@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - message
 - AGENTS/concurrency::message
@@ -15,19 +16,22 @@ f1_keywords:
 - AGENTS/concurrency::message::msg_id
 - AGENTS/concurrency::message::remove_ref
 - AGENTS/concurrency::message::payload
-dev_langs: C++
-helpviewer_keywords: message class
+dev_langs:
+- C++
+helpviewer_keywords:
+- message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 55d1744d67156bcfcf6f76c757fc97ab0d4fd380
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 030b3d376b26afb077edd765d338b4c5d1b0841f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="message-class"></a>message 클래스
 메시징 블록 간에 전달되는 데이터 페이로드를 포함하는 기본 메시지 봉투입니다.  
@@ -70,7 +74,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 |이름|설명|  
 |----------|-----------------|  
-|[페이로드](#payload)|페이로드는 `message` 개체입니다.|  
+|[payload](#payload)|페이로드는 `message` 개체입니다.|  
   
 ## <a name="remarks"></a>설명  
  자세한 내용은 참조 [비동기 메시지 블록](../../../parallel/concrt/asynchronous-message-blocks.md)합니다.  
@@ -83,7 +87,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
  **네임스페이스:** 동시성  
   
-##  <a name="add_ref"></a>add_ref 
+##  <a name="add_ref"></a> add_ref 
 
  에 대 한 참조 횟수에 추가 `message` 개체입니다. 메시지 수명을 확인 하기 위해 참조 가산 필요로 하는 메시지 블록에 사용 합니다.  
   
@@ -94,7 +98,7 @@ long add_ref();
 ### <a name="return-value"></a>반환 값  
  참조 횟수의 새 값입니다.  
   
-##  <a name="ctor"></a>메시지 
+##  <a name="ctor"></a> 메시지 
 
  `message` 개체를 생성합니다.  
   
@@ -126,7 +130,7 @@ message(
 ### <a name="remarks"></a>설명  
  에 대 한 포인터를 사용 하는 생성자는 `message` 개체는 인수를 throw 하는 것으로 [invalid_argument](../../../standard-library/invalid-argument-class.md) 예외 경우 매개 변수 `_Msg` 은 `NULL`합니다.  
   
-##  <a name="dtor"></a>~ 메시지 
+##  <a name="dtor"></a> ~message 
 
  소멸 된 `message` 개체입니다.  
   
@@ -134,7 +138,7 @@ message(
 virtual ~message();
 ```  
   
-##  <a name="msg_id"></a>msg_id 
+##  <a name="msg_id"></a> msg_id 
 
  ID를 반환 된 `message` 개체입니다.  
   
@@ -145,7 +149,7 @@ runtime_object_identity msg_id() const;
 ### <a name="return-value"></a>반환 값  
  `runtime_object_identity` 의 `message` 개체입니다.  
   
-##  <a name="payload"></a>페이로드 
+##  <a name="payload"></a> 페이로드 
 
  페이로드는 `message` 개체입니다.  
   
@@ -153,7 +157,7 @@ runtime_object_identity msg_id() const;
 T const payload;
 ```  
   
-##  <a name="remove_ref"></a>remove_ref 
+##  <a name="remove_ref"></a> remove_ref 
 
  에 대 한 참조 횟수에서 값을 뺍니다는 `message` 개체입니다. 메시지 수명을 확인 하기 위해 참조 가산 필요로 하는 메시지 블록에 사용 합니다.  
   

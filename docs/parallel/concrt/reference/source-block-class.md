@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - source_block
 - AGENTS/concurrency::source_block
@@ -36,19 +37,22 @@ f1_keywords:
 - AGENTS/concurrency::source_block::sync_send
 - AGENTS/concurrency::source_block::unlink_target_notification
 - AGENTS/concurrency::source_block::wait_for_outstanding_async_sends
-dev_langs: C++
-helpviewer_keywords: source_block class
+dev_langs:
+- C++
+helpviewer_keywords:
+- source_block class
 ms.assetid: fbdd4146-e8d0-42e8-b714-fe633f69ffbf
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1709ebf0a831fa7c1bba79b338a2978d6c6dae86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 61b79d716aa836c14e18d9c0ac20210526b7fd52
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sourceblock-class"></a>source_block 클래스
 `source_block` 클래스는 소스 전용 블록에 대한 추상 기본 클래스입니다. 이 클래스는 기본 링크 관리 기능 및 일반적인 오류 검사를 제공합니다.  
@@ -86,9 +90,9 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
   
 |이름|설명|  
 |----------|-----------------|  
-|[허용](#accept)|이 제공 된 메시지를 수락 `source_block` 개체를 호출자에 게 소유권을 전송 합니다.|  
+|[accept](#accept)|이 제공 된 메시지를 수락 `source_block` 개체를 호출자에 게 소유권을 전송 합니다.|  
 |[acquire_ref](#acquire_ref)|이 참조 횟수를 가져옵니다 `source_block` 개체 삭제가 발생 하지 않도록 합니다.|  
-|[사용](#consume)|이전에 제공한이 메시지를 생성 `source_block` 개체와 호출자에 게 소유권을 전송 하 여 대상에 의해 성공적으로 예약 되어 있습니다.|  
+|[consume](#consume)|이전에 제공한이 메시지를 생성 `source_block` 개체와 호출자에 게 소유권을 전송 하 여 대상에 의해 성공적으로 예약 되어 있습니다.|  
 |[link_target](#link_target)|이 대상 블록에 연결 `source_block` 개체입니다.|  
 |[release](#release)|이전의 성공적인 메시지 예약을 해제합니다.|  
 |[release_ref](#release_ref)|이 참조 횟수를 해제 `source_block` 개체입니다.|  
@@ -130,7 +134,7 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
   
  **네임스페이스:** 동시성  
   
-##  <a name="accept"></a>허용 
+##  <a name="accept"></a> 허용 
 
  이 제공 된 메시지를 수락 `source_block` 개체를 호출자에 게 소유권을 전송 합니다.  
   
@@ -155,7 +159,7 @@ virtual message<_Target_type>* accept(
   
  `accept` 메서드는 대상에서이 메시지를 제공 하는 동안 `ISource` 블록입니다. 메시지 포인터가 반환에 전달 된 것과에서 다를 수 있습니다는 `propagate` 의 메서드는 `ITarget` 이 원본 메시지의 복사본을 확인 하기로 결정 하면 차단 합니다.  
   
-##  <a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a> accept_message 
 
  파생된 클래스에서 재정의 되 면 소스에서 제공된 된 메시지를 허용 합니다. 메시지 블록의 유효성을 검사 하려면이 메서드를 재정의 해야는 `_MsgId` 고 메시지를 반환 합니다.  
   
@@ -173,7 +177,7 @@ virtual message<_Target_type>* accept_message(runtime_object_identity _MsgId) = 
 ### <a name="remarks"></a>설명  
  소유권을 전송 하려면 원래 메시지 포인터를 반환 합니다. 소유권을 유지 하려면 메시지 페이로드의 복사본을 만들고 반환 해야 있어야 합니다.  
   
-##  <a name="acquire_ref"></a>acquire_ref 
+##  <a name="acquire_ref"></a> acquire_ref 
 
  이 참조 횟수를 가져옵니다 `source_block` 개체 삭제가 발생 하지 않도록 합니다.  
   
@@ -184,7 +188,7 @@ virtual void acquire_ref(_Inout_ ITarget<_Target_type> *);
 ### <a name="remarks"></a>설명  
  이 메서드는 프로그램 `ITarget` 하는 동안이 원본에 연결 하는 중 개체는 `link_target` 메서드.  
   
-##  <a name="async_send"></a>async_send 
+##  <a name="async_send"></a> async_send 
 
  비동기적으로 메시지를 큐에 대기 하 고 이미 수행 되지 않은 경우 전파 작업을 시작 합니다.  
   
@@ -196,7 +200,7 @@ virtual void async_send(_Inout_opt_ message<_Target_type>* _Msg);
  `_Msg`  
  에 대 한 포인터는 `message` 비동기적으로 보낼 개체입니다.  
   
-##  <a name="consume"></a>사용 
+##  <a name="consume"></a> 사용 
 
  이전에 제공한이 메시지를 생성 `source_block` 개체와 호출자에 게 소유권을 전송 하 여 대상에 의해 성공적으로 예약 되어 있습니다.  
   
@@ -223,7 +227,7 @@ virtual message<_Target_type>* consume(
   
  `consume` 메서드는 `accept`를를 호출 하 여 뒤에 야 항상 있지만 `reserve` 반환 `true`합니다.  
   
-##  <a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a> consume_message 
 
  파생된 클래스에서 재정의 되 면 이전에 예약 된 메시지를 생성 합니다.  
   
@@ -241,7 +245,7 @@ virtual message<_Target_type>* consume_message(runtime_object_identity _MsgId) =
 ### <a name="remarks"></a>설명  
  비슷한 `accept`를를 호출 하 여 항상 선행 `reserve`합니다.  
   
-##  <a name="enable_batched_processing"></a>enable_batched_processing 
+##  <a name="enable_batched_processing"></a> enable_batched_processing 
 
  이 블록에 대한 일괄 처리를 할 수 있도록 합니다.  
   
@@ -249,7 +253,7 @@ virtual message<_Target_type>* consume_message(runtime_object_identity _MsgId) =
 void enable_batched_processing();
 ```  
   
-##  <a name="initialize_source"></a>initialize_source 
+##  <a name="initialize_source"></a> initialize_source 
 
  초기화는 `message_propagator` 이 `source_block`합니다.  
   
@@ -266,7 +270,7 @@ void initialize_source(
  `_PScheduleGroup`  
  작업을 예약 하는 데 사용할 수 있는 일정 그룹입니다.  
   
-##  <a name="link_target"></a>link_target 
+##  <a name="link_target"></a> link_target 
 
  이 대상 블록에 연결 `source_block` 개체입니다.  
   
@@ -281,7 +285,7 @@ virtual void link_target(_Inout_ ITarget<_Target_type>* _PTarget);
 ### <a name="remarks"></a>설명  
  메서드에서 throw 된 [invalid_argument](../../../standard-library/invalid-argument-class.md) 예외 경우 매개 변수 `_PTarget` 은 `NULL`합니다.  
   
-##  <a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a> link_target_notification 
 
  이 새 대상 연결을 알리는 콜백입니다 `source_block` 개체입니다.  
   
@@ -289,7 +293,7 @@ virtual void link_target(_Inout_ ITarget<_Target_type>* _PTarget);
 virtual void link_target_notification(_Inout_ ITarget<_Target_type> *);
 ```  
   
-##  <a name="process_input_messages"></a>process_input_messages 
+##  <a name="process_input_messages"></a> process_input_messages 
 
  입력된 메시지를 처리합니다. source_block에서 파생되는 전파자 블록에만 유용합니다.  
   
@@ -300,7 +304,7 @@ virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
 ### <a name="parameters"></a>매개 변수  
  `_PMessage`  
   
-##  <a name="propagate_output_messages"></a>propagate_output_messages 
+##  <a name="propagate_output_messages"></a> propagate_output_messages 
 
  메시지를 대상으로 전파합니다.  
   
@@ -308,7 +312,7 @@ virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
 virtual void propagate_output_messages();
 ```  
   
-##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets 
 
  파생된 클래스에서 재정의 되 면 연결 된 대상 중 일부 또는 모두 지정된 된 메시지를 전파 합니다. 메시지 블록에 대 한 주 전파 루틴입니다.  
   
@@ -320,7 +324,7 @@ virtual void propagate_to_any_targets(_Inout_opt_ message<_Target_type>* _PMessa
  `_PMessage`  
  전파 될 수 있는 메시지에 대 한 포인터입니다.  
   
-##  <a name="release"></a>릴리스 
+##  <a name="release"></a> 릴리스 
 
  이전의 성공적인 메시지 예약을 해제합니다.  
   
@@ -342,7 +346,7 @@ virtual void release(
   
  메서드에서 throw 한 [bad_target](bad-target-class.md) 예외 경우 매개 변수 `_PTarget` 호출 대상을 나타내지 않는 `reserve`합니다.  
   
-##  <a name="release_message"></a>release_message 
+##  <a name="release_message"></a> release_message 
 
  파생된 클래스에서 재정의 되 면 이전 메시지 예약을 해제 합니다.  
   
@@ -354,7 +358,7 @@ virtual void release_message(runtime_object_identity _MsgId) = 0;
  `_MsgId`  
  `runtime_object_identity` 의 `message` 해제 하 고 개체입니다.  
   
-##  <a name="release_ref"></a>release_ref 
+##  <a name="release_ref"></a> release_ref 
 
  이 참조 횟수를 해제 `source_block` 개체입니다.  
   
@@ -369,7 +373,7 @@ virtual void release_ref(_Inout_ ITarget<_Target_type>* _PTarget);
 ### <a name="remarks"></a>설명  
  이 메서드는 프로그램 `ITarget` 이 원본의 연결이 해제 되는 개체입니다. 소스 블록 대상 블록에 대 한 예약 된 리소스를 해제할 수 있습니다.  
   
-##  <a name="remove_targets"></a>remove_targets 
+##  <a name="remove_targets"></a> remove_targets 
 
  이 소스 블록에 대 한 모든 대상 링크를 제거합니다. 이 소멸자에서 호출 되어야 합니다.  
   
@@ -377,7 +381,7 @@ virtual void release_ref(_Inout_ ITarget<_Target_type>* _PTarget);
 void remove_targets();
 ```  
   
-##  <a name="reserve"></a>예약 
+##  <a name="reserve"></a> 예약 
 
  이 이전에 제공 메시지를 예약 `source_block` 개체입니다.  
   
@@ -395,14 +399,14 @@ virtual bool reserve(
  호출 하는 대상 블록에 대 한 포인터는 `reserve` 메서드.  
   
 ### <a name="return-value"></a>반환 값  
- `true`메시지를 성공적으로 예약 하는 경우 `false` 그렇지 않은 경우. 예약은 메시지를 이미 다른 대상이 예약했거나 수락한 경우, 소스에서 예약을 거부한 경우 등과 같은 다양한 이유로 실패할 수 있습니다.  
+ `true` 메시지를 성공적으로 예약 하는 경우 `false` 그렇지 않은 경우. 예약은 메시지를 이미 다른 대상이 예약했거나 수락한 경우, 소스에서 예약을 거부한 경우 등과 같은 다양한 이유로 실패할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
  메서드에서 throw 된 [invalid_argument](../../../standard-library/invalid-argument-class.md) 예외 경우 매개 변수 `_PTarget` 은 `NULL`합니다.  
   
  호출한 후 `reserve`를 호출 해야 성공 하면 `consume` 또는 `release` 얻거나 각각 메시지의 소유를 포기 하기 위해.  
   
-##  <a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a> reserve_message 
 
  파생된 클래스에서 재정의 되 면 이전에 제공한이 메시지를 예약 `source_block` 개체입니다.  
   
@@ -415,12 +419,12 @@ virtual bool reserve_message(runtime_object_identity _MsgId) = 0;
  `runtime_object_identity` 의 `message` 예약 되 고 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `true`메시지를 성공적으로 예약 하는 경우 `false` 그렇지 않은 경우.  
+ `true` 메시지를 성공적으로 예약 하는 경우 `false` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
  후 `reserve` 반환 하는 경우 라고 `true`, 어느 `consume` 또는 `release` 호출을 얻거나 메시지의 소유권을 해제 해야 합니다.  
   
-##  <a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a> resume_propagation 
 
  파생된 클래스에서 재정의 되 면 전파 예약이 해제 된 후 다시 시작 합니다.  
   
@@ -428,7 +432,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId) = 0;
 virtual void resume_propagation() = 0;
 ```  
   
-##  <a name="ctor"></a>source_block 
+##  <a name="ctor"></a> source_block 
 
  `source_block` 개체를 생성합니다.  
   
@@ -436,7 +440,7 @@ virtual void resume_propagation() = 0;
 source_block();
 ```  
   
-##  <a name="dtor"></a>~ source_block 
+##  <a name="dtor"></a> ~source_block 
 
  소멸 된 `source_block` 개체입니다.  
   
@@ -444,7 +448,7 @@ source_block();
 virtual ~source_block();
 ```  
   
-##  <a name="sync_send"></a>sync_send 
+##  <a name="sync_send"></a> sync_send 
 
  동기적으로 메시지를 큐에 대기 하 고 이미 수행 되지 않은 경우 전파 작업을 시작 합니다.  
   
@@ -456,7 +460,7 @@ virtual void sync_send(_Inout_opt_ message<_Target_type>* _Msg);
  `_Msg`  
  에 대 한 포인터는 `message` 비동기적으로 보낼 개체입니다.  
   
-##  <a name="unlink_target"></a>unlink_target 
+##  <a name="unlink_target"></a> unlink_target 
 
  이 대상 블록을 연결 해제 `source_block` 개체입니다.  
   
@@ -471,7 +475,7 @@ virtual void unlink_target(_Inout_ ITarget<_Target_type>* _PTarget);
 ### <a name="remarks"></a>설명  
  메서드에서 throw 된 [invalid_argument](../../../standard-library/invalid-argument-class.md) 예외 경우 매개 변수 `_PTarget` 은 `NULL`합니다.  
   
-##  <a name="unlink_target_notification"></a>unlink_target_notification 
+##  <a name="unlink_target_notification"></a> unlink_target_notification 
 
  대상에서이 연결 된 되었음을 알리는 콜백입니다 `source_block` 개체입니다.  
   
@@ -483,7 +487,7 @@ virtual void unlink_target_notification(_Inout_ ITarget<_Target_type>* _PTarget)
  `_PTarget`  
  `ITarget` 연결 되지 않은 블록입니다.  
   
-##  <a name="unlink_targets"></a>unlink_targets 
+##  <a name="unlink_targets"></a> unlink_targets 
 
  이 모든 대상 블록의 연결을 해제 `source_block` 개체입니다.  
   
@@ -491,7 +495,7 @@ virtual void unlink_target_notification(_Inout_ ITarget<_Target_type>* _PTarget)
 virtual void unlink_targets();
 ```  
   
-##  <a name="wait_for_outstanding_async_sends"></a>wait_for_outstanding_async_sends 
+##  <a name="wait_for_outstanding_async_sends"></a> wait_for_outstanding_async_sends 
 
  모든 비동기 전파가 완료 될 때까지 기다립니다. 이 특정 전파자 스핀 대기 하는 데 메시지 블록의 소멸자에 모든 비동기 전파가 블록을 삭제 하기 전에 완료 하는 데는 시간이 있는지 확인 합니다.  
   

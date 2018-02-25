@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - array/std::array::operator!=
 - array/std::array::operator<
@@ -13,15 +13,16 @@ f1_keywords:
 - array/std::array::operator>
 - array/std::array::operator>=
 - array/std::array::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-caps.latest.revision: "12"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: e4854303bc80603ccbdf908aefc31f304487fb1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 4a42ddf39044e97ca6297cfbc5a55810981f7778
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt; 연산자
 \<array> 헤더는 다음의 `array` 비 멤버 비교 템플릿 함수를 포함합니다.  
@@ -57,7 +58,7 @@ bool operator!=(
 ### <a name="remarks"></a>설명  
  템플릿 함수가 `!(left == right)`을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__operator_ne.cpp   
@@ -127,7 +128,7 @@ bool operator<(
 ### <a name="remarks"></a>설명  
  [array 클래스](../standard-library/array-class-stl.md) 템플릿 클래스의 두 개체를 비교하기 위한 템플릿 함수 오버로드 `operator<`입니다. 함수에서 `lexicographical_compare(left.begin(), left.end(), right.begin())`을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__operator_lt.cpp   
@@ -198,7 +199,7 @@ bool operator<=(
 ### <a name="remarks"></a>설명  
  템플릿 함수가 `!(right < left)`을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__operator_le.cpp   
@@ -269,7 +270,7 @@ bool operator==(
 ### <a name="remarks"></a>설명  
  [array 클래스](../standard-library/array-class-stl.md) 템플릿 클래스의 두 개체를 비교하기 위한 템플릿 함수 오버로드 `operator==`입니다. 함수에서 `equal(left.begin(), left.end(), right.begin())`을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__operator_eq.cpp   
@@ -340,7 +341,7 @@ bool operator>(
 ### <a name="remarks"></a>설명  
  템플릿 함수가 `(right < left)`을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__operator_gt.cpp   
@@ -411,7 +412,7 @@ bool operator>=(
 ### <a name="remarks"></a>설명  
  템플릿 함수가 `!(left < right)`을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // std__array__operator_ge.cpp   

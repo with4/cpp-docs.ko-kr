@@ -4,28 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-pragma.init_seg
 - init_seg_CPP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pragmas, init_seg
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 69036ffba2143d166c9ac5c55a5b3ec9008b75bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a092ed554af1b078772d53fd0cc663e250a6ea3c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="initseg"></a>init_seg
 **C + + 전용**  
@@ -46,23 +49,23 @@ ms.lasthandoff: 12/21/2017
   
  옵션을는 **init_seg** pragma:  
   
- **컴파일러**  
+ **compiler**  
  Microsoft C 런타임 라이브러리 초기화용으로 예약되어 있습니다. 이 그룹의 개체는 처음 생성됩니다.  
   
  **lib**  
  타사 클래스 라이브러리 공급업체의 초기화에 사용할 수 있습니다. 이 그룹의 개체로 표시 된 이후 생성 된 **컴파일러** 다른 대체 이전에 있습니다.  
   
- **사용자**  
+ **user**  
  모든 사용자가 사용할 수 있습니다. 이 그룹의 개체는 마지막에 생성됩니다.  
   
- *섹션 이름*  
+ *section-name*  
  초기화 섹션의 명시적 지정을 허용합니다. 하지만 사용자 지정 개체 *섹션 이름* 암시적으로 생성 하지는 의해 명명 된 섹션에 해당 주소가 배치 *섹션 이름*합니다.  
   
  제공된 섹션 이름은 pragma 뒤 해당 모듈에서 선언된 전역 개체를 생성할 도우미 함수에 대한 포인터를 포함합니다.  
   
  목록이 섹션을 만들 때 사용 하지 않아야 하는 이름에 대 한 참조 [/section](../build/reference/section-specify-section-attributes.md)합니다.  
   
- *함수 이름*  
+ *func-name*  
  프로그램이 종료되면 `atexit` 대신 호출될 함수를 지정합니다. 이 도우미 함수를 호출 또한 [atexit](../c-runtime-library/reference/atexit.md) 전역 개체에 대 한 소멸자에 대 한 포인터입니다. 다음 형식의 pragma에서 함수 식별자를 지정하면  
   
 ```  

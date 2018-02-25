@@ -4,28 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _mm_inserti_si64
 - _mm_insert_si64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - insertq instruction
 - _mm_insert_si64 intrinsic
 - _mm_inserti_si64 intrinsic
 ms.assetid: 897a4b36-8b08-4b00-a18f-7850f5732d7d
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5f7a2b52c8a41a3689cc668846e038505425aab4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dc85f56660702afe1c05f3626b3b28b0b566dbd5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64, _mm_inserti_si64
 **Microsoft 전용**  
@@ -51,13 +54,13 @@ __m128i _mm_inserti_si64(
  [in] `Source1`  
  필드는 삽입의 하위 64 비트에서 입력 데이터로 128 비트 필드입니다.  
   
- [in]`Source2`  
+ [in]  `Source2`  
  데이터 삽입의 낮은 비트를 128 비트 필드입니다.  에 대 한 `_mm_insert_si64`, 해당 상위 비트에서 필드 설명자가 포함 되어 있습니다.  
   
- [in]`Length`  
+ [in]  `Length`  
  삽입할 필드의 길이 지정 하는 정수 상수입니다.  
   
- [in]`Index`  
+ [in]  `Index`  
  데이터는 삽입 하는 필드의 최하위 비트 인덱스를 지정 하는 정수 상수입니다.  
   
 ## <a name="return-value"></a>반환 값  
@@ -126,7 +129,7 @@ result3 = 0xfffffffff3210fff
 ```  
   
 **Microsoft 전용 종료**  
- 고급 마이크로 장치, inc 2007 저작권 All rights reserved. 고급 마이크로 장치, Inc. 로부터 사용 권한을 승인 하에 복제  
+ Copyright 2007 by Advanced Micro Devices, Inc. All rights reserved. 고급 마이크로 장치, Inc. 로부터 사용 권한을 승인 하에 복제  
   
 ## <a name="see-also"></a>참고 항목  
  [_mm_extract_si64, _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)   

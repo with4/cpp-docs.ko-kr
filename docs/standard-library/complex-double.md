@@ -4,26 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: complex/std::complex<double>
-dev_langs: C++
-helpviewer_keywords: complex<double> function
+ms.topic: reference
+f1_keywords:
+- complex/std::complex<double>
+dev_langs:
+- C++
+helpviewer_keywords:
+- complex<double> function
 ms.assetid: 0d0b9d2a-9b9b-410b-82a0-86b6df127e47
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b279b78c309dd9fff87954d9b50b255b7f0d9f25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3d82fccaa98dd0591cf8d7b3a9fcabb9e78f7d88
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
-둘 다 형식이 **double***,*인 개체의 정렬된 쌍을 저장하는 개체를 설명합니다. 첫 번째 개체는 복소수의 실수부를 나타내고 두 번째 개체는 허수부를 나타냅니다.  
+형식의 개체의 정렬된 된 쌍을 저장 하는 개체에 설명 **double ** 는 먼저 복소수와 두 번째 실수 부분을 나타내는 허수 부분을 나타내는입니다.  
   
 ## <a name="syntax"></a>구문  
   

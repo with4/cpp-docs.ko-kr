@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: amp_math/Concurrency::fast_math
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- amp_math/Concurrency::fast_math
+dev_langs:
+- C++
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 047eee60eb409e86d77faf6f637a88a56f271094
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 11c6f990cdcc4dab0a3526d338333183a0f5e889
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencyfastmath-namespace"></a>Concurrency::fast_math 네임스페이스
 함수는 `fast_math` 네임 스페이스는 정확도 단일 정밀도만 지원 (`float`), DirectX 내장 함수를 호출 합니다. 두 가지 버전 각 함수의 예를 들어 `cos` 및 `cosf`합니다. 두 버전 모두 사용 하 고 반환 된 `float`, 하지만 동일한 DirectX 호출 각각 내장 함수입니다.  

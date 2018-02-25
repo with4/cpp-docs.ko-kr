@@ -5,19 +5,20 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - unordered_set/std::operator!=
 - unordered_set/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 8653eea6-12f2-4dd7-aa2f-db38a71599a0
-caps.latest.revision: "7"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: 615e2f69a45a17b34b38190ac1c7def1de09d8c8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 96f04fc312f718bae28576a5e248823a45950e03
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltunorderedsetgt-operators"></a>&lt;unordered_set&gt; 연산자
 |||||  
@@ -44,7 +45,7 @@ bool operator!=(const unordered_set <Key, Hash, Pred, Allocator>& left, const un
 ### <a name="remarks"></a>설명  
  unordered_set 개체 간의 비교는 해당 요소를 저장하는 임의의 순서에 의해 영향을 받지 않습니다. 두 unordered_set는 요소 수가 같고 특정 컨테이너의 요소가 다른 컨테이너의 요소 순열이면 동일합니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // unordered_set_ne.cpp   
@@ -109,7 +110,7 @@ bool operator==(const unordered_set <Key, Hash, Pred, Allocator>& left, const un
 ### <a name="remarks"></a>설명  
  unordered_set 개체 간의 비교는 해당 요소를 저장하는 임의의 순서에 의해 영향을 받지 않습니다. 두 unordered_set는 요소 수가 같고 특정 컨테이너의 요소가 다른 컨테이너의 요소 순열이면 동일합니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // unordered_set_eq.cpp   
@@ -174,7 +175,7 @@ bool operator!=(const unordered_multiset <Key, Hash, Pred, Allocator>& left, con
 ### <a name="remarks"></a>설명  
  unordered_multiset 개체 간의 비교는 해당 요소를 저장하는 임의의 순서에 의해 영향을 받지 않습니다. 두 unordered_multiset는 요소 수가 같고 특정 컨테이너의 요소가 다른 컨테이너의 요소 순열이면 동일합니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // unordered_multiset_ne.cpp   
@@ -242,7 +243,7 @@ bool operator==(const unordered_multiset <Key, Hash, Pred, Allocator>& left, con
 ### <a name="remarks"></a>설명  
  unordered_multiset 개체 간의 비교는 해당 요소를 저장하는 임의의 순서에 의해 영향을 받지 않습니다. 두 unordered_multiset는 요소 수가 같고 특정 컨테이너의 요소가 다른 컨테이너의 요소 순열이면 동일합니다. 그렇지 않으면 목록은 같지 않은 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // unordered_multiset_eq.cpp   

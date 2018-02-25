@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - deque/std::deque
 - deque/std::deque::allocator_type
@@ -50,7 +51,8 @@ f1_keywords:
 - deque/std::deque::shrink_to_fit
 - deque/std::deque::size
 - deque/std::deque::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::deque [C++]
 - std::deque [C++], allocator_type
@@ -95,16 +97,17 @@ helpviewer_keywords:
 - std::deque [C++], size
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 58f66f264e5586b2cfbc0125329be4dec34298d9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88ce199617f0628ccb7e022581cd52d83d82e2ac
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="deque-class"></a>deque 클래스
 선형 정렬에서 지정된 형식의 요소를 정렬하고 벡터처럼 모든 요소에 대한 빠른 임의 액세스와 컨테이너 뒤쪽에서 효율적인 삽입 및 삭제를 가능하게 합니다. 그러나 벡터와 달리 `deque` 클래스는 컨테이너 앞에서 효율적인 삽입 및 삭제를 지원합니다.  
@@ -121,7 +124,7 @@ class deque
  deque에 저장되는 요소 데이터 형식입니다.  
   
  `Allocator`  
- deque의 메모리 할당 및 할당 취소에 대한 세부 정보를 캡슐화하는 저장된 할당자 개체를 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 **allocator\<Type>***입니다.*  
+ deque의 메모리 할당 및 할당 취소에 대한 세부 정보를 캡슐화하는 저장된 할당자 개체를 나타내는 형식입니다. 이 인수는 선택 사항이 며 기본값은 **할당자\<유형 > * * *입니다.*  
   
 ## <a name="remarks"></a>설명  
  컨테이너 형식은 일반적으로 응용 프로그램에서 필요한 검색과 삽입의 형식을 기준으로 선택해야 합니다. 요소에 대한 임의 액세스는 거의 발생하지 않으며 요소 삽입 또는 삭제는 시퀀스 끝에서만 수행하면 되는 시퀀스를 관리할 때는 [벡터](../standard-library/vector-class.md)를 기본 컨테이너로 사용해야 합니다. 시퀀스 내의 모든 위치에서 효율적인 삽입 및 삭제(일정한 시간)가 최상일 때 목록 컨테이너의 성능이 가장 우수합니다. 시퀀스 중 이러한 작업에는 시퀀스의 요소 수에 비례하는 요소 복사본 및 할당이 필요합니다(선형 시간).  

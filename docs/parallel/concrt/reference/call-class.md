@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - call
 - AGENTS/concurrency::call
@@ -16,19 +17,22 @@ f1_keywords:
 - AGENTS/concurrency::call::propagate_message
 - AGENTS/concurrency::call::send_message
 - AGENTS/concurrency::call::supports_anonymous_source
-dev_langs: C++
-helpviewer_keywords: call class
+dev_langs:
+- C++
+helpviewer_keywords:
+- call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2d575aaa01a3668925c6a81eda7d8d99cc591180
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9a63873b7666e4f75ddd39fbf684ebb80c1f85e8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="call-class"></a>call 클래스
 `call` 메시징 블록은 메시지를 받을 때 지정된 함수를 호출하는 순서가 지정된 다중 소스 `target_block`입니다.  
@@ -53,7 +57,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 |이름|설명|  
 |----------|-----------------|  
-|[호출](#ctor)|오버로드됨. 생성 된 `call` 메시징 블록입니다.|  
+|[call](#ctor)|오버로드됨. 생성 된 `call` 메시징 블록입니다.|  
 |[~ call 소멸자](#dtor)|소멸 된 `call` 메시징 블록입니다.|  
   
 ### <a name="protected-methods"></a>보호된 메서드  
@@ -81,7 +85,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
  **네임스페이스:** 동시성  
   
-##  <a name="ctor"></a>호출 
+##  <a name="ctor"></a> 호출 
 
  생성 된 `call` 메시징 블록입니다.  
   
@@ -132,7 +136,7 @@ call(
   
  형식 `filter_method` 시그니처가 있는 함수는 `bool (T const &)` 이 호출 되는 `call` 제공된 된 메시지를 수락 해야 하는지 여부를 결정 하는 메시징 블록입니다.  
   
-##  <a name="dtor"></a>~ 호출 
+##  <a name="dtor"></a> ~call 
 
  소멸 된 `call` 메시징 블록입니다.  
   
@@ -140,7 +144,7 @@ call(
 ~call();
 ```  
   
-##  <a name="process_input_messages"></a>process_input_messages 
+##  <a name="process_input_messages"></a> process_input_messages 
 
  입력된 메시지에 대해 호출 함수를 실행 합니다.  
   
@@ -151,7 +155,7 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
 ### <a name="parameters"></a>매개 변수  
  `_PMessage`  
   
-##  <a name="process_message"></a>process_message 
+##  <a name="process_message"></a> process_message 
 
  이 수락 했던 메시지를 처리 `call` 메시징 블록입니다.  
   
@@ -163,7 +167,7 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
  `_PMessage`  
  처리할 메시지에 대 한 포인터입니다.  
   
-##  <a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a> propagate_message 
 
  메시지를 비동기적으로 전달 된 `ISource` 이 블록 `call` 메시징 블록입니다. 이 호출 하는 `propagate` 소스 블록에서 호출 될 경우이 메서드.  
   
@@ -183,7 +187,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>반환 값  
  A [message_status](concurrency-namespace-enums.md) 메시지로 하기로 하는 대상의 표시 합니다.  
   
-##  <a name="send_message"></a>send_message 
+##  <a name="send_message"></a> send_message 
 
  메시지를 동기적으로 전달 된 `ISource` 이 블록 `call` 메시징 블록입니다. 이 호출 하는 `send` 소스 블록에서 호출 될 경우이 메서드.  
   
@@ -203,7 +207,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>반환 값  
  A [message_status](concurrency-namespace-enums.md) 메시지로 하기로 하는 대상의 표시 합니다.  
   
-##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a> supports_anonymous_source 
 
  `supports_anonymous_source` 메서드를 재정의하여 이 블록이 연결되지 않은 소스에서 제공하는 메시지를 수락할 수 있음을 나타냅니다.  
   

@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-pragma.comment
 - comment_CPP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - annotations [C++]
 - comments [C++], compiled files
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4dc4c9036565c2571371c172f61de4948c188f83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d1062923f50470a2238af21676c4137fac241905
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="comment-cc"></a>C 주석 (C/C++)
 주석 기록을 개체 파일 또는 실행 파일에 배치합니다.  
@@ -41,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  *주석 형식* 주석 기록 형식을 지정 하는 하나 아래에서 설명 하는 미리 정의 된 식별자입니다. 선택적 `commentstring`은 일부 주석 형식에 추가 정보를 제공하는 문자열 리터럴입니다. 때문에 `commentstring` 은 문자열 리터럴, 이스케이프 문자를 포함 된 큰 따옴표와 관련 하 여 문자열 리터럴에 대 한 모든 규칙을 따르는 (**"**), 및 연결 합니다.  
   
- **컴파일러**  
+ **compiler**  
  컴파일러의 이름 및 버전 이름을 개체 파일에 배치합니다. 이 주석 기록은 링커에 의해 무시됩니다. 이 기록 형식에 `commentstring` 매개 변수를 제공한 경우 컴파일러에서 경고를 생성합니다.  
   
  **exestr**  
@@ -54,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
  기본 라이브러리 및 추가 된 라이브러리의 순서가 중요 한 경우 사용 하 여 컴파일하는 [/Zl](../build/reference/zl-omit-default-library-name.md) 스위치 개체 모듈에 배치 되지 않게 기본 라이브러리 이름을 수 없게 됩니다. 그런 다음 두 번째 주석 pragma를 사용하여 추가된 라이브러리 다음에 기본 라이브러리의 이름을 삽입할 수 있습니다. pragma를 사용하여 나열된 라이브러리는 소스 코드와 동일한 순서로 개체 모듈에 표시됩니다.  
   
- **링커**  
+ **linker**  
  위치는 [링커 옵션](../build/reference/linker-options.md) 개체 파일에 있습니다. 이 주석 형식을 이용하여 명령줄에 주석을 전달하거나 개발 환경에 지정하는 대신 링커 옵션을 지정할 수 있습니다. 예를 들어, /include 옵션을 지정하면 기호를 포함하도록 할 수 있습니다.  
   
 ```  
@@ -65,17 +68,17 @@ ms.lasthandoff: 12/21/2017
   
 -   [/DEFAULTLIB](../build/reference/defaultlib-specify-default-library.md)  
   
--   [/ 내보내기](../build/reference/export-exports-a-function.md)  
+-   [/EXPORT](../build/reference/export-exports-a-function.md)  
   
--   [/ 포함](../build/reference/include-force-symbol-references.md)  
+-   [/INCLUDE](../build/reference/include-force-symbol-references.md)  
   
 -   [/MANIFESTDEPENDENCY](../build/reference/manifestdependency-specify-manifest-dependencies.md)  
   
--   [/ 병합](../build/reference/merge-combine-sections.md)  
+-   [/MERGE](../build/reference/merge-combine-sections.md)  
   
--   [/ 섹션](../build/reference/section-specify-section-attributes.md)  
+-   [/SECTION](../build/reference/section-specify-section-attributes.md)  
   
- **사용자**  
+ **user**  
  일반 주석을 개체 파일에 배치합니다. `commentstring` 매개 변수에는 주석 텍스트가 들어 있습니다. 이 주석 기록은 링커에 의해 무시됩니다.  
   
  다음 pragma를 사용하면 링커가 연결하는 동안 EMAPI.LIB 라이브러리를 검색할 수 있습니다. 링커는 먼저 현재 작업 경로에서 검색한 다음 LIB 환경 변수에 지정된 경로에서 검색합니다.  

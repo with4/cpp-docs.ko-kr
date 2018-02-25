@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: locale/std::time_base
-dev_langs: C++
-helpviewer_keywords: time_base class
+ms.topic: reference
+f1_keywords:
+- locale/std::time_base
+dev_langs:
+- C++
+helpviewer_keywords:
+- time_base class
 ms.assetid: 9ae37f0b-9a42-496e-9870-3d9b71bab8fb
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8a91d10a1705e14663443c1471397478aad85b68
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cc7ed644d7c66ea7e3ca49b6d403b17535fa3eb9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="timebase-class"></a>time_base 클래스
 이 클래스는 템플릿 클래스 time_get의 패싯에 대한 기본 클래스로 사용되며 열거형 **dateorder**와 이 형식의 여러 상수만 정의합니다.  

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xcomplex/std::operator!=
 - xcomplex/std::operator&gt;&gt;
@@ -15,19 +15,20 @@ f1_keywords:
 - xcomplex/std::operator-
 - xcomplex/std::operator/
 - xcomplex/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: aa282604-dcb9-46a2-bf1d-34c50aa6c4ba
-caps.latest.revision: "11"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: 46d469b2e9befbc1effbb4b34e47f5cd7dc4f3f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 130bd3bec74ec3ea31c9baca0dfef9fef4a57399
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; operators
 ||||  
@@ -72,7 +73,7 @@ bool operator!=(
   
  연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 비교 테스트를 실행할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_op_NE.cpp  
@@ -206,7 +207,7 @@ complex<Type> operator*(
 ### <a name="remarks"></a>설명  
  연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_op_mult.cpp  
@@ -303,7 +304,7 @@ complex<Type> operator+(const complex<Type>& left);
 ### <a name="remarks"></a>설명  
  연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다. 단항 연산자는 반환 `left`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_op_add.cpp  
@@ -441,7 +442,7 @@ complex<Type> operator-(const complex<Type>& left);
   
  단항 연산자는 복소수의 부호를 변경하고, 실수부가 숫자 입력에서 음의 실수부이고 허수부가 숫자 입력에서 음의 허수부인 값을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_op_sub.cpp  
@@ -574,7 +575,7 @@ complex<Type> operator*(
 ### <a name="remarks"></a>설명  
  연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 단순한 산술 연산을 실행할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_op_div.cpp  
@@ -680,7 +681,7 @@ basic_ostream<Elem, Traits>& operator<<(
 ### <a name="remarks"></a>설명  
  출력 스트림이 오버로드어 모든 형태의 복소수를 허용하며 기본 출력 형식은 직각좌표 형식입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_op_insert.cpp  
@@ -751,7 +752,7 @@ bool operator==(
   
  연산이 오버로드되어 특정 형식으로 데이터를 변환하지 않고 비교 테스트를 실행할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_op_EQ.cpp  
@@ -881,7 +882,7 @@ basic_istream<Elem, Traits>& operator>>(
   
 - *실수부*  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_op_extract.cpp  

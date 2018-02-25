@@ -5,23 +5,25 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::get_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 97f03dbf71c0f8b97b750532279e4cc76d01fb64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7628f5e0f91d1cf4064c0f802e242138acf9de3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::graphics::direct3d 네임 스페이스 함수
 ||||  
@@ -30,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 |[make_texture](#make_texture)|[msad4](#msad4)|  
 
  
-##  <a name="get_sampler"></a>get_sampler  
+##  <a name="get_sampler"></a>  get_sampler  
  Get 주어진된 accelerator는 D3D 샘플러 상태 인터페이스를 나타내는 지정된 샘플러 개체를 봅니다.  
   
 ```  
@@ -49,7 +51,7 @@ IUnknown* get_sampler(
 ### <a name="return-value"></a>반환 값  
  IUnknown 인터페이스 포인터에 해당 하는 D3D 샘플러 상태 지정된 샘플러를 나타내는입니다.  
   
-##  <a name="get_texture"></a>get_texture  
+##  <a name="get_texture"></a>  get_texture  
  지정 된 원본으로 사용 하는 Direct3D 텍스처 인터페이스를 가져옵니다 [질감](texture-class.md) 개체입니다.  
   
 ```  
@@ -92,7 +94,7 @@ _Ret_ IUnknown *get_texture(
 ### <a name="return-value"></a>반환 값  
  에 해당 하는 질감 기본 Direct3D 텍스처 IUnknown 인터페이스 포인터입니다.  
   
-##  <a name="make_sampler"></a>make_sampler  
+##  <a name="make_sampler"></a>  make_sampler  
  D3D 샘플러 상태 인터페이스 포인터에서는 샘플러를 만듭니다.  
   
 ```  
@@ -106,7 +108,7 @@ sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  샘플러 제공된 D3D 샘플러 상태를 나타냅니다.  
   
-##  <a name="make_texture"></a>make_texture  
+##  <a name="make_texture"></a>  make_texture  
  만듭니다는 [질감](texture-class.md) 지정된 된 매개 변수를 사용 하 여 개체입니다.  
   
 ```  
@@ -139,7 +141,7 @@ texture<value_type, _Rank> make_texture(
 ### <a name="return-value"></a>반환 값  
  제공 된 D3D 질감을 사용 하 여 질감입니다.  
   
-##  <a name="msad4"></a>msad4  
+##  <a name="msad4"></a>  msad4  
  4 바이트 참조 값과 8 바이트 소스 값을 비교 하 고 4 합계의 벡터를 누적 합니다. 각 합계는 마스크 된 제곱의 합 절대의 서로 다른 바이트 정렬 참조 값과 원본 값에 해당합니다.  
   
 ```  

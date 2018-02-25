@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - critical_section
 - CONCRT/concurrency::critical_section
@@ -17,19 +18,22 @@ f1_keywords:
 - CONCRT/concurrency::critical_section::try_lock
 - CONCRT/concurrency::critical_section::try_lock_for
 - CONCRT/concurrency::critical_section::unlock
-dev_langs: C++
-helpviewer_keywords: critical_section class
+dev_langs:
+- C++
+helpviewer_keywords:
+- critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5421cf47214d4ceeb7f8388835cb7a1cc57110ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c2b5bd48039cdf2cc477035abd2904387e194ee2
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="criticalsection-class"></a>critical_section 클래스
 동시성 런타임을 명시적으로 인식하는 재진입성이 아닌 뮤텍스입니다.  
@@ -82,7 +86,7 @@ class critical_section;
   
  **네임스페이스:** 동시성  
   
-##  <a name="ctor"></a>critical_section 
+##  <a name="ctor"></a> critical_section 
 
  새 임계 영역을 생성합니다.  
   
@@ -90,7 +94,7 @@ class critical_section;
 critical_section();
 ```  
   
-##  <a name="dtor"></a>~ critical_section 
+##  <a name="dtor"></a> ~critical_section 
 
  임계 영역을 제거합니다.  
   
@@ -101,7 +105,7 @@ critical_section();
 ### <a name="remarks"></a>설명  
  더 이상 잠금이 소멸자가 실행 되는 경우 사용할 수 없습니다. 여전히 유지를 소멸 된 잠금으로 임계 영역 허용 하면 정의 되지 않은 동작이 발생 합니다.  
   
-##  <a name="lock"></a>잠금 
+##  <a name="lock"></a> 잠금 
 
  이 임계 영역을 가져옵니다.  
   
@@ -114,7 +118,7 @@ void lock();
   
  이미 잠금이 호출 컨텍스트에 의해 하는 경우는 [improper_lock](improper-lock-class.md) 예외가 throw 됩니다.  
   
-##  <a name="native_handle"></a>native_handle 
+##  <a name="native_handle"></a> native_handle 
 
  있는 경우에 플랫폼 특정 네이티브 핸들을 반환 합니다.  
   
@@ -128,14 +132,14 @@ native_handle_type native_handle();
 ### <a name="remarks"></a>설명  
  A `critical_section` 개체는 Windows 운영 체제에 대 한 플랫폼 특정 네이티브 핸들 연결 되어 있지 않습니다. 메서드는 단순히 개체 자체에 대 한 참조를 반환합니다.  
   
-##  <a name="critical_section__scoped_lock_class"></a>critical_section:: scoped_lock 클래스  
+##  <a name="critical_section__scoped_lock_class">critical_section:: scoped_lock 클래스</a>  
  예외 안전한 RAII 래퍼에 대 한는 `critical_section` 개체입니다.  
   
 ```
 class scoped_lock;
 ```  
   
-##  <a name="critical_section__scoped_lock_ctor"></a>scoped_lock::scoped_lock 
+##  <a name="critical_section__scoped_lock_ctor"></a> scoped_lock::scoped_lock 
 
  생성 한 `scoped_lock` 개체를 가져옵니다는 `critical_section` 에 전달 된 개체는 `_Critical_section` 매개 변수입니다. 임계 영역, 다른 스레드에서 보유 하는 경우에이 호출이 차단 됩니다.  
   
@@ -147,7 +151,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
  `_Critical_section`  
  임계 영역 잠금입니다.  
   
-##  <a name="critical_section__scoped_lock_dtor"></a>scoped_lock:: ~ scoped_lock 
+##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock::~scoped_lock 
 
  제거는 `scoped_lock` 개체를 해당 생성자에 제공 된 중요 한 섹션을 해제 합니다.  
   
@@ -155,7 +159,7 @@ explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 ~scoped_lock();
 ```  
   
-##  <a name="try_lock"></a>try_lock 
+##  <a name="try_lock"></a> try_lock 
 
  차단 하지 않고 잠금을 가져오려고 시도 합니다.  
   
@@ -166,7 +170,7 @@ bool try_lock();
 ### <a name="return-value"></a>반환 값  
  잠금을 획득 하는 경우 값 `true`, 그렇지 않으면 값 `false`합니다.  
   
-##  <a name="try_lock_for"></a>try_lock_for 
+##  <a name="try_lock_for"></a> try_lock_for 
 
  특정 기간(밀리초) 동안 차단하지 않고 잠금을 가져오려고 시도합니다.  
   
@@ -181,7 +185,7 @@ bool try_lock_for(unsigned int _Timeout);
 ### <a name="return-value"></a>반환 값  
  잠금을 획득 하는 경우 값 `true`, 그렇지 않으면 값 `false`합니다.  
   
-##  <a name="unlock"></a>잠금 해제 
+##  <a name="unlock"></a> 잠금 해제 
 
  임계 영역 잠금을 해제합니다.  
   

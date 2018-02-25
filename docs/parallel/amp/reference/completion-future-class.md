@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - completion_future
 - AMPRT/completion_future
@@ -18,18 +19,20 @@ f1_keywords:
 - AMPRT/Concurrency::completion_future::wait
 - AMPRT/Concurrency::completion_future::wait_for
 - AMPRT/Concurrency::completion_future::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 07e41d6bf03df1231249a9e2ea5e54e420c9840c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 24f7012f7fdd9aaeb2443665187aba4eef483e0f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="completionfuture-class"></a>completion_future 클래스
 나중에 해당 하는 c + + AMP 비동기 작업을 나타냅니다.  
@@ -54,10 +57,10 @@ class completion_future;
 |이름|설명|  
 |----------|-----------------|  
 |[get](#get)|연결 된 비동기 작업이 완료 될 때까지 기다립니다.|  
-|[그런 다음](#then)|연결에 콜백 함수 개체는 `completion_future` 연결 된 비동기 작업 실행이 끝날 때 실행 될 개체입니다.|  
+|[then](#then)|연결에 콜백 함수 개체는 `completion_future` 연결 된 비동기 작업 실행이 끝날 때 실행 될 개체입니다.|  
 |[to_task](#to_task)|반환 된 `task` 연결 된 비동기 작업에 해당 하는 개체입니다.|  
-|[유효한](#valid)|개체가 비동기 작업에 연결 되었는지 여부를 나타내는 부울 값을 가져옵니다.|  
-|[대기](#wait)|연결 된 비동기 작업이 완료 될 때까지 차단 됩니다.|  
+|[valid](#valid)|개체가 비동기 작업에 연결 되었는지 여부를 나타내는 부울 값을 가져옵니다.|  
+|[wait](#wait)|연결 된 비동기 작업이 완료 될 때까지 차단 됩니다.|  
 |[wait_for](#wait_for)|연결 된 비동기 작업이 완료 될 때까지 차단 또는 지정 된 시간 `_Rel_time` 경과 합니다.|  
 |[wait_until](#wait_until)|현재 시간에서 지정한 값을 초과할 때까지 또는 연결 된 비동기 작업이 완료 될 때까지 차단 `_Abs_time`합니다.|  
   
@@ -77,7 +80,7 @@ class completion_future;
  **네임스페이스:** 동시성  
 
 
-## <a name="ctor"></a>completion_future 
+## <a name="ctor"></a> completion_future 
 
 `completion_future` 클래스의 새 인스턴스를 초기화합니다.  
   
@@ -105,7 +108,7 @@ completion_future(
 |`completion_future(const completion_future& _Other);`|생성자를 복사하여 `completion_future` 클래스의 새 인스턴스를 초기화합니다.|  
 |`completion_future(completion_future&& _Other);`|생성자를 이동시켜 `completion_future` 클래스의 새 인스턴스를 초기화합니다.|  
   
-## <a name="get"></a>가져오기 
+## <a name="get"></a> 가져오기 
 
 연결 된 비동기 작업이 완료 될 때까지 기다립니다. 비동기 작업 중 하나가 발생한 경우 저장된 예외를 throw합니다.  
   
@@ -115,7 +118,7 @@ completion_future(
 void get() const;  
 ```  
   
-## <a name="operator_shared_future"></a>연산자 std::shared_future<void> 
+## <a name="operator_shared_future"></a> 연산자 std::shared_future<void> 
 
 암시적으로 변환 된 `completion_future` 개체는 `std::shared_future` 개체입니다.  
   
@@ -128,7 +131,7 @@ operator std::shared_future<void>() const;
 ### <a name="return-value"></a>반환 값  
  `std::shared_future` 개체입니다.  
   
-## <a name="operator_eq"></a>연산자 = 
+## <a name="operator_eq"></a> 연산자 = 
 
 지정 된의 내용을 복사 `completion_future` 을 여기에 개체입니다.  
   
@@ -153,7 +156,7 @@ completion_future&  operator= (completion_future&& _Other );
 |`completion_future& operator=(const completion_future& _Other);`|전체 복사본을 사용하여 지정된 `completion_future` 개체의 내용을 여기로 복사합니다.|  
 |`completion_future& operator=(completion_future&& _Other);`|이동 할당을 사용하여 지정된 `completion_future` 개체의 내용을 여기로 복사합니다.|  
   
-## <a name="then"></a>그런 다음 
+## <a name="then"></a> 그런 다음 
 
 연결에 콜백 함수 개체는 `completion_future` 연결 된 비동기 작업 실행이 끝날 때 실행 될 개체입니다.  
   
@@ -171,7 +174,7 @@ void then(const _Functor & _Func ) const;
  `_Func`  
  콜백 함수 개체입니다.  
   
-## <a name="to_task"></a>to_task 
+## <a name="to_task"></a> to_task 
 
 반환 된 `task` 연결 된 비동기 작업에 해당 하는 개체입니다.  
   
@@ -184,7 +187,7 @@ concurrency::task<void> to_task() const;
 ### <a name="return-value"></a>반환 값  
  연결된 비동기 작업에 해당하는 `task` 개체입니다.  
   
-## <a name="valid"></a>유효한 
+## <a name="valid"></a> 유효한 
 
 개체가 비동기 작업에 연결되어 있는지 여부를 나타내는 부울 값을 가져옵니다.  
   
@@ -197,7 +200,7 @@ bool valid() const;
 ### <a name="return-value"></a>반환 값  
  개체가 비동기 작업에 연결되어 있으면 `true`이고, 그렇지 않으면 `false`입니다.  
   
-## <a name="wait"></a>대기 
+## <a name="wait"></a> 대기 
 
 연결 된 비동기 작업이 완료 될 때까지 차단 됩니다.  
   
@@ -207,7 +210,7 @@ bool valid() const;
 void wait() const;  
 ```  
   
-## <a name="wait_for"></a>wait_for 
+## <a name="wait_for"></a> wait_for 
 
 연결 된 비동기 작업이 완료 될 때까지 차단 또는 지정 된 시간 `_Rel_time` 경과 합니다.  
   
@@ -235,13 +238,13 @@ std::future_status::future_status wait_for(
 ### <a name="return-value"></a>반환 값  
  반환합니다.  
   
--   `std::future_status::deferred`연결 된 비동기 작업을 실행 하지 않으면 합니다.  
+-   `std::future_status::deferred` 연결 된 비동기 작업을 실행 하지 않으면 합니다.  
   
--   `std::future_status::ready`경우 연결 된 비동기 작업 완료 됩니다.  
+-   `std::future_status::ready` 경우 연결 된 비동기 작업 완료 됩니다.  
   
--   `std::future_status::timeout`지정 된 시간 동안 경과 되었습니다 하는 경우.  
+-   `std::future_status::timeout` 지정 된 시간 동안 경과 되었습니다 하는 경우.  
   
-## <a name="wait_until"></a>wait_until 
+## <a name="wait_until"></a> wait_until 
 
 현재 시간에서 지정한 값을 초과할 때까지 또는 연결 된 비동기 작업이 완료 될 때까지 차단 `_Abs_time`합니다.  
   
@@ -269,13 +272,13 @@ std::future_status::future_status wait_until(
 ### <a name="return-value"></a>반환 값  
  반환합니다.  
   
-1.  `std::future_status::deferred`연결 된 비동기 작업을 실행 하지 않으면 합니다.  
+1.  `std::future_status::deferred` 연결 된 비동기 작업을 실행 하지 않으면 합니다.  
   
-2.  `std::future_status::ready`경우 연결 된 비동기 작업 완료 됩니다.  
+2.  `std::future_status::ready` 경우 연결 된 비동기 작업 완료 됩니다.  
   
-3.  `std::future_status::timeout`지정 된 시간 동안 경과 되었습니다.  
+3.  `std::future_status::timeout` 지정 된 시간 동안 경과 되었습니다.  
   
-## <a name="dtor"></a>~ completion_future 
+## <a name="dtor"></a> ~completion_future 
 
 소멸 된 `completion_future` 개체입니다.  
   

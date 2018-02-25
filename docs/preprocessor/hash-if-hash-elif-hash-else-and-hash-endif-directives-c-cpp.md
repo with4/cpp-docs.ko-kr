@@ -1,12 +1,13 @@
 ---
-title: "#<a name=\"if-elif-else-and-endif-directives-cc--microsoft-docs\"></a>#elif, if, #else, 및 #endif 지시문 (C/c + +) | Microsoft Docs"
+title: "##elif, if, #else, 및 #endif 지시문 (C/c + +) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - '#else'
 - '#endif'
@@ -14,7 +15,8 @@ f1_keywords:
 - '#elif'
 - defined
 - __has_include
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - '#elif directive'
 - conditional compilation, directives
@@ -28,49 +30,50 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8acd8444295175e6aa9fe329e7851456fcd5f7c4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 13a684412b0b0b24cbb9067ef6ea4cf78810c37f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if, #elif, #else, and #endif 지시문 (C/C++)
 `#if` 지시문은 `#elif`, `#else` 및 `#endif` 지시문과 함께 소스 파일 부분들의 컴파일을 제어합니다. `#if` 뒤에 작성하는 식에 0이 아닌 값이 있는 경우 `#if` 지시문 바로 다음에 나오는 줄 그룹은 변환 단위에서 유지됩니다.  
   
 ## <a name="grammar"></a>문법  
- *조건부* :  
+ *conditional* :  
  *if 부분 elif 부품*opt*else 부분*opt*endif 줄*  
   
- *if 부분* :  
+ *if-part* :  
  *if 줄 텍스트*  
   
- *if 줄* :  
- **#if***상수 식*   
+ *if-line* :  
+ **#if**  *constant-expression*  
   
- **#ifdef***식별자*   
+ **#ifdef**  *identifier*  
   
- **#ifndef***식별자*   
+ **#ifndef**  *identifier*  
   
- *elif 부품* :  
+ *elif-parts* :  
  *elif 줄 텍스트*  
   
  *elif 부품 elif 줄 텍스트*  
   
- *elif 줄* :  
- **#elif***상수 식*   
+ *elif-line* :  
+ **#elif**  *constant-expression*  
   
- *else 부분* :  
+ *else-part* :  
  *다른 줄 텍스트*  
   
- *다른 줄* :  
+ *else-line* :  
  `#else`  
   
- *endif 줄* :  
+ *endif-line* :  
  `#endif`  
   
  소스 파일의 각 `#if` 지시문은 닫는 `#endif` 지시문과 일치해야 합니다. 원하는 수의 `#elif` 지시문이 `#if` 및 `#endif` 지시문 사이에 나타날 수 있지만 `#else` 지시문은 하나만 허용됩니다. `#else` 지시문(있을 경우)은 `#endif` 앞에 있는 마지막 지시문이어야 합니다.  

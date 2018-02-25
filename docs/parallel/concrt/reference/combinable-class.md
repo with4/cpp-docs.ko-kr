@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - combinable
 - PPL/concurrency::combinable
@@ -15,19 +16,22 @@ f1_keywords:
 - PPL/concurrency::combinable::combine
 - PPL/concurrency::combinable::combine_each
 - PPL/concurrency::combinable::local
-dev_langs: C++
-helpviewer_keywords: combinable class
+dev_langs:
+- C++
+helpviewer_keywords:
+- combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 698c59614894314e70019fe2b4621755b4cd3085
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a9bec5ce0e6679af71d8d3372fb939223691152a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="combinable-class"></a>combinable 클래스
 `combinable<T>` 개체는 병렬 알고리즘 중에 잠금 없는 스레드 로컬 하위 계산을 수행하기 위해 데이터의 스레드 전용 복사본을 제공합니다. 병렬 작업이 끝나면 스레드 전용 하위 계산을 최종 결과에 병합할 수 있습니다. 이 클래스는 공유 변수 대신 사용될 수 있으며, 그렇지 않을 경우 해당 공유 변수에 대한 경합이 많으면 성능이 향상될 수 있습니다.  
@@ -59,7 +63,7 @@ class combinable;
 |[clear](#clear)|이전 사용에서 중간 계산 결과 지웁니다.|  
 |[combine](#combine)|제공된 된 combine 함수를 호출 하 여 스레드 로컬 하위 계산 집합의 최종 값을 계산 합니다.|  
 |[combine_each](#combine_each)|스레드 로컬 하위 계산에 한 번씩 제공된 combine 함수를 호출 하 여 스레드 로컬 하위 계산 집합의 최종 값을 계산 합니다. 최종 결과 함수 개체에 의해 누적 됩니다.|  
-|[로컬](#local)|오버로드됨. 스레드 전용 하위 계산에 대 한 참조를 반환합니다.|  
+|[local](#local)|오버로드됨. 스레드 전용 하위 계산에 대 한 참조를 반환합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
@@ -78,7 +82,7 @@ class combinable;
   
  **네임스페이스:** 동시성  
   
-##  <a name="clear"></a>선택을 취소합니다 
+##  <a name="clear"></a> 지우기 
 
  이전 사용에서 중간 계산 결과 지웁니다.  
   
@@ -86,7 +90,7 @@ class combinable;
 void clear();
 ```  
   
-##  <a name="ctor"></a>combinable 
+##  <a name="ctor"></a> combinable 
 
  새 `combinable` 개체를 생성합니다.  
   
@@ -116,7 +120,7 @@ combinable(const combinable& _Copy);
   
  세 번째 생성자는 복사 생성자입니다.  
   
-##  <a name="dtor"></a>~ combinable 
+##  <a name="dtor"></a> ~combinable 
 
  `combinable` 개체를 제거합니다.  
   
@@ -124,7 +128,7 @@ combinable(const combinable& _Copy);
 ~combinable();
 ```  
   
-##  <a name="combine"></a>결합 
+##  <a name="combine"></a> 결합 
 
  제공된 된 combine 함수를 호출 하 여 스레드 로컬 하위 계산 집합의 최종 값을 계산 합니다.  
   
@@ -143,7 +147,7 @@ T combine(_Function _FnCombine) const;
 ### <a name="return-value"></a>반환 값  
  모든 스레드 전용 하위 계산을 결합 하 여 최종 결과입니다.  
   
-##  <a name="combine_each"></a>combine_each 
+##  <a name="combine_each"></a> combine_each 
 
  스레드 로컬 하위 계산에 한 번씩 제공된 combine 함수를 호출 하 여 스레드 로컬 하위 계산 집합의 최종 값을 계산 합니다. 최종 결과 함수 개체에 의해 누적 됩니다.  
   
@@ -159,7 +163,7 @@ void combine_each(_Function _FnCombine) const;
  `_FnCombine`  
  하나의 하위 계산을 결합 하는 데 사용 되는 함수입니다. 해당 시그니처는 `void (T)` 또는 `void (const T&)`, 연관 및 누적 이어야 합니다.  
   
-##  <a name="local"></a>로컬 
+##  <a name="local"></a> 로컬 
 
  스레드 전용 하위 계산에 대 한 참조를 반환합니다.  
   
@@ -176,7 +180,7 @@ T& local(bool& _Exists);
 ### <a name="return-value"></a>반환 값  
  스레드 전용 하위 계산에 대 한 참조입니다.  
   
-##  <a name="operator_eq"></a>연산자 = 
+##  <a name="operator_eq"></a> 연산자 = 
 
  에 할당 한 `combinable` 개체에서 다른 `combinable` 개체입니다.  
   

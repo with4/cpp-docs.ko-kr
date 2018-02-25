@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f03b62e045fe0130f981d55767c756df89bca9c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b75a4f682b83fb8a738a5b19a7c5aa9a1b38166a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iterators"></a>반복기
 반복기는 C++ 표준 라이브러리 컨테이너에 있는 요소를 반복하고 개별 요소에 대한 액세스를 제공할 수 있는 개체입니다. C++ 표준 라이브러리 컨테이너는 모두 반복기를 제공하므로 요소가 저장되는 컨테이너 형식을 확인하지 않고도 알고리즘에서 표준 방식으로 해당 요소에 액세스할 수 있습니다.  

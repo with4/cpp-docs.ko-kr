@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - extent
 - AMP/extent
@@ -15,19 +16,22 @@ f1_keywords:
 - AMP/Concurrency::extent::size
 - AMP/Concurrency::extent::tile
 - AMP/Concurrency::extent::rank Constant
-dev_langs: C++
-helpviewer_keywords: extent structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f93bcd69a6f0b05f9566fe3a2ffb6025729b63de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9a8606b01ac5d3676b06c93c373677f2eb85d954
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="extent-class-c-amp"></a>extent 클래스(C++ AMP)
 벡터를 나타냅니다 *N* 의 범위를 지정 하는 정수 값은 *N*-0 원점이 차원 공간입니다. 벡터의 값은 가장 덜 중요 한에 가장 중요 한에서 정렬 됩니다.  
@@ -60,9 +64,9 @@ class extent;
   
 |이름|설명|  
 |----------|-----------------|  
-|[포함](#contains)|확인 하는 지정 된 `extent` 개체에 지정 된 순위입니다.|  
+|[contains](#contains)|확인 하는 지정 된 `extent` 개체에 지정 된 순위입니다.|  
 |[size](#size)|범위 (요소의 단위)에서 총 선형 크기를 반환합니다.|  
-|[바둑판식으로 배열](#tile)|생성 한 `tiled_extent` 제공한 타일 익스텐트 개체가 크기를 지정 합니다.|  
+|[tile](#tile)|생성 한 `tiled_extent` 제공한 타일 익스텐트 개체가 크기를 지정 합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
@@ -73,7 +77,7 @@ class extent;
 |[operator%=](#operator_mod_eq)|모듈러스 (나머지)의 각 요소에 계산의 `extent` 해당 요소는를 숫자로 나눌 때 개체입니다.|  
 |[operator*=](#operator_star_eq)|각 요소를 곱합니다는 `extent` 번호로 개체입니다.|  
 |[operator/=](#operator_min_eq)|분할의 각 요소는 `extent` 번호로 개체입니다.|  
-|[extent:: operator\[\]](#operator_at)|지정된 된 인덱스에 있는 요소를 반환 합니다.|  
+|[extent::operator\[\]](#operator_at)|지정된 된 인덱스에 있는 요소를 반환 합니다.|  
 |[operator+](#operator_add)|새 반환 `extent` 해당 추가 하 여 만든 개체 `index` 및 `extent` 요소입니다.|  
 |[operator++](#operator_add_add)|각 요소를 증가 `extent` 개체입니다.|  
 |[operator+=](#operator_add_eq)|지정된 된 수의 각 요소에 추가 `extent` 개체입니다.|  
@@ -91,7 +95,7 @@ class extent;
  `extent`  
 
 
-## <a name="contains"></a>포함 
+## <a name="contains"></a> 포함 
 
 나타냅니다 있는지 여부를 지정 된 [인덱스](index-class.md) '범위'는 개체 내에서 값이 포함 됩니다.  
   
@@ -106,9 +110,9 @@ bool contains(const index<rank>& _Index) const restrict(amp,cpu);
  `index` 테스트할 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `true`하는 경우 지정 된 `index` 에 포함 된 값의 `extent` 개체; 그렇지 않으면 `false`합니다.  
+ `true` 하는 경우 지정 된 `index` 에 포함 된 값의 `extent` 개체; 그렇지 않으면 `false`합니다.  
   
-##  <a name="ctor"></a>익스텐트 
+##  <a name="ctor"></a> 익스텐트 
 
 '범위' 클래스의 새 인스턴스를 초기화합니다.  
   
@@ -147,7 +151,7 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
   
  배열 생성에 사용 되는 경우는 `extent` 개체 배열의 길이의 순위와 일치 해야 합니다는 `extent` 개체입니다.  
   
-##  <a name="operator_mod_eq"></a>operator % = 
+##  <a name="operator_mod_eq"></a> operator%= 
 
 해당 요소는를 숫자로 나눌 때의 모듈러스 (나머지)의 각 요소에는 '범위'를 계산 합니다.  
   
@@ -164,7 +168,7 @@ extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 ### <a name="return-value"></a>반환 값  
  `extent` 개체  
   
-##  <a name="operator_star_eq"></a>연산자 * = 
+##  <a name="operator_star_eq"></a> operator*= 
 
 지정 된 수 '범위' 개체의 각 요소를 곱합니다.  
   
@@ -181,7 +185,7 @@ extent<_Rank>& operator*=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>반환 값  
  `extent` 개체  
   
-## <a name="operator_add"></a>operator + 
+## <a name="operator_add"></a> operator + 
 
 새 반환 `extent` 해당 추가 하 여 만든 개체 `index` 및 `extent` 요소입니다.  
   
@@ -198,7 +202,7 @@ extent<_Rank> operator+(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>반환 값  
  새로운 `extent` 개체입니다.  
   
-##  <a name="operator_add_add"></a>operator + + 
+##  <a name="operator_add_add"></a> operator + + 
 
 '범위' 개체의 각 요소를 증가 시킵니다.  
   
@@ -212,7 +216,7 @@ extent<_Rank> operator++(int)restrict(amp,cpu);
 ### <a name="return-value"></a>반환 값  
  전위 연산자에 대 한는 `extent` 개체 (`*this`). 접미사 연산자에 대 한 새 `extent` 개체입니다.  
   
-##  <a name="operator_add_eq"></a>+ = 연산자 
+##  <a name="operator_add_eq"></a> operator+= 
 
 '범위' 개체의 각 요소에 지정된 된 숫자를 추가합니다.  
   
@@ -231,7 +235,7 @@ extent<_Rank>& operator+=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>반환 값  
  결과 `extent` 개체입니다.  
   
-##  <a name="operator_min"></a>연산자- 
+##  <a name="operator_min"></a> 연산자- 
 
 새 `extent` 개체에서 지정 된 각 요소를 빼서 `index` 이 해당 요소에서 개체 `extent` 개체입니다.  
   
@@ -248,7 +252,7 @@ extent<_Rank> operator-(const index<_Rank>& _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>반환 값  
  새로운 `extent` 개체입니다.  
   
-##  <a name="operator_min_min"></a>operator- 
+##  <a name="operator_min_min"></a> operator- 
 
 감소 '범위' 개체의 각 요소입니다.  
   
@@ -262,7 +266,7 @@ extent<_Rank> operator--(int)restrict(amp,cpu);
 ### <a name="return-value"></a>반환 값  
  전위 연산자에 대 한는 `extent` 개체 (`*this`). 접미사 연산자에 대 한 새 `extent` 개체입니다.  
   
-##  <a name="operator_div_eq"></a>operator / = 
+##  <a name="operator_div_eq"></a> operator / = 
 
 지정 된 수 '범위' 개체의 각 요소를 나눕니다.  
   
@@ -279,7 +283,7 @@ extent<_Rank>& operator/=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>반환 값  
  `extent` 개체  
   
-##  <a name="operator_min_eq"></a>-= 연산자 
+##  <a name="operator_min_eq"></a> -= 연산자 
 
 '범위' 개체의 각 요소에서 지정된 된 숫자를 뺍니다.  
   
@@ -298,7 +302,7 @@ extent<_Rank>& operator-=(int _Rhs) restrict(amp,cpu);
 ### <a name="return-value"></a>반환 값  
  결과 `extent` 개체입니다.  
   
-##  <a name="operator_eq"></a>연산자 = 
+##  <a name="operator_eq"></a> 연산자 = 
 
 다른 '범위' 개체의 내용을 여기로 복사합니다.  
   
@@ -315,7 +319,7 @@ extent<_Rank>& operator=(const extent<_Rank>& _Other) restrict(amp,cpu);
 ### <a name="return-value"></a>반환 값  
  이에 대 한 참조 `extent` 개체입니다.  
   
-##  <a name="operator_at"></a>extent:: operator\[\] 
+##  <a name="operator_at"></a> extent:: operator \[\] 
 지정된 된 인덱스에 있는 요소를 반환 합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -332,7 +336,7 @@ int& operator[](unsigned int _Index) restrict(amp,cpu);
 ### <a name="return-value"></a>반환 값  
  지정 된 인덱스에 있는 요소입니다.  
   
-##  <a name="rank_constant"></a>순위 
+##  <a name="rank_constant"></a> 순위 
 
 '범위' 개체의 차수를 저장 합니다.  
   
@@ -342,7 +346,7 @@ int& operator[](unsigned int _Index) restrict(amp,cpu);
 static const int rank = _Rank;  
 ```  
   
-##  <a name="size"></a>크기 
+##  <a name="size"></a> 크기 
 
 `extent` 개체(요소의 단위에서)의 총 선형 크기 단위를 반환합니다.  
   
@@ -352,7 +356,7 @@ static const int rank = _Rank;
 unsigned int size() const restrict(amp,cpu);  
 ```  
   
-## <a name="tile"></a>바둑판식으로 배열 
+## <a name="tile"></a> 바둑판식으로 배열 
 
 지정한 타일 차원 tiled_extent 개체를 생성 합니다.
 
@@ -367,9 +371,9 @@ template <int _Dim0, int _Dim1, int _Dim2>
 tiled_extent<_Dim0, _Dim1, _Dim2> tile() const ;
 ```  
 ### <a name="parameters"></a>매개 변수
-`_Dim0`바둑판식된 범위의의 가장 중요 한 구성 요소입니다.
-`_Dim1`바둑판식된 범위의의 다음-에-가장 중요 한 구성 요소입니다.
-`_Dim2`바둑판식 범위의 가장 덜 중요 한 구성 요소입니다.
+`_Dim0` 바둑판식된 범위의의 가장 중요 한 구성 요소입니다.
+`_Dim1` 바둑판식된 범위의의 다음-에-가장 중요 한 구성 요소입니다.
+`_Dim2` 바둑판식 범위의 가장 덜 중요 한 구성 요소입니다.
 
 
   

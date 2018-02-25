@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - Context
 - CONCRT/concurrency::Context
@@ -23,19 +24,22 @@ f1_keywords:
 - CONCRT/concurrency::Context::Unblock
 - CONCRT/concurrency::Context::VirtualProcessorId
 - CONCRT/concurrency::Context::Yield
-dev_langs: C++
-helpviewer_keywords: Context class
+dev_langs:
+- C++
+helpviewer_keywords:
+- Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7a15b041f638312081417daae8c800647fbfb7d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9195ec68a47e2ed528a42bb018cfba6316101a0c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="context-class"></a>Context 클래스
 실행 컨텍스트에 대한 추상화를 나타냅니다.  
@@ -68,7 +72,7 @@ class Context;
 |[IsSynchronouslyBlocked](#issynchronouslyblocked)|컨텍스트에서 동기적으로 차단 여부를 결정 합니다. 컨텍스트를 명시적으로 차단를 초래한 작업을 수행 하는 경우 차단 동기적으로 간주 됩니다.|  
 |[초과 구독](#oversubscribe)|해당 스케줄러의 가상 프로세서 중 하나에서 실행 되는 컨텍스트에서 될 때 코드 블록의 기간에 대 한 스케줄러에 추가 가상 프로세서를 삽입 합니다.|  
 |[ScheduleGroupId](#schedulegroupid)|현재 컨텍스트를 작업 하는 일정 그룹에 대 한 식별자를 반환 합니다.|  
-|[차단 해제](#unblock)|컨텍스트를 차단 해제 하 고 실행할 수 없게 합니다.|  
+|[Unblock](#unblock)|컨텍스트를 차단 해제 하 고 실행할 수 없게 합니다.|  
 |[VirtualProcessorId](#virtualprocessorid)|현재 컨텍스트가 실행 중인 가상 프로세서에 대 한 식별자를 반환 합니다.|  
 |[Yield](#yield)|다른 컨텍스트에서 실행할 수 있도록 실행을 양도합니다. 양도할 수 있는 다른 컨텍스트가 없는 경우 스케줄러에서 다른 운영 체제 스레드에 양도할 수 있습니다.|  
   
@@ -87,7 +91,7 @@ class Context;
   
  **네임스페이스:** 동시성  
   
-##  <a name="block"></a>블록 
+##  <a name="block"></a> 블록 
 
  현재 컨텍스트를 차단 합니다.  
   
@@ -104,13 +108,13 @@ static void __cdecl Block();
   
  이 메서드는 다양 한 예외를 포함 하 여 throw 할 수 있습니다 [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md)합니다.  
   
-##  <a name="dtor"></a>~ 컨텍스트 
+##  <a name="dtor"></a> ~Context 
 
 ```
 virtual ~Context();
 ```  
   
-##  <a name="currentcontext"></a>CurrentContext 
+##  <a name="currentcontext"></a> CurrentContext 
 
  현재 컨텍스트에 대 한 포인터를 반환합니다.  
   
@@ -124,7 +128,7 @@ static Context* __cdecl CurrentContext();
 ### <a name="remarks"></a>설명  
  이 메서드를 사용하면 현재 호출 컨텍스트와 연결된 스케줄러가 없는 경우 프로세스의 기본 스케줄러가 생성되고 호출 컨텍스트에 연결됩니다.  
   
-##  <a name="getid"></a>GetId 
+##  <a name="getid"></a> GetId 
 
  컨텍스트 속해 있는 스케줄러 내에서 고유한 컨텍스트에 대 한 식별자를 반환 합니다.  
   
@@ -135,7 +139,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>반환 값  
  컨텍스트 속해 있는 스케줄러 내에서 고유한 컨텍스트에 대 한 식별자입니다.  
   
-##  <a name="getschedulegroupid"></a>GetScheduleGroupId 
+##  <a name="getschedulegroupid"></a> GetScheduleGroupId 
 
  컨텍스트는 현재 작업의 일정 그룹에 대 한 식별자를 반환 합니다.  
   
@@ -149,7 +153,7 @@ virtual unsigned int GetScheduleGroupId() const = 0;
 ### <a name="remarks"></a>설명  
  이 메서드의 반환 값은 컨텍스트에서 실행 되는 일정 그룹의 순간 샘플링입니다. 이 메서드가 현재 컨텍스트가 아닌 다른 컨텍스트에서 호출될 경우 값은 반환되는 순간에 부실 값이 되어 사용할 수 없습니다. 일반적으로이 메서드를 디버깅 하거나 추적 목적 으로만 사용 됩니다.  
   
-##  <a name="getvirtualprocessorid"></a>GetVirtualProcessorId 
+##  <a name="getvirtualprocessorid"></a> GetVirtualProcessorId 
 
  에 컨텍스트는 현재 실행 중인 가상 프로세서에 대 한 식별자를 반환 합니다.  
   
@@ -163,7 +167,7 @@ virtual unsigned int GetVirtualProcessorId() const = 0;
 ### <a name="remarks"></a>설명  
  이 메서드의 반환 값은 컨텍스트에서 실행 중인 가상 프로세서의 순간 샘플링입니다. 이 값은 반환되는 순간 부실할 수 있으며, 이 값에 의존할 수 없습니다. 일반적으로이 메서드를 디버깅 하거나 추적 목적 으로만 사용 됩니다.  
   
-##  <a name="id"></a>Id 
+##  <a name="id"></a> Id 
 
  현재 컨텍스트에 속해 있는 스케줄러 내에서 고유한 현재 컨텍스트에 대 한 식별자를 반환 합니다.  
   
@@ -174,7 +178,7 @@ static unsigned int __cdecl Id();
 ### <a name="return-value"></a>반환 값  
  현재 컨텍스트가; 현재 컨텍스트에 속해 있는 스케줄러 내에서 고유한 현재 컨텍스트에 대 한 식별자는 스케줄러에 연결 된 경우 그렇지 않으면 값 `-1`합니다.  
   
-##  <a name="iscurrenttaskcollectioncanceling"></a>IsCurrentTaskCollectionCanceling 
+##  <a name="iscurrenttaskcollectioncanceling"></a> IsCurrentTaskCollectionCanceling 
 
  반환 여부를 나타내는 표시 현재 컨텍스트에서 현재 인라인으로 실행 작업 컬렉션이 활성 취소 (또는 곧).  
   
@@ -185,7 +189,7 @@ static bool __cdecl IsCurrentTaskCollectionCanceling();
 ### <a name="return-value"></a>반환 값  
  스케줄러 호출 컨텍스트에 연결 된 작업 그룹은 해당 컨텍스트에서 작업 인라인 실행을 여부를 해당 작업 그룹이 활성 취소 (또는 곧); 그렇지 않으면 값 `false`합니다.  
   
-##  <a name="issynchronouslyblocked"></a>IsSynchronouslyBlocked 
+##  <a name="issynchronouslyblocked"></a> IsSynchronouslyBlocked 
 
  컨텍스트에서 동기적으로 차단 여부를 결정 합니다. 컨텍스트를 명시적으로 차단를 초래한 작업을 수행 하는 경우 차단 동기적으로 간주 됩니다.  
   
@@ -201,7 +205,7 @@ virtual bool IsSynchronouslyBlocked() const = 0;
   
  이 메서드의 반환 값은 컨텍스트 동기적으로 차단 여부의 순간 샘플. 이 값이 반환 하 고 특정 상황 에서만 사용할 수 있습니다는 순간 부실 할 수 있습니다.  
   
-##  <a name="operator_delete"></a>delete 연산자 
+##  <a name="operator_delete"></a> delete 연산자 
 
  A `Context` 개체는 런타임에 의해 내부적으로 소멸 됩니다. 개체를 명시적으로 삭제할 수 없습니다.  
   
@@ -213,7 +217,7 @@ void operator delete(void* _PObject);
  `_PObject`  
  삭제할 개체에 대 한 포인터입니다.  
   
-##  <a name="oversubscribe"></a>초과 구독 
+##  <a name="oversubscribe">초과 구독</a> 
 
  해당 스케줄러의 가상 프로세서 중 하나에서 실행 되는 컨텍스트에서 될 때 코드 블록의 기간에 대 한 스케줄러에 추가 가상 프로세서를 삽입 합니다.  
   
@@ -225,7 +229,7 @@ static void __cdecl Oversubscribe(bool _BeginOversubscription);
  `_BeginOversubscription`  
  경우 `true`는 초과 구독 기간에 대 한 추가 가상 프로세서를 추가 해야 함을 나타냅니다. 경우 `false`, 표시 된 초과 구독을 종료 해야 하 고 이전에 추가한 가상 프로세서를 제거 해야 합니다.  
   
-##  <a name="schedulegroupid"></a>ScheduleGroupId 
+##  <a name="schedulegroupid"></a> ScheduleGroupId 
 
  현재 컨텍스트를 작업 하는 일정 그룹에 대 한 식별자를 반환 합니다.  
   
@@ -236,7 +240,7 @@ static unsigned int __cdecl ScheduleGroupId();
 ### <a name="return-value"></a>반환 값  
  현재 컨텍스트의;에서 작업 스케줄러에 연결 된 현재 컨텍스트 및에 일정 그룹에 대 한 작업 스케줄러에 대 한 식별자 그룹 하는 경우 그렇지 않으면 값 `-1`합니다.  
   
-##  <a name="unblock"></a>차단 해제 
+##  <a name="unblock"></a> Unblock 
 
  컨텍스트를 차단 해제 하 고 실행할 수 없게 합니다.  
   
@@ -251,7 +255,7 @@ virtual void Unblock() = 0;
   
  코드에서 호출할 수 있는 다른 스레드의 대 한 컨텍스트를 게시 하는 있는 지점 간의 중요 한은는 `Unblock` 메서드 및 실제 메서드를 호출 하는 위치 지점 `Block` 이루어집니다. 이 기간 동안에는 잠금 가져오기 등과 같은 개별적인 이유로 차단하거나 차단 해제할 수 있는 메서드를 호출해서는 안 됩니다. 에 대 한 호출이 `Block` 및 `Unblock` 메서드 차단 및 차단 해제에 대 한 이유를 추적 하지 않습니다. 하나의 개체의 소유권을 가져야는 `Block` 및 `Unblock` 쌍입니다.  
   
-##  <a name="virtualprocessorid"></a>VirtualProcessorId 
+##  <a name="virtualprocessorid"></a> VirtualProcessorId 
 
  현재 컨텍스트가 실행 중인 가상 프로세서에 대 한 식별자를 반환 합니다.  
   
@@ -265,7 +269,7 @@ static unsigned int __cdecl VirtualProcessorId();
 ### <a name="remarks"></a>설명  
  이 메서드의 반환 값은 현재 컨텍스트가 실행 중인 가상 프로세서의 순간 샘플링입니다. 이 값은 반환되는 순간 부실할 수 있으며, 이 값에 의존할 수 없습니다. 일반적으로이 메서드를 디버깅 하거나 추적 목적 으로만 사용 됩니다.  
   
-##  <a name="yield"></a>Yield 
+##  <a name="yield"></a> Yield 
 
  다른 컨텍스트에서 실행할 수 있도록 실행을 양도합니다. 양도할 수 있는 다른 컨텍스트가 없는 경우 스케줄러에서 다른 운영 체제 스레드에 양도할 수 있습니다.  
   
@@ -276,7 +280,7 @@ static void __cdecl Yield();
 ### <a name="remarks"></a>설명  
  이 메서드를 사용하면 현재 호출 컨텍스트와 연결된 스케줄러가 없는 경우 프로세스의 기본 스케줄러가 생성되고 호출 컨텍스트에 연결됩니다.  
   
-##  <a name="yieldexecution"></a>YieldExecution 
+##  <a name="yieldexecution"></a> YieldExecution 
 
  다른 컨텍스트에서 실행할 수 있도록 실행을 양도합니다. 양도할 수 있는 다른 컨텍스트가 없는 경우 스케줄러에서 다른 운영 체제 스레드에 양도할 수 있습니다.  
   

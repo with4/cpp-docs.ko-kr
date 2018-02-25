@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_wyxz
 - amp_short_vectors/Concurrency::graphics::float_4::zxw
@@ -273,18 +274,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_x
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 049099c5a6b2a08d1482f4074b8b316ccb14562d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6f4e168215270cca2112efa43b7faa225b972c34
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="float4-class"></a>float_4 클래스
 4 개의 부동 소수점의 short 벡터를 나타냅니다.  
@@ -455,19 +458,19 @@ class float_4;
 |이름|설명|  
 |----------|-----------------|  
 |float_4::operator-||  
-|float_4::operator-||  
-|float_4::operator * =||  
-|float_4::operator / =||  
-|float_4::operator + +||  
-|float_4::operator + =||  
-|float_4::operator =||  
-|-= float_4::operator||  
+|float_4::operator--||  
+|float_4::operator*=||  
+|float_4::operator/=||  
+|float_4::operator++||  
+|float_4::operator+=||  
+|float_4::operator=||  
+|float_4::operator-=||  
   
 ### <a name="public-constants"></a>공용 상수  
   
 |이름|설명|  
 |----------|-----------------|  
-|[상수 크기](#float_4__size)||  
+|[size Constant](#float_4__size)||  
   
 ### <a name="public-data-members"></a>공용 데이터 멤버  
   
@@ -610,7 +613,7 @@ class float_4;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="ctor"></a>float_4 
+##  <a name="ctor"></a> float_4 
 
  기본 생성자, 0 인 모든 요소를 초기화 합니다.  
   
@@ -681,7 +684,7 @@ explicit inline float_4(
  `_Other`  
  초기화 하는 데 사용 되는 개체입니다.  
   
-##  <a name="float_4__size"></a>크기 
+##  <a name="float_4__size"></a> 크기 
 
 ```  
 static const int size = 4;  

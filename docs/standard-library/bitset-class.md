@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - bitset/std::bitset
 - bitset/std::bitset::element_type
@@ -23,7 +24,8 @@ f1_keywords:
 - bitset/std::bitset::to_ullong
 - bitset/std::bitset::to_ulong
 - bitset/std::bitset::reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::bitset [C++]
 - std::bitset [C++], element_type
@@ -41,16 +43,17 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f1bdd59695e7c1be32d65bcb9f49e01fa8903eaa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: abc205a0de58430ea70d843dd73c4bf7f0caaea0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="bitset-class"></a>bitset 클래스
 일련의 항목 또는 조건에 대한 플래그를 유지하는 간단한 방법을 제공하는 고정 비트 수로 구성된 시퀀스를 저장하는 개체의 유형에 대해 설명합니다. bitset 클래스에서는 비트 컬렉션을 포함하고 각 비트에 대한 constant-time 액세스 권한을 제공하는 형식 bitset의 개체에 대한 작업을 지원합니다.  
@@ -466,7 +469,7 @@ bitset\<N>& flip(size_t _Pos);
  멤버 함수가 호출된, 수정된 bitset의 복사본입니다.  
   
 ### <a name="remarks"></a>설명  
- 비트가 반전된 **bitset\<***N***>**의 *N* 크기보다 매개 변수로 지정된 위치가 더 큰 경우 두 번째 멤버 함수는 [out_of_range](../standard-library/out-of-range-class.md) 예외를 throw합니다.  
+ 두 번째 멤버 함수에서 throw 한 [out_of_range](../standard-library/out-of-range-class.md) 매개 변수로 지정 된 위치가 크기 보다 큰 경우 예외 *N* 의 **bitset\<***N***  >**  비트가 반전 되었습니다.  
   
 ### <a name="example"></a>예  
   
@@ -1173,7 +1176,7 @@ public:
  클래스 참조의 첫 번째, 두 번째 및 다섯 번째 멤버 함수에 대한 인수 위치로 지정된 bitset 내 비트에 대한 참조이며, 클래스 참조의 세 번째 및 네 번째 멤버 함수에 대한 bitset 내 수정된 비트의 값에 따라 **true** 또는 **false**입니다.  
   
 ### <a name="remarks"></a>설명  
- `reference` 클래스는 `operator[]` bitset에 대한 도우미 클래스로서만 존재합니다. 멤버 클래스는 bitset 내 개별 비트에 액세스할 수 있는 개체를 설명합니다. *b*는 `bool` 형식의 개체이고, *x* 및 *y* 개체는 **bitset\<***N***>** 형식이고, *i* 및 *j*는 그러한 개체 내 유효한 위치라고 가정하겠습니다. *x [i]* 표기법은 *x* bitset 내 *i* 위치에 있는 비트를 참조합니다. `reference` 클래스의 멤버 함수는 다음 연산을 차례로 제공합니다.  
+ `reference` 클래스는 `operator[]` bitset에 대한 도우미 클래스로서만 존재합니다. 멤버 클래스는 bitset 내 개별 비트에 액세스할 수 있는 개체를 설명합니다. Let *b* 형식의 개체 수 `bool`, *x* 및 *y* 유형의 개체 **bitset\<***N*** >** , 및 *i* 및 *j* 이러한 개체 내에서 유효한 위치입니다. *x [i]* 표기법은 *x* bitset 내 *i* 위치에 있는 비트를 참조합니다. `reference` 클래스의 멤버 함수는 다음 연산을 차례로 제공합니다.  
   
 |작업|정의|  
 |---------------|----------------|  

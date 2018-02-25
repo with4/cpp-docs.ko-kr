@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - section_CPP
 - vc-pragma.section
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pragmas, section
 - section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fc6035caeb3b2fe466d18ea92300b3135a6189f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 10f5783c6712852bfb53f457cea174f699c01ea0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="section"></a>section
 .obj 파일에서 섹션을 만듭니다.  
@@ -51,19 +54,19 @@ ms.lasthandoff: 12/21/2017
  **write**  
  데이터에 대한 쓰기 작업을 허용합니다.  
   
- **실행**  
+ **execute**  
  코드가 실행될 수 있도록 합니다.  
   
- **공유**  
+ **shared**  
  이미지를 로드하는 모든 프로세스에서 섹션을 공유합니다.  
   
  **nopage**  
  섹션을 페이징할 수 없는 것으로 표시합니다. Win32 장치 드라이버에 유용합니다.  
   
- **캐시 없음**  
+ **nocache**  
  섹션을 캐시할 수 없는 것으로 표시합니다. Win32 장치 드라이버에 유용합니다.  
   
- **취소**  
+ **discard**  
  섹션을 삭제할 수 있는 것으로 표시합니다. Win32 장치 드라이버에 유용합니다.  
   
  **remove**  

@@ -5,19 +5,19 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - exception/std::exception_ptr
 - exception/std::terminate_handler
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
-caps.latest.revision: "7"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: e674e7ca53338b379ea029f5d9ad802443ccbb30
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 24f4fc5d30a95d55b5a4241d9c70eca31255fc18
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltexceptiongt-typedefs"></a>&lt;exception&gt; 형식 정의
 ||||  
@@ -56,7 +56,7 @@ typedef void (*terminate_handler)();
 ### <a name="remarks"></a>설명  
  이 형식은 종료 처리기로 사용하는 데 적합한 함수의 포인터에 대해 설명합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `terminate_handler` 사용에 대한 예제는 [set_terminate](../standard-library/exception-functions.md#set_terminate)를 참조하세요.  
   
 ##  <a name="unexpected_handler"></a>  unexpected_handler  
@@ -66,7 +66,7 @@ typedef void (*terminate_handler)();
 typedef void (*unexpected_handler)();
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `unexpected_handler` 사용에 대한 예제는 [set_unexpected](../standard-library/exception-functions.md#set_unexpected)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

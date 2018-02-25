@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IThreadProxy
 - CONCRTRM/concurrency::IThreadProxy
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::SwitchOut
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::SwitchTo
 - CONCRTRM/concurrency::IThreadProxy::IThreadProxy::YieldToSystem
-dev_langs: C++
-helpviewer_keywords: IThreadProxy structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bc0808d7b6eae3db64695d2d3e0b40d092361a6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e96f02677e3a79d1a6e15b9b22b777ca794b516d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy 구조체
 실행 스레드에 대한 추상화입니다. 직접 만든 스케줄러의 `SchedulerType` 정책 키에 따라 리소스 관리자는 일반 Win32 스레드 또는 UMS(사용자 모드 예약 가능) 스레드 중 하나에서 지원되는 스레드 프록시를 부여합니다. UMS 스레드는 Windows 7 이상 버전의 64비트 운영 체제에서 지원됩니다.  
@@ -43,10 +47,10 @@ struct IThreadProxy;
   
 |이름|설명|  
 |----------|-----------------|  
-|[Ithreadproxy:: Getid](#getid)|스레드 프록시에 대 한 고유 식별자를 반환합니다.|  
-|[Ithreadproxy:: Switchout](#switchout)|내부 가상 프로세서 루트에서 컨텍스트의 연결을 끊습니다.|  
-|[Ithreadproxy:: Switchto](#switchto)|현재 실행 컨텍스트를 다른 맵으로 협조적 컨텍스트 전환을 수행합니다.|  
-|[Ithreadproxy:: Yieldtosystem](#yieldtosystem)|호출 스레드가 현재 프로세서에서 실행할 준비가 되어 있는 다른 스레드에 실행 명령을 내리도록 합니다. 운영 체제를 실행할 수는 다음 스레드를 선택 합니다.|  
+|[IThreadProxy::GetId](#getid)|스레드 프록시에 대 한 고유 식별자를 반환합니다.|  
+|[IThreadProxy::SwitchOut](#switchout)|내부 가상 프로세서 루트에서 컨텍스트의 연결을 끊습니다.|  
+|[IThreadProxy::SwitchTo](#switchto)|현재 실행 컨텍스트를 다른 맵으로 협조적 컨텍스트 전환을 수행합니다.|  
+|[IThreadProxy::YieldToSystem](#yieldtosystem)|호출 스레드가 현재 프로세서에서 실행할 준비가 되어 있는 다른 스레드에 실행 명령을 내리도록 합니다. 운영 체제를 실행할 수는 다음 스레드를 선택 합니다.|  
   
 ## <a name="remarks"></a>설명  
  스레드 프록시는 인터페이스에서 표시 하는 실행 컨텍스트에 연결 되어 있으며 `IExecutionContext` 작업 디스패치 하는 방법으로 합니다.  
@@ -59,7 +63,7 @@ struct IThreadProxy;
   
  **네임스페이스:** 동시성  
   
-##  <a name="getid"></a>Ithreadproxy:: Getid 메서드  
+##  <a name="getid"></a>  IThreadProxy::GetId Method  
  스레드 프록시에 대 한 고유 식별자를 반환합니다.  
   
 ```
@@ -69,7 +73,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>반환 값  
  고유 정수 식별자입니다.  
   
-##  <a name="switchout"></a>Ithreadproxy:: Switchout 메서드  
+##  <a name="switchout"></a>  IThreadProxy::SwitchOut Method  
  내부 가상 프로세서 루트에서 컨텍스트의 연결을 끊습니다.  
   
 ```
@@ -89,11 +93,11 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
   
  다시 초기화된 가상 프로세서 루트는 리소스 관리자가 스케줄러를 부여한 새로운 가상 프로세서 루트와 차이가 없습니다. 이는 `IVirtualProcessorRoot::Activate`를 사용하여 실행 컨텍스트로 가상 프로세서 루트를 활성화함으로써 실행하는 데 사용할 수 있습니다.  
   
- `SwitchOut`호출 해야는 `IThreadProxy` 현재 실행 중인 스레드 또는 결과 나타내는 인터페이스를 정의 되지 않습니다.  
+ `SwitchOut` 호출 해야는 `IThreadProxy` 현재 실행 중인 스레드 또는 결과 나타내는 인터페이스를 정의 되지 않습니다.  
   
  Visual Studio 2010과 함께 제공된 헤더 및 라이브러리에서 이 메서드는 매개 변수를 사용하지 않으며 가상 프로세서 루트를 다시 초기화하지 않습니다. 이전 동작을 유지하기 위해 `Blocking`의 기본 매개 변수 값이 제공됩니다.  
   
-##  <a name="switchto"></a>Ithreadproxy:: Switchto 메서드  
+##  <a name="switchto"></a>  IThreadProxy::SwitchTo Method  
  현재 실행 컨텍스트를 다른 맵으로 협조적 컨텍스트 전환을 수행합니다.  
   
 ```
@@ -118,9 +122,9 @@ virtual void SwitchTo(
   
  값을 사용 하 여 `Nesting` 실행 중인 가상 프로세서 루트에서이 스레드 프록시를 일시적으로 분리 하려는 시점과 스케줄러 작업을 디스패치 됩니다. 호출 `SwitchTo` 매개 변수와 함께 `switchState` 로 설정 `Nesting` 실행 컨텍스트를 사용 하면 `pContext` 를 실행 하 고 현재 시작 스레드 프록시도 계속 가상 프로세서 루트에 대 한 필요 없이 실행 합니다. 스레드 프록시를 호출할 때까지 스케줄러에 남아 있는 것으로 간주 됩니다는 [ithreadproxy:: Switchout](#switchout) 메서드는 나중 시간에 있습니다. `IThreadProxy::SwitchOut` 메서드 가상 프로세서 루트와 일정을 조정 하는 수 있을 때까지 스레드 프록시를 차단할 수 없습니다.  
   
- `SwitchTo`호출 해야는 `IThreadProxy` 현재 실행 중인 스레드 또는 결과 나타내는 인터페이스를 정의 되지 않습니다. Throw `invalid_argument` 경우 매개 변수 `pContext` 로 설정 된 `NULL`합니다.  
+ `SwitchTo` 호출 해야는 `IThreadProxy` 현재 실행 중인 스레드 또는 결과 나타내는 인터페이스를 정의 되지 않습니다. Throw `invalid_argument` 경우 매개 변수 `pContext` 로 설정 된 `NULL`합니다.  
   
-##  <a name="yieldtosystem"></a>Ithreadproxy:: Yieldtosystem 메서드  
+##  <a name="yieldtosystem"></a>  IThreadProxy::YieldToSystem Method  
  호출 스레드가 현재 프로세서에서 실행할 준비가 되어 있는 다른 스레드에 실행 명령을 내리도록 합니다. 운영 체제를 실행할 수는 다음 스레드를 선택 합니다.  
   
 ```
@@ -130,7 +134,7 @@ virtual void YieldToSystem() = 0;
 ### <a name="remarks"></a>설명  
  일반 Windows 스레드를 통해 지원 스레드 프록시에 의해 호출 될 때 `YieldToSystem` Windows 함수 처럼 정확 하 게 동작 `SwitchToThread`합니다. 그러나 사용자 모드 예약 가능 (UMS) 스레드에서 호출 될 때는 `SwitchToThread` 함수는 운영 체제가 아닌 사용자 모드 스케줄러를 실행 하는 다음 스레드에서 선택 하는 작업을 위임 합니다. 시스템에서 준비 다른 스레드로 전환의 원하는 효과 얻기 위해 사용 하 여 `YieldToSystem`합니다.  
   
- `YieldToSystem`호출 해야는 `IThreadProxy` 현재 실행 중인 스레드 또는 결과 나타내는 인터페이스를 정의 되지 않습니다.  
+ `YieldToSystem` 호출 해야는 `IThreadProxy` 현재 실행 중인 스레드 또는 결과 나타내는 인터페이스를 정의 되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Namespace 동시성](concurrency-namespace.md)   

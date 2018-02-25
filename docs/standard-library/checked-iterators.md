@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: _SECURE_SCL_THROWS
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- _SECURE_SCL_THROWS
+dev_langs:
+- C++
 helpviewer_keywords:
 - Safe Libraries
 - Safe Libraries, C++ Standard Library
@@ -16,16 +19,17 @@ helpviewer_keywords:
 - iterators, checked
 - checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8997741b4290214aa8f147aa7b841424467e296b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6c3ba2f1c1914001da8d295f5a3729979cdefe95
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 확인된 반복기는 컨테이너 경계를 덮어쓰지 않습니다. 확인된 반복기는 릴리스 빌드 및 디버그 빌드에 모두 적용됩니다. 디버그 모드에서 컴파일할 때 디버그 반복기를 사용하는 방법에 대한 자세한 내용은 [Debug Iterator Support](../standard-library/debug-iterator-support.md)(디버그 반복기 지원)를 참조하세요.  

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - numeric/std::accumulate
 - numeric/std::adjacent_difference
@@ -13,7 +13,7 @@ f1_keywords:
 - numeric/std::iota
 - numeric/std::partial_sum
 ms.assetid: a4b0449a-c80c-4a1d-8d9f-d7fcd0058f8b
-caps.latest.revision: "13"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::accumulate [C++]
@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::inner_product [C++]
 - std::iota [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: 9b1c992930fb6b35498f04357e783d01db3a229c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: b0437225718e402ac2c8b9a22af5b4825128cbd6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 함수
 ||||  
@@ -67,7 +67,7 @@ Type accumulate(
 ### <a name="remarks"></a>설명  
  초기값을 사용하면 범위가 비어 있을 때도 결과가 적절하게 정의되며 `val`이 반환됩니다. 이진 연산은 결합 법칙이나 교환 법칙이 성립하지 않아도 됩니다. 결과는 초기값 `val`로 초기화되며, 그리고 나면 범위 전체에서 *result* = `binary_op` ( *result*, **\***`Iter`)가 반복 계산됩니다. 여기서 `Iter`은 범위의 연속 요소를 가리키는 반복기입니다. 범위는 유효해야 하며 복잡성은 범위의 크기에 비례해야 합니다. 반복 중에 닫기가 가능하도록 하려면 이진 연산자의 반환 형식을 **Type**으로 변환할 수 있어야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // numeric_accum.cpp  
@@ -209,7 +209,7 @@ OutputIterator adjacent_difference(
   
  이항 연산 `binary_op`는 적용 연산 순서가 완전히 적용되므로 결합성이 있거나 가환적일 필요가 없습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // numeric_adj_diff.cpp  
@@ -313,20 +313,20 @@ Type inner_product(
 ### <a name="return-value"></a>반환 값  
  첫 번째 구성원 함수는 요소별 곱의 합을 반환하고 해당 합을 지정된 초기값에 더합니다. 따라서 값 *a*i 및 *b*i의 범위에 대해 이 함수는 다음 결과를 반환합니다.  
   
- `val`+ ( *는*1 \* *b*1) + ( *는*2 \* *b*2) + … + ( *는* n  \* *b*n) 
+ `val` + ( *a*1 \* *b*1 ) + ( *a*2 \* *b*2 ) + ... + ( *a*n \* *b*n ) 
   
  반복적으로 대체 하 여 `val` 와 `val` + ( *는*i \* *b*i).  
   
  두 번째 구성원 함수는 다음 결과를 반환합니다.  
   
- `val`*binary_op1* ( *는*1 *binary_op2* *b*1) *binary_op1* ( *는*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* ( *는*n *binary_op2* *b*n)  
+ `val` *binary_op1* ( *는*1 *binary_op2* *b*1) *binary_op1* ( *는*2 *binary_op2* *b*2) *binary_op1* ... *binary_op1* ( *는*n *binary_op2* *b*n)  
   
  반복적으로 대체 하 여 `val` 와 `val` *binary_op1* ( *는*i *binary_op2* *b*i).  
   
 ### <a name="remarks"></a>설명  
  초기값을 사용하면 범위가 비어 있을 때도 결과가 적절하게 정의되며 `val`이 반환됩니다. 이진 연산은 결합 법칙이나 교환 법칙이 성립하지 않아도 됩니다. 범위는 유효해야 하며 복잡성은 범위의 크기에 비례해야 합니다. 반복 중에 닫기가 가능하도록 하려면 이진 연산자의 반환 형식을 **Type**으로 변환할 수 있어야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // numeric_inner_prod.cpp  
@@ -436,7 +436,7 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
   
 ### <a name="remarks"></a>설명  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   다음 예제에서는 [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle) 함수를 사용할 수 있도록 정수 [list](../standard-library/list.md)를 채운 다음 `list`로 [vector](../standard-library/vector.md)를 채우는 `iota` 함수의 몇 가지 사용 방법을 보여 줍니다.  
   
 ```cpp  
@@ -520,7 +520,7 @@ OutputIterator partial_sum(
   
  이항 연산 `binary_op`는 적용 연산 순서가 완전히 적용되므로 결합성이 있거나 가환적일 필요가 없습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // numeric_partial_sum.cpp  

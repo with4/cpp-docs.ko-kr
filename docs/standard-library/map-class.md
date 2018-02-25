@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - map/std::map
 - map/std::map::allocator_type
@@ -50,7 +51,8 @@ f1_keywords:
 - map/std::map::swap
 - map/std::map::upper_bound
 - map/std::map::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::map [C++]
 - std::map [C++], allocator_type
@@ -95,16 +97,17 @@ helpviewer_keywords:
 - std::map [C++], upper_bound
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d83bebb0953ee3ed7acec9e0e732cef6e5b3816f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: be1d2ddf9c80c2039608a3cf5f459284796b685d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="map-class"></a>map 클래스
 각 요소가 데이터 값과 정렬 키를 갖고 있는 쌍인 컬렉션에서 데이터의 저장과 검색에 사용됩니다. 키 값은 고유하며 데이터를 자동으로 정렬하는 데 사용됩니다.  
@@ -1504,7 +1507,7 @@ typedef implementation-defined iterator;
 ```  
   
 ### <a name="remarks"></a>설명  
- map에 의해 정의된 **iterator**는 `pair`*\<***constKey**, **Type***>* 형식의 [value_type](#value_type) 개체인 요소를 가리킵니다. 여기서 첫 번째 멤버는 요소에 대한 키이고 두 번째 멤버는 요소에 포함된 매핑된 데이텀입니다.  
+ **반복기** 지도 점의 개체는 요소에 의해 정의 된 [value_type](#value_type), 즉 형식의 `pair` * \< * **constKey** , **형식 * * * >*의 첫 번째 멤버 키 요소이 고 멤버 요소가 매핑된 데이터는 두 번째입니다.  
   
  map의 요소를 가리키는 **iterator**`Iter`를 역참조하려면 **->** 연산자를 사용합니다.  
   
@@ -2310,7 +2313,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ### <a name="remarks"></a>설명  
  `reverse_iterator` 형식은 요소 값을 수정할 수 없으며 map을 역방향으로 반복하는 데 사용됩니다.  
   
- map에 의해 정의된 `reverse_iterator`는 `pair`*\<***constKey**, **Type***>* 형식의 [value_type](#value_type) 개체인 요소를 가리킵니다. 여기서 첫 번째 멤버는 요소에 대한 키이고 두 번째 멤버는 요소에 포함된 매핑된 데이텀입니다.  
+ `reverse_iterator` 지도 점의 개체는 요소에 의해 정의 된 [value_type](#value_type), 즉 형식의 `pair` * \< * **constKey**, * *형식 * * * >*의 첫 번째 멤버 키 요소이 고 멤버 요소가 매핑된 데이터는 두 번째입니다.  
   
  역참조에 `reverse_iterator` `rIter` 사용 하 여 map에서 요소를 가리키는  **->**  연산자입니다.  
   

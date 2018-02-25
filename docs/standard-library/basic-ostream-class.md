@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ostream/std::basic_ostream
 - ostream/std::basic_ostream::flush
@@ -16,7 +17,8 @@ f1_keywords:
 - ostream/std::basic_ostream::swap
 - ostream/std::basic_ostream::tellp
 - ostream/std::basic_ostream::write
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::basic_ostream [C++]
 - std::basic_ostream [C++], flush
@@ -27,16 +29,17 @@ helpviewer_keywords:
 - std::basic_ostream [C++], tellp
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d08410c68a2cff5a1c85733c4a2a2ed1775754b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6c9890fcbcebb86357d344b13c346a849cad4bcb
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="basicostream-class"></a>basic_ostream 클래스
 이 템플릿 클래스는 문자 특성이 **Tr**([traits_type](../standard-library/basic-ios-class.md#traits_type)이라고도 함)에 의해 결정되는 **Elem**([char_type](../standard-library/basic-ios-class.md#char_type)이라고도 함) 형식의 요소가 있는 스트림 버퍼에 요소 및 인코드된 개체의 삽입을 제어하는 개체를 설명합니다.  
@@ -265,7 +268,7 @@ basic_ostream<Elem, Tr>& operator<<(basic_streambuf<Elem, Tr>* strbuf);
 basic_ostream<Elem, Tr>& operator<<(bool val);
 ```  
   
- 변환 `_Val` 부울으로 필드를 호출 하 여 삽입 [use_facet](../standard-library/basic-filebuf-class.md#open)**< num_put\<m, OutIt >**`(`[getloc](../standard-library/ios-base-class.md#getloc)). [배치](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)),  **\*이**, `getloc`, **val**). 여기서 **OutIt**는 [ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md)**\<Elem, Tr>**로 정의됩니다. 함수는 **\*this**를 반환합니다.  
+ 변환 `_Val` 부울으로 필드를 호출 하 여 삽입 [use_facet](../standard-library/basic-filebuf-class.md#open)**< num_put\<m, OutIt >**`(`[getloc](../standard-library/ios-base-class.md#getloc)). [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**). 여기서 **OutIt**는 [ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md)**\<Elem, Tr>**로 정의됩니다. 함수는 **\*this**를 반환합니다.  
   
  다음 함수는  
   
@@ -281,7 +284,7 @@ basic_ostream<Elem, Tr>& operator<<(unsigned long long val);
 basic_ostream<Elem, Tr>& operator<<(const void* val);
 ```  
   
- 각 변환 `val` 숫자 필드를 호출 하 여 삽입 **use_facet < num_put\<m, OutIt >**(`getloc`). **배치**(**OutIt**(`rdbuf`),  **\*이**, `getloc`, **val**). 여기서 **OutIt**는 **ostreambuf_iterator\<Elem, Tr>**로 정의됩니다. 함수는 **\*this**를 반환합니다.  
+ 각 변환 `val` 숫자 필드를 호출 하 여 삽입 **use_facet < num_put\<m, OutIt >**(`getloc`). **put**(**OutIt**(`rdbuf`), **\*this**, `getloc`, **val**). 여기서 **OutIt**는 **ostreambuf_iterator\<Elem, Tr>**로 정의됩니다. 함수는 **\*this**를 반환합니다.  
   
  다음 함수는  
   

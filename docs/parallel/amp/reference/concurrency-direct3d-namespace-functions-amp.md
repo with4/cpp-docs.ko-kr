@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d::abs
 - amp/Concurrency::direct3d::countbits
@@ -24,31 +24,33 @@ f1_keywords:
 - amp/Concurrency::direct3d::smoothstep
 - amp/Concurrency::direct3d::step
 - amp/Concurrency::direct3d::umin
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ff24f75c27ee60a085a8f87256a96b65a57e523c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b200ce8329c10fe2257ca3ce9ca8cb61125390fc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency:: direct3d 네임 스페이스 함수 (AMP)
 ||||  
 |-|-|-|  
-|[abs](#abs)|[제한](#clamp)|[countbits](#countbits)|
+|[abs](#abs)|[clamp](#clamp)|[countbits](#countbits)|
 |[create_accelerator_view](#create_accelerator_view)|||
 |[d3d_access_lock](#d3d_access_lock)|[d3d_access_try_lock](#d3d_access_try_lock)|[d3d_access_unlock](#d3d_access_unlock)|  
 |[firstbithigh](#firstbithigh)|[firstbitlow](#firstbitlow)|[get_buffer](#get_buffer)|  
 |[imax](#imax)|[imin](#imin)|[is_timeout_disabled](#is_timeout_disabled)|  
-|[mad](#mad)|[make_array](#make_array)|[노이즈](#noise)|  
-|[라디안](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
-|[saturate](#saturate)|[로그인](#sign)|[smoothstep](#smoothstep)|  
-|[단계](#step)|[umax](#umax)|[umin](#umin)|  
+|[mad](#mad)|[make_array](#make_array)|[noise](#noise)|  
+|[radians](#radians)|[rcp](#rcp)|[reversebits](#reversebits)|  
+|[saturate](#saturate)|[sign](#sign)|[smoothstep](#smoothstep)|  
+|[step](#step)|[umax](#umax)|[umin](#umin)|  
 
 ## <a name="requirements"></a>요구 사항
 **헤더:** amp.h **Namespace:** 동시성
@@ -67,7 +69,7 @@ inline int abs(int _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 절대값을 반환합니다.  
   
-##  <a name="clamp"></a>제한  
+##  <a name="clamp"></a>  clamp  
  지정된 된 두 번째 및 세 번째 인수에 정의 된 범위를 제한 하는 첫 번째 지정 된 인수 값을 계산 합니다.  
   
 ```  
@@ -96,7 +98,7 @@ inline int clamp(
 ### <a name="return-value"></a>반환 값  
  clamped 값 `_X`합니다.  
   
-##  <a name="countbits"></a>countbits  
+##  <a name="countbits"></a>  countbits  
  _X의 집합 비트 수를 계산합니다.  
   
 ```  
@@ -110,7 +112,7 @@ inline unsigned int countbits(unsigned int _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  _X의 비트 집합 수를 반환합니다.  
 
-## <a name="create_accelerator_view"></a>create_accelerator_view  
+## <a name="create_accelerator_view"></a> create_accelerator_view  
 만듭니다는 [accelerator_view](accelerator-view-class.md) Direct3D 장치 인터페이스에 대 한 포인터에서 개체입니다.  
   
 ## <a name="syntax"></a>구문  
@@ -150,7 +152,7 @@ accelerator_view create_accelerator_view(
  C + + AMP 런타임이 사용 하는 경우에 D3D 디버깅 레이어를 사용 하 여 디버그 모드에서 자세한 오류 정보를 제공는 `D3D11_CREATE_DEVICE_DEBUG` 플래그입니다.  
   
   
-##  <a name="d3d_access_lock"></a>d3d_access_lock  
+##  <a name="d3d_access_lock"></a>  d3d_access_lock  
  안전 하 게는 accelerator_view와 공유 하는 리소스에 대 한 D3D 작업을 수행할 목적으로 accelerator_view에 대 한 잠금을 획득 합니다. accelerator_view와 내부적으로이 accelerator_view와 관련 된 모든 c + + AMP 리소스 작업을 수행할 때이 잠금을 수행 하 고 다른 스레드가 D3D 액세스 잠금을 보유 하는 동안 차단 됩니다. 이 잠금은 비재귀적:이 함수를 호출 스레드가 이미 잠금을 보유 하는 정의 되지 않은 동작입니다. accelerator_view 또는 D3D 액세스 잠금을 보유 하는 스레드에서 accelerator_view와 연결 된 모든 데이터 컨테이너에 대 한 작업을 수행 하려면 정의 되지 않은 동작입니다. Scoped_d3d_access_lock, 범위 기반 D3D 액세스 잠금에 대 한 RAII 스타일 클래스를 참조 하십시오.  
   
 ```  
@@ -161,7 +163,7 @@ void __cdecl d3d_access_lock(accelerator_view& _Av);
  `_Av`  
  잠글 accelerator_view 합니다.  
   
-##  <a name="d3d_access_try_lock"></a>d3d_access_try_lock  
+##  <a name="d3d_access_try_lock"></a>  d3d_access_try_lock  
  차단 하지 않고는 accelerator_view D3D 액세스 잠금을 가져오려고 시도 합니다.  
   
 ```  
@@ -175,7 +177,7 @@ bool __cdecl d3d_access_try_lock(accelerator_view& _Av);
 ### <a name="return-value"></a>반환 값  
  true는 잠금을 획득 하는 경우 또는 다른 스레드에 의해 현재 보유 하는 경우 false입니다.  
   
-##  <a name="d3d_access_unlock"></a>d3d_access_unlock  
+##  <a name="d3d_access_unlock"></a>  d3d_access_unlock  
  주어진된 accelerator_view에 D3D 액세스 잠금을 해제 합니다. 호출 스레드가 accelerator_view에 잠금을 유지 하지 않으면 결과가 정의 되지 않습니다.  
   
 ```  
@@ -186,7 +188,7 @@ void __cdecl d3d_access_unlock(accelerator_view& _Av);
  `_Av`  
  잠금이 해제 될는 accelerator_view 합니다.  
   
-##  <a name="firstbithigh"></a>firstbithigh  
+##  <a name="firstbithigh"></a>  firstbithigh  
  최상위 비트로 시작 하 고 최하위 비트 쪽으로 이동 _X의 첫 번째 설정 비트 위치를 가져옵니다.  
   
 ```  
@@ -200,7 +202,7 @@ inline int firstbithigh(int _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  첫 번째 설정 비트의 위치  
   
-##  <a name="firstbitlow"></a>firstbitlow  
+##  <a name="firstbitlow"></a>  firstbitlow  
  _X 최하위 비트로 시작 하 고 최상위 비트는 방향에 있는 첫 번째 설정 비트의 위치를 가져옵니다.  
   
 ```  
@@ -214,7 +216,7 @@ inline int firstbitlow(int _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  첫 번째 설정 비트의 위치를 반환 합니다.  
   
-##  <a name="get_buffer"></a>get_buffer  
+##  <a name="get_buffer"></a>  get_buffer  
  지정된 된 배열의 기본 Direct3D 버퍼 인터페이스를 가져옵니다.  
   
 ```  
@@ -239,7 +241,7 @@ IUnknown *get_buffer(
 ### <a name="return-value"></a>반환 값  
  에 해당 하는 Direct3D 버퍼 배열의 기본 IUnknown 인터페이스 포인터입니다.  
   
-##  <a name="imax"></a>imax  
+##  <a name="imax"></a>  imax  
  인수의 최대 숫자 값을 결정  
   
 ```  
@@ -258,7 +260,7 @@ inline int imax(
 ### <a name="return-value"></a>반환 값  
  인수의 최대 숫자 값을 반환 합니다.  
   
-##  <a name="imin"></a>imin  
+##  <a name="imin"></a>  imin  
  인수의 숫자의 최소값 결정  
   
 ```  
@@ -277,7 +279,7 @@ inline int imin(
 ### <a name="return-value"></a>반환 값  
  인수 중 최소 숫자 값을 반환 합니다.  
   
-##  <a name="is_timeout_disabled"></a>is_timeout_disabled  
+##  <a name="is_timeout_disabled"></a>  is_timeout_disabled  
  지정 된 accelerator_view에 대 한 시간 초과 사용할 수 없습니다 나타내는 부울 플래그를 반환 합니다. Direct3D 장치를 만들기 위한 D3D11_CREATE_DEVICE_DISABLE_GPU_TIMEOUT 플래그에 해당합니다.  
   
 ```  
@@ -291,7 +293,7 @@ bool __cdecl is_timeout_disabled(const accelerator_view& _Accelerator_view);
 ### <a name="return-value"></a>반환 값  
  지정 된 accelerator_view에 대 한 시간 초과 사용할 수 없습니다 나타내는 부울 플래그입니다.  
   
-##  <a name="mad"></a>mad  
+##  <a name="mad"></a>  mad  
  첫 번째 및 두 번째 지정 된 인수를의 곱을 계산 후 지정된 된 세 번째 인수입니다.  
   
 ```  
@@ -332,7 +334,7 @@ inline unsigned int mad(
 ### <a name="return-value"></a>반환 값  
  결과 `_X`  *  `_Y`  +  `_Z`합니다.  
   
-##  <a name="make_array"></a>make_array  
+##  <a name="make_array"></a>  make_array  
  Direct3D 버퍼 인터페이스 포인터의 배열을 만듭니다.  
   
 ```  
@@ -365,7 +367,7 @@ array<value_type, _Rank> make_array(
 ### <a name="return-value"></a>반환 값  
  제공 된 Direct3D 버퍼를 사용 하 여 만든 배열입니다.  
   
-##  <a name="noise"></a>노이즈  
+##  <a name="noise"></a>  noise  
  Perlin 노이즈 알고리즘을 사용하여 임의의 값을 생성합니다.  
   
 ```  
@@ -379,7 +381,7 @@ inline float noise(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  -1과 1 사이의 범위 내에서 Perlin 노이즈 값을 반환합니다.  
   
-##  <a name="radians"></a>라디안  
+##  <a name="radians"></a>  radians  
  _X도 라디안으로 변환  
   
 ```  
@@ -393,7 +395,7 @@ inline float radians(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  각도에서 라디안으로 변환한 _X를 반환합니다.  
   
-##  <a name="rcp"></a>rcp  
+##  <a name="rcp"></a>  rcp  
  빠른 근사값을 사용 하 여 지정된 된 인수의 역을 계산 합니다.  
   
 ```  
@@ -410,7 +412,7 @@ inline double rcp(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  지정 된 인수의 역 합니다.  
   
-##  <a name="reversebits"></a>reversebits  
+##  <a name="reversebits"></a>  reversebits  
  _X의 비트의 순서를 반대로 바꿉니다.  
   
 ```  
@@ -424,7 +426,7 @@ inline unsigned int reversebits(unsigned int _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  _X의 반대로 바뀐 비트 순서 값을 반환합니다.  
   
-##  <a name="saturate"></a>saturate  
+##  <a name="saturate"></a>  saturate  
  0 ~ 1 범위 내에서 _X 범위로 제한  
   
 ```  
@@ -438,7 +440,7 @@ inline float saturate(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  0 - 1의 범위 내로 제한된 _X를 반환합니다.  
   
-##  <a name="sign"></a>로그인  
+##  <a name="sign"></a>  sign  
  지정 된 인수의 부호를 결정합니다.  
   
 ```  
@@ -452,7 +454,7 @@ inline int sign(int _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 기호입니다.  
   
-##  <a name="smoothstep"></a>smoothstep  
+##  <a name="smoothstep"></a>  smoothstep  
  _X가 [_Min, _Max] 범위에 있는 경우 0과 1 사이의 부드러운 Hermite 보간을 반환 합니다.  
   
 ```  
@@ -475,7 +477,7 @@ inline float smoothstep(
 ### <a name="return-value"></a>반환 값  
  _X가 _Min보다 작은 경우 0을, _X가 _Max보다 큰 경우 1을 반환합니다. 그렇지 않으면, _X가 [_Min, _Max] 범위에 있는 경우 0과 1 사이의 값입니다.  
   
-##  <a name="step"></a>단계  
+##  <a name="step"></a>  step  
  두 값을 0 또는 1을 기반으로 어떤 값이 크면 반환 비교  
   
 ```  
@@ -494,7 +496,7 @@ inline float step(
 ### <a name="return-value"></a>반환 값  
  _X가 _Y보다 큰 경우 1을 반환합니다. 그렇지 않으면, 0을 반환합니다.  
   
-##  <a name="umax"></a>umax  
+##  <a name="umax"></a>  umax  
  인수의 최대 숫자 값을 결정  
   
 ```  
@@ -513,7 +515,7 @@ inline unsigned int umax(
 ### <a name="return-value"></a>반환 값  
  인수의 최대 숫자 값을 반환 합니다.  
   
-##  <a name="umin"></a>umin  
+##  <a name="umin"></a>  umin  
  인수의 숫자의 최소값 결정  
   
 ```  

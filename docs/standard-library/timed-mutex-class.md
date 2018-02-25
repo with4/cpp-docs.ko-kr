@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - mutex/std::timed_mutex
 - mutex/std::timed_mutex::timed_mutex
@@ -15,9 +16,10 @@ f1_keywords:
 - mutex/std::timed_mutex::try_lock_for
 - mutex/std::timed_mutex::try_lock_until
 - mutex/std::timed_mutex::unlock
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: cd198081-6f38-447a-9dba-e06dfbfafe59
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -29,12 +31,13 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_for
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
-ms.workload: cplusplus
-ms.openlocfilehash: b8b27489ce275cde4d0493a496980afd844f2378
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ec0d34d83d19185730216af6ca9280fa14246214
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="timedmutex-class"></a>timed_mutex 클래스
 *시간이 지정된 뮤텍스 형식*을 나타냅니다. 이러한 형식의 개체를 사용하면 프로그램 내에서 시간이 제한된 차단을 통해 상호 배제를 강제로 수행할 수 있습니다.  
@@ -69,7 +72,7 @@ class timed_mutex;
   
  **네임스페이스:** std  
   
-##  <a name="lock"></a>timed_mutex:: lock
+##  <a name="lock"></a>  timed_mutex::lock
  스레드가 `mutex`의 소유권을 가져올 때까지 호출 스레드를 차단합니다.  
   
 ```cpp  
@@ -96,7 +99,7 @@ timed_mutex();
 ### <a name="remarks"></a>설명  
  소멸자가 실행될 때 개체가 잠겨 있는 경우, 이 동작은 정의되지 않습니다.  
   
-##  <a name="try_lock"></a>timed_mutex:: try_lock
+##  <a name="try_lock"></a>  timed_mutex::try_lock
  차단되지 않고 `mutex`의 소유권을 가져오려고 시도합니다.  
   
 ```cpp  
@@ -109,7 +112,7 @@ bool try_lock();
 ### <a name="remarks"></a>설명  
  호출 스레드가 이미 `mutex`를 소유하고 있는 경우, 이 동작은 정의되지 않습니다.  
   
-##  <a name="try_lock_for"></a>timed_mutex:: try_lock_for
+##  <a name="try_lock_for"></a>  timed_mutex::try_lock_for
  차단되지 않고 `mutex`의 소유권을 가져오려고 시도합니다.  
   
 ```cpp  
@@ -127,7 +130,7 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 ### <a name="remarks"></a>설명  
  호출 스레드가 이미 `mutex`를 소유하고 있는 경우, 이 동작은 정의되지 않습니다.  
   
-##  <a name="try_lock_until"></a>timed_mutex:: try_lock_until
+##  <a name="try_lock_until"></a>  timed_mutex::try_lock_until
  차단되지 않고 `mutex`의 소유권을 가져오려고 시도합니다.  
   
 ```cpp  
@@ -147,7 +150,7 @@ bool try_lock_until(const xtime* Abs_time);
 ### <a name="remarks"></a>설명  
  호출 스레드가 이미 `mutex`를 소유하고 있는 경우, 이 동작은 정의되지 않습니다.  
   
-##  <a name="unlock"></a>timed_mutex:: unlock
+##  <a name="unlock"></a>  timed_mutex::unlock
  `mutex`의 소유권을 해제합니다.  
   
 ```cpp  

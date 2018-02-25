@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - exception/std::current_exception
 - exception/std::get_terminate
@@ -18,7 +18,7 @@ f1_keywords:
 - exception/std::uncaught_exception
 - exception/std::unexpected
 ms.assetid: c09ac569-5e35-4fe8-872d-ca5810274dd7
-caps.latest.revision: "12"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::current_exception [C++]
@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 616c8d4dd0982f0cd96a3678f6f8595b074f291f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: ea24d26ed840d1c7222abbbf9fce2bc18c2a7a5f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;exception&gt; 함수
 ||||  
@@ -122,7 +122,7 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 ### <a name="remarks"></a>설명  
  함수는 새 [terminate_handler](../standard-library/exception-typedefs.md#terminate_handler)를 함수 * `fnew`로 설정합니다. 따라서 `fnew`가 null 포인터가 아니어야 합니다. 함수는 이전 terminate 처리기의 주소를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // exception_set_terminate.cpp  
@@ -177,7 +177,7 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
   
  C++ 표준의 경우 함수가 throw 목록에 없는 예외를 throw할 경우 `unexpected`가 호출되어야 합니다. 현재 구현은 이 기능을 지원하지 않습니다. 다음 예제에서는 `unexpected`를 직접 호출하고 나서 `unexpected_handler`를 호출합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // exception_set_unexpected.cpp  
@@ -215,7 +215,7 @@ void terminate();
   
  terminate 처리기는 호출자로 반환되지 않을 수 있습니다. 프로그램 시작 시 **abort**를 호출하는 함수가 terminate 처리기입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   **terminate** 사용에 대한 예제는 [set_unexpected](../standard-library/exception-functions.md#set_unexpected)를 참조하세요.  
   
 ##  <a name="uncaught_exception"></a>  uncaught_exception  
@@ -228,7 +228,7 @@ bool uncaught_exception();
 ### <a name="return-value"></a>반환 값  
  throw 식 평가를 완료한 후, 그리고 일치하는 처리기에서 예외 선언 초기화를 완료하거나 throw 식의 결과로 [unexpected](../standard-library/exception-functions.md#unexpected)를 호출하기 전에 `true`를 반환합니다. 특히 `uncaught_exception`은 예외 해제 중에 호출되는 소멸자에서 호출된 경우 `true`를 반환합니다. 장치의 경우 `uncaught_exception`은 Windows Mobile 2005 플랫폼을 포함하여 Windows CE 5.00 이상 버전에서만 지원됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // exception_uncaught_exception.cpp  
@@ -303,7 +303,7 @@ void unexpected();
   
  프로그램 시작 시 [terminate](../standard-library/exception-functions.md#terminate)를 호출하는 함수가 unexpected 처리기입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   **unexpected** 사용에 대한 예제는 [set_unexpected](../standard-library/exception-functions.md#set_unexpected)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

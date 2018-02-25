@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: reduction
-dev_langs: C++
-helpviewer_keywords: reduction OpenMP clause
+ms.topic: reference
+f1_keywords:
+- reduction
+dev_langs:
+- C++
+helpviewer_keywords:
+- reduction OpenMP clause
 ms.assetid: a2b051af-5a1b-4c00-9cc7-692bb43653fb
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 67e8b7740c4e346b3e6a0751376c4cecb3437e82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8f43ae9afac7bdbabe12b7532e2bbc7005fe59a0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="reduction"></a>reduction
 각 스레드에 private 되는 하나 이상의 변수에 병렬 영역 끝날 때 감소 작업의 제목을 지정 합니다.  
@@ -41,13 +46,13 @@ reduction(operation:var)
  스칼라 감소가 수행할 하나 이상의 변수입니다. 둘 이상의 변수를 지정 하는 경우 변수 이름을 쉼표로 구분 합니다.  
   
 ## <a name="remarks"></a>설명  
- `reduction`다음과 같은 지시문에 적용 됩니다.  
+ `reduction` 다음과 같은 지시문에 적용 됩니다.  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
--   [섹션](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
   
  자세한 내용은 참조 [2.7.2.6 감소](../../../parallel/openmp/2-7-2-6-reduction.md)합니다.  
   

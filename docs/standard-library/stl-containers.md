@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - C++ Standard Library, template class containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 23979709bcc43074d6db2f042fdde850f6894e73
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a69230b190671fe768cdf4473b24d0c942743943
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="c-standard-library-containers"></a>C++ 표준 라이브러리 컨테이너
 표준 라이브러리는 관련 개체 컬렉션을 저장할, 형식이 안전한 다양한 컨테이너를 제공합니다. 컨테이너는 클래스 템플릿입니다. 컨테이너 변수를 선언할 때 컨테이너에 포함할 요소의 형식을 지정합니다. 컨테이너는 이니셜라이저 목록을 사용하여 생성할 수 있습니다. 요소 추가 및 제거, 다른 작업 수행 등을 위한 멤버 함수가 있습니다.  

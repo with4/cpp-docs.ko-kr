@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <complex>
 - std::<complex>
-dev_langs: C++
-helpviewer_keywords: complex header
+dev_langs:
+- C++
+helpviewer_keywords:
+- complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 178318ba212665e9157d1c49289d3167056b0e83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e23707a342e666e49a15c47e0dc82c4e882176cd
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 컨테이너 템플릿 클래스를 정의 **복잡 한** 및 해당 지원 템플릿을 합니다.  
@@ -48,15 +52,15 @@ ms.lasthandoff: 12/21/2017
   
 -   복소수의 덧셈 역 (*는*, *b*)는 (-*는*,-*b*), 및는 이러한 모든 복소수의 곱셈 역 수는 제외 하 고 (0, 0)은  
   
-     (*는*/ (*는*<sup>2</sup> + *b*<sup>2</sup>),-*b*/ (*는*<sup>2</sup> + *b*<sup>2</sup>))  
+     (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))  
   
  복소수를 나타내 *z* = (*는*, *b*) 형태로 *z* = *는*  +  *bi*여기서 *i*<sup>2</sup> = 복소수 집합 및 해당 구성 요소에 실수 집합의 대 수를 적용할 수에 대 한 규칙은-1입니다. 예:  
   
   (1 + 2*i*) \* (2 + 3*i*)  
   = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*)  
   = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>)  
-  = (2-6) + (3 + 4)*i*  
-  =-4 + 7*i*  
+  = (2 - 6) + (3 + 4)*i*  
+  = -4 + 7*i*  
   
  복소수 시스템은 필드이지만 순서가 지정된 필드가 아닙니다. 순서가 있지 않습니다 복소수의 이므로 실수 및 해당 하위 집합의 필드에 대 한 부등식 실수는 복소수를 적용할 수 없습니다.  
   
@@ -130,7 +134,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|이 반환 됩니다.`complex<long double>{0.0L, static_cast<long double>(d)}`|  
+|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|반환합니다. `complex<long double>{0.0L, static_cast<long double>(d)}`|  
 |`constexpr complex<double> operator""i(long double d)`<br /><br /> `constexpr complex<double> operator""i(unsigned long long d)`|`complex<double>{0.0, static_cast<double>(d)}`를 반환합니다.|  
 |`constexpr complex<float> operator""if(long double d)`<br /><br /> `constexpr complex<float> operator""if(unsigned long long d)`|`complex<float>{0.0f, static_cast<float>(d)}`를 반환합니다.|  
   

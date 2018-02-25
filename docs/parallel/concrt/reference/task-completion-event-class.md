@@ -4,28 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - task_completion_event
 - PPLTASKS/concurrency::task_completion_event
 - PPLTASKS/concurrency::task_completion_event::task_completion_event
 - PPLTASKS/concurrency::task_completion_event::set
 - PPLTASKS/concurrency::task_completion_event::set_exception
-dev_langs: C++
-helpviewer_keywords: task_completion_event class
+dev_langs:
+- C++
+helpviewer_keywords:
+- task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 48bf640d75a02b9033102b1c8fc7b824dc4a5be0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2ec810fdb897a9a80dc803cdcc3f229bab186f09
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event 클래스
 `task_completion_event` 클래스를 사용하면 조건이 충족될 때까지 작업 실행을 지연하거나 외부 이벤트에 대한 응답으로 작업을 시작할 수 있습니다.  
@@ -76,7 +80,7 @@ class task_completion_event<void>;
   
  **네임스페이스:** 동시성  
   
-##  <a name="set"></a>설정 
+##  <a name="set"></a> 설정 
 
  작업 완료 이벤트를 설정합니다.  
   
@@ -96,7 +100,7 @@ bool set() const ;
 ### <a name="remarks"></a>설명  
  여러 개 있는 경우 또는 동시 호출을 `set`은 첫 번째 호출에 성공 하 고 (있는 경우)는 결과 작업 완료 이벤트에 저장 됩니다. 나머지 집합 무시 되며 메서드가 false를 반환 합니다. 작업 완료 이벤트를 설정 하면 모든 작업에서 만든 이벤트 즉시 완료 하 고 해당 연속 있는 경우 예약 됩니다. 작업 완료 개체는 `_ResultType` 이외의 `void` 작업의 연속을 값에 전달 합니다.  
   
-##  <a name="set_exception"></a>set_exception 
+##  <a name="set_exception"></a> set_exception 
 
  이 이벤트와 연결된 모든 작업에 대한 예외를 전파합니다.  
   
@@ -114,7 +118,7 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
   
 ### <a name="return-value"></a>반환 값  
   
-##  <a name="ctor"></a>task_completion_event 
+##  <a name="ctor"></a> task_completion_event 
 
  `task_completion_event` 개체를 생성합니다.  
   

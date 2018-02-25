@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB providers, OLE DB data architecture
 - OLE DB providers
@@ -15,18 +17,18 @@ helpviewer_keywords:
 - OLE DB consumers
 - OLE DB, data model
 ms.assetid: 886cb39d-652b-4557-93f0-4b1b0754d8bc
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4f0a0ee77b13d6e5231d002cb444ac5a7847f3d6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec0a8764ef8f5e906ad399d76a5a004c313f500b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-consumers-and-providers"></a>OLE DB 소비자 및 공급자
 OLE DB 아키텍처의 소비자 및 공급자 모델을 사용 합니다. 소비자에서는 데이터에 대 한 요청 합니다. 공급자는 테이블 형식으로 데이터를 배치 하는 고객에 게 반환 하 여 이러한 요청에 응답 합니다. 공급자에서 소비자 수 있도록 하는 모든 호출을 구현 되어야 합니다.  

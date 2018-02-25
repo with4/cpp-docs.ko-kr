@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::duration
 - chrono/std::chrono::duration::duration
@@ -14,19 +15,22 @@ f1_keywords:
 - chrono/std::chrono::duration::max
 - chrono/std::chrono::duration::min
 - chrono/std::chrono::duration::zero
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-helpviewer_keywords: std::chrono [C++], duration
-ms.workload: cplusplus
-ms.openlocfilehash: e25b632554f56054793f60f3fe058791798894d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+helpviewer_keywords:
+- std::chrono [C++], duration
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 742c6acf9f404275fbf9c74a55abd661224d5bc6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="duration-class"></a>duration 클래스
 두 시점 사이에 경과된 시간을 나타내는 *시간 간격*을 포함하는 형식을 설명합니다.  
@@ -58,7 +62,7 @@ class duration <duration<Rep, Period1>, Period2>;
   
 |이름|설명|  
 |----------|-----------------|  
-|[기간](#duration)|`duration` 개체를 생성합니다.|  
+|[duration](#duration)|`duration` 개체를 생성합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
@@ -67,7 +71,7 @@ class duration <duration<Rep, Period1>, Period2>;
 |[count](#count)|시간 간격의 클록 틱 수를 반환합니다.|  
 |[max](#max)|정적. 템플릿 매개 변수 `Ref`의 최대 허용 값을 반환합니다.|  
 |[분](#min)|정적. 템플릿 매개 변수 `Ref`의 최저 허용 값을 반환합니다.|  
-|[0](#zero)|정적. 실제로 `Rep`(0)를 반환합니다.|  
+|[zero](#zero)|정적. 실제로 `Rep`(0)를 반환합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   

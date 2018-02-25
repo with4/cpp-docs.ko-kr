@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - unorm
 - AMP_SHORT_VECTORS/unorm
 - AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fffce416bebda4bcc1d5aa0078135aff27bdb7e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cfd4ed2b4aad398e1206d0e3b786742841aa189b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="unorm-class"></a>unorm 클래스
 Unorm 수를 나타냅니다. 각 요소는 부동 소수점 숫자 [0.0 f, 1.0 f] 범위에 있습니다.  
@@ -45,14 +48,14 @@ class unorm;
   
 |이름|설명|  
 |----------|-----------------|  
-|unorm::operator-||  
+|unorm::operator--||  
 |unorm::operator float|변환 연산자입니다. Unorm 번호 변환 부동 소수점 값입니다.|  
-|unorm::operator * =||  
-|unorm::operator / =||  
-|unorm::operator + +||  
-|unorm::operator + =||  
-|unorm::operator =||  
-|-= unorm::operator||  
+|unorm::operator*=||  
+|unorm::operator/=||  
+|unorm::operator++||  
+|unorm::operator+=||  
+|unorm::operator=||  
+|unorm::operator-=||  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `unorm`  
@@ -62,7 +65,7 @@ class unorm;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="ctor"></a>unorm 
+##  <a name="ctor"></a> unorm 
 
  기본 생성자입니다. 0.0f로 초기화합니다.  
   

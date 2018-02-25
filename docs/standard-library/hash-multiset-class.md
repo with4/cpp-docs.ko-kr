@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - hash_set/stdext::hash_multiset
 - hash_set/stdext::hash_multiset::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - hash_set/stdext::hash_multiset::swap
 - hash_set/stdext::hash_multiset::upper_bound
 - hash_set/stdext::hash_multiset::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::hash_multiset
 - stdext::hash_multiset::allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - stdext::hash_multiset::upper_bound
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 132ea24bd65ae4bf79922c811c03ef9cc7c13c42
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 78fb4998754bc7a4b30a63de166973909d21b68f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hashmultiset-class"></a>hash_multiset 클래스
 > [!NOTE]
@@ -122,10 +125,10 @@ class hash_multiset
  hash_multiset에 저장되는 요소 데이터 형식입니다.  
   
  `Traits`  
- 두 요소 값을 정렬 키로 비교하여 상대 순서를 확인할 수 있는 이진 조건자인 클래스 비교 중 하나와 요소의 키 값을 **size_t** 형식의 부호 없는 정수에 매핑하는 단항 조건자인 해시 함수의 두 개체를 포함하는 형식입니다. 이 인수는 선택 사항이며 `hash_compare`*<Key,* **less***\<Key> >*가 기본값입니다.  
+ 두 요소 값을 정렬 키로 비교하여 상대 순서를 확인할 수 있는 이진 조건자인 클래스 비교 중 하나와 요소의 키 값을 **size_t** 형식의 부호 없는 정수에 매핑하는 단항 조건자인 해시 함수의 두 개체를 포함하는 형식입니다. 이 인수는 선택 사항이 고 `hash_compare` *< 키를* **작음 * * *\<키 >>* 기본값입니다.  
   
  `Allocator`  
- hash_multiset의 메모리 할당 및 할당 취소에 대한 세부 정보를 캡슐화하는 저장된 할당자 개체를 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 **allocator***\<Key>*입니다.  
+ hash_multiset의 메모리 할당 및 할당 취소에 대한 세부 정보를 캡슐화하는 저장된 할당자 개체를 나타내는 형식입니다. 이 인수는 선택 사항이 며 기본값은 **할당자 * * *\<키 >입니다.*  
   
 ## <a name="remarks"></a>설명  
  Hash_multiset은  
@@ -146,7 +149,7 @@ class hash_multiset
   
  응용 프로그램에서 값과 해당 키를 연결하는 조건을 만족할 경우 적절한 연관 컨테이너는 hash_multiset입니다. hash_multiset의 요소는 여러 개일 수 있고 자체 정렬 키로 사용되므로 키는 고유하지 않습니다. 이 형식의 구조에 대한 모델은 정렬된 목록입니다. 예를 들어, 단어 내의 단어가 두 번 이상 나타날 수 있습니다. 단어가 여러 번 나타날 수 있도록 허용되지 않은 경우 hash_set가 적절한 컨테이너 구조입니다. 고유 키 단어 목록에 고유 정의가 연결된 경우 이 데이터를 포함하기 위한 적절한 구조는 hash_map입니다. 대신, 정의가 고유하지 않은 경우는 hash_multimap이 적절한 컨테이너입니다.  
   
- hash_multiset은 형식 [value_compare](#value_compare)의 저장된 해시 특성 개체를 호출하여 제어하는 시퀀스를 정렬합니다. 이 저장된 개체는 [key_comp](#key_comp) 멤버 함수를 호출하여 액세스할 수 있습니다. 이와 같은 함수 개체는 클래스 `hash_compare`*<Key,* **less***\<Key> >*의 개체와 동일하게 동작해야 합니다. 특히, 형식 **Key**의 모든 값 *Key*에 대해 호출 **Trait**(*Key*)은 형식 **size_t**의 값 분포를 생성합니다.  
+ hash_multiset은 형식 [value_compare](#value_compare)의 저장된 해시 특성 개체를 호출하여 제어하는 시퀀스를 정렬합니다. 이 저장된 개체는 [key_comp](#key_comp) 멤버 함수를 호출하여 액세스할 수 있습니다. 이러한 함수 개체 클래스의 개체와 동일 하 게 동작 해야 `hash_compare` *< 키,* **작음 * * *\<키 >> 합니다.* 특히, 형식 **Key**의 모든 값 *Key*에 대해 호출 **Trait**(*Key*)은 형식 **size_t**의 값 분포를 생성합니다.  
   
  일반적으로, 이 순서를 정하려면 요소의 크기를 비교할 수 있어야 합니다. 즉, 제공된 어떤 두 요소에서 두 요소가 동일하거나(어떤 것도 다른 것보다 작지 않음) 하나가 다른 것보다 작음을 정할 수 있어야 합니다. 그러면 동일하지 않은 요소 사이에 정렬이 수행됩니다. 기술적으로 설명하면, 비교 함수는 표준 함수의 의미에서 엄밀히 약한 정렬을 수행하는 이진 조건자입니다. 이진 조건자 *f*(*x*, *y*)는 두 인수 개체 x, y 및 반환 값 true 또는 false가 있는 함수 개체입니다. 이진 조건자가 비재귀적, 비대칭 및 전이적인 경우 및 동등성이 전이적인 경우 hash_multiset에 적용된 정렬은 엄밀히 약한 정렬입니다. 여기서, *f*(*x*, *y*)와 *f*(*y*, *x*)가 모두 false인 경우 x 및 y 두 개체는 동등한 것으로 정의됩니다. 키 사이의 더 강력한 같음 조건이 동등 조건을 대체하는 경우, 정렬은 전체가 되고(모든 요소가 서로 상대적으로 정렬됨을 의미) 일치된 키는 서로 구분할 수 없게 됩니다.  
   

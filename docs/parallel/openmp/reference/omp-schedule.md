@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: OMP_SCHEDULE
-dev_langs: C++
-helpviewer_keywords: OMP_SCHEDULE OpenMP environment variable
+ms.topic: reference
+f1_keywords:
+- OMP_SCHEDULE
+dev_langs:
+- C++
+helpviewer_keywords:
+- OMP_SCHEDULE OpenMP environment variable
 ms.assetid: 2295a801-e584-4d2f-826f-7ca4c88846a6
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8aa1406b490128657da19f7c48c958d382850d96
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8ff09bf142fd1c8bbbd61d1e1d3bd76102f7d86b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ompschedule"></a>OMP_SCHEDULE
 동작을 수정 하는 [일정](../../../parallel/openmp/reference/schedule.md) 절 때 `schedule(runtime)` 에 지정 된 한 `for` 또는 `parallel for` 지시문입니다.  
@@ -35,7 +40,7 @@ set OMP_SCHEDULE[=type[,size]]
  다음은 각 문자에 대한 설명입니다.  
   
  `size`(선택 사항)  
- 반복의 크기를 지정합니다. `size`양의 정수 여야 합니다. 기본값은 1의 경우는 제외 `type` 는 정적입니다. 경우에 유효 하지 않은 `type` 은 `runtime`합니다.  
+ 반복의 크기를 지정합니다. `size` 양의 정수 여야 합니다. 기본값은 1의 경우는 제외 `type` 는 정적입니다. 경우에 유효 하지 않은 `type` 은 `runtime`합니다.  
   
  `type`  
  일정의 종류:  

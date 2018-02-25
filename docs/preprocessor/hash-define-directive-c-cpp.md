@@ -1,14 +1,17 @@
 ---
-title: "#<a name=\"define-directive-cc--microsoft-docs\"></a>define 지시문 (C/c + +) | Microsoft Docs"
+title: "#define 지시문 (C/c + +) | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '#define'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '#define'
+dev_langs:
+- C++
 helpviewer_keywords:
 - define directive (#define), syntax
 - preprocessor, directives
@@ -16,24 +19,25 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a42b1b823ac69ba9a92535076ba8ec45f6c9710d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8d06a24d969f0ae7545f1b9ec0401e098a2bcf54
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="define-directive-cc"></a>#define 지시문 (C/C++)
 `#define` 만듭니다는 *매크로*, 식별자 또는 매개 변수화 된 식별자와 토큰 문자열 연결 하는입니다. 매크로가 정의된 후 컴파일러는 소스 파일에서 발생하는 각 식별자를 토큰 문자열로 대체할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
- `#define`*식별자* *토큰 문자열*선택  
+ `#define` *identifier* *token-string*opt  
   
- `#define`*식별자* `(` *식별자*opt`,`*...*  `,` *식별자*opt`)`*토큰 문자열*선택  
+ `#define` *식별자* `(` *식별자*opt`,`*...*  `,` *식별자*opt`)`*토큰 문자열*선택  
   
 ## <a name="remarks"></a>설명  
  `#define` 지시문을 대체할 컴파일러가 *토큰 문자열* 의 각 항목에 대 한 *식별자* 소스 파일에 있습니다. *식별자* 토큰을 형성 하는 경우에 대체 됩니다. 즉, *식별자* 문자열에서 또는 긴 식별자의 일부로 설명에 표시 되는 경우 대체 되지 않습니다. 자세한 내용은 참조 [토큰](../cpp/tokens-cpp.md)합니다.  
@@ -73,7 +77,7 @@ ms.lasthandoff: 12/21/2017
   
  Microsoft C/C++에서는 새 정의가 원래 정의와 구문적으로 동일할 경우 매크로를 재정의할 수 있습니다. 즉, 두 개의 정의에서 매개 변수 이름은 각기 다를 수 있습니다. 이 동작은 두 정의의 어휘가 동일해야 하는 [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] C와는 다릅니다.  
   
- 예를 들어, 다음 두 매크로는 매개 변수 이름만 제외하면 모두 동일합니다. [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)]C는 재정의 허용 하지 않습니다 되지만 Microsoft C/c + +는 오류 없이 컴파일합니다.  
+ 예를 들어, 다음 두 매크로는 매개 변수 이름만 제외하면 모두 동일합니다. [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] C는 재정의 허용 하지 않습니다 되지만 Microsoft C/c + +는 오류 없이 컴파일합니다.  
   
 ```  
 #define multiply( f1, f2 ) ( f1 * f2 )  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - hash_map/stdext::hash_multimap
 - hash_map/stdext::hash_multimap::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - hash_map/stdext::hash_multimap::swap
 - hash_map/stdext::hash_multimap::upper_bound
 - hash_map/stdext::hash_multimap::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::hash_multimap
 - stdext::hash_multimap::allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - stdext::hash_multimap::upper_bound
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1e5c64e90b2e75a7dc0879bbc871892d90d1a02c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d6474bd6cdbb8baa2819d80f122b5a17792251bc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hashmultimap-class"></a>hash_multimap 클래스
 > [!NOTE]
@@ -475,7 +478,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ### <a name="remarks"></a>설명  
  `const_iterator` 형식을 사용하여 요소의 값을 수정할 수는 없습니다.  
   
- hash_multimap에 의해 정의된 `const_iterator`는 [value_type](#value_type)의 개체를 가리킵니다. 이러한 개체는 `pair`*\<***constKey, Type**, *>* 형식입니다. 키의 값은 첫 번째 멤버 쌍을 통해 제공되며 매핑된 요소의 값은 쌍의 두 번째 멤버를 통해 제공됩니다.  
+ `const_iterator` 의 개체에 hash_multimap 점으로 정의 [value_type](#value_type), 유형을 `pair`  *\< ***constKey, 형식*** >* . 키의 값은 첫 번째 멤버 쌍을 통해 제공되며 매핑된 요소의 값은 쌍의 두 번째 멤버를 통해 제공됩니다.  
   
  역참조에 `const_iterator` `cIter` 사용 하는 hash_multimap의 요소를 가리키는  **->**  연산자입니다.  
   
@@ -2533,7 +2536,7 @@ typedef pair<const Key, Type> value_type;
 ```  
   
 ### <a name="remarks"></a>설명  
- `value_type`쌍으로 선언 된\<const [key_type](#key_type), [mapped_type](#mapped_type)> 쌍으로 연결 하지 및\<key_type, mapped_type >는 적절 한 연관 컨테이너의 키를 변경할 수 있습니다 비상수 반복기 또는 참조를 사용합니다.  
+ `value_type` 쌍으로 선언 된\<const [key_type](#key_type), [mapped_type](#mapped_type)> 쌍으로 연결 하지 및\<key_type, mapped_type >는 적절 한 연관 컨테이너의 키를 변경할 수 있습니다 비상수 반복기 또는 참조를 사용합니다.  
   
    
   

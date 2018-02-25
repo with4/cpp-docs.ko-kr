@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <regex>
-dev_langs: C++
-helpviewer_keywords: regex header
+ms.topic: reference
+f1_keywords:
+- <regex>
+dev_langs:
+- C++
+helpviewer_keywords:
+- regex header
 ms.assetid: 5dd4ef74-6063-4dbc-b692-1960bb736f0b
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7da90e13c325380cb8aad54d1af712c1567e0420
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c586cf909ce07f17dfdba08005d1efd8489db869
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltregexgt"></a>&lt;regex&gt;
 [정규식(C++)](../standard-library/regular-expressions-cpp.md)을 구문 분석하는 템플릿 클래스와 텍스트에서 정규식 개체와 일치하는 항목을 검색하는 여러 템플릿 클래스 및 함수를 정의합니다.  

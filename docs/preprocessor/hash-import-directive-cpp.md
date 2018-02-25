@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '#import'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '#import'
+dev_langs:
+- C++
 helpviewer_keywords:
 - .tlh files
 - '#import directive'
@@ -18,16 +21,17 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3d104f25dfc45a0d2b24650289b6ce49f8468c39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: cbf8a35022638884733f5151fffb2a3a0a2946c3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="import-directive-c"></a>#import 지시문 (C++)
 **C + + 전용**  
@@ -88,7 +92,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="remarks"></a>설명  
   
-##  <a name="_predir_the_23import_directive_searchorderforfilename"></a>파일 이름의 검색 순서  
+##  <a name="_predir_the_23import_directive_searchorderforfilename"></a> 파일 이름의 검색 순서  
  *filename* 선택적으로 디렉터리 사양 옵니다. 이 파일 이름은 기존 파일의 이름이어야 합니다. 두 구문 형식의 차이는 경로가 불완전하게 지정되어 있을 경우 전처리기가 형식 라이브러리 파일을 검색하는 순서입니다.  
   
 |구문 형식|작업|  
@@ -96,7 +100,7 @@ ms.lasthandoff: 12/21/2017
 |따옴표로 묶인 형식|전처리기가 우선 `#import` 문을 포함하는 파일의 디렉터리에서 형식 라이브러리 파일을 검색한 다음, 해당 파일을 포함하는(`#include`) 모든 파일의 디렉터리를 검색하도록 지시합니다. 그런 다음 전처리기는 아래 표시된 경로를 따라 검색합니다.|  
 |꺾쇠 괄호 형식|전처리기가 다음 경로에 따라 형식 라이브러리 파일을 검색하도록 지시합니다.<br /><br /> 1.  **경로** 환경 변수 경로 목록<br />2.  **LIB** 환경 변수 경로 목록<br />3.  /I에서 지정 된 경로 (추가 포함 디렉터리) 컴파일러 옵션을 컴파일러와 다른 형식 라이브러리에서 참조 되는 형식 라이브러리에 대 한 검색은 제외 하 고 [no_registry](../preprocessor/no-registry.md) 특성입니다.|  
   
-##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a>지역화 ID 및 버전 번호 지정  
+##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a> 지역화 ID 및 버전 번호 지정  
  progid를 지정할 때 progid의 지역화 ID 및 버전 번호를 지정할 수도 있습니다. 예:  
   
 ```  
@@ -113,7 +117,7 @@ ms.lasthandoff: 12/21/2017
   
 -   버전 번호를 지정하지 않는 경우 최신 버전이 사용됩니다.  
   
-##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a>가져오기로 만든 헤더 파일  
+##  <a name="_predir_the_23import_directive_header_files_created_by_import"></a> 가져오기로 만든 헤더 파일  
  `#import`는 C++ 소스 코드에서 형식 라이브러리 콘텐츠를 다시 생성하는 두 가지 헤더 파일을 만듭니다. 기본 헤더 파일은 MIDL(Microsoft Interface Definition Language) 컴파일러에 의해 생성된 파일과 비슷하지만 컴파일러에서 생성된 코드와 데이터를 파일 내에 추가합니다. [기본 헤더 파일](#_predir_the_primary_type_library_header_file) 은 형식 라이브러리와 동일한 기본 이름을 뒤에 있습니다. TLH 확장입니다. 보조 헤더 파일은 .TLI 확장명을 가진 형식 라이브러리와 같은 기본 이름을 가집니다. 이 파일은 컴파일러에서 생성된 멤버 함수에 대한 구현을 포함하고 기본 헤더 파일에 포함(`#include`)되어 있습니다.  
   
  Byref 매개 변수를 사용 하는 dispinterface 속성을 가져오는 경우 #import __declspec를 생성 하지 것입니다 ([속성](../cpp/property-cpp.md)) 함수에 대 한 문입니다.  
@@ -128,7 +132,7 @@ ms.lasthandoff: 12/21/2017
   
  `#import` 지시문도 최소 다시 빌드에 참여하고 미리 컴파일된 헤더 파일에 배치될 수 있습니다. 참조 [미리 컴파일된 헤더 파일 만들기](../build/reference/creating-precompiled-header-files.md) 자세한 정보에 대 한 합니다.  
   
-###  <a name="_predir_the_primary_type_library_header_file"></a>기본 형식 라이브러리 헤더 파일  
+###  <a name="_predir_the_primary_type_library_header_file"></a> 기본 형식 라이브러리 헤더 파일  
  기본 형식 라이브러리 헤더 파일은 다음과 같은 7개의 섹션으로 구성됩니다.  
   
 -   제목 상용구: 주석, COMDEF.H용 `#include` 문(헤더에 사용되는 일부 표준 매크로 정의) 및 다른 기타 설정 정보로 구성됩니다.  
@@ -185,7 +189,7 @@ using namespace MyLib;
   
  자세한 내용은 기술 자료 문서인 "#import Wrapper Methods May Cause Access Violation"(Q242527) 또는 "Compiler Errors When You Use #import with XML"(Q269194)를 참조하십시오. 또는 MSDN Library 미디어에서 기술 자료 문서를 찾을 수 [Microsoft 지원](https://support.microsoft.com/)합니다.  
   
-##  <a name="_predir_the_23import_directive_import_attributes"></a>#import 특성  
+##  <a name="_predir_the_23import_directive_import_attributes"></a> #import 특성  
  `#import`는 하나 이상의 특성을 선택적으로 포함할 수 있습니다. 이러한 특성은 컴파일러가 형식 라이브러리 헤더의 콘텐츠를 수정하도록 지시합니다. 백슬래시 (**\\**) 추가 줄을 포함할 단일에서 기호를 사용할 수 `#import` 문. 예:  
   
 ```  

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - join
 - AGENTS/concurrency::join
@@ -19,19 +20,22 @@ f1_keywords:
 - AGENTS/concurrency::join::release_message
 - AGENTS/concurrency::join::reserve_message
 - AGENTS/concurrency::join::resume_propagation
-dev_langs: C++
-helpviewer_keywords: join class
+dev_langs:
+- C++
+helpviewer_keywords:
+- join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5166dd4d8c57d3d64fb9d794319b7f2b0398e3d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6ee69daa9ec5570d89d407c980e4ff20deca6360
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="join-class"></a>join 클래스
 `join` 메시징 블록은 각 소스에서 `T` 형식의 메시지를 결합하는 순서가 지정된 단일 대상 다중 소스 `propagator_block`입니다.  
@@ -50,7 +54,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
  조인 되 고 블록에 의해 전파 메시지의 페이로드 형식입니다.  
   
  `_Jtype`  
- 종류의 `join` 하거나 이것이 블록 `greedy` 또는`non_greedy`  
+ 종류의 `join` 하거나 이것이 블록 `greedy` 또는 `non_greedy`  
   
 ## <a name="members"></a>멤버  
   
@@ -93,7 +97,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
   
  **네임스페이스:** 동시성  
   
-##  <a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a> accept_message 
 
  이 제공 된 메시지를 수락 `join` 호출자에 게 소유권을 전송 하는 메시징 블록입니다.  
   
@@ -108,7 +112,7 @@ virtual message<_OutputType>* accept_message(runtime_object_identity _MsgId);
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 `message` 호출자에 이제 소유권을 가진 개체입니다.  
   
-##  <a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a> consume_message 
 
  이전에 제공한 메시지 소비는 `join` 메시징 블록이 고 호출자에 게 소유권을 전송 하 여 대상에 의해 예약 합니다.  
   
@@ -126,7 +130,7 @@ virtual message<_OutputType>* consume_message(runtime_object_identity _MsgId);
 ### <a name="remarks"></a>설명  
  비슷한 `accept`를를 호출 하 여 항상 선행 `reserve`합니다.  
   
-##  <a name="ctor"></a>조인 
+##  <a name="ctor"></a> 조인 
 
  생성 된 `join` 메시징 블록입니다.  
   
@@ -175,7 +179,7 @@ join(
   
  형식 `filter_method` 시그니처가 있는 함수는 `bool (T const &)` 이 호출 되는 `join` 제공된 된 메시지를 수락 해야 하는지 여부를 결정 하는 메시징 블록입니다.  
   
-##  <a name="dtor"></a>~ 조인 
+##  <a name="dtor"></a> ~join 
 
  소멸 된 `join` 블록입니다.  
   
@@ -183,7 +187,7 @@ join(
 ~join();
 ```  
   
-##  <a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a> link_target_notification 
 
  이 새 대상 연결을 알리는 콜백입니다 `join` 메시징 블록입니다.  
   
@@ -191,7 +195,7 @@ join(
 virtual void link_target_notification(_Inout_ ITarget<std::vector<T>> *);
 ```  
   
-##  <a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a> propagate_message 
 
  메시지를 비동기적으로 전달 된 `ISource` 이 블록 `join` 메시징 블록입니다. 이 호출 하는 `propagate` 소스 블록에서 호출 될 경우이 메서드.  
   
@@ -211,7 +215,7 @@ message_status propagate_message(
 ### <a name="return-value"></a>반환 값  
  A [message_status](concurrency-namespace-enums.md) 메시지로 하기로 하는 대상의 표시 합니다.  
   
-##  <a name="propagate_to_any_targets"></a>propagate_to_any_targets 
+##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets 
 
  전파 될 때 하는 모든 메시지에는 각 원본에서 입력된 메시지를 포함 하는 출력 메시지를 생성 합니다. 각 대상에이 출력 메시지를 보냅니다.  
   
@@ -219,7 +223,7 @@ message_status propagate_message(
 void propagate_to_any_targets(_Inout_opt_ message<_OutputType> *);
 ```  
   
-##  <a name="release_message"></a>release_message 
+##  <a name="release_message"></a> release_message 
 
  이전의 메시지 예약을 해제합니다.  
   
@@ -231,7 +235,7 @@ virtual void release_message(runtime_object_identity _MsgId);
  `_MsgId`  
  `runtime_object_identity` 의 `message` 해제 하 고 개체입니다.  
   
-##  <a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a> reserve_message 
 
  이 이전에 제공 메시지를 예약 `join` 메시징 블록입니다.  
   
@@ -244,12 +248,12 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
  `runtime_object_identity` 제공 되의 `message` 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `true`메시지를 성공적으로 예약 하는 경우 `false` 그렇지 않은 경우.  
+ `true` 메시지를 성공적으로 예약 하는 경우 `false` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
  후 `reserve` 반환 하는 경우 라고 `true`, 어느 `consume` 또는 `release` 호출을 얻거나 메시지의 소유권을 해제 해야 합니다.  
   
-##  <a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a> resume_propagation 
 
  예약을 해제 된 후에 전파를 다시 시작 합니다.  
   

@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xutility/std::reverse_iterator
 - iterator/std::reverse_iterator::difference_type
@@ -15,7 +16,8 @@ f1_keywords:
 - iterator/std::reverse_iterator::reference
 - iterator/std::reverse_iterator::base
 - iterator/std::reverse_iterator::operator_star
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::reverse_iterator [C++]
 - std::reverse_iterator [C++], difference_type
@@ -25,16 +27,17 @@ helpviewer_keywords:
 - std::reverse_iterator [C++], base
 - std::reverse_iterator [C++], operator_star
 ms.assetid: c0b34d04-ae9a-4999-9aff-28b313897ffa
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03c9d04786bcffc8fbf951fe125dc64d45e8c0d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b72f9bc378c37eed6660091f04dfabc01bc5d4c3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="reverseiterator-class"></a>reverse_iterator 클래스
 템플릿 클래스는 임의 액세스, 양방향 반복기 또는 역방향으로만 동작하는 역방향 반복기 개체에 대해 설명하는 반복기 어댑터입니다. 범위를 뒤로 이동할 수 있습니다.  
@@ -57,7 +60,7 @@ class reverse_iterator
   
  반복기의 범위는 [*첫 번째*, *마지막*), 왼쪽 대괄호의 포함 여부를 나타냅니다. 여기서 *첫 번째* 오른쪽 괄호를 나타내고는 백업에 요소를 포함 *마지막* 자체입니다. 역방향된 시퀀스에 같은 요소가 포함 된 [ **rev** - *첫 번째*, **rev** - *마지막*) 하므로 경우 *마지막* 는 1--끝을 지난 요소를 시퀀스에서 다음 첫 번째 요소 **rev** - *첫 번째* 는 역방향된 시퀀스 요소에서 \*(*마지막* -1). 모든 역방향 반복기를 기본 역방향과 연결하는 ID는 다음과 같습니다.  
   
- &\*( **reverse_iterator** ( *i* )) = = &\*( *i* -1).  
+ &\*( **reverse_iterator** ( *i* ) ) == &\*( *i* - 1 ).  
   
  실제로, 역방향 시퀀스에서 reverse_iterator는 반복기가 원래 시퀀스에서 참조한 요소에서 하나 다음의(오른쪽으로) 요소를 참조함을 의미합니다. 따라서 반복기가 시퀀스(2, 4, 6, 8)에서 요소 6을 주소 지정한 경우 `reverse_iterator`는 역방향 시퀀스(8, 6, 4, 2)에서 요소 4를 주소 지정합니다.  
   
@@ -114,7 +117,7 @@ RandomIterator base() const;
 ### <a name="remarks"></a>설명  
  모든 역방향 반복기를 기본 역방향과 연결하는 ID는 다음과 같습니다.  
   
- &\*( `reverse_iterator` ( *i* )) = = &\*( *i* -1).  
+ &\*( `reverse_iterator` ( *i* ) ) == &\*( *i* - 1 ).  
   
  실제로, 역방향 시퀀스에서 `reverse_iterator`는 반복기가 원래 시퀀스에서 참조한 요소에서 하나 다음의(오른쪽으로) 요소를 참조함을 의미합니다. 따라서 반복기가 시퀀스(2, 4, 6, 8)에서 요소 6을 주소 지정한 경우 `reverse_iterator`는 역방향 시퀀스(8, 6, 4, 2)에서 요소 4를 주소 지정합니다.  
   
@@ -932,7 +935,7 @@ reverse_iterator(const reverse_iterator<Type>& right);
 ### <a name="remarks"></a>설명  
  모든 역방향 반복기를 기본 역방향과 연결하는 ID는 다음과 같습니다.  
   
- &\*( `reverse_iterator` ( *i* )) = = &\*( *i* -1).  
+ &\*( `reverse_iterator` ( *i* ) ) == &\*( *i* - 1 ).  
   
  실제로, 역방향 시퀀스에서 reverse_iterator는 반복기가 원래 시퀀스에서 참조한 요소에서 하나 다음의(오른쪽으로) 요소를 참조함을 의미합니다. 따라서 반복기가 시퀀스(2, 4, 6, 8)에서 요소 6을 주소 지정한 경우 `reverse_iterator`는 역방향 시퀀스(8, 6, 4, 2)에서 요소 4를 주소 지정합니다.  
   

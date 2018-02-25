@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - unbounded_buffer
 - AGENTS/concurrency::unbounded_buffer
@@ -24,18 +25,20 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::resume_propagation
 - AGENTS/concurrency::unbounded_buffer::send_message
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9834a3ee67d49651de703a54660767604e067b25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ecddf2327e3b2e29dd3c9a857227c03d9e880ef4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 `unbounded_buffer` 메시징 블록은 메시지를 개수에 제한 없이 저장할 수 있는, 순서가 지정된 다중 대상 다중 소스 `propagator_block`입니다.  
   
@@ -59,14 +62,14 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 |이름|설명|  
 |----------|-----------------|  
 |[unbounded_buffer](#ctor)|오버로드됨. 생성 된 `unbounded_buffer` 메시징 블록입니다.|  
-|[~ unbounded_buffer 소멸자](#dtor)|소멸 된 `unbounded_buffer` 메시징 블록입니다.|  
+|[~unbounded_buffer Destructor](#dtor)|소멸 된 `unbounded_buffer` 메시징 블록입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[큐에서 제거](#dequeue)|항목을 제거는 `unbounded_buffer` 메시징 블록입니다.|  
-|[큐에 넣기](#enqueue)|항목을 추가 `unbounded_buffer` 메시징 블록입니다.|  
+|[dequeue](#dequeue)|항목을 제거는 `unbounded_buffer` 메시징 블록입니다.|  
+|[enqueue](#enqueue)|항목을 추가 `unbounded_buffer` 메시징 블록입니다.|  
   
 ### <a name="protected-methods"></a>보호된 메서드  
   
@@ -102,7 +105,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
   
  **네임스페이스:** 동시성  
   
-##  <a name="accept_message"></a>accept_message 
+##  <a name="accept_message"></a> accept_message 
 
  이 제공 된 메시지를 수락 `unbounded_buffer` 호출자에 게 소유권을 전송 하는 메시징 블록입니다.  
   
@@ -119,7 +122,7 @@ virtual message<_Type> * accept_message(
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 `message` 호출자에 이제 소유권을 가진 개체입니다.  
   
-##  <a name="consume_message"></a>consume_message 
+##  <a name="consume_message"></a> consume_message 
 
  이전에 제공한 메시지 소비는 `unbounded_buffer` 메시징 블록이 고 호출자에 게 소유권을 전송 하 여 대상에 의해 예약 합니다.  
   
@@ -139,7 +142,7 @@ virtual message<_Type> * consume_message(
 ### <a name="remarks"></a>설명  
  비슷한 `accept`를를 호출 하 여 항상 선행 `reserve`합니다.  
   
-##  <a name="dequeue"></a>큐에서 제거 
+##  <a name="dequeue"></a> 큐에서 제거 
 
  항목을 제거는 `unbounded_buffer` 메시징 블록입니다.  
   
@@ -150,7 +153,7 @@ _Type dequeue();
 ### <a name="return-value"></a>반환 값  
  제거 하는 메시지의 페이로드에 `unbounded_buffer`합니다.  
   
-##  <a name="enqueue"></a>큐에 넣기 
+##  <a name="enqueue"></a> 큐에 넣기 
 
  항목을 추가 `unbounded_buffer` 메시징 블록입니다.  
   
@@ -165,9 +168,9 @@ bool enqueue(
  추가할 항목입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `true`항목 수락 되 면 `false` 그렇지 않은 경우.  
+ `true` 항목 수락 되 면 `false` 그렇지 않은 경우.  
   
-##  <a name="link_target_notification"></a>link_target_notification 
+##  <a name="link_target_notification"></a> link_target_notification 
 
  이 새 대상 연결을 알리는 콜백입니다 `unbounded_buffer` 메시징 블록입니다.  
   
@@ -181,7 +184,7 @@ virtual void link_target_notification(
  `_PTarget`  
  새로 연결 된 대상에 대 한 포인터입니다.  
   
-##  <a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a> propagate_message 
 
  메시지를 비동기적으로 전달 된 `ISource` 이 블록 `unbounded_buffer` 메시징 블록입니다. 이 호출 하는 `propagate` 소스 블록에서 호출 될 경우이 메서드.  
   
@@ -202,7 +205,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>반환 값  
  A [message_status](concurrency-namespace-enums.md#message_status) 메시지로 하기로 하는 대상의 표시 합니다.  
   
-##  <a name="propagate_output_messages"></a>propagate_output_messages 
+##  <a name="propagate_output_messages"></a> propagate_output_messages 
 
  위치는 `message` `_PMessage` 이 `unbounded_buffer` 메시징 블록 및 모든 연결 된 대상에 제공을 시도 합니다.  
   
@@ -213,7 +216,7 @@ virtual void propagate_output_messages();
 ### <a name="remarks"></a>설명  
  이미 다른 메시지가에서 앞 적용 되었는지는 `unbounded_buffer`, 연결 된 대상의 전파는 이전 메시지가 수락 되거나 사용 될 때까지 발생 하지 것입니다. 성공적으로 연결 된 하는 대상이 첫 번째 `accept` 또는 `consume` 메시지 소유권 및 다른 대상이 없습니다. 메시지를 가져올 수 있습니다.  
   
-##  <a name="process_input_messages"></a>process_input_messages 
+##  <a name="process_input_messages"></a> process_input_messages 
 
  위치는 `message` `_PMessage` 이 `unbounded_buffer` 메시징 블록 및 모든 연결 된 대상에 제공을 시도 합니다.  
   
@@ -226,7 +229,7 @@ virtual void process_input_messages(
 ### <a name="parameters"></a>매개 변수  
  `_PMessage`  
   
-##  <a name="release_message"></a>release_message 
+##  <a name="release_message"></a> release_message 
 
  이전의 메시지 예약을 해제합니다.  
   
@@ -240,7 +243,7 @@ virtual void release_message(
  `_MsgId`  
  `runtime_object_identity` 의 `message` 해제 하 고 개체입니다.  
   
-##  <a name="reserve_message"></a>reserve_message 
+##  <a name="reserve_message"></a> reserve_message 
 
  이 이전에 제공 메시지를 예약 `unbounded_buffer` 메시징 블록입니다.  
   
@@ -255,12 +258,12 @@ virtual bool reserve_message(
  `runtime_object_identity` 의 `message` 예약 되 고 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `true`메시지를 성공적으로 예약 하는 경우 `false` 그렇지 않은 경우.  
+ `true` 메시지를 성공적으로 예약 하는 경우 `false` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
  후 `reserve` 반환 하는 경우 라고 `true`, 어느 `consume` 또는 `release` 호출을 얻거나 메시지의 소유권을 해제 해야 합니다.  
   
-##  <a name="resume_propagation"></a>resume_propagation 
+##  <a name="resume_propagation"></a> resume_propagation 
 
  예약을 해제 된 후에 전파를 다시 시작 합니다.  
   
@@ -268,7 +271,7 @@ virtual bool reserve_message(
 virtual void resume_propagation();  
 ```  
   
-##  <a name="send_message"></a>send_message 
+##  <a name="send_message"></a> send_message 
 
  메시지를 동기적으로 전달 된 `ISource` 이 블록 `unbounded_buffer` 메시징 블록입니다. 이 호출 하는 `send` 소스 블록에서 호출 될 경우이 메서드.  
   
@@ -289,7 +292,7 @@ virtual message_status send_message(
 ### <a name="return-value"></a>반환 값  
  A [message_status](concurrency-namespace-enums.md#message_status) 메시지로 하기로 하는 대상의 표시 합니다.  
   
-##  <a name="supports_anonymous_source"></a>supports_anonymous_source 
+##  <a name="supports_anonymous_source"></a> supports_anonymous_source 
 
  `supports_anonymous_source` 메서드를 재정의하여 이 블록이 연결되지 않은 소스에서 제공하는 메시지를 수락할 수 있음을 나타냅니다.  
   
@@ -300,7 +303,7 @@ virtual bool supports_anonymous_source();
 ### <a name="return-value"></a>반환 값  
  블록은 제공된 메시지를 연기하지 않기 때문에 `true`입니다.  
   
-##  <a name="ctor"></a>unbounded_buffer 
+##  <a name="ctor"></a> unbounded_buffer 
 
  생성 된 `unbounded_buffer` 메시징 블록입니다.  
   
@@ -345,7 +348,7 @@ unbounded_buffer(
   
  형식 `filter_method` 시그니처가 있는 함수는 `bool (_Type const &)` 이 호출 되는 `unbounded_buffer` 제공된 된 메시지를 수락 해야 하는지 여부를 결정 하는 메시징 블록입니다.  
   
-##  <a name="dtor"></a>~ unbounded_buffer 
+##  <a name="dtor"></a> ~unbounded_buffer 
 
  소멸 된 `unbounded_buffer` 메시징 블록입니다.  
   

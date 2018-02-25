@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IExecutionResource
 - CONCRTRM/concurrency::IExecutionResource
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetExecutionResourceId
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::GetNodeId
 - CONCRTRM/concurrency::IExecutionResource::IExecutionResource::Remove
-dev_langs: C++
-helpviewer_keywords: IExecutionResource structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cd22fdb38b1828e1fa86ca79b9967a546ccb9456
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: eb4ad0b6f9038d78ae94b5ab1dcb148ebd628edc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource 구조체
 하드웨어 스레드에 대한 추상화입니다.  
@@ -43,10 +47,10 @@ struct IExecutionResource;
   
 |이름|설명|  
 |----------|-----------------|  
-|[Iexecutionresource:: Currentsubscriptionlevel](#currentsubscriptionlevel)|활성화 된 가상 프로세서 수가 루트 및 구독 한 현재 스레드와 연결 된 기본 하드웨어가 실행 리소스가 나타내는 외부 스레드를 반환 합니다.|  
-|[Iexecutionresource:: Getexecutionresourceid](#getexecutionresourceid)|이 실행 리소스를 나타내는 하드웨어 스레드에 대 한 고유 식별자를 반환 합니다.|  
-|[Iexecutionresource:: Getnodeid](#getnodeid)|이 실행 리소스가 속한 프로세서 노드에 대 한 고유 식별자를 반환 합니다.|  
-|[Iexecutionresource:: Remove](#remove)|이 실행 리소스를 리소스 관리자를 반환합니다.|  
+|[IExecutionResource::CurrentSubscriptionLevel](#currentsubscriptionlevel)|활성화 된 가상 프로세서 수가 루트 및 구독 한 현재 스레드와 연결 된 기본 하드웨어가 실행 리소스가 나타내는 외부 스레드를 반환 합니다.|  
+|[IExecutionResource::GetExecutionResourceId](#getexecutionresourceid)|이 실행 리소스를 나타내는 하드웨어 스레드에 대 한 고유 식별자를 반환 합니다.|  
+|[IExecutionResource::GetNodeId](#getnodeid)|이 실행 리소스가 속한 프로세서 노드에 대 한 고유 식별자를 반환 합니다.|  
+|[IExecutionResource::Remove](#remove)|이 실행 리소스를 리소스 관리자를 반환합니다.|  
   
 ## <a name="remarks"></a>설명  
  실행 리소스에는 가상 프로세서 루트와 연결 된 또는 독립 실행형 수 있습니다. 독립 실행형 실행 리소스는 응용 프로그램의 스레드는 스레드 구독을 만들 때 생성 됩니다. 메서드 [ISchedulerProxy::SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread) 및 [ischedulerproxy:: Requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) 스레드 구독을 만들고 반환 된 `IExecutionResource` 인터페이스를 나타내는 구독입니다. 스레드 구독을 만드는 스케줄러에 할당 된 리소스 관리자 가상 프로세서 루트와 함께 스케줄러에 큐에 대기 작업 참여 하는 지정된 된 스레드가 리소스 관리자에 게 알립니다 하는 방법입니다. 리소스 관리자를 사용 하 여 정보 하드웨어 스레드 클라우드 방지 수 없는 합니다.  
@@ -59,7 +63,7 @@ struct IExecutionResource;
   
  **네임스페이스:** 동시성  
   
-##  <a name="currentsubscriptionlevel"></a>Iexecutionresource:: Currentsubscriptionlevel 메서드  
+##  <a name="currentsubscriptionlevel"></a>  Iexecutionresource:: Currentsubscriptionlevel 메서드  
  활성화 된 가상 프로세서 수가 루트 및 구독 한 현재 스레드와 연결 된 기본 하드웨어가 실행 리소스가 나타내는 외부 스레드를 반환 합니다.  
   
 ```
@@ -78,7 +82,7 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
   
  리소스 관리자 스케줄러 간에 리소스를 이동 하는 시기를 결정 하는 방법 중 하나로 구독 수준 정보를 사용 합니다.  
   
-##  <a name="getexecutionresourceid"></a>Iexecutionresource:: Getexecutionresourceid 메서드  
+##  <a name="getexecutionresourceid"></a>  Iexecutionresource:: Getexecutionresourceid 메서드  
  이 실행 리소스를 나타내는 하드웨어 스레드에 대 한 고유 식별자를 반환 합니다.  
   
 ```
@@ -91,7 +95,7 @@ virtual unsigned int GetExecutionResourceId() const = 0;
 ### <a name="remarks"></a>설명  
  각 하드웨어 스레드, 동시성 런타임에서 고유 식별자가 할당 합니다. 여러 실행 리소스를 연결 된 하드웨어 경우 스레드를 갖게 됩니다 동일한 실행 리소스 식별자입니다.  
   
-##  <a name="getnodeid"></a>Iexecutionresource:: Getnodeid 메서드  
+##  <a name="getnodeid"></a>  Iexecutionresource:: Getnodeid 메서드  
  이 실행 리소스가 속한 프로세서 노드에 대 한 고유 식별자를 반환 합니다.  
   
 ```
@@ -106,7 +110,7 @@ virtual unsigned int GetNodeId() const = 0;
   
  함수에서 노드 수를 얻을 수 있습니다 [GetProcessorNodeCount](concurrency-namespace-functions.md)합니다.  
   
-##  <a name="remove"></a>Iexecutionresource:: Remove 메서드  
+##  <a name="remove"></a>  Iexecutionresource:: Remove 메서드  
  이 실행 리소스를 리소스 관리자를 반환합니다.  
   
 ```
@@ -124,9 +128,9 @@ virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
   
  인터페이스 `Remove`는 `IVirtualProcessorRoot` 인터페이스에서 상속되기 때문에 `IExecutionResource` 메서드를 호출하여 리소스 관리자에 가상 프로세서 루트도 반환할 수 있습니다. 가상 프로세서 루트에 대 한 호출에 대 한 응답에서 반환 해야 할 수 있습니다는 [ischeduler:: Removevirtualprocessors](ischeduler-structure.md#removevirtualprocessors) 메서드를에서 가져온는 줄이려고 가상 프로세서 루트와 함께 완료 되 면 또는 [ Ischedulerproxy:: Createoversubscriber](ischedulerproxy-structure.md#createoversubscriber) 메서드. 가상 프로세서 루트에 대 한 제한은 없습니다는 스레드를 호출할 수는 `Remove` 메서드.  
   
- `invalid_argument`경우 throw 되는 매개 변수 `pScheduler` 로 설정 된 `NULL`합니다.  
+ `invalid_argument` 경우 throw 되는 매개 변수 `pScheduler` 로 설정 된 `NULL`합니다.  
   
- `invalid_operation`경우에 throw 되는 매개 변수 `pScheduler` 현재 스레드의 스레드 구독을 만든 스레드가 아닌 다른 경우, 또는 독립 실행형 실행 리소스와이 실행 리소스를 만든 스케줄러는 합니다.  
+ `invalid_operation` 경우에 throw 되는 매개 변수 `pScheduler` 현재 스레드의 스레드 구독을 만든 스레드가 아닌 다른 경우, 또는 독립 실행형 실행 리소스와이 실행 리소스를 만든 스케줄러는 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Namespace 동시성](concurrency-namespace.md)   

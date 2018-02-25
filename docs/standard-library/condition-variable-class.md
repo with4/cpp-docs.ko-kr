@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - condition_variable/std::condition
 - condition_variable/std::condition_variable::condition_variable
@@ -16,9 +17,10 @@ f1_keywords:
 - condition_variable/std::condition_variable::wait
 - condition_variable/std::condition_variable::wait_for
 - condition_variable/std::condition_variable::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 80b1295c-b73d-4d46-b664-6e183f2eec1b
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -31,12 +33,13 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.workload: cplusplus
-ms.openlocfilehash: 3b51ec2810ddb982d53c3073bdf860b26100859d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d3d4f917bd9057eed6dfcd2b480bbb8afb2f7ccf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="conditionvariable-class"></a>condition_variable 클래스
 `unique_lock<mutex>` 형식의 `mutex`가 있는 경우 `condition_variable` 클래스를 사용하여 이벤트를 대기합니다. 이 형식의 개체는 [condition_variable_any<unique_lock\<mutex>>](../standard-library/condition-variable-any-class.md) 형식의 개체보다 성능이 더 나을 수 있습니다.  
@@ -62,7 +65,7 @@ class condition_variable;
 |[native_handle](#native_handle)|Condition_variable 핸들을 나타내는 구현 관련 형식을 반환합니다.|  
 |[notify_all](#notify_all)|`condition_variable` 개체를 대기 중인 모든 스레드를 차단 해제합니다.|  
 |[notify_one](#notify_one)|`condition_variable` 개체를 대기 중인 스레드 중 하나를 차단 해제합니다.|  
-|[대기](#wait)|스레드를 차단합니다.|  
+|[wait](#wait)|스레드를 차단합니다.|  
 |[wait_for](#wait_for)|스레드를 차단하고 스레드가 차단 해제되는 시간 간격을 설정합니다.|  
 |[wait_until](#wait_until)|스레드를 차단하고 스레드가 차단 해제되는 최대 시점을 설정합니다.|  
   

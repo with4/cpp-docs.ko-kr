@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-attr.db_param
 - vc-attr.db_column
@@ -15,21 +16,23 @@ f1_keywords:
 - vc-attr.db_table
 - vc.templates.ole
 - vc-attr.db_source
-dev_langs: C++
-helpviewer_keywords: OLE DB consumer templates, classes
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 681654f79f0cb3574b0893bb9f726bea78435e74
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 29f833f6a598b9028506fb11d163be49212bd998
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-consumer-templates-reference"></a>OLE DB 소비자 템플릿 참조
 OLE DB 소비자 템플릿은 다음 클래스를 포함 합니다. 참조 자료도 포함 되어 항목에는 [OLE DB 소비자 템플릿에 대 한 매크로](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)합니다.  
@@ -121,7 +124,7 @@ OLE DB 소비자 템플릿은 다음 클래스를 포함 합니다. 참조 자�
  같은 템플릿 클래스에 대 한 템플릿 인수로 사용 `CCommand` 및 `CTable`, 접근자 클래스 인수를 사용 하는 합니다. 사용 하 여 `CNoAccessor` 출력 열 또는 매개 변수를 지원 하도록 클래스 하지 않도록 합니다.  
   
  [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)  
- 에 대 한 템플릿 인수로 사용 된 `CCommand` 서식 파일을 단일 행 집합을 처리 하는 명령을 선택 합니다. `CNoMultipleResults`템플릿 인수에 대 한 기본값이입니다.  
+ 에 대 한 템플릿 인수로 사용 된 `CCommand` 서식 파일을 단일 행 집합을 처리 하는 명령을 선택 합니다. `CNoMultipleResults` 템플릿 인수에 대 한 기본값이입니다.  
   
  [CNoRowset](../../data/oledb/cnorowset-class.md)  
  에 대 한 템플릿 인수로 사용 `CCommand` 또는 `CTable` 명령 또는 테이블 행 집합을 반환 하지 않는 경우.  

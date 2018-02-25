@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: filesystem/std::experimental::filesystem::path
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- filesystem/std::experimental::filesystem::path
+dev_langs:
+- C++
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 05acbc14af8daec265cf705ac4605e9606cb0696
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9e91ee287b1403b49f7a70ab3d96686650d6b2f0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="path-class"></a>path 클래스
 **path** 클래스는 string\_type 형식의 개체(여기서는 표시 편의상 이름이 myname으로 지정됨)를 저장하며 경로 이름으로 사용하는 데 적합합니다. string\_type은 basic\_string\<value_type>과 동일한 의미이며, 여기서 value\_type은 Windows에서는 char와, Posix에서는 wchar_t와 동일한 의미입니다.  

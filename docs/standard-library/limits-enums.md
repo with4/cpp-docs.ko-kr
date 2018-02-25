@@ -5,18 +5,18 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - limits/std::float_denorm_style
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
-caps.latest.revision: "11"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: 1b69623aa9eccfca57667d4f33546512799b172f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: a776ccd0299c3acc43763a381ce337c67bc6c134
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltlimitsgt-enums"></a>&lt;limits&gt; 열거형
 |||  
@@ -42,7 +42,7 @@ enum float_denorm_style {
   
 - **denorm_present** - 비정규화된 폼이 있는 경우.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   이 열거형의 값에 액세스할 수 있는 예제는 [numeric_limits::has_denorm](../standard-library/numeric-limits-class.md#has_denorm)을 참조하세요.  
   
 ##  <a name="float_round_style"></a>  float_round_style 열거형  
@@ -70,7 +70,7 @@ enum float_round_style {
   
 - **round_toward_neg_infinity** - 더 큰 음의 정수로 반올림되는 경우.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   이 열거형의 값에 액세스할 수 있는 예제는 [numeric_limits::round_style](../standard-library/numeric-limits-class.md#round_style)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

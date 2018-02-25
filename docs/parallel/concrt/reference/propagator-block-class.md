@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - propagator_block
 - AGENTS/concurrency::propagator_block
@@ -23,19 +24,22 @@ f1_keywords:
 - AGENTS/concurrency::propagator_block::send_message
 - AGENTS/concurrency::propagator_block::unlink_source
 - AGENTS/concurrency::propagator_block::unlink_sources
-dev_langs: C++
-helpviewer_keywords: propagator_block class
+dev_langs:
+- C++
+helpviewer_keywords:
+- propagator_block class
 ms.assetid: 86aa75fd-eda5-42aa-aadf-25c0c1c9742d
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ff31849020c9daed7999ae1569e8c12249a4b834
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3ff6e543702fc366e72f1473f0f70608a1daabc6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="propagatorblock-class"></a>propagator_block 클래스
 `propagator_block` 클래스는 소스인 동시에 대상인 메시지 블록에 대한 추상 기본 클래스입니다. `source_block` 및 `target_block` 클래스의 기능을 결합합니다.  
@@ -72,13 +76,13 @@ class propagator_block : public source_block<_TargetLinkRegistry,
 |이름|설명|  
 |----------|-----------------|  
 |[propagator_block](#ctor)|`propagator_block` 개체를 생성합니다.|  
-|[~ propagator_block 소멸자](#dtor)|`propagator_block` 개체를 제거합니다.|  
+|[~propagator_block Destructor](#dtor)|`propagator_block` 개체를 제거합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[전파](#propagate)|소스 블록에서이 대상 블록에 메시지를 비동기적으로 전달 합니다.|  
+|[propagate](#propagate)|소스 블록에서이 대상 블록에 메시지를 비동기적으로 전달 합니다.|  
 |[send](#send)|이 블록에 메시지를 동기적으로 시작 합니다. 에 의해 호출 된 `ISource` 블록입니다. 이 함수에는 다음이 완료 되 면 메시지 이미 블록으로 전파 됩니다.|  
   
 ### <a name="protected-methods"></a>보호된 메서드  
@@ -113,7 +117,7 @@ class propagator_block : public source_block<_TargetLinkRegistry,
   
  **네임스페이스:** 동시성  
   
-##  <a name="decline_incoming_messages"></a>decline_incoming_messages 
+##  <a name="decline_incoming_messages"></a> decline_incoming_messages 
 
  새 메시지가 거부 되어야 하는 블록을 나타냅니다.  
   
@@ -124,7 +128,7 @@ void decline_incoming_messages();
 ### <a name="remarks"></a>설명  
  이 메서드는 소멸 진행 중인 동안 새로운 메시지가 거부 되도록 소멸자에 의해 호출 됩니다.  
   
-##  <a name="initialize_source_and_target"></a>initialize_source_and_target 
+##  <a name="initialize_source_and_target"></a> initialize_source_and_target 
 
  기준 개체를 초기화합니다. 특히,는 `message_processor` 개체를 초기화 해야 합니다.  
   
@@ -141,7 +145,7 @@ void initialize_source_and_target(
  `_PScheduleGroup`  
  작업을 예약 하는 데 사용할 수 있는 일정 그룹입니다.  
   
-##  <a name="link_source"></a>link_source 
+##  <a name="link_source"></a> link_source 
 
  이 지정 된 소스 블록에 연결 `propagator_block` 개체입니다.  
   
@@ -153,7 +157,7 @@ virtual void link_source(_Inout_ ISource<_Source_type>* _PSource);
  `_PSource`  
  에 대 한 포인터는 `ISource` 블록 연결 되어야 하는 것입니다.  
   
-##  <a name="process_input_messages"></a>process_input_messages 
+##  <a name="process_input_messages"></a> process_input_messages 
 
  입력된 메시지를 처리합니다. source_block에서 파생되는 전파자 블록에만 유용합니다.  
   
@@ -164,7 +168,7 @@ virtual void process_input_messages(_Inout_ message<_Target_type>* _PMessage);
 ### <a name="parameters"></a>매개 변수  
  `_PMessage`  
   
-##  <a name="propagate"></a>전파 
+##  <a name="propagate"></a> 전파 
 
  소스 블록에서이 대상 블록에 메시지를 비동기적으로 전달 합니다.  
   
@@ -189,7 +193,7 @@ virtual message_status propagate(
   
  메서드에서 throw 된 [invalid_argument](../../../standard-library/invalid-argument-class.md) 경우 예외는 `_PMessage` 또는 `_PSource` 매개 변수는 `NULL`합니다.  
   
-##  <a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a> propagate_message 
 
  파생된 클래스에서 재정의 되 면이 메서드에서 메시지를 비동기적으로 전달 된 `ISource` 이 블록 `propagator_block` 개체입니다. 이 호출 하는 `propagate` 소스 블록에서 호출 될 경우이 메서드.  
   
@@ -209,7 +213,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>반환 값  
  A [message_status](concurrency-namespace-enums.md) 메시지로 하기로 하는 대상의 표시 합니다.  
   
-##  <a name="ctor"></a>propagator_block 
+##  <a name="ctor"></a> propagator_block 
 
  `propagator_block` 개체를 생성합니다.  
   
@@ -217,7 +221,7 @@ virtual message_status propagate_message(
 propagator_block();
 ```  
   
-##  <a name="dtor"></a>~ propagator_block 
+##  <a name="dtor"></a> ~propagator_block 
 
  `propagator_block` 개체를 제거합니다.  
   
@@ -225,7 +229,7 @@ propagator_block();
 virtual ~propagator_block();
 ```  
   
-##  <a name="register_filter"></a>register_filter 
+##  <a name="register_filter"></a> register_filter 
 
  받은 모든 메시지에 대해 호출 되는 필터 메서드를 등록 합니다.  
   
@@ -237,7 +241,7 @@ void register_filter(filter_method const& _Filter);
  `_Filter`  
  필터 메서드입니다.  
   
-##  <a name="remove_network_links"></a>remove_network_links 
+##  <a name="remove_network_links"></a> remove_network_links 
 
  이 모든 소스 및 대상 네트워크 링크를 제거 `propagator_block` 개체입니다.  
   
@@ -245,7 +249,7 @@ void register_filter(filter_method const& _Filter);
 void remove_network_links();
 ```  
   
-##  <a name="send"></a>보내기 
+##  <a name="send"></a> 보내기 
 
  이 블록에 메시지를 동기적으로 시작 합니다. 에 의해 호출 된 `ISource` 블록입니다. 이 함수에는 다음이 완료 되 면 메시지 이미 블록으로 전파 됩니다.  
   
@@ -268,7 +272,7 @@ virtual message_status send(
 ### <a name="remarks"></a>설명  
  이 메서드에서 throw 된 [invalid_argument](../../../standard-library/invalid-argument-class.md) 경우 예외는 `_PMessage` 또는 `_PSource` 매개 변수는 `NULL`합니다.  
   
-##  <a name="send_message"></a>send_message 
+##  <a name="send_message"></a> send_message 
 
  파생된 클래스에서 재정의 되 면이 메서드에서 메시지를 동기적으로 전달 된 `ISource` 이 블록 `propagator_block` 개체입니다. 이 호출 하는 `send` 소스 블록에서 호출 될 경우이 메서드.  
   
@@ -284,7 +288,7 @@ virtual message_status send_message(
 ### <a name="remarks"></a>설명  
  기본적으로이 블록 반환 `declined` 파생된 클래스에서 재정의 되지 않는 경우.  
   
-##  <a name="unlink_source"></a>unlink_source 
+##  <a name="unlink_source"></a> unlink_source 
 
  이 지정 된 소스 블록을 연결 해제 `propagator_block` 개체입니다.  
   
@@ -296,7 +300,7 @@ virtual void unlink_source(_Inout_ ISource<_Source_type>* _PSource);
  `_PSource`  
  에 대 한 포인터는 `ISource` 블록 연결을 끊을 하는 것입니다.  
   
-##  <a name="unlink_sources"></a>unlink_sources 
+##  <a name="unlink_sources"></a> unlink_sources 
 
  모든 소스 블록에서이 연결을 해제 `propagator_block` 개체입니다.  
   

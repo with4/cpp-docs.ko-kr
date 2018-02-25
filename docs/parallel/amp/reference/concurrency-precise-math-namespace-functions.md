@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::precise_math::acos
 - amp_math/Concurrency::precise_math::acosh
@@ -94,18 +94,20 @@ f1_keywords:
 - amp_math/Concurrency::precise_math::tgamma
 - amp_math/Concurrency::precise_math::trunc
 - amp_math/Concurrency::precise_math::truncf
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 02a792717690215c572089f11525f1f92c0e90e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c1d329e13d686e7f378646105b4bcaed2dbb3a3a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Concurrency:: precise_math 네임 스페이스 함수
 ||||  
@@ -173,7 +175,7 @@ inline double acos(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 아크코사인 값을 반환합니다.  
   
-##  <a name="acosf"></a>acosf  
+##  <a name="acosf"></a>  acosf  
  인수의 아크코사인 값을 계산합니다.  
   
 ```  
@@ -187,7 +189,7 @@ inline float acosf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 아크코사인 값을 반환합니다.  
   
-##  <a name="acosh"></a>acosh  
+##  <a name="acosh"></a>  acosh  
  인수의 역 하이퍼볼릭 코사인 값을 계산합니다.  
   
 ```  
@@ -204,7 +206,7 @@ inline double acosh(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 역 하이퍼볼릭 코사인 값을 반환합니다.  
   
-##  <a name="acoshf"></a>acoshf  
+##  <a name="acoshf"></a>  acoshf  
  인수의 역 하이퍼볼릭 코사인 값을 계산합니다.  
   
 ```  
@@ -235,7 +237,7 @@ inline double asin(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 아크사인 값을 반환합니다.  
   
-##  <a name="asinf"></a>asinf  
+##  <a name="asinf"></a>  asinf  
  인수의 아크사인 계산  
   
 ```  
@@ -249,7 +251,7 @@ inline float asinf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 아크사인 값을 반환합니다.  
   
-##  <a name="asinh"></a>asinh  
+##  <a name="asinh"></a>  asinh  
  인수의 역 하이퍼볼릭 사인 값을 계산합니다.  
   
 ```  
@@ -266,7 +268,7 @@ inline double asinh(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 역 하이퍼볼릭 사인 값을 반환합니다.  
   
-##  <a name="asinhf"></a>asinhf  
+##  <a name="asinhf"></a>  asinhf  
  인수의 역 하이퍼볼릭 사인 값을 계산합니다.  
   
 ```  
@@ -321,7 +323,7 @@ inline double atan2(
 ### <a name="return-value"></a>반환 값  
  _Y/_X의 아크탄젠트 값을 반환합니다.  
   
-##  <a name="atan2f"></a>atan2f  
+##  <a name="atan2f"></a>  atan2f  
  _Y/_X의 아크탄젠트를 계산합니다.  
   
 ```  
@@ -340,7 +342,7 @@ inline float atan2f(
 ### <a name="return-value"></a>반환 값  
  _Y/_X의 아크탄젠트 값을 반환합니다.  
   
-##  <a name="atanf"></a>atanf  
+##  <a name="atanf"></a>  atanf  
  인수의 아크탄젠트를 계산합니다.  
   
 ```  
@@ -354,7 +356,7 @@ inline float atanf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 아크탄젠트 값을 반환합니다.  
   
-##  <a name="atanh"></a>atanh  
+##  <a name="atanh"></a>  atanh  
  인수의 역 하이퍼볼릭 탄젠트 값을 계산합니다.  
   
 ```  
@@ -371,7 +373,7 @@ inline double atanh(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 역 하이퍼볼릭 탄젠트 값을 반환합니다.  
   
-##  <a name="atanhf"></a>atanhf  
+##  <a name="atanhf"></a>  atanhf  
  인수의 역 하이퍼볼릭 탄젠트 값을 계산합니다.  
   
 ```  
@@ -385,7 +387,7 @@ inline float atanhf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 역 하이퍼볼릭 탄젠트 값을 반환합니다.  
   
-##  <a name="cbrt"></a>cbrt  
+##  <a name="cbrt"></a>  cbrt  
  인수의 실제 세제곱근을 계산  
   
 ```  
@@ -402,7 +404,7 @@ inline double cbrt(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 실제 세제곱근을 반환합니다.  
   
-##  <a name="cbrtf"></a>cbrtf  
+##  <a name="cbrtf"></a>  cbrtf  
  인수의 실제 세제곱근을 계산  
   
 ```  
@@ -416,7 +418,7 @@ inline float cbrtf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 실제 세제곱근을 반환합니다.  
   
-##  <a name="ceil"></a>ceil  
+##  <a name="ceil"></a>  ceil  
  인수의 한계를 계산합니다.  
   
 ```  
@@ -433,7 +435,7 @@ inline double ceil(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 한계를 반환합니다.  
   
-##  <a name="ceilf"></a>ceilf  
+##  <a name="ceilf"></a>  ceilf  
  인수의 한계를 계산합니다.  
   
 ```  
@@ -447,7 +449,7 @@ inline float ceilf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 한계를 반환합니다.  
   
-##  <a name="copysign"></a>copysign  
+##  <a name="copysign"></a>  copysign  
  _X 크기 및 _Y 부호 값을 생성합니다.  
   
 ```  
@@ -471,7 +473,7 @@ inline double copysign(
 ### <a name="return-value"></a>반환 값  
  _X 크기 및 _Y 부호 값을 반환합니다.  
   
-##  <a name="copysignf"></a>copysignf  
+##  <a name="copysignf"></a>  copysignf  
  _X 크기 및 _Y 부호 값을 생성합니다.  
   
 ```  
@@ -507,7 +509,7 @@ inline double cos(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 코사인 값을 반환합니다.  
   
-##  <a name="cosf"></a>cosf  
+##  <a name="cosf"></a>  cosf  
  인수의 코사인 값을 계산합니다.  
   
 ```  
@@ -538,7 +540,7 @@ inline double cosh(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 하이퍼볼릭 코사인 값을 반환합니다.  
   
-##  <a name="coshf"></a>coshf  
+##  <a name="coshf"></a>  coshf  
  인수의 하이퍼볼릭 코사인 값을 계산합니다.  
   
 ```  
@@ -552,7 +554,7 @@ inline float coshf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 하이퍼볼릭 코사인 값을 반환합니다.  
   
-##  <a name="cospi"></a>cospi  
+##  <a name="cospi"></a>  cospi  
  pi * _X의 코사인 값을 계산합니다.  
   
 ```  
@@ -569,7 +571,7 @@ inline double cospi(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  pi * _X의 코사인 값을 반환합니다.  
   
-##  <a name="cospif"></a>cospif  
+##  <a name="cospif"></a>  cospif  
  pi * _X의 코사인 값을 계산합니다.  
   
 ```  
@@ -583,7 +585,7 @@ inline float cospif(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  pi * _X의 코사인 값을 반환합니다.  
   
-##  <a name="erf"></a>erf  
+##  <a name="erf"></a>  erf  
  _X의 오류 함수 계산  
   
 ```  
@@ -600,7 +602,7 @@ inline double erf(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  _X의 오류 함수를 반환합니다.  
   
-##  <a name="erfc"></a>erfc  
+##  <a name="erfc"></a>  erfc  
  _X의 상보 오류 함수 계산  
   
 ```  
@@ -617,7 +619,7 @@ inline double erfc(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  _X의 상보 오류 함수를 반환합니다.  
   
-##  <a name="erfcf"></a>erfcf  
+##  <a name="erfcf"></a>  erfcf  
  _X의 상보 오류 함수 계산  
   
 ```  
@@ -631,7 +633,7 @@ inline float erfcf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  _X의 상보 오류 함수를 반환합니다.  
   
-##  <a name="erfcinv"></a>erfcinv  
+##  <a name="erfcinv"></a>  erfcinv  
  _X의 역 상보 오류 함수 계산  
   
 ```  
@@ -648,7 +650,7 @@ inline double erfcinv(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  _X의 역 상보 오류 함수를 반환합니다.  
   
-##  <a name="erfcinvf"></a>erfcinvf  
+##  <a name="erfcinvf"></a>  erfcinvf  
  _X의 역 상보 오류 함수 계산  
   
 ```  
@@ -662,7 +664,7 @@ inline float erfcinvf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  _X의 역 상보 오류 함수를 반환합니다.  
   
-##  <a name="erff"></a>erff  
+##  <a name="erff"></a>  erff  
  _X의 오류 함수 계산  
   
 ```  
@@ -676,7 +678,7 @@ inline float erff(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  _X의 오류 함수를 반환합니다.  
   
-##  <a name="erfinv"></a>erfinv  
+##  <a name="erfinv"></a>  erfinv  
  _X의 역 오류 함수 계산  
   
 ```  
@@ -693,7 +695,7 @@ inline double erfinv(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  _X의 역 오류 함수를 반환합니다.  
   
-##  <a name="erfinvf"></a>erfinvf  
+##  <a name="erfinvf"></a>  erfinvf  
  _X의 역 오류 함수 계산  
   
 ```  
@@ -707,7 +709,7 @@ inline float erfinvf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  _X의 역 오류 함수를 반환합니다.  
   
-##  <a name="exp10"></a>exp10  
+##  <a name="exp10"></a>  exp10  
  밑수 10 인수의 지 수 계산  
   
 ```  
@@ -724,7 +726,7 @@ inline double exp10(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 밑 밑수 10을 반환 합니다.  
   
-##  <a name="exp10f"></a>exp10f  
+##  <a name="exp10f"></a>  exp10f  
  밑수 10 인수의 지 수 계산  
   
 ```  
@@ -738,7 +740,7 @@ inline float exp10f(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 밑 밑수 10을 반환 합니다.  
   
-##  <a name="expm1"></a>expm1  
+##  <a name="expm1"></a>  expm1  
  인수의 밑이 e인 지수 값 - 1을 계산합니다.  
   
 ```  
@@ -755,7 +757,7 @@ inline double expm1(double exponent) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 밑이 e인 지수 값 - 1을 반환합니다.  
   
-##  <a name="expm1f"></a>expm1f  
+##  <a name="expm1f"></a>  expm1f  
  인수의 밑이 e인 지수 값 - 1을 계산합니다.  
   
 ```  
@@ -786,7 +788,7 @@ inline double exp(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 밑이 e인 지수 값을 반환합니다.  
   
-##  <a name="expf"></a>expf  
+##  <a name="expf"></a>  expf  
  밑이 e 인 인수를 계산합니다.  
   
 ```  
@@ -800,7 +802,7 @@ inline float expf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 밑이 e인 지수 값을 반환합니다.  
   
-##  <a name="exp2"></a>exp2  
+##  <a name="exp2"></a>  exp2  
  밑이 2 인 지 수의 인수를 계산합니다.  
   
 ```  
@@ -817,7 +819,7 @@ inline double exp2(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 밑이 2인 지수 값을 반환합니다.  
   
-##  <a name="exp2f"></a>exp2f  
+##  <a name="exp2f"></a>  exp2f  
  밑이 2 인 지 수의 인수를 계산합니다.  
   
 ```  
@@ -831,7 +833,7 @@ inline float exp2f(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 밑이 2인 지수 값을 반환합니다.  
   
-##  <a name="fabs"></a>fabs  
+##  <a name="fabs"></a>  fabs  
  인수의 절대값을 반환합니다.  
   
 ```  
@@ -848,7 +850,7 @@ inline double fabs(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 절대값을 반환합니다.  
   
-##  <a name="fabsf"></a>fabsf  
+##  <a name="fabsf"></a>  fabsf  
  인수의 절대값을 반환합니다.  
   
 ```  
@@ -862,7 +864,7 @@ inline float fabsf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 절대값을 반환합니다.  
 
-## <a name="fdim"></a>fdim  
+## <a name="fdim"></a> fdim  
 인수 사이의 양의 차이 계산 합니다.
 ```  
 inline float fdim(
@@ -875,13 +877,13 @@ inline double fdim(
 ) restrict(amp);
 ``` 
 ### <a name="parameters"></a>매개 변수
-`_X`부동 소수점 값 `_Y` 부동 소수점 값
+`_X` 부동 소수점 값 `_Y` 부동 소수점 값
 
 
 ### <a name="return-value"></a>반환 값
 _X 및 _Y _X가 _Y; 보다 큰 경우의 차이점 그렇지 않고 + 0입니다.
  
-## <a name="fdimf"></a>fdimf  
+## <a name="fdimf"></a> fdimf  
 인수 사이의 양의 차이 계산 합니다.
 ```
 inline float fdimf(
@@ -890,12 +892,12 @@ inline float fdimf(
 ) restrict(amp);
 ```
 ### <a name="parameters"></a>매개 변수
-`_X`부동 소수점 값 `_Y` 부동 소수점 값
+`_X` 부동 소수점 값 `_Y` 부동 소수점 값
 
 ### <a name="return-value"></a>반환 값
 _X 및 _Y _X가 _Y; 보다 큰 경우의 차이점 그렇지 않고 + 0입니다. 
   
-##  <a name="floor"></a>floor  
+##  <a name="floor"></a>  floor  
  인수의 밑을 계산합니다.  
   
 ```  
@@ -912,7 +914,7 @@ inline double floor(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 밑을 반환합니다.  
   
-##  <a name="floorf"></a>floorf  
+##  <a name="floorf"></a>  floorf  
  인수의 밑을 계산합니다.  
   
 ```  
@@ -926,7 +928,7 @@ inline float floorf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 밑을 반환합니다.  
 
-## <a name="a-namefma-fma"></a><a name="fma">fma  
+## <a name="a-namefma-fma"></a><a name="fma"> fma  
 첫 번째 및 두 번째 지정 된 인수를의 곱을 계산 다음 결과는 세 번째 지정 된 인수를 추가 전체 계산 된 단일 작업으로 수행 됩니다.
 ```
 inline float fma(
@@ -942,14 +944,14 @@ inline double fma(
 ) restrict(amp);
 ```
 ### <a name="parameters"></a>매개 변수
-`_X`첫 번째 부동 소수점 인수입니다.
-`_Y`두 번째 부동 소수점 인수입니다.
-`_Z`부동 소수점 세 번째 인수입니다.
+`_X` 첫 번째 부동 소수점 인수입니다.
+`_Y` 두 번째 부동 소수점 인수입니다.
+`_Z` 부동 소수점 세 번째 인수입니다.
 
 ### <a name="return-value"></a>반환 값
 식의 결과 (_X * _Y) + _Z 합니다. 전체 계산은; 한 번의 작업으로 수행 됩니다. 즉, 하위 식을 무한 정밀도로 계산 하는 고만 최종 결과가 반올림 됩니다. 
 
-## <a name="fmaf"></a>fmaf  
+## <a name="fmaf"></a> fmaf  
 첫 번째 및 두 번째 지정 된 인수를의 곱을 계산 다음 결과는 세 번째 지정 된 인수를 추가 전체 계산 된 단일 작업으로 수행 됩니다.
 ```
 inline float fmaf(
@@ -959,14 +961,14 @@ inline float fmaf(
 ) restrict(amp);
 ```  
 ### <a name="parameters"></a>매개 변수
-`_X`첫 번째 부동 소수점 인수입니다.
-`_Y`두 번째 부동 소수점 인수입니다.
-`_Z`부동 소수점 세 번째 인수입니다.
+`_X` 첫 번째 부동 소수점 인수입니다.
+`_Y` 두 번째 부동 소수점 인수입니다.
+`_Z` 부동 소수점 세 번째 인수입니다.
 
 ### <a name="return-value"></a>반환 값
 식의 결과 (_X * _Y) + _Z 합니다. 전체 계산은; 한 번의 작업으로 수행 됩니다. 즉, 하위 식을 무한 정밀도로 계산 하는 고만 최종 결과가 반올림 됩니다.
   
-##  <a name="fmax"></a>fmax  
+##  <a name="fmax"></a>  fmax  
  인수의 최대 숫자 값을 결정  
   
 ```  
@@ -990,7 +992,7 @@ inline double fmax(
 ### <a name="return-value"></a>반환 값  
  인수의 최대 숫자 값을 반환 합니다.  
   
-##  <a name="fmaxf"></a>fmaxf  
+##  <a name="fmaxf"></a>  fmaxf  
  인수의 최대 숫자 값을 결정  
   
 ```  
@@ -1009,7 +1011,7 @@ inline float fmaxf(
 ### <a name="return-value"></a>반환 값  
  인수의 최대 숫자 값을 반환 합니다.  
   
-##  <a name="fmin"></a>fmin  
+##  <a name="fmin"></a>  fmin  
  인수의 숫자의 최소값 결정  
   
 ```  
@@ -1033,7 +1035,7 @@ inline double fmin(
 ### <a name="return-value"></a>반환 값  
  인수 중 최소 숫자 값을 반환 합니다.  
   
-##  <a name="fminf"></a>fminf  
+##  <a name="fminf"></a>  fminf  
  인수의 숫자의 최소값 결정  
   
 ```  
@@ -1052,7 +1054,7 @@ inline float fminf(
 ### <a name="return-value"></a>반환 값  
  인수 중 최소 숫자 값을 반환 합니다.  
   
-##  <a name="fmod"></a>fmod 함수 (c + + AMP)  
+##  <a name="fmod"></a>  fmod 함수 (c + + AMP)  
  첫 번째 지정 된 인수 두 번째는 지정 된 인수를 나눈 나머지를 계산 합니다.  
   
 ```  
@@ -1076,7 +1078,7 @@ inline double fmod(
 ### <a name="return-value"></a>반환 값  
  나머지 부분에서는 `_X` 나눈 `_Y`;의 값 즉, `_X`  -  `_Y`  *n* 여기서  *n*  되는 정수 되도록의 크기가 `_X`  -  `_Y`  *n*  의 크기 보다 작으면 `_Y`합니다.  
   
-##  <a name="fmodf"></a>fmodf  
+##  <a name="fmodf"></a>  fmodf  
  첫 번째 지정 된 인수 두 번째는 지정 된 인수를 나눈 나머지를 계산 합니다.  
   
 ```  
@@ -1095,7 +1097,7 @@ inline float fmodf(
 ### <a name="return-value"></a>반환 값  
  나머지 부분에서는 `_X` 나눈 `_Y`;의 값 즉, `_X`  -  `_Y`  *n* 여기서  *n*  되는 정수 되도록의 크기가 `_X`  -  `_Y`  *n*  의 크기 보다 작으면 `_Y`합니다.  
   
-##  <a name="fpclassify"></a>fpclassify  
+##  <a name="fpclassify"></a>  fpclassify  
  인수 값을 NaN, infinite, normal, subnormal, 0으로 분류합니다.  
   
 ```  
@@ -1112,7 +1114,7 @@ inline int fpclassify(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수 값에 적절한 번호 분류 매크로의 값을 반환합니다.  
   
-##  <a name="frexp"></a>frexp  
+##  <a name="frexp"></a>  frexp  
  가 수 및 _X의 지 수를 가져옵니다.  
   
 ```  
@@ -1136,7 +1138,7 @@ inline double frexp(
 ### <a name="return-value"></a>반환 값  
  _X의 가수를 반환합니다.  
   
-##  <a name="frexpf"></a>frexpf  
+##  <a name="frexpf"></a>  frexpf  
  가 수 및 _X의 지 수를 가져옵니다.  
   
 ```  
@@ -1155,7 +1157,7 @@ inline float frexpf(
 ### <a name="return-value"></a>반환 값  
  _X의 가수를 반환합니다.  
   
-##  <a name="hypot"></a>hypot  
+##  <a name="hypot"></a>  hypot  
  _X 및 _Y 제곱합의 제곱근 계산  
   
 ```  
@@ -1179,7 +1181,7 @@ inline double hypot(
 ### <a name="return-value"></a>반환 값  
  _X 및 _Y 제곱합의 제곱근을 반환합니다.  
   
-##  <a name="hypotf"></a>hypotf  
+##  <a name="hypotf"></a>  hypotf  
  _X 및 _Y 제곱합의 제곱근 계산  
   
 ```  
@@ -1198,7 +1200,7 @@ inline float hypotf(
 ### <a name="return-value"></a>반환 값  
  _X 및 _Y 제곱합의 제곱근을 반환합니다.  
   
-##  <a name="ilogb"></a>ilogb  
+##  <a name="ilogb"></a>  ilogb  
  부호 있는 정수 값으로 _X 지수를 추출합니다.  
   
 ```  
@@ -1215,7 +1217,7 @@ inline int ilogb(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  부호 있는 정수 값으로 _X 지수를 반환합니다.  
   
-##  <a name="ilogbf"></a>ilogbf  
+##  <a name="ilogbf"></a>  ilogbf  
  부호 있는 정수 값으로 _X 지수를 추출합니다.  
   
 ```  
@@ -1229,7 +1231,7 @@ inline int ilogbf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  부호 있는 정수 값으로 _X 지수를 반환합니다.  
   
-##  <a name="isfinite"></a>isfinite  
+##  <a name="isfinite"></a>  isfinite  
  인수가 유한 인 값인에 있는지 여부를 결정 합니다.  
   
 ```  
@@ -1246,7 +1248,7 @@ inline int isfinite(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수가 유한인 값인 경우에만 0이 아닌 값을 반환합니다.  
   
-##  <a name="isinf"></a>isinf  
+##  <a name="isinf"></a>  isinf  
  인수가 무한대 인지를 결정 합니다.  
   
 ```  
@@ -1263,7 +1265,7 @@ inline int isinf(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수가 무한대 값인 경우에 0이 아닌 값을 반환합니다.  
   
-##  <a name="isnan"></a>isnan  
+##  <a name="isnan"></a>  isnan  
  인수가 NaN 인지 확인 합니다.  
   
 ```  
@@ -1280,7 +1282,7 @@ inline int isnan(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수가 NaN 값을 갖는 경우에만 0이 아닌 값을 반환합니다.  
   
-##  <a name="isnormal"></a>isnormal  
+##  <a name="isnormal"></a>  isnormal  
  인수가 정상인지 여부를 결정합니다.  
   
 ```  
@@ -1297,7 +1299,7 @@ inline int isnormal(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수가 정상 값을 가진 경우에만 0이 아닌 값을 반환합니다.  
   
-##  <a name="ldexp"></a>ldexp  
+##  <a name="ldexp"></a>  ldexp  
  지정 된가 수 및 지 수에서 실수를 계산합니다.  
   
 ```  
@@ -1321,7 +1323,7 @@ inline double ldexp(
 ### <a name="return-value"></a>반환 값  
  _X를 반환 합니다 * 2 ^ _Exp  
   
-##  <a name="ldexpf"></a>ldexpf  
+##  <a name="ldexpf"></a>  ldexpf  
  지정 된가 수 및 지 수에서 실수를 계산합니다.  
   
 ```  
@@ -1340,7 +1342,7 @@ inline float ldexpf(
 ### <a name="return-value"></a>반환 값  
  _X를 반환 합니다 * 2 ^ _Exp  
   
-##  <a name="lgamma"></a>lgamma  
+##  <a name="lgamma"></a>  lgamma  
  감마 인수의 절대 값 자연 로그 계산  
   
 ```  
@@ -1364,7 +1366,7 @@ inline double lgamma(
 ### <a name="return-value"></a>반환 값  
  감마 인수의 절대 값의 자연 로그를 반환합니다.  
   
-##  <a name="lgammaf"></a>lgammaf  
+##  <a name="lgammaf"></a>  lgammaf  
  감마 인수의 절대 값 자연 로그 계산  
   
 ```  
@@ -1417,7 +1419,7 @@ inline double log10(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 밑이 10인 로그 값을 반환합니다.  
   
-##  <a name="log10f"></a>log10f  
+##  <a name="log10f"></a>  log10f  
  인수의 밑이 10 인 로그 계산  
   
 ```  
@@ -1431,7 +1433,7 @@ inline float log10f(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 밑이 10인 로그 값을 반환합니다.  
   
-##  <a name="log1p"></a>log1p  
+##  <a name="log1p"></a>  log1p  
  인수에 1을 더한 값의 밑이 e인 로그 값을 계산합니다.  
   
 ```  
@@ -1448,7 +1450,7 @@ inline double log1p(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수에 1을 더한 값의 밑이 e인 로그 값을 반환합니다.  
   
-##  <a name="log1pf"></a>log1pf  
+##  <a name="log1pf"></a>  log1pf  
  인수에 1을 더한 값의 밑이 e인 로그 값을 계산합니다.  
   
 ```  
@@ -1462,7 +1464,7 @@ inline float log1pf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수에 1을 더한 값의 밑이 e인 로그 값을 반환합니다.  
   
-##  <a name="log2"></a>log2  
+##  <a name="log2"></a>  log2  
  인수의 밑이 2 인 로그 계산  
   
 ```  
@@ -1479,7 +1481,7 @@ inline double log2(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 밑이 10인 로그 값을 반환합니다.  
   
-##  <a name="log2f"></a>log2f  
+##  <a name="log2f"></a>  log2f  
  인수의 밑이 2 인 로그 계산  
   
 ```  
@@ -1493,7 +1495,7 @@ inline float log2f(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 밑이 10인 로그 값을 반환합니다.  
   
-##  <a name="logb"></a>logb  
+##  <a name="logb"></a>  logb  
  부호 있는 정수 값으로서 _X의 지수를 부동 소수점 형식에서 추출합니다.  
   
 ```  
@@ -1510,7 +1512,7 @@ inline double logb(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  _X의 부호 있는 지수를 반환합니다.  
   
-##  <a name="logbf"></a>logbf  
+##  <a name="logbf"></a>  logbf  
  부호 있는 정수 값으로서 _X의 지수를 부동 소수점 형식에서 추출합니다.  
   
 ```  
@@ -1524,7 +1526,7 @@ inline float logbf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  _X의 부호 있는 지수를 반환합니다.  
   
-##  <a name="logf"></a>logf  
+##  <a name="logf"></a>  logf  
  인수의 밑이 e 인 지 수 로그를 계산합니다.  
   
 ```  
@@ -1538,7 +1540,7 @@ inline float logf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 밑이 e인 로그 값을 반환합니다.  
   
-##  <a name="modf"></a>modf  
+##  <a name="modf"></a>  modf  
  정수 부분과 소수 부분에 지정 된 인수를 분할합니다.  
   
 ```  
@@ -1556,13 +1558,13 @@ inline double modf(
  `_X`  
  부동 소수점 값  
   
- `_Iptr`(out 매개 변수)  
+ `_Iptr` (out 매개 변수)  
  정수 부분 `_X`, 부동 소수점 값으로.  
   
 ### <a name="return-value"></a>반환 값  
  부호 있는 소수 부분 `_X`합니다.  
   
-##  <a name="modff"></a>modff  
+##  <a name="modff"></a>  modff  
  정수 부분과 소수 부분에 지정 된 인수를 분할합니다.  
   
 ```  
@@ -1581,7 +1583,7 @@ inline float modff(
 ### <a name="return-value"></a>반환 값  
  부호 있는 소수 부분을 반환 `_X`합니다.  
   
-##  <a name="nan"></a>nan  
+##  <a name="nan"></a>  nan  
  자동 NaN을 반환합니다.  
   
 ```  
@@ -1595,7 +1597,7 @@ inline double nan(int _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  사용 가능할 경우 _X에 표시된 내용과 함께 자동 NaN을 반환합니다.  
   
-##  <a name="nanf"></a>nanf  
+##  <a name="nanf"></a>  nanf  
  자동 NaN을 반환합니다.  
   
 ```  
@@ -1609,7 +1611,7 @@ inline float nanf(int _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  사용 가능할 경우 _X에 표시된 내용과 함께 자동 NaN을 반환합니다.  
   
-##  <a name="nearbyint"></a>nearbyint  
+##  <a name="nearbyint"></a>  nearbyint  
  인수에 현재 반올림 방향을 사용하여 부동 소수점 형식에서 정수 값으로 반올림합니다.  
   
 ```  
@@ -1626,7 +1628,7 @@ inline double nearbyint(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  반올림된 정수 값을 반환합니다.  
   
-##  <a name="nearbyintf"></a>nearbyintf  
+##  <a name="nearbyintf"></a>  nearbyintf  
  인수에 현재 반올림 방향을 사용하여 부동 소수점 형식에서 정수 값으로 반올림합니다.  
   
 ```  
@@ -1640,7 +1642,7 @@ inline float nearbyintf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  반올림된 정수 값을 반환합니다.  
   
-##  <a name="nextafter"></a>nextafter  
+##  <a name="nextafter"></a>  nextafter  
  _X _Y 방향에서 후는 함수 형식에 다음 표현 가능한 값 결정  
   
 ```  
@@ -1664,7 +1666,7 @@ inline double nextafter(
 ### <a name="return-value"></a>반환 값  
  _Y 방향에서 _X 후 존재 하는 함수를 형식에서 다음 표현 가능한 값을 반환 합니다.  
   
-##  <a name="nextafterf"></a>nextafterf  
+##  <a name="nextafterf"></a>  nextafterf  
  _X _Y 방향에서 후는 함수 형식에 다음 표현 가능한 값 결정  
   
 ```  
@@ -1683,7 +1685,7 @@ inline float nextafterf(
 ### <a name="return-value"></a>반환 값  
  _Y 방향에서 _X 후 존재 하는 함수를 형식에서 다음 표현 가능한 값을 반환 합니다.  
   
-##  <a name="phi"></a>phi  
+##  <a name="phi"></a>  phi  
  인수는 누적 분포 함수를 반환합니다.  
   
 ```  
@@ -1700,7 +1702,7 @@ inline double phi(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수는 누적 분포 함수를 반환합니다.  
   
-##  <a name="phif"></a>phif  
+##  <a name="phif"></a>  phif  
  인수는 누적 분포 함수를 반환합니다.  
   
 ```  
@@ -1737,7 +1739,7 @@ inline double pow(
   
 ### <a name="return-value"></a>반환 값  
   
-##  <a name="powf"></a>powf  
+##  <a name="powf"></a>  powf  
  _X _Y 거듭제곱을 계산 합니다.  
   
 ```  
@@ -1755,7 +1757,7 @@ inline float powf(
   
 ### <a name="return-value"></a>반환 값  
   
-##  <a name="probit"></a>probit  
+##  <a name="probit"></a>  probit  
  인수의 역 누적 분포 함수를 반환합니다.  
   
 ```  
@@ -1772,7 +1774,7 @@ inline double probit(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 역 누적 분포 함수를 반환합니다.  
   
-##  <a name="probitf"></a>probitf  
+##  <a name="probitf"></a>  probitf  
  인수의 역 누적 분포 함수를 반환합니다.  
   
 ```  
@@ -1786,7 +1788,7 @@ inline float probitf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 역 누적 분포 함수를 반환합니다.  
   
-##  <a name="rcbrt"></a>rcbrt  
+##  <a name="rcbrt"></a>  rcbrt  
  인수의 제곱근 역을 반환합니다.  
   
 ```  
@@ -1803,7 +1805,7 @@ inline double rcbrt(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 제곱근 역을 반환합니다.  
   
-##  <a name="rcbrtf"></a>rcbrtf  
+##  <a name="rcbrtf"></a>  rcbrtf  
  인수의 제곱근 역을 반환합니다.  
   
 ```  
@@ -1817,7 +1819,7 @@ inline float rcbrtf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 제곱근 역을 반환합니다.  
   
-##  <a name="remainder"></a>나머지  
+##  <a name="remainder"></a>  remainder  
  나머지 계산: _X REM _Y  
   
 ```  
@@ -1841,7 +1843,7 @@ inline double remainder(
 ### <a name="return-value"></a>반환 값  
  _X REM _Y를 반환합니다.  
   
-##  <a name="remainderf"></a>remainderf  
+##  <a name="remainderf"></a>  remainderf  
  나머지 계산: _X REM _Y  
   
 ```  
@@ -1860,7 +1862,7 @@ inline float remainderf(
 ### <a name="return-value"></a>반환 값  
  _X REM _Y를 반환합니다.  
   
-##  <a name="remquo"></a>remquo  
+##  <a name="remquo"></a>  remquo  
  첫 번째 지정 된 인수 두 번째는 지정 된 인수를 나눈 나머지를 계산 합니다. 또한 두 번째는 지정 된 인수의 significand 나눈 첫 번째는 지정 된 인수의 significand의 몫을 계산 하 고 세 번째 인수에 지정 된 위치를 사용 하 여 몫을 반환 합니다.  
   
 ```  
@@ -1883,13 +1885,13 @@ inline double remquo(
  `_Y`  
  두 번째 부동 소수점 인수입니다.  
   
- `_Quo`(out 매개 변수)  
+ `_Quo` (out 매개 변수)  
  소수 자릿수 비트의 몫을 반환 하는 데 사용 되는 정수 주소 `_X` 의 소수 자릿수 비트 나눈 `_Y`합니다.  
   
 ### <a name="return-value"></a>반환 값  
  나머지를 반환 `_X` 나눈 `_Y`합니다.  
   
-##  <a name="remquof"></a>remquof  
+##  <a name="remquof"></a>  remquof  
  첫 번째 지정 된 인수 두 번째는 지정 된 인수를 나눈 나머지를 계산 합니다. 또한 두 번째는 지정 된 인수의 significand 나눈 첫 번째는 지정 된 인수의 significand의 몫을 계산 하 고 세 번째 인수에 지정 된 위치를 사용 하 여 몫을 반환 합니다.  
   
 ```  
@@ -1906,13 +1908,13 @@ inline float remquof(
  `_Y`  
  두 번째 부동 소수점 인수입니다.  
   
- `_Quo`(out 매개 변수)  
+ `_Quo` (out 매개 변수)  
  소수 자릿수 비트의 몫을 반환 하는 데 사용 되는 정수 주소 `_X` 의 소수 자릿수 비트 나눈 `_Y`합니다.  
   
 ### <a name="return-value"></a>반환 값  
  나머지를 반환 `_X` 나눈 `_Y`합니다.  
   
-##  <a name="round"></a>반올림  
+##  <a name="round"></a>  round  
  _X 가장 가까운 정수로 반올림 합니다.  
   
 ```  
@@ -1929,7 +1931,7 @@ inline double round(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  _X의 가장 가까운 정수를 반환합니다.  
   
-##  <a name="roundf"></a>roundf  
+##  <a name="roundf"></a>  roundf  
  _X 가장 가까운 정수로 반올림 합니다.  
   
 ```  
@@ -1943,7 +1945,7 @@ inline float roundf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  _X의 가장 가까운 정수를 반환합니다.  
   
-##  <a name="rsqrt"></a>rsqrt  
+##  <a name="rsqrt"></a>  rsqrt  
  역 인수의 제곱근을 반환합니다.  
   
 ```  
@@ -1960,7 +1962,7 @@ inline double rsqrt(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  역 인수의 제곱근을 반환합니다.  
   
-##  <a name="rsqrtf"></a>rsqrtf  
+##  <a name="rsqrtf"></a>  rsqrtf  
  역 인수의 제곱근을 반환합니다.  
   
 ```  
@@ -1974,7 +1976,7 @@ inline float rsqrtf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  역 인수의 제곱근을 반환합니다.  
   
-##  <a name="scalb"></a>scalb  
+##  <a name="scalb"></a>  scalb  
  _X에 FLT_RADIX를 곱하여 _Y 거듭제곱을 구합니다.  
   
 ```  
@@ -1998,7 +2000,7 @@ inline double scalb(
 ### <a name="return-value"></a>반환 값  
  _X * (FLT_RADIX ^ _Y)를 반환합니다.  
   
-##  <a name="scalbf"></a>scalbf  
+##  <a name="scalbf"></a>  scalbf  
  _X에 FLT_RADIX를 곱하여 _Y 거듭제곱을 구합니다.  
   
 ```  
@@ -2017,7 +2019,7 @@ inline float scalbf(
 ### <a name="return-value"></a>반환 값  
  _X * (FLT_RADIX ^ _Y)를 반환합니다.  
   
-##  <a name="scalbn"></a>scalbn  
+##  <a name="scalbn"></a>  scalbn  
  _X에 FLT_RADIX를 곱하여 _Y 거듭제곱을 구합니다.  
   
 ```  
@@ -2041,7 +2043,7 @@ inline double scalbn(
 ### <a name="return-value"></a>반환 값  
  _X * (FLT_RADIX ^ _Y)를 반환합니다.  
   
-##  <a name="scalbnf"></a>scalbnf  
+##  <a name="scalbnf"></a>  scalbnf  
  _X에 FLT_RADIX를 곱하여 _Y 거듭제곱을 구합니다.  
   
 ```  
@@ -2060,7 +2062,7 @@ inline float scalbnf(
 ### <a name="return-value"></a>반환 값  
  _X * (FLT_RADIX ^ _Y)를 반환합니다.  
   
-##  <a name="signbit"></a>signbit  
+##  <a name="signbit"></a>  signbit  
  _X의 부호가 음수인지 결정합니다.  
   
 ```  
@@ -2077,7 +2079,7 @@ inline int signbit(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  _X의 부호가 음수인 경우에만 0이 아닌 값을 반환합니다.  
   
-##  <a name="signbitf"></a>signbitf  
+##  <a name="signbitf"></a>  signbitf  
  _X의 부호가 음수인지 결정합니다.  
   
 ```  
@@ -2108,7 +2110,7 @@ inline double sin(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 사인 값을 반환합니다.  
   
-##  <a name="sinf"></a>sinf  
+##  <a name="sinf"></a>  sinf  
  인수의 사인 값을 계산합니다.  
   
 ```  
@@ -2122,7 +2124,7 @@ inline float sinf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 사인 값을 반환합니다.  
   
-##  <a name="sincos"></a>sincos  
+##  <a name="sincos"></a>  sincos  
  _X의 사인 값 및 코사인 값을 계산  
   
 ```  
@@ -2148,7 +2150,7 @@ inline void sincos(
  `_C`  
  _X의 코사인 값을 반환합니다.  
   
-##  <a name="sincosf"></a>sincosf  
+##  <a name="sincosf"></a>  sincosf  
  _X의 사인 값 및 코사인 값을 계산  
   
 ```  
@@ -2185,7 +2187,7 @@ inline double sinh(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 하이퍼볼릭 사인 값을 반환합니다.  
   
-##  <a name="sinhf"></a>sinhf  
+##  <a name="sinhf"></a>  sinhf  
  인수의 하이퍼볼릭 사인 값을 계산합니다.  
   
 ```  
@@ -2199,7 +2201,7 @@ inline float sinhf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 하이퍼볼릭 사인 값을 반환합니다.  
   
-##  <a name="sinpi"></a>sinpi  
+##  <a name="sinpi"></a>  sinpi  
  pi * _X의 사인 값을 계산합니다.  
   
 ```  
@@ -2216,7 +2218,7 @@ inline double sinpi(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  pi * _X의 사인 값을 반환합니다.  
   
-##  <a name="sinpif"></a>sinpif  
+##  <a name="sinpif"></a>  sinpif  
  pi * _X의 사인 값을 계산합니다.  
   
 ```  
@@ -2247,7 +2249,7 @@ inline double sqrt(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 제곱근을 반환합니다.  
   
-##  <a name="sqrtf"></a>sqrtf  
+##  <a name="sqrtf"></a>  sqrtf  
  인수의 제곱근을 계산합니다.  
   
 ```  
@@ -2278,7 +2280,7 @@ inline double tan(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 탄젠트 값을 반환합니다.  
   
-##  <a name="tanf"></a>tanf  
+##  <a name="tanf"></a>  tanf  
  인수의 탄젠트 값을 계산  
   
 ```  
@@ -2309,7 +2311,7 @@ inline double tanh(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 하이퍼볼릭 탄젠트 값을 반환합니다.  
   
-##  <a name="tanhf"></a>tanhf  
+##  <a name="tanhf"></a>  tanhf  
  인수의 하이퍼볼릭 탄젠트 값을 계산합니다.  
   
 ```  
@@ -2323,7 +2325,7 @@ inline float tanhf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 하이퍼볼릭 탄젠트 값을 반환합니다.  
   
-##  <a name="tanpi"></a>tanpi  
+##  <a name="tanpi"></a>  tanpi  
  pi * _X의 탄젠트 값을 계산합니다.  
   
 ```  
@@ -2340,7 +2342,7 @@ inline double tanpi(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  pi * _X의 탄젠트 값을 반환합니다.  
   
-##  <a name="tanpif"></a>tanpif  
+##  <a name="tanpif"></a>  tanpif  
  pi * _X의 탄젠트 값을 계산합니다.  
   
 ```  
@@ -2354,7 +2356,7 @@ inline float tanpif(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  pi * _X의 탄젠트 값을 반환합니다.  
   
-##  <a name="tgamma"></a>tgamma  
+##  <a name="tgamma"></a>  tgamma  
  _X의 감마 함수 계산  
   
 ```  
@@ -2371,7 +2373,7 @@ inline double tgamma(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  _X의 감마 함수의 결과를 반환합니다.  
   
-##  <a name="tgammaf"></a>tgammaf  
+##  <a name="tgammaf"></a>  tgammaf  
  _X의 감마 함수 계산  
   
 ```  
@@ -2385,7 +2387,7 @@ inline float tgammaf(float _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  _X의 감마 함수의 결과를 반환합니다.  
   
-##  <a name="trunc"></a>trunc  
+##  <a name="trunc"></a>  trunc  
  정수 구성 요소에 대 한 인수를 자릅니다.  
   
 ```  
@@ -2402,7 +2404,7 @@ inline double trunc(double _X) restrict(amp);
 ### <a name="return-value"></a>반환 값  
  인수의 정수 구성 요소를 반환합니다.  
   
-##  <a name="truncf"></a>truncf  
+##  <a name="truncf"></a>  truncf  
  정수 구성 요소에 대 한 인수를 자릅니다.  
   
 ```  

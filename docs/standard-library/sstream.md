@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <sstream>
-dev_langs: C++
-helpviewer_keywords: sstream header
+ms.topic: reference
+f1_keywords:
+- <sstream>
+dev_langs:
+- C++
+helpviewer_keywords:
+- sstream header
 ms.assetid: 56f55bc5-549d-4e7f-aaad-99e0ffa49c9e
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3a8fb1e1ee10cb42a2fd75f6eb7f16a7bb359321
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 319c9cc1b61565eaeffb442b2f4e280aab9b720c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltsstreamgt"></a>&lt;sstream&gt;
 할당된 개체 배열에 저장된 시퀀스에 대한 Iostreams 작업을 지원하는 여러 템플릿 클래스를 정의합니다. 이러한 시퀀스와 템플릿 클래스 [basic_string](../standard-library/basic-string-class.md)의 개체 간을 쉽게 변환할 수 있습니다.  

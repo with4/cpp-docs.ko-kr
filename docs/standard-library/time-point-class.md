@@ -4,28 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::time_point
 - chrono/std::chrono::time_point::time_point
 - chrono/std::chrono::time_point::max
 - chrono/std::chrono::time_point::min
 - chrono/std::chrono::time_point::time_since_epoch
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-helpviewer_keywords: std::chrono [C++], time_point
-ms.workload: cplusplus
-ms.openlocfilehash: 4b8f6880968b899bcf28b60fa69edf1e4250d4d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+helpviewer_keywords:
+- std::chrono [C++], time_point
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4d81f49fd94dcedacfe33de75e307a441f74a94e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="timepoint-class"></a>time_point 클래스
 `time_point`는 시점을 나타내는 형식을 설명합니다. 이 클래스는 템플릿 인수 `Clock`으로 표시되는 epoch 이후 경과된 시간을 저장하는 [duration](../standard-library/duration-class.md) 형식의 개체를 포함합니다.  
@@ -75,7 +79,7 @@ class time_point;
   
  **네임스페이스:** std::chrono  
   
-##  <a name="max"></a>time_point:: max
+##  <a name="max"></a>  time_point::max
  형식 `time_point::ref`의 값에 대한 상한을 반환하는 정적 메서드입니다.  
   
 ```  
@@ -85,7 +89,7 @@ static constexpr time_point max();
 ### <a name="return-value"></a>반환 값  
  실제로 `time_point(duration::max())`를 반환합니다.  
   
-##  <a name="min"></a>time_point:: min
+##  <a name="min"></a>  time_point::min
  `time_point::ref` 형식의 값에 대한 하한값을 반환하는 정적 메서드입니다.  
   
 ```  
@@ -149,7 +153,7 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
   
  세 번째 생성자는 `Tp.time_since_epoch()`를 사용하여 `duration` 값을 초기화합니다.  
   
-##  <a name="time_since_epoch"></a>time_point:: time_since_epoch
+##  <a name="time_since_epoch"></a>  time_point::time_since_epoch
  저장된 [duration](../standard-library/duration-class.md) 값을 검색합니다.  
   
 ```  

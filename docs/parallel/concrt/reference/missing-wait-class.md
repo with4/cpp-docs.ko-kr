@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - missing_wait
 - CONCRT/concurrency::missing_wait
 - CONCRT/concurrency::missing_wait::missing_wait
-dev_langs: C++
-helpviewer_keywords: missing_wait class
+dev_langs:
+- C++
+helpviewer_keywords:
+- missing_wait class
 ms.assetid: ff981875-bd43-47e3-806f-b03c9f418b18
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 952a2b88ebb91449341085a923e06d389aa10fe4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 66feb4d39d08b4a9ae9b3a6099c32d2d15f1a5f1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="missingwait-class"></a>missing_wait 클래스
 이 클래스는 개체의 소멸자를 실행할 때 `task_group` 또는 `structured_task_group` 개체에 여전히 예약된 작업이 있는 경우 발생하는 예외를 설명합니다. 예외의 결과로 스택 해제 때문에 소멸자에 도달한 경우에는 이 예외가 발생하지 않습니다.  
@@ -55,7 +59,7 @@ class missing_wait : public std::exception;
   
  **네임스페이스:** 동시성  
   
-##  <a name="ctor"></a>missing_wait 
+##  <a name="ctor"></a> missing_wait 
 
  `missing_wait` 개체를 생성합니다.  
   
@@ -72,6 +76,6 @@ missing_wait() throw();
 ## <a name="see-also"></a>참고 항목  
  [Namespace 동시성](concurrency-namespace.md)   
  [task_group 클래스](task-group-class.md)   
- [대기](task-group-class.md)   
+ [wait](task-group-class.md)   
  [run_and_wait](task-group-class.md)   
  [structured_task_group 클래스](structured-task-group-class.md)

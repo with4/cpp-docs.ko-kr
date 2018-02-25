@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <exception>
-dev_langs: C++
-helpviewer_keywords: exception header
+ms.topic: reference
+f1_keywords:
+- <exception>
+dev_langs:
+- C++
+helpviewer_keywords:
+- exception header
 ms.assetid: 28900768-5dd7-4834-b907-5e37ab3407db
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e152b51a5c33bc6e33622af2a08cb40886af67b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6c6b9f264a00ed57a343c3ede8690b061d8bff43
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 여러 가지 형식 및 예외 처리와 관련된 함수를 정의합니다. 시스템이 오류에서 복구될 수 있는 경우에 예외 처리가 사용됩니다. 함수에서 프로그램으로 반환되는 컨트롤에 대한 방법을 제공합니다. 예외 처리를 통합하는 목표는 프로그램의 견고성을 높이는 동시에 오류 발생 시 체계적으로 복구하는 방법을 제공하는 것입니다.  

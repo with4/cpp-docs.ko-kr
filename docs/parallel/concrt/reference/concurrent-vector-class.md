@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concurrent_vector
 - CONCURRENT_VECTOR/concurrency::concurrent_vector
@@ -36,19 +37,22 @@ f1_keywords:
 - CONCURRENT_VECTOR/concurrency::concurrent_vector::shrink_to_fit
 - CONCURRENT_VECTOR/concurrency::concurrent_vector::size
 - CONCURRENT_VECTOR/concurrency::concurrent_vector::swap
-dev_langs: C++
-helpviewer_keywords: concurrent_vector class
+dev_langs:
+- C++
+helpviewer_keywords:
+- concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1b765be1043ac69ed735eb91deaf9419bce7f017
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b1f196a4eaf8685a33b1ef4847e44f62015ed1ed
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrentvector-class"></a>concurrent_vector 클래스
 `concurrent_vector` 클래스는 모든 요소에 대해 임의 액세스를 허용하는 시퀀스 컨테이너 클래스입니다. 동시성으로부터 안전한 추가, 요소 액세스, 반복기 액세스 및 반복기 통과 작업을 사용할 수 있게 합니다.  
@@ -129,7 +133,7 @@ class concurrent_vector: protected details::_Allocator_base<T,
   
 |이름|설명|  
 |----------|-----------------|  
-|[operator]](#operator_at)|오버로드됨. 동시 벡터의 지정한 인덱스에 있는 요소에 대 한 액세스를 제공합니다. 이 메서드는 동시성 으로부터 안전한 읽기 작업에 대 한 고 보장 하는 값으로 벡터를 증가 하는 동안 `_Index` 동시 벡터의 크기 보다 작습니다.|  
+|[operator[]](#operator_at)|오버로드됨. 동시 벡터의 지정한 인덱스에 있는 요소에 대 한 액세스를 제공합니다. 이 메서드는 동시성 으로부터 안전한 읽기 작업에 대 한 고 보장 하는 값으로 벡터를 증가 하는 동안 `_Index` 동시 벡터의 크기 보다 작습니다.|  
 |[operator=](#operator_eq)|오버로드됨. 다른 할당 `concurrent_vector` 여기에 개체입니다. 이 메서드는 동시성 으로부터 안전한 없습니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -147,7 +151,7 @@ class concurrent_vector: protected details::_Allocator_base<T,
   
  **네임스페이스:** 동시성  
   
-##  <a name="assign"></a>할당 
+##  <a name="assign"></a> 할당 
 
  동시 벡터의 요소를 삭제 하 고을 할당 `_N` 의 복사 `_Item`, 또는 반복기 범위에서 지정 된 값 [ `_Begin`, `_End`). 이 메서드는 동시성 으로부터 안전한 없습니다.  
   
@@ -178,9 +182,9 @@ void assign(_InputIterator _Begin,
  소스 범위의 마지막 요소 하나를 사용 하는 반복기입니다.  
   
 ### <a name="remarks"></a>설명  
- `assign`동시성 으로부터 안전한 않습니다. 이 메서드를 호출할 때 다른 스레드가 없는 있는 동시 벡터에 대 한 메서드를 호출 하는 확인 해야 합니다.  
+ `assign` 동시성 으로부터 안전한 않습니다. 이 메서드를 호출할 때 다른 스레드가 없는 있는 동시 벡터에 대 한 메서드를 호출 하는 확인 해야 합니다.  
   
-##  <a name="at"></a>에서 
+##  <a name="at"></a> 에서 
 
  동시 벡터의 지정한 인덱스에 있는 요소에 대 한 액세스를 제공합니다. 이 메서드는 동시성 으로부터 안전한 읽기 작업에 대 한 고 보장 하는 값으로 벡터를 증가 하는 동안 `_Index` 동시 벡터의 크기 보다 작습니다.  
   
@@ -202,7 +206,7 @@ const_reference at(size_type _Index) const;
   
  메서드에서 throw `out_of_range` 경우 `_Index` 동시 벡터의 크기 보다 크거나 및 `range_error` 인덱스가 있는 경우 벡터의 손상 된 부분에 대 한 합니다. 벡터 끊어진 변환할 수 있는 방법을 대 한 세부 정보를 참조 하십시오. [병렬 컨테이너 및 개체](../../../parallel/concrt/parallel-containers-and-objects.md)합니다.  
   
-##  <a name="back"></a>뒤로 
+##  <a name="back"></a> 뒤로 
 
  반환 대 한 참조 또는 `const` 동시 벡터에서 요소를 마지막으로 참조 합니다. 동시 벡터가 비어 있으면 반환 값은 정의 되지 않습니다. 이 메서드는 동시성 으로부터 안전한.  
   
@@ -215,7 +219,7 @@ const_reference back() const;
 ### <a name="return-value"></a>반환 값  
  대 한 참조 또는 `const` 동시 벡터에서 요소를 마지막으로 참조 합니다.  
   
-##  <a name="begin"></a>시작 
+##  <a name="begin"></a> 시작 
 
  형식의 반복기를 반환 `iterator` 또는 `const_iterator` 동시 벡터의 시작 부분에 있습니다. 이 메서드는 동시성 으로부터 안전한.  
   
@@ -228,7 +232,7 @@ const_iterator begin() const;
 ### <a name="return-value"></a>반환 값  
  반복기 형식의 `iterator` 또는 `const_iterator` 동시 벡터의 시작 부분에 있습니다.  
   
-##  <a name="capacity"></a>용량 
+##  <a name="capacity"></a> 용량 
 
  동시 벡터가 더 많은 메모리를 할당 하지 않고도 확장할 수 있는 최대 크기를 반환 합니다. 이 메서드는 동시성 으로부터 안전한.  
   
@@ -242,7 +246,7 @@ size_type capacity() const;
 ### <a name="remarks"></a>설명  
  C + + 표준 라이브러리와 달리 `vector`, `concurrent_vector` 개체는 더 많은 메모리를 할당 하는 경우 기존 요소를 이동 하지 않습니다.  
   
-##  <a name="cbegin"></a>cbegin 
+##  <a name="cbegin"></a> cbegin 
 
  형식의 반복기를 반환 `const_iterator` 동시 벡터의 시작 부분에 있습니다. 이 메서드는 동시성 으로부터 안전한.  
   
@@ -253,7 +257,7 @@ const_iterator cbegin() const;
 ### <a name="return-value"></a>반환 값  
  반복기 형식의 `const_iterator` 동시 벡터의 시작 부분에 있습니다.  
   
-##  <a name="cend"></a>cend 
+##  <a name="cend"></a> cend 
 
  형식의 반복기를 반환 `const_iterator` 동시 벡터의 끝에 있습니다. 이 메서드는 동시성 으로부터 안전한.  
   
@@ -264,7 +268,7 @@ const_iterator cend() const;
 ### <a name="return-value"></a>반환 값  
  반복기 형식의 `const_iterator` 동시 벡터의 끝에 있습니다.  
   
-##  <a name="clear"></a>선택을 취소합니다 
+##  <a name="clear"></a> 지우기 
 
  동시 벡터의 모든 요소를 지웁니다. 이 메서드는 동시성 으로부터 안전한 없습니다.  
   
@@ -273,9 +277,9 @@ void clear();
 ```  
   
 ### <a name="remarks"></a>설명  
- `clear`동시성 으로부터 안전한 않습니다. 이 메서드를 호출할 때 다른 스레드가 없는 있는 동시 벡터에 대 한 메서드를 호출 하는 확인 해야 합니다. `clear`내부 배열을 해제 하지 않습니다. 내부 배열을 확보 하기 위해 함수를 호출 `shrink_to_fit` 후 `clear`합니다.  
+ `clear` 동시성 으로부터 안전한 않습니다. 이 메서드를 호출할 때 다른 스레드가 없는 있는 동시 벡터에 대 한 메서드를 호출 하는 확인 해야 합니다. `clear` 내부 배열을 해제 하지 않습니다. 내부 배열을 확보 하기 위해 함수를 호출 `shrink_to_fit` 후 `clear`합니다.  
   
-##  <a name="ctor"></a>concurrent_vector 
+##  <a name="ctor"></a> concurrent_vector 
 
  동시 벡터를 생성 합니다.  
   
@@ -349,7 +353,7 @@ concurrent_vector(_InputIterator _Begin,
   
  마지막 생성자는 반복기 범위에서 제공 하는 값을 지정 [ `_Begin`, `_End`).  
   
-##  <a name="dtor"></a>~ concurrent_vector 
+##  <a name="dtor"></a> ~concurrent_vector 
 
  모든 요소를 지웁니다 하 고이 동시 벡터를 제거 합니다.  
   
@@ -357,7 +361,7 @@ concurrent_vector(_InputIterator _Begin,
 ~concurrent_vector();
 ```  
   
-##  <a name="crbegin"></a>crbegin 
+##  <a name="crbegin"></a> crbegin 
 
  형식의 반복기를 반환 `const_reverse_iterator` 동시 벡터의 시작 부분에 있습니다. 이 메서드는 동시성 으로부터 안전한.  
   
@@ -368,7 +372,7 @@ const_reverse_iterator crbegin() const;
 ### <a name="return-value"></a>반환 값  
  반복기 형식의 `const_reverse_iterator` 동시 벡터의 시작 부분에 있습니다.  
   
-##  <a name="crend"></a>crend 
+##  <a name="crend"></a> crend 
 
  형식의 반복기를 반환 `const_reverse_iterator` 동시 벡터의 끝에 있습니다. 이 메서드는 동시성 으로부터 안전한.  
   
@@ -379,7 +383,7 @@ const_reverse_iterator crend() const;
 ### <a name="return-value"></a>반환 값  
  반복기 형식의 `const_reverse_iterator` 동시 벡터의 끝에 있습니다.  
   
-##  <a name="empty"></a>빈 
+##  <a name="empty"></a> 빈 
 
  이 메서드가 호출 될 때 동시 벡터가 비어 있으면 테스트 합니다. 이 메서드는 동시성 으로부터 안전한.  
   
@@ -388,9 +392,9 @@ bool empty() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `true`함수가 호출 된 시점에서 벡터가 비어 있으면 `false` 그렇지 않은 경우.  
+ `true` 함수가 호출 된 시점에서 벡터가 비어 있으면 `false` 그렇지 않은 경우.  
   
-##  <a name="end"></a>끝 
+##  <a name="end"></a> 끝 
 
  형식의 반복기를 반환 `iterator` 또는 `const_iterator` 동시 벡터의 끝에 있습니다. 이 메서드는 동시성 으로부터 안전한.  
   
@@ -403,7 +407,7 @@ const_iterator end() const;
 ### <a name="return-value"></a>반환 값  
  반복기 형식의 `iterator` 또는 `const_iterator` 동시 벡터의 끝에 있습니다.  
   
-##  <a name="front"></a>전면 
+##  <a name="front"></a> 전면 
 
  반환 대 한 참조 또는 `const` 동시 벡터의 첫 번째 요소에 대 한 참조입니다. 동시 벡터가 비어 있으면 반환 값은 정의 되지 않습니다. 이 메서드는 동시성 으로부터 안전한.  
   
@@ -416,7 +420,7 @@ const_reference front() const;
 ### <a name="return-value"></a>반환 값  
  대 한 참조 또는 `const` 동시 벡터의 첫 번째 요소에 대 한 참조입니다.  
   
-##  <a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a> get_allocator 
 
  동시 벡터를 생성 하는 데 사용 되는 할당자 복사본을 반환 합니다. 이 메서드는 동시성 으로부터 안전한.  
   
@@ -427,7 +431,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>반환 값  
  생성에 사용 되는 할당자 복사본은 `concurrent_vector` 개체입니다.  
   
-##  <a name="grow_by"></a>grow_by 
+##  <a name="grow_by"></a> grow_by 
 
  이 동시 벡터가 확장 `_Delta` 요소입니다. 이 메서드는 동시성 으로부터 안전한.  
   
@@ -453,7 +457,7 @@ iterator grow_by(
 ### <a name="remarks"></a>설명  
  경우 `_Item` 를 지정 하지 않으면 새 요소는 기본 생성 합니다.  
   
-##  <a name="grow_to_at_least"></a>grow_to_at_least 
+##  <a name="grow_to_at_least"></a> grow_to_at_least 
 
  이상 될 때까지이 동시 벡터가 확장 `_N` 요소입니다. 이 메서드는 동시성 으로부터 안전한.  
   
@@ -468,7 +472,7 @@ iterator grow_to_at_least(size_type _N);
 ### <a name="return-value"></a>반환 값  
  추가 된 시퀀스의 시작 부분 또는 인덱스에 있는 요소를 가리키는 반복자 `_N` 요소가 추가 된 경우.  
   
-##  <a name="max_size"></a>max_size 
+##  <a name="max_size"></a> max_size 
 
  저장할 수 있는 동시 벡터 요소의 최대 수를 반환 합니다. 이 메서드는 동시성 으로부터 안전한.  
   
@@ -479,7 +483,7 @@ size_type max_size() const;
 ### <a name="return-value"></a>반환 값  
  요소의 최대 개수는 `concurrent_vector` 개체가 보유할 수 있습니다.  
   
-##  <a name="operator_eq"></a>연산자 = 
+##  <a name="operator_eq"></a> 연산자 = 
 
  다른 할당 `concurrent_vector` 여기에 개체입니다. 이 메서드는 동시성 으로부터 안전한 없습니다.  
   
@@ -505,7 +509,7 @@ concurrent_vector& operator= (
 ### <a name="return-value"></a>반환 값  
  이에 대 한 참조 `concurrent_vector` 개체입니다.  
   
-##  <a name="operator_at"></a>operator] 
+##  <a name="operator_at"></a> operator[] 
 
  동시 벡터의 지정한 인덱스에 있는 요소에 대 한 액세스를 제공합니다. 이 메서드는 동시성 으로부터 안전한 읽기 작업에 대 한 고 보장 하는 값으로 벡터를 증가 하는 동안 `_Index` 동시 벡터의 크기 보다 작습니다.  
   
@@ -527,7 +531,7 @@ const_reference operator[](size_type _index) const;
   
  범위 검사를 충족 되도록 수행 없음 `_Index` 동시 벡터에 유효한 인덱스가 있습니다.  
   
-##  <a name="push_back"></a>push_back 
+##  <a name="push_back"></a> push_back 
 
  동시 벡터의 끝에 지정된 된 항목을 추가합니다. 이 메서드는 동시성 으로부터 안전한.  
   
@@ -544,7 +548,7 @@ iterator push_back(T&& _Item);
 ### <a name="return-value"></a>반환 값  
  반복기 항목에 추가 됩니다.  
   
-##  <a name="rbegin"></a>rbegin 
+##  <a name="rbegin"></a> rbegin 
 
  형식의 반복기를 반환 `reverse_iterator` 또는 `const_reverse_iterator` 동시 벡터의 시작 부분에 있습니다. 이 메서드는 동시성 으로부터 안전한.  
   
@@ -557,7 +561,7 @@ const_reverse_iterator rbegin() const;
 ### <a name="return-value"></a>반환 값  
  반복기 형식의 `reverse_iterator` 또는 `const_reverse_iterator` 동시 벡터의 시작 부분에 있습니다.  
   
-##  <a name="rend"></a>rend 
+##  <a name="rend"></a> rend 
 
  형식의 반복기를 반환 `reverse_iterator` 또는 `const_reverse_iterator` 동시 벡터의 끝에 있습니다. 이 메서드는 동시성 으로부터 안전한.  
   
@@ -570,7 +574,7 @@ const_reverse_iterator rend() const;
 ### <a name="return-value"></a>반환 값  
  반복기 형식의 `reverse_iterator` 또는 `const_reverse_iterator` 동시 벡터의 끝에 있습니다.  
   
-##  <a name="reserve"></a>예약 
+##  <a name="reserve"></a> 예약 
 
  동시 벡터 크기가으로 증가할 수 있는 공간이 할당 `_N` 나중에 더 많은 메모리를 할당 하지 않고도 합니다. 이 메서드는 동시성 으로부터 안전한 없습니다.  
   
@@ -583,9 +587,9 @@ void reserve(size_type _N);
  에 대 한 공간을 예약 하 고 있는 요소의 수입니다.  
   
 ### <a name="remarks"></a>설명  
- `reserve`동시성 으로부터 안전한 않습니다. 이 메서드를 호출할 때 다른 스레드가 없는 있는 동시 벡터에 대 한 메서드를 호출 하는 확인 해야 합니다. 메서드가 반환 되는 동시 벡터의 용량을 요청된 된 예약 보다 클 수 있습니다.  
+ `reserve` 동시성 으로부터 안전한 않습니다. 이 메서드를 호출할 때 다른 스레드가 없는 있는 동시 벡터에 대 한 메서드를 호출 하는 확인 해야 합니다. 메서드가 반환 되는 동시 벡터의 용량을 요청된 된 예약 보다 클 수 있습니다.  
   
-##  <a name="resize"></a>크기 조정 
+##  <a name="resize"></a> 크기 조정 
 
  필요에 따라 요소를 추가 또는 삭제를 요청한 크기로 동시 벡터의 크기를 변경 합니다. 이 메서드는 동시성 으로부터 안전한 없습니다.  
   
@@ -608,9 +612,9 @@ void resize(
 ### <a name="remarks"></a>설명  
  컨테이너의 크기가 요청된 된 크기 보다 작은 경우 요청된 된 크기에 도달할 때까지 벡터에 요소가 추가 됩니다. 크기에 도달할 때까지 컨테이너의 끝에 가장 가까운 요소가 삭제 됩니다 컨테이너의 크기가 요청된 된 크기 보다 큰 경우 `_N`합니다. 컨테이너의 현재 크기와 요청된 크기가 동일하면 아무런 작업도 실행되지 않습니다.  
   
- `resize`안전 하지 않습니다 동시성. 이 메서드를 호출할 때 다른 스레드가 없는 있는 동시 벡터에 대 한 메서드를 호출 하는 확인 해야 합니다.  
+ `resize` 안전 하지 않습니다 동시성. 이 메서드를 호출할 때 다른 스레드가 없는 있는 동시 벡터에 대 한 메서드를 호출 하는 확인 해야 합니다.  
   
-##  <a name="shrink_to_fit"></a>shrink_to_fit 
+##  <a name="shrink_to_fit"></a> shrink_to_fit 
 
  조각화를 줄이고 메모리 사용을 최적화 동시 벡터의 내부 표현이 압축 합니다. 이 메서드는 동시성 으로부터 안전한 없습니다.  
   
@@ -619,9 +623,9 @@ void shrink_to_fit();
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 내부적으로 다시 할당 메모리 이동 요소, 모든 반복기를 무효화 합니다. `shrink_to_fit`동시성 으로부터 안전한 않습니다. 이 함수를 호출할 때 다른 스레드가 없는 있는 동시 벡터에 대 한 메서드를 호출 하는 확인 해야 합니다.  
+ 이 메서드는 내부적으로 다시 할당 메모리 이동 요소, 모든 반복기를 무효화 합니다. `shrink_to_fit` 동시성 으로부터 안전한 않습니다. 이 함수를 호출할 때 다른 스레드가 없는 있는 동시 벡터에 대 한 메서드를 호출 하는 확인 해야 합니다.  
   
-##  <a name="size"></a>크기 
+##  <a name="size"></a> 크기 
 
  동시 벡터의 요소 수를 반환합니다. 이 메서드는 동시성 으로부터 안전한.  
   
@@ -635,7 +639,7 @@ size_type size() const;
 ### <a name="remarks"></a>설명  
  반환 되는 크기 함수 호출에 의해 추가 된 모든 요소를 포함 하도록 보장은 `push_back`, 또는이 메서드를 호출 하기 전에 완료 된 작업을 확장 합니다. 그러나 할당 되는 요소를 포함할 수도 있습니다 하지만 여전히 증가 메서드 중 하나에 동시 호출 합니다.  
   
-##  <a name="swap"></a>스왑 
+##  <a name="swap"></a> 스왑 
 
  두 개의 동시 벡터의 내용을 바꿉니다. 이 메서드는 동시성 으로부터 안전한 없습니다.  
   

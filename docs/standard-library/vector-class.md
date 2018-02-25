@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vector/std::vector::allocator_type
 - vector/std::vector::const_iterator
@@ -49,7 +50,8 @@ f1_keywords:
 - vector/std::vector::shrink_to_fit
 - vector/std::vector::size
 - vector/std::vector::swap
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::vector [C++], allocator_type
 - std::vector [C++], const_iterator
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - std::vector [C++], size
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f38fb67c20da6b1022c6365e66b1626cd8276313
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 15fca6437626b09ee2995f9afe268f44a5f4b34f
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="vector-class"></a>vector 클래스
 C++ 표준 라이브러리 벡터 클래스는 선형 정렬에서 지정된 형식의 요소를 정렬하고 모든 요소에 대한 빠른 임의 액세스를 허용하는 시퀀스 컨테이너의 템플릿 클래스입니다. 임의 액세스 성능이 가장 중요할 때 시퀀스에 대한 기본 컨테이너로 사용해야 합니다.  
@@ -119,7 +122,7 @@ class vector
  벡터에 저장되는 요소 데이터 형식입니다.  
   
  `Allocator`  
- 벡터의 메모리 할당 및 할당 취소에 대한 세부 정보를 캡슐화하는 저장된 할당자 개체를 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 **allocator***\<Type>*입니다.  
+ 벡터의 메모리 할당 및 할당 취소에 대한 세부 정보를 캡슐화하는 저장된 할당자 개체를 나타내는 형식입니다. 이 인수는 선택 사항이 며 기본값은 **할당자 * * *\<유형 >입니다.*  
   
 ## <a name="remarks"></a>설명  
  벡터를 사용하면 시퀀스 끝에서 상수 시간 삽입 및 삭제할 수 있습니다. 벡터 중간에 요소를 삽입하거나 삭제하려면 선형 시간이 필요합니다. 시퀀스의 시작과 끝에서 수행하는 삽입 및 삭제의 경우에는 [deque 클래스](../standard-library/deque-class.md) 컨테이너의 성능이 더 우수합니다. 그리고 시퀀스 내 임의의 위치에서 수행하는 삽입 및 삭제의 경우에는 [list 클래스](../standard-library/list-class.md) 컨테이너의 성능이 뛰어납니다.  

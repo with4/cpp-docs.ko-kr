@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - valarray/std::abs
 - valarray/std::acos
@@ -25,7 +25,7 @@ f1_keywords:
 - valarray/std::tan
 - valarray/std::tanh
 ms.assetid: 109778fc-440e-4239-b23e-bafda2b165c2
-caps.latest.revision: "12"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::abs [C++]
@@ -45,11 +45,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: b15c90c9346ae490e51f6b28cc508164ead395b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 0c6734e0c776a27057ef9f3bbe8c5be1ae0c7990
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray&gt; 함수
 ||||  
@@ -76,7 +76,7 @@ valarray<Type> abs(const valarray<Type>& left);
 ### <a name="return-value"></a>반환 값  
  해당 요소가 입력 valarray 요소의 절대값과 같은 valarray  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_abs.cpp  
@@ -133,7 +133,7 @@ valarray<Type> acos(const valarray<Type>& left);
   
  반환 값은 코사인값 입력과 일치하는 0과 +pi 사이의 주요 값입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_acos.cpp  
@@ -202,7 +202,7 @@ valarray<Type> asin(const valarray<Type>& left);
   
  반환 값은 보안 주체 사이 + pi/2와-pi/2 사인 일치 하는 값 입력 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_asin.cpp  
@@ -271,7 +271,7 @@ valarray<Type> atan(const valarray<Type>& left);
   
  반환 값은 보안 주체 사이 + pi/2와-pi/2 탄젠트 일치 하는 값 입력 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_atan.cpp  
@@ -360,7 +360,7 @@ valarray<Type> atan2(const Type& left, const valarray<Type>& right);
   
  `left` 및 `right`의 요소 수가 다르면 결과가 정의되지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_atan2.cpp  
@@ -428,7 +428,7 @@ valarray<Type> cos(const valarray<Type>& left);
 ### <a name="return-value"></a>반환 값  
  해당 요소가 입력 valarray 요소의 절대값과 같은 valarray  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_cos.cpp  
@@ -507,7 +507,7 @@ valarray<Type> cosh(const valarray<Type>& left);
   
  cosh ( *z* ) = ( exp ( *z* ) + exp ( - *z* ) ) / 2  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_cosh.cpp  
@@ -581,7 +581,7 @@ valarray<Type> exp(const valarray<Type>& left);
 ### <a name="return-value"></a>반환 값  
  해당 요소가 입력 valarray 요소의 자연 지수와 같은 valarray  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_exp.cpp  
@@ -641,7 +641,7 @@ valarray<Type> log(const valarray<Type>& left);
 ### <a name="return-value"></a>반환 값  
  해당 요소가 입력 valarray 요소의 절대값과 같은 valarray  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_log.cpp  
@@ -701,7 +701,7 @@ valarray<Type> log10(const valarray<Type>& left);
 ### <a name="return-value"></a>반환 값  
  해당 요소가 입력 valarray 요소의 상용 로그와 같은 valarray  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_log10.cpp  
@@ -790,7 +790,7 @@ pow(
 ### <a name="remarks"></a>설명  
  `left` 및 `right`의 요소 수가 다르면 결과가 정의되지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 #include <valarray>  
@@ -856,7 +856,7 @@ valarray<Type> sin(const valarray<Type>& left);
 ### <a name="return-value"></a>반환 값  
  해당 요소가 입력 valarray 요소의 사인과 같은 valarray  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_sin.cpp  
@@ -933,9 +933,9 @@ valarray<Type> sinh(const valarray<Type>& left);
 ### <a name="remarks"></a>설명  
  지수 함수로 쌍곡선 사인을 정의하는 ID입니다.  
   
- sinh ( *z* ) = (exp ( *z* )-exp (- *z* )) / 2  
+ sinh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / 2  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_sinh.cpp  
@@ -1009,7 +1009,7 @@ valarray<Type> sqrt(const valarray<Type>& left);
 ### <a name="return-value"></a>반환 값  
  해당 요소가 입력 valarray 요소의 제곱근과 같은 valarray  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_sqrt.cpp  
@@ -1063,7 +1063,7 @@ void swap(
 |`right`|`valarray` 형식의 개체입니다.|  
   
 ### <a name="remarks"></a>설명  
- 이 템플릿 함수는 ` left.swap( right)`를 실행합니다.  
+ 이 템플릿 함수는 ` left.swap( right)`을 실행합니다.  
   
 ##  <a name="tan"></a>  tan  
  입력 valarray의 요소에서 작동하고 요소가 입력 valarray 요소의 탄젠트와 같은 valarray를 반환합니다.  
@@ -1080,7 +1080,7 @@ valarray<Type> tan(const valarray<Type>& left);
 ### <a name="return-value"></a>반환 값  
  해당 요소가 입력 valarray 요소의 탄젠트와 같은 valarray  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_tan.cpp  
@@ -1157,9 +1157,9 @@ valarray<Type> tanh(const valarray<Type>& left);
 ### <a name="remarks"></a>설명  
  지수 함수로 쌍곡선 탄젠트를 정의하는 ID입니다.  
   
- tanh ( *z* ) = sinh ( *z* ) / cosh ( *z* ) = (exp ( *z* )-exp (- *z* )) / (exp ( *z* ) + exp (- *z* ))  
+ tanh ( *z* ) = sinh ( *z* ) / cosh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / ( exp ( *z* ) + exp ( - *z* ) )  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // valarray_tanh.cpp  

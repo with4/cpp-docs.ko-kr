@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <shared_mutex>
 - shared_mutex/std::swap
@@ -50,20 +51,22 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_for
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2cdfa90b137da2e1a4c7460dfa54663ddb9a3581
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f7d657a95822d66d34a6173cc775f99c80411f12
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="ltsharedmutex"></a>&lt;shared_mutex >
+# <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
 &lt;shared_mutex > 헤더는 여러 스레드에서 액세스할 수 있는 공유 데이터에 대 한 보호에 대 한 동기화 기본 형식을 제공 합니다. 공유 mutex 클래스에서는 mutex 클래스가 제공하는 독점적 액세스 제어 기능을 사용할 수 있을 뿐 아니라, 비독점적 액세스를 위해 여러 스레드가 소유권을 공유할 수도 있습니다. 공유 뮤텍스를 사용하면 경쟁 조건을 발생시키지 않고 여러 스레드가 읽을 수 있는 동시에 스레드 하나가 독점적으로 쓸 수 있어야 하는리소스를 제어할 수 있습니다.
 
@@ -226,7 +229,7 @@ private:
 
 ## <a name="functions"></a>함수
 
-###  <a name="function_swap"></a>스왑
+###  <a name="function_swap"></a> 스왑
 
 `shared_lock` 개체를 교환합니다.
 

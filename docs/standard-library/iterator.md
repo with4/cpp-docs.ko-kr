@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <iterator>
 - iterator/std::<iterator>
-dev_langs: C++
-helpviewer_keywords: iterator header
+dev_langs:
+- C++
+helpviewer_keywords:
+- iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3f0918b5d4c222506173c03859cb74ec3fd13bdd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0216c90a922050d4a752b4dbbd1209b26892ba05
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 반복기 기본형, 미리 정의된 반복기, 스트림 반복기뿐만 아니라 여러 가지 지원 템플릿을 정의합니다. 미리 정의된 반복기는 삽입 및 반전 어댑터를 포함합니다. 삽입 반복기 어댑터: 앞, 뒤 및 일반의 세 가지 클래스가 있습니다. 컨테이너 멤버 함수 반복기가 제공하는 덮어쓰기 의미 체계보다 삽입 의미 체계를 제공합니다.  

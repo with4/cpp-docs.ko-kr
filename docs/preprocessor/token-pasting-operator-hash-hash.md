@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '##'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '##'
+dev_langs:
+- C++
 helpviewer_keywords:
 - preprocessor, operators
 - '## preprocessor operator'
 ms.assetid: 4f173503-990f-4bff-aef3-ec4d1f1458ef
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b2f77a2bd61080c398256c5d9c28085ec779d2e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d3a8c2cef3560a6823314a4edb2cba78994864ce
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="token-pasting-operator-"></a>토큰 붙여넣기 연산자 (##)
 이중 숫자 기호 또는 "토큰 붙여넣기" 연산자 (**##**)을 모두 개체 형식 및 함수 형식 매크로에 사용 되는 "병합" 연산자 라고도 합니다. 이 연산자는 별도의 토큰이 단일 토큰으로 조인되도록 허용하므로 매크로 정의의 첫 번째 토큰 또는 마지막 토큰이 될 수 없습니다.  

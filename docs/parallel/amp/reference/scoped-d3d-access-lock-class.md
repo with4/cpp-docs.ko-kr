@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - scoped_d3d_access_lock
 - AMPRT/scoped_d3d_access_lock
 - AMPRT/concurrency::direct3d::scoped_d3d_access_lock::scoped_d3d_access_lock
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 0ad333e6-9839-4736-a722-16d95d70c4b1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 37dadc932701354de317d253a39bd2f2ee71a495
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4a592249221129bce35f8592dcec56ff2379472d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="scopedd3daccesslock-class"></a>scoped_d3d_access_lock 클래스
 D3D 액세스 잠금 accelerator_view 개체에 대 한 RAII 래퍼.  
@@ -40,7 +43,7 @@ class scoped_d3d_access_lock;
 |이름|설명|  
 |----------|-----------------|  
 |[scoped_d3d_access_lock 생성자](#ctor)|오버로드됨. `scoped_d3d_access_lock` 개체를 생성합니다. 이 개체가 범위를 벗어날 때 잠금이 해제 됩니다.|  
-|[~ scoped_d3d_access_lock 소멸자](#dtor)|연결된 된의 D3D 액세스 잠금을 해제 `accelerator_view` 개체입니다.|  
+|[~scoped_d3d_access_lock Destructor](#dtor)|연결된 된의 D3D 액세스 잠금을 해제 `accelerator_view` 개체입니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
@@ -56,7 +59,7 @@ class scoped_d3d_access_lock;
   
  **Namespace:** concurrency:: direct3d  
 
-##  <a name="ctor"></a>scoped_d3d_access_lock 
+##  <a name="ctor"></a> scoped_d3d_access_lock 
 
  `scoped_d3d_access_lock` 개체를 생성합니다. 이 개체가 범위를 벗어날 때 잠금이 해제 됩니다.  
  
@@ -95,14 +98,14 @@ scoped_d3d_access_lock(// [3] move constructor
  기존 D3D 액세스 잠금이 다른 `scoped_d3d_access_lock` 개체입니다. 생성을 차단 하지 않습니다.  
 
   
-##  <a name="dtor"></a>~ scoped_d3d_access_lock 
+##  <a name="dtor"></a> ~scoped_d3d_access_lock 
 
  연결된 된의 D3D 액세스 잠금을 해제 `accelerator_view` 개체입니다.  
   
 ```  
 ~scoped_d3d_access_lock();
 ```  
-## <a name="operator_eq"></a>연산자 = 
+## <a name="operator_eq"></a> 연산자 = 
 
 다른 D3D 액세스 잠금 소유권을 가져오면 `scoped_d3d_access_lock` 개체를 이전 잠금을 해제 합니다.  
  

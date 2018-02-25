@@ -4,28 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _mm_extracti_si64
 - _mm_extract_si64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - extrq instruction
 - _mm_extracti_si64 intrinsic
 - _mm_extract_si64 intrinsic
 ms.assetid: 459fdd72-cc54-4ee5-bbd5-d2c6067a88e7
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cc28de10a2a0d53ee87920d511ea894ad517a79a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4bc65289ce52be9acb1cfe01d1149480a8381e3b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64, _mm_extracti_si64
 **Microsoft 전용**  
@@ -50,13 +53,13 @@ __m128i _mm_extracti_si64(
  [in] `Source`  
  입력된 데이터의 하위 64 비트를 128 비트 필드입니다.  
   
- [in]`Descriptor`  
+ [in]  `Descriptor`  
  추출 하는 비트 필드를 설명 하는 128 비트 필드입니다.  
   
- [in]`Length`  
+ [in]  `Length`  
  추출 하는 필드의 길이 지정 하는 정수입니다.  
   
- [in]`Index`  
+ [in]  `Index`  
  추출 하는 필드의 인덱스를 지정 하는 정수  
   
 ## <a name="return-value"></a>반환 값  
@@ -116,7 +119,7 @@ result3 = 0x30eca86
 ```  
   
 **Microsoft 전용 종료**  
- 고급 마이크로 장치, inc 2007 저작권 All rights reserved. 고급 마이크로 장치, Inc. 로부터 사용 권한을 승인 하에 복제  
+ Copyright 2007 by Advanced Micro Devices, Inc. All rights reserved. 고급 마이크로 장치, Inc. 로부터 사용 권한을 승인 하에 복제  
   
 ## <a name="see-also"></a>참고 항목  
  [_mm_insert_si64, _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)   

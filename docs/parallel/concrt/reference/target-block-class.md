@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - target_block
 - AGENTS/concurrency::target_block
@@ -28,19 +29,22 @@ f1_keywords:
 - AGENTS/concurrency::target_block::unlink_source
 - AGENTS/concurrency::target_block::unlink_sources
 - AGENTS/concurrency::target_block::wait_for_async_sends
-dev_langs: C++
-helpviewer_keywords: target_block class
+dev_langs:
+- C++
+helpviewer_keywords:
+- target_block class
 ms.assetid: 3ce181b4-b94a-4894-bf7b-64fc09821f9f
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 42bf40997bed7bcf7125397d4984b636f64f3a6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2827e7bbb9a2c23804d90ccb729e990b84f3a442
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="targetblock-class"></a>target_block 클래스
 `target_block` 클래스는 대상 전용 블록에 대해 기본 링크 관리 기능 및 오류 검사를 제공하는 추상 기본 클래스입니다.  
@@ -78,7 +82,7 @@ class target_block : public ITarget<typename _SourceLinkRegistry::type::source_t
   
 |이름|설명|  
 |----------|-----------------|  
-|[전파](#propagate)|소스 블록에서이 대상 블록에 메시지를 비동기적으로 전달 합니다.|  
+|[propagate](#propagate)|소스 블록에서이 대상 블록에 메시지를 비동기적으로 전달 합니다.|  
 |[send](#send)|소스 블록에서이 대상 블록에 메시지를 동기적으로 전달 합니다.|  
   
 ### <a name="protected-methods"></a>보호된 메서드  
@@ -111,7 +115,7 @@ class target_block : public ITarget<typename _SourceLinkRegistry::type::source_t
   
  **네임스페이스:** 동시성  
   
-##  <a name="async_send"></a>async_send 
+##  <a name="async_send"></a> async_send 
 
  비동기적으로 처리를 위한 메시지를 보냅니다.  
   
@@ -123,7 +127,7 @@ void async_send(_Inout_opt_ message<_Source_type>* _PMessage);
  `_PMessage`  
  보내는 메시지에 대 한 포인터입니다.  
   
-##  <a name="decline_incoming_messages"></a>decline_incoming_messages 
+##  <a name="decline_incoming_messages"></a> decline_incoming_messages 
 
  새 메시지가 거부 되어야 하는 블록을 나타냅니다.  
   
@@ -134,7 +138,7 @@ void decline_incoming_messages();
 ### <a name="remarks"></a>설명  
  이 메서드는 소멸 진행 중인 동안 새로운 메시지가 거부 되도록 소멸자에 의해 호출 됩니다.  
   
-##  <a name="enable_batched_processing"></a>enable_batched_processing 
+##  <a name="enable_batched_processing"></a> enable_batched_processing 
 
  이 블록에 대한 일괄 처리를 할 수 있도록 합니다.  
   
@@ -142,7 +146,7 @@ void decline_incoming_messages();
 void enable_batched_processing();
 ```  
   
-##  <a name="initialize_target"></a>initialize_target 
+##  <a name="initialize_target"></a> initialize_target 
 
  기준 개체를 초기화합니다. 특히,는 `message_processor` 개체를 초기화 해야 합니다.  
   
@@ -159,7 +163,7 @@ void initialize_target(
  `_PScheduleGroup`  
  작업을 예약 하는 데 사용할 수 있는 일정 그룹입니다.  
   
-##  <a name="link_source"></a>link_source 
+##  <a name="link_source"></a> link_source 
 
  이 지정 된 소스 블록에 연결 `target_block` 개체입니다.  
   
@@ -174,7 +178,7 @@ virtual void link_source(_Inout_ ISource<_Source_type>* _PSource);
 ### <a name="remarks"></a>설명  
  이 함수에서 직접 호출할 수 없습니다는 `target_block` 개체입니다. 블록을 사용 하 여 함께 연결할는 `link_target` 메서드를 `ISource` 호출 하는 블록의 `link_source` 해당 대상 메서드.  
   
-##  <a name="process_input_messages"></a>process_input_messages 
+##  <a name="process_input_messages"></a> process_input_messages 
 
  입력으로 받은 메시지를 처리합니다.  
   
@@ -185,7 +189,7 @@ virtual void process_input_messages(_Inout_ message<_Source_type>* _PMessage);
 ### <a name="parameters"></a>매개 변수  
  `_PMessage`  
   
-##  <a name="process_message"></a>process_message 
+##  <a name="process_message"></a> process_message 
 
  파생 클래스에 재정의된 경우 이 `target_block` 개체가 수락했던 메시지를 처리합니다.  
   
@@ -193,7 +197,7 @@ virtual void process_input_messages(_Inout_ message<_Source_type>* _PMessage);
 virtual void process_message(message<_Source_type> *);
 ```  
   
-##  <a name="propagate"></a>전파 
+##  <a name="propagate"></a> 전파 
 
  소스 블록에서이 대상 블록에 메시지를 비동기적으로 전달 합니다.  
   
@@ -216,7 +220,7 @@ virtual message_status propagate(
 ### <a name="remarks"></a>설명  
  메서드에서 throw 된 [invalid_argument](../../../standard-library/invalid-argument-class.md) 경우 예외는 `_PMessage` 또는 `_PSource` 매개 변수는 `NULL`합니다.  
   
-##  <a name="propagate_message"></a>propagate_message 
+##  <a name="propagate_message"></a> propagate_message 
 
  파생된 클래스에서 재정의 되 면이 메서드에서 메시지를 비동기적으로 전달 된 `ISource` 이 블록 `target_block` 개체입니다. 이 호출 하는 `propagate` 소스 블록에서 호출 될 경우이 메서드.  
   
@@ -236,7 +240,7 @@ virtual message_status propagate_message(
 ### <a name="return-value"></a>반환 값  
  A [message_status](concurrency-namespace-enums.md) 메시지로 하기로 하는 대상의 표시 합니다.  
   
-##  <a name="register_filter"></a>register_filter 
+##  <a name="register_filter"></a> register_filter 
 
  받은 모든 메시지에 대해 호출 되는 필터 메서드를 등록 합니다.  
   
@@ -248,7 +252,7 @@ void register_filter(filter_method const& _Filter);
  `_Filter`  
  필터 메서드입니다.  
   
-##  <a name="remove_sources"></a>remove_sources 
+##  <a name="remove_sources"></a> remove_sources 
 
  처리 중인 비동기 보내기 작업이 완료 될 때까지 기다린 후 모든 원본 연결을 끊습니다.  
   
@@ -259,7 +263,7 @@ void remove_sources();
 ### <a name="remarks"></a>설명  
  모든 대상 블록 해당 소멸자에서 원본을 제거 하려면이 루틴을 호출 해야 합니다.  
   
-##  <a name="send"></a>보내기 
+##  <a name="send"></a> 보내기 
 
  소스 블록에서이 대상 블록에 메시지를 동기적으로 전달 합니다.  
   
@@ -286,7 +290,7 @@ virtual message_status send(
   
  때 `send` 반환 메시지에 이미 허용 되었으며 대상 블록으로 전송 또는 대상에 의해 거부 되었습니다.  
   
-##  <a name="send_message"></a>send_message 
+##  <a name="send_message"></a> send_message 
 
  파생된 클래스에서 재정의 되 면이 메서드에서 메시지를 동기적으로 전달 된 `ISource` 이 블록 `target_block` 개체입니다. 이 호출 하는 `send` 소스 블록에서 호출 될 경우이 메서드.  
   
@@ -302,7 +306,7 @@ virtual message_status send_message(
 ### <a name="remarks"></a>설명  
  기본적으로이 블록 반환 `declined` 파생된 클래스에서 재정의 되지 않는 경우.  
   
-##  <a name="sync_send"></a>sync_send 
+##  <a name="sync_send"></a> sync_send 
 
  동기적으로 처리를 위한 메시지를 보냅니다.  
   
@@ -314,7 +318,7 @@ void sync_send(_Inout_opt_ message<_Source_type>* _PMessage);
  `_PMessage`  
  보내는 메시지에 대 한 포인터입니다.  
   
-##  <a name="ctor"></a>target_block 
+##  <a name="ctor"></a> target_block 
 
  `target_block` 개체를 생성합니다.  
   
@@ -322,7 +326,7 @@ void sync_send(_Inout_opt_ message<_Source_type>* _PMessage);
 target_block();
 ```  
   
-##  <a name="dtor"></a>~ target_block 
+##  <a name="dtor"></a> ~target_block 
 
  소멸 된 `target_block` 개체입니다.  
   
@@ -330,7 +334,7 @@ target_block();
 virtual ~target_block();
 ```  
   
-##  <a name="unlink_source"></a>unlink_source 
+##  <a name="unlink_source"></a> unlink_source 
 
  이 지정 된 소스 블록을 연결 해제 `target_block` 개체입니다.  
   
@@ -342,7 +346,7 @@ virtual void unlink_source(_Inout_ ISource<_Source_type>* _PSource);
  `_PSource`  
  에 대 한 포인터는 `ISource` 블록 연결을 끊을 하는 것입니다.  
   
-##  <a name="unlink_sources"></a>unlink_sources 
+##  <a name="unlink_sources"></a> unlink_sources 
 
  모든 소스 블록에서이 연결을 해제 `target_block` 개체입니다.  
   
@@ -350,7 +354,7 @@ virtual void unlink_source(_Inout_ ISource<_Source_type>* _PSource);
 virtual void unlink_sources();
 ```  
   
-##  <a name="wait_for_async_sends"></a>wait_for_async_sends 
+##  <a name="wait_for_async_sends"></a> wait_for_async_sends 
 
  모든 비동기 전파가 완료 될 때까지 기다립니다.  
   

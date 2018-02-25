@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - <locale>
 - locale/std::<locale>
 - std::<locale>
-dev_langs: C++
-helpviewer_keywords: locale header
+dev_langs:
+- C++
+helpviewer_keywords:
+- locale header
 ms.assetid: ca56f9d2-7128-44da-8df1-f4c78c17fbf2
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b2b617870bdeec43dcdc9bf5d9031c0c4d78d0aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6ac044246cf9dea3d5760d60453182b2ec5711d0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltlocalegt"></a>&lt;locale&gt;
 문자 분류 및 문자열 데이터 정렬에 대한 국제 지원을 포함하여, C++ 프로그램이 숫자, 통화, 달력 데이터의 표시 및 서식 지정에 관한 다양한 문화적 규약을 캡슐화하고 조작하기 위해 사용할 수 있는 템플릿 클래스와 함수를 정의합니다.  
@@ -65,7 +69,7 @@ ms.lasthandoff: 12/21/2017
 |[collate](../standard-library/collate-class.md)|문자열 정렬 규약을 처리하는 패싯을 제공하는 데이터 정렬 템플릿 클래스입니다.|  
 |[collate_byname](../standard-library/collate-byname-class.md)|지정된 로캘의 데이터 정렬 패싯으로 사용할 수 있는 개체를 설명하는 파생된 템플릿 클래스입니다. 이 클래스를 사용하여 문자열 정렬 규약과 관련된 문화 영역별 정보를 검색할 수 있습니다.|  
 |[ctype](../standard-library/ctype-class.md)|문자를 분류하고, 대문자와 소문자 사이에서 변환하고, 네이티브 문자 집합과 로캘에서 사용하는 문자 집합 사이에서 변환하는 데 사용하는 패싯을 제공하는 템플릿 클래스입니다.|  
-|[ctype\<char >](../standard-library/ctype-char-class.md)|템플릿 클래스의 명시적 특수화 하는 클래스 **ctype\<CharType**> 형식으로 `char`, 다양 한 형식의 문자 속성 특징을 결정 하는 로캘 패싯으로 사용할 수 있는 개체를 설명 하는 `char`.|  
+|[ctype\<char>](../standard-library/ctype-char-class.md)|템플릿 클래스의 명시적 특수화 하는 클래스 **ctype\<CharType**> 형식으로 `char`, 다양 한 형식의 문자 속성 특징을 결정 하는 로캘 패싯으로 사용할 수 있는 개체를 설명 하는 `char`.|  
 |[ctype_base](../standard-library/ctype-base-class.md)|개별적으로 또는 전체 범위 내에서 특성을 분류 또는 테스트하는 데 사용하는 열거형을 정의하는 데 사용하는 ctype 클래스의 기본 클래스입니다.|  
 |[ctype_byname](../standard-library/ctype-byname-class.md)|지정된 로캘의 ctype 패싯으로 사용할 수 있는 개체를 설명하는 파생된 템플릿 클래스입니다. 이 클래스를 사용하여 특성을 분류하고 대/소문자 간 변환하거나 네이티브 및 로캘 지정 문자 집합 사이에서 변환할 수 있습니다.|  
 |[locale](../standard-library/locale-class.md)|문화별 정보를 특정 지역별 환경을 전체적으로 정의하는 패싯 집합으로 캡슐화하는 로캘 개체에 대해 설명하는 클래스입니다.|  

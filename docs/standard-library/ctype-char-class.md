@@ -4,25 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ctype<char>
 - locale/std::ctype<char>
-dev_langs: C++
-helpviewer_keywords: ctype<char> class
+dev_langs:
+- C++
+helpviewer_keywords:
+- ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d7e1fdc3a37abec334cccfe5a62954210e6e4a30
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c18f5a98ae7e6ff0f71e669380cb29e9904b6815
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; 클래스
 이 클래스는 `char` 형식에 대한 템플릿 클래스 **ctype\<CharType**>의 명시적 특수화입니다. `char` 형식 문자의 다양한 속성에 대해 특징을 지정하기 위한 로캘 패싯으로 사용할 수 있는 개체를 설명합니다.  

@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: concrt/concurrency::invalid_scheduler_policy_thread_specification
-dev_langs: C++
-helpviewer_keywords: invalid_scheduler_policy_thread_specification class
+ms.topic: reference
+f1_keywords:
+- concrt/concurrency::invalid_scheduler_policy_thread_specification
+dev_langs:
+- C++
+helpviewer_keywords:
+- invalid_scheduler_policy_thread_specification class
 ms.assetid: 2d0fafb2-18f8-4284-8040-3db640d33303
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 82c53e760d09ecdcc39f50b30d68a6c0b5290c4a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e73883cc3eb045d1bf12b85e76c122b4efd5788d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="invalidschedulerpolicythreadspecification-class"></a>invalid_scheduler_policy_thread_specification 클래스
 이 클래스는 `MinConcurrency` 키의 값이 `MaxConcurrency` 키의 값보다 작도록 `SchedulerPolicy` 개체의 동시성 제한을 설정하려고 시도하는 경우 발생하는 예외를 설명합니다.  
@@ -37,7 +42,7 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
   
 |이름|설명|  
 |----------|-----------------|  
-|[invalid_scheduler_policy_thread_specification] (잘못 된-스케줄러-정책-값-class.md #ctor|오버로드됨. `invalid_scheduler_policy_value` 개체를 생성합니다.|  
+|[invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-value-class.md#ctor|오버로드됨. `invalid_scheduler_policy_value` 개체를 생성합니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `exception`  
@@ -48,7 +53,7 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
  **헤더:** concrt.h  
   
  **네임스페이스:** 동시성  
-##  <a name="ctor"></a>invalid_scheduler_policy_thread_specification 
+##  <a name="ctor"></a> invalid_scheduler_policy_thread_specification 
 
  `invalid_scheduler_policy_value` 개체를 생성합니다.  
   

@@ -5,29 +5,31 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy_async
 - amp_graphics/Concurrency::fast_math::copy
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7338e634c7ce10b06e7b599494ed934942febe42
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4d360a322cdc4ae82ebded5a441152a075e8a5fc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Concurrency:: graphics 네임 스페이스 함수
 |||  
 |-|-|  
 |[copy](#copy)|[copy_async](#copy_async)|  
   
-##  <a name="copy"></a>copy 함수 (concurrency:: graphics Namespace)  
+##  <a name="copy"></a>  copy 함수 (concurrency:: graphics Namespace)  
  원본 질감을 대상 버퍼에 복사 하거나 소스 버퍼를 대상 버퍼에 복사 합니다. 이 함수는 일반적인 형태의 `copy(src, dest)`합니다.  
   
 ```  
@@ -173,7 +175,7 @@ void copy (
  `last`  
  소스 컨테이너에 사용 되는 끝 반복기입니다.  
   
-##  <a name="copy_async"></a>copy_async 함수 (concurrency:: graphics Namespace)  
+##  <a name="copy_async"></a>  copy_async 함수 (concurrency:: graphics Namespace)  
  대상 버퍼에 원본 질감을 비동기적으로 복사 또는 소스 버퍼를 대상 버퍼에 복사한 다음 반환을 [completion_future](completion-future-class.md) 대기한 수 있는 개체입니다. 코드 가속기에서 실행 되는 데이터를 복사할 수 없습니다. 이 함수는 일반적인 형태의 `copy(src, dest)`합니다.  
   
 ```  

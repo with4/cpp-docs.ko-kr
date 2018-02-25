@@ -4,26 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - reading data [C++], iostream programming
 - data [C++], reading
 - streams [C++], in iostream classes
 - streams [C++]
 ms.assetid: a7e661e9-6cd1-4543-a9a4-c58ee9fd32f3
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7084a0fb74d963532e01623e8e9047768c67f801
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7515c587a651b31bce7f3d1c56777a2a908c488a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="what-a-stream-is"></a>What a Stream Is
 C++에도 C와 마찬가지로 기본 제공 입력/출력 기능은 없습니다. 하지만, 모든 C++ 컴파일러는 iostream class라고 알려진 체계적이고 객체지향화된 I/O 패키지를 번들로(기본으로) 제공합니다. 스트림은 iostream 클래스의 중요 컨셉입니다. 스트림 객체는 Byte 데이터에 대한 원본과 대상의 역할을 하는 스마트 파일로 간주하면 됩니다. 스크림의 형질(특성)은 클래스 자체와 삽입(Insertion)과 추출(Extraction) 연산자에 의해 커스터마이징됨으로서 결정됩니다.  

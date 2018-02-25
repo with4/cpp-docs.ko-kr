@@ -4,30 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - variadic macros [C++]
 - __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bf4d669f1a716751d02e06c2c52de5df5128b1a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a0e3832ab334d31b50edbe0cc1fd5dccbffb61bf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="variadic-macros"></a>Variadic 매크로
 Variadic 매크로 가변 개수의 인수를 포함 하는 함수 형식 매크로입니다.  
   
 ## <a name="remarks"></a>설명  
- Variadic 매크로 사용 하려면 줄임표로 지정할 수 있습니다 매크로 정의와 대체 식별자에 마지막 형식 인수 `__VA_ARGS__` 불필요 한 인수를 삽입 하려면 정의에 사용할 수 있습니다.  `__VA_ARGS__`쉼표로 구분 하를 포함 하 여 줄임표와 일치 하는 인수를 모두으로 바뀝니다.  
+ Variadic 매크로 사용 하려면 줄임표로 지정할 수 있습니다 매크로 정의와 대체 식별자에 마지막 형식 인수 `__VA_ARGS__` 불필요 한 인수를 삽입 하려면 정의에 사용할 수 있습니다.  `__VA_ARGS__` 쉼표로 구분 하를 포함 하 여 줄임표와 일치 하는 인수를 모두으로 바뀝니다.  
   
  C 표준 지정 하나 이상의 인수에 매크로 후행 쉼표는 식으로 해결 되지 않으면 되도록 줄임표에 전달 되어야 합니다.  줄임표 전달 되는 인수가 없는 경우 Visual c + + 구현 후행 쉼표를 표시 되지 것입니다.  
   

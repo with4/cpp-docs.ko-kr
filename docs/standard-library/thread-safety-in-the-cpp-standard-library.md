@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - thread safety
 - C++ Standard Library, thread safety
 - thread safety, C++ Standard Library
 ms.assetid: 9351c8fb-4539-4728-b0e9-226e2ac4284b
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1fa4c69e79a918d7b8cf77e03f76c81e846d5a5b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 406fd1a2c376b7be67badb02b25dc33070fccbc5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="thread-safety-in-the-c-standard-library"></a>C++ 표준 라이브러리의 스레드 보안
 다음 스레드 보안 규칙은 C++ 표준 라이브러리의 모든 클래스에 적용됩니다. 아래에서 설명하는 것처럼 이 라이브러리에는 `shared_ptr`이 포함됩니다.  경우에 따라 좀 더 강력하게 적용되기도 합니다. 예를 들어 아래에서 설명하는 것처럼 표준 iostream 개체 및 [\<atomic>](../standard-library/atomic.md)의 형식과 같은 다중 스레딩에 사용되기 위한 형식이 그러한 경우입니다.  

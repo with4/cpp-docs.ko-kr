@@ -4,27 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - accelerator_view_removed
 - AMPRT/accelerator_view_removed
 - AMPRT/Concurrency::accelerator_view_removed:accelerator_view_removed
 - AMPRT/Concurrency::accelerator_view_removed:get_view_removed_reason
-dev_langs: C++
-helpviewer_keywords: AMPRT/Concurrency::accelerator_view_removed:accelerator_view_removed Class
+dev_langs:
+- C++
+helpviewer_keywords:
+- AMPRT/Concurrency::accelerator_view_removed:accelerator_view_removed Class
 ms.assetid: 262446de-311c-454e-a5ed-e2aaced0d88a
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 68b770acd41956ec255718ee2e2db1c5ee556b9d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a1bc6784dd4f5ce9ee6b887b16a27f3a0126a9f5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="acceleratorviewremoved-class"></a>accelerator_view_removed 클래스
 Windows 시간 초과 검색 및 복구 메커니즘으로 인해 내부 DirectX 호출이 실패할 때 throw되는 예외입니다.  
@@ -41,7 +45,7 @@ class accelerator_view_removed : public runtime_exception;
   
 |이름|설명|  
 |----------|-----------------|  
-|[accelerator_view_removed 생성자](#ctor)|`accelerator_view_removed` 클래스의 새 인스턴스를 초기화합니다.|  
+|[accelerator_view_removed Constructor](#ctor)|`accelerator_view_removed` 클래스의 새 인스턴스를 초기화합니다.|  
 
 ### <a name="public-methods"></a>Public 메서드  
   
@@ -61,7 +65,7 @@ class accelerator_view_removed : public runtime_exception;
   
  **네임스페이스:** 동시성  
 
-## <a name="ctor"></a>accelerator_view_removed 
+## <a name="ctor"></a> accelerator_view_removed 
 
 새 인스턴스를 초기화는 [accelerator_view_removed](accelerator-view-removed-class.md) 클래스입니다.  
   
@@ -86,7 +90,7 @@ explicit accelerator_view_removed(
 ### <a name="return-value"></a>반환 값  
  Accelerator_view_removed 클래스의 새 인스턴스입니다.  
   
-## <a name="get_view_removed_reason_method"></a>get_view_removed_reason 
+## <a name="get_view_removed_reason_method"></a> get_view_removed_reason 
 
 `accelerator_view` 개체 제거의 원인을 나타내는 HRESULT 오류 코드를 반환합니다.  
   

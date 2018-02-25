@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - hash_map/stdext::hash_map
 - hash_map/stdext::hash_map::allocator_type
@@ -50,7 +51,8 @@ f1_keywords:
 - hash_map/stdext::hash_map::swap
 - hash_map/stdext::hash_map::upper_bound
 - hash_map/stdext::hash_map::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - stdext::hash_map
 - stdext::hash_map::allocator_type
@@ -95,16 +97,17 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 056d517779ca085152fea081271757329f7f3be8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dc280212a4d37147c8af9cd2921e12516c529d13
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="hashmap-class"></a>hash_map 클래스
 > [!NOTE]
@@ -518,7 +521,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ### <a name="remarks"></a>설명  
  `const_iterator` 형식을 사용하여 요소의 값을 수정할 수는 없습니다.  
   
- hash_map에 의해 정의된 `const_iterator`는 `pair`*\<***const Key, Type***>* 형식의 [value_type](#value_type) 개체인 요소를 가리킵니다. 형식에서 첫 번째 멤버는 요소에 대한 키이고 두 번째 멤버는 요소에 의해 포함된 매핑된 데이텀입니다.  
+ `const_iterator` 의 개체는 요소에 hash_map 점으로 정의 [value_type](#value_type), 즉 형식의 `pair`  *\< ***const 키를 입력*** >* 의 첫 번째 멤버 키 요소이 고 멤버 요소가 매핑된 데이터는 두 번째입니다.  
   
  역참조에 `const_iterator` `cIter` 사용 하 여 hash_map의 요소를 가리키는  **->**  연산자입니다.  
   
@@ -2711,7 +2714,7 @@ typedef pair<const Key, Type> value_type;
 ```  
   
 ### <a name="remarks"></a>설명  
- 연관 컨테이너의 키는 상수가 아닌 반복기 또는 참조를 사용하여 변경할 수 없으므로 `value_type`는 `pair` *\<***const**[key_type](#key_type), [mapped_type](#mapped_type)*>*으로 선언되고 `pair`**\<key_type, mapped_type>**으로 선언되지 않습니다.  
+ `value_type` 되도록 선언 `pair`  *\< * **const**[key_type](#key_type), [mapped_type](#mapped_type)*> * 및 not `pair`  **\<key_type, mapped_type >** 비상수 반복기 또는 참조를 사용 하 여 연관 컨테이너의 키 변경 되지 않을 수 있습니다.  
   
   
 ### <a name="example"></a>예  

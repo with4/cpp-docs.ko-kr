@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - type_traits/std::is_assignable
 - type_traits/std::is_copy_assignable
@@ -18,7 +18,7 @@ f1_keywords:
 - type_traits/std::is_trivially_move_assignable
 - type_traits/std::is_trivially_move_constructible
 ms.assetid: dce4492f-f3e4-4d5e-bdb4-5875321254ec
-caps.latest.revision: "13"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::is_assignable
@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: 668ef9fb5f1786c3830d1ad143348c26060218ff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 67fd80381854bd141fd47314544aca745f9a9aaf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="lttypetraitsgt-functions"></a>&lt;type_traits&gt; 함수
 ||||  
@@ -93,7 +93,7 @@ struct is_copy_constructible;
 ### <a name="remarks"></a>설명  
  형식 조건자의 인스턴스는 `Ty` 형식이 복사 생성자가 있는 클래스인 경우 true이고 그렇지 않은 경우 false입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 #include <type_traits>   
@@ -143,7 +143,7 @@ struct is_default_constructible;
 ### <a name="remarks"></a>설명  
  형식 조건자의 인스턴스는 `T` 형식이 기본 생성자가 있는 클래스 형식인 경우 true이고 그렇지 않은 경우 false입니다. 이것은 조건자 `is_constructible<T>`에 해당합니다. `T` 형식은 완전한 형식, `void`또는 범위를 알 수 없는 배열이어야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 #include <type_traits>   

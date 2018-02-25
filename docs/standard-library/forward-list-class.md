@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - forward_list/std::forward_list
 - forward_list/std::forward_list::allocator_type
@@ -46,7 +47,8 @@ f1_keywords:
 - forward_list/std::forward_list::splice_after
 - forward_list/std::forward_list::swap
 - forward_list/std::forward_list::unique
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::forward_list
 - std::forward_list::allocator_type
@@ -87,16 +89,17 @@ helpviewer_keywords:
 - std::forward_list::swap
 - std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 36354e8b6e6e0c456334caed402a700129b32dae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c2861f4b51b5d1deefd1d4959343d16c2979b67d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="forwardlist-class"></a>forward_list 클래스
 다양한 길이의 요소 시퀀스를 제어하는 개체를 설명합니다. 각각 `Type` 형식의 멤버를 포함하는 노드의 단일 연결 목록으로 시퀀스가 저장됩니다.  
@@ -606,7 +609,7 @@ void merge(forward_list& right, Predicate comp);
 |`comp`|요소를 정렬하는 데 사용되는 비교 함수 개체입니다.|  
   
 ### <a name="remarks"></a>설명  
- `forward_list::merge`요소 제거는 `forward_list` `right`,이에 삽입 `forward_list`합니다. 두 시퀀스는 모두 아래 설명된 동일한 조건자별로 순서가 지정되어야 합니다. 결합된 시퀀스도 비교 함수 개체별로 순서가 지정되어야 합니다.  
+ `forward_list::merge` 요소 제거는 `forward_list` `right`,이에 삽입 `forward_list`합니다. 두 시퀀스는 모두 아래 설명된 동일한 조건자별로 순서가 지정되어야 합니다. 결합된 시퀀스도 비교 함수 개체별로 순서가 지정되어야 합니다.  
   
  위치 `i` 및 `j`에서 요소를 지정하는 반복기 `Pi` 및 `Pj`의 경우 첫 번째 멤버 함수는 `i < j`가 실행될 때마다 순서 `!(*Pj < *Pi)`를 적용합니다. 요소는 `ascending` 순서로 정렬됩니다. 두 번째 멤버 함수는 `i < j`가 실행될 때마다 순서 `! comp(*Pj, *Pi)`를 적용합니다.  
   

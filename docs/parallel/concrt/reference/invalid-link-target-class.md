@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - invalid_link_target
 - CONCRT/concurrency::invalid_link_target
 - CONCRT/concurrency::invalid_link_target::invalid_link_target
-dev_langs: C++
-helpviewer_keywords: invalid_link_target class
+dev_langs:
+- C++
+helpviewer_keywords:
+- invalid_link_target class
 ms.assetid: 33b64885-34d8-4d4e-a893-02e9f19c958e
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c428ee5f8b66f09eb9422d3fa76477d77ac08681
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b3a4ac6888f22fcedb494865a219fc0dd8e8a98c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="invalidlinktarget-class"></a>invalid_link_target 클래스
 이 클래스는 메시징 블록의 `link_target` 메서드를 호출하고 메시징 블록이 대상에 연결할 수 없는 경우 발생하는 예외를 설명합니다. 메시징 블록에 허용되는 링크 수를 초과했거나 동일한 소스에 특정 대상을 두 번 연결하려고 시도한 결과일 수 있습니다.  
@@ -52,7 +56,7 @@ class invalid_link_target : public std::exception;
   
  **네임스페이스:** 동시성  
   
-##  <a name="ctor"></a>invalid_link_target 
+##  <a name="ctor"></a> invalid_link_target 
 
  `invalid_link_target` 개체를 생성합니다.  
   

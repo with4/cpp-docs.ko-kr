@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - future/std::shared_future
 - future/std::shared_future::shared_future
@@ -15,9 +16,10 @@ f1_keywords:
 - future/std::shared_future::wait
 - future/std::shared_future::wait_for
 - future/std::shared_future::wait_until
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 454ebedd-f42b-405f-99a5-a25cc9ad7c90
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -29,12 +31,13 @@ helpviewer_keywords:
 - std::shared_future [C++], wait
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
-ms.workload: cplusplus
-ms.openlocfilehash: c6d7946de6440ad33c844e140ca7cbcc2199a0b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1d008142b78bc7901ef67f66f4327ad9229688bf
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sharedfuture-class"></a>shared_future 클래스
 *비동기 반환 개체*를 설명합니다. [future](../standard-library/future-class.md) 개체와는 달리 `shared_future` 개체의 경우 원하는 수만큼 *비동기 공급자*에 연결할 수 있습니다.  
@@ -64,8 +67,8 @@ class shared_future;
 |이름|설명|  
 |----------|-----------------|  
 |[get](#get)|*연결된 비동기 상태*에 저장된 결과를 검색합니다.|  
-|[유효한](#valid)|개체가 비어 있지 않은지를 지정합니다.|  
-|[대기](#wait)|연결된 비동기 상태가 ready로 설정될 때까지 현재 스레드를 차단합니다.|  
+|[valid](#valid)|개체가 비어 있지 않은지를 지정합니다.|  
+|[wait](#wait)|연결된 비동기 상태가 ready로 설정될 때까지 현재 스레드를 차단합니다.|  
 |[wait_for](#wait_for)|연결된 비동기 상태가 준비로 설정되거나 지정된 시간이 경과할 때까지 차단합니다.|  
 |[wait_until](#wait_until)|연결된 비동기 상태가 준비로 설정되거나 지정된 시점이 될 때까지 차단합니다.|  
   
@@ -80,7 +83,7 @@ class shared_future;
   
  **네임스페이스:** std  
   
-##  <a name="get"></a>shared_future:: get
+##  <a name="get"></a>  shared_future::get
  *연결된 비동기 상태*에 저장된 결과를 검색합니다.  
   
 ```
@@ -141,7 +144,7 @@ shared_future(const shared_future& Right);
   
  네 번째 생성자는 연결된 비동기 상태가 동일한 `shared_future` 개체를 `Right`로 생성합니다.  
   
-##  <a name="valid"></a>shared_future:: valid
+##  <a name="valid"></a>  shared_future::valid
  개체에 *연결된 비동기 상태*가 있는지를 지정합니다.  
   
 ```
@@ -151,7 +154,7 @@ bool valid() noexcept;
 ### <a name="return-value"></a>반환 값  
  개체가 연결된 비동기 상태이면 `true`이고, 그렇지 않으면 `false`입니다.  
   
-##  <a name="wait"></a>shared_future:: wait
+##  <a name="wait"></a>  shared_future::wait
  *연결된 비동기 상태*가 *ready*로 설정될 때까지 현재 스레드를 차단합니다.  
   
 ```
@@ -161,7 +164,7 @@ void wait() const;
 ### <a name="remarks"></a>설명  
  연결된 비동기 상태는 해당 비동기 공급자가 반환 값을 저장했거나 예외를 저장한 경우에만 준비입니다.  
   
-##  <a name="wait_for"></a>shared_future:: wait_for
+##  <a name="wait_for"></a>  shared_future::wait_for
  연결된 비동기 상태가 *ready*로 설정되거나 지정된 시간이 경과할 때까지 차단합니다.  
   
 ```
@@ -180,7 +183,7 @@ future_status wait_for(
 ### <a name="remarks"></a>설명  
  연결된 비동기 상태는 해당 비동기 공급자가 반환 값을 저장했거나 예외를 저장한 경우에만 *ready*로 설정됩니다.  
   
-##  <a name="wait_until"></a>shared_future:: wait_until
+##  <a name="wait_until"></a>  shared_future::wait_until
  연결된 비동기 상태가 *준비*가 되거나 지정된 시점이 지날 때까지 현재 스레드를 차단합니다.  
   
 ```

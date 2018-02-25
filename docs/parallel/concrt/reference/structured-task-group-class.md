@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - structured_task_group
 - PPL/concurrency::structured_task_group
@@ -16,19 +17,22 @@ f1_keywords:
 - PPL/concurrency::structured_task_group::run
 - PPL/concurrency::structured_task_group::run_and_wait
 - PPL/concurrency::structured_task_group::wait
-dev_langs: C++
-helpviewer_keywords: structured_task_group class
+dev_langs:
+- C++
+helpviewer_keywords:
+- structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ae2e4648e94d05edc3ec787232bab7f1db8aea90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1f8d2b9cdc71b6e8a7a0fe9e3bf3d3d3306af1da
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group 클래스
 `structured_task_group` 클래스는 구조화된 병렬 작업 컬렉션을 나타냅니다. `task_handle` 개체를 사용하여 개별 병렬 작업을 `structured_task_group`에 대기시킨 다음 완료되기를 기다리거나 실행이 완료되기 전에 작업 그룹을 취소합니다. 이 경우 실행이 시작되지 않은 작업이 모두 중단됩니다.  
@@ -52,11 +56,11 @@ class structured_task_group;
   
 |이름|설명|  
 |----------|-----------------|  
-|[취소](#cancel)|이 작업 그룹에서 시작한 작업의 하위 트리를 취소 하려는 시도를 만듭니다. 작업 그룹에 예약 된 모든 작업은 전이적으로 취소 가능한 경우.|  
+|[cancel](#cancel)|이 작업 그룹에서 시작한 작업의 하위 트리를 취소 하려는 시도를 만듭니다. 작업 그룹에 예약 된 모든 작업은 전이적으로 취소 가능한 경우.|  
 |[is_canceling](#is_canceling)|작업 그룹 현재 취소 중은 여부 호출자에 게 알립니다. 이 반드시을 나타내지 않는 `cancel` 메서드가 `structured_task_group` 개체 (반드시 반환 하려면이 메서드 `true`). 대/소문자는 것입니다는 `structured_task_group` 인라인으로 실행 개체 및 작업 그룹을 추가로 구성 작업 트리에서 취소 되었습니다. 이 경우 런타임에서 취소가를 통해 이동 하는 미리 확인할 수 `structured_task_group` 개체 `true` 도 반환 됩니다.|  
 |[run](#run)|오버로드됨. 작업을 예약는 `structured_task_group` 개체입니다. 호출자의 수명을 관리 하는 `task_handle` 에 전달 된 개체는 `_Task_handle` 매개 변수입니다. `_Placement` 매개 변수를 사용하는 버전은 이 매개 변수로 지정된 위치에서 작업이 실행되도록 합니다.|  
 |[run_and_wait](#run_and_wait)|오버로드됨. 사용 하 여 인라인 호출 컨텍스트에서 실행 하는 작업을 예약 된 `structured_task_group` 전체 취소 지원에 대 한 개체입니다. 경우는 `task_handle` 에 대 한 매개 변수로 전달 `run_and_wait`의 수명을 관리 하는 것에 대 한 호출자가는 `task_handle` 개체입니다. 함수는 다음에 사용 될 때까지 대기는 `structured_task_group` 개체 완료 되거나 취소 되었습니다.|  
-|[대기](#wait)|에 사용 될 때까지 대기는 `structured_task_group` 완료 또는 취소 됩니다.|  
+|[wait](#wait)|에 사용 될 때까지 대기는 `structured_task_group` 완료 또는 취소 됩니다.|  
   
 ## <a name="remarks"></a>설명  
  심각한 제한의 사용에는 여러 가지가 `structured_task_group` 성능 개선을 위해 개체:  
@@ -79,7 +83,7 @@ class structured_task_group;
   
  **네임스페이스:** 동시성  
   
-##  <a name="cancel"></a>취소 
+##  <a name="cancel"></a> 취소 
 
  이 작업 그룹에서 시작한 작업의 하위 트리를 취소 하려는 시도를 만듭니다. 작업 그룹에 예약 된 모든 작업은 전이적으로 취소 가능한 경우.  
   
@@ -90,7 +94,7 @@ void cancel();
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [취소](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)합니다.  
   
-##  <a name="is_canceling"></a>is_canceling 
+##  <a name="is_canceling"></a> is_canceling 
 
  작업 그룹 현재 취소 중은 여부 호출자에 게 알립니다. 이 반드시을 나타내지 않는 `cancel` 메서드가 `structured_task_group` 개체 (반드시 반환 하려면이 메서드 `true`). 대/소문자는 것입니다는 `structured_task_group` 인라인으로 실행 개체 및 작업 그룹을 추가로 구성 작업 트리에서 취소 되었습니다. 이 경우 런타임에서 취소가를 통해 이동 하는 미리 확인할 수 `structured_task_group` 개체 `true` 도 반환 됩니다.  
   
@@ -104,7 +108,7 @@ bool is_canceling();
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [취소](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)합니다.  
   
-##  <a name="run"></a>실행 
+##  <a name="run"></a> 실행 
 
  작업을 예약는 `structured_task_group` 개체입니다. 호출자의 수명을 관리 하는 `task_handle` 에 전달 된 개체는 `_Task_handle` 매개 변수입니다. `_Placement` 매개 변수를 사용하는 버전은 이 매개 변수로 지정된 위치에서 작업이 실행되도록 합니다.  
   
@@ -136,7 +140,7 @@ void run(
   
  Throw는 [invalid_multiple_scheduling](invalid-multiple-scheduling-class.md) 태스크가 처리 하는 경우 예외에서 주어진는 `_Task_handle` 매개 변수를 통해 작업 그룹 개체에 이미 예약 되어는 `run` 메서드에 대 한 중간 호출이 되었습니다 중 하나는 `wait` 또는 `run_and_wait` 메서드를 해당 작업 그룹입니다.  
   
-##  <a name="run_and_wait"></a>run_and_wait 
+##  <a name="run_and_wait"></a> run_and_wait 
 
  사용 하 여 인라인 호출 컨텍스트에서 실행 하는 작업을 예약 된 `structured_task_group` 전체 취소 지원에 대 한 개체입니다. 경우는 `task_handle` 에 대 한 매개 변수로 전달 `run_and_wait`의 수명을 관리 하는 것에 대 한 호출자가는 `task_handle` 개체입니다. 함수는 다음에 사용 될 때까지 대기는 `structured_task_group` 개체 완료 되거나 취소 되었습니다.  
   
@@ -170,7 +174,7 @@ task_group_status run_and_wait(const _Function& _Func);
   
  두이 방법 중 하나를 호출 해야 실행 비 예외 경로 또는 `wait` 의 소멸자 보다 먼저 메서드는 `structured_task_group` 실행 합니다.  
   
-##  <a name="ctor"></a>structured_task_group 
+##  <a name="ctor"></a> structured_task_group 
 
  새 `structured_task_group` 개체를 생성합니다.  
   
@@ -187,7 +191,7 @@ structured_task_group(cancellation_token _CancellationToken);
 ### <a name="remarks"></a>설명  
  취소 토큰을 사용하는 생성자는 토큰에 연결된 소스가 취소될 때 취소될 `structured_task_group`을 만듭니다. 명시적 취소 토큰을 제공이 구조적된 작업 그룹에 다른 토큰이 있거나 토큰이 없는 부모 그룹에서의 암시적 취소 참여 하지 않도록 격리 됩니다.  
   
-##  <a name="dtor"></a>~ structured_task_group 
+##  <a name="dtor"></a> ~structured_task_group 
 
  `structured_task_group` 개체를 제거합니다. 중 하나를 호출 해야는 `wait` 또는 `run_and_wait` 소멸자 실행 전에 개체의 메서드를 소멸자는 실행 되지 않는 경우의 결과로 인 한 스택 해제는 예외입니다.  
   
@@ -198,7 +202,7 @@ structured_task_group(cancellation_token _CancellationToken);
 ### <a name="remarks"></a>설명  
  소멸자가 실행 되 고 (예를 들어 스택 해제 되지 않음 예외로 인해) 정상 실행의 결과로 `wait` 나 `run_and_wait` 메서드도 호출 되지 않은, 소멸자 throw 될 수 있습니다는 [missing_wait](missing-wait-class.md) 예외입니다.  
   
-##  <a name="wait"></a>대기 
+##  <a name="wait"></a> 대기 
 
  에 사용 될 때까지 대기는 `structured_task_group` 완료 또는 취소 됩니다.  
   

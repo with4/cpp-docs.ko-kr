@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::ywx
 - amp_short_vectors/Concurrency::graphics::uint_4::get_yxw
@@ -273,18 +274,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::set_xywz
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 4de759866580cce03dae40c5fe2fe5cb9482013b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1d70672b5d862164607afefde3de758fdd269d60
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="uint4-class"></a>uint_4 클래스
 부호 없는 정수 4 개의 짧은 벡터를 나타냅니다.  
@@ -456,19 +459,19 @@ class uint_4;
 |이름|설명|  
 |----------|-----------------|  
 |uint_4::operator-||  
-|uint_4::operator-||  
-|uint_4::operator * =||  
-|uint_4::operator / =||  
-|uint_4::operator + +||  
-|uint_4::operator + =||  
-|uint_4::operator =||  
-|-= uint_4::operator||  
+|uint_4::operator--||  
+|uint_4::operator*=||  
+|uint_4::operator/=||  
+|uint_4::operator++||  
+|uint_4::operator+=||  
+|uint_4::operator=||  
+|uint_4::operator-=||  
   
 ### <a name="public-constants"></a>공용 상수  
   
 |이름|설명|  
 |----------|-----------------|  
-|[상수 크기](#size)||  
+|[size Constant](#size)||  
 
   
 ### <a name="public-data-members"></a>공용 데이터 멤버  
@@ -612,7 +615,7 @@ class uint_4;
   
  **Namespace:** concurrency:: graphics  
   
-## <a name="uint_4__ctor"></a>uint_4 
+## <a name="uint_4__ctor"></a> uint_4 
 
 기본 생성자, 0 인 모든 요소를 초기화 합니다.
   
@@ -668,7 +671,7 @@ explicit inline uint_4(
  `_Other`  
  초기화 하는 데 사용 되는 개체입니다.  
   
-## <a name=""></a>크기 
+## <a name=""></a> 크기 
 
 ## <a name="syntax"></a>구문  
   

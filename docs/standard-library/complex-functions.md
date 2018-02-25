@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xcomplex/std::abs
 - xcomplex/std::acos
@@ -28,7 +28,7 @@ f1_keywords:
 - xcomplex/std::tan
 - xcomplex/std::tanh
 ms.assetid: 58b14e94-0e0c-493e-8237-8b4d685904a2
-caps.latest.revision: "14"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::abs [C++]
@@ -49,11 +49,11 @@ helpviewer_keywords:
 - std::sqrt [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 14fed0ac2d0714989e78459a74b48fd8173c7632
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: aee4e410bae6ea3fc3726ac29c250e2339e0fcb0
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;complex&gt; 함수
 ||||  
@@ -83,7 +83,7 @@ Type abs(const complex<Type>& complexNum);
 ### <a name="remarks"></a>설명  
  복소수의 *모듈러스*는 복소수를 나타내는 벡터의 길이에 대한 측정입니다. 복소수의 모듈러스                         a + bi는 sqrt (a<sup>2</sup> + b<sup>2</sup>)이며, |a + bi|로 표기됩니다. 복소수의 *기준*                         a + bi는 (a<sup>2</sup> + b<sup>2</sup>)이므로 복소수의 모듈러스는 해당 기준의 제곱근입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_abs.cpp  
@@ -166,7 +166,7 @@ Type arg(const complex<Type>& complexNum);
 ### <a name="remarks"></a>설명  
  *인수* 는 복합 평면의에서 양수 실제 축과 함께 사용 하면 복잡 한 벡터 각도입니다. 복소수 *a + bi*, 인수가 arctan 같음 (*b / a*). 각도는 양의 실수 축에서 시계 반대 방향으로 측정되는 경우 양을 나타내고, 시계 방향으로 측정되는 경우 음을 나타냅니다. 주 값이-pi 보다 큰 보다 같음 + pi 또는 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_arg.cpp  
@@ -249,7 +249,7 @@ complex<Type> conj(const complex<Type>& complexNum);
 ### <a name="remarks"></a>설명  
  복소수의 켤레 복소수 *a + bi* 은 *-bi*합니다. 복소수와 켤레 복소수는 숫자 *a*2 + *b*2의 기준입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_conj.cpp  
@@ -324,7 +324,7 @@ complex<Type> cos(const complex<Type>& complexNum);
   
  cos ( *z*) = cos ( *a* + *bi*) = cos ( *a*) cosh ( *b*) - isin ( *a*) sinh ( *b*)  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_cos.cpp  
@@ -411,7 +411,7 @@ complex<Type> cosh(const complex<Type>& complexNum);
   
  cos ( *z*) = cosh ( *a + bi*) = cosh ( *a*) cos ( *b*) + isinh ( *a*) sin ( *b*)  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_cosh.cpp  
@@ -491,7 +491,7 @@ complex<Type> exp(const complex<Type>& complexNum);
 ### <a name="return-value"></a>반환 값  
  입력 복소수의 지수인 복소수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_exp.cpp  
@@ -562,7 +562,7 @@ Type imag(const complex<Type>& complexNum);
 ### <a name="remarks"></a>설명  
  이 템플릿 함수는 복소수의 실수 부분을 수정하는 데 사용할 수 없습니다. 실수 부분을 변경하려면 새 복소수에 구성 요소 값이 할당되어야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complexc_imag.cpp  
@@ -610,7 +610,7 @@ complex<Type> log(const complex<Type>& complexNum);
 ### <a name="remarks"></a>설명  
  분기는 음의 실수 축을 따릅니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_log.cpp  
@@ -676,7 +676,7 @@ complex<Type> log10(const complex<Type>& complexNum);
 ### <a name="remarks"></a>설명  
  분기는 음의 실수 축을 따릅니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_log10.cpp  
@@ -742,7 +742,7 @@ Type norm(const complex<Type>& complexNum);
 ### <a name="remarks"></a>설명  
  복소수 기준인 *a + bi*는 *(a*<sup>2</sup> *+ b*<sup>2</sup>*)입니다.* 복소수의 기준은 모듈러스의 제곱입니다. 복소수의 모듈러스는 복소수를 나타내는 벡터의 길이에 대한 측정입니다. 복소수의 모듈러스인 *a + bi*는 `sqrt`*(a*<sup>2</sup> *+ b*<sup>2</sup>*)이며,* *|a + bi|로 표기됩니다.*  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_norm.cpp  
@@ -824,7 +824,7 @@ complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 ### <a name="remarks"></a>설명  
  극좌표 형 형식의 복소수 제공 모듈러스 *r* 인수 *p*실수 및 허수 데카르트 구성 요소가 이러한 매개 변수는 관련이, *는* 및 *b* 수식으로 *는* = r \* cos *p* 및 *b* = *r* \* sin *p*합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_polar.cpp  
@@ -908,7 +908,7 @@ complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
   
  분기는 음의 실수 축을 따릅니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_pow.cpp  
@@ -1035,7 +1035,7 @@ Type real(const complex<Type>& complexNum);
 ### <a name="remarks"></a>설명  
  이 템플릿 함수는 복소수의 실수 부분을 수정하는 데 사용할 수 없습니다. 실수 부분을 변경하려면 새 복소수에 구성 요소 값이 할당되어야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_real.cpp  
@@ -1083,11 +1083,11 @@ complex<Type> sin(const complex<Type>& complexNum);
 ### <a name="remarks"></a>설명  
  복소수 사인을 정의하는 항:  
   
- sin ( *z*) = (1/2 *i*)\*(exp ( *iz*)-exp (- *iz*))  
+ sin ( *z*) = (1/2 *i*)\*( exp ( *iz*) - exp (- *iz*) )  
   
  sin ( *z*) = sin ( *a + bi*) = sin ( *a*) cosh ( *b*) + icos ( *a*) sinh ( *b*)  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_sin.cpp  
@@ -1170,11 +1170,11 @@ complex<Type> sinh(const complex<Type>& complexNum);
 ### <a name="remarks"></a>설명  
  복소수 쌍곡 사인을 정의하는 항:  
   
- sinh ( *z*) (1/2) =\*(exp ( *z*)-exp (- *z*))  
+ sinh ( *z*) = (1/2)\*( exp ( *z*) - exp (- *z*) )  
   
  sinh ( *z*) = sinh ( *a + bi*) = sinh ( *a*) cos ( *b*) + *i*cosh ( *a*) sin ( *b*)  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_sinh.cpp  
@@ -1261,7 +1261,7 @@ complex<Type> sqrt(const complex<Type>& complexNum);
   
  복소수의 제곱근은 입력 숫자의 제곱근인 모듈러스와 입력 숫자의 1/2인 인수를 갖습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_sqrt.cpp  
@@ -1330,9 +1330,9 @@ complex<Type> tan(const complex<Type>& complexNum);
 ### <a name="remarks"></a>설명  
  복소수 코탄젠트를 정의하는 항:  
   
- tan ( *z*) = sin ( *z*) / cos ( *z*) = (exp ( *iz*)-exp (- *iz*)) / *i*(exp ( *iz*) + exp (- *iz*))  
+ tan ( *z*) = sin ( *z*) / cos ( *z*) = ( exp ( *iz*) - exp (- *iz*) ) / *i*( exp ( *iz*) + exp (- *iz*) )  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_tan.cpp  
@@ -1415,9 +1415,9 @@ complex<Type> tanh(const complex<Type>& complexNum);
 ### <a name="remarks"></a>설명  
  복소수 쌍곡 코탄젠트를 정의하는 항:  
   
- tanh ( *z*) = sinh ( *z*) / cosh ( *z*) = (exp ( *z*)-exp (- *z*)) / (exp ( *z*) + exp (- *z*))  
+ tanh ( *z*) = sinh ( *z*) / cosh ( *z*) = ( exp ( *z*) - exp (- *z*) ) / ( exp ( *z*) + exp (- *z*) )  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // complex_tanh.cpp  

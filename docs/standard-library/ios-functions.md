@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xiosbase/std::defaultfloat
 - xiosbase/std::boolalpha
@@ -31,7 +31,7 @@ f1_keywords:
 - ios/std::unitbuf
 - ios/std::uppercase
 ms.assetid: 1382d53f-e531-4b41-adf6-6a1543512e51
-caps.latest.revision: "10"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::defaultfloat [C++]
@@ -57,11 +57,11 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: 621f659ec0a3896013d8b81526f9ec83561d76a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 60bb8bac5ca2f961d6d2977dc84d0844dfd54b8c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltiosgt-functions"></a>&lt;ios&gt; 함수
 ||||  
@@ -92,11 +92,11 @@ ios_base& boolalpha(ios_base& str);
 ### <a name="remarks"></a>설명  
  기본적으로 `bool` 형식의 변수는 1 또는 0으로 표시됩니다.  
   
- `boolalpha`시그니처 `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha`), 다음을 반환 하 고 `str`합니다.  
+ `boolalpha` 시그니처 `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::boolalpha`), 다음을 반환 하 고 `str`합니다.  
   
  [noboolalpha](../standard-library/ios-functions.md#noboolalpha)는 `boolalpha`의 결과를 되돌립니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // ios_boolalpha.cpp  
@@ -142,7 +142,7 @@ ios_base& dec(ios_base& str);
   
  **dec**는 `str.`[setf](../standard-library/ios-base-class.md#setf)( `ios_base::dec`**, ios_base::basefield**)를 효과적으로 호출한 다음 `str`을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // ios_dec.cpp  
@@ -205,7 +205,7 @@ ios_base& fixed(ios_base& str);
   
  조작자를 효과적으로 호출 * str.*[setf](../standard-library/ios-base-class.md#setf)( `ios_base::fixed`, **ios_base::floatfield**), 다음을 반환 하 고 `str`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // ios_fixed.cpp  
@@ -249,7 +249,7 @@ ios_base& hex(ios_base& str);
   
  조작자는 `str`**.**[setf](../standard-library/ios-base-class.md#setf)( `ios_base::hex`, **ios_base::basefield**)를 효과적으로 호출한 다음 `str`을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   **hex**를 사용하는 방법에 대한 예제는 [dec](../standard-library/ios-functions.md#dec)를 참조하세요.  
   
 ##  <a name="internal"></a>  internal  
@@ -271,7 +271,7 @@ ios_base& internal(ios_base& str);
   
  조작자는 `str`. [setf](../standard-library/ios-base-class.md#setf)( [ios_base::internal](../standard-library/ios-base-class.md#fmtflags), [ios_base::adjustfield](../standard-library/ios-base-class.md#fmtflags))를 효과적으로 호출한 다음 `str`을 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // ios_internal.cpp  
@@ -311,7 +311,7 @@ ios_base& left(ios_base& str);
 ### <a name="remarks"></a>설명  
  조작자를 효과적으로 호출 `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::left`, **ios_base::adjustfield**), 다음을 반환 하 고 `str`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // ios_left.cpp  
@@ -350,11 +350,11 @@ ios_base& noboolalpha(ios_base& str);
 ### <a name="remarks"></a>설명  
  기본적으로 `noboolalpha`가 설정되어 있습니다.  
   
- `noboolalpha`시그니처 `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::boolalpha`), 다음을 반환 하 고 `str`합니다.  
+ `noboolalpha` 시그니처 `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::boolalpha`), 다음을 반환 하 고 `str`합니다.  
   
  [boolalpha](../standard-library/ios-functions.md#boolalpha)는 `noboolalpha`의 결과를 되돌립니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `noboolalpha` 사용 예제는 [boolalpha](../standard-library/ios-functions.md#boolalpha)를 참조하세요.  
   
 ##  <a name="noshowbase"></a>  noshowbase  
@@ -376,7 +376,7 @@ ios_base& noshowbase(ios_base& str);
   
  조작자를 효과적으로 호출 `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showbase`), 다음을 반환 하 고 `str`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `noshowbase`를 사용하는 방법에 대한 예제는 [showbase](../standard-library/ios-functions.md#showbase)를 참조하세요.  
   
 ##  <a name="noshowpoint"></a>  noshowpoint  
@@ -398,7 +398,7 @@ ios_base& noshowpoint(ios_base& str);
   
  조작자를 효과적으로 호출 `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showpoint`), 다음을 반환 하 고 `str`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // ios_noshowpoint.cpp  
@@ -441,7 +441,7 @@ ios_base& noshowpos(ios_base& str);
   
  조작자를 효과적으로 호출 `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::showps`), 그런 다음 반환 `str`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `noshowpos` 사용 예제는 [showpos](../standard-library/ios-functions.md#showpos)를 참조하세요.  
   
 ##  <a name="noskipws"></a>  noskipws  
@@ -463,7 +463,7 @@ ios_base& noskipws(ios_base& str);
   
  조작자를 효과적으로 호출 `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::skipws`), 다음을 반환 하 고 `str`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // ios_noskipws.cpp  
@@ -518,7 +518,7 @@ ios_base& nouppercase(ios_base& str);
 ### <a name="remarks"></a>설명  
  조작자를 효과적으로 호출 `str`.[ unsetf](../standard-library/ios-base-class.md#unsetf)( `ios_base::uppercase`), 다음을 반환 하 고 `str`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `nouppercase` 사용 예제는 [uppercase](../standard-library/ios-functions.md#uppercase)를 참조하세요.  
   
 ##  <a name="oct"></a>  oct  
@@ -540,7 +540,7 @@ ios_base& oct(ios_base& str);
   
  조작자를 효과적으로 호출 `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::oct`, `ios_base::basefield`), 다음을 반환 하 고 `str`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   **oct**를 사용하는 방법에 대한 예제는 [dec](../standard-library/ios-functions.md#dec)를 참조하세요.  
   
 ##  <a name="right"></a>  right  
@@ -562,7 +562,7 @@ ios_base& right(ios_base& str);
   
  조작자를 효과적으로 호출 `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::right`, `ios_base::adjustfield`), 다음을 반환 하 고 `str`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // ios_right.cpp  
@@ -615,7 +615,7 @@ ios_base& scientific(ios_base& str);
   
  조작자를 효과적으로 호출 `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::scientific`, `ios_base::floatfield`), 다음을 반환 하 고 `str`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // ios_scientific.cpp  
@@ -656,7 +656,7 @@ ios_base& showbase(ios_base& str);
   
  조작자를 효과적으로 호출 `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::showbase`), 다음을 반환 하 고 `str`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // ios_showbase.cpp  
@@ -706,7 +706,7 @@ ios_base& showpoint(ios_base& str);
   
  조작자를 효과적으로 호출 `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::showpoint`), 다음을 반환 하 고 `str`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `showpoint` 사용 예제는 [noshowpoint](../standard-library/ios-functions.md#noshowpoint)를 참조하세요.  
   
 ##  <a name="showpos"></a>  showpos  
@@ -728,7 +728,7 @@ ios_base& showpos(ios_base& str);
   
  조작자를 효과적으로 호출 `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::showpos`), 다음을 반환 하 고 `str`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // ios_showpos.cpp  
@@ -769,7 +769,7 @@ ios_base& skipws(ios_base& str);
   
  조작자를 효과적으로 호출 `str`.[ setf](../standard-library/ios-base-class.md#setf)( `ios_base::skipws`), 다음을 반환 하 고 `str`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 #include <iostream>  
@@ -840,7 +840,7 @@ ios_base& uppercase(ios_base& str);
   
  조작자를 효과적으로 호출 `str`.[ setf](../standard-library/ios-base-class.md#setf)( [ios_base::uppercase](../standard-library/ios-base-class.md#fmtflags)), 다음을 반환 하 고 `str`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // ios_uppercase.cpp  

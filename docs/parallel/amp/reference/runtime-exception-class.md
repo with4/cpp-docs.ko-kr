@@ -4,27 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - runtime_exception
 - AMPRT/runtime_exception
 - AMPRT/Concurrency::runtime_exception
 - AMPRT/Concurrency::runtime_exception::get_error_code
-dev_langs: C++
-helpviewer_keywords: runtime_exception class
+dev_langs:
+- C++
+helpviewer_keywords:
+- runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 705949f118e85b6dfef2beeccb55fecd63a64882
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 678f0a93577a6e30afbc5e0c6d83aca6b6a7bedc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="runtimeexception-class"></a>runtime_exception 클래스
 C++ AMP(C++ Accelerated Massive Parallelism) 라이브러리의 예외에 대한 기본 형식입니다.  
@@ -67,7 +71,7 @@ class runtime_exception : public std::exception;
   
  **네임스페이스:** 동시성  
 
-## <a name="runtime_exception__ctor"></a>runtime_exception 생성자  
+## <a name="runtime_exception__ctor">runtime_exception 생성자</a>  
 클래스의 새 인스턴스를 초기화합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -97,7 +101,7 @@ runtime_exception(
 ### <a name="return-value"></a>반환 값  
  `runtime_exception` 개체  
 
-## <a name="dtor"></a>~ runtime_exception 소멸자  
+## <a name="dtor">~ runtime_exception 소멸자</a>  
 개체를 제거합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -106,7 +110,7 @@ runtime_exception(
 virtual ~runtime_exception() throw();  
 ```  
   
-## <a name="runtime_exception__get_error_code"></a>get_error_code   
+## <a name="runtime_exception__get_error_code"></a>  get_error_code   
 예외를 발생 시킨 오류 코드가 반환 됩니다.  
   
 ### <a name="syntax"></a>구문  

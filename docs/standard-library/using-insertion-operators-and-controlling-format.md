@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,11 +19,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2794da411458ccdf83725b80a6b5ba8371e53248
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: 6049d92ab2ca1f7f724f3e27037c5df5c4304ea6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>삽입 연산자 사용 및 형식 제어
 이 항목에서는 형식을 제어하는 방법 및 고유 클래스에 대한 삽입 연산자를 만드는 방법을 보여 줍니다. 모든 표준 C++ 데이터 형식에 대해 미리 프로그래밍된 삽입(**<<**) 연산자는 출력 스트림 개체에 바이트를 보냅니다. 삽입 연산자는 정수 인수의 기본 형식을 변경하는 요소인 미리 정의된 "조작자"와 함께 작동합니다.  

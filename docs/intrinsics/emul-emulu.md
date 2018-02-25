@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - __emulu_cpp
 - __emul
 - __emul_cpp
 - __emulu
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - __emul intrinsic
 - __emulu intrinsic
 ms.assetid: 79545236-cca2-40b8-a4e1-8abce9b26311
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8592633b0b2356f5a3e9bbdefb509a8f1d1a878d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ba97b1160b9b0bff9e6014d73d1c79bf4627139c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="emul-emulu"></a>__emul, __emulu
 **Microsoft 전용**  
@@ -66,9 +69,9 @@ unsigned __int64 __emulu(
  **헤더 파일** \<. h >  
   
 ## <a name="remarks"></a>설명  
- `__emul`에서는 두 개의 32 비트 부호 있는 값을 사용 하 고 64 비트 부호 있는 정수 값으로 곱하기의 결과 반환 합니다.  
+ `__emul` 에서는 두 개의 32 비트 부호 있는 값을 사용 하 고 64 비트 부호 있는 정수 값으로 곱하기의 결과 반환 합니다.  
   
- `__emulu`에서는 두 개의 32 비트 부호 없는 정수 값을 사용 하 고 64 비트 부호 없는 정수 값으로 곱하기의 결과 반환 합니다.  
+ `__emulu` 에서는 두 개의 32 비트 부호 없는 정수 값을 사용 하 고 64 비트 부호 없는 정수 값으로 곱하기의 결과 반환 합니다.  
   
 ## <a name="example"></a>예  
   

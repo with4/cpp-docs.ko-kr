@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: <stdexcept>
-dev_langs: C++
-helpviewer_keywords: stdexcept header
+ms.topic: reference
+f1_keywords:
+- <stdexcept>
+dev_langs:
+- C++
+helpviewer_keywords:
+- stdexcept header
 ms.assetid: 495c10b1-1e60-4514-9f8f-7fda11a2f522
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b67e1bdd9377c81965dd212836e0f224ff618788
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 26cc6c5811819ffcb909e2e27ab90e7dad1f19fc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltstdexceptgt"></a>&lt;stdexcept&gt;
 예외 보고에 사용되는 여러 표준 클래스를 정의합니다. 클래스는 [exception](../standard-library/exception-class.md) 클래스에서 모두 파생된 파생 계층 구조를 형성하고 두 가지 일반 형식의 예외(논리 오류 및 런타임 오류)를 포함합니다. 논리 오류는 프로그래머 실수로 인해 발생합니다. 기본 클래스 logic_error에서 파생되며 다음을 포함합니다.  

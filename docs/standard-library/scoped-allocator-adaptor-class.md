@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - scoped_allocator/std::scoped_allocator_adaptor
 - scoped_allocator/std::scoped_allocator_adaptor::rebind Struct
@@ -18,7 +19,8 @@ f1_keywords:
 - scoped_allocator/std::scoped_allocator_adaptor::max_size
 - scoped_allocator/std::scoped_allocator_adaptor::outer_allocator
 - scoped_allocator/std::scoped_allocator_adaptor::select_on_container_copy_construction
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::scoped_allocator_adaptor
 - std::scoped_allocator_adaptor::allocate
@@ -30,16 +32,17 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::outer_allocator
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 66c188c490861e0b632791755b2d9914a7919865
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fcfc9d5ca7b988be2dad0451aa2f58aacd15c789
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor 클래스
 할당자의 중첩을 나타냅니다.  
@@ -119,7 +122,7 @@ class scoped_allocator_adaptor;
   
  **네임스페이스:** std  
   
-##  <a name="allocate"></a>scoped_allocator_adaptor:: allocate
+##  <a name="allocate"></a>  scoped_allocator_adaptor::allocate
  `Outer` 할당자를 사용하여 메모리를 할당합니다.  
   
 ```cpp  
@@ -136,7 +139,7 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 ### <a name="return-value"></a>반환 값  
  첫 번째 구성원 함수는 `Outer_traits::allocate(outer_allocator(), count)`를 반환합니다. 두 번째 구성원 함수는 `Outer_traits::allocate(outer_allocator(), count, hint)`를 반환합니다.  
   
-##  <a name="construct"></a>scoped_allocator_adaptor:: construct
+##  <a name="construct"></a>  scoped_allocator_adaptor::construct
  개체를 생성합니다.  
   
 ```cpp  
@@ -197,7 +200,7 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
   
  여섯 번째 메서드는 `this->construct(ptr, piecewise_construct, forward_as_tuple(std::forward<Uy1>(right.first), forward_as_tuple(std::forward<Uy2>(right.second))`와 동일하게 동작합니다.  
   
-##  <a name="deallocate"></a>scoped_allocator_adaptor:: deallocate
+##  <a name="deallocate"></a>  scoped_allocator_adaptor::deallocate
  외부 할당자를 사용하여 개체의 할당을 취소합니다.  
   
 ```cpp  
@@ -211,7 +214,7 @@ void deallocate(pointer ptr, size_type count);
  `count`  
  할당을 취소할 개체의 수입니다.  
   
-##  <a name="destroy"></a>scoped_allocator_adaptor:: destroy
+##  <a name="destroy"></a>  scoped_allocator_adaptor::destroy
  지정된 개체를 제거합니다.  
   
 ```cpp  
@@ -226,7 +229,7 @@ void destroy(Ty* ptr)
 ### <a name="return-value"></a>반환 값  
  `Outermost_traits::destroy(OUTERMOST(*this), ptr)`  
   
-##  <a name="inner_allocator"></a>scoped_allocator_adaptor:: inner_allocator
+##  <a name="inner_allocator"></a>  scoped_allocator_adaptor::inner_allocator
  `inner_allocator_type` 형식의 저장된 개체에 대한 참조를 검색합니다.  
   
 ```cpp  
@@ -237,7 +240,7 @@ const inner_allocator_type& inner_allocator() const noexcept;
 ### <a name="return-value"></a>반환 값  
  `inner_allocator_type` 형식의 저장된 개체에 대한 참조입니다.  
   
-##  <a name="max_size"></a>scoped_allocator_adaptor:: max_size
+##  <a name="max_size"></a>  scoped_allocator_adaptor::max_size
  외부 할당자를 통해 할당할 수 있는 개체의 최대 수를 결정합니다.  
   
 ```cpp  
@@ -247,7 +250,7 @@ size_type max_size();
 ### <a name="return-value"></a>반환 값  
  `Outer_traits::max_size(outer_allocator())`  
   
-##  <a name="outer_allocator"></a>scoped_allocator_adaptor:: outer_allocator
+##  <a name="outer_allocator"></a>  scoped_allocator_adaptor::outer_allocator
  `outer_allocator_type` 형식의 저장된 개체에 대한 참조를 검색합니다.  
   
 ```cpp  
@@ -298,7 +301,7 @@ scoped_allocator_adaptor(Outer2&& al,
 ### <a name="remarks"></a>설명  
  첫 번째 생성자는 기본적으로 저장된 allocator 개체를 생성합니다. 다음 3개 생성자는 각각 `right`의 해당 개체에서 저장된 allocator 개체를 생성합니다. 마지막 생성자는 인수 목록의 해당 인수에서 저장된 allocator 개체를 생성합니다.  
   
-##  <a name="select_on_container_copy_construction"></a>scoped_allocator_adaptor:: select_on_container_copy_construction
+##  <a name="select_on_container_copy_construction"></a>  scoped_allocator_adaptor::select_on_container_copy_construction
  해당하는 각 할당자에 대해 `select_on_container_copy_construction`을 호출하여 초기화되는 저장된 각각의 allocator 개체를 포함하는 새 `scoped_allocator_adaptor` 개체를 만듭니다.  
   
 ```cpp  

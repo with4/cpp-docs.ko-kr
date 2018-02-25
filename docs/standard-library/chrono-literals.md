@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: 1a9e23b1-256f-4570-8226-5fa7364fb032
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f23208b916c190e2fbcdcd0db4ce0709485795ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2b9fe0472654a0c7a04f523138418e8ef2c33dfd
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="chrono-literals"></a>chrono 리터럴
 (C++14) \<chrono> 헤더는 12가지 [사용자 정의 리터럴](../cpp/user-defined-literals-cpp.md)을 정의하여 시, 분, 초, 밀리초, 마이크로초 및 나노초를 나타내는 리터럴의 사용을 한층 쉽게 만듭니다. 각 사용자 정의 리터럴에는 정수 계열 및 부동 소수점 오버로드가 있습니다. 리터럴은 std::chrono가 범위에 있을 때 자동으로 범위로 가져오는 literals::chrono_literals 인라인 네임스페이스에서 정의됩니다.  

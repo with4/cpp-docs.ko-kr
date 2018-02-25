@@ -4,21 +4,25 @@ ms.custom:
 ms.date: 08/08/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-ide
+ms.technology:
+- cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: CMake in Visual C++
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 33c768d419215d6bee6d5d8acff707ec129b7cd5
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8b9f00e511be43e5a6b77abae6394013e4e33a34
+ms.sourcegitcommit: 2cca90d965f76ebf1d741ab901693a15d5b8a4df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="cmake-projects-in-visual-c"></a>Visual c + +에서 CMake 프로젝트
 
@@ -161,7 +165,7 @@ C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 
    ![CMakeLists.txt 파일 오류](media/cmake-cmakelists-error.png "CMakeLists.txt 파일 오류")
 
-## <a name="cmake_settings"></a>CMake 설정 및 사용자 지정 구성
+## <a name="cmake_settings"></a> CMake 설정 및 사용자 지정 구성
 
 기본적으로 Visual Studio는 6 개의 기본 CMake 구성 ("x86 디버그", "x86 릴리스", "x64 디버그", "x64-릴리스", "Linux 디버그" 및 "Linux 릴리스")을 제공합니다. 이러한 구성은 지정된 된 프로젝트에 대 한 CMake 캐시를 만드는 데 CMake.exe은 호출 하는 방법을 정의 합니다. 를 이러한 구성을 수정 하거나 새 사용자 지정 구성을 선택 **CMake | CMake 설정 변경**, 설정은에 적용 하는 CMakeLists.txt 파일을 선택 합니다. **CMake 설정 변경** 명령은 파일의 상황에 맞는 메뉴에 있습니다. **솔루션 탐색기**합니다. 이 명령은 프로젝트 폴더의 CMakeSettings.json 파일을 만듭니다. 이 파일은 다시 후 CMake 캐시 파일을 예를 만드는 데는 **Clean** 작업 합니다. 
 
@@ -215,13 +219,13 @@ Visual Studio 생성기를 지정 하려면는 CMakeSettings.json 주 메뉴에�
 또한 CMakeSettings.json 위에서 언급 한 속성에서 사용 중인 환경 변수를 지원 합니다. 사용 하는 구문은 `${env.FOO}` 환경 변수 % FOO % 확장 합니다.
 이 파일 내의 기본 매크로에 대 한 액세스 구성 요소도 필요.
 
-- `${workspaceRoot}`– 작업 영역 폴더의 전체 경로 제공 합니다.
-- `${workspaceHash}`– 작업 영역 위치;의 해시 현재 작업 영역 (예: 폴더 경로에 사용)에 대 한 고유 식별자를 만드는 데 유용
-- `${projectFile}`– 루트 CMakeLists.txt 파일의 전체 경로
-- `${projectDir}`– 루트 CMakeLists.txt 파일의 폴더의 전체 경로
-- `${thisFile}`– CMakeSettings.json 파일의 전체 경로
-- `${name}`– 구성의 이름
-- `${generator}`-이 구성에 사용 된 CMake 생성기의 이름
+- `${workspaceRoot}` – 작업 영역 폴더의 전체 경로 제공 합니다.
+- `${workspaceHash}` – 작업 영역 위치;의 해시 현재 작업 영역 (예: 폴더 경로에 사용)에 대 한 고유 식별자를 만드는 데 유용
+- `${projectFile}` – 루트 CMakeLists.txt 파일의 전체 경로
+- `${projectDir}` – 루트 CMakeLists.txt 파일의 폴더의 전체 경로
+- `${thisFile}` – CMakeSettings.json 파일의 전체 경로
+- `${name}` – 구성의 이름
+- `${generator}` -이 구성에 사용 된 CMake 생성기의 이름
 
 ### <a name="ninja-command-line-arguments"></a>닌자 명령줄 인수
 
@@ -248,8 +252,7 @@ usage: ninja [options] [targets...]
 |   -w FLAG  | 경고 (-w 목록에 목록 경고 사용)를 조정 합니다.|
 
 ### <a name="inherited-environments-visual-studio-2017-version-155"></a>상속 된 환경 (Visual Studio 2017 15.5 버전)
-
-CmakeSettings.json 상속 된 환경을 지원합니다. 이 기능을 사용 하면 기본 환경을 상속 하는 (1) 및 (2)를 실행할 때 CMake.exe에 전달 되는 사용자 정의 환경 변수를 만들 수 있습니다.
+CMakeSettings.json 상속 된 환경을 지원합니다. 이 기능을 사용 하면 기본 환경을 상속 하는 (1) 및 (2)를 실행할 때 CMake.exe에 전달 되는 사용자 정의 환경 변수를 만들 수 있습니다.
 
 ```json
   "inheritEnvironments": [ "msvc_x64_x64" ]
@@ -271,7 +274,7 @@ CmakeSettings.json 상속 된 환경을 지원합니다. 이 기능을 사용 �
 |msvc_arm64_x64|64 비트 도구를 사용 하 여 arm64 컴파일|
 
 ### <a name="custom-environment-variables"></a>사용자 정의 환경 변수
-CmakeSettings.json를 정의할 수 있습니다 사용자 정의 환경 변수 전역적으로 또는에서 구성 당는 **환경** 속성입니다. 다음 예제에서는 하나의 전역 변수를 정의 **BuildDir**, 디버그 x86 및 x64 디버그 구성 모두에서 상속 됨. 각 구성에 대 한 값을 지정 하는 변수를 사용 하 여는 **buildRoot** 해당 구성에 대 한 속성입니다. 각 구성을 사용 하는 방법 또한 참고는 **inheritEnvironments** 속성을 해당 구성에만 적용 되는 변수를 지정 합니다.
+CMakeSettings.json를 정의할 수 있습니다 사용자 정의 환경 변수 전역적으로 또는에서 구성 당는 **환경** 속성입니다. 다음 예제에서는 하나의 전역 변수를 정의 **BuildDir**, 디버그 x86 및 x64 디버그 구성 모두에서 상속 됨. 각 구성에 대 한 값을 지정 하는 변수를 사용 하 여는 **buildRoot** 해당 구성에 대 한 속성입니다. 각 구성을 사용 하는 방법 또한 참고는 **inheritEnvironments** 속성을 해당 구성에만 적용 되는 변수를 지정 합니다.
 
 ```json
 {
@@ -290,8 +293,7 @@ CmakeSettings.json를 정의할 수 있습니다 사용자 정의 환경 변수 
       "configurationType": "Debug",
       // Inherit the defaults for using the MSVC x86 compiler.
       "inheritEnvironments": [ "msvc_x86" ],
-      "buildRoot": "${env.BuildDir}\\${name}"
-    },
+      "buildRoot": "${env.BuildDir}\\${name}"    },
     {
       "name": "x64-Debug",
       "generator": "Ninja",
@@ -346,7 +348,7 @@ CmakeSettings.json를 정의할 수 있습니다 사용자 정의 환경 변수 
 }
 ```
 
-## <a name="cmake-configure-step"></a>Cmake 단계를 구성 합니다.
+## <a name="cmake-configure-step"></a>CMake 단계를 구성 합니다.
 
 중요 한 변경 사항이 있을 경우 또는 CMakeLists.txt 파일을 Visual Studio는 CMakeSettings.json에 자동으로 CMake를 다시 실행 단계를 구성 합니다. 구성 단계는 오류 없이 완료 되 면 수집 된 정보는 c + + IntelliSense 및 언어 서비스에서 사용할 수 및에 빌드 및 디버그 작업 합니다.
 

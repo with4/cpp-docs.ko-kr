@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - map/std::multimap
 - map/std::multimap::allocator_type
@@ -49,7 +50,8 @@ f1_keywords:
 - map/std::multimap::swap
 - map/std::multimap::upper_bound
 - map/std::multimap::value_comp
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::multimap [C++]
 - std::multimap [C++], allocator_type
@@ -93,16 +95,17 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 18d648f632a28214779c9424971f65e535a5e210
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 554ea4bac3e374013a511b75f27158ad897195f7
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="multimap-class"></a>multimap 클래스
 C++ 표준 라이브러리 multimap 클래스는 각 요소가 데이터 값과 정렬 키를 갖고 있는 쌍인 컬렉션에서 데이터의 저장과 검색에 사용됩니다. 키 값은 고유할 필요가 없으며 데이터를 자동으로 정렬하는 데 사용됩니다. multimap 요소의 값은 연관된 키 값을 제외하고 직접적으로 변경할 수 있습니다. 대신, 이전 요소와 관련된 키 값을 삭제하고 새 요소와 연결된 새 키 값을 삽입해야 합니다.  
@@ -391,7 +394,7 @@ typedef implementation-defined const_iterator;
 ### <a name="remarks"></a>설명  
  `const_iterator` 형식을 사용하여 요소의 값을 수정할 수는 없습니다.  
   
- multimap에 의해 정의된 `const_iterator`는 [value_type](#value_type)의 개체를 가리킵니다. 이러한 개체는 `pair`*\<***const Key**, **Type***>* 형식입니다. 키의 값은 첫 번째 구성원 쌍을 통해 제공되며 매핑된 요소값은 쌍의 두 번째 구성원를 통해 제공됩니다.  
+ `const_iterator` 의 개체에 multimap 점으로 정의 [value_type](#value_type), 유형을 `pair` * \< * **const 키**, **형식 * * * >*합니다. 키의 값은 첫 번째 구성원 쌍을 통해 제공되며 매핑된 요소값은 쌍의 두 번째 구성원를 통해 제공됩니다.  
   
  역참조에 `const_iterator` `cIter` 사용 하는 multimap의 요소를 가리키는  **->**  연산자입니다.  
   
@@ -471,7 +474,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 ### <a name="remarks"></a>설명  
  `const_reverse_iterator` 형식은 요소값을 수정할 수 없으며 multimap을 역방향으로 반복하는 데 사용됩니다.  
   
- multimap에 의해 정의된 `const_reverse_iterator`는 [value_type](#value_type)의 개체를 가리킵니다. 이러한 개체는 `pair`*\<***const Key**, **Type***>* 형식입니다. 키의 값은 첫 번째 구성원 쌍을 통해 제공되며 매핑된 요소값은 쌍의 두 번째 구성원를 통해 제공됩니다.  
+ `const_reverse_iterator` 의 개체에 multimap 점으로 정의 [value_type](#value_type), 유형을 `pair` * \< * **const 키**, **형식 * * * >*합니다. 키의 값은 첫 번째 구성원 쌍을 통해 제공되며 매핑된 요소값은 쌍의 두 번째 구성원를 통해 제공됩니다.  
   
  역참조에 `const_reverse_iterator` `crIter` 사용 하는 multimap의 요소를 가리키는  **->**  연산자입니다.  
   
@@ -1298,7 +1301,7 @@ typedef implementation-defined iterator;
 ```  
   
 ### <a name="remarks"></a>설명  
- multimap에 의해 정의된 **반복기**는 [value_type](#value_type)의 개체를 가리킵니다. 이러한 개체는 `pair`*\<***const Key**, **Type***>* 형식입니다. 키의 값은 첫 번째 구성원 쌍을 통해 제공되며 매핑된 요소값은 쌍의 두 번째 구성원를 통해 제공됩니다.  
+ **반복기** 의 개체에 multimap 점으로 정의 [value_type](#value_type), 유형을 `pair` * \< * **const 키**, **형식 * * * >*합니다. 키의 값은 첫 번째 구성원 쌍을 통해 제공되며 매핑된 요소값은 쌍의 두 번째 구성원를 통해 제공됩니다.  
   
  multimap의 요소를 가리키는 **반복기**`Iter`를 역참조하려면 **->** 연산자를 사용합니다.  
   
@@ -2017,7 +2020,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 ### <a name="remarks"></a>설명  
  `reverse_iterator` 형식은 multimap을 역방향으로 반복하는 데 사용됩니다.  
   
- multimap에 의해 정의된 `reverse_iterator`는 [value_type](#value_type)의 개체를 가리킵니다. 이러한 개체는 `pair`*\<***const Key**, **Type***>* 형식입니다. 키의 값은 첫 번째 구성원 쌍을 통해 제공되며 매핑된 요소값은 쌍의 두 번째 구성원를 통해 제공됩니다.  
+ `reverse_iterator` 의 개체에 multimap 점으로 정의 [value_type](#value_type), 유형을 `pair` * \< * **const 키**, **형식 * * * >*합니다. 키의 값은 첫 번째 구성원 쌍을 통해 제공되며 매핑된 요소값은 쌍의 두 번째 구성원를 통해 제공됩니다.  
   
  역참조에 `reverse_iterator` `rIter` 사용 하는 multimap의 요소를 가리키는-> 연산자입니다.  
   

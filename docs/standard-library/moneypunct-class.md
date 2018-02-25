@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocmon/std::moneypunct
 - xlocmon/std::moneypunct::char_type
@@ -29,7 +30,8 @@ f1_keywords:
 - xlocmon/std::moneypunct::pos_format
 - xlocmon/std::moneypunct::positive_sign
 - xlocmon/std::moneypunct::thousands_sep
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::moneypunct [C++]
 - std::moneypunct [C++], char_type
@@ -53,16 +55,17 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 569aa946ac324c833e651e6b9b74b8cc402a4d04
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8a9d1d621d9969d47976911bf52724c29888594d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="moneypunct-class"></a>moneypunct 클래스
 템플릿 클래스는 통화 입력 필드 또는 통화 출력 필드를 나타내는 데 사용 가능한 `CharType` 형식의 시퀀스를 설명하는 데 로캘 패싯으로 사용할 수 있는 개체에 대해 설명합니다. 템플릿 매개 변수 `Intl`이 `true`인 경우 국제 규약을 준수합니다.  
@@ -497,7 +500,7 @@ explicit moneypunct(size_t _Refs = 0);
   
 -   1: 개체의 수명을 수동으로 관리해야 합니다.  
   
--   \>1: 이러한 값은 정의 되지 않습니다.  
+-   \> 1: 이러한 값은 정의 되지 않습니다.  
   
  소멸자는 보호되므로 직접적인 예제는 확인할 수 없습니다.  
   

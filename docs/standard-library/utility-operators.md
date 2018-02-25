@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - utility/std::operator!=
 - utility/std::operator&gt;
@@ -13,9 +13,10 @@ f1_keywords:
 - utility/std::operator&lt;
 - utility/std::operator&lt;=
 - utility/std::operator==
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: a6617109-2cec-4a69-948f-6c87116eda5f
-caps.latest.revision: "13"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (utility)
@@ -24,11 +25,11 @@ helpviewer_keywords:
 - std::operator&lt; (utility)
 - std::operator&lt;= (utility)
 - std::operator== (utility)
-ms.openlocfilehash: 9f9290b171a74098af5186c17f027fcf6e34c78f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 407e08934c4469776feb34d0f18b20b457d208d9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltutilitygt-operators"></a>&lt;utility&gt; 연산자
 ||||  
@@ -60,7 +61,7 @@ constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="remarks"></a>설명  
  해당 요소가 각각 같으면 한 쌍과 다른 쌍이 같습니다. 한 쌍의 첫 번째 또는 두 번째 요소가 다른 쌍의 해당 요소와 같지 않으면 두 쌍은 같지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // utility_op_ne.cpp  
@@ -128,7 +129,7 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="remarks"></a>설명  
  해당 요소가 각각 같으면 한 쌍과 다른 쌍이 같습니다. 함수에서 `left`을 반환합니다. **first** == `right`. **first** && `left`. **second** == `right`. **second**. 한 쌍의 첫 번째 또는 두 번째 요소가 다른 쌍의 해당 요소와 같지 않으면 두 쌍은 같지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // utility_op_eq.cpp  
@@ -189,7 +190,7 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
   
  쌍의 비교에서 두 쌍에서 값의 첫 번째 요소가 가장 높은 우선 순위를 갖습니다. 서로 다르면 해당 비교 결과가 쌍의 비교 결과로 사용됩니다. 첫 번째 요소 값이 다르지 않으면 두 번째 요소 값이 비교되고 해당 비교 결과가 쌍의 비교 결과로 사용됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // utility_op_lt.cpp  
@@ -260,7 +261,7 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="remarks"></a>설명  
  쌍의 비교에서 두 쌍에서 값의 첫 번째 요소가 가장 높은 우선 순위를 갖습니다. 서로 다르면 해당 비교 결과가 쌍의 비교 결과로 사용됩니다. 첫 번째 요소 값이 다르지 않으면 두 번째 요소 값이 비교되고 해당 비교 결과가 쌍의 비교 결과로 사용됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // utility_op_le.cpp  
@@ -343,7 +344,7 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
   
  쌍의 비교에서 두 쌍에서 값의 첫 번째 요소가 가장 높은 우선 순위를 갖습니다. 서로 다르면 해당 비교 결과가 쌍의 비교 결과로 사용됩니다. 첫 번째 요소 값이 다르지 않으면 두 번째 요소 값이 비교되고 해당 비교 결과가 쌍의 비교 결과로 사용됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // utility_op_gt.cpp  
@@ -424,7 +425,7 @@ constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 ### <a name="remarks"></a>설명  
  쌍의 비교에서 두 쌍에서 값의 첫 번째 요소가 가장 높은 우선 순위를 갖습니다. 서로 다르면 해당 비교 결과가 쌍의 비교 결과로 사용됩니다. 첫 번째 요소 값이 다르지 않으면 두 번째 요소 값이 비교되고 해당 비교 결과가 쌍의 비교 결과로 사용됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 // utility_op_ge.cpp  

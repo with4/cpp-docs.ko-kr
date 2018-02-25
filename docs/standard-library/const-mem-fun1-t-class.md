@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: xfunctional/std::const_mem_fun1_t
-dev_langs: C++
-helpviewer_keywords: const_mem_fun1_t class
+ms.topic: reference
+f1_keywords:
+- xfunctional/std::const_mem_fun1_t
+dev_langs:
+- C++
+helpviewer_keywords:
+- const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 788f49d3aa4cefd46e5ea97517a02a35a9747403
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 187d564f83e63f712ad2aed88679607c212deafe
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="constmemfun1t-class"></a>const_mem_fun1_t 클래스
 포인터 인수를 사용하여 초기화할 때 단일 인수를 사용하는 **const** 멤버 함수를 이항 함수 개체로 호출할 수 있도록 하는 어댑터 클래스입니다.  
@@ -51,7 +56,7 @@ class const_mem_fun1_t
  조정 가능한 이항 함수입니다.  
   
 ## <a name="remarks"></a>설명  
- 템플릿 클래스는 `_Pm`의 복사본을 저장합니다. 이는 전용 멤버 개체에서 **Type** 클래스의 멤버 함수에 대한 포인터여야 합니다. 또한 해당 멤버 함수 `operator()`가 ( **_Pleft**->\* *Pm)(***Right**) **const**를 반환하는 것으로 정의합니다.  
+ 템플릿 클래스는 `_Pm`의 복사본을 저장합니다. 이는 전용 멤버 개체에서 **Type** 클래스의 멤버 함수에 대한 포인터여야 합니다. 멤버 함수 정의 `operator()` 반환 하도록 ( **_Pleft** -> \* * Pm) (***오른쪽**) **const**합니다.  
   
 ## <a name="example"></a>예  
  `const_mem_fun1_t`의 생성자는 일반적으로 직접 사용되지 않습니다. 도우미 함수 `mem_fun`은 멤버 함수를 적용하는 데 사용됩니다. 멤버 함수 어댑터를 사용하는 방법에 대한 예제는 [mem_fun](../standard-library/functional-functions.md#mem_fun)을 참조하세요.  

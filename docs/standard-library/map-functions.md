@@ -5,23 +5,23 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - map/std::swap (map)
 - map/std::swap (multimap)
 ms.assetid: 7cb3d1a5-7add-4726-a73f-61927eafd466
-caps.latest.revision: "6"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: 7972ff0d03f0c7b2378f87c311db633dff2a5d13
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 29fa327fe892cba8c7cd9d9f4f428baa130ded29
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltmapgt-functions"></a>&lt;map&gt; 함수
 |||  
 |-|-|  
-|[swap (map)](#swap)|[swap (multimap)](#swap_multimap)|  
+|[swap(map)](#swap)|[swap (multimap)](#swap_multimap)|  
   
 ##  <a name="swap_multimap"></a>  swap  (map)
  두 map의 요소를 교환합니다.  
@@ -43,7 +43,7 @@ void swap(
 ### <a name="remarks"></a>설명  
  템플릿 함수는 멤버 함수를 실행 하려면 컨테이너 클래스 지도의 `left`.[ 스왑](../standard-library/map-class.md#swap)( `right`). 이 함수는 컴파일러에서 지정하는 함수 템플릿의 부분 순서 인스턴스입니다. 함수를 호출할 때 템플릿이 고유하게 일치하지 않는 방식으로 템플릿 함수가 오버로드되면 컴파일러는 템플릿 함수의 가장 특수화된 버전을 선택합니다. 알고리즘 클래스에서 템플릿 함수의 일반 버전인 **template** \< **class T**> **void swap**( **T&**, **T&**)는 할당을 기준으로 작동하며 속도가 느린 작업입니다. 각 컨테이너의 특수화된 버전은 컨테이너 클래스의 내부 표현을 사용할 수 있으므로 속도가 훨씬 빠릅니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `swap`의 템플릿 버전을 사용하는 예제는 멤버 함수 [map::swap](../standard-library/map-class.md#swap)에 대한 코드 예제를 참조하세요.  
   
 ##  <a name="swap"></a>  swap  (multimap)
@@ -66,7 +66,7 @@ void swap(
 ### <a name="remarks"></a>설명  
  템플릿 함수는 멤버 함수를 실행 하는 컨테이너 클래스 multimap에서를 실행 하는 컨테이너 클래스 맵에 `left`.[ 스왑](../standard-library/multimap-class.md#swap) ( `right`). 이 함수는 컴파일러에서 지정하는 함수 템플릿의 부분 순서 인스턴스입니다. 함수를 호출할 때 템플릿이 고유하게 일치하지 않는 방식으로 템플릿 함수가 오버로드되면 컴파일러는 템플릿 함수의 가장 특수화된 버전을 선택합니다. 알고리즘 클래스에서 템플릿 함수의 일반 버전인 **template** \< **class T**> **void swap**( **T&**, **T&**)는 할당을 기준으로 작동하며 속도가 느린 작업입니다. 각 컨테이너의 특수화된 버전은 컨테이너 클래스의 내부 표현을 사용할 수 있으므로 속도가 훨씬 빠릅니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `swap`의 템플릿 버전을 사용하는 예제는 멤버 함수 [multimap::swap](../standard-library/multimap-class.md#swap)에 대한 코드 예제를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

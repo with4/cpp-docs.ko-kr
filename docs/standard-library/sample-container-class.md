@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
-helpviewer_keywords: container classes [C++]
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- container classes [C++]
 ms.assetid: 5b1451f2-c708-45da-bbf0-9e42fd687a1a
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3666bf4ee03149a9c00ec93d9fc1dc536ce2d080
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0d528f53747979da7b95d8d3298a43ea717007a5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sample-container-class"></a>Sample Container 클래스
 > [!NOTE]
@@ -33,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 -   **~Ty** 식이 예외를 throw하면 container 개체의 결과 상태는 정의되지 않습니다.  
   
--   컨테이너가 allocator 개체 *al*을 정의하는 경우 *al*이 *al***.allocate** 호출의 결과를 제외한 예외를 throw하면 container 개체의 결과 상태는 정의되지 않습니다.  
+-   컨테이너는 할당자 개체를 저장 하는 경우 *al*, 및 *al* 에 대 한 호출의 결과로 아닌 다른 예외를 throw * al ***.allocate**, 컨테이너의 결과 상태 개체 정의 되지 않습니다.  
   
 -   컨테이너가 제어되는 시퀀스의 순서를 지정할 방법을 결정하기 위해 function 개체 *comp*를 저장하는 경우 *comp*가 종류와 관계없이 예외를 throw하면 container 개체의 결과 상태는 정의되지 않습니다.  
   

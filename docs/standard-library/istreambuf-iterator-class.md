@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - streambuf/std::istreambuf_iterator
 - iterator/std::istreambuf_iterator::char_type
@@ -15,7 +16,8 @@ f1_keywords:
 - iterator/std::istreambuf_iterator::streambuf_type
 - iterator/std::istreambuf_iterator::traits_type
 - iterator/std::istreambuf_iterator::equal
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::istreambuf_iterator [C++]
 - std::istreambuf_iterator [C++], char_type
@@ -25,16 +27,17 @@ helpviewer_keywords:
 - std::istreambuf_iterator [C++], traits_type
 - std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 2334ebd75d3a941c453950a6a99adfd99e6b1555
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dc69f36b5dae84775025b2e7e8086321dfe55fd5
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="istreambufiterator-class"></a>istreambuf_iterator 클래스
 템플릿 클래스 istreambuf_iterator는 여기에 저장되는 개체를 통해 액세스하는, `basic_streambuf`\< **CharType**, **Traits**>에 대한 형식 포인터의 입력 스트림 버퍼에서 문자 요소를 추출하는 입력 반복기 개체에 대해 설명합니다.  
