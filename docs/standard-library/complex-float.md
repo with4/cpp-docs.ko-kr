@@ -4,26 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: complex/std::complex<float>
-dev_langs: C++
-helpviewer_keywords: complex<float> function
+ms.topic: reference
+f1_keywords:
+- complex/std::complex<float>
+dev_langs:
+- C++
+helpviewer_keywords:
+- complex<float> function
 ms.assetid: 1178eb1e-39bd-4017-89cd-aea95f813939
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1555812fb3607f3271ba87c88839767ce79f9ecc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 09bf551c6487631ea803e071ed4b4c11501cdb04
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
-둘 다 형식이 **float**인 개체의 정렬된 쌍을 저장하는 개체를 설명합니다. 첫 번째 개체는 복소수의 실수부를 나타내고 두 번째 개체는 허수부를 나타냅니다.  
+형식의 개체의 정렬된 된 쌍을 저장 하는 개체에 설명 **float ** 는 먼저 복소수와 두 번째 실수 부분을 나타내는 허수 부분을 나타내는입니다.  
   
 ## <a name="syntax"></a>구문  
   

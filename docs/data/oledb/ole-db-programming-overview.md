@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - Universal Data Access
 - OLE DB, about OLE DB
 ms.assetid: a5a69730-2793-4277-a67d-6f3c8edab6df
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 17e80f5a1fbe94a1d2bd4c7fc3b77525a77bbd4e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 338f6f3d83e6df67e151e0fd85019fb14c8b4087
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-programming-overview"></a>OLE DB 프로그래밍 개요
 OLE DB 데이터베이스 성능, COM 기반 기술입니다. 저장 된 폼에 관계 없이 데이터에 액세스 하는 일반적인 방법은 제공 합니다. 일반적인 비즈니스 상황에서 기업 데이터베이스 외부 방대한 양의 정보가 저장 됩니다. 인덱싱된 순차적 파일 (예: 액세스) 개인 데이터베이스, 스프레드시트 (예: Excel의 경우), 프로젝트 계획 및 응용 프로그램 (예: 프로젝트의 경우) 전자 메일 (예: Outlook)이이 정보 (예: FAT 또는 NTFS) 파일 시스템에 있는 됩니다. OLE DB 데이터 저장소에 OLE DB 공급자도 동일한 방식으로 모든 종류의 데이터 저장소에 액세스할 수 있습니다.

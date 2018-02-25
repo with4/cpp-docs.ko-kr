@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - invalid_multiple_scheduling
 - CONCRT/concurrency::invalid_multiple_scheduling
 - CONCRT/concurrency::invalid_multiple_scheduling::invalid_multiple_scheduling
-dev_langs: C++
-helpviewer_keywords: invalid_multiple_scheduling class
+dev_langs:
+- C++
+helpviewer_keywords:
+- invalid_multiple_scheduling class
 ms.assetid: e9a47cb7-a778-4df7-92b0-3752119fd4c7
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: aa021ec655162cb75837ac1475e5cb9094f79fa8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7aed5586f58560e01b1a22f973ab7defadf49432
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="invalidmultiplescheduling-class"></a>invalid_multiple_scheduling 클래스
 이 클래스는 `wait` 또는 `run_and_wait` 메서드에 대한 중간 호출 없이 `task_group` 또는 `structured_task_group` 개체의 `run` 메서드를 사용하여 `task_handle` 개체가 여러 번 예약하는 경우 발생하는 예외를 설명합니다.  
@@ -52,7 +56,7 @@ class invalid_multiple_scheduling : public std::exception;
   
  **네임스페이스:** 동시성  
   
-##  <a name="ctor"></a>invalid_multiple_scheduling 
+##  <a name="ctor"></a> invalid_multiple_scheduling 
 
  `invalid_multiple_scheduling` 개체를 생성합니다.  
   
@@ -70,7 +74,7 @@ invalid_multiple_scheduling() throw();
  [Namespace 동시성](concurrency-namespace.md)   
  [task_handle 클래스](task-handle-class.md)   
  [task_group 클래스](task-group-class.md)   
- [실행](task-group-class.md)   
- [대기](task-group-class.md)   
+ [run](task-group-class.md)   
+ [wait](task-group-class.md)   
  [run_and_wait](task-group-class.md)   
  [structured_task_group 클래스](structured-task-group-class.md)

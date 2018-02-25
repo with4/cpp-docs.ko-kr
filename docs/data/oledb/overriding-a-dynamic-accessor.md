@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,11 +22,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1786b376ca437c749448511cf8e8fcef02240206
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f31f2f3ec58ea7b557cc04718cf52219d0f4d9e9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="overriding-a-dynamic-accessor"></a>동적 접근자 재정의
 사용 하는 경우 동적 접근자와 같은 `CDynamicAccessor`, 명령 **열려** 열린된 행 집합의 열 정보를 자동으로 기반 메서드는 접근자를 만듭니다. 열 바인딩된 방식을 정확 하 게 제어 하려면 동적 접근자를 재정의할 수 있습니다.  

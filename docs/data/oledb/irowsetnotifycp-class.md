@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IRowsetNotifyCP
 dev_langs:
@@ -22,11 +22,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7d20a4eb011b67a743e91f1f8340c80ea146bb7c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a43825ee3fa676ce07dcd3bc4e121abd400ef322
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP 클래스
 연결 지점 인터페이스에 대 한 공급자 사이트 구현 [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)합니다.  

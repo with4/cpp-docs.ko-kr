@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::IRowsetImpl::RefRows
 - ATL.IRowsetImpl.RefRows
@@ -26,11 +26,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c804d012029bd72d8c2837c17c74a2ece0e6848d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: db2ae7e068f3c253e546274dbdfe693889a06504
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="irowsetimplrefrows"></a>IRowsetImpl::RefRows
 에 의해 호출 [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) 및 [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md) 증가 하거나 기존 행 핸들에 대 한 참조 횟수를 해제 합니다.  

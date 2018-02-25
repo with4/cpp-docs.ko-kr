@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IUMSScheduler
 - CONCRTRM/concurrency::IUMSScheduler
 - CONCRTRM/concurrency::IUMSScheduler::IUMSScheduler::SetCompletionList
-dev_langs: C++
-helpviewer_keywords: IUMSScheduler structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- IUMSScheduler structure
 ms.assetid: 3a500225-4e02-4849-bb56-d744865f5870
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f45f8f2f152cdbfee1ee1ca3c3acfdb93a249d7a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: da35fe5ae8d00ee537674fd689fd7f27074b0355
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="iumsscheduler-structure"></a>IUMSScheduler 구조체
 동시성 런타임의 리소스 관리자를 통해 UMS(사용자 모드 예약 가능) 스레드를 전달하려는 작업 스케줄러의 추상화에 대한 인터페이스입니다. 리소스 관리자는 이 인터페이스를 사용하여 UMS 스레드 스케줄러와 통신합니다. `IUMSScheduler` 인터페이스는 `IScheduler` 인터페이스에서 상속됩니다.  
@@ -40,7 +44,7 @@ struct IUMSScheduler : public IScheduler;
   
 |이름|설명|  
 |----------|-----------------|  
-|[Iumsscheduler:: Setcompletionlist](#setcompletionlist)|할당 된 `IUMSCompletionList` UMS 스레드 스케줄러에 대 한 인터페이스입니다.|  
+|[IUMSScheduler::SetCompletionList](#setcompletionlist)|할당 된 `IUMSCompletionList` UMS 스레드 스케줄러에 대 한 인터페이스입니다.|  
   
 ## <a name="remarks"></a>설명  
  구현을 제공 해야 리소스 관리자와 통신 하는 사용자 지정 스케줄러를 구현 하는 경우 대신 일반 Win32 스레드 스케줄러로 전달 될 UMS 스레드는 `IUMSScheduler` 인터페이스입니다. 스케줄러 정책 키에 대 한 정책 값을 설정 해야 또한 `SchedulerKind` 되도록 `UmsThreadDefault`합니다. 정책 UMS 스레드를 지정 하는 경우는 `IScheduler` 에 대 한 매개 변수로 전달 되는 인터페이스는 [iresourcemanager:: Registerscheduler](iresourcemanager-structure.md#registerscheduler) 메서드가 이어야는 `IUMSScheduler` 인터페이스입니다.  
@@ -59,7 +63,7 @@ struct IUMSScheduler : public IScheduler;
   
  **네임스페이스:** 동시성  
   
-##  <a name="setcompletionlist"></a>Iumsscheduler:: Setcompletionlist 메서드  
+##  <a name="setcompletionlist"></a>  Iumsscheduler:: Setcompletionlist 메서드  
  할당 된 `IUMSCompletionList` UMS 스레드 스케줄러에 대 한 인터페이스입니다.  
   
 ```

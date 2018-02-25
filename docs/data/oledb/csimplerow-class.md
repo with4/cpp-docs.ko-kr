@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CSimpleRow
 - ATL::CSimpleRow
@@ -24,11 +24,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7c241118d13f7efecef9413851d3d47ff9a08b58
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: efd6773edd5eaae8a53041eaab06e597fe029635
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="csimplerow-class"></a>CSimpleRow 클래스
 에 사용 되는 행 핸들에 대 한 기본 구현을 제공는 [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) 클래스입니다.  

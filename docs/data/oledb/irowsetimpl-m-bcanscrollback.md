@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - IRowsetImpl::m_bCanScrollBack
 - ATL::IRowsetImpl::m_bCanScrollBack
@@ -26,11 +26,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 592d9ec5e0fdf74159592b9340f08ef6ee4ebe45
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c388092aaeb935dc8eaf9f76d7d64adb974310b3
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="irowsetimplmbcanscrollback"></a>IRowsetImpl::m_bCanScrollBack
 공급자는 커서 스크롤을 이전 버전과 가질 수 있는지 여부를 나타냅니다.  

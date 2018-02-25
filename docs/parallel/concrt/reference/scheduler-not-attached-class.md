@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - scheduler_not_attached
 - CONCRT/concurrency::scheduler_not_attached
 - CONCRT/concurrency::scheduler_not_attached::scheduler_not_attached
-dev_langs: C++
-helpviewer_keywords: scheduler_not_attached class
+dev_langs:
+- C++
+helpviewer_keywords:
+- scheduler_not_attached class
 ms.assetid: 26001970-b400-463b-be3d-8623359c399a
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1a7c76ed0c2b4291934914d3e6aa8d13b23580bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2671479d51c703dc4c0d0ab01b8036a130497ac6
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schedulernotattached-class"></a>scheduler_not_attached 클래스
 이 클래스는 스케줄러가 현재 컨텍스트에 연결되어야 하는 작업을 수행하는데 연결된 스케줄러가 없는 경우 발생하는 예외를 설명합니다.  
@@ -52,7 +56,7 @@ class scheduler_not_attached : public std::exception;
   
  **네임스페이스:** 동시성  
   
-##  <a name="ctor"></a>scheduler_not_attached 
+##  <a name="ctor"></a> scheduler_not_attached 
 
  `scheduler_not_attached` 개체를 생성합니다.  
   

@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: '#'
-dev_langs: C++
+ms.topic: reference
+f1_keywords:
+- '#'
+dev_langs:
+- C++
 helpviewer_keywords:
 - preprocessor, operators
 - arguments [C++], converting to strings
@@ -18,16 +21,17 @@ helpviewer_keywords:
 - macros [C++], converting parameters to strings
 - '# preprocessor operator'
 ms.assetid: 1175dd19-4538-43b3-ad97-a008ab80e7b1
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 320d3d2e5071d03a562e6673a8c13d28f4d0d114
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: df61a50b9522c6631ca0b5f32d5c438369632d01
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="stringizing-operator-"></a>문자열화 연산자 (#)
 숫자 기호 또는 "문자열 화" 연산자 (**#**) 매개 변수 정의 확장 없이 매크로 매개 변수를 문자열 리터럴로 변환 합니다. 인수를 사용하는 매크로에만 사용됩니다. 매크로 호출이 전달하는 실제 인수가 매크로 정의에서 형식 매개 변수 앞에 나오는 경우, 해당 인수는 따옴표로 묶이고 문자열 리터럴로 취급됩니다. 해당 문자열 리터럴은 매크로 정의에서 문자열화된 연산자와 형식적 매개 변수의 조합이 발생할 때마다 이를 대체합니다.  

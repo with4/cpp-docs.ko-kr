@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,11 +21,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ab099689af725c2b074f4caf4d2e9b13d16fbaf2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 663b26d77138af60d13c3caf24960730a324131e
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>마법사 생성 접근자의 필드 상태 데이터 멤버
 ATL OLE DB 소비자 마법사를 사용 하 여 소비자를 만드는 마법사를 열 지도에 지정 하는 각 필드에 대 한 사용자 레코드 클래스에에서 데이터 멤버를 생성 합니다. 각 데이터 멤버는 형식의 `DWORD` 각 필드에 해당 하는 상태 값을 포함 합니다.  

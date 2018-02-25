@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - sampler
 - AMP_GRAPHICS/sampler
@@ -17,18 +18,20 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::sampler::graphics::address_mode
 - AMP_GRAPHICS/concurrency::sampler::graphics::border_color
 - AMP_GRAPHICS/concurrency::sampler::graphics::filter_mode
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5a9f12f2670fce7ea1c28d68510ef6134a199dd7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 43aa9b68d2369ff2a0ade4bb4cb122b2481d3cd4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sampler-class"></a>sampler 클래스
 샘플러 클래스 텍스처 샘플링에 사용할 샘플링 구성 정보를 집계 합니다.  
@@ -77,7 +80,7 @@ class sampler;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="ctor"></a>샘플러 
+##  <a name="ctor"></a> 샘플러 
 
  인스턴스를 생성 된 [sampler 클래스](sampler-class.md)합니다.  
   
@@ -134,7 +137,7 @@ sampler(// [6] move constructor
  [6] 이동 생성자  
  `sampler` 새 이동할 개체가 `sampler` 인스턴스.  
   
-##  <a name="address_mode"></a>address_mode 
+##  <a name="address_mode"></a> address_mode 
 
  주소 모드를 가져옵니다는 `sampler` 개체입니다.  
   
@@ -142,7 +145,7 @@ sampler(// [6] move constructor
 __declspec(property(get= get_address_mode)) Concurrency::graphics::address_mode address_mode;  
 ```  
   
-##  <a name="border_color"></a>border_color 
+##  <a name="border_color"></a> border_color 
 
  테두리 색을 가져옵니다는 `sampler` 개체입니다.  
   
@@ -150,7 +153,7 @@ __declspec(property(get= get_address_mode)) Concurrency::graphics::address_mode 
 __declspec(property(get= get_border_color)) Concurrency::graphics::float_4 border_color;  
 ```  
   
-##  <a name="filter_mode"></a>filter_mode 
+##  <a name="filter_mode"></a> filter_mode 
 
  필터 모드를 가져옵니다는 `sampler` 개체입니다.  
   
@@ -158,7 +161,7 @@ __declspec(property(get= get_border_color)) Concurrency::graphics::float_4 borde
 __declspec(property(get= get_filter_mode)) Concurrency::graphics::filter_mode filter_mode;  
 ```  
   
-##  <a name="get_address_mode"></a>get_address_mode 
+##  <a name="get_address_mode"></a> get_address_mode 
 
  이 위해 구성 된 필터 모드가 반환 `sampler`합니다.  
   
@@ -169,7 +172,7 @@ Concurrency::graphics::address_mode get_address_mode() const __GPU;
 ### <a name="return-value"></a>반환 값  
  샘플러에 대 한 구성 된 주소 모드입니다.  
   
-##  <a name="get_border_color"></a>get_border_color 
+##  <a name="get_border_color"></a> get_border_color 
 
  이 위해 구성 된 테두리 색을 반환 `sampler`합니다.  
   
@@ -180,7 +183,7 @@ Concurrency::graphics::float_4 get_border_color() const restrict(amp, cpu);
 ### <a name="return-value"></a>반환 값  
  테두리 색을 포함 하는 float_4 합니다.  
   
-##  <a name="get_filter_mode"></a>get_filter_mode 
+##  <a name="get_filter_mode"></a> get_filter_mode 
 
  이 위해 구성 된 필터 모드가 반환 `sampler`합니다.  
   
@@ -191,7 +194,7 @@ Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
 ### <a name="return-value"></a>반환 값  
  필터 모드는 샘플러에 대 한 구성입니다.  
   
-##  <a name="operator_eq"></a>연산자 = 
+##  <a name="operator_eq"></a> 연산자 = 
 
  기존 샘플러에 다른 샘플러 개체의 값을 할당합니다.  
   

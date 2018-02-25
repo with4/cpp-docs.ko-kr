@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB consumer templates, table support
 - CCommand class, OLE DB consumer templates
@@ -18,18 +20,18 @@ helpviewer_keywords:
 - tables [C++], OLE DB Consumer Templates
 - OLE DB consumer templates, command support
 ms.assetid: 4bd3787b-6d26-40a9-be0c-083080537c12
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c42422c156a51cac161f0cc75dfd1947b92eb20e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b3500b5b39e4f6e483789cdc13a055b2fe45fa39
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="commands-and-tables"></a>명령 및 테이블
 명령 및 테이블에 액세스할 수 있도록 행 집합입니다. 즉, 행 집합을 열고 명령을 실행 하 고 열을 바인딩하십시오. [CCommand](../../data/oledb/ccommand-class.md) 및 [CTable](../../data/oledb/ctable-class.md) 클래스 각각 명령 및 테이블 개체를 인스턴스화합니다. 이러한 클래스에서 파생 [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) 다음 그림에 나와 있는 것 처럼 합니다.  

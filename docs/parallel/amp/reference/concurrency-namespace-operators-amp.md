@@ -5,19 +5,21 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: cb0682a246cc2cd2acd8f22228fd25c99755f1cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 308c09af9989aa998a7e1f7d748f52a2d8dca391
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrency-namespace-operators-amp"></a>동시성 네임 스페이스 연산자 (AMP)
 ||||  
@@ -50,7 +52,7 @@ bool operator== (
  비교할 튜플 중 하나입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `true`튜플을 동일 하면 그렇지 않으면 `false`합니다.  
+ `true` 튜플을 동일 하면 그렇지 않으면 `false`합니다.  
   
 ##  <a name="operator_neq"></a>  operator!=   
  지정된 된 인수가 같은지 여부를 결정 합니다.  
@@ -76,7 +78,7 @@ bool operator!= (
  비교할 튜플 중 하나입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `true`튜플을 같지 않으면 하는 경우 그렇지 않으면 `false`합니다.  
+ `true` 튜플을 같지 않으면 하는 경우 그렇지 않으면 `false`합니다.  
   
 ##  <a name="operator_add"></a>  operator+   
 
@@ -277,4 +279,4 @@ _Tuple_type<_Rank>   operator%(
  결과 첫 번째 지정 된 인수 모듈러스 두 번째는 지정 된 인수입니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [동시성 Namespace](concurrency-namespace-cpp-amp.md)
+ [Namespace 동시성 ](concurrency-namespace-cpp-amp.md)

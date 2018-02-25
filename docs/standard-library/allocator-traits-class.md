@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - memory/std::allocator_traits
 - memory/std::allocator_traits::propagate_on_container_move_assignment
@@ -26,9 +27,10 @@ f1_keywords:
 - memory/std::allocator_traits::destroy
 - memory/std::allocator_traits::max_size
 - memory/std::allocator_traits::select_on_container_copy_construction
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 612974b8-b5d4-4668-82fb-824bff6821d6
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -51,12 +53,13 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.workload: cplusplus
-ms.openlocfilehash: 7d96b4a03085a2a6486fa2f2fe0d7050323682c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d732b91a1c7a288cf22fea61e9565a794bb3380d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="allocatortraits-class"></a>allocator_traits 클래스
 템플릿 클래스는 *할당자 형식*을 보완하는 개체를 설명합니다. 할당자 형식은 할당된 저장소를 관리하는 데 사용되는 할당자 개체를 설명하는 형식입니다. 특히 할당자 형식 `Alloc`에 대해서는 할당자를 사용할 수 있는 컨테이너에 필요한 모든 정보를 확인하기 위해 `allocator_traits<Alloc>`를 사용할 수 있습니다. 자세한 내용은 기본 [allocator 클래스](../standard-library/allocator-class.md)를 참조하세요.  
@@ -101,7 +104,7 @@ class allocator_traits;
   
  **네임스페이스:** std  
   
-##  <a name="allocate"></a>allocator_traits:: allocate
+##  <a name="allocate"></a>  allocator_traits::allocate
  지정된 할당자 매개 변수를 사용하여 메모리를 할당하는 정적 메서드입니다.  
   
 ```cpp  
@@ -128,7 +131,7 @@ static pointer allocate(Alloc& al, size_type count,
   
  해당 식이 잘 구성되어 있는 경우 두 번째 메서드는 `al.allocate(count, hint)`를 반환하고, 아닌 경우 `al.allocate(count)`를 반환합니다.  
   
-##  <a name="construct"></a>allocator_traits:: construct
+##  <a name="construct"></a>  allocator_traits::construct
  지정된 할당자를 사용하여 개체를 생성하는 정적 메서드입니다.  
   
 ```cpp  
@@ -149,7 +152,7 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 ### <a name="remarks"></a>설명  
  해당 식이 잘 구성되어 있는 경우 정적 멤버 함수는 `al.construct(ptr, args...)`를 호출하고, 아닌 경우 `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`를 평가합니다.  
   
-##  <a name="deallocate"></a>allocator_traits:: deallocate
+##  <a name="deallocate"></a>  allocator_traits::deallocate
  지정된 할당자를 사용하여 지정된 수의 개체를 할당 해제하는 정적 메서드입니다.  
   
 ```cpp  
@@ -173,7 +176,7 @@ static void deallocate(Alloc al,
   
  이 메서드는 아무것도 throw하지 않습니다.  
   
-##  <a name="destroy"></a>allocator_traits:: destroy
+##  <a name="destroy"></a>  allocator_traits::destroy
  지정된 할당자를 사용하여 메모리를 할당 취소하지 않고 개체에서 소멸자를 호출하는 정적 메서드입니다.  
   
 ```cpp  
@@ -191,7 +194,7 @@ static void destroy(Alloc& al, Uty* ptr);
 ### <a name="remarks"></a>설명  
  해당 식이 잘 구성되어 있는 경우 이 메서드는 `al.destroy(ptr)`를 호출하고, 아닌 경우 `ptr->~Uty()`를 평가합니다.  
   
-##  <a name="max_size"></a>allocator_traits:: max_size
+##  <a name="max_size"></a>  allocator_traits::max_size
  지정된 할당자를 사용하여 할당 가능한 개체의 최대 수를 결정하는 정적 메서드입니다.  
   
 ```cpp  
@@ -205,7 +208,7 @@ static size_type max_size(const Alloc& al);
 ### <a name="remarks"></a>설명  
  해당 식이 잘 구성되어 있는 경우 이 메서드는 `al.max_size()`를 반환하고, 아닌 경우 `numeric_limits<size_type>::max()`를 반환합니다.  
   
-##  <a name="select_on_container_copy_construction"></a>allocator_traits:: select_on_container_copy_construction
+##  <a name="select_on_container_copy_construction"></a>  allocator_traits::select_on_container_copy_construction
  지정된 할당자에서 `select_on_container_copy_construction`을 호출하는 정적 메서드입니다.  
   
 ```cpp  

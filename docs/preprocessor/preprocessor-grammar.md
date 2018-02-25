@@ -4,78 +4,81 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - preprocessor
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 797d4bf4274a92ca4f265d01579698c0f9c6a4a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 02b3597b035e3ea4bfa1670aa405109f4c01a077
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="preprocessor-grammar"></a>전처리기 문법
-**#define***식별자* *토큰 문자열*선택    
+**#define**  *identifier* *token-string*opt  
   
- *#***정의***식별자*[**(** *식별자*opt**,** *...*  **,** *식별자*opt **)**] *토큰 문자열*선택    
+ *#* **정의***식별자*[**(** *식별자*opt**,** *...*  **,** *식별자*opt **)**] *토큰 문자열*선택    
   
- **정의 (***식별자* **)**   
+ **defined(**  *identifier* **)**  
   
- **정의 된***식별자*   
+ **defined**  *identifier*  
   
- `#include`**"***경로 사양***"**  
+ `#include` **"***path-spec***"**  
   
- `#include` **\<**  *경로 사양***>**  
+ `#include` **\<***path-spec***>**  
   
- **#line***자리 시퀀스***"** *filename* **"**선택      
+ **#line**  *digit-sequence*  **"** *filename* **"**opt  
   
- *#***undef***식별자*   
+ *#* **undef**  *identifier*  
   
- **#error***토큰 문자열*   
+ **#error**  *token-string*  
   
- **#pragma***토큰 문자열*   
+ **#pragma**  *token-string*  
   
- *조건부* :  
+ *conditional* :  
  *if 부분 elif 부품*opt*else 부분*opt*endif 줄*  
   
- *if 부분* :  
- *if linetext*  
+ *if-part* :  
+ *if-linetext*  
   
- *if 줄* :  
- **#if***상수 식*   
+ *if-line* :  
+ **#if**  *constant-expression*  
   
- **#ifdef***식별자*   
+ **#ifdef**  *identifier*  
   
- **#ifndef***식별자*   
+ **#ifndef**  *identifier*  
   
- *elif 부품* :  
+ *elif-parts* :  
  *elif 줄 텍스트*  
   
  *elif 부품 elif 줄 텍스트*  
   
- *elif 줄* :  
- **#elif***상수 식*   
+ *elif-line* :  
+ **#elif**  *constant-expression*  
   
- *else 부분* :  
- *else linetext*  
+ *else-part* :  
+ *else-linetext*  
   
- *다른 줄* :  
+ *else-line* :  
  `#else`  
   
- *endif 줄* :  
+ *endif-line* :  
  `#endif`  
   
- *자리 시퀀스* :  
+ *digit-sequence* :  
  *digit*  
   
  *digit-sequence digit*  
@@ -83,10 +86,10 @@ ms.lasthandoff: 12/21/2017
  *자리* : 중 하나  
  **0 1 2 3 4 5 6 7 8 9**  
   
- *토큰 문자열* :  
+ *token-string* :  
  토큰 문자열  
   
- *토큰* :  
+ *token* :  
  *keyword*  
   
  *identifier*  
@@ -100,10 +103,10 @@ ms.lasthandoff: 12/21/2017
  *filename* :  
  올바른 운영 체제 파일 이름  
   
- *경로-사양* :  
+ *path-spec* :  
  Legal file path  
   
- *텍스트* :  
+ *text* :  
  임의의 텍스트 시퀀스  
   
 > [!NOTE]

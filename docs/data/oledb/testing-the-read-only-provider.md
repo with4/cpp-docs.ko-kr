@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,11 +23,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fd224163f11a4ebafde8faf6b0c3156d89de1781
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 49f86150afe9116909a137e97a0e04d5a7d54bac
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="testing-the-read-only-provider"></a>읽기 전용 공급자 테스트
 공급자를 테스트 하려면 소비자가 있어야 합니다. 공급자와 소비자 수와 일치 하는 경우 도움이 됩니다. OLE DB 소비자 템플릿은 OLE DB에 대 한 씬 래퍼 있으며 공급자 COM 개체와 일치 합니다. 소스는 소비자 템플릿과 함께 제공 되, 때문에 이러한 공급자를 디버깅할 쉽습니다. 소비자 템플릿은 소비자 응용 프로그램을 개발 하는 매우 작고 빠른 방법입니다.  

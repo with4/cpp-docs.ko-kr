@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::set_yxzw
 - amp_short_vectors/Concurrency::graphics::unorm_4::gbra
@@ -273,18 +274,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::wyx
 - amp_short_vectors/Concurrency::graphics::unorm_4::rb
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 204e33b14c48dee7ad52af65fa55c650b74de5d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3e8c22389a739f5beafe1ff1a38799c9d1848ba9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="unorm4-class"></a>unorm_4 클래스
 네 개의 서명 되지 않은 일반 숫자의 short 벡터를 나타냅니다.  
@@ -455,19 +458,19 @@ class unorm_4;
 |이름|설명|  
 |----------|-----------------|  
 |unorm_4::operator-||  
-|unorm_4::operator-||  
-|unorm_4::operator * =||  
-|unorm_4::operator / =||  
-|unorm_4::operator + +||  
-|unorm_4::operator + =||  
-|unorm_4::operator =||  
-|-= unorm_4::operator||  
+|unorm_4::operator--||  
+|unorm_4::operator*=||  
+|unorm_4::operator/=||  
+|unorm_4::operator++||  
+|unorm_4::operator+=||  
+|unorm_4::operator=||  
+|unorm_4::operator-=||  
   
 ### <a name="public-constants"></a>공용 상수  
   
 |이름|설명|  
 |----------|-----------------|  
-|[상수 크기](#unorm_4__size)||  
+|[size Constant](#unorm_4__size)||  
   
 ### <a name="public-data-members"></a>공용 데이터 멤버  
   
@@ -610,7 +613,7 @@ class unorm_4;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="ctor"></a>unorm_4 
+##  <a name="ctor"></a> unorm_4 
 
  기본 생성자, 0 인 모든 요소를 초기화 합니다.  
   
@@ -694,7 +697,7 @@ explicit inline unorm_4(
  `_Other`  
  초기화 하는 데 사용 되는 개체입니다.  
   
-##  <a name="unorm_4__size"></a>크기 
+##  <a name="unorm_4__size"></a> 크기 
 
 ```  
 static const int size = 4;  

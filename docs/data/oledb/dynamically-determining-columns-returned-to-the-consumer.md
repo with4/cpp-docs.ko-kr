@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,11 +21,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed7ad9ab7b28758419c2b7c848852678f69bc3e2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: da3d6e700ef69bda084a6bc5c010957c7fddd0c4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>소비자에게 반환되는 열을 동적으로 결정
 PROVIDER_COLUMN_ENTRY 매크로 정상적으로 처리는 **icolumnsinfo:: Getcolumnsinfo** 호출 합니다. 그러나 소비자는 책갈피를 사용 하도록 선택할 수도, 때문에 공급자는 소비자는 책갈피를 요청 하는 여부에 따라 반환 되는 열을 변경 하려면 수 있어야 합니다.  

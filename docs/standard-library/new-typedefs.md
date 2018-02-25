@@ -5,16 +5,17 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: new/std::new_handler
+ms.topic: reference
+f1_keywords:
+- new/std::new_handler
 ms.assetid: aef01de1-06b5-4b6c-aebc-2c9f423d7e47
-caps.latest.revision: "7"
+caps.latest.revision: 
 manager: ghogen
-ms.openlocfilehash: e23ea06002dc840997a0e7202f581cd81ef407c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: cbcc542095ad8b75bbe632f741f43206e436b5e4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltnewgt-typedefs"></a>&lt;new&gt; 형식 정의
 ||  
@@ -31,7 +32,7 @@ typedef void (*new_handler)();
 ### <a name="remarks"></a>설명  
  이 유형의 처리기 함수는 추가 저장소 요청을 충족할 수 없을 때 **operatornew** 또는 `operator new[]`에 의해 호출됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   `new_handler`를 반환 값으로 사용하는 방법의 예제는 [set_new_handler](../standard-library/new-functions.md#set_new_handler)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

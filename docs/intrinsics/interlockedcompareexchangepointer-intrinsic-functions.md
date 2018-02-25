@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _InterlockedCompareExchangePointer_HLERelease
 - _InterlockedCompareExchangePointer_rel
@@ -18,7 +19,8 @@ f1_keywords:
 - _InterlockedCompareExchangePointer_HLEAcquire
 - _InterlockedCompareExchangePointer_acq
 - _InterlockedCompareExchangePointer_nf
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - InterlockedCompareExchangePointer_acq intrinsic
 - _InterlockedCompareExchangePointer_rel intrinsic
@@ -31,16 +33,17 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9228422886c211bb6a7c153abdfd4d48ecca7f19
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a75c25caef43a0f1908cfe326b5b194480c3190c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer Intrinsic Functions
 **Microsoft 전용**  
@@ -104,14 +107,14 @@ long _InterlockedCompareExchangePointer_rel (
   
 |내장 함수|아키텍처|Header|  
 |---------------|------------------|------------|  
-|`_InterlockedCompareExchangePointer`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<. h >|  
-|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h >|  
-|`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<. h >|  
+|`_InterlockedCompareExchangePointer`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h>|  
+|`_InterlockedCompareExchangePointer_acq`, `_InterlockedCompareExchangePointer_nf`, `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|  
+|`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h>|  
   
 ## <a name="remarks"></a>설명  
  `_InterlockedCompareExchangePointer`는 `Destination` 주소와 `Comparand` 주소의 원자성 비교를 수행합니다. `Destination` 주소가 `Comparand` 주소와 같으면 `Exchange`으로 지정된 주소에 `Destination` 주소가 저장됩니다. 그렇지 않으면 작업이 수행되지 않습니다.  
   
- `_InterlockedCompareExchangePointer`Win32에 대 한 컴파일러 내장 지원을 제공 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [_InterlockedCompareExchangePointer](http://msdn.microsoft.com/library/ff547863.aspx) 함수입니다.  
+ `_InterlockedCompareExchangePointer` Win32에 대 한 컴파일러 내장 지원을 제공 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [_InterlockedCompareExchangePointer](http://msdn.microsoft.com/library/ff547863.aspx) 함수입니다.  
   
  사용 하는 방법의 예제를 보려면 `_InterlockedCompareExchangePointer`, 참조 [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)합니다.  
   

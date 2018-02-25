@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - translation phases
 - preprocessor, translation
@@ -16,16 +18,17 @@ helpviewer_keywords:
 - file translation [C++], compiler process
 - files [C++], translation
 ms.assetid: a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 22d73156d4f03a32bd9aa382dd0cc610f8a5f03f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 21cf6efeba83758bed8abe45aba36f025ace16f4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="phases-of-translation"></a>변환 단계
 C 및 C++ 프로그램은 각각 일부 프로그램의 텍스트를 포함하는 하나 이상의 소스 파일로 구성됩니다. `#include`와 같은 조건부 컴파일에서 제거된 코드 섹션을 제외하고 include 파일(`#if` 전처리기 지시문을 사용하여 포함된 파일)을 포함하는 소스 파일을 "변환 단위"라고 합니다.  

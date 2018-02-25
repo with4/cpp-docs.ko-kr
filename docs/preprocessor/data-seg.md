@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - data_seg_CPP
 - vc-pragma.data_seg
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - data_seg pragma
 - pragmas, data_seg
 ms.assetid: 65c66466-4c98-494f-93af-106beb4caf78
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: dbc581e1237b25404b611e24bf8af46af4a166b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c23598ba98d35e2a32832437111ebf9f852e1259
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="dataseg"></a>data_seg
 초기화된 변수가 .obj 파일에 저장되는 데이터 세그먼트를 지정합니다.  
@@ -54,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
  *식별자* 여러 레코드는 단일으로 팝 될 수 있습니다 **pop** 명령입니다.  
   
- *"세그먼트 이름"*(선택 사항)  
+ *"segment-name"*(optional)  
  세그먼트의 이름입니다. 와 함께 사용할 경우 **pop**, 스택을 팝 되 고 *세그먼트 이름* 활성 세그먼트 이름이 됩니다.  
   
  *"세그먼트 클래스"* (선택 사항)  

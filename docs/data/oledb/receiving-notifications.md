@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,11 +26,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 29e82458f56c9b1f321f7a82afeb6f041be27854
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 50911440acbc7514b091a439d42bf73ee60353f9
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="receiving-notifications"></a>알림 수신
 OLE DB 이벤트가 발생할 때 알림을 수신 하기 위한 인터페이스를 제공 합니다. 에 설명 되어 [OLE DB 개체 알림](https://msdn.microsoft.com/en-us/library/ms725406.aspx) 에 *OLE DB Programmer's Reference*합니다. 이러한 이벤트의 설정은 표준 COM 연결 지점 메커니즘을 사용 합니다. ATL 개체를 통해 이벤트를 검색 하는 예를 들어 `IRowsetNotify` 구현 하는 `IRowsetNotify` 인터페이스를 추가 하 여 `IRowsetNotify` 파생 된 클래스 목록 및를 통해 노출 하는 **COM_INTERFACE_ENTRY** 매크로입니다.  

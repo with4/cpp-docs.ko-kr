@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,11 +20,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a61de0a4621f6f9387da23093f9f450749129ac3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ffc6a92f8fc4e4223e83c3270e28ae68ddc1829a
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>마법사를 사용하지 않고 소비자 만들기
 다음 예에서는 기존 ATL 프로젝트에 OLE DB 소비자 지원을 추가 가정 합니다. MFC 응용 프로그램에 OLE DB 소비자 지원을 추가 하려는 경우 모든 지원이 필요한 만들고 응용 프로그램을 실행 하는 데 필요한 MFC 루틴을 호출 하는 MFC 응용 프로그램 마법사를 실행 해야 합니다.  

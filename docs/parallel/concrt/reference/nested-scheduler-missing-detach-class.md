@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - nested_scheduler_missing_detach
 - CONCRT/concurrency::nested_scheduler_missing_detach
 - CONCRT/concurrency::nested_scheduler_missing_detach::nested_scheduler_missing_detach
-dev_langs: C++
-helpviewer_keywords: nested_scheduler_missing_detach class
+dev_langs:
+- C++
+helpviewer_keywords:
+- nested_scheduler_missing_detach class
 ms.assetid: 65d3f277-6d43-4160-97ef-caf8b26c1641
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5a499467962c8393cc8fe64136fea422a85ef8aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b0fdcc96de9e691d71a2ceaf36c87f843e5b4276
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="nestedschedulermissingdetach-class"></a>nested_scheduler_missing_detach 클래스
 이 클래스는 동시성 런타임에서 `Scheduler` 개체의 `Attach` 메서드를 사용하여 두 번째 스케줄러에 연결된 컨텍스트에 대해 `CurrentScheduler::Detach` 메서드를 호출하지 않은 것을 감지하는 경우 발생하는 예외를 설명합니다.  
@@ -55,7 +59,7 @@ class nested_scheduler_missing_detach : public std::exception;
   
  **네임스페이스:** 동시성  
   
-##  <a name="ctor"></a>nested_scheduler_missing_detach 
+##  <a name="ctor"></a> nested_scheduler_missing_detach 
 
  `nested_scheduler_missing_detach` 개체를 생성합니다.  
   

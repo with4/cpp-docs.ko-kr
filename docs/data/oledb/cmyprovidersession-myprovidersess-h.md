@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - cmyprovidersession
 - myprovidersess.h
@@ -24,11 +24,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4ffb1a0ca8e9a2cd5b90d33c21423beb0969a4f4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c244d77a0e299f4a09de985e11c7537a9fb7e5ff
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cmyprovidersession-myprovidersessh"></a>CMyProviderSession(MyProviderSess.H)
 MyProviderSess.H 선언 및 OLE DB 세션 개체에 대 한 구현을 포함합니다. 데이터 원본 개체 세션 개체를 만들고 소비자 및 공급자 간의 대화를 나타냅니다. 여러 개의 동시 세션 하나의 데이터 원본에 대 한 열 수 있습니다. 에 대 한 상속 목록 `CMyProviderSession` 따릅니다.  

@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL.AtlTraceErrorRecords
 - ATL::AtlTraceErrorRecords
@@ -24,11 +24,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 95b743d9785d083b670be28e274b6f46acdea2ce
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 024a4331b71b3414aa7d83f27ecaca4e5d2f11de
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="atltraceerrorrecords"></a>AtlTraceErrorRecords
 오류가 반환 되 면 OLE DB 오류 레코드 덤프 장치 정보를 덤프 합니다.  

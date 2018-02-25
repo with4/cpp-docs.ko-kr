@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - pack_CPP
 - vc-pragma.pack
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f4a6dc351d0184d43a1cf79f1cec9e9bae33aecf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 15625977ab5dd0c20238f52e84f4ecea443d01ed
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="pack"></a>pack
 구조체, 공용 구조체 및 클래스 멤버에 대한 압축 맞춤을 지정합니다.  
@@ -56,7 +59,7 @@ ms.lasthandoff: 12/21/2017
  `n`(선택 사항)  
  압축에 사용할 값(바이트)을 지정합니다. 하는 경우 컴파일러 옵션 [/Zp](../build/reference/zp-struct-member-alignment.md) 모듈에 대 한 기본값을 설정 하지 않으면 `n` 8입니다. 유효한 값은 1, 2, 4, 8 및 16입니다. 멤버의 맞춤은 `n`의 배수나 멤버 크기의 배수 중 작은 것의 경계에 있습니다.  
   
- `#pragma pack(pop, identifier, n)`정의 되지 않습니다.  
+ `#pragma pack(pop, identifier, n)` 정의 되지 않습니다.  
   
  맞춤을 수정하는 방법에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   

@@ -5,7 +5,7 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - utility/std::exchange
 - utility/std::forward
@@ -13,7 +13,7 @@ f1_keywords:
 - utility/std::move
 - utility/std::swap
 ms.assetid: b1df38cd-3a59-4098-9c81-83342eb719a4
-caps.latest.revision: "7"
+caps.latest.revision: 
 manager: ghogen
 helpviewer_keywords:
 - std::exchange [C++]
@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: d2b444c2de41651ac74047717ed54a7059866f86
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: a442f3a4b03a62363d465107b7e2ae5f3e975249
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ltutilitygt-functions"></a>&lt;utility&gt; 함수
 ||||  
@@ -51,7 +51,7 @@ T exchange(T& val, Other&& new_val)
 ### <a name="remarks"></a>설명  
  복합 형식에서 `exchange`는 이동 생성자를 사용할 수 있는 경우 이전 값의 복사를 방지하고, 임시 개체이거나 이동된 경우 새 값의 복사를 방지하며, 사용 가능한 변환 대입 연산자를 통해 모든 형식을 새 값으로 받아들입니다. exchange 함수는 왼쪽 인수가 오른쪽 인수로 이동되거나 복사되지 않는다는 점에서 [std::swap](../standard-library/algorithm-functions.md#swap)과 다릅니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   다음 예제에서는 `exchange`을 사용하는 방법을 보여 줍니다. 실제로 `exchange`는 복사하는 데 비용이 많이 드는 큰 개체에서 가장 유용합니다.  
   
 ```  
@@ -174,7 +174,7 @@ constexpr T2&& get(pair<T1, T2>&& Pr) noexcept;
   
  인덱스 매개 변수가 없는 오버로드에서는 반환할 요소가 형식 인수로 추론됩니다. `get<T>(Tuple)` 을 호출할 때 `pr` 에 T 형식의 요소가 두 개 이상 있거나 없는 경우 컴파일러 오류가 생성됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   
 ```cpp  
 #include <utility>  
@@ -247,7 +247,7 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
   
  `make_pair` 도우미 함수도 입력 매개 변수로 한 쌍이 필요한 함수에 두 값을 전달할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   도우미 함수 `make_pair`를 사용하여 쌍을 선언하고 초기화하는 방법을 알아보려면 [pair 구조체](../standard-library/pair-structure.md)를 참조하세요.  
   
 ##  <a name="move"></a>  move  

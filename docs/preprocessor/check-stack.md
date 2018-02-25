@@ -4,28 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vc-pragma.check_stack
 - check_stack_CPP
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - check_stack pragma
 - pragmas, check_stack
 - pragmas, check_stack usage table
 ms.assetid: f18e20cc-9abb-48b7-ad62-8d384875b996
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: e48952788e7bbef86ade1177ce243da503ec8b9b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 70f88d1eabb58f384d754803674b35f0bd9dbeda
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="checkstack"></a>check_stack
 경우 스택 프로브를 해제 하려면 컴파일러에 지시 **오프** (또는  **-** )를 지정 하는 경우 스택 프로브를 설정 하려면 또는 **에** (또는  **+** ) 지정 합니다.  
@@ -50,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 |**#pragma check_stack ()** 또는<br /><br /> **#pragma check_stack**|예|뒤에 오는 함수에 대한 스택 검사 해제|  
 |**#pragma check_stack ()** 또는<br /><br /> **#pragma check_stack**|아니요|뒤에 오는 함수에 대한 스택 검사 설정|  
 |**#pragma check_stack(on)**<br /><br /> 또는 **#pragma check_stack +**|예 또는 아니요|뒤에 오는 함수에 대한 스택 검사 설정|  
-|**#pragma check_stack(off)**<br /><br /> 또는 **#pragma check_stack-**|예 또는 아니요|뒤에 오는 함수에 대한 스택 검사 해제|  
+|**#pragma check_stack(off)**<br /><br /> or **#pragma check_stack -**|예 또는 아니요|뒤에 오는 함수에 대한 스택 검사 해제|  
   
 ## <a name="see-also"></a>참고 항목  
  [Pragma 지시문 및 __Pragma 키워드](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

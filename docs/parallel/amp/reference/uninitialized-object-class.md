@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - uninitialized_object
 - AMPRT/uninitialized_object
 - AMPRT/Concurrency::uninitialized_object
-dev_langs: C++
-helpviewer_keywords: uninitialized_object class
+dev_langs:
+- C++
+helpviewer_keywords:
+- uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 75d3050c128b067833352ea82aee38bcd2a7019d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4a6c602ffa6cb444ce2245a655d47ffc9b548276
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="uninitializedobject-class"></a>uninitialized_object 클래스
 초기화 되지 않은 개체를 사용 하는 경우 throw 되는 예외입니다.  
@@ -54,7 +58,7 @@ class uninitialized_object : public runtime_exception;
  **헤더:** amprt.h  
   
  **네임스페이스:** 동시성  
-## <a name="uninitialized_object__ctor"></a>unsupported_feature 
+## <a name="uninitialized_object__ctor"></a> unsupported_feature 
 
 Unsupported_feature 예외의 새 인스턴스를 생성합니다.  
   

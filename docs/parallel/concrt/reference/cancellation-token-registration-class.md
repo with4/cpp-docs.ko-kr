@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - cancellation_token_registration
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_registration
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_registration::cancellation_token_registration
-dev_langs: C++
-helpviewer_keywords: cancellation_token_registration class
+dev_langs:
+- C++
+helpviewer_keywords:
+- cancellation_token_registration class
 ms.assetid: 823d63f4-7233-4d65-8976-6152ccf12d0e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 70ab8114860a77582a6c9f6276b74122f9505c26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b7c609c3a76e94029bd9004cf6322bae4f08d27b
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cancellationtokenregistration-class"></a>cancellation_token_registration 클래스
 `cancellation_token_registration` 클래스는 `cancellation_token`의 콜백 알림을 나타냅니다. 취소 발생 시 알림을 받는 데 `register`의 `cancellation_token` 메서드를 사용하면 `cancellation_token_registration` 메서드 사용을 통해 더 이상 만들어지지 않는 특정 콜백을 호출자가 요청할 수 있도록 `deregister` 개체가 콜백에 대한 핸들로 반환됩니다.  
@@ -41,7 +45,7 @@ class cancellation_token_registration;
 |이름|설명|  
 |----------|-----------------|  
 |[cancellation_token_registration](#ctor)||  
-|[~ cancellation_token_registration 소멸자](#dtor)||  
+|[~cancellation_token_registration Destructor](#dtor)||  
   
 ### <a name="public-operators"></a>Public 연산자  
   
@@ -59,13 +63,13 @@ class cancellation_token_registration;
   
  **네임스페이스:** 동시성  
   
-##  <a name="dtor"></a>~ cancellation_token_registration 
+##  <a name="dtor"></a> ~cancellation_token_registration 
 
 ```
 ~cancellation_token_registration();
 ```  
   
-##  <a name="ctor"></a>cancellation_token_registration 
+##  <a name="ctor"></a> cancellation_token_registration 
 
 ```
 cancellation_token_registration();
@@ -78,7 +82,7 @@ cancellation_token_registration(cancellation_token_registration&& _Src);
 ### <a name="parameters"></a>매개 변수  
  `_Src`  
   
-##  <a name="operator_neq"></a>operator! = 
+##  <a name="operator_neq"></a> operator! = 
 
 ```
 bool operator!= (const cancellation_token_registration& _Rhs) const;
@@ -89,7 +93,7 @@ bool operator!= (const cancellation_token_registration& _Rhs) const;
   
 ### <a name="return-value"></a>반환 값  
   
-##  <a name="operator_eq"></a>연산자 = 
+##  <a name="operator_eq"></a> 연산자 = 
 
 ```
 cancellation_token_registration& operator= (const cancellation_token_registration& _Src);
@@ -102,7 +106,7 @@ cancellation_token_registration& operator= (cancellation_token_registration&& _S
   
 ### <a name="return-value"></a>반환 값  
   
-##  <a name="operator_eq_eq"></a>연산자 = = 
+##  <a name="operator_eq_eq"></a> operator== 
 
 ```
 bool operator== (const cancellation_token_registration& _Rhs) const;

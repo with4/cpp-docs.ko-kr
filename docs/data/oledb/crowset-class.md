@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL.CRowset<TAccessor>
 - CRowset
@@ -26,11 +26,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ef4ec2851365d9fbabab6819a0883b6a9b660f28
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0774c82715ab2fd85098147ebe1697daf7d2d2fa
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="crowset-class"></a>CRowset 클래스
 OLE DB 행 집합 개체와 관련 된 몇 가지 캡슐화 인터페이스를 만들고 행 집합 데이터 조작 메서드를 제공 합니다.  

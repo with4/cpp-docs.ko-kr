@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - rowsets, OLE DB object model
 - OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 533142115a4811c0f03f585b995b83383a33d831
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2cd8fb90b7418b45f6bc011e8d4d0db6e04c08df
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="ole-db-object-model"></a>OLE DB 개체 모델
 OLE DB 개체 모델에는 다음 개체 또는 구성 요소 구성 됩니다. 처음 4 개의 개체나 나열 된 구성 요소 (데이터 원본, 세션, 명령 및 행 집합) 데이터 원본에 연결 하 고 볼 수 있도록 합니다. 접근자 이하의 나머지 표시 되 면 데이터 작업과 관련이 있습니다.  
@@ -55,7 +57,7 @@ OLE DB 개체 모델에는 다음 개체 또는 구성 요소 구성 됩니다. 
 ## <a name="accessors"></a>접근자  
  OLE DB만 접근자의 개념을 사용합니다. 접근자를 소비자에 데이터가 저장 되는 방법을 설명 합니다. 행 집합 필드 (열)와 소비자에서 선언 하는 데이터 멤버 (열 지도)는 바인딩 집합을 포함 합니다.  
   
-##  <a name="vcconoledbcomponents_transactions"></a>트랜잭션  
+##  <a name="vcconoledbcomponents_transactions"></a> 트랜잭션  
  트랜잭션 개체 커밋하거나 최하위 수준이 아닌 수준에서 중첩 된 트랜잭션을 중단할 때 사용 됩니다. 트랜잭션은은 ACID 테스트에 의해 정의 나눌 수 없는 작업 단위입니다. ACID를 나타냅니다.  
   
 -   원자성: 더 작은 작업 단위로 나눌 수 없습니다.  

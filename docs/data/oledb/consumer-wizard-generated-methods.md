@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -30,11 +30,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1d41ae6c6ca32819faa498d5a9b37ce4b4008a05
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b9ee0a1a044a7e1f87b6da4bec9418c42e6b6ba1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="consumer-wizard-generated-methods"></a>소비자 마법사 생성 메서드
 ATL OLE DB 소비자 마법사 및 MFC 응용 프로그램 마법사는 알고 있어야 하는 특정 기능을 생성 합니다. 참고는 몇 가지 방법을 다르게 구현 됩니다 특성 사용된 프로젝트에 있으므로 더 몇 가지 주의 해야 합니다. 각 사례는 아래에 자세히 설명 합니다. 삽입된 코드를 보는 방법에 대한 자세한 내용은 [삽입된 코드 디버그](/visualstudio/debugger/how-to-debug-injected-code)를 참조하세요.  

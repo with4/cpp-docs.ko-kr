@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
-helpviewer_keywords: OLE DB provider templates, unsupported data types
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB provider templates, unsupported data types
 ms.assetid: f495e50f-530a-4fab-ab54-e0c359785845
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 438d75ad3a36c82c4f9389d4c9b65d677603f6c7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2fd46e57397eba0e8e732bba586df384951a86dc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="converting-data-not-supported-by-the-provider"></a>공급자가 지원하지 않는 데이터 변환
 OLE DB 공급자 템플릿 코드에 대 한 소비자는 공급자에서 지원 되지 않는 데이터 형식을 요청 하면 `IRowsetImpl::GetData` Msdadc.dll 데이터 형식을 변환을 호출 합니다.  

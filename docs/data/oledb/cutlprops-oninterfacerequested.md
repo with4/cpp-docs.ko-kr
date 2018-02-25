@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - CUtlProps
 dev_langs:
@@ -22,11 +22,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: eb15d2574ba60dcec9c0638ca10a465db5813709
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cdac2b6069e5f72534a304794b65723bef8ceb47
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cutlpropsoninterfacerequested"></a>CUtlProps::OnInterfaceRequested
 소비자 메서드를 호출할 때 개체 중 하나에서 생성 인터페이스는 선택적 인터페이스에 대 한 요청을 처리 합니다.  

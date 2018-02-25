@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: xlocmon/std::moneypunct_byname
-dev_langs: C++
-helpviewer_keywords: moneypunct_byname class
+ms.topic: reference
+f1_keywords:
+- xlocmon/std::moneypunct_byname
+dev_langs:
+- C++
+helpviewer_keywords:
+- moneypunct_byname class
 ms.assetid: e8a544d2-6aee-420d-b513-deb385c9b416
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fd5c4774da1ea1c0afc25e1538351dad4decbe6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d50e841af6ca158e431d29bf6a139fd9534748bd
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="moneypunctbyname-class"></a>moneypunct_byname 클래스
 지정된 로캘의 `moneypunct` 패싯으로 사용하여 통화 입력 필드 또는 통화 출력 필드의 서식을 지정할 수 있는 개체에 대해 설명하는 파생된 템플릿 클래스입니다.  

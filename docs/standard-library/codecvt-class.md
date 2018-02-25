@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - xlocale/std::codecvt
 - xlocale/std::codecvt::extern_type
@@ -26,7 +27,8 @@ f1_keywords:
 - xlocale/std::codecvt::max_length
 - xlocale/std::codecvt::out
 - xlocale/std::codecvt::unshift
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - std::codecvt [C++]
 - std::codecvt [C++], extern_type
@@ -47,16 +49,17 @@ helpviewer_keywords:
 - std::codecvt [C++], out
 - std::codecvt [C++], unshift
 ms.assetid: 37d3efa1-2b7f-42b6-b04f-7a972c8c2c86
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 36631c1a23c90b875d2a2fba8a1cec23b97c2400
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b456472fc28b473da29169acb899a1a8a142c095
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="codecvt-class"></a>codecvt 클래스
 로캘 패싯으로 사용할 수 있는 개체를 설명하는 템플릿 클래스입니다. 프로그램 내의 문자를 인코딩하는 데 사용하는 값의 시퀀스와 프로그램 밖의 문자를 인코딩하는 데 사용하는 값 사이의 변환을 제어할 수 있습니다.  
@@ -211,7 +214,7 @@ explicit codecvt(size_t _Refs = 0);
   
 -   1: 개체의 수명을 수동으로 관리해야 합니다.  
   
--   \>1: 이러한 값은 정의 되지 않습니다.  
+-   \> 1: 이러한 값은 정의 되지 않습니다.  
   
  생성자를 초기화 합니다. 해당 `locale::facet` 기준 개체와 **로캘::**[패싯](../standard-library/locale-class.md#facet_class)(`_Refs`).  
   

@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - AMP/index
 - AMP/Concurrency::index::index
 - AMP/Concurrency::index::rank
-dev_langs: C++
-helpviewer_keywords: index structure
+dev_langs:
+- C++
+helpviewer_keywords:
+- index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 04a10524a46fe7351b881e436d7aaf422b2a9acb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d227876285de1ea0784ac28b7a772ef35b6a9c49
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="index-class"></a>index 클래스
 정의 *N*-차원 인덱스 pographics cpp amp.md 합니다.  
@@ -52,10 +56,10 @@ class index;
 |이름|설명|  
 |----------|-----------------|  
 |[operator--](#operator--)|감소의 각 요소는 `index` 개체입니다.|  
-|[operator(mod) =](#operator_mod_eq)|모듈러스 (나머지)의 각 요소에 계산의 `index` 해당 요소는를 숫자로 나눌 때 개체입니다.|  
+|[operator(mod)=](#operator_mod_eq)|모듈러스 (나머지)의 각 요소에 계산의 `index` 해당 요소는를 숫자로 나눌 때 개체입니다.|  
 |[operator*=](#operator_star_eq)|각 요소를 곱합니다는 `index` 번호로 개체입니다.|  
 |[operator/=](#operator_div_eq)|분할의 각 요소는 `index` 번호로 개체입니다.|  
-|[index:: operator\[\]](#operator_at)|지정된 된 인덱스에 있는 요소를 반환 합니다.|  
+|[index::operator\[\]](#operator_at)|지정된 된 인덱스에 있는 요소를 반환 합니다.|  
 |[operator++](#operator_add_add)|각 요소를 증가 `index` 개체입니다.|  
 |[operator+=](#operator_add_eq)|지정된 된 수의 각 요소에 추가 `index` 개체입니다.|  
 |[operator=](#operator_eq)|지정 된의 내용을 복사 `index` 을 여기에 개체입니다.|  
@@ -80,7 +84,7 @@ class index;
  **네임스페이스:** 동시성  
 
 
-## <a name="index_ctor"></a>인덱스 생성자
+## <a name="index_ctor">인덱스 생성자</a>
 Index 클래스의 새 인스턴스를 초기화합니다.
 
 ```  
@@ -125,7 +129,7 @@ _I2
 _Other  
 새 인덱스 개체의 기반이 되는 인덱스 개체입니다.  
 
-## <a name="operator--"></a>operator-
+## <a name="operator--"></a>  operator--
 감소 index 개체의 각 요소입니다.  
 ```  
 index<_Rank>& operator--() restrict(amp,cpu);  
@@ -137,7 +141,7 @@ index operator--(
 ### <a name="return-values"></a>반환 값
 Index 개체 전위 연산자에 대 한 (*이). 접미사 연산자는 새 인덱스 개체입니다.
 
-## <a name="operator_mod_eq"></a>operator(mod) =   
+## <a name="operator_mod_eq"></a>  operator(mod)=   
 해당 요소가 지정된 된 수로 나누어 때 index 개체에 있는 각 요소의 모듈러스 (나머지)를 계산 합니다.
 
 ```  
@@ -149,7 +153,7 @@ index<_Rank>& operator%=(
 _Rhs를 모듈러스를 찾기 위해 나눌 숫자입니다.
 Index 개체 값을 반환 합니다.
 
-## <a name="operator_star_eq"></a>연산자 * =   
+## <a name="operator_star_eq"></a>  operator*=   
 지정 된 수 index 개체의 각 요소를 곱합니다.
 ```
 index<_Rank>& operator*=(
@@ -160,7 +164,7 @@ index<_Rank>& operator*=(
 ### <a name="parameters"></a>매개 변수
 _Rhs 곱할 수입니다.
 
-## <a name="operator_div_eq"></a>operator / = 
+## <a name="operator_div_eq"></a>  operator/= 
 지정된 된 숫자 인덱스 개체의 각 요소를 나눕니다.
 
 ```
@@ -200,7 +204,7 @@ std::cout << idx[1] << "\n";
 std::cout << idx[2] << "\n";
 ```
 
-## <a name="operator_add_add"></a>operator + +   
+## <a name="operator_add_add"></a>  operator++   
 Index 개체의 각 요소를 증가 시킵니다.
 ```  
 index<_Rank>& operator++() restrict(amp,cpu);
@@ -212,7 +216,7 @@ index<_Rank> operator++(
 ### <a name="return-value"></a>반환 값
 Index 개체 전위 연산자에 대 한 (*이). 접미사 연산자는 새 인덱스 개체입니다.
 
-## <a name="operator_add_eq"></a>+ = 연산자   
+## <a name="operator_add_eq"></a>  operator+=   
 Index 개체의 각 요소에 지정된 된 숫자를 추가합니다.
 ```  
 index<_Rank>& operator+=(
@@ -242,7 +246,7 @@ _Other에서 복사할 인덱스 개체입니다.
 ### <a name="return-value"></a>반환 값
 이 인덱스 개체에 대 한 참조입니다.
 
-## <a name="operator_-_eq"></a>-= 연산자
+## <a name="operator_-_eq"></a>  operator-=
 Index 개체의 각 요소에서 지정된 된 숫자를 뺍니다.
 ```  
 index<_Rank>& operator-=(
@@ -259,7 +263,7 @@ _Rhs 뺄 수 있습니다.
 ### <a name="return-value"></a>반환 값
 인덱스 개체입니다.   
 
-## <a name="rank"></a>순위  
+## <a name="rank"></a>  Rank  
   Index 개체의 차수를 가져옵니다.
 ```
 static const int rank = _Rank;

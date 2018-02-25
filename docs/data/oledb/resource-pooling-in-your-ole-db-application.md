@@ -4,28 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - OLE DB services [OLE DB], resource pooling
 - resource pooling [OLE DB], services
 - OLE DB, resource pooling
 - OLE DB providers, resource pooling
 ms.assetid: 2ead1bcf-bbd4-43ea-a307-bb694b992fc1
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9d094b3545978aa042ba5a6d308a09369b238e4c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 84b8814974850238ccf0be7411821d6e2cce8880
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="resource-pooling-in-your-ole-db-application"></a>OLE DB 응용 프로그램의 리소스 풀링
 응용 프로그램의 풀링 활용, OLE DB 서비스를 통해 데이터 소스를 확보 하 여 호출 되 고 있는지 확인 해야 **IDataInitialize** 또는 **IDBPromptInitialize**합니다. 직접 사용 하는 경우 `CoCreateInstance` 공급자의 CLSID에 따라 공급자를 호출 하려면 OLE DB 서비스가 호출 됩니다.  

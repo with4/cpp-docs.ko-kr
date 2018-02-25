@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ATL::CRowset::MoveToBookmark
 - ATL::CRowset<TAccessor>::MoveToBookmark
@@ -29,11 +29,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2e443cace051fc0d5c08381222f0cd6aa53bec8f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 81109bf910f24ab2d0cc4d49023537baafdf70c4
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="crowsetmovetobookmark"></a>CRowset::MoveToBookmark
 책갈피 또는 지정된 된 오프셋에 있는 행으로 표시 된 행 인출 (`lSkip`) 해당 책갈피에서 합니다.  

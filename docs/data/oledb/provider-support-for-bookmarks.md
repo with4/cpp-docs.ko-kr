@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,11 +24,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9e69f0cd9b77f4d492e5011a6c8e653515ea784e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 39720b271834a585eff3ef3893154462bcdf7424
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="provider-support-for-bookmarks"></a>공급자의 책갈피 지원
 추가 하는이 항목의 예제는 `IRowsetLocate` 인터페이스는 `CMyProviderRowset` 클래스입니다. 대부분의 경우 기존 COM 개체에는 인터페이스를 추가 하 여 시작 합니다. 소비자 템플릿에서 많은 호출을 추가 하 여 테스트할 수 있습니다. 예제에 나오는 하는 방법:  
