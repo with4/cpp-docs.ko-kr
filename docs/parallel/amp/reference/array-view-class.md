@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - array_view
 - AMP/array_view
@@ -29,19 +30,22 @@ f1_keywords:
 - AMP/Concurrency::array_view::extent
 - AMP/Concurrency::array_view::source_accelerator_view
 - AMP/Concurrency::array_view::value_type
-dev_langs: C++
-helpviewer_keywords: array_view class
+dev_langs:
+- C++
+helpviewer_keywords:
+- array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 467d806203687610265d1b199e01295f93557081
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 54202618f578b9a5e6fd602924a37d7ea0825353
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="arrayview-class"></a>array_view 클래스
 다른 컨테이너에 보관 된 데이터를 통해 N 차원 보기를 나타냅니다.  
@@ -88,7 +92,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 |[get_extent](#get_extent)|Array_view 개체의 범위 개체를 반환합니다.|  
 |[get_ref](#get_ref)|인덱싱된 요소에 대 한 참조를 반환합니다.|  
 |[get_source_accelerator_view](#get_source_accelerator_view)|반환 된 [accelerator_view](accelerator-view-class.md) 위치의 데이터 소스는 `array_view` 있는 합니다.|  
-|[새로 고침](#refresh)|알립니다는 `array_view` 외부에서 수정 되었으며 바인딩된 메모리 개체는 `array_view` 인터페이스입니다. 이 메서드를 호출 오래 된 모든 캐시 된 정보를 렌더링합니다.|  
+|[refresh](#refresh)|알립니다는 `array_view` 외부에서 수정 되었으며 바인딩된 메모리 개체는 `array_view` 인터페이스입니다. 이 메서드를 호출 오래 된 모든 캐시 된 정보를 렌더링합니다.|  
 |[reinterpret_as](#reinterpret_as)|모든 요소가 포함 된 1 차원 배열을 반환는 `array_view` 개체입니다.|  
 |[section](#section)|하위 섹션 반환는 `array_view` 지정된 된 origin을 필요에 따라 하에 있는 개체에 지정 된 범위입니다.|  
 |[synchronize](#synchronize)|모든 수정 내용이 동기화는 `array_view` 해당 원본 데이터에 다시 개체입니다.|  
@@ -101,8 +105,8 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 |이름|설명|  
 |----------|-----------------|  
-|[operator)](#operator_call)|매개 변수 또는 매개 변수로 지정 된 요소의 값을 반환 합니다.|  
-|[operator]](#operator_at)|매개 변수에 의해 지정 된 요소를 반환 합니다.|  
+|[operator()](#operator_call)|매개 변수 또는 매개 변수로 지정 된 요소의 값을 반환 합니다.|  
+|[operator[]](#operator_at)|매개 변수에 의해 지정 된 요소를 반환 합니다.|  
 |[operator=](#operator_eq)|지정 된의 내용을 복사 `array_view` 을 여기에 개체입니다.|  
   
 ### <a name="public-constants"></a>공용 상수  
@@ -158,7 +162,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
  **네임스페이스:** 동시성  
   
-##  <a name="dtor"></a>~ array_view 
+##  <a name="dtor"></a> ~array_view 
 
  소멸 된 `array_view` 개체입니다.  
   
@@ -166,7 +170,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 ~array_view()restrict(amp,cpu);
 ```  
   
-##  <a name="ctor"></a>array_view 
+##  <a name="ctor"></a> array_view 
 
  `array_view` 클래스의 새 인스턴스를 초기화합니다.  
   
@@ -386,7 +390,7 @@ array_view(
  `_Src`  
  새 배열에 복사 될 원본 데이터에 대 한 포인터입니다.  
   
-##  <a name="copy_to"></a>copy_to 
+##  <a name="copy_to"></a> copy_to 
 
  내용을 복사는 `array_view` 개체를 호출 하 여 지정 된 대상 개체 `copy(*this, dest)`합니다.  
   
@@ -406,7 +410,7 @@ void copy_to(
  `_Dest`  
  복사할 대상 개체입니다.  
   
-##  <a name="data"></a>데이터 
+##  <a name="data"></a> 데이터 
 
  원시 데이터에 대 한 포인터를 반환 합니다.는 `array_view`합니다.  
   
@@ -422,7 +426,7 @@ const value_type* data() const restrict(amp,
 ### <a name="return-value"></a>반환 값  
  `array_view`의 원시 데이터에 대한 포인터입니다.  
   
-##  <a name="discard_data"></a>discard_data 
+##  <a name="discard_data"></a> discard_data 
 
  이 뷰를 원본으로 현재 데이터를 삭제 합니다. 이 보기의 현재 내용을 대상에 복사 방지 하는 데 사용 되는 런타임에 대 한 최적화 힌트는 `accelerator_view` 에 액세스 하는 것을 기존 콘텐츠 필요 하지 않은 경우 해당 사용을 권장 합니다. 이 메서드는 아무는 restrict (amp) 컨텍스트에서 사용 하는 경우에  
   
@@ -430,7 +434,7 @@ const value_type* data() const restrict(amp,
 void discard_data() const restrict(cpu);
 ```  
   
-##  <a name="extent"></a>익스텐트 
+##  <a name="extent"></a> 익스텐트 
 
  `extent` 개체의 모양을 정의하는 `array_view` 개체를 가져옵니다.  
   
@@ -438,7 +442,7 @@ void discard_data() const restrict(cpu);
 __declspec(property(get= get_extent)) Concurrency::extent<_Rank> extent;  
 ```  
   
-##  <a name="get_extent"></a>get_extent 
+##  <a name="get_extent"></a> get_extent 
 
  반환 된 [익스텐트](extent-class.md) 의 개체는 `array_view` 개체입니다.  
   
@@ -449,7 +453,7 @@ Concurrency::extent<_Rank> get_extent() const restrict(cpu, amp);
 ### <a name="return-value"></a>반환 값  
  `extent` 개체의 `array_view` 개체입니다.  
   
-##  <a name="get_ref"></a>get_ref 
+##  <a name="get_ref"></a> get_ref 
 
  _Index로 인덱싱된 요소에 대 한 참조를 가져옵니다. 다른 인덱싱 연산자 CPU에서 array_view에 액세스 하기 위한를 달리이 메서드 동기화 하지 않습니다 암시적으로이 array_view 콘텐츠는 CPU입니다. Array_view 원격 위치에 액세스 하거나이 array_view 관련 복사 작업 수행 후 사용자가 명시적으로이 메서드를 호출 하기 전에 cpu array_view를 동기화 해야 합니다. 이렇게 하지 않으면 정의 되지 않은 동작이 발생 합니다.  
   
@@ -465,7 +469,7 @@ value_type& get_ref(
 ### <a name="return-value"></a>반환 값  
  _Index로 인덱싱된 요소에 대 한 참조  
   
-##  <a name="get_source_accelerator_view"></a>get_source_accelerator_view 
+##  <a name="get_source_accelerator_view"></a> get_source_accelerator_view 
 
  array_view의 데이터 원본이 위치한 장소는 accelerator_view를 반환 합니다. 이 API는 runtime_exception throw 된 array_view 데이터 원본에 없는 경우  
   
@@ -477,7 +481,7 @@ accelerator_view get_source_accelerator_view() const;
   
 ### <a name="return-value"></a>반환 값  
   
-##  <a name="operator_call"></a>operator) 
+##  <a name="operator_call"></a> operator) 
 
  매개 변수 또는 매개 변수로 지정 된 요소의 값을 반환 합니다.  
   
@@ -524,7 +528,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>반환 값  
  매개 변수 또는 매개 변수로 지정 된 요소의 값입니다.  
   
-##  <a name="operator_at"></a>operator] 
+##  <a name="operator_at"></a> operator[] 
 
  매개 변수에 의해 지정 된 요소를 반환 합니다.  
   
@@ -547,7 +551,7 @@ value_type& operator[] (
 ### <a name="return-value"></a>반환 값  
  인덱스에 요소 값 또는 `array_view` 가장 중요 한 차원에 표시 합니다.  
   
-##  <a name="operator_eq"></a>연산자 = 
+##  <a name="operator_eq"></a> 연산자 = 
 
  지정 된의 내용을 복사 `array_view` 여기에 개체입니다.  
   
@@ -567,7 +571,7 @@ array_view& operator= (
 ### <a name="return-value"></a>반환 값  
  이에 대 한 참조 `array_view` 개체입니다.  
   
-##  <a name="rank"></a>순위 
+##  <a name="rank"></a> 순위 
 
  차수를 저장 된 `array_view` 개체입니다.  
   
@@ -575,14 +579,14 @@ array_view& operator= (
 static const int rank = _Rank;  
 ```  
   
-##  <a name="refresh"></a>새로 고침 
+##  <a name="refresh"></a> 새로 고침 
 
  알립니다는 `array_view` 외부에서 수정 되었으며 바인딩된 메모리 개체는 `array_view` 인터페이스입니다. 이 메서드를 호출 오래 된 모든 캐시 된 정보를 렌더링합니다.  
   
 ```  
 void refresh() const restrict(cpu);
 ```  
-## <a name="reinterpret_as"></a>reinterpret_as 
+## <a name="reinterpret_as"></a> reinterpret_as 
 
 옵션으로 다른 값 형식 보다 소스 array_view 가질 수 있는 1 차원 array_view, 통해 array_view를 재해석 합니다.  
   
@@ -623,7 +627,7 @@ array_view<float,1> v = a.reinterpret_as<float>();
 assert(v.extent == 3*a.extent);  
 ```  
     
-##  <a name="section"></a>섹션 
+##  <a name="section"></a> 섹션 
 
  하위 섹션 반환는 `array_view` 지정된 된 origin을 필요에 따라 하에 있는 개체에 지정 된 범위입니다.  
   
@@ -699,7 +703,7 @@ array_view section(
 ### <a name="return-value"></a>반환 값  
  하위 섹션은 `array_view` 지정된 된 origin을 필요에 따라 하에 있는 개체에 지정 된 범위입니다. 경우에는 `index` 개체가 지정 된 경우 인덱스는 인덱스의 요소 보다 큰 경우에 연결된 하는 범위 내에서 모든 요소를 포함 하는 하위 섹션은 `index` 개체입니다.  
   
-##  <a name="source_accelerator_view"></a>source_accelerator_view 
+##  <a name="source_accelerator_view"></a> source_accelerator_view 
 
  이 Array_view이 연결 된 소스 accelerator_view를 가져옵니다.  
   
@@ -707,7 +711,7 @@ array_view section(
 __declspec(property(get= get_source_accelerator_view)) accelerator_view source_accelerator_view;  
 ```  
   
-##  <a name="synchronize"></a>동기화 
+##  <a name="synchronize"></a> 동기화 
 
  모든 수정 내용이 동기화는 `array_view` 해당 원본 데이터에 다시 개체입니다.  
   
@@ -722,7 +726,7 @@ void synchronize() const restrict(cpu);
  `_Access_type`  
  의도 한 [access_type](concurrency-namespace-enums-amp.md#access_type) 대상에 [accelerator_view](accelerator-view-class.md)합니다. 이 매개 변수는 기본값은 `access_type_read`합니다.  
   
-##  <a name="synchronize_async"></a>synchronize_async 
+##  <a name="synchronize_async"></a> synchronize_async 
 
  모든 수정 내용이 비동기적으로 동기화는 `array_view` 해당 원본 데이터에 다시 개체입니다.  
   
@@ -740,7 +744,7 @@ concurrency::completion_future synchronize_async() const restrict(cpu);
 ### <a name="return-value"></a>반환 값  
  작업이 완료 될 때까지 대기 하는 앞입니다.  
   
-##  <a name="synchronize_to"></a>synchronize_to 
+##  <a name="synchronize_to"></a> synchronize_to 
 
  모든 수정 내용이이 array_view 지정된 accelerator_view 동기화 합니다.  
   
@@ -761,7 +765,7 @@ void synchronize_to(
  `_Access_type`  
  대상 accelerator_view에 원하는 access_type 합니다. 이 매개 변수는 기본값을 access_type_read 합니다.  
   
-##  <a name="synchronize_to_async"></a>synchronize_to_async 
+##  <a name="synchronize_to_async"></a> synchronize_to_async 
 
  모든 수정 내용이이 array_view 지정된 accelerator_view 비동기적으로 동기화 합니다.  
   
@@ -785,7 +789,7 @@ concurrency::completion_future synchronize_to_async(
 ### <a name="return-value"></a>반환 값  
  작업이 완료 될 때까지 대기 하는 앞입니다.  
   
-##  <a name="value_type"></a>value_type 
+##  <a name="value_type"></a> value_type 
 
  값 형식에서 array_view 및 바운드 배열입니다.  
   
@@ -793,7 +797,7 @@ concurrency::completion_future synchronize_to_async(
 typedef typenamevalue_type value_type;  
 ```  
   
-##  <a name="view_as"></a>view_as 
+##  <a name="view_as"></a> view_as 
 
  이 재해석 `array_view` 으로 `array_view` 다른 차수입니다.  
   

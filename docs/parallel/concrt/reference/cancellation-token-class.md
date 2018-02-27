@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - cancellation_token
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token
@@ -16,19 +17,22 @@ f1_keywords:
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::is_canceled
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::none
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::register_callback
-dev_langs: C++
-helpviewer_keywords: cancellation_token class
+dev_langs:
+- C++
+helpviewer_keywords:
+- cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a27bb4221e1a8db19f0dd7be37bb6ca3966635de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 1e95bfb264b1c6fbc4230cf38fc26b7b6a2c12a1
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token 클래스
 `cancellation_token` 클래스는 일부 작업을 취소하도록 요청되었는지 여부를 확인하는 기능을 나타냅니다. 지정된 토큰을 `task_group`, `structured_task_group` 또는 `task`와 연결하여 암시적 취소를 제공할 수 있습니다. 연결된 `cancellation_token_source`가 취소된 경우 취소를 폴링하거나 콜백을 등록할 수도 있습니다.  
@@ -74,13 +78,13 @@ class cancellation_token;
   
  **네임스페이스:** 동시성  
   
-##  <a name="dtor"></a>~ cancellation_token 
+##  <a name="dtor"></a> ~cancellation_token 
 
 ```
 ~cancellation_token();
 ```  
   
-##  <a name="ctor"></a>cancellation_token 
+##  <a name="ctor"></a> cancellation_token 
 
 ```
 cancellation_token(const cancellation_token& _Src);
@@ -91,7 +95,7 @@ cancellation_token(cancellation_token&& _Src);
 ### <a name="parameters"></a>매개 변수  
  `_Src`  
   
-##  <a name="deregister_callback"></a>deregister_callback 
+##  <a name="deregister_callback"></a> deregister_callback 
 
  등록 시 반환된 `register` 개체를 기반으로 `cancellation_token_registration` 메서드를 통해 이전에 등록한 콜백을 제거합니다.  
   
@@ -103,7 +107,7 @@ void deregister_callback(const cancellation_token_registration& _Registration) c
  `_Registration`  
  `cancellation_token_registration` 개체는 등록을 취소할 콜백에 해당합니다. `register` 메서드에 대한 호출에서 이 토큰이 이전에 반환됐어야 합니다.  
   
-##  <a name="is_cancelable"></a>is_cancelable 
+##  <a name="is_cancelable"></a> is_cancelable 
 
  이 토큰을 취소할 수 있는지 여부를 나타내는 값을 반환합니다.  
   
@@ -114,7 +118,7 @@ bool is_cancelable() const;
 ### <a name="return-value"></a>반환 값  
  이 토큰을 취소할 수 있는지 여부를 나타냅니다.  
   
-##  <a name="is_canceled"></a>is_canceled 
+##  <a name="is_canceled"></a> is_canceled 
 
  토큰이 취소된 경우 `true`를 반환합니다.  
   
@@ -125,7 +129,7 @@ bool is_canceled() const;
 ### <a name="return-value"></a>반환 값  
  토큰이 취소되면 값은 `true`이고, 그렇지 않으면 값은 `false`입니다.  
   
-##  <a name="none"></a>없음 
+##  <a name="none"></a> 없음 
 
  취소에 영향을 받을 수 없는 취소 토큰을 반환합니다.  
   
@@ -136,7 +140,7 @@ static cancellation_token none();
 ### <a name="return-value"></a>반환 값  
  취소할 수 없는 취소 토큰입니다.  
   
-##  <a name="operator_neq"></a>operator! = 
+##  <a name="operator_neq"></a> operator! = 
 
 ```
 bool operator!= (const cancellation_token& _Src) const;
@@ -147,7 +151,7 @@ bool operator!= (const cancellation_token& _Src) const;
   
 ### <a name="return-value"></a>반환 값  
   
-##  <a name="operator_eq"></a>연산자 = 
+##  <a name="operator_eq"></a> 연산자 = 
 
 ```
 cancellation_token& operator= (const cancellation_token& _Src);
@@ -160,7 +164,7 @@ cancellation_token& operator= (cancellation_token&& _Src);
   
 ### <a name="return-value"></a>반환 값  
   
-##  <a name="operator_eq_eq"></a>연산자 = = 
+##  <a name="operator_eq_eq"></a> operator== 
 
 ```
 bool operator== (const cancellation_token& _Src) const;
@@ -171,7 +175,7 @@ bool operator== (const cancellation_token& _Src) const;
   
 ### <a name="return-value"></a>반환 값  
   
-##  <a name="register_callback"></a>register_callback 
+##  <a name="register_callback"></a> register_callback 
 
  토큰에 콜백 함수를 등록합니다. 만약 토큰이 취소되면 콜백이 만들어집니다. 이 메서드가 호출된 시점에 토큰이 이미 취소된 경우, 동기적으로 즉시 콜백이 만들어집니다.  
   

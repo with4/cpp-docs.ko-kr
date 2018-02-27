@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - ScheduleGroup
 - CONCRT/concurrency::ScheduleGroup
@@ -14,19 +15,22 @@ f1_keywords:
 - CONCRT/concurrency::ScheduleGroup::Reference
 - CONCRT/concurrency::ScheduleGroup::Release
 - CONCRT/concurrency::ScheduleGroup::ScheduleTask
-dev_langs: C++
-helpviewer_keywords: ScheduleGroup class
+dev_langs:
+- C++
+helpviewer_keywords:
+- ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f1ca427842245701c1d8dfbcef946ef1586acbf0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b2ba16ff0e17a0a6e8cc63cefaebe1e66a93af7c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup 클래스
 일정 그룹에 대한 추상화를 나타냅니다. 일정 그룹은 다른 그룹으로 이동하기 전에 동일한 그룹의 다른 작업을 실행하여 시간적으로 또는 동일한 NUMA 노드 또는 실제 소켓에서 동일한 그룹 내의 여러 항목을 실행하여 공간적으로 서로 가깝게 예약하면 도움이 되는 관련된 작업 집합을 구성합니다.  
@@ -62,7 +66,7 @@ class ScheduleGroup;
   
  **네임스페이스:** 동시성  
   
-##  <a name="id"></a>Id 
+##  <a name="id"></a> Id 
 
  스케줄러는 그룹이 속한 내에서 고유한 일정 그룹에 대 한 식별자를 반환 합니다.  
   
@@ -73,7 +77,7 @@ virtual unsigned int Id() const = 0;
 ### <a name="return-value"></a>반환 값  
  스케줄러는 그룹이 속한 내에서 고유한 일정 그룹에 대 한 식별자입니다.  
   
-##  <a name="operator_delete"></a>delete 연산자 
+##  <a name="operator_delete"></a> delete 연산자 
 
  A `ScheduleGroup` 개체는 내부적으로 런타임에 의해 될 때 제거 모든 외부 참조가 해제 됩니다. 개체를 명시적으로 삭제할 수 없습니다.  
   
@@ -92,7 +96,7 @@ void operator delete(
  `_PObject`  
  삭제할 개체에 대 한 포인터입니다.  
   
-##  <a name="reference"></a>참조 
+##  <a name="reference"></a> 참조 
 
  일정 그룹 참조 횟수를 증가시킵니다.  
   
@@ -106,7 +110,7 @@ virtual unsigned int Reference() = 0;
 ### <a name="remarks"></a>설명  
  이를 결합 하는 일정 그룹의 수명을 관리 하 고 일반적으로 사용 됩니다. 일정 그룹의 참조 횟수가 0으로, 일정 그룹 런타임에 의해 삭제 됩니다. 일정 그룹 중 하나를 사용 하 여 만든는 [currentscheduler:: Createschedulegroup](currentscheduler-class.md#createschedulegroup) 메서드, 또는 [scheduler:: createschedulegroup](scheduler-class.md#createschedulegroup) 메서드 하나의 참조 횟수로 시작 합니다.  
   
-##  <a name="release"></a>릴리스 
+##  <a name="release"></a> 릴리스 
 
  일정 그룹 참조 횟수를 감소시킵니다.  
   
@@ -122,13 +126,13 @@ virtual unsigned int Release() = 0;
   
  일정 그룹은 특정 스케줄러 인스턴스와 연결 합니다. 스케줄러에 대한 모든 참조는 스케줄러에서 소멸될 수 있기 때문에 스케줄러에 대한 모든 참조가 해제되기 전에 일정 그룹에 대한 모든 참조가 해제되었는지 확인해야 합니다. 그렇지 않으면 결과가 정의 되지 않은 동작을 수행합니다.  
   
-##  <a name="dtor"></a>~ ScheduleGroup 
+##  <a name="dtor"></a> ~ScheduleGroup 
 
 ```
 virtual ~ScheduleGroup();
 ```  
   
-##  <a name="scheduletask"></a>ScheduleTask 
+##  <a name="scheduletask"></a> ScheduleTask 
 
  일정 그룹 내에서 간단한 작업을 예약합니다.  
   

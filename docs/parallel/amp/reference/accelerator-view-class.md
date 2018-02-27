@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - accelerator_view
 - AMPRT/accelerator_view
@@ -24,19 +25,22 @@ f1_keywords:
 - AMPRT/Concurrency::accelerator_view:is_debug
 - AMPRT/Concurrency::accelerator_view:queuing_mode
 - AMPRT/Concurrency::accelerator_view:version
-dev_langs: C++
-helpviewer_keywords: accelerator_view class
+dev_langs:
+- C++
+helpviewer_keywords:
+- accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9fd05acc351a23cc088c6491a76ecfb91583b16b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5160e0fa37ed8c1c40a3cdfd6ca63d3b76e2d980
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="acceleratorview-class"></a>accelerator_view 클래스
 C + + AMP 데이터 병렬 가속기에서 가상 장치 추상화를 나타냅니다.  
@@ -67,7 +71,7 @@ class accelerator_view;
 |[get_is_debug](#get_is_debug)|나타내는 부울 값을 반환 여부는 `accelerator_view` 개체에 DEBUG 레이어가 확장 오류 보고에 대 한 활성화 합니다.|  
 |[get_queuing_mode](#get_queuing_mode)|큐 모드를 반환 합니다.는 `accelerator_view` 개체입니다.|  
 |[get_version](#get_version)|버전을 반환 된 `accelerator_view`합니다.|  
-|[대기](#wait)|에 제출 하는 모든 명령에 대 한 대기는 `accelerator_view` 개체를 완료 합니다.|  
+|[wait](#wait)|에 제출 하는 모든 명령에 대 한 대기는 `accelerator_view` 개체를 완료 합니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
@@ -81,7 +85,7 @@ class accelerator_view;
   
 |이름|설명|  
 |----------|-----------------|  
-|[액셀러레이터 키](#accelerator)|`accelerator` 개체에 대한 `accelerator_view` 개체를 가져옵니다.|  
+|[accelerator](#accelerator)|`accelerator` 개체에 대한 `accelerator_view` 개체를 가져옵니다.|  
 |[is_auto_selection](#is_auto_selection)|런타임에 적절 한 액셀러레이터 키가 자동으로 선택 여부를 나타내는 부울 값을 가져옵니다 때는 `accelerator_view` 를 전달 하는 [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)합니다.|  
 |[is_debug](#is_debug)|나타내는 부울 값을 가져옵니다 여부는 `accelerator_view` 개체에 DEBUG 레이어가 확장 오류 보고에 대 한 활성화 합니다.|  
 |[queuing_mode](#queuing_mode)|큐 모드를 가져옵니다는 `accelerator_view` 개체입니다.|  
@@ -102,7 +106,7 @@ class accelerator_view;
   
  **네임스페이스:** 동시성  
 
-## <a name="accelerator"></a>액셀러레이터 키 
+## <a name="accelerator"></a> 액셀러레이터 키 
 
 Accelerator_view 개체에 대 한 액셀러레이터 키 개체를 가져옵니다.  
   
@@ -112,7 +116,7 @@ Accelerator_view 개체에 대 한 액셀러레이터 키 개체를 가져옵니
 __declspec(property(get= get_accelerator)) Concurrency::accelerator accelerator;  
 ```  
   
-## <a name="ctor"></a>accelerator_view 
+## <a name="ctor"></a> accelerator_view 
 
 기존 복사 하 여 accelerator_view 클래스의 새 인스턴스를 초기화 `accelerator_view` 개체입니다.  
   
@@ -126,7 +130,7 @@ accelerator_view( const accelerator_view & _Other );
  `_Other`  
  `accelerator_view` 복사할 개체입니다.  
   
-## <a name="accelerator_view__create_marker"></a>create_marker 
+## <a name="accelerator_view__create_marker"></a> create_marker 
 
 지금까지이 제출 된 모든 명령이 완료를 추적 하는 미래 반환 `accelerator_view` 개체입니다.  
   
@@ -139,7 +143,7 @@ concurrency::completion_future create_marker();
 ### <a name="return-value"></a>반환 값  
  지금까지이 제출 된 모든 명령이 완료를 추적 하는 미래 `accelerator_view` 개체입니다.  
   
-## <a name="flush"></a>플러시 
+## <a name="flush"></a> 플러시 
 
 모든 보류 중인 명령 실행을 위해 accelerator accelerator_view 개체에 대기 중인 전송 합니다.  
   
@@ -152,7 +156,7 @@ void flush();
 ### <a name="return-value"></a>반환 값  
  `void`를 반환합니다.  
 
-## <a name="accelerator_view__get_accelerator"></a>get_accelerator 
+## <a name="accelerator_view__get_accelerator"></a> get_accelerator 
 
 Accelerator_view 개체에 대 한 액셀러레이터 키 개체를 반환합니다.
 ### <a name="syntax"></a>구문
@@ -162,7 +166,7 @@ accelerator get_accelerator() const;
 ### <a name="return-value"></a>반환 값
 Accelerator_view 개체에 대 한 바로 가기 개체입니다.
 
-## <a name="accelerator_view__get_is_auto_selection"></a>get_is_auto_selection 
+## <a name="accelerator_view__get_is_auto_selection"></a> get_is_auto_selection 
 
 있는지 여부를 런타임에서 자동으로 선택 합니다 적절 한 액셀러레이터의 accelerator_view 전달 될 때를 나타내는 부울 값을 반환 된 [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)합니다.  
   
@@ -173,9 +177,9 @@ bool get_is_auto_selection() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `true`런타임에서 적절 한 액셀러레이터; 자동으로 선택 하는 경우 그렇지 않으면 `false`합니다.  
+ `true` 런타임에서 적절 한 액셀러레이터; 자동으로 선택 하는 경우 그렇지 않으면 `false`합니다.  
   
-## <a name="accelerator_view__get_is_debug"></a>get_is_debug 
+## <a name="accelerator_view__get_is_debug"></a> get_is_debug 
 
 Accelerator_view 개체 DEBUG 레이어가 활성화 광범위 한 오류 보고에 있는지 여부를 나타내는 부울 값을 반환 합니다.  
   
@@ -188,7 +192,7 @@ bool get_is_debug() const;
 ### <a name="return-value"></a>반환 값  
  `accelerator_view` 개체에 확장 오류 보고를 위해 DEBUG 레이어가 활성화되었는지 여부를 나타내는 부울 값입니다.  
 
-## <a name="accelerator_view__get_queuing_mode"></a>get_queuing_mode 
+## <a name="accelerator_view__get_queuing_mode"></a> get_queuing_mode 
 
 Accelerator_view 개체에 대 한 큐 모드를 반환합니다.  
   
@@ -201,7 +205,7 @@ queuing_mode get_queuing_mode() const;
 ### <a name="return-value"></a>반환 값  
  `accelerator_view` 개체의 큐 모드입니다.  
   
-## <a name="accelerator_view__get_version"></a>get_version 
+## <a name="accelerator_view__get_version"></a> get_version 
 
 accelerator_view의 버전을 반환 합니다.  
   
@@ -214,7 +218,7 @@ unsigned int get_version() const;
 ### <a name="return-value"></a>반환 값  
  버전의는 `accelerator_view`합니다.  
   
-## <a name="accelerator_view__is_auto_selection"></a>is_auto_selection 
+## <a name="accelerator_view__is_auto_selection"></a> is_auto_selection 
 
 있는지 여부를 런타임에서 자동으로 선택 합니다 적절 한 액셀러레이터의 accelerator_view 전달 될 때를 나타내는 부울 값을 가져옵니다는 [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)합니다.  
   
@@ -224,7 +228,7 @@ unsigned int get_version() const;
 __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;  
 ```  
   
-## <a name="accelerator_view__is_debug"></a>is_debug 
+## <a name="accelerator_view__is_debug"></a> is_debug 
 
 Accelerator_view 개체 DEBUG 레이어가 활성화 광범위 한 오류 보고에 있는지 여부를 나타내는 부울 값을 가져옵니다.  
   
@@ -234,7 +238,7 @@ Accelerator_view 개체 DEBUG 레이어가 활성화 광범위 한 오류 보고
 __declspec(property(get= get_is_debug)) bool is_debug;  
 ```  
   
-## <a name="accelerator_view__operator_neq"></a>operator! = 
+## <a name="accelerator_view__operator_neq"></a> operator! = 
 
 이 accelerator_view 개체를 다른 비교 하 고 반환 `false` 않으면는 동일 합니다; 그렇지 않으면 반환 `true`합니다.  
   
@@ -251,7 +255,7 @@ bool operator!= (    const accelerator_view & _Other ) const;
 ### <a name="return-value"></a>반환 값  
  두 개체가 같으면 `false`이고, 그렇지 않으면 `true`입니다.  
   
-## <a name="accelerator_view__operator_eq"></a>연산자 = 
+## <a name="accelerator_view__operator_eq"></a> 연산자 = 
 
 지정 된 accelerator_view 개체의 내용을 여기로 복사합니다.  
   
@@ -268,7 +272,7 @@ accelerator_view & operator= (    const accelerator_view & _Other );
 ### <a name="return-value"></a>반환 값  
  수정된 `accelerator_view` 개체에 대한 참조입니다.  
   
-## <a name="accelerator_view__operator_eq_eq"></a>연산자 = = 
+## <a name="accelerator_view__operator_eq_eq"></a> operator== 
 
 이 accelerator_view 개체를 다른 비교 하 고 반환 `true` 않으면는 동일 합니다; 그렇지 않으면 반환 `false`합니다.  
   
@@ -285,7 +289,7 @@ bool operator= = (    const accelerator_view & _Other ) const;
 ### <a name="return-value"></a>반환 값  
  두 개체가 같으면 `true`이고, 그렇지 않으면 `false`입니다.  
   
-## <a name="accelerator_view__queuing_mode"></a>queuing_mode 
+## <a name="accelerator_view__queuing_mode"></a> queuing_mode 
 
 Accelerator_view 개체에 대 한 큐 모드를 가져옵니다.  
   
@@ -295,7 +299,7 @@ Accelerator_view 개체에 대 한 큐 모드를 가져옵니다.
 __declspec(property(get= get_queuing_mode)) Concurrency::queuing_mode queuing_mode;  
 ```  
   
-## <a name="accelerator_view__version"></a>버전 
+## <a name="accelerator_view__version"></a> 버전 
 
 accelerator_view 버전을 가져옵니다.  
   
@@ -305,7 +309,7 @@ accelerator_view 버전을 가져옵니다.
 __declspec(property(get= get_version)) unsigned int version;  
 ```  
   
-## <a name="accelerator_view__wait"></a>대기 
+## <a name="accelerator_view__wait"></a> 대기 
 
 끝나기를 accelerator_view 개체에 제출 된 모든 명령이 대기 합니다.  
   
@@ -321,7 +325,7 @@ void wait();
 #### <a name="remarks"></a>설명  
  경우는 [queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) 은 `immediate`,이 메서드를 차단 하지 않고 즉시 반환 합니다.  
   
-##  <a name="dtor"></a>~ accelerator_view 
+##  <a name="dtor"></a> ~accelerator_view 
 
  Accelerator_view 개체를 제거합니다.  
   

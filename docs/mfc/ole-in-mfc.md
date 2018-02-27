@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - MFC, OLE and
 - OLE items
@@ -17,16 +19,17 @@ helpviewer_keywords:
 - applications [OLE], about OLE
 - OLE component object model (COM)
 ms.assetid: 5193479d-1239-4697-aea4-e82f92c707ab
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 38b2f6c936ff314f56e4b1868837729ad00efce4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d13baf7960b329e56cfce24011f4c15599cdda8b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ole-in-mfc"></a>MFC의 OLE
 이 문서에서는 MFC를 사용 하 여 OLE 프로그래밍의 기본적인 사항을 설명 합니다. MFC는 OLE를 사용 하는 프로그램을 작성 하는 가장 쉬운 방법은 제공 합니다.  
@@ -41,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 -   MFC의 상태 데이터를 관리 하려면 모듈을 포함 하 여 내보낸 DLL 함수 시작 지점, OLE/COM 인터페이스 진입점 및 창 프로시저 진입점입니다.  
   
- 사용할 수도 있습니다 [자동화](../mfc/automation.md) 또는 [원격 자동화](../mfc/remote-automation.md) 프로그램에서 다른 프로그램을 작동 하도록 합니다.  
+ 사용할 수도 있습니다 [자동화](../mfc/automation.md)합니다.  
   
 > [!NOTE]
 >  OLE 나타냅니다는 등의 기술 관련 연결 및, 포함 된 OLE 컨테이너, OLE 서버, OLE 항목, 내부 활성화 (또는 비주얼 편집) 추적기, 끌어서 놓기, 용어 및 메뉴 병합 합니다. 활성은 ActiveX 컨트롤 같은 구성 요소 개체 모델 (COM) 및 COM 기반 개체에 적용 됩니다 용어입니다. OLE 자동화 자동화를 라고 합니다.  

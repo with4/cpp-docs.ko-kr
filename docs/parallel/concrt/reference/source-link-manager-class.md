@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - source_link_manager
 - AGENTS/concurrency::source_link_manager
@@ -20,19 +21,22 @@ f1_keywords:
 - AGENTS/concurrency::source_link_manager::release
 - AGENTS/concurrency::source_link_manager::remove
 - AGENTS/concurrency::source_link_manager::set_bound
-dev_langs: C++
-helpviewer_keywords: source_link_manager class
+dev_langs:
+- C++
+helpviewer_keywords:
+- source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 67cf15c6681c989a2da2b4e6824fec6012c517bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f6368511a7e824e6e1bb69542815fce1e864a964
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager 클래스
 `source_link_manager` 개체는 `ISource` 블록에 대한 메시징 블록 네트워크 연결을 관리합니다.  
@@ -72,7 +76,7 @@ class source_link_manager;
 |----------|-----------------|  
 |[add](#add)|소스 링크를 추가 하 고 `source_link_manager` 개체입니다.|  
 |[begin](#begin)|첫 번째 요소에 반복기를 반환 합니다.는 `source_link_manager` 개체입니다.|  
-|[포함](#contains)|검색 된 `network_link_registry` 이 `source_link_manager` 지정된 된 블록에 대 한 개체입니다.|  
+|[contains](#contains)|검색 된 `network_link_registry` 이 `source_link_manager` 지정된 된 블록에 대 한 개체입니다.|  
 |[count](#count)|에 연결 된 블록의 개수는 `source_link_manager` 개체입니다.|  
 |[reference](#reference)|에 대 한 참조를 획득 하 고 `source_link_manager` 개체입니다.|  
 |[register_target_block](#register_target_block)|이 보유 하는 대상 블록 등록 `source_link_manager` 개체입니다.|  
@@ -91,7 +95,7 @@ class source_link_manager;
   
  **네임스페이스:** 동시성  
   
-##  <a name="add"></a>추가 
+##  <a name="add"></a> 추가 
 
  소스 링크를 추가 하 고 `source_link_manager` 개체입니다.  
   
@@ -103,7 +107,7 @@ void add(_EType _Link);
  `_Link`  
  추가할 블록에 대 한 포인터입니다.  
   
-##  <a name="begin"></a>시작 
+##  <a name="begin"></a> 시작 
 
  첫 번째 요소에 반복기를 반환 합니다.는 `source_link_manager` 개체입니다.  
   
@@ -117,7 +121,7 @@ iterator begin();
 ### <a name="remarks"></a>설명  
  반복기의 최종 상태도 표시 됩니다는 `NULL` 링크 합니다.  
   
-##  <a name="contains"></a>포함 
+##  <a name="contains"></a> 포함 
 
  검색 된 `network_link_registry` 이 `source_link_manager` 지정된 된 블록에 대 한 개체입니다.  
   
@@ -130,9 +134,9 @@ bool contains(_EType _Link);
  에 대 한 검색할 블록에 대 한 포인터는 `source_link_manager` 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `true`지정한 블록이 있으면 `false` 그렇지 않은 경우.  
+ `true` 지정한 블록이 있으면 `false` 그렇지 않은 경우.  
   
-##  <a name="count"></a>개수 
+##  <a name="count"></a> 개수 
 
  에 연결 된 블록의 개수는 `source_link_manager` 개체입니다.  
   
@@ -143,7 +147,7 @@ size_t count();
 ### <a name="return-value"></a>반환 값  
  에 연결 된 블록 수는 `source_link_manager` 개체입니다.  
   
-##  <a name="reference"></a>참조 
+##  <a name="reference"></a> 참조 
 
  에 대 한 참조를 획득 하 고 `source_link_manager` 개체입니다.  
   
@@ -151,7 +155,7 @@ size_t count();
 void reference();
 ```  
   
-##  <a name="register_target_block"></a>register_target_block 
+##  <a name="register_target_block"></a> register_target_block 
 
  이 보유 하는 대상 블록 등록 `source_link_manager` 개체입니다.  
   
@@ -163,7 +167,7 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
  `_PTarget`  
  이 보유 하는 대상 블록 `source_link_manager` 개체입니다.  
   
-##  <a name="release"></a>릴리스 
+##  <a name="release"></a> 릴리스 
 
  참조를 해제는 `source_link_manager` 개체입니다.  
   
@@ -171,7 +175,7 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
 void release();
 ```  
   
-##  <a name="remove"></a>제거 
+##  <a name="remove"></a> 제거 
 
  링크를 제거는 `source_link_manager` 개체입니다.  
   
@@ -184,9 +188,9 @@ bool remove(_EType _Link);
  제거 될 경우 블록에 대 한 포인터를 찾을 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
- `true`링크를 찾아 제거 했으면 `false` 그렇지 않은 경우.  
+ `true` 링크를 찾아 제거 했으면 `false` 그렇지 않은 경우.  
   
-##  <a name="set_bound"></a>set_bound 
+##  <a name="set_bound"></a> set_bound 
 
  이에 추가할 수 있는 소스 링크의 최대 수를 설정 `source_link_manager` 개체입니다.  
   
@@ -198,7 +202,7 @@ void set_bound(size_t _MaxLinks);
  `_MaxLinks`  
  링크의 최대 수입니다.  
   
-##  <a name="ctor"></a>source_link_manager 
+##  <a name="ctor"></a> source_link_manager 
 
  `source_link_manager` 개체를 생성합니다.  
   
@@ -206,7 +210,7 @@ void set_bound(size_t _MaxLinks);
 source_link_manager();
 ```  
   
-##  <a name="dtor"></a>~ source_link_manager 
+##  <a name="dtor"></a> ~source_link_manager 
 
  소멸 된 `source_link_manager` 개체입니다.  
   

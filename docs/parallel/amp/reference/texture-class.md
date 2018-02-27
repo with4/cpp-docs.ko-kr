@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - texture
 - AMP_GRAPHICS/texture
@@ -22,18 +23,20 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::associated_accelerator_view
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6131f2349a065052c9860038ca4b9f08de89f37d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 822797fb04104b28cf72f8d8ea4291a5ad283d20
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="texture-class"></a>texture 클래스
 질감은 데이터에 집계는 `accelerator_view` 익스텐트 도메인에 있습니다. 익스텐트 도메인의 각 요소에 대 한 변수 컬렉션입니다. C + + 기본 형식에 해당 하는 값을 보유 하는 각 변수 ( `unsigned int`, `int`, `float`, `double`), 스칼라 형식 ( `norm`, 또는 `unorm`), 또는 short 벡터 형식입니다.  
@@ -84,8 +87,8 @@ class texture;
   
 |이름|설명|  
 |----------|-----------------|  
-|[operator)](#operator_call)|매개 변수에 의해 지정 된 요소 값을 반환 합니다.|  
-|[operator]](#operator_at)|지정된 된 인덱스에 있는 요소를 반환 합니다.|  
+|[operator()](#operator_call)|매개 변수에 의해 지정 된 요소 값을 반환 합니다.|  
+|[operator[]](#operator_at)|지정된 된 인덱스에 있는 요소를 반환 합니다.|  
 |[operator=](#operator_eq)|지정 된 복사 [질감](texture-class.md) 여기에 개체입니다.|  
   
 ### <a name="public-constants"></a>공용 상수  
@@ -112,7 +115,7 @@ class texture;
   
  **Namespace:** concurrency:: graphics  
   
-##  <a name="dtor"></a>~ 질감 
+##  <a name="dtor"></a> ~texture 
 
  소멸 된 `texture` 개체입니다.  
   
@@ -120,7 +123,7 @@ class texture;
 ~texture() restrict(cpu);
 ```  
   
-##  <a name="associated_accelerator_view"></a>associated_accelerator_view 
+##  <a name="associated_accelerator_view"></a> associated_accelerator_view 
 
  가져옵니다는 [accelerator_view](accelerator-view-class.md) 에 복사할이 질감에 대 한 기본 대상입니다.  
   
@@ -128,7 +131,7 @@ class texture;
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;  
 ```  
   
-##  <a name="copy_to"></a>copy_to 
+##  <a name="copy_to"></a> copy_to 
 
  복사는 `texture` 개체를 전체 복사본을 실행 하 여 대상입니다.  
   
@@ -147,7 +150,7 @@ void copy_to(writeonly_texture_view<value_type, _Rank>& _Dest) const;
  `value_type`  
  질감에 있는 요소의 형식입니다.  
   
-##  <a name="data"></a>데이터 
+##  <a name="data"></a> 데이터 
 
  이 질감의 원시 데이터에 대 한 CPU 포인터를 반환합니다.  
   
@@ -161,7 +164,7 @@ const void* data() const restrict(cpu);
 ### <a name="return-value"></a>반환 값  
  질감의 원시 데이터에 대 한 포인터입니다.  
   
-##  <a name="depth_pitch"></a>depth_pitch 
+##  <a name="depth_pitch"></a> depth_pitch 
 
  CPU에서 준비 3D 텍스처의 각 깊이 조각만 사이의 바이트 수를 가져옵니다.  
   
@@ -169,7 +172,7 @@ const void* data() const restrict(cpu);
 __declspec(property(get= get_depth_pitch)) unsigned int depth_pitch;  
 ```  
   
-##  <a name="get"></a>가져오기 
+##  <a name="get"></a> 가져오기 
 
  지정된 된 인덱스에 요소 값을 반환합니다.  
   
@@ -184,7 +187,7 @@ const value_type get(const index<_Rank>& _Index) const restrict(amp);
 ### <a name="return-value"></a>반환 값  
  지정된 인덱스에 있는 요소의 값입니다.  
   
-##  <a name="get_associated_accelerator_view"></a>get_associated_accelerator_view 
+##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view 
 
  에 복사할이 질감에 대 한 기본 설정 대상 accelerator_view를 반환 합니다.  
   
@@ -195,7 +198,7 @@ Concurrency::accelerator_view get_associated_accelerator_view() const restrict(c
 ### <a name="return-value"></a>반환 값  
  [accelerator_view](accelerator-view-class.md) 에 복사할이 질감에 대 한 기본 대상입니다.  
   
-##  <a name="get_depth_pitch"></a>get_depth_pitch 
+##  <a name="get_depth_pitch"></a> get_depth_pitch 
 
  각 깊이 조각만 CPU에서 질감을 준비 하는 3d에서 사이의 바이트 수를 반환 합니다.  
   
@@ -206,7 +209,7 @@ unsigned int get_depth_pitch() const restrict(cpu);
 ### <a name="return-value"></a>반환 값  
  각 깊이 조각만 CPU에서 질감을 준비 하는 3d에서 사이의 바이트 수입니다.  
   
-##  <a name="get_row_pitch"></a>get_row_pitch 
+##  <a name="get_row_pitch"></a> get_row_pitch 
 
  3 차원 준비 질감에서 깊이 조각만의 각 행 또는 2 차원이 준비 텍스처의 각 행 간에 바이트 수를 반환합니다.  
   
@@ -217,7 +220,7 @@ unsigned int get_row_pitch() const restrict(cpu);
 ### <a name="return-value"></a>반환 값  
  3 차원 준비 질감에서 깊이 조각만의 각 행 또는 2 차원이 준비 텍스처의 각 행 간에 바이트 수입니다.  
   
-##  <a name="operator_call"></a>operator) 
+##  <a name="operator_call"></a> operator) 
 
  매개 변수에 의해 지정 된 요소 값을 반환 합니다.  
   
@@ -260,7 +263,7 @@ const value_type operator() (
 ### <a name="return-value"></a>반환 값  
  매개 변수에 의해 지정 된 요소 값입니다.  
   
-##  <a name="operator_at"></a>operator] 
+##  <a name="operator_at"></a> operator[] 
 
  지정된 된 인덱스에 있는 요소를 반환 합니다.  
   
@@ -281,7 +284,7 @@ const value_type operator[] (int _I0) const restrict(amp);
 ### <a name="return-value"></a>반환 값  
  지정 된 인덱스에 있는 요소입니다.  
   
-##  <a name="operator_eq"></a>연산자 = 
+##  <a name="operator_eq"></a> 연산자 = 
 
  지정 된 복사 [질감](texture-class.md) 여기에 개체입니다.  
   
@@ -301,7 +304,7 @@ texture& operator= (
 ### <a name="return-value"></a>반환 값  
  이에 대 한 참조 `texture` 개체입니다.  
   
-##  <a name="rank"></a>순위 
+##  <a name="rank"></a> 순위 
 
  순위를 가져옵니다는 `texture` 개체입니다.  
   
@@ -309,7 +312,7 @@ texture& operator= (
 static const int rank = _Rank;  
 ```  
   
-##  <a name="row_pitch"></a>row_pitch 
+##  <a name="row_pitch"></a> row_pitch 
 
  2D 또는 3D의 각 행 사이의 바이트 수를 CPU에서 질감을 준비 가져옵니다.  
   
@@ -317,7 +320,7 @@ static const int rank = _Rank;
 __declspec(property(get= get_row_pitch)) unsigned int row_pitch;  
 ```  
   
-##  <a name="set"></a>설정 
+##  <a name="set"></a> 설정 
 
  지정된 된 인덱스에 요소 값을 설정합니다.  
   
@@ -337,7 +340,7 @@ void set(
  `value`  
  요소의 새 값입니다.  
   
-##  <a name="ctor"></a>질감 
+##  <a name="ctor"></a> 질감 
 
  `texture` 클래스의 새 인스턴스를 초기화합니다.  
   

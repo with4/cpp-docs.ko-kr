@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
-helpviewer_keywords: preprocessor
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 596e17d0574f9f4935cf31ec71eb74cb2587d312
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 75caab67343e7806e1dd97fb673114949c68a94c
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="preprocessor"></a>전처리기
 전처리기는 첫 번째 변환 단계의 일부로 소스 파일의 텍스트를 조작하는 텍스트 처리기입니다. 전처리기는 소스 텍스트를 구문 분석하지 않지만 매크로 호출을 찾기 위해 소스 텍스트를 토큰으로 나눕니다. 컴파일러는 일반적으로 첫 번째 단계에서 전처리기를 호출하지만, 컴파일 없이 텍스트를 처리하기 위해 전처리기를 별도로 호출할 수도 있습니다.  
@@ -40,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  **Microsoft 전용 종료**  
   
-##  <a name="_predir_special_terminology"></a>특수 용어  
+##  <a name="_predir_special_terminology"></a> 특수 용어  
  전처리기 설명서에서 "인수"라는 용어는 함수에 전달되는 엔터티를 나타냅니다. 경우에 따라 함수 호출에서 지정된 인수 식과 함수 정의에서 지정된 인수 선언을 각각 나타내는 "실제" 또는 "형식"이라는 수식어가 인수에 붙습니다.  
   
  "변수"라는 용어는 간단한 C 형식 데이터 개체를 나타냅니다. "개체"라는 용어는 C++ 개체 및 변수를 둘 다 나타내는 포괄적인 용어입니다.  

@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: MFC COM (MFC)
-dev_langs: C++
+f1_keywords:
+- MFC COM (MFC)
+dev_langs:
+- C++
 helpviewer_keywords:
 - MFC, COM support
 - MFC ActiveX controls [MFC], COM support in MFC
@@ -17,16 +20,17 @@ helpviewer_keywords:
 - Active technology [MFC]
 - COM [MFC], MFC support
 ms.assetid: 7646bdcb-3a06-4ed5-9386-9b00f3979dcb
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 827bef034eeb7fc46b397c50f5ddf0c4cb6e48fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd9035c7b80b36e8124c827c0b3d1b76c59deb52
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mfc-com"></a>MFC COM
 액티브 템플릿 라이브러리 (ATL)의 대부분이 설계 된 반면 MFC의 하위 집합 COM 지원 하도록 되어 COM 프로그래밍에 대 한 합니다. 이 항목의이 단원 com MFC의 지원을 설명합니다  
@@ -53,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [자동화](../mfc/automation.md) (이전의 OLE 자동화) 다른 응용 프로그램에서 구현 되는 개체를 조작 하거나 "개체를 노출 하" 조작할 수 있도록 한 응용 프로그램에 대 한 가능 하 게 합니다.  
   
-     자동화 개체는 로컬 일 수 있습니다 또는 [원격](../mfc/remote-automation.md) 다른 컴퓨터에서 네트워크를 통해 액세스할 수 있습니다. 자동화는 OLE 및 COM 개체 모두에 대해 사용할 수 있습니다.  
+     로컬 또는 원격 (네트워크를 통해 액세스할 수 있는 다른 컴퓨터)에서 자동화 된 개체 수 있습니다. 자동화는 OLE 및 COM 개체 모두에 대해 사용할 수 있습니다.  
   
 -   또한이 섹션의 예를 들어, MFC를 사용 하 여 COM 구성 요소를 작성 하는 방법에 정보를 제공 [연결점](../mfc/connection-points.md)합니다.  
   
@@ -65,8 +69,6 @@ ms.lasthandoff: 12/21/2017
  [활성 문서 포함](../mfc/active-document-containment.md)  
   
  [자동화](../mfc/automation.md)  
-  
- [원격 자동화](../mfc/remote-automation.md)  
   
  [연결 지점](../mfc/connection-points.md)  
   

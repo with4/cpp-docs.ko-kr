@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - choice
 - AGENTS/concurrency::choice
@@ -23,19 +24,22 @@ f1_keywords:
 - AGENTS/concurrency::choice::unlink_target
 - AGENTS/concurrency::choice::unlink_targets
 - AGENTS/concurrency::choice::value
-dev_langs: C++
-helpviewer_keywords: choice class
+dev_langs:
+- C++
+helpviewer_keywords:
+- choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ec7383340e9502764514bb61ce8e10f6cb64c616
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 77a02043a3a301760130b568380a0ca5d57994cc
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="choice-class"></a>choice 클래스
 `choice` 메시징 블록은 소스 집합과의 제어 흐름 상호 작용을 나타내는 다중 소스 단일 대상 블록입니다. 선택한 블록은 여러 소스 중 하나가 메시지를 생성할 때까지 대기하고 메시지를 생성한 소스의 인덱스를 전파합니다.  
@@ -65,18 +69,18 @@ class choice: public ISource<size_t>;
   
 |이름|설명|  
 |----------|-----------------|  
-|[선택](#ctor)|오버로드됨. `choice` 메시징 블록을 생성합니다.|  
+|[choice](#ctor)|오버로드됨. `choice` 메시징 블록을 생성합니다.|  
 |[~ choice 소멸자](#dtor)|소멸 된 `choice` 메시징 블록입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[허용](#accept)|이 제공 된 메시지를 수락 `choice` 블록을 호출자에 게 소유권을 전송 합니다.|  
+|[accept](#accept)|이 제공 된 메시지를 수락 `choice` 블록을 호출자에 게 소유권을 전송 합니다.|  
 |[acquire_ref](#acquire_ref)|이 참조 횟수를 가져옵니다 `choice` 삭제를 방지 하기 위해 메시징 블록입니다.|  
-|[사용](#consume)|이전에 제공한이 메시지를 생성 `choice` 메시징 블록이 고 호출자에 게 소유권을 전송 하 여 대상에 의해 성공적으로 예약 합니다.|  
+|[consume](#consume)|이전에 제공한이 메시지를 생성 `choice` 메시징 블록이 고 호출자에 게 소유권을 전송 하 여 대상에 의해 성공적으로 예약 합니다.|  
 |[has_value](#has_value)|확인 여부를이 `choice` 아직 값으로 초기화 되었는지 메시징 블록입니다.|  
-|[인덱스](#index)|에 대 한 인덱스를 반환 합니다.는 `tuple` 가 선택한 요소를 나타내는 `choice` 메시징 블록입니다.|  
+|[index](#index)|에 대 한 인덱스를 반환 합니다.는 `tuple` 가 선택한 요소를 나타내는 `choice` 메시징 블록입니다.|  
 |[link_target](#link_target)|이 대상 블록에 연결 `choice` 메시징 블록입니다.|  
 |[release](#release)|이전의 성공적인 메시지 예약을 해제합니다.|  
 |[release_ref](#release_ref)|이 참조 횟수를 해제 `choice` 메시징 블록입니다.|  
@@ -100,7 +104,7 @@ class choice: public ISource<size_t>;
   
  **네임스페이스:** 동시성  
   
-##  <a name="accept"></a>허용 
+##  <a name="accept"></a> 허용 
 
  이 제공 된 메시지를 수락 `choice` 블록을 호출자에 게 소유권을 전송 합니다.  
   
@@ -120,7 +124,7 @@ virtual message<size_t>* accept(
 ### <a name="return-value"></a>반환 값  
  호출자에 게는 이제 소유권을 가진 메시지에 대 한 포인터입니다.  
   
-##  <a name="acquire_ref"></a>acquire_ref 
+##  <a name="acquire_ref"></a> acquire_ref 
 
  이 참조 횟수를 가져옵니다 `choice` 삭제를 방지 하기 위해 메시징 블록입니다.  
   
@@ -135,7 +139,7 @@ virtual void acquire_ref(_Inout_ ITarget<size_t>* _PTarget);
 ### <a name="remarks"></a>설명  
  이 메서드는 프로그램 `ITarget` 하는 동안이 원본에 연결 하는 중 개체는 `link_target` 메서드.  
   
-##  <a name="ctor"></a>선택 
+##  <a name="ctor"></a> 선택 
 
  `choice` 메시징 블록을 생성합니다.  
   
@@ -176,7 +180,7 @@ choice(
   
  잠금이 있는 경우 이동 생성은 수행되지 않습니다. 즉, 이동하는 중에 간단한 작업이 실행되고 있지 않은지 확인할 책임은 사용자에게 있습니다. 그러지 않으면 수많은 레이스가 발생하여 예외가 발생하거나 일관성 없는 상태가 될 수 있습니다.  
   
-##  <a name="dtor"></a>~ 선택 
+##  <a name="dtor"></a> ~choice 
 
  소멸 된 `choice` 메시징 블록입니다.  
   
@@ -184,7 +188,7 @@ choice(
 ~choice();
 ```  
   
-##  <a name="consume"></a>사용 
+##  <a name="consume"></a> 사용 
 
  이전에 제공한이 메시지를 생성 `choice` 메시징 블록이 고 호출자에 게 소유권을 전송 하 여 대상에 의해 성공적으로 예약 합니다.  
   
@@ -207,7 +211,7 @@ virtual message<size_t>* consume(
 ### <a name="remarks"></a>설명  
  `consume` 메서드는 `accept`를를 호출 하 여 뒤에 야 항상 있지만 `reserve` 반환 `true`합니다.  
   
-##  <a name="has_value"></a>has_value 
+##  <a name="has_value"></a> has_value 
 
  확인 여부를이 `choice` 아직 값으로 초기화 되었는지 메시징 블록입니다.  
   
@@ -218,9 +222,9 @@ bool has_value() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `true`블록에서 값을 받는 경우 `false` 그렇지 않은 경우.  
+ `true` 블록에서 값을 받는 경우 `false` 그렇지 않은 경우.  
   
-##  <a name="index"></a>인덱스 
+##  <a name="index"></a> 인덱스 
 
  에 대 한 인덱스를 반환 합니다.는 `tuple` 가 선택한 요소를 나타내는 `choice` 메시징 블록입니다.  
   
@@ -234,7 +238,7 @@ size_t index();
 ### <a name="remarks"></a>설명  
  사용 하 여 메시지 페이로드를 추출할 수 있습니다는 `get` 메서드.  
   
-##  <a name="link_target"></a>link_target 
+##  <a name="link_target"></a> link_target 
 
  이 대상 블록에 연결 `choice` 메시징 블록입니다.  
   
@@ -246,7 +250,7 @@ virtual void link_target(_Inout_ ITarget<size_t>* _PTarget);
  `_PTarget`  
  에 대 한 포인터는 `ITarget` 연결 대상 블록 `choice` 메시징 블록입니다.  
   
-##  <a name="release"></a>릴리스 
+##  <a name="release"></a> 릴리스 
 
  이전의 성공적인 메시지 예약을 해제합니다.  
   
@@ -263,7 +267,7 @@ virtual void release(
  `_PTarget`  
  호출 하는 대상 블록에 대 한 포인터는 `release` 메서드.  
   
-##  <a name="release_ref"></a>release_ref 
+##  <a name="release_ref"></a> release_ref 
 
  이 참조 횟수를 해제 `choice` 메시징 블록입니다.  
   
@@ -278,7 +282,7 @@ virtual void release_ref(_Inout_ ITarget<size_t>* _PTarget);
 ### <a name="remarks"></a>설명  
  이 메서드는 프로그램 `ITarget` 이 원본의 연결이 해제 되는 개체입니다. 소스 블록 대상 블록에 대 한 예약 된 리소스를 해제할 수 있습니다.  
   
-##  <a name="reserve"></a>예약 
+##  <a name="reserve"></a> 예약 
 
  이 이전에 제공 메시지를 예약 `choice` 메시징 블록입니다.  
   
@@ -296,12 +300,12 @@ virtual bool reserve(
  호출 하는 대상 블록에 대 한 포인터는 `reserve` 메서드.  
   
 ### <a name="return-value"></a>반환 값  
- `true`메시지를 성공적으로 예약 하는 경우 `false` 그렇지 않은 경우. 예약은 메시지를 이미 다른 대상이 예약했거나 수락한 경우, 소스에서 예약을 거부한 경우 등과 같은 다양한 이유로 실패할 수 있습니다.  
+ `true` 메시지를 성공적으로 예약 하는 경우 `false` 그렇지 않은 경우. 예약은 메시지를 이미 다른 대상이 예약했거나 수락한 경우, 소스에서 예약을 거부한 경우 등과 같은 다양한 이유로 실패할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
  호출한 후 `reserve`를 호출 해야 성공 하면 `consume` 또는 `release` 얻거나 각각 메시지의 소유를 포기 하기 위해.  
   
-##  <a name="unlink_target"></a>unlink_target 
+##  <a name="unlink_target"></a> unlink_target 
 
  이 대상 블록을 연결 해제 `choice` 메시징 블록입니다.  
   
@@ -313,7 +317,7 @@ virtual void unlink_target(_Inout_ ITarget<size_t>* _PTarget);
  `_PTarget`  
  에 대 한 포인터는 `ITarget` 블록에서이 연결을 끊을 `choice` 메시징 블록입니다.  
   
-##  <a name="unlink_targets"></a>unlink_targets 
+##  <a name="unlink_targets"></a> unlink_targets 
 
  이 모든 대상의 연결을 해제 `choice` 메시징 블록입니다.  
   
@@ -324,7 +328,7 @@ virtual void unlink_targets();
 ### <a name="remarks"></a>설명  
  이 메서드는 때문에 소멸자에서 호출 하지 않아도 내부에 대 한 소멸자 `single_assignment` 블록 적절히 연결 해제 됩니다.  
   
-##  <a name="value"></a>값 
+##  <a name="value"></a> 값 
 
  인덱스를 포함 하 여 선택한 메시지를 가져옵니다는 `choice` 메시징 블록입니다.  
   

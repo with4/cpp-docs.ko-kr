@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - array
 - AMP/array
@@ -25,19 +26,22 @@ f1_keywords:
 - AMP/Concurrency::array::associated_accelerator_view
 - AMP/Concurrency::array::cpu_access_type
 - AMP/Concurrency::array::extent
-dev_langs: C++
-helpviewer_keywords: array class
+dev_langs:
+- C++
+helpviewer_keywords:
+- array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5b76fcb181d955fc051ade5183b67b9d55b823ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6a8b7fa960fab118f527d12553725af794db3f0d
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="array-class"></a>array 클래스
 액셀러레이터 키 데이터를 이동 하는 데 사용 된 데이터 컨테이너를 나타냅니다.  
@@ -83,8 +87,8 @@ friend class array;
 |이름|설명|  
 |----------|-----------------|  
 |[operator std:: vector&lt;value_type&gt;](#operator_vec)|사용 하 여 `copy(*this, vector)` 변환할 암시적으로 배열은 std::[벡터](../../../standard-library/vector-class.md) 개체입니다.|  
-|[operator)](#operator_call)|매개 변수에 의해 지정 된 요소 값을 반환 합니다.|  
-|[operator]](#operator_at)|지정된 된 인덱스에 있는 요소를 반환 합니다.|  
+|[operator()](#operator_call)|매개 변수에 의해 지정 된 요소 값을 반환 합니다.|  
+|[operator[]](#operator_at)|지정된 된 인덱스에 있는 요소를 반환 합니다.|  
 |[operator=](#operator_eq)|지정 된의 내용을 복사 `array` 을 여기에 개체입니다.|  
   
 ### <a name="public-constants"></a>공용 상수  
@@ -127,7 +131,7 @@ friend class array;
   
  **네임스페이스:** 동시성  
   
-##  <a name="dtor"></a>~ 배열 
+##  <a name="dtor"></a> ~array 
 
  소멸 된 `array` 개체입니다.  
   
@@ -135,7 +139,7 @@ friend class array;
 ~array() restrict(cpu);
 ```  
   
-##  <a name="accelerator_view"></a>accelerator_view 
+##  <a name="accelerator_view"></a> accelerator_view 
 
  가져옵니다는 [accelerator_view](accelerator-view-class.md) 배열 할당 된 위치를 나타내는 개체입니다. 이 속성은 CPU에 대해서만 액세스할 수 있습니다.  
   
@@ -143,7 +147,7 @@ friend class array;
 __declspec(property(get= get_accelerator_view)) Concurrency::accelerator_view accelerator_view;  
 ```  
   
-##  <a name="ctor"></a>배열 
+##  <a name="ctor"></a> 배열 
 
  새 인스턴스를 초기화는 [array 클래스](array-class.md)합니다. 생성자가 없는 기본에 대 한 `array<T,N>`합니다. 모든 생성자만 CPU에서 실행 됩니다. Direct3D 대상에서 실행할 수는 없습니다.  
   
@@ -446,7 +450,7 @@ array(array&& _Other) restrict(cpu);
  `value_type`  
  복사 된 요소의 데이터 형식입니다.  
   
-##  <a name="associated_accelerator_view"></a>associated_accelerator_view 
+##  <a name="associated_accelerator_view"></a> associated_accelerator_view 
 
  두 번째 가져옵니다 [accelerator_view](accelerator-view-class.md) 를 인스턴스화하는 스테이징 생성자를 호출할 때 매개 변수로 전달 되는 개체는 `array` 개체입니다.  
   
@@ -454,7 +458,7 @@ array(array&& _Other) restrict(cpu);
 __declspec(property(get= get_associated_accelerator_view)) Concurrency::accelerator_view associated_accelerator_view;  
 ```  
   
-##  <a name="copy_to"></a>copy_to 
+##  <a name="copy_to"></a> copy_to 
 
  내용을 복사는 `array` 다른 `array`합니다.  
   
@@ -470,7 +474,7 @@ void copy_to(
  `_Dest`  
  [array_view](array-view-class.md) 복사할 개체입니다.  
   
-##  <a name="cpu_access_type"></a>cpu_access_type 
+##  <a name="cpu_access_type"></a> cpu_access_type 
 
  이 배열에 대 한 허용 CPU access_type를 가져옵니다.  
   
@@ -478,7 +482,7 @@ void copy_to(
 __declspec(property(get= get_cpu_access_type)) access_type cpu_access_type;  
 ```  
   
-##  <a name="data"></a>데이터 
+##  <a name="data"></a> 데이터 
 
  원시 데이터에 대 한 포인터를 반환 합니다.는 `array`합니다.  
   
@@ -491,7 +495,7 @@ const value_type* data() const restrict(amp, cpu);
 ### <a name="return-value"></a>반환 값  
  배열의 원시 데이터에 대 한 포인터입니다.  
   
-##  <a name="extent"></a>익스텐트 
+##  <a name="extent"></a> 익스텐트 
 
  가져옵니다는 [익스텐트](extent-class.md) 의 모양을 정의 하는 개체는 `array`합니다.  
   
@@ -499,7 +503,7 @@ const value_type* data() const restrict(amp, cpu);
 __declspec(property(get= get_extent)) Concurrency::extent<_Rank> extent;  
 ```  
   
-##  <a name="get_accelerator_view"></a>get_accelerator_view 
+##  <a name="get_accelerator_view"></a> get_accelerator_view 
 
  반환은 [accelerator_view](accelerator-view-class.md) 위치를 나타내는 개체 위치는 `array` 개체가 할당 됩니다. 이 속성은 CPU에 대해서만 액세스할 수 있습니다.  
   
@@ -510,7 +514,7 @@ Concurrency::accelerator_view get_accelerator_view() const;
 ### <a name="return-value"></a>반환 값  
  `accelerator_view` 위치를 나타내는 개체 위치는 `array` 개체가 할당 됩니다.  
   
-##  <a name="get_associated_accelerator_view"></a>get_associated_accelerator_view 
+##  <a name="get_associated_accelerator_view"></a> get_associated_accelerator_view 
 
  두 번째 가져옵니다 [accelerator_view](accelerator-view-class.md) 를 인스턴스화하는 스테이징 생성자를 호출할 때 매개 변수로 전달 되는 개체는 `array` 개체입니다.  
   
@@ -521,7 +525,7 @@ Concurrency::accelerator_view get_associated_accelerator_view() const ;
 ### <a name="return-value"></a>반환 값  
  두 번째 [accelerator_view](accelerator-view-class.md) 스테이징 생성자에 전달 된 개체입니다.  
   
-##  <a name="get_cpu_access_type"></a>get_cpu_access_type 
+##  <a name="get_cpu_access_type"></a> get_cpu_access_type 
 
  이 배열에 대해 허용 되는 CPU access_type를 반환 합니다.  
   
@@ -531,7 +535,7 @@ access_type get_cpu_access_type() const restrict(cpu);
   
 ### <a name="return-value"></a>반환 값  
   
-##  <a name="get_extent"></a>get_extent 
+##  <a name="get_extent"></a> get_extent 
 
  반환 된 [익스텐트](extent-class.md) 의 개체는 `array`합니다.  
   
@@ -542,7 +546,7 @@ Concurrency::extent<_Rank> get_extent() const restrict(amp,cpu);
 ### <a name="return-value"></a>반환 값  
  `extent` 의 개체는 `array`합니다.  
   
-##  <a name="operator_vec"></a>operator std:: vector&lt;value_type&gt; 
+##  <a name="operator_vec"></a> operator std:: vector&lt;value_type&gt; 
 
  사용 하 여 `copy(*this, vector)` 배열을 std:: vector 개체를 암시적으로 변환할 합니다.  
   
@@ -557,7 +561,7 @@ operator std::vector<value_type>() const restrict(cpu);
 ### <a name="return-value"></a>반환 값  
  형식의 개체 `vector<T>` 배열에 포함 된 데이터의 복사본이 포함 된 합니다.  
   
-##  <a name="operator_call"></a>operator) 
+##  <a name="operator_call"></a> operator) 
 
  매개 변수에 의해 지정 된 요소 값을 반환 합니다.  
   
@@ -598,7 +602,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>반환 값  
  매개 변수에 의해 지정 된 요소 값입니다.  
   
-##  <a name="operator_at"></a>operator] 
+##  <a name="operator_at"></a> operator[] 
 
  지정된 된 인덱스에 있는 요소를 반환 합니다.  
   
@@ -623,7 +627,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>반환 값  
  지정 된 인덱스에 있는 요소입니다.  
   
-##  <a name="operator_eq"></a>연산자 = 
+##  <a name="operator_eq"></a> 연산자 = 
 
  지정 된의 내용을 복사 `array` 개체입니다.  
   
@@ -646,14 +650,14 @@ array& operator= (
 ### <a name="return-value"></a>반환 값  
  이에 대 한 참조 `array` 개체입니다.  
   
-##  <a name="rank"></a>순위 
+##  <a name="rank"></a> 순위 
 
  차수를 저장 된 `array`합니다.  
   
 ```  
 static const int rank = _Rank;  
 ```  
-## <a name="reinterpret_as"></a>reinterpret_as 
+## <a name="reinterpret_as"></a> reinterpret_as 
 
 필요에 따라 다른 값 형식 소스 배열 보다 있을 수 있습니다는 1 차원 array_view 통해 재해석 합니다.
 
@@ -667,7 +671,7 @@ array_view<const _Value_type2, 1> reinterpret_as() const restrict(amp,cpu);
 ``` 
   
 ### <a name="parameters"></a>매개 변수  
-`_Value_type2`반환된 된 데이터의 데이터 형식입니다.
+`_Value_type2` 반환된 된 데이터의 데이터 형식입니다.
 
 ### <a name="return-value"></a>반환 값
 Array_view 또는 ElementType 및 N에서 1 바이트로 줄일 순위 T에서 다시 해석 요소 형식을 가진 배열 기반으로 하는 const array_view 개체입니다.
@@ -687,7 +691,7 @@ array_view<float,1> v = a.reinterpret_as<float>();
 assert(v.extent == 3*a.extent);
 ```  
   
-##  <a name="section"></a>섹션 
+##  <a name="section"></a> 섹션 
 
  하위 섹션 반환는 `array` 지정된 된 origin을 필요에 따라 하에 있는 개체에 지정 된 범위입니다.  
   
@@ -789,7 +793,7 @@ array_view<const value_type,3> section(
 ### <a name="return-value"></a>반환 값  
  하위 섹션 반환는 `array` 지정된 된 origin을 필요에 따라 하에 있는 개체에 지정 된 범위입니다. 경우에는 `index` 개체가 지정 된 경우 인덱스는 인덱스의 요소 보다 큰 경우에 연결 된 눈금의 모든 요소를 포함 하는 하위 섹션은 `index` 개체입니다.  
   
-##  <a name="view_as"></a>view_as 
+##  <a name="view_as"></a> view_as 
 
  이 배열을로 재해석는 [array_view](array-view-class.md) 다른 차수입니다.  
   

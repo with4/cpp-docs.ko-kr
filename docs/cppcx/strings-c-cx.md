@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 5b34e1df-7c2b-4269-aba8-b767d36c49d9
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 66a08038825b2ca76a8d18e5103b5569feb51cb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e70f5fc5478d0950a7287da690822046621e517b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="strings-ccx"></a>문자열(C++/CX)
 C +는 Windows 런타임에서 텍스트 표현 됩니다 + 여 CX는 [platform:: string 클래스](../cppcx/platform-string-class.md)합니다. 사용 하 여 `Platform::String Class` 를 Windows 런타임 클래스의 메서드 간에 문자열을 전달 하거나 ABI (이진 인터페이스) 응용 프로그램 경계를 넘어가는 다른 Windows 런타임 구성 요소와 상호 작용할 때. `Platform::String Class` 는 몇 가지 일반적인 문자열 작업에 대한 메서드를 제공하지만 완전한 기능의 문자열 클래스로 설계되지 않았습니다. C++ 모듈에서는 중요한 텍스트 처리에 [wstring](../standard-library/basic-string-class.md) 과 같은 표준 C++ 문자열 형식을 사용한 다음 최종 결과를 공용 인터페이스로 전달하거나 공용 인터페이스로부터 전달받기 전에 [Platform::String^](../cppcx/platform-string-class.md) 으로 변환합니다. `wstring` 또는 `wchar_t*` 와 `Platform::String`간의 변환은 쉽고 효율적입니다.  

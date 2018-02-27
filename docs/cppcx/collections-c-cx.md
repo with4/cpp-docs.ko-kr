@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5c97a264488e8b382091b24cdef8faae4c7bbfc0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3b4f98b17ceb7e7ccde15d2b7def17ee1e57b5ff
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="collections-ccx"></a>컬렉션(C++/CX)
 C + + /CX 프로그램 템플릿 STL (표준 라이브러리) 컨테이너 또는 다른 모든 사용자 정의 컬렉션 형식을 자유롭게 사용할 만들 수 있습니다. 그러나 전달 하는 경우 컬렉션에서 Windows 런타임 응용 프로그램 이진 인터페이스 ABI ()를 통해-예를 들어 XAML 컨트롤 또는 JavaScript 클라이언트로-Windows 런타임 컬렉션 형식을 사용 해야 합니다.  
@@ -64,7 +65,7 @@ C + + /CX 프로그램 템플릿 STL (표준 라이브러리) 컨테이너 또�
    
   
 ## <a name="vectorproxy-elements"></a>VectorProxy 요소  
- [Platform::Collections::VectorIterator](../cppcx/platform-collections-vectoriterator-class.md) 및 [Platform::Collections::VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md) 을 사용할 수 있도록 `range for` 루프 및 알고리즘 같은 [std:: sort](../standard-library/algorithm-functions.md#sort) 으로 [IVector\<T >](http://msdn.microsoft.com/en-us/library/windows/apps/br206631.aspx) 컨테이너입니다. 그러나 `IVector` 요소는 C++ 포인터 역참조를 통해 액세스할 수 없습니다. 이 요소는 [GetAt](http://msdn.microsoft.com/library/windows/apps/br206634.aspx) 및 [SetAt](http://msdn.microsoft.com/library/windows/apps/br206642.aspx) 메서드를 통해서만 액세스할 수 있습니다. 따라서 STL 요구 사항에 맞게 `Platform::Details::VectorProxy<T>` , `Platform::Details::ArrowProxy<T>` 및 `*`연산자를 통해 개별 요소에 대한 액세스를 제공하기 위해 이러한 반복기에 프록시 클래스 `->`및 `[]` 가 사용됩니다. 엄밀히 말해 `IVector<Person^> vec`지정 시 `*begin(vec)` 의 형식은 `VectorProxy<Person^>`입니다. 그러나 프록시 개체는 사용자 코드에 거의 표시되지 않습니다. 이러한 프록시 개체는 내부적으로 반복기에만 사용되므로 문서화되지 않지만 메커니즘의 작동 방식을 알면 유용합니다.  
+ [Platform::Collections::VectorIterator](../cppcx/platform-collections-vectoriterator-class.md) 및 [Platform::Collections::VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md) 을 사용할 수 있도록 `range for` 루프 및 알고리즘 같은 [std:: sort](../standard-library/algorithm-functions.md#sort) 는 와[ IVector\<T >](http://msdn.microsoft.com/en-us/library/windows/apps/br206631.aspx) 컨테이너입니다. 그러나 `IVector` 요소는 C++ 포인터 역참조를 통해 액세스할 수 없습니다. 이 요소는 [GetAt](http://msdn.microsoft.com/library/windows/apps/br206634.aspx) 및 [SetAt](http://msdn.microsoft.com/library/windows/apps/br206642.aspx) 메서드를 통해서만 액세스할 수 있습니다. 따라서 STL 요구 사항에 맞게 `Platform::Details::VectorProxy<T>` , `Platform::Details::ArrowProxy<T>` 및 `*`연산자를 통해 개별 요소에 대한 액세스를 제공하기 위해 이러한 반복기에 프록시 클래스 `->`및 `[]` 가 사용됩니다. 엄밀히 말해 `IVector<Person^> vec`지정 시 `*begin(vec)` 의 형식은 `VectorProxy<Person^>`입니다. 그러나 프록시 개체는 사용자 코드에 거의 표시되지 않습니다. 이러한 프록시 개체는 내부적으로 반복기에만 사용되므로 문서화되지 않지만 메커니즘의 작동 방식을 알면 유용합니다.  
   
  `range for` 컨테이너에 대해 `IVector` 루프를 사용할 때는 반복기 변수가 `auto&&` 요소에 올바르게 바인딩되도록 `VectorProxy` 를 사용합니다. `auto` 또는 `auto&`를 사용하면 컴파일러 경고 C4239가 발생하고 `VectoryProxy` 가 경고 텍스트에 언급됩니다.  
   
@@ -135,11 +136,11 @@ void FindButton(UIElementCollection^ col)
   
 |반복기|함수|  
 |---------------|---------------|  
-|[Platform::Collections::VectorIterator\<T >](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (내부적으로 저장 [Windows::Foundation::Collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) 및 int)|[시작](../cppcx/begin-function.md)/ [끝](../cppcx/end-function.md)([Windows::Foundation::Collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx))|  
-|[Platform::Collections::VectorViewIterator\<T >](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (내부적으로 저장 [IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^ 및 int)|[시작](../cppcx/begin-function.md)/ [끝](../cppcx/end-function.md) ([IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^)|  
-|[Platform::Collections::InputIterator\<T >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (내부적으로 저장 [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 및 T)|[시작](../cppcx/begin-function.md)/ [끝](../cppcx/end-function.md) ([IIterable\<T >](http://msdn.microsoft.com/library/windows/apps/br226024.aspx))|  
-|[Platform::Collections::InputIterator < IKeyValuePair\<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (내부적으로 저장 [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 및 T)|[시작](../cppcx/begin-function.md)/ [끝](../cppcx/end-function.md) ([IMap\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226042.aspx)합니다.|  
-|[Platform::Collections::InputIterator < IKeyValuePair\<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (내부적으로 저장 [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 및 T)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx))|  
+|[Platform::Collections::VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (내부적으로 저장 [Windows::Foundation::Collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx) 및 int)|[시작](../cppcx/begin-function.md)/ [끝](../cppcx/end-function.md)([Windows::Foundation::Collections:: IVector\<T >](http://msdn.microsoft.com/library/windows/apps/br206631.aspx))|  
+|[Platform::Collections::VectorViewIterator\<T>](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (내부적으로 저장 [IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^ 및 int)|[시작](../cppcx/begin-function.md)/ [끝](../cppcx/end-function.md) ([IVectorView\<T >](http://msdn.microsoft.com/library/windows/apps/br226058.aspx)^)|  
+|[Platform::Collections::InputIterator\<T>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (내부적으로 저장 [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 및 T)|[시작](../cppcx/begin-function.md)/ [끝](../cppcx/end-function.md) ([IIterable\<T >](http://msdn.microsoft.com/library/windows/apps/br226024.aspx))|  
+|[Platform::Collections::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (내부적으로 저장 [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 및 T)|[시작](../cppcx/begin-function.md)/ [끝](../cppcx/end-function.md) ([IMap\<K, V >](http://msdn.microsoft.com/library/windows/apps/br226042.aspx)합니다.|  
+|[Platform::Collections::InputIterator<IKeyValuePair\<K, V>^>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (내부적으로 저장 [IIterator\<T >](http://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ 및 T)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView](http://msdn.microsoft.com/library/windows/apps/br226037.aspx))|  
   
 ### <a name="collection-change-events"></a>컬렉션 변경 이벤트  
  `Vector` 및 `Map` 은 컬렉션 개체가 변경되거나 다시 설정된 경우 또는 컬렉션의 요소가 삽입, 제거 또는 변경된 경우에 발생하는 이벤트를 구현하여 XAML 컬렉션에서 데이터 바인딩을 지원합니다. 데이터 바인딩을 지원하는 고유한 형식을 작성할 수 있지만 이러한 형식이 봉인되기 때문에 `Map` 또는 `Vector` 에서 상속할 수는 없습니다.  

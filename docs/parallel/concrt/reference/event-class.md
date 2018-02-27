@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - event
 - CONCRT/concurrency::event
@@ -15,19 +16,22 @@ f1_keywords:
 - CONCRT/concurrency::event::wait
 - CONCRT/concurrency::event::wait_for_multiple
 - CONCRT/concurrency::event::timeout_infinite
-dev_langs: C++
-helpviewer_keywords: event class
+dev_langs:
+- C++
+helpviewer_keywords:
+- event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 550cbdda0468db969ffe3c7d3412789c1f0e5976
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c2301e06554d99529c7d4e4e5215208dc4265970
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="event-class"></a>event 클래스
 동시성 런타임을 명시적으로 인식하는 수동 다시 설정 이벤트입니다.  
@@ -52,7 +56,7 @@ class event;
 |----------|-----------------|  
 |[reset](#reset)|이벤트 신호 되지 않은 상태로 다시 설정합니다.|  
 |[set](#set)|이벤트를 발생을 시킵니다.|  
-|[대기](#wait)|이벤트가 신호를 받을 때까지 기다립니다.|  
+|[wait](#wait)|이벤트가 신호를 받을 때까지 기다립니다.|  
 |[wait_for_multiple](#wait_for_multiple)|여러 이벤트 신호를 받을 때까지 기다립니다.|  
   
 ### <a name="public-constants"></a>공용 상수  
@@ -72,7 +76,7 @@ class event;
   
  **네임스페이스:** 동시성  
   
-##  <a name="ctor"></a>이벤트 
+##  <a name="ctor"></a> 이벤트 
 
  새 이벤트를 생성 합니다.  
   
@@ -82,7 +86,7 @@ _CRTIMP event();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="dtor"></a>~ 이벤트 
+##  <a name="dtor"></a> ~ 이벤트 
 
  이벤트를 제거합니다.  
   
@@ -93,7 +97,7 @@ _CRTIMP event();
 ### <a name="remarks"></a>설명  
  소멸자가 실행 될 때 이벤트에서 대기 하는 스레드가 있습니다 사용할 수 있습니다. 이벤트가 해당 이벤트를 계속 대기 중인 스레드와 함께 소멸할 수 있도록 허용하면 정의되지 않은 동작이 발생합니다.  
   
-##  <a name="reset"></a>다시 설정 
+##  <a name="reset"></a> 다시 설정 
 
  이벤트 신호 되지 않은 상태로 다시 설정합니다.  
   
@@ -101,7 +105,7 @@ _CRTIMP event();
 void reset();
 ```  
   
-##  <a name="set"></a>설정 
+##  <a name="set"></a> 설정 
 
  이벤트를 발생을 시킵니다.  
   
@@ -112,7 +116,7 @@ void set();
 ### <a name="remarks"></a>설명  
  이벤트에 신호를 보내면 이벤트를 대기하고 있는 임의 수의 컨텍스트가 실행 가능하게 됩니다.  
   
-##  <a name="timeout_infinite"></a>timeout_infinite 
+##  <a name="timeout_infinite"></a> timeout_infinite 
 
  대기 시간이 초과되지 않아야 함을 나타내는 값입니다.  
   
@@ -120,7 +124,7 @@ void set();
 static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
 ```  
   
-##  <a name="wait"></a>대기 
+##  <a name="wait"></a> 대기 
 
  이벤트가 신호를 받을 때까지 기다립니다.  
   
@@ -136,9 +140,9 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
  대기가 충족 된 경우 값 `0` 반환 되 고, 그러지 않으면 값 `COOPERATIVE_WAIT_TIMEOUT` 신호 이벤트 하지 않고 대기 시간이 초과 되었음을 나타냅니다.  
   
 > [!IMPORTANT]
->  [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] 앱의 경우 ASTA 스레드에서 `wait`을 호출하면 현재 스레드가 차단되고 앱이 응답하지 않게 될 수 있으므로 이 함수를 호출하지 마십시오.  
+>  유니버설 Windows 플랫폼 (UWP) 응용 프로그램에서 호출 하지 마십시오 `wait` ASTA 스레드에서 있으므로이 현재 스레드를 차단할 수는 앱이 응답 하지 않는 발생할 수 있습니다.  
   
-##  <a name="wait_for_multiple"></a>wait_for_multiple 
+##  <a name="wait_for_multiple"></a> wait_for_multiple 
 
  여러 이벤트 신호를 받을 때까지 기다립니다.  
   
@@ -170,7 +174,7 @@ static size_t __cdecl wait_for_multiple(
  경우 매개 변수 `_FWaitAll` 값으로 설정 `true` 함수에서 반환 하는 인덱스는 모든 이벤트 신호를 보내야 하는 대기를 만족를 나타내려면 값 아닌지 사실 제외 특별 한 의미가 없습니다를 전달 `COOPERATIVE_WAIT_TIMEOUT`합니다.  
   
 > [!IMPORTANT]
->  [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] 앱의 경우 ASTA 스레드에서 `wait_for_multiple`을 호출하면 현재 스레드가 차단되고 앱이 응답하지 않게 될 수 있으므로 이 함수를 호출하지 마십시오.  
+>  유니버설 Windows 플랫폼 (UWP) 응용 프로그램에서 호출 하지 마십시오 `wait_for_multiple` ASTA 스레드에서 있으므로이 현재 스레드를 차단할 수는 앱이 응답 하지 않는 발생할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [concurrency 네임스페이스](concurrency-namespace.md)

@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: 'index-page '
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - classes [C++], ATL
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ab3e57cc5ccaedb5ad75ffa601f1d6c679c0ea6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: bc8f03660742f0e752bb9ef12043af841797d0ab
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atl-classes"></a>ATL 클래스
 액티브 템플릿 라이브러리 (ATL)는 다음과 같은 클래스가 포함 되어 있습니다. 특정 클래스를 범주별으로 찾으려면 참조는 [ATL 클래스 개요](../../atl/atl-class-overview.md)합니다.  
@@ -81,7 +84,7 @@ ms.lasthandoff: 12/21/2017
 |[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)|이 클래스는 구현 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 소유자 개체에 위임 하 여 **IUnknown**합니다.|atlcom.h|  
 |[CComControl](../../atl/reference/ccomcontrol-class.md)|이 클래스는 만들고 ATL 컨트롤을 관리 하기 위한 메서드를 제공 합니다.|atlctl.h|  
 |[CComControlBase](../../atl/reference/ccomcontrolbase-class.md)|이 클래스는 만들고 ATL 컨트롤을 관리 하기 위한 메서드를 제공 합니다.|atlctl.h|  
-|[클래스](../../atl/reference/ccomcriticalsection-class.md)|이 클래스는 가져오는 임계 영역 개체의 소유권을 해제 하기 위한 메서드를 제공 합니다.|atlcore.h|  
+|[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)|이 클래스는 가져오는 임계 영역 개체의 소유권을 해제 하기 위한 메서드를 제공 합니다.|atlcore.h|  
 |[CComCritSecLock](../../atl/reference/ccomcritseclock-class.md)|이 클래스는 잠금 및 임계 영역 개체 잠금 해제에 대 한 메서드를 제공 합니다.|atlbase.h|  
 |[CComCurrency](../../atl/reference/ccomcurrency-class.md)|이 클래스를 만들고 관리 하기 위한 메서드 및 연산자에는 `CURRENCY` 개체입니다.|atlcur.h|  
 |[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)|이 클래스의 배열을 저장 **IUnknown** 포인터입니다.|atlcom.h|  
@@ -175,7 +178,7 @@ ms.lasthandoff: 12/21/2017
 |[CWin32Heap](../../atl/reference/cwin32heap-class.md)|이 클래스는 구현 [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) Win32 힙 할당 함수를 사용 합니다.|atlmem.h|  
 |[CWindow](../../atl/reference/cwindow-class.md)|이 클래스는 창을 조작 하기 위한 메서드를 제공 합니다.|atlwin.h|  
 |[CWindowImpl](../../atl/reference/cwindowimpl-class.md)|이 클래스는 만들거나 창을 서브클래싱 하기 위한 메서드를 제공 합니다.|atlwin.h|  
-|[용으로 CWinTraits](../../atl/reference/cwintraits-class.md)|이 클래스는 window 개체를 만들 때 사용 되는 스타일을 표준화 하기 위한 메서드를 제공 합니다.|atlwin.h|  
+|[CWinTraits](../../atl/reference/cwintraits-class.md)|이 클래스는 window 개체를 만들 때 사용 되는 스타일을 표준화 하기 위한 메서드를 제공 합니다.|atlwin.h|  
 |[CWinTraitsOR](../../atl/reference/cwintraitsor-class.md)|이 클래스는 window 개체를 만들 때 사용 되는 스타일을 표준화 하기 위한 메서드를 제공 합니다.|atlwin.h|  
 |[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)|이 클래스는 창 클래스에 대 한 정보를 등록 하기 위한 메서드를 제공 합니다.|atlwin.h|  
 |[CWorkerThread 클래스](../../atl/reference/cworkerthread-class.md)|이 클래스에서 작업자 스레드 또는 기존을 사용 하 여, 하나 이상의 커널 개체 핸들을 대기 만들고 핸들 중 하나에 신호가 전달 될 때 지정 된 클라이언트 함수를 실행 합니다.|atlutil.h|  
@@ -216,7 +219,7 @@ ms.lasthandoff: 12/21/2017
 |[ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md)|이 클래스의 기본 구현을 제공는 `ISupportErrorInfo Interface` 인터페이스 및 단일 인터페이스만 개체에는 오류를 생성 하는 경우 사용할 수 있습니다.|atlcom.h|  
 |[IThreadPoolConfig 인터페이스](../../atl/reference/ithreadpoolconfig-interface.md)|이 인터페이스는 스레드 풀을 구성 하기 위한 메서드를 제공 합니다.|atlutil.h|  
 |[IViewObjectExImpl](../../atl/reference/iviewobjecteximpl-class.md)|이 클래스는 구현 **IUnknown** 의 기본 구현을 제공 하 고는 [IViewObject](http://msdn.microsoft.com/library/windows/desktop/ms680763), [IViewObject2](http://msdn.microsoft.com/library/windows/desktop/ms691318), 및 [IViewObjectEx](http://msdn.microsoft.com/library/windows/desktop/ms682375)인터페이스입니다.|atlctl.h|  
-|[IWorkerThreadClient 인터페이스](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient`클라이언트 컴퓨터에 구현 된 인터페이스는 [CWorkerThread](../../atl/reference/cworkerthread-class.md) 클래스입니다.|atlutil.h|  
+|[IWorkerThreadClient 인터페이스](../../atl/reference/iworkerthreadclient-interface.md)|`IWorkerThreadClient` 클라이언트 컴퓨터에 구현 된 인터페이스는 [CWorkerThread](../../atl/reference/cworkerthread-class.md) 클래스입니다.|atlutil.h|  
 |[_U_MENUorID](../../atl/reference/u-menuorid-class.md)|이 클래스에 대 한 래퍼를 제공 **CreateWindow** 및 **CreateWindowEx**합니다.|atlwin.h|  
 |[_U_RECT](../../atl/reference/u-rect-class.md)|이 인수 어댑터 클래스를 사용 하거나 `RECT` 포인터 또는 포인터의 관점에서 구현 되는 함수에 전달할 수에 대 한 참조입니다.|atlwin.h|  
 |[_U_STRINGorID](../../atl/reference/u-stringorid-class.md)|이 인수 어댑터 클래스 리소스 이름 중 하나를 사용 하면 (`LPCTSTR`s) 또는 리소스 Id (**UINT**s) 호출자 ID를 사용 하 여 문자열을 변환할 필요 없이 함수에 전달할는 **MAKEINTRESOURCE** 매크로입니다.|atlwin.h|  

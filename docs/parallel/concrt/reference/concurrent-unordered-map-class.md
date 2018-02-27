@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - concurrent_unordered_map
 - CONCURRENT_UNORDERED_MAP/concurrency::concurrent_unordered_map
@@ -17,19 +18,22 @@ f1_keywords:
 - CONCURRENT_UNORDERED_MAP/concurrency::concurrent_unordered_map::key_eq
 - CONCURRENT_UNORDERED_MAP/concurrency::concurrent_unordered_map::swap
 - CONCURRENT_UNORDERED_MAP/concurrency::concurrent_unordered_map::unsafe_erase
-dev_langs: C++
-helpviewer_keywords: concurrent_unordered_map class
+dev_langs:
+- C++
+helpviewer_keywords:
+- concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 29eae25b01dcb3b76a6c3c13a8675b92048b2d22
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d37feb147cc0604081479bfae0afca933c251bc8
+ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map 클래스
 `concurrent_unordered_map` 클래스는 `std::pair<const K, _Element_type>` 형식의 다양한 길이 요소 시퀀스를 제어하는 동시성으로부터 안전한 컨테이너입니다. 시퀀스는 동시성으로부터 안전한 추가, 요소 액세스, 반복기 액세스 및 반복기 통과 작업을 사용할 수 있는 방식으로 표시됩니다.  
@@ -115,7 +119,7 @@ template <typename K,
   
 |이름|설명|  
 |----------|-----------------|  
-|[operator]](#operator_at)|오버로드됨. 지정된 키가 있는 요소를 찾거나 삽입합니다. 이 메서드는 동시성 으로부터 안전한.|  
+|[operator[]](#operator_at)|오버로드됨. 지정된 키가 있는 요소를 찾거나 삽입합니다. 이 메서드는 동시성 으로부터 안전한.|  
 |[operator=](#operator_eq)|오버로드됨. 다른 할당 `concurrent_unordered_map` 여기에 개체입니다. 이 메서드는 동시성 으로부터 안전한 없습니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -133,7 +137,7 @@ template <typename K,
   
  **네임스페이스:** 동시성  
   
-##  <a name="at"></a>에서 
+##  <a name="at"></a> 에서 
 
  요소를 찾습니다는 `concurrent_unordered_map` 지정 된 키 값으로... 이 메서드는 동시성 으로부터 안전한.  
   
@@ -153,7 +157,7 @@ const mapped_type& at(const key_type& KVal) const;
 ### <a name="remarks"></a>설명  
  인수 키 값을 찾을 수 없는 경우 이 함수는 `out_of_range` 클래스의 개체를 throw합니다.  
   
-##  <a name="begin"></a>시작 
+##  <a name="begin"></a> 시작 
 
  동시 컨테이너의 첫 번째 요소를 가리키는 반복기를 반환 합니다. 이 방법은 안전 하 게 보호 되는 동시성에 설명 합니다.  
   
@@ -166,7 +170,7 @@ const_iterator begin() const;
 ### <a name="return-value"></a>반환 값  
  동시 컨테이너의 첫 번째 요소는 반복기입니다.  
   
-##  <a name="cbegin"></a>cbegin 
+##  <a name="cbegin"></a> cbegin 
 
  동시 컨테이너의 첫 번째 요소를 가리키는 상수 반복기를 반환 합니다. 이 방법은 안전 하 게 보호 되는 동시성에 설명 합니다.  
   
@@ -177,7 +181,7 @@ const_iterator cbegin() const;
 ### <a name="return-value"></a>반환 값  
  동시 컨테이너의 첫 번째 요소에는 const 반복기입니다.  
   
-##  <a name="cend"></a>cend 
+##  <a name="cend"></a> cend 
 
  동시 컨테이너의 마지막 요소 다음에 나오는 위치를 가리키는 상수 반복기를 반환 합니다. 이 방법은 안전 하 게 보호 되는 동시성에 설명 합니다.  
   
@@ -188,7 +192,7 @@ const_iterator cend() const;
 ### <a name="return-value"></a>반환 값  
  동시 컨테이너의 마지막 요소 다음 위치에는 const 반복기입니다.  
   
-##  <a name="clear"></a>선택을 취소합니다 
+##  <a name="clear"></a> 지우기 
 
  동시 컨테이너의 모든 요소를 지웁니다. 이 함수는 동시성 안전 하지 않습니다.  
   
@@ -196,7 +200,7 @@ const_iterator cend() const;
 void clear();
 ```  
   
-##  <a name="ctor"></a>concurrent_unordered_map 
+##  <a name="ctor"></a> concurrent_unordered_map 
 
  동시 unorderedmap를 생성합니다.  
   
@@ -267,7 +271,7 @@ concurrent_unordered_map(
   
  마지막 생성자는 순서가 지정되지 않은 동시 맵 `_Umap`의 이동을 지정합니다.  
   
-##  <a name="count"></a>개수 
+##  <a name="count"></a> 개수 
 
  지정 된 키와 일치 하는 요소의 수를 계산 합니다. 이 함수는 동시성을 안전 하 게 보호 합니다.  
   
@@ -282,7 +286,7 @@ size_type count(const key_type& KVal) const;
 ### <a name="return-value"></a>반환 값  
  키 컨테이너에 나타나는 횟수 시간.  
   
-##  <a name="empty"></a>빈 
+##  <a name="empty"></a> 빈 
 
  요소가 있는지 여부를 테스트합니다. 이 방법은 안전 하 게 보호 되는 동시성에 설명 합니다.  
   
@@ -291,12 +295,12 @@ bool empty() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `true`동시 컨테이너 비어 있으면 `false` 그렇지 않은 경우.  
+ `true` 동시 컨테이너 비어 있으면 `false` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
  동시 삽입 있는 경우 동시 컨테이너 비어 여부 반환 값을 읽기도 전에이 함수를 호출한 직후 변경 될 수 있습니다.  
   
-##  <a name="end"></a>끝 
+##  <a name="end"></a> 끝 
 
  동시 컨테이너의 마지막 요소 다음에 나오는 위치를 가리키는 반복기를 반환 합니다. 이 방법은 안전 하 게 보호 되는 동시성에 설명 합니다.  
   
@@ -309,7 +313,7 @@ const_iterator end() const;
 ### <a name="return-value"></a>반환 값  
  동시 컨테이너의 마지막 요소 다음 위치에 사용 되는 반복기입니다.  
   
-##  <a name="equal_range"></a>equal_range 
+##  <a name="equal_range"></a> equal_range 
 
  지정된 된 키와 일치 하는 범위를 찾습니다. 이 함수는 동시성을 안전 하 게 보호 합니다.  
   
@@ -333,7 +337,7 @@ std::pair<const_iterator,
 ### <a name="remarks"></a>설명  
  Begin 반복기 뒤와 끝 반복기 앞에 삽입할 추가 키를 동시 삽입에 대 한 것 같습니다.  
   
-##  <a name="find"></a>찾기 
+##  <a name="find"></a> 찾기 
 
  지정된 키와 일치하는 요소를 찾습니다. 이 함수는 동시성을 안전 하 게 보호 합니다.  
   
@@ -350,7 +354,7 @@ const_iterator find(const key_type& KVal) const;
 ### <a name="return-value"></a>반환 값  
  위치를 가리키는 반복기는 첫 번째 요소를 제공 하는 키를 일치 하는 또는 반복기 `end()` 이러한 요소가 없을 경우.  
   
-##  <a name="get_allocator"></a>get_allocator 
+##  <a name="get_allocator"></a> get_allocator 
 
  이 동시 컨테이너에 대 한 저장 된 할당자 개체를 반환합니다. 이 방법은 안전 하 게 보호 되는 동시성에 설명 합니다.  
   
@@ -361,7 +365,7 @@ allocator_type get_allocator() const;
 ### <a name="return-value"></a>반환 값  
  이 동시 컨테이너에 대해 저장 된 할당자 개체입니다.  
   
-##  <a name="hash_function"></a>hash_function 
+##  <a name="hash_function"></a> hash_function 
 
  저장된 해시 함수 개체를 가져옵니다.  
   
@@ -372,7 +376,7 @@ hasher hash_function() const;
 ### <a name="return-value"></a>반환 값  
  저장된 해시 함수 개체입니다.  
   
-##  <a name="insert"></a>삽입 
+##  <a name="insert"></a> 삽입 
 
  요소를 추가 하 고 `concurrent_unordered_map` 개체입니다.  
   
@@ -433,7 +437,7 @@ typename std::enable_if<!std::is_same<const_iterator,
   
  마지막 두 멤버 함수는 처음 두 함수와 똑같이 동작하지만, `value`는 삽입된 값을 생성하는데 사용된다는 점이 다릅니다.  
   
-##  <a name="key_eq"></a>key_eq 
+##  <a name="key_eq"></a> key_eq 
 
  저장 된 같음 비교 함수 개체를 가져옵니다.  
   
@@ -444,7 +448,7 @@ key_equal key_eq() const;
 ### <a name="return-value"></a>반환 값  
  저장 된 같음 비교 함수 개체입니다.  
   
-##  <a name="load_factor"></a>load_factor 
+##  <a name="load_factor"></a> load_factor 
 
  계산 하 고 컨테이너의 현재 로드 비율을 반환 합니다. 로드 비율은 버킷 수로 나눈 컨테이너에 있는 요소의 수입니다.  
   
@@ -455,7 +459,7 @@ float load_factor() const;
 ### <a name="return-value"></a>반환 값  
  컨테이너에 대 한 로드 비율입니다.  
   
-##  <a name="max_load_factor"></a>max_load_factor 
+##  <a name="max_load_factor"></a> max_load_factor 
 
  컨테이너의 최대 로드 비율을 가져오거나 설정 합니다. 최대 로드 비율 컨테이너 내부 테이블에 맞게 증가 하기 전에 모든 버킷의 수 있는 것 보다 요소의 최대 수는 있습니다.  
   
@@ -471,7 +475,7 @@ void max_load_factor(float _Newmax);
 ### <a name="return-value"></a>반환 값  
  첫 번째 멤버 함수는 저장된 최대 로드 비율을 반환합니다. 두 번째 멤버 함수 값을 반환 하지 않지만 throw 한 [out_of_range](../../../standard-library/out-of-range-class.md) 예외는 제공 된 로드 비율 유효 하지 않을 경우...  
   
-##  <a name="max_size"></a>max_size 
+##  <a name="max_size"></a> max_size 
 
  할당자에 의해 결정 동시 컨테이너의 최대 크기를 반환 합니다. 이 방법은 안전 하 게 보호 되는 동시성에 설명 합니다.  
   
@@ -485,7 +489,7 @@ size_type max_size() const;
 ### <a name="remarks"></a>설명  
  상한 값이 실제로 컨테이너 저장할 실제로 수 있는 내용 보다 더 높은 수 있습니다.  
   
-##  <a name="operator_at"></a>operator] 
+##  <a name="operator_at"></a> operator[] 
 
  지정된 키가 있는 요소를 찾거나 삽입합니다. 이 메서드는 동시성 으로부터 안전한.  
   
@@ -507,11 +511,11 @@ mapped_type& operator[](key_type&& kval);
 ### <a name="remarks"></a>설명  
  인수 키 값이 없으면 데이터 형식의 기본값과 함께 삽입됩니다.  
   
- `operator[]`map에 요소를 삽입 하는 데 사용 될 `m` 를 사용 하 여 `m[key] = DataValue;`여기서 `DataValue` 의 값인는 `mapped_type` 의 키 값을 사용 하 여 요소의 `key`합니다.  
+ `operator[]` map에 요소를 삽입 하는 데 사용 될 `m` 를 사용 하 여 `m[key] = DataValue;`여기서 `DataValue` 의 값인는 `mapped_type` 의 키 값을 사용 하 여 요소의 `key`합니다.  
   
  `operator[]`를 사용하여 요소를 삽입하는 경우 반환된 참조는 삽입이 기존 요소를 변경하는지 또는 새 요소를 생성하는지 여부를 나타내지 않습니다. 멤버 함수 `find` 및 [삽입](#insert) 지정 된 키가 있는 요소가 삽입 하기 전에 이미 있는지 여부를 확인 하기 위해 사용할 수 있습니다.  
   
-##  <a name="operator_eq"></a>연산자 = 
+##  <a name="operator_eq"></a> 연산자 = 
 
  다른 할당 `concurrent_unordered_map` 여기에 개체입니다. 이 메서드는 동시성 으로부터 안전한 없습니다.  
   
@@ -531,7 +535,7 @@ concurrent_unordered_map& operator= (concurrent_unordered_map&& _Umap);
 ### <a name="remarks"></a>설명  
  동시 벡터의 기존 요소를 지운 후에 `operator=`는 `_Umap`의 내용을 동시 벡터로 복사하거나 이동합니다.  
   
-##  <a name="rehash"></a>rehash 
+##  <a name="rehash"></a> rehash 
 
  해시 테이블을 다시 빌드합니다.  
   
@@ -548,7 +552,7 @@ void rehash(size_type _Buckets);
   
  throw 한 [out_of_range](../../../standard-library/out-of-range-class.md) 버킷 수가 유효 하지 않을 경우 예외 (0 또는 최대 버킷 개수 보다 큰).  
   
-##  <a name="size"></a>크기 
+##  <a name="size"></a> 크기 
 
  이 동시 컨테이너의 요소 수를 반환합니다. 이 방법은 안전 하 게 보호 되는 동시성에 설명 합니다.  
   
@@ -562,7 +566,7 @@ size_type size() const;
 ### <a name="remarks"></a>설명  
  동시 삽입이 있을 경우 이 함수를 호출한 직후, 반환 값을 읽기도 전에 동시 컨테이너의 요소 수가 변경될 수 있습니다.  
   
-##  <a name="swap"></a>스왑 
+##  <a name="swap"></a> 스왑 
 
  두 개의의 내용을 바꿉니다 `concurrent_unordered_map` 개체입니다. 이 메서드는 동시성 으로부터 안전한 없습니다.  
   
@@ -574,7 +578,7 @@ void swap(concurrent_unordered_map& _Umap);
  `_Umap`  
  스왑할 `concurrent_unordered_map` 개체입니다.  
   
-##  <a name="unsafe_begin"></a>unsafe_begin 
+##  <a name="unsafe_begin"></a> unsafe_begin 
 
  특정 버킷의 대 한이 컨테이너의 첫 번째 요소에 반복기를 반환합니다.  
   
@@ -591,7 +595,7 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 ### <a name="return-value"></a>반환 값  
  버킷의 시작 부분을 가리키는 반복기입니다.  
   
-##  <a name="unsafe_bucket"></a>unsafe_bucket 
+##  <a name="unsafe_bucket"></a> unsafe_bucket 
 
  특정 키가이 컨테이너에 매핑되는 버킷 인덱스를 반환 합니다.  
   
@@ -606,7 +610,7 @@ size_type unsafe_bucket(const key_type& KVal) const;
 ### <a name="return-value"></a>반환 값  
  이 컨테이너의 키에 대 한 버킷 인덱스입니다.  
   
-##  <a name="unsafe_bucket_count"></a>unsafe_bucket_count 
+##  <a name="unsafe_bucket_count"></a> unsafe_bucket_count 
 
  이 컨테이너의 현재 버킷 수를 반환합니다.  
   
@@ -617,7 +621,7 @@ size_type unsafe_bucket_count() const;
 ### <a name="return-value"></a>반환 값  
  현재이 컨테이너의 버킷 수입니다.  
   
-##  <a name="unsafe_bucket_size"></a>unsafe_bucket_size 
+##  <a name="unsafe_bucket_size"></a> unsafe_bucket_size 
 
  이 컨테이너의은 특정 버킷의 항목 수를 반환합니다.  
   
@@ -632,7 +636,7 @@ size_type unsafe_bucket_size(size_type _Bucket);
 ### <a name="return-value"></a>반환 값  
  현재이 컨테이너의 버킷 수입니다.  
   
-##  <a name="unsafe_cbegin"></a>unsafe_cbegin 
+##  <a name="unsafe_cbegin"></a> unsafe_cbegin 
 
  특정 버킷의 대 한이 컨테이너의 첫 번째 요소에 반복기를 반환합니다.  
   
@@ -647,7 +651,7 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 ### <a name="return-value"></a>반환 값  
  버킷의 시작 부분을 가리키는 반복기입니다.  
   
-##  <a name="unsafe_cend"></a>unsafe_cend 
+##  <a name="unsafe_cend"></a> unsafe_cend 
 
  특정 버킷의 마지막 요소 다음 위치에는 반복기를 반환 합니다.  
   
@@ -662,7 +666,7 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 ### <a name="return-value"></a>반환 값  
  버킷의 시작 부분을 가리키는 반복기입니다.  
   
-##  <a name="unsafe_end"></a>unsafe_end 
+##  <a name="unsafe_end"></a> unsafe_end 
 
  특정 버킷의 대 한이 컨테이너의 마지막 요소에 반복기를 반환합니다.  
   
@@ -679,7 +683,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 ### <a name="return-value"></a>반환 값  
  버킷 끝의를 가리키는 반복기입니다.  
   
-##  <a name="unsafe_erase"></a>unsafe_erase 
+##  <a name="unsafe_erase"></a> unsafe_erase 
 
  요소 제거는 `concurrent_unordered_map` 지정 된 위치에 있습니다. 이 메서드는 동시성 으로부터 안전한 없습니다.  
   
@@ -716,7 +720,7 @@ size_type unsafe_erase(
   
  구분 된 범위의 요소를 제거 하는 세 번째 멤버 함수 `concurrent_unordered_map::equal_range`(KVal).  
   
-##  <a name="unsafe_max_bucket_count"></a>unsafe_max_bucket_count 
+##  <a name="unsafe_max_bucket_count"></a> unsafe_max_bucket_count 
 
  이 컨테이너의 최대 버킷 개수를 반환합니다.  
   
