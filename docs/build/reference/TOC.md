@@ -148,6 +148,7 @@
 ##### [/Zc:throwingNew(operator new throw 가정)](zc-throwingnew-assume-operator-new-throws.md)
 ##### [/Zc:trigraphs(삼중자 대체)](zc-trigraphs-trigraphs-substitution.md)
 ##### [/Zc:wchar_t(wchar_t를 네이티브 형식으로 인식)](zc-wchar-t-wchar-t-is-native-type.md)
+#### [/Zf(더 빠른 PDB 생성)](zf.md)
 #### [/Zg(함수 프로토타입 생성)](zg-generate-function-prototypes.md)
 #### [/Zl(기본 라이브러리 이름 생략)](zl-omit-default-library-name.md)
 #### [/Zm(미리 컴파일된 헤더 메모리 할당 제한 지정)](zm-specify-precompiled-header-memory-allocation-limit.md)
