@@ -10,6 +10,11 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 dev_langs:
 - C++
+f1_keywords:
+- auto_CPP
+- auto
+helpviewer_keywords:
+- auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
 caps.latest.revision: 
 author: mikeblome
@@ -17,11 +22,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6721aa5860f23025b8b6c762cc7e5f4d6178228d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 334006e8ad06bdc174922d57d97d2d0f0335cf34
+ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="auto-c"></a>auto (c + +)
 초기화 식에서 선언된 변수의 형식을 추론합니다.  
@@ -222,7 +227,7 @@ int main()
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [auto 키워드](../cpp/auto-keyword.md)   
+ [auto Keyword](../cpp/auto-keyword.md)   
  [키워드](../cpp/keywords-cpp.md)   
  [/Zc: auto (변수 형식 추론)](../build/reference/zc-auto-deduce-variable-type.md)   
  [sizeof 연산자](../cpp/sizeof-operator.md)   
