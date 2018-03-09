@@ -1,12 +1,13 @@
 ---
 layout: HubPage
+ms.topic: hub-page
 title: "Visual C++ 설명서 | Microsoft 문서"
 description: "C++를 사용하여 플랫폼과 장치용 응용 프로그램, 서비스 및 도구를 개발하는 방법을 알아봅니다."
-ms.openlocfilehash: d74ee013980d77131f6513063ad3d16ee55cc891
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 7a0b3bb00f43157b6f1d3a7a64999beb59f9a06f
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 03/08/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -74,7 +75,7 @@ ms.lasthandoff: 10/24/2017
                 <a href="#workloads">작업</a>
                 <ul id="workloads">
                     <li>
-                        <a href="#workloads1">작업</a>
+                        <a href="#workloads1">워크로드</a>
                         <ul id="workloads1" class="cardsC">
                             <li>
                                 <a href="/cpp/windows/universal-windows-apps-cpp">
@@ -287,7 +288,7 @@ ms.lasthandoff: 10/24/2017
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>배포:</h3>
+                                                    <h3>배포</h3>
                                                     <p>최종 사용자에게 완성된 프로그램을 배포합니다.</p>
                                                 </div>
                                             </div>

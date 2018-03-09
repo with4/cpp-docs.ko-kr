@@ -2,13 +2,14 @@
 layout: LandingPage
 author: jasongroce
 ms.author: apexprodleads
+ms.topic: landing-page
 title: "C++ 설명서로 Linux 개발"
 description: "Linux에서 실행되는 응용 프로그램을 만들고 디버그합니다."
-ms.openlocfilehash: 80dea4d1a963bd9c2f6f49dda3347529d51e8ce1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: c4794dbeb7e5a1d356e251686653c6c0aa0a023a
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="linux-development-with-c-documentation"></a>C++ 설명서로 Linux 개발
 

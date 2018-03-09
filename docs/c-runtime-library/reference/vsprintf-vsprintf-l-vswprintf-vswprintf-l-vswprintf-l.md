@@ -60,11 +60,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a96bcc3de4b59601e18043bb18fb82802abd4c8f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c9e236d7b880b2bcc5a66f8f2494990c6b420193
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf, _vsprintf_l, vswprintf, _vswprintf_l, __vswprintf_l
 인수 목록에 대한 포인터를 사용하여 형식이 지정된 출력을 씁니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [vsprintf_s, _vsprintf_s_l, vswprintf_s, _vswprintf_s_l](../../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)를 참조하세요.  
@@ -157,7 +157,7 @@ int _vswprintf_l(
  `_l` 접미사가 있는 이러한 함수 버전은 현재 스레드 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다.  
   
 > [!IMPORTANT]
->  `vsprintf`를 사용하는 경우 기록되는 문자 수를 제한할 방법이 없습니다. 즉, 이 함수를 사용하는 코드에서는 버퍼 오버런이 발생하기 쉽습니다. 대신 [_vsnprintf](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)를 사용하거나 [_vscprintf](../../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)를 호출하여 필요한 버퍼의 크기를 확인하세요. 또한 `format`이 사용자 정의 문자열이 아닌지 확인합니다. 자세한 내용은 [버퍼 오버런 방지](http://msdn.microsoft.com/library/windows/desktop/ms717795)를 참조하세요.  
+>  사용 하 여 `vsprintf`어는 문자 수를 제한할 방법이 없습니다 쓸이 함수를 사용 하 여 코드는 버퍼 오버런에 취약 합니다. 대신 [_vsnprintf](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)를 사용하거나 [_vscprintf](../../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)를 호출하여 필요한 버퍼의 크기를 확인하세요. 또한 `format`이 사용자 정의 문자열이 아닌지 확인합니다. 자세한 내용은 [버퍼 오버런 방지](http://msdn.microsoft.com/library/windows/desktop/ms717795)를 참조하세요.  
   
  `vswprintf`는 `size_t` 형식의 두 번째 매개 변수 `count`를 요구하는 ISO C 표준을 준수합니다. 이전의 비표준 동작을 강제 적용하려면 `_CRT_NON_CONFORMING_SWPRINTFS.`를 정의합니다. 이후 버전에서 기존 동작이 제거될 수도 있으므로 새 준수 동작을 사용하도록 코드를 변경해야 합니다.  
   

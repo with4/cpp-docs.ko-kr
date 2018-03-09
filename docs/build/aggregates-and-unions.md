@@ -19,11 +19,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74ee1bbcf1a39171b18c09274543c72e0b844748
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db5e8551adff9752cbcaca3f4dc7d3c4a7fca908
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="aggregates-and-unions"></a>집계 및 공용 구조체
 배열, 구조체 및 공용 구조체와 같은 다른 형식에는 일관성 있는 집계 및 공용 구조체 저장소 및 데이터 검색을 보장 하는 보다 엄격한 맞춤 요구 사항이 있습니다. 배열, 구조체 및 공용 구조체에 대 한 정의 다음과 같습니다.  
@@ -52,9 +52,9 @@ ms.lasthandoff: 12/21/2017
 |**UINT64**|**unsigned __int64**|쿼드 워드|  
 |**FP32 (정밀도 단일)**|**float**|워드 단위|  
 |**FP64 (이중 정밀도)**|**double**|쿼드 워드|  
-|**포인터**|**\***|쿼드 워드|  
-|`__m64`|**__m64 구조체**|쿼드 워드|  
-|`__m128`|**__m128 구조체**|Octaword|  
+|**POINTER**|**\***|쿼드 워드|  
+|`__m64`|**struct __m64**|쿼드 워드|  
+|`__m128`|**struct __m128**|Octaword|  
   
  다음 집계 정렬 규칙이 적용 됩니다.  
   
