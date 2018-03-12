@@ -23,11 +23,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1525b92b43a688cdec970c646613aa4474d44cc3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: bf5c9d4e410c74957fad3816c6ba07ddcc724f37
+ms.sourcegitcommit: b597ef49b5b12fe2e54dc3d54619442879eca5a9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="floatcontrol"></a>float_control
 함수의 부동 소수점 동작을 지정합니다.  
@@ -59,8 +59,6 @@ float_control( value,setting [push] | push | pop )
 #pragma float_control(except, off)  
 #pragma fenv_access(off)  
 #pragma float_control(precise, off)  
-// The following line is needed on Itanium processors  
-#pragma fp_contract(on)  
 ```  
   
  `float_control` pragma를 사용하여 빠른 모델에서 엄격한 모델로 이동하려면 다음 코드를 사용합니다.  
@@ -69,8 +67,6 @@ float_control( value,setting [push] | push | pop )
 #pragma float_control(precise, on)  
 #pragma fenv_access(on)  
 #pragma float_control(except, on)  
-// The following line is needed on Itanium processors.  
-#pragma fp_contract(off)  
 ```  
   
  다른 부동 소수점 pragma는 다음과 같습니다.  
