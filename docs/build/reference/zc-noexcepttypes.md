@@ -18,11 +18,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1b0e209462295f907f5e518299d34fb18aade4d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af455b9a781295f3e6f446b7dc5c3d253fe2f4c5
+ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc:noexceptTypes (C + + 17 noexcept 규칙)
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="remarks"></a>설명
 
-경우는 **/Zc:noexceptTypes** 옵션을 지정한 경우 컴파일러는 C + + 17 표준에 맞는 하며 처리 [throw ()](../../cpp/exception-specifications-throw-cpp.md) 별칭으로 [noexcept](../../cpp/noexcept-cpp.md), 제거`throw(<type list>)`및 `throw(...)`를 포함 하도록 특정 종류 가능 `noexcept`합니다. **/Zc:noexceptTypes** 옵션은만 사용할 수 있는 경우 [/std:c + + 17](std-specify-language-standard-version.md) 또는 [/std:latest](std-specify-language-standard-version.md) 를 사용할 수 있습니다. **/Zc:noexceptTypes** ISO C + + 17 표준에 맞게 기본적으로 사용 됩니다. 이 옵션을 지정 하 여 해제 **/Zc:noexceptTypes-** 의 C + + 14 동작으로 되돌리려면 `noexcept` 때 **/std::C + + 17** 또는 **/std::latest** 지정 됩니다.
+경우는 **/Zc:noexceptTypes** 옵션을 지정한 경우 컴파일러는 C + + 17 표준에 맞는 하며 처리 [throw ()](../../cpp/exception-specifications-throw-cpp.md) 별칭으로 [noexcept](../../cpp/noexcept-cpp.md), 제거`throw(<type list>)`및 `throw(...)`를 포함 하도록 특정 종류 가능 `noexcept`합니다. **/Zc:noexceptTypes** 옵션은만 사용할 수 있는 경우 [/std:c + + 17](std-specify-language-standard-version.md) 또는 [/std:latest](std-specify-language-standard-version.md) 를 사용할 수 있습니다. **/Zc:noexceptTypes** ISO C + + 17 표준에 맞게 기본적으로 사용 됩니다. [관대 한 /-](permissive-standards-conformance.md) 옵션이 적용 되지 않습니다 **/Zc:noexceptTypes**합니다. 이 옵션을 지정 하 여 해제 **/Zc:noexceptTypes-** 의 C + + 14 동작으로 되돌리려면 `noexcept` 때 **/std::C + + 17** 또는 **/std::latest** 지정 됩니다.
 
 Visual Studio 2017 15.5 버전부터, c + + 컴파일러 진단 C + + 17 모드의 선언에 더 많은 일치 하지 않는 예외 사양 시기는 [관대 한 /-](permissive-standards-conformance.md) 옵션을 지정 합니다.
 
@@ -84,12 +84,12 @@ Visual C++의 규칙과 관련된 문제에 대한 자세한 내용은 [Nonstand
 
 1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.
 
-1. 선택 된 **명령줄** 속성 페이지에는 **C/c + +** 폴더입니다.
+1. 선택 된 **구성 속성** > **C/c + +** > **명령줄** 속성 페이지.
 
 1. 수정 된 **추가 옵션** 포함할 속성을 **/Zc:noexceptTypes** 또는 **/Zc:noexceptTypes-** 선택한 후 **확인**합니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[/Zc (규칙)](../../build/reference/zc-conformance.md)  
+[/Zc(규칙)](../../build/reference/zc-conformance.md)  
 [noexcept](../../cpp/noexcept-cpp.md)  
-[예외 사양 (throw)](../../cpp/exception-specifications-throw-cpp.md)  
+[예외 사양(throw)](../../cpp/exception-specifications-throw-cpp.md)  
