@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d527a4e0647fe0e8471e168841a93512f4d1a9e8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f534432fbf7ff723cac1448bc3a26474f3b323bb
+ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2017"></a>Visual Studio 2015와 Visual Studio 2017 간의 C++ 이진 호환성
 
@@ -34,7 +34,8 @@ ms.lasthandoff: 12/21/2017
 
 1) 정적 라이브러리 또는 개체 파일이 /GL 컴파일러 스위치를 사용하여 컴파일된 경우.  
 
-2) 응용 프로그램에서 사용하는 재배포 가능 라이브러리의 버전 번호가 해당 응용 프로그램을 컴파일하는 데 사용된 도구 집합보다 작을 경우. 즉, 플랫폼 도구 집합 v141을 사용하여 프로그램을 컴파일하는 경우 응용 프로그램에서 사용하는 모든 재배포 가능 라이브러리는 v141 이상으로 컴파일되어야 합니다.  
+2) 응용 프로그램을 컴파일하고 연결하는 데 사용하는 도구 집합 보다 버전이 높은 도구 집합을 사용하여 빌드된 라이브러리를 사용한 경우 예를 들어 도구 집합 19.12를 사용하여 컴파일되고 연결된 프로그램은 19.0부터 19.12으로 컴파일된 라이브러리를 사용할 수 있습니다. Visual Studio 2013 이전에서 생성된 라이브러리와 19.x 프로그램을 연결하는 작업은 지원되지 않습니다.
+
 
 ## <a name="see-also"></a>참고 항목  
 
