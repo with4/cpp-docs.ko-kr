@@ -147,6 +147,7 @@
 ##### [/Zc:threadSafeInit(스레드로부터 안전한 로컬 정적 초기화)](zc-threadsafeinit-thread-safe-local-static-initialization.md)
 ##### [/Zc:throwingNew(operator new throw 가정)](zc-throwingnew-assume-operator-new-throws.md)
 ##### [/Zc:trigraphs(삼중자 대체)](zc-trigraphs-trigraphs-substitution.md)
+##### [/Zc:twoPhase-(2단계 이름 조회를 사용하지 않도록 설정)](zc-twophase.md)
 ##### [/Zc:wchar_t(wchar_t를 네이티브 형식으로 인식)](zc-wchar-t-wchar-t-is-native-type.md)
 #### [/Zf(더 빠른 PDB 생성)](zf.md)
 #### [/Zg(함수 프로토타입 생성)](zg-generate-function-prototypes.md)
