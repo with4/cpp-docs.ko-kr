@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c96cd6ad904439f556f2baa51602353ea00c5ac7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="help-files-html-help"></a>도움말 파일(HTML 도움말)
 다음 파일을 선택 하 여 응용 프로그램에 HTML 도움말에 대 한 형식의 도움말 지원 추가할 때 생성 됩니다는 **상황에 맞는 도움말** 확인란을 선택 하면 다음 **HTML 도움말 형식** 는 에서[고급 기능](../mfc/reference/advanced-features-mfc-application-wizard.md) MFC 응용 프로그램 마법사의 페이지입니다.  

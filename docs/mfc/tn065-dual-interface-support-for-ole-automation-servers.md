@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 959938be27e66a765ee0ae9e5aef9b3c1f1aed6f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: OLE 자동화 서버에 대한 이중 인터페이스 지원
 > [!NOTE]
@@ -66,7 +66,7 @@ interface IDualAClick : IDispatch
  };  
 ```  
   
- 인터페이스 문을 위치에 있으면 메서드 및 속성에 대 한 항목을 추가 하기 시작 합니다. 이중 인터페이스에 대 한 메서드 및 이중 인터페이스의 속성 접근자 함수를 반환 하는 매개 변수 목록을 다시 정렬 해야는 `HRESULT` 특성을 가진 매개 변수로 반환 값을 전달 `[retval,out]`합니다. 속성에는 필요 합니다 모두 읽기를 추가 하려면 (`propget`) 및 쓰기 (`propput`) 동일한 id 가진 함수에 액세스 합니다. 예:  
+ 인터페이스 문을 위치에 있으면 메서드 및 속성에 대 한 항목을 추가 하기 시작 합니다. 이중 인터페이스에 대 한 메서드 및 이중 인터페이스의 속성 접근자 함수를 반환 하는 매개 변수 목록을 다시 정렬 해야는 `HRESULT` 특성을 가진 매개 변수로 반환 값을 전달 `[retval,out]`합니다. 속성에는 필요 합니다 모두 읽기를 추가 하려면 (`propget`) 및 쓰기 (`propput`) 동일한 id 가진 함수에 액세스 합니다. 예를 들어:  
   
 ```  
 [propput,
@@ -77,7 +77,7 @@ interface IDualAClick : IDispatch
     retval] BSTR* retval);
 ```  
   
- 메서드 및 속성을 정의한 후 coclass 문에서 인터페이스에 대 한 참조를 추가 해야 합니다. 예:  
+ 메서드 및 속성을 정의한 후 coclass 문에서 인터페이스에 대 한 참조를 추가 해야 합니다. 예를 들어:  
   
 ```  
 [ uuid(4B115281-32F0-11cf-AC85-444553540000) ]  
@@ -90,7 +90,7 @@ coclass Document
   
  ODL 파일을 업데이트 후 MFC의 인터페이스 맵 메커니즘을 사용 하 여 개체 클래스에 이중 인터페이스에 대 한 구현 클래스를 정의 하 고 mfc의 해당 항목을 확인 하려면 `QueryInterface` 메커니즘입니다. 에 있는 하나의 항목 필요는 `INTERFACE_PART` ODL의 인터페이스 문에서 각 항목 및 디스패치 인터페이스에 대 한 항목에 대 한 블록입니다. 각 ODL 항목으로는 **propput** 특성 라는 함수가 필요 `put_propertyname`합니다. 각 항목은 **propget** 특성 라는 함수가 필요 `get_propertyname`합니다.  
   
- 이중 인터페이스에 대 한 구현 클래스를 정의 하려면 추가 `DUAL_INTERFACE_PART` 개체 클래스 정의에 블록입니다. 예:  
+ 이중 인터페이스에 대 한 구현 클래스를 정의 하려면 추가 `DUAL_INTERFACE_PART` 개체 클래스 정의에 블록입니다. 예를 들어:  
   
 ```  
 BEGIN_DUAL_INTERFACE_PART(DualAClick,
@@ -136,7 +136,7 @@ BEGIN_INTERFACE_MAP(CAutoClickDoc,
 END_INTERFACE_MAP()  
 ```  
   
- 다음으로, 인터페이스의 구현을 입력 해야 합니다. 대부분의 경우 기존 MFC에 위임할 수는 `IDispatch` 구현 합니다. 예:  
+ 다음으로, 인터페이스의 구현을 입력 해야 합니다. 대부분의 경우 기존 MFC에 위임할 수는 `IDispatch` 구현 합니다. 예를 들어:  
   
 ```  
 STDMETHODIMP_(ULONG) CAutoClickDoc::XDualAClick::AddRef()  
@@ -239,7 +239,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::Invoke(
 }  
 ```  
   
- 개체의 메서드 및 속성 접근자 함수를 구현을 입력 해야 합니다. 메서드 및 속성 함수는 클래스 마법사를 사용 하 여 생성 하는 방법에 다시 일반적으로 위임할 수 있습니다. 그러나 변수를 직접 액세스 속성을 설정 하는 경우 코드 값을 변수에 get/put를 작성 해야 합니다. 예:  
+ 개체의 메서드 및 속성 접근자 함수를 구현을 입력 해야 합니다. 메서드 및 속성 함수는 클래스 마법사를 사용 하 여 생성 하는 방법에 다시 일반적으로 위임할 수 있습니다. 그러나 변수를 직접 액세스 속성을 설정 하는 경우 코드 값을 변수에 get/put를 작성 해야 합니다. 예를 들어:  
   
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)  
@@ -262,7 +262,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::get_text(BSTR* retval)
 ```  
   
 ## <a name="passing-dual-interface-pointers"></a>이중 인터페이스 포인터를 전달합니다.  
- 이중 인터페이스 포인터에 전달 되지를 호출 해야 하는 경우에 특히 간단 `CCmdTarget::FromIDispatch`합니다. `FromIDispatch`MFC의에 대해서만 작동 `IDispatch` 포인터입니다. 이 해결 하는 한 가지 방법은 원본에 대 한 쿼리를 `IDispatch` 포인터 MFC에 의해 집합과 해당 포인터를 필요로 하는 함수에 전달 합니다. 예:  
+ 이중 인터페이스 포인터에 전달 되지를 호출 해야 하는 경우에 특히 간단 `CCmdTarget::FromIDispatch`합니다. `FromIDispatch` MFC의에 대해서만 작동 `IDispatch` 포인터입니다. 이 해결 하는 한 가지 방법은 원본에 대 한 쿼리를 `IDispatch` 포인터 MFC에 의해 집합과 해당 포인터를 필요로 하는 함수에 전달 합니다. 예를 들어:  
   
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_Position(
@@ -306,10 +306,10 @@ lpDisp->QueryInterface(IID_IDualAutoClickPoint, (LPVOID*)retval);
 -   응용 프로그램에서 `InitInstance` 함수를 호출을 찾습니다 `COleObjectFactory::UpdateRegistryAll`합니다. 이 호출 다음에 대 한 호출을 추가 `AfxOleRegisterTypeLib`을 지정 하는 **LIBID** 에 형식 라이브러리로 형식 라이브러리의 이름과 함께 해당:  
   
  ' ' * / 서버 응용 프로그램을 독립 실행형 시작 되는 것이 좋습니다 / * / / 손상 된 경우 시스템 레지스트리를 업데이트 합니다.  
-    m_server 합니다. UpdateRegistry(OAT_DISPATCH_OBJECT);
+    m_server.UpdateRegistry(OAT_DISPATCH_OBJECT);
 
  COleObjectFactory::UpdateRegistryAll(); * / / DUAL_SUPPORT_START * / / 형식 라이브러리가 등록 되어 있거나 이중 인터페이스 작동 하지 않습니다 있는지 확인 합니다.  
-AfxOleRegisterTypeLib(AfxGetInstanceHandle(), LIBID_ACDual, _T("AutoClik.TLB")); * / / DUAL_SUPPORT_END  
+AfxOleRegisterTypeLib(AfxGetInstanceHandle(), LIBID_ACDual, _T("AutoClik.TLB")); *// DUAL_SUPPORT_END  
  ```  
   
 ## Modifying Project Build Settings to Accommodate Type Library Changes  
@@ -330,7 +330,7 @@ AfxOleRegisterTypeLib(AfxGetInstanceHandle(), LIBID_ACDual, _T("AutoClik.TLB"));
     미리 컴파일된 헤더와 하지 구축 해야 합니다.  
       #<a name="include-ole2h"></a>< ole2.h >를 포함 합니다.  
       #<a name="include-initguidh"></a>< d. h >를 포함 합니다.  
-      #<a name="include-acdualh"></a>"acdual.h"를 포함 합니다.  
+      #<a name="include-acdualh"></a>include "acdual.h"  
  ```  
   
 3.  On the **Build** menu, click **Settings**, and then select INITIIDS.CPP from the file list for each configuration.  
@@ -350,12 +350,12 @@ AfxOleRegisterTypeLib(AfxGetInstanceHandle(), LIBID_ACDual, _T("AutoClik.TLB"));
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)  
 {  
-    METHOD_PROLOGUE (CAutoClickDoc, DualAClick)  
+    METHOD_PROLOGUE(CAutoClickDoc, DualAClick)  
     TRY_DUAL(IID_IDualAClick) {* / / MFC는 자동으로 유니코드 BSTR에서 변환 * / / Ansi CString, 필요한 경우...  
-    pThis m_str-> = newText;  
+    pThis->m_str = newText;  
     NOERROR를 반환 합니다.  
  }  
-    CATCH_ALL_DUAL}  
+    CATCH_ALL_DUAL }  
 ```  
   
  `CATCH_ALL_DUAL` takes care of returning the correct error code when an exception occurs. `CATCH_ALL_DUAL` converts an MFC exception into OLE Automation error-handling information using the **ICreateErrorInfo** interface. (An example `CATCH_ALL_DUAL` macro is in the file MFCDUAL.H in the [ACDUAL](../visual-cpp-samples.md) sample. The function it calls to handle exceptions, `DualHandleException`, is in the file MFCDUAL.CPP.) `CATCH_ALL_DUAL` determines the error code to return based on the type of exception that occurred:  
@@ -365,7 +365,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
  ```  
     hr = MAKE_HRESULT(SEVERITY_ERROR,
     FACILITY_ITF,   
- (e-> m_wCode + 0x200));
+ (e->m_wCode + 0x200));
 
  ```  
   
@@ -390,25 +390,25 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 ```  
 STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::AddRef()   
 {  
-    METHOD_PROLOGUE (CAutoClickDoc, SupportErrorInfo)   
-    반환 pThis ExternalAddRef();->
+    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
+    return pThis->ExternalAddRef();
 
 }   
 STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::Release()   
 {   
-    METHOD_PROLOGUE (CAutoClickDoc, SupportErrorInfo)   
-    반환 pThis ExternalRelease();->
+    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
+    return pThis->ExternalRelease();
 
 }   
-STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::QueryInterface (REFIID iid, LPVOID ppvObj)   
+STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::QueryInterface( REFIID iid, LPVOID* ppvObj)   
 {   
-    METHOD_PROLOGUE (CAutoClickDoc, SupportErrorInfo)   
-    반환 pThis ExternalQueryInterface (& iid, ppvObj);->
+    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
+    return pThis->ExternalQueryInterface(&iid, ppvObj);
 
 }   
-STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::InterfaceSupportsErrorInfo REFIID iid)   
+STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::InterfaceSupportsErrorInfo( REFIID iid)   
 {   
-    METHOD_PROLOGUE (CAutoClickDoc, SupportErrorInfo)   
+    METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
     반환 (iid IID_IDualAClick = =) S_OK: S_FALSE;   
 }  
 ```  

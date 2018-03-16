@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 717e3979ac0f1309f24e6747946480b4e05ada42
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-error-c2635"></a>컴파일러 오류 C2635
 변환할 수 없습니다는 ' identifier1 *'는 ' identifier2\*'; 암시 가상 기본 클래스에서 변환  

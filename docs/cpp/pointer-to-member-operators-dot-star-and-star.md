@@ -27,10 +27,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6db7b7190a1374564071775ce2ea6c0777bdf567
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="pointer-to-member-operators--and--gt"></a>멤버 포인터 연산자:. * 및-&gt;*
 ## <a name="syntax"></a>구문  
@@ -100,7 +100,7 @@ m_func1
   
  ->를 포함 하는 식에서 * 연산자를 첫 번째 피연산자 형식의 "클래스 형식 포인터" 형식 지정 된 두 번째 피연산자에 해당 해야 형식의 명확 하 게에서 파생 되었거나 해당 클래스입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 클래스와 프로그램 부분을 살펴보십시오.  
   
 ```  

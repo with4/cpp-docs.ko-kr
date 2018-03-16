@@ -32,10 +32,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c4566a9b640a73687b3bf48c1346af711d450b73
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="moneyget-class"></a>money_get 클래스
 `CharType` 형식의 시퀀스에서 통화 값으로 변환을 제어하는 로캘 패싯으로 사용 가능한 개체에 대해 설명하는 템플릿 클래스입니다.  
@@ -165,7 +165,7 @@ virtual iter_type do_get(iter_type first,
   
  **money_base::space**와 동일한 요소가 형식 패턴에 나타나는 위치(해당 요소가 형식 패턴의 끝이 아닌 위치에 나타나는 경우)에서 임의의 공백 일치 여부를 확인합니다. 그렇지 않으면 내부 공백 일치 여부를 확인하지 않습니다. 요소 *ch*는 [use_facet](../standard-library/locale-functions.md#use_facet) < [ctype](../standard-library/ctype-class.md)\< **CharType**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). [is](../standard-library/ctype-class.md#is)( **ctype_base::space**, *ch*)가 **true**이면 공백으로 간주합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   `do_get`을 호출하는 [get](#get)에 대한 예제를 참조하세요.  
   
 ##  <a name="get"></a>  money_get::get  
@@ -212,7 +212,7 @@ iter_type get(iter_type first,
 ### <a name="remarks"></a>설명  
  두 멤버 함수는 반환 [do_get](#do_get)`(first, last, Intl, Iosbase, State, val)`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // money_get_get.cpp  

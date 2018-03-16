@@ -1,7 +1,7 @@
 ---
 title: "/Zc:threadSafeInit (스레드로부터 안전한 로컬 정적 초기화) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/96/2018
+ms.date: 03/14/2018
 ms.technology:
 - cpp-tools
 ms.topic: article
@@ -22,11 +22,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0d44b807a244ea96a982dc2363f90beceb0806b
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: c0a809e0137ccdf03318eab64f5af1db542906c4
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="zcthreadsafeinit-thread-safe-local-static-initialization"></a>/Zc:threadSafeInit (스레드로부터 안전한 로컬 정적 초기화)
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/15/2018
 
 ## <a name="syntax"></a>구문
 
-**/Zc:threadSafeInit**[`-`]
+> **/Zc:threadSafeInit**[**-**]
 
 ## <a name="remarks"></a>설명
 
@@ -58,7 +58,7 @@ Visual C++의 규칙과 관련된 문제에 대한 자세한 내용은 [Nonstand
 
 1. 수정 된 **추가 옵션** 포함할 속성을 **/Zc:threadSafeInit** 또는 **/Zc:threadSafeInit-** 선택한 후 **확인**합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [컴파일러 옵션](../../build/reference/compiler-options.md)<br/>
 [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)<br/>

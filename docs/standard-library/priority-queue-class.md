@@ -36,10 +36,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2d3c103673029f33d1d7eb36cce431c9b46d0270
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="priorityqueue-class"></a>priority_queue 클래스
 항상 가장 크거나 우선 순위가 가장 높은 일부 기본 컨테이너 형식의 최상위 요소에 대한 액세스를 제한하는 기능 제한을 제공하는 템플릿 컨테이너 어댑터 클래스입니다. priority_queue에 새 요소를 추가하고 priority_queue의 최상위 요소를 검사하거나 제거할 수 있습니다.  
@@ -119,7 +119,7 @@ typedef Container container_type;
   
  `Container`에 대한 자세한 내용은 [priority_queue 클래스](../standard-library/priority-queue-class.md) 항목의 설명 섹션을 참조하세요.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   `container_type`을 선언하고 사용하는 방법에 대한 예제는 [priority_queue](#priority_queue)의 예제를 참조하세요.  
   
 ##  <a name="empty"></a>  priority_queue::empty  
@@ -132,7 +132,7 @@ bool empty() const;
 ### <a name="return-value"></a>반환 값  
  priority_queue가 비어 있으면 **true**이고 비어 있지 않으면 **false**입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // pqueue_empty.cpp  
@@ -176,7 +176,7 @@ void pop();
 ### <a name="remarks"></a>설명  
  멤버 함수를 적용하려면 priority_queue는 비어 있지 않아야 합니다. priority_queue의 최상위 위치에는 항상 컨테이너에서 가장 큰 요소가 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // pqueue_pop.cpp  
@@ -265,7 +265,7 @@ priority_queue(InputIterator first, InputIterator last, const Traits&_comp, cons
   
  범위를 복사 하는 마지막 세 명의 생성자 [* 첫 번째, 마지막 *) 일부 컨테이너의 값을 사용 하는 클래스의 비교 함수의 유형을 지정 하는 명시적인의 증가 따라 priority_queue 초기화 **특성** 및 `container_type`.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // pqueue_ctor.cpp  
@@ -390,7 +390,7 @@ void push(const Type& val);
 ### <a name="remarks"></a>설명  
  priority_queue의 최상위 위치에는 컨테이너에서 가장 큰 요소가 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // pqueue_push.cpp  
@@ -432,7 +432,7 @@ size_type size() const;
 ### <a name="return-value"></a>반환 값  
  priority_queue의 현재 길이입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // pqueue_size.cpp  
@@ -471,7 +471,7 @@ typedef typename Container::size_type size_type;
 ### <a name="remarks"></a>설명  
  이 형식은 priority_queue에 의해 조정되는 기본 컨테이너의 `size_type`과 동일한 의미입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#size)에 대한 예제를 참조하세요.  
   
 ##  <a name="top"></a>  priority_queue::top  
@@ -487,7 +487,7 @@ const_reference top() const;
 ### <a name="remarks"></a>설명  
  멤버 함수를 적용하려면 priority_queue는 비어 있지 않아야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // pqueue_top.cpp  
@@ -529,7 +529,7 @@ typedef typename Container::value_type value_type;
 ### <a name="remarks"></a>설명  
  이 형식은 priority_queue에 의해 조정되는 기본 컨테이너의 `value_type`과 동일한 의미입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // pqueue_value_type.cpp  

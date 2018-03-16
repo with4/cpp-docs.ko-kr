@@ -21,10 +21,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: aa6285504a194d909dec7a446437ca9f584272a9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-declarations"></a>선언자 개요
 "선언"은 식별자 집합에 대한 해석 및 특성을 지정합니다. 식별자에 의해 이름이 지정된 개체나 함수용으로 저장소를 예약하는 선언은 "정의"라고도 합니다. 변수, 함수 및 형식에 대한 C 선언에는 다음과 같은 구문이 사용됩니다.  

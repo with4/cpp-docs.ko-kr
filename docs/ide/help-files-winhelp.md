@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a5698f7001512c5a4f8c45b5c787f35c9ce0ca6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="help-files-winhelp"></a>도움말 파일(WinHelp)
 선택 하 여 응용 프로그램에 도움말 지원 WinHelp 형식의 추가할 때 다음 파일이 생성 됩니다는 **상황에 맞는 도움말** 확인란을 선택 하면 다음 **WinHelp 형식** 는 에서[고급 기능](../mfc/reference/advanced-features-mfc-application-wizard.md) MFC 응용 프로그램 마법사의 페이지입니다.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 |*Projname*.hpj|*Projname*\hlp|소스 파일|프로그램 또는 컨트롤의 도움말 파일을 만드는 도움말 컴파일러에서 사용 되는 프로젝트 파일입니다.|  
 |*Projname*.rtf|*Projname*\hlp|프로젝트|.Hpj 파일을 사용자 지정 하는 방법 및을 편집할 수 있습니다 하는 서식 파일 항목을 포함 합니다.|  
 |Makehelp.bat|*Projname*|소스 파일|프로젝트를 빌드하려면 도움말 프로젝트를 컴파일할 때 시스템에서 사용 합니다.|  
-|위치|*Projname*|리소스 파일|표준 도움말 파일 항목에서 글머리 기호 목록을 나타내는 데 사용 합니다.|  
+|Bullet.bmp|*Projname*|리소스 파일|표준 도움말 파일 항목에서 글머리 기호 목록을 나타내는 데 사용 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Visual C++ 프로젝트용 파일 형식](../ide/file-types-created-for-visual-cpp-projects.md)

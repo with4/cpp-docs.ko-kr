@@ -18,10 +18,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 13f65f403cac43551b787abab15713fb9ffab618
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="linker-tools-error-lnk2038"></a>링커 도구 오류 LNK2038
 
@@ -55,6 +55,6 @@ Visual Studio는 런타임 오류 또는 기타 예기치 않은 동작을 일�
 
 빌드의 일부로 타사 라이브러리를 구성 하려고 시도할 때이 오류를 표시 하는 경우를 사용해 [Vcpkg](../../vcpkg.md), Visual c + + 패키지 관리자를 설치 하 여 라이브러리를 빌드합니다. 크기가 크고 점점 Vcpkg에서는 [타사 라이브러리 목록이](https://github.com/Microsoft/vcpkg/tree/master/ports), 구성 속성 및 프로젝트의 일부분으로 빌드가 성공한 경우에 필요한 종속성을 가져오거나 설정 합니다. 자세한 내용은 참조는 관련 [Visual c + + 블로그](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/) 게시 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [링커 도구 오류 및 경고](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)

@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 073715c72dfad83490b377b5d55e1169297be1ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>예외: 버전 3.0의 예외 매크로 변경 사항
 고급 항목입니다.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [예외가 다시 throw](#_core_re.2d.throwing_exceptions)  
   
-##  <a name="_core_exception_types_and_the_catch_macro"></a>예외 형식 및 CATCH 매크로  
+##  <a name="_core_exception_types_and_the_catch_macro"></a> 예외 형식 및 CATCH 매크로  
  MFC의 이전 버전에서의 **CATCH** 예외의 형식이 결정 됩니다, 즉, catch 쪽에서; 매크로 MFC 런타임 형식 정보 예외의 형식을 결정 하는 데 사용 합니다. 그러나 C + + 예외와 예외 형식은 항상에 따라 결정 됩니다 throw 사이트 throw 되는 예외 개체의 형식입니다. 드물긴 하지만 throw 된 개체의 형식에서 throw 된 개체에 대 한 포인터의 유형이 다른 비 호환성 그러면 됩니다.  
   
  다음 예제는 MFC 버전 3.0 및 이전 버전 간의 이러한 차이의 결과입니다.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/21/2017
   
  이 문제를 해결 하려면 throw 식에서 함수 호출 코드에 이동한 실제 예외를 생성할 때 컴파일러에 알려진 형식의 예외를 throw 합니다.  
   
-##  <a name="_core_re.2d.throwing_exceptions"></a>예외가 다시 Throw  
+##  <a name="_core_re.2d.throwing_exceptions"></a> 예외가 다시 Throw  
  Catch 블록에 있는 것 같은 예외 포인터 throw 할 수 없습니다.  
   
  이 코드의 이전 버전에서는 유효 하지만 갖습니다 예를 들어 버전 3.0의 예기치 않은 결과:  

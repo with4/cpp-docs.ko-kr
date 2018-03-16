@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: efdf3f67e488af0e7c20c882552b18c533a031b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="semantics-of-expressions"></a>식의 의미
 식은 해당 연산자의 그룹화 및 우선 순위에 따라 계산됩니다. ([연산자 우선순위 및 결합성](../cpp/cpp-built-in-operators-precedence-and-associativity.md) 에 [어휘 규칙](../cpp/lexical-conventions.md), 연산자가 식에 적용 하는 c + + 관계를 표시 합니다.)  
@@ -80,10 +80,10 @@ int main()
   
 |필요한 형식|허용되는 형식|  
 |-------------------|-------------------|  
-|*type*|`const`*유형*<br /> `volatile`*유형*<br /> *형식*&<br /> `const`*유형*&<br /> `volatile`*유형*&<br /> `volatile const`*유형*<br /> `volatile const`*유형*&|  
-|*형식*\*|*형식*\*<br /> `const`*유형*\*<br /> `volatile`*유형*\*<br /> `volatile const`*유형*\*|  
-|`const`*유형*|*type*<br /> `const`*유형*<br />`const`*유형*&|  
-|`volatile`*유형*|*type*<br /> `volatile`*유형*<br /> `volatile`*유형*&|  
+|*type*|`const` *type*<br /> `volatile` *type*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *type*<br /> `volatile const` *type*&|  
+|*type*\*|*type*\*<br /> `const` *type*\*<br /> `volatile` *type*\*<br /> `volatile const` *type*\*|  
+|`const` *type*|*type*<br /> `const` *type*<br />`const` *type*&|  
+|`volatile` *type*|*type*<br /> `volatile` *type*<br /> `volatile` *type*&|  
   
  항상 이전 규칙을 조합하여 사용할 수 있으므로 포인터가 필요한 지점에 volatile 개체에 대한 const 포인터를 제공할 수 있습니다.  
   
@@ -105,7 +105,7 @@ func( i, ++i );
   
 -   논리 AND 연산자(&&)의 왼쪽 피연산자. 계속하기 전에 논리 AND 연산자의 왼쪽 피연산자가 완전히 계산되고 의도하지 않은 모든 결과가 완료됩니다. 논리 AND 연산자의 오른쪽 피연산자가 계산된다는 보장은 없습니다.  
   
--   논리 OR 연산자 (&#124; &#124;)의 왼쪽된 피연산자. 계속하기 전에 논리 OR 연산자의 왼쪽 피연산자가 완전히 계산되고 의도하지 않은 모든 결과가 완료됩니다. 논리 OR 연산자의 오른쪽 피연산자가 계산된다는 보장은 없습니다.  
+-   논리 OR 연산자의 왼쪽 피연산자 (&#124;&#124;). 계속하기 전에 논리 OR 연산자의 왼쪽 피연산자가 완전히 계산되고 의도하지 않은 모든 결과가 완료됩니다. 논리 OR 연산자의 오른쪽 피연산자가 계산된다는 보장은 없습니다.  
   
 -   쉼표 연산자의 왼쪽 피연산자. 계속하기 전에 쉼표 연산자의 왼쪽 피연산자가 완전히 계산되고 의도하지 않은 모든 결과가 완료됩니다. 쉼표 연산자의 두 피연산자는 항상 계산됩니다.  
   

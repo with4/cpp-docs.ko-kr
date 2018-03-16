@@ -18,10 +18,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 476e4e23b22527accaa095d80b827c95aed58c15
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="24-work-sharing-constructs"></a>2.4 작업 공유 구문
 작업 공유 생성자 배포 발생 하는 팀의 멤버 간에 연결 된 문 실행 합니다. 작업 공유 지시문은 새 스레드를 시작 하지 않으며 없습니다 묵시적된 장벽 작업 공유 구문에 대 한 항목에.  

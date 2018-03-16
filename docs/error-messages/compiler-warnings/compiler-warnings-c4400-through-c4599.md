@@ -35,7 +35,6 @@ f1_keywords:
 - C4457
 - C4458
 - C4459
-- C4464
 - C4472
 - C4474
 - C4475
@@ -105,7 +104,6 @@ helpviewer_keywords:
 - C4457
 - C4458
 - C4459
-- C4464
 - C4472
 - C4474
 - C4475
@@ -152,11 +150,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 750f0cdd1b22a1ed72d569a6bf85646ee34b2aea
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 9843c3725022ff500d31b90677192c4178c42596
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>컴파일러 경고 C4400 C4599 통해
 
@@ -177,7 +175,7 @@ ms.lasthandoff: 02/21/2018
 |[컴파일러 경고(수준 1) C4405](../../error-messages/compiler-warnings/compiler-warning-level-1-c4405.md)|'*식별자*': 식별자가 예약어|
 |[컴파일러 경고(수준 1) C4406](../../error-messages/compiler-warnings/compiler-warning-level-1-c4406.md)|무시 지시문의 피연산자|
 |[컴파일러 경고(수준 1) C4407](../../error-messages/compiler-warnings/compiler-warning-level-1-c4407.md)|멤버 표현에 다른 포인터 캐스팅, 컴파일러 코드를 생성할 수 잘못 된|
-|[컴파일러 경고(수준 4) C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)|익명 '구조체 &#124; union' 모든 데이터 멤버를 선언 하지 않았습니다.|
+|[컴파일러 경고(수준 4) C4408](../../error-messages/compiler-warnings/compiler-warning-level-4-c4408.md)|익명 ' 구조체&#124;union' 모든 데이터 멤버를 선언 하지 않았습니다.|
 |[컴파일러 경고(수준 1) C4409](../../error-messages/compiler-warnings/compiler-warning-level-1-c4409.md)|잘못 된 명령 크기|
 |[컴파일러 경고(수준 1) C4410](../../error-messages/compiler-warnings/compiler-warning-level-1-c4410.md)|피연산자 크기가 잘못 되었습니다.|
 |[컴파일러 경고(수준 1) C4411](../../error-messages/compiler-warnings/compiler-warning-level-1-c4411.md)|'*식별자*': 치환 레지스터가 되는 기호|
@@ -210,7 +208,7 @@ ms.lasthandoff: 02/21/2018
 |컴파일러 경고 (수준 1) C4442|__annotation 인수에 null 종결자를 포함 합니다.  값은 잘립니다.|
 |컴파일러 경고 (수준 1) C4443|pragma 매개 변수는 '0', '1' 또는 '2'|
 |컴파일러 경고 (수준 3) C4444|'*식별자*':이 컨텍스트에서 최상위 '__unaligned' 구현 되지 않음|
-|[컴파일러 경고(수준 1) C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|'*함수*':에 ' WinRT &#124; 관리 되는 ' 형식에서 가상 메서드는 전용일 수 없습니다.|
+|[컴파일러 경고(수준 1) C4445](../../error-messages/compiler-warnings/compiler-warning-level-1-c4445.md)|'*함수*':에 ' WinRT&#124;관리 되는 ' 형식에서 가상 메서드는 전용일 수 없습니다.|
 |컴파일러 경고 (수준 1) C4446|'*형식*': 멤버를 매핑할 수 없습니다 '*name1*'이 형식에 형식 이름으로 충돌 하기 때문입니다. 메서드가 변경 되어 '*name2*'|
 |컴파일러 경고 (수준 1) C4447|스레딩 모델이 없는 'main' 시그니처입니다. 사용 하는 것이 좋습니다. ' int main (platform:: array\<platform:: string ^ > ^ args)'입니다.|
 |컴파일러 경고 C4448|'*형식*1'는 메타 데이터에 지정 된 기본 인터페이스를 제공 하지 않습니다. 선택 하는 데: '*type2*'는 런타임에 실패할 수 있습니다.|
@@ -225,14 +223,14 @@ ms.lasthandoff: 02/21/2018
 |[컴파일러 경고(수준 4) C4457](compiler-warning-level-4-c4457.md)|선언 '*식별자*' 숨깁니다 함수 매개 변수|
 |[컴파일러 경고(수준 4) C4458](compiler-warning-level-4-c4458.md)|선언 '*식별자*' 클래스 멤버를 숨깁니다|
 |[컴파일러 경고 (수준 4) C4459](compiler-warning-level-4-c4459.md)|선언 '*식별자*' 전역 선언을 숨깁니다.|
-|[컴파일러 경고(수준 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|' WinRT &#124; 관리 되는 ' 연산자 '*연산자*', 참조로 매개 변수를 전달 합니다. ' WinRT &#124; 관리 되는 ' 연산자 '*연산자*'c + + 연산자에서 다른 의미 체계의 '*cpp_operator*', 값으로 전달 하 시겠습니까?|
+|[컴파일러 경고(수준 4) C4460](../../error-messages/compiler-warnings/compiler-warning-level-4-c4460.md)|' WinRT&#124;관리 되는 ' 연산자 '*연산자*', 참조로 매개 변수를 전달 합니다. ' WinRT&#124;관리 되는 ' 연산자 '*연산자*'c + + 연산자에서 다른 의미 체계의 '*cpp_operator*', 값으로 전달 하 시겠습니까?|
 |[컴파일러 경고(수준 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|'*classname*':이 클래스에 종료 자가 '! *종료자*' 소멸자가 되지 않은 있지만 ' ~*dtor*'|
 |[컴파일러 경고 (수준 1, 오류) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'*형식*': 형식의 GUID를 확인할 수 없습니다. 프로그램은 런타임에 실패할 수 있습니다.|
 |[컴파일러 경고 (수준 4) C4463](compiler-warning-level-4-c4463.md)|오버플로. 할당 '*값*' 비트 필드에 값을 포함할 수 있는'*min_value*'to'*max_value*'|
-|컴파일러 경고 (수준 4) C4464|include에 상대 경로 포함 '..'|
+|[컴파일러 경고 (수준 4) C4464](../../error-messages/compiler-warnings/c4464.md)|include에 상대 경로 포함 '..'|
 |[컴파일러 경고(수준 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|부동 소수점 제어 pragma /clr에서 무시 됩니다.|
 |[컴파일러 경고 (수준 4) C4471](compiler-warning-level-4-c4471.md)|'*열거형*': 범위가 지정 되지 않은 열거형의 정방향 선언에 (int로 가정)는 내부 형식이 있어야 합니다.|
-|컴파일러 경고 (수준 1) c 4472|'*식별자*'가 네이티브 열거형: 선언 하려면 액세스 지정자 (전용/공용) 추가 ' WinRT &#124; 관리 되는 ' 열거형|
+|컴파일러 경고 (수준 1) c 4472|'*식별자*'가 네이티브 열거형: 선언 하려면 액세스 지정자 (전용/공용) 추가 ' WinRT&#124;관리 되는 ' 열거형|
 |[컴파일러 경고 (수준 1) C4473](c4473.md)|'*함수*': 서식 문자열에 대 한 전달 된 인수가 부족 합니다.|
 |컴파일러 경고 (수준 3) C4474|'*함수*': 서식 문자열에 전달 된 인수가 너무 많습니다.|
 |컴파일러 경고 (수준 3) C4475|'*함수*': 길이 한정자 '*한정자*'형식 필드 문자를 사용할 수 없습니다'*문자*' 서식 지정자|

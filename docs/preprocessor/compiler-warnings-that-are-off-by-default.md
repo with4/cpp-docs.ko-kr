@@ -15,11 +15,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 619e2c517305246937ed7428eadbcf40be31fe5b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3ef690e42088294ac0cebfa2d153f56ccca2cb5c
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>기본적으로 해제 되어 있는 컴파일러 경고
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/23/2018
    **/ 벽** 기본적으로 해제 되어 있는 모든 경고를 활성화 합니다. 사용 하 여 개별 경고 해제할 수 있습니다이 옵션을 사용 하는 경우는 [/wd](../build/reference/compiler-option-warning-level.md) 옵션입니다.
 
 - [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
-   이 경고를 통해  *nnnn*  수준에서 *l*합니다.
+   이 경고를 통해 *nnnn* 수준에서 *l*합니다.
 
 다음 경고는 기본적으로 해제되어 있습니다.
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 02/23/2018
 |[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (수준 4)|'*class1*': 가상 기본으로 인해/v d 2의 개체 레이아웃이 변경 됩니다 '*class2*'|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (수준 4)|가상 기본 사이의 dynamic_cast '*class1*'to'*class2*' 일부 컨텍스트에서 실패할 수 있습니다|
 |C4444 (수준 3)|이 컨텍스트에서는 최상위 '__unaligned'가 구현되지 않았습니다.|
-|C4464 (수준 4)|include에 상대 경로 포함 '..'|
+|[C4464](../error-messages/compiler-warnings/c4464.md) (수준 4)|include에 상대 경로 포함 '..'|
 |C 4472 (수준 1)|'*식별자*'가 네이티브 열거형: 관리 되는 열거형을 선언 하려면 액세스 지정자 (전용/공용)를 추가 합니다.|
 |[C4514](../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md) (수준 4)|'*함수*': 참조 되지 않은 인라인 함수를 제거|
 |[C4536](../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md) (수준 4)|'type name': 형식-이름이 메타 데이터 한계인 초과 '*제한*' 문자|
@@ -103,7 +103,7 @@ ms.lasthandoff: 02/23/2018
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) (수준 1)|'*함수*': 전용이 아닌 멤버의 시그니처에 어셈블리 전용 네이티브 형식 '*native_type*'|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) (수준 4)|'*함수*': 함수를 인라이닝 하지 못했습니다.|
 |[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md) (수준 3)|32비트 float 결과를 메모리에 저장하면 성능이 저하될 수 있습니다.|
-|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|volatile 액세스 '*식*' /volatile:\<iso &#124; ms > __iso_volatile_load/store 내장 함수를 사용 하 여 고려 설정;|
+|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|volatile 액세스 '*식*' /volatile:\<iso&#124;ms > __iso_volatile_load/store 내장 함수를 사용 하 여 고려 설정;|
 |C4749 (수준 4)|조건에 따라 지원: non standard-레이아웃 형식에 적용 된 offsetof '*형식*'|
 |C4767 (수준 4)|섹션 이름 '*기호*' 8 자 보다 긺 및 링커에서 잘립니다|
 |C4768 (수준 3)|링크 사양이 이전 __declspec 특성이 무시 됩니다.|

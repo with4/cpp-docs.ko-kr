@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0980f048b9be411308b159dea0ceaa71f8eee563
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="active-documents-on-the-internet"></a>인터넷의 액티브 문서
 액티브 문서는 일반적인 포함된 개체에 대 한 확장을 제공합니다. 액티브 문서는 다중 페이지 수 있으며 전체 클라이언트 영역에 표시 됩니다. 기존 메뉴 협상을 수행 하며 현재 위치와 서버 응용 프로그램에서 열려 있는 창에 편집할 수 있습니다. 해치 테두리가 작은 사각형으로 표시를 하는 대신 액티브 문서는 전체 프레임 및 항상 내부 활성입니다.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/21/2017
 |-------------------------|---------------------------------|  
 |복합 파일을 저장 메커니즘으로 사용 합니다.|`IPersistStorage`.|  
 |파일에서 만들기를 포함 하는 활성 문서의 기본 포함 기능을 지원 합니다.|`IPersistFile`, `IOleObject` 및 `IDataObject`|  
-|에서는 내부 활성화.|`IOleInPlaceObject`및 `IOleInPlaceActiveObject` (컨테이너의를 사용 하 여 `IOleInPlaceSite` 및 **IOleInPlaceFrame** 인터페이스).|  
+|에서는 내부 활성화.|`IOleInPlaceObject` 및 `IOleInPlaceActiveObject` (컨테이너의를 사용 하 여 `IOleInPlaceSite` 및 **IOleInPlaceFrame** 인터페이스).|  
 |이러한 새 인터페이스를 포함 하는 액티브 문서 확장을 지원 합니다. 일부 인터페이스는 선택적입니다.|`IOleDocument`, `IOleDocumentView`, `IOleCommandTarget` 및 `IPrint`가 있습니다.|  
   
  MFC에서는 활성 문서에 포함 된 서버 지원 기존 확장에 대 한 지원을 제공 합니다.  
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="add-active-document-support-to-a-new-application"></a>새 응용 프로그램 액티브 문서 지원 추가  
  액티브 문서 지원을 사용 하 여 새 응용 프로그램을 만들려면: MFC 응용 프로그램 마법사에는 **복합 문서 지원** 페이지에서 "Select 복합 문서 지원"에 선택 **풀 서버** 또는  **컨테이너/풀 서버**, "추가 옵션 선택"에서 대 한 확인란을 선택 하 고 **액티브 문서 서버**합니다.  
   
-##  <a name="_core_convert_an_existing_mfc_in.2d.process_server_to_an_activex_document_server"></a>액티브 문서 서버를 기존 MFC In-process 서버 변환  
+##  <a name="_core_convert_an_existing_mfc_in.2d.process_server_to_an_activex_document_server"></a> 액티브 문서 서버를 기존 MFC In-process 서버 변환  
  응용 프로그램 버전 4.2 이전 버전의 Visual c + +로 만든 있고 이미 in-process 서버 이면 다음 클래스를 변경 하 여 액티브 문서 지원을 추가할 수 있습니다.  
   
 |클래스 형식|이전에서 파생|파생 되도록 변경|  

@@ -214,10 +214,10 @@ helpviewer_keywords:
 ms.workload:
 - cplusplus
 ms.openlocfilehash: eb5b068f30703119d0771725a9cb9980a1ca65ea
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 함수
 ||||  
@@ -286,7 +286,7 @@ template<class ForwardIterator , class BinaryPredicate>
   
  요소 간의 일치를 확인하는 데 사용되는 `operator==`는 피연산자 간에 동등 관계를 적용해야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_adj_fnd.cpp  
@@ -450,7 +450,7 @@ template<class ForwardIterator,  class Type,  class BinaryPredicate>
   
  알고리즘의 복잡성은 임의 액세스 반복기에 대 한 로그 및 선형 단계에 비례하여 수 이며 그렇지 않은 경우 ( `last`  -  `first`).  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_bin_srch.cpp  
@@ -563,7 +563,7 @@ template<class InputIterator, class OutputIterator>
   
  **copy** 알고리즘은 반복기가 가리키는 값만 수정하며 대상 범위에 있는 요소에 새 값을 할당합니다. 새 요소를 만드는 데 사용할 수 없고 빈 컨테이너에 요소를 직접 삽입할 수 없습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_copy.cpp  
@@ -656,7 +656,7 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
   
  이 `copy_backward` 알고리즘은 반복기가 가리키는 값만 수정하며 대상 범위에 있는 요소에 새로운 값을 할당합니다. 새 요소를 만드는 데 사용할 수 없고 빈 컨테이너에 요소를 직접 삽입할 수 없습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_copy_bkwd.cpp  
@@ -798,7 +798,7 @@ template<class InputIterator, class Type>
   
  이 알고리즘은 템플릿 함수 [count_if](../standard-library/algorithm-functions.md#count_if)가 포함된 모든 조건자를 충족하는 요소를 계산하기 위해 일반화됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_count.cpp  
@@ -862,7 +862,7 @@ template<class InputIterator, class Predicate>
 ### <a name="remarks"></a>설명  
  이 템플릿 함수는 "지정한 값과 일치" 조건자를 다른 임의의 조건자로 교체하는 방식으로 [count](../standard-library/algorithm-functions.md#count) 알고리즘을 일반화한 것입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_count_if.cpp  
@@ -968,7 +968,7 @@ bool equal(
   
  피연산자 간에 대칭, 재귀 및 전이적인 동등 관계를 적용하려면 `operator==`나 사용자 정의 조건자 모두 필요하지 않습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 #include <iostream>  
@@ -1047,7 +1047,7 @@ pair<ForwardIterator, ForwardIterator> equal_range(
   
  알고리즘의 복잡성은 임의 액세스 반복기에 대 한 로그 및 선형 단계에 비례하여 수 이며 그렇지 않은 경우 ( `last`  -  `first`).  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_equal_range.cpp  
@@ -1189,7 +1189,7 @@ void fill(
 ### <a name="remarks"></a>설명  
  대상 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다. 복잡성은 범위의 크기와 선형입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_fill.cpp  
@@ -1257,7 +1257,7 @@ OutputIterator fill_n(
 ### <a name="remarks"></a>설명  
  대상 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다. 복잡성은 범위의 크기와 선형입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_fill_n.cpp  
@@ -1379,7 +1379,7 @@ ForwardIterator1 find_end(
   
  참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_find_end.cpp  
@@ -1519,7 +1519,7 @@ ForwardIterator1 find_first_of(
   
  참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 각 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_find_first_of.cpp  
@@ -1645,7 +1645,7 @@ InputIterator find_if(
 ### <a name="remarks"></a>설명  
  이 템플릿 함수는 [find](../standard-library/algorithm-functions.md#find) 알고리즘을 일반화한 것으로, "equals a specific value" 조건자를 임의의 조건자로 바꿉니다. 이 조건자와 논리적으로 반대되는 항목(조건자를 충족하지 않는 첫 번째 요소를 찾음)은 [find_if_not](../standard-library/algorithm-functions.md#find_if_not)을 참조하세요.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // cl.exe /W4 /nologo /EHsc /MTd  
@@ -1791,7 +1791,7 @@ Function for_each(
   
  복잡성은 선형 이며 최대 ( `last`  -   `first`) 비교 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_for_each.cpp  
@@ -1932,7 +1932,7 @@ void generate(
   
  복잡성은 선형 이며 정확히 ( `last`  -   `first`)에 필요한 생성기에 대 한 호출입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_generate.cpp  
@@ -2003,7 +2003,7 @@ void generate_n(
   
  복잡성은 필요한 생성기에 대해 정확하게 `Count`개 선형 호출입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // cl.exe /EHsc /nologo /W4 /MTd  
@@ -2099,7 +2099,7 @@ bool includes(
   
  알고리즘의 복잡성은 선형 이며 최대 2 \* (( *last1-first1*)-(* last2-first2 *))-1 비어 있지 않은 소스 범위에 대 한 비교 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_includes.cpp  
@@ -2286,7 +2286,7 @@ void inplace_merge(
   
  알고리즘은 임시 버퍼에 메모리를 할당하므로 복잡성은 사용 가능한 메모리에 따라 달라집니다. 최상의 경우는 선형 이며 충분 한 메모리를 사용할 수 있는 경우 (* 성-*)-1 비교; 최악의 경우에는 보조 메모리가 사용할 수 없을 경우 *N* 로그 *(N)*여기서  *N* = (* 성-*).  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_inplace_merge.cpp  
@@ -2554,7 +2554,7 @@ bool is_permutation(
   
  두 번째 및 네 번째 템플릿 함수는 `operator==(X, Y)`를 `Pred(X, Y)`로 대체한다는 점을 제외하고 동일하게 동작합니다. 올바르게 동작하려면 조건자가 대칭, 재귀 및 전이여야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   다음 예제에서는 `is_permutation`을 사용하는 방법을 보여 줍니다.  
   
 ```cpp  
@@ -2699,7 +2699,7 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
   
  입력 정방향 반복기의 값 형식은 동일한 값을 가져야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_iter_swap.cpp  
@@ -2881,7 +2881,7 @@ bool lexicographical_compare(
   
 -   부등식이 발견되지 않고 시퀀스가 동일한 수의 요소를 가지고 있어서, 시퀀스가 같으며 비교 결과가 false가 될 때까지  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_lex_comp.cpp  
@@ -3022,7 +3022,7 @@ ForwardIterator lower_bound(
   
  알고리즘의 복잡성은 임의 액세스 반복자에 대해서는 로그이고, 다른 경우에는 ( `last - first`)에 비례하는 단계 수와 함께 선형입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_lower_bound.cpp  
@@ -3151,7 +3151,7 @@ void make_heap(
   
  복잡성은 선형 3 요구 \* (* 성-*) 비교 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_make_heap.cpp  
@@ -3238,7 +3238,7 @@ template<class Type, class Pr>
 ### <a name="remarks"></a>설명  
  `max` 알고리즘은 대체로 매개 변수로 전달된 개체를 사용하지 않습니다. 대부분의 C++ 표준 라이브러리 알고리즘은 매개 변수로 전달된 반복기가 위치를 지정하는 요소 범위에서 작동합니다. 요소 범위에서 작동하는 함수가 필요한 경우 [max_element](../standard-library/algorithm-functions.md#max_element)를 대신 사용합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_max.cpp  
@@ -3436,7 +3436,7 @@ ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryP
   
  복잡성은 선형: ( `last`  -   `first`)-1 비교는 비어 있지 않은 범위에 대 한 필요 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_max_element.cpp  
@@ -3596,7 +3596,7 @@ OutputIterator merge(
   
  [list class](../standard-library/list-class.md) 클래스는 두 목록의 요소를 병합하는 멤버 함수 "병합"을 제공합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_merge.cpp  
@@ -3750,7 +3750,7 @@ template<class Type, class Pr>    Type min (
 ### <a name="remarks"></a>설명  
  `min` 알고리즘은 대체로 매개 변수로 전달된 개체를 사용하지 않습니다. 대부분의 C++ 표준 라이브러리 알고리즘은 매개 변수로 전달된 반복기가 위치를 지정하는 요소 범위에서 작동합니다. 요소 범위를 사용하는 함수가 필요한 경우 [min_element](../standard-library/algorithm-functions.md#min_element)를 사용합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_min.cpp  
@@ -3947,7 +3947,7 @@ ForwardIterator min_element(ForwardIterator first, ForwardIterator last, BinaryP
   
  복잡성은 선형: ( `last`  -  `first`)-1 비교는 비어 있지 않은 범위에 대 한 필요 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_min_element.cpp  
@@ -4218,7 +4218,7 @@ mismatch(
   
  피연산자 간에 대칭, 재귀 및 전이적인 동등 관계를 적용하려면 사용자 정의 조건자가 필요하지 않습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   다음 예제에서는 불일치 사용 방법을 보여 줍니다. C++03 오버로드는 예기치 않은 결과를 생성하는 방법을 보여 주는 목적으로만 표시됩니다.  
   
 ```cpp  
@@ -4398,7 +4398,7 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
   
  복잡성은 선형 이며 최대 (* 성-*) / 2 바꿉니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_next_perm.cpp  
@@ -4538,7 +4538,7 @@ After another next_permutation of vector v1,
 ```  
   
 ##  <a name="nth_element"></a>  nth_element  
- 정확 하 게 찾습니다 요소의 범위를 분할는  *n* 범위에서 시퀀스의 th 요소는 그 앞에 있는 모든 요소 보다 작거나 같은 및 다음 시퀀스의 모든 요소는 보다 크거나 같은 재구성 합니다.  
+ 요소 범위를 분할하여 범위에서 시퀀스의 n번째 요소 앞의 모든 요소가 n번째 요소보다 작거나 같고 그 다음의 요소는 크거나 같도록 *n*번째 요소를 정확하게 찾습니다.  
   
 ```  
 template<class RandomAccessIterator>  
@@ -4565,13 +4565,13 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
 ### <a name="remarks"></a>설명  
  참조된 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
   
- `nth_element` 알고리즘 하위 범위에 있는 요소 하거나 측면을 보장 하지 않습니다의  *n* th 요소 정렬 됩니다. 따라서 선택된 요소 아래의 범위에 있는 요소를 정렬하는 `partial_sort`보다 보증이 줄어들고, 더 낮은 범위의 순서가 필요하지 않은 경우 `partial_sort`에 대한 더 빠른 대안으로 사용될 수 있습니다.  
+ `nth_element` 알고리즘은 *n*번째 요소의 어느 한쪽 하위 범위에 있는 요소가 정렬되는 것을 보증하지 않습니다. 따라서 선택된 요소 아래의 범위에 있는 요소를 정렬하는 `partial_sort`보다 보증이 줄어들고, 더 낮은 범위의 순서가 필요하지 않은 경우 `partial_sort`에 대한 더 빠른 대안으로 사용될 수 있습니다.  
   
  둘 중 어느 요소도 다른 것보다 작지 않은 경우 두 요소는 등가이지만, 반드시 같은 것은 아닙니다.  
   
  정렬 복잡성의 평균을 기준으로 선형 * 성-* 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_nth_elem.cpp  
@@ -4700,7 +4700,7 @@ template<class RandomAccessIterator, class BinaryPredicate>
   
  평균 부분 정렬 복잡성은 *O*(( `last`- `first`) log ( `sortEnd`- `first`))입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_partial_sort.cpp  
@@ -4818,7 +4818,7 @@ template<class InputIterator, class RandomAccessIterator, class BinaryPredicate>
   
  등가가 아닌 요소는 정렬되고 등가인 요소는 정렬되지 않도록 엄밀히 약한 정렬을 제공해야 합니다. 둘 중 어느 요소도 다른 것보다 작지 않은 경우 두 요소는 보다 작음 조건에서 등가이지만, 반드시 같음은 아닙니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_partial_sort_copy.cpp  
@@ -4926,7 +4926,7 @@ template<class BidirectionalIterator, class Predicate>
   
  복잡성은 선형:는 ( `last`  -   `first`)의 응용 프로그램 `comp` 자에서 ( `last`  -   `first`) / 2 바꿉니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_partition.cpp  
@@ -5066,7 +5066,7 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
   
  복잡성은 필요한 로그 최대 로그 (* 성-*) 비교 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_pop_heap.cpp  
@@ -5165,7 +5165,7 @@ template<class BidirectionalIterator, class BinaryPredicate>
   
  복잡성은 선형 이며 최대 ( `last`  -   `first`) / 2 바꿉니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_prev_perm.cpp  
@@ -5338,7 +5338,7 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
   
  복잡성은 필요한 로그 최대 로그 ( *성-*) 비교 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_push_heap.cpp  
@@ -5441,7 +5441,7 @@ template<class ForwardIterator, class Type>
   
  [list class](../standard-library/list-class.md)에는 **remove**의 더욱 효율적인 멤버 함수 버전이 있습니다. 이 버전은 포인터로 다시 링크합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_remove.cpp  
@@ -5523,7 +5523,7 @@ template<class InputIterator, class OutputIterator, class Type>
   
  복잡성은 선형; ( `last`  -   `first`) 비교 및 최대 같은지 ( `last`  -   `first`) 할당 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_remove_copy.cpp  
@@ -5604,7 +5604,7 @@ OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIte
   
  이러한 함수의 동작 방식에 대한 자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_remove_copy_if.cpp  
@@ -5687,7 +5687,7 @@ template<class ForwardIterator, class Predicate>
   
  List에는 remove의 더욱 효율적인 멤버 함수 버전이 있습니다. 이 버전은 포인터를 다시 링크합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_remove_if.cpp  
@@ -5767,7 +5767,7 @@ void replace(ForwardIterator first, ForwardIterator last, const Type& _OldVal, c
   
  복잡성은 선형; ( `last`  -   `first`) 비교 및 최대 같은지 ( `last`  -   `first`) 개의 새 값 할당이 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_replace.cpp  
@@ -5847,7 +5847,7 @@ int main( ) {
   
  복잡성은 선형:는 ( `last`  -   `first`) 비교 및 최대 같은지 ( `last`  -   `first`) 개의 새 값 할당이 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_replace_copy.cpp  
@@ -5946,7 +5946,7 @@ OutputIterator replace_copy_if(
   
  복잡성은 선형; ( `last`  -   `first`) 비교 및 최대 같은지 ( `last`  -   `first`) 개의 새 값 할당이 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_replace_copy_if.cpp  
@@ -6043,7 +6043,7 @@ void replace_if(ForwardIterator first, ForwardIterator last, Predicate pred, con
   
  복잡성은 선형:는 ( `last`  -   `first`) 비교 및 최대 같은지 ( `last`  -   `first`) 개의 새 값 할당이 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_replace_if.cpp  
@@ -6106,7 +6106,7 @@ template<class BidirectionalIterator>
 ### <a name="remarks"></a>설명  
  참조된 소스 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_reverse.cpp  
@@ -6176,7 +6176,7 @@ OutputIterator reverse_copy(
 ### <a name="remarks"></a>설명  
  참조된 소스 및 대상 범위는 유효해야 하고 모든 포인터는 역참조 가능해야 하며 시퀀스 내에서 처음 위치에서 증분하여 마지막 위치까지 도달할 수 있어야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_reverse_copy.cpp  
@@ -6240,7 +6240,7 @@ template<class ForwardIterator>
   
  복잡성은 선형 이며 최대 ( `last`  -   `first`) 바꿉니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_rotate.cpp  
@@ -6349,7 +6349,7 @@ OutputIterator rotate_copy(
   
  복잡성은 선형 이며 최대 ( `last`  -   `first`) 바꿉니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_rotate_copy.cpp  
@@ -6455,7 +6455,7 @@ template<class ForwardIterator1, class ForwardIterator2, class Predicate>
   
  평균 복잡성은 검색 범위의 크기에 대해 선형이며, 가장 나쁜 경우의 복잡성도 검색 대상 시퀀스의 크기에 대해 선형입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_search.cpp  
@@ -6600,7 +6600,7 @@ template<class ForwardIterator1, class Diff2, class Type, class BinaryPredicate>
   
  복잡성은 검색 결과의 크기와 관련하여 선형입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_search_n.cpp  
@@ -6741,7 +6741,7 @@ OutputIterator set_difference(
   
  알고리즘의 복잡성은 선형 이며 최대 2 \* (( *last1-first1*)-( *last2-first2*))-1 비어 있지 않은 소스 범위에 대 한 비교 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_set_diff.cpp  
@@ -6918,7 +6918,7 @@ OutputIterator set_intersection(
   
  알고리즘의 복잡성은 선형 이며 최대 2 \* (( *last1-first1*) + ( *last2-first2*))-1 비어 있지 않은 소스 범위에 대 한 비교 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_set_intersection.cpp  
@@ -7089,7 +7089,7 @@ OutputIterator set_symmetric_difference(
   
  알고리즘의 복잡성은 선형 이며 최대 2 \* ((*last1-first1*)-(*last2-first2*))-1 비어 있지 않은 소스 범위에 대 한 비교 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_set_sym_diff.cpp  
@@ -7265,7 +7265,7 @@ OutputIterator set_union(
   
  알고리즘의 복잡성은 선형 이며 최대 2 \* (( *last1-first1*)-( *last2-first2*))-1 비교 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_set_union.cpp  
@@ -7443,7 +7443,7 @@ template<class RandomAccessIterator, class Predicate>
   
  정렬 복잡성 평균이 *O*( *N* 로그 *N*) 여기서 *N* =  *마지막에 첫 번째*.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_sort.cpp  
@@ -7554,7 +7554,7 @@ template<class RandomAccessIterator, class Predicate>
   
  복잡성은 최대 *N* 로그 *N*여기서 *N* = ( *성-*).  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_sort_heap.cpp  
@@ -7634,7 +7634,7 @@ BidirectionalIterator stable_partition(
   
  *Pr* ( *a*,  *b*)가 false이고 *Pr* ( *b*,  *a*)도 false인 경우 *a*와 *b* 요소는 등가이지만 반드시 같음은 아닙니다. 여기서 *Pr*은 매개 변수로 지정된 조건자입니다. **stable_ partition** 알고리즘은 안정적이며 등가 요소의 상대적인 순서가 유지될 것임을 보증합니다. **partition** 알고리즘은 반드시 원래 순서를 유지할 필요는 없습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_stable_partition.cpp  
@@ -7711,7 +7711,7 @@ void stable_sort(
   
  실행 시간 복잡도 `stable_sort` 사용 가능한 메모리의 양에 따라 달라 집니다 (충분 한 메모리 부여 된 경우) 최상의 경우 하지만 *O*( *N* 로그 *N*) 및 최악의 경우 *O*( *N* (로그 *N* ) 2), 여기서 *N* =  *성-이름입니다.* 일반적으로 **sort** 알고리즘이 `stable_sort`보다 훨씬 빠릅니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_stable_sort.cpp  
@@ -7803,7 +7803,7 @@ template<class Type, size_t N>
 ### <a name="remarks"></a>설명  
  첫 번째 오버로드는 개별 개체에서 작동하도록 설계되었습니다. 두 번째 오버로드는 두 배열 간에 개체의 내용을 교환합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_swap.cpp  
@@ -7889,7 +7889,7 @@ ForwardIterator2 swap_ranges(
   
  복잡성은 선형 이며 `last1`  -   `first1` 교체를 수행 합니다. 멤버 함수는 일반적으로 일관된 복잡성을 가지고 있기 때문에, 동일한 유형의 컨테이너에서 요소를 교환하는 경우 해당 컨테이너의 `swap` 멤버 함수를 사용해야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_swap_ranges.cpp  
@@ -7997,7 +7997,7 @@ OutputIterator transform(
   
  복잡성은 선형 이며 최대 (`last1` -  `first1`) 비교 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_transform.cpp  
@@ -8127,7 +8127,7 @@ template<class ForwardIterator, class Predicate>
   
  이러한 알고리즘은 연관 컨테이너에서 사용할 수 없습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_unique.cpp  
@@ -8256,7 +8256,7 @@ OutputIterator unique_copy( InputIterator first,
   
  복잡성은 선형 요구 ( `last`  -   `first`) 비교 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_unique_copy.cpp  
@@ -8374,7 +8374,7 @@ template<class ForwardIterator, class Type, class Predicate>
   
  알고리즘의 복잡성은 임의 액세스 반복자에 대해서는 로그이고, 다른 경우에는 ( `last - first`)에 비례하는 단계 수와 함께 선형입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // alg_upper_bound.cpp  

@@ -28,10 +28,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e73e7aa3ff62782c6ebd3b5a8728aa05e78b1784
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="parameters"></a>매개 변수
 인수는 함수 호출을 통해 함수에 전달되는 값의 이름입니다. 매개 변수는 함수가 수신할 수 있는 값입니다. 함수 프로토타입에서 함수 이름 뒤의 괄호에는 함수의 전체 매개 변수 및 해당 형식 목록이 포함됩니다. 매개 변수 선언은 형식, 크기 및 매개 변수에 저장된 값의 식별자를 지정합니다.  

@@ -104,10 +104,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: dc280212a4d37147c8af9cd2921e12516c529d13
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="hashmap-class"></a>hash_map 클래스
 > [!NOTE]
@@ -247,7 +247,7 @@ class hash_map
 typedef list<typename Traits::value_type, typename Traits::allocator_type>::allocator_type allocator_type;  
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   `allocator_type`을 사용하는 예제는 [get_allocator](#get_allocator)의 예제를 참조하세요.  
   
 ##  <a name="at"></a>  hash_map::at  
@@ -277,7 +277,7 @@ const Type& at(const Key& key) const;
  인수 키 값을 찾을 수 없는 경우 이 함수는 [out_of_range 클래스](../standard-library/out-of-range-class.md) 클래스의 개체를 throw합니다.  
   
 
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_at.cpp  
@@ -320,7 +320,7 @@ iterator begin();
 ### <a name="return-value"></a>반환 값  
  hash_map의 첫 번째 요소 또는 빈 hash_map 다음의 위치 주소를 지정하는 양방향 반복기입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_begin.cpp  
@@ -378,7 +378,7 @@ const_iterator cbegin() const;
 ### <a name="return-value"></a>반환 값  
  [hash_map](../standard-library/hash-map-class.md)의 첫 번째 요소 또는 빈 `hash_map` 다음의 위치 주소를 지정하는 상수 양방향 반복기입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_cbegin.cpp  
@@ -427,7 +427,7 @@ const_iterator cend() const;
  `cend`에서 반환한 값은 역참조되지 않아야 합니다.  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_cend.cpp  
@@ -471,7 +471,7 @@ void clear();
 ### <a name="remarks"></a>설명  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   다음 예제에서는 hash_map::clear 멤버 함수의 사용을 보여 줍니다.  
   
 ```  
@@ -528,7 +528,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
  요소에 대한 키의 값에 액세스하려면 `cIter` **-> first**를 사용합니다. 이 항목은 (\* `cIter`) **.first**와 같습니다. 요소에 대한 매핑된 데이텀의 값에 액세스하려면 `cIter` **-> second**를 사용합니다. 이 항목은 (\* `cIter`) **.second**와 같습니다.  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   `const_iterator`를 사용하는 예제는 [begin](#begin)의 예제를 참조하세요.  
   
 ##  <a name="const_pointer"></a>  hash_map::const_pointer  
@@ -562,7 +562,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::co
 ### <a name="remarks"></a>설명  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_const_ref.cpp  
@@ -626,7 +626,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
  요소에 대한 키의 값에 액세스하려면 `crIter` -> **first**를 사용합니다. 이 항목은 (\* `crIter`) **.first**와 같습니다. 요소에 대한 매핑된 데이텀의 값에 액세스하려면 `crIter` -> **second**를 사용합니다. 이 항목은 (\* `crIter`). **first**와 같습니다.  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   `const_reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rend](#rend)의 예제를 참조하세요.  
   
 ##  <a name="count"></a>  hash_map::count  
@@ -655,7 +655,7 @@ size_type count(const Key& key) const;
  고유한 결합형 컨테이너인 hash_map의 경우 0 또는 1입니다.  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   다음 예제에서는 hash_map::count 멤버 함수를 사용하는 방법을 보여 줍니다.  
   
 ```  
@@ -720,7 +720,7 @@ const_reverse_iterator crbegin() const;
  `crbegin`은 `hash_map`을 역방향으로 반복할 때 사용할 수 있습니다.  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_crbegin.cpp  
@@ -773,7 +773,7 @@ const_reverse_iterator crend() const;
  `crend`에서 반환한 값은 역참조되지 않아야 합니다.  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_crend.cpp  
@@ -814,7 +814,7 @@ The last element of the reversed hash_map hm1 is 3.
 typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::difference_type difference_type;  
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_diff_type.cpp  
@@ -902,7 +902,7 @@ emplace(
 ### <a name="remarks"></a>설명  
  요소의 [hash_map::value_type](#value_type)은 쌍으로, 요소의 값은 첫 번째 구성 요소가 키 값과 동일하고 두 번째 구성 요소가 요소의 데이터 값과 동일한 정렬된 쌍입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_emplace.cpp  
@@ -961,7 +961,7 @@ iterator emplace_hint(
   
  삽입 지점이 `_Where` 바로 뒤에 오면 로그 시간 대신 분할 상수 시간에 삽입이 발생할 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_emplace_hint.cpp  
@@ -1007,7 +1007,7 @@ bool empty() const;
 ### <a name="remarks"></a>설명  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_empty.cpp  
@@ -1062,7 +1062,7 @@ iterator end();
   
  **end**에서 반환한 값을 역참조해서는 안 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_end.cpp  
@@ -1135,7 +1135,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="remarks"></a>설명  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_equal_range.cpp  
@@ -1233,7 +1233,7 @@ size_type erase(const key_type& key);
  멤버 함수는 예외를 throw하지 않습니다.  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   다음 예제에서는 hash_map::erase 멤버 함수의 사용을 보여 줍니다.  
   
 ```  
@@ -1343,7 +1343,7 @@ const_iterator find(const Key& key) const;
  **find**의 반환 값이 [const_iterator](#const_iterator)에 할당되는 경우에는 hash_map 개체를 수정할 수 없습니다. **find**의 반환 값이 [iterator](#iterator)에 할당되는 경우에는 hash_map 개체를 수정할 수 있습니다.  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_find.cpp  
@@ -1412,7 +1412,7 @@ Allocator get_allocator() const;
  hash_map 클래스의 할당자는 클래스가 저장소를 관리하는 방법을 지정합니다. C++ 표준 라이브러리 컨테이너 클래스와 함께 제공되는 기본 할당자를 사용하면 대부분의 프로그래밍 요구 사항을 충족할 수 있습니다. 할당자 클래스를 직접 작성하고 사용하는 방법에 대해서는 고급 C++ 항목에서 다룹니다.  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_get_allocator.cpp  
@@ -1604,7 +1604,7 @@ iterator insert(
   
  세 번째 멤버 함수는 지정된 set의 *[First, Last)* 범위에서 반복기가 주소를 지정하는 각 요소에 해당하는 hash_map에 요소 값의 시퀀스를 삽입합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_insert.cpp  
@@ -1732,7 +1732,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
  형식 **iterator**는 요소값을 수정할 때 사용할 수 있습니다.  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   **iterator**를 선언하고 사용하는 방법의 예제는 [begin](#begin)의 예제를 참조하세요.  
   
 ##  <a name="key_comp"></a>  hash_map::key_comp  
@@ -1757,7 +1757,7 @@ key_compare key_comp() const;
  정의합니다. 이 함수는 `left`가 앞에 오며 정렬 순서가 `right`와 같지 않으면 **true**를 반환합니다.  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_key_comp.cpp  
@@ -1827,7 +1827,7 @@ typedef Traits key_compare;
  `Traits`에 대한 자세한 내용은 [hash_map 클래스](../standard-library/hash-map-class.md) 항목을 참조하세요.  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   `key_compare`를 선언하고 사용하는 방법에 대한 예제는 [key_comp](#key_comp)의 예제를 참조하세요.  
   
 ##  <a name="key_type"></a>  hash_map::key_type  
@@ -1847,7 +1847,7 @@ typedef Key key_type;
  `Key`에 대한 자세한 내용은 [hash_map 클래스](../standard-library/hash-map-class.md) 항목의 설명 섹션을 참조하세요.  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   `key_type`을 선언하고 사용하는 방법에 대한 예제는 [value_type](#value_type)의 예제를 참조하세요.  
   
 ##  <a name="lower_bound"></a>  hash_map::lower_bound  
@@ -1875,7 +1875,7 @@ const_iterator lower_bound(const Key& key) const;
 ### <a name="remarks"></a>설명  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_lower_bound.cpp  
@@ -1943,7 +1943,7 @@ typedef Type mapped_type;
  `Type`에 대한 자세한 내용은 [hash_map 클래스](../standard-library/hash-map-class.md) 항목을 참조하세요.  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   `key_type`을 선언하고 사용하는 방법에 대한 예제는 [value_type](#value_type)의 예제를 참조하세요.  
   
 ##  <a name="max_size"></a>  hash_map::max_size  
@@ -1963,7 +1963,7 @@ size_type max_size() const;
 ### <a name="remarks"></a>설명  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_max_size.cpp  
@@ -2019,7 +2019,7 @@ Type& operator[](Key&& key);
   
  `operator[]`를 사용하여 요소를 삽입하는 경우 반환된 참조는 삽입이 기존 요소를 변경하는지 또는 새 요소를 생성하는지 여부를 나타내지 않습니다. 멤버 함수 [find](../standard-library/map-class.md#find) 및 [insert](../standard-library/map-class.md#insert)는 지정된 키가 포함된 요소가 삽입 전에 이미 있는지 여부를 확인하는 데 사용할 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_op_ref.cpp  
@@ -2104,7 +2104,7 @@ hash_map& operator=(hash_map&& right);
 ### <a name="remarks"></a>설명  
  `hash_map`는 `operator=`에서 기존 요소를 지운 후에 `right`의 내용을 `hash_map`로 복사하거나 이동합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_operator_as.cpp  
@@ -2183,7 +2183,7 @@ reverse_iterator rbegin();
  `rbegin`은 hash_map을 역방향으로 반복할 때 사용할 수 있습니다.  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_rbegin.cpp  
@@ -2256,7 +2256,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::re
 ### <a name="remarks"></a>설명  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_reference.cpp  
@@ -2332,7 +2332,7 @@ reverse_iterator rend();
  `rend`에서 반환한 값은 역참조되지 않아야 합니다.  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_rend.cpp  
@@ -2416,7 +2416,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
  요소에 대한 키의 값에 액세스하려면 `rIter` -> **first**를 사용합니다. 이 항목은 (\* `rIter`). **first**와 같습니다. 요소에 대한 매핑된 데이터의 값에 액세스하려면 `rIter` -> **second**를 사용합니다. 이 항목은 (\* `rIter`). **first**와 같습니다.  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   `reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rbegin](#rbegin)의 예제를 참조하세요.  
   
 ##  <a name="size"></a>  hash_map::size  
@@ -2436,7 +2436,7 @@ size_type size() const;
 ### <a name="remarks"></a>설명  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   다음 예제에서는 hash_map::size 멤버 함수를 사용하는 방법을 보여 줍니다.  
   
 ```  
@@ -2482,7 +2482,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
 ### <a name="remarks"></a>설명  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#size)의 예제를 참조하세요.  
   
 ##  <a name="swap"></a>  hash_map::swap  
@@ -2504,7 +2504,7 @@ void swap(hash_map& right);
  멤버 함수는 해당 요소를 교환할 두 hash_map의 요소를 지정하는 참조, 포인터 또는 반복기를 무효화하지 않습니다.  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_swap.cpp  
@@ -2583,7 +2583,7 @@ const_iterator upper_bound(const Key& key) const;
 ### <a name="remarks"></a>설명  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_upper_bound.cpp  
@@ -2657,7 +2657,7 @@ value_compare value_comp() const;
  정의합니다. 이 함수는 `left`의 키 값이 앞에 오고 정렬 순서의 `right` 키 값과 같지 않으면 **true**를 반환합니다.  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_value_comp.cpp  
@@ -2717,7 +2717,7 @@ typedef pair<const Key, Type> value_type;
  `value_type` 되도록 선언 `pair`  *\< * **const**[key_type](#key_type), [mapped_type](#mapped_type)*> * 및 not `pair`  **\<key_type, mapped_type >** 비상수 반복기 또는 참조를 사용 하 여 연관 컨테이너의 키 변경 되지 않을 수 있습니다.  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // hash_map_value_type.cpp  

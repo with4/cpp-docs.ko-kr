@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 253c3b389bd0411e6b5096e914b6a844c8f40805
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="segment"></a>SEGMENT
 호출 프로그램 세그먼트 정의 *이름* 세그먼트 특성이  
@@ -50,7 +50,7 @@ name ENDS
 |**DWORD**|다음 2 배 워드를 사용 가능한 주소 (2 배 워드 당 4 바이트)입니다.|  
 |**P A R A**|다음 단락을 사용할 수 있는 주소 (단락 당 16 바이트)입니다.|  
 |**PAGE**|다음 사용 가능한 페이지 주소 (페이지당 256 바이트)입니다.|  
-|**ALIGN**(*n*)|다음 사용 가능한  *n* 번째 바이트 주소입니다. 자세한 내용은 설명 섹션을 참조 하십시오.|  
+|**ALIGN**(*n*)|다음 사용 가능한 *n*번째 바이트 주소입니다. 자세한 내용은 설명 섹션을 참조 하십시오.|  
   
  이 매개 변수를 지정 하지 않으면 **P a r a** 기본적으로 사용 됩니다.  
   

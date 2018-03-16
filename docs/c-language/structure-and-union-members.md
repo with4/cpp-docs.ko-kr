@@ -27,10 +27,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2183aead53ee02f36bc982e4f33ad174346da5f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="structure-and-union-members"></a>구조체 및 공용 구조체 멤버
 "멤버 선택 식"은 구조체와 공용 구조체의 멤버를 참조합니다. 이러한 식은 선택한 멤버의 값과 형식을 갖게 됩니다.  

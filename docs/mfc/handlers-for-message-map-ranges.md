@@ -38,10 +38,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 02b44288d21ab2df68468b0e39cb1ee35b7b8810
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="handlers-for-message-map-ranges"></a>메시지 맵 범위에 대한 처리기
 이 문서에서는 다양 한 메시지 (메시지 한 개를 하나의 함수에 매핑) 대신 단일 메시지 처리기 함수에 매핑하는 방법을 설명 합니다.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [컨트롤 Id의 범위에 대 한 예](#_core_example_for_a_range_of_control_ids)  
   
-##  <a name="_core_writing_the_message.2d.map_entry"></a>메시지 맵 항목을 기록  
+##  <a name="_core_writing_the_message.2d.map_entry"></a> 메시지 맵 항목을 기록  
  안에. CPP 파일에서 다음 예제와 같이 메시지 맵 항목을 추가 합니다.  
   
  [!code-cpp[NVC_MFCMessageHandling#6](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_1.cpp)]  
@@ -95,7 +95,7 @@ ms.lasthandoff: 12/21/2017
   
      세 번째 매크로 `ON_CONTROL_RANGE`, 추가 첫 번째 매개 변수: 같은 컨트롤 알림 메시지 **EN_CHANGE**합니다.  
   
-##  <a name="_core_declaring_the_handler_function"></a>처리기 함수 선언  
+##  <a name="_core_declaring_the_handler_function"></a> 처리기 함수 선언  
  처리기 함수 선언에 추가 된 합니다. H 파일입니다. 다음 코드는 아래 표시 된 대로 이러한 바인딩을 보여 주는,을 보여줍니다.  
   
  [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
@@ -104,7 +104,7 @@ ms.lasthandoff: 12/21/2017
   
  처리기 함수를 업데이트 하기 위한 매개 변수 요구 사항에 대 한 자세한 내용은 참조 [예제에 대 한 명령 Id 범위](#_core_example_for_a_range_of_command_ids)합니다.  
   
-##  <a name="_core_example_for_a_range_of_command_ids"></a>명령 범위 Id에 대 한 예제  
+##  <a name="_core_example_for_a_range_of_command_ids"></a> 명령 범위 Id에 대 한 예제  
  MFC 샘플에서 확대/축소 명령은 같은 명령을 처리 하는 예로 범위를 사용 하면 [HIERSVR](../visual-cpp-samples.md)합니다. 이 명령은 300% 보통 크기의 25% 사이의 크기 조정 보기를 확대 합니다. 확대/축소 명령은이 모양의 메시지 맵 항목으로 처리 하는 범위를 사용 하는 HIERSVR의 뷰 클래스:  
   
  [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]  
@@ -127,7 +127,7 @@ ms.lasthandoff: 12/21/2017
   
  처리기 함수를 단일 명령에 단일 매개 변수를 정상적으로 수행에 대 한 업데이트 `pCmdUI`, 형식의 **CCmdUI\***합니다. 처리기 함수는 달리 메시지 맵 범위에 대 한 업데이트 처리기 함수는 추가 매개 변수가 필요 하지 않습니다 `nID`, 형식의 **UINT**합니다. 사용자가 실제로 선택 되는 명령은 지정 하는 데 필요한 명령 ID에서 발견 되는 `CCmdUI` 개체입니다.  
   
-##  <a name="_core_example_for_a_range_of_control_ids"></a>컨트롤의 범위 Id에 대 한 예제  
+##  <a name="_core_example_for_a_range_of_control_ids"></a> 컨트롤의 범위 Id에 대 한 예제  
  다른 흥미로운 사례 컨트롤 Id의 범위에 대 한 컨트롤 알림 메시지를 단일 처리기에 매핑된다 합니다. 사용자에 10 개의 단추를 클릭할 수 있다고 가정 합니다. 모든 10 단추 처리기에 매핑할 메시지-맵 항목은 다음과 같습니다.  
   
  [!code-cpp[NVC_MFCMessageHandling#10](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_5.cpp)]  

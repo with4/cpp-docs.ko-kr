@@ -27,10 +27,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c8fbcbb5579c63ef0cab375ec19e2afee47e97ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-multiplicative-operators"></a>곱하기 연산자
 곱하기 연산자는 곱하기(**\***), 나누기(**/**) 및 나머지(`%`) 연산을 수행합니다.  
@@ -105,7 +105,7 @@ n = i % j;
   
  **Microsoft 전용**  
   
- 나머지의 부호는 피제수의 부호와 동일합니다. 예:  
+ 나머지의 부호는 피제수의 부호와 동일합니다. 예를 들어:  
   
 ```  
 50 % -6 = 2  

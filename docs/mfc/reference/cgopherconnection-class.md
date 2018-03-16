@@ -30,10 +30,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d669ebc954b73d848e22dc373704ab3434074274
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection 클래스
 Gopher 인터넷 서버 연결을 관리합니다.  
@@ -82,7 +82,7 @@ class CGopherConnection : public CInternetConnection
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxinet.h  
   
-##  <a name="cgopherconnection"></a>CGopherConnection::CGopherConnection  
+##  <a name="cgopherconnection"></a>  CGopherConnection::CGopherConnection  
  이 멤버 함수를 생성 하 라고 하는 `CGopherConnection` 개체입니다.  
   
 ```  
@@ -113,7 +113,7 @@ CGopherConnection(
  FTP 서버 이름을 포함 하는 문자열에 대 한 포인터입니다.  
   
  `dwContext`  
- 작업에 대 한 컨텍스트 식별자입니다. `dwContext`반환한 작업의 상태 정보를 식별 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)합니다. 기본값은 1로 설정 그러나 작업에 대 한 특정 컨텍스트 ID를 명시적으로 할당할 수 있습니다. 개체와 수행 하는 작업 컨텍스트 ID와 가진 연결 됩니다.  
+ 작업에 대 한 컨텍스트 식별자입니다. `dwContext` 반환한 작업의 상태 정보를 식별 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)합니다. 기본값은 1로 설정 그러나 작업에 대 한 특정 컨텍스트 ID를 명시적으로 할당할 수 있습니다. 개체와 수행 하는 작업 컨텍스트 ID와 가진 연결 됩니다.  
   
  `pstrUserName`  
  사용자가 로그인의 이름을 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다. 경우 **NULL**, 기본값은 익명입니다.  
@@ -123,9 +123,9 @@ CGopherConnection(
   
 |`pstrUserName`|`pstrPassword`|FTP 서버에 전송 하는 사용자 이름|FTP 서버에 전송 하는 암호|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
-|**NULL** 또는 ""|**NULL** 또는 ""|"익명"|사용자의 전자 메일 이름|  
+|**NULL** 또는 ""|**NULL** 또는 ""|"anonymous"|사용자의 전자 메일 이름|  
 |비- **NULL** 문자열|**NULL** 또는 ""|`pstrUserName`|" "|  
-|**NULL** 비- **NULL** 문자열|**오류**|**오류**||  
+|**NULL** 비- **NULL** 문자열|**ERROR**|**ERROR**||  
 |비- **NULL** 문자열|비- **NULL** 문자열|`pstrUserName`|`pstrPassword`|  
   
  `nPort`  
@@ -134,7 +134,7 @@ CGopherConnection(
 ### <a name="remarks"></a>설명  
  만들지 마십시오는 `CGopherConnection` 직접 합니다. 대신, 호출 [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection), 만듦는 `CGopherConnection` 개체 하 고 포인터를 반환 합니다.  
   
-##  <a name="createlocator"></a>CGopherConnection::CreateLocator  
+##  <a name="createlocator"></a>  CGopherConnection::CreateLocator  
  이 멤버 함수를 찾거나 gopher 서버에서 파일 식별 gopher 로케이터 만들기를 호출 합니다.  
   
 ```  
@@ -159,7 +159,7 @@ static CGopherLocator CreateLocator(
  Gopher 문서 또는 검색할 디렉터리의 이름을 포함 하는 문자열에 대 한 포인터입니다. 경우는 `pstrDisplayString` 매개 변수는 **NULL**, gopher 서버에 대 한 기본 디렉터리 반환 됩니다.  
   
  `pstrSelectorString`  
- Gopher 서버에 전송 될 항목을 검색할 선택기 문자열에 대 한 포인터입니다. `pstrSelectorString`수 **NULL**합니다.  
+ Gopher 서버에 전송 될 항목을 검색할 선택기 문자열에 대 한 포인터입니다. `pstrSelectorString` 수 **NULL**합니다.  
   
  *dwGopherType*  
  이 지정 하는지 여부를 `pstrSelectorString` 디렉터리 또는 문서에 대 한 참조 및 gopher 또는 gopher + 요청 인지 합니다. 구조에 대 한 특성 참조 [GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) Windows sdk에서입니다.  
@@ -181,7 +181,7 @@ static CGopherLocator CreateLocator(
   
  Gopher 서버에서 정보를 검색 하기 위해 응용 프로그램 gopher 로케이터를 먼저 발생 합니다. 응용 프로그램에 다음 불투명 토큰으로 로케이터 처리 해야 합니다 (즉, 응용 프로그램 수 로케이터를 사용 하지만 직접 조작 하거나 비교). 응용 프로그램에 대 한 호출에 대 한 로케이터를 사용 하는 일반적으로 [CGopherFileFind::FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile) 정보의 특정 부분을 검색 하려면 멤버 함수입니다.  
   
-##  <a name="getattribute"></a>CGopherConnection::GetAttribute  
+##  <a name="getattribute"></a>  CGopherConnection::GetAttribute  
  Gopher 서버에서 항목에 대 한 특정 특성 정보를 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -203,7 +203,7 @@ BOOL GetAttribute(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다. Win32 함수 호출이 실패 한 경우 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) 오류의 원인을 확인 하기 위해 호출할 수 있습니다.  
   
-##  <a name="openfile"></a>CGopherConnection::OpenFile  
+##  <a name="openfile"></a>  CGopherConnection::OpenFile  
  Gopher 서버에서 파일을 열려면이 멤버 함수를 호출 합니다.  
   
 ```  

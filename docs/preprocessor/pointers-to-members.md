@@ -26,10 +26,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4313aaa38d410b8e6f46594cd9ce11269b523073
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="pointerstomembers"></a>pointers_to_members
 **C + + 전용**  
@@ -64,7 +64,7 @@ ms.lasthandoff: 02/23/2018
 > [!CAUTION]
 >  영향을 줄 소스 코드 파일에 한해 `pointers_to_members` 지시문 뒤에 `#include` pragma를 배치해야 합니다. 그러면 pragma가 다른 파일에 영향을 줄 위험이 주고 잘못해서 같은 변수, 함수 또는 클래스 이름에 대해 여러 정의를 지정하는 위험이 줄어듭니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 //   Specify single-inheritance only  

@@ -102,10 +102,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 554ea4bac3e374013a511b75f27158ad897195f7
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="multimap-class"></a>multimap 클래스
 C++ 표준 라이브러리 multimap 클래스는 각 요소가 데이터 값과 정렬 키를 갖고 있는 쌍인 컬렉션에서 데이터의 저장과 검색에 사용됩니다. 키 값은 고유할 필요가 없으며 데이터를 자동으로 정렬하는 데 사용됩니다. multimap 요소의 값은 연관된 키 값을 제외하고 직접적으로 변경할 수 있습니다. 대신, 이전 요소와 관련된 키 값을 삭제하고 새 요소와 연결된 새 키 값을 삽입해야 합니다.  
@@ -238,7 +238,7 @@ class multimap;
 typedef Allocator allocator_type;  
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   `allocator_type`을 사용하는 예제는 [get_allocator](#get_allocator)의 예제를 참조하세요.  
   
 ##  <a name="begin"></a>  multimap::begin  
@@ -253,7 +253,7 @@ iterator begin();
 ### <a name="return-value"></a>반환 값  
  multimap의 첫 번째 요소 또는 빈 multimap 다음의 위치 주소를 지정하는 양방향 반복기입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // multimap_begin.cpp  
@@ -349,7 +349,7 @@ auto i2 = Container.cend();
 void clear();
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   다음 예제에서는 multimap::clear 멤버 함수의 사용을 보여 줍니다.  
   
 ```  
@@ -400,7 +400,7 @@ typedef implementation-defined const_iterator;
   
  요소에 대한 키의 값에 액세스하려면 `cIter` -> **first**를 사용합니다. 이 항목은 (\* `cIter`). **first**와 같습니다. 요소에 대한 매핑된 데이터의 값에 액세스하려면 `cIter` -> **second**를 사용합니다. 이 항목은 (\* `cIter`). **second**와 같습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   `const_iterator`를 사용하는 예제는 [begin](#begin)의 예제를 참조하세요.  
   
 ##  <a name="const_pointer"></a>  multimap::const_pointer  
@@ -422,7 +422,7 @@ typedef typename allocator_type::const_pointer const_pointer;
 typedef typename allocator_type::const_reference const_reference;  
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // multimap_const_ref.cpp  
@@ -480,7 +480,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
   
  요소에 대한 키의 값에 액세스하려면 `crIter` -> **first**를 사용합니다. 이 항목은 (\* `crIter`). **first**와 같습니다. 요소에 대한 매핑된 데이터의 값에 액세스하려면 `crIter` -> **second**를 사용합니다. 이 항목은 (\* `crIter`). **first**와 같습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   `const_reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rend](#rend)의 예제를 참조하세요.  
   
 ##  <a name="count"></a>  multimap::count  
@@ -504,7 +504,7 @@ size_type count(const Key& key) const;
   
  키 값 `key`를 가진 요소의 수를 반환합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   다음 예제에서는 multimap::count 멤버 함수의 사용을 보여 줍니다.  
   
 ```  
@@ -564,7 +564,7 @@ const_reverse_iterator crbegin() const;
   
  `crbegin`은 `multimap`을 역방향으로 반복할 때 사용할 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // multimap_crbegin.cpp  
@@ -613,7 +613,7 @@ const_reverse_iterator crend() const;
   
  `crend`에서 반환한 값은 역참조되지 않아야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // multimap_crend.cpp  
@@ -656,7 +656,7 @@ typedef typename allocator_type::difference_type difference_type;
   
  입력 반복기 요구 사항을 충족하는 모든 반복기(set 등의 가역 컨테이너에서 지원하는 양방향 반복기 클래스 포함)에 대해 `difference_type`을 사용할 수는 있지만, 반복기 간의 빼기는 vector와 같은 임의 액세스 컨테이너가 제공하는 임의 액세스 반복기를 통해서만 지원됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // multimap_diff_type.cpp  
@@ -725,7 +725,7 @@ iterator emplace(Args&&... args);
   
  요소의 [value_type](../standard-library/map-class.md#value_type)은 쌍으로, 요소값은 첫 번째 구성 요소가 키 값과 동일하고 두 번째 구성 요소가 요소의 데이터 값과 동일한 정렬된 쌍입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // multimap_emplace.cpp  
@@ -807,7 +807,7 @@ bool empty() const;
 ### <a name="return-value"></a>반환 값  
  multimap이 비어 있으면 **true**이고 비어 있지 않으면 **false**입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // multimap_empty.cpp  
@@ -879,7 +879,7 @@ pair <iterator, iterator> equal_range (const Key& key);
   
  구성원 함수가 반환하는 `pr` 쌍의 첫 번째 반복기에 액세스하려면 `pr`. **first**를 사용하고 하한 반복기를 역참조하려면 \*( `pr`. **first**)를 사용합니다. 구성원 함수가 반환하는 `pr` 쌍의 두 번째 반복기에 액세스하려면 `pr`. **second**를 사용하고 상한 반복기를 역참조하려면 \*( `pr`. **second**)를 사용합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // multimap_equal_range.cpp  
@@ -997,7 +997,7 @@ const_iterator find(const Key& key) const;
   
  **find**의 반환 값이 **const_iterator**에 할당되는 경우 multimap 개체를 수정할 수 없습니다. **find**의 반환 값이 **iterator**에 할당되는 경우에는 multimap 개체를 수정할 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // compile with: /EHsc /W4 /MTd  
@@ -1073,7 +1073,7 @@ allocator_type get_allocator() const;
 ### <a name="remarks"></a>설명  
  multimap 클래스의 할당자는 클래스가 저장소를 관리하는 방법을 지정합니다. C++ 표준 라이브러리 컨테이너 클래스와 함께 제공되는 기본 할당자를 사용하면 대부분의 프로그래밍 요구 사항을 충족할 수 있습니다. 할당자 클래스를 직접 작성하고 사용하는 방법에 대해서는 고급 C++ 항목에서 다룹니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // multimap_get_allocator.cpp  
@@ -1202,7 +1202,7 @@ IList);
   
  생성된 요소를 제 위치에 삽입하려면, 즉 복사 또는 이동 작업을 수행하지 않으려면 [multimap::emplace](#emplace) 및 [multimap::emplace_hint](#emplace_hint)를 참조하세요.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // multimap_insert.cpp  
@@ -1309,7 +1309,7 @@ typedef implementation-defined iterator;
   
  형식 **iterator**는 요소값을 수정할 때 사용할 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   **반복기**를 선언하고 사용하는 방법의 예제는 [begin](#begin)의 예제를 참조하세요.  
   
 ##  <a name="key_comp"></a>  multimap::key_comp  
@@ -1329,7 +1329,7 @@ key_compare key_comp() const;
   
  를 정의합니다. 이 함수는 정렬 순서에서 *x*가 엄격하게 *y* 앞에 오면 true를 반환합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // multimap_key_comp.cpp  
@@ -1392,7 +1392,7 @@ typedef Traits key_compare;
   
  `Traits`에 대한 자세한 내용은 [multimap 클래스](../standard-library/multimap-class.md) 항목을 참조하세요.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   `key_compare`를 선언하고 사용하는 방법에 대한 예제는 [key_comp](#key_comp)의 예제를 참조하세요.  
   
 ##  <a name="key_type"></a>  multimap::key_type  
@@ -1407,7 +1407,7 @@ typedef Key key_type;
   
  `Key`에 대한 자세한 내용은 [multimap 클래스](../standard-library/multimap-class.md) 항목의 설명 섹션을 참조하세요.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   `key_type`를 선언하고 사용하는 방법에 대한 예제는 [value_type](#value_type)의 예제를 참조하세요.  
   
 ##  <a name="lower_bound"></a>  multimap::lower_bound  
@@ -1428,7 +1428,7 @@ const_iterator lower_bound(const Key& key) const;
   
  `lower_bound`의 반환 값이 `const_iterator`에 할당된 경우 multimap 개체는 수정할 수 없습니다. `lower_bound`의 반환 값이 **iterator**에 할당되는 경우에는 multimap 개체를 수정할 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // multimap_lower_bound.cpp  
@@ -1507,7 +1507,7 @@ typedef Type mapped_type;
   
  `Type`에 대한 자세한 내용은 [multimap 클래스](../standard-library/multimap-class.md) 항목을 참조하세요.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   `key_type`를 선언하고 사용하는 방법에 대한 예제는 [value_type](#value_type)의 예제를 참조하세요.  
   
 ##  <a name="max_size"></a>  multimap::max_size  
@@ -1520,7 +1520,7 @@ size_type max_size() const;
 ### <a name="return-value"></a>반환 값  
  multimap의 최대 허용 길이입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // multimap_max_size.cpp  
@@ -1619,7 +1619,7 @@ multimap(
   
  다음 3개 생성자는 map의 범위 `[First, Last)`를 복사하며, 범위 내에서 클래스 **Traits** 및 allocator의 비교 함수 형식을 지정하는 명시도는 계속 높아집니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // multimap_ctor.cpp  
@@ -1747,7 +1747,7 @@ multimap& operator=(multimap&& right);
 ### <a name="remarks"></a>설명  
  `multimap`는 `operator=`에서 기존 요소를 지운 후에 `right`의 내용을 `multimap`로 복사하거나 이동합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // multimap_operator_as.cpp  
@@ -1815,7 +1815,7 @@ reverse_iterator rbegin();
   
  `rbegin`은 multmap을 역방향으로 반복할 때 사용할 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // multimap_rbegin.cpp  
@@ -1880,7 +1880,7 @@ After the erasure, the first element in the reversed multimap is 2.
 typedef typename allocator_type::reference reference;  
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // multimap_ref.cpp  
@@ -1950,7 +1950,7 @@ reverse_iterator rend();
   
  `rend`에서 반환한 값은 역참조되지 않아야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // multimap_rend.cpp  
@@ -2026,7 +2026,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
   
  요소에 대한 키의 값에 액세스하려면 `rIter` -> **first**를 사용합니다. 이 항목은 (\* `rIter`). **first**와 같습니다. 요소에 대한 매핑된 데이터의 값에 액세스하려면 `rIter` -> **second**를 사용합니다. 이 항목은 (\* `rIter`). **first**와 같습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   `reverse_iterator`를 선언하고 사용하는 방법에 대한 예제는 [rbegin](#rbegin)의 예제를 참조하세요.  
   
 ##  <a name="size"></a>  multimap::size  
@@ -2039,7 +2039,7 @@ size_type size() const;
 ### <a name="return-value"></a>반환 값  
  multimap의 현재 길이입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   다음 예제에서는 multimap::size 멤버 함수를 사용하는 방법을 보여 줍니다.  
   
 ```  
@@ -2077,7 +2077,7 @@ The multimap length is now 2.
 typedef typename allocator_type::size_type size_type;  
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   `size_type`을 선언하고 사용하는 방법에 대한 예제는 [size](#size)의 예제를 참조하세요.  
   
 ##  <a name="swap"></a>  multimap::swap  
@@ -2095,7 +2095,7 @@ void swap(
 ### <a name="remarks"></a>설명  
  구성원 함수는 해당 요소를 교환할 두 multimap의 요소를 지정하는 참조, 포인터 또는 반복기를 무효화하지 않습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // multimap_swap.cpp  
@@ -2164,7 +2164,7 @@ const_iterator upper_bound(const Key& key) const;
   
  반환 값이 `const_iterator`에 할당된 경우 multimap 개체는 수정할 수 없습니다. 반환 값이 **iterator**에 할당되는 경우에는 multimap 개체를 수정할 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // multimap_upper_bound.cpp  
@@ -2235,7 +2235,7 @@ value_compare value_comp() const;
 ### <a name="remarks"></a>설명  
  multimap *m*의 두 요소 *e*1( *k*1, *d*1) 및 *e*2( *k*2, `d`2)가 `value_type` 형식의 개체이고, *k*1 및 *k*2는 `key_type` 형식의 키이며 `d`1 및 `d`2는 `mapped_type` 형식의 데이터이면 *m.*`value_comp`( *e*1, *e*2)는 *m.*`key_comp`( *k*1, *k*2)와 동일합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // multimap_value_comp.cpp  
@@ -2292,7 +2292,7 @@ The element ( 2,5 ) does not precede the element ( 1,10 ).
 typedef pair<const Key, Type> value_type;  
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // multimap_value_type.cpp  

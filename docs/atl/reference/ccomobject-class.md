@@ -28,10 +28,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 27da00e09ca88cc06b8bafed8f8601dac756fd34
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ccomobject-class"></a>CComObject 클래스
 이 클래스는 구현 **IUnknown** 집계 되지 않은 원시 개체에 대 한 합니다.  
@@ -54,7 +54,7 @@ class CComObject : public Base
 |이름|설명|  
 |----------|-----------------|  
 |[CComObject::CComObject](#ccomobject)|생성자입니다.|  
-|[CComObject:: ~ CComObject](#dtor)|소멸자입니다.|  
+|[CComObject::~CComObject](#dtor)|소멸자입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
@@ -66,7 +66,7 @@ class CComObject : public Base
 |[CComObject::Release](#release)|개체에 대 한 참조 횟수를 줄입니다.|  
   
 ## <a name="remarks"></a>설명  
- `CComObject`구현 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 집계 되지 않은 원시 개체에 대 한 합니다. 그러나에 대 한 호출이 `QueryInterface`, `AddRef`, 및 **릴리스** 에 위임 되며 `CComObjectRootEx`합니다.  
+ `CComObject` 구현 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 집계 되지 않은 원시 개체에 대 한 합니다. 그러나에 대 한 호출이 `QueryInterface`, `AddRef`, 및 **릴리스** 에 위임 되며 `CComObjectRootEx`합니다.  
   
  사용에 대 한 자세한 내용은 `CComObject`, 문서를 참조 [ATL COM 개체 기본 사항](../../atl/fundamentals-of-atl-com-objects.md)합니다.  
   
@@ -78,7 +78,7 @@ class CComObject : public Base
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="addref"></a>CComObject::AddRef  
+##  <a name="addref"></a>  CComObject::AddRef  
  개체에서 참조 횟수를 증가 시킵니다.  
   
 ```
@@ -88,7 +88,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>반환 값  
  이 함수는 개체에 새 증가 된 참조 횟수를 반환합니다. 이 값은 진단 또는 테스트에 대 한 유용할 수 있습니다.  
   
-##  <a name="ccomobject"></a>CComObject::CComObject  
+##  <a name="ccomobject"></a>  CComObject::CComObject  
  생성자는 모듈의 잠금 횟수를 증가 시킵니다.  
   
 ```
@@ -97,14 +97,14 @@ CComObject(void* = NULL);
   
 ### <a name="parameters"></a>매개 변수  
  **void\***  
- [in] 이 명명 되지 않은 매개 변수가 사용 되지 않습니다. 대응 하 여 다른 있는 **CCom***XXX*`Object`*XXX* 생성자입니다.  
+ [in] 이 명명 되지 않은 매개 변수가 사용 되지 않습니다. 대응 하 여 다른 있는 **CCom * * * XXX*`Object`*XXX* 생성자입니다.  
   
 ### <a name="remarks"></a>설명  
  소멸자 감소 것입니다.  
   
  경우는 `CComObject`-파생 된 개체를 사용 하 여 성공적으로 생성 되는 **새** 연산자, 초기 참조 횟수는 0입니다. 호출 하 여 참조 횟수가 적절 한 값 (1)을 설정 하려면는 [AddRef](#addref) 함수입니다.  
   
-##  <a name="dtor"></a>CComObject:: ~ CComObject  
+##  <a name="dtor"></a>  CComObject::~CComObject  
  소멸자입니다.  
   
 ```
@@ -115,7 +115,7 @@ CComObject();
  호출 하는 할당 된 모든 리소스를 해제 [FinalRelease](ccomobjectrootex-class.md#finalrelease), 및 모듈 잠금 횟수를 줄입니다.  
 
   
-##  <a name="createinstance"></a>CComObject::CreateInstance  
+##  <a name="createinstance"></a>  CComObject::CreateInstance  
  이 정적 함수를 사용 하면 새 **CComObject <** `Base`  **>**  개체는 오버 헤드 없이 [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)합니다.  
   
 ```
@@ -134,12 +134,12 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
  직접 필요 않는 개체에 액세스할 수 있지만 여전히 오버 헤드 없이 새 개체를 만들려고 할 경우 `CoCreateInstance`를 사용 하 여 [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) 대신 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_COM#38](../../atl/codesnippet/cpp/ccomobject-class_1.h)]  
   
  [!code-cpp[NVC_ATL_COM#39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
   
-##  <a name="queryinterface"></a>CComObject::QueryInterface  
+##  <a name="queryinterface"></a>  CComObject::QueryInterface  
  요청된 인터페이스에 대한 포인터를 검색합니다.  
   
 ```
@@ -161,7 +161,7 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-##  <a name="release"></a>CComObject::Release  
+##  <a name="release"></a>  CComObject::Release  
  개체에 대 한 참조 횟수를 줄입니다.  
   
 ```

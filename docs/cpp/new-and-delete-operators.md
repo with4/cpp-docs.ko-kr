@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3af862988502ac0d1908c466aae5e62b753509c2
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="new-and-delete-operators"></a>new 및 delete 연산자
 
@@ -38,7 +38,7 @@ C + +에서는 동적 할당 및 개체를 사용 하 여 할당 취소는 [새]
   
  C 런타임 라이브러리 및 c + + 표준 라이브러리를 구성 하는 라이브러리 파일의 목록에 대 한 참조 [CRT 라이브러리 기능](../c-runtime-library/crt-library-features.md)합니다.  
   
-##  <a id="new_operator"></a> New 연산자  
+##  <a id="new_operator"> </a> New 연산자  
  프로그램에서 다음과 같은 문이 발견될 경우, `operator new` 함수가 호출됩니다.  
   
 ```cpp  
@@ -101,7 +101,7 @@ Blanks *SomeBlanks = new Blanks;
   
  Visual c + + 5.0 및 이전 버전, 비 클래스 형식 및 모든 배열 (의 인지 여부에 관계 없이 **클래스** 유형) 사용 하 여 할당 된 **새** 연산자는 항상 전역 사용 **new 연산자** 함수입니다.  
   
- Visual c + + 5.0 이후부터, 컴파일러 지원 멤버 배열을 **새** 및 **삭제** 연산자 클래스 선언에 있습니다. 예:  
+ Visual c + + 5.0 이후부터, 컴파일러 지원 멤버 배열을 **새** 및 **삭제** 연산자 클래스 선언에 있습니다. 예를 들어:  
   
 ```cpp  
 // spec1_the_operator_new_function2.cpp  
@@ -144,7 +144,7 @@ int main() {
   
  실패 한 메모리 할당 요청을 처리 하는 다른 방법으로: 이러한 오류를 처리 하는 사용자 지정 복구 루틴을 작성 한 다음 함수를 호출 하 여 등록는 [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) 런타임 함수입니다.  
   
-##  <a id="delete_operator"></a> Delete 연산자  
+##  <a id="delete_operator"> </a> Delete 연산자  
  사용 하 여 동적으로 할당 된 메모리는 **새** 연산자를 사용 하 여 해제할 수는 **삭제** 연산자입니다. Delete 연산자 호출은 **delete 연산자** 함수 메모리 사용 가능한 풀으로 해제 합니다. 사용 하는 **삭제** 연산자 또한를 사용 하면 클래스 소멸자 (있을 경우)를 호출할 수 있습니다.  
   
  전역 및 클래스 범위의 **delete 연산자** 함수입니다. 하나의 **delete 연산자** 지정된 된 클래스에 대 한 함수를 정의할 수 있습니다; 전역 숨깁니다을 정의한 경우 속성이 **delete 연산자** 함수입니다. 전역 **delete 연산자** 함수는 항상 모든 형식의 배열에 대 한 호출 됩니다.  
@@ -215,7 +215,7 @@ int main( int argc, char *argv[] ) {
   
  앞의 코드를 사용하여 "메모리 누수"를 검색할 수 있습니다. 메모리 누수는 사용 가능한 저장소에 할당되었지만 비워지지 않은 메모리를 의미합니다. 전역이 검색을 수행 하려면 **새** 및 **삭제** 연산자 count 할당 및 메모리 할당 취소 하도록 다시 정의 됩니다.  
   
- Visual c + + 5.0 이후부터, 컴파일러 지원 멤버 배열을 **새** 및 **삭제** 연산자 클래스 선언에 있습니다. 예:  
+ Visual c + + 5.0 이후부터, 컴파일러 지원 멤버 배열을 **새** 및 **삭제** 연산자 클래스 선언에 있습니다. 예를 들어:  
   
 ```cpp  
 // spec1_the_operator_delete_function2.cpp  

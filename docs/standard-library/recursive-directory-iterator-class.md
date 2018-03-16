@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c432cde8a4c565e6195658ab27ce5f2cb1838f6a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="recursivedirectoryiterator-class"></a>recursive_directory_iterator 클래스
 재귀적으로 하위 디렉터리로 상속될 수 있는 디렉터리의 파일 이름을 통해 시퀀스되는 입력 반복기에 대해 설명합니다. 반복기 X에 대해 식 *X는 파일 이름과 상태에 대해 알려진 모든 항목을 래핑하는 directory_entry 클래스의 개체로 계산됩니다.  

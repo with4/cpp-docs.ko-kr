@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c8d641b94664292eac70e9eba40f994de26337e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Visual C++에서 여러 개의 리소스 파일 및 헤더 파일 사용
 > [!NOTE]
@@ -124,7 +124,7 @@ RESOURCE.H     AFXRES.H
   
  AFXRES.H는 프레임워크와 특히 AFXRES.RC에서 사용되는 `ID_FILE_NEW`와 같은 표준 기호를 정의합니다. 또한 AFXRES.H는 Visual C++에서 생성된 .RC 파일과 AFXRES.RC에 필요한 WINDOWS.H의 부분 집합을 포함하는 WINRES.H를 #include로 지정합니다. AFXRES.H에 정의된 기호는 응용 프로그램 리소스 파일(MYAPP.RC)을 편집할 때 사용할 수 있습니다. 예를 들면 `ID_FILE_NEW`는 MYAPP.RC의 메뉴 리소스에서 새 파일 메뉴 항목에 사용됩니다. 프레임워크에서 정의된 이러한 기호는 변경하거나 삭제할 수 없습니다.  
   
-## <a name="_mfcnotes_tn035_including"></a>추가 헤더 파일 포함  
+## <a name="_mfcnotes_tn035_including"></a> 추가 헤더 파일 포함  
   
  응용 프로그램 마법사에서 생성된 응용 프로그램에는 RESOURCE.H와 AFXRES.H라는 두 개 헤더 파일만 포함됩니다. RESOURCE.H는 응용 프로그램마다 다릅니다. 다음의 경우에는 추가 읽기 전용 헤더 파일만 포함하면 됩니다.  
   
@@ -303,7 +303,7 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
   
  Visual C++에서는 파일을 저장할 때 항상 //{{NO_DEPENDENCIES}} 주석 줄이 .RC 파일에 추가됩니다. 경우에 따라 RESOURCE.H에 대한 빌드 종속성 회피로 인해 링크 타임에는 발견되지 않은 런타임 오류가 발생할 수도 있습니다. 예를 들어, 기호 브라우저를 사용하여 리소스에 대한 기호에 할당된 숫자 값을 변경하는 경우 해당 리소스를 참조하는 .CPP 파일이 다시 컴파일되지 않을 경우 응용 프로그램 런타임 시 해당 리소스를 올바르게 찾아서 로드할 수 없습니다. 이 경우 명시적으로 다시 컴파일해야 하나. 사용자가 알고 있는 CPP 파일 리소스의 기호 변경 영향을 받습니다. H 또는 선택 **모두 다시 빌드**합니다. 자주 변경 되는 특정 리소스 그룹에 대 한 기호 값 필요가 있는 경우 아마도 것이 더 편리 하 고 이러한 기호를 별도 읽기 전용 헤더 파일로 나누는 더 안전 하 게 위의 섹션에 설명 된 대로 [포함 추가 헤더 파일](#_mfcnotes_tn035_including)합니다.  
   
-## <a name="_mfcnotes_tn035_set_includes"></a>Visual c + +를 관리 하는 방법 집합에 포함 되어 정보 * *  
+## <a name="_mfcnotes_tn035_set_includes"></a> Visual c + +를 관리 하는 방법 집합에 포함 되어 정보 * *  
   
  위의 설명한 바와 같이, 파일 메뉴의 Set Includes 명령을 통해 세 가지 유형의 정보를 지정할 수 있습니다.  
   

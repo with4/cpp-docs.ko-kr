@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 199db318eb847687d10044e0376b70c8d6d44feb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="general-rules-for-operator-overloading"></a>연산자 오버로드에 대한 일반 규칙
 다음 규칙은 오버로드된 연산자를 구현하는 방법을 제한합니다. 그러나에 적용 되지 않습니다는 [새](../cpp/new-operator-cpp.md) 및 [삭제](../cpp/delete-operator-cpp.md) 은 별도로 다루는 연산자.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
 -   기본 제공 데이터 형식에 적용할 때 연산자의 의미를 다시 정의할 수 없습니다.  
   
--   오버로드된 연산자는 비정적 클래스 멤버 함수 또는 전역 함수여야 합니다. private 또는 protected 클래스 멤버에 액세스해야 하는 전역 함수는 해당 클래스의 friend로 선언해야 합니다. 전역 함수는 클래스 또는 열거형 형식이거나 클래스 또는 열거형 형식에 대한 참조인 인수를 하나 이상 사용해야 합니다. 예:  
+-   오버로드된 연산자는 비정적 클래스 멤버 함수 또는 전역 함수여야 합니다. private 또는 protected 클래스 멤버에 액세스해야 하는 전역 함수는 해당 클래스의 friend로 선언해야 합니다. 전역 함수는 클래스 또는 열거형 형식이거나 클래스 또는 열거형 형식에 대한 참조인 인수를 하나 이상 사용해야 합니다. 예를 들어:  
   
     ```  
     // rules_for_operator_overloading.cpp  

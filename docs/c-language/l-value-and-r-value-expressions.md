@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6fb26b4488f6c75c0d9d7b70afb68c3c1b5e3178
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: HT
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="l-value-and-r-value-expressions"></a>L-Value 및 R-Value 식
 메모리 위치를 참조하는 식을 "l-value" 식이라고 합니다. l-value는 저장소 영역의 "로케이터" 값이나 "왼쪽" 값을 나타내므로 등호(**=**)의 왼쪽에 나타날 수 있습니다. l-value는 대개 식별자입니다.  

@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 09bf551c6487631ea803e071ed4b4c11501cdb04
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 형식의 개체의 정렬된 된 쌍을 저장 하는 개체에 설명 **float ** 는 먼저 복소수와 두 번째 실수 부분을 나타내는 허수 부분을 나타내는입니다.  
@@ -70,7 +70,7 @@ constexpr complex(
   
  템플릿 클래스 `complex`에 대한 자세한 내용은 [complex 클래스](../standard-library/complex-class.md)를 참조하세요. 템플릿 클래스 `complex`의 멤버 목록은 다음을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```cpp  
 // complex_comp_flt.cpp  

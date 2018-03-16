@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a800aca290a178e3b193c245df515385311b5593
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="void-c"></a>void (C++)
 함수 반환 형식으로 사용된 경우 `void` 키워드는 함수가 값을 반환하지 않도록 지정합니다. 함수의 매개 변수 목록에 사용된 경우 void는 함수가 매개 변수를 사용하지 않도록 지정합니다. 포인터 선언에 사용된 경우 void는 포인터를 "범용"으로 지정합니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  void 형식의 변수는 선언할 수 없습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // void.cpp  

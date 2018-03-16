@@ -24,10 +24,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7641a970c747576fa3cfd8cd1c00602edb3541e2
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="mfc-library-versions"></a>MFC 라이브러리 버전
 
@@ -98,7 +98,7 @@ IDE에서 유니코드 문자열 및 문자 지원 단일 바이트, 멀티 바�
 
 MFC에 대 한 정적 라이브러리는 다음과 같은 명명 규칙을 사용합니다. 라이브러리 이름은
 
-> *u*AFX*c * * d*합니다. LIB
+> *u*AFX*c**d*.LIB
 
 여기서 기울임꼴 소문자로 표시 문자는 그 의미는 다음 표와 지정자에 대 한 자리 표시자.
 
@@ -114,10 +114,10 @@ MFC에 대 한 정적 라이브러리는 다음과 같은 명명 규칙을 사�
 |-------------|-----------------|
 |NAFXCW.LIB|MFC 동적 연결 라이브러리, 릴리스 버전|
 |NAFXCWD.LIB|MFC 동적 연결 라이브러리, 디버그 버전|
-|UAFXCW 합니다. LIB|유니코드를 지 원하는, 릴리스 버전 MFC 정적 연결 라이브러리|
-|UAFXCWD 합니다. LIB|유니코드 지원 디버그 버전 MFC 정적 연결 라이브러리|
-|AFXNMCD 합니다. LIB|MFC 대화 상자 컨트롤, 릴리스 버전 없이 MFC 정적 연결 라이브러리|
-|AFXNMCDD 합니다. LIB|MFC 대화 상자 컨트롤, 디버그 버전 없이 MFC 정적 연결 라이브러리|
+|UAFXCW.LIB|유니코드를 지 원하는, 릴리스 버전 MFC 정적 연결 라이브러리|
+|UAFXCWD.LIB|유니코드 지원 디버그 버전 MFC 정적 연결 라이브러리|
+|AFXNMCD.LIB|MFC 대화 상자 컨트롤, 릴리스 버전 없이 MFC 정적 연결 라이브러리|
+|AFXNMCDD.LIB|MFC 대화 상자 컨트롤, 디버그 버전 없이 MFC 정적 연결 라이브러리|
 
 디버거 파일 같은 기본 이름과 및.pdb 확장명을 정적 라이브러리를 각각에 대해 사용할 수 있습니다.
 
@@ -129,14 +129,14 @@ MFC dll *버전* 이진 호환성을 나타내는 번호입니다. 다른 라이
 
 |DLL|설명|
 |---------|-----------------|
-|MFC*버전*합니다. DLL|MFC DLL, ANSI 또는 MBCS 릴리스 버전|
-|MFC*버전*U.DLL|MFC DLL, 유니코드 릴리스 버전|
-|MFC*버전*D.DLL|MFC DLL, ANSI 또는 MBCS 디버그 버전|
-|MFC*버전*UD 합니다. DLL|MFC DLL, 유니코드 디버그 버전|
-|MFCM*버전*합니다. DLL|MFC DLL Windows Forms 컨트롤을 ANSI 또는 MBCS 릴리스 버전|
-|MFCM*버전*U.DLL|MFC DLL을 Windows Forms 컨트롤, 유니코드 릴리스 버전|
-|MFCM*버전*D.DLL|MFC DLL Windows Forms 컨트롤을 ANSI 또는 MBCS 디버그 버전|
-|MFCM*버전*UD 합니다. DLL|MFC DLL을 Windows Forms 컨트롤, 유니코드 디버그 버전|
+|MFC*version*.DLL|MFC DLL, ANSI 또는 MBCS 릴리스 버전|
+|MFC*version*U.DLL|MFC DLL, 유니코드 릴리스 버전|
+|MFC*version*D.DLL|MFC DLL, ANSI 또는 MBCS 디버그 버전|
+|MFC*version*UD.DLL|MFC DLL, 유니코드 디버그 버전|
+|MFCM*version*.DLL|MFC DLL Windows Forms 컨트롤을 ANSI 또는 MBCS 릴리스 버전|
+|MFCM*version*U.DLL|MFC DLL을 Windows Forms 컨트롤, 유니코드 릴리스 버전|
+|MFCM*version*D.DLL|MFC DLL Windows Forms 컨트롤을 ANSI 또는 MBCS 디버그 버전|
+|MFCM*version*UD.DLL|MFC DLL을 Windows Forms 컨트롤, 유니코드 디버그 버전|
 
 응용 프로그램 또는 MFC 확장 Dll 이러한 공유 Dll을 사용 하는 빌드하는 데 필요한 가져오기 라이브러리 DLL과 같은 기본 이름을 갖지만.lib 파일 이름 확장명이 있습니다. 공유 Dll을 사용 하면 작은 정적 라이브러리 여전히와 연결 되어야 합니다 코드 이 라이브러리 MFCS 라는*버전*{U} {D}.lib입니다.
 
@@ -152,6 +152,6 @@ MFC 및 비 MFC 실행 파일에서 사용할 수 있는 Dll을 만드는 중 �
 
 MFC 정적 라이브러리에 연결 하 여 DLL 프로젝트를 만들 때 DLL은 MFC 공유 Dll 하지 않고 배포할 수 있습니다. DLL 프로젝트 MFC 가져오기 라이브러리에 연결 하는 경우*버전*합니다. LIB 또는 MFC*버전*U.LIB를 배포 해야 일치 하는 MFC 공유 DLL MFC*버전*합니다. DLL 또는 MFC*버전*U.DLL DLL 함께 합니다. 자세한 내용은 참조 [Dll](../build/dlls-in-visual-cpp.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [일반 MFC 항목](../mfc/general-mfc-topics.md)  

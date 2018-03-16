@@ -1,12 +1,9 @@
 ---
 title: "Visual c + +에서 배포 | Microsoft Docs"
 ms.custom: 
-ms.date: 9/21/2017
-ms.reviewer: 
-ms.suite: 
+ms.date: 03/13/2018
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - C++
@@ -14,17 +11,16 @@ helpviewer_keywords:
 - deploying applications [C++]
 - application deployment [C++]
 ms.assetid: d4b4ffc0-d2bd-4e4a-84a6-62f1c26f6a09
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eda9c4a1a173087688c1fd3182845d6517f27ba6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2356e98e911978dcaef9471f2b474c2a2377716d
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="deployment-in-visual-c"></a>Visual C++의 개발
 
@@ -49,6 +45,8 @@ Visual c + + 라이브러리를 중앙에서 배포 하려면 설치 하는 파�
 ## <a name="local-deployment"></a>로컬 배포
 
 로컬 배포의 경우 라이브러리 파일은 실행 파일과 함께 응용 프로그램 폴더에 설치 됩니다. 각 버전의 파일 이름은 버전 번호를 포함 하기 때문에 서로 다른 버전의 Visual c + + 재배포 가능 라이브러리와 동일한 폴더에 설치할 수 있습니다. 예를 들어, c + + 런타임 라이브러리의 버전 12 msvcp120.dll, 및 14는 msvcp140.dll 버전입니다.
+
+라이브러리 라고 하는 여러 추가 Dll 분산 될 수 *라이브러리 점*합니다. 예를 들어 Visual Studio 2017 버전 15.6에에서 릴리스 표준 라이브러리의 일부 기능에 추가 되었습니다 msvcp140_1.dll에 preverve msvcp140.dll의 ABI 호환성. Visual Studio 2017 버전 15.6 (도구 집합 14.13) 또는 Visual Studio 2017에서 최신 도구 집합을 사용 하는 경우 로컬에서 이러한 점 라이브러리 뿐 아니라 주 라이브러리를 배포 해야 할 수 있습니다. 이러한 별도 점 라이브러리 ABI 변경 될 때 다음 기본 라이브러리의 다음 주 버전으로 롤백됩니다.
 
 Microsoft 없습니다 자동으로 하기 때문에 업데이트를 로컬로 Visual c + + 라이브러리를 배포, 이러한 라이브러리의 로컬 배포 권장 하지는 않습니다. 재배포 가능 라이브러리 로컬 배포를 사용하기로 결정하는 경우 로컬 배포된 라이브러리를 자동으로 업데이트하는 사용자 고유의 메서드를 구현하는 것이 좋습니다.
 

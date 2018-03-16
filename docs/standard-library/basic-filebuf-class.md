@@ -56,10 +56,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5c9891f67c376d13794778c82b167092237df3f7
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf 클래스
 외부 파일에 저장된 요소의 시퀀스에서 나가고 들어오는 `Elem` 형식 요소의 전송을 제어하는 스트림 버퍼에 대해 설명하며, 해당 문자 특성은 `Tr` 클래스로 결정됩니다.  
@@ -86,7 +86,7 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
   
  `basic_filebuf`< `Elem`, `Tr`> 클래스의 개체는 열려 있는 파일과 연결된 스트림을 제어하는 `FILE` 개체를 지정하는 파일 포인터를 저장합니다. 또한 보호된 멤버 함수 [overflow](#overflow) 및 [underflow](#underflow)에서 사용하도록 두 가지 파일 변환 패싯에 대한 포인터를 저장합니다. 자세한 내용은 [basic_filebuf::open](#open)을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `basic_filebuf<wchar_t>` 형식의 개체가 `pubsetbuf()` 메서드를 호출하여 유니코드 문자열을 내부 버퍼에 강제로 저장하도록 하는 방법을 보여 줍니다.  
   
 ```  
@@ -278,7 +278,7 @@ basic_filebuf<Elem, Tr> *close();
   
  와이드 스트림의 경우 스트림이 열린 이후 또는 `streampos`에 대한 마지막 호출 이후 삽입이 발생하면 함수는 [overflow](#overflow)를 호출합니다. 또한 필요에 따라 파일 변환 패싯 **fac**를 사용하여 **fac.unshift**를 호출함으로써, 초기 변환 상태를 복원하는 데 필요한 시퀀스를 삽입합니다. 따라서 생성된 `char` 형식의 각 요소 **byte**가 마치 `fputc` 형식의 연속 호출( **byte**, **fp**)에 의한 것처럼 **fp** 파일 포인터로 지정된 연결된 스트림에 기록됩니다. **fac.unshift**에 대한 호출 또는 쓰기가 실패하면 함수가 성공하지 못합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   다음 샘플에서는 현재 디렉터리에 두 개의 파일, 즉 basic_filebuf_close.txt(내용: "테스트") 및 iotest.txt(내용: "ssss")가 있다고 가정합니다.  
   
 ```  
@@ -343,7 +343,7 @@ bool is_open() const;
 ### <a name="return-value"></a>반환 값  
  파일 포인터가 null 포인터가 아니면 **true**입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // basic_filebuf_is_open.cpp  
@@ -431,7 +431,7 @@ basic_filebuf<Elem, Tr> *open(
   
  파일 포인터가 null 포인터인 경우 함수는 null 포인터를 반환합니다. 아닌 경우 **this**를 반환합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   **open**을 사용하는 예는 [basic_filebuf::close](#close)를 참조하세요.  
   
 ##  <a name="op_eq"></a>  basic_filebuf::operator=  

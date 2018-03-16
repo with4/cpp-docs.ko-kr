@@ -27,10 +27,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 17fae0cbb16208d5c7e7346f354f3501e4803d96
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ieee-floating-point-representation"></a>IEEE 부동 소수점 표시
 Microsoft Visual c + +는 IEEE 숫자 표준 일치 합니다. 세 종류의 실수로 가지가 있습니다. 실제\*4 및 real\*8 Visual c + +에서 사용 됩니다. 실제\*4 라는 단어를 사용 하 여 선언 된 **float**합니다. 실제\*8 단어를 사용 하 여 선언 된 **double**합니다. Windows 32 비트 프로그래밍에는 `long double` 데이터 형식은 **double**합니다. 하지만가 실제를 사용 하 여 계산에 대 한 어셈블리 언어 지원 * 10 데이터 형식입니다.  
@@ -39,8 +39,8 @@ Microsoft Visual c + +는 IEEE 숫자 표준 일치 합니다. 세 종류의 실
   
 |값|으로 저장|  
 |-----------|---------------|  
-|real * 4|부호 비트, 지 수 8 비트가 수 23 비트|  
-|real * 8|부호 비트, 지 수 11 비트가 수 52 비트|  
+|real*4|부호 비트, 지 수 8 비트가 수 23 비트|  
+|real*8|부호 비트, 지 수 11 비트가 수 52 비트|  
 |real * 10|부호 비트, 15 비트 지 수, 64 비트가 수|  
   
  Real에서 * 4 및 real\*8 형식 비트만 되지만 실제로 24 또는 53 비트 23 또는 52 비트 저장 되므로 메모리에 저장 되지 않은 수의 맡은 선행 1이가 있습니다. 실제\*10 형식은이 비트 저장 되기 때문입니다.  
@@ -63,11 +63,11 @@ Microsoft Visual c + +는 IEEE 숫자 표준 일치 합니다. 세 종류의 실
   
 |형식|1 바이트|2 바이트|3 바이트|4 바이트|...|바이트 n|  
 |------------|------------|------------|------------|------------|---------|------------|  
-|real * 4|`SXXX XXXX`|`XMMM MMMM`|`MMMM MMMM`|`MMMM MMMM`|||  
-|real * 8|`SXXX XXXX`|`XXXX MMMM`|`MMMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
+|real*4|`SXXX XXXX`|`XMMM MMMM`|`MMMM MMMM`|`MMMM MMMM`|||  
+|real*8|`SXXX XXXX`|`XXXX MMMM`|`MMMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
 |real * 10|`SXXX XXXX`|`XXXX XXXX`|`1MMM MMMM`|`MMMM MMMM`|...|`MMMM MMMM`|  
   
- `S`부호 비트를 나타냅니다는 `X`의 지 수 비트 및 `M`의 수 비트 됩니다. 왼쪽에 있는 비트 실시간 가정 참고 * 4 및 real\*8 형식과 같은 하지만 실제 바이트 3에서 "1"으로 제공 되며\*10 형식입니다.  
+ `S` 부호 비트를 나타냅니다는 `X`의 지 수 비트 및 `M`의 수 비트 됩니다. 왼쪽에 있는 비트 실시간 가정 참고 * 4 및 real\*8 형식과 같은 하지만 실제 바이트 3에서 "1"으로 제공 되며\*10 형식입니다.  
   
  이진 소수점을 제대로 이동 하려면 먼저 옮김 지 수와 다음 이진 소수점 오른쪽으로 이동 또는 남아 있는 비트의 적절 한 수입니다.  
   

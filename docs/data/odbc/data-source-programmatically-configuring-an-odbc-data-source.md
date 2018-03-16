@@ -26,10 +26,10 @@ ms.workload:
 - cplusplus
 - data-storage
 ms.openlocfilehash: ac5756452a8b1c2d5dbf2f27ac7d3e1a8b069ca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>데이터 소스: 프로그래밍 방식으로 ODBC 데이터 소스 구성
 이 항목에서는 프로그래밍 방식으로 데이터 원본 이름은 ODBC Open Database Connectivity ()를 구성 하는 방법에 대해 설명 합니다. 이 방법을 사용 하면 데이터 액세스를 명시적으로 데이터 원본의 이름을 지정 하려면 ODBC 관리자 또는 다른 프로그램을 사용 하도록 사용자를 강요 하지 않고도.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
  그러나 여러 Dbms에는 프로그래밍 방식으로 데이터 소스를 만들을 수 있습니다. 일부 데이터 원본에는 데이터베이스에 대 한 디렉터리 사양을 유지 관리 합니다. 즉, 디렉터리는 데이터 원본 및 데이터 원본 내에서 각 테이블은 별도 파일에 저장 됩니다 (dBASE의 경우 각 테이블은.dbf 파일). Microsoft Access 및 SQL Server와 같은 다른 ODBC 데이터베이스에 대 한 드라이버 해야 데이터 원본 설정 먼저 특정 기준을 충족 되어야 합니다. 예를 들어 SQL Server ODBC 드라이버를 사용 하는 경우 SQL Server 컴퓨터를 설정 해야 합니다.  
   
-##  <a name="_core_sqlconfigdatasource_example"></a>SQLConfigDataSource 예제  
+##  <a name="_core_sqlconfigdatasource_example"></a> SQLConfigDataSource 예제  
  다음 예제에서는 **:: SQLConfigDataSource** ODBC API 함수를 만드는 새 Excel 데이터 원본 이라는 새로운 Excel 데이터 원본:  
   
 ```  
@@ -64,10 +64,10 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
   
  이 정보를 사용 하지 않고 레지스트리에 직접 쓸 수 있지만 **:: SQLConfigDataSource**,이 작업을 수행 하는 응용 프로그램은 드라이버 관리자가 사용 하 여 데이터를 관리 하는 기술을에 의존 하므로 합니다. 최신 기록을 다른 방식으로 데이터 원본에 대 한 유지 ODBC 드라이버 관리자 구현 하면이 기법을 사용 하는 모든 응용 프로그램은 중단 합니다. 일반적으로 제공 되는 경우 API 함수를 사용 하는 것이 좋습니다. 예를 들어, 코드를 사용 하는 경우 32 비트에서 16 비트 이식할는 **:: SQLConfigDataSource** 함수 Odbc.ini 파일 또는 레지스트리를 올바르게 작성 때문에 작동 합니다.  
   
-##  <a name="_core_sqlconfigdatasource_parameters"></a>SQLConfigDataSource 매개 변수  
+##  <a name="_core_sqlconfigdatasource_parameters"></a> SQLConfigDataSource 매개 변수  
  다음 설명의 매개 변수는 **:: SQLConfigDataSource** 함수입니다. ODBC API에서 대부분의 정보를 가져옵니다 *Programmer's Reference* Visual c + + 1.5 이상 버전에서 제공 합니다.  
   
-###  <a name="_core_function_prototype"></a>함수 프로토타입  
+###  <a name="_core_function_prototype"></a> 함수 프로토타입  
   
 ```  
 BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCSTR lpszAttributes);  
@@ -75,8 +75,8 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
 ### <a name="remarks"></a>설명  
   
-####  <a name="_core_parameters_and_usage"></a>매개 변수 및 사용법  
- *창은*  
+####  <a name="_core_parameters_and_usage"></a> 매개 변수 및 사용법  
+ *hwndParent*  
  ODBC 드라이버 관리자 또는 특정 ODBC 드라이버를 새 데이터 원본에 대 한 사용자에 게 서 추가 정보를 얻기 위해 만드는 모든 대화 상자의 소유자로 지정 하는 창입니다. 경우는 `lpszAttributes` 매개 변수가 충분 한 정보를 제공 하지 않는, 대화 상자가 나타납니다. *창은* 매개 변수 수 **NULL**합니다.  
   
  `lpszDriver`  

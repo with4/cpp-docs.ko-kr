@@ -13,10 +13,10 @@ ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
 caps.latest.revision: 
 manager: ghogen
 ms.openlocfilehash: a5bd2224f65db9ac376d04beed52217c1a0c4ec1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="ltnewgt-operators"></a>&lt;new&gt; 연산자
 ||||  
@@ -50,7 +50,7 @@ void operator delete(void* ptr,
   
  세 번째 함수는 **new**( **std::size_t**, **conststd::nothrow_t&**) 형식의 new 식에 해당하는 placement delete 식에 의해 호출됩니다. 프로그램은 C++ 표준 라이브러리를 통해 정의되는 기본 버전을 바꾸는 함수를 이 함수 시그니처로 정의할 수 있습니다. 필요한 동작은 이전 `operator new`( **size_t**) 호출에 의해 반환되었거나 null인 `ptr`의 값을 허용하는 것입니다. 기본 동작은 **delete**( `ptr`)를 평가하는 것입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   `operator delete`를 사용하는 예제는 [operator new](../standard-library/new-operators.md#op_new)를 참조하세요.  
   
 ##  <a name="op_delete_arr"></a>  operator delete[]  
@@ -77,7 +77,7 @@ void operator delete[](void* ptr,
   
  세 번째 함수는 `new[]`( **std::size_t**, **const std::nothrow_t&**) 형식의 `new[]` 식에 해당하는 placement delete 식에 의해 호출됩니다. 프로그램은 C++ 표준 라이브러리를 통해 정의되는 기본 버전을 바꾸는 함수를 이 함수 시그니처로 정의할 수 있습니다. 필요한 동작은 이전 operator `new[]`( **size_t**) 호출에 의해 반환되었거나 null인 `ptr`의 값을 허용하는 것입니다. 기본 동작은 `delete[]`( `ptr`)를 평가하는 것입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   `operator delete[]` 사용 방법의 예제는 [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)를 참조하세요.  
   
 ##  <a name="op_new"></a>  operator new  
@@ -132,7 +132,7 @@ void* operator new(std::size_t count,
   
  new의 throw 또는 비throw 동작에 대한 자세한 내용은 [new 및 delete 연산자](../cpp/new-and-delete-operators.md)를 참조하세요.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // new_op_new.cpp  
@@ -209,7 +209,7 @@ void* operator new[](std::size_t count,
   
  new의 throw 또는 비throw 동작에 대한 자세한 내용은 [new 및 delete 연산자](../cpp/new-and-delete-operators.md)를 참조하세요.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // new_op_alloc.cpp  
