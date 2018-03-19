@@ -23,7 +23,7 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 2d9b7ce4895d51c50185c5262664dc478af62cfa
 ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/16/2018
 ---
@@ -77,7 +77,7 @@ __declspec(thread) char *var;
 > [!NOTE]
 >  *선언자*를 참조하는 구문은 [C 언어 구문 요약](../c-language/c-language-syntax-summary.md) 또는 [선언 개요](../c-language/overview-of-declarations.md)에서 *선언*에 대한 구문을 참조하세요.  
   
- 선언자가 수정되지 않은 식별자로 구성되면 선언되는 항목에 기본 형식이 있습니다. 식별자 왼쪽에 별표(**\***)가 나타나는 경우 형식은 포인터 형식으로 수정됩니다. 식별자 뒤에 대괄호(**[ ]**)가 올 경우 형식은 배열 형식으로 수정됩니다. 식별자 뒤에 괄호가 올 경우 형식은 함수 형식으로 수정됩니다. 선언 내에서 우선 순위를 해석하는 방법에 대한 자세한 내용은 [더 복잡한 선언자 해석](../c-language/interpreting-more-complex-declarators.md)을 참조하세요.  
+ 선언자가 수정되지 않은 식별자로 구성되면 선언되는 항목에 기본 형식이 있습니다. 식별자 왼쪽에 별표(**\***)가 나타나는 경우 형식은 포인터 형식으로 수정됩니다. 식별자 뒤에 대괄호(**[ ]***)가 올 경우 형식은 배열 형식으로 수정됩니다. 식별자 뒤에 괄호가 올 경우 형식은 함수 형식으로 수정됩니다. 선언 내에서 우선 순위를 해석하는 방법에 대한 자세한 내용은 [더 복잡한 선언자 해석](../c-language/interpreting-more-complex-declarators.md)을 참조하세요.  
   
  각 선언자는 하나 이상의 식별자를 선언합니다. 선언이 완전하려면 선언자에 형식 지정자가 포함되어야 합니다. 형식 지정자는 배열 형식의 요소 형식, 포인터 형식으로 처리되는 개체의 형식 또는 함수의 반환 형식을 제공합니다.  
   

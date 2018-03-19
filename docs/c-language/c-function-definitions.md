@@ -29,7 +29,7 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: a58adfefc5e2b3b5085a44c38dd392d3369421c8
 ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/16/2018
 ---
@@ -50,7 +50,7 @@ ms.lasthandoff: 03/16/2018
  *function-definition*: /\* 여기서 Declarator는 함수 선언자입니다. \*/  
  *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
   
- /\* *attribute-seq*는 Microsoft 전용임 */  
+ /\* *attribute-seq*는 Microsoft 전용임 \*/  
   
  프로토타입 매개 변수인 경우:  
   
