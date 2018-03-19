@@ -33,7 +33,7 @@ ms.lasthandoff: 03/16/2018
  `declaration`:  
  *declaration-specifiers* *attribute-seq*opt*init-declarator-list*opt**;**  
   
- /\* *attribute-seq*opt는 Microsoft 전용임 */  
+ /\* *attribute-seq*opt는 Microsoft 전용임 \*/  
   
  *declaration-specifiers*:  
  *storage-class-specifier declaration-specifiers*opt  

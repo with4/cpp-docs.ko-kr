@@ -40,7 +40,7 @@ ms.lasthandoff: 03/16/2018
  *function-definition*:  
  *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
   
- /\* *attribute-seq*는 Microsoft 전용임 */  
+ /\* *attribute-seq*는 Microsoft 전용임 \*/  
   
  *declarator* :  
  *pointer* opt*direct-declarator*  

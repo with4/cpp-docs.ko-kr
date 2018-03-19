@@ -1,5 +1,5 @@
 ---
-title: "방법: system:: string을 wchar_t * 또는 char *로 변환 | Microsoft Docs"
+title: "방법: system:: string을 wchar_t* 또는 char* 로 변환 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 

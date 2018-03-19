@@ -263,12 +263,12 @@ volatile Over&
 |-----------------------|---------------------|  
 |*type-name*|*type-name* **&**|  
 |*type-name* **&**|*type-name*|  
-|*type-name* **[ ]**|*type-name\**|  
+|*type-name* **[ ]**|*type-name\***|  
 |*type-name* **(** *argument-list* **)**|**(** *\*type-name* **) (** *argument-list* **)**|  
 |*type-name*|**const** *type-name*|  
 |*type-name*|`volatile` *type-name*|  
-|*type-name\**|**const** *type-name\**|  
-|*type-name\**|`volatile` *type-name\**|  
+|*type-name\***|**const** *type-name\***|  
+|*type-name\***|`volatile` *type-name\**|  
   
  변환이 시도되는 시퀀스는 다음과 같습니다.  
   

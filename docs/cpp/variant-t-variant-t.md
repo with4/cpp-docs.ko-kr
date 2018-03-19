@@ -233,7 +233,7 @@ _variant_t(
   
 -   **_variant_t (_bstr_t &**`bstrSrc`**)** 생성 한 `_variant_t` 형식의 개체 `VT_BSTR` 에서 `_bstr_t` 개체입니다.     새 `BSTR`이 할당됩니다.  
   
--   **_variant_t (wchar_t \***  *wstrSrc***)** 생성 한 `_variant_t` 형식의 개체 `VT_BSTR` 유니코드 문자열에서입니다.   새 `BSTR`이 할당됩니다.  
+-   **_variant_t (wchar_t \*** *wstrSrc*  **)** 생성 한 `_variant_t` 형식의 개체 `VT_BSTR` 유니코드 문자열에서입니다.   새 `BSTR`이 할당됩니다.  
   
 -   **_variant_t (char\***`strSrc`**)** 생성 한 `_variant_t` 형식의 개체 `VT_BSTR` 문자열에서입니다.     새 `BSTR`이 할당됩니다.  
   

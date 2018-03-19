@@ -97,7 +97,7 @@ CComObject(void* = NULL);
   
 ### <a name="parameters"></a>매개 변수  
  **void\***  
- [in] 이 명명 되지 않은 매개 변수가 사용 되지 않습니다. 대응 하 여 다른 있는 **CCom * * * XXX*`Object`*XXX* 생성자입니다.  
+ [in] 이 명명 되지 않은 매개 변수가 사용 되지 않습니다. 대응 하 여 다른 있는 **CCom***XXX*`Object`*XXX* 생성자입니다.  
   
 ### <a name="remarks"></a>설명  
  소멸자 감소 것입니다.  
