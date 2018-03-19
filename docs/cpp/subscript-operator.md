@@ -25,10 +25,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1fbcb3657af276cdfc9aa05d461c090b76f6de0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="subscript-operator"></a>아래 첨자 연산자:
 ## <a name="syntax"></a>구문  
@@ -39,7 +39,7 @@ postfix-expression [ expression ]
 ```  
   
 ## <a name="remarks"></a>설명  
- 뒤에 첨자 연산자, 후 위 식 (수 있는 기본 식) **[]**, 배열 인덱싱 지정 합니다.  
+ 후위 식(기본 식이 될 수도 있음) 뒤에 첨자 연산자 [ ]**가 오면 배열 인덱싱이 지정됩니다.  
   
  관리 되는 배열에 대 한 정보를 참조 하십시오. [배열](../windows/arrays-cpp-component-extensions.md)합니다.  
   
@@ -51,11 +51,11 @@ cout << nArray[2] << endl;            // prints "2"
 cout << 2[nArray] << endl;            // prints "2"  
 ```  
   
- 위의 예제에서 `nArray[2]` 식은 `2[nArray]`와 동일합니다. 이유는 첨자 식의 결과 *e1***[** *e2* **]** 하 여 제공 됩니다.  
+ 위의 예제에서 `nArray[2]` 식은 `2[nArray]`와 동일합니다. 이유는 첨자 식의 결과 *e1 * * * [** *e2* **]** 하 여 제공 됩니다.  
   
- **\*((** *e2* **)**  *+*  **(***e1***))**  
+ **\*( (** *e2* **)** *+* **(***e1***) )**  
   
- 식에서 생성 된 주소 않습니다 *e2* 주소에서 바이트 *e1*합니다. 주소를 배열에 있는 다음 개체가 생성으로 확장 하는 대신, *e2*합니다. 예:  
+ 식에서 생성 된 주소 않습니다 *e2* 주소에서 바이트 *e1*합니다. 주소를 배열에 있는 다음 개체가 생성으로 확장 하는 대신, *e2*합니다. 예를 들어:  
   
 ```  
 double aDbl[2];  
@@ -67,7 +67,7 @@ double aDbl[2];
   
  *expression1* **[***expression2***] [***expression3***]**...  
   
- 첨자 식은 왼쪽에서 오른쪽으로 연결합니다. 맨 왼쪽 첨자 식인 *expression1***[***expression2***]**가 먼저 계산됩니다. *expression1* 및 *expression2*를 추가한 결과인 주소는 포인터 식을 형성합니다. 그런 다음 이 포인터 식에 *expression3*이 추가되어 새 포인터 식을 형성하고 마지막 첨자 식이 추가될 때까지 계속됩니다. 간접 참조 연산자 (**\***) 최종 포인터 값이 배열 형식을 해결 하지 않으면 마지막 첨자 식이 계산 된 후 적용 됩니다.  
+ 첨자 식은 왼쪽에서 오른쪽으로 연결합니다. 맨 왼쪽 첨자 식인 * expression1***[***expression2 ***]**, 먼저 계산 됩니다. *expression1* 및 *expression2*를 추가한 결과인 주소는 포인터 식을 형성합니다. 그런 다음 이 포인터 식에 *expression3*이 추가되어 새 포인터 식을 형성하고 마지막 첨자 식이 추가될 때까지 계속됩니다. 간접 참조 연산자 (**\***) 최종 포인터 값이 배열 형식을 해결 하지 않으면 마지막 첨자 식이 계산 된 후 적용 됩니다.  
   
  여러 첨자가 포함된 식은 다차원 배열의 요소를 참조합니다. 다차원 배열은 요소가 배열인 배열입니다. 예를 들어 3차원 배열의 첫 번째 요소는 2차원 배열입니다. 다음 예제에서는 간단한 2차원 문자 배열을 선언 및 초기화합니다.  
   
