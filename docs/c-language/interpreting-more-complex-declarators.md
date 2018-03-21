@@ -20,11 +20,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67d66667d169a95ae4d62ccadd2b56a136cd0a76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82779e423a1958c0392aebb55d29e41bdd132cc1
+ms.sourcegitcommit: 6576d4d8a768279b4d340d036581e0f8a2974ea7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="interpreting-more-complex-declarators"></a>더 복잡한 선언자 해석
 선언자를 괄호로 묶어 "복합 선언자"의 특정 해석을 지정할 수 있습니다. 복합 선언자는 둘 이상의 배열, 포인터 또는 함수 한정자로 한정된 식별자입니다. 배열, 포인터 및 함수 한정자의 다양한 조합을 단일 식별자에 적용할 수 있습니다. 일반적으로 `typedef`를 사용하여 선언을 단순화할 수 있습니다. [Typedef 선언](../c-language/typedef-declarations.md)을 참조하세요.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/21/2017
      7   6  4 2 1   3    5  
     ```  
   
- 이 예제에서 단계는 순서대로 번호가 매겨지고 다음과 같이 해석될 수 있습니다.  
+이 예제에서 단계는 순서대로 번호가 매겨지고 다음과 같이 해석될 수 있습니다.  
   
 1.  `var` 식별자는 다음으로 선언됩니다.  
   
