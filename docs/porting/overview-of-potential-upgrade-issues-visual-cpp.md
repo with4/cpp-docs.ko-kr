@@ -13,11 +13,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccdd667898cf2043e10137fa301eb42ee3877fc8
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: c3c01256e852f179d9f9cb02b5658898f5a1c96d
+ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>잠재적인 업그레이드 문제 개요(Visual C++)
 
@@ -37,9 +37,11 @@ ms.lasthandoff: 02/03/2018
 
 C++에는 안정적인 ABI(응용 프로그램 이진 인터페이스)가 없습니다. Visual Studio는 릴리스의 모든 부 버전에 대해 안정적인 C++ ABI를 유지 관리합니다. 예를 들어 Visual Studio 2017과 모든 업데이트는 이진 호환됩니다. 그러나 주 버전의 Visual Studio 간에는 ABI가 호환되지 않을 수 있습니다(단, 2015와 2017은 이진 호환_됨_). 즉, C++ 형식 레이아웃, 이름 데코레이션, 예외 처리 및 C++ ABI의 다른 부분에서 주요 변경이 수행될 수 있습니다. 따라서 C++ 연결이 있는 외부 기호를 포함하는 개체 파일은 다른 주 버전의 도구 집합을 사용하여 생성된 개체 파일에 제대로 연결하지 못할 수 있습니다. 여기서 "작동하지 않을 수 있음"에는 여러 가능한 결과가 있습니다. 즉, 연결이 완전히 실패하거나(예: 이름 데코레이션이 변경된 경우), 연결은 성공하지만 런타임 시 작업이 작동하지 않거나(예: 형식 레이아웃이 변경된 경우), 대부분의 경우 작업이 작동하고 오류가 전혀 발생하지 않을 수도 있습니다. 또한 C++ ABI는 불안정하지만 C ABI 및 COM에 필요한 C++ ABI의 하위 집합은 안정적입니다.
 
+가져오기 라이브러리에 링크하면 런타임 시 ABI 호환성을 유지하는 Visual Studio 재배포 가능 라이브러리의 이후 버전을 사용할 수 있습니다. 예를 들어, Visual Studio 2015 업데이트 3 도구 집합을 사용하여 앱을 컴파일하고 링크한 경우 2015 및 2017 라이브러리가 이전 버전과의 호환성을 보존했기 때문에 Visual Studio 2017 재배포 가능 패키지를 사용할 수 있습니다. 그 반대는 성립하지 않습니다. 호환 가능한 ABI가 있어도 코드를 작성하는 데 사용한 것보다 이전 버전의 도구 집합에 대해 재배포 가능 패키지를 사용할 수 없습니다.
+
 ### <a name="libraries"></a>라이브러리
 
-특정 버전의 Visua Studiol C++ 라이브러리 헤더 파일을 사용하여 소스 파일을 컴파일하는 경우(헤더 #including 사용) 결과로 생성된 개체 파일은 동일한 버전의 라이브러리에만 연결해야 합니다. 따라서, 예를 들어 소스 파일이 Visual Studio 2017 \<immintrin.h>를 사용하여 컴파일된 경우 Visual Studio 2017 vcruntime 라이브러리에 연결해야 합니다. 마찬가지로, 소스 파일이 Visual Studio 2017 \<iostream>을 사용하여 컴파일된 경우 Visual Studio 2017 표준 C++ 라이브러리인 msvcprt에 연결해야 합니다. 혼합 및 일치는 지원되지 않습니다.
+특정 버전의 Visua Studiol C++ 라이브러리 헤더 파일을 사용하여 소스 파일을 컴파일하는 경우(헤더 #including 사용) 결과로 생성된 개체 파일은 동일한 버전의 라이브러리에만 연결해야 합니다. 따라서, 예를 들어 소스 파일이 Visual Studio 2015 업데이트 3 \<immintrin.h>를 사용하여 컴파일된 경우 Visual Studio 2015 업데이트 3 vcruntime 라이브러리에 연결해야 합니다. 마찬가지로, 소스 파일이 Visual Studio 2017 버전 15.5 \<iostream>을 사용하여 컴파일된 경우 Visual Studio 2017 버전 15.5 표준 C++ 라이브러리인 msvcprt에 연결해야 합니다. 혼합 및 일치는 지원되지 않습니다.
 
 C++ 표준 라이브러리의 경우 Visual Studio 2010 이후 표준 헤더에서 `#pragma detect_mismatch`를 사용하여 혼합 및 일치가 명시적으로 금지되었습니다. 호환되지 않는 개체 파일이나 잘못된 표준 라이브러리에 연결을 시도하면 연결이 실패합니다.
 
