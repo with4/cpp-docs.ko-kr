@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: b7b441f41106544633bd691c409fa04c989146f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 5cd2e3e51ecc8d9fc0d889555b4bfa193ba1d6a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="vcprofileallocscale"></a>VCPROFILE_ALLOC_SCALE
 프로필 데이터를 보관에 할당 된 메모리의 양을 수정 합니다.  
@@ -45,7 +45,7 @@ VCPROFILE_ALLOC_SCALE=scale_value
   
  메모리가 부족 한지 여부를 나타내는 테스트 실행 도중 오류 메시지를 수신 하는 경우에 더 큰 값을 할당 `VCPROFILE_ALLOC_SCALE`테스트 실행이 메모리 부족 오류 없이 완료 될 때까지, 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 set VCPROFILE_ALLOC_SCALE=2  
