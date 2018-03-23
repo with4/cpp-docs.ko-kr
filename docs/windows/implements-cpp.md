@@ -1,12 +1,12 @@
 ---
-title: "구현 (c + +) | Microsoft Docs"
-ms.custom: 
+title: 구현 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - vc-attr.implements
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0dbe7d829ae31f53a3dbc35df66bee2d50f14f19
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bab33955ebeb1473839a1549ca1817f520e1a9fd
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="implements-c"></a>implements(C++)
 IDL coclass의 구성원이 될 해야 하는 디스패치 인터페이스를 지정 합니다.  
@@ -42,11 +42,11 @@ IDL coclass의 구성원이 될 해야 하는 디스패치 인터페이스를 �
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- **인터페이스**  
+ **interfaces**  
  쉼표로 구분한 목록 IDL coclass의 멤버는 인터페이스입니다. 단일 인터페이스를 지정 하기 위한 줄임 메서드는 **구현 (***interface_name***)**합니다.  
   
- **dispinterface**  
- 쉼표로 구분한 목록 IDL coclass의 구성원이 될 dispinterface입니다. 단일 dispinterface 지정 하기 위한 줄임 메서드는 **구현 (dispinterface** *dispinterface_name =***)**합니다.  
+ **dispinterfaces**  
+ 쉼표로 구분한 목록 IDL coclass의 구성원이 될 dispinterface입니다. 단일 dispinterface 지정 하기 위한 줄임 메서드는 **구현 (dispinterface** * = dispinterface_name ***)**합니다.  
   
 ## <a name="remarks"></a>설명  
  기본적으로만-있는 COM 인터페이스는 coclass의 기본 클래스는 IDL coclass에 추가 됩니다. **구현** 통해 IDL coclass 구성원으로 다른 인터페이스를 적용할 수 있습니다.  
@@ -64,7 +64,7 @@ IDL coclass의 구성원이 될 해야 하는 디스패치 인터페이스를 �
   
  자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 세 부분으로 구성 중인:.idl 파일 및 해당 관련된.h 파일과 c + + 파일입니다.  
   
  컴파일러에 사용할 수 있는 다음.idl 파일을 가정 합니다.  
@@ -116,7 +116,7 @@ library odod
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  및 다음.h 파일도 컴파일러에 사용할 수 있어야 합니다.  
   
 ```  
@@ -433,7 +433,7 @@ CBar;
 #endif  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 프로그램을 구현 하지 않고 IBar1, IBar2, 및 ISna는 생성된 된 IDL의 coclass에 수 없습니다.  
   
 ```  
@@ -486,7 +486,7 @@ public:
       if (pDispParams == 0) {  
          return DISP_E_BADVARTYPE;  
       }  
-      if (pDispParams->cArgs > 0) {  
+      if (pDispParams->cArgs> 0) {  
          return DISP_E_BADPARAMCOUNT;  
       }  
       if (pVarResult != 0) {  
