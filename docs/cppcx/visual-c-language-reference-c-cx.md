@@ -1,30 +1,36 @@
 ---
-title: "Visual c + + 언어 참조 (C + + /cli CX) | Microsoft Docs"
-ms.custom: 
+title: Visual c + + 언어 참조 (C + + /cli CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/15/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0867cb30f1337ffaf1cb726a0c52977899f02d0a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e9cca27f54816c3727762eebba5a9af5246ed173
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="visual-c-language-reference-ccx"></a>Visual C++ 언어 참조(C++/CX)
 
 C + + /cli CX는 집합의 Windows 앱 및 Windows 런타임 구성 요소를 최신 가능한 c + + 가까운를 만들 수 있도록 하는 c + + 언어 확장입니다. 사용 하 여 C + + /CX를 Visual C#, Visual Basic 및 JavaScript와 쉽게 상호 작용 하는 네이티브 코드와 Windows 런타임을 지 원하는 다른 언어에서 Windows 앱 및 구성 요소를 작성 합니다. 드물지만 원시 COM 인터페이스 또는 예외가 없는 코드에 직접 액세스 해야 하는 경우를 사용할 수 있습니다는 [Windows 런타임 c + + 템플릿 라이브러리 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)합니다.
 
-새 모델은 차세대 Windows 네이티브 C++ 프로그래밍을 나타냅니다. 이를 통해 다음을 만들 수 있습니다.
+> [!NOTE]
+> C + + /cli WinRT는 새, 표준 C + + 17 언어 프로젝션 Windows 런타임 Api에 대 한 합니다. 최신 Windows 10 SDK 부터는 1803 버전에서 제공 됩니다. C + + /cli WinRT 헤더 파일에서 완전히 구현 되며 하 게 고급 액세스 권한이 있는 최신 Windows API를 제공 합니다.
+
+> C + + /cli WinRT, 둘 다 사용 하는 모든 표준 호환 C + + 17 컴파일러를 사용 하 여 Windows 런타임 Api를 작성 합니다. C + + /cli WinRT에서 일반적으로 더 나은 성능을 제공 하 고 Windows 런타임에 대 한 다른 언어 옵션 보다 더 작은 이진 파일을 생성 합니다. 우리는 계속 지원 C + + /CX 및 WRL, 되지만 매우 권장 구성이 새 응용 프로그램에서 사용할 C + + /cli WinRT 합니다. 자세한 내용은 참조 [C + + /cli WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)합니다.
+
+
+통해 C + + /CX에서는 만들려면:
 
 - XAML을 사용 하 여 사용자를 정의 하는 c + + 유니버설 Windows 플랫폼 (UWP) 응용 프로그램 인터페이스 및 고 네이티브 스택을 사용 합니다. 자세한 내용은 참조 [c + + (UWP)에서 "hello world" 앱 만들기](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)합니다.
 
@@ -44,4 +50,4 @@ C + + /cli CX는 집합의 Windows 앱 및 Windows 런타임 구성 요소를 �
 |[네임 스페이스 참조](../cppcx/namespaces-reference-c-cx.md)|기본 네임스페이스, Platform 네임스페이스, Platform::Collections 및 관련 네임스페이스에 대한 참조 설명서입니다.|
 |[유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Windows 런타임 앱에서 사용할 수 없는 CRT 함수를 나열합니다.|
 |[Windows 10 앱에 대한 방법 가이드](http://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|Windows 10 앱에 대한 개략적인 지침 및 자세한 정보에 대한 링크를 제공합니다.|
-|[C + + /CX 파트 0 / \[ n \]: 소개](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C + + /CX 파트 1 \[ n \]: 간단한 클래스](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C + + /CX 파트 2 / \[ n \]: 유형](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C + + /CX 파트 3 \[ n \]: 작성 중](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C + + /CX 파트 4 / \[ n \]: 정적 멤버 함수](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|기본적인 Visual c + + 블로그 시리즈에 C + + /cli CX 합니다.|
+|[C + + /CX 파트 0 / \[n\]: 소개](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C + + /CX 파트 1 \[n\]: 간단한 클래스](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C + + /CX 파트 2 / \[n\]: 유형](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C + + /CX 파트 3 \[n\]: 작성 중](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C + + /CX 파트 4 / \[n\]: 정적 멤버 함수](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|기본적인 Visual c + + 블로그 시리즈에 C + + /cli CX 합니다.|

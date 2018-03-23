@@ -1,31 +1,36 @@
 ---
-title: "Windows 런타임 c + + 템플릿 라이브러리 (WRL) | Microsoft Docs"
-ms.custom: 
+title: Windows 런타임 c + + 템플릿 라이브러리 (WRL) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 98b97098f397772026d0926c72ad83dadd5e59cb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d362fdde185f5d9345977ca58d7679a448976555
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows 런타임 C++ 템플릿 라이브러리(WRL)
-WRL(Windows 런타임 C++ 템플릿 라이브러리)은 Windows 런타임 구성 요소를 만들고 사용하기 위한 간단한 방법을 제공하는 템플릿 라이브러리입니다.  
+WRL(Windows 런타임 C++ 템플릿 라이브러리)은 Windows 런타임 구성 요소를 만들고 사용하기 위한 간단한 방법을 제공하는 템플릿 라이브러리입니다.
+
+> [!NOTE]
+> WRL은 이제 대체 C + + /cli WinRT, 표준 C + + 17 언어 프로젝션 Windows 런타임 Api에 대 한 합니다. C + + /cli WinRT는 Windows 10 SDK 부터는 1803 버전에서 사용할 수 있습니다. C + + /cli WinRT 헤더 파일에서 완전히 구현 되며 하 게 고급 액세스 권한이 있는 최신 Windows API를 제공 합니다.
+
+> C + + /cli WinRT, 둘 다 사용 하는 모든 표준 호환 C + + 17 컴파일러를 사용 하 여 Windows 런타임 Api를 작성 합니다. C + + /cli WinRT에서 일반적으로 더 나은 성능을 제공 하 고 Windows 런타임에 대 한 다른 언어 옵션 보다 더 작은 이진 파일을 생성 합니다. 우리는 계속 지원 C + + /CX 및 WRL, 되지만 매우 권장 구성이 새 응용 프로그램에서 사용할 C + + /cli WinRT 합니다. 자세한 내용은 참조 [C + + /cli WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)합니다.   
   
 ## <a name="benefits"></a>이점  
  Windows 런타임 c + + 템플릿 라이브러리를 사용 하면 보다 손쉽게 구현 하 고 구성 요소 개체 모델 (COM) 구성 요소를 사용할 수 있습니다. 이 라이브러리는 개체의 수명을 관리하기 위해 참조 횟수와 같은 관리 기법을 제공하며, 작업의 성공 또는 실패를 확인하기 위한 테스트 `HRESULT` 값을 제공합니다. Windows 런타임 c + + 템플릿 라이브러리를 사용 하려면 이러한 규칙과 기법 신중 하 게 수행 해야 합니다.  
@@ -58,10 +63,7 @@ WRL(Windows 런타임 C++ 템플릿 라이브러리)은 Windows 런타임 구성
  [방법: 이벤트 처리](../windows/how-to-handle-events-using-wrl.md)  
  구독 하 고 Windows 런타임 개체의 이벤트를 처리 하는 Windows 런타임 c + + 템플릿 라이브러리를 사용 하는 방법을 보여 줍니다.  
   
- [연습: 기본 Windows 런타임 구성 요소 만들기](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)  
- 두 숫자를 추가 하는 기본적인 Windows 런타임 구성 요소를 Windows 런타임 c + + 템플릿 라이브러리를 사용 하는 방법을 보여 줍니다. 또한 이벤트를 발생 시키고 JavaScript를 사용 하는 UWP 앱에서 구성 요소를 사용 하는 방법을 보여 줍니다.  
-  
- [연습: WRL 및 Media Foundation을 사용 하는 UWP 앱 만들기](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+ [연습: WRL 및 미디어 파운데이션을 사용하여 UWP 앱 만들기](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
  사용 하는 UWP 앱을 만드는 방법을 배울 [Microsoft 미디어 파운데이션](http://msdn.microsoft.com/library/windows/apps/ms694197)합니다.  
   
  [방법: 기본 COM 구성 요소 만들기](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
@@ -144,7 +146,6 @@ WRL(Windows 런타임 C++ 템플릿 라이브러리)은 Windows 런타임 구성
   
 |||  
 |-|-|  
-|[클래스 라이브러리 프로젝트 템플릿](../windows/wrl-class-library-project-template.md)|WRL 클래스 라이브러리 프로젝트 템플릿에 액세스하는 방법을 설명합니다. 이 서식 파일을 사용 하면 Visual Studio를 사용 하 여 Windows 런타임 구성 요소를 만드는 작업을 간소화할 수 있습니다.|  
 |[범주별 키 Api](../windows/key-wrl-apis-by-category.md)|기본 Windows 런타임 c + + 템플릿 라이브러리 형식, 함수 및 매크로 강조 표시합니다.|  
 |[참조](../windows/wrl-reference.md)|Windows 런타임 c + + 템플릿 라이브러리에 대 한 참조 정보를 포함합니다.|  
 |[빠른 참조 (Windows 런타임 및 Visual c + +)](http://go.microsoft.com/fwlink/p/?linkid=229180)|간략하게 설명 하는 C + + /cli CX 기능에는 Windows 런타임에서 지원 합니다.|  

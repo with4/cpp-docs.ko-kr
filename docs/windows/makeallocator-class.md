@@ -1,12 +1,12 @@
 ---
-title: "MakeAllocator 클래스 | Microsoft Docs"
-ms.custom: 
+title: MakeAllocator 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::MakeAllocator
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - MakeAllocator class
 ms.assetid: a1114615-abd7-4a56-9bc3-750c118f0fa1
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 523bcdb17fc0a1b74fe615e5ff15a6fcef99cc32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33ba172099fd2554709cc539eeee8999c0e42cef
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="makeallocator-class"></a>MakeAllocator 클래스
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -38,17 +38,13 @@ WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습
 template<  
    typename T,  
    bool hasWeakReferenceSupport =   
-         !__is_base_of(RuntimeClassFlags<InhibitWeakReference>,   
-   T)> , T)> class MakeAllocator;  
+         !__is_base_of(RuntimeClassFlags<InhibitWeakReference>, T)>
+ class MakeAllocator;  
   
-template<  
-   typename T  
->  
+template<typename T>  
 class MakeAllocator<T, false>;  
   
-template<  
-   typename T  
->  
+template<typename T>  
 class MakeAllocator<T, true>;  
 ```  
   
@@ -57,7 +53,7 @@ class MakeAllocator<T, true>;
  형식 이름.  
   
  `hasWeakReferenceSupport`  
- `true`약한 참조; 지 원하는 개체에 대 한 메모리를 할당 하려면 `false` 약한 참조를 지원 하지 않는 개체에 대 한 메모리를 할당할 수 있습니다.  
+ `true` 약한 참조; 지 원하는 개체에 대 한 메모리를 할당 하려면 `false` 약한 참조를 지원 하지 않는 개체에 대 한 메모리를 할당할 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
  약한 참조 지원을 사용 하지 않는 또는 활성화 가능한 클래스에 대 한 메모리를 할당합니다.  

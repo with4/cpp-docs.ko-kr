@@ -1,12 +1,12 @@
 ---
-title: "SafeInt 클래스 | Microsoft Docs"
-ms.custom: 
+title: SafeInt 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SafeInt
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - SafeInt class
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-caps.latest.revision: 
+caps.latest.revision: ''
 author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea076ea092257fd5bf6acd6d597f79ef42dd96f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61b9ee9ca030d8661ce9c4cabf03e59c55ac88b1
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="safeint-class"></a>SafeInt 클래스
 정수 오버플로 방지 하는 정수 기본 형식을 확장 하 고 다양 한 유형의 정수를 비교할 수 있습니다.  
@@ -62,7 +62,7 @@ class SafeInt;
   
 ### <a name="assignment-operators"></a>할당 연산자  
   
-|name|구문|  
+|이름|구문|  
 |----------|------------|  
 |=|`template<typename U>`<br /><br /> `SafeInt<T,E>& operator= (const U& rhs)`|  
 |=|`SafeInt<T,E>& operator= (const T& rhs) throw()`|  
@@ -89,7 +89,7 @@ class SafeInt;
   
 ### <a name="comparison-operators"></a>비교 연산자  
   
-|name|구문|  
+|이름|구문|  
 |----------|------------|  
 |<|`template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()`|  
 |<|`bool operator< (SafeInt<T,E> rhs) const throw()`|  
@@ -108,7 +108,7 @@ class SafeInt;
   
 ### <a name="arithmetic-operators"></a>산술 연산자  
   
-|name|구문|  
+|이름|구문|  
 |----------|------------|  
 |+|`const SafeInt<T,E>& operator+ () const throw()`|  
 |-|`SafeInt<T,E> operator- () const`|  
@@ -178,9 +178,9 @@ class SafeInt;
   
  이 항목의 연산자 표에서 지 원하는 수치 연산 및 비교 연산자는 `SafeInt` 클래스입니다. 반환할 가장 수치 연산자는 `SafeInt` 형식의 개체 `T`합니다.  
   
- 간의 비교 작업을 `SafeInt` 하며 정수 계열 형식 두 방향에서 모두 수행할 수 있습니다. 예를 들어 모두 `SafeInt<int>(x) < y` 및 `y > SafeInt<int>(x)` 유효 하 고 동일한 결과 반환 합니다.  
+ 간의 비교 작업을 `SafeInt` 하며 정수 계열 형식 두 방향에서 모두 수행할 수 있습니다. 예를 들어 모두 `SafeInt<int>(x) < y` 및 `y> SafeInt<int>(x)` 유효 하 고 동일한 결과 반환 합니다.  
   
- 많은 이항 연산자는 두 가지를 사용 하 여를 지원 하지 않는 `SafeInt` 형식입니다. 한 가지 예로는 `&` 연산자입니다. `SafeInt<T, E> & int`지원 하지만 `SafeInt<T, E> & SafeInt<U, E>` 않습니다. 두 번째 예제에서 컴파일러는 어떤 유형의 매개 변수를 반환할를 알지 못합니다. 이 문제 해결 방법 중 하나를 두 번째 매개 변수는 기본 형식으로 다시 캐스팅 되려고 합니다. 동일한 매개 변수를 사용 하 여 이렇게와 `SafeInt<T, E> & (U)SafeInt<U, E>`합니다.  
+ 많은 이항 연산자는 두 가지를 사용 하 여를 지원 하지 않는 `SafeInt` 형식입니다. 한 가지 예로는 `&` 연산자입니다. `SafeInt<T, E> & int` 지원 하지만 `SafeInt<T, E> & SafeInt<U, E>` 않습니다. 두 번째 예제에서 컴파일러는 어떤 유형의 매개 변수를 반환할를 알지 못합니다. 이 문제 해결 방법 중 하나를 두 번째 매개 변수는 기본 형식으로 다시 캐스팅 되려고 합니다. 동일한 매개 변수를 사용 하 여 이렇게와 `SafeInt<T, E> & (U)SafeInt<U, E>`합니다.  
   
 > [!NOTE]
 >  모든 비트 연산을 대 한 두 개의 서로 다른 매개 변수 크기가 동일 해야 합니다. 크기가 다른 컴파일러에서 throw 한 [ASSERT](../mfc/reference/diagnostic-services.md#assert) 예외입니다. 정확 하 게이 작업의 결과 보장할 수 없습니다. 이 문제를 해결 하려면 더 큰 매개 변수 크기가 될 때까지 작은 매개 변수를 캐스팅 합니다.  
@@ -213,12 +213,12 @@ Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);
 Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;  
 ```  
   
- `T`및 `U` 부울 형식, 문자 형식 또는 정수 형식에 할당할 수 있습니다. 정수 형식을 signed / unsigned 수 및 8 비트에서 64 비트로 모든 크기입니다.  
+ `T` 및 `U` 부울 형식, 문자 형식 또는 정수 형식에 할당할 수 있습니다. 정수 형식을 signed / unsigned 수 및 8 비트에서 64 비트로 모든 크기입니다.  
   
 > [!NOTE]
 >  하지만 `SafeInt` 클래스 허용 모든 종류의 정수, 부호 없는 형식으로 보다 효율적으로 수행 합니다.  
   
- `E`오류 처리 메커니즘은는 `SafeInt` 사용 합니다. 두 오류 처리 메커니즘은 SafeInt 라이브러리와 함께 제공 됩니다. 기본 정책은 `SafeIntErrorPolicy_SafeIntException`, throw 하는 [SafeIntException 클래스](../windows/safeintexception-class.md) 오류가 발생 하는 동안 예외가 발생 했습니다. 다른 정책을 `SafeIntErrorPolicy_InvalidParameter`, 오류가 발생 하면 프로그램을 중지 합니다.  
+ `E` 오류 처리 메커니즘은는 `SafeInt` 사용 합니다. 두 오류 처리 메커니즘은 SafeInt 라이브러리와 함께 제공 됩니다. 기본 정책은 `SafeIntErrorPolicy_SafeIntException`, throw 하는 [SafeIntException 클래스](../windows/safeintexception-class.md) 오류가 발생 하는 동안 예외가 발생 했습니다. 다른 정책을 `SafeIntErrorPolicy_InvalidParameter`, 오류가 발생 하면 프로그램을 중지 합니다.  
   
  오류 정책을 사용자 지정 하는 방법은 두 가지가 있습니다. 매개 변수를 설정 하는 첫 번째 옵션 `E` 만들 때 한 `SafeInt`합니다. 오류 처리 하나에 대 한 정책 변경 하려는 경우이 옵션을 사용 하 여 `SafeInt`합니다. 정의 하는 다른 옵션은 `_SAFEINT_DEFAULT_ERROR_POLICY` 오류 처리 사용자 지정 된 클래스를 포함 하기 전에 `SafeInt` 라이브러리입니다. 기본 오류 처리의 모든 인스턴스에 대 한 정책 변경 하려는 경우이 옵션을 사용 하 여는 `SafeInt` 코드의 클래스.  
   

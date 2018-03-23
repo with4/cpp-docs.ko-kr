@@ -1,12 +1,12 @@
 ---
-title: "Module 클래스 | Microsoft Docs"
-ms.custom: 
+title: Module 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - Module class
 ms.assetid: dd67e3b8-c2e1-4f53-8c0f-565a140ba649
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d17e0dc79241fbd84e282b9cd8403259e34def0e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9911cdfc943243bd24d452139ef7452e693340f
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="module-class"></a>Module 클래스
 관련된 개체의 컬렉션을 나타냅니다.  
@@ -35,9 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 ```  
   
-template<  
-   ModuleType moduleType  
->  
+template<ModuleType moduleType>  
 class Module;  
   
 template<>  
@@ -55,7 +53,7 @@ class Module<OutOfProc> : public Module<InProc>;
   
 ### <a name="protected-classes"></a>Protected 클래스  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[Module::GenericReleaseNotifier 클래스](../windows/module-genericreleasenotifier-class.md)|현재 모듈의 마지막 개체가 해제될 때 이벤트 처리기를 호출합니다. 이벤트 처리기는 람다, 함수 또는 함수 포인터에 의해 지정됩니다.|  
 |[Module::MethodReleaseNotifier 클래스](../windows/module-methodreleasenotifier-class.md)|현재 모듈의 마지막 개체가 해제될 때 이벤트 처리기를 호출합니다. 이벤트 처리기는 멤버의 포인터-에-a-메서드 멤버 및 개체에서 지정 됩니다.|  
@@ -100,7 +98,7 @@ class Module<OutOfProc> : public Module<InProc>;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[Module::objectCount_ 데이터 멤버](../windows/module-objectcount-data-member.md)|추적으로 생성 된 클래스 수는 [확인](../windows/make-function.md) 함수입니다.|  
 |[Module::releaseNotifier_ 데이터 멤버](../windows/module-releasenotifier-data-member.md)|ReleaseNotifier 개체에 대한 포인터를 보유합니다.|  

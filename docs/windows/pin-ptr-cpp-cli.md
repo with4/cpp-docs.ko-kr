@@ -1,12 +1,12 @@
 ---
 title: pin_ptr (C + + /cli CLI) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - pin_ptr_cpp
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7205718a3564a3929fe2a9f8b7d8049a320ae1cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce63996cc2d93f4890f54c5edda318fca55f98aa
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="pinptr-ccli"></a>pin_ptr(C++/CLI)
 선언는 *고정 포인터*, 공용 언어 런타임만을 사용 합니다.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="parameters"></a>매개 변수  
  *cv_qualifier*  
- `const`또는 `volatile` 한정자입니다. 기본적으로 고정 포인터는 `volatile`합니다. 고정 포인터를 선언 하는 오류가 아니라 하지만 중복 `volatile`합니다.  
+ `const` 또는 `volatile` 한정자입니다. 기본적으로 고정 포인터는 `volatile`합니다. 고정 포인터를 선언 하는 오류가 아니라 하지만 중복 `volatile`합니다.  
   
  *type*  
  `initializer`의 형식입니다.  
@@ -93,7 +93,7 @@ ms.lasthandoff: 12/21/2017
   
 -   캐스트의 대상 형식입니다.  
   
- `pin_ptr`에 `cli` 네임 스페이스입니다. 자세한 내용은 참조 [플랫폼, default 및 cli 네임 스페이스](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)합니다.  
+ `pin_ptr` 에 `cli` 네임 스페이스입니다. 자세한 내용은 참조 [플랫폼, default 및 cli 네임 스페이스](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)합니다.  
   
  내부 포인터에 대 한 자세한 내용은 참조 [interior_ptr (C + + /cli CLI)](../windows/interior-ptr-cpp-cli.md)합니다.  
   
@@ -211,7 +211,7 @@ public:
   
 int main() {  
    ManagedType ^mt = gcnew ManagedType;  
-   pin_ptr< int > pt = &mt->i;  
+   pin_ptr<int> pt = &mt->i;  
    *pt = 8;  
    Console::WriteLine(mt->i);  
   

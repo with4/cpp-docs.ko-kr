@@ -1,12 +1,12 @@
 ---
-title: "Weakref:: Weakref 생성자 | Microsoft Docs"
-ms.custom: 
+title: 'Weakref:: Weakref 생성자 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::WeakRef::WeakRef
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - WeakRef, constructor
 ms.assetid: 589f87e0-8dcc-4e82-aab2-f2f66f1ec47c
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 125fe25179ddbe975530a0c368a4dfc7e4caaf1a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c215006412a1ab882792546e575b6f448529a652
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="weakrefweakref-constructor"></a>WeakRef::WeakRef 생성자
 WeakRef 클래스의 새 인스턴스를 초기화합니다.  
@@ -61,7 +61,7 @@ WeakRef(
  포인터, 참조 또는 rvalue 참조 현재 WeakRef 개체를 초기화 하는 기존 개체에 있습니다.  
   
 ## <a name="remarks"></a>설명  
- 첫 번째 생성자는 빈 WeakRef 개체를 초기화합니다. 두 번째 생성자는 IWeakReference 인터페이스에 대 한 포인터에서 WeakRef 개체를 초기화합니다. 세 번째 생성자는 ComPtr에 대 한 참조에서 WeakRef 개체를 초기화 합니다.\< IWeakReference > 개체입니다. 네 번째와 다섯 번째 생성자는 다른 WeakRef 개체에서 WeakRef 개체를 초기화 합니다.  
+ 첫 번째 생성자는 빈 WeakRef 개체를 초기화합니다. 두 번째 생성자는 IWeakReference 인터페이스에 대 한 포인터에서 WeakRef 개체를 초기화합니다. 세 번째 생성자는 ComPtr에 대 한 참조에서 WeakRef 개체를 초기화 합니다.\<IWeakReference > 개체입니다. 네 번째와 다섯 번째 생성자는 다른 WeakRef 개체에서 WeakRef 개체를 초기화 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  

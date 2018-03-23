@@ -1,12 +1,12 @@
 ---
-title: "Module:: methodreleasenotifier 클래스 | Microsoft Docs"
-ms.custom: 
+title: 'Module:: methodreleasenotifier 클래스 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::MethodReleaseNotifier
@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - MethodReleaseNotifier class
 ms.assetid: 5c2902be-964b-488f-9f1c-adf504995cbc
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 113ea9179292606461a8fe67ff161f63e58161da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 204fe04b9c4df566ae50dacbe4981d5b902203d5
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier 클래스
 현재 모듈의 마지막 개체가 해제될 때 이벤트 처리기를 호출합니다. 이벤트 처리기는 멤버의 포인터-에-a-메서드 멤버 및 개체에서 지정 됩니다.  
@@ -34,9 +34,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="syntax"></a>구문  
   
 ```  
-template<  
-   typename T  
->  
+template<typename T>  
 class MethodReleaseNotifier : public ReleaseNotifier;  
 ```  
   
@@ -60,7 +58,7 @@ class MethodReleaseNotifier : public ReleaseNotifier;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[Module::MethodReleaseNotifier::method_ 데이터 멤버](../windows/module-methodreleasenotifier-method-data-member.md)|현재 Module::MethodReleaseNotifier 개체의 이벤트 처리기에 대한 포인터를 보유합니다.|  
 |[Module::MethodReleaseNotifier::object_ 데이터 멤버](../windows/module-methodreleasenotifier-object-data-member.md)|멤버 함수가 현재 Module::MethodReleaseNotifier 개체의 이벤트 처리기인 개체에 대한 포인터를 보유합니다.|  
