@@ -1,12 +1,12 @@
 ---
-title: "_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s | Microsoft 문서"
-ms.custom: 
+title: _itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ui64tow_s
@@ -67,17 +67,17 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-caps.latest.revision: 
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 2d349627bfe5f6c5049de128937215301411b86e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="itoas-i64toas-ui64toas-itows-i64tows-ui64tows"></a>_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s
 정수를 문자열로 변환합니다. 이러한 함수는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 보안 기능이 강화된 [_itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md)의 버전입니다.  
@@ -155,10 +155,10 @@ errno_t _itow_s(
   
 |값|buffer|sizeInCharacters|radix|반환|  
 |-----------|------------|----------------------|-----------|------------|  
-|any|`NULL`|any|any|`EINVAL`|  
-|any|any|<=0|any|`EINVAL`|  
-|any|any|<= length of the result string required|any|`EINVAL`|  
-|any|any|any|`radix` < 2 또는 `radix` > 36|`EINVAL`|  
+|모두|`NULL`|모두|모두|`EINVAL`|  
+|모두|모두|<=0|모두|`EINVAL`|  
+|모두|모두|<= length of the result string required|모두|`EINVAL`|  
+|모두|모두|모두|`radix` < 2 또는 `radix` > 36|`EINVAL`|  
   
  **보안 문제**  
   
@@ -171,7 +171,7 @@ errno_t _itow_s(
   
  이러한 함수의 디버그 버전은 우선 0xFD로 버퍼를 채웁니다. 이 동작을 사용하지 않으려면 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)를 사용하세요.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -181,7 +181,7 @@ errno_t _itow_s(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴에서 반환된 값|필수 헤더|  
+|루틴|필수 헤더|  
 |-------------|---------------------|  
 |`_itoa_s`|\<stdlib.h>|  
 |`_i64toa_s`|\<stdlib.h>|  
@@ -192,7 +192,7 @@ errno_t _itow_s(
   
  호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // crt_itoa_s.c  

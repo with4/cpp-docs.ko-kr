@@ -1,12 +1,12 @@
 ---
-title: "_itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow | Microsoft 문서"
-ms.custom: 
+title: _itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _itow
@@ -63,17 +63,17 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-caps.latest.revision: 
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: bdfe837630a4f8b36ca57970c6b23d832740f59d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="itoa-i64toa-ui64toa-itow-i64tow-ui64tow"></a>_itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow
 정수를 문자열로 변환합니다. 이러한 함수의 보다 안전한 버전을 사용할 수 있습니다. [_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s](../../c-runtime-library/reference/itoa-s-i64toa-s-ui64toa-s-itow-s-i64tow-s-ui64tow-s.md)를 참조하세요.  
@@ -170,7 +170,7 @@ wchar_t * _ui64tow(
   
  C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -180,7 +180,7 @@ wchar_t * _ui64tow(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴에서 반환된 값|필수 헤더|  
+|루틴|필수 헤더|  
 |-------------|---------------------|  
 |`_itoa`|\<stdlib.h>|  
 |`_i64toa`|\<stdlib.h>|  
@@ -191,7 +191,7 @@ wchar_t * _ui64tow(
   
  호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // crt_itoa.c  

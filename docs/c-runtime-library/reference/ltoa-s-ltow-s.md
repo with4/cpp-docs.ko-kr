@@ -1,12 +1,12 @@
 ---
-title: "_ltoa_s, _ltow_s | Microsoft 문서"
-ms.custom: 
+title: _ltoa_s, _ltow_s | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ltoa_s
@@ -39,17 +39,17 @@ helpviewer_keywords:
 - ltoa_s function
 - _ltow_s function
 ms.assetid: d7dc61ea-1ccd-412d-b262-555a58647386
-caps.latest.revision: 
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 181f03752a16f64329eb94ae0cd8fac091fa2987
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="ltoas-ltows"></a>_ltoa_s, _ltow_s
 long 정수를 문자열로 변환합니다. 이러한 함수는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [_ltoa, _ltow](../../c-runtime-library/reference/ltoa-ltow.md)의 버전입니다.  
@@ -106,7 +106,7 @@ errno_t _ltow_s(
   
  C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -114,7 +114,7 @@ errno_t _ltow_s(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴에서 반환된 값|필수 헤더|  
+|루틴|필수 헤더|  
 |-------------|---------------------|  
 |`_ltoa_s`|\<stdlib.h>|  
 |`_ltow_s`|\<stdlib.h>|  

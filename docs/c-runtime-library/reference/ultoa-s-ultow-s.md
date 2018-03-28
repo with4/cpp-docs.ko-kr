@@ -1,12 +1,12 @@
 ---
 title: _ultoa_s, _ultow_s | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ultow_s
@@ -40,17 +40,17 @@ helpviewer_keywords:
 - converting numbers, to strings
 - ultow_s function
 ms.assetid: 606ce905-6752-46ac-a15a-bdc22920e1d4
-caps.latest.revision: 
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 1e6b882e8e4017410e0f377aaf4b49b658b39afa
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="ultoas-ultows"></a>_ultoa_s, _ultow_s
 부호 없는 long 정수를 문자열로 변환합니다. 이러한 함수는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [_ultoa, _ultow](../../c-runtime-library/reference/ultoa-ultow.md)의 버전입니다.  
@@ -107,7 +107,7 @@ errno_t _ultow_s(
   
  C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
 |TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -115,7 +115,7 @@ errno_t _ultow_s(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴에서 반환된 값|필수 헤더|  
+|루틴|필수 헤더|  
 |-------------|---------------------|  
 |`_ultoa_s`|\<stdlib.h>|  
 |`_ultow_s`|\<stdlib.h>|  
