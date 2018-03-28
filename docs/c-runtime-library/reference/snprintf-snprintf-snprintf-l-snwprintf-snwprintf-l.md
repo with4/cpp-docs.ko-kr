@@ -1,12 +1,12 @@
 ---
 title: snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _snwprintf
@@ -25,6 +25,7 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _snprintf
@@ -56,17 +57,17 @@ helpviewer_keywords:
 - sntprintf function
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
-caps.latest.revision: 
+caps.latest.revision: ''
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d235f1034d8e916ddcd9e268e72aadacaf90911
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 92a4939c9fc71245528198c686ca9ed7024c858d
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 문자열에 서식이 지정된 데이터를 씁니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](../../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)를 참조하세요.  
@@ -179,13 +180,13 @@ int _snwprintf_l(
   
  Visual Studio 2015 및 Windows 10의 UCRT부터 `snprintf` 는 더 이상 `_snprintf`와 같지 않습니다. `snprintf` 함수 동작은 이제 C99 표준을 준수합니다.  
   
- `_snwprintf` 는 `_snprintf`의 와이드 문자 버전이며, `_snwprintf` 에 대한 포인터 인수는 와이드 문자 문자열입니다. `_snwprintf`에서 인코딩 오류의 탐지 방식은 `_snprintf`에서와 다를 수 있습니다. `_snwprintf`와 같이 `swprintf`가 `FILE`유형의 대상 대신 문자열에 출력을 기록합니다.  
+ `_snwprintf`는 `_snprintf`의 와이드 문자 버전이며, `_snwprintf`에 대한 포인터 인수는 와이드 문자 문자열입니다. `_snwprintf`에서 인코딩 오류의 탐지 방식은 `_snprintf`에서와 다를 수 있습니다. `_snwprintf`와 같이 `swprintf`가 `FILE` 유형의 대상 대신 문자열에 출력을 기록합니다.  
   
  `_l` 접미사가 있는 이러한 함수 버전은 현재 스레드 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다.  
   
  C++에서 이러한 함수는 보다 최신의 안전한 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
   
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
   
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -194,14 +195,14 @@ int _snwprintf_l(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴에서 반환된 값|필수 헤더|  
+|루틴|필수 헤더|  
 |-------------|---------------------|  
 |`snprintf`, `_snprintf`,  `_snprintf_l`|\<stdio.h>|  
 |`_snwprintf`, `_snwprintf_l`|\<stdio.h> 또는 \<wchar.h>|  
   
  호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```C  
 // crt_snprintf.c  

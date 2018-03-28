@@ -1,27 +1,27 @@
 ---
-title: "컨트롤 (ATL 자습서, 2 부) 추가 | Microsoft Docs"
-ms.custom: 
+title: 컨트롤 (ATL 자습서, 2 부) 추가 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 dev_langs:
 - C++
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aed69a5dd421e967e1da33bb3a2f2c41fa80698d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6bedc0fbe4cd1e4a612bcb329071668e783b3de8
+ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>컨트롤 추가(ATL 자습서, 2부)
 이 단계에서는 프로젝트에 컨트롤을 추가를 빌드하고 웹 페이지에서 테스트 합니다.  
@@ -32,9 +32,9 @@ ms.lasthandoff: 12/21/2017
   
 1.  클래스 뷰에서 다각형 프로젝트를 마우스 오른쪽 단추로 클릭 합니다.  
   
-2.  가리킨 **추가** 를 바로 가기 메뉴를 클릭 한 **클래스** 하위 메뉴에 있습니다.  
+2.  가리킨 **추가** 를 바로 가기 메뉴를 클릭 한 **새 항목** 하위 메뉴에 있습니다.  
   
-     **클래스 추가** 대화 상자가 나타납니다. 왼쪽의 트리 구조에 다른 개체 범주 나열 됩니다.  
+     **새 항목 추가** 대화 상자가 나타납니다. 왼쪽의 트리 구조에 다른 개체 범주 나열 됩니다.  
   
 3.  클릭는 **ATL** 폴더입니다.  
   
