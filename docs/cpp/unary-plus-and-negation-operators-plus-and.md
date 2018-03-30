@@ -1,12 +1,12 @@
 ---
-title: "단항 더하기 및 부정 연산자: + 및-| Microsoft Docs"
-ms.custom: 
+title: '단항 더하기 및 부정 연산자: + 및-| Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - +
@@ -20,17 +20,17 @@ helpviewer_keywords:
 - + operator [C++], unary operators
 - + operator
 ms.assetid: 2c58c4f4-0d92-4ae3-9d0c-1a6157875cc1
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12aba6e13f10d05c8559439427d2d28bcdad089d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8211cf9ebef808ad428e4c94ba97c6bcd22897ea
+ms.sourcegitcommit: cdd4808dcb274bbb29618286df4d1d4acd35b9bc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>단항 더하기 및 부정 연산자: + 및 -
 ## <a name="syntax"></a>구문  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/21/2017
  정수 계열 확장은 정수 계열 피연산자에서 수행되며, 결과 형식은 피연산자가 확장되는 형식입니다. 참조 [표준 변환](standard-conversions.md) 확장 수행 방법에 대 한 자세한 내용은 합니다.  
   
 ## <a name="microsoft-specific"></a>Microsoft 전용  
- 부호 없는 수량의 단항 부정은 2^n에서 피연산자의 값을 빼서 수행됩니다. 여기서 n은 지정된 부호 없는 형식의 개체에 있는 비트 수입니다. Microsoft C++는 2의 보수 산술 연산을 활용하는 프로세서에서 실행됩니다. 다른 프로세서에서는 부정에 대한 알고리즘이 다를 수 있습니다.  
+ 부호 없는 수량의 단항 부정은 2^n에서 피연산자의 값을 빼서 수행됩니다. 여기서 n은 지정된 부호 없는 형식의 개체에 있는 비트 수입니다.
   
 ## <a name="see-also"></a>참고 항목  
  [단항 연산자가 있는 식](../cpp/expressions-with-unary-operators.md)   
