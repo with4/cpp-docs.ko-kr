@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio의 Visual C++에 대한 새로운 기능 | Microsoft Docs"
+title: Visual Studio의 Visual C++에 대한 새로운 기능 | Microsoft Docs
 ms.date: 11/15/2017
 ms.technology:
 - vs-ide-general
@@ -420,7 +420,7 @@ Visual Studio 그래픽 진단은 Direct3D 앱의 렌더링 및 성능 문제를
 
   ![리소스 기록 변경](media/resource-history-change.png)
 
-  전체 호출 스택 캡처링을 사용하여 프레임이 캡처된 경우(**Visual Studio > 도구 > 옵션(**그래픽 진단** 아래)**), 각 변경 이벤트의 컨텍스트를 신속하게 추론하고 Visual Studio 프로젝트 내에서 검사할 수 있습니다.
+  전체 호출 스택 캡처링을 사용하여 프레임이 캡처된 경우(**Visual Studio > 도구 > 옵션(**그래픽 진단 **아래)**), 각 변경 이벤트의 컨텍스트를 신속하게 추론하고 Visual Studio 프로젝트 내에서 검사할 수 있습니다.
 
 - **API 통계:** 프레임의 API 사용에 대한 대략적인 요약을 표시합니다. 인지하지 못한 상태에서 수행 중인 호출이나 너무 많이 수행 중인 호출을 검색하는 데 유용할 수 있습니다. 이 창은 Visual Studio Graphics Analyzer의 **보기 > API 통계**를 통해 사용할 수 있습니다.
 
