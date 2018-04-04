@@ -1,33 +1,33 @@
 ---
-title: "데스크톱 응용 프로그램 (Visual c + +) | Microsoft Docs"
-ms.custom: 
+title: 데스크톱 응용 프로그램 (Visual c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e2da53a234f63bfd4c8a7f84ec5c107426f0e7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61f52dead8ca7ecad52b1cef4f1d87ffc5830386
+ms.sourcegitcommit: 78e5e5cdbafd29e2a6ccf68d4cce215136952907
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="desktop-applications-visual-c"></a>데스크톱 응용 프로그램 (Visual c + +)
 A *데스크톱 응용 프로그램* c + + Windows Api 집합과 나 시스템 콘솔 창에서 실행 되거나 전체 집합에 액세스할 수 있는 네이티브 응용 프로그램입니다. Windows XP부터 Windows 10 (Windows XP은 더 이상 공식적으로 지원 되며 그 이후 도입 된 많은 Windows Api) 하지만 c + +에서 데스크톱 응용 프로그램 실행할 수 없습니다.   데스크톱 응용 프로그램은 Windows 10을 실행 하는 Pc에 및 XBox, Windows Phone, Surface Hub 및 기타 장치에서 실행할 수 있는 한 유니버설 Windows 플랫폼 (UWP) 앱과에서 다릅니다. 데스크톱 vs에 대 한 자세한 내용은 합니다. UWP 응용 프로그램 참조 [기술 선택](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx)합니다.  
   
- **용어**  
+ **Terminology**  
   
 -   A *Win32* 응용 프로그램은 네이티브 데스크톱 응용 프로그램에서 만들 수 있는 c + +를 사용 하는 Windows [Windows C Api 및/또는 COM Api](https://msdn.microsoft.com/en-us/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT 및 표준 라이브러리 Api 및 타사 라이브러리입니다. 창에서를 실행 하는 Win32 응용 프로그램 개발자가 Windows 프로시저 함수 내 Windows 메시지를 명시적으로 작업할 수 필요 합니다. 이름이 32 비트 (x86) 또는 64 비트 (x64) 이진으로 Win32 응용 프로그램을 컴파일할 수 있습니다. Visual Studio IDE에서 x86 용어 및 Win32는 동의어입니다.  
   
@@ -54,7 +54,7 @@ A *데스크톱 응용 프로그램* c + + Windows Api 집합과 나 시스템 �
 |제목|설명|  
 |-----------|-----------------|  
 |[Windows Development](http://go.microsoft.com/fwlink/p/?LinkId=262282)|Windows API 및 COM에 대한 정보를 제공합니다. 일부 Windows API 및 타사 DLL이 COM 개체로 구현됩니다.|  
-|[Hilo: Developing C++ Applications for Windows 7](http://go.microsoft.com/fwlink/p/?LinkId=262284)|Windows Animation 및 Direct2D를 사용하는 리치 클라이언트 Windows 데스크톱 응용 프로그램을 만들어서 캐러셀 기반 사용자 인터페이스를 만드는 방법에 대해 설명합니다.  이 자습서에서는 Windows 7 이후 업데이트 되지 않은 있지만 여전히 Win32 프로그래밍에 대 한 throough 소개를 제공 합니다.|  
+|[Hilo: Developing C++ Applications for Windows 7](http://go.microsoft.com/fwlink/p/?LinkId=262284)|Windows Animation 및 Direct2D를 사용하는 리치 클라이언트 Windows 데스크톱 응용 프로그램을 만들어서 캐러셀 기반 사용자 인터페이스를 만드는 방법에 대해 설명합니다.  이 자습서에서는 Windows 7 이후 업데이트 되지 않은 있지만 여전히 Win32 프로그래밍에 대 한 철저 한 소개를 제공 합니다.|  
 |[Visual C++](../visual-cpp-in-visual-studio.md)|Visual Studio에 포함된 Visual C++의 주요 기능을 설명하고 Visual C++ 설명서의 나머지 부분에 연결합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
