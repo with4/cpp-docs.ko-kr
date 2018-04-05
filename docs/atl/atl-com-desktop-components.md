@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/29/2018
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM 데스크톱 구성 요소
-ATL 참조는 액티브 템플릿 라이브러리(ATL), 콤포넌트 개체 모델(COM) 객체의 프로그래밍을 단순화 하는 템플릿 기반 C++ 클래스 집합을 설명 합니다. ATL의 완전히 활용을 위해 COM에 대한 지식이 있다면 가장 좋습니다.  
+ATL 참조는 액티브 템플릿 라이브러리(ATL), 콤포넌트 개체 모델(COM) 객체의 프로그래밍을 단순화하는 템플릿 기반 C++ 클래스 집합을 설명합니다. ATL를 완전히 활용하기 위해 COM에 대한 지식이 있는 것이 가장 좋습니다. 
   
 ## <a name="in-this-section"></a>섹션 내용  
  [ATL 클래스 개요](../atl/atl-class-overview.md)  
@@ -62,10 +62,10 @@ ATL 참조는 액티브 템플릿 라이브러리(ATL), 콤포넌트 개체 모�
  액티브 템플릿 라이브러리 (ATL)를 사용 하 여 프로그래밍 하는 방법에 항목을 제공 합니다.  
   
  [ATL 자습서](../atl/active-template-library-atl-tutorial.md)  
- 컨트롤 생성을 안내 하고 프로세스에서 일부 ATL 기초를 보여 줍니다.  
+ 컨트롤 생성을 안내하고 프로세스에서 일부 ATL 기초를 보여줍니다. 
   
  [ATL 샘플](../visual-cpp-samples.md)  
- COM 객체를 이용한 ATL 사용 방법을 보여 주는 샘플 코드입니다.  
+ COM 객체를 이용한 ATL 사용 방법을 보여주는 샘플 코드입니다. 
   
  [OLE DB 템플릿](../data/oledb/ole-db-templates.md)  
  흔히 사용되는 여러 OLE DB 인터페이스를 구현하는 템플릿 클래스 집합인 OLE DB 소비자 및 공급자 템플릿에 대한 참조 자료를 제공합니다.  
