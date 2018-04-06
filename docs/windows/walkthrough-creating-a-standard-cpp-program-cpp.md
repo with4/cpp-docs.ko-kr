@@ -1,12 +1,12 @@
 ---
-title: "연습: 만들기 표준 c + + 프로그램 (c + +) | Microsoft Docs"
-ms.custom: 
+title: '연습: 만들기 표준 c + + 프로그램 (c + +) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 f1_keywords:
 - vcfirstapp
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-caps.latest.revision: 
+caps.latest.revision: 36
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -61,27 +61,28 @@ ms.lasthandoff: 12/21/2017
   
 6.  다음과 같이 새 소스 파일을 프로젝트에 추가 합니다.  
   
-    1.  **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭는 **소스 파일** 폴더를 가리키도록 **추가**, 클릭 하 고 **새 항목**합니다.  
+    1.  **솔루션 탐색기**에서 **소스 파일** 폴더를 마우스 오른쪽 단추로 클릭하고 **추가**를 클릭 후 **새 항목**을 선택합니다.  
   
-    2.  에 **코드** 노드를 클릭 **c + + 파일 (.cpp)**파일 이름을 입력 한 다음 클릭 **추가**합니다.  
+    2.  **코드** 노드에서 **C++ 파일(.cpp)**을 클릭하고, 파일 이름을 입력한 다음 **추가**를 클릭합니다.  
   
-     .Cpp 파일의 원본 파일 폴더에 나타납니다 **솔루션 탐색기**, Visual Studio 편집기에서 파일이 열립니다.  
+     .cpp 파일의 원본 파일 폴더에 나타납니다. **솔루션 탐색기**, Visual Studio 편집기에서 파일이 열립니다.  
   
-7.  편집기에서 파일을에서 c + + 표준 라이브러리를 사용 하는 올바른 c + + 프로그램 입력 샘플 프로그램 중 하나를 복사 하는 파일에 붙여 넣습니다.  
+7.  편집기의 파일에서 C++ 표준 라이브러리를 사용하는 올바른 C++ 프로그램 입력 샘플 프로그램 중 하나를 복사하여 파일에 붙여넣습니다.
+  
   
 8.  파일을 저장합니다.  
   
 9. **빌드** 메뉴에서 **솔루션 빌드**를 클릭합니다.  
   
-     **출력** 창 컴파일 진행률, 빌드 로그 및 빌드 상태를 나타내는 메시지의 예를 들어 위치에 대 한 정보를 표시 합니다.  
+     **출력** 창에서는 빌드 로그 및 빌드 상태를 나타내는 메시지와 같은 컴파일 진행 상황을 안내합니다.  
   
-10. 에 **디버그** 메뉴를 클릭 하 여 **디버깅 하지 않고 시작**합니다.  
+10. **디버그** 메뉴를 클릭하여 **디버깅하지 않고 시작**을 선택합니다.  
   
-     샘플 프로그램을 사용 하는 경우 명령 창을 표시 되 고 집합에 특정 정수 찾았는지를 보여 줍니다.  
+     샘플 프로그램을 사용하는 경우 명령 창이 표시되고 `set`에서 특정 정수를 찾았는지를 보여줍니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  **이전:** [콘솔 Visual c + +에서 응용 프로그램](../windows/console-applications-in-visual-cpp.md)합니다. **다음:**[연습: 명령줄에서 네이티브 c + + 프로그램 컴파일](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [C + + 언어 참조](../cpp/cpp-language-reference.md)   
+ [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [C++ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)
