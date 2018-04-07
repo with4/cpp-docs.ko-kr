@@ -1,12 +1,12 @@
 ---
-title: "정적 멤버 (c + +) | Microsoft Docs"
-ms.custom: 
+title: 정적 멤버 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -22,24 +22,24 @@ helpviewer_keywords:
 - instance constructors, shared members
 - class instances [C++], static members
 ms.assetid: 9cc8cf0f-d74c-46f2-8e83-42d4e42c8370
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d19985271648e66aa86946c685608f805b1dfe1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 420139a8e7eba02411ef0e1e3cf39cecc5b3e97a
+ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="static-members-c"></a>정적 멤버(C++)
 클래스는 정적 멤버 데이터와 멤버 함수를 포함할 수 있습니다. 로 데이터 멤버가 선언 되는 경우 **정적**, 클래스의 모든 개체에 대 한 데이터의 복사본을 하나만 유지 됩니다.
   
  정적 데이터 멤버는 지정된 클래스 형식의 개체에 속하지 않습니다. 결과적으로, 정적 데이터 멤버 선언은 정의로 간주되지 않습니다. 데이터 멤버는 클래스 범위에서 선언되지만 정의는 파일 범위에서 수행됩니다. 이러한 정적 멤버에는 외부 링크가 있습니다. 다음 예제는 이러한 과정을 보여 줍니다.  
   
-```  
+```cpp  
 // static_data_members.cpp  
 class BufferedOutput  
 {  
@@ -72,13 +72,13 @@ int main()
   
  클래스 형식의 개체를 참조하지 않고 정적 데이터 멤버를 참조할 수 있습니다. `BufferedOutput` 개체를 사용하여 쓴 바이트 수는 다음과 같이 확인할 수 있습니다.  
   
-```  
+```cpp  
 long nBytes = BufferedOutput::bytecount;  
 ```  
   
- 정적 멤버가 존재하기 위해 클래스 형식의 개체가 있어야 하는 것은 아닙니다. 멤버 선택을 사용 하 여 정적 멤버 액세스할 수도 있습니다 (**합니다.** 및  **->** ) 연산자. 예:  
+ 정적 멤버가 존재하기 위해 클래스 형식의 개체가 있어야 하는 것은 아닙니다. 멤버 선택을 사용 하 여 정적 멤버 액세스할 수도 있습니다 (**합니다.** 및 **->**) 연산자. 예를 들어:  
   
-```  
+```cpp  
 BufferedOutput Console;  
   
 long nBytes = Console.bytecount;  

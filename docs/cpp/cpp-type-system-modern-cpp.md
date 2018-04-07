@@ -1,27 +1,27 @@
 ---
-title: "C + + 형식 시스템 (최신 c + +) | Microsoft Docs"
-ms.custom: 
+title: C + + 형식 시스템 (최신 c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-caps.latest.revision: 
+caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c4e86ffe91c2c0bf6a914e8f735b5faca6ae45f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7abede5a7370461b0e77bd51ea12f7ab9b184e5c
+ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="c-type-system-modern-c"></a>C++ 형식 시스템(최신 C++)
 개념 *형식* c + +에서 매우 중요 합니다. 모든 변수, 함수 인수 및 함수 반환 값은 형식이 있어야 컴파일할 수 있습니다. 또한 모든 식(리터럴 값 포함)은 확인 전 컴파일러가 암시적으로 형식을 지정합니다. 형식의 몇 가지 예로 `int` 정수 계열 값을 저장 한 `double` 부동 소수점 값을 저장 한 (라고도 *스칼라* 데이터 형식), 또는 표준 라이브러리 클래스 [std::basic_string](../standard-library/basic-string-class.md) 텍스트를 저장 합니다. `class` 또는 `struct`를 정의하여 고유 형식을 만들 수 있습니다. 이 형식은 변수에 할당되는(또는 식 결과) 메모리 양, 해당 변수에 저장할 수 있는 값의 유형, 이러한 값(비트 패턴)의 해석 방법 및 여기에 대해 수행할 수 있는 작업을 지정합니다. 이 문서에는 C++ 형식 시스템의 주요 기능에 대한 비공식적 개요가 들어 있습니다.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  다음 예제에서는 각각에 대한 일부 설명을 포함한 몇 가지 간단한 변수 선언을 보여 줍니다. 또한 컴파일러가 특정 변수의 후속 작업을 허용하거나 거부하기 위해 형식 정보를 사용하는 방법을 보여줍니다.  
   
-```  
+```cpp  
   
 int result = 0;              // Declare and initialize an integer.  
 double coefficient = 10.8;   // Declare and initialize a floating   
@@ -70,7 +70,7 @@ int maxValue;                // Not recommended! maxValue contains
   
  다음 그림은 기본 제공 형식의 상대적 크기를 보여 줍니다.  
   
- ![크기를 바이트로 작성 &#45; 형식에](../cpp/media/built-intypesizes.png "내장 inTYpeSizes")  
+ ![크기를 바이트로 작성&#45;형식에서](../cpp/media/built-intypesizes.png "내장 inTYpeSizes")  
   
  다음 표에는 가장 자주 사용하는 기본 형식이 나와 있습니다.  
   
@@ -91,7 +91,7 @@ int maxValue;                // Not recommended! maxValue contains
 ## <a name="const-type-qualifier"></a>const 형식 한정자  
  기본 제공 또는 사용자 정의 형식은 const 키워드로 정규화할 수 있습니다. 또한 멤버 함수는 `const` 한정 또는 `const` 오버로드일 수 있습니다. `const` 형식 값은 초기화한 후 수정할 수 없습니다.  
   
-```  
+```cpp  
   
 const double PI = 3.1415;  
 PI = .75 //Error. Cannot modify const variable.  
@@ -119,7 +119,7 @@ PI = .75 //Error. Cannot modify const variable.
   
  가장 먼저 알아야 할 점은 원시 포인터 변수를 선언하는 것은 포인터 변수 역참조가 있는 경우 포인터를 참조하는 메모리 위치의 주소를 저장하는 데 필요한 메모리를 할당한다는 것입니다. 데이터 값 자체에 대 한 메모리의 할당 (호출 또한 *백업 저장소*) 아직 할당 되지 않습니다. 즉, 기본 포인터 변수를 선언하면 실제 데이터 변수가 아니라 메모리 주소 변수를 만듭니다. 포인터 변수에 백업 저장소에 대한 올바른 주소가 포함되어 있는지 확인하기 전에 포인터 변수를 역참조하면 프로그램에서 정의되지 않은 동작(일반적으로 심각한 오류)이 발생합니다. 다음 예제에서는 이런 종류의 오류를 보여 줍니다.  
   
-```  
+```cpp  
   
 int* pNumber;       // Declare a pointer-to-int variable.  
 *pNumber = 10;      // error. Although this may compile, it is  
@@ -131,7 +131,7 @@ int* pNumber;       // Declare a pointer-to-int variable.
   
  이 예제는 실제 정수 데이터 또는 할당된 유효한 메모리 주소를 저장하기 위해 할당된 메모리 없이 포인터를 역참조합니다. 다음은 다음 오류를 해결한 코드입니다.  
   
-```  
+```cpp  
   
     int number = 10;          // Declare and initialize a local integer  
                               // variable for data backing store.  
@@ -151,7 +151,7 @@ int* pNumber;       // Declare a pointer-to-int variable.
   
  그러나 되기은 동적으로 할당 된 개체-특히 복잡 한 코드를 호출 하는 리소스 버그가에서 삭제를 잊기 쉬울는 *메모리 누수*합니다. 그러므로 최신 C++에서는 원시 포인터를 사용하지 않는 것이 좋습니다. 거의 항상 하는 것에 대 한 원시 포인터를 래핑하는 [스마트 포인터](../cpp/smart-pointers-modern-cpp.md), (스마트 포인터에 대 한 범위에서 벗어날) 하는 경우 해당 소멸자가 호출 됩니다; 자동으로 메모리를 해제할 것는 스마트 포인터를 사용 하 여 있습니다 거의 c + + 프로그램에서 버그가 있는 모든 급을 제거 합니다. 다음 예에서 `MyClass`는 `DoSomeWork();`의 공용 메서드를 가진 사용자 정의 형식입니다.  
   
-```  
+```cpp  
   
 void someFunction() {  
     unique_ptr<MyClass> pMc(new MyClass);  
@@ -181,5 +181,5 @@ void someFunction() {
   
 ## <a name="see-also"></a>참고 항목  
  [C + +의 진화](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C + + 언어 참조](../cpp/cpp-language-reference.md)   
+ [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [C++ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)

@@ -1,33 +1,33 @@
 ---
-title: "스마트 포인터 (최신 c + +) | Microsoft Docs"
-ms.custom: 
+title: 스마트 포인터 (최신 c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-caps.latest.revision: 
+caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e5883cc7f028c2d64c038a2cdbd9b8365b7e61d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c92a0a6030f8e46fb52beee0bf8fd661b47cdf95
+ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="smart-pointers-modern-c"></a>스마트 포인터(최신 C++)
 최신 c + + 프로그래밍에서 표준 라이브러리 포함 *스마트 포인터*, 메모리의 사용할 수 있는 프로그램이 수 있도록 하는 데 사용 되는 및 리소스 누수 예외 로부터 안전한 됩니다.  
   
 ## <a name="uses-for-smart-pointers"></a>스마트 포인터 용도  
- 스마트 포인터에 정의 된는 `std` 네임 스페이스에는 [ \<메모리 >](../standard-library/memory.md) 헤더 파일입니다. 에 중요는 [RAII](../cpp/objects-own-resources-raii.md) 또는 *Resource Acquisition Is Initialialization* 프로그래밍 언어입니다. 이 관용구의 주요 목표는 개체의 모든 자원 생성이 한 줄의 코드에서 만들어지고 준비되어 그 개체가 초기화되는 동시에 자원 수집이 발생하는 것을 확인하는 것입니다. 실제로 RAII의 기본 원칙은 힙 할당 리소스(예: 동적 할당 메모리 또는 시스템 개체 핸들)의 소유권을 해당 소멸자가 리소스를 삭제하거나 비우는 코드 및 모든 관련 정리 코드가 포함된 스택 할당 개체에 제공하는 것입니다.  
+ 스마트 포인터에 정의 된는 `std` 네임 스페이스에는 [ \<메모리 >](../standard-library/memory.md) 헤더 파일입니다. 에 중요는 [RAII](../cpp/objects-own-resources-raii.md) 또는 *Resource Acquisition Is Initialization* 프로그래밍 언어입니다. 이 관용구의 주요 목표는 개체의 모든 자원 생성이 한 줄의 코드에서 만들어지고 준비되어 그 개체가 초기화되는 동시에 자원 수집이 발생하는 것을 확인하는 것입니다. 실제로 RAII의 기본 원칙은 힙 할당 리소스(예: 동적 할당 메모리 또는 시스템 개체 핸들)의 소유권을 해당 소멸자가 리소스를 삭제하거나 비우는 코드 및 모든 관련 정리 코드가 포함된 스택 할당 개체에 제공하는 것입니다.  
   
  대부분의 경우 실제 리소스를 가리키도록 기본 포인터 또는 리소스 핸들을 초기화할 때는 포인터를 스마트 포인터로 즉시 전달합니다. 현대적인 C++에서 기본 포인터는 성능이 중요하며, 소유권 관련 혼동 여지가 없는 제한된 범위, 루프 또는 지원 함수의 작은 코드 블록에서만 사용됩니다.  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/21/2017
  POCO(Plain Old C++ 개체)에 대한 포인터를 캡슐화하는 데 가장 먼저 스마트 포인터를 사용합니다.  
   
 -   `unique_ptr`   
-     기본 포인터로 한 명의 소유자만 허용합니다. `shared_ptr`이 필요하다는 점을 확실히 알 경우 POCO의 기본 선택으로 사용합니다. 새 소유자로 이동할 수 있지만 복사하거나 공유할 수 없습니다. 사용하지 않는 `auto_ptr`을 대체합니다. `boost::scoped_ptr`과 비교합니다. `unique_ptr`작고 효율적 이며, 크기는 1 포인터가 고 c + + 표준 라이브러리 컬렉션에서 빠른 삽입 및 검색에 대 한 rvalue 참조를 지원 합니다. 헤더 파일: `<memory>`. 자세한 내용은 참조 [하는 방법: unique_ptr 인스턴스 만들기 및 사용](../cpp/how-to-create-and-use-unique-ptr-instances.md) 및 [unique_ptr 클래스](../standard-library/unique-ptr-class.md)합니다.  
+     기본 포인터로 한 명의 소유자만 허용합니다. `shared_ptr`이 필요하다는 점을 확실히 알 경우 POCO의 기본 선택으로 사용합니다. 새 소유자로 이동할 수 있지만 복사하거나 공유할 수 없습니다. 사용하지 않는 `auto_ptr`을 대체합니다. `boost::scoped_ptr`과 비교합니다. `unique_ptr` 작고 효율적 이며, 크기는 1 포인터가 고 c + + 표준 라이브러리 컬렉션에서 빠른 삽입 및 검색에 대 한 rvalue 참조를 지원 합니다. 헤더 파일: `<memory>`. 자세한 내용은 참조 [하는 방법: unique_ptr 인스턴스 만들기 및 사용](../cpp/how-to-create-and-use-unique-ptr-instances.md) 및 [unique_ptr 클래스](../standard-library/unique-ptr-class.md)합니다.  
   
 -   `shared_ptr`   
      참조 횟수가 계산되는 스마트 포인터입니다. 원시 포인터 하나를 여러 소유자에게 할당하려고 할 경우 사용합니다(예: 컨테이너에서 포인터 복사본을 반환할 때 원본을 유지하고 싶을 경우). 원시 포인터는 모든 `shared_ptr` 소유자가 범위를 벗어나거나 소유권을 포기할 때까지 삭제되지 않습니다. 크기는 2개의 포인터입니다. 하나는 개체용이고, 다른 하나는 참조 횟수가 포함된 공유 제어 블록용입니다. 헤더 파일: `<memory>`. 자세한 내용은 참조 [하는 방법: shared_ptr 인스턴스 만들기 및 사용](../cpp/how-to-create-and-use-shared-ptr-instances.md) 및 [shared_ptr 클래스](../standard-library/shared-ptr-class.md)합니다.  
@@ -123,5 +123,5 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>참고 항목  
  [C + +의 진화](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C + + 언어 참조](../cpp/cpp-language-reference.md)   
+ [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [C++ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)   
