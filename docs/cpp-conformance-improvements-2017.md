@@ -14,11 +14,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6799b1b53366d342dc2dacec7bff756c7396d7cb
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 018b4941171dd466cb8230f7e2614fda3b019752
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Visual Studio 2017 버전 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156) 및 [15.7](#improvements_157)의 C++ 규칙 향상입니다.
 
@@ -1711,6 +1711,32 @@ int main() {
 }
 
 ```
+
+### <a name="variadic-template-constructor-base-class-initialization-list"></a>Variadic 템플릿 생성자 기본 클래스 초기화 목록
+
+Visual Studio의 이전 버전에서는 템플릿 인수가 누락된 variadic 템플릿 생성자 기본 클래스 초기화 목록이 오류 없이 잘못 허용되었습니다. Visual Studio 2017 버전 15.7에서는 컴파일러 오류가 발생합니다.
+
+Visual Studio 2017 버전 15.7의 다음 코드 예에서는 *오류 C2614: D\<int>: 멤버 초기화가 잘못되었습니다. ‘B’이(가) 기본 또는 멤버가 아닙니다.*가 발생합니다.
+
+```cpp
+template<typename T>
+struct B {};
+
+template<typename T>
+struct D : B<T>
+{
+
+    template<typename ...C>
+    D() : B() {} // C2614. Missing template arguments to B.
+};
+
+D<int> d;
+
+```
+
+오류를 수정하려면 B() 식을 B\<T>()로 변경하세요.
+
+
 
 ## <a name="see-also"></a>참고 항목
 
