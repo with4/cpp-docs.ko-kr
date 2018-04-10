@@ -29,6 +29,7 @@
 ## [버퍼 조작](buffer-manipulation.md)
 ## [바이트 분류](byte-classification.md)
 ## [문자 분류](character-classification.md)
+## [복잡한 수학 지원](complex-math-support.md)
 ## [데이터 맞춤](data-alignment.md)
 ## [데이터 변환](data-conversion.md)
 ## [디버그 루틴](debug-routines.md)
