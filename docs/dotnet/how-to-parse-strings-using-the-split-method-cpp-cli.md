@@ -1,12 +1,12 @@
 ---
-title: "방법: Split 메서드를 사용 하 여 문자열 구문 분석 (C + + /cli CLI) | Microsoft Docs"
-ms.custom: 
+title: '방법: Split 메서드를 사용 하 여 문자열 구문 분석 (C + + /cli CLI) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - Split method, parsing strings
 - strings [C++], parsing
 ms.assetid: d52d2539-5ebb-4716-86b3-07314dd7e4bd
-caps.latest.revision: 
+caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
 manager: ghogen
