@@ -1,27 +1,27 @@
 ---
-title: "2.3 parallel 구문 | Microsoft Docs"
-ms.custom: 
+title: 2.3 parallel 구문 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 190eacdf-2c16-4c06-8cb7-ac60eb211425
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 89167547085682a81cc1d281f4f32ab55022d27c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="23-parallel-construct"></a>2.3 parallel 구문
 다음 지시문을 동시에 여러 개의 스레드에서 실행할 프로그램의 영역인 병렬 영역을 정의 합니다. 이 병렬 실행을 시작 하는 기본 구문입니다.  
@@ -32,21 +32,21 @@ ms.lasthandoff: 12/21/2017
   
  *절* 다음 중 하나입니다.  
   
- **경우 (** *스칼라 식* **)**  
+ **if(** *scalar-expression* **)**  
   
- **개인 (** *변수 목록* **)**  
+ **private(** *variable-list* **)**  
   
- **firstprivate (** *변수 목록* **)**  
+ **firstprivate(** *variable-list* **)**  
   
  **기본 (공유 &#124; 없음)**  
   
- **공유 (** *변수 목록* **)**  
+ **shared(** *variable-list* **)**  
   
- **copyin (** *변수 목록* **)**  
+ **copyin(** *variable-list* **)**  
   
- **감소 (** *연산자* **:***변수 목록* **)**   
+ **reduction(** *operator* **:**  *variable-list* **)**  
   
- **num_threads (** *정수 식* **)**  
+ **num_threads(** *integer-expression* **)**  
   
  다음 경우 중 하나에 있는 스레드는 병렬 구문을 발견 하면 스레드 팀이 만들어집니다.  
   

@@ -1,12 +1,12 @@
 ---
-title: "Context 클래스 | Microsoft Docs"
-ms.custom: 
+title: Context 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - Context
@@ -29,17 +29,17 @@ dev_langs:
 helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-caps.latest.revision: 
+caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 9195ec68a47e2ed528a42bb018cfba6316101a0c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="context-class"></a>Context 클래스
 실행 컨텍스트에 대한 추상화를 나타냅니다.  
@@ -72,7 +72,7 @@ class Context;
 |[IsSynchronouslyBlocked](#issynchronouslyblocked)|컨텍스트에서 동기적으로 차단 여부를 결정 합니다. 컨텍스트를 명시적으로 차단를 초래한 작업을 수행 하는 경우 차단 동기적으로 간주 됩니다.|  
 |[초과 구독](#oversubscribe)|해당 스케줄러의 가상 프로세서 중 하나에서 실행 되는 컨텍스트에서 될 때 코드 블록의 기간에 대 한 스케줄러에 추가 가상 프로세서를 삽입 합니다.|  
 |[ScheduleGroupId](#schedulegroupid)|현재 컨텍스트를 작업 하는 일정 그룹에 대 한 식별자를 반환 합니다.|  
-|[Unblock](#unblock)|컨텍스트를 차단 해제 하 고 실행할 수 없게 합니다.|  
+|[차단 해제](#unblock)|컨텍스트를 차단 해제 하 고 실행할 수 없게 합니다.|  
 |[VirtualProcessorId](#virtualprocessorid)|현재 컨텍스트가 실행 중인 가상 프로세서에 대 한 식별자를 반환 합니다.|  
 |[Yield](#yield)|다른 컨텍스트에서 실행할 수 있도록 실행을 양도합니다. 양도할 수 있는 다른 컨텍스트가 없는 경우 스케줄러에서 다른 운영 체제 스레드에 양도할 수 있습니다.|  
   
@@ -217,7 +217,7 @@ void operator delete(void* _PObject);
  `_PObject`  
  삭제할 개체에 대 한 포인터입니다.  
   
-##  <a name="oversubscribe">초과 구독</a> 
+##  <a name="oversubscribe"></a> 초과 구독 
 
  해당 스케줄러의 가상 프로세서 중 하나에서 실행 되는 컨텍스트에서 될 때 코드 블록의 기간에 대 한 스케줄러에 추가 가상 프로세서를 삽입 합니다.  
   

@@ -1,27 +1,27 @@
 ---
-title: "2.4.2 sections 구문 | Microsoft Docs"
-ms.custom: 
+title: 2.4.2 sections 구문 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: e9e6e3ea-7fc9-4925-8f68-92b8a5bb1e76
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 6e5b755e95e9bbbb78d6ab13cd09732f9c9aee3d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="242-sections-construct"></a>2.4.2 sections 구문
 **섹션** 지시문 팀에 스레드 간에 나눠집니다 않는 구문이의 집합을 지정 하는 noniterative 작업 공유 구문을 식별 합니다. 각 섹션은 팀의 스레드에 의해 한 번만 실행 됩니다. 구문은 **섹션** 지시문은 다음과 같습니다.  
@@ -38,13 +38,13 @@ ms.lasthandoff: 12/21/2017
   
  절은 다음 중 하나입니다.  
   
- **개인 (** *변수 목록* **)**  
+ **private(** *variable-list* **)**  
   
- **firstprivate (** *변수 목록* **)**  
+ **firstprivate(** *variable-list* **)**  
   
- **lastprivate (** *변수 목록* **)**  
+ **lastprivate(** *variable-list* **)**  
   
- **감소 (** *연산자* **:***변수 목록* **)**   
+ **reduction(** *operator* **:**  *variable-list* **)**  
   
  **nowait**  
   

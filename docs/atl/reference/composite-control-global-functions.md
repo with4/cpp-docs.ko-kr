@@ -1,12 +1,12 @@
 ---
-title: "복합 컨트롤 전역 함수 | Microsoft Docs"
-ms.custom: 
+title: 복합 컨트롤 전역 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - atlhost/ATL::AtlAxDialogBox
@@ -27,17 +27,17 @@ dev_langs:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-caps.latest.revision: 
+caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d5a062ea9477df9db026c75bc775df804ed86da4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="composite-control-global-functions"></a>복합 컨트롤 전역 함수
 이러한 함수를 작성, 호스팅 및 ActiveX 컨트롤 라이센스 획득 하 고 대화 상자 만들기에 대 한 지원을 제공 합니다.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlhost.h  
 
-##  <a name="atlaxdialogbox"></a>AtlAxDialogBox  
+##  <a name="atlaxdialogbox"></a>  AtlAxDialogBox  
  사용자가 제공한 대화 상자 템플릿에서 모달 대화 상자를 만듭니다.  
    
 ```
@@ -107,7 +107,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
   
  일반적으로 대화 상자에 대 한 자세한 내용은 참조 [대화 상자](http://msdn.microsoft.com/library/windows/desktop/ms645452) 및 [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) Windows sdk에서입니다.  
   
-##  <a name="atlaxcreatedialog"></a>AtlAxCreateDialog  
+##  <a name="atlaxcreatedialog"></a>  AtlAxCreateDialog  
  사용자가 제공한 대화 상자 템플릿에서 모덜리스 대화 상자를 만듭니다.  
   
 ```
@@ -143,7 +143,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
   
  참조 [CreateDialog](http://msdn.microsoft.com/library/windows/desktop/ms645434) 및 [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) in the Windows SDK입니다.  
   
-##  <a name="atlaxcreatecontrol"></a>AtlAxCreateControl  
+##  <a name="atlaxcreatecontrol"></a>  AtlAxCreateControl  
  ActiveX 컨트롤을 만들고 초기화하며 지정한 창에 호스팅합니다.  
   
 
@@ -161,11 +161,11 @@ ATLAPI AtlAxCreateControl(
   
 -   ProgID "MSCAL 예:. Calendar.7 "  
   
--   "{8E27C92B-1264-101C-8A2F-040224009C02}"와 같은 CLSID  
+-   A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"  
   
--   "Http://www.microsoft.com"과 같이 URL  
+-   와 같은 URL "http://www.microsoft.com"  
   
--   와 같은 액티브 문서에 대 한 참조 "file://\\\Documents\MyDoc.doc"  
+-   A reference to an Active document such as "file://\\\Documents\MyDoc.doc"  
   
 -   와 같은 HTML 조각을 "MSHTML:\<HTML >\<본문 > 텍스트의 줄\</본문 >\</HTML >"  
   
@@ -189,7 +189,7 @@ ATLAPI AtlAxCreateControl(
   
  사용 허가 받은 ActiveX 컨트롤을 만들려면 참조 [AtlAxCreateControlLic](#atlaxcreatecontrollic)합니다.  
   
-##  <a name="atlaxcreatecontrolex"></a>AtlAxCreateControlEx  
+##  <a name="atlaxcreatecontrolex"></a>  AtlAxCreateControlEx  
  ActiveX 컨트롤을 만들고 초기화하며 지정한 창에 호스팅합니다. 새 컨트롤에 대한 인터페이스 포인터와 이벤트 싱크를 만들 수도 있습니다.  
   
 ```
@@ -209,11 +209,11 @@ ATLAPI AtlAxCreateControlEx(
   
 -   ProgID "MSCAL 예:. Calendar.7 "  
   
--   "{8E27C92B-1264-101C-8A2F-040224009C02}"와 같은 CLSID  
+-   A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"  
   
--   "Http://www.microsoft.com"과 같이 URL  
+-   와 같은 URL "http://www.microsoft.com"  
   
--   와 같은 액티브 문서에 대 한 참조 "file://\\\Documents\MyDoc.doc"  
+-   A reference to an Active document such as "file://\\\Documents\MyDoc.doc"  
   
 -   와 같은 HTML 조각을 "MSHTML:\<HTML >\<본문 > 텍스트의 줄\</본문 >\</HTML >"  
   
@@ -242,11 +242,11 @@ ATLAPI AtlAxCreateControlEx(
  HRESULT 값 중 하나입니다.  
   
 ### <a name="remarks"></a>설명  
- `AtlAxCreateControlEx`유사한 [AtlAxCreateControl](#atlaxcreatecontrol) 하지만 새로 만든된 컨트롤에 대 한 인터페이스 포인터를 받아서 컨트롤에 의해 실행 되는 이벤트를 수신할 이벤트 싱크를 설정할 수 있습니다.  
+ `AtlAxCreateControlEx` 유사한 [AtlAxCreateControl](#atlaxcreatecontrol) 하지만 새로 만든된 컨트롤에 대 한 인터페이스 포인터를 받아서 컨트롤에 의해 실행 되는 이벤트를 수신할 이벤트 싱크를 설정할 수 있습니다.  
   
  사용 허가 받은 ActiveX 컨트롤을 만들려면 참조 [AtlAxCreateControlLicEx](#atlaxcreatecontrollicex)합니다.  
   
-##  <a name="atlaxcreatecontrollic"></a>AtlAxCreateControlLic  
+##  <a name="atlaxcreatecontrollic"></a>  AtlAxCreateControlLic  
  사용 허가를 받은 ActiveX 컨트롤을 만들고 초기화하며 지정한 창에 호스팅합니다.  
 
 ```
@@ -264,11 +264,11 @@ ATLAPI AtlAxCreateControlLic(
   
 -   ProgID "MSCAL 예:. Calendar.7 "  
   
--   "{8E27C92B-1264-101C-8A2F-040224009C02}"와 같은 CLSID  
+-   A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"  
   
--   "Http://www.microsoft.com"과 같이 URL  
+-   와 같은 URL "http://www.microsoft.com"  
   
--   와 같은 액티브 문서에 대 한 참조 "file://\\\Documents\MyDoc.doc"  
+-   A reference to an Active document such as "file://\\\Documents\MyDoc.doc"  
   
 -   와 같은 HTML 조각을 "MSHTML:\<HTML >\<본문 > 텍스트의 줄\</본문 >\</HTML >"  
   
@@ -290,10 +290,10 @@ ATLAPI AtlAxCreateControlLic(
 ### <a name="return-value"></a>반환 값  
  HRESULT 값 중 하나입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [ActiveX 컨트롤 ATL를 사용 하 여 AXHost 호스팅](../../atl/hosting-activex-controls-using-atl-axhost.md) 샘플을 사용 하는 방법에 대 한 `AtlAxCreateControlLic`합니다.  
   
-##  <a name="atlaxcreatecontrollicex"></a>AtlAxCreateControlLicEx  
+##  <a name="atlaxcreatecontrollicex"></a>  AtlAxCreateControlLicEx  
  사용 허가를 받은 ActiveX 컨트롤을 만들고 초기화하며 지정한 창에 호스팅합니다. 새 컨트롤에 대한 인터페이스 포인터와 이벤트 싱크를 만들 수도 있습니다.  
   
 ```
@@ -314,11 +314,11 @@ ATLAPI AtlAxCreateControlLicEx(
   
 -   ProgID "MSCAL 예:. Calendar.7 "  
   
--   "{8E27C92B-1264-101C-8A2F-040224009C02}"와 같은 CLSID  
+-   A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"  
   
--   "Http://www.microsoft.com"과 같이 URL  
+-   와 같은 URL "http://www.microsoft.com"  
   
--   와 같은 액티브 문서에 대 한 참조 "file://\\\Documents\MyDoc.doc"  
+-   A reference to an Active document such as "file://\\\Documents\MyDoc.doc"  
   
 -   와 같은 HTML 조각을 "MSHTML:\<HTML >\<본문 > 텍스트의 줄\</본문 >\</HTML >"  
   
@@ -350,12 +350,12 @@ ATLAPI AtlAxCreateControlLicEx(
  HRESULT 값 중 하나입니다.  
   
 ### <a name="remarks"></a>설명  
- `AtlAxCreateControlLicEx`유사한 [AtlAxCreateControlLic](#atlaxcreatecontrollic) 하지만 새로 만든된 컨트롤에 대 한 인터페이스 포인터를 받아서 컨트롤에 의해 실행 되는 이벤트를 수신할 이벤트 싱크를 설정할 수 있습니다.  
+ `AtlAxCreateControlLicEx` 유사한 [AtlAxCreateControlLic](#atlaxcreatecontrollic) 하지만 새로 만든된 컨트롤에 대 한 인터페이스 포인터를 받아서 컨트롤에 의해 실행 되는 이벤트를 수신할 이벤트 싱크를 설정할 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [ActiveX 컨트롤 ATL를 사용 하 여 AXHost 호스팅](../../atl/hosting-activex-controls-using-atl-axhost.md) 샘플을 사용 하는 방법에 대 한 `AtlAxCreateControlLicEx`합니다.  
   
-##  <a name="atlaxattachcontrol"></a>AtlAxAttachControl  
+##  <a name="atlaxattachcontrol"></a>  AtlAxAttachControl  
  지정한 창에 이전에 만든 컨트롤을 연결합니다.  
   
 ```
@@ -384,7 +384,7 @@ ATLAPI AtlAxAttachControl(
 > [!NOTE]
 >  연결 되는 컨트롤 개체를 호출 하기 전에 올바르게 초기화 해야 `AtlAxAttachControl`합니다.  
   
-##  <a name="atlaxgethost"></a>AtlAxGetHost  
+##  <a name="atlaxgethost"></a>  AtlAxGetHost  
  핸들이 제공되는 지정된 창(있는 경우)의 컨테이너에 직접 인터페이스 포인터를 가져옵니다.  
   
 ```
@@ -401,7 +401,7 @@ ATLAPI AtlAxGetHost(HWND h, IUnknown** pp);
 ### <a name="return-value"></a>반환 값  
  HRESULT 값 중 하나입니다.  
   
-##  <a name="atlaxgetcontrol"></a>AtlAxGetControl  
+##  <a name="atlaxgetcontrol"></a>  AtlAxGetControl  
  핸들이 제공되는 지정된 창 내에 포함된 컨트롤에 직접 인터페이스 포인터를 가져옵니다.  
   
 ```
@@ -418,7 +418,7 @@ ATLAPI AtlAxGetControl(HWND h, IUnknown** pp);
 ### <a name="return-value"></a>반환 값  
  HRESULT 값 중 하나입니다.  
   
-##  <a name="atlsetchildsite"></a>AtlSetChildSite  
+##  <a name="atlsetchildsite"></a>  AtlSetChildSite  
  자식 개체의 사이트를 설정 하려면이 함수 호출의 **IUnknown** 부모 개체의 합니다.  
   
 ```
@@ -435,7 +435,7 @@ HRESULT AtlSetChildSite(IUnknown* punkChild, IUnknown* punkParent);
 ### <a name="return-value"></a>반환 값  
  표준 HRESULT 값입니다.  
   
-##  <a name="atlaxwininit"></a>AtlAxWinInit  
+##  <a name="atlaxwininit"></a>  AtlAxWinInit  
  이 함수를 ATL의 컨트롤 호스팅 코드를 등록 하 여 초기화 된 **"AtlAxWin80"** 및 **"AtlAxWinLic80"** 창 클래스 몇 가지 사용자 지정 창 메시지와 함께 합니다.  
   
 ```
@@ -448,7 +448,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
 ### <a name="remarks"></a>설명  
  ATL 컨트롤 호스팅 API를 사용 하기 전에이 함수를 호출 해야 합니다. 이 함수를 호출한 다음는 **"AtlAxWin"** 창 클래스에 대 한 호출에서 사용할 수 있습니다 [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) 또는 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)Windows SDK에 설명 된 대로 합니다.  
 
-##  <a name="atlaxwinterm"></a>AtlAxWinTerm  
+##  <a name="atlaxwinterm"></a>  AtlAxWinTerm  
  이 함수 ATL의 컨트롤 호스팅 코드를 등록 취소 하 여 초기화를 취소는 **"AtlAxWin80"** 및 **"AtlAxWinLic80"** 창 클래스입니다.  
   
 ```
@@ -463,7 +463,7 @@ inline BOOL AtlAxWinTerm();
   
  이 함수를 호출한 경우 모든 기존 호스트 창을 제거 된 후 정리 호출 [AtlAxWinInit](#atlaxwininit) 호스트 창을 만들 더 이상 필요 합니다. 이 함수를 호출 하지 않으면, 창 클래스는 등록을 취소할 자동으로 프로세스가 종료 될 때입니다.  
   
-##  <a name="atlgetobjectsourceinterface"></a>AtlGetObjectSourceInterface  
+##  <a name="atlgetobjectsourceinterface"></a>  AtlGetObjectSourceInterface  
  개체의 기본 소스 인터페이스에 대한 정보를 검색하려면 이 함수를 호출합니다.  
   
 ```
@@ -495,13 +495,13 @@ ATLAPI AtlGetObjectSourceInterface(
  표준 HRESULT 값입니다.  
   
 ### <a name="remarks"></a>설명  
- `AtlGetObjectSourceInterface`인터페이스 ID의 LIBID 함께 및 주요 기본 소스 인터페이스를 사용 하 고 해당 인터페이스를 설명 하는 형식 라이브러리의 부 버전 번호를 제공할 수 있습니다.  
+ `AtlGetObjectSourceInterface` 인터페이스 ID의 LIBID 함께 및 주요 기본 소스 인터페이스를 사용 하 고 해당 인터페이스를 설명 하는 형식 라이브러리의 부 버전 번호를 제공할 수 있습니다.  
   
 > [!NOTE]
 >  가 나타내는 개체가 성공적으로 요청된 된 정보를 검색 하려면이 함수에 대해 `punkObj` 구현 해야 `IDispatch` (통해 형식 정보를 반환 하 고 **IDispatch::GetTypeInfo**)와 해야 합니다 구현 `IProvideClassInfo2` 또는 `IPersist`합니다. 소스 인터페이스에 대 한 형식 정보에 대 한 형식 정보와 동일한 형식 라이브러리에 있어야 합니다. `IDispatch`합니다.  
   
-### <a name="example"></a>예  
- 다음 예제에서는 이벤트 싱크 클래스를 정의 하는 방법을 보여 줍니다. `CEasySink`에 전달할 수 있는 템플릿 인수 개수를 줄여 주는 `IDispEventImpl` 완전 essentials에 합니다. `EasyAdvise`및 `EasyUnadvise` 사용 `AtlGetObjectSourceInterface` 초기화 하는 [IDispEventImpl](../../atl/reference/idispeventimpl-class.md) 호출 하기 전에 멤버 [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) 또는 [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise)합니다.  
+### <a name="example"></a>예제  
+ 다음 예제에서는 이벤트 싱크 클래스를 정의 하는 방법을 보여 줍니다. `CEasySink`에 전달할 수 있는 템플릿 인수 개수를 줄여 주는 `IDispEventImpl` 완전 essentials에 합니다. `EasyAdvise` 및 `EasyUnadvise` 사용 `AtlGetObjectSourceInterface` 초기화 하는 [IDispEventImpl](../../atl/reference/idispeventimpl-class.md) 호출 하기 전에 멤버 [DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise) 또는 [DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise)합니다.  
   
  [!code-cpp[NVC_ATL_Windowing#93](../../atl/codesnippet/cpp/composite-control-global-functions_1.h)]  
   

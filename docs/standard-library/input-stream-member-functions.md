@@ -1,12 +1,12 @@
 ---
-title: "입력 스트림 멤버 함수 | Microsoft 문서"
-ms.custom: 
+title: 입력 스트림 멤버 함수 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +14,17 @@ helpviewer_keywords:
 - input stream objects
 - input streams, member functions
 ms.assetid: b4b9465d-0da9-4ccf-859d-72a68418982e
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 96927d7e1a6718f4663ca42248140ac5a7d8fe50
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="input-stream-member-functions"></a>입력 스트림 멤버 함수
 입력 스트림 멤버 함수는 디스크 입력에 사용됩니다. 멤버 함수는 다음과 같습니다.  
@@ -55,7 +55,7 @@ if (ifile.fail())
 // The file does not exist ...  
 ```  
   
-##  <a name="vclrfthegetfunctionanchor12">Get</a>
+##  <a name="vclrfthegetfunctionanchor12"></a> Get
  형식이 지정되지 않은 **get** 멤버 함수는 두 가지 예외가 있는 **>>** 연산자처럼 작동합니다. 첫째 **get** 함수에는 공백 문자가 포함되지만 **skipws** 플래그를 설정(기본값)하면 추출기에서 공백을 제외합니다. 둘째, **get** 함수는 연결된 출력 스트림(예: `cout`)이 플러시되도록 할 가능성이 적습니다.  
   
  **get** 함수의 변형은 버퍼 주소와 읽을 문자의 최대 수를 지정합니다. 이 함수는 다음 예제와 같이 특정 변수로 전송되는 문자 수를 제한하는 데 유용합니다.  
@@ -89,7 +89,7 @@ int main()
 1234  
 ```  
   
-##  <a name="vclrfthegetlinefunctionanchor13">getline</a>
+##  <a name="vclrfthegetlinefunctionanchor13"></a> getline
  **getline** 멤버 함수는 **get** 함수와 유사합니다. 두 함수 모두 입력에 대해 종료 문자를 지정하는 세 번째 인수를 허용합니다. 기본값은 줄 바꿈 문자입니다. 두 함수 모두 필요한 종료 문자에 대해 문자 하나를 예약합니다. 그러나 **get**은 종료 문자를 스트림에 유지하고 **getline**은 종료 문자를 제거합니다.  
   
  다음 예제에서는 입력 스트림에 대해 종료 문자를 지정합니다.  
@@ -115,7 +115,7 @@ int main( )
 test  
 ```  
   
-##  <a name="vclrfthereadfunctionanchor14">읽기</a>
+##  <a name="vclrfthereadfunctionanchor14"></a> 읽기
  **read** 멤버 함수는 파일부터 지정된 메모리 영역까지 바이트를 읽습니다. 길이 인수가 읽은 바이트 수를 결정합니다. 해당 인수를 포함하지 않은 경우에는 실제 파일 끝에 도달하거나 텍스트 모드 파일의 경우 포함된 `EOF` 문자를 읽으면 읽기가 중지됩니다.  
   
  다음 예제에서는 급여 파일에서 구조로 이진 레코드를 읽어 옵니다.  

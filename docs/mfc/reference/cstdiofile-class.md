@@ -1,12 +1,12 @@
 ---
-title: "CStdioFile 클래스 | Microsoft Docs"
-ms.custom: 
+title: CStdioFile 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - CStdioFile
@@ -27,17 +27,17 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-caps.latest.revision: 
+caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 868442a2936781ed24588f47dcb591cadcc48f0d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="cstdiofile-class"></a>CStdioFile 클래스
 런타임 함수에서 연 것과 C 런타임 스트림 파일을 나타냅니다 [fopen](../../c-runtime-library/reference/fopen-wfopen.md)합니다.  
@@ -92,7 +92,7 @@ class CStdioFile : public CFile
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afx.h  
   
-##  <a name="cstdiofile"></a>CStdioFile::CStdioFile  
+##  <a name="cstdiofile"></a>  CStdioFile::CStdioFile  
  `CStdioFile` 개체를 생성하고 초기화합니다.  
   
 ```  
@@ -138,10 +138,10 @@ CStdioFile(
   
  생성자를 throw 하는 경우 파일을 열거나 만들 수 없습니다는 `CFileException*`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCFiles#37](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_1.cpp)]  
   
-##  <a name="m_pstream"></a>CStdioFile::m_pStream  
+##  <a name="m_pstream"></a>  CStdioFile::m_pStream  
  `m_pStream` C 런타임 함수에서 반환 된 데이터 멤버는 열려 있는 파일에 대 한 포인터 `fopen`합니다.  
   
 ```  
@@ -151,7 +151,7 @@ FILE* m_pStream;
 ### <a name="remarks"></a>설명  
  **NULL** 파일을 열어본 적 하거나 닫힌 경우.  
   
-##  <a name="open"></a>CStdioFile::Open  
+##  <a name="open"></a>  CStdioFile::Open  
  오버로드됨. 열기는 기본 사용 하도록 설계 `CStdioFile` 생성자입니다.  
   
 ```  
@@ -173,7 +173,7 @@ virtual BOOL Open(
  문자열은 원하는 파일을 경로입니다. 상대 또는 절대 경로일 수 있습니다.  
   
  `nOpenFlags`  
- 공유 및 액세스 모드입니다. 파일을 열 때 수행할 동작을 지정 합니다. 비트 OR (&#124;)를 사용 하 여 옵션을 결합할 수 연산자입니다. 에 대 한 액세스 권한 및 하나의 공유 옵션은 필수 사항이 고, modeCreate 및 modeNoInherit 모드는 선택적입니다.  
+ 공유 및 액세스 모드입니다. 파일을 열 때 수행할 동작을 지정 합니다. 비트 OR를 사용 하 여 옵션을 결합할 수 있습니다 (&#124;) 연산자. 에 대 한 액세스 권한 및 하나의 공유 옵션은 필수 사항이 고, modeCreate 및 modeNoInherit 모드는 선택적입니다.  
   
  `pError`  
  실패 한 작업의 상태를 수신할 기존 파일 예외 개체에 대 한 포인터입니다.  
@@ -186,7 +186,7 @@ virtual BOOL Open(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="readstring"></a>CStdioFile::ReadString  
+##  <a name="readstring"></a>  CStdioFile::ReadString  
  텍스트 데이터의 제한의 버퍼로 읽어 `nMax`연결 된 파일에서-1 문자는 `CStdioFile` 개체입니다.  
   
 ```  
@@ -218,10 +218,10 @@ virtual BOOL ReadString(CString& rString);
 > [!NOTE]
 >  `CString` 이 함수의 버전을 제거는 `'\n'` 있으면;는 `LPTSTR` 버전은 그렇지 않습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCFiles#38](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]  
   
-##  <a name="seek"></a>CStdioFile::Seek  
+##  <a name="seek"></a>  CStdioFile::Seek  
  이전에 연된 파일에는 포인터 위치를 변경 합니다.  
   
 ```  
@@ -253,12 +253,12 @@ virtual ULONGLONG Seek(
   
  이 구현 `Seek` 런타임 라이브러리 (CRT) 기능에 따라 `fseek`합니다. 용도에 몇 가지 제한이 `Seek` 텍스트 모드에서 열린 스트림의에 있습니다. 자세한 내용은 참조 [fseek, _fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 사용 하는 방법을 보여 줍니다. `Seek` 의 시작 부분에서 1000 바이트 포인터를 이동 하는 `cfile` 파일입니다. `Seek` 호출 이후에 해야 하므로 데이터를 읽지 않습니다 [CStdioFile::ReadString](#readstring) 데이터를 읽을 수 있습니다.  
   
  [!code-cpp[NVC_MFCFiles#39](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_3.cpp)]  
   
-##  <a name="writestring"></a>CStdioFile::WriteString  
+##  <a name="writestring"></a>  CStdioFile::WriteString  
  버퍼에서 데이터를 연결 된 파일에 작성 된 `CStdioFile` 개체입니다.  
   
 ```  
@@ -278,7 +278,7 @@ virtual void WriteString(LPCTSTR lpsz);
   
  이 메서드에서 throw 한 `CFileException*` 파일 시스템 오류에 대 한 응답에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCFiles#40](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_4.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

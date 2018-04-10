@@ -1,12 +1,12 @@
 ---
-title: "back_insert_iterator 클래스 | Microsoft 문서"
-ms.custom: 
+title: back_insert_iterator 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - iterator/std::back_insert_iterator
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - std::back_insert_iterator [C++], container_type
 - std::back_insert_iterator [C++], reference
 ms.assetid: a1ee07f2-cf9f-46a1-8608-cfaf207f9713
-caps.latest.revision: 
+caps.latest.revision: 21
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 7646b26c1651ccf93fcc3bcb6828ae402ea5ca07
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator 클래스
 출력 반복기의 요구 사항을 충족하는 반복기 어댑터에 대해 설명합니다. 반복기 어댑터는 요소를 덮어쓰는 것이 아니라, 시퀀스 끝 부분에 요소를 삽입하므로 C++ 시퀀스 컨테이너의 반복기가 제공한 덮어쓰기 의미 체계와 다른 의미 체계를 제공합니다. `back_insert_iterator` 클래스는 컨테이너 형식에 대해 템플릿화됩니다.  
@@ -88,7 +88,7 @@ explicit back_insert_iterator(Container& _Cont);
 ### <a name="return-value"></a>반환 값  
  매개 변수 컨테이너에 대한 `back_insert_iterator`입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // back_insert_iterator_back_insert_iterator.cpp  
@@ -147,7 +147,7 @@ container_type;
 ### <a name="remarks"></a>설명  
  이 형식은 템플릿 매개 변수 **Container**의 동의어입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // back_insert_iterator_container_type.cpp  
@@ -201,7 +201,7 @@ back_insert_iterator<Container>& operator*();
 ### <a name="remarks"></a>설명  
  출력 반복기 식 **\*Iter** = **value**를 구현하는 데 사용됩니다. **Iter**이 시퀀스에서 요소의 주소를 지정하는 반복기인 경우 **\*Iter** = **value**는 해당 요소를 값과 바꾸며 시퀀스에서 총 요소 수를 변경하지 않습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // back_insert_iterator_back_insert.cpp  
@@ -259,7 +259,7 @@ back_insert_iterator<Container> operator++(int);
 ### <a name="remarks"></a>설명  
  preincrementation과 postincrementation 연산자는 둘 다 동일한 결과를 반환합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // back_insert_iterator_op_incre.cpp  
@@ -327,7 +327,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
   
  그런 다음 `*this`를 반환합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // back_insert_iterator_op_assign.cpp  
@@ -376,7 +376,7 @@ typedef typename Container::reference reference;
 ### <a name="remarks"></a>설명  
  이 형식은 연관 컨테이너에서 제어하는 시퀀스의 요소에 대한 참조를 제공합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 // back_insert_iterator_reference.cpp  

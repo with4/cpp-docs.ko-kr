@@ -1,12 +1,12 @@
 ---
-title: "task 클래스 (동시성 런타임) | Microsoft Docs"
-ms.custom: 
+title: task 클래스 (동시성 런타임) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - task
@@ -23,17 +23,17 @@ dev_langs:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-caps.latest.revision: 
+caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 80f56f02c8a26e87da3f402ecebf738304408eac
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="task-class-concurrency-runtime"></a>작업 클래스(동시성 런타임)
 PPL(병렬 패턴 라이브러리) `task` 클래스입니다. `task` 개체는 비동기식으로 실행할 수 있으며 동시성 런타임의 병렬 알고리즘을 통해 생성되는 기타 작업 및 병렬 작업과 동시에 실행할 수 있는 작업을 나타냅니다. 이러한 작업이 정상적으로 완료되면 `_ResultType` 형식의 결과가 생성됩니다. `task<void>` 형식의 작업에서는 결과가 생성되지 않습니다. 작업은 다른 작업과 관계없이 대기 및 취소할 수 있으며 연속을 사용 하 여 다른 작업으로 구성 될 수도 있습니다 ( `then`), 조인 ( `when_all`) 및 선택 ( `when_any`) 패턴.  
@@ -144,7 +144,7 @@ bool is_done() const;
 ### <a name="remarks"></a>설명  
  작업이 완료 되거나 (포함 또는 사용자 예외 제외)를 취소 하는 경우 true를 반환 합니다.  
   
-##  <a name="operator_neq"></a> operator! = 
+##  <a name="operator_neq"></a> operator!= 
 
  두 `task` 개체가 서로 다른 내부 작업을 나타내는지 여부를 확인합니다.  
   
@@ -160,7 +160,7 @@ bool operator!= (const task<void>& _Rhs) const;
 ### <a name="return-value"></a>반환 값  
  개체가 서로 다른 기본 작업을 참조하면 `true`이고, 그렇지 않으면 `false`입니다.  
   
-##  <a name="operator_eq"></a> 연산자 = 
+##  <a name="operator_eq"></a> operator= 
 
  하나의 `task` 개체 콘텐츠를 다른 개체 콘텐츠로 바꿉니다.  
   
@@ -179,7 +179,7 @@ task& operator= (task&& _Other);
 ### <a name="remarks"></a>설명  
  `task`가 스마트 포인터와 같이 작동할 경우, 복사 할당 후 이 `task` 개체는 `_Other`와 동일한 실제 작업을 나타냅니다.  
   
-##  <a name="operator_eq_eq"></a> operator== 
+##  <a name="operator_eq_eq"></a> 연산자 = = 
 
  두 `task` 개체가 동일한 내부 작업을 나타내는지 여부를 확인합니다.  
   

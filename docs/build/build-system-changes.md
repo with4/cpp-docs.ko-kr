@@ -28,10 +28,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="build-system-changes"></a>빌드 시스템 변경 사항
 MSBuild 시스템은 Visual C++ 프로젝트를 빌드하는 데 사용됩니다. 하지만 Visual Studio 2008 및 이전 버전에서는 VCBuild 시스템이 사용되었습니다. 특정 파일 형식 및 개념 VCBuild에 의존 하는 존재 하지 않는 또는 현재 시스템에서 다르게 표현 됩니다. 이 문서는 현재 빌드 시스템의 차이점을 설명 합니다.  
@@ -59,7 +59,7 @@ MSBuild 시스템은 Visual C++ 프로젝트를 빌드하는 데 사용됩니다
   
  현재 릴리스에서 상속으로 하나 이상의 리터럴 값 및 속성 매크로의 연결 속성의 값을 지정 하 여 지원 됩니다. **$ (inherit)** 및 **$ (noinherit)** 매크로 지원 되지 않습니다.  
   
- 다음 예제에서는 세미콜론으로 구분 된 목록 속성 페이지에서 속성에 할당 됩니다. 연결의 목록으로 구성 됩니다는  *\<값 >* 리터럴 및의 값은 `MyProperty` 매크로 표기법을 사용 하 여 액세스할 수 있는 속성 **$(**  *MyProperty***)**합니다.  
+ 다음 예제에서는 세미콜론으로 구분 된 목록 속성 페이지에서 속성에 할당 됩니다. 연결의 목록으로 구성 됩니다는  *\<값 >* 리터럴 및의 값은 `MyProperty` 매크로 표기법을 사용 하 여 액세스할 수 있는 속성 **$(***MyProperty***)** .  
   
 ```  
 Property=<value>;$(MyProperty)  
@@ -68,7 +68,7 @@ Property=<value>;$(MyProperty)
 ## <a name="vcxprojuser-files"></a>. vcxproj.user 파일  
  사용자 파일 (. vcxproj.user) 디버깅 및 배포 설정에 대 한 사용자 고유의 속성을 저장 합니다. Vcxproj.user 파일 특정 사용자에 대해 모든 프로젝트에 적용 됩니다.  
   
-## <a name="vcxprojfilters-file"></a>. vcxproj.filters 파일  
+## <a name="vcxprojfilters-file"></a>.vcxproj.filters File  
  때 **솔루션 탐색기** 경우 필터 파일을 프로젝트에 파일을 추가 하는 데 사용 됩니다 (. vcxproj.filters)의 위치를 정의 **솔루션 탐색기** 트리 파일 이름 확장명에 따라 보기 해당 파일이 추가 됩니다.  
   
 ## <a name="vc-directories-settings"></a>VC + + 디렉터리 설정  

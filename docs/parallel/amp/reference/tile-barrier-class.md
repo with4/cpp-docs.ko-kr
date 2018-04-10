@@ -1,12 +1,12 @@
 ---
-title: "tile_barrier 클래스 | Microsoft Docs"
-ms.custom: 
+title: tile_barrier 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - tile_barrier
@@ -21,17 +21,17 @@ dev_langs:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-caps.latest.revision: 
+caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e7d868b4bd677d207590de6449e3d5643001e857
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="tilebarrier-class"></a>tile_barrier 클래스
 동기화를 사용 하 여 스레드 그룹 (타일)에서 실행 중인 스레드의 실행 `wait` 메서드. 런타임에만이 클래스를 인스턴스화할 수 있습니다.  
@@ -67,7 +67,7 @@ class tile_barrier;
   
  **네임스페이스:** 동시성  
 
-## <a name="tile_barrier__ctor">tile_barrier 생성자</a>  
+## <a name="tile_barrier__ctor"></a>  tile_barrier 생성자  
  기존을 복사 하 여 클래스의 새 인스턴스를 초기화 합니다.  
   
 ### <a name="syntax"></a>구문 

@@ -1,12 +1,12 @@
 ---
-title: "CRecordView 및 CDaoRecordView에 대 한 대화 상자 데이터 교환 함수 | Microsoft Docs"
-ms.custom: 
+title: CRecordView 및 CDaoRecordView에 대 한 대화 상자 데이터 교환 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - AFXDAO/DDX_FieldCBIndex
@@ -29,17 +29,17 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f58b7ba7ae51c4db065cd7b30cc233128f7b7c68
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>CRecordView 및 CDaoRecordView에 대한 대화 상자 데이터 교환 함수
 이 항목에서는 DDX_Field 함수 간에 데이터를 교환 하는 데 사용 된 [CRecordset](../../mfc/reference/crecordset-class.md) 및 [CRecordView](../../mfc/reference/crecordview-class.md) 양식 또는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 및 [ CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 폼입니다.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 12/21/2017
 |[DDX_FieldSlider](#ddx_fieldslider)|레코드 뷰에서의 슬라이더 컨트롤의 스크롤 상자 위치를 동기화 및 `int` 레코드 집합의 필드 데이터 멤버입니다. |
 |[DDX_FieldText](#ddx_fieldtext)|오버 로드 된 버전을 전송 하는 데 사용할 수 `int`, **UINT**, **긴**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float** **double**, **짧은**, [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md), 및 [COleCurrency](../../mfc/reference/colecurrency-class.md) 레코드 집합 필드 데이터 멤버 및 편집 간에 데이터 상자에 `CRecordView` 또는 `CDaoRecordView`합니다.|  
   
-##  <a name="ddx_fieldcbindex"></a>DDX_FieldCBIndex  
+##  <a name="ddx_fieldcbindex"></a>  DDX_FieldCBIndex  
  `DDX_FieldCBIndex` 레코드 뷰에서의 콤보 상자 컨트롤의 목록 상자 컨트롤에서 선택한 항목의 인덱스를 동기화 하는 함수 및 `int` 레코드 보기와 연결 된 레코드 집합의 필드 데이터 멤버입니다.  
   
 ```  
@@ -87,7 +87,7 @@ void AFXAPI DDX_FieldCBIndex(
  `nIDC`  
  에 컨트롤의 ID는 [CRecordView](../../mfc/reference/crecordview-class.md) 또는 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 개체입니다.  
   
- *인덱스*  
+ *index*  
  연결 된 필드 데이터 멤버에 대 한 참조 `CRecordset` 또는 `CDaoRecordset` 개체입니다.  
   
  `pRecordset`  
@@ -100,13 +100,13 @@ void AFXAPI DDX_FieldCBIndex(
   
  DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다. 예제 및에 대 한 DDX에 대 한 자세한 내용은 [CRecordView](../../mfc/reference/crecordview-class.md) 및 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 필드, 문서를 참조 하십시오. [레코드 뷰](../../data/record-views-mfc-data-access.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [DDX_FieldText](#ddx_fieldtext) 일반적인 DDX_Field 예제에 대 한 합니다. 이 예제에 대 한 유사 합니다 `DDX_FieldCBIndex`합니다.  
 
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxdao.h  
 
-##  <a name="ddx_fieldcbstring"></a>DDX_FieldCBString  
+##  <a name="ddx_fieldcbstring"></a>  DDX_FieldCBString  
  `DDX_FieldCBString` 함수의 전송을 관리 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 레코드 뷰에서의 콤보 상자 컨트롤의 편집 컨트롤 간에 데이터 및 `CString` 레코드 보기와 연결 된 레코드 집합의 필드 데이터 멤버입니다.  
   
 ```  
@@ -143,13 +143,13 @@ void AFXAPI DDX_FieldCBString(
   
  DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다. 예제 및에 대 한 DDX에 대 한 자세한 내용은 [CRecordView](../../mfc/reference/crecordview-class.md) 및 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 필드, 문서를 참조 하십시오. [레코드 뷰](../../data/record-views-mfc-data-access.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [DDX_FieldText](#ddx_fieldtext) 일반적인 DDX_Field 예제에 대 한 합니다. 예제에 대 한 호출에 포함 되어 `DDX_FieldCBString`합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdao.h  
   
-## <a name="ddx_fieldcbstringexact"></a>DDX_FieldCBStringExact  
+## <a name="ddx_fieldcbstringexact"></a>  DDX_FieldCBStringExact  
  `DDX_FieldCBStringExact` 함수의 전송을 관리 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 레코드 뷰에서의 콤보 상자 컨트롤의 편집 컨트롤 간에 데이터 및 `CString` 레코드 보기와 연결 된 레코드 집합의 필드 데이터 멤버입니다.  
   
 ```  
@@ -186,13 +186,13 @@ void AFXAPI DDX_FieldCBStringExact(
   
  DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다. 예제 및에 대 한 DDX에 대 한 자세한 내용은 [CRecordView](../../mfc/reference/crecordview-class.md) 및 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 필드, 문서를 참조 하십시오. [레코드 뷰](../../data/record-views-mfc-data-access.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [DDX_FieldText](#ddx_fieldtext) 일반적인 DDX_Field 예제에 대 한 합니다. 에 대 한 호출이 `DDX_FieldCBStringExact` 유사 합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdao.h  
   
-##  <a name="ddx_fieldcheck"></a>DDX_FieldCheck  
+##  <a name="ddx_fieldcheck"></a>  DDX_FieldCheck  
  `DDX_FieldCheck` 함수의 전송을 관리 `int` 대화 상자에서 확인란 컨트롤 간의 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 `int` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
   
 ```  
@@ -230,7 +230,7 @@ void AFXAPI DDX_FieldCheck(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdao.h  
   
-##  <a name="ddx_fieldlbindex"></a>DDX_FieldLBIndex  
+##  <a name="ddx_fieldlbindex"></a>  DDX_FieldLBIndex  
  `DDX_FieldLBIndex` 레코드 뷰에 목록 상자 컨트롤에서 선택한 항목의 인덱스를 동기화 하는 함수 및 `int` 레코드 보기와 연결 된 레코드 집합의 필드 데이터 멤버입니다.  
   
 ```  
@@ -254,7 +254,7 @@ void AFXAPI DDX_FieldLBIndex(
  `nIDC`  
  에 컨트롤의 ID는 [CRecordView](../../mfc/reference/crecordview-class.md) 또는 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 개체입니다.  
   
- *인덱스*  
+ *index*  
  연결 된 필드 데이터 멤버에 대 한 참조 `CRecordset` 또는 `CDaoRecordset` 개체입니다.  
   
  `pRecordset`  
@@ -267,13 +267,13 @@ void AFXAPI DDX_FieldLBIndex(
   
  DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다. 예제 및에 대 한 DDX에 대 한 자세한 내용은 [CRecordView](../../mfc/reference/crecordview-class.md) 및 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 필드, 문서를 참조 하십시오. [레코드 뷰](../../data/record-views-mfc-data-access.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [DDX_FieldText](#ddx_fieldtext) 일반적인 DDX_Field 예제에 대 한 합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdao.h  
   
-##  <a name="ddx_fieldlbstring"></a>DDX_FieldLBString  
+##  <a name="ddx_fieldlbstring"></a>  DDX_FieldLBString  
  `DDX_FieldLBString` 레코드 뷰를 목록 상자 컨트롤의 현재 선택 영역 복사는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 레코드 보기와 연결 된 레코드 집합의 필드 데이터 멤버입니다.  
   
 ```  
@@ -310,13 +310,13 @@ void AFXAPI DDX_FieldLBString(
   
  DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다. 예제 및에 대 한 DDX에 대 한 자세한 내용은 [CRecordView](../../mfc/reference/crecordview-class.md) 및 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 필드, 문서를 참조 하십시오. [레코드 뷰](../../data/record-views-mfc-data-access.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [DDX_FieldText](#ddx_fieldtext) 일반적인 DDX_Field 예제에 대 한 합니다. 에 대 한 호출이 `DDX_FieldLBString` 유사 합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdao.h  
   
-##  <a name="ddx_fieldlbstringexact"></a>DDX_FieldLBStringExact  
+##  <a name="ddx_fieldlbstringexact"></a>  DDX_FieldLBStringExact  
  `DDX_FieldLBStringExact` 함수를 레코드 뷰에 목록 상자 컨트롤의 현재 선택 영역 복사는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 레코드 보기와 연결 된 레코드 집합의 필드 데이터 멤버입니다.  
   
 ```  
@@ -353,13 +353,13 @@ void AFXAPI DDX_FieldLBStringExact(
   
  DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다. 예제 및에 대 한 DDX에 대 한 자세한 내용은 [CRecordView](../../mfc/reference/crecordview-class.md) 및 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 필드, 문서를 참조 하십시오. [레코드 뷰](../../data/record-views-mfc-data-access.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [DDX_FieldText](#ddx_fieldtext) 일반적인 DDX_Field 예제에 대 한 합니다. 에 대 한 호출이 `DDX_FieldLBStringExact` 유사 합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdao.h  
   
-##  <a name="ddx_fieldradio"></a>DDX_FieldRadio  
+##  <a name="ddx_fieldradio"></a>  DDX_FieldRadio  
  `DDX_FieldRadio` 함수는 0부터 시작 연결 `int` 레코드 보기에서 라디오 단추 그룹에서 현재 선택 된 라디오 단추와 레코드 뷰의 레코드 집합의 멤버 변수입니다.  
   
 ```  
@@ -396,13 +396,13 @@ void AFXAPI DDX_FieldRadio(
   
  DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다. 예제 및에 대 한 DDX에 대 한 자세한 내용은 [CRecordView](../../mfc/reference/crecordview-class.md) 및 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 필드, 문서를 참조 하십시오. [레코드 뷰](../../data/record-views-mfc-data-access.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [DDX_FieldText](#ddx_fieldtext) 일반적인 DDX_Field 예제에 대 한 합니다. 에 대 한 호출이 `DDX_FieldRadio` 유사 합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdao.h  
   
-##  <a name="ddx_fieldscroll"></a>DDX_FieldScroll  
+##  <a name="ddx_fieldscroll"></a>  DDX_FieldScroll  
  `DDX_FieldScroll` 레코드 뷰에서의 스크롤 막대 컨트롤의 스크롤 위치를 동기화 하는 함수 및 `int` 레코드 뷰 (또는 매핑하도록 선택 하면 모든 정수 변수)과 관련 된 레코드 집합의 필드 데이터 멤버입니다.  
   
 ```  
@@ -439,13 +439,13 @@ void AFXAPI DDX_FieldScroll(
   
  DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다. 예제 및에 대 한 DDX에 대 한 자세한 내용은 [CRecordView](../../mfc/reference/crecordview-class.md) 및 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 필드, 문서를 참조 하십시오. [레코드 뷰](../../data/record-views-mfc-data-access.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [DDX_FieldText](#ddx_fieldtext) 일반적인 DDX_Field 예제에 대 한 합니다. 에 대 한 호출이 `DDX_FieldScroll` 유사 합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdao.h  
 
-  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name = "ddx_fieldslider" ></a> DDX_FieldSlider
+  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name="ddx_fieldslider"></a>  DDX_FieldSlider
 `DDX_FieldSlider` 레코드 뷰에서의 슬라이더 컨트롤의 스크롤 상자 위치를 동기화 하는 함수 및 `int` 레코드 뷰 (또는 매핑하도록 선택 하면 모든 정수 변수)과 관련 된 레코드 집합의 필드 데이터 멤버입니다.  
    
 ### <a name="syntax"></a>구문  
@@ -478,13 +478,13 @@ void AFXAPI DDX_FieldSlider(
 ### <a name="remarks"></a>설명  
  이 함수에 지정 된 값으로 슬라이더의 위치를 설정 데이터를 레코드 집합에서 슬라이더를 이동할 때는 *값*합니다. 컨트롤에는 레코드 집합에서 전송, 레코드 집합 필드는 Null 인 경우 슬라이더 컨트롤의 위치를 0으로 설정 됩니다. 레코드 집합에 컨트롤에서으로 전송에서 컨트롤이 비어 레코드 집합 필드의 값은 0입니다.  
   
- `DDX_FieldSlider`위치 단순히 보다는 범위를 설정할 수 있는 슬라이더 컨트롤을 사용 하 여 범위 정보를 교환 하지 않습니다.  
+ `DDX_FieldSlider` 위치 단순히 보다는 범위를 설정할 수 있는 슬라이더 컨트롤을 사용 하 여 범위 정보를 교환 하지 않습니다.  
   
  ODBC 기반 클래스를 사용 하는 경우 함수의 첫 번째 재정의 사용 합니다. DAO 기반 클래스와 두 번째 재정의 사용 합니다.  
   
  DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../dialog-data-exchange-and-validation.md)합니다. 예제 및에 대 한 DDX에 대 한 자세한 내용은 `CRecordView` 및 `CDaoRecordView` 필드 참조 [레코드 뷰](../../data/record-views-mfc-data-access.md)합니다. 슬라이더 컨트롤에 대 한 정보를 참조 하십시오. [CSliderCtrl 사용 하 여](../using-csliderctrl.md)합니다.  
    
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [DDX_FieldText](#ddx_fieldtext) 일반적인 DDX_Field 예제에 대 한 합니다. 에 대 한 호출이 `DDX_FieldSlider` 유사 합니다.  
    
 ### <a name="requirements"></a>요구 사항  
@@ -493,7 +493,7 @@ void AFXAPI DDX_FieldSlider(
 ### <a name="see-also"></a>참고 항목  
  [매크로 및 전역](mfc-macros-and-globals.md)   
   
-##  <a name="ddx_fieldtext"></a>DDX_FieldText  
+##  <a name="ddx_fieldtext"></a>  DDX_FieldText  
  `DDX_FieldText` 함수의 전송을 관리 `int`, **짧은**, **긴**, `DWORD`, [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **double**, **BOOL**, 또는 **바이트** 편집 상자 컨트롤 및 레코드 집합의 필드 데이터 멤버 간에 데이터입니다.  
   
 ```  
@@ -626,7 +626,7 @@ void AFXAPI DDX_FieldText(
   
  DDX에 대 한 자세한 내용은 참조 [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md)합니다. 예제 및에 대 한 DDX에 대 한 자세한 내용은 [CRecordView](../../mfc/reference/crecordview-class.md) 및 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 필드, 문서를 참조 하십시오. [레코드 뷰](../../data/record-views-mfc-data-access.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 `DoDataExchange` 에 대 한 함수는 [CRecordView](../../mfc/reference/crecordview-class.md) 포함 `DDX_FieldText` 세 개의 데이터 형식에 대 한 함수 호출: `IDC_COURSELIST` 은 콤보 상자; 다른 두 컨트롤은 편집 상자입니다. DAO 프로그래밍에 대 한는 *하기 위해* 매개 변수는에 대 한 포인터는 [CRecordset](../../mfc/reference/crecordset-class.md) 또는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)합니다.  
   
  [!code-cpp[NVC_MFCDatabase#43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]  
