@@ -25,13 +25,13 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>방법: Windows 데스크톱 응용 프로그램에서 Windows 10 SDK 사용
-Visual Studio 2017에 클래식 Windows 데스크톱 프로젝트를 만들 때 설정은 기본적으로 C++ 데스크톱 작업 설치 또는 마지막으로 업데이트 되었을 때 설치 된 Windows 10 SDK의 버전으로 만들 수 있습니다. 이 버전의 Windows SDK의 모든 최근 Windows 릴리스와 호환 됩니다. 이전 버전의 SDK를 대상으로 하려는 경우 프로젝트 | 속성의 Windows SDK 버전 드롭다운 목록에서 사용할 수 있는 다른 SDK 버전에서 선택 합니다.  
+Visual Studio 2017에 클래식 Windows 데스크톱 프로젝트를 만들 때 설정은 기본적으로 C++ 데스크톱 작업 설치 또는 마지막으로 업데이트되었을 때 설치된 Windows 10 SDK의 버전으로 만들 수 있습니다. 이 버전의 Windows SDK의 최근 Windows 릴리스와 모두 호환 됩니다. 이전 버전의 SDK를 대상으로 하려는 경우 프로젝트 | 속성의 Windows SDK 버전 드롭다운 목록의 사용할 수 있는 다른 SDK 버전에서 선택합니다.   
   
- Visual Studio 2015 및 Windows 10 SDK 부터는 CRT 라이브러리가 두 부분으로 분리되었는데, 하나(ucrtbase)는 유니버설 Windows 앱에서 허용 되는 함수를 포함 하고 이외의 모든 항목이 포함 된 다른 부분(vcruntime140) 입니다. Windows 10 SDK 이후로는 다수의 C99 함수와 같은 새로운 함수가 있으며, 이러한 함수를 사용하려면 다음 단계를 따라야 합니다. [CRT 라이브러리 기능](../c-runtime-library/crt-library-features.md)을 참조하세요.  
+ Visual Studio 2015 및 Windows 10 SDK부터는 CRT 라이브러리가 두 부분으로 분리되었는데, 하나(ucrtbase)는 유니버설 Windows 앱에서 허용되는 함수를 포함하고 나머지는 이외의 모든 항목이 포함된 다른 부분(vcruntime140)입니다. Windows 10 SDK 이후로는 다수의 C99 함수와 같은 새로운 함수가 있으며, 이러한 함수를 사용하려면 다음 단계를 따라야 합니다. [CRT 라이브러리 기능](../c-runtime-library/crt-library-features.md)을 참조하세요.   
   
 ### <a name="to-target-the-windows-10-sdk"></a>Windows 10 SDK를 대상으로 하려면  
   
-1.  Windows 10 SDK가 설치되었는지 확인합니다. Windows 10 SDK는 [Windows 10 용 도구](http://go.microsoft.com/fwlink/p/?linkid=617631)의 일부로 설치 됩니다.
+1. Windows 10 SDK가 설치되었는지 확인합니다. Windows 10 SDK는 [Windows 10용 도구](http://go.microsoft.com/fwlink/p/?linkid=617631)의 일부로 설치됩니다.
   
 2.  프로젝트 노드에 대한 바로 가기 메뉴를 열고 **SDK 버전 대상 다시 지정**을 선택합니다.  
   
@@ -41,7 +41,7 @@ Visual Studio 2017에 클래식 Windows 데스크톱 프로젝트를 만들 때 
   
      ![솔루션 작업 검토](../windows/media/retargetingwindowssdk2.PNG "RetargetingWindowsSDK2")  
   
-3.  **대상 플랫폼 버전** 드롭다운 목록에서 대상으로 하려는 Windows 10 SDK의 버전을 선택 합니다. 확인 단추를 선택하여 변경 내용을 적용합니다.  
+3. **대상 플랫폼 버전** 드롭다운 목록에서 대상으로 하려는 Windows 10 SDK의 버전을 선택합니다. 확인 단추를 선택하여 변경 내용을 적용합니다.  
   
      이 컨텍스트에서 8.1이란 Windows SDK를 말하며 이는 또는 Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 및 Windows Vista와 이전 버전 호환성을 가집니다.  
   
@@ -53,7 +53,7 @@ Visual Studio 2017에 클래식 Windows 데스크톱 프로젝트를 만들 때 
   
      ![대상 플랫폼 버전](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")  
   
-     이 작업은 헤더 파일 및 라이브러리 파일에 대한 경로가 포함된 프로젝트 매크로의 값을 변경합니다. 변경 내용을 확인하기 위해서 프로젝트 속성 대화 상자의 Visual C++ 디렉터리 섹션의 포함 디렉터리와 같은 속성 중 하나를 선택, 선택 드롭다운 목록에서 \<편집>을 선택 합니다. **포함 디렉터리** 대화 상자가 나타납니다.  
+     이 작업은 헤더 파일 및 라이브러리 파일에 대한 경로가 포함된 프로젝트 매크로의 값을 변경합니다. 변경 내용을 확인하기 위해 프로젝트 속성 대화 상자의 Visual C++ 디렉터리 섹션의 포함 디렉터리와 같은 속성 중 하나를 선택, 선택 드롭다운 목록에서 \<편집>을 선택합니다. **포함 디렉터리** 대화 상자가 나타납니다. 
   
      ![디렉터리 대화 상자를 포함](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")  
   
