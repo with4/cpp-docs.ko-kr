@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="atlmfc-concepts"></a>ATL/MFC 개념
-이 섹션에서는 개념 및 작업 기반 항목 수 있도록 라이브러리 ATL (액티브 템플릿) 및 Microsoft Foundation 클래스 (MFC) 라이브러리 간에 공유 되는 클래스를 사용 하 여 프로그래밍 합니다.  
+이 섹션에서는 액티브 탬플릿 라이브러리(ATL)와 MFC 라이브러리 간에 공유되는 클래스를 사용하여 프로그래밍 하는데 도움이 되는 개념 및 작업 기반 항목을 제공해 줍니다.
   
 ## <a name="in-this-section"></a>섹션 내용  
  [문자열 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
