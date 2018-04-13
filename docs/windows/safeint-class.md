@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - SafeInt class
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-caps.latest.revision: ''
+caps.latest.revision: 16
 author: ghogen
 ms.author: ghogen
 manager: ghogen
@@ -29,7 +29,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 03/22/2018
 ---
 # <a name="safeint-class"></a>SafeInt 클래스
-정수 오버플로 방지 하는 정수 기본 형식을 확장 하 고 다양 한 유형의 정수를 비교할 수 있습니다.  
+기본 정수형을 확장하여 정수 오버플로를 방지하고 다양한 유형의 정수를 비교할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,7 +42,7 @@ class SafeInt;
   
 |템플릿|설명|  
 |--------------|-----------------|  
-|T|정수 또는 부울 매개 변수 유형의 `SafeInt` 대체 합니다.|  
+|T|정수 또는 부울 타입의 `SafeInt` 가 대체하는 매개 변수 유형입니다.|  
 |E|정책 처리 오류를 정의 하는 열거형된 데이터 형식입니다.|  
 |U|정수 또는 보조 피연산자에 대 한 부울 매개 변수의 형식입니다.|  
   
@@ -176,7 +176,7 @@ class SafeInt;
   
  이 클래스 수도 있습니다는 두 가지 유형의 정수 비교 `SafeInt` 개체입니다. 일반적으로 비교를 수행 하는 경우 먼저 변환 해야 동일한 형식이 되도록 숫자입니다. 다른 형식으로 한 숫자를 종종 캐스팅 데이터 손실 없이 있는지 확인 하기 위해 검사 필요 합니다.  
   
- 이 항목의 연산자 표에서 지 원하는 수치 연산 및 비교 연산자는 `SafeInt` 클래스입니다. 반환할 가장 수치 연산자는 `SafeInt` 형식의 개체 `T`합니다.  
+ 이 항목의 연산자 표에는 `SafeInt` 클래스가 지원하는 수치 연산 및 비교 연산자의 목록을 보여줍니다. 대부분 반환되는 수치 연산자는 `T` 형식의 `SafeInt` 개체입니다.  
   
  간의 비교 작업을 `SafeInt` 하며 정수 계열 형식 두 방향에서 모두 수행할 수 있습니다. 예를 들어 모두 `SafeInt<int>(x) < y` 및 `y> SafeInt<int>(x)` 유효 하 고 동일한 결과 반환 합니다.  
   
@@ -195,13 +195,13 @@ class SafeInt;
   
  첫 번째 문은 확인 `true`, 두 번째 문은로 확인 되지만 `false`합니다. 비트 부정 0은 0xFFFFFFFF입니다. 두 번째 문은 기본 비교 연산자는 0xFFFFFFFF 0xFFFFFFFF로 비교 하 고 동일한 것으로 간주 합니다. 에 대 한 비교 연산자는 `SafeInt` 클래스 첫 번째 매개 변수 서명 되지 않은 반면 두 번째 매개 변수가 음수 임을 인식 합니다. 따라서 비트 표현은 동일 하지만는 `SafeInt` 논리 연산자는 부호 없는 정수는-1 보다 큰 인식 합니다.  
   
- 사용 하는 경우 주의 해야는 `SafeInt` 와 함께 클래스는 `?:` 삼항 연산자입니다. 다음 코드 줄을 고려 합니다.  
+ `SafeInt`클래스를 `?:` 삼항 연산자와 함께 사용할 때 주의해야 합니다. 다음 코드 줄을 고려 합니다.  
   
 ```  
 Int x = flag ? SafeInt<unsigned int>(y) : -1;  
 ```  
   
- 컴파일러가이으로 변환합니다.  
+ 컴파일러는 다음과 같이 변환합니다.   
   
 ```  
 Int x = flag ? SafeInt<unsigned int>(y) : SafeInt<unsigned int>(-1);  
@@ -223,7 +223,7 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
  오류 정책을 사용자 지정 하는 방법은 두 가지가 있습니다. 매개 변수를 설정 하는 첫 번째 옵션 `E` 만들 때 한 `SafeInt`합니다. 오류 처리 하나에 대 한 정책 변경 하려는 경우이 옵션을 사용 하 여 `SafeInt`합니다. 정의 하는 다른 옵션은 `_SAFEINT_DEFAULT_ERROR_POLICY` 오류 처리 사용자 지정 된 클래스를 포함 하기 전에 `SafeInt` 라이브러리입니다. 기본 오류 처리의 모든 인스턴스에 대 한 정책 변경 하려는 경우이 옵션을 사용 하 여는 `SafeInt` 코드의 클래스.  
   
 > [!NOTE]
->  SafeInt 라이브러리에서 오류를 처리 하는 사용자 지정 된 클래스를 오류 처리기를 호출한 코드에 제어를 반환 해야 합니다. 오류 처리기가 호출의 결과 `SafeInt` 작업 신뢰할 수 없습니다.  
+>  SafeInt 라이브러리에서 발생하는 오류를 처리하는 사용자 지정 클래스는 오류 처리기를 호출한 모드에 제어를 반환하지 않아야 합니다. 오류 처리기가 호출된 이후에는 `SafeInt` 연산 결과를 신뢰할 수 없습니다.   
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** safeint.h  
