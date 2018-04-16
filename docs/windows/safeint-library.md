@@ -30,7 +30,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="safeint-library"></a>SafeInt 라이브러리
-SafeInt 라이브러리는 응용 프로그램 수학 연산을 수행할 때 발생할 수 있는 정수 오버플로 방지 합니다.  
+SafeInt 라이브러리는 응용 프로그램이 수학 연산을 수행할 때 발생할 수 있는 정수 오버플로를 방지합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

@@ -1,12 +1,12 @@
 ---
-title: "ATL MFC 공유 클래스 | Microsoft Docs"
-ms.custom: 
+title: ATL MFC 공유 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: 'index-page '
 f1_keywords:
 - vc.classes.shared
@@ -30,7 +30,7 @@ helpviewer_keywords:
 - CString objects, shared class
 - shared classes
 ms.assetid: e13aaac3-21ec-4f4d-8834-432b40fde544
-caps.latest.revision: 
+caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -43,11 +43,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/29/2018
 ---
 # <a name="atlmfc-shared-classes"></a>ATL/MFC 공유 클래스
-이러한 유틸리티 클래스는 MFC DLL을 요구 하지 않고 모든 네이티브 c + + 프로젝트에서 사용할 수 있습니다.  
+유틸리티 클래스는 MFC DLL을 요구하지 않고 모든 네이티브 C++ 프로젝트에서 사용할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [MFC와 ATL 간 공유 되는 클래스](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)  
- MFC 및 ATL. 간에 공유 되는 클래스에 대 한 링크를 제공 합니다.  
+ MFC 및 ATL 간에 공유되는 클래스에 대한 링크를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  [액티브 템플릿 라이브러리 (ATL) 참조](../atl/atl-com-desktop-components.md)  
