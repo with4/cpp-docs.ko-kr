@@ -38,7 +38,7 @@ SafeInt 라이브러리는 응용 프로그램이 수학 연산을 수행할 때
 |-------------|-----------------|  
 |[SafeInt 클래스](../windows/safeint-class.md)|이 클래스는 정수 오버플로를 방지할 수 있습니다.|  
 |[SafeInt 함수](../windows/safeint-functions.md)|`SafeInt` 개체를 만들지 않고 사용할 수 있는 함수 입니다.|  
-|[SafeIntException 클래스](../windows/safeintexception-class.md)|예외는 클래스와 관련이 `SafeInt` 클래스입니다.|  
+|[SafeIntException 클래스](../windows/safeintexception-class.md)|`SafeInt`클래스와 관련 있는 예외 클래스입니다.|  
   
 ## <a name="related-sections"></a>관련 단원  
   
