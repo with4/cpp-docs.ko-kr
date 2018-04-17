@@ -1,12 +1,12 @@
 ---
-title: "어떻게 MFC를 사용 하면 인터넷 클라이언트 응용 프로그램을 만드는 쉽게 | Microsoft Docs"
-ms.custom: 
+title: 어떻게 MFC를 사용 하면 인터넷 클라이언트 응용 프로그램을 만드는 쉽게 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -15,7 +15,7 @@ helpviewer_keywords:
 - Internet applications [MFC], MFC
 - MFC, Internet applications
 ms.assetid: 94437b3f-f15c-437d-b5fd-264a2efec9ab
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen

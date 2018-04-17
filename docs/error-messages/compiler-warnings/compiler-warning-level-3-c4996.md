@@ -1,12 +1,12 @@
 ---
-title: "컴파일러 경고 (수준 3) C4996 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 3) C4996 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: error-reference
 f1_keywords:
 - C4996
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-caps.latest.revision: 
+caps.latest.revision: 34
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5a4797b4ac5fabc31d747682579c3b3ae6ce900
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0c41ce646f635e32f6e1e34d0361c738d0bb6b0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compiler-warning-level-3-c4996"></a>컴파일러 경고 (수준 3) C4996
 
@@ -37,13 +37,13 @@ ms.lasthandoff: 12/21/2017
 
 - [이 함수 또는 변수 안전 하지 않을 수 있습니다. 사용 하는 것이 좋습니다 *safe_version* 대신 합니다. 사용 중단을 해제 하려면 사용 하 여 \_CRT\_SECURE\_아니요\_경고 합니다.  자세한 내용은 온라인 도움말을 참조하세요.](#unsafe-crt-library-functions)
 
-- [' std::*function_name*::\_옵션을 해제\_반복기::\_Deprecate' 호출 std::*function_name*매개 변수가 있는 안전 하지 않을 수 있습니다이 호출 전달 된 값이 정확한 지 확인 하려면 호출자에 의존 합니다. 이 경고를 사용하지 않으려면 -D_SCL_SECURE_NO_WARNINGS를 사용합니다. Visual c + + ' 확인 된 반복기 ' 사용 하는 방법에 설명서를 참조 하십시오.](#unsafe-standard-library-functions)
+- [' std::*function_name*::\_옵션을 해제\_반복기::\_Deprecate' 호출 std::*function_name*안전 하지 않을 수 있는 매개 변수와 함께이 호출에 의존 전달 된 값이 정확한 지 확인 하려면 호출자에 게 있습니다. 이 경고를 사용하지 않으려면 -D_SCL_SECURE_NO_WARNINGS를 사용합니다. Visual c + + ' 확인 된 반복기 ' 사용 하는 방법에 설명서를 참조 하십시오.](#unsafe-standard-library-functions)
 
 - [이 함수 또는 변수 최신 라이브러리 또는 운영 체제 기능으로 대체 되었습니다. 사용 하는 것이 좋습니다 *new_item* 대신 합니다. 자세한 내용은 온라인 도움말을 참조하세요.](#obsolete-crt-functions-and-variables)
 
 ## <a name="cause"></a>원인
 
-컴파일러로 표시 된 변수 또는 함수에서 발생 하는 경우 c 4996 발생 [더 이상 사용 되지](../../cpp/deprecated-cpp.md) 를 사용 하 여는 `__declspec(deprecated)` 한정자, 함수, 클래스 멤버 또는 C + + 14가 있는 형식 정의 액세스 하려고 하면 또는 [ \[ \[사용 되지 않는\] \] ](../../cpp/attributes2.md) 특성입니다. 사용할 수는 `__declspec(deprecated)` 한정자 또는 `[[deprecated]]` 라이브러리 또는 헤더 파일 사용 되지 않는 함수, 변수, 멤버 또는 형식 정의 대 한 클라이언트에 게 경고 하기 위한 특성을 직접 합니다.
+컴파일러로 표시 된 변수 또는 함수에서 발생 하는 경우 c 4996 발생 [더 이상 사용 되지](../../cpp/deprecated-cpp.md) 를 사용 하 여는 `__declspec(deprecated)` 한정자, 함수, 클래스 멤버 또는 C + + 14가 있는 형식 정의 액세스 하려고 하면 또는 [ \[ \[사용 되지 않는\] \] ](../../cpp/attributes.md) 특성입니다. 사용할 수는 `__declspec(deprecated)` 한정자 또는 `[[deprecated]]` 라이브러리 또는 헤더 파일 사용 되지 않는 함수, 변수, 멤버 또는 형식 정의 대 한 클라이언트에 게 경고 하기 위한 특성을 직접 합니다.
 
 ## <a name="remarks"></a>설명
 

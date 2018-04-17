@@ -1,7 +1,7 @@
 ---
-title: "-NATVIS (PDB Natvis 추가) | Microsoft Docs"
+title: -NATVIS (PDB Natvis 추가) | Microsoft Docs
 ms.date: 08/10/2017
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.technology:
 - cpp-tools
 ms.topic: article

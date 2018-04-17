@@ -1,12 +1,12 @@
 ---
-title: "-(최적화)를 선택 합니다. | Microsoft Docs"
-ms.custom: 
+title: -(최적화)를 선택 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VC.Project.VCLinkerTool.OptimizeReferences
@@ -26,17 +26,17 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86427dbf1ac6c3404daa36d2e02786aa80ed6453
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 928968803dc008eb39b3d0c52152c1f3b631a852
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="opt-optimizations"></a>/OPT(최적화)
 LINK가 빌드하는 동안 수행할 최적화를 제어합니다.  
@@ -50,10 +50,10 @@ LINK가 빌드하는 동안 수행할 최적화를 제어합니다.
 ```  
   
 ## <a name="arguments"></a>인수  
- **REF** &#124; **NOREF**  
+ **REF** &AMP;#124; **NOREF**  
  **/Opt: ref** 함수와; 참조 되지 않는 데이터를 제거 합니다. **/Opt: noref** 함수 및 참조 되지 않는 데이터를 유지 합니다.  
   
- /OFT:REF를 사용하면 LINK가 참조되지 않은 패키지된 함수 및 데이터를 제거합니다. 개체에 포함 패키지 함수 및 데이터 (Comdat)를 사용 하 여 컴파일된는 [/Gy](../../build/reference/gy-enable-function-level-linking.md) 옵션입니다. 이러한 최적화를 전이적 COMDAT 제거라고 합니다. 기본적으로 **/opt: ref** 디버그가 아닌 빌드에서 사용 하도록 설정 합니다. 이 기본값을 재정의 하 고 프로그램에 참조 되지 않은 Comdat를 유지 하려면 지정 **/opt: noref**합니다. 사용할 수는 [/include](../../build/reference/include-force-symbol-references.md) 특정 기호는 제거 되지 않도록 하려면 옵션입니다.  
+ /Opt: ref를 사용 하는 링크 참조 되지 않은 패키지에 포함 된 함수 및 데이터를 제거 합니다. 개체에 포함 패키지 함수 및 데이터 (Comdat)를 사용 하 여 컴파일된는 [/Gy](../../build/reference/gy-enable-function-level-linking.md) 옵션입니다. 이러한 최적화를 전이적 COMDAT 제거라고 합니다. 기본적으로 **/opt: ref** 디버그가 아닌 빌드에서 사용 하도록 설정 합니다. 이 기본값을 재정의 하 고 프로그램에 참조 되지 않은 Comdat를 유지 하려면 지정 **/opt: noref**합니다. 사용할 수는 [/include](../../build/reference/include-force-symbol-references.md) 특정 기호는 제거 되지 않도록 하려면 옵션입니다.  
   
  때 **/opt: ref** 명시적으로 또는 제한 된 형태의 기본적으로 사용 되는 **/opt: icf** 활성화 되어 동일한 함수만 정리 하는 합니다. 원하는 경우 **/opt: ref** 아닌 **/opt: icf**를 지정 해야 **/opt: ref, NOICF** 또는 **/opt: noicf**합니다.  
   
@@ -63,7 +63,7 @@ LINK가 빌드하는 동안 수행할 최적화를 제어합니다.
   
  지정 **/opt: icf** 사용 하도록 설정 하지 않습니다는 **/opt: ref** 옵션입니다.  
   
- **ICF [=** `iterations` **] &#124; NOICF**   
+ **ICF [=** `iterations` **] &AMP;#124; NOICF**   
  사용 하 여 **/opt: icf [=**`iterations`**]** 를 동일한 COMDAT를 정리 합니다. 중복 COMDAT는 링커 출력에서 제거될 수 있습니다. 선택적인 `iterations` 매개 변수는 중복을 위해 기호를 트래버스하는 횟수를 지정합니다. 기본 반복 횟수는 2입니다. 추가 반복에서 이전 반복의 정리를 통해 발견되지 않은 중복 항목을 더 많이 찾을 수도 있습니다.  
   
  링커는 다르게 작동 때 **/opt: ref** 지정-및 **ICF** 기본적으로 적용 되-때 보다 **ICF, /opt: ref** 명시적으로 지정 됩니다. 형식의 **ICF** 으로 사용할 수 있는 **/opt: ref** 단독 읽기 전용 데이터를 정리 하지 않습니다-여기에.rdata,.pdata 및.xdata 포함 됩니다. 따라서 이러한 모듈의 함수에 읽기 전용 데이터 종속성이 높아지기 때문에(예: .pdata 및 .xdata) [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]에 대해 이미지가 생성될 때 정리되는 함수가 적어집니다. 완전 하 게 하려면 **ICF** 정리 동작을 명시적으로 지정 **/opt: icf**합니다.  
@@ -75,7 +75,7 @@ LINK가 빌드하는 동안 수행할 최적화를 제어합니다.
 > [!NOTE]
 >  때문에 **/opt: icf** 서로 다른 함수 또는 읽기 전용 데이터 멤버에 할당 될 동일한 주소를 발생할 수 있습니다 (`const` 변수를 사용 하 여 컴파일된 **/Gy**), 의존 하는 프로그램을 중단할 수 있습니다 함수 또는 읽기 전용 데이터 멤버에 대해 고유한 주소입니다. 자세한 내용은 [/Gy(함수 수준 링크 사용)](../../build/reference/gy-enable-function-level-linking.md)를 참조하세요.  
   
- **LBR** &#124; **NOLBR**  
+ **LBR** &AMP;#124; **NOLBR**  
  **/OPT:LBR** 및 **/OPT:NOLBR** 옵션 ARM 이진 파일에만 적용 합니다. 특정 ARM 프로세서 분기 명령에는 제한된 범위가 있으므로 링커가 범위를 벗어난 주소로 점프하는 것을 감지하면 분기 명령의 대상 주소를 실제 대상을 목표로 하는 분기 명령이 포함된 코드 "아일랜드"의 주소로 대체합니다. 사용할 수 있습니다 **/OPT:LBR** 긴 분기 지침 검색 및 전체 코드 크기를 최소화 하기 위해 중간 코드 아일랜드 배치를 최적화할 수 있습니다. **/OPT:NOLBR** 최적화 없이 현재 발생에 긴 분기 명령에 대 한 코드 아일랜드를 생성 하도록 링커에 지시 합니다.  
   
  기본적으로는 **/OPT:LBR** 증분 링크를 사용 하지 않을 때 옵션이 설정 되어 있습니다. 비증분 링크 원하지만 긴 분기 최적화는 원하는 경우 지정 **/OPT:NOLBR**합니다. **/OPT:LBR** 증분 링크 옵션을 해제 합니다.  

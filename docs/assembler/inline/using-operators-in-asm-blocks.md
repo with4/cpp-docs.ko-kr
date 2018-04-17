@@ -1,12 +1,12 @@
 ---
-title: "__Asm 블록에서 연산자를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: __Asm 블록에서 연산자를 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - operators [C++], using in __asm blocks
 - square brackets [ ]
 ms.assetid: a26ccfd4-40ae-4a61-952f-c417982aa8dd
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ca8ac739793c81ef18f8657cbf53c9cb018b3e38
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="using-operators-in-asm-blocks"></a>__asm 블록에서 연산자 사용
 ## <a name="microsoft-specific"></a>Microsoft 전용  
- `__asm` 블록은와 같은 C 또는 c + + 특정 연산자를 사용할 수 없습니다는  **<<**  연산자입니다. 그러나 공유 하는 연산자 C 및 MASM에서와 같은 \* 연산자를 어셈블리 언어 연산자로 해석 됩니다. 예를 들어, 외부 프로그램 `__asm` 대괄호를 차단 (**[]**) 바깥쪽 C 배열에 있는 요소의 크기를 자동으로 배율을 조정 하는 배열 첨자로 해석 됩니다. `__asm` 블록 안에서 MASM 인덱스 연산자로 표시되며, 이 연산자는 임의의 데이터 개체 또는 레이블(배열만이 아님)로부터 크기를 조절하지 않은 바이트 오프셋을 만듭니다. 다음 코드에서는 차이점을 보여 줍니다.  
+ `__asm` 블록은와 같은 C 또는 c + + 특정 연산자를 사용할 수 없습니다는 **<<** 연산자입니다. 그러나 공유 하는 연산자 C 및 MASM에서와 같은 \* 연산자를 어셈블리 언어 연산자로 해석 됩니다. 예를 들어, 외부 프로그램 `__asm` 대괄호를 차단 (**[]**) 바깥쪽 C 배열에 있는 요소의 크기를 자동으로 배율을 조정 하는 배열 첨자로 해석 됩니다. `__asm` 블록 안에서 MASM 인덱스 연산자로 표시되며, 이 연산자는 임의의 데이터 개체 또는 레이블(배열만이 아님)로부터 크기를 조절하지 않은 바이트 오프셋을 만듭니다. 다음 코드에서는 차이점을 보여 줍니다.  
   
 ```  
 int array[10];  

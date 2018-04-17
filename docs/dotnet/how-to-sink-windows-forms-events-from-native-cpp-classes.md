@@ -1,12 +1,12 @@
 ---
-title: "방법: 네이티브 c + + 클래스에서 Windows Forms 이벤트 싱크 | Microsoft Docs"
-ms.custom: 
+title: '방법: 네이티브 c + + 클래스에서 Windows Forms 이벤트 싱크 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 dev_langs:
 - C++
@@ -16,7 +16,7 @@ helpviewer_keywords:
 - event handling, .NET/native interop
 - event handling, Windows Forms in C++
 ms.assetid: 6e30ddee-d058-4c8d-9956-2a43d86f19d5
-caps.latest.revision: 
+caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
 manager: ghogen

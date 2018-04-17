@@ -1,12 +1,12 @@
 ---
-title: "(C/c + +) 사용 되지 않습니다. | Microsoft Docs"
-ms.custom: 
+title: (C/c + +) 사용 되지 않습니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - vc-pragma.deprecated
@@ -17,22 +17,22 @@ helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-caps.latest.revision: 
+caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5df80fffb5b9cdeabfe19d5a5de6eb771d35d3d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 65333f72f71ded1338956ab1a3c51c2be980cb1a
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deprecated-cc"></a>사용되지 않음 (C/C++)
 **사용 되지 않는** pragma는 함수, 형식 또는 다른 식별자 더 이상 지원 되지 않을 이후에서 표시를 사용 하면 임대 해제 또는 더 이상 사용 해야 합니다.  
 > [!NOTE]
-> C + + 14에 대 한 내용은 `[[deprecated]]` Microsoft declspec 또는 pragma vs 특성, 참조 특성을 포함 하며 해당 복사본을 사용 하는 시기에 대 한 지침 [c + + 표준 특성](../cpp/attributes2.md) 특성입니다.
+> C + + 14에 대 한 내용은 `[[deprecated]]` Microsoft declspec 또는 pragma vs 특성, 참조 특성을 포함 하며 해당 복사본을 사용 하는 시기에 대 한 지침 [c + + 표준 특성](../cpp/attributes.md) 특성입니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 02/23/2018
 
   C + + 14를 사용 하는 것이 좋습니다 `[[deprecated]]` 특성 대신 가능 하면는 **사용 되지 않는** pragma입니다. Microsoft 전용 [__declspec (deprecated)](../cpp/deprecated-cpp.md) 선언 한정자도 하는 것이 보다 많은 경우에는 **사용 되지 않는** pragma입니다. `[[deprecated]]` 특성 및 `__declspec(deprecated)` 한정자를 사용 하면 특정 형태의 오버 로드 된 함수에 대 한 사용 되지 않는 상태를 지정할 수 있습니다. 진단 경고에만 표시 하는 특정 오버 로드 된 함수에 대 한 참조 특성 또는 한정자에 적용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // pragma_directive_deprecated.cpp  

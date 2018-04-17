@@ -1,17 +1,17 @@
----
-title: "방법: Windows 10을 사용 하 여 Windows 데스크톱 응용 프로그램에서 SDK | Microsoft Docs"
-ms.custom: 
+﻿---
+title: '방법: Windows 10을 사용 하 여 Windows 데스크톱 응용 프로그램에서 SDK | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 dev_langs:
 - C++
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-caps.latest.revision: 
+caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -31,7 +31,7 @@ Visual Studio 2017에 클래식 Windows 데스크톱 프로젝트를 만들 때 
   
 ### <a name="to-target-the-windows-10-sdk"></a>Windows 10 SDK를 대상으로 하려면  
   
-1. Windows 10 SDK가 설치되었는지 확인합니다. Windows 10 SDK는 [Windows 10용 도구](http://go.microsoft.com/fwlink/p/?linkid=617631)의 일부로 설치됩니다.
+1.  Windows 10 SDK가 설치되었는지 확인합니다. Windows 10 SDK는 [Windows 10용 도구](http://go.microsoft.com/fwlink/p/?linkid=617631)의 일부로 설치됩니다.  
   
 2.  프로젝트 노드에 대한 바로 가기 메뉴를 열고 **SDK 버전 대상 다시 지정**을 선택합니다.  
   
@@ -41,7 +41,7 @@ Visual Studio 2017에 클래식 Windows 데스크톱 프로젝트를 만들 때 
   
      ![솔루션 작업 검토](../windows/media/retargetingwindowssdk2.PNG "RetargetingWindowsSDK2")  
   
-3. **대상 플랫폼 버전** 드롭다운 목록에서 대상으로 하려는 Windows 10 SDK의 버전을 선택합니다. 확인 단추를 선택하여 변경 내용을 적용합니다.  
+3.  에 **대상 플랫폼 버전** 드롭다운 목록에서 대상으로 하려는 Windows 10 SDK의 버전을 선택합니다.  확인 단추를 선택하여 변경 내용을 적용합니다.  
   
      이 컨텍스트에서 8.1이란 Windows SDK를 말하며 이는 또는 Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 및 Windows Vista와 이전 버전 호환성을 가집니다.  
   

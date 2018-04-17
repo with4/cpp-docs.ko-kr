@@ -1,12 +1,12 @@
 ---
-title: ". 링커 입력으로 사용 하는 Obj 파일 | Microsoft Docs"
-ms.custom: 
+title: . 링커 입력으로 사용 하는 Obj 파일 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/29/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++

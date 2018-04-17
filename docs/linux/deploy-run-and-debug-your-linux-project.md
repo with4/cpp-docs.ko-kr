@@ -1,12 +1,12 @@
 ---
-title: "Linux 프로젝트 배포, 실행 및 디버그 | Microsoft Docs"
-ms.custom: 
+title: Linux 프로젝트 배포, 실행 및 디버그 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/06/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-linux
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
 author: corob-msft
@@ -15,11 +15,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 6c904c721eedb8f15e254abd68fca56da7fe0e6a
-ms.sourcegitcommit: 1e367a5f5c5a6fd0b6018f4fb5edcdf2f1a8085c
+ms.openlocfilehash: ebd8783bdcf3c188e04c1d6808d5a727a2bc7cdd
+ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Linux 프로젝트 배포, 실행 및 디버그
 
@@ -29,9 +29,6 @@ Linux 프로젝트를 조작하고 디버그할 수 있는 여러 가지 방법�
 
 * 중단점, 조사식 창과 같은 기존의 Visual Studio 기능을 사용하여 변수를 마우스 단추로 가리켜 디버그합니다. 이러한 메서드를 사용하여 다른 프로젝트 형식에 사용하는 일반적인 방법으로 디버그할 수 있습니다.
 * 특별한 Linux 콘솔 창에서 대상 컴퓨터의 출력을 봅니다. 또한 콘솔을 사용하여 대상 컴퓨터에 입력을 보낼 수 있습니다.
-
-> [!NOTE]
-> Linux의 ARM 디버깅은 [Visual Studio에서 포함된 ARM 장치 디버깅](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/) 블로그 게시물을 참조하세요.
 
 ## <a name="debug-your-linux-project"></a>Linux 프로젝트 디버그
 
@@ -89,6 +86,12 @@ Linux 프로젝트를 조작하고 디버그할 수 있는 여러 가지 방법�
 * 특정 디버거 옵션은 **추가 디버거 명령** 항목을 통해 GDB에 전달될 수 있습니다.  예를 들어 SIGILL(잘못된 명령) 신호를 무시하고자 할 경우  **handle** 명령을 사용하여 신호를 무시할 수 있습니다.  위 그림처럼 **추가 디버거 명령** 항목에 다음 내용을 추가하면 됩니다.
 
   ```handle SIGILL nostop noprint```
+
+## <a name="next-steps"></a>다음 단계
+
+* Linux에서 ARM 장치를 디버깅하려면 [Visual Studio에서 포함된 ARM 장치 디버깅](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/) 블로그 게시물을 참조하세요.
+
+* **프로세스에 연결** 명령을 사용하여 디버깅하려면 [프로젝트 시스템에 대한 Linux C++ 워크로드 개선 사항, Linux 콘솔 창, rsync 및 프로세스에 연결](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/) 블로그 게시물을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 [C++ 디버깅 속성(Linux C++)](../linux/prop-pages/debugging-linux.md).

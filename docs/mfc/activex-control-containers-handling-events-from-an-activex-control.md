@@ -1,12 +1,12 @@
 ---
-title: "ActiveX 컨트롤 컨테이너: ActiveX 컨트롤에서 이벤트를 처리 합니다. | Microsoft Docs"
-ms.custom: 
+title: 'ActiveX 컨트롤 컨테이너: ActiveX 컨트롤에서 이벤트를 처리 합니다. | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -20,17 +20,17 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 84e1571f400297584e12a40dfd2bfcc3c0b525d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX 컨트롤 컨테이너: ActiveX 컨트롤에서 보낸 이벤트 처리
 이 문서에서는 ActiveX 컨트롤 컨테이너에서 ActiveX 컨트롤에 대 한 이벤트 처리기를 설치 하려면 속성 창을 사용 하 여 설명 합니다. 이벤트 처리기는 특정 이벤트 (컨트롤)에서 알림 받기 및 응답에 일부 작업을 수행 하는 데 사용 됩니다. 이 알림은 이벤트를 "발생" 라고 합니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  이벤트 싱크 맵에 대 한 자세한 내용은 참조 하십시오. [이벤트 싱크 맵](../mfc/reference/event-sink-maps.md) 에 *클래스 라이브러리 참조*합니다.  
   
-##  <a name="_core_event_handler_modifications_to_the_project"></a>프로젝트에 이벤트 처리기 수정  
+##  <a name="_core_event_handler_modifications_to_the_project"></a> 프로젝트에 이벤트 처리기 수정  
  속성 창을 사용 하 여 이벤트 처리기를 추가 하려면 이벤트 싱크 맵 선언 되 고 프로젝트에 정의 합니다. 다음 문이 컨트롤에 추가 됩니다. Cpp 처음 이벤트 처리기를 추가 합니다. 이 코드에서는 대화 상자 클래스에 대 한 이벤트 싱크 맵 선언 (이 경우 `CContainerDlg`):  
   
  [!code-cpp[NVC_MFC_AxCont#8](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_1.cpp)]  
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  원하는 이벤트를 처리 하는 대화 상자 클래스를 선택 합니다. 이 예에서는 선택 **클릭**합니다.  
   
-5.  오른쪽의 드롭다운 목록 상자에서 선택  **\<추가 > ClickCircctrl1**합니다.  
+5.  오른쪽의 드롭다운 목록 상자에서 선택 ** \<추가 > ClickCircctrl1**합니다.  
   
 6.  이벤트 처리기 코드 구현에서으로 이동 하려면 클래스 뷰에서 새 처리기 함수를 두 번 클릭 (합니다. Cpp)의 `CContainerDlg`합니다.  
   

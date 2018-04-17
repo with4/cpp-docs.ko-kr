@@ -1,12 +1,12 @@
 ---
-title: "tiled_extent 클래스 | Microsoft Docs"
-ms.custom: 
+title: tiled_extent 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - tiled_extent
@@ -22,17 +22,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8370dbd381fa7005ea619ddb63b21bd227f68153
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="tiledextent-class"></a>tiled_extent 클래스
 A `tiled_extent` 개체가 `extent` 익스텐트 공간 1, 2 또는 3 차원 타일으로 세분 하는 1 ~ 3 차원 개체입니다.  
@@ -75,7 +75,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 |이름|설명|  
 |----------|-----------------|  
-|[tiled_extent Constructor](#ctor)|`tiled_extent` 클래스의 새 인스턴스를 초기화합니다.|  
+|[tiled_extent 생성자](#ctor)|`tiled_extent` 클래스의 새 인스턴스를 초기화합니다.|  
 
   
 ### <a name="public-methods"></a>Public 메서드  
@@ -98,7 +98,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 |이름|설명|  
 |----------|-----------------|  
 |[tile_dim0 Constant](#tile_dim0)|가장 중요 한 차원 길이 저장합니다.|  
-|[tile_dim1 Constant](#tile_dim1)|다음 가장 중요 한 차원 길이 저장합니다.|  
+|[tile_dim1 상수](#tile_dim1)|다음 가장 중요 한 차원 길이 저장합니다.|  
 |[tile_dim2 Constant](#tile_dim2)|가장 덜 중요 한 차원 길이 저장합니다.|  
 
   
@@ -153,7 +153,7 @@ Concurrency::extent<rank> get_tile_extent() const restrict(amp,cpu);
  `extent` 개체의이 크기를 캡처하는 `tiled_extent` 인스턴스.  
   
 
-## <a name="pad"> </a>  pad   
+## <a name="pad"> </a>  채움   
 새 반환 `tiled_extent` 익스텐트 개체 타일 크기에 따라 균등 하 게 나눌 수를 조정 합니다.  
   
 ### <a name="syntax"></a>구문  

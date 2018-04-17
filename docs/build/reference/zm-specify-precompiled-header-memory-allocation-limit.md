@@ -1,12 +1,12 @@
 ---
-title: "-Zm (미리 컴파일된 헤더 메모리 할당 제한 지정) | Microsoft Docs"
-ms.custom: 
+title: -Zm (미리 컴파일된 헤더 메모리 할당 제한 지정) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - /zm
@@ -23,7 +23,7 @@ helpviewer_keywords:
 - memory allocation, Memory Allocation Limit compiler option
 - -Zm compiler option [C++]
 ms.assetid: 94c77d5e-6672-46a7-92e0-3f69e277727d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen

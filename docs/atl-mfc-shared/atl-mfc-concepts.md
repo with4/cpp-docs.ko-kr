@@ -1,12 +1,12 @@
----
-title: "ATL MFC 개념 | Microsoft Docs"
-ms.custom: 
+﻿---
+title: ATL MFC 개념 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,7 +14,7 @@ helpviewer_keywords:
 - MFC
 - ATL
 ms.assetid: 4d973f56-8730-4e0b-9522-b5f43bc4548d
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="atlmfc-concepts"></a>ATL/MFC 개념
-이 섹션에서는 액티브 탬플릿 라이브러리(ATL)와 MFC 라이브러리 간에 공유되는 클래스를 사용하여 프로그래밍 하는데 도움이 되는 개념 및 작업 기반 항목을 제공해 줍니다.
+이 섹션에서는 액티브 탬플릿 라이브러리(ATL)와 MFC 라이브러리 간에 공유되는 클래스를 사용하여 프로그래밍하는 데 도움이 되는 개념 및 작업 기반 항목을 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [문자열 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  

@@ -1,10 +1,10 @@
 ---
-title: "vcpkg-- Windows용 C++ 패키지 관리자 | Microsoft Docs"
-description: "vcpkg는 Windows에서 오픈 소스 C++ 라이브러리 획득 및 설치를 크게 간소화하는 명령줄 패키지 관리자입니다."
+title: vcpkg-- Windows용 C++ 패키지 관리자 | Microsoft Docs
+description: vcpkg는 Windows에서 오픈 소스 C++ 라이브러리 획득 및 설치를 크게 간소화하는 명령줄 패키지 관리자입니다.
 keywords: vcpkg
 author: mikeblome
 ms.author: mblome
-ms.date: 02/01/2018
+ms.date: 04/06/2018
 ms.technology:
 - cpp-ide
 ms.tgt_pltfrm: windows
@@ -15,11 +15,11 @@ dev_langs:
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07b7f4b3c5d77c7c31001a656667b7d2602a74b9
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 54d1f0cf2a6971435858a1a64bf3e163631822b5
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg: Windows용 C++ 패키지 관리자
 
@@ -39,7 +39,7 @@ vcpkg는 Windows에서 타사 라이브러리 획득 및 설치를 크게 간소
 
 ## <a name="installation"></a>설치
 
-vcpkg 리포지토리를 GitHub: https://github.com/Microsoft/vcpkg에서 복제합니다. 원하는 폴더 위치에 다운로드할 수 있습니다.
+GitHub에서 vcpkg 리포지토리를 복제합니다. https://github.com/Microsoft/vcpkg 원하는 폴더 위치에 다운로드할 수 있습니다.
 
 루트 폴더에서 부트스트래퍼 **bootstrap-vcpkg.bat**를 실행합니다.
 
@@ -53,7 +53,7 @@ vcpkg 리포지토리를 GitHub: https://github.com/Microsoft/vcpkg에서 복제
 
 ```cmd
 ace       6.4.3   The ADAPTIVE Communication Environment
-anax      2.1.0-1 An open source C++ entity system. <https://github...
+anax      2.1.0-1 An open source C++ entity system. \<https://github...
 antlr4    4.6-1   ANother Tool for Language Recognition
 apr       1.5.2   The Apache Portable Runtime (APR) is a C library ...
 asio      1.10.8  Asio is a cross-platform C++ library for network ...
@@ -86,7 +86,6 @@ Additional packages (*) will be installed to complete this operation.
 ```
 
 ## <a name="list-the-libraries-already-installed"></a>이미 설치된 라이브러리 나열
-
 일부 라이브러리를 설치한 후에 **vcpkg list**를 사용하여 설치된 라이브러리를 확인할 수 있습니다.
 
 ```cmd
@@ -106,9 +105,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 **vcpkg integrate install**을 실행하여 VC++ 디렉터리 경로를 수동으로 편집할 필요 없이 사용자 단위로 모든 vcpkg 헤더 파일과 이진 파일을 찾도록 Visual Studio를 구성할 수 있습니다. 클론이 여러 개 있는 경우 이 명령을 실행하는 클론은 새 기본 위치가 됩니다.
 
-그러면 폴더/헤더를 입력하는 것만으로 헤더를 포함할 수 있으며 자동 완성이 도움이 됩니다. 라이브러리에 연결하거나 프로젝트 참조를 추가하는 추가 단계는 필요 없습니다. 다음 그림에서는 Visual Studio가 azure-storage-cpp 헤더를 찾는 방법을 보여 줍니다. vcpkg는 대상 플랫폼으로 분할된 \installed 하위 폴더에 헤더를 배치합니다. 다음 다이어그램에서는 라이브러리의 `/was`에 있는 포함 파일의 목록을 보여 줍니다.
-
-그러면 폴더/헤더를 입력하는 것만으로 헤더를 포함할 수 있으며 자동 완성이 도움이 됩니다. 라이브러리에 연결하거나 프로젝트 참조를 추가하는 추가 단계는 필요 없습니다. 다음 그림에서는 Visual Studio가 azure-storage-cpp 헤더를 찾는 방법을 보여 줍니다. vcpkg는 대상 플랫폼으로 분할된 \installed 하위 폴더에 헤더를 배치합니다. 다음 다이어그램에서는 라이브러리의 \was 하위 폴더에 있는 포함 파일의 목록을 보여줍니다.
+그러면 폴더/헤더를 입력하는 것만으로 헤더를 포함할 수 있으며 자동 완성이 도움이 됩니다. 라이브러리에 연결하거나 프로젝트 참조를 추가하는 추가 단계는 필요 없습니다. 다음 그림에서는 Visual Studio가 azure-storage-cpp 헤더를 찾는 방법을 보여 줍니다. vcpkg는 대상 플랫폼으로 분할된 **/installed** 하위 폴더에 헤더를 배치합니다. 다음 다이어그램에서는 라이브러리의 **/was** 하위 폴더에 있는 포함 파일의 목록을 보여줍니다.
 
 ![vcpkg Intellisense 통합](media/vcpkg-intellisense.png "vcpkg 및 Intellisense")
 
@@ -144,6 +141,36 @@ zlib:x86-windows        1.2.11   A compression library
 
 ### <a name="upgrade-example"></a>업그레이드 예제
 
+### <a name="per-project"></a>프로젝트 단위
+활성 vcpkg 인스턴스에서 버전과 다른 라이브러리의 특정 버전을 사용해야 하는 경우 다음 단계를 따르세요.
+
+1. vcpkg의 새 클론 생성 
+1. 필요한 버전을 가져오도록 라이브러리의 프로필 수정
+1. **vcpkg install \<library>**를 실행합니다.
+1. **vcpkg integrate project**를 사용하여 프로젝트 단위로 해당 라이브러리를 참조하는 NuGet 패키지를 만듭니다.
+
+
+## <a name="export-compiled-binaries-and-headers"></a>컴파일된 이진 파일 및 헤더 내보내기
+모든 팀 구성원이 라이브러리를 다운로드 및 빌드해야 한다면 비효율적일 것입니다. 한 구성원만 해당 작업을 수행한 다음, **vcpkg export**를 사용하여 이진 파일 및 헤더의 Zip 파일을 만들어 다른 팀 구성원이 쉽게 공유하도록 만들 수 있습니다. 
+
+## <a name="updateupgrade-installed-libraries"></a>설치된 라이브러리 업데이트/업그레이드
+공용 카탈로그는 라이브러리의 최신 버전으로 최신 상태로 유지됩니다. 로컬 라이브러리 중 어떤 것이 오래되었는지 확인하려면 **vcpkg update**를 사용합니다. 포트 컬렉션을 공용 카탈로그의 최신 버전으로 업데이트할 준비가 되면 **vcpkg upgrade** 명령을 실행하여 만료된 설치 라이브러리의 일부를 자동으로 다운로드하고 다시 빌드합니다.
+
+기본적으로는 **upgrade** 명령은 만료된 라이브러리를 나열할 뿐 업그레이드하지는 않습니다. 업그레이드를 수행하려면 **--no-dry-run** 옵션을 사용합니다. 
+
+```cmd
+  vcpkg upgrade --no-dry-run 
+```
+
+### <a name="upgrade-options"></a>업그레이드 옵션
+
+- **--no-dry-run** 업그레이드를 수행합니다. 지정되지 않은 경우 명령은 만료된 패키지를 나열합니다. 
+- **--keep-going** 한 번 실패하더라도 패키지를 계속 설치합니다. 
+- **--triplet \<t>** 정규화되지 않은 패키지에 대한 세 가지 기본값을 설정합니다. 
+- **--vcpkg-root \<path>** 현재 디렉터리 또는 도구 디렉터리 대신 사용할 vcpkg 디렉터리를 지정합니다. 
+
+### <a name="upgrade-example"></a>업그레이드 예제
+
 다음 예제에서는 지정된 라이브러리를 업그레이드하는 방법을 보여줍니다. vcpgk가 필요에 따라는 종속성을 자동으로 가져옵니다.
 
 ```cmd
@@ -160,27 +187,21 @@ If you are sure you want to rebuild the above packages, run this command with th
 ```
 
 ## <a name="contribute-new-libraries"></a>새 라이브러리 제공
-
 원하는 모든 라이브러리를 개인 포트 컬렉션에 포함할 수 있습니다. 공용 카탈로그에 대한 새 라이브러리를 제안하려면 [GitHub vcpkg 문제 페이지](https://github.com/Microsoft/vcpkg/issues)에서 문제를 엽니다.
 
 ## <a name="remove-a-library"></a>라이브러리를 제거합니다.
-
 **vcpkg remove**를 입력하여 설치된 라이브러리를 제거합니다. 종속된 라이브러리가 있는 경우 모든 다운스트림 라이브러리가 제거되는 **--recurse**를 사용하여 명령을 다시 실행하라는 메시지가 표시됩니다.
 
 ## <a name="customize-vcpkg"></a>Vcpkg 사용자 지정
-
 원하는 어떤 방식으로든 vcpkg의 클론을 수정할 수 있습니다. 여러 vcpkg 클론을 만들고 각 클론에서 포트 파일을 수정하여 특정 라이브러리 버전을 구하거나 명령줄 매개 변수를 지정할 수 있습니다. 예를 들어 기업에서 한 개발자 그룹은 한 가지 종속성 집합을 가진 소프트웨어로 작업하고 다른 그룹은 다른 집합으로 작업할 수 있습니다. Vcpkg의 두 클론을 설정하고 필요에 따라 라이브러리 및 컴파일 스위치 등의 버전을 다운로드하도록 각 클론을 수정할 수 있습니다. 
 
 ## <a name="uninstall-vcpkg"></a>vcpkg 제거
-
 디렉터리를 삭제하기만 하면 됩니다. 
 
 ## <a name="send-feedback-about-vcpkg"></a>vcpkg에 대한 사용자 의견 보내기
-
 **--survey** 명령을 사용하여 기능에 대한 버그 보고서 및 제안을 비롯하여 vcpkg에 대한 사용자 의견을 Microsoft에 보냅니다.
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>Vcpkg 폴더 계층 구조
-
 모든 vcpkg 기능 및 데이터는 단일 디렉터리 계층 구조에서 독립적이며 "인스턴스"라고 합니다. 레지스트리 설정 또는 환경 변수는 없습니다. 한 컴퓨터에 Vcpkg의 인스턴스가 얼마든지 있을 수 있으며 서로를 방해하지 않습니다. 
 
 Vcpkg 인스턴스의 내용: 

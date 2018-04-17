@@ -15,7 +15,7 @@ dev_langs:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-caps.latest.revision: ''
+caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -23,10 +23,10 @@ ms.workload:
 - cplusplus
 - uwp
 ms.openlocfilehash: bab33955ebeb1473839a1549ca1817f520e1a9fd
-ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="implements-c"></a>implements(C++)
 IDL coclass의 구성원이 될 해야 하는 디스패치 인터페이스를 지정 합니다.  
@@ -46,7 +46,7 @@ IDL coclass의 구성원이 될 해야 하는 디스패치 인터페이스를 �
  쉼표로 구분한 목록 IDL coclass의 멤버는 인터페이스입니다. 단일 인터페이스를 지정 하기 위한 줄임 메서드는 **구현 (***interface_name***)**합니다.  
   
  **dispinterfaces**  
- 쉼표로 구분한 목록 IDL coclass의 구성원이 될 dispinterface입니다. 단일 dispinterface 지정 하기 위한 줄임 메서드는 **구현 (dispinterface** * = dispinterface_name ***)**합니다.  
+ 쉼표로 구분한 목록 IDL coclass의 구성원이 될 dispinterface입니다. 단일 dispinterface 지정 하기 위한 줄임 메서드는 **구현(dispinterface** *= dispinterface_name***)** 합니다.  
   
 ## <a name="remarks"></a>설명  
  기본적으로만-있는 COM 인터페이스는 coclass의 기본 클래스는 IDL coclass에 추가 됩니다. **구현** 통해 IDL coclass 구성원으로 다른 인터페이스를 적용할 수 있습니다.  

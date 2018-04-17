@@ -1,11 +1,12 @@
 ---
-title: "Sets2 문자 | Microsoft Docs"
-ms.custom: 
+title: Sets2 문자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-language
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - Character sets
@@ -13,16 +14,17 @@ helpviewer_keywords:
 - universal character names
 - basic execution character set (C++)
 ms.assetid: 379a2af6-6422-425f-8352-ef0bca6c0d74
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: db505809c1fbc2c49e116b9c2f850f6e14dfbdf6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/13/2018
 ---
 # <a name="character-sets"></a>문자 집합
 C++ 프로그램의 텍스트는 특정 문자 인코딩을 사용하는 소스 파일에 저장됩니다. C++ 표준에서는 소스 파일에 대해 기본 소스 문자 집합을 지정하고 컴파일된 파일에 대해 기본 실행 문자 집합을 지정합니다. Visual C++에서는 추가 로캘별 문자 집합을 소스 파일 및 컴파일된 파일에서 사용할 수 있습니다.  

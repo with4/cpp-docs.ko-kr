@@ -1,12 +1,12 @@
 ---
-title: "(c + +) 사용 되지 않습니다. | Microsoft Docs"
-ms.custom: 
+title: (c + +) 사용 되지 않습니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - deprecated_cpp
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb0dd0bd25f1e4f8d0fd3bc0f1bee19f34497fb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce1d98917609af0eeb42c197cd55bb2179039fe0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deprecated-c"></a>사용되지 않음 (C++)
-이 항목은 Microsoft 전용에 대 한 declspec 선언 사용 되지 않습니다. C + + 14에 대 한 내용은 `[[deprecated]]` 특성 및 해당 특성 및 Microsoft 전용 declspec 또는 pragma를 사용 하는 경우에 대 한 지침 참조 [c + + 표준 특성](attributes2.md)합니다.
+이 항목은 Microsoft 전용에 대 한 declspec 선언 사용 되지 않습니다. C + + 14에 대 한 내용은 `[[deprecated]]` 특성 및 해당 특성 및 Microsoft 전용 declspec 또는 pragma를 사용 하는 경우에 대 한 지침 참조 [c + + 표준 특성](attributes.md)합니다.
 
  아래와 같이 예외가 **더 이상 사용 되지** 와 동일한 기능을 제공 하는 선언에서 [더 이상 사용 되지](../preprocessor/deprecated-c-cpp.md) pragma:  
   
@@ -39,9 +39,9 @@ ms.lasthandoff: 12/21/2017
   
 -   매크로와 사용 되지 않는 것에 표시 수는 **더 이상 사용 되지** pragma입니다.  
   
- 컴파일러는 사용 되지 않는 식별자 또는 표준의 사용을 발견 하는 경우 [ `[[deprecated]]` ](attributes2.md) 특성에는 [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) 경고가 throw 됩니다.  
+ 컴파일러는 사용 되지 않는 식별자 또는 표준의 사용을 발견 하는 경우 [ `[[deprecated]]` ](attributes.md) 특성에는 [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) 경고가 throw 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 함수를 사용되지 않는 것으로 표시하는 방법과 사용되지 않는 함수가 사용되는 경우 컴파일 타임에 표시될 메시지를 지정하는 방법을 보여 줍니다.  
   
 ```  
@@ -61,7 +61,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 클래스를 사용되지 않는 것으로 표시하는 방법과 사용되지 않는 클래스가 사용되는 경우 컴파일 타임에 표시될 메시지를 지정하는 방법을 보여 줍니다.  
   
 ```  

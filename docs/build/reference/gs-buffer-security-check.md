@@ -1,12 +1,12 @@
 ---
-title: "-GS (버퍼 보안 검사) | Microsoft Docs"
-ms.custom: 
+title: -GS (버퍼 보안 검사) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.BufferSecurityCheck
@@ -23,17 +23,17 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
-caps.latest.revision: 
+caps.latest.revision: 40
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e5699830a090f42feb92b24ec43fbae36634c4df
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="gs-buffer-security-check"></a>/GS(버퍼 보안 검사)  
   
@@ -142,7 +142,7 @@ struct { int a; int b; };
   
 -   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BufferSecurityCheck%2A>을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 이 샘플에는 버퍼를 오버런 됩니다. 이렇게 하면 런타임 시 실패 하도록 응용 프로그램.  
   

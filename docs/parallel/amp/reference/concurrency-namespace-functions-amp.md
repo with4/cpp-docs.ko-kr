@@ -1,10 +1,10 @@
 ---
-title: "동시성 네임 스페이스 함수 (AMP) | Microsoft Docs"
-ms.custom: 
+title: 동시성 네임 스페이스 함수 (AMP) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::all_memory_fence
@@ -20,17 +20,17 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 360c253860931f00e65575250d3944b05dc9c4a9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="concurrency-namespace-functions-amp"></a>동시성 네임 스페이스 함수 (AMP)
 ||||  
@@ -93,7 +93,7 @@ inline bool atomic_compare_exchange(
  작업에 성공하면 `true`이고, 그렇지 않으면 `false`입니다.  
   
 
-##  <a name="atomic_exchange">atomic_exchange 함수 (c + + AMP)</a>  
+##  <a name="atomic_exchange"></a>  atomic_exchange 함수 (c + + AMP)  
  원자 단위 작업으로 대상 위치의 값을 설정합니다.  
   
 ```  
@@ -126,7 +126,7 @@ inline float atomic_exchange(
  대상 위치의 원본 값입니다.  
   
 
-##  <a name="atomic_fetch_add">atomic_fetch_add 함수 (c + + AMP)</a>  
+##  <a name="atomic_fetch_add"></a>  atomic_fetch_add 함수 (c + + AMP)  
  원자 값 메모리 위치의 값을 추가 합니다.  
   
 ```  
@@ -152,7 +152,7 @@ inline unsigned int atomic_fetch_add(
 ### <a name="return-value"></a>반환 값  
  메모리 위치의 원본 값입니다.  
   
-##  <a name="atomic_fetch_and">atomic_fetch_and 함수 (c + + AMP)</a>  
+##  <a name="atomic_fetch_and"></a>  atomic_fetch_and 함수 (c + + AMP)  
  값과 메모리 위치의 값의 비트 AND 연산을 원자 단위로 수행 합니다.  
   
 ```  
@@ -265,7 +265,7 @@ inline unsigned int atomic_fetch_min(
 ### <a name="return-value"></a>반환 값  
  지정 된 위치 위치에 저장 된 원래 값입니다.  
   
-##  <a name="atomic_fetch_or">atomic_fetch_or 함수 (c + + AMP)</a>  
+##  <a name="atomic_fetch_or"></a>  atomic_fetch_or 함수 (c + + AMP)  
  값 및 메모리 위치의 값으로 비트 OR 연산을 원자 단위로 수행합니다.  
   
 ```  
@@ -291,7 +291,7 @@ inline unsigned int atomic_fetch_or(
 ### <a name="return-value"></a>반환 값  
  메모리 위치의 원본 값입니다.  
   
-##  <a name="atomic_fetch_sub">atomic_fetch_sub 함수 (c + + AMP)</a>  
+##  <a name="atomic_fetch_sub"></a>  atomic_fetch_sub 함수 (c + + AMP)  
  원자적으로 메모리 위치에서 값을 뺍니다.  
   
 ```  
@@ -317,7 +317,7 @@ inline unsigned int atomic_fetch_sub(
 ### <a name="return-value"></a>반환 값  
  메모리 위치의 원본 값입니다.  
   
-##  <a name="atomic_fetch_xor">atomic_fetch_xor 함수 (c + + AMP)</a>  
+##  <a name="atomic_fetch_xor"></a>  atomic_fetch_xor 함수 (c + + AMP)  
  원자적으로 peforms 메모리 위치 및 값의 비트 XOR 작업 합니다.  
   
 ```  
@@ -586,7 +586,7 @@ inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
  `_Barrier`  
  Tile_barrier 개체  
   
-##  <a name="parallel_for_each">parallel_for_each 함수 (c + + AMP)</a>  
+##  <a name="parallel_for_each"></a>  parallel_for_each 함수 (c + + AMP)  
  계산 도메인에서 함수를 실행합니다. 자세한 내용은 참조 [c + + AMP 개요](../../../parallel/amp/cpp-amp-overview.md)합니다.  
   
 ```  
