@@ -1,4 +1,4 @@
----
+﻿---
 title: '방법: Windows 10을 사용 하 여 Windows 데스크톱 응용 프로그램에서 SDK | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
@@ -53,7 +53,7 @@ Visual Studio 2017에 클래식 Windows 데스크톱 프로젝트를 만들 때 
   
      ![대상 플랫폼 버전](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")  
   
-     이 작업은 헤더 파일 및 라이브러리 파일에 대한 경로가 포함된 프로젝트 매크로의 값을 변경합니다. 변경 내용을 확인하기 위해 프로젝트 속성 대화 상자의 Visual C++ 디렉터리 섹션의 포함 디렉터리와 같은 속성 중 하나를 선택, 선택 드롭다운 목록에서 \<<편집>을 선택합니다. **포함 디렉터리** 대화 상자가 나타납니다.  
+     이 작업은 헤더 파일 및 라이브러리 파일에 대한 경로가 포함된 프로젝트 매크로의 값을 변경합니다. 변경 내용을 확인하기 위해 프로젝트 속성 대화 상자의 Visual C++ 디렉터리 섹션의 포함 디렉터리와 같은 속성 중 하나를 선택, 선택 드롭다운 목록에서 \<편집>을 선택합니다. **포함 디렉터리** 대화 상자가 나타납니다. 
   
      ![디렉터리 대화 상자를 포함](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")  
   

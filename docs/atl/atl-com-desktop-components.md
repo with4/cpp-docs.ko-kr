@@ -1,4 +1,4 @@
----
+﻿---
 title: ATL COM 데스크톱 구성 요소 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016

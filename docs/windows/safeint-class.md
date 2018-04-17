@@ -1,4 +1,4 @@
----
+﻿---
 title: SafeInt 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016

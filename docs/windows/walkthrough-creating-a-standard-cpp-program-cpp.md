@@ -1,4 +1,4 @@
----
+﻿---
 title: '연습: 표준 C++ 프로그램(C++) 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
@@ -32,6 +32,7 @@ ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>연습: 표준 C++ 프로그램(C++) 만들기
 표준 C++ 프로그램을 만들어 Visual Studio 통합 개발 환경(IDE)에서 Visual C++를 사용할 수 있습니다. 이 연습 단계를 수행하면 Visual Studio에서 프로젝트를 만들고, 만든 프로젝트에 파일을 추가하며 C++ 코드를 추가하고 컴파일 및 실행까지 일련의 과정을 수행할 수 있습니다[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
+[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]합니다.  
   
  C++ 프로그램을 직접 입력하거나 샘플 프로그램 중 하나를 이용할 수 있습니다. 이 연습에서는 샘플 프로그램은 콘솔 응용 프로그램입니다. 이 응용 프로그램에서는 C++ 표준 라이브러리 컨테이너 `set`을 사용합니다.  
   
@@ -81,7 +82,7 @@ ms.lasthandoff: 12/21/2017
      샘플 프로그램을 사용하는 경우 명령 창이 표시되고 `set`에서 특정 정수를 찾았는지를 보여줍니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- **이전:** [콘솔 Visual c + +에서 응용 프로그램](../windows/console-applications-in-visual-cpp.md)합니다. **다음:**[연습: 명령줄에서 네이티브 c + + 프로그램 컴파일](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)합니다.  
+ **이전:** [콘솔 Visual C++에서 응용 프로그램](../windows/console-applications-in-visual-cpp.md)합니다. **다음:**[연습: 명령줄에서 네이티브 C++ 프로그램 컴파일](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)합니다.
   
 ## <a name="see-also"></a>참고 항목  
  [C++ 언어 참조](../cpp/cpp-language-reference.md)   

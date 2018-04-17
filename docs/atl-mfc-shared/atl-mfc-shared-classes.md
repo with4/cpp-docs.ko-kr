@@ -1,4 +1,4 @@
----
+﻿---
 title: ATL MFC 공유 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/29/2018
   
 ## <a name="in-this-section"></a>섹션 내용  
  [MFC와 ATL 간 공유 되는 클래스](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)  
- MFC 및 ATL 간에 공유되는 클래스에 대한 링크를 제공합니다.  
+ MFC 및 ATL 간에 공유 되는 클래스에 대한 링크를 제공 합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  [액티브 템플릿 라이브러리 (ATL) 참조](../atl/atl-com-desktop-components.md)  
