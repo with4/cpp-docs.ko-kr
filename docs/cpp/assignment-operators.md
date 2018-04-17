@@ -1,37 +1,35 @@
 ---
-title: "대입 연산자 | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: 대입 연산자 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
-- '>>='
-- xor_eq
-- '&='
-- <<=
-- -=
-- and_eq
-- ^=
-- '|='
+- =
+- '*='
 - /=
 - '%='
-- or_eq
 - +=
-- '*='
+- -=
+- <<=
+- '>>='
+- '&='
+- ^=
+- '|='
+- '&&='
 dev_langs:
 - C++
 helpviewer_keywords:
-- or_eq operator
-- '&= operator'
 - operators [C++], assignment
 - assignment operators [C++], C++
-- xor_eq operator
+- '&= operator'
+- '&&= operator'
+- ^= operator
 - += operator
-- and_eq operator
 - '>>= operator'
 - '|= operator'
 - operator>>=
@@ -40,35 +38,39 @@ helpviewer_keywords:
 - ^= operator
 - operator >>=
 - = operator
-- assignment operators [C++]
 - -= operator
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c84244a619873dcd61b52dee317a751ff28ec3ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4cc273b145aebab3c0a413efe74c29c39b3a6b88
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assignment-operators"></a>할당 연산자
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      expression assignment-operator expression   
+expression assignment-operator expression   
 assignment-operator : one of  
-   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  
+   =   *=   /=   %=   +=   -=   <<=   >>=   &=   ^=   |=  &&=
 ```  
   
 ## <a name="remarks"></a>설명  
- 할당 연산자는 왼쪽 피연산자가 지정된 개체에 값을 저장합니다. 할당 연산자에는 두 번째 피연산자의 값이 첫 번째 피연산자가 지정한 개체에 저장되는 단순 할당과 결과를 저장하기 전에 산술, 시프트 또는 비트 연산이 수행되는 복합 할당 두 종류가 있습니다. 다음 표에 있는 모든 할당 연산자(= 연산자 제외)는 복합 할당 연산자입니다.  
+ 할당 연산자는 왼쪽 피연산자가 지정된 개체에 값을 저장합니다. 할당 작업의 세 가지 종류가 있습니다. 
+
+1. 단순 할당 중인 두 번째 피연산자의 값은 첫 번째 피연산자가 지정한 개체에 저장 됩니다. 1. 산술, 시프트 또는 비트 연산의 해당 결과 저장 하기 전에 수행 되는 복합 할당 합니다.
+1. 복사 하지 않고 전송 되는 리소스에서 (클래스 형식)에 대 한 할당을 이동 합니다.
+
+
+다음 표에서 모든 할당 연산자를 제외 하 고 = 및 & & = 연산자는 복합 할당 연산자입니다.  
   
 ### <a name="assignment-operators"></a>할당 연산자  
   
@@ -84,7 +86,8 @@ assignment-operator : one of
 |**>>=**|두 번째 피연산자의 값에서 지정한 비트 수만큼 첫 번째 피연산자의 값을 오른쪽으로 이동하여 첫 번째 피연산자가 지정한 개체에 결과를 저장합니다.|  
 |**&=**|첫 번째 및 두 번째 피연산자의 비트 AND를 구하여 첫 번째 피연산자가 지정한 개체에 결과를 저장합니다.|  
 |`^=`|첫 번째 및 두 번째 피연산자의 비트 배타적 OR를 구하여 첫 번째 피연산자가 지정한 개체에 결과를 저장합니다.|  
-|`&#124;=`|첫 번째 및 두 번째 피연산자의 비트 포함 OR를 구하여 첫 번째 피연산자가 지정한 개체에 결과를 저장합니다.|  
+|`&#124;=`|첫 번째 및 두 번째 피연산자의 비트 포함 OR를 구하여 첫 번째 피연산자가 지정한 개체에 결과를 저장합니다.|
+|**&&=**| 이동 할당 연산자 (클래스 형식에만 해당). 두 번째 피연산자가 있는 경우는 rvalue (복사) 없이 첫 번째 피연산자에 해당 리소스를 이동 합니다. 참조 [이동 생성자 및 이동 할당 연산자](move-constructors-and-move-assignment-operators-cpp.md) 자세한 정보에 대 한 합니다.|
   
  **연산자 키워드**  
   
@@ -98,7 +101,7 @@ assignment-operator : one of
   
  이러한 연산자 키워드를 프로그램에서 액세스 하는 방법은 두 가지가: 헤더 파일을 포함 `iso646.h`,으로 컴파일하는 [/Za](../build/reference/za-ze-disable-language-extensions.md) (언어 확장명 사용 안 함) 컴파일러 옵션입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // expre_Assignment_Operators.cpp  
@@ -129,7 +132,7 @@ int main() {
   
  클래스 형식(구조체, 공용 구조체 및 클래스 형식)의 개체에 대한 할당은 operator=이라는 함수에 의해 수행됩니다. 이 연산자 함수의 기본 동작은 비트 복사를 수행하는 것이지만, 이 동작은 오버로드된 연산자를 사용하여 수정할 수 있습니다. (참조 [오버 로드 된 연산자](../cpp/operator-overloading.md) 자세한 정보에 대 한 합니다.)  
   
- 지정된 기본 클래스에서 명확히 파생된 모든 클래스의 개체는 기본 클래스의 개체에 할당될 수 있습니다. 하지만 반대의 경우는 성립되지 않습니다. 파생 클래스에서 기본 클래스로의 암시적 변환이 있지만 기본 클래스에서 파생 클래스로의 암시적 변환은 없기 때문입니다. 예:  
+ 지정된 기본 클래스에서 명확히 파생된 모든 클래스의 개체는 기본 클래스의 개체에 할당될 수 있습니다. 하지만 반대의 경우는 성립되지 않습니다. 파생 클래스에서 기본 클래스로의 암시적 변환이 있지만 기본 클래스에서 파생 클래스로의 암시적 변환은 없기 때문입니다. 예를 들어:  
   
 ```  
 // expre_SimpleAssignment.cpp  

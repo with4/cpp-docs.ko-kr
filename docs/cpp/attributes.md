@@ -1,19 +1,19 @@
 ---
-title: "C + + 표준 특성 | Microsoft Docs"
-ms.custom: 
+title: C + + 표준 특성 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-caps.latest.revision: "11"
+caps.latest.revision: 11
 manager: ghogen
 ms.openlocfilehash: d2dcce6b0e289588c426792a334ee4ec38d1ab5f
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="attributes-in-c"></a>C + + 특성
 
@@ -39,17 +39,17 @@ C + + 11에 특성 주석을 공급 업체별 아닐 수 있는 추가 정보가
 void Foo(int);
 ```
 
-특성이 나타내는 대신 #pragma 지시문을 추가 (Visual c + +), 등의 공급 업체별 확장 하는 표준화 된 표현 또는 &#95; &#95; 속성 &#95; #95 (GNU)입니다. 그러나 대부분의 용도 대 한 공급 업체 특정 구문을 사용 해야 여전히 합니다. 현재 표준에는 컴파일러를 인식 해야 하는 다음 특성을 지정 합니다.
+특성이 나타내는 대신 #pragma 지시문을 추가 (Visual c + +), 등의 공급 업체별 확장 하는 표준화 된 표현 또는 &#95; &#95;특성&#95; &#95; (GNU). 그러나 대부분의 용도 대 한 공급 업체 특정 구문을 사용 해야 여전히 합니다. 현재 표준에는 컴파일러를 인식 해야 하는 다음 특성을 지정 합니다.
 
-- `[[noreturn]]`지정 하는 함수 반환 하지 않습니다. 즉 예외가 항상 throw 됩니다. 컴파일러는 해당 컴파일 규칙에 대 한 조정할 수 `[[noreturn]]` 엔터티.
+- `[[noreturn]]` 지정 하는 함수 반환 하지 않습니다. 즉 예외가 항상 throw 됩니다. 컴파일러는 해당 컴파일 규칙에 대 한 조정할 수 `[[noreturn]]` 엔터티.
 
-- `[[carries_dependency]]`함수는 데이터 종속성 순서 스레드 동기화와 관련 하 여 전파 있는지를 지정 합니다. 특성 지정 전달 된 인수는 함수 본문에 대 한 종속성을 수행 하려면 하나 이상의 매개 변수에 적용할 수 있습니다. 함수 반환 값 전달 함수의 종속성을 지정 하려면 자체에 특성을 적용할 수 있습니다. 컴파일러는 보다 효율적인 코드를 생성 하려면이 정보를 사용할 수 있습니다.
+- `[[carries_dependency]]` 함수는 데이터 종속성 순서 스레드 동기화와 관련 하 여 전파 있는지를 지정 합니다. 특성 지정 전달 된 인수는 함수 본문에 대 한 종속성을 수행 하려면 하나 이상의 매개 변수에 적용할 수 있습니다. 함수 반환 값 전달 함수의 종속성을 지정 하려면 자체에 특성을 적용할 수 있습니다. 컴파일러는 보다 효율적인 코드를 생성 하려면이 정보를 사용할 수 있습니다.
 
-- `[[deprecated]]`**Visual Studio 2015 이상:** 지정 함수는 사용할 수 없습니다 및 이후 버전의 라이브러리 인터페이스 존재 하지 않을 수 있습니다. 컴파일러는 클라이언트 코드에서 함수를 호출 하려고 하면 정보 메시지를 생성 하는 데 사용할 수 있습니다. 클래스, 형식 정의 이름, 변수, 비정적 데이터 멤버, 함수, 네임 스페이스, 열거형, 열거자, 또는 템플릿 특수화의 선언에 적용할 수 있습니다.  
+- `[[deprecated]]` **Visual Studio 2015 이상:** 지정 함수는 사용할 수 없습니다 및 이후 버전의 라이브러리 인터페이스 존재 하지 않을 수 있습니다. 컴파일러는 클라이언트 코드에서 함수를 호출 하려고 하면 정보 메시지를 생성 하는 데 사용할 수 있습니다. 클래스, 형식 정의 이름, 변수, 비정적 데이터 멤버, 함수, 네임 스페이스, 열거형, 열거자, 또는 템플릿 특수화의 선언에 적용할 수 있습니다.  
 
-- `[[fallthrough]]`**2017 이상 visual Studio:** (사용할 수 있는 [/std:c + + 17](../build/reference/std-specify-language-standard-version.md))는 `[[fallthrough]]` 특성의 컨텍스트에서 사용할 수 있습니다 [전환](switch-statement-cpp.md) 문을 한 힌트로 컴파일러 (또는 코드를 읽는 사람) fallthrough 동작이 지정 된입니다. Visual c + + 컴파일러 현재 경고 하지 않습니다 fallthrough 동작에 있으므로이 특성에 영향을 주지 컴파일러 동작이 없습니다.
+- `[[fallthrough]]` **2017 이상 visual Studio:** (사용할 수 있는 [/std:c + + 17](../build/reference/std-specify-language-standard-version.md))는 `[[fallthrough]]` 특성의 컨텍스트에서 사용할 수 있습니다 [전환](switch-statement-cpp.md) 컴파일러 (또는 읽는 사람에 대 한 힌트를 사용 하 여 문 코드) fallthrough 동작이 지정 된입니다. Visual c + + 컴파일러 현재 경고 하지 않습니다 fallthrough 동작에 있으므로이 특성에 영향을 주지 컴파일러 동작이 없습니다.
 
-- `[[nodiscard]]`**Visual Studio 2017 15.3 이상 버전:** (사용할 수 있는 [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) 함수의 반환 값에 취소 하려고 하지 지정 합니다. 이 예제에 표시 된 대로 C4834, 경고를 발생 시킵니다.
+- `[[nodiscard]]` **Visual Studio 2017 15.3 이상 버전:** (사용할 수 있는 [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) 함수의 반환 값에 취소 하려고 하지 지정 합니다. 이 예제에 표시 된 대로 C4834, 경고를 발생 시킵니다.
 
    ```cpp
    [[nodiscard]]
@@ -62,11 +62,11 @@ void Foo(int);
    }
    ```
 
-- `[[maybe_unused]]`**Visual Studio 2017 15.3 이상 버전:** (사용할 수 있는 [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) 지정 해당 변수, 함수, 클래스 형식 정의 비정적 데이터 멤버, 열거형 또는 템플릿 특수화 될 수 있습니다. 의도적으로 사용할 수 없습니다. 엔터티의 표시 하면 컴파일러에서 경고 하지 않습니다 `[[maybe_unused]]` 사용 되지 않습니다. 특성 없이 선언 된 엔터티 특성으로, 그 반대의 다시 선언 나중 수 있습니다. 표시 된 첫 번째 선언을 분석 한 후 및 현재 변환 단위의 나머지에 대해 표시 된 엔터티 간주 됩니다.
+- `[[maybe_unused]]` **Visual Studio 2017 15.3 이상 버전:** (사용할 수 있는 [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) 지정 하는 변수, 함수, 클래스, typedef, 비정적 데이터 멤버, 열거형 또는 템플릿 특수화 의도적으로 사용할 수 없습니다. 엔터티의 표시 하면 컴파일러에서 경고 하지 않습니다 `[[maybe_unused]]` 사용 되지 않습니다. 특성 없이 선언 된 엔터티 특성으로, 그 반대의 다시 선언 나중 수 있습니다. 표시 된 첫 번째 선언을 분석 한 후 및 현재 변환 단위의 나머지에 대해 표시 된 엔터티 간주 됩니다.
 
 ## <a name="microsoft-specific-attributes"></a>Microsoft 전용 특성
 
-- `[[gsl::suppress(rules)]]`이 Microsoft 전용 특성을 적용 하는 검사에서 경고가 표시 되지 않도록 하는 데 사용 됩니다 [지침 지원 라이브러리 (GSL)](https://github.com/Microsoft/GSL) 코드에는 규칙입니다. 예를 들어이 코드 조각을 참조 하십시오.
+- `[[gsl::suppress(rules)]]` 이 Microsoft 전용 특성을 적용 하는 검사에서 경고가 표시 되지 않도록 하는 데 사용 됩니다 [지침 지원 라이브러리 (GSL)](https://github.com/Microsoft/GSL) 코드에는 규칙입니다. 예를 들어이 코드 조각을 참조 하십시오.
 
     ```cpp
     void main()

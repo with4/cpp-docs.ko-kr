@@ -1,12 +1,12 @@
 ---
-title: "문자열 및 문자 리터럴 (c + +) | Microsoft Docs"
-ms.custom: 
+title: 문자열 및 문자 리터럴 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - R
@@ -25,17 +25,17 @@ helpviewer_keywords:
 - NULL, character constant
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-caps.latest.revision: 
+caps.latest.revision: 36
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 8714ff649471b0f84e11a65ae4100c8facb06c52
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="string-and-character-literals--c"></a>문자열 및 문자 리터럴 (c + +)
 C++를 사용하면 다양한 문자열 및 문자 형식이 지원되며 이러한 각 형식의 리터럴 값을 표현할 수 있습니다. 소스 코드에서는 문자 집합을 사용하여 문자 및 문자열 리터럴의 내용을 표현합니다. 유니버설 문자 이름 및 이스케이프 문자를 사용하면 기본 소스 문자 집합만 사용하여 모든 문자열을 표현할 수 있습니다. 원시 문자열 리터럴을 사용하면 이스케이프 문자를 사용하지 않아도 되며 원시 문자열 리터럴을 사용하여 모든 유형의 문자열 리터럴을 표현할 수 있습니다. 또한 추가 생성이나 변환 단계를 수행하지 않고도 std:: string 리터럴을 만들 수 있습니다.  
@@ -83,7 +83,7 @@ int main()
 }  
 ```  
   
- 문자열 리터럴에는 접두사가 없거나, 각각 좁은 문자(싱글바이트 또는 멀티바이트), UTF-8, 와이드 문자(UCS-2 또는 UTF-16), UTF-16 및 UTF-32 인코딩을 나타내는 `u8`, `L`, `u`및  `U` 접두사가 있습니다. 원시 문자열 리터럴에는 이러한 인코딩의 원시 버전에 해당하는 `R`, `u8R`, `LR`, `uR` 및 `UR` 접두사가 있을 수 있습니다.  임시 또는 정적 std:: string 값을 만들려면 `s` 접미사와 함께 문자열 리터럴이나 원시 문자열 리터럴을 사용할 수 있습니다. 자세한 내용은 아래의 문자열 리터럴 단원을 참조하세요. 기본 소스 문자 집합, 유니버설 문자 이름 및 소스 코드에서 확장된 코드 페이지의 문자 사용에 대한 자세한 내용은 [Character Sets](../cpp/character-sets2.md)을 참조하세요.  
+ 문자열 리터럴에는 접두사가 없거나, 각각 좁은 문자(싱글바이트 또는 멀티바이트), UTF-8, 와이드 문자(UCS-2 또는 UTF-16), UTF-16 및 UTF-32 인코딩을 나타내는 `u8`, `L`, `u`및  `U` 접두사가 있습니다. 원시 문자열 리터럴에는 이러한 인코딩의 원시 버전에 해당하는 `R`, `u8R`, `LR`, `uR` 및 `UR` 접두사가 있을 수 있습니다.  임시 또는 정적 std:: string 값을 만들려면 `s` 접미사와 함께 문자열 리터럴이나 원시 문자열 리터럴을 사용할 수 있습니다. 자세한 내용은 아래의 문자열 리터럴 단원을 참조하세요. 기본 소스 문자에 대 한 자세한 내용은 집합, 유니버설 문자 이름 및 확장 된 코드 페이지에서 문자를 사용 하 여 소스 코드에서 참조 [문자 집합](../cpp/character-sets.md)합니다.  
   
 ## <a name="character-literals"></a>문자 리터럴  
  *문자 리터럴* 은 상수 문자로 구성됩니다. 문자 리터럴은 작은따옴표로 묶인 문자로 표현됩니다. 문자 리터럴의 5 가지 종류가 있습니다.  
@@ -210,7 +210,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
   
  유니버설 문자 이름은 서로게이트 코드 포인트 범위 D800-DFFF의 값을 인코딩할 수 없습니다. 유니코드 서로게이트 쌍에 대해 `\UNNNNNNNN`을 사용하여 유니버설 문자 이름을 지정합니다. 여기서 NNNNNNNN은 문자에 대한 8자리 코드 포인트입니다. 컴파일러는 필요한 경우 서로게이트 쌍을 생성합니다.  
   
- C++03에서는 해당 유니버설 문자 이름을 사용해서만 문자 하위 집합을 나타낼 수 있으며 실제로 유효한 유니코드 문자를 나타내지 않는 일부 유니버설 문자 이름이 허용됩니다. C++11 표준에서 이것이 수정되었습니다. C++11에서는 문자 및 문자열 리터럴과 식별자 모두 유니버설 문자 이름을 사용할 수 있습니다.  유니버설 문자 이름에 대한 자세한 내용은 [Character Sets](../cpp/character-sets2.md)을 참조하세요. 유니코드에 대한 자세한 내용은 [유니코드](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx)(영문)를 참조하세요. 서로게이트 쌍에 대한 자세한 내용은 [서로게이트 쌍 및 보조 문자](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx)(영문)를 참조하세요.  
+ C++03에서는 해당 유니버설 문자 이름을 사용해서만 문자 하위 집합을 나타낼 수 있으며 실제로 유효한 유니코드 문자를 나타내지 않는 일부 유니버설 문자 이름이 허용됩니다. C++11 표준에서 이것이 수정되었습니다. C++11에서는 문자 및 문자열 리터럴과 식별자 모두 유니버설 문자 이름을 사용할 수 있습니다.  유니버설 문자 이름에 대 한 자세한 내용은 참조 하십시오. [문자 집합](../cpp/character-sets.md)합니다. 유니코드에 대한 자세한 내용은 [유니코드](http://msdn.microsoft.com/library/dd374081\(v=vs.85\).aspx)(영문)를 참조하세요. 서로게이트 쌍에 대한 자세한 내용은 [서로게이트 쌍 및 보조 문자](http://msdn.microsoft.com/library/dd374069\(v=vs.85\).aspx)(영문)를 참조하세요.  
   
 ## <a name="string-literals"></a>문자열 리터럴  
  문자열 리터럴은 함께 사용되어 null로 끝나는 문자열을 형성하는 문자 시퀀스를 나타냅니다. 문자를 큰따옴표로 묶어야 합니다. 다음과 같은 종류의 문자열 리터럴이 있습니다.  
@@ -404,6 +404,6 @@ const char32_t* s5 = U"😎 = \U0001F60E is B-)";
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Character Sets](../cpp/character-sets2.md)   
+ [문자 집합](../cpp/character-sets.md)   
  [숫자, 부울 및 포인터 리터럴](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
  [사용자 정의 리터럴](../cpp/user-defined-literals-cpp.md)

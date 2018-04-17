@@ -1,7 +1,7 @@
 ---
 title: Extern을 지정 하는 링크를 사용 하 여 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 04/06/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -23,25 +23,24 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db93feb8c8fad13cf8de082858e68b89f93b5323
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 319ee69d30ad49ff745df05172db10503b3b42e0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-extern-to-specify-linkage"></a>extern을 사용하여 링크 지정
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      extern string-literal { declaration-list }  
+extern string-literal { declaration-list }  
 extern string-literal declaration  
 ```  
   
 ## <a name="remarks"></a>설명  
  `extern` 키워드는 변수 또는 함수를 선언하며 외부 링크를 포함하도록 지정합니다. 외부 링크의 이름은 해당 링크가 정의된 파일이 아닌 다른 파일에 표시됩니다. `extern`은 변수를 한정할 때 변수에 정적 지속 기간을 지정합니다. 정적 지속 기간은 프로그램 시작 시 할당되고 프로그램 종료 시 할당 해제됩니다. 변수 또는 함수는 다른 소스 파일에서 정의하거나 나중에 같은 파일에서 정의할 수 있습니다. 파일 범위의 변수 및 함수는 기본적으로 외부에서 선언됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // specifying_linkage1.cpp  
@@ -66,7 +65,7 @@ void other() {
   
  Microsoft c + +에서는 문자열 **"C"** 및 **"c + +"** 에 *문자열 리터럴* 필드입니다. 모든 표준 include 파일은 `extern` "C" 구문을 사용하여 C++ 프로그램에 사용할 런타임 라이브러리 함수를 허용합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 C 링크가 있는 이름을 선언하는 또 다른 방법을 보여 줍니다.  
   
 ```  
@@ -107,7 +106,7 @@ extern "C" char GetChar( void ) {
 extern "C" int errno;  
 ```  
   
- 함수에 둘 이상의 링크 사양이 있는 경우 두 사양은 일치해야 합니다. C 및 C++ 링크가 둘 다 있는 것으로 함수를 선언하면 오류가 발생합니다. 뿐만 아니라 함수에 대한 두 선언(링크 사양이 있는 선언과 없는 선언)이 프로그램에서 발생할 경우 링크 사양이 있는 선언이 첫 번째여야 합니다. 이미 링크 사양이 있는 함수의 모든 중복 선언에는 첫 번째 선언에서 지정된 링크가 제공됩니다. 예:  
+ 함수에 둘 이상의 링크 사양이 있는 경우 두 사양은 일치해야 합니다. C 및 C++ 링크가 둘 다 있는 것으로 함수를 선언하면 오류가 발생합니다. 뿐만 아니라 함수에 대한 두 선언(링크 사양이 있는 선언과 없는 선언)이 프로그램에서 발생할 경우 링크 사양이 있는 선언이 첫 번째여야 합니다. 이미 링크 사양이 있는 함수의 모든 중복 선언에는 첫 번째 선언에서 지정된 링크가 제공됩니다. 예를 들어:  
   
 ```  
 extern "C" int CFunc1();  

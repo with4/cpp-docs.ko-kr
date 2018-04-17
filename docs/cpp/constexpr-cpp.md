@@ -19,11 +19,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdf0a4794dd32208b08791d921f6d638873545a1
-ms.sourcegitcommit: d9ee6f777974d031570f4260c9581ea2c81ad875
+ms.openlocfilehash: 5218e576a1aa0436ccb7696d208b1ba2049263b0
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="constexpr-c"></a>constexpr(C++)
 
@@ -49,6 +49,7 @@ constexpr ctor (params);
 
 ## <a name="return-value"></a>반환 값
 
+
  Constexpr 변수 또는 함수 반환 해야 합니다는 [리터럴 형식](trivial-standard-layout-and-pod-types.md#literal_types)합니다.
 
 ## <a name="constexpr-variables"></a>constexpr 변수
@@ -70,7 +71,7 @@ int j = 0;
 constexpr int k = j + 1; //Error! j not a constant expression
 ```
 
-## <a name="constexpr-functions"></a>constexpr 함수
+## <a name="constexpr_functions"></a> constexpr 함수
 
 A **constexpr** 함수는 사용 하는 코드가 필요로 하는 경우 컴파일 시 반환 값을 계산할 수 있습니다.  해당 인수가 **constexpr** 값 및 사용 하는 코드 예를 들어 초기화를 컴파일 타임에 반환 값을 요구는 **constexpr** 변수 나 비형식 템플릿 인수 제공 것 컴파일 타임 상수를 생성합니다. 비-를 사용 하 여 호출**constexpr** 인수, 하거나 해당 값 컴파일 타임에 필요 하지 않을 경우 일반 함수 처럼 런타임에 값을 생성 합니다.  (이 이중 동작 덕분 작성 하지 않아도 **constexpr** 및 비-**constexpr** 버전의 동일한 기능을 합니다.)
 

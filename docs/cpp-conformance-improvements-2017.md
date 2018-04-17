@@ -14,11 +14,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 018b4941171dd466cb8230f7e2614fda3b019752
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: ce15db75d4d08ef128e561fa9671b643946c71c3
+ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Visual Studio 2017 버전 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156) 및 [15.7](#improvements_157)의 C++ 규칙 향상입니다.
 
@@ -72,7 +72,7 @@ Range-based for 루프에 더 이상 동일한 유형의 begin() 및 end() 반�
 
 ### <a name="using-attribute-namespaces-without-repetition"></a>반복 없이 특성 네임스페이스 사용
 
-특성 목록에서 단일 네임스페이스 식별자만 사용하는 새 구문입니다. 자세한 내용은 [C++ 특성](cpp/attributes2.md)을 참조하세요.
+특성 목록에서 단일 네임스페이스 식별자만 사용하는 새 구문입니다. 자세한 내용은 [C++ 특성](cpp/attributes.md)을 참조하세요.
 
 ### <a name="structured-bindings"></a>구조적 바인딩
 
