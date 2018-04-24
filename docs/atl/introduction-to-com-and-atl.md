@@ -1,12 +1,12 @@
----
-title: "COM 및 ATL 소개 | Microsoft Docs"
-ms.custom: 
+﻿---
+title: COM 및 ATL 소개 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: 'index-page '
 dev_langs:
 - C++
@@ -15,7 +15,7 @@ helpviewer_keywords:
 - ATL, COM
 - COM objects, ATL
 ms.assetid: 35d6ae9c-abbb-42f0-9344-33f3c19ac3ce
-caps.latest.revision: 
+caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -28,18 +28,18 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="introduction-to-com-and-atl"></a>COM 및 ATL 소개
-이 섹션에서는 COM 및 ATL에 대해 간략히 소개합니다.
+이 섹션에서는 COM 및 ATL에 대해 간략히 소개합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [COM 소개](../atl/introduction-to-com.md)  
- 구성 요소 개체 모델(COM)의 개요를 제공합니다. 인터페이스를 비롯한 **IUnknown**, 참조 횟수, `QueryInterface`, 마샬링 및 집계에 대한 기본적인 개념을 설명합니다.
+ 구성 요소 개체 모델(COM)의 개요를 제공합니다. 인터페이스를 비롯한 **IUnknown**, 참조 횟수, `QueryInterface`, 마샬링 및 집계에 대한 기본적인 개념을 설명합니다.  
   
  [ATL 소개](../atl/introduction-to-atl.md)  
- 액티브 템플릿 라이브러리(ATL)의 설계와 템플릿 라이브러리 그리고 ATL 버전 번호에 대해 간략하게 설명합니다. ATL 및 MFC 중에 선택 권장 사항이 포함되어 있습니다. 
+ 액티브 템플릿 라이브러리(ATL)의 설계와 템플릿 라이브러리 그리고 ATL 버전 번호에 대해 간략하게 설명합니다. ATL 및 MFC 중에 선택 권장 사항이 포함되어 있습니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  [구성 요소 개체 모델](http://msdn.microsoft.com/library/windows/desktop/ms694363)  
- COM을 구성하는 Windows SDK
+ COM을 구성하는 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]  
   
  [ATL](../atl/active-template-library-atl-concepts.md)  
  액티브 템플릿 라이브러리를 사용하여 프로그래밍하는 방법에 대한 개념 항목의 링크를 제공합니다.  
