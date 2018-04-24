@@ -11,7 +11,7 @@ ms.topic: get-started-article
 dev_langs:
 - C++
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen
