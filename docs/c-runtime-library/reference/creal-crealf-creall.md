@@ -42,11 +42,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc43c72c4fcbaf9d24c1a2c4cc7b7923d0c67878
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: a51de64d8dea595041939e8b59638031babe53a2
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="creal-crealf-creall"></a>creal, crealf, creall
 
@@ -76,23 +76,23 @@ long double creal( _Lcomplex z );  // C++ only
 
 ## <a name="remarks"></a>설명
 
-C + +는 오버 로딩을 허용 하기 때문에 오버 로드를 호출할 수 있습니다 `creal` 사용 하는 **_Fcomplex** 또는 **_Lcomplex** 값 및 반환 **float** 또는 **긴 이중** 값입니다. C 프로그램에서 `creal` 항상 약간의 **_Dcomplex** 값과 반환은 **double** 값입니다.
+C + +는 오버 로딩을 허용 하기 때문에 오버 로드를 호출할 수 있습니다 **creal** 사용 하는 **_Fcomplex** 또는 **_Lcomplex** 값 및 반환 **float** 또는 **long double** 값입니다. C 프로그램에서 **creal** 항상 약간의 **_Dcomplex** 값과 반환은 **double** 값입니다.
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴|C 헤더|C++ 헤더|
 |-------------|--------------|------------------|
-|`creal`, `crealf`, `creall`|\<complex.h>|\<ccomplex>|
+|**creal**, **crealf**, **creall**|\<complex.h>|\<ccomplex>|
 
 **_Fcomplex**, **_Dcomplex**, 및 **_Lcomplex** 유형은 구현 되지 않은 네이티브 C99 형식의 해당 하는 Microsoft 전용 **_Complex float** , **double _Complex**, 및 **long double _Complex**각각. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고자료
 
-[사전순 함수 참조](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
-[_Cbuild, _FCbuild, _LCbuild](../../c-runtime-library/reference/cbuild-fcbuild-lcbuild.md)<br/>
-[norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)<br/>
-[cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)<br/>
-[conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)<br/>
-[cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)<br/>
-[carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)<br/>
-[cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)<br/>
+[사전순 함수 참조](crt-alphabetical-function-reference.md)<br/>
+[_Cbuild, _FCbuild, _LCbuild](cbuild-fcbuild-lcbuild.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
+[cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
+[conj, conjf, conjl](conj-conjf-conjl.md)<br/>
+[cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>
+[carg, cargf, cargl](carg-cargf-cargl.md)<br/>
+[cabs, cabsf, cabsl](cabs-cabsf-cabsl.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "ldiv, lldiv | Microsoft 문서"
-ms.custom: 
+title: ldiv, lldiv | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ldiv
@@ -37,17 +37,17 @@ helpviewer_keywords:
 - remainder computing
 - computing quotients
 ms.assetid: 68ab5d83-27a4-479c-9d52-d055eb139eca
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: cdd241eca666570a47e1ce3ceb74730c6fe35de7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.sourcegitcommit: 9a3a3d59176043ae60584482c2572c07f757b320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ldiv-lldiv"></a>ldiv, lldiv
 한 번의 작업으로 두 정수의 몫과 나머지를 계산합니다.  
@@ -82,7 +82,7 @@ lldiv_t lldiv(
   
 ## <a name="requirements"></a>요구 사항  
   
-|루틴에서 반환된 값|필수 헤더|  
+|루틴|필수 헤더|  
 |-------------|---------------------|  
 |`ldiv`, `lldiv`|\<stdlib.h>|  
   
@@ -91,7 +91,7 @@ lldiv_t lldiv(
 ## <a name="libraries"></a>라이브러리  
  모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // crt_ldiv.c  

@@ -1,49 +1,49 @@
 ---
-title: "&lt;ctgmath&gt; | Microsoft 문서"
-ms.custom: 
+title: '&lt;ctgmath&gt; | Microsoft 문서'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: ff521893-f445-4dc8-a2f6-699185bb7024
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac578edcfab6acb59360c80794c4f2c02470b470
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fbff9bcb3e36ef65e811314d0c426c9992e87fda
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
-실제로 \<tgmath.h>와 동일한 형식-제네릭 수학 매크로를 제공하는 C++ 표준 라이브러리 헤더 \<ccomplex> 및 \<cmath>를 포함합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-#include <ctgmath>  
-  
-```  
-  
-## <a name="remarks"></a>설명  
- 표준 C 라이브러리 헤더 \<tgmath.h>의 기능은 \<ccomplex> 및 \<cmath>의 오버로드로 제공됩니다.  
-  
- 이 헤더를 포함하는 경우 표준 C 라이브러리 헤더의 외부 링크를 사용하여 선언한 이름이 `std` 네임스페이스에도 선언됩니다.  
-  
-## <a name="see-also"></a>참고 항목  
- [\<ccomplex>](../standard-library/ccomplex.md)   
- [\<cmath>](../standard-library/cmath.md)   
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 표준 라이브러리 개요](../standard-library/cpp-standard-library-overview.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
+실제로 \<tgmath.h>와 동일한 형식-제네릭 수학 매크로를 제공하는 C++ 표준 라이브러리 헤더 \<ccomplex> 및 \<cmath>를 포함합니다.
 
+## <a name="syntax"></a>구문
 
+```cpp
+#include <ctgmath>
+
+```
+
+## <a name="remarks"></a>설명
+
+표준 C 라이브러리 헤더 \<tgmath.h>의 기능은 \<ccomplex> 및 \<cmath>의 오버로드로 제공됩니다.
+
+이 헤더를 포함하는 경우 표준 C 라이브러리 헤더의 외부 링크를 사용하여 선언한 이름이 `std` 네임스페이스에도 선언됩니다.
+
+## <a name="see-also"></a>참고자료
+
+[\<ccomplex >](../standard-library/ccomplex.md)<br/>
+[\<cmath >](../standard-library/cmath.md)<br/>
+[헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)<br/>
+[C++ 표준 라이브러리 개요](../standard-library/cpp-standard-library-overview.md)<br/>
+[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

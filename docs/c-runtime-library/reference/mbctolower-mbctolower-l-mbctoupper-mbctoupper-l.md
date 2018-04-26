@@ -1,12 +1,12 @@
 ---
-title: "_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l | Microsoft 문서"
-ms.custom: 
+title: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbctolower_l
@@ -51,86 +51,91 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6de3ad7c095ab96e27e00863e2eaa775bce58ae8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: cbe370fa5443ade72d352768d299fd6ac697288d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
-멀티바이트 문자의 대/소문자를 테스트하고 변환합니다.  
-  
+
+멀티바이트 문자의 대/소문자를 테스트하고 변환합니다.
+
 > [!IMPORTANT]
->  이 API는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 참조 [CRT 함수는 유니버설 Windows 플랫폼 앱에서 지원 되지 않습니다](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-unsigned int _mbctolower(  
-   unsigned int c   
-);  
-unsigned int _mbctolower_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-unsigned int _mbctoupper(  
-   unsigned int c   
-);  
-unsigned int _mbctoupper_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `c`  
- 변환할 멀티바이트 문자입니다.  
-  
- `locale`  
- 사용할 로캘입니다.  
-  
-## <a name="return-value"></a>반환 값  
- 가능한 경우 이러한 각 함수는 변환된 문자 `c`를 반환합니다. 그렇지 않으면 변환되지 않은 `c` 문자를 반환합니다.  
-  
-## <a name="remarks"></a>설명  
- 함수는 문자`c`를 테스트하고 가능한 경우 다음 변환 중 하나를 적용합니다.  
-  
-|루틴|변환|  
-|--------------|--------------|  
-|`_mbctolower,_mbctolower_l`|대문자를 소문자로|  
-|`_mbctoupper,_mbctoupper_l`|소문자를 대문자로|  
-  
- 출력값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하고 `_l` 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용한다는 점을 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
-  
- 이전 버전에서는 `_mbctolower` 호출한 `jtolower`, 및 `_mbctoupper` 호출한 `jtoupper`합니다. 새 코드의 경우에는 새 이름을 대신 사용하십시오.  
-  
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
-  
-|Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_totlower`|`tolower`|`_mbctolower`|`towlower`|  
-|`_totlower_l`|`_tolower_l`|`_mbctolower_l`|`_towlower_t`|  
-|`_totupper`|`toupper`|`_mbctoupper`|`towupper`|  
-|`_totupper_l`|`toupper_l`|`_mbctoupper_l`|`_towupper_l`|  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴|필수 헤더|  
-|--------------|---------------------|  
-|`_mbctolower,_mbctolower_l`|\<mbstring.h>|  
-|`_mbctoupper,_mbctoupper_l`|\<mbstring.h>|  
-  
- 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- [데이터 변환](../../c-runtime-library/data-conversion.md)   
- [_mbbtombc, _mbbtombc_l](../../c-runtime-library/reference/mbbtombc-mbbtombc-l.md)   
- [_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l](../../c-runtime-library/reference/mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)   
- [_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l](../../c-runtime-library/reference/mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)   
- [_mbctombb, _mbctombb_l](../../c-runtime-library/reference/mbctombb-mbctombb-l.md)
+> 이 API는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
+
+## <a name="syntax"></a>구문
+
+```C
+unsigned int _mbctolower(
+   unsigned int c
+);
+unsigned int _mbctolower_l(
+   unsigned int c,
+   _locale_t locale
+);
+unsigned int _mbctoupper(
+   unsigned int c
+);
+unsigned int _mbctoupper_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*c*<br/>
+변환할 멀티바이트 문자입니다.
+
+*locale*<br/>
+사용할 로캘입니다.
+
+## <a name="return-value"></a>반환 값
+
+변환 된 문자를 반환 하는 이러한 각 함수 *c*, 가능한 경우. 문자를 반환 하지 않으면 *c* 변경 되지 않습니다.
+
+## <a name="remarks"></a>설명
+
+함수는 문자를 테스트 *c* 고 가능한 경우 다음 변환 중 하나를 적용 합니다.
+
+|루틴|변환|
+|--------------|--------------|
+|**_mbctolower**, **_mbctolower_l**|대문자를 소문자로|
+|**_mbctoupper**, **_mbctoupper_l**|소문자를 대문자로|
+
+출력 값은의 설정에 영향을 **LC_CTYPE** 로캘 범주 설정; 참조 [setlocale](setlocale-wsetlocale.md) 자세한 정보에 대 한 합니다. 없이이 함수의 버전은는 **_l** 접미사가 로캘 종속 동작에 대 한 현재 로캘을 사용 하 여 버전으로는 **_l** 로캘 매개 변수를 사용 하 여 접미사는 동일 대신에 전달 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+
+이전 버전에서는 **_mbctolower** 호출한 **jtolower**, 및 **_mbctoupper** 호출한 **jtoupper**합니다. 새 코드의 경우에는 새 이름을 대신 사용하십시오.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
+
+|Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_totlower**|**tolower**|**_mbctolower**|**towlower**|
+|**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_t**|
+|**_totupper**|**toupper**|**_mbctoupper**|**towupper**|
+|**_totupper_l**|**toupper_l**|**_mbctoupper_l**|**_towupper_l**|
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|--------------|---------------------|
+|**_mbctolower**, **_mbctolower_l**|\<mbstring.h>|
+|**_mbctoupper**, **_mbctoupper_l**|\<mbstring.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="see-also"></a>참고자료
+
+[데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
+[_mbbtombc, _mbbtombc_l](mbbtombc-mbbtombc-l.md)<br/>
+[_mbcjistojms, _mbcjistojms_l, _mbcjmstojis, _mbcjmstojis_l](mbcjistojms-mbcjistojms-l-mbcjmstojis-mbcjmstojis-l.md)<br/>
+[_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l](mbctohira-mbctohira-l-mbctokata-mbctokata-l.md)<br/>
+[_mbctombb, _mbctombb_l](mbctombb-mbctombb-l.md)<br/>

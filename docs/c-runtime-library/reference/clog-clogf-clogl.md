@@ -1,13 +1,13 @@
 ---
-title: "clog, clogf, clogl | Microsoft 문서"
-ms.custom: 
+title: clog, clogf, clogl | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - clog
@@ -40,71 +40,76 @@ helpviewer_keywords:
 - clogf function
 - clogl function
 ms.assetid: 870b9b0b-6618-46f3-bfcf-da595cbd5e18
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 045eaee50f988e5712fd23845bd91db68c75ba65
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7d0f27af3c63b4f3dd43caae6b628b184f8c872a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="clog-clogf-clogl"></a>clog, clogf, clogl
-음의 실수 축을 따라 분기를 사용하여 복소수의 자연 로그를 검색합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-_Dcomplex clog(   
-   _Dcomplex z   
-);  
-_Fcomplex clog(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex clog(   
-   _Lcomplex z   
-);  // C++ only  
-_Fcomplex clogf(   
-   _Fcomplex z   
-);  
-_Lcomplex clogl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `z`  
- 로그의 밑입니다.  
-  
-## <a name="return-value"></a>반환 값  
- `z`의 자연 로그입니다. 결과 실제 축을 따라 및 간격에서 경계 수 없습니다. [-iπ, + iπ] 허수 축을 따라 합니다.  
-  
- 가능한 반환 값은 다음과 같습니다.  
-  
-|z 매개 변수|반환 값|  
-|-----------------|------------------|  
-|양수|z의 밑이 10인 로그|  
-|0|- ∞|  
-|음수|NaN|  
-|NaN|NaN|  
-|+ ∞|+ ∞|  
-  
-## <a name="remarks"></a>설명  
- C++에서는 오버로드를 허용하므로 `clog` 및 `_Fcomplex` 값을 사용 및 반환하는 `_Lcomplex`의 오버로드를 호출할 수 있습니다. C 프로그램에서 `clog` 는 항상 `_Dcomplex` 값을 사용 및 반환합니다.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|C 헤더|C++ 헤더|  
-|-------------|--------------|------------------|  
-|`clog`,               `clogf`, `clogl`|\<complex.h>|\<ccomplex>|  
-  
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- [사전순 함수 참조](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [cexp, cexpf, cexpl](../../c-runtime-library/reference/cexp-cexpf-cexpl.md)   
- [cpow, cpowf, cpowl](../../c-runtime-library/reference/cpow-cpowf-cpowl.md)   
- [clog10, clog10f, clog10l](../../c-runtime-library/reference/clog10-clog10f-clog10l.md)
+
+음의 실수 축을 따라 분기를 사용하여 복소수의 자연 로그를 검색합니다.
+
+## <a name="syntax"></a>구문
+
+```C
+_Dcomplex clog(
+   _Dcomplex z
+);
+_Fcomplex clog(
+   _Fcomplex z
+);  // C++ only
+_Lcomplex clog(
+   _Lcomplex z
+);  // C++ only
+_Fcomplex clogf(
+   _Fcomplex z
+);
+_Lcomplex clogl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*z*<br/>
+로그의 밑입니다.
+
+## <a name="return-value"></a>반환 값
+
+자연 로그 *z*합니다. 결과 실제 축을 따라 및 간격에서 경계 수 없습니다. [-iπ, + iπ] 허수 축을 따라 합니다.
+
+가능한 반환 값은 다음과 같습니다.
+
+|z 매개 변수|반환 값|
+|-----------------|------------------|
+|양수|z의 밑이 10인 로그|
+|0|- ∞|
+|음수|NaN|
+|NaN|NaN|
+|+ ∞|+ ∞|
+
+## <a name="remarks"></a>설명
+
+C + +는 오버 로딩을 허용 하기 때문에 오버 로드를 호출할 수 있습니다 **clog** 사용 하 고 반환 **_Fcomplex** 및 **_Lcomplex** 값입니다. C 프로그램에서 **clog** 항상 사용 하 고 반환 된 **_Dcomplex** 값입니다.
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|C 헤더|C++ 헤더|
+|-------------|--------------|------------------|
+|**clog**, **clogf**, **clogl**|\<complex.h>|\<ccomplex>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="see-also"></a>참고자료
+
+[사전순 함수 참조](crt-alphabetical-function-reference.md)<br/>
+[cexp, cexpf, cexpl](cexp-cexpf-cexpl.md)<br/>
+[cpow, cpowf, cpowl](cpow-cpowf-cpowl.md)<br/>
+[clog10, clog10f, clog10l](clog10-clog10f-clog10l.md)<br/>

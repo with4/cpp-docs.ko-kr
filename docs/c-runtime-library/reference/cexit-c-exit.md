@@ -1,12 +1,12 @@
 ---
-title: "_cexit, _c_exit | Microsoft 문서"
-ms.custom: 
+title: _cexit, _c_exit | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _c_exit
@@ -38,59 +38,62 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 825ed933d5a164fd6a07f13319d30fdf97a928e1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3b4310ac5c0bac6853da23f7f491a757a7014ebe
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cexit-cexit"></a>_cexit, _c_exit
-정리 작업을 수행하고 프로세스 종료 없이 반환합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-void _cexit( void );  
-void _c_exit( void );  
-```  
-  
-## <a name="remarks"></a>설명  
- `_cexit` 함수는 `atexit` 및 `_onexit`를 통해 등록된 함수를 LIFO(후입선출) 순서로 호출합니다. 그런 다음, `_cexit`는 반환하기 전에 모든 I/O 버퍼를 플러시하고 열려 있는 모든 스트림을 닫습니다. `_c_exit`는 `_exit`와 동일하지만, `atexit` 또는 `_onexit`를 처리하지 않거나 스트림 버퍼를 플러시하지 않고 호출 프로세스로 반환합니다. `exit`,`_exit`, `_cexit` 및 `_c_exit`의 동작은 다음 표에 나와 있습니다.  
-  
-|함수|동작|  
-|--------------|--------------|  
-|`exit`|전체 C 라이브러리 종료 절차를 수행하고, 프로세스를 종료하고, 제공된 상태 코드와 함께 종료됩니다.|  
-|`_exit`|빠른 C 라이브러리 종료 절차를 수행하고, 프로세스를 종료하고, 제공된 상태 코드와 함께 종료됩니다.|  
-|`_cexit`|전체 C 라이브러리 종료 절차를 수행하고 호출자에게 반환하지만, 프로세스를 종료하지 않습니다.|  
-|`_c_exit`|빠른 C 라이브러리 종료 절차를 수행하고 호출자에게 반환하지만, 프로세스를 종료하지 않습니다.|  
-  
- `_cexit` 또는 `_c_exit` 함수를 호출하는 경우 호출 당시에 존재하는 임시 또는 자동 개체에 대한 소멸자가 호출되지 않습니다. 자동 개체는 개체가 정적으로 선언되지 않은 함수에서 정의된 개체입니다. 임시 개체는 컴파일러에 의해 생성된 개체입니다. `_cexit` 또는 `_c_exit`를 호출하기 전에 자동 개체를 삭제하려면 다음과 같이 개체에 대한 소멸자를 명시적으로 호출합니다.  
-  
-```  
-myObject.myClass::~myClass( );  
-```  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`_cexit`|\<process.h>|  
-|`_c_exit`|\<process.h>|  
-  
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- [프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [atexit](../../c-runtime-library/reference/atexit.md)   
- [_exec, _wexec 함수](../../c-runtime-library/exec-wexec-functions.md)   
- [exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)   
- [_onexit, _onexit_m](../../c-runtime-library/reference/onexit-onexit-m.md)   
- [_spawn, _wspawn 함수](../../c-runtime-library/spawn-wspawn-functions.md)   
- [system, _wsystem](../../c-runtime-library/reference/system-wsystem.md)
+
+정리 작업을 수행하고 프로세스 종료 없이 반환합니다.
+
+## <a name="syntax"></a>구문
+
+```C
+void _cexit( void );
+void _c_exit( void );
+```
+
+## <a name="remarks"></a>설명
+
+**_cexit** 함수 방식으로, lifo (후입선출) 순서, 통해 등록 된 함수 호출 **atexit** 및 **_onexit**합니다. 그런 다음 **_cexit** 모든 I/O 버퍼를 플러시하고 반환 하기 전에 열려 있는 모든 스트림을 닫습니다. **_c_exit** 동일 **_exit** 를 처리 하지 않고 호출 프로세스에 반환 되지만 **atexit** 또는 **_onexit** 스트림 버퍼를 플러시하지 또는 합니다. 동작 **종료**, **_exit**, **_cexit**, 및 **_c_exit** 다음 표에 표시 됩니다.
+
+|함수|동작|
+|--------------|--------------|
+|**exit**|전체 C 라이브러리 종료 절차를 수행하고, 프로세스를 종료하고, 제공된 상태 코드와 함께 종료됩니다.|
+|**_exit**|빠른 C 라이브러리 종료 절차를 수행하고, 프로세스를 종료하고, 제공된 상태 코드와 함께 종료됩니다.|
+|**_cexit**|전체 C 라이브러리 종료 절차를 수행하고 호출자에게 반환하지만, 프로세스를 종료하지 않습니다.|
+|**_c_exit**|빠른 C 라이브러리 종료 절차를 수행하고 호출자에게 반환하지만, 프로세스를 종료하지 않습니다.|
+
+호출 하는 경우는 **_cexit** 또는 **_c_exit** 함수 호출의 시간에 존재 하는 임시 또는 자동 개체에 대 한 소멸자가 호출 되지 않습니다. 자동 개체는 개체가 정적으로 선언되지 않은 함수에서 정의된 개체입니다. 임시 개체는 컴파일러에 의해 생성된 개체입니다. 호출 하기 전에 자동 개체를 삭제 하려면 **_cexit** 또는 **_c_exit**, 명시적으로 다음과 같이 개체 소멸자를 호출 합니다.
+
+```cpp
+myObject.myClass::~myClass( );
+```
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**_cexit**|\<process.h>|
+|**_c_exit**|\<process.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="see-also"></a>참고자료
+
+[프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)<br/>
+[abort](abort.md)<br/>
+[atexit](atexit.md)<br/>
+[_exec, _wexec 함수](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[exit, _Exit, _exit](exit-exit-exit.md)<br/>
+[_onexit, _onexit_m](onexit-onexit-m.md)<br/>
+[_spawn, _wspawn 함수](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[system, _wsystem](system-wsystem.md)<br/>

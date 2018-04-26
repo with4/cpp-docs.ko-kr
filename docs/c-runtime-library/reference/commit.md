@@ -1,12 +1,12 @@
 ---
-title: "_commit | Microsoft 문서"
-ms.custom: 
+title: _commit | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _commit
@@ -35,52 +35,57 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed5a3f1e8d1f4a122ecf5a66393fa5c1f5c65f1b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 9396fd502f5137b469c9f92110bfc23c9d2fb246
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="commit"></a>_commit
-디스크에 직접 파일을 플러시합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-int _commit(   
-   int fd   
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `fd`  
- 열려 있는 파일을 참조하는 파일 설명자입니다.  
-  
-## <a name="return-value"></a>반환 값  
- `_commit`는 파일이 디스크에 플러시되면 0을 반환합니다. 반환 값-1의 오류를 나타냅니다.  
-  
-## <a name="remarks"></a>설명  
- `_commit` 함수는 운영 체제에서 `fd`와 연결된 파일을 디스크에 기록하도록 강제합니다. 이 호출은 지정된 파일이 운영 체제의 결정을 따르지 않고 즉시 플러시되도록 합니다.  
-  
- `fd`가 잘못된 파일 설명자인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속 실행하도록 허용된 경우 함수는 -1을 반환하고 `errno`는 `EBADF`로 설정됩니다.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
-|-------------|---------------------|----------------------|  
-|`_commit`|\<io.h>|\<errno.h>|  
-  
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- [하위 수준 I/O](../../c-runtime-library/low-level-i-o.md)   
- [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
- [_read](../../c-runtime-library/reference/read.md)   
- [_write](../../c-runtime-library/reference/write.md)
+
+디스크에 직접 파일을 플러시합니다.
+
+## <a name="syntax"></a>구문
+
+```C
+int _commit(
+   int fd
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*fd*<br/>
+열려 있는 파일을 참조하는 파일 설명자입니다.
+
+## <a name="return-value"></a>반환 값
+
+**_commit** 파일이 성공적으로 되었으면 0을 반환 합니다. 디스크에 플러시된 합니다. 반환 값-1의 오류를 나타냅니다.
+
+## <a name="remarks"></a>설명
+
+**_commit** 함수 운영 체제와 관련 된 파일에 쓰기를 강제로 *fd* 디스크에 있습니다. 이 호출은 지정된 파일이 운영 체제의 결정을 따르지 않고 즉시 플러시되도록 합니다.
+
+경우 *fd* 된 잘못 된 파일 설명자는에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 함수 실행을 계속 허용 된,-1을 반환 하 고 **errno** 로 설정 된 **EBADF**합니다.
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|선택적 헤더|
+|-------------|---------------------|----------------------|
+|**_commit**|\<io.h>|\<errno.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="see-also"></a>참고자료
+
+[하위 수준 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[_read](read.md)<br/>
+[_write](write.md)<br/>

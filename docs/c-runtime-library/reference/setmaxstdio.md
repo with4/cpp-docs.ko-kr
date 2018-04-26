@@ -1,12 +1,12 @@
 ---
 title: _setmaxstdio | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _setmaxstdio
@@ -34,60 +34,66 @@ helpviewer_keywords:
 - setmaxstdio function
 - open files, maximum
 ms.assetid: 9e966875-9ff5-47c4-9b5f-e79e83b70249
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5317437202cef423759ac850aab2360892521746
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0c0f54f43b0abb5fff2d13233847b45acdb5f0be
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setmaxstdio"></a>_setmaxstdio
-`stdio` 수준에서 동시에 열리는 파일 수의 최대값을 설정합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-int _setmaxstdio(  
-   int newmax   
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `newmax`  
- `stdio` 수준에서 동시에 열리는 파일 수의 새 최대값입니다.  
-  
-## <a name="return-value"></a>반환 값  
- 반환 `newmax` 성공 하면 그렇지 않으면-1입니다.  
-  
- `newmax`가 `_IOB_ENTRIES`보다 작거나 운영 체제에서 사용 가능한 최대 핸들 수보다 많으면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 이 함수는 -1을 반환하고 `errno`를 `EINVAL`로 설정합니다.  
-  
- 이 오류 및 다른 오류 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
-  
-## <a name="remarks"></a>설명  
- `_setmaxstdio` 함수는 `stdio` 수준에서 동시에 열 수 있는 파일 수의 최대값을 변경합니다.  
-  
- C 런타임 I/O는 이제 이전 버전에 비해 Win32 플랫폼에서 훨씬 더 많은 파일을 열 수 있도록 지원합니다. [lowio 수준](../../c-runtime-library/low-level-i-o.md)에서는 최대 2,048개의 파일을 동시에 열 수 있습니다. 즉, `_open`, `_read`, `_write` 등의 I/O 함수 패밀리를 통해 이 수만큼의 파일을 열고 액세스할 수 있습니다. [stdio 수준](../../c-runtime-library/stream-i-o.md)에서는 최대 512개의 파일을 동시에 열 수 있습니다. 즉, `fopen`, `fgetc`, `fputc` 등의 함수 패밀리를 통해 이 수만큼의 파일을 열고 액세스할 수 있습니다. `_setmaxstdio` 함수를 사용하면 `stdio` 수준에서 열 수 있는 파일 수에 대한 제한(512개)을 최대 2,048개까지 늘릴 수 있습니다.  
-  
- `fopen`과 같은 `stdio` 수준 함수는 `lowio` 함수를 기반으로 작성되므로 최대값 2,048은 C 런타임 라이브러리를 통해 액세스하는 동시에 열 수 있는 파일 수에 대한 하드 상한입니다.  
-  
+
+동시에 열리는 파일 수에 대 한 최대 설정한는 **stdio** 수준입니다.
+
+## <a name="syntax"></a>구문
+
+```C
+int _setmaxstdio(
+   int newmax
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*newmax*<br/>
+동시에 열리는 파일 수에 대 한 새 최대값은 **stdio** 수준입니다.
+
+## <a name="return-value"></a>반환 값
+
+반환 *newmax* 성공 하면 그렇지 않으면-1입니다.
+
+경우 *newmax* 는 보다 작은 **_IOB_ENTRIES** 에 설명 된 대로 잘못 된 매개 변수 처리기 운영 체제에서 사용할 수 있는 핸들의 최대 수는 호출 다음에 큰 [ 매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 이 함수는-1 반환 하 고 집합을 계속 하려면 실행 허용 된 경우 **errno** 를 **EINVAL**합니다.
+
+이 오류 및 다른 오류 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
+
+## <a name="remarks"></a>설명
+
+**_setmaxstdio** 에서 동시에 열려 있는 파일 수에 대 한 최대 값을 변경 하는 함수는 **stdio** 수준입니다.
+
+C 런타임 I/O는 이제 이전 버전에 비해 Win32 플랫폼에서 훨씬 더 많은 파일을 열 수 있도록 지원합니다. 최대 2, 048 파일에 동시에 열 수는 [lowio 수준](../../c-runtime-library/low-level-i-o.md) (즉, 열리고 통해는 **열기 (_o)**, **읽기 (_r)**, **_write**, I/O 함수 패밀리 등). 최대 512 파일에 동시에 열 수는 [stdio 수준](../../c-runtime-library/stream-i-o.md) (즉, 열리고 통해는 **fopen**, **fgetc**, **fputc** 을 함수 패밀리 등). 열려 있는 파일에 512의 한계는 **stdio** 최대 2, 048 방법으로 수준을 올릴 수는 **_setmaxstdio** 함수입니다.
+
+때문에 **stdio**-와 같은 함수 수준 **fopen**, 맨 위에 빌드됩니다는 **lowio** 함수, 2, 048의 최대는 하드 상한값이 수에 대 한 동시에 C 런타임 라이브러리를 통해 액세스 되는 파일을 엽니다.
+
 > [!NOTE]
->  이 상한은 특정 Win32 플랫폼 및 구성에서 지원하는 수를 초과할 수 있습니다.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`_setmaxstdio`|\<stdio.h>|  
-  
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
-  
-## <a name="example"></a>예  
- `_setmaxstdio`를 사용하는 예제는 [_getmaxstdio](../../c-runtime-library/reference/getmaxstdio.md)를 참조하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- [스트림 I/O](../../c-runtime-library/stream-i-o.md)
+> 이 상한은 특정 Win32 플랫폼 및 구성에서 지원하는 수를 초과할 수 있습니다.
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**_setmaxstdio**|\<stdio.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="example"></a>예제
+
+참조 [_getmaxstdio](getmaxstdio.md) 사용 하는 예제에 대 한 **_setmaxstdio**합니다.
+
+## <a name="see-also"></a>참고자료
+
+[스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>

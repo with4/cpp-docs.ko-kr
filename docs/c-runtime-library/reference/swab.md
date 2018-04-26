@@ -1,12 +1,12 @@
 ---
 title: _swab | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _swab
@@ -35,81 +35,85 @@ helpviewer_keywords:
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01f23047436b7ff8cee16b42cc6ae0d8c2a9fd78
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1ab841400bd002595508806797a9a204415b5f15
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="swab"></a>_swab
-바이트를 교환합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-void _swab(  
-   char *src,  
-   char *dest,  
-   int n   
-);  
-```  
-  
-## <a name="parameters"></a>매개 변수  
- `src`  
- 복사하고 교환할 데이터입니다.  
-  
- `dest`  
- 교환된 데이터에 대한 저장소 위치입니다.  
-  
- `n`  
- 복사되고 교환될 바이트 수입니다.  
-  
+
+바이트를 교환합니다.
+
+## <a name="syntax"></a>구문
+
+```C
+void _swab(
+   char *src,
+   char *dest,
+   int n
+);
+```
+
+## <a name="parameters"></a>매개 변수
+
+*src* 데이터를 복사 하 고 교환 합니다.
+
+*dest* 교환 된 데이터에 대 한 저장소 위치입니다.
+
+*n* 바이트 복사 하 고 교환할 수입니다.
+
 ## <a name="return-value"></a>반환 값
- `swab` 함수는 값을 반환하지 않습니다. `src` 또는 `dest` 포인터가 null이거나 `n`이 0보다 작으면 이 함수는 `errno`를 `EINVAL`로 설정하며, [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다.  
-  
- 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
- 
-## <a name="remarks"></a>설명  
- `n`이 짝수인 경우 `_swab` 함수는 `n`에서 `src`바이트를 복사하고, 인접한 각 바이트 쌍을 교환하고, 결과를 `dest`에 저장합니다. `n`이 홀수인 경우 `_swab`은 `src`의 첫 `n-1`바이트를 복사 및 교환하며 마지막 바이트는 복사되지 않습니다. `_swab` 함수는 일반적으로 다른 바이트 순서를 사용하는 컴퓨터에 전송할 이진 데이터를 준비하는 데 사용됩니다.  
-  
-## <a name="requirements"></a>요구 사항  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`_swab`|C: \<stdlib.h> C++: \<cstdlib> 또는 \<stdlib.h>|  
-  
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
-  
-## <a name="example"></a>예  
-```C 
-// crt_swab.c  
-  
-#include <stdlib.h>  
-#include <stdio.h>  
-  
-char from[] = "BADCFEHGJILKNMPORQTSVUXWZY";  
-char to[] =   "...........................";  
-  
-int main()  
-{  
-    printf("Before: %s  %d bytes\n        %s\n\n", from, sizeof(from), to);  
-    _swab(from, to, sizeof(from));  
-    printf("After:  %s\n        %s\n\n", from, to);  
-}  
-```  
-  
-```Output  
-Before: BADCFEHGJILKNMPORQTSVUXWZY  27 bytes  
-        ...........................  
-  
-After:  BADCFEHGJILKNMPORQTSVUXWZY  
-        ABCDEFGHIJKLMNOPQRSTUVWXYZ.  
-```  
-  
-## <a name="see-also"></a>참고 항목  
- [버퍼 조작](../../c-runtime-library/buffer-manipulation.md)
+
+**swab** 함수 값을 반환 하지 않습니다. 함수 집합 **errno** 를 **EINVAL** 경우는 *src* 또는 *dest* 포인터가 null이 또는 *n* 작습니다 0이 고 잘못 된 매개 변수 보다 처리기가 호출에 설명 된 대로 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다.
+
+이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
+
+## <a name="remarks"></a>설명
+
+경우 *n* ,는 **_swab** 복사본 함수 *n* 바이트 *src*, 인접 한 바이트의 각 쌍을 교환 하 고 에서결과저장*dest*합니다. 경우 *n* 홀수 이면 **_swab** 복사 하 고 첫 번째 교환 *n*-1 바이트의 *src*, 마지막 바이트 복사 되지 않습니다. **_swab** 함수는 일반적으로 다른 바이트 순서를 사용 하는 컴퓨터에 전송할 이진 데이터를 준비 하는 데 사용 됩니다.
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**_swab**|C: \<stdlib.h> C++: \<cstdlib> 또는 \<stdlib.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="example"></a>예제
+
+```C
+// crt_swab.c
+
+#include <stdlib.h>
+#include <stdio.h>
+
+char from[] = "BADCFEHGJILKNMPORQTSVUXWZY";
+char to[] =   "...........................";
+
+int main()
+{
+    printf("Before: %s  %d bytes\n        %s\n\n", from, sizeof(from), to);
+    _swab(from, to, sizeof(from));
+    printf("After:  %s\n        %s\n\n", from, to);
+}
+```
+
+```Output
+Before: BADCFEHGJILKNMPORQTSVUXWZY  27 bytes
+        ...........................
+
+After:  BADCFEHGJILKNMPORQTSVUXWZY
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ.
+```
+
+## <a name="see-also"></a>참고자료
+
+[버퍼 조작](../../c-runtime-library/buffer-manipulation.md)<br/>

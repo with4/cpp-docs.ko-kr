@@ -1,12 +1,12 @@
 ---
 title: unexpected(CRT) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - unexpected
@@ -29,42 +29,45 @@ dev_langs:
 helpviewer_keywords:
 - unexpected function
 ms.assetid: 2f873763-15ad-4556-a924-dcf28f2b52b4
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b86200fc9501b9a543bae3ebc19f5069e49859bb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3fce88dd7b2fdb821fc015130d25e54701c3e467
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="unexpected-crt"></a>unexpected(CRT)
-`terminate`를 사용하여 `set_unexpected` 또는 사용자가 지정하는 함수를 호출합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-void unexpected( void );  
-```  
-  
-## <a name="remarks"></a>설명  
- `unexpected` 루틴은 C++ 예외 처리의 현재 구현과 함께 사용되지 않습니다. `unexpected`는 기본적으로 `terminate`를 호출합니다. 사용자는 사용자 지정 종료 함수를 작성하고 함수 이름과 함께 `set_unexpected`를 해당 인수로 호출하여 이 기본 동작을 변경할 수 있습니다. `unexpected`는 `set_unexpected`에 대한 인수로 지정된 마지막 함수를 호출합니다.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`unexpected`|\<eh.h>|  
-  
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
-  
-## <a name="see-also"></a>참고 항목  
- [예외 처리 루틴](../../c-runtime-library/exception-handling-routines.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)   
- [set_terminate](../../c-runtime-library/reference/set-terminate-crt.md)   
- [set_unexpected](../../c-runtime-library/reference/set-unexpected-crt.md)   
- [terminate](../../c-runtime-library/reference/terminate-crt.md)
+
+호출 **종료** 또는 함수를 사용 하 여 지정 **set_unexpected**합니다.
+
+## <a name="syntax"></a>구문
+
+```C
+void unexpected( void );
+```
+
+## <a name="remarks"></a>설명
+
+**예기치 않은** 루틴 c + + 예외 처리의 현재 구현과 함께 사용 되지 않습니다. **예기치 않은** 호출 **종료** 기본적으로 합니다. 사용자 지정 종료 함수를 작성 하 고 호출 하 여이 기본 동작을 변경할 수 있습니다 **set_unexpected** 의 인수로 서 함수 이름으로 합니다. **예기치 않은** 에 대 한 인수로 주어진 마지막 함수를 호출 **set_unexpected**합니다.
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**unexpected**|\<eh.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="see-also"></a>참고자료
+
+[예외 처리 루틴](../../c-runtime-library/exception-handling-routines.md)<br/>
+[abort](abort.md)<br/>
+[_set_se_translator](set-se-translator.md)<br/>
+[set_terminate](set-terminate-crt.md)<br/>
+[set_unexpected](set-unexpected-crt.md)<br/>
+[terminate](terminate-crt.md)<br/>

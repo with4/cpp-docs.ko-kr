@@ -1,12 +1,12 @@
 ---
-title: "expm1, expm1f, expm1l | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: expm1, expm1f, expm1l | Microsoft 문서
+ms.custom: ''
+ms.date: 04/05/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - expm1l
@@ -36,60 +36,65 @@ helpviewer_keywords:
 - expm1l function
 - expm1 function
 ms.assetid: 2a4dd2d9-370c-42b0-9067-0625efa272e0
-caps.latest.revision: 
+caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85fc89810e37236b4e7e4844931393395f51426d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ba382fb29b5ec841d9acd127ad5f48e0ca7b68fa
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="expm1-expm1f-expm1l"></a>expm1, expm1f, expm1l
-값의 밑이 e인 지수 - 1을 계산합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-double expm1(   
-   double x   
-);  
-float expm1(  
-   float x  
-);  // C++ only  
-long double expm1(  
-   long double x  
-);  // C++ only  
-float expm1f(  
-   float x  
-);  
-long double expm1l(  
-   long double x  
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `x`  
- 부동 소수점 지수 값입니다.  
-  
-## <a name="return-value"></a>반환 값  
- `expm1` 함수 e를 나타내는 부동 소수점 값을 반환<sup>x</sup> -1, 성공 하는 경우. 오버플로에서 `expm1`은 `HUGE_VAL`을 반환하고, `expm1f`는 `HUGE_VALF`를 반환하고, `expm1l`은 `HUGE_VALL`을 반환하고, `errno`는 `ERANGE`로 설정됩니다. 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
-  
-## <a name="remarks"></a>설명  
- C++에서는 오버로드를 허용하므로 `expm1` 및 `float` 값을 사용 및 반환하는 `long double`의 오버로드를 호출할 수 있습니다. C 프로그램에서 `expm1`는 항상 `double`을 사용 및 반환합니다.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`expm1`, `expm1f`, `expm1l`|\<math.h>|  
-  
- 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)   
- [exp2, exp2f, exp2l](exp2-exp2f-exp2l.md)   
- [pow, powf, powl](../../c-runtime-library/reference/pow-powf-powl.md)
+
+값의 밑이 e인 지수 - 1을 계산합니다.
+
+## <a name="syntax"></a>구문
+
+```C
+double expm1(
+   double x
+);
+float expm1(
+   float x
+);  // C++ only
+long double expm1(
+   long double x
+);  // C++ only
+float expm1f(
+   float x
+);
+long double expm1l(
+   long double x
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*x*<br/>
+부동 소수점 지수 값입니다.
+
+## <a name="return-value"></a>반환 값
+
+**expm1** 함수 e를 나타내는 부동 소수점 값을 반환<sup>x</sup> -1, 성공 하는 경우. 오버플로에서 **expm1** 반환 **HUGE_VAL**, **expm1f** 반환 **HUGE_VALF**, **expm1l** 반환 **HUGE_VALL**, 및 **errno** 로 설정 된 **ERANGE**합니다. 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
+
+## <a name="remarks"></a>설명
+
+C + +는 오버 로딩을 허용 하기 때문에 오버 로드를 호출할 수 있습니다 **expm1** 사용 하 고 반환 **float** 및 **긴** **double** 값입니다. C 프로그램에서 **expm1** 항상 사용 하 고 반환 된 **double**합니다.
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**expm1**, **expm1f**, **expm1l**|\<math.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="see-also"></a>참고자료
+
+[부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
+[exp2, exp2f, exp2l](exp2-exp2f-exp2l.md)<br/>
+[pow, powf, powl](pow-powf-powl.md)<br/>

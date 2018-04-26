@@ -40,103 +40,111 @@ helpviewer_keywords:
 - gets_s function
 - standard input, reading from
 ms.assetid: 5880c36f-122c-4061-a1a5-aeeced6fe58c
-caps.latest.revision: ''
+caps.latest.revision: 29
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1596c7598565fe098313ab0fc65a2a3f3982afd2
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: efd4e458fa71fd6dcd93d47350c998a4a410cc65
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getss-getwss"></a>gets_s, _getws_s
-`stdin` 스트림에서 줄을 가져옵니다. 이러한 버전의 [gets, _getws](../../c-runtime-library/gets-getws.md)에는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 포함되어 있습니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-char *gets_s(   
-   char *buffer,  
-   size_t sizeInCharacters  
-);  
-wchar_t *_getws_s(   
-   wchar_t *buffer,  
-   size_t sizeInCharacters  
-);  
-template <size_t size>  
-char *gets_s(   
-   char (&buffer)[size]  
-); // C++ only  
-template <size_t size>  
-wchar_t *_getws_s(   
-   wchar_t (&buffer)[size]  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- [out] `buffer`  
- 입력 문자열에 대한 저장소 위치입니다.  
-  
- [in] `sizeInCharacters`  
- 버퍼의 크기입니다.  
-  
-## <a name="return-value"></a>반환 값  
- 성공하는 경우 `buffer`가 반환됩니다. `NULL` 포인터는 오류 또는 파일 끝 조건을 나타냅니다. 어떤 것이 발생했는지 확인하려면 [ferror](../../c-runtime-library/reference/ferror.md) 또는 [feof](../../c-runtime-library/reference/feof.md)를 사용합니다.  
-  
-## <a name="remarks"></a>설명  
- `gets_s` 함수는 표준 입력 스트림 `stdin`에서 줄을 읽고 `buffer`에 저장합니다. 줄은 첫 번째 줄 바꿈 문자('\n')까지 모든 문자로 구성됩니다. `gets_s`는 줄을 반환하기 전에 줄 바꿈 문자를 null 문자('\0')로 대체합니다. 반대로 `fgets_s` 함수는 줄 바꿈 문자를 유지합니다.  
-  
- 첫 번째 문자 읽기가 파일 끝 문자인 경우 `buffer`의 시작 부분에 null 문자가 저장되고 `NULL`이 반환됩니다.  
-  
- `_getws_s`는 `gets_s`의 와이드 문자 버전입니다. 해당 인수 및 반환 값은 와이드 문자열입니다.  
-  
- `buffer`가 `NULL`이거나 `sizeInCharacters`가 0보다 작거나 같은 경우 도는 버퍼가 너무 작아 입력 줄과 null 종료자를 포함할 수 없는 경우, 이러한 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 호출자를 호출합니다. 계속해서 실행하도록 허용된 경우 이러한 함수는 `NULL`을 반환하고 errno를 `ERANGE`로 설정합니다.  
-  
- C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
-  
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
-  
-|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_getts_s`|`gets_s`|`gets_s`|`_getws_s`|  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴|필수 헤더|  
-|-------------|---------------------|  
-|`gets_s`|\<stdio.h>|  
-|`_getws_s`|\<stdio.h> 또는 \<wchar.h>|  
-  
-콘솔 유니버설 Windows 플랫폼 (UWP) 응용 프로그램에서 지원 되지 않습니다. 콘솔을 사용 하는 연결 된 표준 스트림 핸들 `stdin`, `stdout`, 및 `stderr`, C 런타임 함수 UWP 앱에서 사용할 수 있는 전에 리디렉션되어야 합니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
-  
-## <a name="example"></a>예제  
-  
-```  
-// crt_gets_s.c  
-// This program retrieves a string from the stdin and   
-// prints the same string to the console.  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char line[21]; // room for 20 chars + '\0'  
-   gets_s( line, 20 );  
-   printf( "The line entered was: %s\n", line );  
-}  
-```  
-  
-```Output  
-  
-Hello there!The line entered was: Hello there!  
-```  
-  
-## <a name="see-also"></a>참고 항목  
- [스트림 I/O](../../c-runtime-library/stream-i-o.md)   
- [gets, _getws](../../c-runtime-library/gets-getws.md)   
- [fgets, fgetws](../../c-runtime-library/reference/fgets-fgetws.md)   
- [fputs, fputws](../../c-runtime-library/reference/fputs-fputws.md)   
- [puts, _putws](../../c-runtime-library/reference/puts-putws.md)
+
+줄을 가져옵니다는 **stdin** 스트림 합니다. 이러한 버전의 [gets, _getws](../../c-runtime-library/gets-getws.md)에는 [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 포함되어 있습니다.
+
+## <a name="syntax"></a>구문
+
+```C
+char *gets_s(
+   char *buffer,
+   size_t sizeInCharacters
+);
+wchar_t *_getws_s(
+   wchar_t *buffer,
+   size_t sizeInCharacters
+);
+```
+
+```cpp
+template <size_t size>
+char *gets_s( char (&buffer)[size] ); // C++ only
+
+template <size_t size>
+wchar_t *_getws_s( wchar_t (&buffer)[size] ); // C++ only
+```
+
+### <a name="parameters"></a>매개 변수
+
+*buffer*<br/>
+입력 문자열에 대한 저장소 위치입니다.
+
+*sizeInCharacters*<br/>
+버퍼의 크기입니다.
+
+## <a name="return-value"></a>반환 값
+
+반환 *버퍼* 성공 하는 경우. A **NULL** 포인터는 오류 또는 파일 끝 조건을 나타냅니다. 어떤 것이 발생했는지 확인하려면 [ferror](ferror.md) 또는 [feof](feof.md)를 사용합니다.
+
+## <a name="remarks"></a>설명
+
+**gets_s** 함수는 표준 입력 스트림에서 한 줄 읽고 **stdin** 저장 *버퍼*합니다. 줄은 첫 번째 줄 바꿈 문자('\n')까지 모든 문자로 구성됩니다. **gets_s** 줄을 반환 하기 전에 줄 바꿈 문자를 null 문자 ('\0')로 대체 합니다. 반면,는 **fgets_s** 함수는 줄 바꿈 문자를 유지 합니다.
+
+Null 문자 맨 앞에 저장은 읽은 첫 번째 문자는 파일의 끝 문자 이면 *버퍼* 및 **NULL** 반환 됩니다.
+
+**_getws_s** 의 와이드 문자 버전이 **gets_s**; 해당 인수 및 반환 값은 와이드 문자 문자열입니다.
+
+경우 *버퍼* 은 **NULL** 또는 *sizeInCharacters* 가 0 보다 작은 또는 버퍼가 너무 작아서 입력된 줄와 null 종결자를 포함 하는 경우 이러한 함수 호출 에 설명 된 대로 잘못 된 매개 변수 처리기는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 허용 된 경우 이러한 함수가 반환 **NULL** errno로 설정 하 고 **ERANGE**합니다.
+
+C++에서는 템플릿 오버로드로 인해 이러한 함수를 사용하는 것이 보다 간단해 집니다. 오버로드는 버퍼 길이를 자동으로 유추할 수 있으며(크기 인수를 지정할 필요가 없어짐), 기존의 비보안 함수를 보다 최신의 보안 대응 함수로 자동으로 바꿀 수 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
+
+|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_getts_s**|**gets_s**|**gets_s**|**_getws_s**|
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**gets_s**|\<stdio.h>|
+|**_getws_s**|\<stdio.h> 또는 \<wchar.h>|
+
+콘솔 유니버설 Windows 플랫폼 (UWP) 응용 프로그램에서 지원 되지 않습니다. 콘솔을 사용 하는 연결 된 표준 스트림 핸들 **stdin**, **stdout**, 및 **stderr**, C 런타임 함수 UWP 앱에서 사용할 수 있는 전에 리디렉션되어야 . 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="example"></a>예제
+
+```C
+// crt_gets_s.c
+// This program retrieves a string from the stdin and
+// prints the same string to the console.
+
+#include <stdio.h>
+
+int main( void )
+{
+   char line[21]; // room for 20 chars + '\0'
+   gets_s( line, 20 );
+   printf( "The line entered was: %s\n", line );
+}
+```
+
+```Input
+Hello there!
+```
+
+```Output
+The line entered was: Hello there!
+```
+
+## <a name="see-also"></a>참고자료
+
+[스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
+[gets, _getws](../../c-runtime-library/gets-getws.md)<br/>
+[fgets, fgetws](fgets-fgetws.md)<br/>
+[fputs, fputws](fputs-fputws.md)<br/>
+[puts, _putws](puts-putws.md)<br/>

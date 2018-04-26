@@ -1,12 +1,12 @@
 ---
-title: "버퍼링 효과 | Microsoft 문서"
-ms.custom: 
+title: 버퍼링 효과 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,46 +14,47 @@ helpviewer_keywords:
 - buffers, effects of buffering
 - buffering, effects of
 ms.assetid: 5d544812-e95e-4f28-b15a-edef3f3414fd
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 460bc234ed438a92328d49c3821079bfb688da21
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c387ce96d17e1db0dfefac6783dbdc87deeb94fb
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="effects-of-buffering"></a>버퍼링 효과
-다음 예제에서는 버퍼링 효과 보여 줍니다. 프로그램에서 `please wait`를 인쇄하고 5초 기다린 후 계속하도록 할 수 있습니다. 그러나 출력이 버퍼링되기 때문에 반드시 이런 방식으로 작동하지는 않습니다.  
-  
-```  
-// effects_buffering.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-#include <time.h>  
-using namespace std;  
-  
-int main( )  
-{  
-   time_t tm = time( NULL ) + 5;  
-   cout << "Please wait...";  
-   while ( time( NULL ) < tm )  
-      ;  
-   cout << "\nAll done" << endl;  
-}  
-```  
-  
- 프로그램이 논리적으로 작동하도록 하려면 메시지가 표시될 때 `cout` 개체 자체가 비어 있어야 합니다. `ostream` 개체를 플러시하려면 `flush` 조작자로 보냅니다.  
-  
-```  
-cout <<"Please wait..." <<flush;  
-```  
-  
- 이 단계에서는 버퍼를 플러시하여 메시지가 인쇄된 후 대기하도록 합니다. 사용할 수도 있습니다는 `endl` 조작자를 사용할 수 있습니다 또는 버퍼를 플러시하고 하 고는 캐리지 리턴-줄 바꿈, 출력 하는 `cin` 개체입니다. 이 개체는 `cerr` 또는 `clog` 개체와 함께 일반적으로 `cout` 개체에 연결됩니다. 따라서 `cin` , `cerr` 또는 `clog` 개체를 사용하면 `cout` 개체가 플러시됩니다.  
-  
-## <a name="see-also"></a>참고 항목  
- [출력 스트림](../standard-library/output-streams.md)
 
+다음 예제에서는 버퍼링 효과 보여 줍니다. 프로그램에서 `please wait`를 인쇄하고 5초 기다린 후 계속하도록 할 수 있습니다. 그러나 출력이 버퍼링되기 때문에 반드시 이런 방식으로 작동하지는 않습니다.
+
+```cpp
+// effects_buffering.cpp
+// compile with: /EHsc
+#include <iostream>
+#include <time.h>
+using namespace std;
+
+int main( )
+{
+   time_t tm = time( NULL ) + 5;
+   cout << "Please wait...";
+   while ( time( NULL ) < tm )
+      ;
+   cout << "\nAll done" << endl;
+}
+```
+
+프로그램이 논리적으로 작동하도록 하려면 메시지가 표시될 때 `cout` 개체 자체가 비어 있어야 합니다. `ostream` 개체를 플러시하려면 `flush` 조작자로 보냅니다.
+
+```cpp
+cout <<"Please wait..." <<flush;
+```
+
+이 단계에서는 버퍼를 플러시하여 메시지가 인쇄된 후 대기하도록 합니다. 사용할 수도 있습니다는 `endl` 조작자를 사용할 수 있습니다 또는 버퍼를 플러시하고 하 고는 캐리지 리턴-줄 바꿈, 출력 하는 `cin` 개체입니다. 이 개체는 `cerr` 또는 `clog` 개체와 함께 일반적으로 `cout` 개체에 연결됩니다. 따라서 `cin` , `cerr` 또는 `clog` 개체를 사용하면 `cout` 개체가 플러시됩니다.
+
+## <a name="see-also"></a>참고자료
+
+[출력 스트림](../standard-library/output-streams.md)<br/>

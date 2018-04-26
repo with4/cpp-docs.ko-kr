@@ -1,12 +1,12 @@
 ---
 title: strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - strncpy
@@ -70,232 +70,238 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-caps.latest.revision: 
+caps.latest.revision: 42
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f881508cfa72686a791dae61af44c615e72cbfdc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 219fe2a9c163da1a7653568675b9c776ecad9d66
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
-한 문자열의 문자를 다른 문자열로 복사합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)을 참조하세요.  
-  
+
+한 문자열의 문자를 다른 문자열로 복사합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)을 참조하세요.
+
 > [!IMPORTANT]
->  Windows 런타임에서 실행되는 응용 프로그램에서는 `_mbsncpy` 및 `_mbsncpy_l`을 사용할 수는 없습니다. 자세한 내용은 참조 [CRT 함수는 유니버설 Windows 플랫폼 앱에서 지원 되지 않습니다](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-char *strncpy(  
-   char *strDest,  
-   const char *strSource,  
-   size_t count   
-);  
-char *_strncpy_l(  
-   char *strDest,  
-   const char *strSource,  
-   size_t count,  
-   locale_t locale   
-);  
-wchar_t *wcsncpy(  
-   wchar_t *strDest,  
-   const wchar_t *strSource,  
-   size_t count   
-);  
-wchar_t *_wcsncpy_l(  
-   wchar_t *strDest,  
-   const wchar_t *strSource,  
-   size_t count,  
-   locale_t locale   
-);  
-unsigned char *_mbsncpy(  
-   unsigned char *strDest,  
-   const unsigned char *strSource,  
-   size_t count   
-);  
-unsigned char *_mbsncpy_l(  
-   unsigned char *strDest,  
-   const unsigned char *strSource,  
-   size_t count,  
-   _locale_t locale  
-);  
-template <size_t size>  
-char *strncpy(  
-   char (&strDest)[size],  
-   const char *strSource,  
-   size_t count   
-); // C++ only  
-template <size_t size>  
-char *_strncpy_l(  
-   char (&strDest)[size],  
-   const char *strSource,  
-   size_t count,  
-   locale_t locale   
-); // C++ only  
-template <size_t size>  
-wchar_t *wcsncpy(  
-   wchar_t (&strDest)[size],  
-   const wchar_t *strSource,  
-   size_t count   
-); // C++ only  
-template <size_t size>  
-wchar_t *_wcsncpy_l(  
-   wchar_t (&strDest)[size],  
-   const wchar_t *strSource,  
-   size_t count,  
-   locale_t locale   
-); // C++ only  
-template <size_t size>  
-unsigned char *_mbsncpy(  
-   unsigned char (&strDest)[size],  
-   const unsigned char *strSource,  
-   size_t count   
-); // C++ only  
-template <size_t size>  
-unsigned char *_mbsncpy_l(  
-   unsigned char (&strDest)[size],  
-   const unsigned char *strSource,  
-   size_t count,  
-   _locale_t locale  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `strDest`  
- 대상 문자열입니다.  
-  
- `strSource`  
- 소스 문자열입니다.  
-  
- `count`  
- 복사할 문자의 수입니다.  
-  
- `locale`  
- 사용할 로캘입니다.  
-  
-## <a name="return-value"></a>반환 값  
- `strDest`를 반환합니다. 반환 값 없음은 오류를 나타내는 데 예약되어 있습니다.  
-  
-## <a name="remarks"></a>설명  
- `strncpy` 함수는 `count`의 초기 `strSource` 문자를 `strDest`로 복사하고 `strDest`를 반환합니다. `count`가 `strSource`의 길이보다 작거나 같으면 복사된 문자열에 null 문자가 자동으로 추가되지 않습니다. `count`가 `strSource`의 길이보다 크면 대상 문자열이 `count` 길이까지 null 문자로 채워집니다. 소스 문자열과 대상 문자열이 겹치는 경우 `strncpy`의 동작이 정의되지 않습니다.  
-  
+> **_mbsncpy** 및 **_mbsncpy_l** 는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
+
+## <a name="syntax"></a>구문
+
+```C
+char *strncpy(
+   char *strDest,
+   const char *strSource,
+   size_t count
+);
+char *_strncpy_l(
+   char *strDest,
+   const char *strSource,
+   size_t count,
+   locale_t locale
+);
+wchar_t *wcsncpy(
+   wchar_t *strDest,
+   const wchar_t *strSource,
+   size_t count
+);
+wchar_t *_wcsncpy_l(
+   wchar_t *strDest,
+   const wchar_t *strSource,
+   size_t count,
+   locale_t locale
+);
+unsigned char *_mbsncpy(
+   unsigned char *strDest,
+   const unsigned char *strSource,
+   size_t count
+);
+unsigned char *_mbsncpy_l(
+   unsigned char *strDest,
+   const unsigned char *strSource,
+   size_t count,
+   _locale_t locale
+);
+template <size_t size>
+char *strncpy(
+   char (&strDest)[size],
+   const char *strSource,
+   size_t count
+); // C++ only
+template <size_t size>
+char *_strncpy_l(
+   char (&strDest)[size],
+   const char *strSource,
+   size_t count,
+   locale_t locale
+); // C++ only
+template <size_t size>
+wchar_t *wcsncpy(
+   wchar_t (&strDest)[size],
+   const wchar_t *strSource,
+   size_t count
+); // C++ only
+template <size_t size>
+wchar_t *_wcsncpy_l(
+   wchar_t (&strDest)[size],
+   const wchar_t *strSource,
+   size_t count,
+   locale_t locale
+); // C++ only
+template <size_t size>
+unsigned char *_mbsncpy(
+   unsigned char (&strDest)[size],
+   const unsigned char *strSource,
+   size_t count
+); // C++ only
+template <size_t size>
+unsigned char *_mbsncpy_l(
+   unsigned char (&strDest)[size],
+   const unsigned char *strSource,
+   size_t count,
+   _locale_t locale
+); // C++ only
+```
+
+### <a name="parameters"></a>매개 변수
+
+*strDest*<br/>
+대상 문자열입니다.
+
+*strSource*<br/>
+소스 문자열입니다.
+
+*count*<br/>
+복사할 문자의 수입니다.
+
+*locale*<br/>
+사용할 로캘입니다.
+
+## <a name="return-value"></a>반환 값
+
+반환 *strDest*합니다. 반환 값 없음은 오류를 나타내는 데 예약되어 있습니다.
+
+## <a name="remarks"></a>설명
+
+**strncpy** 함수에는 초기 복사 *count* 자의 *strSource* 를 *strDest* 반환 *strDest* . 경우 *count* 가의 길이 보다 작거나 같으면 *strSource*, null 문자는 복사한 문자열에 자동으로 추가 되지 않습니다. 경우 *count* 의 길이 보다 크면 *strSource*, 대상 문자열 길이까지 null 문자로 채워집니다 *count*합니다. 동작은 **strncpy** 소스 문자열과 대상 문자열이 겹치는 경우 정의 되지 않습니다.
+
 > [!IMPORTANT]
->  `strncpy`는 `strDest`에 공간이 충분한지 확인하지 않습니다. 이는 버퍼 오버런의 잠재적 원인이 될 수 있습니다. `count` 인수는 `strDest`의 크기가 아니라 복사되는 문자 수를 제한합니다. 다음 예제를 참조하세요. 자세한 내용은 [버퍼 오버런 방지](http://msdn.microsoft.com/library/windows/desktop/ms717795)를 참조하세요.  
-  
- `strDest` 또는 `strSource`가 `NULL` 포인터이거나 `count`가 0보다 작거나 같으면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 이러한 함수가 -1을 반환하고 `errno`를 `EINVAL`로 설정합니다.  
-  
- `wcsncpy` 및 `_mbsncpy`는 `strncpy`의 와이드 문자 및 멀티바이트 문자 버전입니다. 따라서 `wcsncpy` 및 `_mbsncpy`의 반환 값과 인수도 달라집니다. 그 외의 경우에는 이들 6개 함수가 동일하게 작동합니다.  
-  
- `_l` 접미사가 있는 이러한 함수 버전은 로캘 종속 동작에 현재 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
-  
- C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
-  
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
-  
-|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsncpy`|`strncpy`|`_mbsnbcpy`|`wcsncpy`|  
-|`_tcsncpy_l`|`_strncpy_l`|`_mbsnbcpy_l`|`_wcsncpy_l`|  
-  
+> **strncpy** 에 공간이 충분 한지 확인 하지 않습니다 *strDest*; 이렇게 하면 버퍼 오버런의 잠재적 원인입니다. *count* 복사 되는 문자 수를 제한 하는 인수 크기에 제한 하지 않으며; *strDest*합니다. 다음 예제를 참조하세요. 자세한 내용은 [버퍼 오버런 방지](http://msdn.microsoft.com/library/windows/desktop/ms717795)를 참조하세요.
+
+경우 *strDest* 또는 *strSource* 는 **NULL** 포인터 또는 *개수* 보다 작거나 0으로 잘못 된 매개 변수 처리기가 호출 에 설명 된 대로 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 허용 된, 하는 경우 이러한 함수가-1을 반환 하 고 설정 **errno** 를 **EINVAL**합니다.
+
+**wcsncpy** 및 **_mbsncpy** 와이드 문자 및 멀티 바이트 문자 버전의 **strncpy**합니다. 인수 및 반환 값이 **wcsncpy** 및 **_mbsncpy** 그에 따라 달라 집니다. 그 외의 경우에는 이들 6개 함수가 동일하게 작동합니다.
+
+있는 이러한 함수 버전은 **_l** 접미사는은 로캘 종속 동작에 현재 로캘 대신 전달 된 로캘을 사용 한다는 점을 제외 하 고는 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+
+C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
+
+|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcsncpy**|**strncpy**|**_mbsnbcpy**|**wcsncpy**|
+|**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
+
 > [!NOTE]
->  `_strncpy_l` 및 `_wcsncpy_l`은 로캘에 종속되지 않습니다. 이러한 함수는 `_tcsncpy_l`용으로만 제공되며 직접 호출하면 안 됩니다.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`strncpy`|\<string.h>|  
-|`wcsncpy`|\<string.h> 또는 \<wchar.h>|  
-|`_mbsncpy`, `_mbsncpy_l`|\<mbstring.h>|  
-  
- 플랫폼 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="example"></a>예  
- 다음 예제에서는 `strncpy`의 사용과 프로그램 버그 및 보안 문제를 야기하는 오용 사례를 보여 줍니다. 컴파일러는 각 호출에 대해 `strncpy`로 다음과 유사한 경고를 생성합니다. **crt_strncpy_x86.c(15) : warning C4996: 'strncpy': 이 함수 또는 변수는 안전하지 않을 수 있습니다. strncpy_s를 대신 사용하세요. 사용 중단을 사용하지 않도록 설정하려면 _CRT_SECURE_NO_WARNINGS를 사용합니다. 자세한 내용은 온라인 도움말을 참조하세요.**  
-  
-```  
-// crt_strncpy_x86.c  
-// Use this command in an x86 developer command prompt to compile:   
-// cl /TC /W3 crt_strncpy_x86.c  
-  
-#include <stdio.h>  
-#include <string.h>  
-  
-int main() {  
-   char t[20];  
-   char s[20];  
-   char *p = 0, *q = 0;  
-  
-   strcpy_s(s, sizeof(s), "AA BB CC");  
-   // Note: strncpy is deprecated; consider using strncpy_s instead  
-   strncpy(s, "aa", 2);     // "aa BB CC"         C4996  
-   strncpy(s + 3, "bb", 2); // "aa bb CC"         C4996  
-   strncpy(s, "ZZ", 3);     // "ZZ",              C4996  
-                            // count greater than strSource, null added  
-   printf("%s\n", s);  
-  
-   strcpy_s(s, sizeof(s), "AA BB CC");  
-   p = strstr(s, "BB");  
-   q = strstr(s, "CC");  
-   strncpy(s, "aa", p - s - 1);   // "aa BB CC"   C4996  
-   strncpy(p, "bb", q - p - 1);   // "aa bb CC"   C4996  
-   strncpy(q, "cc",  q - s);      // "aa bb cc"   C4996  
-   strncpy(q, "dd", strlen(q));   // "aa bb dd"   C4996  
-   printf("%s\n", s);  
-  
-   // some problems with strncpy  
-   strcpy_s(s, sizeof(s), "test");  
-   strncpy(t, "this is a very long string", 20 ); // C4996  
-   // Danger: at this point, t has no terminating null,  
-   // so the printf continues until it runs into one.  
-   // In this case, it will print "this is a very long test"  
-   printf("%s\n", t);  
-  
-   strcpy_s(t, sizeof(t), "dogs like cats");  
-   printf("%s\n", t);  
-  
-   strncpy(t + 10, "to chase cars.", 14); // C4996  
-   printf("%s\n", t);  
-  
-   // strncpy has caused a buffer overrun and corrupted string s  
-   printf("Buffer overrun: s = '%s' (should be 'test')\n", s);  
-   // Since the stack grows from higher to lower addresses, buffer  
-   // overruns can corrupt function return addresses on the stack,  
-   // which can be exploited to run arbitrary code.  
-}  
-```  
-  
- 출력  
-  
-```Output  
- ZZ  
-aa bb dd  
-this is a very long test  
-dogs like cats  
-dogs like to chase cars.  
-Buffer overrun: s = 'ars.' (should be 'test')  
-```  
-  
- 자동 변수의 레이아웃과 오류 검색 및 코드 보호의 수준은 변경된 컴파일러 설정에 따라 달라질 수 있습니다. 이 예제에서는 다른 컴파일러 옵션을 사용하거나 다른 컴파일 환경에서 빌드하는 경우 서로 다른 결과가 발생할 수 있습니다.  
-  
-## <a name="see-also"></a>참고 항목  
- [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)   
- [로캘](../../c-runtime-library/locale.md)   
- [멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbsnbcpy, _mbsnbcpy_l](../../c-runtime-library/reference/mbsnbcpy-mbsnbcpy-l.md)   
- [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
- [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)   
- [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)   
- [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   
- [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
- [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
- [strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](../../c-runtime-library/reference/strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)   
- [strcpy_s, wcscpy_s, _mbscpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)
+> **_strncpy_l** 및 **_wcsncpy_l** 로캘에 종속 되지 않습니다; 용 으로만 제공 되며 **_tcsncpy_l** 직접 호출할 수 없습니다.
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**strncpy**|\<string.h>|
+|**wcsncpy**|\<string.h> 또는 \<wchar.h>|
+|**_mbsncpy**, **_mbsncpy_l**|\<mbstring.h>|
+
+플랫폼 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="example"></a>예제
+
+다음 예제에서는 **strncpy** 및 어떻게과 프로그램 버그 및 보안 문제를 일으킬에 악용할 수 있습니다. 컴파일러를 호출할 때마다에 대 한 경고를 생성 **strncpy** 비슷합니다 **crt_strncpy_x86.c(15): 경고 C4996: 'strncpy': 함수 또는 변수에이 안전 하지 않을 수 있습니다. strncpy_s를 대신 사용하세요. 사용 중단을 사용하지 않도록 설정하려면 _CRT_SECURE_NO_WARNINGS를 사용합니다. 자세한 내용은 온라인 도움말을 참조하세요.**
+
+```C
+// crt_strncpy_x86.c
+// Use this command in an x86 developer command prompt to compile:
+// cl /TC /W3 crt_strncpy_x86.c
+
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+   char t[20];
+   char s[20];
+   char *p = 0, *q = 0;
+
+   strcpy_s(s, sizeof(s), "AA BB CC");
+   // Note: strncpy is deprecated; consider using strncpy_s instead
+   strncpy(s, "aa", 2);     // "aa BB CC"         C4996
+   strncpy(s + 3, "bb", 2); // "aa bb CC"         C4996
+   strncpy(s, "ZZ", 3);     // "ZZ",              C4996
+                            // count greater than strSource, null added
+   printf("%s\n", s);
+
+   strcpy_s(s, sizeof(s), "AA BB CC");
+   p = strstr(s, "BB");
+   q = strstr(s, "CC");
+   strncpy(s, "aa", p - s - 1);   // "aa BB CC"   C4996
+   strncpy(p, "bb", q - p - 1);   // "aa bb CC"   C4996
+   strncpy(q, "cc",  q - s);      // "aa bb cc"   C4996
+   strncpy(q, "dd", strlen(q));   // "aa bb dd"   C4996
+   printf("%s\n", s);
+
+   // some problems with strncpy
+   strcpy_s(s, sizeof(s), "test");
+   strncpy(t, "this is a very long string", 20 ); // C4996
+   // Danger: at this point, t has no terminating null,
+   // so the printf continues until it runs into one.
+   // In this case, it will print "this is a very long test"
+   printf("%s\n", t);
+
+   strcpy_s(t, sizeof(t), "dogs like cats");
+   printf("%s\n", t);
+
+   strncpy(t + 10, "to chase cars.", 14); // C4996
+   printf("%s\n", t);
+
+   // strncpy has caused a buffer overrun and corrupted string s
+   printf("Buffer overrun: s = '%s' (should be 'test')\n", s);
+   // Since the stack grows from higher to lower addresses, buffer
+   // overruns can corrupt function return addresses on the stack,
+   // which can be exploited to run arbitrary code.
+}
+```
+
+출력
+
+```Output
+ZZ
+aa bb dd
+this is a very long test
+dogs like cats
+dogs like to chase cars.
+Buffer overrun: s = 'ars.' (should be 'test')
+```
+
+자동 변수의 레이아웃과 오류 검색 및 코드 보호의 수준은 변경된 컴파일러 설정에 따라 달라질 수 있습니다. 이 예제에서는 다른 컴파일러 옵션을 사용하거나 다른 컴파일 환경에서 빌드하는 경우 서로 다른 결과가 발생할 수 있습니다.
+
+## <a name="see-also"></a>참고자료
+
+[문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>
+[멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[_mbsnbcpy, _mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md)<br/>
+[strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
+[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
+[strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>
+[strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
+[strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
+[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
+[strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
+[_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
+[strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
+[strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l](strncpy-s-strncpy-s-l-wcsncpy-s-wcsncpy-s-l-mbsncpy-s-mbsncpy-s-l.md)<br/>
+[strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)<br/>

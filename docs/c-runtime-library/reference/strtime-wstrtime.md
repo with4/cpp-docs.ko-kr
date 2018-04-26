@@ -1,12 +1,12 @@
 ---
 title: _strtime, _wstrtime | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wstrtime
@@ -42,97 +42,102 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00c355d5d11fe403b8004eeb3b90dc46ba34dab3
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2533fa8e3c60cbecbf4ab04c4f2508ef225b62a3
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strtime-wstrtime"></a>_strtime, _wstrtime
-버퍼에 시간을 복사합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_strtime_s, _wstrtime_s](../../c-runtime-library/reference/strtime-s-wstrtime-s.md)를 참조하세요.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-char *_strtime(  
-   char *timestr   
-);  
-wchar_t *_wstrtime(  
-   wchar_t *timestr   
-);  
-template <size_t size>  
-char *_strtime(  
-   char (&timestr)[size]  
-); // C++ only  
-template <size_t size>  
-wchar_t *_wstrtime(  
-   wchar_t (&timestr)[size]  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `timestr`  
- 시간 문자열입니다.  
-  
-## <a name="return-value"></a>반환 값  
- 결과 문자열 `timestr`에 대한 포인터를 반환합니다.  
-  
-## <a name="remarks"></a>설명  
- `_strtime` 함수는 현재 현지 시간에서 가리키는 버퍼에 복사 `timestr`합니다. 시간 형식은 `hh:mm:ss`로 지정됩니다. 여기서 `hh`는 24시간 표기법의 시간을 나타내는 2자리 숫자, `mm`은 분을 나타내는 2자리 숫자, 그리고 `ss`는 초를 나타내는 2자리 숫자입니다. 예를 들어 문자열 `18:23:44`는 오후 6시 23분 44초를 나타냅니다. 버퍼는 9바이트 이상이어야 합니다.  
-  
- `_wstrtime`는 `_strtime`의 와이드 문자 버전이고, `_wstrtime`의 인수와 반환 값은 와이드 문자 문자열입니다. 이러한 함수는 그 외의 경우에는 동일하게 동작합니다. `timestr`이 `NULL`이거나 `timestr`의 형식이 잘못된 경우에는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 예외가 계속되도록 허용되는 경우 이러한 함수는 NULL을 반환하며, `timestr`이 NULL이면 `errno`를 `EINVAL`로 설정하고 `timestr`의 형식이 잘못된 경우에는 `errno`를 `ERANGE`로 설정합니다.  
-  
- C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
-  
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
-  
-|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tstrtime`|`_strtime`|`_strtime`|`_wstrtime`|  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`_strtime`|\<time.h>|  
-|`_wstrtime`|\<time.h> 또는 \<wchar.h>|  
-  
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
-  
-## <a name="example"></a>예  
-  
-```  
-// crt_strtime.c  
-// compile with: /W3  
-  
-#include <time.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char tbuffer [9];  
-   _strtime( tbuffer ); // C4996  
-   // Note: _strtime is deprecated; consider using _strtime_s instead  
-   printf( "The current time is %s \n", tbuffer );  
-}  
-```  
-  
-```Output  
-The current time is 14:21:44  
-```  
-  
-## <a name="see-also"></a>참고 항목  
- [시간 관리](../../c-runtime-library/time-management.md)   
- [asctime, _wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
- [ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
- [gmtime, _gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md)   
- [localtime, _localtime32, _localtime64](../../c-runtime-library/reference/localtime-localtime32-localtime64.md)   
- [mktime, _mktime32, _mktime64](../../c-runtime-library/reference/mktime-mktime32-mktime64.md)   
- [time, _time32, _time64](../../c-runtime-library/reference/time-time32-time64.md)   
- [_tzset](../../c-runtime-library/reference/tzset.md)
+
+버퍼에 시간을 복사합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_strtime_s, _wstrtime_s](strtime-s-wstrtime-s.md)를 참조하세요.
+
+## <a name="syntax"></a>구문
+
+```C
+char *_strtime(
+   char *timestr
+);
+wchar_t *_wstrtime(
+   wchar_t *timestr
+);
+template <size_t size>
+char *_strtime(
+   char (&timestr)[size]
+); // C++ only
+template <size_t size>
+wchar_t *_wstrtime(
+   wchar_t (&timestr)[size]
+); // C++ only
+```
+
+### <a name="parameters"></a>매개 변수
+
+*timestr*<br/>
+시간 문자열입니다.
+
+## <a name="return-value"></a>반환 값
+
+결과 문자열에 대 한 포인터를 반환 *timestr*합니다.
+
+## <a name="remarks"></a>설명
+
+**_strtime** 함수는 현재 현지 시간에서 가리키는 버퍼에 복사 *timestr*합니다. 시간 형식으로 지정 된 **hh: mm:** 여기서 **hh** 는 24 시간 표기법의 시간을 나타내는 두 자리 숫자로 **mm** 은 두 자리 시간과 를지난분을나타내는**ss** 은 두 자리 초를 나타내는입니다. 예를 들어 문자열 **18시 23분: 44** 23 분 및 44 지난 초 6 오후를 나타냅니다. 버퍼는 9바이트 이상이어야 합니다.
+
+**_wstrtime** 의 와이드 문자 버전이 **_strtime**; 인수 및 반환 값의 **_wstrtime** 는 와이드 문자 문자열입니다. 이러한 함수 동일 하 게 작동 합니다. 경우 *timestr* 은 **NULL** 포인터 또는 *timestr* 형식이 잘못 되었습니다, 잘못 된에 설명 된 대로 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 예외는 이러한 함수 반환 NULL 및 set 계속 하도록 허용 된 경우 **errno** 를 **EINVAL** 경우 *timestr* NULL 되었거나 설정 **errno**를 **ERANGE** 경우 *timestr* 형식이 잘못 되었습니다.
+
+C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
+
+|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tstrtime**|**_strtime**|**_strtime**|**_wstrtime**|
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**_strtime**|\<time.h>|
+|**_wstrtime**|\<time.h> 또는 \<wchar.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="example"></a>예제
+
+```C
+// crt_strtime.c
+// compile with: /W3
+
+#include <time.h>
+#include <stdio.h>
+
+int main( void )
+{
+   char tbuffer [9];
+   _strtime( tbuffer ); // C4996
+   // Note: _strtime is deprecated; consider using _strtime_s instead
+   printf( "The current time is %s \n", tbuffer );
+}
+```
+
+```Output
+The current time is 14:21:44
+```
+
+## <a name="see-also"></a>참고자료
+
+[시간 관리](../../c-runtime-library/time-management.md)<br/>
+[asctime, _wasctime](asctime-wasctime.md)<br/>
+[ctime, _ctime32, _ctime64, _wctime, _wctime32, _wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)<br/>
+[gmtime, _gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md)<br/>
+[localtime, _localtime32, _localtime64](localtime-localtime32-localtime64.md)<br/>
+[mktime, _mktime32, _mktime64](mktime-mktime32-mktime64.md)<br/>
+[time, _time32, _time64](time-time32-time64.md)<br/>
+[_tzset](tzset.md)<br/>

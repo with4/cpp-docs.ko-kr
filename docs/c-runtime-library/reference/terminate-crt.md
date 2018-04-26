@@ -1,12 +1,12 @@
 ---
 title: terminate(CRT) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - terminate
@@ -31,96 +31,99 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0be18926e565604e2985b0e3afed571b752465b7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 302bb0096bd6b4d0b9e92c3508704f35f2c355c8
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="terminate-crt"></a>terminate(CRT)
-`abort`를 사용하여 `set_terminate` 또는 사용자가 지정하는 함수를 호출합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-void terminate( void );  
-```  
-  
-## <a name="remarks"></a>설명  
- `terminate` 함수는 C++ 예외 처리와 함께 사용되며 다음과 같은 경우에 호출됩니다.  
-  
--   throw된 C++ 예외에 대해 일치하는 catch 처리기를 찾을 수 없는 경우  
-  
--   스택 해제 중에 소멸자 함수가 예외를 throw한 경우  
-  
--   스택이 예외를 throw한 후에 손상된 경우  
-  
- `terminate`는 기본적으로 `abort`를 호출합니다. 종료 함수를 직접 작성하고 함수 이름을 인수로 사용해 `set_terminate`를 호출하면 이 기본값을 변경할 수 있습니다. `terminate`는 `set_terminate`에 대한 인수로 지정된 마지막 함수를 호출합니다. 자세한 내용은 [처리되지 않은 C++ 예외](../../cpp/unhandled-cpp-exceptions.md)를 참조하세요.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`terminate`|\<eh.h>|  
-  
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
-  
-## <a name="example"></a>예  
-  
-```  
-// crt_terminate.cpp  
-// compile with: /EHsc  
-#include <eh.h>  
-#include <process.h>  
-#include <iostream>  
-using namespace std;  
-  
-void term_func();  
-  
-int main()  
-{  
-    int i = 10, j = 0, result;  
-    set_terminate( term_func );  
-    try  
-    {  
-        if( j == 0 )  
-            throw "Divide by zero!";  
-        else  
-            result = i/j;  
-    }  
-    catch( int )  
-    {  
-        cout << "Caught some integer exception.\n";  
-    }  
-    cout << "This should never print.\n";  
-}  
-  
-void term_func()  
-{  
-    cout << "term_func() was called by terminate().\n";  
-  
-    // ... cleanup tasks performed here  
-  
-    // If this function does not exit, abort is called.  
-  
-    exit(-1);  
-}  
-```  
-  
-```Output  
-term_func() was called by terminate().  
-```  
-  
-## <a name="see-also"></a>참고 항목  
- [예외 처리 루틴](../../c-runtime-library/exception-handling-routines.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)   
- [set_terminate](../../c-runtime-library/reference/set-terminate-crt.md)   
- [set_unexpected](../../c-runtime-library/reference/set-unexpected-crt.md)   
- [unexpected](../../c-runtime-library/reference/unexpected-crt.md)
+
+호출 [중단](abort.md) 사용 하 여을 지정 하는 함수 또는 **set_terminate**합니다.
+
+## <a name="syntax"></a>구문
+
+```C
+void terminate( void );
+```
+
+## <a name="remarks"></a>설명
+
+**종료** 함수 c + + 예외 처리와 함께 사용 되 고 다음과 같은 경우에 호출 됩니다.
+
+- throw된 C++ 예외에 대해 일치하는 catch 처리기를 찾을 수 없는 경우
+
+- 스택 해제 중에 소멸자 함수가 예외를 throw한 경우
+
+- 스택이 예외를 throw한 후에 손상된 경우
+
+**종료** 호출 [중단](abort.md) 기본적으로 합니다. 자체 종료 함수를 작성 하 고 호출 하 여이 기본값을 변경할 수 있습니다 **set_terminate** 의 인수로 서 함수 이름으로 합니다. **종료** 에 대 한 인수로 주어진 마지막 함수를 호출 **set_terminate**합니다. 자세한 내용은 [처리되지 않은 C++ 예외](../../cpp/unhandled-cpp-exceptions.md)를 참조하세요.
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**terminate**|\<eh.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="example"></a>예제
+
+```cpp
+// crt_terminate.cpp
+// compile with: /EHsc
+#include <eh.h>
+#include <process.h>
+#include <iostream>
+using namespace std;
+
+void term_func();
+
+int main()
+{
+    int i = 10, j = 0, result;
+    set_terminate( term_func );
+    try
+    {
+        if( j == 0 )
+            throw "Divide by zero!";
+        else
+            result = i/j;
+    }
+    catch( int )
+    {
+        cout << "Caught some integer exception.\n";
+    }
+    cout << "This should never print.\n";
+}
+
+void term_func()
+{
+    cout << "term_func() was called by terminate().\n";
+
+    // ... cleanup tasks performed here
+
+    // If this function does not exit, abort is called.
+
+    exit(-1);
+}
+```
+
+```Output
+term_func() was called by terminate().
+```
+
+## <a name="see-also"></a>참고자료
+
+[예외 처리 루틴](../../c-runtime-library/exception-handling-routines.md)<br/>
+[abort](abort.md)<br/>
+[_set_se_translator](set-se-translator.md)<br/>
+[set_terminate](set-terminate-crt.md)<br/>
+[set_unexpected](set-unexpected-crt.md)<br/>
+[unexpected](unexpected-crt.md)<br/>

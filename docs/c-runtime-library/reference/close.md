@@ -1,12 +1,12 @@
 ---
-title: "_close | Microsoft 문서"
-ms.custom: 
+title: _close | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _close
@@ -32,58 +32,64 @@ helpviewer_keywords:
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-caps.latest.revision: 
+caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9532d8fb98786f35dfa888b5bf8bef5e3e8b2583
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e49906a1ea0bf66400a6ac753c5d4041bc47217c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="close"></a>_close
-파일을 닫습니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-int _close(   
-   int fd   
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `fd`  
- 열려 있는 파일을 참조하는 파일 설명자입니다.  
-  
-## <a name="return-value"></a>반환 값  
- 파일을 성공적으로 닫은 경우 `_close`는 0을 반환합니다. 반환 값-1의 오류를 나타냅니다.  
-  
-## <a name="remarks"></a>설명  
- `_close` 함수는 `fd`와 연결된 파일을 닫습니다.  
-  
- 파일 설명자와 기본 OS 파일 핸들을 닫습니다. 따라서 파일이 원래 Win32 함수 `CreateFile`을 사용하여 열리고 `_open_osfhandle`을 사용하여 파일 설명자로 변환된 경우 `CloseHandle`을 호출할 필요가 없습니다.  
-  
- 이 함수는 해당 매개 변수의 유효성을 검사합니다. `fd`가 잘못된 파일 설명자인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속 실행하도록 허용된 경우 함수가 -1을 반환하며, `errno`가 `EBADF`로 설정됩니다.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
-|-------------|---------------------|---------------------|  
-|`_close`|\<io.h>|\<errno.h>|  
-  
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
-  
-## <a name="example"></a>예  
- [_open](../../c-runtime-library/reference/open-wopen.md)의 예제를 참조하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- [하위 수준 I/O](../../c-runtime-library/low-level-i-o.md)   
- [_chsize](../../c-runtime-library/reference/chsize.md)   
- [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [_dup, _dup2](../../c-runtime-library/reference/dup-dup2.md)   
- [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
- [_unlink, _wunlink](../../c-runtime-library/reference/unlink-wunlink.md)
+
+파일을 닫습니다.
+
+## <a name="syntax"></a>구문
+
+```C
+int _close(
+   int fd
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*fd*<br/>
+열려 있는 파일을 참조하는 파일 설명자입니다.
+
+## <a name="return-value"></a>반환 값
+
+**_close** 파일이 성공적으로 종료 된 경우 0을 반환 합니다. 반환 값-1의 오류를 나타냅니다.
+
+## <a name="remarks"></a>설명
+
+**_close** 함수에 연결 된 파일을 닫고 *fd*합니다.
+
+파일 설명자와 기본 OS 파일 핸들을 닫습니다. 따라서 호출할 필요가 없습니다는 **CloseHandle** 파일을 원래 Win32 함수를 사용 하 여 연 경우 **CreateFile** 사용 하는 파일 설명자를 변환할 **_open_osfhandle**.
+
+이 함수는 해당 매개 변수의 유효성을 검사합니다. 경우 *fd* 은 잘못 된 파일 설명자에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 함수 실행을 계속 허용 된,-1을 반환 하 고 **errno** 로 설정 된 **EBADF**합니다.
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|선택적 헤더|
+|-------------|---------------------|---------------------|
+|**_close**|\<io.h>|\<errno.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="example"></a>예제
+
+[_open](open-wopen.md)의 예제를 참조하세요.
+
+## <a name="see-also"></a>참고자료
+
+[하위 수준 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
+[_chsize](chsize.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[_dup, _dup2](dup-dup2.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[_unlink, _wunlink](unlink-wunlink.md)<br/>

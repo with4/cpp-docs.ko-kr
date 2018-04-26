@@ -1,12 +1,12 @@
 ---
-title: "_get_heap_handle | Microsoft 문서"
-ms.custom: 
+title: _get_heap_handle | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _get_heap_handle
@@ -34,63 +34,67 @@ helpviewer_keywords:
 - _get_heap_handle function
 - get_heap_handle function
 ms.assetid: a4d05049-8528-494a-8281-a470d1e1115c
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0608ef825032f636e09c42c5c522c5c600c649a6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f72033509c191e644dd85a97dbbd48f28ff94c1c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getheaphandle"></a>_get_heap_handle
-C 런타임 시스템에서 사용되는 힙의 핸들을 반환합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-intptr_t _get_heap_handle( void );  
-```  
-  
-## <a name="return-value"></a>반환 값  
- C 런타임 시스템에서 사용되는 Win32 힙에 대한 핸들을 반환합니다.  
-  
-## <a name="remarks"></a>설명  
- [HeapSetInformation](http://msdn.microsoft.com/library/windows/desktop/aa366705) 을 호출하고 CRT 힙에서 낮은 조각화 힙을 사용하도록 설정하려는 경우 이 함수를 사용합니다.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`_get_heap_handle`|\<malloc.h>|  
-  
- 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="sample"></a>샘플  
-  
-```  
-// crt_get_heap_handle.cpp  
-// compile with: /MT  
-#include <windows.h>  
-#include <malloc.h>  
-#include <stdio.h>  
-  
-int main(void)  
-{  
-    intptr_t hCrtHeap = _get_heap_handle();  
-    ULONG ulEnableLFH = 2;  
-    if (HeapSetInformation((PVOID)hCrtHeap,  
-                           HeapCompatibilityInformation,  
-                           &ulEnableLFH, sizeof(ulEnableLFH)))  
-        puts("Enabling Low Fragmentation Heap succeeded");  
-    else  
-        puts("Enabling Low Fragmentation Heap failed");  
-    return 0;  
-}  
-```  
-  
-## <a name="see-also"></a>참고 항목  
- [메모리 할당](../../c-runtime-library/memory-allocation.md)
+
+C 런타임 시스템에서 사용되는 힙의 핸들을 반환합니다.
+
+## <a name="syntax"></a>구문
+
+```C
+intptr_t _get_heap_handle( void );
+```
+
+## <a name="return-value"></a>반환 값
+
+C 런타임 시스템에서 사용되는 Win32 힙에 대한 핸들을 반환합니다.
+
+## <a name="remarks"></a>설명
+
+[HeapSetInformation](http://msdn.microsoft.com/library/windows/desktop/aa366705) 을 호출하고 CRT 힙에서 낮은 조각화 힙을 사용하도록 설정하려는 경우 이 함수를 사용합니다.
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**_get_heap_handle**|\<malloc.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="sample"></a>샘플
+
+```cpp
+// crt_get_heap_handle.cpp
+// compile with: /MT
+#include <windows.h>
+#include <malloc.h>
+#include <stdio.h>
+
+int main(void)
+{
+    intptr_t hCrtHeap = _get_heap_handle();
+    ULONG ulEnableLFH = 2;
+    if (HeapSetInformation((PVOID)hCrtHeap,
+                           HeapCompatibilityInformation,
+                           &ulEnableLFH, sizeof(ulEnableLFH)))
+        puts("Enabling Low Fragmentation Heap succeeded");
+    else
+        puts("Enabling Low Fragmentation Heap failed");
+    return 0;
+}
+```
+
+## <a name="see-also"></a>참고자료
+
+[메모리 할당](../../c-runtime-library/memory-allocation.md)<br/>

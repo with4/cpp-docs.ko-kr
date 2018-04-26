@@ -1,12 +1,12 @@
 ---
-title: "binder1st 클래스 | Microsoft 문서"
-ms.custom: 
+title: binder1st 클래스 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - xfunctional/std::binder1st
@@ -15,24 +15,25 @@ dev_langs:
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3764a4ef76425ef1b92b7eef2f46803d291a91a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a302c7097393e056fb4a8dab4109873825effeeb
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="binder1st-class"></a>binder1st 클래스
-이항 함수의 첫 번째 인수를 지정된 값에 바인딩하여 이항 함수 개체를 단항 함수 개체로 변환하는 생성자를 제공하는 템플릿 클래스입니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```
+
+이항 함수의 첫 번째 인수를 지정된 값에 바인딩하여 이항 함수 개체를 단항 함수 개체로 변환하는 생성자를 제공하는 템플릿 클래스입니다.
+
+## <a name="syntax"></a>구문
+
+```cpp
 template <class Operation>
 class binder1st
     : public unaryFunction <typename Operation::second_argument_type,
@@ -52,84 +53,83 @@ protected:
     Operation op;
     typename Operation::first_argument_type value;
 };
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `Func`  
- 단항 함수 개체로 변환할 이항 함수 개체입니다.  
-  
- `left`  
- 이항 함수 개체의 첫 번째 인수가 바인딩되는 값입니다.  
-  
- `right`  
- 수정된 이진 개체를 두 번째 인수의 고정 값과 비교하는 인수의 값입니다.  
-  
-## <a name="return-value"></a>반환 값  
- 이항 함수 개체의 첫 번째 인수를 `left.` 값에 바인딩할 때 생성되는 단항 함수 개체입니다.  
-  
-## <a name="remarks"></a>설명  
- 템플릿 클래스는 이항 함수 개체 `Func`의 복사본을 **op**에, `left`의 복사본을 **value**에 저장합니다. 그리고 **op**( **value**, `right`)를 반환하도록 해당 멤버 함수 `operator()`를 정의합니다.  
-  
- `Func`가 **Operation** 형식의 개체이고 `c`가 상수이면 [bind1st](../standard-library/functional-functions.md#bind1st) ( `Func`, `c` )는 `binder1st` 클래스 생성자 `binder1st`\< **Operation**> ( `Func`, `c` )와 등가이고 더 편리합니다.  
-  
-## <a name="example"></a>예  
-  
-```cpp  
-// functional_binder1st.cpp  
-// compile with: /EHsc  
-#include <vector>  
-#include <functional>  
-#include <algorithm>  
-#include <iostream>  
-  
-using namespace std;  
-  
-int main()  
-{  
-    vector<int> v1;  
-    vector<int>::iterator Iter;  
-  
-    int i;  
-    for (i = 0; i <= 5; i++)  
-    {  
-        v1.push_back(5 * i);  
-    }  
-  
-    cout << "The vector v1 = ( ";  
-    for (Iter = v1.begin(); Iter != v1.end(); Iter++)  
-        cout << *Iter << " ";  
-    cout << ")" << endl;  
-  
-    // Count the number of integers > 10 in the vector  
-    vector<int>::iterator::difference_type result1;  
-    result1 = count_if(v1.begin(), v1.end(),  
-        binder1st<less<int> >(less<int>(), 10));  
-    cout << "The number of elements in v1 greater than 10 is: "  
-         << result1 << "." << endl;  
-  
-    // Compare use of binder2nd fixing 2nd argument:  
-    // count the number of integers < 10 in the vector  
-    vector<int>::iterator::difference_type result2;  
-    result2 = count_if(v1.begin(), v1.end(),  
-        binder2nd<less<int> >(less<int>(), 10));  
-    cout << "The number of elements in v1 less than 10 is: "  
-         << result2 << "." << endl;  
-}  
-\* Output:   
-The vector v1 = ( 0 5 10 15 20 25 )  
-The number of elements in v1 greater than 10 is: 3.  
-The number of elements in v1 less than 10 is: 2.  
-*\  
-```  
-  
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<functional>  
-  
- **네임스페이스:** std  
-  
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+```
 
+### <a name="parameters"></a>매개 변수
 
+`Func` 이항 함수 개체를 단항 함수 개체로 변환할 수입니다.
 
+`left` 이진 함수 개체의 첫 번째 인수를 바인딩할 수 값입니다.
+
+`right` 두 번째 인수의 고정된 값으로 조정된 이진 개체를 비교 하는 인수 값입니다.
+
+## <a name="return-value"></a>반환 값
+
+이항 함수 개체의 첫 번째 인수를 `left.` 값에 바인딩할 때 생성되는 단항 함수 개체입니다.
+
+## <a name="remarks"></a>설명
+
+템플릿 클래스는 이항 함수 개체 `Func`의 복사본을 **op**에, `left`의 복사본을 **value**에 저장합니다. 그리고 **op**( **value**, `right`)를 반환하도록 해당 멤버 함수 `operator()`를 정의합니다.
+
+`Func`가 **Operation** 형식의 개체이고 `c`가 상수이면 [bind1st](../standard-library/functional-functions.md#bind1st) ( `Func`, `c` )는 `binder1st` 클래스 생성자 `binder1st`\< **Operation**> ( `Func`, `c` )와 등가이고 더 편리합니다.
+
+## <a name="example"></a>예제
+
+```cpp
+// functional_binder1st.cpp
+// compile with: /EHsc
+#include <vector>
+#include <functional>
+#include <algorithm>
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    vector<int> v1;
+    vector<int>::iterator Iter;
+
+    int i;
+    for (i = 0; i <= 5; i++)
+    {
+        v1.push_back(5 * i);
+    }
+
+    cout << "The vector v1 = ( ";
+    for (Iter = v1.begin(); Iter != v1.end(); Iter++)
+        cout << *Iter << " ";
+    cout << ")" << endl;
+
+    // Count the number of integers > 10 in the vector
+    vector<int>::iterator::difference_type result1;
+    result1 = count_if(v1.begin(), v1.end(),
+        binder1st<less<int> >(less<int>(), 10));
+    cout << "The number of elements in v1 greater than 10 is: "
+         << result1 << "." << endl;
+
+    // Compare use of binder2nd fixing 2nd argument:
+    // count the number of integers < 10 in the vector
+    vector<int>::iterator::difference_type result2;
+    result2 = count_if(v1.begin(), v1.end(),
+        binder2nd<less<int> >(less<int>(), 10));
+    cout << "The number of elements in v1 less than 10 is: "
+         << result2 << "." << endl;
+}
+\* Output:
+The vector v1 = ( 0 5 10 15 20 25 )
+The number of elements in v1 greater than 10 is: 3.
+The number of elements in v1 less than 10 is: 2.
+*\
+```
+
+## <a name="requirements"></a>요구 사항
+
+**헤더:** \<functional>
+
+**네임스페이스:** std
+
+## <a name="see-also"></a>참고자료
+
+[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -1,12 +1,12 @@
 ---
 title: wctype | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - wctype
@@ -30,61 +30,66 @@ helpviewer_keywords:
 - wctype function
 - wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17006f31e02e7aed60a20e088502fe969059084c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: bbad04d3c56015ddea10a058ae8b262d7f94d40f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="wctype"></a>wctype
-와이드 문자 코드에 대한 분류 규칙을 결정합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-wctype_t wctype(  
-   const char * property   
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `property`  
- 속성 문자열입니다.  
-  
-## <a name="return-value"></a>반환 값  
- 현재 로캘의 `LC_CTYPE` 범주가 이름이 속성 문자열 `property`와 일치하는 분류 규칙을 정의하지 않는 경우 이 함수는 0을 반환합니다. 그렇지 않으면 이 함수는 [towctrans](../../c-runtime-library/reference/towctrans.md)에 대한 후속 호출에 두 번째 인수로 사용할 수 있는 0이 아닌 값을 반환합니다.  
-  
-## <a name="remarks"></a>설명  
- 이 함수는 와이드 문자 코드에 대한 분류 규칙을 결정합니다. 다음 호출 쌍은 모든 로캘에서 동일하게 동작하지만 구현은 "C" 로캘에서도 추가 분류 규칙을 정의할 수 있습니다.  
-  
-|함수|다음과 같이 사용|  
-|--------------|-------------|  
-|`iswalnum(`  `c`  `)`|`iswctype(`  `c` `, wctype( "alnum" ) )`|  
-|`iswalpha(`  `c`  `)`|`iswctype(`  `c` `, wctype( "alpha" ) )`|  
-|`iswcntrl(`  `c`  `)`|`iswctype(`  `c` `, wctype( "cntrl" ) )`|  
-|`iswdigit(`  `c`  `)`|`iswctype(`  `c` `, wctype( "digit" ) )`|  
-|`iswgraph(`  `c`  `)`|`iswctype(`  `c` `, wctype( "graph" ) )`|  
-|`iswlower(`  `c`  `)`|`iswctype(`  `c` `, wctype( "lower" ) )`|  
-|`iswprint(`  `c`  `)`|`iswctype(`  `c` `, wctype( "print" ) )`|  
-|`iswpunct(`  `c`  `)`|`iswctype(`  `c` `, wctype( "punct" ) )`|  
-|`iswspace(`  `c`  `)`|`iswctype(`  `c` `, wctype( "space" ) )`|  
-|`iswupper(`  `c`  `)`|`iswctype(`  `c` `, wctype( "upper" ) )`|  
-|`iswxdigit(`  `c`  `)`|`iswctype(`  `c` `, wctype( "xdigit" ) )`|  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`wctype`|\<wctype.h>|  
-  
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
-  
-## <a name="see-also"></a>참고 항목  
- [데이터 변환](../../c-runtime-library/data-conversion.md)   
- [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)
+
+와이드 문자 코드에 대한 분류 규칙을 결정합니다.
+
+## <a name="syntax"></a>구문
+
+```C
+wctype_t wctype(
+   const char * property
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*속성*<br/>
+속성 문자열입니다.
+
+## <a name="return-value"></a>반환 값
+
+경우는 **LC_CTYPE** 현재 로캘의 범주가 이름이 속성 문자열을 일치 하는 분류 규칙을 정의 하지 않습니다 *속성*, 함수가 0을 반환 합니다. 그렇지 않으면 이 함수는 [towctrans](towctrans.md)에 대한 후속 호출에 두 번째 인수로 사용할 수 있는 0이 아닌 값을 반환합니다.
+
+## <a name="remarks"></a>설명
+
+이 함수는 와이드 문자 코드에 대한 분류 규칙을 결정합니다. 다음 호출 쌍은 모든 로캘에서 동일하게 동작하지만 구현은 "C" 로캘에서도 추가 분류 규칙을 정의할 수 있습니다.
+
+|함수|다음과 같이 사용|
+|--------------|-------------|
+|iswalnum(c)|iswctype (c, wctype ("alnum 과"))|
+|iswalpha(c)|iswctype (c, wctype ("알파"))|
+|iswcntrl(c)|iswctype (c, wctype ("cntrl"))|
+|iswdigit(c)|iswctype (c, wctype ("자리"))|
+|iswgraph(c)|iswctype (c, wctype ("그래프"))|
+|iswlower(c)|iswctype (c, wctype ("낮음"))|
+|iswprint(c)|iswctype (c, wctype ("print"))|
+|iswpunct(c)|iswctype (c, wctype ("좁 힘"))|
+|iswspace(c)|iswctype (c, wctype ("공간"))|
+|iswupper(c)|iswctype (c, wctype ("위쪽"))|
+|iswxdigit(c)|iswctype (c, wctype ("xdigit"))|
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**wctype**|\<wctype.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="see-also"></a>참고자료
+
+[데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
+[setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>

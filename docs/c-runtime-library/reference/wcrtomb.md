@@ -1,12 +1,12 @@
 ---
 title: wcrtomb | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - wcrtomb
@@ -33,113 +33,119 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
-caps.latest.revision: 
+caps.latest.revision: 26
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 203b3ec1d72b7691aa8e46d60784100c0bf89a5e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7618900dd313a31f7d514698c0ac7a670446d96d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="wcrtomb"></a>wcrtomb
-와이드 문자를 멀티바이트 문자 표현으로 변환합니다. 이 함수의 더 안전한 버전을 사용할 수 있습니다. [wcrtomb_s](../../c-runtime-library/reference/wcrtomb-s.md)를 참조하세요.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-size_t wcrtomb(  
-   char *mbchar,  
-   wchar_t wchar,  
-   mbstate_t *mbstate  
-);  
-template <size_t size>  
-size_t wcrtomb(  
-   char (&mbchar)[size],  
-   wchar_t wchar,  
-   mbstate_t *mbstate  
-); // C++ only  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- [out] `mbchar`  
- 멀티바이트로 변환된 결과 문자입니다.  
-  
- [in] `wchar`  
- 변환할 와이드 문자입니다.  
-  
- [in] `mbstate`  
- `mbstate_t` 개체에 대한 포인터입니다.  
-  
-## <a name="return-value"></a>반환 값  
- 변환된 멀티바이트 문자를 표시하는 데 필요한 바이트 수를 반환하고, 오류가 발생하면 -1을 반환합니다.  
-  
-## <a name="remarks"></a>설명  
- `wcrtomb` 함수는 `mbstate`에 포함된 지정한 변환 상태부터 시작하여 와이드 문자를 `wchar`에 포함된 값에서 `mbchar`로 표시되는 주소로 변환합니다. 반환 값은 해당 멀티바이트 문자를 표시하는 데 필요한 바이트 수이지만 `MB_CUR_MAX`바이트까지만 반환됩니다.  
-  
- `mbstate`가 null이면 `mbchar`의 변환 상태를 포함하는 내부 `mbstate_t` 개체가 사용됩니다. 문자 시퀀스 `wchar`에 해당하는 멀티바이트 문자 표현이 없으면 -1이 반환되며 `errno`가 `EILSEQ`로 설정됩니다.  
-  
- `wcrtomb` 함수는 다시 시작할 수 있다는 점에서 [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md)과 다릅니다. 같거나 다른 다시 시작 가능 함수에 대한 후속 호출에서는 변환 상태가 `mbstate`에 저장됩니다. 다시 시작할 수 있는 함수와 다시 시작할 수 없는 함수를 함께 사용할 때는 결과가 정의되지 않습니다. 예를 들어 `wcstombs` 대신 후속 `wcsrtombs` 호출을 사용하는 경우 응용 프로그램은 `wcsnlen` 대신 `wcsrlen`을 사용해야 합니다.  
-  
- C++에서 이 함수는 해당 최신 보안 버전을 호출하는 템플릿 오버로드를 포함합니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.  
-  
-## <a name="exceptions"></a>예외  
- `wcrtomb` 함수는 이 함수가 실행 중인 동안 현재 스레드의 함수가 `setlocale`을 호출하지 않으며 `mbstate`가 null이면 다중 스레드로부터 안전합니다.  
-  
-## <a name="example"></a>예  
-  
-```  
-// crt_wcrtomb.c  
-// compile with: /W3  
-// This program converts a wide character  
-// to its corresponding multibyte character.  
-  
-#include <string.h>  
-#include <stdio.h>  
-#include <wchar.h>  
-  
-int main( void )  
-{  
-    size_t      sizeOfCovertion = 0;  
-    mbstate_t   mbstate;  
-    char        mbStr = 0;  
-    wchar_t*    wcStr = L"Q";  
-  
-    // Reset to initial conversion state  
-    memset(&mbstate, 0, sizeof(mbstate));  
-  
-    sizeOfCovertion = wcrtomb(&mbStr, *wcStr, &mbstate); // C4996  
-    // Note: wcrtomb is deprecated; consider using wcrtomb_s instead  
-    if (sizeOfCovertion > 0)  
-    {  
-        printf("The corresponding wide character \"");  
-        wprintf(L"%s\"", wcStr);  
-        printf(" was converted to the \"%c\" ", mbStr);  
-        printf("multibyte character.\n");  
-    }  
-    else  
-    {  
-        printf("No corresponding multibyte character "  
-               "was found.\n");  
-    }  
-}  
-```  
-  
-```Output  
-The corresponding wide character "Q" was converted to the "Q" multibyte character.  
-```  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`wcrtomb`|\<wchar.h>|  
-  
-## <a name="see-also"></a>참고 항목  
- [데이터 변환](../../c-runtime-library/data-conversion.md)   
- [로캘](../../c-runtime-library/locale.md)   
- [멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [mbsinit](../../c-runtime-library/reference/mbsinit.md)
+
+와이드 문자를 멀티바이트 문자 표현으로 변환합니다. 이 함수의 더 안전한 버전을 사용할 수 있습니다. [wcrtomb_s](wcrtomb-s.md)를 참조하세요.
+
+## <a name="syntax"></a>구문
+
+```C
+size_t wcrtomb(
+   char *mbchar,
+   wchar_t wchar,
+   mbstate_t *mbstate
+);
+template <size_t size>
+size_t wcrtomb(
+   char (&mbchar)[size],
+   wchar_t wchar,
+   mbstate_t *mbstate
+); // C++ only
+```
+
+### <a name="parameters"></a>매개 변수
+
+*mbchar*<br/>
+멀티바이트로 변환된 결과 문자입니다.
+
+*wchar*<br/>
+변환할 와이드 문자입니다.
+
+*mbstate*<br/>
+에 대 한 포인터는 **mbstate_t** 개체입니다.
+
+## <a name="return-value"></a>반환 값
+
+변환된 멀티바이트 문자를 표시하는 데 필요한 바이트 수를 반환하고, 오류가 발생하면 -1을 반환합니다.
+
+## <a name="remarks"></a>설명
+
+**wcrtomb** 함수 변환에 포함 된 지정 된 변환 상태에서 시작 하 고 와이드 *mbstate*에 포함 된 값에서 *wchar*에 주소를 나타내는 *mbchar*합니다. 반환 값은 해당 멀티 바이트 문자를 나타내는 데 필요한 바이트 수 있지만 반환 하지 것입니다 이상 **MB_CUR_MAX** 바이트입니다.
+
+경우 *mbstate* 매개 변수가 null 이면 내부 **mbstate_t** 의 변환 상태를 포함 하는 개체 *mbchar* 사용 됩니다. 경우 문자 시퀀스 *wchar* 해당 멀티 바이트 없는 문자 표현이-1 반환 및 **errno** 로 설정 되어 **EILSEQ**합니다.
+
+**wcrtomb** 함수에서와 다른 [wctomb, _wctomb_l](wctomb-wctomb-l.md) 다시 시작할 합니다. 변환 상태에 저장 됩니다 *mbstate* 같거나 다른 다시 시작 가능 함수에 대 한 후속 호출에 대 한 합니다. 다시 시작할 수 있는 함수와 다시 시작할 수 없는 함수를 함께 사용할 때는 결과가 정의되지 않습니다. 예를 들어 응용 프로그램 사용 **wcsrlen** 대신 **wcsnlen**후속 호출 하는 경우, **wcsrtombs** 대신 사용한 **wcstombs**.
+
+C++에서 이 함수는 해당 최신 보안 버전을 호출하는 템플릿 오버로드를 포함합니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.
+
+## <a name="exceptions"></a>예외
+
+**wcrtomb** 함수는 현재 스레드의 호출 함수는 아니면 다중 스레드로부터 안전 **setlocale** 이 함수를 실행 중일 때 및 연결 된 동안는 *mbstate* null입니다.
+
+## <a name="example"></a>예제
+
+```C
+// crt_wcrtomb.c
+// compile with: /W3
+// This program converts a wide character
+// to its corresponding multibyte character.
+
+#include <string.h>
+#include <stdio.h>
+#include <wchar.h>
+
+int main( void )
+{
+    size_t      sizeOfCovertion = 0;
+    mbstate_t   mbstate;
+    char        mbStr = 0;
+    wchar_t*    wcStr = L"Q";
+
+    // Reset to initial conversion state
+    memset(&mbstate, 0, sizeof(mbstate));
+
+    sizeOfCovertion = wcrtomb(&mbStr, *wcStr, &mbstate); // C4996
+    // Note: wcrtomb is deprecated; consider using wcrtomb_s instead
+    if (sizeOfCovertion > 0)
+    {
+        printf("The corresponding wide character \"");
+        wprintf(L"%s\"", wcStr);
+        printf(" was converted to the \"%c\" ", mbStr);
+        printf("multibyte character.\n");
+    }
+    else
+    {
+        printf("No corresponding multibyte character "
+               "was found.\n");
+    }
+}
+```
+
+```Output
+The corresponding wide character "Q" was converted to the "Q" multibyte character.
+```
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**wcrtomb**|\<wchar.h>|
+
+## <a name="see-also"></a>참고자료
+
+[데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>
+[멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[mbsinit](mbsinit.md)<br/>

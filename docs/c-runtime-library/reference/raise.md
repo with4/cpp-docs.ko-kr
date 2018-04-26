@@ -1,12 +1,12 @@
 ---
 title: raise | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - raise
@@ -37,11 +37,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a116bfab72222bcf3ee3357c77759960f838cb9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7b4c6bc2668089c4e6b813a03246e0690d1b4af
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="raise"></a>raise
 
@@ -60,7 +60,7 @@ int raise(
 
 ### <a name="parameters"></a>매개 변수
 
-*sig*  
+*sig*<br/>
 생성할 신호입니다.
 
 ## <a name="return-value"></a>반환 값
@@ -73,25 +73,25 @@ int raise(
 
 |신호|의미|기본|
 |------------|-------------|-------------|
-|`SIGABRT`|비정상적인 종료|호출 프로그램을 종료하고 종료 코드 3을 생성합니다.|
-|`SIGFPE`|부동 소수점 오류|호출 프로그램을 종료합니다.|
-|`SIGILL`|잘못된 명령|호출 프로그램을 종료합니다.|
-|`SIGINT`|CTRL+C 인터럽트|호출 프로그램을 종료합니다.|
-|`SIGSEGV`|잘못된 저장소 액세스|호출 프로그램을 종료합니다.|
-|`SIGTERM`|프로그램에 종료 요청이 전송됨|신호를 무시합니다.|
+|**SIGABRT**|비정상적인 종료|호출 프로그램을 종료하고 종료 코드 3을 생성합니다.|
+|**SIGFPE**|부동 소수점 오류|호출 프로그램을 종료합니다.|
+|**SIGILL**|잘못된 명령|호출 프로그램을 종료합니다.|
+|**SIGINT**|CTRL+C 인터럽트|호출 프로그램을 종료합니다.|
+|**SIGSEGV**|잘못된 저장소 액세스|호출 프로그램을 종료합니다.|
+|**SIGTERM**|프로그램에 종료 요청이 전송됨|신호를 무시합니다.|
 
-인수가 위에 지정되어 있는 유효한 신호가 아니면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 신호가 처리되지 않은 경우 함수는 `errno`를 `EINVAL`로 설정하고 0이 아닌 값을 반환합니다.
+인수가 위에 지정되어 있는 유효한 신호가 아니면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 함수를 설정 하는 처리 되지 **errno** 를 **EINVAL** 0이 아닌 값을 반환 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴에서 반환된 값|필수 헤더|
+|루틴|필수 헤더|
 |-------------|---------------------|
 |**raise**|\<signal.h>|
 
 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
-[프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)  
-[abort](../../c-runtime-library/reference/abort.md)  
-[signal](../../c-runtime-library/reference/signal.md)  
+[프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)<br/>
+[abort](abort.md)<br/>
+[signal](signal.md)<br/>

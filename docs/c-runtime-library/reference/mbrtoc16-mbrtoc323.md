@@ -1,13 +1,13 @@
 ---
-title: "mbrtoc16, mbrtoc323 | Microsoft 문서"
-ms.custom: 
+title: mbrtoc16, mbrtoc323 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - mbrtoc16
@@ -36,85 +36,89 @@ helpviewer_keywords:
 - mbrtoc16 function
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
-caps.latest.revision: 
+caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e686a39266587fdc214ddbb0757672a57b94314
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 842950535dd71ba678e00a3203df17625ab50a4d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
-반각 문자열의 첫 번째 멀티바이트 문자를 해당하는 UTF-16 또는 UTF-32 문자로 변환합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-size_t mbrtoc16(   
-   char16_t* destination,   
-   const char* source,   
-   size_t max_bytes,   
-   mbstate_t* state   
-);  
-  
-size_t mbrtoc32(  
-   char32_t* destination,   
-   const char* source,   
-   size_t max_bytes,   
-   mbstate_t* state   
-);  
-  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `destination`  
- 변환할 멀티바이트 문자에 해당하는 `char16_t` 또는 `char32_t` 문자의 포인터입니다. Null인 경우 함수는 값을 저장하지 않습니다.  
-  
- `source`  
- 변환할 멀티바이트 문자열의 포인터입니다.  
-  
- `max_bytes`  
- 변환할 문자에 대해 검사할 `source` 의 최대 바이트 수입니다. 1과 `source`에 남아 있는 바이트(null 종결자 포함) 수 사이의 값이어야 합니다.  
-  
- `state`  
- 멀티바이트 문자열을 하나 이상의 출력 문자로 해석하는 데 사용되는 `mbstate_t` 변환 상태 개체의 포인터입니다.  
-  
-## <a name="return-value"></a>반환 값  
- 성공 시, 현재 `state` 값이 다음과 같을 때 적용되는 아래 조건 중 첫 번째 값이 반환됩니다.  
-  
-|값|조건|  
-|-----------|---------------|  
-|0|`max_bytes` 에서 변환되는 다음 `source` 이하 문자는 null 와이드 문자에 해당하며, 이는 `destination` 이 null이 아닌 경우 저장되는 값입니다.<br /><br /> `state` 에는 초기 이동 상태가 포함되어 있습니다.|  
-|1과 `max_bytes`(포함) 사이|반환되는 값은 유효한 멀티바이트 문자를 완성하는 `source` 의 바이트 수입니다. `destination` 이 null이 아닌 경우 변환된 와이드 문자가 저장됩니다.|  
-|-3|`destination` 이 null이 아닌 경우 함수에 대한 이전 호출로 발생하는 다음 와이드 문자가 `destination` 에 저장되어 있습니다. `source` 의 바이트는 함수에 대한 이 호출에서 사용되지 않습니다.<br /><br /> 
-`source` 에서 두 개 이상의 와이드 문자가 나타내야 하는 멀티바이트 문자(예: 서로게이트 쌍)를 가리키면 다음 함수 호출에서 추가 문자를 작성하도록 `state` 값이 업데이트됩니다.|  
-|-2|다음 `max_bytes` 바이트는 완료되지 않았지만 잠재적으로 유효한 멀티바이트 문자를 나타냅니다. `destination`에 저장된 값이 없습니다. 이 결과는 `max_bytes` 가 0인 경우에 발생할 수 있습니다.|  
-|-1|인코딩 오류가 발생했습니다. 다음 `max_bytes` 개 이하의 바이트가 완전하며 올바른 멀티바이트 문자에 포함되지 않습니다. `destination`에 저장된 값이 없습니다.<br /><br /> `EILSEQ` 가 `errno` 에 저장되며, 변환 상태 `state` 는 지정되지 않습니다.|  
-  
-## <a name="remarks"></a>주의  
- `mbrtoc16` 함수는 `max_bytes` 에서 `source` 바이트까지 읽어 완전하고 유효한 첫 번째 멀티바이트 문자를 찾은 후 해당하는 UTF-16 문자를 `destination`에 저장합니다. 소스 바이트는 현재 스레드 멀티바이트 로캘에 따라 해석됩니다. 멀티바이트 문자에서 서로게이트 쌍과 같은 둘 이상의 UTF-16 출력 문자가 필요하면 `state` 값이 `destination` 에 대한 다음 호출 시 `mbrtoc16`에 다음 UTF-16 문자를 저장하도록 설정됩니다. `mbrtoc32` 함수는 동일하지만, 출력이 UTF-32 문자로 저장됩니다.  
-  
- `source` 가 null인 경우 이러한 함수는 `NULL` 에 `destination`, `""` 에 `source`, `1` 에 `max_bytes`의 인수를 사용한 호출에 해당하는 값을 반환합니다. `destination` 및 `max_bytes` 의 전달된 값은 무시됩니다.  
-  
- `source` 가 null인 아닌 경우 함수는 문자열의 맨 앞에서 시작하고 `max_bytes` 바이트까지 검사하여 다음 멀티바이트 문자를 완성하는 데 필요한 바이트 수를 결정합니다(이동 시퀀스 포함). 검사된 바이트에 유효하고 완전한 멀티바이트 문자가 포함되는 경우 함수는 문자를 해당하는 16비트 또는 32비트 와이드 문자로 변환합니다. `destination` 이 null이 아닌 경우 함수는 대상의 첫 번째(그리고 유일할 수 있음) 결과 문자를 저장합니다. 추가 출력 문자가 필요한 경우 값이 `state`에 설정되므로 함수에 대한 후속 호출에서 추가 문자를 출력하고 -3 값을 반환합니다. 출력 문자가 더 이상 필요하지 않으면 `state` 가 초기 이동 상태로 설정됩니다.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|함수|C 헤더|C++ 헤더|  
-|--------------|--------------|------------------|  
-|`mbrtoc16`,                `mbrtoc32`|\<uchar.h>|\<cuchar>|  
-  
- 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- [데이터 변환](../../c-runtime-library/data-conversion.md)   
- [로캘](../../c-runtime-library/locale.md)   
- [멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [c16rtomb, c32rtomb](../../c-runtime-library/reference/c16rtomb-c32rtomb1.md)   
- [mbrtowc](../../c-runtime-library/reference/mbrtowc.md)   
- [mbsrtowcs](../../c-runtime-library/reference/mbsrtowcs.md)   
- [mbsrtowcs_s](../../c-runtime-library/reference/mbsrtowcs-s.md)
+
+반각 문자열의 첫 번째 멀티바이트 문자를 해당하는 UTF-16 또는 UTF-32 문자로 변환합니다.
+
+## <a name="syntax"></a>구문
+
+```C
+size_t mbrtoc16(
+   char16_t* destination,
+   const char* source,
+   size_t max_bytes,
+   mbstate_t* state
+);
+
+size_t mbrtoc32(
+   char32_t* destination,
+   const char* source,
+   size_t max_bytes,
+   mbstate_t* state
+);
+
+```
+
+### <a name="parameters"></a>매개 변수
+
+*대상*<br/>
+에 대 한 포인터는 **char16_t** 또는 **char32_t** 변환할 멀티 바이트 문자에 해당 합니다. Null인 경우 함수는 값을 저장하지 않습니다.
+
+*소스*<br/>
+변환할 멀티바이트 문자열의 포인터입니다.
+
+*max_bytes*<br/>
+최대 수의 바이트 *소스* 를 변환할 문자에 대 한 검사 합니다. 1과에 남아 있는 모든 null 종결자를 포함 한 바이트 수 사이의 값 이어야 합니다이 *소스*합니다.
+
+*state*<br/>
+에 대 한 포인터는 **mbstate_t** 변환 상태 개체를 하나 이상의 출력 문자로 멀티 바이트 문자열을 해석 하는 데 사용 합니다.
+
+## <a name="return-value"></a>반환 값
+
+성공할 경우 첫 번째 값을 반환 지정 된 현재 적용 되는 이러한 조건 중 *상태* 값:
+
+|값|조건|
+|-----------|---------------|
+|0|다음 *max_bytes* 더 적은 문자에서 변환 또는 *소스* 경우 저장 된 값은 null 와이드 문자에 해당 *대상* null이 아닌 합니다.<br /><br /> *상태* 초기 이동 상태를 포함 합니다.|
+|1 및 *max_bytes*(포함)|반환 값은의 바이트 수가 *소스* 유효한 멀티 바이트 문자를 완성 하는 합니다. 경우에 변환 된 와이드 문자는 저장 *대상* null입니다.|
+|-3|에 저장 된 함수에 대 한 이전 호출에서 발생 하는 다음 와이드 문자가 *대상* 경우 *대상* null입니다. 바이트 *소스* 함수에이 호출에서 사용 됩니다.<br /><br /> 때 *소스* (예: 서로게이트 쌍)를 나타내려면 둘 이상의 와이드 문자가 멀티 바이트 문자를 가리키는 경우 *상태* 다음 함수 호출 작성 되도록 값이 업데이트  추가 문자입니다.|
+|-2|다음 *max_bytes* 바이트는 완료 되지 않았지만 잠재적으로 유효한 멀티 바이트 문자를 나타냅니다. 값은 *대상*합니다. 이 결과 경우에 발생할 수 있습니다 *max_bytes* 은 0입니다.|
+|-1|인코딩 오류가 발생했습니다. 다음 *max_bytes* 또는 이하의 바이트가 완전 하며 올바른 멀티 바이트 문자에 기여 하지 않습니다. 값은 *대상*합니다.<br /><br /> **EILSEQ** 에 저장 된 **errno** 및에서는 변환 상태가 *상태* 지정 되지 않았습니다.|
+
+## <a name="remarks"></a>설명
+
+**mbrtoc16** 까지 함수 읽습니다 *max_bytes* 바이트 *소스* 그 다음으로 첫 번째 완전 하 고 유효한 멀티 바이트 문자를 해당 하는 utf-16 저장소를 찾을 수 문자 *대상*합니다. 소스 바이트는 현재 스레드 멀티바이트 로캘에 따라 해석됩니다. 멀티 바이트 문자는 서로게이트 쌍을 같은 둘 이상의 utf-16 출력 문자를이 필요한 경우 그런 다음 *상태* 값에 다음 utf-16 문자를 저장 하도록 설정 된 *대상* 의다음호출**mbrtoc16**합니다. **mbrtoc32** 함수는 동일 하지만, 출력이 utf-32 문자로 저장 됩니다.
+
+경우 *소스* 가 null 인 경우 반환 이러한 함수 호출의 해당 인수를 사용 하 여 **NULL** 에 대 한 *대상*, **""** 에대한*소스*에 1 *max_bytes*합니다. 전달 된 값의 *대상* 및 *max_bytes* 무시 됩니다.
+
+경우 *소스* 은 null이 아닌 함수는 문자열의 시작 부분에서 시작 하 고 최대 검사 *max_bytes* 다음 멀티 바이트 문자를 완성 하는 데 필요한 바이트 수를 결정 하는 바이트 포함 이동 시퀀스입니다. 검사된 바이트에 유효하고 완전한 멀티바이트 문자가 포함되는 경우 함수는 문자를 해당하는 16비트 또는 32비트 와이드 문자로 변환합니다. 경우 *대상* null이 아닌 대상에 첫 번째 (및 유일 할 수 있음) 결과 문자 함수 저장 합니다. 에 값이 설정 추가 출력 문자가 필요한 경우 *상태*함수에 대 한 후속 호출에서 추가 문자를 출력 하 고-3 값 반환 되도록 합니다. 출력 문자가 더 이상 필요한 경우 다음 *상태* 초기 이동 상태로 설정 됩니다.
+
+## <a name="requirements"></a>요구 사항
+
+|함수|C 헤더|C++ 헤더|
+|--------------|--------------|------------------|
+|**mbrtoc16**, **mbrtoc32**|\<uchar.h>|\<cuchar>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="see-also"></a>참고자료
+
+[데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>
+[멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[c16rtomb, c32rtomb](c16rtomb-c32rtomb1.md)<br/>
+[mbrtowc](mbrtowc.md)<br/>
+[mbsrtowcs](mbsrtowcs.md)<br/>
+[mbsrtowcs_s](mbsrtowcs-s.md)<br/>

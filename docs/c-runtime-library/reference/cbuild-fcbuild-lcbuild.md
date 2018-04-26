@@ -41,11 +41,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d5a2a5f40266f490cc0d18614c63715192b0707
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 555cd1d9d8f22801b1d3f3341be9041b1dde548c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cbuild-fcbuild-lcbuild"></a>_Cbuild, _FCbuild, _LCbuild
 
@@ -73,25 +73,25 @@ A **_Dcomplex**, **_Fcomplex**, 또는 **_Lcomplex** 복소수를 나타내는 �
 
 ## <a name="remarks"></a>설명
 
-**_Cbuild**, **_FCbuild**, 및 **_LCbuild** 함수 복합 형식 만들기를 단순화 합니다. 사용 하 여는 [creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md) 및 [cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md) 표현 복소수의 실수 및 허수 부분을 검색 하는 함수입니다.
+**_Cbuild**, **_FCbuild**, 및 **_LCbuild** 함수 복합 형식 만들기를 단순화 합니다. 사용 하 여는 [creal, crealf, creall](creal-crealf-creall.md) 및 [cimag, cimagf, cimagl](cimag-cimagf-cimagl.md) 표현 복소수의 실수 및 허수 부분을 검색 하는 함수입니다.
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴|C 헤더|C++ 헤더|
 |-------------|--------------|------------------|
-|`_Cbuild`,`_FCbuild`, `_LCbuild`|\<complex.h>|\<ccomplex>|
+|**_Cbuild**, **_FCbuild**, **_LCbuild**|\<complex.h>|\<ccomplex>|
 
 이러한 함수는 Microsoft 전용입니다. 형식을 **_Dcomplex**, **_Fcomplex**, 및 **_Lcomplex** 는 구현 되지 않은 C99 네이티브 형식에 해당 하는 Microsoft 전용 **double _Complex** , **_Complex float**, 및 **long double _Complex**각각. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고자료
 
-[사전순 함수 참조](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
-[_Cmulcc, _FCmulcc, _LCmulcc](../../c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md)<br/>
-[_Cmulcr, _FCmulcr, _LCmulcr](../../c-runtime-library/reference/cmulcr-fcmulcr-lcmulcr.md)<br/>
-[norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)<br/>
-[cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)<br/>
-[conj, conjf, conjl](../../c-runtime-library/reference/conj-conjf-conjl.md)<br/>
-[creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)<br/>
-[cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)<br/>
-[carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)<br/>
-[cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)<br/>
+[사전순 함수 참조](crt-alphabetical-function-reference.md)<br/>
+[_Cmulcc, _FCmulcc, _LCmulcc](cmulcc-fcmulcc-lcmulcc.md)<br/>
+[_Cmulcr, _FCmulcr, _LCmulcr](cmulcr-fcmulcr-lcmulcr.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
+[cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
+[conj, conjf, conjl](conj-conjf-conjl.md)<br/>
+[creal, crealf, creall](creal-crealf-creall.md)<br/>
+[cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>
+[carg, cargf, cargl](carg-cargf-cargl.md)<br/>
+[cabs, cabsf, cabsl](cabs-cabsf-cabsl.md)<br/>

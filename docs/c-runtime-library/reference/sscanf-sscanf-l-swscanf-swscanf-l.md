@@ -1,12 +1,12 @@
 ---
 title: sscanf, _sscanf_l, swscanf, _swscanf_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - swscanf
@@ -49,138 +49,143 @@ helpviewer_keywords:
 - sscanf_l function
 - stscanf_l function
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
-caps.latest.revision: 
+caps.latest.revision: 26
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486b9be37f52210ae77eb5cef17dce3304d8adde
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8319a5546674b8a36d6d40037f356c7a1d33d80c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="sscanf-sscanfl-swscanf-swscanfl"></a>sscanf, _sscanf_l, swscanf, _swscanf_l
-문자열에서 형식이 지정된 데이터를 읽습니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](../../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)을 참조하세요.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-int sscanf(  
-   const char *buffer,  
-   const char *format [,  
-   argument ] ...   
-);  
-int _sscanf_l(  
-   const char *buffer,  
-   const char *format,  
-   locale_t locale [,  
-   argument ] ...   
-);  
-int swscanf(  
-   const wchar_t *buffer,  
-   const wchar_t *format [,  
-   argument ] ...   
-);  
-int _swscanf_l(  
-   const wchar_t *buffer,  
-   const wchar_t *format,  
-   locale_t locale [,  
-   argument ] ...   
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `buffer`  
- 저장된 데이터  
-  
- `format`  
- 형식 컨트롤 문자열입니다. 자세한 내용은 [형식 사양](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)을 참조하세요.  
-  
- `argument`  
- 선택적 인수  
-  
- `locale`  
- 사용할 로캘입니다.  
-  
-## <a name="return-value"></a>반환 값  
- 이러한 각 함수는 모두 성공적으로 변환되고 할당된 필드 수를 반환합니다. 이때 읽혀졌지만 할당되지 않은 필드는 반환 값에 포함되지 않습니다. 반환 값이 0이면 할당된 필드가 없음을 나타냅니다. 오류가 발생하거나 첫 번째 변환 전에 문자열의 끝에 도달할 경우 반환 값은 `EOF`입니다.  
-  
- `buffer` 또는 `format`이 `NULL` 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 이러한 함수가 -1을 반환하고 `errno` 를 `EINVAL`로 설정합니다.  
-  
- 이러한 오류 코드 및 기타 오류 코드에 대한 내용은 [_doserrno, errno, _sys_errlist, 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
-  
-## <a name="remarks"></a>설명  
- `sscanf` 함수는 각 `argument`에서 제공하는 위치로 `buffer`의 데이터를 읽습니다. 각 `argument`는 `format`의 형식 지정자에 해당되는 형식의 변수에 대한 포인터여야 합니다. `format` 인수는 입력 필드의 해석을 제어하며, 형식과 기능은 `scanf` 함수의 `format` 인수와 동일합니다. 중복되는 문자열 간에 복사가 이뤄지면 이 동작은 정의되지 않습니다.  
-  
+
+문자열에서 형식이 지정된 데이터를 읽습니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [sscanf_s, _sscanf_s_l, swscanf_s, _swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)을 참조하세요.
+
+## <a name="syntax"></a>구문
+
+```C
+int sscanf(
+   const char *buffer,
+   const char *format [,
+   argument ] ...
+);
+int _sscanf_l(
+   const char *buffer,
+   const char *format,
+   locale_t locale [,
+   argument ] ...
+);
+int swscanf(
+   const wchar_t *buffer,
+   const wchar_t *format [,
+   argument ] ...
+);
+int _swscanf_l(
+   const wchar_t *buffer,
+   const wchar_t *format,
+   locale_t locale [,
+   argument ] ...
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*buffer*<br/>
+저장된 데이터
+
+*format*<br/>
+형식 컨트롤 문자열입니다. 자세한 내용은 [형식 사양](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)을 참조하세요.
+
+*argument*<br/>
+선택적 인수
+
+*locale*<br/>
+사용할 로캘입니다.
+
+## <a name="return-value"></a>반환 값
+
+이러한 각 함수는 모두 성공적으로 변환되고 할당된 필드 수를 반환합니다. 이때 읽혀졌지만 할당되지 않은 필드는 반환 값에 포함되지 않습니다. 반환 값이 0이면 할당된 필드가 없음을 나타냅니다. 반환 값은 **EOF** 오류에 대 한 첫 번째 변환 하기 전에 문자열의 끝에 도달 하는 경우.
+
+경우 *버퍼* 또는 *형식* 는 **NULL** 에 설명 된 대로 포인터, 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 허용 된, 하는 경우 이러한 함수가-1을 반환 하 고 설정 **errno** 를 **EINVAL**합니다.
+
+이러한 오류 코드 및 기타 오류 코드에 대한 내용은 [_doserrno, errno, _sys_errlist, 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
+
+## <a name="remarks"></a>설명
+
+**sscanf** 함수에서 데이터를 읽는 *버퍼* 각각 지정 된 위치에 *인수*합니다. 모든 *인수* 의 형식 지정자에 해당 하는 형식의 변수에 대 한 포인터 여야 합니다 *형식*합니다. *형식* 인수 컨트롤 입력의 해석은 필드 및 동일한 형태와 기능을 *형식* 에 대 한 인수는 **scanf** 함수입니다. 중복되는 문자열 간에 복사가 이뤄지면 이 동작은 정의되지 않습니다.
+
 > [!IMPORTANT]
->  `sscanf`를 사용하여 문자열을 읽을 때는 항상 `%s` 형식의 너비를 지정합니다. 예를 들어 `"%s"` 대신 `"%32s"`를 지정해야 합니다. 그렇지 않으면 서식이 잘못된 입력으로 인해 버퍼 오버런이 발생하기 쉽습니다.  
-  
- `swscanf`는 `sscanf`의 와이드 문자 버전이며, `swscanf`에 대한 인수는 와이드 문자 문자열입니다. `sscanf`는 멀티바이트 16진수 문자를 처리하지 않습니다. `swscanf`는 유니코드 전자 16진수 또는 "호환 영역" 문자를 처리하지 않습니다. 그렇지 않으면 `swscanf`과 `sscanf`은 동일하게 작동합니다.  
-  
- `_l` 접미사가 있는 이러한 함수 버전은 현재 스레드 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다.  
-  
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
-  
-|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_stscanf`|`sscanf`|`sscanf`|`swscanf`|  
-|`_stscanf_l`|`_sscanf_l`|`_sscanf_l`|`_swscanf_l`|  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`sscanf`, `_sscanf_l`|\<stdio.h>|  
-|`swscanf`, `_swscanf_l`|\<stdio.h> 또는 \<wchar.h>|  
-  
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
-  
-## <a name="example"></a>예  
-  
-```  
-// crt_sscanf.c  
-// compile with: /W3  
-// This program uses sscanf to read data items  
-// from a string named tokenstring, then displays them.  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   char  tokenstring[] = "15 12 14...";  
-   char  s[81];  
-   char  c;  
-   int   i;  
-   float fp;  
-  
-   // Input various data from tokenstring:  
-   // max 80 character string:  
-   sscanf( tokenstring, "%80s", s ); // C4996  
-   sscanf( tokenstring, "%c", &c );  // C4996  
-   sscanf( tokenstring, "%d", &i );  // C4996  
-   sscanf( tokenstring, "%f", &fp ); // C4996  
-   // Note: sscanf is deprecated; consider using sscanf_s instead  
-  
-   // Output the data read  
-   printf( "String    = %s\n", s );  
-   printf( "Character = %c\n", c );  
-   printf( "Integer:  = %d\n", i );  
-   printf( "Real:     = %f\n", fp );  
-}  
-```  
-  
-```Output  
-String    = 15  
-Character = 1  
-Integer:  = 15  
-Real:     = 15.000000  
-```  
-  
-## <a name="see-also"></a>참고 항목  
- [스트림 I/O](../../c-runtime-library/stream-i-o.md)   
- [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l](../../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)
+> 문자열을 읽을 때 **sscanf**, 항상에 대 한 너비를 지정 된 **%s** 형식 (예를 들어 **"%32s"** 대신 **"%s"**) 고, 그렇지 않으면 서식이 잘못 지정 된 입력 버퍼 오버런을 쉽게 될 수 있습니다.
+
+**swscanf** 의 와이드 문자 버전이 **sscanf**;에 대 한 인수 **swscanf** 는 와이드 문자 문자열입니다. **sscanf** 멀티 바이트 16 진수 문자를 처리 하지 않습니다. **swscanf** 유니코드 전자 16 진수 또는 "호환성 영역" 문자를 처리 하지 않습니다. 그렇지 않으면 **swscanf** 및 **sscanf** 동일 하 게 작동 합니다.
+
+있는 이러한 함수 버전은 **_l** 은 현재 스레드 로캘 대신 전달 된 로캘 매개 변수를 사용 하는 점을 제외 하 고 접미사는 동일 합니다.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
+
+|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_stscanf**|**sscanf**|**sscanf**|**swscanf**|
+|**_stscanf_l**|**_sscanf_l**|**_sscanf_l**|**_swscanf_l**|
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**sscanf**, **_sscanf_l**|\<stdio.h>|
+|**swscanf**, **_swscanf_l**|\<stdio.h> 또는 \<wchar.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="example"></a>예제
+
+```C
+// crt_sscanf.c
+// compile with: /W3
+// This program uses sscanf to read data items
+// from a string named tokenstring, then displays them.
+
+#include <stdio.h>
+
+int main( void )
+{
+   char  tokenstring[] = "15 12 14...";
+   char  s[81];
+   char  c;
+   int   i;
+   float fp;
+
+   // Input various data from tokenstring:
+   // max 80 character string:
+   sscanf( tokenstring, "%80s", s ); // C4996
+   sscanf( tokenstring, "%c", &c );  // C4996
+   sscanf( tokenstring, "%d", &i );  // C4996
+   sscanf( tokenstring, "%f", &fp ); // C4996
+   // Note: sscanf is deprecated; consider using sscanf_s instead
+
+   // Output the data read
+   printf( "String    = %s\n", s );
+   printf( "Character = %c\n", c );
+   printf( "Integer:  = %d\n", i );
+   printf( "Real:     = %f\n", fp );
+}
+```
+
+```Output
+String    = 15
+Character = 1
+Integer:  = 15
+Real:     = 15.000000
+```
+
+## <a name="see-also"></a>참고자료
+
+[스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
+[fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
+[scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)<br/>

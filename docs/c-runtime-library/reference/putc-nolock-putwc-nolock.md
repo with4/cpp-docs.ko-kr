@@ -1,12 +1,12 @@
 ---
 title: _putc_nolock, _putwc_nolock | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _putc_nolock
@@ -43,100 +43,105 @@ helpviewer_keywords:
 - _puttc_nolock function
 - _putwc_nolock function
 ms.assetid: 3cfc7f21-c9e8-4b7f-b0fb-af0d4d85e7e1
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 348141f4d096e22efc80ada84c31a7e10b96287a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c52dcb390fac781018782f727fbc360d949770c1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="putcnolock-putwcnolock"></a>_putc_nolock, _putwc_nolock
-스레드를 잠그지 않고 스트림에 문자를 씁니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-  
-      int _putc_nolock(  
-   int c,  
-   FILE *stream   
-);  
-wint_t _putwc_nolock(  
-   wchar_t c,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `c`  
- 쓸 문자입니다.  
-  
- `stream`  
- **FILE** 구조체에 대한 포인터입니다.  
-  
-## <a name="return-value"></a>반환 값  
- **putc, putwc**를 참조하세요.  
-  
-## <a name="remarks"></a>설명  
- `_putc_nolock` 및 `_putwc_nolock`은 다른 스레드에 의한 간섭에서 보호되지 않는 점을 제외하면 **_nolock** 접미사가 없는 버전과 동일합니다. 이들은 다른 스레드를 잠그는 오버헤드를 유발하지 않으므로 속도가 더 빠를 수 있습니다. 단일 스레드 응용 프로그램과 같은 스레드로부터 안전한 컨텍스트 또는 이미 스레드 격리를 처리한 호출 범위에서만 이러한 함수를 사용합니다.  
-  
- `_putwc_nolock`은 `_putc_nolock`의 와이드 문자 버전이며, 이 두 함수는 스트림이 ANSI 모드에서 열리는 경우 동일하게 작동합니다. `_putc_nolock`는 현재 UNICODE 스트림에 대한 출력을 지원하지 않습니다.  
-  
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
-  
-|Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_puttc_nolock`|`_putc_nolock`|`_putc_nolock`|**_putwc_nolock**|  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`_putc_nolock`|\<stdio.h>|  
-|`_putwc_nolock`|\<stdio.h> 또는 \<wchar.h>|  
-  
-콘솔 유니버설 Windows 플랫폼 (UWP) 응용 프로그램에서 지원 되지 않습니다. 콘솔을 사용 하는 연결 된 표준 스트림 핸들 `stdin`, `stdout`, 및 `stderr`, C 런타임 함수 UWP 앱에서 사용할 수 있는 전에 리디렉션되어야 합니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
-  
-## <a name="libraries"></a>라이브러리  
- 모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
-  
-## <a name="example"></a>예  
-  
-```  
-// crt_putc_nolock.c  
-/* This program uses putc to write buffer  
- * to a stream. If an error occurs, the program  
- * stops before writing the entire buffer.  
- */  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   FILE *stream;  
-   char *p, buffer[] = "This is the line of output\n";  
-   int  ch;  
-  
-   ch = 0;  
-   /* Make standard out the stream and write to it. */  
-   stream = stdout;  
-   for( p = buffer; (ch != EOF) && (*p != '\0'); p++ )  
-      ch = _putc_nolock( *p, stream );  
-}  
-```  
-  
-## <a name="output"></a>출력  
-  
-```  
-This is the line of output  
-```  
-  
-## <a name="see-also"></a>참고 항목  
- [스트림 I/O](../../c-runtime-library/stream-i-o.md)   
- [fputc, fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
- [getc, getwc](../../c-runtime-library/reference/getc-getwc.md)
+
+스레드를 잠그지 않고 스트림에 문자를 씁니다.
+
+## <a name="syntax"></a>구문
+
+```C
+int _putc_nolock(
+   int c,
+   FILE *stream
+);
+wint_t _putwc_nolock(
+   wchar_t c,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*c*<br/>
+쓸 문자입니다.
+
+*스트림*<br/>
+**FILE** 구조체에 대한 포인터입니다.
+
+## <a name="return-value"></a>반환 값
+
+**putc, putwc**를 참조하세요.
+
+## <a name="remarks"></a>설명
+
+**_putc_nolock** 및 **_putwc_nolock** 버전 없이 동일한는 **_nolock** 접미사 제외 하 고 다른 스레드에서 방해 로부터 보호 되지 않습니다. 이들은 다른 스레드를 잠그는 오버헤드를 유발하지 않으므로 속도가 더 빠를 수 있습니다. 단일 스레드 응용 프로그램과 같은 스레드로부터 안전한 컨텍스트 또는 이미 스레드 격리를 처리한 호출 범위에서만 이러한 함수를 사용합니다.
+
+**_putwc_nolock** 의 와이드 문자 버전이 **_putc_nolock**; 스트림이 ANSI 모드에서 열리는 경우 두 함수는 동일 하 게 작동 합니다. **_putc_nolock** 현재 출력 유니코드 스트림을 지원 하지 않습니다.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
+
+|Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_puttc_nolock**|**_putc_nolock**|**_putc_nolock**|**_putwc_nolock**|
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**_putc_nolock**|\<stdio.h>|
+|**_putwc_nolock**|\<stdio.h> 또는 \<wchar.h>|
+
+콘솔 유니버설 Windows 플랫폼 (UWP) 응용 프로그램에서 지원 되지 않습니다. 콘솔을 사용 하는 연결 된 표준 스트림 핸들 **stdin**, **stdout**, 및 **stderr**, C 런타임 함수 UWP 앱에서 사용할 수 있는 전에 리디렉션되어야 . 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="libraries"></a>라이브러리
+
+모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.
+
+## <a name="example"></a>예제
+
+```C
+// crt_putc_nolock.c
+/* This program uses putc to write buffer
+* to a stream. If an error occurs, the program
+* stops before writing the entire buffer.
+*/
+
+#include <stdio.h>
+
+int main( void )
+{
+   FILE *stream;
+   char *p, buffer[] = "This is the line of output\n";
+   int  ch;
+
+   ch = 0;
+   /* Make standard out the stream and write to it. */
+   stream = stdout;
+   for( p = buffer; (ch != EOF) && (*p != '\0'); p++ )
+      ch = _putc_nolock( *p, stream );
+}
+```
+
+### <a name="output"></a>출력
+
+```Output
+This is the line of output
+```
+
+## <a name="see-also"></a>참고자료
+
+[스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
+[fputc, fputwc](fputc-fputwc.md)<br/>
+[getc, getwc](getc-getwc.md)<br/>

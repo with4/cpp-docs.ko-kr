@@ -35,11 +35,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f58b7ba7ae51c4db065cd7b30cc233128f7b7c68
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 82585f9f2c727d7189633091429aef6742cdd00b
+ms.sourcegitcommit: 9a3a3d59176043ae60584482c2572c07f757b320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>CRecordView 및 CDaoRecordView에 대한 대화 상자 데이터 교환 함수
 이 항목에서는 DDX_Field 함수 간에 데이터를 교환 하는 데 사용 된 [CRecordset](../../mfc/reference/crecordset-class.md) 및 [CRecordView](../../mfc/reference/crecordview-class.md) 양식 또는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 및 [ CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 폼입니다.  
@@ -423,7 +423,7 @@ void AFXAPI DDX_FieldScroll(
  `pDX`  
  에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다. 프레임워크는 해당 방향을 포함해서 데이터 교환의 컨텍스트를 설정하기 위해 이 개체를 제공합니다.  
   
- *nIDC\**  
+ `nIDC`  
  첫 번째 ID 그룹의 (스타일으로 **WS_GROUP**) 인접 한 라디오 단추 컨트롤에 [CRecordView](../../mfc/reference/crecordview-class.md) 또는 [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) 개체입니다.  
   
  *값*  

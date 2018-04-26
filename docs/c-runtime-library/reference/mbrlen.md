@@ -1,12 +1,12 @@
 ---
-title: "mbrlen | Microsoft 문서"
-ms.custom: 
+title: mbrlen | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - mbrlen
@@ -30,139 +30,140 @@ dev_langs:
 helpviewer_keywords:
 - mbrlen function
 ms.assetid: dde8dee9-e091-4c4c-81b3-639808885ae1
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5c110c1fc5917614514b4e4fd7e474569026207
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5dd71912412188f7e6c8df8e2cf744166ea928ee
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="mbrlen"></a>mbrlen
-현재 로캘에서 멀티바이트 문자열을 완성하는 데 필요한 바이트 수를 결정합니다. 이때 멀티바이트 문자의 중간에서 다시 시작할 수 있습니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-size_t mbrlen(  
-   const char * str,  
-   size_t count,  
-   mbstate_t * mbstate  
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `str`  
- 멀티바이트 문자열에서 검사할 다음 바이트에 대한 포인터입니다.  
-  
- `count`  
- 검사할 최대 바이트 수입니다.  
-  
- `mbstate`  
- `str` 초기 바이트의 현재 이동 상태에 대한 포인터입니다.  
-  
-## <a name="return-value"></a>반환 값  
- 다음 값 중 하나입니다.  
-  
- 0  
- 다음 `count`개 이하의 바이트가 와이드 null 문자를 나타내는 멀티바이트 문자를 완성합니다.  
-  
- 1~`count`(포괄)  
- 다음 `count`개 이하의 바이트가 올바른 멀티바이트 문자를 완성합니다. 반환되는 값은 멀티바이트 문자를 완성하는 바이트 수입니다.  
-  
- (size_t)(-2)  
- 다음 `count` 바이트가 불완전하지만 올바를 가능성이 있는 멀티바이트 문자에 포함되며 `count`개 바이트가 모두 처리되었습니다.  
-  
- (size_t)(-1)  
- 인코딩 오류가 발생했습니다. 다음 `count`개 이하의 바이트가 완전하며 올바른 멀티바이트 문자에 포함되지 않습니다. 이 경우 `errno`는 EILSEQ로 설정되며 `mbstate`에서 변환 상태가 지정되지 않습니다.  
-  
-## <a name="remarks"></a>설명  
- `mbrlen` 함수는 `count`이 가리키는 바이트부터 최대 `str`바이트를 검사하여 다음 멀티바이트 문자를 완성하는 데 필요한 바이트 수를 결정합니다(이동 시퀀스 포함). 이러한 방식은 `mbrtowc(NULL, str, count, &mbstate)`를 호출하는 것과 같습니다. 여기서 `mbstate`는 사용자가 제공하는 `mbstate_t` 개체이거나 라이브러리에서 제공되는 정적 내부 개체입니다.  
-  
- `mbrlen` 함수는 `mbstate` 매개 변수에서 불완전한 멀티바이트 문자의 이동 상태를 저장하고 사용합니다. 따라서 필요한 경우 `mbrlen`을 멀티바이트 문자 중간에서 다시 시작하여 최대 `count`바이트를 검사할 수 있습니다. `mbstate`가 null 포인터이면 `mbrlen`은 내부 정적 `mbstate_t` 개체를 사용하여 이동 상태를 저장합니다. 내부 `mbstate_t` 개체는 스레드로부터 안전하지 않으므로 항상 고유한 `mbstate` 매개 변수를 할당하고 전달하는 것이 좋습니다.  
-  
- `mbrlen` 함수는 다시 시작할 수 있다는 점에서 [_mbclen, mblen, _mblen_l](../../c-runtime-library/reference/mbclen-mblen-mblen-l.md)과 다릅니다. 같거나 다른 다시 시작 가능 함수에 대한 후속 호출에서는 이동 상태가 `mbstate`에 저장됩니다. 다시 시작할 수 있는 함수와 다시 시작할 수 없는 함수를 함께 사용할 때는 결과가 정의되지 않습니다.  예를 들어 `wcsrlen` 대신 후속 `wcslen` 호출을 사용하는 경우 응용 프로그램은 `wcsrtombs` 대신 `wcstombs.`을 사용해야 합니다.  
-  
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
-  
-|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|적용할 수 없음|적용할 수 없음|`mbrlen`|적용할 수 없음|  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`mbrlen`|\<wchar.h>|  
-  
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
-  
-## <a name="example"></a>예  
- 이 예제에서는 멀티바이트 문자 해석이 현재 코드 페이지에 따라 달라지는 방식과 `mbrlen`의 다시 시작 기능을 보여 줍니다.  
-  
-```C  
-// crt_mbrlen.c  
-// Compile by using: cl crt_mbrlen.c  
-#include <stdlib.h>  
-#include <stdio.h>  
-#include <string.h>  
-#include <locale.h>  
-#include <wchar.h>  
-  
-size_t Example(const char * pStr)  
-{  
-    size_t      charLen = 0;  
-    size_t      charCount = 0;  
-    mbstate_t   mbState = {0};  
-  
-    while ((charLen = mbrlen(pStr++, 1, &mbState)) != 0 &&  
-            charLen != (size_t)-1)  
-    {  
-        if (charLen != (size_t)-2) // if complete mbcs char,  
-        {  
-            charCount++;  
-        }  
-    }   
-    return (charCount);  
-}   
-  
-int main( void )  
-{  
-    int         cp;  
-    size_t      charCount = 0;  
-    const char  *pSample =   
-        "\x82\xD0\x82\xE7\x82\xAA\x82\xC8: Shift-jis hiragana.";  
-  
-    cp = _getmbcp();  
-    charCount = Example(pSample);  
-    printf("\nCode page: %d\n%s\nCharacter count: %d\n",   
-        cp, pSample, charCount);  
-  
-    setlocale(LC_ALL, "ja-JP"); // Set Japanese locale  
-    _setmbcp(932); // and Japanese multibyte code page  
-    cp = _getmbcp();  
-    charCount = Example(pSample);  
-    printf("\nCode page: %d\n%s\nCharacter count: %d\n",   
-        cp, pSample, charCount);  
-}  
-```  
-  
-```Output  
-  
-Code page: 0  
-é╨éτé¬é╚: Shift-jis hiragana.  
-Character count: 29  
-  
-Code page: 932  
-????: Shift-jis hiragana.  
-Character count: 25  
-  
-```  
-  
-## <a name="see-also"></a>참고 항목  
- [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)   
- [로캘](../../c-runtime-library/locale.md)
+
+현재 로캘에서 멀티바이트 문자열을 완성하는 데 필요한 바이트 수를 결정합니다. 이때 멀티바이트 문자의 중간에서 다시 시작할 수 있습니다.
+
+## <a name="syntax"></a>구문
+
+```C
+size_t mbrlen(
+   const char * str,
+   size_t count,
+   mbstate_t * mbstate
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*str*<br/>
+멀티바이트 문자열에서 검사할 다음 바이트에 대한 포인터입니다.
+
+*count*<br/>
+검사할 최대 바이트 수입니다.
+
+*mbstate*<br/>
+초기 바이트의 현재 이동 상태에 대 한 포인터 *str*합니다.
+
+## <a name="return-value"></a>반환 값
+
+다음 값 중 하나입니다.
+
+|||
+|-|-|
+0|다음 *count* 개 이하의 바이트가 와이드 null 문자를 나타내는 멀티 바이트 문자를 완성 합니다.
+1 ~ *count*(포함)|다음 *count* 개 이하의 바이트가 올바른 멀티 바이트 문자를 완성 합니다. 반환되는 값은 멀티바이트 문자를 완성하는 바이트 수입니다.
+(size_t)(-2)|다음 *count* 바이트가 불완전 하지만 올바를 가능성이 있는 멀티 바이트 문자 및 모든 *count* 바이트를 처리 합니다.
+(size_t)(-1)|인코딩 오류가 발생했습니다. 다음 *count* 또는 이하의 바이트가 완전 하며 올바른 멀티 바이트 문자에 기여 하지 않습니다. 이 경우 **errno** EILSEQ로 설정 되며에서 변환 상태가 설정 되어 *mbstate* 지정 되지 않았습니다.
+
+## <a name="remarks"></a>설명
+
+**mbrlen** 함수 검사 최대 *count* 가리키는 바이트부터 바이트 *str* 다음을 완료 하는 데 필요한 바이트 수를 확인 하려면 멀티 바이트 문자를 이동 시퀀스 포함 합니다. 호출 하는 것과 같습니다 `mbrtowc(NULL, str, count, &mbstate)` 여기서 *mbstate* 중 하나는 사용자 제공은 **mbstate_t** 개체 또는 라이브러리에서 제공 하는 정적 내부 개체입니다.
+
+**mbrlen** 저장 하 고에서 불완전 한 멀티 바이트 문자의 이동 상태를 사용 하는 함수는 *mbstate* 매개 변수입니다. 이렇게 하면 **mbrlen** 최대 검사 하는 경우 멀티 바이트 문자의 중간에서 변환을 다시 시작할 수 있어야 *count* 바이트입니다. 경우 *mbstate* null 포인터가 **mbrlen** 은 내부 정적을 사용 하 여 **mbstate_t** 이동 상태를 저장할 개체입니다. 때문에 내부 **mbstate_t** 개체는 스레드로부터 안전 하지, 항상 할당 해 서 사용자 고유의 전달 권장 *mbstate* 매개 변수입니다.
+
+**mbrlen** 함수에서와 다른 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md) 다시 시작할 합니다. 이동 상태에 저장 됩니다 *mbstate* 같거나 다른 다시 시작 가능 함수에 대 한 후속 호출에 대 한 합니다. 다시 시작할 수 있는 함수와 다시 시작할 수 없는 함수를 함께 사용할 때는 결과가 정의되지 않습니다.  예를 들어, 응용 프로그램 사용 해야 **wcsrlen** 대신 **wcslen** 후속 호출 하는 경우 **wcsrtombs** 대신 사용 됩니다 **wcstombs**.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
+
+|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|적용할 수 없음|적용할 수 없음|**mbrlen**|적용할 수 없음|
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**mbrlen**|\<wchar.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="example"></a>예제
+
+멀티 바이트 문자 해석이 현재 코드 페이지에 따라 달라 집니다 방법과 다시 시작 기능을 보여 주며 보여 주는이 예제 **mbrlen**합니다.
+
+```C
+// crt_mbrlen.c
+// Compile by using: cl crt_mbrlen.c
+#include <stdlib.h>
+#include <stdio.h>
+#include <string.h>
+#include <locale.h>
+#include <wchar.h>
+
+size_t Example(const char * pStr)
+{
+    size_t      charLen = 0;
+    size_t      charCount = 0;
+    mbstate_t   mbState = {0};
+
+    while ((charLen = mbrlen(pStr++, 1, &mbState)) != 0 &&
+            charLen != (size_t)-1)
+    {
+        if (charLen != (size_t)-2) // if complete mbcs char,
+        {
+            charCount++;
+        }
+    }
+    return (charCount);
+}
+
+int main( void )
+{
+    int         cp;
+    size_t      charCount = 0;
+    const char  *pSample =
+        "\x82\xD0\x82\xE7\x82\xAA\x82\xC8: Shift-jis hiragana.";
+
+    cp = _getmbcp();
+    charCount = Example(pSample);
+    printf("\nCode page: %d\n%s\nCharacter count: %d\n",
+        cp, pSample, charCount);
+
+    setlocale(LC_ALL, "ja-JP"); // Set Japanese locale
+    _setmbcp(932); // and Japanese multibyte code page
+    cp = _getmbcp();
+    charCount = Example(pSample);
+    printf("\nCode page: %d\n%s\nCharacter count: %d\n",
+        cp, pSample, charCount);
+}
+```
+
+```Output
+
+Code page: 0
+é╨éτé¬é╚: Shift-jis hiragana.
+Character count: 29
+
+Code page: 932
+????: Shift-jis hiragana.
+Character count: 25
+
+```
+
+## <a name="see-also"></a>참고자료
+
+[문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>

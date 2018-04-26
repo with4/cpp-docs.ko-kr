@@ -1,12 +1,12 @@
 ---
-title: "_get_doserrno | Microsoft 문서"
-ms.custom: 
+title: _get_doserrno | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _get_doserrno
@@ -32,51 +32,56 @@ helpviewer_keywords:
 - get_doserrno function
 - _get_doserrno function
 ms.assetid: 7fec7be3-6e39-4181-846b-8ef24489361c
-caps.latest.revision: 
+caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccda58f0de7a22a5fe54e70e512cb4ae88d063e0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ba68356f13ed416a33f0bde54426ec2182e8e166
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getdoserrno"></a>_get_doserrno
-운영 체제에서 반환된 오류 값이 `errno` 값으로 변환되기 전에 가져옵니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-errno_t _get_doserrno(   
-   int * pValue   
-);   
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- [out] `pValue`  
- `_doserrno` 전역 매크로의 현재 값으로 채워지는 정수에 대한 포인터입니다.  
-  
-## <a name="return-value"></a>반환 값  
- `_get_doserrno` 함수는 성공하면 0을 반환하고 실패하면 오류 코드를 반환합니다. `pValue`가 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 이 함수는 `errno`를 `EINVAL`로 설정하고 `EINVAL`을 반환합니다.  
-  
-## <a name="remarks"></a>설명  
- 프로세스 실행을 시작하기 전에 CRT를 초기화하는 동안 `_doserrno` 전역 매크로가 0으로 설정됩니다. 운영 체제 오류를 반환하는 시스템 수준 함수 호출에 의해 반환되는 운영 체제 오류 값으로 설정되며, 실행 중 0으로 다시 설정되지 않습니다. 함수에서 반환되는 오류 값을 확인하는 코드를 작성할 때는 함수를 호출하기 전에 항상 [_set_doserrno](../../c-runtime-library/reference/set-doserrno.md)를 사용하여 `_doserrno`를 지웁니다. 다른 함수를 호출하면 `_doserrno`를 덮어쓸 수 있으므로 함수 호출 후 바로 `_get_doserrno`를 사용하여 값을 확인합니다.  
-  
- 이식 가능한 오류 코드에는 `_get_doserrno` 대신 [_get_errno](../../c-runtime-library/reference/get-errno.md)를 사용하는 것이 좋습니다.  
-  
- `_doserrno`의 가능한 값은 \<errno.h>에 정의되어 있습니다.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
-|-------------|---------------------|---------------------|  
-|`_get_doserrno`|\<stdlib.h>, \<cstdlib>(C++)|\<errno.h>, \<cerrno>(C++)|  
-  
- `_get_doserrno`는 Microsoft 확장입니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- [_set_doserrno](../../c-runtime-library/reference/set-doserrno.md)   
- [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
+
+으로 변환 되기 전에 운영 체제에서 반환 된 오류 값을 가져옵니다는 **errno** 값입니다.
+
+## <a name="syntax"></a>구문
+
+```C
+errno_t _get_doserrno( 
+   int * pValue 
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*pValue*<br/>
+현재 값으로 채워질 정수에 대 한 포인터는 **_doserrno** 글로벌 매크로입니다.
+
+## <a name="return-value"></a>반환 값
+
+경우 **_get_doserrno** 성공 하면 0을 반환 합니다; 실패 한 경우 오류 코드를 반환 합니다. 경우 *pValue* 은 **NULL**에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 이 함수를 설정 하는 경우 실행을 계속 허용 된, **errno** 를 **EINVAL** 반환 **EINVAL**합니다.
+
+## <a name="remarks"></a>설명
+
+**_doserrno** 프로세스 전에 실행을 시작, 전역 매크로 CRT 초기화 하는 동안 0으로 설정 됩니다. 운영 체제 오류를 반환하는 시스템 수준 함수 호출에 의해 반환되는 운영 체제 오류 값으로 설정되며, 실행 중 0으로 다시 설정되지 않습니다. 항상 일반 함수에 의해 반환 된 오류 값을 확인 하는 코드를 작성할 때 **_doserrno** 를 사용 하 여 [_set_doserrno](set-doserrno.md) 함수 호출 전에 합니다. 다른 함수를 호출 덮어쓸 수 있으므로 **_doserrno**를 사용 하 여 값을 확인 **_get_doserrno** 함수 호출 후 바로 합니다.
+
+권장 [_get_errno](get-errno.md) 대신 **_get_doserrno** 휴대용 오류 코드에 대 한 합니다.
+
+가능한 값 **_doserrno** 에 정의 된 \<. h >입니다.
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|선택적 헤더|
+|-------------|---------------------|---------------------|
+|**_get_doserrno**|\<stdlib.h>, \<cstdlib>(C++)|\<errno.h>, \<cerrno>(C++)|
+
+**_get_doserrno** Microsoft 확장입니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="see-also"></a>참고자료
+
+[_set_doserrno](set-doserrno.md)<br/>
+[errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)<br/>
