@@ -1,12 +1,12 @@
 ---
 title: _printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _printf_p
@@ -48,128 +48,133 @@ helpviewer_keywords:
 - tprintf_p_l function
 - _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74f33e1f11eed9b1757da1062fab9b494d43b61f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7698181ba23ececc251196702cb76a3b912788e4
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="printfp-printfpl-wprintfp-wprintfpl"></a>_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
-표준 출력 스트림에 서식이 지정된 출력을 인쇄하고, 서식 문자열에서 매개 변수가 사용되는 순서를 지정할 수 있도록 설정합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-int _printf_p(  
-   const char *format [,  
-   argument]...   
-);  
-int _printf_p_l(  
-   const char *format,  
-   locale_t locale [,  
-   argument]...   
-);  
-int _wprintf_p(  
-   const wchar_t *format [,  
-   argument]...   
-);  
-int _wprintf_p_l(  
-   const wchar_t *format,  
-   locale_t locale [,  
-   argument]...   
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `format`  
- 컨트롤의 서식을 지정합니다.  
-  
- `argument`  
- 선택적 인수입니다.  
-  
- `locale`  
- 사용할 로캘입니다.  
-  
-## <a name="return-value"></a>반환 값  
- 인쇄된 문자 수 또는 오류가 발생하는 경우 음수 값을 반환합니다.  
-  
-## <a name="remarks"></a>설명  
- `_printf_p` 함수는 일련의 문자와 값의 서식을 지정하여 표준 출력 스트림 `stdout`에 인쇄합니다. 인수가 `format` 문자열 다음에 나오는 경우 `format` 문자열에 해당 인수에 대한 출력 형식을 결정하는 지정이 포함되어야 합니다([printf_p Positional Parameters](../../c-runtime-library/printf-p-positional-parameters.md) 참조).  
-  
- `_printf_p`와 `printf_s`의 차이점은 `_printf_p`에서 위치 매개 변수를 지원한다는 점입니다. 이는 인수가 형식 문자열에서 사용되는 순서를 지정할 수 있습니다. 자세한 내용은 [printf_p 위치 매개 변수](../../c-runtime-library/printf-p-positional-parameters.md)를 참조하세요.  
-  
- `_wprintf_p`는 `_printf_p`의 와이드 문자 버전이며, 이 두 항목은 스트림이 ANSI 모드에서 열리는 경우 동일하게 작동합니다. `_printf_p`는 현재 UNICODE 스트림에 대한 출력을 지원하지 않습니다.  
-  
- `_l` 접미사가 있는 이러한 함수 버전은 현재 스레드 로캘 대신 전달된 로캘 매개 변수를 사용하는 경우를 제외하고는 동일합니다.  
-  
+
+표준 출력 스트림에 서식이 지정된 출력을 인쇄하고, 서식 문자열에서 매개 변수가 사용되는 순서를 지정할 수 있도록 설정합니다.
+
+## <a name="syntax"></a>구문
+
+```C
+int _printf_p(
+   const char *format [,
+   argument]...
+);
+int _printf_p_l(
+   const char *format,
+   locale_t locale [,
+   argument]...
+);
+int _wprintf_p(
+   const wchar_t *format [,
+   argument]...
+);
+int _wprintf_p_l(
+   const wchar_t *format,
+   locale_t locale [,
+   argument]...
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*format*<br/>
+컨트롤의 서식을 지정합니다.
+
+*argument*<br/>
+선택적 인수입니다.
+
+*locale*<br/>
+사용할 로캘입니다.
+
+## <a name="return-value"></a>반환 값
+
+인쇄된 문자 수 또는 오류가 발생하는 경우 음수 값을 반환합니다.
+
+## <a name="remarks"></a>설명
+
+**_printf_p** 함수 포맷 하 고 일련의 문자 및 값을 표준 출력 스트림에 인쇄 **stdout**합니다. 인수를 수행 하는 경우는 *형식* 문자열은 *형식* 문자열 인수에 대 한 출력 형식을 결정 하는 사양에 포함 되어야 합니다 (참조 [printf_p 위치 매개 변수](../../c-runtime-library/printf-p-positional-parameters.md)).
+
+차이 **_printf_p** 및 **printf_s** 은 **_printf_p** 지원 위치 매개 변수를 인수는 순서를 지정할 수 있습니다 형식 문자열에 사용 합니다. 자세한 내용은 [printf_p 위치 매개 변수](../../c-runtime-library/printf-p-positional-parameters.md)를 참조하세요.
+
+**_wprintf_p** 의 와이드 문자 버전이 **_printf_p**; 스트림이 ANSI 모드에서 열리는 경우 동일 하 게 작동 합니다. **_printf_p** 현재 출력 유니코드 스트림을 지원 하지 않습니다.
+
+있는 이러한 함수 버전은 **_l** 은 현재 스레드 로캘 대신 전달 된 로캘 매개 변수를 사용 하는 점을 제외 하 고 접미사는 동일 합니다.
+
 > [!IMPORTANT]
->  `format` 이 사용자 정의 문자열이 아닌지 확인하세요.  
-  
- `format` 또는 `argument`가 `NULL`이거나 서식 문자열에 잘못된 서식 지정 문자가 포함되어 있는 경우 `_printf_p` 및 `_wprintf_p` 함수는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)의 설명대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용한 경우 함수는 -1을 반환하고 `errno` 를 `EINVAL`로 설정합니다.  
-  
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
-  
-|Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tprintf_p`|`_printf_p`|`_printf_p`|`_wprintf_p`|  
-|`_tprintf_p_l`|`_printf_p_l`|`_printf_p_l`|`_wprintf_p_l`|  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`_printf_p`, `_printf_p_l`|\<stdio.h>|  
-|`_wprintf_p`, `_wprintf_p_l`|\<stdio.h> 또는 \<wchar.h>|  
-  
-콘솔 유니버설 Windows 플랫폼 (UWP) 응용 프로그램에서 지원 되지 않습니다. 콘솔을 사용 하는 연결 된 표준 스트림 핸들 `stdin`, `stdout`, 및 `stderr`, C 런타임 함수 UWP 앱에서 사용할 수 있는 전에 리디렉션되어야 합니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
-  
-## <a name="example"></a>예  
-  
-```  
-// crt_printf_p.c  
-// This program uses the _printf_p and _wprintf_p  
-// functions to choose the order in which parameters  
-// are used.  
-  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   // Positional arguments   
-   _printf_p( "Specifying the order: %2$s %3$s %1$s %4$s %5$s.\n",  
-              "little", "I'm", "a", "tea", "pot");  
-  
-   // Resume arguments  
-   _wprintf_p( L"Reusing arguments: %1$d %1$d %1$d %1$d\n", 10);  
-  
-   // Width argument  
-   _printf_p("Width specifiers: %1$*2$s", "Hello\n", 10);  
-}  
-```  
-  
-```Output  
-Specifying the order: I'm a little tea pot.  
-Reusing arguments: 10 10 10 10  
-Width specifiers:     Hello  
-```  
-  
-## <a name="see-also"></a>참고 항목  
- [부동 소수점 지원](../../c-runtime-library/floating-point-support.md)   
- [스트림 I/O](../../c-runtime-library/stream-i-o.md)   
- [로캘](../../c-runtime-library/locale.md)   
- [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](../../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)   
- [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
- [fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](../../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)   
- [scanf, _scanf_l, wscanf, _wscanf_l](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
- [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
- [_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l](../../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)   
- [sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)   
- [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)   
- [vprintf 함수](../../c-runtime-library/vprintf-functions.md)
+> *format*이 사용자 정의 문자열이 아닌지 확인하세요.
+
+경우 *형식* 또는 *인수* 는 **NULL**, 형식 문자열에 잘못 된 문자가 서식 지정, 또는 **_printf_p** 및 **_wprintf_p** 에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 하는 함수를 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 함수는-1 반환 하 고 집합을 계속 하려면 실행 허용 된 경우 **errno** 를 **EINVAL**합니다.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
+
+|Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tprintf_p**|**_printf_p**|**_printf_p**|**_wprintf_p**|
+|**_tprintf_p_l**|**_printf_p_l**|**_printf_p_l**|**_wprintf_p_l**|
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**_printf_p**, **_printf_p_l**|\<stdio.h>|
+|**_wprintf_p**, **_wprintf_p_l**|\<stdio.h> 또는 \<wchar.h>|
+
+콘솔 유니버설 Windows 플랫폼 (UWP) 응용 프로그램에서 지원 되지 않습니다. 콘솔을 사용 하는 연결 된 표준 스트림 핸들 **stdin**, **stdout**, 및 **stderr**, C 런타임 함수 UWP 앱에서 사용할 수 있는 전에 리디렉션되어야 . 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="example"></a>예제
+
+```C
+// crt_printf_p.c
+// This program uses the _printf_p and _wprintf_p
+// functions to choose the order in which parameters
+// are used.
+
+#include <stdio.h>
+
+int main( void )
+{
+   // Positional arguments
+   _printf_p( "Specifying the order: %2$s %3$s %1$s %4$s %5$s.\n",
+              "little", "I'm", "a", "tea", "pot");
+
+   // Resume arguments
+   _wprintf_p( L"Reusing arguments: %1$d %1$d %1$d %1$d\n", 10);
+
+   // Width argument
+   _printf_p("Width specifiers: %1$*2$s", "Hello\n", 10);
+}
+```
+
+```Output
+Specifying the order: I'm a little tea pot.
+Reusing arguments: 10 10 10 10
+Width specifiers:     Hello
+```
+
+## <a name="see-also"></a>참고자료
+
+[부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
+[스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>
+[fopen, _wfopen](fopen-wfopen.md)<br/>
+[_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
+[fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
+[fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l](fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)<br/>
+[scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
+[scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>
+[_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l](sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)<br/>
+[vprintf 함수](../../c-runtime-library/vprintf-functions.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "_get_pgmptr | Microsoft 문서"
-ms.custom: 
+title: _get_pgmptr | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _get_pgmptr
@@ -34,46 +34,51 @@ helpviewer_keywords:
 - pgmptr global variable
 - _pgmptr global variable
 ms.assetid: 29f16a9f-a685-4721-add3-7fad4f67eece
-caps.latest.revision: 
+caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c5fc146c3b1385879172ecd9e2c6862bca135d0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6af6203f8c6f40335a132f21929abf3cc4ce1808
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getpgmptr"></a>_get_pgmptr
-`_pgmptr` 전역 변수의 현재 값을 가져옵니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-errno_t _get_pgmptr(   
-   char **pValue   
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- [out] `pValue`  
- `_pgmptr` 변수의 현재 값으로 채울 문자열에 대한 포인터입니다.  
-  
-## <a name="return-value"></a>반환 값  
- 성공하는 경우 0을 반환하고, 실패하는 경우 오류 코드를 반환합니다. `pValue`가 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 이 함수는 `errno`를 `EINVAL`로 설정하고 `EINVAL`을 반환합니다.  
-  
-## <a name="remarks"></a>설명  
- 호출 `_get_pgmptr` 프로그램 좁은 진입점이 있으면 같은 `main()` 또는 `WinMain()`합니다. `_pgmptr` 전역 변수는 프로세스와 관련 된 실행 파일의 전체 경로 포함 합니다. 자세한 내용은 [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)를 참조하세요.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`_get_pgmptr`|\<stdlib.h>|  
-  
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- [_get_wpgmptr](../../c-runtime-library/reference/get-wpgmptr.md)
+
+현재 값을 가져옵니다는 **_pgmptr** 전역 변수입니다.
+
+## <a name="syntax"></a>구문
+
+```C
+errno_t _get_pgmptr( 
+   char **pValue 
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*pValue*<br/>
+현재 값으로 채울 문자열에 대 한 포인터는 **_pgmptr** 변수입니다.
+
+## <a name="return-value"></a>반환 값
+
+성공하는 경우 0을 반환하고, 실패하는 경우 오류 코드를 반환합니다. 경우 *pValue* 은 **NULL**에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 이 함수를 설정 하는 경우 실행을 계속 허용 된, **errno** 를 **EINVAL** 반환 **EINVAL**합니다.
+
+## <a name="remarks"></a>설명
+
+호출 **_get_pgmptr** 프로그램 좁은 진입점이 있으면 같은 **main ()** 또는 **WinMain()** 합니다. **_pgmptr** 전역 변수는 프로세스와 관련 된 실행 파일의 전체 경로 포함 합니다. 자세한 내용은 [_pgmptr, _wpgmptr](../../c-runtime-library/pgmptr-wpgmptr.md)를 참조하세요.
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**_get_pgmptr**|\<stdlib.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="see-also"></a>참고자료
+
+[_get_wpgmptr](get-wpgmptr.md)<br/>

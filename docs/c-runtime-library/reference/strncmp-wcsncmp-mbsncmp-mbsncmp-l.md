@@ -1,12 +1,12 @@
 ---
 title: strncmp, wcsncmp, _mbsncmp, _mbsncmp_l | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - strncmp
@@ -57,161 +57,166 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-caps.latest.revision: 
+caps.latest.revision: 28
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92ec6c3c6a28258ffc953fc9c7f5a344e1f3d0f9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 924c3c2bd6517d5a8a8996a6e5983ed7d143dbcf
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strncmp-wcsncmp-mbsncmp-mbsncmpl"></a>strncmp, wcsncmp, _mbsncmp, _mbsncmp_l
-두 문자열의 문자를 지정한 수까지 비교합니다.  
-  
+
+두 문자열의 문자를 지정한 수까지 비교합니다.
+
 > [!IMPORTANT]
->  Windows 런타임에서 실행되는 응용 프로그램에서는 `_mbsncmp` 및 `_mbsncmp_l`을 사용할 수는 없습니다. 자세한 내용은 참조 [CRT 함수는 유니버설 Windows 플랫폼 앱에서 지원 되지 않습니다](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-int strncmp(  
-   const char *string1,  
-   const char *string2,  
-   size_t count   
-);  
-int wcsncmp(  
-   const wchar_t *string1,  
-   const wchar_t *string2,  
-   size_t count   
-);  
-int _mbsncmp(  
-   const unsigned char *string1,  
-   const unsigned char *string2,  
-   size_t count   
-);  
-int _mbsncmp_l(  
-   const unsigned char *string1,  
-   const unsigned char *string2,  
-   size_t count,   
-   _locale_t locale  
-);int _mbsnbcmp(  
-   const unsigned char *string1,  
-   const unsigned char *string2,  
-   size_t count   
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `string1, string2`  
- 비교할 문자열입니다.  
-  
- `count`  
- 비교할 문자 수입니다.  
-  
- `locale`  
- 사용할 로캘입니다.  
-  
-## <a name="return-value"></a>반환 값  
- 반환 값은 다음과 같이 `string1` 및 `string2` 부분 문자열의 관계를 나타냅니다.  
-  
-|반환 값|설명|  
-|------------------|-----------------|  
-|< 0|`string1` 부분 문자열이 `string2` 부분 문자열보다 작습니다.|  
-|0|`string1` 부분 문자열이 `string2` 부분 문자열과 같습니다.|  
-|> 0|`string1` 부분 문자열이 `string2` 부분 문자열보다 큽니다.|  
-  
- 매개 변수 유효성 검사 오류 시 `_mbsncmp` 및 `_mbsncmp_l`은 \<string.h> 및 \<mbstring.h>에 정의된 `_NLSCMPERROR`를 반환합니다.  
-  
-## <a name="remarks"></a>설명  
- `strncmp` 함수는 `count` 및 `string1`에서 최대 처음 `string2`개 문자까지 서수 비교를 수행한 다음 부분 문자열 간의 관계를 나타내는 값을 반환합니다. `strncmp`는 대소문자를 구분하는 `_strnicmp` 버전입니다. `wcsncmp` 및 `_mbsncmp`는 각각 대소문자를 구분하는 `_wcsnicmp` 및 `_mbsnicmp` 버전입니다.  
-  
- `wcsncmp` 및 `_mbsncmp`는 `strncmp`의 와이드 문자 및 멀티바이트 문자 버전입니다. `wcsncmp`의 인수는 와이드 문자열이고 `_mbsncmp`의 인수는 멀티바이트 문자열입니다. `_mbsncmp`는 멀티바이트 코드 페이지에 따라 멀티바이트 문자 시퀀스를 인식하며 오류 발생 시 `_NLSCMPERROR`를 반환합니다.  
-  
- 또한 `_mbsncmp` 및 `_mbsncmp_l`은 매개 변수의 유효성을 검사합니다. `string1` 또는 `string2`가 null 포인터인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용한 경우 `_mbsncmp` 및 `_mbsncmp_l`은 `_NLSCMPERROR`를 반환하며 `errno`는 `EINVAL`로 설정됩니다. `strncmp` 및 `wcsncmp`는 매개 변수의 유효성을 검사하지 않습니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.  
-  
- 로캘의 `_mbsncmp` 범주 설정이 `_mbsncmp_l` 및 `LC_CTYPE`의 비교 동작에 영향을 줍니다. 이 설정은 멀티바이트 문자의 선행 및 후행 바이트 검색을 제어합니다. 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_mbsncmp` 함수는 이 로캘 종속 동작에 대해 현재 로캘을 사용합니다. `_mbsncmp_l` 함수는 `locale` 매개 변수를 대신 사용한다는 점을 제외하면 이 함수와 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요. 싱글바이트 로캘의 경우 이러한 함수의 동작은 `strncmp`와 같습니다.  
-  
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑  
-  
-|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
-|---------------------|------------------------------------|--------------------|-----------------------|  
-|`_tcsnccmp`|`strncmp`|`_mbsncmp`|`wcsncmp`|  
-|`_tcsncmp`|`strncmp`|`_mbsnbcmp`|`wcsncmp`|  
-|`_tccmp`|매크로 또는 인라인 함수에 매핑|`_mbsncmp`|매크로 또는 인라인 함수에 매핑|  
-|**해당 없음**|**해당 없음**|`_mbsncmp_l`|**해당 없음**|  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`strncmp`|\<string.h>|  
-|`wcsncmp`|\<string.h> 또는 \<wchar.h>|  
-|`_mbsncmp`, `_mbsncmp_l`|\<mbstring.h>|  
-  
- 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="example"></a>예  
-  
-```  
-// crt_strncmp.c  
-#include <string.h>  
-#include <stdio.h>  
-  
-char string1[] = "The quick brown dog jumps over the lazy fox";  
-char string2[] = "The QUICK brown fox jumps over the lazy dog";  
-  
-int main( void )  
-{  
-   char tmp[20];  
-   int result;  
-   printf( "Compare strings:\n      %s\n      %s\n\n",  
-           string1, string2 );  
-   printf( "Function:   strncmp (first 10 characters only)\n" );  
-   result = strncmp( string1, string2 , 10 );  
-   if( result > 0 )  
-      strcpy_s( tmp, sizeof(tmp), "greater than" );  
-   else if( result < 0 )  
-      strcpy_s( tmp, sizeof(tmp), "less than" );  
-   else  
-      strcpy_s( tmp, sizeof(tmp), "equal to" );  
-   printf( "Result:      String 1 is %s string 2\n\n", tmp );  
-   printf( "Function:   strnicmp _strnicmp (first 10 characters only)\n" );  
-   result = _strnicmp( string1, string2, 10 );  
-   if( result > 0 )  
-      strcpy_s( tmp, sizeof(tmp), "greater than" );  
-   else if( result < 0 )  
-      strcpy_s( tmp, sizeof(tmp), "less than" );  
-   else  
-      strcpy_s( tmp, sizeof(tmp), "equal to" );  
-   printf( "Result:      String 1 is %s string 2\n", tmp );  
-}  
-```  
-  
-```Output  
-Compare strings:  
-      The quick brown dog jumps over the lazy fox  
-      The QUICK brown fox jumps over the lazy dog  
-  
-Function:   strncmp (first 10 characters only)  
-Result:      String 1 is greater than string 2  
-  
-Function:   strnicmp _strnicmp (first 10 characters only)  
-Result:      String 1 is equal to string 2  
-```  
-  
-## <a name="see-also"></a>참고 항목  
- [문자열 조작](../../c-runtime-library/string-manipulation-crt.md)   
- [로캘](../../c-runtime-library/locale.md)   
- [멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
- [_mbsnbcmp, _mbsnbcmp_l](../../c-runtime-library/reference/mbsnbcmp-mbsnbcmp-l.md)   
- [_mbsnbicmp, _mbsnbicmp_l](../../c-runtime-library/reference/mbsnbicmp-mbsnbicmp-l.md)   
- [strcmp, wcscmp, _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   
- [strcoll 함수](../../c-runtime-library/strcoll-functions.md)   
- [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](../../c-runtime-library/reference/strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)   
- [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
- [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](../../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)   
- [strspn, wcsspn, _mbsspn, _mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)
+> **_mbsncmp** 및 **_mbsncmp_l** 는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
+
+## <a name="syntax"></a>구문
+
+```C
+int strncmp(
+   const char *string1,
+   const char *string2,
+   size_t count
+);
+int wcsncmp(
+   const wchar_t *string1,
+   const wchar_t *string2,
+   size_t count
+);
+int _mbsncmp(
+   const unsigned char *string1,
+   const unsigned char *string2,
+   size_t count
+);
+int _mbsncmp_l(
+   const unsigned char *string1,
+   const unsigned char *string2,
+   size_t count,
+   _locale_t locale
+);int _mbsnbcmp(
+   const unsigned char *string1,
+   const unsigned char *string2,
+   size_t count
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*string1*, *문자열 2*<br/>
+비교할 문자열입니다.
+
+*count*<br/>
+비교할 문자 수입니다.
+
+*locale*<br/>
+사용할 로캘입니다.
+
+## <a name="return-value"></a>반환 값
+
+반환 값의 부분 문자열 간의 관계를 나타냅니다. *string1* 및 *string2* 다음과 같습니다.
+
+|반환 값|설명|
+|------------------|-----------------|
+|< 0|*string1* 부분 문자열 보다 작은 *string2* 부분 문자열|
+|0|*string1* 부분 문자열을 동일한 *string2* 부분 문자열|
+|> 0|*string1* 부분 문자열 보다 큰 *string2* 부분 문자열|
+
+매개 변수 유효성 검사 오류 시 **_mbsncmp** 및 **_mbsncmp_l** 반환 **_NLSCMPERROR**에 정의 된 \<g. h > 및 \< mbstring.h > 합니다.
+
+## <a name="remarks"></a>설명
+
+**strncmp** 최대 첫 번째 서 수 비교를 수행 하는 함수 *count* 에서 문자 *string1* 및 *string2* 및 부분 문자열 간의 관계를 나타내는 값을 반환 합니다. **strncmp** 의 대/소문자 구분 버전이 **_strnicmp**합니다. **wcsncmp** 및 **_mbsncmp** 의 대/소문자 구분 버전 **_wcsnicmp** 및 **_mbsnicmp**합니다.
+
+**wcsncmp** 및 **_mbsncmp** 와이드 문자 및 멀티 바이트 문자 버전의 **strncmp**합니다. 인수 **wcsncmp** 은 와이드 문자열이 고 **_mbsncmp** 는 멀티 바이트 문자 문자열입니다. **_mbsncmp** 멀티 바이트 코드 페이지에 따라 멀티 바이트 문자 시퀀스를 인식 하 고 반환 **_NLSCMPERROR** 오류 발생 시.
+
+또한 **_mbsncmp** 및 **_mbsncmp_l** 매개 변수 유효성 검사 합니다. 경우 *string1* 또는 *string2* 가 null 포인터에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 하도록 허용 된 경우 **_mbsncmp** 및 **_mbsncmp_l** 반환 **_NLSCMPERROR** 설정 **errno** 를  **EINVAL**합니다. **strncmp** 및 **wcsncmp** 매개 변수를 확인 하지 않습니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다.
+
+비교 동작 **_mbsncmp** 및 **_mbsncmp_l** 의 설정에 의해 영향을 받는 **LC_CTYPE** 로캘 범주를 설정 합니다. 이 설정은 멀티바이트 문자의 선행 및 후행 바이트 검색을 제어합니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. **_mbsncmp** 함수가 로캘 종속 동작에 대 한 현재 로캘을 사용 합니다. **_mbsncmp_l** 사용 한다는 점을 제외 하 고 함수는 동일는 *로캘* 매개 변수 대신 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요. 이러한 함수의 동작은 동일 로캘이 싱글바이트 로캘의 경우 **strncmp**합니다.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
+
+|TCHAR.H 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
+|---------------------|------------------------------------|--------------------|-----------------------|
+|**_tcsnccmp**|**strncmp**|**_mbsncmp**|**wcsncmp**|
+|**_tcsncmp**|**strncmp**|**_mbsnbcmp**|**wcsncmp**|
+|**_tccmp**|매크로 또는 인라인 함수에 매핑|**_mbsncmp**|매크로 또는 인라인 함수에 매핑|
+|**해당 없음**|**해당 없음**|**_mbsncmp_l**|**해당 없음**|
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**strncmp**|\<string.h>|
+|**wcsncmp**|\<string.h> 또는 \<wchar.h>|
+|**_mbsncmp**, **_mbsncmp_l**|\<mbstring.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="example"></a>예제
+
+```C
+// crt_strncmp.c
+#include <string.h>
+#include <stdio.h>
+
+char string1[] = "The quick brown dog jumps over the lazy fox";
+char string2[] = "The QUICK brown fox jumps over the lazy dog";
+
+int main( void )
+{
+   char tmp[20];
+   int result;
+   printf( "Compare strings:\n      %s\n      %s\n\n",
+           string1, string2 );
+   printf( "Function:   strncmp (first 10 characters only)\n" );
+   result = strncmp( string1, string2 , 10 );
+   if( result > 0 )
+      strcpy_s( tmp, sizeof(tmp), "greater than" );
+   else if( result < 0 )
+      strcpy_s( tmp, sizeof(tmp), "less than" );
+   else
+      strcpy_s( tmp, sizeof(tmp), "equal to" );
+   printf( "Result:      String 1 is %s string 2\n\n", tmp );
+   printf( "Function:   strnicmp _strnicmp (first 10 characters only)\n" );
+   result = _strnicmp( string1, string2, 10 );
+   if( result > 0 )
+      strcpy_s( tmp, sizeof(tmp), "greater than" );
+   else if( result < 0 )
+      strcpy_s( tmp, sizeof(tmp), "less than" );
+   else
+      strcpy_s( tmp, sizeof(tmp), "equal to" );
+   printf( "Result:      String 1 is %s string 2\n", tmp );
+}
+```
+
+```Output
+Compare strings:
+      The quick brown dog jumps over the lazy fox
+      The QUICK brown fox jumps over the lazy dog
+
+Function:   strncmp (first 10 characters only)
+Result:      String 1 is greater than string 2
+
+Function:   strnicmp _strnicmp (first 10 characters only)
+Result:      String 1 is equal to string 2
+```
+
+## <a name="see-also"></a>참고자료
+
+[문자열 조작](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[로캘](../../c-runtime-library/locale.md)<br/>
+[멀티바이트 문자 시퀀스 해석](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
+[_mbsnbicmp, _mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>
+[strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
+[strcoll 함수](../../c-runtime-library/strcoll-functions.md)<br/>
+[_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
+[strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
+[_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
+[strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>

@@ -1,6 +1,6 @@
 ---
-title: "_beginthread, _beginthreadex | Microsoft 문서"
-ms.custom: 
+title: _beginthread, _beginthreadex | Microsoft 문서
+ms.custom: ''
 ms.date: 02/27/2018
 ms.technology:
 - cpp-standard-libraries
@@ -40,11 +40,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d7b575883bfad702d32a161a985a76494797747
-ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.openlocfilehash: f5a85367a59ca16b9447c8fd60aa61932bf9797a
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -84,7 +84,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 ### <a name="parameters"></a>매개 변수
 
 *start_address*<br/>
-새 스레드의 실행을 시작하는 루틴의 시작 주소입니다. `_beginthread`의 경우 호출 규칙은 [__cdecl](../../cpp/cdecl.md)(네이티브 코드용) 또는 [__clrcall](../../cpp/clrcall.md)(관리 코드용)입니다. `_beginthreadex`의 경우 호출 규칙은 [__stdcall](../../cpp/stdcall.md)(네이티브 코드용) 또는 [__clrcall](../../cpp/clrcall.md)(관리 코드용)입니다.
+새 스레드의 실행을 시작하는 루틴의 시작 주소입니다. 에 대 한 **_beginthread**, 호출 규칙은 [__cdecl](../../cpp/cdecl.md) (네이티브 코드용) 또는 [__clrcall](../../cpp/clrcall.md) (관리 코드용)에 대 한; **_beginthreadex**, 있거나 [__stdcall](../../cpp/stdcall.md) (네이티브 코드용) 또는 [__clrcall](../../cpp/clrcall.md) (관리 코드용)입니다.
 
 *stack_size*<br/>
 새 스레드의 스택 크기 또는 0입니다.
@@ -96,72 +96,72 @@ uintptr_t _beginthreadex( // MANAGED CODE
 반환된 핸들이 자식 프로세스에 의해 상속되는지 여부를 결정하는 [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) 구조에 대한 포인터입니다. 경우 *보안* 가 NULL 인 경우 핸들을 상속할 수 없습니다. Windows 95 응용 프로그램에서 NULL이어야 합니다.
 
 *initflag*<br/>
-새 스레드의 초기 상태를 제어하는 플래그입니다. 설정 *initflag* 를 `0` 실행, 즉시 실행 또는 `CREATE_SUSPENDED` 일시 중단 된 상태 이면 스레드를 만들를 사용 하 여 [ResumeThread](http://msdn.microsoft.com/library/windows/desktop/ms685086.aspx) 는 스레드를 실행 하 합니다. 설정 *initflag* 를 `STACK_SIZE_PARAM_IS_A_RESERVATION` 플래그를 사용 하 여 *stack_size* 바이트입니다;이 플래그를 지정 하지 않으면를 스택의 초기 예약 크기도 *stack_size* 지정는 커밋 크기입니다.
+새 스레드의 초기 상태를 제어하는 플래그입니다. 설정 *initflag* 를 즉시 실행 하려면 0 또는 **CREATE_SUSPENDED** 일시 중단 된 상태 이면 스레드를 만들를 사용 하 여 [ResumeThread](http://msdn.microsoft.com/library/windows/desktop/ms685086.aspx) 는 스레드를 실행 하 합니다. 설정 *initflag* 를 **STACK_SIZE_PARAM_IS_A_RESERVATION** 플래그를 사용 하 여 *stack_size* 초기 바이트의 스택 크기 예약 되므로이 플래그는 지정 되지 않았으므로, *stack_size* 커밋 크기를 지정 합니다.
 
 *thrdaddr*<br/>
 스레드 식별자를 수신하는 32비트 변수를 가리킵니다. NULL인 경우는 사용되지 않습니다.
 
 ## <a name="return-value"></a>반환 값
 
-성공하면 이러한 함수가 각각 새로 만든 스레드에 대한 핸들을 반환하지만 새로 만든 스레드가 너무 빨리 종료되는 경우 `_beginthread` 가 올바른 핸들을 반환할 수 없습니다. 설명 단원의 설명을 참조하세요. 오류로 인해 `_beginthread`가 -1L로 반환되고 `errno`는 스레드가 많을 경우 `EAGAIN`에 설정되고, 인수가 잘못되거나 스택 크기가 잘못된 경우`EINVAL`에 설정되며, 리소스(즉, 메모리)가 부족할 경우`EACCES`에 설정됩니다. 오류 발생 시 `_beginthreadex` 에서 0을 반환하고 `errno` 및 `_doserrno` 가 설정됩니다.
+새로 만든된 스레드에;에 대 한 핸들에 성공 하면 반환 이러한 각 함수 그러나 새로 만든된 스레드가 너무 빨리 종료 되는 경우, **_beginthread** 유효한 핸들을 반환할 수 없습니다. 설명 단원의 설명을 참조하세요. 오류 발생 시 **_beginthread** -1l로 반환 하 고 **errno** 로 설정 된 **EAGAIN** 너무 많은 스레드를에 없는 경우 **EINVAL** 인수가 유효 하지 않음 또는 스택 크기가 올바르지 않습니다. 또는 **EACCES** 경우 (예: 메모리) 리소스가 부족 합니다. 오류 발생 시 **_beginthreadex** 0을 반환 하 고 **errno** 및 **_doserrno** 설정 됩니다.
 
-경우 *start_address* 가 null 인 경우에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 계속해서 실행하도록 허용한 경우 이러한 함수는 `errno` 를 `EINVAL` 로 설정하고 -1을 반환합니다.
+경우 *start_address* 가 null 인 경우에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 허용 된, 이러한 함수 설정 **errno** 를 **EINVAL** 고-1을 반환 합니다.
 
 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
 
-`uintptr_t`에 대한 자세한 내용은 [표준 형식](../../c-runtime-library/standard-types.md)을 참조하세요.
+에 대 한 자세한 내용은 **uintptr_t**, 참조 [표준 형식](../../c-runtime-library/standard-types.md)합니다.
 
 ## <a name="remarks"></a>설명
 
-`_beginthread` 함수에서 루틴 실행을 시작 하는 스레드를 만듭니다 *start_address*합니다. 루틴 *start_address* 사용 해야 합니다는 `__cdecl` (네이티브 코드용) 또는 `__clrcall` (관리 코드용) 호출 규칙 및 반환 값이 없어야 합니다. 스레드가 루틴에서 반환되면 자동으로 종료됩니다. 스레드에 대한 자세한 내용은 [이전 코드를 위한 다중 스레드 지원(Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)을 참조하세요.
+**_beginthread** 함수에서 루틴 실행을 시작 하는 스레드를 만듭니다 *start_address*합니다. 루틴 *start_address* 사용 해야 합니다는 **__cdecl** (네이티브 코드용) 또는 **__clrcall** (관리 코드용) 호출 규칙 및 반환 값이 없어야 합니다. 스레드가 루틴에서 반환되면 자동으로 종료됩니다. 스레드에 대한 자세한 내용은 [이전 코드를 위한 다중 스레드 지원(Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)을 참조하세요.
 
-`_beginthreadex`는 `_beginthread`보다 Win32 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453.aspx) API와 더 비슷합니다. `_beginthreadex` 와 `_beginthread` 의 차이점은 다음과 같습니다.
+**_beginthreadex** win32 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453.aspx) API와 더 밀접 하 게 보다 **_beginthread** 않습니다. **_beginthreadex** 에서 다른 **_beginthread** 다음과 같은 방법으로:
 
-- `_beginthreadex` 세 개의 추가 매개 변수: *initflag*, *보안*, 및 `threadaddr`합니다. 새 스레드는 지정 된 보안 또는 일시 중단된 된 상태에서 만들 수 있으며를 사용 하 여 액세스할 수 *thrdaddr*, 스레드 식별자 인 합니다.
+- **_beginthreadex** 세 개의 추가 매개 변수: *initflag*, *보안*, 및 **threadaddr**합니다. 새 스레드는 지정 된 보안 또는 일시 중단된 된 상태에서 만들 수 있으며를 사용 하 여 액세스할 수 *thrdaddr*, 스레드 식별자 인 합니다.
 
-- 루틴 *start_address* 에 전달 되는 `_beginthreadex` 사용 해야 합니다는 `__stdcall` (네이티브 코드용) 또는 `__clrcall` (관리 코드용) 호출 규칙 및 스레드 종료 코드를 반환 해야 합니다.
+- 루틴 *start_address* 에 전달 되는 **_beginthreadex** 사용 해야 합니다는 **__stdcall** (네이티브 코드용) 또는 **__clrcall** ( 관리 코드) 호출 규칙 및 스레드 종료 코드를 반환 해야 합니다.
 
-- `_beginthreadex` 는 실패 시 -1L이 아닌 0을 반환합니다.
+- **_beginthreadex** 시-1l이 아닌 실패, 0을 반환 합니다.
 
-- `_beginthreadex` 를 사용하여 생성된 스레드는 [_endthreadex](../../c-runtime-library/reference/endthread-endthreadex.md)에 대한 호출로 종료됩니다.
+- 사용 하 여 만든 스레드에서 **_beginthreadex** 를 호출 하 여 종료 [_endthreadex](endthread-endthreadex.md)합니다.
 
-`_beginthreadex` 함수를 사용하면 `_beginthread` 보다 스레드를 만드는 방법을 더 자세하게 제어할 수 있습니다. `_endthreadex` 함수는 더 유연하기도 합니다. 예를 들어, `_beginthreadex`를 사용하면 보안 정보를 사용하고 스레드의 초기 상태(실행 중 또는 일시 중단됨)를 설정하고 새로 만든 스레드의 스레드 식별자를 가져올 수 있습니다. `_beginthreadex` 로 작업할 수 없는 동기화 API로 `_beginthread`에서 반환된 스레드 핸들을 사용할 수도 있습니다.
+**_beginthreadex** 함수를 보다 스레드를 만드는 방법을 보다 자세히 제어 사용 **_beginthread** 않습니다. **_endthreadex** 함수는 더 유연 하기도 합니다. 예를 들어, **_beginthreadex**, 보안 정보를 사용 하 여, (실행 중 또는 일시 중단) 스레드의 초기 상태를 설정 및 새로 만든 스레드의 스레드 식별자를 가져올 수 있습니다. 반환 되는 스레드 핸들을 사용할 수 있습니다 **_beginthreadex** 동기화 Api로 작업할 수 없는로 **_beginthread**합니다.
 
-`_beginthreadex` 보다 `_beginthread`를 사용하는 것이 더 안전합니다. `_beginthread` 에 의해 생성된 스레드가 빨리 종료되는 경우 `_beginthread` 의 호출자로 반환된 핸들이 잘못되거나 다른 스레드를 가리킬 수 있습니다. 그러나 `_beginthreadex` 에 의해 반환된 핸들은 `_beginthreadex`의 호출자에 의해 닫혀야 하므로 `_beginthreadex` 가 오류를 반환하지 않은 경우 유효한 핸들이어야 합니다.
+이 사용 하도록 안전 **_beginthreadex** 보다 **_beginthread**합니다. 경우에 의해 생성 된 스레드 **_beginthread** 핸들의 호출자에 게 반환 되는 빨리 종료 **_beginthread** 잘못 되거나 다른 스레드를 가리킬 수 있습니다. 그러나에서 반환 되는 핸들 **_beginthreadex** 를 호출자에 의해 닫아야 **_beginthreadex**하는 경우 유효한 핸들 이어야 하므로 **_beginthreadex** 오류를 반환 하지 않았습니다.
 
-[_endthread](../../c-runtime-library/reference/endthread-endthreadex.md) 또는 `_endthreadex` 를 명시적으로 호출하여 스레드를 종료할 수 있지만 스레드가 매개 변수로 전달된 루틴에서 반환되면 `_endthread` 또는 `_endthreadex` 는 자동으로 호출됩니다. `_endthread` 또는 `_endthreadex` 에 대한 호출로 스레드를 종료하면 스레드에 할당된 리소스의 올바른 복구를 보장하는 데 도움이 됩니다.
+그러나 호출할 수 있습니다 [_endthread](endthread-endthreadex.md) 또는 **_endthreadex** 명시적으로 스레드를 종료할 **_endthread** 또는 **_endthreadex** 라고 자동으로 반환 될 때 스레드를 매개 변수로 전달 되는 루틴에서 합니다. 에 대 한 호출으로 스레드를 종료 **_endthread** 또는 **_endthreadex** 스레드에 대해 할당 되는 리소스의 올바른 복구 보장 합니다.
 
-`_endthread` 는 스레드 핸들을 자동으로 닫지만, `_endthreadex` 는 그렇지 않습니다. 따라서 `_beginthread` 및 `_endthread`를 사용할 때는 Win32 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API를 호출해서 스레드 핸들을 명시적으로 닫지 마세요. 이 동작은 Win32 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) API와 다릅니다.
+**_endthread** 스레드 핸들을 자동으로 닫지만 **_endthreadex** 는 그렇지 않습니다. 따라서 사용 하는 경우 **_beginthread** 및 **_endthread**를 명시적으로 닫지 마세요 스레드 핸들 Win32를 호출 하 여 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API입니다. 이 동작은 Win32 [ExitThread](http://msdn.microsoft.com/library/windows/desktop/ms682659.aspx) API와 다릅니다.
 
-> [!NOTE]  
-> Libcmt.lib로 연결된 실행 파일의 경우 런타임 시스템이 할당된 리소스를 회수할 수 있도록 Win32 `ExitThread` API를 호출하지 마세요. `_endthread` 및 `_endthreadex`는 할당된 스레드 리소스를 회수한 다음 `ExitThread`를 호출합니다.
+> [!NOTE]
+> Libcmt.lib로 연결 된 실행 파일에 대 한 Win32을 호출 하지 마십시오 **ExitThread** API 런타임 시스템을 회수 하지 않도록 있도록 할당 된 리소스입니다. **_endthread** 및 **_endthreadex** 할당 된 스레드 리소스를 회수 한 다음 호출 **ExitThread**합니다.
 
-`_beginthread` 또는 `_beginthreadex`가 호출되면 운영 체제가 스택 할당을 처리합니다. 스레드 스택의 주소를 이러한 함수 중 하나에 전달할 필요가 없습니다. 또한는 *stack_size* 인수는 경우 운영 체제는 주 스레드에 지정 된 스택과 동일한 값 사용는 0 일 수 있습니다.
+운영 체제가 스택 할당을 처리 때 어느 **_beginthread** 또는 **_beginthreadex** 버전이 호출 됩니다; 스레드 스택의 주소를 이러한 함수 중 하나에 전달할 필요가 없습니다. 또한는 *stack_size* 인수는 경우 운영 체제는 주 스레드에 지정 된 스택과 동일한 값 사용는 0 일 수 있습니다.
 
-*arglist* 새로 만든된 스레드에 전달 될 매개 변수입니다. 일반적으로 문자열과 같은 데이터 항목의 주소입니다. *arglist* 필요 하지 않은 경우 NULL이 될 수 있지만 `_beginthread` 및 `_beginthreadex` 에 새로운 스레드로 전달할 값을 제공 해야 합니다. 임의의 스레드가 `abort`, `exit`, `_exit`또는 `ExitProcess`를 호출하면 모든 스레드가 종료됩니다.
+*arglist* 새로 만든된 스레드에 전달 될 매개 변수입니다. 일반적으로 문자열과 같은 데이터 항목의 주소입니다. *arglist* 필요 하지 않은 경우 NULL이 될 수 있지만 **_beginthread** 및 **_beginthreadex** 에 새로운 스레드로 전달할 값을 제공 해야 합니다. 임의의 스레드가 호출 하면 모든 스레드가 종료 됩니다 [중단](abort.md), **종료**, **_exit**, 또는 **ExitProcess**합니다.
 
-새 스레드 로캘 프로세스별 전역 현재 로캘 정보를 사용 하 여 초기화 됩니다. 스레드별 로캘을 호출 하 여 사용 하도록 설정 하는 경우 [_configthreadlocale](../../c-runtime-library/reference/configthreadlocale.md) (전역으로 또는 새 스레드에 대 한만), 스레드 수의 로캘을 독립적으로 다른 스레드에서 호출 하 여 변경할 `setlocale` 또는 `_wsetlocale`합니다. 스레드별 로캘 플래그가 설정 되지 않은 스레드 새로 만든 모든 스레드를 비롯 하 여 모든 스레드는 또한 스레드별 로캘 플래그를 설정 하 고, 필요가 없습니다에 로캘 정보에 영향을 줄 수 있습니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+새 스레드 로캘 프로세스별 전역 현재 로캘 정보를 사용 하 여 초기화 됩니다. 스레드별 로캘을 호출 하 여 사용 하도록 설정 하는 경우 [_configthreadlocale](configthreadlocale.md) (전역으로 또는 새 스레드에 대 한만), 스레드 수의 로캘을 독립적으로 다른 스레드에서 호출 하 여 변경할 **setlocale** 또는 **_wsetlocale**합니다. 스레드별 로캘 플래그가 설정 되지 않은 스레드 새로 만든 모든 스레드를 비롯 하 여 모든 스레드는 또한 스레드별 로캘 플래그를 설정 하 고, 필요가 없습니다에 로캘 정보에 영향을 줄 수 있습니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-혼합형 및 순수형 코드에 대 한 `_beginthread` 및 `_beginthreadex` 각각 두 개의 오버 로드를 갖고 있습니다. 하나는 네이티브 호출 규칙 함수 포인터가 고 다른 오버 로드는 `__clrcall` 함수 포인터입니다. 첫 번째 오버로드는 응용 프로그램 도메인에 안전하지 않고 어떤 방법으로도 안전할 수 없습니다. 혼합형 또는 순수형 코드를 작성하는 경우 새 스레드가 관리되는 리소스에 액세스하기 전에 올바른 응용 프로그램 도메인에 들어가는지 확인해야 합니다. 이 작업은 예를 들어 [call_in_appdomain 함수](../../dotnet/call-in-appdomain-function.md)를 사용하여 수행할 수 있습니다. 두 번째 오버로드는 응용 프로그램 도메인에 영향을 주지 않습니다. 새로 생성된 스레드는 항상 `_beginthread` 또는 `_beginthreadex`호출자의 응용 프로그램 도메인에서 종료됩니다.
+혼합형 및 순수형 코드에 대 한 **_beginthread** 및 **_beginthreadex** 각각 두 개의 오버 로드를 갖고 있습니다. 하나는 네이티브 호출 규칙 함수 포인터가 고 다른 오버 로드는 **__clrcall** 함수 포인터입니다. 첫 번째 오버로드는 응용 프로그램 도메인에 안전하지 않고 어떤 방법으로도 안전할 수 없습니다. 혼합형 또는 순수형 코드를 작성하는 경우 새 스레드가 관리되는 리소스에 액세스하기 전에 올바른 응용 프로그램 도메인에 들어가는지 확인해야 합니다. 이 작업은 예를 들어 [call_in_appdomain 함수](../../dotnet/call-in-appdomain-function.md)를 사용하여 수행할 수 있습니다. 두 번째 오버 로드는 응용 프로그램 도메인 안전 합니다. 호출자의 응용 프로그램 도메인에서 새로 만든된 스레드에 항상 끝나는 **_beginthread** 또는 **_beginthreadex**합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴에서 반환된 값|필수 헤더|
+|루틴|필수 헤더|
 |-------------|---------------------|
-|`_beginthread`|\<process.h>|
-|`_beginthreadex`|\<process.h>|
+|**_beginthread**|\<process.h>|
+|**_beginthreadex**|\<process.h>|
 
 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
 ## <a name="libraries"></a>라이브러리
 
-다중 스레드 버전의 유일한 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.
+다중 스레드 버전의 유일한 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md) 입니다.
 
-`_beginthread` 또는 `_beginthreadex`를 사용하려면 응용 프로그램이 다중 스레드 C 런타임 라이브러리 중 하나와 링크로 연결해야 합니다.
+사용 하도록 **_beginthread** 또는 **_beginthreadex**, 응용 프로그램은 다중 스레드 C 런타임 라이브러리 중 하 나와 연결 해야 합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
-다음 예제에서는 `_beginthread` 및 `_endthread`를 사용합니다.
+다음 예제에서는 **_beginthread** 및 **_endthread**합니다.
 
 ```C
 // crt_BEGTHRD.C
@@ -181,7 +181,7 @@ void CheckKey( void * );
 // GetGlyph returns a printable ASCII character value
 #define GetGlyph( val ) ((char)((val + 32) % 93 + 33))
 
-BOOL repeat = TRUE;                 // Global repeat flag 
+BOOL repeat = TRUE;                 // Global repeat flag
 HANDLE hStdOut;                     // Handle for console window
 CONSOLE_SCREEN_BUFFER_INFO csbi;    // Console information structure
 
@@ -197,7 +197,7 @@ int main()
     // Launch CheckKey thread to check for terminating keystroke.
     _beginthread( CheckKey, 0, NULL );
 
-    // Loop until CheckKey terminates program or 1000 threads created. 
+    // Loop until CheckKey terminates program or 1000 threads created.
     while( repeat && param < 1000 )
     {
         // launch another character thread.
@@ -235,9 +235,9 @@ void Bounce( void * parg )
 
     // Generate location, letter and color attribute from thread argument.
     srand( _threadid );
-    oldcoord.X = region.Left = region.Right = 
+    oldcoord.X = region.Left = region.Right =
         GetRandom(csbi.srWindow.Left, csbi.srWindow.Right - 1);
-    oldcoord.Y = region.Top = region.Bottom = 
+    oldcoord.Y = region.Top = region.Bottom =
         GetRandom(csbi.srWindow.Top, csbi.srWindow.Bottom - 1);
     ci.Char.AsciiChar = GetGlyph(*((int *)parg));
     ci.Attributes = GetRandom(1, 15);
@@ -279,9 +279,9 @@ void Bounce( void * parg )
 
 아무 키나 눌러 샘플 응용 프로그램을 종료합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
-다음 샘플 코드는 동기화 API `_beginthreadex` WaitForSingleObject [와 함께](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx)에 의해 반환되는 스레드 핸들 사용 방법을 보여 줍니다. 주 스레드는 두 번째 스레드가 종료할 때까지 기다린 다음 계속합니다. 두 번째 스레드가 `_endthreadex`를 호출하면 스레드 개체가 신호를 받은 상태로 전환됩니다. 그러면 기본 스레드를 계속 실행할 수 있습니다. `_beginthread` 는 신호된 상태로 설정되기 전에 스레드 개체를 소멸하는 `_endthread`을 호출하기 때문에 이 작업은 `_endthread` 및 `CloseHandle`로 수행할 수 없습니다.
+다음 샘플 코드에서 반환 되는 스레드 핸들을 사용 하는 방법을 보여 줍니다 **_beginthreadex** 동기화 API로 [WaitForSingleObject](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx)합니다. 주 스레드는 두 번째 스레드가 종료할 때까지 기다린 다음 계속합니다. 두 번째 스레드가 호출 하는 경우 **_endthreadex**, 하면 스레드 개체가 신호 된 상태로 이동 합니다. 그러면 기본 스레드를 계속 실행할 수 있습니다. 로 수행할 수 없습니다 **_beginthread** 및 **_endthread**때문에, **_endthread** 호출 **CloseHandle**, 스레드를 소멸 하 개체 신호 된 상태로 설정할 수 있습니다.
 
 ```cpp
 // crt_begthrdex.cpp
@@ -290,7 +290,7 @@ void Bounce( void * parg )
 #include <stdio.h>
 #include <process.h>
 
-unsigned Counter; 
+unsigned Counter;
 unsigned __stdcall SecondThreadFunc( void* pArguments )
 {
     printf( "In second thread...\n" );
@@ -329,10 +329,10 @@ In second thread...
 Counter should be 1000000; it is-> 1000000
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_endthread, _endthreadex](../../c-runtime-library/reference/endthread-endthreadex.md)<br/>
-[abort](../../c-runtime-library/reference/abort.md)<br/>
-[exit, _Exit, _exit](../../c-runtime-library/reference/exit-exit-exit.md)<br/>
+[_endthread, _endthreadex](endthread-endthreadex.md)<br/>
+[abort](abort.md)<br/>
+[exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "C++ 표준 라이브러리 개요 | Microsoft 문서"
-ms.custom: 
+title: C++ 표준 라이브러리 개요 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,61 +16,62 @@ helpviewer_keywords:
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-caps.latest.revision: 
+caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2892f3df9375a220902588ff37e73c5b9e8b1719
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 79ec0f582ace9431a1d3a4f8eb0b474cb0d588d6
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-standard-library-overview"></a>C++ 표준 라이브러리 개요
-모든 C++ 라이브러리 엔터티가 하나 이상의 표준 헤더에서 선언되거나 정의됩니다. 이 구현에는 C++ 표준에서는 필요 없는 두 개의 추가 헤더, 즉 `<hash_map>` 및 `<hash_set>`가 포함됩니다. 이 구현에서 지원되는 헤더의 전체 목록을 보려면 [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)를 참조하세요.  
-  
- C++ 라이브러리의 독립형 구현에서는 이러한 헤더의 하위 집합만을 제공합니다.  
-  
-|||  
-|-|-|  
-|[\<cstddef>](../standard-library/cstddef.md)|[\<cstdlib>](../standard-library/cstdlib.md)(적어도 함수 `abort`, `atexit` 및 `exit`를 선언함)|  
-|[\<exception>](../standard-library/exception.md)|[\<limits>](../standard-library/limits.md)|  
-|[\<new>](../standard-library/new.md)|[\<cstdarg>](../standard-library/cstdarg.md)|  
-  
- C++ 라이브러리 헤더에는 광범위한 두 개의 하위 영역이 있습니다.  
-  
--   [iostreams](../standard-library/iostreams-conventions.md) 규칙입니다.  
-  
--   [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md) 규칙입니다.  
-  
- 이 섹션에는 다음 섹션이 포함되어 있습니다.  
-  
--   [C++ 라이브러리 헤더 사용](../standard-library/using-cpp-library-headers.md)  
-  
--   [C++ 라이브러리 규칙](../standard-library/cpp-library-conventions.md)  
-  
--   [iostreams 규칙](../standard-library/iostreams-conventions.md)  
-  
--   [C++ 프로그램 시작 및 종료](../standard-library/cpp-program-startup-and-termination.md)  
-  
--   [안전한 라이브러리: C++ 표준 라이브러리](../standard-library/safe-libraries-cpp-standard-library.md)  
-  
--   [확인된 반복기](../standard-library/checked-iterators.md)  
-  
--   [Debug Iterator Support](../standard-library/debug-iterator-support.md)  
-  
--   [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)  
-  
--   [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)  
-  
--   [stdext 네임스페이스](../standard-library/stdext-namespace.md)  
-  
--   [정규식(C++)](../standard-library/regular-expressions-cpp.md)  
-  
- Visual C++ 런타임 라이브러리에 대한 자세한 내용은 [CRT 라이브러리 기능](../c-runtime-library/crt-library-features.md)을 참조하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- [C++ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)
 
+모든 C++ 라이브러리 엔터티가 하나 이상의 표준 헤더에서 선언되거나 정의됩니다. 이 구현에는 두 개의 추가 헤더 포함 됩니다. \<hash_map > 및 \<hash_set >, c + + 표준에 따라 필요 하지 않습니다. 이 구현에서 지원되는 헤더의 전체 목록을 보려면 [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)를 참조하세요.
+
+C++ 라이브러리의 독립형 구현에서는 이러한 헤더의 하위 집합만을 제공합니다.
+
+|||
+|-|-|
+|[\<cstddef>](../standard-library/cstddef.md)|[\<cstdlib>](../standard-library/cstdlib.md)(적어도 함수 `abort`, `atexit` 및 `exit`를 선언함)|
+|[\<exception>](../standard-library/exception.md)|[\<limits>](../standard-library/limits.md)|
+|[\<new>](../standard-library/new.md)|[\<cstdarg>](../standard-library/cstdarg.md)|
+
+C++ 라이브러리 헤더에는 광범위한 두 개의 하위 영역이 있습니다.
+
+- [iostreams](../standard-library/iostreams-conventions.md) 규칙입니다.
+
+- [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md) 규칙입니다.
+
+이 섹션에는 다음 섹션이 포함되어 있습니다.
+
+- [C++ 라이브러리 헤더 사용](../standard-library/using-cpp-library-headers.md)
+
+- [C++ 라이브러리 규칙](../standard-library/cpp-library-conventions.md)
+
+- [iostreams 규칙](../standard-library/iostreams-conventions.md)
+
+- [C++ 프로그램 시작 및 종료](../standard-library/cpp-program-startup-and-termination.md)
+
+- [안전한 라이브러리: C++ 표준 라이브러리](../standard-library/safe-libraries-cpp-standard-library.md)
+
+- [확인된 반복기](../standard-library/checked-iterators.md)
+
+- [Debug Iterator Support](../standard-library/debug-iterator-support.md)
+
+- [C++ 표준 라이브러리 참조](../standard-library/cpp-standard-library-reference.md)
+
+- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+
+- [stdext 네임스페이스](../standard-library/stdext-namespace.md)
+
+- [정규식(C++)](../standard-library/regular-expressions-cpp.md)
+
+Visual C++ 런타임 라이브러리에 대한 자세한 내용은 [CRT 라이브러리 기능](../c-runtime-library/crt-library-features.md)을 참조하세요.
+
+## <a name="see-also"></a>참고자료
+
+[C++ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "&lt;iosfwd&gt; | Microsoft 문서"
-ms.custom: 
+title: '&lt;iosfwd&gt; | Microsoft 문서'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - <iosfwd>
@@ -15,31 +15,32 @@ dev_langs:
 helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da52a399718acb97f9d14c776091d33ad627a412
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 15005f088043b7d7904f57114fc125d3da80b1fc
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
-iostreams 전체에서 사용되는 여러 템플릿 클래스에 대한 전방 참조를 선언합니다. 이러한 템플릿 클래스는 모두 다른 표준 헤더에 정의되어 있습니다. 이 헤더는 해당 정의가 아니라 해당 선언 중 하나가 필요한 경우에만 명시적으로 포함합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-#include <iosfwd>  
-  
-```  
-  
-## <a name="typedefs"></a>형식 정의  
-  
+
+iostreams 전체에서 사용되는 여러 템플릿 클래스에 대한 전방 참조를 선언합니다. 이러한 템플릿 클래스는 모두 다른 표준 헤더에 정의되어 있습니다. 이 헤더는 해당 정의가 아니라 해당 선언 중 하나가 필요한 경우에만 명시적으로 포함합니다.
+
+## <a name="syntax"></a>구문
+
+```cpp
+#include <iosfwd>
+
 ```
+
+## <a name="typedefs"></a>형식 정의
+
+```cpp
 typedef T1 streamoff;
 typedef T2 streamsize;
 typedef fpos streampos;
@@ -74,11 +75,11 @@ typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 };
-```  
-  
-## <a name="forward-declarationstemplate-classes"></a>정방향 선언/템플릿 클래스  
-  
 ```
+
+## <a name="forward-declarationstemplate-classes"></a>정방향 선언/템플릿 클래스
+
+```cpp
 template <class _Statetype>
 class fpos;
 
@@ -138,13 +139,11 @@ class basic_ofstream;
 
 template <class Elem, class Tr = char_traits<Elem>>
 class basic_fstream;
-```  
-  
-## <a name="see-also"></a>참고 항목  
- [헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream 프로그래밍](../standard-library/iostream-programming.md)   
- [iostreams 규칙](../standard-library/iostreams-conventions.md)
+```
 
+## <a name="see-also"></a>참고자료
 
-
+[헤더 파일 참조](../standard-library/cpp-standard-library-header-files.md)<br/>
+[C++ 표준 라이브러리의 스레드 보안](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[iostream 프로그래밍](../standard-library/iostream-programming.md)<br/>
+[iostreams 규칙](../standard-library/iostreams-conventions.md)<br/>

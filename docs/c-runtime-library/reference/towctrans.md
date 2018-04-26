@@ -1,12 +1,12 @@
 ---
 title: towctrans | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - towctrans
@@ -30,53 +30,59 @@ dev_langs:
 helpviewer_keywords:
 - towctrans function
 ms.assetid: 1ed1e70d-7b31-490f-a7d9-42564b5924ca
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79bd4c48b5462d0d7b3cc7145a3044da80869af1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a1e3029fc9d33df93e13e6fd0a8e9e8d8da168b0
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="towctrans"></a>towctrans
-문자를 변형합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-wint_t towctrans(  
-   wint_t c,  
-   wctrans_t category   
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `c`  
- 변형할 문자입니다.  
-  
- `category`  
- [wctrans](../../c-runtime-library/reference/wctrans.md)의 반환 값을 포함하는 식별자입니다.  
-  
-## <a name="return-value"></a>반환 값  
- `c` 다음의 문자 `towctrans`가 `category`에서 변환 규칙을 사용했습니다.  
-  
-## <a name="remarks"></a>설명  
- `category`의 값은 이전에 정상적으로 수행한 [wctrans](../../c-runtime-library/reference/wctrans.md) 호출에 의해 이미 반환된 상태여야 합니다.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`towctrans`|\<wctype.h>|  
-  
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
-  
-## <a name="example"></a>예  
- `wctrans`를 사용하는 샘플은 `towctrans`를 참조하십시오.  
-  
-## <a name="see-also"></a>참고 항목  
- [데이터 변환](../../c-runtime-library/data-conversion.md)
+
+문자를 변형합니다.
+
+## <a name="syntax"></a>구문
+
+```C
+wint_t towctrans(
+   wint_t c,
+   wctrans_t category
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*c*<br/>
+변형할 문자입니다.
+
+*category*<br/>
+[wctrans](wctrans.md)의 반환 값을 포함하는 식별자입니다.
+
+## <a name="return-value"></a>반환 값
+
+문자 *c*이후에 **towctrans** 에서 변환 규칙을 사용 *범주*합니다.
+
+## <a name="remarks"></a>설명
+
+값 *범주* 는 이전 성공적으로 호출 하 여 반환 됐 어 야 [wctrans](wctrans.md)합니다.
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**towctrans**|\<wctype.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="example"></a>예제
+
+참조 **wctrans** 사용 하는 샘플에 대 한 **towctrans**합니다.
+
+## <a name="see-also"></a>참고자료
+
+[데이터 변환](../../c-runtime-library/data-conversion.md)<br/>

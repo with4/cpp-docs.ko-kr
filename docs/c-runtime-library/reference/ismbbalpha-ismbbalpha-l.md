@@ -1,12 +1,12 @@
 ---
-title: "_ismbbalpha, _ismbbalpha_l | Microsoft 문서"
-ms.custom: 
+title: _ismbbalpha, _ismbbalpha_l | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbbalpha
@@ -37,60 +37,63 @@ helpviewer_keywords:
 - _ismbbalpha function
 - _ismbbalpha_l function
 ms.assetid: 8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0
-caps.latest.revision: 
+caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9df6ee4ab843d9adf6723936856519894b732958
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a3e1a5984333def50c31ed6395265afb424fd7e6
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbbalpha-ismbbalphal"></a>_ismbbalpha, _ismbbalpha_l
-지정된 멀티바이트 문자가 영문자인지 여부를 확인합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-int _ismbbalpha(  
-   unsigned int c   
-);  
-int _ismbbalpha_l(  
-   unsigned int c   
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `c`  
- 테스트할 정수입니다.  
-  
- `locale`  
- 사용할 로캘입니다.  
-  
-## <a name="return-value"></a>반환 값  
- 식이 다음과 같을 경우 `_ismbbalpha`는 0이 아닌 값을 반환합니다.  
-  
-```  
-isalpha || _ismbbkalnum  
-```  
-  
- `c`에 대해 0이 아니며, 그렇지 않은 경우 0입니다. `_ismbbalpha` 는 모든 로캘 종속 문자 설정에 대한 현재 로캘을 사용합니다. `_ismbbalpha_l` 은 전달된 로캘을 사용한다는 점을 제외하고 동일합니다.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`_ismbbalpha`|\<mbctype.h>|  
-|`_ismbbalpha_l`|\<mbctype.h>|  
-  
- 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="libraries"></a>라이브러리  
- 모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.  
-  
-## <a name="see-also"></a>참고 항목  
- [바이트 분류](../../c-runtime-library/byte-classification.md)   
- [_ismbb 루틴](../../c-runtime-library/ismbb-routines.md)
+
+지정된 멀티바이트 문자가 영문자인지 여부를 확인합니다.
+
+## <a name="syntax"></a>구문
+
+```C
+int _ismbbalpha(
+   unsigned int c
+);
+int _ismbbalpha_l(
+   unsigned int c
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*c*<br/>
+테스트할 정수입니다.
+
+*locale*<br/>
+사용할 로캘입니다.
+
+## <a name="return-value"></a>반환 값
+
+**_ismbbalpha** 경우 0이 아닌 값을 반환 식:
+
+`isalpha(c) || _ismbbkalnum(c)`
+
+에 대 한이 0이 아닌 *c*, 없는 경우 0입니다. **_ismbbalpha** 모든 로캘 종속 문자 설정에 대 한 현재 로캘을 사용 합니다. **_ismbbalpha_l** 전달 된 로캘을 사용 하 여 한다는 점을 제외 하 고는 동일 합니다.
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**_ismbbalpha**|\<mbctype.h>|
+|**_ismbbalpha_l**|\<mbctype.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="libraries"></a>라이브러리
+
+모든 버전의 [C 런타임 라이브러리](../../c-runtime-library/crt-library-features.md)입니다.
+
+## <a name="see-also"></a>참고자료
+
+[바이트 분류](../../c-runtime-library/byte-classification.md)<br/>
+[_ismbb 루틴](../../c-runtime-library/ismbb-routines.md)<br/>

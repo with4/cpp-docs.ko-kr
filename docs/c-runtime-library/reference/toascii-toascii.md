@@ -1,12 +1,12 @@
 ---
 title: toascii, __toascii | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - __toascii
@@ -36,17 +36,17 @@ helpviewer_keywords:
 - __toascii function
 - ASCII characters, converting to
 ms.assetid: a07c0608-b0e2-4da2-a20c-7b64d6a9b77c
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf4c29934d22d3f20d79650faa406f217ffdd4c6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 62b94724e95738c424ee04b0fbccfad1fdf6951c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="toascii-toascii"></a>toascii, __toascii
 
@@ -63,29 +63,29 @@ int __toascii(
 
 ### <a name="parameters"></a>매개 변수
 
-*c*  
+*c*<br/>
 변환할 문자입니다.
 
 ## <a name="return-value"></a>반환 값
 
-`__toascii` 값으로 변환 *c* 7 비트 ascii 범위 및 결과 반환 합니다. 오류를 나타내기 위해 예약된 반환 값은 없습니다.
+**__toascii** 값을 변환 *c* 7 비트 ascii 범위 및 결과 반환 합니다. 오류를 나타내기 위해 예약된 반환 값은 없습니다.
 
 ## <a name="remarks"></a>설명
 
-`__toascii` 루틴은 하위 순서의 7비트를 잘라내는 방법으로 지정된 문자를 ASCII 문자로 변환합니다. 다른 변환은 적용되지 않습니다.
+**__toascii** 루틴 하위 7 비트를 잘라 지정 된 문자를 ASCII 문자로 변환 합니다. 다른 변환은 적용되지 않습니다.
 
-전처리기 매크로 _CTYPE_DISABLE_MACROS가 정의되지 않은 경우 `__toascii` 루틴은 매크로로 정의됩니다. 이전 버전과 호환성을 위해 `toascii` 매크로로 정의 된 경우에만 [&#95; &#95; STDC &#95; #95 ](../../preprocessor/predefined-macros.md) 이 정의 되지 않았거나; 0으로 정의 하지 않으면 정의 되지 않습니다.
+**__toascii** 전처리기 매크로 _CTYPE_DISABLE_MACROS 정의 되어 있지 않으면 루틴은 매크로로 정의 합니다. 이전 버전과 호환성에 대 한 **toascii** 매크로로 정의 된 경우에만 [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) 이 정의 되지 않았거나; 0으로 정의한 그렇지 않으면 정의 되지 않습니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴에서 반환된 값|필수 헤더|
+|루틴|필수 헤더|
 |-------------|---------------------|
-|`toascii`, `__toascii`|C: \<ctype.h><br /><br /> C++: \<cctype> 또는 \<ctype.h>|
+|**toascii**, **__toascii**|C: \<ctype.h><br /><br /> C++: \<cctype> 또는 \<ctype.h>|
 
-`toascii` 매크로는 POSIX 확장이고 `__toascii`는 POSIX 확장의 Microsoft 관련 구현입니다. 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.
+**toascii** 매크로 POSIX 확장 및 **__toascii** POSIX 확장의 Microsoft 관련 구현입니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
-[데이터 변환](../../c-runtime-library/data-conversion.md)   
-[is, isw 루틴](../../c-runtime-library/is-isw-routines.md)   
-[to 함수](../../c-runtime-library/to-functions.md)
+[데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
+[is, isw 루틴](../../c-runtime-library/is-isw-routines.md)<br/>
+[to 함수](../../c-runtime-library/to-functions.md)<br/>

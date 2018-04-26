@@ -1,12 +1,12 @@
 ---
 title: lfind | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - lfind
@@ -29,17 +29,18 @@ dev_langs:
 helpviewer_keywords:
 - lfind function
 ms.assetid: 2528e787-94b6-4740-8a8d-6efc276d1f42
-caps.latest.revision: 
+caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6246d7fa80f9a89f2a57171ae805b03e75f664b2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 181977d9b88e9f009d9ad775c8faf4642b40bdfa
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lfind"></a>lfind
-이 POSIX 함수는 사용되지 않습니다. 대신 ISO C++와 호환되는 [_lfind](../../c-runtime-library/reference/lfind.md) 또는 보안이 강화된 [_lfind_s](../../c-runtime-library/reference/lfind-s.md)를 사용하세요.
+
+이 POSIX 함수는 사용되지 않습니다. 대신 ISO C++와 호환되는 [_lfind](lfind.md) 또는 보안이 강화된 [_lfind_s](lfind-s.md)를 사용하세요.

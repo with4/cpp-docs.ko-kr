@@ -1,12 +1,12 @@
 ---
 title: set_unexpected(CRT) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - set_unexpected
@@ -31,65 +31,68 @@ helpviewer_keywords:
 - unexpected function
 - exception handling, termination
 ms.assetid: ebcef032-4771-48e5-88aa-2a1ab8750aa6
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edc1d3b96ee5b52d349b30434932d2c9770267b4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c740f74dc13ea22819d0f792bfc1e3dbcc9f425e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setunexpected-crt"></a>set_unexpected(CRT)
-`unexpected`로 호출하는 자체 종료 함수를 설치합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-unexpected_function set_unexpected(  
-   unexpected_function unexpFunction   
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `unexpFunction`  
- `unexpected` 함수 대신 사용하기 위해 작성하는 함수에 대한 포인터입니다.  
-  
-## <a name="return-value"></a>반환 값  
- 이전 함수를 나중에 복원할 수 있도록 `_set_unexpected`에서 등록한 이전 종료 함수에 대한 포인터를 반환합니다. 이전 함수가 설정되지 않은 경우 반환 값은 기본 동작을 복원하는 데 사용되며 이 값은 NULL일 수 있습니다.  
-  
-## <a name="remarks"></a>설명  
- `set_unexpected` 함수는 `unexpected`에서 호출한 함수로 `unexpFunction`을 설치합니다. `unexpected`는 현재 C++ 예외 처리 구현에서 사용되지 않습니다. `unexpected_function` 형식은 EH.H에서 `void`를 반환하는 사용자 정의 unexpected 함수 `unexpFunction`에 대한 포인터로 정의됩니다. 사용자 지정 `unexpFunction` 함수는 해당 호출자에게 반환되어서는 안 됩니다.  
-  
-```  
-typedef void ( *unexpected_function )( );  
-```  
-  
- 기본적으로 `unexpected`는 `terminate`를 호출합니다. 종료 함수를 직접 작성하고 함수 이름을 인수로 사용해 `set_unexpected`를 호출하면 이 기본 동작을 변경할 수 있습니다. `unexpected`는 `set_unexpected`에 대한 인수로 지정된 마지막 함수를 호출합니다.  
-  
- `set_terminate` 호출을 통해 설치한 사용자 지정 종료 함수와는 달리, `unexpFunction` 내에서 예외를 throw할 수 있습니다.  
-  
- 다중 스레드 환경에서 unexpected 함수는 각 스레드에 대해 개별적으로 유지 관리됩니다. 각 새 스레드는 자체 unexpected 함수를 설치해야 합니다. 따라서 각 스레드는 자체 unexpected 처리를 담당합니다.  
-  
- C++ 예외 처리의 현재 Microsoft 구현에서는 `unexpected`가 기본적으로 `terminate`를 호출하며 예외 처리 런타임 라이브러리를 통해서는 호출되지 않습니다. `terminate`가 아닌 `unexpected`를 호출하는 방식에 특별한 이점은 없습니다.  
-  
- 동적으로 연결된 모든 DLL 또는 EXE에 대해서는 `set_unexpected` 처리기가 1개 있습니다. `set_unexpected`를 호출하더라도 사용자의 처리기가 다른 처리기로 바뀌거나 사용자가 다른 DLL 또는 EXE로 설정한 처리기를 바꿀 수 있습니다.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`set_unexpected`|\<eh.h>|  
-  
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
-  
-## <a name="see-also"></a>참고 항목  
- [예외 처리 루틴](../../c-runtime-library/exception-handling-routines.md)   
- [abort](../../c-runtime-library/reference/abort.md)   
- [_get_unexpected](../../c-runtime-library/reference/get-unexpected.md)   
- [set_terminate](../../c-runtime-library/reference/set-terminate-crt.md)   
- [terminate](../../c-runtime-library/reference/terminate-crt.md)   
- [unexpected](../../c-runtime-library/reference/unexpected-crt.md)
+
+**unexpected**로 호출하는 자체 종료 함수를 설치합니다.
+
+## <a name="syntax"></a>구문
+
+```cpp
+unexpected_function set_unexpected( unexpected_function unexpFunction );
+```
+
+### <a name="parameters"></a>매개 변수
+
+*unexpFunction*<br/>
+대체를 작성 하는 함수에 대 한 포인터는 **예기치 않은** 함수입니다.
+
+## <a name="return-value"></a>반환 값
+
+이전 종료 함수에 대 한 포인터에 의해 등록 반환 **_set_unexpected** 이전 함수는 나중에 복원할 수 있도록 합니다. 이전 함수가 설정되지 않은 경우 반환 값은 기본 동작을 복원하는 데 사용되며 이 값은 NULL일 수 있습니다.
+
+## <a name="remarks"></a>설명
+
+**set_unexpected** 설치 함수 *unexpFunction* 호출한 함수로 **예기치 않은**합니다. **예기치 않은** 현재 c + + 예외 처리 구현에서 사용 되지 않습니다. **unexpected_function 형식** 형식이 EH에 정의 되어 있습니다. 사용자 정의 예기치 않은 함수에 대 한 포인터로 H *unexpFunction* 반환 하는 **void**합니다. 사용자 지정 *unexpFunction* 함수는 호출자에 반환 되지 해야 합니다.
+
+```cpp
+typedef void ( *unexpected_function )( );
+```
+
+기본적으로 **예기치 않은** 호출 **종료**합니다. 자체 종료 함수를 작성 하 고 호출 하 여이 기본 동작을 변경할 수 있습니다 **set_unexpected** 의 인수로 서 함수 이름으로 합니다. **예기치 않은** 에 대 한 인수로 주어진 마지막 함수를 호출 **set_unexpected**합니다.
+
+사용자 지정 종료 함수를 호출 하 여 설치와 달리 **set_terminate**, 내에서 예외가 throw 될 수 *unexpFunction*합니다.
+
+다중 스레드 환경에서 unexpected 함수는 각 스레드에 대해 개별적으로 유지 관리됩니다. 각 새 스레드는 자체 unexpected 함수를 설치해야 합니다. 따라서 각 스레드는 자체 unexpected 처리를 담당합니다.
+
+Microsoft c + + 예외 처리의 현재 구현에서 **예기치 않은** 호출 **종료** 기본적으로 및 예외 처리 런타임 라이브러리에 의해 호출 되지 않습니다. 호출을 특정 소용이 없습니다 **예기치 않은** 대신 **종료**합니다.
+
+단일 **set_unexpected** 처리기에 대 한 모든 동적으로 연결 된 Dll 또는 Exe; 호출 하는 경우에 **set_unexpected** 처리기 다른 대체 될 수 있습니다 또는 설정한 처리기를 대체 하는 다른 DLL 또는 EXE 합니다.
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**set_unexpected**|\<eh.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="see-also"></a>참고자료
+
+[예외 처리 루틴](../../c-runtime-library/exception-handling-routines.md)<br/>
+[abort](abort.md)<br/>
+[_get_unexpected](get-unexpected.md)<br/>
+[set_terminate](set-terminate-crt.md)<br/>
+[terminate](terminate-crt.md)<br/>
+[unexpected](unexpected-crt.md)<br/>

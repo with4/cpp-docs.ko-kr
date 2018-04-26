@@ -1,12 +1,12 @@
 ---
-title: "_chmod, _wchmod | Microsoft 문서"
-ms.custom: 
+title: _chmod, _wchmod | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _chmod
@@ -38,159 +38,154 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-caps.latest.revision: 
+caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6df97d52e084b56ca9f0e3e749ce933994a8dd2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b8194e6bdaf93c4bc2cbbc8c2ff2fdf23df438a5
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="chmod-wchmod"></a>_chmod, _wchmod
-파일 권한 설정을 변경합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-  
-      int _chmod(   
-   const char *filename,  
-   int pmode   
-);  
-int _wchmod(   
-   const wchar_t *filename,  
-   int pmode   
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `filename`  
- 기존 파일의 이름입니다.  
-  
- `pmode`  
- 파일에 대한 권한 설정입니다.  
-  
-## <a name="return-value"></a>반환 값  
- 권한 설정을 성공적으로 변경한 경우 이러한 함수는 0을 반환합니다. 반환 값이-1은 오류를 나타냅니다. 지정된 파일을 찾을 수 없는 경우 `errno`는 `ENOENT`로 설정되며, 매개 변수가 올바르지 않은 경우 `errno`는 `EINVAL`로 설정됩니다.  
-  
-## <a name="remarks"></a>설명  
- `_chmod` 함수 변경 하 여 지정 된 파일의 사용 권한 설정을 `filename`합니다. 권한 설정은 파일에 대한 읽기 및 쓰기 액세스를 제어합니다. 정수 식 `pmode`에는 SYS\Stat.h에 정의된 다음 매니페스트 상수 중 하나 또는 둘 다가 포함되어 있습니다.  
-  
- `_S_IWRITE`  
- 쓰기를 허용합니다.  
-  
- `_S_IREAD`  
- 읽기를 허용합니다.  
-  
- `_S_IREAD | _S_IWRITE`  
- 읽기 및 쓰기를 허용합니다.  
-  
- 두 상수를 지정하는 경우 비트 `OR` 연산자(`|`)를 사용하여 결합합니다. 쓰기 권한이 부여되지 않은 경우 파일은 읽기 전용입니다. 모든 파일을 항상 읽을 수 있으므로 쓰기 전용 권한을 부여할 수 없습니다. 따라서 `_S_IWRITE` 및 `_S_IREAD | _S_IWRITE` 모드는 동일합니다.  
-  
- `_wchmod`은 `_chmod`의 와이드 문자 버전이며, `filename`에 대한 `_wchmod` 인수는 와이드 문자열입니다. 그렇지 않으면 `_wchmod`과 `_chmod`이 동일하게 작동합니다.  
-  
- 이 함수는 해당 매개 변수의 유효성을 검사합니다. `pmode`가 매니페스트 상수 중 하나의 조합이 아니거나 다른 상수 집합을 통합하는 경우 함수가 이들을 모두 간단히 무시합니다. `filename`가 `NULL`인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 `errno` 는 `EINVAL` 로 설정되고 함수는 -1을 반환합니다.  
-  
-### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑  
-  
-|Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|  
-|---------------------|--------------------------------------|--------------------|-----------------------|  
-|`_tchmod`|`_chmod`|`_chmod`|`_wchmod`|  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
-|-------------|---------------------|---------------------|  
-|`_chmod`|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|  
-|`_wchmod`|\<io.h> 또는 \<wchar.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|  
-  
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
-  
-## <a name="example"></a>예  
-  
-```  
-// crt_chmod.c  
-// This program uses _chmod to  
-// change the mode of a file to read-only.  
-// It then attempts to modify the file.  
-//  
-  
-#include <sys/types.h>  
-#include <sys/stat.h>  
-#include <io.h>  
-#include <stdio.h>  
-#include <stdlib.h>  
-#include <errno.h>  
-  
-// Change the mode and report error or success   
-void set_mode_and_report(char * filename, int mask)  
-{  
-   // Check for failure   
-   if( _chmod( filename, mask ) == -1 )  
-   {  
-      // Determine cause of failure and report.   
-      switch (errno)  
-      {  
-         case EINVAL:  
-            fprintf( stderr, "Invalid parameter to chmod.\n");  
-            break;  
-         case ENOENT:  
-            fprintf( stderr, "File %s not found\n", filename );  
-            break;  
-         default:  
-            // Should never be reached   
-            fprintf( stderr, "Unexpected error in chmod.\n" );  
-       }  
-   }  
-   else  
-   {  
-      if (mask == _S_IREAD)  
-        printf( "Mode set to read-only\n" );  
-      else if (mask & _S_IWRITE)  
-        printf( "Mode set to read/write\n" );  
-   }  
-   fflush(stderr);  
-}  
-  
-int main( void )  
-{   
-  
-   // Create or append to a file.   
-   system( "echo /* End of file */ >> crt_chmod.c_input" );  
-  
-   // Set file mode to read-only:   
-   set_mode_and_report("crt_chmod.c_input ", _S_IREAD );  
-  
-   system( "echo /* End of file */ >> crt_chmod.c_input " );  
-  
-   // Change back to read/write:   
-   set_mode_and_report("crt_chmod.c_input ", _S_IWRITE );  
-  
-   system( "echo /* End of file */ >> crt_chmod.c_input " );   
-}   
-```  
-  
-```Output  
-  
-A line of text.  
-  
-```  
-  
-```Output  
-  
-      A line of text.Mode set to read-only  
-Access is denied.  
-Mode set to read/write  
-```  
-  
-## <a name="see-also"></a>참고 항목  
- [파일 처리](../../c-runtime-library/file-handling.md)   
- [_access, _waccess](../../c-runtime-library/reference/access-waccess.md)   
- [_creat, _wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
- [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
- [_open, _wopen](../../c-runtime-library/reference/open-wopen.md)   
- [_stat, _wstat 함수](../../c-runtime-library/reference/stat-functions.md)
+
+파일 권한 설정을 변경합니다.
+
+## <a name="syntax"></a>구문
+
+```C
+int _chmod( const char *filename, int pmode );
+int _wchmod( const wchar_t *filename, int pmode );
+```
+
+### <a name="parameters"></a>매개 변수
+
+*filename*<br/>
+기존 파일의 이름입니다.
+
+*pmode*<br/>
+파일에 대한 권한 설정입니다.
+
+## <a name="return-value"></a>반환 값
+
+권한 설정을 성공적으로 변경한 경우 이러한 함수는 0을 반환합니다. 반환 값이-1은 오류를 나타냅니다. 지정된 된 파일을 찾을 수 없는, 경우 **errno** 로 설정 된 **ENOENT**매개 변수가 유효 하지 않을 경우; **errno** 로 설정 된 **EINVAL**합니다.
+
+## <a name="remarks"></a>설명
+
+**_chmod** 함수 변경 하 여 지정 된 파일의 사용 권한 설정을 *filename*합니다. 권한 설정은 파일에 대한 읽기 및 쓰기 액세스를 제어합니다. 정수 식 *pmode* SYS\Stat.h에 정의 된 다음 매니페스트 상수 중 하나 또는 모두를 포함 합니다.
+
+|*pmode*|의미|
+|-|-|
+**_S_IREAD**|읽기만 허용합니다.
+**_S_IWRITE**|쓰기를 허용합니다. 실제로는 읽기 및 쓰기를 모두 허용합니다.
+**_S_IREAD** &AMP;#124; **_S_IWRITE**|읽기 및 쓰기를 허용합니다.
+
+두 상수가 지정 하는 경우와 비트 가입 or 연산자 (**|**). 쓰기 권한이 부여되지 않은 경우 파일은 읽기 전용입니다. 모든 파일을 항상 읽을 수 있으므로 쓰기 전용 권한을 부여할 수 없습니다. 따라서 모드 **_S_IWRITE** 및 **_S_IREAD** | **_S_IWRITE** 동일 합니다.
+
+**_wchmod** 의 와이드 문자 버전이 **_chmod**; *filename* 인수를 **_wchmod** 는 와이드 문자 문자열입니다. **_wchmod** 및 **_chmod** 동일 하 게 작동 합니다.
+
+이 함수는 해당 매개 변수의 유효성을 검사합니다. 경우 *pmode* 매니페스트 상수 중 하 나와 아니거나 통합 다른 집합의 상수, 함수 무시 하기만 하는 것입니다. 경우 *filename* 은 **NULL**에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 하도록 허용 된 경우 **errno** 로 설정 된 **EINVAL** 함수가-1을 반환 합니다.
+
+### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
+
+|Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
+|---------------------|--------------------------------------|--------------------|-----------------------|
+|**_tchmod**|**_chmod**|**_chmod**|**_wchmod**|
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|선택적 헤더|
+|-------------|---------------------|---------------------|
+|**_chmod**|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
+|**_wchmod**|\<io.h> 또는 \<wchar.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="example"></a>예제
+
+```C
+// crt_chmod.c
+// This program uses _chmod to
+// change the mode of a file to read-only.
+// It then attempts to modify the file.
+//
+
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <io.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+// Change the mode and report error or success
+void set_mode_and_report(char * filename, int mask)
+{
+   // Check for failure
+   if( _chmod( filename, mask ) == -1 )
+   {
+      // Determine cause of failure and report.
+      switch (errno)
+      {
+         case EINVAL:
+            fprintf( stderr, "Invalid parameter to chmod.\n");
+            break;
+         case ENOENT:
+            fprintf( stderr, "File %s not found\n", filename );
+            break;
+         default:
+            // Should never be reached
+            fprintf( stderr, "Unexpected error in chmod.\n" );
+       }
+   }
+   else
+   {
+      if (mask == _S_IREAD)
+        printf( "Mode set to read-only\n" );
+      else if (mask & _S_IWRITE)
+        printf( "Mode set to read/write\n" );
+   }
+   fflush(stderr);
+}
+
+int main( void )
+{
+
+   // Create or append to a file.
+   system( "echo /* End of file */ >> crt_chmod.c_input" );
+
+   // Set file mode to read-only:
+   set_mode_and_report("crt_chmod.c_input ", _S_IREAD );
+
+   system( "echo /* End of file */ >> crt_chmod.c_input " );
+
+   // Change back to read/write:
+   set_mode_and_report("crt_chmod.c_input ", _S_IWRITE );
+
+   system( "echo /* End of file */ >> crt_chmod.c_input " );
+}
+```
+
+```Output
+
+A line of text.
+
+```
+
+```Output
+
+      A line of text.Mode set to read-only
+Access is denied.
+Mode set to read/write
+```
+
+## <a name="see-also"></a>참고자료
+
+[파일 처리](../../c-runtime-library/file-handling.md)<br/>
+[_access, _waccess](access-waccess.md)<br/>
+[_creat, _wcreat](creat-wcreat.md)<br/>
+[_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)<br/>
+[_open, _wopen](open-wopen.md)<br/>
+[_stat, _wstat 함수](stat-functions.md)<br/>

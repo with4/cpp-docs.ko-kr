@@ -31,11 +31,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 773cf37e3a9e3d7047f0de4cd489c0ae9f41f61d
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: e9e5dc49b59ac534d871d6b31efdeec0afef5c8d
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="countof-macro"></a>_countof 매크로
 
@@ -58,15 +58,15 @@ ms.lasthandoff: 03/28/2018
 
 ## <a name="remarks"></a>설명
 
-`_countof` 함수 형식 전처리기 매크로로 구현 됩니다. C + + 버전에 대 한 포인터는 정적으로 선언 된 배열 대신 전달 되는 경우 컴파일 타임에 감지 하는 추가 템플릿 기계 있습니다.
+**_countof** 함수 형식 전처리기 매크로로 구현 됩니다. C + + 버전에 대 한 포인터는 정적으로 선언 된 배열 대신 전달 되는 경우 컴파일 타임에 감지 하는 추가 템플릿 기계 있습니다.
 
-되도록 *배열* 은 실제 배열, 포인터가 아닙니다. C에서는 `_countof` 경우 잘못 된 결과가 생성 *배열* 대 한 포인터입니다. C + +에서는 `_countof` 경우 컴파일을 *배열* 대 한 포인터입니다.  배열 함수에 매개 변수로 전달 *포인터에 decays*는 함수 내에서 사용할 수 없음을 의미 하는 `_countof` 배열의 범위를 확인 합니다.
+되도록 *배열* 은 실제 배열, 포인터가 아닙니다. C에서는 **_countof** 경우 잘못 된 결과가 생성 *배열* 대 한 포인터입니다. C + +에서는 **_countof** 경우 컴파일을 *배열* 대 한 포인터입니다.  배열 함수에 매개 변수로 전달 *포인터에 decays*는 함수 내에서 사용할 수 없음을 의미 하는 **_countof** 배열의 범위를 확인 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
 |매크로|필수 헤더|
 |-----------|---------------------|
-|`_countof`|\<stdlib.h>|
+|**_countof**|\<stdlib.h>|
 
 ## <a name="example"></a>예제
 

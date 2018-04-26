@@ -1,12 +1,12 @@
 ---
-title: "_ismbbtrail, _ismbbtrail_l | Microsoft 문서"
-ms.custom: 
+title: _ismbbtrail, _ismbbtrail_l | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbbtrail
@@ -37,57 +37,62 @@ helpviewer_keywords:
 - _ismbbtrail_l function
 - ismbbtrail function
 ms.assetid: dfdd0292-960b-4c1d-bf11-146e0fc80247
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc0a56d64a44f9c2fc0c72ec7019cc56420c7dda
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5b062dff3ef38743af21e2dcf75ea1cfb4a8c921
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbbtrail-ismbbtraill"></a>_ismbbtrail, _ismbbtrail_l
-바이트가 멀티바이트 문자의 후행 바이트인지 여부를 결정합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-int _ismbbtrail(  
-   unsigned int c   
-);  
-int _ismbbtrail_l(  
-   unsigned int c,  
-   _locale_t locale   
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `c`  
- 테스트할 정수입니다.  
-  
- `locale`  
- 사용할 로캘입니다.  
-  
-## <a name="return-value"></a>반환 값  
- `_ismbbtrail`은 `c` 정수가 멀티바이트 문자의 두 번째 바이트이면 0이 아닌 값을 반환합니다. 예를 들어 코드 페이지 932에 한해 유효 범위는 0x40-0x7E 및 0x80-0xFC입니다.  
-  
-## <a name="remarks"></a>설명  
- `_ismbbtrail`은 로캘 종속 동작에 대해 현재 로캘을 사용합니다. `_ismbbtrail_l` 은 전달된 로캘을 대신 사용한다는 점을 제외하고 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
-|-------------|---------------------|---------------------|  
-|`_ismbbtrail`|\<mbctype.h> 또는 \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
-|`_ismbbtrail_l`|\<mbctype.h> 또는 \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|  
-  
- \* 테스트 조건에 대한 매니페스트 상수에 해당합니다.  
-  
- 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- [바이트 분류](../../c-runtime-library/byte-classification.md)   
- [_ismbb 루틴](../../c-runtime-library/ismbb-routines.md)
+
+바이트가 멀티바이트 문자의 후행 바이트인지 여부를 결정합니다.
+
+## <a name="syntax"></a>구문
+
+```C
+int _ismbbtrail(
+   unsigned int c
+);
+int _ismbbtrail_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*c*<br/>
+테스트할 정수입니다.
+
+*locale*<br/>
+사용할 로캘입니다.
+
+## <a name="return-value"></a>반환 값
+
+**_ismbbtrail** 경우 0이 아닌 값을 반환 하는 정수 *c* 멀티 바이트 문자의 두 번째 바이트. 예를 들어 코드 페이지 932에 한해 유효 범위는 0x40-0x7E 및 0x80-0xFC입니다.
+
+## <a name="remarks"></a>설명
+
+**_ismbbtrail** 로캘 종속 동작에 대 한 현재 로캘을 사용 합니다. **_ismbbtrail_l** 대신 전달 된 로캘을 사용 한다는 점을 제외 하 고는 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|선택적 헤더|
+|-------------|---------------------|---------------------|
+|**_ismbbtrail**|\<mbctype.h> 또는 \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+|**_ismbbtrail_l**|\<mbctype.h> 또는 \<mbstring.h>|\<ctype.h>,* \<limits.h>, \<stdlib.h>|
+
+\* 테스트 조건에 대한 매니페스트 상수에 해당합니다.
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="see-also"></a>참고자료
+
+[바이트 분류](../../c-runtime-library/byte-classification.md)<br/>
+[_ismbb 루틴](../../c-runtime-library/ismbb-routines.md)<br/>

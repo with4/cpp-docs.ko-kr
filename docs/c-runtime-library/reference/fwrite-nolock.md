@@ -1,12 +1,12 @@
 ---
-title: "_fwrite_nolock | Microsoft 문서"
-ms.custom: 
+title: _fwrite_nolock | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _fwrite_nolock
@@ -33,63 +33,69 @@ helpviewer_keywords:
 - streams, writing data to
 - _fwrite_nolock function
 ms.assetid: 2b4ec6ce-742e-4615-8407-44a0a18ec1d7
-caps.latest.revision: 
+caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e698c6957177720bd171429144518a683be9b08
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 03e04dd884b4b96f64a4d4ece5b61fe5aeafb3a1
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="fwritenolock"></a>_fwrite_nolock
-스레드를 잠그지 않고 데이터를 스트림에 씁니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-size_t _fwrite_nolock(  
-   const void *buffer,  
-   size_t size,  
-   size_t count,  
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `buffer`  
- 쓰여질 데이터에 대한 포인터입니다.  
-  
- `size`  
- 항목 크기(바이트)입니다.  
-  
- `count`  
- 쓸 항목의 최대 수입니다.  
-  
- `stream`  
- `FILE` 구조체에 대한 포인터입니다.  
-  
-## <a name="return-value"></a>반환 값  
- [fwrite](../../c-runtime-library/reference/fwrite.md)와 같습니다.  
-  
-## <a name="remarks"></a>설명  
- 이 함수는 `fwrite`의 잠기지 않은 버전입니다. 이는 다른 스레드의 방해로부터 보호되지 않는다는 점을 제외하고 `fwrite`와 동일합니다. 이는 다른 스레드를 잠그는 오버헤드를 유발하지 않으므로 속도가 더 빠를 수 있습니다. 단일 스레드 응용 프로그램과 같은 스레드로부터 안전한 컨텍스트 또는 호출 범위에서 이미 스레드 격리를 처리하는 경우에만 이 함수를 사용합니다.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|함수|필수 헤더|  
-|--------------|---------------------|  
-|`_fwrite_nolock`|\<stdio.h>|  
-  
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
-  
-## <a name="example"></a>예  
- [fread](../../c-runtime-library/reference/fread.md)의 예제를 참조하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- [스트림 I/O](../../c-runtime-library/stream-i-o.md)   
- [fread](../../c-runtime-library/reference/fread.md)   
- [_write](../../c-runtime-library/reference/write.md)
+
+스레드를 잠그지 않고 데이터를 스트림에 씁니다.
+
+## <a name="syntax"></a>구문
+
+```C
+size_t _fwrite_nolock(
+   const void *buffer,
+   size_t size,
+   size_t count,
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*buffer*<br/>
+쓰여질 데이터에 대한 포인터입니다.
+
+*size*<br/>
+항목 크기(바이트)입니다.
+
+*count*<br/>
+쓸 항목의 최대 수입니다.
+
+*스트림*<br/>
+**FILE** 구조체에 대한 포인터입니다.
+
+## <a name="return-value"></a>반환 값
+
+[fwrite](fwrite.md)와 같습니다.
+
+## <a name="remarks"></a>설명
+
+이 함수는 잠기지 않은 버전의 **fwrite**합니다. 동일 **fwrite** 다른 스레드의 방해 로부터 보호 되지 않으므로 한다는 점이 다릅니다. 이는 다른 스레드를 잠그는 오버헤드를 유발하지 않으므로 속도가 더 빠를 수 있습니다. 단일 스레드 응용 프로그램과 같은 스레드로부터 안전한 컨텍스트 또는 호출 범위에서 이미 스레드 격리를 처리하는 경우에만 이 함수를 사용합니다.
+
+## <a name="requirements"></a>요구 사항
+
+|함수|필수 헤더|
+|--------------|---------------------|
+|**_fwrite_nolock**|\<stdio.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="example"></a>예제
+
+[fread](fread.md)의 예제를 참조하세요.
+
+## <a name="see-also"></a>참고자료
+
+[스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
+[fread](fread.md)<br/>
+[_write](write.md)<br/>

@@ -109,15 +109,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a471e0df86dbfd5e8c267c463684a088b400863
-ms.sourcegitcommit: 604907f77eb6c5b1899194a9877726f3e8c2dabc
+ms.openlocfilehash: 34069bd8866e38faa2cade18e44e16eda4154a40
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
-정수를 문자열로 변환합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. 참조 [_itoa_s, _itow_s 함수](../../c-runtime-library/reference/itoa-s-itow-s.md)합니다.
+정수를 문자열로 변환합니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. 참조 [_itoa_s, _itow_s 함수](itoa-s-itow-s.md)합니다.
 
 ## <a name="syntax"></a>구문
 
@@ -192,12 +192,12 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 
 ## <a name="remarks"></a>설명
 
-`_itoa`, `_ltoa`, `_ultoa`, `_i64toa`, 및 `_ui64toa` 함수 변환의 숫자는 주어진 *값* 인수를 null로 끝나는 문자열 및 저장소 (최대 33 결과 에 대 한 문자 `_itoa`, `_ltoa`, 및 `_ultoa`, 및에 대 한 65 `_i64toa` 및 `_ui64toa`)에서 *버퍼*합니다. 경우 *기 수* 이 10 및 *값* 가 음수인 경우 저장된 된 문자열의 첫 번째 문자는 음수 기호 (**-**). `_itow`, `_ltow`, `_ultow`, `_i64tow`, 및 `_ui64tow` 함수는 와이드 문자 버전의 `_itoa`, `_ltoa`, `_ultoa`, `_i64toa`, 및 `_ui64toa`각각.
+**_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, 및 **_ui64toa** 함수 변환의 숫자 주어진 *값* 인수를 null로 끝나는 문자열 및 저장소 결과 (최대 33 문자에 대 한 **_itoa**, **_ltoa**, 및  **_ultoa**, 및에 대 한 65 **_i64toa** 및 **_ui64toa**)에서 *버퍼*합니다. 경우 *기 수* 이 10 및 *값* 가 음수인 경우 저장된 된 문자열의 첫 번째 문자는 음수 기호 (**-**). **_itow**, **_ltow**, **_ultow**, **_i64tow**, 및 **_ui64tow** 함수는 와이드 문자 버전의 **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, 및 **_ui64toa**, 각각.
 
 > [!IMPORTANT]
 > 이러한 함수는 너무 작은 버퍼의 끝을 지나서 작성할 수 있습니다. 버퍼 오버런을 방지 하려면 되도록 *버퍼* 작아서 변환 된 숫자와 후행 null 문자 및 기호 문자를 포함 합니다. 이러한 함수를 잘못 사용 하면 코드의 심각한 보안 문제가 발생할 수 있습니다.
 
-기본적으로 보안 문제에 대 한 잠재력 인해 이러한 함수는 사용 중단 경고를 발생 [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **함수 또는 변수에이 안전 하지 않을 수 있습니다. 사용 하는 것이 좋습니다** *safe_function* **대신 합니다. 사용 중단 하려면 _CRT_SECURE_NO_WARNINGS를 사용 합니다.** 사용 하 여 소스 코드를 변경 하는 것이 좋습니다는 *safe_function* 경고 메시지에서 제안 합니다. 보다 안전한 함수는 지정 된 버퍼 크기 보다 많은 문자를 작성 하지 마십시오. 자세한 내용은 참조 [_itoa_s, _itow_s 함수](../../c-runtime-library/reference/itoa-s-itow-s.md)합니다.
+기본적으로 보안 문제에 대 한 잠재력 인해 이러한 함수는 사용 중단 경고를 발생 [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **함수 또는 변수에이 안전 하지 않을 수 있습니다. 사용 하는 것이 좋습니다** *safe_function* **대신 합니다. 사용 중단 하려면 _CRT_SECURE_NO_WARNINGS를 사용 합니다.** 사용 하 여 소스 코드를 변경 하는 것이 좋습니다는 *safe_function* 경고 메시지에서 제안 합니다. 보다 안전한 함수는 지정 된 버퍼 크기 보다 많은 문자를 작성 하지 마십시오. 자세한 내용은 참조 [_itoa_s, _itow_s 함수](itoa-s-itow-s.md)합니다.
 
 사용 중단 경고 없이 이러한 함수를 사용 하려면 정의 **하려면 _CRT_SECURE_NO_WARNINGS** CRT 헤더를 포함 하기 전에 전처리기 매크로입니다. 추가 하 여 개발자 명령 프롬프트에서 명령줄에 이렇게 하려면는 **/D_CRT_SECURE_NO_WARNINGS** 컴파일러 옵션을는 **cl** 명령입니다. 그렇지 않으면 원본 파일에 매크로 정의 합니다. 미리 컴파일된 헤더를 사용 하면 미리 컴파일된 헤더 맨 위에 있는 매크로 정의 일반적으로 stdafx.h 파일을 포함 합니다. 사용 하 여 소스 코드에서 매크로 정의 하는 **#define** 지시문이이 예제에서와 같이 모든 CRT 헤더를 포함 하기 전에:
 
@@ -208,7 +208,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 
 C + +에서 이러한 함수는 보다 안전한 대응을 호출 하는 템플릿 오버 로드를 갖고 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.
 
-Posix 이름을 `itoa`, `ltoa`, 및 `ultoa` 에 대 한 별칭으로 존재는 `_itoa`, `_ltoa`, 및 `_ultoa` 함수입니다. ISO C의 구현의 함수 이름 규칙을 준수 하지 않는 때문에 Posix 이름은 사용 되지 않습니다. 기본적으로 이러한 함수는 사용 중단 경고를 발생 [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **이 항목은 POSIX 이름은 사용 되지 않습니다. 대신 ISO C 및 c + + 규격 이름을 사용 하 여:** *new_name*합니다. 이러한 함수의 더 안전한 버전을 사용 하 여 소스 코드를 변경 하는 것이 좋습니다 `_itoa_s`, `_ltoa_s`, 또는 `_ultoa_s`합니다. 자세한 내용은 참조 [_itoa_s, _itow_s 함수](../../c-runtime-library/reference/itoa-s-itow-s.md)합니다.
+Posix 이름을 **itoa**, **ltoa**, 및 **ultoa** 에 대 한 별칭으로 존재는 **_itoa**, **_ltoa**, 및 **_ultoa** 함수입니다. ISO C의 구현의 함수 이름 규칙을 준수 하지 않는 때문에 Posix 이름은 사용 되지 않습니다. 기본적으로 이러한 함수는 사용 중단 경고를 발생 [C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md): **이 항목은 POSIX 이름은 사용 되지 않습니다. 대신 ISO C 및 c + + 규격 이름을 사용 하 여:** *new_name*합니다. 이러한 함수의 더 안전한 버전을 사용 하 여 소스 코드를 변경 하는 것이 좋습니다 **_itoa_s**, **_ltoa_s**, 또는 **_ultoa_s**합니다. 자세한 내용은 참조 [_itoa_s, _itow_s 함수](itoa-s-itow-s.md)합니다.
 
 소스 코드 이식성에 대 한 코드에서 Posix 이름을 사용 하는 것이 좋습니다. 사용 중단 경고 없이 이러한 함수를 사용 하려면 둘 다 정의 **_CRT_NONSTDC_NO_WARNINGS** 및 **하려면 _CRT_SECURE_NO_WARNINGS** CRT 헤더를 포함 하기 전에 전처리기 매크로입니다. 추가 하 여 개발자 명령 프롬프트에서 명령줄에 이렇게 하려면는 **/D_CRT_SECURE_NO_WARNINGS** 및 **/D_CRT_NONSTDC_NO_WARNINGS** 컴파일러 옵션을 **cl**명령입니다. 그렇지 않은 경우, 소스 파일에 매크로 정의 합니다. 미리 컴파일된 헤더를 사용 하면 정의 미리 컴파일된 헤더 맨 위에 있는 매크로 일반적으로 stdafx.h 파일을 포함 합니다. 소스 코드에서 매크로 정의 하려면 **#define** 지시문이이 예제에서와 같이 모든 CRT 헤더를 포함 하기 전에:
 
@@ -227,11 +227,11 @@ CRT에 변환에 대 한 보안 버퍼를 만들 수 있도록, 일부 편리한
 ||||
 |-|-|-|
 |함수|radix|매크로|
-|`_itoa`, `_itow`|16<br/>10<br/>8<br/>2|`_MAX_ITOSTR_BASE16_COUNT`<br/>`_MAX_ITOSTR_BASE10_COUNT`<br/>`_MAX_ITOSTR_BASE8_COUNT`<br/>`_MAX_ITOSTR_BASE2_COUNT`|
-|`_ltoa`, `_ltow`|16<br/>10<br/>8<br/>2|`_MAX_LTOSTR_BASE16_COUNT`<br/>`_MAX_LTOSTR_BASE10_COUNT`<br/>`_MAX_LTOSTR_BASE8_COUNT`<br/>`_MAX_LTOSTR_BASE2_COUNT`|
-|`_ultoa`, `_ultow`|16<br/>10<br/>8<br/>2|`_MAX_ULTOSTR_BASE16_COUNT`<br/>`_MAX_ULTOSTR_BASE10_COUNT`<br/>`_MAX_ULTOSTR_BASE8_COUNT`<br/>`_MAX_ULTOSTR_BASE2_COUNT`|
-|`_i64toa`, `_i64tow`|16<br/>10<br/>8<br/>2|`_MAX_I64TOSTR_BASE16_COUNT`<br/>`_MAX_I64TOSTR_BASE10_COUNT`<br/>`_MAX_I64TOSTR_BASE8_COUNT`<br/>`_MAX_I64TOSTR_BASE2_COUNT`|
-|`_ui64toa`, `_ui64tow`|16<br/>10<br/>8<br/>2|`_MAX_U64TOSTR_BASE16_COUNT`<br/>`_MAX_U64TOSTR_BASE10_COUNT`<br/>`_MAX_U64TOSTR_BASE8_COUNT`<br/>`_MAX_U64TOSTR_BASE2_COUNT`|
+|**_itoa**, **_itow**|16<br/>10<br/>8<br/>2|**_MAX_ITOSTR_BASE16_COUNT**<br/>**_MAX_ITOSTR_BASE10_COUNT**<br/>**_MAX_ITOSTR_BASE8_COUNT**<br/>**_MAX_ITOSTR_BASE2_COUNT**|
+|**_ltoa**, **_ltow**|16<br/>10<br/>8<br/>2|**_MAX_LTOSTR_BASE16_COUNT**<br/>**_MAX_LTOSTR_BASE10_COUNT**<br/>**_MAX_LTOSTR_BASE8_COUNT**<br/>**_MAX_LTOSTR_BASE2_COUNT**|
+|**_ultoa**, **_ultow**|16<br/>10<br/>8<br/>2|**_MAX_ULTOSTR_BASE16_COUNT**<br/>**_MAX_ULTOSTR_BASE10_COUNT**<br/>**_MAX_ULTOSTR_BASE8_COUNT**<br/>**_MAX_ULTOSTR_BASE2_COUNT**|
+|**_i64toa**, **_i64tow**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
+|**_ui64toa**, **_ui64tow**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
 변환 개수 매크로 사용 하 여 포함할 수 있을 만큼 큰 버퍼를 정의 하는이 예제는 **부호 없는 long long** 밑 2에서:
 
@@ -249,19 +249,19 @@ int main()
 
 |Tchar.h 루틴|_UNICODE 및 _MBCS 정의되지 않음|_MBCS 정의됨|_UNICODE 정의됨|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|`_itot`|`_itoa`|`_itoa`|`_itow`|
-|`_ltot`|`_ltoa`|`_ltoa`|`_ltow`|
-|`_ultot`|`_ultoa`|`_ultoa`|`_ultow`|
-|`_i64tot`|`_i64toa`|`_i64toa`|`_i64tow`|
-|`_ui64tot`|`_ui64toa`|`_ui64toa`|`_ui64tow`|
+|**_itot**|**_itoa**|**_itoa**|**_itow**|
+|**_ltot**|**_ltoa**|**_ltoa**|**_ltow**|
+|**_ultot**|**_ultoa**|**_ultoa**|**_ultow**|
+|**_i64tot**|**_i64toa**|**_i64toa**|**_i64tow**|
+|**_ui64tot**|**_ui64toa**|**_ui64toa**|**_ui64tow**|
 
 ## <a name="requirements"></a>요구 사항
 
 |루틴|필수 헤더|
 |-------------|---------------------|
-|`itoa`, `ltoa`, `ultoa`|\<stdlib.h>|
-|`_itoa`, `_ltoa`, `_ultoa`, `_i64toa`, `_ui64toa`|\<stdlib.h>|
-|`_itow`, `_ltow`, `_ultow`, `_i64tow`, `_ui64tow`|\<stdlib.h> 또는 \<wchar.h>|
+|**itoa**, **ltoa**, **ultoa**|\<stdlib.h>|
+|**_itoa**, **_ltoa**, **_ultoa**, **_i64toa**, **_ui64toa**|\<stdlib.h>|
+|**_itow**, **_ltow**, **_ultow**, **_i64tow**, **_ui64tow**|\<stdlib.h> 또는 \<wchar.h>|
 
 이러한 함수 및 매크로 Microsoft 마다 다릅니다. 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
@@ -342,7 +342,7 @@ base 3: 11112220022122120101211020120210210211220 (41 chars)
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [데이터 변환](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa_s, _itow_s functions](../../c-runtime-library/reference/itoa-s-itow-s.md)<br/>
+[_itoa_s, _itow_s 함수](itoa-s-itow-s.md)<br/>

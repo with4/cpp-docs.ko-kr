@@ -24,11 +24,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd40617afecd0c9be03e3676ebe5f2fb8058312a
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: a8ac39babea0c36e9d5d120e1f5ca89e3f3dc014
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG(링크 타임 코드 생성)
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 03/22/2018
 완료된 링크 비율을 표시하는 진행률 표시기가 링커에 표시되는지 여부를 지정합니다. 기본적으로 이 상태 정보는 표시되지 않습니다.
 
 **OFF** (선택 사항)<br/>
-링크 타임 코드 생성을 사용 하지 않도록 설정 합니다. 이 동작은 명령줄에서 /LTCG 지정 하지 않으면 경우와 동일 합니다.
+링크 타임 코드 생성을 사용 하지 않도록 설정 합니다. 이 동작은 경우와 동일 하 게 **/LTCG** 명령줄에서 지정 하지 않으면 합니다.
 
 **PGINSTRUMENT** (선택 사항)<br/>
 이 옵션은 Visual Studio 2015부터 사용 되지 않습니다. 대신를 사용 하 여 **/LTCG** 및 [/GENPROFILE 또는 /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) 를 프로필 기반 최적화에 대 한 계측된 된 빌드를 생성 합니다. 계측된 실행으로부터 수집되는 데이터는 최적화된 이미지를 만드는 데 사용됩니다. 자세한 내용은 참조 [프로필 기반 최적화](profile-guided-optimizations.md)합니다. 이 옵션의 약식 형태는 **/ltcg: pgi**합니다.
@@ -156,7 +156,7 @@ ms.lasthandoff: 03/22/2018
 
 적용할 수 있습니다 **/LTCG** 선택 하 여 특정 빌드에 **빌드** > **프로필 기반 최적화** 프로필 중 하나를 선택 하거나 메뉴 모음에서 프로젝트에 대 한 바로 가기 메뉴에서 최적화 옵션을 안내 합니다.
 
-#### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면
+### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면
 
 - <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LinkTimeCodeGeneration%2A>을 참조하세요.
 

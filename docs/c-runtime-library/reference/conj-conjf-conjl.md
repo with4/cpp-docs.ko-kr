@@ -1,13 +1,13 @@
 ---
-title: "conj, conjf, conjl | Microsoft 문서"
-ms.custom: 
+title: conj, conjf, conjl | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - conj
@@ -40,64 +40,69 @@ helpviewer_keywords:
 - conjf function
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6b994d8c6afe416cd399c04d91fae422b217cf2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e01feb4b30305f915a91d104d9134018c3d5b24e
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="conj-conjf-conjl"></a>conj, conjf, conjl
-복소수의 켤레 복소수를 검색합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-_Dcomplex conj(   
-   _Dcomplex z   
-);  
-_Fcomplex conj(   
-   _Fcomplex z   
-);  // C++ only  
-_Lcomplex conj(   
-   _Lcomplex z   
-);  // C++ only  
-_Fcomplex conjf(   
-   _Fcomplex z   
-);  
-_Lcomplex conjl(   
-   _Lcomplex z   
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `z`  
- 복소수입니다.  
-  
-## <a name="return-value"></a>반환 값  
- `z`의 켤레 복소수입니다.  결과는 `z`와 실수부 및 허수부가 동일하지만 부호가 반대입니다.  
-  
-## <a name="remarks"></a>설명  
- C++에서는 오버로드를 허용하므로 `conj` 및 `_Fcomplex` 값을 사용 및 반환하는 `_Lcomplex`의 오버로드를 호출할 수 있습니다. C 프로그램에서 `conj` 는 항상 `_Dcomplex` 값을 사용 및 반환합니다.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|C 헤더|C++ 헤더|  
-|-------------|--------------|------------------|  
-|`conj`,               `conjf`, `conjl`|\<complex.h>|\<ccomplex>|  
-  
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- [사전순 함수 참조](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [norm, normf, norml](../../c-runtime-library/reference/norm-normf-norml1.md)   
- [creal, crealf, creall](../../c-runtime-library/reference/creal-crealf-creall.md)   
- [cproj, cprojf, cprojl](../../c-runtime-library/reference/cproj-cprojf-cprojl.md)   
- [cimag, cimagf, cimagl](../../c-runtime-library/reference/cimag-cimagf-cimagl.md)   
- [carg, cargf, cargl](../../c-runtime-library/reference/carg-cargf-cargl.md)   
- [cabs, cabsf, cabsl](../../c-runtime-library/reference/cabs-cabsf-cabsl.md)
+
+복소수의 켤레 복소수를 검색합니다.
+
+## <a name="syntax"></a>구문
+
+```C
+_Dcomplex conj(
+   _Dcomplex z
+);
+_Fcomplex conj(
+   _Fcomplex z
+);  // C++ only
+_Lcomplex conj(
+   _Lcomplex z
+);  // C++ only
+_Fcomplex conjf(
+   _Fcomplex z
+);
+_Lcomplex conjl(
+   _Lcomplex z
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*z*<br/>
+복소수입니다.
+
+## <a name="return-value"></a>반환 값
+
+복소수의 켤레 *z*합니다.  결과 동일한 실수 및 허수 부분으로 *z*, 같지만 부호가 다른 합니다.
+
+## <a name="remarks"></a>설명
+
+C + +는 오버 로딩을 허용 하기 때문에 오버 로드를 호출할 수 있습니다 **conj** 사용 하 고 반환 **_Fcomplex** 및 **_Lcomplex** 값입니다. C 프로그램에서 **conj** 항상 사용 하 고 반환 된 **_Dcomplex** 값입니다.
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|C 헤더|C++ 헤더|
+|-------------|--------------|------------------|
+|**conj**, **conjf**, **conjl**|\<complex.h>|\<ccomplex>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="see-also"></a>참고자료
+
+[사전순 함수 참조](crt-alphabetical-function-reference.md)<br/>
+[norm, normf, norml](norm-normf-norml1.md)<br/>
+[creal, crealf, creall](creal-crealf-creall.md)<br/>
+[cproj, cprojf, cprojl](cproj-cprojf-cprojl.md)<br/>
+[cimag, cimagf, cimagl](cimag-cimagf-cimagl.md)<br/>
+[carg, cargf, cargl](carg-cargf-cargl.md)<br/>
+[cabs, cabsf, cabsl](cabs-cabsf-cabsl.md)<br/>

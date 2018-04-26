@@ -1,12 +1,12 @@
 ---
-title: "_lsearch_s | Microsoft 문서"
-ms.custom: 
+title: _lsearch_s | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _lsearch_s
@@ -37,84 +37,89 @@ helpviewer_keywords:
 - _lsearch_s function
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
-caps.latest.revision: 
+caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a680c990ec91edf225057ea729fd3343a57610d4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 21d2aface59c4c2fd4247d299af26c63cdf46d45
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lsearchs"></a>_lsearch_s
-값에 대한 선형 검색을 수행합니다. [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [_lsearch](../../c-runtime-library/reference/lsearch.md) 버전입니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-void *_lsearch_s(  
-   const void *key,  
-   void *base,  
-   unsigned int *num,  
-   size_t size,  
-   int (__cdecl *compare)(void *, const void *, const void *),  
-   void * context  
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `key`  
- 검색할 개체입니다.  
-  
- `base`  
- 검색할 배열의 기준에 대한 포인터입니다.  
-  
- `num`  
- 요소의 수입니다.  
-  
- `size`  
- 각 배열 요소의 크기(바이트)입니다.  
-  
- `compare`  
- 비교 루틴에 대한 포인터입니다. 두 번째 매개 변수는 검색할 키에 대한 포인터입니다. 세 번째 매개 변수는 키와 비교할 배열 요소에 대한 포인터입니다.  
-  
- `context`  
- 비교 함수에서 액세스할 수 있는 개체에 대한 포인터입니다.  
-  
-## <a name="return-value"></a>반환 값  
- `key`가 있으면 `_lsearch_s`는 `base`에서 `key`와 일치하는 배열의 요소에 대한 포인터를 반환합니다. `key`가 없으면 `_lsearch_s`는 배열의 끝에서 새로 추가된 항목에 대한 포인터를 반환합니다.  
-  
- 함수에 잘못된 매개 변수를 전달하면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 계속해서 실행하도록 허용된 경우 `errno`는 `EINVAL`로 설정되고 함수는 `NULL`을 반환합니다. 자세한 내용은 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.  
-  
-### <a name="error-conditions"></a>오류 조건  
-  
-|`key`|`base`|`compare`|`num`|`size`|`errno`|  
-|-----------|------------|---------------|-----------|------------|-------------|  
-|`NULL`|any|any|any|any|`EINVAL`|  
-|any|`NULL`|any|!= 0|any|`EINVAL`|  
-|any|any|any|any|0|`EINVAL`|  
-|any|any|`NULL`|an|모두|`EINVAL`|  
-  
-## <a name="remarks"></a>설명  
- `_lsearch_s` 함수는 각각 `width` 바이트인 `num` 요소의 배열에서 `key` 값에 대해 선형 검색을 수행합니다. `bsearch_s`와 달리 `_lsearch_s`에서는 배열을 정렬할 필요가 없습니다. `key`가 없는 경우 `_lsearch_s`는 배열의 끝에 추가하고 `num`을 늘립니다.  
-  
- `compare` 함수는 두 배열 요소를 비교하여 해당 관계를 지정하는 값을 반환하는 사용자가 제공한 루틴에 대한 포인터입니다. 또한 `compare` 함수는 컨텍스트에 대한 포인터를 첫 번째 인수로 사용합니다. `_lsearch_s`는 검색 중에 `compare`를 한 번 이상 호출하며 각 호출에서 두 배열 요소에 대한 포인터를 전달합니다. `compare`는 요소를 비교한 다음 0이 아닌 값(요소가 다르다는 의미) 또는 0(요소가 동일하다는 의미)을 반환합니다.  
-  
- `context` 포인터는 검색된 데이터 구조가 개체의 일부이며 `compare` 함수가 개체의 멤버에 액세스해야 하는 경우에 유용할 수 있습니다. 예를 들어 `compare` 함수는 void 포인터를 적절한 개체 형식으로 캐스팅하고 해당 개체의 멤버에 액세스할 수 있습니다. `context` 포인터를 추가하면 정적 변수를 사용하여 `compare` 함수에 데이터를 제공할 경우 발생하는 재진입 버그를 추가 컨텍스트로 방지할 수 있으므로 `_lsearch_s`의 보안이 강화됩니다.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`_lsearch_s`|\<search.h>|  
-  
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- [검색 및 정렬](../../c-runtime-library/searching-and-sorting.md)   
- [bsearch_s](../../c-runtime-library/reference/bsearch-s.md)   
- [_lfind_s](../../c-runtime-library/reference/lfind-s.md)   
- [_lsearch](../../c-runtime-library/reference/lsearch.md)
+
+값에 대한 선형 검색을 수행합니다. [CRT의 보안 기능](../../c-runtime-library/security-features-in-the-crt.md)에 설명된 대로 강화된 보안 기능이 있는 [_lsearch](lsearch.md) 버전입니다.
+
+## <a name="syntax"></a>구문
+
+```C
+void *_lsearch_s(
+   const void *key,
+   void *base,
+   unsigned int *num,
+   size_t size,
+   int (__cdecl *compare)(void *, const void *, const void *),
+   void * context
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*key*<br/>
+검색할 개체입니다.
+
+*base*<br/>
+검색할 배열의 기준에 대한 포인터입니다.
+
+*번호*<br/>
+요소의 수입니다.
+
+*size*<br/>
+각 배열 요소의 크기(바이트)입니다.
+
+*compare*<br/>
+비교 루틴에 대한 포인터입니다. 두 번째 매개 변수는 검색할 키에 대한 포인터입니다. 세 번째 매개 변수는 키와 비교할 배열 요소에 대한 포인터입니다.
+
+*context*<br/>
+비교 함수에서 액세스할 수 있는 개체에 대한 포인터입니다.
+
+## <a name="return-value"></a>반환 값
+
+경우 *키* , 있으면 **_lsearch_s** 배열의 요소에 대 한 포인터를 반환 *기본* 일치 하는 *키*합니다. 경우 *키* 발견 되지 않으면 **_lsearch_s** 배열의 끝에 새로 추가 된 항목에 대 한 포인터를 반환 합니다.
+
+함수에 잘못된 매개 변수를 전달하면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행 한 다음 계속 하도록 허용 된 경우 **errno** 로 설정 된 **EINVAL** 함수가 반환 하 고 **NULL**합니다. 자세한 내용은 [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
+
+### <a name="error-conditions"></a>오류 조건
+
+|*key*|*base*|*compare*|*번호*|*size*|**errno**|
+|-----------|------------|---------------|-----------|------------|-------------|
+|**NULL**|모두|모두|모두|모두|**EINVAL**|
+|모두|**NULL**|모두|!= 0|모두|**EINVAL**|
+|모두|모두|모두|any|0|**EINVAL**|
+|모두|모두|**NULL**|an|모두|**EINVAL**|
+
+## <a name="remarks"></a>설명
+
+**_lsearch_s** 함수 값에 대 한 선형 검색을 수행 *키* 배열을 *번호* 의 각 요소 *너비* 바이트입니다. 와 달리 **bsearch_s**, **_lsearch_s** 정렬할 배열 필요 하지 않습니다. 경우 *키* 발견 되지 않으면 다음 **_lsearch_s** 배열과 간격의 끝에 추가 *번호*합니다.
+
+*비교* 함수는 두 배열 요소를 비교 하 고 서로의 관계를 지정 하는 값을 반환 하는 사용자 제공 루틴에 대 한 포인터입니다. *비교* 함수에는 또한 포인터는 첫 번째 인수는 컨텍스트를 사용 합니다. **_lsearch_s** 호출 *비교* 각 호출에 두 개의 배열 요소에 포인터를 전달 검색 하는 동안 한 번 이상. *비교* 요소를 비교 하 고 다음 중 하나를 반환 해야 (요소는 서로 다른 의미) 0이 아닌 값 또는 0 (요소는 동일).
+
+*컨텍스트* 포인터는 검색 된 데이터 구조가 개체의 일부 경우에 유용할 수 있습니다 및 *비교* 함수 개체의 멤버에 액세스 해야 합니다. 예를 들어 코드에 *비교* 함수는 void 포인터를 해당 개체의 적절 한 개체 유형 및 액세스 구성원으로 캐스팅할 수 있습니다. 추가 *컨텍스트* 포인터는 **_lsearch_s** 추가 데이터를 사용할 수 있도록 정적 변수를 사용 하 여 재진입 버그를 방지 하려면 추가 컨텍스트를 사용할 수 있으므로 보안은 *비교* 함수입니다.
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**_lsearch_s**|\<search.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="see-also"></a>참고자료
+
+[검색 및 정렬](../../c-runtime-library/searching-and-sorting.md)<br/>
+[bsearch_s](bsearch-s.md)<br/>
+[_lfind_s](lfind-s.md)<br/>
+[_lsearch](lsearch.md)<br/>

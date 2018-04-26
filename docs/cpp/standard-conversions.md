@@ -1,12 +1,12 @@
 ---
-title: "표준 변환 | Microsoft Docs"
-ms.custom: 
+title: 표준 변환 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-caps.latest.revision: 
+caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: bdb7477d0ea07803bf2219118e1fb530a889118c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="standard-conversions"></a>표준 변환
 C++ 언어에서는 기본 형식 간의 변환을 정의합니다. 또한 포인터, 참조 및 멤버 포인터 파생 형식에 대한 변환도 정의합니다. 이러한 변환을 "표준 변환"이라고 합니다. (형식, 표준 형식 및 파생된 형식에 대 한 자세한 내용은 참조 [형식](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0).)  
@@ -81,11 +81,11 @@ long_num2 = int_num * long_num2;
   
  값을 보존하는 확장과 부호 유부를 보존하는 확장은 보통 동일한 결과를 생성합니다. 하지만 확장된 개체가 다음 중 하나일 경우 다른 결과가 생성될 수 있습니다.  
   
--   피연산자  **/** , `%`, `/=`, `%=`,  **<** ,  **\< =** ,  **>** , 또는 **>=**  
+-   피연산자 **/**, `%`, `/=`, `%=`, **<**, **\< =**, **>**, 또는 **>=**  
   
      이 연산자는 부호를 사용하여 결과를 확인합니다. 따라서 피연산자에 적용될 경우 값을 보존하는 확장과 부호를 보존하는 확장이 다른 결과를 생성합니다.  
   
--   왼쪽된 피연산자  **>>**  또는 **>>=**  
+-   왼쪽된 피연산자 **>>** 또는 **>>=**  
   
      이 연산자는 시프트 연산을 수행할 때 부호 있는 수량과 부호 없는 수량을 다르게 처리합니다. 부호 있는 수량의 경우 수량을 오른쪽으로 이동하면 부호 비트가 빈 비트 위치로 전파됩니다. 부호 없는 수량의 경우 빈 비트 위치가 0으로 채워집니다.  
   
@@ -120,8 +120,7 @@ int main()
   
  부호 없는 정수 계열 형식의 개체를 부호 있는 해당 형식으로 변환할 수 있습니다. 그러나 다음 예제에서와 같이 부호 없는 개체의 값이 부호 있는 형식으로 표현할 수 있는 범위 밖에 있는 경우 이러한 변환으로 인해 데이터가 잘못 해석될 수 있습니다.  
   
-```  
-  
+```cpp
 #include <iostream>  
   
 using namespace std;  
@@ -142,11 +141,11 @@ int main()
   
  부동 형식의 개체를 덜 정확한 형식으로 변환할 수도 있습니다.단, 해당 형식으로 표현할 수 있는 범위에 있어야 합니다. (참조 [부동 제한](../cpp/floating-limits.md) 부동 형식의 범위에 대 한 합니다.) 원래 값을 정확하게 표현할 수 없는 경우 다음으로 높거나 다음으로 낮은 표현 가능한 값으로 변환할 수 있습니다. 그러한 값이 없으면 결과가 정의되지 않습니다. 다음 예제를 참조하세요.  
   
-```  
+```cpp
 cout << (float)1E300 << endl;  
 ```  
   
- 형식으로 표현할 수 있는 최대 값 **float** 3.402823466E38은-1E300 보다 훨씬 더 작은 수입니다. 따라서 숫자가 무한대로 변환되고 결과는 1.#INF입니다.  
+ 형식으로 표현할 수 있는 최대 값 **float** 3.402823466E38은-1E300 보다 훨씬 더 작은 수입니다. 따라서 숫자가 무한대로 변환 됩니다 하 고 결과 "inf"입니다.  
   
 ## <a name="conversions-between-integral-and-floating-point-types"></a>정수 계열 및 부동 소수점 형식 간의 변환  
  특정 식은 부동 형식의 개체가 정수 계열 형식으로 변환되도록 하거나 그 반대로 변환되도록 할 수 있습니다. 정수 형식의 개체를 부동 형식으로 변환하고 원래 값을 정확하게 나타낼 수 없는 경우, 결과는 다음의 더 높은 표현 가능 값 또는 다음의 더 낮은 표현 가능 값 중 하나입니다.  

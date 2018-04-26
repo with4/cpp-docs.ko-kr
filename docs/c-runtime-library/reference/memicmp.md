@@ -1,12 +1,12 @@
 ---
-title: "memicmp | Microsoft 문서"
-ms.custom: 
+title: memicmp | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - memicmp
@@ -29,17 +29,18 @@ dev_langs:
 helpviewer_keywords:
 - memicmp function
 ms.assetid: 45362e9c-7c64-41e9-92bb-7d4999a8635b
-caps.latest.revision: 
+caps.latest.revision: 4
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4c03aaf6a120701f04968adbdf49f6c4ab48862
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4b878985b0cc9a59947ed8691c4f337f41764c61
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="memicmp"></a>memicmp
-이 POSIX 함수는 사용되지 않습니다. 대신 ISO C++와 호환되는 [_memicmp](../../c-runtime-library/reference/memicmp-memicmp-l.md)를 사용하세요.
+
+이 POSIX 함수는 사용되지 않습니다. 대신 ISO C++와 호환되는 [_memicmp](memicmp-memicmp-l.md)를 사용하세요.

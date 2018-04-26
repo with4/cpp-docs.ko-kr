@@ -1,12 +1,12 @@
 ---
-title: "ferror | Microsoft 문서"
-ms.custom: 
+title: ferror | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ferror
@@ -32,57 +32,63 @@ helpviewer_keywords:
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7db390539df0761aacdb11de5eace58b2c9c87f8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3baec1f3f8775b422aa9e0e5da3a6eb3e738e74b
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ferror"></a>ferror
-스트림 오류를 테스트합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-int ferror(   
-   FILE *stream   
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `stream`  
- `FILE` 구조체에 대한 포인터입니다.  
-  
-## <a name="return-value"></a>반환 값  
- `stream`에서 오류가 발생하지 않는 경우 `ferror`는 0을 반환합니다. 그렇지 않으면 0이 아닌 값을 반환합니다. 스트림이 `NULL`인 경우 `ferror`는 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용한 경우 이 함수는 `errno`를 `EINVAL` 로 설정하고 0을 반환합니다.  
-  
- 이러한 오류 코드 및 기타 오류 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.  
-  
-## <a name="remarks"></a>설명  
- `ferror` 루틴(함수와 매크로 모두에서 구현됨)은 `stream`과 연결된 파일 읽기 또는 쓰기 오류를 테스트합니다. 오류가 발생한 경우 스트림의 오류 표시기는 스트림이 닫히거나 되감길 때까지 또는 이에 대해 `clearerr`이 호출될 때까지 설정된 상태를 유지합니다.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|함수|필수 헤더|  
-|--------------|---------------------|  
-|`ferror`|\<stdio.h>|  
-  
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
-  
-## <a name="example"></a>예  
- [feof](../../c-runtime-library/reference/feof.md)의 예제를 참조하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- [오류 처리](../../c-runtime-library/error-handling-crt.md)   
- [스트림 I/O](../../c-runtime-library/stream-i-o.md)   
- [clearerr](../../c-runtime-library/reference/clearerr.md)   
- [_eof](../../c-runtime-library/reference/eof.md)   
- [feof](../../c-runtime-library/reference/feof.md)   
- [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
- [perror, _wperror](../../c-runtime-library/reference/perror-wperror.md)
+
+스트림 오류를 테스트합니다.
+
+## <a name="syntax"></a>구문
+
+```C
+int ferror(
+   FILE *stream
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*스트림*<br/>
+**FILE** 구조체에 대한 포인터입니다.
+
+## <a name="return-value"></a>반환 값
+
+에 오류가 발생 한 경우 *스트림*, **ferror** 0을 반환 합니다. 그렇지 않으면 0이 아닌 값을 반환합니다. 스트림이 **NULL**, **ferror** 에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 이 함수를 설정 하는 경우 실행을 계속 허용 된, **errno** 를 **EINVAL** 0을 반환 합니다.
+
+이러한 오류 코드 및 기타 오류 코드에 대한 자세한 내용은 [_doserrno, errno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)를 참조하세요.
+
+## <a name="remarks"></a>설명
+
+**ferror** 루틴 (함수 및 매크로로 구현 됨)는 읽기 또는 쓰기와 관련 된 파일에서 오류에 대 한 테스트 *스트림*합니다. 오류가 발생 한 경우 스트림에 대 한 오류 표시기 설정이 그대로 유지 됩니다는 닫히거나 되 감 길 때까지 또는 until **clearerr** 이 대해 호출 됩니다.
+
+## <a name="requirements"></a>요구 사항
+
+|함수|필수 헤더|
+|--------------|---------------------|
+|**ferror**|\<stdio.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="example"></a>예제
+
+[feof](feof.md)의 예제를 참조하세요.
+
+## <a name="see-also"></a>참고자료
+
+[오류 처리](../../c-runtime-library/error-handling-crt.md)<br/>
+[스트림 I/O](../../c-runtime-library/stream-i-o.md)<br/>
+[clearerr](clearerr.md)<br/>
+[_eof](eof.md)<br/>
+[feof](feof.md)<br/>
+[fopen, _wfopen](fopen-wfopen.md)<br/>
+[perror, _wperror](perror-wperror.md)<br/>

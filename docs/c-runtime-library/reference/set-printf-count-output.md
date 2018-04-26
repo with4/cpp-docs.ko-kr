@@ -1,12 +1,12 @@
 ---
 title: _set_printf_count_output | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _set_printf_count_output
@@ -33,73 +33,77 @@ helpviewer_keywords:
 - set_printf_count_output function
 - _set_printf_count_output function
 ms.assetid: d8259ec5-764e-42d0-9169-72172e95163b
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 279b14f0387348d322bbe09428af24daa5fd2f69
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 505d87a98ed212a4be7e23a05127686b370c9176
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
-[printf, _printf_l, wprintf, _wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 패밀리 함수가 `%n` 형식을 지원하거나 지원하지 않도록 설정합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-int _set_printf_count_output(  
-   int enable  
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `enable`  
- 0이 아닌 값은 `%n` 지원을 사용하도록 설정하고, 0은 `%n` 지원을 사용하지 않도록 설정합니다.  
-  
-## <a name="property-valuereturn-value"></a>속성 값/반환 값  
- 이 함수를 호출하기 전의 `%n` 지원 상태입니다. `%n` 지원이 사용되면 0이 아닌 값이고, 해당 지원이 사용되지 않으면 0입니다.  
-  
-## <a name="remarks"></a>설명  
- 보안상의 이유로 `%n` 형식 지정자에 대한 지원은 기본적으로 `printf` 및 모든 해당 변형 항목에서 사용되지 않습니다. `%n`이 `printf` 형식 사양에서 발견되는 경우 기본 동작은 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출하는 것입니다. 호출 `_set_printf_count_output` 0이 아닌 인수를 사용 하면 `printf`-해석 패밀리 함수 `%n` 에 설명 된 대로 [형식 사양 구문: printf 및 wprintf 함수](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)합니다.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`_set_printf_count_output`|\<stdio.h>|  
-  
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.  
-  
-## <a name="example"></a>예  
-  
-```C  
-// crt_set_printf_count_output.c  
-#include <stdio.h>  
-  
-int main()  
-{  
-   int e;  
-   int i;  
-   e = _set_printf_count_output( 1 );  
-   printf( "%%n support was %sabled.\n",  
-        e ? "en" : "dis" );  
-   printf( "%%n support is now %sabled.\n",  
-        _get_printf_count_output() ? "en" : "dis" );  
-   printf( "12345%n6789\n", &i ); // %n format should set i to 5  
-   printf( "i = %d\n", i );  
-}  
-```  
-  
-```Output  
-%n support was disabled.  
-%n support is now enabled.  
-123456789  
-i = 5  
-```  
-  
-## <a name="see-also"></a>참고 항목  
- [_get_printf_count_output](../../c-runtime-library/reference/get-printf-count-output.md)
+
+지원을 설정 또는 해제는 **%n** 에 서식을 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-패밀리 함수입니다.
+
+## <a name="syntax"></a>구문
+
+```C
+int _set_printf_count_output(
+   int enable
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*사용 하도록 설정* 사용 하도록 설정 하려면 0이 아닌 값 **%n** 를 지원 하지 않으려면 0 **%n** 지원 합니다.
+
+## <a name="property-valuereturn-value"></a>속성 값/반환 값
+
+상태 **%n** 이 함수를 호출 하기 전에 지원: 0이 아닌 경우 **%n** 지원이 활성화 된 경우 사용 하지 않도록 설정 된 경우 0입니다.
+
+## <a name="remarks"></a>설명
+
+보안상의 이유로 인해에 대 한 지원의 **%n** 형식 지정자에는 기본적으로 비활성화 되어 **printf** 및 모든 변형 합니다. 경우 **%n** 에서 발견 되는 **printf** 에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 하는 형식 지정의 기본 동작은 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 호출 **_set_printf_count_output** 0이 아닌 인수를 사용 하면 **printf**-해석 패밀리 함수 **%n** 에 설명 된 대로 [형식 사양 구문: printf 및 wprintf 함수](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)합니다.
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**_set_printf_count_output**|\<stdio.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="example"></a>예제
+
+```C
+// crt_set_printf_count_output.c
+#include <stdio.h>
+
+int main()
+{
+   int e;
+   int i;
+   e = _set_printf_count_output( 1 );
+   printf( "%%n support was %sabled.\n",
+        e ? "en" : "dis" );
+   printf( "%%n support is now %sabled.\n",
+        _get_printf_count_output() ? "en" : "dis" );
+   printf( "12345%n6789\n", &i ); // %n format should set i to 5
+   printf( "i = %d\n", i );
+}
+```
+
+```Output
+%n support was disabled.
+%n support is now enabled.
+123456789
+i = 5
+```
+
+## <a name="see-also"></a>참고자료
+
+[_get_printf_count_output](get-printf-count-output.md)<br/>

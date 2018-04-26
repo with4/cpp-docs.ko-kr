@@ -1,12 +1,12 @@
 ---
 title: strrev, wcsrev | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - strrev
@@ -32,17 +32,18 @@ helpviewer_keywords:
 - strrev function
 - wcsrev function
 ms.assetid: 89e05854-a9ce-4fb7-993d-a9831cd7edf2
-caps.latest.revision: 
+caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cfb48c7c2494b300018e274ea2de8c45e9f2ce9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: faa65e9dfb8ea26fffe6076379eac92335a252fc
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="strrev-wcsrev"></a>strrev, wcsrev
-이러한 POSIX 함수는 더 이상 사용되지 않습니다. 대신 ISO C++와 호환되는 [_strrev, _wcsrev, _mbsrev, _mbsrev_l](../../c-runtime-library/reference/strrev-wcsrev-mbsrev-mbsrev-l.md)을 사용하세요.
+
+이러한 POSIX 함수는 더 이상 사용되지 않습니다. 대신 ISO C++와 호환되는 [_strrev, _wcsrev, _mbsrev, _mbsrev_l](strrev-wcsrev-mbsrev-mbsrev-l.md)을 사용하세요.

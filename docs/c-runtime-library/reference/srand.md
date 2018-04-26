@@ -1,12 +1,12 @@
 ---
 title: srand | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srand
@@ -42,15 +42,15 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cc76b80ca6c01d6512c69cc13fb0934e79b6ae5
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a01e56159bf4f04f2c8a53f39e3fcd1e7dd450b5
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="srand"></a>srand
 
-사용 하는 의사 난수 생성기에 대 한 시작 시드 값을 설정 하는 `rand` 함수입니다.
+사용 하는 의사 난수 생성기에 대 한 시작 시드 값을 설정 하는 **rand** 함수입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -62,26 +62,25 @@ void srand(
 
 ### <a name="parameters"></a>매개 변수
 
-*seed*  
-의사 난수 생성을 위한 시드
+*시드* 의사 난수 생성에 대 한 초기값
 
 ## <a name="remarks"></a>설명
 
-`srand` 함수는 현재 스레드에서 일련의 의사 난수 정수 생성을 위한 시작점을 설정합니다. 호출 결과의 동일한 시퀀스를 만드는 생성자를 다시 초기화 하려면는 `srand` 함수를 사용 하 여 동일한 *시드* 다시 인수입니다. 다른 모든 값에 대 한 *시드* 생성기 의사 난수 시퀀스에서 서로 다른 시작 지점으로 설정 합니다. `rand`는 생성된 의사 난수를 검색합니다. 호출 `rand` 를 호출 하기 전에 `srand` 호출할 때와 동일한 시퀀스를 생성 `srand` 와 *시드* 1로 전달 합니다.
+**srand** 함수는 현재 스레드의 의사 난수 정수 계열을 생성 하기 위한 시작 지점을 설정 합니다. 호출 결과의 동일한 시퀀스를 만드는 생성자를 다시 초기화 하려면는 **srand** 함수를 사용 하 여 동일한 *시드* 다시 인수입니다. 다른 모든 값에 대 한 *시드* 생성기 의사 난수 시퀀스에서 서로 다른 시작 지점으로 설정 합니다. **rand** 생성 되는 난수를 검색 합니다. 호출 **rand** 를 호출 하기 전에 **srand** 호출할 때와 동일한 시퀀스를 생성 **srand** 와 *시드* 1로 전달 합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴에서 반환된 값|필수 헤더|
+|루틴|필수 헤더|
 |-------------|---------------------|
-|`srand`|\<stdlib.h>|
+|**srand**|\<stdlib.h>|
 
-호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하십시오.
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
-[rand](../../c-runtime-library/reference/rand.md)의 예제를 참조하세요.
+[rand](rand.md)의 예제를 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
-[부동 소수점 지원](../../c-runtime-library/floating-point-support.md)  
-[rand](../../c-runtime-library/reference/rand.md)  
+[부동 소수점 지원](../../c-runtime-library/floating-point-support.md)<br/>
+[rand](rand.md)<br/>

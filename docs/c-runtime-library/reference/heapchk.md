@@ -1,12 +1,12 @@
 ---
-title: "_heapchk | Microsoft 문서"
-ms.custom: 
+title: _heapchk | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _heapchk
@@ -35,104 +35,101 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-caps.latest.revision: 
+caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1656c488b722d2ed791da16db8a014e53568e82d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: bc4be6eca6f2c9a2849f0a9e6ebda67a021eb226
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="heapchk"></a>_heapchk
-힙에서 일관성 확인을 실행합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-int _heapchk( void );  
-```  
-  
-## <a name="return-value"></a>반환 값  
- `_heapchk`는 Malloc.h에 정의된 다음 정수 매니페스트 상수 중 하나를 반환합니다.  
-  
- `_HEAPBADBEGIN`  
- 초기 헤더 정보가 잘못되었거나 찾을 수 없습니다.  
-  
- `_HEAPBADNODE`  
- 잘못된 노드가 검색되었거나 힙이 손상되었습니다.  
-  
- `_HEAPBADPTR`  
- 힙 포인터가 잘못되었습니다.  
-  
- `_HEAPEMPTY`  
- 힙이 초기화되지 않았습니다.  
-  
- `_HEAPOK`  
- 힙이 일치하는 것 같습니다.  
-  
- 또한 오류가 발생하는 경우 `_heapchk` 는 `errno` 를 `ENOSYS`로 설정합니다.  
-  
-## <a name="remarks"></a>설명  
- `_heapchk` 함수를 통해 힙의 최소 일관성을 확인하여 힙 관련 문제를 디버그할 수 있습니다. 운영 체제가 `_heapchk`(예: Windows 98)을 지원하지 않는 경우 함수에서 `_HEAPOK`를 반환하고 `errno`를 `ENOSYS`로 설정합니다.  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|선택적 헤더|  
-|-------------|---------------------|---------------------|  
-|`_heapchk`|\<malloc.h>|\<errno.h>|  
-  
- 호환성에 대한 자세한 내용은 소개 단원의 [호환성](../../c-runtime-library/compatibility.md) 부분을 참조하세요.  
-  
-## <a name="example"></a>예  
-  
-```  
-// crt_heapchk.c  
-// This program checks the heap for  
-// consistency and prints an appropriate message.  
-  
-#include <malloc.h>  
-#include <stdio.h>  
-  
-int main( void )  
-{  
-   int  heapstatus;  
-   char *buffer;  
-  
-   // Allocate and deallocate some memory  
-   if( (buffer = (char *)malloc( 100 )) != NULL )  
-      free( buffer );  
-  
-   // Check heap status  
-   heapstatus = _heapchk();  
-   switch( heapstatus )  
-   {  
-   case _HEAPOK:  
-      printf(" OK - heap is fine\n" );  
-      break;  
-   case _HEAPEMPTY:  
-      printf(" OK - heap is empty\n" );  
-      break;  
-   case _HEAPBADBEGIN:  
-      printf( "ERROR - bad start of heap\n" );  
-      break;  
-   case _HEAPBADNODE:  
-      printf( "ERROR - bad node in heap\n" );  
-      break;  
-   }  
-}  
-```  
-  
-```Output  
-OK - heap is fine  
-```  
-  
-## <a name="see-also"></a>참고 항목  
- [메모리 할당](../../c-runtime-library/memory-allocation.md)   
- [_heapadd](../../c-runtime-library/heapadd.md)   
- [_heapmin](../../c-runtime-library/reference/heapmin.md)   
- [_heapset](../../c-runtime-library/heapset.md)   
- [_heapwalk](../../c-runtime-library/reference/heapwalk.md)
+
+힙에서 일관성 확인을 실행합니다.
+
+## <a name="syntax"></a>구문
+
+```C
+int _heapchk( void );
+```
+
+## <a name="return-value"></a>반환 값
+
+**_heapchk** Malloc.h에 정의 된 다음 정수 매니페스트 상수 중 하나를 반환 합니다.
+
+|반환 값|조건|
+|-|-|
+**_HEAPBADBEGIN**|초기 헤더 정보가 잘못되었거나 찾을 수 없습니다.
+**_HEAPBADNODE**|잘못된 노드가 검색되었거나 힙이 손상되었습니다.
+**_HEAPBADPTR**|힙 포인터가 잘못되었습니다.
+**_HEAPEMPTY**|힙이 초기화되지 않았습니다.
+**_HEAPOK**|힙이 일치하는 것 같습니다.
+
+또한 오류가 발생 하는 경우 **_heapchk** 설정 **errno** 를 **ENOSYS**합니다.
+
+## <a name="remarks"></a>설명
+
+**_heapchk** 함수에 힙 최소한의 일관성을 확인 하 여 힙 관련 문제를 디버그 하는 데 도움이 됩니다. 운영 체제를 지원 하지 않는 경우 **_heapchk**함수 반환 (예: Windows 98) **_HEAPOK** 설정 **errno** 를 **ENOSYS**.
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|선택적 헤더|
+|-------------|---------------------|---------------------|
+|**_heapchk**|\<malloc.h>|\<errno.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="example"></a>예제
+
+```C
+// crt_heapchk.c
+// This program checks the heap for
+// consistency and prints an appropriate message.
+
+#include <malloc.h>
+#include <stdio.h>
+
+int main( void )
+{
+   int  heapstatus;
+   char *buffer;
+
+   // Allocate and deallocate some memory
+   if( (buffer = (char *)malloc( 100 )) != NULL )
+      free( buffer );
+
+   // Check heap status
+   heapstatus = _heapchk();
+   switch( heapstatus )
+   {
+   case _HEAPOK:
+      printf(" OK - heap is fine\n" );
+      break;
+   case _HEAPEMPTY:
+      printf(" OK - heap is empty\n" );
+      break;
+   case _HEAPBADBEGIN:
+      printf( "ERROR - bad start of heap\n" );
+      break;
+   case _HEAPBADNODE:
+      printf( "ERROR - bad node in heap\n" );
+      break;
+   }
+}
+```
+
+```Output
+OK - heap is fine
+```
+
+## <a name="see-also"></a>참고자료
+
+[메모리 할당](../../c-runtime-library/memory-allocation.md)<br/>
+[_heapadd](../../c-runtime-library/heapadd.md)<br/>
+[_heapmin](heapmin.md)<br/>
+[_heapset](../../c-runtime-library/heapset.md)<br/>
+[_heapwalk](heapwalk.md)<br/>

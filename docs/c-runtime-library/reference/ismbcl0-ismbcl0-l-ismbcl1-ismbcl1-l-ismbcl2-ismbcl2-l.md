@@ -1,12 +1,12 @@
 ---
-title: "_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l | Microsoft 문서"
-ms.custom: 
+title: _ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _ismbcl2
@@ -57,92 +57,97 @@ helpviewer_keywords:
 - _ismbcl2_l function
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
-caps.latest.revision: 
+caps.latest.revision: 20
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 007b94015b0d898ccedf9d9a7a07d60b26f5faa7
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4cbca36f0b396bd0623fee3a4039c20cee3d367c
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="ismbcl0-ismbcl0l-ismbcl1-ismbcl1l-ismbcl2-ismbcl2l"></a>_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
-현재 로캘 또는 지정된 LC_CTYPE 변환 상태 범주를 사용하는 **코드 페이지 932 관련 함수**입니다.  
-  
+
+현재 로캘 또는 지정된 LC_CTYPE 변환 상태 범주를 사용하는 **코드 페이지 932 관련 함수**입니다.
+
 > [!IMPORTANT]
->  이 API는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 참조 [CRT 함수는 유니버설 Windows 플랫폼 앱에서 지원 되지 않습니다](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-int _ismbcl0(  
-   unsigned int c   
-);  
-int _ismbcl0_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-int _ismbcl1(  
-   unsigned int c   
-);  
-int _ismbcl1_l(  
-   unsigned int c ,  
-   _locale_t locale  
-);  
-int _ismbcl2(  
-   unsigned int c   
-);  
-int _ismbcl2_l(  
-   unsigned int c,  
-   _locale_t locale  
-);  
-```  
-  
-#### <a name="parameters"></a>매개 변수  
- `c`  
- 테스트할 문자입니다.  
-  
- `locale`  
- 사용할 로캘입니다.  
-  
-## <a name="return-value"></a>반환 값  
- 이러한 각 루틴은 이 문자가 테스트 조건을 만족하는 경우 0이 아닌 값을 반환하고, 그렇지 않으면 0을 반환합니다. `c`가 <= 255이고 해당 `_ismbb` 루틴(예를 들어 `_ismbcalnum`은 `_ismbbalnum`에 해당됨)이 있는 경우 결과는 해당 `_ismbb` 루틴의 반환 값입니다.  
-  
-## <a name="remarks"></a>설명  
- 이러한 각 함수는 지정한 조건에 대해 주어진 멀티바이트 문자를 테스트합니다.  
-  
- 출력값은 로캘의 `LC_CTYPE` 범주 설정에 영향을 받습니다. 자세한 내용은 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)을 참조하세요. `_l` 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, `_l` 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.  
-  
-|루틴에서 반환된 값|테스트 조건(코드 페이지 932만 해당)|  
-|-------------|-------------------------------------------|  
-|`_ismbcl0`|JIS 비간지: 0x8140<=`c`<=0x889E.|  
-|`_ismbcl0_l`|JIS 비간지: 0x8140<=`c`<=0x889E.|  
-|`_ismbcl1`|JIS 수준 1: 0x889F<=`c`<=0x9872.|  
-|`_ismbcl1_l`|JIS 수준 1: 0x889F<=`c`<=0x9872.|  
-|`_ismbcl2`|JIS 수준 2: 0x989F<=`c`<=0xEAA4.|  
-|`_ismbcl2_l`|JIS 수준 2: 0x989F<=`c`<=0xEAA4.|  
-  
- 이 함수는 지정된 값 `c`가 위에 설명된 테스트 조건과 일치하는지 확인하지만 `c`가 유효한 멀티바이트 문자인지는 확인하지 않습니다. 하위 바이트 범위가 0x00 – 0x3F, 0x7F 또는 0xFD – 0xFF인 경우 이러한 함수는 0이 아닌 값을 반환하여 문자가 테스트 조건을 충족함을 나타냅니다. [_ismbbtrail](../../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)을 사용하여 멀티바이트 문자가 정의되었는지 여부를 테스트합니다.  
-  
- **최종 코드 페이지 932 관련**  
-  
-## <a name="requirements"></a>요구 사항  
-  
-|루틴에서 반환된 값|필수 헤더|  
-|-------------|---------------------|  
-|`_ismbcl0`|\<mbstring.h>|  
-|`_ismbcl0_l`|\<mbstring.h>|  
-|`_ismbcl1`|\<mbstring.h>|  
-|`_ismbcl1_l`|\<mbstring.h>|  
-|`_ismbcl2`|\<mbstring.h>|  
-|`_ismbcl2_l`|\<mbstring.h>|  
-  
- 호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- [문자 분류](../../c-runtime-library/character-classification.md)   
- [_ismbc 루틴](../../c-runtime-library/ismbc-routines.md)   
- [is, isw 루틴](../../c-runtime-library/is-isw-routines.md)
+> 이 API는 Windows 런타임에서 실행되는 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)를 참조하세요.
+
+## <a name="syntax"></a>구문
+
+```C
+int _ismbcl0(
+   unsigned int c
+);
+int _ismbcl0_l(
+   unsigned int c,
+   _locale_t locale
+);
+int _ismbcl1(
+   unsigned int c
+);
+int _ismbcl1_l(
+   unsigned int c ,
+   _locale_t locale
+);
+int _ismbcl2(
+   unsigned int c
+);
+int _ismbcl2_l(
+   unsigned int c,
+   _locale_t locale
+);
+```
+
+### <a name="parameters"></a>매개 변수
+
+*c*<br/>
+테스트할 문자입니다.
+
+*locale*<br/>
+사용할 로캘입니다.
+
+## <a name="return-value"></a>반환 값
+
+이러한 각 루틴은 이 문자가 테스트 조건을 만족하는 경우 0이 아닌 값을 반환하고, 그렇지 않으면 0을 반환합니다. 경우 *c* < 255 = 해당 하는 및 **_ismbb** 루틴 (예를 들어 **_ismbcalnum** 에 해당 **_ismbbalnum**), 결과 해당 반환 값 **_ismbb** 루틴입니다.
+
+## <a name="remarks"></a>설명
+
+이러한 각 함수는 지정한 조건에 대해 주어진 멀티바이트 문자를 테스트합니다.
+
+출력 값은의 설정에 영향을 **LC_CTYPE** 로캘 범주 설정; 참조 [setlocale](setlocale-wsetlocale.md) 자세한 정보에 대 한 합니다. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+
+|루틴|테스트 조건(코드 페이지 932만 해당)|
+|-------------|-------------------------------------------|
+|**_ismbcl0**|간지 JIS 비-: 0x8140 < =*c*< 0x889E = 합니다.|
+|**_ismbcl0_l**|간지 JIS 비-: 0x8140 < =*c*< 0x889E = 합니다.|
+|**_ismbcl1**|JIS 수준-1: 0x889F < =*c*< 0x9872 = 합니다.|
+|**_ismbcl1_l**|JIS 수준-1: 0x889F < =*c*< 0x9872 = 합니다.|
+|**_ismbcl2**|JIS 수준-2: 0x989F < =*c*< 0xEAA4 = 합니다.|
+|**_ismbcl2_l**|JIS 수준-2: 0x989F < =*c*< 0xEAA4 = 합니다.|
+
+함수를 확인 하는 지정된 된 값 *c* 테스트 조건을 위에서 설명한 하지만 검사 하지 않는 일치 *c* 유효한 멀티 바이트 문자입니다. 하위 바이트 범위가 0x00 – 0x3F, 0x7F 또는 0xFD – 0xFF인 경우 이러한 함수는 0이 아닌 값을 반환하여 문자가 테스트 조건을 충족함을 나타냅니다. [_ismbbtrail](ismbbtrail-ismbbtrail-l.md)을 사용하여 멀티바이트 문자가 정의되었는지 여부를 테스트합니다.
+
+**최종 코드 페이지 932 관련**
+
+## <a name="requirements"></a>요구 사항
+
+|루틴|필수 헤더|
+|-------------|---------------------|
+|**_ismbcl0**|\<mbstring.h>|
+|**_ismbcl0_l**|\<mbstring.h>|
+|**_ismbcl1**|\<mbstring.h>|
+|**_ismbcl1_l**|\<mbstring.h>|
+|**_ismbcl2**|\<mbstring.h>|
+|**_ismbcl2_l**|\<mbstring.h>|
+
+호환성에 대한 자세한 내용은 [호환성](../../c-runtime-library/compatibility.md)을 참조하세요.
+
+## <a name="see-also"></a>참고자료
+
+[문자 분류](../../c-runtime-library/character-classification.md)<br/>
+[_ismbc 루틴](../../c-runtime-library/ismbc-routines.md)<br/>
+[is, isw 루틴](../../c-runtime-library/is-isw-routines.md)<br/>

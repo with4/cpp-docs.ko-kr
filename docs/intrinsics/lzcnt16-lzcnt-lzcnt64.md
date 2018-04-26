@@ -1,12 +1,12 @@
 ---
 title: __lzcnt16, __lzcnt, __lzcnt64 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - __lzcnt64
@@ -23,22 +23,22 @@ helpviewer_keywords:
 - lzcnt64 intrinsic
 - __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-caps.latest.revision: 
+caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85af6534ccf578bccabcd0f7b517234b2b560b6f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8507dc567c92539baaf51abe8bd7a4644a405558
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16, __lzcnt, __lzcnt64
 **Microsoft 전용**  
   
- 개수 앞에 오는 수는 16, 32 비트 또는 64 바이트 정수에 0입니다.  
+ 계산 선행 수는 16, 32 비트 또는 64 비트 정수에 0입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -78,7 +78,7 @@ unsigned __int64 __lzcnt64(
   
  Intel 프로세서를 지원 하지 않는 `lzcnt` 명령으로 실행 명령 바이트 인코딩을 `bsr` (스캔 역방향 비트)입니다. 사용 하 여 코드 이식성 중요 한 경우는 `_BitScanReverse` 내장 함수 대신 합니다. 자세한 내용은 참조 [_BitScanReverse, _BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // Compile this test with: /EHsc  
