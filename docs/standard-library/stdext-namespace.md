@@ -1,12 +1,12 @@
 ---
-title: "stdext 네임스페이스 | Microsoft Docs"
-ms.custom: 
+title: stdext 네임스페이스 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/06/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - stdext
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - _DEFINE_DEPRECATED_HASH_CLASSES symbol
 - stdext namespace
 ms.assetid: 3e94fc89-0584-424f-bc09-081b73379545
-caps.latest.revision: 
+caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 265a10e71064f2bf3a318a272b751009b1b193be
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9c1baadcb29f4f30582f3e1cadd8a061fc72cd5a
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="stdext-namespace"></a>stdext 네임스페이스
 
@@ -36,11 +36,11 @@ ms.lasthandoff: 02/23/2018
 
 컴파일러의 사용에 대 한 오류를 생성 하려면 `std` 의 멤버에 대 한는 \<hash_map > 및 \<hash_set > 헤더 파일을 **/Ze**, 하기 전에 다음 지시문을 추가 `#include` 모든 c + + 표준 라이브러리 헤더 파일입니다.
 
-```cpp  
-#define _DEFINE_DEPRECATED_HASH_CLASSES 0  
-```  
+```cpp
+#define _DEFINE_DEPRECATED_HASH_CLASSES 0
+```
 
-로 컴파일할 때 **/Za**, 컴파일러에 오류가 발생 합니다.  
+로 컴파일할 때 **/Za**, 컴파일러에 오류가 발생 합니다.
 
 ## <a name="see-also"></a>참고 항목
 

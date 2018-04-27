@@ -1,12 +1,12 @@
 ---
-title: "weak_ptr 클래스 | Microsoft Docs"
-ms.custom: 
+title: weak_ptr 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - memory/std::weak_ptr
@@ -37,141 +37,150 @@ helpviewer_keywords:
 - std::weak_ptr [C++], swap
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
-caps.latest.revision: 
+caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a4d7989038ecb83575a8c9c2137df8965db6dc3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c8169d8958d99de545ed03c50393bc22478b425f
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="weakptr-class"></a>weak_ptr 클래스
-약하게 링크된 포인터를 래핑합니다.  
-  
-## <a name="syntax"></a>구문  
-```    
+
+약하게 링크된 포인터를 래핑합니다.
+
+## <a name="syntax"></a>구문
+
+```cpp
 template<class _Ty>
-   class weak_ptr {  
-public:  
-   typedef Ty element_type;  
+   class weak_ptr {
+public:
+   typedef Ty element_type;
    weak_ptr();
    weak_ptr(const weak_ptr&);
-   template <class Other>  
+   template <class Other>
       weak_ptr(const weak_ptr<Other>&);
-   template <class Other>  
+   template <class Other>
       weak_ptr(const shared_ptr<Other>&);
    weak_ptr& operator=(const weak_ptr&);
-   template <class Other>  
+   template <class Other>
       weak_ptr& operator=(const weak_ptr<Other>&);
-   template <class Other>  
+   template <class Other>
       weak_ptr& operator=(shared_ptr<Other>&);
    void swap(weak_ptr&);
    void reset();
    long use_count() const;
    bool expired() const;
    shared_ptr<Ty> lock() const;
-   };  
-```    
-#### <a name="parameters"></a>매개 변수  
- `Ty`  
- 약한 포인터에 의해 제어되는 형식입니다.  
-  
-## <a name="remarks"></a>설명  
- 이 템플릿 클래스는 하나 이상의 [shared_ptr Class](../standard-library/shared-ptr-class.md) 개체에 의해 관리되는 리소스를 가리키는 개체를 설명합니다. 리소스를 가리키는 `weak_ptr` 개체는 리소스의 참조 횟수에 영향을 주지 않습니다. 따라서 해당 리소스를 관리하는 마지막 `shared_ptr` 개체가 삭제되면 해당 리소스를 가리키는 `weak_ptr` 개체가 있는 경우에도 리소스가 해제됩니다. 이는 데이터 구조에서 순환을 방지하는 데 필요합니다.  
-  
- `weak_ptr` 개체는 리소스를 소유하는 `shared_ptr` 개체에서 생성된 경우, 리소스를 가리키는 `weak_ptr` 개체에서 생성된 경우 또는 [operator=](#op_eq)를 사용하여 리소스가 할당된 경우 해당 리소스를 가리킵니다. `weak_ptr` 개체는 가리키는 리소스에 대한 직접 액세스를 제공하지 않습니다. 리소스를 사용해야 하는 코드는 구성원 함수 [lock](#lock)을 호출하여 만든, 해당 리소스를 소유하는 `shared_ptr` 개체를 통해 사용합니다. 리소스를 소유하는 모든 `shared_ptr` 개체가 삭제되어 `weak_ptr` 개체가 가리키는 리소스가 해제된 경우 개체가 만료되었습니다. 만료된 `weak_ptr` 개체에 대해 `lock`을 호출하면 빈 shared_ptr 개체가 생성됩니다.  
-  
- 빈 weak_ptr 개체는 리소스를 가리키지 않으며 제어 블록이 없습니다. 멤버 함수 `lock`은 빈 shared_ptr 개체를 반환합니다.  
-  
- `shared_ptr` 개체가 제어하는 둘 이상의 리소스가 상호 참조하는 `shared_ptr` 개체를 보유한 경우 순환이 발생합니다. 예를 들어 요소 세 개가 포함된 순환 연결된 목록에 헤드 노드 `N0`가 있습니다. 해당 노드는 다음 노드 `N1`을 소유하는 `shared_ptr` 개체를 보유합니다. 해당 노드는 다음 노드 `N2`를 소유하는 `shared_ptr` 개체를 보유합니다. 해당 노드는 다시 헤드 노드 `N0`을 소유하는 `shared_ptr` 개체를 보유하여 순환을 닫습니다. 이 경우 참조 횟수는 결코 0이 되지 않으며 순환의 노드가 해제되지 않습니다. 순환을 제거하려면 마지막 노드 `N2`가 `shared_ptr` 개체 대신 `N0`을 가리키는 `weak_ptr` 개체를 보유해야 합니다. `weak_ptr` 개체는 `N0`을 소유하지 않으므로 `N0`의 참조 횟수에 영향을 주지 않으며, 헤드 노드에 대한 프로그램의 마지막 참조가 삭제되면 목록의 노드도 삭제됩니다.  
-  
-## <a name="members"></a>멤버  
-  
-### <a name="constructors"></a>생성자  
-  
-|||  
-|-|-|  
-|[weak_ptr](#weak_ptr)|`weak_ptr`를 생성합니다.|  
-  
-### <a name="methods"></a>메서드  
-  
-|||  
-|-|-|  
-|[element_type](#element_type)|요소의 형식입니다.|  
-|[expired](#expired)|소유권이 만료되었는지 테스트합니다.|  
-|[lock](#lock)|리소스의 단독 소유권을 가져옵니다.|  
-|[owner_before](#owner_before)|이 `weak_ptr`이 제공된 포인터 앞에 정렬(또는 보다 작음)되는 경우 `true`를 반환합니다.|  
-|[reset](#reset)|소유하는 리소스를 해제합니다.|  
-|[swap](#swap)|두 `weak_ptr` 개체를 교환합니다.|  
-|[use_count](#use_count)|지정된 `shared_ptr` 개체 수를 계산합니다.|  
-  
-### <a name="operators"></a>연산자  
-  
-|||  
-|-|-|  
-|[operator=](#op_eq)|소유하는 리소스를 대체합니다.|  
-  
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<memory>  
-  
- **네임스페이스:** std  
-  
-##  <a name="element_type"></a>  element_type  
- 요소의 형식입니다.  
-  
-```  
-typedef Ty element_type;  
-```  
-  
-### <a name="remarks"></a>설명  
- 이 형식은 템플릿 매개 변수 `Ty`의 동의어입니다.  
-  
-### <a name="example"></a>예  
-  
-```cpp  
-// std__memory__weak_ptr_element_type.cpp   
-// compile with: /EHsc   
-#include <memory>   
-#include <iostream>   
-  
-int main()   
-    {   
-    std::shared_ptr<int> sp0(new int(5));   
-    std::weak_ptr<int> wp0(sp0);   
-    std::weak_ptr<int>::element_type val = *wp0.lock();   
-  
-    std::cout << "*wp0.lock() == " << val << std::endl;   
-  
-    return (0);   
-    }  
-  
-```  
-  
-```Output  
-*wp0.lock() == 5  
-```  
-  
-##  <a name="expired"></a>  expired  
- 소유권이 만료되었는지 테스트합니다.  
-  
-```  
+   };
+```
+
+### <a name="parameters"></a>매개 변수
+
+`Ty` 약한 포인터에 의해 제어 되는 형식입니다.
+
+## <a name="remarks"></a>설명
+
+이 템플릿 클래스는 하나 이상의 [shared_ptr Class](../standard-library/shared-ptr-class.md) 개체에 의해 관리되는 리소스를 가리키는 개체를 설명합니다. 리소스를 가리키는 `weak_ptr` 개체는 리소스의 참조 횟수에 영향을 주지 않습니다. 따라서 해당 리소스를 관리하는 마지막 `shared_ptr` 개체가 삭제되면 해당 리소스를 가리키는 `weak_ptr` 개체가 있는 경우에도 리소스가 해제됩니다. 이는 데이터 구조에서 순환을 방지하는 데 필요합니다.
+
+`weak_ptr` 개체는 리소스를 소유하는 `shared_ptr` 개체에서 생성된 경우, 리소스를 가리키는 `weak_ptr` 개체에서 생성된 경우 또는 [operator=](#op_eq)를 사용하여 리소스가 할당된 경우 해당 리소스를 가리킵니다. `weak_ptr` 개체는 가리키는 리소스에 대한 직접 액세스를 제공하지 않습니다. 리소스를 사용해야 하는 코드는 구성원 함수 [lock](#lock)을 호출하여 만든, 해당 리소스를 소유하는 `shared_ptr` 개체를 통해 사용합니다. 리소스를 소유하는 모든 `shared_ptr` 개체가 삭제되어 `weak_ptr` 개체가 가리키는 리소스가 해제된 경우 개체가 만료되었습니다. 만료된 `weak_ptr` 개체에 대해 `lock`을 호출하면 빈 shared_ptr 개체가 생성됩니다.
+
+빈 weak_ptr 개체는 리소스를 가리키지 않으며 제어 블록이 없습니다. 멤버 함수 `lock`은 빈 shared_ptr 개체를 반환합니다.
+
+`shared_ptr` 개체가 제어하는 둘 이상의 리소스가 상호 참조하는 `shared_ptr` 개체를 보유한 경우 순환이 발생합니다. 예를 들어 요소 세 개가 포함된 순환 연결된 목록에 헤드 노드 `N0`가 있습니다. 해당 노드는 다음 노드 `N1`을 소유하는 `shared_ptr` 개체를 보유합니다. 해당 노드는 다음 노드 `N2`를 소유하는 `shared_ptr` 개체를 보유합니다. 해당 노드는 다시 헤드 노드 `N0`을 소유하는 `shared_ptr` 개체를 보유하여 순환을 닫습니다. 이 경우 참조 횟수는 결코 0이 되지 않으며 순환의 노드가 해제되지 않습니다. 순환을 제거하려면 마지막 노드 `N2`가 `shared_ptr` 개체 대신 `N0`을 가리키는 `weak_ptr` 개체를 보유해야 합니다. `weak_ptr` 개체는 `N0`을 소유하지 않으므로 `N0`의 참조 횟수에 영향을 주지 않으며, 헤드 노드에 대한 프로그램의 마지막 참조가 삭제되면 목록의 노드도 삭제됩니다.
+
+## <a name="members"></a>멤버
+
+### <a name="constructors"></a>생성자
+
+|생성자|설명|
+|-|-|
+|[weak_ptr](#weak_ptr)|`weak_ptr`를 생성합니다.|
+
+### <a name="methods"></a>메서드
+
+|||
+|-|-|
+|[element_type](#element_type)|요소의 형식입니다.|
+|[expired](#expired)|소유권이 만료되었는지 테스트합니다.|
+|[lock](#lock)|리소스의 단독 소유권을 가져옵니다.|
+|[owner_before](#owner_before)|이 `weak_ptr`이 제공된 포인터 앞에 정렬(또는 보다 작음)되는 경우 `true`를 반환합니다.|
+|[reset](#reset)|소유하는 리소스를 해제합니다.|
+|[swap](#swap)|두 `weak_ptr` 개체를 교환합니다.|
+|[use_count](#use_count)|지정된 `shared_ptr` 개체 수를 계산합니다.|
+
+### <a name="operators"></a>연산자
+
+|연산자|설명|
+|-|-|
+|[operator=](#op_eq)|소유하는 리소스를 대체합니다.|
+
+## <a name="requirements"></a>요구 사항
+
+**헤더:** \<memory>
+
+**네임스페이스:** std
+
+## <a name="element_type"></a>  element_type
+
+요소의 형식입니다.
+
+```cpp
+typedef Ty element_type;
+```
+
+### <a name="remarks"></a>설명
+
+이 형식은 템플릿 매개 변수 `Ty`의 동의어입니다.
+
+### <a name="example"></a>예제
+
+```cpp
+// std__memory__weak_ptr_element_type.cpp
+// compile with: /EHsc
+#include <memory>
+#include <iostream>
+
+int main()
+    {
+    std::shared_ptr<int> sp0(new int(5));
+    std::weak_ptr<int> wp0(sp0);
+    std::weak_ptr<int>::element_type val = *wp0.lock();
+
+    std::cout << "*wp0.lock() == " << val << std::endl;
+
+    return (0);
+    }
+
+```
+
+```Output
+*wp0.lock() == 5
+```
+
+## <a name="expired"></a>  expired
+
+소유권이 만료되었는지 테스트합니다.
+
+```cpp
 bool expired() const;
-```  
-  
-### <a name="remarks"></a>설명  
- 구성원 함수는 `*this`가 만료된 경우 `true`를 반환하고 그렇지 않으면 `false`를 반환합니다.  
-  
-### <a name="example"></a>예  
-  
-```cpp  
-// std__memory__weak_ptr_expired.cpp   
-// compile with: /EHsc   
-#include <memory>   
-#include <iostream>   
+```
+
+### <a name="remarks"></a>설명
+
+구성원 함수는 `*this`가 만료된 경우 `true`를 반환하고 그렇지 않으면 `false`를 반환합니다.
+
+### <a name="example"></a>예제
+
+```cpp
+// std__memory__weak_ptr_expired.cpp
+// compile with: /EHsc
+#include <memory>
+#include <iostream>
 
 struct deleter
 {
@@ -193,7 +202,7 @@ int main()
         std::cout << "*wp.lock() == " << *wp.lock() << std::endl;
     }
 
-    // check expired after sp is destroyed   
+    // check expired after sp is destroyed
     std::cout << "wp.expired() == " << std::boolalpha
         << wp.expired() << std::endl;
     std::cout << "(bool)wp.lock() == " << std::boolalpha
@@ -201,33 +210,35 @@ int main()
 
     return (0);
 }
-  
-```  
-  
-```Output  
-wp.expired() == false  
-*wp.lock() == 10  
-wp.expired() == true  
-(bool)wp.lock() == false  
-```  
-  
-##  <a name="lock"></a>  lock  
- 리소스의 단독 소유권을 가져옵니다.  
-  
-```  
+
+```
+
+```Output
+wp.expired() == false
+*wp.lock() == 10
+wp.expired() == true
+(bool)wp.lock() == false
+```
+
+## <a name="lock"></a>  lock
+
+리소스의 단독 소유권을 가져옵니다.
+
+```cpp
 shared_ptr<Ty> lock() const;
-```  
-  
-### <a name="remarks"></a>설명  
- 구성원 함수는 `*this`가 만료된 경우 빈 shared_prt 개체를 반환하고, 그렇지 않으면 `*this`가 가리키는 리소스를 소유한 [shared_ptr Class](../standard-library/shared-ptr-class.md)`<Ty>` 개체를 반환합니다.  
-  
-### <a name="example"></a>예  
-  
-```cpp  
-// std__memory__weak_ptr_lock.cpp   
-// compile with: /EHsc   
-#include <memory>   
-#include <iostream>   
+```
+
+### <a name="remarks"></a>설명
+
+멤버 함수는 빈 shared_ptr 개체를 반환 하는 경우 `*this` 만료 되 면 그렇지 않으면 반환는 [shared_ptr 클래스](../standard-library/shared-ptr-class.md)\<Ty > 리소스를 소유 하는 개체 `*this` 를 가리킵니다.
+
+### <a name="example"></a>예제
+
+```cpp
+// std__memory__weak_ptr_lock.cpp
+// compile with: /EHsc
+#include <memory>
+#include <iostream>
 
 struct deleter
 {
@@ -249,7 +260,7 @@ int main()
         std::cout << "*wp.lock() == " << *wp.lock() << std::endl;
     }
 
-    // check expired after sp is destroyed   
+    // check expired after sp is destroyed
     std::cout << "wp.expired() == " << std::boolalpha
         << wp.expired() << std::endl;
     std::cout << "(bool)wp.lock() == " << std::boolalpha
@@ -257,50 +268,49 @@ int main()
 
     return (0);
 }
-  
-```  
-  
-```Output  
-wp.expired() == false  
-*wp.lock() == 10  
-wp.expired() == true  
-(bool)wp.lock() == false  
-```  
-  
-##  <a name="op_eq"></a>  operator=  
- 소유하는 리소스를 대체합니다.  
-  
-```  
+```
+
+```Output
+wp.expired() == false
+*wp.lock() == 10
+wp.expired() == true
+(bool)wp.lock() == false
+```
+
+## <a name="op_eq"></a>  operator=
+
+소유하는 리소스를 대체합니다.
+
+```cpp
 weak_ptr& operator=(const weak_ptr& wp);
 
-template <class Other>  
+template <class Other>
 weak_ptr& operator=(const weak_ptr<Other>& wp);
 
-template <class Other>  
+template <class Other>
 weak_ptr& operator=(const shared_ptr<Other>& sp);
-```  
-  
-### <a name="parameters"></a>매개 변수  
- `Other`  
- 인수 공유/취약 포인터에 의해 제어되는 형식입니다.  
-  
- `wp`  
- 복사할 취약 포인터입니다.  
-  
- `sp`  
- 복사할 공유 포인터입니다.  
-  
-### <a name="remarks"></a>설명  
- 모든 연산자는 현재 `*this`가 가리키는 리소스를 해제하고 피연산자 시퀀스로 이름이 지정된 리소스의 소유권을 `*this`에 할당합니다. 연산자 실행이 실패하면 `*this`는 변경되지 않은 상태로 유지됩니다.  
-  
-### <a name="example"></a>예  
-  
-```cpp  
-// std__memory__weak_ptr_operator_as.cpp   
-// compile with: /EHsc   
-#include <memory>   
-#include <iostream>   
-  
+```
+
+### <a name="parameters"></a>매개 변수
+
+`Other` 인수 공유/약한 포인터에 의해 제어 되는 형식입니다.
+
+`wp` 복사할 약한 포인터입니다.
+
+`sp` 복사할 공유 포인터입니다.
+
+### <a name="remarks"></a>설명
+
+모든 연산자는 현재 `*this`가 가리키는 리소스를 해제하고 피연산자 시퀀스로 이름이 지정된 리소스의 소유권을 `*this`에 할당합니다. 연산자 실행이 실패하면 `*this`는 변경되지 않은 상태로 유지됩니다.
+
+### <a name="example"></a>예제
+
+```cpp
+// std__memory__weak_ptr_operator_as.cpp
+// compile with: /EHsc
+#include <memory>
+#include <iostream>
+
 int main()
 {
     std::shared_ptr<int> sp0(new int(5));
@@ -317,51 +327,54 @@ int main()
 
     return (0);
 }
-  
-```  
-  
-```Output  
-*wp0.lock() == 5  
-*wp0.lock() == 10  
-*wp1.lock() == 10  
-```  
-  
-##  <a name="owner_before"></a>  owner_before  
- 이 `weak_ptr`이 제공된 포인터 앞에 정렬(또는 보다 작음)되는 경우 `true`를 반환합니다.  
-  
-```  
-template <class Other>  
+```
+
+```Output
+*wp0.lock() == 5
+*wp0.lock() == 10
+*wp1.lock() == 10
+```
+
+## <a name="owner_before"></a>  owner_before
+
+이 `weak_ptr`이 제공된 포인터 앞에 정렬(또는 보다 작음)되는 경우 `true`를 반환합니다.
+
+```cpp
+template <class Other>
 bool owner_before(const shared_ptr<Other>& ptr);
 
-template <class Other>  
+template <class Other>
 bool owner_before(const weak_ptr<Other>& ptr);
-```  
-  
-### <a name="parameters"></a>매개 변수  
- `ptr`  
- `shared_ptr` 또는 `weak_ptr`에 대한 `lvalue` 참조입니다.  
-  
-### <a name="remarks"></a>설명  
- 템플릿 멤버 함수를 반환 `true` 경우 `*this` 은 `ordered before` `ptr`합니다.  
-  
-##  <a name="reset"></a>  reset  
- 소유하는 리소스를 해제합니다.  
-  
-```  
+```
+
+### <a name="parameters"></a>매개 변수
+
+`ptr` `lvalue` 중 하나에 대 한 참조는 `shared_ptr` 또는 `weak_ptr`합니다.
+
+### <a name="remarks"></a>설명
+
+템플릿 멤버 함수를 반환 `true` 경우 `*this` 은 `ordered before` `ptr`합니다.
+
+## <a name="reset"></a>  reset
+
+소유하는 리소스를 해제합니다.
+
+```cpp
 void reset();
-```  
-  
-### <a name="remarks"></a>설명  
- 구성원 함수는 `*this`가 가리키는 리소스를 해제하고 `*this`를 빈 weak_ptr 개체로 변환합니다.  
-  
-### <a name="example"></a>예  
-  
-```cpp  
-// std__memory__weak_ptr_reset.cpp   
-// compile with: /EHsc   
-#include <memory>   
-#include <iostream>   
-  
+```
+
+### <a name="remarks"></a>설명
+
+구성원 함수는 `*this`가 가리키는 리소스를 해제하고 `*this`를 빈 weak_ptr 개체로 변환합니다.
+
+### <a name="example"></a>예제
+
+```cpp
+// std__memory__weak_ptr_reset.cpp
+// compile with: /EHsc
+#include <memory>
+#include <iostream>
+
 int main()
 {
     std::shared_ptr<int> sp(new int(5));
@@ -377,36 +390,38 @@ int main()
     return (0);
 }
 
-```  
-  
-```Output  
-*wp.lock() == 5  
-wp.expired() == false  
-wp.expired() == true  
-```  
-  
-##  <a name="swap"></a>  swap  
- 두 `weak_ptr` 개체를 교환합니다.  
-  
-```  
+```
+
+```Output
+*wp.lock() == 5
+wp.expired() == false
+wp.expired() == true
+```
+
+## <a name="swap"></a>  swap
+
+두 `weak_ptr` 개체를 교환합니다.
+
+```cpp
 void swap(weak_ptr& wp);
-```  
-  
-### <a name="parameters"></a>매개 변수  
- `wp`  
- 교환할 취약 포인터입니다.  
-  
-### <a name="remarks"></a>설명  
- 구성원 함수는 원래 `*this`가 가리켰다가 이후에 `wp`가 가리킨 리소스 및 원래 `wp`가 가리켰다가 이후에 `*this`가 가리킨 리소스를 남겨 둡니다. 함수는 두 리소스의 참조 개수를 변경하지 않으며 예외도 throw하지 않습니다.  
-  
-### <a name="example"></a>예  
-  
-```cpp  
-// std__memory__weak_ptr_swap.cpp   
-// compile with: /EHsc   
-#include <memory>   
-#include <iostream>   
- 
+```
+
+### <a name="parameters"></a>매개 변수
+
+`wp` 작동이 약한 포인터입니다.
+
+### <a name="remarks"></a>설명
+
+구성원 함수는 원래 `*this`가 가리켰다가 이후에 `wp`가 가리킨 리소스 및 원래 `wp`가 가리켰다가 이후에 `*this`가 가리킨 리소스를 남겨 둡니다. 함수는 두 리소스의 참조 개수를 변경하지 않으며 예외도 throw하지 않습니다.
+
+### <a name="example"></a>예제
+
+```cpp
+// std__memory__weak_ptr_swap.cpp
+// compile with: /EHsc
+#include <memory>
+#include <iostream>
+
 struct deleter
 {
     void operator()(int *p)
@@ -441,35 +456,37 @@ int main()
     return (0);
 }
 
-```  
-  
-```Output  
-*sp1 == 5  
-*sp1 == 10  
-*sp1 == 5  
-  
-*wp1 == 5  
-*wp1 == 10  
-*wp1 == 5  
-```  
-  
-##  <a name="use_count"></a>  use_count  
- 지정된 `shared_ptr` 개체 수를 계산합니다.  
-  
-```  
+```
+
+```Output
+*sp1 == 5
+*sp1 == 10
+*sp1 == 5
+
+*wp1 == 5
+*wp1 == 10
+*wp1 == 5
+```
+
+## <a name="use_count"></a>  use_count
+
+지정된 `shared_ptr` 개체 수를 계산합니다.
+
+```cpp
 long use_count() const;
-```  
-  
-### <a name="remarks"></a>설명  
- 구성원 함수는 `*this`가 가리키는 리소스를 소유한 `shared_ptr` 개체의 수를 반환합니다.  
-  
-### <a name="example"></a>예  
-  
-```cpp  
-// std__memory__weak_ptr_use_count.cpp   
-// compile with: /EHsc   
-#include <memory>   
-#include <iostream>   
+```
+
+### <a name="remarks"></a>설명
+
+구성원 함수는 `*this`가 가리키는 리소스를 소유한 `shared_ptr` 개체의 수를 반환합니다.
+
+### <a name="example"></a>예제
+
+```cpp
+// std__memory__weak_ptr_use_count.cpp
+// compile with: /EHsc
+#include <memory>
+#include <iostream>
 
 int main()
 {
@@ -483,51 +500,51 @@ int main()
         << wp.use_count() << std::endl;
 
     return (0);
-} 
-  
-```  
-  
-```Output  
-wp.use_count() == 1  
-wp.use_count() == 2  
-```  
-  
-##  <a name="weak_ptr"></a>  weak_ptr  
- `weak_ptr`를 생성합니다.  
-  
-```  
+}
+
+```
+
+```Output
+wp.use_count() == 1
+wp.use_count() == 2
+```
+
+## <a name="weak_ptr"></a>  weak_ptr
+
+`weak_ptr`를 생성합니다.
+
+```cpp
 weak_ptr();
 
 weak_ptr(const weak_ptr& wp);
 
-template <class Other>  
+template <class Other>
 weak_ptr(const weak_ptr<Other>& wp);
 
-template <class Other>  
+template <class Other>
 weak_ptr(const shared_ptr<Other>& sp);
-```  
-  
-### <a name="parameters"></a>매개 변수  
- `Other`  
- 인수 공유/취약 포인터에 의해 제어되는 형식입니다.  
-  
- `wp`  
- 복사할 취약 포인터입니다.  
-  
- `sp`  
- 복사할 공유 포인터입니다.  
-  
-### <a name="remarks"></a>설명  
- 각 생성자는 피연산자 시퀀스에 의해 이름이 지정되는 리소스를 가리키는 개체를 생성합니다.  
-  
-### <a name="example"></a>예  
-  
-```cpp  
-// std__memory__weak_ptr_construct.cpp   
-// compile with: /EHsc   
-#include <memory>   
-#include <iostream>   
-  
+```
+
+### <a name="parameters"></a>매개 변수
+
+`Other` 인수 공유/약한 포인터에 의해 제어 되는 형식입니다.
+
+`wp` 복사할 약한 포인터입니다.
+
+`sp` 복사할 공유 포인터입니다.
+
+### <a name="remarks"></a>설명
+
+각 생성자는 피연산자 시퀀스에 의해 이름이 지정되는 리소스를 가리키는 개체를 생성합니다.
+
+### <a name="example"></a>예제
+
+```cpp
+// std__memory__weak_ptr_construct.cpp
+// compile with: /EHsc
+#include <memory>
+#include <iostream>
+
 int main()
 {
     std::weak_ptr<int> wp0;
@@ -545,15 +562,15 @@ int main()
 
     return (0);
 }
-  
-```  
-  
-```Output  
-wp0.expired() == true  
-*wp1.lock() == 5  
-*wp2.lock() == 5  
-```  
-  
-## <a name="see-also"></a>참고 항목  
- [shared_ptr 클래스](../standard-library/shared-ptr-class.md)
 
+```
+
+```Output
+wp0.expired() == true
+*wp1.lock() == 5
+*wp2.lock() == 5
+```
+
+## <a name="see-also"></a>참고자료
+
+[shared_ptr 클래스](../standard-library/shared-ptr-class.md)<br/>

@@ -1,12 +1,12 @@
 ---
-title: "스트림이란 | Microsoft Docs"
-ms.custom: 
+title: 스트림이란 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,26 +16,28 @@ helpviewer_keywords:
 - streams [C++], in iostream classes
 - streams [C++]
 ms.assetid: a7e661e9-6cd1-4543-a9a4-c58ee9fd32f3
-caps.latest.revision: 
+caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7515c587a651b31bce7f3d1c56777a2a908c488a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e9ec618bb1e62c75a949c49806a8d0b4ec09bdec
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what-a-stream-is"></a>What a Stream Is
-C++에도 C와 마찬가지로 기본 제공 입력/출력 기능은 없습니다. 하지만, 모든 C++ 컴파일러는 iostream class라고 알려진 체계적이고 객체지향화된 I/O 패키지를 번들로(기본으로) 제공합니다. 스트림은 iostream 클래스의 중요 컨셉입니다. 스트림 객체는 Byte 데이터에 대한 원본과 대상의 역할을 하는 스마트 파일로 간주하면 됩니다. 스크림의 형질(특성)은 클래스 자체와 삽입(Insertion)과 추출(Extraction) 연산자에 의해 커스터마이징됨으로서 결정됩니다.  
-  
- 디스크 운영 시스템은 장치 드라이버를 통해, 키보드, 스크린, 프린터 그리고 통신 포트를 마치 확장된 파일인 것 처럼 처리합니다. Iostream 클래스는 이 다수의 확장된 파일과 상호 작용합니다. 내장 클래스들은 Disk I/O와 동일한 Syntax를 이용하여 메모리로부터 읽기와 쓰기를 지원하므로, 스트림 클래스들을 파생하기가 한결 쉬워집니다.  
-  
-## <a name="in-this-section"></a>섹션 내용  
- [입력/출력 대체](../standard-library/input-output-alternatives.md)  
-  
-## <a name="see-also"></a>참고 항목  
- [iostream 프로그래밍](../standard-library/iostream-programming.md)
 
+C++에도 C와 마찬가지로 기본 제공 입력/출력 기능은 없습니다. 하지만, 모든 C++ 컴파일러는 iostream class라고 알려진 체계적이고 객체지향화된 I/O 패키지를 번들로(기본으로) 제공합니다. 스트림은 iostream 클래스의 중요 컨셉입니다. 스트림 객체는 Byte 데이터에 대한 원본과 대상의 역할을 하는 스마트 파일로 간주하면 됩니다. 스크림의 형질(특성)은 클래스 자체와 삽입(Insertion)과 추출(Extraction) 연산자에 의해 커스터마이징됨으로서 결정됩니다.
+
+디스크 운영 시스템은 장치 드라이버를 통해, 키보드, 스크린, 프린터 그리고 통신 포트를 마치 확장된 파일인 것 처럼 처리합니다. Iostream 클래스는 이 다수의 확장된 파일과 상호 작용합니다. 내장 클래스들은 Disk I/O와 동일한 Syntax를 이용하여 메모리로부터 읽기와 쓰기를 지원하므로, 스트림 클래스들을 파생하기가 한결 쉬워집니다.
+
+## <a name="in-this-section"></a>섹션 내용
+
+[입력/출력 대체](../standard-library/input-output-alternatives.md)
+
+## <a name="see-also"></a>참고자료
+
+[iostream 프로그래밍](../standard-library/iostream-programming.md)<br/>

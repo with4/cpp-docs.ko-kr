@@ -1,7 +1,7 @@
 ﻿---
 title: '방법: Windows 10을 사용 하 여 Windows 데스크톱 응용 프로그램에서 SDK | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 04/19/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -18,11 +18,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1f5e6f09b371c4d295b4bcdff469396a2671d22a
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 6cd358be2e9c28dae5c495d2a18cbbb7a0976ea7
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>방법: Windows 데스크톱 응용 프로그램에서 Windows 10 SDK 사용
 Visual Studio 2017에 클래식 Windows 데스크톱 프로젝트를 만들 때 설정은 기본적으로 C++ 데스크톱 작업 설치 또는 마지막으로 업데이트되었을 때 설치된 Windows 10 SDK의 버전으로 만들 수 있습니다. 이 버전의 Windows SDK의 최근 Windows 릴리스와 모두 호환 됩니다. 이전 버전의 SDK를 대상으로 하려는 경우 프로젝트 | 속성의 Windows SDK 버전 드롭다운 목록의 사용할 수 있는 다른 SDK 버전에서 선택합니다.   
@@ -31,7 +31,8 @@ Visual Studio 2017에 클래식 Windows 데스크톱 프로젝트를 만들 때 
   
 ### <a name="to-target-the-windows-10-sdk"></a>Windows 10 SDK를 대상으로 하려면  
   
-1.  Windows 10 SDK가 설치되었는지 확인합니다. Windows 10 SDK는 [Windows 10용 도구](http://go.microsoft.com/fwlink/p/?linkid=617631)의 일부로 설치됩니다.  
+1.  Windows 10 SDK가 설치되었는지 확인합니다. Windows 10 SDK의 일부로 설치 되는 **c + + 데스크톱 개발** 작업 합니다. 독립 실행형 버전에서 제공 됩니다. [다운로드 및 Windows 10 용 도구](https://developer.microsoft.com/windows/downloads)합니다.
+
   
 2.  프로젝트 노드에 대한 바로 가기 메뉴를 열고 **SDK 버전 대상 다시 지정**을 선택합니다.  
   
