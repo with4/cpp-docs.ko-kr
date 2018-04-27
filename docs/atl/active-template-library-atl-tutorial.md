@@ -1,4 +1,4 @@
----
+﻿---
 title: 액티브 템플릿 라이브러리 (ATL) 자습서 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016

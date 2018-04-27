@@ -1,4 +1,4 @@
----
+﻿---
 title: Win32 프로젝트 마법사, 응용 프로그램 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
@@ -30,7 +30,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Win32 프로젝트 마법사, 응용 프로그램 설정
-마법사의이 페이지를 사용 하 여 Win32 프로젝트에 대 한 옵션을 설정 합니다.  
+마법사의이 페이지를 사용 하여 Win32 프로젝트에 대한 옵션을 설정 합니다.  
   
  **응용 프로그램 종류**  
  지정 된 응용 프로그램 유형을 만듭니다.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/21/2017
 |**빈 프로젝트**|프로젝트 파일이 비어 있는지를 확인합니다.  소스 코드 파일 (예:.cpp 파일, 헤더 파일, 아이콘, 도구 모음, 대화 상자 등)의 집합이 있고 Visual C++ 개발 환경에서 프로젝트를 만들려고 할 경우 먼저 빈 프로젝트를 만든 다음 파일을 프로젝트에 추가해야 합니다.<br /><br /> 이 옵션은 정적 라이브러리 프로젝트를 선택할 수 없는 경우 사용합니다.|  
 |**내보내기 기호**|DLL 프로젝트에서 기호를 내보내도록 지정 합니다.|  
 |**미리 컴파일된 헤더**|정적 라이브러리 프로젝트에서 미리 컴파일된 헤더 사용 하도록 지정 합니다.|  
-|보안 SDL (Development Lifecycle) 검사|SDL에 대 한 자세한 내용은 참조 [Microsoft 보안 SDL (Development Lifecycle) 프로세스 지침](../build/reference/sdl-enable-additional-security-checks.md)|  
+|보안 SDL (Security Development Lifecycle) 검사|SDL에 대 한 자세한 내용은 참조 [Microsoft 보안 SDL (Security Development Lifecycle) 프로세스 지침](../build/reference/sdl-enable-additional-security-checks.md)|  
   
  **추가 지원**  
  Visual C++에서 제공되는 라이브러리에 대한 지원을 추가합니다.   
