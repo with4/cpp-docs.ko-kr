@@ -1,12 +1,12 @@
 ---
-title: "&lt;hash_map&gt; | Microsoft 문서"
-ms.custom: 
+title: '&lt;hash_map&gt; | Microsoft 문서'
+ms.custom: ''
 ms.date: 01/18/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - <hash_map>
@@ -20,11 +20,11 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c50716912b42aace87b1132672331c86d9eae162
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 177afaca1ddad1145c9465dc6b71863c846b6b5c
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/23/2018
 
 ### <a name="classes"></a>클래스
 
-|||
+|클래스|설명|
 |-|-|
 |[hash_compare 클래스](hash-compare-class.md)|해시 연관 컨테이너(hash_map, hash_multimap, hash_set 또는 hash_multiset) 중 하나에서 기본 **Traits** 매개 변수 개체로 사용하여 포함된 요소의 순서를 지정하고 해시할 수 있는 개체를 설명합니다.|
 |[value_compare 클래스](value-compare-class.md)|키 값 비교를 통해 hash_map의 요소를 비교하여 hash_map 내의 상대 순서를 확인할 수 있는 함수 개체를 제공합니다.|
@@ -65,8 +65,8 @@ ms.lasthandoff: 02/23/2018
 
 **네임스페이스:** stdext
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
-[헤더 파일 참조](cpp-standard-library-header-files.md)  
-[C++ 표준 라이브러리의 스레드 보안](thread-safety-in-the-cpp-standard-library.md)  
-[C++ 표준 라이브러리 참조](cpp-standard-library-reference.md)  
+[헤더 파일 참조](cpp-standard-library-header-files.md)
+[c + + 표준 라이브러리의 스레드 보안](thread-safety-in-the-cpp-standard-library.md)
+[c + + 표준 라이브러리 참조](cpp-standard-library-reference.md)
