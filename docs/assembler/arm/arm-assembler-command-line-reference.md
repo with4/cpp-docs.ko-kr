@@ -1,27 +1,22 @@
 ---
-title: "ARM 어셈블러 명령줄 참조 | Microsoft Docs"
-ms.custom: 
+title: ARM 어셈블러 명령줄 참조 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: f7b89478-1ab5-4995-8cde-a805f0462c45
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eb6b395ec8f47e820cb3184c0d88b4c91e712eb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f196b4aad76c72233c179249386dbb42960b31a6
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="arm-assembler-command-line-reference"></a>ARM 어셈블러 명령줄 참조
 이 문서에서는 Microsoft ARM 어셈블러 명령줄 설명 *armasm*, Microsoft 구현에는 파일 형식 COFF (공용 개체) ARMv7 Thumb 어셈블리 언어를 컴파일합니다. 링커는 ARM 어셈블러 또는 라이브러리 관리자가 만든 개체 라이브러리와 함께 C 컴파일러에서 생성 되는 개체 코드를 사용 하 여 COFF 코드를 연결할 수 있습니다.  
@@ -50,13 +45,13 @@ armasm [[options]] -o objectfile sourcefile
  -nowarn  
  모든 경고 메시지를 사용 하지 않도록 설정 합니다.  
   
- -ignore `warning`  
+ -무시 `warning`  
  지정 된 경고를 사용 하지 않도록 설정 합니다. 가능한 값에 대 한 경고에 대 한 섹션을 참조 합니다.  
   
  -도움말  
  명령줄 도움말 메시지를 인쇄 합니다.  
   
- -machine `machine`  
+ -컴퓨터 `machine`  
  PE 헤더에서을 설정 하려면 컴퓨터 종류를 지정 합니다.  가능한 값에 대 한 `machine` 됩니다.  
 **ARM**-컴퓨터 종류 IMAGE_FILE_MACHINE_ARMNT를 설정 합니다. 이 값이 기본값입니다.   
 **THUMB**-컴퓨터 종류 IMAGE_FILE_MACHINE_THUMB를 설정 합니다.  
