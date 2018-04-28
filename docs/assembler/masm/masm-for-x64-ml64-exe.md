@@ -1,12 +1,9 @@
 ---
 title: MASM (ml64.exe) x64 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,21 +12,19 @@ helpviewer_keywords:
 - ml64.exe
 - masm for x64
 ms.assetid: 89059103-f372-4968-80ea-0c7f90bb9c91
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a42b25b5d86d181bed907a3b437d28f3cbf5e820
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b17771239ff9c89b765576ba49515463db42386f
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="masm-for-x64-ml64exe"></a>x64용 MASM (ml64.exe)
 
-Visual Studio는 32 비트 및 64 비트 호스트 된 버전의 MASM x64 대상 코드에 포함 되어 있습니다. X64 허용 하는 어셈블러는 ml64.exe 명명 된, 어셈블러 언어입니다. MASM 명령줄 도구는 Visual Studio를 설치 하는 동안 c + + 작업을 선택 하면 설치 됩니다. 이러한 도구는 별도 다운로드로 사용할 수 없습니다. 참조를 다운로드 하 고 Visual Studio의 복사본을 설치할 [https://www.visualstudio.com/](https://www.visualstudio.com/)합니다. Visual Studio IDE를 설치 하지 않을 않고 원하는 명령줄 도구를 경우 참조는 **Visual Studio 2017 용 빌드 도구** 옵션에 [Visual Studio 다운로드](https://www.visualstudio.com/downloads/) 페이지.
+Visual Studio는 32 비트 및 64 비트 호스트 된 버전의 MASM x64 대상 코드에 포함 되어 있습니다. X64 허용 하는 어셈블러는 ml64.exe 명명 된, 어셈블러 언어입니다. MASM 명령줄 도구는 Visual Studio를 설치 하는 동안 c + + 작업을 선택 하면 설치 됩니다. 이러한 도구는 별도 다운로드로 사용할 수 없습니다. 참조를 다운로드 하 고 Visual Studio의 복사본을 설치할 [ https://www.visualstudio.com/ ](https://www.visualstudio.com/)합니다. Visual Studio IDE를 설치 하지 않을 않고 원하는 명령줄 도구를 경우 참조는 **Visual Studio 2017 용 빌드 도구** 옵션에 [Visual Studio 다운로드](https://www.visualstudio.com/downloads/) 페이지.
 
 작성 하는 MASM을 사용 하려면 x64에 대 한 코드를 명령줄에서 대상으로 x64 개발자 명령 프롬프트를 사용 해야 합니다 필요한 경로 및 다른 환경 변수를 설정 하는 대상입니다. 개발자 명령 프롬프트를 시작 하는 방법에 대 한 정보를 참조 하십시오. [명령줄에서 빌드 C/c + + 코드](../../build/building-on-the-command-line.md)합니다.
 
@@ -45,7 +40,7 @@ Visual Studio 프로젝트 시스템 MASM c + + 프로젝트에서 사용 하 �
 
 1. 프로젝트를 선택 **솔루션 탐색기**합니다. 메뉴 모음에서 **프로젝트**, **빌드 사용자 지정**합니다.
 
-1. 에 **Visual c + + 빌드 사용자 지정 파일** 대화 상자에서 옆에 확인란 **masm(.targets,.props)**합니다. 선택 **확인** 하 여 선택 내용을 저장 하 고 대화 상자를 닫습니다.
+1. 에 **Visual c + + 빌드 사용자 지정 파일** 대화 상자에서 옆에 확인란 **masm(.targets,.props)** 합니다. 선택 **확인** 하 여 선택 내용을 저장 하 고 대화 상자를 닫습니다.
 
 1. 메뉴 모음에서 **프로젝트**, **새 항목 추가**합니다. 
 

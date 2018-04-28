@@ -1,12 +1,9 @@
 ---
-title: "세그먼트 | Microsoft Docs"
-ms.custom: 
+title: 세그먼트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - SEGMENT
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 253c3b389bd0411e6b5096e914b6a844c8f40805
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: c55416cc5a757128c9cc97b2f342953911ac2946
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="segment"></a>SEGMENT
 호출 프로그램 세그먼트 정의 *이름* 세그먼트 특성이  
@@ -50,7 +45,7 @@ name ENDS
 |**DWORD**|다음 2 배 워드를 사용 가능한 주소 (2 배 워드 당 4 바이트)입니다.|  
 |**P A R A**|다음 단락을 사용할 수 있는 주소 (단락 당 16 바이트)입니다.|  
 |**PAGE**|다음 사용 가능한 페이지 주소 (페이지당 256 바이트)입니다.|  
-|**ALIGN**(*n*)|다음 사용 가능한 *n*번째 바이트 주소입니다. 자세한 내용은 설명 섹션을 참조 하십시오.|  
+|**맞춤**(*n*)|다음 사용 가능한 *n*번째 바이트 주소입니다. 자세한 내용은 설명 섹션을 참조 하십시오.|  
   
  이 매개 변수를 지정 하지 않으면 **P a r a** 기본적으로 사용 됩니다.  
   

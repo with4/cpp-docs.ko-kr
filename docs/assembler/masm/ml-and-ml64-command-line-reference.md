@@ -1,12 +1,9 @@
 ---
-title: "ML 및 ML64 명령줄 참조 | Microsoft Docs"
-ms.custom: 
+title: ML 및 ML64 명령줄 참조 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - ML
@@ -63,17 +60,15 @@ helpviewer_keywords:
 - command line, reference [ML]
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: edb7f0c19e9517b1bcefcc2400542f910a73c8f0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: da3fb143aeaaf6fa8cf31c45b31707fa01bf6898
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>ML 및 ML64 명령줄 참조
 조합 하 고 하나 이상의 어셈블리 언어 소스 파일을 연결 합니다. 명령줄 옵션은 대/소문자를 구분 합니다.  
@@ -104,7 +99,7 @@ ML64 [[options]] filename [[ [[options]]  filename]]
 |**/Cx**|공용 및 extern 기호에 대/소문자를 유지합니다.|  
 |**/D** `symbol`[[=`value`]]|지정 된 이름의 텍스트 매크로 정의합니다. 경우 `value` 가 누락 된 경우에 비어 있습니다. 공백으로 구분 하 여 여러 토큰 따옴표로 묶어야 합니다.|  
 |**/EP**|전처리 원본 목록 (STDOUT으로 전송)을 생성 합니다. 참조 **/Sf**합니다.|  
-|**/ERRORREPORT** [ **NONE** &#124; **프롬프트** &#124; **큐** &#124; **보낼** ]|사용할 수 있습니다 ml.exe 또는 ml64.exe 실패 하면 런타임 시 **/ERRORREPORT** 이러한 내부 오류에 대 한 정보를 Microsoft로 보내도록 합니다.<br /><br /> 에 대 한 자세한 내용은 **/ERRORREPORT**, 참조 [/errorReport (내부 컴파일러 오류 보고)](../../build/reference/errorreport-report-internal-compiler-errors.md)합니다.|  
+|**/ERRORREPORT** [ **NONE** &AMP;#124; **프롬프트** &AMP;#124; **큐** &AMP;#124; **보낼** ]|사용할 수 있습니다 ml.exe 또는 ml64.exe 실패 하면 런타임 시 **/ERRORREPORT** 이러한 내부 오류에 대 한 정보를 Microsoft로 보내도록 합니다.<br /><br /> 에 대 한 자세한 내용은 **/ERRORREPORT**, 참조 [/errorReport (내부 컴파일러 오류 보고)](../../build/reference/errorreport-report-internal-compiler-errors.md)합니다.|  
 |**/F** `hexnum`|스택 크기를 설정 `hexnum` 바이트 (이와 동일 하 게 **/링크/스택**:`number`). 값은 16 진수 표기법으로 표시 되어야 합니다. 사이 공백이 있어야 **/F** 및 `hexnum`합니다.|  
 |**/Fe** `filename`|실행 파일을 이름을 지정 합니다.|  
 |**/Fl**[[`filename`]]|어셈블된 코드 목록을 생성합니다. 참조 **/Sf**합니다.|  

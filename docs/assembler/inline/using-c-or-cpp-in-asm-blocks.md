@@ -1,13 +1,10 @@
 ---
-title: "__Asm 블록에서 C 또는 c + +를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: __Asm 블록에서 C 또는 c + +를 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-masm
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - typedef names, used in __asm blocks
 - __asm keyword [C++], C/C++ elements in
 ms.assetid: ae8b2b52-6b75-42e3-ac0c-ad02d922ed97
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ab706f682372cb0a76f0d3283157d4da9105ed6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e9451a0b665e5377c2acaf871154ec78a38c8b5
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="using-c-or-c-in-asm-blocks"></a>__asm 블록에서 C 또는 C++ 사용
 ## <a name="microsoft-specific"></a>Microsoft 전용  
@@ -47,11 +42,11 @@ ms.lasthandoff: 12/21/2017
   
 -   매크로 및 전처리기 지시문  
   
--   주석 (둘 다  **/ \* \* /**  및  **//**  )  
+-   주석 (둘 다 **/ \* \* /** 및 **//** )  
   
 -   형식 이름(MASM 형식이 올바를 때마다)  
   
--   `typedef`일반적으로 사용 되는 연산자와 같은 이름 **PTR** 및 **형식** 또는 구조체 또는 공용 구조체 멤버를 지정 하려면  
+-   `typedef` 일반적으로 사용 되는 연산자와 같은 이름 **PTR** 및 **형식** 또는 구조체 또는 공용 구조체 멤버를 지정 하려면  
   
  `__asm` 블록 내에서 C 표기법 또는 어셈블러 기수 표기법과 함께 정수 상수(예: 0x100 및 100h는 동일)를 지정할 수 있습니다. 이를 통해 C에서 (`#define`을 사용하여) 상수를 정의한 다음 C 또는 C++ 모두와 프로그램의 어셈블리 부분에서 사용할 수 있습니다. a 0과 함께 이전 상수에 의해 8진수에서 상수를 지정할 수도 있습니다. 예를 들어, 0777은 8진수 상수를 지정합니다.  
   

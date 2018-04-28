@@ -1,12 +1,9 @@
 ---
-title: "Microsoft 매크로 어셈블러 참조 | Microsoft Docs"
-ms.custom: 
+title: Microsoft 매크로 어셈블러 참조 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler)
 - MASM (Microsoft Macro Assembler), documentation overview
 ms.assetid: 1446d55f-e2e7-4fd1-a9b8-b15cf7d4e47c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fa951c5386847f216eea8581865ff3ba03a9e05
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 713e11262a660bcd42aea27bcb0da9e5f7f0c956
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Microsoft 매크로 어셈블러 참조
 Microsoft 매크로 어셈블러 (MASM) 인라인 어셈블리에 비해 여러 가지 이점을 제공합니다. MASM은 매크로 반복, 산술, 및 텍스트 문자열 처리와 같은 기능이 있는 언어를 포함 합니다. MASM도 제어할 수 큰 하드웨어는 386, 486, 및 Pentium 프로세서의 명령 집합을 지원 하기 때문에 있습니다. MASM를 사용 하 여도 시간 및 메모리 오버를 줄일 수 있습니다.  
