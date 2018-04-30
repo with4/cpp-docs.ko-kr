@@ -1,12 +1,12 @@
 ---
-title: "시스템 호출 | Microsoft Docs"
-ms.custom: 
+title: 시스템 호출 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - c.system
@@ -16,31 +16,33 @@ helpviewer_keywords:
 - Windows [C++], system calls
 - system calls
 ms.assetid: 0255f2ec-a5a0-487e-8b09-9dad001d81ed
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aee53285b2953ae5eac63737f1854f9b01dbd5b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0cbf9b060f8063345f00a4c5fc9c14df71e9f4c9
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="system-calls"></a>시스템 호출
-다음 함수는 Windows 운영 체제 호출입니다.  
-  
-### <a name="system-call-functions"></a>시스템 호출 함수  
-  
-|함수|사용|  
-|--------------|---------|  
-|[_findclose](../c-runtime-library/reference/findclose.md)|이전 찾기 작업에서 리소스를 해제합니다.|  
-|[_findfirst, _findfirst32, _findfirst64, _findfirsti64, _findfirst32i64, _findfirst64i32, _wfindfirst, _wfindfirst32, _wfindfirst64, _wfindfirsti64, _wfindfirst32i64, _wfindfirst64i32](../c-runtime-library/reference/findfirst-functions.md)|지정된 특성의 파일을 찾습니다.|  
-|[_findnext, _findnext32, _findnext64, _findnexti64, _findnext32i64, _findnext64i32, _wfindnext, _wfindnext32, _wfindnexti64, _wfindnext64, _wfindnexti64](../c-runtime-library/reference/findnext-functions.md)|지정된 특성의 다음 파일을 찾습니다.|  
-  
-## <a name="see-also"></a>참고 항목  
- [범주별 런타임 루틴](../c-runtime-library/run-time-routines-by-category.md)   
- [파일 처리](../c-runtime-library/file-handling.md)   
- [디렉터리 제어](../c-runtime-library/directory-control.md)   
- [하위 수준 I/O](../c-runtime-library/low-level-i-o.md)
+
+다음 함수는 Windows 운영 체제 호출입니다.
+
+## <a name="system-call-functions"></a>시스템 호출 함수
+
+|함수|사용|
+|--------------|---------|
+|[_findclose](../c-runtime-library/reference/findclose.md)|이전 찾기 작업에서 리소스를 해제합니다.|
+|[_findfirst, _findfirst32, _findfirst64, _findfirsti64, _findfirst32i64, _findfirst64i32, _wfindfirst, _wfindfirst32, _wfindfirst64, _wfindfirsti64, _wfindfirst32i64, _wfindfirst64i32](../c-runtime-library/reference/findfirst-functions.md)|지정된 특성의 파일을 찾습니다.|
+|[_findnext, _findnext32, _findnext64, _findnexti64, _findnext32i64, _findnext64i32, _wfindnext, _wfindnext32, _wfindnexti64, _wfindnext64, _wfindnexti64](../c-runtime-library/reference/findnext-functions.md)|지정된 특성의 다음 파일을 찾습니다.|
+
+## <a name="see-also"></a>참고 항목
+
+[범주별 유버니설 C 런타임 루틴](../c-runtime-library/run-time-routines-by-category.md)<br/>
+ [파일 처리](../c-runtime-library/file-handling.md)<br/>
+ [디렉터리 제어](../c-runtime-library/directory-control.md)<br/>
+ [하위 수준 I/O](../c-runtime-library/low-level-i-o.md)<br/>
