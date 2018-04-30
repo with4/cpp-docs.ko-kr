@@ -1,5 +1,5 @@
 ---
-title: 범주별 런타임 루틴 | Microsoft Docs
+title: 범주별 유버니설 C 런타임 루틴 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/06/2018
 ms.technology:
@@ -20,17 +20,19 @@ ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ff178238e457d4a9346ba3659509c295bcf3794
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 01bdb786c003894b4ab1bf6418aa9c492e909602
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="run-time-routines-by-category"></a>범주별 런타임 루틴
+# <a name="universal-c-runtime-routines-by-category"></a>범주별 유버니설 C 런타임 루틴
 
-이 단원에서는 Microsoft 런타임 라이브러리 루틴을 범주별로 나열하고 설명합니다. 참조상의 편의를 위해 일부 루틴은 둘 이상의 범주에 나열됩니다. 멀티바이트 문자 루틴 및 와이드 문자 루틴은 이들이 존재하는 싱글바이트 문자의 해당 부분과 함께 그룹화됩니다.
+이 섹션에서는 UCRT(유버니설 C 런타임) 라이브러리 루틴을 범주별로 나열하고 설명합니다. 참조상의 편의를 위해 일부 루틴은 둘 이상의 범주에 나열됩니다. 멀티바이트 문자 루틴 및 와이드 문자 루틴은 이들이 존재하는 싱글바이트 문자의 해당 부분과 함께 그룹화됩니다.
 
-## <a name="routine-categories"></a>루틴 범주
+## <a name="ucrt-library-routine-categories"></a>UCRT 라이브러리 루틴 범주
+
+UCRT 라이브러리 루틴의 주요 범주는 다음과 같습니다.
 
 |||
 |-|-|

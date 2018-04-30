@@ -1,27 +1,27 @@
 ---
-title: "UWP 앱, Windows 런타임 및 C 런타임 | Microsoft Docs"
-ms.custom: 
+title: UWP 앱, Windows 런타임 및 C 런타임 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-caps.latest.revision: 
+caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 120e02caab735455224ad75f0944ceb25f4baf33
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e9e6053cdcd7797319379e1e5e7290bcff373b6f
+ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>UWP 앱, Windows 런타임 및 C 런타임
 
@@ -31,7 +31,7 @@ Windows 런타임에서는 다음 CRT 기능을 지원하지 않습니다.
 
 - 지원되지 않는 기능과 관련된 대부분의 CRT 함수
 
-   예를 들어 UWP 앱은 루틴의 `exec` 및 `spawn` 패밀리를 사용하여 프로세스를 만들 수 없습니다.
+   예를 들어 UWP 앱은 루틴의 **exec** 및 **spawn** 패밀리를 사용하여 프로세스를 만들 수 없습니다.
 
    UWP 앱에서 CRT 함수가 지원되지 않은 경우 이러한 팩트가 해당 참조 아티클에 기록됩니다.
 
@@ -58,4 +58,7 @@ Windows 런타임에서는 다음 CRT 기능을 지원하지 않습니다.
 UWP 앱에서 사용할 수 없는 CRT 함수의 전체 목록 및 대체 기능에 대한 제안을 보려면 [유니버설 Windows 플랫폼 앱에는 CRT 함수가 지원 안 됨](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
- [호환성](../c-runtime-library/compatibility.md) [Windows 런타임 지원되지 않는 CRT 함수](../c-runtime-library/windows-runtime-unsupported-crt-functions.md) [범주별 런타임 루틴](../c-runtime-library/run-time-routines-by-category.md)
+
+[호환성](../c-runtime-library/compatibility.md)<br/>
+[Windows 런타임 지원되지 않는 CRT 함수](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>
+[범주별 유버니설 C 런타임 루틴](../c-runtime-library/run-time-routines-by-category.md)<br/>
