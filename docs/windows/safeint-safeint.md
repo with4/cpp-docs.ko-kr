@@ -1,12 +1,12 @@
 ---
 title: 'Safeint:: Safeint | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SafeInt::SafeInt
@@ -17,7 +17,7 @@ dev_langs:
 helpviewer_keywords:
 - SafeInt class, constructor
 ms.assetid: 39e6f632-a396-40e6-9ece-cc3d4c5a78ef
-caps.latest.revision: 
+caps.latest.revision: 7
 author: ghogen
 ms.author: ghogen
 manager: ghogen
@@ -62,7 +62,7 @@ SafeInt (
  새 값 `SafeInt` 개체입니다. 이 생성자에 따라 T 또는 U, 형식의 매개 변수 여야 합니다.  
   
  [in] `b`  
- 새 부울 값 `SafeInt` 개체입니다.  
+ 새 `SafeInt` 개체의 부울 값입니다.  
   
  [in] `u`  
  A `SafeInt` 형식 u 새 `SafeInt` 개체와 같은 값을 갖습니다 `u`는 T 형식 이어야 하지만  
@@ -71,7 +71,7 @@ SafeInt (
  에 저장 된 데이터의 종류는 `SafeInt`합니다. 이 부울, 문자 또는 정수 형식 수 있습니다. 데이터 형식이 정수 형식인 경우 서명 하거나 이동할 수 있습니다 부호 없는 8 및 64 비트 사이 여야 합니다.  
   
 ## <a name="remarks"></a>설명  
- 템플릿 형식에 대 한 자세한 내용은 `T` 및 `E`, 참조 [SafeInt 클래스](../windows/safeint-class.md)합니다.  
+ 템플릿 형식 `T` 및 `E`에 대한 자세한 내용은 [SafeInt 클래스](../windows/safeint-class.md)를 참조합니다.  
   
  생성자에 대 한 입력된 매개 변수 `i` 또는 `u`, 부울, 문자 또는 정수 형식 이어야 합니다. 매개 변수를 다른 형식인 경우는 `SafeInt` 클래스가 호출 [static_assert](../cpp/static-assert.md) 잘못 된 입력된 매개 변수를 나타냅니다.  
   

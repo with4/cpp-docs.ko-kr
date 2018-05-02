@@ -1,12 +1,12 @@
 ---
-title: "VC + + 디렉터리 속성 페이지 | Microsoft Docs"
-ms.custom: 
-ms.date: 03/09/2018
-ms.reviewer: 
-ms.suite: 
+title: VC + + 디렉터리 속성 페이지 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/26/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VC.Project.VCDirectories.IncludePath
@@ -22,17 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - VC++ Directories Property Page
 ms.assetid: 428eeef6-f127-4271-b3ea-0ae6f2c3d624
-caps.latest.revision: 
+caps.latest.revision: 25
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1608bc5e78da98feb39be14d779677839f664058
-ms.sourcegitcommit: eb246547c7c9adc7d7ac4083ef09bf6e54dec914
+ms.openlocfilehash: 8931ecd34acfa1aba0287274acb45d362bdec2cf
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="vc-directories-property-page-windows"></a>VC + + 디렉터리 속성 페이지 (Windows)
 
@@ -111,7 +111,7 @@ VC + + 디렉터리 속성 최상위 솔루션 노드가 아닌 프로젝트에 
 IntelliSense에 사용할 소스 파일을 검색할 디렉터리입니다.
 
 **디렉터리 제외**<br/>
-빌드 종속성을 확인할 때 검색하지 않을 디렉터리입니다.
+각 컴파일 전에 Visual Studio 이전 컴파일 이후에 수정 된 여부는 확인 하는 모든 파일에 타임 스탬프를 쿼리 합니다. 프로젝트에 큰 안정적인 라이브러리를 타임 스탬프 확인에서 이러한 디렉터리를 제외 하 여 빌드 시간을 속도 잠재적으로 수 있습니다.
 
 ## <a name="sharing-the-settings"></a>설정 공유
 

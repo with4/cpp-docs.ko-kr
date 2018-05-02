@@ -1,13 +1,10 @@
 ---
-title: "인라인 어셈블리로 함수 작성 | Microsoft Docs"
-ms.custom: 
+title: 인라인 어셈블리로 함수 작성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-masm
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - assembler [C++], writing functions
 - __asm keyword [C++], in functions
 ms.assetid: b5df8a04-fdc7-4622-8c9e-e4b618927497
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2fc9e6a1d2c94e74ef8aabf085af8fc4dc0bc28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6c6c5b064dfc7d156d4de424e1ab69d74140f90
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="writing-functions-with-inline-assembly"></a>인라인 어셈블리로 함수 작성
 ## <a name="microsoft-specific"></a>Microsoft 전용  
@@ -56,7 +51,7 @@ _TEXT   ENDS
   
  별도의 어셈블러에 대해 작성했으므로 이 함수에는 별도의 소스 파일과 어셈블리 및 링크 단계가 필요합니다. C 및 C++ 함수 인수는 대개 스택에서 전달되므로 이 버전의 `power2` 함수는 스택의 위치를 기준으로 인수에 액세스합니다. (유의 **모델** 지시문을 MASM과 몇몇 다른 어셈블러에서 사용할 수 있는 또한 이름으로 스택 인수와 로컬 스택 변수에 액세스할 수 있습니다.)  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 프로그램은 인라인 어셈블리 코드를 사용하여 `power2` 함수를 작성합니다.  
   
 ```  

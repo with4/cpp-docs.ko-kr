@@ -1,12 +1,9 @@
 ---
 title: . SAVEXMM128 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-masm
 ms.topic: reference
 f1_keywords:
 - .SAVEXMM128
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - .SAVEXMM128 directive
 ms.assetid: 551eb472-b8d0-47b1-8d82-995d1f485723
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e163f71b0c1d49f845cc871a26d4ee369843597
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d50d4bbc7f9c89e9ef36a1dd8cf3dfeb56de79b5
+ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="savexmm128"></a>.SAVEXMM128
 중 하나를 생성 한 `UWOP_SAVE_XMM128` 또는 `UWOP_SAVE_XMM128_FAR` 지정된 XMM 레지스터에 대 한 코드 항목을 해제 하 고 현재 프롤로그 오프셋을 사용 하 여 오프셋 합니다. MASM 가장 효율적인 인코딩 선택 합니다.  

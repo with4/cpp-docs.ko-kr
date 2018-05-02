@@ -1,11 +1,12 @@
 ---
-title: "Visual Studio에서 Linux CMake 프로젝트 구성 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 Linux CMake 프로젝트 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/25/2107
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-linux
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- cpp-linux
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
 author: corob-msft
@@ -14,11 +15,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 67665f3271caf71d16788b2e102d0e756d9f702f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 961419e9ffcd5dede0db01f81e1b1eedc3290436
+ms.sourcegitcommit: dd1a509526fa8bb18e97ab7bc7b91cbdb3ec7059
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-a-linux-cmake-project"></a>Linux CMake 프로젝트 구성
   
@@ -103,19 +104,13 @@ cmake -E capabilities
 
 출력에서 “serverMode”:true를 찾습니다. 아래에 설명된 대로 소스로 CMake를 컴파일하는 경우에도 완료 후 기능을 확인해야 합니다. Linux 컴퓨터에 서버 모드가 활성화되지 못하게 하는 제한 사항이 있을 수 있습니다.
 
-Linux 시스템용 셸에서 소스로 빌드를 시작하려면 패키지 관리자가 최신 상태이고 사용 가능한 git 및 cmake가 있는지 확인해야 합니다. 먼저 CMake 소스를 복제합니다.
+Linux 시스템용 셸에서 소스로 빌드를 시작하려면 패키지 관리자가 최신 상태이고 사용 가능한 git 및 cmake가 있는지 확인해야 합니다. 먼저 Visual Studio의 CMake 지원에 사용하는 리포지토리에서 CMake 소스를 복제합니다.
 
 ```cmd
 sudo apt-get update
 sudo apt-get install -y git cmake
-git clone https://github.com/Kitware/CMake.git
+git clone https://github.com/Microsoft/CMake.git
 cd CMake
-```
-
-다음으로, 지원되는 Visual Studio에용 CMake 릴리스인지 확인합니다. Microsoft에서는 CMake 개발을 활발하게 추적하고 있지만 최신 버전을 지원한다는 것을 보장할 수 없습니다. 예를 들어 CMake 3.9.0을 빌드하려면 먼저 다음을 실행합니다.
-
-```cmd
-git checkout tags/v3.9.0
 ```
 
 그런 후에 다음 명령을 실행합니다.
