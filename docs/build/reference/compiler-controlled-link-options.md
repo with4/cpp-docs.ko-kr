@@ -1,13 +1,10 @@
 ---
-title: "컴파일러 제어 LINK 옵션 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 제어 LINK 옵션 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - link
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - cl.exe compiler [C++], features that affect linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc899fc7f1fc8c1805648e72e14ef13853841c90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d99a05b5f9c4d97fd42328a41ad3fe054ab42cd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
 /C 옵션을 지정 하지 않으면 CL 컴파일러 링크를 자동으로 호출 합니다. CL에서는 링커 명령줄 옵션 및 인수를 제어할 수 있습니다. 다음 표에서 연결에 영향을 주는 CL 기능을 요약 합니다.  

@@ -1,13 +1,10 @@
 ---
-title: "__Declspec (dllexport)를 사용 하 여 DLL에서 내보내기 | Microsoft Docs"
-ms.custom: 
+title: __Declspec (dllexport)를 사용 하 여 DLL에서 내보내기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - dllexport
 - __declspec
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f20e47724a6d32dad014fbaf025cd283112c54
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6ab1d11c117c75633ce4ab836965449c4cc6ca1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>__declspec(dllexport)을 사용하여 DLL에서 내보내기
 도입 된 Microsoft **__export** 16 비트 컴파일러 버전의 Visual c + + 컴파일러가 내보내기 이름을 자동으로 생성 하는.lib 파일에 배치할 수 있도록 합니다. 이.lib 파일은 DLL에 연결 하는 정적.lib 처럼 방금 사용할 수 있습니다.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  많은 내보내기 지시문와 같은 서 수, NONAME, 및 PRIVATE.def 파일에만 구성할 수 있으며.def 파일 없이 이러한 특성을 지정할 수 없습니다. 그러나를 사용 하 여 **__declspec (dllexport)** 는.def를 사용 하 여 파일 빌드 오류가 발생 하지 않습니다.  
   
- 함수를 내보내려면는 **__declspec (dllexport)** 키워드는 키워드를 지정 하는 경우 호출 규칙 키워드의 왼쪽에 나타나야 합니다. 예:  
+ 함수를 내보내려면는 **__declspec (dllexport)** 키워드는 키워드를 지정 하는 경우 호출 규칙 키워드의 왼쪽에 나타나야 합니다. 예를 들어:  
   
 ```  
 __declspec(dllexport) void __cdecl Function1(void);  
@@ -54,7 +49,7 @@ class __declspec(dllexport) CExampleExport : public CObject
 ```  
   
 > [!NOTE]
->  `__declspec(dllexport)`사용 하는 함수에 적용할 수 없습니다는 `__clrcall` 호출 규칙입니다.  
+>  `__declspec(dllexport)` 사용 하는 함수에 적용할 수 없습니다는 `__clrcall` 호출 규칙입니다.  
   
  함수 프로토타입 및/또는 내보내는 하 고 추가 클래스를 포함 하는 헤더 파일 DLL을 빌드할 때 일반적으로 만들고 **__declspec (dllexport)** 헤더 파일에 선언에 있습니다. 코드를 더 읽기 쉽게 하려면에 대 한 매크로 정의 **__declspec (dllexport)** 내보내는 각 기호로 매크로 사용 합니다.  
   
@@ -65,7 +60,7 @@ class __declspec(dllexport) CExampleExport : public CObject
  **__declspec (dllexport)** 저장소 함수는 DLL의 내보내기 테이블의 이름입니다. 참조 테이블의 크기를 최적화 하려면 [이름 대신 서 수를 사용 하 여 DLL에서 함수 내보내기](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)합니다.  
   
 > [!NOTE]
->  W i n 32에서 Win16 DLL 소스 코드를 이식 하는 경우 각 인스턴스의 바꿉니다 **__export** 와 **__declspec (dllexport)**합니다.  
+>  W i n 32에서 Win16 DLL 소스 코드를 이식 하는 경우 각 인스턴스의 바꿉니다 **__export** 와 **__declspec (dllexport)** 합니다.  
   
  참조로 Win32 Winbase.h 헤더 파일에서 검색 합니다. 예제가 포함 되어 **__declspec (dllimport)** 사용 합니다.  
   

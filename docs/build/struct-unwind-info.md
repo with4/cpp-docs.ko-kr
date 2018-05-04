@@ -2,26 +2,21 @@
 title: 구조체 UNWIND_INFO | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f0aee906-a1b9-44cc-a8ad-463637bd5411
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1effec5bc753f1b23f8d43a8406c61cb6663fa56
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 14b17a79905ffc7814e2aecf92e90f3db526453f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="struct-unwindinfo"></a>구조체 UNWIND_INFO
 해제 데이터 정보 구조체를 사용 하 여 함수에 스택 포인터 및 스택에 비휘발성 레지스터 저장 되는 효과 기록 합니다.  

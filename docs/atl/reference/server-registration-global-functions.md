@@ -1,12 +1,9 @@
 ---
-title: "서버 등록 전역 함수 | Microsoft Docs"
-ms.custom: 
+title: 서버 등록 전역 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlComModuleRegisterServer
@@ -17,17 +14,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f5cfffbcc47555ee8cff7cd6e18ea54b5524607
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08a4141ab5ff27e44f663a4d5f267c2b7d754283
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="server-registration-global-functions"></a>서버 등록 전역 함수
 이러한 함수를 등록 하 고 개체 맵의 서버 개체를 등록 취소에 대 한 지원을 제공 합니다.  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
    
-##  <a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer  
+##  <a name="atlcommoduleregisterserver"></a>  AtlComModuleRegisterServer  
  이 함수는 개체 맵의 모든 개체를 등록하기 위해 호출됩니다.  
   
 ```
@@ -70,11 +65,11 @@ ATLINLINE ATLAPI AtlComModuleRegisterServer(
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- `AtlComModuleRegisterServer`ATL 자동 생성 된 개체 지도에서는 지도에서 각 개체를 등록 합니다. 경우 `pCLSID` 가 NULL이 아니면 참조 하는 개체에만 `pCLSID` 등록 됩니다; 그렇지 않은 경우 등록 된 모든 개체.  
+ `AtlComModuleRegisterServer` ATL 자동 생성 된 개체 지도에서는 지도에서 각 개체를 등록 합니다. 경우 `pCLSID` 가 NULL이 아니면 참조 하는 개체에만 `pCLSID` 등록 됩니다; 그렇지 않은 경우 등록 된 모든 개체.  
   
  이 함수를 호출 하 [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver)합니다.  
   
-##  <a name="atlcommoduleunregisterserver"></a>AtlComModuleUnregisterServer  
+##  <a name="atlcommoduleunregisterserver"></a>  AtlComModuleUnregisterServer  
  이 함수는 개체 맵의 모든 개체를 등록 취소하기 위해 호출됩니다.  
   
 ```
@@ -98,11 +93,11 @@ ATLINLINE ATLAPI AtlComModuleUnregisterServer(
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- `AtlComModuleUnregisterServer`ATL 개체 맵의 안내 하 고 지도 있는 각 개체의 등록을 취소 합니다. 경우 `pCLSID` 가 NULL이 아니면 참조 하는 개체에만 `pCLSID` 등록 되지 않은 상태가 아니면 등록 되지 않은 모든 개체.  
+ `AtlComModuleUnregisterServer` ATL 개체 맵의 안내 하 고 지도 있는 각 개체의 등록을 취소 합니다. 경우 `pCLSID` 가 NULL이 아니면 참조 하는 개체에만 `pCLSID` 등록 되지 않은 상태가 아니면 등록 되지 않은 모든 개체.  
   
  이 함수를 호출 하 [CAtlComModule::UnregisterServer](catlcommodule-class.md#unregisterserver)합니다.  
   
-##  <a name="atlcommoduleregisterclassobjects"></a>AtlComModuleRegisterClassObjects  
+##  <a name="atlcommoduleregisterclassobjects"></a>  AtlComModuleRegisterClassObjects  
  이 함수는 클래스 개체를 등록하기 위해 호출됩니다.  
   
 ```
@@ -128,7 +123,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 ### <a name="remarks"></a>설명  
  이 도우미 함수를 사용 하 여 [CComModule::RegisterClassObjects](ccommodule-class.md#registerclassobjects) (ATL 7.0에서 사용 되지 않음) 및 [CAtlExeModuleT::RegisterClassObjects](catlexemodulet-class.md#registerclassobjects)합니다.  
   
-##  <a name="atlcommodulerevokeclassobjects"></a>AtlComModuleRevokeClassObjects  
+##  <a name="atlcommodulerevokeclassobjects"></a>  AtlComModuleRevokeClassObjects  
  이 함수는 실행 개체 테이블에서 클래스 팩터리를 제거하기 위해 호출됩니다.  
   
 ```
@@ -145,7 +140,7 @@ ATLINLINE ATLAPI AtlComModuleRevokeClassObjects(_ATL_COM_MODULE* pComModule);
 ### <a name="remarks"></a>설명  
  이 도우미 함수를 사용 하 여 [CComModule::RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (ATL 7.0에서 사용 되지 않음) 및 [CAtlExeModuleT::RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects)합니다.  
   
-##  <a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject  
+##  <a name="atlcommodulegetclassobject"></a>  AtlComModuleGetClassObject  
  이 함수는 클래스 팩터리를 반환하기 위해 호출됩니다.  
   
 ```

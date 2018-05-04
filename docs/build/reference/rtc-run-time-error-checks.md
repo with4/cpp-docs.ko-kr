@@ -2,12 +2,9 @@
 title: -RTC (런타임 오류 검사) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /rtc
 - VC.Project.VCCLCompilerTool.SmallerTypeCheck
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-caps.latest.revision: 18
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8699a96dcd7c04bc1b2707e964afb4b68068147e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a135c9c4e32ea7a54c45719eff503ff99509d3e7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC(런타임 오류 검사)
 설정 및 런타임 오류 검사 기능을 함께에서 사용 하지 않도록 설정 하는 데 사용 된 [runtime_checks](../../preprocessor/runtime-checks.md) pragma입니다.  
@@ -65,7 +60,7 @@ ms.lasthandoff: 12/21/2017
  `c`  
  보고서 값 보다 작은 데이터 형식 및 데이터 손실을 결과에 할당 됩니다. 예를 들어 형식의 값 `short 0x101` 형식의 변수에 할당 `char`합니다.  
   
- 이 옵션을 사용할 파일을 자르거나 예를 들어의 처음 8 비트를 원하는 경우 경우 보고는 `int` 으로 반환 되는 `char`합니다. 때문에 **/RTC** `c` 하면 런타임 오류가 발생의 결과로 런타임 오류를 방지 하는 데 필요한 정보 가릴 수 정보를 할당으로 인해 분실 한 경우 **/RTC** `c`. 예:  
+ 이 옵션을 사용할 파일을 자르거나 예를 들어의 처음 8 비트를 원하는 경우 경우 보고는 `int` 으로 반환 되는 `char`합니다. 때문에 **/RTC** `c` 하면 런타임 오류가 발생의 결과로 런타임 오류를 방지 하는 데 필요한 정보 가릴 수 정보를 할당으로 인해 분실 한 경우 **/RTC** `c`. 예를 들어:  
   
 ```  
 #include <crtdbg.h>  

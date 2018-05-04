@@ -2,11 +2,8 @@
 title: _com_ptr_t::Attach | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - _com_ptr_t::Attach
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - COM interfaces, attach pointer
 - Attach method [C++]
 ms.assetid: 94c18e0a-06be-4ca7-bdaf-cd54ec0a645e
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8b9eac88c9387c6aeedd140159bb24482c829dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7341695ad0cbc8384da859b80a72a63d8d52215f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comptrtattach"></a>_com_ptr_t::Attach
 **Microsoft 전용**  
@@ -55,9 +50,9 @@ void Attach(
   
 ## <a name="remarks"></a>설명  
   
--   **연결 (**`pInterface`**)** `AddRef` 호출 되지 않습니다. 인터페이스 소유권이 이 `_com_ptr_t` 개체에 전달됩니다. **릴리스** 이전에 캡슐화 된 포인터에 대 한 참조 횟수를 감소 시키기 위해 호출 됩니다.  
+-   **연결 (**`pInterface`**)** `AddRef` 호출 되지 않습니다.     인터페이스 소유권이 이 `_com_ptr_t` 개체에 전달됩니다. **릴리스** 이전에 캡슐화 된 포인터에 대 한 참조 횟수를 감소 시키기 위해 호출 됩니다.  
   
--   **연결 (** `pInterface` **,**`fAddRef`**)** 경우 `fAddRef` 은 **true**, `AddRef` 대 한 참조를 증가 하기 위해 호출 캡슐화 된 인터페이스 포인터에 대 한 수입니다. 경우 `fAddRef` 은 **false**,이 `_com_ptr_t` 개체 호출 하지 않고 원시 인터페이스 포인터의 소유권을 갖습니다 `AddRef`합니다. **릴리스** 이전에 캡슐화 된 포인터에 대 한 참조 횟수를 감소 시키기 위해 호출 됩니다.  
+-   **연결 (** `pInterface` **,**`fAddRef`**)** 경우 `fAddRef` 은 **true**, `AddRef` 대 한 참조를 증가 하기 위해 호출 캡슐화 된 인터페이스 포인터에 대 한 수입니다.       경우 `fAddRef` 은 **false**,이 `_com_ptr_t` 개체 호출 하지 않고 원시 인터페이스 포인터의 소유권을 갖습니다 `AddRef`합니다. **릴리스** 이전에 캡슐화 된 포인터에 대 한 참조 횟수를 감소 시키기 위해 호출 됩니다.  
   
  **Microsoft 전용 종료**  
   

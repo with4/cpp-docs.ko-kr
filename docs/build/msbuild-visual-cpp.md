@@ -1,13 +1,10 @@
 ---
 title: MSBuild (Visual c + +) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - MSBuild
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0db569d456a85418f01dfdf3abab116d68d99dff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 743aba156f9b937f28242b63e6deaf4c6dfb8369
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msbuild-visual-c"></a>MSBuild(Visual C++)
 사용할 수는 **MSBuild** 명령 프롬프트에서 Visual c + + 응용 프로그램을 빌드하는 도구입니다. 빌드 프로세스에서 정보를 만들고 편집할 수 있는 프로젝트 파일 (.vcxproj)에 의해 제어 됩니다. 프로젝트 파일에 따라 빌드 옵션 빌드 단계, 조건 및 이벤트를 지정 합니다.  

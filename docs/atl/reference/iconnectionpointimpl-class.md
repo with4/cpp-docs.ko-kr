@@ -1,12 +1,9 @@
 ---
-title: "IConnectionPointImpl 클래스 | Microsoft Docs"
-ms.custom: 
+title: IConnectionPointImpl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IConnectionPointImpl
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - connection points [C++], implementing
 - IConnectionPointImpl class
 ms.assetid: 27992115-3b86-45dd-bc9e-54f32876c557
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c49057153a23f0e17d09032df8781b64cef8677
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 444dea401fa711b40e4d8229b26c9cdbf6d1fcbc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iconnectionpointimpl-class"></a>IConnectionPointImpl 클래스
 이 클래스는 연결 지점을 구현합니다.  
@@ -74,7 +69,7 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 |[IConnectionPointImpl::m_vec](#m_vec)|연결 지점에 대 한 연결을 관리합니다.|  
   
 ## <a name="remarks"></a>설명  
- `IConnectionPointImpl`연결 지점이 클라이언트에 송신 인터페이스를 노출 하는 개체 수 있도록 구현 합니다. 클라이언트는 싱크 라는 개체에이 인터페이스를 구현 합니다.  
+ `IConnectionPointImpl` 연결 지점이 클라이언트에 송신 인터페이스를 노출 하는 개체 수 있도록 구현 합니다. 클라이언트는 싱크 라는 개체에이 인터페이스를 구현 합니다.  
   
  ATL 사용 하 여 [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md) 연결 가능 개체를 구현 하려면. 연결 가능 개체 내에서 각 연결 지점으로 식별 하는 송신 인터페이스를 나타내는 `piid`합니다. 클래스 *CDV* 연결 지점 및 싱크 간의 연결을 관리 합니다. 각 연결 고유 하 게 식별 하 여 "쿠키"입니다.  
   
@@ -88,7 +83,7 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="advise"></a>IConnectionPointImpl::Advise  
+##  <a name="advise"></a>  IConnectionPointImpl::Advise  
  연결 지점 및 싱크 간에 연결을 설정 합니다.  
   
 ```
@@ -102,7 +97,7 @@ STDMETHOD(Advise)(
   
  참조 [IConnectionPoint::Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815) in the Windows SDK입니다.  
   
-##  <a name="enumconnections"></a>IConnectionPointImpl::EnumConnections  
+##  <a name="enumconnections"></a>  IConnectionPointImpl::EnumConnections  
  연결 지점에 대 한 연결을 반복 하는 열거자를 만듭니다.  
   
 ```
@@ -112,7 +107,7 @@ STDMETHOD(EnumConnections)(IEnumConnections** ppEnum);
 ### <a name="remarks"></a>설명  
  참조 [IConnectionPoint::EnumConnections](http://msdn.microsoft.com/library/windows/desktop/ms680755) in the Windows SDK입니다.  
   
-##  <a name="getconnectioninterface"></a>IConnectionPointImpl::GetConnectionInterface  
+##  <a name="getconnectioninterface"></a>  IConnectionPointImpl::GetConnectionInterface  
  연결 지점에서이 나타내는 인터페이스의 IID를 검색 합니다.  
   
 ```
@@ -122,7 +117,7 @@ STDMETHOD(GetConnectionInterface)(IID* piid2);
 ### <a name="remarks"></a>설명  
  참조 [IConnectionPoint::GetConnectionInterface](http://msdn.microsoft.com/library/windows/desktop/ms693468) in the Windows SDK입니다.  
   
-##  <a name="getconnectionpointcontainer"></a>IConnectionPointImpl::GetConnectionPointContainer  
+##  <a name="getconnectionpointcontainer"></a>  IConnectionPointImpl::GetConnectionPointContainer  
  연결 가능 개체에 대 한 인터페이스 포인터를 검색합니다.  
   
 ```
@@ -132,7 +127,7 @@ STDMETHOD(GetConnectionPointContainer)(IConnectionPointContainer** ppCPC);
 ### <a name="remarks"></a>설명  
  참조 [IConnectionPoint::GetConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms679669) in the Windows SDK입니다.  
   
-##  <a name="m_vec"></a>IConnectionPointImpl::m_vec  
+##  <a name="m_vec"></a>  IConnectionPointImpl::m_vec  
  연결 지점 개체와 싱크 간의 연결을 관리 합니다.  
   
 ```
@@ -142,7 +137,7 @@ CDV m_vec;
 ### <a name="remarks"></a>설명  
  기본적으로 `m_vec` 유형의 [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)합니다.  
   
-##  <a name="unadvise"></a>IConnectionPointImpl::Unadvise  
+##  <a name="unadvise"></a>  IConnectionPointImpl::Unadvise  
  통해 이전에 설정 된 연결을 종료 [Advise](#advise)합니다.  
   
 ```

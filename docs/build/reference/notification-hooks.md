@@ -1,29 +1,24 @@
 ---
-title: "알림 후크 | Microsoft Docs"
-ms.custom: 
+title: 알림 후크 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - delayed loading of DLLs, notification hooks
 ms.assetid: e9c291ed-2f2d-4319-a171-09800625256f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31490e3bb591af6568ffecddf68219c89a25e055
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0210c4ee058694594893a029789442c89003da2e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="notification-hooks"></a>알림 후크
 알림 후크 도우미 루틴에는 다음과 같은 조치가 취해집니다 하기 바로 전에 호출 됩니다.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 -   포인터의 새 정의 제공 하 여 **__pfnDliNotifyHook2** 는 알림을 수신 하는 사용자 고유의 함수를 가리키도록 하 여 초기화 합니다.  
   
-     또는  
+     -또는-  
   
 -   포인터를 설정 하 여 **__pfnDliNotifyHook2** 로딩을 지연 하는 프로그램은 DLL 호출 하기 전에 후크 함수를 합니다.  
   

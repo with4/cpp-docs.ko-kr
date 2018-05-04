@@ -2,28 +2,23 @@
 title: typeid 연산자 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - typeid operator
 ms.assetid: 8871cee6-d6b9-4301-a5cb-bf3dc9798d61
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b27f3bcb7358b3ea05907df1a4372c107538dfb4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: abb99b3dbc656d43701eebafbd7d34de125d1a31
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="typeid-operator"></a>typeid 연산자
 ## <a name="syntax"></a>구문  
@@ -39,7 +34,7 @@ typeid( expression )
 ## <a name="remarks"></a>설명  
  `typeid` 연산자를 사용하면 런타임에 개체 형식이 결정됩니다.  
   
- 결과 `typeid` 는 **const type_info &**합니다. 값이에 대 한 참조는 **type_info** 나타내는 개체는 *유형 id* 또는 변수의 *식*형태에 따라 `typeid` 사용 . 참조 [type_info 클래스](../cpp/type-info-class.md) 자세한 정보에 대 한 합니다.  
+ 결과 `typeid` 는 **const type_info &** 합니다. 값이에 대 한 참조는 **type_info** 나타내는 개체는 *유형 id* 또는 변수의 *식*형태에 따라 `typeid` 사용 . 참조 [type_info 클래스](../cpp/type-info-class.md) 자세한 정보에 대 한 합니다.  
   
  `typeid` 연산자 (추상 선언 자 또는 인스턴스)의 관리 되는 형식에서 작동 하지 않습니다, 참조 [typeid](../windows/typeid-cpp-component-extensions.md) 가져오기에 대 한 내용은 <xref:System.Type> 지정 된 형식의 합니다.  
   
@@ -51,7 +46,7 @@ typeid( expression )
   
 -   첨자 포인터(예: [ ]). 일반적으로 다형 형식의 포인터에 첨자를 사용하는 것은 안전하지 않습니다.  
   
- 경우는 *식* 아직 해당 기본 클래스에서 파생 된 형식의 개체가 실제로 기본 클래스 유형 가리키는 **type_info** 파생된 클래스는 결과 대 한 참조입니다. *식* 다형 형식 (가상 함수가 있는 클래스)를 가리켜야 합니다. 그렇지 않으면 결과는 **type_info** 에서 참조 하는 정적 클래스는 *식*합니다. 또한 가리키는 개체를 사용하도록 포인터를 역참조해야 합니다. 결과 포인터를 역참조 하지 않으면 됩니다는 **type_info** 아니라를 가리키는 포인터에 대 한 합니다. 예:  
+ 경우는 *식* 아직 해당 기본 클래스에서 파생 된 형식의 개체가 실제로 기본 클래스 유형 가리키는 **type_info** 파생된 클래스는 결과 대 한 참조입니다. *식* 다형 형식 (가상 함수가 있는 클래스)를 가리켜야 합니다. 그렇지 않으면 결과는 **type_info** 에서 참조 하는 정적 클래스는 *식*합니다. 또한 가리키는 개체를 사용하도록 포인터를 역참조해야 합니다. 결과 포인터를 역참조 하지 않으면 됩니다는 **type_info** 아니라를 가리키는 포인터에 대 한 합니다. 예를 들어:  
   
 ```  
 // expre_typeid_Operator.cpp  

@@ -1,13 +1,10 @@
 ---
 title: -REBASE | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /rebase
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - executable files [C++], base address
 - /REBASE editbin option [C++]
 ms.assetid: 3f89d874-af5c-485b-974b-fd205f6e1a4b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50bb10acda1175d2cca12e7e4aff6fc9e5bae73a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a5e2b68768b01d71532c358a14c53d8a033e1ed
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rebase"></a>/다시 지정
 ```  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 |한정자|작업|  
 |--------------|------------|  
-|자료**=***주소*|파일에 기본 주소를 다시 할당 하기 위해 시작 주소를 제공 합니다. 지정 *주소* 10 진수 또는 C 언어 표기법입니다. BASE를 지정 하지 않은 경우 기본적으로 시작 하는 기본 주소는 0x400000입니다. DOWN이 사용 되는, 기본 사람은 및 *주소* 의 기본 주소 범위의 끝을 설정 합니다.|  
+|기본 **= * * * 주소*|파일에 기본 주소를 다시 할당 하기 위해 시작 주소를 제공 합니다. 지정 *주소* 10 진수 또는 C 언어 표기법입니다. BASE를 지정 하지 않은 경우 기본적으로 시작 하는 기본 주소는 0x400000입니다. DOWN이 사용 되는, 기본 사람은 및 *주소* 의 기본 주소 범위의 끝을 설정 합니다.|  
 |BASEFILE|COFFBASE 라는 파일을 만듭니다. TXT 옵션 /base는 링크의 필요한 형식에 있는 텍스트 파일입니다.|  
 |아래로|끝 주소에서 아래쪽으로 기준 주소 다시 할당 하도록 EDITBIN 지시 합니다. 파일은 가능한 가장 높은 주소 주소 범위의 끝 부분 아래에 있는 첫 번째 파일이 지정 된 순서로 다시 할당 됩니다. BASE는 아래쪽에 있는 파일의 기준에 대 한 충분 한 주소 공간을 위해 사용 해야 합니다. 지정된 된 파일에 필요한 주소 공간을 확인 하려면 /REBASE EDITBIN 파일에 대해 실행 하 고 표시 된 전체 크기를 64KB를 추가 합니다.|  
   

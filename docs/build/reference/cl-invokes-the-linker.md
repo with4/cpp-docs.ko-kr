@@ -1,13 +1,10 @@
 ---
-title: "CL에서의 링커 호출 | Microsoft Docs"
-ms.custom: 
+title: CL에서의 링커 호출 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - cl
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - cl.exe compiler [C++], compiling without linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32a3bdd1e227b894ca5a32ddfaa8c46a478a19f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bc9c5c4815dc83b37d0b7971d5fd0f31db51e39e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cl-invokes-the-linker"></a>CL에서의 링커 호출
 CL /c 옵션을 사용 하지 않으면 컴파일한 다음 링커를 자동으로 호출 합니다. CL 컴파일하는 동안 만들어진.obj 파일의 이름 및 명령줄에 지정 된 다른 파일의 이름이 링커로 전달 합니다. 링커가 링크 환경 변수에 나열 된 옵션을 사용 합니다. CL 명령줄에서 링커 옵션을 지정 하려면 /link 옵션을 사용할 수 있습니다. /Link 옵션을 다음 옵션을 LINK 환경 변수를 재정의 합니다. 다음 표의 옵션 링크 하지 않도록 합니다.  
@@ -43,7 +38,7 @@ CL /c 옵션을 사용 하지 않으면 컴파일한 다음 링커를 자동으�
   
  연결에 대 한 자세한 내용은 참조 하십시오. [링커 옵션](../../build/reference/linker-options.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  세 가지 C 소스 파일을 컴파일하는 것으로 가정: MAIN.c 및 MOD1.c와 MOD2.c 합니다. 각 파일에 다른 파일에 정의 된 함수에 대 한 호출에 포함 됩니다.  
   
 -   함수를 호출 하는 MAIN.c `func1` MOD1.c 및 함수에 `func2` MOD2.c에 합니다.  

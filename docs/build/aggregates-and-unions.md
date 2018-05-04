@@ -1,29 +1,24 @@
 ---
-title: "집계 및 공용 구조체 | Microsoft Docs"
-ms.custom: 
+title: 집계 및 공용 구조체 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - aggregates [C++], and unions
 ms.assetid: 859fc211-b111-4f12-af98-de78e48f9b92
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db5e8551adff9752cbcaca3f4dc7d3c4a7fca908
-ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
+ms.openlocfilehash: 5b1afd3be89e1d18da9889d88dbbbef3fb104e02
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregates-and-unions"></a>집계 및 공용 구조체
 배열, 구조체 및 공용 구조체와 같은 다른 형식에는 일관성 있는 집계 및 공용 구조체 저장소 및 데이터 검색을 보장 하는 보다 엄격한 맞춤 요구 사항이 있습니다. 배열, 구조체 및 공용 구조체에 대 한 정의 다음과 같습니다.  
@@ -52,7 +47,7 @@ ms.lasthandoff: 03/08/2018
 |**UINT64**|**unsigned __int64**|쿼드 워드|  
 |**FP32 (정밀도 단일)**|**float**|워드 단위|  
 |**FP64 (이중 정밀도)**|**double**|쿼드 워드|  
-|**POINTER**|**\***|쿼드 워드|  
+|**포인터**|**\***|쿼드 워드|  
 |`__m64`|**struct __m64**|쿼드 워드|  
 |`__m128`|**struct __m128**|Octaword|  
   

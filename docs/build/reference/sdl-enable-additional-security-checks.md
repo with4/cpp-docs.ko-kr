@@ -1,29 +1,24 @@
 ---
-title: "-sdl (추가 보안 검사 사용) | Microsoft Docs"
-ms.custom: 
+title: -sdl (추가 보안 검사 사용) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 dev_langs:
 - C++
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cbcb74272fa7cae3dd0c641bd6371c8f0f9c204
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8aa984b488f74043b8c90876047516ebca23d4d3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/SDL(추가 보안 검사 사용)
 권장되는 SDL(Security Development Lifecycle) 검사를 추가합니다. 이러한 검사에는 오류와 같은 추가 보안 관련 경고 및 추가 보안 코드 생성 기능이 포함됩니다.  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>설명  
- **/sdl** 에서 제공 하는 기준 보안 검사 보다 더 [/GS](../../build/reference/gs-buffer-security-check.md) 재정의 **/GS-**합니다. 기본적으로 **/sdl** 꺼져 있습니다. **/sdl-** 추가 보안 검사를 비활성화 합니다.  
+ **/sdl** 에서 제공 하는 기준 보안 검사 보다 더 [/GS](../../build/reference/gs-buffer-security-check.md) 재정의 **/GS-** 합니다. 기본적으로 **/sdl** 꺼져 있습니다. **/sdl-** 추가 보안 검사를 비활성화 합니다.  
   
 ## <a name="compile-time-checks"></a>컴파일 시간 검사  
  **/sdl** 이러한 경고를 오류로 활성화 합니다.  

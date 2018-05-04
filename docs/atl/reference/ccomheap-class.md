@@ -1,12 +1,9 @@
 ---
-title: "CComHeap 클래스 | Microsoft Docs"
-ms.custom: 
+title: CComHeap 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComHeap
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CComHeap class
 ms.assetid: c74183ce-98ae-46fb-b186-93ea4cf0222b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cf86ebe45cdb0a70af6eebaaed90690e83e8db7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 75bd4ad2f182d2a9f62e82b78f9ee9d0db44fa00
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomheap-class"></a>CComHeap 클래스
 이 클래스는 구현 [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) COM 메모리 할당 함수를 사용 합니다.  
@@ -56,9 +51,9 @@ class CComHeap : public IAtlMemMgr
 |[Ccomheap:: Reallocate](#reallocate)|이 메모리 관리자에 의해 할당된 메모리를 다시 할당하려면 이 메서드를 호출합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CComHeap`메모리 할당 기능을 포함 하 여 COM 할당 기능을 사용 하 여 구현 하 [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226), 및 [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)합니다. 할당 될 수 있는 메모리의 최대 크기는 크거나 **INT_MAX** (2147483647) 바이트입니다.  
+ `CComHeap` 메모리 할당 기능을 포함 하 여 COM 할당 기능을 사용 하 여 구현 하 [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226), 및 [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)합니다. 할당 될 수 있는 메모리의 최대 크기는 크거나 **INT_MAX** (2147483647) 바이트입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  예를 참조 [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
@@ -69,7 +64,7 @@ class CComHeap : public IAtlMemMgr
 ## <a name="requirements"></a>요구 사항  
  **헤더:** ATLComMem.h  
   
-##  <a name="allocate"></a>CComHeap::Allocate  
+##  <a name="allocate"></a>  CComHeap::Allocate  
  메모리 블록을 할당하려면 이 메서드를 호출합니다.  
   
 ```
@@ -88,7 +83,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  사용 하 여 구현 [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)합니다.  
   
-##  <a name="free"></a>Ccomheap::  
+##  <a name="free"></a>  Ccomheap::  
  이 메모리 관리자에 의해 할당 된 메모리 블록을 해제 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -102,7 +97,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>설명  
  사용 하 여 구현 [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)합니다.  
   
-##  <a name="getsize"></a>CComHeap::GetSize  
+##  <a name="getsize"></a>  CComHeap::GetSize  
  이 메모리 관리자에 의해 할당 된 메모리 블록의 할당 된 크기를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -119,7 +114,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>설명  
  사용 하 여 구현 [IMalloc::GetSize](http://msdn.microsoft.com/library/windows/desktop/ms691226)합니다.  
   
-##  <a name="reallocate"></a>Ccomheap:: Reallocate  
+##  <a name="reallocate"></a>  Ccomheap:: Reallocate  
  이 메모리 관리자에 의해 할당된 메모리를 다시 할당하려면 이 메서드를 호출합니다.  
   
 ```

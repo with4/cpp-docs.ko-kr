@@ -1,12 +1,9 @@
 ---
-title: "CFixedStringT 클래스 | Microsoft Docs"
-ms.custom: 
+title: CFixedStringT 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFixedStringT
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - CFixedStringT class
 - shared classes, CFixedStringT
 ms.assetid: 6d4171ba-3104-493a-a6cc-d515f4ba9a4b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f66749272649fe230b31e770a175e0b94441b90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93125d15be32a95d71c763f476fad700dab65a3b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cfixedstringt-class"></a>CFixedStringT 클래스
 이 클래스는 문자열 개체가 고정된 문자 버퍼를 나타냅니다.  
@@ -68,7 +63,7 @@ class CFixedStringT : private CFixedStringMgr, public StringType
   
 -   에 대 한 문자 버퍼는 `CFixedStringT` 개체는 항상 길이가 동일 ( *t_nChars*). 에 대 한 버퍼 크기 제한은 `CStringT` 개체입니다.  
   
--   메모리 관리자에 대 한 `CFixedStringT` 의 공유 되도록 사용자 지정 된는 [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) 둘 이상의 개체 `CFixedStringT` objectsis 허용 되지 않습니다. `CStringT`개체에는 이러한 제한이 없습니다.  
+-   메모리 관리자에 대 한 `CFixedStringT` 의 공유 되도록 사용자 지정 된는 [CStringData](../../atl-mfc-shared/reference/cstringdata-class.md) 둘 이상의 개체 `CFixedStringT` objectsis 허용 되지 않습니다. `CStringT` 개체에는 이러한 제한이 없습니다.  
   
  사용자 지정에 대 한 자세한 내용은 `CFixedStringT` string 개체의 메모리 관리는 일반적으로 참조 하 고 [메모리 관리 및 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)합니다.  
   
@@ -84,7 +79,7 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 ## <a name="requirements"></a>요구 사항  
  **헤더:** cstringt.h  
   
-##  <a name="cfixedstringt"></a>CFixedStringT::CFixedStringT  
+##  <a name="cfixedstringt"></a>  CFixedStringT::CFixedStringT  
  `CFixedStringT` 개체를 생성합니다.  
   
 ```
@@ -110,7 +105,7 @@ explicit CFixedStringT(const unsigned char* psz);
 ### <a name="remarks"></a>설명  
  알고 있어야 새 할당 된 저장소에 입력된 데이터를 복사 하는 생성자를 때문에 메모리 예외가 발생할 수 있습니다. 이러한 생성자 중 일부는 역할 변환 함수를 참고 합니다.  
   
-##  <a name="operator__eq"></a>CFixedStringT::operator =  
+##  <a name="operator__eq"></a>  CFixedStringT::operator =  
  기존 다시 초기화 `CFixedStringT` 새 데이터로 개체입니다.  
   
 ```

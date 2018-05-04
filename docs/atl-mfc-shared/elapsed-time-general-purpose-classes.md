@@ -1,12 +1,9 @@
 ---
-title: "경과 된 시간: 범용 클래스 | Microsoft Docs"
-ms.custom: 
+title: '경과 된 시간: 범용 클래스 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - intervals, date and time
 - calculations, date and time
 ms.assetid: e5c5d3d2-ce1d-409e-875c-98848434e716
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51eea60669fb7ad35525d65013ffc8420649349b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ff7ef11bb20124a05e2e85c408ce27de8f982546
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="elapsed-time-general-purpose-classes"></a>경과 된 시간: 범용 클래스
 다음 절차에는 두 개의 간의 차이 계산 하는 방법을 보여 줍니다 `CTime` 개체 및 get는 `CTimeSpan` 결과입니다.  

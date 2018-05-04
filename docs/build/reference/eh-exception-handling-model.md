@@ -1,13 +1,10 @@
 ---
-title: "-EH (예외 처리 모델) | Microsoft Docs"
-ms.custom: 
+title: -EH (예외 처리 모델) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.ExceptionHandling
 - /eh
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c56020d5013e951d9d43ed799d34641d114d612
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 96b009a9f209ffcc4bb84550c5f37680ef71c9fe
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="eh-exception-handling-model"></a>/EH(예외 처리 모델)
 컴파일러에서 사용하는 예외 처리의 종류, 예외 검사를 최적화할 시기 및 예외로 인해 범위를 벗어나는 C++ 개체를 삭제할지 여부를 지정합니다. **/EH** 를 지정하지 않으면 컴파일러에서 비동기 구조적 예외와 C++ 예외를 모두 catch하지만 비동기 예외로 인해 범위를 벗어나는 C++ 개체를 삭제하지 않습니다.  
@@ -105,9 +100,9 @@ int main() {
   
  **/clr**에 따른 예외 처리 제한에 대한 자세한 내용은 [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)를 참조하세요.  
   
- **-**기호를 사용하면 옵션을 제거할 수 있습니다. 예를 들어 **/EHsc-** 는 **/EHs /EHc-** 로 해석되고 **/EHs**와 동일합니다.  
+ **-** 기호를 사용하면 옵션을 제거할 수 있습니다. 예를 들어 **/EHsc-** 는 **/EHs /EHc-** 로 해석되고 **/EHs**와 동일합니다.  
   
- **/EHr** 컴파일러 옵션은 `noexcept` 특성을 갖는 모든 함수에서 런타임 종료 검사를 적용합니다. 기본적으로 런타임 검사는 컴파일러 백 엔드에서 함수가 *throw되지 않는* 함수만 호출하는 것을 확인하는 경우 최적화할 수 있습니다. throw되지 않는 함수는 예외가 throw될 수 없음을 지정하는 특성을 갖는 모든 함수입니다. 여기에는 `noexcept`, `throw()`, `__declspec(nothrow)`로 표시된 함수 및 **/EHc** 가 지정된 경우 `extern "C"` 함수에 대해 항상 런타임 종료 검사를 생성하도록 컴파일러에 지시합니다. throw되지 않는 함수에는 컴파일러에서 검사에 의해 throw되지 않는 것으로 확인한 모든 함수도 포함됩니다. **/EHr-**을 사용하여 기본값을 명시적으로 설정할 수 있습니다.  
+ **/EHr** 컴파일러 옵션은 `noexcept` 특성을 갖는 모든 함수에서 런타임 종료 검사를 적용합니다. 기본적으로 런타임 검사는 컴파일러 백 엔드에서 함수가 *throw되지 않는* 함수만 호출하는 것을 확인하는 경우 최적화할 수 있습니다. throw되지 않는 함수는 예외가 throw될 수 없음을 지정하는 특성을 갖는 모든 함수입니다. 여기에는 `noexcept`, `throw()`, `__declspec(nothrow)`로 표시된 함수 및 **/EHc** 가 지정된 경우 `extern "C"` 함수에 대해 항상 런타임 종료 검사를 생성하도록 컴파일러에 지시합니다. throw되지 않는 함수에는 컴파일러에서 검사에 의해 throw되지 않는 것으로 확인한 모든 함수도 포함됩니다. **/EHr-** 을 사용하여 기본값을 명시적으로 설정할 수 있습니다.  
   
  그러나 throw되지 않는 특성이 함수에 의해 예외가 throw되지 않음을 보장하지는 않습니다. `noexcept` 함수의 동작과 달리 Visual C++ 컴파일러는 `throw()`, `__declspec(nothrow)`또는 `extern "C"` 를 사용하여 선언된 함수에 의해 throw된 예외를 정의되지 않은 동작으로 간주합니다. 이러한 세 선언 특성을 사용하는 함수는 예외에 대해 런타임 종료 검사를 적용하지 않습니다. **/EHr** 옵션을 사용하면 컴파일러에서 `noexcept` 함수를 이스케이프하는 처리되지 않은 예외에 대해 런타임 검사를 생성하도록 하여 이 정의되지 않은 동작을 식별할 수 있습니다.  
   

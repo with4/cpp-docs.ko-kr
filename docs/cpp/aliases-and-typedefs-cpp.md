@@ -1,29 +1,24 @@
 ---
-title: "별칭 및 typedef (c + +) | Microsoft Docs"
-ms.custom: 
+title: 별칭 및 typedef (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - typedef_cpp
 dev_langs:
 - C++
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8946c87c18e1781f95df7a91e8cc4fa0eba02158
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c020d9fc4a8bc5275fe77b05eff74fdcec25ec6c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aliases-and-typedefs-c"></a>별칭 및 typedef(C++)
 사용할 수는 *별칭 선언* 를 이전에 선언 된 형식에 대 한 동의어로 사용할 이름을 선언 합니다. (이 메커니즘은 또한 비공식적으로 *형식 별칭*). 만들려면이 메커니즘을 사용할 수도 있습니다는 *별칭 템플릿이*, 사용자 지정 할당자에 특히 유용할 수 있습니다.  
@@ -93,7 +88,7 @@ ptr<int> ptr_int;
   
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 사용자 지정 할당자(이 경우 정수 벡터 형식)와 별칭 템플릿을 사용하는 방법을 데모로 보여 줍니다. `int`의 형식을 간편한 별칭으로 대체하여 기본 함수 코드의 매개 변수 목록을 간단히 표시할 수 있습니다. 코드 전반에 사용자 지정 할당자를 사용하여 가독성을 향상시키고 오타로 인한 버그의 위험을 줄일 수 있습니다.  
   
 ```cpp  
@@ -196,7 +191,7 @@ void myproc( int )
 }  
 ```  
   
- typedef와 동일한 이름의 로컬 범위 식별자를 선언하거나 같은 범위 또는 내부 범위에서 구조체 또는 공용 구조체의 멤버를 선언할 때 반드시 형식 지정자를 지정해야 합니다. 예:  
+ typedef와 동일한 이름의 로컬 범위 식별자를 선언하거나 같은 범위 또는 내부 범위에서 구조체 또는 공용 구조체의 멤버를 선언할 때 반드시 형식 지정자를 지정해야 합니다. 예를 들어:  
   
 ```  
 typedef char FlagType;  
@@ -224,7 +219,7 @@ int;  // Illegal declaration
  포인터, 함수 및 배열 형식을 비롯한 모든 형식을 typedef를 사용하여 선언할 수 있습니다. 정의의 표시 유형이 선언의 표시 유형과 동일한 경우 구조체 또는 공용 구조체 형식을 정의하기 전에 구조체 또는 공용 구조체 형식에 대한 포인터의 typedef 이름을 선언할 수 있습니다.  
   
 ### <a name="examples"></a>예  
- `typedef` 선언의 한 가지 사용 방법은 선언을 더 균일하고 압축적으로 만드는 것입니다. 예:  
+ `typedef` 선언의 한 가지 사용 방법은 선언을 더 균일하고 압축적으로 만드는 것입니다. 예를 들어:  
   
 ```cpp  
 typedef char CHAR;          // Character type.  
@@ -234,7 +229,7 @@ typedef unsigned long ulong;
 ulong ul;     // Equivalent to "unsigned long ul;"  
 ```  
   
- `typedef`를 사용하여 같은 선언에서 기본 및 파생 형식을 지정하려면 선언을 쉼표로 구분하면 됩니다. 예:  
+ `typedef`를 사용하여 같은 선언에서 기본 및 파생 형식을 지정하려면 선언을 쉼표로 구분하면 됩니다. 예를 들어:  
   
 ```  
 typedef char CHAR, *PSTR;  
@@ -284,7 +279,7 @@ int main()
 ```  
   
 ### <a name="re-declaration-of-typedefs"></a>typedef 다시 선언  
- `typedef` 선언을 사용하여 동일한 이름이 동일한 형식을 참조하도록 다시 선언할 수 있습니다. 예:  
+ `typedef` 선언을 사용하여 동일한 이름이 동일한 형식을 참조하도록 다시 선언할 수 있습니다. 예를 들어:  
   
 ```cpp  
 // FILE1.H  

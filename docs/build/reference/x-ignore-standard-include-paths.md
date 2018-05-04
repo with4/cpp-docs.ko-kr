@@ -1,13 +1,10 @@
 ---
-title: "-X (표준 무시 경로 포함) | Microsoft Docs"
-ms.custom: 
+title: -X (표준 무시 경로 포함) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /x
 - VC.Project.VCCLCompilerTool.OVERWRITEStandardIncludePath
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - X compiler option
 - Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a15294e1a63b16124d8907639fbd2e6bb705f1aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c5d246c43a1f234426b33ac640b3e1bb706d2f72
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X(표준 포함 경로 무시)
 컴파일러를 PATH 및 INCLUDE 환경 변수에 지정 된 디렉터리에서 포함 파일을 검색할 수 없습니다.  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
 -   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.IgnoreStandardIncludePath%2A>을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 명령에서 `/X` PATH 및 INCLUDE 환경 변수에서 지정한 위치를 무시 하도록 컴파일러에 지시 하 고 `/I` 을 검색할 디렉터리를 지정 포함 파일:  
   
 ```  

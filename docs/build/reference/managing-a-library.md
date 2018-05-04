@@ -2,12 +2,9 @@
 title: 라이브러리 관리 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.OVERWRITEAllDefaultLibraries
 - VC.Project.VCLibrarianTool.AdditionalDependencies
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05ced49a960aea0b32365b80fe76095893f63d5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 97c6da9e12e9071b4792476d2e49739a55d7ea8e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="managing-a-library"></a>라이브러리 관리
 LIB에 대 한 기본 모드를 빌드하거나 COFF 개체의 라이브러리를 수정 하는 합니다. LIB은 /EXTRACT (개체를 복사할 파일) 또는 /DEF (가져오기 라이브러리를 빌드)를 지정 하지 않을 경우이 모드에서 실행 됩니다.  
@@ -76,7 +71,7 @@ LIB [options...] files...
   
  다음 옵션은 빌드 및 수정 라이브러리에 적용:  
   
- /LIBPATH:`dir`  
+ /LIBPATH: `dir`  
  환경 라이브러리 경로를 재정의합니다. 자세한 내용은 링크에 대 한 설명을 참조 [/LIBPATH](../../build/reference/libpath-additional-libpath.md) 옵션입니다.  
   
  / 목록  
@@ -94,7 +89,7 @@ LIB [options...] files...
  / 제거: *개체*  
  지정한 *개체* 출력 라이브러리에서. LIB 모든 개체 (개체 파일 또는 라이브러리)을 결합 하 고 다음 /REMOVE로 지정 된 개체를 삭제 하 여 출력 라이브러리를 만듭니다.  
   
- /SUBSYSTEM: {콘솔 &#124; EFI_APPLICATION &#124; EFI_BOOT_SERVICE_DRIVER &#124; EFI_ROM &#124; EFI_RUNTIME_DRIVER &#124; 네이티브 &#124; POSIX &#124; WINDOWS&#124; WINDOWSCE} [, #[. # #]]  
+ /SUBSYSTEM: {콘솔 &AMP;#124; EFI_APPLICATION &AMP;#124; EFI_BOOT_SERVICE_DRIVER &AMP;#124; EFI_ROM &AMP;#124; EFI_RUNTIME_DRIVER &AMP;#124; 네이티브 &AMP;#124; POSIX &AMP;#124; WINDOWS &AMP;#124; WINDOWSCE} [, #[. # #]]  
  운영 체제를 출력 라이브러리에 연결 하 여 만든 프로그램을 실행 하는 방법을 설명 합니다. 자세한 내용은 링크에 대 한 설명을 참조 [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) 옵션입니다.  
   
  LIB 옵션이 명령줄에 지정 된 대/소문자 구분 하지 않습니다.  

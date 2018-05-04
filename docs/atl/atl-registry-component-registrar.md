@@ -1,13 +1,10 @@
 ---
-title: "ATL 레지스트리 구성 요소 (등록자) | Microsoft Docs"
-ms.custom: 
+title: ATL 레지스트리 구성 요소 (등록자) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: 106752ae-4cfc-4030-8cb2-d36a1d635a2e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43eff661ff9a72ca72554a87b2177cbe07ad10f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17c1aafdfd118a78aefff4fa32ac67f4e290596b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-registry-component-registrar"></a>ATL 레지스트리 구성 요소(등록자)
 ATL 등록자는 사용자 지정 인터페이스를 통해 시스템 레지스트리로 최적화 된 액세스를 제공합니다. 등록자는 자유 스레드 및 c + + 클라이언트에 대 한 코드의 정적 링크를 허용 합니다.  

@@ -2,26 +2,21 @@
 title: 일반 규칙 및 제한 사항 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 6c48902d-4259-4761-95d4-e421d69aa050
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f92844e993671a3423c04523ccf4e03f7f7e48
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 218bd2fb58ccc4d3a3c2e1d297be930350577d18
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="general-rules-and-limitations"></a>일반 규칙 및 제한 사항
 ## <a name="microsoft-specific"></a>Microsoft 전용  
@@ -30,7 +25,7 @@ ms.lasthandoff: 12/21/2017
   
      `dllexport` 특성을 사용하여 함수 또는 개체를 선언하면 해당 정의가 같은 프로그램의 일부 모듈에 나타나야 합니다. 그렇게 하지 않으면 링커 오류가 생성됩니다.  
   
--   프로그램의 모듈 하나에 둘 다 포함 하는 경우 **dllimport** 및 `dllexport` 같은 함수 또는 개체에 대 한 선언을 `dllexport` 특성 보다 우선는 **dllimport** 특성입니다. 그러나 이 경우 컴파일러 경고가 생성됩니다. 예:  
+-   프로그램의 모듈 하나에 둘 다 포함 하는 경우 **dllimport** 및 `dllexport` 같은 함수 또는 개체에 대 한 선언을 `dllexport` 특성 보다 우선는 **dllimport** 특성입니다. 그러나 이 경우 컴파일러 경고가 생성됩니다. 예를 들어:  
   
     ```  
     __declspec( dllimport ) int i;  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
                                      // dllexport takes precedence.  
     ```  
   
--   C + +에서 전역으로 선언 또는 정적 로컬 데이터 포인터를 초기화할 수 또는 사용 하 여 선언 된 데이터 개체의 주소와는 **dllimport** C에서 오류를 생성 하는 특성 또한으로 선언 된 함수의 주소로 정적 로컬 함수 포인터를 초기화할 수 있습니다는 **dllimport** 특성입니다. C에서는 이러한 대입으로 인해 포인터가 함수의 주소 대신 DLL 가져오기 썽크(함수로 제어를 전송하는 코드 스텁)의 주소로 설정됩니다. C++에서는 포인터가 함수의 주소로 설정됩니다. 예:  
+-   C + +에서 전역으로 선언 또는 정적 로컬 데이터 포인터를 초기화할 수 또는 사용 하 여 선언 된 데이터 개체의 주소와는 **dllimport** C에서 오류를 생성 하는 특성 또한으로 선언 된 함수의 주소로 정적 로컬 함수 포인터를 초기화할 수 있습니다는 **dllimport** 특성입니다. C에서는 이러한 대입으로 인해 포인터가 함수의 주소 대신 DLL 가져오기 썽크(함수로 제어를 전송하는 코드 스텁)의 주소로 설정됩니다. C++에서는 포인터가 함수의 주소로 설정됩니다. 예를 들어:  
   
     ```  
     __declspec( dllimport ) void func1( void );  
@@ -82,7 +77,7 @@ ms.lasthandoff: 12/21/2017
     // ...  
     ```  
   
-     템플릿 인수가 파생 클래스일 경우 이 해결 방법은 실패합니다. 예:  
+     템플릿 인수가 파생 클래스일 경우 이 해결 방법은 실패합니다. 예를 들어:  
   
     ```  
     class __declspec(dllexport) D : public B<D> {  

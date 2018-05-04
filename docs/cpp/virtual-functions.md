@@ -1,12 +1,9 @@
 ---
-title: "가상 함수 | Microsoft Docs"
-ms.custom: 
+title: 가상 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - derived classes [C++], virtual functions
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a1a6fd82a042ab29ad9216746dcabce9e9ed15f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d1fc04a09e48ac50f6f27d4ffd3e01dbd3dac8a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="virtual-functions"></a>가상 함수
 가상 함수는 파생 클래스에서 다시 정의할 멤버 함수입니다. 기본 클래스의 포인터나 참조를 사용하여 파생 클래스 개체를 참조할 때 해당 개체의 가상 함수를 호출하고 파생 클래스의 함수 버전을 실행할 수 있습니다.  

@@ -1,12 +1,9 @@
 ---
-title: "IPersistStreamInitImpl 클래스 | Microsoft Docs"
-ms.custom: 
+title: IPersistStreamInitImpl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IPersistStreamInitImpl
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - IPersistStreamInitImpl class
 - streams, ATL
 ms.assetid: ef217c3c-020f-4cf8-871e-ef68e57865b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fe1bcd8d8198304c92584f01522048c4d29b827
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a51dd5e198a86b7bb17a6182c1edb098f23a8e47
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ipersiststreaminitimpl-class"></a>IPersistStreamInitImpl 클래스
 이 클래스는 구현 **IUnknown** 의 기본 구현을 제공 하 고는 [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273) 인터페이스입니다.  
@@ -80,7 +75,7 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="getclassid"></a>IPersistStreamInitImpl::GetClassID  
+##  <a name="getclassid"></a>  IPersistStreamInitImpl::GetClassID  
  개체의 CLSID를 검색합니다.  
   
 ```
@@ -90,7 +85,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ### <a name="remarks"></a>설명  
  참조 [:: Getclassid](http://msdn.microsoft.com/library/windows/desktop/ms688664) in the Windows SDK입니다.  
   
-##  <a name="getsizemax"></a>IPersistStreamInitImpl::GetSizeMax  
+##  <a name="getsizemax"></a>  IPersistStreamInitImpl::GetSizeMax  
  개체의 데이터를 저장 하는 데 필요한 스트림의 크기를 검색 합니다.  
   
 ```
@@ -103,7 +98,7 @@ STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
 ### <a name="remarks"></a>설명  
  참조 [IPersistStreamInit::GetSizeMax](http://msdn.microsoft.com/library/windows/desktop/ms687287) in the Windows SDK입니다.  
   
-##  <a name="initnew"></a>IPersistStreamInitImpl::InitNew  
+##  <a name="initnew"></a>  IPersistStreamInitImpl::InitNew  
  새로 만든된 개체를 초기화합니다.  
   
 ```
@@ -113,7 +108,7 @@ STDMETHOD(InitNew)();
 ### <a name="remarks"></a>설명  
  참조 [IPersistStreamInit::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms690234) in the Windows SDK입니다.  
   
-##  <a name="isdirty"></a>IPersistStreamInitImpl::IsDirty  
+##  <a name="isdirty"></a>  IPersistStreamInitImpl::IsDirty  
  개체의 데이터를 마지막으로 저장 후 변경 되었는지 여부를 확인 합니다.  
   
 ```
@@ -123,7 +118,7 @@ STDMETHOD(IsDirty)();
 ### <a name="remarks"></a>설명  
  참조 [IPersistStreamInit::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms680092) in the Windows SDK입니다.  
   
-##  <a name="load"></a>IPersistStreamInitImpl::Load  
+##  <a name="load"></a>  IPersistStreamInitImpl::Load  
  지정 된 스트림에서 해당 개체의 속성을 로드합니다.  
   
 ```
@@ -135,7 +130,7 @@ STDMETHOD(Load)(LPSTREAM pStm);
   
  참조 [IPersistStreamInit::Load](http://msdn.microsoft.com/library/windows/desktop/ms680730) in the Windows SDK입니다.  
   
-##  <a name="save"></a>IPersistStreamInitImpl::Save  
+##  <a name="save"></a>  IPersistStreamInitImpl::Save  
  지정 된 스트림에 개체의 속성을 저장합니다.  
   
 ```

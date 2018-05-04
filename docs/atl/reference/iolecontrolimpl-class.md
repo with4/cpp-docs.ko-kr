@@ -1,12 +1,9 @@
 ---
-title: "IOleControlImpl 클래스 | Microsoft Docs"
-ms.custom: 
+title: IOleControlImpl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IOleControlImpl
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IOleControlImpl class
 ms.assetid: 5a4255ad-ede4-49ca-ba9a-07c2e919fa85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23375f8f76e1a58bf29e3e3e269077fea4ae8d61
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a54067f53e83d78f063ae5f3694460452e24b26
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iolecontrolimpl-class"></a>IOleControlImpl 클래스
 이 클래스의 기본 구현을 제공는 **IOleControl** 인터페이스와 구현 **IUnknown**합니다.  
@@ -73,7 +68,7 @@ class IOleControlImpl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlctl.h  
   
-##  <a name="freezeevents"></a>IOleControlImpl::FreezeEvents  
+##  <a name="freezeevents"></a>  IOleControlImpl::FreezeEvents  
  ATL의 구현에서 `FreezeEvents` 컨트롤 클래스를 증가 시킵니다. `m_nFreezeEvents` 데이터 멤버 경우 `bFreeze` 은 **TRUE**, 하 고 감소 `m_nFreezeEvents` 경우 `bFreeze` 은 **FALSE**.  
   
 ```
@@ -81,11 +76,11 @@ HRESULT FreezeEvents(BOOL bFreeze);
 ```  
   
 ### <a name="remarks"></a>설명  
- `FreezeEvents`그런 다음 반환 `S_OK`합니다.  
+ `FreezeEvents` 그런 다음 반환 `S_OK`합니다.  
   
  참조 [IOleControl::FreezeEvents](http://msdn.microsoft.com/library/windows/desktop/ms678482) in the Windows SDK입니다.  
   
-##  <a name="getcontrolinfo"></a>IOleControlImpl::GetControlInfo  
+##  <a name="getcontrolinfo"></a>  IOleControlImpl::GetControlInfo  
  컨트롤의 키보드 동작에 대 한 정보를 채웁니다.  
   
 ```
@@ -98,7 +93,7 @@ HRESULT GetControlInfo(LPCONTROLINFO pCI);
 ### <a name="return-value"></a>반환 값  
  반환 **E_NOTIMPL**합니다.  
   
-##  <a name="onambientpropertychange"></a>IOleControlImpl::OnAmbientPropertyChange  
+##  <a name="onambientpropertychange"></a>  IOleControlImpl::OnAmbientPropertyChange  
  컨테이너의 앰비언트 속성 중 하나 이상이 변경 된 컨트롤에 알립니다.  
   
 ```
@@ -111,7 +106,7 @@ HRESULT OnAmbientPropertyChange(DISPID dispid);
 ### <a name="remarks"></a>설명  
  참조 [IOleControl::OnAmbientPropertyChange](http://msdn.microsoft.com/library/windows/desktop/ms690175) in the Windows SDK입니다.  
   
-##  <a name="onmnemonic"></a>IOleControlImpl::OnMnemonic  
+##  <a name="onmnemonic"></a>  IOleControlImpl::OnMnemonic  
  사용자가 지정 된 키를 눌렀습니다 컨트롤에 알립니다.  
   
 ```

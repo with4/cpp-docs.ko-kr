@@ -1,10 +1,10 @@
 ---
-title: "-Zc: auto (변수 형식 추론) | Microsoft Docs"
-ms.custom: 
+title: '-Zc: auto (변수 형식 추론) | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/28/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /Zc:auto
 dev_langs:
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 5f5bc102-44c3-4688-bbe1-080594dcee5c
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 662095cdc1555891a543920a64cb7b31074914aa
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: caa64f64b75145c850c6f6393570dc3f9ba0b0d3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcauto-deduce-variable-type"></a>/Zc:auto(변수 형식 추론)
 
@@ -48,7 +47,7 @@ C++ 표준에는 `auto` 키워드의 원래 의미와 수정된 의미가 정의
 
 1. 추가 **/zc: auto** 또는 **/zc: auto-** 에 **추가 옵션:** 창.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [/Zc(규칙)](../../build/reference/zc-conformance.md)<br/>
 [auto 키워드](../../cpp/auto-keyword.md)

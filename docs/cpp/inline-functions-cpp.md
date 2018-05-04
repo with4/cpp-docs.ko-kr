@@ -1,12 +1,9 @@
 ---
-title: "인라인 함수 (c + +) | Microsoft Docs"
-ms.custom: 
+title: 인라인 함수 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __forceinline_cpp
@@ -17,22 +14,20 @@ dev_langs:
 helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de370d8dbff1f1340539adc825f7f5316c59a468
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6661996669e454e655d0149f1dbb1df505116469
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="inline-functions-c"></a>인라인 함수(C++)
 클래스 선언의 본문에 정의된 함수는 인라인 함수입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 클래스 선언에서 `Account` 생성자는 인라인 함수입니다. 멤버 함수 `GetBalance`, `Deposit`, 및 `Withdraw` 으로 지정 되지 않은 **인라인** 있지만 인라인 함수로 구현할 수 있습니다.  
   
 ```  

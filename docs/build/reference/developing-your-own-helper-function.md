@@ -2,28 +2,23 @@
 title: 사용자 도우미 함수 개발 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - helper functions
 ms.assetid: a845429d-68b1-4e14-aa88-f3f5343bd490
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76172804cc271a740244d06e791db35d534c69e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e6b8e397fecc8f14140cd7c86217421d5aa1a749
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="developing-your-own-helper-function"></a>사용자 도우미 함수 개발
 고유한 버전의 DLL 이나 가져오기 이름을 기반으로 하는 특정 처리를 수행 하는 루틴을 제공 하려는 경우. 이 작업을 수행 하는 방법은 두 가지가: 후크 설명한 알림 후크를 사용 하 여 제공 된 버전 또는 코딩을 직접 제공된 된 코드에 기반 합니다.  

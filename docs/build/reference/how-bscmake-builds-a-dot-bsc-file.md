@@ -2,28 +2,23 @@
 title: BSCMAKE을 빌드하는 방법에 있습니다. Bsc 파일 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - browse information files (.bsc), building
 ms.assetid: 8512b33e-c856-44a2-87bd-01ab10b52a95
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb8e03bed85a5e466a3c41f0cffc51d35c4b4561
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0cdc8a2840e3beb1272b33b2794f70a979684f46
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>BSCMAKE에서 .Bsc 파일을 빌드하는 방법
 BSCMAKE 빌드하거나 수 있는 가장 효율적인 방법으로.bsc 파일을 다시 빌드합니다. 잠재적 문제를 방지 하려면 빌드 프로세스를 이해 하는 것이 중요 합니다.  

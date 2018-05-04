@@ -1,13 +1,10 @@
 ---
-title: "일반 MFC Dll을 정적으로 MFC에 링크 | Microsoft Docs"
-ms.custom: 
+title: 일반 MFC Dll을 정적으로 MFC에 링크 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - statically linked DLLs [C++]
 - regular MFC DLLs [C++], statically linked to MFC
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ef25785e3d1e37ee622572f03fce56b1fa236aa
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: c48fdfb0b10541c1643ec49038e29cfa60c633d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>일반 MFC Dll을 정적으로 MFC에 링크
 MFC DLL 정적으로 MFC에 링크 되는 일반적인 MFC를 내부적으로 사용 하는 DLL 이며 MFC 또는 비 MFC 실행 파일에서 DLL의 내보낸된 함수를 호출할 수 있습니다. 이름에서 알 수 있듯이 이러한 종류의 DLL의 MFC 정적 연결 라이브러리 버전을 사용 하 여 만들어집니다. 함수는 일반적으로 표준 C 인터페이스를 사용 하 여 MFC DLL 일반에서 내보내집니다. 작성, 빌드 및 MFC 기본 DLL을 사용 하는 방법의 예를 들어 샘플을 참조 하십시오. [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap)합니다.  

@@ -1,12 +1,9 @@
 ---
-title: "CRBMultiMap 클래스 | Microsoft Docs"
-ms.custom: 
+title: CRBMultiMap 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CRBMultiMap
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CRBMultiMap class
 ms.assetid: 94d3ec0c-3e30-4ab7-a101-d8da4fb8add3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79ef7fdd5799b01ec115befcd50bbe4625d48bea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ec016df268b702fd8b26d742d702ac38b95fa06
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crbmultimap-class"></a>CRBMultiMap 클래스
 이 클래스는 각 키 빨간색 검정 이진 트리를 사용 하 여 둘 이상의 값에 연결할 수 있게 하는 매핑 구조를 나타냅니다.  
@@ -80,7 +75,7 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 |[CRBMultiMap::RemoveKey](#removekey)|지정된 된 키에 대 한 키/값 요소를 모두 제거 하려면이 메서드를 호출 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CRBMultiMap`요소 키와 값의 순서 있는 배열 관리 지정 된 형식의 매핑 배열에 대 한 지원을 제공 합니다. 와 달리는 [CRBMap](../../atl/reference/crbmap-class.md) 클래스, 각 키 값이 여러 개 연결 될 수 있습니다.  
+ `CRBMultiMap` 요소 키와 값의 순서 있는 배열 관리 지정 된 형식의 매핑 배열에 대 한 지원을 제공 합니다. 와 달리는 [CRBMap](../../atl/reference/crbmap-class.md) 클래스, 각 키 값이 여러 개 연결 될 수 있습니다.  
   
  (키와 값의 구성) 하는 요소는 이진 트리에 저장 된 구조를 사용 하는 [CRBMultiMap::Insert](#insert) 메서드. 사용 하 여 요소를 제거할 수는 [CRBMultiMap::RemoveKey](#removekey) 메서드를 지정 된 키와 일치 하는 모든 요소를 삭제 합니다.  
   
@@ -88,7 +83,7 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
   
  `KTraits` 및 `VTraits` 매개 변수는 복사 하거나 요소를 이동 하는 데 필요한 모든 추가 코드를 포함 하는 특성 클래스입니다.  
   
- `CRBMultiMap`파생 된 [CRBTree](../../atl/reference/crbtree-class.md), 빨강 검정 알고리즘을 사용 하 여 이진 트리를 구현 하는 합니다. 에 대 한 대안 `CRBMultiMap` 및 `CRBMap` 에서 제공 하는 [CAtlMap](../../atl/reference/catlmap-class.md) 클래스입니다. 사용 하는 소수의 요소를 저장 해야 하는 경우 고려는 [CSimpleMap](../../atl/reference/csimplemap-class.md) 클래스를 대신 합니다.  
+ `CRBMultiMap` 파생 된 [CRBTree](../../atl/reference/crbtree-class.md), 빨강 검정 알고리즘을 사용 하 여 이진 트리를 구현 하는 합니다. 에 대 한 대안 `CRBMultiMap` 및 `CRBMap` 에서 제공 하는 [CAtlMap](../../atl/reference/catlmap-class.md) 클래스입니다. 사용 하는 소수의 요소를 저장 해야 하는 경우 고려는 [CSimpleMap](../../atl/reference/csimplemap-class.md) 클래스를 대신 합니다.  
   
  다양 한 컬렉션 클래스 및 해당 기능 및 성능 특성의 자세한 논의 알려면 [ATL 컬렉션 클래스](../../atl/atl-collection-classes.md)합니다.  
   
@@ -100,7 +95,7 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcoll.h  
   
-##  <a name="crbmultimap"></a>CRBMultiMap::CRBMultiMap  
+##  <a name="crbmultimap"></a>  CRBMultiMap::CRBMultiMap  
  생성자입니다.  
   
 ```
@@ -116,10 +111,10 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
   
  기본 클래스에 대 한 설명서를 참조 하십시오. [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 내용은 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities#85](../../atl/codesnippet/cpp/crbmultimap-class_1.cpp)]  
   
-##  <a name="dtor"></a>CRBMultiMap:: ~ CRBMultiMap  
+##  <a name="dtor"></a>  CRBMultiMap:: ~ CRBMultiMap  
  소멸자입니다.  
   
 ```
@@ -131,7 +126,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
   
  기본 클래스에 대 한 설명서를 참조 하십시오. [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 내용은 합니다.  
   
-##  <a name="findfirstwithkey"></a>CRBMultiMap::FindFirstWithKey  
+##  <a name="findfirstwithkey"></a>  CRBMultiMap::FindFirstWithKey  
  지정된 된 키와 첫 번째 요소의 위치를 찾으려면이 메서드를 호출 합니다.  
   
 ```
@@ -150,10 +145,10 @@ POSITION FindFirstWithKey(KINARGTYPE key) const throw();
   
  기본 클래스에 대 한 설명서를 참조 하십시오. [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 내용은 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [CRBMultiMap::CRBMultiMap](#crbmultimap)합니다.  
   
-##  <a name="getnextvaluewithkey"></a>CRBMultiMap::GetNextValueWithKey  
+##  <a name="getnextvaluewithkey"></a>  CRBMultiMap::GetNextValueWithKey  
  지정된 된 키와 연결 된 값을 가져오려면이 메서드를 호출 하 고 위치 값을 업데이트 합니다.  
   
 ```
@@ -180,10 +175,10 @@ V& GetNextValueWithKey(
   
  기본 클래스에 대 한 설명서를 참조 하십시오. [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 내용은 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [CRBMultiMap::CRBMultiMap](#crbmultimap)합니다.  
   
-##  <a name="getnextwithkey"></a>CRBMultiMap::GetNextWithKey  
+##  <a name="getnextwithkey"></a>  CRBMultiMap::GetNextWithKey  
  지정된 된 키와 연결 된 요소를 가져오려면이 메서드를 호출 하 고 위치 값을 업데이트 합니다.  
   
 ```
@@ -210,7 +205,7 @@ CPair* GetNextWithKey(
   
  기본 클래스에 대 한 설명서를 참조 하십시오. [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 내용은 합니다.  
   
-##  <a name="insert"></a>CRBMultiMap::Insert  
+##  <a name="insert"></a>  CRBMultiMap::Insert  
  지도에 요소 쌍을 삽입 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -230,10 +225,10 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 ### <a name="remarks"></a>설명  
  기본 클래스에 대 한 설명서를 참조 하십시오. [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 내용은 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [CRBMultiMap::CRBMultiMap](#crbmultimap)합니다.  
   
-##  <a name="removekey"></a>CRBMultiMap::RemoveKey  
+##  <a name="removekey"></a>  CRBMultiMap::RemoveKey  
  지정된 된 키에 대 한 키/값 요소를 모두 제거 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -248,11 +243,11 @@ size_t RemoveKey(KINARGTYPE key) throw();
  지정된 된 키와 연결 된 값의 수를 반환 합니다.  
   
 ### <a name="remarks"></a>설명  
- `RemoveKey`일치 하는 키가 있는 키/값 요소를 모두 삭제 `key`합니다.  
+ `RemoveKey` 일치 하는 키가 있는 키/값 요소를 모두 삭제 `key`합니다.  
   
  기본 클래스에 대 한 설명서를 참조 하십시오. [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 내용은 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [CRBMultiMap::CRBMultiMap](#crbmultimap)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

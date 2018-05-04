@@ -1,29 +1,24 @@
 ---
-title: "CStringT를 사용 하 여 String 클래스 내보내기 | Microsoft Docs"
-ms.custom: 
+title: CStringT를 사용 하 여 String 클래스 내보내기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - CStringT class, exporting strings
 ms.assetid: bdfc441e-8d2a-461c-9885-46178066c09f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd662b149f56cf0d6bd5e7a3c912e0ecd14f21b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7510b1f44f49d17211c71419f4dde5a6e6a78974
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>CStringT를 사용 하 여 String 클래스 내보내기
 이전에 MFC 개발자는에서 파생 된 `CString` 를 자신의 문자열 클래스 특수화입니다. Microsoft Visual c + +.net (MFC 8.0)는 [CString](../atl-mfc-shared/using-cstring.md) 클래스 호출 하는 템플릿 클래스에 의해 대체 된 [CStringT](../atl-mfc-shared/reference/cstringt-class.md)합니다. 이 몇 가지 이점을 제공 합니다.  
@@ -32,7 +27,7 @@ ms.lasthandoff: 12/21/2017
   
 -   새 `CStringT` 템플릿 클래스를 사용자 지정할 수 있습니다 `CString` c + + 표준 라이브러리의 템플릿에 유사한 문자 특성을 지정 하는 템플릿 매개 변수를 사용 하 여 동작 합니다.  
   
--   사용 하 여 DLL에서 고유한 문자열 클래스를 내보낼 때 `CStringT`, 컴파일러에서 자동으로 내보내는 `CString` 기본 클래스입니다. 이후 `CString` 템플릿 클래스는 그 자체가 컴파일러에서 인식 하지 않는 한 컴파일러를 사용 하 여 인스턴스화할 수 있습니다 하 `CString` DLL에서 가져왔습니다. 프로젝트를 Visual c + + 6.0에서에서 Visual c + +.net를 마이그레이션한 경우 수에 대해 알아보았습니다는 곱하기 정의 대 한 링커 기호 오류 `CString` 의 충돌 때문에 `CString` 는 DLL과 로컬로 인스턴스화된 버전에서 가져온입니다. 이 작업을 수행 하는 올바른 방법은 다음과 같습니다. 이 문제에 대 한 자세한 내용은 기술 자료 문서를 참조 하십시오. "링크 오류 CString 파생을 가져올 때 클래스" (Q309801)에서 [http://support.microsoft.com/default.aspx](http://support.microsoft.com/default.aspx)합니다.  
+-   사용 하 여 DLL에서 고유한 문자열 클래스를 내보낼 때 `CStringT`, 컴파일러에서 자동으로 내보내는 `CString` 기본 클래스입니다. 이후 `CString` 템플릿 클래스는 그 자체가 컴파일러에서 인식 하지 않는 한 컴파일러를 사용 하 여 인스턴스화할 수 있습니다 하 `CString` DLL에서 가져왔습니다. 프로젝트를 Visual c + + 6.0에서에서 Visual c + +.net를 마이그레이션한 경우 수에 대해 알아보았습니다는 곱하기 정의 대 한 링커 기호 오류 `CString` 의 충돌 때문에 `CString` 는 DLL과 로컬로 인스턴스화된 버전에서 가져온입니다. 이 작업을 수행 하는 올바른 방법은 다음과 같습니다. 이 문제에 대 한 자세한 내용은 기술 자료 문서를 참조 하십시오. "링크 오류 CString 파생을 가져올 때 클래스" (Q309801)에서 [ http://support.microsoft.com/default.aspx ](http://support.microsoft.com/default.aspx)합니다.  
   
  다음 시나리오는 여러 번 정의 된 클래스에 대 한 기호 오류를 생성 하도록 링커에 발생 합니다. 내보내는 경우를 가정는 `CString`-파생 클래스 (`CMyString`)는 MFC 확장 DLL에서에서:  
   

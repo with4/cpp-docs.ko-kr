@@ -2,12 +2,9 @@
 title: ATL COM 개체의 기본 사항 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL COM objects
 - COM objects, ATL
 ms.assetid: 0f9c9d98-cc28-45da-89ac-dc94cee422fe
-caps.latest.revision: 25
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a5a43af31a88420c154d7a57d27d2b69787d11d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 955f8f6be96feeaf0f22f02c125dcdeaceb8e7f8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>ATL COM 개체의 기본 사항
 다음 그림에서는 클래스 및 ATL COM 개체를 정의 하는 데 사용 되는 인터페이스 간의 관계를 보여 줍니다.  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  이 다이어그램을 보여 줍니다 `CComObject` 에서 파생 된 `CYourClass` 반면 `CComAggObject` 및 `CComPolyObject` 포함 `CYourClass` 멤버 변수로 합니다.  
   
- ATL COM 개체를 정의 하는 방법은 세 가지가 있습니다. 표준 옵션은 사용 하 여 `CComObject` 클래스에서 파생 된 `CYourClass`합니다. 두 번째 옵션에서 사용 하 여 집계 개체를 만드는 것은 `CComAggObject` 클래스입니다. 세 번째 옵션은 사용 하 여 `CComPolyObject` 클래스입니다. `CComPolyObject`역할을 하이브리드: 작동할 수 있습니다는 `CComObject` 클래스 또는 `CComAggObject` 처음 생성 되는 방법에 따라 클래스입니다. 사용 하는 방법에 대 한 자세한 내용은 `CComPolyObject` 클래스를 참조 하십시오. [CComPolyObject 클래스](../atl/reference/ccompolyobject-class.md)합니다.  
+ ATL COM 개체를 정의 하는 방법은 세 가지가 있습니다. 표준 옵션은 사용 하 여 `CComObject` 클래스에서 파생 된 `CYourClass`합니다. 두 번째 옵션에서 사용 하 여 집계 개체를 만드는 것은 `CComAggObject` 클래스입니다. 세 번째 옵션은 사용 하 여 `CComPolyObject` 클래스입니다. `CComPolyObject` 역할을 하이브리드: 작동할 수 있습니다는 `CComObject` 클래스 또는 `CComAggObject` 처음 생성 되는 방법에 따라 클래스입니다. 사용 하는 방법에 대 한 자세한 내용은 `CComPolyObject` 클래스를 참조 하십시오. [CComPolyObject 클래스](../atl/reference/ccompolyobject-class.md)합니다.  
   
  두 개체를 사용 하는 표준 ATL COM을 사용 하는 경우: 외부 개체 및 내부 개체입니다. 외부 클라이언트 외부 개체에 정의 된 래퍼 함수를 통해 내부 개체의 기능에 액세스 합니다. 외부 개체에 유형임 `CComObject`합니다.  
   

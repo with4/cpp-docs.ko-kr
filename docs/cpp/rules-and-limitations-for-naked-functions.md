@@ -2,28 +2,23 @@
 title: 규칙 및 Naked 함수에 대 한 제한 사항 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a007cd18714906b3897004549da83053b42ec3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb18f3e75bb7d912cbafbde01893d6283a4c61f6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Naked 함수의 규칙 및 제한
 ## <a name="microsoft-specific"></a>Microsoft 전용  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 -   `naked` 키워드는로 컴파일할 때 무시 됩니다 [/clr](../build/reference/clr-common-language-runtime-compilation.md)합니다.  
   
--   에 대 한 [__fastcall](../cpp/fastcall.md) naked 함수, C/c + + 코드에 레지스터 인수 중 하나에 대 한 참조가 있을 때마다 프롤로그 코드 해당 변수의 스택 위치에 레지스터의 값을를 저장 해야 합니다. 예:  
+-   에 대 한 [__fastcall](../cpp/fastcall.md) naked 함수, C/c + + 코드에 레지스터 인수 중 하나에 대 한 참조가 있을 때마다 프롤로그 코드 해당 변수의 스택 위치에 레지스터의 값을를 저장 해야 합니다. 예를 들어:  
   
 ```  
 // nkdfastcl.cpp  

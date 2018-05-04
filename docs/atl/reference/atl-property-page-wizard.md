@@ -1,12 +1,9 @@
 ---
-title: "ATL 속성 페이지 마법사 | Microsoft Docs"
-ms.custom: 
+title: ATL 속성 페이지 마법사 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.ppg.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f97b4fcc84f9099ca7017eabd7ae5ead62cfe63
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17c5d863ef14aeddcd66f813449b514360f657a4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-property-page-wizard"></a>ATL 속성 페이지 마법사
 이 마법사 [ATL 프로젝트에 속성 페이지를 추가](../../atl/reference/adding-an-atl-property-page.md) 또는 MFC 프로젝트에 ATL 지원 합니다. 속성을 설정 하기 위한 사용자 인터페이스를 제공 하는 ATL 속성 페이지 (또는 메서드를 호출할) 하나 이상의 COM 개체입니다.  
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="com"></a>COM  
  개체에 대 한 COM 기능에 대 한 정보를 제공합니다.  
   
- **Coclass**  
+ **coclass**  
  개체에서 지 원하는 인터페이스의 목록을 포함 하는 구성 요소 클래스의 이름을 설정 합니다.  
   
 > [!NOTE]

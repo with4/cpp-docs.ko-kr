@@ -2,12 +2,9 @@
 title: -Fd (프로그램 데이터베이스 파일 이름) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /FD
 - VC.Project.VCCLWCECompilerTool.ProgramDataBaseFileName
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - .pdb files, creating
 - FD compiler option [C++]
 ms.assetid: 3977a9ed-f0ac-45df-bf06-01cedd2ba85a
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9cda26f310ec110c452394e960d3fb81d1f3e8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07ab9f1d9c5c611b8da8b19860fe9e0c05351d75
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fd-program-database-file-name"></a>/Fd(프로그램 데이터베이스 파일 이름)
 만든 프로그램 데이터베이스 (PDB) 파일에 대 한 파일 이름을 지정 [/Z7, /Zi, /ZI (디버깅 정보 형식)](../../build/reference/z7-zi-zi-debug-information-format.md)합니다.  
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
 -   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ProgramDataBaseFileName%2A>을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 명령줄 PROG.pdb 및 PROG.idb 라는.idb 파일 라는.pdb 파일을 만듭니다.  
   
 ```  

@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - GENPROFILE
 - FASTGENPROFILE
@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: deff5ce7-46f5-448a-b9cd-a7a83a6864c6
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6174c1fdd53ec14f0cb63292a9036caabc98a7d
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 05d7961ff46661b8f6df2768591932699c3965d4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="genprofile-fastgenprofile-generate-profiling-instrumented-build"></a>/GENPROFILE, /FASTGENPROFILE(계측된 빌드 프로파일링 생성)
 
@@ -38,19 +37,19 @@ ms.lasthandoff: 03/22/2018
 
 다음 인수 중 하나를 지정할 수 있습니다 **/GENPROFILE** 또는 **/FASTGENPROFILE**합니다. 여기에 나열 된 인수 파이프로 구분 된 (**|**) 문자는 함께 사용할 수 없습니다. 쉼표를 사용 하 여 (**,**) 옵션을 구분 하는 문자입니다.
 
-**COUNTER32** &#124; **COUNTER64**<br/>
+**COUNTER32** &AMP;#124; **COUNTER64**<br/>
 사용 하 여 **COUNTER32** 32 비트 프로브 카운터를 사용 하도록 지정할 및 **COUNTER64** 64 비트 프로브 카운터를 지정할 수 있습니다. 지정 하는 경우 **/GENPROFILE**, 기본값은 **COUNTER64**합니다. 지정 하는 경우 **/FASTGENPROFILE**, 기본값은 **COUNTER32**합니다.
 
-**EXACT** &#124; **NOEXACT**<br/>
+**정확한** &AMP;#124; **NOEXACT**<br/>
 사용 하 여 **EXACT** 프로브에 대해 스레드로부터 안전한 연관된 증분을 지정할 수 있습니다. **NOEXACT** 프로브에 대해 보호 되지 않는 증분 작업을 지정 합니다. 기본값은 **NOEXACT**합니다.
 
-**MEMMAX**=*value*, **MEMMIN**=*value*<br/>
+**MEMMAX**=*값*, **MEMMIN**=*값*<br/>
 사용 하 여 **MEMMAX** 및 **MEMMIN** 메모리의 학습 데이터에 대 한 최대 및 최소 예약 크기를 지정할 수 있습니다. 값은 예약할 메모리의 크기(바이트)입니다. 기본적으로 이러한 값은 내부 추론에 의해 결정됩니다.
 
 **PATH**  &#124; **NOPATH** <br/>
 사용 하 여 **경로** 별도의 함수에 고유한 각 경로 대 한 PGO 카운터 집합을 지정할 수 있습니다. 사용 하 여 **NOPATH** 각 함수에 대 한 카운터 집합이 하나만 지정할 수 있습니다. 지정 하는 경우 **/GENPROFILE**, 기본값은 **경로** 합니다. 지정 하는 경우 **/FASTGENPROFILE**, 기본값은 **NOPATH** 합니다.
 
-**TRACKEH**  &#124; **NOTRACKEH** <br/>
+**TRACKEH** &AMP;#124; **NOTRACKEH**  <br/>
 학습 중 예외가 throw되면 정확한 개수를 유지하기 위해 추가 카운터를 사용할지 여부를 지정합니다. 사용 하 여 **TRACKEH** 정확한 개수를 위해 추가 카운터를 지정할 수 있습니다. 사용 하 여 **NOTRACKEH** 예외를 사용 하지 않는 코드에 대 한 단일 카운터를 지정 하 여 처리 하거나 예외가 발생 하지 않는 학습 시나리오에서 합니다.  지정 하는 경우 **/GENPROFILE**, 기본값은 **TRACKEH** 합니다. 지정 하는 경우 **/FASTGENPROFILE**, 기본값은 **NOTRACKEH** 합니다.
 
 **PGD**=*파일 이름*<br/>

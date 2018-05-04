@@ -2,12 +2,9 @@
 title: . 링커 입력으로 사용 하는 Obj 파일 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,14 +17,13 @@ helpviewer_keywords:
 - .obj files as linker input
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a2896822e97bdbb5ffdf8f869e67beadc1675b7
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 57907beaa30418ce31e6c46202149048d5c9dea1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="obj-files-as-linker-input"></a>링커 입력 파일로 사용하는 .Obj 파일
 
@@ -43,7 +39,7 @@ Visual Studio 2005 이상에서는 Microsoft Visual c + + 컴파일러는 ISO/IE
 
 컴파일러 및 링커에서의 하는 방법에 대 한 자세한 내용은 참조 [컴파일러 및 링커에서의 유니코드 지원](../../build/reference/unicode-support-in-the-compiler-and-linker.md)합니다. 유니코드 표준에 대 한 자세한 내용은 참조는 [유니코드](http://go.microsoft.com/fwlink/p/?linkid=37123) 조직입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [LINK 입력 파일](../../build/reference/link-input-files.md)  
 [링커 옵션](../../build/reference/linker-options.md)  

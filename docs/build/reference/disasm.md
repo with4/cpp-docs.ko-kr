@@ -3,8 +3,7 @@ title: /DISASM | Microsoft Docs
 ms.date: 1/17/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /disasm
 dev_langs:
@@ -15,14 +14,13 @@ helpviewer_keywords:
 - /DISASM dumpbin option
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d448b92c3436f3d2875bd8d9b8e0af6a7149e065
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.openlocfilehash: 89b0784ff10e7d9521351e01d8907c963c9304fd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="disasm"></a>/DISASM
 
@@ -48,6 +46,6 @@ DUMPBIN 출력에 있는 코드 섹션의 디스어셈블리를 인쇄 합니다
 
 만 [/HEADERS](../../build/reference/headers.md) DUMPBIN 옵션을 통해 생성 된 파일에서 사용 하기 위해 사용할 수는 [/GL (전체 프로그램 최적화)](../../build/reference/gl-whole-program-optimization.md) 컴파일러 옵션입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [DUMPBIN 옵션](../../build/reference/dumpbin-options.md)  

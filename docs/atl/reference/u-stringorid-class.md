@@ -1,12 +1,9 @@
 ---
-title: "_U_STRINGorID 클래스 | Microsoft Docs"
-ms.custom: 
+title: _U_STRINGorID 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - ATL._U_STRINGorID
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - _U_STRINGorID class
 - U_STRINGorID class
 ms.assetid: 443cdc00-d265-4b27-8ef3-2feb95f3e5e3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebc1b8f65f2a0841baf09b5c95528f571f97ce38
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2a601b1c64b28681c13a0b9e8f42156d8820cb4b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ustringorid-class"></a>_U_STRINGorID 클래스
 이 인수 어댑터 클래스 리소스 이름 중 하나를 사용 하면 ( `LPCTSTR`s) 또는 리소스 Id ( **UINT**s) 호출자 ID를 사용 하 여 문자열을 변환할 필요 없이 함수에 전달할는 **MAKEINTRESOURCE** 매크로입니다.  
@@ -64,14 +59,14 @@ class _U_STRINGorID
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
   
-##  <a name="_u_stringorid__m_lpstr"></a>_U_STRINGorID::m_lpstr  
+##  <a name="_u_stringorid__m_lpstr"></a>  _U_STRINGorID::m_lpstr  
  클래스를 공용 생성자 중 하나에 전달 된 값을 보유 `LPCTSTR` 데이터 멤버입니다.  
   
 ```
 LPCTSTR m_lpstr;
 ```  
   
-##  <a name="_u_stringorid___u_stringorid"></a>_U_STRINGorID::_U_STRINGorID  
+##  <a name="_u_stringorid___u_stringorid"></a>  _U_STRINGorID::_U_STRINGorID  
  **UINT** 해당 인수를 사용 하 여 Windows 리소스 관리 기능와 호환 되는 리소스 종류를 변환 하는 생성자는 **MAKEINTRESOURCE** 클래스의 단일에 매크로 결과 저장 데이터 멤버 [m_lpstr](#_u_stringorid__m_lpstr)합니다.  
   
 ```

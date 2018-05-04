@@ -1,12 +1,9 @@
 ---
-title: "CAutoPtrArray 클래스 | Microsoft Docs"
-ms.custom: 
+title: CAutoPtrArray 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAutoPtrArray
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CAutoPtrArray class
 ms.assetid: 880a70da-8c81-4427-8ac6-49aa8d424244
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4afb07323cdb6b25914aabd802c4df73ee1d07c7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b99fe8fde475453c9e6dc0b524a6b1b94821bf75
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cautoptrarray-class"></a>CAutoPtrArray 클래스
 이 클래스는 스마트 포인터의 배열을 만들 때 유용한 메서드를 제공 합니다.  
@@ -69,7 +64,7 @@ class CAutoPtrArray : public CAtlArray<
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcoll.h  
   
-##  <a name="cautoptrarray"></a>CAutoPtrArray::CAutoPtrArray  
+##  <a name="cautoptrarray"></a>  CAutoPtrArray::CAutoPtrArray  
  생성자입니다.  
   
 ```

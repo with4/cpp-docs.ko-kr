@@ -1,29 +1,24 @@
 ---
-title: "C + + 표준 라이브러리 기반 컬렉션 구현 | Microsoft Docs"
-ms.custom: 
+title: C + + 표준 라이브러리 기반 컬렉션 구현 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ICollectionOnSTLImpl interface
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5b80b55361a8f7bfa195b08d02feb94af0874bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 14a09f54598b525346a65b56a335711f114878cb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>C + + 표준 라이브러리 기반 컬렉션 구현
 ATL은 제공 된 `ICollectionOnSTLImpl` 신속 하 게 개체에 c + + 표준 라이브러리 기반 컬렉션 인터페이스를 구현할 수 있도록 인터페이스입니다. 이 클래스의 작동 방식을 이해 하려면 간단한 예제 (아래 참조)이이 클래스를 사용 하 여 자동화 클라이언트 것을 목표로 하는 읽기 전용 컬렉션을 구현 하는 작업 합니다.  
@@ -46,10 +41,10 @@ ATL은 제공 된 `ICollectionOnSTLImpl` 신속 하 게 개체에 c + + 표준 �
   
 -   [컬렉션을 채우는 코드를 추가](#vcconpopulate_the_collection)합니다.  
   
-##  <a name="vccongenerating_an_object"></a>새 단순 개체를 생성합니다.  
+##  <a name="vccongenerating_an_object"></a> 새 단순 개체를 생성합니다.  
  응용 프로그램 설정에서 특성 상자 선택이 취소 되도록 새 프로젝트를 만듭니다. ATL 클래스 추가 대화 상자를 사용 하 고 간단한 개체를 생성 하려면 단순 개체 마법사 추가 호출 `Words`합니다. 이중 인터페이스 호출 했는지 확인 `IWords` 생성 됩니다. 생성된 된 클래스의 개체 (문자열) 단어의 컬렉션을 나타내는 데 사용 됩니다.  
   
-##  <a name="vcconedit_the_idl"></a>IDL 파일을 편집  
+##  <a name="vcconedit_the_idl"></a> IDL 파일을 편집  
  이제 IDL 파일을 열고 세 가지 속성을 설정 하는 데 필요한 추가 `IWords` 아래와 같이 읽기 전용 컬렉션 인터페이스에:  
   
  [!code-cpp[NVC_ATL_COM#24](../atl/codesnippet/cpp/implementing-an-stl-based-collection_1.idl)]  
@@ -68,7 +63,7 @@ ATL은 제공 된 `ICollectionOnSTLImpl` 신속 하 게 개체에 c + + 표준 �
   
 6.  DISPID를 사용 하는 값은 **Count** 속성은 완전히 임의의 합니다. 이 속성에 대 한 표준 DISPID 되지 않습니다.  
   
-##  <a name="vcconstorage_and_exposure_typedefs"></a>저장 및 노출 하는 것에 대 한 형식 정의 만들기  
+##  <a name="vcconstorage_and_exposure_typedefs"></a> 저장 및 노출 하는 것에 대 한 형식 정의 만들기  
  컬렉션 인터페이스에서 정의 되 면 어떻게 데이터를 저장 되 고 열거자를 통해 데이터는 노출 하는 방법을 결정 해야 합니다.  
   
  이러한 질문에 답변 다양 한 새로 만든된 클래스에 대 한 헤더 파일의 맨 위 근처에 추가할 수 있는 형식 정의의 형태로 제공 될 수 있습니다.  
@@ -79,26 +74,26 @@ ATL은 제공 된 `ICollectionOnSTLImpl` 신속 하 게 개체에 c + + 표준 �
   
  열거자에서 반환 된 Visual Basic 지원이이 인터페이스의 성공에 필수적 이므로 `_NewEnum` 속성을 지원 해야 합니다는 **IEnumVARIANT** 인터페이스입니다. Visual Basic에서 인식 하는 유일한 열거자 인터페이스입니다.  
   
-##  <a name="vcconcopy_classes"></a>복사 정책 클래스에 대 한 형식 정의 만들기  
+##  <a name="vcconcopy_classes"></a> 복사 정책 클래스에 대 한 형식 정의 만들기  
  지금까지 만든 typedefs 추가로 열거자 및 컬렉션에 사용 될 복사 클래스에 대 한 형식 정의 만드는 데 필요한 모든 정보를 제공 합니다.  
   
  [!code-cpp[NVC_ATL_COM#26](../atl/codesnippet/cpp/implementing-an-stl-based-collection_3.h)]  
   
  이 예제에서는 사용자 지정을 사용할 수 있습니다 `GenericCopy` VCUE_Copy.h 및에서 VCUE_CopyString.h에 정의 된 클래스는 [ATLCollections](../visual-cpp-samples.md) 샘플. 다른 코드에서이 클래스를 사용할 수 있지만 추가의 특수화를 정의 해야 할 수 있습니다 `GenericCopy` 사용자 지정 컬렉션에 사용 되는 데이터 형식을 지원 하도록 합니다. 자세한 내용은 참조 [ATL 복사 정책 클래스](../atl/atl-copy-policy-classes.md)합니다.  
   
-##  <a name="vcconenumeration_and_collection"></a>열거형 및 컬렉션에 대 한 형식 정의 만들기  
+##  <a name="vcconenumeration_and_collection"></a> 열거형 및 컬렉션에 대 한 형식 정의 만들기  
  이제 모든 템플릿 매개 변수 특수화 하는 데 필요한는 `CComEnumOnSTL` 및 `ICollectionOnSTLImpl` 이러한 상황에 대 한 클래스 형식 정의의 형태로 제공 되었습니다. 특수화의 사용을 단순화 하려면 아래와 같이 두 개 더 많은 형식 정의 만듭니다.  
   
  [!code-cpp[NVC_ATL_COM#27](../atl/codesnippet/cpp/implementing-an-stl-based-collection_4.h)]  
   
  이제 `CollectionType` 의 특수화에 대 한 동의어 `ICollectionOnSTLImpl` 구현 하는 `IWords` 인터페이스 앞에서 정의한 및 지 원하는 열거자를 제공 합니다. **IEnumVARIANT**합니다.  
   
-##  <a name="vcconedit_the_generated_code"></a>마법사에서 생성 된 코드를 편집합니다.  
+##  <a name="vcconedit_the_generated_code"></a> 마법사에서 생성 된 코드를 편집합니다.  
  파생 해야 하는 이제 `CWords` 나타내는 인터페이스 구현에서는 `CollectionType` typedef 대신 `IWords`다음과 같이:  
   
  [!code-cpp[NVC_ATL_COM#28](../atl/codesnippet/cpp/implementing-an-stl-based-collection_5.h)]  
   
-##  <a name="vcconpopulate_the_collection"></a>컬렉션을 채우는 코드를 추가 합니다.  
+##  <a name="vcconpopulate_the_collection"></a> 컬렉션을 채우는 코드를 추가 합니다.  
  남아 있는 유일한 항목은 데이터를 사용 하 여 벡터를 채우는 것입니다. 이 간단한 예제에서는 컬렉션 클래스에 대 한 생성자에 몇 가지 단어를 추가할 수 있습니다.  
   
  [!code-cpp[NVC_ATL_COM#29](../atl/codesnippet/cpp/implementing-an-stl-based-collection_6.h)]  

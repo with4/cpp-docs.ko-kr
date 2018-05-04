@@ -4,20 +4,19 @@ ms.custom: ''
 ms.date: 03/14/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: dc3a1914-dbb6-4401-bc63-10665a8c8943
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98933630a2cc8b5dfb5c4d1d7b24ceac3ec2937b
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: f8a586ef48f87f90dd5f191f9fcaea6f30af5c56
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="profile-guided-optimization-in-the-visual-studio-2013-performance-and-diagnostics-hub"></a>Visual Studio 2013 성능 및 진단 허브의 프로필 기반 최적화
 
@@ -37,7 +36,7 @@ PGO(프로필 기반 최적화)는 사용자의 상호 작용 방식에 최적�
 
 1. 메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.
 
-1. 왼쪽된 창에는 **새 프로젝트** 대화 상자에서 **설치 됨**, **템플릿**, **Visual c + +**를 선택한 후  **MFC**합니다.
+1. 왼쪽된 창에는 **새 프로젝트** 대화 상자에서 **설치 됨**, **템플릿**, **Visual c + +** 를 선택한 후  **MFC**합니다.
 
 1. 가운데 창에서 선택 **MFC 응용 프로그램**합니다.
 

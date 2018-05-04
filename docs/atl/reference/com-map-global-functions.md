@@ -1,12 +1,9 @@
 ---
-title: "전역 함수를 COM 맵 | Microsoft Docs"
-ms.custom: 
+title: 전역 함수를 COM 맵 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlInternalQueryInterface
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - COM interfaces, COM map global functions
 ms.assetid: b9612d30-eb23-46ef-8093-d56f237d3cf1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a0a02e46906ae8d3b6c62b8cc1b9147d396966
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 509479a923203acd80eaac1ef90aa64125d208c6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="com-map-global-functions"></a>Com 전역 함수
 이러한 함수는 COM 맵에 대 한 지원을 제공 **IUnknown** 구현 합니다.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
 
-##  <a name="atlinternalqueryinterface"></a>AtlInternalQueryInterface  
+##  <a name="atlinternalqueryinterface"></a>  AtlInternalQueryInterface  
  요청된 인터페이스에 대한 포인터를 검색합니다.  
   
 ```
@@ -70,10 +65,10 @@ HRESULT AtlInternalQueryInterface(
 ### <a name="remarks"></a>설명  
  `AtlInternalQueryInterface`에서는 COM 맵 테이블의 인터페이스만 처리됩니다. 개체를 집계 하는 경우 `AtlInternalQueryInterface` 알 수 없는 외부를 위임 하지 않습니다. 인터페이스에서는 COM 맵 테이블에 매크로 입력할 수 [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) 또는 해당 변형 중 하나입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing#94](../../atl/codesnippet/cpp/com-map-global-functions_1.cpp)]  
   
-##  <a name="inlineisequaliunknown"></a>InlineIsEqualIUnknown  
+##  <a name="inlineisequaliunknown"></a>  InlineIsEqualIUnknown  
  이 함수에 대 한 테스트의 특수 한 경우 호출 **IUnknown**합니다.  
   
 ```

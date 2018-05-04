@@ -1,12 +1,9 @@
 ---
-title: "레지스트리 및 TypeLib 전역 함수 | Microsoft Docs"
-ms.custom: 
+title: 레지스트리 및 TypeLib 전역 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetPerUserRegistration
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbb919cb2fe4d91f5665fbea3dcfd2140d178341
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb0a89ecf8bb81e515703abe819bb1edfbf80d59
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-and-typelib-global-functions"></a>레지스트리 및 TypeLib 전역 함수
 이러한 함수는 로드 하 고 형식 라이브러리를 등록에 대 한 지원을 제공 합니다.  
@@ -68,7 +63,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h
 
-## <a name="atlgetperuserregistration"></a>AtlGetPerUserRegistration
+## <a name="atlgetperuserregistration"></a> AtlGetPerUserRegistration
 이 함수를 사용 하 여 응용 프로그램에 대 한 레지스트리 액세스 리디렉션합니다 있는지 여부를 결정 하는 **HKEY_CURRENT_USER** (**HKCU**) 노드.  
   
 ### <a name="syntax"></a>구문  
@@ -79,10 +74,10 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
   
 ### <a name="parameters"></a>매개 변수  
  [out] `pEnabled`  
- `TRUE`레지스트리 정보가 지정은 나타냅니다는 **HKCU** 노드 `FALSE` 나타냅니다 응용 프로그램에 기본 노드 레지스트리 정보를 씁니다. 기본 노드는 **HKEY_CLASSES_ROOT** (**HKCR**).  
+ `TRUE` 레지스트리 정보가 지정은 나타냅니다는 **HKCU** 노드 `FALSE` 나타냅니다 응용 프로그램에 기본 노드 레지스트리 정보를 씁니다. 기본 노드는 **HKEY_CLASSES_ROOT** (**HKCR**).  
   
 ### <a name="return-value"></a>반환 값  
- `S_OK`그렇지 않으면 메서드는 성공 하는 경우는 `HRESULT` 오류가 발생 한 경우 오류 코드입니다.  
+ `S_OK` 그렇지 않으면 메서드는 성공 하는 경우는 `HRESULT` 오류가 발생 한 경우 오류 코드입니다.  
   
 ### <a name="remarks"></a>설명  
  레지스트리 리디렉션이 기본적으로 사용 되지 않습니다. 이 옵션을 사용 하는 경우 레지스트리 액세스를 리디렉션되면 **HKEY_CURRENT_USER\Software\Classes**합니다.  
@@ -92,7 +87,7 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
 
- ## <a name="afxregcreatekey"></a>AfxRegCreateKey
+ ## <a name="afxregcreatekey"></a> AfxRegCreateKey
  지정 된 레지스트리 키를 만듭니다.  
   
 ### <a name="syntax"></a>구문  
@@ -120,7 +115,7 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxpriv.h  
 
-## <a name="afxregdeletekey"></a>AfxRegDeleteKey
+## <a name="afxregdeletekey"></a> AfxRegDeleteKey
 지정된 된 레지스트리 키를 삭제합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -167,7 +162,7 @@ BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeNa
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h   
 
-##  <a name="atlregistertypelib"></a>AtlRegisterTypeLib  
+##  <a name="atlregistertypelib"></a>  AtlRegisterTypeLib  
  이 함수는 형식 라이브러리를 등록하기 위해 호출됩니다.  
   
   
@@ -190,7 +185,7 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h
 
- ## <a name="afxregopenkey"></a>AfxRegOpenKey
+ ## <a name="afxregopenkey"></a> AfxRegOpenKey
  지정 된 레지스트리 키를 엽니다.  
   
 ### <a name="syntax"></a>구문  
@@ -218,7 +213,7 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxpriv.h  
 
-## <a name="afxregopenkeyex"></a>AfxRegOpenKeyEx
+## <a name="afxregopenkeyex"></a>  AfxRegOpenKeyEx
 지정 된 레지스트리 키를 엽니다. 
 
 ### <a name="syntax"></a>구문  
@@ -252,7 +247,7 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxpriv.h  
 
- ## <a name="afxunregisterpreviewhandler"></a>AfxUnregisterPreviewHandler
+ ## <a name="afxunregisterpreviewhandler"></a> AfxUnregisterPreviewHandler
  미리 보기 처리기 등록을 취소 하는 도우미입니다.  
   
 ### <a name="syntax"></a>구문  
@@ -268,7 +263,7 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h  
 
-## <a name="atlsetperuserregistration"></a>AtlSetPerUserRegistration
+## <a name="atlsetperuserregistration"></a> AtlSetPerUserRegistration
 응용 프로그램에 대 한 레지스트리 액세스 리디렉션하는지 여부를 설정 하는 **HKEY_CURRENT_USER** (**HKCU**) 노드.  
   
 ### <a name="syntax"></a>구문  
@@ -279,10 +274,10 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bEnable`  
- `TRUE`레지스트리 정보가 지정은 나타냅니다는 **HKCU** 노드 `FALSE` 나타냅니다 응용 프로그램에 기본 노드 레지스트리 정보를 씁니다. 기본 노드는 **HKEY_CLASSES_ROOT** (**HKCR**).  
+ `TRUE` 레지스트리 정보가 지정은 나타냅니다는 **HKCU** 노드 `FALSE` 나타냅니다 응용 프로그램에 기본 노드 레지스트리 정보를 씁니다. 기본 노드는 **HKEY_CLASSES_ROOT** (**HKCR**).  
   
 ### <a name="return-value"></a>반환 값  
- `S_OK`그렇지 않으면 메서드는 성공 하는 경우는 `HRESULT` 오류가 발생 한 경우 오류 코드입니다.  
+ `S_OK` 그렇지 않으면 메서드는 성공 하는 경우는 `HRESULT` 오류가 발생 한 경우 오류 코드입니다.  
   
 ### <a name="remarks"></a>설명  
  레지스트리 리디렉션이 기본적으로 사용 되지 않습니다. 이 옵션을 사용 하는 경우 레지스트리 액세스를 리디렉션되면 **HKEY_CURRENT_USER\Software\Classes**합니다.  
@@ -291,7 +286,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
 
-##  <a name="atlunregistertypelib"></a>AtlUnRegisterTypeLib  
+##  <a name="atlunregistertypelib"></a>  AtlUnRegisterTypeLib  
  이 함수는 형식 라이브러리를 등록 취소하기 위해 호출됩니다.  
   
 ### <a name="syntax"></a>구문  
@@ -316,7 +311,7 @@ ATLAPI AtlUnRegisterTypeLib(
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h
 
-##  <a name="atlloadtypelib"></a>AtlLoadTypeLib  
+##  <a name="atlloadtypelib"></a>  AtlLoadTypeLib  
  이 함수는 형식 라이브러리를 로드하기 위해 호출됩니다.  
   
 ### <a name="syntax"></a>구문  
@@ -347,7 +342,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 ### <a name="remarks"></a>설명  
  이 도우미 함수를 사용 하 여 [AtlRegisterTypeLib](#atlregistertypelib) 및 [AtlUnRegisterTypeLib](#atlunregistertypelib)합니다.  
   
-##  <a name="atlupdateregistryfromresourced"></a>AtlUpdateRegistryFromResourceD  
+##  <a name="atlupdateregistryfromresourced"></a>  AtlUpdateRegistryFromResourceD  
  이 함수는 Visual Studio 2013에서 사용이 중단되었으며, Visual Studio 2015에서 제거되었습니다.  
   
 ```
@@ -356,7 +351,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
   
 
   
-##  <a name="registrydataexchange"></a>RegistryDataExchange  
+##  <a name="registrydataexchange"></a>  RegistryDataExchange  
  이 함수는 시스템 레지스트리에서 읽거나 쓰기 위해 호출됩니다.  
 
 ### <a name="syntax"></a>구문  

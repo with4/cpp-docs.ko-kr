@@ -2,11 +2,8 @@
 title: 범주 매크로 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetHexValue
@@ -34,17 +31,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 752a0c0c9de5c726a106ca08a574844369c6bdc5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b1eba97ef5253041752d4b8abfcd6ea7300b8492
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="category-macros"></a>범주 매크로
 이러한 매크로 범주 맵을 정의 합니다.  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
 
-##  <a name="begin_category_map"></a>BEGIN_CATEGORY_MAP  
+##  <a name="begin_category_map"></a>  BEGIN_CATEGORY_MAP  
  카테고리 맵의 시작을 표시 합니다.  
   
 ```
@@ -82,20 +77,20 @@ BEGIN_CATEGORY_MAP(theClass)
   
  구성 요소 범주에 대 한 자세한 내용은 참조 [무엇 구성 요소 범주 이며 어떻게 작동 합니까](http://msdn.microsoft.com/library/windows/desktop/ms694322) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
   
-##  <a name="end_category_map"></a>END_CATEGORY_MAP  
+##  <a name="end_category_map"></a>  END_CATEGORY_MAP  
  범주 맵의 끝을 표시 합니다.  
   
 ```
 END_CATEGORY_MAP()
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [BEGIN_CATEGORY_MAP](#begin_category_map)합니다.  
   
-##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY  
+##  <a name="implemented_category"></a>  IMPLEMENTED_CATEGORY  
  추가 `IMPLEMENTED_CATEGORY` 해당 구성 요소는 매크로 [카테고리 맵](#begin_category_map) 등록으로 식별 되는 범주를 구현 해야 함을 지정 하는 `catID` 매개 변수입니다.  
   
 ```
@@ -125,10 +120,10 @@ IMPLEMENTED_CATEGORY(catID)
 |창 없는 컨트롤|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
 |인터넷 인식 개체|참조 [인터넷 인식 개체](http://msdn.microsoft.com/library/windows/desktop/ms690561) 샘플 목록에 대 한 Windows sdk입니다.||  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
   
-##  <a name="required_category"></a>REQUIRED_CATEGORY  
+##  <a name="required_category"></a>  REQUIRED_CATEGORY  
  추가 `REQUIRED_CATEGORY` 해당 구성 요소는 매크로 [카테고리 맵](#begin_category_map) 등록로 식별 되는 범주를 필요로 하는 컨트롤로 해야 함을 지정 하는 `catID` 매개 변수입니다.  
   
 ```
@@ -158,7 +153,7 @@ REQUIRED_CATEGORY( catID )
 |창 없는 컨트롤|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
 |인터넷 인식 개체|참조 [인터넷 인식 개체](http://msdn.microsoft.com/library/windows/desktop/ms690561) 샘플 목록에 대 한 Windows sdk입니다.||  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]  
   
 ## <a name="see-also"></a>참고 항목  

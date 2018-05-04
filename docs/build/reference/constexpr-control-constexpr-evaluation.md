@@ -1,13 +1,10 @@
 ---
-title: "constexpr (컨트롤 constexpr 평가) | Microsoft Docs"
-ms.custom: 
+title: constexpr (컨트롤 constexpr 평가) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/15/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /constexpr
 - -constexpr
@@ -20,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 76d56784-f5ad-401d-841d-09d1059e8b8c
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e594eb697c8972d28b513a3638d3eb704258b5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f83f1d9a505ebc4c05ce4e367bb1e978d6a14b78
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (컨트롤 constexpr 평가)  
   
@@ -41,13 +37,13 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="arguments"></a>인수  
   
-**깊이***N*  
+**깊이 * * * N*  
 재귀 깊이 제한 `constexpr` 함수를 호출 *N* 수준입니다. 기본값은 512입니다.  
   
-**backtrace***N*  
+**backtrace * * * N*  
 최대 표시 *N* `constexpr` 진단에서 평가 합니다. 기본값은 10입니다.  
   
-**단계***N*  
+**단계 * * * N*  
 종료 `constexpr` 후 계산 *N* 단계입니다. 기본값은 100, 000입니다.  
   
 ## <a name="remarks"></a>설명  

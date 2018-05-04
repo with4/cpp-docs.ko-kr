@@ -1,12 +1,9 @@
 ---
-title: "CRBMap 클래스 | Microsoft Docs"
-ms.custom: 
+title: CRBMap 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CRBMap
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CRBMap class
 ms.assetid: 658e94dc-e835-4356-aed1-1513e1f66969
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cfa4d6fff6b46341f01b4d5ce18d9ec418738bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b32b21c8785bb5e28058c51f2345c5ffcb6de1f3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crbmap-class"></a>CRBMap 클래스
 이 클래스에는 빨간색 검정 이진 트리를 사용 하 여 매핑 구조를 나타냅니다.  
@@ -76,13 +71,13 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 |[CRBMap::SetAt](#setat)|지도에 요소 쌍을 삽입 하려면이 메서드를 호출 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CRBMap`관리 되는 주요 요소와 연결 된 값의 순서 있는 배열 지정 된 형식의 매핑 배열에 대 한 지원을 제공 합니다. 각 키에 연결 된 값이 하나만 있을 수 있습니다. (키와 값의 구성) 하는 요소는 이진 트리에 저장 된 구조를 사용 하는 [CRBMap::SetAt](#setat) 메서드. 사용 하 여 요소를 제거할 수는 [CRBMap::RemoveKey](#removekey) 메서드를 지정 된 키 값을 가진 요소를 삭제 합니다.  
+ `CRBMap` 관리 되는 주요 요소와 연결 된 값의 순서 있는 배열 지정 된 형식의 매핑 배열에 대 한 지원을 제공 합니다. 각 키에 연결 된 값이 하나만 있을 수 있습니다. (키와 값의 구성) 하는 요소는 이진 트리에 저장 된 구조를 사용 하는 [CRBMap::SetAt](#setat) 메서드. 사용 하 여 요소를 제거할 수는 [CRBMap::RemoveKey](#removekey) 메서드를 지정 된 키 값을 가진 요소를 삭제 합니다.  
   
  트리를 트래버스하는 있기 때문 메서드로 같은 [CRBTree::GetHeadPosition](../../atl/reference/crbtree-class.md#getheadposition), [CRBTree::GetNext](../../atl/reference/crbtree-class.md#getnext), 및 [CRBTree::GetNextValue](../../atl/reference/crbtree-class.md#getnextvalue)합니다.  
   
  `KTraits` 및 `VTraits` 매개 변수는 복사 하거나 요소를 이동 하는 데 필요한 모든 추가 코드를 포함 하는 특성 클래스입니다.  
   
- `CRBMap`파생 된 [CRBTree](../../atl/reference/crbtree-class.md), 빨강 검정 알고리즘을 사용 하 여 이진 트리를 구현 하는 합니다. [CRBMultiMap](../../atl/reference/crbmultimap-class.md) 은 각 키에 대 한 여러 값을 허용 하는 변형입니다. 파생 너무 `CRBTree`와 많은 기능을 공유 하므로 `CRBMap`합니다.  
+ `CRBMap` 파생 된 [CRBTree](../../atl/reference/crbtree-class.md), 빨강 검정 알고리즘을 사용 하 여 이진 트리를 구현 하는 합니다. [CRBMultiMap](../../atl/reference/crbmultimap-class.md) 은 각 키에 대 한 여러 값을 허용 하는 변형입니다. 파생 너무 `CRBTree`와 많은 기능을 공유 하므로 `CRBMap`합니다.  
   
  둘 다에 대 한 대안 `CRBMap` 및 `CRBMultiMap` 에서 제공 된 [CAtlMap](../../atl/reference/catlmap-class.md) 클래스. 사용 하는 소수의 요소를 저장 해야 하는 경우 고려는 [CSimpleMap](../../atl/reference/csimplemap-class.md) 클래스를 대신 합니다.  
   
@@ -96,7 +91,7 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcoll.h  
   
-##  <a name="crbmap"></a>CRBMap::CRBMap  
+##  <a name="crbmap"></a>  CRBMap::CRBMap  
  생성자입니다.  
   
 ```
@@ -112,10 +107,10 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
   
  기본 클래스에 대 한 설명서를 참조 하십시오. [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 내용은 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities#81](../../atl/codesnippet/cpp/crbmap-class_1.cpp)]  
   
-##  <a name="dtor"></a>CRBMap:: ~ CRBMap  
+##  <a name="dtor"></a>  CRBMap:: ~ CRBMap  
  소멸자입니다.  
   
 ```
@@ -127,7 +122,7 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
   
  기본 클래스에 대 한 설명서를 참조 하십시오. [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 내용은 합니다.  
   
-##  <a name="lookup"></a>CRBMap::Lookup  
+##  <a name="lookup"></a>  CRBMap::Lookup  
  키 또는 값을 조회 하려면이 메서드를 호출 하는 `CRBMap` 개체입니다.  
   
 ```
@@ -149,10 +144,10 @@ CPair* Lookup(KINARGTYPE key) throw();
 ### <a name="remarks"></a>설명  
  기본 클래스에 대 한 설명서를 참조 하십시오. [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 내용은 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities#82](../../atl/codesnippet/cpp/crbmap-class_2.cpp)]  
   
-##  <a name="removekey"></a>CRBMap::RemoveKey  
+##  <a name="removekey"></a>  CRBMap::RemoveKey  
  요소를 제거 하려면이 메서드를 호출 하는 `CRBMap` 키가 지정 된 개체입니다.  
   
 ```
@@ -169,10 +164,10 @@ bool RemoveKey(KINARGTYPE key) throw();
 ### <a name="remarks"></a>설명  
  기본 클래스에 대 한 설명서를 참조 하십시오. [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 내용은 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities#83](../../atl/codesnippet/cpp/crbmap-class_3.cpp)]  
   
-##  <a name="setat"></a>CRBMap::SetAt  
+##  <a name="setat"></a>  CRBMap::SetAt  
  지도에 요소 쌍을 삽입 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -192,11 +187,11 @@ POSITION SetAt(
  에 있는 키/값 요소 쌍의 위치를 반환 하는 `CRBMap` 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- `SetAt`일치 하는 키가 있을 경우 기존 요소를 바꿉니다. 키가 없는 경우 새 키/값 쌍이 만들어집니다.  
+ `SetAt` 일치 하는 키가 있을 경우 기존 요소를 바꿉니다. 키가 없는 경우 새 키/값 쌍이 만들어집니다.  
   
  기본 클래스에 대 한 설명서를 참조 하십시오. [CRBTree](../../atl/reference/crbtree-class.md) 사용할 수 있는 다른 방법에 대 한 내용은 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities#84](../../atl/codesnippet/cpp/crbmap-class_4.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

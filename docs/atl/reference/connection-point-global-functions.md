@@ -1,12 +1,9 @@
 ---
-title: "연결 지점 전역 함수 | Microsoft Docs"
-ms.custom: 
+title: 연결 지점 전역 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlAdvise
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce7f6fc3d2a0b51f88952dd720955367b1dfe9d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7dc6cd11cb1f04ba877524cd1ae6134a7dd93d09
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-point-global-functions"></a>연결 지점 전역 함수
 이러한 함수는 연결점에 대 한 지원을 제공 하 고 지도 싱크 합니다.  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
    
-##  <a name="atladvise"></a>AtlAdvise  
+##  <a name="atladvise"></a>  AtlAdvise  
  개체의 연결 지점과 클라이언트의 싱크 간에 연결을 만듭니다.  
   
 > [!IMPORTANT]
@@ -77,10 +72,10 @@ HRESULT    AtlAdvise(
 ### <a name="remarks"></a>설명  
  싱크 연결 지점에서 지 원하는 송신 인터페이스를 구현 합니다. 클라이언트가 사용 하 여 `pdw` 쿠키를 전달 하 여 연결을 제거 하려면 [AtlUnadvise](#atlunadvise)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing#91](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]  
   
-##  <a name="atlunadvise"></a>AtlUnadvise  
+##  <a name="atlunadvise"></a>  AtlUnadvise  
  통해 설정 된 연결을 종료 [AtlAdvise](#atladvise)합니다.  
   
 > [!IMPORTANT]
@@ -106,10 +101,10 @@ HRESULT    AtlUnadvise(
 ### <a name="return-value"></a>반환 값  
  표준 HRESULT 값입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing#96](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]  
   
-##  <a name="atladvisesinkmap"></a>AtlAdviseSinkMap  
+##  <a name="atladvisesinkmap"></a>  AtlAdviseSinkMap  
  개체의 싱크 이벤트 맵에서 모든 항목을 advise하거나 unadvise하려면 이 함수를 호출합니다.  
   
 > [!IMPORTANT]
@@ -129,7 +124,7 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 ### <a name="return-value"></a>반환 값  
  표준 HRESULT 값입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing#92](../../atl/codesnippet/cpp/connection-point-global-functions_3.h)]  
   
 ## <a name="see-also"></a>참고 항목  

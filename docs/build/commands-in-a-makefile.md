@@ -1,29 +1,24 @@
 ---
-title: "메이크파일의 명령 | Microsoft Docs"
-ms.custom: 
+title: 메이크파일의 명령 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - commands, makefiles
 ms.assetid: 8085517e-42f4-493b-b8f8-44311fc08c64
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5361012fd388f49d8eb956ec1a4fa1bdd53a2dcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 99e1eb5b4800ff1046ca60d4d4874d386809e2e0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="commands-in-a-makefile"></a>메이크파일의 명령
 설명 블록 또는 유추 규칙의 종속성이 오래 된 경우 실행 하는 명령 블록을 지정 합니다. NMAKE 않는 한 각 명령을 실행 하기 전에 표시 /S, **합니다. 자동**, **! CMDSWITCHES**, 또는 @ 사용 됩니다. NMAKE 설명 블록 명령 블록이 나오지 않습니다. 일치 하는 유추 규칙을 찾습니다.  

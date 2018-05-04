@@ -1,12 +1,9 @@
 ---
-title: "IDispEventSimpleImpl 클래스 | Microsoft Docs"
-ms.custom: 
+title: IDispEventSimpleImpl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IDispEventSimpleImpl
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - IDispEventSimpleImpl class
 ms.assetid: 971d82b7-a921-47fa-a4d8-909bed377ab0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8a5b3098961af4f3f9262cdc4c99dbe80b4ac7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 89f565c1e32f1208fbb039321d26b9175596d57e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="idispeventsimpleimpl-class"></a>IDispEventSimpleImpl 클래스
 이 클래스의 구현을 제공는 `IDispatch` 형식 라이브러리에서 형식 정보를 가져오지 않고 메서드.  
@@ -75,9 +70,9 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 |[IDispEventSimpleImpl::Unadvise](#unadvise)|기본 이벤트 소스와의 연결이 끊어집니다.|  
   
 ## <a name="remarks"></a>설명  
- `IDispEventSimpleImpl`해당 인터페이스의 모든 메서드/이벤트에 대 한 구현 코드 제공할 필요 없이 이벤트 인터페이스를 구현 방법을 제공 합니다. `IDispEventSimpleImpl`구현을 제공는 `IDispatch` 메서드. 처리에 관심이 있는 이벤트에 대 한 구현을 제공 하기만 하면 됩니다.  
+ `IDispEventSimpleImpl` 해당 인터페이스의 모든 메서드/이벤트에 대 한 구현 코드 제공할 필요 없이 이벤트 인터페이스를 구현 방법을 제공 합니다. `IDispEventSimpleImpl` 구현을 제공는 `IDispatch` 메서드. 처리에 관심이 있는 이벤트에 대 한 구현을 제공 하기만 하면 됩니다.  
   
- `IDispEventSimpleImpl`적절 한 처리기 함수에 경로 이벤트 하려면 클래스에서 이벤트 싱크 맵와 함께 작동 합니다. 이 클래스를 사용 합니다.  
+ `IDispEventSimpleImpl` 적절 한 처리기 함수에 경로 이벤트 하려면 클래스에서 이벤트 싱크 맵와 함께 작동 합니다. 이 클래스를 사용 합니다.  
   
 -   추가 [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info) 매크로를 처리 하려면 각 개체의 각 이벤트에 대 한 이벤트 싱크 맵.  
   
@@ -92,7 +87,7 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
  **IDispEventSimplImpl** 와 동일한 기능을 제공 [IDispEventImpl](../../atl/reference/idispeventimpl-class.md)를 제외한 형식 라이브러리에서 인터페이스에 대 한 형식 정보를 가져오지 않습니다. 마법사 코드의 경우에 기반으로 생성 `IDispEventImpl`, 사용할 수 있지만 `IDispEventSimpleImpl` 코드를 직접 추가 하 여 합니다. 사용 하 여 `IDispEventSimpleImpl` 이벤트 인터페이스를 설명 하는 형식 라이브러리 또는 형식 라이브러리를 사용 하 여 연관 된 오버 헤드를 방지 하려면 하지 않는 경우.  
   
 > [!NOTE]
-> `IDispEventImpl`및 `IDispEventSimpleImpl` 의 자체 구현을 제공 **iunknown:: Queryinterface** 각 활성화 `IDispEventImpl` 또는 `IDispEventSimpleImpl` 기본 클래스 멤버에 대 한 직접 액세스를 허용 하면서 역할을 별도 COM id 클래스 기본 COM 개체입니다.  
+> `IDispEventImpl` 및 `IDispEventSimpleImpl` 의 자체 구현을 제공 **iunknown:: Queryinterface** 각 활성화 `IDispEventImpl` 또는 `IDispEventSimpleImpl` 기본 클래스를 별도 COM id의 클래스 멤버에 대 한 직접 액세스를 허용 하면서 프록시로 기본 COM 개체입니다.  
   
  ActiveX 이벤트 싱크만 지원 형식의 반환 값 HRESULT 또는 이벤트 처리기 메서드에서; void CE ATL 구현 다른 모든 반환 값 지원 되지 않으며 해당 동작이 정의 되지 않습니다.  
   
@@ -108,7 +103,7 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="advise"></a>IDispEventSimpleImpl::Advise  
+##  <a name="advise"></a>  IDispEventSimpleImpl::Advise  
  가 나타내는 이벤트 소스와 연결을 설정 하려면이 메서드를 호출 *펑크*합니다.  
   
 ```
@@ -120,7 +115,7 @@ HRESULT Advise(IUnknown* pUnk);
  [in] 에 대 한 포인터는 **IUnknown** 이벤트 소스 개체의 인터페이스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `S_OK`또는 모든 오류 `HRESULT` 값입니다.  
+ `S_OK` 또는 모든 오류 `HRESULT` 값입니다.  
   
 ### <a name="remarks"></a>설명  
  시작 되는 이벤트는 연결이 설정 되 면 *펑크* 이벤트 싱크 맵을 통해 클래스에 대 한 처리기로 라우트 되도록 합니다.  
@@ -128,9 +123,9 @@ HRESULT Advise(IUnknown* pUnk);
 > [!NOTE]
 >  다중에서 클래스 파생 되는 경우 `IDispEventSimpleImpl` 클래스에 관심 있는 특정 기본 클래스를 사용 하 여 호출 범위를 지정 하 여이 메서드의 호출을 명확 하 게 해야 합니다.  
   
- `Advise`연결을 설정 기준으로 개체의 기본 이벤트 원본의 IID를 가져옵니다 기본 이벤트 소스와 [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface)합니다.  
+ `Advise` 연결을 설정 기준으로 개체의 기본 이벤트 원본의 IID를 가져옵니다 기본 이벤트 소스와 [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface)합니다.  
   
-##  <a name="dispeventadvise"></a>IDispEventSimpleImpl::DispEventAdvise  
+##  <a name="dispeventadvise"></a>  IDispEventSimpleImpl::DispEventAdvise  
  가 나타내는 이벤트 소스와 연결을 설정 하려면이 메서드를 호출 *펑크*합니다.  
   
 ```
@@ -145,7 +140,7 @@ HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
  이벤트 소스 개체의 IID에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `S_OK`또는 모든 오류 `HRESULT` 값입니다.  
+ `S_OK` 또는 모든 오류 `HRESULT` 값입니다.  
   
 ### <a name="remarks"></a>설명  
  이벤트에서 발생 하는 그 후 *펑크* 이벤트 싱크 맵을 통해 클래스에 대 한 처리기로 라우트 되도록 합니다.  
@@ -153,9 +148,9 @@ HRESULT DispEventAdvise(IUnknown* pUnk  const IID* piid);
 > [!NOTE]
 >  다중에서 클래스 파생 되는 경우 `IDispEventSimpleImpl` 클래스에 관심 있는 특정 기본 클래스를 사용 하 여 호출 범위를 지정 하 여이 메서드의 호출을 명확 하 게 해야 합니다.  
   
- `DispEventAdvise`에 지정 된 이벤트 소스와 연결을 설정 `pdiid`합니다.  
+ `DispEventAdvise` 에 지정 된 이벤트 소스와 연결을 설정 `pdiid`합니다.  
   
-##  <a name="dispeventunadvise"></a>IDispEventSimpleImpl::DispEventUnadvise  
+##  <a name="dispeventunadvise"></a>  IDispEventSimpleImpl::DispEventUnadvise  
  가 나타내는 이벤트 소스와 연결을 끊는 *펑크*합니다.  
   
 ```
@@ -170,7 +165,7 @@ HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
  이벤트 소스 개체의 IID에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `S_OK`또는 모든 오류 `HRESULT` 값입니다.  
+ `S_OK` 또는 모든 오류 `HRESULT` 값입니다.  
   
 ### <a name="remarks"></a>설명  
  연결이 끊어지면 이벤트 더 이상 이벤트 싱크 맵에 나열 된 처리기 함수에 라우팅할 수 없습니다.  
@@ -178,9 +173,9 @@ HRESULT DispEventUnadvise(IUnknown* pUnk  const IID* piid);
 > [!NOTE]
 >  다중에서 클래스 파생 되는 경우 `IDispEventSimpleImpl` 클래스에 관심 있는 특정 기본 클래스를 사용 하 여 호출 범위를 지정 하 여이 메서드의 호출을 명확 하 게 해야 합니다.  
   
- `DispEventAdvise`에 지정 된 이벤트 소스와 설정 된 연결이 `pdiid`합니다.  
+ `DispEventAdvise` 에 지정 된 이벤트 소스와 설정 된 연결이 `pdiid`합니다.  
   
-##  <a name="getidsofnames"></a>IDispEventSimpleImpl::GetIDsOfNames  
+##  <a name="getidsofnames"></a>  IDispEventSimpleImpl::GetIDsOfNames  
  이 구현 **IDispatch::GetIDsOfNames** 반환 **E_NOTIMPL**합니다.  
   
 ```
@@ -195,7 +190,7 @@ STDMETHOD(GetIDsOfNames)(
 ### <a name="remarks"></a>설명  
  참조 [IDispatch::GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) in the Windows SDK입니다.  
   
-##  <a name="gettypeinfo"></a>IDispEventSimpleImpl::GetTypeInfo  
+##  <a name="gettypeinfo"></a>  IDispEventSimpleImpl::GetTypeInfo  
  이 구현 **IDispatch::GetTypeInfo** 반환 **E_NOTIMPL**합니다.  
   
 ```
@@ -208,7 +203,7 @@ STDMETHOD(GetTypeInfo)(
 ### <a name="remarks"></a>설명  
  참조 [IDispatch::GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) in the Windows SDK입니다.  
   
-##  <a name="gettypeinfocount"></a>IDispEventSimpleImpl::GetTypeInfoCount  
+##  <a name="gettypeinfocount"></a>  IDispEventSimpleImpl::GetTypeInfoCount  
  이 구현 **IDispatch::GetTypeInfoCount** 반환 **E_NOTIMPL**합니다.  
   
 ```
@@ -218,7 +213,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* /* pctinfo */);
 ### <a name="remarks"></a>설명  
  참조 [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) in the Windows SDK입니다.  
   
-##  <a name="invoke"></a>IDispEventSimpleImpl::Invoke  
+##  <a name="invoke"></a>  IDispEventSimpleImpl::Invoke  
  이 구현 **idispatch:: Invoke** 이벤트 처리기 나열 이벤트 싱크 맵 호출 합니다.  
   
 ```
@@ -236,7 +231,7 @@ STDMETHOD(Invoke)(
 ### <a name="remarks"></a>설명  
  참조 [idispatch:: Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d)합니다.  
   
-##  <a name="unadvise"></a>IDispEventSimpleImpl::Unadvise  
+##  <a name="unadvise"></a>  IDispEventSimpleImpl::Unadvise  
  가 나타내는 이벤트 소스와 연결을 끊는 *펑크*합니다.  
   
 ```
@@ -248,7 +243,7 @@ HRESULT Unadvise(IUnknown* pUnk);
  [in] 에 대 한 포인터는 **IUnknown** 이벤트 소스 개체의 인터페이스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `S_OK`또는 모든 오류 `HRESULT` 값입니다.  
+ `S_OK` 또는 모든 오류 `HRESULT` 값입니다.  
   
 ### <a name="remarks"></a>설명  
  연결이 끊어지면 이벤트 더 이상 이벤트 싱크 맵에 나열 된 처리기 함수에 라우팅할 수 없습니다.  
@@ -256,7 +251,7 @@ HRESULT Unadvise(IUnknown* pUnk);
 > [!NOTE]
 >  다중에서 클래스 파생 되는 경우 `IDispEventSimpleImpl` 클래스에 관심 있는 특정 기본 클래스를 사용 하 여 호출 범위를 지정 하 여이 메서드의 호출을 명확 하 게 해야 합니다.  
   
- `Unadvise`에 지정 된 기본 이벤트 소스와 설정 된 연결이 `pdiid`합니다.  
+ `Unadvise` 에 지정 된 기본 이벤트 소스와 설정 된 연결이 `pdiid`합니다.  
   
  **Unavise** 기준으로 개체의 기본 이벤트 원본의 IID를 가져옵니다 나누기 한 기본 이벤트 소스와 연결 [AtlGetObjectSourceInterface](composite-control-global-functions.md#atlgetobjectsourceinterface)합니다.  
   

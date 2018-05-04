@@ -1,13 +1,10 @@
 ---
-title: "-Fe (EXE 파일 이름) | Microsoft Docs"
-ms.custom: 
+title: -Fe (EXE 파일 이름) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /fe
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - /Fe compiler option [C++]
 - Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d74892ef670ed53e68701730fdb71554989a495c
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 0afd8a863c9b8482e2b7f3868047845818bd2923
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fe-name-exe-file"></a>/Fe(EXE 파일 이름 지정)
 
@@ -38,7 +33,7 @@ ms.lasthandoff: 02/28/2018
 ## <a name="syntax"></a>구문
 
 > **/Fe**[_pathname_]  
-> **/Fe:** _pathname_  
+> **/ Fe:** _경로 이름_  
 
 ### <a name="arguments"></a>인수
 
@@ -65,7 +60,7 @@ ms.lasthandoff: 02/28/2018
 
 - <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>을 참조하세요.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 명령줄을 컴파일하고 현재 디렉터리의 모든 C 소스 파일을 연결 합니다. 결과 실행 파일 PROCESS.exe 라고 하 고 "C:\Users\User Name\repos\My Project\bin" 디렉터리에 만들어집니다.
 
@@ -73,7 +68,7 @@ ms.lasthandoff: 02/28/2018
 CL /Fe"C:\Users\User Name\repos\My Project\bin\PROCESS" *.C
 ```
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 명령줄의 실행 파일을 만듭니다 `C:\BIN` 현재 디렉터리에 첫 번째 소스 파일과 동일한 기본 이름을 가진:
 
@@ -81,7 +76,7 @@ CL /Fe"C:\Users\User Name\repos\My Project\bin\PROCESS" *.C
 CL /FeC:\BIN\ *.C
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [출력 파일(/F) 옵션](../../build/reference/output-file-f-options.md)<br/>
 [컴파일러 옵션](../../build/reference/compiler-options.md)<br/>

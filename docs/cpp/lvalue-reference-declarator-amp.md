@@ -2,11 +2,8 @@
 title: 'Lvalue 참조 선언 자: &amp; | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '&'
@@ -16,19 +13,17 @@ helpviewer_keywords:
 - reference operator
 - '& operator [C++], reference operator'
 ms.assetid: edf0513d-3dcc-4663-b276-1269795dda51
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bea07ed3139240279848d94184564ec821a8cd9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de716ec8c29bbdb50462cd6ea642ed603d411c2a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="lvalue-reference-declarator-amp"></a>Lvalue 참조 선언 자:&amp;
+# <a name="lvalue-reference-declarator-amp"></a>Lvalue 참조 선언 자: &amp;
 개체의 주소를 보유하지만 구문상 개체처럼 동작합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -45,7 +40,7 @@ type-id & cast-expression
   
  사용 하 여 참조 선언을 혼동 하지 마십시오는 [address-of 연산자](../cpp/address-of-operator-amp.md)합니다. 경우는 `&` *식별자* 와 같은 형식으로 앞 `int` 또는 `char`, *식별자* 형식에 대 한 참조로 선언 됩니다. 때 `&` *식별자* 앞에 나오지 않는 사용법은 address-of 연산자의 형식으로.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `Person` 개체 및 해당 개체에 대한 참조를 선언하여 참조 선언자를 보여 줍니다. `rFriend`가 `myFriend`에 대한 참조이기 때문에 변수 중 하나를 업데이트하면 동일한 개체가 변경됩니다.  
   
 ```  

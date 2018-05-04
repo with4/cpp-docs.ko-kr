@@ -1,29 +1,24 @@
 ---
-title: "이벤트 처리 및 ATL | Microsoft Docs"
-ms.custom: 
+title: 이벤트 처리 및 ATL | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - event handling, about event handling
 ms.assetid: e4812b0d-6fdd-4e8c-bdb8-378a25c7bde2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbd1b955ae8ed3caf4f67dbcb9aa71419eb620c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6586c4fd54e9e968f3d7571bc61e866f07c8f2f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="event-handling-and-atl"></a>이벤트 처리 및 ATL
 이 섹션에서는 ATL.를 사용 하 여 이벤트 싱크 하는 방법을 보여 줍니다. COM 이벤트 처리 원칙과 ATL. 제공한 지원을 사용 하 여 이벤트 싱크의 세부 사항 설명  

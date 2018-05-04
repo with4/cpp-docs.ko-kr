@@ -1,12 +1,9 @@
 ---
-title: "링크 형식 | Microsoft Docs"
-ms.custom: 
+title: 링크 형식 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - internal linkage, types of linkage
 - external linkage, linkage types
 ms.assetid: 41326c7f-4602-4bad-a648-697604858ba0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f71fc6e0d0251db38cd1c3dc1032ba6c71ba3ba4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dfddf0105603311179340a0c6b0b2e8fb328b134
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="types-of-linkage"></a>링크 형식
 개체 및 함수 이름을 변환 단위 간에 공유하는 방법을 링크라고 합니다. 이러한 이름에는 다음이 있을 수 있습니다.  

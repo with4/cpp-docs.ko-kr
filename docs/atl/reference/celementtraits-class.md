@@ -1,12 +1,9 @@
 ---
-title: "CElementTraits 클래스 | Microsoft Docs"
-ms.custom: 
+title: CElementTraits 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CElementTraits
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - CElementTraits class
 ms.assetid: 496528e5-7f80-4b45-be0c-6f646feb43c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebe629a08170ce011b22595c8b821b278e16faa7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c530622f096ef14d4eb3de56e5219e8f7df4f082
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="celementtraits-class"></a>CElementTraits 클래스
 이 클래스는 복사, 이동, 비교 및 해싱 작업에 대 한 메서드 및 함수를 제공 하 여 컬렉션 클래스에 의해 사용 됩니다.  
@@ -43,7 +38,7 @@ class CElementTraits : public CDefaultElementTraits<T>
  컬렉션에 저장할 데이터의 형식입니다.  
   
 ## <a name="remarks"></a>설명  
- 이 클래스는 이동, 복사, 비교, 및 컬렉션 클래스 개체에 저장 된 해시 요소에 대 한 기본 정적 함수 및 메서드를 제공 합니다. `CElementTraits`컬렉션 클래스를 통해 이러한 작업의 기본 공급자로 지정 [CAtlArray](../../atl/reference/catlarray-class.md), [CAtlList](../../atl/reference/catllist-class.md), [CRBMap](../../atl/reference/crbmap-class.md), [CRBMultiMap](../../atl/reference/crbmultimap-class.md), 및 [CRBTree](../../atl/reference/crbtree-class.md)합니다.  
+ 이 클래스는 이동, 복사, 비교, 및 컬렉션 클래스 개체에 저장 된 해시 요소에 대 한 기본 정적 함수 및 메서드를 제공 합니다. `CElementTraits` 컬렉션 클래스를 통해 이러한 작업의 기본 공급자로 지정 [CAtlArray](../../atl/reference/catlarray-class.md), [CAtlList](../../atl/reference/catllist-class.md), [CRBMap](../../atl/reference/crbmap-class.md), [CRBMultiMap](../../atl/reference/crbmultimap-class.md), 및 [CRBTree](../../atl/reference/crbtree-class.md)합니다.  
   
  단순 데이터 형식에 대 한 기본 구현을 만으로도 충분 하지만 함수 및 메서드는 더 복잡 한 개체를 저장 하는 컬렉션 클래스를 사용 하면 사용자가 제공한 구현에 의해 재정의 해야 합니다.  
   

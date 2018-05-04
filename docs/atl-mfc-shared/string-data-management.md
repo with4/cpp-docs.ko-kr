@@ -2,28 +2,23 @@
 title: 데이터 관리 문자열 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - Unicode, string objects
 ms.assetid: 0b53a542-eeb1-4108-9ada-6700645b6f8f
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad7a17b1b34375fcb45019bcaf8878757288a290
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: acf14ebec5417179a94d0a6ffefdb473966f0c2e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-data-management"></a>문자열 데이터 관리
 Visual c + +에서는 문자열 데이터를 관리 하는 여러 방법을 제공 합니다.  
@@ -71,7 +66,7 @@ Visual c + +에서는 문자열 데이터를 관리 하는 여러 방법을 제�
  A `CString` 개체를 저장할 수 **INT_MAX** (2147483647) 자인 합니다. **TCHAR** 가져오기 또는 설정 내 개별 문자 데이터 형식이 사용 됩니다는 `CString` 개체입니다. 문자 배열 달리는 `CString` 클래스에 기본 제공 메모리 할당 기능이 있습니다. 이 통해 `CString` 필요에 따라 자동으로 증가 하는 개체 (증가에 대해 걱정할 필요가 없습니다 즉, 한 `CString` 더 긴 문자열에 맞게 개체).  
   
 ##  <a name="_core_cstrings_and_const_char_pointers"></a> Cstring 및 const char 포인터  
- A `CString` 도 개체 리터럴 C 스타일 문자열 처럼 작동할 수 (한 `PCXSTR`와 동일한 **const char\* ** 유니코드에 포함 되지 않은 경우). [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr) 변환 연산자를 사용 하면 `CString` 자유롭게 함수 호출에서 문자 포인터에 대 한 대체 되는 개체입니다. **CString (lpcwstr을 사용** `pszSrc` **)** 생성자를 대체할 문자 포인터를 사용 하면 `CString` 개체입니다.  
+ A `CString` 도 개체 리터럴 C 스타일 문자열 처럼 작동할 수 (한 `PCXSTR`와 동일한 **const char\***  유니코드에 포함 되지 않은 경우). [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr) 변환 연산자를 사용 하면 `CString` 자유롭게 함수 호출에서 문자 포인터에 대 한 대체 되는 개체입니다. **CString (lpcwstr을 사용** `pszSrc` **)** 생성자를 대체할 문자 포인터를 사용 하면 `CString` 개체입니다.  
   
  접기 하려고 시도 하지 `CString` 개체입니다. 두 개의 만들면 `CString` 포함 된 개체 `Chicago`, 예를 들어의 문자를 `Chicago` 두 위치에 저장 됩니다. (이 아닐 수, MFC의 이후 버전의 경우에 있으므로 신뢰 하지 않아야 합니다.)  
   

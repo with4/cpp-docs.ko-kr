@@ -1,34 +1,29 @@
 ---
-title: "간략하게 x64 호출 규칙 | Microsoft Docs"
-ms.custom: 
+title: 간략하게 x64 호출 규칙 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a05db5eb-0844-4d9d-8b92-b1b2434be0ea
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ac42eb934692fb9eaecf345b75e7544e7078f07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb4071cd3223ad2ab073f84418e641b515c05112
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-x64-calling-conventions"></a>x64 호출 규칙 개요
 두 가지 중요 한 차이점 x86 및 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 는 64 비트 주소 지정 기능 및 범용 레지스터 16 64 비트의 단순 집합입니다. 확장 된 레지스터 집합, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 사용 하 여는 [__fastcall](../cpp/fastcall.md) 호출 규칙 및 RISC 기반 예외 처리 모델입니다. `__fastcall` 규칙 처음 네 개의 인수가 및 스택 프레임에 대 한 레지스터를 사용 하 여 추가 인수를 전달 합니다.  
   
  다음 컴파일러 옵션을 사용 하도록 응용 프로그램을 최적화 하는 데 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]:  
   
--   [/favor에 (아키텍처에 대 한 최적화)](../build/reference/favor-optimize-for-architecture-specifics.md)  
+-   [/favor(아키텍처에 맞게 최적화)](../build/reference/favor-optimize-for-architecture-specifics.md)  
   
 ## <a name="calling-convention"></a>호출 규칙  
  [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 기본적으로 4 개 레지스터 빠른 호출 규칙을 사용 하는 응용 프로그램 이진 인터페이스 ABI (). 호출 스택의 해당 레지스터를 저장 하려면 호출 수신자에 대 한 섀도 저장소 공간이 할당 됩니다. 함수 호출에 인수 및 해당 인수에 사용 되는 레지스터 간의 엄격한 한 일 대응이 됩니다. 8 바이트에 맞지 않으면 없거나 1, 2, 4 또는 8 바이트 하는 모든 인수는 참조로 전달 되어야 합니다. 여러 레지스터에는 하나의 인수를 분산 하지 않습니다. x87 레지스터 스택은 사용 되지 않습니다. 이 호출 수신자가 사용할 수 있습니다. 하지만 고려해 야 할 휘발성 함수 호출 간에 합니다. 모든 부동 소수점 작업은 수행 XMM 레지스터 16을 사용 하 여 합니다. 정수 인수는 RCX, RDX, R8 및 r 9 레지스터에 전달 됩니다. 부동 소수점 인수 XMM0L, XMM1L, XMM2L, 및 XMM3L에 전달 됩니다. 16 바이트 인수는 참조로 전달 됩니다. 매개 변수 전달에 자세히 설명 되어 [매개 변수 전달](../build/parameter-passing.md)합니다. 이 레지스터 외에도 RAX, r 10, R11, XMM4, 및 XMM5 휘발성 간주 됩니다. 다른 모든 레지스터 volatile이 아닌 경우 레지스터 사용에서 자세히 설명 되어 [사용 등록](../build/register-usage.md) 및 [호출자/호출 수신자 저장 레지스터](../build/caller-callee-saved-registers.md)합니다.  

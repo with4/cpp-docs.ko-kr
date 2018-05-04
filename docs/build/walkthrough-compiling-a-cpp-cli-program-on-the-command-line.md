@@ -2,26 +2,21 @@
 title: '연습: 컴파일 C + + /CLI 프로그램 명령줄에 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
-caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d509bc9890f4fa5ccebbd6ae3d1e3bcb3dbb0d93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81e5b8119c8921da28c6ad93b257234e0998083a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>연습: 명령줄에서 C++/CLI 프로그램 컴파일
 CLR(공용 언어 런타임)을 대상으로 하는 Visual C++ 프로그램을 만들어 .NET Framework를 사용하여 명령줄에서 빌드할 수 있습니다. Visual C++은 .NET 프로그래밍 모델을 대상으로 하는 추가 형식 및 연산자가 있는 C++/CLI 프로그래밍 언어를 지원합니다. 에 대 한 C + + /CLI 언어 참조 [순수 c + +: Hello, C + + CLI](http://msdn.microsoft.com/magazine/cc163681.aspx)합니다. 일반 정보를 참조 하십시오. [.NET 프로그래밍 C + + /cli CLI (Visual c + +)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)합니다.  
@@ -31,7 +26,7 @@ CLR(공용 언어 런타임)을 대상으로 하는 Visual C++ 프로그램을 �
 > [!NOTE]
 >  또한 Visual Studio IDE를 사용하여 C++/CLI 프로그램을 컴파일할 수 있습니다. 자세한 내용은 참조 [연습: Visual Studio에서 CLR를 대상으로 하는 c + + 프로그램 컴파일](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  개발자는 C++ 언어의 기본적인 사항을 알고 있어야 합니다.  
   
 ## <a name="compiling-a-ccli-program"></a>C++/CLI 프로그램 컴파일  
@@ -73,6 +68,6 @@ CLR(공용 언어 런타임)을 대상으로 하는 Visual C++ 프로그램을 �
     ```  
   
 ## <a name="see-also"></a>참고 항목  
- [C + + 언어 참조](../cpp/cpp-language-reference.md)   
+ [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [C/C++ 프로그램 빌드](../build/building-c-cpp-programs.md)   
  [컴파일러 옵션](../build/reference/compiler-options.md)

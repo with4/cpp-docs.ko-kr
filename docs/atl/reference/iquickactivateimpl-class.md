@@ -2,11 +2,8 @@
 title: IQuickActivateImpl 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IQuickActivateImpl
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - IQuickActivateImpl class
 - IQuickActivate ATL implementation
 ms.assetid: aa80c056-1041-494e-b21d-2acca7dc27ea
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c6f5bc1798bc8ec40fb6f6d9d22f48c06b19745
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b87427408483a60cf33b46a1a670095d211b3d80
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iquickactivateimpl-class"></a>IQuickActivateImpl 클래스
 이 클래스는 컨테이너의 컨트롤 초기화를 단일 호출으로 결합합니다.  
@@ -74,7 +69,7 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlctl.h  
   
-##  <a name="getcontentextent"></a>IQuickActivateImpl::GetContentExtent  
+##  <a name="getcontentextent"></a>  IQuickActivateImpl::GetContentExtent  
  실행 중인 컨트롤에 대 한 현재 표시 크기를 검색합니다.  
   
 ```
@@ -86,7 +81,7 @@ STDMETHOD(GetContentExtent)(LPSIZEL pSize);
   
  참조 [IQuickActivate::GetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms693792) in the Windows SDK입니다.  
   
-##  <a name="quickactivate"></a>IQuickActivateImpl::QuickActivate  
+##  <a name="quickactivate"></a>  IQuickActivateImpl::QuickActivate  
  로드 되 고 컨트롤의 빠른 초기화를 수행 합니다.  
   
 ```
@@ -100,7 +95,7 @@ STDMETHOD(QuickActivate)(
   
  참조 [IQuickActivate::QuickActivate](http://msdn.microsoft.com/library/windows/desktop/ms682421) in the Windows SDK입니다.  
   
-##  <a name="setcontentextent"></a>IQuickActivateImpl::SetContentExtent  
+##  <a name="setcontentextent"></a>  IQuickActivateImpl::SetContentExtent  
  컨테이너에 할당 된 디스플레이 공간 크기의 컨트롤을 알립니다.  
   
 ```

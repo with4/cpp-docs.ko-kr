@@ -1,12 +1,9 @@
 ---
-title: "CDefaultHashTraits 클래스 | Microsoft Docs"
-ms.custom: 
+title: CDefaultHashTraits 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDefaultHashTraits
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CDefaultHashTraits class
 ms.assetid: d8ec4b37-6d58-447b-a0c1-8580c5b1ab85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2407ffdd5d8ea327cd4669f2c33ccda5e0246d6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 85cf9e27211763559617715a6c025055b25379fa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits 클래스
 이 클래스는 해시 값을 계산 하기 위한 정적 함수를 제공 합니다.  
@@ -59,7 +54,7 @@ class CDefaultHashTraits
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcoll.h  
   
-##  <a name="hash"></a>CDefaultHashTraits::Hash  
+##  <a name="hash"></a>  CDefaultHashTraits::Hash  
  지정된 된 요소에 대 한 해시 값을 계산 하려면이 함수를 호출 합니다.  
   
 ```

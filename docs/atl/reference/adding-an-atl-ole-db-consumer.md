@@ -1,12 +1,9 @@
 ---
-title: "ATL OLE DB 소비자 추가 | Microsoft Docs"
-ms.custom: 
+title: ATL OLE DB 소비자 추가 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - OLE DB, adding ATL OLE DB consumer to projects
 - ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: defc933014bd287eb48f53635efba12a40960711
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90b16c84c0dc2c921722c4c80a1e2bdf0e091d9c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>ATL OLE DB 소비자 추가
 이 마법사를 사용 하 여 프로젝트에 ATL OLE DB 소비자를 추가 합니다. ATL OLE DB 소비자는 데이터 원본에 액세스 하는 데 필요한 OLE DB 접근자 클래스 및 데이터 바인딩으로 구성 됩니다. 프로젝트 (ATL OLE DB 소비자 마법사를 추가 하는 자동으로) ATL 지원을 포함 하는 MFC 또는 Win32 응용 프로그램 또는 ATL COM 응용 프로그램으로 만든 것 이어야 합니다.  

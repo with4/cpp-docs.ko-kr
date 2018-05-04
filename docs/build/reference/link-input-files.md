@@ -1,13 +1,10 @@
 ---
-title: "입력 파일 링크 | Microsoft Docs"
-ms.custom: 
+title: 입력 파일 링크 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - link
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - import libraries [C++], linker files
 - command input to linker files [C++]
 ms.assetid: bb26fcc5-509a-4620-bc3e-b6c6e603a412
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d0cae9498d2c9b49e52cf56991d2425de39d7e1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d61a24916c3b56cf666a85483414f86753f7f59
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="link-input-files"></a>LINK 입력 파일
 개체, 가져오기 및 표준 라이브러리, 리소스, 모듈 정 및 명령 입력을 포함 하는 파일에 링커를 제공 합니다. 링크 파일의 내용에 대해 정도 파일 확장명을 사용 하지 않습니다. 대신, 링크는 어떤 종류의 파일 인지 확인 하려면 각 입력된 파일을 검사 합니다.  

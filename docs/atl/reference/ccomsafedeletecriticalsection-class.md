@@ -1,12 +1,9 @@
 ---
-title: "CComSafeDeleteCriticalSection 클래스 | Microsoft Docs"
-ms.custom: 
+title: CComSafeDeleteCriticalSection 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComSafeDeleteCriticalSection
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComSafeDeleteCriticalSection class
 ms.assetid: 4d2932c4-ba8f-48ec-8664-1db8bed01314
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df86d5219940ffc1dd3c34f47920675014eefd13
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cff637f9e307f2714cd351f3c6bcaf1e4b78342e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomsafedeletecriticalsection-class"></a>CComSafeDeleteCriticalSection 클래스
 이 클래스는 가져오는 임계 영역 개체의 소유권을 해제 하기 위한 메서드를 제공 합니다.  
@@ -66,21 +61,21 @@ class CComSafeDeleteCriticalSection : public CComCriticalSection
 |[m_bInitialized](#m_binitialized)|플래그 여부는 내부 **CRITICAL_SECTION** 개체가 초기화 되었습니다.|  
   
 ## <a name="remarks"></a>설명  
- `CComSafeDeleteCriticalSection`클래스에서 파생 [클래스](../../atl/reference/ccomcriticalsection-class.md)합니다. 그러나 `CComSafeDeleteCriticalSection` 추가 안전 메커니즘을 통해 [클래스](../../atl/reference/ccomcriticalsection-class.md)합니다.  
+ `CComSafeDeleteCriticalSection` 클래스에서 파생 [클래스](../../atl/reference/ccomcriticalsection-class.md)합니다. 그러나 `CComSafeDeleteCriticalSection` 추가 안전 메커니즘을 통해 [클래스](../../atl/reference/ccomcriticalsection-class.md)합니다.  
   
  인스턴스가 `CComSafeDeleteCriticalSection` 범위를 벗어나거나 명시적으로 메모리에서 삭제 된 기본 임계 영역 개체 자동으로 정리 됩니다 여전히 유효한 경우. 또한는 [CComSafeDeleteCriticalSection::Term](#term) 메서드는 기본 임계 영역 개체 아직 할당 되지 않은 또는 메모리에서 이미 해제 하는 경우 정상적으로 종료 됩니다.  
   
  참조 [클래스](../../atl/reference/ccomcriticalsection-class.md) 임계 영역 도우미 클래스에 대 한 자세한 내용은 합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
- [클래스](../../atl/reference/ccomcriticalsection-class.md)  
+ [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)  
   
  `CComSafeDeleteCriticalSection`  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcore.h  
   
-##  <a name="ccomsafedeletecriticalsection"></a>CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection  
+##  <a name="ccomsafedeletecriticalsection"></a>  CComSafeDeleteCriticalSection::CComSafeDeleteCriticalSection  
  생성자입니다.  
   
 ```
@@ -90,7 +85,7 @@ CComSafeDeleteCriticalSection();
 ### <a name="remarks"></a>설명  
  설정의 [m_bInitialized](#m_binitialized) 데이터 멤버를 **false**합니다.  
   
-##  <a name="dtor"></a>CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection  
+##  <a name="dtor"></a>  CComSafeDeleteCriticalSection:: ~ CComSafeDeleteCriticalSection  
  소멸자입니다.  
   
 ```
@@ -100,7 +95,7 @@ CComSafeDeleteCriticalSection();
 ### <a name="remarks"></a>설명  
  내부 해제 **CRITICAL_SECTION** 경우 메모리에서 개체는 [m_bInitialized](#m_binitialized) 데이터 멤버가로 설정 된 **true**합니다.  
   
-##  <a name="init"></a>CComSafeDeleteCriticalSection::Init  
+##  <a name="init"></a>  CComSafeDeleteCriticalSection::Init  
  기본 클래스 구현을 호출 [Init](/visualstudio/debugger/init) 설정 [m_bInitialized](#m_binitialized) 를 **true** 성공 하는 경우.  
   
 ```
@@ -110,7 +105,7 @@ HRESULT Init() throw();
 ### <a name="return-value"></a>반환 값  
  결과 반환 [CComCriticalSection::Init](../../atl/reference/ccomcriticalsection-class.md#init)합니다.  
   
-##  <a name="lock"></a>CComSafeDeleteCriticalSection::Lock  
+##  <a name="lock"></a>  CComSafeDeleteCriticalSection::Lock  
 기본 클래스 구현을 호출 [잠금](ccomcriticalsection-class.md#lock)합니다.  
 
   
@@ -126,7 +121,7 @@ HRESULT Lock();
   
  함수 동작에 자세한 내용은를 참조 [CComCriticalSection::Lock](../../atl/reference/ccomcriticalsection-class.md#lock)합니다.  
   
-##  <a name="m_binitialized"></a>CComSafeDeleteCriticalSection::m_bInitialized  
+##  <a name="m_binitialized"></a>  CComSafeDeleteCriticalSection::m_bInitialized  
  플래그 여부는 내부 **CRITICAL_SECTION** 개체가 초기화 되었습니다.  
   
 ```
@@ -136,7 +131,7 @@ bool m_bInitialized;
 ### <a name="remarks"></a>설명  
  **m_bInitialized** 데이터 멤버는 기본의 유효성을 추적 하는 데 **CRITICAL_SECTION** 연관 된 개체는 [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) 클래스입니다. 내부 **CRITICAL_SECTION** 이 플래그 설정 하지 않으면 메모리에서 해제 될 개체 시도 되지 것입니다 **true**합니다.  
   
-##  <a name="term"></a>CComSafeDeleteCriticalSection::Term  
+##  <a name="term"></a>  CComSafeDeleteCriticalSection::Term  
  기본 클래스 구현을 호출 [CComCriticalSection::Term](../../atl/reference/ccomcriticalsection-class.md#term) 경우 내부 **CRITICAL_SECTION** 개체는 유효 합니다.  
   
 ```

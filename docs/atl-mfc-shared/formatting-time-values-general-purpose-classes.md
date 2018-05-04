@@ -1,12 +1,9 @@
 ---
-title: "시간 값 형식 지정: 범용 클래스 | Microsoft Docs"
-ms.custom: 
+title: '시간 값 형식 지정: 범용 클래스 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - time [C++], formatting
 - formatting [C++], time
 ms.assetid: 7fcfee24-f874-4a4d-95b3-adc19a0f2df0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4479fea641a21edf3f037924b50247798f5a6e6e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d48dd7ef4990c4ffe13c7c1f056d5904b6897435
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="formatting-time-values-general-purpose-classes"></a>시간 값 형식 지정: 범용 클래스
 다음 절차에는 시간 값의 형식을 지정 하는 방법을 보여 줍니다.  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
      [!code-cpp[NVC_ATLMFC_Utilities#175](../atl-mfc-shared/codesnippet/cpp/formatting-time-values-general-purpose-classes_1.cpp)]  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [일반적인 날짜 및 시간 프로그래밍 MFC의](../atl-mfc-shared/date-and-time.md)  
   

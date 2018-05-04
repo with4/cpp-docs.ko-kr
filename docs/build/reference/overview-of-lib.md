@@ -2,12 +2,9 @@
 title: LIB 개요 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - Lib
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef3d1e57371fdea62bb557830baca633f4165637
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8fd3d370da4f841e85086e3d061508d68414e96
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-lib"></a>LIB 개요
 LIB에서 만드는 표준 라이브러리, 라이브러리, 가져오기 및 내보내기 파일을 사용할 수 있습니다 [링크](../../build/reference/linker-options.md) 는 프로그램을 빌드할 경우. LIB 명령 프롬프트에서 실행 됩니다.  
@@ -53,7 +48,7 @@ LIB에서 만드는 표준 라이브러리, 라이브러리, 가져오기 및 �
   
  자세한 내용은 참조 [LIB 실행](../../build/reference/running-lib.md)합니다.  
   
- **/ 내보내기**  
+ **/EXPORT**  
  프로그램에서 함수를 내보냅니다.  
   
  자세한 내용은 참조 [가져오기 라이브러리 및 내보내기 파일 빌드](../../build/reference/building-an-import-library-and-export-file.md)합니다.  
@@ -63,7 +58,7 @@ LIB에서 만드는 표준 라이브러리, 라이브러리, 가져오기 및 �
   
  자세한 내용은 참조 [라이브러리 멤버 추출](../../build/reference/extracting-a-library-member.md)합니다.  
   
- **/ 포함**  
+ **/INCLUDE**  
  기호 테이블에는 기호를 추가합니다.  
   
  자세한 내용은 참조 [가져오기 라이브러리 및 내보내기 파일 빌드](../../build/reference/building-an-import-library-and-export-file.md)합니다.  
@@ -113,7 +108,7 @@ LIB에서 만드는 표준 라이브러리, 라이브러리, 가져오기 및 �
   
  자세한 내용은 참조 [라이브러리 관리](../../build/reference/managing-a-library.md)합니다.  
   
- **/ 하위 시스템**  
+ **/SUBSYSTEM**  
  운영 체제를 출력 라이브러리에 연결 하 여 만든 프로그램을 실행 하는 방법을 설명 합니다.  
   
  자세한 내용은 참조 [라이브러리 관리](../../build/reference/managing-a-library.md)합니다.  

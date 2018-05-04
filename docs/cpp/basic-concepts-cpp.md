@@ -1,29 +1,24 @@
 ---
 title: 기본 개념 (c + +) | Microsoft Docs
-ms.custom: ''
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: 'index-page '
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - C++, basic language concepts
 ms.assetid: 961801e6-2ffd-4bf1-bb71-7f55e48d9c79
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f47ef027e2ca13e02ed10f186853cb0eb6845ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17eb18438f4b39c7f07d144dad2c16db2f49553b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="basic-concepts--c"></a>기본 개념 (c + +)
 이 섹션에서는 c + + 이해에 필수적인 개념을 설명 합니다. C 프로그래머 이러한 개념에 대해 잘 알고 있지만 예기치 않은 프로그램 결과 일으킬 수 있는 몇 가지 미묘한 차이가 있습니다. 주제는 다음과 같습니다.  

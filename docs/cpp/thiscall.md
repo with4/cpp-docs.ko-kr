@@ -1,12 +1,9 @@
 ---
 title: __thiscall | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __thiscall
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a55f7d288758b345dfc4f182f2153e0d39a1b349
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9dccd9e80a23b1636bd869d406824c9997f4cdef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="thiscall"></a>__thiscall
 ## <a name="microsoft-specific"></a>Microsoft 전용  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  Visual c + + 2005 이전 버전에서 thiscall 호출 규칙 수 지정 되지 않았습니다. 명시적으로 프로그램에서 때문에 `thiscall` 키워드가 없습니다.  
   
- `vararg`멤버 함수는 사용 된 `__cdecl` 호출 규칙입니다. 와 모든 함수 인수는 스택에서 푸시됩니다는 `this` 포인터 마지막 스택에 배치  
+ `vararg` 멤버 함수는 사용 된 `__cdecl` 호출 규칙입니다. 와 모든 함수 인수는 스택에서 푸시됩니다는 `this` 포인터 마지막 스택에 배치  
   
  C + +에만 이러한 호출 규칙 적용 되므로 C 이름 데코레이션 구성표가 없습니다.  
   

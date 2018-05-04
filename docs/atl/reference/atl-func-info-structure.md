@@ -1,12 +1,9 @@
 ---
-title: "_ATL_FUNC_INFO 구조 | Microsoft Docs"
-ms.custom: 
+title: _ATL_FUNC_INFO 구조 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - _ATL_FUNC_INFO
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - _ATL_FUNC_INFO structure
 - ATL_FUNC_INFO structure
 ms.assetid: 441ebe2c-f971-47de-9f52-a258e8d6f88e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5e184f1c78264304b8e4424ea3f9659689f333b
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d5f3b759591333a41c3bc9da083e8e724249d13d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atlfuncinfo-structure"></a>_ATL_FUNC_INFO 구조
 dispinterface에 메서드 또는 속성을 설명 하는 데 사용 되는 형식 정보를 포함 합니다.  
@@ -60,7 +55,7 @@ struct _ATL_FUNC_INFO {
 ## <a name="remarks"></a>설명  
  내부적으로 ATL이이 구조를 사용 하 여 형식 라이브러리에서 얻은 정보를 저장 합니다. 함께 사용 하는 이벤트 처리기에 대 한 형식 정보를 제공 하는 경우이 구조를 직접 조작 해야 할 수 있습니다는 [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) 클래스 및 [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info) 매크로입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  IDL에 정의 하는 dispinterface 메서드를 제공 합니다.  
   
  [!code-cpp[NVC_ATL_Windowing#139](../../atl/codesnippet/cpp/atl-func-info-structure_1.idl)]  

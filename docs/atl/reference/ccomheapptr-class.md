@@ -1,12 +1,9 @@
 ---
-title: "CComHeapPtr 클래스 | Microsoft Docs"
-ms.custom: 
+title: CComHeapPtr 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComHeapPtr
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CComHeapPtr class
 ms.assetid: bd08b53d-da2b-43ab-a79c-e7c8dbbc5994
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8619c050ecc356e1445991b625da00c04f462848
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1937bb96cabfd1a42650e2a27fd04c11aa648f2b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomheapptr-class"></a>CComHeapPtr 클래스
 스마트 포인터는 힙에 대 한 포인터를 관리 하기 위한 클래스입니다.  
@@ -52,7 +47,7 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 |[CComHeapPtr::CComHeapPtr](#ccomheapptr)|생성자입니다.|  
   
 ## <a name="remarks"></a>설명  
- `CComHeapPtr`파생 `CHeapPtr`, 하지만 사용 하 여 [CComAllocator](../../atl/reference/ccomallocator-class.md) COM 루틴을 사용 하 여 메모리를 할당 합니다. 참조 [CHeapPtr](../../atl/reference/cheapptr-class.md) 및 [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) 사용할 수 있는 방법에 대 한 합니다.  
+ `CComHeapPtr` 파생 `CHeapPtr`, 하지만 사용 하 여 [CComAllocator](../../atl/reference/ccomallocator-class.md) COM 루틴을 사용 하 여 메모리를 할당 합니다. 참조 [CHeapPtr](../../atl/reference/cheapptr-class.md) 및 [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md) 사용할 수 있는 방법에 대 한 합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)  
@@ -64,7 +59,7 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="ccomheapptr"></a>CComHeapPtr::CComHeapPtr  
+##  <a name="ccomheapptr"></a>  CComHeapPtr::CComHeapPtr  
  생성자입니다.  
   
 ```

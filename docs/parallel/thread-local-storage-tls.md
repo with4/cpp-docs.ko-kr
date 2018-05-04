@@ -1,12 +1,12 @@
 ---
-title: "스레드 로컬 저장소 (TLS) | Microsoft Docs"
-ms.custom: 
+title: 스레드 로컬 저장소 (TLS) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47e6be3645e03892d17e45256a5a003d982d973f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b01bd50fa50a449128842755898d703f7bafe76
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="thread-local-storage-tls"></a>TLS(스레드 로컬 저장소)
 TLS(스레드 로컬 저장소)는 지정된 다중 스레드 프로세스의 각 스레드에서 스레드별 데이터를 저장하는 위치를 할당하는 방법입니다. 동적으로 바인딩 (런타임) 스레드별 데이터는 TLS API를 통해 지원 됩니다 ([TlsAlloc](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686801), [TlsGetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686812), [TlsSetValue](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686818), 및 [TlsFree](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686804)). Windows 스레드 로컬 저장소가 구현 되는 방법에 대 한 자세한 내용은 참조 [스레드 로컬 저장소 (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/ms686749\(v=vs.85\).aspx)합니다.  Win32 및 Visual C++ 컴파일러는 이제 기존 API 구현 외에도 정적으로 바인딩된(로드 타임) 스레드별 데이터도 지원합니다.  
   
-##  <a name="_core_compiler_implementation_for_tls"></a>TLS의 컴파일러 구현  
+##  <a name="_core_compiler_implementation_for_tls"></a> TLS의 컴파일러 구현  
  **C + + 11:** 는 `thread_local` 저장소 클래스 지정자는 클래스 멤버 및 개체에 대 한 스레드 로컬 저장소를 지정 하는 것이 좋습니다. 자세한 내용은 참조 [저장소 클래스 (c + +)](../cpp/storage-classes-cpp.md)합니다.  
   
  Visual c + +는 또한 Microsoft 전용 특성을 제공 [스레드](../cpp/thread.md), 확장된 저장소 클래스 한정자로 합니다. 사용 하 여는 `__declspec` 키워드를 선언 하는 **스레드** 변수입니다. 예를 들어, 다음 코드는 정수 스레드 로컬 변수를 선언한 다음 값으로 초기화합니다.  
@@ -107,7 +107,7 @@ __declspec( thread ) int tls_i = 1;
   
      이 제한은 C++에서는 적용되지 않습니다. C++에서는 모든 개체의 동적 초기화가 허용되기 때문에, 스레드 지역 변수의 주소를 사용하는 식을 사용하여 개체를 초기화할 수 있습니다. 이것은 마치 스레드 로컬 개체 생성과 같습니다. 예를 들어 앞에 나온 코드는 C++ 소스 파일로 컴파일하면 오류를 생성하지 않습니다. 스레드 지역 변수의 주소는 이 주소가 사용된 스레드가 존재하는 동안에만 유효합니다.  
   
--   표준 C에서는 비정적 범위의 개체에 한해 자신에 대한 참조를 포함하는 식으로 개체 또는 변수를 초기화할 수 있습니다. C++에서는 일반적으로 자신에 대한 참조를 포함하는 식으로 개체를 동적으로 초기화할 수 있지만 스레드 로컬 개체에 대해서는 이런 종류의 초기화가 허용되지 않습니다. 예:  
+-   표준 C에서는 비정적 범위의 개체에 한해 자신에 대한 참조를 포함하는 식으로 개체 또는 변수를 초기화할 수 있습니다. C++에서는 일반적으로 자신에 대한 참조를 포함하는 식으로 개체를 동적으로 초기화할 수 있지만 스레드 로컬 개체에 대해서는 이런 종류의 초기화가 허용되지 않습니다. 예를 들어:  
   
     ```  
     __declspec( thread )int tls_i = tls_i;                // Error in C and C++   
@@ -119,7 +119,7 @@ __declspec( thread ) int tls_i = 1;
   
      C++에서는 향후 스레드 로컬 저장소 기능이 향상될 수 있으므로 이런 방식으로 스레드 데이터를 동적으로 초기화할 수 없습니다.  
   
--   [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)] 이전 Windows 운영 체제에서는 `__declspec`( thread )에 몇 가지 제한이 있습니다. DLL에서 데이터 또는 개체를 `__declspec`( thread )로 선언하는 경우 동적으로 로드하면 보호 오류가 발생할 수 있습니다. 와 DLL이 로드 된 후 [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175), 코드를 참조할 때마다 시스템 오류가 발생 된 `__declspec`(thread) 데이터. 런타임에 스레드에 대한 전역 변수 공간이 할당되기 때문에, 이 공간의 크기는 응용 프로그램의 요구 사항과 정적으로 연결되는 모든 DLL의 요구 사항을 계산하여 결정됩니다. `LoadLibrary`를 사용할 때는 `__declspec`( thread )로 스레드 지역 변수를 선언할 수 있도록 이 공간을 확장할 수 없습니다. 와 같은 TLS Api를 사용 하 여 [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801), 함께 DLL을 로드할 수 수 있으면 TLS를 할당 하 여 DLL에서 `LoadLibrary`합니다.  
+-   Windows Vista 이전 Windows 운영 체제에서 `__declspec`(스레드)에 몇 가지 제한이 있습니다. DLL에서 데이터 또는 개체를 `__declspec`( thread )로 선언하는 경우 동적으로 로드하면 보호 오류가 발생할 수 있습니다. 와 DLL이 로드 된 후 [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175), 코드를 참조할 때마다 시스템 오류가 발생 된 `__declspec`(thread) 데이터. 런타임에 스레드에 대한 전역 변수 공간이 할당되기 때문에, 이 공간의 크기는 응용 프로그램의 요구 사항과 정적으로 연결되는 모든 DLL의 요구 사항을 계산하여 결정됩니다. `LoadLibrary`를 사용할 때는 `__declspec`( thread )로 스레드 지역 변수를 선언할 수 있도록 이 공간을 확장할 수 없습니다. 와 같은 TLS Api를 사용 하 여 [TlsAlloc](http://msdn.microsoft.com/library/windows/desktop/ms686801), 함께 DLL을 로드할 수 수 있으면 TLS를 할당 하 여 DLL에서 `LoadLibrary`합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [C 및 Win32를 사용한 다중 스레딩](../parallel/multithreading-with-c-and-win32.md)   

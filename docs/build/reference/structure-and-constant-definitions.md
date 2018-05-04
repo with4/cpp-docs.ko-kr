@@ -1,27 +1,22 @@
 ---
-title: "구조체 및 상수 정의 | Microsoft Docs"
-ms.custom: 
+title: 구조체 및 상수 정의 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 1df7cf46-b853-4788-a257-100d5c37997f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f77c74ab4b8c72973526007b2496554f5e672ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1c39809c89b350f9c8754f05687363ecac6271c5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structure-and-constant-definitions"></a>구조체 및 상수 정의
 기본 도우미 루틴은 후크 함수 및 모든 예외는 동안 통신에 몇 가지 구조를 사용 합니다. 알림 및 실패 값, 정보 구조 및 후크에 전달 된 함수 후크 포인터 형식을 다음과 같습니다.  

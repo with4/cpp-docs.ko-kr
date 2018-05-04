@@ -1,12 +1,9 @@
 ---
-title: "문자열 변환 매크로 | Microsoft Docs"
-ms.custom: 
+title: 문자열 변환 매크로 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlconv/ATL::DEVMODEA2W
@@ -20,27 +17,25 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0a166fec6eceb84b1b22563849ff1b9462ef9a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 917afc7dae7a0ed96d5d5cc476b4f8394abe8913
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-conversion-macros"></a>문자열 변환 매크로
 
 이러한 매크로 문자열 변환 기능을 제공합니다.  
  
-##  <a name="atl_and_mfc_string_conversion_macros"></a>ATL 및 MFC 문자열 변환 매크로
+##  <a name="atl_and_mfc_string_conversion_macros"></a>  ATL 및 MFC 문자열 변환 매크로
 
 이 항목에서 설명하는 문자열 변환 매크로는 ATL과 MFC에 모두 사용 가능합니다. MFC 문자열 변환에 대 한 자세한 내용은 참조 하십시오. [TN059: MFC MBCS/유니코드 변환 매크로 사용 하 여](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) 및 [MFC 매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)합니다.
 
-##  <a name="devmode_and_textmetric_string_conversion_macros"></a>DEVMODE 및 TEXTMETRIC 문자열 변환 매크로
+##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  DEVMODE 및 TEXTMETRIC 문자열 변환 매크로
 
 이러한 매크로의 복사본을 만들고는 [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) 또는 [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) 구조체이 고 새 구조 내의 문자열을 새 문자열 형식으로 변환 합니다. 매크로 새 구조에 대 한 스택에 메모리를 할당 하 고 새 구조에 대 한 포인터를 반환 합니다.  
   
@@ -50,7 +45,7 @@ MACRONAME( address_of_structure )
   
 ### <a name="remarks"></a>설명
 
-예:  
+예를 들어:  
   
 [!code-cpp[NVC_ATL_Utilities#128](../../atl/codesnippet/cpp/string-conversion-macros_1.cpp)]  
   

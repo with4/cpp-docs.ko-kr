@@ -1,13 +1,10 @@
 ---
-title: "확장 Dll: 개요 | Microsoft Docs"
-ms.custom: 
+title: '확장 Dll: 개요 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 407ed0c63dce8e350c24ac5f260876fb6ab47576
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8bd851b9335e2b1ecffc8873590f176d7ebb2205
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mfc-extension-dlls-overview"></a>MFC 확장명 Dll: 개요
 MFC 확장 DLL은 일반적으로 기존 Microsoft Foundation Class 라이브러리 클래스에서 파생 된 다시 사용할 수 있는 클래스를 구현 하는 DLL입니다. MFC 확장명 Dll은 MFC (MFC 공유 버전 라고도 함)의 동적 연결 라이브러리 버전을 사용 하 여 작성 됩니다. 만 MFC 실행 파일 (응용 프로그램 또는 일반 MFC Dll)의 MFC 공유 버전으로 작성 하는 MFC 확장 DLL을 사용할 수 있습니다. MFC 확장 DLL MFC에서 새로운 사용자 지정 클래스를 파생 시킨 수 있으며 다음이 확장 된 버전의 MFC DLL을 호출 하는 응용 프로그램을 제공할 수 있습니다.  

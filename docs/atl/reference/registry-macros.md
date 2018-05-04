@@ -1,12 +1,9 @@
 ---
-title: "레지스트리 매크로 | Microsoft Docs"
-ms.custom: 
+title: 레지스트리 매크로 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::_ATL_STATIC_REGISTRY
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eada9ed75bd69122523350536d0757e98b31358d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed9b172217f1ca7ada7d8752151126b53055df37
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-macros"></a>레지스트리 매크로
 이러한 매크로 유용한 형식 라이브러리 및 레지스트리 시설을 정의 합니다.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
  **헤더:** atlcom.h  
   
     
-##  <a name="_atl_static_registry"></a>_ATL_STATIC_REGISTRY  
+##  <a name="_atl_static_registry"></a>  _ATL_STATIC_REGISTRY  
  Atl에 기반한 종속성을 방지 하기 위해 개체에 포함 되도록 개체에 대 한 등록 코드가 필요한 경우를 나타내는 기호 DLL입니다.  
   
 ```
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_ATL_EventHandlingSample#5](../../atl/codesnippet/cpp/registry-macros_1.cpp)]  
   
-##  <a name="declare_libid"></a>DECLARE_LIBID  
+##  <a name="declare_libid"></a>  DECLARE_LIBID  
  ATL 가져올 수 있는 방법을 제공는 *libid* 형식 라이브러리의 합니다.  
   
 ```
@@ -76,17 +71,17 @@ DECLARE_LIBID( libid )
 ### <a name="remarks"></a>설명  
  사용 하 여 `DECLARE_LIBID` 에 `CAtlModuleT`-클래스를 파생 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  ATL 프로젝트 마법사에서 생성 된 아닌 특성을 사용이 매크로 사용 하는 예제를 갖습니다.  
   
-##  <a name="declare_no_registry"></a>DECLARE_NO_REGISTRY  
+##  <a name="declare_no_registry"></a>  DECLARE_NO_REGISTRY  
  사용 하 여 `DECLARE_NO_REGISTRY` 이 매크로 표시 되는 클래스에 대 한 기본 ATL 등록을 방지 하려는 경우.  
   
 ```
 DECLARE_NO_REGISTRY()
 ```  
   
-##  <a name="declare_registry"></a>DECLARE_REGISTRY  
+##  <a name="declare_registry"></a>  DECLARE_REGISTRY  
  시스템 레지스트리에 표준 클래스 등록을 입력 하거나 시스템 레지스트리에서 제거 합니다.  
   
 ```
@@ -117,9 +112,9 @@ DECLARE_REGISTRY(
 ### <a name="remarks"></a>설명  
  표준 등록 CLSID, 프로그램 ID, 버전 독립 프로그램 ID, 설명 문자열 및 스레드 모델 구성 됩니다.  
   
- ATL 클래스 추가 마법사를 사용 하 여 제어할 또는 개체를 만들 때 마법사 자동으로 레지스트리 스크립트 기반 지원을 구현 하 고 추가 [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) 파일에는 매크로입니다. 사용 하 여이 매크로 교체 해야 하는 경우 레지스트리 스크립트 기반 지원 하지 않으려면 `DECLARE_REGISTRY`합니다. `DECLARE_REGISTRY`만 레지스트리에 위에서 설명한 5 개의 기본 키를 삽입 합니다. 다른 키를 레지스트리에 삽입 하는 코드를 직접 작성 해야 합니다.  
+ ATL 클래스 추가 마법사를 사용 하 여 제어할 또는 개체를 만들 때 마법사 자동으로 레지스트리 스크립트 기반 지원을 구현 하 고 추가 [DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid) 파일에는 매크로입니다. 사용 하 여이 매크로 교체 해야 하는 경우 레지스트리 스크립트 기반 지원 하지 않으려면 `DECLARE_REGISTRY`합니다. `DECLARE_REGISTRY` 만 레지스트리에 위에서 설명한 5 개의 기본 키를 삽입 합니다. 다른 키를 레지스트리에 삽입 하는 코드를 직접 작성 해야 합니다.  
   
-##  <a name="declare_registry_appid_resourceid"></a>DECLARE_REGISTRY_APPID_RESOURCEID  
+##  <a name="declare_registry_appid_resourceid"></a>  DECLARE_REGISTRY_APPID_RESOURCEID  
  자동으로 등록 하는 데 필요한 정보를 지정 된 *appid*합니다.  
   
 ```
@@ -138,10 +133,10 @@ DECLARE_REGISTRY_APPID_RESOURCEID(
 ### <a name="remarks"></a>설명  
  사용 하 여 `DECLARE_REGISTRY_APPID_RESOURCEID` 에 `CAtlModuleT`-클래스를 파생 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  클래스 추가 코드 마법사로 ATL 프로젝트에 추가 되는 클래스가이 매크로 사용 하는 예제를 갖습니다.  
   
-##  <a name="declare_registry_resource"></a>DECLARE_REGISTRY_RESOURCE  
+##  <a name="declare_registry_resource"></a>  DECLARE_REGISTRY_RESOURCE  
  레지스트리 파일을 포함 하는 명명 된 리소스를 가져오고 개체를 시스템 레지스트리에 입력 하거나 시스템 레지스트리에서 제거 스크립트를 실행 합니다.  
   
 ```
@@ -164,7 +159,7 @@ DECLARE_REGISTRY_RESOURCE( x )
   
  대체 가능 매개 변수 및 스크립트에 대 한 자세한 내용은 문서 참조 [ATL 레지스트리 구성 요소 (등록자)](../../atl/atl-registry-component-registrar.md)합니다.  
   
-##  <a name="declare_registry_resourceid"></a>DECLARE_REGISTRY_RESOURCEID  
+##  <a name="declare_registry_resourceid"></a>  DECLARE_REGISTRY_RESOURCEID  
  와 동일 [DECLARE_REGISTRY_RESOURCE](#declare_registry_resource) 마법사에서 생성 된 사용 하 여 **UINT** 문자열 이름 대신는 리소스를 식별 하 합니다.  
   
 ```

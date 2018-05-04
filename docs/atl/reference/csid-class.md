@@ -1,12 +1,9 @@
 ---
-title: "CSid 클래스 | Microsoft Docs"
-ms.custom: 
+title: CSid 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSid
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38c2cff0cb9bd99a70e142d16ee5e7d38e82d8d0
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: ed55fd2286c3d6e37b59b16a06f43cc4efe55091
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csid-class"></a>CSid 클래스
 이 클래스는에 대 한 래퍼는 `SID` (보안 식별자) 구조입니다.  
@@ -98,11 +93,11 @@ class CSid
 |||  
 |-|-|  
 |[operator ==](#operator_eq_eq)|두 개의 보안 설명자 개체가 같은지를 테스트합니다.|  
-|[operator !=](#operator_neq)|두 개의 보안 설명자 개체가 다른 지 테스트합니다.|  
-|[operator \<](#operator_lt_)|두 개의 보안 설명자 개체의 상대 값을 비교합니다.|  
+|[operator! =](#operator_neq)|두 개의 보안 설명자 개체가 다른 지 테스트합니다.|  
+|[연산자 \<](#operator_lt_)|두 개의 보안 설명자 개체의 상대 값을 비교합니다.|  
 |[연산자 >](#operator_gt_)|두 개의 보안 설명자 개체의 상대 값을 비교합니다.|  
-|[operator \<=](#operator_lt__eq)|두 개의 보안 설명자 개체의 상대 값을 비교합니다.|  
-|[operator >=](#operator_gt__eq)|두 개의 보안 설명자 개체의 상대 값을 비교합니다.|  
+|[연산자 \<=](#operator_lt__eq)|두 개의 보안 설명자 개체의 상대 값을 비교합니다.|  
+|[연산자 > =](#operator_gt__eq)|두 개의 보안 설명자 개체의 상대 값을 비교합니다.|  
   
 ## <a name="remarks"></a>설명  
  `SID` 구조는 사용자 또는 그룹을 고유 하 게 식별 하는 데 사용 되는 다양 한 길이의 구조입니다.  
@@ -342,7 +337,7 @@ bool LoadAccount(
  반환 **true** 성공 **false** 실패 합니다. 확장 오류 정보를 가져오려면 `GetLastError`를 호출합니다.  
   
 ### <a name="remarks"></a>설명  
- `LoadAccount`지정 된 이름에 대 한 보안 식별자를 찾으려고 시도 합니다. 참조 [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx) 내용을 확인 합니다.  
+ `LoadAccount` 지정 된 이름에 대 한 보안 식별자를 찾으려고 시도 합니다. 참조 [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx) 내용을 확인 합니다.  
   
 ##  <a name="operator_eq"></a>  CSid::operator =  
  대입 연산자입니다.  
@@ -378,7 +373,7 @@ bool operator==(
 ### <a name="return-value"></a>반환 값  
  **true 이면** 그렇지 않으면 보안 설명자가 같으면 **false**합니다.  
   
-##  <a name="operator_neq"></a>  CSid::operator !=  
+##  <a name="operator_neq"></a>  CSid::operator! =  
  두 개의 보안 설명자 개체가 다른 지 테스트합니다.  
   
 ```
@@ -516,7 +511,7 @@ SID_NAME_USE SidNameUse() const throw();
 |SidTypeComputer|나타냅니다는 `SID` 컴퓨터에 대 한 합니다.|  
   
 ### <a name="remarks"></a>설명  
- 호출 [CSid::LoadAccount](#loadaccount) 업데이트 하는 `CSid` 호출 하기 전에 개체 `SidNameUse` 해당 상태를 반환할 수 있습니다. `SidNameUse`개체의 상태를 변경 하지 않습니다 (을 호출 하 여 **LookupAccountName** 또는 **LookupAccountSid**), 하지만 현재 상태를 반환 합니다.  
+ 호출 [CSid::LoadAccount](#loadaccount) 업데이트 하는 `CSid` 호출 하기 전에 개체 `SidNameUse` 해당 상태를 반환할 수 있습니다. `SidNameUse` 개체의 상태를 변경 하지 않습니다 (을 호출 하 여 **LookupAccountName** 또는 **LookupAccountSid**), 하지만 현재 상태를 반환 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Security 샘플](../../visual-cpp-samples.md)   

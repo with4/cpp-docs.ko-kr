@@ -1,12 +1,9 @@
 ---
-title: "메시지 맵 매크로 (ATL) | Microsoft Docs"
-ms.custom: 
+title: 메시지 맵 매크로 (ATL) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlwin/ATL::ALT_MSG_MAP
@@ -46,17 +43,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 200d82c9d9b2ca0456ae5de4d6c937be69e212bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f026e7b8190b311b16e86673b6f2271637442df0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="message-map-macros-atl"></a>메시지 맵 매크로 (ATL)
 이러한 매크로 메시지 맵 및 항목을 정의 합니다.  
@@ -101,7 +96,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
 
-##  <a name="alt_msg_map"></a>ALT_MSG_MAP  
+##  <a name="alt_msg_map"></a>  ALT_MSG_MAP  
  대체 메시지 맵의 시작을 표시 합니다.  
   
 ```
@@ -123,7 +118,7 @@ ALT_MSG_MAP(msgMapID)
   
  ATL에서 메시지 맵을 사용 하는 방법에 대 한 자세한 내용은 참조 [메시지 맵](../../atl/message-maps-atl.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 기본 메시지 맵과 각각 하나의 처리기 함수를 포함 하는 하나의 대체 메시지 맵을 보여 줍니다.  
   
  [!code-cpp[NVC_ATL_Windowing#98](../../atl/codesnippet/cpp/message-map-macros-atl_1.h)]  
@@ -135,7 +130,7 @@ ALT_MSG_MAP(msgMapID)
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
 
-##  <a name="begin_msg_map"></a>BEGIN_MSG_MAP  
+##  <a name="begin_msg_map"></a>  BEGIN_MSG_MAP  
  기본 메시지 맵의 시작을 표시 합니다.  
   
 ```
@@ -190,7 +185,7 @@ BEGIN_MSG_MAP(theClass)
 |[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|매핑하는 반영 **WM_NOTIFY** 컨트롤 식별자의 연속 된 범위에 따라를 처리기 함수는 메시지입니다.|  
 |[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|매핑하는 반영 **WM_NOTIFY** 알림 코드와 컨트롤 식별자의 연속 된 범위에 따라를 처리기 함수는 메시지입니다.|  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing#102](../../atl/codesnippet/cpp/message-map-macros-atl_3.h)]  
   
  경우는 `CMyExtWindow` 개체가 받을 `WM_PAINT` 메시지가, 메시지가 전송 되 `CMyExtWindow::OnPaint` 실제 처리 합니다. 경우 `OnPaint` 메시지 추가 처리를 메시지는 필요 하며 다음의 기본 메시지 맵에 전송할 `CMyBaseWindow`합니다.  
@@ -210,7 +205,7 @@ BEGIN_MSG_MAP(theClass)
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="chain_msg_map_alt"></a>CHAIN_MSG_MAP_ALT  
+##  <a name="chain_msg_map_alt"></a>  CHAIN_MSG_MAP_ALT  
  메시지 맵 항목을 정의 합니다.  
   
 ```
@@ -225,7 +220,7 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
  [in] 메시지 맵 식별자입니다.  
   
 ### <a name="remarks"></a>설명  
- `CHAIN_MSG_MAP_ALT`기본 클래스에 대체 메시지 맵에 대 한 메시지를 보냅니다. 로이 대체 메시지 맵을 선언 합니다 [ALT_MSG_MAP(msgMapID)](#alt_msg_map)합니다. 기본 클래스의 기본 메시지 맵에 대 한 메시지를 보낼 (사용 하 여 선언 [BEGIN_MSG_MAP](#begin_msg_map))를 사용 하 여 `CHAIN_MSG_MAP`합니다. 예를 들어 참조 [CHAIN_MSG_MAP](#chain_msg_map)합니다.  
+ `CHAIN_MSG_MAP_ALT` 기본 클래스에 대체 메시지 맵에 대 한 메시지를 보냅니다. 로이 대체 메시지 맵을 선언 합니다 [ALT_MSG_MAP(msgMapID)](#alt_msg_map)합니다. 기본 클래스의 기본 메시지 맵에 대 한 메시지를 보낼 (사용 하 여 선언 [BEGIN_MSG_MAP](#begin_msg_map))를 사용 하 여 `CHAIN_MSG_MAP`합니다. 예를 들어 참조 [CHAIN_MSG_MAP](#chain_msg_map)합니다.  
   
 > [!NOTE]
 >  항상 사용 하 여 메시지 map 시작 `BEGIN_MSG_MAP`합니다. 포함 된 후속 대체 메시지 맵을 선언할 수 있습니다 `ALT_MSG_MAP`합니다. [END_MSG_MAP](#end_msg_map) 매크로 메시지 맵에의 끝을 표시 합니다. 모든 메시지 맵을의 인스턴스 중 하나만 있어야 합니다. `BEGIN_MSG_MAP` 및 `END_MSG_MAP`합니다.  
@@ -235,7 +230,7 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="chain_msg_map_alt_member"></a>CHAIN_MSG_MAP_ALT_MEMBER  
+##  <a name="chain_msg_map_alt_member"></a>  CHAIN_MSG_MAP_ALT_MEMBER  
  메시지 맵 항목을 정의 합니다.  
   
 ```
@@ -250,7 +245,7 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
  [in] 메시지 맵 식별자입니다.  
   
 ### <a name="remarks"></a>설명  
- `CHAIN_MSG_MAP_ALT_MEMBER`데이터 멤버에는 대체 메시지 맵에 메시지를 보냅니다. 로이 대체 메시지 맵을 선언 합니다 [ALT_MSG_MAP(msgMapID)](#alt_msg_map)합니다. 데이터 멤버의 기본 메시지 맵에 대 한 메시지를 보낼 (사용 하 여 선언 [BEGIN_MSG_MAP](#begin_msg_map))를 사용 하 여 `CHAIN_MSG_MAP_MEMBER`합니다. 예를 들어 참조 [CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)합니다.  
+ `CHAIN_MSG_MAP_ALT_MEMBER` 데이터 멤버에는 대체 메시지 맵에 메시지를 보냅니다. 로이 대체 메시지 맵을 선언 합니다 [ALT_MSG_MAP(msgMapID)](#alt_msg_map)합니다. 데이터 멤버의 기본 메시지 맵에 대 한 메시지를 보낼 (사용 하 여 선언 [BEGIN_MSG_MAP](#begin_msg_map))를 사용 하 여 `CHAIN_MSG_MAP_MEMBER`합니다. 예를 들어 참조 [CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)합니다.  
   
 > [!NOTE]
 >  항상 사용 하 여 메시지 map 시작 `BEGIN_MSG_MAP`합니다. 포함 된 후속 대체 메시지 맵을 선언할 수 있습니다 `ALT_MSG_MAP`합니다. [END_MSG_MAP](#end_msg_map) 매크로 메시지 맵에의 끝을 표시 합니다. 모든 메시지 맵을의 인스턴스 중 하나만 있어야 합니다. `BEGIN_MSG_MAP` 및 `END_MSG_MAP`합니다.  
@@ -260,7 +255,7 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="chain_msg_map"></a>CHAIN_MSG_MAP  
+##  <a name="chain_msg_map"></a>  CHAIN_MSG_MAP  
  메시지 맵 항목을 정의 합니다.  
   
 ```
@@ -272,14 +267,14 @@ CHAIN_MSG_MAP(theChainClass)
  [in] 메시지 맵을 포함 하는 기본 클래스의 이름입니다.  
   
 ### <a name="remarks"></a>설명  
- `CHAIN_MSG_MAP`기본 클래스의 기본 메시지 맵에 대 한 메시지를 보냅니다 (사용 하 여 선언 [BEGIN_MSG_MAP](#begin_msg_map)). 기본 클래스의 대체 메시지 맵에 대 한 메시지를 보낼 (사용 하 여 선언 [ALT_MSG_MAP](#alt_msg_map))를 사용 하 여 [CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)합니다.  
+ `CHAIN_MSG_MAP` 기본 클래스의 기본 메시지 맵에 대 한 메시지를 보냅니다 (사용 하 여 선언 [BEGIN_MSG_MAP](#begin_msg_map)). 기본 클래스의 대체 메시지 맵에 대 한 메시지를 보낼 (사용 하 여 선언 [ALT_MSG_MAP](#alt_msg_map))를 사용 하 여 [CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)합니다.  
   
 > [!NOTE]
 >  항상 사용 하 여 메시지 map 시작 `BEGIN_MSG_MAP`합니다. 포함 된 후속 대체 메시지 맵을 선언할 수 있습니다 `ALT_MSG_MAP`합니다. [END_MSG_MAP](#end_msg_map) 매크로 메시지 맵에의 끝을 표시 합니다. 모든 메시지 맵을의 인스턴스 중 하나만 있어야 합니다. `BEGIN_MSG_MAP` 및 `END_MSG_MAP`합니다.  
   
  ATL에서 메시지 맵을 사용 하는 방법에 대 한 자세한 내용은 참조 [메시지 맵](../../atl/message-maps-atl.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing#107](../../atl/codesnippet/cpp/message-map-macros-atl_4.h)]  
   
  이 예제는 다음을 보여 줍니다.  
@@ -288,12 +283,12 @@ CHAIN_MSG_MAP(theChainClass)
   
 -   창 프로시저에서 첫 번째 대체 메시지 맵을 사용 하는 경우 `CMyClass`, 모든 메시지 이동 되 고 `CMyBaseClass`의 기본 메시지 맵.  
   
--   창 프로시저를 사용 하는 경우 `CMyClass`의 두 번째 대체 메시지 매핑 및 `OnChar` 메시지를 메시지에 지정 된 대체 메시지 구조에 전달 되는 핸들 하지 않는 `CMyBaseClass`합니다. `CMyBaseClass`이 메시지 맵을와 선언 있어야 `ALT_MSG_MAP(1)`합니다.  
+-   창 프로시저를 사용 하는 경우 `CMyClass`의 두 번째 대체 메시지 매핑 및 `OnChar` 메시지를 메시지에 지정 된 대체 메시지 구조에 전달 되는 핸들 하지 않는 `CMyBaseClass`합니다. `CMyBaseClass` 이 메시지 맵을와 선언 있어야 `ALT_MSG_MAP(1)`합니다.  
   
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="chain_msg_map_dynamic"></a>CHAIN_MSG_MAP_DYNAMIC  
+##  <a name="chain_msg_map_dynamic"></a>  CHAIN_MSG_MAP_DYNAMIC  
  메시지 맵 항목을 정의 합니다.  
   
 ```
@@ -305,7 +300,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
  [in] 개체의 메시지 맵에 대 한 고유 식별자입니다.  
   
 ### <a name="remarks"></a>설명  
- `CHAIN_MSG_MAP_DYNAMIC`다른 개체의 기본 메시지 맵에 런타임에 메시지를 보냅니다. 와 관련 된 개체 및 자신의 메시지 맵을 *dynaChainID*를 통해 정의 하는 [CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry)합니다. 클래스를 파생 해야 `CDynamicChain` 사용 하려면 `CHAIN_MSG_MAP_DYNAMIC`합니다. 예를 들어 참조는 [CDynamicChain](../../atl/reference/cdynamicchain-class.md) 개요입니다.  
+ `CHAIN_MSG_MAP_DYNAMIC` 다른 개체의 기본 메시지 맵에 런타임에 메시지를 보냅니다. 와 관련 된 개체 및 자신의 메시지 맵을 *dynaChainID*를 통해 정의 하는 [CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry)합니다. 클래스를 파생 해야 `CDynamicChain` 사용 하려면 `CHAIN_MSG_MAP_DYNAMIC`합니다. 예를 들어 참조는 [CDynamicChain](../../atl/reference/cdynamicchain-class.md) 개요입니다.  
 
   
 > [!NOTE]
@@ -316,7 +311,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="chain_msg_map_member"></a>CHAIN_MSG_MAP_MEMBER  
+##  <a name="chain_msg_map_member"></a>  CHAIN_MSG_MAP_MEMBER  
  메시지 맵 항목을 정의 합니다.  
   
 ```
@@ -328,14 +323,14 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
  [in] 메시지 맵이 포함 된 데이터 멤버의 이름입니다.  
   
 ### <a name="remarks"></a>설명  
- `CHAIN_MSG_MAP_MEMBER`데이터 멤버의 기본 메시지 맵에 대 한 메시지를 보냅니다 (사용 하 여 선언 [BEGIN_MSG_MAP](#begin_msg_map)). 데이터 멤버의 대체 메시지 맵에 대 한 메시지를 보낼 (사용 하 여 선언 [ALT_MSG_MAP](#alt_msg_map))를 사용 하 여 [CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)합니다.  
+ `CHAIN_MSG_MAP_MEMBER` 데이터 멤버의 기본 메시지 맵에 대 한 메시지를 보냅니다 (사용 하 여 선언 [BEGIN_MSG_MAP](#begin_msg_map)). 데이터 멤버의 대체 메시지 맵에 대 한 메시지를 보낼 (사용 하 여 선언 [ALT_MSG_MAP](#alt_msg_map))를 사용 하 여 [CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)합니다.  
   
 > [!NOTE]
 >  항상 사용 하 여 메시지 map 시작 `BEGIN_MSG_MAP`합니다. 포함 된 후속 대체 메시지 맵을 선언할 수 있습니다 `ALT_MSG_MAP`합니다. [END_MSG_MAP](#end_msg_map) 매크로 메시지 맵에의 끝을 표시 합니다. 모든 메시지 맵을의 인스턴스 중 하나만 있어야 합니다. `BEGIN_MSG_MAP` 및 `END_MSG_MAP`합니다.  
   
  ATL에서 메시지 맵을 사용 하는 방법에 대 한 자세한 내용은 참조 [메시지 맵](../../atl/message-maps-atl.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing#108](../../atl/codesnippet/cpp/message-map-macros-atl_5.h)]  
   
  이 예제는 다음을 보여 줍니다.  
@@ -349,7 +344,7 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="command_code_handler"></a>COMMAND_CODE_HANDLER  
+##  <a name="command_code_handler"></a>  COMMAND_CODE_HANDLER  
  비슷합니다 [COMMAND_HANDLER](#command_handler), 하지만 매핑하는 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) 알림 코드에만 메시지를 기반 합니다.  
   
 ```
@@ -366,7 +361,7 @@ COMMAND_CODE_HANDLER(code, func)
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="command_handler"></a>COMMAND_HANDLER  
+##  <a name="command_handler"></a>  COMMAND_HANDLER  
  메시지 맵 항목을 정의 합니다.  
   
 ```
@@ -384,7 +379,7 @@ COMMAND_HANDLER(id, code, func)
  [in] 메시지-처리기 함수의 이름입니다.  
   
 ### <a name="remarks"></a>설명  
- `COMMAND_HANDLER`매핑하는 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) 알림 코드와 컨트롤 식별자에 따라 지정 된 처리기 함수에는 메시지입니다. 예:  
+ `COMMAND_HANDLER` 매핑하는 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) 알림 코드와 컨트롤 식별자에 따라 지정 된 처리기 함수에는 메시지입니다. 예를 들어:  
   
  [!code-cpp[NVC_ATL_Windowing#119](../../atl/codesnippet/cpp/message-map-macros-atl_6.h)]  
   
@@ -404,7 +399,7 @@ COMMAND_HANDLER(id, code, func)
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="command_id_handler"></a>COMMAND_ID_HANDLER  
+##  <a name="command_id_handler"></a>  COMMAND_ID_HANDLER  
  비슷합니다 [COMMAND_HANDLER](#command_handler), 하지만 매핑하는 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) 메뉴 항목, 컨트롤 또는 액셀러레이터 키의 식별자에만 메시지를 기반 합니다.  
   
 ```
@@ -421,7 +416,7 @@ COMMAND_ID_HANDLER(id, func)
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="command_range_code_handler"></a>COMMAND_RANGE_CODE_HANDLER  
+##  <a name="command_range_code_handler"></a>  COMMAND_RANGE_CODE_HANDLER  
  비슷한 [COMMAND_RANGE_HANDLER](#command_range_handler), 매핑합니다 하지만 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) 단일 처리기 함수에 다양 한 컨트롤에서에서 특정 알림 코드를 사용 하 여 메시지입니다.  
   
 ```
@@ -447,7 +442,7 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="command_range_handler"></a>COMMAND_RANGE_HANDLER  
+##  <a name="command_range_handler"></a>  COMMAND_RANGE_HANDLER  
  비슷한 [COMMAND_HANDLER](#command_handler), 매핑합니다 하지만 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) 컨트롤의 범위에서 메시지를 단일 처리기 함수입니다.  
   
 ```
@@ -470,7 +465,7 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="declare_empty_msg_map"></a>DECLARE_EMPTY_MSG_MAP  
+##  <a name="declare_empty_msg_map"></a>  DECLARE_EMPTY_MSG_MAP  
  빈 메시지 맵을 선언합니다.  
   
 ```
@@ -478,11 +473,11 @@ DECLARE_EMPTY_MSG_MAP()
 ```  
   
 ### <a name="remarks"></a>설명  
- `DECLARE_EMPTY_MSG_MAP`매크로 호출 하는 편리한 매크로 [BEGIN_MSG_MAP](#begin_msg_map) 및 [END_MSG_MAP](#end_msg_map) 빈 메시지 맵을 만들려면:  
+ `DECLARE_EMPTY_MSG_MAP` 매크로 호출 하는 편리한 매크로 [BEGIN_MSG_MAP](#begin_msg_map) 및 [END_MSG_MAP](#end_msg_map) 빈 메시지 맵을 만들려면:  
   
  [!code-cpp[NVC_ATL_Windowing#122](../../atl/codesnippet/cpp/message-map-macros-atl_7.h)]  
   
-##  <a name="default_reflection_handler"></a>DEFAULT_REFLECTION_HANDLER  
+##  <a name="default_reflection_handler"></a>  DEFAULT_REFLECTION_HANDLER  
  리플렉션된 메시지; 받을 자식 창 (컨트롤)에 대 한 기본 처리기를 제공 합니다. 처리기는 처리 되지 않은 메시지를 전달 제대로 `DefWindowProc`합니다.  
   
 ```
@@ -492,7 +487,7 @@ DEFAULT_REFLECTION_HANDLER()
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="end_msg_map"></a>END_MSG_MAP  
+##  <a name="end_msg_map"></a>  END_MSG_MAP  
  메시지 맵의 끝을 표시 합니다.  
   
 ```
@@ -506,7 +501,7 @@ END_MSG_MAP()
   
  ATL에서 메시지 맵을 사용 하는 방법에 대 한 자세한 내용은 참조 [메시지 맵](../../atl/message-maps-atl.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 기본 메시지 맵과 각각 하나의 처리기 함수를 포함 하는 하나의 대체 메시지 맵을 보여 줍니다.  
   
  [!code-cpp[NVC_ATL_Windowing#98](../../atl/codesnippet/cpp/message-map-macros-atl_1.h)]  
@@ -518,7 +513,7 @@ END_MSG_MAP()
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="forward_notifications"></a>FORWARD_NOTIFICATIONS  
+##  <a name="forward_notifications"></a>  FORWARD_NOTIFICATIONS  
  부모 창에 알림 메시지를 전달합니다.  
   
 ```
@@ -531,7 +526,7 @@ FORWARD_NOTIFICATIONS()
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="message_handler"></a>MESSAGE_HANDLER  
+##  <a name="message_handler"></a>  MESSAGE_HANDLER  
  메시지 맵 항목을 정의 합니다.  
   
 ```
@@ -546,7 +541,7 @@ MESSAGE_HANDLER( msg, func )
  [in] 메시지-처리기 함수의 이름입니다.  
   
 ### <a name="remarks"></a>설명  
- `MESSAGE_HANDLER`지정 된 처리기 함수에는 Windows 메시지를 매핑합니다.  
+ `MESSAGE_HANDLER` 지정 된 처리기 함수에는 Windows 메시지를 매핑합니다.  
   
  에 지정 된 모든 함수는 `MESSAGE_HANDLER` 매크로 다음과 같이 정의 되어야 합니다.  
   
@@ -561,13 +556,13 @@ MESSAGE_HANDLER( msg, func )
   
  ATL에서 메시지 맵을 사용 하는 방법에 대 한 자세한 내용은 참조 [메시지 맵](../../atl/message-maps-atl.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing#129](../../atl/codesnippet/cpp/message-map-macros-atl_8.h)]  
   
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="message_range_handler"></a>MESSAGE_RANGE_HANDLER  
+##  <a name="message_range_handler"></a>  MESSAGE_RANGE_HANDLER  
  비슷한 [MESSAGE_HANDLER](#message_handler), 하지만 Windows의 범위는 단일 처리기 함수에 메시지 맵.  
   
 ```
@@ -587,7 +582,7 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="notify_code_handler"></a>NOTIFY_CODE_HANDLER  
+##  <a name="notify_code_handler"></a>  NOTIFY_CODE_HANDLER  
  비슷합니다 [NOTIFY_HANDLER](#notify_handler), 하지만 매핑하는 [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) 알림 코드에만 메시지를 기반 합니다.  
   
 ```
@@ -604,7 +599,7 @@ NOTIFY_CODE_HANDLER(cd, func)
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="notify_handler"></a>NOTIFY_HANDLER  
+##  <a name="notify_handler"></a>  NOTIFY_HANDLER  
  메시지 맵 항목을 정의 합니다.  
   
 ```
@@ -622,7 +617,7 @@ NOTIFY_HANDLER( id, cd, func )
  [in] 메시지-처리기 함수의 이름입니다.  
   
 ### <a name="remarks"></a>설명  
- `NOTIFY_HANDLER`매핑하는 [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) 알림 코드와 컨트롤 식별자에 따라 지정 된 처리기 함수에는 메시지입니다.  
+ `NOTIFY_HANDLER` 매핑하는 [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) 알림 코드와 컨트롤 식별자에 따라 지정 된 처리기 함수에는 메시지입니다.  
   
  에 지정 된 모든 함수는 `NOTIFY_HANDLER` 매크로 다음과 같이 정의 되어야 합니다.  
   
@@ -637,13 +632,13 @@ NOTIFY_HANDLER( id, cd, func )
   
  ATL에서 메시지 맵을 사용 하는 방법에 대 한 자세한 내용은 참조 [메시지 맵](../../atl/message-maps-atl.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing#130](../../atl/codesnippet/cpp/message-map-macros-atl_9.h)]  
   
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="notify_id_handler"></a>NOTIFY_ID_HANDLER  
+##  <a name="notify_id_handler"></a>  NOTIFY_ID_HANDLER  
  비슷합니다 [NOTIFY_HANDLER](#notify_handler), 하지만 매핑하는 [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) 컨트롤 식별자에만 메시지를 기반 합니다.  
   
 ```
@@ -660,7 +655,7 @@ NOTIFY_ID_HANDLER( id, func )
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="notify_range_code_handler"></a>NOTIFY_RANGE_CODE_HANDLER  
+##  <a name="notify_range_code_handler"></a>  NOTIFY_RANGE_CODE_HANDLER  
  비슷한 [NOTIFY_RANGE_HANDLER](#notify_range_handler), 매핑합니다 하지만 [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) 단일 처리기 함수에 다양 한 컨트롤에서에서 특정 알림 코드를 사용 하 여 메시지입니다.  
   
 ```
@@ -686,7 +681,7 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="notify_range_handler"></a>NOTIFY_RANGE_HANDLER  
+##  <a name="notify_range_handler"></a>  NOTIFY_RANGE_HANDLER  
  비슷한 [NOTIFY_HANDLER](#notify_handler), 매핑합니다 하지만 [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) 컨트롤의 범위에서 메시지를 단일 처리기 함수입니다.  
   
 ```
@@ -709,7 +704,7 @@ NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="reflect_notifications"></a>REFLECT_NOTIFICATIONS  
+##  <a name="reflect_notifications"></a>  REFLECT_NOTIFICATIONS  
  알림 메시지를 다시 보낸 자식 창 (제어)를 반영 합니다.  
   
 ```
@@ -722,7 +717,7 @@ REFLECT_NOTIFICATIONS()
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="reflected_command_code_handler"></a>REFLECTED_COMMAND_CODE_HANDLER  
+##  <a name="reflected_command_code_handler"></a>  REFLECTED_COMMAND_CODE_HANDLER  
  비슷한 [COMMAND_CODE_HANDLER](#command_code_handler), 있지만 부모 창에서 반영 하는 명령에 매핑합니다.  
   
 ```
@@ -739,7 +734,7 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
    
-##  <a name="reflected_command_handler"></a>REFLECTED_COMMAND_HANDLER  
+##  <a name="reflected_command_handler"></a>  REFLECTED_COMMAND_HANDLER  
  비슷한 [COMMAND_HANDLER](#command_handler), 있지만 부모 창에서 반영 하는 명령에 매핑합니다.  
   
 ```
@@ -759,7 +754,7 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
 
-##  <a name="reflected_command_id_handler"></a>REFLECTED_COMMAND_ID_HANDLER  
+##  <a name="reflected_command_id_handler"></a>  REFLECTED_COMMAND_ID_HANDLER  
  비슷한 [COMMAND_ID_HANDLER](#command_id_handler), 있지만 부모 창에서 반영 하는 명령에 매핑합니다.  
   
 ```
@@ -776,7 +771,7 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
 
-##  <a name="reflected_command_range_code_handler"></a>REFLECTED_COMMAND_RANGE_CODE_HANDLER  
+##  <a name="reflected_command_range_code_handler"></a>  REFLECTED_COMMAND_RANGE_CODE_HANDLER  
  비슷한 [COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler), 있지만 부모 창에서 반영 하는 명령에 매핑합니다.  
   
 ```
@@ -799,7 +794,7 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
 
-##  <a name="reflected_command_range_handler"></a>REFLECTED_COMMAND_RANGE_HANDLER  
+##  <a name="reflected_command_range_handler"></a>  REFLECTED_COMMAND_RANGE_HANDLER  
  비슷한 [COMMAND_RANGE_HANDLER](#command_range_handler), 있지만 부모 창에서 반영 하는 명령에 매핑합니다.  
   
 ```
@@ -819,7 +814,7 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
 
-##  <a name="reflected_notify_code_handler"></a>REFLECTED_NOTIFY_CODE_HANDLER  
+##  <a name="reflected_notify_code_handler"></a>  REFLECTED_NOTIFY_CODE_HANDLER  
  비슷한 [NOTIFY_CODE_HANDLER](#notify_code_handler), 하지만 알림 부모 창에서 반사를 매핑합니다.  
   
 ```
@@ -836,7 +831,7 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
 
-##  <a name="reflected_notify_handler"></a>REFLECTED_NOTIFY_HANDLER  
+##  <a name="reflected_notify_handler"></a>  REFLECTED_NOTIFY_HANDLER  
  비슷한 [NOTIFY_HANDLER](#notify_handler), 하지만 알림 부모 창에서 반사를 매핑합니다.  
   
 ```
@@ -856,7 +851,7 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
 
-##  <a name="reflected_notify_id_handler"></a>REFLECTED_NOTIFY_ID_HANDLER  
+##  <a name="reflected_notify_id_handler"></a>  REFLECTED_NOTIFY_ID_HANDLER  
  비슷한 [NOTIFY_ID_HANDLER](#notify_id_handler), 하지만 알림 부모 창에서 반사를 매핑합니다.  
   
 ```
@@ -873,7 +868,7 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
 
-##  <a name="reflected_notify_range_code_handler"></a>REFLECTED_NOTIFY_RANGE_CODE_HANDLER  
+##  <a name="reflected_notify_range_code_handler"></a>  REFLECTED_NOTIFY_RANGE_CODE_HANDLER  
  비슷한 [NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler), 하지만 알림 부모 창에서 반사를 매핑합니다.  
   
 ```
@@ -896,7 +891,7 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h   
   
-##  <a name="reflected_notify_range_handler"></a>REFLECTED_NOTIFY_RANGE_HANDLER  
+##  <a name="reflected_notify_range_handler"></a>  REFLECTED_NOTIFY_RANGE_HANDLER  
  비슷한 [NOTIFY_RANGE_HANDLER](#notify_range_handler), 하지만 알림 부모 창에서 반사를 매핑합니다.  
   
 ```

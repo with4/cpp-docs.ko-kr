@@ -1,13 +1,10 @@
 ---
-title: "링커 옵션 설정 | Microsoft Docs"
-ms.custom: 
+title: 링커 옵션 설정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - input files [C++]
 - object/library modules
 ms.assetid: e08fb487-0f2e-4f24-87db-232dbc8bd2e2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ba42921f1e192c90e302b437b9a7d1b4e5eb34e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 18728994be3f44152a263fb8a6009728e33a42a0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setting-linker-options"></a>링커 옵션 설정
 내부 또는 개발 환경 외부에서 링커 옵션을 설정할 수 있습니다. 각 링커 옵션에 대 한 알아봅니다 방법을 개발 환경에서 설정할 수 있습니다. 참조 [링커 옵션](../../build/reference/linker-options.md) 전체 목록은 합니다.  

@@ -1,12 +1,9 @@
 ---
-title: "CStringRefElementTraits 클래스 | Microsoft Docs"
-ms.custom: 
+title: CStringRefElementTraits 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CStringRefElementTraits
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CStringRefElementTraits class
 ms.assetid: cc15062d-5627-46cc-ac2b-1744afdc2dbd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c89a1e0d87550614fb8991ac3efe6bf369d147e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e8746bf216be417fb569aae58421b272c983914b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstringrefelementtraits-class"></a>CStringRefElementTraits 클래스
 이 클래스와 관련 된 클래스 개체를 컬렉션에 저장 된 문자열 정적 함수를 제공 합니다. String 개체 참조로 처리 됩니다.  
@@ -68,7 +63,7 @@ class CStringRefElementTraits : public CElementTraitsBase<T>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcoll.h  
   
-##  <a name="compareelements"></a>CStringRefElementTraits::CompareElements  
+##  <a name="compareelements"></a>  CStringRefElementTraits::CompareElements  
  두 개의 문자열 요소가 같은지 비교 하려면이 정적 함수를 호출 합니다.  
   
 ```
@@ -85,7 +80,7 @@ static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
 ### <a name="return-value"></a>반환 값  
  요소가 같은지, false를 반환 하지 않으면 true를 반환 합니다.  
   
-##  <a name="compareelementsordered"></a>CStringRefElementTraits::CompareElementsOrdered  
+##  <a name="compareelementsordered"></a>  CStringRefElementTraits::CompareElementsOrdered  
  두 개의 문자열 요소를 비교 하려면이 정적 함수를 호출 합니다.  
   
 ```
@@ -102,7 +97,7 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="return-value"></a>반환 값  
  문자열이 동일한 경우 0이 고, < 0 경우 `str1` 는 보다 작은 `str2`, 또는 > 0 경우 `str1` 보다 크면 `str2`합니다. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) 는 비교를 수행 하려면 메서드를 사용 합니다.  
   
-##  <a name="hash"></a>CStringRefElementTraits::Hash  
+##  <a name="hash"></a>  CStringRefElementTraits::Hash  
  지정 된 string 요소에 대 한 해시 값을 계산 하기이 정적 함수를 호출 합니다.  
   
 ```

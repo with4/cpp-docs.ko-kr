@@ -2,12 +2,9 @@
 title: 컴파일러 처리량 향상 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - performance, compiler
 - cl.exe compiler, throughput
 ms.assetid: ba5f884e-9037-4a92-b10e-fc2a3836c5bf
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23e0376006336aecb9d77bb448bf14614399a37a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c78c0640e415f4a531149a47430833ba94770719
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="improving-compiler-throughput"></a>컴파일러 처리량 향상
 미리 컴파일된 헤더를 사용 하 여 프로젝트를 더 빠르게 작성 합니다. ATL, MFC, 또는 Windows SDK 헤더 파일을 사용 하는 경우에 유용 합니다.  

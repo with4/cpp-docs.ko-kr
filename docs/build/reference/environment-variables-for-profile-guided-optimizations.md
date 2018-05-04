@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: f95a6d1e-49a4-4802-a144-092026b600a3
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 701f0292d9960801139abc698946122718247645
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 19edc9c8a2702e5b7ac9ae4a49364718f19d3900
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="environment-variables-for-profile-guided-optimizations"></a>프로필 기반 최적화 환경 변수
 
@@ -71,7 +70,7 @@ PGO 안전 모드로 프로 파일링을 실행 하거나 사용 해야 환경 �
 
 ### <a name="vcprofilepath-syntax"></a>VCPROFILE_PATH 구문
 
-> **set VCPROFILE_PATH**[**=**_path_]
+> **VCPROFILE_PATH 설정**[**=**_경로_]
 
 설정의 *경로* .pgc 파일을 추가 하려면 디렉터리 경로를 매개 변수입니다. 예를 들어 명령줄이 C:\profile에 폴더를 설정 합니다.
 

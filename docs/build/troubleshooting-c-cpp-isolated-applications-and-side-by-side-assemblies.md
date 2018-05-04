@@ -1,13 +1,10 @@
 ---
-title: "격리 된 응용 프로그램 및 side-by-side-어셈블리 C/c + + 문제 해결 | Microsoft Docs"
-ms.custom: 
+title: 격리 된 응용 프로그램 및 side-by-side-어셈블리 C/c + + 문제 해결 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3ea32a33a3194282657999712effbad0e334bea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f5645270cbc8fbb71dd841cb4f1affa6bef1295
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>C/C++ 격리된 응용 프로그램 및 side-by-side 어셈블리 문제 해결
 종속 라이브러리를 찾을 수 없는 경우 C/C++ 응용 프로그램을 로드하지 못할 수 있습니다. 이 문서에서는 C/C++ 응용 프로그램을 로드하지 못하는 몇 가지 일반적인 이유에 대해 설명하고 문제를 해결할 수 있는 단계를 제안합니다.  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
   
 6.  매니페스트에 열거되는 모든 어셈블리가 컴퓨터에 올바르게 설치되어 있는지 확인합니다. 각 어셈블리는 이름, 버전 번호 및 프로세서 아키텍처별로 매니페스트에 지정됩니다. 응용 프로그램-side-by-side 어셈블리에 의존 하는 경우 이러한 어셈블리 설치 되어 있는지 확인 올바르게 컴퓨터에 운영 체제 로더를 찾을 수 있도록에 설명 된 대로 [어셈블리 검색 시퀀스](http://msdn.microsoft.com/library/aa374224)합니다. 64비트 어셈블리는 32비트 프로세스에서 로드할 수 없으며 32비트 운영 체제에서 실행할 수 없습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  Visual c + +를 사용 하 여 만들어지는 appl.exe 응용 프로그램이 있다고 가정 합니다. 응용 프로그램 매니페스트는 ID가 1인 이진 리소스 RT_MANIFEST로 appl.exe에 포함되거나 별도의 파일 appl.exe.manifest로 저장됩니다. 이 매니페스트의 콘텐츠는 다음과 같습니다.  
   
 ```  

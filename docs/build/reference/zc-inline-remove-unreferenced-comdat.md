@@ -1,10 +1,10 @@
 ---
-title: "/Zc: inline (참조 되지 않은 COMDAT 제거) | Microsoft Docs"
-ms.custom: 
+title: '/Zc: inline (참조 되지 않은 COMDAT 제거) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/01/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /Zc:inline
 - VC.Project.VCCLCompilerTool.RemoveUnreferencedCodeData
@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: a4c94224-1d73-4bea-a9d5-4fa73dc924df
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9c62ea6557ba6ba575fc71a34f39d24f41f76fd
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 067ba5dad4e0751a86835ea56c536a5b7250485d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcinline-remove-unreferenced-comdat"></a>/Zc:inline(참조되지 않은 COMDAT 제거)
 
@@ -139,6 +138,6 @@ Visual C++의 규칙과 관련된 문제에 대한 자세한 내용은 [Nonstand
 
 1. 수정 된 **참조 되지 않은 코드 및 데이터를 제거** 속성을 선택한 후 **확인**합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [/Zc(규칙)](../../build/reference/zc-conformance.md)<br/>

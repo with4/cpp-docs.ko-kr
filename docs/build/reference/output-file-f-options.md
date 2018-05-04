@@ -2,12 +2,9 @@
 title: 출력 파일 (-F) 옵션 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /f
 dev_langs:
@@ -17,32 +14,30 @@ helpviewer_keywords:
 - output files, compiler options [C++]
 - cl.exe compiler, output files
 ms.assetid: f6367f30-2710-4178-b43a-639eed824acb
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa7bdc75bd994b5220d4f6fbbc0d4defeb68c691
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 40adadb2e9f0c06fc9164537656f7eec3b7527af
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="output-file-f-options"></a>출력 파일(/F) 옵션
 출력 파일 옵션 만들거나 출력 파일의 이름을 바꿉니다. CL 환경 변수, 명령줄 또는 명령 파일에에서 지정 된 모든 C 또는 c + + 소스 파일을 영향을 줍니다.  
   
--   [/FA, /Fa (목록 파일)](../../build/reference/fa-fa-listing-file.md)  
+-   [/FA, /Fa(목록 파일)](../../build/reference/fa-fa-listing-file.md)  
   
 -   [경로 이름 지정](../../build/reference/specifying-the-pathname.md)  
   
 -   [/Fd (PDB 파일 이름)](../../build/reference/fd-program-database-file-name.md)  
   
--   [/Fe (EXE 파일 이름)](../../build/reference/fe-name-exe-file.md)  
+-   [/Fe(EXE 파일 이름 지정)](../../build/reference/fe-name-exe-file.md)  
   
--   [/FI (강제 포함 파일 이름)](../../build/reference/fi-name-forced-include-file.md)  
+-   [/FI(강제 포함 파일 이름 지정)](../../build/reference/fi-name-forced-include-file.md)  
   
--   [/Fm (맵 파일 이름)](../../build/reference/fm-name-mapfile.md)  
+-   [/Fm(맵 파일 이름 지정)](../../build/reference/fm-name-mapfile.md)  
   
 -   [/Fo (개체 파일 이름)](../../build/reference/fo-object-file-name.md)  
   
@@ -50,9 +45,9 @@ ms.lasthandoff: 12/21/2017
   
 -   [/FR, /Fr (.sbr 파일 만들기)](../../build/reference/fr-fr-create-dot-sbr-file.md)  
   
--   [/FU (name Forced #using 파일)](../../build/reference/fu-name-forced-hash-using-file.md)  
+-   [/FU(강제 #using 파일 이름 지정)](../../build/reference/fu-name-forced-hash-using-file.md)  
   
--   [/Fx (삽입 된 코드 병합)](../../build/reference/fx-merge-injected-code.md)  
+-   [/Fx(삽입된 코드 병합)](../../build/reference/fx-merge-injected-code.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [컴파일러 옵션](../../build/reference/compiler-options.md)   

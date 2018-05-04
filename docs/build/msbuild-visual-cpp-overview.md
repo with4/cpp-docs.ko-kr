@@ -2,34 +2,29 @@
 title: MSBuild (Visual c + +) 개요 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f250443e0e5da2cf399282f19a5fde58c4c4b089
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae6e6d826f4bc1e8c9ab6cc28686e4ad1e6e3b02
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="msbuild-visual-c-overview"></a>MSBuild(Visual C++) 개요  
   
 MSBuild는 Visual c + + 프로젝트 시스템을 작성 하는 표준입니다. Visual Studio 통합된 개발 환경 (IDE)에서 프로젝트를 빌드할 때 사용 하 여 msbuild.exe 도구, XML 기반 프로젝트 파일 및 설정 (옵션) 파일입니다. Msbuild.exe 및 명령줄에서 프로젝트 파일을 사용할 수 있지만 보다 쉽게 설정을 구성 하 고 프로젝트를 빌드할 수 있도록 IDE 사용자 인터페이스를 제공 합니다. 이 개요에서는 Visual c + + MSBuild 시스템을 사용 하는 방법을 설명 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
   
 MSBuild에 대 한 다음 문서를 참조 합니다.  
   
@@ -84,9 +79,9 @@ IDE에서 프로젝트 속성을 설정 하 고 다음 프로젝트를 저장 �
   
 |디렉터리|설명|  
 |---------------|-----------------|  
-|*드라이브*: \Program Files *(x86)*\Microsoft Visual Studio\\*연도*\\*edition*\Common7\IDE\VC\VCTargets\ <br /><br />*드라이브*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp (x86) \v4.0\\*버전*\ |기본 대상 파일 (.targets)을 포함 하 고 대상에서 사용 되는 속성 파일 (.props). 기본적으로 $(VCTargetsPath) 매크로이 디렉터리를 참조합니다.|  
-|*드라이브*: \Program Files *(x86)*\Microsoft Visual Studio\\*연도*\\*edition*\Common7\IDE\VC\VCTargets\ 플랫폼\\*플랫폼*\ <br /><br />*드라이브*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp\v4.0\\*버전*\Platforms\\*플랫폼*\ |대상 및 부모 디렉터리의 속성을 재정의 하는 플랫폼 특정 대상 및 속성 파일을 포함 합니다. 이 디렉터리는이 디렉터리에 있는 대상에서 사용 되는 작업을 정의 하는 DLL도 포함 됩니다.<br /><br /> *플랫폼* 자리 표시자는 ARM, Win32, 또는 x64 나타냅니다 하위 디렉터리입니다.|  
-|*드라이브*: \Program Files *(x86)*\Microsoft Visual Studio\\*연도*\\*edition*\Common7\IDE\VC\VCTargets\ 플랫폼\\*플랫폼*\PlatformToolsets\\*도구 집합*\ <br /><br />*드라이브*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp\v4.0\\*버전*\Platforms\\*플랫폼*\ \ PlatformToolsets\\*도구 집합*\ <br /><br />*드라이브*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp\v4.0\Platforms\\*플랫폼*\PlatformToolsets\\*도구 집합*\ |지정 된를 사용 하 여 Visual c + + 응용 프로그램을 생성 하는 빌드를 사용할 수 있는 디렉터리를 포함 *도구 집합*합니다.<br /><br /> *연도* 및 *edition* 자리 표시자는 Visual Studio 2017 및 이후 버전에서 사용 됩니다. *버전* 자리 표시자는 Visual Studio 2012 용 V110, Visual Studio 2013 용 V120 또는 Visual Studio 2015 용 V140 합니다. *플랫폼* 자리 표시자는 ARM, Win32, 또는 x64 나타냅니다 하위 디렉터리입니다. *도구 집합* 자리 표시자 예를 들어 v140 v120_xp Visual Studio 2013 도구 집합 또는 v110_wp80를 사용 하 여 Windows XP 용 빌드를 위해 Visual Studio 2015 도구 집합을 사용 하 여 Windows 앱을 빌드하기 위한 도구 집합 하위 디렉터리를 나타냅니다. Visual Studio 2012 도구 집합을 사용 하 여 Windows Phone 8.0 앱을 빌드하십시오.<br /><br />Visual c + + 2008 또는 Visual c + + 2010 응용 프로그램을 생성 하는 빌드를 사용할 수 있는 디렉터리를 포함 하는 경로 포함 되지 않습니다는 *버전*, 및 *플랫폼* 자리 표시자를 나타냅니다 Itanium, Win32, 또는 x64 하위 디렉터리입니다. *도구 집합* 자리 표시자 v90 또는 v100 도구 집합 하위 디렉터리를 나타냅니다.|  
+|*드라이브*: \Program Files *(x86)* \Microsoft Visual Studio\\*연도*\\*edition*\Common7\IDE\VC\VCTargets\ <br /><br />*드라이브*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp (x86) \v4.0\\*버전*\ |기본 대상 파일 (.targets)을 포함 하 고 대상에서 사용 되는 속성 파일 (.props). 기본적으로 $(VCTargetsPath) 매크로이 디렉터리를 참조합니다.|  
+|*드라이브*: \Program Files *(x86)* \Microsoft Visual Studio\\*연도*\\*edition*\Common7\IDE\VC\VCTargets\ 플랫폼\\*플랫폼*\ <br /><br />*드라이브*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*버전*\Platforms\\*플랫폼*\ |대상 및 부모 디렉터리의 속성을 재정의 하는 플랫폼 특정 대상 및 속성 파일을 포함 합니다. 이 디렉터리는이 디렉터리에 있는 대상에서 사용 되는 작업을 정의 하는 DLL도 포함 됩니다.<br /><br /> *플랫폼* 자리 표시자는 ARM, Win32, 또는 x64 나타냅니다 하위 디렉터리입니다.|  
+|*드라이브*: \Program Files *(x86)* \Microsoft Visual Studio\\*연도*\\*edition*\Common7\IDE\VC\VCTargets\ 플랫폼\\*플랫폼*\PlatformToolsets\\*도구 집합*\ <br /><br />*드라이브*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*버전*\Platforms\\*플랫폼*\ \ PlatformToolsets\\*도구 집합*\ <br /><br />*드라이브*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*플랫폼*\PlatformToolsets\\*도구 집합*\ |지정 된를 사용 하 여 Visual c + + 응용 프로그램을 생성 하는 빌드를 사용할 수 있는 디렉터리를 포함 *도구 집합*합니다.<br /><br /> *연도* 및 *edition* 자리 표시자는 Visual Studio 2017 및 이후 버전에서 사용 됩니다. *버전* 자리 표시자는 Visual Studio 2012 용 V110, Visual Studio 2013 용 V120 또는 Visual Studio 2015 용 V140 합니다. *플랫폼* 자리 표시자는 ARM, Win32, 또는 x64 나타냅니다 하위 디렉터리입니다. *도구 집합* 자리 표시자 예를 들어 v140 v120_xp Visual Studio 2013 도구 집합 또는 v110_wp80를 사용 하 여 Windows XP 용 빌드를 위해 Visual Studio 2015 도구 집합을 사용 하 여 Windows 앱을 빌드하기 위한 도구 집합 하위 디렉터리를 나타냅니다. Visual Studio 2012 도구 집합을 사용 하 여 Windows Phone 8.0 앱을 빌드하십시오.<br /><br />Visual c + + 2008 또는 Visual c + + 2010 응용 프로그램을 생성 하는 빌드를 사용할 수 있는 디렉터리를 포함 하는 경로 포함 되지 않습니다는 *버전*, 및 *플랫폼* 자리 표시자를 나타냅니다 Itanium, Win32, 또는 x64 하위 디렉터리입니다. *도구 집합* 자리 표시자 v90 또는 v100 도구 집합 하위 디렉터리를 나타냅니다.|  
   
 ### <a name="support-files"></a>지원 파일  
   

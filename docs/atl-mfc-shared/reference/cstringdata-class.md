@@ -1,12 +1,9 @@
 ---
-title: "CStringData 클래스 | Microsoft Docs"
-ms.custom: 
+title: CStringData 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStringData
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7523ca52c0ded8ec9b3cf02dd6798beca8be5cf8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 187892b74536de47079324d90bb21b2569e00498
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstringdata-class"></a>CStringData 클래스
 이 클래스는 문자열 개체의 데이터를 나타냅니다.  
@@ -98,7 +93,7 @@ struct CStringData
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsimpstr.h  
   
-##  <a name="addref"></a>CStringData::AddRef  
+##  <a name="addref"></a>  CStringData::AddRef  
  String 개체의 참조 횟수를 증가 시킵니다.  
   
 ```
@@ -111,7 +106,7 @@ void AddRef() throw();
 > [!NOTE]
 >  음수 개수는 문자열 버퍼 잠겨 있다고 표시 되므로 음수 참조 횟수를 문자열에이 메서드를 호출 하지 마십시오.  
   
-##  <a name="data"></a>CStringData::data  
+##  <a name="data"></a>  CStringData::data  
  String 개체의 문자 버퍼에 대 한 포인터를 반환합니다.  
   
 ```
@@ -127,7 +122,7 @@ void* data() throw();
 > [!NOTE]
 >  이 버퍼를 할당 하지 않은 `CStringData` 개체 문자열 관리자 필요할 때가 있습니다. 할당 된 버퍼 문자열 데이터 개체에 추가 됩니다.  
   
-##  <a name="islocked"></a>CStringData::IsLocked  
+##  <a name="islocked"></a>  CStringData::IsLocked  
  문자 버퍼 잠겨 있는지 확인 합니다.  
   
 ```
@@ -140,7 +135,7 @@ bool IsLocked() const throw();
 ### <a name="remarks"></a>설명  
  현재 string 개체의 문자 버퍼 잠겨 있는지 확인 하려면이 함수를 호출 합니다.  
   
-##  <a name="isshared"></a>CStringData::IsShared  
+##  <a name="isshared"></a>  CStringData::IsShared  
  문자 버퍼는 공유 하는 경우를 결정 합니다.  
   
 ```
@@ -153,7 +148,7 @@ bool IsShared() const throw();
 ### <a name="remarks"></a>설명  
  문자열 데이터 개체의 문자 버퍼 현재 문자열의 여러 개체 간에 공유 되는지 확인 하려면이 함수를 호출 합니다.  
   
-##  <a name="lock"></a>CStringData::Lock  
+##  <a name="lock"></a>  CStringData::Lock  
  연결 된 문자열 개체의 문자 버퍼를 잠급니다.  
   
 ```
@@ -166,7 +161,7 @@ void Lock() throw();
 > [!NOTE]
 >  버퍼 더 높은 문자열 개체 간에 공유 되지 않은 경우에 문자 버퍼를 잠글 수 있습니다.  
   
-##  <a name="nalloclength"></a>CStringData::nAllocLength  
+##  <a name="nalloclength"></a>  CStringData::nAllocLength  
  할당 된 문자 버퍼의 길이입니다.  
   
 ```
@@ -176,7 +171,7 @@ int nAllocLength;
 ### <a name="remarks"></a>설명  
  에 할당 된 데이터 버퍼의 길이 저장 `XCHAR`s (종료 null) 포함 되지 않음.  
   
-##  <a name="ndatalength"></a>CStringData::nDataLength  
+##  <a name="ndatalength"></a>  CStringData::nDataLength  
  String 개체의 현재 길이입니다.  
   
 ```
@@ -186,7 +181,7 @@ int nDataLength;
 ### <a name="remarks"></a>설명  
  현재 사용 되는 데이터의 길이 저장 `XCHAR`s (종료 null) 포함 되지 않음.  
   
-##  <a name="nrefs"></a>CStringData::nRefs  
+##  <a name="nrefs"></a>  CStringData::nRefs  
  문자열 데이터 개체의 참조 횟수입니다.  
   
 ```
@@ -196,7 +191,7 @@ long nRefs;
 ### <a name="remarks"></a>설명  
  문자열 데이터 개체의 참조 횟수를 저장합니다. 이 수는 문자열 데이터 개체와 관련 된 높은 string 개체의 수를 나타냅니다. 음수 값을 현재 문자열 데이터 개체가 잠겨 있는지를 나타냅니다.  
   
-##  <a name="pstringmgr"></a>CStringData::pStringMgr  
+##  <a name="pstringmgr"></a>  CStringData::pStringMgr  
  연결 된 문자열 개체의 메모리 관리자입니다.  
   
 ```
@@ -206,7 +201,7 @@ IAtlStringMgr* pStringMgr;
 ### <a name="remarks"></a>설명  
  연결 된 문자열 개체에 대 한 메모리 관리자를 저장합니다. 메모리 관리자와 문자열에 대 한 자세한 내용은 참조 하십시오. [메모리 관리 및 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)합니다.  
   
-##  <a name="release"></a>CStringData::Release  
+##  <a name="release"></a>  CStringData::Release  
  문자열 데이터 개체의 참조 횟수를 감소 시킵니다.  
   
 ```
@@ -220,7 +215,7 @@ void Release() throw();
   
  [!code-cpp[NVC_ATLMFC_Utilities#104](../../atl-mfc-shared/codesnippet/cpp/cstringdata-class_1.cpp)]  
   
-##  <a name="unlock"></a>CStringData::Unlock  
+##  <a name="unlock"></a>  CStringData::Unlock  
  연결 된 문자열 개체의 문자 버퍼를 잠금 해제합니다.  
   
 ```

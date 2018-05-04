@@ -2,28 +2,23 @@
 title: 멤버 함수 템플릿 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - function templates, member functions
 ms.assetid: 83d51835-6a27-40ed-997c-7d90dc9182d8
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6d16c94eb9d88f8e000f3830477fbf420acf8b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb7eeed732f8d9e69dd2571b69cf1c7247a38991
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="member-function-templates"></a>멤버 함수 템플릿
 
@@ -31,7 +26,7 @@ ms.lasthandoff: 12/21/2017
   
  멤버 함수는 여러 컨텍스트에서 함수 템플릿이 될 수 있습니다. 클래스 템플릿의 모든 함수는 제네릭이지만 멤버 템플릿 또는 멤버 함수 템플릿이라고는 하지 않습니다. 이 멤버 함수가 고유한 템플릿 인수를 가질 경우 멤버 함수 템플릿으로 간주됩니다.  
   
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
  비템플릿 또는 템플릿 클래스의 멤버 함수 템플릿은 템플릿 매개 변수를 사용하여 함수 템플릿으로 선언됩니다.  
   
@@ -50,7 +45,7 @@ int main()
 }  
 ```  
   
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
  다음 예제에서는 템플릿 클래스의 멤버 함수 템플릿을 보여 줍니다.  
   
@@ -71,7 +66,7 @@ int main()
 }  
 ```  
   
-## <a name="example"></a>예
+## <a name="example"></a>예제
   
 ```cpp
 // defining_member_templates_outside_class.cpp  
@@ -93,7 +88,7 @@ int main()
 }  
 ```  
   
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
  지역 클래스에는 멤버 템플릿이 허용되지 않습니다.  
   

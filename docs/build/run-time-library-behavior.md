@@ -2,12 +2,9 @@
 title: Dll 및 Visual c + + 런타임 라이브러리 동작 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _DllMainCRTStartup
 - CRT_INIT
@@ -24,21 +21,19 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75bf84eeaf9277c5cf037c4fa59c28d109d95856
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: feee3d888fbf43bfd8675ccc83a04fd4e1f0b528
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Dll 및 Visual c + + 런타임 라이브러리 동작  
   
-기본적으로 Visual c + +를 사용 하 여 동적 연결 라이브러리 (DLL)를 빌드할 때 링커 Visual c + + 런타임 라이브러리 (VCRuntime)에 포함 됩니다. VCRuntime 초기화 및 C/c + + 실행 파일을 종료 하는 데 필요한 코드를 포함 합니다. VCRuntime 코드 제공 호출 하는 내부 DLL 진입점 함수를 DLL로 연결 `_DllMainCRTStartup` 를 연결 하거나 프로세스나 스레드를 분리 하려면 해당 DLL에 Windows OS 메시지를 처리 하는 합니다. `_DllMainCRTStartup` 함수는 스택 버퍼 보안 설정, C 런타임 라이브러리 (CRT) 초기화 및 종료, 예: 필수 작업을 수행 하 고 정적 및 전역 개체에 대 한 생성자 및 소멸자를 호출 합니다. `_DllMainCRTStartup`또한 호출 후크 WinRT, MFC 및 ATL 자신의 초기화 및 종료를 수행 하는 등의 다른 라이브러리에 대 한 함수입니다. 이 초기화, CRT 및 다른 라이브러리도 정적 변수를 없이 초기화 되지 않은 상태로 남아 있을 것. DLL이 동적으로 연결 된 CRT DLL 또는 정적으로 연결 된 CRT를 사용 하는지 여부를 동일한 VCRuntime 내부 초기화 및 종료 루틴 호출 됩니다.  
+기본적으로 Visual c + +를 사용 하 여 동적 연결 라이브러리 (DLL)를 빌드할 때 링커 Visual c + + 런타임 라이브러리 (VCRuntime)에 포함 됩니다. VCRuntime 초기화 및 C/c + + 실행 파일을 종료 하는 데 필요한 코드를 포함 합니다. VCRuntime 코드 제공 호출 하는 내부 DLL 진입점 함수를 DLL로 연결 `_DllMainCRTStartup` 를 연결 하거나 프로세스나 스레드를 분리 하려면 해당 DLL에 Windows OS 메시지를 처리 하는 합니다. `_DllMainCRTStartup` 함수는 스택 버퍼 보안 설정, C 런타임 라이브러리 (CRT) 초기화 및 종료, 예: 필수 작업을 수행 하 고 정적 및 전역 개체에 대 한 생성자 및 소멸자를 호출 합니다. `_DllMainCRTStartup` 또한 호출 후크 WinRT, MFC 및 ATL 자신의 초기화 및 종료를 수행 하는 등의 다른 라이브러리에 대 한 함수입니다. 이 초기화, CRT 및 다른 라이브러리도 정적 변수를 없이 초기화 되지 않은 상태로 남아 있을 것. DLL이 동적으로 연결 된 CRT DLL 또는 정적으로 연결 된 CRT를 사용 하는지 여부를 동일한 VCRuntime 내부 초기화 및 종료 루틴 호출 됩니다.  
   
 ## <a name="default-dll-entry-point-dllmaincrtstartup"></a>기본 DLL 항목 지점 _DllMainCRTStartup  
   

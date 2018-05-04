@@ -2,11 +2,8 @@
 title: IPointerInactiveImpl 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IPointerInactiveImpl
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - inactive objects
 - IPointerInactiveImpl class
 ms.assetid: e1fe9ea6-d38a-4527-9112-eb344771e0b7
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe45700a941a8a59439b816124728f43e5f54f44
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c28eb8d6db520bd1c2d5de5642098263508c0f6b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ipointerinactiveimpl-class"></a>IPointerInactiveImpl 클래스
 이 클래스는 구현 **IUnknown** 및 [IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712) 인터페이스 메서드.  
@@ -77,7 +72,7 @@ class IPointerInactiveImpl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlctl.h  
   
-##  <a name="getactivationpolicy"></a>IPointerInactiveImpl::GetActivationPolicy  
+##  <a name="getactivationpolicy"></a>  IPointerInactiveImpl::GetActivationPolicy  
  현재 정품 인증 정책 개체를 검색합니다.  
   
 ```
@@ -90,7 +85,7 @@ HRESULT GetActivationPolicy(DWORD* pdwPolicy);
 ### <a name="remarks"></a>설명  
  참조 [IPointerInactive::GetActivationPolicy](http://msdn.microsoft.com/library/windows/desktop/ms692470) in the Windows SDK입니다.  
   
-##  <a name="oninactivemousemove"></a>IPointerInactiveImpl::OnInactiveMouseMove  
+##  <a name="oninactivemousemove"></a>  IPointerInactiveImpl::OnInactiveMouseMove  
  마우스 포인터를 위로 이동에 개체를 나타내는 개체 마우스 이벤트를 발생 시킬 수에 알립니다.  
   
 ```
@@ -107,7 +102,7 @@ HRESULT OnInactiveMouseMove(
 ### <a name="remarks"></a>설명  
  참조 [IPointerInactive::OnInactiveMouseMove](http://msdn.microsoft.com/library/windows/desktop/ms693374) in the Windows SDK입니다.  
   
-##  <a name="oninactivesetcursor"></a>IPointerInactiveImpl::OnInactiveSetCursor  
+##  <a name="oninactivesetcursor"></a>  IPointerInactiveImpl::OnInactiveSetCursor  
  비활성 개체에 대 한 마우스 포인터를 설정합니다.  
   
 ```

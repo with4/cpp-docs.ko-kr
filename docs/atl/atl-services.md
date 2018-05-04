@@ -1,13 +1,10 @@
 ---
-title: "ATL 서비스 | Microsoft Docs"
-ms.custom: 
+title: ATL 서비스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - CServiceModule
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - services, ATL
 - ATL services
 ms.assetid: 8c09d1a8-7548-4d2c-947c-9d795a81659b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d13eebbe96ba57c82e3bf1c360b0cb471a6bd975
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db13b443e605168389f0a9bc767ba29a75d4234d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-services"></a>ATL 서비스
 ATL COM 개체를 만들려면 서비스에서 실행 되도록 ATL 프로젝트 마법사에서 서버 옵션의 목록에서 서비스 (EXE)를 선택 합니다. 파생 된 클래스 다음 만들어집니다 `CAtlServiceModuleT` 은 서비스 구현에 있습니다.  

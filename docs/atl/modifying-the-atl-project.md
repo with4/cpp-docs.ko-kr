@@ -1,13 +1,10 @@
 ---
-title: "ATL 프로젝트를 수정 합니다. | Microsoft Docs"
-ms.custom: 
+title: ATL 프로젝트를 수정 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - Dialog editor, working with composite controls
 - composite controls, adding controls
 ms.assetid: 59984518-748f-4b8b-875f-3e97d22d0b0f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7de670642e80a32158b84c739d7081ca02d483a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0a8594c2d98b05750d6e43138101894fb8fc4b72
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modifying-the-atl-project"></a>ATL 프로젝트
 이 시점에서 합성 컨트롤 프로젝트 복합 컨트롤에 대 한 필요한 개체를 구현합니다. 다음 단계는 합성 컨트롤 포함 되며 필요한 이벤트를 처리 하는 컨트롤을 추가할 것입니다.  

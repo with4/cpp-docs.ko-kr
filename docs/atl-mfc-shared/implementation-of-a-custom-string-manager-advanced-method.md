@@ -1,29 +1,24 @@
 ---
-title: "사용자 지정 문자열 관리자 구현 (고급 메서드) | Microsoft Docs"
-ms.custom: 
+title: 사용자 지정 문자열 관리자 구현 (고급 메서드) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: 64ab7da9-47c1-4c4a-9cd7-4cc37e7f3f57
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e76edc65e5f30fee90f346d5434ecbee320a37a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 23798a4e3c1a5d3c46ea28dec39b37697aae640f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>사용자 지정 문자열 관리자 구현 (고급 방법)
 경우에는 어떤 힙 메모리를 할당 하는 데 사용 되는 변경 보다 더 않는 사용자 지정 문자열 관리자를 구현 하는 것이 좋습니다. 이 경우 수동으로 구현 해야는 [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) 인터페이스를 사용자 지정 문자열 관리자도 합니다.  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [pStringMgr](../atl-mfc-shared/reference/cstringdata-class.md#pstringmgr) 를 가리키는이 필드는 `IAtlStringMgr` 이 문자열 데이터를 관리 하는 데 사용 되는 인터페이스입니다. 때 `CStringT` 재할당 하거나 재할당 또는 전달이 인터페이스의 해제 메서드를 호출 하는 문자열 버퍼를 해제 하는 `CStringData` 매개 변수로 구조입니다. 할당 하는 경우는 `CStringData` 구조 문자열 관리자에서이 필드를 사용자 지정 문자열 관리자를 가리키도록 설정 해야 합니다.  
   
--   [nDataLength](../atl-mfc-shared/reference/cstringdata-class.md#ndatalength) 이 필드에는 종료 null을 제외 하는 버퍼에 저장 된 문자열의 현재 논리적 길이입니다. `CStringT`문자열의 길이가 변경 될 때이 필드를 업데이트 합니다. 할당 하는 경우는 `CStringData` 구조, 문자열 관리자 0으로이 필드를 설정 해야 합니다. 재할당할 때는 `CStringData` 구조를 사용자 지정 문자열 관리자 변경 하지 않고이 필드를 유지 해야 합니다.  
+-   [nDataLength](../atl-mfc-shared/reference/cstringdata-class.md#ndatalength) 이 필드에는 종료 null을 제외 하는 버퍼에 저장 된 문자열의 현재 논리적 길이입니다. `CStringT` 문자열의 길이가 변경 될 때이 필드를 업데이트 합니다. 할당 하는 경우는 `CStringData` 구조, 문자열 관리자 0으로이 필드를 설정 해야 합니다. 재할당할 때는 `CStringData` 구조를 사용자 지정 문자열 관리자 변경 하지 않고이 필드를 유지 해야 합니다.  
   
 -   [nAllocLength](../atl-mfc-shared/reference/cstringdata-class.md#nalloclength) 이 필드 것 재할당 하지 않고도이 문자열 버퍼에 저장할 수 있는 문자 (종료 null 제외)의 최대 수를 포함 합니다. 때마다 `CStringT` 논리는 문자열의 길이 늘려야 하는 버퍼에 충분 한 공간이 있는지 확인 하려면이 필드를 먼저 확인 합니다. 확인이 실패 하면 `CStringT` 버퍼 다시 할당 하기 위해 사용자 지정 문자열 관리자를 호출 합니다. 할당 또는 다시 할당 하는 경우는 `CStringData` 구조를 설정 해야이 필드를 하나 이상에서 요청 된 문자 수는 **nChars** 매개 변수를 [IAtlStringMgr::Allocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#allocate) 또는 [IAtlStringMgr::Reallocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate)합니다. 요청 된 수보다 버퍼에 공간이 더 많은 경우에 실제 사용 가능한 공간의 크기를 반영 하기 위해이 값을 설정할 수 있습니다. 이 통해 `CStringT` 버퍼를 재할당할 문자열 관리자도 다시 호출할 수 있기 전에 전체 문자열에 공간을 할당 합니다.  
   

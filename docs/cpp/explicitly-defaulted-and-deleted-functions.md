@@ -2,26 +2,21 @@
 title: 명시적으로 기본 설정 및 삭제 된 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f31304a63ddedb90c0aa76ff77883bd1b007b77f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f8558a2fac4995d89d0745917e6e1be5ad99d56
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>명시적으로 기본 설정 및 삭제된 함수
 C++ 11에서 기본 설정 및 삭제된 함수를 사용하면 특수 멤버 함수가 자동으로 생성되는지 여부를 명시적으로 제어할 수 있습니다. 함수를 삭제하면 간단한 언어로 일반적인 멤버 함수와 비멤버 함수뿐 아니라 특수 멤버 함수까지 모든 형식의 함수에 대한 인수에서 문제가 발생할 수 있는 형식 승격을 방지할 수 있습니다. 그렇지 않은 경우 원하지 않는 함수 호출 시 문제가 발생할 수 있습니다.  

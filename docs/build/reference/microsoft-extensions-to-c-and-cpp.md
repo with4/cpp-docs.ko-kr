@@ -1,13 +1,10 @@
 ---
-title: "C 및 c + +에 대 한 Microsoft 확장 | Microsoft Docs"
-ms.custom: 
+title: C 및 c + +에 대 한 Microsoft 확장 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -38,17 +35,15 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8453209a92b8f7485a9e7f575fb8810196d27fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 903ad9d5a44bb455bede52aa3456d03456f54d13
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>C 및 C++에 대한 Microsoft 확장명
 Visual C++는 다음과 같이 ANSI C 및 ANSI C++ 표준을 확장합니다.  
@@ -71,7 +66,7 @@ const int CMyClass::max;   // out of class definition
   
  아래 **/Ze**, 한 클래스 정의 static, const 정수 계열, 및 const 열거형 데이터 멤버에 대 한 선택 사항입니다. static 및 const인 열거형 및 정수만 클래스에서 이니셜라이저를 포함할 수 있습니다. 초기화 식은 const 식이어야 합니다.  
   
- 한 클래스 정의 헤더에서 파일 및 헤더 파일은 여러 소스 파일에 포함 하는 제공 하는 경우 오류를 방지 하기 위해 사용 하 여 [selectany](../../cpp/selectany.md)합니다. 예:  
+ 한 클래스 정의 헤더에서 파일 및 헤더 파일은 여러 소스 파일에 포함 하는 제공 하는 경우 오류를 방지 하기 위해 사용 하 여 [selectany](../../cpp/selectany.md)합니다. 예를 들어:  
   
 ```  
 __declspec(selectany) const int CMyClass::max = 5;  
@@ -80,7 +75,7 @@ __declspec(selectany) const int CMyClass::max = 5;
 ## <a name="casts"></a>캐스트  
  C++ 컴파일러 및 C 컴파일러는 모두 이러한 종류의 비ANSI 캐스트를 지원합니다.  
   
--   l-value를 생성하기 위한 비ANSI 캐스트. 예:  
+-   l-value를 생성하기 위한 비ANSI 캐스트. 예를 들어:  
   
     ```  
     char *p;  
@@ -96,7 +91,7 @@ __declspec(selectany) const int CMyClass::max = 5;
     p = ( char * )(( int * )p + 1 );  
     ```  
   
--   데이터 포인터에 대한 함수 포인터의 비ANSI 캐스트. 예:  
+-   데이터 포인터에 대한 함수 포인터의 비ANSI 캐스트. 예를 들어:  
   
     ```  
     int ( * pfunc ) ();   
@@ -272,7 +267,7 @@ void func ()
   
 -   & (bitand)  
   
--   &#124; (bitor)  
+-   &#124;(bitor)  
   
 -   ~ (compl)  
   
@@ -280,9 +275,9 @@ void func ()
   
 -   ! = (not_eq)  
   
--   &#124; &#124; (또는)  
+-   &#124;&#124;(또는)  
   
--   &#124; (or_eq) =  
+-   &#124;= (or_eq)  
   
 -   ^ (배타적 or)  
   

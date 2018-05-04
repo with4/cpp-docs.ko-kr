@@ -1,13 +1,10 @@
 ---
 title: GetProcAddress | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - GetProcAddress
 dev_langs:
@@ -17,22 +14,20 @@ helpviewer_keywords:
 - ordinal exports [C++]
 - GetProcAddress method
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2bc32c5f6b6ae4ee80c69dff028f05d2b334d920
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cec73a7d7aa212c6f53bc2654db6fe40ff96472a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getprocaddress"></a>GetProcAddress
-DLL 호출에 명시적으로 연결 하는 프로세스 [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) DLL에서 내보낸된 함수 주소를 가져옵니다. 반환 된 함수 포인터를 사용 하 여 DLL 함수를 호출 합니다. **GetProcAddress** DLL 모듈 핸들을 매개 변수로 (에서 반환 된 **LoadLibrary**, `AfxLoadLibrary`, 또는 **GetModuleHandle**) 함수 이름을 사용 하 고 있습니다 원하는 호출 또는 함수의 내보내기로에 서 수입니다.  
+DLL 호출에 명시적으로 연결 하는 프로세스 [GetProcAddress](http://msdn.microsoft.com/library/windows/desktop/ms683212) DLL에서 내보낸된 함수 주소를 가져옵니다. 반환 된 함수 포인터를 사용 하 여 DLL 함수를 호출 합니다. **GetProcAddress** DLL 모듈 핸들을 매개 변수로 (에서 반환 된 **LoadLibrary**, `AfxLoadLibrary`, 또는 **GetModuleHandle**) 원하는 함수 이름을 사용 하 고 호출 하거나 함수 내보내기 서 수를 제공 합니다.  
   
- 포인터를 통해 DLL 함수를 호출 하는 없으므로 컴파일 타임 형식 검사는 한도가 스택에 할당 된 메모리 및에서 액세스 위반이 발생 하지 않는 함수에 매개 변수가 정확한 지 확인 합니다. 형식 안전성을 보장 하는 한 가지 방법은 내보낸 함수의 함수 프로토타입을 확인 하 고 함수 포인터에 대 한 일치 하는 형식 정의 만드는 경우 예:  
+ 포인터를 통해 DLL 함수를 호출 하는 없으므로 컴파일 타임 형식 검사는 한도가 스택에 할당 된 메모리 및에서 액세스 위반이 발생 하지 않는 함수에 매개 변수가 정확한 지 확인 합니다. 형식 안전성을 보장 하는 한 가지 방법은 내보낸 함수의 함수 프로토타입을 확인 하 고 함수 포인터에 대 한 일치 하는 형식 정의 만드는 경우 예를 들어:  
   
 ```  
 typedef UINT (CALLBACK* LPFNDLLFUNC1)(DWORD,UINT);  

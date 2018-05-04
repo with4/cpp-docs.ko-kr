@@ -2,12 +2,9 @@
 title: -Yc (미리 컴파일된 헤더 파일 만들기) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - devlang-cpp
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UsePrecompiledHeader
 - /yc
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - /Yc compiler option [C++]
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
-caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 865b5e0fa7039a0b60f524c2f13a367569757d92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7f26121c80378f4317d02f51582ad67033972765
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc(미리 컴파일된 헤더 파일 만들기)
 컴파일 특정 지점에서 상태를 나타내는 미리 컴파일된 헤더 (.pch) 파일을 만들도록 컴파일러에 지시 합니다.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="syntax"></a>구문  
   
 > __/Yc__
-> __/Yc__*파일 이름*  
+>  __/Yc__*파일 이름*  
   
   
 ## <a name="arguments"></a>인수  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
  미리 컴파일된 헤더에 대 한 자세한 내용은 다음을 참조 하세요.  
   
--   [/Y (미리 컴파일된 헤더)](../../build/reference/y-precompiled-headers.md)  
+-   [/Y(미리 컴파일된 헤더)](../../build/reference/y-precompiled-headers.md)  
   
 -   [미리 컴파일된 헤더 파일 만들기](../../build/reference/creating-precompiled-header-files.md)  
   
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/21/2017
   
 -   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> 및 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>을 참조하십시오.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드를 살펴보세요.  
   
 ```cpp  

@@ -1,12 +1,9 @@
 ---
-title: "CNoWorkerThread 클래스 | Microsoft Docs"
-ms.custom: 
+title: CNoWorkerThread 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CNoWorkerThread
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - CNoWorkerThread class
 ms.assetid: 29f06bae-b658-4aac-9c14-331e996d25d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36af37fae778a572d790a137073c62cfde22019c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 85e1962d10f274f4f8c35ba27cb05c41e8bf19cb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cnoworkerthread-class"></a>CNoWorkerThread 클래스
 이 클래스를 사용 하 여에 대 한 인수로 `MonitorClass` 동적 캐시 유지 관리를 사용 하지 않도록 설정 하려는 경우 캐시 클래스에 템플릿 매개 변수입니다.  
@@ -69,7 +64,7 @@ class CNoWorkerThread
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlutil.h  
   
-##  <a name="addhandle"></a>CNoWorkerThread::AddHandle  
+##  <a name="addhandle"></a>  CNoWorkerThread::AddHandle  
  기능 이외에 해당 [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle)합니다.  
   
 ```
@@ -87,7 +82,7 @@ HRESULT AddHandle(HANDLE /* hObject
 ### <a name="remarks"></a>설명  
  이 클래스에서 제공 하는 구현을 아무 작업도 수행 합니다.  
   
-##  <a name="addtimer"></a>CNoWorkerThread::AddTimer  
+##  <a name="addtimer"></a>  CNoWorkerThread::AddTimer  
  기능 이외에 해당 [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer)합니다.  
   
 ```
@@ -107,7 +102,7 @@ HRESULT AddTimer(DWORD /* dwInterval
 ### <a name="remarks"></a>설명  
  이 클래스에서 제공 하는 구현을 아무 작업도 수행 합니다.  
   
-##  <a name="getthreadhandle"></a>CNoWorkerThread::GetThreadHandle  
+##  <a name="getthreadhandle"></a>  CNoWorkerThread::GetThreadHandle  
  기능 이외에 해당 [CWorkerThread::GetThreadHandle](../../atl/reference/cworkerthread-class.md#getthreadhandle)합니다.  
   
 ```
@@ -120,7 +115,7 @@ HANDLE GetThreadHandle() throw();
 ### <a name="remarks"></a>설명  
  이 클래스에서 제공 하는 구현을 아무 작업도 수행 합니다.  
   
-##  <a name="getthreadid"></a>CNoWorkerThread::GetThreadId  
+##  <a name="getthreadid"></a>  CNoWorkerThread::GetThreadId  
  기능 이외에 해당 [CWorkerThread::GetThreadId](../../atl/reference/cworkerthread-class.md#getthreadid)합니다.  
   
 ```
@@ -133,7 +128,7 @@ DWORD GetThreadId() throw();
 ### <a name="remarks"></a>설명  
  이 클래스에서 제공 하는 구현을 아무 작업도 수행 합니다.  
   
-##  <a name="initialize"></a>CNoWorkerThread::Initialize  
+##  <a name="initialize"></a>  CNoWorkerThread::Initialize  
  기능 이외에 해당 [CWorkerThread::Initialize](../../atl/reference/cworkerthread-class.md#initialize)합니다.  
   
 ```
@@ -146,7 +141,7 @@ HRESULT Initialize() throw();
 ### <a name="remarks"></a>설명  
  이 클래스에서 제공 하는 구현을 아무 작업도 수행 합니다.  
   
-##  <a name="removehandle"></a>CNoWorkerThread::RemoveHandle  
+##  <a name="removehandle"></a>  CNoWorkerThread::RemoveHandle  
  기능 이외에 해당 [CWorkerThread::RemoveHandle](../../atl/reference/cworkerthread-class.md#removehandle)합니다.  
   
 ```
@@ -160,7 +155,7 @@ HRESULT RemoveHandle(HANDLE /* hObject
 ### <a name="remarks"></a>설명  
  이 클래스에서 제공 하는 구현을 아무 작업도 수행 합니다.  
   
-##  <a name="shutdown"></a>CNoWorkerThread::Shutdown  
+##  <a name="shutdown"></a>  CNoWorkerThread::Shutdown  
  기능 이외에 해당 [CWorkerThread::Shutdown](../../atl/reference/cworkerthread-class.md#shutdown)합니다.  
   
 ```

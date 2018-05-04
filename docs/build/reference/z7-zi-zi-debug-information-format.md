@@ -1,6 +1,6 @@
 ---
-title: "-Z7,-Zi,-ZI (디버그 정보 형식) | Microsoft Docs"
-ms.custom: 
+title: -Z7,-Zi,-ZI (디버그 정보 형식) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
@@ -31,14 +31,13 @@ helpviewer_keywords:
 - -Z7 compiler option [C++]
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b55c5ea77b752d4adac8d74abaed245b4d19821
-ms.sourcegitcommit: 3038840ca6e4dea01accf733436b99d19ff6c930
+ms.openlocfilehash: a86605b8fd47c0febedfc9ab022dfc2c2728822a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI(디버깅 정보 형식)
 
@@ -79,7 +78,7 @@ ms.lasthandoff: 02/27/2018
 
 ### <a name="zi"></a>/ZI
 
-**/ZI** 옵션은와 유사 **/Zi**, PDB 파일을 지 원하는 형식에서 생성 되지만 [편집 하며 계속 하기](/visualstudio/debugger/edit-and-continue-visual-cpp) 기능입니다. 편집 하며 계속 하기 디버깅 기능을 사용 하려면이 옵션을 사용 해야 합니다. 편집 하며 계속 하기 기능은 개발자 생산성에 유용 하지만 코드 크기, 성능 및 컴파일러 규칙에서 문제가 발생할 수 있습니다. 대부분의 최적화 편집 하며 계속 하기와 호환 되지 않으므로 사용 하 여 **/ZI** 하나를 사용 하지 않도록 설정 `#pragma optimize` 사용자 코드에서 문입니다. **/ZI** 옵션은 또한의 사용과 호환 되는 [&#95; &#95; 줄 &#95; #95 미리 정의 된 매크로](../../preprocessor/predefined-macros.md);로 컴파일된 코드 **/ZI** 사용할 수 없는 **&#95; &#95; 줄 &#95; #95**  비형식 템플릿 인수로 있지만 **&#95; &#95; 줄 &#95; #95**  매크로 확장에서 사용할 수 있습니다.
+**/ZI** 옵션은와 유사 **/Zi**, PDB 파일을 지 원하는 형식에서 생성 되지만 [편집 하며 계속 하기](/visualstudio/debugger/edit-and-continue-visual-cpp) 기능입니다. 편집 하며 계속 하기 디버깅 기능을 사용 하려면이 옵션을 사용 해야 합니다. 편집 하며 계속 하기 기능은 개발자 생산성에 유용 하지만 코드 크기, 성능 및 컴파일러 규칙에서 문제가 발생할 수 있습니다. 대부분의 최적화 편집 하며 계속 하기와 호환 되지 않으므로 사용 하 여 **/ZI** 하나를 사용 하지 않도록 설정 `#pragma optimize` 사용자 코드에서 문입니다. **/ZI** 옵션은 또한의 사용과 호환 되는 [ &#95; &#95;줄&#95; &#95; 미리 정의 된 매크로](../../preprocessor/predefined-macros.md);로 컴파일된 코드 **/ZI** 를사용할수없습니다 **&#95; &#95;줄&#95; &#95;** 비형식 템플릿 인수로 있지만 **&#95; &#95;줄&#95; &#95;** 매크로 확장에서 사용할 수 있습니다.
 
 **/ZI** 옵션을 모두 사용 하면는 [/Gy (함수 수준 링크 사용)](../../build/reference/gy-enable-function-level-linking.md) 및 [/FC (전체 소스 코드 파일의 경로 진단에서)](../../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md) 컴파일에 사용할 옵션입니다.
 
@@ -100,7 +99,7 @@ ms.lasthandoff: 02/27/2018
 
 - <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DebugInformationFormat%2A>을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [컴파일러 옵션](../../build/reference/compiler-options.md)  
 [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)  

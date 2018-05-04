@@ -2,26 +2,21 @@
 title: 스택 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e3aa8d01dcc85b6c37684ccccaf82c84d8dfb3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b6f711636089a6f2966002002220aac88cebe17a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stack-usage"></a>스택 사용
 모든 메모리 RSP의 현재 주소 외에 메모리 휘발성 것으로 간주 됩니다: OS, 또는 디버거, 인터럽트 처리기 또는 사용자 디버그 세션 동안이 메모리를 덮어쓸 수 있습니다. 따라서 RSP 항상 읽기 또는 스택 프레임으로 값을 쓰기를 시도 하기 전에 설정 해야 합니다.  

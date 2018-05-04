@@ -1,13 +1,10 @@
 ---
-title: "방법: C/c + + 응용 프로그램에 매니페스트 포함 | Microsoft Docs"
-ms.custom: 
+title: '방법: C/c + + 응용 프로그램에 매니페스트 포함 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0950cff4cb568f0adcae5e7d523f233868da013d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a759533a8e88ef05e3660e0e9b36525df378334
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>방법: C/C++ 응용 프로그램에 매니페스트 포함
 C/c + + 응용 프로그램 (또는 라이브러리) 한지의 매니페스트가 대부분의 시나리오에서 올바른 런타임 동작을 보장 하기 때문에 최종 이진에 포함 하는 것이 좋습니다. 기본적으로 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 참조; 소스 파일에서 프로젝트를 빌드할 때 매니페스트를 포함 하려고 [Visual Studio에서 매니페스트 생성](../build/manifest-generation-in-visual-studio.md) 자세한 정보에 대 한 합니다. 그러나를 nmake를 사용 하 여 응용 프로그램을 빌드하는 경우 일부 기존의 메이크파일을 변경이 필요 합니다. 이 섹션에는 최종 이진 매니페스트를 자동으로 포함 하도록 기존 메이크파일을 변경 하는 방법을 보여 줍니다.  

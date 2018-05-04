@@ -1,12 +1,9 @@
 ---
-title: "CImage 클래스 | Microsoft Docs"
-ms.custom: 
+title: CImage 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/01/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CImage
@@ -63,20 +60,18 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d5478a258c55996fe4073ffc1ab616b2b71386c
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 762941834820edda09970750af752d4c8a9df61c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cimage-class"></a>CImage 클래스
-`CImage`향상 된 비트맵 지원, 로드 및 이미지를 JPEG, GIF, BMP, 및 PNG 이동식 네트워크 그래픽 () 형식으로 저장 하는 기능을 포함 하 여 제공 합니다.  
+`CImage` 향상 된 비트맵 지원, 로드 및 이미지를 JPEG, GIF, BMP, 및 PNG 이동식 네트워크 그래픽 () 형식으로 저장 하는 기능을 포함 하 여 제공 합니다.  
   
 > [!IMPORTANT]
 >  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
@@ -146,7 +141,7 @@ class CImage
 |[HBITMAP CImage::operator](#operator_hbitmap)|에 연결 된 Windows 핸들을 반환 된 `CImage` 개체입니다.|  
   
 ## <a name="remarks"></a>설명  
- `CImage`비트맵 또는 부정은 어느 장치 독립적 비트맵 (DIB) 섹션을 사용 합니다. 사용할 수 있습니다 [만들기](#create) 또는 [CImage::Load](#load) DIB 섹션만 사용 합니다. 비 DIB 섹션 비트맵을 연결할 수 있습니다는 `CImage` 개체 사용 하 여 [연결](#attach), 하지만 다음 사용할 수 없는 있습니다 `CImage` DIB 섹션 비트맵만을 지원 하는 메서드:  
+ `CImage` 비트맵 또는 부정은 어느 장치 독립적 비트맵 (DIB) 섹션을 사용 합니다. 사용할 수 있습니다 [만들기](#create) 또는 [CImage::Load](#load) DIB 섹션만 사용 합니다. 비 DIB 섹션 비트맵을 연결할 수 있습니다는 `CImage` 개체 사용 하 여 [연결](#attach), 하지만 다음 사용할 수 없는 있습니다 `CImage` DIB 섹션 비트맵만을 지원 하는 메서드:  
   
 - [GetBits](#getbits)  
   
@@ -170,9 +165,9 @@ class CImage
 > [!NOTE]
 >  사용 하 여 전역 `CImage` 개체를 DLL에서 권장 되지 않습니다. 전역 사용 해야 할 경우 `CImage` dll로 호출 개체 [CImage::ReleaseGDIPlus](#releasegdiplus) 를 명시적으로 GDI +에서 사용 하는 리소스를 해제 합니다.  
   
- `CImage`새 선택할 수 없는 [CDC](../../mfc/reference/cdc-class.md)합니다. `CImage`자체 만듭니다 **HDC** 이미지에 대 한 합니다. 때문에 프로그램 `HBITMAP` 하나에 선택할 수 있습니다 **HDC** 한 번에는 `HBITMAP` 연관는 `CImage` 다른 파티션으로 선택할 수 없습니다 **HDC**합니다. 필요한 경우는 `CDC`, 검색 된 **HDC** 에서 `CImage` 되 고 나면 [CDC::FromHandle] (... /.. /mfc/reference/cdc-class.md#cdc__fromhandle 합니다.  
+ `CImage` 새 선택할 수 없는 [CDC](../../mfc/reference/cdc-class.md)합니다. `CImage` 자체 만듭니다 **HDC** 이미지에 대 한 합니다. 때문에 프로그램 `HBITMAP` 하나에 선택할 수 있습니다 **HDC** 한 번에는 `HBITMAP` 연관는 `CImage` 다른 파티션으로 선택할 수 없습니다 **HDC**합니다. 필요한 경우는 `CDC`, 검색 된 **HDC** 에서 `CImage` 되 고 나면 [CDC::FromHandle] (... /.. /mfc/reference/cdc-class.md#cdc__fromhandle 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
 ```cpp  
 // Get a CDC for the image
 CDC* pDC = CDC::FromHandle(m_myImage.GetDC());
@@ -185,7 +180,7 @@ m_myImage.ReleaseDC();
  사용 하는 경우 `CImage` MFC 프로젝트를 프로젝트에는 멤버 함수에 대 한 포인터를 기대 사항을 유의 [CBitmap](../../mfc/reference/cbitmap-class.md) 개체입니다. 사용 하려는 경우 `CImage` 이러한 함수 처럼 [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)를 사용 하 여 [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle), 전달 프로그램 `CImage` `HBITMAP`, 반환 된 를사용하여`CBitmap*`.  
 
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
 ```cpp  
 void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 {
@@ -486,7 +481,7 @@ BOOL CreateEx(
 ### <a name="return-value"></a>반환 값  
  **True 이면** 성공 하는 경우. 그렇지 않으면 **FALSE**합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에는 16 비트를 사용 하 여 각 픽셀을 인코딩하는 데 100 x 100 픽셀 비트맵을 만듭니다. 지정된 된 16 비트 픽셀 0-3 비트 빨강 구성 요소를 인코딩하, 4-7 비트 녹색, 인코딩 및 8-11 비트 인코딩 파랑 합니다. 나머지 4 비트가 사용 되지 않습니다.  
 
 ```cpp  
@@ -685,7 +680,7 @@ static HRESULT GetExporterFilterString(CSimpleString& strExporters,
  `pszAllFilesDescription`  
  이 매개 변수가 없으면 **NULL**, 필터 문자열 목록 맨 앞에 하나의 추가 필터를 갖습니다. 이 필터의 현재 값을 갖습니다 `pszAllFilesDescription` 해당 설명에 대 한 하 고 목록에서 다른 내보내기에서에서 지 원하는 모든 확장명의 파일을 허용 합니다.  
   
- 예:  
+ 예를 들어:  
 
 ```cpp  
 //First filter in the list will be titled "All Image Files", and
@@ -732,13 +727,13 @@ CImage::GetExporterFilterString(
   
  매개 변수 *strExporter* 형식은 같습니다.  
   
- 파일 description0 &#124; \*.ext0 &#124; filedescription1 &#124; \*.ext1 &#124;... 파일 설명  *n* &#124;\*합니다. ext  *n* &#124; &#124;  
+ description0 파일&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;...file 설명 *n*&#124;\*.ext *n*&#124;&#124;  
   
- 여기서 ' &#124;'에서 지정 하는 구분 기호 `chSeparator`합니다. 예:  
+ 여기서 '&#124;' 구분 기호 문자 지정 `chSeparator`합니다. 예를 들어:  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- 기본 구분 기호를 사용 하 여 ' &#124;'에 MFC이이 문자열을 전달 하는 경우 `CFileDialog` 개체입니다. 일반 파일 저장 대화 상자에이 문자열을 전달 하는 경우 null 구분 기호 '\0'를 사용 합니다.  
+ 기본 구분 기호를 사용 하 여 '&#124;'는 MFC에이 문자열을 전달 하는 경우 `CFileDialog` 개체입니다. 일반 파일 저장 대화 상자에이 문자열을 전달 하는 경우 null 구분 기호 '\0'를 사용 합니다.  
   
 ##  <a name="getheight"></a>  CImage::GetHeight  
  픽셀 이미지의 높이 검색합니다.  
@@ -774,7 +769,7 @@ static HRESULT GetImporterFilterString(CSimpleString& strImporters,
  `pszAllFilesDescription`  
  이 매개 변수가 없으면 **NULL**, 필터 문자열 목록 맨 앞에 하나의 추가 필터를 갖습니다. 이 필터의 현재 값을 갖습니다 `pszAllFilesDescription` 해당 설명에 대 한 하 고 목록에서 다른 내보내기에서에서 지 원하는 모든 확장명의 파일을 허용 합니다.  
   
- 예:  
+ 예를 들어:  
 
 ```cpp  
 //First filter in the list will be titled "All Image Files", and
@@ -818,13 +813,13 @@ CImage::GetImporterFilterString(
   
  매개 변수 *strImporter* 형식은 같습니다.  
   
- 파일 description0 &#124; \*.ext0 &#124; filedescription1 &#124; \*.ext1 &#124;... 파일 설명  *n* &#124;\*합니다. ext  *n* &#124; &#124;  
+ description0 파일&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;...file 설명 *n*&#124;\*.ext *n*&#124;&#124;  
   
- 여기서 ' &#124;'에서 지정 하는 구분 기호 `chSeparator`합니다. 예:  
+ 여기서 '&#124;' 구분 기호 문자 지정 `chSeparator`합니다. 예를 들어:  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- 기본 구분 기호를 사용 하 여 ' &#124;'에 MFC이이 문자열을 전달 하는 경우 `CFileDialog` 개체입니다. 공용으로이 문자열을 전달 하는 경우 null 구분 기호 '\0'를 사용 하 여 **파일 열기** 대화 상자.  
+ 기본 구분 기호를 사용 하 여 '&#124;'는 MFC에이 문자열을 전달 하는 경우 `CFileDialog` 개체입니다. 공용으로이 문자열을 전달 하는 경우 null 구분 기호 '\0'를 사용 하 여 **파일 열기** 대화 상자.  
   
 ##  <a name="getmaxcolortableentries"></a>  CImage::GetMaxColorTableEntries  
  색상표에 있는 항목의 최대 수를 검색 합니다.  
@@ -1123,7 +1118,7 @@ BOOL MaskBlt(
 ### <a name="remarks"></a>설명  
  이 메서드는 Windows NT 4.0 이상만 해당 버전에 적용 됩니다.  
   
-##  <a name="operator_hbitmap"></a>  CImage::operator HBITMAP  
+##  <a name="operator_hbitmap"></a>  HBITMAP CImage::operator  
  이 연산자를 사용 하 여의 연결 된 Windows GDI 핸들을 가져올 수는 `CImage` 개체입니다. 이 연산자는의 직접 사용을 지원 하려면 캐스팅 연산자는 `HBITMAP` 개체입니다.  
   
 ##  <a name="plgblt"></a>  CImage::PlgBlt  
@@ -1515,10 +1510,10 @@ BOOL TransparentBlt(
  **TRUE** 성공 하 고, 그렇지 않으면 **FALSE**합니다.  
   
 ### <a name="remarks"></a>설명  
- `TransparentBlt`4 비트 / 픽셀 및 픽셀 당 8 비트의 소스 비트맵에 지원 됩니다. 사용 하 여 [CImage::AlphaBlend](#alphablend) 에 투명도 사용 하 여 32 비트 / 픽셀 비트맵을 지정 합니다.  
+ `TransparentBlt` 4 비트 / 픽셀 및 픽셀 당 8 비트의 소스 비트맵에 지원 됩니다. 사용 하 여 [CImage::AlphaBlend](#alphablend) 에 투명도 사용 하 여 32 비트 / 픽셀 비트맵을 지정 합니다.  
   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 
 ```cpp  
 // Performs a transparent blit from the source image to the destination 

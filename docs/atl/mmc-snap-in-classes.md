@@ -1,12 +1,9 @@
 ---
-title: "MMC 스냅인 클래스 (ATL) | Microsoft Docs"
-ms.custom: 
+title: MMC 스냅인 클래스 (ATL) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.atl.MMC
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MMC Snap-In classes
 ms.assetid: 4af1d5af-687f-48b1-b2c5-fa252241b4d6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94380314a5b24cfab0399aed5f5e001b7b7df9a4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f3b5c1786695c9bf48189c6ff350d721a5bdac74
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mmc-snap-in-classes"></a>MMC 스냅인 클래스
 다음 클래스에서는 관리 MMC (Microsoft Console) 스냅인에서 구성 요소를 개발에 대 한 지원:  

@@ -1,9 +1,9 @@
 ---
-title: "(조건부 연산자 규칙 적용) /Zc:ternary | Microsoft Docs"
+title: (조건부 연산자 규칙 적용) /Zc:ternary | Microsoft Docs
 ms.date: 3/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /Zc:ternary
 dev_langs:
@@ -14,12 +14,11 @@ helpviewer_keywords:
 - -Zc:ternary
 author: corob-msft
 ms.author: corob
-manager: ghogen
-ms.openlocfilehash: 198da679e9d0d7bd58e034ca9c04c3102748af20
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 613381795fb962e1f10ec01598748b617b7543aa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcternary-enforce-conditional-operator-rules"></a>/Zc:ternary (조건부 연산자 규칙 적용)
 
@@ -33,7 +32,7 @@ ms.lasthandoff: 03/15/2018
 
 Visual Studio 버전 15.3 사용 하면 c + + 표준 조건부 (삼항) 연산자에 대 한 컴파일러 지원 (**?:**) 동작 합니다. C + + 표준에는 동일한 유형 및 cv 한정자, 동일한 유형 및 cv 한정에 다른 명확 하 게 변환할 수 있는 하나의 피연산자에 대 한 또는 throw 하는 식에 하나 또는 두 개의 피연산자에 대 한 피연산자 필요 합니다. Visual Studio 버전 15.5 이전 버전, 컴파일러 간주 되는 모호한 표준에 따라 변환을 허용 합니다. 경우는 **/Zc:ternary** 옵션을 지정한 경우 컴파일러는 표준을 준수 하 고 일치 하는 형식 및 두 번째 및 세 번째 피연산자의 cv 한정자에 대 한 규칙을 충족 하지 않는 코드를 거부 합니다.
 
-**/Zc:ternary** 옵션은 기본적으로 해제 되어 있습니다. 사용 하 여 **/Zc:ternary** 표준을 준수 동작을 사용 하도록 또는 **/Zc:ternary-** 를 명시적으로 이전 맞지 않는 컴파일러 동작을 지정 합니다. [관대 한 /-](permissive-standards-conformance.md) 옵션을 암시적으로 사용 하면이 옵션을 사용 하 여 재정의할 수 있습니다 하지만 **/Zc:ternary-**합니다.
+**/Zc:ternary** 옵션은 기본적으로 해제 되어 있습니다. 사용 하 여 **/Zc:ternary** 표준을 준수 동작을 사용 하도록 또는 **/Zc:ternary-** 를 명시적으로 이전 맞지 않는 컴파일러 동작을 지정 합니다. [관대 한 /-](permissive-standards-conformance.md) 옵션을 암시적으로 사용 하면이 옵션을 사용 하 여 재정의할 수 있습니다 하지만 **/Zc:ternary-** 합니다.
 
 ### <a name="examples"></a>예제
 
@@ -164,6 +163,6 @@ Visual C++의 규칙과 관련된 문제에 대한 자세한 내용은 [Nonstand
 
 1. 수정 된 **추가 옵션** 포함할 속성을 **/Zc:ternary** 또는 **/Zc:ternary-** 선택한 후 **확인**합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [/Zc(규칙)](../../build/reference/zc-conformance.md)  
