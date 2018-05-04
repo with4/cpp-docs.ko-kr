@@ -2,12 +2,9 @@
 title: 섹션 (C/C + +) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - SECTIONS
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - SECTIONS .def file statement
 ms.assetid: 7b974366-9ef5-4e57-bbcc-73a1df6f8857
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ab2f021a53e8ae685891863500feb3873e13e2e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c433bf49ee4c56833ac7291bcc4a0f90e32f4e5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sections-cc"></a>SECTIONS(C/C++)
 하나 이상의 섹션이 `definitions` 프로젝트의 출력 파일 섹션에에서 대 한 액세스 지정자는입니다.  
@@ -53,14 +48,14 @@ definitions
 |`SHARED`|이미지를 로드 하는 모든 프로세스에서 섹션을 공유 합니다.|  
 |`WRITE`|데이터에 쓸 수 있습니다.|  
   
- 식별자 이름은 공백으로 구분 합니다. 예:  
+ 식별자 이름은 공백으로 구분 합니다. 예를 들어:  
   
 ```  
 SECTIONS  
 .rdata READ WRITE  
 ```  
   
- `SECTIONS`섹션의 목록의 시작을 표시 `definitions`합니다. 각 `definition` 별도 줄에 있어야 합니다. `SECTIONS` 키워드 첫 번째와 같은 줄에 있을 수 있습니다 `definition` 앞의 줄 또는 합니다. .Def 파일 하나 이상 포함할 수 있습니다 `SECTIONS` 문. `SEGMENTS` 키워드는의 동의어로 지원 `SECTIONS`합니다.  
+ `SECTIONS` 섹션의 목록의 시작을 표시 `definitions`합니다. 각 `definition` 별도 줄에 있어야 합니다. `SECTIONS` 키워드 첫 번째와 같은 줄에 있을 수 있습니다 `definition` 앞의 줄 또는 합니다. .Def 파일 하나 이상 포함할 수 있습니다 `SECTIONS` 문. `SEGMENTS` 키워드는의 동의어로 지원 `SECTIONS`합니다.  
   
  이전 버전의 Visual c + + 지원 됩니다.  
   

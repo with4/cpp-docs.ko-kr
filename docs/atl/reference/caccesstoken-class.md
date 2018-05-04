@@ -1,12 +1,9 @@
 ---
-title: "CAccessToken 클래스 | Microsoft Docs"
-ms.custom: 
+title: CAccessToken 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAccessToken
@@ -61,17 +58,15 @@ dev_langs:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8d2a314ea7697ef4379b899ee6845cd4ceca707
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 407652cc5a5e300a2e5eb9d6a5a07dd29209ffef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 클래스
 이 클래스는 액세스 토큰에 대 한 래퍼입니다.  
@@ -222,7 +217,7 @@ bool CreateImpersonationToken(
  성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- `CreateImpersonationToken`호출 [DuplicateToken](http://msdn.microsoft.com/library/windows/desktop/aa446616) 새 가장 토큰을 만들어야 합니다.  
+ `CreateImpersonationToken` 호출 [DuplicateToken](http://msdn.microsoft.com/library/windows/desktop/aa446616) 새 가장 토큰을 만들어야 합니다.  
   
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken  
  새 기본 토큰을 만들려면이 메서드를 호출 합니다.  
@@ -248,7 +243,7 @@ bool CreatePrimaryToken(
  성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- `CreatePrimaryToken`호출 [DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617) 새 기본 토큰을 만들어야 합니다.  
+ `CreatePrimaryToken` 호출 [DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617) 새 기본 토큰을 만들어야 합니다.  
   
 ##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser  
  가 나타내는 사용자의 보안 컨텍스트에서 실행 되는 새 프로세스를 만들려면이 메서드를 호출 하는 `CAccessToken` 개체입니다.  
@@ -334,7 +329,7 @@ bool CreateRestrictedToken(
  성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- `CreateRestrictedToken`사용 하 여는 [CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583) Win32 함수를 만드는 새 `CAccessToken` 제한 사항이 있는 개체입니다.  
+ `CreateRestrictedToken` 사용 하 여는 [CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583) Win32 함수를 만드는 새 `CAccessToken` 제한 사항이 있는 개체입니다.  
   
 > [!IMPORTANT]
 >  사용 하는 경우 `CreateRestrictedToken`, 다음을 확인: 기존 토큰은 유효한 (및 사용자가 입력 한 하지) 및 `SidsToDisable` 및 `PrivilegesToDelete` 모두 유효한 (및 사용자가 입력 한 하지) 됩니다. 메서드가 false를 반환 하면 기능을 거부 합니다.  
@@ -942,7 +937,7 @@ bool OpenThreadToken(
  성공하면 true를 반환하고, 실패하면 false를 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- `OpenThreadToken`비슷합니다 [CAccessToken::GetThreadToken](#getthreadtoken), 초기화 하기 전에 가장 수준으로 설정 된 `CAccessToken` 는 스레드의 액세스 토큰에서 합니다.  
+ `OpenThreadToken` 비슷합니다 [CAccessToken::GetThreadToken](#getthreadtoken), 초기화 하기 전에 가장 수준으로 설정 된 `CAccessToken` 는 스레드의 액세스 토큰에서 합니다.  
   
  [CAutoRevertImpersonation 클래스](../../atl/reference/cautorevertimpersonation-class.md) 자동으로 설정 하 여 만든 가장된 액세스 토큰 revert 데 사용할 수는 `bImpersonate` 플래그를 *true*합니다.  
   

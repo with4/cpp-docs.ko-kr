@@ -2,11 +2,8 @@
 title: 중첩 클래스 선언 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 247be4e212efbe2b8061deed200a8350b87fc7a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2fe55a1f67ff3c6ac06f1d6431e6e1a2fb8052d8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nested-class-declarations"></a>중첩 클래스 선언
 클래스는 다른 클래스의 범위 내에서 선언될 수 있습니다. 이러한 클래스를 "중첩 클래스"라고 합니다. 중첩 클래스는 바깥쪽 클래스의 범위 내에 있는 것으로 간주되고 해당 범위 내에서 사용할 수 있습니다. 바로 바깥쪽 범위 이외의 범위에서 중첩 클래스를 참조하려면 정규화된 이름을 사용해야 합니다.  
@@ -76,7 +71,7 @@ int main()
 > [!NOTE]
 >  중첩 클래스는 클래스 범위 내에서 형식만 선언하며, 중첩 클래스의 포함된 개체가 만들어지지는 않습니다. 위의 예제에서는 두 중첩 클래스를 선언하지만 이러한 클래스 형식의 개체는 선언하지 않습니다.  
   
- 중첩 클래스 선언의 범위 표시 유형에 대한 예외는 형식 이름이 정방향 선언과 함께 선언된 경우입니다.  이 경우 정방향 선언에서 선언된 클래스 이름은 바깥쪽 클래스 외부에 표시되며 해당 범위는 가장 작은 바깥쪽 비클래스 범위로 정의됩니다.  예:  
+ 중첩 클래스 선언의 범위 표시 유형에 대한 예외는 형식 이름이 정방향 선언과 함께 선언된 경우입니다.  이 경우 정방향 선언에서 선언된 클래스 이름은 바깥쪽 클래스 외부에 표시되며 해당 범위는 가장 작은 바깥쪽 비클래스 범위로 정의됩니다.  예를 들어:  
   
 ```  
 // nested_class_declarations_2.cpp  

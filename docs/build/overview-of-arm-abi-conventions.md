@@ -1,27 +1,22 @@
 ---
-title: "ARM ABI 규칙 개요 | Microsoft Docs"
-ms.custom: 
+title: ARM ABI 규칙 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 073fe113c1915913d06a63c7feabcb7808896188
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f78e5731e6c8d4125fb8afc184cd6e4f2a74cb7a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-arm-abi-conventions"></a>ARM ABI 규칙 개요
 Windows on ARM 프로세서용으로 컴파일된 코드의 ABI(응용 프로그램 이진 인터페이스)는 표준 ARM EABI를 기반으로 합니다. 이 문서에서는 Windows on ARM과 표준 간의 주요 차이점에 대해 주로 설명합니다. 표준 ARM EABI에 대 한 자세한 내용은 참조 [ABI 응용 프로그램 이진 인터페이스 () ARM 아키텍처용](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html)합니다.  

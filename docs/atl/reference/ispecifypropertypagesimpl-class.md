@@ -1,12 +1,9 @@
 ---
-title: "ISpecifyPropertyPagesImpl 클래스 | Microsoft Docs"
-ms.custom: 
+title: ISpecifyPropertyPagesImpl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - ISpecifyPropertyPagesImpl
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - ISpecifyPropertyPages
 - ISpecifyPropertyPagesImpl class
 ms.assetid: 4e4b9795-b656-4d56-9b8c-85941e7731f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 716e3ba5d48d39cd189da8d92cca694f09508e42
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74f10684c32cc5b1b4b07ac30406520c9ba41ddd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>ISpecifyPropertyPagesImpl 클래스
 이 클래스는 구현 **IUnknown** 의 기본 구현을 제공 하 고는 [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) 인터페이스입니다.  
@@ -73,7 +68,7 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="getpages"></a>ISpecifyPropertyPagesImpl::GetPages  
+##  <a name="getpages"></a>  ISpecifyPropertyPagesImpl::GetPages  
  배열을 채웁니다는 [CAUUID](http://msdn.microsoft.com/library/windows/desktop/ms680048) 개체의 속성 시트에 표시 될 수 있는 속성 페이지에 대 한 clsid가 포함 된 구조입니다.  
   
 ```

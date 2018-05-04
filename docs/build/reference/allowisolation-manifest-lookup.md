@@ -2,12 +2,9 @@
 title: -/ALLOWISOLATION (매니페스트 조회) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /ALLOWISOLATION
 - VC.Project.VCLinkerTool.AllowIsolation
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - -ALLOWISOLATION linker option
 - /ALLOWISOLATION linker option
 ms.assetid: 6d41851e-b3c1-4bdf-beaa-031773089d6f
-caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0ca939021a6fc530b11c6ec66fc74cc012da1c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a0e063aa51e136dfcc7a4445948e8a68d7a99bca
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="allowisolation-manifest-lookup"></a>/ALLOWISOLATION(매니페스트 조회)
 매니페스트 조회 동작을 지정합니다.  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
  **/ALLOWISOLATION** 값이 기본값입니다.  
   
- 실행 파일에 대 한 격리가 비활성화 되었으면, Windows 로더가 새로 생성된 된 프로세스에 대 한 응용 프로그램 매니페스트를 찾으려고 시도 하지 않습니다. 새 프로세스는 기본 활성화 컨텍스트가 갖습니다 실행 파일 또는 이름 가진 실행 파일과 동일한 디렉터리에 배치 된 내부 매니페스트 경우에 *실행 파일 이름***. exe.manifest**합니다.  
+ 실행 파일에 대 한 격리가 비활성화 되었으면, Windows 로더가 새로 생성된 된 프로세스에 대 한 응용 프로그램 매니페스트를 찾으려고 시도 하지 않습니다. 실행 파일 또는 이름 가진 실행 파일과 동일한 디렉터리에 배치 된 내부 매니페스트 경우에 새 프로세스는 기본 활성화 컨텍스트가 않아도 됩니다 * 실행-name ***. exe.manifest**합니다.  
   
  자세한 내용은 참조 [매니페스트 파일 참조](http://msdn.microsoft.com/library/aa375632)합니다.  
   

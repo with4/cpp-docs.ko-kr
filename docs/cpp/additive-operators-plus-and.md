@@ -1,12 +1,9 @@
 ---
-title: "가감 연산자: + 및-| Microsoft Docs"
-ms.custom: 
+title: '가감 연산자: + 및-| Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - +
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - arithmetic operators [C++], additive operators
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1096565843cfe150530a825254e9ad6c24b5ec8
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 5f265bf915d9ba0c984b85235bd502d6ea0a5a77
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="additive-operators--and--"></a>가감 연산자: + 및 -
 ## <a name="syntax"></a>구문  
@@ -78,7 +73,7 @@ expression - expression
   
  설명한 변환이 피연산자가 모두 산술 형식, 경우 [표준 변환](standard-conversions.md) 피연산자에 적용 되 고 결과 변환 된 형식입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // expre_Additive_Operators.cpp  
@@ -121,7 +116,7 @@ for( int i = 0; i < 10; ++i )
 ## <a name="pointer-subtraction"></a>포인터 빼기  
  두 피연산자가 모두 포인터인 경우 빼기의 결과는 피연산자 간 배열 요소의 차이입니다. 빼기 식은 ptrdiff_t 형식의 부호 있는 정수 계열 결과 생성 (표준 포함 파일에 정의 된 \<stddef.h >).  
   
- 피연산자 중 하나가 두 번째 피연산자라면 정수 계열 형식이 될 수 있습니다. 빼기 결과는 원래 포인터와 동일한 형식입니다. 빼기 값은에 대 한 포인터는 (*n* - *i*) 번째 배열 요소 여기서  *n*  요소를 가리키고 원래 포인터와 *i* 두 번째 피연산자의 정수 값입니다.  
+ 피연산자 중 하나가 두 번째 피연산자라면 정수 계열 형식이 될 수 있습니다. 빼기 결과는 원래 포인터와 동일한 형식입니다. 빼기 값은에 대 한 포인터는 (*n* - *i*) 번째 배열 요소 여기서 *n* 요소를 가리키고 원래 포인터와 *i* 두 번째 피연산자의 정수 값입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [이항 연산자가 있는 식](../cpp/expressions-with-binary-operators.md)   

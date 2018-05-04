@@ -1,12 +1,9 @@
 ---
-title: "CComCachedTearOffObject 클래스 | Microsoft Docs"
-ms.custom: 
+title: CComCachedTearOffObject 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComCachedTearOffObject
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - cache, ATL cached tear-off objects
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89240e913f46a3522062317da8089c3ae4bd81ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1072faed01033bec9fec127318334f8a61ac29e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject 클래스
 이 클래스는 구현 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 분리 인터페이스에 대 한 합니다.  
@@ -80,7 +75,7 @@ public CComObjectRootEx<contained
 |[CComCachedTearOffObject::m_contained](#m_contained)|A `CComContainedObject` 분리 클래스에서 파생 된 개체 (클래스 `contained`).|  
   
 ## <a name="remarks"></a>설명  
- `CComCachedTearOffObject`구현 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 분리 인터페이스에 대 한 합니다. 이 클래스와 다른 `CComTearOffObject` 한다는 점에서 `CComCachedTearOffObject` 자체 **IUnknown**소유자 개체와에서는 별도로 **IUnknown** (소유자를는 분리가 생성 되는 개체를가 하는 데 사용). `CComCachedTearOffObject`자체 유지 관리 참조 횟수에 해당 **IUnknown** 참조 개수가 0이 되 면 자체를 삭제 합니다. 그러나 해당 분리 중 하나에 대 한 쿼리 하는 경우 인터페이스를 소유자 개체의 참조 횟수 **IUnknown** 증가 됩니다.  
+ `CComCachedTearOffObject` 구현 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 분리 인터페이스에 대 한 합니다. 이 클래스와 다른 `CComTearOffObject` 한다는 점에서 `CComCachedTearOffObject` 자체 **IUnknown**소유자 개체와에서는 별도로 **IUnknown** (소유자를는 분리가 생성 되는 개체를가 하는 데 사용). `CComCachedTearOffObject` 자체 유지 관리 참조 횟수에 해당 **IUnknown** 참조 개수가 0이 되 면 자체를 삭제 합니다. 그러나 해당 분리 중 하나에 대 한 쿼리 하는 경우 인터페이스를 소유자 개체의 참조 횟수 **IUnknown** 증가 됩니다.  
   
  경우는 `CComCachedTearOffObject` 개체는 분리 구현 이미 인스턴스화되고 분리 인터페이스를 다시 동일한 컴퓨터에 대해 쿼리할 `CComCachedTearOffObject` 개체가 다시 사용 됩니다. 반대로, 분리 인터페이스에서 구현 하는 경우에 `CComTearOffObject` 다시 쿼리 하는 소유자 개체를 통해 다른 `CComTearOffObject` 인스턴스화됩니다.  
   
@@ -98,7 +93,7 @@ public CComObjectRootEx<contained
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="addref"></a>CComCachedTearOffObject::AddRef  
+##  <a name="addref"></a>  CComCachedTearOffObject::AddRef  
  참조 횟수를 증가 `CComCachedTearOffObject` 1 씩 개체입니다.  
   
 ```
@@ -108,7 +103,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>반환 값  
  진단에 대 한 유용 하 고 테스트 될 수 있는 값입니다.  
   
-##  <a name="ccomcachedtearoffobject"></a>CComCachedTearOffObject::CComCachedTearOffObject  
+##  <a name="ccomcachedtearoffobject"></a>  CComCachedTearOffObject::CComCachedTearOffObject  
  생성자입니다.  
   
 ```
@@ -122,7 +117,7 @@ CComCachedTearOffObject(void* pv);
 ### <a name="remarks"></a>설명  
  초기화는 `CComContainedObject` 멤버 [m_contained](#m_contained)합니다.  
   
-##  <a name="dtor"></a>CComCachedTearOffObject:: ~ CComCachedTearOffObject  
+##  <a name="dtor"></a>  CComCachedTearOffObject:: ~ CComCachedTearOffObject  
  소멸자입니다.  
   
 ```
@@ -132,7 +127,7 @@ CComCachedTearOffObject(void* pv);
 ### <a name="remarks"></a>설명  
  할당 된 모든 리소스를 해제 하는 호출 [FinalRelease](#finalrelease)합니다.  
   
-##  <a name="finalconstruct"></a>CComCachedTearOffObject::FinalConstruct  
+##  <a name="finalconstruct"></a>  CComCachedTearOffObject::FinalConstruct  
  호출 **m_contained::FinalConstruct** 만들려는 `m_contained`, `CComContainedObject` <  `contained`> 분리 클래스에서 구현 된 인터페이스에 액세스 하는 데 사용 되는 개체입니다.  
   
 ```
@@ -142,14 +137,14 @@ HRESULT FinalConstruct();
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-##  <a name="finalrelease"></a>CComCachedTearOffObject::FinalRelease  
+##  <a name="finalrelease"></a>  CComCachedTearOffObject::FinalRelease  
  호출 **m_contained::FinalRelease** 무료 `m_contained`, `CComContainedObject` <  `contained`> 개체입니다.  
   
 ```
 void FinalRelease();
 ```  
   
-##  <a name="m_contained"></a>CComCachedTearOffObject::m_contained  
+##  <a name="m_contained"></a>  CComCachedTearOffObject::m_contained  
  A [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md) 분리 클래스에서 파생 된 개체입니다.  
   
 ```
@@ -163,7 +158,7 @@ CcomContainedObject <contained> m_contained;
 ### <a name="remarks"></a>설명  
  메서드 `m_contained` 상속 되는 개체를 통해 캐시 된 분리의 분리 클래스에 분리 인터페이스에 액세스 하는 데 사용 되 `QueryInterface`, `FinalConstruct`, 및 `FinalRelease`합니다.  
   
-##  <a name="queryinterface"></a>CComCachedTearOffObject::QueryInterface  
+##  <a name="queryinterface"></a>  CComCachedTearOffObject::QueryInterface  
  요청된 인터페이스에 대한 포인터를 검색합니다.  
   
 ```
@@ -184,7 +179,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
  요청한 인터페이스가 **IUnknown**에 대 한 포인터를 반환 합니다.는 `CComCachedTearOffObject`의 자체 **IUnknown** 참조 횟수를 증가 시킵니다. 그렇지 않은 경우 사용 하 여 분리 클래스에서 인터페이스에 대 한 쿼리는 [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) 에서 상속 된 `CComObjectRootEx`합니다.  
 
   
-##  <a name="release"></a>CComCachedTearOffObject::Release  
+##  <a name="release"></a>  CComCachedTearOffObject::Release  
  참조 횟수를 1 씩 감소 고 참조 횟수가 0 이면 삭제는 `CComCachedTearOffObject` 개체입니다.  
   
 ```

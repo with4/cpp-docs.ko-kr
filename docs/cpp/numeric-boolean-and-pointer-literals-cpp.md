@@ -1,12 +1,9 @@
 ---
-title: "숫자, 부울 및 포인터 리터럴 (c + +) | Microsoft Docs"
-ms.custom: 
+title: 숫자, 부울 및 포인터 리터럴 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91f79a2703dee8a162b971a78eba7e13a9849b43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ce5f2c6703b18747dd4a2c51fe540d01370b38b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>숫자, 부울 및 포인터 리터럴 (c + +)
 리터럴은 값을 직접 나타내는 프로그램 요소입니다. 이 문서에서는 정수, 부동 소수점, 부울 및 포인터 형식의 리터럴에 대해 설명합니다. 문자열 및 문자 리터럴에 대 한 정보를 참조 하십시오. [문자열 및 문자 리터럴 (c + +)](../cpp/string-and-character-literals-cpp.md)합니다. 이러한 범주;에 따라 고유한 리터럴을 정의할 수도 있습니다. 자세한 내용은 참조 하십시오. [사용자 정의 리터럴 (c + +)](../cpp/user-defined-literals-cpp.md)  
@@ -49,7 +44,7 @@ MyClass* mc = nullptr;      // pointer literal
   
  접두사나 접미사가 없는 경우 값이 적합하면 컴파일러는 정수 리터럴 값 형식 `int`(32비트)를 지정하고, 그렇지 않으면 `long long` 형식(64비트)을 지정합니다.  
   
- 10진수 정수 계열 리터럴을 지정하려면 0이 아닌 숫자를 사용하여 지정을 시작합니다. 예:  
+ 10진수 정수 계열 리터럴을 지정하려면 0이 아닌 숫자를 사용하여 지정을 시작합니다. 예를 들어:  
   
 ```  
 int i = 157;   // Decimal literal  
@@ -59,21 +54,21 @@ int m = 36'000'000  // digit separators make large values more readable
 int   
 ```  
   
- 8진수 정수 계열 리터럴을 지정하려면 0으로 시작하여 0부터 7까지의 숫자 시퀀스를 지정합니다. 8진수 리터럴을 지정할 때 숫자 8과 9는 오류입니다. 예:  
+ 8진수 정수 계열 리터럴을 지정하려면 0으로 시작하여 0부터 7까지의 숫자 시퀀스를 지정합니다. 8진수 리터럴을 지정할 때 숫자 8과 9는 오류입니다. 예를 들어:  
   
 ```  
 int i = 0377;   // Octal literal  
 int j = 0397;        // Error: 9 is not an octal digit  
 ```  
   
- 16진수 정수 계열 리터럴을 지정하려면 `0x` 또는 `0X`("x"의 대/소문자 구분 안 함)로 시작하여 `0`부터 `9` 및 `a`(또는 `A`)부터 `f`(또는 `F`)의 숫자 시퀀스를 지정합니다. 16진수 숫자 `a`(또는 `A`)부터 `f`(또는 `F`)는 10부터 15 사이의 값을 나타냅니다. 예:  
+ 16진수 정수 계열 리터럴을 지정하려면 `0x` 또는 `0X`("x"의 대/소문자 구분 안 함)로 시작하여 `0`부터 `9` 및 `a`(또는 `A`)부터 `f`(또는 `F`)의 숫자 시퀀스를 지정합니다. 16진수 숫자 `a`(또는 `A`)부터 `f`(또는 `F`)는 10부터 15 사이의 값을 나타냅니다. 예를 들어:  
   
 ```  
 int i = 0x3fff;   // Hexadecimal literal  
 int j = 0X3FFF;        // Equal to i  
 ```  
   
- 부호 없는 형식을 지정 하려면 하나를 사용는 **u** 또는 **U** 접미사입니다. Long 형식을 지정 하려면 하나를 사용는 **l** 또는 **L** 접미사입니다. 64비트 정수 계열 형식을 지정하려면 LL 또는 ll 접미사를 사용합니다. i64 접미사는 계속 지원되지만 Microsoft 전용이고 이식할 수 없으므로 사용하지 않아야 합니다. 예:  
+ 부호 없는 형식을 지정 하려면 하나를 사용는 **u** 또는 **U** 접미사입니다. Long 형식을 지정 하려면 하나를 사용는 **l** 또는 **L** 접미사입니다. 64비트 정수 계열 형식을 지정하려면 LL 또는 ll 접미사를 사용합니다. i64 접미사는 계속 지원되지만 Microsoft 전용이고 이식할 수 없으므로 사용하지 않아야 합니다. 예를 들어:  
   
 ```  
 unsigned val_1 = 328u;             // Unsigned value  

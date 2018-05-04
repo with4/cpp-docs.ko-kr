@@ -1,12 +1,9 @@
 ---
-title: "static_cast 연산자 | Microsoft Docs"
-ms.custom: 
+title: static_cast 연산자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - static_cast_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3913937d9099304c478404c4c55a09fa54392785
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a0cd6ea7e2268940febca9e1e564f30d29dcff0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="staticcast-operator"></a>static_cast 연산자
 변환는 *식* 유형과 *유형 id* 식에 있는 형식에 대해서만 기반으로 합니다.  
@@ -63,7 +58,7 @@ void f(B* pb, D* pd) {
   
  달리 [dynamic_cast](../cpp/dynamic-cast-operator.md), 런타임 검사가 수행 되지 않습니다에 `static_cast` 변환 `pb`합니다. `pb`가 가리키는 개체는 유형 `D`의 개체가 아닐 수 있으며, 이 경우 `*pd2`를 사용하는 것은 매우 위험합니다. 예를 들어 `D` 클래스가 아닌 `B` 클래스의 멤버인 함수를 호출하면 액세스 위반이 발생할 수 있습니다.  
   
- `dynamic_cast` 및 `static_cast` 연산자는 클래스 계층 구조 전체에서 포인터를 이동시킵니다. 하지만 `static_cast`는 캐스트 문에서 제공하는 정보에 전적으로 의존하고 있으므로 안전하지 않을 수 있습니다. 예:  
+ `dynamic_cast` 및 `static_cast` 연산자는 클래스 계층 구조 전체에서 포인터를 이동시킵니다. 하지만 `static_cast`는 캐스트 문에서 제공하는 정보에 전적으로 의존하고 있으므로 안전하지 않을 수 있습니다. 예를 들어:  
   
 ```  
 // static_cast_Operator_2.cpp  
@@ -88,7 +83,7 @@ void f(B* pb) {
   
  이 동작은 클래스 형식 이외의 형식에도 적용됩니다. 예를 들어 `static_cast`는 정수를 `char`로 변환하는 데 사용할 수 있습니다. 하지만 결과로 나오는 `char`에는 충분한 비트가 없으므로 전체 `int` 값을 보유할 수 없습니다. 다시 남아 있는지 확인 하는 프로그래머를의 결과 `static_cast` 변환은 안전 합니다.  
   
- `static_cast` 연산자는 표준 변환 및 사용자 지정 변환을 포함하는 모든 암시적 변환에 사용할 수 있습니다. 예:  
+ `static_cast` 연산자는 표준 변환 및 사용자 지정 변환을 포함하는 모든 암시적 변환에 사용할 수 있습니다. 예를 들어:  
   
 ```  
 // static_cast_Operator_3.cpp  

@@ -1,27 +1,22 @@
 ---
-title: "MASM 매크로 | Microsoft Docs"
-ms.custom: 
+title: MASM 매크로 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 21410432-72fc-4795-bc93-e78123f9f14f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 043ad96ada12467ce9c2ff39c9e337e0da9d2391
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 403220306a2585b1506a990664eaa2ec8f2ac1a3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="masm-macros"></a>MASM 매크로
 사용을 단순화 하기 위해는 [원시 의사 작업](../build/raw-pseudo-operations.md)를 일반적인 방법 프롤로그 및 에필로그를 만드는 데 사용할 수 있도록 ksamd64.inc에에 정의 된 매크로의 집합입니다.  

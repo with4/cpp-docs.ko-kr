@@ -2,11 +2,8 @@
 title: 다중 기본 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b765fabe8b83169353650286d05d02301dcb4807
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d48c373f0753a787aa8e59c7ead5a8f94bfc7846
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiple-base-classes"></a>다중 기본 클래스
 에 설명 된 대로 [다중 상속](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca), 클래스는 둘 이상의 기본 클래스에서 파생 될 수 있습니다. 다중 상속 모델 (파생 클래스에서 둘 이상의 기본 클래스)에서 기본 클래스를 사용 하 여 지정 된 된 *자료 목록* 문법 요소입니다. 예를 들어 `CollectionOfBook` 및 `Collection`에서 파생된 `Book`에 대한 클래스 선언을 지정할 수 있습니다.  
@@ -69,7 +64,7 @@ class CollectionOfBook : public Book, public Collection {
   
  그림에서 `Queue`는 `CashierQueue` 및 `LunchQueue`에 대한 기본 클래스입니다. 하지만 두 클래스가 결합되어 `LunchCashierQueue`를 형성할 경우 새 클래스에 형식이 `Queue`인 두 하위 개체가 포함되는데 하나는 `CashierQueue`의 하위 개체이고 하나는 `LunchQueue`의 하위 개체인 문제가 발생할 수 있습니다. 다음 그림에서는 개념적 메모리 레이아웃을 보여 줍니다.(실제 메모리 레이아웃은 최적화될 수도 있습니다.)  
   
- ![시뮬레이션 된 런치 &#45; 줄 개체](../cpp/media/vc38xp2.gif "vc38XP2")  
+ ![런치 시뮬레이션&#45;줄 개체](../cpp/media/vc38xp2.gif "vc38XP2")  
 시뮬레이션된 Lunch-Line 개체  
   
  `Queue` 개체에 두 개의 `LunchCashierQueue` 하위 개체가 있습니다. 다음 코드에서는 `Queue`를 가상 기본 클래스로 선언합니다.  
@@ -85,7 +80,7 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
   
  `virtual` 키워드는 단 하나의 하위 개체 `Queue` 사본을 포함하도록 합니다(아래 그림 참조).  
   
- ![시뮬레이션 된 런치 &#45; 줄 개체, 가상 기본 클래스](../cpp/media/vc38xp3.gif "vc38XP3")  
+ ![런치 시뮬레이션&#45;줄 개체, 가상 기본 클래스](../cpp/media/vc38xp3.gif "vc38XP3")  
 가상 기본 클래스를 사용하여 시뮬레이션된 Lunch-Line 개체  
   
  클래스에는 주어진 형식의 가상 구성 요소와 비가상 구성 요소가 둘 다 있을 수 있습니다. 이는 다음 그림에서 설명하는 조건에서 발생합니다.  

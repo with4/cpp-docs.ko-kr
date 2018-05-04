@@ -1,12 +1,9 @@
 ---
-title: "클래스를 cUrl | Microsoft Docs"
-ms.custom: 
+title: 클래스를 cUrl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CUrl
@@ -44,17 +41,15 @@ dev_langs:
 helpviewer_keywords:
 - CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb60fcef5fdfd30b4121f5c2277667829772dcd6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: afb0f7abc079d699cfcf682356b88b9cc8aa2bb9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="curl-class"></a>CUrl 클래스
 이 클래스는 URL을 나타냅니다. 기존 URL을 구문 분석 하는지 여부를 개별적으로 URL의 각 요소를 조작할 수 있습니다 문자열 또는 처음부터 문자열을 작성 합니다.  
@@ -116,7 +111,7 @@ class CUrl
 |[CUrl::operator =](#operator_eq)|지정 된 할당 `CUrl` 개체를 현재 `CUrl` 개체입니다.|  
   
 ## <a name="remarks"></a>설명  
- `CUrl`URL 경로 또는 포트 번호 등의 필드를 조작할 수 있습니다. `CUrl`다음 형식의 Url을 인식합니다.  
+ `CUrl` URL 경로 또는 포트 번호 등의 필드를 조작할 수 있습니다. `CUrl` 다음 형식의 Url을 인식합니다.  
   
  \<체계 >://\<사용자 이름 >:\<암호 > @\<호스트 이름 >:\<포트 번호 > /\<UrlPath >\<되어 나타날 >  
   
@@ -145,7 +140,7 @@ class CUrl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlutil.h  
   
-##  <a name="canonicalize"></a>CUrl::Canonicalize  
+##  <a name="canonicalize"></a>  CUrl::Canonicalize  
  URL 문자열을 정규 형식으로 변환 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -154,7 +149,7 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
   
 ### <a name="parameters"></a>매개 변수  
  `dwFlags`  
- 정규화를 제어 하는 플래그입니다. 플래그가 지정 된 경우 ( `dwFlags` = 0), 메서드가 안전 하지 않은 문자와 메타 시퀀스 변환 하는 (같은 \\., \..., 및 \\...) 값이 되도록 이스케이프 시퀀스입니다. `dwFlags`다음 값 중 하나일 수 있습니다.  
+ 정규화를 제어 하는 플래그입니다. 플래그가 지정 된 경우 ( `dwFlags` = 0), 메서드가 안전 하지 않은 문자와 메타 시퀀스 변환 하는 (같은 \\., \..., 및 \\...) 값이 되도록 이스케이프 시퀀스입니다. `dwFlags` 다음 값 중 하나일 수 있습니다.  
   
 -   ATL_URL_BROWSER_MODE: 인코딩하거나 후 "#" 문자를 해독 하지 않습니다 또는 "" 고 후 후행 공백만 제거 하지 않습니다 ""입니다. 이 값을 지정 하지 않으면 전체 URL은 인코딩되고 후행 공백은 제거 됩니다.  
   
@@ -174,14 +169,14 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
 ### <a name="remarks"></a>설명  
  정규 형식으로 변환에서는 안전 하지 않은 문자와 공백을 이스케이프 시퀀스를 변환 합니다.  
   
-##  <a name="clear"></a>CUrl::Clear  
+##  <a name="clear"></a>  CUrl::Clear  
  URL 필드 모두 선택 취소 하려면이 메서드를 호출 합니다.  
   
 ```
 inline void Clear() throw();
 ```  
   
-##  <a name="crackurl"></a>CUrl::CrackUrl  
+##  <a name="crackurl"></a>  CUrl::CrackUrl  
  암호 해독 하 고 URL의 구문 분석에이 메서드를 호출 합니다.  
   
 ```
@@ -198,7 +193,7 @@ BOOL CrackUrl(LPCTSTR lpszUrl, DWORD dwFlags = 0) throw();
 ### <a name="return-value"></a>반환 값  
  성공할 경우 TRUE를 반환 합니다. 실패 한 경우 FALSE입니다.  
   
-##  <a name="createurl"></a>CUrl::CreateUrl  
+##  <a name="createurl"></a>  CUrl::CreateUrl  
  이 메서드는 CUrl 개체의 구성 요소 필드에서 URL 문자열을 만듭니다.  
   
 ```
@@ -228,12 +223,12 @@ inline BOOL CreateUrl(
   
  이 메서드를 호출 하는 경우는 `pdwMaxLength` 매개 변수에서 참조 하는 문자열 버퍼의 최대 길이 포함 처음 해야는 *lpszUrl* 매개 변수입니다. 값은 `pdwMaxLength` 매개 변수는 URL 문자열의 실제 길이으로 업데이트 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  이 샘플에 CUrl 개체를 해당 URL 문자열을 검색 하 고 만드는 방법을 보여 줍니다.  
   
  [!code-cpp[NVC_ATL_Utilities#133](../../atl/codesnippet/cpp/curl-class_1.cpp)]  
   
-##  <a name="curl"></a>CUrl::CUrl  
+##  <a name="curl"></a>  CUrl::CUrl  
  생성자입니다.  
   
 ```
@@ -245,14 +240,14 @@ CUrl(const CUrl& urlThat) throw();
  `urlThat`  
  `CUrl` URL을 만드는 데 복사할 개체입니다.  
   
-##  <a name="dtor"></a>CUrl:: ~ CUrl  
+##  <a name="dtor"></a>  CUrl:: ~ CUrl  
  소멸자입니다.  
   
 ```
 ~CUrl() throw();
 ```  
   
-##  <a name="getextrainfo"></a>CUrl::GetExtraInfo  
+##  <a name="getextrainfo"></a>  CUrl::GetExtraInfo  
  추가 정보를 가져오려면이 메서드를 호출 (예: *텍스트* 또는 # *텍스트*) URL에서 합니다.  
   
 ```
@@ -262,7 +257,7 @@ inline LPCTSTR GetExtraInfo() const throw();
 ### <a name="return-value"></a>반환 값  
  추가 정보를 포함 하는 문자열을 반환 합니다.  
   
-##  <a name="getextrainfolength"></a>CUrl::GetExtraInfoLength  
+##  <a name="getextrainfolength"></a>  CUrl::GetExtraInfoLength  
  추가 정보의 길이 가져오려면이 메서드를 호출 (같은 *텍스트* 또는 # *텍스트*) URL에서 검색할 수 있습니다.  
   
 ```
@@ -272,7 +267,7 @@ inline DWORD GetExtraInfoLength() const throw();
 ### <a name="return-value"></a>반환 값  
  추가 정보를 포함 하는 문자열의 길이 반환 합니다.  
   
-##  <a name="gethostname"></a>CUrl::GetHostName  
+##  <a name="gethostname"></a>  CUrl::GetHostName  
  URL에서 호스트 이름을 가져오기 위해이 메서드를 호출 합니다.  
   
 ```
@@ -282,7 +277,7 @@ inline LPCTSTR GetHostName() const throw();
 ### <a name="return-value"></a>반환 값  
  호스트 이름을 반환합니다.  
   
-##  <a name="gethostnamelength"></a>CUrl::GetHostNameLength  
+##  <a name="gethostnamelength"></a>  CUrl::GetHostNameLength  
  호스트 이름의 길이 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -292,7 +287,7 @@ inline DWORD GetHostNameLength() const throw();
 ### <a name="return-value"></a>반환 값  
  호스트 이름 길이 반환합니다.  
   
-##  <a name="getpassword"></a>CUrl::GetPassword  
+##  <a name="getpassword"></a>  CUrl::GetPassword  
  URL에서 암호를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -302,7 +297,7 @@ inline LPCTSTR GetPassword() const throw();
 ### <a name="return-value"></a>반환 값  
  암호를 반환 합니다.  
   
-##  <a name="getpasswordlength"></a>CUrl::GetPasswordLength  
+##  <a name="getpasswordlength"></a>  CUrl::GetPasswordLength  
  암호의 길이 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -312,7 +307,7 @@ inline DWORD GetPasswordLength() const throw();
 ### <a name="return-value"></a>반환 값  
  암호의 길이 반환합니다.  
   
-##  <a name="getportnumber"></a>CUrl::GetPortNumber  
+##  <a name="getportnumber"></a>  CUrl::GetPortNumber  
  포트 번호를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -322,7 +317,7 @@ inline ATL_URL_PORT GetPortNumber() const throw();
 ### <a name="return-value"></a>반환 값  
  포트 번호를 반환합니다.  
   
-##  <a name="getscheme"></a>CUrl::GetScheme  
+##  <a name="getscheme"></a>  CUrl::GetScheme  
  URL 스키마를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -332,7 +327,7 @@ inline ATL_URL_SCHEME GetScheme() const throw();
 ### <a name="return-value"></a>반환 값  
  반환 된 [ATL_URL_SCHEME](atl-url-scheme-enum.md) URL의 체계를 설명 하는 값입니다.  
   
-##  <a name="getschemename"></a>CUrl::GetSchemeName  
+##  <a name="getschemename"></a>  CUrl::GetSchemeName  
  URL 구성표 이름을 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -342,7 +337,7 @@ inline LPCTSTR GetSchemeName() const throw();
 ### <a name="return-value"></a>반환 값  
  URL 구성표 이름 (예: "http" 또는 "ftp")를 반환합니다.  
   
-##  <a name="getschemenamelength"></a>CUrl::GetSchemeNameLength  
+##  <a name="getschemenamelength"></a>  CUrl::GetSchemeNameLength  
  URL 구성표 이름의 길이 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -352,7 +347,7 @@ inline DWORD GetSchemeNameLength() const throw();
 ### <a name="return-value"></a>반환 값  
  URL 구성표 이름 길이 반환합니다.  
   
-##  <a name="geturllength"></a>CUrl::GetUrlLength  
+##  <a name="geturllength"></a>  CUrl::GetUrlLength  
  URL 길이 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -362,7 +357,7 @@ inline DWORD GetUrlLength() const throw();
 ### <a name="return-value"></a>반환 값  
  URL 길이 반환합니다.  
   
-##  <a name="geturlpath"></a>CUrl::GetUrlPath  
+##  <a name="geturlpath"></a>  CUrl::GetUrlPath  
  URL 경로 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -372,7 +367,7 @@ inline LPCTSTR GetUrlPath() const throw();
 ### <a name="return-value"></a>반환 값  
  URL 경로 반환합니다.  
   
-##  <a name="geturlpathlength"></a>CUrl::GetUrlPathLength  
+##  <a name="geturlpathlength"></a>  CUrl::GetUrlPathLength  
  URL 경로 길이 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -382,7 +377,7 @@ inline DWORD GetUrlPathLength() const throw();
 ### <a name="return-value"></a>반환 값  
  URL 경로 길이 반환합니다.  
   
-##  <a name="getusername"></a>CUrl::GetUserName  
+##  <a name="getusername"></a>  CUrl::GetUserName  
  URL에서 사용자 이름을 가져오기 위해이 메서드를 호출 합니다.  
   
 ```
@@ -392,7 +387,7 @@ inline LPCTSTR GetUserName() const throw();
 ### <a name="return-value"></a>반환 값  
  사용자 이름을 반환합니다.  
   
-##  <a name="getusernamelength"></a>CUrl::GetUserNameLength  
+##  <a name="getusernamelength"></a>  CUrl::GetUserNameLength  
  사용자 이름의 길이 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -402,7 +397,7 @@ inline DWORD GetUserNameLength() const throw();
 ### <a name="return-value"></a>반환 값  
  사용자 이름 길이 반환합니다.  
   
-##  <a name="operator_eq"></a>CUrl::operator =  
+##  <a name="operator_eq"></a>  CUrl::operator =  
  지정 된 할당 `CUrl` 개체를 현재 `CUrl` 개체입니다.  
   
 ```
@@ -416,7 +411,7 @@ CUrl& operator= (const CUrl& urlThat) throw();
 ### <a name="return-value"></a>반환 값  
  현재 개체에 대 한 참조를 반환합니다.  
   
-##  <a name="setextrainfo"></a>CUrl::SetExtraInfo  
+##  <a name="setextrainfo"></a>  CUrl::SetExtraInfo  
  추가 정보를 설정 하려면이 메서드를 호출 (예: *텍스트* 또는 # *텍스트*) URL의 합니다.  
   
 ```
@@ -430,7 +425,7 @@ inline BOOL SetExtraInfo(LPCTSTR lpszInfo) throw();
 ### <a name="return-value"></a>반환 값  
  성공할 경우 TRUE를 반환 합니다. 실패 한 경우 FALSE입니다.  
   
-##  <a name="sethostname"></a>CUrl::SetHostName  
+##  <a name="sethostname"></a>  CUrl::SetHostName  
  호스트 이름을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -444,7 +439,7 @@ inline BOOL SetHostName(LPCTSTR lpszHost) throw();
 ### <a name="return-value"></a>반환 값  
  성공할 경우 TRUE를 반환 합니다. 실패 한 경우 FALSE입니다.  
   
-##  <a name="setpassword"></a>CUrl::SetPassword  
+##  <a name="setpassword"></a>  CUrl::SetPassword  
  암호를 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -458,7 +453,7 @@ inline BOOL SetPassword(LPCTSTR lpszPass) throw();
 ### <a name="return-value"></a>반환 값  
  성공할 경우 TRUE를 반환 합니다. 실패 한 경우 FALSE입니다.  
   
-##  <a name="setportnumber"></a>CUrl::SetPortNumber  
+##  <a name="setportnumber"></a>  CUrl::SetPortNumber  
  포트 번호를 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -472,7 +467,7 @@ inline BOOL SetPortNumber(ATL_URL_PORT nPrt) throw();
 ### <a name="return-value"></a>반환 값  
  성공할 경우 TRUE를 반환 합니다. 실패 한 경우 FALSE입니다.  
   
-##  <a name="setscheme"></a>CUrl::SetScheme  
+##  <a name="setscheme"></a>  CUrl::SetScheme  
  URL 스키마를 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -489,7 +484,7 @@ inline BOOL SetScheme(ATL_URL_SCHEME nScheme) throw();
 ### <a name="remarks"></a>설명  
  이름으로 구성표를 설정할 수도 있습니다 (참조 [CUrl::SetSchemeName](#setschemename)).  
   
-##  <a name="setschemename"></a>CUrl::SetSchemeName  
+##  <a name="setschemename"></a>  CUrl::SetSchemeName  
  URL 구성표 이름을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -506,7 +501,7 @@ inline BOOL SetSchemeName(LPCTSTR lpszSchm) throw();
 ### <a name="remarks"></a>설명  
  체계를 사용 하 여 설정할 수도 있습니다는 [ATL_URL_SCHEME](atl-url-scheme-enum.md) 상수 (참조 [CUrl::SetScheme](#setscheme)).  
   
-##  <a name="seturlpath"></a>CUrl::SetUrlPath  
+##  <a name="seturlpath"></a>  CUrl::SetUrlPath  
  URL 경로 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -520,7 +515,7 @@ inline BOOL SetUrlPath(LPCTSTR lpszPath) throw();
 ### <a name="return-value"></a>반환 값  
  성공할 경우 TRUE를 반환 합니다. 실패 한 경우 FALSE입니다.  
   
-##  <a name="setusername"></a>CUrl::SetUserName  
+##  <a name="setusername"></a>  CUrl::SetUserName  
  사용자 이름을 설정 하려면이 메서드를 호출 합니다.  
   
 ```

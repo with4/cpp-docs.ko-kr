@@ -1,13 +1,10 @@
 ---
-title: "메이크파일 연산자 전처리 | Microsoft Docs"
-ms.custom: 
+title: 메이크파일 연산자 전처리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - DEFINED operator
 - makefiles, preprocessing operators
 ms.assetid: a46e4d39-afdb-43c1-ac3b-025d33e6ebdb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59007bdabc81b5fe49aa4b5265dc0fc73ef4f0b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9a99bf6388a4aa15b2126aca8e09210b7202d46
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="makefile-preprocessing-operators"></a>메이크파일 전처리 연산자
 메이크파일 전처리 식에서는 상수 값, 명령의 종료 코드, 문자열, 매크로 및 파일 시스템 경로에 대해 작동하는 연산자를 사용할 수 있습니다. 식을 평가하기 위해 전처리기에서는 먼저 매크로를 확장하고 명령을 실행한 다음 연산을 수행합니다. 연산은 괄호로 명시적으로 그룹화된 순서에 따르고 그 다음에는 연산자의 우선 순위에 따라 평가됩니다. 결과는 상수 값입니다.  
@@ -45,8 +40,8 @@ ms.lasthandoff: 12/21/2017
   
 |연산자|설명|  
 |--------------|-----------------|  
-|`DEFINED(`*매크로 이름*`)`|현재 정의 상태에 대 한 논리 값을 생성 *매크로 이름*합니다.|  
-|`EXIST(`*경로*`)`|파일의 존재에 대 한 논리 값을 생성 *경로*합니다.|  
+|`DEFINED(` *매크로 이름* `)`|현재 정의 상태에 대 한 논리 값을 생성 *매크로 이름*합니다.|  
+|`EXIST(` *경로* `)`|파일의 존재에 대 한 논리 값을 생성 *경로*합니다.|  
 |||  
 |`!`|단항 논리 연산자 NOT|  
 |`~`|단항 연산자의 보수|  

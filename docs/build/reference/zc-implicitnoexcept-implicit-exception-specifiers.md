@@ -1,10 +1,10 @@
 ---
-title: "/Zc: implicitnoexcept (암시적 예외 지정자) | Microsoft Docs"
-ms.custom: 
+title: '/Zc: implicitnoexcept (암시적 예외 지정자) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /Zc:implicitNoexcept
 dev_langs:
@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 71807652-6f9d-436b-899e-f52daa6f500b
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77308d262022f0cddbbb7008fe8277f7768afd68
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 7e420017056d6857a2809ce6eb85fe99b6f3866f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcimplicitnoexcept-implicit-exception-specifiers"></a>/Zc:implicitNoexcept(암시적 예외 지정자)
 
@@ -41,7 +40,7 @@ ms.lasthandoff: 03/15/2018
 
 기본적으로 **/zc: implicitnoexcept** 를 사용할 수 있습니다. [관대 한 /-](permissive-standards-conformance.md) 옵션이 적용 되지 않습니다 **/zc: implicitnoexcept**합니다.
 
-지정 하 여는 옵션을 해제 하는 경우 **/zc: implicitnoexcept-**, 암시적 예외 지정 자가 없는 컴파일러에서 생성 됩니다. 이 동작은 Visual Studio 2013과 같습니다. Visual Studio 2013에서는 예외 지정자가 없는 소멸자 및 비할당자에 `throw` 문이 있습니다. 기본적으로 언제 **/zc: implicitnoexcept** 를 지정 하는 경우는 `throw` 암시적 함수에서 런타임 시 문이 `noexcept(true)` 지정자를 즉시 호출 하면 `std::terminate`, 및 예외 처리기의 정상적인 해제 동작이 보장 되지 않습니다. 를 이러한 상황을 식별 하기 위해 컴파일러에서 생성 [컴파일러 경고 (수준 1) C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)합니다. 경우는 `throw` 은 의도 한 것이 좋습니다 명시적 하도록 함수 선언을 변경 `noexcept(false)` 지정자를 사용 하는 대신 **/zc: implicitnoexcept-**합니다.
+지정 하 여는 옵션을 해제 하는 경우 **/zc: implicitnoexcept-**, 암시적 예외 지정 자가 없는 컴파일러에서 생성 됩니다. 이 동작은 Visual Studio 2013과 같습니다. Visual Studio 2013에서는 예외 지정자가 없는 소멸자 및 비할당자에 `throw` 문이 있습니다. 기본적으로 언제 **/zc: implicitnoexcept** 를 지정 하는 경우는 `throw` 암시적 함수에서 런타임 시 문이 `noexcept(true)` 지정자를 즉시 호출 하면 `std::terminate`, 및 예외 처리기의 정상적인 해제 동작이 보장 되지 않습니다. 를 이러한 상황을 식별 하기 위해 컴파일러에서 생성 [컴파일러 경고 (수준 1) C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)합니다. 경우는 `throw` 은 의도 한 것이 좋습니다 명시적 하도록 함수 선언을 변경 `noexcept(false)` 지정자를 사용 하는 대신 **/zc: implicitnoexcept-** 합니다.
 
 이 샘플에서는 사용자 정의 소멸자가 명시적 예외 지정 자가 없는 경우의 동작 방식을 보여 줍니다.는 **/zc: implicitnoexcept** 옵션을 설정 하거나 사용 하지 않도록 설정 합니다. 동작으로 설정 하면 사용 하 여 컴파일할 `cl /EHsc /W4 implicitNoexcept.cpp`합니다. 사용 하지 않도록 설정 하는 경우 동작을 표시 하려면 사용 하 여 컴파일할 `cl /EHsc /W4 /Zc:implicitNoexcept- implicitNoexcept.cpp`합니다.
 
@@ -145,7 +144,7 @@ Visual C++의 규칙과 관련된 문제에 대한 자세한 내용은 [Nonstand
 
 1. 수정 된 **추가 옵션** 포함할 속성을 **/zc: implicitnoexcept** 또는 **/zc: implicitnoexcept-** 선택한 후 **확인**합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [/Zc(규칙)](../../build/reference/zc-conformance.md)<br/>
 [noexcept](../../cpp/noexcept-cpp.md)<br/>

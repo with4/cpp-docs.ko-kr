@@ -2,12 +2,9 @@
 title: -CLRSUPPORTLASTERROR (마지막 오류 코드 유지 PInvoke 호출의) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /CLRSUPPORTLASTERROR
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - /CLRSUPPORTLASTERROR linker option
 - -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
-caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e082637e25832c5c5036910f7b67aff53d867bdb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 297414aa71e9d871da795c2ffe567573237c7e0e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR(PInvoke 호출의 마지막 오류 코드 유지)
 **/CLRSUPPORTLASTERROR**, 기본적으로 켜져 있는, 사용 하 여 컴파일한 DLL에 코드에서 네이티브 함수를 호출할 수 있는 P/Invoke 메커니즘을 통해 호출 함수의 마지막 오류 코드는 전처리 **/clr**합니다.  
@@ -92,7 +87,7 @@ ms.lasthandoff: 12/21/2017
   
 -   <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플 마지막 오류를 수정 하는 내보낸 함수를 하나의 네이티브 DLL을 정의 합니다.  
   
 ```  
@@ -108,7 +103,7 @@ __declspec(dllexport) double MySqrt(__int64 n) {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에 사용 하는 방법을 보여 주는 DLL 사용 **/CLRSUPPORTLASTERROR**합니다.  
   
 ```  

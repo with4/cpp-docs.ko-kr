@@ -2,12 +2,9 @@
 title: ATL COM 속성 페이지 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - COM objects, ATL
 - ATL property pages
 ms.assetid: 663c7caa-2e5e-4b5c-b8ea-fd434ceb1654
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08b1c31aeaba25f4eadad5225dd2f5607cf7053c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d5d7904b9f31a1be858dadaa8a087c720c277465
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-com-property-pages"></a>ATL COM 속성 페이지
 속성을 설정 하기 위한 사용자 인터페이스를 제공 하는 COM 속성 페이지 (또는 메서드를 호출할) 하나 이상의 COM 개체입니다. 속성 페이지 컨트롤 속성을 디자인 타임에 설정 될 수 있는 풍부한 사용자 인터페이스를 제공 하기 위해 ActiveX 컨트롤에서 광범위 하 게 사용 됩니다.  

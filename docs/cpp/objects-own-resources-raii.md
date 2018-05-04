@@ -1,27 +1,22 @@
 ---
-title: "개체가 리소스 소유 (RAII) | Microsoft Docs"
-ms.custom: 
+title: 개체가 리소스 소유 (RAII) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f86b484e-5a27-4c3b-a92a-dfaa5dd6d93a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05e23cc81666086bc34352a351ead8006b6c859f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dfd3f1df54e5b5881ed15efeb98a6e6070f400a1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="objects-own-resources-raii"></a>개체가 리소스 소유(RAII)
 직접 리소스 개체가 있는지 확인 합니다. 이 원칙은 라고도 "resource acquisition 초기화" 또는 "RAII."  
@@ -50,5 +45,5 @@ void g() {
   
 ## <a name="see-also"></a>참고 항목  
  [C + +의 진화](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C + + 언어 참조](../cpp/cpp-language-reference.md)   
+ [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [C++ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)

@@ -1,27 +1,22 @@
 ---
-title: "-/Qpar-report (자동 평행 화 도우미 보고 수준) | Microsoft Docs"
-ms.custom: 
+title: -/Qpar-report (자동 평행 화 도우미 보고 수준) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 562673b9-02da-4bf8-bb64-70bc25ef4651
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70ae055d69341cc773b8b40ed1111b65ba5683cf
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 94a9db6d02b9233c51a49cf506a664c9be0f821e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report(자동 병렬화 도우미 보고 수준)
 컴파일러의 보고 기능을 사용 하면 [자동 평행 화](../../parallel/auto-parallelization-and-auto-vectorization.md) 컴파일하는 동안 출력에 대 한 정보 메시지의 수준을 지정 합니다.  
@@ -45,7 +40,7 @@ ms.lasthandoff: 01/03/2018
   
 1.  **솔루션 탐색기**에서 프로젝트의 바로 가기 메뉴를 열고 **속성**을 선택합니다.  
   
-2.  에 **속성 페이지** 대화 상자의 **C/c + +**선택, **명령줄**합니다.  
+2.  에 **속성 페이지** 대화 상자의 **C/c + +** 선택, **명령줄**합니다.  
   
 3.  에 **추가 옵션** 상자에 입력 `/Qpar-report:1` 또는 `/Qpar-report:2`합니다.  
   

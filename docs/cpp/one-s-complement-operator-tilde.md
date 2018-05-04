@@ -1,12 +1,9 @@
 ---
-title: '하나 &#39; s 보수 연산자: ~ | Microsoft Docs'
+title: '하나의&#39;s 보수 연산자: ~ | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - "~"
@@ -19,19 +16,17 @@ helpviewer_keywords:
 - compl operator
 - ~ operator [C++], syntax
 ms.assetid: 4bf81967-34f7-4b4b-aade-fd03d5da0174
-caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 635a3e3b2d270d2164adc3f25a260085d7c50d60
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a10c8f3df2a1f2f27ee33450a52132e8184d4232
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="one39s-complement-operator-"></a>하나 &#39; s 보수 연산자: ~
+# <a name="one39s-complement-operator-"></a>하나의&#39;s 보수 연산자: ~
 ## <a name="syntax"></a>구문  
   
 ```  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="operator-keyword-for-"></a>~에 대한 연산자 키워드  
  `compl` 연산자는 `~`에 해당하는 텍스트입니다. 두 가지 방법으로 액세스 하는 `compl` 를 프로그램에서 연산자: 헤더 파일을 포함 `iso646.h`, 사용 하 여 컴파일 또는 [/Za](../build/reference/za-ze-disable-language-extensions.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // expre_One_Complement_Operator.cpp  

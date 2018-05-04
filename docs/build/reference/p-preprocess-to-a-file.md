@@ -1,13 +1,10 @@
 ---
-title: "-P (파일 전처리) | Microsoft Docs"
-ms.custom: 
+title: -P (파일 전처리) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GeneratePreprocessedFile
 - /p
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - output files, preprocessor
 - preprocessing output files
 ms.assetid: 123ee54f-8219-4a6f-9876-4227023d83fc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f4de2f19820a846197806e0a24ddc213dd636c4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 26e9d2d63c7244990a047749f15273b45229c7bd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="p-preprocess-to-a-file"></a>/P(파일 전처리)
 C 및 c + + 소스 파일을 전처리 하 고 전처리 된 출력 파일을 씁니다.  
@@ -63,7 +58,7 @@ C 및 c + + 소스 파일을 전처리 하 고 전처리 된 출력 파일을 �
   
 -   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GeneratePreprocessedFile%2A>을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 명령줄을 실행 하면 `ADD.C`주석을 유지, 추가, `#line` 지시문을 파일에 결과 기록 `ADD.I`:  
   
 ```  
@@ -73,4 +68,4 @@ CL /P /C ADD.C
 ## <a name="see-also"></a>참고 항목  
  [컴파일러 옵션](../../build/reference/compiler-options.md)   
  [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)   
- [/Fi (출력 파일 이름 전처리)](../../build/reference/fi-preprocess-output-file-name.md)
+ [/Fi(출력 파일 이름 전처리)](../../build/reference/fi-preprocess-output-file-name.md)

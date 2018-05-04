@@ -2,11 +2,8 @@
 title: break 문 (c + +) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - break_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - break keyword [C++]
 ms.assetid: 63739928-8985-4b05-93ce-016322e6da3d
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1f9c9a09652eb76511c7d059cc70eae3fb99ffd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c3679ad27683e5f7ff9a13f5b5021710f7894c04
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="break-statement-c"></a>break 문 (C++)
 `break` 문은 가장 가까운 바깥쪽 루프 또는 표시되는 조건문의 실행을 종료합니다. 제어는 종료된 문 뒤의 문이 있는 경우 전달됩니다.  
@@ -45,7 +40,7 @@ break;
   
  중첩된 문 내의 `break` 문은 해당 문을 둘러싼 `do`, `for`, `switch` 또는 `while` 문만을 종료합니다. `return` 또는 `goto` 문을 사용하여 더 많이 중첩된 구조에서 제어를 전송할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에서는 `break` 문에서 `for` 문을 사용하는 방법을 보여 줍니다.  
   
 ```cpp  

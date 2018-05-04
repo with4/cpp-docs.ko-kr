@@ -1,13 +1,10 @@
 ---
-title: ". 링커 입력 파일로 파일을 lib | Microsoft Docs"
-ms.custom: 
+title: . 링커 입력 파일로 파일을 lib | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.AdditionalDependencies
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - defaults [C++], libraries
 - .lib files
 ms.assetid: dc5d2b1c-2487-41fa-aa71-ad1e0647958b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 181c8c3e5e762f2f20d99ca2acadaf285e717b6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8382e43398c4b6e5241542e6b41fdee8e2f70eff
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lib-files-as-linker-input"></a>링커 입력 파일로 사용하는 .Lib 파일
 링크 허용 COFF 표준 라이브러리 및 COFF 가져오기 라이브러리는 일반적으로 확장명이. lib 합니다. 표준 라이브러리 개체를 포함 하 고 LIB 도구에 의해 생성 됩니다. 가져오기 라이브러리 다른 프로그램의 내보내기에 대 한 정보가 포함 되어 있으며 내보내기가 포함 된 프로그램을 빌드할 때 링크 하 여 하거나 LIB 도구로 만듭니다. LIB 표준 만들기 또는 가져오기 라이브러리를 사용 하는 방법은 참조 하십시오. [LIB 참조](../../build/reference/lib-reference.md)합니다. 가져오기 라이브러리를 만드는 링크 사용에 대 한 자세한 내용은 참조는 [/DLL](../../build/reference/dll-build-a-dll.md) 옵션입니다.  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
 -   참조 [AdditionalDependencies](https://msdn.microsoft.com/library/microsoft.visualstudio.vcprojectengine.vclinkertool.additionaldependencies.aspx)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
 다음 샘플을 빌드하고.lib 파일을 사용 하는 방법을 보여 줍니다. 첫째,.lib 파일 빌드:  
   
 ```cpp  

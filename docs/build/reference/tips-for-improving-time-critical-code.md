@@ -2,12 +2,9 @@
 title: 시간이 중요 한 코드를 향상을 위한 팁 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - _lfind function
 - heap allocation, time-critical code performance
 ms.assetid: 3e95a8cc-6239-48d1-9d6d-feb701eccb54
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23ca6fc8c18a7f2f2013ffdeabd70a7eb9fb0057
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69e05d0aa49a895a9632b07fe07bf38d9e6d4d6b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tips-for-improving-time-critical-code"></a>시간 중심의 코드 성능 향상을 위한 팁
 코드를 빠르게 작성하려면 응용 프로그램의 모든 측면과 응용 프로그램이 시스템과 상호 작용하는 방법을 파악하고 있어야 합니다. 이 항목에서는 코드에서 시간이 중요한 부분이 만족스럽게 수행됨을 확신하는 데 도움이 되는 보다 명백한 일부 코딩 기술에 대한 대안을 제시합니다.  
@@ -82,7 +77,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [소규모 작업 집합](#_core_small_working_set)  
   
-##  <a name="_core_cache_hits_and_page_faults"></a>캐시 누락 및 페이지 폴트  
+##  <a name="_core_cache_hits_and_page_faults"></a> 캐시 누락 및 페이지 폴트  
  페이지 폴트(프로그램 지침 및 데이터를 위한 보조 저장소로 이동)와 외부 및 내부 캐시 모두에서, 누락된 캐시 적중은 프로그램 성능을 저하시킵니다.  
   
  CPU 캐시 적중 10-20 클록 주기를 일으킬 수 있습니다. 외부 캐시 적중 20-40 클록 주기를 일으킬 수 있습니다. 페이지 폴트는 백만 클록 주기를 일으킬 수 있습니다(프로세서가 하나의 페이지 폴트를 500MIPS(초당 명령 100만 개) 및 2밀리초 시간으로 처리한다고 가정). 따라서 프로그램 실행 시 누락된 캐시 적중 및 페이지 폴트 수를 줄이는 코드를 작성하는 것이 가장 중요합니다.  
@@ -93,7 +88,7 @@ ms.lasthandoff: 12/21/2017
   
 -   동적으로 할당되어 연결된 목록을 사용하는 해시 테이블은 성능을 저하시킬 수 있습니다. 더 나아가 동적으로 할당되어 연결된 목록을 사용하여 내용을 저장하는 해시 테이블은 성능을 크게 저하시킬 수 있습니다. 실제로 최종 분석에서는 상황에 따라 배열을 통한 간단한 선형 검색이 더 빠를 수도 있습니다. 배열 기반 해시 테이블("closed hashing")은 뛰어난 성능을 자주 보여줌에도 불구하고 종종 간과되는 구현입니다.  
   
-##  <a name="_core_sorting_and_searching"></a>정렬 및 검색  
+##  <a name="_core_sorting_and_searching"></a> 정렬 및 검색  
  정렬은 대다수의 일반 작업에 비해 본래 시간이 많이 소요됩니다. 불필요한 속도 저하를 피하려면 중요한 시간에는 정렬 작업을 피합니다. 다음과 같이 할 수 있습니다.  
   
 -   비-성능이 중요 한 시간까지 정렬을 지연할 수 있습니다.  
@@ -114,27 +109,27 @@ ms.lasthandoff: 12/21/2017
   
  검색에 대한 대안은 정렬에 대한 대안보다 적습니다. 검색이 시간 결정적이라면 이진 검색 또는 해시 테이블 조회는 거의 항상 최고의 성능을 보이지만 정렬과 마찬가지로 집약성을 염두에 둬야 합니다. 작은 배열을 통한 선형 검색은 페이지 폴트 또는 캐시 누락을 일으키는 포인터가 많이 포함된 데이터 구조를 통한 이진 검색보다 빠를 수 있습니다.  
   
-##  <a name="_core_mfc_and_class_libraries"></a>MFC 및 클래스 라이브러리  
+##  <a name="_core_mfc_and_class_libraries"></a> MFC 및 클래스 라이브러리  
  MFC(Microsoft Foundation Classes)는 코드 작성을 크게 간소화할 수 있습니다. 시간 결정적인 코드를 작성할 때 일부 클래스에서 본질적으로 발생하는 오버헤드를 염두에 둬야 합니다. 시간 결정적 코드가 성능 요구 사항을 충족하는지 확인하려면 시간 결정적 코드가 사용하는 MFC 코드를 확인합니다. 다음 목록에서는 파악하고 있어야 하는 MFC 클래스 및 함수를 식별합니다.  
   
--   `CString`에 대 한 메모리를 할당할 C 런타임 라이브러리를 호출 하는 MFC는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 동적으로 합니다. 일반적으로 `CString`은 동적으로 할당된 다른 문자열처럼 효율적입니다. 동적으로 할당된 모든 문자열처럼 동적 할당 및 릴리스에 대한 오버헤드가 있습니다. 일반적으로 스택에 대한 단순 `char` 배열은 동일한 용도를 제공하면서 더 빠릅니다. 상수 문자열을 저장하는 데 `CString`을 사용하지 마세요. 대신 `const char *`를 사용하십시오. `CString` 개체를 사용하여 수행하는 모든 작업에는 약간의 오버헤드가 있습니다. 런타임 라이브러리를 사용 하 여 [문자열 함수](../../c-runtime-library/string-manipulation-crt.md) 빠를 수 있습니다.  
+-   `CString` 에 대 한 메모리를 할당할 C 런타임 라이브러리를 호출 하는 MFC는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 동적으로 합니다. 일반적으로 `CString`은 동적으로 할당된 다른 문자열처럼 효율적입니다. 동적으로 할당된 모든 문자열처럼 동적 할당 및 릴리스에 대한 오버헤드가 있습니다. 일반적으로 스택에 대한 단순 `char` 배열은 동일한 용도를 제공하면서 더 빠릅니다. 상수 문자열을 저장하는 데 `CString`을 사용하지 마세요. 대신 `const char *`를 사용하십시오. `CString` 개체를 사용하여 수행하는 모든 작업에는 약간의 오버헤드가 있습니다. 런타임 라이브러리를 사용 하 여 [문자열 함수](../../c-runtime-library/string-manipulation-crt.md) 빠를 수 있습니다.  
   
--   `CArray`A [CArray](../../mfc/reference/carray-class.md) 일반 배열과 하지만 프로그램은 필요 하지 않을 유연성을 제공 합니다. 배열의 특정 한계를 알면 대신 고정된 전역 배열을 사용할 수 있습니다. `CArray`를 사용하면 `CArray::SetSize`를 사용하여 크기를 설정하고 다시 할당이 필요한 경우 커지게 하는 요소 수를 지정합니다. 그렇지 않은 경우 요소를 추가하면 배열이 자주 다시 할당되고 복사될 수 있습니다. 이는 비효율적이며 메모리를 조각화할 수 있습니다. 또한 배열에 항목을 삽입하면 `CArray`가 메모리의 후속 항목을 이동하므로 배열이 커져야 할 수 있음에 주의합니다. 이러한 작업은 캐시 누락 및 페이지 폴트를 일으킬 수 있습니다. MFC에서 사용하는 코드를 살펴보면 성능 개선을 위해 자신의 시나리오에 더 잘 맞는 코드를 작성할 수 있다는 점을 알 수 있습니다. `CArray`는 템플릿입니다. 예를 들어 특정 형식에 대해 `CArray` 특수화를 제공할 수 있습니다.  
+-   `CArray` A [CArray](../../mfc/reference/carray-class.md) 일반 배열과 하지만 프로그램은 필요 하지 않을 유연성을 제공 합니다. 배열의 특정 한계를 알면 대신 고정된 전역 배열을 사용할 수 있습니다. `CArray`를 사용하면 `CArray::SetSize`를 사용하여 크기를 설정하고 다시 할당이 필요한 경우 커지게 하는 요소 수를 지정합니다. 그렇지 않은 경우 요소를 추가하면 배열이 자주 다시 할당되고 복사될 수 있습니다. 이는 비효율적이며 메모리를 조각화할 수 있습니다. 또한 배열에 항목을 삽입하면 `CArray`가 메모리의 후속 항목을 이동하므로 배열이 커져야 할 수 있음에 주의합니다. 이러한 작업은 캐시 누락 및 페이지 폴트를 일으킬 수 있습니다. MFC에서 사용하는 코드를 살펴보면 성능 개선을 위해 자신의 시나리오에 더 잘 맞는 코드를 작성할 수 있다는 점을 알 수 있습니다. `CArray`는 템플릿입니다. 예를 들어 특정 형식에 대해 `CArray` 특수화를 제공할 수 있습니다.  
   
--   `CList`[CList](../../mfc/reference/clist-class.md) 위쪽 빠른 요소를 삽입 하는 이중 연결된 목록 이므로 끝 및 알려진 위치 (`POSITION`) 목록에 있습니다. 값 또는 인덱스별로 요소 조회에는 순차 검색이 필요하지만 목록이 길 경우 속도가 저하될 수 있습니다. 코드에 이중 연결 목록이 필요 없는 경우에는 `CList` 사용을 다시 고려할 수 있습니다. 단일 연결 목록을 사용하면 모든 작업에 필요한 추가 포인터 업데이트를 위한 오버헤드와 해당 포인터에 필요한 메모리가 절약됩니다. 추가 메모리는 크지 않지만 캐시 누락 또는 페이지 폴트가 발생할 수 있는 또 다른 기회가 될 수 있습니다.  
+-   `CList` [CList](../../mfc/reference/clist-class.md) 위쪽 빠른 요소를 삽입 하는 이중 연결된 목록 이므로 끝 및 알려진 위치 (`POSITION`) 목록에 있습니다. 값 또는 인덱스별로 요소 조회에는 순차 검색이 필요하지만 목록이 길 경우 속도가 저하될 수 있습니다. 코드에 이중 연결 목록이 필요 없는 경우에는 `CList` 사용을 다시 고려할 수 있습니다. 단일 연결 목록을 사용하면 모든 작업에 필요한 추가 포인터 업데이트를 위한 오버헤드와 해당 포인터에 필요한 메모리가 절약됩니다. 추가 메모리는 크지 않지만 캐시 누락 또는 페이지 폴트가 발생할 수 있는 또 다른 기회가 될 수 있습니다.  
   
--   `IsKindOf`이 함수는 여러 호출을 생성 하 고 참조의 집약성 여러 데이터 영역에 메모리가 매우 많이 액세스할 수 있습니다. 이 함수는 디버그 빌드(예: ASSERT 호출)에 유용하지만 릴리스 빌드에는 사용하지 않도록 하세요.  
+-   `IsKindOf` 이 함수는 여러 호출을 생성 하 고 참조의 집약성 여러 데이터 영역에 메모리가 매우 많이 액세스할 수 있습니다. 이 함수는 디버그 빌드(예: ASSERT 호출)에 유용하지만 릴리스 빌드에는 사용하지 않도록 하세요.  
   
--   `PreTranslateMessage`사용 하 여 `PreTranslateMessage` 창의 특정 트리에 다른 키보드 액셀러레이터가 필요 하거나 메시지 펌프에 메시지 처리를 삽입 해야 합니다. `PreTranslateMessage`는 MFC 디스패치 메시지를 변경합니다. `PreTranslateMessage`를 재정의하는 경우 필요한 수준에서만 재정의합니다. 예를 들어 특정 뷰의 자식으로 이동하는 메시지에만 관심이 있는 경우에는 `CMainFrame::PreTranslateMessage`를 재정의할 필요가 없습니다. 대신 뷰 클래스의 `PreTranslateMessage`를 재정의합니다.  
+-   `PreTranslateMessage` 사용 하 여 `PreTranslateMessage` 창의 특정 트리에 다른 키보드 액셀러레이터가 필요 하거나 메시지 펌프에 메시지 처리를 삽입 해야 합니다. `PreTranslateMessage`는 MFC 디스패치 메시지를 변경합니다. `PreTranslateMessage`를 재정의하는 경우 필요한 수준에서만 재정의합니다. 예를 들어 특정 뷰의 자식으로 이동하는 메시지에만 관심이 있는 경우에는 `CMainFrame::PreTranslateMessage`를 재정의할 필요가 없습니다. 대신 뷰 클래스의 `PreTranslateMessage`를 재정의합니다.  
   
      아무 창으로나 전송된 메시지를 처리하려고 `PreTranslateMessage`를 사용하여 일반 디스패치 경로를 피하지 마세요. 사용 하 여 [창 프로시저](../../mfc/registering-window-classes.md) 및 MFC 메시지 맵을 목적으로 합니다.  
   
--   `OnIdle`유휴 이벤트가 발생할 수 시간에 예상 되지 않는, 사이 처럼 `WM_KEYDOWN` 및 `WM_KEYUP` 이벤트입니다. 타이머가 코드를 트리거할 보다 효율적인 방법일 수 있습니다. false 메시지를 생성하거나 `OnIdle`의 재정의에서 항상 `TRUE`를 반환하여 `OnIdle`을 강제로 반복적으로 호출하지 마세요. 그러면 스레드 대기를 허용할 수 없습니다. 다시 한 번 말하지만 타이머 또는 개별 스레드가 더욱 적절할 수 있습니다.  
+-   `OnIdle` 유휴 이벤트가 발생할 수 시간에 예상 되지 않는, 사이 처럼 `WM_KEYDOWN` 및 `WM_KEYUP` 이벤트입니다. 타이머가 코드를 트리거할 보다 효율적인 방법일 수 있습니다. false 메시지를 생성하거나 `OnIdle`의 재정의에서 항상 `TRUE`를 반환하여 `OnIdle`을 강제로 반복적으로 호출하지 마세요. 그러면 스레드 대기를 허용할 수 없습니다. 다시 한 번 말하지만 타이머 또는 개별 스레드가 더욱 적절할 수 있습니다.  
   
-##  <a name="vcovrsharedlibraries"></a>공유 라이브러리  
+##  <a name="vcovrsharedlibraries"></a> 공유 라이브러리  
  코드 다시 사용이 필요합니다. 그러나 다른 사람의 코드를 사용하려고 하면 성능이 중요한 경우 해당 코드가 무엇을 수행하는지 정확하게 파악해야 합니다. 이를 파악하는 가장 좋은 방법은 소스 코드를 꼼꼼하게 살펴보거나 PView 또는 성능 모니터와 같은 도구를 사용하여 측정하는 것입니다.  
   
-##  <a name="_core_heaps"></a>힙  
+##  <a name="_core_heaps"></a> 힙  
  다중 힙은 신중하게 사용합니다. `HeapCreate` 및 `HeapAlloc`으로 만든 추가 힙을 사용하면 관련 할당 집합을 관리한 다음 삭제할 수 있습니다. 메모리를 너무 많이 커밋하지 마세요. 다중 힙을 사용하는 경우 초기에 커밋된 메모리 양에 특히 주의를 기울이세요.  
   
  다중 힙 대신 도우미 함수를 사용하여 코드와 기본 힙 간에 상호 작용할 수 있습니다. 도우미 함수는 응용 프로그램의 성능을 개선할 수 있는 사용자 지정 할당 전략의 구현을 용이하게 합니다. 예를 들어 소규모 할당을 자주 수행하는 경우 이러한 할당을 기본 힙의 한 부분으로 지역화하려 할 수 있습니다. 메모리의 큰 블록을 할당한 다음 도우미 함수를 사용하여 이 블록에서 하위 할당할 수 있습니다. 이렇게 하면 할당이 기본 힙에서 나오므로 사용되지 않는 메모리가 있는 추가 힙은 없습니다.  
@@ -154,7 +149,7 @@ ms.lasthandoff: 12/21/2017
   
  자세한 내용은 참조 [유휴 루프 처리](../../mfc/idle-loop-processing.md) 및 [다중 스레딩](../../parallel/multithreading-support-for-older-code-visual-cpp.md)합니다.  
   
-##  <a name="_core_small_working_set"></a>소규모 작업 집합  
+##  <a name="_core_small_working_set"></a> 소규모 작업 집합  
  작업 집합이 더 작을수록 참조 집약성은 향상되고 페이지 폴트는 줄어들며 캐시 적중률은 더 커집니다. 프로세스 작업 집합은 운영 체제에서 직접 제공하는, 참조 집약성 측정에 가장 적합한 메트릭입니다.  
   
 -   작업 집합의 상한 및 하 한 제한을 설정 하려면 [SetProcessWorkingSetSize](http://msdn.microsoft.com/library/windows/desktop/ms683226.aspx)합니다.  

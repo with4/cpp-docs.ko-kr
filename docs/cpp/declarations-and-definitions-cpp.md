@@ -1,27 +1,22 @@
 ---
-title: "선언 및 정의 (c + +) | Microsoft Docs"
-ms.custom: 
+title: 선언 및 정의 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea0f8210993e494cbd4795a2c4cf7c6c0afa8aa2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0f8a0922d66a9421bcc7c6c07b9396b277499d0d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declarations-and-definitions-c"></a>선언 및 정의 (C++)
 선언은 프로그램에서 하는 이름, 변수, 네임 스페이스, 함수 및 클래스의 이름 예를 소개합니다. 또한, 선언은 형식 정보뿐만 아니라 선언되는 개체의 다른 특성도 지정합니다. 이름은 먼저 선언해야 사용할 수 있습니다. C++에서는 이름이 선언되는 지점에 따라 이름이 컴파일러에 표시되는지 여부가 달라집니다. 함수 또는; 컴파일 단위에서 늦은 지점에 선언 된 클래스를 참조할 수 없습니다. 사용할 수 있습니다 *정방향 선언* 이 제한을 해결 하기.  

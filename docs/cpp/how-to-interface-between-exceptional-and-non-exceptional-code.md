@@ -1,27 +1,22 @@
 ---
-title: "방법: 예외 및 비 예외 코드 간의 인터페이스 | Microsoft Docs"
-ms.custom: 
+title: '방법: 예외 및 비 예외 코드 간의 인터페이스 | Microsoft Docs'
+ms.custom: how-to
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fd5bb4af-5665-46a1-a321-614b48d4061e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59838fa1797fc87561b081d40143693dea385668
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2cf2216ba75912520f744f0f0331a50520aa895
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>방법: 예외 코드와 예외가 아닌 코드 간 인터페이스
 이 문서에서는 C++ 모듈에서 일관된 예외 처리를 구현하는 방법 및 예외 경계에서 이러한 예외를 오류 코드에서 및 오류 코드로 변환하는 방법을 설명합니다.  
@@ -31,7 +26,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="calling-non-exceptional-functions-from-c"></a>C++에서 비예외 함수 호출  
  C++에서 비예외 함수를 호출하는 경우 오류를 검색한 다음 예외를 throw할 수 있는 C++ 함수에서 해당 함수를 래핑합니다. 이러한 래퍼 함수를 디자인하는 경우 먼저 제공을 위해 throw 없음, 강력 또는 기본 같이 예외 보장의 형식을 결정합니다. 두 번째로 예외가 throw된 경우 모든 리소스(예: 파일 핸들)가 올바르게 해제되도록 함수를 디자인합니다. 일반적으로 이는 스마트 포인터 또는 유사한 리소스 관리자를 사용하여 리소스를 소유함을 의미합니다. 디자인 고려 사항에 대 한 자세한 내용은 참조 [하는 방법: 예외 안전성을 위한 디자인](../cpp/how-to-design-for-exception-safety.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 Win32 `CreateFile` 및 `ReadFile` 함수를 사용하여 내부적으로 두 파일을 읽고 여는 C++ 함수를 보여 줍니다.  `File` 클래스는 파일 핸들에 대한 RAII(Resource Acquisition Is Initialization) 래퍼입니다. 해당 생성자는 "파일을 찾을 수 없음" 상태를 감지하고 C++ 모듈(이 예제에서 `main()` 함수)의 호출 스택 위로 오류를 전파하기 위해 예외를 throw합니다. `File` 개체가 완전히 생성된 후 예외가 throw된 경우 소멸자는 파일 핸들을 해제하기 위해 자동으로 `CloseHandle`을 호출합니다. 원하는 경우 이와 같은 용도로 ATL(액티브 템플릿 라이브러리) `CHandle` 클래스를 사용하거나 `unique_ptr`을 사용자 지정 deleter와 함께 사용할 수 있습니다. Win32 및 CRT API를 호출하는 함수가 오류를 검색한 다음 로컬로 정의된 `ThrowLastErrorIf` 함수와 `Win32Exception`에서 파생된 `runtime_error` 클래스를 차례로 사용하여 C++ 예외를 throw합니다. 이 예제의 모든 함수는 강력한 예외 보장을 제공합니다. 언제든지 이러한 함수에서 예외가 throw되면 리소스가 손실되지 않고 프로그램 상태가 수정되지 않습니다.  
   
 ```cpp  

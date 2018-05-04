@@ -1,10 +1,10 @@
 ---
-title: "/Zc:twoPhase-(사용 안 함 2 단계 이름 lookup) | Microsoft Docs"
-ms.custom: 
+title: /Zc:twoPhase-(사용 안 함 2 단계 이름 lookup) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - twoPhase
 - /Zc:twoPhase
@@ -17,14 +17,13 @@ helpviewer_keywords:
 - /Zc:twoPhase
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4582a5532d9fd410224ee4174ca3973bfe539656
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 5653959b25105f10ae98768217524dc0ff0cbe2a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(2 단계 이름 조회 사용 안 함)
 
@@ -38,7 +37,7 @@ ms.lasthandoff: 03/15/2018
 
 Visual Studio 2017 15.3 이상 버전에서는 기본적으로 버전의 컴파일러는 템플릿 이름 확인에 대 한 2 단계 이름 조회를 사용합니다. 경우 **/Zc:twoPhase-** 지정, 컴파일러는 이전 맞지 않는 클래스 템플릿 및 함수 템플릿 이름 확인 및 대체 동작 되돌아갑니다.
 
-**/Zc:twoPhase-** 맞지 않는 동작을 사용 하는 옵션 기본 설정 되지 않습니다. [관대 한 /-](permissive-standards-conformance.md) 옵션 표준에 맞는 2 단계 조회 컴파일러 동작을 암시적으로 설정 되지만 사용 하 여 재정의할 수 있습니다 **/Zc:twoPhase-**합니다.
+**/Zc:twoPhase-** 맞지 않는 동작을 사용 하는 옵션 기본 설정 되지 않습니다. [관대 한 /-](permissive-standards-conformance.md) 옵션 표준에 맞는 2 단계 조회 컴파일러 동작을 암시적으로 설정 되지만 사용 하 여 재정의할 수 있습니다 **/Zc:twoPhase-** 합니다.
 
 버전 10.0.15063.0 (작성자가 업데이트 또는 Redstone 2) 및 이전 버전의 Windows SDK 헤더 파일 규격 모드에서 제대로 작동 하지 않습니다. 사용 해야 **/Zc:twoPhase-** Visual Studio 2017 버전 15.3 및 이상 버전을 사용 하는 경우 해당 SDK 버전에 대 한 코드를 컴파일할 수 있습니다. 버전의 Windows SDK 버전부터 10.0.15254.0 (Redstone 3 또는 Fall 작성자 업데이트) 규격 모드에서 제대로 작동 하 고 필요 하지 않습니다는 **/Zc:twoPhase-** 옵션입니다.
 
@@ -84,7 +83,7 @@ int main()
 
 컴파일된 경우 **/Zc:twoPhase-**,이 프로그램 "int로 호출 확인"에 출력 합니다. 규격 모드에서 **관대 한 /-**,이 프로그램 "호출에 void * 확인", 두 번째 오버 로드 때문에 인쇄 `func` 컴파일러에서 서식 파일을 발견 한 경우 표시 되지 않습니다.
 
-*종속 이름*를 템플릿 매개 변수에 종속 되는 이름에서 다른 이기도 조회 동작을 내포 **/Zc:twoPhase-**합니다. 규격 모드에서 종속 이름 서식 파일의 정의 시 바인딩되지 않습니다. 대신, 이러한 이름은 조회 됩니다 템플릿이 인스턴스화될 때. 종속 함수 이름으로 함수 호출에 대 한 이름은 위와 같은 서식 파일의 정의에 대 한 호출 시 표시 되는 함수 집합에 바인딩되어 있습니다. 인수 종속 조회의 추가 오버 로드는 모두 템플릿 정의 시점의 끝점 및 템플릿이 인스턴스화될 위치에 추가 됩니다. 2 단계 조회의 두 단계는 템플릿 인스턴스화 시 종속 이름에 대 한 템플릿 정 및 조회의 시간에 종속 되지 않은 이름에 대 한 조회 있습니다. 아래 **/Zc:twoPhase-**, 컴파일러에서 일반, 정규화 되지 않은 조회 인수 종속 조회를 별도로 수행 하지는 않습니다 (즉,는 일은 2 단계 조회), 하므로 오버 로드 확인의 결과 다를 수 있습니다.
+*종속 이름*를 템플릿 매개 변수에 종속 되는 이름에서 다른 이기도 조회 동작을 내포 **/Zc:twoPhase-** 합니다. 규격 모드에서 종속 이름 서식 파일의 정의 시 바인딩되지 않습니다. 대신, 이러한 이름은 조회 됩니다 템플릿이 인스턴스화될 때. 종속 함수 이름으로 함수 호출에 대 한 이름은 위와 같은 서식 파일의 정의에 대 한 호출 시 표시 되는 함수 집합에 바인딩되어 있습니다. 인수 종속 조회의 추가 오버 로드는 모두 템플릿 정의 시점의 끝점 및 템플릿이 인스턴스화될 위치에 추가 됩니다. 2 단계 조회의 두 단계는 템플릿 인스턴스화 시 종속 이름에 대 한 템플릿 정 및 조회의 시간에 종속 되지 않은 이름에 대 한 조회 있습니다. 아래 **/Zc:twoPhase-**, 컴파일러에서 일반, 정규화 되지 않은 조회 인수 종속 조회를 별도로 수행 하지는 않습니다 (즉,는 일은 2 단계 조회), 하므로 오버 로드 확인의 결과 다를 수 있습니다.
 
 또 다른 예는 다음과 같습니다.
 
@@ -130,11 +129,11 @@ func(int)
 NS::func(NS::S)
 ```
 
-규격 모드에서 **관대 한 /-**, 호출 `tfunc(1729)` 확인 되는 `void func(long)` 오버 로드, 하지 `void func(int)` 미만으로 오버 로드 **/Zc:twoPhase-**때문에, 정규화 되지 않은 `func(int)` 서식 파일의 정의 뒤에 선언 되며 인수 종속 조회를 통해 찾을 수 없습니다. 하지만 `void func(S)` 는 오버 로드는 호출에 대 한 설정에 추가 인수 종속 조회에 참여 `tfunc(s)` 템플릿 함수 뒤에 선언 된 경우에 합니다.
+규격 모드에서 **관대 한 /-**, 호출 `tfunc(1729)` 확인 되는 `void func(long)` 오버 로드, 하지 `void func(int)` 미만으로 오버 로드 **/Zc:twoPhase-** 때문에, 정규화 되지 않은 `func(int)` 서식 파일의 정의 뒤에 선언 되며 인수 종속 조회를 통해 찾을 수 없습니다. 하지만 `void func(S)` 는 오버 로드는 호출에 대 한 설정에 추가 인수 종속 조회에 참여 `tfunc(s)` 템플릿 함수 뒤에 선언 된 경우에 합니다.
 
 ### <a name="update-your-code-for-two-phase-conformance"></a>2 단계 규칙에 대 한 코드 업데이트
 
-이전 버전의 컴파일러 키워드 필요 하지 않습니다 `template` 및 `typename` everywhere c + + 표준에 필요한 합니다. 이러한 키워드 컴파일러 종속 이름이 구문 분석 해야 조회의 첫 번째 단계는 어떻게 명확 하 게 일부 위치에 필요 합니다. 예:
+이전 버전의 컴파일러 키워드 필요 하지 않습니다 `template` 및 `typename` everywhere c + + 표준에 필요한 합니다. 이러한 키워드 컴파일러 종속 이름이 구문 분석 해야 조회의 첫 번째 단계는 어떻게 명확 하 게 일부 위치에 필요 합니다. 예를 들어:
 
 `T::Foo<a || b>(c);`
 
@@ -144,7 +143,7 @@ NS::func(NS::S)
 
 Visual Studio 2017 버전 15.3, 이전 버전에서는 언제 **/Zc:twoPhase-** 를 지정 하지 않고이 코드는 컴파일러에서 허용는 `template` 키워드 의인수와함께함수가서식파일에대한호출으로해석하고`a || b`매우 제한 된 방식으로 서식 파일을 구문 분석 하기 때문에, 합니다. 위의 코드 첫 번째 단계에서 전혀 구문 분석 되지 않습니다. 두 번째 단계는 충분 한 컨텍스트는 `T::Foo` 이므로 변수를 사용 하지 않고 템플릿을 컴파일러는 키워드의 사용을 적용 하지 않습니다.
 
-키워드를 제거 하 여이 문제를 확인할 수도 있습니다 `typename` 이름 앞에 함수 템플릿 본문, 이니셜라이저, 기본 인수 및 noexcept 인수입니다. 예:
+키워드를 제거 하 여이 문제를 확인할 수도 있습니다 `typename` 이름 앞에 함수 템플릿 본문, 이니셜라이저, 기본 인수 및 noexcept 인수입니다. 예를 들어:
 
 ```cpp
 template<typename T>
@@ -154,7 +153,7 @@ typename T::TYPE func(typename T::TYPE*)
 }
 ```
 
-키워드를 사용 하지 않는 경우 `typename` 함수 본문에서이 코드에서 컴파일됩니다 **/Zc:twoPhase-**, 아니라 **관대 한 /-**합니다. `typename` 키워드는 해당 필요는 `TYPE` 따라 달라 집니다. 본문을 구문 분석할 **/Zc:twoPhase-**, 컴파일러와 키워드가 필요 합니다. **관대 한 /-** 준수 모드, 없이 코드는 `typename` 키워드 오류를 생성 합니다. Visual Studio 2017 15.3 버전에 코드를 마이그레이션하고 beyond를 삽입 하는 `typename` 누락 된 키워드입니다.
+키워드를 사용 하지 않는 경우 `typename` 함수 본문에서이 코드에서 컴파일됩니다 **/Zc:twoPhase-**, 아니라 **관대 한 /-** 합니다. `typename` 키워드는 해당 필요는 `TYPE` 따라 달라 집니다. 본문을 구문 분석할 **/Zc:twoPhase-**, 컴파일러와 키워드가 필요 합니다. **관대 한 /-** 준수 모드, 없이 코드는 `typename` 키워드 오류를 생성 합니다. Visual Studio 2017 15.3 버전에 코드를 마이그레이션하고 beyond를 삽입 하는 `typename` 누락 된 키워드입니다.
 
 마찬가지로,이 코드 예제를 고려해 야 합니다.
 
@@ -178,6 +177,6 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 
 1. 수정 된 **추가 옵션** 포함할 속성을 **/Zc:twoPhase-** 선택한 후 **확인**합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [/Zc(규칙)](../../build/reference/zc-conformance.md)<br/>

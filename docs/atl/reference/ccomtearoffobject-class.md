@@ -1,12 +1,9 @@
 ---
-title: "CComTearOffObject 클래스 | Microsoft Docs"
-ms.custom: 
+title: CComTearOffObject 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComTearOffObject
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - tear-off interfaces
 - CComTearOffObject class
 ms.assetid: d974b598-c6b2-42b1-8360-9190d9d0fbf3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80be7d80af5a6c8fa2c47bc0e853020663f2ceae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: be47c9525098cb3bd444cefff39dbbf25b88d396
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomtearoffobject-class"></a>CComTearOffObject 클래스
 이 클래스는 분리 인터페이스를 구현합니다.  
@@ -82,11 +77,11 @@ class CComTearOffObject : public Base
 |[m_pOwner](#m_powner)|에 대 한 포인터는 `CComObject` 소유자 클래스에서 파생 됩니다.|  
   
 ## <a name="remarks"></a>설명  
- `CComTearOffObject`해당 인터페이스 쿼리 하는 경우에 인스턴스화될 별개의 개체로 분리 인터페이스를 구현 합니다. 참조 횟수가 0 인 경우는 분리 삭제 됩니다. 일반적으로 사용 되는 거의 주요 개체의 모든 인스턴스에서 vtable 포인터를 저장 한 분리를 사용 하 여 이후 인터페이스에 대 한 분리 인터페이스를 빌드합니다.  
+ `CComTearOffObject` 해당 인터페이스 쿼리 하는 경우에 인스턴스화될 별개의 개체로 분리 인터페이스를 구현 합니다. 참조 횟수가 0 인 경우는 분리 삭제 됩니다. 일반적으로 사용 되는 거의 주요 개체의 모든 인스턴스에서 vtable 포인터를 저장 한 분리를 사용 하 여 이후 인터페이스에 대 한 분리 인터페이스를 빌드합니다.  
   
- 분리를 구현 하는 클래스를 파생 시켜야 `CComTearOffObjectBase` 및 중에서 어떤 인터페이스 지원 하기 위해 분리 개체입니다. `CComTearOffObjectBase`소유자 클래스와 스레드 모델에 템플릿 화 됩니다. Owner 클래스는를 분리 구현 되는 경우 개체의 클래스입니다. 스레드 모델을 지정 하지 않으면 기본 스레드 모델 사용 됩니다.  
+ 분리를 구현 하는 클래스를 파생 시켜야 `CComTearOffObjectBase` 및 중에서 어떤 인터페이스 지원 하기 위해 분리 개체입니다. `CComTearOffObjectBase` 소유자 클래스와 스레드 모델에 템플릿 화 됩니다. Owner 클래스는를 분리 구현 되는 경우 개체의 클래스입니다. 스레드 모델을 지정 하지 않으면 기본 스레드 모델 사용 됩니다.  
   
- 분리 클래스에 대 한 COM 맵을 만들어야 합니다. ATL에서 인스턴스화하는 분리 하면 생기게 됩니다 **CComTearOffObject\<CYourTearOffClass >** 또는 **CComCachedTearOffObject\<CYourTearOffClass >**합니다.  
+ 분리 클래스에 대 한 COM 맵을 만들어야 합니다. ATL에서 인스턴스화하는 분리 하면 생기게 됩니다 **CComTearOffObject\<CYourTearOffClass >** 또는 **CComCachedTearOffObject\<CYourTearOffClass >** 합니다.  
   
  예를 들어 호출기 샘플에에서는 `CBeeper2` 클래스는 분리 클래스 및 `CBeeper` 클래스는 소유자 클래스:  
   
@@ -100,7 +95,7 @@ class CComTearOffObject : public Base
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="addref"></a>CComTearOffObject::AddRef  
+##  <a name="addref"></a>  CComTearOffObject::AddRef  
  참조 횟수를 증가 `CComTearOffObject` 씩 개체입니다.  
   
 ```
@@ -110,7 +105,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="return-value"></a>반환 값  
  진단에 대 한 유용 하 고 테스트 될 수 있는 값입니다.  
   
-##  <a name="ccomtearoffobject"></a>CComTearOffObject::CComTearOffObject  
+##  <a name="ccomtearoffobject"></a>  CComTearOffObject::CComTearOffObject  
  생성자입니다.  
   
 ```
@@ -124,7 +119,7 @@ CComTearOffObject(void* pv);
 ### <a name="remarks"></a>설명  
  씩 소유자의 참조 횟수를 증가 시킵니다.  
   
-##  <a name="dtor"></a>CComTearOffObject:: ~ CComTearOffObject  
+##  <a name="dtor"></a>  CComTearOffObject:: ~ CComTearOffObject  
  소멸자입니다.  
   
 ```
@@ -134,7 +129,7 @@ CComTearOffObject(void* pv);
 ### <a name="remarks"></a>설명  
  할당 된 모든 리소스를 해제 하 고 감소 FinalRelease, 모듈을 호출, 잠금 카운트입니다.  
   
-##  <a name="ccomtearoffobjectbase"></a>CComTearOffObject::CComTearOffObjectBase  
+##  <a name="ccomtearoffobjectbase"></a>  CComTearOffObject::CComTearOffObjectBase  
  생성자입니다.  
   
 ```
@@ -144,7 +139,7 @@ CComTearOffObjectBase();
 ### <a name="remarks"></a>설명  
  초기화는 [m_pOwner](#m_powner) 멤버 **NULL**합니다.  
   
-##  <a name="m_powner"></a>CComTearOffObject::m_pOwner  
+##  <a name="m_powner"></a>  CComTearOffObject::m_pOwner  
  에 대 한 포인터는 [CComObject](../../atl/reference/ccomobject-class.md) 에서 파생 된 개체 *소유자*합니다.  
   
 ```
@@ -158,7 +153,7 @@ CComObject<Owner>* m_pOwner;
 ### <a name="remarks"></a>설명  
  에 포인터가 초기화 되 **NULL** 생성 중입니다.  
   
-##  <a name="queryinterface"></a>CComTearOffObject::QueryInterface  
+##  <a name="queryinterface"></a>  CComTearOffObject::QueryInterface  
  요청된 인터페이스에 대한 포인터를 검색합니다.  
   
 ```
@@ -178,7 +173,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="remarks"></a>설명  
  인터페이스 분리 클래스에 대 한 먼저를 쿼리 합니다. 인터페이스가 없는 경우, 소유자 개체의 인터페이스에 대 한 쿼리 합니다. 요청한 인터페이스가 **IUnknown**, 반환 된 **IUnknown** 소유자의 합니다.  
   
-##  <a name="release"></a>CComTearOffObject::Release  
+##  <a name="release"></a>  CComTearOffObject::Release  
  참조 횟수를 1 씩 감소 고 참조 횟수가 0 인 경우 삭제 된 `CComTearOffObject`합니다.  
   
 ```

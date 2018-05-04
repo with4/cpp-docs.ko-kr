@@ -2,11 +2,8 @@
 title: _mbclen, mblen, _mblen_l | Microsoft 문서
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbclen
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-caps.latest.revision: 24
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f0478d5d6337d185d30a7fee8d012104bdff13d
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 932695b9d3474f892460e222fd1d9cc2b34c0dd6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
 
@@ -105,7 +100,7 @@ int _mblen_l(
 
 **mblen** 바이트의 길이 반환 *mbstr* 유효한 멀티 바이트 문자 이며 코드 페이지와 관련 된 멀티 바이트 문자의 유효성을 확인 하는 경우. **mblen** 검사 *count* 또는에 포함 된 더 적은 바이트 *mbstr*, 최대 **MB_CUR_MAX** 바이트입니다.
 
-출력 값은의 설정에 영향을 **LC_CTYPE** 로캘 범주 설정; 참조 [setlocale](setlocale-wsetlocale.md) 자세한 정보에 대 한 합니다. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따른 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 루틴 매핑
 

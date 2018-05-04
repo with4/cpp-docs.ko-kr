@@ -2,11 +2,8 @@
 title: _mbsnbset, _mbsnbset_l | Microsoft 문서
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsnbset
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - tcsnset_l function
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
-caps.latest.revision: 24
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 462e435c1b93561cf5ca21dd20ad2025ac6f9661
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 316580b0c5f1f46ffa9f4a49ef759b347032fc09
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mbsnbset-mbsnbsetl"></a>_mbsnbset, _mbsnbset_l
 
@@ -102,7 +97,7 @@ unsigned char *_mbsnbset_l(
 
 경우 *str* 은 **NULL** 또는 *count* 0 이면이 함수에 설명 된 대로 잘못 된 매개 변수 예외를 생성 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md). 실행을 계속 하도록 허용 된 경우 **errno** 로 설정 된 **EINVAL** 함수가 반환 하 고 **NULL**합니다. 또한 경우 *c* 은 유효한 멀티 바이트 문자가 아닙니다 **errno** 로 설정 된 **EINVAL** 공백을 대신 사용 됩니다.
 
-출력 값은의 설정에 영향을 **LC_CTYPE** 로캘 범주 설정; 참조 [setlocale](setlocale-wsetlocale.md) 자세한 정보에 대 한 합니다. **_mbsnbset** 이 함수의 버전은이 로캘 종속 동작에 대 한 현재 로캘을 사용는 **_mbsnbset_l** 버전은 전달 된 로캘 매개 변수를 사용 하 여 제외 하 고 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따른 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. **_mbsnbset** 이 함수의 버전은이 로캘 종속 동작에 대 한 현재 로캘을 사용는 **_mbsnbset_l** 버전은 전달 된 로캘 매개 변수를 사용 하 여 제외 하 고 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
 **보안 정보** 이 API는 버퍼 오버런 문제로 인해 발생하는 잠재적인 위협을 일으킵니다. 버퍼 오버런 문제는 자주 사용되는 시스템 공격 방법으로, 불필요한 권한 상승을 초래합니다. 자세한 내용은 [버퍼 오버런 방지](http://msdn.microsoft.com/library/windows/desktop/ms717795)를 참조하세요.
 

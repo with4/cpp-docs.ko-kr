@@ -1,27 +1,22 @@
 ---
-title: "연습: 컴파일 C + + /CX 프로그램 명령줄에 | Microsoft Docs"
-ms.custom: 
+title: '연습: 컴파일 C + + /CX 프로그램 명령줄에 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13e1b220123d3215e1c9150d00ee092ea4200ca8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0963f70047ea42893b1169c5da7c614766406280
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>연습: 명령줄에서 C++/CX 프로그램 컴파일
 Windows 런타임을 대상으로 하는 Visual C++ 프로그램을 만들어 명령줄에서 빌드할 수 있습니다. Visual C++는 Windows 런타임 프로그래밍 모델을 대상으로 하는 추가 형식 및 연산자가 있는 Visual C++ 구성 요소 확장명(C++/CX)을 지원합니다. 에서는 C + + /CX 유니버설 Windows 플랫폼 (UWP), Windows Phone 8.1 및 Windows 데스크톱 앱을 빌드할를 합니다. 자세한 내용은 참조 [A C+ 둘러보기 + CX](http://msdn.microsoft.com/magazine/dn166929.aspx) 및 [런타임 플랫폼용 구성 요소 확장명](../windows/component-extensions-for-runtime-platforms.md)합니다.  
@@ -31,7 +26,7 @@ Windows 런타임을 대상으로 하는 Visual C++ 프로그램을 만들어 �
 > [!NOTE]
 >  또한 Visual Studio IDE를 사용하여 C++/CX 프로그램을 컴파일할 수 있습니다. IDE에서 디자인, 디버깅, 에뮬레이션 및 배포 지원 명령줄에서 사용할 수 없는 포함 하므로 IDE를 사용 하 여 유니버설 Windows 플랫폼 (UWP) 응용 프로그램을 빌드하는 것이 좋습니다. 자세한 내용은 참조 [c + + UWP 앱을 만들](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  개발자는 C++ 언어의 기본적인 사항을 알고 있어야 합니다.  
   
 ## <a name="compiling-a-ccx-program"></a>C++/CX 프로그램 컴파일  
@@ -74,6 +69,6 @@ Windows 런타임을 대상으로 하는 Visual C++ 프로그램을 만들어 �
     ```  
   
 ## <a name="see-also"></a>참고 항목  
- [C + + 언어 참조](../cpp/cpp-language-reference.md)   
+ [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [C/C++ 프로그램 빌드](../build/building-c-cpp-programs.md)   
  [컴파일러 옵션](../build/reference/compiler-options.md)

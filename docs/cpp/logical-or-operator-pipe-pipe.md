@@ -1,12 +1,9 @@
 ---
-title: "논리 OR 연산자: | | | Microsoft Docs"
-ms.custom: 
+title: '논리 OR 연산자: | | | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '||'
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - OR operator
 - logical OR operator
 ms.assetid: 31837c99-2655-4bf3-8ded-f13b7a9dc533
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a826b23f94c4eae4a4fdb5379563b015f05dde71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bd0642e9759eaa4d39eac680ba165af7dbbb0d44
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="logical-or-operator-"></a>논리합 연산자: ||
 ## <a name="syntax"></a>구문  
@@ -56,10 +51,10 @@ printf( "%d" , (x == w || x == y || x == z) );
   
  위의 예제에서 `x`가 `w`, `y` 또는 `z`와 같을 경우 `printf` 함수에 대한 두 번째 인수는 true로 계산되고 값 1이 출력됩니다. 그렇지 않으면 false로 계산되고 값 0이 출력됩니다. 조건 중 하나가 true로 확인되면 계산이 중지됩니다.  
   
-## <a name="operator-keyword-for-124124"></a>에 대 한 연산자 키워드 &#124; &#124;  
+## <a name="operator-keyword-for-124124"></a>에 대 한 연산자 키워드&#124;&#124;  
  **또는** 연산자는 해당 하는 텍스트 `||`합니다. 두 가지 방법으로 액세스 하는 **또는** 를 프로그램에서 연산자: 헤더 파일을 포함 `iso646.h`,으로 컴파일하는 [/Za](../build/reference/za-ze-disable-language-extensions.md) (언어 확장명 사용 안 함) 컴파일러 옵션입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // expre_Logical_OR_Operator.cpp  

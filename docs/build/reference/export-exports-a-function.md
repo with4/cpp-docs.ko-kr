@@ -2,12 +2,9 @@
 title: 내보내기 (함수 내보내기) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.ExportFunctions
 - /export
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2183a67679fc216396d03ac31a5a11db8d011454
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f366b40e8e40e62f67ec45f3e59ad61eb338c427
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="export-exports-a-function"></a>/EXPORT(함수 내보내기)
 ```  
@@ -38,9 +33,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  이 옵션을 다른 프로그램에서 함수를 호출할 수 있도록 프로그램에서 함수를 내보낼 수 있습니다. 데이터를 내보낼 수 있습니다. 내보내기는 일반적으로 DLL에 정의 됩니다.  
   
- *entryname* 호출 프로그램에서 사용 하는 것 만큼은 함수 또는 데이터 항목의 이름입니다. `ordinal`1-65535의에서 내보내기 테이블에 인덱스를 지정합니다. 지정 하지 않으면 `ordinal`, 링크 값을 할당 합니다. **NONAME** 키워드는 서 수로만 하지 않고 함수를 내보내는 *entryname*합니다.  
+ *entryname* 호출 프로그램에서 사용 하는 것 만큼은 함수 또는 데이터 항목의 이름입니다. `ordinal` 1-65535의에서 내보내기 테이블에 인덱스를 지정합니다. 지정 하지 않으면 `ordinal`, 링크 값을 할당 합니다. **NONAME** 키워드는 서 수로만 하지 않고 함수를 내보내는 *entryname*합니다.  
   
- **데이터** 키워드는 내보낸된 항목 데이터 항목 임을 지정 합니다. 사용 하 여 클라이언트 프로그램에서 데이터 항목을 선언 해야 **extern __declspec (dllimport)**합니다.  
+ **데이터** 키워드는 내보낸된 항목 데이터 항목 임을 지정 합니다. 사용 하 여 클라이언트 프로그램에서 데이터 항목을 선언 해야 **extern __declspec (dllimport)** 합니다.  
   
  권장된 사용 순서 대로 나열 된 정의 내보내기 위한 세 가지가 있습니다.  
   

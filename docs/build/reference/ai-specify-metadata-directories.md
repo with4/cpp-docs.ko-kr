@@ -1,13 +1,10 @@
 ---
-title: "-AI (메타 데이터 디렉터리 지정) | Microsoft Docs"
-ms.custom: 
+title: -AI (메타 데이터 디렉터리 지정) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.AdditionalUsingDirectories
 - VC.Project.VCNMakeTool.AssemblySearchPath
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - AI compiler option [C++]
 - -AI compiler option [C++]
 ms.assetid: fb9c1846-504c-4a3b-bb39-c8696de32f6f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e2f6cb90cd86dfc572c23ef6fd0e5661b339774
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bde5c93c8a211bb0fc66028932a0a7d50415236d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ai-specify-metadata-directories"></a>/AI(메타데이터 디렉터리 지정)
 `#using` 지시문에 전달된 파일 참조를 확인하기 위해 컴파일러가 검색할 디렉터리를 지정합니다.  

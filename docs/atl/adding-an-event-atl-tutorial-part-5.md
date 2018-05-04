@@ -1,27 +1,22 @@
 ---
-title: "이벤트 (ATL 자습서, 5 부) 추가 | Microsoft Docs"
-ms.custom: 
+title: 이벤트 (ATL 자습서, 5 부) 추가 | Microsoft Docs
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 2de12022-3148-4ce3-8606-8a9d4274f0e9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c42befe57bdc7a01da31bd6c4e010458e1d3ba7e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a118cf29546ac8dae2e882d5658b07e3b5e085f6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>이벤트 추가(ATL 자습서, 5부)
 이 단계에서 추가한는 `ClickIn` 및 `ClickOut` ATL 컨트롤에는 이벤트입니다. 발생는 `ClickIn` 다각형 및 화재 내부를 클릭할 경우 이벤트 `ClickOut` 바깥쪽을 클릭할 경우. 이벤트 추가 하려면 작업은 다음과 같습니다.  
@@ -82,7 +77,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  프로젝트를 다시 빌드하십시오.  
   
-     또는  
+     -또는-  
   
 2.  솔루션 탐색기에서 마우스 오른쪽 단추로 Polygon.idl 파일을 마우스 오른쪽 단추로 클릭 하 고 클릭 **컴파일** 바로 가기 메뉴.  
   

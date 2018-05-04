@@ -1,13 +1,10 @@
 ---
-title: "-vd (생성 치환 비활성화) | Microsoft Docs"
-ms.custom: 
+title: -vd (생성 치환 비활성화) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /vd
 dev_langs:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - vd0 compiler option [C++]
 - Disable Construction Displacements compiler option
 ms.assetid: 93258964-14d7-4b1c-9cbc-d6f4d74eab69
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b945c4a3191554d5299522ff376772d6362a616c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6a7b9bacc95c668c1c0f59a3dba172d58c607d2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd(생성 치환 비활성화)
 ## <a name="syntax"></a>구문  
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  이러한 옵션은 가상 기본을 사용 하는 c + + 코드에만 적용 됩니다.  
   
- [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]가상 상속 사용 되는 경우 c + + 생성 치환 지원을 구현 합니다. 생성 치환 때 가상 기본에 선언 된 및 파생된 클래스에서 재정의 되는 가상 함수를 생성 하 여 문제가 해결, 추가로 파생된 되는 클래스를 생성 하는 동안에 생성자에서 호출 됩니다.  
+ [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 가상 상속 사용 되는 경우 c + + 생성 치환 지원을 구현 합니다. 생성 치환 때 가상 기본에 선언 된 및 파생된 클래스에서 재정의 되는 가상 함수를 생성 하 여 문제가 해결, 추가로 파생된 되는 클래스를 생성 하는 동안에 생성자에서 호출 됩니다.  
   
  이 문제는 가상 함수 전달 될 수 있다는 잘못 된 `this` 포인터 결과적으로 가상 치환 간의 차이점의 기본 클래스와 파생된 된 클래스에 치환입니다. 솔루션에 클래스의 각 가상 기본에 대 한 vtordisp 필드를 호출 하는 단일 생성 치환 조정을 제공 합니다.  
   

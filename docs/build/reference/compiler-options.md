@@ -1,13 +1,10 @@
 ---
-title: "컴파일러 옵션 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 옵션 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/29/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - compiler options, C++
 - x64 Visual C++ compiler
 ms.assetid: ed3376c8-bef4-4c9a-80e9-3b5da232644c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4addd9f5dce819f554e6ab04707929a32f7b7d9d
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: bea07361a292ee5e7cde99cedad2d5ac4c8a53aa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-options"></a>컴파일러 옵션
 
@@ -64,7 +59,7 @@ cl.exe는 Microsoft Visual c + + (MSVC) C 및 c + + 컴파일러 및 링커를 �
 
 [링커 옵션](../../build/reference/linker-options.md) 프로그램 빌드 방법을 영향을 줍니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [C/C++ 빌드 참조](../../build/reference/c-cpp-building-reference.md)  
 [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)  

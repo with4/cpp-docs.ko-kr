@@ -1,12 +1,9 @@
 ---
-title: "디버깅 및 오류 보고 매크로 | Microsoft Docs"
-ms.custom: 
+title: 디버깅 및 오류 보고 매크로 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9098b944f70ab4e4448fe40aa2347b0128e6e1a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b99147c9eb9a331d7cc0f9064b858979d00e2804
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debugging-and-error-reporting-macros"></a>디버깅 및 오류 보고 매크로
 이러한 매크로 유용한 디버깅 및 추적 기능을 제공 합니다.  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 |[ATLTRACE](#alttrace)|출력 장치 디버거 창 표시 플래그 및 수준에 따라 같은 경고를 보고 합니다. 이전 버전과 호환성을 위해 포함 됩니다.|  
 |[ATLTRACE2](#atltrace2)|출력 장치 디버거 창 표시 플래그 및 수준에 따라 같은 경고를 보고 합니다.|  
   
-##  <a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES  
+##  <a name="_atl_debug_interfaces"></a>  _ATL_DEBUG_INTERFACES  
  ATL 헤더 파일을 모두 추적에 포함 하기 전에이 매크로 정의할 `AddRef` 및 **릴리스** 출력 창에 사용자 구성 요소 인터페이스를 호출 합니다.  
   
 ```
@@ -72,9 +67,9 @@ ms.lasthandoff: 12/21/2017
  정보 여기에 제공 된 이전 추적 문을에 제공 된 정보로 직접 매핑됩니다, 인터페이스 썽크의 전체 수명 동안 내내 참조 카운트를 검사할 수 있도록 합니다. 또한 해당 인터페이스 썽크에 최대 참조 수를 나타내는 값을 가져옵니다.  
   
 > [!NOTE]
-> `_ATL_DEBUG_INTERFACES`일반 정품 빌드에 사용할 수 있습니다.  
+> `_ATL_DEBUG_INTERFACES` 일반 정품 빌드에 사용할 수 있습니다.  
   
-##  <a name="_atl_debug_qi"></a>_ATL_DEBUG_QI  
+##  <a name="_atl_debug_qi"></a>  _ATL_DEBUG_QI  
  에 대 한 모든 호출을 기록 `QueryInterface` 출력 합니다.  
   
 ```
@@ -86,7 +81,7 @@ ms.lasthandoff: 12/21/2017
   
  *인터페이스 이름* - `failed`  
   
-##  <a name="atlassert"></a>ATLASSERT  
+##  <a name="atlassert"></a>  ATLASSERT  
  `ATLASSERT` 와 동일한 기능을 수행 하는 매크로 [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 매크로 C 런타임 라이브러리에서 찾을 수 있습니다.  
   
 ```
@@ -103,7 +98,7 @@ ATLASSERT(booleanExpression);
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atldef.h  
     
-##  <a name="atlensure"></a>ATLENSURE  
+##  <a name="atlensure"></a>  ATLENSURE  
  이 매크로 함수에 전달 된 매개 변수 유효성 검사에 사용 됩니다.  
   
 ```
@@ -129,13 +124,13 @@ ATLENSURE_THROW(booleanExpression, hr);
   
  차이 **ATLENSURE** 및 `ATLASSERT` 은 **ATLENSURE** 릴리스에서 예외 디버그 빌드 에서처럼도 빌드 throw 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
 
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afx.h  
 
-##  <a name="atltracenotimpl"></a>ATLTRACENOTIMPL  
+##  <a name="atltracenotimpl"></a>  ATLTRACENOTIMPL  
  ATL의 디버그 빌드에 문자열을 보냅니다 " `funcname` 구현 되지 않음" 덤프 장치 및 반환 **E_NOTIMPL**합니다.  
   
 ```
@@ -149,13 +144,13 @@ ATLTRACENOTIMPL(funcname);
 ### <a name="remarks"></a>설명  
  릴리스 빌드에서 반환 **E_NOTIMPL**합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atltrace.h 
 
-##  <a name="atltrace"></a>ATLTRACE
+##  <a name="atltrace"></a>  ATLTRACE
  출력 장치 디버거 창 표시 플래그 및 수준에 따라 같은 경고를 보고 합니다. 이전 버전과 호환성을 위해 포함 됩니다.  
   
 ```
@@ -183,7 +178,7 @@ ATLTRACE(
 ### <a name="remarks"></a>설명  
  참조 [ATLTRACE2](#atltrace2) 에 대 한 설명은 **ATLTRACE**합니다. **ATLTRACE** 및 `ATLTRACE2` 동일한 동작 **ATLTRACE** 이전 버전과 호환성을 위해 포함 되었습니다.  
   
-##  <a name="atltrace2"></a>ATLTRACE2  
+##  <a name="atltrace2"></a>  ATLTRACE2  
  출력 장치 디버거 창 표시 플래그 및 수준에 따라 같은 경고를 보고 합니다.  
   
 ```
@@ -264,11 +259,11 @@ ATLTRACE2(
   
  릴리스 빌드에서 `ATLTRACE2` 컴파일함으로써 `(void) 0`합니다.  
   
- `ATLTRACE2`포맷 후 1, 024 개 이하의 자로 덤프 장치에 전송 하는 데 사용할 문자열의 내용을 제한 합니다.  
+ `ATLTRACE2` 포맷 후 1, 024 개 이하의 자로 덤프 장치에 전송 하는 데 사용할 문자열의 내용을 제한 합니다.  
   
  **ATLTRACE** 및 `ATLTRACE2` 동일한 동작 **ATLTRACE** 이전 버전과 호환성을 위해 포함 되었습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

@@ -2,26 +2,21 @@
 title: 레지스터 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: ce58e2cf-afd3-4068-980e-28a209298265
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 705a8fef3043498c041ea7e5490a7b22c1db8e5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6792fcf035ee698767c9dd099cb7b84f5b784616
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="register-usage"></a>레지스터 사용
 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 아키텍처는 범용 레지스터 16개(이하 '정수 레지스터')와 부동 소수점용으로 사용 가능한 XMM/YMM 레지스터 16개를 제공합니다. 휘발성 레지스터는 호출자가 호출 중에 제거되는 것으로 가정하는 스크래치 레지스터입니다. 함수 호출 중에 값을 유지하려면 비휘발성 레지스터가 필요합니다. 호출 수신자는 비휘발성 레지스터(사용하는 경우)를 저장해야 합니다.  

@@ -2,11 +2,8 @@
 title: strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbslen
@@ -57,17 +54,15 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-caps.latest.revision: 32
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2830c3bfc343d3f4912d3f2d67cdba4d45f3ee57
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 1fa673de76632fbb5c4aad08a13ff269a464ff46
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
@@ -129,7 +124,7 @@ Null 종료 문자열입니다.
 
 **_mbslen** 및 **_mbslen_l** 멀티 바이트 문자열의 멀티 바이트 문자 수를 반환 하지만 멀티 바이트 문자의 유효성을 테스트 하지는 않습니다. **_mbstrlen** 및 **_mbstrlen_l** 멀티 바이트 문자의 유효성을 테스트 하 고 멀티 바이트 문자 시퀀스를 인식 합니다. 에 전달 된 문자열이 **_mbstrlen** 또는 **_mbstrlen_l** 에 잘못 된 문자가 멀티 바이트 코드 페이지, 함수 반환 값-1 및 집합에 대 한 **errno** 를**EILSEQ**합니다.
 
-출력 값은의 설정에 영향을 **LC_CTYPE** 로캘 범주 설정; 참조 [setlocale](setlocale-wsetlocale.md) 자세한 정보에 대 한 합니다. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따른 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
 ## <a name="requirements"></a>요구 사항
 

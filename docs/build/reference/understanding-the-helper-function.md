@@ -2,12 +2,9 @@
 title: 도우미 함수 이해 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - delayimp.h
 - helper functions
 ms.assetid: 6279c12c-d908-4967-b0b3-cabfc3e91d3d
-caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3a013cf584c37f84331a5ab5dfe74eaa213c851
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54ed331022c29ecc47d61bbcccbfac82000cb235
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-the-helper-function"></a>도우미 함수 이해
 지연된 로드 링커 지원에 대 한 도우미 함수는 실제로 실행 시 DLL을 로드 합니다. 사용자 고유의 함수를 작성 Delayimp.lib에 제공 된 도우미 함수를 사용 하는 대신 프로그램에 연결 하 여 동작을 사용자 지정할 도우미 함수를 수정할 수 있습니다. 한 도우미 함수는 모든 지연 로드 된 Dll을 지원합니다.  

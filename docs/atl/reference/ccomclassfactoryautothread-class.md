@@ -2,11 +2,8 @@
 title: CComClassFactoryAutoThread 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComClassFactoryAutoThread
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CComClassFactoryAutoThread class
 ms.assetid: 22008042-533f-4dd9-bf7e-191ee571f9a1
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 916bd22a982e70a7acb50793723be23416516d04
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 601f67d4a753dd617b9d7a3d5856ca64588a66c6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomclassfactoryautothread-class"></a>CComClassFactoryAutoThread 클래스
 이 클래스가 구현 하는 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) 인터페이스, 및 개체를 여러 아파트에서 만들 수 있습니다.  
@@ -54,9 +49,9 @@ class CComClassFactoryAutoThread
 |[CComClassFactoryAutoThread::LockServer](#lockserver)|메모리에서 클래스 팩터리를 잠급니다.|  
   
 ## <a name="remarks"></a>설명  
- `CComClassFactoryAutoThread`유사한 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), 개체를 여러 아파트에서 만들 수 있습니다. 이 지원을 활용 하려면 사용자 EXE 모듈에서 파생 [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)합니다.  
+ `CComClassFactoryAutoThread` 유사한 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), 개체를 여러 아파트에서 만들 수 있습니다. 이 지원을 활용 하려면 사용자 EXE 모듈에서 파생 [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)합니다.  
   
- ATL 개체에서 파생 하 여 일반적으로 클래스 팩터리를 획득 [CComCoClass](../../atl/reference/ccomcoclass-class.md)합니다. 이 클래스는 매크로 포함 [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)를 선언 하는 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) 기본 클래스 팩터리로 합니다. 사용 하도록 `CComClassFactoryAutoThread`, 지정는 [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) 개체의 클래스 정의에 매크로입니다. 예:  
+ ATL 개체에서 파생 하 여 일반적으로 클래스 팩터리를 획득 [CComCoClass](../../atl/reference/ccomcoclass-class.md)합니다. 이 클래스는 매크로 포함 [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)를 선언 하는 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) 기본 클래스 팩터리로 합니다. 사용 하도록 `CComClassFactoryAutoThread`, 지정는 [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) 개체의 클래스 정의에 매크로입니다. 예를 들어:  
   
  [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/ccomclassfactoryautothread-class_1.h)]  
   
@@ -72,7 +67,7 @@ class CComClassFactoryAutoThread
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="createinstance"></a>CComClassFactoryAutoThread::CreateInstance  
+##  <a name="createinstance"></a>  CComClassFactoryAutoThread::CreateInstance  
  지정된 된 CLSID의 개체를 만들고이 개체에 대 한 인터페이스 포인터를 검색 합니다.  
   
 ```
@@ -98,7 +93,7 @@ STDMETHODIMP CreateInstance(
 ### <a name="remarks"></a>설명  
  모듈에서 파생 된 경우 [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), `CreateInstance` 먼저 개체를 만드는 연결된 아파트에 스레드를 선택 합니다.  
   
-##  <a name="lockserver"></a>CComClassFactoryAutoThread::LockServer  
+##  <a name="lockserver"></a>  CComClassFactoryAutoThread::LockServer  
  증가 하 고 호출 하 여 모듈 잠금 횟수를 감소 **_Module::Lock** 및 **_Module::Unlock**각각.  
   
 ```

@@ -1,13 +1,10 @@
 ---
-title: "-Gd,-Gr-Gv,-Gz (호출 규칙) | Microsoft Docs"
-ms.custom: 
+title: -Gd,-Gr-Gv,-Gz (호출 규칙) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /gr
 - /Gv
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26e88abf30c0f67fe5b104d560c40dd2adc57752
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec0d3d7c750be9b6b6d1496c8a1e2265786264f2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz(호출 규칙)
 이러한 옵션은 함수에서 인수는 스택에 밀어 넣은, 여부는 호출자가 함수 또는 호출된 된 함수 호출의 끝에 스택에서 인수를 제거 하는 순서 및 컴파일러를 사용 하 여 식별 이름을 데코 레이트 규칙 결정 개별 함수입니다.  

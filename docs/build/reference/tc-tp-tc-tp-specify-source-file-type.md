@@ -1,10 +1,9 @@
 ---
-title: "/Tc, /Tp, /TC, /TP (소스 파일 형식 지정) | Microsoft Docs"
+title: /Tc, /Tp, /TC, /TP (소스 파일 형식 지정) | Microsoft Docs
 ms.date: 1/11/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.CompileAs
 - VC.Project.VCCLCompilerTool.CompileAs
@@ -22,14 +21,13 @@ helpviewer_keywords:
 - -Tp compiler option [C++]
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3d51e4c6bbf6a77f86be5cabde9b65f8e4f8c9f
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.openlocfilehash: 9cb612d5c26fd4db51222c480539867d5e506b70
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc, /Tp, /TC, /TP(소스 파일 형식 지정)
 
@@ -40,7 +38,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="syntax"></a>구문
 
 > **/Tc** _filename_  
-> **/Tp** _filename_  
+> **/Tp** _파일 이름_  
 > **/TC**  
 > **/TP**  
 
@@ -75,9 +73,9 @@ CL 명령줄이 모두 C 소스 파일을 MAIN.c, TEST.prg, 및 COLLATE.prg가 �
 
 CL 명령줄이 지정 된 c + + 파일로 컴파일된 TEST1.c, TEST2.cxx, TEST3.huh, 및 TEST4.o TEST5.z C 파일로 컴파일됩니다입니다.
 
-> CL TEST1.C TEST2.CXX TEST3.HUH TEST4.O /Tc TEST5.Z /TP
+> CL TEST1 합니다. C TEST2입니다. CXX TEST3 합니다. 멋지지 TEST4 합니다. O /Tc TEST5 합니다. Z /TP
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [컴파일러 옵션](../../build/reference/compiler-options.md)  
 [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)  

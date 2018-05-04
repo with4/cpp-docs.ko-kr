@@ -1,12 +1,9 @@
 ---
-title: "CComEnumImpl 클래스 | Microsoft Docs"
-ms.custom: 
+title: CComEnumImpl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComEnumImpl
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cda4598f5d5b0e5b3dbca265066c8366cfd6d67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 14c7b1e72db3337b786a0e524ae3d8da964f6bbc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl 클래스
 이 클래스는 열거 되 고 항목이 배열에 저장 되는 COM 열거자 인터페이스에 대 한 구현을 제공 합니다.  
@@ -93,7 +88,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 |[CComEnumImpl::m_spUnk](#m_spunk)|**IUnknown** 열거 되는 컬렉션을 제공 하는 개체의 포인터입니다.|  
   
 ## <a name="remarks"></a>설명  
- `CComEnumImpl`열거 되 고 항목이 배열에 저장 되어 있는 COM 열거자 인터페이스에 대 한 구현을 제공 합니다. 이 클래스는 비슷합니다는 `IEnumOnSTLImpl` 열거자 인터페이스의 구현을 제공 하는 클래스는 c + + 표준 라이브러리 컨테이너 기반으로 합니다.  
+ `CComEnumImpl` 열거 되 고 항목이 배열에 저장 되어 있는 COM 열거자 인터페이스에 대 한 구현을 제공 합니다. 이 클래스는 비슷합니다는 `IEnumOnSTLImpl` 열거자 인터페이스의 구현을 제공 하는 클래스는 c + + 표준 라이브러리 컨테이너 기반으로 합니다.  
   
 > [!NOTE]
 >  간의 추가 차이점에 대 한 내용은 `CComEnumImpl` 및 `IEnumOnSTLImpl`, 참조 [CComEnumImpl::Init](#init)합니다.  
@@ -112,21 +107,21 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl  
+##  <a name="ccomenumimpl"></a>  CComEnumImpl::CComEnumImpl  
  생성자입니다.  
   
 ```
 CComEnumImpl();
 ```  
   
-##  <a name="dtor"></a>CComEnumImpl:: ~ CComEnumImpl  
+##  <a name="dtor"></a>  CComEnumImpl:: ~ CComEnumImpl  
  소멸자입니다.  
   
 ```
 ~CComEnumImpl();
 ```  
   
-##  <a name="init"></a>CComEnumImpl::Init  
+##  <a name="init"></a>  CComEnumImpl::Init  
  모든 클라이언트에 다시 열거자 인터페이스에 대 한 포인터를 전달 하기 전에이 메서드를 호출 해야 합니다.  
   
 ```
@@ -158,7 +153,7 @@ HRESULT Init(
   
  다른 개체에서 배열에 있는 항목에 대 한 포인터를 전달 (및 데이터를 복사 열거자 표시 안 함) 하는 경우 사용할 수 있습니다는 *펑크* 매개 변수 개체와 배열을 보유 하는 동안 열거자에 사용할 수 있는지 확인 필요 합니다. 열거자는 단순히을 활성 상태로 유지할지 개체에서 COM 참조를 보유 합니다. COM 참조는 열거자 소멸 될 때 자동으로 해제 됩니다.  
   
- `flags` 매개 변수를 사용 하는 열거자에 전달 된 배열 요소를 처리 해야 방법을 지정할 수 있습니다. `flags`값 중 하나를 수행할 수는 **CComEnumFlags** 아래에 표시 된 열거:  
+ `flags` 매개 변수를 사용 하는 열거자에 전달 된 배열 요소를 처리 해야 방법을 지정할 수 있습니다. `flags` 값 중 하나를 수행할 수는 **CComEnumFlags** 아래에 표시 된 열거:  
   
 ```  
 enum CComEnumFlags  
@@ -178,7 +173,7 @@ enum CComEnumFlags
 > [!NOTE]
 >  이 방법의 프로토타입 형식으로 배열 요소를 지정 **T**여기서 **T** 클래스에 템플릿 매개 변수로 정의 되었습니다. 이 COM 인터페이스 메서드를 사용 하 여 노출 되는 동일한 유형의 [CComEnumImpl::Next](#next)합니다. 이 방식은 달리 [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md),이 클래스는 다른 저장소를 지원 하지 않으며 데이터 형식을 노출 합니다. 배열에 있는 요소의 데이터 형식을 COM 인터페이스를 사용 하 여 노출 된 데이터 형식과 일치 해야 합니다.  
   
-##  <a name="clone"></a>CComEnumImpl::Clone  
+##  <a name="clone"></a>  CComEnumImpl::Clone  
  이 메서드는의 구현을 제공는 [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx) 형식의 개체를 만들어 메서드 `CComEnum`, 배열 및 현재 개체에서 사용 하는 반복기가 동일한 초기화 하 고 인터페이스에 대해 반환 된 새로 만든 개체입니다.  
   
 ```
@@ -195,42 +190,42 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="remarks"></a>설명  
  복제 된 열거자 하지 확인 자신의 원래 열거자에 사용 되는 데이터의 복사본 (또는 소유권 가져오기). 필요한 경우 복제 된 열거자 상태로 유지 합니다 원래 열거자 (COM 참조를 사용 하 여)으로 소요 되는 데이터를 사용할 수 있도록 합니다.  
   
-##  <a name="m_spunk"></a>CComEnumImpl::m_spUnk  
+##  <a name="m_spunk"></a>  CComEnumImpl::m_spUnk  
  이 스마트 포인터에 전달 된 개체에 대 한 참조를 유지 관리 [CComEnumImpl::Init](#init)를 유지 하는지 활성 열거자의 수명 동안 보장 합니다.  
   
 ```
 CComPtr<IUnknown> m_spUnk;
 ```  
   
-##  <a name="m_begin"></a>CComEnumImpl::m_begin  
+##  <a name="m_begin"></a>  CComEnumImpl::m_begin  
  열거할 항목이 포함 된 배열의 마지막 요소 바로 다음 위치에 대 한 포인터입니다.  
   
 ```
 T* m_begin;
 ```  
   
-##  <a name="m_end"></a>CComEnumImpl::m_end  
+##  <a name="m_end"></a>  CComEnumImpl::m_end  
  열거할 항목이 포함 된 배열의 첫 번째 요소에 대 한 포인터입니다.  
   
 ```
 T* m_end;
 ```  
   
-##  <a name="m_iter"></a>CComEnumImpl::m_iter  
+##  <a name="m_iter"></a>  CComEnumImpl::m_iter  
  항목을 열거할 수를 포함 하는 배열의 현재 요소에 대 한 포인터입니다.  
   
 ```
 T* m_iter;
 ```  
   
-##  <a name="m_dwflags"></a>CComEnumImpl::m_dwFlags  
+##  <a name="m_dwflags"></a>  CComEnumImpl::m_dwFlags  
  에 전달 되는 플래그 [CComEnumImpl::Init](#init)합니다.  
   
 ```
 DWORD m_dwFlags;
 ```  
   
-##  <a name="next"></a>CComEnumImpl::Next  
+##  <a name="next"></a>  CComEnumImpl::Next  
  이 메서드는의 구현을 제공는 [IEnumXXXX::Next](https://msdn.microsoft.com/library/ms695273.aspx) 메서드.  
   
 ```
@@ -250,7 +245,7 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-##  <a name="reset"></a>CComEnumImpl::Reset  
+##  <a name="reset"></a>  CComEnumImpl::Reset  
  이 메서드는의 구현을 제공는 [IEnumXXXX::Reset](https://msdn.microsoft.com/library/ms693414.aspx) 메서드.  
   
 ```
@@ -260,7 +255,7 @@ STDMETHOD(Reset)(void);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-##  <a name="skip"></a>CComEnumImpl::Skip  
+##  <a name="skip"></a>  CComEnumImpl::Skip  
  이 메서드는의 구현을 제공는 [IEnumXXXX::Skip](https://msdn.microsoft.com/library/ms690392.aspx) 메서드.  
   
 ```

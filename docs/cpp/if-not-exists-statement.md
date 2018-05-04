@@ -1,12 +1,9 @@
 ---
-title: "__if_not_exists 문 | Microsoft Docs"
-ms.custom: 
+title: __if_not_exists 문 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __if_not_exists_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - __if_not_exists keyword [C++]
 ms.assetid: a2f322d4-e96f-4a32-954e-4323d20c6e32
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2342354528811f415a9c9aeb819e2c0e7cec6646
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bd4e586a211d7c4e2ead1ce3f225e2d92d2bd5a7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ifnotexists-statement"></a>__if_not_exists 문
 `__if_not_exists` 문은 지정된 식별자가 있는지 여부를 테스트합니다. 식별자가 없는 경우 지정된 문 블록이 실행됩니다.  
@@ -60,7 +55,7 @@ statements
   
  보완 하는 `__if_not_exists` 문이 [__if_exists](../cpp/if-exists-statement.md) 문.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  사용 하는 방법에 대 한 예제를 보려면 `__if_not_exists`, 참조 [__if_exists 문](../cpp/if-exists-statement.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

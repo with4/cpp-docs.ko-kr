@@ -1,12 +1,9 @@
 ---
-title: "클래스 멤버 개요 | Microsoft Docs"
-ms.custom: 
+title: 클래스 멤버 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - class members [C++], types of
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d9a8d274f162e64dc20c5f257d09c84e9871d0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd280255afe98aa5ca512c63bb00623891eafc4f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="class-member-overview"></a>클래스 멤버 개요
 클래스 또는 구조체는 멤버로 구성됩니다. 클래스가 수행하는 작업은 해당 멤버 함수에 의해 수행됩니다. 클래스가 유지하는 상태는 해당 데이터 멤버에 저장됩니다. 생성자 및 메모리와 같은 정리 작업에서 멤버의 초기화가 수행 하 고 소멸자를 통해 이루어집니다 리소스 해제 키를 누릅니다. C++11 이상에서는 선언 지점에 데이터 멤버를 초기화할 수 있으며 일반적으로 초기화해야 합니다.  

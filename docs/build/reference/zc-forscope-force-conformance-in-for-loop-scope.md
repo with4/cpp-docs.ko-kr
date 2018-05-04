@@ -1,10 +1,10 @@
 ---
-title: "/Zc: forscope (for 강제 규칙 루프 범위) | Microsoft Docs"
-ms.custom: 
+title: '/Zc: forscope (for 강제 규칙 루프 범위) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ForceConformanceInForLoopScope
 - VC.Project.VCCLWCECompilerTool.ForceConformanceInForLoopScope
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47cdc45b63e5e5c7b48627b13040e95fc64c8a2d
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: b21c844cd29c7fb45e58f44fdf8eaae427b74235
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope(for 루프 범위의 강제 규칙)
 
@@ -61,7 +60,7 @@ int main() {
 }
 ```
 
-**/Zc:forScope-**를 사용하는 경우 이전 범위에서 만든 선언으로 인해 변수가 범위 내에 있으면 경고 C4288이 발생합니다(기본적으로 설정되어 있지 않음). 이를 증명하려면 예제 코드에서 `//` 문자를 제거하여 `int i`를 선언합니다.
+**/Zc:forScope-** 를 사용하는 경우 이전 범위에서 만든 선언으로 인해 변수가 범위 내에 있으면 경고 C4288이 발생합니다(기본적으로 설정되어 있지 않음). 이를 증명하려면 예제 코드에서 `//` 문자를 제거하여 `int i`를 선언합니다.
 
 **conform** pragma를 사용하여 [/Zc:forScope](../../preprocessor/conform.md) 의 런타임 동작을 수정할 수 있습니다.
 
@@ -81,7 +80,7 @@ Visual C++의 규칙과 관련된 문제에 대한 자세한 내용은 [Nonstand
 
 - <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForceConformanceInForLoopScope%2A>을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [/Zc(규칙)](../../build/reference/zc-conformance.md)<br/>
 [/Za, /Ze(언어 확장 사용 안 함)](../../build/reference/za-ze-disable-language-extensions.md)<br/>

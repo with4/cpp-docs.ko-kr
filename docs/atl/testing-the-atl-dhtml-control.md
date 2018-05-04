@@ -1,13 +1,10 @@
 ---
-title: "ATL DHTML 컨트롤 테스트 | Microsoft Docs"
-ms.custom: 
+title: ATL DHTML 컨트롤 테스트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DHTML controls
 - DHTML controls, testing
 ms.assetid: 0e4b4358-80ce-4505-8b06-ef4f30b1d1f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd92900ffbb8170e942053910d3faedd1f5ab2ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2b523b981a58f577a3e98925899b32c0e9e69e98
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="testing-the-atl-dhtml-control"></a>ATL DHTML 컨트롤 테스트
 프로젝트를 만든 후에 작성 하 고 샘플 컨트롤을 테스트할 수 있습니다. 이렇게 하기 전에 클래스 뷰 및 솔루션 탐색기에서 프로젝트를 검사 하려면 사용 합니다. 프로젝트의 요소에 더 자세히 설명 되어 [DHTML 컨트롤 프로젝트의 요소를 식별](../atl/identifying-the-elements-of-the-dhtml-control-project.md)합니다.  

@@ -1,27 +1,22 @@
 ---
-title: "입력 파일.netmodule 형식을 선택 한다는 | Microsoft Docs"
-ms.custom: 
+title: 입력 파일.netmodule 형식을 선택 한다는 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6b83039a054e19e62cbbe87befbe08dd7997e51
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 62575d3e816bdc10587e7a4c9cebcea735329ec1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>.netmodule 입력 파일 형식 선택
 MSIL.obj 파일 (사용 하 여 컴파일된 [/clr](../../build/reference/clr-common-language-runtime-compilation.md)).netmodule 파일을 사용할 수도 있습니다.  .obj 파일에는 메타 데이터 및 네이티브 기호가 포함 되어 있습니다.  .netmodules에는 메타데이터만 포함됩니다.  

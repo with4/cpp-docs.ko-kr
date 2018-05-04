@@ -1,10 +1,10 @@
 ---
-title: "/Zc:referenceBinding (참조 바인딩 규칙 적용) | Microsoft Docs"
-ms.custom: 
+title: /Zc:referenceBinding (참조 바인딩 규칙 적용) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - referenceBinding
 - /Zc:referenceBinding
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 0c6cfaac-9c2a-41a3-aa94-64ca8ef261fc
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8e3b10f5b2108a4c0e29d802951015749775a27
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 30038f6ff73eaa2d9536c3685927458a70209864
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcreferencebinding-enforce-reference-binding-rules"></a>/Zc:referenceBinding (참조 바인딩 규칙 적용)
 
@@ -40,9 +39,9 @@ ms.lasthandoff: 03/15/2018
 
 경우 **/Zc:referenceBinding** 이 지정 된 경우 컴파일러는 C + + 11 표준의 섹션 8.5.3 뒤에 오는 비 const lvalue 참조에는 사용자 정의 형식을 임시 바인딩하는 식으로 허용 하지 않습니다. 기본적으로 또는 **/Zc:referenceBinding-** 지정 않으면, 컴파일러는 Microsoft 확장으로 이러한 식이 허용 하지만 수준 4 경고가 발생 합니다. 코드 보안, 이식성 및 규칙을 사용 하는 권장 **/Zc:referenceBinding**합니다.
 
-**/Zc:referenceBinding** 옵션은 기본적으로 해제 되어 있습니다. [관대 한 /-](permissive-standards-conformance.md) 컴파일러 옵션에는 암시적으로이 옵션을 설정 하지만 사용 하 여 재정의할 수 있습니다 **/Zc:referenceBinding-**합니다.
+**/Zc:referenceBinding** 옵션은 기본적으로 해제 되어 있습니다. [관대 한 /-](permissive-standards-conformance.md) 컴파일러 옵션에는 암시적으로이 옵션을 설정 하지만 사용 하 여 재정의할 수 있습니다 **/Zc:referenceBinding-** 합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 샘플에서는 사용자 정의 형식의 임시 비 const lvalue 참조에 바인딩될 수 있는 Microsoft 확장을 보여 줍니다.
 
@@ -75,7 +74,7 @@ Visual C++의 규칙과 관련된 문제에 대한 자세한 내용은 [Nonstand
 
 1. 수정 된 **추가 옵션** 포함할 속성을 **/Zc:referenceBinding** 선택한 후 **확인**합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [컴파일러 옵션](../../build/reference/compiler-options.md)<br/>
 [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)<br/>

@@ -2,26 +2,21 @@
 title: 맞춤 (c + + 선언) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 019884793eb3472e52c7772351b2f5826520a193
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f39fe0cf3706a67e2aa42aa89de5914808e9cec
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alignment-c-declarations"></a>맞춤(C++ 선언)
 C++의 하위 수준 기능 중 하나는 특정 하드웨어 아키텍처를 최대한 활용하기 위해 메모리 내 개체의 정확한 맞춤을 지정하는 기능입니다. 기본적으로 컴파일러는 해당 크기 값에 따라 클래스 및 구조체 멤버를 맞춥니다. bool 및 char는 1바이트 경계, short는 2바이트 경계, int는 4바이트 경계, long long, double 및 long double은 8바이트 경계에 맞춰집니다. 대부분의 시나리오에서는 기본 맞춤이 이미 최적화되어 있기 때문에 맞춤에 주의할 필요가 없습니다. 그러나 데이터 구조에 대해 사용자 지정 맞춤을 지정하여 상당한 성능 향상이나 메모리 절약 효과를 얻을 수 있는 경우도 있습니다. Visual Studio 2015 이전에는 Microsoft 특정 키워드 __alignof 및 declspec(alignas)를 사용하여 기본값보다 큰 맞춤을 지정할 수 있었습니다. C + + 11 표준 키워드를 사용 해야 Visual Studio 2015에서 시작 [alignof 및 alignas](../cpp/alignof-and-alignas-cpp.md) 최대 코드 이식성에 대 한 합니다. 새 키워드는 내부적으로 Microsoft 특정 확장과 동일한 방식으로 동작하며 해당 확장에 대한 설명서가 새 키워드에도 적용됩니다. 참조 [__alignof 연산자](../cpp/alignof-operator.md) 및 [맞춤](../cpp/align-cpp.md) 자세한 정보에 대 한 합니다. C + + 표준 되므로 microsoft #pragma 필요가 대상 플랫폼에 대 한 컴파일러 기본값 보다 작은 경계에 맞추기 위한 압축 동작을 지정 하지 않는 [팩](../preprocessor/pack.md) 경우.  

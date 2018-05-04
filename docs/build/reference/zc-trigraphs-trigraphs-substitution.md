@@ -1,10 +1,10 @@
 ---
-title: "/Zc: trigraphs (삼중 자 대체) | Microsoft Docs"
-ms.custom: 
+title: '/Zc: trigraphs (삼중 자 대체) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /Zc
 dev_langs:
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: e3d6058f-400d-4966-a3aa-800cfdf69cbf
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fdc5fc6432335e964a05185b7647b152a57d8f4
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 3e465b62944b360d6fdb09da1230f3353658437b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zctrigraphs-trigraphs-substitution"></a>/Zc:trigraphs(삼중자 대체)
 
@@ -50,7 +49,7 @@ C/c + + 삼중 자 및 삼중 자를 사용 하는 방법을 보여 주는 예�
 
 1. 수정 된 **추가 옵션** 포함할 속성을 **/zc: trigraphs** 또는 **/Zc:trigraphs-** 선택한 후 **확인**합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [/Zc(규칙)](../../build/reference/zc-conformance.md)<br/>
 [삼중자](../../c-language/trigraphs.md)<br/>

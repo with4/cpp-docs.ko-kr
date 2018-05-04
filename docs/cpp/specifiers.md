@@ -2,11 +2,8 @@
 title: 지정자 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - declarations, specifiers
 - specifiers, in declarations
 ms.assetid: 8b14e844-9880-4571-8779-28c8efe44633
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 352ef898c9380c55e90205129ba6fe48bf352856
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2888f8a75e9b7addd2b8f195ffbf875c2b7ae1a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifiers"></a>지정자
 이 항목에 설명 된 *decl 지정자* 의 (선언 지정자) 구성 요소는 [선언](declarations-and-definitions-cpp.md)합니다.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  [typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1)  
   
- [__declspec](../cpp/declspec.md) `(` *확장-decl-한정자-seq*`)`  
+ [__declspec](../cpp/declspec.md) `(` *확장-decl-한정자-seq* `)`  
   
 ## <a name="remarks"></a>설명  
  *decl 지정자* 선언의 부분은의 가장 긴 시퀀스 *decl 지정자* 또는 참조 한정자를 포인터를 포함 하지 않고 형식 이름을 의미 하기 위해 취할 수입니다. 선언의 나머지는 *선언 자*, 도입 된 이름이 포함 된 합니다.  

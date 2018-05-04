@@ -1,12 +1,9 @@
 ---
-title: "CMessageMap 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMessageMap 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CMessageMap
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - message maps, ATL
 - ATL, message handlers
 ms.assetid: 1f97bc16-a8a0-4cf0-b90f-1778813a5c8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04aff6922358048fcbd330096eb26a412cdb75ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 187d9964da0929516207a67b0e3a769649fc375b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cmessagemap-class"></a>CMessageMap 클래스
 이 클래스를 사용 하면 다른 개체에 의해 액세스 되어야 하는 개체의 메시지 맵.  
@@ -52,7 +47,7 @@ class ATL_NO_VTABLE CMessageMap
 |[CMessageMap::ProcessWindowMessage](#processwindowmessage)|메시지 맵을 액세스는 `CMessageMap`-클래스를 파생 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CMessageMap`개체의 메시지를 허용 하는 추상 기본 클래스에 액세스 하 여 다른 개체에 의해 매핑되는입니다. 개체는 메시지 맵을 노출 하도록 하려면, 해당 클래스에서 파생 되어야 `CMessageMap`합니다.  
+ `CMessageMap` 개체의 메시지를 허용 하는 추상 기본 클래스에 액세스 하 여 다른 개체에 의해 매핑되는입니다. 개체는 메시지 맵을 노출 하도록 하려면, 해당 클래스에서 파생 되어야 `CMessageMap`합니다.  
   
  ATL 사용 하 여 `CMessageMap` 지원이 포함 된 창과 동적 메시지 맵 체인입니다. 예를 들어 모든 클래스를 포함 하는 [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) 개체에서 파생 되어야 `CMessageMap`합니다. 다음 코드에서 가져온 것은 [SUBEDIT](../../visual-cpp-samples.md) 샘플. 통해 [CComControl](../../atl/reference/ccomcontrol-class.md), `CAtlEdit` 클래스에서 자동으로 파생 `CMessageMap`합니다.  
   
@@ -65,7 +60,7 @@ class ATL_NO_VTABLE CMessageMap
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
   
-##  <a name="processwindowmessage"></a>CMessageMap::ProcessWindowMessage  
+##  <a name="processwindowmessage"></a>  CMessageMap::ProcessWindowMessage  
  로 식별 되는 메시지 맵을 액세스 `dwMsgMapID` 에 `CMessageMap`-클래스를 파생 합니다.  
   
 ```

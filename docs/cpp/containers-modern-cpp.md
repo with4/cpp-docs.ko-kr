@@ -1,25 +1,21 @@
 ---
-title: "컨테이너 (최신 c + +) | Microsoft Docs"
-ms.custom: 
+title: 컨테이너 (최신 c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 1/18/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d43570f644e9627de5a40fc5b824a17e4fd33ffc
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.openlocfilehash: 49a77234b679fd61d801bb78d751891467d6b4e0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="containers-modern-c"></a>컨테이너(최신 C++)
 
@@ -50,7 +46,7 @@ C 스타일 배열에 사용 하지 마십시오. 데이터에 대 한 액세스
 
 컨테이너에 대 한 자세한 내용은 참조 [c + + 표준 라이브러리 컨테이너](../standard-library/stl-containers.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [C++의 진화](../cpp/welcome-back-to-cpp-modern-cpp.md)  
 [C++ 언어 참조](../cpp/cpp-language-reference.md)  

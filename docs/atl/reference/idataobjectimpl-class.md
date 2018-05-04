@@ -1,12 +1,9 @@
 ---
-title: "IDataObjectImpl 클래스 | Microsoft Docs"
-ms.custom: 
+title: IDataObjectImpl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IDataObjectImpl
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - IDataObjectImpl class
 - IDataObject, ATL implementation
 ms.assetid: b680f0f7-7795-40a1-a0f6-f48768201c89
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 644f498a491605fb69b18ec53afee689f5f90a26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3ffcdd8cc8320b2534d928171fe75619062b300
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="idataobjectimpl-class"></a>IDataObjectImpl 클래스
 이 클래스는 단일형 데이터 전송 지원 및 연결 관리에 대 한 메서드를 제공 합니다.  
@@ -76,9 +71,9 @@ class IDataObjectImpl
 |[IDataObjectImpl::SetData](#setdata)|데이터 개체에는 클라이언트에서 데이터를 전송합니다. ATL 구현은 **E_NOTIMPL**합니다.|  
   
 ## <a name="remarks"></a>설명  
- [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) 인터페이스 단일형 데이터 전송 지원 하기 위해 메서드를 제공 합니다. `IDataObject`표준 형식 구조를 사용 하 여 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 및 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 검색 하 고 데이터를 저장 합니다.  
+ [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) 인터페이스 단일형 데이터 전송 지원 하기 위해 메서드를 제공 합니다. `IDataObject` 표준 형식 구조를 사용 하 여 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 및 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 검색 하 고 데이터를 저장 합니다.  
   
- `IDataObject`또한 데이터 변경 알림을 처리 하는 싱크를 알리기 위해 연결을 관리 합니다. 클라이언트에서 데이터 개체에서 데이터 변경 알림을 수신 하도록 클라이언트를 구현 해야 합니다는 [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) advise 싱크 라는 개체의 인터페이스에 있습니다. 클라이언트는 다음 호출 하는 경우 **IDataObject::DAdvise**, 데이터 개체와 advise 싱크 간의 연결입니다.  
+ `IDataObject` 또한 데이터 변경 알림을 처리 하는 싱크를 알리기 위해 연결을 관리 합니다. 클라이언트에서 데이터 개체에서 데이터 변경 알림을 수신 하도록 클라이언트를 구현 해야 합니다는 [IAdviseSink](http://msdn.microsoft.com/library/windows/desktop/ms692513) advise 싱크 라는 개체의 인터페이스에 있습니다. 클라이언트는 다음 호출 하는 경우 **IDataObject::DAdvise**, 데이터 개체와 advise 싱크 간의 연결입니다.  
   
  클래스 `IDataObjectImpl` 의 기본 구현을 제공 `IDataObject` 구현 **IUnknown** 디버그에서 장치 정보 덤프를 전송 하 여 빌드합니다.  
   
@@ -92,7 +87,7 @@ class IDataObjectImpl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlctl.h  
   
-##  <a name="dadvise"></a>IDataObjectImpl::DAdvise  
+##  <a name="dadvise"></a>  IDataObjectImpl::DAdvise  
  데이터 개체와 advise 싱크 간의 연결을 만듭니다.  
   
 ```
@@ -110,7 +105,7 @@ HRESULT DAdvise(
   
  참조 [IDataObject::DAdvise](http://msdn.microsoft.com/library/windows/desktop/ms692579) in the Windows SDK입니다.  
   
-##  <a name="dunadvise"></a>IDataObjectImpl::DUnadvise  
+##  <a name="dunadvise"></a>  IDataObjectImpl::DUnadvise  
  통해 이전에 설정 된 연결을 종료 [DAdvise](#dadvise)합니다.  
   
 ```
@@ -120,7 +115,7 @@ HRESULT DUnadvise(DWORD dwConnection);
 ### <a name="remarks"></a>설명  
  참조 [IDataObject::DUnadvise](http://msdn.microsoft.com/library/windows/desktop/ms692448) in the Windows SDK입니다.  
   
-##  <a name="enumdadvise"></a>IDataObjectImpl::EnumDAdvise  
+##  <a name="enumdadvise"></a>  IDataObjectImpl::EnumDAdvise  
  현재 자문 연결을 통해 반복 하는 열거자를 만듭니다.  
   
 ```
@@ -134,7 +129,7 @@ HRESULT DAdvise(
 ### <a name="remarks"></a>설명  
  참조 [IDataObject::EnumDAdvise](http://msdn.microsoft.com/library/windows/desktop/ms680127) in the Windows SDK입니다.  
   
-##  <a name="enumformatetc"></a>IDataObjectImpl::EnumFormatEtc  
+##  <a name="enumformatetc"></a>  IDataObjectImpl::EnumFormatEtc  
  반복 하는 열거자를 만듭니다는 **FORMATETC** 데이터 개체에서 지 원하는 구조입니다.  
   
 ```
@@ -149,7 +144,7 @@ HRESULT EnumFormatEtc(
 ### <a name="return-value"></a>반환 값  
  반환 **E_NOTIMPL**합니다.  
   
-##  <a name="firedatachange"></a>IDataObjectImpl::FireDataChange  
+##  <a name="firedatachange"></a>  IDataObjectImpl::FireDataChange  
  현재 관리 중인 각 advise 싱크 변경 알림을 다시 보냅니다.  
   
 ```
@@ -159,7 +154,7 @@ HRESULT FireDataChange();
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-##  <a name="getcanonicalformatetc"></a>IDataObjectImpl::GetCanonicalFormatEtc  
+##  <a name="getcanonicalformatetc"></a>  IDataObjectImpl::GetCanonicalFormatEtc  
  논리적으로 동일한 검색 **FORMATETC** 는 더 복잡 한 구조입니다.  
   
 ```
@@ -172,7 +167,7 @@ HRESULT GetCanonicalFormatEtc(FORMATETC* pformatetcIn, FORMATETC* pformatetcOut)
 ### <a name="remarks"></a>설명  
  참조 [IDataObject::GetCanonicalFormatEtc](http://msdn.microsoft.com/library/windows/desktop/ms680685) in the Windows SDK입니다.  
   
-##  <a name="getdata"></a>IDataObjectImpl::GetData  
+##  <a name="getdata"></a>  IDataObjectImpl::GetData  
  클라이언트에 데이터 개체에서 데이터를 전송합니다.  
   
 ```
@@ -186,7 +181,7 @@ HRESULT GetData(
   
  참조 [idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) in the Windows SDK입니다.  
   
-##  <a name="getdatahere"></a>IDataObjectImpl::GetDataHere  
+##  <a name="getdatahere"></a>  IDataObjectImpl::GetDataHere  
  비슷한 `GetData`클라이언트를 할당 해야 점을 제외 하 고는 **STGMEDIUM** 구조입니다.  
   
 ```
@@ -201,7 +196,7 @@ HRESULT GetDataHere(
 ### <a name="remarks"></a>설명  
  참조 [IDataObject::GetDataHere](http://msdn.microsoft.com/library/windows/desktop/ms687266) in the Windows SDK입니다.  
   
-##  <a name="querygetdata"></a>IDataObjectImpl::QueryGetData  
+##  <a name="querygetdata"></a>  IDataObjectImpl::QueryGetData  
  데이터 개체에 특정 지원 하는지 여부를 결정 **FORMATETC** 데이터 전송에 대 한 구조입니다.  
   
 ```
@@ -214,7 +209,7 @@ HRESULT QueryGetData(FORMATETC* pformatetc);
 ### <a name="remarks"></a>설명  
  참조 [IDataObject::QueryGetData](http://msdn.microsoft.com/library/windows/desktop/ms680637) in the Windows SDK입니다.  
   
-##  <a name="setdata"></a>IDataObjectImpl::SetData  
+##  <a name="setdata"></a>  IDataObjectImpl::SetData  
  데이터 개체에는 클라이언트에서 데이터를 전송합니다.  
   
 ```

@@ -1,12 +1,9 @@
 ---
-title: "IAxWinHostWindow 인터페이스 | Microsoft Docs"
-ms.custom: 
+title: IAxWinHostWindow 인터페이스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IAxWinHostWindow
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 791ef9de69646efc82361f8afbed3e17dbe56453
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1d0d41439748cd0ddbc981ecb1d74194d5fbd59
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow 인터페이스
 이 인터페이스는 컨트롤 및 해당 호스트 개체를 조작 하기 위한 메서드를 제공 합니다.  
@@ -70,7 +65,7 @@ interface IAxWinHostWindow : IUnknown
 |IDL|ATLIFace.idl|  
 |C++|ATLIFace.h (ATLBase.h에도 포함)|  
   
-##  <a name="attachcontrol"></a>IAxWinHostWindow::AttachControl  
+##  <a name="attachcontrol"></a>  IAxWinHostWindow::AttachControl  
  로 식별 되는 창을 사용 하 여 호스트 개체는 기존 (및 이전에 초기화) 컨트롤 연결 `hWnd`합니다.  
   
 ```
@@ -87,7 +82,7 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-##  <a name="createcontrol"></a>IAxWinHostWindow::CreateControl  
+##  <a name="createcontrol"></a>  IAxWinHostWindow::CreateControl  
  컨트롤을 만들고 초기화를로 식별 되는 창에 호스팅합니다 `hWnd`합니다.  
   
 ```
@@ -117,7 +112,7 @@ STDMETHOD(CreateControl)(
   
  사용 허가 받은 ActiveX 컨트롤을 만들려면 참조 [IAxWinHostWindowLic::CreateControlLic](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)합니다.  
   
-##  <a name="createcontrolex"></a>IAxWinHostWindow::CreateControlEx  
+##  <a name="createcontrolex"></a>  IAxWinHostWindow::CreateControlEx  
  ActiveX 컨트롤을 만들고 초기화를 유사 하며 지정한 창에 호스팅합니다 [IAxWinHostWindow::CreateControl](#createcontrol)합니다.  
   
 ```
@@ -157,7 +152,7 @@ STDMETHOD(CreateControlEx)(
   
  사용 허가 받은 ActiveX 컨트롤을 만들려면 참조 [IAxWinHostWindowLic::CreateControlLicEx](../../atl/reference/iaxwinhostwindowlic-interface.md#createcontrollicex)합니다.  
   
-##  <a name="querycontrol"></a>IAxWinHostWindow::QueryControl  
+##  <a name="querycontrol"></a>  IAxWinHostWindow::QueryControl  
  호스팅된 컨트롤에서 제공 된 인터페이스 포인터를 반환 합니다.  
   
 ```
@@ -176,7 +171,7 @@ STDMETHOD(QueryControl)(
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-##  <a name="setexternaldispatch"></a>IAxWinHostWindow::SetExternalDispatch  
+##  <a name="setexternaldispatch"></a>  IAxWinHostWindow::SetExternalDispatch  
  통해 포함 된 컨트롤에 사용할 수 있는 외부 dispinterface 설정는 [IDocHostUIHandlerDispatch::GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md) 메서드.  
   
 ```
@@ -190,7 +185,7 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-##  <a name="setexternaluihandler"></a>IAxWinHostWindow::SetExternalUIHandler  
+##  <a name="setexternaluihandler"></a>  IAxWinHostWindow::SetExternalUIHandler  
  외부를 설정 하려면이 함수 호출 [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) 에 대 한 인터페이스는 `CAxWindow` 개체입니다.  
   
 ```

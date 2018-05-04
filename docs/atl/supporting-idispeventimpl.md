@@ -1,13 +1,10 @@
 ---
-title: "IDispEventImpl 지원 | Microsoft Docs"
-ms.custom: 
+title: IDispEventImpl 지원 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - IDispEventImpl
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - BEGIN_SINK_MAP macro
 - IDispEventImpl class, declaring
 ms.assetid: b957f930-6a5b-4598-8e4d-8027759957e7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bf10a68ae15743a637df2dee52bee83c3dfcbe0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 680396ae912cca5f19e87697e7de0033213cc963
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supporting-idispeventimpl"></a>IDispEventImpl 지원
 템플릿 클래스 [IDispEventImpl](../atl/reference/idispeventimpl-class.md) 는 연결 지점 싱크에 ATL 클래스에 대 한 지원을 제공 하는 데 사용할 수 있습니다. 연결 지점 싱크 클래스를를 COM 개체 외부에서 발생 하는 이벤트를 처리할 수 있습니다. 이러한 연결 지점 싱크는 클래스에서 제공 하는 이벤트 싱크 맵이 매핑됩니다.  

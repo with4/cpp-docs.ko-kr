@@ -1,29 +1,24 @@
 ---
-title: "for 문 (c + +) | Microsoft Docs"
-ms.custom: 
+title: for 문 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8358af0cd6784b1974767456602350a8ccf1c57f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38181a43134c35c4db1db3d78a79d3338934b7d2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="for-statement-c"></a>for 문 (C++)
 조건이 false가 될 때까지 문을 반복적으로 실행합니다. 참조 된 범위 기반의 for 문에 대 한 자세한 내용은 [범위 기반에 대 한 문 (c + +)](../cpp/range-based-for-statement-cpp.md)합니다.  
@@ -75,7 +70,7 @@ int main() {
     // Output: 012  
 ```  
   
- `init-expression` 및 `loop-expression`은 쉼표로 구분된 여러 개의 문을 포함할 수 있습니다. 예:  
+ `init-expression` 및 `loop-expression`은 쉼표로 구분된 여러 개의 문을 포함할 수 있습니다. 예를 들어:  
   
 ```cpp  
 #include <iostream>  
@@ -130,7 +125,7 @@ int main()
 ```  
   
 ## <a name="for-loops-and-the-c-standard"></a>루프와 C++ 표준에 대해  
- C++ 표준에 따르면 `for` 루프에서 선언된 변수는 `for` 루프가 종료된 후 범위를 벗어납니다. 예:  
+ C++ 표준에 따르면 `for` 루프에서 선언된 변수는 `for` 루프가 종료된 후 범위를 벗어납니다. 예를 들어:  
   
 ```cpp  
 for (int i = 0 ; i < 5 ; i++) {  

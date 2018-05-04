@@ -2,11 +2,8 @@
 title: CA2CAEX 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CA2CAEX
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CA2CAEX class
 ms.assetid: 388e7c1d-a144-474c-a182-b15f69a74bd8
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f579716cff70d0c9f20ea0fa0133dcb4d86c8db3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8aa16122a1cb3a5f8378397363a45cd28ddaef6d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ca2caex-class"></a>CA2CAEX 클래스
 이 클래스는 사용 하 여 문자열 변환 매크로 `CA2CTEX` 및 `CT2CAEX`, 및 typedef **CA2CA**합니다.  
@@ -85,13 +80,13 @@ class CA2CAEX
   
  이러한 텍스트 변환 매크로의 논의 알려면 [ATL 및 MFC 문자열 변환 매크로](string-conversion-macros.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  참조 [ATL 및 MFC 문자열 변환 매크로](string-conversion-macros.md) 이러한 문자열 변환 매크로 사용의 예입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlconv.h  
   
-##  <a name="ca2caex"></a>CA2CAEX::CA2CAEX  
+##  <a name="ca2caex"></a>  CA2CAEX::CA2CAEX  
  생성자입니다.  
   
 ```
@@ -109,7 +104,7 @@ CA2CAEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>설명  
  번역에 필요한 버퍼를 만듭니다.  
   
-##  <a name="dtor"></a>CA2CAEX:: ~ CA2CAEX  
+##  <a name="dtor"></a>  CA2CAEX:: ~ CA2CAEX  
  소멸자입니다.  
   
 ```
@@ -119,14 +114,14 @@ CA2CAEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>설명  
  할당된 된 버퍼를 해제합니다.  
   
-##  <a name="m_psz"></a>CA2CAEX::m_psz  
+##  <a name="m_psz"></a>  CA2CAEX::m_psz  
  소스 문자열을 저장 하는 데이터 멤버입니다.  
   
 ```
 LPCSTR m_psz;
 ```  
   
-##  <a name="operator_lpcstr"></a>CA2CAEX::operator LPCSTR  
+##  <a name="operator_lpcstr"></a>  CA2CAEX::operator LPCSTR  
  변환 연산자입니다.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "옵션, ATL 단순 개체 마법사 | Microsoft Docs"
-ms.custom: 
+title: 옵션, ATL 단순 개체 마법사 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.simple.options
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37341dc23f95e1863aeae4a1b57c01d24d6ad365
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: ffc38f5359b68b90f91a2643e1fbaa743a94e559
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="options-atl-simple-object-wizard"></a>옵션, ATL 단순 개체 마법사
 ATL 단순 개체 마법사의이 페이지를 사용 하 여 효율성과 개체에 대 한 오류 지원에 대 한 디자인 합니다.  
@@ -59,7 +54,7 @@ ATL 단순 개체 마법사의이 페이지를 사용 하 여 효율성과 개�
   
 |옵션|설명|  
 |------------|-----------------|  
-|**Dual**|개체는 이중 인터페이스를 지원 하도록 지정 (해당 vtable에 인터페이스를 사용자 지정 함수 및 런타임에 바인딩 `IDispatch` 메서드). 수 있도록 두 COM 클라이언트 및 [자동화 컨트롤러](../../mfc/automation-clients.md) 개체에 액세스할 수 있습니다. 기본값입니다.|  
+|**이중**|개체는 이중 인터페이스를 지원 하도록 지정 (해당 vtable에 인터페이스를 사용자 지정 함수 및 런타임에 바인딩 `IDispatch` 메서드). 수 있도록 두 COM 클라이언트 및 [자동화 컨트롤러](../../mfc/automation-clients.md) 개체에 액세스할 수 있습니다. 기본값입니다.|  
 |**사용자 지정**|개체는 사용자 지정 인터페이스 (사용자 지정 인터페이스 함수)를 지원 하는지 지정 합니다. 프로세스 경계를 넘어 사용자 지정 인터페이스는 이중 인터페이스 보다 빠를 수 있습니다.<br /><br /> -   **자동화 호환** 허용 자동화 컨트롤러 사용자 지정 인터페이스 지 원하는 개체에 액세스 합니다.|  
   
  **지원**  

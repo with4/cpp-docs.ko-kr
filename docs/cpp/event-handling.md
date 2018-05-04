@@ -2,11 +2,8 @@
 title: 이벤트 처리 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - intrinsic functions [C++], event handling
 - event handling [C++], Visual C++
 ms.assetid: 82de3f9a-2d88-470c-9527-8a5b54c8ced4
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4167a76d3e301f76ebba09f78abcd7e64fc7f108
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 09029f3afef0a9a28fdc572b9b7d8685cf76e811
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="event-handling"></a>이벤트 처리
 이벤트 처리는 기본적으로 COM 클래스에 대 한 지원 (대개 ATL 클래스를 사용 하 여 COM 개체를 구현 하는 c + + 클래스 또는 [coclass](../windows/coclass.md) 특성).  자세한 내용은 참조 [COM에서 이벤트 처리](../cpp/event-handling-in-com.md)합니다.  
@@ -46,6 +41,6 @@ ms.lasthandoff: 12/21/2017
 |[__unhook](../cpp/unhook.md)|처리기 메서드를 이벤트에서 분리합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [C + + 언어 참조](../cpp/cpp-language-reference.md)   
+ [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [키워드](../cpp/keywords-cpp.md)   
  [이벤트 처리 샘플](http://msdn.microsoft.com/en-us/cc0287d4-f92b-4da5-85fc-a0f186e16424)

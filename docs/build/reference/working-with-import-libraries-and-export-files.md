@@ -1,13 +1,10 @@
 ---
-title: "가져오기 라이브러리 및 내보내기 파일 작업 | Microsoft Docs"
-ms.custom: 
+title: 가져오기 라이브러리 및 내보내기 파일 작업 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - export files
 - import libraries, creating
 ms.assetid: d8175596-9773-4c2f-959d-b05b065a5161
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e0d60eed00abc60c09e03838a113c424d8f173a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bc2e5b6b1f2a459d7a00e48ff1aaafff38803871
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-import-libraries-and-export-files"></a>가져오기 라이브러리 및 내보내기 파일을 사용한 작업
 /DEF 옵션으로 LIB를 사용 하 여 가져오기 라이브러리 및 내보내기 파일을 만들 수 있습니다. LINK 포함 하는 프로그램을 작성 하는 내보내기 파일을 사용 하 여 (일반적으로 동적 연결 라이브러리 (DLL))을 내보내고 가져오기 라이브러리를 사용 하 여 다른 프로그램의 내보내기에 대 한 참조를 확인 합니다.  

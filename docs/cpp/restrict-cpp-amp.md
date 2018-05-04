@@ -2,11 +2,8 @@
 title: 제한 (c + + AMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - cpu_CPP
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - restrict clause (C++ AMP)
 ms.assetid: 07d3291f-7edf-456b-8828-283ac8673661
-caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60ac40e2cb64c307574d14c1f7cc7a5290c740ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: abe3bd4f737cfb26a326a1f0d83b731c36e6c7bf
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 제한 지정자는 함수 및 람다 선언에 적용할 수 있습니다. 제한 지정자는 C++ AMP(C++ Accelerated Massive Parallelism) 런타임을 사용하는 응용 프로그램의 함수 동작 및 함수의 코드에 제한을 적용합니다.  
@@ -93,7 +88,7 @@ ms.lasthandoff: 12/21/2017
   
  함수 제한 사항을 논의 알려면 [restrict (amp) 제한](http://go.microsoft.com/fwlink/p/?LinkId=251089)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  사용 하는 방법을 보여 주는 다음 예제는 `restrict(amp)`절.  
   
 ```  

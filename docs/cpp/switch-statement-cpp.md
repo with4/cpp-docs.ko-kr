@@ -1,12 +1,9 @@
 ---
-title: "문 (c + +) 전환 | Microsoft Docs"
-ms.custom: 
+title: 문 (c + +) 전환 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - default_cpp
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - case keyword [C++], in switch statements
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e668756e8cabafbdef522d6754487efe452f96de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5cea2c7e4bff895f9ccabc044ed5b7f5ae506b32
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="switch-statement-c"></a>switch 문 (C++)
 정수 계열 식의 값에 따라 코드의 여러 섹션 중에서 선택할 수 있습니다.  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
 |상수 조건과 일치 하는 상수는 **대/소문자** 레이블의 **기본** 레이블이 있습니다.|제어가 **기본** 레이블.|  
 |상수 조건과 일치 하는 상수는 **대/소문자** 레이블의 **기본** 레이블이 나타나지 않습니다.|제어가 `switch` 문 뒤의 문으로 전송됩니다.|  
   
- 이후 제어가 방해 되지 않습니다는 일치 하는 식이 발견 되는 경우 **대/소문자** 또는 **기본** 레이블을 합니다. [나누기](../cpp/break-statement-cpp.md) 문을 사용 실행을 중지 하 고 뒤의 문으로 제어를 전송 하는 `switch` 문. 없이 **나누기** 문, 일치 하는 모든 문을 **대/소문자** 의 끝에 레이블은 `switch`를 포함 하 여는 **기본**, 실행 됩니다. 예:  
+ 이후 제어가 방해 되지 않습니다는 일치 하는 식이 발견 되는 경우 **대/소문자** 또는 **기본** 레이블을 합니다. [나누기](../cpp/break-statement-cpp.md) 문을 사용 실행을 중지 하 고 뒤의 문으로 제어를 전송 하는 `switch` 문. 없이 **나누기** 문, 일치 하는 모든 문을 **대/소문자** 의 끝에 레이블은 `switch`를 포함 하 여는 **기본**, 실행 됩니다. 예를 들어:  
   
 ```  
 // switch_statement1.cpp  
@@ -131,7 +126,7 @@ int main()
         };
 ```
 
- `switch` 문의 내부 블록은 도달할 수 있는 한, 즉 가능한 모든 실행 경로에 의해 건너뛰어지지 않는 한 초기화를 사용하는 정의를 포함할 수 있습니다. 이러한 선언을 사용하여 정의된 이름에는 로컬 범위가 있습니다. 예:  
+ `switch` 문의 내부 블록은 도달할 수 있는 한, 즉 가능한 모든 실행 경로에 의해 건너뛰어지지 않는 한 초기화를 사용하는 정의를 포함할 수 있습니다. 이러한 선언을 사용하여 정의된 이름에는 로컬 범위가 있습니다. 예를 들어:  
   
 ```cpp  
 // switch_statement2.cpp  

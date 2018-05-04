@@ -1,13 +1,10 @@
 ---
-title: "LINK 출력 | Microsoft Docs"
-ms.custom: 
+title: LINK 출력 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - link
 dev_langs:
@@ -26,22 +23,20 @@ helpviewer_keywords:
 - DLLs [C++], as linker output
 - LINK tool [C++], mapfile
 ms.assetid: a98b557c-1947-447a-be1f-616fb45a9580
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 567a87ab5cb4badd5f32423b8fb3067b21c46e9e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae68de707ece35825a32a404ce14032d4bbd3141
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="link-output"></a>LINK 출력
 Link 출력.exe 파일, Dll, 맵 파일, 및 메시지를 포함합니다.  
   
-##  <a name="_core_output_files"></a>출력 파일  
+##  <a name="_core_output_files"></a> 출력 파일  
  링크에서 기본 출력 파일은.exe 파일입니다. 경우는 [/DLL](../../build/reference/dll-build-a-dll.md) 옵션을 지정 하면 링크.dll 파일을 빌드합니다. 출력 파일 이름으로 제어할 수 있습니다는 [출력 파일 이름 (/out)](../../build/reference/out-output-file-name.md) 옵션입니다.  
   
  링크는 증분 모드에서 프로그램의 후속 증분 빌드에 대 한 상태 정보를 보관.ilk 파일을 만듭니다. .Ilk 파일에 대 한 세부 정보를 참조 하십시오. [.ilk 파일](../../build/reference/dot-ilk-files-as-linker-input.md)합니다. 증분 링크에 대 한 자세한 내용은 참조는 [증분 링크 (/incremental)](../../build/reference/incremental-link-incrementally.md) 옵션입니다.  
@@ -52,7 +47,7 @@ Link 출력.exe 파일, Dll, 맵 파일, 및 메시지를 포함합니다.
   
  경우는 [디버그 정보 생성 (/debug)](../../build/reference/debug-generate-debug-info.md) 링크에서는 프로그램에 대 한 디버깅 정보를 포함할 PDB를 만들어, 옵션을 지정 합니다.  
   
-##  <a name="_core_other_output"></a>다른 출력  
+##  <a name="_core_other_output"></a> 다른 출력  
  입력할 때 `link` 다른 명령줄 입력 하지 않고 링크는 옵션을 요약 usage 문을 표시 합니다.  
   
  버전 및 저작권 메시지를 표시 하 고 하지 않는 한 명령 파일을 입력을 에코 하는 링크는 [시작 배너 표시 안 함 (/ NOLOGO)](../../build/reference/nologo-suppress-startup-banner-linker.md) 옵션을 사용 합니다.  

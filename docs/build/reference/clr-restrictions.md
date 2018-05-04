@@ -1,29 +1,24 @@
 ---
-title: "-clr 제한 | Microsoft Docs"
-ms.custom: 
+title: -clr 제한 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3552fda0ce6dc80c253809cfd464555d32604534
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 697e2a50e8c63928a52bd1d960dcdefad0fe87bb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clr-restrictions"></a>/clr 제한
 사용에 대 한 다음과 같은 제한 사항이 **/clr**:  
@@ -68,7 +63,7 @@ ms.lasthandoff: 02/14/2018
   
 -   사용 하는 경우 **/Zi** 와 **/clr**에 성능 문제. 자세한 내용은 참조 [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)합니다.  
   
--   도 지정 하지 않고 루틴을 출력 하는.NET Framework에 대 한 와이드 문자를 전달 [/zc: wchar_t](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 또는 문자를 캐스팅 하지 않고도 `__wchar_t` 로 표시 되도록 출력 하면는 `unsigned short int`합니다. 예:  
+-   도 지정 하지 않고 루틴을 출력 하는.NET Framework에 대 한 와이드 문자를 전달 [/zc: wchar_t](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 또는 문자를 캐스팅 하지 않고도 `__wchar_t` 로 표시 되도록 출력 하면는 `unsigned short int`합니다. 예를 들어:  
   
     ```  
     Console::WriteLine(L' ')              // Will output 32.  

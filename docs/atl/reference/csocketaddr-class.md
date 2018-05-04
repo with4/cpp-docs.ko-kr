@@ -1,12 +1,9 @@
 ---
-title: "CSocketAddr 클래스 | Microsoft Docs"
-ms.custom: 
+title: CSocketAddr 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSocketAddr
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - CSocketAddr class
 ms.assetid: 2fb2d8a7-899e-4a36-a342-cc9f4fcdd68c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cadd771e6c3a9e7addb6893b4427183cfff293c9
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 830b1087d0a4792b449c516ed12ad7e8a84b2a51
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr 클래스
 이 클래스는 호스트 이름을 호스트 주소에 IPv4 및 IPV6 모두 형식을 지 원하는 변환 하기 위한 메서드를 제공 합니다.  
@@ -71,7 +66,7 @@ class CSocketAddr
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsocket.h  
   
-##  <a name="csocketaddr"></a>CSocketAddr::CSocketAddr  
+##  <a name="csocketaddr"></a>  CSocketAddr::CSocketAddr  
  생성자입니다.  
   
 ```
@@ -81,7 +76,7 @@ CSocketAddr();
 ### <a name="remarks"></a>설명  
  새 `CSocketAddr` 개체를 호스트 하는 방법에 대 한 응답 정보를 포함 하는 링크 된 목록의 초기화 합니다.  
   
-##  <a name="findaddr"></a>CSocketAddr::FindAddr  
+##  <a name="findaddr"></a>  CSocketAddr::FindAddr  
  제공 된 호스트 이름을 호스트 주소를 변환 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -130,7 +125,7 @@ int FindAddr(
 ### <a name="remarks"></a>설명  
  호스트 이름 매개 변수는 IPv4 또는 IPv6 형식 수 있습니다. 이 메서드는 Win32 API 함수를 호출 [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) 변환을 수행 하려고 합니다.  
   
-##  <a name="findinet4addr"></a>CSocketAddr::FindINET4Addr  
+##  <a name="findinet4addr"></a>  CSocketAddr::FindINET4Addr  
  호스트 주소를 IPv4 호스트 이름으로 변환 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -160,7 +155,7 @@ int FindINET4Addr(
 ### <a name="remarks"></a>설명  
  이 메서드는 Win32 API 함수를 호출 [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) 변환을 수행 하려고 합니다.  
   
-##  <a name="findinet6addr"></a>CSocketAddr::FindINET6Addr  
+##  <a name="findinet6addr"></a>  CSocketAddr::FindINET6Addr  
  IPv6 호스트 이름을 호스트 주소를 변환 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -190,7 +185,7 @@ int FindINET6Addr(
 ### <a name="remarks"></a>설명  
  이 메서드는 Win32 API 함수를 호출 [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) 변환을 수행 하려고 합니다.  
   
-##  <a name="getaddrinfo"></a>CSocketAddr::GetAddrInfo  
+##  <a name="getaddrinfo"></a>  CSocketAddr::GetAddrInfo  
  호출의 특정 요소에 대 한 포인터를 반환 하려면이 메서드는 **addrinfo** 목록입니다.  
   
 ```
@@ -204,7 +199,7 @@ addrinfo* const GetAddrInfoint nIndex = 0) const;
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터를 반환 합니다.는 **addrinfo** 에서 참조 하는 구조 `nIndex` 호스트에 대 한 응답 정보를 포함 하는 연결 된 목록의 합니다.  
   
-##  <a name="getaddrinfolist"></a>CSocketAddr::GetAddrInfoList  
+##  <a name="getaddrinfolist"></a>  CSocketAddr::GetAddrInfoList  
  호출에 대 한 포인터를 반환 하려면이 메서드는 **addrinfo** 목록입니다.  
   
 ```

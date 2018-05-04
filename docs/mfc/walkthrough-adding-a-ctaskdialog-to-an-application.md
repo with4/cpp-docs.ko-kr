@@ -1,12 +1,12 @@
 ---
-title: "연습: 응용 프로그램에 CTaskDialog 추가 | Microsoft Docs"
-ms.custom: 
+title: '연습: 응용 프로그램에 CTaskDialog 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -14,34 +14,34 @@ helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3e9e75cb705bb4497cfefa350c2b34eca75cf2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 7b0d820b45b85b5dc20e82cb647c05f839e7ab41
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>연습: 응용 프로그램에 CTaskDialog 추가
 이 연습에서는 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) 를 소개하고 이를 응용 프로그램에 추가하는 방법을 보여 줍니다.  
   
- `CTaskDialog` 는 [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]에서 Windows 메시지 상자를 대체하는 작업 대화 상자입니다. `CTaskDialog` 는 원래 메시지 상자를 개선하고 기능을 추가합니다. Windows 메시지 상자는 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]에서 계속 지원됩니다.  
+ `CTaskDialog` Windows Vista 이상에서 Windows 메시지 상자를 대체 하는 작업 대화 상자. `CTaskDialog` 는 원래 메시지 상자를 개선하고 기능을 추가합니다. Windows 메시지 상자는 Visual Studio에서 계속 지원 됩니다.  
   
 > [!NOTE]
->  [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)] 이전 버전의 Windows는 `CTaskDialog`를 지원하지 않습니다. 이전 버전의 Windows에서 응용 프로그램을 실행하는 사용자에게 메시지를 표시하려면 다른 대화 상자 옵션을 프로그래밍해야 합니다. 정적 메서드 [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) 를 사용하여 런타임에 사용자 컴퓨터에서 `CTaskDialog`에서 Windows 메시지 상자를 대체하는 작업 대화 상자입니다. 또한 `CTaskDialog` 는 응용 프로그램이 유니코드 라이브러리와 함께 빌드된 경우에만 사용할 수 있습니다.  
+> 이전 버전 Windows의 Windows vista 지원 하지 않습니다는 `CTaskDialog`합니다. 이전 버전의 Windows에서 응용 프로그램을 실행하는 사용자에게 메시지를 표시하려면 다른 대화 상자 옵션을 프로그래밍해야 합니다. 정적 메서드 [CTaskDialog::IsSupported](../mfc/reference/ctaskdialog-class.md#issupported) 를 사용하여 런타임에 사용자 컴퓨터에서 `CTaskDialog`에서 Windows 메시지 상자를 대체하는 작업 대화 상자입니다. 또한 `CTaskDialog` 는 응용 프로그램이 유니코드 라이브러리와 함께 빌드된 경우에만 사용할 수 있습니다.  
   
  `CTaskDialog` 는 정보를 수집하고 표시할 수 있도록 여러 선택적 요소를 지원합니다. 예를 들어 `CTaskDialog` 는 명령 링크, 사용자 지정 단추, 사용자 지정 아이콘 및 바닥글을 표시할 수 있습니다. 또한 `CTaskDialog` 에는 사용자가 선택한 선택적 요소를 확인하기 위해 작업 대화 상자를 쿼리하는 데 사용할 수 있는 여러 메서드가 있습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
-- [!INCLUDE[vs_dev10_long](../build/includes/vs_dev10_long_md.md)]  
+- Visual Studio 2010 이상  
   
-- [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]  
+- Windows Vista 이상 버전  
   
 ## <a name="replacing-a-windows-message-box-with-a-ctaskdialog"></a>Windows 메시지 상자를 CTaskDialog로 대체  
  다음 절차에서는 Windows 메시지 상자를 대체하는 `CTaskDialog`의 가장 기본적인 사용법을 보여 줍니다. 또한 이 예제에서는 작업 대화 상자와 연결된 아이콘을 변경합니다. 아이콘을 변경하면 `CTaskDialog` 가 Windows 메시지 상자와 동일하게 표시됩니다.  

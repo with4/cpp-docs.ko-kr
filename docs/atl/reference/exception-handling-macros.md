@@ -1,12 +1,9 @@
 ---
-title: "예외 처리 매크로 | Microsoft Docs"
-ms.custom: 
+title: 예외 처리 매크로 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atldef/ATL::_ATLCATCH
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - exception handling, macros
 - C++ exception handling, macros
 ms.assetid: a8385d34-3fb0-4006-a42a-de045cacf0f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 424a65c44d7bb22d1fef6e21e1892967ecd3e9b8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05ee381aa792c252fc9b80107d25e15e7d1ecfca
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exception-handling-macros"></a>예외 처리 매크로
 이러한 매크로 예외 처리에 대 한 지원을 제공합니다.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>요구 사항:
 **헤더:** atldef.h
 
-##  <a name="_atlcatch"></a>_ATLCATCH  
+##  <a name="_atlcatch"></a>  _ATLCATCH  
  연결 된 발생 하는 오류를 처리 하는 문 `_ATLTRY`합니다.  
   
 ```
@@ -56,7 +51,7 @@ _ATLCATCH(e)
 ### <a name="remarks"></a>설명  
  와 함께 사용 `_ATLTRY`합니다. C + +로 확인 [(CAtlException e) catch](../../cpp/try-throw-and-catch-statements-cpp.md) 지정 된 유형의 c + + 예외 처리에 대 한 합니다.  
   
-##  <a name="_atlcatchall"></a>_ATLCATCHALL  
+##  <a name="_atlcatchall"></a>  _ATLCATCHALL  
  연결 된 발생 하는 오류를 처리 하는 문 `_ATLTRY`합니다.  
   
 ```
@@ -66,7 +61,7 @@ _ATLCATCHALL
 ### <a name="remarks"></a>설명  
  와 함께 사용 `_ATLTRY`합니다. C + +로 확인 [catch (...) ](../../cpp/try-throw-and-catch-statements-cpp.md) 모든 형식의 c + + 예외 처리에 대 한 합니다.  
   
-##  <a name="_atltry"></a>_ATLTRY  
+##  <a name="_atltry"></a>  _ATLTRY  
  오류가 발생할 수 있는 수 있는 보호 된 코드 섹션을 표시 합니다.  
   
 ```

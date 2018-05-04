@@ -1,13 +1,10 @@
 ---
-title: "파일 이름 부분 구문 | Microsoft Docs"
-ms.custom: 
+title: 파일 이름 부분 구문 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,20 +12,18 @@ helpviewer_keywords:
 - filename-parts syntax in NMAKE
 - NMAKE program, syntax
 ms.assetid: 48fe38e0-3f3b-40e6-894c-330ee775a656
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a481f8c461cb4fddd4acb090edb2f2b5fd18636d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d807087be171a2ad63ed37a8b359c3200c812040
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filename-parts-syntax"></a>파일 이름 부분 구문
-명령에서 파일 이름 부분 구문 (수도 있음 묵시적된 종속) 하면 첫 번째 종속 파일의 구성 요소를 나타냅니다. 파일 이름 구성 요소입니다 파일의 드라이브, 경로, 기본 이름 및 지정 된 대로 확장 하지 디스크에 있습니다. 사용 하 여 **%s** 전체 파일 이름을 나타내는입니다. 사용 하 여 **% &#124;** [*부분*]**F** (세로 막대 백분율 기호 뒤에 문자가), 파일 이름 부분을 나타내는를 여기서 *부분* 0 개 이상의 다음 문자 수 순서에 관계 없이 합니다.  
+명령에서 파일 이름 부분 구문 (수도 있음 묵시적된 종속) 하면 첫 번째 종속 파일의 구성 요소를 나타냅니다. 파일 이름 구성 요소입니다 파일의 드라이브, 경로, 기본 이름 및 지정 된 대로 확장 하지 디스크에 있습니다. 사용 하 여 **%s** 전체 파일 이름을 나타내는입니다. 사용 하 여 **%&#124;**[*부분*]**F** (세로 막대 백분율 기호 뒤에 문자가), 파일 이름 부분을 나타내는를 여기서 *부분*순서에 관계 없이 다음 문자 또는 0 일 수 있습니다.  
   
 |글자|설명|  
 |------------|-----------------|  
@@ -42,15 +37,15 @@ ms.lasthandoff: 12/21/2017
   
 -   %s c:\prog.exe 됩니다.  
   
--   % &#124; F c:\prog.exe 됩니다.  
+-   %&#124;F c:\prog.exe 됩니다  
   
--   % &#124; dF는 c 됩니다  
+-   %&#124;dF c 됩니다  
   
--   % &#124; pF는 c:\ 됩니다  
+-   %&#124;pF c:\ 됩니다  
   
--   % &#124; fF는 prog 됩니다  
+-   %&#124;fF prog 됩니다  
   
--   % &#124; eF는 exe 됩니다  
+-   %&#124;eF exe 됩니다  
   
 ## <a name="see-also"></a>참고 항목  
  [메이크파일의 명령](../build/commands-in-a-makefile.md)

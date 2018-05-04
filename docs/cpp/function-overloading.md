@@ -1,12 +1,9 @@
 ---
-title: "함수 오버 로드 | Microsoft Docs"
-ms.custom: 
+title: 함수 오버 로드 | Microsoft Docs
+ms.custom: ''
 ms.date: 1/25/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 07b7209c890ce3eeadb2db346445802576674bfd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-overloading"></a>함수 오버로드
 C++에서는 동일한 범위에서 이름이 같은 함수를 둘 이상 지정할 수 있습니다. 이 라고 *오버 로드 된* 함수입니다. 오버 로드 된 함수를 사용 하면 함수, 형식 및 수의 인수에 따라 서로 다른 의미 체계를 제공할 수 있습니다. 
@@ -264,7 +259,7 @@ volatile Over&
 |*type-name*|*type-name* **&**|  
 |*type-name* **&**|*type-name*|  
 |*type-name* **[ ]**|*type-name\***|  
-|*type-name* **(** *argument-list* **)**|**(** *\*type-name* **) (** *argument-list* **)**|  
+|*type-name* **(** *argument-list* **)**|**(**  *\*형식-이름이* **) (** *인수 목록* **)**|  
 |*type-name*|**const** *type-name*|  
 |*type-name*|`volatile` *type-name*|  
 |*type-name\***|**const** *type-name\***|  
@@ -274,13 +269,13 @@ volatile Over&
   
 1.  정확한 일치. 함수가 호출되는 형식과 함수 프로토타입에서 선언된 형식 간 정확한 일치는 항상 가장 좋은 일치입니다. trivial 변환 시퀀스는 정확히 일치하는 항목으로 분류됩니다. 하지만 이러한 변환 중 어느 것도 수행하지 않는 시퀀스는 변환시키는 시퀀스보다 나은 것으로 간주됩니다.  
   
-    -   에 대 한 포인터를 포인터에서 **const** (`type`  **\***  를 **const** `type`  **\***  ).  
+    -   에 대 한 포인터를 포인터에서 **const** (`type` **\*** 를 **const** `type` **\*** ).  
   
-    -   에 대 한 포인터를 포인터에서 `volatile` (`type`  **\***  를 `volatile` `type`  **\*** ).  
+    -   에 대 한 포인터를 포인터에서 `volatile` (`type` **\*** 를 `volatile` `type` **\***).  
   
-    -   참조에 대 한 참조에서 **const** (`type`  **&**  를 **const** `type`  **&** ).  
+    -   참조에 대 한 참조에서 **const** (`type` **&** 를 **const** `type` **&**).  
   
-    -   참조에 대 한 참조에서 `volatile` (`type`  **&**  를 `volatile` `type`  **&** ).  
+    -   참조에 대 한 참조에서 `volatile` (`type` **&** 를 `volatile` `type` **&**).  
   
 2.  승격을 통한 일치. 만 정수 계열 승격, 포함 된 정확 하 게 일치로 분류 되지 않은 모든 시퀀스 **float** 를 **double**, 및 trivial 변환이 승격을 통한 일치로 분류 됩니다. 승격을 통한 일치는 정확한 일치만큼 양호하지는 않지만 표준 변환을 통한 일치에 비해 좋습니다.  
   
@@ -408,7 +403,7 @@ obj.name
  `->*`의 왼쪽 피연산자와 `.*`(멤버에 대한 포인터) 연산자는 인수 일치와 관련하여 `.` 및 `->`(멤버 선택) 연산자와 동일한 방식으로 처리됩니다.  
 
 ## <a name="ref-qualifiers"></a> 멤버 함수에서 ref-qualifier  
-Ref 한정자 확인 여부는 가리키는 개체를 기반으로 하는 멤버 함수를 오버 로드할 수 `this` rvalue 또는 lvalue입니다.  이 기능은 포인터 데이터에 대 한 액세스를 제공 하지 않아도 선택할 수 있는 시나리오에서 불필요 한 복사 작업을 방지 하기 위해 사용할 수 있습니다. 예를 들어 클래스 **C** 해당 생성자의 일부 데이터를 초기화 하 고 멤버 함수에 해당 데이터의 복사본을 반환 **get_data()**합니다. 경우 형식의 개체 **C** 값이 소멸 될 예정에 있으면 컴파일러는 선택 rvalue는 **get_data() & &** 복사 하지 않고 데이터를 이동 하는 오버 로드 합니다. 
+Ref 한정자 확인 여부는 가리키는 개체를 기반으로 하는 멤버 함수를 오버 로드할 수 `this` rvalue 또는 lvalue입니다.  이 기능은 포인터 데이터에 대 한 액세스를 제공 하지 않아도 선택할 수 있는 시나리오에서 불필요 한 복사 작업을 방지 하기 위해 사용할 수 있습니다. 예를 들어 클래스 **C** 해당 생성자의 일부 데이터를 초기화 하 고 멤버 함수에 해당 데이터의 복사본을 반환 **get_data()** 합니다. 경우 형식의 개체 **C** 값이 소멸 될 예정에 있으면 컴파일러는 선택 rvalue는 **get_data() & &** 복사 하지 않고 데이터를 이동 하는 오버 로드 합니다. 
 
 ```cpp
 #include <iostream>
