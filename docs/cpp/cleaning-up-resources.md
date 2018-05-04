@@ -1,12 +1,9 @@
 ---
-title: "리소스 정리 | Microsoft Docs"
-ms.custom: 
+title: 리소스 정리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd84fdd041a3b3715c4fbfa9b4c1d78fdf2ba464
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 960e19400ae1d00108d57eb85d3df01ebf1dbc33
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cleaning-up-resources"></a>리소스 정리
 종료 처리기를 실행하는 동안 종료 처리기가 호출되기 전에 어떤 리소스가 실제로 할당되는지 알 수 없을 수 있습니다. 모든 리소스가 할당되기 전에 `__try` 문 블록이 중단되어 일부 리소스가 열리지 않을 수도 있습니다.  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  `__finally` 문 블록에서 해당 핸들 또는 플래그 변수가 0이 아니거나 NULL이 아닌 각 리소스를 해제합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  예를 들어, 다음 코드는 종료 처리기를 사용하여 `__try` 문 블록에 할당된 3개의 파일과 1개의 메모리 블록을 닫습니다. 리소스를 정리하기 전에 코드는 먼저 리소스가 할당되었는지 확인합니다.  
   
 ```  

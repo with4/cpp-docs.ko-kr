@@ -1,12 +1,9 @@
 ---
-title: "이 포인터 | Microsoft Docs"
-ms.custom: 
+title: 이 포인터 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - this_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pointers, to class instance
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 814e7518c6ed7052abc93b9e4705be93172b1e7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e6a1df3bb262a814c641f5bfbcee070ec5de344
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="this-pointer"></a>this 포인터
 **이** 포인터는 포인터의 비정적 멤버 함수 내 에서만 액세스할 수는 **클래스**, `struct`, 또는 **union** 유형입니다. 멤버 함수가 호출되는 개체를 가리킵니다. 정적 멤버 함수를 포함 하지 않습니다는 **이** 포인터입니다.  
@@ -53,7 +48,7 @@ myDate.setMonth( 3 );
 setMonth( &myDate, 3 );  
 ```  
   
- 개체의 주소는 멤버 함수 내에서 사용할 수는 **이** 포인터입니다. 대부분 용도 **이** 는 암시적 합니다. 사용 하 여 명시적으로 법률, **이** 클래스의 멤버를 참조할 때. 예:  
+ 개체의 주소는 멤버 함수 내에서 사용할 수는 **이** 포인터입니다. 대부분 용도 **이** 는 암시적 합니다. 사용 하 여 명시적으로 법률, **이** 클래스의 멤버를 참조할 때. 예를 들어:  
   
 ```  
 void Date::setMonth( int mn )  
@@ -82,7 +77,7 @@ if (&Object != this) {
   
  경우에 따라서는 **이** 포인터를 직접 사용-예를 들어 자체 참조 데이터를 조작 하기 위한 구조를 현재 개체의 주소가 필요 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // this_pointer.cpp  
@@ -183,7 +178,7 @@ int main()
   
  유형의 **이** 멤버 함수는 다음 구문을 사용 하 여 설명 되어 있는 *cv 한정자-목록* 수 및 멤버 함수 선언 자에서 결정 됩니다 **const**또는 **휘발성** (또는 둘 다) 및 *클래스 형식* 클래스의 이름입니다.  
   
- *클래스 유형 [cv 한정자 목록]*  **\* const이**   
+ *클래스 유형 [cv 한정자 목록]* **\* const이**  
   
  즉, **이** 는 항상 const 포인터 이며 다시 할당할 수 없습니다.  **const** 또는 `volatile` 멤버 함수 선언에서 사용 되는 한정자가 가리키는 클래스 인스턴스에 적용 **이** 해당 함수의 범위에 있습니다.  
   
