@@ -2,11 +2,8 @@
 title: CWin32Heap 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWin32Heap
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - CWin32Heap class
 ms.assetid: 69176022-ed98-4e3b-96d8-116b0c58ac95
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67856242c63639101185eb6f6dcfd4902f0ef48c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b26d979ccb99d3d99bc91af03c4836603d31c01
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cwin32heap-class"></a>CWin32Heap 클래스
 이 클래스는 구현 [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) Win32 힙 할당 함수를 사용 합니다.  
@@ -77,9 +72,9 @@ class CWin32Heap : public IAtlMemMgr
 |[CWin32Heap::m_hHeap](#m_hheap)|힙 개체에 대 한 핸들입니다.|  
   
 ## <a name="remarks"></a>설명  
- `CWin32Heap`메모리 할당 메서드를 포함 하 여 Win32 힙 할당 함수를 사용 하 여 구현 [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597) 및 [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701)합니다. 다른 힙 클래스와 달리 `CWin32Heap` 메모리를 할당 하기 전에 제공 되는 유효한 힙 핸들 필요: 다른 클래스 기본적으로 프로세스 힙을 사용 합니다. 핸들 또는 생성자에 제공 될 수 있습니다는 [cwin32heap:: Attach](#attach) 메서드. 참조는 [CWin32Heap::CWin32Heap](#cwin32heap) 메서드 자세한 정보에 대 한 합니다.  
+ `CWin32Heap` 메모리 할당 메서드를 포함 하 여 Win32 힙 할당 함수를 사용 하 여 구현 [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597) 및 [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701)합니다. 다른 힙 클래스와 달리 `CWin32Heap` 메모리를 할당 하기 전에 제공 되는 유효한 힙 핸들 필요: 다른 클래스 기본적으로 프로세스 힙을 사용 합니다. 핸들 또는 생성자에 제공 될 수 있습니다는 [cwin32heap:: Attach](#attach) 메서드. 참조는 [CWin32Heap::CWin32Heap](#cwin32heap) 메서드 자세한 정보에 대 한 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  예를 참조 [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
@@ -90,7 +85,7 @@ class CWin32Heap : public IAtlMemMgr
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlmem.h  
   
-##  <a name="allocate"></a>Cwin32heap:: Allocate  
+##  <a name="allocate"></a>  Cwin32heap:: Allocate  
  힙 개체에서 메모리 블록을 할당합니다.  
   
 ```
@@ -109,7 +104,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  사용 하 여 구현 [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597)합니다.  
   
-##  <a name="attach"></a>Cwin32heap:: Attach  
+##  <a name="attach"></a>  Cwin32heap:: Attach  
  기존 힙에 힙 개체를 연결합니다.  
   
 ```
@@ -126,7 +121,7 @@ void Attach(HANDLE hHeap, bool bTakeOwnership) throw();
 ### <a name="remarks"></a>설명  
  경우 `bTakeOwnership` 가 TRUE 이면는 `CWin32Heap` 개체를 힙 핸들을 삭제 해야 합니다.  
   
-##  <a name="cwin32heap"></a>CWin32Heap::CWin32Heap  
+##  <a name="cwin32heap"></a>  CWin32Heap::CWin32Heap  
  생성자입니다.  
   
 ```
@@ -168,7 +163,7 @@ CWin32Heap(
   
  세 번째 매개 변수의 기본값이 0으로 지정되어, 필요에 따라 힙을 증가시킬 수 있습니다. 참조 [HeapCreate](http://msdn.microsoft.com/library/windows/desktop/aa366599\(v=vs.85\).aspx) 에 대 한 설명은 메모리 크기 및 플래그입니다.  
   
-##  <a name="dtor"></a>CWin32Heap:: ~ CWin32Heap  
+##  <a name="dtor"></a>  CWin32Heap:: ~ CWin32Heap  
  소멸자입니다.  
   
 ```
@@ -178,7 +173,7 @@ CWin32Heap(
 ### <a name="remarks"></a>설명  
  경우 힙 핸들을 소멸 시킵니다는 `CWin32Heap` 힙의 소유권을 가집니다.  
   
-##  <a name="detach"></a>CWin32Heap::Detach  
+##  <a name="detach"></a>  CWin32Heap::Detach  
  기존 힙에서 힙 개체를 분리합니다.  
   
 ```
@@ -188,7 +183,7 @@ HANDLE Detach() throw();
 ### <a name="return-value"></a>반환 값  
  이전에 연결 된 개체를 힙에 핸들을 반환 합니다.  
   
-##  <a name="free"></a>Cwin32heap:: Free  
+##  <a name="free"></a>  Cwin32heap:: Free  
  이전에 할당 하 여 힙에서 메모리를 확보 [cwin32heap:: Allocate](#allocate) 또는 [cwin32heap:: Reallocate](#reallocate)합니다.  
   
 ```
@@ -199,7 +194,7 @@ virtual void Free(void* p) throw();
  `p`  
  무료을 메모리 블록에 대 한 포인터입니다. NULL은 올바른 값이 고 아무 작업도 수행 합니다.  
   
-##  <a name="getsize"></a>CWin32Heap::GetSize  
+##  <a name="getsize"></a>  CWin32Heap::GetSize  
  힙 개체에서 할당 된 메모리 블록의 크기를 반환 합니다.  
   
 ```
@@ -213,14 +208,14 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="return-value"></a>반환 값  
  할당 된 메모리 블록의 바이트 단위로 크기를 반환 합니다.  
   
-##  <a name="m_bownheap"></a>CWin32Heap::m_bOwnHeap  
+##  <a name="m_bownheap"></a>  CWin32Heap::m_bOwnHeap  
  에 저장 된 힙 핸들의 현재 소유권을 결정 하는 데 사용 하는 플래그 [m_hHeap](#m_hheap)합니다.  
   
 ```
 bool m_bOwnHeap;
 ```  
   
-##  <a name="m_hheap"></a>CWin32Heap::m_hHeap  
+##  <a name="m_hheap"></a>  CWin32Heap::m_hHeap  
  힙 개체에 대 한 핸들입니다.  
   
 ```
@@ -230,7 +225,7 @@ HANDLE m_hHeap;
 ### <a name="remarks"></a>설명  
  힙 개체에 대 한 핸들을 저장 하는 데 사용 되는 변수입니다.  
   
-##  <a name="reallocate"></a>Cwin32heap:: Reallocate  
+##  <a name="reallocate"></a>  Cwin32heap:: Reallocate  
  힙 개체에서 메모리 블록을 다시 할당합니다.  
   
 ```

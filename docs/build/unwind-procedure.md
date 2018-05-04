@@ -1,27 +1,22 @@
 ---
-title: "해제 절차 | Microsoft Docs"
-ms.custom: 
+title: 해제 절차 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 82c5d0ca-70be-4d1a-a306-bfe01c29159f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b8caa2be1528c26cf374637f3d0357847721de9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e2a5af5d8db5974aa10595bbd3bac1cd032a0f4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unwind-procedure"></a>해제 절차
 해제 코드 배열은 내림차순으로 정렬 됩니다. 예외가 발생 하면 전체 컨텍스트가 컨텍스트 레코드에 운영 체제에 의해 저장 됩니다. 예외 디스패치 논리 호출 되를 예외 처리기를 찾으려면 다음 단계를 반복 해 서 실행 하는 합니다.  

@@ -1,13 +1,10 @@
 ---
-title: "부동 소수점 숫자의 정밀도 떨어지는 이유 | Microsoft Docs"
-ms.custom: 
+title: 부동 소수점 숫자의 정밀도 떨어지는 이유 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - FLT_EPSILON constant
 - floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 371aad5dc573a13ca834d8d6d9667a43bb40324e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb673f087d98f6c7acdd1e98b5649cc84a48d277
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>부동 소수점 숫자의 정밀도가 떨어지는 이유
 부동 소수점 10 진수 값 일반적으로 필요는 없습니다는 정확한 이진 표현입니다. 이 CPU에서 부동 소수점 데이터를 나타내는 하는 방식 때문입니다. 이러한 이유로, 자릿수 손실이 발생할 수 있습니다 및 부동 소수점 연산에 예기치 않은 결과가 발생할 수 있습니다.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  부동 소수점 값의 이진 표현 전체 자릿수와 부동 소수점 계산의 정확도 영향을 줍니다. Microsoft Visual c + +를 사용 하 여 [IEEE 부동 소수점 형식](../../build/reference/ieee-floating-point-representation.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // Floating-point_number_precision.c  

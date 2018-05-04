@@ -1,12 +1,9 @@
 ---
-title: "CCRTAllocator 클래스 | Microsoft Docs"
-ms.custom: 
+title: CCRTAllocator 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CCRTAllocator
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CCRTAllocator class
 ms.assetid: 3e1b8cb0-859a-41ab-8e93-6f0b5ceca49d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84c8f800e0b68e23fe33ca0a7e1c1d977bcc344e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f92ae3f4041b143a8cc4d58b1060c7d5b9a7bb4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccrtallocator-class"></a>CCRTAllocator 클래스
 이 클래스는 CRT 메모리 루틴을 사용 하 여 메모리를 관리 하기 위한 메서드를 제공 합니다.  
@@ -56,7 +51,7 @@ class ATL::CCRTAllocator
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcore.h  
   
-##  <a name="allocate"></a>Ccrtallocator:: Allocate  
+##  <a name="allocate"></a>  Ccrtallocator:: Allocate  
  메모리를 할당하려면 이 정적 함수를 호출합니다.  
   
 ```
@@ -73,7 +68,7 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 ### <a name="remarks"></a>설명  
  메모리를 할당합니다. 참조 [malloc](../../c-runtime-library/reference/malloc.md) 내용을 확인 합니다.  
   
-##  <a name="free"></a>Ccrtallocator:: Free  
+##  <a name="free"></a>  Ccrtallocator:: Free  
  메모리를 해제 하려면이 정적 함수를 호출 합니다.  
   
 ```
@@ -87,7 +82,7 @@ static void Free(void* p) throw();
 ### <a name="remarks"></a>설명  
  할당된 된 메모리를 해제합니다. 참조 [무료](../../c-runtime-library/reference/free.md) 내용을 확인 합니다.  
   
-##  <a name="reallocate"></a>Ccrtallocator:: Allocate  
+##  <a name="reallocate"></a>  Ccrtallocator:: Allocate  
  메모리를 다시 할당하려면 이 정적 함수를 호출합니다.  
   
 ```

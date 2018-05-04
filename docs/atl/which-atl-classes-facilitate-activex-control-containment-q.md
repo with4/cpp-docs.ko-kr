@@ -1,30 +1,25 @@
 ---
-title: "ATL 클래스에 ActiveX 컨트롤 포함 용이? | Microsoft 문서"
-ms.custom: 
+title: ATL 클래스에 ActiveX 컨트롤 포함 용이? | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - hosting controls using ATL
 - ActiveX control containers [C++], ATL control hosting
 ms.assetid: 803a4605-7f4c-4139-8638-49d8783d31b0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 880c7bd52476614a4356690aff2fda286e9f3aef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f024e9929e916e15b110bfc32bc704c4aef755a9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="which-atl-classes-facilitate-activex-control-containment"></a>ATL 클래스에 ActiveX 컨트롤 포함 용이?
 ATL의 컨트롤 호스팅 코드 모든 ATL 클래스;를 사용 하도록 요구 하지 않습니다. 간단히 만들 수 있습니다는 **"AtlAxWin80"** 창 및 필요한 경우 컨트롤 호스팅 API 사용 하 여 (자세한 내용은 참조 **ATL 컨트롤 호스팅 API를 이란**합니다. 그러나 다음 클래스의 포함 기능 사용 하기 쉽도록 합니다.  

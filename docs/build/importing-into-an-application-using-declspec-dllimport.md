@@ -1,13 +1,10 @@
 ---
-title: "__Declspec (dllimport)을 사용 하 여 응용 프로그램으로 가져오는 | Microsoft Docs"
-ms.custom: 
+title: __Declspec (dllimport)을 사용 하 여 응용 프로그램으로 가져오는 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - __declspec
 - dllimport
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - importing DLLs [C++], __declspec(dllimport)
 ms.assetid: edb4da4e-f83a-44cf-a668-9239d49dbe42
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9766c6088e3f99711b936b10db0443da49b52c6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82974ec688fbe688c98188c2e99a54462da81165
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="importing-into-an-application-using-declspecdllimport"></a>__declspec(dllimport)을 사용하여 응용 프로그램으로 가져오기
 DLL에 정의 된 공용 기호를 사용 하는 프로그램을 가져올 라고 합니다. Dll을 사용 하 여, 작성 하는 응용 프로그램 사용에 대 한 헤더 파일을 만들 때 **__declspec (dllimport)** 공용 기호 선언에 있습니다. 키워드 **__declspec (dllimport)** .def 파일 또는 내보내기 든 작동는 **__declspec (dllexport)** 키워드입니다.  
@@ -43,7 +38,7 @@ DllImport void func();
   
  사용 하 여 **__declspec (dllimport)** 함수 선언에서은 되지만 컴파일러가이 키워드를 사용 하는 경우 보다 효율적인 코드를 생성 합니다. 하지만 사용 해야 **__declspec (dllimport)** DLL의 공용 데이터 기호 및 개체에 액세스 되는 가져오기 파일에 대 한 합니다. Note 사용자 개체의 DLL 가져오기 라이브러리에 링크 해야 합니다.  
   
- DLL과 클라이언트 응용 프로그램에 동일한 헤더 파일을 사용할 수 있습니다. 이 수행 하려면 해당 DLL을 빌드 또는 클라이언트 응용 프로그램은 있는지를 나타내는 특수 전처리기 기호를 사용 합니다. 예:  
+ DLL과 클라이언트 응용 프로그램에 동일한 헤더 파일을 사용할 수 있습니다. 이 수행 하려면 해당 DLL을 빌드 또는 클라이언트 응용 프로그램은 있는지를 나타내는 특수 전처리기 기호를 사용 합니다. 예를 들어:  
   
 ```  
 #ifdef _EXPORTING  

@@ -1,12 +1,9 @@
 ---
-title: "CAutoPtr 클래스 | Microsoft Docs"
-ms.custom: 
+title: CAutoPtr 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAutoPtr
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CAutoPtr class
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b8ded7bbf4dbe4e4f2ada7054cebab996934316
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: edf1baff50541dd5f16c27205f300558558d6f92
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cautoptr-class"></a>CAutoPtr 클래스
 이 클래스는 스마트 포인터 개체를 나타냅니다.  
@@ -86,7 +81,7 @@ class CAutoPtr
   
  또한 `CAutoPtr`의 복사 생성자와 소유권을 이전 할당 연산자는 포인터의 대상 포인터에 소스 파일에 대 한 포인터를 복사 및 NULL로 원본 포인터를 설정 합니다. 따라서 두 개의 수 없으면 `CAutoPtr` 같은 포인터를 저장 하는 각 개체 및이 두 번 같은 포인터를 삭제할 경우의 가능성을 줄여 줍니다.  
   
- `CAutoPtr`한 포인터 컬렉션의 생성을 단순화합니다. 컬렉션 클래스를 파생 소멸자를 재정의 하는 대신 더 간단 하 게의 컬렉션을 만드는 `CAutoPtr` 개체입니다. 컬렉션 삭제 되 면는 `CAutoPtr` 개체는 범위에서 벗어나게 하 고 자동으로 자체를 삭제 합니다.  
+ `CAutoPtr` 한 포인터 컬렉션의 생성을 단순화합니다. 컬렉션 클래스를 파생 소멸자를 재정의 하는 대신 더 간단 하 게의 컬렉션을 만드는 `CAutoPtr` 개체입니다. 컬렉션 삭제 되 면는 `CAutoPtr` 개체는 범위에서 벗어나게 하 고 자동으로 자체를 삭제 합니다.  
   
  [CHeapPtr](../../atl/reference/cheapptr-class.md) 에서 동일한 방식으로 작동 하는 변형 `CAutoPtr`할당 하 고 c + + 대신 다른 힙 함수를 사용 하 여 메모리를 확보 있는 점을 제외 하 고, **새** 및 **삭제** 연산자입니다. [CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md) 비슷합니다 `CAutoPtr`, 유일한 차이점은 사용 하는 것 **벡터 new** 및 **벡터 delete** 할당 하 고 메모리를 해제 합니다.  
   
@@ -95,10 +90,10 @@ class CAutoPtr
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities#74](../../atl/codesnippet/cpp/cautoptr-class_1.cpp)]  
   
-##  <a name="attach"></a>CAutoPtr::Attach  
+##  <a name="attach"></a>  CAutoPtr::Attach  
  기존 포인터의 소유권을 갖도록이 메서드를 호출 합니다.  
   
 ```
@@ -114,10 +109,10 @@ void Attach(T* p) throw();
   
  디버그 빌드에서 경우 어설션 오류가 발생 합니다는 [CAutoPtr::m_p](#m_p) 데이터 멤버는 현재 기존 값을 가리킵니다; NULL과 같음는 즉, 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예제를 참조는 [CAutoPtr 개요](../../atl/reference/cautoptr-class.md)합니다.  
   
-##  <a name="cautoptr"></a>CAutoPtr::CAutoPtr  
+##  <a name="cautoptr"></a>  CAutoPtr::CAutoPtr  
  생성자입니다.  
   
 ```
@@ -141,10 +136,10 @@ CAutoPtr(CAutoPtr<T>& p) throw();
 ### <a name="remarks"></a>설명  
  `CAutoPtr` 경우 포인터의 소유권을 전송 하기, 기존 포인터를 사용 하 여 개체를 만들 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예제를 참조는 [CAutoPtr 개요](../../atl/reference/cautoptr-class.md)합니다.  
   
-##  <a name="dtor"></a>CAutoPtr:: ~ CAutoPtr  
+##  <a name="dtor"></a>  CAutoPtr:: ~ CAutoPtr  
  소멸자입니다.  
   
 ```
@@ -154,7 +149,7 @@ CAutoPtr(CAutoPtr<T>& p) throw();
 ### <a name="remarks"></a>설명  
  할당 된 모든 리소스를 해제합니다. 호출 [CAutoPtr::Free](#free)합니다.  
   
-##  <a name="detach"></a>CAutoPtr::Detach  
+##  <a name="detach"></a>  CAutoPtr::Detach  
  포인터의 소유권을 해제 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -167,10 +162,10 @@ T* Detach() throw();
 ### <a name="remarks"></a>설명  
  포인터의 소유권을 해제, 설정 된 [CAutoPtr::m_p](#m_p) 데이터 멤버 변수를 NULL 포인터의 복사본을 반환 합니다. 호출한 후 **분리**, 것은 해제 하는 프로그래머까지 리소스가 할당 하는 `CAutoPtr` 개체 수 이전에 독자를 대상으로 reponsibility 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예제를 참조는 [CAutoPtr 개요](../../atl/reference/cautoptr-class.md)합니다.  
   
-##  <a name="free"></a>CAutoPtr::Free  
+##  <a name="free"></a>  CAutoPtr::Free  
  가 가리키는 개체를 삭제 하려면이 메서드를 호출 하는 `CAutoPtr`합니다.  
   
 ```
@@ -180,7 +175,7 @@ void Free() throw();
 ### <a name="remarks"></a>설명  
  가 가리키는 개체는 `CAutoPtr` 해제 되 면 및 [CAutoPtr::m_p](#m_p) 데이터 멤버 변수를 NULL로 설정 합니다.  
   
-##  <a name="m_p"></a>CAutoPtr::m_p  
+##  <a name="m_p"></a>  CAutoPtr::m_p  
  포인터 데이터 멤버 변수입니다.  
   
 ```
@@ -190,7 +185,7 @@ T* m_p;
 ### <a name="remarks"></a>설명  
  이 멤버 변수는 포인터 정보를 보유합니다.  
   
-##  <a name="operator_eq"></a>CAutoPtr::operator =  
+##  <a name="operator_eq"></a>  CAutoPtr::operator =  
  대입 연산자입니다.  
   
 ```
@@ -209,15 +204,15 @@ CAutoPtr<T>& operator= (CAutoPtr<TSrc>& p);
  클래스 유형입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 참조를 반환 합니다.는 **CAutoPtr\< T >**합니다.  
+ 에 대 한 참조를 반환 합니다.는 **CAutoPtr\< T >** 합니다.  
   
 ### <a name="remarks"></a>설명  
  대입 연산자 분리는 `CAutoPtr` 개체에서 모든 현재 포인터 새 포인터를 연결 합니다. `p`, 그 자리에 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예제를 참조는 [CAutoPtr 개요](../../atl/reference/cautoptr-class.md)합니다.  
   
-##  <a name="operator_ptr"></a>CAutoPtr::operator-&gt;  
+##  <a name="operator_ptr"></a>  CAutoPtr::operator-&gt;  
  멤버 포인터 연산자입니다.  
   
 ```
@@ -230,10 +225,10 @@ T* operator->() const throw();
 ### <a name="remarks"></a>설명  
  이 연산자를 사용 하 여가 가리키는 클래스에서 메서드를 호출 하는 `CAutoPtr` 개체입니다. 디버그 빌드에서 경우 어설션 오류가 발생 합니다는 `CAutoPtr` NULL를 가리킵니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예제를 참조는 [CAutoPtr 개요](../../atl/reference/cautoptr-class.md)합니다.  
   
-##  <a name="operator_t_star"></a>CAutoPtr::operator T *  
+##  <a name="operator_t_star"></a>  CAutoPtr::operator T *  
  캐스트 연산자입니다.  
   
 ```  
@@ -243,7 +238,7 @@ operator T* () const throw();
 ### <a name="return-value"></a>반환 값  
  클래스 템플릿에 정의 된 개체 데이터 형식에 대 한 포인터를 반환 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예제를 참조는 [CAutoPtr 개요](../../atl/reference/cautoptr-class.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

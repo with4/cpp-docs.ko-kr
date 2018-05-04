@@ -2,11 +2,8 @@
 title: fopen, _wfopen | Microsoft 문서
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wfopen
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-caps.latest.revision: 56
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb44d99d635891561c4b73d87e737ea594b0b05f
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 3b606f168448f833a8e244ad35e52faf4f0afd75
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
@@ -153,7 +148,7 @@ FILE *_wfopen(
 
 텍스트 모드에서 CTRL + Z는 입력에서 EOF 문자로 해석 됩니다. 사용 하 여 읽기/쓰기를 위해 연 파일에서 **"a +"**, **fopen** 파일의 끝에 CTRL + Z가 있는지 확인 하 고 가능한 경우이 제거 합니다. 사용 하 여 때문에 이렇게 [fseek](fseek-fseeki64.md) 및 **ftell** CTRL + Z로 끝나는 않을 파일 내에서 이동할 수 [fseek](fseek-fseeki64.md) 파일의 끝 부분에서 제대로 동작 합니다.
 
-텍스트 모드에서 캐리지 리턴-줄 바꿈 조합은 입력 시 단일 줄 바꿈으로 변환 되 고 줄 바꿈 문자는 출력에서 캐리지 리턴-줄 바꿈 조합으로 변환 합니다. 유니코드 스트림 I/O 함수가 텍스트 모드에서 작동할 경우(기본값) 소스 또는 대상 스트림은 멀티바이트 문자 시퀀스로 간주됩니다. 따라서 유니코드 스트림 입력 함수는 와이드 문자를 멀티 바이트 문자를 변환 (것으로 간주에 대 한 호출에서 **mbtowc** 함수). 와이드 문자 멀티 바이트 문자를 유니코드 스트림 출력 함수 같은 이유로 변환 (것으로 간주에 대 한 호출에서 **wctomb** 함수).
+텍스트 모드에서 캐리지 리턴-줄 바꿈 조합은 입력 시 단일 줄 바꿈으로 변환 되 고 줄 바꿈 문자는 출력에서 캐리지 리턴-줄 바꿈 조합으로 변환 합니다. 유니코드 스트림 I/O 함수가 텍스트 모드에서 작동할 경우(기본값) 소스 또는 대상 스트림은 멀티바이트 문자 시퀀스로 간주됩니다. 따라서 유니코드 스트림 입력 함수는 **mbtowc** 함수 호출과 마찬가지로 멀티바이트 문자를 와이드 문자로 변환합니다. 동일한 이유로 유니코드 스트림 출력 함수는 **wctomb** 함수 호출과 마찬가지로 와이드 문자를 멀티바이트 문자로 변환합니다.
 
 경우 **t** 또는 **b** 제공 되지 않습니다 *모드*, 기본 변환 모드는 전역 변수에 의해 정의 됩니다 [_fmode](../../c-runtime-library/fmode.md)합니다. 경우 **t** 또는 **b** 맨 앞에 인수, 함수 실패 및 반환 **NULL**합니다.
 

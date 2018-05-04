@@ -1,11 +1,10 @@
 ---
-title: "컴파일러 및 링커에서의 유니코드 지원 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 및 링커에서의 유니코드 지원 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/15/2017
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.UseUnicodeResponseFiles
 - VC.Project.VCLibrarianTool.UseUnicodeResponseFiles
@@ -17,14 +16,13 @@ helpviewer_keywords:
 - Unicode, Visual C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe775a53914089648a868a94aa2c863ee87790c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec0b84cd62f3fcca378ab55de16006925e685b37
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>컴파일러 및 링커에서의 유니코드 지원
 
@@ -58,6 +56,6 @@ ms.lasthandoff: 12/21/2017
 
 .asm 및.cod 덤프 MASM 호환을 위해 기본적으로 ansi에서 됩니다. 사용 하 여 [/FAu](../../build/reference/fa-fa-listing-file.md) u t F-8을 출력 합니다. 지정 하는 경우 유의 **/FAs**, 소스가 직접 인쇄 됩니다 및 보일 수 있습니다, 예를 들어 소스 코드는 u t F-8을 지정 하지 않은 경우 **/FAsu**합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [명령줄에서 C/C++ 코드 빌드](../../build/building-on-the-command-line.md)

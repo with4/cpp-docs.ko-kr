@@ -1,12 +1,9 @@
 ---
-title: "IServiceProviderImpl 클래스 | Microsoft Docs"
-ms.custom: 
+title: IServiceProviderImpl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IServiceProviderImpl
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - IServiceProviderImpl class
 - IServiceProvider interface, ATL implementation
 ms.assetid: 251254d3-c4ce-40d7-aee0-3d676d1d72f2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4946a88e6bf6767de0e3965670f94b91d1ddaf90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1b1472fe5d952e93b45240128383db9fdec5b093
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl 클래스
 이 클래스의 기본 구현을 제공는 `IServiceProvider` 인터페이스입니다.  
@@ -57,7 +52,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
   
  **IServiceProviderImpl** 한 가지 방법은 지정: [QueryService](#queryservice), 되 또는 지정된 된 서비스에 액세스 하 고이 서비스에 대 한 지정된 된 인터페이스에 인터페이스 포인터를 반환 합니다.  
   
- `IServiceProviderImpl`로 시작 하는 서비스 맵을 사용 하 여 [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) 끝나는 [END_SERVICE_MAP](service-map-macros.md#end_service_map)합니다.  
+ `IServiceProviderImpl` 로 시작 하는 서비스 맵을 사용 하 여 [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) 끝나는 [END_SERVICE_MAP](service-map-macros.md#end_service_map)합니다.  
   
  두 항목을 포함 하는 서비스 맵의: [SERVICE_ENTRY](service-map-macros.md#service_entry), 개체에서 지 원하는 지정 된 서비스 id (SID)를 나타내는 및 [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), 되는 호출 `QueryService` 다른 체인으로 연결 개체입니다.  
   
@@ -69,7 +64,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="queryservice"></a>IServiceProviderImpl::QueryService  
+##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService  
  만듭니다 또는 지정 된 서비스에 액세스 하 고 서비스에 대 한 지정된 된 인터페이스에 대 한 인터페이스 포인터를 반환 합니다.  
   
 ```
@@ -80,13 +75,13 @@ STDMETHOD(QueryService)(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [IN]`guidService`  
+ [IN] `guidService`  
  서비스 식별자 (SID)에 대 한 포인터입니다.  
   
- [IN]`riid`  
+ [IN] `riid`  
  호출자를 액세스 하는 인터페이스의 식별자입니다.  
   
- [OUT]`ppvObj`  
+ [OUT] `ppvObj`  
  요청된 된 인터페이스에 대 한 간접 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -101,7 +96,7 @@ STDMETHOD(QueryService)(
 |E_NOINTERFACE|요청된 된 인터페이스가이 서비스의 일부가 아니거나 서비스를 알 수 없습니다.|  
   
 ### <a name="remarks"></a>설명  
- `QueryService`지정된 된 서비스에서 요청된 된 인터페이스에 대 한 간접 포인터를 반환합니다. 호출자에 게는 더 이상 필요한 경우이 포인터를 해제 하는 일을 담당 합니다.  
+ `QueryService` 지정된 된 서비스에서 요청된 된 인터페이스에 대 한 간접 포인터를 반환합니다. 호출자에 게는 더 이상 필요한 경우이 포인터를 해제 하는 일을 담당 합니다.  
   
  호출 하는 경우 `QueryService`, 서비스 식별자를 전달 하면 ( `guidService`) 및 인터페이스 식별자 ( `riid`). `guidService` 액세스, 서비스 지정 및 `riid` 서비스의 일부인 인터페이스를 식별 합니다. 인터페이스에 대 한 간접 포인터, 나타납니다.  
   

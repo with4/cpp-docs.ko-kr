@@ -1,12 +1,9 @@
 ---
-title: "CRTThreadTraits 클래스 | Microsoft Docs"
-ms.custom: 
+title: CRTThreadTraits 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CRTThreadTraits
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - threading [ATL], creation functions
 - threading [ATL], CRT threads
 ms.assetid: eb6e20b0-c2aa-4170-8e34-aaeeacc86343
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6fbe71ff23db8dba431b9d46d71fc6c924fbc5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f08f0d6ea57aa5a153d190b357785911e64d6f09
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crtthreadtraits-class"></a>CRTThreadTraits 클래스
 이 클래스는 CRT 스레드에 대 한 만들기 함수를 제공 합니다. 스레드 CRT 함수를 사용 하는 경우에이 클래스를 사용 합니다.  
@@ -65,7 +60,7 @@ class CRTThreadTraits
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="createthread"></a>CRTThreadTraits::CreateThread  
+##  <a name="createthread"></a>  CRTThreadTraits::CreateThread  
  CRT 함수를 사용할 수 있는 스레드를 만드는 데이 함수를 호출 합니다.  
   
 ```

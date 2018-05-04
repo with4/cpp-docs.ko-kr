@@ -1,12 +1,9 @@
 ---
-title: "CComObject 클래스 | Microsoft Docs"
-ms.custom: 
+title: CComObject 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComObject
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27da00e09ca88cc06b8bafed8f8601dac756fd34
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: af84d64d326ed7746b76db39ef26181ab96ca88d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomobject-class"></a>CComObject 클래스
 이 클래스는 구현 **IUnknown** 집계 되지 않은 원시 개체에 대 한 합니다.  
@@ -116,7 +111,7 @@ CComObject();
 
   
 ##  <a name="createinstance"></a>  CComObject::CreateInstance  
- 이 정적 함수를 사용 하면 새 **CComObject <** `Base`  **>**  개체는 오버 헤드 없이 [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)합니다.  
+ 이 정적 함수를 사용 하면 새 **CComObject <** `Base` **>** 개체는 오버 헤드 없이 [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)합니다.  
   
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
@@ -124,7 +119,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
 ### <a name="parameters"></a>매개 변수  
  `pp`  
- [out] 에 대 한 포인터는 **CComObject <** `Base`  **>**  포인터입니다. 경우 `CreateInstance` 실패 `pp` 로 설정 된 **NULL**합니다.  
+ [out] 에 대 한 포인터는 **CComObject <** `Base` **>** 포인터입니다. 경우 `CreateInstance` 실패 `pp` 로 설정 된 **NULL**합니다.  
   
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  

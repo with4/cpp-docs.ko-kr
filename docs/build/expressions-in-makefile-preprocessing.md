@@ -1,13 +1,10 @@
 ---
-title: "메이크파일 전처리 식 | Microsoft Docs"
-ms.custom: 
+title: 메이크파일 전처리 식 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - expressions [C++], makefile preprocessing
 - makefiles, preprocessing
 ms.assetid: 37f0f413-97e0-452c-a83f-3c9002c44c92
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bea4f0c4fea2c2d04681674734bc989424c7951
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 04a53e5e6fe45c2c846cae3fb9e973fe1c712107
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>메이크파일 전처리 식
 **! IF** 또는 **! ELSE IF** `constantexpression` 10 진수 또는 C 언어 표기법으로 정수 상수, 문자열 상수 또는 명령으로 구성 됩니다. 그룹 식에 괄호를 사용 합니다. 식을 사용 하 여 C 스타일 부호 있는 정수 (long) 산술; 숫자는 32 비트 2의 보수 형식 범위-2147483648에서 2147483647입니다.  

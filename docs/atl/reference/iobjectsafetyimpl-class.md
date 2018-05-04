@@ -2,11 +2,8 @@
 title: IObjectSafetyImpl 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IObjectSafetyImpl
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - IObjectSafety, ATL implementation
 - IObjectSafetyImpl class
 ms.assetid: 64e32082-d910-4a8a-a5bf-ebed9145359d
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa7813b694cfea614bc80946d91c8f1bd977e627
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 592a23286ad6592bc0ce6faab999cb362aac42f1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iobjectsafetyimpl-class"></a>IObjectSafetyImpl 클래스
 이 클래스의 기본 구현을 제공는 `IObjectSafety` 클라이언트가 검색 한 개체의 보안 수준을 설정 하는 인터페이스입니다.  
@@ -88,7 +83,7 @@ class IObjectSafetyImpl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlctl.h  
   
-##  <a name="getinterfacesafetyoptions"></a>IObjectSafetyImpl::GetInterfaceSafetyOptions  
+##  <a name="getinterfacesafetyoptions"></a>  IObjectSafetyImpl::GetInterfaceSafetyOptions  
  현재 개체에 대해 설정 안전 옵션 뿐만 아니라 개체에서 지 원하는 보안 옵션을 검색 합니다.  
   
 ```
@@ -106,14 +101,14 @@ HRESULT GetInterfaceSafetyOptions(
   
  참조 [IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) in the Windows SDK입니다.  
   
-##  <a name="m_dwcurrentsafety"></a>IObjectSafetyImpl::m_dwCurrentSafety  
+##  <a name="m_dwcurrentsafety"></a>  IObjectSafetyImpl::m_dwCurrentSafety  
  개체의 현재 보안 수준을 저장합니다.  
   
 ```
 DWORD m_dwCurrentSafety;
 ```  
   
-##  <a name="setinterfacesafetyoptions"></a>IObjectSafetyImpl::SetInterfaceSafetyOptions  
+##  <a name="setinterfacesafetyoptions"></a>  IObjectSafetyImpl::SetInterfaceSafetyOptions  
  개체에 초기화 또는 설정 하 여 스크립트에 대 한 안전 하 게는 [m_dwCurrentSafety](#m_dwcurrentsafety) 적절 한 값으로 멤버입니다.  
   
 ```

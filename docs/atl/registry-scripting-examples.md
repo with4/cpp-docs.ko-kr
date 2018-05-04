@@ -1,13 +1,10 @@
 ---
-title: "레지스트리 스크립트 예제 | Microsoft Docs"
-ms.custom: 
+title: 레지스트리 스크립트 예제 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: b6df80e1-e08b-40ee-9243-9b381b172460
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b2a5dfd3bd31674917a5b41174277ef787aff25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c192e8bec1d32dd7d7a7953e5da72a139c7520e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="registry-scripting-examples"></a>레지스트리 스크립팅 예제
 이 항목의 스크립팅 예제에는 시스템 레지스트리에 키를 추가, 등록자 COM 서버를 등록 합니다. 여러 구문 분석 트리를 지정 하는 방법을 보여 줍니다.  
@@ -59,7 +54,7 @@ HKCU
   
  스크립트에 하위 키를 추가 하 고 이제 `HasASubkey`을 `MyVeryOwnKey`입니다. 이 하위 키를 추가 둘 다는 `PrettyCool` 하위 키 (기본값 `DWORD` 55의 값) 및 `ANameValue` 명명 된 값 (의 문자열 값을 가진 `WithANamedValue`).  
   
-##  <a name="_atl_register_the_registrar_com_server"></a>등록 기관 COM 서버를 등록 합니다.  
+##  <a name="_atl_register_the_registrar_com_server"></a> 등록 기관 COM 서버를 등록 합니다.  
  다음 스크립트는 등록자 COM 서버 자체를 등록합니다.  
   
 ```  
@@ -102,7 +97,7 @@ HKCR
   
 -   추가 `ATL Registrar Class` 에 대 한 기본 문자열 값으로 `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`합니다.  
   
- 구문 분석 트리를 두 개의 새 하위 키를 지금 추가 `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`합니다. 첫 번째 키 `ProgID`, ProgID는 기본 문자열 값을 가져옵니다. 두 번째 키 `InprocServer32`, 기본 문자열 값을 가져옵니다 `%MODULE%`, 즉 섹션에 설명 된 전처리기 값 [를 사용 하 여 대체 가능 매개 변수 (The 등록자 전처리기)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md),이 문서의. `InprocServer32`또한 명명된 된 값을 가져옵니다 `ThreadingModel`의 문자열 값을 가진 `Apartment`합니다.  
+ 구문 분석 트리를 두 개의 새 하위 키를 지금 추가 `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`합니다. 첫 번째 키 `ProgID`, ProgID는 기본 문자열 값을 가져옵니다. 두 번째 키 `InprocServer32`, 기본 문자열 값을 가져옵니다 `%MODULE%`, 즉 섹션에 설명 된 전처리기 값 [를 사용 하 여 대체 가능 매개 변수 (The 등록자 전처리기)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md),이 문서의. `InprocServer32` 또한 명명된 된 값을 가져옵니다 `ThreadingModel`의 문자열 값을 가진 `Apartment`합니다.  
   
 ## <a name="specify-multiple-parse-trees"></a>여러 구문 분석 트리를 지정 합니다.  
  스크립트에서 둘 이상의 구문 분석 트리를 지정 하려면 다른의 끝에 트리를 배치 합니다. 다음 스크립트는 키를 추가 하는 예를 들어 `MyVeryOwnKey`, 둘 다에 대해 구문 분석 트리를 `HKEY_CLASSES_ROOT` 및 `HKEY_CURRENT_USER`:  

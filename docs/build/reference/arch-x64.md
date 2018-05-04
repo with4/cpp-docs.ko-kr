@@ -1,27 +1,22 @@
 ---
 title: -arch (x64) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: ecda22bf-5bed-43f4-99fb-88aedd83d9d8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27a453601988c22ed03ae9cb267480d88d6a1cc0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 848d229d6cf8df7d08494d0c300e082c6dc7d0a9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arch-x64"></a>/arch(x64)
 x64에서 코드 생성 아키텍처를 지정합니다. 또한 참조 [(x86) /arch](../../build/reference/arch-x86.md) 및 [/arch (ARM)](../../build/reference/arch-arm.md)합니다.  
@@ -52,7 +47,7 @@ x64에서 코드 생성 아키텍처를 지정합니다. 또한 참조 [(x86) /a
   
 3.  선택 된 **코드 생성** 속성 페이지.  
   
-4.  에 **고급 명령 집합 사용** 드롭 다운 상자 **Advanced Vector Extensions (/ /arch: AVX)** 또는 **고급 벡터 확장 2 (/ /arch: AVX2)**합니다.  
+4.  에 **고급 명령 집합 사용** 드롭 다운 상자 **Advanced Vector Extensions (/ /arch: AVX)** 또는 **고급 벡터 확장 2 (/ /arch: AVX2)** 합니다.  
   
 ### <a name="to-set-this-compiler-option-programmatically"></a>프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면  
   

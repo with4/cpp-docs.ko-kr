@@ -1,27 +1,22 @@
 ---
-title: "웹 페이지 (ATL 자습서, 7 부)에 컨트롤 배치 | Microsoft Docs"
-ms.custom: 
+title: 웹 페이지 (ATL 자습서, 7 부)에 컨트롤 배치 | Microsoft Docs
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 50dc4c95-c95b-4006-b88a-9826f7bdb222
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 523086c70d9f974c014f5d33a71bf9309b8e017d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0cd4076ac34af6ee4b19687f401376265bf0e872
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>웹 페이지에 컨트롤 배치(ATL 자습서, 7부)
 컨트롤이 완성 되었습니다. 실제 상황에서 작동 하 여 컨트롤을 보려면 웹 페이지에 추가 합니다. 컨트롤을 정의할 때 컨트롤을 포함 하는 HTML 파일을 만들었습니다. PolyCtl.htm 파일 열기 **솔루션 탐색기**, 웹 페이지에 컨트롤을 볼 수 있습니다.  

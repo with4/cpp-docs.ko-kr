@@ -1,12 +1,9 @@
 ---
-title: "용으로 CWinTraits 클래스 | Microsoft Docs"
-ms.custom: 
+title: 용으로 CWinTraits 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWinTraits
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - CFrameWinTraits class
 - CControlWinTraits class
 ms.assetid: f78f486e-6d9c-42c6-8e86-371e05aa7e59
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c5e71f969f86aee419a0ff9d3701f4d43be5c32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea1eafc6376c44a09d13fb513d41f222048708d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cwintraits-class"></a>용으로 CWinTraits 클래스
 이 클래스는 window 개체를 만들 때 사용 되는 스타일을 표준화 하기 위한 메서드를 제공 합니다.  
@@ -83,7 +78,7 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
   
-##  <a name="getwndstyle"></a>CWinTraits::GetWndStyle  
+##  <a name="getwndstyle"></a>  CWinTraits::GetWndStyle  
  표준 스타일을 검색 하려면이 함수 호출의 `CWinTraits` 개체입니다.  
   
 ```
@@ -97,7 +92,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 ### <a name="return-value"></a>반환 값  
  개체의 표준 창 스타일입니다.  
   
-##  <a name="getwndexstyle"></a>CWinTraits::GetWndExStyle  
+##  <a name="getwndexstyle"></a>  CWinTraits::GetWndExStyle  
  확장된 스타일을 검색 하려면이 함수 호출의 `CWinTraits` 개체입니다.  
   
 ```

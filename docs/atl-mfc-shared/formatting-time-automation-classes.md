@@ -1,12 +1,9 @@
 ---
-title: "서식 지정 시간: 자동화 클래스 | Microsoft Docs"
-ms.custom: 
+title: '서식 지정 시간: 자동화 클래스 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - time [C++], formatting
 - formatting [C++], time
 ms.assetid: 155c5bef-b555-4bed-9545-29afc49715f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2000f3ec059c98150fbb82c71f0d810bdae53d06
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 710faeef504e9d2963837f721200c51386540d64
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="formatting-time-automation-classes"></a>서식 지정 시간: 자동화 클래스
 #### <a name="to-format-a-time"></a>한 번의 서식을 지정 하려면  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
  자세한 내용은 클래스를 참조 하십시오. [COleVariant](../mfc/reference/colevariant-class.md)합니다.  
   
-### <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+### <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [일반적인 날짜 및 시간 프로그래밍 MFC의](../atl-mfc-shared/date-and-time.md)  
   

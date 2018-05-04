@@ -2,11 +2,8 @@
 title: CSnapInItemImpl 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSnapInItemImpl
@@ -36,17 +33,15 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1355173bafcf026a7f1bfba771a7769b202c92c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 759917497f06f80cde97f4e1bba9f3711add94a8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl 클래스
 이 클래스에 스냅인 노드 개체를 구현 하기 위한 메서드를 제공 합니다.  
@@ -103,7 +98,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 |[CSnapInItemImpl::m_scopeDataItem](#m_scopedataitem)|Windows **SCOPEDATAITEM** 에서 사용 하는 구조는 `CSnapInItemImpl` 개체입니다.|  
   
 ## <a name="remarks"></a>설명  
- `CSnapInItemImpl`메뉴 항목 및 도구 모음을 추가 하 고 적절 한 처리기 함수에 스냅인 노드에 대 한 명령을 전달 등의 한 스냅인 노드 개체에 대 한 기본 구현을 제공 합니다. 이 기능은 여러 가지 다른 인터페이스를 사용 하 여 구현 됩니다 있으며 형식을 매핑합니다. 파생된 클래스의 올바른 인스턴스를 확인 하 고 다음 올바른 인스턴스로 메시지를 전달 하 여 노드 개체를 전송 하는 알림을 처리 하는 기본 구현 합니다.  
+ `CSnapInItemImpl` 메뉴 항목 및 도구 모음을 추가 하 고 적절 한 처리기 함수에 스냅인 노드에 대 한 명령을 전달 등의 한 스냅인 노드 개체에 대 한 기본 구현을 제공 합니다. 이 기능은 여러 가지 다른 인터페이스를 사용 하 여 구현 됩니다 있으며 형식을 매핑합니다. 파생된 클래스의 올바른 인스턴스를 확인 하 고 다음 올바른 인스턴스로 메시지를 전달 하 여 노드 개체를 전송 하는 알림을 처리 하는 기본 구현 합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `CSnapInItem`  
@@ -113,7 +108,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsnap.h  
   
-##  <a name="addmenuitems"></a>CSnapInItemImpl::AddMenuItems  
+##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems  
  이 메서드는 Win32 함수를 구현 [IExtendContextMenu::AddMenuItems](http://msdn.microsoft.com/library/aa814841)합니다.  
   
 ```
@@ -149,7 +144,7 @@ AddMenuItems(
   
 - **CCT_UNINITIALIZED** 데이터 개체 유형이 잘못 되었습니다.  
   
-##  <a name="command"></a>CSnapInItemImpl::Command  
+##  <a name="command"></a>  CSnapInItemImpl::Command  
  이 메서드는 Win32 함수를 구현 [IExtendContextMenu::Command](http://msdn.microsoft.com/library/aa814842)합니다.  
   
 ```
@@ -171,7 +166,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
   
 - **CCT_UNINITIALIZED** 데이터 개체 유형이 잘못 되었습니다.  
   
-##  <a name="createpropertypages"></a>CSnapInItemImpl::CreatePropertyPages  
+##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages  
  이 메서드는 Win32 함수를 구현 [IExtendPropertySheet::CreatePropertyPages](http://msdn.microsoft.com/library/aa814846)합니다.  
   
 ```
@@ -186,7 +181,7 @@ CreatePropertyPages(
  *lpProvider*  
  [in] 에 대 한 포인터는 **IPropertySheetCallback** 인터페이스입니다.  
   
- *핸들*  
+ *handle*  
  [in] 사용 되는 핸들을 지정 하 여 경로로 **MMCN_PROPERTY_CHANGE** 알림 메시지를 적절 한 데이터 클래스.  
   
  *pUnk*  
@@ -203,14 +198,14 @@ CreatePropertyPages(
   
 - **CCT_UNINITIALIZED** 데이터 개체 유형이 잘못 되었습니다.  
   
-##  <a name="csnapinitemimpl"></a>CSnapInItemImpl::CSnapInItemImpl  
+##  <a name="csnapinitemimpl"></a>  CSnapInItemImpl::CSnapInItemImpl  
  `CSnapInItemImpl` 개체를 생성합니다.  
   
 ```
 CSnapInItemImpl();
 ```  
   
-##  <a name="filldata"></a>CSnapInItemImpl::FillData  
+##  <a name="filldata"></a>  CSnapInItemImpl::FillData  
  이 함수는 항목에 대 한 정보를 검색 하 라고 합니다.  
   
 ```
@@ -227,7 +222,7 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
 ### <a name="remarks"></a>설명  
  이 함수를 올바르게 구현 하려면 올바른 정보를 스트림으로 복사 ( `pStream`)에 설정 된 클립보드 형식에 따라 `cf`합니다.  
   
-##  <a name="getresultviewtype"></a>CSnapInItemImpl::GetResultViewType  
+##  <a name="getresultviewtype"></a>  CSnapInItemImpl::GetResultViewType  
  스냅인 개체의 결과 창에 대 한 보기의 유형을 검색 하려면이 함수를 호출 합니다.  
   
 ```
@@ -247,7 +242,7 @@ GetResultViewType(
   
 - **MMC_VIEW_OPTIONS_NONE** = 0 허용 하는 기본 보기 옵션입니다.  
   
-##  <a name="getscopepaneinfo"></a>CSnapInItemImpl::GetScopePaneInfo  
+##  <a name="getscopepaneinfo"></a>  CSnapInItemImpl::GetScopePaneInfo  
  검색 하려면이 함수 호출의 **SCOPEDATAITEM** 스냅인의 구조입니다.  
   
 ```
@@ -258,7 +253,7 @@ GetScopePaneInfo (SCOPEDATAITEM* pScopeDataItem);
  *pScopeDataItem*  
  [out] 에 대 한 포인터는 **SCOPEDATAITEM** 의 구조는 `CSnapInItemImpl` 개체입니다.  
   
-##  <a name="getresultpaneinfo"></a>CSnapInItemImpl::GetResultPaneInfo  
+##  <a name="getresultpaneinfo"></a>  CSnapInItemImpl::GetResultPaneInfo  
  검색 하려면이 함수 호출의 **RESULTDATAITEM** 스냅인의 구조입니다.  
   
 ```
@@ -269,28 +264,28 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
  *pResultDataItem*  
  [out] 에 대 한 포인터는 **RESULTDATAITEM** 의 구조는 `CSnapInItemImpl` 개체입니다.  
   
-##  <a name="m_bstrdisplayname"></a>CSnapInItemImpl::m_bstrDisplayName  
+##  <a name="m_bstrdisplayname"></a>  CSnapInItemImpl::m_bstrDisplayName  
  노드 항목에 대해 표시 되는 문자열을 포함 합니다.  
   
 ```
 CComBSTR m_bstrDisplayName;
 ```  
   
-##  <a name="m_scopedataitem"></a>CSnapInItemImpl::m_scopeDataItem  
+##  <a name="m_scopedataitem"></a>  CSnapInItemImpl::m_scopeDataItem  
  `SCOPEDATAITEM` 스냅인 데이터 개체의 구조가 있습니다.  
   
 ```
 SCOPEDATAITEM m_scopeDataItem;
 ```  
   
-##  <a name="m_resultdataitem"></a>CSnapInItemImpl::m_resultDataItem  
+##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem  
  [RESULTDATAITEM](http://msdn.microsoft.com/library/aa815165) 스냅인 데이터 개체의 구조입니다.  
   
 ```
 RESULTDATAITEM m_resultDataItem;
 ```  
   
-##  <a name="notify"></a>CSnapInItemImpl::Notify  
+##  <a name="notify"></a>  CSnapInItemImpl::Notify  
  스냅인 개체는 사용자가 대상이 되는 경우 호출 됩니다.  
   
 ```
@@ -358,14 +353,14 @@ STDMETHOD(Notify)(
   
 - **CCT_UNINITIALIZED** 데이터 개체 유형이 잘못 되었습니다.  
   
-##  <a name="querypagesfor"></a>CSnapInItemImpl::QueryPagesFor  
+##  <a name="querypagesfor"></a>  CSnapInItemImpl::QueryPagesFor  
  스냅인에서 노드 속성 페이지에서 지원 하는지 확인 하기 위해 호출 합니다.  
   
 ```
 QueryPagesFor(DATA_OBJECT_TYPES type);
 ```  
   
-##  <a name="setmenuinsertionflags"></a>CSnapInItemImpl::SetMenuInsertionFlags  
+##  <a name="setmenuinsertionflags"></a>  CSnapInItemImpl::SetMenuInsertionFlags  
  로 지정 된 메뉴 삽입 플래그를 수정 하려면이 함수를 호출 `pInsertionAllowed`, 스냅인 개체에 대 한 합니다.  
   
 ```
@@ -394,7 +389,7 @@ void SetMenuInsertionFlags(
   
  비트를 설정 하려고 해서는 안 `pInsertionAllowed` 원래 선택을 취소 하는 합니다. 이후 버전의 MMC 현재 현재 정의 되어 있지 않은 비트를 변경 하지 않아야 하므로 정의 된 비트를 사용할 수 있습니다.  
   
-##  <a name="settoolbarbuttoninfo"></a>CSnapInItemImpl::SetToolbarButtonInfo  
+##  <a name="settoolbarbuttoninfo"></a>  CSnapInItemImpl::SetToolbarButtonInfo  
  도구 모음을 만들기 전에 스냅인 개체의 모든 도구 모음 단추 스타일을 수정 하려면이 함수를 호출 합니다.  
   
 ```
@@ -411,32 +406,32 @@ void SetToolbarButtonInfo(
  `fsState`  
  [in] 단추의 상태 플래그입니다. 다음 중 하나 이상을 하나일 수 있습니다.  
   
-- `TBSTATE_CHECKED`단추에는 **TBSTYLE_CHECKED** 눌렀는지 및 스타일 지정 합니다.  
+- `TBSTATE_CHECKED` 단추에는 **TBSTYLE_CHECKED** 눌렀는지 및 스타일 지정 합니다.  
   
-- `TBSTATE_ENABLED`단추는 사용자 입력을 허용합니다. 이 상태를 갖지 않는 단추 사용자 입력을 받아들이지 않는 흐리게 표시 됩니다.  
+- `TBSTATE_ENABLED` 단추는 사용자 입력을 허용합니다. 이 상태를 갖지 않는 단추 사용자 입력을 받아들이지 않는 흐리게 표시 됩니다.  
   
-- `TBSTATE_HIDDEN`단추가 표시 되지 않으며 사용자 입력을 받을 수 없습니다.  
+- `TBSTATE_HIDDEN` 단추가 표시 되지 않으며 사용자 입력을 받을 수 없습니다.  
   
-- `TBSTATE_INDETERMINATE`단추가 흐리게 표시 됩니다.  
+- `TBSTATE_INDETERMINATE` 단추가 흐리게 표시 됩니다.  
   
-- `TBSTATE_PRESSED`추가 되 고 합니다.  
+- `TBSTATE_PRESSED` 추가 되 고 합니다.  
   
-- `TBSTATE_WRAP`줄 바꿈을 단추는 다음과 같습니다. 단추 있어야는 `TBSTATE_ENABLED`합니다.  
+- `TBSTATE_WRAP` 줄 바꿈을 단추는 다음과 같습니다. 단추 있어야는 `TBSTATE_ENABLED`합니다.  
   
  *fsType*  
  [in] 단추의 상태 플래그입니다. 다음 중 하나 이상을 하나일 수 있습니다.  
   
-- `TBSTYLE_BUTTON`표준 누름 단추를 만듭니다.  
+- `TBSTYLE_BUTTON` 표준 누름 단추를 만듭니다.  
   
-- `TBSTYLE_CHECK`단추 누름 또는 not 누른 상태로 될 때마다 사용자가을 설정/해제를 만듭니다. 단추는 눌린 상태로 될 때 다른 배경색을 합니다.  
+- `TBSTYLE_CHECK` 단추 누름 또는 not 누른 상태로 될 때마다 사용자가을 설정/해제를 만듭니다. 단추는 눌린 상태로 될 때 다른 배경색을 합니다.  
   
-- `TBSTYLE_CHECKGROUP`그룹의 다른 단추를 누를 때까지 누른 상태로 유지 되는 확인 단추를 만듭니다.  
+- `TBSTYLE_CHECKGROUP` 그룹의 다른 단추를 누를 때까지 누른 상태로 유지 되는 확인 단추를 만듭니다.  
   
-- `TBSTYLE_GROUP`그룹의 다른 단추를 누를 때까지 누른 상태로 유지 되는 단추를 만듭니다.  
+- `TBSTYLE_GROUP` 그룹의 다른 단추를 누를 때까지 누른 상태로 유지 되는 단추를 만듭니다.  
   
-- `TBSTYLE_SEP`단추 그룹 간에 작은 간격을 제공 하는 구분 기호를 만듭니다. 이 스타일 있는 단추는 사용자 입력을 받지 않습니다.  
+- `TBSTYLE_SEP` 단추 그룹 간에 작은 간격을 제공 하는 구분 기호를 만듭니다. 이 스타일 있는 단추는 사용자 입력을 받지 않습니다.  
   
-##  <a name="updatemenustate"></a>CSnapInItemImpl::UpdateMenuState  
+##  <a name="updatemenustate"></a>  CSnapInItemImpl::UpdateMenuState  
  스냅인 개체의 상황에 맞는 메뉴에 삽입 하기 전에 메뉴 항목을 수정 하려면이 함수를 호출 합니다.  
   
 ```
@@ -466,7 +461,7 @@ void UpdateMenuState(
   
 - **MF_DISABLED** 되므로 선택할 수 없습니다. 그러나이 플래그는 회색 하지 않는 메뉴 항목을 사용 하지 않도록 설정 합니다.  
   
-- `MF_ENABLED`선택할 수 있습니다, 회색된 상태에서 복원 되므로 메뉴 항목을 사용할 수 있습니다.  
+- `MF_ENABLED` 선택할 수 있습니다, 회색된 상태에서 복원 되므로 메뉴 항목을 사용할 수 있습니다.  
   
 - **MF_GRAYED** 선택할 수 없도록 표시 메뉴 항목을 사용 하지 않도록 설정 합니다.  
   
@@ -484,7 +479,7 @@ void UpdateMenuState(
   
 - **MF_CHECKED** 및 **MF_UNCHECKED**합니다.  
   
-##  <a name="updatetoolbarbutton"></a>CSnapInItemImpl::UpdateToolbarButton  
+##  <a name="updatetoolbarbutton"></a>  CSnapInItemImpl::UpdateToolbarButton  
  스냅인 개체의 도구 모음 단추를 표시 하기 전에 수정 하려면이 함수를 호출 합니다.  
   
 ```

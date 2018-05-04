@@ -1,13 +1,10 @@
 ---
-title: "가져오기 및 내보내기 인라인 함수 | Microsoft Docs"
-ms.custom: 
+title: 가져오기 및 내보내기 인라인 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - functions [C++], importing
 - functions [C++], exporting
 ms.assetid: 89f488f8-b078-40fe-afd7-80bd7840057b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6f8d159a1537cdfee02d45805632ba9ad4afa7e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b666d450766a5a285f02517d92d5eb4dc3f29c68
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="importing-and-exporting-inline-functions"></a>인라인 함수 가져오기 및 내보내기
 가져온된 함수를 인라인으로 정의할 수 있습니다. 효과 거의 표준 함수 인라인;와 동일 함수 호출에는 인라인 코드로 매크로 매우 유사 하 게 확장 됩니다. C + +를 지 원하는 효율성에 대 한 함수 일부 멤버를 인라인 할 수 있는 DLL의 클래스 주로 유용 합니다.  

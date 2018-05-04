@@ -1,12 +1,9 @@
 ---
-title: "ATL COM + 1.0 구성 요소 마법사 | Microsoft Docs"
-ms.custom: 
+title: ATL COM + 1.0 구성 요소 마법사 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.mts.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL projects, adding components
 - ATL COM+ 1.0 Component Wizard
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c82cf91c61f047a80c513d1aead25fe73c77715
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19151ca659f7bc3235f84eefb39b640c4856fa43
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-com-10-component-wizard"></a>ATL COM+ 1.0 구성 요소 마법사
 이 마법사를 사용 하 여 트랜잭션을 포함 하 여 COM + 1.0 서비스를 지 원하는 프로젝트에 개체를 추가 합니다.  
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="com"></a>COM  
  개체에 대 한 COM 기능에 대 한 정보를 제공합니다.  
   
- **Coclass**  
+ **coclass**  
  개체에서 지 원하는 인터페이스의 목록을 포함 하는 구성 요소 클래스의 이름을 설정 합니다.  
   
 > [!NOTE]

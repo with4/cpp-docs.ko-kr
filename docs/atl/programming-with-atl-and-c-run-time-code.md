@@ -1,13 +1,10 @@
 ---
-title: "ATL 및 C 런타임 코드를 사용한 프로그래밍 | Microsoft Docs"
-ms.custom: 
+title: ATL 및 C 런타임 코드를 사용한 프로그래밍 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - _ATL_MIN_CRT macro
 - ATL, C Run-Time library (CRT)
 ms.assetid: 20f03b66-1eb7-4add-84a2-6047db0911eb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c14b52ef062b2a60815f47adfb2b8d39e6aa31f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c44b62410b7098d1d672ac859285c7d06b27ab77
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>ATL 및 C 런타임 코드를 사용한 프로그래밍
 이 섹션에서는 C 런타임 라이브러리 (CRT)를 사용 하 여 정적 또는 동적 링크의 경우의 이점을 설명 합니다.  

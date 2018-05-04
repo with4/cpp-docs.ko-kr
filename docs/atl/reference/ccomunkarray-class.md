@@ -1,12 +1,9 @@
 ---
-title: "CComUnkArray 클래스 | Microsoft Docs"
-ms.custom: 
+title: CComUnkArray 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComUnkArray
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - connection points [C++], managing
 - CComUnkArray class
 ms.assetid: 5fd4b378-a7b5-4cc1-8866-8ab72a73639e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ca462648a43869b11984e4582c8eb2c3dfaece7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0de49180052a6fdb7bde32274e032ea1dd9bfb87
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomunkarray-class"></a>CComUnkArray 클래스
 이 클래스는 저장 **IUnknown** 포인터에 대 한 매개 변수로 사용할 수 있도록 설계 되 고는 [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) 템플릿 클래스입니다.  
@@ -77,12 +72,12 @@ class CComUnkArray
  참조 [개체에 추가 연결 지점을](../../atl/adding-connection-points-to-an-object.md) 연결 만들기를 자동화에 대 한 내용은 프록시를 가리킵니다.  
   
 > [!NOTE]
-> **참고** 클래스 [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md) 에서 사용 되는 **클래스 추가** 연결점에 컨트롤을 만들 때 마법사. 연결 지점의 수를 수동으로 지정 하려는 경우 해당 참조 변경 **CComDynamicUnkArray** 를 `CComUnkArray<`  *n*  `>`여기서  *n*  필요한 연결 지점의 수입니다.  
+> **참고** 클래스 [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md) 에서 사용 되는 **클래스 추가** 연결점에 컨트롤을 만들 때 마법사. 연결 지점의 수를 수동으로 지정 하려는 경우 해당 참조 변경 **CComDynamicUnkArray** 를 `CComUnkArray<` *n* `>`여기서 *n*필요한 연결 지점의 수입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="add"></a>CComUnkArray::Add  
+##  <a name="add"></a>  CComUnkArray::Add  
  이 메서드를 호출 추가 **IUnknown** 배열에 대 한 포인터입니다.  
   
 ```
@@ -96,7 +91,7 @@ DWORD Add(IUnknown* pUnk);
 ### <a name="return-value"></a>반환 값  
  배열의 새 포인터를 포함할 수 없는 경우 새로 추가 된 포인터 또는 0와 연관 된 쿠키를 반환 합니다.  
   
-##  <a name="begin"></a>CComUnkArray::begin  
+##  <a name="begin"></a>  CComUnkArray::begin  
  컬렉션의 시작 부분에 대 한 포인터를 반환 **IUnknown** 인터페이스 포인터입니다.  
   
 ```
@@ -112,7 +107,7 @@ IUnknown**
   
  사용 하기 전에 **IUnknown** 인터페이스를 확인 해야 아닌지 **NULL**합니다.  
   
-##  <a name="ccomunkarray"></a>CComUnkArray::CComUnkArray  
+##  <a name="ccomunkarray"></a>  CComUnkArray::CComUnkArray  
  생성자입니다.  
   
 ```
@@ -122,7 +117,7 @@ CComUnkArray();
 ### <a name="remarks"></a>설명  
  보관할 컬렉션 설정 `nMaxSize` **IUnknown** 포인터에 대 한 포인터를 초기화 하 고 **NULL**합니다.  
   
-##  <a name="end"></a>CComUnkArray::end  
+##  <a name="end"></a>  CComUnkArray::end  
  마지막 지난 다음 요소에 대 한 포인터를 반환 **IUnknown** 컬렉션에 대 한 포인터입니다.  
   
 ```
@@ -138,7 +133,7 @@ IUnknown**
   
  [!code-cpp[NVC_ATL_COM#44](../../atl/codesnippet/cpp/ccomunkarray-class_1.cpp)]  
   
-##  <a name="getcookie"></a>CComUnkArray::GetCookie  
+##  <a name="getcookie"></a>  CComUnkArray::GetCookie  
  와 연관 된 쿠키를 가져오려면이 메서드를 호출 하는 지정 된 **IUnknown** 포인터입니다.  
   
 ```
@@ -155,7 +150,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 ### <a name="remarks"></a>설명  
  동일한 인스턴스가 여러 개 있는지 **IUnknown** 포인터인 경우이 함수에 대 한 첫 번째 쿠키를 반환 합니다.  
   
-##  <a name="getunknown"></a>CComUnkArray::GetUnknown  
+##  <a name="getunknown"></a>  CComUnkArray::GetUnknown  
  가져오려면이 메서드를 호출 하는 **IUnknown** 지정된 쿠키와 관련 된 포인터입니다.  
   
 ```
@@ -169,7 +164,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ### <a name="return-value"></a>반환 값  
  반환 된 **IUnknown** 포인터 또는 일치 하는 쿠키가 없는 경우 NULL입니다.  
   
-##  <a name="remove"></a>CComUnkArray::Remove  
+##  <a name="remove"></a>  CComUnkArray::Remove  
  제거 하려면이 메서드를 호출 하는 **IUnknown** 배열에서 포인터입니다.  
   
 ```

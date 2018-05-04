@@ -2,11 +2,8 @@
 title: CWinTraitsOR 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWinTraitsOR
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CWinTraitsOR class
 - window styles, default values for ATL
 ms.assetid: 1eb7b1e8-a9bd-411b-a30a-35a8a10af989
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac6cf07fcd6d3703ffb6b483ba19a2d12520cb0a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3df5081d8584d821737350176740b6fd067ac78f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cwintraitsor-class"></a>CWinTraitsOR 클래스
 이 클래스는 window 개체를 만들 때 사용 되는 스타일을 표준화 하기 위한 메서드를 제공 합니다.  
@@ -72,7 +67,7 @@ class CWinTraitsOR
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
   
-##  <a name="getwndstyle"></a>CWinTraitsOR::GetWndStyle  
+##  <a name="getwndstyle"></a>  CWinTraitsOR::GetWndStyle  
  표준 스타일의 조합 (논리적 OR 연산자 사용)를 검색 하려면이 함수 호출의 `CWinTraits` 개체와 지정 된 기본 스타일 `t_dwStyle`합니다.  
   
 ```
@@ -86,7 +81,7 @@ static DWORD GetWndStyle(DWORD dwStyle);
 ### <a name="return-value"></a>반환 값  
  에 전달 되는 스타일의 조합을 `dwStyle` 및 것으로 지정 된 기본 `t_dwStyle`, 논리적 OR 연산자를 사용 합니다.  
   
-##  <a name="getwndexstyle"></a>CWinTraitsOR::GetWndExStyle  
+##  <a name="getwndexstyle"></a>  CWinTraitsOR::GetWndExStyle  
  호출의 확장된 스타일의 조합 (논리적 OR 연산자 사용)를 검색 하려면이 함수는 `CWinTraits` 개체와 지정 된 기본 스타일 `t_dwStyle`합니다.  
   
 ```

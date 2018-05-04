@@ -2,12 +2,9 @@
 title: IDispEventSimpleImpl (ATL)를 사용 하 여 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - IDispEventSimpleImpl
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - IDispEventSimpleImpl class, using
 ms.assetid: 8640ad1a-4bd0-40a5-b5e4-7322685d7aab
-caps.latest.revision: 12
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed21c862d61686e86efd684a6e88795e4b7bbe51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0cdef5012288b7f5f17040f73dfac5ec1f90d4f0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-idispeventsimpleimpl"></a>IDispEventSimpleImpl를 사용 하 여
 사용 하는 경우 `IDispEventSimpleImpl` 이벤트를 처리 하려면 해야 합니다.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 -   싱 및 이벤트 소스가 unadvise 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 처리 하는 방법을 보여 줍니다.는 **DocumentChange** 이벤트가 Word의 **응용 프로그램** 개체입니다. 이 이벤트가 메서드로 정의 된는 **ApplicationEvents** dispinterface 합니다.  
   
  이 예제에서는 [ATLEventHandling 샘플](../visual-cpp-samples.md)합니다.  

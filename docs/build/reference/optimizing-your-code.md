@@ -2,12 +2,9 @@
 title: 코드 최적화 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,14 +16,13 @@ helpviewer_keywords:
 - performance, compiler
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4306f825b9925dbdcdc994d287a2c4287ea7bfc2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a8b18ba4ce00eb751d8f30debbab3e87b9cce53e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimizing-your-code"></a>코드 최적화
 
@@ -99,6 +95,6 @@ Rvalue 참조의 구현을 지원 *의미 체계 이동*합니다. 경우 의미
 
 - [로드 시 클라이언트 응용 프로그램의 성능을 향상 시키려면 어떤 최적화 기술을 사용 해야 합니까?](../../build/dll-frequently-asked-questions.md#mfc_optimization)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [C/C++ 빌드 참조](../../build/reference/c-cpp-building-reference.md)  

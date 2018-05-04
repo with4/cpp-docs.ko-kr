@@ -2,11 +2,8 @@
 title: _mbsnbcpy_s, _mbsnbcpy_s_l | Microsoft 문서
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsnbcpy_s_l
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-caps.latest.revision: 29
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5dfb0d070fbe5e229b38aca4ece47696fcfce24
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: a9475609d304b6a3e49c2f71073c4d06c0380160
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mbsnbcpys-mbsnbcpysl"></a>_mbsnbcpy_s, _mbsnbcpy_s_l
 
@@ -116,7 +111,7 @@ errno_t _mbsnbcpy_s_l(
 
 **_mbsnbcpy_s** 복사본 함수 *count* 바이트 *strSource* 를 *strDest*합니다. 경우 *count* 의 크기를 초과 *strDest*중 하나, 입력된 문자열의 null 포인터는 또는 *sizeInBytes* 또는 *count* 은 0으로, 함수 에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 합니다. 계속 하려면 실행 허용 된 경우, 함수 반환 **EINVAL**합니다. 소스 문자열과 대상 문자열이 겹치는 경우의 동작 **_mbsnbcpy_s** 정의 되지 않습니다.
 
-출력 값은의 설정에 영향을 **LC_CTYPE** 로캘 범주 설정; 참조 [setlocale](setlocale-wsetlocale.md) 자세한 정보에 대 한 합니다. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따른 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
 > [!NOTE]
 > 이 함수는 안전 하지 않은 버전과 달리 **_mbsnbcpy_s** null 채움의 수행 하지 않으며 항상 null 문자열을 종료 합니다.

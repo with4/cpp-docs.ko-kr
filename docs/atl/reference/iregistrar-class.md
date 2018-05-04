@@ -1,12 +1,9 @@
 ---
-title: "IRegistrar 인터페이스 | Microsoft Docs"
-ms.custom: 
+title: IRegistrar 인터페이스 | Microsoft Docs
+ms.custom: ''
 ms.date: 2/1/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IRegistrar
@@ -26,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c0b304b00b5cc5c613ff7e81818d1c637989e5f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 89d1e9269536ee28f2c8dd29819ff594c89c186b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iregistrar-interface"></a>IRegistrar 인터페이스
 이 인터페이스 atliface.h에 정의 되어 있으며 내부적으로 사용 됩니다 CAtlModule 멤버 함수에 의해 같은 [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced)합니다.   
@@ -66,7 +62,7 @@ typedef interface IRegistrar IRegistrar;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlifase.h  
   
-##  <a name="resourceregistersz"></a>IRegistrar::ResourceRegisterSz 
+##  <a name="resourceregistersz"></a>  IRegistrar::ResourceRegisterSz 
  리소스를 등록합니다.  
   
 ```
@@ -78,7 +74,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegisterSz(
   
  
   
-##  <a name="resourceunregistersz"></a>IRegistrar::ResourceUnregisterSz  
+##  <a name="resourceunregistersz"></a>  IRegistrar::ResourceUnregisterSz  
  리소스를 등록 취소합니다.
   
 ```
@@ -89,7 +85,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceUnregisterSz(
 ```  
   
   
-##  <a name="fileregister"></a>IRegistrar::FileRegister  
+##  <a name="fileregister"></a>  IRegistrar::FileRegister  
 파일을 등록 합니다.
   
 ```
@@ -98,7 +94,7 @@ virtual HRESULT STDMETHODCALLTYPE FileRegister(
 ```  
   
   
-##  <a name="fileunregister"></a>IRegistrar::FileUnregister  
+##  <a name="fileunregister"></a>  IRegistrar::FileUnregister  
 파일의 등록을 취소 합니다.
 
 ```
@@ -107,14 +103,14 @@ virtual HRESULT STDMETHODCALLTYPE FileUnregister(
 ```  
   
  
-##  <a name="stringregister"></a>IRegistrar::StringRegister  
+##  <a name="stringregister"></a>  IRegistrar::StringRegister  
   지정 된 문자열 데이터를 등록합니다.
 ```
 virtual HRESULT STDMETHODCALLTYPE StringRegister( 
     /* [in] */ _In_z_ LPCOLESTR data) = 0;
 ```  
   
-##  <a name="stringunregister"></a>IRegistrar::StringUnregister
+##  <a name="stringunregister"></a>  IRegistrar::StringUnregister
  지정 된 문자열 데이터를 등록 취소합니다.  
   
 ```
@@ -123,7 +119,7 @@ virtualHRESULT STDMETHODCALLTYPE StringUnregister(
 ```  
 
   
-##  <a name="resourceregister"></a>IRegistrar::ResourceRegister  
+##  <a name="resourceregister"></a>  IRegistrar::ResourceRegister  
  리소스를 등록합니다.  
   
 ```
@@ -134,7 +130,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegister(
 ```  
    
   
-##  <a name="resourceunregister"></a>IRegistrar::ResourceUnregister  
+##  <a name="resourceunregister"></a>  IRegistrar::ResourceUnregister  
  리소스를 등록 취소합니다.  
   
 ```

@@ -2,11 +2,8 @@
 title: CAtlTransactionManager 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlTransactionManager
@@ -34,17 +31,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-caps.latest.revision: 25
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0def8aa809cd1ccc115ccc2a09b1ae752316098f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 02ab9cd6f8867f9e6bc9d81ff825e8fe8f7b57d7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager 클래스
 CAtlTransactionManager 클래스 관리자 KTM (Kernel Transaction) 함수에 대 한 래퍼를 제공합니다.  
@@ -90,9 +85,9 @@ class CAtlTransactionManager;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
-|[m_bFallback](#m_bfallback)|`TRUE`지원 되는 대체 하는 경우 `FALSE` 그렇지 않은 경우.|  
+|[m_bFallback](#m_bfallback)|`TRUE` 지원 되는 대체 하는 경우 `FALSE` 그렇지 않은 경우.|  
 |[m_hTransaction](#m_htransaction)|트랜잭션 핸들입니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -103,7 +98,7 @@ class CAtlTransactionManager;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atltransactionmanager.h  
   
-##  <a name="dtor"></a>~ CAtlTransactionManager  
+##  <a name="dtor"></a>  ~ CAtlTransactionManager  
  CAtlTransactionManager 소멸자입니다.  
   
 ```
@@ -113,7 +108,7 @@ virtual ~CAtlTransactionManager();
 ### <a name="remarks"></a>설명  
  정상적인 처리에는 트랜잭션은 자동으로 커밋 하 고 닫힙니다. 소멸자는 예외 해제 중 호출 되 면 트랜잭션이 롤백 되 고 닫힐 합니다.  
   
-##  <a name="catltransactionmanager"></a>CAtlTransactionManager  
+##  <a name="catltransactionmanager"></a>  CAtlTransactionManager  
  CAtlTransactionManager 생성자입니다.  
   
 ```
@@ -122,14 +117,14 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
   
 ### <a name="parameters"></a>매개 변수  
  `bFallback`  
- `TRUE`지원 대체 (fallback)를 나타냅니다. 트랜잭션 된 함수가 실패 한 경우 클래스는 자동으로 "트랜잭션 되지 않은" 함수를 호출 합니다. `FALSE`더 "대체" 호출을 나타냅니다.  
+ `TRUE` 지원 대체 (fallback)를 나타냅니다. 트랜잭션 된 함수가 실패 한 경우 클래스는 자동으로 "트랜잭션 되지 않은" 함수를 호출 합니다. `FALSE` 더 "대체" 호출을 나타냅니다.  
   
  `bAutoCreateTransaction`  
- `TRUE`트랜잭션 처리기 생성자에서 자동으로 만들어지는지 나타냅니다. `FALSE`하지 않음을 나타냅니다.  
+ `TRUE` 트랜잭션 처리기 생성자에서 자동으로 만들어지는지 나타냅니다. `FALSE` 하지 않음을 나타냅니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="close"></a>닫기  
+##  <a name="close"></a>  닫기  
  트랜잭션 핸들을 닫습니다.  
   
 ```
@@ -142,7 +137,7 @@ inline BOOL Close();
 ### <a name="remarks"></a>설명  
  호출 하는이 래퍼는 `CloseHandle` 함수입니다. 메서드는 소멸자에서 자동으로 호출 됩니다.  
   
-##  <a name="commit"></a>커밋  
+##  <a name="commit"></a>  커밋  
  트랜잭션을 커밋할 수 요청 수입니다.  
   
 ```
@@ -155,7 +150,7 @@ inline BOOL Commit();
 ### <a name="remarks"></a>설명  
  호출 하는이 래퍼는 `CommitTransaction` 함수입니다. 메서드는 소멸자에서 자동으로 호출 됩니다.  
   
-##  <a name="create"></a>만들기  
+##  <a name="create"></a>  만들기  
  트랜잭션 핸들을 만듭니다.  
   
 ```
@@ -168,7 +163,7 @@ inline BOOL Create();
 ### <a name="remarks"></a>설명  
  호출 하는이 래퍼는 `CreateTransaction` 함수입니다. 인지 확인  
   
-##  <a name="createfile"></a>CreateFile  
+##  <a name="createfile"></a>  CreateFile  
  만들거나 파일, 파일 스트림 또는 트랜잭션된 작업으로 디렉터리를 엽니다.  
   
 ```
@@ -210,7 +205,7 @@ inline HANDLE CreateFile(
 ### <a name="remarks"></a>설명  
  호출 하는이 래퍼는 `CreateFileTransacted` 함수입니다.  
   
-##  <a name="deletefile"></a>DeleteFile  
+##  <a name="deletefile"></a>  DeleteFile  
  트랜잭션된 작업으로 기존 파일을 삭제합니다.  
   
 ```
@@ -224,7 +219,7 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
 ### <a name="remarks"></a>설명  
  호출 하는이 래퍼는 `DeleteFileTransacted` 함수입니다.  
   
-##  <a name="findfirstfile"></a>FindFirstFile  
+##  <a name="findfirstfile"></a>  FindFirstFile  
  트랜잭션된 작업으로 파일이 나 하위 디렉터리에 대 한 디렉터리를 검색합니다.  
   
 ```
@@ -246,7 +241,7 @@ inline HANDLE FindFirstFile(
 ### <a name="remarks"></a>설명  
  호출 하는이 래퍼는 `FindFirstFileTransacted` 함수입니다.  
   
-##  <a name="getfileattributes"></a>GetFileAttributes  
+##  <a name="getfileattributes"></a>  GetFileAttributes  
  트랜잭션된 작업으로 지정 된 파일 또는 디렉터리에 대 한 파일 시스템 특성을 검색합니다.  
   
 ```
@@ -260,7 +255,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
 ### <a name="remarks"></a>설명  
  호출 하는이 래퍼는 `GetFileAttributesTransacted` 함수입니다.  
   
-##  <a name="getfileattributesex"></a>GetFileAttributesEx  
+##  <a name="getfileattributesex"></a>  GetFileAttributesEx  
  트랜잭션된 작업으로 지정 된 파일 또는 디렉터리에 대 한 파일 시스템 특성을 검색합니다.  
   
 ```
@@ -283,7 +278,7 @@ inline BOOL GetFileAttributesEx(
 ### <a name="remarks"></a>설명  
  호출 하는이 래퍼는 `GetFileAttributesTransacted` 함수입니다.  
   
-##  <a name="gethandle"></a>GetHandle  
+##  <a name="gethandle"></a>  GetHandle  
  트랜잭션 핸들을 반환합니다.  
   
 ```
@@ -295,7 +290,7 @@ HANDLE GetHandle() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="isfallback"></a>IsFallback  
+##  <a name="isfallback"></a>  IsFallback  
  대체 (fallback) 호출을 사용할지 여부를 결정 합니다.  
   
 ```
@@ -307,8 +302,8 @@ BOOL IsFallback() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="m_bfallback"></a>m_bFallback  
- `TRUE`지원 되는 대체 하는 경우 `FALSE` 그렇지 않은 경우.  
+##  <a name="m_bfallback"></a>  m_bFallback  
+ `TRUE` 지원 되는 대체 하는 경우 `FALSE` 그렇지 않은 경우.  
   
 ```
 BOOL m_bFallback;
@@ -316,7 +311,7 @@ BOOL m_bFallback;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="m_htransaction"></a>m_hTransaction  
+##  <a name="m_htransaction"></a>  m_hTransaction  
  트랜잭션 핸들입니다.  
   
 ```
@@ -325,7 +320,7 @@ HANDLE m_hTransaction;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="movefile"></a>MoveFile  
+##  <a name="movefile"></a>  MoveFile  
  기존 파일 또는 해당 자식 항목을 포함 하 여 트랜잭션된 작업으로 디렉터리를 이동 합니다.  
   
 ```
@@ -342,7 +337,7 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
 ### <a name="remarks"></a>설명  
  호출 하는이 래퍼는 `MoveFileTransacted` 함수입니다.  
   
-##  <a name="regcreatekeyex"></a>RegCreateKeyEx  
+##  <a name="regcreatekeyex"></a>  RegCreateKeyEx  
  지정된 된 레지스트리 키를 만들어지고 트랜잭션과 연결 됩니다. 키가 이미 있는 경우 함수를 엽니다.  
   
 ```
@@ -392,7 +387,7 @@ inline LSTATUS RegCreateKeyEx(
 ### <a name="remarks"></a>설명  
  호출 하는이 래퍼는 `RegCreateKeyTransacted` 함수입니다.  
   
-##  <a name="regdeletekey"></a>RegDeleteKey  
+##  <a name="regdeletekey"></a>  RegDeleteKey  
  트랜잭션된 작업으로는 레지스트리의 지정된 된 플랫폼 특정 보기에서 하위 키와 해당 값을 삭제합니다.  
   
 ```
@@ -412,7 +407,7 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 ### <a name="remarks"></a>설명  
  호출 하는이 래퍼는 `RegDeleteKeyTransacted` 함수입니다.  
   
-##  <a name="regopenkeyex"></a>RegOpenKeyEx  
+##  <a name="regopenkeyex"></a>  RegOpenKeyEx  
  지정된 된 레지스트리 키 열리고 트랜잭션과 연결 됩니다.  
   
 ```
@@ -446,7 +441,7 @@ inline LSTATUS RegOpenKeyEx(
 ### <a name="remarks"></a>설명  
  호출 하는이 래퍼는 `RegOpenKeyTransacted` 함수입니다.  
   
-##  <a name="rollback"></a>롤백  
+##  <a name="rollback"></a>  롤백  
  트랜잭션을 롤백할 수 있는 요청 수입니다.  
   
 ```
@@ -459,7 +454,7 @@ inline BOOL Rollback();
 ### <a name="remarks"></a>설명  
  호출 하는이 래퍼는 `RollbackTransaction` 함수입니다.  
   
-##  <a name="setfileattributes"></a>SetFileAttributes  
+##  <a name="setfileattributes"></a>  SetFileAttributes  
  트랜잭션된 작업으로 파일 또는 디렉터리에 대 한 특성을 설정합니다.  
   
 ```

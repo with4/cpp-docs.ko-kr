@@ -1,13 +1,10 @@
 ---
-title: "ATL DHTML 컨트롤 수정 | Microsoft Docs"
-ms.custom: 
+title: ATL DHTML 컨트롤 수정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - DHTML controls
 - DHTML controls, modifying
 ms.assetid: c053f35f-8629-4600-9595-721f5956777a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 571b7f4f52e3f6838822db39ba0bbf5148d57d1e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3810236aca4661a6cdcd8399294cdb73e97948fd
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>ATL DHTML 컨트롤 수정
 ATL 컨트롤 마법사에서 작성 하 고 해당 컨트롤의 실행 수 있도록 하 고 프로젝트 파일에는 메서드는 작성 하는 방법 및 DHTML 디스패치 메서드를 사용 하 여 컨트롤의 c + + 코드를 호출 하는 방법을 확인할 수 있도록 시작 코드를 제공 합니다. 인터페이스에 디스패치 메서드를 추가할 수 있습니다. 그런 다음 HTML 리소스의 메서드를 호출할 수 있습니다.  
@@ -62,7 +57,7 @@ ATL 컨트롤 마법사에서 작성 하 고 해당 컨트롤의 실행 수 있�
   
      HTML, 특히 외부 Windows 디스패치 메서드 호출을 검사 합니다. 프로젝트의를 호출 하는 HTML `OnClick` 메서드, 및 매개 변수는 컨트롤의 본문을 나타냅니다 (`theBody`) 색을 할당 하 고 ("`red`"). 메서드 호출 다음 텍스트는 단추에 표시 되는 레이블입니다.  
   
-2.  다른 항목 추가 `OnClick` 메서드를 변경 색입니다. 예:  
+2.  다른 항목 추가 `OnClick` 메서드를 변경 색입니다. 예를 들어:  
   
  ```  
  <br>  
@@ -72,7 +67,7 @@ ATL 컨트롤 마법사에서 작성 하 고 해당 컨트롤의 실행 수 있�
   
      이 메서드는 레이블이 붙은 단추 만들어집니다 **새로 고침**, 원래, 흰색 배경으로 컨트롤을 반환 하기 위해 클릭할 수는 있습니다.  
   
-3.  에 대 한 호출 추가 `HelloHTML` 만든 메서드. 예:  
+3.  에 대 한 호출 추가 `HelloHTML` 만든 메서드. 예를 들어:  
   
  ```  
  <br>  

@@ -1,30 +1,25 @@
 ---
-title: "auto 키워드 | Microsoft Docs"
-ms.custom: 
+title: auto 키워드 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 744a41c0-2510-4140-a1be-96257e722908
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48c21ec8304fa5c56bb29f07eea4bec169fbda83
-ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.openlocfilehash: 93b2f5e28dc0306a996b4c8bdb799122fe4646ab
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="auto-keyword"></a>auto 키워드
-`auto` 키워드는 선언 지정자입니다. 그러나 C++ 표준에는 이 키워드의 원래 의미와 수정된 의미가 정의되어 있습니다. Visual c + + 2010 이전는 `auto` 에 변수를 선언 하는 키워드는 *자동* 저장소 클래스, 즉 변수 지역 변수입니다. Visual c + + 2010부터는 `auto` 키워드로 선언 된 변수 선언에 초기화 식에서 해당 형식이 추론 됩니다. [/zc: auto &#91;-&#93;](../build/reference/zc-auto-deduce-variable-type.md) 컴파일러 옵션의 의미를 제어는 `auto` 키워드입니다.  
+`auto` 키워드는 선언 지정자입니다. 그러나 C++ 표준에는 이 키워드의 원래 의미와 수정된 의미가 정의되어 있습니다. Visual c + + 2010 이전는 `auto` 에 변수를 선언 하는 키워드는 *자동* 저장소 클래스, 즉 변수 지역 변수입니다. Visual c + + 2010부터는 `auto` 키워드로 선언 된 변수 선언에 초기화 식에서 해당 형식이 추론 됩니다. [/zc: auto&#91;-&#93; ](../build/reference/zc-auto-deduce-variable-type.md) 컴파일러 옵션의 의미를 제어는 `auto` 키워드입니다.  
   
 ## <a name="syntax"></a>구문  
   

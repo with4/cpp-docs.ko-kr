@@ -1,12 +1,9 @@
 ---
-title: "CContainedWindowT 클래스 | Microsoft Docs"
-ms.custom: 
+title: CContainedWindowT 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CContainedWindowT
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cf792fed2f7a5cac45826649224a565228f9d73
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f3f90e23eed3bd1eba80bbf90fe73de45eb7cfa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT 클래스
 이 클래스는 다른 개체에 포함 된 창을 구현 합니다.  
@@ -97,9 +92,9 @@ class CContainedWindowT : public TBase
 |[CContainedWindowT::m_pObject](#m_pobject)|포함 하는 개체를 가리킵니다.|  
   
 ## <a name="remarks"></a>설명  
- `CContainedWindowT`다른 개체에 포함 된 창을 구현 합니다. `CContainedWindowT`창 프로시저는 메시지를 적절 한 처리기에 직접 메시지를 포함 하는 개체에 매핑합니다. 생성할 때는 `CContainedWindowT` 개체를 사용 해야 하는 어떤 메시지 맵을 지정 합니다.  
+ `CContainedWindowT` 다른 개체에 포함 된 창을 구현 합니다. `CContainedWindowT`창 프로시저는 메시지를 적절 한 처리기에 직접 메시지를 포함 하는 개체에 매핑합니다. 생성할 때는 `CContainedWindowT` 개체를 사용 해야 하는 어떤 메시지 맵을 지정 합니다.  
   
- `CContainedWindowT`기존 창 클래스 슈퍼 클 래 싱 하 여 새 창을 만들 수 있습니다. **만들기** 메서드는 먼저 기존 클래스에 기반 하는 창 클래스 등록 `CContainedWindowT::WindowProc`합니다. **만들** 그런 다음이 새 창 클래스를 기반으로 창을 만듭니다. 각 인스턴스에 `CContainedWindowT` 슈퍼 클래스는 다양 한 창 클래스를 수 있습니다.  
+ `CContainedWindowT` 기존 창 클래스 슈퍼 클 래 싱 하 여 새 창을 만들 수 있습니다. **만들기** 메서드는 먼저 기존 클래스에 기반 하는 창 클래스 등록 `CContainedWindowT::WindowProc`합니다. **만들** 그런 다음이 새 창 클래스를 기반으로 창을 만듭니다. 각 인스턴스에 `CContainedWindowT` 슈퍼 클래스는 다양 한 창 클래스를 수 있습니다.  
   
  `CContainedWindowT`은 또한 창 서브클래싱도 지원합니다. `SubclassWindow` 메서드는 기존 창을 `CContainedWindowT` 개체에 연결하고 창 프로시저를 `CContainedWindowT::WindowProc`로 변경합니다. `CContainedWindowT`의 각 인스턴스는 다른 창을 서브클래싱할 수 있습니다.  
   
@@ -129,7 +124,7 @@ class CContainedWindowT : public TBase
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
   
-##  <a name="ccontainedwindowt"></a>CContainedWindowT::CContainedWindowT  
+##  <a name="ccontainedwindowt"></a>  CContainedWindowT::CContainedWindowT  
  이 생성자는 데이터 멤버를 초기화 합니다.  
   
 ```
@@ -167,7 +162,7 @@ CContainedWindowT(
   
  경우 기존 창 서브 통해 [SubclassWindow](#subclasswindow), `lpszClassName` 값 사용 되지 것입니다; 따라서 전달할 수 있습니다 **NULL** 이 매개 변수에 대 한 합니다.  
   
-##  <a name="create"></a>CContainedWindowT::Create  
+##  <a name="create"></a>  CContainedWindowT::Create  
  호출 [RegisterWndSuperclass](#registerwndsuperclass) 기존 클래스에 기반 하는 창 클래스 등록 [CContainedWindowT::WindowProc](#windowproc)합니다.  
   
 ```
@@ -247,7 +242,7 @@ HWND Create(
 > [!NOTE]
 >  0에 대 한 값으로 사용 되는 경우는 `MenuOrID` 매개 변수를 0U로 지정 해야 합니다 (기본값) 컴파일러 오류가 발생 하지 않도록 합니다.  
   
-##  <a name="defwindowproc"></a>CContainedWindowT::DefWindowProc  
+##  <a name="defwindowproc"></a>  CContainedWindowT::DefWindowProc  
  에 의해 호출 [WindowProc](#windowproc) 메시지를 처리 하는 메시지 맵에 의해 처리 되지 않습니다.  
   
 ```
@@ -274,7 +269,7 @@ LRESULT DefWindowProc(
 ### <a name="remarks"></a>설명  
  기본적으로 `DefWindowProc` 호출은 [CallWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633571) Win32 함수에 지정 된 창 프로시저에 메시지 정보를 보내거나 [m_pfnSuperWindowProc](#m_pfnsuperwindowproc)합니다.  
   
-##  <a name="getcurrentmessage"></a>CContainedWindowT::GetCurrentMessage  
+##  <a name="getcurrentmessage"></a>  CContainedWindowT::GetCurrentMessage  
  현재 메시지를 반환 합니다 ( **m_pCurrentMsg**).  
   
 ```
@@ -284,7 +279,7 @@ const _ATL_MSG* GetCurrentMessage();
 ### <a name="return-value"></a>반환 값  
  패키지에 현재 메시지는 `MSG` 구조입니다.  
   
-##  <a name="m_dwmsgmapid"></a>CContainedWindowT::m_dwMsgMapID  
+##  <a name="m_dwmsgmapid"></a>  CContainedWindowT::m_dwMsgMapID  
  포함 된 창에 대 한 현재 사용 중인 메시지 맵의 식별자를 포함 합니다.  
   
 ```
@@ -296,9 +291,9 @@ DWORD m_dwMsgMapID;
   
  기본 메시지 맵을 사용 하 여 선언 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map), 항상 0으로 식별 됩니다. 대체 메시지 맵을 사용 하 여 선언 [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map),으로 식별 되 `msgMapID`합니다.  
   
- `m_dwMsgMapID`생성자가 먼저 초기화 되 고 호출 하 여 변경할 수 있습니다 [SwitchMessageMap](#switchmessagemap)합니다. 예를 들어 참조는 [CContainedWindowT 개요](../../atl/reference/ccontainedwindowt-class.md)합니다.  
+ `m_dwMsgMapID` 생성자가 먼저 초기화 되 고 호출 하 여 변경할 수 있습니다 [SwitchMessageMap](#switchmessagemap)합니다. 예를 들어 참조는 [CContainedWindowT 개요](../../atl/reference/ccontainedwindowt-class.md)합니다.  
   
-##  <a name="m_lpszclassname"></a>CContainedWindowT::m_lpszClassName  
+##  <a name="m_lpszclassname"></a>  CContainedWindowT::m_lpszClassName  
  기존 창 클래스의 이름을 지정합니다.  
   
 ```
@@ -308,9 +303,9 @@ LPTSTR m_lpszClassName;
 ### <a name="remarks"></a>설명  
  창을 만들 때 [만들기](#create) 이 기존 클래스에 기반 하는 새 창 클래스 등록 [CContainedWindowT::WindowProc](#windowproc)합니다.  
   
- `m_lpszClassName`생성자에 의해 초기화 됩니다. 예를 들어 참조는 [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) 개요입니다.  
+ `m_lpszClassName` 생성자에 의해 초기화 됩니다. 예를 들어 참조는 [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) 개요입니다.  
   
-##  <a name="m_pfnsuperwindowproc"></a>CContainedWindowT::m_pfnSuperWindowProc  
+##  <a name="m_pfnsuperwindowproc"></a>  CContainedWindowT::m_pfnSuperWindowProc  
  포함된 된 창의 서브클래싱된 경우 `m_pfnSuperWindowProc` 창 클래스의 원본 창 프로시저를 가리킵니다.  
   
 ```
@@ -322,7 +317,7 @@ WNDPROC m_pfnSuperWindowProc;
   
  [DefWindowProc](#defwindowproc) 메서드 창 프로시저에 저장 된 메시지 정보는 전송 `m_pfnSuperWindowProc`합니다.  
   
-##  <a name="m_pobject"></a>CContainedWindowT::m_pObject  
+##  <a name="m_pobject"></a>  CContainedWindowT::m_pObject  
  포함 하는 개체를 가리키는 `CContainedWindowT` 개체입니다.  
   
 ```
@@ -332,9 +327,9 @@ CMessageMap* m_pObject;
 ### <a name="remarks"></a>설명  
  해당 클래스에서 파생 되어야이 컨테이너 [CMessageMap](../../atl/reference/cmessagemap-class.md), 포함 된 창에서 사용 하는 메시지 맵을 선언 합니다.  
   
- `m_pObject`생성자에 의해 초기화 됩니다. 예를 들어 참조는 [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) 개요입니다.  
+ `m_pObject` 생성자에 의해 초기화 됩니다. 예를 들어 참조는 [CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md) 개요입니다.  
   
-##  <a name="registerwndsuperclass"></a>CContainedWindowT::RegisterWndSuperclass  
+##  <a name="registerwndsuperclass"></a>  CContainedWindowT::RegisterWndSuperclass  
  에 의해 호출 [만들기](#create) 포함 된 창의 창 클래스를 등록 합니다.  
   
 ```
@@ -347,7 +342,7 @@ ATOM RegisterWndSuperClass();
 ### <a name="remarks"></a>설명  
  이 창 클래스는 기존 클래스를 기반으로 하지만 사용 하 여 [CContainedWindowT::WindowProc](#windowproc)합니다. 기존 창 클래스의 이름 및 창 프로시저에 저장 됩니다 [m_lpszClassName](#m_lpszclassname) 및 [m_pfnSuperWindowProc](#m_pfnsuperwindowproc)각각.  
   
-##  <a name="subclasswindow"></a>CContainedWindowT::SubclassWindow  
+##  <a name="subclasswindow"></a>  CContainedWindowT::SubclassWindow  
  로 식별 되는 창을 서브 클래스 `hWnd` 에 연결 된 `CContainedWindowT` 개체입니다.  
   
 ```
@@ -367,7 +362,7 @@ BOOL SubclassWindow(HWND hWnd);
 > [!NOTE]
 >  호출 하지 마십시오 `SubclassWindow` 이미 호출한 경우 [만들기](#create)합니다.  
   
-##  <a name="switchmessagemap"></a>CContainedWindowT::SwitchMessageMap  
+##  <a name="switchmessagemap"></a>  CContainedWindowT::SwitchMessageMap  
  포함된 된 창의 메시지를 처리할 수 있는 메시지 맵이 사용 되는 변경 됩니다.  
   
 ```
@@ -383,7 +378,7 @@ void SwitchMessageMap(DWORD dwMsgMapID);
   
  처음 생성자에 메시지 맵 식별자를 지정 합니다.  
   
-##  <a name="unsubclasswindow"></a>CContainedWindowT::UnsubclassWindow  
+##  <a name="unsubclasswindow"></a>  CContainedWindowT::UnsubclassWindow  
  서브클래싱된 창을 분리는 `CContainedWindowT` 개체에 저장 된 원래 창 프로시저를 복원 및 [m_pfnSuperWindowProc](#m_pfnsuperwindowproc)합니다.  
   
 ```
@@ -400,7 +395,7 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 ### <a name="remarks"></a>설명  
  창이 소멸 되기 전에 원본 창 프로시저를 복원 하려는 경우에이 방법을 사용 합니다. 그렇지 않으면 [WindowProc](#windowproc) 는 자동으로 이렇게 창이 소멸 될 때입니다.  
   
-##  <a name="windowproc"></a>CContainedWindowT::WindowProc  
+##  <a name="windowproc"></a>  CContainedWindowT::WindowProc  
  이 정적 메서드 창 프로시저를 구현합니다.  
   
 ```
@@ -428,7 +423,7 @@ static LRESULT CALLBACK WindowProc(
  메시지 처리의 결과입니다.  
   
 ### <a name="remarks"></a>설명  
- `WindowProc`메시지 맵에 식별 되는 메시지를 보냅니다 [m_dwMsgMapID](#m_dwmsgmapid)합니다. 필요한 경우 `WindowProc` 호출 [DefWindowProc](#defwindowproc) 추가 메시지 처리에 대 한 합니다.  
+ `WindowProc` 메시지 맵에 식별 되는 메시지를 보냅니다 [m_dwMsgMapID](#m_dwmsgmapid)합니다. 필요한 경우 `WindowProc` 호출 [DefWindowProc](#defwindowproc) 추가 메시지 처리에 대 한 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CWindow 클래스](../../atl/reference/cwindow-class.md)   

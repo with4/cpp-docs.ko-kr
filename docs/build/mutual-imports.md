@@ -1,13 +1,10 @@
 ---
-title: "상호 가져오기 | Microsoft Docs"
-ms.custom: 
+title: 상호 가져오기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfd31cd4e5776555137daf002c076e14d4031f89
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b43977f86be409698d8fbdba16fc63d85acfac5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mutual-imports"></a>상호 가져오기
 Import에는 상호 (또는 순환) 내보내기 또는 가져오기를 다른 실행 파일에 대해 복잡해 집니다. 예를 들어 두 개의 Dll 상호 재귀 함수를 유사한 다른 기호를 가져옵니다.  
@@ -87,14 +82,14 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...  
 ```  
   
- 사용 하 여 빌드 A.dll를 빌드할 때 `/D A_IMPL` 사용 하 여 빌드 B.dll를 빌드할 때 및 `/D B_IMPL`합니다. 각 DLL에 대 한 별도 기호를 사용 하 여 `CExampleB` 내보낸 및 `CExampleA` B.dll를 빌드할 때 가져온 합니다. `CExampleA`A.dll 빌드될 때 이며 B.dll (또는 다른 클라이언트)가 사용 될 때 가져오게 됩니다.  
+ 사용 하 여 빌드 A.dll를 빌드할 때 `/D A_IMPL` 사용 하 여 빌드 B.dll를 빌드할 때 및 `/D B_IMPL`합니다. 각 DLL에 대 한 별도 기호를 사용 하 여 `CExampleB` 내보낸 및 `CExampleA` B.dll를 빌드할 때 가져온 합니다. `CExampleA` A.dll 빌드될 때 이며 B.dll (또는 다른 클라이언트)가 사용 될 때 가져오게 됩니다.  
   
  기본 제공을 사용 하는 경우 이러한 유형의 쌓기를 수행할 수 없는 **AFX_EXT_CLASS** 및 `_AFXEXT` 전처리기 기호입니다. 위에서 설명한 기술을 액티브 기술, 데이터베이스 및 네트워크 MFC 확장 Dll을 빌드할 때 메커니즘은 MFC를 직접 사용 하 여 방식으로이 문제를 해결 합니다.  
   
 ## <a name="not-exporting-the-entire-class"></a>전체 클래스를 내보내지 않는 경우  
  전체 클래스를 내보내지 않는 경우에 MFC 매크로에서 만든 필요한 데이터 항목 내보내집니다 확인 해야 합니다. 다시 정의 하 여이 작업을 수행할 수 있습니다 `AFX_DATA` 특정 클래스의 매크로를 합니다. 이렇게 해야 전체 클래스를 내보내지 않는 언제 든 지 합니다.  
   
- 예:  
+ 예를 들어:  
   
 ```  
 /* A.H */  

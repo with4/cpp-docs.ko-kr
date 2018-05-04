@@ -1,29 +1,24 @@
 ---
-title: "작업자 아키타 | Microsoft Docs"
-ms.custom: 
+title: 작업자 아키타 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44f275568df9b4f8200a3fac1d77520bab38e8d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42ff0e71e15c70d8d5d9dee0b398d4f0c075eb47
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="worker-archetype"></a>작업자 아키타
 준수 하는 클래스는 *작업자* 아키타 스레드 풀 큐에 대기 프로세스 작업 항목에 코드를 제공 합니다.  
@@ -88,7 +83,7 @@ void Execute(
  `pOverlapped`  
  에 대 한 포인터는 [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) 구조를 큐에 항목 대상 작업에 큐를 만드는 데 사용 합니다.  
   
-## <a name="initialize"></a>WorkerArchetype::Initialize
+## <a name="initialize"></a> WorkerArchetype::Initialize
 모든 요청에 전달 되기 전에 worker 개체를 초기화 하기 위해 호출 `WorkerArchetype::Execute`합니다.  
 ```
 BOOL Initialize(void* pvParam) throw();
@@ -101,7 +96,7 @@ BOOL Initialize(void* pvParam) throw();
 ### <a name="return-value"></a>반환 값  
  반환할 **TRUE** 성공 **FALSE** 실패 합니다.  
   
-## <a name="requesttype"></a>WorkerArchetype::RequestType
+## <a name="requesttype"></a> WorkerArchetype::RequestType
 작업자 클래스에 의해 처리 될 수 있는 작업 항목 형식에 대 한 typedef입니다.  
   
 ```  
@@ -111,7 +106,7 @@ typedef MyRequestType RequestType;
 ### <a name="remarks"></a>설명  
  이 형식은의 첫 번째 매개 변수로 사용 해야 `WorkerArchetype::Execute` 는 ULONG_PTR의 캐스팅 되 고 수 있어야 하 고 있습니다.  
   
-## <a name="terminate"></a>WorkerArchetype::Terminate
+## <a name="terminate"></a> WorkerArchetype::Terminate
 모든 요청에 전달 된 후 작업자 개체의 초기화를 해제 하기 위해 호출 `WorkerArchetype::Execute`).  
     
 ``` 

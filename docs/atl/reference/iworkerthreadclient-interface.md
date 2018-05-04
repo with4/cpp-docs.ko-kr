@@ -1,12 +1,9 @@
 ---
-title: "IWorkerThreadClient 인터페이스 | Microsoft Docs"
-ms.custom: 
+title: IWorkerThreadClient 인터페이스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IWorkerThreadClient
@@ -18,20 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - IWorkerThreadClient interface
 ms.assetid: 56f4a2f5-007e-4a33-9e20-05187629f715
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86b0578b3fbe16d21a12edf2ac5eb91528419e83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8336edb07d02bbbcd5775eaf3ef8fe0f735d3adb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iworkerthreadclient-interface"></a>IWorkerThreadClient 인터페이스
-`IWorkerThreadClient`클라이언트 컴퓨터에 구현 된 인터페이스는 [CWorkerThread](../../atl/reference/cworkerthread-class.md) 클래스입니다.  
+`IWorkerThreadClient` 클라이언트 컴퓨터에 구현 된 인터페이스는 [CWorkerThread](../../atl/reference/cworkerthread-class.md) 클래스입니다.  
   
 > [!IMPORTANT]
 >  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
@@ -57,7 +52,7 @@ __interface IWorkerThreadClient
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlutil.h  
   
-##  <a name="closehandle"></a>IWorkerThreadClient::CloseHandle  
+##  <a name="closehandle"></a>  IWorkerThreadClient::CloseHandle  
  이 개체와 연결 된 핸들을 종료 하려면이 메서드를 구현 합니다.  
   
 ```
@@ -74,12 +69,12 @@ HRESULT CloseHandle(HANDLE  hHandle);
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 핸들이를 호출 하 여이 개체와 이전에 연결 되어 [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 코드와의 간단한 구현을 `IWorkerThreadClient::CloseHandle`합니다.  
   
  [!code-cpp[NVC_ATL_Utilities#135](../../atl/codesnippet/cpp/iworkerthreadclient-interface_1.cpp)]  
   
-##  <a name="execute"></a>IWorkerThreadClient::Execute  
+##  <a name="execute"></a>  IWorkerThreadClient::Execute  
  이 개체와 연결 된 핸들은 신호를 받을 때 코드를 실행 하려면이 메서드를 구현 합니다.  
   
 ```
@@ -99,7 +94,7 @@ HRESULT Execute(DWORD_PTR dwParam, HANDLE hObject);
 ### <a name="remarks"></a>설명  
  핸들 및 DWORD/이 메서드에 전달 된 포인터를 호출 하 여이 개체와 이미 연결 되어 [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 코드와의 간단한 구현을 `IWorkerThreadClient::Execute`합니다.  
   
  [!code-cpp[NVC_ATL_Utilities#136](../../atl/codesnippet/cpp/iworkerthreadclient-interface_2.cpp)]  

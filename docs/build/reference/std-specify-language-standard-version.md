@@ -2,10 +2,7 @@
 title: -std (언어 표준 버전 지정) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2017
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /std
 - -std
@@ -13,17 +10,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb248f4c7ce1d9520bc328ed59b75ff081659996
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7fed80f0f9763b7e988c40a9d9f38f4e0f18eeb1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="std-specify-language-standard-version"></a>/std (언어 표준 버전을 지정 합니다.)
 
@@ -51,7 +46,7 @@ Enable 지정된 된 버전의 표준 c + + 언어에서 c + + 언어 기능을 
 
 자세한 내용은 C + + 14 및 C + + 17 기능에 설정 된 경우 **/std:c + + 14** 은에 메모를 참조 하세요 지정 [Visual c + + 언어 규칙](../../visual-cpp-language-conformance.md)합니다.
   
-**/std:c + + 17** 옵션을 사용 하는 전체 C + + 17 기능 집합이 Visual c + + 컴파일러에서 구현 합니다. 이 옵션 컴파일러 및 표준 라이브러리 지원 또는 새 버전의 c + + 표준의 초안 작업 및 defect 업데이트 변경 되어 변경 된 기능에 대 한 C + + 17 후 비활성화 합니다.  
+**/std:c + + 17** 옵션을 사용 하는 전체 C + + 17 기능 집합이 Visual c + + 컴파일러에서 구현 합니다. 이 옵션에서는 C++17 이후의 C++표준 규격 초안(Working Draft) 및 결함 업데이트의 전에서 변경되거나 새로운 기능에 대한 컴파일러 및 표준 라이브러리 지원을 사용하지 않습니다.  
   
 **/std:c + + 최신** 옵션을 사용 하면 가장을 추적 하는 Visual c + +에서 구현 되는 c + + 언어 및 라이브러리 기능 집합이 최신 C + + 20 초안 작업 및 defect 업데이트의 c + + 표준 C + + 17에 포함 되어 있지 않은 합니다. 이 스위치를 사용 하 여 게시물에 가져오려는-컴파일러 및 표준 라이브러리에서 지 원하는 C + + 17 언어 기능. 지원 되는 언어 및 라이브러리 기능 목록은 참조 하십시오. [Visual c + +에 대 한 새로운](../../what-s-new-for-visual-cpp-in-visual-studio.md)합니다. **/std:c + + 최신** 옵션이 감시 하 고 기능을 활성화 하지 않습니다는 **실험적 /** 전환 합니다.  
   
@@ -70,7 +65,7 @@ Enable 지정된 된 버전의 표준 c + + 언어에서 c + + 언어 기능을 
   
 3.  **c + + 언어 표준**, 선택 드롭다운 컨트롤에서 지원 한 다음를 선택 하기 위해 언어 표준을 **확인** 또는 **적용** 변경 내용을 저장 하려면.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
   
 [컴파일러 옵션](../../build/reference/compiler-options.md)   
 [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)   

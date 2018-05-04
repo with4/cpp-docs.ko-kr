@@ -1,12 +1,9 @@
 ---
-title: "CSimpleArray 클래스 | Microsoft Docs"
-ms.custom: 
+title: CSimpleArray 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSimpleArray
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - CSimpleArray class
 ms.assetid: ee0c9f39-b61c-4c18-bc43-4eada21dca3a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ea081d3868c1226638d01be9505eb9d0e01ed10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 187dee79cd09e366fb56d9cd0e71395589476a69
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csimplearray-class"></a>CSimpleArray 클래스
 이 클래스는 1 차원 배열의 관리를 위한 메서드를 제공 합니다.  
@@ -85,19 +80,19 @@ class CSimpleArray
 
   
 ## <a name="remarks"></a>설명  
- `CSimpleArray`만들고 지정 된 형식의 간단한 배열 관리 하기 위한 메서드를 제공 `T`합니다.  
+ `CSimpleArray` 만들고 지정 된 형식의 간단한 배열 관리 하기 위한 메서드를 제공 `T`합니다.  
   
- 매개 변수 `TEqual` 형식의 두 가지 요소에 대 한 같음 함수를 정의 하는 방법을 제공 `T`합니다. 클래스를 만들어 비슷합니다 [CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md), 모든 지정 된 배열에 대 한 같음 테스트의 동작을 변경 하는 것이 불가능 합니다. 예를 들어 포인터의 배열로 처리할 때에 포인터를 참조할 값에 따라 일치로 정의 유용할 수 있습니다. 기본 구현은 활용 **operator=()**합니다.  
+ 매개 변수 `TEqual` 형식의 두 가지 요소에 대 한 같음 함수를 정의 하는 방법을 제공 `T`합니다. 클래스를 만들어 비슷합니다 [CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md), 모든 지정 된 배열에 대 한 같음 테스트의 동작을 변경 하는 것이 불가능 합니다. 예를 들어 포인터의 배열로 처리할 때에 포인터를 참조할 값에 따라 일치로 정의 유용할 수 있습니다. 기본 구현은 활용 **operator=()** 합니다.  
   
  둘 다 `CSimpleArray` 및 [CSimpleMap](../../atl/reference/csimplemap-class.md) 적은 수의 요소에 대 한 설계 합니다. [CAtlArray](../../atl/reference/catlarray-class.md) 및 [CAtlMap](../../atl/reference/catlmap-class.md) 배열 많은 수의 요소를 포함 하는 경우에 사용 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsimpcoll.h  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities#86](../../atl/codesnippet/cpp/csimplearray-class_1.cpp)]  
   
-##  <a name="add"></a>CSimpleArray::Add  
+##  <a name="add"></a>  CSimpleArray::Add  
  배열에 새 요소를 추가 합니다.  
   
 ```
@@ -111,10 +106,10 @@ BOOL Add(const T& t);
 ### <a name="return-value"></a>반환 값  
  경우 성공적으로 추가 되는 배열에 FALSE 그렇지 않으면 TRUE를 반환 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities#87](../../atl/codesnippet/cpp/csimplearray-class_2.cpp)]  
   
-##  <a name="csimplearray"></a>CSimpleArray::CSimpleArray  
+##  <a name="csimplearray"></a>  CSimpleArray::CSimpleArray  
  배열 개체에 대 한 생성자입니다.  
   
 ```
@@ -129,7 +124,7 @@ CSimpleArray();
 ### <a name="remarks"></a>설명  
  비어 있는 새 만들기는 데이터 멤버를 초기화 `CSimpleArray` 개체나 기존 복사본 `CSimpleArray` 개체입니다.  
   
-##  <a name="dtor"></a>CSimpleArray:: ~ CSimpleArray  
+##  <a name="dtor"></a>  CSimpleArray:: ~ CSimpleArray  
  소멸자입니다.  
   
 ```
@@ -139,7 +134,7 @@ CSimpleArray();
 ### <a name="remarks"></a>설명  
  할당 된 모든 리소스를 해제합니다.  
   
-##  <a name="find"></a>CSimpleArray::Find  
+##  <a name="find"></a>  CSimpleArray::Find  
  배열의 요소를 찾습니다.  
   
 ```
@@ -153,10 +148,10 @@ int Find(const T& t) const;
 ### <a name="return-value"></a>반환 값  
  요소가 없는 경우에 찾은 요소의 또는-1의 인덱스를 반환 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities#88](../../atl/codesnippet/cpp/csimplearray-class_3.cpp)]  
   
-##  <a name="getdata"></a>CSimpleArray::GetData  
+##  <a name="getdata"></a>  CSimpleArray::GetData  
  배열에 저장 된 데이터에 대 한 포인터를 반환 합니다.  
   
 ```
@@ -166,7 +161,7 @@ T* GetData() const;
 ### <a name="return-value"></a>반환 값  
  배열에 있는 데이터에 대 한 포인터를 반환합니다.  
   
-##  <a name="getsize"></a>CSimpleArray::GetSize  
+##  <a name="getsize"></a>  CSimpleArray::GetSize  
  배열에 저장 된 요소의 수를 반환 합니다.  
   
 ```
@@ -176,7 +171,7 @@ int GetSize() const;
 ### <a name="return-value"></a>반환 값  
  배열에 저장 된 요소의 수를 반환 합니다.  
   
-##  <a name="operator_at"></a>CSimpleArray::operator\[\]  
+##  <a name="operator_at"></a>  CSimpleArray::operator \[\]  
  배열에서 요소를 검색합니다.  
   
 ```
@@ -190,10 +185,10 @@ T& operator[](int nindex);
 ### <a name="return-value"></a>반환 값  
  참조 하는 배열의 요소를 반환 `nIndex`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities#89](../../atl/codesnippet/cpp/csimplearray-class_4.cpp)]  
   
-##  <a name="operator_eq"></a>CSimpleArray::operator =  
+##  <a name="operator_eq"></a>  CSimpleArray::operator =  
  대입 연산자입니다.  
   
 ```
@@ -212,10 +207,10 @@ CSimpleArray<T, TEqual>
 ### <a name="remarks"></a>설명  
  요소를 모두 복사는 `CSimpleArray` 개체에서 참조 *src* 현재 배열 개체에 모든 기존 데이터를 바꿉니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities#90](../../atl/codesnippet/cpp/csimplearray-class_5.cpp)]  
   
-##  <a name="remove"></a>CSimpleArray::Remove  
+##  <a name="remove"></a>  CSimpleArray::Remove  
  배열에서 지정된 된 요소를 제거합니다.  
   
 ```
@@ -232,7 +227,7 @@ BOOL Remove(const T& t);
 ### <a name="remarks"></a>설명  
  요소가 제거 되 면 나머지 요소 배열에서 빈 공간을 채우기 위해 매겨집니다.  
   
-##  <a name="removeall"></a>CSimpleArray::RemoveAll  
+##  <a name="removeall"></a>  CSimpleArray::RemoveAll  
  배열에서 모든 요소를 제거합니다.  
   
 ```
@@ -242,7 +237,7 @@ void RemoveAll();
 ### <a name="remarks"></a>설명  
  현재 배열에 저장 된 모든 요소를 제거 합니다.  
   
-##  <a name="removeat"></a>CSimpleArray::RemoveAt  
+##  <a name="removeat"></a>  CSimpleArray::RemoveAt  
  배열에서 지정된 된 요소를 제거합니다.  
   
 ```
@@ -259,7 +254,7 @@ BOOL RemoveAtint nIndex);
 ### <a name="remarks"></a>설명  
  요소가 제거 되 면 나머지 요소 배열에서 빈 공간을 채우기 위해 매겨집니다.  
   
-##  <a name="setatindex"></a>CSimpleArray::SetAtIndex  
+##  <a name="setatindex"></a>  CSimpleArray::SetAtIndex  
  배열에 지정된 된 요소를 설정 합니다.  
   
 ```

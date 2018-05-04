@@ -1,12 +1,9 @@
 ---
-title: "CAtlWinModule 클래스 | Microsoft Docs"
-ms.custom: 
+title: CAtlWinModule 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAtlWinModule
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcaf3d6573432b7f6f16826b2551a7e9330abed9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 14b918747d9b7bee1b661eebd61fbb35325861e7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="catlwinmodule-class"></a>CAtlWinModule 클래스
 이 클래스는 ATL windowing 구성 요소에 대 한 지원을 제공합니다.  
@@ -70,7 +65,7 @@ class CAtlWinModule : public _ATL_WIN_MODULE
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="addcreatewnddata"></a>CAtlWinModule::AddCreateWndData  
+##  <a name="addcreatewnddata"></a>  CAtlWinModule::AddCreateWndData  
  이 메서드를 초기화 하 고 추가 `_AtlCreateWndData` 구조입니다.  
   
 ```
@@ -87,7 +82,7 @@ void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ### <a name="remarks"></a>설명  
  이 메서드를 호출 [AtlWinModuleAddCreateWndData](winmodule-global-functions.md#atlwinmoduleaddcreatewnddata) 어떤 초기화는 [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md) 구조입니다. 이 구조는 저장 된 **이** 창 프로시저의 클래스 인스턴스를 가져오는 데 포인터입니다.  
   
-##  <a name="catlwinmodule"></a>CAtlWinModule::CAtlWinModule  
+##  <a name="catlwinmodule"></a>  CAtlWinModule::CAtlWinModule  
  생성자입니다.  
   
 ```
@@ -97,7 +92,7 @@ CAtlWinModule();
 ### <a name="remarks"></a>설명  
  초기화에 실패 하면는 **EXCEPTION_NONCONTINUABLE** 예외가 발생 합니다.  
   
-##  <a name="dtor"></a>CAtlWinModule:: ~ CAtlWinModule  
+##  <a name="dtor"></a>  CAtlWinModule:: ~ CAtlWinModule  
  소멸자입니다.  
   
 ```
@@ -107,7 +102,7 @@ CAtlWinModule();
 ### <a name="remarks"></a>설명  
  할당 된 모든 리소스를 해제합니다.  
   
-##  <a name="extractcreatewnddata"></a>CAtlWinModule::ExtractCreateWndData  
+##  <a name="extractcreatewnddata"></a>  CAtlWinModule::ExtractCreateWndData  
  이 메서드가 반환에 대 한 포인터는 `_AtlCreateWndData` 구조입니다.  
   
 ```

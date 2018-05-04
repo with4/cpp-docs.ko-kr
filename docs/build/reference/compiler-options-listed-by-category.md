@@ -1,29 +1,24 @@
 ---
-title: "컴파일러 옵션 범주별 목록 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 옵션 범주별 목록 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87eb79e7932d18ac5aae47a39ec207fec326d58e
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: fff661bf573ca30a5b0e7550c2e53b00a7ff3d8f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-options-listed-by-category"></a>컴파일러 옵션 범주별 목록
 
@@ -227,7 +222,7 @@ ms.lasthandoff: 02/28/2018
 |[/Ze](za-ze-disable-language-extensions.md)|더 이상 사용되지 않습니다. 언어 확장을 사용합니다.|
 |[/Zg](zg-generate-function-prototypes.md)|Visual C++ 2015에서 제거되었습니다. 함수 프로토타입을 생성합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [C/C++ 빌드 참조](c-cpp-building-reference.md)<br/>
 [컴파일러 옵션](compiler-options.md)<br/>

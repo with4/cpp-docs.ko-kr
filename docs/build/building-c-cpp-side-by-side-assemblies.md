@@ -1,29 +1,24 @@
 ---
-title: "C/c + +-side-by-side 어셈블리 빌드 | Microsoft Docs"
-ms.custom: 
+title: C/c + +-side-by-side 어셈블리 빌드 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c54f0e3b8bceff3daa92ecb3e0ee46d7fbeb666
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a45062af5648c7b3565d959fd1d2dce13aeca4b3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>C/C++ side-by-side 어셈블리 빌드
 A [side-by-side-어셈블리](http://msdn.microsoft.com/library/windows/desktop/ff951640) 리소스의 컬렉션은-Dll, windows 클래스, COM 서버, 형식 라이브러리 또는 인터페이스 그룹-런타임 시 사용 하도록 응용 프로그램에 사용할 수 있습니다. 어셈블리에 Dll을 다시 패키지의 주요 이점은 동시에 응용 프로그램에서 여러 버전의 어셈블리를 사용할 수 있습니다 및 현재 설치 된 서비스 업데이트가 릴리스되는 어셈블리 수입니다.  

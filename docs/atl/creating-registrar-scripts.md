@@ -1,13 +1,10 @@
 ---
-title: "ATL 등록자에 대 한 스크립트를 생성 | Microsoft Docs"
-ms.custom: 
+title: ATL 등록자에 대 한 스크립트를 생성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - scripts, creating
 ms.assetid: cbd5024b-8061-4a71-be65-7fee90374a35
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3bda4043693d14451a2de14cbc71fbecdcdddba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e140e66ee24d8333d25c0c2942924c7a9db4965b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-registrar-scripts"></a>Creating Registrar Scripts
 등록자 스크립트 시스템 레지스트리에 API 기반 하는 것이 아니라 데이터 기반 액세스를 제공합니다. 데이터 기반 액세스 레지스트리 키를 추가 하는 스크립트에 한 개나 두 줄을 걸리는 이므로 일반적으로 더 효율적입니다.  

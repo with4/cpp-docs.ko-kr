@@ -1,13 +1,10 @@
 ---
-title: "BSCMAKE 명령 파일 (지시 파일) | Microsoft Docs"
-ms.custom: 
+title: BSCMAKE 명령 파일 (지시 파일) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - response files
 - command files
 ms.assetid: abdffeea-35c7-4f2d-8c17-7d0d80bac314
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c250af9f1af96bb051be0b2cd347ecd8d98d809
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a879306078c52e0ad11d29f1786a2e55c2480d2f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bscmake-command-file-response-file"></a>BSCMAKE 명령 파일(지시 파일)
 명령 파일의 명령줄 입력의 일부 또는 전체를 제공할 수 있습니다. 다음 구문을 사용 하 여 명령 파일을 지정 합니다.  

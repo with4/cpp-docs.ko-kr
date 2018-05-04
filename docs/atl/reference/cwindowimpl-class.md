@@ -1,12 +1,9 @@
 ---
-title: "CWindowImpl 클래스 | Microsoft Docs"
-ms.custom: 
+title: CWindowImpl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWindowImpl
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aa14c3ae6c083cbf440d8b5b94fcb3754bd6fff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4884bbacd03675d00cb1a49b937265ab5faa2835
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl 클래스
 창을 만들거나 서브클래싱하기 위한 메서드를 제공합니다.  
@@ -97,7 +92,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 ## <a name="remarks"></a>설명  
  사용할 수 있습니다 `CWindowImpl` 창이 나 하위 클래스는 기존 창을 만들 수 있습니다. `CWindowImpl` 창 프로시저는 메시지 맵을 사용 하 여 메시지를 적절 한 처리기입니다.  
   
- `CWindowImpl::Create`관리 되는 창 클래스 정보를 기반으로 창을 만듭니다 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)합니다. `CWindowImpl`포함 된 [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) 의미 하는 매크로 `CWndClassInfo` 는 새 창 클래스 등록 합니다. Superclass 기존 창 클래스를 하려는 경우에서 클래스를 파생 `CWindowImpl` 포함는 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) 매크로입니다. 이 경우 `CWndClassInfo`는 기존 클래스를 기반으로 하는 창 클래스 등록하지만 `CWindowImpl::WindowProc`를 사용합니다. 예:  
+ `CWindowImpl::Create` 관리 되는 창 클래스 정보를 기반으로 창을 만듭니다 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)합니다. `CWindowImpl` 포함 된 [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) 의미 하는 매크로 `CWndClassInfo` 는 새 창 클래스 등록 합니다. Superclass 기존 창 클래스를 하려는 경우에서 클래스를 파생 `CWindowImpl` 포함는 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) 매크로입니다. 이 경우 `CWndClassInfo`는 기존 클래스를 기반으로 하는 창 클래스 등록하지만 `CWindowImpl::WindowProc`를 사용합니다. 예를 들어:  
   
  [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]  
   
@@ -113,7 +108,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
   
  기본 클래스 소멸자 (~ **CWindowImplRoot**) 사라지도록 보장 창 개체 소멸 되기 전에 합니다.  
   
- `CWindowImpl`파생 **CWindowImplBaseT**에서 파생 되는 **CWindowImplRoot**에서 파생 되는 **TBase** 및 [CMessageMap](../../atl/reference/cmessagemap-class.md)합니다.  
+ `CWindowImpl` 파생 **CWindowImplBaseT**에서 파생 되는 **CWindowImplRoot**에서 파생 되는 **TBase** 및 [CMessageMap](../../atl/reference/cmessagemap-class.md)합니다.  
   
 |추가 정보|보기|  
 |--------------------------------|---------|  
@@ -135,7 +130,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
   
-##  <a name="create"></a>CWindowImpl::Create  
+##  <a name="create"></a>  CWindowImpl::Create  
  새 창 클래스를 기반으로 창을 만듭니다.  
   
 ```
@@ -185,7 +180,7 @@ HWND Create(
 > [!NOTE]
 >  0에 대 한 값으로 사용 되는 경우는 `MenuOrID` 매개 변수를 0U로 지정 해야 합니다 (기본값) 컴파일러 오류가 발생 하지 않도록 합니다.  
   
-##  <a name="defwindowproc"></a>CWindowImpl::DefWindowProc  
+##  <a name="defwindowproc"></a>  CWindowImpl::DefWindowProc  
  에 의해 호출 [WindowProc](#windowproc) 메시지를 처리 하는 메시지 맵에 의해 처리 되지 않습니다.  
   
 ```
@@ -215,7 +210,7 @@ LRESULT DefWindowProc();
   
  자동으로 매개 변수가 없는 함수는 현재 메시지에서 필요한 매개 변수를 검색합니다.  
   
-##  <a name="getcurrentmessage"></a>CWindowImpl::GetCurrentMessage  
+##  <a name="getcurrentmessage"></a>  CWindowImpl::GetCurrentMessage  
  패키지에 현재 메시지를 반환 된 `MSG` 구조입니다.  
   
 ```
@@ -225,7 +220,7 @@ const MSG* GetCurrentMessage();
 ### <a name="return-value"></a>반환 값  
  현재 메시지입니다.  
   
-##  <a name="getwindowproc"></a>CWindowImpl::GetWindowProc  
+##  <a name="getwindowproc"></a>  CWindowImpl::GetWindowProc  
  반환 `WindowProc`, 현재 창 프로시저입니다.  
   
 ```
@@ -238,7 +233,7 @@ virtual WNDPROC GetWindowProc();
 ### <a name="remarks"></a>설명  
  사용자의 창 프로시저로 바꾸려면이 메서드를 재정의 합니다.  
   
-##  <a name="getwndclassinfo"></a>CWindowImpl::GetWndClassInfo  
+##  <a name="getwndclassinfo"></a>  CWindowImpl::GetWndClassInfo  
  에 의해 호출 [만들기](#create) 창 클래스 정보에 액세스할 수 있습니다.  
   
 ```
@@ -255,7 +250,7 @@ static CWndClassInfo& GetWndClassInfo();
   
  사용 하 여 외에도 `DECLARE_WND_CLASS` 및 `DECLARE_WND_SUPERCLASS` 재정의할 수 매크로 `GetWndClassInfo` 사용자 구현으로 합니다.  
   
-##  <a name="m_pfnsuperwindowproc"></a>CWindowImpl::m_pfnSuperWindowProc  
+##  <a name="m_pfnsuperwindowproc"></a>  CWindowImpl::m_pfnSuperWindowProc  
  창에 따라 다음 창 프로시저 중 하나를 가리킵니다.  
   
 ```
@@ -272,7 +267,7 @@ WNDPROC m_pfnSuperWindowProc;
   
  [CWindowImpl::DefWindowProc](#defwindowproc) 보내는 메시지는 정보에 저장 하 고 창 프로시저를 `m_pfnSuperWindowProc`합니다.  
   
-##  <a name="onfinalmessage"></a>CWindowImpl::OnFinalMessage  
+##  <a name="onfinalmessage"></a>  CWindowImpl::OnFinalMessage  
  마지막 메시지를 받은 후에 호출 (일반적으로 `WM_NCDESTROY`).  
   
 ```
@@ -286,7 +281,7 @@ virtual void OnFinalMessage(HWND hWnd);
 ### <a name="remarks"></a>설명  
  기본 구현은 `OnFinalMessage` 아무 것도 수행 되지만 창을 삭제 하기 전에 정리를 처리 하려면이 함수를 재정의할 수 있습니다. 창 소멸 시 개체를 자동으로 삭제 하려는 경우 호출할 수 있습니다 `delete this;` 이 함수에 있습니다.  
   
-##  <a name="subclasswindow"></a>CWindowImpl::SubclassWindow  
+##  <a name="subclasswindow"></a>  CWindowImpl::SubclassWindow  
  로 식별 되는 창을 서브 클래스 `hWnd` 에 연결 된 `CWindowImpl` 개체입니다.  
   
 ```
@@ -306,7 +301,7 @@ BOOL SubclassWindow(HWND hWnd);
 > [!NOTE]
 >  호출 하지 마십시오 `SubclassWindow` 이미 호출한 경우 [만들기](#create)합니다.  
   
-##  <a name="unsubclasswindow"></a>CWindowImpl::UnsubclassWindow  
+##  <a name="unsubclasswindow"></a>  CWindowImpl::UnsubclassWindow  
  서브클래싱된 창을 분리는 `CWindowImpl` 개체에 저장 된 원래 창 프로시저를 복원 및 [m_pfnSuperWindowProc](#m_pfnsuperwindowproc)합니다.  
   
 ```
@@ -316,7 +311,7 @@ HWND UnsubclassWindow();
 ### <a name="return-value"></a>반환 값  
  이전에 서브클래싱된 창 핸들입니다.  
   
-##  <a name="windowproc"></a>CWindowImpl::WindowProc  
+##  <a name="windowproc"></a>  CWindowImpl::WindowProc  
  이 정적 함수는 창 프로시저를 구현합니다.  
   
 ```
@@ -344,7 +339,7 @@ static LRESULT CALLBACK WindowProc(
  메시지 처리의 결과입니다.  
   
 ### <a name="remarks"></a>설명  
- `WindowProc`기본 메시지 맵을 사용 하 여 (사용 하 여 선언 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)) 메시지를 적절 한 처리기를 합니다. 필요한 경우 `WindowProc` 호출 [DefWindowProc](#defwindowproc) 추가 메시지 처리에 대 한 합니다. 최종 메시지 처리 되지 않은 경우 `WindowProc` 다음 작업을 수행 합니다.  
+ `WindowProc` 기본 메시지 맵을 사용 하 여 (사용 하 여 선언 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)) 메시지를 적절 한 처리기를 합니다. 필요한 경우 `WindowProc` 호출 [DefWindowProc](#defwindowproc) 추가 메시지 처리에 대 한 합니다. 최종 메시지 처리 되지 않은 경우 `WindowProc` 다음 작업을 수행 합니다.  
   
 -   창을 서브클래싱 하지 않았으면 unsubclassing 수행 합니다.  
   

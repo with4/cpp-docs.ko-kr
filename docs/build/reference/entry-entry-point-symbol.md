@@ -1,13 +1,10 @@
 ---
-title: "입력 (진입점 기호) | Microsoft Docs"
-ms.custom: 
+title: 입력 (진입점 기호) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /entry
 - VC.Project.VCLinkerTool.EntryPointSymbol
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - /ENTRY linker option
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5ebaf9a8723f06b6fab8577abf283f6eec69aa25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74d7e6e05af98bb3d3175d352fb3d5de1b70b12b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY(진입점 기호)
 ```  
@@ -52,8 +47,8 @@ ms.lasthandoff: 12/21/2017
 |함수 이름|에 대 한 기본값|  
 |-------------------|-----------------|  
 |**mainCRTStartup** (또는 **wmainCRTStartup**)|/SUBSYSTEM:CONSOLE;를 사용 하는 응용 프로그램 호출 `main` (또는 `wmain`)|  
-|**WinMainCRTStartup** (또는 **wWinMainCRTStartup**)|/SUBSYSTEM을 사용 하는 응용 프로그램:**WINDOWS**; 호출 `WinMain` (또는 `wWinMain`)를 사용 하도록 정의 해야 합니다`__stdcall`|  
-|**_DllMainCRTStartup**|DLL; 호출 `DllMain` 이 특성이 있으면를 정의 해야 사용 하려면`__stdcall`|  
+|**WinMainCRTStartup** (또는 **wWinMainCRTStartup**)|/SUBSYSTEM을 사용 하는 응용 프로그램:**WINDOWS**; 호출 `WinMain` (또는 `wWinMain`)를 사용 하도록 정의 해야 합니다 `__stdcall`|  
+|**_DllMainCRTStartup**|DLL; 호출 `DllMain` 이 특성이 있으면를 정의 해야 사용 하려면 `__stdcall`|  
   
  경우는 [/DLL](../../build/reference/dll-build-a-dll.md) 또는 [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) 옵션 지정 하지 않으면, 인지 여부에 따라 하위 시스템 및 항목 요소를 선택 하는 링커 `main` 또는 `WinMain` 정의 됩니다.  
   
