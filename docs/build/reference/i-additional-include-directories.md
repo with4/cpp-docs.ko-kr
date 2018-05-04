@@ -2,12 +2,9 @@
 title: -I (추가 포함 디렉터리) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.AdditionalIncludeDirectories
 - VC.Project.VCCLCompilerTool.AdditionalIncludeDirectories
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfbf962a92af22d3e724c592fec6cf812b610dc7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 435714d72eeabe74f0cd85509d74dff5d541b019
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="i-additional-include-directories"></a>/I(추가 포함 디렉터리)
 Include 파일을 검색할 디렉터리 목록에 디렉터리를 추가 합니다.  
@@ -75,7 +70,7 @@ Include 파일을 검색할 디렉터리 목록에 디렉터리를 추가 합니
   
 -   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalIncludeDirectories%2A>을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 명령은 다음과 같은 순서로 MAIN.c 요청한 포함 파일에 대 한 찾습니다: \INCLUDE 디렉터리에서 다음 다음 \MY\INCLUDE 디렉터리에서 MAIN.c를 포함 하 고 마지막으로 디렉터리에서에 할당 된 포함 된 디렉터리에서 첫 번째 환경 변수입니다.  
   
 ```  

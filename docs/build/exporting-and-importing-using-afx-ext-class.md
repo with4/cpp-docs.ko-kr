@@ -1,13 +1,10 @@
 ---
-title: "AFX_EXT_CLASS를 사용 하 여 가져오기 및 내보내기 | Microsoft Docs"
-ms.custom: 
+title: AFX_EXT_CLASS를 사용 하 여 가져오기 및 내보내기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - afx_ext_class
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - executable files [C++], importing classes
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb47703b7cd4ef2d0493016c120db0b7d845a71f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f6cc853c66afae72d6e426d800c0443ab206ab20
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exporting-and-importing-using-afxextclass"></a>AFX_EXT_CLASS를 사용하여 내보내기 및 가져오기  
   
@@ -66,7 +61,7 @@ class AFX_EXT_CLASS CMyClass : public CDocument
   
 클래스의 개별 멤버를 내보내려면 하는 경우가 있습니다. 예를 들어, 내보내는 경우는 `CDialog`-파생 클래스 생성자는 내보낼 하기만 하면 및 `DoModal` 호출 합니다. 사용할 수 있습니다 `AFX_EXT_CLASS` 내보내야 하는 개별 멤버에 있습니다.  
   
-예:  
+예를 들어:  
   
 ```cpp  
 class CExampleDialog : public CDialog  
@@ -95,7 +90,7 @@ public: \
   
 정적 행이 있는 시작 하는 줄 `AFX_DATA` 클래스 내부에서 정적 개체를 선언 합니다. 이 클래스를 올바르게 내보내고 클라이언트 실행 파일에서 런타임 정보에 액세스, 정적이 개체를 내보내야 합니다. 정적 개체는 한정자로 선언 되었으므로 `AFX_DATA`를 정의 해야 `AFX_DATA` 되도록 `__declspec(dllexport)` DLL을 빌드할 때로 정의 하 고 `__declspec(dllimport)` 클라이언트를 실행 파일을 만들 때. 때문에 `AFX_EXT_CLASS` 이미 정의 되어 이러한 방식으로 하기만 하면 다시 정의할 `AFX_DATA` 와 동일 하 게 `AFX_EXT_CLASS` 주위 클래스 정의 합니다.  
   
-예:  
+예를 들어:  
   
 ```cpp  
 #undef  AFX_DATA  

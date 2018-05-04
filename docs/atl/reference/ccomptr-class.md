@@ -2,11 +2,8 @@
 title: CComPtr 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComPtr
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CComPtr class
 ms.assetid: 22d9ea8d-ed66-4c34-940f-141db11e83bd
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ef8c49b04a769fd6202aa58324f20216948cf3a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5254e463050d685840ff90334ecbdb94372f27ef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomptr-class"></a>CComPtr 클래스
 COM 인터페이스 포인터를 관리 하기 위한 스마트 포인터 클래스입니다.  
@@ -76,7 +71,7 @@ class CComPtr
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="ccomptr"></a>CComPtr::CComPtr  
+##  <a name="ccomptr"></a>  CComPtr::CComPtr  
  생성자입니다.  
   
 ```
@@ -92,7 +87,7 @@ CComPtr (const CComPtr<T>& lp) throw ();
  `T`  
  COM 인터페이스입니다.  
   
-##  <a name="operator_eq"></a>CComPtr::operator =  
+##  <a name="operator_eq"></a>  CComPtr::operator =  
  대입 연산자입니다.  
   
 ```

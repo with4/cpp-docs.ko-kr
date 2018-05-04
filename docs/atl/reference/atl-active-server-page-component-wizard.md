@@ -1,12 +1,9 @@
 ---
-title: "ATL Active Server Page 구성 요소 마법사 | Microsoft Docs"
-ms.custom: 
+title: ATL Active Server Page 구성 요소 마법사 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.asp.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ASP components, creating in ATL
 - ATL Active Server Page Component Wizard
 ms.assetid: 5a5cb904-dbbf-44ea-ad3d-2ddd14c1d3c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad2d707b5dbfc78ec8975471114bc87bf23fe5f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4d717eefe9c9ee353692d343b88c57469eeb6892
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-active-server-page-component-wizard"></a>ATL Active Server Page 구성 요소 마법사
 이 마법사는 프로젝트에는 ASP Active Server Pages () 구성 요소를 삽입합니다. Microsoft 인터넷 정보 서비스 (IIS)의 향상 된 웹 페이지 개발 아키텍처의 일부로 ASP 구성 요소를 사용합니다.  
@@ -72,7 +67,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="com"></a>COM  
  개체에 대 한 COM 기능에 대 한 정보를 제공합니다.  
   
- **Coclass**  
+ **coclass**  
  개체에서 지 원하는 인터페이스의 목록을 포함 하는 구성 요소 클래스의 이름을 설정 합니다. ATL 포함 되어 있지 않으므로이 옵션을 변경할 수 없습니다 프로젝트 또는이 개체에서 특성을 사용할 경우의 **coclass** 특성입니다.  
   
  **Type**  

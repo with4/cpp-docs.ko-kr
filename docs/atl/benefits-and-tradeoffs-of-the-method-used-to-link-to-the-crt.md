@@ -1,29 +1,24 @@
 ---
-title: "CRT에 대 한 링크에 사용 되는 방법의 장단점 및 이점 | Microsoft Docs"
-ms.custom: 
+title: CRT에 대 한 링크에 사용 되는 방법의 장단점 및 이점 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 49b485f7-9487-49e4-b12a-0f710b620e2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 244415a947918a836e8c4c67dbd18758ec40393c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b2835e88da11b8d8332226080eb860afd41c0702
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt"></a>CRT에 대 한 링크에 사용 되는 방법의 장단점 및 이점
 프로젝트 CRT에 동적 또는 정적 링크 수입니다. 다음 표에서 장점과 단점을 사용할 방법을 선택과 관련 된 간략하게 설명 합니다.  

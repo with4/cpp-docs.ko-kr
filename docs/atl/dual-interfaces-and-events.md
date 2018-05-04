@@ -1,30 +1,25 @@
 ---
-title: "이중 인터페이스 및 이벤트 | Microsoft Docs"
-ms.custom: 
+title: 이중 인터페이스 및 이벤트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - events [C++], dual interfaces
 - dual interfaces, events
 ms.assetid: bb382f7c-e885-4274-bf07-83f3602615d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87774f0237eb42c4bd2f97185230b3c869688ca8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 99dc173f3dde8ea81f6dc11d02298cd94673f999
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dual-interfaces-and-events"></a>이중 인터페이스 및 이벤트
 이중으로는 이벤트 인터페이스를 디자인할 수 있지만 이렇게 하려면 하지 좋은 디자인 상의 이유로의 여러 가지가 있습니다. 기본 이유는 이벤트의 소스는 vtable 또는 통해 이벤트 발생만 `Invoke`하나만 있습니다. 이벤트 소스 직접 vtable 메서드 호출으로 이벤트를 발생 시키는 경우에 `IDispatch` 메서드를 사용 하지 않을 인터페이스 순수 vtable 인터페이스 되었는지가 명확 하 고 있습니다. 이벤트 소스에 대 한 호출으로 이벤트를 발생 시킨 경우 `Invoke`, vtable 메서드를 사용 하지 않을 있고 그것이 인터페이스는 dispinterface 되었는지가 명확 합니다. 이중 이벤트 인터페이스를 정의 하는 경우 일부 사용 되지 것입니다는 인터페이스를 구현 하는 클라이언트 필요 합니다.  

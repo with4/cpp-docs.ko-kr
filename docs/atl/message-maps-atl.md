@@ -1,12 +1,9 @@
 ---
-title: "메시지 맵 (ATL) | Microsoft Docs"
-ms.custom: 
+title: 메시지 맵 (ATL) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - message maps, ATL
 - ATL, message handlers
 ms.assetid: 9e100400-65c7-4a85-8857-4e6cb6dd7340
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12eeb74266e9c303817430958025d6536147356c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: eaef52363ebdd79a1efb1e2e26bce016500cb722
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="message-maps-atl"></a>메시지 맵 (ATL)
 메시지 맵 특정 메시지, 명령 또는 알림 처리기 함수를 연결합니다. ATL의를 사용 하 여 [메시지 맵 매크로](../atl/reference/message-map-macros-atl.md), 창에 대 한 메시지 맵을 지정할 수 있습니다. 에 창 프로시저 `CWindowImpl`, `CDialogImpl`, 및 `CContainedWindowT` 창의 메시지를 메시지 맵에 있습니다.  

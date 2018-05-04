@@ -1,12 +1,9 @@
 ---
-title: "연결 지점 매크로 | Microsoft Docs"
-ms.custom: 
+title: 연결 지점 매크로 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_CONNECTION_POINT_MAP
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - connection points [C++], macros
 ms.assetid: cc3a6dd3-5538-45df-b027-1f34963c31e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f98b5abd00f1d7ac3e3d69b0e22b549fdea35a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e50a868dd87628873b2a43f0ace55690b0583fd5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connection-point-macros"></a>연결 지점 매크로
 이러한 매크로 연결 지점 맵 및 항목을 정의합니다.  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h 
    
-##  <a name="begin_connection_point_map"></a>BEGIN_CONNECTION_POINT_MAP  
+##  <a name="begin_connection_point_map"></a>  BEGIN_CONNECTION_POINT_MAP  
  연결 지점 맵 항목의 시작을 표시 합니다.  
   
 ```
@@ -57,10 +52,10 @@ BEGIN_CONNECTION_POINT_MAP(x)
   
  Atl에서 연결 지점에 대 한 자세한 내용은 문서 참조 [연결점](../../atl/atl-connection-points.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing#101](../../atl/codesnippet/cpp/connection-point-macros_1.h)]  
   
-##  <a name="connection_point_entry"></a>CONNECTION_POINT_ENTRY 및 CONNECTION_POINT_ENTRY_P  
+##  <a name="connection_point_entry"></a>  CONNECTION_POINT_ENTRY 및 CONNECTION_POINT_ENTRY_P  
  액세스할 수 있도록 연결 지점 맵은에 지정된 된 인터페이스에 대 한 연결 지점을 입력 합니다.  
   
 ```
@@ -82,10 +77,10 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
   
  Atl에서 연결 지점에 대 한 자세한 내용은 문서 참조 [연결점](../../atl/atl-connection-points.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing#120](../../atl/codesnippet/cpp/connection-point-macros_2.h)]  
   
-##  <a name="end_connection_point_map"></a>END_CONNECTION_POINT_MAP  
+##  <a name="end_connection_point_map"></a>  END_CONNECTION_POINT_MAP  
  연결 지점 맵 항목의 끝을 표시 합니다.  
   
 ```
@@ -97,7 +92,7 @@ END_CONNECTION_POINT_MAP()
   
  Atl에서 연결 지점에 대 한 자세한 내용은 문서 참조 [연결점](../../atl/atl-connection-points.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing#128](../../atl/codesnippet/cpp/connection-point-macros_3.h)]  
   
 ## <a name="see-also"></a>참고 항목  

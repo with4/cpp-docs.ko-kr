@@ -1,13 +1,10 @@
 ---
-title: "-U,-u (기호 정의 해제) | Microsoft Docs"
-ms.custom: 
+title: -U,-u (기호 정의 해제) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UndefinePreprocessorDefinitions
 - VC.Project.VCCLWCECompilerTool.UndefinePreprocessorDefinitions
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18fdaf0c2cb980f1ed19fdfc0577769a9985cf85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 897ca229ec7312812b6f2bd2991bf519e98c836c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u(기호 정의 해제)
 **/U** 컴파일러 옵션에 지정된 된 전처리기 기호 정의 해제 합니다. **/u** 컴파일러 옵션에는 컴파일러를 정의 하는 Microsoft 전용 기호 정의 해제 합니다.  
@@ -86,4 +81,4 @@ ms.lasthandoff: 12/21/2017
  [/J (부호 형식은 기본 문자)](../../build/reference/j-default-char-type-is-unsigned.md)   
  [/GR (런타임 형식 정보 사용)](../../build/reference/gr-enable-run-time-type-information.md)   
  [/EH (예외 처리 모델)](../../build/reference/eh-exception-handling-model.md)   
- [/MD, /MT, /LD (런타임 라이브러리 사용)](../../build/reference/md-mt-ld-use-run-time-library.md)
+ [/MD, /MT, /LD(런타임 라이브러리 사용)](../../build/reference/md-mt-ld-use-run-time-library.md)

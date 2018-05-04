@@ -1,30 +1,25 @@
 ---
-title: "-커널 (만들 커널 모드 이진) | Microsoft Docs"
-ms.custom: 
+title: -커널 (만들 커널 모드 이진) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /kernel
 - /kernel-
 dev_langs:
 - C++
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0e20df59788577acb680cbd18b737f7ec2d7822
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbbae275e751287464e4bf1637ee21aff77fb697
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel(커널 모드 이진 만들기)
 Windows 커널에서 실행할 수 있는 이진 파일을 만듭니다.  
@@ -53,7 +48,7 @@ Windows 커널에서 실행할 수 있는 이진 파일을 만듭니다.
   
 |동작 유형|**/kernel** 동작|  
 |-------------------|---------------------------|  
-|C++ 예외 처리|사용 하지 않습니다. 모든 인스턴스는 `throw` 및 `try` 키워드는 컴파일러 오류를 내보냅니다 (예외 사양을 제외한 `throw()`). 더 **/EH** 옵션은 호환 **/kernel**를 제외 하 고 **/EH-**합니다.|  
+|C++ 예외 처리|사용 하지 않습니다. 모든 인스턴스는 `throw` 및 `try` 키워드는 컴파일러 오류를 내보냅니다 (예외 사양을 제외한 `throw()`). 더 **/EH** 옵션은 호환 **/kernel**를 제외 하 고 **/EH-** 합니다.|  
 |RTTI|사용 하지 않습니다. 모든 인스턴스는 `dynamic_cast` 및 `typeid` 키워드 하지 않는 한 컴파일러 오류 내보낼 `dynamic_cast` 정적으로 사용 됩니다.|  
 |`new` 및 `delete`|명시적으로 정의 해야는 `new()` 또는 `delete()` 연산자; 컴파일러도 아니고 런타임에서 default 정의 제공 합니다.|  
   
@@ -76,7 +71,7 @@ class NONPAGESECTION MyNonPagedClass
   
  일부 대상 아키텍처에서 다음과 같은 조합 및 **/arch** 옵션을 함께 사용 될 때 오류가 생성 **/kernel**:  
   
--   **/arch: {SSE &#124; SSE2 &#124; AVX}** x86에서 지원 되지 않습니다. 만 **/arch:IA32** 를 사용할 수 **/kernel** x86 합니다.  
+-   **/arch: {SSE&#124;SSE2&#124;AVX}** x86에서 지원 되지 않습니다. 만 **/arch:IA32** 를 사용할 수 **/kernel** x86 합니다.  
   
 -   **/arch: avx** 지원 되지 않는 **/kernel** x64 합니다.  
   

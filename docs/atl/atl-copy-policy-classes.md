@@ -1,13 +1,10 @@
 ---
-title: "ATL 복사 정책 클래스 | Microsoft Docs"
-ms.custom: 
+title: ATL 복사 정책 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54ac3c9d53c3b6d2b295643001fd15b1e4c6c46d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 34b9ed5dca45633a5ab980d38b8a7cda151f5dc7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-copy-policy-classes"></a>ATL 복사 정책 클래스
 복사 정책 클래스는 [유틸리티 클래스가](../atl/utility-classes.md) 초기화 하는 데 사용, 복사 및 데이터를 삭제 합니다. 복사 정책 클래스를 사용 하 여 모든 유형의 데이터에 대 한 복사 의미를 정의 하 고 다른 데이터 형식 간의 변환을 정의할 수 있습니다.  
@@ -75,14 +70,14 @@ ms.lasthandoff: 12/21/2017
  일반적으로 다른 유형의 (즉, 데이터 형식 간 변환)를 복사 하기 위한 고유한 복사본 정책 클래스를 정의 해야 합니다. 몇 가지 예제 사용자 지정 복사본 정책 클래스는 VCUE_Copy.h 및 VCUE_CopyString.h에서 파일을 볼는 [ATLCollections](../visual-cpp-samples.md) 샘플. 이 파일은 두 개의 템플릿 복사 정책 클래스 포함 `GenericCopy` 및 `MapCopy`, 더하기 특수화의 숫자가 `GenericCopy` 서로 다른 데이터 형식에 대 한 합니다.  
   
 ### <a name="genericcopy"></a>GenericCopy  
- `GenericCopy`지정할 수 있습니다는 *SourceType* 및 `DestinationType` 템플릿 인수로 사용 합니다. 다음은 가장 일반적인 형태의 `GenericCopy` VCUE_Copy.h에서 클래스:  
+ `GenericCopy` 지정할 수 있습니다는 *SourceType* 및 `DestinationType` 템플릿 인수로 사용 합니다. 다음은 가장 일반적인 형태의 `GenericCopy` VCUE_Copy.h에서 클래스:  
   
  [!code-cpp[NVC_ATL_COM#30](../atl/codesnippet/cpp/atl-copy-policy-classes_1.h)]  
   
  이 클래스의 다음 특수화 VCUE_Copy.h에도 포함 되어: `GenericCopy<BSTR>`, `GenericCopy<VARIANT, BSTR>`, `GenericCopy<BSTR, VARIANT>`합니다. VCUE_CopyString.h 포함에서 복사에 대 한 특수화 **std:: string**s: `GenericCopy<std::string>`, `GenericCopy<VARIANT, std::string>`, 및 `GenericCopy<BSTR, std::string>`합니다. 높일 수 `GenericCopy` 추가 자신만의 특수화를 제공 하 여 합니다.  
   
 ### <a name="mapcopy"></a>MapCopy  
- `MapCopy`이므로 데이터가 저장 되 고 대상 유형 맵의 형식을 지정할 수 있습니다 데이터를 복사 하는 c + + 표준 라이브러리 스타일 map에 저장 되어 있다고 가정 합니다. 클래스의 구현을 사용 하 여 제공한 typedef는 *MapType* 클래스 원본 데이터의 형식을 결정 하 고 적절 한 호출 `GenericCopy` 클래스입니다. 이 클래스의 없음 특수화가 필요 합니다.  
+ `MapCopy` 이므로 데이터가 저장 되 고 대상 유형 맵의 형식을 지정할 수 있습니다 데이터를 복사 하는 c + + 표준 라이브러리 스타일 map에 저장 되어 있다고 가정 합니다. 클래스의 구현을 사용 하 여 제공한 typedef는 *MapType* 클래스 원본 데이터의 형식을 결정 하 고 적절 한 호출 `GenericCopy` 클래스입니다. 이 클래스의 없음 특수화가 필요 합니다.  
   
  [!code-cpp[NVC_ATL_COM#31](../atl/codesnippet/cpp/atl-copy-policy-classes_2.h)]  
   

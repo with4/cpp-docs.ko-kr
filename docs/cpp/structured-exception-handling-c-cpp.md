@@ -2,11 +2,8 @@
 title: 구조적 예외 처리 (C/c + +) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37d5a89ebf95d8852664dcd50e44e82009ebd95e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b5b6aafa91ecfde27cc38cccc52f36af43ad21ae
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 Windows 및 Visual C++에서 SEH(구조적 예외 처리)를 지원하지만 포팅 가능하고 유연한 코드를 만들기 위해 ISO 표준 C++ 예외 처리를 사용하는 것이 좋습니다. 그러나 기존 코드 또는 특정 종류의 프로그램에서는 SEH를 계속 사용할 수 있습니다.  
@@ -38,9 +33,9 @@ Windows 및 Visual C++에서 SEH(구조적 예외 처리)를 지원하지만 포
 ## <a name="grammar"></a>문법  
  *try 문을 제외 하 고* :  
   
- `__try`*복합 문*  
+ `__try` *복합 문*  
   
- `__except`( `expression` ) *복합 문*  
+ `__except` ( `expression` ) *복합 문*  
   
 ## <a name="remarks"></a>설명  
  SEH를 사용하면 실행이 예기치 않게 종료되는 경우 메모리 블록 및 파일과 같은 리소스가 올바른지 확인할 수 있습니다. `goto` 문을 사용하지 않는 간결한 구조의 코드나 반환 코드의 정교한 테스트를 사용하여 메모리 부족 등의 특정 문제를 처리할 수도 있습니다.  
@@ -75,7 +70,7 @@ Windows 및 Visual C++에서 SEH(구조적 예외 처리)를 지원하지만 포
   
 -   [C++에서 구조적 예외 처리 사용](../cpp/using-structured-exception-handling-with-cpp.md)  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  앞서 설명한 것 처럼, 소멸자는 c + + 프로그램에서 SEH를 사용 하 고 사용 하 여 컴파일하는 경우 로컬 개체는 호출 된는 **/EH** 특정 한정자와 함께 옵션-예를 들어 **/EHsc** 및 **/EHa**. 그러나 C++ 예외도 사용하는 경우 실행 중의 동작은 예상과 다를 수 있습니다. 다음 예제에서는 이러한 동작의 차이를 보여 줍니다.  
   
 ```cpp  

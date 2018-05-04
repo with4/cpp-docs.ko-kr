@@ -1,27 +1,22 @@
 ---
-title: "프롤로그 및 에필로그 | Microsoft Docs"
-ms.custom: 
+title: 프롤로그 및 에필로그 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 0453ed1a-3ff1-4bee-9cc2-d6d3d6384984
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 700b467065d17a61dcfabf9dcaa6577a7ecffc11
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2939293fe5fbdfd07cb12470790de5b064489d7f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prolog-and-epilog"></a>프롤로그 및 에필로그
 스택 공간이 할당 되는 모든 함수, 호출 함수 다른 비휘발성 레지스터를 저장 하거나 예외 처리를 사용 하 여 해당 주소 한계 각 함수의 테이블 항목에 연결 된 해제 데이터에서 설명 하는 프롤로그 있어야 합니다 ( 참조[예외 처리 (x64)](../build/exception-handling-x64.md)). 프롤로그 집 주소에는 레지스터, 필요한 경우 비휘발성 레지스터를 스택에 푸시합니다. 인수를 저장, 지역 및, 임시 개체에 대 한 스택 고정된 부분을 할당 및 필요에 따라 프레임 포인터를 설정 합니다. 연결 된 해제 데이터 프롤로그의 동작을 설명 하 고 프롤로그 코드의 효과 취소 하는 데 필요한 정보를 제공 해야 합니다.  

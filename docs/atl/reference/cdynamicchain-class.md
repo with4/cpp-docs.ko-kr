@@ -2,11 +2,8 @@
 title: CDynamicChain 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDynamicChain
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - chaining message maps
 - CDynamicChain class
 ms.assetid: f084b2be-0e77-4836-973d-ae278a1e9da8
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f57da02b764c1cbce6a97ecbea8aa84e4ffcce9e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08f6d09546d4514950b5b45ffb9494116294d051
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdynamicchain-class"></a>CDynamicChain 클래스
 이 클래스는 메시지 맵의 동적 체인을 지 원하는 메서드를 제공 합니다.  
@@ -64,13 +59,13 @@ class CDynamicChain
 |[CDynamicChain::SetChainEntry](#setchainentry)|메시지 맵 항목을 컬렉션에 추가 하거나 기존 항목을 수정 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CDynamicChain`Windows 메시지를 다른 개체의 메시지 맵에 런타임 시 연결을 사용 하도록 설정 하는 메시지 맵의 컬렉션을 관리 합니다.  
+ `CDynamicChain` Windows 메시지를 다른 개체의 메시지 맵에 런타임 시 연결을 사용 하도록 설정 하는 메시지 맵의 컬렉션을 관리 합니다.  
   
  에 메시지 맵의 동적 체인에 대 한 지원을 추가 하려면 다음을 수행 합니다.  
   
 -   클래스를 파생 `CDynamicChain`합니다. 메시지 맵에 지정는 [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) 매크로 다른 개체의 기본 메시지 맵에 체인으로 연결 합니다.  
   
--   연결 하려는 모든 클래스를 파생 [CMessageMap](../../atl/reference/cmessagemap-class.md)합니다. `CMessageMap`한 개체가 다른 개체에는 메시지 맵을 노출할 수 있습니다.  
+-   연결 하려는 모든 클래스를 파생 [CMessageMap](../../atl/reference/cmessagemap-class.md)합니다. `CMessageMap` 한 개체가 다른 개체에는 메시지 맵을 노출할 수 있습니다.  
   
 -   호출 `CDynamicChain::SetChainEntry` 식별 하는 개체 및 메시지 맵에 체인을 해야 하는 하 합니다.  
   
@@ -89,7 +84,7 @@ class CDynamicChain
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
   
-##  <a name="callchain"></a>CDynamicChain::CallChain  
+##  <a name="callchain"></a>  CDynamicChain::CallChain  
  다른 개체의 메시지 맵에 Windows 메시지를 보냅니다.  
   
 ```
@@ -127,16 +122,16 @@ BOOL CallChain(
 ### <a name="remarks"></a>설명  
  호출 하 고 창 프로시저에 대 한 `CallChain`를 지정 해야 합니다는 [CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic) 메시지 맵에서 매크로입니다. 예를 들어 참조는 [CDynamicChain](../../atl/reference/cdynamicchain-class.md) 개요입니다.  
   
- `CallChain`이전 호출을 [SetChainEntry](#setchainentry) 연결 하는 `dwChainID` 개체 및 자신의 메시지 맵을 포함 된 값입니다.  
+ `CallChain` 이전 호출을 [SetChainEntry](#setchainentry) 연결 하는 `dwChainID` 개체 및 자신의 메시지 맵을 포함 된 값입니다.  
   
-##  <a name="cdynamicchain"></a>CDynamicChain::CDynamicChain  
+##  <a name="cdynamicchain"></a>  CDynamicChain::CDynamicChain  
  생성자입니다.  
   
 ```
 CDynamicChain();
 ```  
   
-##  <a name="dtor"></a>CDynamicChain:: ~ CDynamicChain  
+##  <a name="dtor"></a>  CDynamicChain:: ~ CDynamicChain  
  소멸자입니다.  
   
 ```
@@ -146,7 +141,7 @@ CDynamicChain();
 ### <a name="remarks"></a>설명  
  할당 된 모든 리소스를 해제합니다.  
   
-##  <a name="removechainentry"></a>CDynamicChain::RemoveChainEntry  
+##  <a name="removechainentry"></a>  CDynamicChain::RemoveChainEntry  
  컬렉션에서 지정 된 메시지 맵을 제거합니다.  
   
 ```
@@ -160,7 +155,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
 ### <a name="return-value"></a>반환 값  
  **True 이면** 메시지 맵에 컬렉션에서 성공적으로 제거 됩니다. 그렇지 않으면 **FALSE**합니다.  
   
-##  <a name="setchainentry"></a>CDynamicChain::SetChainEntry  
+##  <a name="setchainentry"></a>  CDynamicChain::SetChainEntry  
  컬렉션에 지정 된 메시지 맵을 추가합니다.  
   
 ```

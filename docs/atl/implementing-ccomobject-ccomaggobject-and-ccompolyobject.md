@@ -1,13 +1,10 @@
 ---
-title: "구현 CComObject, CComAggObject, 및 CComPolyObject | Microsoft Docs"
-ms.custom: 
+title: 구현 CComObject, CComAggObject, 및 CComPolyObject | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - CComPolyObject
 - CComAggObject
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - CComAggObject class
 - CComObject class, implementing
 ms.assetid: 5aabe938-104d-492e-9c41-9f7fb1c62098
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54f237a629c4af9ea7ae30aeca21c03786abcd97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ac45a6edbe606ba445ed3ae58cfde348f83e4de
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>CComObject, CComAggObject, 및 CComPolyObject 구현
 템플릿 클래스 [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), 및 [CComPolyObject](../atl/reference/ccompolyobject-class.md) 상속 체인의 가장 많이 파생 된 클래스는 항상 합니다. 책임의 메서드 중 일부를 처리 하는 **IUnknown**: `QueryInterface`, `AddRef`, 및 **릴리스**합니다. 또한 `CComAggObject` 및 `CComPolyObject` (집계 개체에 대해 사용) 하는 경우 특별 한 참조 횟수를 제공 하 고 `QueryInterface` 알 수 없는 내부에 필요한 의미 체계입니다.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 |매크로|효과|  
 |-----------|------------|  
 |`DECLARE_NOT_AGGREGATABLE`|항상 사용 하 여 `CComObject`합니다.|  
-|`DECLARE_AGGREGATABLE`|사용 하 여 `CComAggObject` 개체가 집계 되는 경우 및 `CComObject` 없는 경우. `CComCoClass`이 매크로 포함 하므로 아닌 경우는 **DECLARE_\*_AGGREGATABLE** 매크로 클래스에 선언 된이 기본값으로 사용 됩니다.|  
+|`DECLARE_AGGREGATABLE`|사용 하 여 `CComAggObject` 개체가 집계 되는 경우 및 `CComObject` 없는 경우. `CComCoClass` 이 매크로 포함 하므로 아닌 경우는 **DECLARE_\*_AGGREGATABLE** 매크로 클래스에 선언 된이 기본값으로 사용 됩니다.|  
 |`DECLARE_ONLY_AGGREGATABLE`|항상 사용 하 여 `CComAggObject`합니다. 개체가 집계 되지 않은 경우 오류를 반환 합니다.|  
 |`DECLARE_POLY_AGGREGATABLE`|인스턴스를 만들고 ATL **CComPolyObject\<CYourClass >** 때 **IClassFactory::CreateInstance** 호출 됩니다. 만드는 동안 알 수 없는 외부의 값이 확인 됩니다. 이 경우 **NULL**, **IUnknown** 집계 되지 않은 원시 개체에 대 한 구현 됩니다. 알 수 없는 외부 없으면 **NULL**, **IUnknown** 집계 개체에 대 한 구현 됩니다.|  
   

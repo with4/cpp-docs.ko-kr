@@ -1,13 +1,10 @@
 ---
-title: "이벤트 처리 인터페이스를 구현 합니다. | Microsoft Docs"
-ms.custom: 
+title: 이벤트 처리 인터페이스를 구현 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - event handling, ATL
 - interfaces, event and event sink
 ms.assetid: eb2a5b33-88dc-4ce3-bee0-c5c38ea050d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9226cf2630ad18651f9bda2f154f49b5b739a433
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea37aa4c84cb0824d11f0081e38d9e8157b77ed1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-the-event-handling-interface"></a>이벤트 처리 인터페이스를 구현 합니다.
 ATL 사용 하면 이벤트를 처리 하는 데 필요한 세 요소 모두: 이벤트 인터페이스를 구현 하 고 이벤트 소스를 확인 하 라는 바이 이벤트 소스입니다. 수행 해야 하는 정확한 단계는 응용 프로그램의 성능 요구 사항 및 이벤트 인터페이스의 형식에 따라 달라 집니다.  

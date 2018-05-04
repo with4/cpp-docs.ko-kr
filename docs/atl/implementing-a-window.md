@@ -1,13 +1,10 @@
 ---
-title: "창 (ATL) 구현 | Microsoft Docs"
-ms.custom: 
+title: 창 (ATL) 구현 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - CWindowImpl class, using
 - windows [C++], implementing in ATL
 ms.assetid: eb1ce8d6-72f9-4894-aae7-e60a61665628
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46007b84d297689b77c3eda5418c4b91be120da5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7f3e2663fa2e8c39bbd8b618d279a49b7eb29233
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="implementing-a-window"></a>창 구현
 클래스 [CWindowImpl](../atl/reference/cwindowimpl-class.md) 창을 구현 하 고 해당 메시지를 처리할 수 있습니다. 메시지 ATL에서 처리 한 메시지 맵을 기반으로 합니다. 이 섹션에 설명합니다.  

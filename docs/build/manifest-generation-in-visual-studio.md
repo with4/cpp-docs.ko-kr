@@ -1,29 +1,24 @@
 ---
-title: "Visual Studio에서 매니페스트 생성 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 매니페스트 생성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d701d73103ee2c5ac72eb36d9919132f0578b1b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73b5cbe631d078dd6ee27b4f7e0a97503c36638b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Visual Studio에서 매니페스트 생성
 프로젝트의 특정 프로젝트에 대 한 매니페스트 파일의 생성을 제어할 수 있습니다 **속성 페이지** 대화 상자. 에 **구성 속성** 탭을 클릭 **링커**, 다음 **매니페스트 파일**, 다음 **매니페스트 생성**합니다. 기본적으로 새 프로젝트의 프로젝트 속성은 매니페스트 파일을 생성 하도록 설정 됩니다. 그러나 사용 하 여 프로젝트에 대 한 매니페스트 생성을 비활성화할 수는 **매니페스트 생성** 프로젝트의 속성입니다. 이 속성이로 설정 된 경우 **예**,이 프로젝트에 대 한 매니페스트가 생성 됩니다. 응용 프로그램 코드의 종속성을 확인할 때 링커가 어셈블리 정보를 무시 하는 그렇지 않으며 매니페스트를 생성 하지 않습니다.  

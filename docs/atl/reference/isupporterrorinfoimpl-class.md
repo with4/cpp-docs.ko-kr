@@ -1,12 +1,9 @@
 ---
-title: "ISupportErrorInfoImpl 클래스 | Microsoft Docs"
-ms.custom: 
+title: ISupportErrorInfoImpl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - ISupportErrorInfoImpl
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - ISupportErrorInfoImpl class
 - error information, ATL
 ms.assetid: e33a4b11-a123-41cf-bcea-7b19743902af
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61e8dc6b277f8eb59ade428d3ef8ea3dd5c083ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3e226f66d6ddd20181f083f723568acb1cc647c7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl 클래스
 이 클래스의 기본 구현을 제공는 [ISupportErrorInfo 인터페이스](http://msdn.microsoft.com/en-us/42d33066-36b4-4a5b-aa5d-46682e560f32) 단일 인터페이스만 개체에는 오류를 생성 하는 경우에 사용할 수 있습니다.  
@@ -60,7 +55,7 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 ## <a name="remarks"></a>설명  
  [ISupportErrorInfo 인터페이스](http://msdn.microsoft.com/en-us/42d33066-36b4-4a5b-aa5d-46682e560f32) 하면 클라이언트에 오류 정보를 반환할 수 있습니다. 사용 하는 개체 **IErrorInfo** 구현 해야 **ISupportErrorInfo**합니다.  
   
- 클래스 `ISupportErrorInfoImpl` 의 기본 구현을 제공 **ISupportErrorInfo** 단일 인터페이스만 개체에는 오류를 생성 하는 경우에 사용할 수 있습니다. 예:  
+ 클래스 `ISupportErrorInfoImpl` 의 기본 구현을 제공 **ISupportErrorInfo** 단일 인터페이스만 개체에는 오류를 생성 하는 경우에 사용할 수 있습니다. 예를 들어:  
   
  [!code-cpp[NVC_ATL_COM#48](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_1.h)]  
   
@@ -72,7 +67,7 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="interfacesupportserrorinfo"></a>ISupportErrorInfoImpl::InterfaceSupportsErrorInfo  
+##  <a name="interfacesupportserrorinfo"></a>  ISupportErrorInfoImpl::InterfaceSupportsErrorInfo  
  인터페이스에서 식별할지 여부를 나타냅니다. `riid` 지원는 [IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447) 인터페이스입니다.  
   
 ```
@@ -82,7 +77,7 @@ STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 ### <a name="remarks"></a>설명  
  참조 [ISupportErrorInfo::InterfaceSupportsErrorInfo](http://msdn.microsoft.com/en-us/a54ef18d-ee3f-4483-ac4a-99d758f0960a) in the Windows SDK입니다.  
   
-##  <a name="getsize"></a>IThreadPoolConfig::GetSize  
+##  <a name="getsize"></a>  IThreadPoolConfig::GetSize  
  풀의 스레드 수를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -96,10 +91,10 @@ STDMETHOD(GetSize)(int* pnNumThreads);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_2.cpp)]  
   
-##  <a name="gettimeout"></a>IThreadPoolConfig::GetTimeout  
+##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout  
  스레드 풀에서 대기 하는 스레드를 종료 하는 시간 (밀리초)에는 최대 시간을 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -113,10 +108,10 @@ STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [IThreadPoolConfig::GetSize](#getsize)합니다.  
   
-##  <a name="setsize"></a>IThreadPoolConfig::SetSize  
+##  <a name="setsize"></a>  IThreadPoolConfig::SetSize  
  풀의 스레드 수를 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -134,10 +129,10 @@ STDMETHOD(SetSize)int nNumThreads);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [IThreadPoolConfig::GetSize](#getsize)합니다.  
   
-##  <a name="settimeout"></a>IThreadPoolConfig::SetTimeout  
+##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout  
  스레드 풀에서 대기 하는 스레드를 종료 하는 시간 (밀리초)에 최대 시간을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -151,7 +146,7 @@ STDMETHOD(SetTimeout)(DWORD dwMaxWait);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [IThreadPoolConfig::GetSize](#getsize)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

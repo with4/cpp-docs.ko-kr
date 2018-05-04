@@ -1,13 +1,10 @@
 ---
-title: "-Ob (인라인 함수 확장) | Microsoft Docs"
-ms.custom: 
+title: -Ob (인라인 함수 확장) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/25/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.InlineFunctionExpansion
 - VC.Project.VCCLCompilerTool.InlineFunctionExpansion
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - Ob0 compiler option [C++]
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b83d470eaf6a30698d8c2836620a0688daa35cc1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fb7c31dca2d95232850140576be3ddc0ac695cac
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob(인라인 함수 확장)
 
@@ -81,7 +76,7 @@ ms.lasthandoff: 12/21/2017
 
 1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.
 
-1. 확장 **구성 속성**, **C/c + +**를 선택 하 고 **최적화**합니다.
+1. 확장 **구성 속성**, **C/c + +** 를 선택 하 고 **최적화**합니다.
 
 1. 수정 된 **인라인 함수 확장** 속성입니다.
 
@@ -91,6 +86,6 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="see-also"></a>참고 항목
 
-[/O 옵션 (코드 최적화)](../../build/reference/o-options-optimize-code.md)  
+[/O 옵션(코드 최적화)](../../build/reference/o-options-optimize-code.md)  
 [컴파일러 옵션](../../build/reference/compiler-options.md)  
 [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)

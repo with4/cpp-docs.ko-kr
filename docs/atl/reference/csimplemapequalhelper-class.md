@@ -1,12 +1,9 @@
 ---
-title: "CSimpleMapEqualHelper 클래스 | Microsoft Docs"
-ms.custom: 
+title: CSimpleMapEqualHelper 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSimpleMapEqualHelper
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CSimpleMapEqualHelper class
 ms.assetid: 9bb2968a-d609-405c-8272-ff3b42df6164
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecc32dc8e6e9b249b0b8b334ec3d08bf26cbd1ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4bfef99d12ae724c2ca6e70375f08a8dc1fb15b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csimplemapequalhelper-class"></a>CSimpleMapEqualHelper 클래스
 이 클래스는에 대 한 도우미는 [CSimpleMap](../../atl/reference/csimplemap-class.md) 클래스입니다.  
@@ -62,7 +57,7 @@ class CSimpleMapEqualHelper
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsimpcoll.h  
   
-##  <a name="isequalkey"></a>CSimpleMapEqualHelper::IsEqualKey  
+##  <a name="isequalkey"></a>  CSimpleMapEqualHelper::IsEqualKey  
  두 키가 같은지 테스트합니다.  
   
 ```
@@ -79,7 +74,7 @@ static bool IsEqualKey(const TKey& k1, const TKey& k2);
 ### <a name="return-value"></a>반환 값  
  키가 같으면 false를 반환 하지 않으면 true를 반환 합니다.  
   
-##  <a name="isequalvalue"></a>CSimpleMapEqualHelper::IsEqualValue  
+##  <a name="isequalvalue"></a>  CSimpleMapEqualHelper::IsEqualValue  
  두 값이 같은지를 테스트합니다.  
   
 ```
@@ -87,10 +82,10 @@ static bool IsEqualValue(const TVal& v1, const TVal& v2);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- *v1*  
+ *V1*  
  첫 번째 값입니다.  
   
- *v2*  
+ *V2*  
  두 번째 값입니다.  
   
 ### <a name="return-value"></a>반환 값  

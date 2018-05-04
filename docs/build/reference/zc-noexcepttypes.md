@@ -1,9 +1,9 @@
 ---
-title: "-Zc: noexceptTypes (C + + 17 noexcept 규칙) | Microsoft Docs"
+title: '-Zc: noexceptTypes (C + + 17 noexcept 규칙) | Microsoft Docs'
 ms.date: 11/14/2017
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /Zc:noexceptTypes
 dev_langs:
@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1cbf7e3c-0f82-4f91-84dd-612bcf26d2c6
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af455b9a781295f3e6f446b7dc5c3d253fe2f4c5
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 25ad2a662af2cda49e3e8dd8c769fa75dafee94b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc:noexceptTypes (C + + 17 noexcept 규칙)
 
@@ -88,7 +87,7 @@ Visual C++의 규칙과 관련된 문제에 대한 자세한 내용은 [Nonstand
 
 1. 수정 된 **추가 옵션** 포함할 속성을 **/Zc:noexceptTypes** 또는 **/Zc:noexceptTypes-** 선택한 후 **확인**합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [/Zc(규칙)](../../build/reference/zc-conformance.md)  
 [noexcept](../../cpp/noexcept-cpp.md)  

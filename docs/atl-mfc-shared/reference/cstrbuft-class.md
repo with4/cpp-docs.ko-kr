@@ -2,11 +2,8 @@
 title: CStrBufT 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStrBufT
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - CStrBufT class
 - shared classes, CStrBufT
 ms.assetid: 6b50fa8f-87e8-4ed4-a229-157ce128710f
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8df7f6c1dbd9987a9f83ed5b33a4c97fd90fec7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 695c3bc4c5e03f2ff6c1865f456b1ef358e3dcf4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstrbuft-class"></a>CStrBufT 클래스
 이 클래스에 대 한 자동 리소스 정리 제공 `GetBuffer` 및 `ReleaseBuffer` 기존 호출 `CStringT` 개체입니다.  
@@ -48,9 +43,9 @@ class CStrBufT
  *TCharType*  
  문자 형식을 `CStrBufT` 클래스입니다. 다음 중 하나일 수 있습니다.  
   
-- `char`(문자열에 대 한 ANSI 문자)  
+- `char` (문자열에 대 한 ANSI 문자)  
   
-- `wchar_t`(문자열에 대 한 유니코드 문자)  
+- `wchar_t` (문자열에 대 한 유니코드 문자)  
   
 - **TCHAR** (ANSI 및 유니코드 문자열)에 대 한  
   
@@ -98,7 +93,7 @@ class CStrBufT
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsimpstr.h  
   
-##  <a name="auto_length"></a>CStrBufT::AUTO_LENGTH  
+##  <a name="auto_length"></a>  CStrBufT::AUTO_LENGTH  
  릴리스에서 문자열의 새 길이 자동으로 결정 합니다.  
   
 ```
@@ -108,7 +103,7 @@ static const DWORD AUTO_LENGTH = 0x01;
 ### <a name="remarks"></a>설명  
  릴리스에서 문자열의 새 길이 자동으로 결정 합니다. Null로 끝나는 문자열 이어야 합니다.  
   
-##  <a name="cstrbuft"></a>CStrBufT::CStrBufT  
+##  <a name="cstrbuft"></a>  CStrBufT::CStrBufT  
  버퍼 개체를 만듭니다.  
   
 ```
@@ -135,7 +130,7 @@ explicit CStrBufT(StringType& str) throw(...);
   
  복사 생성자가 참고 `private`합니다.  
   
-##  <a name="operator_pcxstr"></a>CStrBufT::operator PCXSTR  
+##  <a name="operator_pcxstr"></a>  CStrBufT::operator PCXSTR  
  C 스타일 문자열로 연결 된 문자열 개체에 저장 된 문자를 직접 액세스 합니다.  
   
 ```  
@@ -148,7 +143,7 @@ operator PCXSTR() const throw();
 ### <a name="remarks"></a>설명  
  String 개체의 문자 버퍼에 대 한 포인터를 반환 하려면이 함수를 호출 합니다. 이 포인터와 함께 문자열 개체의 내용은 변경할 수 없습니다.  
   
-##  <a name="operator_pxstr"></a>CStrBufT::operator PXSTR  
+##  <a name="operator_pxstr"></a>  CStrBufT::operator PXSTR  
  C 스타일 문자열로 연결 된 문자열 개체에 저장 된 문자를 직접 액세스 합니다.  
   
 ```
@@ -161,21 +156,21 @@ operator PXSTR() throw();
 ### <a name="remarks"></a>설명  
  String 개체의 문자 버퍼에 대 한 포인터를 반환 하려면이 함수를 호출 합니다. 개발자는이 포인터와 함께 문자열 개체의 내용을 변경할 수 있습니다.  
   
-##  <a name="pcxstr"></a>CStrBufT::PCXSTR  
+##  <a name="pcxstr"></a>  CStrBufT::PCXSTR  
  상수 문자열에 대 한 포인터입니다.  
   
 ```
 typedef CSimpleStringT<TCharType>::PCXSTR PCXSTR;
 ```  
   
-##  <a name="pxstr"></a>CStrBufT::PXSTR  
+##  <a name="pxstr"></a>  CStrBufT::PXSTR  
  문자열에 대 한 포인터입니다.  
   
 ```
 typedef CSimpleStringT<TCharType>::PXSTR PXSTR;
 ```  
   
-##  <a name="set_length"></a>CStrBufT::SET_LENGTH  
+##  <a name="set_length"></a>  CStrBufT::SET_LENGTH  
  에 있는 문자열 개체의 길이 설정 `GetBuffer` 시간입니다.  
   
 ```
@@ -187,7 +182,7 @@ static const DWORD SET_LENGTH = 0x02;
   
  있는지 여부를 확인 [CSimpleStringT::GetBuffer](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) 및 [CSimpleStringT::GetBufferSetLength](../../atl-mfc-shared/reference/csimplestringt-class.md#getbuffersetlength) 문자열 버퍼 개체가 생성 될 때 호출 됩니다.  
   
-##  <a name="setlength"></a>CStrBufT::SetLength  
+##  <a name="setlength"></a>  CStrBufT::SetLength  
  문자 버퍼의 길이 설정합니다.  
   
 ```
@@ -204,7 +199,7 @@ void SetLength(int nLength);
 ### <a name="remarks"></a>설명  
  버퍼 개체를 나타내는 문자열의 길이 설정 하려면이 함수를 호출 합니다.  
   
-##  <a name="stringtype"></a>CStrBufT::StringType  
+##  <a name="stringtype"></a>  CStrBufT::StringType  
  이 클래스 템플릿의 특수화에 의해 조작 될 버퍼가 문자열 형식입니다.  
   
 ```

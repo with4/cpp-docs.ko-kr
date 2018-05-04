@@ -1,12 +1,9 @@
 ---
-title: "시도-문을 제외 하 고 | Microsoft Docs"
-ms.custom: 
+title: 시도-문을 제외 하 고 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _abnormal_termination_cpp
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - _exception_info keyword [C++]
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24be4e7fd6b4dc95d9964e69943a94ecad947a47
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 3bd1e8139af64539974ad942f60a19e31b14d7f3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="try-except-statement"></a>try-except 문
 
@@ -105,7 +100,7 @@ A `goto` 문은 보호 된 섹션에서 외부로 이동할 수도 수 및와 �
 
 구조적된 예외 처리 사용 시 사용할 수 있는 두 가지 내장 함수를 제공 합니다.는 **시도-제외 하 고** 문을: `GetExceptionCode` 및 `GetExceptionInformation`합니다.
 
-`GetExceptionCode`예외의 코드 (32 비트 정수)를 반환합니다.
+`GetExceptionCode` 예외의 코드 (32 비트 정수)를 반환합니다.
 
 내장 함수 `GetExceptionInformation` 예외에 대 한 추가 정보가 포함 된 구조에 대 한 포인터를 반환 합니다. 이 포인터를 통하여, 하드웨어 예외 발생 시의 컴퓨터 상태에 액세스할 수 있습니다. 구조체는 다음과 같습니다.
 
@@ -124,13 +119,13 @@ typedef struct _EXCEPTION_POINTERS {
 
 excpt.h 이러한 내장 함수에 대 한 일부 대체 이름을 정의합니다.
 
-`GetExceptionCode`가 같음`_exception_code`
+`GetExceptionCode` 가 같음 `_exception_code`
 
- `GetExceptionInformation`가 같음`_exception_info`
+ `GetExceptionInformation` 가 같음 `_exception_info`
 
- `AbnormalTermination`가 같음`_abnormal_termination`
+ `AbnormalTermination` 가 같음 `_abnormal_termination`
   
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ```cpp
 // exceptions_try_except_Statement.cpp

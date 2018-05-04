@@ -1,12 +1,9 @@
 ---
-title: "범위 (Visual c + +) | Microsoft Docs"
-ms.custom: 
+title: 범위 (Visual c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55baa4496522336a5a64ee81daa7a8ce484534c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 469fc76701161fda8116627c2b16fb4dfa63224e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scope-visual-c"></a>범위(Visual C++)
 프로그램의 특정 영역에서만 C++를 사용할 수 있습니다. 이 영역을 이름의 "범위"라고 합니다. 범위는 정적 범위의 개체가 표시되지 않는 이름의 "수명"을 결정합니다. 클래스 생성자와 소멸자가 호출되고 범위에 로컬인 변수가 초기화되면 범위가 이름의 표시 유형을 결정하기도 합니다. (자세한 내용은 참조 [생성자](../cpp/constructors-cpp.md) 및 [소멸자](../cpp/destructors-cpp.md).) 범위의 종류는 다음 5가지입니다.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
      C++에서는 파일 범위를 네임스페이스 범위라고도 합니다.  
   
--   **클래스 범위** 클래스 멤버의 이름을 클래스 범위를 가집니다. 클래스 멤버 함수는 멤버 선택 연산자를 사용 하 여 액세스할 수 있습니다 (**합니다.** 또는  **->** ) 또는 멤버 포인터 연산자 (**.\***  또는  **-> \*** ) 개체나; 해당 클래스의 개체에 대 한 포인터에 비정적 클래스 멤버 데이터 해당 클래스의 개체에 로컬 간주 됩니다. 다음과 같은 클래스 선언을 생각해 보세요.  
+-   **클래스 범위** 클래스 멤버의 이름을 클래스 범위를 가집니다. 클래스 멤버 함수는 멤버 선택 연산자를 사용 하 여 액세스할 수 있습니다 (**합니다.** 또는 **->**) 또는 멤버 포인터 연산자 (**.\***  또는 **-> \***) 개체나; 해당 클래스의 개체에 대 한 포인터에 비정적 클래스 멤버 데이터 해당 클래스의 개체에 로컬 간주 됩니다. 다음과 같은 클래스 선언을 생각해 보세요.  
   
     ```  
     class Point  
@@ -71,7 +66,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="hiding-names"></a>이름 숨기기  
  이름을 포함된 블록에서 선언하여 숨길 수 있습니다. 다음 그림에서는 `i`가 내부 블록 안에서 다시 선언되므로 바깥쪽 블록 범위에서 `i`와 연결된 변수가 숨겨집니다.  
   
- ![블록 &#45; 범위 이름 숨기기](../cpp/media/vc38sf1.png "vc38SF1")  
+ ![블록&#45;범위 이름 숨기기](../cpp/media/vc38sf1.png "vc38SF1")  
 블록 범위 및 이름 숨기기  
   
  그림에 표시된 프로그램의 출력은 다음과 같습니다.  

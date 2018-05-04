@@ -1,12 +1,9 @@
 ---
-title: "CTokenPrivileges 클래스 | Microsoft Docs"
-ms.custom: 
+title: CTokenPrivileges 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CTokenPrivileges
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48ff04428d6cde6501c2782894c4132157a02b9
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: f6c9886b79739f42329b0f306c8bce6afc2d9fa0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges 클래스
 이 클래스는에 대 한 래퍼는 **TOKEN_PRIVILEGES** 구조입니다.  
@@ -180,7 +175,7 @@ void GetDisplayNames(CNames* pDisplayNames) const throw(...);
   
 ### <a name="parameters"></a>매개 변수  
  `pDisplayNames`  
- `CString` 개체의 배열에 대한 포인터입니다. **CNames** typedef 정의: **CTokenPrivileges::CAtlArray\<CString >**합니다.  
+ `CString` 개체의 배열에 대한 포인터입니다. **CNames** typedef 정의: **CTokenPrivileges::CAtlArray\<CString >** 합니다.  
   
 ### <a name="remarks"></a>설명  
  매개 변수 `pDisplayNames` 의 배열에 대 한 포인터 `CString` 개체에 해당 하는 권한을에 포함 된 표시 이름을 수신할는 `CTokenPrivileges` 개체입니다. 이 메서드는 WINNT의 권한 정의 섹션에 지정 된 권한에 대 한 표시 이름을 검색 합니다. 8.  
@@ -294,7 +289,7 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ### <a name="return-value"></a>반환 값  
  업데이트 된 반환 `CTokenPrivileges` 개체입니다.  
   
-##  <a name="operator_const_token_privileges__star"></a>CTokenPrivileges::operator const TOKEN_PRIVILEGES *  
+##  <a name="operator_const_token_privileges__star"></a>  CTokenPrivileges::operator const TOKEN_PRIVILEGES *  
  값에 대 한 포인터에 캐스팅은 **TOKEN_PRIVILEGES** 구조입니다.  
   
 ```  

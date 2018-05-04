@@ -1,27 +1,22 @@
 ---
-title: "알고리즘 (최신 c + +) | Microsoft Docs"
-ms.custom: 
+title: 알고리즘 (최신 c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 6f758d3c-a7c7-4a50-92bb-97b2f6d4ab27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d89f6b5116459018cb50eb58b976f6f853ed088
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fdd5742bb86992ce20f5a52f587c8557d46a97eb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="algorithms-modern-c"></a>알고리즘(최신 C++)
 최신 c + + 프로그래밍에 대 한 알고리즘에 사용 하는 권장는 [c + + 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)합니다. 다음은 몇 가지 중요 한 예입니다.  
@@ -84,5 +79,5 @@ auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );
   
 ## <a name="see-also"></a>참고 항목  
  [C + +의 진화](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C + + 언어 참조](../cpp/cpp-language-reference.md)   
+ [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [C++ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)

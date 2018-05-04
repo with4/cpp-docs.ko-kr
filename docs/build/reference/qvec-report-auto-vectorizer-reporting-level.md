@@ -2,26 +2,21 @@
 title: -/Qvec-report (자동 벡터화 도우미 보고 수준) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 4778c9a3-0692-4085-9b05-1bfeadf4c74a
-caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43c9a182046ff148621151107a98932cc39835f2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 7ddbb68c20ade9f66215d3a60f2db7ea545409a1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-report(자동 벡터화 도우미 보고 수준)
 컴파일러의 보고 기능을 사용 하면 [자동 벡터화](../../parallel/auto-parallelization-and-auto-vectorization.md) 컴파일하는 동안 출력에 대 한 정보 메시지의 수준을 지정 합니다.  
@@ -45,7 +40,7 @@ ms.lasthandoff: 01/03/2018
   
 1.  **솔루션 탐색기**에서 프로젝트의 바로 가기 메뉴를 열고 **속성**을 선택합니다.  
   
-2.  에 **속성 페이지** 대화 상자의 **C/c + +**선택, **명령줄**합니다.  
+2.  에 **속성 페이지** 대화 상자의 **C/c + +** 선택, **명령줄**합니다.  
   
 3.  에 **추가 옵션** 상자에 입력 `/Qvec-report:1` 또는 `/Qvec-report:2`합니다.  
   

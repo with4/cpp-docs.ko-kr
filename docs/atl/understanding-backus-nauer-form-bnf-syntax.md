@@ -1,30 +1,25 @@
 ---
-title: "ATL 등록자 및 기초로 Nauer 구성 (bnf 표기법) | Microsoft Docs"
-ms.custom: 
+title: ATL 등록자 및 기초로 Nauer 구성 (bnf 표기법) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - BNF notation
 - Backus Nauer Form (BNF) syntax
 ms.assetid: 994bbef0-9077-4aa8-bdfe-b7e830af9acc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01d364313420c0a950f8eba222e3ae020fbd86cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4137dd94886456d5813076f3cb328bac5ecf5c03
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-backus-nauer-form-bnf-syntax"></a>기초로 Nauer BNF (Form) 구문을 이해
 ATL 등록자에서 사용 하는 스크립트는 다음 표에 표시 된 표기법을 사용 하 여 BNF 구문을 사용 하 여이 항목에 설명 되어 있습니다.  

@@ -1,13 +1,10 @@
 ---
-title: "-Ox (대부분의 속도 최적화 사용에 필요) | Microsoft Docs"
-ms.custom: 
+title: -Ox (대부분의 속도 최적화 사용에 필요) | Microsoft Docs
+ms.custom: ''
 ms.date: 09/25/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ToolOptimization
 - /ox
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - /Ox compiler option [C++]
 - -Ox compiler option [C++]
 ms.assetid: 3ad7c30b-c615-428c-b1d0-2e024f81c760
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85efa8a2beab34d0dcf1bdb74e3cf89008b10d6e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 569563bff030904988e93db749438eaeb58ce9db
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/Ox (대부분의 속도 최적화 사용에 필요)
 
@@ -47,9 +42,9 @@ ms.lasthandoff: 12/21/2017
 
 - [/Ob (인라인 함수 확장)](../../build/reference/ob-inline-function-expansion.md)option 매개 변수는 2, (**/Ob2**)
 
-- [/Og (전역 최적화)](../../build/reference/og-global-optimizations.md)
+- [/Og(전역 최적화)](../../build/reference/og-global-optimizations.md)
 
-- [/Oi (내장 함수 생성)](../../build/reference/oi-generate-intrinsic-functions.md)
+- [/Oi(내장 함수 만들기)](../../build/reference/oi-generate-intrinsic-functions.md)
 
 - [/Ot (크기 우선 빠른 코드)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)
 
@@ -61,7 +56,7 @@ ms.lasthandoff: 12/21/2017
 
 - [/ O 2 (속도 최대화)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)
 
-- [/Od (디버그 비활성화))](../../build/reference/od-disable-debug.md)
+- [/Od(디버그 사용 안 함)](../../build/reference/od-disable-debug.md)
 
 오차의 속도 취소할 수는 **/Ox** 컴파일러 옵션을 지정 하는 경우 **/Oxs**를 결합 하는 **/Ox** 컴파일러 옵션을 [(크기 우선 작은 /Os 코드)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)합니다. 조합 된 옵션이 더 작은 코드 크기를 선호합니다.
 
@@ -81,6 +76,6 @@ ms.lasthandoff: 12/21/2017
 
 ## <a name="see-also"></a>참고 항목
 
-[/O 옵션 (코드 최적화)](../../build/reference/o-options-optimize-code.md)  
+[/O 옵션(코드 최적화)](../../build/reference/o-options-optimize-code.md)  
 [컴파일러 옵션](../../build/reference/compiler-options.md)  
 [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)

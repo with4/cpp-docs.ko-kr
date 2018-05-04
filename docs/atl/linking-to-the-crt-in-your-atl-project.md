@@ -1,13 +1,10 @@
 ---
-title: "ATL 프로젝트에서 CRT에 연결 | Microsoft Docs"
-ms.custom: 
+title: ATL 프로젝트에서 CRT에 연결 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 f1_keywords:
 - DllMainCRTStartup
 - wWinMainCRTStartup
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - wWinMainCRTStartup method
 - ATL, C Run-Time library (CRT)
 ms.assetid: 650957ae-362c-4ecf-8b03-5d49138e8b5b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 631426fece3960303d67d8929e99c404beaab998
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec0d93f8770ebbd893491c0e8b8eed239396e00a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linking-to-the-crt-in-your-atl-project"></a>ATL 프로젝트에서 CRT에 연결
 [C 런타임 라이브러리](../c-runtime-library/crt-library-features.md) (CRT) 만들 수 있는 프로그래밍 훨씬 더 쉽게 ATL 개발 하는 동안 여러 유용한 기능을 제공 합니다. 모든 ATL 프로젝트는 CRT 라이브러리에 연결합니다. 메서드를 연결의 장단점을 확인할 수 있습니다 [메서드 CRT에 대 한 링크를 사용 하는 장점과 단점](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)합니다.  

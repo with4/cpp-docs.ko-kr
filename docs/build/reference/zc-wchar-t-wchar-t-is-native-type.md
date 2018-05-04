@@ -1,10 +1,10 @@
 ---
 title: '/Zc: wchar_t (wchar_t Is Native Type) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.TreatWChar_tAsBuiltInType
 - VC.Project.VCCLCompilerTool.TreatWChar_tAsBuiltInType
@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: b0de5a84-da72-4e5a-9a4e-541099f939e0
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4970e4aba8bf2d6aebf60f876a4770b18943781
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 061aa4a70412a0b51450470e690bea5633b764ad
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t(wchar_t를 네이티브 형식으로 인식)
 
@@ -41,7 +40,7 @@ C++ 표준에 따라 `wchar_t`를 기본 제공 형식으로 구문 분석합니
 
 경우 **/zc: wchar_t** 켜져 `wchar_t` c + +로 컴파일된 코드에서 기본 제공 정수 계열 형식에 대 한 키워드입니다. 경우 **/Zc:wchar_t-** (빼기 기호)로 지정 된, 또는 코드에서 C로 컴파일된, `wchar_t` 기본 제공 형식이 아닙니다. 대신, `wchar_t` 로 정의 `typedef` 에 대 한 `unsigned short` 정식 헤더 stddef.h에 있습니다. (Microsoft에서 구현한 정의 stddef.h로 포함 되는 다른 헤더와 다른 표준 헤더에서 함.)
 
-권장 하지는 않습니다 **/Zc:wchar_t-** 하는 c + + 표준 필요 하기 때문에 `wchar_t` 기본 제공 형식 이어야 합니다. `typedef` 버전을 사용하면 이식성 문제가 발생할 수 있습니다. 이전 버전의 Visual c + +에서 업그레이드 하 고 컴파일러 오류가 발생할 경우 [c 2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) 암시적으로 변환 하려고 하기 때문에 `wchar_t` 를 `unsigned short`, 대신 오류를 해결 하는 코드를 변경 하는 것이 좋습니다 설정의 **/Zc:wchar_t-**합니다.
+권장 하지는 않습니다 **/Zc:wchar_t-** 하는 c + + 표준 필요 하기 때문에 `wchar_t` 기본 제공 형식 이어야 합니다. `typedef` 버전을 사용하면 이식성 문제가 발생할 수 있습니다. 이전 버전의 Visual c + +에서 업그레이드 하 고 컴파일러 오류가 발생할 경우 [c 2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) 암시적으로 변환 하려고 하기 때문에 `wchar_t` 를 `unsigned short`, 대신 오류를 해결 하는 코드를 변경 하는 것이 좋습니다 설정의 **/Zc:wchar_t-** 합니다.
 
 **/zc: wchar_t** 옵션 c + + 컴파일에서는 기본적으로 켜져 있고 C 컴파일에 무시 됩니다. [관대 한 /-](permissive-standards-conformance.md) 옵션이 적용 되지 않습니다 **/zc: wchar_t**합니다.
 
@@ -67,6 +66,6 @@ Microsoft는 `wchar_t`를 2바이트 부호 없는 값으로 구현합니다. Mi
 
 - <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.TreatWChar_tAsBuiltInType%2A>을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [/Zc(규칙)](../../build/reference/zc-conformance.md)<br/>

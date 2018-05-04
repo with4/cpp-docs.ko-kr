@@ -2,11 +2,8 @@
 title: strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _wcstok_s_l
@@ -56,17 +53,15 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-caps.latest.revision: 28
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9be62937a5c687c93f0280a8f3ca9d8acc955567
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 74be09a9a852d2bfd29b40a5d63583784e3f75a6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
@@ -156,7 +151,7 @@ unsigned char* _mbstok_s(
 
 이후는 *컨텍스트* 매개 변수 대체에 사용 되는 정적 버퍼 **strtok** 및 **_strtok_l**를 동시에 동일한 스레드에서에서 두 문자열을 구문 분석할 수 있습니다.
 
-출력 값은의 설정에 영향을 **LC_CTYPE** 로캘 범주 설정; 참조 [setlocale](setlocale-wsetlocale.md) 자세한 정보에 대 한 합니다. 없는 이러한 함수 버전은 **_l** 은 현재 스레드 로컬이 로캘 종속 동작에 대 한 사용 합니다. 버전에는 **_l** 대신를 사용 하는 점을 제외 하 고 접미사는 동일는 *로캘* 매개 변수입니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따른 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. 없는 이러한 함수 버전은 **_l** 은 현재 스레드 로컬이 로캘 종속 동작에 대 한 사용 합니다. 버전에는 **_l** 대신를 사용 하는 점을 제외 하 고 접미사는 동일는 *로캘* 매개 변수입니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
 ## <a name="requirements"></a>요구 사항
 

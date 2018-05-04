@@ -1,29 +1,24 @@
 ---
-title: "(C + +) 함수 템플릿의 부분 순서 지정 | Microsoft Docs"
-ms.custom: 
+title: (C + +) 함수 템플릿의 부분 순서 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cddc0f1680a3354276a2135dd28c31a2037a8202
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60936a46732e4b2ed827a5efb08740661d9bb0d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>함수 템플릿의 부분 순서 지정 (C++)
 
@@ -49,11 +44,11 @@ ms.lasthandoff: 12/21/2017
 
      2. 만 템플릿에서도 __T\*__  은 하나의 라인만 보다 더 특수 한 __T__가상 입력 하기 때문에, __X\*__  에 대 한 인수는 유효한는 __T__ 템플릿 인수에 있지만 __X__ 이 대 한 올바른 인수가 아닙니다는 __T\*__  템플릿 인수를 사용 합니다.
 
-     3. __const T__ 은 보다 더 특수 한 __T__때문에, __const X__ 에 대 한 인수는 유효한는 __T__ 템플릿 인수에 있지만 __X__ 이 대 한 올바른 인수가 아닙니다는 __const T__ 템플릿 인수를 사용 합니다.
+     3. __const T__ 은 보다 더 특수 한 __T__때문에, __const X__ 에 대 한 인수는 유효한는 __T__ 템플릿 인수에 있지만 __X__ 은 에 대 한 올바른 인수가 아닙니다는 __const T__ 템플릿 인수를 사용 합니다.
 
-     4. __const T\*__  은 보다 더 특수 한 __T\*__때문에, __const X\*__  에 대 한 유효한 인수는 __T\*__  템플릿 인수에 있지만 __X\*__  이 대 한 올바른 인수가 아닙니다는 __const T\*__  템플릿 인수를 사용 합니다.
+     4. __const T\*__  은 보다 더 특수 한 __T\*__ 때문에, __const X\*__  에 대 한 유효한 인수는 __T\*__  템플릿 인수에 있지만 __X\*__  이 대 한 올바른 인수가 아닙니다는 __const T\*__  템플릿 인수를 사용 합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 샘플은 표준에 지정 된 대로 작동합니다.
 

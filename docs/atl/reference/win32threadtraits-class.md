@@ -1,12 +1,9 @@
 ---
-title: "Win32ThreadTraits 클래스 | Microsoft Docs"
-ms.custom: 
+title: Win32ThreadTraits 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - Win32ThreadTraits
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - threading [ATL], creation functions
 - Win32ThreadTraits class
 ms.assetid: 50279c38-eae1-4301-9ea6-97ccea580f3e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf4fd3ffaf2fc4a035fdecf679ab507ebb557f38
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b863808a2367cae8878728403dbf11265b9e819
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="win32threadtraits-class"></a>Win32ThreadTraits 클래스
 이 클래스는 Windows 스레드에 대 한 만들기 함수를 제공합니다. 스레드 CRT 함수를 사용 하지 않는 경우에이 클래스를 사용 합니다.  
@@ -65,7 +60,7 @@ class Win32ThreadTraits
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="createthread"></a>Win32ThreadTraits::CreateThread  
+##  <a name="createthread"></a>  Win32ThreadTraits::CreateThread  
  CRT 함수를 사용 해야 하는 스레드를 만드는 데이 함수를 호출 합니다.  
   
 ```

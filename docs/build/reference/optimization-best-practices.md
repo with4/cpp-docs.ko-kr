@@ -1,30 +1,25 @@
 ---
-title: "최적화에 대 한 유용한 정보 | Microsoft Docs"
-ms.custom: 
+title: 최적화에 대 한 유용한 정보 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec12e847eef72827e11700be322fd2a2ca309037
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e869a12635117f37f32fad3dcfdd38ed45d401e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimization-best-practices"></a>최적화를 위한 유용한 정보
 이 문서에서는 Visual c + +에서 최적화에 대 한 몇 가지 모범 사례를 설명 합니다. 다음 항목을 다룹니다.  
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="optimization-declspecs"></a>최적화 Declspec  
  이 섹션에서는 살펴보겠습니다 성능을 위해 프로그램에서 사용할 수 있는 두 개의 declspec: `__declspec(restrict)` 및 `__declspec(noalias)`합니다.  
   
- `restrict` declspec 등에 대 한 포인터를 반환 하는 함수 선언에만 적용할 수 있습니다`__declspec(restrict) void *malloc(size_t size);`  
+ `restrict` declspec 등에 대 한 포인터를 반환 하는 함수 선언에만 적용할 수 있습니다 `__declspec(restrict) void *malloc(size_t size);`  
   
  `restrict` declspec 별칭이 지정 되지 않은 포인터를 반환 하는 함수에 사용 됩니다. 이 키워드는 C 런타임 라이브러리의 구현에 사용 됩니다 `malloc` 이후 이미 사용 중인 현재 프로그램의 (하지 않는 경우 해제 된 후에 메모리를 사용 하는 등 잘못 된 항목)는 포인터 값을 반환 하지 것입니다.  
   
@@ -113,24 +108,24 @@ int myFunc() {...}
   
  인라이닝은 컴파일러를 수행 하 고 여기 몇 가지이 동작을 수정 하는 데 도움이 되는 pragma에 설명 하는 가장 중요 한 최적화 중 하나입니다.  
   
- `#pragma inline_recursion`응용 프로그램 재귀 호출을 인라인 할 수 있는 것인지 여부를 지정 하는 데 유용 합니다. 기본적으로 해제 되어 있습니다. 단순 재귀 작은 함수에 대 한이 서비스 설정 할 수 있습니다. 자세한 내용은 참조 [inline_recursion](../../preprocessor/inline-recursion.md)합니다.  
+ `#pragma inline_recursion` 응용 프로그램 재귀 호출을 인라인 할 수 있는 것인지 여부를 지정 하는 데 유용 합니다. 기본적으로 해제 되어 있습니다. 단순 재귀 작은 함수에 대 한이 서비스 설정 할 수 있습니다. 자세한 내용은 참조 [inline_recursion](../../preprocessor/inline-recursion.md)합니다.  
   
  깊이 제한 하는 다른 유용한 pragma 인라인 처리는 `#pragma inline_depth`합니다. 프로그램 또는 함수의의 크기를 제한 하려는 경우에 일반적으로 유용 합니다. 자세한 내용은 참조 [inline_depth](../../preprocessor/inline-depth.md)합니다.  
   
 ## <a name="restrict-and-assume"></a>__restrict 및 \__assume  
  성능을 향상 시킬 수 있는 Visual c + + 키워드는 두 가지가: [__restrict](../../cpp/extension-restrict.md) 및 [__assume](../../intrinsics/assume.md)합니다.  
   
- 용도로 먼저는 `__restrict` 및 `__declspec(restrict)` 서로 구분 합니다. 다소 관련 되어 있는 동안 해당 의미 체계가 서로 다릅니다. `__restrict`형식 한정자를 같은입니다 `const` 또는 `volatile`, 있지만 포인터 형식에 대 한 단독으로 합니다.  
+ 용도로 먼저는 `__restrict` 및 `__declspec(restrict)` 서로 구분 합니다. 다소 관련 되어 있는 동안 해당 의미 체계가 서로 다릅니다. `__restrict` 형식 한정자를 같은입니다 `const` 또는 `volatile`, 있지만 포인터 형식에 대 한 단독으로 합니다.  
   
  로 한정 되는 포인터 `__restrict` 라고는 *포인터 __restrict*합니다. __Restrict 포인터는만 통해 액세스할 수 있는 포인터는 \_제한 (_r) 포인터입니다. 즉,에서 가리키는 데이터에 액세스 하려면 다른 포인터를 사용할 수 없습니다는 \_제한 (_r) 포인터입니다.  
   
- `__restrict`Visual c + + 최적화 프로그램을 위한 강력한 도구로 수는 있지만 매우 주의 하 여 사용 합니다. 잘못 사용 하면 최적화 프로그램 결과로 응용 프로그램이 있는 최적화를 수행할 수 있습니다.  
+ `__restrict` Visual c + + 최적화 프로그램을 위한 강력한 도구로 수는 있지만 매우 주의 하 여 사용 합니다. 잘못 사용 하면 최적화 프로그램 결과로 응용 프로그램이 있는 최적화를 수행할 수 있습니다.  
   
  `__restrict` 키워드를 대체는 **/Oa** 이전 버전에서 전환 합니다.  
   
  와 `__assume`, 개발자 수 있는 일부 변수의 값에 대 한 가정을 컴파일러를 알 수 있습니다.  
   
- 예를 들어 `__assume(a < 5);` 변수 코드 줄에는 최적화 프로그램에 알립니다 `a` 5 보다 작은 합니다. 다시 컴파일러 하기 위한 약속입니다. 경우 `a` 실제로 6이 시점에서 프로그램에 다음 컴파일러 최적화 한 후 프로그램의 동작은 예상 되지 않을 수 있습니다. `__assume`switch 문 및 조건 식 전에 가장 유용 합니다.  
+ 예를 들어 `__assume(a < 5);` 변수 코드 줄에는 최적화 프로그램에 알립니다 `a` 5 보다 작은 합니다. 다시 컴파일러 하기 위한 약속입니다. 경우 `a` 실제로 6이 시점에서 프로그램에 다음 컴파일러 최적화 한 후 프로그램의 동작은 예상 되지 않을 수 있습니다. `__assume` switch 문 및 조건 식 전에 가장 유용 합니다.  
   
  몇 가지 제한이 있습니다 `__assume`합니다. 먼저 같은 `__restrict`,이만, 이므로 컴파일러에 의해 무시 될 합니다. 또한 `__assume` 현재 구성 된 상수에 대해 변수 부등식만 작동 합니다. 예를 들어 assume(a < b)과 같이 기호로만 구성된 부등식은 사용할 수 없습니다.  
   

@@ -1,30 +1,25 @@
 ---
-title: "방법: 릴리스 빌드 디버깅 | Microsoft Docs"
-ms.custom: 
+title: '방법: 릴리스 빌드 디버깅 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - debugging [C++], release builds
 - release builds, debugging
 ms.assetid: d333e4d1-4e6c-4384-84a9-cb549702da25
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31113d9a5935536ac10b22c7b5f5af27b0d29970
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7e733375f01d4b2b8ec7090f7f70ad1ec5280cd9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-debug-a-release-build"></a>방법: 릴리스 빌드 디버깅
 응용 프로그램의 릴리스 빌드를 디버그할 수 있습니다.  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  열기는 **속성 페이지** 프로젝트에 대 한 대화 상자. 자세한 내용은 참조 [프로젝트 속성 작업](../../ide/working-with-project-properties.md)합니다.  
   
-2.  클릭는 **C/c + +** 노드. 설정 **디버깅 정보 형식** 를 [C7 호환 되는 (/ Z7)](../../build/reference/z7-zi-zi-debug-information-format.md) 또는 **프로그램 데이터베이스 (/Zi)**합니다.  
+2.  클릭는 **C/c + +** 노드. 설정 **디버깅 정보 형식** 를 [C7 호환 되는 (/ Z7)](../../build/reference/z7-zi-zi-debug-information-format.md) 또는 **프로그램 데이터베이스 (/Zi)** 합니다.  
   
 3.  확장 **링커** 클릭는 **일반** 노드. 설정 **증분 링크 사용** 를 [아니요 (/ /INCREMENTAL: NO)](../../build/reference/incremental-link-incrementally.md)합니다.  
   

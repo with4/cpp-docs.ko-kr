@@ -1,29 +1,24 @@
 ---
-title: "new 연산자 (c + +) | Microsoft Docs"
-ms.custom: 
+title: new 연산자 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68843f0619b5ebc057f83bdb4f49807a15fb86a1
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 365beedce529e29be73c02caa57e5c6236565b9c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="new-operator-c"></a>new 연산자 (C++)
 개체 또는 개체의 배열에 대 한 메모리를 할당 *형식-이름이* 스토어에서 무료 및 개체에는 적절 한 형식의 0이 아닌 포인터를 반환 합니다.  
@@ -73,7 +68,7 @@ delete *p;
   
  다음 목록에는 설명의 문법 요소 **새**:  
   
- *placement*  
+ *배치*  
  재정의 한 경우 추가 인수를 전달 하는 방법을 제공 **새**합니다.  
   
  *type-name*  
@@ -82,7 +77,7 @@ delete *p;
  *initializer*  
  초기화된 개체의 값을 제공합니다. 배열에 대한 이니셜라이저는 지정할 수 없습니다. **새** 연산자는 클래스에 기본 생성자가 있는 경우에 개체의 배열을 만들어집니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제는 문자 배열 및 `CName` 클래스 개체를 할당한 다음 해제합니다.  
   
 ```  
@@ -126,8 +121,8 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예  
- 새 배치 형식을 사용 하는 경우는 **새** 연산자를 컴파일러가 할당 크기 이외의 인수가 된 폼의 배치 형태를 지원 하지 않습니다는 **삭제** 연산자 경우는 생성자가 예외를 throw 합니다. 예:  
+## <a name="example"></a>예제  
+ 새 배치 형식을 사용 하는 경우는 **새** 연산자를 컴파일러가 할당 크기 이외의 인수가 된 폼의 배치 형태를 지원 하지 않습니다는 **삭제** 연산자 경우는 생성자가 예외를 throw 합니다. 예를 들어:  
   
 ```  
 // expre_new_Operator2.cpp  
@@ -201,7 +196,7 @@ int main()
  함수 호출과 마찬가지로 초기화된 식이 계산되는 순서가 정의되지 않습니다. 또한 메모리 할당을 수행하기 전에 완전히 계산되는 이 식에 의존하지 마세요. 메모리 할당에 실패 하는 경우 및 **새** 0을 반환 하는 연산자, 이니셜라이저의 일부 식이 완전히 계산 되지 않을 수 있습니다.  
   
 ## <a name="lifetime-of-objects-allocated-with-new"></a>new로 할당된 개체 수명  
- 로 할당 된 개체는 **새** 연산자에는 정의 된 범위가 종료 될 때 제거 되지 않습니다. 때문에 **새** 할당 한 개체에 대 한 포인터를 반환 하는 연산자, 프로그램에 알맞은 범위의 포인터를 이러한 개체에 액세스할 수를 정의 해야 합니다. 예:  
+ 로 할당 된 개체는 **새** 연산자에는 정의 된 범위가 종료 될 때 제거 되지 않습니다. 때문에 **새** 할당 한 개체에 대 한 포인터를 반환 하는 연산자, 프로그램에 알맞은 범위의 포인터를 이러한 개체에 액세스할 수를 정의 해야 합니다. 예를 들어:  
   
 ```  
 // expre_Lifetime_of_Objects_Allocated_with_new.cpp  
@@ -239,7 +234,7 @@ int main()
   
  **새** 연산자 함수를 호출 `operator new`합니다. 하지 않은 개체 및 모든 형식의 배열에 대 한 **클래스**, `struct`, 또는 **union** 형식, 전역 함수인 **:: new 연산자**, 저장소를 할당 하기 위해 호출 됩니다. 클래스 형식 개체는 클래스별로 고유한 `operator new` 정적 멤버 함수를 정의할 수 있습니다.  
   
- 컴파일러에서 발생 하는 경우는 **새** 형식의 개체를 할당 연산자 `type`에 대 한 호출을 내보내려면 `type` **:: 연산자 new (sizeof (** `type` **))**  또는 사용자 정의 하지 않는 경우 `operator new` 정의 된 **:: 연산자 new (sizeof (** `type` **))**합니다. 따라서는 **새** 연산자는 개체에 대 한 올바른 양의 메모리를 할당할 수 있습니다.  
+ 컴파일러에서 발생 하는 경우는 **새** 형식의 개체를 할당 연산자 `type`에 대 한 호출을 내보내려면 `type` **:: 연산자 new (sizeof (** `type` **))**  또는 사용자 정의 하지 않는 경우 `operator new` 정의 된 **:: 연산자 new (sizeof (** `type` **))** 합니다. 따라서는 **새** 연산자는 개체에 대 한 올바른 양의 메모리를 할당할 수 있습니다.  
   
 > [!NOTE]
 >  에 대 한 인수 `operator new` 유형의 **size_t**합니다. 이 형식에 정의 된 \<c t. h >, \<malloc.h >, \<y. h >, \<c h. h >, \<stddef.h >, \<. h >, \<stdlib.h >, \<g. h >, 및 \<. h >입니다.  

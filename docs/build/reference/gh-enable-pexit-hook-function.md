@@ -1,13 +1,10 @@
 ---
-title: "-GH (_pexit 후크 함수 사용) | Microsoft Docs"
-ms.custom: 
+title: -GH (_pexit 후크 함수 사용) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _pexit
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - _pexit function
 - -Gh compiler option [C++]
 ms.assetid: 93181453-2676-42e5-bf63-3b19e07299b6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02cfdd783a698a3397e84fa62b7252399570dc84
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 57e11c27af36eb539b22f3833a73341ff3065e97
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH(_pexit 후크 함수 사용)
 호출 된 `_pexit` 함수의 모든 메서드 또는 함수의 끝에 있습니다.  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 void __declspec(naked) _cdecl _pexit( void );  
 ```  
   
- `_pexit`유사한 `_penter`; 참조 [/Gh (_penter 후크 함수 사용)](../../build/reference/gh-enable-penter-hook-function.md) 작성 하는 방법의 예는 `_pexit` 함수입니다.  
+ `_pexit` 유사한 `_penter`; 참조 [/Gh (_penter 후크 함수 사용)](../../build/reference/gh-enable-penter-hook-function.md) 작성 하는 방법의 예는 `_pexit` 함수입니다.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   

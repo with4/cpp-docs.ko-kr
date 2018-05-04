@@ -1,27 +1,22 @@
 ---
-title: "malloc 맞춤 | Microsoft Docs"
-ms.custom: 
+title: malloc 맞춤 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a8d1d1b4-5122-456f-9a64-a50e105e55a5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d9acaf1c8912e1b563bb5d05ae600d1430049e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d503d0dd891c651a405cb79bb5ce50996f46cff6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="malloc-alignment"></a>malloc 맞춤
 [malloc](../c-runtime-library/reference/malloc.md) 적절 하 게 할당 된 메모리의 양에 맞게 기본 맞춤 하 고 있는 있는 모든 개체를 저장 하기에 대 한 정렬 되는 메모리를 반환 하도록 보장 됩니다. A *기본 맞춤* 은 맞춤 지정을 하지 않고 구현에서 지원 되는 최대 맞춤 보다 작은 맞춤 합니다. (이것은 맞춤에 대 한 필요한 Visual c + +에서는 `double`, 또는 8 바이트입니다. 64비트 플랫폼을 대상으로 하는 코드에서는 16바이트입니다. 예를 들어 4 바이트 할당을 지 원하는 모든 4 바이트 또는 더 작은 개체는 경계에 정렬 합니다.  

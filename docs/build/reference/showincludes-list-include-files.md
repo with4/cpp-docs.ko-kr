@@ -2,12 +2,9 @@
 title: -showIncludes (목록 파일을 포함 하는 데 사용) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.ShowIncludes
 - VC.Project.VCCLCompilerTool.ShowIncludes
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - -showIncludes compiler option [C++]
 - showIncludes compiler option [C++]
 ms.assetid: 0b74b052-f594-45a6-a7c7-09e1a319547d
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb88ff6d8a314ebd5cb0390f2c920f5b1d04e3e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6eac7df694994b625e08ded710d43837d857df2d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="showincludes-list-include-files"></a>/showIncludes(포함 파일 나열)
 컴파일러가 포함 파일의 목록을 출력 합니다. 중첩 된 포함 파일도 표시 됩니다 (포함 하는 파일에서 포함 된).  

@@ -1,27 +1,22 @@
 ---
-title: "Windows XP에 대 한 프로그램을 구성 | Microsoft Docs"
-ms.custom: 
+title: Windows XP에 대 한 프로그램을 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23e417d9ef316bf72c9606ce2525ff79587e7047
-ms.sourcegitcommit: ecf0177ae9d36b1f63c9673a9583e0359107a5cb
+ms.openlocfilehash: a846ea5508173ce0e383b1c4b8798b896ae5be0e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Windows XP 용 프로그램 구성
 
@@ -46,7 +41,7 @@ Windows XP 플랫폼 도구 집합, C 런타임 라이브러리 (CRT), c + + 표
 
 이러한 라이브러리는 대상에 따라 Visual Studio가 설치 된 플랫폼 도구 집합에서 지원 됩니다.
 
-|라이브러리|Windows 데스크톱 앱을 대상으로 하는 기본 플랫폼 도구 집합|기본 플랫폼 도구 집합 대상 스토어 앱|Windows XP 플랫폼 도구 집합을 대상으로 [!INCLUDE[winxp](../build/includes/winxp_md.md)], [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]|
+|라이브러리|Windows 데스크톱 앱을 대상으로 하는 기본 플랫폼 도구 집합|기본 플랫폼 도구 집합 대상 스토어 앱|[!INCLUDE[winxp](../build/includes/winxp_md.md)], [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]을 대상으로 하는 Windows XP 플랫폼 도구 집합|
 |---|---|---|---|
 |CRT|X|X|X|
 |C++ 표준 라이브러리|X|X|X|
@@ -78,6 +73,6 @@ Windows XP 플랫폼 도구 집합, C 런타임 라이브러리 (CRT), c + + 표
 
      그래픽 디버거는 Direct3D 9 API를 지원하지 않으므로 [!INCLUDE[winxp](../build/includes/winxp_md.md)] 또는 [!INCLUDE[WinXPSvr](../build/includes/winxpsvr_md.md)]에서 Direct3D를 사용하는 앱을 디버그하는 데 사용할 수는 없습니다. 그러나 앱이 Direrct3D 10 또는 Direct3D 11 API를 사용하는 대체 렌더러를 구현하는 경우 그래픽 디버거를 사용하여 해당 API 사용 시 발생하는 문제를 진단할 수 있습니다.
 
-- **Building HLSL**
+- **HLSL 빌드**
 
    Windows XP 도구 집합은 기본적으로 HSLS 소스 코드 파일을 컴파일하지 않습니다. HLSL 파일을 컴파일하려면 2010년 6월 DirectX SDK를 다운로드하여 설치한 다음 해당 SDK를 포함하도록 프로젝트의 VC 디렉터리를 설정합니다. 자세한 내용은 참조는 "DirectX SDK를 등록 하지 않습니다 포함/라이브러리 경로를 Visual Studio 2010"의 섹션은 [2010 년 6 월 DirectX SDK 다운로드 페이지](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812)합니다.

@@ -1,12 +1,9 @@
 ---
-title: "const_cast 연산자 | Microsoft Docs"
-ms.custom: 
+title: const_cast 연산자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - const_cast_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - const_cast keyword [C++]
 ms.assetid: 4d8bb203-ef33-4a10-9f9f-c64d4fbc1687
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79c4aa00038f2d4d7e5cc3d1c86d2e28c6d44229
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed5daf503024b2c3f843faeeaedbd9ec9bf64b7c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constcast-operator"></a>const_cast 연산자
 제거는 **const**, `volatile`, 및 **__unaligned** 클래스에서 특성입니다.  
@@ -49,7 +44,7 @@ expression
   
  `const_cast` 연산자는 null 포인터 값을 대상 형식의 null 포인터 값으로 변환합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // expre_const_cast_Operator.cpp  

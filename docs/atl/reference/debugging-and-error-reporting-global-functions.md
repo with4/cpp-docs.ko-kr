@@ -1,12 +1,9 @@
 ---
-title: "디버깅 및 오류 보고 함수를 전역 | Microsoft Docs"
-ms.custom: 
+title: 디버깅 및 오류 보고 함수를 전역 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcomcli/ATL::AtlHresultFromLastError
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b3383efcc78a022fc5131984957d94aa4b47838
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fb3257b5205587b27a83671ed8e610aad5373eef
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>디버깅 및 오류 보고 함수를 전역
 이러한 함수는 유용한 디버깅 및 추적 기능을 제공 합니다.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 |[Atlthrow 변형이](debugging-and-error-reporting-global-functions.md#atlthrow)|`CAtlException`를 throw합니다.|  
 |[AtlThrowLastWin32](debugging-and-error-reporting-global-functions.md#atlthrowlastwin32)|Windows 함수 `GetLastError`의 결과에 따라 오류를 표시하려면 이 함수를 호출합니다.|  
   
-##  <a name="atlhresultfromlasterror"></a>AtlHresultFromLastError  
+##  <a name="atlhresultfromlasterror"></a>  AtlHresultFromLastError  
  호출 스레드의 마지막 오류 코드 값을 HRESULT 형식으로 반환합니다.  
   
 ```
@@ -48,12 +43,12 @@ HRESULT AtlHresultFromLastError();
 ```  
   
 ### <a name="remarks"></a>설명  
- `AtlHresultFromLastError`호출 `GetLastError` 마지막 오류 얻으려고 사용 하는 HRESULT를 변환한 후 오류를 반환 하 고는 **HRESULT_FROM_WIN32** 매크로입니다.  
+ `AtlHresultFromLastError` 호출 `GetLastError` 마지막 오류 얻으려고 사용 하는 HRESULT를 변환한 후 오류를 반환 하 고는 **HRESULT_FROM_WIN32** 매크로입니다.  
 
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlcomcli.h  
 
-##  <a name="atlhresultfromwin32"></a>AtlHresultFromWin32  
+##  <a name="atlhresultfromwin32"></a>  AtlHresultFromWin32  
  Win32 오류 코드 HRESULT로 변환합니다.  
   
 ```
@@ -61,7 +56,7 @@ AtlHresultFromWin32(DWORD error);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- *오류*  
+ *error*  
  변환할 오류 값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -73,7 +68,7 @@ AtlHresultFromWin32(DWORD error);
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlcomcli.h  
 
-##  <a name="atlreporterror"></a>AtlReportError  
+##  <a name="atlreporterror"></a>  AtlReportError  
  설정 된 `IErrorInfo` 인터페이스 개체의 클라이언트에 오류 정보를 제공 합니다.  
   
 ```
@@ -148,12 +143,12 @@ HRESULT WINAPI AtlReportError(
  [in] 리소스에 대 한 핸들입니다. 이 매개 변수는 기본적으로 **__AtlBaseModuleModule::GetResourceInstance**여기서 **__AtlBaseModuleModule** 의 인스턴스인 전역 [CAtlBaseModule](../../atl/reference/catlbasemodule-class.md) 또는 클래스 여기에서 파생 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
- 경우는 `hRes` 매개 변수는 0이 아니고의 값을 반환 `hRes`합니다. 경우 `hRes` 가 0 인 처음 4 개 버전의 `AtlReportError` 반환 `DISP_E_EXCEPTION`합니다. 매크로의 결과 반환 하는 마지막 두 버전 **MAKE_HRESULT (1, FACILITY_ITF,** `nID` **)**합니다.  
+ 경우는 `hRes` 매개 변수는 0이 아니고의 값을 반환 `hRes`합니다. 경우 `hRes` 가 0 인 처음 4 개 버전의 `AtlReportError` 반환 `DISP_E_EXCEPTION`합니다. 매크로의 결과 반환 하는 마지막 두 버전 **MAKE_HRESULT (1, FACILITY_ITF,** `nID` **)** 합니다.  
   
 ### <a name="remarks"></a>설명  
  문자열 *lpszDesc* 의 오류 텍스트 설명으로 사용 됩니다. 받으면 클라이언트는 `hRes` 에서 반환할 `AtlReportError`, 클라이언트에 액세스할 수는 **IErrorInfo** 오류에 대 한 세부 정보에 대 한 구조입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_COM#52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]  
   
 > [!CAUTION]
@@ -162,7 +157,7 @@ HRESULT WINAPI AtlReportError(
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
     
-##  <a name="atlthrow"></a>Atlthrow 변형이  
+##  <a name="atlthrow"></a>  Atlthrow 변형이  
  `HRESULT` 상태 코드에 따라 오류를 표시하려면 이 함수를 호출합니다.  
   
 ```
@@ -188,13 +183,13 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
   
  ATL 프로젝트에 ATL 오류가 발생할 경우 사용할이 함수의 사용자 지정 구현을 제공 하는 것이 같습니다. 이 작업을 수행 하려면으로 동일한 서명 사용 하 여 사용자 고유의 함수를 정의 `AtlThrow` 및 #define `AtlThrow` 함수의 이름 이어야 합니다. 이 atlexcept.h (즉, 수행 atlbase.h atlexcept.h 포함 되므로 ATL 헤더를 포함 하기 전에 해야 함을)를 포함 하기 전에 수행 되어야 합니다. 함수 특성 `__declspec(noreturn)` 에 잘못 된 SAL 경고가 표시 되지 않도록 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]  
 
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atldef.h  
 
-##  <a name="atlthrowlastwin32"></a>AtlThrowLastWin32  
+##  <a name="atlthrowlastwin32"></a>  AtlThrowLastWin32  
  Windows 함수 `GetLastError`의 결과에 따라 오류를 표시하려면 이 함수를 호출합니다.  
   
 ```

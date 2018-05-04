@@ -2,11 +2,8 @@
 title: decltype (c + +) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - decltype_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee3c83512929e4592a5ee75b954bc6c19f52f448
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac9fe7ebf3d3e406854308e56d38e37567acc07a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decltype--c"></a>decltype (c + +)
 `decltype` 형식 지정자는 지정된 식의 형식을 생성합니다. `decltype` 형식 지정자와 함께 [auto 키워드](../cpp/auto-cpp.md), 템플릿 라이브러리를 작성 하는 개발자에 게 주로 유용 합니다. 반환 형식이 해당 템플릿 인수의 형식에 종속되는 템플릿 함수를 선언하려면 `auto` 및 `decltype`을 사용하세요. 또는 다른 함수에 대한 호출을 래핑한 다음 래핑된 함수의 반환 형식을 반환하는 템플릿 함수를 선언하려면 `auto` 및 `decltype`을 사용하세요.  
@@ -91,7 +86,7 @@ UNKNOWN func(T&& t, U&& u){ return t + u; };
   
  다음 프로토타입에서는 대체 함수 선언의 구문을 보여 줍니다. `const` 및 `volatile` 한정자 및 `throw` [예외 사양이](../cpp/exception-specifications-throw-cpp.md) 는 선택 사항입니다. *function_body* 자리 표시자 함수에서 수행 하는 작업을 지정 하는 복합 문을 나타냅니다. 모범 코딩 사례는 *식* 에서 자리 표시자는 `decltype` 문의 하 여 지정 된 식이 일치 해야는 `return` 문, 있는 경우에 *function_body*합니다.  
   
- **자동** *function_name* **(** *매개 변수*<sub>opt</sub> **)**  **const**<sub>opt</sub> **휘발성**<sub>opt</sub>  **->**  **decltype (** *식* **)** **throw**<sub>opt</sub> **{** *function_body* **};**  
+ **자동** *function_name* **(** *매개 변수*<sub>opt</sub> **)**  **const**<sub>opt</sub> **휘발성**<sub>opt</sub> **->** **decltype (** *식* **)** **throw**<sub>opt</sub> **{** *function_body* **};**  
   
  다음 코드 예제에서는 `myFunc` 템플릿 함수의 컴파일하면 지정되는 반환 형식이 `t` 및 `u` 템플릿 인수의 형식에 따라 결정됩니다. 모범 코딩 사례, 코드 예제에서는 또한 사용 하 여 rvalue 참조 및 `forward` 지원 함수 템플릿을 *완벽 전달*합니다. 자세한 내용은 [RValue 참조 선언자: &&](../cpp/rvalue-reference-declarator-amp-amp.md)를 참조하세요.  
   
@@ -113,7 +108,7 @@ decltype(auto) myFunc(T&& t, U&& u)
   
  이 시나리오에서는 `decltype` 형식 지정자 없이 적절한 형식 식을 쓸 수 없습니다. `decltype` 형식 지정자는 함수가 참조 형식을 반환하는지 여부에 대한 필수 정보를 잃지 않기 때문에 제네릭 전달 함수를 사용할 수 있게 만듭니다. 전달 함수의 코드 예제는 이전 `myFunc` 템플릿 함수 예제를 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제는 템플릿 함수 `Plus()`의 컴파일하면 지정되는 반환 형식을 선언합니다. `Plus` 함수는 해당 두 피연산자를 `operator+` 오버로드로 처리합니다. 따라서 `Plus` 함수의 반환 형식 및 더하기 연산자(+)에 대한 해석은 함수 인수의 형식에 따라 달라집니다.  
   
 ```cpp  
@@ -186,7 +181,7 @@ Hello, world!
 x3.Dump() = 42
 ```
   
-## <a name="example"></a>예
+## <a name="example"></a>예제
 **Visual Studio 2017 이상:** 컴파일러 템플릿을 선언 되지 않고 인스턴스화할 때 decltype 인수를 구문 분석 합니다. 따라서 decltype 인수에 독립적 특수화가 있는 경우 이 특수화는 인스턴스화 시점으로 연기되지 않고 즉시 처리되며 결과 오류가 이 시점에 진단됩니다.
 
 다음 예제에서는 선언 시점에 발생한 컴파일러 오류를 보여 줍니다.
@@ -213,5 +208,5 @@ static_assert(test2, "PASS2");
 ## <a name="requirements"></a>요구 사항  
  Visual C++ 2010 이상 버전  
   
- `decltype(auto)`Visual Studio 2015 이상이 필요합니다.  
+ `decltype(auto)` Visual Studio 2015 이상이 필요합니다.  
   

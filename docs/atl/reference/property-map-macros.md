@@ -2,11 +2,8 @@
 title: 속성 맵 매크로 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_PROP_MAP
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - property maps
 ms.assetid: 128bc742-2b98-4b97-a243-684dbb83db77
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfd99fa59fc5e1d97011ac3dba4d16dd222c35b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 718028385b3910b955c49ab9e0abddf23b443967
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="property-map-macros"></a>속성 맵 매크로
 이러한 매크로 속성 맵 및 항목을 정의합니다.  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
    
-##  <a name="begin_prop_map"></a>BEGIN_PROP_MAP  
+##  <a name="begin_prop_map"></a>  BEGIN_PROP_MAP  
  개체의 속성 매핑이 두의 시작을 표시 합니다.  
   
 ```
@@ -63,12 +58,12 @@ BEGIN_PROP_MAP(theClass)
   
  ATL 프로젝트 마법사는 개체를 만들 때 만들어집니다는 빈 속성 맵을 지정 하 여 `BEGIN_PROP_MAP` 이어서 [END_PROP_MAP](#end_prop_map)합니다.  
   
- `BEGIN_PROP_MAP`없는 익스텐트 동일 하 게 되므로 개체 속성 맵을 사용 하 여이 사용자 인터페이스 있을 수 있으므로 속성 맵의 익스텐트 (차원) 저장 하지 않습니다. 개체가 사용자 인터페이스가 있는 ActiveX 컨트롤 경우 익스텐트는에 있습니다. 이 경우 지정 해야 [PROP_DATA_ENTRY](#prop_data_entry) 속성 맵에 범위를 제공 합니다.  
+ `BEGIN_PROP_MAP` 없는 익스텐트 동일 하 게 되므로 개체 속성 맵을 사용 하 여이 사용자 인터페이스 있을 수 있으므로 속성 맵의 익스텐트 (차원) 저장 하지 않습니다. 개체가 사용자 인터페이스가 있는 ActiveX 컨트롤 경우 익스텐트는에 있습니다. 이 경우 지정 해야 [PROP_DATA_ENTRY](#prop_data_entry) 속성 맵에 범위를 제공 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing#103](../../atl/codesnippet/cpp/property-map-macros_1.h)]  
   
-##  <a name="prop_data_entry"></a>PROP_DATA_ENTRY  
+##  <a name="prop_data_entry"></a>  PROP_DATA_ENTRY  
  범위 내에서 또는 ActiveX 컨트롤의 크기를 나타냅니다.  
   
 ```
@@ -90,14 +85,14 @@ PROP_DATA_ENTRY( szDesc, member, vt)
   
  마법사는 속성 맵 매크로 뒤이 매크로 삽입 하는 ActiveX 컨트롤을 만들 때 [BEGIN_PROP_MAP](#begin_prop_map) 속성 맵 매크로 하기 전에 [END_PROP_MAP](#end_prop_map)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 개체의 범위 ( `m_sizeExtent`)은 유지 되 고 있습니다.  
   
  [!code-cpp[NVC_ATL_Windowing#131](../../atl/codesnippet/cpp/property-map-macros_2.h)]  
   
  [!code-cpp[NVC_ATL_Windowing#132](../../atl/codesnippet/cpp/property-map-macros_3.h)]  
   
-##  <a name="prop_entry_type"></a>PROP_ENTRY_TYPE  
+##  <a name="prop_entry_type"></a>  PROP_ENTRY_TYPE  
  이 매크로 사용 하 여 개체의 속성 매핑이 두에 속성 설명, DISPID, 속성 및 속성 페이지 CLSID를 입력 합니다.  
   
 ```
@@ -122,10 +117,10 @@ PROP_ENTRY_TYPE( szDesc, dispid, clsid, vt)
   
  [BEGIN_PROP_MAP](#begin_prop_map) 속성 맵에의 시작을 표시 하는 매크로, [END_PROP_MAP](#end_prop_map) 매크로 끝을 표시 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [BEGIN_PROP_MAP](#begin_prop_map)합니다.  
   
-##  <a name="prop_entry_type_ex"></a>PROP_ENTRY_TYPE_EX를 대신 사용  
+##  <a name="prop_entry_type_ex"></a>  PROP_ENTRY_TYPE_EX를 대신 사용  
  비슷한 [PROP_ENTRY_TYPE](#prop_entry_type), 개체가 여러 이중 인터페이스를 지 원하는 경우 특정 IID를 지정할 수 있습니다.  
   
 ```
@@ -153,12 +148,12 @@ PROP_ENTRY_TYPE_EX( szDesc, dispid, clsid, iidDispatch, vt)
   
  [BEGIN_PROP_MAP](#begin_prop_map) 속성 맵에의 시작을 표시 하는 매크로, [END_PROP_MAP](#end_prop_map) 매크로 끝을 표시 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에 대 한 항목을 그룹화 `IMyDual1` 뒤에 대 한 항목이 `IMyDual2`합니다. 이중 인터페이스에 의해 그룹화 성능이 향상 됩니다.  
   
  [!code-cpp[NVC_ATL_Windowing#133](../../atl/codesnippet/cpp/property-map-macros_4.h)]  
   
-##  <a name="prop_page"></a>PROP_PAGE  
+##  <a name="prop_page"></a>  PROP_PAGE  
  이 매크로 사용 하 여 개체의 속성 매핑이 두에 속성 페이지 CLSID를 입력 합니다.  
   
 ```
@@ -170,17 +165,17 @@ PROP_PAGE(clsid)
  [in] 속성 페이지의 CLSID입니다.  
   
 ### <a name="remarks"></a>설명  
- `PROP_PAGE`유사한 [PROP_ENTRY_TYPE](#prop_entry_type), 하지만 속성 설명 또는 DISPID 필요 하지 않습니다.  
+ `PROP_PAGE` 유사한 [PROP_ENTRY_TYPE](#prop_entry_type), 하지만 속성 설명 또는 DISPID 필요 하지 않습니다.  
   
 > [!NOTE]
 >  인 CLSID를 이미 입력 한 경우 `PROP_ENTRY_TYPE` 또는 [prop_entry_type_ex를 대신 사용](#prop_entry_type_ex)와 추가 항목을 만들 필요가 없습니다 `PROP_PAGE`합니다.  
   
  [BEGIN_PROP_MAP](#begin_prop_map) 속성 맵에의 시작을 표시 하는 매크로, [END_PROP_MAP](#end_prop_map) 매크로 끝을 표시 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Windowing#134](../../atl/codesnippet/cpp/property-map-macros_5.h)]  
   
-##  <a name="end_prop_map"></a>END_PROP_MAP  
+##  <a name="end_prop_map"></a>  END_PROP_MAP  
  개체의 속성 매핑이 두의 끝을 표시 합니다.  
   
 ```
@@ -190,7 +185,7 @@ END_PROP_MAP()
 ### <a name="remarks"></a>설명  
  ATL 프로젝트 마법사는 개체를 만들 때 만들어집니다는 빈 속성 맵을 지정 하 여 [BEGIN_PROP_MAP](#begin_prop_map) 이어서 `END_PROP_MAP`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [BEGIN_PROP_MAP](#begin_prop_map)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

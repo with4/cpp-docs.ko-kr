@@ -1,12 +1,9 @@
 ---
-title: "IPerPropertyBrowsingImpl 클래스 | Microsoft Docs"
-ms.custom: 
+title: IPerPropertyBrowsingImpl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IPerPropertyBrowsingImpl
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - property pages, accessing information
 - IPerPropertyBrowsing, ATL implementation
 ms.assetid: 0b1a9be3-d242-4767-be69-663a21e4b728
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dca0c4e519703408af1ca5b6834e4b311c70bd21
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d9fffd6151405eaf53e99f770281139d7664b01
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iperpropertybrowsingimpl-class"></a>IPerPropertyBrowsingImpl 클래스
 이 클래스는 구현 **IUnknown** 및 클라이언트 개체의 속성 페이지의 정보에 액세스할 수 있습니다.  
@@ -80,7 +75,7 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlctl.h  
   
-##  <a name="getdisplaystring"></a>IPerPropertyBrowsingImpl::GetDisplayString  
+##  <a name="getdisplaystring"></a>  IPerPropertyBrowsingImpl::GetDisplayString  
  지정된 된 속성을 설명 하는 문자열을 검색 합니다.  
   
 ```
@@ -92,7 +87,7 @@ STDMETHOD(GetDisplayString)(
 ### <a name="remarks"></a>설명  
  참조 [IPerPropertyBrowsing::GetDisplayString](http://msdn.microsoft.com/library/windows/desktop/ms688734) in the Windows SDK입니다.  
   
-##  <a name="getpredefinedstrings"></a>IPerPropertyBrowsingImpl::GetPredefinedStrings  
+##  <a name="getpredefinedstrings"></a>  IPerPropertyBrowsingImpl::GetPredefinedStrings  
  각 0 항목 배열을 채웁니다.  
   
 ```
@@ -108,7 +103,7 @@ STDMETHOD(GetPredefinedStrings)(
 ### <a name="remarks"></a>설명  
  참조 [IPerPropertyBrowsing::GetPredefinedStrings](http://msdn.microsoft.com/library/windows/desktop/ms679724) in the Windows SDK입니다.  
   
-##  <a name="getpredefinedvalue"></a>IPerPropertyBrowsingImpl::GetPredefinedValue  
+##  <a name="getpredefinedvalue"></a>  IPerPropertyBrowsingImpl::GetPredefinedValue  
  검색 한 **VARIANT** 주어진된 DISPID로 식별 되는 속성의 값이 포함 합니다. 검색 문자열 이름으로 연결 된 DISPID `GetPredefinedStrings`합니다.  
   
 ```
@@ -126,7 +121,7 @@ STDMETHOD(GetPredefinedValue)(
   
  참조 [IPerPropertyBrowsing::GetPredefinedValue](http://msdn.microsoft.com/library/windows/desktop/ms690401) in the Windows SDK입니다.  
   
-##  <a name="mappropertytopage"></a>IPerPropertyBrowsingImpl::MapPropertyToPage  
+##  <a name="mappropertytopage"></a>  IPerPropertyBrowsingImpl::MapPropertyToPage  
  지정 된 속성과 연결 된 속성 페이지의 CLSID를 검색 합니다.  
   
 ```

@@ -1,13 +1,10 @@
 ---
-title: "EDITBIN 옵션 | Microsoft Docs"
-ms.custom: 
+title: EDITBIN 옵션 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - editbin
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4fc808f27b1d7a37e29a0f308ce51d31a9cc953
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1922e410b0151337ce403e24d20ae90b7e964cd5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="editbin-options"></a>EDITBIN 옵션
 개체 파일, 실행 파일 및 동적 연결 라이브러리 (Dll)를 수정 하려면 EDITBIN를 사용할 수 있습니다. 옵션에 따라 EDITBIN이 수행하는 변경 사항이 지정됩니다.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 02/14/2018
 |[/NXCOMPAT](../../build/reference/nxcompat.md)|실행 가능 이미지가 Windows 데이터 실행 방지와 호환되는지 여부를 지정합니다.|  
 |[/REBASE](../../build/reference/rebase.md)|지정된 개체에 대한 기준 주소를 설정합니다.|  
 |[/RELEASE](../../build/reference/release.md)|헤더에 체크섬을 설정합니다.|  
-|[/SECTION](../../build/reference/section-editbin.md)|섹션의 특성을 재정의합니다.|  
+|[/ 섹션](../../build/reference/section-editbin.md)|섹션의 특성을 재정의합니다.|  
 |[/STACK](../../build/reference/stack.md)|실행 가능 이미지의 스택 크기(바이트)를 설정합니다.|  
 |[/SUBSYSTEM](../../build/reference/subsystem.md)|실행 환경을 지정합니다.|  
 |[/SWAPRUN](../../build/reference/swaprun.md)|실행 가능 이미지를 스왑 파일에 복사한 후 여기에서 실행해야 하도록 지정합니다.|  

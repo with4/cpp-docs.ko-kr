@@ -1,12 +1,9 @@
 ---
-title: "CAxWindow 클래스 | Microsoft Docs"
-ms.custom: 
+title: CAxWindow 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAxWindow
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8848e8ecf85b073032561e2db52a0db1889911e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 052e7ad2bfa8cc03c4eadd4926dbd84c4fd60223
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="caxwindow-class"></a>CAxWindow 클래스
 이 클래스는 ActiveX 컨트롤을 호스팅하는 창 조작 하기 위한 메서드를 제공 합니다.  
@@ -69,10 +64,10 @@ class CAxWindow : public CWindow
   
 |||  
 |-|-|  
-|[연산자 =](#operator_eq)|할당 된 **HWND** 기존의 **CAxWindow** 개체입니다.|  
+|[operator =](#operator_eq)|할당 된 **HWND** 기존의 **CAxWindow** 개체입니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 클래스는 ActiveX 컨트롤을 호스팅하는 창을 조작 하기 위한 메서드를 제공 합니다. 제공한 호스트 하는 " **AtlAxWin80"**를 래핑하는 `CAxWindow`합니다.  
+ 이 클래스는 ActiveX 컨트롤을 호스팅하는 창을 조작 하기 위한 메서드를 제공 합니다. 제공한 호스트 하는 " **AtlAxWin80"** 를 래핑하는 `CAxWindow`합니다.  
   
  클래스 `CAxWindow` 의 특수화로 구현 됩니다는 `CAxWindowT` 클래스입니다. 이 특수화로 선언 됩니다.  
   
@@ -83,7 +78,7 @@ class CAxWindow : public CWindow
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
   
-##  <a name="attachcontrol"></a>CAxWindow::AttachControl  
+##  <a name="attachcontrol"></a>  CAxWindow::AttachControl  
  이미 존재 하지 하나 및 지정된 된 컨트롤을 호스트에 연결 하는 경우 새 호스트 개체를 만듭니다.  
   
 ```
@@ -105,7 +100,7 @@ HRESULT AttachControl(
 ### <a name="remarks"></a>설명  
  연결 되는 컨트롤 개체를 호출 하기 전에 올바르게 초기화 해야 `AttachControl`합니다.  
   
-##  <a name="caxwindow"></a>CAxWindow::CAxWindow  
+##  <a name="caxwindow"></a>  CAxWindow::CAxWindow  
  생성 된 `CAxWindow` 기존 창 개체 핸들을 사용 하 여 개체입니다.  
   
 ```
@@ -116,7 +111,7 @@ CAxWindow(HWND hWnd = NULL);
  `hWnd`  
  기존 창 개체에 대 한 핸들입니다.  
   
-##  <a name="createcontrol"></a>CAxWindow::CreateControl  
+##  <a name="createcontrol"></a>  CAxWindow::CreateControl  
  ActiveX 컨트롤을 만들고 초기화하며 지정한 창에 호스팅합니다.  
   
 ```
@@ -139,7 +134,7 @@ HRESULT CreateControl(
   
 -   "{8E27C92B-1264-101C-8A2F-040224009C02}"와 같은 CLSID  
   
--   "Http://www.microsoft.com"과 같이 URL  
+-   와 같은 URL "http://www.microsoft.com"  
   
 -   와 같은 액티브 문서에 대 한 참조 "file://\\\Documents\MyDoc.doc"  
   
@@ -169,10 +164,10 @@ HRESULT CreateControl(
   
  참조 [CAxWindow2T::CreateControlLic](../../atl/reference/caxwindow2t-class.md#createcontrollic) 만들기, 초기화 및 사용 허가 받은 ActiveX 컨트롤을 호스트 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [ActiveX 컨트롤 ATL를 사용 하 여 AXHost 호스팅](../../atl/hosting-activex-controls-using-atl-axhost.md) 사용 하는 샘플에 대 한 `CreateControl`합니다.  
   
-##  <a name="createcontrolex"></a>CAxWindow::CreateControlEx  
+##  <a name="createcontrolex"></a>  CAxWindow::CreateControlEx  
  ActiveX 컨트롤을 만들고 초기화하며 지정한 창에 호스팅합니다.  
   
 ```
@@ -201,7 +196,7 @@ HRESULT CreateControlEx(
   
 -   "{8E27C92B-1264-101C-8A2F-040224009C02}"와 같은 CLSID  
   
--   "Http://www.microsoft.com"과 같이 URL  
+-   와 같은 URL "http://www.microsoft.com"  
   
 -   와 같은 액티브 문서에 대 한 참조 "file://\\\Documents\MyDoc.doc"  
   
@@ -236,10 +231,10 @@ HRESULT CreateControlEx(
   
  참조 [CAxWindow2T::CreateControlLicEx](../../atl/reference/caxwindow2t-class.md#createcontrollicex) 만들기, 초기화 및 사용 허가 받은 ActiveX 컨트롤을 호스트 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [ActiveX 컨트롤 ATL를 사용 하 여 AXHost 호스팅](../../atl/hosting-activex-controls-using-atl-axhost.md) 사용 하는 샘플에 대 한 `CreateControlEx`합니다.  
   
-##  <a name="getwndclassname"></a>CAxWindow::GetWndClassName  
+##  <a name="getwndclassname"></a>  CAxWindow::GetWndClassName  
  창 클래스의 이름을 검색합니다.  
   
 ```
@@ -249,7 +244,7 @@ static LPCTSTR GetWndClassName();
 ### <a name="return-value"></a>반환 값  
  라이센스가 없는 ActiveX 컨트롤을 호스팅할 수 있는 창 클래스의 이름을 포함 하는 문자열에 대 한 포인터입니다.  
   
-##  <a name="operator_eq"></a>CAxWindow::operator =  
+##  <a name="operator_eq"></a>  CAxWindow::operator =  
  할당 된 `HWND` 기존의 `CAxWindow` 개체입니다.  
   
 ```
@@ -263,7 +258,7 @@ CAxWindow<TBase>& operator=(HWND hWnd);
 ### <a name="return-value"></a>반환 값  
  현재 `CAxWindow` 개체에 대한 참조를 반환합니다.  
   
-##  <a name="querycontrol"></a>CAxWindow::QueryControl  
+##  <a name="querycontrol"></a>  CAxWindow::QueryControl  
  호스팅된 컨트롤의 지정된 된 인터페이스를 검색합니다.  
   
 ```
@@ -285,7 +280,7 @@ HRESULT QueryControl(Q** ppUnk);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-##  <a name="queryhost"></a>CAxWindow::QueryHost  
+##  <a name="queryhost"></a>  CAxWindow::QueryHost  
  호스트의 지정된 된 인터페이스를 반환합니다.  
   
 ```
@@ -310,7 +305,7 @@ HRESULT QueryHost(Q** ppUnk);
 ### <a name="remarks"></a>설명  
  호스트의이 인터페이스에 의해 구현 창 호스팅 코드의 기본 기능에 대 한 액세스를 허용 **AxWin**합니다.  
   
-##  <a name="setexternaldispatch"></a>CAxWindow::SetExternalDispatch  
+##  <a name="setexternaldispatch"></a>  CAxWindow::SetExternalDispatch  
  설정에 대 한 외부 디스패치 인터페이스는 `CAxWindow` 개체입니다.  
   
 ```
@@ -324,7 +319,7 @@ HRESULT SetExternalDispatch(IDispatch* pDisp);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-##  <a name="setexternaluihandler"></a>CAxWindow::SetExternalUIHandler  
+##  <a name="setexternaluihandler"></a>  CAxWindow::SetExternalUIHandler  
  설정 하는 외부 [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) 에 대 한 인터페이스는 `CAxWindow` 개체입니다.  
   
 ```

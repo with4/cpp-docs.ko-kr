@@ -1,12 +1,9 @@
 ---
-title: "옵션, ATL Active Server Page 구성 요소 마법사 | Microsoft Docs"
-ms.custom: 
+title: 옵션, ATL Active Server Page 구성 요소 마법사 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.asp.options
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ATL Active Server Page Component Wizard, options
 ms.assetid: 54f34e26-53c7-4456-9675-cb86e356bde0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 199092acf4d26303a0d83d4885c3c7e3999bf0c4
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 31549c812b4f523cb8026a0d0b15ae60e31cd1f8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>옵션, ATL Active Server Page 구성 요소 마법사
 ATL Active Server 페이지 구성 요소 마법사의이 페이지를 사용 하 여 효율성과 개체에 대 한 오류 지원에 대 한 디자인 합니다.  
@@ -52,7 +47,7 @@ ATL Active Server 페이지 구성 요소 마법사의이 페이지를 사용 �
 |------------|-----------------|  
 |**예**|개체를 집계할 수 있도록 지정 합니다. 기본값입니다.|  
 |**No**|개체가 집계 되지 않은 것을 지정 합니다.|  
-|**Only**|개체가 해야 집계할 수 있도록 지정 합니다.|  
+|**만**|개체가 해야 집계할 수 있도록 지정 합니다.|  
   
  **지원**  
  (추가 될 요소 설명)  

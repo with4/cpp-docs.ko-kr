@@ -2,11 +2,8 @@
 title: 멤버 액세스 제어 (c + +) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88fe05ab0c0e6a1c433bf2b6007fb63c18fb5850
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1f36b23ce76c4f4e639e824116f7f80063a8748
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="member-access-control-c"></a>멤버 Access Control(C++)
 액세스 제어를 사용 하면 분리할 수는 [공용](../cpp/public-cpp.md) 에서 클래스의 인터페이스는 [개인](../cpp/private-cpp.md) 구현 세부 정보 및 [보호](../cpp/protected-cpp.md) 멤버에 대해서만 사용 하 여 파생된 클래스입니다. 액세스 지정자는 다음 액세스 지정자가 나타날 때까지 해당 액세스 지정자 뒤에 선언된 모든 멤버에 적용됩니다.  
@@ -190,7 +185,7 @@ int Derived2::ShowCount()
  파생 클래스인 `T`의 멤버 및 friend는 `T`에 대한 포인터를 `T`의 전용 직접 기본 클래스에 대한 포인터로 변환할 수 있습니다.  
   
 ## <a name="access-to-virtual-functions"></a>가상 함수에 대한 액세스  
- 액세스 제어를 적용할 [가상](../cpp/virtual-cpp.md) 함수는 함수 호출 시 사용 된 형식에 의해 결정 됩니다. 함수의 선언 재정의는 지정된 형식에 대한 액세스 제어에 영향을 주지 않습니다. 예:  
+ 액세스 제어를 적용할 [가상](../cpp/virtual-cpp.md) 함수는 함수 호출 시 사용 된 형식에 의해 결정 됩니다. 함수의 선언 재정의는 지정된 형식에 대한 액세스 제어에 영향을 주지 않습니다. 예를 들어:  
   
 ```  
 // access_to_virtual_functions.cpp  

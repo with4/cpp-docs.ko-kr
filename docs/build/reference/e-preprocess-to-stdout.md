@@ -2,12 +2,9 @@
 title: -E (stdout으로 전처리) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /e
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - preprocessor output, copy to stdout
 - preprocessor output
 ms.assetid: ddbb1725-d950-4978-ab2f-30a5cd7b778c
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed083c960421ce17c0ce61036cd05191fc12c797
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3f9105c5c75bc4695d0b00debdff49acf78690b1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="e-preprocess-to-stdout"></a>/E(stdout으로 전처리)
 C 및 c + + 소스 파일을 전처리 하 고 표준 출력 장치 전처리 파일을 복사 합니다.  
@@ -70,7 +65,7 @@ m(int)main( )
 cl -E test.cpp > test2.cpp  
 ```  
   
- `int main`test2.cpp에서 잘못 됩니다 `intmain`합니다.  
+ `int main` test2.cpp에서 잘못 됩니다 `intmain`합니다.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
@@ -86,7 +81,7 @@ cl -E test.cpp > test2.cpp
   
 -   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GeneratePreprocessedFile%2A>을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 명령줄을 실행 하면 `ADD.C`주석을 유지, 추가, `#line` 지시문을 표준 출력 장치에 결과 표시 합니다.  
   
 ```  

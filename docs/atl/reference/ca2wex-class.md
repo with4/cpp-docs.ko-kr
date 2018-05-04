@@ -1,12 +1,9 @@
 ---
-title: "CA2WEX 클래스 | Microsoft Docs"
-ms.custom: 
+title: CA2WEX 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CA2WEX
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - CA2WEX class
 ms.assetid: 317d9ffb-e84f-47e8-beda-57e28fb19124
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0114d2ce60eba1d92b4cfd52d003532bd9ced097
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 218e0d8f5e93a9e6c41ff855ff086cc7bfa6c766
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ca2wex-class"></a>CA2WEX 클래스
 이 클래스는 문자열 변환 매크로 사용 `CA2TEX`, `CA2CTEX`, `CT2WEX`, 및 `CT2CWEX`, 및 typedef **CA2W**합니다.  
@@ -95,13 +90,13 @@ class CA2WEX
   
  이러한 텍스트 변환 매크로의 논의 알려면 [ATL 및 MFC 문자열 변환 매크로](string-conversion-macros.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  참조 [ATL 및 MFC 문자열 변환 매크로](string-conversion-macros.md) 이러한 문자열 변환 매크로 사용의 예입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlconv.h  
   
-##  <a name="ca2wex"></a>CA2WEX::CA2WEX  
+##  <a name="ca2wex"></a>  CA2WEX::CA2WEX  
  생성자입니다.  
   
 ```
@@ -119,7 +114,7 @@ CA2WEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>설명  
  변환 프로세스에서 사용 되는 버퍼를 할당 합니다.  
   
-##  <a name="dtor"></a>CA2WEX:: ~ CA2WEX  
+##  <a name="dtor"></a>  CA2WEX:: ~ CA2WEX  
  소멸자입니다.  
   
 ```
@@ -129,21 +124,21 @@ CA2WEX(LPCSTR psz) throw(...);
 ### <a name="remarks"></a>설명  
  할당된 된 버퍼를 해제합니다.  
   
-##  <a name="m_psz"></a>CA2WEX::m_psz  
+##  <a name="m_psz"></a>  CA2WEX::m_psz  
  소스 문자열을 저장 하는 데이터 멤버입니다.  
   
 ```
 LPWSTR m_psz;
 ```  
   
-##  <a name="m_szbuffer"></a>CA2WEX::m_szBuffer  
+##  <a name="m_szbuffer"></a>  CA2WEX::m_szBuffer  
  변환된 된 문자열을 저장 하는 데 정적 버퍼입니다.  
   
 ```
 wchar_t m_szBuffer[t_nBufferLength];
 ```  
   
-##  <a name="operator_lpwstr"></a>CA2WEX::operator LPWSTR  
+##  <a name="operator_lpwstr"></a>  CA2WEX::operator LPWSTR  
  변환 연산자입니다.  
   
 ```  

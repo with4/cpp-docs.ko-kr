@@ -1,30 +1,25 @@
 ---
-title: "DHTML 컨트롤 프로젝트의 요소를 식별 합니다. | Microsoft Docs"
-ms.custom: 
+title: DHTML 컨트롤 프로젝트의 요소를 식별 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - HTML controls, ATL support
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74b271f56fe7c8d3345ce53de06a18a2700175f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 525ad4e073607064234641f6544a11901ded0096
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>DHTML 컨트롤 프로젝트의 요소를 식별합니다.
 ATL 컨트롤에 대 한 대부분 DHTML 제어 코드와 같습니다 만들어집니다. 제네릭 코드의 한 기본적인 이해에 대 한 작업을 통해는 [ATL 자습서](../atl/active-template-library-atl-tutorial.md), 섹션에서 확인 하 고 [ATL 프로젝트 만들기](../atl/reference/creating-an-atl-project.md) 및 [ATL COM 개체 기본 사항](../atl/fundamentals-of-atl-com-objects.md)합니다.  

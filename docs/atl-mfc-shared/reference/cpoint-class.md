@@ -2,11 +2,8 @@
 title: CPoint 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPoint
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7140e2db55db8a28c1af63f89517708f4dc0d835
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 36dc82c03f13b4708d705d9fd66eff26870c8346
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cpoint-class"></a>CPoint 클래스
 Windows `POINT` 구조체와 유사합니다.  
@@ -85,7 +80,7 @@ class CPoint : public tagPOINT
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atltypes.h  
   
-##  <a name="cpoint"></a>CPoint::CPoint
+##  <a name="cpoint"></a>  CPoint::CPoint
  `CPoint` 개체를 생성합니다.  
   
 ```  
@@ -115,7 +110,7 @@ CPoint(LPARAM dwPoint) throw();
 ### <a name="remarks"></a>설명  
  인수가 지정되지 않으면 `x` 및 `y` 멤버가 0으로 설정됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp   
 CPoint   ptTopLeft(0, 0); 
@@ -142,7 +137,7 @@ CPoint ptFromDouble(dwSize);
 ASSERT(ptFromDouble == ptMFCHere);
 ```  
   
-##  <a name="offset"></a>CPoint::Offset  
+##  <a name="offset"></a>  CPoint::Offset  
  값을 추가 **x** 및 **y** 의 멤버는 `CPoint`합니다.  
   
 ```  
@@ -164,10 +159,10 @@ void Offset(SIZE size) throw();
  `size`  
  크기 지정 ( [크기](http://msdn.microsoft.com/library/windows/desktop/dd145106) 또는 [CSize](../../atl-mfc-shared/reference/csize-class.md)) 오프셋의 `CPoint`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities#28](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_1.cpp)]  
   
-##  <a name="operator_eq_eq"></a>CPoint::operator = =  
+##  <a name="operator_eq_eq"></a>  CPoint::operator = =  
  두 점 사이의 같은지 확인 합니다.  
   
 ```  
@@ -181,10 +176,10 @@ BOOL operator==(POINT point) const throw();
 ### <a name="return-value"></a>반환 값  
  점 동일 하면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities#29](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_2.cpp)]  
   
-##  <a name="operator_neq"></a>CPoint::operator! =  
+##  <a name="operator_neq"></a>  CPoint::operator! =  
  두 점 사이의 다른 지 확인 합니다.  
   
 ```  
@@ -198,10 +193,10 @@ BOOL operator!=(POINT point) const throw();
 ### <a name="return-value"></a>반환 값  
  요소가 개체가 동일 하면 0이 아니고 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities#30](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_3.cpp)]  
   
-##  <a name="operator_add_eq"></a>CPoint::operator + =  
+##  <a name="operator_add_eq"></a>  CPoint::operator + =  
  크기를 추가 하는 첫 번째 오버 로드는 `CPoint`합니다.  
   
 ```  
@@ -223,10 +218,10 @@ void operator+=(POINT point) throw();
   
  예를 들어 추가 `CPoint(5, -7)` 포함 된 변수에 `CPoint(30, 40)` 변수를 변경 `CPoint(35, 33)`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities#31](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_4.cpp)]  
   
-##  <a name="operator_-_eq"></a>-= CPoint::operator  
+##  <a name="operator_-_eq"></a>  -= CPoint::operator  
  첫 번째 오버 로드에서 크기를 뺍니다는 `CPoint`합니다.  
   
 ```  
@@ -248,10 +243,10 @@ void operator-=(POINT point) throw();
   
  예를 들어 빼기 `CPoint(5, -7)` 포함 된 변수에서 `CPoint(30, 40)` 변수를 변경 `CPoint(25, 47)`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities#32](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_5.cpp)]  
   
-##  <a name="operator_add"></a>CPoint::operator +  
+##  <a name="operator_add"></a>  CPoint::operator +  
  이 연산자를 사용 하 여를 오프셋할 `CPoint` 하 여는 `CPoint` 또는 `CSize` 개체 또는 오프셋 하는 `CRect` 하 여는 `CPoint`합니다.  
   
 ```  
@@ -278,10 +273,10 @@ CRect operator+(const RECT* lpRect) const throw();
   
  만큼 오프셋 되 고 후 사각형을 반환 하는 지점에 사각형을 추가 **x** 및 **y** 지점에 지정 된 값입니다. 예를 들어 마지막 오버 로드를 사용 하 여 사각형이 오프셋 `CRect(125, 219, 325, 419)` 지점 `CPoint(25, -19)` 반환 `CRect(150, 200, 350, 400)`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities#33](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_6.cpp)]  
   
-##  <a name="operator_-"></a>CPoint::operator-  
+##  <a name="operator_-"></a>  CPoint::operator-  
  사용 하는 처음 두 개의 오버 로드 중 하나는 `CPoint` 또는 `CSize` 에서 개체 `CPoint`합니다.  
   
 ```  
@@ -315,7 +310,7 @@ CPoint operator-() const throw();
   
  단항 연산자를 사용 하 여 점을 부정입니다. 예를 들어, 단항 연산자를 사용 하 여 지점과 `CPoint(25, -19)` 반환 `CPoint(-25, 19)`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATLMFC_Utilities#34](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_7.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

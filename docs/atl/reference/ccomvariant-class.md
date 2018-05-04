@@ -1,12 +1,9 @@
 ---
-title: "CComVariant 클래스 | Microsoft Docs"
-ms.custom: 
+title: CComVariant 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComVariant
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67e5aeee2aaa96b143962beb0790e3854ff7de01
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e2ebef74f6da48d2124d69f002a85c467db73406
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomvariant-class"></a>CComVariant 클래스
 이 클래스를 래핑하는 `VARIANT` 형식, 저장 된 데이터의 형식을 나타내는 멤버를 제공 합니다.  
@@ -82,13 +77,13 @@ class CComVariant : public tagVARIANT
 |[CComVariant::operator <](#operator_lt)|나타냅니다 여부는 `CComVariant` 개체가 지정 된 보다 작은지 **VARIANT**합니다.|  
 |[CComVariant::operator >](#operator_gt)|나타냅니다 여부는 `CComVariant` 개체가 지정 된 보다 큰지 **VARIANT**합니다.|  
 |[operator! =](#operator_neq)|나타냅니다 여부는 `CComVariant` 지정 된 개체와 같지 않습니다 **VARIANT**합니다.|  
-|[연산자 =](#operator_eq)|에 값을 할당는 `CComVariant` 개체입니다.|  
-|[연산자 = =](#operator_eq_eq)|나타냅니다 여부는 `CComVariant` 개체가 지정 된 같음 **VARIANT**합니다.|  
+|[operator =](#operator_eq)|에 값을 할당는 `CComVariant` 개체입니다.|  
+|[operator ==](#operator_eq_eq)|나타냅니다 여부는 `CComVariant` 개체가 지정 된 같음 **VARIANT**합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CComVariant`래핑하는 `VARIANT and VARIANTARG` 공용 구조체 및 공용 구조체에 저장 된 데이터의 형식을 나타내는 구성원으로 구성 된 유형입니다. **VARIANT**의자동화에서 일반적으로 사용 됩니다.  
+ `CComVariant` 래핑하는 `VARIANT and VARIANTARG` 공용 구조체 및 공용 구조체에 저장 된 데이터의 형식을 나타내는 구성원으로 구성 된 유형입니다. **VARIANT**의자동화에서 일반적으로 사용 됩니다.  
   
- `CComVariant`파생 되는 **VARIANT** 입력 될 수 있도록 아무 곳에 나 사용을 **VARIANT** 사용할 수 있습니다. 예를 들어 사용할 수 있습니다는 **V_VT** 유형을 추출 하는 매크로 `CComVariant` 하거나 액세스할 수 있습니다는 **vt** 멤버 수와 같은 직접 방법는 **VARIANT**합니다.  
+ `CComVariant` 파생 되는 **VARIANT** 입력 될 수 있도록 아무 곳에 나 사용을 **VARIANT** 사용할 수 있습니다. 예를 들어 사용할 수 있습니다는 **V_VT** 유형을 추출 하는 매크로 `CComVariant` 하거나 액세스할 수 있습니다는 **vt** 멤버 수와 같은 직접 방법는 **VARIANT**합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `tagVARIANT`  
@@ -98,7 +93,7 @@ class CComVariant : public tagVARIANT
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcomcli.h  
   
-##  <a name="attach"></a>CComVariant::Attach  
+##  <a name="attach"></a>  CComVariant::Attach  
  현재 콘텐츠를 안전 하 게 지웁니다는 `CComVariant` 개체의 내용을 복사, `pSrc` 이 개체에 다음에서 variant 형식의 설정 `pSrc` 를 `VT_EMPTY`합니다.  
   
 ```
@@ -115,7 +110,7 @@ HRESULT Attach(VARIANT* pSrc);
 ### <a name="remarks"></a>설명  
  에 보관 된 데이터의 소유권 `pSrc` 으로 전송 되는 `CComVariant` 개체입니다.  
   
-##  <a name="ccomvariant"></a>CComVariant::CComVariant  
+##  <a name="ccomvariant"></a>  CComVariant::CComVariant  
  안전 초기화를 처리 하는 각 생성자는 `CComVariant` 호출 하 여 개체는 `VariantInit` Win32 함수 또는 개체의 값과 전달 된 매개 변수에 따라 형식을 설정 하 여 합니다.  
   
 ```
@@ -170,7 +165,7 @@ CComVariant(const CComBSTR& bstrSrc);
  [in] **CY** 초기화 하는 데는 `CComVariant` 개체입니다. 종류는 `CComVariant` 개체 됩니다 `VT_CY`합니다.  
   
  `pSrc`  
- [in] `IDispatch` 또는 **IUnknown** 포인터를 초기화 하는 데 사용 된 `CComVariant` 개체입니다. `AddRef`인터페이스 포인터에서 호출 됩니다. 유형의 `CComVariant` 개체 됩니다 **VT_DISPATCH** 또는 **VT_UNKNOWN**각각.  
+ [in] `IDispatch` 또는 **IUnknown** 포인터를 초기화 하는 데 사용 된 `CComVariant` 개체입니다. `AddRef` 인터페이스 포인터에서 호출 됩니다. 유형의 `CComVariant` 개체 됩니다 **VT_DISPATCH** 또는 **VT_UNKNOWN**각각.  
   
  또는 **SAFERRAY** 포인터를 초기화 하는 데 사용 된 `CComVariant` 개체입니다. 복사본은 **SAFEARRAY** 에 저장 되는 `CComVariant` 개체입니다. 종류는 `CComVariant` 개체는 원래 유형의의 조합 수 있는지는 **SAFEARRAY** 및 **VT_ARRAY**합니다.  
   
@@ -183,7 +178,7 @@ CComVariant(const CComBSTR& bstrSrc);
 ### <a name="remarks"></a>설명  
  소멸자를 호출 하 여 정리 관리 [CComVariant::Clear](#clear)합니다.  
   
-##  <a name="dtor"></a>CComVariant:: ~ CComVariant  
+##  <a name="dtor"></a>  CComVariant:: ~ CComVariant  
  소멸자입니다.  
   
 ```
@@ -193,7 +188,7 @@ CComVariant(const CComBSTR& bstrSrc);
 ### <a name="remarks"></a>설명  
  이 메서드를 호출 하 여 정리 관리 [CComVariant::Clear](#clear)합니다.  
   
-##  <a name="changetype"></a>CComVariant::ChangeType  
+##  <a name="changetype"></a>  CComVariant::ChangeType  
  변환 된 `CComVariant` 개체를 새 형식입니다.  
   
 ```
@@ -213,7 +208,7 @@ HRESULT ChangeType(VARTYPE vtNew, const VARIANT* pSrc = NULL);
 ### <a name="remarks"></a>설명  
  에 대 한 값을 전달 하는 경우 `pSrc`, `ChangeType` ´ ֲ이 **VARIANT** 변환에 대 한 소스로 합니다. 그렇지 않은 경우는 `CComVariant` 개체 소스 됩니다.  
   
-##  <a name="clear"></a>CComVariant::Clear  
+##  <a name="clear"></a>  CComVariant::Clear  
  지웁니다는 `CComVariant` 호출 하 여 개체는 `VariantClear` Win32 함수입니다.  
   
 ```
@@ -226,7 +221,7 @@ HRESULT Clear();
 ### <a name="remarks"></a>설명  
  소멸자를 자동으로 호출 **지우기**합니다.  
   
-##  <a name="copy"></a>CComVariant::Copy  
+##  <a name="copy"></a>  CComVariant::Copy  
  해제 된 `CComVariant` 개체를 지정 된 복사 할당 **VARIANT**합니다.  
   
 ```
@@ -240,7 +235,7 @@ HRESULT Copy(const VARIANT* pSrc);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-##  <a name="copyto"></a>CComVariant::CopyTo  
+##  <a name="copyto"></a>  CComVariant::CopyTo  
  내용을 복사는 `CComVariant` 개체입니다.  
   
 ```
@@ -257,7 +252,7 @@ HRESULT CopyTo(BSTR* pstrDest);
 ### <a name="remarks"></a>설명  
  **CComVariant** 개체 유형 이어야 `VT_BSTR`합니다.  
   
-##  <a name="detach"></a>CComVariant::Detach  
+##  <a name="detach"></a>  CComVariant::Detach  
  내부 분리 **VARIANT** 에서 `CComVariant` 개체 및 개체의 형식을 설정 `VT_EMPTY`합니다.  
   
 ```
@@ -274,7 +269,7 @@ HRESULT Detach(VARIANT* pDest);
 ### <a name="remarks"></a>설명  
  내용을 `VARIANT` 참조 `pDest` 호출의 종류와 값이 할당 되기 전에 자동으로 해제 됩니다 **CComVariant** 개체입니다.  
   
-##  <a name="getsize"></a>CComVariant::GetSize  
+##  <a name="getsize"></a>  CComVariant::GetSize  
  단순 고정 크기에 대 한 `VARIANT`s,이 메서드는 반환 된 `sizeof` 기본 데이터 형식 더하기 `sizeof(VARTYPE)`합니다.  
   
 ```
@@ -291,7 +286,7 @@ ULONG GetSize() const;
   
  이 메서드에 의해 반환 되는 크기에 사용 된 바이트 수와 일치 [CComVariant::WriteToStream](#writetostream) 성공 조건입니다.  
   
-##  <a name="operator_eq"></a>CComVariant::operator =  
+##  <a name="operator_eq"></a>  CComVariant::operator =  
  값과 해당 형식에 지정 된 `CComVariant` 개체입니다.  
   
 ```
@@ -345,14 +340,14 @@ CComVariant& operator=(char cSrc) throw();
  [in] **CY** 에 할당할 수는 `CComVariant` 개체입니다. 종류는 `CComVariant` 개체 됩니다 `VT_CY`합니다.  
   
  `pSrc`  
- [in] `IDispatch` 또는 **IUnknown** 포인터에 할당할 수는 `CComVariant` 개체입니다. `AddRef`인터페이스 포인터에서 호출 됩니다. 유형의 `CComVariant` 개체 됩니다 **VT_DISPATCH** 또는 **VT_UNKNOWN**각각.  
+ [in] `IDispatch` 또는 **IUnknown** 포인터에 할당할 수는 `CComVariant` 개체입니다. `AddRef` 인터페이스 포인터에서 호출 됩니다. 유형의 `CComVariant` 개체 됩니다 **VT_DISPATCH** 또는 **VT_UNKNOWN**각각.  
   
  또는, **SAFEARRAY** 포인터에 할당할 수는 `CComVariant` 개체입니다. 복사본은 **SAFEARRAY** 에 저장 되는 `CComVariant` 개체입니다. 종류는 `CComVariant` 개체는 원래 유형의의 조합 수 있는지는 **SAFEARRAY** 및 **VT_ARRAY**합니다.  
   
  `cSrc`  
  [in] 에 할당할 char는 `CComVariant` 개체입니다. 종류는 `CComVariant` 개체 됩니다 **VT_I1**합니다.  
   
-##  <a name="operator_eq_eq"></a>CComVariant::operator = =  
+##  <a name="operator_eq_eq"></a>  CComVariant::operator = =  
  나타냅니다 여부는 `CComVariant` 개체가 지정 된 같음 **VARIANT**합니다.  
   
 ```
@@ -364,7 +359,7 @@ bool operator==(const VARIANT& varSrc) const throw();
   
  연산자는 variant 형식의 값만 비교합니다. 문자열, 정수 및 부동 소수점 하지만 하지 배열 또는 레코드를 비교합니다.  
   
-##  <a name="operator_neq"></a>CComVariant::operator! =  
+##  <a name="operator_neq"></a>  CComVariant::operator! =  
  나타냅니다 여부는 `CComVariant` 지정 된 개체와 같지 않습니다 **VARIANT**합니다.  
   
 ```
@@ -376,7 +371,7 @@ bool operator!=(const VARIANT& varSrc) const throw();
   
  연산자는 variant 형식의 값만 비교합니다. 문자열, 정수 및 부동 소수점 하지만 하지 배열 또는 레코드를 비교합니다.  
   
-##  <a name="operator_lt"></a>CComVariant::operator&lt;  
+##  <a name="operator_lt"></a>  CComVariant::operator &lt;  
  나타냅니다 여부는 `CComVariant` 개체가 지정 된 보다 작은지 **VARIANT**합니다.  
   
 ```
@@ -386,7 +381,7 @@ bool operator<(const VARIANT& varSrc) const throw();
 ### <a name="remarks"></a>설명  
  반환 **true** 경우의 값은 `CComVariant` 개체의 값 보다 작으면 *varSrc*합니다. 그렇지 않으면 **false**합니다. 연산자 비교를 수행 하려면 사용자의 기본 로캘을 사용 합니다.  
   
-##  <a name="operator_gt"></a>CComVariant::operator&gt;  
+##  <a name="operator_gt"></a>  CComVariant::operator &gt;  
  나타냅니다 여부는 `CComVariant` 개체가 지정 된 보다 큰지 **VARIANT**합니다.  
   
 ```
@@ -396,7 +391,7 @@ bool operator>(const VARIANT& varSrc) const throw();
 ### <a name="remarks"></a>설명  
  반환 **true** 경우의 값은 `CComVariant` 개체의 값 보다 크면 *varSrc*합니다. 그렇지 않으면 **false**합니다. 연산자 비교를 수행 하려면 사용자의 기본 로캘을 사용 합니다.  
   
-##  <a name="readfromstream"></a>CComVariant::ReadFromStream  
+##  <a name="readfromstream"></a>  CComVariant::ReadFromStream  
  기본 설정 **VARIANT** 에 **VARIANT** 에 지정된 된 스트림을 포함 합니다.  
   
 ```
@@ -413,7 +408,7 @@ HRESULT ReadFromStream(IStream* pStream);
 ### <a name="remarks"></a>설명  
  **ReadToStream** 이전 호출을 [WriteToStream](#writetostream)합니다.  
   
-##  <a name="setbyref"></a>CComVariant::SetByRef  
+##  <a name="setbyref"></a>  CComVariant::SetByRef  
  초기화는 `CComVariant` 개체 및 설정은 **vt** 멤버를 **VT_BYREF**합니다.  
   
 ```
@@ -429,11 +424,11 @@ void SetByRef(T* pT) throw();
  초기화 하는 데 포인터는 `CComVariant` 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- `SetByRef`가 초기화 하는 함수 템플릿이 `CComVariant` 개체 포인터를 *pT* 설정 하 고는 **vt** 멤버를 **VT_BYREF**합니다. 예:  
+ `SetByRef` 가 초기화 하는 함수 템플릿이 `CComVariant` 개체 포인터를 *pT* 설정 하 고는 **vt** 멤버를 **VT_BYREF**합니다. 예를 들어:  
   
  [!code-cpp[NVC_ATL_Utilities#76](../../atl/codesnippet/cpp/ccomvariant-class_1.cpp)]  
   
-##  <a name="writetostream"></a>CComVariant::WriteToStream  
+##  <a name="writetostream"></a>  CComVariant::WriteToStream  
  내부 저장 **VARIANT** 스트림으로 합니다.  
   
 ```

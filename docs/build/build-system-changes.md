@@ -2,12 +2,9 @@
 title: 빌드 시스템 변경 내용 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.msbuild.changes
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 01eb3a38ddaf7cdb1d54061e48680396f16b25e0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="build-system-changes"></a>빌드 시스템 변경 사항
 MSBuild 시스템은 Visual C++ 프로젝트를 빌드하는 데 사용됩니다. 하지만 Visual Studio 2008 및 이전 버전에서는 VCBuild 시스템이 사용되었습니다. 특정 파일 형식 및 개념 VCBuild에 의존 하는 존재 하지 않는 또는 현재 시스템에서 다르게 표현 됩니다. 이 문서는 현재 빌드 시스템의 차이점을 설명 합니다.  
@@ -68,7 +63,7 @@ Property=<value>;$(MyProperty)
 ## <a name="vcxprojuser-files"></a>. vcxproj.user 파일  
  사용자 파일 (. vcxproj.user) 디버깅 및 배포 설정에 대 한 사용자 고유의 속성을 저장 합니다. Vcxproj.user 파일 특정 사용자에 대해 모든 프로젝트에 적용 됩니다.  
   
-## <a name="vcxprojfilters-file"></a>.vcxproj.filters File  
+## <a name="vcxprojfilters-file"></a>. vcxproj.filters 파일  
  때 **솔루션 탐색기** 경우 필터 파일을 프로젝트에 파일을 추가 하는 데 사용 됩니다 (. vcxproj.filters)의 위치를 정의 **솔루션 탐색기** 트리 파일 이름 확장명에 따라 보기 해당 파일이 추가 됩니다.  
   
 ## <a name="vc-directories-settings"></a>VC + + 디렉터리 설정  

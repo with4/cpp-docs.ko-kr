@@ -1,10 +1,10 @@
 ---
-title: "/Zc:throwingNew (가정 연산자 새 throw) | Microsoft Docs"
-ms.custom: 
+title: /Zc:throwingNew (가정 연산자 새 throw) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - throwingNew
 - /Zc:throwingNew
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 20ff0101-9677-4d83-8c7b-8ec9ca49f04f
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc29a364e5001fb319017a1bc2fa084514d52f16
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: f446e5c71e88be86c31e5a83ca7d23f611683af4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcthrowingnew-assume-operator-new-throws"></a>/Zc:throwingNew (가정 연산자 새 throw)
 
@@ -62,7 +61,7 @@ Visual C++의 규칙과 관련된 문제에 대한 자세한 내용은 [Nonstand
 
 1. 수정 된 **추가 옵션** 포함할 속성을 **/Zc:throwingNew** 또는 **/Zc:throwingNew-** 선택한 후 **확인**합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [컴파일러 옵션](../../build/reference/compiler-options.md)<br/>
 [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)<br/>

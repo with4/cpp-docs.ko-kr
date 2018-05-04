@@ -1,12 +1,12 @@
 ---
-title: "링커 속성 페이지 | Microsoft Docs"
-ms.custom: 
+title: 링커 속성 페이지 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/21/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VC.Project.VCLinkerTool.RegisterOutput
@@ -19,17 +19,17 @@ helpviewer_keywords:
 - per-user redirection
 - Linker property pages
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b8a1d0d4775955ee55aa0f40ac10a75cda54379
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 31b44b6711153d29ab6a9c542a6e5677e6279432
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linker-property-pages"></a>링커 속성 페이지
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/21/2017
 
 ### <a name="per-user-redirection"></a>사용자별 리디렉션
 
-일반적으로 Visual Studio에서 등록 HKEY_CLASSES_ROOT (HKCR)에서 수행 하지 않았습니다. 와 [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)], 승격 된 모드에서 Visual Studio를 실행 해야 하는 HKCR 액세스할 수 있습니다. 개발자는 항상 원하지 않는 관리자 모드에서 실행 하지만 등록 에서도 계속 작동 해야 합니다. 사용자 단위 리디렉션을 사용 하면이 모드에서 실행 하지 않고도 등록할 수 있습니다.
+일반적으로 Visual Studio에서 등록 HKEY_CLASSES_ROOT (HKCR)에서 수행 하지 않았습니다. Windows Vista 및 이후 운영 체제와 HKCR에 액세스 하려면 Visual Studio을 승격 된 모드에서 실행 해야 있습니다. 개발자는 항상 원하지 않는 관리자 모드에서 실행 하지만 등록 에서도 계속 작동 해야 합니다. 사용자 단위 리디렉션을 사용 하면이 모드에서 실행 하지 않고도 등록할 수 있습니다.
 
 사용자 단위 리디렉션을 HKEY 리디렉션할 수 HKCR에 한 쓰기가 강제로\_현재\_사용자 (HKCU). 사용자 단위 리디렉션을 해제 하는 경우 발생할 수 있습니다 [프로젝트 빌드 오류 PRJ0050](../error-messages/tool-errors/project-build-error-prj0050.md) HKCR에는 프로그램을 사용 하는 경우.
 
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/21/2017
 
 액세스 하는 방법에 대 한 내용은 **일반** 링커 속성 페이지 참조 [프로젝트 속성 작업](../ide/working-with-project-properties.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [옵션 대화 상자, 프로젝트 및 솔루션, VC++ 프로젝트 설정](/visualstudio/ide/reference/vcpp-project-settings-projects-and-solutions-options-dialog-box)  
 [속성 페이지](../ide/property-pages-visual-cpp.md)  

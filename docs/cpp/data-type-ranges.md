@@ -1,12 +1,9 @@
 ---
-title: "데이터 형식 범위 | Microsoft Docs"
-ms.custom: 
+title: 데이터 형식 범위 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -44,17 +41,15 @@ helpviewer_keywords:
 - long int keyword [C++]
 - unsigned long int [C++]
 ms.assetid: 3691ceca-05fb-4b82-b1ae-5c4618cda91a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af0601299046276c135571be2bac615df1571140
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 04c809249bbe7513e5a1e439ebaf5e4e44a2f758
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-type-ranges"></a>데이터 형식 범위
 Visual C++ 32비트 및 64비트 컴파일러는 이 문서의 뒷부분의 표에 나온 형식을 인식합니다.  
@@ -89,7 +84,7 @@ Visual C++ 32비트 및 64비트 컴파일러는 이 문서의 뒷부분의 표�
 |unsigned __int16|2|unsigned short, unsigned short int|0 ~ 65,535|  
 |__int32|4|signed, signed int 및 int|–2,147,483,648 ~ 2,147,483,647|  
 |unsigned __int32|4|unsigned, unsigned int|0 ~ 4,294,967,295|  
-|__int64|9|long long, signed long long|–9,223,372,036,854,775,808 ~ 9,223,372,036,854,775,807|  
+|__int64|8|long long, signed long long|–9,223,372,036,854,775,808 ~ 9,223,372,036,854,775,807|  
 |unsigned __int64|8|unsigned long long|0 ~ 18,446,744,073,709,551,615|  
 |bool|1|없음|false 또는 true|  
 |char|1|없음|-기본적으로 128에서 127<br /><br /> [/J](../build/reference/j-default-char-type-is-unsigned.md)를 사용하여 컴파일된 경우 0~255|  

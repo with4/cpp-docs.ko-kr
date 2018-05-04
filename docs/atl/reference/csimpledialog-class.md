@@ -1,12 +1,9 @@
 ---
-title: "CSimpleDialog 클래스 | Microsoft Docs"
-ms.custom: 
+title: CSimpleDialog 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CSimpleDialog
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - dialog boxes, modal
 - modal dialog boxes, ATL
 ms.assetid: 2ae65cc9-4f32-4168-aecd-200b4a480fdf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e497d5f1646ab890b7dafa3e1fb7e1c711a8a09
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f3a8f6cb2ead8798b86d65a1fa875a42a68cdd77
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog 클래스
 이 클래스는 기본 모달 대화 상자를 구현합니다.  
@@ -59,9 +54,9 @@ class CSimpleDialog : public CDialogImplBase
 |[CSimpleDialog::DoModal](#domodal)|모달 대화 상자를 만듭니다.|  
   
 ## <a name="remarks"></a>설명  
- 기본 기능으로 모달 대화 상자를 구현 합니다. `CSimpleDialog`Windows 공용 컨트롤만 지원을 합니다. 을 만들고 모달 대화 상자를 표시 하려면 대화 상자에 대 한 기존 리소스 템플릿 이름을 제공 하는이 클래스의 인스턴스를 만듭니다. 대화 상자 개체 (예: IDOK 또는 IDCANCEL) 미리 정의 된 값을 가진 모든 컨트롤을 마우스 오른쪽 단추로 클릭할 때 닫힙니다.  
+ 기본 기능으로 모달 대화 상자를 구현 합니다. `CSimpleDialog` Windows 공용 컨트롤만 지원을 합니다. 을 만들고 모달 대화 상자를 표시 하려면 대화 상자에 대 한 기존 리소스 템플릿 이름을 제공 하는이 클래스의 인스턴스를 만듭니다. 대화 상자 개체 (예: IDOK 또는 IDCANCEL) 미리 정의 된 값을 가진 모든 컨트롤을 마우스 오른쪽 단추로 클릭할 때 닫힙니다.  
   
- `CSimpleDialog`모달 대화 상자만 만들 수 있습니다. `CSimpleDialog`기본 메시지 맵을 메시지를 적절 한 처리기를 사용 하 여 대화 상자 프로시저를 제공 합니다.  
+ `CSimpleDialog` 모달 대화 상자만 만들 수 있습니다. `CSimpleDialog` 기본 메시지 맵을 메시지를 적절 한 처리기를 사용 하 여 대화 상자 프로시저를 제공 합니다.  
   
  참조 [대화 상자를 구현](../../atl/implementing-a-dialog-box.md) 자세한 정보에 대 한 합니다.  
   
@@ -73,7 +68,7 @@ class CSimpleDialog : public CDialogImplBase
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
   
-##  <a name="domodal"></a>CSimpleDialog::DoModal  
+##  <a name="domodal"></a>  CSimpleDialog::DoModal  
  모달 대화 상자를 호출 하 고 완료 한 후 대화 상자 결과 반환 합니다.  
   
 ```

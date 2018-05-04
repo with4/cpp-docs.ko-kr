@@ -1,27 +1,22 @@
 ---
-title: "값 형식 (최신 c + +) | Microsoft Docs"
-ms.custom: 
+title: 값 형식 (최신 c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f63bb62c-60da-40d5-ac14-4366608fe260
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d84888236b81fe862c6a22793e926ebf7df55c0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e7e49c97bca86b8d2debde2f5b132f7dde16998e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="value-types-modern-c"></a>값 형식(최신 C++)
 C + + 클래스는 기본 값 형식으로 됩니다. 이 항목에서는 값 형식 및 용도 관련 된 문제 소개 개요를 제공 합니다.  
@@ -127,5 +122,5 @@ public:
 ## <a name="see-also"></a>참고 항목  
  [C + + 형식 시스템](../cpp/cpp-type-system-modern-cpp.md)   
  [C + +의 진화](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C + + 언어 참조](../cpp/cpp-language-reference.md)   
+ [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [C++ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)

@@ -1,29 +1,24 @@
 ---
-title: "격리 된 응용 프로그램 빌드 C/c + + | Microsoft Docs"
-ms.custom: 
+title: 격리 된 응용 프로그램 빌드 C/c + + | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - isolated applications [C++]
 ms.assetid: 8a2fe4fa-0489-433e-bfc6-495844d8d73a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76b0c1fa5b509ae495a12fb63164d7da01f402aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69de94159ef792aedff35efe81e8bb663d571105
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-cc-isolated-applications"></a>C/C++ 격리된 응용 프로그램 빌드
 격리 된 응용 프로그램-side-by-side 어셈블리에만 의존 하 고 매니페스트를 사용 하 여 해당 종속성을 바인딩합니다. 완전히 격리 Windows;에서 제대로 실행 되도록 응용 프로그램에 필요 하지 않습니다. 그러나 완전히 격리 된 응용 프로그램을 만드는에 투자를 하 여 나중에 응용 프로그램을 서비스 하는 경우 시간을 절약할 수 있습니다. 완전히 격리 된 응용 프로그램을 만드는의 장점에 자세한 내용은 참조 하십시오. [격리 된 응용 프로그램](http://msdn.microsoft.com/library/aa375190)합니다.  

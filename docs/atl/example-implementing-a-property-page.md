@@ -1,29 +1,24 @@
 ---
-title: "속성 페이지 (ATL) 구현 | Microsoft Docs"
-ms.custom: 
+title: 속성 페이지 (ATL) 구현 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96314b4b8ba7696f784354c2353070ca3873c11c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 139bdd9076e99139f4da105b4bb2b375689efe15
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="example-implementing-a-property-page"></a>예: 속성 페이지 구현
 속성을 표시 (및 변경할 수 있습니다) 하는 속성 페이지를 빌드하는 방법을 보여 주는이 예제는 [문서 클래스](../mfc/document-classes.md) 인터페이스입니다.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
 - [매크로 만들](#vcconcreating_a_macro) 하는 속성 페이지를 테스트 합니다.  
   
-##  <a name="vcconusing_the_atl_object_wizard"></a>ATL 속성 페이지 클래스 추가  
+##  <a name="vcconusing_the_atl_object_wizard"></a> ATL 속성 페이지 클래스 추가  
  먼저 라고 하는 DLL 서버에 대 한 새 ATL 프로젝트를 만듭니다 `ATLPages7`합니다. 사용 하 여 이제는 [ATL 속성 페이지 마법사](../atl/reference/atl-property-page-wizard.md) 속성 페이지를 생성 하 합니다. 속성 페이지를 제공는 **약식 이름** 의 **DocProperties** 다음 전환 하는 **문자열** 아래 표에 나와 있는 것 처럼 속성 페이지의 관련 항목을 설정 하는 페이지입니다.  
   
 |항목|값|  
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
  클릭 **확인** 속성 페이지를 생성 하면 마법사가 있습니다.  
   
-##  <a name="vcconediting_the_dialog_resource"></a>대화 상자 리소스 편집  
+##  <a name="vcconediting_the_dialog_resource"></a> 대화 상자 리소스 편집  
  이제 속성 페이지가 생성 된 경우에 해당 페이지를 나타내는 대화 상자 리소스에 몇 가지 컨트롤을 추가 해야 합니다. 편집 상자, 정적 텍스트 컨트롤 및 확인란을 추가 하 고 아래와 같이 해당 Id를 설정 합니다.  
   
  ![대화 상자 리소스 편집](../atl/media/ppgresourcelabeled.gif "ppgresourcelabeled")  
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  대화 상자 리소스에는 프레임이 나 명령 단추 아니며 예상 된 탭된 형태 사용 하지 않습니다. 이러한 기능을 호출 하 여 만든 것과 같은 속성 페이지 프레임 제공 [OleCreatePropertyFrame](http://msdn.microsoft.com/library/windows/desktop/ms678437)합니다.  
   
-##  <a name="vcconadding_message_handlers"></a>메시지 처리기 추가  
+##  <a name="vcconadding_message_handlers"></a> 메시지 처리기 추가  
  현재 위치에 있는 컨트롤과 컨트롤의 값이 변경 될 때 페이지의 변경 상태를 업데이트 하는 메시지 처리기를 추가할 수 있습니다.  
   
  [!code-cpp[NVC_ATL_Windowing#73](../atl/codesnippet/cpp/example-implementing-a-property-page_1.h)]  
@@ -86,7 +81,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  사용자 고유의 속성 페이지에서 추적 하기 위해 정확 하 게 되는 속성 변경 된 사용자가 변경 되지 않은 속성을 업데이트 하지 않도록 할 수 있습니다. 이 예제에서는 원래 속성 값 및 추적 하는 변경 내용을 적용 하려면 UI의 현재 값과 비교 하 여 해당 코드를 구현 합니다.  
   
-##  <a name="vcconhousekeeping"></a>정리 작업  
+##  <a name="vcconhousekeeping"></a> 정리 작업  
  이제 몇 가지 추가 `#import` DocProperties.h 문을 컴파일러에 대 한 알 수 있도록는 **문서** 인터페이스:  
   
  [!code-cpp[NVC_ATL_Windowing#74](../atl/codesnippet/cpp/example-implementing-a-property-page_2.h)]  
@@ -95,7 +90,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_ATL_Windowing#75](../atl/codesnippet/cpp/example-implementing-a-property-page_3.h)]  
   
-##  <a name="vcconoverriding_ipropertypageimpl_setobjects"></a>IPropertyPageImpl::SetObjects 재정의  
+##  <a name="vcconoverriding_ipropertypageimpl_setobjects"></a> IPropertyPageImpl::SetObjects 재정의  
  첫 번째 `IPropertyPageImpl` 재정의 해야 하는 메서드는 [SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)합니다. 단일 개체를 전달 된를 지원 하는지 확인 하는 코드를 추가 여기는 **문서** 하는데 인터페이스:  
   
  [!code-cpp[NVC_ATL_Windowing#76](../atl/codesnippet/cpp/example-implementing-a-property-page_4.h)]  
@@ -103,7 +98,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  이렇게 하면 사용자가 개체의 파일 이름을 설정 하도록 허용 하는 때문에이 페이지에 대 한 단일 개체만 지원 하-어느 한 위치에 파일이 하나만 있을 수 있습니다.  
   
-##  <a name="vcconoverriding_ipropertypageimpl_activate"></a>IPropertyPageImpl::Activate 재정의  
+##  <a name="vcconoverriding_ipropertypageimpl_activate"></a> IPropertyPageImpl::Activate 재정의  
  다음 단계는 페이지를 처음 만들 때 기본 개체의 속성 값을 가진 속성 페이지를 초기화 하는 것입니다.  
   
  이 경우 것도 초기 속성 값 비교를 사용 하면 페이지의 사용자는 자신의 변경 내용을 적용 하므로 클래스에는 다음과 같은 멤버를 추가 해야:  
@@ -116,7 +111,7 @@ ms.lasthandoff: 12/21/2017
   
  이 코드의 COM 메서드를 사용 하 여는 **문서** 인터페이스를 원하는 속성을 가져옵니다. 제공 하는 Win32 API 래퍼를 사용 하 여 다음 [CDialogImpl](../atl/reference/cdialogimpl-class.md) 와 사용자에 게 속성 값을 표시 하려면 해당 기본 클래스입니다.  
   
-##  <a name="vcconoverride_ipropertypageimpl_apply"></a>IPropertyPageImpl::Apply 재정의  
+##  <a name="vcconoverride_ipropertypageimpl_apply"></a> IPropertyPageImpl::Apply 재정의  
  사용자가 개체에 변경 내용을 적용 하려고 하면 속성 페이지 사이트를 호출 합니다는 [적용](../atl/reference/ipropertypageimpl-class.md#apply) 메서드. 여기에서의 코드 반대로 작업할 수 **Activate** -반면 **Activate** 는 개체의 값을 적용 하 고 해당 속성 페이지에 있는 컨트롤에 푸시되 **적용** 속성 페이지에 있는 컨트롤에서 값을 사용 하 고 개체에 밀어넣습니다.  
   
  [!code-cpp[NVC_ATL_Windowing#79](../atl/codesnippet/cpp/example-implementing-a-property-page_7.h)]  
@@ -127,7 +122,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 > **문서** 노출 **FullName** 읽기 전용 속성으로. 속성 페이지에 대 한 변경 내용을 기반으로 문서의 파일 이름을 업데이트 하려면 사용 하 여 할는 **저장** 메서드를 다른 이름으로 파일을 저장 합니다. 따라서 속성 페이지의에서 코드를 제한할 필요가 없습니다 자체를 수집 또는 속성을 설정 합니다.  
   
-##  <a name="vccontesting_the_property_page"></a>속성 페이지 표시  
+##  <a name="vccontesting_the_property_page"></a> 속성 페이지 표시  
  이 페이지를 표시 하려면 간단한 도우미 개체를 만듭니다. 도우미 개체를 간소화 하는 메서드를 제공 합니다는 **OleCreatePropertyFrame** 단일 페이지를 표시 하기 위한 API 단일 개체에 연결 합니다. 이 도우미는 Visual Basic에서 사용할 수 있도록 디자인 됩니다.  
   
  사용 하 여는 [클래스 추가 대화 상자](../ide/add-class-dialog-box.md) 및 [ATL 단순 개체 마법사](../atl/reference/atl-simple-object-wizard.md) 새 클래스를 생성 하 여 사용할 `Helper` 짧은 이름으로 합니다. 를 만든 후 아래 표에 나와 있는 것 처럼 메서드를 추가 합니다.  
@@ -143,7 +138,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_ATL_Windowing#80](../atl/codesnippet/cpp/example-implementing-a-property-page_8.cpp)]  
   
-##  <a name="vcconcreating_a_macro"></a>매크로 만들기  
+##  <a name="vcconcreating_a_macro"></a> 매크로 만들기  
  작성 한 후 프로젝트를 만들고 Visual Studio 개발 환경에서 실행할 수 있는 간단한 매크로 사용 하 여 도우미 개체 및 속성 페이지를 테스트할 수 있습니다. 이 매크로 도우미 만들어집니다 개체를 호출 합니다. 해당 **페이지 표시** 의 ProgID를 사용 하 여 메서드는 **DocProperties** 속성 페이지 및 **IUnknown** 문서 포인터 Visual Studio 편집기에서 현재 활성 상태입니다. 이 매크로에 필요한 코드는 다음과 같습니다.  
   
 ```  

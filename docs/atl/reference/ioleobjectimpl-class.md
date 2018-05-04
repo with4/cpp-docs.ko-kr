@@ -2,11 +2,8 @@
 title: IOleObjectImpl 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IOleObjectImpl
@@ -58,17 +55,15 @@ helpviewer_keywords:
 - IOleObject, ATL implementation
 - IOleObjectImpl class
 ms.assetid: 59750b2d-1633-4a51-a4c2-6455b6b90c45
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f710953a32ccb32c63742ab28e84818f3a330336
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3a98d3e0ad75d2eaa0325699369bfe4473182049
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ioleobjectimpl-class"></a>IOleObjectImpl 클래스
 이 클래스는 구현 **IUnknown** 컨트롤과 컨테이너 통신 하는 주 인터페이스입니다.  
@@ -147,7 +142,7 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlctl.h  
   
-##  <a name="advise"></a>IOleObjectImpl::Advise  
+##  <a name="advise"></a>  IOleObjectImpl::Advise  
  컨트롤에서 권장 된 연결을 설정합니다.  
   
 ```
@@ -159,7 +154,7 @@ STDMETHOD(Advise)(
 ### <a name="remarks"></a>설명  
  참조 [IOleObject::Advise](http://msdn.microsoft.com/library/windows/desktop/ms686573) in the Windows SDK입니다.  
   
-##  <a name="close"></a>IOleObjectImpl::Close  
+##  <a name="close"></a>  IOleObjectImpl::Close  
  실행을 로드 컨트롤 상태를 변경 합니다.  
   
 ```
@@ -173,7 +168,7 @@ STDMETHOD(Close)(DWORD dwSaveOption);
   
  참조 [IOleObject::Close](http://msdn.microsoft.com/library/windows/desktop/ms683922) in the Windows SDK입니다.  
   
-##  <a name="doverb"></a>IOleObjectImpl::DoVerb  
+##  <a name="doverb"></a>  IOleObjectImpl::DoVerb  
  열거 작업 중 하나를 수행 하려면 컨트롤에 알립니다.  
   
 ```
@@ -202,7 +197,7 @@ STDMETHOD(DoVerb)(
   
  참조 [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) in the Windows SDK입니다.  
   
-##  <a name="doverbdiscardundo"></a>IOleObjectImpl::DoVerbDiscardUndo  
+##  <a name="doverbdiscardundo"></a>  IOleObjectImpl::DoVerbDiscardUndo  
  컨트롤 여전히 활성 상태가 유지 관리 하는 것을 지시 합니다.  
   
 ```
@@ -213,13 +208,13 @@ HRESULT DoVerbDiscardUndo(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
  `prcPosRec`  
  [in] 사각형 컨테이너에 대 한 포인터에 제어를 하려고 합니다.  
   
- *창은*  
+ *hwndParent*  
  [in] 컨트롤을 포함 하는 창의 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
  `S_OK`를 반환합니다.  
   
-##  <a name="doverbhide"></a>IOleObjectImpl::DoVerbHide  
+##  <a name="doverbhide"></a>  IOleObjectImpl::DoVerbHide  
  비활성화 하 고 컨트롤의 사용자 인터페이스를 제거 하 고 컨트롤을 숨깁니다.  
   
 ```
@@ -230,13 +225,13 @@ HRESULT DoVerbHide(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
  `prcPosRec`  
  [in] 사각형 컨테이너에 대 한 포인터에 제어를 하려고 합니다.  
   
- *창은*  
+ *hwndParent*  
  [in] 컨트롤을 포함 하는 창의 핸들입니다. ATL 구현에서 사용 되지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  
  `S_OK`를 반환합니다.  
   
-##  <a name="doverbinplaceactivate"></a>IOleObjectImpl::DoVerbInPlaceActivate  
+##  <a name="doverbinplaceactivate"></a>  IOleObjectImpl::DoVerbInPlaceActivate  
  컨트롤을 실행 하 고 해당 창을 설치 되지만 컨트롤의 사용자 인터페이스를 설치 하지 않습니다.  
   
 ```
@@ -247,7 +242,7 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
  `prcPosRec`  
  [in] 사각형 컨테이너에 대 한 포인터에 제어를 하려고 합니다.  
   
- *창은*  
+ *hwndParent*  
  [in] 컨트롤을 포함 하는 창의 핸들입니다. ATL 구현에서 사용 되지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -256,7 +251,7 @@ HRESULT DoVerbInPlaceActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
 ### <a name="remarks"></a>설명  
  호출 하 여 위치에 컨트롤을 활성화 [CComControlBase::InPlaceActivate](../../atl/reference/ccomcontrolbase-class.md#inplaceactivate)합니다. 하지 않는 한 컨트롤 클래스의 데이터 멤버 `m_bWindowOnly` 은 **TRUE**, `DoVerbInPlaceActivate` 창 없는 컨트롤로 컨트롤을 활성화 하려면 먼저 시도 (컨테이너에서 지 원하는 경우에 가능한 [IOleInPlaceSiteWindowless ](http://msdn.microsoft.com/library/windows/desktop/ms682300)). 함수 확장된 기능을 사용 하 여 컨트롤을 활성화 하려고 실패할 경우 (컨테이너에서 지 원하는 경우에 가능한 [IOleInPlaceSiteEx](http://msdn.microsoft.com/library/windows/desktop/ms693461)). 함수 확장 기능이 없는 컨트롤을 활성화 하려고 실패할 경우 (컨테이너에서 지 원하는 경우에 가능한 [IOleInPlaceSite](http://msdn.microsoft.com/library/windows/desktop/ms686586)). 정품 인증에 성공 하는 경우 함수가 알립니다 컨테이너 컨트롤 활성화 되었습니다.  
   
-##  <a name="doverbopen"></a>IOleObjectImpl::DoVerbOpen  
+##  <a name="doverbopen"></a>  IOleObjectImpl::DoVerbOpen  
  사용 하면 오픈 편집 별도 창에서 수를 제어 합니다.  
   
 ```
@@ -267,13 +262,13 @@ HRESULT DoVerbOpen(LPCRECT /* prcPosRect */, HWND /* hwndParent */);
  `prcPosRec`  
  [in] 사각형 컨테이너에 대 한 포인터에 제어를 하려고 합니다.  
   
- *창은*  
+ *hwndParent*  
  [in] 컨트롤을 포함 하는 창의 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
  `S_OK`를 반환합니다.  
   
-##  <a name="doverbprimary"></a>IOleObjectImpl::DoVerbPrimary  
+##  <a name="doverbprimary"></a>  IOleObjectImpl::DoVerbPrimary  
  컨트롤을 두 번 클릭할 때 수행할 동작을 정의 합니다.  
   
 ```
@@ -284,7 +279,7 @@ HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
  `prcPosRec`  
  [in] 사각형 컨테이너에 대 한 포인터에 제어를 하려고 합니다.  
   
- *창은*  
+ *hwndParent*  
  [in] 컨트롤을 포함 하는 창의 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -293,7 +288,7 @@ HRESULT DoVerbPrimary(LPCRECT prcPosRect, HWND hwndParent);
 ### <a name="remarks"></a>설명  
  기본적으로 속성 페이지를 표시 하도록 설정 합니다. 이 두 번 클릭;에 다른 동작을 호출 하려면 컨트롤 클래스에서 재정의할 수 있습니다. 예를 들어, 비디오를 재생 하거나 내부 활성화를 이동 합니다.  
   
-##  <a name="doverbshow"></a>IOleObjectImpl::DoVerbShow  
+##  <a name="doverbshow"></a>  IOleObjectImpl::DoVerbShow  
  컨트롤을 표시 하려면 컨테이너에 지시 합니다.  
   
 ```
@@ -304,13 +299,13 @@ HRESULT DoVerbShow(LPCRECT prcPosRect, HWND /* hwndParent */);
  `prcPosRec`  
  [in] 사각형 컨테이너에 대 한 포인터에 제어를 하려고 합니다.  
   
- *창은*  
+ *hwndParent*  
  [in] 컨트롤을 포함 하는 창의 핸들입니다. ATL 구현에서 사용 되지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  
  표준 중 하나 `HRESULT` 값입니다.  
   
-##  <a name="doverbuiactivate"></a>IOleObjectImpl::DoVerbUIActivate  
+##  <a name="doverbuiactivate"></a>  IOleObjectImpl::DoVerbUIActivate  
  컨트롤의 사용자 인터페이스를 활성화 하 고 복합 메뉴가 해당 메뉴를 대체 되 고는 컨테이너에 알립니다.  
   
 ```
@@ -321,13 +316,13 @@ HRESULT DoVerbUIActivate(LPCRECT prcPosRect, HWND /* hwndParent */);
  `prcPosRec`  
  [in] 사각형 컨테이너에 대 한 포인터에 제어를 하려고 합니다.  
   
- *창은*  
+ *hwndParent*  
  [in] 컨트롤을 포함 하는 창의 핸들입니다. ATL 구현에서 사용 되지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  
  표준 중 하나 `HRESULT` 값입니다.  
   
-##  <a name="enumadvise"></a>IOleObjectImpl::EnumAdvise  
+##  <a name="enumadvise"></a>  IOleObjectImpl::EnumAdvise  
  이 컨트롤에 대 한 등록된 자문 연결의 열거형을 제공합니다.  
   
 ```
@@ -337,7 +332,7 @@ STDMETHOD(EnumAdvise)(IEnumSTATDATA** ppenumAdvise);
 ### <a name="remarks"></a>설명  
  참조 [IOleObject::EnumAdvise](http://msdn.microsoft.com/library/windows/desktop/ms682355) in the Windows SDK입니다.  
   
-##  <a name="enumverbs"></a>IOleObjectImpl::EnumVerbs  
+##  <a name="enumverbs"></a>  IOleObjectImpl::EnumVerbs  
  호출 하 여이 컨트롤에 대 한 등록된 작업 (동사) 열거 제공 **OleRegEnumVerbs**합니다.  
   
 ```
@@ -349,7 +344,7 @@ STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
   
  참조 [IOleObject::EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781) in the Windows SDK입니다.  
   
-##  <a name="getclientsite"></a>IOleObjectImpl::GetClientSite  
+##  <a name="getclientsite"></a>  IOleObjectImpl::GetClientSite  
  컨트롤 클래스 데이터 멤버에 포인터를 놓습니다 [CComControlBase::m_spClientSite](../../atl/reference/ccomcontrolbase-class.md#m_spclientsite) 에 *ppClientSite* 포인터의 참조 횟수를 증가 시킵니다.  
   
 ```
@@ -359,7 +354,7 @@ STDMETHOD(GetClientSite)(IOleClientSite** ppClientSite);
 ### <a name="remarks"></a>설명  
  참조 [IOleObject::GetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms692603) in the Windows SDK입니다.  
   
-##  <a name="getclipboarddata"></a>IOleObjectImpl::GetClipboardData  
+##  <a name="getclipboarddata"></a>  IOleObjectImpl::GetClipboardData  
  클립보드의 데이터를 검색합니다.  
   
 ```
@@ -374,7 +369,7 @@ STDMETHOD(GetClipboardData)(
 ### <a name="remarks"></a>설명  
  참조 [IOleObject::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms682288) in the Windows SDK입니다.  
   
-##  <a name="getextent"></a>IOleObjectImpl::GetExtent  
+##  <a name="getextent"></a>  IOleObjectImpl::GetExtent  
  HIMETRIC 단위 (단위당 0.01 m m)에서 실행 중인 컨트롤의 표시 크기를 검색합니다.  
   
 ```
@@ -388,7 +383,7 @@ STDMETHOD(GetExtent)(
   
  참조 [IOleObject::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms692325) in the Windows SDK입니다.  
   
-##  <a name="getmiscstatus"></a>IOleObjectImpl::GetMiscStatus  
+##  <a name="getmiscstatus"></a>  IOleObjectImpl::GetMiscStatus  
  호출 하 여 컨트롤에 대 한 등록 된 상태 정보에 대 한 포인터를 반환 **OleRegGetMiscStatus**합니다.  
   
 ```
@@ -402,7 +397,7 @@ STDMETHOD(GetMiscStatus)(
   
  참조 [IOleObject::GetMiscStatus](http://msdn.microsoft.com/library/windows/desktop/ms678521) in the Windows SDK입니다.  
   
-##  <a name="getmoniker"></a>IOleObjectImpl::GetMoniker  
+##  <a name="getmoniker"></a>  IOleObjectImpl::GetMoniker  
  컨트롤의 모니커를 검색합니다.  
   
 ```
@@ -418,7 +413,7 @@ STDMETHOD(GetMoniker)(
 ### <a name="remarks"></a>설명  
  참조 [IOleObject::GetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms686576) in the Windows SDK입니다.  
   
-##  <a name="getuserclassid"></a>IOleObjectImpl::GetUserClassID  
+##  <a name="getuserclassid"></a>  IOleObjectImpl::GetUserClassID  
  컨트롤의 클래스 식별자를 반환합니다.  
   
 ```
@@ -428,7 +423,7 @@ STDMETHOD(GetUserClassID)(CLSID* pClsid);
 ### <a name="remarks"></a>설명  
  참조 [IOleObject::GetUserClassID](http://msdn.microsoft.com/library/windows/desktop/ms682313) in the Windows SDK입니다.  
   
-##  <a name="getusertype"></a>IOleObjectImpl::GetUserType  
+##  <a name="getusertype"></a>  IOleObjectImpl::GetUserType  
  호출 하 여 컨트롤의 사용자 형식 이름을 반환 **OleRegGetUserType**합니다.  
   
 ```
@@ -442,7 +437,7 @@ STDMETHOD(GetUserType)(
   
  참조 [IOleObject::GetUserType](http://msdn.microsoft.com/library/windows/desktop/ms688643) in the Windows SDK입니다.  
   
-##  <a name="initfromdata"></a>IOleObjectImpl::InitFromData  
+##  <a name="initfromdata"></a>  IOleObjectImpl::InitFromData  
  선택한 데이터에서 컨트롤을 초기화합니다.  
   
 ```
@@ -458,7 +453,7 @@ STDMETHOD(InitFromData)(
 ### <a name="remarks"></a>설명  
  참조 [IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) in the Windows SDK입니다.  
   
-##  <a name="isuptodate"></a>IOleObjectImpl::IsUpToDate  
+##  <a name="isuptodate"></a>  IOleObjectImpl::IsUpToDate  
  컨트롤 최신 상태 인지 확인 합니다.  
   
 ```
@@ -471,7 +466,7 @@ STDMETHOD(IsUpToDate)(void);
 ### <a name="remarks"></a>설명  
  참조 [IOleObject::IsUpToDate](http://msdn.microsoft.com/library/windows/desktop/ms686624) in the Windows SDK입니다.  
   
-##  <a name="onpostverbdiscardundo"></a>IOleObjectImpl::OnPostVerbDiscardUndo  
+##  <a name="onpostverbdiscardundo"></a>  IOleObjectImpl::OnPostVerbDiscardUndo  
  에 의해 호출 [DoVerbDiscardUndo](#doverbdiscardundo) 후 실행 취소 상태는 삭제 됩니다.  
   
 ```
@@ -484,7 +479,7 @@ HRESULT OnPostVerbDiscardUndo();
 ### <a name="remarks"></a>설명  
  실행 취소 상태는 삭제 후에 실행 하려는 코드로이 메서드를 재정의 합니다.  
   
-##  <a name="onpostverbhide"></a>IOleObjectImpl::OnPostVerbHide  
+##  <a name="onpostverbhide"></a>  IOleObjectImpl::OnPostVerbHide  
  에 의해 호출 [DoVerbHide](#doverbhide) 후 컨트롤을 숨깁니다.  
   
 ```
@@ -497,7 +492,7 @@ HRESULT OnPostVerbHide();
 ### <a name="remarks"></a>설명  
  컨트롤이 숨겨지는지 후에 실행 하려는 코드로이 메서드를 재정의 합니다.  
   
-##  <a name="onpostverbinplaceactivate"></a>IOleObjectImpl::OnPostVerbInPlaceActivate  
+##  <a name="onpostverbinplaceactivate"></a>  IOleObjectImpl::OnPostVerbInPlaceActivate  
  에 의해 호출 [DoVerbInPlaceActivate](#doverbinplaceactivate) 컨트롤 위치에 활성화 된 후입니다.  
   
 ```
@@ -510,7 +505,7 @@ HRESULT OnPostVerbInPlaceActivate();
 ### <a name="remarks"></a>설명  
  컨트롤은 내부에서 활성화 한 후에 실행 하려는 코드로이 메서드를 재정의 합니다.  
   
-##  <a name="onpostverbopen"></a>IOleObjectImpl::OnPostVerbOpen  
+##  <a name="onpostverbopen"></a>  IOleObjectImpl::OnPostVerbOpen  
  에 의해 호출 [DoVerbOpen](#doverbopen) 컨트롤을 연 후에 별도 창에서 편집 합니다.  
   
 ```
@@ -523,7 +518,7 @@ HRESULT OnPostVerbOpen();
 ### <a name="remarks"></a>설명  
  컨트롤을 별도 창에서 편집을 위해 열린 후에 실행 하려는 코드로이 메서드를 재정의 합니다.  
   
-##  <a name="onpostverbshow"></a>IOleObjectImpl::OnPostVerbShow  
+##  <a name="onpostverbshow"></a>  IOleObjectImpl::OnPostVerbShow  
  에 의해 호출 [DoVerbShow](#doverbshow) 만들어지면 컨트롤 표시 합니다.  
   
 ```
@@ -536,7 +531,7 @@ HRESULT OnPostVerbShow();
 ### <a name="remarks"></a>설명  
  컨트롤 표시 수행 된 후 실행을 원하는 코드로이 메서드를 재정의 합니다.  
   
-##  <a name="onpostverbuiactivate"></a>IOleObjectImpl::OnPostVerbUIActivate  
+##  <a name="onpostverbuiactivate"></a>  IOleObjectImpl::OnPostVerbUIActivate  
  에 의해 호출 [DoVerbUIActivate](#doverbuiactivate) 컨트롤의 사용자 인터페이스를 활성화 합니다.  
   
 ```
@@ -549,7 +544,7 @@ HRESULT OnPostVerbUIActivate();
 ### <a name="remarks"></a>설명  
  컨트롤의 사용자 인터페이스를 활성화 한 후 실행을 원하는 코드로이 메서드를 재정의 합니다.  
   
-##  <a name="onpreverbdiscardundo"></a>IOleObjectImpl::OnPreVerbDiscardUndo  
+##  <a name="onpreverbdiscardundo"></a>  IOleObjectImpl::OnPreVerbDiscardUndo  
  에 의해 호출 [DoVerbDiscardUndo](#doverbdiscardundo) 실행 취소 하기 전에 상태는 삭제 됩니다.  
   
 ```
@@ -562,7 +557,7 @@ HRESULT OnPreVerbDiscardUndo();
 ### <a name="remarks"></a>설명  
  실행 취소 상태를 삭제 하지 않도록 하려면 오류 HRESULT를 반환 하려면이 메서드를 재정의 합니다.  
   
-##  <a name="onpreverbhide"></a>IOleObjectImpl::OnPreVerbHide  
+##  <a name="onpreverbhide"></a>  IOleObjectImpl::OnPreVerbHide  
  에 의해 호출 [DoVerbHide](#doverbhide) 전에 컨트롤을 숨깁니다.  
   
 ```
@@ -575,7 +570,7 @@ HRESULT OnPreVerbHide();
 ### <a name="remarks"></a>설명  
  컨트롤이 숨겨진 되지 않도록 하려면 오류 HRESULT를 반환 하려면이 메서드를 재정의 합니다.  
   
-##  <a name="onpreverbinplaceactivate"></a>IOleObjectImpl::OnPreVerbInPlaceActivate  
+##  <a name="onpreverbinplaceactivate"></a>  IOleObjectImpl::OnPreVerbInPlaceActivate  
  에 의해 호출 [DoVerbInPlaceActivate](#doverbinplaceactivate) 컨트롤 위치에서 활성화 되기 전에 합니다.  
   
 ```
@@ -588,7 +583,7 @@ HRESULT OnPreVerbInPlaceActivate();
 ### <a name="remarks"></a>설명  
  컨트롤에에서 활성화를 방지 하려면 오류 HRESULT를 반환 하려면이 메서드를 재정의 합니다.  
   
-##  <a name="onpreverbopen"></a>IOleObjectImpl::OnPreVerbOpen  
+##  <a name="onpreverbopen"></a>  IOleObjectImpl::OnPreVerbOpen  
  에 의해 호출 [DoVerbOpen](#doverbopen) 전에 컨트롤 별도 창에서 편집을 위해 열려 있습니다.  
   
 ```
@@ -601,7 +596,7 @@ HRESULT OnPreVerbOpen();
 ### <a name="remarks"></a>설명  
  컨트롤을 별도 창에서 편집을 위해 열을 방지 하려면 오류 HRESULT를 반환 하려면이 메서드를 재정의 합니다.  
   
-##  <a name="onpreverbshow"></a>IOleObjectImpl::OnPreVerbShow  
+##  <a name="onpreverbshow"></a>  IOleObjectImpl::OnPreVerbShow  
  에 의해 호출 [DoVerbShow](#doverbshow) 컨트롤이 되기 전에 표시 합니다.  
   
 ```
@@ -614,7 +609,7 @@ HRESULT OnPreVerbShow();
 ### <a name="remarks"></a>설명  
  컨트롤 표시를 수정할를 방지 하려면 오류 HRESULT를 반환 하려면이 메서드를 재정의 합니다.  
   
-##  <a name="onpreverbuiactivate"></a>IOleObjectImpl::OnPreVerbUIActivate  
+##  <a name="onpreverbuiactivate"></a>  IOleObjectImpl::OnPreVerbUIActivate  
  에 의해 호출 [DoVerbUIActivate](#doverbuiactivate) 전에 컨트롤의 사용자 인터페이스를 활성화 합니다.  
   
 ```
@@ -627,7 +622,7 @@ HRESULT OnPreVerbUIActivate();
 ### <a name="remarks"></a>설명  
  컨트롤의 사용자 인터페이스를 활성화할를 방지 하려면 오류 HRESULT를 반환 하려면이 메서드를 재정의 합니다.  
   
-##  <a name="setclientsite"></a>IOleObjectImpl::SetClientSite  
+##  <a name="setclientsite"></a>  IOleObjectImpl::SetClientSite  
  컨테이너에서의 클라이언트 사이트에 대 한 컨트롤에 알립니다.  
   
 ```
@@ -639,7 +634,7 @@ STDMETHOD(SetClientSite)(IOleClientSite* pClientSite);
   
  참조 [IOleObject::SetClientSite](http://msdn.microsoft.com/library/windows/desktop/ms684013) in the Windows SDK입니다.  
   
-##  <a name="setcolorscheme"></a>IOleObjectImpl::SetColorScheme  
+##  <a name="setcolorscheme"></a>  IOleObjectImpl::SetColorScheme  
  있는 경우에 컨트롤의 응용 프로그램에 색 구성표를 권장 합니다.  
   
 ```
@@ -652,7 +647,7 @@ STDMETHOD(SetColorScheme)(LOGPALETTE* /* pLogPal */);
 ### <a name="remarks"></a>설명  
  참조 [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) in the Windows SDK입니다.  
   
-##  <a name="setextent"></a>IOleObjectImpl::SetExtent  
+##  <a name="setextent"></a>  IOleObjectImpl::SetExtent  
  컨트롤의 표시 영역 범위를 설정합니다.  
   
 ```
@@ -670,7 +665,7 @@ STDMETHOD(SetExtent)(
   
  참조 [IOleObject::SetExtent](http://msdn.microsoft.com/library/windows/desktop/ms694330) in the Windows SDK입니다.  
   
-##  <a name="sethostnames"></a>IOleObjectImpl::SetHostNames  
+##  <a name="sethostnames"></a>  IOleObjectImpl::SetHostNames  
  컨테이너 문서 컨테이너 응용 프로그램의 이름과 컨트롤에 알립니다.  
   
 ```
@@ -683,7 +678,7 @@ STDMETHOD(SetHostNames)(LPCOLESTR /* szContainerApp */, LPCOLESTR /* szContainer
 ### <a name="remarks"></a>설명  
  참조 [IOleObject::SetHostNames](http://msdn.microsoft.com/library/windows/desktop/ms680642) in the Windows SDK입니다.  
   
-##  <a name="setmoniker"></a>IOleObjectImpl::SetMoniker  
+##  <a name="setmoniker"></a>  IOleObjectImpl::SetMoniker  
  해당 모니커 란 컨트롤에 알립니다.  
   
 ```
@@ -698,7 +693,7 @@ STDMETHOD(SetMoniker)(
 ### <a name="remarks"></a>설명  
  참조 [IOleObject::SetMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679671) in the Windows SDK입니다.  
   
-##  <a name="unadvise"></a>IOleObjectImpl::Unadvise  
+##  <a name="unadvise"></a>  IOleObjectImpl::Unadvise  
  컨트롤 클래스에 저장 된 권장 연결 삭제 `m_spOleAdviseHolder` 데이터 멤버입니다.  
   
 ```
@@ -708,7 +703,7 @@ STDMETHOD(Unadvise)(DWORD dwConnection);
 ### <a name="remarks"></a>설명  
  참조 [IOleObject::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms693749) in the Windows SDK입니다.  
   
-##  <a name="update"></a>IOleObjectImpl::Update  
+##  <a name="update"></a>  IOleObjectImpl::Update  
  컨트롤을 업데이트합니다.  
   
 ```

@@ -1,9 +1,9 @@
 ---
-title: "이상의 사용 권한을 허용-(표준 준수) | Microsoft Docs"
+title: 이상의 사용 권한을 허용-(표준 준수) | Microsoft Docs
 ms.date: 11/11/2016
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /permissive
 - VC.Project.VCCLCompilerTool.ConformanceMode
@@ -15,17 +15,15 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09b24e96752e61f4d09efc3780e0e60ffed8effd
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 90cfdcf20cf74244afe026a392759ac59616bbdf
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="permissive--standards-conformance"></a>관대 한 /-(표준 규칙)
 
@@ -47,7 +45,7 @@ ms.lasthandoff: 03/15/2018
 
 버전의 Visual Studio 2017 15.3, 버전에서에서 시작 하는 컴파일러는 **관대 한 /-** 집합 옵션는 [/Zc:ternary](../../build/reference/zc-ternary.md) 옵션입니다. 컴파일러는 2 단계 이름 조회에 대 한 요구 사항 중에 구현합니다. 경우는 **관대 한 /-** 옵션이 설정 되어, 컴파일러 서식 파일에 사용 되는 종속 및 종속 되지 않은 이름 식별 함수 및 클래스 템플릿 정의 구문 분석 합니다. 이 릴리스에서 이름 종속성 분석만 수행 됩니다.
 
-환경 관련 확장 및 구현에 따라 표준을 해제 하는 언어 영역 영향을 받지 않는 **관대 한 /-**합니다. 예를 들어 Microsoft 전용 `__declspec`, 호출 규칙 및 구조적된 예외 처리 키워드 및 관련 컴파일러 pragma 지시문 또는 특성에 컴파일러에서 플래그가 지정 되지 않은 **관대 한 /-** 모드입니다.
+환경 관련 확장 및 구현에 따라 표준을 해제 하는 언어 영역 영향을 받지 않는 **관대 한 /-** 합니다. 예를 들어 Microsoft 전용 `__declspec`, 호출 규칙 및 구조적된 예외 처리 키워드 및 관련 컴파일러 pragma 지시문 또는 특성에 컴파일러에서 플래그가 지정 되지 않은 **관대 한 /-** 모드입니다.
 
 **관대 한 /-** 옵션 사용 하 여 규칙에 따라 지원 현재 컴파일러 버전에서 어떤 언어 구문을 맞지 않는 확인 합니다. 옵션 코드는 c + + 표준의 특정 버전에 맞는 경우를 확인 하지 않습니다. 를 최신 초안 표준에 대 한 모든 구현 된 컴파일러 지원 하도록 설정 하려면 사용 된 [/std:latest](../../build/reference/std-specify-language-standard-version.md) 옵션입니다. 현재 구현 된 C + + 17 표준에 컴파일러 지원 제한 하려면는 [/std:c + + 17](../../build/reference/std-specify-language-standard-version.md) 옵션입니다. C + + 14 표준와 비슷하도록 컴파일러 지원 제한 하려면는 [/std:c + + 14](../../build/reference/std-specify-language-standard-version.md) 옵션을 기본값으로 설정 되어 만들어져야 합니다.
 
@@ -275,7 +273,7 @@ auto y = cond ? 7 : int(a);
 auto z = cond ? A(7) : a;
 ```
 
-예외가 중요이 공통 패턴을 T null로 끝나는 문자열 형식 중 하나를 나타내는 경우 (예를 들어 `const char *`, `const char16_t *`등) 및 실제 인수를 `?:` 문자열인 해당 유형의 리터럴. C + + 17에는 C + + 14에서 의미 체계가 변경 되었습니다. 예제 2의에서 코드에서 수락 되는 결과적으로, **/std:c + + 14** 와에서 거부 된 **/std:c + + 17** 때 **/Zc:ternary** 또는 **/permissive-**사용 됩니다.
+예외가 중요이 공통 패턴을 T null로 끝나는 문자열 형식 중 하나를 나타내는 경우 (예를 들어 `const char *`, `const char16_t *`등) 및 실제 인수를 `?:` 문자열인 해당 유형의 리터럴. C + + 17에는 C + + 14에서 의미 체계가 변경 되었습니다. 예제 2의에서 코드에서 수락 되는 결과적으로, **/std:c + + 14** 와에서 거부 된 **/std:c + + 17** 때 **/Zc:ternary** 또는 **/permissive-** 사용 됩니다.
 
 ```cpp
 // Example 2: exception from the above
@@ -307,7 +305,7 @@ void myassert(const char* text, const char* file, int line);
 #define ASSERT_B(ex) (void)((ex) ? void() : myassert(#ex, __FILE__, __LINE__))
 ```
 
-조건부 연산자 결과 형식에서 변경 될 수 있습니다는 여기서 템플릿 메타 프로그래밍에 오류가 나타날 **/Zc:ternary** 및 **관대 한 /-**합니다. 사용 하는 것이 문제를 해결 하는 한 가지 방법은 [std::remove_reference](../../standard-library/remove-reference-class.md) 결과 형식에 있습니다.
+조건부 연산자 결과 형식에서 변경 될 수 있습니다는 여기서 템플릿 메타 프로그래밍에 오류가 나타날 **/Zc:ternary** 및 **관대 한 /-** 합니다. 사용 하는 것이 문제를 해결 하는 한 가지 방법은 [std::remove_reference](../../standard-library/remove-reference-class.md) 결과 형식에 있습니다.
 
 ```cpp
 // Example 4: different result types 
@@ -351,7 +349,7 @@ int main()
 
 **관대 한 /-** 옵션은 Windows가 작성자 업데이트 SDK (10.0.16299.0) 하기 전에 Windows 키트의 버전 또는 1709 키트 WDK (Windows 드라이버) 버전에 대 한 굉장히 엄격 합니다. 사용 하도록 최신 버전의 Windows 키트를 업데이트 하는 것이 좋습니다 **관대 한 /-** Windows 또는 장치 드라이버 코드에서.
 
-Windows가 작성자 업데이트 SDK (10.0.16299.0) 또는 Windows 드라이버 키트 (WDK) 1709에서 일부 헤더 파일의 사용과 호환 되지 않을 수 있는 문제에 아직 **관대 한 /-**합니다. 이러한 문제를 해결 하려면 파일에 대해서만 소스 코드를 요구 하 고 제거 하는 이러한 헤더의 사용을 제한 권장는 **관대 한 /-** 해당 특정 소스 코드 파일을 컴파일할 때 옵션입니다. 다음과 같은 문제는 Windows가 작성자 업데이트 SDK (10.0.16299.0)에 달라 집니다.
+Windows가 작성자 업데이트 SDK (10.0.16299.0) 또는 Windows 드라이버 키트 (WDK) 1709에서 일부 헤더 파일의 사용과 호환 되지 않을 수 있는 문제에 아직 **관대 한 /-** 합니다. 이러한 문제를 해결 하려면 파일에 대해서만 소스 코드를 요구 하 고 제거 하는 이러한 헤더의 사용을 제한 권장는 **관대 한 /-** 해당 특정 소스 코드 파일을 컴파일할 때 옵션입니다. 다음과 같은 문제는 Windows가 작성자 업데이트 SDK (10.0.16299.0)에 달라 집니다.
 
 #### <a name="issue-in-umqueryh"></a>Um\Query.h에서 못한 문제 발생
 
@@ -410,7 +408,7 @@ Visual Studio 2017 버전 15.5 이상 버전에서이 절차를 사용 합니다
 
 1. **구성 속성**, 확장 하 고는 **C/c + +** 폴더를 선택 하 고는 **언어** 속성 페이지.
 
-1. 변경 된 **준수 모드** 속성 값을 **예 (허용 /-)**합니다. 선택 **확인** 또는 **적용** 변경 내용을 저장 합니다.
+1. 변경 된 **준수 모드** 속성 값을 **예 (허용 /-)** 합니다. 선택 **확인** 또는 **적용** 변경 내용을 저장 합니다.
 
 Visual Studio 2017 15.5 버전 보다 이전 버전을이 절차를 사용 합니다.
 
@@ -424,7 +422,7 @@ Visual Studio 2017 15.5 버전 보다 이전 버전을이 절차를 사용 합�
 
 - <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [컴파일러 옵션](../../build/reference/compiler-options.md)   
 [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)

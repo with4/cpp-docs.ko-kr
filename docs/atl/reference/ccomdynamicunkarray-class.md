@@ -1,12 +1,9 @@
 ---
-title: "CComDynamicUnkArray 클래스 | Microsoft Docs"
-ms.custom: 
+title: CComDynamicUnkArray 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComDynamicUnkArray
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - connection points [C++], managing
 - CComDynamicUnkArray class
 ms.assetid: 202470d7-9a1b-498f-b96d-659d681acd65
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5863c224ed47c70ce485bde3cd693c29afbfbc04
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9c3384c2c8ce03132e6525f175b9d34339b7aa26
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomdynamicunkarray-class"></a>CComDynamicUnkArray 클래스
 이 클래스의 배열을 저장 **IUnknown** 포인터입니다.  
@@ -79,12 +74,12 @@ class CComDynamicUnkArray
  참조 [개체에 추가 연결 지점을](../../atl/adding-connection-points-to-an-object.md) 연결 만들기를 자동화에 대 한 내용은 프록시를 가리킵니다.  
   
 > [!NOTE]
-> **참고** 클래스 **CComDynamicUnkArray** 에서 사용 되는 **클래스 추가** 연결점에 컨트롤을 만들 때 마법사. 연결 지점의 수를 수동으로 지정 하려는 경우 해당 참조 변경 **CComDynamicUnkArray** 를 `CComUnkArray<`  *n*  `>`여기서  *n*  필요한 연결 지점의 수입니다.  
+> **참고** 클래스 **CComDynamicUnkArray** 에서 사용 되는 **클래스 추가** 연결점에 컨트롤을 만들 때 마법사. 연결 지점의 수를 수동으로 지정 하려는 경우 해당 참조 변경 **CComDynamicUnkArray** 를 `CComUnkArray<` *n* `>`여기서 *n*필요한 연결 지점의 수입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="add"></a>CComDynamicUnkArray::Add  
+##  <a name="add"></a>  CComDynamicUnkArray::Add  
  이 메서드를 호출 추가 **IUnknown** 배열에 대 한 포인터입니다.  
   
 ```
@@ -98,7 +93,7 @@ DWORD Add(IUnknown* pUnk);
 ### <a name="return-value"></a>반환 값  
  새로 추가 된 포인터와 연관 된 쿠키를 반환 합니다.  
   
-##  <a name="begin"></a>CComDynamicUnkArray::begin  
+##  <a name="begin"></a>  CComDynamicUnkArray::begin  
  컬렉션의 시작 부분에 대 한 포인터를 반환 **IUnknown** 인터페이스 포인터입니다.  
   
 ```
@@ -114,14 +109,14 @@ IUnknown**
   
  사용 하기 전에 **IUnknown** 인터페이스를 확인 해야 아닌지 **NULL**합니다.  
   
-##  <a name="clear"></a>CComDynamicUnkArray::clear  
+##  <a name="clear"></a>  CComDynamicUnkArray::clear  
  배열을 비웁니다.  
   
 ```
 void clear();
 ```  
   
-##  <a name="ccomdynamicunkarray"></a>CComDynamicUnkArray::CComDynamicUnkArray  
+##  <a name="ccomdynamicunkarray"></a>  CComDynamicUnkArray::CComDynamicUnkArray  
  생성자입니다.  
   
 ```
@@ -131,7 +126,7 @@ CComDynamicUnkArray();
 ### <a name="remarks"></a>설명  
  컬렉션 크기를 0으로 설정 하 고 값을 초기화 **NULL**합니다. 필요한 경우 소멸자는 컬렉션을 해제 합니다.  
   
-##  <a name="dtor"></a>CComDynamicUnkArray:: ~ CComDynamicUnkArray  
+##  <a name="dtor"></a>  CComDynamicUnkArray:: ~ CComDynamicUnkArray  
  소멸자입니다.  
   
 ```
@@ -141,7 +136,7 @@ CComDynamicUnkArray();
 ### <a name="remarks"></a>설명  
  클래스 생성자에 의해 할당 된 리소스를 해제 합니다.  
   
-##  <a name="end"></a>CComDynamicUnkArray::end  
+##  <a name="end"></a>  CComDynamicUnkArray::end  
  마지막 지난 다음 요소에 대 한 포인터를 반환 **IUnknown** 컬렉션에 대 한 포인터입니다.  
   
 ```
@@ -152,7 +147,7 @@ IUnknown**
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 **IUnknown** 인터페이스 포인터입니다.  
   
-##  <a name="getat"></a>CComDynamicUnkArray::GetAt  
+##  <a name="getat"></a>  CComDynamicUnkArray::GetAt  
  지정된 된 인덱스에 요소를 검색 합니다.  
   
 ```
@@ -166,7 +161,7 @@ IUnknown* GetAt(int nIndex);
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 인터페이스입니다.  
   
-##  <a name="getcookie"></a>CComDynamicUnkArray::GetCookie  
+##  <a name="getcookie"></a>  CComDynamicUnkArray::GetCookie  
  와 연관 된 쿠키를 가져오려면이 메서드를 호출 하는 지정 된 **IUnknown** 포인터입니다.  
   
 ```
@@ -183,7 +178,7 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
 ### <a name="remarks"></a>설명  
  동일한 인스턴스가 여러 개 있는지 **IUnknown** 포인터인 경우이 함수에 대 한 첫 번째 쿠키를 반환 합니다.  
   
-##  <a name="getsize"></a>CComDynamicUnkArray::GetSize  
+##  <a name="getsize"></a>  CComDynamicUnkArray::GetSize  
  배열 길이 반환합니다.  
   
 ```
@@ -193,7 +188,7 @@ int GetSize() const;
 ### <a name="return-value"></a>반환 값  
  배열의 길이입니다.  
   
-##  <a name="getunknown"></a>CComDynamicUnkArray::GetUnknown  
+##  <a name="getunknown"></a>  CComDynamicUnkArray::GetUnknown  
  가져오려면이 메서드를 호출 하는 **IUnknown** 지정된 쿠키와 관련 된 포인터입니다.  
   
 ```
@@ -207,7 +202,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
 ### <a name="return-value"></a>반환 값  
  반환 된 **IUnknown** 포인터 또는 일치 하는 쿠키가 없는 경우 NULL입니다.  
   
-##  <a name="remove"></a>CComDynamicUnkArray::Remove  
+##  <a name="remove"></a>  CComDynamicUnkArray::Remove  
  제거 하려면이 메서드를 호출 하는 **IUnknown** 배열에서 포인터입니다.  
   
 ```

@@ -2,11 +2,8 @@
 title: 서비스 맵 매크로 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_SERVICE_MAP
@@ -16,17 +13,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 444d89833d84f23099ff0de8bce29bfc9d0a1344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2d2fa313c574951a8f8ba7c85d5b405707ec220
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="service-map-macros"></a>서비스 맵 매크로
 이러한 매크로 서비스 맵 및 항목을 정의합니다.  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
    
-##  <a name="begin_service_map"></a>BEGIN_SERVICE_MAP  
+##  <a name="begin_service_map"></a>  BEGIN_SERVICE_MAP  
  서비스 맵의 시작을 표시 합니다.  
   
 ```
@@ -59,20 +54,20 @@ BEGIN_SERVICE_MAP(theClass)
   
 - [SERVICE_ENTRY_CHAIN](#service_entry_chain) 하도록 [IServiceProviderImpl::QueryService](#queryservice) 다른, 지정 된 개체에 체인으로 연결 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_COM#57](../../atl/codesnippet/cpp/service-map-macros_1.h)]  
   
-##  <a name="end_service_map"></a>END_SERVICE_MAP  
+##  <a name="end_service_map"></a>  END_SERVICE_MAP  
  서비스 맵의 끝을 표시 합니다.  
   
 ```
 END_SERVICE_MAP()
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [BEGIN_SERVICE_MAP](#begin_service_map)합니다.  
   
-##  <a name="service_entry"></a>SERVICE_ENTRY  
+##  <a name="service_entry"></a>  SERVICE_ENTRY  
  개체에서 지정 된 서비스 id를 지원 하는지 나타냅니다 *SID*합니다.  
   
 ```
@@ -83,10 +78,10 @@ SERVICE_ENTRY( SID )
  *SID*  
  서비스 id입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [BEGIN_SERVICE_MAP](#begin_service_map)합니다.  
   
-##  <a name="service_entry_chain"></a>SERVICE_ENTRY_CHAIN  
+##  <a name="service_entry_chain"></a>  SERVICE_ENTRY_CHAIN  
  지시 [IServiceProviderImpl::QueryService](#queryservice) 가 지정한 개체에 대 한 체인을 `punk`합니다.  
   
 ```
@@ -97,10 +92,10 @@ SERVICE_ENTRY_CHAIN( punk )
  `punk`  
  에 대 한 포인터는 **IUnknown** 체인에 있는 인터페이스입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [BEGIN_SERVICE_MAP](#begin_service_map)합니다.  
   
-##  <a name="queryservice"></a>IServiceProviderImpl::QueryService  
+##  <a name="queryservice"></a>  IServiceProviderImpl::QueryService  
  만듭니다 또는 지정 된 서비스에 액세스 하 고 서비스에 대 한 지정된 된 인터페이스에 대 한 인터페이스 포인터를 반환 합니다.  
   
 ```
@@ -111,13 +106,13 @@ STDMETHOD(QueryService)(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [IN]`guidService`  
+ [IN] `guidService`  
  서비스 식별자 (SID)에 대 한 포인터입니다.  
   
- [IN]`riid`  
+ [IN] `riid`  
  호출자를 액세스 하는 인터페이스의 식별자입니다.  
   
- [OUT]`ppvObj`  
+ [OUT] `ppvObj`  
  요청된 된 인터페이스에 대 한 간접 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -132,7 +127,7 @@ STDMETHOD(QueryService)(
 |E_NOINTERFACE|요청된 된 인터페이스가이 서비스의 일부가 아니거나 서비스를 알 수 없습니다.|  
   
 ### <a name="remarks"></a>설명  
- `QueryService`지정된 된 서비스에서 요청된 된 인터페이스에 대 한 간접 포인터를 반환합니다. 호출자에 게는 더 이상 필요한 경우이 포인터를 해제 하는 일을 담당 합니다.  
+ `QueryService` 지정된 된 서비스에서 요청된 된 인터페이스에 대 한 간접 포인터를 반환합니다. 호출자에 게는 더 이상 필요한 경우이 포인터를 해제 하는 일을 담당 합니다.  
   
  호출 하는 경우 `QueryService`, 서비스 식별자를 전달 하면 ( `guidService`) 및 인터페이스 식별자 ( `riid`). `guidService` 액세스, 서비스 지정 및 `riid` 서비스의 일부인 인터페이스를 식별 합니다. 인터페이스에 대 한 간접 포인터, 나타납니다.  
   

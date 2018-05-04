@@ -1,9 +1,9 @@
 ---
-title: "C + + 콘솔 응용 프로그램 프로젝트 만들기 | Microsoft Docs"
-description: "Visual c + +에서는 Hello World 콘솔 응용 프로그램 만들기"
+title: C + + 콘솔 응용 프로그램 프로젝트 만들기 | Microsoft Docs
+description: Visual c + +에서는 Hello World 콘솔 응용 프로그램 만들기
 ms.custom: mvc
 ms.date: 12/12/2017
-ms.topic: get-started-article
+ms.topic: tutorial
 ms.technology:
 - devlang-C++
 ms.devlang: C++
@@ -12,20 +12,19 @@ dev_langs:
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76975054aad3173fef99a2e0f6c5ca1c642dea86
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 35b7b896dfb2a4c9dd37a9f59476cbc7f23c3902
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-c-console-app-project"></a>C + + 콘솔 앱 프로젝트 만들기
 
 C + + 프로그래머는 일반적인 시작 지점을 "Hello, world!" 명령줄에서 실행 되는 응용 프로그램입니다. 즉, 어떤 만들게 Visual Studio에서이 단계에서는 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 - 설치 하 고 컴퓨터에서 실행 중인 작업의 c + + 데스크톱 개발을 사용한 Visual Studio가 있습니다. 아직 설치 되지 않은 경우 참조 [Visual Studio에서 c + + 설치 지원](../build/vscpp-step-0-installation.md)합니다.
 
@@ -51,7 +50,7 @@ Visual Studio는 Windows 및 기타 플랫폼에 대 한 모든 종류의 앱 �
 
 1. Visual Studio에서 열고는 **프로젝트** 메뉴 선택 **속성** 열려는 **HelloWorld 속성 페이지** 대화 합니다.
 
-1. 에 **속성 페이지** 대화 아래에서 **구성 속성**선택, **링커**, **시스템**를 선택한 후 편집 상자 옆에 **하위 시스템** 속성입니다. 표시 되는 드롭다운 메뉴에서 선택 **콘솔 (/ /SUBSYSTEM: CONSOLE)**합니다. 선택 **확인** 변경 내용을 저장 합니다.
+1. 에 **속성 페이지** 대화 아래에서 **구성 속성**선택, **링커**, **시스템**를 선택한 후 편집 상자 옆에 **하위 시스템** 속성입니다. 표시 되는 드롭다운 메뉴에서 선택 **콘솔 (/ /SUBSYSTEM: CONSOLE)** 합니다. 선택 **확인** 변경 내용을 저장 합니다.
 
    ![속성 페이지 대화 상자를 열고](../build/media/vscpp-properties-linker-subsystem.gif "속성 페이지 대화 상자를 열려면")
 
@@ -63,7 +62,7 @@ Visual Studio는 Windows 및 기타 플랫폼에 대 한 모든 종류의 앱 �
 
 1. **솔루션 탐색기**, HelloWorld 프로젝트를 선택 합니다. 메뉴 모음에서 **프로젝트**, **새 항목 추가** 열려는 **새 항목 추가** 대화 상자.
 
-1. 에 **새 항목 추가** 대화 상자에서 **Visual c + +** 아래 **설치 됨** 이미 선택 되지 않은 경우. 가운데 창에서 선택 **c + + 파일 (.cpp)**합니다. 변경 된 **이름** 를 *HelloWorld.cpp*합니다. 선택 **추가** 를 대화 상자를 닫고 파일을 만듭니다.
+1. 에 **새 항목 추가** 대화 상자에서 **Visual c + +** 아래 **설치 됨** 이미 선택 되지 않은 경우. 가운데 창에서 선택 **c + + 파일 (.cpp)** 합니다. 변경 된 **이름** 를 *HelloWorld.cpp*합니다. 선택 **추가** 를 대화 상자를 닫고 파일을 만듭니다.
 
    ![HelloWorld.cpp에 대 한 소스 파일을 추가](../build/media/vscpp-add-new-item.gif "HelloWorld.cpp에 대 한 소스 파일을 추가 합니다.")
 

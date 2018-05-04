@@ -1,12 +1,9 @@
 ---
-title: "소멸자 (c + +) | Microsoft Docs"
-ms.custom: 
+title: 소멸자 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - destructors, about destructors
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37aa5ab5cad2367bfc37e2e1b6fd886540eada8e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ae1ca6923bc7e67218e35c5a6c86b9f4ac112e59
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="destructors-c"></a>소멸자 (C++)
 소멸자 개체가 범위에서 벗어나거나 명시적으로 호출 하 여 제거 될 때 자동으로 호출 되는 멤버 함수는 `delete`합니다. 소멸자에 앞에 물결표 클래스와 동일한 이름을 (`~`). 예를 들어 클래스 `String`의 소멸자는 `~String()`으로 선언됩니다. 소멸자를 정의 하지 않으면 컴파일러는 요소가 기본을 제공 다 수의 클래스에는 이것 만으로 충분 합니다. 클래스를 해제 해야 하는 시스템 리소스에 대 한 핸들을 저장 하는 경우 사용자 정의 소멸자를 정의 하면 또는 메모리를 소유 하는 포인터를 가리킵니다.

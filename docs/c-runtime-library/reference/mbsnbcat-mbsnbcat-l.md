@@ -2,11 +2,8 @@
 title: _mbsnbcat, _mbsnbcat_l | Microsoft 문서
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbsnbcat_l
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - _mbsnbcat function
 - tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
-caps.latest.revision: 29
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00f7fb633d4e0c259403a5d48e1bb05618c75ddc
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: ff7dc09e4305c16ebe710cb99c9e1bdd24490761
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat, _mbsnbcat_l
 
@@ -111,7 +106,7 @@ null로 끝나는 멀티바이트 문자 소스 문자열입니다.
 
 **_mbsnbcat** 함수 추가, 최대, 첫 번째 *count* 바이트의 *src* 를 *dest*합니다. 경우에 null 문자 바로 앞에 바이트 *dest* 의 초기 바이트가 선행 바이트 인지 *src* 이 선행 바이트를 덮어씁니다. 그렇지 않은 경우의 초기 바이트가 *src* 의 null 종결 문자를 덮어씁니다 *dest*합니다. 에 null 바이트가 나타나는 경우 *src* 하기 전에 *count* 바이트를 추가 **_mbsnbcat** 의 모든 바이트를 추가 *src*를 null 문자입니다. 경우 *개수* 의 길이 보다 크면 *src*, 길이의 *src* 대신 사용 됩니다 *개수*합니다. 결과 문자열은 null 문자로 끝납니다. 중복되는 문자열 간에 복사가 이뤄지면 이 동작은 정의되지 않습니다.
 
-출력 값은의 설정에 영향을 **LC_CTYPE** 로캘 범주 설정; 참조 [setlocale](setlocale-wsetlocale.md) 자세한 정보에 대 한 합니다. **_mbsnbcat** 버전의 함수가 로캘 종속 동작에 대 한 현재 로캘을 사용는 **_mbsnbcat_l** 버전은 전달 된 로캘 매개 변수를 사용 하는 점을 제외 하 고 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따른 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. **_mbsnbcat** 버전의 함수가 로캘 종속 동작에 대 한 현재 로캘을 사용는 **_mbsnbcat_l** 버전은 전달 된 로캘 매개 변수를 사용 하는 점을 제외 하 고 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
 **보안 정보** null로 끝나는 문자열을 사용하세요. null로 끝나는 문자열은 대상 버퍼의 크기를 초과할 수 없습니다. 자세한 내용은 [버퍼 오버런 방지](http://msdn.microsoft.com/library/windows/desktop/ms717795)를 참조하세요.
 

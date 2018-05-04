@@ -1,13 +1,10 @@
 ---
-title: "릴리스 빌드 | Microsoft Docs"
-ms.custom: 
+title: 릴리스 빌드 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - release builds
 - debug builds, converting to release build
 ms.assetid: fa9a78fa-f4b5-4722-baf4-aec655c4ff0f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12e81b26cd83214a5d62a42689bfc3a866ef1c10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f3ae18c5e2dcdb735880509fd158dac4ccaa1462
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="release-builds"></a>릴리스 빌드
 릴리스 빌드 최적화를 사용 합니다. 최적화를 사용 하 여 릴리스 빌드를 만들 때 컴파일러가 기호 디버깅 정보를 생성 하지 않습니다. ASSERT와 추적에 대 한 코드가 생성 되지 않으면 사실 외 기호 디버깅 정보 없으면 호출, 실행 파일의 크기 감소를 더 빠르게 수 없으므로 있다는 것을 의미 합니다.  

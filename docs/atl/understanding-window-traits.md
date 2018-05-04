@@ -1,29 +1,24 @@
 ---
-title: "ATL 창 특성 | Microsoft Docs"
-ms.custom: 
+title: ATL 창 특성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - window traits
 ms.assetid: c90cf850-9e91-49da-9cf3-ad4efb30347d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fda95e4517d2717a89310a8e49a0c5b337feebcf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71fbf5b3c4c3f1aa95070cbc0d30beb9e1321348
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-window-traits"></a>창 특성 이해
 창 특성 클래스는 ATL 창 개체 만들기에 사용 되는 스타일을 표준화 하기 위한 간단한 방법을 제공 합니다. 창 특성에서 템플릿 매개 변수로 허용 됩니다 [CWindowImpl](../atl/reference/cwindowimpl-class.md) 및 기본 창 스타일 클래스 수준에서 제공 하는 방법으로 다른 ATL 창 클래스입니다.  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
 |클래스|설명|  
 |-----------|-----------------|  
-|[용으로 CWinTraits](../atl/reference/cwintraits-class.md)|창 스타일 없음 다른 스타일에 대 한 호출에 지정 된 경우에 사용할 수 있는 기본 제공 하려는 경우이 서식 파일을 사용 하 여 **만들기**합니다. 설정 된 스타일 보다 우선 적용 실행된 시간에 제공 되는 스타일 컴파일 시간입니다.|  
+|[CWinTraits](../atl/reference/cwintraits-class.md)|창 스타일 없음 다른 스타일에 대 한 호출에 지정 된 경우에 사용할 수 있는 기본 제공 하려는 경우이 서식 파일을 사용 하 여 **만들기**합니다. 설정 된 스타일 보다 우선 적용 실행된 시간에 제공 되는 스타일 컴파일 시간입니다.|  
 |[CWinTraitsOR](../atl/reference/cwintraitsor-class.md)|창 클래스에 대해 항상 설정 되어 있어야 하는 스타일을 지정 하려는 경우에이 클래스를 사용 합니다. 런타임 시 제공 되는 스타일 비트 OR 연산자를 사용 하 여 컴파일 타임에 설정 된 스타일과 결합 됩니다.|  
   
  ATL 이러한 서식 파일 뿐 아니라 다양 한 미리 정의 된 특수화를 제공는 `CWinTraits` 창 스타일의 자주 사용 되는 조합에 대 한 서식 파일입니다. 참조는 [용으로 CWinTraits](../atl/reference/cwintraits-class.md) 대 한 자세한 내용은 설명서를 참조 합니다.  

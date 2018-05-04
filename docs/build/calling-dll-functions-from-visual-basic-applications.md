@@ -2,12 +2,9 @@
 title: Visual Basic 응용 프로그램에서 DLL 함수 호출 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,22 +16,20 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed99b0ebe41a8f1bc9684638fa74e18556dd51f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9877544635dc894bbe379c751de35297add91c9d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Visual Basic 응용 프로그램에서 DLL 함수 호출
 Visual Basic 응용 프로그램 (또는 Pascal 또는 포트란 같은 다른 언어에서는 응용 프로그램) C/c + + DLL의 함수를 호출에 대 한 올바른 호출 규칙을 사용 하 여 컴파일러에 의해 이름 데코레이션 없이 함수를 내보낼 수 해야 합니다.  
   
- `__stdcall`함수에 대 한 올바른 호출 규칙을 만듭니다 (스택을 정리 하는 호출된 된 함수 및 매개 변수는 오른쪽에서 왼쪽으로 전달 됩니다) 있지만 함수 이름을 다르게 데코레이팅합니다. 그럴 경우 **__declspec (dllexport)** 사용 데코레이팅된 이름을 내보내는 DLL에서 내보낸된 함수에 있습니다.  
+ `__stdcall` 함수에 대 한 올바른 호출 규칙을 만듭니다 (스택을 정리 하는 호출된 된 함수 및 매개 변수는 오른쪽에서 왼쪽으로 전달 됩니다) 있지만 함수 이름을 다르게 데코레이팅합니다. 그럴 경우 **__declspec (dllexport)** 사용 데코레이팅된 이름을 내보내는 DLL에서 내보낸된 함수에 있습니다.  
   
  `__stdcall` 이름 데코레이션 기호 이름에 밑줄 (_)을 추가 at 기호 (@) 문자와 인수 목록 (필요한 스택 공간)의 바이트 수입니다. 결과적으로로 선언 된 함수가:  
   

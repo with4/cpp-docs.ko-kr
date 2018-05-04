@@ -1,12 +1,9 @@
 ---
-title: "보안 식별자 전역 함수 | Microsoft Docs"
-ms.custom: 
+title: 보안 식별자 전역 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlsecurity/ATL::Sids::AccountOps
@@ -46,17 +43,15 @@ helpviewer_keywords:
 - security IDs [C++]
 - SIDs [C++], returning SID objects
 ms.assetid: 85404dcb-c59b-4535-ab3d-66cfa37e87de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6975b6b73c6d81fc9347a2395cd36747ce235b2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 153436ab5d05d0355d85ca165b2bfba9ae86d534
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-identifier-global-functions"></a>보안 식별자 전역 함수
 이러한 함수 개체 일반적인 잘 알려진 SID를 반환합니다.  
@@ -102,98 +97,98 @@ ms.lasthandoff: 12/21/2017
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlsecurity.h 
 
-##  <a name="accountops"></a>Sids::AccountOps  
+##  <a name="accountops"></a>  Sids::AccountOps  
  DOMAIN_ALIAS_RID_ACCOUNT_OPS SID를 반환합니다.    
   
 ```
 CSid AccountOps() throw(...);
 ```  
   
-##  <a name="admins"></a>Sids::Admins  
+##  <a name="admins"></a>  Sids::Admins  
  DOMAIN_ALIAS_RID_ADMINS SID를 반환합니다.  
 ```
 CSid Admins() throw(...);
 ```  
   
-##  <a name="anonymouslogon"></a>Sids::AnonymousLogon  
+##  <a name="anonymouslogon"></a>  Sids::AnonymousLogon  
  SECURITY_ANONYMOUS_LOGON_RID SID를 반환합니다.  
 ```
 CSid AnonymousLogon() throw(...);
 ```  
   
-##  <a name="authenticateduser"></a>Sids::AuthenticatedUser  
+##  <a name="authenticateduser"></a>  Sids::AuthenticatedUser  
  SECURITY_AUTHENTICATED_USER_RID SID를 반환합니다.  
 ```
 CSid AuthenticatedUser() throw(...);
 ```  
   
-##  <a name="backupops"></a>Sids::BackupOps  
+##  <a name="backupops"></a>  Sids::BackupOps  
  DOMAIN_ALIAS_RID_BACKUP_OPS SID를 반환합니다.  
 ```
 CSid BackupOps() throw(...);
 ```  
   
-##  <a name="batch"></a>Sids::Batch  
+##  <a name="batch"></a>  Sids::Batch  
  SECURITY_BATCH_RID SID를 반환합니다.  
 ```
 CSid Batch() throw(...);
 ```  
   
-##  <a name="creatorgroup"></a>Sids::CreatorGroup  
+##  <a name="creatorgroup"></a>  Sids::CreatorGroup  
  SECURITY_CREATOR_GROUP_RID SID를 반환합니다.  
 ```
 CSid CreatorGroup() throw(...);
 ```  
   
-##  <a name="creatorgroupserver"></a>Sids::CreatorGroupServer  
+##  <a name="creatorgroupserver"></a>  Sids::CreatorGroupServer  
  SECURITY_CREATOR_GROUP_SERVER_RID SID를 반환합니다.  
 ```
 CSid CreatorGroupServer() throw(...);
 ```  
   
-##  <a name="creatorowner"></a>Sids::CreatorOwner  
+##  <a name="creatorowner"></a>  Sids::CreatorOwner  
  SECURITY_CREATOR_OWNER_RID SID를 반환합니다.  
 ```
 CSid CreatorOwner() throw(...);
 ```  
   
-##  <a name="creatorownerserver"></a>Sids::CreatorOwnerServer  
+##  <a name="creatorownerserver"></a>  Sids::CreatorOwnerServer  
  SECURITY_CREATOR_OWNER_SERVER_RID SID를 반환합니다.  
 ```
 CSid CreatorOwnerServer() throw(...);
 ```  
   
-##  <a name="dialup"></a>Sids::Dialup  
+##  <a name="dialup"></a>  Sids::Dialup  
  SECURITY_DIALUP_RID SID를 반환합니다.  
 ```
 CSid Dialup() throw(...);
 ```  
   
-##  <a name="guests"></a>Sids::Guests  
+##  <a name="guests"></a>  Sids::Guests  
  DOMAIN_ALIAS_RID_GUESTS SID를 반환합니다.  
 ```
 CSid Guests() throw(...);
 ```  
   
-##  <a name="interactive"></a>Sids::Interactive  
+##  <a name="interactive"></a>  Sids::Interactive  
  SECURITY_INTERACTIVE_RID SID를 반환합니다.  
 ```
 CSid Interactive() throw(...);
 ```  
   
-##  <a name="local"></a>Sids::Local  
+##  <a name="local"></a>  Sids::Local  
  SECURITY_LOCAL_RID SID를 반환합니다.  
 ```
 CSid Local() throw(...);
 ```  
   
-##  <a name="network"></a>Sids::Network  
+##  <a name="network"></a>  Sids::Network  
  SECURITY_NETWORK_RID SID를 반환합니다.  
 ```
 CSid Network() throw(...);
 ```  
   
-##  <a name="networkservice"></a>Sids::NetworkService  
+##  <a name="networkservice"></a>  Sids::NetworkService  
  SECURITY_NETWORK_SERVICE_RID SID를 반환합니다.  
 ```
 CSid NetworkService() throw(...);
@@ -204,97 +199,97 @@ CSid NetworkService() throw(...);
   
  사용자 지정 로그 카운터 Perfmon mmc에서 ATLServer CPerfMon 클래스를 사용 하 여 만들어진, 실시간 보기에서 올바르게 표시 되도록 하지만 로그 파일을 볼 때 카운터 나타나지 않을 수 있습니다. CPerfMon 사용자 지정 성능 카운터에는 "성능 로그 및 경고" 서비스 (smlogsvc.exe)에서 실행 하는 데 필요한 권한이 없는 [!INCLUDE[WinXpFamily](../../atl/reference/includes/winxpfamily_md.md)] (이상) 운영 체제. 이 서비스는 "NT AUTHORITY\NetworkService" 계정에서 실행 합니다.  
   
-##  <a name="null"></a>Sids::Null  
+##  <a name="null"></a>  Sids::Null  
  SECURITY_NULL_RID SID를 반환합니다.  
 ```
 CSid Null() throw(...);
 ```  
   
-##  <a name="prew2kaccess"></a>Sids::PreW2KAccess  
+##  <a name="prew2kaccess"></a>  Sids::PreW2KAccess  
  DOMAIN_ALIAS_RID_PREW2KCOMPACCESS SID를 반환합니다.  
 ```
 CSid PreW2KAccess() throw(...);
 ```  
   
-##  <a name="powerusers"></a>Sids::PowerUsers  
+##  <a name="powerusers"></a>  Sids::PowerUsers  
  DOMAIN_ALIAS_RID_POWER_USERS SID를 반환합니다.  
 ```
 CSid PowerUsers() throw(...);
 ```  
   
-##  <a name="printops"></a>Sids::PrintOps  
+##  <a name="printops"></a>  Sids::PrintOps  
  DOMAIN_ALIAS_RID_PRINT_OPS SID를 반환합니다.  
 ```
 CSid PrintOps() throw(...);
 ```  
   
-##  <a name="proxy"></a>Sids::Proxy  
+##  <a name="proxy"></a>  Sids::Proxy  
  SECURITY_PROXY_RID SID를 반환합니다.  
 ```
 CSid Proxy() throw(...);
 ```  
   
-##  <a name="rasservers"></a>Sids::RasServers  
+##  <a name="rasservers"></a>  Sids::RasServers  
  DOMAIN_ALIAS_RID_RAS_SERVERS SID를 반환합니다.  
 ```
 CSid RasServers() throw(...);
 ```  
   
-##  <a name="replicator"></a>Sids::Replicator  
+##  <a name="replicator"></a>  Sids::Replicator  
  DOMAIN_ALIAS_RID_REPLICATOR SID를 반환합니다.  
 ```
 CSid Replicator() throw(...);
 ```  
   
-##  <a name="restrictedcode"></a>Sids::RestrictedCode  
+##  <a name="restrictedcode"></a>  Sids::RestrictedCode  
  SECURITY_RESTRICTED_CODE_RID SID를 반환합니다.  
 ```
 CSid RestrictedCode() throw(...);
 ```  
   
-##  <a name="self"></a>Sids::Self  
+##  <a name="self"></a>  Sids::Self  
  SECURITY_PRINCIPAL_SELF_RID SID를 반환합니다.  
 ```
 CSid Self() throw(...);
 ```  
   
-##  <a name="serverlogon"></a>Sids::ServerLogon  
+##  <a name="serverlogon"></a>  Sids::ServerLogon  
  SECURITY_SERVER_LOGON_RID SID를 반환합니다.  
 ```
 CSid ServerLogon() throw(...);
 ```  
   
-##  <a name="service"></a>Sids::Service  
+##  <a name="service"></a>  Sids::Service  
  SECURITY_SERVICE_RID SID를 반환합니다.  
 ```
 CSid Service() throw(...);
 ```  
   
-##  <a name="system"></a>Sids::System  
+##  <a name="system"></a>  Sids::System  
  SECURITY_LOCAL_SYSTEM_RID SID를 반환합니다.  
 ```
 CSid System() throw(...);
 ```  
   
-##  <a name="systemops"></a>Sids::SystemOps  
+##  <a name="systemops"></a>  Sids::SystemOps  
  DOMAIN_ALIAS_RID_SYSTEM_OPS SID를 반환합니다.  
 ```
 CSid SystemOps() throw(...);
 ```  
   
-##  <a name="terminalserver"></a>Sids::TerminalServer  
+##  <a name="terminalserver"></a>  Sids::TerminalServer  
  SECURITY_TERMINAL_SERVER_RID SID를 반환합니다.  
 ```
 CSid TerminalServer() throw(...);
 ```  
   
-##  <a name="users"></a>Sids::Users  
+##  <a name="users"></a>  Sids::Users  
  DOMAIN_ALIAS_RID_USERS SID를 반환합니다.  
 ```
 CSid Users() throw(...);
 ```  
   
-##  <a name="world"></a>Sids::World  
+##  <a name="world"></a>  Sids::World  
  SECURITY_WORLD_RID SID를 반환합니다.  
 ```
 CSid World() throw(...);

@@ -1,27 +1,22 @@
 ---
 title: 속성 페이지 (ATL 자습서, 6 부) 추가 | Microsoft Docs
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067c5d662fee3838a33a3b53fd5dab2946ab50cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf7f0383697fbc1e23e179936a2616d1d236b5f2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>속성 페이지 추가(ATL 자습서, 6부)
 속성 페이지는 필요한 경우를 공유할 수 있도록 별도 COM 개체로 구현 됩니다. 이 단계에서는 컨트롤에 속성 페이지를 추가 하려면 다음 작업을 수행 합니다.  
@@ -104,7 +99,7 @@ ms.lasthandoff: 12/21/2017
   
  이 코드는 이제 해당 설정을 검사는 `Sides` 실제로 작동 하는 속성입니다. 실패 한 경우 코드에서 오류 세부 정보 표시 메시지 상자를 표시 하는 **IErrorInfo** 인터페이스입니다. 컨테이너에 대 한 개체를 요청 하는 일반적으로 **ISupportErrorInfo** 인터페이스 및 호출 `InterfaceSupportsErrorInfo` 먼저 개체가 설정 오류 정보를 지원 하는지 여부를 확인 합니다. 이 태스크를 건너뛸 수 있습니다.  
   
- [CComPtr](../atl/reference/ccomptr-class.md) 를 사용 하면 참조 횟수를 자동으로 처리 하 여 되므로 호출 하지 않고도 `Release` 인터페이스에 있습니다. `CComBSTR`사용 하면 `BSTR` 처리의 마지막으로 수행 해야 하므로 `SysFreeString` 호출 합니다. 또한 중 하나를 사용할 다양 한 문자열 변환 클래스를 변환할 수 있도록는 `BSTR` 필요한 경우 (이 인해는 `USES_CONVERSION` 매크로 함수의 시작 부분에).  
+ [CComPtr](../atl/reference/ccomptr-class.md) 를 사용 하면 참조 횟수를 자동으로 처리 하 여 되므로 호출 하지 않고도 `Release` 인터페이스에 있습니다. `CComBSTR` 사용 하면 `BSTR` 처리의 마지막으로 수행 해야 하므로 `SysFreeString` 호출 합니다. 또한 중 하나를 사용할 다양 한 문자열 변환 클래스를 변환할 수 있도록는 `BSTR` 필요한 경우 (이 인해는 `USES_CONVERSION` 매크로 함수의 시작 부분에).  
   
  속성 페이지의 해당 변경 플래그를 설정 해야는 **적용** 단추가 활성화 되어야 합니다. 사용자의 값을 변경할 때 발생 하는이 **면** 상자 편집 합니다.  
   
@@ -126,7 +121,7 @@ ms.lasthandoff: 12/21/2017
   
      [!code-cpp[NVC_ATL_Windowing#59](../atl/codesnippet/cpp/adding-a-property-page-atl-tutorial-part-6_2.cpp)]  
   
- `OnEnChangeSides`호출 됩니다는 **WM_COMMAND** 메시지와 함께 보내집니다는 **EN_CHANGE** 에 대 한 알림을 `IDC_SIDES` 제어 합니다. `OnEnChangeSides`그런 다음 호출 `SetDirty` 전달 `TRUE` 속성을 나타내기 위해 페이지가 이제 커밋되지 않았는지 및 **적용** 단추가 활성화 되어야 합니다.  
+ `OnEnChangeSides` 호출 됩니다는 **WM_COMMAND** 메시지와 함께 보내집니다는 **EN_CHANGE** 에 대 한 알림을 `IDC_SIDES` 제어 합니다. `OnEnChangeSides` 그런 다음 호출 `SetDirty` 전달 `TRUE` 속성을 나타내기 위해 페이지가 이제 커밋되지 않았는지 및 **적용** 단추가 활성화 되어야 합니다.  
   
 ## <a name="adding-the-property-page-to-the-control"></a>컨트롤에 속성 페이지 추가  
  ATL 클래스 추가 마법사 및 ATL 속성 페이지 마법사 추가 하지 마십시오 속성 페이지에 있는 컨트롤을 자동으로 프로젝트에서 하는 컨트롤을 여러 개 있을 수 있기 때문. 컨트롤의 속성 매핑이 두에 항목을 추가 해야 합니다.  
@@ -152,7 +147,7 @@ ms.lasthandoff: 12/21/2017
   
  다음으로, 웹 페이지에 컨트롤을 추가 합니다.  
   
- [5 단계를 다시](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [7 단계로](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
+ [5 단계를 다시](../atl/adding-an-event-atl-tutorial-part-5.md) &#124; [단계 7에](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [자습서](../atl/active-template-library-atl-tutorial.md)

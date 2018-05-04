@@ -2,11 +2,8 @@
 title: COM 맵 매크로 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlcom/ATL::BEGIN_COM_MAP
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - COM interfaces, COM map macros
 ms.assetid: 0f33656d-321f-4996-90cc-9a7f21ab73c3
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e97db324dc8e130418419ef435e2665c84eb0b64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74f8903d81a126a6647bc43018f8422296ddf970
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="com-map-macros"></a>COM 맵 매크로
 이러한 매크로 COM 인터페이스 맵을 정의 합니다.  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
    
-##  <a name="begin_com_map"></a>BEGIN_COM_MAP  
+##  <a name="begin_com_map"></a>  BEGIN_COM_MAP  
  COM 개체를 통해 클라이언트에 대 한 인터페이스를 노출 하는 메커니즘은 `QueryInterface`합니다.  
   
 ```
@@ -54,14 +49,14 @@ BEGIN_COM_MAP(x)
  [CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) 만 COM 맵에서 인터페이스에 대 한 포인터를 반환 합니다. 시작 된 인터페이스 맵에 `BEGIN_COM_MAP` 매크로와 인터페이스의 각 항목을 추가 [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) 매크로 또는 해당 변형 중 하나는 지도에 완료는 [END_COM_MAP](#end_com_map) 매크로입니다.  
 
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  ATL에서 [호출기](../../visual-cpp-samples.md) 샘플:  
   
  [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]  
   
 
   
-##  <a name="end_com_map"></a>END_COM_MAP  
+##  <a name="end_com_map"></a>  END_COM_MAP  
  COM 인터페이스 맵 정의 끝냅니다.  
   
 ```

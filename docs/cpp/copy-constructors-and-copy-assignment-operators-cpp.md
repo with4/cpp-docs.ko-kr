@@ -1,12 +1,9 @@
 ---
-title: "복사 생성자 및 복사 할당 연산자 (c + +) | Microsoft Docs"
-ms.custom: 
+title: 복사 생성자 및 복사 할당 연산자 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - copying objects
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f2ebf51f28912c3cb798acc1ff4aa377c1bebb5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1292240e5343c461142e8c6029c277175f6a62f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>복사 생성자 및 복사 할당 연산자(C++)
 > [!NOTE]
@@ -66,7 +61,7 @@ b = a;
   
  복사 생성자를 선언하지 않으면 컴파일러는 자동으로 멤버 단위 복사 생성자를 생성합니다.  복사 할당 연산자를 선언하지 않으면 컴파일러는 자동으로 멤버 단위 복사 할당 연산자를 생성합니다. 복사 생성자의 선언은 컴파일러에서 생성된 복사 할당 연산자를 숨기지 않으며 그 반대의 경우에도 마찬가지입니다. 둘 중 하나를 구현하는 경우 다른 하나도 구현하여 코드의 의미를 분명히 하는 것이 좋습니다.  
    
- 형식의 인수를 사용 하는 복사 생성자 *클래스 이름***&**여기서 *클래스 이름* 생성자가 정의 하는 클래스의 이름입니다. 예:  
+ 형식의 인수를 사용 하는 복사 생성자 * 클래스-name ***&** 여기서 *클래스 이름* 생성자가 정의 하는 클래스의 이름입니다. 예를 들어:  
   
 ```cpp  
 // spec1_copying_class_objects.cpp  
@@ -83,14 +78,14 @@ int main()
 ```  
   
 > [!NOTE]
->  복사 생성자의 인수 형식을 쉽게 *const 클래스 이름*  **&**  가능 합니다. 이는 복사 생성자가 복사 중인 개체를 실수로 변경하는 것을 방지합니다. 복사도 가능 **const** 개체입니다.  
+>  복사 생성자의 인수 형식을 만듭니다 *const 클래스-name * * * &** 가능 합니다. 이는 복사 생성자가 복사 중인 개체를 실수로 변경하는 것을 방지합니다. 복사도 가능 **const** 개체입니다.  
   
 ## <a name="compiler-generated-copy-constructors"></a>컴파일러에서 생성된 복사 생성자  
- 사용자 정의 복사 생성자와 마찬가지로 컴파일러 생성 복사 생성자가 형식의 단일 인수 "에 대 한 참조 *클래스 이름*." 예외는 모든 기본 클래스와 멤버 클래스 형식의 단일 인수를 사용 하도록 선언 된 복사 생성자가 있는 경우 **const** *클래스 이름***&**합니다. 이 경우 컴파일러 생성 복사 생성자의 인수는 또한 **const**합니다.  
+ 사용자 정의 복사 생성자와 마찬가지로 컴파일러 생성 복사 생성자가 형식의 단일 인수 "에 대 한 참조 *클래스 이름*." 예외는 모든 기본 클래스와 멤버 클래스 형식의 단일 인수를 사용 하도록 선언 된 복사 생성자가 있는 경우 **const** * 클래스-name ***&** 합니다. 이 경우 컴파일러 생성 복사 생성자의 인수는 또한 **const**합니다.  
   
  인수 형식이 복사 생성자에 없는 경우 **const**를 복사 하 여 초기화 한 **const** 개체에 오류가 발생 합니다. 반대는 성립 하지 않습니다: 인수가 **const**를 하지 않은 개체를 복사 하 여 초기화할 수 있습니다 **const**합니다.  
   
- 컴파일러에서 생성 된 할당 연산자는 동일한와 관련 된 패턴에 따라 **const 합니다.** 형식의 단일 인수 *클래스 이름*  **&**  모든 기본 및 멤버 클래스의 할당 연산자 형식의 인수를 사용 하지 않는 한 **const** *클래스 이름 & 합니다.* 이 경우 클래스의 생성 된 할당 연산자는 **const** 인수입니다.  
+ 컴파일러에서 생성 된 할당 연산자는 동일한와 관련 된 패턴에 따라 **const 합니다.** 형식의 단일 인수 *클래스-name * * * &** 모든 기본 및 멤버 클래스의 할당 연산자 형식의 인수를 사용 하지 않는 한 **const** *클래스 이름 & 합니다.* 이 경우 클래스의 생성 된 할당 연산자는 **const** 인수입니다.  
   
 > [!NOTE]
 >  가상 기본 클래스가 복사 생성자에 의해 초기화되고 컴파일러에서 생성되거나 사용자 정의되는 경우 생성되는 시점에 한 번만 초기화됩니다.  

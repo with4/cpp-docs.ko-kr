@@ -1,10 +1,10 @@
 ---
-title: "/Zc: strictstrings (문자열 리터럴 형식 변환 사용 안 함) | Microsoft Docs"
-ms.custom: 
+title: '/Zc: strictstrings (문자열 리터럴 형식 변환 사용 안 함) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /Zc:strictStrings
 - strictStrings
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: b7eb3f3b-82c1-48a2-8e63-66bad7397b46
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61ae45d6a067b45d625055d92900b17e69a366e7
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 7025a4bae2d4a7474cb366b041a3c62f3d7db819
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>/Zc:strictStrings(문자열 리터럴 형식 변환 사용 안 함)
 
@@ -40,7 +39,7 @@ ms.lasthandoff: 03/15/2018
 
 경우 **/zc: strictstrings** 를 지정한 경우 컴파일러는 표준 c + + `const` 문자열 리터럴 형식에 대 한 자격 ' 배열을 `const char`' 또는 ' 배열을 `const wchar_t`' 선언에 따라, 합니다. 문자열 리터럴은 변경 불가능하고 문자열 리터럴 중 하나의 내용을 수정하려고 하면 런타임에 액세스 위반 오류가 발생합니다. 문자열 포인터를 `const`로 선언하여 문자열 리터럴을 사용하여 초기화하거나 명시적 `const_cast`를 사용하여 비`const` 포인터를 초기화해야 합니다. 기본적으로 또는 **/Zc:strictStrings-** 컴파일러는 표준 c + +를 적용 하지 않는 지정 된 `const` 문자열 리터럴을 사용 하 여 초기화 된 문자열 포인터에 대 한 자격입니다.
 
-**/zc: strictstrings** 옵션은 기본적으로 해제 되어 있습니다. [관대 한 /-](permissive-standards-conformance.md) 컴파일러 옵션에는 암시적으로이 옵션을 설정 하지만 사용 하 여 재정의할 수 있습니다 **/Zc:strictStrings-**합니다.
+**/zc: strictstrings** 옵션은 기본적으로 해제 되어 있습니다. [관대 한 /-](permissive-standards-conformance.md) 컴파일러 옵션에는 암시적으로이 옵션을 설정 하지만 사용 하 여 재정의할 수 있습니다 **/Zc:strictStrings-** 합니다.
 
 사용 하 여 **/zc: strictstrings** 잘못 된 코드의 컴파일을 방지 하려면 옵션입니다. 다음 예제에서는 간단한 선언 오류가 런타임에 충돌을 어떻게 발생시키는지 보여줍니다. 
 
@@ -80,6 +79,6 @@ Visual C++의 규칙과 관련된 문제에 대한 자세한 내용은 [Nonstand
 
 1. 수정 된 **추가 옵션** 포함할 속성을 **/zc: strictstrings** 선택한 후 **확인**합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [/Zc(규칙)](../../build/reference/zc-conformance.md)<br/>

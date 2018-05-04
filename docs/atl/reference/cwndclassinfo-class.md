@@ -2,11 +2,8 @@
 title: CWndClassInfo 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CWndClassInfo
@@ -24,17 +21,15 @@ dev_langs:
 helpviewer_keywords:
 - CWndClassInfo class
 ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
-caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b07f6b12914e18f3f83abedf59742a8b7c7867b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 878d6065f3a158ac4404620205ef9c60912d89ca
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo 클래스
 이 클래스는 창 클래스에 대 한 정보를 등록 하기 위한 메서드를 제공 합니다.  
@@ -69,17 +64,17 @@ class CWndClassInfo
 |[pWndProc](#pwndproc)|기존 창 클래스의 창 프로시저를 가리킵니다.|  
   
 ## <a name="remarks"></a>설명  
- `CWndClassInfo`창 클래스 정보를 관리합니다. 일반적으로 사용 `CWndClassInfo` 세 가지 매크로 중 하나를 통해 `DECLARE_WND_CLASS`, `DECLARE_WND_CLASS_EX`, 또는 `DECLARE_WND_SUPERCLASS`다음 표에 설명 된 대로:  
+ `CWndClassInfo` 창 클래스 정보를 관리합니다. 일반적으로 사용 `CWndClassInfo` 세 가지 매크로 중 하나를 통해 `DECLARE_WND_CLASS`, `DECLARE_WND_CLASS_EX`, 또는 `DECLARE_WND_SUPERCLASS`다음 표에 설명 된 대로:  
   
 |매크로|설명|  
 |-----------|-----------------|  
-|[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)|`CWndClassInfo`새 창 클래스에 대 한 정보를 등록합니다.|  
-|[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)|`CWndClassInfo`클래스 매개 변수를 포함 하 여 새 창 클래스에 대 한 정보를 등록 합니다.|  
-|[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)|`CWndClassInfo`기존 클래스에 기반 하지만 다른 창 프로시저를 사용 하는 창 클래스에 대 한 정보를 등록 합니다. 이 기술은 슈퍼 클 래 싱을 라고 합니다.|  
+|[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)|`CWndClassInfo` 새 창 클래스에 대 한 정보를 등록합니다.|  
+|[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)|`CWndClassInfo` 클래스 매개 변수를 포함 하 여 새 창 클래스에 대 한 정보를 등록 합니다.|  
+|[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)|`CWndClassInfo` 기존 클래스에 기반 하지만 다른 창 프로시저를 사용 하는 창 클래스에 대 한 정보를 등록 합니다. 이 기술은 슈퍼 클 래 싱을 라고 합니다.|  
   
  기본적으로 [CWindowImpl](../../atl/reference/cwindowimpl-class.md) 포함는 `DECLARE_WND_CLASS` 매크로 창을 만들기 위해 새 창 클래스에 기반 합니다. DECLARE_WND_CLASS는 컨트롤에 대 한 기본 스타일과 배경색을 제공합니다. 스타일을 지정 하 고 사용자가 직접 배경 색상 하려면에서 클래스를 파생 `CWindowImpl` 포함는 `DECLARE_WND_CLASS_EX` 클래스 정의에 매크로입니다.  
   
- 기존 창 클래스를 기반으로 창을 만들려는 경우에서 클래스를 파생 `CWindowImpl` 포함는 `DECLARE_WND_SUPERCLASS` 클래스 정의에 매크로입니다. 예:  
+ 기존 창 클래스를 기반으로 창을 만들려는 경우에서 클래스를 파생 `CWindowImpl` 포함는 `DECLARE_WND_SUPERCLASS` 클래스 정의에 매크로입니다. 예를 들어:  
   
  [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]  
   
@@ -90,14 +85,14 @@ class CWndClassInfo
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
   
-##  <a name="m_atom"></a>CWndClassInfo::m_atom  
+##  <a name="m_atom"></a>  CWndClassInfo::m_atom  
  등록 된 창 클래스에 대 한 고유 식별자를 포함합니다.  
   
 ```
 ATOM m_atom;
 ```  
   
-##  <a name="m_bsystemcursor"></a>CWndClassInfo::m_bSystemCursor  
+##  <a name="m_bsystemcursor"></a>  CWndClassInfo::m_bSystemCursor  
  경우 **TRUE**, 창 클래스를 등록 하는 경우 시스템 커서 리소스 로드 됩니다.  
   
 ```
@@ -107,9 +102,9 @@ BOOL m_bSystemCursor;
 ### <a name="remarks"></a>설명  
  그렇지 않으면 모듈에 포함 된 커서 리소스 로드 됩니다.  
   
- `CWndClassInfo`사용 하 여 `m_bSystemCursor` 경우에만 [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (대화 상자에서 기본 [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) 또는 [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) 매크로 지정 합니다. 이 경우 `m_bSystemCursor` 로 초기화 **TRUE**합니다. 자세한 내용은 참조는 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) 개요입니다.  
+ `CWndClassInfo` 사용 하 여 `m_bSystemCursor` 경우에만 [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (대화 상자에서 기본 [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) 또는 [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) 매크로 지정 합니다. 이 경우 `m_bSystemCursor` 로 초기화 **TRUE**합니다. 자세한 내용은 참조는 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) 개요입니다.  
   
-##  <a name="m_lpszcursorid"></a>CWndClassInfo::m_lpszCursorID  
+##  <a name="m_lpszcursorid"></a>  CWndClassInfo::m_lpszCursorID  
  하위 단어 및 상위 word에서 0이 커서 리소스의 이름 또는 리소스 식별자를 지정합니다.  
   
 ```
@@ -119,9 +114,9 @@ LPCTSTR m_lpszCursorID;
 ### <a name="remarks"></a>설명  
  창 클래스 등록 될 때,로 식별 되는 커서에 대 한 핸들 `m_lpszCursorID` 검색 및 저장 하 여 [m_wc](#m_wc)합니다.  
   
- `CWndClassInfo`사용 하 여 `m_lpszCursorID` 경우에만 [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (대화 상자에서 기본 [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) 또는 [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) 매크로 지정 합니다. 이 경우 `m_lpszCursorID` 로 초기화 **IDC_ARROW**합니다. 자세한 내용은 참조는 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) 개요입니다.  
+ `CWndClassInfo` 사용 하 여 `m_lpszCursorID` 경우에만 [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (대화 상자에서 기본 [CWindowImpl](../../atl/reference/cwindowimpl-class.md)) 또는 [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) 매크로 지정 합니다. 이 경우 `m_lpszCursorID` 로 초기화 **IDC_ARROW**합니다. 자세한 내용은 참조는 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) 개요입니다.  
   
-##  <a name="m_lpszorigname"></a>CWndClassInfo::m_lpszOrigName  
+##  <a name="m_lpszorigname"></a>  CWndClassInfo::m_lpszOrigName  
  기존 창 클래스의 이름을 포함합니다.  
   
 ```
@@ -129,9 +124,9 @@ LPCTSTR m_lpszOrigName;
 ```  
   
 ### <a name="remarks"></a>설명  
- `CWndClassInfo`사용 하 여 `m_lpszOrigName` 만 포함 한 경우는 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) 클래스 정의에 매크로입니다. 이 경우 `CWndClassInfo` 창 클래스 이름이 지정 된 클래스를 기반으로 레지스터 `m_lpszOrigName`합니다. 자세한 내용은 참조는 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) 개요입니다.  
+ `CWndClassInfo` 사용 하 여 `m_lpszOrigName` 만 포함 한 경우는 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) 클래스 정의에 매크로입니다. 이 경우 `CWndClassInfo` 창 클래스 이름이 지정 된 클래스를 기반으로 레지스터 `m_lpszOrigName`합니다. 자세한 내용은 참조는 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) 개요입니다.  
   
-##  <a name="m_szautoname"></a>CWndClassInfo::m_szAutoName  
+##  <a name="m_szautoname"></a>  CWndClassInfo::m_szAutoName  
  창 클래스의 이름을 보유 합니다.  
   
 ```
@@ -139,9 +134,9 @@ TCHAR m_szAutoName[13];
 ```  
   
 ### <a name="remarks"></a>설명  
- `CWndClassInfo`사용 하 여 `m_szAutoName` 경우에만 **NULL** 에 대 한 전달 되는 `WndClassName` 매개 변수를 [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class), [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) 또는 [ DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)합니다. ATL 창 클래스를 등록 하는 경우 이름을 생성 합니다.  
+ `CWndClassInfo` 사용 하 여 `m_szAutoName` 경우에만 **NULL** 에 대 한 전달 되는 `WndClassName` 매개 변수를 [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class), [DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex) 또는 [ DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)합니다. ATL 창 클래스를 등록 하는 경우 이름을 생성 합니다.  
   
-##  <a name="m_wc"></a>CWndClassInfo::m_wc  
+##  <a name="m_wc"></a>  CWndClassInfo::m_wc  
  창 클래스 정보를 유지 관리는 [WNDCLASSEX](http://msdn.microsoft.com/library/windows/desktop/ms633577) 구조입니다.  
   
 ```
@@ -153,7 +148,7 @@ WNDCLASSEX m_wc;
   
  지정한 경우에 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) 매크로 `m_wc` 슈퍼 클래스에 대 한 정보가 포함 되어-기존 클래스에 기반 하지만 다른 창 프로시저를 사용 하는 창 클래스입니다. [m_lpszOrigName](#m_lpszorigname) 및 [pWndProc](#pwndproc) 기존 창 클래스 이름 및 창 프로시저를 각각 저장 합니다.  
   
-##  <a name="pwndproc"></a>CWndClassInfo::pWndProc  
+##  <a name="pwndproc"></a>  CWndClassInfo::pWndProc  
  기존 창 클래스의 창 프로시저를 가리킵니다.  
   
 ```
@@ -161,9 +156,9 @@ WNDPROC pWndProc;
 ```  
   
 ### <a name="remarks"></a>설명  
- `CWndClassInfo`사용 하 여 `pWndProc` 만 포함 한 경우는 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) 클래스 정의에 매크로입니다. 이 경우 `CWndClassInfo` 기존 클래스에 기반 하지만 다양 한 창 프로시저를 사용 하는 창 클래스 등록 합니다. 에 저장 된 기존 창 클래스의 창 프로시저 `pWndProc`합니다. 자세한 내용은 참조는 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) 개요입니다.  
+ `CWndClassInfo` 사용 하 여 `pWndProc` 만 포함 한 경우는 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) 클래스 정의에 매크로입니다. 이 경우 `CWndClassInfo` 기존 클래스에 기반 하지만 다양 한 창 프로시저를 사용 하는 창 클래스 등록 합니다. 에 저장 된 기존 창 클래스의 창 프로시저 `pWndProc`합니다. 자세한 내용은 참조는 [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md) 개요입니다.  
   
-##  <a name="register"></a>CWndClassInfo::Register  
+##  <a name="register"></a>  CWndClassInfo::Register  
  에 의해 호출 [CWindowImpl::Create](../../atl/reference/cwindowimpl-class.md#create) 를 아직 등록 되지 않은 경우 창 클래스를 등록 합니다.  
   
 ```

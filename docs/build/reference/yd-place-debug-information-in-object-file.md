@@ -1,13 +1,10 @@
 ---
-title: "-Yd (개체 파일에 디버그 정보) | Microsoft Docs"
-ms.custom: 
+title: -Yd (개체 파일에 디버그 정보) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /yd
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - debugging [C++], debug information files
 - Yd compiler option [C++]
 ms.assetid: c5a699fe-65ce-461e-964c-7f5eb2a8320a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 419d97357fd3424d5de980f76c6758eaa47f3c7d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 39b03b0faf975caba8c5a287c88afcdf53f7a71f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd(개체 파일에 디버그 정보 삽입)
 함께 사용 하면 미리 컴파일된 헤더 (.pch) 파일에서 만든 전체 디버깅 정보 모든 개체 파일에 삽입 된 [/Yc](../../build/reference/yc-create-precompiled-header-file.md) 및 [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) 옵션입니다. 더 이상 사용되지 않습니다.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
  미리 컴파일된 헤더에 대 한 자세한 내용은 다음을 참조 하세요.  
   
--   [/Y (미리 컴파일된 헤더)](../../build/reference/y-precompiled-headers.md)  
+-   [/Y(미리 컴파일된 헤더)](../../build/reference/y-precompiled-headers.md)  
   
 -   [미리 컴파일된 헤더 파일 만들기](../../build/reference/creating-precompiled-header-files.md)  
   

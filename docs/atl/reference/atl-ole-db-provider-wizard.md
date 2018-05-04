@@ -1,12 +1,9 @@
 ---
-title: "ATL OLE DB 공급자 마법사 | Microsoft Docs"
-ms.custom: 
+title: ATL OLE DB 공급자 마법사 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.provider.overview
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ATL OLE DB Provider Wizard
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 660f70be8ec4ac1efcec056c694d0e2fc3256071
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 827b46de299341f23d0b799a5ed44b8923bbc182
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-ole-db-provider-wizard"></a>ATL OLE DB 공급자 마법사
 이 마법사에서 OLE DB 공급자를 구성 하는 클래스를 만듭니다.  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
  **짧은 이름**  
  만들어질 공급자의 약식 이름을 입력 합니다. 다른 입력란 마법사에서 자동으로 채워집니다. 입력에 기반 합니다. 원하는 경우 다른 이름 상자를 편집할 수 있습니다.  
   
- **Coclass**  
+ **coclass**  
  Coclass의 이름입니다. 이 이름과 일치 하도록 ProgID 이름이 변경 됩니다.  
   
  **특성 사용**  

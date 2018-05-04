@@ -1,12 +1,9 @@
 ---
-title: "CComObjectStack 클래스 | Microsoft Docs"
-ms.custom: 
+title: CComObjectStack 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComObjectStack
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComObjectStack class
 ms.assetid: 3da72c40-c834-45f6-bb76-6ac204028d80
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b7fa9d14a27277d4c26fc6e7589400e19ef1395
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ac37ac5abc193082aaccb8d5de1a4f75f8a3f7c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomobjectstack-class"></a>CComObjectStack 클래스
 이 클래스는 임시 COM 개체를 만들고의 기본 구현을 제공 **IUnknown**합니다.  
@@ -72,7 +67,7 @@ class CComObjectStack
 |[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|포함는 **HRESULT** 생성 중에 반환 되는 `CComObjectStack` 개체입니다.|  
   
 ## <a name="remarks"></a>설명  
- `CComObjectStack`임시 COM 개체를 만들고 개체의 기본 구현을 제공 하는 데 사용 되 **IUnknown**합니다. 일반적으로 개체 (즉, 스택에 밀어 넣은) 하나의 함수 내에 지역 변수도 사용 됩니다. 함수가 완료 되 면 해당 개체가 삭제 됩니다, 이후 참조 횟수 해도 효율성을 높이기 위해 수행 되지 않습니다.  
+ `CComObjectStack` 임시 COM 개체를 만들고 개체의 기본 구현을 제공 하는 데 사용 되 **IUnknown**합니다. 일반적으로 개체 (즉, 스택에 밀어 넣은) 하나의 함수 내에 지역 변수도 사용 됩니다. 함수가 완료 되 면 해당 개체가 삭제 됩니다, 이후 참조 횟수 해도 효율성을 높이기 위해 수행 되지 않습니다.  
   
  다음 예제에서는 함수 내에서 사용 하는 COM 개체를 만드는 방법을 보여 줍니다.  
   
@@ -88,7 +83,7 @@ class CComObjectStack
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="addref"></a>CComObjectStack::AddRef  
+##  <a name="addref"></a>  CComObjectStack::AddRef  
  0을 반환합니다.  
   
 ```
@@ -101,7 +96,7 @@ STDMETHOD_(ULONG, AddRef)();
 ### <a name="remarks"></a>설명  
  디버그 모드에서 호출 되는 `_ASSERTE`합니다.  
   
-##  <a name="ccomobjectstack"></a>CComObjectStack::CComObjectStack  
+##  <a name="ccomobjectstack"></a>  CComObjectStack::CComObjectStack  
  생성자입니다.  
   
 ```
@@ -111,7 +106,7 @@ CComObjectStack(void* = NULL);
 ### <a name="remarks"></a>설명  
  호출 `FinalConstruct` 다음 설정 [m_hResFinalConstruct](#m_hresfinalconstruct) 에 `HRESULT` 반환한 `FinalConstruct`합니다. 기본 클래스를 파생 하지 경우 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), 직접 제공 해야 `FinalConstruct` 메서드. 이 소멸자는 `FinalRelease`을 호출합니다.  
   
-##  <a name="dtor"></a>CComObjectStack:: ~ CComObjectStack  
+##  <a name="dtor"></a>  CComObjectStack:: ~ CComObjectStack  
  소멸자입니다.  
   
 ```
@@ -121,14 +116,14 @@ CComObjectStack();
 ### <a name="remarks"></a>설명  
  할당 된 모든 리소스를 해제 하는 호출 [FinalRelease](ccomobjectrootex-class.md#finalrelease)합니다.  
   
-##  <a name="m_hresfinalconstruct"></a>CComObjectStack::m_hResFinalConstruct  
+##  <a name="m_hresfinalconstruct"></a>  CComObjectStack::m_hResFinalConstruct  
  포함 된 `HRESULT` 호출에서 반환 된 `FinalConstruct` 생성 중는 `CComObjectStack` 개체입니다.  
   
 ```
 HRESULT    m_hResFinalConstruct;
 ```  
   
-##  <a name="queryinterface"></a>CComObjectStack::QueryInterface  
+##  <a name="queryinterface"></a>  CComObjectStack::QueryInterface  
  반환 **E_NOINTERFACE**합니다.  
   
 ```
@@ -142,7 +137,7 @@ HRESULT    QueryInterface(REFIID, void**)
 ### <a name="remarks"></a>설명  
  디버그 모드에서 호출 되는 `_ASSERTE`합니다.  
   
-##  <a name="release"></a>CComObjectStack::Release  
+##  <a name="release"></a>  CComObjectStack::Release  
  0을 반환합니다.  
   
 ```

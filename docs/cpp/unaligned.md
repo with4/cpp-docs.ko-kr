@@ -1,6 +1,6 @@
 ---
 title: __unaligned | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/09/2018
 ms.technology:
 - cpp-language
@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0cd83aad-1840-47e3-ad33-59bfcbe6375b
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9f30e2b268be6f9398cf0af40d66b786c7cdca9
-ms.sourcegitcommit: eb246547c7c9adc7d7ac4083ef09bf6e54dec914
+ms.openlocfilehash: d73b082b9f41d03eb0b1a8c9fe772351ff4da91f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unaligned"></a>__unaligned
 
@@ -45,6 +44,6 @@ ms.lasthandoff: 03/12/2018
 
 - [구조체 맞춤 예제](../build/examples-of-structure-alignment.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [키워드](../cpp/keywords-cpp.md)

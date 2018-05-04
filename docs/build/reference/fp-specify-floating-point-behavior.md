@@ -1,13 +1,10 @@
 ---
-title: "-fp (부동 소수점 동작 지정) | Microsoft Docs"
-ms.custom: 
+title: -fp (부동 소수점 동작 지정) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.floatingPointModel
 - VC.Project.VCCLWCECompilerTool.FloatingPointExceptions
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f4a86c7bbbd38887944080a5a5c8124310fdd4a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af796b7143b3600130e9405782d618a5960d22fc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp(부동 소수점 동작 지정)
 소스 코드 파일에서 부동 소수점 동작을 지정합니다.  
@@ -78,7 +73,7 @@ ms.lasthandoff: 12/21/2017
  신뢰할 수 있는 부동 소수점 예외 모델입니다. 예외가 트리거되는 즉시 발생합니다. 이 옵션은 기본적으로 해제되어 있습니다. 옵션에 빼기 기호를 추가하면 옵션이 명시적으로 해제됩니다.  
   
  **엄격한**  
- 가장 엄격한 부동 소수점 모델입니다. **/fp: strict** 하면 [fp_contract](../../preprocessor/fp-contract.md) 는 OFF 및 [fenv_access](../../preprocessor/fenv-access.md) 가 ON입니다. **/fp: 제외한** 인 것으로 간주 하 고 명시적으로 지정 하 여 해제할 수 있습니다 **/fp: 제외 하 고-**합니다. 와 함께 사용할 경우 **/fp: 제외 하 고-**, **/fp: strict** 부동 소수점 의미 체계를 엄격 하 게 확인 예외 이벤트를 고려 하지 않고 있습니다.  
+ 가장 엄격한 부동 소수점 모델입니다. **/fp: strict** 하면 [fp_contract](../../preprocessor/fp-contract.md) 는 OFF 및 [fenv_access](../../preprocessor/fenv-access.md) 가 ON입니다. **/fp: 제외한** 인 것으로 간주 하 고 명시적으로 지정 하 여 해제할 수 있습니다 **/fp: 제외 하 고-** 합니다. 와 함께 사용할 경우 **/fp: 제외 하 고-**, **/fp: strict** 부동 소수점 의미 체계를 엄격 하 게 확인 예외 이벤트를 고려 하지 않고 있습니다.  
   
 ## <a name="remarks"></a>설명  
  여러 **/fp** 동일한 컴파일에서 옵션을 지정할 수 있습니다.  

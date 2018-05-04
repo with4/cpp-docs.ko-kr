@@ -2,31 +2,26 @@
 title: __vectorcall | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 1c95ed59-86c6-4857-b4ed-10519193f851
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54c1473e2341c783ebf73883680d51f161d99163
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 29c202a888d4c741a9a9fb54a84109100038d32a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vectorcall"></a>__vectorcall
 **Microsoft 전용**  
   
- `__vectorcall` 호출 규칙은 가능하면 함수의 인수가 레지스터에 전달되도록 지정합니다. `__vectorcall`보다 인수에 대 한 자세한 레지스터를 사용 하 여 [__fastcall](../cpp/fastcall.md) 또는 기본 [x64 호출 규칙](../build/overview-of-x64-calling-conventions.md) 사용 합니다. `__vectorcall` 호출 규칙은 SSE2(스트리밍 SIMD 확장 2) 이상을 포함하는 x86 및 x64 프로세서의 네이티브 코드에서만 지원됩니다. `__vectorcall`을 사용하여 여러 부동 소수점 또는 SIMD 벡터 인수를 전달하는 함수의 속도를 높이고 레지스터에 로드된 인수를 활용하는 작업을 수행합니다. 다음 목록은 `__vectorcall`을 x86 및 x64에서 구현할 때 공통적으로 사용되는 기능을 보여 줍니다. 차이점은 이 문서의 뒷부분에 설명되어 있습니다.  
+ `__vectorcall` 호출 규칙은 가능하면 함수의 인수가 레지스터에 전달되도록 지정합니다. `__vectorcall` 보다 인수에 대 한 자세한 레지스터를 사용 하 여 [__fastcall](../cpp/fastcall.md) 또는 기본 [x64 호출 규칙](../build/overview-of-x64-calling-conventions.md) 사용 합니다. `__vectorcall` 호출 규칙은 SSE2(스트리밍 SIMD 확장 2) 이상을 포함하는 x86 및 x64 프로세서의 네이티브 코드에서만 지원됩니다. `__vectorcall`을 사용하여 여러 부동 소수점 또는 SIMD 벡터 인수를 전달하는 함수의 속도를 높이고 레지스터에 로드된 인수를 활용하는 작업을 수행합니다. 다음 목록은 `__vectorcall`을 x86 및 x64에서 구현할 때 공통적으로 사용되는 기능을 보여 줍니다. 차이점은 이 문서의 뒷부분에 설명되어 있습니다.  
   
 |요소|구현|  
 |-------------|--------------------|  

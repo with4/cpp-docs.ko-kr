@@ -1,13 +1,10 @@
 ---
-title: "-Zl (기본 라이브러리 이름 생략) | Microsoft Docs"
-ms.custom: 
+title: -Zl (기본 라이브러리 이름 생략) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /zi
 - VC.Project.VCCLCompilerTool.OmitDefaultLibName
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - /Zl compiler option [C++]
 - default libraries, omitting names
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b77b9c1033be1f6144d92b6051118ca85aaaf20
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c14a3217334c2c43bac7fbcce8b0bfd60a609d3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zl-omit-default-library-name"></a>/Zl(기본 라이브러리 이름 생략)
 .Obj 파일에서 기본 C 런타임 라이브러리 이름을 생략합니다. 기본적으로 컴파일러는 올바른 라이브러리로 링커를 보내기 위해 라이브러리 이름을 .obj 파일에 넣습니다.  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
  자세한 내용은 [CRT 라이브러리 기능](../../c-runtime-library/crt-library-features.md)을 참조하세요.  
   
- 로 컴파일할 때 **/Zl**, `_VC_NODEFAULTLIB` 정의 됩니다.  예:  
+ 로 컴파일할 때 **/Zl**, `_VC_NODEFAULTLIB` 정의 됩니다.  예를 들어:  
   
 ```  
 // vc_nodefaultlib.cpp  

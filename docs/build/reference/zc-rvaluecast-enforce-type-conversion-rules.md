@@ -1,10 +1,10 @@
 ---
-title: "/Zc: rvaluecast (형식 변환 규칙 적용) | Microsoft Docs"
-ms.custom: 
+title: '/Zc: rvaluecast (형식 변환 규칙 적용) | Microsoft Docs'
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - rvaluecast
 - /Zc:rvalueCast
@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 7825277d-e565-4c48-b0fb-76ac0b0c6e38
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9e2223176082a2252dd410af4012ace31c14267
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: d730563d01a3b59d4f2ac6bbadc980ca51112203
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcrvaluecast-enforce-type-conversion-rules"></a>/Zc:rvalueCast(형식 변환 규칙 적용)
 
@@ -41,7 +40,7 @@ ms.lasthandoff: 03/15/2018
 
 경우 **/zc: rvaluecast** 이 지정 된 경우 컴파일러는 C + + 11 표준의 섹션 5.4에 따라 캐스트 비참조 형식 발생 하 고 비 함수 형식에 대 한 rvalue 참조에서 생성 하는 식을 캐스팅 하는 식만 처리 rvalue 형식입니다. 기본적으로 또는 **/Zc:rvalueCast-** 이 지정 된 경우 컴파일러는 비호환 적 모든 캐스트 식을 rvalue로 rvalue 참조에서 발생 하는 처리 합니다. 준수 및 캐스트에서 오류를 제거 하기 위해 사용 하는 것이 좋습니다 **/zc: rvaluecast**합니다.
 
-기본적으로 **/zc: rvaluecast** 해제 되어 (**/Zc:rvalueCast-**). [관대 한 /-](permissive-standards-conformance.md) 컴파일러 옵션에는 암시적으로이 옵션을 설정 하지만 사용 하 여 재정의할 수 있습니다 **/Zc:rvalueCast-**합니다.
+기본적으로 **/zc: rvaluecast** 해제 되어 (**/Zc:rvalueCast-**). [관대 한 /-](permissive-standards-conformance.md) 컴파일러 옵션에는 암시적으로이 옵션을 설정 하지만 사용 하 여 재정의할 수 있습니다 **/Zc:rvalueCast-** 합니다.
 
 사용 하 여 **/zc: rvaluecast** rvalue 참조 형식을 사용 하는 함수에 캐스트 식을 인수로 전달 하는 경우. 기본 동작은 컴파일러 오류 [c 2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) 때 컴파일러 올바르게 형식을 잘못 결정 캐스트 식입니다. 올바른에서 보여 주는이 예제는 컴파일러 오류 때 코드 **/zc: rvaluecast** 지정 되지 않았습니다.
 
@@ -102,6 +101,6 @@ Visual C++의 규칙과 관련된 문제에 대한 자세한 내용은 [Nonstand
 
 1. 수정 된 **추가 옵션** 포함할 속성을 **/zc: rvaluecast** 선택한 후 **확인**합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [/Zc(규칙)](../../build/reference/zc-conformance.md)<br/>

@@ -1,27 +1,22 @@
 ---
-title: "종속적인 형식에 대 한 이름 확인 | Microsoft Docs"
-ms.custom: 
+title: 종속적인 형식에 대 한 이름 확인 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d8978e38745f088884bbf28ffb0ab98cfb87895
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c31a609345408727d53abd314e30bd523526833c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="name-resolution-for-dependent-types"></a>종속적인 형식에 대한 이름 확인
 사용 하 여 **typename** 정규화 된 이름에 지정된 된 정규화 이름이 형식을 식별 함을 컴파일러에 지시 하는 템플릿 정의 대 한 합니다. 자세한 내용은 참조 [typename](../cpp/typename.md)합니다.  
@@ -102,7 +97,7 @@ Int MyNamespace::myFunction
 ```  
   
 ### <a name="template-disambiguation"></a>템플릿 명확성  
- [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)]는 "템플릿" 키워드를 사용하여 명확성에 대한 C++ 98/03/11 표준 규칙을 적용합니다. 다음 예제에서는 Visual c + + 2010는 모두을 표준에 맞는 줄 수락 합니다.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)]표준에 맞는 줄만 허용합니다.  
+ [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)]는 "템플릿" 키워드를 사용하여 명확성에 대한 C++ 98/03/11 표준 규칙을 적용합니다. 다음 예제에서는 Visual c + + 2010는 모두을 표준에 맞는 줄 수락 합니다.  [!INCLUDE[cpp_dev11_long](../build/includes/cpp_dev11_long_md.md)] 표준에 맞는 줄만 허용합니다.  
   
 ```cpp  
 #include <iostream>  

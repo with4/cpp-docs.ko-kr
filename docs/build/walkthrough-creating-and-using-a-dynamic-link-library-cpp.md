@@ -1,30 +1,25 @@
 ---
-title: "연습: 사용자 고유의 동적 연결 라이브러리 (c + +)를 사용 하 여 만들고 | Microsoft Docs"
-ms.custom: 
+title: '연습: 사용자 고유의 동적 연결 라이브러리 (c + +)를 사용 하 여 만들고 | Microsoft Docs'
+ms.custom: conceptual
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdcc02cf7c86b85684df0e8d8b7a1f0049ff7e25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19c9c013d591f4c6de14ecd4a2c582d8f0f3e4d3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>연습: 만들기 및 사용자 고유의 동적 연결 라이브러리 (c + +)를 사용 합니다.
 
@@ -50,7 +45,7 @@ DLL을 정적으로 연결 된 라이브러리와 같은 _내보냅니다_ 변�
 
 이 연습에서는 Visual Studio 2017 년을 사용 하지만 코드와 대부분 지침의 이전 버전에 적용 됩니다. 새 프로젝트를 구축 하는 단계는 Visual Studio 2017 15.3 버전부터 변경 합니다. 이 연습에서는 최신 및 이전 버전에 대 한 프로젝트를 만드는 방법에 설명 합니다. Visual Studio 버전에 일치 하는 단계를 찾습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 - Microsoft Windows 7 이상을 실행 하는 컴퓨터입니다. 개발 환경을 최적화 하려면 Windows 10이 좋습니다.
 
@@ -76,7 +71,7 @@ DLL 프로젝트를 만드는 작업의이 집합에 코드를 추가 빌드합�
 
 1. 선택 된 **확인** 단추를 닫습니다는 **새 프로젝트** 대화 상자 및 시작은 **Windows 데스크톱 프로젝트** 마법사.
 
-1. 에 **Windows 데스크톱 프로젝트** 마법사의 **응용 프로그램 종류**선택, **동적 연결 라이브러리 (.dll)**합니다.
+1. 에 **Windows 데스크톱 프로젝트** 마법사의 **응용 프로그램 종류**선택, **동적 연결 라이브러리 (.dll)** 합니다.
 
    ![Windows 데스크톱 프로젝트 마법사에서 DLL을 만들고](media/mathlibrary-desktop-project-wizard-dll.png "Windows 데스크톱 프로젝트 마법사에서 DLL 만들기")
 
@@ -85,11 +80,11 @@ DLL 프로젝트를 만드는 작업의이 집합에 코드를 추가 빌드합�
 > [!NOTE]
 > Visual Studio 2017 15.3 버전에에서는 문제를 해결 하려면 추가 단계가 필요 합니다. 이러한 변경 작업에 필요한 지 여부를 다음이 지침을 따릅니다.
 >
->1. **솔루션 탐색기**아직 없는 선택 옵션을 선택 하는 경우는 **MathLibrary** 아래의 프로젝트 **솔루션 'MathLibrary'**합니다.
+>1. **솔루션 탐색기**아직 없는 선택 옵션을 선택 하는 경우는 **MathLibrary** 아래의 프로젝트 **솔루션 'MathLibrary'** 합니다.
 >
 >1. 메뉴 모음에서 **프로젝트**, **속성**을 선택합니다.
 >
->1. 왼쪽된 창에는 **속성 페이지** 대화 상자에서 **전처리기** 아래 **구성 속성**, **C/c + +**합니다. 콘텐츠를 확인는 **전처리기 정의** 속성입니다.<br/><br/>![전처리기 정의 속성을 확인](media/mathlibrary-153bug-preprocessor-definitions-check.png "전처리기 정의 속성 확인")<br/><br/>표시 되 면 **MATHLIBRARY &#95; 내보내기** 에 **전처리기 정의** 목록 아무 것도 변경 해야 합니다. 표시 되 면 **MathLibrary &#95; 내보내기** 대신 다음이 단계를 수행 하려면 다음 계속 합니다.
+>1. 왼쪽된 창에는 **속성 페이지** 대화 상자에서 **전처리기** 아래 **구성 속성**, **C/c + +** 합니다. 콘텐츠를 확인는 **전처리기 정의** 속성입니다.<br/><br/>![전처리기 정의 속성을 확인](media/mathlibrary-153bug-preprocessor-definitions-check.png "전처리기 정의 속성 확인")<br/><br/>표시 되 면 **MATHLIBRARY&#95;내보내기** 에 **전처리기 정의** 목록 아무 것도 변경 해야 합니다. 표시 되 면 **MathLibrary&#95;내보내기** 대신 다음이 단계를 수행 하려면 다음 계속 합니다.
 >
 >1. 맨 위에 있는 **속성 페이지** 대화 상자에서 변경 된 **구성** 드롭다운을 **모든 구성**합니다.
 >
@@ -103,7 +98,7 @@ DLL 프로젝트를 만드는 작업의이 집합에 코드를 추가 빌드합�
 
 1. 메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.
 
-1. 왼쪽된 창에서는 **새 프로젝트** 대화 상자에서 **설치 됨**, **템플릿**, 선택한 **Visual c + +**를 선택한 다음 가운데 창에서 **Win32 콘솔 응용 프로그램**합니다. 입력 `MathLibrary` 에 **이름** 편집 상자는 프로젝트에 대 한 이름을 지정할 수 있습니다.
+1. 왼쪽된 창에서는 **새 프로젝트** 대화 상자에서 **설치 됨**, **템플릿**, 선택한 **Visual c + +** 를 선택한 다음 가운데 창에서 **Win32 콘솔 응용 프로그램**합니다. 입력 `MathLibrary` 에 **이름** 편집 상자는 프로젝트에 대 한 이름을 지정할 수 있습니다.
 
    ![MathLibrary 프로젝트 이름을](media/mathlibrary-project-name.png "MathLibrary 프로젝트 이름을")
 
@@ -127,7 +122,7 @@ DLL 프로젝트를 만드는 작업의이 집합에 코드를 추가 빌드합�
 
 1. 메뉴 모음에서 사용자 함수에 대 한 헤더 파일을 만들려면 선택 **프로젝트**, **새 항목 추가**합니다.
 
-1. 에 **새 항목 추가** 대화 상자의 왼쪽된 창에서 선택 **Visual c + +**합니다. 가운데 창에서 **헤더 파일 (.h)**을 선택합니다. 지정 `MathLibrary.h` 헤더 파일의 이름으로 합니다.
+1. 에 **새 항목 추가** 대화 상자의 왼쪽된 창에서 선택 **Visual c + +** 합니다. 가운데 창에서 **헤더 파일 (.h)** 을 선택합니다. 지정 `MathLibrary.h` 헤더 파일의 이름으로 합니다.
 
    ![새 항목 추가 대화 상자에서 추가 헤더](media/mathlibrary-add-new-item-header-file.png "새 항목 추가 대화 상자에서 추가 헤더 파일")
 
@@ -176,9 +171,9 @@ DLL 프로젝트를 만드는 작업의이 집합에 코드를 추가 빌드합�
 
 이 헤더 파일 일반화 된 피보나치 주어진된 두 개의 초기 값을 생성 하기 위해 일부 함수를 선언 합니다. 에 대 한 호출 `fibonacci_init(1, 1)` 친숙 한 피보나치 숫자 시퀀스를 생성 합니다.
 
-파일 맨 위에 있는 전처리기 문을 확인 합니다. 기본적으로 새 프로젝트 템플릿은 DLL에 대 한 추가  ***PROJECTNAME*&#95; 내보내기** DLL 프로젝트에 대해 정의 된 전처리기 매크로에 있습니다. 이 예제에서는 Visual Studio는 다음과 같이 정의 됩니다. **MATHLIBRARY &#95; 내보내기** MathLibrary DLL 프로젝트를 빌드할 경우. (Visual Studio 2017 15.3 버전의에서 마법사를 대문자로이 기호 정의 강제로 되지 않습니다. "MathLibrary" 프로젝트 이름을 다음 정의 된 기호는 MathLibrary &#95; 대신 MATHLIBRARY &#95; 내보내기 내보냅니다. That's 때문에이 기호를 추가 하려면 위의 추가 단계가 있습니다.)
+파일 맨 위에 있는 전처리기 문을 확인 합니다. 기본적으로 새 프로젝트 템플릿은 DLL에 대 한 추가 ***PROJECTNAME *&#95;내보내기** DLL 프로젝트에 대해 정의 된 전처리기 매크로에 있습니다. 이 예제에서는 Visual Studio는 다음과 같이 정의 됩니다. **MATHLIBRARY&#95;내보내기** MathLibrary DLL 프로젝트를 빌드할 경우. (Visual Studio 2017 15.3 버전의에서 마법사를 대문자로이 기호 정의 강제로 되지 않습니다. "MathLibrary" 프로젝트 이름을 지정할 경우 정의 된 기호는 MathLibrary&#95;MATHLIBRARY 대신 내보내기&#95;내보냅니다. That's 때문에이 기호를 추가 하려면 위의 추가 단계가 있습니다.)
 
-경우는 **MATHLIBRARY &#95; 내보내기** 매크로가 정의 **MATHLIBRARY &#95; API** 매크로 세트는 `__declspec(dllexport)` 함수 선언에서 한정자입니다. 이 한정자는 컴파일러와 다른 응용 프로그램에서 사용할 수 있도록 DLL에서 함수 또는 변수를 내보내려면 링커 지시 합니다. 때 **MATHLIBRARY &#95; 내보내기** 이 정의 되지 않습니다 예를 들어 헤더 파일은 클라이언트 응용 프로그램에 의해 포함 되 면 **MATHLIBRARY &#95; API** 적용 되는 `__declspec(dllimport)` 한정자를 선언 합니다. 이 한정자는 함수 또는 응용 프로그램에서 변수 가져오기를 최적화합니다. 자세한 내용은 참조 [dllexport, dllimport](../cpp/dllexport-dllimport.md)합니다.
+경우는 **MATHLIBRARY&#95;내보내기** 매크로가 정의 **MATHLIBRARY&#95;API** 매크로 세트는 `__declspec(dllexport)` 함수 선언에서 한정자입니다. 이 한정자는 컴파일러와 다른 응용 프로그램에서 사용할 수 있도록 DLL에서 함수 또는 변수를 내보내려면 링커 지시 합니다. 때 **MATHLIBRARY&#95;내보내기** 이 정의 되지 않습니다 예를 들어 헤더 파일은 클라이언트 응용 프로그램에 의해 포함 되 면 **MATHLIBRARY&#95;API** 적용 되는 `__declspec(dllimport)` 한정자를는 선언 합니다. 이 한정자는 함수 또는 응용 프로그램에서 변수 가져오기를 최적화합니다. 자세한 내용은 참조 [dllexport, dllimport](../cpp/dllexport-dllimport.md)합니다.
 
 ### <a name="to-add-an-implementation-to-the-dll"></a>DLL에 대 한 구현을 추가 하려면
 
@@ -271,7 +266,7 @@ DLL을 사용할 수 있는지 여부를 사용자 소유 또는 타사 DLL 클�
 
 1. 메뉴 모음에서 방금 만든 DLL을 사용 하는 c + + 앱을 만들려면 선택 **파일**, **새로**, **프로젝트**합니다.
 
-1. 왼쪽된 창에는 **새 프로젝트** 대화 상자에서 **Windows 바탕 화면** 아래 **설치 됨**, **Visual c + +**합니다. 가운데 창에서 선택 **Windows 바탕 화면 마법사**합니다. 프로젝트에 대 한 이름을 지정 `MathClient`에 **이름** 상자 편집 합니다.
+1. 왼쪽된 창에는 **새 프로젝트** 대화 상자에서 **Windows 바탕 화면** 아래 **설치 됨**, **Visual c + +** 합니다. 가운데 창에서 선택 **Windows 바탕 화면 마법사**합니다. 프로젝트에 대 한 이름을 지정 `MathClient`에 **이름** 상자 편집 합니다.
 
    ![클라이언트 프로젝트의 이름을](media/mathclient-new-project-name-153.png "클라이언트 프로젝트 이름을")
 
@@ -301,7 +296,7 @@ DLL을 사용할 수 있는지 여부를 사용자 소유 또는 타사 DLL 클�
 
 1. 에 **구성** 드롭다운 상자 **모든 구성** 아직 선택 하지 않은 경우.
 
-1. 왼쪽된 창에서 선택 **일반** 아래 **구성 속성**, **C/c + +**합니다.
+1. 왼쪽된 창에서 선택 **일반** 아래 **구성 속성**, **C/c + +** 합니다.
 
 1. 속성 창에서 드롭다운 컨트롤을 옆에 선택 된 **추가 포함 디렉터리** 편집 상자를 선택한 후 **편집**합니다.
 

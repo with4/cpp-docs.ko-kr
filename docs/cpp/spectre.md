@@ -1,12 +1,9 @@
 ---
-title: "유령 | Microsoft Docs"
-ms.custom: 
+title: 유령 | Microsoft Docs
+ms.custom: ''
 ms.date: 1/23/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - spectre_cpp
@@ -19,14 +16,13 @@ helpviewer_keywords:
 - spectre __declspec keyword
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b515d25d4818cf8b6213a37f3fe78df4f3882a69
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 153ff690b975ecb442c260fcebce73acd32d03fb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spectre"></a>유령
 
@@ -47,7 +43,7 @@ ms.lasthandoff: 01/25/2018
 > [!CAUTION]
 > **/Qspectre** 추론 실행 장벽 지침 중요 한 보안 기능을 제공 하 고 성능에 거의 영향을 줄 합니다. 함수의 성능이 매우 중요하고 해당 함수의 안전성이 파악되는 드문 경우를 제외하고, 버퍼 보안 검사를 억제하지 않도록 권장합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 코드를 사용 하는 방법을 보여 줍니다 `__declspec(spectre(nomitigation))`합니다.
 
@@ -68,7 +64,7 @@ int main() {
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [__declspec](../cpp/declspec.md)  
 [키워드](../cpp/keywords-cpp.md)  

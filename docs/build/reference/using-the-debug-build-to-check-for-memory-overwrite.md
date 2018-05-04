@@ -1,29 +1,24 @@
 ---
-title: "메모리 덮어쓰기 확인 하려면 디버그 빌드를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: 메모리 덮어쓰기 확인 하려면 디버그 빌드를 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - memory, overwrites
 ms.assetid: 1345eb4d-24ba-4595-b1cc-2da66986311e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f18a13992e41cd88bc8edec44f16b02da38ad10c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c89242a63484eaccd0330eddac28c4e543ec61b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>디버그 빌드를 사용한 메모리 덮어쓰기 확인
 메모리 덮어쓰기 확인 하려면 디버그 빌드를 사용 하려면 디버그에 대 한 프로젝트를 먼저 빌드해야 할 합니다. 그런 다음 응용 프로그램의 처음 부분을 이동 `InitInstance` 다음 줄을 추가 합니다.  
@@ -40,7 +35,7 @@ afxMemDF |= checkAlwaysMemDF;
 Damage Occurred! Block=0x5533  
 ```  
   
- 이러한 메시지 중 하나를 참조 하는 경우 손상이 발생 한 위치를 확인 하는 코드를 단계별로 실행 되도록 해야 합니다. 메모리 덮어쓰기 발생 한 부분을 보다 정확 하 게 하려면에 대 한 명시적 호출을 만들 수 있습니다 `AfxCheckMemory` 직접 합니다. 예:  
+ 이러한 메시지 중 하나를 참조 하는 경우 손상이 발생 한 위치를 확인 하는 코드를 단계별로 실행 되도록 해야 합니다. 메모리 덮어쓰기 발생 한 부분을 보다 정확 하 게 하려면에 대 한 명시적 호출을 만들 수 있습니다 `AfxCheckMemory` 직접 합니다. 예를 들어:  
   
 ```  
 ASSERT(AfxCheckMemory());  
