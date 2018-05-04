@@ -2,12 +2,9 @@
 title: -Gw (전역 데이터 최적화) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /Gw
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - /Gw compiler option [C++]
 - -Gw compiler option [C++]
 ms.assetid: 6f90f4e9-5eb8-4c47-886e-631278a5a4a9
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e849ee51a231c6f0d3d696a3aaa9b1c1ac77c33c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 173b9499477ee02cbb1f052d3d85445a9ffb7732
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gw-optimize-global-data"></a>/Gw(전역 데이터 최적화)
 최적화를 위한 COMDAT 섹션의 전역 데이터 패키지  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>설명  
- **/Gw** 옵션은 컴파일러가 전역 데이터를 패키지 개별 COMDAT 섹션에 있습니다. 기본적으로 **/Gw** 해제 되어 있고 명시적으로 설정 해야 합니다. 활성화를 사용 하 여 **/Gw-**합니다. 때 둘 다 **/Gw** 및 [/GL](../../build/reference/gl-whole-program-optimization.md) 는 활성화 링커가 전체 프로그램 최적화 하 여 참조 되지 않은 전역 데이터를 제외 하거나 병합를 여러 개체 파일에서 COMDAT 섹션을 비교 동일한 읽기 전용 전역 데이터입니다. 이렇게 하면 결과로 생성되는 바이너리 실행 파일의 크기를 크게 줄일 수 있습니다.  
+ **/Gw** 옵션은 컴파일러가 전역 데이터를 패키지 개별 COMDAT 섹션에 있습니다. 기본적으로 **/Gw** 해제 되어 있고 명시적으로 설정 해야 합니다. 활성화를 사용 하 여 **/Gw-** 합니다. 때 둘 다 **/Gw** 및 [/GL](../../build/reference/gl-whole-program-optimization.md) 는 활성화 링커가 전체 프로그램 최적화 하 여 참조 되지 않은 전역 데이터를 제외 하거나 병합를 여러 개체 파일에서 COMDAT 섹션을 비교 동일한 읽기 전용 전역 데이터입니다. 이렇게 하면 결과로 생성되는 바이너리 실행 파일의 크기를 크게 줄일 수 있습니다.  
   
  컴파일하고 개별적으로 연결 하는 경우 사용할 수 있습니다는 [/opt: ref](../../build/reference/opt-optimizations.md) 링커 옵션으로 컴파일된 개체 파일에 참조 되지 않은 전역 데이터 실행 파일에서 제외 하 고 **/Gw** 옵션.  
   

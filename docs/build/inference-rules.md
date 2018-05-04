@@ -1,13 +1,10 @@
 ---
-title: "유추 규칙 | Microsoft Docs"
-ms.custom: 
+title: 유추 규칙 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - rules, inference
 - NMAKE program, inference rules
 ms.assetid: caff320f-fb07-4eea-80c3-a6a2133a8492
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 932aad860cd2b78208857ca7b028e35cd96d481e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2baa4bdd749e7553d052600cc9efe524ec09910d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="inference-rules"></a>유추 규칙
 유추 규칙 대상을 업데이트 하 고 대상에 대 한 종속 항목을 유추 하는 명령을 제공 합니다. 확장이 유추 규칙에 일치 하는 단일 대상 있고 종속 기본 이름은 동일 합니다. 유추 규칙은 사용자 지정 또는 미리 정의 된; 미리 정의 된 규칙을 재정의할 수 있습니다.  

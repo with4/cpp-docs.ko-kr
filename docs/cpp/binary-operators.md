@@ -1,12 +1,9 @@
 ---
-title: "이항 연산자 | Microsoft Docs"
-ms.custom: 
+title: 이항 연산자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - operators [C++], binary
 - binary operators [C++]
 ms.assetid: c0e7fbff-bc87-4708-8333-504ac09ee83e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c52d48359210a21b23caa72afee7e2a3bcd8cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b930c548ea411beb03255d694f2423903053288
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binary-operators"></a>이항 연산자
 다음 표에서는 오버로드될 수 있는 연산자 목록을 보여 줍니다.  
   
 ### <a name="redefinable-binary-operators"></a>다시 정의 가능 이항 연산자  
   
-|연산자|name|  
+|연산자|이름|  
 |--------------|----------|  
 |**,**|쉼표|  
 |`!=`|같지 않음|  

@@ -1,13 +1,10 @@
 ---
-title: "가져오기 라이브러리 및 내보내기 파일 빌드 | Microsoft Docs"
-ms.custom: 
+title: 가져오기 라이브러리 및 내보내기 파일 빌드 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.ModuleDefinitionFile
 - VC.Project.VCLibrarianTool.ExportNamedFunctions
@@ -34,17 +31,15 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 979e052147f058e6c46a1c10b1dd89cfd36ee362
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93f817aadf2de826c628a14255ae9257be2f29ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-an-import-library-and-export-file"></a>가져오기 라이브러리 및 내보내기 파일 빌드
 가져오기 라이브러리를 빌드하고 파일을 내보낼 하려면 다음 구문을 사용 합니다.  
@@ -59,7 +54,7 @@ LIB /DEF[:deffile] [options] [objfiles] [libraries]
   
 2.  /EXPORT 사양:*이름* LIB 명령줄에서  
   
-3.  에 있는 정의 **내보내기** 의 문에서`deffile`  
+3.  에 있는 정의 **내보내기** 의 문에서 `deffile`  
   
  이들은 내보내기를 내보내는 프로그램을 링크할 때 지정 하는 데 사용 하는 동일한 방법입니다. 프로그램 둘 이상의 메서드를 사용할 수 있습니다. LIB 명령의 부분을 지정할 수 있습니다 (여러 같은 *objfiles* 또는 /EXPORT 사양) LIB 명령에 명령 파일에서와 마찬가지로에서 할 수 있는 링크 명령입니다.  
   
@@ -73,7 +68,7 @@ LIB /DEF[:deffile] [options] [objfiles] [libraries]
   
  *entryname* 호출 프로그램에서 사용 하는 것 만큼은 함수 또는 데이터 항목의 이름입니다. 지정할 수 있습니다는 *internalname* 정의 프로그램에서는 기본적으로 알려진 함수로 *internalname* 동일 *entryname*합니다. `ordinal` 지정 하지 않을 경우 범위는 1-65535; 내보내기 테이블에 있는 인덱스를 지정 `ordinal`, LIB 하나를 할당 합니다. **NONAME** 키워드는 서 수로만 하지 않고 함수를 내보내는 *entryname*합니다. **데이터** 키워드 데이터 전용 개체를 내보내는 데 사용 됩니다.  
   
- / 다음과 같습니다.`symbol`  
+ / 다음과 같습니다. `symbol`  
  기호 테이블에 지정 된 기호를 추가합니다. 이 옵션은 사용 되지 않는 포함 된 라이브러리 개체의을 강제로 적용 하는 데 유용 합니다.  
   
  Note.dll을 만들기 전에 예비 단계에서 가져오기 라이브러리를 만드는 경우 전달 해야 합니다 개체 파일의 동일한 집합.dll을 빌드할 때 가져오기 라이브러리를 빌드할 때 성공 합니다.  

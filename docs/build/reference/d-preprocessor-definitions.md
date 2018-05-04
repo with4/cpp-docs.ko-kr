@@ -2,12 +2,9 @@
 title: -D (전처리기 정의) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCNMakeTool.PreprocessorDefinitions
 - VC.Project.VCCLCompilerTool.PreprocessorDefinitions
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-caps.latest.revision: 22
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08812cdd0a4ffb27b387cce8cfb26e72ef80770a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b8b386d55804421fb6cb454b4818db52e7cea85
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="d-preprocessor-definitions"></a>/D(전처리기 정의)
 소스 파일에 대한 전처리 기호를 정의합니다.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
  기호와 관련된 값은 기본적으로 1입니다. 예를 들어 **/D** `name` 같습니다 **/D**`name`**= 1**합니다. 이 문서에서는의 정의의 끝에 나오는 예제에서 **테스트** 인쇄에 게 표시 `1`합니다.  
   
- 사용 하 여 컴파일 **/D** `name`  **=**  기호와 연결 된 값이 없어야 합니다. 기호를 사용해 조건에 따라 코드를 컴파일할 수 있지만 그렇지 않은 경우 기호가 어떤 값으로도 계산되지 않습니다. 예제를 사용 하 여 컴파일하는 경우 **/DTEST =**, 오류가 발생 합니다. 이 동작은 값을 사용하거나 사용하지 않을 때에도 `#define`을 사용할 때의 동작과 비슷합니다.  
+ 사용 하 여 컴파일 **/D** `name` **=** 기호와 연결 된 값이 없어야 합니다. 기호를 사용해 조건에 따라 코드를 컴파일할 수 있지만 그렇지 않은 경우 기호가 어떤 값으로도 계산되지 않습니다. 예제를 사용 하 여 컴파일하는 경우 **/DTEST =**, 오류가 발생 합니다. 이 동작은 값을 사용하거나 사용하지 않을 때에도 `#define`을 사용할 때의 동작과 비슷합니다.  
   
  이 명령은 TEST.c에서 DEBUG 기호를 정의합니다.  
   
@@ -86,7 +81,7 @@ CL /DTEST=%% TEST.C
   
 -   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PreprocessorDefinitions%2A>을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cpp_D_compiler_option.cpp  

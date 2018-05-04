@@ -1,12 +1,12 @@
 ---
-title: "방법: 다시 시작 관리자 지원 추가 | Microsoft Docs"
-ms.custom: 
+title: '방법: 다시 시작 관리자 지원 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -14,27 +14,28 @@ helpviewer_keywords:
 - Restart manager [MFC]
 - C++, application crash support
 ms.assetid: 7f3f5867-d4bc-4ba8-b3c9-dc1e7be93642
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a413f28909a52e3bc82e9d8f2694d559bf8a885c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
-ms.translationtype: MT
+ms.openlocfilehash: 4550a8a6a6457c4bf5b7acc137a592aa5ecb2e4b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-add-restart-manager-support"></a>방법: 다시 시작 관리자 지원 추가
-다시 시작 관리자는 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] for [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]에 추가된 기능입니다. 다시 시작 관리자는 예기치 않게 닫히거나 다시 시작되는 경우 응용 프로그램에 대한 지원을 추가합니다. 다시 시작 관리자의 동작은 응용 프로그램의 유형에 따라 달라집니다. 응용 프로그램이 문서 편집기인 경우 다시 시작 관리자는 예기치 않게 닫힌 후 응용 프로그램에서 열려 있는 문서의 상태 및 내용을 자동으로 저장하도록 하고 응용 프로그램을 다시 시작합니다. 응용 프로그램이 문서 편집기가 아닌 경우 다시 시작 관리자는 응용 프로그램을 다시 시작하지만 기본적으로 응용 프로그램의 상태를 저장할 수 없습니다.  
+
+다시 시작 관리자는 Visual Studio for Windows Vista 이상의 운영 체제에 추가 하는 기능입니다. 다시 시작 관리자는 예기치 않게 닫히거나 다시 시작되는 경우 응용 프로그램에 대한 지원을 추가합니다. 다시 시작 관리자의 동작은 응용 프로그램의 유형에 따라 달라집니다. 응용 프로그램이 문서 편집기인 경우 다시 시작 관리자는 예기치 않게 닫힌 후 응용 프로그램에서 열려 있는 문서의 상태 및 내용을 자동으로 저장하도록 하고 응용 프로그램을 다시 시작합니다. 응용 프로그램이 문서 편집기가 아닌 경우 다시 시작 관리자는 응용 프로그램을 다시 시작하지만 기본적으로 응용 프로그램의 상태를 저장할 수 없습니다.  
   
  다시 시작한 후 응용 프로그램이 유니코드이면 응용 프로그램에 작업 대화 상자가 표시됩니다. ANSI 응용 프로그램이면 Windows 메시지 상자가 응용 프로그램에 표시됩니다. 이때 사용자는 자동으로 저장된 문서를 복원할지 여부를 선택합니다. 사용자가 자동으로 저장된 문서를 복원하지 않으면 다시 시작 관리자는 임시 파일을 삭제합니다.  
   
 > [!NOTE]
 >  데이터를 저장하고 응용 프로그램을 다시 시작하는 다시 시작 관리자의 기본 동작을 재정의할 수 있습니다.  
   
- 기본적으로 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 에서 프로젝트 마법사를 사용하여 만든 MFC 응용 프로그램은 [!INCLUDE[wiprlhext](../c-runtime-library/reference/includes/wiprlhext_md.md)]가 있는 컴퓨터에서 응용 프로그램이 실행되는 경우 다시 시작 관리자를 지원합니다. 응용 프로그램에서 다시 시작 관리자를 지원하지 않도록 하려면 새 프로젝트 마법사에서 다시 시작 관리자를 사용하지 않도록 설정할 수 있습니다.  
+ 기본적으로 MFC 응용 프로그램에서 프로젝트 마법사를 사용 하 여 만든 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 응용 프로그램은 Windows Vista 또는 운영 체제를가 하는 컴퓨터에서 실행 될 때 다시 시작 관리자를 지원 합니다. 응용 프로그램에서 다시 시작 관리자를 지원하지 않도록 하려면 새 프로젝트 마법사에서 다시 시작 관리자를 사용하지 않도록 설정할 수 있습니다.  
   
 ### <a name="to-add-support-for-the-restart-manager-to-an-existing-application"></a>기존 응용 프로그램에 다시 시작 관리자에 대한 지원을 추가하려면  
   

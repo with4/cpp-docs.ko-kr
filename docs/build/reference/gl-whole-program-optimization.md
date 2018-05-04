@@ -1,13 +1,10 @@
 ---
-title: "-GL (전체 프로그램 최적화) | Microsoft Docs"
-ms.custom: 
+title: -GL (전체 프로그램 최적화) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /gl
 - VC.Project.VCCLWCECompilerTool.WholeProgramOptimization
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - -GL compiler option [C++]
 - GL compiler option [C++]
 ms.assetid: 09d51e2d-9728-4bd0-b5dc-3b8284aca1d1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd3a83b59a1b1a0e95dd46ebca57c814c7d680c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce972b6e7254ad7454f8e8799283588f0fdd5270
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="gl-whole-program-optimization"></a>/GL(전체 프로그램 최적화)
 전체 프로그램 최적화를 사용합니다.  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  전체 프로그램 최적화 프로그램에서 모든 모듈에서 정보를 사용 하 여 최적화를 수행 하려면 컴파일러가 수 있습니다. 전체 프로그램 최적화 없이 최적화가 수행 됩니다는 모듈 (컴파일) 별로 합니다.  
   
- 전체 프로그램 최적화는 기본적으로 꺼져 있고 명시적으로 설정 해야 합니다. 하지만 사용 하 여 명시적으로 비활성화할 수 이기도 **/GL-**합니다.  
+ 전체 프로그램 최적화는 기본적으로 꺼져 있고 명시적으로 설정 해야 합니다. 하지만 사용 하 여 명시적으로 비활성화할 수 이기도 **/GL-** 합니다.  
   
  모든 모듈에 대 한 정보를 컴파일러는 다음을 수행할 수 있습니다.  
   

@@ -2,12 +2,9 @@
 title: 경로 이름 지정 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - cl.exe compiler, output files
 - output files, specifying pathnames
 ms.assetid: 7a6595ce-3383-44ae-957a-466bfa29c343
-caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2412ab15317604e1d6cccc5535226d429d8ba6b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a2dd121909fbe0aa2f9305b7bd5779b995a69719
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-the-pathname"></a>경로 이름 지정
 각 출력 파일 옵션을 *pathname* 인수를 위치와 출력 파일에 대 한 이름을 지정할 수 있습니다. 인수는 드라이브 이름, 디렉터리 및 파일 이름에 포함할 수 있습니다. 옵션 및 인수 사이 공백이 없어야 합니다.  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 |PRN|프린터|  
 |NUL|Null 장치 (파일 생성)|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 명령줄 프린터 맵 파일을 보냅니다.  
   
 ```  

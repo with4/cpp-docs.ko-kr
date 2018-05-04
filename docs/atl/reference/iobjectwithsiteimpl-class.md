@@ -1,12 +1,9 @@
 ---
-title: "IObjectWithSiteImpl 클래스 | Microsoft Docs"
-ms.custom: 
+title: IObjectWithSiteImpl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IObjectWithSiteImpl
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IObjectWithSiteImpl class
 ms.assetid: 4e1f774f-bc3d-45ee-9a1c-c3533a511588
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49574d31ef0c606528f29c0045506e5febe69b28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c626db62a02fba70f926776ea214e664d2f7f82
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl 클래스
 이 클래스는 해당 사이트와 통신 하는 개체를 허용 하는 메서드를 제공 합니다.  
@@ -66,7 +61,7 @@ template <class T>
 ## <a name="remarks"></a>설명  
  [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) 인터페이스를 사용 하면 사이트와 통신 하는 개체입니다. 클래스 `IObjectWithSiteImpl` 이 인터페이스의 기본 구현을 제공 하 고 구현 **IUnknown** 디버그에서 장치 정보 덤프를 전송 하 여 빌드합니다.  
   
- `IObjectWithSiteImpl`두 개의 메서드를 지정합니다. 클라이언트의 첫 번째 호출 `SetSite`, 사이트의 전달 **IUnknown** 포인터입니다. 이 포인터는 개체 내에서 저장 되 고 호출을 통해 나중에 검색할 수 `GetSite`합니다.  
+ `IObjectWithSiteImpl` 두 개의 메서드를 지정합니다. 클라이언트의 첫 번째 호출 `SetSite`, 사이트의 전달 **IUnknown** 포인터입니다. 이 포인터는 개체 내에서 저장 되 고 호출을 통해 나중에 검색할 수 `GetSite`합니다.  
   
  클래스를 파생 하는 일반적으로 `IObjectWithSiteImpl` 컨트롤이 아닙니다 만들 때 개체입니다. 컨트롤에 대 한에서 클래스를 파생 [IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)는 또한 사이트에 포인터를 제공 합니다. 둘 다에서 클래스를 파생 되지 않는 `IObjectWithSiteImpl` 및 `IOleObjectImpl`합니다.  
   
@@ -78,7 +73,7 @@ template <class T>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="getsite"></a>IObjectWithSiteImpl::GetSite  
+##  <a name="getsite"></a>  IObjectWithSiteImpl::GetSite  
  로 식별 된 인터페이스에 대 한 포인터에 대 한 사이트를 쿼리하여 `riid`합니다.  
   
 ```
@@ -92,7 +87,7 @@ STDMETHOD(GetSite)(
   
  참조 [IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) in the Windows SDK입니다.  
   
-##  <a name="m_spunksite"></a>IObjectWithSiteImpl::m_spUnkSite  
+##  <a name="m_spunksite"></a>  IObjectWithSiteImpl::m_spUnkSite  
  사이트의 관리 **IUnknown** 포인터입니다.  
   
 ```
@@ -100,9 +95,9 @@ CComPtr<IUnknown> m_spUnkSite;
 ```  
   
 ### <a name="remarks"></a>설명  
- `m_spUnkSite`처음 호출을 통해이 포인터를 받는 [SetSite](#setsite)합니다.  
+ `m_spUnkSite` 처음 호출을 통해이 포인터를 받는 [SetSite](#setsite)합니다.  
   
-##  <a name="setchildsite"></a>IObjectWithSiteImpl::SetChildSite  
+##  <a name="setchildsite"></a>  IObjectWithSiteImpl::SetChildSite  
  개체를 제공 하는 사이트와 **IUnknown** 포인터입니다.  
   
 ```
@@ -116,7 +111,7 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
 ### <a name="return-value"></a>반환 값  
  `S_OK`를 반환합니다.  
   
-##  <a name="setsite"></a>IObjectWithSiteImpl::SetSite  
+##  <a name="setsite"></a>  IObjectWithSiteImpl::SetSite  
  개체를 제공 하는 사이트와 **IUnknown** 포인터입니다.  
   
 ```

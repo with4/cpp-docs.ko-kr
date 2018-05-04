@@ -1,12 +1,9 @@
 ---
-title: "_com_ptr_t 클래스 | Microsoft Docs"
-ms.custom: 
+title: _com_ptr_t 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - _com_ptr_t
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - _com_ptr_t class
 ms.assetid: 3753a8a0-03d4-4cfd-8a9a-74872ea53971
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9a17309ab08d50be1366b8db71798766b52baa9
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 8ec54735fce39cc54bdb5e396da7c637b889b92c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="comptrt-class"></a>_com_ptr_t 클래스
 **Microsoft 전용**  
   
  `_com_ptr_t` 개체는 COM 인터페이스 포인터를 캡슐화하며 "스마트" 포인터라고 합니다. 이 템플릿 클래스 리소스 할당 및 할당 해제 함수 호출을 통해 관리 하는 **IUnknown** 멤버 함수: `QueryInterface`, `AddRef`, 및 **릴리스**합니다.  
   
- 스마트 포인터에서 제공 하는 typedef 정의에서 일반적으로 참조 되는 **_COM_SMARTPTR_TYPEDEF** 매크로입니다. 이 매크로는 인터페이스 이름과 IID를 사용하며 인터페이스의 이름 및 `_com_ptr_t`의 접미사로 `Ptr` 의 특수화를 선언합니다. 예:  
+ 스마트 포인터에서 제공 하는 typedef 정의에서 일반적으로 참조 되는 **_COM_SMARTPTR_TYPEDEF** 매크로입니다. 이 매크로는 인터페이스 이름과 IID를 사용하며 인터페이스의 이름 및 `_com_ptr_t`의 접미사로 `Ptr` 의 특수화를 선언합니다. 예를 들어:  
   
 ```  
 _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));  

@@ -1,13 +1,10 @@
 ---
-title: "찾아보기 정보 파일 빌드: 개요 | Microsoft Docs"
-ms.custom: 
+title: '찾아보기 정보 파일 빌드: 개요 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5b369d5a708e0ee56df635234c68ee88a31af48
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a2306c69c219320e11259ba6303b76588db8f7b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="building-browse-information-files-overview"></a>찾아보기 정보 파일 빌드: 개요
 기호 검색에 대 한 찾아보기 정보를 만들려면 컴파일러 BSCMAKE 다음 프로젝트의 각 소스 파일에 대 한.sbr 파일을 만듭니다. EXE 하나의.bsc 파일에.sbr 파일을 연결합니다.  

@@ -1,12 +1,9 @@
 ---
 title: __clrcall | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __clrcall_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d11211e90f0517c11213d7bdd2815c2f937fc79a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 02af89a99b78ba17e6c5a7463073d314ee8d2a03
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clrcall"></a>__clrcall
 **Microsoft 전용**  
@@ -42,11 +37,11 @@ ms.lasthandoff: 12/21/2017
   
  [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md) 즉 모든 함수 및 함수 포인터, 됩니다 `__clrcall` 컴파일러 이외의 아무 것도 표시 될 수 컴파일 대상 내에서 함수를 허용 하지 않는 및 `__clrcall`합니다. 때 **/clr: pure** 을 사용 하는 `__clrcall` 함수 포인터 및 외부 선언에만 지정할 수 있습니다.  
   
- 직접 호출할 수 있습니다 `__clrcall` 를 사용 하 여 컴파일된 기존의 c + + 코드에서 함수 **/clr** 함수에 MSIL 구현이으로 합니다. `__clrcall`이러한 기능으로 컴파일할 경우에 인라인 asm 및 예를 들어 CPU 관련 intrinisics를 호출 하는 함수에서 직접 함수를 호출할 수 없습니다 **/clr**합니다.  
+ 직접 호출할 수 있습니다 `__clrcall` 를 사용 하 여 컴파일된 기존의 c + + 코드에서 함수 **/clr** 함수에 MSIL 구현이으로 합니다. `__clrcall` 이러한 기능으로 컴파일할 경우에 인라인 asm 및 예를 들어 CPU 관련 intrinisics를 호출 하는 함수에서 직접 함수를 호출할 수 없습니다 **/clr**합니다.  
   
  `__clrcall` 함수 포인터는 자신이 만들어진 응용 프로그램 도메인에서만 사용됩니다.  `__clrcall` 함수 포인터를 응용 프로그램 도메인에서 전달하는 대신 <xref:System.CrossAppDomainDelegate>를 사용하십시오. 자세한 내용은 참조 [응용 프로그램 도메인 및 Visual c + +](../dotnet/application-domains-and-visual-cpp.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  `__clrcall`을 사용하여 함수가 선언되면 필요할 때(예: 함수가 호출될 때) 코드가 생성됩니다.  
   
 ```  
@@ -84,7 +79,7 @@ in Func1
 in Func1  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 함수 포인터를 정의하고 관리 코드에서만 함수 포인터를 호출할 수 있도록 선언합니다. 여기서는 컴파일러가 관리되는 함수를 직접 호출하고 네이티브 진입점(이중 썽크 문제)을 방지할 수 있습니다.  
   
 ```  

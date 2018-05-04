@@ -1,12 +1,9 @@
 ---
 title: __unhook | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __unhook
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1513391aedf9a08cd1ece971d79fd5f6913d406d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b95ff49c9b1f088ac38ffb0791f18f249b211e72
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unhook"></a>__unhook
 처리기 메서드를 이벤트에서 분리합니다.  
@@ -52,7 +47,7 @@ long  __unhook(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- **&***SourceClass* `::` *EventMethod*  
+ **&** *SourceClass* `::` *EventMethod*  
  이벤트 처리기 메서드를 언후크할 이벤트 메서드의 포인터입니다.  
   
 -   네이티브 c + + 이벤트: *SourceClass* 는 이벤트 소스 클래스 및 *EventMethod* 이벤트입니다.  
@@ -73,7 +68,7 @@ long  __unhook(
   
 -   관리되는 이벤트의 관리되는 개체 포인터입니다.  
   
- **&***ReceiverClass* `::``HandlerMethod`  
+ **&** *ReceiverClass* `::` `HandlerMethod`  
  이벤트에서 언후크될 이벤트 처리기 메서드의 포인터입니다. 처리기는 클래스의 메서드나 클래스에 대한 참조로 지정됩니다. 클래스 이름을 지정하지 않으면 `__unhook`는 클래스에서 호출된 것으로 가정합니다.  
   
 -   네이티브 c + + 이벤트: *ReceiverClass* 는 이벤트 수신기 클래스 및 `HandlerMethod` 처리기입니다.  
@@ -108,7 +103,7 @@ long  __unhook(
 > [!NOTE]
 >  템플릿 기반 클래스 또는 구조체에 event를 포함시킬 수 없습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  참조 [네이티브 c + +에서 이벤트 처리](../cpp/event-handling-in-native-cpp.md) 및 [COM에서 이벤트 처리](../cpp/event-handling-in-com.md) 샘플에 대 한 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

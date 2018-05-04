@@ -1,12 +1,9 @@
 ---
-title: "인터페이스 (ATL) | Microsoft Docs"
-ms.custom: 
+title: 인터페이스 (ATL) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - COM interfaces
 - interfaces, COM
 ms.assetid: de6c8b12-6230-4fdc-af66-a28b91d5ee55
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95dce7d707cfb29c8f33f94504c26b5b24ef4c4f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0db5a79f187cb0fe320bf67aace751a5d4c537d3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="interfaces-atl"></a>인터페이스 (ATL)
 인터페이스는 개체는 외부 기능을 노출 하는 방법입니다. COM 인터페이스에는 개체에 의해 구현 되는 함수 (예: c + + vtable) 포인터의 테이블입니다. 테이블 인터페이스를 나타내고 가리키는 함수는 해당 인터페이스의 메서드입니다. 개체는 선택한 만큼의 인터페이스를 노출할 수 있습니다.  

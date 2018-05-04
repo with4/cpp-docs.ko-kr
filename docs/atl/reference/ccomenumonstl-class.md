@@ -1,12 +1,9 @@
 ---
-title: "CComEnumOnSTL 클래스 | Microsoft Docs"
-ms.custom: 
+title: CComEnumOnSTL 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComEnumOnSTL
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - CComEnumOnSTL class
 ms.assetid: befe1a44-7a00-4f28-9a2e-cc0fa526643c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d42d99baf154bc5434f2d771aeaabb71c5502b30
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c380ba7b6c2c13f178a15263e1ff510f9f3c31c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomenumonstl-class"></a>CComEnumOnSTL 클래스
 이 클래스는 c + + 표준 라이브러리 컬렉션에 따라 COM 열거자 개체를 정의 합니다.  
@@ -60,11 +55,11 @@ class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
  C + + 표준 라이브러리 컨테이너 클래스입니다.  
   
 ## <a name="remarks"></a>설명  
- `CComEnumOnSTL`c + + 표준 라이브러리 컬렉션에 따라 COM 열거자 개체를 정의 합니다. 이 클래스는 자체적으로 또는 함께에서 사용할 수 [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)합니다. 이 클래스를 사용 하기 위한 일반적인 단계는 다음과 같습니다. 자세한 내용은 참조 [ATL 컬렉션 및 열거자](../../atl/atl-collections-and-enumerators.md)합니다.  
+ `CComEnumOnSTL` c + + 표준 라이브러리 컬렉션에 따라 COM 열거자 개체를 정의 합니다. 이 클래스는 자체적으로 또는 함께에서 사용할 수 [ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)합니다. 이 클래스를 사용 하기 위한 일반적인 단계는 다음과 같습니다. 자세한 내용은 참조 [ATL 컬렉션 및 열거자](../../atl/atl-collections-and-enumerators.md)합니다.  
   
 ## <a name="to-use-this-class-with-icollectiononstlimpl"></a>이 클래스를 ICollectionOnSTLImpl 사용:  
   
-- `typedef`이 클래스의 특수화입니다.  
+- `typedef` 이 클래스의 특수화입니다.  
   
 -   사용 하 여는 `typedef` 의 특수화의 최종 템플릿 인수로 `ICollectionOnSTLImpl`합니다.  
   
@@ -72,7 +67,7 @@ class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
   
 ## <a name="to-use-this-class-independently-of-icollectiononstlimpl"></a>이 클래스를 사용 하려면이 ICollectionOnSTLImpl 독립적으로:  
   
-- `typedef`이 클래스의 특수화입니다.  
+- `typedef` 이 클래스의 특수화입니다.  
   
 -   사용 하 여 `typedef` 의 특수화의 템플릿 인수로 `CComObject`합니다.  
   
@@ -96,7 +91,7 @@ class ATL_NO_VTABLE CComEnumOnSTL : public IEnumOnSTLImpl<Base, piid,
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  아래 표시 된 코드 생성 및 초기화 하는 열거자 개체를 처리 하는 제네릭 함수를 제공 합니다.  
   
  [!code-cpp[NVC_ATL_COM#34](../../atl/codesnippet/cpp/ccomenumonstl-class_1.h)]  

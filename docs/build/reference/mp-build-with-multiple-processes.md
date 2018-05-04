@@ -1,6 +1,6 @@
 ---
-title: "/MP (여러 프로세스로 빌드) | Microsoft Docs"
-ms.custom: 
+title: /MP (여러 프로세스로 빌드) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
@@ -16,14 +16,13 @@ helpviewer_keywords:
 - cl.exe compiler, multi-process build
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa190d2cb2d1e0b0d13979d5e0044291d7cd8a7
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 29f7fd00a9d24b1941830690633befc75c39eb32
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP(여러 프로세스로 빌드)
 
@@ -123,7 +122,7 @@ ms.lasthandoff: 02/28/2018
 
 #### <a name="the-msbuildexe-tool"></a>MSBUILD.exe 도구
 
-[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 사용 하 여는 [MSBuild.exe](/visualstudio/msbuild/msbuild-reference) 솔루션 및 프로젝트를 작성 하는 도구입니다. **/maxcpucount:**_번호_ (또는 **/m:**_번호_) MSBuild.exe 도구의 명령줄 옵션에서 여러 프로젝트를 빌드할 수는 같은 시간입니다. **/MP** 컴파일러 옵션은 여러 컴파일 단위를 동시에 빌드할 수 있습니다. 응용 프로그램에 대해 적절한 경우 **/MP** 와 **/maxcpucount**중 하나 또는 둘 모두를 사용하여 솔루션의 빌드 시간을 개선할 수 있습니다.
+[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 는 [MSBuild.exe](/visualstudio/msbuild/msbuild-reference) 도구를 사용하여 솔루션 및 프로젝트를 빌드합니다. **/maxcpucount:**_번호_ (또는 **/m:**_번호_) MSBuild.exe 도구의 명령줄 옵션에서 여러 프로젝트를 빌드할 수는 같은 시간입니다. **/MP** 컴파일러 옵션은 여러 컴파일 단위를 동시에 빌드할 수 있습니다. 응용 프로그램에 대해 적절한 경우 **/MP** 와 **/maxcpucount**중 하나 또는 둘 모두를 사용하여 솔루션의 빌드 시간을 개선할 수 있습니다.
 
 솔루션의 빌드 시간은 부분적으로 빌드를 수행 하는 프로세스의 수에 따라 다릅니다. *번호* 의 인수는 [/maxcpucount](/visualstudio/msbuild/msbuild-command-line-reference) MSBuild 옵션에 동시에 빌드할 프로젝트의 최대 수를 지정 합니다. 마찬가지로,는 *processMax* 의 인수는 **/MP** 컴파일러 옵션 컴파일 단위 동시에 빌드할 수의 최대 수를 지정 합니다. 경우는 **/maxcpucount** 옵션 지정 *P* 프로젝트 및 **/MP** 옵션 지정 *C* 프로세스, 최대 *P*  x *C* 프로세스를 동시에 실행 합니다.
 
@@ -139,8 +138,8 @@ ms.lasthandoff: 02/28/2018
 
 기본적으로 프로젝트 빌드는 디버그 빌드에 대해서는 **/Gm** 컴파일러 옵션(증분 빌드)을 사용하고 릴리스 빌드에 대해서는 사용하지 않습니다. 따라서 **/MP** 컴파일러 옵션은 기본 **/Gm** 컴파일러 옵션과 충돌하기 때문에 디버그 빌드에서 자동으로 사용되지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
-[#import Directive](../../preprocessor/hash-import-directive-cpp.md)<br/>
+[#import 지시문](../../preprocessor/hash-import-directive-cpp.md)<br/>
 [명령줄 참조](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
-[/Zf (더 빠르게 PDB 생성)](zf.md)<br/>
+[/Zf(더 빠른 PDB 생성)](zf.md)<br/>

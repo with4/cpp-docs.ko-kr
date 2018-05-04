@@ -2,11 +2,8 @@
 title: '조건부 연산자:? : | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - '?:'
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - conditional operators [C++]
 - '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 296ced0754dd12017353469845b3bc4b30e0dc11
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 807754bb13f8302fe9583b6f4a8219e3aea81086
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="conditional-operator--"></a>조건부 연산자:? :
 ## <a name="syntax"></a>구문  
@@ -69,7 +64,7 @@ expression ? expression : expression
 > [!WARNING]
 >  두 번째와 세 번째 피연산자의 형식이 같지 않으면 C++ 표준에 지정된 복합 형식 변환 규칙이 호출됩니다. 이러한 변환이 수행되면 임시 개체 생성 및 제거를 비롯한 예기치 않은 동작이 발생할 수 있습니다. 그러므로 조건부 연산자와 함께 사용자 정의 형식을 피연산자로 사용하지 않거나, 사용자 정의 형식을 사용하는 경우에는 명시적으로 각 피연산자를 공용 형식으로 캐스팅하는 것이 좋습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // expre_Expressions_with_the_Conditional_Operator.cpp  

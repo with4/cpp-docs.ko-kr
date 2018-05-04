@@ -1,13 +1,10 @@
 ---
-title: "어설션 표시 | Microsoft Docs"
-ms.custom: 
+title: 어설션 표시 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - debugging assertions
 - assertions, debugging
 ms.assetid: fa353fe8-4656-4384-a5d2-8866bc977f06
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bff1ab29841ff2dd9973d538bb763d1fc1126a8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9133d2fadfa4158eef9755fff7e0d2a62478966
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="displaying-assertions"></a>어설션 표시
 서비스에 연결 된 클라이언트는 응답 하지 않는 것 처럼, 서비스 어설션 있고 볼 수 없는 메시지 상자에 표시 될 수 있습니다. 코드를 디버깅 하려면 Visual c + +의 디버거를 사용 하 여이 확인할 수 있습니다 (참조 [작업 관리자를 사용 하 여](../atl/using-task-manager.md) 이 섹션의 앞부분에 나오는).  

@@ -1,12 +1,9 @@
 ---
-title: "명시적 인스턴스화 | Microsoft Docs"
-ms.custom: 
+title: 명시적 인스턴스화 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - explicit instantiation
 - instantiation, explicit
 ms.assetid: 8b0d4e32-45a6-49d5-8041-1ebdd674410e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e272652ecc82b65d0251194f17a746ddde58fcc1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f4925a60843ada350a2795709d9257ab796616a7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="explicit-instantiation"></a>명시적 인스턴스화
 명시적 인스턴스화를 통해 코드에서 실제로 사용하지 않고 템플릿 기반 클래스 또는 함수의 인스턴스를 만들 수 있습니다. 라이브러리 (.lib) 파일 배포에 대 한 템플릿을 사용 하는 만들 때 유용한 것은, 인스턴스화되지 않은 템플릿 정의 개체 (.obj) 파일에 배치 되지 않은 합니다.  
@@ -46,7 +41,7 @@ template MyStack<int, 6>::MyStack( void );
   
  예제에 표시 된 대로 다시 선언 특정 형식 인수를 사용 하 여 함수 템플릿을 명시적으로 인스턴스화할 수 있습니다 [함수 템플릿 인스턴스화](../cpp/function-template-instantiation.md)합니다.  
   
- 사용할 수는 `extern` 멤버의 자동 인스턴스화를 방지 하려면 키워드입니다. 예:  
+ 사용할 수는 `extern` 멤버의 자동 인스턴스화를 방지 하려면 키워드입니다. 예를 들어:  
   
 ```cpp  
 extern template class MyStack<int, 6>;  

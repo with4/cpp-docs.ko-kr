@@ -1,13 +1,10 @@
 ---
-title: "링커 입력 파일로.netmodule 파일 | Microsoft Docs"
-ms.custom: 
+title: 링커 입력 파일로.netmodule 파일 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - .netmodules
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1c30c56012dc14392ecdc6a089dcd88a217d6d8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 23a1ecdff483118d92ac2c5fd01c24e8f2599bc6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="netmodule-files-as-linker-input"></a>링커 입력 파일로 사용하는 .netmodule 파일
 link.exe에서는 이제 MSIL .obj 및 .netmodules가 입력으로 사용됩니다. 링커에서 생성되는 출력 파일은 링커에 입력된 .obj 또는 .netmodules에 대해 런타임 종속성이 없는 .netmodule 또는 어셈블리입니다.  
@@ -53,7 +48,7 @@ link.exe에서는 이제 MSIL .obj 및 .netmodules가 입력으로 사용됩니�
   
  MSIL 링크를 수행 하는 경우 및도 지정 하지 않으면 [/LTCG (링크 타임 코드 생성)](../../build/reference/ltcg-link-time-code-generation.md), 링크를 다시 시작 정보 메시지가 표시 됩니다. 이 메시지를 msil 링크 링커 성능이 향상 되지만 무시, 명시적으로 지정 **/LTCG**합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  C + + 코드에서는 해당 try catch 블록을 비 시스템 예외에 대 한 호출 됩니다. 그러나 기본적으로 CLR 예외를 래핑합니다 비시스템와 <xref:System.Runtime.CompilerServices.RuntimeWrappedException>합니다. 어셈블리는 Visual c + +에서 만들어질 시점과 아닌 Visual c + + 모듈을 하려면 try 블록을 추가 해야 비 시스템 예외를 throw 하는 경우에 해당 try 절에서 호출 되는 c + + 코드의 catch 블록에서  
   
  [assembly:System::Runtime::CompilerServices::RuntimeCompatibility(WrapNonExceptionThrows=false)] 특성 비 c + + 모듈에 대 한 소스 코드입니다.  
@@ -81,7 +76,7 @@ int main() {
 */  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  WrapNonExceptionThrows 특성의 부울 값을 변경 하 여 비 시스템 예외를 catch 하는 Visual c + + 코드의 기능을 수정 합니다.  
   
 ```  

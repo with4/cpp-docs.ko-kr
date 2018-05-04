@@ -1,12 +1,9 @@
 ---
-title: "final 지정자 | Microsoft Docs"
-ms.custom: 
+title: final 지정자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - final_CPP
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - final Identifier
 ms.assetid: 649866d0-79d4-449f-ab74-f84b911b79a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3f7c5afd4010983ea943193b7abfb99f22eda38
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 82fb9e13fc5dbbafcc37905716a37322b2966c6d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="final-specifier"></a>final 지정자
 `final` 키워드를 사용하여 파생 클래스에서 재정의할 수 없는 가상 함수를 지정할 수 있습니다. 상속할 수 없는 클래스를 지정하기 위해 해당 키워드를 사용할 수도 있습니다.  
@@ -47,7 +42,7 @@ class class-name final base-classes
   
  `final`이 클래스 선언에 사용되는 경우 `base-classes`는 선언의 선택적 부분입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제는 `final` 키워드를 사용하여 가상 함수를 재정의할 수 없음을 지정합니다.  
   
 ```cpp  

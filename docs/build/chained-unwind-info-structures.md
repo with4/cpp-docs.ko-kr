@@ -1,27 +1,22 @@
 ---
-title: "연결 된 해제 정보 구조체 | Microsoft Docs"
-ms.custom: 
+title: 연결 된 해제 정보 구조체 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 176835bf-f118-45d9-9128-9db4b7571864
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ac09c1f107b51542b7a17c8661eb784b4abf14a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87469a381c038462549d20b105b791ddb17b1656
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="chained-unwind-info-structures"></a>연결된 해제 정보 구조체
 UNW_FLAG_CHAININFO 플래그가 설정 된 경우, 해제 정보 구조체는 보조 로케이터로 되 고 주 해제 정보를 포함 하는 공유 되는 예외-처리기/연결 된 정보 주소 필드. 다음 코드를 검색 주 정보를 가정 하 고 해제 `unwindInfo` 는 UNW_FLAG_CHAININFO이 있는 구조 플래그가 설정 됩니다.  

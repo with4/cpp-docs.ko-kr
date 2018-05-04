@@ -1,12 +1,9 @@
 ---
-title: "C + + 예외 처리 | Microsoft Docs"
-ms.custom: 
+title: C + + 예외 처리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - C++ exception handling
 - Visual C++, exception handling
 ms.assetid: 65f80b44-9d0f-4d17-b910-07205a5c5c40
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6cbe3489b0d45111a527102c85e6d8c207715ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ce782000ac1767034d00aa3e0280b8e3820e3d7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-exception-handling"></a>C++ 예외 처리
 C++ 언어에는 예외의 throw 및 catch를 기본적으로 지원합니다. C++에서 프로그래밍하는 경우 이 단원에서 설명한 대로 기본 제공 C++ 예외 지원을 거의 항상 사용해야 합니다.  
@@ -36,7 +31,7 @@ C++ 언어에는 예외의 throw 및 catch를 기본적으로 지원합니다. C
   
 -   [Try, catch 및 throw 문](../cpp/try-throw-and-catch-statements-cpp.md)  
   
--   [Catch 블록 평가 방법](../cpp/how-catch-blocks-are-evaluated-cpp.md)  
+-   [Catch 블록의 평가 방법](../cpp/how-catch-blocks-are-evaluated-cpp.md)  
   
 -   [예외 및 스택 해제](../cpp/exceptions-and-stack-unwinding-in-cpp.md)  
   

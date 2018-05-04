@@ -1,12 +1,9 @@
 ---
-title: "dynamic_cast 연산자 | Microsoft Docs"
-ms.custom: 
+title: dynamic_cast 연산자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - dynamic_cast_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29add795c7adeca67fc85c7cf3b1b90d17f804fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a87105ad2d52ebbb7749deafadedcd510314038f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dynamiccast-operator"></a>dynamic_cast 연산자
 피연산자를 변환 `expression` 유형의 개체로 `type-id`합니다.  
@@ -44,11 +39,11 @@ dynamic_cast < type-id > ( expression )
   
  동작의 두 가지 주요 변경 내용이 `dynamic_cast` 관리 코드에서:  
   
--   `dynamic_cast`boxed 열거형의 내부 형식에 대 한 포인터로 변환 된 포인터 대신 0을 반환 하는 런타임 시 실패 합니다.  
+-   `dynamic_cast` boxed 열거형의 내부 형식에 대 한 포인터로 변환 된 포인터 대신 0을 반환 하는 런타임 시 실패 합니다.  
   
--   `dynamic_cast`더 이상 예외를 throw 할 때 `type-id` 는 런타임 시 실패 한 캐스트를 통해 값 형식으로 내부 포인터입니다.  캐스팅 throw 하는 대신 0 포인터 값을 반환 합니다.  
+-   `dynamic_cast` 더 이상 예외를 throw 할 때 `type-id` 는 런타임 시 실패 한 캐스트를 통해 값 형식으로 내부 포인터입니다.  캐스팅 throw 하는 대신 0 포인터 값을 반환 합니다.  
   
- 경우 `type-id` 는 명확한 액세스할 수 있는 직접 또는 간접 기본 클래스의에 대 한 포인터 `expression`, 형식의 고유한 하위 개체에 대 한 포인터 `type-id` 은 결과입니다. 예:  
+ 경우 `type-id` 는 명확한 액세스할 수 있는 직접 또는 간접 기본 클래스의에 대 한 포인터 `expression`, 형식의 고유한 하위 개체에 대 한 포인터 `type-id` 은 결과입니다. 예를 들어:  
   
 ```  
 // dynamic_cast_1.cpp  
@@ -137,7 +132,7 @@ int main() {
  ![다중 상속을 보여 주는 계층 구조를 클래스](../cpp/media/vc39011.gif "vc39011")  
 다중 상속을 보여 주는 클래스 계층 구조  
   
- 형식의 개체에 대 한 포인터 `D` 으로 안전 하 게 캐스팅 될 수 `B` 또는 `C`합니다. 그러나 경우 `D` 를 가리키도록 캐스팅는 `A` 개체, 인스턴스 `A` 초래? 따라서 모호한 캐스팅 오류가 있습니다. 이 문제를 해결 하려면 두 개의 모호 하지 않은 캐스트를 수행할 수 있습니다. 예:  
+ 형식의 개체에 대 한 포인터 `D` 으로 안전 하 게 캐스팅 될 수 `B` 또는 `C`합니다. 그러나 경우 `D` 를 가리키도록 캐스팅는 `A` 개체, 인스턴스 `A` 초래? 따라서 모호한 캐스팅 오류가 있습니다. 이 문제를 해결 하려면 두 개의 모호 하지 않은 캐스트를 수행할 수 있습니다. 예를 들어:  
   
 ```  
 // dynamic_cast_4.cpp  
@@ -185,7 +180,7 @@ void f(D* pd) {
   
  `dynamic_cast` 연산자 캐스트를 수행 하는 "교차 합니다."도 사용할 수 있습니다 같은 클래스 계층 구조를 사용 하 여에서 예를 들어 대 한 포인터를 캐스팅할 수는 `B` 하위 개체에는 `D` 으로 완전 한 개체 형식의 하위 개체 `E`합니다.  
   
- 캐스트 크로스 고려, 실제로에 대 한 포인터에서 변환을 수행할 수는 `D` 맨 왼쪽에 대 한 포인터로 `A` 두 단계에서 하위 개체입니다. 크로스에서 캐스팅을 수행할 수 있습니다 `D` 를 `B`에서 암시적 변환이 다음 `B` 를 `A`합니다. 예:  
+ 캐스트 크로스 고려, 실제로에 대 한 포인터에서 변환을 수행할 수는 `D` 맨 왼쪽에 대 한 포인터로 `A` 두 단계에서 하위 개체입니다. 크로스에서 캐스팅을 수행할 수 있습니다 `D` 를 `B`에서 암시적 변환이 다음 `B` 를 `A`합니다. 예를 들어:  
   
 ```  
 // dynamic_cast_6.cpp  
@@ -204,7 +199,7 @@ void f(D* pd) {
   
  Null 포인터 값으로 대상 형식의 null 포인터 값으로 변환 됩니다 `dynamic_cast`합니다.  
   
- 사용 하는 경우 `dynamic_cast < type-id > ( expression )`경우 `expression` 형식으로 안전 하 게 변환할 수 없습니다 `type-id`, 런타임 검사 하면 실패로 캐스팅 합니다. 예:  
+ 사용 하는 경우 `dynamic_cast < type-id > ( expression )`경우 `expression` 형식으로 안전 하 게 변환할 수 없습니다 `type-id`, 런타임 검사 하면 실패로 캐스팅 합니다. 예를 들어:  
   
 ```  
 // dynamic_cast_7.cpp  
@@ -223,7 +218,7 @@ void f() {
   
  참조 [typeid](../cpp/typeid-operator.md) 에 대 한 설명은 `__non_rtti_object` 예외입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플 기본 클래스 (구조체 A) 포인터 (C 구조체) 개체를 만듭니다.  이 더한 없는 팩트는 가상 함수, 런타임 다형성을 사용 하도록 설정 합니다.  
   
  또한 샘플 계층 구조에서 비가상 함수를 호출합니다.  

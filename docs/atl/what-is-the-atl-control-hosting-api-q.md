@@ -1,13 +1,10 @@
 ---
-title: "란 ATL 컨트롤 호스팅 API? | Microsoft 문서"
-ms.custom: 
+title: 란 ATL 컨트롤 호스팅 API? | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - control-hosting API
 - controls [ATL], hosting APIs
 ms.assetid: 75b27e45-cfba-4950-aa35-96cc7d8da753
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e985ffd3b514feec81f4fee540a95792eb3658e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 30b104e21259006da41c236c168431d85b43e0d4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-is-the-atl-control-hosting-api"></a>란 ATL 컨트롤 호스팅 API?
 ATL 컨트롤 호스팅의 API를 사용 하면 모든 창이 ActiveX 컨트롤 컨테이너 역할을 하는 함수 집합입니다. 이러한 함수 구현 해야 합니다 또는 동적으로 소스 코드로 사용할 수 있기 때문에 프로젝트에 연결 하 고이 노출 ATL90.dll 하 여 만듭니다. 컨트롤 호스팅 함수는 아래 표에 나열 됩니다.  

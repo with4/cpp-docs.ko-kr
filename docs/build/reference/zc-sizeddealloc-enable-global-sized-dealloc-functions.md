@@ -1,10 +1,10 @@
 ---
-title: "/Zc:sizedDealloc (전역 크기의 할당 해제 함수 사용) | Microsoft Docs"
-ms.custom: 
+title: /Zc:sizedDealloc (전역 크기의 할당 해제 함수 사용) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/06/2018
 ms.technology:
 - cpp-tools
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - sizedDealloc
 - /Zc:sizedDealloc
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3a73ace0-4d36-420a-b699-0ca6fc0dd134
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df3ae48e0d83fc0e0bd0f0b34b5c84c78d069a22
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 0a912b87240ad37e29cade077b7a93aa1e7886a6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="zcsizeddealloc-enable-global-sized-deallocation-functions"></a>/Zc:sizedDealloc (전역 크기의 할당 해제 함수 사용)
 
@@ -58,7 +57,7 @@ Visual C++의 규칙과 관련된 문제에 대한 자세한 내용은 [Nonstand
 
 1. 수정 된 **추가 옵션** 포함할 속성을 **/Zc:sizedDealloc** 또는 **/zc: sizeddealloc-** 선택한 후 **확인**합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [컴파일러 옵션](../../build/reference/compiler-options.md)<br/>
 [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)<br/>

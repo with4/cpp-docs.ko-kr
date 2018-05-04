@@ -1,12 +1,9 @@
 ---
-title: "CComSafeArray 클래스 | Microsoft Docs"
-ms.custom: 
+title: CComSafeArray 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComSafeArray
@@ -37,17 +34,15 @@ dev_langs:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bed846015090ef9c4da841adff4968c91d8719d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1c7c4e0603d70513194f8672752ec704011e8326
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray 클래스
 이 클래스는 **SAFEARRAY** 구조체의 래퍼입니다.  
@@ -144,10 +139,10 @@ class CComSafeArray
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlsafe.h  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities#75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
   
-##  <a name="add"></a>CComSafeArray::Add  
+##  <a name="add"></a>  CComSafeArray::Add  
  하나 이상의 요소 또는 **SAFEARRAY** 구조체를 `CComSafeArray`에 추가합니다.  
   
 ```
@@ -180,7 +175,7 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
   
  `bCopy` 플래그 고려할 때 형식의 요소 `BSTR` 또는 **VARIANT** 배열에 추가 됩니다. 기본값 **TRUE** 요소 배열에 추가 될 때 데이터의 새 복사본이 생성 되 보장 합니다.  
   
-##  <a name="attach"></a>CComSafeArray::Attach  
+##  <a name="attach"></a>  CComSafeArray::Attach  
  **SAFEARRAY** 구조체를 `CComSafeArray` 개체에 연결합니다.  
   
 ```
@@ -197,7 +192,7 @@ HRESULT Attach(const SAFEARRAY* psaSrc);
 ### <a name="remarks"></a>설명  
  연결는 **SAFEARRAY** 구조체는 `CComSafeArray` 개체를 기존 `CComSafeArray` 사용할 수 있는 방법입니다.  
   
-##  <a name="ccomsafearray"></a>CComSafeArray::CComSafeArray  
+##  <a name="ccomsafearray"></a>  CComSafeArray::CComSafeArray  
  생성자입니다.  
   
 ```
@@ -236,7 +231,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
  
           `CComSafeArray` 개체를 만듭니다.  
   
-##  <a name="dtor"></a>CComSafeArray:: ~ CComSafeArray  
+##  <a name="dtor"></a>  CComSafeArray:: ~ CComSafeArray  
  소멸자입니다.  
   
 ```
@@ -246,7 +241,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 ### <a name="remarks"></a>설명  
  할당 된 모든 리소스를 해제합니다.  
   
-##  <a name="copyfrom"></a>CComSafeArray::CopyFrom  
+##  <a name="copyfrom"></a>  CComSafeArray::CopyFrom  
  **SAFEARRAY** 구조체의 내용을 `CComSafeArray` 개체에 복사합니다.  
   
 ```
@@ -263,7 +258,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
 ### <a name="remarks"></a>설명  
  콘텐츠를 복사 하는이 메서드는 **SAFEARRAY** 현재 `CComSafeArray` 개체입니다. 배열의 기존 내용은 대체 됩니다.  
   
-##  <a name="copyto"></a>CComSafeArray::CopyTo  
+##  <a name="copyto"></a>  CComSafeArray::CopyTo  
  `CComSafeArray` 개체의 복사본을 만듭니다.  
   
 ```
@@ -321,7 +316,7 @@ HRESULT Destroy();
 ### <a name="remarks"></a>설명  
  기존 소멸 `CComSafeArray` 개체와 모든 포함 된 데이터입니다.  
   
-##  <a name="detach"></a>CComSafeArray::Detach  
+##  <a name="detach"></a>  CComSafeArray::Detach  
  **SAFEARRAY** 를 `CComSafeArray` 개체에서 분리합니다.  
   
 ```
@@ -334,7 +329,7 @@ LPSAFEARRAY Detach();
 ### <a name="remarks"></a>설명  
  이 메서드를 분리는 **SAFEARRAY** 에서 개체는 `CComSafeArray` 개체입니다.  
   
-##  <a name="getat"></a>CComSafeArray::GetAt  
+##  <a name="getat"></a>  CComSafeArray::GetAt  
  1차원 배열에서 단일 요소를 검색합니다.  
   
 ```
@@ -348,7 +343,7 @@ T& GetAt(LONG lIndex) const;
 ### <a name="return-value"></a>반환 값  
  필요한 배열 요소에 대 한 참조를 반환합니다.  
   
-##  <a name="getcount"></a>CComSafeArray::GetCount  
+##  <a name="getcount"></a>  CComSafeArray::GetCount  
  배열의 요소 수를 반환합니다.  
   
 ```
@@ -365,7 +360,7 @@ ULONG GetCount(UINT uDim = 0) const;
 ### <a name="remarks"></a>설명  
  다차원 배열에 사용 하는 경우이 메서드는 특정 차원에서 요소 수를 반환 합니다.  
   
-##  <a name="getdimensions"></a>CComSafeArray::GetDimensions  
+##  <a name="getdimensions"></a>  CComSafeArray::GetDimensions  
  배열의 차원 수를 반환합니다.  
   
 ```
@@ -375,7 +370,7 @@ UINT GetDimensions() const;
 ### <a name="return-value"></a>반환 값  
  배열의 차원 수를 반환합니다.  
   
-##  <a name="getlowerbound"></a>CComSafeArray::GetLowerBound  
+##  <a name="getlowerbound"></a>  CComSafeArray::GetLowerBound  
  배열의 지정된 차원에 대한 하한을 반환합니다.  
   
 ```
@@ -392,7 +387,7 @@ LONG GetLowerBound(UINT uDim = 0) const;
 ### <a name="remarks"></a>설명  
  하 한이 0 이면 해당 첫 번째 요소는 요소 번호 0는 C 형식의 배열을 나타냅니다. 오류 발생 시 예를 들어 잘못 된 차원 인수에이 메서드를 호출 `AtlThrow` 오류를 설명 하는 hresult입니다.  
   
-##  <a name="getsafearrayptr"></a>CComSafeArray::GetSafeArrayPtr  
+##  <a name="getsafearrayptr"></a>  CComSafeArray::GetSafeArrayPtr  
  `m_psa` 데이터 멤버의 주소를 반환합니다.  
   
 ```
@@ -402,7 +397,7 @@ LPSAFEARRAY* GetSafeArrayPtr() throw();
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터를 반환 합니다.는 [CComSafeArray::m_psa](#m_psa) 데이터 멤버입니다.  
   
-##  <a name="gettype"></a>CComSafeArray::GetType  
+##  <a name="gettype"></a>  CComSafeArray::GetType  
  배열에 저장된 데이터의 형식을 반환합니다.  
   
 ```
@@ -430,7 +425,7 @@ VARTYPE GetType() const;
 |VT_VARIANT|variant pointer|  
 |VT_CY|Currency 데이터 형식|  
   
-##  <a name="getupperbound"></a>CComSafeArray::GetUpperBound  
+##  <a name="getupperbound"></a>  CComSafeArray::GetUpperBound  
  배열의 모든 차원에 대한 상한을 반환합니다.  
   
 ```
@@ -447,7 +442,7 @@ LONG GetUpperBound(UINT uDim = 0) const;
 ### <a name="remarks"></a>설명  
  오류 발생 시 예를 들어 잘못 된 차원 인수에이 메서드를 호출 `AtlThrow` 오류를 설명 하는 hresult입니다.  
   
-##  <a name="issizable"></a>CComSafeArray::IsSizable  
+##  <a name="issizable"></a>  CComSafeArray::IsSizable  
  `CComSafeArray` 개체의 크기를 조정할 수 있는지 테스트합니다.  
   
 ```
@@ -457,14 +452,14 @@ bool IsSizable() const;
 ### <a name="return-value"></a>반환 값  
  반환 **true** 경우는 `CComSafeArray` 조정할 수 있는 **false** 불가능 한 경우.  
   
-##  <a name="m_psa"></a>CComSafeArray::m_psa  
+##  <a name="m_psa"></a>  CComSafeArray::m_psa  
  주소를 보유는 **SAFEARRAY** 구조에 액세스 합니다.  
   
 ```
 LPSAFEARRAY m_psa;
 ```  
   
-##  <a name="multidimgetat"></a>CComSafeArray::MultiDimGetAt  
+##  <a name="multidimgetat"></a>  CComSafeArray::MultiDimGetAt  
  다차원 배열에서 단일 요소를 검색합니다.  
   
 ```
@@ -481,7 +476,7 @@ HRESULT MultiDimGetAt(const LONG* alIndex, T& t);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="multidimsetat"></a>CComSafeArray::MultiDimSetAt  
+##  <a name="multidimsetat"></a>  CComSafeArray::MultiDimSetAt  
  다차원 배열의 요소 값을 설정합니다.  
   
 ```
@@ -501,7 +496,7 @@ HRESULT MultiDimSetAt(const LONG* alIndex, const T& t);
 ### <a name="remarks"></a>설명  
  이의 다차원 버전 [CComSafeArray::SetAt](#setat)합니다.  
   
-##  <a name="operator_at"></a>CComSafeArray::operator\[\]  
+##  <a name="operator_at"></a>  CComSafeArray::operator \[\]  
  배열에서 요소를 검색합니다.  
   
 ```
@@ -519,7 +514,7 @@ T& operator[]int nindex) const;
 ### <a name="remarks"></a>설명  
  비슷한 기능을 수행 [CComSafeArray::GetAt](#getat)있지만이 연산자는 1 차원 배열에만 작동 합니다.  
   
-##  <a name="operator_eq"></a>CComSafeArray::operator =  
+##  <a name="operator_eq"></a>  CComSafeArray::operator =  
  대입 연산자입니다.  
   
 ```
@@ -537,7 +532,7 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 ### <a name="return-value"></a>반환 값  
  배열에 저장된 데이터의 형식을 반환합니다.  
   
-##  <a name="operator_lpsafearray"></a>CComSafeArray::operator LPSAFEARRAY  
+##  <a name="operator_lpsafearray"></a>  CComSafeArray::operator LPSAFEARRAY  
  **SAFEARRAY** 포인터에 값을 캐스팅합니다.  
   
 ```
@@ -547,7 +542,7 @@ operator LPSAFEARRAY() const;
 ### <a name="return-value"></a>반환 값  
  **SAFEARRAY** 포인터에 값을 캐스팅합니다.  
   
-##  <a name="resize"></a>CComSafeArray::Resize  
+##  <a name="resize"></a>  CComSafeArray::Resize  
  `CComSafeArray` 개체의 크기를 조정합니다.  
   
 ```
@@ -571,7 +566,7 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
 ### <a name="remarks"></a>설명  
  이 메서드는 맨 오른쪽 차원만 조정합니다. 반환 하는 배열 크기가 조정 되지 것입니다 **IsResizable** 으로 **false**합니다.  
   
-##  <a name="setat"></a>CComSafeArray::SetAt  
+##  <a name="setat"></a>  CComSafeArray::SetAt  
  1차원 배열의 요소 값을 설정합니다.  
   
 ```
