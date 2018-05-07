@@ -1,12 +1,9 @@
 ---
-title: "심각한 오류 C1083 | Microsoft Docs"
-ms.custom: 
+title: 심각한 오류 C1083 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/01/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C1083
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd929403afc86beabf185d099a79bfab5578482a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d25914a6b391f54be5b4b60dbbf716436dc4d2d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fatal-error-c1083"></a>심각한 오류 C1083
 
@@ -117,7 +112,7 @@ C1083 오류가 잘못된 버전의 파일이 포함되었음을 나타낼 수�
 
 - 파일 핸들이 충분하지 않습니다. 일부 응용 프로그램을 닫은 후 다시 컴파일하십시오. 이러한 경우는 일반적인 상황에서 거의 발생하지 않습니다. 하지만 실제 메모리가 제한된 컴퓨터에서 큰 프로젝트를 빌드하는 경우 발생할 수 있습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 C1083 오류가 발생 하는 경우 헤더 파일 `"test.h"` 포함 검색 경로에 또는 소스 디렉터리에 존재 하지 않습니다.
 
@@ -130,6 +125,6 @@ C1083 오류가 잘못된 버전의 파일이 포함되었음을 나타낼 수�
 
 IDE 또는 명령줄에서 C/c + + 프로젝트를 빌드하는 방법에 대 한 정보 및 환경 변수를 설정 하는 방법에 대 한 정보에 대 한 참조 [C/c + + 프로그램 빌드](../../build/building-c-cpp-programs.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [MSBuild 속성](/visualstudio/msbuild/msbuild-properties)

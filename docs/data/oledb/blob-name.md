@@ -1,12 +1,9 @@
 ---
 title: BLOB_NAME | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - BLOB_NAME
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - BLOB_NAME macro
 ms.assetid: 757acd0d-946d-447d-937e-94ecd700ba38
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b4d5d7bbad25c7b2921e7b379c1014f893216d3d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b060b82654a0603674d1d58ec906d36edd9fcda8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="blobname"></a>BLOB_NAME
 함께 사용할 `BEGIN_COLUMN_MAP` 및 `END_COLUMN_MAP` binary large object 바인딩할 ([BLOB](https://msdn.microsoft.com/en-us/library/ms711511.aspx)). 비슷한 [BLOB_ENTRY](../../data/oledb/blob-entry.md)제외 하 고이 매크로 열 번호 대신 열 이름을 사용 합니다.  
@@ -50,7 +45,7 @@ BLOB_NAME(pszName, IID, flags, data )
  `data`  
  [in] 사용자 레코드에서 해당 데이터 멤버입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  참조 [BLOB을 검색 하는 방법을?](../../data/oledb/retrieving-a-blob.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  

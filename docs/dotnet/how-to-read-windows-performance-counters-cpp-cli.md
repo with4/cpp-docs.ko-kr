@@ -1,13 +1,10 @@
 ---
-title: "방법: Windows 성능 카운터 읽기 (C + + /cli CLI) | Microsoft Docs"
-ms.custom: 
+title: '방법: Windows 성능 카운터 읽기 (C + + /cli CLI) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - performance
 - performance monitoring
 ms.assetid: 9e1c836c-cb0f-4f37-9a93-3dca6412d6b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e3bbfcf020d1700effdc770b5a5e04892b72d8cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3a69f8c07572416a4f26c915a9bd81a434a45eb9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-read-windows-performance-counters-ccli"></a>방법: Windows 성능 카운터 읽기(C++/CLI)
 일부 응용 프로그램 및 Windows 하위 시스템에는 Windows 성능 시스템을 통해 성능 데이터를 표시 합니다. 이러한 카운터를 사용 하 여 액세스할 수는 <xref:System.Diagnostics.PerformanceCounterCategory> 및 <xref:System.Diagnostics.PerformanceCounter> 에 상주 하는 클래스는 <xref:System.Diagnostics?displayProperty=fullName> 네임 스페이스입니다.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  이 예제를 Windows Vista에서 실행하려면 관리 권한이 필요합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // processor_timer.cpp  

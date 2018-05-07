@@ -1,13 +1,10 @@
 ---
-title: "ODBC 및 데이터베이스 클래스 | Microsoft Docs"
-ms.custom: 
+title: ODBC 및 데이터베이스 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - ODBC classes [C++], MFC database classes
 - MFC [C++], ODBC and
 ms.assetid: b166f82d-6f85-4556-aac8-fb851235d22c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e3041a4fc027a8786fb62db7df6eaf486633ce97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: abbb20b76f8e24a9b0f20961728dd8e428733654
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-and-the-database-classes"></a>ODBC 및 데이터베이스 클래스
 ODBC API 함수 호출이 일반적으로 하는 것 직접 멤버에서의 기능을 캡슐화 하는 MFC ODBC 데이터베이스 클래스는 [CDatabase](../../mfc/reference/cdatabase-class.md) 및 [CRecordset](../../mfc/reference/crecordset-class.md) 클래스입니다. 예를 들어 복잡 한 ODBC 호출 시퀀스, 저장소 위치, 오류 조건 처리 및 기타 작업에 반환 되는 레코드의 바인딩을 관리 사용자에 대 한 데이터베이스 클래스 합니다. 훨씬 단순한 클래스 인터페이스를 사용 하 여 recordset 개체를 통해 레코드를 조작 하는 결과적으로, 합니다.  

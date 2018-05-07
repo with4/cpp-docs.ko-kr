@@ -1,31 +1,26 @@
 ---
-title: "방법: Windows Forms에서 DDX DDV 데이터 바인딩 수행 | Microsoft Docs"
-ms.custom: 
+title: '방법: Windows Forms에서 DDX DDV 데이터 바인딩 수행 | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9996fd10bad8578bd70739aa10b863bcea7f3c18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f6992aa0c7238d2dc89a8084c7b870dae23067a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>방법: Windows Forms에서 DDX/DDV 데이터 바인딩 수행
 [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol) 호출 [CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol) 리소스 컨트롤 id입니다. 일치 하는 컨트롤을 만들려면 사용 하는 경우 `DDX_ManagedControl` 에 대 한는 `CWinFormsControl` 컨트롤 마법사에서 생성 된 코드에서 호출 하지 않아야 `CreateManagedControl` 동일한 컨트롤에 대 한 명시적으로 합니다.  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
  다음 예제에서는 네이티브 c + + 문자열을.NET 사용자 컨트롤에 바인딩하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음은 MFC 문자열의 DDX/DDV 데이터 바인딩 예제 `m_str` 사용자 정의 `NameText` .NET 사용자 컨트롤의 속성입니다.  
   
  컨트롤을 만들 때 [CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) 호출 `CMyDlg::DoDataExchange` 처음으로 하므로 모든 코드를 참조 하는 `m_UserControl` 뒤에 야는 `DDX_ManagedControl` 호출 합니다.  
@@ -51,7 +46,7 @@ class CMFC01Dlg : public CDialog
 };  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 CMFC01Dlg의 구현에 저장 합니다.  
   
 ```  
@@ -69,7 +64,7 @@ void CMFC01Dlg::DoDataExchange(CDataExchange* pDX)
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이제 확인 단추 클릭에 대 한 처리기 메서드를 추가 합니다. 클릭는 **리소스 뷰** 탭 합니다. 리소스 보기에서 두 번 클릭 `IDD_MFC01_DIALOG`합니다. 대화 상자 리소스는 리소스 편집기에 나타납니다. 다음 두 번 클릭 하면 확인 단추 클릭...  
   
  다음과 같이 해당 처리기를 정의 합니다.  
@@ -82,7 +77,7 @@ void CMFC01Dlg::OnBnClickedOk()
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  BOOL CMFC01Dlg::OnInitDialog()의 구현에 다음 줄을 추가 하십시오.  
   
 ```  

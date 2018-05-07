@@ -1,13 +1,10 @@
 ---
-title: "Visual Studio에서 c + + 프로젝트 빌드 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 c + + 프로젝트 빌드 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - projects [C++], building
 - builds [C++], about building in Visual Studio
 ms.assetid: 9e8bc1a2-bb17-4951-937a-c757ed88d2d1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 074b43619d307d4d6ffeec1a057c9c27a4f9d05f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a7008e7fe670471301968482fbd4c6c758f0ff5e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="building-c-projects-in-visual-studio"></a>Visual Studio에서 C++ 프로젝트 빌드
 Visual Studio IDE(통합 개발 환경)에는 전체 솔루션이나 전체 솔루션 중 한 개의 프로젝트만 빌드할 수 있는 여러 가지 방법이 있습니다. 또한 빌드 설정을 수정하고 사용자 지정 빌드 단계를 지정하여 개발 프로세스를 보다 효율적으로 만들 수 있습니다.  
@@ -44,7 +39,7 @@ Visual Studio IDE(통합 개발 환경)에는 전체 솔루션이나 전체 솔�
   
  선택한 프로젝트를 빌드하려면 **솔루션 탐색기**를 할 수 있습니다.  
   
--   메뉴 모음에서 **빌드**, **빌드 \<프로젝트 이름 >**합니다.  
+-   메뉴 모음에서 **빌드**, **빌드 \<프로젝트 이름 >** 합니다.  
   
 -   또는 **솔루션 탐색기**를 프로젝트에 대 한 바로 가기 메뉴를 열고 다음 선택 **빌드**합니다.  
   

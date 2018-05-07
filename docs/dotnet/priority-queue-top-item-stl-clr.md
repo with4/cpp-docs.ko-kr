@@ -1,12 +1,9 @@
 ---
 title: 'priority_queue:: top_item (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::priority_queue::top_item
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - top_item member [STL/CLR]
 ms.assetid: d497403b-6b1d-4c6e-a0f4-c744cc5fad75
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9cc5dc2656a1083b4aaa2b6cadc731a6010968e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3a36bff75f0c1140157078d7e747dd576dbd684a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="priorityqueuetopitem-stlclr"></a>priority_queue::top_item(STL/CLR)
 우선 순위가 가장 높은 요소에 액세스 합니다.  
@@ -40,7 +35,7 @@ property value_type back_item;
 ## <a name="remarks"></a>설명  
  비어 있는 제어 된 시퀀스의 최상위 (가장 높은 우선 순위) 요소를 액세스 하는 속성입니다. 읽기 또는 존재 하는 것을 알고 있는 경우 우선 순위가 가장 높은 요소를 쓰기 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_priority_queue_top_item.cpp   

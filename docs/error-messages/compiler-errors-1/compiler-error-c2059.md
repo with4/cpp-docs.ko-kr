@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C2059 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C2059 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2059
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a87f9c3dbb1405463804b7abd5c94abe04a42845
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69182e4b27b474cafe60b71b02594a244f65a09b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2059"></a>컴파일러 오류 C2059
 구문 오류: 'token'  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  오류 메시지는 바로 뒤에 기호에 대해 발생 하는 경우는 `typedef` 변수, 변수 소스 코드에 정의 되어 있는지 확인 합니다.  
   
- C2059 오류가 발생할 수 있으므로, nothing으로 계산 되는 기호 때 **/D** `symbol`  **=**  컴파일하는 데 사용 됩니다.  
+ C2059 오류가 발생할 수 있으므로, nothing으로 계산 되는 기호 때 **/D** `symbol` **=** 컴파일하는 데 사용 됩니다.  
   
 ```  
 // C2059a.cpp  

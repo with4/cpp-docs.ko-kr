@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C3114 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C3114 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3114
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3114
 ms.assetid: b5d2df4f-87d0-4292-9981-25c6a6013c05
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 509c0dd1d85187871e78cfa93a66bc4ef385bbb6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69001d415167f976d0f30c2dd5a0181cc032d0d1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3114"></a>컴파일러 오류 C3114
 'argument': 잘못 명명 된 특성 인수입니다.  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
  자세한 내용은 참조 [속성](../../windows/property-cpp-component-extensions.md) 및 [사용자 정의 특성](../../windows/user-defined-attributes-cpp-component-extensions.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C3114 오류가 발생 합니다.  
   
 ```  

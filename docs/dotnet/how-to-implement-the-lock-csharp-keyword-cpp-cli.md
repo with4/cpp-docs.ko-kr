@@ -1,38 +1,33 @@
 ---
-title: "방법: lock C# 키워드 구현 (C + + /cli CLI) | Microsoft Docs"
-ms.custom: 
+title: '방법: lock C# 키워드 구현 (C + + /cli CLI) | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - lock statement
 - lock C# keyword [C++]
 ms.assetid: 436fe544-ffb7-49b9-9798-90794e9974de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e016a0f481063711cb5daafe45110a1d53b16253
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dba651a7bcbfb1e8d7a0d107fe2400e222b06111
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-implement-the-lock-c-keyword-ccli"></a>방법: lock C# 키워드 구현(C++/CLI)
 이 항목에서는 C# 구현 하는 방법을 보여 줍니다. `lock` Visual c + +의 키워드입니다. 
   
  사용할 수도 있습니다는 `lock` c + + 지원 라이브러리에 있는 클래스입니다. 참조 [동기화 (lock 클래스)](../dotnet/synchronization-lock-class.md) 자세한 정보에 대 한 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // CS_lock_in_CPP.cpp  

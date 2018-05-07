@@ -1,13 +1,10 @@
 ---
-title: "활성화 (c + +) | Microsoft Docs"
-ms.custom: 
+title: 활성화 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - activation [MFC], embedded OLE items
 - OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70017721fb59fa0c6d18d568546d9618257328b5
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 34b6d6e9313092a8f9a0a11967c7c6a62ed15e15
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activation-c"></a>활성화(C++)
 이 문서에서는 OLE 항목의 비주얼 편집 활성화의 역할을 설명 합니다. OLE 항목이 컨테이너 문서에 포함 된, 사용할 필요할 수 있습니다. 이 수행 하려면 사용자가 해당 항목을 활성화 하는 항목을 두 번 클릭 합니다. 정품 인증에 대 한 가장 자주 나타나는 활동 편집 중입니다. 많은 현재 OLE 항목 편집을 위해 활성화 될 때 메뉴 및 도구 모음 항목을 만든 서버 응용 프로그램에 속한 반영 하도록 변경 하려면 현재 프레임 창에 발생 합니다. 이 동작을 같이 내부 활성화를 알려진 컨테이너 문서 창 종료 하지 않고 복합 문서에 포함 된 모든 항목을 편집할 수 있습니다.  

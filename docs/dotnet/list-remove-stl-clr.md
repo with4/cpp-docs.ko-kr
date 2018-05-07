@@ -1,12 +1,9 @@
 ---
 title: 'list:: remove (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::list::remove
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - remove member [STL/CLR]
 ms.assetid: eaf598ee-e8fd-4cc0-be69-ca81a80e1d51
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 19534e3b2552c8226dee72862f8f9fdfb1709ce7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 785affb742b0055c0b146006d33ec0ed031c93b0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listremove-stlclr"></a>list::remove(STL/CLR)
 지정된 된 값을 가진 요소를 제거합니다.  
@@ -44,7 +39,7 @@ void remove(value_type val);
 ## <a name="remarks"></a>설명  
  멤버 함수는에 대 한 제어 된 시퀀스의 요소를 제거 `((System::Object^)val)->Equals((System::Object^)x)` 가 true (있는 경우). 지정 된 값이 임의의 요소를 지울 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_list_remove.cpp   

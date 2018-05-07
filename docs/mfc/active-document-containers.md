@@ -1,13 +1,10 @@
 ---
-title: "액티브 문서 컨테이너 | Microsoft Docs"
-ms.custom: 
+title: 액티브 문서 컨테이너 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - containers [MFC], active document
 - MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 87546f3c02025438b3e60cd2038fdc885dfedf9f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a47db4f9715c539ecf9bcbfb78e48b7e8edbc94b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-document-containers"></a>액티브 문서 컨테이너
 Microsoft Office Binder 또는 Internet Explorer와 같은 액티브 문서 컨테이너를 사용 하면 여러 문서를 만들고 각각에 대해 여러 응용 프로그램 프레임을 사용 하도록 요구 하는 것 (대신 단일 프레임 내에서 다른 응용 프로그램 종류의 작업을 문서 유형)입니다.  
@@ -49,7 +44,7 @@ Microsoft Office Binder 또는 Internet Explorer와 같은 액티브 문서 컨�
   
 -   [명령 대상](../mfc/message-handling-and-command-targets.md)  
   
-##  <a name="container_requirements"></a>컨테이너 요구 사항  
+##  <a name="container_requirements"></a> 컨테이너 요구 사항  
  액티브 문서 지원 액티브 문서 컨테이너에 둘 이상의 인터페이스 구현을 의미: 포함 된 개체의 인터페이스를 사용 하 여 한 지식이 필요 합니다. 컨테이너는 액티브 문서 자체에 확장 인터페이스를 사용 하는 방법을 알고도 있어야 하는 액티브 문서 확장에도 마찬가지입니다.  
   
  활성 문서를 통합 하는 액티브 문서 컨테이너 수행 해야 합니다.  
@@ -70,7 +65,7 @@ Microsoft Office Binder 또는 Internet Explorer와 같은 액티브 문서 컨�
   
  하나의 구체적 클래스에는 하나의 뷰만 지원 문서 보기와 문서 모두 구성 요소 (즉, 해당 인터페이스)를 구현할 수 있습니다. 또한 한 번에 하나의 뷰만 지원 하는 컨테이너 사이트 결합할 수 문서 사이트 및 사이트 보기는 단일 구체적인 사이트 클래스. 그러나 컨테이너의 프레임 개체 유지 distinct, 되 고 컨테이너의 문서 구성 요소는 단순히 여기에 포함 된 아키텍처;의 완전 한 설명을 제공 하려면 액티브 문서 포함 아키텍처에서 영향을 받지 않습니다.  
   
-##  <a name="document_site_objects"></a>문서 사이트 개체  
+##  <a name="document_site_objects"></a> 문서 사이트 개체  
  액티브 문서 포함 아키텍처에서 문서 사이트는 클라이언트 사이트에 추가 하 여 OLE 문서에서 개체와 동일한는 `IOleDocument` 인터페이스:  
   
  `interface IOleDocumentSite : IUnknown`  
@@ -83,12 +78,12 @@ Microsoft Office Binder 또는 Internet Explorer와 같은 액티브 문서 컨�
   
  문서 사이트는 개념적으로 하나 이상의 "보기 사이트" 개체에 대 한 컨테이너입니다. 각 보기 사이트 개체 문서 사이트에 의해 관리 되는 문서의 각 뷰 개체와 연결 됩니다. 컨테이너 문서 사이트 마다 단일 뷰만 지원, 문서 사이트와 보기 사이트는 하나의 구체적 클래스에 구현할 수 있습니다.  
   
-##  <a name="view_site_objects"></a>사이트 개체 보기  
+##  <a name="view_site_objects"></a> 사이트 개체 보기  
  컨테이너의 보기 사이트 개체는 문서의 특정 보기에 표시 공간을 관리합니다. 표준을 지원할 뿐 아니라 `IOleInPlaceSite` 인터페이스를 구현 또한 일반적으로 사이트 보기 `IContinueCallback` 프로그래밍 방식 인쇄 컨트롤에 대 한 합니다. (View 개체를 되지에 대 한 쿼리는 `IContinueCallback` 에 실제로 구현할 수 있도록 모든 개체 컨테이너 필요 합니다.)  
   
  여러 뷰를 지원 하는 컨테이너 문서 사이트 내 사이트 개체에 여러 보기를 만들 수 있어야 합니다. 통해 제공 된 별도 활성화 및 비활성화 서비스와 각 보기를 제공이 `IOleInPlaceSite`합니다.  
   
-##  <a name="frame_object"></a>프레임 개체  
+##  <a name="frame_object"></a> 프레임 개체  
  컨테이너의 프레임 개체는 대부분의 경우 즉 OLE 문서에서 내부 활성화에 사용 되는 동일한 프레임, 메뉴 및 도구 모음 협상을 처리 하는 것입니다. View 개체를 통해이 프레임 개체에 대 한 액세스는 **IOleInPlaceSite::GetWindowContext**, 또한 (도구 모음 창 수준 협상을 처리할 수 있는 컨테이너 문서를 나타내는 컨테이너 개체에 대 한 액세스를 제공 하는 및 포함 된 개체를 열거)입니다.  
   
  액티브 문서 컨테이너를 추가 하 여 프레임을 강화할 수 `IOleCommandTarget`합니다. 이렇게 하면 현재 문서의 사용자 인터페이스에서이 인터페이스에서 동일한 명령을 보내도록 컨테이너를 허용할 수에 관계 없이 동일한 방식으로 발생 하는 명령을 받을 수 (같은 **새 파일**, **열려**,  **다른 이름으로 저장**, **인쇄**; **복사본 편집**, **붙여넣기**, **실행 취소**, 및 기타) 현재 문서에 있습니다. 자세한 내용은 참조 [명령 대상](../mfc/message-handling-and-command-targets.md)합니다.  

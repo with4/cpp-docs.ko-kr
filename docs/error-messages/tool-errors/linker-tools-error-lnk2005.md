@@ -1,12 +1,9 @@
 ---
-title: "링커 도구 오류 LNK2005 | Microsoft Docs"
-ms.custom: 
+title: 링커 도구 오류 LNK2005 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2005
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK2005
 ms.assetid: d9587adc-68be-425c-8a30-15dbc86717a4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69b5201c3e035d1c0aca0105c136766eba3786f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f853bec220c7d46ed2a0c44ac1e1d45fbca8318f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2005"></a>링커 도구 오류 LNK2005
 *기호* 개체에 이미 정의  
@@ -115,7 +110,7 @@ ms.lasthandoff: 12/21/2017
   
 -   이 오류는 경우에 발생할 수 있습니다는 `extern const` 변수를 두 번 정의 되어 있고 각 정의에서 다른 값을 갖도록 합니다. 이 문제를 해결 하는 일정 한 번만 정의 하거나 네임 스페이스를 사용 하거나 `enum class` 상수를 구분 하기 위해 정의 합니다.  
   
--   이 오류 (예: oledb.lib 및 adsiid.lib) Guid를 정의 하는 다른.lib 파일과 함께에서 uuid.lib를 사용 하는 경우에 발생할 수 있습니다. 예:  
+-   이 오류 (예: oledb.lib 및 adsiid.lib) Guid를 정의 하는 다른.lib 파일과 함께에서 uuid.lib를 사용 하는 경우에 발생할 수 있습니다. 예를 들어:  
   
     ```Output  
     oledb.lib(oledb_i.obj) : error LNK2005: _IID_ITransactionObject  

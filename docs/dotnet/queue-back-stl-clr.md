@@ -1,12 +1,9 @@
 ---
 title: 'queue:: back (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::queue::back
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - back member [STL/CLR]
 ms.assetid: 983a5c0f-0a2f-475f-932b-e7dec9eaffbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8b6f9cd950e42e31727c54aff29b637739bcf6f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a8a7e107b624be256fbe3882a857af066ec4228
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="queueback-stlclr"></a>queue::back(STL/CLR)
 마지막 요소에 액세스합니다.  
@@ -40,7 +35,7 @@ reference back();
 ## <a name="remarks"></a>설명  
  멤버 함수는 비어 있어야 하는 제어 된 시퀀스의 마지막 요소에 대 한 참조를 반환 합니다. 존재 하는 것을 알고 있는 경우 마지막 요소를 액세스 하려면 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_queue_back.cpp   

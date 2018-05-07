@@ -1,30 +1,25 @@
 ---
-title: "데이터베이스 지원 파일 재배포 | Microsoft Docs"
-ms.custom: 
+title: 데이터베이스 지원 파일 재배포 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - redistributing database support files
 - database support files [C++], redistributing
 ms.assetid: d80cffe0-177c-4515-9de7-fbf0517eb8d6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7517222b1dc2e61f45c23a9fc91709672f304768
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a51697367480569e2d27a4cb67791f5fe4d39a8f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-database-support-files"></a>데이터베이스 지원 파일 재배포
 에 대 한 개체 DAO (Data Access) 및 Microsoft Data Access SDK에 포함 된 데이터베이스 기술을 대 한 지원 파일을 재배포할 수 있습니다.  

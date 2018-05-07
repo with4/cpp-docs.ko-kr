@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C2970 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C2970 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2970
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2970
 ms.assetid: 21d90348-20d3-438c-b278-efdbfb93a7d2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29ed219cf0e2faba8d1c12709432a9069c5aacf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0775f9d771b2c9497b3dc731e26c6a3b4e6ab30c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2970"></a>컴파일러 오류 C2970
 'class': 템플릿 매개 변수 'param': 'arg': 내부 링크가 있는 개체를 포함 하는 식을 비형식 인수로 사용할 수 없습니다  

@@ -1,12 +1,9 @@
 ---
 title: 'set:: insert (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::set::insert
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - insert member [STL/CLR]
 ms.assetid: 40472869-5c28-4658-b1d3-3ede4d8b8921
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ada7618d66089550fb7bbdf64e2062120a1dcdad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 619dab8844920f61a19c5159fc96c688cafebfdd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setinsert-stlclr"></a>set::insert(STL/CLR)
 요소를 추가합니다.  
@@ -70,7 +65,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
   
  제어 된 시퀀스의 요소 수 로그 비례 하는 시간을 사용 하는 각 요소를 삽입 합니다. 그러나 삽입 발생할 수 있습니다 분할 상환된 상수 시간에 삽입 지점에 인접 하는 요소를 지정 하는 힌트를 제공 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_set_insert.cpp   

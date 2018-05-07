@@ -2,11 +2,8 @@
 title: 'map:: key_type (STL/CLR) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::map::key_type
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - key_type member [STL/CLR]
 ms.assetid: 5bcf92e4-d9ff-48a2-86da-e24842ccf80c
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 285950f6d155acabee2c049afa2f8b8d38dcf2b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ef8bd428da31fa57b9eab2f73e90d9399a3c5135
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapkeytype-stlclr"></a>map::key_type(STL/CLR)
 정렬 키의 형식입니다.  
@@ -40,7 +35,7 @@ typedef Key key_type;
 ## <a name="remarks"></a>설명  
  이 형식은 템플릿 매개 변수 `Key`의 동의어입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_map_key_type.cpp   

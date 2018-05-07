@@ -1,12 +1,9 @@
 ---
 title: 'vector:: reserve (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::vector::reserve
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - reserve member [STL/CLR]
 ms.assetid: d1d5ede9-9628-4b55-95ec-f087a57205f2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2c8c5ac474cc2b94baedab64854fec3ca3e0a78a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c9c8bbf48d9727ff726ccfb0acde286535aa454
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vectorreserve-stlclr"></a>vector::reserve(STL/CLR)
 컨테이너에 대 한 최소 증가 용량을 보장합니다.  
@@ -44,7 +39,7 @@ void reserve(size_type count);
 ## <a name="remarks"></a>설명  
  멤버 함수를 사용 하면 `capacity()` 예측이 이상 반환 `count`합니다. 컨테이너 지정된 된 크기 성장 했으며 될 때까지 제어 되는 시퀀스에 대 한 저장소 할당 되지 필요 하도록 사용할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_vector_reserve.cpp   

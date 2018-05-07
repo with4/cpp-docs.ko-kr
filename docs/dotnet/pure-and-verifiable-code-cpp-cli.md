@@ -1,13 +1,10 @@
 ---
-title: "순수형 및 안정형 코드 (C + + /cli CLI) | Microsoft Docs"
-ms.custom: 
+title: 순수형 및 안정형 코드 (C + + /cli CLI) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,18 +23,16 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - assemblies [C++], pure code
 ms.assetid: 9050e110-fa11-4356-b56c-665187ff871c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9ba218772bdedf772e995bb9289b18452d599e6c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c4f4b9bd590ad873d0b241d2c095be53ad1dacb4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pure-and-verifiable-code-ccli"></a>순수형 및 안정형 코드(C++/CLI)
 .NET 프로그래밍에 대 한 Visual Studio 2017에 Visual c + +를 사용 하 여 혼합된 어셈블리의 생성을 지원는 [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md) 컴파일러 옵션입니다. **/clr: pure** 및 **: safe** 옵션에는 Visual Studio 2015를 기준으로 사용 되지 않으며 이후 버전의 컴파일러에서 제거 됩니다. 코드를 확인할 수 있으려면 하는 경우 C#로 포팅하 하도록 권장 합니다.
