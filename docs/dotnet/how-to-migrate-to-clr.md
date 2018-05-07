@@ -1,13 +1,10 @@
 ---
-title: "방법:-clr로 마이그레이션 | Microsoft Docs"
-ms.custom: 
+title: 방법:-clr로 마이그레이션 | Microsoft Docs
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cd40443bc656b0e0ec02b1ec05b604a758628321
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: f5d7dafdc377723e33372529af1b8f125561366e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-to-clr"></a>방법: /clr로 마이그레이션
 이 항목에서는 네이티브 코드를 컴파일할 때 발생 하는 문제를 설명 **/clr** (참조 [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md) 자세한 정보에 대 한). **/clr** Visual c + + 모듈을 호출 하 고 관리 되지 않는 모듈과 호환성을 유지 하면서.NET 어셈블리를 호출할 수 있습니다. 참조 [혼합 (네이티브 / 관리) 어셈블리](../dotnet/mixed-native-and-managed-assemblies.md) 및 [네이티브 및.NET 상호 운용성](../dotnet/native-and-dotnet-interoperability.md) 로 컴파일할의 장점에 대 한 자세한 내용은 **/clr**합니다.  
@@ -37,7 +32,7 @@ ms.lasthandoff: 01/29/2018
 ## <a name="known-issues-compiling-library-projects-with-clr"></a>알려진된 문제 컴파일 라이브러리 프로젝트 /clr을 사용한  
  Visual Studio와 라이브러리 프로젝트를 컴파일할 때 몇 가지 알려진된 문제가 포함 **/clr**:  
   
--   코드를 런타임에 형식 쿼리할 수 있습니다 [CRuntimeClass::FromName](../mfc/reference/cruntimeclass-structure.md#fromname)합니다. 그러나 형식이 인 경우 MSIL.dll에서 (사용 하 여 컴파일된 **/clr**)에 대 한 호출 `FromName` (표시 되지 것입니다이 문제가 보낸사람 호출 코드에 다음 문제가 발생 하면 관리 되는.dll에 정적 생성자 실행 전에 발생 하는 경우 실패할 수 있습니다 실행에서 관리 되는.dll). 이 문제를 해결 하려면 관리 되는.dll의 함수를 정의 하 고, 내보내기 등, 네이티브 MFC 응용 프로그램에서 호출 하 여 관리 되는 정적 생성자의 생성을 강제할 수 있습니다. 예:  
+-   코드를 런타임에 형식 쿼리할 수 있습니다 [CRuntimeClass::FromName](../mfc/reference/cruntimeclass-structure.md#fromname)합니다. 그러나 형식이 인 경우 MSIL.dll에서 (사용 하 여 컴파일된 **/clr**)에 대 한 호출 `FromName` (표시 되지 것입니다이 문제가 보낸사람 호출 코드에 다음 문제가 발생 하면 관리 되는.dll에 정적 생성자 실행 전에 발생 하는 경우 실패할 수 있습니다 실행에서 관리 되는.dll). 이 문제를 해결 하려면 관리 되는.dll의 함수를 정의 하 고, 내보내기 등, 네이티브 MFC 응용 프로그램에서 호출 하 여 관리 되는 정적 생성자의 생성을 강제할 수 있습니다. 예를 들어:  
   
     ```  
     // MFC extension DLL Header file:  
@@ -131,7 +126,7 @@ COMObj2->Method(args);  // C++ equivalent
  네이티브 형식은 기본적으로 private입니다. 이 DLL 외부에 표시 되 고 있지는 네이티브 형식에 발생할 수 있습니다. 추가 하 여이 오류를 해결 `public` 이러한 형식에 있습니다.  
   
 ### <a name="floating-point-and-alignment-issues"></a>부동 소수점 및 맞춤 문제  
- `__controlfp`공용 언어 런타임 지원 되지 않습니다 (참조 [_control87, _controlfp, \__control87_2](../c-runtime-library/reference/control87-controlfp-control87-2.md) 자세한 정보에 대 한). CLR은 또한 영향을 미치지 [맞춤](../cpp/align-cpp.md)합니다.  
+ `__controlfp` 공용 언어 런타임 지원 되지 않습니다 (참조 [_control87, _controlfp, \__control87_2](../c-runtime-library/reference/control87-controlfp-control87-2.md) 자세한 정보에 대 한). CLR은 또한 영향을 미치지 [맞춤](../cpp/align-cpp.md)합니다.  
   
 ### <a name="com-initialization"></a>COM 초기화  
  공용 언어 런타임에서 모듈을 초기화 될 때 자동으로 COM를 초기화 합니다 (COM 자동으로 초기화 될 때 초기화 MTA로). 결과적으로, 명시적으로 COM을 초기화 COM이 이미 초기화를 나타내는 반환 코드를 생성 합니다. CLR 이미 다른 스레딩 모델로 COM 초기화 하는 경우 COM 스레딩 모델을 하나를 명시적으로 초기화 하려고 하면 응용 프로그램이 실패 발생할 수 있습니다.  

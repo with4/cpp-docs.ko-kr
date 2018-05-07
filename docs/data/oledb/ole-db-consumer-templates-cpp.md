@@ -1,12 +1,9 @@
 ---
-title: "OLE DB 소비자 템플릿 (c + +) | Microsoft Docs"
-ms.custom: 
+title: OLE DB 소비자 템플릿 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - OLE DB consumer templates [C++]
 - databases [C++], consumers
 ms.assetid: d3e42612-0bc0-4d65-9c32-0e8a7b219e82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 953711a6fd026c0b5409392393d854917c650cbf
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 39264ed7485e67377963316730689645c73f185f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB 소비자 템플릿(C++)
 OLE DB 소비자 템플릿은 OLE DB 버전 2.6 사양을 지원합니다. OLE DB 소비자 템플릿은 OLE DB 2.6에 대해 테스트되지만 사양에서 모든 인터페이스를 지원하지는 않습니다. 소비자 템플릿은 OLE DB 소비자를 구현하기 위해 작성해야 하는 코드의 양을 최소화합니다. 이 템플릿은 다음과 같은 장점이 있습니다.  

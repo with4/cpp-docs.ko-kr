@@ -1,13 +1,10 @@
 ---
-title: "MFC 대화 상자에서 사용자 정의 컨트롤을 형성 하는 Windows 호스트 | Microsoft Docs"
-ms.custom: 
+title: MFC 대화 상자에서 사용자 정의 컨트롤을 형성 하는 Windows 호스트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - hosting Windows Forms control [C++]
 - Windows Forms [C++], MFC support
 ms.assetid: 9f66ee52-b7cb-4ffd-8306-392a5da990d8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: da8e8a54947b329fe36eea5c80bdc13ba5cdfa74
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 291c0856e9d305e0b2b31c6bc233005b111592a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>MFC 대화 상자에서 Windows Form 사용자 정의 컨트롤 호스팅
 MFC ActiveX 컨트롤의 특수 한 종류는 Windows Forms 컨트롤을 호스트 하 고 ActiveX 인터페이스, 속성 및 메서드를 사용 하 여 컨트롤와 통신 하는 <xref:System.Windows.Forms.Control> 클래스입니다. 컨트롤에서 작동 하려면.NET Framework 속성 및 메서드를 사용 하는 것이 좋습니다.  
@@ -44,7 +39,7 @@ MFC ActiveX 컨트롤의 특수 한 종류는 Windows Forms 컨트롤을 호스�
  [방법: 네이티브 C++ 클래스에서 Windows Forms 이벤트 싱크](../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)  
   
 ## <a name="reference"></a>참조  
- [CWinFormsControl 클래스](../mfc/reference/cwinformscontrol-class.md) &#124; [CDialog 클래스](../mfc/reference/cdialog-class.md) &#124; [CWnd 클래스](../mfc/reference/cwnd-class.md) &#124;<xref:System.Windows.Forms.Control>  
+ [CWinFormsControl 클래스](../mfc/reference/cwinformscontrol-class.md) &#124; [CDialog 클래스](../mfc/reference/cdialog-class.md) &#124; [CWnd 클래스](../mfc/reference/cwnd-class.md)&#124; <xref:System.Windows.Forms.Control>  
   
 ## <a name="see-also"></a>참고 항목  
  [MFC의 Windows Form 사용자 정의 컨트롤을 사용 하 여](../dotnet/using-a-windows-form-user-control-in-mfc.md)   

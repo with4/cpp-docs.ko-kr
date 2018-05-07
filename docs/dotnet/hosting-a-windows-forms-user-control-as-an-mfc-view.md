@@ -1,13 +1,10 @@
 ---
-title: "호스팅하는 Windows Forms 사용자 컨트롤을 MFC 뷰로 | Microsoft Docs"
-ms.custom: 
+title: 호스팅하는 Windows Forms 사용자 컨트롤을 MFC 뷰로 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - Windows Forms controls [C++], hosting as an MFC view
 - hosting Windows Forms control [C++]
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7e4e0b7bc081d3b16b3f9aa55719d298f710cdab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf9e54b3e2808a232bc13052c885a341cb51297f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>Windows Forms 사용자 정의 컨트롤을 MFC 뷰로 호스팅
 MFC을 MFC 뷰로에서 Windows Forms 사용자 정의 컨트롤을 호스팅할 CWinFormsView 클래스를 사용 합니다. MFC Windows Forms 뷰는 ActiveX 컨트롤입니다. 사용자 정의 컨트롤 기본 보기의 자식으로 호스트 되 고 기본 보기의 전체 클라이언트 영역을 차지 하지만 40gb.  

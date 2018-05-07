@@ -2,11 +2,8 @@
 title: 'hash_map:: equal_range (STL/CLR) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_map::equal_range
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - equal_range member [STL/CLR]
 ms.assetid: 9b9a18b8-42fd-4d17-91bd-df85e583cf61
-caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8d5e8b628e96fbf147e3b757f0c5ba778dc7a22c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1c42f08ac258ce1a716453ee4060033c121ad4a6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmapequalrange-stlclr"></a>hash_map::equal_range(STL/CLR)
 지정된 키와 일치하는 범위를 찾습니다.  
@@ -44,7 +39,7 @@ cliext::pair<iterator, iterator> equal_range(key_type key);
 ## <a name="remarks"></a>설명  
  멤버 함수는 한 쌍의 반복기를 반환 `cliext::pair<iterator, iterator>(lower_bound(key), upper_bound(key))`합니다. 지정된 된 키와 일치 하는 제어 된 시퀀스의 현재 요소의 범위를 확인 하려면 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```cpp  
 // cliext_hash_map_equal_range.cpp   

@@ -1,11 +1,8 @@
 ---
-title: "Platform:: stathreadattribute 클래스 | Microsoft Docs"
-ms.custom: 
+title: 'Platform:: stathreadattribute 클래스 | Microsoft Docs'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Platform
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db66ba0775ad3b38be1b43fd5781be611ca2f333
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ab58409bf86af77c9b1f751b9978b5e7103bd043
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute 클래스
 응용 프로그램에 대한 스레딩 모델이 STA(단일 스레드 아파트)임을 나타냅니다.  
@@ -50,7 +45,7 @@ public ref class STAThreadAttribute sealed : Attribute
 ### <a name="public-methods"></a>Public 메서드  
  STAThreadAttribute 특성에서 상속 [platform:: object 클래스](../cppcx/platform-object-class.md)합니다. STAThreadAttribute도 다음 멤버를 오버로드하거나 포함합니다.  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[STAThreadAttribute::Equals](#equals)|지정한 개체와 현재 개체가 같은지 여부를 확인합니다.|  
 |[STAThreadAttribute::GetHashCode](#gethashcode)|이 인스턴스의 해시 코드를 반환합니다.|  

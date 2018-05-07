@@ -2,11 +2,8 @@
 title: 'hash_multiset:: lower_bound (STL/CLR) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multiset::lower_bound
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - lower_bound member [STL/CLR]
 ms.assetid: 891898fa-c9e8-4132-a71d-36e5141793f1
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fb799c12bf153ed3279d8d3d6fb10d59bd1cf22d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9cfb7050cbfcbab8ba9bbbb0c24fad199e32b212
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultisetlowerbound-stlclr"></a>hash_multiset::lower_bound(STL/CLR)
 지정된 된 키와 일치 하는 범위의 시작 부분을 찾습니다.  
@@ -44,7 +39,7 @@ iterator lower_bound(key_type key);
 ## <a name="remarks"></a>설명  
  멤버 함수는 첫 번째 요소를 결정 `X` 동일한 버킷으로 해시 제어 된 시퀀스의 `key` 과 순서가 및 `key`합니다. 이러한 요소가 있는 경우 반환 [hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`; 그렇지 않으면 지정 하는 반복기를 반환 `X`합니다. 지정된 된 키와 일치 하는 제어 된 시퀀스의 요소 시퀀스의 시작 부분을 현재 찾을 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_multiset_lower_bound.cpp   

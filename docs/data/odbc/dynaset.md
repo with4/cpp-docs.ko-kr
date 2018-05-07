@@ -1,13 +1,10 @@
 ---
-title: "다이너셋 | Microsoft Docs"
-ms.custom: 
+title: 다이너셋 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - recordsets [C++], dynasets
 - dynasets
 ms.assetid: 2867e6be-208e-4fe7-8bbe-b8697cb1045c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f0f2f7ddd4a1b4021dfff8d533bb81acd84129a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ec71b5b00b26564f9c8dc3c2d98f53f8182b0ca3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynaset"></a>다이너셋
 이 항목에서는 다이너셋 및 설명의 [가용성](#_core_availability_of_dynasets)합니다.  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  업데이트할 수 있는 다이너셋에 대 한 ODBC 드라이버가 위치 지정된 update 문 중 하나를 지원 해야 합니다 또는 **:: SQLSetPos** ODBC API 함수입니다. MFC를 사용 하는 둘 다 지 원하는 경우 **:: SQLSetPos** 효율성에 대 한 합니다.  
   
-##  <a name="_core_availability_of_dynasets"></a>다이너셋 가용성  
+##  <a name="_core_availability_of_dynasets"></a> 다이너셋 가용성  
  MFC 데이터베이스 클래스에는 다음 요구 사항을 충족 될 경우 다이너셋을 지원:  
   
 -   ODBC 커서 라이브러리 DLL이 데이터 원본에 대 한 사용 아니어야 합니다.  

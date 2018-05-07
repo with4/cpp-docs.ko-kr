@@ -2,11 +2,8 @@
 title: marshal_as | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - marshal_as
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - marshal_as template [C++]
 ms.assetid: 2ed717da-2b11-41e5-981d-47d251771989
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1a209b1ee657d6ae6773ee88c64225a7dc5b4f49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ebca4a94fa48feb4ff5fb897293303a395ac4eb8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="marshalas"></a>marshal_as
 이 메서드는 네이티브 및 관리 환경 간에 데이터를 변환합니다.  
@@ -55,7 +50,7 @@ To_Type marshal_as<To_Type>(
   
  마샬링 라이브러리 헤더 파일을 여러 개 구성 됩니다. 모든 변환 파일 하나만 필요 하지만 다른 변환 해야 하는 경우 추가 파일을 포함할 수 있습니다. 어떤 변환에는 연결 된 파일을 보려면 테이블에 확인 `Marshaling Overview`합니다. 에 관계 없이 어떤 변환의 원하는 작업을 수행 하는 네임 스페이스 요구 사항을 항상 적용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서 마샬링하는 `const char*` 에 `System::String` 변수 형식입니다.  
   
 ```  
