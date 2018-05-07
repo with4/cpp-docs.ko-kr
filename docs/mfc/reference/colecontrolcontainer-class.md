@@ -1,12 +1,9 @@
 ---
-title: "COleControlContainer 클래스 | Microsoft Docs"
-ms.custom: 
+title: COleControlContainer 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleControlContainer
@@ -81,17 +78,15 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6d04faa904eba416b290515e5e6773ac6ef9837
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 673ce0694357a397590a29f7328612cfcc3cce09
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer 클래스
 ActiveX 컨트롤의 컨트롤 컨테이너 역할을 합니다.  
@@ -153,7 +148,7 @@ class COleControlContainer : public CCmdTarget
 |[COleControlContainer::m_siteMap](#m_sitemap)|사이트 맵입니다.|  
   
 ## <a name="remarks"></a>설명  
- 하나 이상의 ActiveX 컨트롤 사이트에 대 한 지원을 제공 하 여 이렇게 (구현한 `COleControlSite`). `COleControlContainer`완벽 하 게 구현는 [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770) 및 [IOleContainer](http://msdn.microsoft.com/library/windows/desktop/ms690103) 인터페이스를 자신의 자격 내부 항목으로 처리 하기 위해 포함 된 ActiveX 컨트롤을 허용 합니다.  
+ 하나 이상의 ActiveX 컨트롤 사이트에 대 한 지원을 제공 하 여 이렇게 (구현한 `COleControlSite`). `COleControlContainer` 완벽 하 게 구현는 [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770) 및 [IOleContainer](http://msdn.microsoft.com/library/windows/desktop/ms690103) 인터페이스를 자신의 자격 내부 항목으로 처리 하기 위해 포함 된 ActiveX 컨트롤을 허용 합니다.  
   
  이 클래스와 함께 사용 되는 일반적으로 `COccManager` 및 `COleControlSite` 하나 이상의 ActiveX 컨트롤에 대 한 사용자 지정 사이트와 ActiveX 컨트롤 컨테이너 사용자 지정을 구현 하 합니다.  
   
@@ -167,7 +162,7 @@ class COleControlContainer : public CCmdTarget
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxocc.h  
   
-##  <a name="attachcontrolsite"></a>COleControlContainer::AttachControlSite  
+##  <a name="attachcontrolsite"></a>  COleControlContainer::AttachControlSite  
  만들고 컨트롤 사이트 연결 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -194,7 +189,7 @@ void AttachControlSite(
 > [!NOTE]
 >  MFC 라이브러리에 정적으로 연결 하려는 경우이 함수의 첫 번째 형태를 사용 합니다. 두 번째 형태를 사용 하 여 동적으로 MFC 라이브러리에 연결 하려는 경우.  
   
-##  <a name="broadcastambientpropertychange"></a>COleControlContainer::BroadcastAmbientPropertyChange  
+##  <a name="broadcastambientpropertychange"></a>  COleControlContainer::BroadcastAmbientPropertyChange  
  앰비언트 속성이 변경 된 모든 호스트 컨트롤을 알립니다.  
   
 ```  
@@ -208,7 +203,7 @@ virtual void BroadcastAmbientPropertyChange(DISPID dispid);
 ### <a name="remarks"></a>설명  
  이 함수는 앰비언트 속성 값 변경 될 때 프레임 워크에서 호출 됩니다. 이 동작을 사용자 지정 하려면이 함수를 재정의 합니다.  
   
-##  <a name="checkdlgbutton"></a>COleControlContainer::CheckDlgButton  
+##  <a name="checkdlgbutton"></a>  COleControlContainer::CheckDlgButton  
  단추의 현재 상태를 수정합니다.  
   
 ```  
@@ -230,7 +225,7 @@ virtual void CheckDlgButton(
   
 - **BST_UNCHECKED** 단추 상태 캐시를 설정 합니다.  
   
-##  <a name="checkradiobutton"></a>COleControlContainer::CheckRadioButton  
+##  <a name="checkradiobutton"></a>  COleControlContainer::CheckRadioButton  
  그룹에 지정 된 라디오 단추를 선택 하 고 그룹의 나머지 버튼을 지웁니다.  
   
 ```  
@@ -250,7 +245,7 @@ virtual void CheckRadioButton(
  `nIDCheckButton`  
  라디오 단추를 검사할의 식별자를 지정 합니다.  
   
-##  <a name="colecontrolcontainer"></a>COleControlContainer::COleControlContainer  
+##  <a name="colecontrolcontainer"></a>  COleControlContainer::COleControlContainer  
  `COleControlContainer` 개체를 생성합니다.  
   
 ```  
@@ -264,7 +259,7 @@ explicit COleControlContainer(CWnd* pWnd);
 ### <a name="remarks"></a>설명  
  개체가 성공적으로 만든 후 추가 호출을 사용 하는 사용자 지정 컨트롤 사이트 `AttachControlSite`합니다.  
   
-##  <a name="createcontrol"></a>COleControlContainer::CreateControl  
+##  <a name="createcontrol"></a>  COleControlContainer::CreateControl  
  지정 된에서 호스팅하는 ActiveX 컨트롤을 만듭니다. `COleControlSite` 개체입니다.  
   
 ```  
@@ -342,7 +337,7 @@ BOOL CreateControl(
   
 - **WS_DISABLED** 처음부터 사용할 창을 만듭니다. 사용할 수 없는 창 사용자 로부터 입력을 받을 수 없습니다. 컨트롤에는 Enabled 속성에 설정할 수 있습니다.  
   
-- `WS_BORDER`씬 줄 테두리가 있는 창을 만듭니다. 컨트롤 BorderStyle 속성에 설정할 수 있습니다.  
+- `WS_BORDER` 씬 줄 테두리가 있는 창을 만듭니다. 컨트롤 BorderStyle 속성에 설정할 수 있습니다.  
   
 - **WS_GROUP** 컨트롤 그룹의 첫 번째 컨트롤을 지정 합니다. 사용자 방향 키를 사용 하 여 키보드 포커스를 한 컨트롤의 그룹에서에서 다음 변경할 수 있습니다. 정의 된 모든 컨트롤은 **WS_GROUP** 후 동일한 그룹에 속하는 첫 번째 컨트롤에 스타일입니다. 다음 컨트롤은 **WS_GROUP** 스타일 그룹을 종료 하 고 다음 그룹을 시작 합니다.  
   
@@ -350,7 +345,7 @@ BOOL CreateControl(
   
  두 번째 오버 로드를 사용 하 여 기본 크기의 컨트롤을 만들 수 있습니다.  
   
-##  <a name="createolefont"></a>COleControlContainer::CreateOleFont  
+##  <a name="createolefont"></a>  COleControlContainer::CreateOleFont  
  OLE 글꼴을 만듭니다.  
   
 ```  
@@ -361,7 +356,7 @@ void CreateOleFont(CFont* pFont);
  `pFont`  
  컨트롤 컨테이너에 사용할 글꼴에 대 한 포인터입니다.  
   
-##  <a name="finditem"></a>COleControlContainer::FindItem  
+##  <a name="finditem"></a>  COleControlContainer::FindItem  
  지정된 된 항목을 호스트 하는 사용자 지정 사이트를 찾습니다.  
   
 ```  
@@ -375,7 +370,7 @@ virtual COleControlSite* FindItem(UINT nID) const;
 ### <a name="return-value"></a>반환 값  
  지정된 된 항목의 사용자 지정 사이트에 대 한 포인터입니다.  
   
-##  <a name="freezeallevents"></a>COleControlContainer::FreezeAllEvents  
+##  <a name="freezeallevents"></a>  COleControlContainer::FreezeAllEvents  
  컨테이너는 연결 된 컨트롤 사이트에서 이벤트를 무시 또는 동의 하는 경우를 결정 합니다.  
   
 ```  
@@ -391,7 +386,7 @@ void FreezeAllEvents(BOOL bFreeze);
 > [!NOTE]
 >  컨트롤을 컨트롤 컨테이너에서 요청 하는 경우 이벤트를 발생 시키고 중지 필요 하지 않습니다. 실행을 계속할 수 있지만 컨트롤 컨테이너에서 후속 이벤트를 모두 무시 됩니다.  
   
-##  <a name="getambientprop"></a>COleControlContainer::GetAmbientProp  
+##  <a name="getambientprop"></a>  COleControlContainer::GetAmbientProp  
  지정된 된 앰비언트 속성의 값을 검색 합니다.  
   
 ```  
@@ -414,7 +409,7 @@ virtual BOOL GetAmbientProp(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-##  <a name="getdlgitem"></a>COleControlContainer::GetDlgItem  
+##  <a name="getdlgitem"></a>  COleControlContainer::GetDlgItem  
  대화 상자에서 지정된 된 컨트롤 또는 자식 창 또는 다른 창에 대 한 포인터를 검색합니다.  
   
 ```  
@@ -435,7 +430,7 @@ virtual void GetDlgItem(
 ### <a name="return-value"></a>반환 값  
  대화 상자 항목 창에 대 한 포인터입니다.  
   
-##  <a name="getdlgitemint"></a>COleControlContainer::GetDlgItemInt  
+##  <a name="getdlgitemint"></a>  COleControlContainer::GetDlgItemInt  
  지정된 된 컨트롤의 번역된 된 텍스트의 값을 검색 합니다.  
   
 ```  
@@ -467,7 +462,7 @@ virtual UINT GetDlgItemInt(
   
  변환 된 값 보다 큰 경우이 함수는 0을 반환 **INT_MAX** (에 대 한 부호 있는 숫자) 또는 **UINT_MAX** (번호에 대 한 서명 되지 않은).  
   
-##  <a name="getdlgitemtext"></a>COleControlContainer::GetDlgItemText  
+##  <a name="getdlgitemtext"></a>  COleControlContainer::GetDlgItemText  
  지정된 된 컨트롤의 텍스트를 검색합니다.  
   
 ```  
@@ -492,7 +487,7 @@ virtual int GetDlgItemText(
   
  함수가 실패하면 반환 값은 0입니다. 확장 정보를 가져오려면 오류, 호출 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)합니다.  
   
-##  <a name="handlesetfocus"></a>COleControlContainer::HandleSetFocus  
+##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus  
  컨테이너를 처리 하는 경우 결정 `WM_SETFOCUS` 메시지입니다.  
   
 ```  
@@ -502,7 +497,7 @@ virtual BOOL HandleSetFocus();
 ### <a name="return-value"></a>반환 값  
  컨테이너를 처리 하면 0이 아닌 `WM_SETFOCUS` 메시지; 그렇지 않으면 0입니다.  
   
-##  <a name="handlewindowlessmessage"></a>COleControlContainer::HandleWindowlessMessage  
+##  <a name="handlewindowlessmessage"></a>  COleControlContainer::HandleWindowlessMessage  
  창 없는 컨트롤에 대 한 창 메시지를 처리합니다.  
   
 ```  
@@ -532,7 +527,7 @@ virtual BOOL HandleWindowlessMessage(
 ### <a name="remarks"></a>설명  
  창 없는 컨트롤 메시지 처리를 사용자 지정 하려면이 함수를 재정의 합니다.  
   
-##  <a name="isdlgbuttonchecked"></a>COleControlContainer::IsDlgButtonChecked  
+##  <a name="isdlgbuttonchecked"></a>  COleControlContainer::IsDlgButtonChecked  
  지정 된 단추의 상태를 결정 합니다.  
   
 ```  
@@ -555,77 +550,77 @@ virtual UINT IsDlgButtonChecked(int nIDButton) const;
 ### <a name="remarks"></a>설명  
  단추 상태 컨트롤을 멤버 함수에 따라 결정 됩니다 여부 것 흐리게 표시 되 면이 옵션을 선택 하거나 둘 다 합니다.  
   
-##  <a name="m_crback"></a>COleControlContainer::m_crBack  
+##  <a name="m_crback"></a>  COleControlContainer::m_crBack  
  컨테이너의 배경색입니다.  
   
 ```  
 COLORREF m_crBack;  
 ```  
   
-##  <a name="m_crfore"></a>COleControlContainer::m_crFore  
+##  <a name="m_crfore"></a>  COleControlContainer::m_crFore  
  컨테이너의 전경색입니다.  
   
 ```  
 COLORREF m_crFore;  
 ```  
   
-##  <a name="m_listsitesorwnds"></a>COleControlContainer::m_listSitesOrWnds  
+##  <a name="m_listsitesorwnds"></a>  COleControlContainer::m_listSitesOrWnds  
  목록 컨테이너에 의해 호스팅되는 컨트롤 사이트입니다.  
   
 ```  
 CTypedPtrList<CPtrList, COleControlSiteOrWnd*> m_listSitesOrWnds;  
 ```  
   
-##  <a name="m_nwindowlesscontrols"></a>COleControlContainer::m_nWindowlessControls  
+##  <a name="m_nwindowlesscontrols"></a>  COleControlContainer::m_nWindowlessControls  
  창 없는 컨트롤은 컨트롤 컨테이너에서 호스트의 수입니다.  
   
 ```  
 int m_nWindowlessControls;  
 ```  
   
-##  <a name="m_polefont"></a>COleControlContainer::m_pOleFont  
+##  <a name="m_polefont"></a>  COleControlContainer::m_pOleFont  
  사용자 지정 컨트롤 사이트에서의 OLE 글꼴에 대 한 포인터입니다.  
   
 ```  
 LPFONTDISP m_pOleFont;  
 ```  
   
-##  <a name="m_psitecapture"></a>COleControlContainer::m_pSiteCapture  
+##  <a name="m_psitecapture"></a>  COleControlContainer::m_pSiteCapture  
  캡처 컨트롤 사이트에 대 한 포인터입니다.  
   
 ```  
 COleControlSite* m_pSiteCapture;  
 ```  
   
-##  <a name="m_psitefocus"></a>COleControlContainer::m_pSiteFocus  
+##  <a name="m_psitefocus"></a>  COleControlContainer::m_pSiteFocus  
  현재 입력 포커스가 컨트롤 사이트에 대 한 포인터입니다.  
   
 ```  
 COleControlSite* m_pSiteFocus;  
 ```  
   
-##  <a name="m_psiteuiactive"></a>COleControlContainer::m_pSiteUIActive  
+##  <a name="m_psiteuiactive"></a>  COleControlContainer::m_pSiteUIActive  
  내부 활성화를 컨트롤 사이트에 대 한 포인터입니다.  
   
 ```  
 COleControlSite* m_pSiteUIActive;  
 ```  
   
-##  <a name="m_pwnd"></a>COleControlContainer::m_pWnd  
+##  <a name="m_pwnd"></a>  COleControlContainer::m_pWnd  
  컨테이너와 연결 된 창 개체에 대 한 포인터입니다.  
   
 ```  
 CWnd* m_pWnd;  
 ```  
   
-##  <a name="m_sitemap"></a>COleControlContainer::m_siteMap  
+##  <a name="m_sitemap"></a>  COleControlContainer::m_siteMap  
  사이트 맵입니다.  
   
 ```  
 CMapPtrToPtr m_siteMap;  
 ```  
   
-##  <a name="onpaint"></a>COleControlContainer::OnPaint  
+##  <a name="onpaint"></a>  COleControlContainer::OnPaint  
  처리 하기 위해 프레임 워크에서 호출 `WM_PAINT` 요청 합니다.  
   
 ```  
@@ -642,7 +637,7 @@ virtual BOOL OnPaint(CDC* pDC);
 ### <a name="remarks"></a>설명  
  그리기 프로세스를 사용자 지정 하려면이 함수를 재정의 합니다.  
   
-##  <a name="onuiactivate"></a>COleControlContainer::OnUIActivate  
+##  <a name="onuiactivate"></a>  COleControlContainer::OnUIActivate  
  프레임 워크에서 호출 때 컨트롤 사이트에서 가리키는 `pSite`, 되려고 할 내부 활성화.  
   
 ```  
@@ -656,7 +651,7 @@ virtual void OnUIActivate(COleControlSite* pSite);
 ### <a name="remarks"></a>설명  
  내부 활성화는 컨테이너의 주 메뉴 아래 템플릿으로 바뀝니다 내부 합성 메뉴를 의미 합니다.  
   
-##  <a name="onuideactivate"></a>COleControlContainer::OnUIDeactivate  
+##  <a name="onuideactivate"></a>  COleControlContainer::OnUIDeactivate  
  프레임 워크에서 호출 때 컨트롤 사이트에서 가리키는 `pSite`, 비활성화 되려고 합니다.  
   
 ```  
@@ -670,7 +665,7 @@ virtual void OnUIDeactivate(COleControlSite* pSite);
 ### <a name="remarks"></a>설명  
  이 알림이 수신 되 면 컨테이너는 해당 사용자 인터페이스를 다시 설치 하 고 포커스를 둘 해야 합니다.  
   
-##  <a name="scrollchildren"></a>COleControlContainer::ScrollChildren  
+##  <a name="scrollchildren"></a>  COleControlContainer::ScrollChildren  
  자식 창에서 스크롤 메시지를 받을 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -686,7 +681,7 @@ virtual void ScrollChildren(
  *dy*  
  Y 축을 따라 스크롤의 양, 픽셀입니다.  
   
-##  <a name="senddlgitemmessage"></a>COleControlContainer::SendDlgItemMessage  
+##  <a name="senddlgitemmessage"></a>  COleControlContainer::SendDlgItemMessage  
  지정된 컨트롤에 메시지를 보냅니다.  
   
 ```  
@@ -710,7 +705,7 @@ virtual LRESULT SendDlgItemMessage(
  `lParam`  
  메시지 관련 추가 정보를 지정합니다.  
   
-##  <a name="setdlgitemint"></a>COleControlContainer::SetDlgItemInt  
+##  <a name="setdlgitemint"></a>  COleControlContainer::SetDlgItemInt  
  지정된 된 정수 값의 문자열 표현으로 대화 상자에서 컨트롤의 텍스트를 설정합니다.  
   
 ```  
@@ -730,7 +725,7 @@ virtual void SetDlgItemInt(
  `bSigned`  
  지정 여부는 `nValue` 서명 되었거나 서명 되지 않은 매개 변수입니다. 이 매개 변수가 **TRUE**, `nValue` 서명 합니다. 이 매개 변수가 **TRUE** 및 `nValue` 0, 서명 문자열의 첫 번째 숫자 앞에 배치 되는지 빼기 미만입니다. 이 매개 변수가 **FALSE**, `nValue` 서명 되지 않은 합니다.  
   
-##  <a name="setdlgitemtext"></a>COleControlContainer::SetDlgItemText  
+##  <a name="setdlgitemtext"></a>  COleControlContainer::SetDlgItemText  
  에 포함 된 텍스트를 사용 하 여 지정된 된 컨트롤의 텍스트를 설정 `lpszString`합니다.  
   
 ```  

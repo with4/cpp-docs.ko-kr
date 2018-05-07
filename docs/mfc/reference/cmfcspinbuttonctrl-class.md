@@ -1,12 +1,9 @@
 ---
-title: "CMFCSpinButtonCtrl 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCSpinButtonCtrl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCSpinButtonCtrl
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCSpinButtonCtrl [MFC], OnDraw
 ms.assetid: 8773f259-4d3f-4bca-a71c-09e0c71bc843
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd6ef1957b1f4994bafa9546581e2588e33d11a7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1b8c602882036d77105bb619069a6e43d73ceeb6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcspinbuttonctrl-class"></a>CMFCSpinButtonCtrl 클래스
 `CMFCSpinButtonCtrl` 클래스 스핀 단추 컨트롤을 그리는 비주얼 관리자를 지원 합니다.  
@@ -56,7 +51,7 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
 ## <a name="remarks"></a>설명  
  응용 프로그램에서 스핀 단추 컨트롤을 그리는 비주얼 관리자를 사용 하려면 모든 인스턴스를 대체는 `CSpinButtonCtrl` 클래스와 `CMFCSpinButtonCtrl` 클래스입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는의 개체를 만드는 방법을 `CMFCSpinButtonCtrl` 클래스 및 사용 하 여 해당 `Create` 메서드.  
   
  [!code-cpp[NVC_MFC_RibbonApp#25](../../mfc/reference/codesnippet/cpp/cmfcspinbuttonctrl-class_1.cpp)]  
@@ -75,7 +70,7 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxspinbuttonctrl.h  
   
-##  <a name="ondraw"></a>CMFCSpinButtonCtrl::OnDraw  
+##  <a name="ondraw"></a>  CMFCSpinButtonCtrl::OnDraw  
  현재 스핀 단추 컨트롤을 다시 그립니다.  
   
 ```  

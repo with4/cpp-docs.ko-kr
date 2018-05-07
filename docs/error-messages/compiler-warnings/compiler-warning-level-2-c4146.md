@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 2) C4146 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 2) C4146 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4146
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4146
 ms.assetid: d6c31ab1-3120-40d5-8d80-32b5f7046e32
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7a9a67beb4dc122c25318c1796e22a4c35dbe38
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 40a94d2aed0b455fda646214f4488c53045b7f6f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-2-c4146"></a>컴파일러 경고 (수준 2) C4146
 단항 빼기 연산자 결과 역시 unsigned 부호 없는 형식에 적용  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
  INT_MIN는 형식을 있는 limits.h에서 사용 하 여 C4146를 방지할 수 있습니다 **int 서명**합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C4146 오류가 생성 됩니다.  
   
 ```  

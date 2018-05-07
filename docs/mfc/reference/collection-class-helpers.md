@@ -1,13 +1,10 @@
 ---
-title: "컬렉션 클래스 도우미 | Microsoft Docs"
-ms.custom: 
+title: 컬렉션 클래스 도우미 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82b11c4cbe8f862121d89c308ab11d53582931d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d00d78acf7ddf8cfa27e117cbcdbbb00c7d6fa6b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collection-class-helpers"></a>컬렉션 클래스 도우미
 컬렉션 클래스 `CMap`, `CList`, 및 `CArray` 를 비교 하 고, 복사 및 요소를 직렬화 하는 작업에 대 한 전역 템플릿 기반 도우미 함수를 사용 합니다. 구현에 따라 클래스의 일부로 `CMap`, `CList`, 및 `CArray`, 지도, 목록 또는 배열에 저장 된 데이터의 형식에 맞는 버전 필요에 따라 이러한 함수를 재정의 해야 합니다. 와 같은 도우미 함수를 재정의에 대 한 내용은 `SerializeElements`, 문서를 참조 [컬렉션: 형식이 안전한 컬렉션을 만드는 방법](../../mfc/how-to-make-a-type-safe-collection.md)합니다. **ConstructElements** 및 **DestructElements** 사용 되지 않습니다.  
@@ -46,8 +41,8 @@ ms.lasthandoff: 12/21/2017
 |[HashKey](#hashkey)|해시 키를 계산합니다.|  
 |[SerializeElements](#serializeelements)|저장 하거나 보관 파일에서 구성 요소를 검색 합니다.|  
   
-##  <a name="compareelements"></a>CompareElements  
- 직접 호출 [CList::Find] (#not_found.md #clist__find clist class.md 및 간접적으로 [cmap__lookup](cmap-class.md#lookup) 및 [cmap__operator &#91; &#93;](cmap-class.md#operator_at)합니다.  
+##  <a name="compareelements"></a>  CompareElements  
+ 직접 호출 [CList::Find] (#not_found.md #clist__find clist class.md 및 간접적으로 [cmap__lookup](cmap-class.md#lookup) 및 [cmap__operator &#91; &#93; ](cmap-class.md#operator_at)합니다.  
   
 ```   
 template<class TYPE, class ARG_TYPE>  
@@ -83,7 +78,7 @@ CompareElements(
 ### <a name="requirements"></a>요구 사항  
    **헤더:** afxtempl.h   
   
-##  <a name="copyelements"></a>CopyElements  
+##  <a name="copyelements"></a>  CopyElements  
  이 함수를 직접 호출 [CArray::Append](carray-class.md#append) 및 [CArray::Copy](carray-class.md#copy)합니다.  
   
 ```   
@@ -108,14 +103,14 @@ void AFXAPI CopyElements(
  복사할 요소의 수입니다.  
   
 ### <a name="remarks"></a>설명  
- 단순 할당 연산자를 사용 하는 기본 구현 (  **=**  ) 복사 작업을 수행 합니다. 복사 하는 형식에 오버 로드 된 연산자가 없는 경우 =, 기본 구현은 비트 복사를 수행 합니다.  
+ 단순 할당 연산자를 사용 하는 기본 구현 ( **=** ) 복사 작업을 수행 합니다. 복사 하는 형식에 오버 로드 된 연산자가 없는 경우 =, 기본 구현은 비트 복사를 수행 합니다.  
   
  이 및 다른 도우미 함수 구현에 대 한 내용은 문서 참조 [컬렉션: 형식이 안전한 컬렉션을 만드는 방법](../how-to-make-a-type-safe-collection.md)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxtempl.h  
   
-##  <a name="dumpelements"></a>DumpElements  
+##  <a name="dumpelements"></a>  DumpElements  
  재정의 된 경우 컬렉션의 요소에 대 한 텍스트 형식으로 스트림 지향 진단 출력을 제공 합니다.  
   
 ```   
@@ -148,7 +143,7 @@ void  AFXAPI DumpElements(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxtempl.h  
   
-##  <a name="hashkey"></a>HashKey  
+##  <a name="hashkey"></a>  HashKey  
  지정된 된 키에 대 한 해시 값을 계산합니다.  
   
 ```  
@@ -167,11 +162,11 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
  키의 해시 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 함수를 직접 호출 [CMap::RemoveKey](cmap-class.md#removekey) 및 간접적으로 [CMap::Lookup](cmap-class.md#lookup) 및 [CMap::Operator &#91; &#93;](cmap-class.md#operator_at)합니다.
+ 이 함수를 직접 호출 [CMap::RemoveKey](cmap-class.md#removekey) 및 간접적으로 [CMap::Lookup](cmap-class.md#lookup) 및 [CMap::Operator &#91; &#93; ](cmap-class.md#operator_at)합니다.
   
  기본 구현은 이동 하 여 해시 값을 만들고 `key` 네 위치 오른쪽으로 합니다. 응용 프로그램에 대 한 적절 한 해시 값을 반환이 함수를 재정의 합니다.  
   
-### <a name="example"></a>예
+### <a name="example"></a>예제
  ```cpp  
 template <> UINT AFXAPI HashKey(unsigned __int64 key)
 {
@@ -184,7 +179,7 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxtempl.h 
   
-##  <a name="serializeelements"></a>SerializeElements  
+##  <a name="serializeelements"></a>  SerializeElements  
  [CArray](carray-class.md), [CList](clist-class.md), 및 [CMap](cmap-class.md) 요소를 serialize 하는 데이 함수를 호출 합니다.  
   
 ```   
@@ -210,7 +205,7 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
   
  이 및 다른 도우미 함수 구현에 대 한 내용은 문서 참조 [컬렉션: 형식이 안전한 컬렉션을 만드는 방법](../how-to-make-a-type-safe-collection.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예제 문서를 참조 하십시오 [컬렉션: 형식이 안전한 컬렉션을 만드는 방법](../how-to-make-a-type-safe-collection.md)합니다.  
  
 ### <a name="requirements"></a>요구 사항  

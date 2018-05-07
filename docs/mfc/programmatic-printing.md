@@ -1,13 +1,10 @@
 ---
-title: "프로그래밍 방식 인쇄 | Microsoft Docs"
-ms.custom: 
+title: 프로그래밍 방식 인쇄 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - IPrint interface
 - printing [MFC]
 ms.assetid: 3db0945b-5e13-4be4-86a0-6aecdae565bd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 927a5d9b4bea41157c8cfac6f3dbfe42fc323bb2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a439080cec7f3ae96014e9df6ddc65782686bf0e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="programmatic-printing"></a>프로그래밍 방식 인쇄
 OLE 제공 영구 문서를 고유 하 게 식별 하는 방법 (**GetClassFile**) 연결 된 코드에 로드 하 고 (`CoCreateInstance`, **QueryInterface(IID_IPersistFile)**, **QueryInterface(IID_IPersistStorage)**, **IPersistFile::Load**, 및 **IPersistStorage::Load**). 인쇄 문서를 더 이상 사용 하려면 (원래 OLE 2.0 함께 제공 되지 않으며 기존 OLE 디자인 사용) 하는 액티브 문서 포함 소개 자료 표준 인쇄 인터페이스 `IPrint`, 일반적으로 로드할 수 있는 모든 개체를 통해 사용할 수는 문서 종류의 영구 상태입니다. 현재 문서의 각 보기 필요에 따라 지원할 수는 **IPrint** 이러한 기능을 제공 하는 인터페이스입니다.  
@@ -61,7 +56,7 @@ interface IPrint : IUnknown
   
  HKEY_CLASSES_ROOT\CLSID\\{...} \Printable  
   
- `IPrint`일반적으로 지 원하는 동일한 개체에 구현 `IPersistFile` 또는 `IPersistStorage`합니다. 호출자가 프로그래밍 방식으로 "인쇄 가능" 키에 대 한 레지스트리를 확인 하 여 일부 클래스의 영구 상태를 인쇄 하는 기능을 확인 합니다. 현재는 "인쇄 가능"에 대 한 지원 이상의 나타냅니다 `IPrint`; 다른 인터페이스 정의 될 수 있습니다 나중에 다음 사용할 수를 통해 `QueryInterface` 여기서 **IPrint** 단순히 기본 수준의 지원 나타냅니다.  
+ `IPrint` 일반적으로 지 원하는 동일한 개체에 구현 `IPersistFile` 또는 `IPersistStorage`합니다. 호출자가 프로그래밍 방식으로 "인쇄 가능" 키에 대 한 레지스트리를 확인 하 여 일부 클래스의 영구 상태를 인쇄 하는 기능을 확인 합니다. 현재는 "인쇄 가능"에 대 한 지원 이상의 나타냅니다 `IPrint`; 다른 인터페이스 정의 될 수 있습니다 나중에 다음 사용할 수를 통해 `QueryInterface` 여기서 **IPrint** 단순히 기본 수준의 지원 나타냅니다.  
   
  인쇄 절차 중 클라이언트 또는 인쇄 계속할지 여부를 제어 하는 인쇄를 시작 하는 컨테이너를 할 수 있습니다. 예를 들어 컨테이너에는 인쇄 작업을 가능한 한 빨리 종료 해야 하는 "중지 Print" 명령을 지원할 수 있습니다. 이 기능을 지원 하려면 클라이언트 인쇄 가능한 개체의 인터페이스와 작은 알림 싱크 개체가 구현할 수 `IContinueCallback`:  
   

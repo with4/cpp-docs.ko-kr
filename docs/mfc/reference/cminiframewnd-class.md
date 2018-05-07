@@ -1,12 +1,9 @@
 ---
-title: "CMiniFrameWnd 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMiniFrameWnd 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMiniFrameWnd
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75fe37703e9956c8272226d33a1bb169c23ea916
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 51fa0fc4f58a7b83267863918d3e1b46baa38e59
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd 클래스
 일반적으로 부동 도구 모음에 있는 절반 높이의 프레임 창을 나타냅니다.  
@@ -78,7 +73,7 @@ class CMiniFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd  
+##  <a name="cminiframewnd"></a>  CMiniFrameWnd::CMiniFrameWnd  
  생성 된 `CMiniFrameWnd` 개체 되지만 창이 되지는 않습니다.  
   
 ```  
@@ -88,7 +83,7 @@ CMiniFrameWnd();
 ### <a name="remarks"></a>설명  
  호출 하는 창을 만들기 위해 [CMiniFrameWnd::Create](#create)합니다.  
   
-##  <a name="create"></a>CMiniFrameWnd::Create  
+##  <a name="create"></a>  CMiniFrameWnd::Create  
  Windows 미니 프레임 창을 만들고에 연결 된 `CMiniFrameWnd` 개체입니다.  
   
 ```  
@@ -133,7 +128,7 @@ virtual BOOL Create(
   
 - **MFS_BLOCKSYSMENU** 시스템 메뉴와 컨트롤 메뉴에 대 한 액세스를 비활성화 하 고 부분 (제목 표시줄)로 변환 합니다.  
   
- 참조 [CWnd::Create](../../mfc/reference/cwnd-class.md#create) 에 대 한 설명은 가능한 창 스타일 값입니다. 미니 프레임 창에 사용 되는 일반적인 조합이 **WS_POPUP &#124; WS_CAPTION &#124; WS_SYSMENU**합니다.  
+ 참조 [CWnd::Create](../../mfc/reference/cwnd-class.md#create) 에 대 한 설명은 가능한 창 스타일 값입니다. 미니 프레임 창에 사용 되는 일반적인 조합이 **WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU**합니다.  
   
  `rect`  
  A `RECT` 창의 원하는 크기를 지정 하는 구조입니다.  
@@ -150,7 +145,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>설명  
  **만들** 창 클래스 이름 및 창 이름을 초기화 하 고 해당 유형과 부모에 대 한 기본값을 등록 합니다.  
   
-##  <a name="createex"></a>CMiniFrameWnd::CreateEx  
+##  <a name="createex"></a>  CMiniFrameWnd::CreateEx  
  
           `CMiniFrameWnd` 개체를 만듭니다.  
   
@@ -191,13 +186,13 @@ virtual BOOL CreateEx(
  성공할 경우 TRUE를 반환 합니다. 실패 한 경우 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- `CreateEx` 매개 변수에 지정 된 **WNDCLASS**, 창 스타일 (선택 사항) 초기 위치 및 창 크기입니다. `CreateEx`또한 창의 부모 (있는 경우) 및 ID를 지정  
+ `CreateEx` 매개 변수에 지정 된 **WNDCLASS**, 창 스타일 (선택 사항) 초기 위치 및 창 크기입니다. `CreateEx` 또한 창의 부모 (있는 경우) 및 ID를 지정  
   
  때 `CreateEx` 실행 되 면 Windows 보냅니다는 [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo), [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), 및 [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate) 메시지를 창입니다.  
   
  기본 메시지 처리를 확장 하려면에서 클래스를 파생 `CMiniFrameWnd`, 메시지 맵을 새 클래스에 추가 하 고 위의 메시지에 대 한 멤버 함수를 제공 합니다. 재정의 `OnCreate`, 예를 들어 새 클래스에 대 한 필요한 초기화를 수행 하도록 합니다.  
   
- 더 이상 재정의 **에***메시지* 메시지 파생된 클래스에 추가 기능을 추가 하는 처리기.  
+ 더 이상 재정의 **에서 * * * 메시지* 메시지 파생된 클래스에 추가 기능을 추가 하는 처리기.  
   
  경우는 **WS_VISIBLE** 스타일은 지정, Windows 창을 활성화 하 고 창을 표시 하는 데 필요한 모든 메시지를 보냅니다. 창 스타일 제목 표시줄을 지정 하는 경우 창 제목은 가리키는 `lpszWindowName` 매개 변수는 제목 표시줄에 표시 됩니다.  
   

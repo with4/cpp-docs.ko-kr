@@ -1,13 +1,10 @@
 ---
-title: "도구 모음 컨트롤 | Microsoft Docs"
-ms.custom: 
+title: 도구 모음 컨트롤 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], accessing toolbar
 - toolbar controls [MFC], accessing
 ms.assetid: b19409d5-3831-42c7-80ae-195c49dc9085
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 475b44b856c874064a4ccbdaf7b648342eb9c657
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 32d3cc6244bc2f928c8d1d0c6e46d1bc5a57aa3b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-the-toolbar-control"></a>ToolBar 컨트롤 사용
 이 문서에서는 액세스 하는 방법을 설명는 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) 개체 내부는 [CToolBar](../mfc/reference/ctoolbar-class.md) 도구 모음을 보다 효율적으로 제어 합니다. 고급 항목입니다.  
@@ -37,12 +32,12 @@ ms.lasthandoff: 12/21/2017
   
 1.  호출 [CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl)합니다.  
   
- `GetToolBarCtrl`에 대 한 참조를 반환 합니다.는 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) 개체입니다. 도구 모음 컨트롤 클래스의 멤버 함수 호출에 대 한 참조를 사용할 수 있습니다.  
+ `GetToolBarCtrl` 에 대 한 참조를 반환 합니다.는 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) 개체입니다. 도구 모음 컨트롤 클래스의 멤버 함수 호출에 대 한 참조를 사용할 수 있습니다.  
   
 > [!CAUTION]
 >  호출 하는 동안 `CToolBarCtrl` **가져오기** 함수는 안전, 호출 하는 경우 주의 해야는 **설정** 함수입니다. 고급 항목입니다. 일반적으로 기본 도구 모음 컨트롤에 액세스할 필요는 없습니다.  
   
-### <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+### <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [컨트롤 (Windows 공용 컨트롤)](../mfc/controls-mfc.md)  
   

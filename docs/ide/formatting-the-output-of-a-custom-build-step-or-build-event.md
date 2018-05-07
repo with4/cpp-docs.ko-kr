@@ -1,13 +1,10 @@
 ---
-title: "사용자 지정 빌드 단계 또는 빌드 이벤트의 출력 서식 지정 | Microsoft Docs"
-ms.custom: 
+title: 사용자 지정 빌드 단계 또는 빌드 이벤트의 출력 서식 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - build steps [C++], output format
 - builds [C++], custom build steps
 ms.assetid: 92ad3e38-24d7-4b89-90e6-5a16f5f998da
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53720e93c7d45f1eaeb0e62749194720373bee1c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7da71e6391d2d3223b47ba528686d2fec003ab3a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>사용자 지정 빌드 단계 또는 빌드 이벤트의 출력 형식 지정
 사용자 지정 빌드 단계 또는 빌드 이벤트의 출력 형식이 올바른지, 사용자는 다음과 같은 이점을 메시지가 나타납니다.  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
  {*filename* (*line #* [, *열 #*]) &#124; *toolname*} **:**  
   
- [*텍스트*] {**오류** &#124; **경고**} *코드 # # #***:***지역화 가능한 문자열*  
+ [*텍스트*] {**오류** &#124; **경고**} *코드 # # #***:*** 지역화 가능한 문자열*  
   
  [ *텍스트* ]  
   
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [`ccc`] 매개 변수 또는 선택적 문자열입니다.  
   
- 예:  
+ 예를 들어:  
   
  C:\\*sourcefile.cpp*(134): 오류 C2143: 구문 오류: 없습니다. ';' 하기 전에 '을 (를) '  
   

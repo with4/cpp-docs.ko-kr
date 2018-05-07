@@ -1,29 +1,24 @@
 ---
-title: "디버그 실행 파일을 실행 하려면 테스트 컴퓨터 준비 | Microsoft Docs"
-ms.custom: 
+title: 디버그 실행 파일을 실행 하려면 테스트 컴퓨터 준비 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 344f413eb2325156996700b6975826600ab997f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33683ebe349fbfdcb3fd51179ed6bc3140510c00
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>디버그 실행 파일을 실행하기 위한 테스트 컴퓨터 준비
 Visual C++로 빌드한 응용 프로그램의 디버그 버전을 테스트하기 위해 컴퓨터를 준비하려면 응용 프로그램이 종속된 Visual C++ 라이브러리 DLL의 디버그 버전을 배포해야 합니다. 단계에 따라 Dll을 배포 해야 하는 문제를 식별 하려면 [Visual c + + 응용 프로그램의 종속성 이해](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)합니다. Visual C++ 라이브러리 DLL의 디버그 버전에는 일반적으로 "d"로 끝나는 이름이 부여됩니다. 예를 들어 msvcr100.dll의 디버그 버전 이름은 msvcr100d.dll입니다.  

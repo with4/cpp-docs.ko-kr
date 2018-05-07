@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonCheckBox 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCRibbonCheckBox 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonCheckBox
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CMFCRibbonCheckBox [MFC], OnDrawOnList
 - CMFCRibbonCheckBox [MFC], SetACCData
 ms.assetid: 3a6c3891-c8d1-4af0-b954-7b9ab048782a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc46d934c99e24b63ef314ef1f63402893c6bb18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 109c3b2f6337adece6c371f1fafa98291468485e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox 클래스
 `CMFCRibbonCheckBox` 클래스는 리본 패널, 빠른 실행 도구 모음 또는 팝업 메뉴에 추가할 수 있는 확인란을 구현합니다.  
@@ -97,7 +92,7 @@ CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxribboncheckbox.h  
   
-##  <a name="cmfcribboncheckbox"></a>CMFCRibbonCheckBox::CMFCRibbonCheckBox  
+##  <a name="cmfcribboncheckbox"></a>  CMFCRibbonCheckBox::CMFCRibbonCheckBox  
  리본 확인란 개체의 생성자  
   
 ```  
@@ -116,12 +111,12 @@ CMFCRibbonCheckBox(
 ### <a name="return-value"></a>반환 값  
  리본 확인란 개체를 만듭니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는의 개체를 생성 하는 `CMFCRibbonCheckBox` 클래스입니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#17](../../mfc/reference/codesnippet/cpp/cmfcribboncheckbox-class_1.cpp)]  
   
-##  <a name="getcompactsize"></a>CMFCRibbonCheckBox::GetCompactSize  
+##  <a name="getcompactsize"></a>  CMFCRibbonCheckBox::GetCompactSize  
  재정의 된 경우,이 확인란의 압축 크기를 가져옵니다.  
   
 ```  
@@ -138,7 +133,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ### <a name="remarks"></a>설명  
  재정의 되지 않으면이 확인란의 중간 크기를 반환 합니다.  
   
-##  <a name="getintermediatesize"></a>CMFCRibbonCheckBox::GetIntermediateSize  
+##  <a name="getintermediatesize"></a>  CMFCRibbonCheckBox::GetIntermediateSize  
  이 확인란의 중간 크기를 가져옵니다.  
   
 ```  
@@ -155,7 +150,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ### <a name="remarks"></a>설명  
  재정의 되지 않으면 기본 확인란 크기로 중간 크기를 계산 ( `AFX_CHECK_BOX_DEFAULT_SIZE`) 및 텍스트 크기와 여백입니다.  
   
-##  <a name="getregularsize"></a>CMFCRibbonCheckBox::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonCheckBox::GetRegularSize  
  이 확인란의 일반 크기를 가져옵니다.  
   
 ```  
@@ -172,7 +167,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="remarks"></a>설명  
  재정의 되지 않으면이 확인란의 중간 크기를 반환 합니다.  
   
-##  <a name="isdrawtooltipimage"></a>CMFCRibbonCheckBox::IsDrawTooltipImage  
+##  <a name="isdrawtooltipimage"></a>  CMFCRibbonCheckBox::IsDrawTooltipImage  
  확인란과 관련 된 도구 설명 이미지 있는지 여부를 나타냅니다.  
   
 ```  
@@ -184,7 +179,7 @@ virtual BOOL IsDrawTooltipImage() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ondraw"></a>CMFCRibbonCheckBox::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonCheckBox::OnDraw  
  지정 된 장치 컨텍스트를 사용 하 여 확인란 그리기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -197,7 +192,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ondrawmenuimage"></a>CMFCRibbonCheckBox::OnDrawMenuImage  
+##  <a name="ondrawmenuimage"></a>  CMFCRibbonCheckBox::OnDrawMenuImage  
  확인란의 메뉴 이미지를 그리기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -217,7 +212,7 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ### <a name="remarks"></a>설명  
  재정의 되지 않으면 반환 `FALSE`합니다.  
   
-##  <a name="ondrawonlist"></a>CMFCRibbonCheckBox::OnDrawOnList  
+##  <a name="ondrawonlist"></a>  CMFCRibbonCheckBox::OnDrawOnList  
  명령 목록 상자에서 확인란을 그리기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -244,14 +239,14 @@ virtual void OnDrawOnList(
  확인란의 표시 사각형을 지정 합니다.  
   
  [in] `bIsSelected`  
- `TRUE`이 확인란을 선택 하는 경우 또는 `FALSE` 그렇지 않은 경우.  
+ `TRUE` 이 확인란을 선택 하는 경우 또는 `FALSE` 그렇지 않은 경우.  
   
  [in] `bHighlighted`  
- `TRUE`이 확인란을 강조 표시 하는 경우 또는 `FALSE` 그렇지 않은 경우.  
+ `TRUE` 이 확인란을 강조 표시 하는 경우 또는 `FALSE` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setaccdata"></a>CMFCRibbonCheckBox::SetACCData  
+##  <a name="setaccdata"></a>  CMFCRibbonCheckBox::SetACCData  
  확인란에 대 한 내게 필요한 옵션 데이터를 설정합니다.  
   
 ```  

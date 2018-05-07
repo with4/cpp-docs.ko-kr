@@ -1,13 +1,10 @@
 ---
-title: "TN038: MFC OLE IUnknown 구현 | Microsoft Docs"
-ms.custom: 
+title: 'TN038: MFC OLE IUnknown 구현 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - END_INTERFACE_PART macro [MFC]
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a17ce210dffd13e0ffdac142c6121954eec1045d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e93c4e9d8707d3960e768b6929bb2b1c16d60b42
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038: MFC/OLE IUnknown 구현
 > [!NOTE]
@@ -106,7 +101,7 @@ pPrint->Release();
 }  
 ```  
   
- 상당히 쉽게 보이지만 IPrintInterface 모두를 지 원하는 개체 어떻게 구현 할까요 및 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 인터페이스가 예제의 간단한 있으므로 IPrintInterface에서 직접 파생 되며 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) -IPrintInterface를 구현 하 여 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 자동으로 지원 됩니다. 예:  
+ 상당히 쉽게 보이지만 IPrintInterface 모두를 지 원하는 개체 어떻게 구현 할까요 및 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 인터페이스가 예제의 간단한 있으므로 IPrintInterface에서 직접 파생 되며 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) -IPrintInterface를 구현 하 여 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 자동으로 지원 됩니다. 예를 들어:  
   
 ```  
 class CPrintObj : public CPrintInterface  
@@ -295,7 +290,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
  집계에 대 한 자세한 내용은 참조는 [집계](http://msdn.microsoft.com/library/windows/desktop/ms686558\(v=vs.85\).aspx) 항목입니다.  
   
- MFC의 인터페이스 맵 지원은 `CCmdTarget` 클래스를 기반으로 합니다. `CCmdTarget`"*a가*" 수 뿐만 아니라 멤버 함수 관련 된 모든 참조는 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 구현 (참조 횟수는 예에 `CCmdTarget`). OLE COM을 지원하는 클래스를 만들려면 `CCmdTarget`에서 클래스를 파생시키고 다양한 매크로 및 `CCmdTarget`의 멤버 함수를 사용하여 원하는 인터페이스를 구현합니다. MFC의 구현에서는 중첩 클래스를 사용하여 위의 예제와 매우 유사하게 각 인터페이스 구현을 정의합니다. IUnknown의 표준 구현 및 반복되는 코드 일부를 제거하는 다양한 매크로를 사용하면 더 간단해집니다.  
+ MFC의 인터페이스 맵 지원은 `CCmdTarget` 클래스를 기반으로 합니다. `CCmdTarget` "*a가*" 수 뿐만 아니라 멤버 함수 관련 된 모든 참조는 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 구현 (참조 횟수는 예에 `CCmdTarget`). OLE COM을 지원하는 클래스를 만들려면 `CCmdTarget`에서 클래스를 파생시키고 다양한 매크로 및 `CCmdTarget`의 멤버 함수를 사용하여 원하는 인터페이스를 구현합니다. MFC의 구현에서는 중첩 클래스를 사용하여 위의 예제와 매우 유사하게 각 인터페이스 구현을 정의합니다. IUnknown의 표준 구현 및 반복되는 코드 일부를 제거하는 다양한 매크로를 사용하면 더 간단해집니다.  
   
 ## <a name="interface-map-basics"></a>인터페이스 맵 기본 사항  
   
@@ -315,7 +310,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
 7.  `METHOD_PROLOGUE` 매크로를 사용하여 부모인 `CCmdTarget` 파생 개체에 액세스합니다.  
   
-8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [릴리스](http://msdn.microsoft.com/library/windows/desktop/ms682317), 및 [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) 를 위임할 수는 `CCmdTarget` 이러한 함수의 구현 (`ExternalAddRef`, `ExternalRelease`, 및 `ExternalQueryInterface` ).  
+8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [릴리스](http://msdn.microsoft.com/library/windows/desktop/ms682317), 및 [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) 를 위임할 수는 `CCmdTarget` 이러한 함수의 구현 (`ExternalAddRef`, `ExternalRelease`, 및 `ExternalQueryInterface`).  
   
  위의 CPrintEditObj 예제는 다음과 같이 구현할 수 있습니다.  
   
@@ -432,7 +427,7 @@ void FAR EXPORT CEditPrintObj::XEditObj::EditObject()
   
 3.  특정 지점(일반적으로 `CCmdTarget::OnCreateAggregates` 중)에서 멤버 변수를 NULL이 아닌 다른 값으로 초기화합니다.  
   
- 예:  
+ 예를 들어:  
   
 ```  
 class CAggrExample : public CCmdTarget  
@@ -584,7 +579,7 @@ END_INTERFACE_PART(
   
  `localClass` 인수는 정의될 로컬 클래스의 이름입니다. 'X'는 이름 앞에 자동으로 추가됩니다. 이 명명 규칙은 이름이 동일한 전역 클래스와의 충돌을 방지하는 데 사용됩니다. 또한 포함된 멤버의 이름은 'm_x' 접두사가 붙는 다는 점을 제외하면 `localClass` 이름과 동일합니다.  
   
- 예:  
+ 예를 들어:  
   
 ```  
 BEGIN_INTERFACE_PART(MyAdviseSink,

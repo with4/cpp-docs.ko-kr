@@ -1,12 +1,9 @@
 ---
-title: "CIPAddressCtrl 클래스 | Microsoft Docs"
-ms.custom: 
+title: CIPAddressCtrl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CIPAddressCtrl
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67c775f314cc70da1b662ca9b9c5f0a2e68eb2bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 86d6c4cdff533538c2f0ea7f0be1fa44bfd27359
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl 클래스
 Windows의 공용 IP 주소 컨트롤의 기능을 제공합니다.  
@@ -94,7 +89,7 @@ class CIPAddressCtrl : public CWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcmn.h  
   
-##  <a name="cipaddressctrl"></a>CIPAddressCtrl::CIPAddressCtrl  
+##  <a name="cipaddressctrl"></a>  CIPAddressCtrl::CIPAddressCtrl  
  
           `CIPAddressCtrl` 개체를 만듭니다.  
   
@@ -102,7 +97,7 @@ class CIPAddressCtrl : public CWnd
 CIPAddressCtrl();
 ```  
   
-##  <a name="clearaddress"></a>CIPAddressCtrl::ClearAddress  
+##  <a name="clearaddress"></a>  CIPAddressCtrl::ClearAddress  
  IP 주소 컨트롤의 내용을 지웁니다.  
   
 ```  
@@ -112,7 +107,7 @@ void ClearAddress();
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [IPM_CLEARADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761377)Windows SDK에 설명 된 대로 합니다.  
   
-##  <a name="create"></a>CIPAddressCtrl::Create  
+##  <a name="create"></a>  CIPAddressCtrl::Create  
  IP 주소 컨트롤을 만들고에 연결 된 `CIPAddressCtrl` 개체입니다.  
   
 ```  
@@ -148,7 +143,7 @@ virtual BOOL Create(
   
  컨트롤 확장된 창 스타일을 사용 하려면 호출 [CreateEx](#createex) 대신 **만들기**합니다.  
   
-##  <a name="createex"></a>CIPAddressCtrl::CreateEx  
+##  <a name="createex"></a>  CIPAddressCtrl::CreateEx  
  컨트롤 (자식 창)을 만들고 사용 하 여 연결 하려면이 함수를 호출 하 여 `CIPAddressCtrl` 개체입니다.  
   
 ```  
@@ -180,9 +175,9 @@ virtual BOOL CreateEx(
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 사용 하 여 `CreateEx` 대신 [만들기](#create) Windows 확장된 스타일 접두사에 의해 지정 된 확장된 창 스타일을 적용할 **WS_EX_**합니다.  
+ 사용 하 여 `CreateEx` 대신 [만들기](#create) Windows 확장된 스타일 접두사에 의해 지정 된 확장된 창 스타일을 적용할 **WS_EX_** 합니다.  
   
-##  <a name="getaddress"></a>CIPAddressCtrl::GetAddress  
+##  <a name="getaddress"></a>  CIPAddressCtrl::GetAddress  
  IP 주소 컨트롤의 모든 4 개의 필드의 주소 값을 검색 합니다.  
   
 ```  
@@ -224,7 +219,7 @@ int GetAddress(DWORD& dwAddress);
 |2|8 ~ 15|  
 |3|0 ~ 7|  
   
-##  <a name="isblank"></a>CIPAddressCtrl::IsBlank  
+##  <a name="isblank"></a>  CIPAddressCtrl::IsBlank  
  IP 주소 컨트롤의 모든 필드가 비어 있는 경우를 결정 합니다.  
   
 ```  
@@ -237,7 +232,7 @@ BOOL IsBlank() const;
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [IPM_ISBLANK](http://msdn.microsoft.com/library/windows/desktop/bb761379)Windows SDK에 설명 된 대로 합니다.  
   
-##  <a name="setaddress"></a>CIPAddressCtrl::SetAddress  
+##  <a name="setaddress"></a>  CIPAddressCtrl::SetAddress  
  IP 주소 컨트롤에서 4 개의 필드에 대 한 주소 값을 설정합니다.  
   
 ```  
@@ -276,7 +271,7 @@ void SetAddress(DWORD dwAddress);
 |2|8 ~ 15|  
 |3|0 ~ 7|  
   
-##  <a name="setfieldfocus"></a>CIPAddressCtrl::SetFieldFocus  
+##  <a name="setfieldfocus"></a>  CIPAddressCtrl::SetFieldFocus  
  IP 주소 컨트롤에 지정된 된 필드를 키보드 포커스를 설정합니다.  
   
 ```  
@@ -290,7 +285,7 @@ void SetFieldFocus(WORD nField);
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [IPM_SETFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb761381)Windows SDK에 설명 된 대로 합니다.  
   
-##  <a name="setfieldrange"></a>CIPAddressCtrl::SetFieldRange  
+##  <a name="setfieldrange"></a>  CIPAddressCtrl::SetFieldRange  
  IP 주소 컨트롤의 지정된 된 필드에 범위를 설정합니다.  
   
 ```  

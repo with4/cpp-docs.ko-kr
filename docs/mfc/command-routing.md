@@ -1,13 +1,10 @@
 ---
-title: "명령 라우팅 | Microsoft Docs"
-ms.custom: 
+title: 명령 라우팅 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4299d5bb0f638d33714a5b5daeff60fde3f49be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ecb836f8fee1efab7f5f925c6ec3ce0f470d666b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-routing"></a>명령 라우팅
 명령 작업을 수행하는 경우 사용자의 역할은 메시지 맵을 사용하여 명령과 해당 처리기 함수를 연결하는 것으로 제한됩니다. 이 작업에는 속성 창을 사용합니다. 또한 사용자는 대부분의 명령 처리기를 작성해야 합니다.  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
 |명령을 수신하는 개체 형식 이어야 합니다. 이어야 합니다.|자신 및 다른 명령 대상 개체가 명령을 처리하는 순서|  
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|  
-|MDI 프레임 창(`CMDIFrameWnd`)|1.  활성`CMDIChildWnd`<br />2.  이 프레임 창<br />3.  응용 프로그램 (`CWinApp` 개체)|  
+|MDI 프레임 창(`CMDIFrameWnd`)|1.  활성 `CMDIChildWnd`<br />2.  이 프레임 창<br />3.  응용 프로그램 (`CWinApp` 개체)|  
 |문서 프레임 창(`CFrameWnd`, `CMDIChildWnd`)|1.  활성 뷰<br />2.  이 프레임 창<br />3.  응용 프로그램 (`CWinApp` 개체)|  
 |보기|1.  이 뷰<br />2.  뷰에 연결된 문서|  
 |문서|1.  이 문서<br />2.  문서에 연결된 문서 템플릿|  

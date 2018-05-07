@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 3) C4800 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 3) C4800 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4800
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4800
 ms.assetid: 4f409799-a250-45ed-bb5f-657691b0d9f7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 687b0dab996bfbfe2ce30d65b86196383c02b914
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed4b14ae2f3af3218909d6cd4609f1f45d3d7cc2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-3-c4800"></a>컴파일러 경고(수준 3) C4800  
   
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
 이 경고는 더 이상 Visual Studio 2017에 발생 합니다.  
   
-## <a name="example"></a>예
+## <a name="example"></a>예제
   
  다음 샘플에서는 C4800 경고가 발생 하 고를 해결 하는 방법을 보여 줍니다.  
   

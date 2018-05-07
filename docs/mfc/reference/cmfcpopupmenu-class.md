@@ -1,12 +1,9 @@
 ---
-title: "CMFCPopupMenu 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCPopupMenu 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPopupMenu
@@ -169,17 +166,15 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40f7b601eda828784fb8ebdaf010059c4d9933e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d18ab91e1b1c3af7e676cbad9992094238214e38
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu 클래스
 Windows 팝업 메뉴 기능을 구현하고 분리 메뉴, 도구 설명 같은 기능을 추가하여 확장합니다.
@@ -288,7 +283,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
 ### <a name="remarks"></a>설명  
  일반적으로 MFC 팝업 메뉴 자동으로 만듭니다. 만들려는 경우 한 `CMFCPopupMenu` 개체를 수동으로, 힙에 각각 하나씩 할당 한 다음 호출 [CMFCPopupMenu::Create](#create)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 팝업 메뉴 개체를 구성 하는 방법을 보여 줍니다. 이 예제에는 로고 및 팝업 메뉴의 소리 설정, 애니메이션 속도 및 유형을 설정, 그림자 주 프레임 외부 팝업 메뉴에 표시 하는 경우, 최대 너비를 설정 및 팝업 메뉴의 오른쪽 메뉴 맞춤을 설정 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [사용자 지정 페이지 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_CustomPages#2](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_1.cpp)]  
@@ -309,7 +304,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxpopupmenu.h  
   
-##  <a name="activatepopupmenu"></a>CMFCPopupMenu::ActivatePopupMenu  
+##  <a name="activatepopupmenu"></a>  CMFCPopupMenu::ActivatePopupMenu  
 
   
 ```  
@@ -326,7 +321,7 @@ static BOOL __stdcall ActivatePopupMenu(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="alwaysshowemptytoolsentry"></a>CMFCPopupMenu::AlwaysShowEmptyToolsEntry  
+##  <a name="alwaysshowemptytoolsentry"></a>  CMFCPopupMenu::AlwaysShowEmptyToolsEntry  
  팝업 메뉴가 활성화 여부는 사용자 정의 형식에 대 한 빈 항목을 표시 하도록 설정 합니다.  
   
 ```  
@@ -335,9 +330,9 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bShow`  
- `TRUE`팝업 메뉴에는 빈 항목이; 표시 수 있습니다. `FALSE` 그렇지 않은 경우.  
+ `TRUE` 팝업 메뉴에는 빈 항목이; 표시 수 있습니다. `FALSE` 그렇지 않은 경우.  
   
-##  <a name="areallcommandsshown"></a>CMFCPopupMenu::AreAllCommandsShown  
+##  <a name="areallcommandsshown"></a>  CMFCPopupMenu::AreAllCommandsShown  
 
   
 ```  
@@ -348,7 +343,7 @@ BOOL AreAllCommandsShown() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="checkarea"></a>CMFCPopupMenu::CheckArea  
+##  <a name="checkarea"></a>  CMFCPopupMenu::CheckArea  
  팝업 메뉴에 상대적인 포인터 위치를 결정합니다.  
   
 ```  
@@ -377,7 +372,7 @@ MENUAREA_TYPE CheckArea(const CPoint& ptScreen) const;
   
 -   메뉴- `ptScreen` 명령 끝났습니다.  
   
-##  <a name="closemenu"></a>CMFCPopupMenu::CloseMenu  
+##  <a name="closemenu"></a>  CMFCPopupMenu::CloseMenu  
 
   
 ```  
@@ -389,7 +384,7 @@ void CloseMenu(BOOL bSetFocusToBar = FALSE);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="cmfcpopupmenu"></a>CMFCPopupMenu::CMFCPopupMenu  
+##  <a name="cmfcpopupmenu"></a>  CMFCPopupMenu::CMFCPopupMenu  
  생성 된 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) 개체입니다.  
   
 ```  
@@ -408,7 +403,7 @@ CMFCPopupMenu(
 ### <a name="remarks"></a>설명  
  이 메서드는에 대 한 리소스를 할당 한 `CMFCPopupMenu`합니다. 팝업 메뉴 항목을 만들려면 호출 [CMFCPopupMenu::Create](#create)합니다.  
   
-##  <a name="create"></a>CMFCPopupMenu::Create  
+##  <a name="create"></a>  CMFCPopupMenu::Create  
  팝업 메뉴를 만들고 연결 하는 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) 개체입니다.  
   
 ```  
@@ -435,23 +430,23 @@ virtual BOOL Create(
  메뉴 리소스에 대 한 핸들입니다.  
   
  [in] `bLocked`  
- 메뉴를 사용자 지정할 수 있는지 여부를 나타내는 부울 매개 변수입니다. `FALSE`팝업 메뉴 사용자 지정 가능한 임을 나타냅니다.  
+ 메뉴를 사용자 지정할 수 있는지 여부를 나타내는 부울 매개 변수입니다. `FALSE` 팝업 메뉴 사용자 지정 가능한 임을 나타냅니다.  
   
  [in] `bOwnMessage`  
  프레임 워크 메뉴 메시지를 라우팅하고 하는 방법을 나타내는 부울 매개 변수입니다. 자세한 내용은 설명 섹션을 참조 하십시오.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `bOwnMessage` 은 `TRUE`, 프레임 워크 메뉴 메시지를 라우팅하고 `pWndParent`합니다. `pWndParent`않아야 `NULL` 경우 `bOwnMessage` 은 `TRUE.` 경우 `bOwnMessage` 은 `FALSE`, 프레임 워크 부모 팝업 메뉴로 메뉴 메시지를 라우팅합니다.  
+ 경우 `bOwnMessage` 은 `TRUE`, 프레임 워크 메뉴 메시지를 라우팅하고 `pWndParent`합니다. `pWndParent` 않아야 `NULL` 경우 `bOwnMessage` 은 `TRUE.` 경우 `bOwnMessage` 은 `FALSE`, 프레임 워크 부모 팝업 메뉴로 메뉴 메시지를 라우팅합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 사용 하는 `Create` 의 메서드는 `CMFCPopuMenu` 클래스. 이 코드 조각은의 일부인는 [사용자 지정 페이지 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_CustomPages#1](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_2.cpp)]  
   
-##  <a name="createtearoffbar"></a>CMFCPopupMenu::CreateTearOffBar  
+##  <a name="createtearoffbar"></a>  CMFCPopupMenu::CreateTearOffBar  
 
   
 ```  
@@ -470,7 +465,7 @@ virtual CPane* CreateTearOffBar(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="defaultmouseclickonclose"></a>CMFCPopupMenu::DefaultMouseClickOnClose  
+##  <a name="defaultmouseclickonclose"></a>  CMFCPopupMenu::DefaultMouseClickOnClose  
 
   
 ```  
@@ -481,7 +476,7 @@ virtual BOOL DefaultMouseClickOnClose() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="enablemenulogo"></a>CMFCPopupMenu::EnableMenuLogo  
+##  <a name="enablemenulogo"></a>  CMFCPopupMenu::EnableMenuLogo  
  팝업 메뉴에 대 한 로고를 초기화합니다.  
   
 ```  
@@ -502,7 +497,7 @@ void EnableMenuLogo(
   
  에 가능한 값은 `nLogoLocation` MENU_LOGO_LEFT, MENU_LOGO_RIGHT, MENU_LOGO_TOP, 및 MENU_LOGO_BOTTOM 됩니다.  
   
-##  <a name="enablemenusound"></a>CMFCPopupMenu::EnableMenuSound  
+##  <a name="enablemenusound"></a>  CMFCPopupMenu::EnableMenuSound  
  메뉴 소리를 수 있습니다.  
   
 ```  
@@ -511,12 +506,12 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bEnable`  
- `TRUE`소리를 사용 하도록 설정 하려면 `FALSE` 그렇지 않은 경우.  
+ `TRUE` 소리를 사용 하도록 설정 하려면 `FALSE` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
  소리를 사용 하면 프레임 워크에서 호출 된 [PlaySound](http://msdn.microsoft.com/library/windows/desktop/bb774426) 메서드를 사용자가 팝업 메뉴를 열거나 메뉴 명령을 선택할 때. 기본적으로이 기능은 사용 됩니다.  
   
-##  <a name="enableresize"></a>CMFCPopupMenu::EnableResize  
+##  <a name="enableresize"></a>  CMFCPopupMenu::EnableResize  
 
   
 ```  
@@ -528,7 +523,7 @@ void EnableResize(CSize sizeMinResize);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="enablescrolling"></a>CMFCPopupMenu::EnableScrolling  
+##  <a name="enablescrolling"></a>  CMFCPopupMenu::EnableScrolling  
 
   
 ```  
@@ -540,7 +535,7 @@ void EnableScrolling(BOOL = TRUE);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="enablevertresize"></a>CMFCPopupMenu::EnableVertResize  
+##  <a name="enablevertresize"></a>  CMFCPopupMenu::EnableVertResize  
 
   
 ```  
@@ -552,7 +547,7 @@ void EnableVertResize(int nMinResize);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="findsubitembycommand"></a>CMFCPopupMenu::FindSubItemByCommand  
+##  <a name="findsubitembycommand"></a>  CMFCPopupMenu::FindSubItemByCommand  
 
   
 ```  
@@ -566,7 +561,7 @@ CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getactivemenu"></a>CMFCPopupMenu::GetActiveMenu  
+##  <a name="getactivemenu"></a>  CMFCPopupMenu::GetActiveMenu  
  현재 활성 메뉴를 반환합니다.  
   
 ```  
@@ -579,7 +574,7 @@ static CMFCPopupMenu* GetActiveMenu();
 ### <a name="remarks"></a>설명  
  각 응용 프로그램에는 최대 하나의 활성 팝업 메뉴가 있을 수 있습니다.  
   
-##  <a name="getanimationspeed"></a>CMFCPopupMenu::GetAnimationSpeed  
+##  <a name="getanimationspeed"></a>  CMFCPopupMenu::GetAnimationSpeed  
  팝업 메뉴에 대 한 애니메이션 속도 반환합니다.  
   
 ```  
@@ -592,7 +587,7 @@ static UINT GetAnimationSpeed();
 ### <a name="remarks"></a>설명  
  애니메이션 속도 전역 값입니다. 사용 하 여 [CMFCPopupMenu::SetAnimationSpeed](#setanimationspeed) 팝업 메뉴에 대 한 애니메이션 속도 변경 하려면.  
   
-##  <a name="getanimationtype"></a>CMFCPopupMenu::GetAnimationType  
+##  <a name="getanimationtype"></a>  CMFCPopupMenu::GetAnimationType  
  팝업 애니메이션의 현재 유형을 반환합니다.  
   
 ```  
@@ -623,7 +618,7 @@ static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
  페이드  
  팝업 메뉴 먼저 투명 나타나고 solidifies 점진적으로.  
   
-##  <a name="getdropdirection"></a>CMFCPopupMenu::GetDropDirection  
+##  <a name="getdropdirection"></a>  CMFCPopupMenu::GetDropDirection  
 
   
 ```  
@@ -634,7 +629,7 @@ DROP_DIRECTION GetDropDirection() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getforcemenufocus"></a>CMFCPopupMenu::GetForceMenuFocus  
+##  <a name="getforcemenufocus"></a>  CMFCPopupMenu::GetForceMenuFocus  
  메뉴 팝업 메뉴가 표시 되 면 모음에 포커스를 반환할지 여부를 나타냅니다.  
   
 ```  
@@ -642,12 +637,12 @@ static BOOL GetForceMenuFocus();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`팝업 메뉴가 표시 되 면 하는 경우 메뉴 모음에 입력된 포커스가 반환 되 면 `FALSE` 팝업 메뉴가 포커스를 유지 합니다.  
+ `TRUE` 팝업 메뉴가 표시 되 면 하는 경우 메뉴 모음에 입력된 포커스가 반환 되 면 `FALSE` 팝업 메뉴가 포커스를 유지 합니다.  
   
 ### <a name="remarks"></a>설명  
  기본적으로 응용 프로그램 메뉴 모음에 포커스를 반환 하지 않습니다. 이 설정을 변경 하려면 사용 하 여 [CMFCPopupMenu::SetForceMenuFocus](#setforcemenufocus)합니다.  
   
-##  <a name="getforceshadow"></a>CMFCPopupMenu::GetForceShadow  
+##  <a name="getforceshadow"></a>  CMFCPopupMenu::GetForceShadow  
 
   
 ```  
@@ -658,14 +653,14 @@ static BOOL __stdcall GetForceShadow();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="gethmenu"></a>CMFCPopupMenu::GetHMenu  
+##  <a name="gethmenu"></a>  CMFCPopupMenu::GetHMenu  
  연결 된 메뉴 리소스에 대 한 핸들을 반환합니다.  
   
 ```  
 HMENU GetHMenu();
 ```  
   
-##  <a name="getmenubar"></a>CMFCPopupMenu::GetMenuBar  
+##  <a name="getmenubar"></a>  CMFCPopupMenu::GetMenuBar  
  반환 된 [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) 팝업 메뉴 내에 포함 합니다.  
   
 ```  
@@ -678,7 +673,7 @@ virtual CMFCPopupMenuBar* GetMenuBar();
 ### <a name="remarks"></a>설명  
  팝업 메뉴에 포함 된 `CMFCPopupMenuBar` 개체입니다. 포함 된 다른 클래스를 사용 하는 경우에 파생된 클래스에서이 메서드를 재정의 해야 합니다.  
   
-##  <a name="getmenuitem"></a>CMFCPopupMenu::GetMenuItem  
+##  <a name="getmenuitem"></a>  CMFCPopupMenu::GetMenuItem  
  지정된 된 인덱스에 있는 메뉴 항목에 대 한 포인터를 반환합니다.  
   
 ```  
@@ -690,12 +685,12 @@ CMFCToolBarMenuButton* GetMenuItem(int iIndex) const;
  메뉴 항목의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 메뉴 항목에 대 한 포인터입니다. `NULL`인덱스가 잘못 되었습니다 하는 경우.  
+ 메뉴 항목에 대 한 포인터입니다. `NULL` 인덱스가 잘못 되었습니다 하는 경우.  
   
 ### <a name="remarks"></a>설명  
  메뉴 항목으로 표시 됩니다는 [CMFCToolBarMenuButton 클래스](../../mfc/reference/cmfctoolbarmenubutton-class.md)합니다. 이 메서드를 호출 하는 경우에 대 한 포인터를 적절 한 반환 `CMFCToolBarMenuButton`합니다.  
   
-##  <a name="getmenuitemcount"></a>CMFCPopupMenu::GetMenuItemCount  
+##  <a name="getmenuitemcount"></a>  CMFCPopupMenu::GetMenuItemCount  
  팝업 메뉴의 항목 수를 반환합니다.  
   
 ```  
@@ -705,7 +700,7 @@ int GetMenuItemCount() const;
 ### <a name="return-value"></a>반환 값  
  메뉴에 있는 항목의 수입니다.  
   
-##  <a name="getmessagewnd"></a>CMFCPopupMenu::GetMessageWnd  
+##  <a name="getmessagewnd"></a>  CMFCPopupMenu::GetMessageWnd  
  프레임 워크의 팝업 메뉴 메시지가 라우트되는 창에 대 한 포인터를 반환 합니다.  
   
 ```  
@@ -718,7 +713,7 @@ CWnd* GetMessageWnd() const;
 ### <a name="remarks"></a>설명  
  메서드를 사용 하는 경우 [CMFCPopupMenu::Create](#create) 를 팝업 메뉴를 만들려면 메뉴 메시지를 수신 하는 창을 지정 합니다.  
   
-##  <a name="getparentarea"></a>CMFCPopupMenu::GetParentArea  
+##  <a name="getparentarea"></a>  CMFCPopupMenu::GetParentArea  
 
   
 ```  
@@ -732,7 +727,7 @@ virtual CWnd* GetParentArea(CRect& rectParentBtn);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getparentbutton"></a>CMFCPopupMenu::GetParentButton  
+##  <a name="getparentbutton"></a>  CMFCPopupMenu::GetParentButton  
  부모 도구 모음 단추에 대 한 포인터를 반환합니다.  
   
 ```  
@@ -740,14 +735,14 @@ CMFCToolBarMenuButton* GetParentButton() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 부모 도구 모음 단추에 대 한 포인터입니다. `NULL`팝업 메뉴에 부모 도구 모음 단추가 없습니다.  
+ 부모 도구 모음 단추에 대 한 포인터입니다. `NULL` 팝업 메뉴에 부모 도구 모음 단추가 없습니다.  
   
 ### <a name="remarks"></a>설명  
  A `CMFCPopupMenu` 메뉴의 단추와 연결 될 수 있습니다. 이 시나리오에서는 사용자가 부모 도구 모음 단추를 선택 팝업 메뉴가 나타납니다.  
   
  팝업 메뉴 바로 가기 메뉴를 경우 없는 부모 도구 모음 단추를 갖습니다.  
   
-##  <a name="getparentpopupmenu"></a>CMFCPopupMenu::GetParentPopupMenu  
+##  <a name="getparentpopupmenu"></a>  CMFCPopupMenu::GetParentPopupMenu  
  부모 팝업 메뉴에 대 한 포인터를 반환합니다.  
   
 ```  
@@ -760,7 +755,7 @@ CMFCPopupMenu* GetParentPopupMenu() const;
 ### <a name="remarks"></a>설명  
  팝업 메뉴에 부모 `CMFCPopupMenu` 하위 메뉴의 경우에 개체입니다.  
   
-##  <a name="getparentribbonelement"></a>CMFCPopupMenu::GetParentRibbonElement  
+##  <a name="getparentribbonelement"></a>  CMFCPopupMenu::GetParentRibbonElement  
 
   
 ```  
@@ -771,7 +766,7 @@ CMFCRibbonBaseElement* GetParentRibbonElement() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getparenttoolbar"></a>CMFCPopupMenu::GetParentToolBar  
+##  <a name="getparenttoolbar"></a>  CMFCPopupMenu::GetParentToolBar  
  부모 도구 모음에 대 한 포인터를 반환합니다.  
   
 ```  
@@ -779,12 +774,12 @@ CMFCToolBar* GetParentToolBar() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 부모 도구 모음에 대 한 포인터입니다. `NULL`팝업 메뉴에 경우 부모 도구 모음 제외 합니다.  
+ 부모 도구 모음에 대 한 포인터입니다. `NULL` 팝업 메뉴에 경우 부모 도구 모음 제외 합니다.  
   
 ### <a name="remarks"></a>설명  
  경우는 `CMFCPopupMenu` 없는 부모 도구 모음을는 바로 가기 메뉴는 합니다.  
   
-##  <a name="getquickcustomizetype"></a>CMFCPopupMenu::GetQuickCustomizeType  
+##  <a name="getquickcustomizetype"></a>  CMFCPopupMenu::GetQuickCustomizeType  
 
   
 ```  
@@ -795,7 +790,7 @@ QUICK_CUSTOMIZE_TYPE GetQuickCustomizeType() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getselitem"></a>CMFCPopupMenu::GetSelItem  
+##  <a name="getselitem"></a>  CMFCPopupMenu::GetSelItem  
  현재 선택 된 메뉴 명령에 대 한 포인터를 반환합니다.  
   
 ```  
@@ -808,7 +803,7 @@ CMFCToolBarMenuButton* GetSelItem();
 ### <a name="remarks"></a>설명  
  팝업 메뉴의 메뉴 명령으로 표시 됩니다는 [CMFCToolBarMenuButton 클래스](../../mfc/reference/cmfctoolbarmenubutton-class.md), 또는 클래스에서 파생 된 `CMFCToolBarMenuButton`합니다.  
   
-##  <a name="hasbeenresized"></a>CMFCPopupMenu::HasBeenResized  
+##  <a name="hasbeenresized"></a>  CMFCPopupMenu::HasBeenResized  
 
   
 ```  
@@ -819,7 +814,7 @@ BOOL HasBeenResized() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="hiderarelyusedcommands"></a>CMFCPopupMenu::HideRarelyUsedCommands  
+##  <a name="hiderarelyusedcommands"></a>  CMFCPopupMenu::HideRarelyUsedCommands  
  팝업 메뉴 거의 사용된 되지 않는 명령을 숨길 수 있는지 여부를 나타냅니다.  
   
 ```  
@@ -827,12 +822,12 @@ BOOL HideRarelyUsedCommands() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`팝업 메뉴에는 거의 사용된 되지 않는 명령을; 숨길 수 있습니다 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 팝업 메뉴에는 거의 사용된 되지 않는 명령을; 숨길 수 있습니다 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드는 해당 구성을 사용 하도록 설정 하는 경우에 없습니다만 팝업 메뉴를 숨길 수 있는지 여부를 거의 사용 되지 않는 명령을 지정 합니다. 팝업 메뉴에 부모 단추 있고 부모 창에서 파생 된 경우 거의 사용된 되지 않는 명령을 숨길 수 있습니다는 [CMFCMenuBar 클래스](../../mfc/reference/cmfcmenubar-class.md)합니다. 사용 하 여 [CMFCMenuBar::SetRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#setrecentlyusedmenus) 이 기능을 설정 하 고 [CMFCMenuBar::IsRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#isrecentlyusedmenus) 이 기능은 현재 사용할 수 있는지 확인 해야 합니다. 부모 창에 대 한 두이 방법 모두를 호출 해야 합니다.  
   
-##  <a name="incommand"></a>CMFCPopupMenu::InCommand  
+##  <a name="incommand"></a>  CMFCPopupMenu::InCommand  
 
   
 ```  
@@ -843,7 +838,7 @@ virtual BOOL InCommand();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="insertitem"></a>CMFCPopupMenu::InsertItem  
+##  <a name="insertitem"></a>  CMFCPopupMenu::InsertItem  
  지정된 된 위치에 팝업 메뉴에 새 항목을 삽입합니다.  
   
 ```  
@@ -865,7 +860,7 @@ int InsertItem(
 ### <a name="remarks"></a>설명  
  에 잘못 된 값을 제공 하는 경우이 메서드를 사용할 `iInsertAt`, 팝업 메뉴에서 현재 항목 수보다 큰 정수 등입니다.  
   
-##  <a name="insertseparator"></a>CMFCPopupMenu::InsertSeparator  
+##  <a name="insertseparator"></a>  CMFCPopupMenu::InsertSeparator  
  지정된 된 위치에 팝업 메뉴에는 구분 기호를 삽입합니다.  
   
 ```  
@@ -884,7 +879,7 @@ int InsertSeparator(int iInsertAt = -1);
   
  이 메서드는 실패 하는 경우 `iInsertAt` 은 잘못 된 값입니다.  
   
-##  <a name="isalwaysclose"></a>CMFCPopupMenu::IsAlwaysClose  
+##  <a name="isalwaysclose"></a>  CMFCPopupMenu::IsAlwaysClose  
 
   
 ```  
@@ -895,7 +890,7 @@ virtual BOOL IsAlwaysClose() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="isalwaysshowemptytoolsentry"></a>CMFCPopupMenu::IsAlwaysShowEmptyToolsEntry  
+##  <a name="isalwaysshowemptytoolsentry"></a>  CMFCPopupMenu::IsAlwaysShowEmptyToolsEntry  
 
   
 ```  
@@ -906,7 +901,7 @@ static BOOL __stdcall IsAlwaysShowEmptyToolsEntry();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="iscustomizepane"></a>CMFCPopupMenu::IsCustomizePane  
+##  <a name="iscustomizepane"></a>  CMFCPopupMenu::IsCustomizePane  
  팝업 메뉴도 작동 하는지 나타냅니다는 **QuickCustomizePane**합니다.  
   
 ```  
@@ -914,14 +909,14 @@ BOOL IsCustomizePane();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`팝업이는 **QuckCustomizePane**고, 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 팝업이는 **QuckCustomizePane**고, 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  사용 하 여 **QuickCustomizePane** 직접 팝업 메뉴를 사용자 지정할 수 있도록 합니다. **QuickCustomizePane** 는 `CMFCPopupMenu` 직접 편집 하려면 도구 모음 단추를 클릭할 때 나타나는 합니다.  
   
  응용 프로그램 중이 메서드를 호출 해야 [CMDIFrameWndEx::OnShowCustomizePane](../../mfc/reference/cmdiframewndex-class.md#onshowcustomizepane)합니다.  
   
-##  <a name="isescclose"></a>CMFCPopupMenu::IsEscClose  
+##  <a name="isescclose"></a>  CMFCPopupMenu::IsEscClose  
 
   
 ```  
@@ -932,7 +927,7 @@ BOOL IsEscClose();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="isidle"></a>CMFCPopupMenu::IsIdle  
+##  <a name="isidle"></a>  CMFCPopupMenu::IsIdle  
  팝업 메뉴가 현재 유휴 상태 인지를 나타냅니다.  
   
 ```  
@@ -940,12 +935,12 @@ virtual BOOL IsIdle() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`팝업 메뉴가 유휴 모드에 있으면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 팝업 메뉴가 유휴 모드에 있으면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  기본적으로 팝업 메뉴가 표시 애니메이션이 적용 되 고 사용자가 팝업 메뉴 스크롤 하지 유휴 모드 설정입니다.  
   
-##  <a name="ismenusound"></a>CMFCPopupMenu::IsMenuSound  
+##  <a name="ismenusound"></a>  CMFCPopupMenu::IsMenuSound  
 
   
 ```  
@@ -956,7 +951,7 @@ static UINT __stdcall IsMenuSound();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="isquickcustomize"></a>CMFCPopupMenu::IsQuickCustomize  
+##  <a name="isquickcustomize"></a>  CMFCPopupMenu::IsQuickCustomize  
  결정 여부는 연결 된 [CMFCToolBarMenuButton 클래스](../../mfc/reference/cmfctoolbarmenubutton-class.md) QuickCustomize 모드에 있습니다.  
   
 ```  
@@ -964,12 +959,12 @@ BOOL IsQuickCustomize();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`연결 된 메뉴 단추 QuickCustomize 모드; 이면 그렇지 않으면 `FALSE`합니다. 이 메서드는 또한 반환 `FALSE` 팝업 메뉴와 연결 되지 않은 경우는 `CMFCToolBarMenuButton`합니다.  
+ `TRUE` 연결 된 메뉴 단추 QuickCustomize 모드; 이면 그렇지 않으면 `FALSE`합니다. 이 메서드는 또한 반환 `FALSE` 팝업 메뉴와 연결 되지 않은 경우는 `CMFCToolBarMenuButton`합니다.  
   
 ### <a name="remarks"></a>설명  
  QuickCustomize 사용자 모드 단추를 직접 사용자 지정 하는 도구 모음에서 단추를 선택 합니다.  
   
-##  <a name="isresizeble"></a>CMFCPopupMenu::IsResizeble  
+##  <a name="isresizeble"></a>  CMFCPopupMenu::IsResizeble  
 
   
 ```  
@@ -980,7 +975,7 @@ BOOL IsResizeble() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="isrightalign"></a>CMFCPopupMenu::IsRightAlign  
+##  <a name="isrightalign"></a>  CMFCPopupMenu::IsRightAlign  
  메뉴 오른쪽 맞춤 인지 왼쪽 맞춤 인지를 나타냅니다.  
   
 ```  
@@ -988,14 +983,14 @@ BOOL IsRightAlign() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`메뉴가 있는 경우 오른쪽에 맞춰집니다. `FALSE` 메뉴 왼쪽 맞춤 하는 경우.  
+ `TRUE` 메뉴가 있는 경우 오른쪽에 맞춰집니다. `FALSE` 메뉴 왼쪽 맞춤 하는 경우.  
   
 ### <a name="remarks"></a>설명  
  사용할 수 있습니다 [CMFCPopupMenu::SetRightAlign](#setrightalign) 메뉴 맞춤을 설정 합니다. 기본적으로 팝업 메뉴는 왼쪽 맞춤을 사용합니다.  
   
  메뉴 맞춤 전역 설정 이며 팝업 메뉴 간에 달라질 수 있습니다.  
   
-##  <a name="isscrollable"></a>CMFCPopupMenu::IsScrollable  
+##  <a name="isscrollable"></a>  CMFCPopupMenu::IsScrollable  
 
   
 ```  
@@ -1006,7 +1001,7 @@ BOOL IsScrollable() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="issendmenuselectmsg"></a>CMFCPopupMenu::IsSendMenuSelectMsg  
+##  <a name="issendmenuselectmsg"></a>  CMFCPopupMenu::IsSendMenuSelectMsg  
  사용자가 팝업 메뉴에서 명령을 선택할 때 프레임 워크에 부모 프레임을 알립니다 있는지 여부를 나타냅니다.  
   
 ```  
@@ -1014,12 +1009,12 @@ static BOOL IsSendMenuSelectMsg();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`프레임 워크에 부모 프레임; 알립니다 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 프레임 워크에 부모 프레임; 알립니다 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  프레임 워크에 전송 하 여 부모 프레임을 알립니다는 `WM_MENUSELECT` 는 사용 되는 메뉴 명령을 선택 했을 때 메시지입니다.  
   
-##  <a name="isshown"></a>CMFCPopupMenu::IsShown  
+##  <a name="isshown"></a>  CMFCPopupMenu::IsShown  
  팝업 메뉴의 현재 표시 여부를 나타냅니다.  
   
 ```  
@@ -1027,9 +1022,9 @@ BOOL IsShown() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`팝업 메뉴가 표시 되 면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 팝업 메뉴가 표시 되 면 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="moveto"></a>CMFCPopupMenu::MoveTo  
+##  <a name="moveto"></a>  CMFCPopupMenu::MoveTo  
 
   
 ```  
@@ -1041,7 +1036,7 @@ void MoveTo(const CPoint& pt);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onchangehot"></a>CMFCPopupMenu::OnChangeHot  
+##  <a name="onchangehot"></a>  CMFCPopupMenu::OnChangeHot  
 
   
 ```  
@@ -1053,7 +1048,7 @@ virtual void OnChangeHot(int nHot);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onchooseitem"></a>CMFCPopupMenu::OnChooseItem  
+##  <a name="onchooseitem"></a>  CMFCPopupMenu::OnChooseItem  
 
   
 ```  
@@ -1065,7 +1060,7 @@ virtual void OnChooseItem(UINT uidCmdID);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="oncmdmsg"></a>CMFCPopupMenu::OnCmdMsg  
+##  <a name="oncmdmsg"></a>  CMFCPopupMenu::OnCmdMsg  
 
   
 ```  
@@ -1086,7 +1081,7 @@ virtual BOOL OnCmdMsg(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="postcommand"></a>CMFCPopupMenu::PostCommand  
+##  <a name="postcommand"></a>  CMFCPopupMenu::PostCommand  
 
   
 ```  
@@ -1100,7 +1095,7 @@ BOOL PostCommand(UINT uiCommandID);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="pretranslatemessage"></a>CMFCPopupMenu::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  CMFCPopupMenu::PreTranslateMessage  
 
   
 ```  
@@ -1114,7 +1109,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="recalclayout"></a>CMFCPopupMenu::RecalcLayout  
+##  <a name="recalclayout"></a>  CMFCPopupMenu::RecalcLayout  
 
   
 ```  
@@ -1126,14 +1121,14 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="removeallitems"></a>CMFCPopupMenu::RemoveAllItems  
+##  <a name="removeallitems"></a>  CMFCPopupMenu::RemoveAllItems  
  팝업 메뉴에서 모든 항목을 지웁니다.  
   
 ```  
 void RemoveAllItems();
 ```  
   
-##  <a name="removeitem"></a>CMFCPopupMenu::RemoveItem  
+##  <a name="removeitem"></a>  CMFCPopupMenu::RemoveItem  
  팝업 메뉴에서 지정된 된 항목을 제거 합니다.  
   
 ```  
@@ -1145,12 +1140,12 @@ BOOL RemoveItem(int iIndex);
  삭제할 항목의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드는 영향을 받는 항목을 제거 하 여 구분 기호 자동으로 정렬 합니다. 프레임 워크에서 구분 기호를 재배열 하는 방법에 대 한 자세한 내용은 참조 [CMFCToolBar::RemoveButton](../../mfc/reference/cmfctoolbar-class.md#removebutton)합니다.  
   
-##  <a name="savestate"></a>CMFCPopupMenu::SaveState  
+##  <a name="savestate"></a>  CMFCPopupMenu::SaveState  
 
   
 ```  
@@ -1159,7 +1154,7 @@ virtual void SaveState();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setanimationspeed"></a>CMFCPopupMenu::SetAnimationSpeed  
+##  <a name="setanimationspeed"></a>  CMFCPopupMenu::SetAnimationSpeed  
  팝업 메뉴에 대 한 애니메이션 속도 설정합니다.  
   
 ```  
@@ -1175,7 +1170,7 @@ static void SetAnimationSpeed(UINT nElapse);
   
  이 매개 변수는 기본적으로 30 밀리초로 설정 됩니다. 에 대 한 유효한 값 범위 `nElapse` 는 0에서 200입니다.  
   
-##  <a name="setanimationtype"></a>CMFCPopupMenu::SetAnimationType  
+##  <a name="setanimationtype"></a>  CMFCPopupMenu::SetAnimationType  
  이 팝업 메뉴에 대 한 애니메이션 유형을 설정합니다.  
   
 ```  
@@ -1189,7 +1184,7 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ### <a name="remarks"></a>설명  
  참조 [CMFCPopupMenu::GetAnimationType](#getanimationtype) 에 유효한 값의 목록에 대 한 `type`합니다.  
   
-##  <a name="setautodestroy"></a>CMFCPopupMenu::SetAutoDestroy  
+##  <a name="setautodestroy"></a>  CMFCPopupMenu::SetAutoDestroy  
 
   
 ```  
@@ -1201,7 +1196,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setdefaultitem"></a>CMFCPopupMenu::SetDefaultItem  
+##  <a name="setdefaultitem"></a>  CMFCPopupMenu::SetDefaultItem  
  팝업 메뉴에 대 한 기본 명령을 설정합니다.  
   
 ```  
@@ -1215,7 +1210,7 @@ void SetDefaultItem(UINT uiCmd);
 ### <a name="remarks"></a>설명  
  팝업 메뉴의 기본 명령 팝업 메뉴가 나타날 때 선택 되는 명령이입니다.  
   
-##  <a name="setforcemenufocus"></a>CMFCPopupMenu::SetForceMenuFocus  
+##  <a name="setforcemenufocus"></a>  CMFCPopupMenu::SetForceMenuFocus  
  메뉴 팝업 메뉴가 표시 되 면 모음으로 돌아가려면 입력된 포커스를 강제로 수행 합니다.  
   
 ```  
@@ -1224,12 +1219,12 @@ static void SetForceMenuFocus(BOOL bValue);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bValue`  
- `TRUE`메뉴 모음 때 팝업 메뉴에 입력된 포커스를 강제로 설정 하기 위해 프레임 워크를 원하는 경우 표시 됩니다. `FALSE`팝업 메뉴의 초점을 맞출를 선택 합니다.  
+ `TRUE` 메뉴 모음 때 팝업 메뉴에 입력된 포커스를 강제로 설정 하기 위해 프레임 워크를 원하는 경우 표시 됩니다. `FALSE` 팝업 메뉴의 초점을 맞출를 선택 합니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드는 응용 프로그램에 팝업 메뉴를 모두에 대 한 전체 적용 되는 플래그를 설정 합니다. 기본적으로이 기능은 사용 되지 않습니다.  
   
-##  <a name="setforceshadow"></a>CMFCPopupMenu::SetForceShadow  
+##  <a name="setforceshadow"></a>  CMFCPopupMenu::SetForceShadow  
  주 프레임 밖에 팝업 메뉴를 표시 하는 경우 메뉴 그림자를 그릴 하기 위해 프레임 워크를 강제로 수행 합니다.  
   
 ```  
@@ -1238,12 +1233,12 @@ static void SetForceShadow(BOOL bValue);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bValue`  
- `TRUE`메뉴 그림자를 그리기 위해 프레임 워크를 원하는 경우 `FALSE` 그렇지 않은 경우.  
+ `TRUE` 메뉴 그림자를 그리기 위해 프레임 워크를 원하는 경우 `FALSE` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
  이 메서드를 호출할 때 응용 프로그램에서 전역 플래그를 설정 합니다. 이 플래그는 응용 프로그램에 팝업 메뉴를 모두 영향을 줍니다.  
   
-##  <a name="setmaxwidth"></a>CMFCPopupMenu::SetMaxWidth  
+##  <a name="setmaxwidth"></a>  CMFCPopupMenu::SetMaxWidth  
  팝업 메뉴에 대 한 최대 너비를 설정 합니다.  
   
 ```  
@@ -1257,7 +1252,7 @@ void SetMaxWidth(int iMaxWidth);
 ### <a name="remarks"></a>설명  
  메뉴 명령과 연결 된 텍스트는 최대 너비를 넘으면가 정수가 아니면 하 고 적합 하지 않은 파트 3 개의 점으로 대체 됩니다.  
   
-##  <a name="setmessagewnd"></a>CMFCPopupMenu::SetMessageWnd  
+##  <a name="setmessagewnd"></a>  CMFCPopupMenu::SetMessageWnd  
 
   
 ```  
@@ -1269,7 +1264,7 @@ void SetMessageWnd(CWnd* pMsgWnd);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setparentribbonelement"></a>CMFCPopupMenu::SetParentRibbonElement  
+##  <a name="setparentribbonelement"></a>  CMFCPopupMenu::SetParentRibbonElement  
 
   
 ```  
@@ -1281,7 +1276,7 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setquickcustomizetype"></a>CMFCPopupMenu::SetQuickCustomizeType  
+##  <a name="setquickcustomizetype"></a>  CMFCPopupMenu::SetQuickCustomizeType  
 
   
 ```  
@@ -1293,7 +1288,7 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setquickmode"></a>CMFCPopupMenu::SetQuickMode  
+##  <a name="setquickmode"></a>  CMFCPopupMenu::SetQuickMode  
 
   
 ```  
@@ -1302,7 +1297,7 @@ void SetQuickMode();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setrightalign"></a>CMFCPopupMenu::SetRightAlign  
+##  <a name="setrightalign"></a>  CMFCPopupMenu::SetRightAlign  
  팝업 메뉴에 대 한 메뉴 맞춤을 설정합니다.  
   
 ```  
@@ -1311,12 +1306,12 @@ void SetRightAlign(BOOL bRightAlign = TRUE);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bRightAlign`  
- 메뉴 맞춤을 나타내는 부울입니다. `TRUE`오른쪽 맞춤을 나타냅니다 `FALSE` 왼쪽된 맞춤을 나타냅니다.  
+ 메뉴 맞춤을 나타내는 부울입니다. `TRUE` 오른쪽 맞춤을 나타냅니다 `FALSE` 왼쪽된 맞춤을 나타냅니다.  
   
 ### <a name="remarks"></a>설명  
  기본적으로 모든 팝업 메뉴에는 왼쪽 맞춤 됩니다.  
   
-##  <a name="setsendmenuselectmsg"></a>CMFCPopupMenu::SetSendMenuSelectMsg  
+##  <a name="setsendmenuselectmsg"></a>  CMFCPopupMenu::SetSendMenuSelectMsg  
  사용자가 명령을 선택 팝업 메뉴의 부모 프레임 알립니다 있는지 여부를 제어 하는 플래그를 설정 합니다.  
   
 ```  
@@ -1325,12 +1320,12 @@ static void SetSendMenuSelectMsg(BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bSet`  
- `TRUE`팝업 메뉴의 부모 프레임에 게 알리는 경우 `FALSE` 그렇지 않은 경우.  
+ `TRUE` 팝업 메뉴의 부모 프레임에 게 알리는 경우 `FALSE` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
  응용 프로그램에 팝업 메뉴를 모두에 대 한 전역 옵션입니다. 팝업 메뉴 송신할 사용 하는 경우는 `WM_MENUSELECT` 메시지는 사용자가 명령을 선택할 때 부모 프레임입니다.  
   
-##  <a name="showallcommands"></a>CMFCPopupMenu::ShowAllCommands  
+##  <a name="showallcommands"></a>  CMFCPopupMenu::ShowAllCommands  
  모든 명령을 표시 하는 팝업 메뉴를 강제로 수행 합니다.  
   
 ```  
@@ -1340,7 +1335,7 @@ void ShowAllCommands();
 ### <a name="remarks"></a>설명  
  이 전역 설정 아니며 현재 팝업 메뉴에 영향을 줍니다.  
   
-##  <a name="triggerresize"></a>CMFCPopupMenu::TriggerResize  
+##  <a name="triggerresize"></a>  CMFCPopupMenu::TriggerResize  
 
   
 ```  
@@ -1349,7 +1344,7 @@ void TriggerResize();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="updateallshadows"></a>CMFCPopupMenu::UpdateAllShadows  
+##  <a name="updateallshadows"></a>  CMFCPopupMenu::UpdateAllShadows  
  모든 열린된 팝업 메뉴에 그림자를 업데이트합니다.  
   
 ```  
@@ -1363,7 +1358,7 @@ static void UpdateAllShadows(LPRECT lprectScreen = NULL);
 ### <a name="remarks"></a>설명  
  이 메서드는 애니메이션된 컨트롤 또는 동적 콘텐츠가 있는 다른 창을 통해 표시 되는 팝업 메뉴에 유용 합니다.  
   
-##  <a name="updateshadow"></a>CMFCPopupMenu::UpdateShadow  
+##  <a name="updateshadow"></a>  CMFCPopupMenu::UpdateShadow  
  팝업 메뉴의 그림자를 업데이트합니다.  
   
 ```  

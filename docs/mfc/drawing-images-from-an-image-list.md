@@ -1,13 +1,10 @@
 ---
-title: "이미지 목록에서 이미지 그리기 | Microsoft Docs"
-ms.custom: 
+title: 이미지 목록에서 이미지 그리기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deb9a96d5096b489f8e4dcbaf987509d60bd5024
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 86983506770b9719972170dfbb70b02c8026e108
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drawing-images-from-an-image-list"></a>이미지 목록에서 이미지 그리기
 이미지를 그리기 위해 사용 하 여는 [CImageList::Draw](../mfc/reference/cimagelist-class.md#draw) 멤버 함수입니다. 장치 컨텍스트 개체를 그릴 위치를 이미지를 그릴 장치 컨텍스트에서 이미지의 인덱스 및 그리기 스타일을 표시 하기 위해 플래그 집합이에 대 한 포인터를 지정 합니다.  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
  마스크 되지 않은 이미지를 사용 하 여 대상 장치 컨텍스트에에 복사 되는 **SRCCOPY** 래스터 작업 합니다. 이미지의 색상 장치 컨텍스트의 배경색에 관계 없이 동일 하 게 표시 합니다. 에 지정 된 그리기 스타일 **그리기** 레이블에도 마스크 되지 않은 이미지의 모양에 영향을 주지 않습니다.  
   
- 멤버 함수 Draw, 다른 함수 외에도 [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), 이미지를 렌더링 하는 기능을 확장 합니다. `DrawIndirect`매개 변수로 하나는 [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) 구조입니다. 이 구조를 사용 하 여 래스터 연산 (ROP) 코드의 사용을 포함 하 여 현재 이미지 렌더링을 사용자 지정할 수 있습니다. ROP 코드에 대 한 자세한 내용은 참조 하십시오. [래스터 연산 코드](http://msdn.microsoft.com/library/windows/desktop/dd162892) 및 [브러시 비트맵](http://msdn.microsoft.com/library/windows/desktop/dd183378) Windows sdk에서입니다.  
+ 멤버 함수 Draw, 다른 함수 외에도 [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), 이미지를 렌더링 하는 기능을 확장 합니다. `DrawIndirect` 매개 변수로 하나는 [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) 구조입니다. 이 구조를 사용 하 여 래스터 연산 (ROP) 코드의 사용을 포함 하 여 현재 이미지 렌더링을 사용자 지정할 수 있습니다. ROP 코드에 대 한 자세한 내용은 참조 하십시오. [래스터 연산 코드](http://msdn.microsoft.com/library/windows/desktop/dd162892) 및 [브러시 비트맵](http://msdn.microsoft.com/library/windows/desktop/dd183378) Windows sdk에서입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CImageList 사용](../mfc/using-cimagelist.md)   

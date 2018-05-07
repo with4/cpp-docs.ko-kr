@@ -1,12 +1,9 @@
 ---
-title: "CTypedPtrMap 클래스 | Microsoft Docs"
-ms.custom: 
+title: CTypedPtrMap 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTypedPtrMap
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9056fc73e2718b2a21936c39e630f4d4fddf1eed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cdb0c8679990a48740032017a2c0e11b7148f2d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap 클래스
 `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`및 `CMapStringToPtr`포인터-맵 클래스 개체에 대해 형식 안전 "래퍼"를 제공합니다.  
@@ -87,7 +82,7 @@ class CTypedPtrMap : public BASE_CLASS
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxtempl.h  
   
-##  <a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc  
+##  <a name="getnextassoc"></a>  CTypedPtrMap::GetNextAssoc  
  에 지도 요소를 검색 `rNextPosition`, 그런 다음 업데이트 `rNextPosition` 맵에서 다음 요소를 참조 하 합니다.  
   
 ```  
@@ -120,8 +115,8 @@ void GetNextAssoc(
   
  이 인라인 함수가 호출 `BASE_CLASS` **:: GetNextAssoc**합니다.  
   
-##  <a name="lookup"></a>CTypedPtrMap::Lookup  
- `Lookup`정확히 일치 하는 키가 있는 지도 요소를 빠르게 찾기 위해 해싱 알고리즘을 사용 합니다.  
+##  <a name="lookup"></a>  CTypedPtrMap::Lookup  
+ `Lookup` 정확히 일치 하는 키가 있는 지도 요소를 빠르게 찾기 위해 해싱 알고리즘을 사용 합니다.  
   
 ```  
 BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;  
@@ -146,7 +141,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ### <a name="remarks"></a>설명  
  이 인라인 함수가 호출 `BASE_CLASS` **:: 조회**합니다.  
   
-##  <a name="operator_at"></a>CTypedPtrMap::operator]  
+##  <a name="operator_at"></a>  CTypedPtrMap::operator]  
  이 연산자는 대입문 (l-value)의 왼쪽에만 사용할 수 있습니다.  
   
 ```  
@@ -166,7 +161,7 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 ### <a name="remarks"></a>설명  
  지정된 된 키와 지도 요소가 경우 새 요소는 생성 됩니다. 없습니다 "오른쪽" (r-value)이이 운영자에 게 해당 되므로은 실패할 가능성이 있는 지도에서 키를 찾을 수 있습니다. 사용 하 여 `Lookup` 요소 검색에 대 한 멤버 함수입니다.  
   
-##  <a name="removekey"></a>CTypedPtrMap::RemoveKey  
+##  <a name="removekey"></a>  CTypedPtrMap::RemoveKey  
  이 멤버 함수를 호출 `BASE_CLASS` **:: RemoveKey**합니다.  
   
 ```  
@@ -186,7 +181,7 @@ BOOL RemoveKey(KEY key);
 ### <a name="remarks"></a>설명  
  설명에 자세한 참조 [CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey)합니다.  
   
-##  <a name="setat"></a>CTypedPtrMap::SetAt  
+##  <a name="setat"></a>  CTypedPtrMap::SetAt  
  이 멤버 함수를 호출 `BASE_CLASS` **:: SetAt**합니다.  
   
 ```  

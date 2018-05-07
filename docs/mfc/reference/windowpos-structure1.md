@@ -1,13 +1,10 @@
 ---
-title: "WINDOWPOS 구조 1 | Microsoft Docs"
-ms.custom: 
+title: WINDOWPOS 구조 1 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - WINDOWPOS
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - WINDOWPOS structure [MFC]
 ms.assetid: a4ea7cd9-c4c2-4480-9c55-cbbff72195e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7db3991a6767e33c73857daf40a977ac5f6f0b85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4abd236998f37f0d719f41827d05a17fde56fde
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windowpos-structure1"></a>WINDOWPOS 구조 1
 `WINDOWPOS` 구조는 창의 위치와 크기에 대 한 정보를 포함 합니다.  
@@ -72,15 +67,15 @@ typedef struct tagWINDOWPOS { /* wp */
   
 - **SWP_HIDEWINDOW** 창을 숨깁니다.  
   
-- `SWP_NOACTIVATE`창을 활성화 하지 않습니다.  
+- `SWP_NOACTIVATE` 창을 활성화 하지 않습니다.  
   
 - **SWP_NOCOPYBITS** 클라이언트 영역의 전체 내용을 삭제 합니다. 이 플래그를 지정 하지 클라이언트 영역의 유효한 내용은 저장 되며 창이 크기가 조정 되거나 위치가 변경 후 클라이언트 영역에 다시 복사 됩니다.  
   
-- `SWP_NOMOVE`현재 위치를 유지 (무시는 **x** 및 **y** 멤버).  
+- `SWP_NOMOVE` 현재 위치를 유지 (무시는 **x** 및 **y** 멤버).  
   
 - **SWP_NOOWNERZORDER** Z-순서에서 소유자 창의 위치를 변경 되지 않습니다.  
   
-- `SWP_NOSIZE`현재 크기를 유지 하면서 (무시는 **cx** 및 **cy** 멤버).  
+- `SWP_NOSIZE` 현재 크기를 유지 하면서 (무시는 **cx** 및 **cy** 멤버).  
   
 - **SWP_NOREDRAW** 변경 내용을 다시 그려지지 않습니다.  
   
@@ -88,7 +83,7 @@ typedef struct tagWINDOWPOS { /* wp */
   
 - **SWP_NOSENDCHANGING** 창을 받지 못하게에서 방지는 `WM_WINDOWPOSCHANGING` 메시지입니다.  
   
-- `SWP_NOZORDER`현재 순서 유지 (무시는 **hwndInsertAfter** 멤버).  
+- `SWP_NOZORDER` 현재 순서 유지 (무시는 **hwndInsertAfter** 멤버).  
   
 - **SWP_SHOWWINDOW** 창을 표시 합니다.  
   

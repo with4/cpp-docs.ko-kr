@@ -1,13 +1,10 @@
 ---
-title: "대화 상자 클래스 | Microsoft Docs"
-ms.custom: 
+title: 대화 상자 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.dialog
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d51529e5d04a8297c0d3824ab38c7d2045bc866
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 60d33289d8025d7cdcaf4f6f69062230730b958c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-box-classes"></a>대화 상자 클래스
 클래스 `CDialog` 및 대화 상자 기능을 캡슐화 하는 클래스의 파생된 클래스입니다. 대화 상자 창의 특별 한 종류 이므로 `CDialog` 에서 파생 된 `CWnd`합니다. 대화 상자 클래스에서 파생 `CDialog` 또는 하나를 사용을 열거나 저장할 파일, 인쇄, 글꼴 또는 색상을 선택 하면 같은 표준 대화 상자에 대 한 일반 대화 상자 클래스의 검색 및 바꾸기 작업을 시작 하거나 수행 하는 다양 한 OLE 관련 작업입니다.  
@@ -71,7 +66,7 @@ ms.lasthandoff: 02/09/2018
  OLE는 Windows에 몇 가지 일반 대화 상자를 추가합니다. 이 클래스는 OLE 일반 대화 상자를 캡슐화 합니다.  
   
  [COleDialog](../mfc/reference/coledialog-class.md)  
- 프레임 워크에서 모든 OLE 대화 상자에 대 한 일반적인 구현을 포함 하는 데 사용 합니다. 사용자 인터페이스 범주에 있는 모든 대화 상자 클래스는이 기본 클래스에서 파생 됩니다. `COleDialog`직접 사용할 수 없습니다.  
+ 프레임 워크에서 모든 OLE 대화 상자에 대 한 일반적인 구현을 포함 하는 데 사용 합니다. 사용자 인터페이스 범주에 있는 모든 대화 상자 클래스는이 기본 클래스에서 파생 됩니다. `COleDialog` 직접 사용할 수 없습니다.  
   
  [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
  새 OLE 삽입 연결 항목 또는 포함에 대 한 표준 사용자 인터페이스 개체 삽입 대화 상자를 표시 합니다.  

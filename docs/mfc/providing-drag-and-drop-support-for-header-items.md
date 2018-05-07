@@ -1,13 +1,10 @@
 ---
-title: "헤더 항목에 대 한 끌어서 놓기 지원 제공 | Microsoft Docs"
-ms.custom: 
+title: 헤더 항목에 대 한 끌어서 놓기 지원 제공 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], drag and drop support
 - HDN_ notifications [MFC]
 ms.assetid: 93a152ec-804f-488f-b260-b3a438d0dc0f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd1ac2171a13610ee3aeabed12f5348089a57491
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50cd19d4828269d0591afd0b46768e9917b96906
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>헤더 항목에 대한 끌어서 놓기 지원 제공
 헤더 항목에 대 한 끌어서 놓기 지원 제공 하려면 지정 된 `HDS_DRAGDROP` 스타일입니다. 헤더 항목에 대 한 끌어서 놓기 지원 사용자의 헤더 컨트롤의 헤더 항목의 순서는 기능을 제공 합니다. 기본 동작 헤더 항목을 삭제할 경우 끌고 헤더 항목의 반투명 끌기 이미지 및 새 위치를 나타내는 시각적 표시기를 제공 합니다.  

@@ -1,12 +1,9 @@
 ---
-title: "C 런타임 오류 r 6033이 발생 | Microsoft Docs"
-ms.custom: 
+title: C 런타임 오류 r 6033이 발생 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - R6033
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - R6033
 ms.assetid: f9cffdc9-81bd-4a64-a698-02762cbd82c9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f2ef73d3cb82a65c8114d2e7f921b47ffd45d65
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed66dec4f4eb17378c9901439be2ad1449597a93
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-runtime-error-r6033"></a>C 런타임 오류 r 6033이 발생
 네이티브 코드를 초기화 하는 동안이 어셈블리에서 MSIL 코드를 사용 하려고 합니다. 응용 프로그램에서 버그를 나타냅니다. MSIL로 컴파일된 호출의 결과 가능성이 높으며 (/ clr) 함수를 DllMain 또는 기본 생성자에서 합니다.  
