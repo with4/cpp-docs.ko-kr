@@ -1,12 +1,9 @@
 ---
-title: "CInstantaneousTransition 클래스 | Microsoft Docs"
-ms.custom: 
+title: CInstantaneousTransition 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CInstantaneousTransition
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CInstantaneousTransition [MFC], Create
 - CInstantaneousTransition [MFC], m_dblFinalValue
 ms.assetid: c3d5121f-2c6b-4221-9e57-10e082a31120
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ffd06fe8c9b6f10c853cbc407d6558b95934b1b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 894d782f0f896837474c24255703a60e228737ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cinstantaneoustransition-class"></a>CInstantaneousTransition 클래스
 순간 전환을 캡슐화합니다.  
@@ -75,7 +70,7 @@ class CInstantaneousTransition : public CBaseTransition;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="cinstantaneoustransition"></a>CInstantaneousTransition::CInstantaneousTransition  
+##  <a name="cinstantaneoustransition"></a>  CInstantaneousTransition::CInstantaneousTransition  
  전환 개체를 생성 하 고 최종 값을 초기화 합니다.  
   
 ```  
@@ -86,7 +81,7 @@ CInstantaneousTransition(DOUBLE dblFinalValue);
  `dblFinalValue`  
  전환의 끝에서 애니메이션 변수의 값입니다.  
   
-##  <a name="create"></a>CInstantaneousTransition::Create  
+##  <a name="create"></a>  CInstantaneousTransition::Create  
  캡슐화 된 전환 COM 개체를 만드는 전환 라이브러리를 호출 합니다.  
   
 ```  
@@ -103,7 +98,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>반환 값  
  TRUE 이면 전환을 만들었습니다. 그렇지 않으면 FALSE입니다.  
   
-##  <a name="m_dblfinalvalue"></a>CInstantaneousTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>  CInstantaneousTransition::m_dblFinalValue  
  전환의 끝에서 애니메이션 변수의 값입니다.  
   
 ```  

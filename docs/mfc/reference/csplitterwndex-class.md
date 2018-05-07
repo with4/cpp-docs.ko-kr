@@ -1,12 +1,9 @@
 ---
-title: "CSplitterWndEx 클래스 | Microsoft Docs"
-ms.custom: 
+title: CSplitterWndEx 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSplitterWndEx
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CSplitterWndEx [MFC], OnDrawSplitter
 ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94ec633718dda81a5183a59eb46387b361d0f004
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f0dfacc6bf08aa5b36288a9933ffa9980937f2b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csplitterwndex-class"></a>CSplitterWndEx 클래스
 
@@ -73,7 +68,7 @@ class CSplitterWndEx : public CSplitterWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxsplitterwndex.h  
   
-##  <a name="ondrawsplitter"></a>CSplitterWndEx::OnDrawSplitter  
+##  <a name="ondrawsplitter"></a>  CSplitterWndEx::OnDrawSplitter  
  분할 창 그리기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  

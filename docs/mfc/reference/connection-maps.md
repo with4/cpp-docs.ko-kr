@@ -1,13 +1,10 @@
 ---
-title: "연결 맵 | Microsoft Docs"
-ms.custom: 
+title: 연결 맵 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 018f2f6c1cd57dc500d4161b02ccb5880a9889fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 475314edba2a11535349991db644a4915e352ae7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="connection-maps"></a>연결 맵
 OLE 컨트롤은 다른 응용 프로그램에 대 한 인터페이스를 노출할 수 있습니다. 이러한 인터페이스는이 컨트롤에는 컨테이너에서의 액세스만을 허용 합니다. OLE 컨트롤을 다른 OLE 개체의 외부 인터페이스에 액세스 하려는 경우 한 연결 지점을 설정 되어야 합니다. 이 연결점에는 나가는 이벤트 맵 또는 알림 함수 등의 외부 디스패치 맵에 대 한 액세스를 제어할 수 있습니다.  
@@ -55,7 +50,7 @@ OLE 컨트롤은 다른 응용 프로그램에 대 한 인터페이스를 노출
 |[AfxConnectionAdvise](#afxconnectionadvise)|원본 및 싱크 간에 연결을 설정 합니다.|  
 |[AfxConnectionUnadvise](#afxconnectionunadvise)|원본 서버와 싱크 간의 연결을 중단합니다.|  
   
-##  <a name="begin_connection_part"></a>BEGIN_CONNECTION_PART  
+##  <a name="begin_connection_part"></a>  BEGIN_CONNECTION_PART  
  사용 하 여는 `BEGIN_CONNECTION_PART` 매크로를 추가 연결 지점 이벤트와 속성 알림 연결 지점 외의 정의 시작 합니다.  
   
 ```   
@@ -75,7 +70,7 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdisp.h  
   
-##  <a name="end_connection_part"></a>END_CONNECTION_PART  
+##  <a name="end_connection_part"></a>  END_CONNECTION_PART  
  연결 지점의 선언을 종료합니다.  
   
 ```   
@@ -89,7 +84,7 @@ END_CONNECTION_PART(localClass)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdisp.h  
   
-##  <a name="connection_iid"></a>CONNECTION_IID  
+##  <a name="connection_iid"></a>  CONNECTION_IID  
  사이 사용 된 `BEGIN_CONNECTION_PART` 및 `END_CONNECTION_PART` OLE 컨트롤에서 지 원하는 연결 지점에 대 한 인터페이스 ID를 정의 하는 매크로입니다.  
   
 ```   
@@ -101,7 +96,7 @@ CONNECTION_IID(iid)
  연결 지점에서 호출 하는 인터페이스의 인터페이스 ID입니다.  
   
 ### <a name="remarks"></a>설명  
- `iid` 인수는 ID에 해당 연결 된 싱크 연결점은 호출 하는 인터페이스를 식별 하는 데 사용 하는 인터페이스입니다. 예:  
+ `iid` 인수는 ID에 해당 연결 된 싱크 연결점은 호출 하는 인터페이스를 식별 하는 데 사용 하는 인터페이스입니다. 예를 들어:  
   
  [!code-cpp[NVC_MFCConnectionPoints#10](../../mfc/codesnippet/cpp/connection-maps_1.h)]  
   
@@ -110,7 +105,7 @@ CONNECTION_IID(iid)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdisp.h  
   
-##  <a name="declare_connection_map"></a>DECLARE_CONNECTION_MAP  
+##  <a name="declare_connection_map"></a>  DECLARE_CONNECTION_MAP  
  각 `COleControl`-프로그램의 파생된 클래스를 지 원하는 컨트롤 추가 연결 지점을 지정 하 고 연결 맵을 제공할 수 있습니다.  
   
 ```   
@@ -123,7 +118,7 @@ DECLARE_CONNECTION_MAP()
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdisp.h  
   
-##  <a name="begin_connection_map"></a>BEGIN_CONNECTION_MAP  
+##  <a name="begin_connection_map"></a>  BEGIN_CONNECTION_MAP  
  프로그램에서 각 `COleControl` 파생 클래스는 컨트롤을 지원하는 연결 포인트를 지정하기 위해 연결 맵을 제공할 수 있습니다.  
   
 ```   
@@ -143,7 +138,7 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdisp.h  
   
-##  <a name="end_connection_map"></a>END_CONNECTION_MAP  
+##  <a name="end_connection_map"></a>  END_CONNECTION_MAP  
  연결 맵의 정의를 끝냅니다.  
   
 ```   
@@ -153,7 +148,7 @@ END_CONNECTION_MAP()
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdisp.h  
   
-##  <a name="connection_part"></a>CONNECTION_PART  
+##  <a name="connection_part"></a>  CONNECTION_PART  
  OLE 컨트롤에 대 한 연결 지점을 ID로 매핑합니다.는 특정 인터페이스  
   
 ```   
@@ -171,7 +166,7 @@ CONNECTION_PART(theClass, iid, localClass)
  연결 지점을 구현하는 로컬 클래스의 이름을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
- 예:  
+ 예를 들어:  
   
  [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/connection-maps_2.cpp)]  
   
@@ -180,7 +175,7 @@ CONNECTION_PART(theClass, iid, localClass)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdisp.h  
   
-##  <a name="afxconnectionadvise"></a>AfxConnectionAdvise  
+##  <a name="afxconnectionadvise"></a>  AfxConnectionAdvise  
  로 지정 된 원본 사이의 연결을 설정 하려면이 함수를 호출 `pUnkSrc`를 및로 지정 된 싱크 `pUnkSink`합니다.  
   
 ```   
@@ -211,13 +206,13 @@ BOOL AFXAPI AfxConnectionAdvise(
 ### <a name="return-value"></a>반환 값  
  연결이 설정 되었습니다. 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCConnectionPoints#8](../../mfc/codesnippet/cpp/connection-maps_3.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxctl.h 
 
-##  <a name="afxconnectionunadvise"></a>AfxConnectionUnadvise  
+##  <a name="afxconnectionunadvise"></a>  AfxConnectionUnadvise  
  로 지정 된 소스 간에 연결을 끊거나이 함수를 호출 `pUnkSrc`를 및로 지정 된 싱크 `pUnkSink`합니다.  
   
 ```   
@@ -248,7 +243,7 @@ BOOL AFXAPI AfxConnectionUnadvise(
 ### <a name="return-value"></a>반환 값  
  0이 아닌 경우에 대 한 연결이 끊어졌습니다. 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCConnectionPoints#9](../../mfc/codesnippet/cpp/connection-maps_4.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  

@@ -2,11 +2,8 @@
 title: CFieldExchange 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFieldExchange
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CFieldExchange [MFC], IsFieldType
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
-caps.latest.revision: 24
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d20a89e48475a0226d76ac719459b1b99cc4e355
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bad68253525fd728b67f2e256c48a3edbf48d720
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange 클래스
 데이터베이스 클래스에서 사용되는 RFX(레코드 필드 교환) 및 대량 RFX(레코드 필드 교환) 루틴을 지원합니다.  
@@ -50,14 +45,14 @@ class CFieldExchange
 |[CFieldExchange::SetFieldType](#setfieldtype)|레코드 집합 데이터 멤버의 유형을 지정-열 또는 매개 변수-다음에 호출할 때까지 다음 모든 RFX 함수 호출을 나타내는 `SetFieldType`합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CFieldExchange`기본 클래스는 없습니다.  
+ `CFieldExchange` 기본 클래스는 없습니다.  
   
  대량 행 페치를 구현 하는 경우 또는 사용자 지정 데이터 형식에 대 한 데이터 교환 루틴을 작성 하는 경우에이 클래스를 사용 하 여 그렇지 않으면 있습니다 사용 하지 않습니다 직접이 클래스. RFX 및 대량 RFX recordset 개체의 필드 데이터 멤버와 데이터 소스에서 현재 레코드에서 해당 필드 간에 데이터를 교환 합니다.  
   
 > [!NOTE]
 >  클래스를 사용 하 여 ODBC Open Database Connectivity () 클래스 아닌 개체 DAO (Data Access) 클래스와 함께 작업 하는 경우 [CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md) 대신 합니다. 자세한 내용은 문서 참조 [개요: 데이터베이스 프로그래밍](../../data/data-access-programming-mfc-atl.md)합니다.  
   
- A `CFieldExchange` 개체 컨텍스트 정보가 필요한 레코드 필드 교환 또는 되려면 대량 레코드 필드 교환에 대 한 배치를 제공 합니다. `CFieldExchange`개체는 현재 레코드의 필드에 다양 한 플래그를 설정 및 매개 변수 및 필드 데이터 멤버를 포함 하 여 작업의 수를 지원 합니다. 에 정의 된 형식의 레코드 집합 클래스 데이터 멤버에서 RFX 및 대량 RFX 작업이 수행 되는 `enum` **FieldType** 에서 `CFieldExchange`합니다. 가능한 **FieldType** 값은:  
+ A `CFieldExchange` 개체 컨텍스트 정보가 필요한 레코드 필드 교환 또는 되려면 대량 레코드 필드 교환에 대 한 배치를 제공 합니다. `CFieldExchange` 개체는 현재 레코드의 필드에 다양 한 플래그를 설정 및 매개 변수 및 필드 데이터 멤버를 포함 하 여 작업의 수를 지원 합니다. 에 정의 된 형식의 레코드 집합 클래스 데이터 멤버에서 RFX 및 대량 RFX 작업이 수행 되는 `enum` **FieldType** 에서 `CFieldExchange`합니다. 가능한 **FieldType** 값은:  
   
 - **CFieldExchange::outputColumn** 필드 데이터 멤버에 대 한 합니다.  
   
@@ -75,7 +70,7 @@ class CFieldExchange
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdb.h  
   
-##  <a name="isfieldtype"></a>CFieldExchange::IsFieldType  
+##  <a name="isfieldtype"></a>  CFieldExchange::IsFieldType  
  사용자가 직접 RFX 함수를 작성 하는 경우 호출 `IsFieldType` 는 특정 필드 또는 매개 변수 데이터 멤버 형식에서 현재 작업을 수행할 수 있는지 여부를 확인 하 고 함수 시작 부분에 (한 **CFieldExchange::outputColumn**, **CFieldExchange::inputParam**, **CFieldExchange::param**, **CFieldExchange::outputParam**, 또는 **CFieldExchange::inoutParam** ).  
   
 ```  
@@ -92,7 +87,7 @@ BOOL IsFieldType(UINT* pnField);
 ### <a name="remarks"></a>설명  
  RFX 함수 기존 모델을 따릅니다.  
   
-##  <a name="setfieldtype"></a>CFieldExchange::SetFieldType  
+##  <a name="setfieldtype"></a>  CFieldExchange::SetFieldType  
  에 대 한 호출을 해야 `SetFieldType` 레코드 집합 클래스에 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) 또는 [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) 재정의 합니다.  
   
 ```  
@@ -129,7 +124,7 @@ void SetFieldType(UINT nFieldType);
   
  출력 및 입/출력 매개 변수를 처리 하는 방법에 대 한 자세한 내용은 참조는 `CRecordset` 멤버 함수 [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset)합니다. RFX 및 대량 RFX 함수에 대 한 자세한 내용은 항목을 참조 하십시오. [레코드 필드 교환 함수](../../mfc/reference/record-field-exchange-functions.md)합니다. 대량 행 페치에 대 한 관련된 정보에 대 한 문서를 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  이 예제에 대 한 호출을 수행할 RFX 함수를 여러 번 호출 `SetFieldType`합니다. `SetFieldType` 통해서만 호출 되는 `pFX` 에 대 한 포인터는 `CFieldExchange` 개체입니다.  
   
  [!code-cpp[NVC_MFCDatabase#33](../../mfc/codesnippet/cpp/cfieldexchange-class_1.cpp)]  

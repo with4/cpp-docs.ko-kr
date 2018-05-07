@@ -1,29 +1,24 @@
 ---
-title: "컨트롤 그리기 최적화 | Microsoft Docs"
-ms.custom: 
+title: 컨트롤 그리기 최적화 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 29ff985d-9bf5-4678-b62d-aad12def75fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3e79a7b8e539198844c106a9c41408f04d69186
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8103e1e342756f9b715c1a0959ed256403e130bf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="optimizing-control-drawing"></a>컨트롤 그리기 최적화
 컨테이너 공급 장치 컨텍스트에 컨트롤을 그리게 되는 경우 일반적으로 장치 컨텍스트에 GDI 개체(예: 펜, 브러시, 글꼴 등)를 선택하고 해당 그리기 작업을 수행하고, 이전의 GDI 개체를 복원합니다. 컨테이너에 동일한 장치 컨텍스트로 그려지는 여러 컨트롤이 있고 각 컨트롤이 필요한 GDI 개체를 선택하는 경우 컨트롤이 이전에 선택한 개체를 개별적으로 복원하지 않으면 시간을 절약할 수 있습니다. 모든 컨트롤이 그려진 후 컨테이너에서는 원래 개체를 자동으로 복원할 수 있습니다.  

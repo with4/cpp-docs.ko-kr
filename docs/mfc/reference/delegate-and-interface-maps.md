@@ -1,13 +1,10 @@
 ---
-title: "대리자 및 인터페이스 맵을 매크로 (MFC) | Microsoft Docs"
-ms.custom: 
+title: 대리자 및 인터페이스 맵을 매크로 (MFC) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/30/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - event map macros [MFC]
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9767c8b92316ffb9e458ba650e28db9ddf1a095b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1e6f2e8cc501f9a466e4970d27a2e6ecd9174ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 |||  
 |-|-|  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 |[MAKE_DELEGATE](#make_delegate)|관리 되는 컨트롤에 이벤트 처리기를 연결합니다.|
 
 
-## <a name="begin_delegate_map"></a>BEGIN_DELEGATE_MAP
+## <a name="begin_delegate_map"></a> BEGIN_DELEGATE_MAP
 대리자 맵에 시작합니다.  
    
 ### <a name="syntax"></a>구문    
@@ -120,7 +115,7 @@ delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
  명령 메시지 id입니다.  
    
 ### <a name="remarks"></a>설명  
- 이 대리자 콜백 메서드는 사용자 인터페이스 업데이트 명령 메시지에 등록합니다. `CommandUIHandler`유사한 [CommandHandler](#commandhandler) 제외 하 고이 대리자는 사용자 인터페이스 개체 업데이트 명령과 함께 사용 합니다. 사용자 인터페이스 업데이트 명령 매핑되어야 일대일 메시지 처리기 메서드를 사용 합니다.  
+ 이 대리자 콜백 메서드는 사용자 인터페이스 업데이트 명령 메시지에 등록합니다. `CommandUIHandler` 유사한 [CommandHandler](#commandhandler) 제외 하 고이 대리자는 사용자 인터페이스 개체 업데이트 명령과 함께 사용 합니다. 사용자 인터페이스 업데이트 명령 매핑되어야 일대일 메시지 처리기 메서드를 사용 합니다.  
   
  Windows Forms를 사용 하 여에 대 한 자세한 내용은 참조 하십시오. [MFC의 Windows Form 사용자 정의 컨트롤을 사용 하 여](../../dotnet/using-a-windows-form-user-control-in-mfc.md)합니다.  
    
@@ -181,15 +176,15 @@ EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);
  컨트롤에 연결할 이벤트 처리기 메서드입니다.  
   
  `ARG0`  
- 관리 되는 이벤트 처리기 메서드의 첫 번째 인수 같은 **개체 ^**합니다.  
+ 관리 되는 이벤트 처리기 메서드의 첫 번째 인수 같은 **개체 ^** 합니다.  
   
  `ARG1`  
- 관리 되는 이벤트 처리기 메서드의 두 번째 인수 같은 **EventArgs ^**합니다.  
+ 관리 되는 이벤트 처리기 메서드의 두 번째 인수 같은 **EventArgs ^** 합니다.  
    
 ### <a name="remarks"></a>설명  
  대리자 맵에의 각 항목에서 만든 관리 되는 이벤트 처리기 대리자에 게 해당 [MAKE_DELEGATE](#make_delegate)합니다.  
    
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 코드 예제는 `EVENT_DELEGATE_ENTRY`를 사용해서 `OnClick` 이벤트 처리기에 대해 대리자 맵에 항목을 만드는 방법을 보여줍니다. `MAKE_DELEGATE`의 코드 예제도 참조하십시오. 자세한 내용은 참조 [하는 방법: 네이티브 c + + 클래스에서 Windows Forms 이벤트 싱크](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)합니다.  
   
  ```cpp
@@ -249,7 +244,7 @@ MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 ### <a name="remarks"></a>설명  
  이 매크로 형식의 관리 되는 이벤트 처리기 대리자를 만듭니다. `DELEGATE` 및 이름의 `MEMBER`합니다. 관리 되는 이벤트 처리기 대리자에는 관리 되는 이벤트를 처리 하는 네이티브 클래스 수 있습니다.  
    
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 코드 예제에서는 호출 하는 방법을 보여 줍니다. `MAKE_DELEGATE` 연결할는 `OnClick` MFC 컨트롤에 이벤트 처리기 `MyControl`합니다. 이 매크로 MFC 응용 프로그램에서 작동 하는 방법에 대 한 보다 광범위 한 설명을 참조 하십시오. [하는 방법: 네이티브 c + + 클래스에서 Windows Forms 이벤트 싱크](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)합니다.  
   
 ```cpp
