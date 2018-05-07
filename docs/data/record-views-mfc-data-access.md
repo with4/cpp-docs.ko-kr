@@ -1,13 +1,10 @@
 ---
-title: "기록 보기 (데이터 액세스) | Microsoft Docs"
-ms.custom: 
+title: 기록 보기 (데이터 액세스) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - record views [C++]
 - forms [C++], data access tasks
 ms.assetid: 562122d9-01d8-4284-acf6-ea109ab0408d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e698cad29405fce4b5a0d23e166217502753dc1d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 742866b2b11811ee37365ee6cc5e4d3aa881db91
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-views--mfc-data-access"></a>레코드 뷰  (MFC Data Access)
 이 섹션은 MFC ODBC 클래스에만 적용 됩니다. OLE DB 레코드 뷰에 대 한 정보를 참조 하십시오. [COleDBRecordView](../mfc/reference/coledbrecordview-class.md) 및 [를 사용 하 여 OLE DB 레코드 뷰](../data/oledb/using-ole-db-record-views.md)합니다.  

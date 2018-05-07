@@ -1,12 +1,9 @@
 ---
-title: "연산자&lt; (multiset) (STL/CLR) | Microsoft Docs"
-ms.custom: 
+title: 연산자&lt; (multiset) (STL/CLR) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multiset::operator<
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator< member [STL/CLR]
 ms.assetid: 48150cda-4f3e-4535-860c-89f622a7f0a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d2eef84b72ab36a0c4dbdfc02e4b58752126a7f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2c665161d266f64cf35b5802c0deca0f3e125df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operatorlt-multiset-stlclr"></a>연산자&lt; (multiset) (STL/CLR)
 목록 비교 보다 작습니다.  
@@ -49,7 +44,7 @@ template<typename Key>
 ## <a name="remarks"></a>설명  
  연산자 함수 이면 true를 반환, 가장 낮은 위치에 대 한 `i` 를 `!(right[i] < left[i])` 도 true 하는 것이 `left[i] < right[i]`합니다. 그렇지 않으면 반환 `left->size() < right->size()` 테스트를 사용 하는지 여부를 `left` 앞에 정렬 `right` 때 두 개의 다중 집합은 요소 별로 비교 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_multiset_operator_lt.cpp   

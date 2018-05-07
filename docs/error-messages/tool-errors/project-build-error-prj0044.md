@@ -1,12 +1,9 @@
 ---
-title: "프로젝트 빌드 오류 PRJ0044 | Microsoft Docs"
-ms.custom: 
+title: 프로젝트 빌드 오류 PRJ0044 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - PRJ0044
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - PRJ0044
 ms.assetid: 5d78c45a-f9e9-4d2b-a3b6-5a5d1421ab84
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69c2d899bb0459d2743b6e9f0d9b51fd1665e75e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7091025f49343ce0054d6033dc54a3397318b37a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="project-build-error-prj0044"></a>프로젝트 빌드 오류 PRJ0044
 'Rule' 'file' 파일에 할당 된 사용자 지정 빌드 규칙에 대 한 ' 추가 종속성 ' 속성이 잘못 되었습니다. 이 속성에 'string'이 포함되어 있으며 이것은 'value'로 계산됩니다.  

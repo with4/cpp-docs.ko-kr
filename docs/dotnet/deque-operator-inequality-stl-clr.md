@@ -1,12 +1,9 @@
 ---
 title: 'deque:: operator! = (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::deque::operator!=
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator!= member [STL/CLR]
 ms.assetid: c23c7bd1-813e-4518-9947-eb13d1176a13
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 17a5fb91f77e1b0a83e63bf498568690001acebd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 46898ab8c6f747dbd72c94e490ec79034231bf81
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dequeoperator-stlclr"></a>deque::operator!=(STL/CLR)
 Deque에 같지 비교 합니다.  
@@ -49,7 +44,7 @@ template<typename Value>
 ## <a name="remarks"></a>설명  
  연산자 함수 반환 `!(left == right)`합니다. 테스트를 사용 하는지 여부를 `left` 동일 정렬 되지 않은 `right` 두 deque 경우 요소 별로 비교 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```cpp  
 // cliext_deque_operator_ne.cpp   

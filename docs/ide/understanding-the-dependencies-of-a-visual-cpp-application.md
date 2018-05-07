@@ -1,13 +1,10 @@
 ---
-title: "Visual c + + 응용 프로그램의 종속성 이해 | Microsoft Docs"
-ms.custom: 
+title: Visual c + + 응용 프로그램의 종속성 이해 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,22 +17,20 @@ helpviewer_keywords:
 - depends.exe
 - libraries [C++], application deployment issues
 ms.assetid: 62a44c95-c389-4c5f-82fd-07d7ef09dbf9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64b7974b16767d226df5e71e7f3ae0e61514ed37
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da2aadeba69a8be29627650ba6ef24516098a8e3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>Visual C++ 응용 프로그램의 종속성 이해
 응용 프로그램에 의존 하는 Visual c + + 라이브러리를 확인 하려면 프로젝트 속성을 볼 수 있습니다. (솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성** 열려는 **속성 페이지** 대화 상자.) 종속성을 더욱 포괄적으로 파악할 수 있는 Dependency Walker(depends.exe)를 사용할 수도 있습니다.  
   
- 에 **속성 페이지** 대화 상자 아래에 있는 다양 한 페이지를 검사할 수 있습니다 **구성 속성** 종속성을 이해 하 합니다. 예를 들어, 프로젝트가 MFC 라이브러리를 사용 하 고 선택 하면 **MFC 사용**, **공유 DLL에서 MFC 사용** 에 **구성 속성**, **일반**  mfc와 같은 MFC Dll에 페이지 실행 시 응용 프로그램이 종속\<버전 >.dll입니다. 선택 하는 경우 CRT 라이브러리에 종속 수 응용 프로그램에서 MFC를 사용 하지 않는 경우는 **런타임 라이브러리** 값 **다중 스레드 디버그 DLL (/ MDd)** 또는 **다중 스레드 DLL (/ MD)**에 **구성 속성**, **C/c + +**, **코드 생성** 페이지.  
+ 에 **속성 페이지** 대화 상자 아래에 있는 다양 한 페이지를 검사할 수 있습니다 **구성 속성** 종속성을 이해 하 합니다. 예를 들어, 프로젝트가 MFC 라이브러리를 사용 하 고 선택 하면 **MFC 사용**, **공유 DLL에서 MFC 사용** 에 **구성 속성**, **일반**  mfc와 같은 MFC Dll에 페이지 실행 시 응용 프로그램이 종속\<버전 >.dll입니다. 선택 하는 경우 CRT 라이브러리에 종속 수 응용 프로그램에서 MFC를 사용 하지 않는 경우는 **런타임 라이브러리** 값 **다중 스레드 디버그 DLL (/ MDd)** 또는 **다중 스레드 DLL (/ MD)** 에 **구성 속성**, **C/c + +**, **코드 생성** 페이지.  
   
  응용 프로그램이 종속되는 DLL을 확인하는 더 포괄적인 방법은 Dependency Walker(depends.exe)를 사용하여 응용 프로그램을 여는 것입니다. 도구를 다운로드할 수 있습니다는 [Dependency Walker](http://go.microsoft.com/fwlink/p/?LinkId=132640) 웹 사이트입니다.  
   

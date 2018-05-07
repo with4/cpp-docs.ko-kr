@@ -1,30 +1,25 @@
 ---
-title: "참조 형식에 대 한 c + + 스택 의미 체계 | Microsoft Docs"
-ms.custom: 
+title: 참조 형식에 대 한 c + + 스택 의미 체계 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8f4bf38fa6512b0dc86edad43c893d2dd09a97a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b3ed886d1bdeb4972122049854b5d288767aa5b8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>참조 형식에 대한 C++ 스택 의미 체계
 Visual c + + 2005 이전 참조 형식의 인스턴스만 만들 수를 사용 하는 `new` 수집 되는 힙에 가비지에 개체를 생성 하는 연산자입니다. 그러나 스택에 네이티브 형식의 인스턴스를 만드는 데 사용할 수 있는 동일한 구문을 사용 하는 참조 형식의 인스턴스를 지금 만들 수 있습니다. 사용할 필요가 없습니다 따라서 [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) 참조 형식의 개체를 만듭니다. 및이 개체가 범위를 벗어나면 컴파일러가 개체의 소멸자가 호출 합니다.  
@@ -60,7 +55,7 @@ Visual c + + 2005 이전 참조 형식의 인스턴스만 만들 수를 사용 �
   
 -   <xref:System.String>  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
  다음 코드 샘플에서는 스택 의미 체계를 사용 하 여 참조 형식의 인스턴스를 선언 하는 방법을 보여 줍니다. 방법을 할당 연산자 및 복사 생성자 작동 및 스택 의미 체계를 사용 하 여 만든 참조 형식이 있는 추적 참조를 초기화 하는 방법입니다.  

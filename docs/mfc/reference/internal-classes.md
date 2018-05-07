@@ -1,13 +1,10 @@
 ---
-title: "내부 클래스 | Microsoft Docs"
-ms.custom: 
+title: 내부 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CPreviewViewEx
 - m_bPreMultiplyCheck
@@ -316,17 +313,15 @@ helpviewer_keywords:
 - CMenuImages class [MFC]
 - CleanUp method [MFC]
 ms.assetid: 3e2276aa-b02a-4781-97ba-ea074045e9e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8848bb9d8599fcff5ed24d3bccf82ef581a0eb0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f7d1ef39a80ce8a06cef14ad227c7de54163644
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internal-classes"></a>내부 클래스
 다음 클래스는 MFC에서 내부적으로 사용 됩니다. 완벽을 기하기 위해 이 단원에서는 이러한 내부 클래스에 대해 설명하지만 이러한 내부 클래스는 코드에서 직접 사용할 수 없습니다.  

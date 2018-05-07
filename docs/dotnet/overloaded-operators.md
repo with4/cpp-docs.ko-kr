@@ -1,36 +1,31 @@
 ---
-title: "오버 로드 된 연산자 | Microsoft Docs"
-ms.custom: 
+title: 오버 로드 된 연산자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - operator overloading, in a CLR class
 - operators [C++], overloading
 ms.assetid: 30391426-afe7-4497-bf22-e4816c1e48c8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 94ee9d7bcffe7d17a5d5cf91fa3accdbe206b641
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f60b749cb5955eda7011b4dc087727d3ca7a5a02
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overloaded-operators"></a>오버로드된 연산자
 연산자 오버 로드는 Visual c + +는 데 Managed Extensions for c + + 정보가 변경 되었습니다.  
   
- 네이티브를 사용 하 여 보다는 예제에 대 한 참조 형식의 선언에 `operator+` 구문, 작성 하는 명시적으로-연산자의 기본 내부 이름이 경우 `op_Addition`합니다. 연산자 오버 로드의 두 가지 주요 이점은 해야 하므로 이름을 통해 명시적으로 호출 하는 연산자의 호출 또한에: 직관적인 구문 (a) 및 (b) 기존 형식에 새 형식을 혼합 될 수 있는 기능입니다. 예:  
+ 네이티브를 사용 하 여 보다는 예제에 대 한 참조 형식의 선언에 `operator+` 구문, 작성 하는 명시적으로-연산자의 기본 내부 이름이 경우 `op_Addition`합니다. 연산자 오버 로드의 두 가지 주요 이점은 해야 하므로 이름을 통해 명시적으로 호출 하는 연산자의 호출 또한에: 직관적인 구문 (a) 및 (b) 기존 형식에 새 형식을 혼합 될 수 있는 기능입니다. 예를 들어:  
   
 ```  
 public __gc __sealed class Vector {  

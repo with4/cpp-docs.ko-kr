@@ -1,12 +1,9 @@
 ---
-title: "소비자 마법사 생성 메서드 | Microsoft Docs"
-ms.custom: 
+title: 소비자 마법사 생성 메서드 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -23,18 +20,16 @@ helpviewer_keywords:
 - OpenRowset method
 - GetRowsetProperties method
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b9ee0a1a044a7e1f87b6da4bec9418c42e6b6ba1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c0e03d24f61b3eba1ff4c6fa1e4d888a0252a21b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="consumer-wizard-generated-methods"></a>소비자 마법사 생성 메서드
 ATL OLE DB 소비자 마법사 및 MFC 응용 프로그램 마법사는 알고 있어야 하는 특정 기능을 생성 합니다. 참고는 몇 가지 방법을 다르게 구현 됩니다 특성 사용된 프로젝트에 있으므로 더 몇 가지 주의 해야 합니다. 각 사례는 아래에 자세히 설명 합니다. 삽입된 코드를 보는 방법에 대한 자세한 내용은 [삽입된 코드 디버그](/visualstudio/debugger/how-to-debug-injected-code)를 참조하세요.  

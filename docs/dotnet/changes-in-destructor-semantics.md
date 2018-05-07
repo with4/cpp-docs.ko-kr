@@ -1,31 +1,26 @@
 ---
-title: "소멸자 의미의 변경 내용을 | Microsoft Docs"
-ms.custom: 
+title: 소멸자 의미의 변경 내용을 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - finalizers [C++]
 - destructors, C++
 ms.assetid: f1869944-a407-452f-b99a-04d8c209f0dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c85ac0b082e8ea1dfbff007a68061e6a286390cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a3d078300ca0e51ba8eb035d5428d300b0413a1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changes-in-destructor-semantics"></a>소멸자 의미의 변경 내용
 클래스 소멸자에 대 한 의미는 Visual c + +는 데 Managed Extensions for c + + 크게 변경 되었습니다.  
@@ -168,7 +163,7 @@ void f() {
  실제로 새 구문에서 소멸자는 다시 이룹니다 생성자는 자동화 된 획득 하 고 해제로 메커니즘 로컬 개체의 수명에 연결 합니다.  
   
 ## <a name="declaring-an-explicit-finalize"></a>명시적 종료 선언  
- 새 구문에서 앞서 설명한 것 처럼 소멸자 합성 됩니다는 `Dispose` 메서드. 즉, 않는 소멸자가 명시적으로 호출 되지 때 가비지 수집기를 종료 하는 동안 이전 처럼 찾지 못합니다 연결 된 `Finalize` 메서드는 개체에 대 한 합니다. 모두 소멸과 종료를 지원 하려면 종료자를 제공 하는 데 특별 한 구문을 도입 되었습니다. 예:  
+ 새 구문에서 앞서 설명한 것 처럼 소멸자 합성 됩니다는 `Dispose` 메서드. 즉, 않는 소멸자가 명시적으로 호출 되지 때 가비지 수집기를 종료 하는 동안 이전 처럼 찾지 못합니다 연결 된 `Finalize` 메서드는 개체에 대 한 합니다. 모두 소멸과 종료를 지원 하려면 종료자를 제공 하는 데 특별 한 구문을 도입 되었습니다. 예를 들어:  
   
 ```  
 public ref class R {  

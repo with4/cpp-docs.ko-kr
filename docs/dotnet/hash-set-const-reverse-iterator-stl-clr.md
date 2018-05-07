@@ -2,11 +2,8 @@
 title: 'hash_set:: const_reverse_iterator (STL/CLR) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_set::const_reverse_iterator
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - const_reverse_iterator member [STL/CLR]
 ms.assetid: 26a58553-3c03-4ded-9d70-65dba6520184
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 115c189893e998a98c5f695fb579d52e3f5ccd60
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8e78284661b16ed8877e36fc74cc0a7530719b65
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashsetconstreverseiterator-stlclr"></a>hash_set::const_reverse_iterator(STL/CLR)
 제어 되는 시퀀스에 대 한 상수 역방향 반복기의 형식입니다.  
@@ -40,7 +35,7 @@ typedef T4 const_reverse_iterator;
 ## <a name="remarks"></a>설명  
  이 형식은 지정 되지 않은 형식의 개체를 설명 `T4` 제어 되는 시퀀스에 대 한 상수 역방향 반복기로 사용할 수 있는 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_set_const_reverse_iterator.cpp   

@@ -1,13 +1,10 @@
 ---
-title: "도움말 메뉴 병합 | Microsoft Docs"
-ms.custom: 
+title: 도움말 메뉴 병합 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - merging Help menus [MFC]
 - Help [MFC], for active document containers
 ms.assetid: 9d615999-79ba-471a-9288-718f0c903d49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4d3ae9509edcbe79417bb37d02f4f585b2da653
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce8d5212f78546c08734aed6fd7e236fa4446007
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="help-menu-merging"></a>도움말 메뉴 병합
 개체가 컨테이너 내에서 활성화 되 면 메뉴 병합 OLE 문서의 프로토콜이 제공의 개체가 완전히 제어는 **도움말** 메뉴. 결과적으로, 컨테이너의 도움말 항목 사용할 수 없는 사용자 개체를 비활성화 하지 않는 한 합니다. 액티브 문서 포함 아키텍처는 컨테이너와 공유할 메뉴에 활성화 되는 활성 문서를 허용 하도록 병합 내부 메뉴에 대 한 규칙을 확장 합니다. 새 규칙은 구성 요소가 무엇 인지 메뉴의 어떤 부분을 소유 하 고 공유 메뉴 생성 방법에 대 한는 추가 규칙입니다.  

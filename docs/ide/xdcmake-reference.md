@@ -1,13 +1,10 @@
 ---
-title: "XDCMake 참조 | Microsoft Docs"
-ms.custom: 
+title: XDCMake 참조 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - xdcmake
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - xdcmake program
 ms.assetid: 14e65747-d000-4343-854b-8393bf01cbac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea635d701b4dea2471067072083d9568f11f3d82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 383347dc5cd1ce0dcadff6bdee802b90fd52e85d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xdcmake-reference"></a>XDCMake 참조
 xdcmake.exe는.xdc 파일을.xml 파일로 컴파일하는 프로그램입니다. 와 소스 코드를 컴파일할 때 각 소스 코드 파일에 대 한 Visual c + + 컴파일러로.xdc 파일 만들어집니다 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 소스 코드 파일에서 XML 태그 여 표시 된 문서 주석을 포함 하는 경우.  
@@ -42,7 +37,7 @@ xdcmake.exe는.xdc 파일을.xml 파일로 컴파일하는 프로그램입니다
 >  명령줄에서 xdcmake.exe 옵션 xdcmake.exe 개발 환경 (속성 페이지)에서 사용 되는 경우 옵션 중에서 다릅니다. 개발 환경에서 xdcmake.exe를 사용 하는 방법은 참조 하십시오. [XML 문서 생성기 도구 속성 페이지](../ide/xml-document-generator-tool-property-pages.md)합니다.  
   
 ## <a name="syntax"></a>구문  
- xdcmake`input_filename options`  
+ xdcmake `input_filename options`  
   
 ## <a name="parameters"></a>매개 변수  
  다음은 각 문자에 대한 설명입니다.  

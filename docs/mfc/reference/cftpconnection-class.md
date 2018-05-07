@@ -1,12 +1,9 @@
 ---
-title: "CFtpConnection 클래스 | Microsoft Docs"
-ms.custom: 
+title: CFtpConnection 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFtpConnection
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a20ee1e3de4d5c9f61437c79bd2eda4240947947
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f43df1cb610c785688db982be2ddc4a19cf140b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection 클래스
 인터넷 서버에 FTP 연결을 관리 하 고 해당 서버에 파일과 디렉터리의 직접 조작할 수 있습니다.  
@@ -91,7 +86,7 @@ class CFtpConnection : public CInternetConnection
   
  방법에 대 한 자세한 내용을 보려면 `CFtpConnection` 작동 하는 다른 MFC 인터넷 클래스 문서를 참조 하십시오. [인터넷 WinInet를 사용한 프로그래밍](../../mfc/win32-internet-extensions-wininet.md)합니다. 서비스, HTTP 및 gopher는 클래스를 참조 하십시오. 지원 되 고 다른 두와 통신 하는 방법에 대 한 자세한 내용은 [CHttpConnection](../../mfc/reference/chttpconnection-class.md) 및 [CGopherConnection](../../mfc/reference/cgopherconnection-class.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   예제를 참조는 [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md) 클래스 개요입니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
@@ -104,7 +99,7 @@ class CFtpConnection : public CInternetConnection
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxinet.h  
   
-##  <a name="cftpconnection"></a>CFtpConnection::CFtpConnection  
+##  <a name="cftpconnection"></a>  CFtpConnection::CFtpConnection  
  이 멤버 함수를 생성 하 라고 하는 `CFtpConnection` 개체입니다.  
   
 ```  
@@ -136,7 +131,7 @@ CFtpConnection(
  FTP 서버 이름을 포함 하는 문자열에 대 한 포인터입니다.  
   
  `dwContext`  
- 작업에 대 한 컨텍스트 식별자입니다. `dwContext`반환한 작업의 상태 정보를 식별 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)합니다. 기본값은 1로 설정 그러나 작업에 대 한 특정 컨텍스트 ID를 명시적으로 할당할 수 있습니다. 개체와 수행 하는 작업 컨텍스트 ID와 가진 연결 됩니다.  
+ 작업에 대 한 컨텍스트 식별자입니다. `dwContext` 반환한 작업의 상태 정보를 식별 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)합니다. 기본값은 1로 설정 그러나 작업에 대 한 특정 컨텍스트 ID를 명시적으로 할당할 수 있습니다. 개체와 수행 하는 작업 컨텍스트 ID와 가진 연결 됩니다.  
   
  `pstrUserName`  
  사용자가 로그인의 이름을 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다. 경우 **NULL**, 기본값은 익명입니다.  
@@ -146,7 +141,7 @@ CFtpConnection(
   
 |`pstrUserName`|`pstrPassword`|FTP 서버에 전송 하는 사용자 이름|FTP 서버에 전송 하는 암호|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
-|**NULL** 또는 ""|**NULL** 또는 ""|"익명"|사용자의 전자 메일 이름|  
+|**NULL** 또는 ""|**NULL** 또는 ""|"anonymous"|사용자의 전자 메일 이름|  
 |비- **NULL** 문자열|**NULL** 또는 ""|`pstrUserName`|" "|  
 |**NULL** 비- **NULL** 문자열|**오류**|**오류**||  
 |비- **NULL** 문자열|비- **NULL** 문자열|`pstrUserName`|`pstrPassword`|  
@@ -160,7 +155,7 @@ CFtpConnection(
 ### <a name="remarks"></a>설명  
  만들지 마십시오는 `CFtpConnection` 개체를 직접 합니다. 대신, 호출 [cinternetsession:: Getftpconnection](../../mfc/reference/cinternetsession-class.md#getftpconnection), 만듦는 **CFptConnection** 개체입니다.  
   
-##  <a name="command"></a>CFtpConnection::Command  
+##  <a name="command"></a>  CFtpConnection::Command  
  FTP 서버에 직접 명령을 보냅니다.  
   
 ```  
@@ -196,7 +191,7 @@ CInternetFile* Command(
   
  오류가 발생 하는 경우 MFC 형식의 예외를 throw 하는 [CInternetException](../../mfc/reference/cinternetexception-class.md)합니다.  
   
-##  <a name="createdirectory"></a>CFtpConnection::CreateDirectory  
+##  <a name="createdirectory"></a>  CFtpConnection::CreateDirectory  
  디렉터리를 만들려면 연결된 된 서버에서이 함수를 호출 합니다.  
   
 ```  
@@ -213,9 +208,9 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
 ### <a name="remarks"></a>설명  
  사용 하 여 `GetCurrentDirectory` 서버에이 연결에 대 한 현재 작업 디렉터리를 확인 하려면. 원격 시스템에 연결 된 있습니다 루트 디렉터리를 가정 하지 마십시오.  
   
- `pstrDirName` 매개 변수 수는 부분적으로 또는 현재 디렉터리에 상대적 정규화 된 파일 이름입니다. 백슬래시 (\\) 또는 슬래시 (/) 이름 중 하나에 대 한 디렉터리 구분 기호로 사용할 수 있습니다. `CreateDirectory`사용 하기 전에 적절 한 문자를 디렉터리 이름 구분 기호를 변환 합니다.  
+ `pstrDirName` 매개 변수 수는 부분적으로 또는 현재 디렉터리에 상대적 정규화 된 파일 이름입니다. 백슬래시 (\\) 또는 슬래시 (/) 이름 중 하나에 대 한 디렉터리 구분 기호로 사용할 수 있습니다. `CreateDirectory` 사용 하기 전에 적절 한 문자를 디렉터리 이름 구분 기호를 변환 합니다.  
   
-##  <a name="getcurrentdirectory"></a>:: Getcurrentdirectory  
+##  <a name="getcurrentdirectory"></a>  :: Getcurrentdirectory  
  현재 디렉터리의 이름을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -247,9 +242,9 @@ BOOL GetCurrentDirectory(
 ### <a name="remarks"></a>설명  
  디렉터리 이름을 가져오려면 URL로 대신 호출 [GetCurrentDirectoryAsURL](#getcurrentdirectoryasurl)합니다.  
   
- 매개 변수 `pstrDirName` 또는 `strDirName` 정규화 된 또는 현재 디렉터리에 상대적 부분적으로 정규화 된 파일 중 하나가 될 수 있습니다. 백슬래시 (\\) 또는 슬래시 (/) 이름 중 하나에 대 한 디렉터리 구분 기호로 사용할 수 있습니다. `GetCurrentDirectory`사용 하기 전에 적절 한 문자를 디렉터리 이름 구분 기호를 변환 합니다.  
+ 매개 변수 `pstrDirName` 또는 `strDirName` 정규화 된 또는 현재 디렉터리에 상대적 부분적으로 정규화 된 파일 중 하나가 될 수 있습니다. 백슬래시 (\\) 또는 슬래시 (/) 이름 중 하나에 대 한 디렉터리 구분 기호로 사용할 수 있습니다. `GetCurrentDirectory` 사용 하기 전에 적절 한 문자를 디렉터리 이름 구분 기호를 변환 합니다.  
   
-##  <a name="getcurrentdirectoryasurl"></a>Cftpconnection:: Getcurrentdirectoryasurl  
+##  <a name="getcurrentdirectoryasurl"></a>  Cftpconnection:: Getcurrentdirectoryasurl  
  URL로 현재 디렉터리의 이름을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -279,11 +274,11 @@ BOOL GetCurrentDirectoryAsURL(
  성공하면 0이 아니고, 그렇지 않으면 0입니다. Win32 함수 호출이 실패 한 경우 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) 오류의 원인을 확인 하기 위해 호출할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
- `GetCurrentDirectoryAsURL`동일 하 게 동작 [GetCurrentDirectory](#getcurrentdirectory)  
+ `GetCurrentDirectoryAsURL` 동일 하 게 동작 [GetCurrentDirectory](#getcurrentdirectory)  
   
- 매개 변수 `strDirName` 정규화 된 또는 현재 디렉터리에 상대적 부분적으로 정규화 된 파일 중 하나가 될 수 있습니다. 백슬래시 (\\) 또는 슬래시 (/) 이름 중 하나에 대 한 디렉터리 구분 기호로 사용할 수 있습니다. `GetCurrentDirectoryAsURL`사용 하기 전에 적절 한 문자를 디렉터리 이름 구분 기호를 변환 합니다.  
+ 매개 변수 `strDirName` 정규화 된 또는 현재 디렉터리에 상대적 부분적으로 정규화 된 파일 중 하나가 될 수 있습니다. 백슬래시 (\\) 또는 슬래시 (/) 이름 중 하나에 대 한 디렉터리 구분 기호로 사용할 수 있습니다. `GetCurrentDirectoryAsURL` 사용 하기 전에 적절 한 문자를 디렉터리 이름 구분 기호를 변환 합니다.  
   
-##  <a name="getfile"></a>CFtpConnection::GetFile  
+##  <a name="getfile"></a>  CFtpConnection::GetFile  
  FTP 서버에서 파일을 가져오고 로컬 컴퓨터에 저장 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -335,15 +330,15 @@ BOOL GetFile(
  성공하면 0이 아니고, 그렇지 않으면 0입니다. Win32 함수 호출이 실패 한 경우 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) 오류의 원인을 확인 하기 위해 호출할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
- `GetFile`모든 FTP 서버에서 파일을 읽고 로컬로 저장 연관 된 오버 헤드 처리 하는 높은 수준의 루틴이입니다. 파일 데이터를 검색 하는 파일 전송을 통해 통제를 해야 하는 등 응용 프로그램 사용 해야 `OpenFile` 및 [cinternetfile:: Read](../../mfc/reference/cinternetfile-class.md#read) 대신 합니다.  
+ `GetFile` 모든 FTP 서버에서 파일을 읽고 로컬로 저장 연관 된 오버 헤드 처리 하는 높은 수준의 루틴이입니다. 파일 데이터를 검색 하는 파일 전송을 통해 통제를 해야 하는 등 응용 프로그램 사용 해야 `OpenFile` 및 [cinternetfile:: Read](../../mfc/reference/cinternetfile-class.md#read) 대신 합니다.  
   
  경우 `dwFlags` FILE_TRANSFER_TYPE_ASCII, 파일 데이터의 번역 변환 제어 되며 Windows에 해당 하는 문자 서식 지정 합니다. 기본 전송 모드가 이진, 서버에 저장 된 동일한 형식으로 파일이 다운로드 됩니다.  
   
- 둘 다 `pstrRemoteFile` 및 `pstrLocalFile` 정규화 된 또는 현재 디렉터리에 상대적 부분적으로 정규화 된 파일 중 하나가 될 수 있습니다. 백슬래시 (\\) 또는 슬래시 (/) 이름 중 하나에 대 한 디렉터리 구분 기호로 사용할 수 있습니다. `GetFile`사용 하기 전에 적절 한 문자를 디렉터리 이름 구분 기호를 변환 합니다.  
+ 둘 다 `pstrRemoteFile` 및 `pstrLocalFile` 정규화 된 또는 현재 디렉터리에 상대적 부분적으로 정규화 된 파일 중 하나가 될 수 있습니다. 백슬래시 (\\) 또는 슬래시 (/) 이름 중 하나에 대 한 디렉터리 구분 기호로 사용할 수 있습니다. `GetFile` 사용 하기 전에 적절 한 문자를 디렉터리 이름 구분 기호를 변환 합니다.  
   
  `dwContext` 기본값을 재정의하여 컨텍스트 식별자를 설정한 값으로 설정합니다. 특정 작업과 연관 된 컨텍스트 식별자는 `CFtpConnection` 하 여 만든 개체의 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 개체입니다. 값이 반환 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) 식별 되는 작업에 대 한 상태에 있습니다. 문서 참조 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md) 컨텍스트 식별자에 대 한 자세한 내용은 합니다.  
   
-##  <a name="openfile"></a>CFtpConnection::OpenFile  
+##  <a name="openfile"></a>  CFtpConnection::OpenFile  
  읽기 또는 쓰기에 대 한 FTP 서버에 있는 파일을 열려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -375,7 +370,7 @@ CInternetFile* OpenFile(
  에 대 한 포인터는 [CInternetFile](../../mfc/reference/cinternetfile-class.md) 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- `OpenFile`다음과 같은 경우에 사용 되어야 합니다.  
+ `OpenFile` 다음과 같은 경우에 사용 되어야 합니다.  
   
 -   응용 프로그램은 로컬 파일에 있는 않습니다 데이터를 전송 하 고 FTP 서버에 파일로 생성 해야 하는 데이터. 한 번 `OpenFile` 응용 프로그램 사용 하 여 파일을 열고 [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write) 서버에 FTP 파일 데이터를 보내려고 합니다.  
   
@@ -385,11 +380,11 @@ CInternetFile* OpenFile(
   
  호출한 후 `OpenFile` 및 호출 될 때까지 **CInternetConnection::Close**, 응용 프로그램에만 호출할 수 있습니다 [cinternetfile:: Read](../../mfc/reference/cinternetfile-class.md#read), [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write), **CInternetConnection::Close**, 또는 [cftpfilefind:: Findfile](../../mfc/reference/cftpfilefind-class.md#findfile)합니다. 같은 FTP 세션에 대 한 다른 FTP 기능에 대 한 호출 실패 하 고 오류 코드 FTP_ETRANSFER_IN_PROGRESS로 설정 됩니다.  
   
- `pstrFileName` 매개 변수 중 하나는 부분적으로 정규화 된 파일 이름이 현재 디렉터리에 대 한 상대 또는 정규화 된 될 수 있습니다. 백슬래시 (\\) 또는 슬래시 (/) 이름 중 하나에 대 한 디렉터리 구분 기호로 사용할 수 있습니다. `OpenFile`사용 하기 전에 적절 한 문자를 디렉터리 이름 구분 기호를 변환 합니다.  
+ `pstrFileName` 매개 변수 중 하나는 부분적으로 정규화 된 파일 이름이 현재 디렉터리에 대 한 상대 또는 정규화 된 될 수 있습니다. 백슬래시 (\\) 또는 슬래시 (/) 이름 중 하나에 대 한 디렉터리 구분 기호로 사용할 수 있습니다. `OpenFile` 사용 하기 전에 적절 한 문자를 디렉터리 이름 구분 기호를 변환 합니다.  
   
  `dwContext` 기본값을 재정의하여 컨텍스트 식별자를 설정한 값으로 설정합니다. 특정 작업과 연관 된 컨텍스트 식별자는 `CFtpConnection` 하 여 만든 개체의 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 개체입니다. 값이 반환 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) 식별 되는 작업에 대 한 상태에 있습니다. 문서 참조 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md) 컨텍스트 식별자에 대 한 자세한 내용은 합니다.  
   
-##  <a name="putfile"></a>CFtpConnection::PutFile  
+##  <a name="putfile"></a>  CFtpConnection::PutFile  
  FTP 서버에 파일을 저장 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -417,11 +412,11 @@ BOOL PutFile(
  성공하면 0이 아니고, 그렇지 않으면 0입니다. Win32 함수 호출이 실패 한 경우 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) 오류의 원인을 확인 하기 위해 호출할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
- `PutFile`모든 FTP 서버에 파일을 저장 하는 연관 된 작업을 처리 하는 높은 수준의 루틴이입니다. 응용 프로그램 데이터를 보낼만 하는 파일 전송에 대 한 자세히 제어를 해야 하는 등 사용 해야 [OpenFile](#openfile) 및 [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write)합니다.  
+ `PutFile` 모든 FTP 서버에 파일을 저장 하는 연관 된 작업을 처리 하는 높은 수준의 루틴이입니다. 응용 프로그램 데이터를 보낼만 하는 파일 전송에 대 한 자세히 제어를 해야 하는 등 사용 해야 [OpenFile](#openfile) 및 [CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write)합니다.  
   
  `dwContext` 기본값을 재정의하여 컨텍스트 식별자를 설정한 값으로 설정합니다. 특정 작업과 연관 된 컨텍스트 식별자는 `CFtpConnection` 하 여 만든 개체의 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 개체입니다. 값이 반환 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) 식별 되는 작업에 대 한 상태에 있습니다. 문서 참조 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md) 컨텍스트 식별자에 대 한 자세한 내용은 합니다.  
   
-##  <a name="remove"></a>CFtpConnection::Remove  
+##  <a name="remove"></a>  CFtpConnection::Remove  
  연결 된 서버에서 지정된 된 파일을 삭제 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -438,7 +433,7 @@ BOOL Remove(LPCTSTR pstrFileName);
 ### <a name="remarks"></a>설명  
  `pstrFileName` 매개 변수 중 하나는 부분적으로 정규화 된 파일 이름이 현재 디렉터리에 대 한 상대 또는 정규화 된 될 수 있습니다. 백슬래시 (\\) 또는 슬래시 (/) 이름 중 하나에 대 한 디렉터리 구분 기호로 사용할 수 있습니다. **제거** 함수는 사용 하기 전에 적절 한 문자를 디렉터리 이름 구분 기호를 변환 합니다.  
   
-##  <a name="removedirectory"></a>CFtpConnection::RemoveDirectory  
+##  <a name="removedirectory"></a>  CFtpConnection::RemoveDirectory  
  연결된 된 서버에서 지정된 된 디렉터리를 제거 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -455,9 +450,9 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
 ### <a name="remarks"></a>설명  
  사용 하 여 [GetCurrentDirectory](#getcurrentdirectory) 서버의 현재 작업 디렉터리를 확인 하려면. 원격 시스템에 연결 된 있습니다 루트 디렉터리를 가정 하지 마십시오.  
   
- `pstrDirName` 매개 변수는 현재 디렉터리에 상대적 또는 부분적으로 정규화 된 filename을 수 있습니다. 백슬래시 (\\) 또는 슬래시 (/) 이름 중 하나에 대 한 디렉터리 구분 기호로 사용할 수 있습니다. `RemoveDirectory`사용 하기 전에 적절 한 문자를 디렉터리 이름 구분 기호를 변환 합니다.  
+ `pstrDirName` 매개 변수는 현재 디렉터리에 상대적 또는 부분적으로 정규화 된 filename을 수 있습니다. 백슬래시 (\\) 또는 슬래시 (/) 이름 중 하나에 대 한 디렉터리 구분 기호로 사용할 수 있습니다. `RemoveDirectory` 사용 하기 전에 적절 한 문자를 디렉터리 이름 구분 기호를 변환 합니다.  
   
-##  <a name="rename"></a>CFtpConnection::Rename  
+##  <a name="rename"></a>  CFtpConnection::Rename  
  이 연결된 된 서버에 지정된 된 파일 이름을 바꿀 함수를 호출 합니다.  
   
 ```  
@@ -479,7 +474,7 @@ BOOL Rename(
 ### <a name="remarks"></a>설명  
  `pstrExisting` 및 `pstrNew` 매개 변수 중 하나는 부분적으로 정규화 된 파일 이름이 현재 디렉터리에 대 한 상대 또는 정규화 된 일 수 있습니다. 백슬래시 (\\) 또는 슬래시 (/) 이름 중 하나에 대 한 디렉터리 구분 기호로 사용할 수 있습니다. **이름 바꾸기** 사용 하기 전에 적절 한 문자를 디렉터리 이름 구분 기호를 변환 합니다.  
   
-##  <a name="setcurrentdirectory"></a>Cftpconnection:: Setcurrentdirectory  
+##  <a name="setcurrentdirectory"></a>  Cftpconnection:: Setcurrentdirectory  
  FTP 서버에서 다른 디렉터리를 변경 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -494,7 +489,7 @@ BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
  성공하면 0이 아니고, 그렇지 않으면 0입니다. Win32 함수 호출이 실패 한 경우 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) 오류의 원인을 확인 하기 위해 호출할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
- `pstrDirName` 매개 변수는 현재 디렉터리에 상대적 또는 부분적으로 정규화 된 filename을 수 있습니다. 백슬래시 (\\) 또는 슬래시 (/) 이름 중 하나에 대 한 디렉터리 구분 기호로 사용할 수 있습니다. `SetCurrentDirectory`사용 하기 전에 적절 한 문자를 디렉터리 이름 구분 기호를 변환 합니다.  
+ `pstrDirName` 매개 변수는 현재 디렉터리에 상대적 또는 부분적으로 정규화 된 filename을 수 있습니다. 백슬래시 (\\) 또는 슬래시 (/) 이름 중 하나에 대 한 디렉터리 구분 기호로 사용할 수 있습니다. `SetCurrentDirectory` 사용 하기 전에 적절 한 문자를 디렉터리 이름 구분 기호를 변환 합니다.  
   
  사용 하 여 [GetCurrentDirectory](#getcurrentdirectory) FTP 서버의 현재 작업 디렉터리를 확인 하려면. 원격 시스템에 연결 된 있습니다 루트 디렉터리를 가정 하지 마십시오.  
   

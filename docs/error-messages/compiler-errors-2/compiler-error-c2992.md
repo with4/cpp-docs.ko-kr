@@ -1,13 +1,10 @@
 ---
-title: "컴파일러 오류 C2992 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C2992 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C2992
 dev_langs:
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C2992
 ms.assetid: 01b16447-43fe-4e91-9a5a-af884a166a31
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bb7da305c28b528d40a9a0f90964008be9ba927
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dc21e5db2770c915c1c64f1e48c89e8e5401835d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2992"></a>컴파일러 오류 C2992
 'class': 형식 매개 변수 목록이 잘못되었거나 없습니다.  
   
  클래스 앞에 `template` 또는 **generic** 키워드가 오며 매개 변수가 없거나 잘못되었습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C2992를 생성합니다.  
   
 ```  

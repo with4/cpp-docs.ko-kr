@@ -1,13 +1,10 @@
 ---
-title: "TN022: 표준 명령 구현 | Microsoft Docs"
-ms.custom: 
+title: 'TN022: 표준 명령 구현 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.commands
 dev_langs:
@@ -68,17 +65,15 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05e5e927ebfcb1584913d6415349c473bde4463c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dea42f4bd33281e65696791677bdd81a921a59e6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022: 표준 명령 구현
 > [!NOTE]
@@ -122,7 +117,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  이를 연결 해야 하면 `CWinApp`-이 기능을 사용 하는 클래스의 메시지 맵 파생 합니다.  
   
-     `CWinApp::OnFileNew`응용 프로그램에서이 명령을 문서 서식 파일의 수에 따라 다르게 구현합니다. 하나만 있으면 `CDocTemplate`, `CWinApp::OnFileNew` 적절 한 프레임 및 보기 클래스 뿐만 아니라 해당 유형의 새 문서를 만듭니다.  
+     `CWinApp::OnFileNew` 응용 프로그램에서이 명령을 문서 서식 파일의 수에 따라 다르게 구현합니다. 하나만 있으면 `CDocTemplate`, `CWinApp::OnFileNew` 적절 한 프레임 및 보기 클래스 뿐만 아니라 해당 유형의 새 문서를 만듭니다.  
   
      둘 이상 있는 경우 `CDocTemplate`, `CWinApp::OnFileNew` 묻는 대화 상자가 표시 되면서 됩니다 (**AFX_IDD_NEWTYPEDLG**) 이러한 사용할 문서 유형을 선택 합니다. 선택한 `CDocTemplate` 문서를 만드는 데 사용 됩니다.  
   
@@ -135,7 +130,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  이를 연결 해야 하면 `CWinApp`-이 기능을 사용 하는 클래스의 메시지 맵 파생 합니다.  
   
-     `CWinApp::OnFileOpen`매우 간단한 구현을 호출 **CWinApp::DoPromptFileName** 이어서 `CWinApp::OpenDocumentFile` 파일 또는 경로 이름으로 열 파일입니다. `CWinApp` 구현 루틴 **DoPromptFileName** 표준 FileOpen 대화 상자를 시작 하 고 현재 문서 서식 파일에서 가져온 파일 확장명으로 채웁니다.  
+     `CWinApp::OnFileOpen` 매우 간단한 구현을 호출 **CWinApp::DoPromptFileName** 이어서 `CWinApp::OpenDocumentFile` 파일 또는 경로 이름으로 열 파일입니다. `CWinApp` 구현 루틴 **DoPromptFileName** 표준 FileOpen 대화 상자를 시작 하 고 현재 문서 서식 파일에서 가져온 파일 확장명으로 채웁니다.  
   
      일반적인 한 사용자 지정 `ID_FILE_OPEN` FileOpen 대화 상자를 사용자 지정 하거나 추가 파일 필터를 추가 하는 것입니다. 기본 구현에서는 사용자 고유의 FileOpen 대화 상자를 닫고 호출으로 바꾸려면이 사용자 정의 하는 권장된 방법은 `CWinApp::OpenDocumentFile` 문서의 파일 또는 경로 이름을 사용 합니다. 기본 클래스를 호출할 필요가 없습니다 있습니다.  
   
@@ -183,7 +178,7 @@ ms.lasthandoff: 12/21/2017
   
      이 명령은 사용자에 대 한 설정에 인쇄 및 프린터를 사용자 지정할 수 있게 하는 표준 인쇄 설정 대화 상자를 호출 합니다.이 문서 또는 최대에 있는 모든 문서가 응용이 프로그램입니다. 제어판을 사용 하 여 전체 시스템에 대 한 기본 프린터 설정 변경 해야 합니다.  
   
-     `CWinApp::OnFilePrintSetup`만드는 매우 간단한 구현에는 `CPrintDialog` 개체와 호출 된 **CWinApp::DoPrintDialog** 함수 구현 합니다. 이 응용 프로그램 기본 프린터 설정을 설정합니다.  
+     `CWinApp::OnFilePrintSetup` 만드는 매우 간단한 구현에는 `CPrintDialog` 개체와 호출 된 **CWinApp::DoPrintDialog** 함수 구현 합니다. 이 응용 프로그램 기본 프린터 설정을 설정합니다.  
   
      이 명령은 사용자 지정 하기 위한 일반적인 요구 저장 될 때 문서와 함께 저장 해야 문서별 프린터 설정에 대 한 허용 하는 것입니다. 이 작업을 수행 하려면 메시지 맵 처리기에 추가 해야 프로그램 **CDocument** 를 만드는 클래스는 `CPrintDialog` 개체, 적절 한 프린터 특성으로 초기화 (일반적으로 **hDevMode** 및 **hDevNames**)를 호출 하는 **CPrintDialog::DoModal,** 변경 된 프린터 설정을 저장 합니다. 강력한 구현에 대 한 살펴봐야 구현의 **CWinApp::DoPrintDialog** 오류 검색에 대 한 및 **CWinApp::UpdatePrinterSelection** 실제 기본값을 다루기 위해 및 시스템 차원의 프린터 변경 내용을 추적 합니다.  
   
@@ -221,7 +216,7 @@ ms.lasthandoff: 12/21/2017
   
      현재이이 명령에 대 한 표준 구현이 없습니다. 각각에 대해 구현 해야 `CView`-클래스를 파생 합니다.  
   
-     `CEditView`사용 하 여이 명령을의 구현을 제공 `CEdit::Clear`합니다. 현재 선택 영역이 없는 경우에 명령이 비활성화 됩니다.  
+     `CEditView` 사용 하 여이 명령을의 구현을 제공 `CEdit::Clear`합니다. 현재 선택 영역이 없는 경우에 명령이 비활성화 됩니다.  
   
      이 명령을 구현 하기로 선택한 경우이 명령 ID를 사용 하는 것이 좋습니다.  
   
@@ -235,7 +230,7 @@ ms.lasthandoff: 12/21/2017
   
      현재이이 명령에 대 한 표준 구현이 없습니다. 각각에 대해 구현 해야 `CView`-클래스를 파생 합니다.  
   
-     `CEditView`이 명령은 현재 선택한 텍스트를 사용 하 여 CF_TEXT 클립보드에 복사 하는의 구현을 제공 `CEdit::Copy`합니다. 현재 선택 영역이 없는 경우에 명령이 비활성화 됩니다.  
+     `CEditView` 이 명령은 현재 선택한 텍스트를 사용 하 여 CF_TEXT 클립보드에 복사 하는의 구현을 제공 `CEdit::Copy`합니다. 현재 선택 영역이 없는 경우에 명령이 비활성화 됩니다.  
   
      이 명령을 구현 하기로 선택한 경우이 명령 ID를 사용 하는 것이 좋습니다.  
   
@@ -243,7 +238,7 @@ ms.lasthandoff: 12/21/2017
   
      현재이이 명령에 대 한 표준 구현이 없습니다. 각각에 대해 구현 해야 `CView`-클래스를 파생 합니다.  
   
-     `CEditView`사용 하 여 CF_TEXT 클립보드에 현재 선택한 텍스트를 잘라냅니다이 명령의 구현을 제공 `CEdit::Cut`합니다. 현재 선택 영역이 없는 경우에 명령이 비활성화 됩니다.  
+     `CEditView` 사용 하 여 CF_TEXT 클립보드에 현재 선택한 텍스트를 잘라냅니다이 명령의 구현을 제공 `CEdit::Cut`합니다. 현재 선택 영역이 없는 경우에 명령이 비활성화 됩니다.  
   
      이 명령을 구현 하기로 선택한 경우이 명령 ID를 사용 하는 것이 좋습니다.  
   
@@ -251,7 +246,7 @@ ms.lasthandoff: 12/21/2017
   
      현재이이 명령에 대 한 표준 구현이 없습니다. 각각에 대해 구현 해야 `CView`-클래스를 파생 합니다.  
   
-     `CEditView`이 명령을 구현 도우미 함수를 호출 하는 구현을 제공 **OnEditFindReplace** 사용 하 고 private 구현 변수에서 이전 찾기/바꾸기 설정을 저장 합니다. `CFindReplaceDialog` 클래스 관리 사용자에 게 확인에 대 한 모덜리스 대화 상자를 사용 합니다.  
+     `CEditView` 이 명령을 구현 도우미 함수를 호출 하는 구현을 제공 **OnEditFindReplace** 사용 하 고 private 구현 변수에서 이전 찾기/바꾸기 설정을 저장 합니다. `CFindReplaceDialog` 클래스 관리 사용자에 게 확인에 대 한 모덜리스 대화 상자를 사용 합니다.  
   
      이 명령을 구현 하기로 선택한 경우이 명령 ID를 사용 하는 것이 좋습니다.  
   
@@ -259,7 +254,7 @@ ms.lasthandoff: 12/21/2017
   
      현재이이 명령에 대 한 표준 구현이 없습니다. 각각에 대해 구현 해야 `CView`-클래스를 파생 합니다.  
   
-     `CEditView`이 명령을 사용 하 여 선택한 텍스트 바꾸기 현재 클립보드 데이터를 복사 하는 구현을 제공 `CEdit::Paste`합니다. 명령이 비활성화 되어 있는 경우 없습니다 **CF_TEXT** 클립보드에 있습니다.  
+     `CEditView` 이 명령을 사용 하 여 선택한 텍스트 바꾸기 현재 클립보드 데이터를 복사 하는 구현을 제공 `CEdit::Paste`합니다. 명령이 비활성화 되어 있는 경우 없습니다 **CF_TEXT** 클립보드에 있습니다.  
   
      **COleClientDoc** 이 명령에 명령 업데이트 UI 처리기를 제공 합니다. 클립보드 포함 가능한 경량 OLE 항목/개체를 포함 하지 않으면 명령이 비활성화 됩니다. 실제 붙여넣기 작업을 수행 하는 실제 명령에 대 한 처리기를 작성 해야 합니다. OLE 응용 프로그램의 다른 형식 붙여 넣을 수도, 경우에 고유한 업데이트 명령 UI 처리기 보기 또는 문서에 제공 해야 (즉, 하기 전에 어딘가에 **COleClientDoc** 명령 대상 라우팅에).  
   
@@ -271,7 +266,7 @@ ms.lasthandoff: 12/21/2017
   
      현재이이 명령에 대 한 표준 구현이 없습니다. 각각에 대해 구현 해야 `CView`-클래스를 파생 합니다.  
   
-     `COleDocument`이 명령에 명령 업데이트 UI 처리기를 제공 됩니다. 클립보드 linkable OLE 항목/개체를 포함 하지 않으면 명령이 비활성화 됩니다. 실제 붙여넣기 작업을 수행 하는 실제 명령에 대 한 처리기를 작성 해야 합니다. OLE 응용 프로그램의 다른 형식 붙여 넣을 수도, 경우에 고유한 업데이트 명령 UI 처리기 보기 또는 문서에 제공 해야 (즉, 하기 전에 어딘가에 `COleDocument` 명령 대상 라우팅에).  
+     `COleDocument` 이 명령에 명령 업데이트 UI 처리기를 제공 됩니다. 클립보드 linkable OLE 항목/개체를 포함 하지 않으면 명령이 비활성화 됩니다. 실제 붙여넣기 작업을 수행 하는 실제 명령에 대 한 처리기를 작성 해야 합니다. OLE 응용 프로그램의 다른 형식 붙여 넣을 수도, 경우에 고유한 업데이트 명령 UI 처리기 보기 또는 문서에 제공 해야 (즉, 하기 전에 어딘가에 `COleDocument` 명령 대상 라우팅에).  
   
      이 명령을 구현 하기로 선택한 경우이 명령 ID를 사용 하는 것이 좋습니다.  
   
@@ -287,7 +282,7 @@ ms.lasthandoff: 12/21/2017
   
      현재이이 명령에 대 한 표준 구현이 없습니다. 각각에 대해 구현 해야 `CView`-클래스를 파생 합니다.  
   
-     `CEditView`이 명령은 마지막 찾기 작업을 반복 하는 구현을 제공 합니다. 마지막 찾기에 대 한 전용 구현 변수가 사용 됩니다. 찾기를 시도할 수 없음 명령이 비활성화 됩니다.  
+     `CEditView` 이 명령은 마지막 찾기 작업을 반복 하는 구현을 제공 합니다. 마지막 찾기에 대 한 전용 구현 변수가 사용 됩니다. 찾기를 시도할 수 없음 명령이 비활성화 됩니다.  
   
      이 명령을 구현 하기로 선택한 경우이 명령 ID를 사용 하는 것이 좋습니다.  
   
@@ -295,7 +290,7 @@ ms.lasthandoff: 12/21/2017
   
      현재이이 명령에 대 한 표준 구현이 없습니다. 각각에 대해 구현 해야 `CView`-클래스를 파생 합니다.  
   
-     `CEditView`이 명령을 구현 도우미 함수를 호출 하는 구현을 제공 **OnEditFindReplace** 사용 하 고 private 구현 변수에서 이전 찾기/바꾸기 설정을 저장 합니다. `CFindReplaceDialog` 클래스는 사용자 요청 하는 모덜리스 대화 상자를 관리 하는 데 사용 됩니다.  
+     `CEditView` 이 명령을 구현 도우미 함수를 호출 하는 구현을 제공 **OnEditFindReplace** 사용 하 고 private 구현 변수에서 이전 찾기/바꾸기 설정을 저장 합니다. `CFindReplaceDialog` 클래스는 사용자 요청 하는 모덜리스 대화 상자를 관리 하는 데 사용 됩니다.  
   
      이 명령을 구현 하기로 선택한 경우이 명령 ID를 사용 하는 것이 좋습니다.  
   
@@ -303,7 +298,7 @@ ms.lasthandoff: 12/21/2017
   
      현재이이 명령에 대 한 표준 구현이 없습니다. 각각에 대해 구현 해야 `CView`-클래스를 파생 합니다.  
   
-     `CEditView`문서에서 모든 텍스트를 선택 합니다.이 명령의 구현을 제공 합니다. 선택할 수 없는 텍스트가 있는 경우에 명령이 비활성화 됩니다.  
+     `CEditView` 문서에서 모든 텍스트를 선택 합니다.이 명령의 구현을 제공 합니다. 선택할 수 없는 텍스트가 있는 경우에 명령이 비활성화 됩니다.  
   
      이 명령을 구현 하기로 선택한 경우이 명령 ID를 사용 하는 것이 좋습니다.  
   
@@ -311,7 +306,7 @@ ms.lasthandoff: 12/21/2017
   
      현재이이 명령에 대 한 표준 구현이 없습니다. 각각에 대해 구현 해야 `CView`-클래스를 파생 합니다.  
   
-     `CEditView`이 구현을 제공 명령을 사용 하 여 `CEdit::Undo`합니다. 명령이 비활성화 되어 있는 경우 `CEdit::CanUndo` FALSE를 반환 합니다.  
+     `CEditView` 이 구현을 제공 명령을 사용 하 여 `CEdit::Undo`합니다. 명령이 비활성화 되어 있는 경우 `CEdit::CanUndo` FALSE를 반환 합니다.  
   
      이 명령을 구현 하기로 선택한 경우이 명령 ID를 사용 하는 것이 좋습니다.  
   
@@ -331,7 +326,7 @@ ms.lasthandoff: 12/21/2017
   
 -   MDI 창 맨 아래에 ID_WINDOW_ARRANGE 정렬 아이콘  
   
-     `CMDIFrameWnd`도우미 함수 구현에에서이 표준 MDI 명령 구현 **OnMDIWindowCmd**합니다. 이 도우미 명령 Id를 매핑하고 MDI 창 메시지를 따라서 많은 코드를 공유할 수 있습니다.  
+     `CMDIFrameWnd` 도우미 함수 구현에에서이 표준 MDI 명령 구현 **OnMDIWindowCmd**합니다. 이 도우미 명령 Id를 매핑하고 MDI 창 메시지를 따라서 많은 코드를 공유할 수 있습니다.  
   
      마찬가지로 대부분 MDI 창 메뉴 명령, 활성 MDI 자식 창이 없습니다 명령이 비활성화 됩니다.  
   
@@ -339,7 +334,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_WINDOW_CASCADE 단계적 windows 겹치게 됩니다.  
   
-     `CMDIFrameWnd`도우미 함수 구현에에서이 표준 MDI 명령 구현 **OnMDIWindowCmd**합니다. 이 도우미 명령 Id를 매핑하고 MDI 창 메시지를 따라서 많은 코드를 공유할 수 있습니다.  
+     `CMDIFrameWnd` 도우미 함수 구현에에서이 표준 MDI 명령 구현 **OnMDIWindowCmd**합니다. 이 도우미 명령 Id를 매핑하고 MDI 창 메시지를 따라서 많은 코드를 공유할 수 있습니다.  
   
      마찬가지로 대부분 MDI 창 메뉴 명령, 활성 MDI 자식 창이 없습니다 명령이 비활성화 됩니다.  
   
@@ -359,7 +354,7 @@ ms.lasthandoff: 12/21/2017
   
 -   분할자를 ID_WINDOW_SPLIT 키보드 인터페이스입니다.  
   
-     `CView`에 대해이 명령을 처리 하는 `CSplitterWnd` 구현 합니다. 이 명령은 구현 함수에 위임 합니다 보기 분할자 창의 일부 이면 `CSplitterWnd::DoKeyboardSplit`합니다. 이 분할자 키보드 사용자가을 분할 하거나 창에 분리 해제할 수 있는 모드를 배치 합니다.  
+     `CView` 에 대해이 명령을 처리 하는 `CSplitterWnd` 구현 합니다. 이 명령은 구현 함수에 위임 합니다 보기 분할자 창의 일부 이면 `CSplitterWnd::DoKeyboardSplit`합니다. 이 분할자 키보드 사용자가을 분할 하거나 창에 분리 해제할 수 있는 모드를 배치 합니다.  
   
      이 명령은 보기 분할자에 없는 경우 비활성화 됩니다.  
   
@@ -384,7 +379,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  이를 연결 해야 하면 `CWinApp`-이 기능을 사용 하는 클래스의 메시지 맵 파생 합니다.  
   
-     `CWinApp::OnHelpIndex`이 명령은 다르거나 일반적으로 호출 하 여 처리 `CWinApp::WinHelp`합니다.  
+     `CWinApp::OnHelpIndex` 이 명령은 다르거나 일반적으로 호출 하 여 처리 `CWinApp::WinHelp`합니다.  
   
      이 명령 처리기를 사용자 지정 권장 되지 않습니다.  
   
@@ -393,7 +388,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  이를 연결 해야 하면 `CWinApp`-이 기능을 사용 하는 클래스의 메시지 맵 파생 합니다.  
   
-     `CWinApp::OnHelpUsing`이 명령은 다르거나 일반적으로 호출 하 여 처리 `CWinApp::WinHelp`합니다.  
+     `CWinApp::OnHelpUsing` 이 명령은 다르거나 일반적으로 호출 하 여 처리 `CWinApp::WinHelp`합니다.  
   
      이 명령 처리기를 사용자 지정 권장 되지 않습니다.  
   
@@ -402,7 +397,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  이를 연결 해야 하면 `CWinApp`-이 기능을 사용 하는 클래스의 메시지 맵 파생 합니다.  
   
-     `CWinApp::OnContextHelp`도움말 모드 커서 설정, 모달 루프를 입력 하 고, 대기 사용자 도움말을 보려면 기간을 선택 하 여이 명령을 처리 합니다. 참조 하십시오 [기술 참고 28](../mfc/tn028-context-sensitive-help-support.md) MFC 도움말 구현에 대 한 자세한 내용은 합니다.  
+     `CWinApp::OnContextHelp` 도움말 모드 커서 설정, 모달 루프를 입력 하 고, 대기 사용자 도움말을 보려면 기간을 선택 하 여이 명령을 처리 합니다. 참조 하십시오 [기술 참고 28](../mfc/tn028-context-sensitive-help-support.md) MFC 도움말 구현에 대 한 자세한 내용은 합니다.  
   
      이 명령 처리기를 사용자 지정 권장 되지 않습니다.  
   
@@ -411,7 +406,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  이를 연결 해야 하면 `CWinApp`-이 기능을 사용 하는 클래스의 메시지 맵 파생 합니다.  
   
-     `CWinApp::OnHelp`현재 응용 프로그램 컨텍스트에 대 한 올바른 도움말 컨텍스트를 가져와서이 명령을 처리 합니다. 이 핸들은 간단한 F1 도움말 처리에 메시지 상자에서 등 수 있습니다. 참조 하십시오 [기술 참고 28](../mfc/tn028-context-sensitive-help-support.md) MFC에 대 한 자세한 내용을 보려면 도움말 구현 합니다.  
+     `CWinApp::OnHelp` 현재 응용 프로그램 컨텍스트에 대 한 올바른 도움말 컨텍스트를 가져와서이 명령을 처리 합니다. 이 핸들은 간단한 F1 도움말 처리에 메시지 상자에서 등 수 있습니다. 참조 하십시오 [기술 참고 28](../mfc/tn028-context-sensitive-help-support.md) MFC에 대 한 자세한 내용을 보려면 도움말 구현 합니다.  
   
      이 명령 처리기를 사용자 지정 권장 되지 않습니다.  
   
@@ -426,7 +421,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_NEXT_PANE 다음 창으로 이동  
   
-     `CView`에 대해이 명령을 처리 하는 `CSplitterWnd` 구현 합니다. 이 명령은 구현 함수에 위임 합니다 보기 분할자 창의 일부 이면 **CSplitterWnd::OnNextPaneCmd**합니다. 현재 보기 분할자의 다음 창으로 이동 됩니다.  
+     `CView` 에 대해이 명령을 처리 하는 `CSplitterWnd` 구현 합니다. 이 명령은 구현 함수에 위임 합니다 보기 분할자 창의 일부 이면 **CSplitterWnd::OnNextPaneCmd**합니다. 현재 보기 분할자의 다음 창으로 이동 됩니다.  
   
      이 명령은 보기에 분할자 없거나 없는 다음 창으로 이동 하는 경우 비활성화 됩니다.  
   
@@ -434,7 +429,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_PREV_PANE 이전 창으로 이동  
   
-     `CView`에 대해이 명령을 처리 하는 `CSplitterWnd` 구현 합니다. 이 명령은 구현 함수에 위임 합니다 보기 분할자 창의 일부 이면 **CSplitterWnd::OnNextPaneCmd**합니다. 현재 보기 분할자의 이전 창으로 이동 됩니다.  
+     `CView` 에 대해이 명령을 처리 하는 `CSplitterWnd` 구현 합니다. 이 명령은 구현 함수에 위임 합니다 보기 분할자 창의 일부 이면 **CSplitterWnd::OnNextPaneCmd**합니다. 현재 보기 분할자의 이전 창으로 이동 됩니다.  
   
      이 명령은 보기에 분할자 없거나 없는 이전 창으로 이동 하는 경우 비활성화 됩니다.  
   
@@ -450,13 +445,13 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_OLE_EDIT_LINKS 편집 OLE 링크  
   
-     `COleDocument`MFC에서 제공 구현의 표준 OLE 연결 대화 상자를 사용 하 여이 명령을 처리 합니다. 이 대화의 구현을 통해 액세스 되는 `COleLinksDialog` 클래스입니다. 현재 문서에 대 한 연결 찾을 수 없는 경우 명령은 사용할 수 없습니다.  
+     `COleDocument` MFC에서 제공 구현의 표준 OLE 연결 대화 상자를 사용 하 여이 명령을 처리 합니다. 이 대화의 구현을 통해 액세스 되는 `COleLinksDialog` 클래스입니다. 현재 문서에 대 한 연결 찾을 수 없는 경우 명령은 사용할 수 없습니다.  
   
      이 명령 처리기를 사용자 지정 권장 되지 않습니다.  
   
 -   ID_OLE_VERB_FIRST 중... OLE 동사에 대 한 마지막 ID 범위  
   
-     `COleDocument`이 명령은 ID 범위를 사용 하 여 현재 선택 된 OLE 항목/개체에서 지 원하는 동사에 대 한 합니다. 지정된 된 OLE 항목/개체 형식을 0 개 이상의 사용자 지정 동사를 지원할 수 있으므로이 범위 여야 합니다. 응용 프로그램의 메뉴에서 메뉴 항목의 ID 하나 있어야 **ID_OLE_VERB_FIRST**합니다. 프로그램이 실행 될 때 메뉴 적절 한 메뉴 동사 설명 (또는 많은 동사와 함께 팝업 메뉴)으로 업데이트 됩니다. OLE 메뉴의 관리는에서 처리 `AfxOleSetEditMenu`,이 명령에 대 한 업데이트 명령 UI 처리기에서 취소 합니다.  
+     `COleDocument` 이 명령은 ID 범위를 사용 하 여 현재 선택 된 OLE 항목/개체에서 지 원하는 동사에 대 한 합니다. 지정된 된 OLE 항목/개체 형식을 0 개 이상의 사용자 지정 동사를 지원할 수 있으므로이 범위 여야 합니다. 응용 프로그램의 메뉴에서 메뉴 항목의 ID 하나 있어야 **ID_OLE_VERB_FIRST**합니다. 프로그램이 실행 될 때 메뉴 적절 한 메뉴 동사 설명 (또는 많은 동사와 함께 팝업 메뉴)으로 업데이트 됩니다. OLE 메뉴의 관리는에서 처리 `AfxOleSetEditMenu`,이 명령에 대 한 업데이트 명령 UI 처리기에서 취소 합니다.  
   
      이 범위에 있는 명령 ID는 처리에 대 한 명시적인 명령 처리기가 없는 있습니다. **COleDocument::OnCmdMsg** 트래핑이 범위에 모든 명령 Id를 0부터 시작 하는 동사 숫자로 바꿀 고 해당 동사에 대 한 서버를 실행 하기 위해 재정의 됩니다 (사용 하 여 `COleClientItem::DoVerb`).  
   
@@ -464,7 +459,7 @@ ms.lasthandoff: 12/21/2017
   
 -   ID_VIEW_TOOLBAR 켜고 도구 모음 설정/해제  
   
-     `CFrameWnd`이 명령 및 명령 업데이트 UI 처리기의 도구 모음 표시 상태를 설정/해제를 처리 합니다. 도구 모음에서 자식 창 id의 프레임의 자식 창 이어야 합니다 `AFX_IDW_TOOLBAR`합니다. 명령 처리기에는 실제로 도구 모음 창의 표시 유형을 전환합니다. `CFrameWnd::RecalcLayout`새 상태에서 프레임 창 도구 모음을 다시 그리게 사용 됩니다. 도구 모음 표시 되 면 명령 업데이트 UI 처리기 메뉴 항목을 확인 합니다.  
+     `CFrameWnd` 이 명령 및 명령 업데이트 UI 처리기의 도구 모음 표시 상태를 설정/해제를 처리 합니다. 도구 모음에서 자식 창 id의 프레임의 자식 창 이어야 합니다 `AFX_IDW_TOOLBAR`합니다. 명령 처리기에는 실제로 도구 모음 창의 표시 유형을 전환합니다. `CFrameWnd::RecalcLayout` 새 상태에서 프레임 창 도구 모음을 다시 그리게 사용 됩니다. 도구 모음 표시 되 면 명령 업데이트 UI 처리기 메뉴 항목을 확인 합니다.  
   
      이 명령 처리기를 사용자 지정 권장 되지 않습니다. 추가 도구 모음을 추가 하려는 경우를 복제 하 고 명령 처리기 및이 명령에 명령 업데이트 UI 처리기를 수정 합니다.  
   

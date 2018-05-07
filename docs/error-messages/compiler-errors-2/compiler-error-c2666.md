@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C2666 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C2666 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2666
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1542eb409c77e8a9919f1884a59810e587d11f11
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 773744baa1ff7f709a471c7324b7f60c3686a7c1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2666"></a>컴파일러 오류 C2666
 'identifier': 숫자 오버 로드에 비슷한 변환이  
@@ -58,7 +53,7 @@ int main() {
   
  Visual Studio.NET 2003 및 Visual c + +의 Visual Studio.NET 버전 둘 다에 적용 되는 코드를 명시적으로 함수 구문을 사용 하 여 클래스 연산자를 호출 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // C2666b.cpp  
@@ -115,7 +110,7 @@ int main()
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C2666  
   
 ```  

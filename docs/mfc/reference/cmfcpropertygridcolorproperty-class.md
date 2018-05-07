@@ -1,12 +1,9 @@
 ---
-title: "CMFCPropertyGridColorProperty 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCPropertyGridColorProperty 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridColorProperty
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33c807343c29fca74168167ef5d784e056b350fa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de336692a821ba374996fac9ee7d282d2990bd08
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty 클래스
 `CMFCPropertyGridColorProperty` 클래스는 색 선택 항목 대화 상자를 여는 속성 목록 컨트롤 항목을 지원합니다.  
@@ -79,7 +74,7 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 ## <a name="remarks"></a>설명  
  `CMFCPropertyGridColorProperty` 클래스는 속성 목록 컨트롤에 추가할 수 있는 색 속성을 지원합니다. 자세한 내용은 참조는 [CMFCPropertyGridCtrl 클래스](../../mfc/reference/cmfcpropertygridctrl-class.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `CMFCPropertyGridColorProperty` 클래스의 개체를 생성하고 `CMFCPropertyGridColorProperty` 클래스의 다양한 메서드를 사용하여 이 개체를 구성하는 방법을 보여 줍니다. 코드에서는 자동 및 기타 단추를 사용하도록 설정하는 방법과 색 및 열 번호를 설정하는 방법을 설명합니다. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#13](../../mfc/reference/codesnippet/cpp/cmfcpropertygridcolorproperty-class_1.cpp)]  
@@ -94,7 +89,7 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxpropertygridctrl.h  
   
-##  <a name="cmfcpropertygridcolorproperty"></a>CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty  
+##  <a name="cmfcpropertygridcolorproperty"></a>  CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty  
  `CMFCPropertyGridColorProperty` 개체를 생성합니다.  
   
 ```  
@@ -122,7 +117,7 @@ CMFCPropertyGridColorProperty(
  [in] `dwData`  
  정수 또는 속성에 연관 된 다른 데이터에 대 한 포인터 등 응용 프로그램별 데이터입니다. 기본값은 0입니다.  
   
-##  <a name="enableautomaticbutton"></a>CMFCPropertyGridColorProperty::EnableAutomaticButton  
+##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
  사용 하도록 설정 된 *자동* 색 선택 대화 상자에서 단추입니다. (표준 자동 단추 레이블이 **자동**.)  
   
 ```  
@@ -140,11 +135,11 @@ void EnableAutomaticButton(
  자동 (기본) 색의 RGB 색상 값입니다.  
   
  [in] `bEnable`  
- `TRUE`자동 단추를 사용 하도록 설정 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
+ `TRUE` 자동 단추를 사용 하도록 설정 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="enableotherbutton"></a>CMFCPropertyGridColorProperty::EnableOtherButton  
+##  <a name="enableotherbutton"></a>  CMFCPropertyGridColorProperty::EnableOtherButton  
  사용 하도록 설정 된 *다른* 색 선택 대화 상자에서 단추입니다. (표준 기타 단추 레이블이 **다른 색**.)  
   
 ```  
@@ -159,14 +154,14 @@ void EnableOtherButton(
  다른 단추 레이블 텍스트입니다.  
   
  [in] `bAltColorDlg`  
- `TRUE`표시 하는 `CMFCColorDialog` 대화 상자 `FALSE` 표준 색 선택 대화 상자를 표시 합니다. 기본값은 `TRUE`입니다.  
+ `TRUE` 표시 하는 `CMFCColorDialog` 대화 상자 `FALSE` 표준 색 선택 대화 상자를 표시 합니다. 기본값은 `TRUE`입니다.  
   
  [in] `bEnable`  
- `TRUE`다른 단추를 표시 하려면 그렇지 않으면 `FALSE`합니다.  기본값은 `TRUE`입니다.  
+ `TRUE` 다른 단추를 표시 하려면 그렇지 않으면 `FALSE`합니다.  기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getcolor"></a>CMFCPropertyGridColorProperty::GetColor  
+##  <a name="getcolor"></a>  CMFCPropertyGridColorProperty::GetColor  
  속성의 현재 색을 가져옵니다.  
   
 ```  
@@ -178,7 +173,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setcolor"></a>CMFCPropertyGridColorProperty::SetColor  
+##  <a name="setcolor"></a>  CMFCPropertyGridColorProperty::SetColor  
  속성에 대한 새로운 색을 설정합니다.  
   
 ```  
@@ -191,7 +186,7 @@ void SetColor(COLORREF color);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setcolumnsnumber"></a>CMFCPropertyGridColorProperty::SetColumnsNumber  
+##  <a name="setcolumnsnumber"></a>  CMFCPropertyGridColorProperty::SetColumnsNumber  
  현재 색 속성 표의 열 수를 지정합니다.  
   
 ```  
@@ -205,7 +200,7 @@ void SetColumnsNumber(int nColumnsNumber);
 ### <a name="remarks"></a>설명  
  값을 설정 하는이 메서드는 `m_nColumnsNumber` 데이터 멤버를 보호 합니다.  
   
-##  <a name="setoriginalvalue"></a>Cmfcpropertygridcolorproperty:: Setoriginalvalue  
+##  <a name="setoriginalvalue"></a>  Cmfcpropertygridcolorproperty:: Setoriginalvalue  
  편집 가능한 속성의 원래 값을 설정합니다.  
   
 ```  

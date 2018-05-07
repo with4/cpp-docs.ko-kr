@@ -2,12 +2,9 @@
 title: CDaoRelationInfo 구조체 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoRelationInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Relations collection
 - CDaoRelationInfo structure [MFC]
 ms.assetid: 92dda090-fe72-4090-84ec-429498a48aad
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 047b81ebaa903d2b9bdddcf6c606d1e9fe649482
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 112af640d020dc579c1ec2b1b7eace509daa451e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo 구조체
 `CDaoRelationInfo` 구조에서 두 테이블의 필드 간에 정의 된 관계에 대 한 정보를 포함 한 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) 개체입니다.  
@@ -85,7 +80,7 @@ struct CDaoRelationInfo
   
  관계 개체는 MFC 클래스에 의해 표시 되지 않습니다. 대신, MFC 개체를 원본 DAO 개체는 `CDaoDatabase` 관계 개체의 컬렉션을 유지 하는 클래스: `CDaoDatabase` 관계 정보 또는 있습니다 일부 개별 항목에 액세스 하는 공급 멤버 함수는 를사용하여한번에모두액세스할수있습니다`CDaoRelationInfo` 호출 하 여 개체는 `GetRelationInfo` 포함 하는 데이터베이스 개체의 멤버 함수입니다.  
   
- 검색 한 정보는 [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) 멤버 함수에 저장 되는 `CDaoRelationInfo` 구조입니다. `CDaoRelationInfo`또한 정의 `Dump` 디버그에서 멤버 함수를 작성 합니다. 사용할 수 있습니다 `Dump` 의 내용을 덤프 하는 `CDaoRelationInfo` 개체입니다.  
+ 검색 한 정보는 [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) 멤버 함수에 저장 되는 `CDaoRelationInfo` 구조입니다. `CDaoRelationInfo` 또한 정의 `Dump` 디버그에서 멤버 함수를 작성 합니다. 사용할 수 있습니다 `Dump` 의 내용을 덤프 하는 `CDaoRelationInfo` 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdao.h  

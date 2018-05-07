@@ -1,12 +1,9 @@
 ---
-title: "COleUpdateDialog 클래스 | Microsoft Docs"
-ms.custom: 
+title: COleUpdateDialog 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleUpdateDialog
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - COleUpdateDialog [MFC], COleUpdateDialog
 - COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32a7d41c507c2b7b932ba33df911151bfc417091
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54088de4c07f1c58656aad468160ef58f0e41398
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleupdatedialog-class"></a>COleUpdateDialog 클래스
 OLE 편집 링크 대화 상자의 특별한 경우에 사용됩니다. 예를 들어, 문서에서 기존에 연결되거나 포함된 개체만 업데이트할 경우에 사용해야 합니다.  
@@ -77,7 +72,7 @@ class COleUpdateDialog : public COleLinksDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxodlgs.h  
   
-##  <a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog  
+##  <a name="coleupdatedialog"></a>  COleUpdateDialog::COleUpdateDialog  
  `COleUpdateDialog` 개체를 생성합니다.  
   
 ```  
@@ -104,7 +99,7 @@ explicit COleUpdateDialog(
 ### <a name="remarks"></a>설명  
  이 함수가 구성 된 `COleUpdateDialog` 개체입니다. 대화 상자를 표시 하려면 호출 [DoModal](../../mfc/reference/colelinksdialog-class.md#domodal)합니다. 이 클래스를 대신 사용 해야 `COleLinksDialog` 기존 업데이트 하려는 경우 연결 항목 또는 포함 합니다.  
   
-##  <a name="domodal"></a>COleUpdateDialog::DoModal  
+##  <a name="domodal"></a>  COleUpdateDialog::DoModal  
  모드를 업데이트 하는 링크 편집 대화 상자에 표시 합니다.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: lock::acquire | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - lock::acquire
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - acquire method
 ms.assetid: c214274e-7519-4739-82aa-91b04a32d3f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 622d308b04edc1793da792c6f371753b80c37680
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54b74721e39489ce8fab5eb93f626f78493479b8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lockacquire"></a>lock::acquire
 지정 된 시간 또는 전혀 영원히 잠금을 획득 하려고 대기 하는 선택적으로 개체에 대 한 잠금을 획득 합니다.  
@@ -59,7 +54,7 @@ void acquire(
   
  잠금을 이미 가져온 경우이 함수는 아무 작업도 수행 하지 않습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다.  클래스를 사용 하 여 잠금을 자체에서 내부 데이터에 대 한 액세스가 각 스레드에 대해 일관적인 지 확인 합니다.  기본 응용 프로그램 스레드는 주기적으로 확인 하는 경우 모든 작업자 스레드 여전히 존재 하며, 해당 작업을 완료 될 때까지 모든 작업자 스레드가 끝나기를 대기 하는 클래스의 동일한 인스턴스에 잠금을 사용 합니다.  
   
 ```  

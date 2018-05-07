@@ -1,13 +1,10 @@
 ---
-title: "ODBC: ODBC API를 호출 함수를 직접 | Microsoft Docs"
-ms.custom: 
+title: 'ODBC: ODBC API를 호출 함수를 직접 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - catalog functions (ODBC), calling
 - ODBC [C++], API functions
 ms.assetid: 4295f1d9-4528-4d2e-bd6a-c7569953c7fa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 51fde2bb7ea73a2655c0b771dabfe14d2c833fb5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55b95c5dd48631f9c724aebd163ce948c3469850
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: ODBC API 함수 직접 호출
 데이터베이스 클래스에서 제공 하는 간단한 인터페이스는 [데이터 소스](../../data/odbc/data-source-odbc.md) 는 ODBC 보다 합니다. 결과적으로 클래스는 모든 ODBC API를 캡슐화 하지 않습니다. 클래스의 기능 외부에 있는 모든 기능에 대 한 ODBC API 함수를 직접 호출 해야 합니다. ODBC 카탈로그 함수를 호출 해야 하는 예를 들어 (**:: SQLColumns**, **:: SQLProcedures**, **:: SQLTables**, 및 기타) 직접 합니다.  

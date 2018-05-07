@@ -1,12 +1,9 @@
 ---
 title: 'vector:: insert (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::vector::insert
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - insert member [STL/CLR]
 ms.assetid: f240cabf-f9d1-40c1-9cfb-975a90955546
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b330a9e0b8a11f41ceab4f604b73b93e8f1d735a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 06b4b5c6385d92e1fb03d05e96716075a5e2f6f3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vectorinsert-stlclr"></a>vector::insert(STL/CLR)
 지정된 된 위치에 요소를 추가합니다.  
@@ -74,7 +69,7 @@ void insert(iterator where,
   
  단일 요소를 삽입할 경우에 요소 복사본의 수는 삽입 지점와 떨어진 끝 시퀀스의 요소 수에 비례 합니다. (시퀀스의 끝에 하나 이상의 요소를 삽입할 경우 요소 복사본이 발생 합니다.) 경우 `InIt` 입력 반복기, 세 번째 멤버 함수는 시퀀스의 각 요소에 대 한 단일 삽입을 효과적으로 수행 합니다. 삽입할 때 그렇지 `N` 요소, 요소 복사본 수에 비례는 `N` 삽입 포인터와 떨어진 시퀀스의 끝 간 요소 수를 더한 값입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_vector_insert.cpp   

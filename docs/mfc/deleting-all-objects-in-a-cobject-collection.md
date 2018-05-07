@@ -1,13 +1,10 @@
 ---
-title: "CObject 컬렉션의 모든 개체 삭제 | Microsoft Docs"
-ms.custom: 
+title: CObject 컬렉션의 모든 개체 삭제 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f1edc7f181bdb23e050d2fa608c9b3a2056749
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f57e503e43bdb637b85e4642349203b9f2e8aa6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>CObject 컬렉션의 모든 개체 삭제
 이 문서에서는 (하지 않고 컬렉션 개체 자체를 삭제)는 컬렉션의 모든 개체를 삭제 하는 방법에 설명 합니다.  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [지도](#_core_to_delete_all_elements_in_a_map)  
   
-#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>CObject에 대 한 포인터 목록에서 모든 개체를 삭제 하려면  
+#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>  CObject에 대 한 포인터 목록에서 모든 개체를 삭제 하려면  
   
 1.  사용 하 여 `GetHeadPosition` 및 `GetNext` 목록에서 반복 하 합니다.  
   
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
  요소의 개체를 삭제 하 고 요소 자체를 제거 간 차이 확인 합니다. 목록에서 요소를 단순히 제거에 목록 개체에 대 한 참조를 제거 합니다. 개체가는 메모리에 계속 있습니다. 개체를 삭제 하면 더 이상 존재 하 고 메모리가 회수 됩니다. 즉, 목록을 더 이상 존재 하는 개체에 액세스 하려고 시도 하지 않도록 요소의 개체가 삭제 된 후에 즉시 요소를 제거 하는 것이 중요 합니다.  
   
-#### <a name="_core_to_delete_all_elements_in_an_array"></a>배열의 모든 요소를 삭제 하려면  
+#### <a name="_core_to_delete_all_elements_in_an_array"></a>  배열의 모든 요소를 삭제 하려면  
   
 1.  사용 하 여 `GetSize` 과 배열을 통해 반복 하는 정수 인덱스 값입니다.  
   
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
   
  호출할 수 목록 위의 예에서와 같이 `RemoveAll` 배열의 모든 요소를 제거 하려면 또는 `RemoveAt` 개별 요소를 제거 하려면.  
   
-#### <a name="_core_to_delete_all_elements_in_a_map"></a>Map의 모든 요소를 삭제 하려면  
+#### <a name="_core_to_delete_all_elements_in_a_map"></a> Map의 모든 요소를 삭제 하려면  
   
 1.  사용 하 여 `GetStartPosition` 및 `GetNextAssoc` 배열을 통해 반복 하 합니다.  
   

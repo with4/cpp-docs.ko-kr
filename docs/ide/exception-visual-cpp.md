@@ -1,13 +1,10 @@
 ---
-title: "&lt;예외&gt; (Visual c + +) | Microsoft Docs"
-ms.custom: 
+title: '&lt;예외&gt; (Visual c + +) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - exception
 - <exception>
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - <exception> C++ XML tag
 - exception C++ XML tag
 ms.assetid: 24451e79-9b89-4b77-98fb-702c6516b818
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c07dde806938b38dd55a3258b3724b0937d5601d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d3d5b7a89a3725ae9dee2065bcd21d8f114ca00
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltexceptiongt-visual-c"></a>&lt;예외&gt; (Visual c + +)
 \<exception> 태그를 사용하면 throw할 수 있는 예외를 지정할 수 있습니다. 이 태그 메서드 정의에 적용 됩니다.  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
  Visual C++ 컴파일러에서는 문서 주석을 통해 단일 패스로 cref 참조를 확인하려고 합니다.  따라서 C++ 조회 규칙을 사용하는 경우 컴파일러에서 기호를 찾을 수 없으며 참조는 확인되지 않음으로 표시됩니다. 참조 [ \<seealso >](../ide/seealso-visual-cpp.md) 자세한 정보에 대 한 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // xml_exception_tag.cpp  

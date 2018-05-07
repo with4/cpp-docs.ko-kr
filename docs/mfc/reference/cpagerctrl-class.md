@@ -2,11 +2,8 @@
 title: CPagerCtrl 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPagerCtrl
@@ -57,17 +54,15 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c79fa877023c7a01c4814f61d75a54cb0dd64b51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d22aa408fe2933803083adc784c2dbf3a85dd4df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl 클래스
 `CPagerCtrl` 클래스는 윈도우에 맞지 않는 포함된 창을 보기로 스크롤할 수 있는 Windows 페이저 컨트롤을 래핑합니다.  
@@ -130,7 +125,7 @@ class CPagerCtrl : public CWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcmn.h  
   
-##  <a name="cpagerctrl"></a>CPagerCtrl::CPagerCtrl  
+##  <a name="cpagerctrl"></a>  CPagerCtrl::CPagerCtrl  
  `CPagerCtrl` 개체를 생성합니다.  
   
 ```  
@@ -140,7 +135,7 @@ CPagerCtrl();
 ### <a name="remarks"></a>설명  
  사용 하 여는 [CPagerCtrl::Create](#create) 또는 [CPagerCtrl::CreateEx](#createex) 페이저 컨트롤을 만들고에 연결 하는 메서드는 `CPagerCtrl` 개체입니다.  
   
-##  <a name="create"></a>CPagerCtrl::Create  
+##  <a name="create"></a>  CPagerCtrl::Create  
  지정 된 스타일으로 페이저 컨트롤을 만들고 현재 연결 `CPagerCtrl` 개체입니다.  
   
 ```  
@@ -166,12 +161,12 @@ virtual BOOL Create(
 ### <a name="remarks"></a>설명  
  페이저 컨트롤을 만들려면 선언는 `CPagerCtrl` 변수를 다음 호출에서 [CPagerCtrl::Create](#create) 또는 [CPagerCtrl::CreateEx](#createex) 해당 변수에 대 한 메서드.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 페이저 컨트롤을 만든 다음 사용 하 여는 [CPagerCtrl::SetChild](#setchild) 페이저 컨트롤에서 매우 긴 단추 컨트롤을 연결 하는 방법이 있습니다. 이 예제에서는 다음 사용 하 여는 [CPagerCtrl::SetButtonSize](#setbuttonsize) 20 픽셀 페이저 컨트롤의 높이 설정 하는 메서드 및 [CPagerCtrl::SetBorder](#setborder) 1 픽셀로 테두리 두께 설정 하는 방법은 합니다.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="createex"></a>CPagerCtrl::CreateEx  
+##  <a name="createex"></a>  CPagerCtrl::CreateEx  
  지정 된 확장된 스타일을 사용 하 여 페이저 컨트롤을 만들고 현재 연결 `CPagerCtrl` 개체입니다.  
   
 ```  
@@ -199,7 +194,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>설명  
  페이저 컨트롤을 만들려면 선언는 `CPagerCtrl` 변수를 다음 호출에서 [CPagerCtrl::Create](#create) 또는 [CPagerCtrl::CreateEx](#createex) 해당 변수에 대 한 메서드.  
   
-##  <a name="forwardmouse"></a>CPagerCtrl::ForwardMouse  
+##  <a name="forwardmouse"></a>  CPagerCtrl::ForwardMouse  
  활성화 하거나 비활성화 전달 [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) 메시지 현재 페이저 컨트롤에 포함 된 창입니다.  
   
 ```  
@@ -210,12 +205,12 @@ void ForwardMouse(BOOL bForward);
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `bForward`|`true`마우스 메시지 전달 또는 `false` 마우스 메시지를 전달 하지 않습니다.|  
+|[in] `bForward`|`true` 마우스 메시지 전달 또는 `false` 마우스 메시지를 전달 하지 않습니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드는 전송 된 [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
-##  <a name="getborder"></a>CPagerCtrl::GetBorder  
+##  <a name="getborder"></a>  CPagerCtrl::GetBorder  
  현재 페이저 컨트롤의 테두리 크기를 검색합니다.  
   
 ```  
@@ -228,12 +223,12 @@ int GetBorder() const;
 ### <a name="remarks"></a>설명  
  이 메서드는 전송 된 [PGM_GETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760869) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 [CPagerCtrl::GetBorder](#getborder) 페이저 컨트롤의 테두리의 두께 검색 하는 메서드입니다.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#5](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_2.cpp)]  
   
-##  <a name="getbkcolor"></a>CPagerCtrl::GetBkColor  
+##  <a name="getbkcolor"></a>  CPagerCtrl::GetBkColor  
  현재 페이저 컨트롤의 배경색을 검색합니다.  
   
 ```  
@@ -246,12 +241,12 @@ COLORREF GetBkColor() const;
 ### <a name="remarks"></a>설명  
  이 메서드는 전송 된 [PGM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760868) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 [CPagerCtrl::SetBkColor](#setbkcolor) 빨간색으로 페이저 컨트롤의 배경색을 설정 하는 메서드 및 [CPagerCtrl::GetBkColor](#getbkcolor) 변경을 수행 했는지 확인 하는 메서드.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
-##  <a name="getbuttonsize"></a>CPagerCtrl::GetButtonSize  
+##  <a name="getbuttonsize"></a>  CPagerCtrl::GetButtonSize  
  현재 페이저 컨트롤의 단추 크기를 검색합니다.  
   
 ```  
@@ -266,7 +261,7 @@ int GetButtonSize() const;
   
  페이저 컨트롤에 있는 경우는 `PGS_HORZ` 페이저 단추 너비를 결정 하는 스타일을 단추 크기 고 페이저 컨트롤에는 `PGS_VERT` 스타일의 단추 크기 페이저 단추 높이 결정 합니다. 자세한 내용은 참조 [페이저 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760859)합니다.  
   
-##  <a name="getbuttonstate"></a>CPagerCtrl::GetButtonState  
+##  <a name="getbuttonstate"></a>  CPagerCtrl::GetButtonState  
  현재 페이저 컨트롤에서 지정 된 스크롤 단추의 상태를 검색합니다.  
   
 ```  
@@ -285,7 +280,7 @@ DWORD GetButtonState(int iButton) const;
 ### <a name="remarks"></a>설명  
  이 메서드는 전송 된 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
-##  <a name="getdroptarget"></a>CPagerCtrl::GetDropTarget  
+##  <a name="getdroptarget"></a>  CPagerCtrl::GetDropTarget  
  검색 된 [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) 현재 페이저 컨트롤에 대 한 인터페이스입니다.  
   
 ```  
@@ -296,11 +291,11 @@ IDropTarget* GetDropTarget() const;
  에 대 한 포인터는 `IDropTarget` 현재 페이저 컨트롤에 대 한 인터페이스입니다.  
   
 ### <a name="remarks"></a>설명  
- `IDropTarget`구현 하는 인터페이스 중 하나는 응용 프로그램에서 끌어서 놓기 작업을 지원 합니다.  
+ `IDropTarget` 구현 하는 인터페이스 중 하나는 응용 프로그램에서 끌어서 놓기 작업을 지원 합니다.  
   
  이 메서드는 전송 된 [PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872) 메시지는 Windows SDK에 설명 되어 있습니다. 이 메서드의 호출자는 호출 하는 데는 `Release` 의 멤버는 [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) 인터페이스는 인터페이스는 더 이상 필요 합니다.  
   
-##  <a name="getscrollpos"></a>CPagerCtrl::GetScrollPos  
+##  <a name="getscrollpos"></a>  CPagerCtrl::GetScrollPos  
  현재 페이저 컨트롤의 스크롤 위치를 검색합니다.  
   
 ```  
@@ -313,12 +308,12 @@ int GetScrollPos() const;
 ### <a name="remarks"></a>설명  
  이 메서드는 전송 된 [PGM_GETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760874) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 [CPagerCtrl::GetScrollPos](#getscrollpos) 페이저 컨트롤의 현재 스크롤 위치를 검색 하는 메서드입니다. 이 예에서는 사용 페이저 컨트롤을 0으로 맨 왼쪽 위치 이미 스크롤되지 않는 경우는 [CPagerCtrl::SetScrollPos](#setscrollpos) 스크롤 위치를 0으로 설정 하는 방법은 합니다.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#7](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_4.cpp)]  
   
-##  <a name="isbuttondepressed"></a>CPagerCtrl::IsButtonDepressed  
+##  <a name="isbuttondepressed"></a>  CPagerCtrl::IsButtonDepressed  
  현재 페이저 컨트롤의 지정 된 스크롤 단추를 누른된 상태 인지 여부를 나타냅니다.  
   
 ```  
@@ -332,12 +327,12 @@ BOOL IsButtonDepressed(int iButton) const;
 |[in] `iButton`|상태를 검색할 단추를 나타냅니다. 페이저 컨트롤 스타일을 사용 하는 경우 `PGS_HORZ`, 지정 `PGB_TOPORLEFT` 왼쪽된 단추에 대 한 및 `PGB_BOTTOMORRIGHT` 오른쪽의 단추에 대 한 합니다. 페이저 컨트롤 스타일을 사용 하는 경우 `PGS_VERT`, 지정 `PGB_TOPORLEFT` 위쪽 단추에 대 한 및 `PGB_BOTTOMORRIGHT` 아래쪽 단추에 대 한 합니다. 자세한 내용은 참조 [페이저 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760859)합니다.|  
   
 ### <a name="return-value"></a>반환 값  
- `true`지정한 단추의 누름된 상태; 이면 그렇지 않으면 `false`합니다.  
+ `true` 지정한 단추의 누름된 상태; 이면 그렇지 않으면 `false`합니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드는 전송 된 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 메시지는 Windows SDK에 설명 되어 있습니다. 반환 되는 상태 인지를 테스트 하는 다음 `PGF_DEPRESSED`합니다. 자세한 내용은의 반환 값 섹션을 참조 하십시오.는 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 메시지입니다.  
   
-##  <a name="isbuttongrayed"></a>CPagerCtrl::IsButtonGrayed  
+##  <a name="isbuttongrayed"></a>  CPagerCtrl::IsButtonGrayed  
  현재 페이저 컨트롤의 지정 된 스크롤 단추 회색된 상태 인지 여부를 나타냅니다.  
   
 ```  
@@ -351,12 +346,12 @@ BOOL IsButtonGrayed(int iButton) const;
 |[in] `iButton`|상태를 검색할 단추를 나타냅니다. 페이저 컨트롤 스타일을 사용 하는 경우 `PGS_HORZ`, 지정 `PGB_TOPORLEFT` 왼쪽된 단추에 대 한 및 `PGB_BOTTOMORRIGHT` 오른쪽의 단추에 대 한 합니다. 페이저 컨트롤 스타일을 사용 하는 경우 `PGS_VERT`, 지정 `PGB_TOPORLEFT` 위쪽 단추에 대 한 및 `PGB_BOTTOMORRIGHT` 아래쪽 단추에 대 한 합니다. 자세한 내용은 참조 [페이저 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760859)합니다.|  
   
 ### <a name="return-value"></a>반환 값  
- `true`지정한 단추의 회색된 상태; 이면 그렇지 않으면 `false`합니다.  
+ `true` 지정한 단추의 회색된 상태; 이면 그렇지 않으면 `false`합니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드는 전송 된 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 메시지는 Windows SDK에 설명 되어 있습니다. 반환 되는 상태 인지를 테스트 하는 다음 `PGF_GRAYED`합니다. 자세한 내용은의 반환 값 섹션을 참조 하십시오.는 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 메시지입니다.  
   
-##  <a name="isbuttonhot"></a>CPagerCtrl::IsButtonHot  
+##  <a name="isbuttonhot"></a>  CPagerCtrl::IsButtonHot  
  현재 페이저 컨트롤의 지정 된 스크롤 단추 활성 상태 인지 여부를 나타냅니다.  
   
 ```  
@@ -370,12 +365,12 @@ BOOL IsButtonHot(int iButton) const;
 |[in] `iButton`|상태를 검색할 단추를 나타냅니다. 페이저 컨트롤 스타일을 사용 하는 경우 `PGS_HORZ`, 지정 `PGB_TOPORLEFT` 왼쪽된 단추에 대 한 및 `PGB_BOTTOMORRIGHT` 오른쪽의 단추에 대 한 합니다. 페이저 컨트롤 스타일을 사용 하는 경우 `PGS_VERT`, 지정 `PGB_TOPORLEFT` 위쪽 단추에 대 한 및 `PGB_BOTTOMORRIGHT` 아래쪽 단추에 대 한 합니다. 자세한 내용은 참조 [페이저 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760859)합니다.|  
   
 ### <a name="return-value"></a>반환 값  
- `true`지정한 단추의 핫 상태; 이면 그렇지 않으면 `false`합니다.  
+ `true` 지정한 단추의 핫 상태; 이면 그렇지 않으면 `false`합니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드는 전송 된 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 메시지는 Windows SDK에 설명 되어 있습니다. 반환 되는 상태 인지를 테스트 하는 다음 `PGF_HOT`합니다. 자세한 내용은의 반환 값 섹션을 참조 하십시오.는 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 메시지입니다.  
   
-##  <a name="isbuttoninvisible"></a>CPagerCtrl::IsButtonInvisible  
+##  <a name="isbuttoninvisible"></a>  CPagerCtrl::IsButtonInvisible  
  현재 페이저 컨트롤의 지정 된 스크롤 단추 보이지 않는 상태 인지 여부를 나타냅니다.  
   
 ```  
@@ -389,19 +384,19 @@ BOOL IsButtonInvisible(int iButton) const;
 |[in] `iButton`|상태를 검색할 단추를 나타냅니다. 페이저 컨트롤 스타일을 사용 하는 경우 `PGS_HORZ`, 지정 `PGB_TOPORLEFT` 왼쪽된 단추에 대 한 및 `PGB_BOTTOMORRIGHT` 오른쪽의 단추에 대 한 합니다. 페이저 컨트롤 스타일을 사용 하는 경우 `PGS_VERT`, 지정 `PGB_TOPORLEFT` 위쪽 단추에 대 한 및 `PGB_BOTTOMORRIGHT` 아래쪽 단추에 대 한 합니다. 자세한 내용은 참조 [페이저 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760859)합니다.|  
   
 ### <a name="return-value"></a>반환 값  
- `true`지정한 단추가 표시 되지 않는 상태 이면 경우 그렇지 않으면 `false`합니다.  
+ `true` 지정한 단추가 표시 되지 않는 상태 이면 경우 그렇지 않으면 `false`합니다.  
   
 ### <a name="remarks"></a>설명  
  Windows에서는 가져오기 때문에 추가 단추를 클릭 하면 없습니다 포함 된 창의 자세히 보기로 가장 멀리 있는 범위가 포함 된 창을 스크롤할 때 특정 방향으로 스크롤 단추를 숨깁니다.  
   
  이 메서드는 전송 된 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 메시지는 Windows SDK에 설명 되어 있습니다. 반환 되는 상태 인지를 테스트 하는 다음 `PGF_INVISIBLE`합니다. 자세한 내용은의 반환 값 섹션을 참조 하십시오.는 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 메시지입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 [CPagerCtrl::IsButtonInvisible](#isbuttoninvisible) 페이저 컨트롤의 왼쪽 및 오른쪽 스크롤 단추를 표시 하는지 여부를 결정 하는 메서드.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#6](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_5.cpp)]  
   
-##  <a name="isbuttonnormal"></a>CPagerCtrl::IsButtonNormal  
+##  <a name="isbuttonnormal"></a>  CPagerCtrl::IsButtonNormal  
  지정된 된 스크롤 단추는 현재 페이저 컨트롤의 정상 상태 인지 여부를 나타냅니다.  
   
 ```  
@@ -415,12 +410,12 @@ BOOL IsButtonNormal(int iButton) const;
 |[in] `iButton`|상태를 검색할 단추를 나타냅니다. 페이저 컨트롤 스타일을 사용 하는 경우 `PGS_HORZ`, 지정 `PGB_TOPORLEFT` 왼쪽된 단추에 대 한 및 `PGB_BOTTOMORRIGHT` 오른쪽의 단추에 대 한 합니다. 페이저 컨트롤 스타일을 사용 하는 경우 `PGS_VERT`, 지정 `PGB_TOPORLEFT` 위쪽 단추에 대 한 및 `PGB_BOTTOMORRIGHT` 아래쪽 단추에 대 한 합니다. 자세한 내용은 참조 [페이저 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760859)합니다.|  
   
 ### <a name="return-value"></a>반환 값  
- `true`지정 된 단추 정상 상태 이면 경우 그렇지 않으면 `false`합니다.  
+ `true` 지정 된 단추 정상 상태 이면 경우 그렇지 않으면 `false`합니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드는 전송 된 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 메시지는 Windows SDK에 설명 되어 있습니다. 반환 되는 상태 인지를 테스트 하는 다음 `PGF_NORMAL`합니다. 자세한 내용은의 반환 값 섹션을 참조 하십시오.는 [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) 메시지입니다.  
   
-##  <a name="recalcsize"></a>CPagerCtrl::RecalcSize  
+##  <a name="recalcsize"></a>  CPagerCtrl::RecalcSize  
  현재 호출기 컨트롤이 포함 된 창의 크기 다시 계산 하 합니다.  
   
 ```  
@@ -430,17 +425,17 @@ void RecalcSize();
 ### <a name="remarks"></a>설명  
  이 메서드는 전송 된 [PGM_RECALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760876) 메시지는 Windows SDK에 설명 되어 있습니다. 따라서 페이저 컨트롤 보냅니다는 [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) 알림을 포함 된 창의 스크롤 가능한 크기입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 [CPagerCtrl::RecalcSize](#recalcsize) 메서드를 현재 페이저 컨트롤 크기 다시 계산을 요청 합니다.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#3](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_6.cpp)]  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 [메시지 리플렉션](../../mfc/tn062-message-reflection-for-windows-controls.md) 페이저 컨트롤 크기 계산을 수행 하는 컨트롤의 부모 대화를 요구 하는 대신 다시 계산을 사용할 수 있도록 합니다. 이 예제에서는 파생는 `MyPagerCtrl` 에서 클래스는 [CPagerCtrl 클래스](../../mfc/reference/cpagerctrl-class.md), 다음 메시지 맵을 사용 하 여 연결 하는 [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) 알림을 `OnCalcsize` 알림 처리기입니다. 이 예제에서는 알림 처리기를 고정된 값 페이저 컨트롤의 높이 너비를 설정합니다.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#8](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_7.cpp)]  
   
-##  <a name="setbkcolor"></a>CPagerCtrl::SetBkColor  
+##  <a name="setbkcolor"></a>  CPagerCtrl::SetBkColor  
  현재 페이저 컨트롤의 배경색을 설정합니다.  
   
 ```  
@@ -459,12 +454,12 @@ COLORREF SetBkColor(COLORREF clrBk);
 ### <a name="remarks"></a>설명  
  이 메서드는 전송 된 [PGM_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760878) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 [CPagerCtrl::SetBkColor](#setbkcolor) 빨간색으로 페이저 컨트롤의 배경색을 설정 하는 메서드 및 [CPagerCtrl::GetBkColor](#getbkcolor) 변경을 수행 했는지 확인 하는 메서드.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
-##  <a name="setborder"></a>CPagerCtrl::SetBorder  
+##  <a name="setborder"></a>  CPagerCtrl::SetBorder  
  현재 페이저 컨트롤의 테두리 크기를 설정합니다.  
   
 ```  
@@ -483,12 +478,12 @@ int SetBorder(int iBorder);
 ### <a name="remarks"></a>설명  
  이 메서드는 전송 된 [PGM_SETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760880) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 페이저 컨트롤을 만든 다음 사용 하 여는 [CPagerCtrl::SetChild](#setchild) 페이저 컨트롤에서 매우 긴 단추 컨트롤을 연결 하는 방법이 있습니다. 이 예제에서는 다음 사용 하 여는 [CPagerCtrl::SetButtonSize](#setbuttonsize) 20 픽셀 페이저 컨트롤의 높이 설정 하는 메서드 및 [CPagerCtrl::SetBorder](#setborder) 1 픽셀로 테두리 두께 설정 하는 방법은 합니다.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="setbuttonsize"></a>CPagerCtrl::SetButtonSize  
+##  <a name="setbuttonsize"></a>  CPagerCtrl::SetButtonSize  
  현재 페이저 컨트롤의 단추 크기를 설정합니다.  
   
 ```  
@@ -509,12 +504,12 @@ int SetButtonSize(int iButtonSize);
   
  페이저 컨트롤에 있는 경우는 `PGS_HORZ` 페이저 단추 너비를 결정 하는 스타일을 단추 크기 고 페이저 컨트롤에는 `PGS_VERT` 스타일의 단추 크기 페이저 단추 높이 결정 합니다. 기본 단추 크기는 3-4의 스크롤 막대의 너비 이며 최소 단추 크기 12 픽셀입니다. 자세한 내용은 참조 [페이저 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760859)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 페이저 컨트롤을 만든 다음 사용 하 여는 [CPagerCtrl::SetChild](#setchild) 페이저 컨트롤에서 매우 긴 단추 컨트롤을 연결 하는 방법이 있습니다. 이 예제에서는 다음 사용 하 여는 [CPagerCtrl::SetButtonSize](#setbuttonsize) 20 픽셀 페이저 컨트롤의 높이 설정 하는 메서드 및 [CPagerCtrl::SetBorder](#setborder) 1 픽셀로 테두리 두께 설정 하는 방법은 합니다.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="setchild"></a>CPagerCtrl::SetChild  
+##  <a name="setchild"></a>  CPagerCtrl::SetChild  
  현재 페이저 컨트롤에 대 한 포함 된 창을 설정입니다.  
   
 ```  
@@ -532,12 +527,12 @@ void SetChild(HWND hwndChild);
   
  이 메서드는 포함된 된 창의;의 부모를 변경 하지 않습니다. 만 스크롤할 수 있도록 페이저 컨트롤에 대 한 창 핸들을 할당합니다. 대부분의 경우에서 포함된 된 창의 페이저 컨트롤의 자식 창이 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 페이저 컨트롤을 만든 다음 사용 하 여는 [CPagerCtrl::SetChild](#setchild) 페이저 컨트롤에서 매우 긴 단추 컨트롤을 연결 하는 방법이 있습니다. 이 예제에서는 다음 사용 하 여는 [CPagerCtrl::SetButtonSize](#setbuttonsize) 20 픽셀 페이저 컨트롤의 높이 설정 하는 메서드 및 [CPagerCtrl::SetBorder](#setborder) 1 픽셀로 테두리 두께 설정 하는 방법은 합니다.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="setscrollpos"></a>CPagerCtrl::SetScrollPos  
+##  <a name="setscrollpos"></a>  CPagerCtrl::SetScrollPos  
  현재 페이저 컨트롤의 스크롤 위치를 설정합니다.  
   
 ```  

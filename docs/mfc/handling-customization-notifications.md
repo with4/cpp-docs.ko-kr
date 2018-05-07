@@ -2,12 +2,9 @@
 title: 사용자 지정 알림 처리 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - TBN_CUSTHELP
 - TBN_QUERYINSERT
@@ -56,17 +53,15 @@ helpviewer_keywords:
 - NM_RDBLCLK notification [MFC]
 - TBN_GETBUTTONINFO notification [MFC]
 ms.assetid: 219ea08e-7515-4b98-85cb-47120f08c0a2
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec4561fda34ba2b20f7fe46aea52f272eed3b9ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3636d3db480563295213b76de06133e78e30cd0d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-customization-notifications"></a>사용자 지정 알림 처리
 Windows 도구 모음 공용 컨트롤에 시스템 정의 사용자 지정 대화 상자를 포함한 기본 제공 사용자 지정 기능이 있으며 이 기능을 통해 사용자는 도구 모음 단추를 삽입, 삭제 또는 재정렬할 수 있습니다. 응용 프로그램에서는 사용자 지정 기능이 사용 가능한지 및 사용자가 도구 모음을 사용자 지정할 수 있는 범위를 제어하는지 여부를 결정합니다.  

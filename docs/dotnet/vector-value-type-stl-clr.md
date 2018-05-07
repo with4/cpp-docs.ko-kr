@@ -1,12 +1,9 @@
 ---
 title: 'vector:: value_type (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::vector::value_type
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: d8777470-5e7f-40d5-966c-a3c518d1f54c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d6246091c6880c39fbf289ec80bc81306d27e292
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac711a03da045dca4a39a75af501161aaaa0640f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vectorvaluetype-stlclr"></a>vector::value_type(STL/CLR)
 요소의 형식입니다.  
@@ -40,7 +35,7 @@ typedef Value value_type;
 ## <a name="remarks"></a>설명  
  이 형식은 템플릿 매개 변수 `Value`의 동의어입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_vector_value_type.cpp   

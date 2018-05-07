@@ -1,12 +1,9 @@
 ---
-title: "COlePropertiesDialog 클래스 | Microsoft Docs"
-ms.custom: 
+title: COlePropertiesDialog 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COlePropertiesDialog
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5460926e1f58a557b26d8e5fa0a0ed763fc5de6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d61d773e2c35bb67f34ae2b4a989a388d8b4015
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog 클래스
 Windows 공용 OLE 개체 속성 대화 상자를 캡슐화합니다.  
@@ -80,7 +75,7 @@ class COlePropertiesDialog : public COleDialog
 ## <a name="remarks"></a>설명  
  일반 OLE 개체 속성 대화 상자에는 쉽게 표시 하 고 Windows 표준와 일치 하는 방식에서 OLE 문서 항목의 속성을 수정 하는 방법을 제공 합니다. 이러한 속성 중 일부 옵션 (항목이 연결 된) 경우 항목의 링크에 아이콘 및 이미지 크기 조정 및 정보를 표시 하기 위한 문서 항목을 나타내는 파일에 대 한 정보가 들어 있습니다.  
   
- 사용 하는 `COlePropertiesDialog` 개체를 사용 하 여 개체를 만들려면 먼저는 `COlePropertiesDialog` 생성자입니다. 대화 상자를 생성 한 후 호출 하 여 `DoModal` 대화 상자를 표시 하 고 사용자가 항목의 속성을 수정 하도록 허용 하려면 멤버 함수입니다. `DoModal`사용자는 확인 선택 여부를 반환 합니다 ( **IDOK**) 또는 Cancel ( **IDCANCEL**) 단추입니다. 확인 및 취소 단추 외에도 적용 단추가 있습니다. 사용자가 적용을 선택 하면 문서 항목의 속성을 변경한 항목에 적용 되 고 해당 이미지가 자동으로 업데이트 되었지만 활성 상태로 유지 됩니다.  
+ 사용 하는 `COlePropertiesDialog` 개체를 사용 하 여 개체를 만들려면 먼저는 `COlePropertiesDialog` 생성자입니다. 대화 상자를 생성 한 후 호출 하 여 `DoModal` 대화 상자를 표시 하 고 사용자가 항목의 속성을 수정 하도록 허용 하려면 멤버 함수입니다. `DoModal` 사용자는 확인 선택 여부를 반환 합니다 ( **IDOK**) 또는 Cancel ( **IDCANCEL**) 단추입니다. 확인 및 취소 단추 외에도 적용 단추가 있습니다. 사용자가 적용을 선택 하면 문서 항목의 속성을 변경한 항목에 적용 되 고 해당 이미지가 자동으로 업데이트 되었지만 활성 상태로 유지 됩니다.  
   
  [m_psh](#m_psh) 데이터 멤버에 대 한 포인터는 한 **PROPSHEETHEADER** 구조 및 대부분의 경우 명시적으로 액세스 해야 합니다. 기본 일반, 뷰 및 링크 페이지 이외의 추가 속성 페이지를 해야 하는 경우는 예외가입니다. 이 경우 수정할 수 있습니다는 `m_psh` 호출 하기 전에 사용자 지정 페이지를 포함 하도록 데이터 멤버는 `DoModal` 멤버 함수입니다.  
   
@@ -104,7 +99,7 @@ class COlePropertiesDialog : public COleDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxodlgs.h  
   
-##  <a name="colepropertiesdialog"></a>COlePropertiesDialog::COlePropertiesDialog  
+##  <a name="colepropertiesdialog"></a>  COlePropertiesDialog::COlePropertiesDialog  
  
           `COlePropertiesDialog` 개체를 만듭니다.  
   
@@ -148,7 +143,7 @@ COlePropertiesDialog(
   
  기본적으로 제공 하는 것 이상의 페이지에 추가 하려면 수정 된 [m_psh](#m_psh) 의 생성자를 종료 하기 전에 멤버 변수 프로그램 `COlePropertiesDialog`-클래스를 파생 합니다. 이의 고급 구현을 `COlePropertiesDialog` 생성자입니다.  
   
-##  <a name="domodal"></a>COlePropertiesDialog::DoModal  
+##  <a name="domodal"></a>  COlePropertiesDialog::DoModal  
  Windows 공용 OLE 개체 속성 대화 상자를 표시 하 고 사용자가 보거나 문서 항목의 다양 한 속성을 변경 하도록 허용 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -160,7 +155,7 @@ virtual INT_PTR DoModal();
   
  경우 **IDCANCEL** 반환 되 면 Windows를 호출할 수 있습니다 [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) 함수 오류가 발생 한 것인지 확인 합니다.  
   
-##  <a name="m_gp"></a>COlePropertiesDialog::m_gp  
+##  <a name="m_gp"></a>  COlePropertiesDialog::m_gp  
  형식의 구조 [OLEUIGNRLPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687297), OLE 개체 속성 대화 상자의 일반 페이지를 초기화 하는 데 사용 합니다.  
   
 ```  
@@ -172,7 +167,7 @@ OLEUIGNRLPROPS m_gp;
   
  대 한 자세한 내용은 **OLEUIGNRLPROPS** 구조체는 Windows SDK를 참조 하십시오.  
   
-##  <a name="m_lp"></a>COlePropertiesDialog::m_lp  
+##  <a name="m_lp"></a>  COlePropertiesDialog::m_lp  
  형식의 구조 [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735), OLE 개체 속성 대화 상자의 연결 페이지를 초기화 하는 데 사용 합니다.  
   
 ```  
@@ -184,7 +179,7 @@ OLEUILINKPROPS m_lp;
   
  대 한 자세한 내용은 **OLEUILINKPROPS** 구조체는 Windows SDK를 참조 하십시오.  
   
-##  <a name="m_op"></a>COlePropertiesDialog::m_op  
+##  <a name="m_op"></a>  COlePropertiesDialog::m_op  
  형식의 구조 [OLEUIOBJECTPROPS](http://msdn.microsoft.com/library/windows/desktop/ms687199), 공용 OLE 개체 속성 대화 상자를 초기화 하는 데 사용 합니다.  
   
 ```  
@@ -196,7 +191,7 @@ OLEUIOBJECTPROPS m_op;
   
  자세한 내용은 참조는 **OLEUIOBJECTPROPS** 및 [OLEUILINKPROPS](http://msdn.microsoft.com/library/windows/desktop/ms680735) Windows SDK에는 구조입니다.  
   
-##  <a name="m_psh"></a>COlePropertiesDialog::m_psh  
+##  <a name="m_psh"></a>  COlePropertiesDialog::m_psh  
  형식의 구조 [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546), 멤버가 대화 상자 개체의 특성을 저장 합니다.  
   
 ```  
@@ -210,7 +205,7 @@ PROPSHEETHEADER m_psh;
   
  대 한 자세한 내용은 **PROPSHEETHEADER** 구조체는 Windows SDK를 참조 하십시오.  
   
-##  <a name="m_vp"></a>COlePropertiesDialog::m_vp  
+##  <a name="m_vp"></a>  COlePropertiesDialog::m_vp  
  형식의 구조 [OLEUIVIEWPROPS](http://msdn.microsoft.com/library/windows/desktop/ms693751), OLE 개체 속성 대화 상자의 보기 페이지를 초기화 하는 데 사용 합니다.  
   
 ```  
@@ -222,7 +217,7 @@ OLEUIVIEWPROPS m_vp;
   
  대 한 자세한 내용은 **OLEUIVIEWPROPS** 구조체는 Windows SDK를 참조 하십시오.  
   
-##  <a name="onapplyscale"></a>COlePropertiesDialog::OnApplyScale  
+##  <a name="onapplyscale"></a>  COlePropertiesDialog::OnApplyScale  
  크기 조정 값 변경 되어 확인 또는 적용 중 하나를 선택한 경우 프레임 워크에서 호출 됩니다.  
   
 ```  

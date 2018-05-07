@@ -1,13 +1,10 @@
 ---
-title: "MFC 라이브러리 버전 | Microsoft Docs"
-ms.custom: 
+title: MFC 라이브러리 버전 | Microsoft Docs
+ms.custom: ''
 ms.date: 1/09/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,14 +17,13 @@ helpviewer_keywords:
 - libraries [MFC], versions
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7641a970c747576fa3cfd8cd1c00602edb3541e2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 9fb4f73d1a0360ddad3983179415d0f7fc2d3cda
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-library-versions"></a>MFC 라이브러리 버전
 
@@ -129,14 +125,14 @@ MFC dll *버전* 이진 호환성을 나타내는 번호입니다. 다른 라이
 
 |DLL|설명|
 |---------|-----------------|
-|MFC*version*.DLL|MFC DLL, ANSI 또는 MBCS 릴리스 버전|
-|MFC*version*U.DLL|MFC DLL, 유니코드 릴리스 버전|
+|MFC*버전*합니다. DLL|MFC DLL, ANSI 또는 MBCS 릴리스 버전|
+|MFC*버전*U.DLL|MFC DLL, 유니코드 릴리스 버전|
 |MFC*version*D.DLL|MFC DLL, ANSI 또는 MBCS 디버그 버전|
-|MFC*version*UD.DLL|MFC DLL, 유니코드 디버그 버전|
+|MFC*버전*UD 합니다. DLL|MFC DLL, 유니코드 디버그 버전|
 |MFCM*version*.DLL|MFC DLL Windows Forms 컨트롤을 ANSI 또는 MBCS 릴리스 버전|
 |MFCM*version*U.DLL|MFC DLL을 Windows Forms 컨트롤, 유니코드 릴리스 버전|
 |MFCM*version*D.DLL|MFC DLL Windows Forms 컨트롤을 ANSI 또는 MBCS 디버그 버전|
-|MFCM*version*UD.DLL|MFC DLL을 Windows Forms 컨트롤, 유니코드 디버그 버전|
+|MFCM*버전*UD 합니다. DLL|MFC DLL을 Windows Forms 컨트롤, 유니코드 디버그 버전|
 
 응용 프로그램 또는 MFC 확장 Dll 이러한 공유 Dll을 사용 하는 빌드하는 데 필요한 가져오기 라이브러리 DLL과 같은 기본 이름을 갖지만.lib 파일 이름 확장명이 있습니다. 공유 Dll을 사용 하면 작은 정적 라이브러리 여전히와 연결 되어야 합니다 코드 이 라이브러리 MFCS 라는*버전*{U} {D}.lib입니다.
 

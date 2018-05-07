@@ -1,12 +1,9 @@
 ---
-title: "링커 도구 오류 LNK1302 | Microsoft Docs"
-ms.custom: 
+title: 링커 도구 오류 LNK1302 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK1302
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK1302
 ms.assetid: aea3c753-c2c4-4249-bbc3-f2d4f0164b5e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a5b9201608d6d457288c7ade9376147da08bcb9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6aa84a411f91303c84acb44e2e6c0ab3d975e19f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk1302"></a>링커 도구 오류 LNK1302
 안전한 .netmodules 링크만 지원됩니다. .netmodule 파일을 링크할 수 없습니다.  
@@ -36,6 +31,6 @@ ms.lasthandoff: 12/21/2017
   
  자세한 내용은 다음 항목을 참조하세요.  
   
--   [/LN (MSIL 모듈 만들기)](../../build/reference/ln-create-msil-module.md)  
+-   [/LN(MSIL 모듈 만들기)](../../build/reference/ln-create-msil-module.md)  
   
 -   [링커 입력 파일로 사용하는 .netmodule 파일](../../build/reference/netmodule-files-as-linker-input.md)

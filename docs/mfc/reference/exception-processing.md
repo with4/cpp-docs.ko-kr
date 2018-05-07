@@ -1,13 +1,10 @@
 ---
-title: "예외 처리 | Microsoft Docs"
-ms.custom: 
+title: 예외 처리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.exceptions
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adad6183d15b378feb7ec96aedff6a0013a2dd24
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a24d78089e468a2020e0ecdb1fba34783965325
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-processing"></a>예외 처리
 프로그램이 실행 될 때 다양 한 비정상적인 상태 및 "예외" 라는 오류가 발생할 수 있습니다. 이러한 메모리, 리소스 할당 오류와 파일을 찾을 수는 실패의 부족 포함 될 수 있습니다.  
@@ -101,7 +96,7 @@ ms.lasthandoff: 12/21/2017
 |-|-|  
 |[AfxAbort](#afxabort)|호출 시 오류가 응용 프로그램을 종료 하 발생 합니다.|  
   
-##  <a name="try"></a>시도  
+##  <a name="try"></a>  시도  
  설정 된 **시도** 블록입니다.  
   
 ```   
@@ -113,13 +108,13 @@ TRY
   
  자세한 내용은 문서 참조 [예외](../../mfc/exception-handling-in-mfc.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [CATCH](#catch)합니다.  
 
 ### <a name="requirements"></a>요구 사항
 헤더: afx.h
 
-##  <a name="catch"></a>CATCH  
+##  <a name="catch"></a>  CATCH  
  이전에 throw 되는 첫 번째 예외 형식을 catch 하는 코드 블록을 정의 **시도** 블록입니다.  
   
 ```   
@@ -146,10 +141,10 @@ CATCH(exception_class, exception_object_pointer_name)
   
  예외에 대 한 자세한 내용은 및 **CATCH** 매크로 문서 참조 [예외](../../mfc/exception-handling-in-mfc.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCExceptions#26](../../mfc/codesnippet/cpp/exception-processing_1.cpp)]  
   
-##  <a name="catch_all"></a>CATCH_ALL  
+##  <a name="catch_all"></a>  CATCH_ALL  
  정의 따르면 이전에 throw 되는 모든 예외 형식을 catch 하는 코드 블록이 **시도** 블록입니다.  
   
 ```   
@@ -168,13 +163,13 @@ CATCH_ALL(exception_object_pointer_name)
   
  예외에 대 한 자세한 내용은 문서 참조 [예외](../../mfc/exception-handling-in-mfc.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [cfile:: Abort](../../mfc/reference/cfile-class.md#abort)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afx.h  
 
-##  <a name="and_catch"></a>AND_CATCH  
+##  <a name="and_catch"></a>  AND_CATCH  
  앞에서 발생 하는 추가 예외 형식을 catch 하기 위한 코드 블록을 정의 **시도** 블록입니다.  
   
 ```   
@@ -191,17 +186,17 @@ AND_CATCH(exception_class, exception_object_pointer_name)
 ### <a name="remarks"></a>설명  
  사용 하 여는 **CATCH** 매크로를 하나의 예외 형식을 catch 하면 `AND_CATCH` 각 후속 형식을 catch 하는 매크로입니다. 종료는 **시도** 블록와 함께 `END_CATCH` 매크로입니다.  
   
- 예외 처리 코드는 필요한 경우 예외 개체를 확인하여 예외의 특정 원인에 대한 추가 정보를 가져올 수 있습니다. 호출 된 `THROW_LAST` 내에서 매크로 `AND_CATCH` 다음 외부 예외 프레임으로 처리 하는 shift를 차단 합니다. `AND_CATCH`앞의 끝을 표시 **CATCH** 또는 `AND_CATCH` 블록입니다.  
+ 예외 처리 코드는 필요한 경우 예외 개체를 확인하여 예외의 특정 원인에 대한 추가 정보를 가져올 수 있습니다. 호출 된 `THROW_LAST` 내에서 매크로 `AND_CATCH` 다음 외부 예외 프레임으로 처리 하는 shift를 차단 합니다. `AND_CATCH` 앞의 끝을 표시 **CATCH** 또는 `AND_CATCH` 블록입니다.  
   
 > [!NOTE]
 >  `AND_CATCH` 블록 (중괄호로 구분)을 c + + 범위로 정의 됩니다. 이 범위에서 변수를 선언 하는 경우 해당 범위 내 에서만 액세스할 수 있는지를 기억 합니다. 이 적용 됩니다.는 *exception_object_pointer_name* 변수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [CATCH](#catch)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afx.h  
-##  <a name="and_catch_all"></a>AND_CATCH_ALL  
+##  <a name="and_catch_all"></a>  AND_CATCH_ALL  
  앞에서 발생 하는 추가 예외 형식을 catch 하기 위한 코드 블록을 정의 **시도** 블록입니다.  
   
 ```   
@@ -215,7 +210,7 @@ AND_CATCH_ALL(exception_object_pointer_name)
 ### <a name="remarks"></a>설명  
  사용 하 여는 **CATCH** 매크로를 하나의 예외 형식을 catch 하면 `AND_CATCH_ALL` 매크로를 다른 모든 후속 형식을 catch 합니다. 사용 하는 경우 `AND_CATCH_ALL`, 최종의 **시도** 블록와 함께 `END_CATCH_ALL` 매크로입니다.  
   
- 예외 처리 코드는 필요한 경우 예외 개체를 확인하여 예외의 특정 원인에 대한 추가 정보를 가져올 수 있습니다. 호출 된 `THROW_LAST` 내에서 매크로 `AND_CATCH_ALL` 다음 외부 예외 프레임으로 처리 하는 shift를 차단 합니다. `AND_CATCH_ALL`앞의 끝을 표시 **CATCH** 또는 `AND_CATCH_ALL` 블록입니다.  
+ 예외 처리 코드는 필요한 경우 예외 개체를 확인하여 예외의 특정 원인에 대한 추가 정보를 가져올 수 있습니다. 호출 된 `THROW_LAST` 내에서 매크로 `AND_CATCH_ALL` 다음 외부 예외 프레임으로 처리 하는 shift를 차단 합니다. `AND_CATCH_ALL` 앞의 끝을 표시 **CATCH** 또는 `AND_CATCH_ALL` 블록입니다.  
   
 > [!NOTE]
 >  `AND_CATCH_ALL` 블록 (중괄호로 구분)을 c + + 범위로 정의 됩니다. 이 범위에서 변수를 선언 하는 경우 해당 범위 내 에서만 액세스할 수 있는지를 기억 합니다.  
@@ -223,7 +218,7 @@ AND_CATCH_ALL(exception_object_pointer_name)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afx.h  
   
-##  <a name="end_catch"></a>END_CATCH  
+##  <a name="end_catch"></a>  END_CATCH  
  마지막의 끝을 표시 **CATCH** 또는 `AND_CATCH` 블록입니다.  
   
 ```   
@@ -236,7 +231,7 @@ END_CATCH
 ### <a name="requirements"></a>요구 사항  
   **헤더** afx.h  
   
-##  <a name="end_catch_all"></a>END_CATCH_ALL  
+##  <a name="end_catch_all"></a>  END_CATCH_ALL  
  마지막의 끝을 표시 `CATCH_ALL` 또는 `AND_CATCH_ALL` 블록입니다.  
   
 ```   
@@ -246,7 +241,7 @@ END_CATCH_ALL
 ### <a name="requirements"></a>요구 사항  
   **헤더** afx.h  
   
-##  <a name="throw"></a>THROW (MFC)  
+##  <a name="throw"></a>  THROW (MFC)  
  지정된 된 예외를 throw합니다.  
   
 ```   
@@ -265,7 +260,7 @@ THROW(exception_object_pointer)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afx.h  
   
-##  <a name="throw_last"></a>THROW_LAST  
+##  <a name="throw_last"></a>  THROW_LAST  
  다음 예외를 다시 throw 외부 **CATCH** 블록입니다.  
   
 ```   
@@ -277,13 +272,13 @@ THROW_LAST()
   
  자세한 내용은 문서 참조 [예외](../../mfc/exception-handling-in-mfc.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [cfile:: Abort](../../mfc/reference/cfile-class.md#abort)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afx.h  
   
-##  <a name="afxthrowarchiveexception"></a>AfxThrowArchiveException  
+##  <a name="afxthrowarchiveexception"></a>  AfxThrowArchiveException  
  아카이브 예외를 throw합니다.  
   
 ```   
@@ -300,7 +295,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 ### <a name="requirements"></a>요구 사항  
   **헤더** afx.h  
   
-##  <a name="afxthrowfileexception"></a>AfxThrowFileException  
+##  <a name="afxthrowfileexception"></a>  AfxThrowFileException  
  파일 예외를 throw합니다.  
   
 ```   
@@ -326,7 +321,7 @@ void AfxThrowFileException(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afx.h  
 
-## <a name="afxthrowinvalidargexception"></a>AfxThrowInvalidArgException
+## <a name="afxthrowinvalidargexception"></a>  AfxThrowInvalidArgException
 잘못 된 인수 예외를 throw합니다.  
    
 ### <a name="syntax"></a>구문    
@@ -346,7 +341,7 @@ void AfxThrowInvalidArgException( );
  [THROW](#throw)
   
   
-##  <a name="afxthrowmemoryexception"></a>AfxThrowMemoryException  
+##  <a name="afxthrowmemoryexception"></a>  AfxThrowMemoryException  
  메모리 예외가 throw 됩니다.  
   
 ```   
@@ -359,7 +354,7 @@ void AfxThrowMemoryException();
 ### <a name="requirements"></a>요구 사항  
   **헤더** afx.h  
   
-##  <a name="afxthrownotsupportedexception"></a>AfxThrowNotSupportedException  
+##  <a name="afxthrownotsupportedexception"></a>  AfxThrowNotSupportedException  
  지원 되지 않는 기능을 요청한 결과인 예외를 throw 합니다.  
   
 ```  
@@ -369,7 +364,7 @@ void AfxThrowNotSupportedException();
 ### <a name="requirements"></a>요구 사항  
   **헤더** afx.h  
   
-##  <a name="afxthrowresourceexception"></a>AfxThrowResourceException  
+##  <a name="afxthrowresourceexception"></a>  AfxThrowResourceException  
  리소스 예외를 throw합니다.  
   
 ```   
@@ -382,7 +377,7 @@ void  AfxThrowResourceException();
 ### <a name="requirements"></a>요구 사항  
   **헤더** afx.h  
   
-##  <a name="afxthrowuserexception"></a>AfxThrowUserException  
+##  <a name="afxthrowuserexception"></a>  AfxThrowUserException  
  최종 사용자 작업을 중지 하도록 예외가 throw 됩니다.  
   
 ```   
@@ -395,7 +390,7 @@ void AfxThrowUserException();
 ### <a name="requirements"></a>요구 사항  
   **헤더** afx.h  
   
-##  <a name="afxthrowoledispatchexception"></a>AfxThrowOleDispatchException  
+##  <a name="afxthrowoledispatchexception"></a>  AfxThrowOleDispatchException  
  이 함수를 사용 하 여 OLE 자동화 함수 내에서 예외를 throw 합니다.  
   
 ```   
@@ -426,13 +421,13 @@ void AFXAPI AfxThrowOleDispatchException(
 ### <a name="remarks"></a>설명  
  (Microsoft Visual Basic 또는 다른 OLE 자동화 클라이언트 응용 프로그램) 구동 응용 프로그램에서이 함수에 제공 된 정보를 표시할 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCExceptions#25](../../mfc/codesnippet/cpp/exception-processing_2.cpp)]  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afx.h  
   
-##  <a name="afxthrowoleexception"></a>AfxThrowOleException  
+##  <a name="afxthrowoleexception"></a>  AfxThrowOleException  
  형식의 개체를 만듭니다. `COleException` 예외를 throw 합니다.  
   
 ``` 
@@ -453,7 +448,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdao.h  
   
-##  <a name="afxthrowdaoexception"></a>AfxThrowDaoException  
+##  <a name="afxthrowdaoexception"></a>  AfxThrowDaoException  
  형식의 예외를 throw 하려면이 함수를 호출 [CDaoException](../../mfc/reference/cdaoexception-class.md) 사용자 고유의 코드에서.  
   
 ```   
@@ -477,7 +472,7 @@ void AFXAPI AfxThrowDaoException(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdb.h  
   
-##  <a name="afxthrowdbexception"></a>AfxThrowDBException  
+##  <a name="afxthrowdbexception"></a>  AfxThrowDBException  
  형식의 예외를 throw 하려면이 함수를 호출 `CDBException` 사용자 고유의 코드에서.  
   
 ```  
@@ -505,7 +500,7 @@ void AfxThrowDBException(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afx.h  
   
-##  <a name="afxabort"></a>AfxAbort  
+##  <a name="afxabort"></a>  AfxAbort  
  MFC에서 제공 하는 기본 종료 함수  
   
 ```   
@@ -513,9 +508,9 @@ void  AfxAbort();
 ```  
   
 ### <a name="remarks"></a>설명  
- `AfxAbort`내부적으로 호출 MFC 멤버 함수에 의해 확인할 수 없는 예외가 처리할 수 없는 등의 심각한 오류가 있을 때. 호출할 수 있습니다 `AfxAbort` 복구할 수 없는 치명적인 오류가 발생 하는 경우에 드문 경우에서입니다.  
+ `AfxAbort` 내부적으로 호출 MFC 멤버 함수에 의해 확인할 수 없는 예외가 처리할 수 없는 등의 심각한 오류가 있을 때. 호출할 수 있습니다 `AfxAbort` 복구할 수 없는 치명적인 오류가 발생 하는 경우에 드문 경우에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [CATCH](#catch)합니다.  
 
 ### <a name="requirements"></a>요구 사항  

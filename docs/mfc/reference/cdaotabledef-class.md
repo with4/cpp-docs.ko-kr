@@ -1,12 +1,9 @@
 ---
-title: "CDaoTableDef 클래스 | Microsoft Docs"
-ms.custom: 
+title: CDaoTableDef 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoTableDef
@@ -81,17 +78,15 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDAOTableDef
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b140d61689672f9d27b8078ad7d2eab732c1582
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ff62b77e6bdec6b796750d27357d12667eb16386
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef 클래스
 기본 테이블 또는 연결된 테이블의 저장된 정의를 나타냅니다.  
@@ -199,7 +194,7 @@ class CDaoTableDef : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdao.h  
   
-##  <a name="append"></a>CDaoTableDef::Append  
+##  <a name="append"></a>  CDaoTableDef::Append  
  이 함수를 호출한 후 호출 [만들기](#create) 데이터베이스의 테이블 정의 저장 하려면 새 테이블 정의 개체를 만듭니다.  
   
 ```  
@@ -214,7 +209,7 @@ virtual void Append();
   
  관련된 정보에 대 한 DAO 도움말의 "추가 방법" 항목을 참조 합니다.  
   
-##  <a name="canupdate"></a>CDaoTableDef::CanUpdate  
+##  <a name="canupdate"></a>  CDaoTableDef::CanUpdate  
  확인 하려면이 함수를 호출 하는지 여부를 내부 테이블의 정의 `CDaoTableDef` 개체를 변경할 수 있습니다.  
   
 ```  
@@ -229,7 +224,7 @@ BOOL CanUpdate();
   
  관련된 정보에 대 한 DAO 도움말의 "업데이트할 수 있는 Property" 항목을 참조 합니다.  
   
-##  <a name="cdaotabledef"></a>CDaoTableDef::CDaoTableDef  
+##  <a name="cdaotabledef"></a>  CDaoTableDef::CDaoTableDef  
  생성 된 **CDaoTableDef** 개체입니다.  
   
 ```  
@@ -243,7 +238,7 @@ CDaoTableDef(CDaoDatabase* pDatabase);
 ### <a name="remarks"></a>설명  
  호출 해야 개체를 생성 한 후의 [만들기](#create) 또는 [열려](#open) 멤버 함수입니다. 호출 해야 개체를 마치면 해당 [닫기](#close) 멤버 함수를 파괴는 `CDaoTableDef` 개체입니다.  
   
-##  <a name="close"></a>CDaoTableDef::Close  
+##  <a name="close"></a>  CDaoTableDef::Close  
  닫고 테이블 정의 개체를 해제 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -257,7 +252,7 @@ virtual void Close();
   
  관련된 정보에 대 한 "Close 메서드" DAO 도움말의 항목을 참조 합니다.  
   
-##  <a name="create"></a>CDaoTableDef::Create  
+##  <a name="create"></a>  CDaoTableDef::Create  
  이 저장 된 새 테이블을 만드는 함수를 호출 합니다.  
   
 ```  
@@ -293,7 +288,7 @@ virtual void Create(
   
  관련된 정보에 대 한 DAO 도움말의 "CreateTableDef Method" 항목을 참조 합니다.  
   
-##  <a name="createfield"></a>CDaoTableDef::CreateField  
+##  <a name="createfield"></a>  CDaoTableDef::CreateField  
  테이블에 필드를 추가 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -363,7 +358,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
   
  관련된 정보에 대 한 DAO 도움말의 "CreateField 메서드" 항목을 참조 합니다.  
   
-##  <a name="createindex"></a>CDaoTableDef::CreateIndex  
+##  <a name="createindex"></a>  CDaoTableDef::CreateIndex  
  테이블에 인덱스를 추가 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -383,13 +378,13 @@ void CreateIndex(CDaoIndexInfo& indexinfo);
   
 - **m_strName** 이름을 제공 해야 합니다.  
   
-- `m_pFieldInfos`배열을 가리켜야 `CDaoIndexFieldInfo` 구조입니다.  
+- `m_pFieldInfos` 배열을 가리켜야 `CDaoIndexFieldInfo` 구조입니다.  
   
-- `m_nFields`배열에 있는 필드 수를 지정 해야 `CDaoFieldInfo` 구조입니다.  
+- `m_nFields` 배열에 있는 필드 수를 지정 해야 `CDaoFieldInfo` 구조입니다.  
   
  멤버 남아 있는 경우 무시로 설정 됩니다 **FALSE**합니다. 또한는 **m_lDistinctCount** 멤버의 인덱스를 만드는 동안 무시 됩니다.  
   
-##  <a name="deletefield"></a>CDaoTableDef::DeleteField  
+##  <a name="deletefield"></a>  CDaoTableDef::DeleteField  
  필드를 제거 하 고 액세스할 수 없도록 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -409,7 +404,7 @@ void DeleteField(int nIndex);
   
  관련된 정보에 대 한 "Delete 메서드" DAO 도움말의 항목을 참조 합니다.  
   
-##  <a name="deleteindex"></a>CDaoTableDef::DeleteIndex  
+##  <a name="deleteindex"></a>  CDaoTableDef::DeleteIndex  
  원본 테이블에 인덱스를 삭제 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -429,7 +424,7 @@ void DeleteIndex(int nIndex);
   
  관련된 정보에 대 한 "Delete 메서드" DAO 도움말의 항목을 참조 합니다.  
   
-##  <a name="getattributes"></a>CDaoTableDef::GetAttributes  
+##  <a name="getattributes"></a>  CDaoTableDef::GetAttributes  
  에 대 한는 `CDaoTableDef` 개체를 반환 값으로 표시 된 테이블의 특성을 지정는 `CDaoTableDef` 개체와 이러한 상수 중 합계만 될 수 있습니다.  
   
 ```  
@@ -456,7 +451,7 @@ long GetAttributes();
   
  관련된 정보에 대 한 DAO 도움말의 "특성 Property" 항목을 참조 합니다.  
   
-##  <a name="getconnect"></a>CDaoTableDef::GetConnect  
+##  <a name="getconnect"></a>  CDaoTableDef::GetConnect  
  데이터 원본에 대 한 연결 문자열을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -479,7 +474,7 @@ CString GetConnect();
   
  관련된 정보에 대 한 DAO 도움말의 "연결 Property" 항목을 참조 합니다.  
   
-##  <a name="getdatecreated"></a>CDaoTableDef::GetDateCreated  
+##  <a name="getdatecreated"></a>  CDaoTableDef::GetDateCreated  
  내부 테이블에 날짜와 시간을 확인 하려면이 함수를 호출는 `CDaoTableDef` 개체가 생성 되었습니다.  
   
 ```  
@@ -494,7 +489,7 @@ COleDateTime GetDateCreated();
   
  관련된 내용은 DAO 도움말의 "DateCreated LastUpdated 속성" 항목을 참조 합니다.  
   
-##  <a name="getdatelastupdated"></a>CDaoTableDef::GetDateLastUpdated  
+##  <a name="getdatelastupdated"></a>  CDaoTableDef::GetDateLastUpdated  
  내부 테이블에 날짜와 시간을 확인 하려면이 함수를 호출는 **CDaoTableDef** 개체가 마지막으로 업데이트 합니다.  
   
 ```  
@@ -509,7 +504,7 @@ COleDateTime GetDateLastUpdated();
   
  관련된 내용은 DAO 도움말의 "DateCreated LastUpdated 속성" 항목을 참조 합니다.  
   
-##  <a name="getfieldcount"></a>CDaoTableDef::GetFieldCount  
+##  <a name="getfieldcount"></a>  CDaoTableDef::GetFieldCount  
  테이블에 정의 된 필드 수를 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -524,7 +519,7 @@ short GetFieldCount();
   
  관련된 정보에 대 한 항목 DAO 도움말의 "Count 속성"을 참조 합니다.  
   
-##  <a name="getfieldinfo"></a>CDaoTableDef::GetFieldInfo  
+##  <a name="getfieldinfo"></a>  CDaoTableDef::GetFieldInfo  
  다양 한 종류의 테이블 정의에 정의 된 필드에 대 한 정보를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -550,11 +545,11 @@ void GetFieldInfo(
  `dwInfoOptions`  
  검색할 필드에 대 한 정보를 지정 하는 옵션입니다. 사용 가능한 옵션은 함께 반환 하는 함수를 입히기 무엇 여기 나열 됩니다.  
   
-- `AFX_DAO_PRIMARY_INFO`(기본값) 특성 이름, 유형, 크기입니다. 이 옵션을 사용 하 여 빠른 성능을 합니다.  
+- `AFX_DAO_PRIMARY_INFO` (기본값) 특성 이름, 유형, 크기입니다. 이 옵션을 사용 하 여 빠른 성능을 합니다.  
   
-- `AFX_DAO_SECONDARY_INFO`기본 정보, 플러스: 서 수 위치에 필요한 길이, 데이터 정렬 순서, 외부 이름, 원본 필드, 원본 테이블 0 허용  
+- `AFX_DAO_SECONDARY_INFO` 기본 정보, 플러스: 서 수 위치에 필요한 길이, 데이터 정렬 순서, 외부 이름, 원본 필드, 원본 테이블 0 허용  
   
-- `AFX_DAO_ALL_INFO`기본 및 보조 정보 플러스: Default Value 유효성 검사 규칙을 유효성 검사 텍스트  
+- `AFX_DAO_ALL_INFO` 기본 및 보조 정보 플러스: Default Value 유효성 검사 규칙을 유효성 검사 텍스트  
   
  `lpszName`  
  이름별으로 조회에 대 한 필드 개체의 이름에 대 한 포인터입니다. 이름은 최대 64 자 필드의 이름을 고유 하 게 지정 하는 문자열입니다.  
@@ -566,7 +561,7 @@ void GetFieldInfo(
   
  관련된 정보에 대 한 DAO 도움말의 "특성 Property" 항목을 참조 합니다.  
   
-##  <a name="getindexcount"></a>CDaoTableDef::GetIndexCount  
+##  <a name="getindexcount"></a>  CDaoTableDef::GetIndexCount  
  이 멤버 함수는 테이블에 대 한 인덱스 번호를 가져올를 호출 합니다.  
   
 ```  
@@ -581,7 +576,7 @@ short GetIndexCount();
   
  관련된 정보에 대 한 항목 DAO 도움말의 "Count 속성"을 참조 합니다.  
   
-##  <a name="getindexinfo"></a>CDaoTableDef::GetIndexInfo  
+##  <a name="getindexinfo"></a>  CDaoTableDef::GetIndexInfo  
  다양 한 종류의 테이블 정의에 정의 된 인덱스에 대 한 정보를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -607,11 +602,11 @@ void GetIndexInfo(
  `dwInfoOptions`  
  인덱스를 검색 하는 방법에 대 한 정보를 지정 하는 옵션입니다. 사용 가능한 옵션은 함께 반환 하는 함수를 입히기 무엇 여기 나열 됩니다.  
   
-- `AFX_DAO_PRIMARY_INFO`필드 이름, 필드 정보입니다. 이 옵션을 사용 하 여 빠른 성능을 합니다.  
+- `AFX_DAO_PRIMARY_INFO` 필드 이름, 필드 정보입니다. 이 옵션을 사용 하 여 빠른 성능을 합니다.  
   
-- `AFX_DAO_SECONDARY_INFO`기본 정보, 플러스: 주, Unique, 클러스터형, 무시 Null, 필수, 외부  
+- `AFX_DAO_SECONDARY_INFO` 기본 정보, 플러스: 주, Unique, 클러스터형, 무시 Null, 필수, 외부  
   
-- `AFX_DAO_ALL_INFO`기본 및 보조 정보 플러스: 고유 카운트  
+- `AFX_DAO_ALL_INFO` 기본 및 보조 정보 플러스: 고유 카운트  
   
  `lpszName`  
  이름별으로 조회에 대 한 인덱스 개체의 이름에 대 한 포인터입니다.  
@@ -623,7 +618,7 @@ void GetIndexInfo(
   
  관련된 정보에 대 한 DAO 도움말의 "특성 Property" 항목을 참조 합니다.  
   
-##  <a name="getname"></a>CDaoTableDef::GetName  
+##  <a name="getname"></a>  CDaoTableDef::GetName  
  기본 테이블의 사용자 정의 이름을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -638,7 +633,7 @@ CString GetName();
   
  관련된 정보에 대 한 항목 DAO 도움말의 "Name 속성"을 참조 합니다.  
   
-##  <a name="getrecordcount"></a>CDaoTableDef::GetRecordCount  
+##  <a name="getrecordcount"></a>  CDaoTableDef::GetRecordCount  
  호출에 있는 레코드 수를 확인 하려면이 함수는 `CDaoTableDef` 개체입니다.  
   
 ```  
@@ -653,7 +648,7 @@ long GetRecordCount();
   
  관련된 정보에 대 한 DAO 도움말의 "RecordCount Property" 항목을 참조 합니다.  
   
-##  <a name="getsourcetablename"></a>CDaoTableDef::GetSourceTableName  
+##  <a name="getsourcetablename"></a>  CDaoTableDef::GetSourceTableName  
  원본 데이터베이스에 연결된 된 테이블의 이름을 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -668,7 +663,7 @@ CString GetSourceTableName();
   
  관련된 정보에 대 한 DAO 도움말의 "속성은" 항목을 참조 합니다.  
   
-##  <a name="getvalidationrule"></a>CDaoTableDef::GetValidationRule  
+##  <a name="getvalidationrule"></a>  CDaoTableDef::GetValidationRule  
  테이블 정의 대 한 유효성 검사 규칙을 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -683,7 +678,7 @@ CString GetValidationRule();
   
  관련된 정보에 대 한 DAO 도움말의 "ValidationRule Property" 항목을 참조 합니다.  
   
-##  <a name="getvalidationtext"></a>CDaoTableDef::GetValidationText  
+##  <a name="getvalidationtext"></a>  CDaoTableDef::GetValidationText  
  유효성 검사 규칙을 일치 하지 않는 데이터를 입력 하는 경우 표시할 문자열을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -698,7 +693,7 @@ CString GetValidationText();
   
  관련된 정보에 대 한 DAO 도움말의 "유효성 검사 텍스트 Property" 항목을 참조 합니다.  
   
-##  <a name="isopen"></a>CDaoTableDef::IsOpen  
+##  <a name="isopen"></a>  CDaoTableDef::IsOpen  
  확인 하려면이 함수를 호출 여부는 `CDaoTableDef` 개체가 현재 열려 있습니다.  
   
 ```  
@@ -710,18 +705,18 @@ BOOL IsOpen() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="m_pdatabase"></a>CDaoTableDef::m_pDatabase  
+##  <a name="m_pdatabase"></a>  CDaoTableDef::m_pDatabase  
  에 대 한 포인터는 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) 이 테이블에 대 한 개체입니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="m_pdaotabledef"></a>CDaoTableDef::m_pDAOTableDef  
+##  <a name="m_pdaotabledef"></a>  CDaoTableDef::m_pDAOTableDef  
  DAO tabledef 개체 내부에 대 한 OLE 인터페이스에 대 한 포인터는 `CDaoTableDef` 개체입니다.  
   
 ### <a name="remarks"></a>설명  
  DAO 인터페이스를 직접 액세스 해야 할 경우이 포인터를 사용 합니다.  
   
-##  <a name="open"></a>CDaoTableDef::Open  
+##  <a name="open"></a>  CDaoTableDef::Open  
  데이터베이스에 이전에 저장 된 테이블 정의 열려면이 멤버 함수 호출의 테이블 정의 컬렉션입니다.  
   
 ```  
@@ -734,7 +729,7 @@ virtual void Open(LPCTSTR lpszName);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="refreshlink"></a>CDaoTableDef::RefreshLink  
+##  <a name="refreshlink"></a>  CDaoTableDef::RefreshLink  
  연결된 된 테이블에 대 한 연결 정보를 업데이트 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -748,7 +743,7 @@ void RefreshLink();
   
  관련된 정보에 대 한 DAO 도움말의 "RefreshLink Method" 항목을 참조 합니다.  
   
-##  <a name="setattributes"></a>CDaoTableDef::SetAttributes  
+##  <a name="setattributes"></a>  CDaoTableDef::SetAttributes  
  하나 이상의 특성을 나타내는 값을 설정 하는 `CDaoTableDef` 개체입니다.  
   
 ```  
@@ -775,7 +770,7 @@ void SetAttributes(long lAttributes);
   
  관련된 정보에 대 한 DAO 도움말의 "특성 Property" 항목을 참조 합니다.  
   
-##  <a name="setconnect"></a>CDaoTableDef::SetConnect  
+##  <a name="setconnect"></a>  CDaoTableDef::SetConnect  
  에 대 한는 `CDaoTableDef` 있는 문자열 개체가 추가 된 테이블을 나타내는 개체 (데이터베이스 형식 지정자 및 데이터베이스에 대 한 경로) 하나 또는 두 개의 부분으로 구성 됩니다.  
   
 ```  
@@ -811,7 +806,7 @@ void SetConnect(LPCTSTR lpszConnect);
 |HTML 내보내기|"HTML 내보내기;"|" `drive`:\\\ *경로*"|  
 |텍스트|"Text";|"드라이브:\\\path"|  
 |ODBC|"ODBC; 데이터베이스 = `database`; UID = *사용자*; PWD = *암호*; DSN = *datasourcename;* LOGINTIMEOUT = *; 초여야*" (모든 서버에 대 한 전체 연결 문자열 아닐 수 있습니다;는 단지 예 이 매개 변수 사이 공백이 하에 매우 중요 합니다.)|없음|  
-|Exchange|"Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE = {0 &#124; 1을 (를);]<br /><br /> [프로필 = *프로필*;]<br /><br /> [PWD = *암호*;]<br /><br /> [데이터베이스 = `database`;] "|*"드라이브*:\\\ *경로*\\\ *filename*합니다. MDB "|  
+|Exchange|"Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE = {0 &AMP;#124; 1을 (를);]<br /><br /> [프로필 = *프로필*;]<br /><br /> [PWD = *암호*;]<br /><br /> [데이터베이스 = `database`;] "|*"드라이브*:\\\ *경로*\\\ *filename*합니다. MDB "|  
   
 > [!NOTE]
 >  DAO 3.5부터 더 이상 Btrieve 사용할 수 없습니다.  
@@ -824,7 +819,7 @@ void SetConnect(LPCTSTR lpszConnect);
   
  관련된 정보에 대 한 DAO 도움말의 "연결 Property" 항목을 참조 합니다.  
   
-##  <a name="setname"></a>CDaoTableDef::SetName  
+##  <a name="setname"></a>  CDaoTableDef::SetName  
  테이블에 대 한 사용자 정의 이름을 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -840,7 +835,7 @@ void SetName(LPCTSTR lpszName);
   
  관련된 정보에 대 한 항목 DAO 도움말의 "Name 속성"을 참조 합니다.  
   
-##  <a name="setsourcetablename"></a>CDaoTableDef::SetSourceTableName  
+##  <a name="setsourcetablename"></a>  CDaoTableDef::SetSourceTableName  
  에 추가 된 테이블의 이름 또는 기본 테이블의 이름을 지정 하려면이 함수를 호출는 `CDaoTableDef` 데이터의 원본 소스에 있는 개체를 기초로 합니다.  
   
 ```  
@@ -856,7 +851,7 @@ void SetSourceTableName(LPCTSTR lpszSrcTableName);
   
  관련된 정보에 대 한 DAO 도움말의 "속성은" 항목을 참조 합니다.  
   
-##  <a name="setvalidationrule"></a>CDaoTableDef::SetValidationRule  
+##  <a name="setvalidationrule"></a>  CDaoTableDef::SetValidationRule  
  테이블 정의 대 한 유효성 검사 규칙을 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -878,7 +873,7 @@ void SetValidationRule(LPCTSTR lpszValidationRule);
   
  관련된 정보에 대 한 DAO 도움말의 "ValidationRule Property" 항목을 참조 합니다.  
   
-##  <a name="setvalidationtext"></a>CDaoTableDef::SetValidationText  
+##  <a name="setvalidationtext"></a>  CDaoTableDef::SetValidationText  
  에 대 한 유효성 검사 규칙의 예외 텍스트를 설정 하려면이 함수를 호출는 `CDaoTableDef` Microsoft Jet 데이터베이스 엔진에서 지 원하는 기본 테이블에 있는 개체입니다.  
   
 ```  

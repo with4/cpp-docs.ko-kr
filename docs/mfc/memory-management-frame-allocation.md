@@ -1,13 +1,10 @@
 ---
-title: "메모리 관리: 프레임 할당 | Microsoft Docs"
-ms.custom: 
+title: '메모리 관리: 프레임 할당 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03a8e5f81e55398ffba30479ecfafc42726e9519
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f67149e5835ee6f2b8922b29ee92872b24d0ec4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="memory-management-frame-allocation"></a>메모리 관리: 프레임 할당
 프레임 할당 설정 된 "스택 프레임"에서 해당 이름을 가진 때마다 함수를 호출 합니다. 스택 프레임은 일시적으로 인수를 보유 하는 정의 된 모든 변수 뿐만 아니라 함수에 함수에 로컬 메모리 영역입니다. 프레임 변수가 컴파일러에 대 한 공간을 자동으로 할당 하기 때문에 "자동" 변수 라고도 합니다.  

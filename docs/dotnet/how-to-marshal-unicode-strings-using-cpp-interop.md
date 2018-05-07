@@ -1,13 +1,10 @@
 ---
-title: "방법: c + + Interop를 사용 하 여 유니코드 문자열 마샬링 | Microsoft Docs"
-ms.custom: 
+title: '방법: c + + Interop를 사용 하 여 유니코드 문자열 마샬링 | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9226eaf035cee7614f2d072a5e2493c067012c2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e5290958a55c61dd55adac0f182af7163896d694
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-marshal-unicode-strings-using-c-interop"></a>방법: C++ Interop를 사용하여 유니코드 문자열 마샬링
 이 항목에서는 Visual c + + 상호 운용성의 한 측면을 보여 줍니다. 자세한 내용은 참조 [c + + Interop를 사용 하 여 (암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)합니다.  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [방법: C++ Interop를 사용하여 COM 문자열 마샬링](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  유니코드 문자열을 관리 되는 관리 되지 않는 함수를 전달 하려면 PtrToStringChars 함수 (Vcclr.h에서 선언 됨)를 사용할 수 있습니다에 관리 되는 문자열이 저장 되는 메모리에 액세스 합니다. 이 주소는 네이티브 함수에 전달 되므로, 되므로 사용 하는 메모리를 고정 [pin_ptr (C + + /cli CLI)](../windows/pin-ptr-cpp-cli.md) 문자열 데이터를 재배치 되 고 않으려면 가비지 수집 주기 발생 해야 하는 동안는 관리 되지 않는 함수를 실행합니다.  
   
 ```  
@@ -73,7 +68,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 관리 되는 함수에 의해 관리 되지 않는 함수 호출에서 유니코드 문자열에 액세스 하는 데 필요한 데이터 마샬링 네이티브 유니코드 문자열을 수신한 경우에 관리 되는 함수를 사용 하 여 관리 되는 문자열을 변환의 <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> 메서드.  
   
 ```  

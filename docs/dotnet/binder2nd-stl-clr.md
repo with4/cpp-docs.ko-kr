@@ -1,12 +1,9 @@
 ---
 title: binder2nd (STL/CLR) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::binder2nd
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - binder2nd function [STL/CLR]
 ms.assetid: f4be8722-1778-4cb9-9ec7-ad1443f6899f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b22c435952602afe96a7f310b931bda8a5bbb13c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d203463213f970d70758ef69ab398f12a52c422f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="binder2nd-stlclr"></a>binder2nd(STL/CLR)
 인수가 한 개인 함수를 설명 하는 템플릿 클래스는를 호출할 때는 제공 된 첫 번째 인수 및 해당 저장 된 두 번째 인수를 사용 하 여 호출 하는 저장된 인수가 두 개인 함수를 반환 합니다. 사용 하면 해당 저장된 함수 측면에서 함수 개체를 지정 합니다.  
@@ -82,7 +77,7 @@ public:
   
  함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_binder2nd.cpp   

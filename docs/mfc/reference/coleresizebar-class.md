@@ -1,12 +1,9 @@
 ---
-title: "COleResizeBar 클래스 | Microsoft Docs"
-ms.custom: 
+title: COleResizeBar 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleResizeBar
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - COleResizeBar [MFC], COleResizeBar
 - COleResizeBar [MFC], Create
 ms.assetid: 56a708d9-28c5-4eb0-9404-77b688d91c63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cc0b9f85392a69191ee3c948985c61bd2d1f494
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cf000b45e2bd24ec40e1ae15001c3df46d1b12c9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleresizebar-class"></a>COleResizeBar 클래스
 내부 OLE 항목의 크기 변경을 지원하는 컨트롤 막대의 한 종류입니다.  
@@ -55,9 +50,9 @@ class COleResizeBar : public CControlBar
 |[COleResizeBar::Create](#create)|및 Windows 자식 창을 초기화 만들어지고 연결 하는 `COleResizeBar` 개체입니다.|  
   
 ## <a name="remarks"></a>설명  
- `COleResizeBar`로 표시 된 개체는 [CRectTracker](../../mfc/reference/crecttracker-class.md) 빗금된 테두리가 있는 및 외부 크기 조정 핸들입니다.  
+ `COleResizeBar` 로 표시 된 개체는 [CRectTracker](../../mfc/reference/crecttracker-class.md) 빗금된 테두리가 있는 및 외부 크기 조정 핸들입니다.  
   
- `COleResizeBar`개체는 프레임 창 개체에서 파생 된 일반적으로 포함 된 멤버는 [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) 클래스입니다.  
+ `COleResizeBar` 개체는 프레임 창 개체에서 파생 된 일반적으로 포함 된 멤버는 [COleIPFrameWnd](../../mfc/reference/coleipframewnd-class.md) 클래스입니다.  
   
  자세한 내용은 문서 참조 [활성화](../../mfc/activation-cpp.md)합니다.  
   
@@ -75,7 +70,7 @@ class COleResizeBar : public CControlBar
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxole.h  
   
-##  <a name="coleresizebar"></a>COleResizeBar::COleResizeBar  
+##  <a name="coleresizebar"></a>  COleResizeBar::COleResizeBar  
  `COleResizeBar` 개체를 생성합니다.  
   
 ```  
@@ -85,7 +80,7 @@ COleResizeBar();
 ### <a name="remarks"></a>설명  
  호출 **만들기** 크기 조정 막대 개체를 만듭니다.  
   
-##  <a name="create"></a>COleResizeBar::Create  
+##  <a name="create"></a>  COleResizeBar::Create  
  자식 창을 만들고 변수와 연결 된 `COleResizeBar` 개체입니다.  
   
 ```  

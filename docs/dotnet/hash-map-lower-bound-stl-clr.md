@@ -1,12 +1,9 @@
 ---
 title: 'hash_map:: lower_bound (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_map::lower_bound
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - lower_bound member [STL/CLR]
 ms.assetid: 7c88987a-9c77-4874-8052-192a148abbf1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 81e27b23a3847c6ed6ccfc6e4b0e37c73664b9a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bfce725071cd33adcb570d73f07ec9d3e7f1eb09
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmaplowerbound-stlclr"></a>hash_map::lower_bound(STL/CLR)
 지정된 된 키와 일치 하는 범위의 시작 부분을 찾습니다.  
@@ -44,7 +39,7 @@ iterator lower_bound(key_type key);
 ## <a name="remarks"></a>설명  
  멤버 함수는 첫 번째 요소를 결정 `X` 동일한 버킷으로 해시 제어 된 시퀀스의 `key` 과 순서가 및 `key`합니다. 이러한 요소가 있는 경우 반환 [hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)`()`; 그렇지 않으면 지정 하는 반복기를 반환 `X`합니다. 지정된 된 키와 일치 하는 제어 된 시퀀스의 요소 시퀀스의 시작 부분을 현재 찾을 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_map_lower_bound.cpp   

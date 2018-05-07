@@ -1,13 +1,10 @@
 ---
-title: "레코드 집합: 레코드 집합 선택 레코드 방법 (ODBC) | Microsoft Docs"
-ms.custom: 
+title: '레코드 집합: 레코드 집합 선택 레코드 방법 (ODBC) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8664c5732c0cdf1042b6af338ea388ab29ab7863
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a9ff2f1e9946eb32356eb09fa2ee216aa636a351
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>레코드 집합: 레코드 집합의 레코드 선택 방법(ODBC)
 MFC ODBC 클래스에이 항목에 적용 됩니다.  
@@ -44,7 +39,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
  레코드 집합에서 드라이버에 SQL 문을 전송 하 여 ODBC 드라이버를 통해 데이터 원본에서 레코드를 선택 합니다. 전송 SQL 설계 하 고 레코드 집합 클래스를 열고 하는 방식에 따라 달라 집니다.  
   
-##  <a name="_core_your_options_in_selecting_records"></a>레코드 선택의 옵션  
+##  <a name="_core_your_options_in_selecting_records"></a> 레코드 선택의 옵션  
  다음 표에서 레코드를 선택 하 여 옵션을 보여 줍니다.  
   
 ### <a name="how-and-when-you-can-affect-a-recordset"></a>레코드 집합 나오는지 방식 및 시기  
@@ -59,7 +54,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
 
 | 호출 **Requery** 데이터 원본에서 최신 값으로 레코드 집합을 | 새 매개 변수, 필터 또는 정렬을 지정 합니다. 참조 [레코드 집합: 레코드 집합 (ODBC) 다시 쿼리](../../data/odbc/recordset-requerying-a-recordset-odbc.md). |  
   
-##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a>레코드 집합의 SQL 문을 생성 하는 방법  
+##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a> 레코드 집합의 SQL 문을 생성 하는 방법  
  레코드 집합 개체를 호출 하는 경우 [열려](../../mfc/reference/crecordset-class.md#open) 멤버 함수 **열려** 은 다음 요소의 일부나 전부를 사용 하 여 SQL 문을 생성:  
   
 -   **lpszSQL** 전달 된 매개 변수가 **열려**합니다. 그렇지 않은 경우 **NULL**, 사용자 지정 SQL 문자열 또는 그 일부가이 매개 변수를 지정 합니다. 프레임 워크는 문자열을 구문 분석 합니다. 문자열이 SQL 인지 **선택** 문이나 ODBC **호출** 문, 프레임 워크 레코드 집합의 SQL 문으로 문자열을 사용 합니다. 문자열 "SELECT" 또는 "{CALL"로 시작 하지 않으므로, 공급 되는 SQL을 생성 하는 프레임 워크 사용 **FROM** 절.  
@@ -85,7 +80,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
  이러한 기술 함께 사용 하 여 열려는 [테이블](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md) 기반으로 쿼리를 작성 하 고는 [조인](../../data/odbc/recordset-performing-a-join-odbc.md) 여러 테이블. 추가 사용자 지정과 호출할 수 있습니다 [미리 정의 된 쿼리](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md) (저장된 프로시저)를 테이블 열을 선택 디자인 타임에 알 수 없는 및 [바인딩할](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md) 대부분의 다른 수행할 수 있습니다 또는 레코드 집합 필드 데이터 액세스 작업입니다. 레코드 집합을 사용자 지정 하 여 수행할 수 없는 작업을 하 여 수행할 수 여전히 [ODBC API 함수 호출](../../data/odbc/odbc-calling-odbc-api-functions-directly.md) 가 있는 SQL 문을 직접 실행 하거나 [CDatabase::ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql)합니다.  
   
-##  <a name="_core_customizing_the_selection"></a>선택 사용자 지정  
+##  <a name="_core_customizing_the_selection"></a> 선택 사용자 지정  
  필터, 정렬 순서 또는 매개 변수를 제공한 것 외에도 레코드 집합의 선택 영역을 사용자 지정 하려면 다음 작업을 수행할 수 있습니다.  
   
 -   에 사용자 지정 SQL 문자열을 전달 **lpszSQL** 호출 하는 경우 [열려](../../mfc/reference/crecordset-class.md#open) 레코드 집합에 대 한 합니다. 에 전달 하는 아무 것도 **lpsqSQL** 무엇 보다 우선는 [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) 멤버 함수를 반환 합니다.  

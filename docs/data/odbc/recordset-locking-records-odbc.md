@@ -2,12 +2,9 @@
 title: '레코드 집합: 레코드 잠금 (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - ODBC recordsets [C++], locking records
 - data [C++], locking
 ms.assetid: 8fe8fcfe-b55a-41a8-9136-94a7cd1e4806
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 76d7ab2df01e485ffff70120609227b9fbae6ac5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1fcef3233e4c2035cc481128d81723dad03fb18b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-locking-records-odbc"></a>레코드 집합: 레코드 잠금(ODBC)
 MFC ODBC 클래스에이 항목에 적용 됩니다.  
@@ -46,7 +41,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
 > [!NOTE]
 >  이 항목에서 파생 된 개체에 적용 됩니다. `CRecordset` 에서 대량 행 페치 구현 되지 않았습니다. 대량 행 페치를 구현한 경우이 정보 중 일부는 적용 되지 않습니다. 예를 들어, 호출할 수 없습니다는 **편집** 및 **업데이트** 멤버 함수입니다. 대량 행 페치에 대 한 자세한 내용은 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
   
-##  <a name="_core_record.2d.locking_modes"></a>레코드 잠금 모드  
+##  <a name="_core_record.2d.locking_modes"></a> 레코드 잠금 모드  
  데이터베이스 클래스에서 제공 두 [레코드 잠금 모드](../../mfc/reference/crecordset-class.md#setlockingmode):  
   
 -   낙관적 잠금 (기본값)  
@@ -63,7 +58,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
  중에 데이터 원본에서 레코드를 잠급니다 낙관적 잠금는 **업데이트** 호출 합니다. 낙관적 잠금 다중 사용자 환경에서 사용 하는 경우 응용 프로그램 처리 하는 **업데이트** 오류 상태입니다. 호출 되는 즉시 레코드를 잠그는 비관적 잠금 **편집** 해제 하지 않는다는 것 할 때까지 호출 **업데이트** (오류를 통해 표시 됩니다는 `CDBException` 값이아니라메커니즘**FALSE** 반환한 **업데이트**). 비관적 잠금에서는 다른 사용자에 대해서는 성능이 저하 같은 레코드에 대 한 동시 액세스를 응용 프로그램의 완료 될 때까지 기다려야 할 수 있으므로 **업데이트** 프로세스입니다.  
   
-##  <a name="_core_locking_records_in_your_recordset"></a>레코드 집합의 레코드 잠금  
+##  <a name="_core_locking_records_in_your_recordset"></a> 레코드 집합의 레코드 잠금  
  레코드 집합 개체의 변경 하려는 경우 [잠금 모드](#_core_record.2d.locking_modes) 기본값에서 변경 해야를 호출 하기 전에 모드 **편집**합니다.  
   
 #### <a name="to-change-the-current-locking-mode-for-your-recordset"></a>레코드 집합에 대 한 현재 잠금 모드를 변경 하려면  

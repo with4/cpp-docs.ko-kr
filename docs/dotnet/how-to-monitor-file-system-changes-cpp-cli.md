@@ -1,13 +1,10 @@
 ---
-title: "방법: 파일 시스템 변경 사항 모니터링 (C + + /cli CLI) | Microsoft Docs"
-ms.custom: 
+title: '방법: 파일 시스템 변경 사항 모니터링 (C + + /cli CLI) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,23 +14,21 @@ helpviewer_keywords:
 - events [C++], monitoring
 - file system events [C++]
 ms.assetid: 207a3069-e63d-417e-8b56-00ab44f29c52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ba75c40b87da01052cd6511cdfd4b8b08219742d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e35f8c79267a031b2728b0a9b8b59e7d63987aa3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-monitor-file-system-changes-ccli"></a>방법: 파일 시스템 변경 사항 모니터링(C++/CLI)
 다음 코드 예제에서는 <xref:System.IO.FileSystemWatcher> 를 생성, 변경, 삭제 또는 이름이 바뀐 파일에 해당 하는 이벤트에 대 한 등록 합니다. 파일의 변경에 대 한 디렉터리를 주기적으로 폴링 대신 사용할 수 있습니다는 <xref:System.IO.FileSystemWatcher> 변경이 감지 된 경우 이벤트를 발생 시키는 클래스입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // monitor_fs.cpp  

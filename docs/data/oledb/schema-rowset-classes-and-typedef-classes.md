@@ -1,12 +1,9 @@
 ---
-title: "스키마 행 집합 클래스 및 Typedef 클래스 | Microsoft Docs"
-ms.custom: 
+title: 스키마 행 집합 클래스 및 Typedef 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - vc.templates.ole
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - schema rowsets, classes
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 54ff183caec6f5ee0d4379f31b1cdd5db24578bb
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 62b2f787f2ba70c847d51cbee5b46c26719b9fc2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>스키마 행 집합 클래스 및 Typedef 클래스
 스키마가 소유 하 고, 있거나 특정 사용자가 만든 데이터베이스 개체의 컬렉션입니다. 카탈로그 하나 이상의 스키마를 포함할 수 있으 라는 INFORMATION_SCHEMA 뷰 및 정보 스키마의 도메인을 포함 하는 스키마를 항상 포함 해야 합니다. OLE DB의 스키마 정보 미리 정의 된 스키마 행 집합을 사용 하 여 검색 됩니다와 유형, 테이블, 열, 인덱스, 뷰, 어설션 및 제약 조건, 통계, 문자 집합, 데이터 정렬 및 도메인을 포함 합니다.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 02/23/2018
 |OLE DB 스키마 행 집합|Typedef 클래스|정보 클래스|  
 |--------------------------|-------------------|----------------|  
 |[어설션](https://msdn.microsoft.com/en-us/library/ms719776.aspx)|[CAssertions](../../data/oledb/cassertions-cassertioninfo.md)|[CAssertionInfo](../../data/oledb/cassertions-cassertioninfo.md)|  
-|[CATALOGS](https://msdn.microsoft.com/en-us/library/ms721241.aspx)|[CCatalogs](../../data/oledb/ccatalogs-ccataloginfo.md)|[CCatalogInfo](../../data/oledb/ccatalogs-ccataloginfo.md)|  
+|[카탈로그](https://msdn.microsoft.com/en-us/library/ms721241.aspx)|[CCatalogs](../../data/oledb/ccatalogs-ccataloginfo.md)|[CCatalogInfo](../../data/oledb/ccatalogs-ccataloginfo.md)|  
 |[CHARACTER_SETS](https://msdn.microsoft.com/en-us/library/ms722638.aspx)|[CCharacterSets](../../data/oledb/ccharactersets-ccharactersetinfo.md)|[CCharacterSetInfo](../../data/oledb/ccharactersets-ccharactersetinfo.md)|  
 |[데이터 정렬](https://msdn.microsoft.com/en-us/library/ms715783.aspx)|[CCollations](../../data/oledb/ccollations-ccollationinfo.md)|[CCollationInfo](../../data/oledb/ccollations-ccollationinfo.md)|  
 |[COLUMN_PRIVILEGES](https://msdn.microsoft.com/en-us/library/ms715800.aspx)|[CColumnPrivileges](../../data/oledb/ccolumnprivileges-ccolumnprivilegeinfo.md)|[CColumnPrivilegeInfo](../../data/oledb/ccolumnprivileges-ccolumnprivilegeinfo.md)|  

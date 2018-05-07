@@ -1,12 +1,9 @@
 ---
-title: "설정 (STL/CLR) | Microsoft Docs"
-ms.custom: 
+title: 설정 (STL/CLR) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::set
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <set> header [STL/CLR]
 - set class [STL/CLR]
 ms.assetid: 27d3628c-741a-43a7-bef1-5085536f679e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9624f08c54629657e7f52c2c688d2083aa557a56
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d6a7ebf4d15d85cb43a6f7101c70e444067a3f7b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="set-stlclr"></a>set(STL/CLR)
 이 템플릿 클래스는 다양 한 길이의 요소 시퀀스를 양방향 액세스할 수 있는 제어 하는 개체를 설명 합니다. 컨테이너를 사용 하 여 `set` 하나의 요소 저장 하 고 각 노드의 정렬 된 나무를 균형 있게 (거의)으로 요소의 시퀀스를 관리할 수 있습니다.  
@@ -127,7 +122,7 @@ template<typename Key>
   
  이러한 대리자 개체 유형의 키에 대해 엄밀히 약한 정렬을 적용 해야 합니다 [set:: key_type (STL/CLR)](../dotnet/set-key-type-stl-clr.md)합니다. 모든 두 개의 키 즉 `X` 및 `Y`:  
   
- `key_comp()(X, Y)`동일한 부울 결과를 반환 모든 호출 합니다.  
+ `key_comp()(X, Y)` 동일한 부울 결과를 반환 모든 호출 합니다.  
   
  경우 `key_comp()(X, Y)` 가 true 이면 `key_comp()(Y, X)` false 이어야 합니다.  
   
@@ -158,6 +153,6 @@ template<typename Key>
  [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
  [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
  [map (STL/CLR)](../dotnet/map-stl-clr.md)   
- [설정](../dotnet/set-stl-clr.md)   
- [설정](../dotnet/set-stl-clr.md)   
+ [set](../dotnet/set-stl-clr.md)   
+ [set](../dotnet/set-stl-clr.md)   
  [STL/CLR 라이브러리 참조](../dotnet/stl-clr-library-reference.md)

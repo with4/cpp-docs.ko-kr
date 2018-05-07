@@ -1,13 +1,10 @@
 ---
-title: "추적기 | Microsoft Docs"
-ms.custom: 
+title: 추적기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 - OLE server applications [MFC], trackers
 ms.assetid: dcd09399-6637-4621-80e5-d12670429787
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e4d3c556a5f7b6b3aed5daa0285ea6c2c15447
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f0a0cc52e3a5150702af4acd293def38df758fd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="trackers"></a>추적기
 [CRectTracker](../mfc/reference/crecttracker-class.md) 클래스 응용 프로그램 및 다양 한 표시 스타일을 제공 하 여 사용자의 사각형 항목 사용자 인터페이스를 제공 합니다. 이러한 스타일 단색, 해치, 또는 파선 테두리;에 항목에 설명 하는 교차 무늬 패턴 및 크기 조정 핸들이 있는 테두리 내부 또는 외부에 있을 수 있습니다. 추적기 OLE 항목와 함께에서 자주 사용 되 고, 개체에서 파생 되는, 즉 `COleClientItem`합니다. 추적기 사각형 항목의 현재 상태에 시각 신호를 제공합니다.  

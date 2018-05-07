@@ -1,13 +1,10 @@
 ---
-title: "TN056: 지역화 된 MFC 구성 요소 설치 | Microsoft Docs"
-ms.custom: 
+title: 'TN056: 지역화 된 MFC 구성 요소 설치 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.components
 dev_langs:
@@ -25,22 +22,20 @@ helpviewer_keywords:
 - localization [MFC], resources
 - installing MFC components
 ms.assetid: 0b582615-3bb1-4fc0-b569-d127d6deccd3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bbc8bd6acdd916abac12803a28eb0e817f15e86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f10addbf21c276a98c980002e4e9a9ea08538455
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn056-installation-of-localized-mfc-components"></a>TN056: 지역화된 MFC 구성 요소 설치
 지역화된 MFC 구성 요소의 설치와 관련된 이 기술 설명은 이제 더 이상 사용되지 않습니다.  
   
- **참조**[응용 프로그램 배포](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4) 에 대 한 추가 **Visual c + + 응용 프로그램을 재배포에 대 한 정보입니다. 또한 참조** [기술 정보 57](../mfc/tn057-localization-of-mfc-components.md) MFC 응용 프로그램 지역화 대 한 자세한 내용은 합니다.  
+ **참조**[응용 프로그램 배포](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4) 에 대 한 추가 **Visual c + + 응용 프로그램을 재배포에 대 한 정보입니다.   또한 참조** [기술 정보 57](../mfc/tn057-localization-of-mfc-components.md) MFC 응용 프로그램 지역화 대 한 자세한 내용은 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [번호별 기술 참고 사항](../mfc/technical-notes-by-number.md)   

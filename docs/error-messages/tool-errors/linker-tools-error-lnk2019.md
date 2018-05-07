@@ -1,10 +1,9 @@
 ---
-title: "링커 도구 오류 LNK2019 | Microsoft Docs"
-ms.custom: 
+title: 링커 도구 오류 LNK2019 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/15/2017
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2019
@@ -16,14 +15,13 @@ helpviewer_keywords:
 - _check_commonlanguageruntime_version
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20f6fdad0d26d04c6e8022f7b29dbdd7f13ac874
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4323e5f8357da046db7a9403d7c575dfdde566b6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2019"></a>링커 도구 오류 LNK2019
 
@@ -77,7 +75,7 @@ C와 달리 C++에서는 [전역 상수](../../error-messages/tool-errors/global
 
 ### <a name="you-build-a-console-application-by-using-settings-for-a-windows-application"></a>Windows 응용 프로그램에 대 한 설정을 사용 하 여 콘솔 응용 프로그램 빌드
 
-오류 메시지는 비슷한 경우 **WinMain 함수에서 참조 하는 확인 되지 않은 외부 기호** *function_name*, 링크를 사용 하 여 **/SUBSYSTEM:CONSOLE** 대신**/SUBSYSTEM:WINDOWS**합니다. 이 설정에 대한 자세한 내용과 Visual Studio에서 이 속성을 설정하는 방법에 대한 지침은 [/SUBSYSTEM (Specify Subsystem)](../../build/reference/subsystem-specify-subsystem.md)을 참조하세요.
+오류 메시지는 비슷한 경우 **WinMain 함수에서 참조 하는 확인 되지 않은 외부 기호** *function_name*, 링크를 사용 하 여 **/SUBSYSTEM:CONSOLE** 대신 **/SUBSYSTEM:WINDOWS**합니다. 이 설정에 대한 자세한 내용과 Visual Studio에서 이 속성을 설정하는 방법에 대한 지침은 [/SUBSYSTEM (Specify Subsystem)](../../build/reference/subsystem-specify-subsystem.md)을 참조하세요.
 
 ### <a name="you-attempt-to-link-64-bit-libraries-to-32-bit-code-or-32-bit-libraries-to-64-bit-code"></a>64 비트 라이브러리가 32 비트 코드 또는 64 비트 코드를 32 비트 라이브러리에 연결 하려고 하면
 
@@ -224,9 +222,9 @@ int main() {
 }
 ```
 
- 이 오류를 해결 하려면 변경 `unsigned short` 를 `wchar_t` 또는 `WCHAR`를 사용 하 여 LNK2019g.cpp를 컴파일 **/Zc:wchar_t-**합니다.
+ 이 오류를 해결 하려면 변경 `unsigned short` 를 `wchar_t` 또는 `WCHAR`를 사용 하 여 LNK2019g.cpp를 컴파일 **/Zc:wchar_t-** 합니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 LNK2001에 대 한 가능한 원인 및 해결 하는 방법에 대 한 자세한 내용은 스택 오버플로 질문을 참조 하십시오. [정의 되지 않은 참조/확인 되지 않은 외부 기호 오류가 란 무엇이 고 어떻게 해결 하나요?](http://stackoverflow.com/q/12573816/2002113)합니다.
 

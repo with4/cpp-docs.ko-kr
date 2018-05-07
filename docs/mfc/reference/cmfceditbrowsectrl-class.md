@@ -1,12 +1,9 @@
 ---
-title: "CMFCEditBrowseCtrl 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCEditBrowseCtrl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCEditBrowseCtrl
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de1e30e6ca9f404199c6db43837f35d612a02b69
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c7214e4da0bce1a01834df556289b61e0ed8574
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl 클래스
 `CMFCEditBrowseCtrl` 클래스는 필요에 따라 찾아보기 단추를 포함 하는 편집 가능한 텍스트 상자 인 편집 찾아보기 컨트롤을 지원 합니다. 사용자가 찾아보기 단추를 클릭하면 컨트롤은 사용자 지정 작업을 수행하거나 파일 브라우저 또는 폴더 브라우저가 포함된 표준 대화 상자를 표시합니다.  
@@ -125,7 +120,7 @@ class CMFCEditBrowseCtrl : public CEdit
   
  [CMFCEditBrowseCtrl](../../mfc/reference/cmfceditbrowsectrl-class.md)  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서 두 개의 메서드를 사용 하는 방법을 보여 줍니다는 `CMFCEditBrowseCtrl` 클래스: `EnableFolderBrowseButton` 및 `EnableFileBrowseButton`합니다. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#6](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]  
@@ -134,7 +129,7 @@ class CMFCEditBrowseCtrl : public CEdit
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxeditbrowsectrl.h  
   
-##  <a name="enablebrowsebutton"></a>CMFCEditBrowseCtrl::EnableBrowseButton  
+##  <a name="enablebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableBrowseButton  
  표시 하거나 현재 편집 찾아보기 컨트롤에 찾아보기 단추를 표시 하지 않습니다.  
   
 ```  
@@ -145,7 +140,7 @@ void EnableBrowseButton(
   
 ### <a name="parameters"></a>매개 변수  
  `bEnable`  
- `TRUE`찾아보기 단추를 표시 하려면 `FALSE` 를 찾아보기 단추를 표시 하지 않습니다. 기본값은 `TRUE`입니다.  
+ `TRUE` 찾아보기 단추를 표시 하려면 `FALSE` 를 찾아보기 단추를 표시 하지 않습니다. 기본값은 `TRUE`입니다.  
   
  `szLabel`  
  찾아보기 단추에 표시 되는 레이블. 기본값은 " **...** ".  
@@ -155,7 +150,7 @@ void EnableBrowseButton(
   
  경우는 `bEnable` 매개 변수는 `TRUE`, 컨트롤의 찾아보기 모드 `BrowseMode_Default`, 그렇지 않으면 찾아보기 모드 `BrowseMode_None`합니다. 찾아보기 모드에 대 한 자세한 내용은 참조는 [GetMode](#getmode) 메서드.  
   
-##  <a name="enablefilebrowsebutton"></a>CMFCEditBrowseCtrl::EnableFileBrowseButton  
+##  <a name="enablefilebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFileBrowseButton  
  현재 편집 찾아보기 컨트롤에서 찾아보기 단추를 표시 하 고에 컨트롤을 넣습니다 *파일 찾아보기* 모드입니다.  
   
 ```  
@@ -180,7 +175,7 @@ void EnableFileBrowseButton(
   
  사용 가능한 플래그 전체 목록은 참조 하십시오. [OPENFILENAME 구조체](https://msdn.microsoft.com/library/ms646839.aspx)합니다.  
   
-##  <a name="enablefolderbrowsebutton"></a>CMFCEditBrowseCtrl::EnableFolderBrowseButton  
+##  <a name="enablefolderbrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFolderBrowseButton  
  현재 편집 찾아보기 컨트롤에서 찾아보기 단추를 표시 하 고에 컨트롤을 넣습니다 *폴더 찾아보기* 모드입니다.  
   
 ```  
@@ -190,7 +185,7 @@ void EnableFolderBrowseButton();
 ### <a name="remarks"></a>설명  
  폴더 찾아보기 모드에서 편집 찾아보기 컨트롤은 사용자가 찾아보기 단추를 클릭 하는 경우 컨트롤이 표준 폴더 선택 대화 상자를 표시 합니다.  
   
-##  <a name="getmode"></a>CMFCEditBrowseCtrl::GetMode  
+##  <a name="getmode"></a>  CMFCEditBrowseCtrl::GetMode  
  현재 편집 찾아보기 컨트롤의 찾아보기 모드를 검색 합니다.  
   
 ```  
@@ -212,7 +207,7 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
 ### <a name="remarks"></a>설명  
  기본적으로는 `CMFCEditBrowseCtrl` 개체도 초기화 됩니다 `BrowseMode_None` 모드입니다. 수정 사용 하 여 찾아보기 모드는 [CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton), [CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton), 및 [CMFCEditBrowseCtrl::EnableFolderBrowseButton ](#enablefolderbrowsebutton) 메서드.  
   
-##  <a name="onafterupdate"></a>CMFCEditBrowseCtrl::OnAfterUpdate  
+##  <a name="onafterupdate"></a>  CMFCEditBrowseCtrl::OnAfterUpdate  
  편집 찾아보기 컨트롤이 찾아보기 동작의 결과 함께 업데이트 된 후 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -222,7 +217,7 @@ virtual void OnAfterUpdate();
 ### <a name="remarks"></a>설명  
  사용자 지정 동작을 구현 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="onbrowse"></a>CMFCEditBrowseCtrl::OnBrowse  
+##  <a name="onbrowse"></a>  CMFCEditBrowseCtrl::OnBrowse  
  사용자가 편집 찾아보기 컨트롤의 찾아보기 단추를 클릭 하면 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -232,7 +227,7 @@ virtual void OnBrowse();
 ### <a name="remarks"></a>설명  
  이 메서드를 사용 하 여 편집 찾아보기 컨트롤의 찾아보기 단추를 클릭할 때 사용자 지정 코드를 실행 합니다. 고유한 클래스를 파생 되는 `CMFCEditBrowseCtrl` 클래스 다이어그램과 해당 `OnBrowse` 메서드. 해당 메서드의 사용자 지정 찾아보기 동작을 구현 하 고 필요에 따라 편집 찾아보기 컨트롤의 텍스트 상자를 업데이트 합니다. 응용 프로그램에서 사용 하 여는 [EnableBrowseButton](#enablebrowsebutton) 에 편집 찾아보기 컨트롤을 배치 하는 메서드 *사용자 지정 찾아보기* 모드입니다.  
   
-##  <a name="onchangelayout"></a>CMFCEditBrowseCtrl::OnChangeLayout  
+##  <a name="onchangelayout"></a>  CMFCEditBrowseCtrl::OnChangeLayout  
  현재 편집 찾아보기 컨트롤을 다시 그립니다.  
   
 ```  
@@ -242,7 +237,7 @@ virtual void OnChangeLayout();
 ### <a name="remarks"></a>설명  
  프레임 워크는 찾아보기 모드의 편집 찾아보기 컨트롤이 변경 하는 경우이 메서드를 호출 합니다. 자세한 내용은 참조 [CMFCEditBrowseCtrl::GetMode](#getmode)합니다.  
   
-##  <a name="ondrawbrowsebutton"></a>CMFCEditBrowseCtrl::OnDrawBrowseButton  
+##  <a name="ondrawbrowsebutton"></a>  CMFCEditBrowseCtrl::OnDrawBrowseButton  
  편집 찾아보기 컨트롤에 찾아보기 단추를 그리기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -261,15 +256,15 @@ virtual void OnDrawBrowseButton(
  찾아보기 단추의 경계 사각형입니다.  
   
  `bIsButtonPressed`  
- `TRUE`단추를 누르면; 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 단추를 누르면; 그렇지 않으면 `FALSE`합니다.  
   
  `bIsButtonHot`  
- `TRUE`단추가; 강조 표시 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 단추가; 강조 표시 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  찾아보기 단추 모양을 사용자 지정 하는 파생된 클래스에서이 함수를 재정의 합니다.  
   
-##  <a name="setbrowsebuttonimage"></a>CMFCEditBrowseCtrl::SetBrowseButtonImage  
+##  <a name="setbrowsebuttonimage"></a>  CMFCEditBrowseCtrl::SetBrowseButtonImage  
  편집 찾아보기 컨트롤의 찾아보기 단추에 사용자 지정 이미지를 설정합니다.  
   
 ```  
@@ -296,12 +291,12 @@ void SetBrowseButtonImage(UINT uiBmpResId);
  비트맵의 리소스 ID입니다.  
   
  `bAutoDestroy`  
- `TRUE`이 메서드 종료; 때 지정 된 아이콘 또는 비트맵을 삭제 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
+ `TRUE` 이 메서드 종료; 때 지정 된 아이콘 또는 비트맵을 삭제 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드를 사용 하 여 찾아보기 단추를 사용자 지정 이미지를 적용 합니다. 기본적으로 프레임 워크 가져옵니다 독립 실행형 이미지 편집 찾아보기 컨트롤에 있으면 *파일 찾아보기* 또는 *폴더 찾아보기* 모드입니다.  
   
-##  <a name="onillegalfilename"></a>CMFCEditBrowseCtrl::OnIllegalFileName  
+##  <a name="onillegalfilename"></a>  CMFCEditBrowseCtrl::OnIllegalFileName  
  편집 컨트롤에 잘못 된 파일 이름이 입력 된 프레임 워크에서 호출 됩니다.  
   
 ```  

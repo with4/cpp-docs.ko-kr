@@ -1,12 +1,9 @@
 ---
-title: "CByteArray 클래스 | Microsoft Docs"
-ms.custom: 
+title: CByteArray 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CByteArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 53d4a512-657c-4187-9609-e3f5339a78e0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b45de74c53ce24d64dc93e73f2195df76bd1152
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8e729c01d768d7ad74673b140496433ab73cf1f8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbytearray-class"></a>CByteArray 클래스
 바이트의 동적 배열을 지원합니다.  
@@ -116,7 +111,7 @@ class CByteArray : public CObject
 |[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|지정한 인덱스에 있는 요소를 설정하거나 가져옵니다.|  
   
 ## <a name="remarks"></a>설명  
- `CByteArray`는 serialization 및 요소 덤프를 지원하기 위해 `IMPLEMENT_SERIAL` 매크로를 통합합니다. 바이트 배열을 오버 로드 된 삽입을 사용 하 여 보관 저장소에 저장 되는 경우 (  **<<** ) 연산자 또는 `Serialize` 멤버 함수의 경우 각 요소가 이면 차례로 직렬화 합니다.  
+ `CByteArray`는 serialization 및 요소 덤프를 지원하기 위해 `IMPLEMENT_SERIAL` 매크로를 통합합니다. 바이트 배열을 오버 로드 된 삽입을 사용 하 여 보관 저장소에 저장 되는 경우 ( **<<**) 연산자 또는 `Serialize` 멤버 함수의 경우 각 요소가 이면 차례로 직렬화 합니다.  
   
 > [!NOTE]
 >  배열을 사용하기 전에 `SetSize`를 사용하여 배열 크기를 설정하고 배열에 대해 메모리를 할당합니다. `SetSize`를 사용하지 않는 경우 배열에 요소를 추가하면 배열이 자주 다시 할당되고 복사됩니다. 이처럼 다시 할당 및 복사가 자주 수행되면 효율성이 떨어지며 메모리가 조각화될 수 있습니다.  

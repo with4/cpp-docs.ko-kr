@@ -1,13 +1,10 @@
 ---
-title: "액티브 문서 포함 | Microsoft Docs"
-ms.custom: 
+title: 액티브 문서 포함 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - active document containers [MFC], about active document containers
 - MFC COM, active document containment
 ms.assetid: b8dfa74b-75ce-47df-b75e-fc87b7f7d687
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c0311c3eedc13cbc47214b44fc8810dee3eecd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74ad16aa453c6fa0df2c84bd0a0a789b05f83169
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-document-containment"></a>액티브 문서 포함
 액티브 문서 포함은 작업을 만들고 각 문서 유형에 대 한 여러 응용 프로그램 프레임을 사용 하도록 요구 하는 대신 문서는 단일 한 프레임을 제공 하는 기술입니다. OLE 콘텐츠의 일부만 활성화 될 수 있는 복합 문서 내에서 포함 된 개체와 함께 작동 한다는 점에서 기본 OLE 기술에서 다릅니다. 액티브 문서 포함을 단일 프레임의 컨텍스트 내에서 전체 문서 (즉, 전체 응용 프로그램, 연결 된 메뉴, 도구 모음, 및 등을 포함 하 여)를 활성화 합니다.  

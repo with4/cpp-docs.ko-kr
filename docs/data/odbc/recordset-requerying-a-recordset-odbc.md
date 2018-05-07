@@ -2,12 +2,9 @@
 title: '레코드 집합: 레코드 집합 (ODBC) 다시 쿼리 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1445273d29fc521b24fbf04ffc5abec1fadd4e59
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3157f416cf6fb7e0fd3b5ad4797b83de218c9ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-requerying-a-recordset-odbc"></a>레코드 집합: 레코드 집합 다시 쿼리(ODBC)
 MFC ODBC 클래스에이 항목에 적용 됩니다.  
@@ -41,16 +36,16 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
 -   매개 변수 값 변경에 따라 레코드 집합을 새로 고칩니다.  
   
-##  <a name="_core_bringing_the_recordset_up_to_date"></a>날짜를 레코드 집합 보기  
+##  <a name="_core_bringing_the_recordset_up_to_date"></a> 날짜를 레코드 집합 보기  
  자주 하려는 requery 여 recordset 개체를 다시 최신 상태입니다. 다중 사용자 데이터베이스 환경에서 다른 사용자가 변경할 수 데이터를 레코드 집합의 수명 동안. 레코드 집합에 다른 사용자가 변경한 내용을 반영 하는 경우 및 다른 사용자의 변경 내용을 반영 하는 경우에 대 한 자세한 내용은 참조 [레코드 집합: 레코드 집합의 레코드 업데이트 방법 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) 및 [다이너셋](../../data/odbc/dynaset.md).  
   
-##  <a name="_core_requerying_based_on_new_parameters"></a>새 매개 변수를 기반으로 다시 쿼리  
+##  <a name="_core_requerying_based_on_new_parameters"></a> 새 매개 변수를 기반으로 다시 쿼리  
  자주-만큼 중요 한 역할-활용 [Requery](../../mfc/reference/crecordset-class.md#requery) 새 매개 변수 값 변경에 따라 레코드 집합을 선택 하는 것입니다.  
   
 > [!TIP]
 >  쿼리 속도 호출 하는 경우 더 빠른 경우가 훨씬 **Requery** 호출 하는 매개 변수 값을 변경 하 여 **열려** 다시 합니다.  
   
-##  <a name="_core_requerying_dynasets_vs.._snapshots"></a>다이너셋 vs를 다시 쿼리 합니다. 스냅숏  
+##  <a name="_core_requerying_dynasets_vs.._snapshots"></a> 다이너셋 vs를 다시 쿼리 합니다. 스냅숏  
  다이너셋은 동적 최신 데이터를 레코드 집합을 제공 하는 데 때문에 다른 사용자가 추가한을 반영 하도록 하려는 경우에 종종 다이너셋 requery 하려고 합니다. 스냅숏, 반면에 유용 보고서를 작성 하 고, 합계를 계산 하는 등의 작업을 수행할 때 안전 하 게 정적 내용에 사용할 수 있기 때문에 합니다. 그러나 스냅샷을 requery 할 때도 있습니다. 다중 사용자 환경에서 스냅숏 데이터를 다른 사용자가 데이터베이스를 변경할 때 데이터 소스와 동기화를 손실 될 수 있습니다.  
   
 #### <a name="to-requery-a-recordset-object"></a>레코드 집합 개체를 다시 쿼리  

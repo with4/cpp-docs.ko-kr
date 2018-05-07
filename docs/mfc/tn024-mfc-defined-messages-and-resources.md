@@ -1,13 +1,10 @@
 ---
-title: "TN024: MFC에서 정의한 메시지 및 리소스 | Microsoft Docs"
-ms.custom: 
+title: 'TN024: MFC에서 정의한 메시지 및 리소스 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.messages
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17aadfd089d6917cd8cded239287034026ff7ad3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4dd403693dd860966cfcca42eacc909b01eb513b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: MFC에서 정의한 메시지 및 리소스
 > [!NOTE]
@@ -130,7 +125,7 @@ ms.lasthandoff: 12/21/2017
   
  **WM_SIZECHILD**  
   
- 이 메시지를 보낼 `COleResizeBar` 소유자 창에 (통해 `GetOwner`) 사용자 크기 크기 조정 핸들을 사용 하 여 크기 조정 막대를 조정 합니다. `COleIPFrameWnd`사용자가 요청한 대로 프레임 창 위치를 다시 시도 하 여이 메시지에 응답 합니다.  
+ 이 메시지를 보낼 `COleResizeBar` 소유자 창에 (통해 `GetOwner`) 사용자 크기 크기 조정 핸들을 사용 하 여 크기 조정 막대를 조정 합니다. `COleIPFrameWnd` 사용자가 요청한 대로 프레임 창 위치를 다시 시도 하 여이 메시지에 응답 합니다.  
   
  크기 조정 막대를 포함 하는 프레임 창 기준으로 클라이언트 좌표에 새 사각형 lParam에서 가리키고 있습니다.  
   
@@ -161,7 +156,7 @@ ms.lasthandoff: 12/21/2017
 |wParam|다음 값 중 하나입니다.<br /><br /> **FS_SHOW**<br /><br /> **FS_HIDE**<br /><br /> **FS_ACTIVATE**<br /><br /> **FS_DEACTIVATE**<br /><br /> **FS_ENABLEFS_DISABLE**<br /><br /> **FS_SYNCACTIVE**|  
 |lParam|사용 되지 않습니다 (0)|  
   
- 반환 값 0이 아닌 값 이어야 합니다. 경우 **FS_SYNCACTIVE** 설정 되 고 창 동기화 부모 프레임을 사용 하 여 해당 활성화 합니다. `CMiniFrameWnd`스타일으로 설정 된 경우 0이 아닌 반환 **MFS_SYNCACTIVE 합니다.**  
+ 반환 값 0이 아닌 값 이어야 합니다. 경우 **FS_SYNCACTIVE** 설정 되 고 창 동기화 부모 프레임을 사용 하 여 해당 활성화 합니다. `CMiniFrameWnd` 스타일으로 설정 된 경우 0이 아닌 반환 **MFS_SYNCACTIVE 합니다.**  
   
  자세한 내용은 참조 구현의 `CMiniFrameWnd`합니다.  
   

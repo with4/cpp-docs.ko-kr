@@ -1,12 +1,9 @@
 ---
-title: "CMFCToolBar 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCToolBar 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolBar
@@ -320,17 +317,15 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d652be633adca3d21d3cee5b54350c34e691740
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 870f2e53688f4ea45bbf61c8f41dd30606670d6d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar 클래스
 `CMFCToolBar` 클래스와 유사 [CToolBar 클래스](../../mfc/reference/ctoolbar-class.md), 하지만 사용자 인터페이스 기능에 대 한 추가 지원을 제공 합니다. 여기에는 평면 도구 모음, 핫 이미지 포함 도구 모음, 큰 아이콘, 페이저 단추, 잠긴 도구 모음, rebar 컨트롤, 이미지 아래 텍스트, 배경 이미지, 탭 도구 모음이 포함됩니다. `CMFCToolBar` 클래스에는 기본 제공 사용자 지정 도구 모음과 메뉴, 메뉴 사이 끌어 놓기, 콤보 상자 단추, 편집 상자 단추, 색 선택 및 롤업 단추 도구 모음이 포함됩니다.
@@ -518,7 +513,7 @@ class CMFCToolBar : public CMFCBaseToolBar
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|높은 DPI 모드로 확장할 것인지 또는 하지 도구 모음 이미지를 지정 합니다.|  
 |[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|큰 이미지의 크기 (높이 또는 너비)와 일반 이미지 차원 비율을 지정합니다.|  
@@ -534,9 +529,9 @@ class CMFCToolBar : public CMFCBaseToolBar
   
  특수 단추를 삽입 하려면 예: 콤보 상자 또는 드롭다운 도구 모음을 부모 리소스에서 더미 단추를 예약 하 고 런타임 시 더미 단추를 사용 하 여 대체 [CMFCToolBar::ReplaceButton](#replacebutton)합니다. 자세한 내용은 참조 [연습: 도구 모음에 컨트롤 배치](../walkthrough-putting-controls-on-toolbars.md)합니다.  
   
- `CMFCToolBar`MFC 라이브러리 클래스에 대 한 기본 클래스 [CMFCMenuBar 클래스](../../mfc/reference/cmfcmenubar-class.md), [CMFCPopupMenuBar 클래스](../../mfc/reference/cmfcpopupmenubar-class.md), 및 [CMFCDropDownToolBar 클래스](../../mfc/reference/cmfcdropdowntoolbar-class.md)합니다.  
+ `CMFCToolBar` MFC 라이브러리 클래스에 대 한 기본 클래스 [CMFCMenuBar 클래스](../../mfc/reference/cmfcmenubar-class.md), [CMFCPopupMenuBar 클래스](../../mfc/reference/cmfcpopupmenubar-class.md), 및 [CMFCDropDownToolBar 클래스](../../mfc/reference/cmfcdropdowntoolbar-class.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `CMFCToolBar` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 도구 모음 창 레이블 텍스트를 설정, 모음, 창 스타일을 설정 및 설정 하는 방법을 설명는 **단추 추가 / 제거** 도구 모음의 끝에 나타나는 단추입니다. 이 코드 조각은의 일부인는 [IE 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
@@ -560,7 +555,7 @@ class CMFCToolBar : public CMFCBaseToolBar
   
  `CMFCToolBar`  
   
-##  <a name="addbasiccommand"></a>CMFCToolBar::AddBasicCommand  
+##  <a name="addbasiccommand"></a>  CMFCToolBar::AddBasicCommand  
  사용자가 메뉴를 열 때 항상 표시 되는 명령의 목록을 메뉴 명령을 추가 합니다.  
   
 ```  
@@ -576,7 +571,7 @@ static void __stdcall AddBasicCommand(UINT uiCmd);
   
  사용 하 여는 [CMFCToolBar::SetBasicCommands](#setbasiccommands) 메서드는 사용자가 메뉴를 열 때 항상 표시 되는 명령의 목록을 설정 합니다. 사용 하 여는 [CMFCToolBar::GetBasicCommands](#getbasiccommands) 응용 프로그램에서 사용 되는 기본 명령 목록을 검색 하는 메서드입니다.  
   
-##  <a name="addcommandusage"></a>CMFCToolBar::AddCommandUsage  
+##  <a name="addcommandusage"></a>  CMFCToolBar::AddCommandUsage  
  지정된 된 명령과와 연결 된 카운터를 1 씩 증가 합니다.  
   
 ```  
@@ -594,7 +589,7 @@ static void __stdcall AddCommandUsage(UINT uiCommand);
   
  이 메서드를 사용 하 여 명령 카운터의 값을 증가 [CMFCCmdUsageCount::AddCmd](../../mfc/reference/cmfccmdusagecount-class.md#addcmd) 메서드.  
   
-##  <a name="addtoolbarforimagecollection"></a>CMFCToolBar::AddToolBarForImageCollection  
+##  <a name="addtoolbarforimagecollection"></a>  CMFCToolBar::AddToolBarForImageCollection  
  응용 프로그램에서 이미지의 컬렉션에 사용자 인터페이스 리소스에서 이미지를 추가합니다.  
   
 ```  
@@ -627,12 +622,12 @@ static BOOL __stdcall AddToolBarForImageCollection(
  비활성화 된 메뉴 이미지를 사용 하 여 비트맵의 리소스 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`메서드가 성공 하면; `FALSE` 경우 `uiResID` 또는 `uiBmpResID` 유효한 리소스를 지정 하지 않으면 또는 다른 오류가 발생 합니다.  
+ `TRUE` 메서드가 성공 하면; `FALSE` 경우 `uiResID` 또는 `uiBmpResID` 유효한 리소스를 지정 하지 않으면 또는 다른 오류가 발생 합니다.  
   
 ### <a name="remarks"></a>설명  
  도구 모음 이미지를 사용 하 여 비트맵을 로드 하 고 도구 모음 이미지의 컬렉션에 추가 하려면이 메서드를 호출 합니다. 이 메서드가 만드는 임시 도구 모음 개체 및 호출 [CMFCToolBar::LoadToolBar](#loadtoolbar)합니다.  
   
-##  <a name="adjustlayout"></a>CMFCToolBar::AdjustLayout  
+##  <a name="adjustlayout"></a>  CMFCToolBar::AdjustLayout  
  크기와 도구 모음의 위치를 다시 계산합니다.  
   
 ```  
@@ -646,7 +641,7 @@ virtual void AdjustLayout();
   
  파생 된 클래스에서 직접 동적 레이아웃을 제공 하려면이 메서드를 재정의 `CMFCToolbar`합니다.  
   
-##  <a name="adjustsize"></a>CMFCToolBar::AdjustSize  
+##  <a name="adjustsize"></a>  CMFCToolBar::AdjustSize  
  도구 모음의 크기를 다시 계산 합니다.  
   
 ```  
@@ -658,7 +653,7 @@ void AdjustSize();
   
  [CMFCToolBar::AdjustLayout](#adjustlayout) 도구 모음을의 부모가 없는 경우 크기를 다시 계산 하려면이 메서드를 호출 하는 메서드는 `CMFCReBar` 개체입니다.  
   
-##  <a name="allowchangetextlabels"></a>CMFCToolBar::AllowChangeTextLabels  
+##  <a name="allowchangetextlabels"></a>  CMFCToolBar::AllowChangeTextLabels  
  도구 모음 단추에서 이미지 아래 텍스트 레이블을 표시 될 수 있는지 여부를 지정 합니다.  
   
 ```  
@@ -666,7 +661,7 @@ virtual BOOL AllowChangeTextLabels() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`이미지 아래 텍스트 레이블을 표시 하도록 허용 된 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 이미지 아래 텍스트 레이블을 표시 하도록 허용 된 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드는 사용자 지정 대화 상자를 사용할지 여부를 결정 하는 **텍스트 레이블 표시** 확인란에는 **도구 모음** 선택한 도구 모음에 대 한 페이지입니다.  
@@ -675,7 +670,7 @@ virtual BOOL AllowChangeTextLabels() const;
   
  파생 된 개체에서이 메서드를 재정의 `CMFCToolBar` 다음 다시 돌아와 `FALSE` 경우 원하지 않는 사용자가 텍스트 레이블이 이미지 아래에서 도구 모음 단추에 표시 되는지 여부를 결정 하도록 합니다.  
   
-##  <a name="allowshowonlist"></a>CMFCToolBar::AllowShowOnList  
+##  <a name="allowshowonlist"></a>  CMFCToolBar::AllowShowOnList  
  도구 모음에서 도구 모음 목록에 표시 되는지 여부를 결정 하는 **도구 모음** 의 창은 **사용자 지정** 대화 상자.  
   
 ```  
@@ -683,14 +678,14 @@ virtual BOOL AllowShowOnList() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`도구 모음 사용자 지정 페이지;에서 목록 상자에서 도구 모음 개체를 표시할 수 있으면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 도구 모음 사용자 지정 페이지;에서 목록 상자에서 도구 모음 개체를 표시할 수 있으면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드는 도구 모음 사용자 지정 페이지의 목록에서 파생 된 특정 개체에 포함 되는지 여부를 결정 하기 위해 프레임 워크 `CMFCToolBar`합니다.  
   
  기본 구현에서는 항상 `TRUE`을 반환합니다. 사용자 지정 대화 상자에서 도구 모음 목록에 표시 하려면 도구 모음을 원하지 않는 경우이 메서드를 재정의 합니다.  
   
-##  <a name="aretextlabels"></a>CMFCToolBar::AreTextLabels  
+##  <a name="aretextlabels"></a>  CMFCToolBar::AreTextLabels  
  이미지 아래 텍스트 레이블을 도구 모음 단추에 현재 표시 여부를 지정 합니다.  
   
 ```  
@@ -698,12 +693,12 @@ BOOL AreTextLabels() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`도구 모음 단추; 이미지 아래 텍스트 레이블을 표시 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 도구 모음 단추; 이미지 아래 텍스트 레이블을 표시 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  사용 하 여 [CMFCToolBar::EnableTextLabels](#enabletextlabels) 텍스트가 표시 되는지 여부를 지정할 수 있습니다. 기본값은 `FALSE`입니다. 호출 [CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels) 사용자 사용자 지정 대화 상자에서이 설정을 변경할 수 있는지 여부를 지정할 수 있습니다.  
   
-##  <a name="autograyinactiveimages"></a>CMFCToolBar::AutoGrayInactiveImages  
+##  <a name="autograyinactiveimages"></a>  CMFCToolBar::AutoGrayInactiveImages  
  비활성 단추 이미지의 자동 생성을 사용 하지 않도록 설정 하거나 사용 합니다.  
   
 ```  
@@ -728,7 +723,7 @@ static void AutoGrayInactiveImages(
   
  에 대 한 자세한 내용은 `nGrayImagePercentage` 매개 변수를 참조 [CMFCToolBarImages::GrayImages](../../mfc/reference/cmfctoolbarimages-class.md#grayimages)합니다.  
   
-##  <a name="buttontoindex"></a>CMFCToolBar::ButtonToIndex  
+##  <a name="buttontoindex"></a>  CMFCToolBar::ButtonToIndex  
  지정 된 인덱스를 반환 [CMFCToolBarButton 클래스](../../mfc/reference/cmfctoolbarbutton-class.md) 이 도구 모음에는 개체입니다.  
   
 ```  
@@ -742,7 +737,7 @@ int ButtonToIndex(const CMFCToolBarButton* pButton) const;
 ### <a name="return-value"></a>반환 값  
  인덱스 `pButton` 도구 모음 단추;이 도구 모음에서 지정한 단추가 표시 되지 않으면-1의 내부 목록에 있습니다.  
   
-##  <a name="calcfixedlayout"></a>CMFCToolBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>  CMFCToolBar::CalcFixedLayout  
  도구 모음에 대 한 가로 크기를 계산합니다.  
   
 ```  
@@ -753,10 +748,10 @@ virtual CSize CalcFixedLayout(
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bStretch`  
- `TRUE`부모 프레임의 크기를 도구 모음을 스트레치 합니다.  
+ `TRUE` 부모 프레임의 크기를 도구 모음을 스트레치 합니다.  
   
  [in] `bHorz`  
- `TRUE`도구 모음을 가로로; 방향을 지정 하려면 `FALSE` 를 도구 모음을 세로 방향입니다.  
+ `TRUE` 도구 모음을 가로로; 방향을 지정 하려면 `FALSE` 를 도구 모음을 세로 방향입니다.  
   
 ### <a name="return-value"></a>반환 값  
  A `CSize` 도구 모음의 크기를 지정 하는 개체입니다.  
@@ -766,7 +761,7 @@ virtual CSize CalcFixedLayout(
   
  이 메서드를 사용 하는 예제에 대 한 VisualStudioDemo 샘플을 참조 하십시오.  
   
-##  <a name="calcmaxbuttonheight"></a>CMFCToolBar::CalcMaxButtonHeight  
+##  <a name="calcmaxbuttonheight"></a>  CMFCToolBar::CalcMaxButtonHeight  
  도구 모음에서 단추의 최대 높이 계산합니다.  
   
 ```  
@@ -781,7 +776,7 @@ virtual int CalcMaxButtonHeight();
   
  파생 된 클래스에서이 메서드를 재정의 `CMFCToolBar` 직접 높이 계산 수 있도록 합니다.  
   
-##  <a name="calcsize"></a>CMFCToolBar::CalcSize  
+##  <a name="calcsize"></a>  CMFCToolBar::CalcSize  
  레이아웃 계산 프로세스의 일환으로 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -790,7 +785,7 @@ virtual CSize CalcSize(BOOL bVertDock);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bVertDock`  
- `TRUE`도구 모음에서 세로로; 도킹 됨을 지정 하려면 `FALSE` 도구 모음에서 가로로 도킹 되어 지정할 수 있습니다.  
+ `TRUE` 도구 모음에서 세로로; 도킹 됨을 지정 하려면 `FALSE` 도구 모음에서 가로로 도킹 되어 지정할 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
  A `CSize` 도구 모음에서 단추의 전체 크기를 지정 하는 개체입니다.  
@@ -800,7 +795,7 @@ virtual CSize CalcSize(BOOL bVertDock);
   
  이 메서드를 사용 하 여 한 번의 단추의 예약된 크기를 반환 도구 모음 단추가 들어 있는 경우는 [CMFCToolBar::GetButtonSize](#getbuttonsize) 메서드.  
   
-##  <a name="canbeclosed"></a>CMFCToolBar::CanBeClosed  
+##  <a name="canbeclosed"></a>  CMFCToolBar::CanBeClosed  
  사용자 도구 모음을 닫을 수 있는지 여부를 지정 합니다.  
   
 ```  
@@ -808,14 +803,14 @@ virtual BOOL CanBeClosed() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`사용자가 도구 모음을 닫을 수 있으면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 사용자가 도구 모음을 닫을 수 있으면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  프레임 워크는 사용자는 도구 모음을 닫을 수 있는지 여부를 확인 하려면이 메서드를 호출 합니다. 메서드에서 반환 되 면 `TRUE`, 프레임 워크에서는 SC_CLOSE 명령을 시스템 메뉴의 도구 모음 및 사용자는 사용자 지정 대화 상자에서 도구 모음 목록에서 확인란을 사용 하 여 도구 모음을 닫을 수 있습니다.  
   
  기본 구현은 `TRUE`를 반환합니다. 파생 된 클래스에서이 메서드를 재정의 `CMFCToolBar` 사용자가 닫을 수 없는 도구 모음 개체에 있도록 합니다.  
   
-##  <a name="canberestored"></a>CMFCToolBar::CanBeRestored  
+##  <a name="canberestored"></a>  CMFCToolBar::CanBeRestored  
  있는지 여부를 시스템 복원할 수는 도구 모음을 원래 상태로 사용자 지정 후 결정 합니다.  
   
 ```  
@@ -823,7 +818,7 @@ virtual BOOL CanBeRestored() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`도구 모음에서 응용 프로그램 리소스에서 복원할 수 있습니다 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 도구 모음에서 응용 프로그램 리소스에서 복원할 수 있습니다 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  프레임 워크는 사용자 지정 후 원래 상태로 도구 모음을 반환 해야 여부를 확인 하려면이 메서드를 호출 합니다. 원래 상태가 응용 프로그램 리소스에서 로드 됩니다.  
@@ -834,7 +829,7 @@ virtual BOOL CanBeRestored() const;
   
  재정의할 수 있습니다는 `CanBeRestored` 파생 클래스에서이 동작을 사용자 지정 하는 메서드.  
   
-##  <a name="canfocus"></a>CMFCToolBar::CanFocus  
+##  <a name="canfocus"></a>  CMFCToolBar::CanFocus  
  창에서 포커스를 받을 수 있는지 여부를 지정 합니다.  
   
 ```  
@@ -847,7 +842,7 @@ virtual BOOL CanFocus() const;
 ### <a name="remarks"></a>설명  
  이 메서드는 기본 클래스 구현을 재정의 [CBasePane::CanFocus](../../mfc/reference/cbasepane-class.md#canfocus)이므로 도구 모음 개체 포커스를 받을 수 없습니다.  
   
-##  <a name="canhandlesiblings"></a>CMFCToolBar::CanHandleSiblings  
+##  <a name="canhandlesiblings"></a>  CMFCToolBar::CanHandleSiblings  
  도구 모음 및 해당 형제를 동일한 창에 배치할지를 결정합니다.  
   
 ```  
@@ -862,7 +857,7 @@ BOOL CanHandleSiblings();
   
  일반적으로 이 메서드를 사용할 필요가 없습니다. 사용할 수 있도록는 **사용자 지정** 호출 도구 모음에 나타나는 단추는 [cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton) 메서드. 사용할 수 있도록는 **표시 단추를 한 줄** 또는 **표시 단추를 두 줄** 단추, 호출 [cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)합니다.  
   
-##  <a name="cleanupimages"></a>CMFCToolBar::CleanUpImages  
+##  <a name="cleanupimages"></a>  CMFCToolBar::CleanUpImages  
  도구 모음 이미지에 할당 된 시스템 리소스를 해제 합니다.  
   
 ```  
@@ -872,7 +867,7 @@ static void CMFCToolBar::CleanUpImages();
 ### <a name="remarks"></a>설명  
  응용 프로그램이 종료 될 때 프레임 워크에서이 메서드를 호출 합니다.  
   
-##  <a name="cleanuplockedimages"></a>CMFCToolBar::CleanUpLockedImages  
+##  <a name="cleanuplockedimages"></a>  CMFCToolBar::CleanUpLockedImages  
  잠긴된 도구 모음 이미지에 할당 된 시스템 리소스를 해제 합니다.  
   
 ```  
@@ -882,7 +877,7 @@ void CleanUpLockedImages();
 ### <a name="remarks"></a>설명  
  응용 프로그램의 비주얼 스타일 변경 될 때이 메서드를 호출 합니다. 이 메서드를 사용 하는 예제에 대 한 VisualStudioDemo 샘플을 참조 하십시오.  
   
-##  <a name="commandtoindex"></a>CMFCToolBar::CommandToIndex  
+##  <a name="commandtoindex"></a>  CMFCToolBar::CommandToIndex  
  지정한 명령 id 도구 모음에서 단추의 인덱스를 반환합니다.  
   
 ```  
@@ -906,7 +901,7 @@ int CommandToIndex(
   
  경우 `iIndex` 가 0 보다 클 경우이 메서드는 인덱스가 있는 도구 모음에서 모든 단추는 무시 미만 `iIndex`합니다.  
   
-##  <a name="create"></a>CMFCToolBar::Create  
+##  <a name="create"></a>  CMFCToolBar::Create  
  
           `CMFCToolBar` 개체를 만듭니다.  
   
@@ -928,12 +923,12 @@ virtual BOOL Create(
  자식 창 도구 모음의 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`이 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 이 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드는 컨트롤 막대를 만들고 도구 모음에 연결 합니다. 이 있는 컨트롤 막대 만듭니다는 `TBSTYLE_FLAT` 스타일입니다. 호출 [CMFCToolBar::CreateEx](#createex) 내의 다른 컨트롤 막대 스타일을 선택 합니다.  
   
-##  <a name="createex"></a>CMFCToolBar::CreateEx  
+##  <a name="createex"></a>  CMFCToolBar::CreateEx  
  만듭니다는 `CMFCToolBar` 큰 아이콘 등의 추가 스타일 옵션을 사용 하는 개체입니다.  
   
 ```  
@@ -972,13 +967,13 @@ virtual BOOL CreateEx(
   
  대신이 메서드를 호출 [CMFCToolBar::Create](#create) 특정 스타일을 제공 하려는 경우. 예를 들어 설정 `dwCtrlStyle` 를 `TBSTYLE_FLAT | TBSTYLE_TRANSPARENT` Internet Explorer 4에서 사용 되는 도구 모음 유사한 도구 모음을 만들려면 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 사용 하는 `CreateEx` 의 메서드는 `CMFCToolBar` 클래스. 이 코드 조각은의 일부인는 [IE 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]  
   
-##  <a name="deactivate"></a>CMFCToolBar::Deactivate  
+##  <a name="deactivate"></a>  CMFCToolBar::Deactivate  
  도구 모음을 비활성화합니다.  
   
 ```  
@@ -988,7 +983,7 @@ virtual void Deactivate();
 ### <a name="remarks"></a>설명  
  이 메서드는 강조 표시 된 도구 모음 단추에서 포커스를 제거 하 여 도구 모음을 비활성화 합니다. 도구 모음에 포커스를 잃이 되거나 삭제 될 때 프레임 워크에서이 메서드를 호출 합니다.  
   
-##  <a name="dopaint"></a>CMFCToolBar::DoPaint  
+##  <a name="dopaint"></a>  CMFCToolBar::DoPaint  
  도구 모음을 다시 그립니다.  
   
 ```  
@@ -1004,7 +999,7 @@ virtual void DoPaint(CDC* pDC);
   
  파생 된 개체의 모양을 사용자 지정 하려면이 메서드를 재정의 `CMFCToolBar`합니다.  
   
-##  <a name="drawbutton"></a>CMFCToolBar::DrawButton  
+##  <a name="drawbutton"></a>  CMFCToolBar::DrawButton  
  도구 모음 단추를 다시 그립니다.  
   
 ```  
@@ -1027,20 +1022,20 @@ virtual BOOL DrawButton(
  도구 모음 이미지에 대 한 포인터입니다.  
   
  [in] `bHighlighted`  
- `TRUE`단추가; 강조 표시 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 단추가; 강조 표시 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
  [in] `bDrawDisabledImages`  
- `TRUE`비활성화 된 단추는 흐리게 표시; 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 비활성화 된 단추는 흐리게 표시; 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`단추; 다시 그려질 경우 `FALSE` 경우 단추는 숨겨집니다.  
+ `TRUE` 단추; 다시 그려질 경우 `FALSE` 경우 단추는 숨겨집니다.  
   
 ### <a name="remarks"></a>설명  
  [CMFCToolBar::DrawButton](#drawbutton) 메서드 도구 모음 단추를 다시 표시 해야 하는 경우이 메서드를 호출 합니다.  
   
  도구 모음에 있는 단추의 모양을 사용자 지정 하려는 경우이 메서드를 재정의 합니다.  
   
-##  <a name="drawseparator"></a>CMFCToolBar::DrawSeparator  
+##  <a name="drawseparator"></a>  CMFCToolBar::DrawSeparator  
  도구 모음에 대 한 구분 기호를 다시 그립니다.  
   
 ```  
@@ -1058,14 +1053,14 @@ virtual void DrawSeparator(
  위치 (픽셀)에서의 구분 기호 그려지는 곳의 경계 사각형입니다.  
   
  [in] `bHorz`  
- `TRUE`구분 기호는 가로 스크롤 하는 경우 `FALSE` 경우 구분 기호는 세로입니다.  
+ `TRUE` 구분 기호는 가로 스크롤 하는 경우 `FALSE` 경우 구분 기호는 세로입니다.  
   
 ### <a name="remarks"></a>설명  
- [CMFCToolBar::DoPaint](#dopaint) 각각에 대해이 메서드를 호출 [CMFCToolBar::DrawSeparator](#drawseparator) 있는 개체는 `TBBS_SEPARATOR` 스타일을 호출 하는 대신 [CMFCToolBar::DrawButton](#drawbutton) 에 대 한 이러한 단추입니다.  
+ [CMFCToolBar::DoPaint](#dopaint) 각각에 대해이 메서드를 호출 [CMFCToolBar::DrawSeparator](#drawseparator) 있는 개체는 `TBBS_SEPARATOR` 스타일을 호출 하는 대신 [CMFCToolBar::DrawButton](#drawbutton) 하는 것에 대 한 단추입니다.  
   
  파생 된 클래스에서이 메서드를 재정의 [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) 도구 모음의 구분 기호의 모양을 사용자 지정할 수 있습니다. 기본 구현 호출 [CMFCVisualManager::OnDrawSeparator](../../mfc/reference/cmfcvisualmanager-class.md#ondrawseparator) 그릴 모양을 가진 현재 비주얼 관리자가 결정 하는 구분 기호입니다.  
   
-##  <a name="enablecustomizebutton"></a>Cmfctoolbar:: Enablecustomizebutton  
+##  <a name="enablecustomizebutton"></a>  Cmfctoolbar:: Enablecustomizebutton  
  도구 모음에 나타나는 사용자 지정 단추를 사용 하지 않도록 설정 하거나 사용 합니다.  
   
 ```  
@@ -1106,7 +1101,7 @@ void EnableCustomizeButton(
   
  프레임 워크 동적으로 메뉴에 추가 하 여 지정 된 항목 앞 도구 모음 영역에 맞지 않는 되는 모든 단추 `iCustomizeCmd`합니다. 펼침 단추에서 아래쪽 화살표 옆에 표시 됩니다.  
   
-##  <a name="enabledocking"></a>CMFCToolBar::EnableDocking  
+##  <a name="enabledocking"></a>  CMFCToolBar::EnableDocking  
  주 프레임 창의 항목 도킹 수 있습니다.  
   
 ```  
@@ -1120,7 +1115,7 @@ virtual void EnableDocking(DWORD dwAlignment);
 ### <a name="remarks"></a>설명  
  이 메서드가 기본 클래스 구현을 확장 [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)를 설정 하 여는 `CBasePane::m_dwControlBarStyle` 데이터 멤버를 `AFX_CBRS_FLOAT`합니다. 이 메서드를 전달 `dwAlignment` 기본 클래스 구현에 있습니다.  
   
-##  <a name="enablelargeicons"></a>CMFCToolBar::EnableLargeIcons  
+##  <a name="enablelargeicons"></a>  CMFCToolBar::EnableLargeIcons  
  도구 모음 단추에 큰 아이콘을 사용 하지 않도록 설정 하거나 사용 합니다.  
   
 ```  
@@ -1129,12 +1124,12 @@ void EnableLargeIcons(BOOL bEnable);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bEnable`  
- `TRUE`큰 아이콘을 사용 하도록 설정 하려면 `FALSE` 를 큰 아이콘을 사용 하지 않도록 설정 합니다.  
+ `TRUE` 큰 아이콘을 사용 하도록 설정 하려면 `FALSE` 를 큰 아이콘을 사용 하지 않도록 설정 합니다.  
   
 ### <a name="remarks"></a>설명  
  큰 아이콘은 기본적으로 활성화 됩니다.  
   
-##  <a name="enablequickcustomization"></a>CMFCToolBar::EnableQuickCustomization  
+##  <a name="enablequickcustomization"></a>  CMFCToolBar::EnableQuickCustomization  
  사용자를 누를 수 있도록 도구 모음의 빠른 사용자 지정을 사용할지는 **Alt** 키 및 단추를 새 위치로 끕니다.  
   
 ```  
@@ -1143,9 +1138,9 @@ static void EnableQuickCustomization(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bEnable`  
- `TRUE`빠른 사용자 지정을 사용 하도록 설정 하려면 `FALSE` 를 빠른 사용자 지정을 사용 하지 않도록 설정 합니다.  
+ `TRUE` 빠른 사용자 지정을 사용 하도록 설정 하려면 `FALSE` 를 빠른 사용자 지정을 사용 하지 않도록 설정 합니다.  
   
-##  <a name="enablereflections"></a>CMFCToolBar::EnableReflections  
+##  <a name="enablereflections"></a>  CMFCToolBar::EnableReflections  
  사용 하거나 명령 리플렉션을 사용 하지 않도록 설정 합니다.  
   
 ```  
@@ -1154,14 +1149,14 @@ void EnableReflections(BOOL bEnable = TRUE);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bEnable`  
- `TRUE`명령 리플렉션;를 사용 하도록 설정 하려면 `FALSE` 명령 리플렉션을 사용 하지 않으려면입니다.  
+ `TRUE` 명령 리플렉션;를 사용 하도록 설정 하려면 `FALSE` 명령 리플렉션을 사용 하지 않으려면입니다.  
   
 ### <a name="remarks"></a>설명  
  콤보 상자 등의 포함 된 컨트롤을 포함 하는 도구 모음 단추에 대 한 명령 리플렉션을 사용 하도록 설정 하려면이 메서드를 호출 합니다.  
   
  리플렉션 명령에 대 한 자세한 내용은 참조 [TN062: Windows 컨트롤에 대 한 메시지 리플렉션](../../mfc/tn062-message-reflection-for-windows-controls.md)합니다.  
   
-##  <a name="enabletextlabels"></a>CMFCToolBar::EnableTextLabels  
+##  <a name="enabletextlabels"></a>  CMFCToolBar::EnableTextLabels  
  도구 모음 단추 이미지 아래 텍스트 레이블을 사용 하지 않도록 설정 하거나 사용 합니다.  
   
 ```  
@@ -1170,12 +1165,12 @@ void EnableTextLabels(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>매개 변수  
  `bEnable`  
- `TRUE`도구 모음 단추 이미지; 아래에 텍스트 레이블을 표시 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 도구 모음 단추 이미지; 아래에 텍스트 레이블을 표시 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  텍스트 레이블을 사용 하는 경우 도구 모음에서 모든 단추 이미지 아래에 표시 될 레이블에 대 한 공간을 제공 하기 위해 확장 됩니다. 사용자 지정 대화 상자에는 **표시 텍스트 레이블을** 확인란에는 **도구 모음** 페이지. 프레임 워크를 호출 하는 경우 도구 모음을 선택 하 고이 옵션을 확인 하는 사용자, `EnableTextLabels` 선택한 도구 모음에 대 한 합니다. 파생 된 개체의 확인란을 비활성화할 수 [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) 반환 하 여 `FALSE` 에서 [CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels) 합니다.  
   
-##  <a name="fromhandlepermanent"></a>CMFCToolBar::FromHandlePermanent  
+##  <a name="fromhandlepermanent"></a>  CMFCToolBar::FromHandlePermanent  
  검색에 대 한 포인터는 `CMFCToolBar` 지정된 창 핸들을 포함 하는 개체입니다.  
   
 ```  
@@ -1192,7 +1187,7 @@ static CMFCToolBar* __stdcall FromHandlePermanent(HWND hwnd);
 ### <a name="remarks"></a>설명  
  이 공유 메서드 조사 각 도구 모음에 대 한 응용 프로그램에는 `CMFCToolBar` 지정된 창 핸들을 포함 하는 개체입니다.  
   
-##  <a name="getallbuttons"></a>CMFCToolBar::GetAllButtons  
+##  <a name="getallbuttons"></a>  CMFCToolBar::GetAllButtons  
  도구 모음에서 단추 읽기 전용 목록을 반환합니다.  
   
 ```  
@@ -1202,7 +1197,7 @@ const CObList& GetAllButtons() const;
 ### <a name="return-value"></a>반환 값  
  에 대 한 상수 참조는 [CObList 클래스](../../mfc/reference/coblist-class.md) 개체의 컬렉션을 포함 하는 [CMFCToolBarButton 클래스](../../mfc/reference/cmfctoolbarbutton-class.md) 개체입니다.  
   
-##  <a name="getalltoolbars"></a>CMFCToolBar::GetAllToolbars  
+##  <a name="getalltoolbars"></a>  CMFCToolBar::GetAllToolbars  
  응용 프로그램에서 읽기 전용 목록이 모든 도구 모음을 반환합니다.  
   
 ```  
@@ -1212,7 +1207,7 @@ static const CObList& GetAllToolbars();
 ### <a name="return-value"></a>반환 값  
  에 대 한 const 참조는 [CObList 클래스](../../mfc/reference/coblist-class.md) 개체의 컬렉션을 포함 하는 `CMFCToolBar` 개체입니다.  
   
-##  <a name="getbasiccommands"></a>CMFCToolBar::GetBasicCommands  
+##  <a name="getbasiccommands"></a>  CMFCToolBar::GetBasicCommands  
  읽기 전용 응용 프로그램에 정의 된 기본 명령 목록이 반환 됩니다.  
   
 ```  
@@ -1225,7 +1220,7 @@ static const CList<UINT,UINT>& GetBasicCommands();
 ### <a name="remarks"></a>설명  
  기본 명령을 호출 하 여 추가 [CMFCToolBar::AddBasicCommand](#addbasiccommand) 또는 [CMFCToolBar::SetBasicCommands](#setbasiccommands)합니다.  
   
-##  <a name="getbutton"></a>CMFCToolBar::GetButton  
+##  <a name="getbutton"></a>  CMFCToolBar::GetButton  
  에 대 한 포인터를 반환 합니다.는 [CMFCToolBarButton 클래스](../../mfc/reference/cmfctoolbarbutton-class.md) 지정된 된 인덱스에는 개체입니다.  
   
 ```  
@@ -1239,7 +1234,7 @@ CMFCToolBarButton* GetButton(int iIndex) const;
 ### <a name="return-value"></a>반환 값  
  않으면 도구 모음 단추에 대 한 포인터 또는 `NULL` 이러한 단추가 없는 경우.  
   
-##  <a name="getbuttoninfo"></a>CMFCToolBar::GetButtonInfo  
+##  <a name="getbuttoninfo"></a>  CMFCToolBar::GetButtonInfo  
  명령 ID, 스타일 및 지정된 된 인덱스에서 단추의 이미지 인덱스를 반환합니다.  
   
 ```  
@@ -1268,7 +1263,7 @@ void GetButtonInfo(
   
  프레임 워크를 설정 하는 지정된 된 인덱스에 있는 단추가 없는 경우 `nID` 및 `nStyle` 0으로 및 `iImage` 메서드가 반환 될 때-1입니다.  
   
-##  <a name="getbuttonsize"></a>CMFCToolBar::GetButtonSize  
+##  <a name="getbuttonsize"></a>  CMFCToolBar::GetButtonSize  
  도구 모음에 각 단추의 크기를 반환합니다.  
   
 ```  
@@ -1281,7 +1276,7 @@ CSize GetButtonSize() const;
 ### <a name="remarks"></a>설명  
  호출 [CMFCToolBar::SetSizes](#setsizes) 또는 [CMFCToolBar::SetLockedSizes](#setlockedsizes) 도구 모음에 각 단추의 크기를 설정할 수 있습니다.  
   
-##  <a name="getbuttonstyle"></a>CMFCToolBar::GetButtonStyle  
+##  <a name="getbuttonstyle"></a>  CMFCToolBar::GetButtonStyle  
  지정된 된 인덱스에 있는 도구 모음 단추의 현재 스타일을 반환 합니다.  
   
 ```  
@@ -1298,7 +1293,7 @@ UINT GetButtonStyle(int nIndex) const;
 ### <a name="remarks"></a>설명  
  호출 [CMFCToolBar::SetButtonStyle](#setbuttonstyle) 도구 모음 단추 스타일을 설정 하려면  
   
-##  <a name="getbuttontext"></a>CMFCToolBar::GetButtonText  
+##  <a name="getbuttontext"></a>  CMFCToolBar::GetButtonText  
  지정된 된 인덱스에 있는 단추의 텍스트 레이블을 반환 합니다.  
   
 ```  
@@ -1322,7 +1317,7 @@ void GetButtonText(
 ### <a name="remarks"></a>설명  
  호출 [CMFCToolBar::SetButtonText](#setbuttontext) 또는 [CMFCToolBar::SetToolBarBtnText](#settoolbarbtntext) 텍스트 레이블을 설정할 수 있습니다.  
   
-##  <a name="getcoldimages"></a>CMFCToolBar::GetColdImages  
+##  <a name="getcoldimages"></a>  CMFCToolBar::GetColdImages  
  응용 프로그램에서 콜드 도구 모음 단추 이미지의 컬렉션에 대 한 포인터를 반환합니다.  
   
 ```  
@@ -1335,7 +1330,7 @@ static CMFCToolBarImages* GetColdImages();
 ### <a name="remarks"></a>설명  
  콜드 이미지는 사용자가 도구 모음 단추와 상호 작용 하지 때 사용 되는 이미지입니다. 호출 [CMFCToolBar::LoadBitmapEx](#loadbitmapex) 또는 [CMFCToolBar::LoadBitmap](#loadbitmap) 콜드 이미지를 로드 합니다.  
   
-##  <a name="getcolumnwidth"></a>CMFCToolBar::GetColumnWidth  
+##  <a name="getcolumnwidth"></a>  CMFCToolBar::GetColumnWidth  
  도구 모음 단추의 너비를 반환합니다.  
   
 ```  
@@ -1348,7 +1343,7 @@ virtual int GetColumnWidth() const;
 ### <a name="remarks"></a>설명  
  프레임 워크 도구 모음 레이아웃을 계산 하려면이 메서드를 호출 합니다. 도구 모음에 대 한 다른 열 너비를 지정 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="getcommandbuttons"></a>CMFCToolBar::GetCommandButtons  
+##  <a name="getcommandbuttons"></a>  CMFCToolBar::GetCommandButtons  
  응용 프로그램에서 모든 도구 모음에서 지정 된 명령 ID를가지고 있는 단추의 목록을 반환 합니다.  
   
 ```  
@@ -1367,7 +1362,7 @@ static int GetCommandButtons(
 ### <a name="return-value"></a>반환 값  
  지정한 명령 ID가 있는 단추의 수  
   
-##  <a name="getcount"></a>CMFCToolBar::GetCount  
+##  <a name="getcount"></a>  CMFCToolBar::GetCount  
  도구 모음에서 단추 및 구분 기호 수를 반환합니다.  
   
 ```  
@@ -1377,7 +1372,7 @@ int GetCount() const;
 ### <a name="return-value"></a>반환 값  
  단추 및 도구 모음에서 구분 기호 수입니다.  
   
-##  <a name="getcustomizebutton"></a>CMFCToolBar::GetCustomizeButton  
+##  <a name="getcustomizebutton"></a>  CMFCToolBar::GetCustomizeButton  
  검색에 대 한 포인터는 `CMFCCustomizeButton` 는 도구 모음과 연결 된 개체입니다.  
   
 ```  
@@ -1392,7 +1387,7 @@ CMFCCustomizeButton* GetCustomizeButton();
   
  호출할 수 있습니다는 [CMFCToolBar::IsExistCustomizeButton](#isexistcustomizebutton) 도구 모음에 유효한 포함 되는지 여부를 확인할 수 있는 방법은 `CMFCCustomizeButton` 개체입니다.  
   
-##  <a name="getdefaultimage"></a>CMFCToolBar::GetDefaultImage  
+##  <a name="getdefaultimage"></a>  CMFCToolBar::GetDefaultImage  
  지정한 명령 id입니다. 도구 모음 단추에 대 한 기본 이미지의 인덱스를 반환합니다.  
   
 ```  
@@ -1409,7 +1404,7 @@ static int GetDefaultImage(UINT uiID);
 ### <a name="remarks"></a>설명  
  이 공유 메서드를 사용 된 지정 된 명령 id입니다. 도구 모음 단추에 대 한 기본 이미지의 인덱스를 검색 합니다. 반환 값은 응용 프로그램의 모든 도구 모음에 대 한 도구 모음 단추 이미지의 공유 컬렉션에 대 한 인덱스입니다. 호출의 [CMFCToolBar::GetImages](#getimages) 메서드를이 컬렉션에 대 한 포인터를 가져옵니다.  
   
-##  <a name="getdisabledimages"></a>CMFCToolBar::GetDisabledImages  
+##  <a name="getdisabledimages"></a>  CMFCToolBar::GetDisabledImages  
  응용 프로그램에서 사용할 수 없는 도구 모음 단추에 사용 되는 이미지의 컬렉션에 대 한 포인터를 반환 합니다.  
   
 ```  
@@ -1422,7 +1417,7 @@ static CMFCToolBarImages* __stdcall GetDisabledImages();
 ### <a name="remarks"></a>설명  
  비활성화 된 도구 모음 단추 이미지를 사용 하 여 로드 된 [CMFCToolBarEditBoxButton 클래스](../../mfc/reference/cmfctoolbareditboxbutton-class.md) 및 [CMFCToolBar::LoadBitmap](#loadbitmap) 메서드.  
   
-##  <a name="getdisabledmenuimages"></a>CMFCToolBar::GetDisabledMenuImages  
+##  <a name="getdisabledmenuimages"></a>  CMFCToolBar::GetDisabledMenuImages  
  응용 프로그램에서 사용할 수 없는 메뉴 단추에 사용 되는 이미지의 컬렉션에 대 한 포인터를 반환 합니다.  
   
 ```  
@@ -1435,7 +1430,7 @@ static CMFCToolBarImages* __stdcall GetDisabledMenuImages();
 ### <a name="remarks"></a>설명  
  비활성화 된 이미지를 사용 하 여 로드 된 [CMFCToolBarEditBoxButton 클래스](../../mfc/reference/cmfctoolbareditboxbutton-class.md) 메서드.  
   
-##  <a name="getdroppeddownmenu"></a>CMFCToolBar::GetDroppedDownMenu  
+##  <a name="getdroppeddownmenu"></a>  CMFCToolBar::GetDroppedDownMenu  
  현재 해당 하위 메뉴를 표시 하는 메뉴 단추 개체에 대 한 포인터를 검색 합니다.  
   
 ```  
@@ -1452,7 +1447,7 @@ CMFCToolBarMenuButton* GetDroppedDownMenu(int* pIndex = NULL) const;
 ### <a name="remarks"></a>설명  
  이 메서드가 반환 이외 `NULL` 값 및 `pIndex` 않습니다 `NULL`를 가리키는 값 `pIndex` 도구 모음 단추의 컬렉션에 있는 메뉴 단추의 인덱스로 설정 됩니다.  
   
-##  <a name="getgraydisabledbuttons"></a>CMFCToolBar::GetGrayDisabledButtons  
+##  <a name="getgraydisabledbuttons"></a>  CMFCToolBar::GetGrayDisabledButtons  
  비활성화 된 단추 이미지 흐리게 버전의 일반 단추 이미지 되는지 여부를 지정 하거나 비활성화 된 단추 이미지의 컬렉션에서 가져옵니다.  
   
 ```  
@@ -1460,12 +1455,12 @@ BOOL GetGrayDisabledButtons() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`비활성화 된 단추; 등의 이미지를 흐리게 하 `FALSE` 비활성화 된 이미지 컬렉션에서 이미지를 가져올 수 있습니다.  
+ `TRUE` 비활성화 된 단추; 등의 이미지를 흐리게 하 `FALSE` 비활성화 된 이미지 컬렉션에서 이미지를 가져올 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
  사용 하 여 [CMFCToolBar::SetGrayDisabledButtons](#setgraydisabledbuttons) 흐리게 이미지와 이미지를 사용할 수 없는 이미지의 컬렉션 간에 전환할 수 있습니다.  
   
-##  <a name="gethighlightedbutton"></a>CMFCToolBar::GetHighlightedButton  
+##  <a name="gethighlightedbutton"></a>  CMFCToolBar::GetHighlightedButton  
  현재 강조 표시 하는 도구 모음 단추에 대 한 포인터를 반환 합니다.  
   
 ```  
@@ -1478,7 +1473,7 @@ CMFCToolBarButton* GetHighlightedButton() const;
 ### <a name="remarks"></a>설명  
  키보드 포커스가 있으면 도구 모음 단추를 강조 표시 됩니다. 도구 모음 단추는 작동 중 추적 된이 응용 프로그램의 경우 도구 모음 단추를 강조 표시도 됩니다 (자세한 내용은 참조 [CMFCToolBar::GetHotBorder](#gethotborder) 및 [CMFCToolBar::SetHotBorder](#sethotborder))와 마우스 없는 도구 모음 단추 또는 메뉴 항목에 키보드 포커스가 있을 때 한번 가리킵니다.  
   
-##  <a name="gethotborder"></a>CMFCToolBar::GetHotBorder  
+##  <a name="gethotborder"></a>  CMFCToolBar::GetHotBorder  
  도구 모음 단추가 있는지 여부를 결정 *작동 중 추적 된*합니다. 단추를 작동 중 추적 된 경우 마우스를 통해 이동할 때 강조 표시 됩니다.  
   
 ```  
@@ -1486,12 +1481,12 @@ BOOL GetHotBorder() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`작동 중 추적 된; 경우 도구 모음 단추 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 작동 중 추적 된; 경우 도구 모음 단추 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  기본적으로 도구 모음 단추 작동 중 추적 된 됩니다.  
   
-##  <a name="gethottextcolor"></a>CMFCToolBar::GetHotTextColor  
+##  <a name="gethottextcolor"></a>  CMFCToolBar::GetHotTextColor  
  강조 표시 된 도구 모음 단추 텍스트 색을 반환합니다.  
   
 ```  
@@ -1504,7 +1499,7 @@ static COLORREF GetHotTextColor();
 ### <a name="remarks"></a>설명  
  호출 [CMFCToolBar::SetHotTextColor](#sethottextcolor) 강조 표시 된 도구 모음 단추에 대 한 새 텍스트 색을 설정 하려면.  
   
-##  <a name="gethwndlastfocus"></a>CMFCToolBar::GetHwndLastFocus  
+##  <a name="gethwndlastfocus"></a>  CMFCToolBar::GetHwndLastFocus  
  도구 모음 전에 방금 입력된 포커스를 창에 대 한 핸들을 반환 합니다.  
   
 ```  
@@ -1517,7 +1512,7 @@ HWND GetHwndLastFocus() const;
 ### <a name="remarks"></a>설명  
  경우는 `CMFCToolBar` 입력된 포커스를 받을, 나중에 복원할 수 있도록 포커스를 손실 하는 창에 대 한 핸들을 저장 합니다.  
   
-##  <a name="getignoresettext"></a>CMFCToolBar::GetIgnoreSetText  
+##  <a name="getignoresettext"></a>  CMFCToolBar::GetIgnoreSetText  
  단추 레이블 설정에 대 한 호출 무시 되는지 여부를 지정 합니다.  
   
 ```  
@@ -1525,11 +1520,11 @@ BOOL GetIgnoreSetText() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`이면 단추 레이블 설정에 대 한 호출에 대해서는; 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 이면 단추 레이블 설정에 대 한 호출에 대해서는; 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getimages"></a>CMFCToolBar::GetImages  
+##  <a name="getimages"></a>  CMFCToolBar::GetImages  
  포인터의 기본 컬렉션에 단추 이미지 반환 응용 프로그램에서 합니다.  
   
 ```  
@@ -1542,7 +1537,7 @@ static CMFCToolBarImages* GetImages();
 ### <a name="remarks"></a>설명  
  이 공유 메서드 응용 프로그램에 대 한 모든 기본 컬렉션에 대 한 액세스 도구 모음 이미지를 제공 합니다. 호출의 [CMFCToolBar::LoadBitmap](#loadbitmap) 메서드를 컬렉션에 이미지를 추가 합니다.  
   
-##  <a name="getimagesize"></a>CMFCToolBar::GetImageSize  
+##  <a name="getimagesize"></a>  CMFCToolBar::GetImageSize  
  도구 모음 단추 이미지의 현재 크기를 반환합니다.  
   
 ```  
@@ -1552,7 +1547,7 @@ CSize GetImageSize() const;
 ### <a name="return-value"></a>반환 값  
  A [CSize 클래스](../../atl-mfc-shared/reference/csize-class.md) 도구 모음 단추 이미지의 현재 크기를 나타내는 개체입니다.  
   
-##  <a name="getimagesoffset"></a>CMFCToolBar::GetImagesOffset  
+##  <a name="getimagesoffset"></a>  CMFCToolBar::GetImagesOffset  
  도구 모음 단추 이미지의 전체 목록에이 도구 모음에 대 한 도구 모음 단추 이미지를 찾는 데 인덱스 오프셋을 반환 합니다.  
   
 ```  
@@ -1569,7 +1564,7 @@ int GetImagesOffset() const;
   
  호출 [CMFCToolBar::GetImages](#getimages) 도구 모음 이미지의 컬렉션에 대 한 포인터를 가져올 수 있습니다.  
   
-##  <a name="getinvalidateitemrect"></a>CMFCToolBar::GetInvalidateItemRect  
+##  <a name="getinvalidateitemrect"></a>  CMFCToolBar::GetInvalidateItemRect  
  지정된 된 인덱스에 있는 단추에 대 한 다시 그려야 하는 클라이언트 영역의 영역을 검색 합니다.  
   
 ```  
@@ -1588,7 +1583,7 @@ virtual void GetInvalidateItemRect(
 ### <a name="remarks"></a>설명  
  `lpRect` 매개 변수가 아니어야 `NULL`합니다. 지정 된 인덱스에 있을 때 단추가 없습니다 `lpRect` 수신는 `RECT` 0으로 초기화 되는 개체입니다.  
   
-##  <a name="getitemid"></a>CMFCToolBar::GetItemID  
+##  <a name="getitemid"></a>  CMFCToolBar::GetItemID  
  지정된 된 인덱스에서 도구 모음 단추의 명령 ID를 반환합니다.  
   
 ```  
@@ -1602,7 +1597,7 @@ UINT GetItemID(int nIndex) const;
 ### <a name="return-value"></a>반환 값  
  도구 모음 단추의 명령 ID 또는 지정 된 인덱스 단추 존재 하지 않는 경우 0입니다.  
   
-##  <a name="getitemrect"></a>CMFCToolBar::GetItemRect  
+##  <a name="getitemrect"></a>  CMFCToolBar::GetItemRect  
  지정된 된 인덱스에 있는 단추의 경계 사각형을 반환합니다.  
   
 ```  
@@ -1621,13 +1616,13 @@ virtual void GetItemRect(
 ### <a name="remarks"></a>설명  
  `CRect` 있는 개체를 `lpRect` 포인트는 지정된 된 인덱스에 단추 존재 하지 않는 경우 0으로 설정 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 사용 하는 `GetItemRect` 의 메서드는 `CMFCToolBar` 클래스. 이 코드 조각은의 일부인는 [IE 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_IEDemo#9](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_4.cpp)]  
   
-##  <a name="getlargecoldimages"></a>CMFCToolBar::GetLargeColdImages  
+##  <a name="getlargecoldimages"></a>  CMFCToolBar::GetLargeColdImages  
  응용 프로그램에서 큰 콜드 도구 모음 단추 이미지의 컬렉션에 대 한 포인터를 반환합니다.  
   
 ```  
@@ -1640,7 +1635,7 @@ static CMFCToolBarImages* GetLargeColdImages();
 ### <a name="remarks"></a>설명  
  콜드 이미지는 사용자가 도구 모음 단추와 상호 작용 하지 때 사용 되는 이미지입니다. 호출 [CMFCToolBar::LoadBitmapEx](#loadbitmapex) 큰 콜드 이미지를 로드 합니다.  
   
-##  <a name="getlargedisabledimages"></a>CMFCToolBar::GetLargeDisabledImages  
+##  <a name="getlargedisabledimages"></a>  CMFCToolBar::GetLargeDisabledImages  
  응용 프로그램에서 사용할 수 없는 큰 도구 모음 단추 이미지의 컬렉션에 대 한 포인터를 반환합니다.  
   
 ```  
@@ -1653,7 +1648,7 @@ static CMFCToolBarImages* GetLargeDisabledImages();
 ### <a name="remarks"></a>설명  
  큰 이미지는 일반 도구 모음 단추 이미지의 대규모 버전입니다. 호출 [CMFCToolBar::LoadBitmapEx](#loadbitmapex) 또는 [CMFCToolBar::LoadBitmap](#loadbitmap) 큰 이미지를 로드 합니다.  
   
-##  <a name="getlargeimages"></a>CMFCToolBar::GetLargeImages  
+##  <a name="getlargeimages"></a>  CMFCToolBar::GetLargeImages  
  응용 프로그램에서 큰 도구 모음 단추 이미지의 컬렉션에 대 한 포인터를 반환합니다.  
   
 ```  
@@ -1666,7 +1661,7 @@ static CMFCToolBarImages* GetLargeImages();
 ### <a name="remarks"></a>설명  
  큰 이미지는 일반 도구 모음 단추 이미지의 대규모 버전입니다. 호출 [CMFCToolBar::LoadBitmapEx](#loadbitmapex) 큰 이미지를 로드 합니다.  
   
-##  <a name="getlockedcoldimages"></a>CMFCToolBar::GetLockedColdImages  
+##  <a name="getlockedcoldimages"></a>  CMFCToolBar::GetLockedColdImages  
  도구 모음에서 잠긴된 콜드 이미지의 컬렉션에 대 한 포인터를 반환합니다.  
   
 ```  
@@ -1683,7 +1678,7 @@ CMFCToolBarImages* GetLockedColdImages();
   
  호출 된 [CMFCToolBar::LoadBitmapEx](#loadbitmapex) 메서드 잠긴된 콜드 이미지를 로드 합니다.  
   
-##  <a name="getlockeddisabledimages"></a>CMFCToolBar::GetLockedDisabledImages  
+##  <a name="getlockeddisabledimages"></a>  CMFCToolBar::GetLockedDisabledImages  
  도구 모음에서 잠긴된 비활성화 된 이미지의 컬렉션에 대 한 포인터를 반환합니다.  
   
 ```  
@@ -1700,7 +1695,7 @@ CMFCToolBarImages* GetLockedDisabledImages();
   
  호출 된 [CMFCToolBar::LoadBitmapEx](#loadbitmapex) 개체의 잠금에 대 한 이미지를 비활성화 합니다.  
   
-##  <a name="getlockedimages"></a>CMFCToolBar::GetLockedImages  
+##  <a name="getlockedimages"></a>  CMFCToolBar::GetLockedImages  
  도구 모음에서 잠긴된 단추 이미지의 컬렉션에 대 한 포인터를 반환합니다.  
   
 ```  
@@ -1715,7 +1710,7 @@ CMFCToolBarImages* GetLockedImages();
   
  이 메서드가 반환 `NULL` 도구 모음에서 잠겨 있지 않은 경우. 이 메서드 생성 어설션 오류 디버그 빌드 도구 모음에서 잠겨 있지 않은 경우. 잠긴된 도구 모음에 대 한 자세한 내용은 참조 [CMFCToolBar::IsLocked](#islocked)합니다.  
   
-##  <a name="getlockedimagesize"></a>CMFCToolBar::GetLockedImageSize  
+##  <a name="getlockedimagesize"></a>  CMFCToolBar::GetLockedImageSize  
  잠긴된 도구 모음 이미지의 기본 크기를 반환합니다.  
   
 ```  
@@ -1732,7 +1727,7 @@ CSize GetLockedImageSize() const;
   
  호출의 [CMFCToolBar::SetLockedSizes](#setlockedsizes) 메서드 잠긴된 이미지 크기를 지정 합니다.  
   
-##  <a name="getlockedmenuimages"></a>CMFCToolBar::GetLockedMenuImages  
+##  <a name="getlockedmenuimages"></a>  CMFCToolBar::GetLockedMenuImages  
  대 한 포인터 컬렉션 잠긴된 도구 모음에 메뉴 이미지 반환 도구 모음에서 합니다.  
   
 ```  
@@ -1749,7 +1744,7 @@ CMFCToolBarImages* GetLockedMenuImages();
   
  호출 된 [CMFCToolBar::LoadBitmapEx](#loadbitmapex) 메서드 잠긴된 메뉴 이미지를 로드 합니다.  
   
-##  <a name="getmenubuttonsize"></a>CMFCToolBar::GetMenuButtonSize  
+##  <a name="getmenubuttonsize"></a>  CMFCToolBar::GetMenuButtonSize  
  응용 프로그램에서 메뉴 단추의 크기를 반환합니다.  
   
 ```  
@@ -1764,7 +1759,7 @@ static CSize GetMenuButtonSize();
   
  호출 [CMFCToolBar::SetMenuSizes](#setmenusizes) 이 전역 변수를 설정 합니다.  
   
-##  <a name="getmenuimages"></a>CMFCToolBar::GetMenuImages  
+##  <a name="getmenuimages"></a>  CMFCToolBar::GetMenuImages  
  응용 프로그램에서 메뉴 단추 이미지의 컬렉션에 대 한 포인터를 반환합니다.  
   
 ```  
@@ -1779,7 +1774,7 @@ static CMFCToolBarImages* GetMenuImages();
   
  호출 된 [CMFCToolBar::SetMenuSizes](#setmenusizes) 단추와 해당 이미지의 크기를 설정 하는 메서드.  
   
-##  <a name="getmenuimagesize"></a>CMFCToolBar::GetMenuImageSize  
+##  <a name="getmenuimagesize"></a>  CMFCToolBar::GetMenuImageSize  
  응용 프로그램에서 메뉴 단추 이미지의 크기를 반환합니다.  
   
 ```  
@@ -1792,7 +1787,7 @@ static CSize GetMenuImageSize();
 ### <a name="remarks"></a>설명  
  이 메서드는 전역 변수로 유지 관리 되는 도구 모음 메뉴 단추에서 이미지의 크기를 반환 합니다. 호출 [CMFCToolBar::SetMenuSizes](#setmenusizes) 이 전역 변수를 설정 합니다.  
   
-##  <a name="getorigbuttons"></a>CMFCToolBar::GetOrigButtons  
+##  <a name="getorigbuttons"></a>  CMFCToolBar::GetOrigButtons  
  도구 모음의 단추 사용자 지정 되지 않은 컬렉션을 검색합니다.  
   
 ```  
@@ -1807,7 +1802,7 @@ const CObList& GetOrigButtons() const;
   
  도구 모음에 대 한 원래 단추의 목록을 설정 하려면 호출는 [CMFCToolBar::SetOrigButtons](#setorigbuttons) 메서드.  
   
-##  <a name="getorigresetbuttons"></a>CMFCToolBar::GetOrigResetButtons  
+##  <a name="getorigresetbuttons"></a>  CMFCToolBar::GetOrigResetButtons  
  도구 모음의 단추 사용자 지정 되지 않은 다시 설정의 컬렉션을 검색 합니다.  
   
 ```  
@@ -1822,7 +1817,7 @@ const CObList& GetOrigResetButtons() const;
   
  [CMFCToolBar::SetButtons](#setbuttons) 메서드 호출 후 원래 다시 설정 단추 목록에 각 도구 모음 단추의 복사본을 추가 [CMFCToolBar::OnReset](#onreset) 메서드. 재정의할 수 있습니다는 [CMFCToolBar::OnReset](#onreset) 후 사용자가 단추의 모양을 사용자 지정 하는 메서드는 **재설정** 단추입니다.  
   
-##  <a name="getresourceid"></a>CMFCToolBar::GetResourceID  
+##  <a name="getresourceid"></a>  CMFCToolBar::GetResourceID  
  도구 모음의 리소스 ID를 검색합니다.  
   
 ```  
@@ -1835,7 +1830,7 @@ UINT GetResourceID() const;
 ### <a name="remarks"></a>설명  
  호출 된 [CMFCToolBar::LoadToolBarEx](#loadtoolbarex) 도구 모음의 리소스 ID를 설정 하는 메서드.  
   
-##  <a name="getroutecommandsviaframe"></a>CMFCToolBar::GetRouteCommandsViaFrame  
+##  <a name="getroutecommandsviaframe"></a>  CMFCToolBar::GetRouteCommandsViaFrame  
  개체, 부모 프레임 또는 소유자 결정, 도구 모음에 명령을 보냅니다.  
   
 ```  
@@ -1850,7 +1845,7 @@ BOOL GetRouteCommandsViaFrame();
   
  이 메서드는 0이 아닌 값을 반환 하는 경우 사용 하 여 부모 프레임 개체에 대 한 포인터를 검색할 수 있습니다는 `CMFCToolBar::GetCommandTarget` 메서드. 이 메서드를 사용 하는 예제에 대 한 VisualStudioDemo 샘플을 참조 하십시오.  
   
-##  <a name="getrowheight"></a>CMFCToolBar::GetRowHeight  
+##  <a name="getrowheight"></a>  CMFCToolBar::GetRowHeight  
  도구 모음 단추의 높이 반환합니다.  
   
 ```  
@@ -1863,7 +1858,7 @@ virtual int GetRowHeight() const;
 ### <a name="remarks"></a>설명  
  프레임 워크 도구 모음 레이아웃을 계산 하려면이 메서드를 호출 합니다. 도구 모음에 대 한 다른 높이 지정 하려면 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="getshowtooltips"></a>CMFCToolBar::GetShowTooltips  
+##  <a name="getshowtooltips"></a>  CMFCToolBar::GetShowTooltips  
  도구 모음 단추에 대 한 도구 설명 표시 되는지 여부를 지정 합니다.  
   
 ```  
@@ -1871,12 +1866,12 @@ static BOOL GetShowTooltips();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`도구 모음 단추;에 대 한 도구 설명을 표시 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 도구 모음 단추;에 대 한 도구 설명을 표시 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  기본적으로 도구 설명 표시 됩니다. 호출 하 여 정적이 플래그를 변경할 수 있습니다 [CMFCToolBar::SetShowTooltips](#setshowtooltips)합니다.  
   
-##  <a name="getsiblingtoolbar"></a>CMFCToolBar::GetSiblingToolBar  
+##  <a name="getsiblingtoolbar"></a>  CMFCToolBar::GetSiblingToolBar  
  도구 모음의 형제를 검색 합니다.  
   
 ```  
@@ -1889,7 +1884,7 @@ CMFCToolBar* GetSiblingToolBar();
 ### <a name="remarks"></a>설명  
  사용 하도록 설정 하는 방법에 대 한 자세한 내용은 **표시 단추를 한 줄** 및 **표시 단추를 두 줄** 단추, 참조 [cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)합니다.  
   
-##  <a name="getuserimages"></a>CMFCToolBar::GetUserImages  
+##  <a name="getuserimages"></a>  CMFCToolBar::GetUserImages  
  응용 프로그램에서 사용자 정의 도구 모음 단추 이미지의 컬렉션에 대 한 포인터를 반환합니다.  
   
 ```  
@@ -1902,7 +1897,7 @@ static CMFCToolBarImages* GetUserImages();
 ### <a name="remarks"></a>설명  
  호출 된 [CMFCToolBar::SetUserImages](#setuserimages) 응용 프로그램에서 사용자 지정 이미지의 컬렉션을 설정 하는 메서드.  
   
-##  <a name="hittest"></a>CMFCToolBar::HitTest  
+##  <a name="hittest"></a>  CMFCToolBar::HitTest  
  지정된 된 위치에 있는 도구 모음 단추의 인덱스를 반환 합니다.  
   
 ```  
@@ -1916,7 +1911,7 @@ virtual int HitTest(CPoint point);
 ### <a name="return-value"></a>반환 값  
  에 있는 지정된 된 위치 또는-1 이러한 단추가 없습니다 또는 단추가 있는 경우 단추의 인덱스 구분 기호입니다.  
   
-##  <a name="insertbutton"></a>CMFCToolBar::InsertButton  
+##  <a name="insertbutton"></a>  CMFCToolBar::InsertButton  
  도구 모음에 단추를 삽입합니다.  
   
 ```  
@@ -1945,7 +1940,7 @@ virtual int InsertButton(
   
  호출 된 [CMFCToolBar::InsertSeparator](#insertseparator) 도구 모음에는 구분 기호를 삽입 하는 메서드.  
   
-##  <a name="insertseparator"></a>CMFCToolBar::InsertSeparator  
+##  <a name="insertseparator"></a>  CMFCToolBar::InsertSeparator  
  도구 모음에는 구분 기호를 삽입합니다.  
   
 ```  
@@ -1966,7 +1961,7 @@ virtual int InsertSeparator(INT_PTR iInsertAt=-1);
   
  호출 된 [CMFCToolBar::InsertButton](#insertbutton) 메서드 도구 모음에는 단추를 삽입 합니다.  
   
-##  <a name="invalidatebutton"></a>CMFCToolBar::InvalidateButton  
+##  <a name="invalidatebutton"></a>  CMFCToolBar::InvalidateButton  
  지정 된 인덱스에 있는 도구 모음 단추의 클라이언트 영역을 무효화 합니다.  
   
 ```  
@@ -1983,7 +1978,7 @@ CMFCToolBarButton* InvalidateButton(int nIndex);
 ### <a name="remarks"></a>설명  
  프레임 워크 도구 모음 단추와 연결 된 클라이언트 영역을 업데이트 하는 경우이 메서드를 호출 합니다. 호출 된 [CWnd::InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect) 의 클라이언트 영역에 사용 하 여 메서드는 `CMFCToolBarButton` 제공된 된 인덱스에 있는 개체입니다.  
   
-##  <a name="isaddremovequickcustomize"></a>CMFCToolBar::IsAddRemoveQuickCustomize  
+##  <a name="isaddremovequickcustomize"></a>  CMFCToolBar::IsAddRemoveQuickCustomize  
  사용자가 추가 하거나 도구 모음 단추를 사용 하 여 제거할 수 있는지 여부를 결정은 **사용자 지정** 메뉴 옵션입니다.  
   
 ```  
@@ -1991,11 +1986,11 @@ BOOL IsAddRemoveQuickCustomize();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`사용자가 사용할 수 있는 경우는 **사용자 지정** 메뉴 옵션 모음을 수정 하 고, 그러지 `FALSE`합니다.  
+ `TRUE` 사용자가 사용할 수 있는 경우는 **사용자 지정** 메뉴 옵션 모음을 수정 하 고, 그러지 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="isaltcustomizemode"></a>CMFCToolBar::IsAltCustomizeMode  
+##  <a name="isaltcustomizemode"></a>  CMFCToolBar::IsAltCustomizeMode  
  지정 하는지 여부를 *빠른 사용자 지정* 는 단추를 끌어에 사용 됩니다. 빠른 사용자 지정을 사용 하면 사용자 수 Alt 키 누른 단추를 새 위치로 끕니다.  
   
 ```  
@@ -2003,11 +1998,11 @@ static BOOL __stdcall IsAltCustomizeMode();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`빠른 사용자 지정 단추; 드래그 사용 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 빠른 사용자 지정 단추; 드래그 사용 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="isautograyinactiveimages"></a>CMFCToolBar::IsAutoGrayInactiveImages  
+##  <a name="isautograyinactiveimages"></a>  CMFCToolBar::IsAutoGrayInactiveImages  
  비활성 (비-강조 표시) 단추 이미지의 자동 생성을 사용할지 여부를 지정 합니다.  
   
 ```  
@@ -2015,12 +2010,12 @@ static BOOL IsAutoGrayInactiveImages();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`자동으로 비활성 이미지를 흐리게 하 옵션을 사용 합니다. 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 자동으로 비활성 이미지를 흐리게 하 옵션을 사용 합니다. 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  호출 하 여 비활성 이미지의 기능을 사용 하지 않도록 설정 하거나 설정할 수 있습니다 [CMFCToolBar::AutoGrayInactiveImages](#autograyinactiveimages)합니다.  
   
-##  <a name="isbasiccommand"></a>CMFCToolBar::IsBasicCommand  
+##  <a name="isbasiccommand"></a>  CMFCToolBar::IsBasicCommand  
  기본 명령 목록에는 명령 인지를 결정 합니다.  
   
 ```  
@@ -2032,12 +2027,12 @@ static BOOL IsBasicCommand(UINT uiCmd);
  확인 하려면 명령을 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`지정된 된 기본 명령; 목록에 속하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 지정된 된 기본 명령; 목록에 속하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  이 정적 메서드는 명령으로 지정 되었는지 여부를 결정 `uiCmd` 기본 명령의 전역 목록에 속합니다. 호출 하 여 기본 명령의 목록을 변경할 수 있습니다 [CMFCToolBar::AddBasicCommand](#addbasiccommand) 또는 [CMFCToolBar::SetBasicCommands](#setbasiccommands)합니다.  
   
-##  <a name="isbuttonextrasizeavailable"></a>CMFCToolBar::IsButtonExtraSizeAvailable  
+##  <a name="isbuttonextrasizeavailable"></a>  CMFCToolBar::IsButtonExtraSizeAvailable  
  도구 모음 테두리를 확장 한 단추를 표시할 수 있는지 여부를 결정 합니다.  
   
 ```  
@@ -2045,14 +2040,14 @@ virtual BOOL IsButtonExtraSizeAvailable() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`막대 여분의 테두리 크기를 사용 하는 단추를 표시할 수 있으면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 막대 여분의 테두리 크기를 사용 하는 단추를 표시할 수 있으면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  도구 모음 개체를 반환 `TRUE` 경우 테두리를 확장 한 단추를 표시할 수 있습니다. 도구 모음 단추를 처리 하는 경우이 메서드를 호출 하는 [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd) 알림의 내부 추가 테두리 크기 플래그를 적절 하 게 설정 됩니다. 이 내부 플래그를 호출 하 여 나중에 검색 될 수 있습니다 [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize)합니다.  
   
  파생 된 클래스에서이 메서드를 재정의 `CMFCToolBar` 다음 다시 돌아와 `TRUE` 표시줄에 별도 테두리 크기와 도구 모음 단추를 표시 하 고 반환할 수 있으면 `FALSE` 그렇지 않은 경우. 기본 구현은 `TRUE`를 반환합니다.  
   
-##  <a name="isbuttonhighlighted"></a>CMFCToolBar::IsButtonHighlighted  
+##  <a name="isbuttonhighlighted"></a>  CMFCToolBar::IsButtonHighlighted  
  지정 된 단추가 강조 표시 하는지 여부를 결정 합니다.  
   
 ```  
@@ -2064,11 +2059,11 @@ BOOL IsButtonHighlighted(int iButton) const;
  도구 모음 단추의 인덱스를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`지정 된 단추가; 강조 표시 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 지정 된 단추가; 강조 표시 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="iscommandpermitted"></a>CMFCToolBar::IsCommandPermitted  
+##  <a name="iscommandpermitted"></a>  CMFCToolBar::IsCommandPermitted  
  명령을 허용 되는지 여부를 결정 합니다.  
   
 ```  
@@ -2080,14 +2075,14 @@ static BOOL IsCommandPermitted(UINT uiCmd);
  확인 하려면 명령을 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`지정된 된 명령을 작업이 허용 됩니다. 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 지정된 된 명령을 작업이 허용 됩니다. 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  이 정적 메서드는 명령으로 지정 되었는지 여부를 결정 `uiCmd` 전역 비 허용 명령 목록에 속합니다.  
   
  호출 하 여 비 허용 명령 목록을 변경할 수 있습니다 [CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands)합니다.  
   
-##  <a name="iscommandrarelyused"></a>CMFCToolBar::IsCommandRarelyUsed  
+##  <a name="iscommandrarelyused"></a>  CMFCToolBar::IsCommandRarelyUsed  
  명령을 거의 사용 여부를 결정 합니다.  
   
 ```  
@@ -2099,7 +2094,7 @@ static BOOL IsCommandRarelyUsed(UINT uiCmd);
  확인 하려면 명령을 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`지정된 된 명령을 거의 사용 되지 않으면 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 지정된 된 명령을 거의 사용 되지 않으면 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  `IsCommandRarelyUsed` 메서드 반환 `FALSE` 다음 조건 중 하나 이상이 발생 하는 경우:  
@@ -2114,7 +2109,7 @@ static BOOL IsCommandRarelyUsed(UINT uiCmd);
   
 -   명령 호출의 20% 이상의 지정된 된 명령에 대 한 호출 됩니다.  
   
-##  <a name="iscustomizemode"></a>CMFCToolBar::IsCustomizeMode  
+##  <a name="iscustomizemode"></a>  CMFCToolBar::IsCustomizeMode  
  도구 모음 프레임 워크 사용자 지정 모드에 있는지 여부를 지정 합니다.  
   
 ```  
@@ -2122,14 +2117,14 @@ static BOOL IsCustomizeMode();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`사용자 지정 모드에는 프레임 워크는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 사용자 지정 모드에는 프레임 워크는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  사용자 지정 모드를 설정/해제를 호출 하 여 [CMFCToolBar::SetCustomizeMode](#setcustomizemode)합니다.  
   
  사용자가 사용자 지정 대화 상자를 호출할 때 모드를 변경 하는 프레임 워크 ( [CMFCToolBarsCustomizeDialog 클래스](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)).  
   
-##  <a name="isdragbutton"></a>CMFCToolBar::IsDragButton  
+##  <a name="isdragbutton"></a>  CMFCToolBar::IsDragButton  
  도구 모음 단추를 끄는 있는지 여부를 결정 합니다.  
   
 ```  
@@ -2141,11 +2136,11 @@ BOOL IsDragButton(const CMFCToolBarButton* pButton) const;
  도구 모음 단추에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`지정한 단추의; 끌어온 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 지정한 단추의; 끌어온 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="isexistcustomizebutton"></a>CMFCToolBar::IsExistCustomizeButton  
+##  <a name="isexistcustomizebutton"></a>  CMFCToolBar::IsExistCustomizeButton  
  도구 모음에 포함 되어 있는지 여부를 결정 하는 **사용자 지정** 단추입니다.  
   
 ```  
@@ -2153,14 +2148,14 @@ BOOL IsExistCustomizeButton();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`도구 모음을 포함 하는 경우는 **사용자 지정** 단추; 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 도구 모음을 포함 하는 경우는 **사용자 지정** 단추; 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드가 반환 하는 경우 `TRUE`, [CMFCToolBar::GetCustomizeButton](#getcustomizebutton) 에 대 한 포인터를 반환 하는 메서드는 **사용자 지정** 끝 도구 모음에 나타나는 단추입니다.  
   
  사용 하 여는 [cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton) 를 추가 하려면 메서드는 **사용자 지정** 를 도구 모음 단추입니다.  
   
-##  <a name="isfloating"></a>CMFCToolBar::IsFloating  
+##  <a name="isfloating"></a>  CMFCToolBar::IsFloating  
  도구 모음이 지 여부를 결정 합니다.  
   
 ```  
@@ -2168,9 +2163,9 @@ virtual BOOL IsFloating() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`도구 모음; 부동 창인 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 도구 모음; 부동 창인 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="islargeicons"></a>CMFCToolBar::IsLargeIcons  
+##  <a name="islargeicons"></a>  CMFCToolBar::IsLargeIcons  
  응용 프로그램에서 도구 모음 현재 큰 아이콘을 표시할지 여부를 지정 합니다.  
   
 ```  
@@ -2178,14 +2173,14 @@ static BOOL IsLargeIcons();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`응용 프로그램에서 큰 아이콘;를 사용 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 응용 프로그램에서 큰 아이콘;를 사용 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  호출 [CMFCToolBar::SetLargeIcons](#setlargeicons) 큰 아이콘와 일반 아이콘 사이 전환 합니다.  
   
  프레임 워크는 자동으로 모드를 변경 하면 전환할 때는 **큰 아이콘** 확인란에는 **옵션** 의 페이지는 **사용자 지정** 대화 상자.  
   
-##  <a name="islastcommandfrombutton"></a>CMFCToolBar::IsLastCommandFromButton  
+##  <a name="islastcommandfrombutton"></a>  CMFCToolBar::IsLastCommandFromButton  
  지정 된 도구 모음 단추에서 명령을 보낸 가장 최근에 실행 여부를 확인 합니다.  
   
 ```  
@@ -2197,12 +2192,12 @@ static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
  단추에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`마지막 명령은 단추에서 받은 하 `pButton` 지정; 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 마지막 명령은 단추에서 받은 하 `pButton` 지정; 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드는에 대 한 포인터를 가져옵니다는 [MSG 구조체](../../mfc/reference/msg-structure1.md) 호출 하 여 `CWnd::GetCurrentMessage`합니다. 다음 비교는 `HWND` 와 단추는 `MSG::lParam` 및 `MSG::hwnd` 단추 명령 원본 했는지 확인 하려면 멤버입니다.  
   
-##  <a name="islocked"></a>CMFCToolBar::IsLocked  
+##  <a name="islocked"></a>  CMFCToolBar::IsLocked  
  도구 모음을 잠글지 여부를 결정 합니다.  
   
 ```  
@@ -2210,14 +2205,14 @@ BOOL IsLocked() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`도구 모음; 잠긴 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 도구 모음; 잠긴 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드가 반환 `TRUE` 사용자 도구 모음 단추 위치를 변경 하는 등의 사용자 지정 작업을 수행할 수 없습니다.  
   
  잠긴된 도구 모음에는 별도 이미지 목록을 사용합니다. 이러한 이미지 목록에 대 한 자세한 내용은 참조 [CMFCToolBar::LoadBitmapEx](#loadbitmapex)합니다.  
   
-##  <a name="isonerowwithsibling"></a>Cmfctoolbar:: Isonerowwithsibling  
+##  <a name="isonerowwithsibling"></a>  Cmfctoolbar:: Isonerowwithsibling  
  도구 모음 및 해당 형제 도구 모음 같은 줄에 배치 되는지 여부를 결정 합니다.  
   
 ```  
@@ -2225,14 +2220,14 @@ BOOL IsOneRowWithSibling();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`도구 모음와 그 형제는 동일한 행에 위치 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 도구 모음와 그 형제는 동일한 행에 위치 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  [cmfccustomizebutton:: Createpopupmenu](http://msdn.microsoft.com/en-us/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) 표시 하는 방법을 확인 하려면이 메서드를 호출 하는 메서드는 **사용자 지정** 팝업 메뉴입니다. 이 메서드가 반환 하는 경우 `TRUE`, 프레임 워크가 표시는 **표시 단추를 한 줄** 단추입니다. 프레임 워크가 표시 하는 그렇지 않은 경우는 **표시 단추를 두 줄** 단추입니다.  
   
  일반적으로 이 메서드를 사용할 필요가 없습니다. 사용할 수 있도록는 **표시 단추를 한 줄** 또는 **표시 단추를 두 줄** 단추, 호출 [cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)합니다.  
   
-##  <a name="isresourcechanged"></a>CMFCToolBar::IsResourceChanged  
+##  <a name="isresourcechanged"></a>  CMFCToolBar::IsResourceChanged  
 
   
 ```  
@@ -2243,7 +2238,7 @@ virtual BOOL IsResourceChanged() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="issibling"></a>CMFCToolBar::IsSibling  
+##  <a name="issibling"></a>  CMFCToolBar::IsSibling  
 
   
 ```  
@@ -2254,7 +2249,7 @@ BOOL IsSibling();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="isuserdefined"></a>CMFCToolBar::IsUserDefined  
+##  <a name="isuserdefined"></a>  CMFCToolBar::IsUserDefined  
  도구 모음 사용자 지정 인지를 지정 합니다.  
   
 ```  
@@ -2262,9 +2257,9 @@ BOOL IsUserDefined() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`도구 모음 사용자에 의해 생성 된 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 도구 모음 사용자에 의해 생성 된 경우 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="loadbitmap"></a>CMFCToolBar::LoadBitmap  
+##  <a name="loadbitmap"></a>  CMFCToolBar::LoadBitmap  
  응용 프로그램 리소스에서 도구 모음 이미지를 로드합니다.  
   
 ```  
@@ -2288,7 +2283,7 @@ virtual BOOL LoadBitmap(
  일반 메뉴 이미지를 참조하는 비트맵의 리소스 ID입니다.  
   
  [in] `bLocked`  
- `TRUE`도구 모음을 잠그려면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 도구 모음을 잠그려면 그렇지 않으면 `FALSE`합니다.  
   
  [in] `uiDisabledResID`  
  비활성화된 도구 모음 이미지를 참조하는 비트맵의 리소스 ID입니다.  
@@ -2304,7 +2299,7 @@ virtual BOOL LoadBitmap(
   
  `LoadBitmapEx` 메서드를 호출하여 도구 모음을 만든 후 추가 이미지를 로드합니다.  
   
-##  <a name="loadbitmapex"></a>CMFCToolBar::LoadBitmapEx  
+##  <a name="loadbitmapex"></a>  CMFCToolBar::LoadBitmapEx  
 
   
 ```  
@@ -2321,7 +2316,7 @@ virtual BOOL LoadBitmapEx(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="loadlargeiconsstate"></a>CMFCToolBar::LoadLargeIconsState  
+##  <a name="loadlargeiconsstate"></a>  CMFCToolBar::LoadLargeIconsState  
 
   
 ```  
@@ -2335,7 +2330,7 @@ static BOOL __stdcall LoadLargeIconsState(LPCTSTR lpszProfileName = NULL);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="loadparameters"></a>CMFCToolBar::LoadParameters  
+##  <a name="loadparameters"></a>  CMFCToolBar::LoadParameters  
  Windows 레지스트리에서 일반 도구 모음 옵션을 로드합니다.  
   
 ```  
@@ -2354,7 +2349,7 @@ static BOOL LoadParameters(LPCTSTR lpszProfileName=NULL);
   
  [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate) 메서드는 응용 프로그램의 초기화 프로세스의 일부분으로이 메서드를 호출 합니다.  
   
-##  <a name="loadstate"></a>CMFCToolBar::LoadState  
+##  <a name="loadstate"></a>  CMFCToolBar::LoadState  
  Windows 레지스트리에서 도구 모음 상태 정보를 로드 합니다.  
   
 ```  
@@ -2380,7 +2375,7 @@ virtual BOOL LoadState(
 ### <a name="remarks"></a>설명  
  프레임 워크는 응용 프로그램의 초기화 프로세스의 일부분으로이 메서드를 호출합니다. 자세한 내용은 참조 [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate)합니다.  
   
-##  <a name="loadtoolbar"></a>CMFCToolBar::LoadToolBar  
+##  <a name="loadtoolbar"></a>  CMFCToolBar::LoadToolBar  
  응용 프로그램 리소스에서 도구 모음을 로드합니다.  
   
 ```  
@@ -2422,13 +2417,13 @@ virtual BOOL LoadToolBar(
 ### <a name="remarks"></a>설명  
  프레임 워크 초기화 도구 모음과 연관 된 이미지를 로드 하는 동안이 메서드를 호출 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 사용 하는 `LoadToolBar` 에서 메서드는 `CMFCToolBar` 클래스. 이 코드 조각은의 일부인는 [IE 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]  
   
-##  <a name="loadtoolbarex"></a>CMFCToolBar::LoadToolBarEx  
+##  <a name="loadtoolbarex"></a>  CMFCToolBar::LoadToolBarEx  
  도구 모음을 사용 하 여 응용 프로그램 리소스에서 로드 된 `CMFCToolBarInfo` 도우미 클래스를 사용 하는 큰 이미지를 사용 하도록 응용 프로그램입니다.  
   
 ```  
@@ -2454,7 +2449,7 @@ virtual BOOL LoadToolBarEx(
 ### <a name="remarks"></a>설명  
  응용 프로그램 리소스에서 도구 모음 이미지를 로드 하려면이 메서드를 호출 합니다.  
   
-##  <a name="m_dbllargeimageratio"></a>CMFCToolBar::m_dblLargeImageRatio  
+##  <a name="m_dbllargeimageratio"></a>  CMFCToolBar::m_dblLargeImageRatio  
  큰 이미지의 크기 (높이 또는 너비)와 일반 이미지 차원 비율을 지정합니다.  
   
 ```  
@@ -2466,7 +2461,7 @@ AFX_IMPORT_DATA static double m_dblLargeImageRatio;
   
  프레임 워크 대형 이미지 집합을 지정 하지 않을 경우이 데이터 멤버를 사용 합니다. 예를 들어, 크기가 16 x 16 작은 이미지 집합을 제공 하 고 큰 이미지 크기가 24 x 24를 원하는 경우이 데이터 멤버 1.5로 설정 합니다.  
   
-##  <a name="nextmenu"></a>CMFCToolBar::NextMenu  
+##  <a name="nextmenu"></a>  CMFCToolBar::NextMenu  
 
   
 ```  
@@ -2477,7 +2472,7 @@ virtual BOOL NextMenu();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onbeforeremovebutton"></a>CMFCToolBar::OnBeforeRemoveButton  
+##  <a name="onbeforeremovebutton"></a>  CMFCToolBar::OnBeforeRemoveButton  
 
   
 ```  
@@ -2497,7 +2492,7 @@ virtual BOOL OnBeforeRemoveButton(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onchangehot"></a>CMFCToolBar::OnChangeHot  
+##  <a name="onchangehot"></a>  CMFCToolBar::OnChangeHot  
  사용자가 도구 모음에서 단추를 선택할 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -2511,7 +2506,7 @@ virtual void OnChangeHot(int iHot);
 ### <a name="remarks"></a>설명  
  사용자는 도구 모음에서 단추를 선택 했는지 알림 처리 하려면이 메서드를 재정의 합니다.  
   
-##  <a name="onchangevisualmanager"></a>CMFCToolBar::OnChangeVisualManager  
+##  <a name="onchangevisualmanager"></a>  CMFCToolBar::OnChangeVisualManager  
 
   
 ```  
@@ -2520,7 +2515,7 @@ virtual void OnChangeVisualManager();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onfillbackground"></a>CMFCToolBar::OnFillBackground  
+##  <a name="onfillbackground"></a>  CMFCToolBar::OnFillBackground  
  프레임 워크에서 호출 [CBasePane::DoPaint](../../mfc/reference/cbasepane-class.md#dopaint) 을 도구 모음 배경에 채웁니다.  
   
 ```  
@@ -2536,7 +2531,7 @@ virtual void OnFillBackground(CDC* pDC);
   
  파생된 클래스에서 사용자 지정 배경을 그리도록이 메서드를 재정의 합니다.  
   
-##  <a name="onglobalfontschanged"></a>CMFCToolBar::OnGlobalFontsChanged  
+##  <a name="onglobalfontschanged"></a>  CMFCToolBar::OnGlobalFontsChanged  
 
   
 ```  
@@ -2545,7 +2540,7 @@ virtual void OnGlobalFontsChanged();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onreset"></a>CMFCToolBar::OnReset  
+##  <a name="onreset"></a>  CMFCToolBar::OnReset  
  도구 모음을 원래 상태로 복원합니다.  
   
 ```  
@@ -2557,7 +2552,7 @@ virtual void OnReset();
   
  기본 구현은 아무 작업도 수행하지 않습니다. 재정의 `OnReset` 에서 파생 된 클래스에서 `CMFCToolBar` 때 도구 모음에 도구 모음에서 원래 상태로 돌아갈 때 교체 해야 하는 더미 단추입니다.  
   
-##  <a name="onsetaccdata"></a>CMFCToolBar::OnSetAccData  
+##  <a name="onsetaccdata"></a>  CMFCToolBar::OnSetAccData  
 
   
 ```  
@@ -2571,7 +2566,7 @@ virtual BOOL OnSetAccData(long lVal);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onsetdefaultbuttontext"></a>CMFCToolBar::OnSetDefaultButtonText  
+##  <a name="onsetdefaultbuttontext"></a>  CMFCToolBar::OnSetDefaultButtonText  
  도구 모음 단추의 텍스트를 기본 상태로 복원합니다.  
   
 ```  
@@ -2583,14 +2578,14 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
  텍스트가 설정 되는 단추를 가리킵니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`ifthe 텍스트 성공적으로 복원 합니다. 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` ifthe 텍스트 성공적으로 복원 합니다. 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  도구 모음 단추의 텍스트를 기본값으로 변경 되는 알림 처리 하려면이 메서드를 재정의 합니다.  
   
  기본 구현에서는 응용 프로그램 리소스에서 단추의 텍스트를 로드합니다.  
   
-##  <a name="onusertooltip"></a>CMFCToolBar::OnUserToolTip  
+##  <a name="onusertooltip"></a>  CMFCToolBar::OnUserToolTip  
  단추에 대 한 도구 설명이 표시 되려고 할 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -2607,14 +2602,14 @@ virtual BOOL OnUserToolTip(
  에 대 한 참조 `CString` 도구 설명 텍스트를 받는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`경우 `strTTText` 도구 설명 텍스트를 입력 하지 못했으면 `FALSE`합니다.  
+ `TRUE` 경우 `strTTText` 도구 설명 텍스트를 입력 하지 못했으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  도구 모음 단추에 대 한 도구 설명이 표시 되려고 할 때 프레임 워크에서이 메서드를 호출 합니다. 경우 `OnUserToolTip` 반환 `TRUE`, 프레임 워크에서 반환 하는 텍스트를 포함 하는 도구 설명이 표시 `OnUserToolTip` 에서 `strTTText`합니다. 그렇지 않으면, 도구 설명 단추 텍스트를 포함합니다.  
   
  재정의 `OnUserToolTip` 도구 모음 단추의 도구 설명을 사용자 지정할 수 있습니다. 기본 구현 호출 [CMFCToolBar::OnUserToolTip](#onusertooltip) 도구 설명 텍스트를 가져올 수 있습니다.  
   
-##  <a name="prevmenu"></a>CMFCToolBar::PrevMenu  
+##  <a name="prevmenu"></a>  CMFCToolBar::PrevMenu  
 
   
 ```  
@@ -2625,7 +2620,7 @@ virtual BOOL PrevMenu();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="processcommand"></a>CMFCToolBar::ProcessCommand  
+##  <a name="processcommand"></a>  CMFCToolBar::ProcessCommand  
  게시물은 `WM_COMMAND` 메시지 도구 모음을 소유 하는 창입니다.  
   
 ```  
@@ -2644,7 +2639,7 @@ BOOL ProcessCommand(CMFCToolBarButton* pButton);
   
  사용 하 여는 [ON_COMMAND](message-map-macros-mfc.md#on_command) 매핑할 매크로 `WM_COMMAND` 멤버 함수에는 메시지입니다.  
   
-##  <a name="removeallbuttons"></a>CMFCToolBar::RemoveAllButtons  
+##  <a name="removeallbuttons"></a>  CMFCToolBar::RemoveAllButtons  
  도구 모음에서 모든 단추 및 구분 기호를 제거합니다.  
   
 ```  
@@ -2654,7 +2649,7 @@ virtual void RemoveAllButtons();
 ### <a name="remarks"></a>설명  
  프레임 워크를 다시 만듭니다 또는 도구 모음을 삭제 시이 메서드를 호출 합니다.  
   
-##  <a name="removebutton"></a>CMFCToolBar::RemoveButton  
+##  <a name="removebutton"></a>  CMFCToolBar::RemoveButton  
  지정된 된 인덱스에 있는 단추를 도구 모음에서 제거 합니다.  
   
 ```  
@@ -2666,14 +2661,14 @@ virtual BOOL RemoveButton(int iIndex);
  제거 하는 단추의 인덱스를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`메서드가 성공 하면 또는 `FALSE` 지정된 된 인덱스 유효 하지 않거나 인덱스에서를 참조 하는 경우는 **사용자 지정** 단추입니다.  
+ `TRUE` 메서드가 성공 하면 또는 `FALSE` 지정된 된 인덱스 유효 하지 않거나 인덱스에서를 참조 하는 경우는 **사용자 지정** 단추입니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드는 단추의 제거 하 여 영향을 받는 도구 모음 추가 특성을 업데이트 합니다. 예를 들어이 메서드는 도구 모음에서 불필요 한 구분 기호를 제거 하 고 바로 가기 키 테이블을 다시 빌드합니다.  
   
  에 대 한 자세한 내용은 **사용자 지정** 단추, 참조 [cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton)합니다.  
   
-##  <a name="removestatefromregistry"></a>CMFCToolBar::RemoveStateFromRegistry  
+##  <a name="removestatefromregistry"></a>  CMFCToolBar::RemoveStateFromRegistry  
  Windows 레지스트리에서 도구 모음에 대 한 상태 정보를 삭제 합니다.  
   
 ```  
@@ -2701,7 +2696,7 @@ virtual BOOL RemoveStateFromRegistry(
   
  Windows 레지스트리에 추가 상태 정보를 저장 하는 경우이 메서드를 재정의 합니다.  
   
-##  <a name="replacebutton"></a>CMFCToolBar::ReplaceButton  
+##  <a name="replacebutton"></a>  CMFCToolBar::ReplaceButton  
  도구 모음 단추를 도구 모음 단추 바꿉니다.  
   
 ```  
@@ -2727,13 +2722,13 @@ int ReplaceButton(
 ### <a name="remarks"></a>설명  
  리소스에서 로드할 수 없는 도구 모음 단추를 추가 하려면이 메서드를 호출 합니다. 디자인 타임에 자리 표시자 단추를 만들 수 있으며 도구 모음을 초기화 하는 경우이 단추는 사용자 지정 단추 바꿉니다. 이 메서드를 사용 하는 예제에 대 한 VisualStudioDemo 샘플을 참조 하십시오.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 사용 하는 `ReplaceButton` 에서 메서드는 `CMFCToolBar` 클래스. 이 코드 조각은의 일부인는 [IE 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
 [!code-cpp[NVC_MFC_IEDemo#10](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_5.cpp)]  
   
-##  <a name="resetall"></a>CMFCToolBar::ResetAll  
+##  <a name="resetall"></a>  CMFCToolBar::ResetAll  
  모든 도구 모음을 원래 상태로 복원합니다.  
   
 ```  
@@ -2743,7 +2738,7 @@ static void __stdcall ResetAll();
 ### <a name="remarks"></a>설명  
  이 메서드를 호출는 [cmfctoolbar:: Restoreoriginalstate](#restoreoriginalstate) 메서드 각 도구 모음에 있는 응용 프로그램을 복원할 수 있습니다. 사용 하 여는 [CMFCToolBar::CanBeRestored](#canberestored) 도구 모음을 복원할 수 있는지 여부를 확인할 수 있습니다.  
   
-##  <a name="resetallimages"></a>CMFCToolBar::ResetAllImages  
+##  <a name="resetallimages"></a>  CMFCToolBar::ResetAllImages  
  응용 프로그램의 모든 도구 모음 이미지 컬렉션을 지웁니다.  
   
 ```  
@@ -2753,7 +2748,7 @@ static void __stdcall ResetAllImages();
 ### <a name="remarks"></a>설명  
  이 메서드는을 초기화 하는 이미지 컬렉션을 지웁니다는 [CMFCToolBar::LoadToolBar](#loadtoolbar) 및 [CMFCToolBar::LoadBitmap](#loadbitmap) 메서드.  
   
-##  <a name="resetimages"></a>CMFCToolBar::ResetImages  
+##  <a name="resetimages"></a>  CMFCToolBar::ResetImages  
 
   
 ```  
@@ -2762,7 +2757,7 @@ virtual void ResetImages();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="restorefocus"></a>CMFCToolBar::RestoreFocus  
+##  <a name="restorefocus"></a>  CMFCToolBar::RestoreFocus  
 
   
 ```  
@@ -2771,7 +2766,7 @@ virtual void RestoreFocus();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="restoreoriginalstate"></a>Cmfctoolbar:: Restoreoriginalstate  
+##  <a name="restoreoriginalstate"></a>  Cmfctoolbar:: Restoreoriginalstate  
  도구 모음의 원래 상태를 복원합니다.  
   
 ```  
@@ -2786,7 +2781,7 @@ virtual BOOL RestoreOriginalState();
   
  프레임 워크를 선택 하면이 메서드를 호출는 **모두 원래 대로** 단추는 **도구 모음** 의 사용자 지정 대화 상자 페이지입니다.  
   
-##  <a name="saveparameters"></a>CMFCToolBar::SaveParameters  
+##  <a name="saveparameters"></a>  CMFCToolBar::SaveParameters  
 
   
 ```  
@@ -2800,7 +2795,7 @@ static BOOL __stdcall SaveParameters(LPCTSTR lpszProfileName = NULL);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="savestate"></a>CMFCToolBar::SaveState  
+##  <a name="savestate"></a>  CMFCToolBar::SaveState  
  Windows 레지스트리에 있는 도구 모음에 대 한 상태 정보를 저장합니다.  
   
 ```  
@@ -2826,7 +2821,7 @@ virtual BOOL SaveState(
 ### <a name="remarks"></a>설명  
  프레임 워크를 레지스트리에 응용 프로그램 상태를 저장 하는 경우이 메서드를 호출 합니다. 자세한 내용은 참조 [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate)합니다.  
   
-##  <a name="setbasiccommands"></a>CMFCToolBar::SetBasicCommands  
+##  <a name="setbasiccommands"></a>  CMFCToolBar::SetBasicCommands  
  사용자가 메뉴를 열 때 항상 표시 되는 명령의 목록을 설정 합니다.  
   
 ```  
@@ -2844,7 +2839,7 @@ static void __stdcall SetBasicCommands(CList<UINT,UINT>& lstCommands);
   
  이 메서드를 사용 하는 예제에 대 한 탐색기 샘플을 참조 하십시오.  
   
-##  <a name="setbuttoninfo"></a>CMFCToolBar::SetButtonInfo  
+##  <a name="setbuttoninfo"></a>  CMFCToolBar::SetButtonInfo  
  명령 ID, 스타일 및 도구 모음 단추의 이미지 ID를 설정합니다.  
   
 ```  
@@ -2875,7 +2870,7 @@ void SetButtonInfo(
   
  호출 된 [CMFCToolBar::SetButtonStyle](#setbuttonstyle) 단추의 스타일에만 설정 하는 방법은 합니다.  
   
-##  <a name="setbuttons"></a>CMFCToolBar::SetButtons  
+##  <a name="setbuttons"></a>  CMFCToolBar::SetButtons  
  도구 모음에 대 한 단추를 설정합니다.  
   
 ```  
@@ -2903,7 +2898,7 @@ virtual BOOL SetButtons(
   
  이 메서드는 추가 **사용자 지정** 보냅니다 고 도구 모음 단추는 `AFX_WM_RESETTOOLBAR` 메시지를 도구 모음의 부모 창입니다. 에 대 한 자세한 내용은 **사용자 지정** 단추, 참조 [cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton)합니다.  
   
-##  <a name="setbuttonstyle"></a>CMFCToolBar::SetButtonStyle  
+##  <a name="setbuttonstyle"></a>  CMFCToolBar::SetButtonStyle  
  지정된 된 인덱스에서 도구 모음 단추 스타일을 설정합니다.  
   
 ```  
@@ -2922,7 +2917,7 @@ virtual void SetButtonStyle(
 ### <a name="remarks"></a>설명  
  이 메서드는 제거는 `TBBS_PRESSED` 경우 스타일 `nStyle` 은 `TBBS_DISABLED` 하므로 사용자는 비활성화 된 단추를 클릭할 수 없습니다.  
   
-##  <a name="setbuttontext"></a>CMFCToolBar::SetButtonText  
+##  <a name="setbuttontext"></a>  CMFCToolBar::SetButtonText  
  도구 모음 단추의 텍스트 레이블을 가져오거나 설정 합니다.  
   
 ```  
@@ -2939,12 +2934,12 @@ BOOL SetButtonText(
  도구 모음 단추의 텍스트 레이블입니다. 비-해야 `NULL`합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`메서드가 성공 하면; 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 메서드가 성공 하면; 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드가 반환 `FALSE` 를 유효한 도구 모음 단추에 지정 된 인덱스를 참조 하지 않는 경우.  
   
-##  <a name="setcommandusageoptions"></a>CMFCToolBar::SetCommandUsageOptions  
+##  <a name="setcommandusageoptions"></a>  CMFCToolBar::SetCommandUsageOptions  
  거의 사용된 되지 않는 명령 응용 프로그램의 메뉴에 표시 되지 않습니다 시기를 지정 합니다.  
   
 ```  
@@ -2961,14 +2956,14 @@ static BOOL SetCommandUsageOptions(
  최근에 사용한 명령 것으로 간주 하는 명령을 실행 해야 하는 횟수 비율입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `FALSE`경우 `nMinUsagePercentage` 같음 또는 100 보다 큰 않으면 `TRUE`합니다.  
+ `FALSE` 경우 `nMinUsagePercentage` 같음 또는 100 보다 큰 않으면 `TRUE`합니다.  
   
 ### <a name="remarks"></a>설명  
  어떻게 기본 및 최근에 사용한 메뉴 항목을 결정 하는 프레임 워크를 사용 하 여 표시 되는 알고리즘을 사용자 지정 하려면이 메서드를 호출 합니다. 기본 명령에 대 한 자세한 내용은 참조 [CMFCToolBar::AddBasicCommand](#addbasiccommand)합니다.  
   
  이 클래스가 사용 하는 `CMFCCmdUsageCount` 명령의 사용 횟수를 추적 하는 클래스입니다. 이 클래스에 대 한 자세한 내용은 참조 [CMFCCmdUsageCount 클래스](../../mfc/reference/cmfccmdusagecount-class.md)합니다.  
   
-##  <a name="setcustomizemode"></a>CMFCToolBar::SetCustomizeMode  
+##  <a name="setcustomizemode"></a>  CMFCToolBar::SetCustomizeMode  
  응용 프로그램의 모든 도구 모음에 대 한 사용자 지정 모드를 사용 하지 않도록 설정 하거나 사용 합니다.  
   
 ```  
@@ -2980,12 +2975,12 @@ static BOOL __stdcall SetCustomizeMode(BOOL bSet=TRUE);
  사용자 지정 모드를 사용할지 여부를 지정 하는 부울 값입니다. 이 매개 변수를 설정 `TRUE` 사용자 지정 모드를 사용 하도록 설정 하려면 또는 `FALSE` 사용 하지 않도록 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`이 메서드를 호출 하는 경우 사용자 지정 모드; 변경 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 이 메서드를 호출 하는 경우 사용자 지정 모드; 변경 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드는 레이아웃을 조정 하 고 응용 프로그램에서 각 도구 모음을 다시 그립니다. 호출 된 [CMFCToolBar::IsCustomizeMode](#iscustomizemode) 응용 프로그램 사용자 지정 모드에 있는지 여부를 확인 하는 메서드  
   
-##  <a name="setgraydisabledbuttons"></a>CMFCToolBar::SetGrayDisabledButtons  
+##  <a name="setgraydisabledbuttons"></a>  CMFCToolBar::SetGrayDisabledButtons  
  도구 모음에서 사용할 수 없는 단추는 흐리게 표시 여부 또는 단추를 사용할 수 없는 이미지의 사용 여부를 지정 합니다.  
   
 ```  
@@ -2999,7 +2994,7 @@ void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 ### <a name="remarks"></a>설명  
  기본적으로 사용할 수 없는 단추가 흐리게 표시 됩니다.  
   
-##  <a name="setheight"></a>CMFCToolBar::SetHeight  
+##  <a name="setheight"></a>  CMFCToolBar::SetHeight  
  도구 모음의 높이 설정합니다.  
   
 ```  
@@ -3013,7 +3008,7 @@ void SetHeight(int cyHeight);
 ### <a name="remarks"></a>설명  
  이 메서드는 높이 설정 하는 후 도구 모음을 다시 그립니다.  
   
-##  <a name="sethelpmode"></a>CMFCToolBar::SetHelpMode  
+##  <a name="sethelpmode"></a>  CMFCToolBar::SetHelpMode  
 
   
 ```  
@@ -3025,7 +3020,7 @@ static void __stdcall SetHelpMode(BOOL bOn = TRUE);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="sethot"></a>CMFCToolBar::SetHot  
+##  <a name="sethot"></a>  CMFCToolBar::SetHot  
 
   
 ```  
@@ -3039,7 +3034,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="sethotborder"></a>CMFCToolBar::SetHotBorder  
+##  <a name="sethotborder"></a>  CMFCToolBar::SetHotBorder  
  도구 모음 단추가 작동 중 추적 된 여부를 지정 합니다.  
   
 ```  
@@ -3055,7 +3050,7 @@ void SetHotBorder(BOOL bShowHotBorder);
   
  호출는 [CMFCToolBar::GetHotBorder](#gethotborder) 확인할 수 있는지 여부를 도구 모음에는 핫 트랙 단추입니다.  
   
-##  <a name="sethottextcolor"></a>CMFCToolBar::SetHotTextColor  
+##  <a name="sethottextcolor"></a>  CMFCToolBar::SetHotTextColor  
  핫 도구 모음 단추에 대 한 텍스트 색을 설정합니다.  
   
 ```  
@@ -3069,7 +3064,7 @@ static void SetHotTextColor(COLORREF clrText);
 ### <a name="remarks"></a>설명  
  작동 중 추적 된 도구 모음 단추에 대 한 자세한 내용은 참조 [CMFCToolBar::GetHotBorder](#gethotborder) 및 [CMFCToolBar::SetHotBorder](#sethotborder)합니다.  
   
-##  <a name="setignoresettext"></a>CMFCToolBar::SetIgnoreSetText  
+##  <a name="setignoresettext"></a>  CMFCToolBar::SetIgnoreSetText  
 
   
 ```  
@@ -3081,7 +3076,7 @@ void SetIgnoreSetText(BOOL bValue);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setlargeicons"></a>CMFCToolBar::SetLargeIcons  
+##  <a name="setlargeicons"></a>  CMFCToolBar::SetLargeIcons  
  도구 모음 단추 큰 아이콘을 표시할지 여부를 지정 합니다.  
   
 ```  
@@ -3099,7 +3094,7 @@ static void SetLargeIcons(BOOL bLargeIcons=TRUE);
   
  에 대 한 자세한 내용은 **사용자 지정** 대화 상자, 참조 [CMFCToolBarsCustomizeDialog 클래스](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)합니다.  
   
-##  <a name="setlockedsizes"></a>CMFCToolBar::SetLockedSizes  
+##  <a name="setlockedsizes"></a>  CMFCToolBar::SetLockedSizes  
  도구 모음에서 잠긴된 단추와 잠긴된 이미지의 크기를 설정합니다.  
   
 ```  
@@ -3124,7 +3119,7 @@ void SetLockedSizes(
   
  호출 된 [CMFCToolBar::GetLockedImageSize](#getlockedimagesize) 의 크기를 검색 하는 메서드 잠긴 이미지입니다. 호출 된 [CMFCToolBar::GetButtonSize](#getbuttonsize) 의 크기를 검색 하는 메서드 잠긴 도구 모음 단추입니다.  
   
-##  <a name="setmaskmode"></a>CMFCToolBar::SetMaskMode  
+##  <a name="setmaskmode"></a>  CMFCToolBar::SetMaskMode  
 
   
 ```  
@@ -3136,7 +3131,7 @@ void SetMaskMode(BOOL bMasked);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setmenusizes"></a>CMFCToolBar::SetMenuSizes  
+##  <a name="setmenusizes"></a>  CMFCToolBar::SetMenuSizes  
  도구 모음 메뉴 단추와 해당 이미지의 크기를 설정합니다.  
   
 ```  
@@ -3159,7 +3154,7 @@ static void __stdcall SetMenuSizes(
   
  이 메서드를 사용 하는 예제는 IEDemo 및 MSMoneyDemo 샘플을 참조 하십시오.  
   
-##  <a name="setnonpermittedcommands"></a>CMFCToolBar::SetNonPermittedCommands  
+##  <a name="setnonpermittedcommands"></a>  CMFCToolBar::SetNonPermittedCommands  
  사용자가 실행할 수 없는 명령 목록을 설정 합니다.  
   
 ```  
@@ -3175,7 +3170,7 @@ static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
   
  이 메서드는 이전 명령 비 허용 목록을 지웁니다. 기본적으로 비 허용 명령 목록이 비어 있습니다.  
   
-##  <a name="setonerowwithsibling"></a>Cmfctoolbar:: Setonerowwithsibling  
+##  <a name="setonerowwithsibling"></a>  Cmfctoolbar:: Setonerowwithsibling  
  도구 모음 및 해당 형제가 동일한 행에 위치 시킵니다.  
   
 ```  
@@ -3189,7 +3184,7 @@ void SetOneRowWithSibling();
   
  프레임 워크를 호출 하 여는 [cmfctoolbar:: Settworowswithsibling](#settworowswithsibling) 메서드는 사용자가 클릭할 때는 **표시 단추를 두 줄** 단추입니다.  
   
-##  <a name="setorigbuttons"></a>CMFCToolBar::SetOrigButtons  
+##  <a name="setorigbuttons"></a>  CMFCToolBar::SetOrigButtons  
 
   
 ```  
@@ -3201,7 +3196,7 @@ void SetOrigButtons(const CObList& lstOrigButtons);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setpermament"></a>CMFCToolBar::SetPermament  
+##  <a name="setpermament"></a>  CMFCToolBar::SetPermament  
  사용자 도구 모음을 닫을 수 있는지 여부를 지정 합니다.  
   
 ```  
@@ -3217,7 +3212,7 @@ void SetPermament(BOOL bPermament=TRUE);
   
  호출 된 [CMFCToolBar::CanBeClosed](#canbeclosed) 사용자 도구 모음을 닫을 수 있는지 여부를 결정 하는 메서드.  
   
-##  <a name="setroutecommandsviaframe"></a>CMFCToolBar::SetRouteCommandsViaFrame  
+##  <a name="setroutecommandsviaframe"></a>  CMFCToolBar::SetRouteCommandsViaFrame  
  부모 프레임 또는 소유자 도구 모음 명령을 보내고 있는지 여부를 지정 합니다.  
   
 ```  
@@ -3231,7 +3226,7 @@ void SetRouteCommandsViaFrame(BOOL bValue);
 ### <a name="remarks"></a>설명  
  기본적으로 부모 프레임 도구 모음 명령을 보냅니다. 호출 된 [CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe) 부모 프레임 또는 소유자 도구 모음 명령을 보내고 있는지 여부를 결정 하는 메서드.  
   
-##  <a name="setshowtooltips"></a>CMFCToolBar::SetShowTooltips  
+##  <a name="setshowtooltips"></a>  CMFCToolBar::SetShowTooltips  
  프레임 워크 도구 설명 표시 되는지 여부를 지정 합니다.  
   
 ```  
@@ -3247,7 +3242,7 @@ static void SetShowTooltips(BOOL bValue);
   
  호출 된 [CMFCToolBar::GetShowTooltips](#getshowtooltips) 프레임 워크 도구 설명 표시 되는지 여부를 결정 하는 메서드.  
   
-##  <a name="setsiblingtoolbar"></a>Cmfctoolbar:: Setsiblingtoolbar  
+##  <a name="setsiblingtoolbar"></a>  Cmfctoolbar:: Setsiblingtoolbar  
  도구 모음의 형제를 지정합니다.  
   
 ```  
@@ -3265,7 +3260,7 @@ void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
   
  도구 모음의 형제를 검색 하려면 [CMFCToolBar::GetSiblingToolBar](#getsiblingtoolbar)합니다.  
   
-##  <a name="setsizes"></a>CMFCToolBar::SetSizes  
+##  <a name="setsizes"></a>  CMFCToolBar::SetSizes  
  모든 도구 모음에서 단추 및 이미지의 크기를 지정합니다.  
   
 ```  
@@ -3286,7 +3281,7 @@ static void __stdcall SetSizes(
   
  호출 된 [CMFCToolBar::GetImageSize](#getimagesize) 도구 모음 단추 이미지의 크기를 검색 하는 메서드입니다. 호출 된 [CMFCToolBar::GetButtonSize](#getbuttonsize) 도구 모음 단추의 크기를 검색 하는 메서드입니다.  
   
-##  <a name="settoolbarbtntext"></a>CMFCToolBar::SetToolBarBtnText  
+##  <a name="settoolbarbtntext"></a>  CMFCToolBar::SetToolBarBtnText  
  도구 모음 단추의 속성을 지정합니다.  
   
 ```  
@@ -3315,7 +3310,7 @@ void SetToolBarBtnText(
   
  디버그 빌드에이 메서드를 생성 어설션 오류 경우 `nBtnIndex` 참조 하지 않는 단추를 클릭 하거나 도구 모음 단추는 구분 기호를 유효한 도구 모음입니다.  
   
-##  <a name="settworowswithsibling"></a>Cmfctoolbar:: Settworowswithsibling  
+##  <a name="settworowswithsibling"></a>  Cmfctoolbar:: Settworowswithsibling  
  도구 모음 및 해당 형제가 별도 행에 위치 시킵니다.  
   
 ```  
@@ -3329,7 +3324,7 @@ void SetTwoRowsWithSibling();
   
  프레임 워크를 호출 하 여는 [cmfctoolbar:: Setonerowwithsibling](#setonerowwithsibling) 메서드는 사용자가 클릭할 때는 **표시 단추를 한 줄** 단추입니다.  
   
-##  <a name="setuserimages"></a>CMFCToolBar::SetUserImages  
+##  <a name="setuserimages"></a>  CMFCToolBar::SetUserImages  
  응용 프로그램에서 사용자 지정 이미지의 컬렉션을 설정합니다.  
   
 ```  
@@ -3352,7 +3347,7 @@ static BOOL SetUserImages(CMFCToolBarImages* pUserImages);
   
  호출 된 [CMFCToolBar::GetUserImages](#getuserimages) 응용 프로그램에서 사용자 지정 이미지의 컬렉션을 검색 하는 메서드입니다.  
   
-##  <a name="stretchpane"></a>CMFCToolBar::StretchPane  
+##  <a name="stretchpane"></a>  CMFCToolBar::StretchPane  
  세로 또는 가로로 도구 모음을 확장 하 고 필요한 경우 단추 위치를 변경 합니다.  
   
 ```  
@@ -3376,7 +3371,7 @@ virtual CSize StretchPane(
   
  호출 하 여 반환 값이 결정 [CMFCToolBar::CalcSize](#calcsize)합니다.  
   
-##  <a name="translatechar"></a>CMFCToolBar::TranslateChar  
+##  <a name="translatechar"></a>  CMFCToolBar::TranslateChar  
  지정된 된 키 코드 유효한 바로 가기 키에 해당 하는 경우는 단추 명령을 실행 합니다.  
   
 ```  
@@ -3388,12 +3383,12 @@ virtual BOOL TranslateChar(UINT nChar);
  가상 키 코드를 지정합니다. 표준 가상 키 코드 목록이 Winuser.h을 참조 하십시오.  
   
 ### <a name="return-value"></a>반환 값  
- `FALSE`지정된 된 키 코드 중 하나 이면 인쇄할 수 없는 유효한 바로 가기 키;에 해당 하지 않는 또는 `TRUE` 지정 된 키 코드; 드롭 다운 메뉴 옵션에 해당 하는 경우, 반환 된 값에서 [CMFCToolBar::ProcessCommand](#processcommand)합니다.  
+ `FALSE` 지정된 된 키 코드 중 하나 이면 인쇄할 수 없는 유효한 바로 가기 키;에 해당 하지 않는 또는 `TRUE` 지정 된 키 코드; 드롭 다운 메뉴 옵션에 해당 하는 경우, 반환 된 값에서 [CMFCToolBar::ProcessCommand](#processcommand)합니다.  
   
 ### <a name="remarks"></a>설명  
  Alt 키와 함께 키를 누를 때 프레임 워크에서이 메서드를 호출 합니다.  
   
-##  <a name="updatebutton"></a>CMFCToolBar::UpdateButton  
+##  <a name="updatebutton"></a>  CMFCToolBar::UpdateButton  
  지정 된 단추의 상태를 업데이트합니다.  
   
 ```  
@@ -3406,7 +3401,7 @@ void UpdateButton(int nIndex);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="wraptoolbar"></a>CMFCToolBar::WrapToolBar  
+##  <a name="wraptoolbar"></a>  CMFCToolBar::WrapToolBar  
  지정 된 차원 내에서 도구 모음 단추 위치를 변경합니다.  
   
 ```  
@@ -3431,7 +3426,7 @@ int WrapToolBar(
  [in] `nColumnWidth`  
  단추 너비입니다. -1 이면 현재 너비 사용 됩니다.  
   
- [in] m`nRowHeight`  
+ [in] m `nRowHeight`  
  단추의 높이입니다. -1 이면 현재 높이 사용 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -3440,7 +3435,7 @@ int WrapToolBar(
 ### <a name="remarks"></a>설명  
  이 메서드 내 단추가 필요한 경우 추가 행을 래핑 도구 모음에서 단추를 다시 설정 합니다.  
   
-##  <a name="m_bdontscaleimages"></a>CMFCToolBar::m_bDontScaleImages  
+##  <a name="m_bdontscaleimages"></a>  CMFCToolBar::m_bDontScaleImages  
  높은 DPI 모드의 도구 모음 이미지의 크기를 조정 여부를 지정 합니다.  
   
 ```  

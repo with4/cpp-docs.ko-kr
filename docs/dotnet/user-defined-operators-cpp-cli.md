@@ -1,30 +1,25 @@
 ---
-title: "사용자 정의 연산자 (C + + /cli CLI) | Microsoft Docs"
-ms.custom: 
+title: 사용자 정의 연산자 (C + + /cli CLI) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b02d6806abedb407d1c53ec8022e92983ce21d28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cf5583b3ae896ea252d191fbeba86e202b56cef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-defined-operators-ccli"></a>사용자 정의 연산자(C++/CLI)
 정적 멤버 또는 인스턴스 멤버 또는 전역 범위에서 관리 되는 형식에 대 한 사용자 정의 연산자는 허용 됩니다. 그러나 정적 연산자만는 Visual c + + 이외의 언어로 작성 된 클라이언트에 메타 데이터를 통해 액세스할 수 있습니다.  
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
 |&#124;&#124;|이항|  
 |~|단항|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```cpp  
 // mcppv2_user-defined_operators.cpp  
@@ -149,7 +144,7 @@ int main() {
 -3  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플을 사용할 때만 사용할 수 있는 연산자 통합 **/clr** 컴파일할 수 있습니다. 연산자를 통합 이항 연산자의 할당 양식을 만들고, 한 경우 정의 되지 않은 할당 연산자의 왼쪽에는 CLR 형식이 합니다.  
   
 ```cpp  

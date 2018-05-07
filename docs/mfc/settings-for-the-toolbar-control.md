@@ -1,30 +1,25 @@
 ---
-title: "도구 모음 컨트롤에 대 한 설정을 | Microsoft Docs"
-ms.custom: 
+title: 도구 모음 컨트롤에 대 한 설정을 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - toolbar controls [MFC], about toolbar controls
 - CToolBarCtrl class [MFC], settings
 ms.assetid: 025ba920-b3ee-4d82-9367-e652cd7875b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b1290e8769bfd072ac66c2e4d981eb6b4d641fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03ff905b76ba4a215f6993c1bb0002dd1f87e06b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="settings-for-the-toolbar-control"></a>Toolbar 컨트롤에 대한 설정
 도구 모음의 단추는 비트맵이나 문자열 또는 둘 모두를 표시할 수 있습니다. 기본적으로 이미지 크기는 16 x 15 픽셀의 크기로 설정됩니다. 모든 단추의 너비는 기본적으로 24 x 22 픽셀로 동일합니다. 도구 모음의 높이는 단추의 높이에 따라 결정되고, 도구 모음의 너비는 기본적으로 상위 창의 클라이언트 영역 너비와 동일합니다.  

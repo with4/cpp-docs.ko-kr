@@ -1,13 +1,10 @@
 ---
-title: "MFC의 MAPI 지원 | Microsoft Docs"
-ms.custom: 
+title: MFC의 MAPI 지원 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - MAPI, MFC
 - OnFileSendMail method [MFC]
 ms.assetid: cafbecb1-0427-4077-b4b8-159bae5b49b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6cc1670559354628127729724300399d5f003ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e5d6498d1ecb20b47070cb26bf1a9d732340e266
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapi-support-in-mfc"></a>MFC의 MAPI 지원
 MFC의는 Microsoft 응용 프로그램 프로그램 인터페이스 MAPI (메시징) 클래스에 하위 집합에 대 한 지원을 제공 **CDocument**합니다. 특히, **CDocument** 메일 지원 최종 사용자의 컴퓨터에 있는지 여부를 결정 하는 멤버 함수 있으며이 경우에 표준 명령 ID가 하는 메일 보내기 명령을 사용할 **ID_FILE_SEND_MAIL**. 이 명령에 대 한 MFC 처리기 함수에는 사용자가 전자 메일을 통해 문서를 보낼 수 있도록 합니다.  

@@ -1,13 +1,10 @@
 ---
-title: "트리 컨트롤 항목 위치 | Microsoft Docs"
-ms.custom: 
+title: 트리 컨트롤 항목 위치 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - tree controls [MFC], item position
 - position, CTreeCtrl items
 ms.assetid: cd264344-2cf9-4d90-9ea8-c6900b6f60e7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db47e27ad0b556e08f51685bf84b6bd998722239
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a7b7576786f456320a355920a7a9ef9e4935ab03
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-item-position"></a>트리 컨트롤 항목 위치
 항목의 초기 위치는 트리 컨트롤에 항목을 추가할 때 설정 됩니다 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md))를 사용 하 여는 `InsertItem` 멤버 함수입니다. 멤버 함수 호출 이후에 새 항목을 삽입할 수는 항목의 핸들과 부모 항목의 핸들을 지정 합니다. 이러한 값 중 하나 또는 두 번째 핸들로 지정 된 부모의 자식 항목을 식별 해야 합니다: `TVI_FIRST`, `TVI_LAST`, 또는 `TVI_SORT`합니다.  

@@ -2,12 +2,9 @@
 title: MFC에서 사용 되는 콜백 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.functions
 dev_langs:
@@ -18,22 +15,20 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adcde434c12c11c1df7fc1367b658114f874b3c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce96d90506176812ffb70b580c9d95a38c65fa19
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="callback-functions-used-by-mfc"></a>MFC에서 사용하는 콜백 함수
 Microsoft Foundation Class 라이브러리에 3 개의 콜백 함수가 나타납니다. 이러한 콜백 함수에 전달 되 [cdc:: enumobjects](../../mfc/reference/cdc-class.md#enumobjects), [cdc:: graystring](../../mfc/reference/cdc-class.md#graystring), 및 [cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)합니다. 모든 콜백 함수 콜백 경계를 넘어 예외를 throw 할 수 없는 이후 창에 반환 하기 전에 MFC 예외를 트래핑 해야 참고 합니다. 예외에 대 한 자세한 내용은 문서 참조 [예외](../../mfc/exception-handling-in-mfc.md)합니다.  
 
-|name||  
+|이름||  
 |----------|-----------------|  
 |[CDC::EnumObjects에 대한 콜백 함수](#enum_objects)||  
 |[CDC::GrayString에 대한 콜백 함수](#graystring)||
@@ -42,7 +37,7 @@ Microsoft Foundation Class 라이브러리에 3 개의 콜백 함수가 나타�
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h 
 
-## <a name="enum_objects"></a>Cdc:: enumobjects에 대 한 콜백 함수
+## <a name="enum_objects"></a> Cdc:: enumobjects에 대 한 콜백 함수
 *ObjectFunc* 이름은 응용 프로그램 제공 하는 함수 이름에 대 한 자리 표시자입니다.  
   
 ### <a name="syntax"></a>구문  
@@ -66,7 +61,7 @@ int CALLBACK EXPORT ObjectFunc(
 ### <a name="remarks"></a>설명  
  실제 이름을 내보내야 합니다.  
   
-## <a name="graystring"></a>Cdc:: graystring에 대 한 콜백 함수
+## <a name="graystring"></a>  Cdc:: graystring에 대 한 콜백 함수
 *OutputFunc* 는 응용 프로그램에서 제공 하는 콜백 함수 이름에 대 한 자리 표시자입니다.  
   
 ### <a name="syntax"></a>구문  
@@ -94,7 +89,7 @@ BOOL CALLBACK EXPORT OutputFunc(
 ### <a name="remarks"></a>설명  
  콜백 함수 (*OutputFunc*) 좌표 (0, 0)를 기준으로 이미지를 그리기 해야 대신 (*x*, *y*).  
 
-## <a name="setabortproc"></a>Cdc:: setabortproc에 대 한 콜백 함수
+## <a name="setabortproc"></a>  Cdc:: setabortproc에 대 한 콜백 함수
 이름을 *AbortFunc* 는 응용 프로그램 제공 하는 함수 이름에 대 한 자리 표시자입니다.  
   
 ### <a name="syntax"></a>구문  

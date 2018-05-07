@@ -1,13 +1,10 @@
 ---
-title: "달력의 컨트롤에서에서 알림 메시지 처리 | Microsoft Docs"
-ms.custom: 
+title: 달력의 컨트롤에서에서 알림 메시지 처리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - notifications [MFC], for CMonthCalCtrl
 - notifications [MFC], month calendar control
 ms.assetid: 607c3e90-0756-493b-9503-ce835a50c7ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75b07973b1410c7f8bbaa527876efa9b9f1481a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 26b4d73284b0cff362ba16248e0906b76c7f52a1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="processing-notification-messages-in-month-calendar-controls"></a>MonthCalendar 컨트롤에서 알림 메시지 처리
 사용자가 컨트롤 (날짜를 선택 및/또는 다른 달 보기), month calendar 컨트롤 상호 작용 하는 대로 (`CMonthCalCtrl`)를 해당 부모 창 알림 메시지를 전송 합니다. 일반적으로 뷰 또는 대화 상자 개체입니다. 이에 대한 응답으로 작업을 수행하려는 경우 이러한 메시지를 처리합니다. 예를 들어 사용자가 볼 수는 새로운 달을 선택, 강조 해야 하는 날짜 집합을 제공할 수 있습니다.  

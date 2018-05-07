@@ -1,13 +1,10 @@
 ---
-title: "가상 함수 봉인 | Microsoft Docs"
-ms.custom: 
+title: 가상 함수 봉인 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,23 +13,21 @@ helpviewer_keywords:
 - virtual functions, sealing
 - __sealed keyword
 ms.assetid: 0e9fae03-6425-4512-9a24-8ccb6dc8a0d4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 48d52a2697289197555438847ba2fcb86aeb3235
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c85f4775025d3661fdfbf8967b310fb733f452b3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sealing-a-virtual-function"></a>가상 함수 봉인
 가상 함수 봉인 하는 구문은 Visual c + + Managed Extensions for c + + 변경 되었습니다.  
   
- `__sealed` 키워드 중 하나는 참조 형식에서 파생 되지 않도록 수정 하는 Managed extensions에서 사용 됩니다 (참조 [관리 되는 클래스 형식 선언의](../dotnet/declaration-of-a-managed-class-type.md)), 또는 가상 함수를 수정 하려면 허용 안 함 이후의 메서드의 파생된 클래스에서 재정의 합니다. 예:  
+ `__sealed` 키워드 중 하나는 참조 형식에서 파생 되지 않도록 수정 하는 Managed extensions에서 사용 됩니다 (참조 [관리 되는 클래스 형식 선언의](../dotnet/declaration-of-a-managed-class-type.md)), 또는 가상 함수를 수정 하려면 허용 안 함 이후의 메서드의 파생된 클래스에서 재정의 합니다. 예를 들어:  
   
 ```  
 __gc class base { public: virtual void f(); };  
@@ -53,7 +48,7 @@ public:
 };  
 ```  
   
- 없는 경우는 `virtual` 키워드가이 인스턴스를 실행 하면 오류가 발생 합니다. 새 구문 컨텍스트 키워드 `abstract` 대신 사용할 수는 `=0` 순수 가상 함수를 지정할 수 있습니다. Managed Extensions 내에서 지원 되지 않았습니다. 예:  
+ 없는 경우는 `virtual` 키워드가이 인스턴스를 실행 하면 오류가 발생 합니다. 새 구문 컨텍스트 키워드 `abstract` 대신 사용할 수는 `=0` 순수 가상 함수를 지정할 수 있습니다. Managed Extensions 내에서 지원 되지 않았습니다. 예를 들어:  
   
 ```  
 __gc class base { public: virtual void f()=0; };  

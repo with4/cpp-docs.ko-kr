@@ -1,13 +1,10 @@
 ---
-title: "콜백 필드를 사용 하 여 날짜 및 시간 선택 컨트롤 | Microsoft Docs"
-ms.custom: 
+title: 콜백 필드를 사용 하 여 날짜 및 시간 선택 컨트롤 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - DTN_FORMATQUERY
 - DTN_FORMAT
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: 404f4ba9-cba7-4718-9faa-bc6b274a723f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e5526b0f8826a91eb0b1c5a6eae250abbb02fcf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b0d59aa8c30e9308448467bb198e898106e61f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>날짜 및 시간 선택 컨트롤에서 콜백 필드 사용
 날짜 및 시간 선택 필드를 정의 하는 표준 형식 문자 외에도 콜백 필드도 사용자 지정 형식 문자열의 특정 부분을 지정 하 여 출력을 사용자 지정할 수 있습니다. 콜백 필드를 선언 하려면 하나 이상의 "X" 문자 (ASCII 코드 88) 형식 문자열의 본문에서 아무 곳 이나 포함 합니다. 예를 들어 다음 문자열 "' 임: 'yy '/' MM '/' dd' (날 'X')'" 뒤에 월, 날짜 및 마지막 날짜의 연도와 현재 값을 표시 하려면 날짜 및 시간 선택 컨트롤 하면 됩니다.  

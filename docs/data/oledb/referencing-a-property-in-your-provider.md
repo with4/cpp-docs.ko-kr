@@ -1,12 +1,9 @@
 ---
-title: "공급자의 속성 참조 | Microsoft Docs"
-ms.custom: 
+title: 공급자의 속성 참조 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,25 +12,23 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3a034c1f925a5b5d422be234118782b283a3d74c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 36965ac33fc0a563951c0c0dfdce60d9d0e4f55b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="referencing-a-property-in-your-provider"></a>공급자의 속성 참조
 원하는 속성에 대 한 속성 그룹과 속성 ID를 찾습니다. 자세한 내용은 참조 [OLE DB 속성](https://msdn.microsoft.com/en-us/library/ms722734.aspx) 에 *OLE DB Programmer's Reference*합니다.  
   
  다음 예에서는 행 집합에서 속성 가져오기 하려는 가정 합니다. 세션 또는 명령에 대 한 코드는 유사 하지만 서로 다른 인터페이스를 사용 합니다.  
   
- 만들기는 [CDBPropSet](../../data/oledb/cdbpropset-class.md) 개체 생성자에 매개 변수로 속성 그룹을 사용 하 여 합니다. 예:  
+ 만들기는 [CDBPropSet](../../data/oledb/cdbpropset-class.md) 개체 생성자에 매개 변수로 속성 그룹을 사용 하 여 합니다. 예를 들어:  
   
 ```  
 CDBPropSet propset(DBPROPSET_ROWSET);  

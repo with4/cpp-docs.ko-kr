@@ -1,13 +1,10 @@
 ---
-title: "표준 Windows 메시지에 대 한 처리기 | Microsoft Docs"
-ms.custom: 
+title: 표준 Windows 메시지에 대 한 처리기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - afx_msg
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - functions [MFC], handler
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91df3462297c2a45a8938d815cc3b6a3b8ca6edb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4ed4e022326d650b1012ad5244d8b18e9c789cc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handlers-for-standard-windows-messages"></a>표준 Windows 메시지에 대한 처리기
 표준 Windows 메시지에 대 한 처리기를 기본 (**WM_**) 클래스에는 미리 정의 `CWnd`합니다. 이 클래스 라이브러리는 메시지 이름을 기반으로 이러한 처리기의 이름을 지정합니다. 예를 들어 `WM_PAINT` 메시지에 대한 처리기는 다음과 같이 `CWnd`에 선언됩니다.  

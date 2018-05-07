@@ -1,12 +1,9 @@
 ---
 title: hash_map (STL/CLR) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_map
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <hash_map> header [STL/CLR]
 - hash_map class [STL/CLR]
 ms.assetid: c3cfc69b-04c6-42ae-a30e-0eda953fe883
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: cff0a45360a74bcfd7612b4eabe60dcc1057507a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad09cf718e2e76cbed99c5628a3eafc5104ad03f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmap-stlclr"></a>hash_map(STL/CLR)
 이 템플릿 클래스는 다양 한 길이의 요소 시퀀스를 양방향 액세스할 수 있는 제어 하는 개체를 설명 합니다. 컨테이너를 사용 하 여 `hash_map` 가 양방향을 저장 하는 각 테이블 항목 연결 된 목록 노드 및 한 개의 요소 저장 노드마다의 해시 테이블로 요소의 시퀀스를 관리 합니다. 요소 순서는 시퀀스와 경험해를 따라 이동 하는 매핑된 값에 대 한 키를 구성 됩니다.  
@@ -39,9 +34,9 @@ ms.lasthandoff: 12/21/2017
   
  다음은 각 문자에 대한 설명입니다.  
   
- `GKey`동일 `Key` 후자 형식인 ref 하지 않는 한 경우에서 이기`Key^`  
+ `GKey` 동일 `Key` 후자 형식인 ref 하지 않는 한 경우에서 이기 `Key^`  
   
- `GMapped`동일 `Mapped` 후자 형식인 ref 하지 않는 한 경우에서 이기`Mapped^`  
+ `GMapped` 동일 `Mapped` 후자 형식인 ref 하지 않는 한 경우에서 이기 `Mapped^`  
   
 ## <a name="syntax"></a>구문  
   
@@ -143,7 +138,7 @@ template<typename Key,
   
  멤버 함수를 호출 하 여 저장된 대리자 개체를 액세스할 [hash_set:: key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`합니다. 형식의 키 간의 순서 지정이 동일할 대리자 개체를 정의 해야 [hash_set:: key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md)합니다. 모든 두 개의 키 즉 `X` 및 `Y`:  
   
- `key_comp()(X, Y)`동일한 부울 결과를 반환 모든 호출 합니다.  
+ `key_comp()(X, Y)` 동일한 부울 결과를 반환 모든 호출 합니다.  
   
  경우 `key_comp()(X, Y) && key_comp()(Y, X)` 가 true 이면 `X` 및 `Y` 순서 지정이 동일할에 있다고 합니다.  
   
@@ -153,7 +148,7 @@ template<typename Key,
   
  개체 형식의 저장된 대리자 개체를 호출 하 여 지정된 된 정렬 키를 포함 해야 버킷을 결정 [hash_set:: hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md)합니다. 멤버 함수를 호출 하 여이 저장 된 개체를 액세스할 [hash_set:: hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` 키 값에 따라 달라 지는 정수 값을 가져올 수 있습니다. Hash_set; 생성할 때 저장된 대리자 개체를 지정할 수 있습니다. 기본값은 함수 없는 대리자 개체를 지정 하면 `System::Object::hash_value(key_type)`합니다. 즉, 모든 키에 대 한 `X` 및 `Y`:  
   
- `hash_delegate()(X)`각 호출에서 동일한 정수 결과 반환합니다.  
+ `hash_delegate()(X)` 각 호출에서 동일한 정수 결과 반환합니다.  
   
  경우 `X` 및 `Y` 순서 지정이 동일할, 다음 `hash_delegate()(X)` 와 동일한 정수 결과 반환 해야 `hash_delegate()(Y)`합니다.  
   

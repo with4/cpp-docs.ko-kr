@@ -1,24 +1,19 @@
 ---
-title: "정적 라이브러리 (C + + /cli CX) | Microsoft Docs"
-ms.custom: 
+title: 정적 라이브러리 (C + + /cli CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/03/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcd69fc00a44bdc0d8259a4a21d31c83ee5c6258
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: ffa905cbe0fd49489bd3634cb927cce57ea4ddbc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="static-libraries-ccx"></a>정적 라이브러리(C++/CX)
 유니버설 Windows 플랫폼 (UWP) 응용 프로그램에서 사용 되는 정적 라이브러리는 STL 형식 및 Windows 런타임 응용 프로그램 플랫폼에서 제외 되지 않은 Win32 Api에 대 한 호출을 비롯 한 ISO 표준 c + + 코드를 포함할 수 있습니다. 정적 라이브러리 Windows 런타임 구성 요소를 사용 하 고 특정 제한 사항이 있는 Windows 런타임 구성 요소를 만들 수 있습니다.  
@@ -27,9 +22,9 @@ ms.lasthandoff: 02/21/2018
   
 #### <a name="to-create-a-static-library-for-use-in-a-uwp-app"></a>UWP 앱에서 사용 하기 위해 정적 라이브러리를 만들려면  
   
-1.  메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다. 아래 **Visual c + +** > **Windows 유니버설** 선택 **정적 라이브러리 (유니버설 Windows)**합니다.  
+1.  메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다. 아래 **Visual c + +** > **Windows 유니버설** 선택 **정적 라이브러리 (유니버설 Windows)** 합니다.  
   
-2.  **솔루션 탐색기**에서 프로젝트의 바로 가기 메뉴를 열고 **속성**을 선택합니다. 에 **속성** 대화 상자의 **구성 속성** > **C/c + +** 페이지에서 설정 **Windows 런타임 확장을사용** 를 **예 (/ZW)**합니다.  
+2.  **솔루션 탐색기**에서 프로젝트의 바로 가기 메뉴를 열고 **속성**을 선택합니다. 에 **속성** 대화 상자의 **구성 속성** > **C/c + +** 페이지에서 설정 **Windows 런타임 확장을사용** 를 **예 (/ZW)** 합니다.  
   
  UWP 앱에 대 한 제외 된 Win32 API를 호출 하는 경우 새 정적 라이브러리를 컴파일할 때 컴파일러에서 오류 C3861 "식별자를 찾을 수 없습니다."를 발생 참조에 Windows 런타임에서 지원 되는 대체 방법을 찾으려면 [UWP 앱에서 Windows Api에 대 한 대안](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)합니다.  
   

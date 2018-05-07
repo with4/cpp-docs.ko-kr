@@ -1,12 +1,9 @@
 ---
 title: 'hash_multimap:: end (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multimap::end
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - end member [STL/CLR]
 ms.assetid: e9354c40-6d48-4882-aaed-ccd9987f24a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0dc0af0c26af06bd2a5ace5ccc5577849fe10f49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b79a6f8cff885b3ef891bde2d0a5d07e11dd0eeb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultimapend-stlclr"></a>hash_multimap::end(STL/CLR)
 제어되는 시퀀스의 끝을 지정합니다.  
@@ -40,7 +35,7 @@ iterator end();
 ## <a name="remarks"></a>설명  
  멤버 함수는 제어 된 시퀀스의 끝 바로 다음을 가리키는 양방향 반복기를 반환합니다. 제어 된 시퀀스의 끝을 지정 하는 반복기를 가져올 사용 해당 상태 대상이 제어 된 시퀀스의 길이가 변경 하는 경우 변경 되지 않습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_multimap_end.cpp   

@@ -1,11 +1,8 @@
 ---
-title: "Platform::Collections::BackInsertIterator 클래스 | Microsoft Docs"
-ms.custom: 
+title: Platform::Collections::BackInsertIterator 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23c8b657a6cafb720cf0be07e2e67b5af0d7767d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: d0be32b550cd0e19facb127ca6a052b03ef1eaf5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator 클래스
 요소를 덮어쓰지 않고 순차 컬렉션의 백 엔드에 삽입하는 반복기를 나타냅니다.  
@@ -69,7 +64,7 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
  **네임스페이스:** Platform::Collections  
   
 ---
-## <a name="ctor"></a>  BackInsertIterator::BackInsertIterator Constructor
+## <a name="ctor"></a>  Backinsertiterator:: Backinsertiterator 생성자
 `BackInsertIterator` 클래스의 새 인스턴스를 초기화합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -118,7 +113,7 @@ BackInsertIterator& operator*();
 ### <a name="remarks"></a>설명  
  이 연산자는 현재 컬렉션의 요소가 아닌 현재 BackInsertIterator에 대한 참조를 반환합니다.  
  
-## <a name="operator-increment"></a>  BackInsertIterator::operator++ Operator
+## <a name="operator-increment"></a>  Backinsertiterator:: Operator + + 연산자
 현재 BackInsertIterator에 대한 참조를 반환합니다. 반복기는 수정되지 않습니다.  
   
 ## <a name="syntax"></a>구문  

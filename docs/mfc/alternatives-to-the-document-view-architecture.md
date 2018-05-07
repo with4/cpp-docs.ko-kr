@@ -1,13 +1,10 @@
 ---
-title: "문서 뷰 아키텍처의 대체 | Microsoft Docs"
-ms.custom: 
+title: 문서 뷰 아키텍처의 대체 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 459383474c9ffed9a7ad6cefe01ea21626cb23b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 332f84346e6445fdf0550c3ddb142d9582722f0d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>문서/뷰 아키텍처의 대체
 MFC 응용 프로그램은 일반적으로 문서/뷰 아키텍처를 사용하여 정보, 파일 형식 및 사용자 데이터의 시각적 표현을 관리합니다. 대부분의 데스크톱 응용 프로그램에 대해 문서/뷰 아키텍처는 적절하고 효율적인 응용 프로그램 아키텍처입니다. 이 아키텍처는 뷰에서 데이터를 구분하고, 대부분의 경우 응용 프로그램을 단순화하고 코드 중복을 줄입니다.  

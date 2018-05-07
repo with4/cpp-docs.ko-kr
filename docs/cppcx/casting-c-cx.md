@@ -1,24 +1,19 @@
 ---
-title: "캐스팅 (C + + /cli CX) | Microsoft Docs"
-ms.custom: 
+title: 캐스팅 (C + + /cli CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e16aacdf713d1f9ff2b40532abfd2b5d6316f7a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 8f71be537ecc0dc0cb58a3ada13612dbe8cbd7d3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="casting-ccx"></a>캐스팅(C++/CX)
 Windows 런타임 형식에 적용 된 네 가지 캐스트 연산자: [static_cast 연산자](../cpp/static-cast-operator.md), [dynamic_cast Operator](../cpp/dynamic-cast-operator.md), **safe_cast Operator**, 및 [ reinterpret_cast 연산자](../cpp/reinterpret-cast-operator.md)합니다. `safe_cast` 및 `static_cast` 는 변환이 수행될 수 없을 때 예외를 throw합니다. [static_cast 연산자](../cpp/static-cast-operator.md) 도 컴파일 타임 형식 검사를 수행합니다. `dynamic_cast` 는 형식을 변환하지 못할 경우 `nullptr` 을 반환합니다. `reinterpret_cast` 는 null이 아닌 값을 반환하지만 이는 잘못되었을 수 있습니다. 따라서 캐스팅이 성공할지 여부를 모른다면 `reinterpret_cast` 를 사용하지 않는 것이 좋습니다. 또한 좋습니다 사용 하는 C 스타일 캐스트 C + + /cli CX 동일 하기 때문에 코드 `reinterpret_cast`합니다.  

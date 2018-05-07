@@ -1,13 +1,10 @@
 ---
-title: "컴파일러 오류 C3491 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C3491 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C3491
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3491
 ms.assetid: 7f0e71b2-46a0-4d25-bd09-6158a280f509
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8c126ae0533424c19fd29ea48dbea8c3d7e8971
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6bd856f50f3528b3895e4495215b2e479d8a424b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3491"></a>컴파일러 오류 C3491
 'var': 변경 불가능한 람다에서 값 방식 캡처를 수정할 수 없습니다.  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
 -   람다 식의 캡처 목록에 변수를 참조로 전달합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 변경할 수 없는 람다 식의 본문에서 `m`캡처 변수를 수정하기 때문에 C3491을 생성합니다.  
   
 ```  
@@ -51,7 +46,7 @@ int main()
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `mutable` 키워드로 람다 식을 선언하여 C3491을 해결합니다.  
   
 ```  

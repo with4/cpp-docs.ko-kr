@@ -1,12 +1,9 @@
 ---
-title: "CDockablePaneAdapter 클래스 | Microsoft Docs"
-ms.custom: 
+title: CDockablePaneAdapter 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDockablePaneAdapter
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CDockablePaneAdapter [MFC], SaveState
 - CDockablePaneAdapter [MFC], SetWrappedWnd
 ms.assetid: 6ed6cf82-f39c-4d0c-bf7c-8641495cf8f3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb0e10490a381784e40167e16d1c7ec4e7e1a19
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea3a2cb6c3d9a454c33654254fb751bfc8679696
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter 클래스
 `CWnd`파생 창에 대해 도킹 지원을 제공합니다.  
@@ -70,7 +65,7 @@ class CDockablePaneAdapter : public CDockablePane
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxDockablePaneAdapter.h  
   
-##  <a name="getwrappedwnd"></a>CDockablePaneAdapter::GetWrappedWnd  
+##  <a name="getwrappedwnd"></a>  CDockablePaneAdapter::GetWrappedWnd  
  도킹 가능한 창 어댑터에 대 한 기본 창을 반환합니다.  
   
 ```  
@@ -83,7 +78,7 @@ virtual CWnd* GetWrappedWnd() const;
 ### <a name="remarks"></a>설명  
  래핑된 창에 액세스 하려면이 함수를 사용 합니다.  
   
-##  <a name="loadstate"></a>CDockablePaneAdapter::LoadState  
+##  <a name="loadstate"></a>  CDockablePaneAdapter::LoadState  
  레지스트리에서 창의 상태를 로드 합니다.  
   
 ```  
@@ -107,7 +102,7 @@ virtual BOOL LoadState(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="savestate"></a>CDockablePaneAdapter::SaveState  
+##  <a name="savestate"></a>  CDockablePaneAdapter::SaveState  
  레지스트리에 창의 상태를 저장합니다.  
   
 ```  
@@ -131,7 +126,7 @@ virtual BOOL SaveState(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setwrappedwnd"></a>CDockablePaneAdapter::SetWrappedWnd  
+##  <a name="setwrappedwnd"></a>  CDockablePaneAdapter::SetWrappedWnd  
  도킹 가능한 창 어댑터에 대 한 기본 창을 설정합니다.  
   
 ```  

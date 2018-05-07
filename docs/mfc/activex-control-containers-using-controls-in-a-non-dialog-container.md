@@ -1,13 +1,10 @@
 ---
-title: "ActiveX 컨트롤 컨테이너: 대화 상자가 아닌 컨테이너에서 컨트롤을 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: 'ActiveX 컨트롤 컨테이너: 대화 상자가 아닌 컨테이너에서 컨트롤을 사용 하 여 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], non-dialog containers
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c380d0a525c2f026054ebae1812450c4d4634c1e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 16264e9b072d27349d4375bd7c04d5bbac1be597
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX 컨트롤 컨테이너: 대화 상자가 아닌 컨테이너에서 컨트롤 사용
 일부 SDI 등의 응용 프로그램 또는 MDI 응용 프로그램을 응용 프로그램 창에 컨트롤을 포함 합니다. **만들기** 멤버 함수 Visual c + +에 의해 삽입 된 래퍼 클래스의 인스턴스를 만들 수는 컨트롤의 동적으로 대화 상자에 대 한 필요 없이 합니다.  

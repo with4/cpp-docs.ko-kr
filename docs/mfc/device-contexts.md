@@ -1,13 +1,10 @@
 ---
-title: "장치 컨텍스트 | Microsoft Docs"
-ms.custom: 
+title: 장치 컨텍스트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - drawing [MFC], directly into windows
 - painting and device context
 ms.assetid: d0cd51f1-f778-4c7e-bf50-d738d10433c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26d4a0e32a8b24a72447cf4227be128659316c0b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45a2f99001d45de71ca3ea8a525152d53d67ee64
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="device-contexts"></a>장치 컨텍스트
 장치 컨텍스트에 화면 또는 프린터와 같은 장치 그리기 특성에 대 한 정보를 포함 하는 Windows 데이터 구조입니다. 모든 그리기 호출은 그리기 선, 도형 및 텍스트에 대 한 Windows Api를 캡슐화 하는 장치 컨텍스트 개체를 통해 수행 됩니다. 장치 컨텍스트는 Windows에서 장치 독립적 그리기를 허용합니다. 장치 컨텍스트 화면, 프린터 또는 메타 파일을 그리는 데 사용할 수 있습니다.  
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
  이 경우 사용할 수 있습니다는 [CClientDC](../mfc/reference/cclientdc-class.md) 디바이스 컨텍스트 개체 보기 직접 그려야 합니다.  
   
-### <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+### <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [장치 컨텍스트 (정의)](http://msdn.microsoft.com/library/windows/desktop/dd183553)  
   

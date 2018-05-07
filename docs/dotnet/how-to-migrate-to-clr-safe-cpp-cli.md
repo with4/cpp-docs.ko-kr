@@ -1,13 +1,10 @@
 ---
-title: "방법:-clr로 마이그레이션: 안전 (C + + /cli CLI) | Microsoft Docs"
-ms.custom: 
+title: '방법:-clr로 마이그레이션: 안전 (C + + /cli CLI) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - verifiable assemblies [C++], migrating to
 - /clr compiler option [C++], migrating to /clr:safe
 ms.assetid: 75f9aae9-1dcc-448a-aa11-2d96f972f9d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4c9d28d64b450d14ba1579597f0276cfe3a0cf39
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b12efce8d3566c4fa8824c70e0a6c7ae9d486dc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-migrate-to-clrsafe-ccli"></a>방법: /clr:safe로 마이그레이션(C++/CLI)
 Visual c + +를 사용 하 여 확인할 수 있는 구성 요소를 생성할 수 **/clr: safe**, 각 비안정형 코드 구문에 대 한 오류를 생성 하도록 컴파일러에 이르게 됩니다.  
@@ -55,7 +50,7 @@ Visual c + +를 사용 하 여 확인할 수 있는 구성 요소를 생성할 �
   
 -   Main 함수 이므로 모든 매개 변수를 선언할 수 없습니다 EXE를 작성 하는 경우 <xref:System.Environment.GetCommandLineArgs%2A> 명령줄 인수를 검색 하는 데 사용 해야 합니다.  
   
--   가상 호출 하는 가상 함수입니다. 예:  
+-   가상 호출 하는 가상 함수입니다. 예를 들어:  
   
     ```  
     // not_verifiable.cpp  
@@ -82,7 +77,7 @@ Visual c + +를 사용 하 여 확인할 수 있는 구성 요소를 생성할 �
   
 -   [__based](../cpp/based-grammar.md)  
   
--   [__try](../cpp/try-except-statement.md) 및`__except`  
+-   [__try](../cpp/try-except-statement.md) 및 `__except`  
   
 ## <a name="see-also"></a>참고 항목  
  [순수형 및 안정형 코드(C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

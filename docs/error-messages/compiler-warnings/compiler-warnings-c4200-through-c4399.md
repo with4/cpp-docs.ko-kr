@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 s C4200 C4399 통해 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 s C4200 C4399 통해 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4203
@@ -42,17 +39,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22f0d58a0d7a348abd0b85d8d5dee41db28ed4f9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 41adf86af231a3f6dfc1f0ecdb14418dea78ec7e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>컴파일러 경고 s C4200 C4399 통해
 
@@ -89,7 +84,7 @@ ms.lasthandoff: 02/14/2018
 |[컴파일러 경고(수준 1) C4227](../../error-messages/compiler-warnings/compiler-warning-level-1-c4227.md)|사용 하는 오래 된 구문: 참조의 한정자는 무시 됩니다.|
 |[컴파일러 경고(수준 1) C4228](../../error-messages/compiler-warnings/compiler-warning-level-1-c4228.md)|비표준 확장이 사용 됨: 선언 자 목록에서 쉼표 뒤의 한정자는 무시 됩니다.|
 |[컴파일러 경고(수준 1) C4229](../../error-messages/compiler-warnings/compiler-warning-level-1-c4229.md)|사용 하는 오래 된 구문: 데이터의 한정자는 무시 됩니다.|
-|[컴파일러 경고(수준 1) C4230](../../error-messages/compiler-warnings/compiler-warning-level-1-c4230.md)|anachronism used: modifiers/qualifiers interspersed; qualifier ignored|
+|[컴파일러 경고(수준 1) C4230](../../error-messages/compiler-warnings/compiler-warning-level-1-c4230.md)|사용 하는 오래 된 구문: 오래; 한정자가 무시 되었습니다|
 |[컴파일러 경고(수준 4) C4232](../../error-messages/compiler-warnings/compiler-warning-level-4-c4232.md)|비표준 확장이 사용 됨: '*식별자*': dllimport의 주소가 '*dllimport*' 정적이 아니거나, identity 보장 되지 않습니다|
 |[컴파일러 경고 (수준 4, 오류) C4233](../../error-messages/compiler-warnings/compiler-warning-level-4-c4233.md)|비표준 확장이 사용 됨: '*키워드*' 키워드를 c + +에서는 C 아님만 지원|
 |[컴파일러 경고 (수준 4, 오류) C4234](../../error-messages/compiler-warnings/compiler-warning-level-4-c4234.md)|비표준 확장이 사용 됨: '*키워드*' 키워드를 사용 하도록 예약|
@@ -175,7 +170,7 @@ ms.lasthandoff: 02/14/2018
 |[컴파일러 경고(수준 4) C4336](../../error-messages/compiler-warnings/compiler-warning-level-4-c4336.md)|상호 참조 형식 라이브러리 가져오기 '*library1*'가져오기' before*library2*'|
 |[컴파일러 경고(수준 4) C4337](../../error-messages/compiler-warnings/compiler-warning-level-4-c4337.md)|상호 참조 형식 라이브러리 '*library1*'에서'*library2*'가 자동으로 가져옵니다.|
 |컴파일러 경고 (수준 4) C4338|#pragma *지시문*: 표준 섹션 '*섹션*' 사용|
-|[컴파일러 경고(수준 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|'*형식*':에서 발견 되는 정의 되지 않은 형식을 사용 하 여 ' WinRT &#124; CLR' 메타 데이터 사용이 형식의 런타임 예외가 발생할 수 있습니다|
+|[컴파일러 경고(수준 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|'*형식*':에서 발견 되는 정의 되지 않은 형식을 사용 하 여 ' WinRT&#124;CLR' 메타 데이터 사용이 형식의 런타임 예외가 발생할 수 있습니다|
 |[컴파일러 경고(수준 1) C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|'*값*': 값이 음수 값으로 양의에서 래핑 되었습니다|
 |[컴파일러 경고(수준 1) C4342](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|동작 변경: '*함수*' 호출 되었지만 이전 버전에서는 멤버 연산자가 호출|
 |컴파일러 경고 (수준 4) C4343|#pragma optimize("g",off)는 /Og 옵션을 재정의합니다.|

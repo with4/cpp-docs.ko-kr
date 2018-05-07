@@ -1,13 +1,10 @@
 ---
-title: "Rebar 컨트롤에서 알림 메시지 처리 | Microsoft Docs"
-ms.custom: 
+title: Rebar 컨트롤에서 알림 메시지 처리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - RBN_ notification messages [MFC]
 - notifications [MFC], CReBarCtrl
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22a8b584c309cd6698ddd73449fcbba866111190
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a06df0bdfe8d1b81b4285fc86378f3da99882698
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Rebar 컨트롤에서 알림 메시지 처리
 Rebar 컨트롤의 부모 클래스에서 만듭니다는 `OnChildNotify` 모든 rebar 컨트롤에 대해 switch 문 사용 하는 처리기 함수 (`CReBarCtrl`) 알림 메시지를 처리 합니다. 개체 변경 내용 삭제 rebar 밴드의 레이아웃 및 등 rebar 컨트롤에서 밴드 rebar 컨트롤 위로 끌 때 부모 창에 알림이 전송 됩니다.  

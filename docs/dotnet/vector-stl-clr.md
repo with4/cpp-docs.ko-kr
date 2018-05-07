@@ -1,12 +1,9 @@
 ---
 title: vector (STL/CLR) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::vector
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <cliext/vector> header [STL/CLR]
 - <vector> header [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bbbded2cb679d1f55949095cae3508d658e020c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de5d09d569933dc06666ed2008081703d59c1564
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vector-stlclr"></a>vector(STL/CLR)
 템플릿 클래스는 임의 액세스를 가진 요소의 다양 한 길이의 시퀀스를 제어 하는 개체를 설명 합니다. 컨테이너를 사용 하 여 `vector` 저장소의 연속 블록으로 요소의 시퀀스를 관리할 수 있습니다. 블록 요구에 맞게 증가 하는 배열을로 구현 됩니다.  

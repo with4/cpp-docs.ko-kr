@@ -1,13 +1,10 @@
 ---
-title: "코드 마법사를 사용 하 여 컨트롤에 대 한 형식이 안전한 액세스 | Microsoft Docs"
-ms.custom: 
+title: 코드 마법사를 사용 하 여 컨트롤에 대 한 형식이 안전한 액세스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - dialog boxes [MFC], access to controls
 - dialog box controls [MFC], accessing
 ms.assetid: b8874393-ee48-4124-8d78-e3648a7e29b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a431061704bf2affa8a343487ff20f8b55b9e6e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 025fd280dc6bf0947dae59cf77abe141bc312df8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>코드 마법사를 사용하여 컨트롤에 대한 형식이 안전한 액세스 수행
 DDX 기능에 익숙한 경우에 컨트롤 속성을 사용할 수 있습니다는 [멤버 변수 추가 마법사](../ide/add-member-variable-wizard.md) 형식이 안전한 액세스를 만들려고 합니다. 이 방법은 코드 마법사를 사용 하지 않고 컨트롤을 만드는 것 보다 쉽습니다.  

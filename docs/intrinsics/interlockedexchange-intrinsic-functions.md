@@ -1,12 +1,9 @@
 ---
 title: _Interlockedexchangepointer intrinsic Functions | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _InterlockedExchange_rel
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4ba9d1da3844da6ebe51aa4fa9cafc19b43079f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c8637772d81031b9f9b30ef8cbee63b55c5b5b8c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>_InterlockedExchangePointer Intrinsic Functions
 **Microsoft 전용**  
@@ -186,7 +181,7 @@ __int64 _InterlockedExchange64_rel(
   
  이러한 루틴은 내장 함수로만 사용할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  샘플을 사용 하는 방법에 대 한 `_InterlockedExchange`, 참조 [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)합니다.  
   
 **Microsoft 전용 종료**  

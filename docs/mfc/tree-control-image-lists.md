@@ -1,13 +1,10 @@
 ---
-title: "트리 컨트롤 이미지 목록 | Microsoft Docs"
-ms.custom: 
+title: 트리 컨트롤 이미지 목록 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - tree controls [MFC], image lists
 - CTreeCtrl class [MFC], image lists
 ms.assetid: f560c4f2-20d2-4d28-ac33-4017e65fb0a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5015a001bf2c15f3144303ba5e19b2a9ea8c34f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ef74b656cc85fbdcc29c7965b9398a5cbd2f44e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-image-lists"></a>트리 컨트롤 이미지 목록
 트리 컨트롤의 각 항목 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 연결 된 비트맵 이미지의 쌍을 가질 수 있습니다. 이미지 항목의 레이블 왼쪽에 나타납니다. 항목을 선택 하 고 항목을 선택 하지 않은 경우 표시 되 면 다른 한 이미지가 표시 됩니다. 예를 들어 항목 선택 하지 않으면 열린 폴더를 선택 하 고 닫혀 있는 폴더가 표시할 수 있습니다.  

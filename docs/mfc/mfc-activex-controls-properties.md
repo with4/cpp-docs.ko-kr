@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 컨트롤: 속성 | Microsoft Docs"
-ms.custom: 
+title: 'MFC ActiveX 컨트롤: 속성 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC]
 ms.assetid: b678a53c-0d9e-476f-8aa0-23b80baaba46
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eea42401255f0aa99dd7a42b8e9b69e45dfe7b5b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac9d9e4f5e7d777bd147ce36e970e7a30fd875b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-properties"></a>MFC ActiveX 컨트롤: 속성
 ActiveX 컨트롤은 컨트롤 컨테이너와 통신 하는 이벤트입니다. 컨테이너를 사용 하 여 메서드 및 속성 컨트롤와 통신할 수 있습니다. 메서드 및 속성은 비슷한 목적으로 사용 중인 각각, 멤버 함수 및 c + + 클래스의 멤버 변수입니다. 속성은 ActiveX 컨트롤의 모든 컨테이너에 노출 되는 데이터 멤버입니다. 자동화 클라이언트 및 ActiveX 컨트롤 컨테이너와 같은 ActiveX 컨트롤을 포함 하는 응용 프로그램에 대 한 한 인터페이스를 제공 합니다.  

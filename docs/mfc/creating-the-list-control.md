@@ -1,30 +1,25 @@
 ---
-title: "목록 컨트롤 만들기 | Microsoft Docs"
-ms.custom: 
+title: 목록 컨트롤 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CListCtrl class [MFC], creating control
 - list controls [MFC]
 ms.assetid: a4cb1729-31b6-4d2b-a44b-367474848a39
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85afbe49943e06a66cf2fa914cc87f07b0fa8c52
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42457e223bb7e12da64be54d757e05d0bac3a028
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-the-list-control"></a>목록 컨트롤 만들기
 목록 제어 하는 방법 ([CListCtrl](../mfc/reference/clistctrl-class.md)) 만들어질 컨트롤을 직접 사용 하거나 클래스를 사용 하 여 하 고 있는지 여부에 따라 달라 집니다 [CListView](../mfc/reference/clistview-class.md) 대신 합니다. 사용 하는 경우 `CListView`, 프레임 워크의 문서/뷰 만들기 시퀀스의 일부로 뷰를 만듭니다. 목록 보기를 만드는 컨트롤을 만듭니다는 목록도 (두 개의 동일한 작업 되어 있음). 보기의에서 컨트롤을 만들 [OnCreate](../mfc/reference/cwnd-class.md#oncreate) 처리기 함수입니다. 이 경우 컨트롤은 호출을 통해 항목을 추가할 수 있도록 준비 된 [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl)합니다.  

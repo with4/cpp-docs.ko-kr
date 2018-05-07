@@ -1,13 +1,10 @@
 ---
-title: "이미지 목록과 헤더 컨트롤 함께 사용 | Microsoft Docs"
-ms.custom: 
+title: 이미지 목록과 헤더 컨트롤 함께 사용 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], image lists
 - image lists [MFC], header controls
 ms.assetid: d5e9b310-6278-406c-909c-eefa09549a47
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7a51aadc10a7722875597813e24ceb5960ab459
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2da3737b54c53903f8fc8ff30cccba6165cbde45
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-image-lists-with-header-controls"></a>이미지 목록과 헤더 컨트롤 함께 사용
 헤더 항목에는 머리글 항목 내 이미지를 표시할 수가 있습니다. 연결 된 이미지 목록에 저장 된이 이미지를 16 x 16 픽셀 있고 목록 뷰 컨트롤에서 사용 되는 아이콘 이미지와 같은 특성을 보유 합니다. 이 동작을 성공적으로 구현 하기 위해 해야 먼저 및 이미지 목록 초기화 목록을 헤더 컨트롤과 연결 만들고에 이미지가 표시 되는 머리글 항목의 속성을 수정 합니다.  

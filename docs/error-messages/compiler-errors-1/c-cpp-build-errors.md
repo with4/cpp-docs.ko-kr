@@ -2,11 +2,8 @@
 title: C/c + + 빌드 오류 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - CRT1002
@@ -309,17 +306,15 @@ helpviewer_keywords:
 - error messages [C++], build errors
 - errors [C++], builds
 ms.assetid: 2470b496-28fa-47e7-a238-a086d99b06ca
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80e723e5fc51ee166b61999396ddfe6be7bdd991
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 65a6eb5fe80c25912c76e3446efb1ee00413fff1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cc-build-errors"></a>C/C++ 빌드 오류
 
@@ -327,7 +322,7 @@ ms.lasthandoff: 12/21/2017
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [C/C++ 빌드 참조](../../build/reference/c-cpp-building-reference.md)   
 [Visual Studio의 디버깅](/visualstudio/debugger/debugging-in-visual-studio)

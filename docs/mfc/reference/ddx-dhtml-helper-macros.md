@@ -1,12 +1,9 @@
 ---
-title: "DDX_DHtml 도우미 매크로 | Microsoft Docs"
-ms.custom: 
+title: DDX_DHtml 도우미 매크로 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - AFXDHTML/DDX_DHtml_ElementValue
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - DDX (dialog data exchange), DHtml helper macros
 - macros [MFC], DDX_DHtml helpers
 ms.assetid: c46302d2-ea43-4fea-bfc2-6f590d99f267
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d5a69e08d06a53dcb2f3a4be58618e9829e8c8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cb2e9d2494463b502fda85c03fa1b861e1182cfc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ddxdhtml-helper-macros"></a>DDX_DHtml 도우미 매크로
 DDX_DHtml 도우미 매크로 사용 하는 HTML 페이지에 있는 컨트롤의 자주 사용 되는 속성에 쉽게 액세스할 수 있습니다.  
@@ -57,7 +52,7 @@ DDX_DHtml 도우미 매크로 사용 하는 HTML 페이지에 있는 컨트롤�
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdhtml.h  
 
-## <a name="ddx_dhtml_anchor_href"></a>DDX_DHtml_Anchor_Href
+## <a name="ddx_dhtml_anchor_href"></a> DDX_DHtml_Anchor_Href
 설정 하거나 대상 URL 또는 앵커 지점을 검색 합니다.  
   
   
@@ -82,7 +77,7 @@ DDX_DHtml_Anchor_Href(
 ## <a name="remarks"></a>설명  
  이 매크로 호출의 [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 함수는 DISPID_IHTMLANCHORELEMENT_HREF를 사용 하 여 디스패치 id입니다.
 
-## <a name="ddx_dhtml_anchor_target"></a>DDX_DHtml_Anchor_Target
+## <a name="ddx_dhtml_anchor_target"></a>  DDX_DHtml_Anchor_Target
  설정 하거나 대상 창이 나 프레임을 검색 합니다.  
     
 ```  
@@ -105,7 +100,7 @@ DDX_DHtml_Anchor_Target(
 ## <a name="remarks"></a>설명  
  이 매크로 호출의 [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 함수는 DISPID_IHTMLANCHORELEMENT_TARGET를 사용 하 여 디스패치 id입니다.  
 
-## <a name="ddx_dhtml_elementinnerhtml"></a>DDX_DHtml_ElementInnerHtml
+## <a name="ddx_dhtml_elementinnerhtml"></a>  DDX_DHtml_ElementInnerHtml
  설정 하거나 현재 요소의 시작 및 끝 태그 사이의 HTML을 검색 합니다.  
   
   
@@ -131,7 +126,7 @@ DDX_DHtml_ElementInnerHtml(
  이 매크로 호출의 [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 함수는 DISPID_IHTMLELEMENT_INNERHTML를 사용 하 여 디스패치 id입니다.  
   
 
-## <a name="ddx_dhtml_elementinnertext"></a>DDX_DHtml_ElementInnerText
+## <a name="ddx_dhtml_elementinnertext"></a>  DDX_DHtml_ElementInnerText
 설정 하거나 현재 요소의 시작 및 끝 태그 사이 오는 텍스트를 검색 합니다.  
   
   
@@ -156,7 +151,7 @@ DDX_DHtml_ElementInnerText(
 ## <a name="remarks"></a>설명  
  이 매크로 호출의 [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 함수는 DISPID_IHTMLELEMENT_INNERTEXT를 사용 하 여 디스패치 id입니다. 
 
-## <a name="ddx_dhtml_elementvalue"></a>DDX_DHtml_ElementValue  
+## <a name="ddx_dhtml_elementvalue"></a> DDX_DHtml_ElementValue  
 설정 하거나 선택된 된 컨트롤에서 속성 값을 검색 합니다.  
  
 ```  
@@ -181,7 +176,7 @@ DDX_DHtml_ElementValue(
   
  이 매크로 호출의 [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 함수는 DISPID_A_VALUE를 사용 하 여 디스패치 id입니다.  
 
-## <a name="ddx_dhtml_frame_src"></a>DDX_DHtml_Frame_Src
+## <a name="ddx_dhtml_frame_src"></a> DDX_DHtml_Frame_Src
 설정 하거나 연결된 된 프레임의 URL을 검색 합니다.  
   
 ```  
@@ -204,7 +199,7 @@ DDX_DHtml_Frame_Src(
 ## <a name="remarks"></a>설명  
  이 매크로 호출의 [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 함수는 DISPID_IHTMLFRAMEBASE_SRC를 사용 하 여 디스패치 id입니다.  
 
-## <a name="ddx_dhtml_iframe_src"></a>DDX_DHtml_IFrame_Src
+## <a name="ddx_dhtml_iframe_src"></a> DDX_DHtml_IFrame_Src
 설정 하거나 연결된 된 프레임의 URL을 검색 합니다.  
   
   

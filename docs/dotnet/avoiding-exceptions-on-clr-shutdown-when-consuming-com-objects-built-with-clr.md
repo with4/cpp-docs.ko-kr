@@ -2,12 +2,9 @@
 title: -Clr과 빌드한 COM 개체에서 발생 한 예외를 방지 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - interoperability [C++], CLR shutdown exceptions
 - CLR shutdown exceptions [C++]
 ms.assetid: 41249d83-4b51-4e46-866f-27f475f2498c
-caps.latest.revision: 4
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 287c9831f8c604272b37ac85528d66fe640de557
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0efd2af7eb4bf8a70bff983d627f802f1976c6ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr"></a>/clr로 빌드한 COM 개체를 사용할 때 CLR 종료 시 예외 방지
 공용 언어 런타임 (CLR) 종료 모드로 설정 되 면 네이티브 함수를 CLR 서비스에 대 한 액세스를 제한 됩니다. COM 개체를 사용 하 여 컴파일된에서 릴리스를 호출 하려고 할 때 **/clr**, 네이티브 코드에 CLR 전환 되 고 다음 관리 코드에 서비스 (관리 코드에서 정의 됨)는 iunknown:: Release 호출으로 다시 전환 합니다. CLR 종료 모드 이므로 관리 코드로 다시 호출을 방지 합니다.  

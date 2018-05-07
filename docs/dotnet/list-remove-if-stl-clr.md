@@ -2,11 +2,8 @@
 title: 'list:: remove_if (STL/CLR) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::list::remove_if
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - remove_if member [STL/CLR]
 ms.assetid: cbc66192-751b-41c5-b557-d5d7bbc2a840
-caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 39cdd5fe6f7bf143b6e46b8fcde1a34f919be191
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53a6c12509e34e40d3a6a439fb03dc1f6779aba3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listremoveif-stlclr"></a>list::remove_if(STL/CLR)
 지정 된 테스트를 통과 하는 요소를 제거 합니다.  
@@ -45,7 +40,7 @@ template<typename Pred1>
 ## <a name="remarks"></a>설명  
  멤버 함수는 제어 된 시퀀스 (지우기로 적용)에서 제거 모든 요소가 `X` 를 `pred(X)` 그렇습니다. 함수 또는 대리자도 지정 하는 조건을 만족 하는 모든 요소를 제거 하려면 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_list_remove_if.cpp   

@@ -1,12 +1,9 @@
 ---
-title: "CMFCMenuBar 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCMenuBar 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCMenuBar
@@ -115,17 +112,15 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56e8e97645d4baa74033af07ba08ab2eae0a3557
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 02637017ccd589e093caf29cbfe0c345dfa80316
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar 클래스
 도킹을 구현하는 메뉴 모음입니다.  
@@ -197,11 +192,11 @@ class CMFCMenuBar : public CMFCToolbar
 ## <a name="remarks"></a>설명  
  `CMFCMenuBar` 클래스는 도킹 기능을 구현 하는 메뉴 모음입니다. 닫을 수 없습니다.-항상 표시 되지만 도구 모음을 비슷합니다.  
   
- `CMFCMenuBar`최근에 사용한 메뉴 항목 개체 표시 옵션을 지원 합니다. 이 옵션을 사용 하는 경우는 `CMFCMenuBar` 처음 볼 때만 사용할 수 있는 명령 하위 집합을 표시 합니다. 그 후 최근에 사용한 명령 원래 명령 집합이 표시 됩니다. 또한 사용자 항상 사용 가능한 모든 명령을 보려면 메뉴를 확장할 수 있습니다. 따라서 사용 가능한 각 명령에 지속적으로 표시 하거나 최근에 선택 된 경우에 표시 하도록 구성 됩니다.  
+ `CMFCMenuBar` 최근에 사용한 메뉴 항목 개체 표시 옵션을 지원 합니다. 이 옵션을 사용 하는 경우는 `CMFCMenuBar` 처음 볼 때만 사용할 수 있는 명령 하위 집합을 표시 합니다. 그 후 최근에 사용한 명령 원래 명령 집합이 표시 됩니다. 또한 사용자 항상 사용 가능한 모든 명령을 보려면 메뉴를 확장할 수 있습니다. 따라서 사용 가능한 각 명령에 지속적으로 표시 하거나 최근에 선택 된 경우에 표시 하도록 구성 됩니다.  
   
  사용 하는 `CMFCMenuBar` 개체, 주 창 프레임 개체에 포함 합니다. 처리 하는 경우는 `WM_CREATE` 메시지, 호출 `CMFCMenuBar::Create` 또는 `CMFCMenuBar::CreateEx`합니다. 함수를 만들 있는 관계 없이 사용 하 여, 주 프레임 창에 대 한 포인터를 전달 합니다. 다음 호출 하 여 도킹을 사용 하도록 설정 [CFrameWndEx::EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking)합니다. 이 메뉴를 호출 하 여 도킹 [CFrameWndEx::DockPane](../../mfc/reference/cframewndex-class.md#dockpane)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `CMFCMenuBar` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 창 스타일을 설정, 사용자 지정 단추를 사용 하도록 설정, 도움말 상자를 사용 하도록 설정, 팝업 메뉴에 대 한 그림자를 사용 하도록 설정 및 메뉴 모음을 업데이트 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [IE 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]  
@@ -227,7 +222,7 @@ class CMFCMenuBar : public CMFCToolbar
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxmenubar.h  
   
-##  <a name="adjustlocations"></a>CMFCMenuBar::AdjustLocations  
+##  <a name="adjustlocations"></a>  CMFCMenuBar::AdjustLocations  
  메뉴 모음에서 메뉴 항목의 위치를 조정합니다.  
   
 ```  
@@ -236,7 +231,7 @@ virtual void AdjustLocations();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="allowchangetextlabels"></a>CMFCMenuBar::AllowChangeTextLabels  
+##  <a name="allowchangetextlabels"></a>  CMFCMenuBar::AllowChangeTextLabels  
  메뉴 모음에서 이미지 아래 텍스트 레이블을 허용 되는지 여부를 결정 합니다.  
   
 ```  
@@ -248,7 +243,7 @@ virtual BOOL AllowChangeTextLabels() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="allowshowonpanemenu"></a>CMFCMenuBar::AllowShowOnPaneMenu  
+##  <a name="allowshowonpanemenu"></a>  CMFCMenuBar::AllowShowOnPaneMenu  
 
   
 ```  
@@ -259,7 +254,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="calcfixedlayout"></a>CMFCMenuBar::CalcFixedLayout  
+##  <a name="calcfixedlayout"></a>  CMFCMenuBar::CalcFixedLayout  
 
   
 ```  
@@ -276,7 +271,7 @@ virtual CSize CalcFixedLayout(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="calclayout"></a>CMFCMenuBar::CalcLayout  
+##  <a name="calclayout"></a>  CMFCMenuBar::CalcLayout  
 
   
 ```  
@@ -293,7 +288,7 @@ virtual CSize CalcLayout(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="calcmaxbuttonheight"></a>CMFCMenuBar::CalcMaxButtonHeight  
+##  <a name="calcmaxbuttonheight"></a>  CMFCMenuBar::CalcMaxButtonHeight  
 
   
 ```  
@@ -304,7 +299,7 @@ virtual int CalcMaxButtonHeight();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="canbeclosed"></a>CMFCMenuBar::CanBeClosed  
+##  <a name="canbeclosed"></a>  CMFCMenuBar::CanBeClosed  
 
   
 ```  
@@ -315,7 +310,7 @@ virtual BOOL CanBeClosed() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="canberestored"></a>CMFCMenuBar::CanBeRestored  
+##  <a name="canberestored"></a>  CMFCMenuBar::CanBeRestored  
 
   
 ```  
@@ -326,7 +321,7 @@ virtual BOOL CanBeRestored() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="create"></a>CMFCMenuBar::Create  
+##  <a name="create"></a>  CMFCMenuBar::Create  
  메뉴 컨트롤을 만들고에 연결 된 [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) 개체입니다.  
   
 ```  
@@ -354,7 +349,7 @@ virtual BOOL Create(
   
  도구 모음 스타일에 대 한 자세한 내용은 참조 [CBasePane::SetPaneStyle](../../mfc/reference/cbasepane-class.md#setpanestyle)합니다.  
   
-##  <a name="createex"></a>CMFCMenuBar::CreateEx  
+##  <a name="createex"></a>  CMFCMenuBar::CreateEx  
  만듭니다는 [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) 개체와 지정 된 확장된 스타일입니다.  
   
 ```  
@@ -393,13 +388,13 @@ virtual BOOL CreateEx(
   
  추가 스타일의 목록에 대 한 참조 [도구 모음 컨트롤과 단추 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760439), [공통 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775498), 및 [일반적인 창 스타일](http://msdn.microsoft.com/library/windows/desktop/ms632600)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 사용 하는 `CreateEx` 의 메서드는 `CMFCMenuBar` 클래스. 이 코드 조각은의 일부인는 [IE 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]  
 [!code-cpp[NVC_MFC_IEDemo#2](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_3.cpp)]  
   
-##  <a name="createfrommenu"></a>CMFCMenuBar::CreateFromMenu  
+##  <a name="createfrommenu"></a>  CMFCMenuBar::CreateFromMenu  
  초기화는 [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) 개체입니다. 이 메서드 모델은 `CMFCMenuBar` 후 개체는 `HMENU` 매개 변수입니다.  
   
 ```  
@@ -411,7 +406,7 @@ virtual void CreateFromMenu(
   
 ### <a name="parameters"></a>매개 변수  
  [in] `hMenu`  
- 메뉴 리소스에 대 한 핸들입니다. `CreateFromMenu`이 리소스에 대 한 템플릿으로 사용 하 여는 `CMFCMenuBar`합니다.  
+ 메뉴 리소스에 대 한 핸들입니다. `CreateFromMenu` 이 리소스에 대 한 템플릿으로 사용 하 여는 `CMFCMenuBar`합니다.  
   
  [in] `bDefaultMenu`  
  새 메뉴의 기본 메뉴 인지 여부를 나타내는 부울입니다.  
@@ -422,7 +417,7 @@ virtual void CreateFromMenu(
 ### <a name="remarks"></a>설명  
  Menu 컨트롤 메뉴 리소스와 동일한 메뉴 항목을 원하는 경우이 메서드를 사용 합니다. 중 하나를 호출한 후이 메서드를 호출 하면 [CMFCMenuBar::Create](#create) 또는 [CMFCMenuBar::CreateEx](#createex)합니다.  
   
-##  <a name="enablehelpcombobox"></a>CMFCMenuBar::EnableHelpCombobox  
+##  <a name="enablehelpcombobox"></a>  CMFCMenuBar::EnableHelpCombobox  
  사용 하도록 설정 된 **도움말** 메뉴 표시줄의 오른쪽에 있는 콤보 상자입니다.  
   
 ```  
@@ -447,7 +442,7 @@ void EnableHelpCombobox(
   
  이 메서드를 호출 하면 `uiID` 0으로 설정 된이 메서드는 콤보 상자를 숨깁니다. 그렇지 않으면이 메서드는 콤보 상자가 표시 자동으로 메뉴 표시줄의 오른쪽에 합니다. 이 메서드를 호출한 후 호출 [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) 삽입 된에 대 한 포인터를 얻으려고 [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) 개체입니다.  
   
-##  <a name="enablemenushadows"></a>CMFCMenuBar::EnableMenuShadows  
+##  <a name="enablemenushadows"></a>  CMFCMenuBar::EnableMenuShadows  
  팝업 메뉴에 대 한 그림자 수 있습니다.  
   
 ```  
@@ -461,7 +456,7 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>설명  
  이 메서드를 사용 하는 알고리즘 복잡 하며, 속도가 느린 시스템 응용 프로그램의 성능이 저하 될 수 있습니다.  
   
-##  <a name="getavailableexpandsize"></a>CMFCMenuBar::GetAvailableExpandSize  
+##  <a name="getavailableexpandsize"></a>  CMFCMenuBar::GetAvailableExpandSize  
 
   
 ```  
@@ -472,7 +467,7 @@ virtual int GetAvailableExpandSize() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getcolumnwidth"></a>CMFCMenuBar::GetColumnWidth  
+##  <a name="getcolumnwidth"></a>  CMFCMenuBar::GetColumnWidth  
 
   
 ```  
@@ -483,7 +478,7 @@ virtual int GetColumnWidth() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getdefaultmenu"></a>CMFCMenuBar::GetDefaultMenu  
+##  <a name="getdefaultmenu"></a>  CMFCMenuBar::GetDefaultMenu  
  원래 메뉴에 대 한 핸들을 검색합니다. 프레임 워크 리소스 파일에서 원래 메뉴를 로드합니다.  
   
 ```  
@@ -496,7 +491,7 @@ HMENU GetDefaultMenu() const;
 ### <a name="remarks"></a>설명  
  응용 프로그램 메뉴 사용자 지정 하는 경우 원래 메뉴에 대 한 핸들을 검색 하려면이 메서드를 사용할 수 있습니다.  
   
-##  <a name="getdefaultmenuresid"></a>CMFCMenuBar::GetDefaultMenuResId  
+##  <a name="getdefaultmenuresid"></a>  CMFCMenuBar::GetDefaultMenuResId  
  기본 메뉴에 대 한 리소스 식별자를 검색합니다.  
   
 ```  
@@ -509,7 +504,7 @@ UINT GetDefaultMenuResId() const;
 ### <a name="remarks"></a>설명  
  프레임 워크 로드에 대 한 기본 메뉴는 `CMFCMenuBar` 리소스 파일에서 개체입니다.  
   
-##  <a name="getfloatpopupdirection"></a>CMFCMenuBar::GetFloatPopupDirection  
+##  <a name="getfloatpopupdirection"></a>  CMFCMenuBar::GetFloatPopupDirection  
 
   
 ```  
@@ -523,7 +518,7 @@ int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getforcedownarrows"></a>CMFCMenuBar::GetForceDownArrows  
+##  <a name="getforcedownarrows"></a>  CMFCMenuBar::GetForceDownArrows  
 
   
 ```  
@@ -534,7 +529,7 @@ BOOL GetForceDownArrows();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="gethelpcombobox"></a>CMFCMenuBar::GetHelpCombobox  
+##  <a name="gethelpcombobox"></a>  CMFCMenuBar::GetHelpCombobox  
  에 대 한 포인터를 반환 합니다.는 **도움말** 콤보 상자입니다.  
   
 ```  
@@ -542,19 +537,19 @@ CMFCToolBarComboBoxButton* GetHelpCombobox();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 **도움말** 콤보 상자입니다. `NULL`경우는 **도움말** 콤보 상자 숨기 거 나 사용할 수 없습니다.  
+ 에 대 한 포인터는 **도움말** 콤보 상자입니다. `NULL` 경우는 **도움말** 콤보 상자 숨기 거 나 사용할 수 없습니다.  
   
 ### <a name="remarks"></a>설명  
  **도움말** 콤보 상자는 메뉴 모음의 오른쪽에 있습니다. 메서드를 호출 [CMFCMenuBar::EnableHelpCombobox](#enablehelpcombobox) 이 콤보 상자를 사용 하도록 합니다.  
   
-##  <a name="gethmenu"></a>CMFCMenuBar::GetHMenu  
+##  <a name="gethmenu"></a>  CMFCMenuBar::GetHMenu  
  에 연결 된 메뉴에 대 한 핸들을 검색 된 [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) 개체입니다.  
   
 ```  
 HMENU GetHMenu() const;  
 ```  
   
-##  <a name="getmenufont"></a>CMFCMenuBar::GetMenuFont  
+##  <a name="getmenufont"></a>  CMFCMenuBar::GetMenuFont  
  현재 메뉴 글꼴을 검색합니다.  
   
 ```  
@@ -563,7 +558,7 @@ static const CFont& GetMenuFont(BOOL bHorz = TRUE);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bHorz`  
- 가로 또는 세로 글꼴을 반환할 것인지를 지정 하는 부울 매개 변수입니다. `TRUE`가로 글꼴을 나타냅니다.  
+ 가로 또는 세로 글꼴을 반환할 것인지를 지정 하는 부울 매개 변수입니다. `TRUE` 가로 글꼴을 나타냅니다.  
   
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 [CFont](../../mfc/reference/cfont-class.md) 현재 메뉴 모음 글꼴을 포함 하는 매개 변수입니다.  
@@ -571,7 +566,7 @@ static const CFont& GetMenuFont(BOOL bHorz = TRUE);
 ### <a name="remarks"></a>설명  
  반환 된 응용 프로그램에 대 한 전역 매개 변수입니다. 두 가지 전역 글꼴 모든 유지 관리 됩니다 `CMFCMenuBar` 개체입니다. 이러한 별도 글꼴 가로 및 세로 메뉴 모음에 사용 됩니다.  
   
-##  <a name="getmenuitem"></a>CMFCMenuBar::GetMenuItem  
+##  <a name="getmenuitem"></a>  CMFCMenuBar::GetMenuItem  
  검색 한 [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) 항목 인덱스에 따라 메뉴 모음의 개체입니다.  
   
 ```  
@@ -583,9 +578,9 @@ CMFCToolBarButton* GetMenuItem(int iItem) const;
  반환할 메뉴 항목의 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `CMFCToolBarButton` 에 지정 된 인덱스와 일치 하는 개체 `iItem`합니다. `NULL`인덱스가 잘못 되었습니다 하는 경우.  
+ 에 대 한 포인터는 `CMFCToolBarButton` 에 지정 된 인덱스와 일치 하는 개체 `iItem`합니다. `NULL` 인덱스가 잘못 되었습니다 하는 경우.  
   
-##  <a name="getrowheight"></a>CMFCMenuBar::GetRowHeight  
+##  <a name="getrowheight"></a>  CMFCMenuBar::GetRowHeight  
 
   
 ```  
@@ -596,7 +591,7 @@ virtual int GetRowHeight() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getsystembutton"></a>CMFCMenuBar::GetSystemButton  
+##  <a name="getsystembutton"></a>  CMFCMenuBar::GetSystemButton  
 
   
 ```  
@@ -613,7 +608,7 @@ CMFCToolBarMenuButtonsButton* GetSystemButton(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getsystembuttonscount"></a>CMFCMenuBar::GetSystemButtonsCount  
+##  <a name="getsystembuttonscount"></a>  CMFCMenuBar::GetSystemButtonsCount  
 
   
 ```  
@@ -624,7 +619,7 @@ int GetSystemButtonsCount() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getsystemmenu"></a>CMFCMenuBar::GetSystemMenu  
+##  <a name="getsystemmenu"></a>  CMFCMenuBar::GetSystemMenu  
 
   
 ```  
@@ -635,7 +630,7 @@ CMFCToolBarSystemMenuButton* GetSystemMenu() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="highlightdisableditems"></a>CMFCMenuBar::HighlightDisabledItems  
+##  <a name="highlightdisableditems"></a>  CMFCMenuBar::HighlightDisabledItems  
  프레임 워크 비활성화 된 메뉴 항목을 강조 표시 하는지 여부를 제어 합니다.  
   
 ```  
@@ -649,7 +644,7 @@ static void HighlightDisabledItems(BOOL bHighlight = TRUE);
 ### <a name="remarks"></a>설명  
  기본적으로 프레임 워크 강조 표시 하지 않습니다 사용할 수 없는 메뉴 항목 위로 마우스 포인터를 놓을 때.  
   
-##  <a name="isbuttonextrasizeavailable"></a>CMFCMenuBar::IsButtonExtraSizeAvailable  
+##  <a name="isbuttonextrasizeavailable"></a>  CMFCMenuBar::IsButtonExtraSizeAvailable  
 
   
 ```  
@@ -660,7 +655,7 @@ virtual BOOL IsButtonExtraSizeAvailable() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ishighlightdisableditems"></a>CMFCMenuBar::IsHighlightDisabledItems  
+##  <a name="ishighlightdisableditems"></a>  CMFCMenuBar::IsHighlightDisabledItems  
  프레임 워크를 사용할 수 없는 메뉴 항목 강조 표시 하는지 여부를 나타냅니다.  
   
 ```  
@@ -668,12 +663,12 @@ static BOOL IsHighlightDisabledItems();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`사용할 수 없는 메뉴 항목이; 강조 표시 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 사용할 수 없는 메뉴 항목이; 강조 표시 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  기본적으로 프레임 워크 강조 표시 하지 않습니다 사용할 수 없는 메뉴 항목 위로 마우스 포인터를 놓을 때. 사용 하 여는 [CMFCMenuBar::HighlightDisabledItems](#highlightdisableditems) 메서드를이 기능을 사용 합니다.  
   
-##  <a name="ismenushadows"></a>CMFCMenuBar::IsMenuShadows  
+##  <a name="ismenushadows"></a>  CMFCMenuBar::IsMenuShadows  
  프레임 워크 팝업 메뉴에 대 한 그림자를 그릴지 여부를 나타냅니다.  
   
 ```  
@@ -681,12 +676,12 @@ static BOOL IsMenuShadows();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`프레임 워크 메뉴 그림자를 그리는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 프레임 워크 메뉴 그림자를 그리는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  사용 하 여는 [CMFCMenuBar::EnableMenuShadows](#enablemenushadows) 메서드를 사용 하도록 설정 하거나이 기능을 사용 하지 않도록 합니다.  
   
-##  <a name="isrecentlyusedmenus"></a>CMFCMenuBar::IsRecentlyUsedMenus  
+##  <a name="isrecentlyusedmenus"></a>  CMFCMenuBar::IsRecentlyUsedMenus  
  최근에 사용한 메뉴 명령을 메뉴 모음의 표시 되는지 여부를 나타냅니다.  
   
 ```  
@@ -699,7 +694,7 @@ static BOOL IsRecentlyUsedMenus();
 ### <a name="remarks"></a>설명  
  함수를 사용 하 여 [CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus) 메뉴 모음 최근에 표시 되는지 여부를 제어할 메뉴 명령을 사용 합니다.  
   
-##  <a name="isshowallcommands"></a>CMFCMenuBar::IsShowAllCommands  
+##  <a name="isshowallcommands"></a>  CMFCMenuBar::IsShowAllCommands  
  메뉴 명령을 모두 표시 하는지 여부를 나타냅니다.  
   
 ```  
@@ -712,9 +707,9 @@ static BOOL IsShowAllCommands();
 ### <a name="remarks"></a>설명  
  A `CMFCMenuBar` 모든 명령을 표시 하거나 명령의 하위 집합만 표시 하도록 개체를 구성할 수 있습니다. 이 기능에 대 한 자세한 내용은 참조 [CMFCMenuBar 클래스](../../mfc/reference/cmfcmenubar-class.md)합니다.  
   
- `IsShowAllCommands`알려이 기능에 대 한 구성 방법의 `CMFCMenuBar` 개체입니다. 메서드를 사용 하 여 메뉴 명령이 표시될지를 제어 하려면 [CMFCMenuBar::SetShowAllCommands](#setshowallcommands) 및 [CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus)합니다.  
+ `IsShowAllCommands` 알려이 기능에 대 한 구성 방법의 `CMFCMenuBar` 개체입니다. 메서드를 사용 하 여 메뉴 명령이 표시될지를 제어 하려면 [CMFCMenuBar::SetShowAllCommands](#setshowallcommands) 및 [CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus)합니다.  
   
-##  <a name="isshowallcommandsdelay"></a>CMFCMenuBar::IsShowAllCommandsDelay  
+##  <a name="isshowallcommandsdelay"></a>  CMFCMenuBar::IsShowAllCommandsDelay  
  나타냅니다 여부는 [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) 개체는 짧은 지연 후 모든 명령이 표시 됩니다.  
   
 ```  
@@ -733,7 +728,7 @@ static BOOL IsShowAllCommandsDelay();
   
  기본적으로 모든 `CMFCMenuBar` 개체는 짧은 지연 후 전체 메뉴를 표시 하려면 옵션을 사용 합니다. 이 옵션을 프로그래밍 방식으로 변경할 수 없습니다.는 `CMFCMenuBar` 클래스입니다. 그러나 사용자 동작을 변경할 수는 도구 모음 사용자 지정 하는 동안 사용 하 여는 **사용자 지정** 대화 상자.  
   
-##  <a name="loadstate"></a>CMFCMenuBar::LoadState  
+##  <a name="loadstate"></a>  CMFCMenuBar::LoadState  
  Windows 레지스트리에서 메뉴 표시줄의 상태를 로드합니다.  
   
 ```  
@@ -754,14 +749,14 @@ virtual BOOL LoadState(
  예약 된 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  사용 하 여는 [CMFCMenuBar::SaveState](#savestate) 레지스트리에 메뉴 표시줄의 상태를 저장 하는 메서드. 저장 된 정보는 메뉴 모음 위치, 도킹 상태 및 메뉴 항목에 포함 됩니다.  
   
  대부분의 경우에서에 응용 프로그램 호출 하지 않습니다 `LoadState`합니다. 작업 영역을 초기화 하는 경우 프레임 워크에서이 메서드를 호출 합니다.  
   
-##  <a name="onchangehot"></a>CMFCMenuBar::OnChangeHot  
+##  <a name="onchangehot"></a>  CMFCMenuBar::OnChangeHot  
 
   
 ```  
@@ -773,7 +768,7 @@ virtual void OnChangeHot(int iHot);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ondefaultmenuloaded"></a>CMFCMenuBar::OnDefaultMenuLoaded  
+##  <a name="ondefaultmenuloaded"></a>  CMFCMenuBar::OnDefaultMenuLoaded  
  프레임 워크 리소스 파일에서 메뉴 리소스를 로드할 때이 메서드를 호출 합니다.  
   
 ```  
@@ -787,7 +782,7 @@ virtual void OnDefaultMenuLoaded(HMENU hMenu);
 ### <a name="remarks"></a>설명  
  이 함수의 기본 구현은 아무 작업도 수행하지 않습니다. 프레임 워크 리소스 파일에서 메뉴 리소스를 로드 한 후 사용자 지정 코드를 실행 하려면이 함수를 재정의 합니다.  
   
-##  <a name="onsendcommand"></a>CMFCMenuBar::OnSendCommand  
+##  <a name="onsendcommand"></a>  CMFCMenuBar::OnSendCommand  
 
   
 ```  
@@ -801,7 +796,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onsetdefaultbuttontext"></a>CMFCMenuBar::OnSetDefaultButtonText  
+##  <a name="onsetdefaultbuttontext"></a>  CMFCMenuBar::OnSetDefaultButtonText  
  메뉴 모음에서 항목의 텍스트를 변경할 때이 메서드를 호출 하는 프레임 워크입니다.  
   
 ```  
@@ -813,12 +808,12 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
  에 대 한 포인터는 [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) 사용자가을 사용자 지정 하는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`프레임 워크는 메뉴 모음;에 사용자 변경 내용을 적용 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 프레임 워크는 메뉴 모음;에 사용자 변경 내용을 적용 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드의 기본 구현에서는 사용자가 제공 하는 텍스트에는 단추의 텍스트를 변경 합니다.  
   
-##  <a name="ontoolhittest"></a>CMFCMenuBar::OnToolHitTest  
+##  <a name="ontoolhittest"></a>  CMFCMenuBar::OnToolHitTest  
 
   
 ```  
@@ -835,7 +830,7 @@ virtual INT_PTR OnToolHitTest(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="pretranslatemessage"></a>CMFCMenuBar::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  CMFCMenuBar::PreTranslateMessage  
 
   
 ```  
@@ -849,7 +844,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="restoreoriginalstate"></a>CMFCMenuBar::RestoreOriginalstate  
+##  <a name="restoreoriginalstate"></a>  CMFCMenuBar::RestoreOriginalstate  
  사용자가 선택할 때 프레임 워크에서 호출 **재설정** 에서 **사용자 지정** 대화 상자.  
   
 ```  
@@ -864,7 +859,7 @@ virtual BOOL RestoreOriginalstate();
   
  사용자가 선택 된 경우 모든 처리를 수행 하려는 경우이 메서드를 재정의 **재설정** 옵션입니다.  
   
-##  <a name="savestate"></a>CMFCMenuBar::SaveState  
+##  <a name="savestate"></a>  CMFCMenuBar::SaveState  
  상태를 저장 된 [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) Windows 레지스트리에 개체입니다.  
   
 ```  
@@ -885,14 +880,14 @@ virtual BOOL SaveState (
  예약 된 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`성공 하면 그렇지 않으면 `FALSE`;  
+ `TRUE` 성공 하면 그렇지 않으면 `FALSE`;  
   
 ### <a name="remarks"></a>설명  
  일반적으로 응용 프로그램 호출 하지 않습니다 `SaveState`합니다. 작업 영역을 serialize 할 때 프레임 워크에서이 메서드를 호출 합니다. 자세한 내용은 참조 [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate)합니다.  
   
  저장 된 정보는 메뉴 모음 위치, 도킹 상태 및 메뉴 항목에 포함 됩니다.  
   
-##  <a name="setdefaultmenuresid"></a>CMFCMenuBar::SetDefaultMenuResId  
+##  <a name="setdefaultmenuresid"></a>  CMFCMenuBar::SetDefaultMenuResId  
  설정에 대 한 기본 메뉴는 [CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md) 리소스 ID를 기반으로 개체  
   
 ```  
@@ -908,7 +903,7 @@ void SetDefaultMenuResId(UINT uiResId);
   
  사용 하 여는 [CMFCMenuBar::GetDefaultMenuResId](#getdefaultmenuresid) 복원 하지 않고 기본 메뉴를 검색 하는 메서드입니다.  
   
-##  <a name="setforcedownarrows"></a>CMFCMenuBar::SetForceDownArrows  
+##  <a name="setforcedownarrows"></a>  CMFCMenuBar::SetForceDownArrows  
 
   
 ```  
@@ -920,7 +915,7 @@ void SetForceDownArrows(BOOL bValue);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setmaximizemode"></a>CMFCMenuBar::SetMaximizeMode  
+##  <a name="setmaximizemode"></a>  CMFCMenuBar::SetMaximizeMode  
  프레임 워크의 디스플레이 모드를 변경 하는 MDI 하 고 메뉴 모음을 업데이트 해야 하는 경우이 메서드를 호출 합니다.  
   
 ```  
@@ -943,7 +938,7 @@ void SetMaximizeMode(
 ### <a name="remarks"></a>설명  
  MDI 주 프레임 창에 연결 된 메뉴 모음을 시스템 메뉴를 표시 MDI 자식 창이 최대화 되었을 때와 **최소화**, **최대화** 및 **닫기** 단추입니다. 경우 `bMax` 은 `TRUE` 및 `pWnd` 않습니다 `NULL`MDI 자식 창을 최대화 하 고 메뉴 모음에는 여러 추가 컨트롤 통합 되어 있어야 합니다. 그렇지 않은 경우 메뉴 모음 일반 상태로 돌아갑니다.  
   
-##  <a name="setmenubuttonrtc"></a>CMFCMenuBar::SetMenuButtonRTC  
+##  <a name="setmenubuttonrtc"></a>  CMFCMenuBar::SetMenuButtonRTC  
  프레임 워크에는 사용자가 메뉴 단추를 만들 때 사용 하는 런타임 클래스 정보를 설정 합니다.  
   
 ```  
@@ -957,7 +952,7 @@ void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
 ### <a name="remarks"></a>설명  
  메뉴 모음에 새 단추를 추가 하는 사용자, 프레임 워크 단추 동적으로 만듭니다. 기본적으로 생성 됩니다. `CMFCMenuButton` 개체입니다. 단추 개체를 만드는 프레임 워크의 형식을 변경 하려면이 메서드를 재정의 합니다.  
   
-##  <a name="setmenufont"></a>CMFCMenuBar::SetMenuFont  
+##  <a name="setmenufont"></a>  CMFCMenuBar::SetMenuFont  
  응용 프로그램에서 모든 메뉴 모음에 대 한 글꼴을 설정합니다.  
   
 ```  
@@ -974,14 +969,14 @@ static BOOL SetMenuFont(
  TRUE 이면는 `lpLogFont` 가로 글꼴에 대 한 사용 하려는 경우 세로 방향 글꼴, FALSE에 사용할 매개 변수입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  모두 두 개의 글꼴을 사용 `CMFCMenuBar` 개체입니다. 이러한 별도 글꼴 가로 및 세로 메뉴 모음에 사용 됩니다.  
   
  글꼴 설정을 전역 변수 및 모든 적용 `CMFCMenuBar` 개체입니다.  
   
-##  <a name="setrecentlyusedmenus"></a>CMFCMenuBar::SetRecentlyUsedMenus  
+##  <a name="setrecentlyusedmenus"></a>  CMFCMenuBar::SetRecentlyUsedMenus  
  사용 되는 메뉴 명령을 메뉴 모음의 최근에 표시 되는지 여부를 제어 합니다.  
   
 ```  
@@ -992,7 +987,7 @@ static void SetRecentlyUsedMenus (BOOL bOn = TRUE);
  [in] `bOn`  
  최근에 사용한 메뉴 명령을 표시 되는지 여부를 제어 하는 부울입니다.  
   
-##  <a name="setshowallcommands"></a>CMFCMenuBar::SetShowAllCommands  
+##  <a name="setshowallcommands"></a>  CMFCMenuBar::SetShowAllCommands  
  사용 가능한 모든 명령을 메뉴에 표시 되는지 여부를 제어 합니다.  
   
 ```  

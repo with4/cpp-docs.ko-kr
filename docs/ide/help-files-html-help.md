@@ -1,29 +1,24 @@
 ---
-title: "도움말 파일 (HTML 도움말) | Microsoft Docs"
-ms.custom: 
+title: 도움말 파일 (HTML 도움말) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - file types [C++], HTML Help files
 ms.assetid: d30a1b1b-318f-4a78-8b60-93da53a224a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c96cd6ad904439f556f2baa51602353ea00c5ac7
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: d180fe4f9cf1baf26b27423ffda975bfe0fe85ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="help-files-html-help"></a>도움말 파일(HTML 도움말)
 다음 파일을 선택 하 여 응용 프로그램에 HTML 도움말에 대 한 형식의 도움말 지원 추가할 때 생성 됩니다는 **상황에 맞는 도움말** 확인란을 선택 하면 다음 **HTML 도움말 형식** 는 에서[고급 기능](../mfc/reference/advanced-features-mfc-application-wizard.md) MFC 응용 프로그램 마법사의 페이지입니다.  

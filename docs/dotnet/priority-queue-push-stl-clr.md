@@ -1,12 +1,9 @@
 ---
 title: 'priority_queue:: push (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::priority_queue::push
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - push member [STL/CLR]
 ms.assetid: 317d3feb-0688-4658-866b-a26cae060354
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d4b88448d1566076841b5f20754d02f3b62428b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7402af9a18f3d0f2f9f434393f5645d4267bb5b0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="priorityqueuepush-stlclr"></a>priority_queue::push(STL/CLR)
 새 요소를 추가 합니다.  
@@ -40,7 +35,7 @@ void push(value_type val);
 ## <a name="remarks"></a>설명  
  멤버 함수는 값을 가진 요소를 삽입 `val` 에 제어 되는 힙 분야를 유지 관리 하는 제어 되는 시퀀스의 순서를 재정렬 하 고 있습니다. 큐에 다른 요소를 추가 하려면 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_priority_queue_push.cpp   

@@ -2,12 +2,9 @@
 title: 컴파일러 오류 C3465 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C3465
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3465
 ms.assetid: aeb815e5-b3fc-4525-afe2-d738e9321df1
-caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b7706779684158da8b1bc7187621420e52a640a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1965b616ec3eb8c7de50f3a76b10e41f3579954c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3465"></a>컴파일러 오류 C3465
 'type' 형식을 사용하려면 'assembly' 어셈블리를 참조해야 합니다.  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
  자세한 내용은 참조 [형식 전달 (C + + /cli CLI)](../../windows/type-forwarding-cpp-cli.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 형식의 새 위치를 포함하는 어셈블리를 빌드합니다.  
   
 ```  
@@ -46,7 +41,7 @@ public:
 };  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 형식의 정의를 포함하는 데 사용한 어셈블리를 빌드하지만 이제는 형식에 대한 전달 구문을 포함합니다.  
   
 ```  
@@ -56,7 +51,7 @@ public:
 [ assembly:TypeForwardedTo(R::typeid) ];  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C3465를 생성합니다.  
   
 ```  

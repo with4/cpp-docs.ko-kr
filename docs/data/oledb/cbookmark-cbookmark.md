@@ -1,12 +1,9 @@
 ---
 title: 'Cbookmark:: Cbookmark | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CBookmark<0>.CBookmark<0>
@@ -23,18 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - CBookmark class, constructor
 ms.assetid: 84f4ad2b-67d4-4ba3-8b2b-656a66fb6298
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2a996f397da3516a43a3e56840d159a070269ff8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f7663c34fc9eea5f4262fea6b347c1b7899ace85
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbookmarkcbookmark"></a>CBookmark::CBookmark
 생성자입니다.  
@@ -55,7 +50,7 @@ CBookmark(DBLENGTH nSize);
  으로 버퍼를 설정 하는 첫 번째 함수 **NULL** 및 버퍼 크기 0입니다. 버퍼 크기를 설정 하는 두 번째 함수 `nSize`, 및 버퍼의 바이트 배열에 `nSize` 바이트입니다.  
   
 > [!NOTE]
->  이 함수는 영어로 **CBookmark\<0 >**합니다.  
+>  이 함수는 영어로 **CBookmark\<0 >** 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  

@@ -1,13 +1,10 @@
 ---
-title: "형식 라이브러리에서 MFC 클래스 추가 | Microsoft Docs"
-ms.custom: 
+title: 형식 라이브러리에서 MFC 클래스 추가 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - MFC, adding classes from type libraries
 - type libraries, adding MFC classes from
 ms.assetid: aba40476-3cfb-47af-990e-ae2e9e0d79cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1efc61e097d7e1136fdb7b6ef740dc00342077e4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 349d06d7fecb82af64fbf2d3b2ebe54689b3b292
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-an-mfc-class-from-a-type-library"></a>형식 라이브러리에서 MFC 클래스 추가
 이 마법사를 사용 하 여 인터페이스에 사용 가능한 형식 라이브러리에는 MFC 클래스를 만듭니다. 에 MFC 클래스를 추가할 수는 [MFC 응용 프로그램](../../mfc/reference/creating-an-mfc-application.md), [MFC DLL](../../mfc/reference/creating-an-mfc-dll-project.md), 또는 [MFC ActiveX 컨트롤](../../mfc/reference/creating-an-mfc-activex-control.md)합니다.  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
  마법사에서 형식 라이브러리의 클래스 두 개 이상 추가할 수 있습니다. 마찬가지로, 단일 마법사 세션에서 둘 이상의 형식 라이브러리에서 클래스를 추가할 수 있습니다.  
   
- 마법사에서 파생 하는 MFC 클래스를 만듭니다. [COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md), 선택한 형식 라이브러리에서 추가할 각 인터페이스에 대 한 합니다. `COleDispatchDriver`OLE 자동화의 클라이언트 쪽을 구현 합니다.  
+ 마법사에서 파생 하는 MFC 클래스를 만듭니다. [COleDispatchDriver](../../mfc/reference/coledispatchdriver-class.md), 선택한 형식 라이브러리에서 추가할 각 인터페이스에 대 한 합니다. `COleDispatchDriver` OLE 자동화의 클라이언트 쪽을 구현 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [자동화 클라이언트](../../mfc/automation-clients.md)   

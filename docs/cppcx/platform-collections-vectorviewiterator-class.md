@@ -1,11 +1,8 @@
 ---
-title: "Platform::Collections::VectorViewIterator 클래스 | Microsoft Docs"
-ms.custom: 
+title: Platform::Collections::VectorViewIterator 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorViewIterator::VectorViewIterator
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e2bd8992477ccf50aed78107fcf7edc0f8d13fb
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e01a6235ccd898e9ae732c89b9f9885db35151cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator 클래스
 Windows Runtime에서 파생 된 개체에 대 한 표준 템플릿 라이브러리 반복기를 제공`IVectorView` 인터페이스입니다.  
@@ -175,7 +170,7 @@ bool operator>(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-greater-than-or-equals"></a>  VectorViewIterator::operator&gt;= Operator
+## <a name="operator-greater-than-or-equals"></a>  Vectorviewiterator::&gt;= 연산자
 현재 VectorViewIterator가 지정된 VectorViewIterator보다 크거나 같은지 여부를 나타냅니다.  
   
 ### <a name="syntax"></a>구문  
@@ -194,7 +189,7 @@ bool operator>=(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-increment"></a>  VectorViewIterator::operator++ Operator
+## <a name="operator-increment"></a>  Vectorviewiterator:: Operator + + 연산자
 현재 VectorViewIterator를 증가시킵니다.  
   
 ### <a name="syntax"></a>구문  
@@ -251,7 +246,7 @@ bool operator<(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-less-than-or-equals"></a>  VectorViewIterator::operator&lt;= Operator
+## <a name="operator-less-than-or-equals"></a>  Vectorviewiterator::&lt;= 연산자
 현재 VectorIterator가 지정된 VectorIterator보다 작거나 같은지 여부를 나타냅니다.  
   
 ### <a name="syntax"></a>구문  
@@ -270,7 +265,7 @@ bool operator<=(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-minus"></a>  VectorViewIterator::operator- Operator
+## <a name="operator-minus"></a>  Vectorviewiterator:: Operator-연산자
 현재 반복기에서 지정된 요소 수를 빼서 새 반복기를 계산하거나 현재 반복기에서 지정된 반복기를 빼서 반복기 간 요소 수 차이를 계산합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -294,7 +289,7 @@ difference_type operator-(const VectorViewIterator& other) const;
   
 
 
-## <a name="operator-plus-equals"></a>  VectorViewIterator::operator+= Operator
+## <a name="operator-plus-equals"></a>  Vectorviewiterator:: Operator + = 연산자
 지정된 치환으로 현재 VectorViewIterator를 늘립니다.  
   
 ### <a name="syntax"></a>구문  
@@ -312,7 +307,7 @@ VectorViewIterator& operator+=(difference_type n);
   
 
 
-## <a name="operator-plus"></a>  VectorViewIterator::operator+ Operator
+## <a name="operator-plus"></a>  Vectorviewiterator:: Operator + 연산자
 지정된 VectorViewIterator에서 지정된 치환에 해당하는 요소를 참조하는 VectorViewIterator를 반환합니다.  
   
 ### <a name="syntax"></a>구문  

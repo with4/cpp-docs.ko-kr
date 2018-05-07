@@ -1,12 +1,9 @@
 ---
-title: "공급자에서 자유 스레딩 지원 | Microsoft Docs"
-ms.custom: 
+title: 공급자에서 자유 스레딩 지원 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - OLE DB providers, multithreaded
 - threading [C++], providers
 ms.assetid: a91270dc-cdf9-4855-88e7-88a54be7cbe8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5cd5ce6b852b490334cbc8d49c6e967efffb3a6e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a9c61aea0fec1f6d808a0a34ee74bd0ce2d399a5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>공급자에서 자유 스레딩 지원
 모든 OLE DB 공급자 클래스는 스레드로부터 안전 하 고, 및 레지스트리 항목에 따라 설정 됩니다. 높은 수준의 다중 사용자 환경에서 성능 제공 하기 위하여 자유 스레딩 지원 하도록 하는 것이 좋습니다. 공급자에 스레드로부터 안전한을 유지 하려면 코드 제대로 차단 되었음을 확인 해야 합니다. 를 작성 하거나 데이터를 저장할 때마다 임계 영역을 사용 하 여 액세스를 차단 해야 합니다.  

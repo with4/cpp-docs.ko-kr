@@ -1,12 +1,9 @@
 ---
-title: "CGdiObject 클래스 | Microsoft Docs"
-ms.custom: 
+title: CGdiObject 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CGdiObject
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - CGdiObject [MFC], UnrealizeObject
 - CGdiObject [MFC], m_hObject
 ms.assetid: 1cba3ba5-3d49-4e43-8293-209299f2f6f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2970dddd4711c431b3809127e7eeb6f7cd3f9eb1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba88269cf37f41cf8a594745eb2e98a57ccf64ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cgdiobject-class"></a>CGdiObject 클래스
 비트맵, 영역, 브러시, 펜, 색상표와 글꼴 등 다양한 Windows GDI(그래픽 장치 인터페이스) 개체에 기본 클래스를 제공합니다.  
@@ -110,7 +105,7 @@ class CGdiObject : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="attach"></a>CGdiObject::Attach  
+##  <a name="attach"></a>  CGdiObject::Attach  
  Windows GDI 개체에 연결 된 `CGdiObject` 개체입니다.  
   
 ```  
@@ -124,7 +119,7 @@ BOOL Attach(HGDIOBJ hObject);
 ### <a name="return-value"></a>반환 값  
  첨부 파일에 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
   
-##  <a name="cgdiobject"></a>CGdiObject::CGdiObject  
+##  <a name="cgdiobject"></a>  CGdiObject::CGdiObject  
  `CGdiObject` 개체를 생성합니다.  
   
 ```  
@@ -134,7 +129,7 @@ CGdiObject();
 ### <a name="remarks"></a>설명  
  만들지 마십시오는 `CGdiObject` 직접 합니다. 대신, 개체를 만들면 해당 파생된 클래스 중 하나에서 같은 `CPen` 또는 **Cbrush**합니다.  
   
-##  <a name="createstockobject"></a>CGdiObject::CreateStockObject  
+##  <a name="createstockobject"></a>  CGdiObject::CreateStockObject  
  미리 정의 된 스톡 Windows GDI 펜, 브러시, 또는 글꼴 중 하나에 대 한 핸들을 검색 하 고 GDI 개체에 연결 된 `CGdiObject` 개체입니다.  
   
 ```  
@@ -151,7 +146,7 @@ BOOL CreateStockObject(int nIndex);
 ### <a name="remarks"></a>설명  
  호출에서 파생 된 중 하나가 지정 된이 함수는 클래스와 같은 Windows GDI 개체 형식에 해당 `CPen` 스톡 펜입니다.  
   
-##  <a name="deleteobject"></a>CGdiObject::DeleteObject  
+##  <a name="deleteobject"></a>  CGdiObject::DeleteObject  
  Windows GDI 개체와 연결 된 모든 시스템 저장소를 해제 하 여 메모리에서 연결 된 Windows GDI 개체를 삭제 합니다.  
   
 ```  
@@ -166,7 +161,7 @@ BOOL DeleteObject();
   
  패턴 브러시 삭제 되 면 브러시와 연결 된 비트맵 삭제 되지 않습니다. 비트맵을 독립적으로 삭제 되어야 합니다.  
   
-##  <a name="deletetempmap"></a>CGdiObject::DeleteTempMap  
+##  <a name="deletetempmap"></a>  CGdiObject::DeleteTempMap  
  자동으로 호출 된 `CWinApp` 유휴 시간 처리기 `DeleteTempMap` 임시 삭제 `CGdiObject` 가 만든 개체 `FromHandle`합니다.  
   
 ```  
@@ -174,12 +169,12 @@ static void PASCAL DeleteTempMap();
 ```  
   
 ### <a name="remarks"></a>설명  
- `DeleteTempMap`임시에 연결 하는 Windows GDI 개체를 분리 `CGdiObject` 개체를 삭제 하기 전에 `CGdiObject` 개체입니다.  
+ `DeleteTempMap` 임시에 연결 하는 Windows GDI 개체를 분리 `CGdiObject` 개체를 삭제 하기 전에 `CGdiObject` 개체입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#175](../../mfc/codesnippet/cpp/cgdiobject-class_1.cpp)]  
   
-##  <a name="detach"></a>CGdiObject::Detach  
+##  <a name="detach"></a>  CGdiObject::Detach  
  Windows GDI 개체를 분리 한 `CGdiObject` 개체를 Windows GDI 개체에 대 한 핸들을 반환 합니다.  
   
 ```  
@@ -189,7 +184,7 @@ HGDIOBJ Detach();
 ### <a name="return-value"></a>반환 값  
  A `HANDLE` Windows GDI 개체 분리, 그렇지 않으면 **NULL** GDI 개체가 연결 된 경우.  
   
-##  <a name="fromhandle"></a>CGdiObject::FromHandle  
+##  <a name="fromhandle"></a>  CGdiObject::FromHandle  
  에 대 한 포인터를 반환 합니다.는 `CGdiObject` Windows GDI 개체에 대 한 핸들을 부여 하는 개체입니다.  
   
 ```  
@@ -208,7 +203,7 @@ static CGdiObject* PASCAL FromHandle(HGDIOBJ hObject);
   
  이 임시 `CGdiObject` 개체는 응용 프로그램에서 모든 임시 그래픽 개체를 삭제 될 때의 이벤트 루프 유휴 시간에는 다음 때만 유효 합니다. 임시 개체가 올바른지만 한 창 메시지를 처리 하는 동안는 하는 또 다른 방법은 말하면 합니다.  
   
-##  <a name="getobject"></a>CGdiObject::GetObject  
+##  <a name="getobject"></a>  CGdiObject::GetObject  
  지정된 된 개체를 정의 하는 데이터 버퍼를 채웁니다.  
   
 ```  
@@ -243,7 +238,7 @@ int GetObject(
   
  개체가 한 `CPalette` 개체 `GetObject` 검색는 **단어** 색상표의 항목 수를 지정 하 합니다. 함수는 검색 하지 않습니다는 [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) 색상표를 정의 하는 구조입니다. 응용 프로그램 호출 하 여 표 항목에 대 한 정보를 얻을 수 [CPalette::GetPaletteEntries](../../mfc/reference/cpalette-class.md#getpaletteentries)합니다.  
   
-##  <a name="getobjecttype"></a>CGdiObject::GetObjectType  
+##  <a name="getobjecttype"></a>  CGdiObject::GetObjectType  
  GDI 개체 유형을 검색합니다.  
   
 ```  
@@ -279,7 +274,7 @@ UINT GetObjectType() const;
   
 - **OBJ_ENHMETADC** 향상 된 메타 파일 장치 컨텍스트  
   
-##  <a name="getsafehandle"></a>CGdiObject::GetSafeHandle  
+##  <a name="getsafehandle"></a>  CGdiObject::GetSafeHandle  
  반환 `m_hObject` 하지 않는 한 **이** 은 **NULL**있으며이 경우 **NULL** 반환 됩니다.  
   
 ```  
@@ -292,17 +287,17 @@ HGDIOBJ GetSafeHandle() const;
 ### <a name="remarks"></a>설명  
  일반 핸들 인터페이스 패러다임의 일부 이며 때 유용 **NULL** 핸들에 대해 유효한 또는 특수 값입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CWnd::IsWindowEnabled](../../mfc/reference/cwnd-class.md#iswindowenabled)합니다.  
   
-##  <a name="m_hobject"></a>CGdiObject::m_hObject  
+##  <a name="m_hobject"></a>  CGdiObject::m_hObject  
  A `HANDLE` 포함 하는 `HBITMAP`, **HRGN**, `HBRUSH`, `HPEN`, `HPALETTE`, 또는 **HFONT** 이 개체에 연결 합니다.  
   
 ```  
 HGDIOBJ m_hObject;  
 ```  
   
-##  <a name="operator_neq"></a>CGdiObject::operator! =  
+##  <a name="operator_neq"></a>  CGdiObject::operator! =  
  하는 경우 두 GDI 개체가 논리적으로 같지 않은지 확인 합니다.  
   
 ```  
@@ -316,7 +311,7 @@ BOOL operator!=(const CGdiObject& obj) const;
 ### <a name="remarks"></a>설명  
  GDI 개체를 왼쪽에서 오른쪽에 GDI 개체와 같지 인지 여부를 확인 합니다.  
   
-##  <a name="operator_eq_eq"></a>CGdiObject::operator = =  
+##  <a name="operator_eq_eq"></a>  CGdiObject::operator = =  
  두 GDI 개체가 논리적으로 동일한 지를 결정 합니다.  
   
 ```  
@@ -330,14 +325,14 @@ BOOL operator==(const CGdiObject& obj) const;
 ### <a name="remarks"></a>설명  
  GDI 개체를 왼쪽에서 오른쪽에 있는 GDI 개체와 같은지 확인 합니다.  
   
-##  <a name="operator_hgdiobj"></a>CGdiObject::operator HGDIOBJ  
+##  <a name="operator_hgdiobj"></a>  CGdiObject::operator HGDIOBJ  
  검색 한 `HANDLE` 연결 된 Windows GDI 개체; 그렇지 않으면 **NULL** 개체가 연결 된 경우.  
   
 ```  
 operator HGDIOBJ() const;  
 ```  
   
-##  <a name="unrealizeobject"></a>CGdiObject::UnrealizeObject  
+##  <a name="unrealizeobject"></a>  CGdiObject::UnrealizeObject  
  브러시의 원점으로 다시 설정 하거나 논리 팔레트를 다시 설정 합니다.  
   
 ```  

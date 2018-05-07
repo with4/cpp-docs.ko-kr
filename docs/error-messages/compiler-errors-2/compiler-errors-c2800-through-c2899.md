@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C2800 C2899 ~ | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C2800 C2899 ~ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2816
@@ -51,17 +48,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00357e68e831e58057faac1b4609ac34fadc1c8c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dc85ab15a262a5f4976fcdc7278401a0d9a128d1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c2800-through-c2899"></a>컴파일러 오류 C2800 ~ C2899
 
@@ -88,7 +83,7 @@ ms.lasthandoff: 12/21/2017
 |[컴파일러 오류 C2812](compiler-error-c2812.md)|/clr을 사용한 #import를 사용할 수 없습니다: pure 및 /clr: safe|
 |[컴파일러 오류 C2813](compiler-error-c2813.md)|/MP를 지정하면 #import를 사용할 수 없습니다.|
 |[컴파일러 오류 C2814](compiler-error-c2814.md)|'*멤버*': 네이티브 형식은 관리 되 는/WinRT 형식 내에서 중첩 될 수 없습니다 '*클래스*'|
-|[컴파일러 오류 C2815](compiler-error-c2815.md)|'operator delete': 첫째 정식 매개 변수 ' void *', 하지만 '*형식 *' 사용|
+|[컴파일러 오류 C2815](compiler-error-c2815.md)|'operator delete': 첫째 정식 매개 변수 ' void *', 하지만 '* 형식 *' 사용|
 |컴파일러 오류 C2816|사용되지 않습니다.|
 |[컴파일러 오류 C2817](compiler-error-c2817.md)|'operator delete'에 대 한 반환 형식은 'void' 이어야 합니다.|
 |[컴파일러 오류 C2818](compiler-error-c2818.md)|응용 프로그램의 'operator->' 오버 로드 된 형식에서 재귀적으로는 '*클래스*'|

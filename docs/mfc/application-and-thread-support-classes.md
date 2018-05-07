@@ -1,13 +1,10 @@
 ---
-title: "응용 프로그램 및 스레드 지원 클래스 | Microsoft Docs"
-ms.custom: 
+title: 응용 프로그램 및 스레드 지원 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.support
 dev_langs:
@@ -20,24 +17,22 @@ helpviewer_keywords:
 - synchronization classes [MFC], multithreading
 - application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e443c2393d9d3a8a0f61df6adddb2c83e7672723
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9f3877cf85e369756b15d565af1481fd6d258df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-and-thread-support-classes"></a>응용 프로그램 및 스레드 지원 클래스
 각 응용 프로그램은 하나의 응용 프로그램 개체입니다. 이 개체는 실행 중인 프로그램의 다른 개체를 조정 하 고에서 파생 된 `CWinApp`합니다.  
   
  Microsoft Foundation 클래스 (MFC) 라이브러리는 다중 스레드 응용 프로그램 내에서 실행을 지원합니다. 모든 응용 프로그램 하나 이상의 스레드가; 있어야 합니다. 사용 되는 스레드 프로그램 `CWinApp` 개체는이 기본 스레드입니다.  
   
- `CWinThread`일부 운영 체제의 스레딩 기능을 캡슐화합니다. 여러 스레드를 보다 쉽게 사용 되도록 MFC 동기화를 Win32 동기화 개체를 c + + 인터페이스를 제공 하는 개체 클래스도 제공 합니다.  
+ `CWinThread` 일부 운영 체제의 스레딩 기능을 캡슐화합니다. 여러 스레드를 보다 쉽게 사용 되도록 MFC 동기화를 Win32 동기화 개체를 c + + 인터페이스를 제공 하는 개체 클래스도 제공 합니다.  
   
 ## <a name="application-and-thread-classes"></a>응용 프로그램 및 스레드 클래스  
  [CWinApp](../mfc/reference/cwinapp-class.md)  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
  [CSyncObject](../mfc/reference/csyncobject-class.md)  
  동기화 개체 클래스의 기본 클래스입니다.  
   
- [아니오](../mfc/reference/ccriticalsection-class.md)  
+ [CCriticalSection](../mfc/reference/ccriticalsection-class.md)  
  개체에 액세스 하는 단일 프로세스에서 스레드를 하나만 허용 하는 동기화 클래스입니다.  
   
  [CSemaphore](../mfc/reference/csemaphore-class.md)  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
  [CEvent](../mfc/reference/cevent-class.md)  
  이벤트가 발생 하는 경우 응용 프로그램을 알리는 동기화 클래스입니다.  
   
- [경우 CSingleLock](../mfc/reference/csinglelock-class.md)  
+ [CSingleLock](../mfc/reference/csinglelock-class.md)  
  하나의 동기화 개체에 대 한 잠금 스레드로부터 안전한 클래스의 멤버 함수에 사용 합니다.  
   
  [CMultiLock](../mfc/reference/cmultilock-class.md)  

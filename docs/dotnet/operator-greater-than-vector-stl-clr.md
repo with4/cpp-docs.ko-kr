@@ -1,12 +1,9 @@
 ---
-title: "연산자&gt; (vector) (STL/CLR) | Microsoft Docs"
-ms.custom: 
+title: 연산자&gt; (vector) (STL/CLR) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::vector::operator>
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator> member [STL/CLR]
 ms.assetid: c9c55c3f-5e82-4504-90e3-708dab7aa660
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f3054fd8ef62716f77269887f419acf3535e4a98
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4ca40b85e6335759df2e60e9b87593dd9ad11d9b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operatorgt-vector-stlclr"></a>연산자&gt; (vector) (STL/CLR)
 비교에 보다 큰 사용 되는 벡터입니다.  
@@ -49,7 +44,7 @@ template<typename Value>
 ## <a name="remarks"></a>설명  
  연산자 함수 반환 `right` `<` `left`합니다. 테스트를 사용 하는지 여부를 `left` 후 정렬 `right` 두 벡터 요소에서 비교 된 요소를가 하는 경우.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_vector_operator_gt.cpp   

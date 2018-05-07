@@ -1,13 +1,10 @@
 ---
-title: "TN048: MFC 데이터베이스 응용 프로그램에 대 한 ODBC 설정 및 관리 프로그램 작성 | Microsoft Docs"
-ms.custom: 
+title: 'TN048: MFC 데이터베이스 응용 프로그램에 대 한 ODBC 설정 및 관리 프로그램 작성 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.odbc
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - ODBC, and MFC
 - MFC, database applications
 ms.assetid: d456cdd4-0513-4a51-80c0-9132b66115ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ec19e3c03d88fa088622c7ed8a5b4efeed0014b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c08366f995c1ecb4182fff04a88ac37fe7334bc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048: MFC 데이터베이스 응용 프로그램에 대한 ODBC 설정 및 관리 프로그램 작성
 > [!NOTE]
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  MFC 데이터베이스 클래스를 사용 하 여 응용 프로그램 설치 프로그램을 ODBC 구성 요소를 설치 해야 합니다. 사용 가능한 드라이버 기본 드라이버를 지정 하 고 데이터 원본을 구성 하는 방법에 대 한 정보를 검색 하는 ODBC 관리 프로그램을 할 수도 있습니다. 이 주석은 이러한 프로그램을 작성 하는 ODBC 설치 관리자 API의 사용을 설명 합니다.  
   
-##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a>ODBC 설치 프로그램을 작성  
+##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a> ODBC 설치 프로그램을 작성  
  MFC 데이터베이스 응용 프로그램 (ODBC ODBC 드라이버 관리자에 필요. DLL) 및 ODBC 드라이버를 데이터 원본에 가져올 수 있습니다. 대부분의 ODBC 드라이버는 추가 네트워크 및 통신 Dll도 필요합니다. 대부분의 ODBC 드라이버는 필요한 ODBC 구성 요소를 설치 하는 설치 프로그램으로 제공 됩니다. MFC 데이터베이스 클래스를 사용 하 여 응용 프로그램 개발자는 다음 작업을 수행할 수 있습니다.  
   
 -   ODBC 구성 요소를 설치 하기 위한 드라이버 관련 설치 프로그램에 의존 합니다. 이 더 이상 작업이 필요 개발자의 부분에-방금 드라이버의 설치 프로그램을 재배포할 수 있습니다.  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  대 한 자세한 내용은 ODBC 합니다. INF, ODBCINST 합니다. INI와 설치 관리자 API를 사용 하 여 ODBC SDK를 참조 하십시오. *Programmer's Reference* 19 장, ODBC 소프트웨어를 설치 합니다.  
   
-##  <a name="_mfcnotes_writing_an_odbc_administrator"></a>ODBC 관리자를 작성합니다.  
+##  <a name="_mfcnotes_writing_an_odbc_administrator"></a> ODBC 관리자를 작성합니다.  
  MFC 데이터베이스 응용 프로그램을 설정 하 고 다음과 같이 두 가지 방법 중 하나에서 ODBC 데이터 소스를 구성할 수 있습니다.  
   
 -   ODBC 관리자 (또는 제어판 항목을 프로그램으로 사용 가능)를 사용 합니다.  

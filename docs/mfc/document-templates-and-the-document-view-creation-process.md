@@ -1,13 +1,10 @@
 ---
-title: "문서 템플릿 및 문서 뷰 만들기 프로세스 | Microsoft Docs"
-ms.custom: 
+title: 문서 템플릿 및 문서 뷰 만들기 프로세스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - CDocTemplate class [MFC]
 - templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd47720009449d51abadd1e5f513149a83702ea3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2d8308e69cf53db4be51f6ce742df41edaa89ea
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>문서 템플릿 및 문서/뷰 만들기 프로세스
 두 문서 서식 파일 클래스를 사용 하는 프레임 워크 관련된 뷰 및 프레임 창 항목과 함께 문서를 만들기의 복잡 한 프로세스를 관리 하려면: [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) SDI 응용 프로그램에 대 한 및 [CMultiDocTemplate ](../mfc/reference/cmultidoctemplate-class.md) MDI 응용 프로그램에 대 한 합니다. A `CSingleDocTemplate` 만들고 한 번에 한 종류의 한 문서를 저장할 수 있습니다. A `CMultiDocTemplate` 열려 있는 문서를 다양 한 형식의 목록을 유지 합니다.  

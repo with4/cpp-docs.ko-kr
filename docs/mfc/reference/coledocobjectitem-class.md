@@ -1,12 +1,9 @@
 ---
-title: "COleDocObjectItem 클래스 | Microsoft Docs"
-ms.custom: 
+title: COleDocObjectItem 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDocObjectItem
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 246c645dad5ed11fb5428e2f90ed9b9574696417
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af2b13b8da5f70cf55b47ddf3b7864f9f9151a40
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem 클래스
 액티브 문서 포함을 구현합니다.  
@@ -104,7 +99,7 @@ class COleDocObjectItem : public COleClientItem
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxole.h  
   
-##  <a name="coledocobjectitem"></a>COleDocObjectItem::COleDocObjectItem  
+##  <a name="coledocobjectitem"></a>  COleDocObjectItem::COleDocObjectItem  
  초기화 하려면이 함수 호출의 `COleDocObjectItem` 개체입니다.  
   
 ```  
@@ -115,7 +110,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
  `pContainerDoc`  
  에 대 한 포인터는 `COleDocument` 액티브 문서 컨테이너 역할 개체입니다. 이 매개 변수 해야 **NULL** 사용할 수 있도록 **만들 수 있습니다**합니다. 비-를 사용 하 여 OLE 항목은 생성 하는 일반적으로 **NULL** 문서 포인터입니다.  
   
-##  <a name="dodefaultprinting"></a>COleDocObjectItem::DoDefaultPrinting  
+##  <a name="dodefaultprinting"></a>  COleDocObjectItem::DoDefaultPrinting  
  기본 설정을 사용 하 여 문서에는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -131,7 +126,7 @@ static HRESULT DoDefaultPrinting(
  `pInfo`  
  에 대 한 포인터는 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 인쇄 작업을 설명 하는 개체입니다.  
   
-##  <a name="execcommand"></a>COleDocObjectItem::ExecCommand  
+##  <a name="execcommand"></a>  COleDocObjectItem::ExecCommand  
  사용자가 지정한 명령을 실행 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -159,8 +154,8 @@ HRESULT ExecCommand(
 |**E_UNEXPECTED**|예기치 않은 오류가 발생 했습니다.|  
 |**E_FAIL**|오류가 발생 했습니다.|  
 |**E_NOTIMPL**|MFC 나타냅니다 자체를 변환 하 고 명령 디스패치 시도해 야 합니다.|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup`이 아닌 **NULL** 하지만 인식 된 명령 그룹을 지정 하지 않습니다.|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID`그룹 pGroup에서 유효한 명령으로 인식 되지 않습니다.|  
+|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` 이 아닌 **NULL** 하지만 인식 된 명령 그룹을 지정 하지 않습니다.|  
+|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` 그룹 pGroup에서 유효한 명령으로 인식 되지 않습니다.|  
 |**OLECMDERR_DISABLED**|로 식별 되는 명령을 `nCmdID` 비활성화 되 고 실행할 수 없습니다.|  
 |**OLECMDERR_NOHELP**|호출자로 식별 되는 명령에 도움을 요청 `nCmdID` 있지만 도움말이 없습니다.|  
 |**OLECMDERR_CANCELLED**|사용자는 실행을 취소 합니다.|  
@@ -168,7 +163,7 @@ HRESULT ExecCommand(
 ### <a name="remarks"></a>설명  
  `pguidCmdGroup` 및 `nCmdID` 매개 변수를 함께 호출할 명령을 고유 하 게 식별 합니다. `nCmdExecOpt` 매개 변수는 정확한 수행할 동작을 지정 합니다.  
   
-##  <a name="getactiveview"></a>COleDocObjectItem::GetActiveView  
+##  <a name="getactiveview"></a>  COleDocObjectItem::GetActiveView  
  이 멤버 함수에 포인터를 얻으려면 호출는 `IOleDocumentView` 현재 활성 뷰의 인터페이스입니다.  
   
 ```  
@@ -181,7 +176,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 ### <a name="remarks"></a>설명  
  반환 된 참조 횟수 `IOleDocumentView` 포인터는이 함수에서 반환 되기 전에 증가 하지 않습니다.  
   
-##  <a name="getpagecount"></a>COleDocObjectItem::GetPageCount  
+##  <a name="getpagecount"></a>  COleDocObjectItem::GetPageCount  
  문서에서 페이지의 수를 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -200,7 +195,7 @@ BOOL GetPageCount(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-##  <a name="onprepareprinting"></a>COleDocObjectItem::OnPreparePrinting  
+##  <a name="onprepareprinting"></a>  COleDocObjectItem::OnPreparePrinting  
  이 멤버 함수는 문서 인쇄를 위해 준비 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -223,7 +218,7 @@ static BOOL OnPreparePrinting(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-##  <a name="onprint"></a>COleDocObjectItem::OnPrint  
+##  <a name="onprint"></a>  COleDocObjectItem::OnPrint  
  이 멤버 함수는 문서를 인쇄 하기 위해 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -243,7 +238,7 @@ static void OnPrint(
  `bPrintAll`  
  전체 문서 인쇄할 수 있는지 여부를 지정 합니다.  
   
-##  <a name="querycommand"></a>COleDocObjectItem::QueryCommand  
+##  <a name="querycommand"></a>  COleDocObjectItem::QueryCommand  
  사용자 인터페이스 이벤트에 의해 생성되는 하나 이상 명령의 상태를 쿼리합니다.  
   
 ```  
@@ -273,7 +268,7 @@ HRESULT QueryCommand(
 ### <a name="remarks"></a>설명  
  기능을 에뮬레이션 하는이 멤버 함수는 [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) 메서드를 Windows SDK에 설명 된 대로 합니다.  
   
-##  <a name="release"></a>COleDocObjectItem::Release  
+##  <a name="release"></a>  COleDocObjectItem::Release  
  OLE 링크 된 항목에 대 한 연결을 해제 하 고 열려 있으면 닫습니다. 클라이언트 항목을 제거 하지 않습니다.  
   
 ```  

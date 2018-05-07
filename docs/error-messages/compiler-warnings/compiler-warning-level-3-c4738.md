@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 3) C4738 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 3) C4738 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4738
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4738
 ms.assetid: 9094895f-7eec-46c2-83d3-249b761d585e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30f56b7963d8c6e98d4564ec90adee6bd3d29f9f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50b94cde2f8809b8ce56dc599804d11b8d058166
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-3-c4738"></a>컴파일러 경고(수준 3) C4738
 32비트 float 결과를 메모리에 저장하면 성능이 저하될 수 있습니다.  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  기본적으로 이 경고는 해제되어 있습니다. 자세한 내용은 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C4738 오류가 생성 됩니다.  
   
 ```  

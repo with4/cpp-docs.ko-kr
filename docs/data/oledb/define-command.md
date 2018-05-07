@@ -1,12 +1,9 @@
 ---
 title: DEFINE_COMMAND | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - DEFINE_COMMAND
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - DEFINE_COMMAND macro
 ms.assetid: 9d724968-e242-413c-9a13-e7175fccf9b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3af85ea4c223cac4e770dd9b45ffe785309f9f69
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 51f975b0477d29fbb35880c796f52612456c32c8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="definecommand"></a>DEFINE_COMMAND
 사용 하는 경우 행 집합을 만드는 데 사용할 명령을 지정는 [CCommand](../../data/oledb/ccommand-class.md) 클래스입니다. 지정 된 응용 프로그램 유형 (ANSI 또는 유니코드)와 일치 하는 문자열 형식에만 허용 합니다.  
@@ -53,7 +48,7 @@ DEFINE_COMMAND(x, szCommand)
   
  이 매크로 유니코드로 응용 프로그램을 작성 하는 경우 ANSI로 응용 프로그램을 작성 하는 경우 ANSI 문자열 또는 유니코드 문자열에 적용 합니다. 사용 하는 것이 좋습니다. [DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) 대신 `DEFINE_COMMAND`전자 ANSI 또는 유니코드 응용 프로그램 종류에 관계 없이 유니코드 문자열을 수락 하기 때문에, 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  참조 [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  

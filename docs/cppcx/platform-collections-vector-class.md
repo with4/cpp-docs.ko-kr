@@ -1,11 +1,8 @@
 ---
-title: "Platform::Collections::Vector 클래스 | Microsoft Docs"
-ms.custom: 
+title: Platform::Collections::Vector 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00bf369942289752f7043ce5070618260a90c7ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c7433ed3d1a81704180aa724424a39d39b193f15
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 클래스
 
@@ -83,7 +78,7 @@ Vector 개체에 포함된 요소의 형식입니다.
 
 |이름|설명|
 |----------|-----------------|
-|[Vector::Vector](#ctor)|Vector 클래스의 새 인스턴스를 초기화합니다.|
+|[Vector:: vector](#ctor)|Vector 클래스의 새 인스턴스를 초기화합니다.|
 
 ### <a name="public-methods"></a>Public 메서드
 
@@ -107,7 +102,7 @@ Vector 개체에 포함된 요소의 형식입니다.
 
 |||
 |-|-|
-|name|설명|
+|이름|설명|
 |이벤트 [Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](http://go.microsoft.com/fwlink/p/?LinkId=262644)|Vector가 변경될 때 발생합니다.|
 
 ## <a name="inheritance-hierarchy"></a>상속 계층

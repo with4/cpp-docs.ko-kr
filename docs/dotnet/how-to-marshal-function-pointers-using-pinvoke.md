@@ -1,13 +1,10 @@
 ---
-title: "방법: PInvoke를 사용 하 여 함수 포인터 마샬링 | Microsoft Docs"
-ms.custom: 
+title: '방법: PInvoke를 사용 하 여 함수 포인터 마샬링 | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - platform invoke [C++], callbacks and delegates
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 38854e3debbaf34c9068ed9fbc22e34274512687
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1aa8da5e5b6931fb46ff283a5be15da5b2c7325d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-marshal-function-pointers-using-pinvoke"></a>방법: PInvoke를 사용하여 함수 포인터 마샬링
 이 항목에서는 관리 되는 방식을 대리자 설명 관리 되지 않는.NET Framework P/Invoke 기능을 사용 하 여 함수 리소스와 상호 운용 하는 경우 함수 포인터 대신 사용할 수 있습니다. 그러나 Visual c + + 프로그래머는 P/Invoke는 작은 컴파일 타임 오류를 보고, 형식 안전 하지 않은 및는 것을 제공 하므로 (가능한 경우) 대신 c + + Interop 기능을 사용 하는 것이 좋습니다. 관리 되지 않는 API는 DLL로 패키지 하는 경우 소스 코드를 사용할 수 없는 P/Invoke 유일한 옵션입니다. 다음 항목을 참조 하십시오.  
@@ -38,7 +33,7 @@ ms.lasthandoff: 02/14/2018
   
  관리 되지 않는 Api에서 인수를 호출 될 함수 포인터는 네이티브 함수 포인터 대신 관리 되는 대리자를 사용 하 여 코드를 관리 합니다. 컴파일러는 자동으로 관리 되지 않는 함수에 대 한 함수 포인터로 대리자 마샬링합니다 하 고 필요한 관리 되 는/관리 되지 않는 변환 코드를 삽입 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드는 관리 되지 않는 관리 되는 모듈 구성 됩니다. 관리 되지 않는 모듈은 TakesCallback 함수 포인터를 허용 하 라는 함수를 정의 하는 DLL입니다. 이 주소는 함수 실행에 사용 됩니다.  
   
  함수 포인터는 네이티브 코드로 마샬링 하 고 사용 하는 대리자를 정의 하는 관리 되는 모듈의 <xref:System.Runtime.InteropServices.DllImportAttribute> 관리 코드에 네이티브 TakesCallback 함수를 노출 하는 특성입니다. Main 함수에 대리자의 인스턴스가 생성 되어 TakesCallback 함수에 전달 합니다. 프로그램 출력이이 함수가 네이티브 TakesCallback 함수에 의해 실행 되는 방법을 보여 줍니다.  

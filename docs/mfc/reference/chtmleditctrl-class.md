@@ -1,12 +1,9 @@
 ---
-title: "CHtmlEditCtrl 클래스 | Microsoft Docs"
-ms.custom: 
+title: CHtmlEditCtrl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHtmlEditCtrl
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CHtmlEditCtrl [MFC], GetDHtmlDocument
 - CHtmlEditCtrl [MFC], GetStartDocument
 ms.assetid: 0fc4a238-b05f-4874-9edc-6a6701f064d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3ea794bfcb3d7e62a53ed8423918e5448990dae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71738511079427a60c9296bc75f9c1e79416d667
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chtmleditctrl-class"></a>CHtmlEditCtrl 클래스
 MFC 창에서 WebBrowser ActiveX 컨트롤의 기능을 제공합니다.  
@@ -78,14 +73,14 @@ class CHtmlEditCtrl: public CWnd,
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxhtml.h  
   
-##  <a name="chtmleditctrl"></a>CHtmlEditCtrl::CHtmlEditCtrl  
+##  <a name="chtmleditctrl"></a>  CHtmlEditCtrl::CHtmlEditCtrl  
  `CHtmlEditCtrl` 개체를 생성합니다.  
   
 ```  
 CHtmlEditCtrl();
 ```  
   
-##  <a name="create"></a>CHtmlEditCtrl::Create  
+##  <a name="create"></a>  CHtmlEditCtrl::Create  
  WebBrowser ActiveX 컨트롤을 만들고에 연결 된 `CHtmlEditCtrl` 개체입니다. 이 함수에 의해 편집 모드를 WebBrowser ActiveX 컨트롤에서 기본 문서를 자동으로 탐색 하 고 다음에 배치 됩니다.  
   
 ```  
@@ -120,7 +115,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>반환 값  
  반환 **TRUE** 성공 **FALSE** 실패 합니다.  
   
-##  <a name="getdhtmldocument"></a>CHtmlEditCtrl::GetDHtmlDocument  
+##  <a name="getdhtmldocument"></a>  CHtmlEditCtrl::GetDHtmlDocument  
  검색 된 [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) 포함 된 WebBrowser 컨트롤에 현재 로드 된 문서에서 인터페이스  
   
 ```  
@@ -131,7 +126,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  `ppDocument`  
  문서 인터페이스입니다.  
   
-##  <a name="getstartdocument"></a>CHtmlEditCtrl::GetStartDocument  
+##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument  
  기본 문서에 포함 된 WebBrowser 컨트롤에서 로드할 URL을 검색 합니다.  
   
 ```  

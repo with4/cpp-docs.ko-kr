@@ -1,12 +1,9 @@
 ---
 title: __noop | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __noop_cpp
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - __noop keyword [C++]
 ms.assetid: 81ac6e97-7bf8-496b-b3c4-fd02837573e5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ed6228d145261edc323ca0f90899e42dcf02f46
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 14d7ab3f1a61dc0644bf5683376ac676fbfcd6b9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="noop"></a>__noop
 **Microsoft 전용**  
@@ -35,7 +30,7 @@ ms.lasthandoff: 02/23/2018
   
  컴파일러는 변환 된 `__noop` 내장 함수를 컴파일 타임에는 0입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드는 사용 하는 방법을 보여 줍니다. `__noop`합니다.  
   
 ```  

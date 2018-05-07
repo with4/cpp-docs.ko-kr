@@ -1,31 +1,26 @@
 ---
-title: "방법:.NET Framework로 이미지 표시 | Microsoft Docs"
-ms.custom: 
+title: 방법:.NET Framework로 이미지 표시 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - GDI+ [C++], displaying images
 - graphics [C++], displaying images
 ms.assetid: c0eddfa1-4bd6-4af5-a533-1fa84b360325
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f50659832e04c3b8938c50bedc47b3ac770a52eb
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 4a7f3ed2d8fe90501b5ef3d0ae5028890fe5290e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-images-with-the-net-framework"></a>방법: .NET Framework로 이미지 표시
 다음 코드 예제에서는 수정 OnPaint 이벤트 처리기에 대 한 포인터를 검색 하는 <xref:System.Drawing.Graphics> 기본 폼에 대 한 개체입니다. <xref:System.Windows.Forms.Form.OnPaint%2A> 함수는 대부분 Visual Studio 응용 프로그램 마법사를 사용 하 여 만든 Windows Forms 응용 프로그램을 위한 것입니다.  
@@ -34,7 +29,7 @@ ms.lasthandoff: 02/09/2018
   
  <xref:System.Drawing.Graphics> 및 <xref:System.Drawing.Image> 클래스는 모두는 <xref:System.Drawing?displayProperty=fullName> 네임 스페이스입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 #using <system.drawing.dll>  

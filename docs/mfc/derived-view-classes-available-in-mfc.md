@@ -1,13 +1,10 @@
 ---
-title: "MFC에서 사용할 수 있는 뷰 클래스를 파생 | Microsoft Docs"
-ms.custom: 
+title: MFC에서 사용할 수 있는 뷰 클래스를 파생 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - derived classes [MFC], view classes
 - view classes [MFC], derived
 ms.assetid: dba42178-7459-4ccc-b025-f3d9b8a4b737
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2426f3e547da6eaab6a4b38bb5199e87c93ef933
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b166e64c57482586e145cecc9e79317eea282b5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>MFC에서 사용할 수 있는 파생된 뷰 클래스
 다음 표에서 MFC의 뷰 클래스 및 형식 간의 관계를 보여 줍니다. 뷰 클래스의 기능 파생 되는 MFC 뷰 클래스에 따라 다릅니다.  

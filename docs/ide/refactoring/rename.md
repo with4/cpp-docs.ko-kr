@@ -1,42 +1,40 @@
 ---
-title: "이름 바꾸기 | Microsoft Docs"
-ms.custom: 
+title: 이름 바꾸기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/16/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- cpp-ide
+ms.topic: conceptual
 ms.assetid: 64b42a88-3bd9-4399-8b96-75bceffc353b
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7ca06ef5a11d674d35aff7276e14312c456c60e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7a064527f6afcbf91be3fb4e51180be647c1f506
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="rename"></a>이름 바꾸기
-**:** 필드, 지역 변수, 메서드, 네임 스페이스, 속성 및 형식 등의 코드 기호에 대 한 식별자의 이름을 바꿀 수 있습니다.
+**대상:** 필드, 지역 변수, 메서드, 네임스페이스, 속성 및 형식과 같은 코드 기호의 식별자 이름을 바꿀 수 있습니다.
 
-**경우:** 안전 하 게 모든 인스턴스 및 새 이름 복사/붙여넣기를 필요 없이 이름을 바꿀 하는 것입니다.  
+**시기:** 모든 인스턴스를 찾지 않고도 안전하게 이름을 바꾸고 새 이름을 복사하여 붙여넣으려고 합니다.  
 
-**이유:** 복사 및 프로젝트 전체에 대해 새 이름을 붙여 넣는 것 오류가 발생 합니다.  이 리팩터링 도구 이름 바꾸기 작업을 수행할 정확 하 게 됩니다.
+**이유:** 전체 프로젝트에 새 이름을 복사하여 붙여넣으면 오류가 발생할 수 있습니다.  이 리팩터링 도구는 이름 바꾸기 작업을 정확하게 수행합니다.
 
 **방법:**
 
-1. 강조 표시 하거나 이름을 바꿀 항목 내 텍스트 커서를 놓습니다.
+1. 이름을 바꿀 항목을 강조 표시하거나 항목 내부에 텍스트 커서를 놓습니다.
 
-   ![강조 표시 된 코드](images/rename_highlight.png)
+   ![강조 표시된 코드](images/rename_highlight.png)
 
-1. 다음으로, 다음 중 하나를 수행 합니다.
+1. 다음 작업 중 하나를 수행합니다.
    * **키보드**
-     * 키를 눌러 **Ctrl + R**, 다음 **Ctrl + R**합니다.  바로 가기 키는 선택한 프로필에 따라 다를 수 있습니다.
+     * **Ctrl+R**을 누른 다음 **Ctrl+R**을 누릅니다.  바로 가기 키는 선택한 프로필에 따라 다를 수 있습니다.
    * **마우스**
-     * 선택 **편집 > 리팩터링 > 이름 바꾸기**합니다.
-     * 코드를 마우스 오른쪽 단추로 클릭 하 고 선택 **이름 바꾸기**합니다.
+     * **편집 > 리팩터링 > 이름 바꾸기**를 선택합니다.
+     * 코드를 마우스 오른쪽 단추로 클릭하고 **이름 바꾸기**를 선택합니다.
 
 1. 에 **이름 바꾸기** , 팝업 창에 선택 된 항목과 클릭에 대 한 새 이름을 입력 된 **미리 보기** 단추입니다.  변경 된 **검색 범위** 을 넓히거나 이름 바꾸기의 범위를 좁히려면 필요 합니다.
 

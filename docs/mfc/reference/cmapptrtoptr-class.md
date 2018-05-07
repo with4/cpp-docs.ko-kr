@@ -1,12 +1,9 @@
 ---
-title: "CMapPtrToPtr 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMapPtrToPtr 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMapPtrToPtr
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 23cbbaec-9d64-48f2-92ae-5e24fa64b926
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7482e2824874cbe0e1126e49979f9dfd18ba57e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1b7140c9d6a175c6464fdaa41cf3cc022e8a6ae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmapptrtoptr-class"></a>CMapPtrToPtr 클래스
 void 포인터로 키가 지정된 void 포인터 맵을 지원합니다.  
@@ -103,7 +98,7 @@ class CMapPtrToPtr : public CObject
   
 |이름|설명|  
 |----------|-----------------|  
-|[CMapStringToOb::operator]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|지도 요소를 삽입-한 연산자의 대체 `SetAt`합니다.|  
+|[CMapStringToOb::operator [ ]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|지도 요소를 삽입-한 연산자의 대체 `SetAt`합니다.|  
   
 ## <a name="remarks"></a>설명  
  `CMapPtrToPtr`는 `IMPLEMENT_DYNAMIC` 매크로를 통합하여 런타임 형식 액세스와 `CDumpContext` 개체에 대한 덤핑을 지원합니다. (포인터 값) 개별 지도 요소의 덤프가 필요한 경우 덤프 컨텍스트 깊이 1 이상으로 설정 해야 합니다.  

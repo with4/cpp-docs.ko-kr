@@ -1,12 +1,9 @@
 ---
-title: "COleChangeSourceDialog 클래스 | Microsoft Docs"
-ms.custom: 
+title: COleChangeSourceDialog 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleChangeSourceDialog
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleChangeSourceDialog [MFC], IsValidSource
 - COleChangeSourceDialog [MFC], m_cs
 ms.assetid: d0e08be7-21ef-45e1-97af-fe27d99e3bac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9eccd25a175479c18a83b5d6ab96753a946e386
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 376b61dbbbfe734ecc49263718902dd387c7fce8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colechangesourcedialog-class"></a>COleChangeSourceDialog 클래스
 OLE 소스 변경 대화 상자에 사용합니다.  
@@ -105,7 +100,7 @@ class COleChangeSourceDialog : public COleDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxodlgs.h  
   
-##  <a name="colechangesourcedialog"></a>COleChangeSourceDialog::COleChangeSourceDialog  
+##  <a name="colechangesourcedialog"></a>  COleChangeSourceDialog::COleChangeSourceDialog  
  이 함수를 생성 한 `COleChangeSourceDialog` 개체입니다.  
   
 ```  
@@ -126,7 +121,7 @@ explicit COleChangeSourceDialog(
   
  자세한 내용은 참조는 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) 구조 및 [OleUIChangeSource](http://msdn.microsoft.com/library/windows/desktop/ms682497) Windows SDK의 함수입니다.  
   
-##  <a name="domodal"></a>COleChangeSourceDialog::DoModal  
+##  <a name="domodal"></a>  COleChangeSourceDialog::DoModal  
  OLE 소스 변경 대화 상자를 표시 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -153,7 +148,7 @@ virtual INT_PTR DoModal();
   
 - [GetItemName](#getitemname)  
   
-##  <a name="getdisplayname"></a>COleChangeSourceDialog::GetDisplayName  
+##  <a name="getdisplayname"></a>  COleChangeSourceDialog::GetDisplayName  
  연결 된 클라이언트 항목에 대 한 전체 표시 이름을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -163,7 +158,7 @@ CString GetDisplayName();
 ### <a name="return-value"></a>반환 값  
  에 대 한 전체 원본 표시 이름 (모니커)는 [COleClientItem](../../mfc/reference/coleclientitem-class.md) 생성자에 지정 합니다.  
   
-##  <a name="getfilename"></a>COleChangeSourceDialog::GetFileName  
+##  <a name="getfilename"></a>  COleChangeSourceDialog::GetFileName  
  연결 된 클라이언트 항목에 대 한 표시 이름의 파일 모니커 부분을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -176,7 +171,7 @@ CString GetFileName();
 ### <a name="remarks"></a>설명  
  항목 모니커 함께 파일 모니커 전체 표시 이름을 제공합니다.  
   
-##  <a name="getfromprefix"></a>COleChangeSourceDialog::GetFromPrefix  
+##  <a name="getfromprefix"></a>  COleChangeSourceDialog::GetFromPrefix  
  원본에 대 한 이전 접두사 문자열을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -193,7 +188,7 @@ CString GetFromPrefix();
   
  자세한 내용은 참조는 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK에는 구조입니다.  
   
-##  <a name="getitemname"></a>COleChangeSourceDialog::GetItemName  
+##  <a name="getitemname"></a>  COleChangeSourceDialog::GetItemName  
  연결 된 클라이언트 항목에 대 한 표시 이름의 항목 모니커 부분을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -206,7 +201,7 @@ CString GetItemName();
 ### <a name="remarks"></a>설명  
  항목 모니커 함께 파일 모니커 전체 표시 이름을 제공합니다.  
   
-##  <a name="gettoprefix"></a>COleChangeSourceDialog::GetToPrefix  
+##  <a name="gettoprefix"></a>  COleChangeSourceDialog::GetToPrefix  
  원본에 대 한 새 접두사 문자열을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -223,7 +218,7 @@ CString GetToPrefix();
   
  자세한 내용은 참조는 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK에는 구조입니다.  
   
-##  <a name="m_cs"></a>COleChangeSourceDialog::m_cs  
+##  <a name="m_cs"></a>  COleChangeSourceDialog::m_cs  
  이 데이터 멤버는 형식의 구조 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160)합니다.  
   
 ```  
@@ -231,11 +226,11 @@ OLEUICHANGESOURCE m_cs;
 ```  
   
 ### <a name="remarks"></a>설명  
- `OLEUICHANGESOURCE`OLE 소스 변경 대화 상자의 동작을 제어 하는 데 사용 됩니다. 이 구조체의 멤버는 직접 수정할 수 있습니다.  
+ `OLEUICHANGESOURCE` OLE 소스 변경 대화 상자의 동작을 제어 하는 데 사용 됩니다. 이 구조체의 멤버는 직접 수정할 수 있습니다.  
   
  자세한 내용은 참조는 [OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK에는 구조입니다.  
   
-##  <a name="isvalidsource"></a>COleChangeSourceDialog::IsValidSource  
+##  <a name="isvalidsource"></a>  COleChangeSourceDialog::IsValidSource  
  새 소스 유효한 지 확인 하려면이 함수를 호출 합니다.  
   
 ```  

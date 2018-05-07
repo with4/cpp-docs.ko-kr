@@ -2,11 +2,8 @@
 title: 'multimap:: equal_range (STL/CLR) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multimap::equal_range
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - equal_range member [STL/CLR]
 ms.assetid: f1008d89-7442-429b-9eca-4ef7ee704766
-caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 64d190bf5cef7168c8b7b96197380789d1011023
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13dfde60504809b3f949119bfab27178411f1a76
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multimapequalrange-stlclr"></a>multimap::equal_range(STL/CLR)
 지정된 키와 일치하는 범위를 찾습니다.  
@@ -44,7 +39,7 @@ pair_iter_iter equal_range(key_type _Keyval);
 ## <a name="remarks"></a>설명  
  메서드가 반환 되는 반복기 쌍 `-` [multimap:: lower_bound (STL/CLR)](../dotnet/multimap-lower-bound-stl-clr.md) `(_Keyval),` [multimap:: upper_bound (STL/CLR)](../dotnet/multimap-upper-bound-stl-clr.md)`(_Keyval)`합니다. 지정된 된 키와 일치 하는 제어 된 시퀀스의 현재 요소의 범위를 확인 하려면 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_multimap_equal_range.cpp   

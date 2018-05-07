@@ -1,8 +1,8 @@
 ---
-title: "컴파일러 경고 C4400 C4599 통해 | Microsoft Docs"
+title: 컴파일러 경고 C4400 C4599 통해 | Microsoft Docs
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4413
@@ -147,14 +147,13 @@ dev_langs:
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9843c3725022ff500d31b90677192c4178c42596
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: aa15d1e23178350dc8b19859db77f272492c2758
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>컴파일러 경고 C4400 C4599 통해
 
@@ -227,7 +226,7 @@ ms.lasthandoff: 03/16/2018
 |[컴파일러 경고(수준 1) C4461](../../error-messages/compiler-warnings/compiler-warning-level-1-c4461.md)|'*classname*':이 클래스에 종료 자가 '! *종료자*' 소멸자가 되지 않은 있지만 ' ~*dtor*'|
 |[컴파일러 경고 (수준 1, 오류) C4462](../../error-messages/compiler-warnings/compiler-warning-level-1-c4462.md)|'*형식*': 형식의 GUID를 확인할 수 없습니다. 프로그램은 런타임에 실패할 수 있습니다.|
 |[컴파일러 경고 (수준 4) C4463](compiler-warning-level-4-c4463.md)|오버플로. 할당 '*값*' 비트 필드에 값을 포함할 수 있는'*min_value*'to'*max_value*'|
-|[컴파일러 경고 (수준 4) C4464](../../error-messages/compiler-warnings/c4464.md)|include에 상대 경로 포함 '..'|
+|[컴파일러 경고(수준 4) C4464](../../error-messages/compiler-warnings/c4464.md)|include에 상대 경로 포함 '..'|
 |[컴파일러 경고(수준 1) C4470](../../error-messages/compiler-warnings/compiler-warning-level-1-c4470.md)|부동 소수점 제어 pragma /clr에서 무시 됩니다.|
 |[컴파일러 경고 (수준 4) C4471](compiler-warning-level-4-c4471.md)|'*열거형*': 범위가 지정 되지 않은 열거형의 정방향 선언에 (int로 가정)는 내부 형식이 있어야 합니다.|
 |컴파일러 경고 (수준 1) c 4472|'*식별자*'가 네이티브 열거형: 선언 하려면 액세스 지정자 (전용/공용) 추가 ' WinRT&#124;관리 되는 ' 열거형|

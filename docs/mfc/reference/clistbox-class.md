@@ -1,12 +1,9 @@
 ---
-title: "CListBox 클래스 | Microsoft Docs"
-ms.custom: 
+title: CListBox 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CListBox
@@ -111,17 +108,15 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecf574deed95fca6a96e8e5a5c1d1e0bebed1854
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1101e4115efa3c5c822d0d64b767cdee379a0e0b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clistbox-class"></a>CListBox 클래스
 Windows 목록 상자의 기능을 제공합니다.  
@@ -249,7 +244,7 @@ class CListBox : public CWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="addstring"></a>CListBox::AddString  
+##  <a name="addstring"></a>  CListBox::AddString  
  목록 상자에 문자열을 추가 합니다.  
   
 ```  
@@ -268,10 +263,10 @@ int AddString(LPCTSTR lpszItem);
   
  사용 하 여 [InsertString](#insertstring) 를 목록 상자 내의 특정 위치에 문자열을 삽입 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#3](../../mfc/codesnippet/cpp/clistbox-class_1.cpp)]  
   
-##  <a name="chartoitem"></a>CListBox::CharToItem  
+##  <a name="chartoitem"></a>  CListBox::CharToItem  
  목록 상자의 부모 창을 받을 때 프레임 워크에서 호출 된 `WM_CHARTOITEM` 목록 상자에서 메시지입니다.  
   
 ```  
@@ -305,10 +300,10 @@ virtual int CharToItem(
   
  반환 값 0 이상의 목록 상자에서 항목의 인덱스를 지정 합니다. 문서를 나타내고 목록 상자의 지정된 된 항목에 키 입력에 대 한 기본 동작을 수행 해야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#4](../../mfc/codesnippet/cpp/clistbox-class_2.cpp)]  
   
-##  <a name="clistbox"></a>CListBox::CListBox  
+##  <a name="clistbox"></a>  CListBox::CListBox  
  `CListBox` 개체를 생성합니다.  
   
 ```  
@@ -318,10 +313,10 @@ CListBox();
 ### <a name="remarks"></a>설명  
  생성할는 `CListBox` 두 단계를 수행에서 하는 개체입니다. 먼저 생성자를 호출 합니다. **ClistBox** 호출 **만들기**, Windows 목록 상자의 초기화 하 고에 연결 하는 `CListBox`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#1](../../mfc/codesnippet/cpp/clistbox-class_3.cpp)]  
   
-##  <a name="compareitem"></a>CListBox::CompareItem  
+##  <a name="compareitem"></a>  CListBox::CompareItem  
  정렬 된 소유자 그리기 목록 상자에 새 항목의 상대 위치를 결정 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -346,10 +341,10 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="remarks"></a>설명  
  기본적으로이 멤버 함수는 아무 작업도 수행 하지 않습니다. 소유자 그리기 목록 상자를 만드는 경우는 **LBS_SORT** 스타일 목록 상자에 추가 하는 새 항목을 정렬 프레임 워크를 지원 하기 위해이 멤버 함수를 재정의 해야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#5](../../mfc/codesnippet/cpp/clistbox-class_4.cpp)]  
   
-##  <a name="create"></a>CListBox::Create  
+##  <a name="create"></a>  CListBox::Create  
  Windows 목록 상자의 만들고 연결 하는 `CListBox` 개체입니다.  
   
 ```  
@@ -387,7 +382,7 @@ virtual BOOL Create(
   
 - **WS_CHILD** 항상  
   
-- **WS_VISIBLE** 일반적으로  
+- **WS_VISIBLE** Usually  
   
 - **WS_DISABLED** 거의  
   
@@ -399,10 +394,10 @@ virtual BOOL Create(
   
 - **WS_TABSTOP** 허용이 컨트롤에 탭 이동 하려면  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#2](../../mfc/codesnippet/cpp/clistbox-class_5.cpp)]  
   
-##  <a name="deleteitem"></a>CListBox::DeleteItem  
+##  <a name="deleteitem"></a>  CListBox::DeleteItem  
  사용자는 소유자 그리기에서 항목을 삭제 될 때 프레임 워크에서 호출 `CListBox` 개체 또는 목록 상자를 제거 합니다.  
   
 ```  
@@ -418,10 +413,10 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
   
  참조 [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) 에 대 한 설명은 `DELETEITEMSTRUCT` 구조입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#6](../../mfc/codesnippet/cpp/clistbox-class_6.cpp)]  
   
-##  <a name="deletestring"></a>CListBox::DeleteString  
+##  <a name="deletestring"></a>  CListBox::DeleteString  
  위치에 항목을 삭제 `nIndex` 목록 상자에서 합니다.  
   
 ```  
@@ -438,10 +433,10 @@ int DeleteString(UINT nIndex);
 ### <a name="remarks"></a>설명  
  다음 모든 항목 `nIndex` 이제 한 칸 아래로 이동 합니다. 예를 들어 목록 상자에 두 개의 항목이 포함 된 경우 첫 번째 항목을 삭제 하면 나머지 항목을 첫 번째 위치에 모두 포함 됩니다. `nIndex`첫 번째 위치에 있는 항목에 대 한 0을 =입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#7](../../mfc/codesnippet/cpp/clistbox-class_7.cpp)]  
   
-##  <a name="dir"></a>CListBox::Dir  
+##  <a name="dir"></a>  CListBox::Dir  
  파일 이름, 드라이브, 또는 둘 다가 목록 상자에 목록을 추가합니다.  
   
 ```  
@@ -471,10 +466,10 @@ int Dir(
 ### <a name="return-value"></a>반환 값  
  목록에 추가 마지막 filename의 0부터 시작 하는 인덱스입니다. 반환 값은 **LB_ERR** 오류가 발생 하는 경우 반환 값은 **LB_ERRSPACE** 새 문자열을 저장할 수 있는 공간이 부족 한 경우.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#8](../../mfc/codesnippet/cpp/clistbox-class_8.cpp)]  
   
-##  <a name="drawitem"></a>CListBox::DrawItem  
+##  <a name="drawitem"></a>  CListBox::DrawItem  
  소유자 그리기 목록 상자 변경의 시각적 측면이 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -492,10 +487,10 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  참조 [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) 에 대 한 설명은 `DRAWITEMSTRUCT` 구조입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#9](../../mfc/codesnippet/cpp/clistbox-class_9.cpp)]  
   
-##  <a name="findstring"></a>CListBox::FindString  
+##  <a name="findstring"></a>  CListBox::FindString  
  목록 상자 선택 영역을 변경 하지 않고 지정된 된 접두사를 포함 하는 목록 상자에서 첫 번째 문자열을 찾습니다.  
   
 ```  
@@ -517,10 +512,10 @@ int FindString(
 ### <a name="remarks"></a>설명  
  사용 하 여 [SelectString](#selectstring) 멤버 함수를 찾아서 문자열을 선택 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#10](../../mfc/codesnippet/cpp/clistbox-class_10.cpp)]  
   
-##  <a name="findstringexact"></a>CListBox::FindStringExact  
+##  <a name="findstringexact"></a>  CListBox::FindStringExact  
  에 지정 된 문자열과 일치 하 여 첫 번째 목록 상자 문자열 `lpszFind`합니다.  
   
 ```  
@@ -542,10 +537,10 @@ int FindStringExact(
 ### <a name="remarks"></a>설명  
  소유자 그리기 스타일을 없이 목록 상자를 만든 경우의 [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) 스타일의 `FindStringExact` 멤버 함수는 워드 단위 값의 값을 일치 시 키 려 `lpszFind`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#11](../../mfc/codesnippet/cpp/clistbox-class_11.cpp)]  
   
-##  <a name="getanchorindex"></a>CListBox::GetAnchorIndex  
+##  <a name="getanchorindex"></a>  CListBox::GetAnchorIndex  
  목록 상자에서 현재 앵커 항목의 0부터 시작 인덱스를 검색합니다.  
   
 ```  
@@ -558,10 +553,10 @@ int GetAnchorIndex() const;
 ### <a name="remarks"></a>설명  
  다중 선택 목록 상자에서 앵커 항목은 연속 선택 된 항목의 블록에서 첫 번째 또는 마지막 항목입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CListBox::SetAnchorIndex](#setanchorindex)합니다.  
   
-##  <a name="getcaretindex"></a>CListBox::GetCaretIndex  
+##  <a name="getcaretindex"></a>  CListBox::GetCaretIndex  
  포커스 사각형을 다중 선택 목록 상자에 있는 항목의 인덱스를 결정 합니다.  
   
 ```  
@@ -574,10 +569,10 @@ int GetCaretIndex() const;
 ### <a name="remarks"></a>설명  
  항목 수 또는 선택할 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CListBox::SetCaretIndex](#setcaretindex)합니다.  
   
-##  <a name="getcount"></a>CListBox::GetCount  
+##  <a name="getcount"></a>  CListBox::GetCount  
  목록 상자에 있는 항목의 수를 검색 합니다.  
   
 ```  
@@ -590,10 +585,10 @@ int GetCount() const;
 ### <a name="remarks"></a>설명  
  반환 된 횟수가 1 (인덱스는 0부터 시작) 마지막 항목의 인덱스 값 보다 큽니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#12](../../mfc/codesnippet/cpp/clistbox-class_12.cpp)]  
   
-##  <a name="getcursel"></a>CListBox::GetCurSel  
+##  <a name="getcursel"></a>  CListBox::GetCurSel  
  단일 선택 목록 상자에 있는 경우에 현재 선택 된 항목의 0부터 시작 하는 인덱스를 검색 합니다.  
   
 ```  
@@ -608,10 +603,10 @@ int GetCurSel() const;
 ### <a name="remarks"></a>설명  
  호출 하지 마십시오 `GetCurSel` 다중 선택 목록 상자에 대 한 합니다. 사용 하 여 [CListBox::GetSelItems](#getselitems) 대신 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#13](../../mfc/codesnippet/cpp/clistbox-class_13.cpp)]  
   
-##  <a name="gethorizontalextent"></a>CListBox::GetHorizontalExtent  
+##  <a name="gethorizontalextent"></a>  CListBox::GetHorizontalExtent  
  너비 픽셀 기준인 것를 가로로 스크롤할 수 있는 목록 상자에서 검색 합니다.  
   
 ```  
@@ -624,10 +619,10 @@ int GetHorizontalExtent() const;
 ### <a name="remarks"></a>설명  
  목록 상자 가로 스크롤 막대가 있는 경우에 적용 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#14](../../mfc/codesnippet/cpp/clistbox-class_14.cpp)]  
   
-##  <a name="getitemdata"></a>CListBox::GetItemData  
+##  <a name="getitemdata"></a>  CListBox::GetItemData  
  지정 된 목록 상자 항목에 연결 된 응용 프로그램에서 제공 하는 워드 단위 값을 검색 합니다.  
   
 ```  
@@ -644,10 +639,10 @@ DWORD_PTR GetItemData(int nIndex) const;
 ### <a name="remarks"></a>설명  
  워드 단위 값이 고 `dwItemData` 의 매개 변수는 [SetItemData](#setitemdata) 호출 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#15](../../mfc/codesnippet/cpp/clistbox-class_15.cpp)]  
   
-##  <a name="getitemdataptr"></a>CListBox::GetItemDataPtr  
+##  <a name="getitemdataptr"></a>  CListBox::GetItemDataPtr  
  응용 프로그램에서 제공 32 비트 값 포인터와 지정 된 목록 상자 항목에 연결 된 검색 ( **void\***).  
   
 ```  
@@ -661,10 +656,10 @@ void* GetItemDataPtr(int nIndex) const;
 ### <a name="return-value"></a>반환 값  
  오류가 발생 하는 경우에 포인터 또는-1을 검색 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#16](../../mfc/codesnippet/cpp/clistbox-class_16.cpp)]  
   
-##  <a name="getitemheight"></a>CListBox::GetItemHeight  
+##  <a name="getitemheight"></a>  CListBox::GetItemHeight  
  목록 상자에 있는 항목의 높이 결정 합니다.  
   
 ```  
@@ -678,10 +673,10 @@ int GetItemHeight(int nIndex) const;
 ### <a name="return-value"></a>반환 값  
  픽셀 목록 상자에 있는 항목의 높이입니다. 목록 상자에는 [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) 스타일, 반환 값은 지정 된 항목의 높이 `nIndex`합니다. 오류가 발생 하는 경우 반환 값은 **LB_ERR**합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#17](../../mfc/codesnippet/cpp/clistbox-class_17.cpp)]  
   
-##  <a name="getitemrect"></a>CListBox::GetItemRect  
+##  <a name="getitemrect"></a>  CListBox::GetItemRect  
  현재 목록 상자 창에 표시 된 대로 사각형의 크기 해당 범위는 목록 상자 항목을 검색 합니다.  
   
 ```  
@@ -700,10 +695,10 @@ int GetItemRect(
 ### <a name="return-value"></a>반환 값  
  **LB_ERR** 오류가 발생 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#18](../../mfc/codesnippet/cpp/clistbox-class_18.cpp)]  
   
-##  <a name="getlistboxinfo"></a>CListBox::GetListBoxInfo  
+##  <a name="getlistboxinfo"></a>  CListBox::GetListBoxInfo  
  열당 항목의 수를 검색합니다.  
   
 ```  
@@ -716,7 +711,7 @@ DWORD GetListBoxInfo() const;
 ### <a name="remarks"></a>설명  
  기능을 에뮬레이션 하는이 멤버 함수는 [LB_GETLISTBOXINFO](http://msdn.microsoft.com/library/windows/desktop/bb775208) Windows SDK에 설명 된 대로 메시지입니다.  
   
-##  <a name="getlocale"></a>CListBox::GetLocale  
+##  <a name="getlocale"></a>  CListBox::GetLocale  
  목록 상자에서 사용 하는 로캘을 검색 합니다.  
   
 ```  
@@ -729,10 +724,10 @@ LCID GetLocale() const;
 ### <a name="remarks"></a>설명  
  예를 들어 로캘 정렬 된 목록 상자에서 문자열의 정렬 순서를 결정 하려면 사용 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CListBox::SetLocale](#setlocale)합니다.  
   
-##  <a name="getsel"></a>CListBox::GetSel  
+##  <a name="getsel"></a>  CListBox::GetSel  
  항목의 선택 상태를 검색합니다.  
   
 ```  
@@ -751,10 +746,10 @@ int GetSel(int nIndex) const;
   
  현재 선택 목록 상자 항목의 인덱스를 검색 하려면 사용 [CListBox::GetCurSel](#getcursel)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#19](../../mfc/codesnippet/cpp/clistbox-class_19.cpp)]  
   
-##  <a name="getselcount"></a>CListBox::GetSelCount  
+##  <a name="getselcount"></a>  CListBox::GetSelCount  
  다중 선택 목록 상자에서 선택한 항목의 총 수를 검색합니다.  
   
 ```  
@@ -764,10 +759,10 @@ int GetSelCount() const;
 ### <a name="return-value"></a>반환 값  
  목록 상자에서 선택한 항목의 수입니다. 목록 상자가 단일 선택 목록 상자 인 경우 반환 값은 **LB_ERR**합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CListBox::GetSelItems](#getselitems)합니다.  
   
-##  <a name="getselitems"></a>CListBox::GetSelItems  
+##  <a name="getselitems"></a>  CListBox::GetSelItems  
  다중 선택 목록 상자에서 선택한 항목의 항목 번호를 지정 하는 정수 배열을으로 버퍼를 채웁니다.  
   
 ```  
@@ -786,10 +781,10 @@ int GetSelItems(
 ### <a name="return-value"></a>반환 값  
  항목 수가 실제 버퍼에 배치 합니다. 목록 상자가 단일 선택 목록 상자 인 경우 반환 값은 `LB_ERR`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#20](../../mfc/codesnippet/cpp/clistbox-class_20.cpp)]  
   
-##  <a name="gettext"></a>CListBox::GetText  
+##  <a name="gettext"></a>  CListBox::GetText  
  목록 상자에서 문자열을 가져옵니다.  
   
 ```  
@@ -818,10 +813,10 @@ void GetText(
 ### <a name="remarks"></a>설명  
  이 멤버에 두 번째 형태 채우기 함수는 `CString` 문자열 텍스트와 함께 개체입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#21](../../mfc/codesnippet/cpp/clistbox-class_21.cpp)]  
   
-##  <a name="gettextlen"></a>CListBox::GetTextLen  
+##  <a name="gettextlen"></a>  CListBox::GetTextLen  
  목록 상자 항목에는 문자열의 길이 가져옵니다.  
   
 ```  
@@ -835,10 +830,10 @@ int GetTextLen(int nIndex) const;
 ### <a name="return-value"></a>반환 값  
  Null 종결 문자를 제외한 문자에 대 한 문자열의 길이입니다. 경우 `nIndex` 유효한 인덱스를 지정 하지 않는 경우 반환 값은 **LB_ERR**합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CListBox::GetText](#gettext)합니다.  
   
-##  <a name="gettopindex"></a>CListBox::GetTopIndex  
+##  <a name="gettopindex"></a>  CListBox::GetTopIndex  
  목록 상자에 표시 되는 첫 번째 항목의 0부터 시작 하는 인덱스를 검색합니다.  
   
 ```  
@@ -851,10 +846,10 @@ int GetTopIndex() const;
 ### <a name="remarks"></a>설명  
  처음에 0 항목 목록 상자의 위쪽에는 있지만 목록 상자 스크롤 된 다른 항목 맨 위에 있는 될 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#22](../../mfc/codesnippet/cpp/clistbox-class_22.cpp)]  
   
-##  <a name="initstorage"></a>CListBox::InitStorage  
+##  <a name="initstorage"></a>  CListBox::InitStorage  
  목록 상자 항목을 저장 하기 위한 메모리를 할당 합니다.  
   
 ```  
@@ -880,10 +875,10 @@ int InitStorage(
   
  Windows 95/98만:는 `nItems` 매개 변수는 16 비트 값으로 제한 합니다. 즉, 목록 상자 개 이상 항목을 포함할 수 없습니다. 항목 수가 제한 된 경우에 목록 상자에 있는 항목의 총 크기는 사용 가능한 메모리 크기로 제한 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#23](../../mfc/codesnippet/cpp/clistbox-class_23.cpp)]  
   
-##  <a name="insertstring"></a>CListBox::InsertString  
+##  <a name="insertstring"></a>  CListBox::InsertString  
  목록 상자에 문자열을 삽입합니다.  
   
 ```  
@@ -905,10 +900,10 @@ int InsertString(
 ### <a name="remarks"></a>설명  
  와 달리는 [AddString](#addstring) 멤버 함수 `InsertString` 함께 목록을 발생 하지 않습니다는 [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) 정렬 스타일입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#24](../../mfc/codesnippet/cpp/clistbox-class_24.cpp)]  
   
-##  <a name="itemfrompoint"></a>CListBox::ItemFromPoint  
+##  <a name="itemfrompoint"></a>  CListBox::ItemFromPoint  
  목록 상자 항목에 지정 된 지점에 가장 가까운 결정 `pt`합니다.  
   
 ```  
@@ -930,10 +925,10 @@ UINT ItemFromPoint(
 ### <a name="remarks"></a>설명  
  마우스 커서를 통해 이동 하는 목록 상자 항목을 확인 하려면이 함수를 사용할 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CListBox::SetAnchorIndex](#setanchorindex)합니다.  
   
-##  <a name="measureitem"></a>CListBox::MeasureItem  
+##  <a name="measureitem"></a>  CListBox::MeasureItem  
  소유자 그리기 스타일을 목록 상자를 만들 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -951,20 +946,20 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
   
  참조 [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) 에 대 한 설명은 `MEASUREITEMSTRUCT` 구조 **합니다.**  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#25](../../mfc/codesnippet/cpp/clistbox-class_25.cpp)]  
   
-##  <a name="resetcontent"></a>CListBox::ResetContent  
+##  <a name="resetcontent"></a>  CListBox::ResetContent  
  목록 상자에서 모든 항목을 제거 합니다.  
   
 ```  
 void ResetContent();
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#26](../../mfc/codesnippet/cpp/clistbox-class_26.cpp)]  
   
-##  <a name="selectstring"></a>CListBox::SelectString  
+##  <a name="selectstring"></a>  CListBox::SelectString  
  검색 지정된 된 문자열을 일치 하는 목록 상자 항목에 대 한 일치 하는 항목이 없는 경우 해당 항목을 선택 합니다.  
   
 ```  
@@ -992,10 +987,10 @@ int SelectString(
   
  사용 하 여는 `FindString` 항목을 선택 하지 않고 문자열을 찾을 멤버 함수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#27](../../mfc/codesnippet/cpp/clistbox-class_27.cpp)]  
   
-##  <a name="selitemrange"></a>CListBox::SelItemRange  
+##  <a name="selitemrange"></a>  CListBox::SelItemRange  
  다중 선택 목록 상자에서 여러 개의 연속 된 항목을 선택합니다.  
   
 ```  
@@ -1021,10 +1016,10 @@ int SelItemRange(
 ### <a name="remarks"></a>설명  
  다중 선택 목록 상자에만이 멤버 함수를 사용 하십시오. 다중 선택 목록 상자에서 하나의 항목을 선택 하는 경우-즉, 경우 `nFirstItem` 같으면 `nLastItem` -호출는 [SetSel](#setsel) 멤버 함수를 대신 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#28](../../mfc/codesnippet/cpp/clistbox-class_28.cpp)]  
   
-##  <a name="setanchorindex"></a>CListBox::SetAnchorIndex  
+##  <a name="setanchorindex"></a>  CListBox::SetAnchorIndex  
  확장된 선택 하려면 다중 선택 목록 상자에 앵커를 설정 합니다.  
   
 ```  
@@ -1038,10 +1033,10 @@ void SetAnchorIndex(int nIndex);
 ### <a name="remarks"></a>설명  
  다중 선택 목록 상자에서 앵커 항목은 연속 선택 된 항목의 블록에서 첫 번째 또는 마지막 항목입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#29](../../mfc/codesnippet/cpp/clistbox-class_29.cpp)]  
   
-##  <a name="setcaretindex"></a>CListBox::SetCaretIndex  
+##  <a name="setcaretindex"></a>  CListBox::SetCaretIndex  
  다중 선택 목록 상자에서 지정된 된 인덱스에 있는 항목에 포커스를 설정합니다.  
   
 ```  
@@ -1063,10 +1058,10 @@ int SetCaretIndex(
 ### <a name="remarks"></a>설명  
  항목이 표시 되지 않으면을 뷰로 스크롤합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#30](../../mfc/codesnippet/cpp/clistbox-class_30.cpp)]  
   
-##  <a name="setcolumnwidth"></a>CListBox::SetColumnWidth  
+##  <a name="setcolumnwidth"></a>  CListBox::SetColumnWidth  
  여러 열 목록 상자에서 모든 열의 픽셀 너비를 설정 (사용 하 여 만든는 [LBS_MULTICOLUMN](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) 스타일).  
   
 ```  
@@ -1077,10 +1072,10 @@ void SetColumnWidth(int cxWidth);
  `cxWidth`  
  모든 열의 픽셀 너비를 지정합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#31](../../mfc/codesnippet/cpp/clistbox-class_31.cpp)]  
   
-##  <a name="setcursel"></a>CListBox::SetCurSel  
+##  <a name="setcursel"></a>  CListBox::SetCurSel  
  문자열을 선택 하 고 필요한 경우 보기로 스크롤합니다.  
   
 ```  
@@ -1092,7 +1087,7 @@ int SetCurSel(int nSelect);
  선택 하는 데 사용할 문자열의 0부터 시작 하는 인덱스를 지정 합니다. 경우 `nSelect` -1 이면 목록 상자가 없는 선택 영역을 설정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `LB_ERR`오류가 발생 합니다.  
+ `LB_ERR` 오류가 발생 합니다.  
   
 ### <a name="remarks"></a>설명  
  새 문자열을 선택 하면 목록 상자는 이전에 선택한 문자열에서 강조 표시를 제거 합니다.  
@@ -1101,10 +1096,10 @@ int SetCurSel(int nSelect);
   
  사용을 설정 하거나 다중 선택 목록 상자에서 선택한 내용을 제거 하려면 [CListBox::SetSel](#setsel)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#32](../../mfc/codesnippet/cpp/clistbox-class_32.cpp)]  
   
-##  <a name="sethorizontalextent"></a>CListBox::SetHorizontalExtent  
+##  <a name="sethorizontalextent"></a>  CListBox::SetHorizontalExtent  
  목록 상자를 가로로 스크롤할 수 픽셀 너비를 설정 합니다.  
   
 ```  
@@ -1122,10 +1117,10 @@ void SetHorizontalExtent(int cxExtent);
   
  이 멤버 함수는 여러 열 목록 상자에 유용 하지 않습니다. 여러 열 목록 상자에 대 한 호출에서 `SetColumnWidth` 멤버 함수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#33](../../mfc/codesnippet/cpp/clistbox-class_33.cpp)]  
   
-##  <a name="setitemdata"></a>CListBox::SetItemData  
+##  <a name="setitemdata"></a>  CListBox::SetItemData  
  목록 상자에서 지정 된 항목과 연결 된 32 비트 값을 설정 합니다.  
   
 ```  
@@ -1144,10 +1139,10 @@ int SetItemData(
 ### <a name="return-value"></a>반환 값  
  **LB_ERR** 오류가 발생 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#34](../../mfc/codesnippet/cpp/clistbox-class_34.cpp)]  
   
-##  <a name="setitemdataptr"></a>CListBox::SetItemDataPtr  
+##  <a name="setitemdataptr"></a>  CListBox::SetItemDataPtr  
  지정된 된 포인터를 목록 상자에서 지정 된 항목과 연결 된 32 비트 값을 설정 ( **void\***).  
   
 ```  
@@ -1169,10 +1164,10 @@ int SetItemDataPtr(
 ### <a name="remarks"></a>설명  
  이 포인터 목록 상자 내에서 항목의 상대 위치 항목을 추가 하거나 제거할 때마다 변경 될 수 있지만 목록 상자의 수명에 대 한 유효한 상태를 유지 합니다. 따라서 상자 내에서 항목의 인덱스를 변경할 수 있지만 포인터 신뢰할 수 있는 상태로 유지 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#35](../../mfc/codesnippet/cpp/clistbox-class_35.cpp)]  
   
-##  <a name="setitemheight"></a>CListBox::SetItemHeight  
+##  <a name="setitemheight"></a>  CListBox::SetItemHeight  
  목록 상자에서 항목의 높이 설정합니다.  
   
 ```  
@@ -1194,10 +1189,10 @@ int SetItemHeight(
 ### <a name="remarks"></a>설명  
  목록 상자에는 [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) 스타일,이 함수에 지정 된 항목의 높이 설정 `nIndex`합니다. 그렇지 않은 경우이 함수는 목록 상자에서 모든 항목의 높이 설정합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#36](../../mfc/codesnippet/cpp/clistbox-class_36.cpp)]  
   
-##  <a name="setlocale"></a>CListBox::SetLocale  
+##  <a name="setlocale"></a>  CListBox::SetLocale  
  이 목록 상자에 대 한 로캘 식별자를 설정합니다.  
   
 ```  
@@ -1214,10 +1209,10 @@ LCID SetLocale(LCID nNewLocale);
 ### <a name="remarks"></a>설명  
  경우 **SetLocale** 를 호출 하지 않으면 기본 시스템에서 로캘을 가져옵니다. 이 시스템 기본 로캘 제어판의를 사용 하 여 수정할 수 있는 국가 (또는 국제) 응용 프로그램입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#37](../../mfc/codesnippet/cpp/clistbox-class_37.cpp)]  
   
-##  <a name="setsel"></a>CListBox::SetSel  
+##  <a name="setsel"></a>  CListBox::SetSel  
  다중 선택 목록 상자에 문자열을 선택합니다.  
   
 ```  
@@ -1234,17 +1229,17 @@ int SetSel(
  선택 영역을 설정 하는 방법을 지정 합니다. 경우 `bSelect` 은 `TRUE`, 문자열은 선택 되어 강조 표시; 경우 `FALSE`, 강조 표시가 제거 되 고 문자열을 더 이상 선택 합니다. 지정된 된 문자열을 선택 기본적으로 강조 표시 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `LB_ERR`오류가 발생 합니다.  
+ `LB_ERR` 오류가 발생 합니다.  
   
 ### <a name="remarks"></a>설명  
  다중 선택 목록 상자에만이 멤버 함수를 사용 하십시오.  
   
  단일 선택 목록 상자에서 항목을 선택 하려면 사용 하 여 [CListBox::SetCurSel](#setcursel)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#38](../../mfc/codesnippet/cpp/clistbox-class_38.cpp)]  
   
-##  <a name="settabstops"></a>CListBox::SetTabStops  
+##  <a name="settabstops"></a>  CListBox::SetTabStops  
  목록 상자에서 탭 정지 위치를 설정합니다.  
   
 ```  
@@ -1277,10 +1272,10 @@ BOOL SetTabStops(
   
  에 대 한 호출에 응답 하는 `SetTabStops` 멤버 함수를 목록 상자 만들어야으로 [LBS_USETABSTOPS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) 스타일입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#39](../../mfc/codesnippet/cpp/clistbox-class_39.cpp)]  
   
-##  <a name="settopindex"></a>CListBox::SetTopIndex  
+##  <a name="settopindex"></a>  CListBox::SetTopIndex  
  특정 목록 상자 항목을 표시 되는지 확인 합니다.  
   
 ```  
@@ -1297,10 +1292,10 @@ int SetTopIndex(int nIndex);
 ### <a name="remarks"></a>설명  
  목록 상자에 지정 된 항목 될 때까지 스크롤 하는 시스템 `nIndex` 표시 목록 맨 위에 있는 상자 또는 최대 스크롤 범위에 도달 했습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#40](../../mfc/codesnippet/cpp/clistbox-class_40.cpp)]  
   
-##  <a name="vkeytoitem"></a>CListBox::VKeyToItem  
+##  <a name="vkeytoitem"></a>  CListBox::VKeyToItem  
  목록 상자의 부모 창을 받을 때 프레임 워크에서 호출 된 `WM_VKEYTOITEM` 목록 상자에서 메시지입니다.  
   
 ```  
@@ -1334,7 +1329,7 @@ virtual int VKeyToItem(
   
  반환 값 0 이상의 목록 상자에서 항목의 인덱스를 지정 합니다. 문서를 나타내고 목록 상자의 지정된 된 항목에 키 입력에 대 한 기본 동작을 수행 해야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CListBox#41](../../mfc/codesnippet/cpp/clistbox-class_41.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

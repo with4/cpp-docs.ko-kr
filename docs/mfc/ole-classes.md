@@ -1,13 +1,10 @@
 ---
-title: "OLE 클래스 | Microsoft Docs"
-ms.custom: 
+title: OLE 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.ole
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - OLE classes [MFC]
 - OLE [MFC], classes
 ms.assetid: 4c2b2bca-fafb-4d2d-8498-9ed1e04011d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 927643d467433d1a88e9b38d6c050bcc758e64c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 79fbf4ba0c176c495ca63a84bda04e0a4872c0c0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-classes"></a>OLE 클래스
 OLE 클래스 프로그램 ActiveX의 사용자에 게 제공 하는 쉬운 방법을 제공 ActiveX API에 쉽게 액세스할 수는 다른 응용 프로그램 프레임 워크 클래스를 사용 합니다. ActiveX를 사용 하 여 다음을 수행할 수 있습니다.  

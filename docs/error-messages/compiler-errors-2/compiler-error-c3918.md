@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C3918 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C3918 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3918
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C3918
 ms.assetid: a8b3a90a-3fe1-4244-a5ff-a31cdae97d98
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0f416a3ec613614daf0aa33498e255e4e88b641
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c8398cabe6b878c29a8a5746b0f344d21a7b692
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3918"></a>컴파일러 오류 C3918
 사용 현황 데이터 멤버를 ' member' 필요  
   
  C3918은 이벤트와 관련 된 여러 가지 이유로 발생할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  C3918은 클래스 멤버가 현재 컨텍스트에서 필요 하기 때문에 발생할 수 있습니다. 다음 샘플에서는 C3918 오류가 발생 합니다.  
   
 ```  
@@ -53,7 +48,7 @@ public:
 };  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  C3918는 null (이벤트 이름을 더 이상에 직접 액세스할 지원 저장소 대리자는 이벤트에 대 한)에 대 한 trivial 이벤트를 확인 하려고 하는 경우에 발생 합니다.  
   
  다음 샘플에서는 C3918 오류가 발생 합니다.  
@@ -77,7 +72,7 @@ ref struct EventSource : public IEFace {
 };  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  C3918 올바르게 구독 하는 경우 하지 이벤트에도 발생할 수 있습니다. 다음 샘플에서는 C3918 오류가 발생 합니다.  
   
 ```  

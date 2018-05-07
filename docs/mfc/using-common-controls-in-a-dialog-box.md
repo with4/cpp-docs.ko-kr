@@ -1,13 +1,10 @@
 ---
-title: "공용 컨트롤을 사용 하 여 대화 상자에서 | Microsoft Docs"
-ms.custom: 
+title: 공용 컨트롤을 사용 하 여 대화 상자에서 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - dialog box controls [MFC], common controls
 - Windows common controls [MFC], in dialog boxes
 ms.assetid: 17713caf-09f8-484a-bf54-5f48bf09cce9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67a9c77e6a8e5721bca6e3741b4b337cfdb42393
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c848cfa74363d871720f9ca269b114687aad9ecf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>대화 상자에서 공용 컨트롤 사용
 Windows 공용 컨트롤에서 사용할 수 있습니다 [대화 상자](../mfc/dialog-boxes.md), 폼 뷰, 레코드 뷰 및 대화 상자 템플릿을 기반으로 하는 다른 창. 약간의 다른 점이 있지만 다음 절차는 폼에서도 작동합니다.  

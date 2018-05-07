@@ -1,12 +1,9 @@
 ---
-title: "연산자&lt; (vector) (STL/CLR) | Microsoft Docs"
-ms.custom: 
+title: 연산자&lt; (vector) (STL/CLR) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::vector::operator<
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator< member [STL/CLR]
 ms.assetid: 41fbd028-e937-4337-9429-57e79a993eef
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: aa4437304f6c2aa05c8e0785c472b5de43925cd8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 075517b08043d01436708b01423934deb3e12ca3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operatorlt-vector-stlclr"></a>연산자&lt; (vector) (STL/CLR)
 벡터 비교 미만입니다.  
@@ -49,7 +44,7 @@ template<typename Value>
 ## <a name="remarks"></a>설명  
  연산자 함수 이면 true를 반환, 가장 낮은 위치에 대 한 `i` 를 `!(right[i] < left[i])` 도 true 하는 것이 `left[i] < right[i]`합니다. 그렇지 않으면 반환 `left->size() < right->size()` 테스트를 사용 하는지 여부를 `left` 앞에 정렬 `right` 두 벡터 요소에서 비교 된 요소를가 하는 경우.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_vector_operator_lt.cpp   

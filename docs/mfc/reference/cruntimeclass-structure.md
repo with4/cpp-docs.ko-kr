@@ -1,12 +1,9 @@
 ---
-title: "CRuntimeClass 구조 | Microsoft Docs"
-ms.custom: 
+title: CRuntimeClass 구조 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRuntimeClass
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - runtime [MFC], class information
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b053e963f4e252302ed4c390a648846166aff62
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 365247dc41ea75e67f63b2bb76b5bfe0c14a7ead
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass 구조
 각 클래스에서 파생 된 `CObject` 연관는 `CRuntimeClass` 런타임에 개체 또는 해당 기본 클래스에 대 한 정보를 가져오는 데 사용할 수 있는 구조입니다.  
@@ -61,11 +56,11 @@ struct CRuntimeClass
 |[CRuntimeClass::m_wSchema](#m_wschema)|클래스의 스키마 수입니다.|  
   
 ## <a name="remarks"></a>설명  
- `CRuntimeClass`구조체가 고 기본 클래스도 있습니다.  
+ `CRuntimeClass` 구조체가 고 기본 클래스도 있습니다.  
   
  런타임 시 개체의 클래스를 결정 하는 기능 추가 형식 함수 인수 검사가 필요할 때 또는 개체의 클래스에 기반 하는 특수 한 용도의 코드를 작성 해야 하는 경우에 유용 합니다. 런타임 클래스 정보는 c + + 언어에서 직접 지원 되지 않습니다.  
   
- `CRuntimeClass`에 대 한 포인터와 같은 관련된 c + + 개체에 대 한 정보를 제공는 `CRuntimeClass` 기본 클래스 및 관련된 클래스의 ASCII 클래스 이름입니다. 이 구조는 또한 친숙 한 이름을 사용 하 고 관련된 클래스 특정 클래스에서 파생 된 경우를 결정 하 여 개체의 유형을 지정 하는 개체를 동적으로 만들 데 사용할 수 있는 다양 한 기능을 구현 합니다.  
+ `CRuntimeClass` 에 대 한 포인터와 같은 관련된 c + + 개체에 대 한 정보를 제공는 `CRuntimeClass` 기본 클래스 및 관련된 클래스의 ASCII 클래스 이름입니다. 이 구조는 또한 친숙 한 이름을 사용 하 고 관련된 클래스 특정 클래스에서 파생 된 경우를 결정 하 여 개체의 유형을 지정 하는 개체를 동적으로 만들 데 사용할 수 있는 다양 한 기능을 구현 합니다.  
   
  사용 하 여 대 한 자세한 내용은 `CRuntimeClass`, 문서를 참조 [런타임 클래스 정보 액세스](../../mfc/accessing-run-time-class-information.md)합니다.  
   
@@ -75,7 +70,7 @@ struct CRuntimeClass
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afx.h  
   
-##  <a name="createobject"></a>CRuntimeClass::CreateObject  
+##  <a name="createobject"></a>  CRuntimeClass::CreateObject  
  런타임 중 지정된 된 클래스를 만들려면 동적으로이 함수를 호출 합니다.  
   
 ```  
@@ -96,10 +91,10 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 ### <a name="remarks"></a>설명  
  클래스에서 파생 된 `CObject` 런타임 시 지정된 된 클래스의 개체를 만들 수 있는 동적 만들기를 지원할 수 있습니다. 문서, 뷰 및 프레임 클래스, 예를 들어 해야 동적 생성을 지원 합니다. 동적 만들기에 대 한 자세한 내용은 및 `CreateObject` 멤버 참조 [CObject 클래스](../../mfc/using-cobject.md) 및 [CObject 클래스: 기능 수준 지정](../../mfc/specifying-levels-of-functionality.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [IsDerivedFrom](#isderivedfrom)합니다.  
   
-##  <a name="fromname"></a>CRuntimeClass::FromName  
+##  <a name="fromname"></a>  CRuntimeClass::FromName  
  검색 하려면이 함수 호출의 `CRuntimeClass` 친숙 한 이름에 연결 된 구조입니다.  
   
 ```  
@@ -115,10 +110,10 @@ static CRuntimeClass* PASCAL FromName(LPCWSTR lpszClassName);
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 `CRuntimeClass` 이름에 해당 하는 전달 된 개체 `lpszClassName`합니다. 함수 반환 **NULL** 경우 일치 하는 클래스 이름을 찾지 못했습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCObjectSample#17](../../mfc/codesnippet/cpp/cruntimeclass-structure_1.cpp)]  
   
-##  <a name="isderivedfrom"></a>CRuntimeClass::IsDerivedFrom  
+##  <a name="isderivedfrom"></a>  CRuntimeClass::IsDerivedFrom  
  이 함수를 호출 하는 클래스에 지정 된 클래스에서 파생 됩니다 확인 호출의 *pBaseClass* 매개 변수입니다.  
   
 ```  
@@ -142,58 +137,58 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
   
  사용 하 여 대 한 자세한 내용은 `CRuntimeClass`, 문서를 참조 [CObject 클래스: 런타임 클래스 정보 액세스](../../mfc/accessing-run-time-class-information.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCObjectSample#18](../../mfc/codesnippet/cpp/cruntimeclass-structure_2.cpp)]  
   
-##  <a name="m_lpszclassname"></a>CRuntimeClass::m_lpszClassName  
+##  <a name="m_lpszclassname"></a>  CRuntimeClass::m_lpszClassName  
  ASCII 클래스 이름이 포함 된 null로 끝나는 문자열입니다.  
   
 ### <a name="remarks"></a>설명  
  이 이름을 사용 하 여 클래스의 인스턴스를 만드는 데 사용할 수는 `FromName` 멤버 함수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [IsDerivedFrom](#isderivedfrom)합니다.  
   
-##  <a name="m_nobjectsize"></a>CRuntimeClass::m_nObjectSize  
+##  <a name="m_nobjectsize"></a>  CRuntimeClass::m_nObjectSize  
  크기 (바이트)에서 개체입니다.  
   
 ### <a name="remarks"></a>설명  
  개체에 데이터 멤버가 할당 된 메모리에 해당 지점 해당 메모리의 크기가 포함 되지 않습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [IsDerivedFrom](#isderivedfrom)합니다.  
   
-##  <a name="m_pbaseclass"></a>CRuntimeClass::m_pBaseClass  
+##  <a name="m_pbaseclass"></a>  CRuntimeClass::m_pBaseClass  
  이 데이터 멤버에 대 한 포인터를 포함 하는 경우 응용 프로그램은 정적으로 MFC에 링크를 `CRuntimeClass` 기본 클래스의 구조입니다.  
   
 ### <a name="remarks"></a>설명  
  응용 프로그램 동적으로 MFC 라이브러리에 연결 하는 경우 참조 [m_pfnGetBaseClass](#m_pfngetbaseclass)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [IsDerivedFrom](#isderivedfrom)합니다.  
   
-##  <a name="m_pfncreateobject"></a>CRuntimeClass::m_pfnCreateObject  
+##  <a name="m_pfncreateobject"></a>  CRuntimeClass::m_pfnCreateObject  
  클래스의 개체를 만드는 기본 생성자 함수 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
  이 포인터 에서만 유효 클래스가; 동적 만들기를 지원 합니다. 그렇지 않으면 함수가 반환 **NULL**합니다.  
   
-##  <a name="m_pfngetbaseclass"></a>CRuntimeClass::m_pfnGetBaseClass  
+##  <a name="m_pfngetbaseclass"></a>  CRuntimeClass::m_pfnGetBaseClass  
  이 데이터 멤버를 반환 하는 함수를 가리키는 MFC 라이브러리를 공유 DLL로 사용 하는 응용 프로그램을 하는 경우는 `CRuntimeClass` 기본 클래스의 구조입니다.  
   
 ### <a name="remarks"></a>설명  
  응용 프로그램은 정적으로 MFC 라이브러리에 링크를 참조 [m_pBaseClass](#m_pbaseclass)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [IsDerivedFrom](#isderivedfrom)합니다.  
   
-##  <a name="m_wschema"></a>CRuntimeClass::m_wSchema  
+##  <a name="m_wschema"></a>  CRuntimeClass::m_wSchema  
  스키마 (직렬화 할 수 없는 클래스에 대 한-1) 수입니다.  
   
 ### <a name="remarks"></a>설명  
  스키마 번호에 대 한 자세한 내용은 참조는 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) 매크로입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [IsDerivedFrom](#isderivedfrom)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

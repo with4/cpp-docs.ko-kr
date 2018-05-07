@@ -1,13 +1,10 @@
 ---
-title: "뷰를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: 뷰를 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - user input [MFC], interpreting through view class [MFC]
 - view classes [MFC], role in displaying application data
 ms.assetid: dc3de6ad-5c64-4317-8f10-8bdcc38cdbd5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99493657313d480559d232bf9033dfb7a7a585c4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4094f41f00266b229c755232f534e9c35d29fe7a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-views"></a>뷰 사용
 뷰는 사용자에 게 문서의 데이터를 그래픽으로 표시 하를 수락 하 고 문서에 대 한 작업으로 사용자 입력 해석 합니다. 뷰 클래스를 작성할에서 작업에는 것입니다.  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
  다른 재정의 해야 하는 또한 `CView` 파생 된 뷰 클래스의 멤버 함수입니다. 재정의 해야 하는 특히, [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) 뷰에 대 한 특별 한 초기화를 수행 하 고 [OnUpdate](../mfc/reference/cview-class.md#onupdate) 보기 자신을 다시 그리면 하기 바로 전에 필요한 특별 한 처리 작업을 수행할 합니다. 다중 페이지 문서에 대 한도 재정의 해야 [OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) 인쇄할 페이지 및 기타 정보의 번호로 인쇄 대화 상자를 초기화 합니다. 재정의 대 한 자세한 내용은 `CView` 멤버 함수는 클래스를 참조 하십시오. [CView](../mfc/reference/cview-class.md) 에 *MFC 참조*합니다.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [MFC에서 사용할 수 있는 파생 된 뷰 클래스](../mfc/derived-view-classes-available-in-mfc.md)  
   

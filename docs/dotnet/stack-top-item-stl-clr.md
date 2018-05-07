@@ -1,12 +1,9 @@
 ---
 title: 'stack:: top_item (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::stack::top_item
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - top_item member [STL/CLR]
 ms.assetid: 01571acf-4880-44c4-80c4-bd91408a032d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7219ed890938493a9c470ce7c2218f8fb78cfc62
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a0faaac744ddd45d9e6b22a2c1390d35401e5e4f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stacktopitem-stlclr"></a>stack::top_item(STL/CLR)
 마지막 요소에 액세스합니다.  
@@ -40,7 +35,7 @@ property value_type top_item;
 ## <a name="remarks"></a>설명  
  비어 있는 제어 된 시퀀스의 마지막 요소를 액세스 하는 속성입니다. 읽기 또는 존재 하는 것을 알고 있는 경우 마지막 요소를 쓰기 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_stack_top_item.cpp   

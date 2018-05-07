@@ -1,12 +1,9 @@
 ---
-title: "CMFCImagePaintArea 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCImagePaintArea 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCImagePaintArea
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f4af09ad1da91e3d59f82736ae9b240812069eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cd5dd96c51c6b4ff5d3376581ddd760a2741968a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea 클래스
 이미지 편집기 대화 상자에서 이미지를 수정 하는 사용 하는 그림 영역을 제공 합니다.  
@@ -71,7 +66,7 @@ class CMFCImagePaintArea : public CButton
   
  이 클래스를 사용 하 여 이미지 편집기 대화 상자에서 그림 영역을 표시 하는 프레임 워크입니다. 이미지 편집기 대화 상자에 대 한 자세한 내용은 참조 [CMFCImageEditorDialog 클래스](../../mfc/reference/cmfcimageeditordialog-class.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는의 개체를 생성 하는 `CMFCImagePaintArea` 클래스, 현재 현재 그리기 모드를 설정 하 고 그림 영역에 대 한 비트맵 이미지를 설정 그리기 색을 설정 합니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#37](../../mfc/reference/codesnippet/cpp/cmfcimagepaintarea-class_1.cpp)]  
@@ -90,7 +85,7 @@ class CMFCImagePaintArea : public CButton
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afximagepaintarea.h  
   
-##  <a name="cmfcimagepaintarea"></a>CMFCImagePaintArea::CMFCImagePaintArea  
+##  <a name="cmfcimagepaintarea"></a>  CMFCImagePaintArea::CMFCImagePaintArea  
  `CMFCImagePaintArea` 개체를 생성합니다.  
   
 ```  
@@ -104,7 +99,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |매개 변수|설명|  
 |[in] `pParentDlg`|이미지 편집기의 부모가 되는 대화 상자에 대 한 포인터입니다.|  
   
-##  <a name="getmode"></a>CMFCImagePaintArea::GetMode  
+##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
  현재 그리기 모드를 검색합니다.  
   
 ```  
@@ -114,7 +109,7 @@ IMAGE_EDIT_MODE GetMode() const;
 ### <a name="return-value"></a>반환 값  
  [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) 현재 그리기 모드를 지정 하는 값입니다.  
   
-##  <a name="setbitmap"></a>CMFCImagePaintArea::SetBitmap  
+##  <a name="setbitmap"></a>  CMFCImagePaintArea::SetBitmap  
  그림 영역에 대 한 비트맵 이미지를 설정합니다.  
   
 ```  
@@ -131,7 +126,7 @@ void SetBitmap(CBitmap* pBitmap);
 ### <a name="remarks"></a>설명  
  경우 `pBitmap` 은 `NULL`,이 메서드는 수정할 수 있는 그리기 영역의 크기를 0으로 설정 합니다. 그렇지 않은 경우 제공 된 비트맵 이미지의 크기를 수정할 수 있는 그리기 영역의 크기를 설정합니다.  
   
-##  <a name="setcolor"></a>CMFCImagePaintArea::SetColor  
+##  <a name="setcolor"></a>  CMFCImagePaintArea::SetColor  
  현재 그리기 색을 설정합니다.  
   
 ```  
@@ -150,7 +145,7 @@ void SetColor(COLORREF color);
   
  그리기 색을 제외 하 고 모든 그리기 모드에 대 한 이미지 편집기 대화 상자에서 사용은 `IMAGE_EDIT_MODE_COLOR`합니다. 그리기 모드에 대 한 자세한 내용은 참조 [cmfcimagepaintarea:: Image_edit_mode 열거형](cmfcimagepaintarea-image-edit-mode-enumeration.md)합니다.  
   
-##  <a name="setmode"></a>CMFCImagePaintArea::SetMode  
+##  <a name="setmode"></a>  CMFCImagePaintArea::SetMode  
  현재 그리기 모드를 설정합니다.  
   
 ```  

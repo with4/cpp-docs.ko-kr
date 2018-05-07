@@ -1,13 +1,10 @@
 ---
-title: "머리글 및 바닥글 | Microsoft Docs"
-ms.custom: 
+title: 머리글 및 바닥글 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - printing [MFC], headers and footers
 - page footers [MFC]
 ms.assetid: b0be9c53-5773-4955-a777-3c15da745128
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7525cba7d05c4d04f0548bd2dc774503b284c220
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c82df1a77cdbf677a6b5e6f84c371da243b9b08d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="headers-and-footers"></a>머리글 및 바닥글
 이 문서에서는 인쇄 문서에 머리글 및 바닥글을 추가 하는 방법에 설명 합니다.  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  헤더 또는 다른에서 인쇄할 수 없는 [OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)하기 전에 호출 되어는 `StartPage` 의 멤버 함수 [CDC](../mfc/reference/cdc-class.md) 가 호출 합니다. 이 시점에서 프린터 장치 컨텍스트는 페이지 경계에 있을으로 간주 됩니다. 에서만 인쇄를 수행할 수 있습니다는 `OnPrint` 멤버 함수입니다.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [다중 페이지 문서 인쇄](../mfc/multipage-documents.md)  
   

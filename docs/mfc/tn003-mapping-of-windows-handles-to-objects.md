@@ -1,13 +1,10 @@
 ---
-title: "TN003: windows 핸들을 개체로 매핑 | Microsoft Docs"
-ms.custom: 
+title: 'TN003: windows 핸들을 개체로 매핑 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mapping
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Windows handles to objects [MFC]
 - mappings [MFC], Windows handles to objects
 ms.assetid: fbea9f38-992c-4091-8dbc-f29e288617d6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e53b2569b0da6bfa63c94adb7bb163e5bcd6b7b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bc8658868c36008c5ed6b9db9747eb63ae37e4d2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003: Windows 핸들을 개체로 매핑
 이 노트에서는 MFC 설명 루틴을 지 원하는 Windows 매핑 개체 c + + 개체에 대 한 핸들입니다.  

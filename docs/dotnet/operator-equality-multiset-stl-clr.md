@@ -1,12 +1,9 @@
 ---
-title: "연산자 = = (multiset) (STL/CLR) | Microsoft Docs"
-ms.custom: 
+title: 연산자 = = (multiset) (STL/CLR) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multiset::operator==
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator== member [STL/CLR]
 ms.assetid: 327918f8-ed9b-4549-a85e-11632757b317
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 114905ff52a6f2774faf2358d4b97fc56d8fcc03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a3e84e6cd17a7e7c037e6fa7549c43cd9fa2ab6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-multiset-stlclr"></a>operator== (multiset)(STL/CLR)
 같음 비교를 나열 합니다.  
@@ -49,7 +44,7 @@ template<typename Key>
 ## <a name="remarks"></a>설명  
  연산자 함수는 시퀀스에 의해 제어 하는 경우에 true를 반환 `left` 및 `right` 동일한 길이 및 각 위치에 대 한 `i`, `left[i] ==` `right[i]`합니다. 테스트를 사용 하는지 여부를 `left` 와 동일 하 게 정렬 되 `right` 때 두 개의 다중 집합은 요소 별로 비교 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_multiset_operator_eq.cpp   

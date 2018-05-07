@@ -1,13 +1,10 @@
 ---
-title: "관리 코드에서 네이티브 함수 호출 | Microsoft Docs"
-ms.custom: 
+title: 관리 코드에서 네이티브 함수 호출 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 159b80fcc015db2999309fe99e9617f7dcd409ac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c0d7e69c95790122f44dc59d06f2843afbddfb2c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="calling-native-functions-from-managed-code"></a>관리 코드에서 네이티브 함수 호출
 공용 언어 런타임 관리 수 있게 네이티브 동적 연결 라이브러리 (Dll)의 C 스타일 함수를 호출 하는 코드는 PInvoke 또는 플랫폼 호출 서비스를 제공 합니다. 런타임 및 것 바로 "작동", 또는 IJW, 메커니즘에 대 한 COM 상호 운용성의 경우와 동일한 데이터 마샬링 사용 됩니다.  
@@ -40,9 +35,9 @@ ms.lasthandoff: 12/21/2017
   
 -   [C++ Interop 사용(암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
   
--   [좀 더 자세히 살펴보고 플랫폼 호출](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
+-   [플랫폼 호출 자세히 보기](http://msdn.microsoft.com/en-us/ba9dd55b-2eaa-45cd-8afd-75cb8d64d243)  
   
- 이 섹션의에서 예제에서는 대해서만 설명 방법을 `PInvoke` 사용할 수 있습니다. `PInvoke`프로시저 마샬링 코드를 작성 하는 대신 특성에 선언적으로 마샬링 정보를 제공 하기 때문에 사용자 지정 된 데이터 마샬링을 간소화할 수 있습니다.  
+ 이 섹션의에서 예제에서는 대해서만 설명 방법을 `PInvoke` 사용할 수 있습니다. `PInvoke` 프로시저 마샬링 코드를 작성 하는 대신 특성에 선언적으로 마샬링 정보를 제공 하기 때문에 사용자 지정 된 데이터 마샬링을 간소화할 수 있습니다.  
   
 > [!NOTE]
 >  마샬링 라이브러리는 최적화 된 방식으로 네이티브 및 관리 환경 간에 데이터를 마샬링해야 하는 대체 방법을 제공 합니다. 참조 [개요의 c + + 마샬링](../dotnet/overview-of-marshaling-in-cpp.md) 마샬링 라이브러리에 대 한 자세한 내용은 합니다. 마샬링 라이브러리를 데이터에만 및 함수에 대 한 사용할 수 있습니다.  

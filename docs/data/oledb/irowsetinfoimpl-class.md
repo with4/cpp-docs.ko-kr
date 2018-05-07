@@ -1,12 +1,9 @@
 ---
-title: "IRowsetInfoImpl 클래스 | Microsoft Docs"
-ms.custom: 
+title: IRowsetInfoImpl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.IRowsetInfoImpl
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - IRowsetInfoImpl class
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a451302920fa94d8bc1224df4c9ad432ed9dc896
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f9b784dbb13ff39be21ccd353d514dd244d5ae41
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl 클래스
 에 대 한 구현을 제공는 [IRowsetInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx) 인터페이스입니다.  

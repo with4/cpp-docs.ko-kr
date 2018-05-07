@@ -1,12 +1,9 @@
 ---
-title: "CBulkRowset 클래스 | Microsoft Docs"
-ms.custom: 
+title: CBulkRowset 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CBulkRowset
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - CBulkRowset class
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 288599a85cc63c59bf8b1bd013e197908adc9cc8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 7dddf645b8795b12f6da70081327366b62946303
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset 클래스
 인출 하 고 한 번의 호출으로 여러 행 핸들을 검색 하 여 대량으로 데이터에서 작동 하도록 행을 조작 합니다.  
@@ -63,7 +58,7 @@ class CBulkRowset : public CRowset<TAccessor>
 |[ReleaseRows](../../data/oledb/cbulkrowset-releaserows.md)|현재 행을 설정 (**m_nCurrentRow**) 0 및 릴리스인 모든 행입니다.|  
 |[SetRows](../../data/oledb/cbulkrowset-setrows.md)|한 번 호출 하 여 검색할 행 핸들의 수를 설정 합니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 사용 된 `CBulkRowset` 클래스입니다.  
   
  [!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  

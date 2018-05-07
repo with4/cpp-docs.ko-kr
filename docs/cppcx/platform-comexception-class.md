@@ -1,11 +1,8 @@
 ---
-title: "Platform:: comexception 클래스 | Microsoft Docs"
-ms.custom: 
+title: 'Platform:: comexception 클래스 | Microsoft Docs'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::COMException
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d06133d89ff2d6a6c96fa0c139f255ce39d401b1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 79c7824a64fc9bfa4bef761e82505195835146ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException 클래스
 응용 프로그램을 실행할 때 나타나는 COM 오류를 나타냅니다. COMException은 미리 정의된 표준 예외 집합의 기본 클래스입니다.  
@@ -64,7 +59,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 ## <a name="derived-exceptions"></a>파생된 예외  
  다음과 같은 미리 정의된 예외는 COMException에서 파생됩니다. COMException과 이름, 생성자 이름 및 내부 HRESULT 값만 다릅니다.  
   
-|name|내부 HRESULT|설명|  
+|이름|내부 HRESULT|설명|  
 |----------|------------------------|-----------------|  
 |COMException|*사용자 정의 hresult*|COM 메서드 호출에서 인식할 수 없는 HRESULT가 반환되는 경우에 throw됩니다.|  
 |AccessDeniedException|E_ACCESSDENIED|리소스 또는 기능에 대한 액세스가 거부된 경우 throw됩니다.|  

@@ -1,12 +1,9 @@
 ---
-title: "ICommandTarget 인터페이스 | Microsoft Docs"
-ms.custom: 
+title: ICommandTarget 인터페이스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - ICommandTarget
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - ICommandTarget interface [MFC]
 ms.assetid: dd9927f6-3479-4e7c-8ef9-13206cf901f3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be8adb388bed39f91637dd1ef37ee1ee895f291d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b32112fbad516b2550da0cc48cb6c287583d396c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icommandtarget-interface"></a>ICommandTarget 인터페이스
 명령 원본 개체에서 명령을 수신 하도록 인터페이스와 함께 사용자 정의 컨트롤을 제공 합니다.  
@@ -56,7 +51,7 @@ interface class ICommandTarget
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwinforms.h (atlmfc\lib\mfcmifc80.dll 어셈블리에에서 정의 됨)  
   
-##  <a name="initialize"></a>ICommandTarget::Initialize  
+##  <a name="initialize"></a> ICommandTarget::Initialize  
  명령 대상 개체를 초기화합니다.  
   
 ```  

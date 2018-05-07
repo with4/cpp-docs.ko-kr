@@ -1,12 +1,9 @@
 ---
-title: "C + + 마샬링 개요 | Microsoft Docs"
-ms.custom: 
+title: C + + 마샬링 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - marshaling
@@ -18,21 +15,19 @@ helpviewer_keywords:
 - C++ Support Library, marshaling
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9d910c7d6346d23f094e9359f0e5fe3536ee09dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f950c8efbdd75e16096d158075e92594fb6b2d1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overview-of-marshaling-in-c"></a>C++ 마샬링 개요
-혼합된 모드의 경우에 따라 마샬링해야 네이티브 및 관리 되는 형식 간의 데이터. [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)]마샬링 라이브러리를 도입 마샬링해야 하 고 간단한 방법으로 데이터를 변환 합니다.  
+혼합된 모드의 경우에 따라 마샬링해야 네이티브 및 관리 되는 형식 간의 데이터. [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] 마샬링 라이브러리를 도입 마샬링해야 하 고 간단한 방법으로 데이터를 변환 합니다.  
   
  여부에 관계 없이 마샬링 라이브러리를 사용할 수는 [marshal_context 클래스](../dotnet/marshal-context-class.md)합니다. 변환 중 일부는 컨텍스트가 필요합니다. 다른 변환을 사용 하 여 구현할 수 있습니다는 [marshal_as](../dotnet/marshal-as.md) 함수입니다. 다음 표에 지원 되는 현재 변환이는 컨텍스트가 필요 여부와 어떤 마샬링 파일 포함 해야 합니다.  
   

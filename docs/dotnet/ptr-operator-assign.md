@@ -1,12 +1,9 @@
 ---
 title: ptr::operator = | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - ptr.operator=
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - operator=
 ms.assetid: 58619910-46c0-4db8-b183-c811b23b2df1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e58d177a8d12970ec5c4b9d1b8b86405f153bdc3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c4f9e54ce2bcd6ff402e6ad239b269a3e314286d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptroperator"></a>ptr::operator=
 COM 개체에 연결 된 `com::ptr`합니다.  
@@ -57,7 +52,7 @@ ptr<_interface_type> % operator=(
   
  이 연산자는 것과 동일한 결과가 `Attach`합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다.  `ReplaceDocument` 멤버 함수에 대 한 첫 번째 호출 `Release` 에서 이전에 소유 하 고 개체와 사용 하 여 `operator=` 새 문서 개체를 연결 합니다.  
   
 ```  

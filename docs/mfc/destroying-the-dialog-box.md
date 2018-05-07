@@ -1,13 +1,10 @@
 ---
-title: "대화 상자 제거 | Microsoft Docs"
-ms.custom: 
+title: 대화 상자 제거 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], destroying
 - modal dialog boxes [MFC], destroying
 ms.assetid: dabceee7-3639-4d85-bf34-73515441b3d0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b1b6c94c4c7efe3bc3300d6c8c5c34fbe890fb4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66a3ef9a72107ffb36a75834a6e197aba394c420
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="destroying-the-dialog-box"></a>대화 상자 제거
 모달 대화 상자가 일반적으로 스택 프레임에 생성 되 고 이들을 만든는 함수가 종료 되어도 삭제 합니다. 대화 상자 개체의 소멸자가 범위를 벗어날 때 호출 됩니다.  

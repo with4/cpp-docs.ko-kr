@@ -2,11 +2,8 @@
 title: CComboBoxEx 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CComboBoxEx
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aecbb168316b3d6416d3a41a6f6a56b04aeb990
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fd7d2c5bbd3445e604620dc1f23f45004b7a3b73
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx 클래스
 이미지 목록에 대한 지원을 제공하여 콤보 상자 컨트롤을 확장합니다.  
@@ -100,7 +95,7 @@ class CComboBoxEx : public CComboBox
  표준 콤보 상자에서 콤보 상자의 소유자가 소유자 그리기 컨트롤 콤보 상자를 만들어 이미지를 그리기를 담당 합니다. 사용 하는 경우 `CComboBoxEx`, 그리기 스타일을 설정할 필요가 없습니다 **CBS_OWNERDRAWFIXED** 및 **CBS_HASSTRINGS** 암시적 때문에 있습니다. 그렇지 않으면 그리기 작업을 수행 하는 코드를 작성 해야 합니다. A `CComboBoxEx` 컨트롤 항목당 최대 3 개의 이미지를 지원: 선택 하지 않은 상태 여 서 및 오버레이 이미지에 대 한 선택 된 상태에 대 한 합니다.  
   
 ## <a name="styles"></a>스타일  
- `CComboBoxEx`스타일 지원 **CBS_SIMPLE**, **CBS_DROPDOWN**, **CBS_DROPDOWNLIST**, 및 **WS_CHILD**합니다. 컨트롤 창을 만들 때 전달 되는 다른 모든 스타일은 무시 됩니다. 창을 만든 후 제공할 수 있습니다 다른 콤보 상자 스타일 호출 하 여는 `CComboBoxEx` 멤버 함수 [SetExtendedStyle](#setextendedstyle)합니다. 이러한 스타일을 사용 하면 다음과 같은 작업을 수행할 수 있습니다.  
+ `CComboBoxEx` 스타일 지원 **CBS_SIMPLE**, **CBS_DROPDOWN**, **CBS_DROPDOWNLIST**, 및 **WS_CHILD**합니다. 컨트롤 창을 만들 때 전달 되는 다른 모든 스타일은 무시 됩니다. 창을 만든 후 제공할 수 있습니다 다른 콤보 상자 스타일 호출 하 여는 `CComboBoxEx` 멤버 함수 [SetExtendedStyle](#setextendedstyle)합니다. 이러한 스타일을 사용 하면 다음과 같은 작업을 수행할 수 있습니다.  
   
 -   대/소문자 구분 되도록 목록에서 문자열 검색을 설정 합니다.  
   
@@ -131,14 +126,14 @@ class CComboBoxEx : public CComboBox
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcmn.h  
   
-##  <a name="ccomboboxex"></a>CComboBoxEx::CComboBoxEx  
+##  <a name="ccomboboxex"></a>  CComboBoxEx::CComboBoxEx  
  이 멤버 함수를 만드는 호출는 `CComboBoxEx` 개체입니다.  
   
 ```  
 CComboBoxEx();
 ```  
   
-##  <a name="create"></a>CComboBoxEx::Create  
+##  <a name="create"></a>  CComboBoxEx::Create  
  콤보 상자를 만들고 연결 하는 `CComboBoxEx` 개체입니다.  
   
 ```  
@@ -190,7 +185,7 @@ virtual BOOL Create(
   
  컨트롤 확장된 창 스타일을 사용 하려면 호출 [CreateEx](#createex) 대신 **만들기**합니다.  
   
-##  <a name="createex"></a>CComboBoxEx::CreateEx  
+##  <a name="createex"></a>  CComboBoxEx::CreateEx  
  확장 된 콤보 상자 컨트롤 (자식 창)을 만들고 사용 하 여 연결 하는이 함수 호출의 `CComboBoxEx` 개체입니다.  
   
 ```  
@@ -222,11 +217,11 @@ virtual BOOL CreateEx(
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 사용 하 여 `CreateEx` 대신 **만들기** Windows 확장된 스타일 접두사에 의해 지정 된 확장된 창 스타일을 적용할 **WS_EX_**합니다.  
+ 사용 하 여 `CreateEx` 대신 **만들기** Windows 확장된 스타일 접두사에 의해 지정 된 확장된 창 스타일을 적용할 **WS_EX_** 합니다.  
   
- `CreateEx`로 지정 된 확장된 창 스타일와 컨트롤을 만듭니다 `dwExStyle`합니다. 설정 해야 확장된 스타일 특정 사용 하 여 확장 된 콤보 상자 컨트롤 [SetExtendedStyle](#setextendedstyle)합니다. 사용 예를 들어 `CreateEx` 으로 이러한 스타일을 설정 하려면 **WS_EX_CONTEXTHELP**를 사용 하지만 `SetExtendedStyle` 으로 이러한 스타일을 설정 하려면 **CBES_EX_CASESENSITIVE**합니다. 자세한 내용은 항목에서 설명 하는 스타일을 참조 하십시오. [ComboBoxEx 컨트롤 확장 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775742) Windows sdk에서입니다.  
+ `CreateEx` 로 지정 된 확장된 창 스타일와 컨트롤을 만듭니다 `dwExStyle`합니다. 설정 해야 확장된 스타일 특정 사용 하 여 확장 된 콤보 상자 컨트롤 [SetExtendedStyle](#setextendedstyle)합니다. 사용 예를 들어 `CreateEx` 으로 이러한 스타일을 설정 하려면 **WS_EX_CONTEXTHELP**를 사용 하지만 `SetExtendedStyle` 으로 이러한 스타일을 설정 하려면 **CBES_EX_CASESENSITIVE**합니다. 자세한 내용은 항목에서 설명 하는 스타일을 참조 하십시오. [ComboBoxEx 컨트롤 확장 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775742) Windows sdk에서입니다.  
   
-##  <a name="deleteitem"></a>CComboBoxEx::DeleteItem  
+##  <a name="deleteitem"></a>  CComboBoxEx::DeleteItem  
  항목을 제거는 **ComboBoxEx** 제어 합니다.  
   
 ```  
@@ -243,7 +238,7 @@ int DeleteItem(int iIndex);
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 메시지의 기능을 구현 [CBEM_DELETEITEM](http://msdn.microsoft.com/library/windows/desktop/bb775768)Windows SDK에 설명 된 대로 합니다. DeleteItem를 호출 하는 경우는 [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) 메시지 **CBEN_DELETEITEM** 부모 창에 알림이 전송 됩니다.  
   
-##  <a name="getcomboboxctrl"></a>CComboBoxEx::GetComboBoxCtrl  
+##  <a name="getcomboboxctrl"></a>  CComboBoxEx::GetComboBoxCtrl  
  이 멤버 함수 내에서 콤보 상자 컨트롤에 대 한 단서를 호출 하는 `CComboBoxEx` 개체입니다.  
   
 ```  
@@ -258,7 +253,7 @@ CComboBox* GetComboBoxCtrl();
   
  `CComboBox` 반환 값으로 가리키는 개체가 임시 개체 이며 다음 유휴 처리 시간 동안 제거 됩니다.  
   
-##  <a name="geteditctrl"></a>CComboBoxEx::GetEditCtrl  
+##  <a name="geteditctrl"></a>  CComboBoxEx::GetEditCtrl  
  콤보 상자에 대 한 편집 컨트롤에 대 한 포인터를 가져오려는이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -273,7 +268,7 @@ CEdit* GetEditCtrl();
   
  `CEdit` 반환 값으로 가리키는 개체가 임시 개체 이며 다음 유휴 처리 시간 동안 제거 됩니다.  
   
-##  <a name="getextendedstyle"></a>CComboBoxEx::GetExtendedStyle  
+##  <a name="getextendedstyle"></a>  CComboBoxEx::GetExtendedStyle  
  이 멤버 함수에 사용 되는 확장된 스타일을 얻으려고 호출는 `CComboBoxEx` 제어 합니다.  
   
 ```  
@@ -286,7 +281,7 @@ DWORD GetExtendedStyle() const;
 ### <a name="remarks"></a>설명  
  참조 [ComboBoxEx 컨트롤 확장 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775742) 이러한 스타일에 대 한 자세한 내용은 Windows sdk입니다.  
   
-##  <a name="getimagelist"></a>CComboBoxEx::GetImageList  
+##  <a name="getimagelist"></a>  CComboBoxEx::GetImageList  
  이 멤버 함수에서 사용 하는 이미지 목록에 대 한 단서를 호출 하는 `CComboBoxEx` 제어 합니다.  
   
 ```  
@@ -299,7 +294,7 @@ CImageList* GetImageList() const;
 ### <a name="remarks"></a>설명  
  `CImageList` 반환 값으로 가리키는 개체가 임시 개체 이며 다음 유휴 처리 시간 동안 제거 됩니다.  
   
-##  <a name="getitem"></a>CComboBoxEx::GetItem  
+##  <a name="getitem"></a>  CComboBoxEx::GetItem  
  검색 항목에 대 한 정보는 주어진 **ComboBoxEx** 항목입니다.  
   
 ```  
@@ -316,7 +311,7 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 메시지의 기능을 구현 [CBEM_GETITEM](http://msdn.microsoft.com/library/windows/desktop/bb775779)Windows SDK에 설명 된 대로 합니다.  
   
-##  <a name="haseditchanged"></a>CComboBoxEx::HasEditChanged  
+##  <a name="haseditchanged"></a>  CComboBoxEx::HasEditChanged  
  사용자의 내용에 변경 되었는지 여부를 결정 하는 **ComboBoxEx** 입력 하 여 컨트롤을 편집 합니다.  
   
 ```  
@@ -329,7 +324,7 @@ BOOL HasEditChanged();
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 메시지의 기능을 구현 [CBEM_HASEDITCHANGED](http://msdn.microsoft.com/library/windows/desktop/bb775782)Windows SDK에 설명 된 대로 합니다.  
   
-##  <a name="insertitem"></a>CComboBoxEx::InsertItem  
+##  <a name="insertitem"></a>  CComboBoxEx::InsertItem  
  새 항목을 삽입 한 **ComboBoxEx** 제어 합니다.  
   
 ```  
@@ -346,7 +341,7 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>설명  
  호출 하는 경우 `InsertItem`, [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) 메시지 [CBEN_INSERTITEM](http://msdn.microsoft.com/library/windows/desktop/bb775764) 부모 창에 알림이 전송 됩니다.  
   
-##  <a name="setextendedstyle"></a>CComboBoxEx::SetExtendedStyle  
+##  <a name="setextendedstyle"></a>  CComboBoxEx::SetExtendedStyle  
  컨트롤 확장 된 콤보 상자에 사용 되는 확장된 스타일을 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -370,7 +365,7 @@ DWORD SetExtendedStyle(
   
  확장된 창 스타일 컨트롤과 확장 된 콤보 상자를 만들려면 사용 [CreateEx](#createex)합니다.  
   
-##  <a name="setimagelist"></a>CComboBoxEx::SetImageList  
+##  <a name="setimagelist"></a>  CComboBoxEx::SetImageList  
  에 대 한 이미지 목록을 설정 하는 **ComboBoxEx** 제어 합니다.  
   
 ```  
@@ -389,7 +384,7 @@ CImageList* SetImageList(CImageList* pImageList);
   
  `CImageList` 반환 값으로 가리키는 개체가 임시 개체 이며 다음 유휴 처리 시간 동안 제거 됩니다.  
   
-##  <a name="setitem"></a>CComboBoxEx::SetItem  
+##  <a name="setitem"></a>  CComboBoxEx::SetItem  
  에 있는 항목에 대 한 특성을 설정는 **ComboBoxEx** 제어 합니다.  
   
 ```  
@@ -406,7 +401,7 @@ BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 메시지의 기능을 구현 [CBEM_SETITEM](http://msdn.microsoft.com/library/windows/desktop/bb775788)Windows SDK에 설명 된 대로 합니다.  
   
-##  <a name="setwindowtheme"></a>CComboBoxEx::SetWindowTheme  
+##  <a name="setwindowtheme"></a>  CComboBoxEx::SetWindowTheme  
  비주얼 스타일의 확장 된 콤보 상자 컨트롤을 설정합니다.  
   
 ```  

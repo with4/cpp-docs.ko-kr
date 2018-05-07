@@ -1,13 +1,10 @@
 ---
-title: "메시지 처리기 | Microsoft Docs"
-ms.custom: 
+title: 메시지 처리기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - handlers [MFC], command
 - handlers [MFC], message
 ms.assetid: 51bc4e76-dbe3-4cc2-b026-3199d56b2fa9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1b906a49d7da7ed8505252a1759d7ea00fcda1f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: be4ccf9ec33e5ddf497193c1942e9f300f8cae57
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-handlers"></a>메시지 처리기
 Mfc에서 전용 *처리기* 함수는 각 메시지를 처리 합니다. 메시지 처리기 함수는 클래스의 멤버 함수입니다. 이 설명서에서는 용어 *메시지 처리기 멤버 함수*, *메시지-처리기 함수의*, *메시지 처리기*, 및 *처리기*같은 의미로 합니다. 일부 종류의 메시지 처리기에는 "명령 처리기입니다." 라고도 합니다.  

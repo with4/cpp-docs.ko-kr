@@ -1,12 +1,9 @@
 ---
-title: "CDaoFieldExchange 클래스 | Microsoft Docs"
-ms.custom: 
+title: CDaoFieldExchange 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoFieldExchange
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_nOperation
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c4a62d3f9631d4e2807bf12e1eda3bd4b4f5112
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4f702f619eb06a11cbbf7ec5be7407d12f7f445
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaofieldexchange-class"></a>CDaoFieldExchange 클래스
 DAO 데이터베이스 클래스에서 사용하는 DAO 레코드 필드 교환(DFX) 루틴을 지원합니다.  
@@ -61,7 +56,7 @@ class CDaoFieldExchange
 |[CDaoFieldExchange::m_prs](#m_prs)|작업은 수행 되는 DFX에서 레코드 집합에 대 한 포인터입니다.|  
   
 ## <a name="remarks"></a>설명  
- `CDaoFieldExchange`기본 클래스는 없습니다.  
+ `CDaoFieldExchange` 기본 클래스는 없습니다.  
   
  이 클래스를 사용 하 여 사용자 지정 데이터 형식에 대 한 데이터 교환 루틴을 작성 하는 경우 그렇지 않으면 있습니다 사용 하지 않습니다 직접이 클래스. DFX의 필드 데이터 멤버 간에 데이터를 교환 하면 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 개체와 데이터 소스에서 현재 레코드에서 해당 필드입니다. DFX는 데이터 원본 및 데이터 원본에서 양방향으로 exchange를 관리합니다. 참조 [기술 참고 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) 사용자 지정 DFX 루틴을 작성 하는 방법에 대 한 정보에 대 한 합니다.  
   
@@ -71,7 +66,7 @@ class CDaoFieldExchange
 > [!NOTE]
 >  DAO 레코드 필드 교환 (DFX)는 ODBC 기반 MFC 데이터베이스 클래스에서 레코드 필드 교환 (RFX)와 매우 비슷합니다 ( `CDatabase`, `CRecordset`). RFX 이해 하면 사용 하기 쉬운 DFX를 찾이 됩니다.  
   
- A `CDaoFieldExchange` 컨텍스트 정보가 필요한 dao 레코드 필드 교환을 수행 하려면 개체를 제공 합니다. `CDaoFieldExchange`개체는 현재 레코드의 필드에 다양 한 플래그를 설정 및 매개 변수 및 필드 데이터 멤버를 포함 하 여 작업의 수를 지원 합니다. Dfx에 정의 된 형식의 레코드 집합 클래스 데이터 멤버에 대해 수행 되는 `enum` **FieldType** 에서 `CDaoFieldExchange`합니다. 가능한 **FieldType** 값은:  
+ A `CDaoFieldExchange` 컨텍스트 정보가 필요한 dao 레코드 필드 교환을 수행 하려면 개체를 제공 합니다. `CDaoFieldExchange` 개체는 현재 레코드의 필드에 다양 한 플래그를 설정 및 매개 변수 및 필드 데이터 멤버를 포함 하 여 작업의 수를 지원 합니다. Dfx에 정의 된 형식의 레코드 집합 클래스 데이터 멤버에 대해 수행 되는 `enum` **FieldType** 에서 `CDaoFieldExchange`합니다. 가능한 **FieldType** 값은:  
   
 - **CDaoFieldExchange::outputColumn** 필드 데이터 멤버에 대 한 합니다.  
   
@@ -85,7 +80,7 @@ class CDaoFieldExchange
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdao.h  
   
-##  <a name="isvalidoperation"></a>CDaoFieldExchange::IsValidOperation  
+##  <a name="isvalidoperation"></a>  CDaoFieldExchange::IsValidOperation  
  사용자가 직접 DFX 함수를 작성 하는 경우 호출 `IsValidOperation` 의 특정 필드 데이터 멤버 형식에서 현재 작업을 수행할 수 있는지 여부를 결정 하는 함수 시작 부분에 (한 **CDaoFieldExchange::outputColumn** 또는 **CDaoFieldExchange::param**).  
   
 ```  
@@ -100,7 +95,7 @@ BOOL IsValidOperation();
   
  사용자 지정 DFX 루틴을 작성 방법에 대 한 자세한 내용은 참조 하십시오. [기술 참고 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)합니다.  
   
-##  <a name="m_noperation"></a>CDaoFieldExchange::m_nOperation  
+##  <a name="m_noperation"></a>  CDaoFieldExchange::m_nOperation  
  에 대해 수행할 작업을 식별 하는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 필드 exchange 개체와 연결 된 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -129,12 +124,12 @@ BOOL IsValidOperation();
 |**DumpField**|필드의 내용을 (디버그에만 해당)를 덤프합니다.|  
 |**MaxDFXOperation**|입력 검사에 사용 합니다.|  
   
-##  <a name="m_prs"></a>CDaoFieldExchange::m_prs  
+##  <a name="m_prs"></a>  CDaoFieldExchange::m_prs  
  에 대 한 포인터는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 연관 된 개체는 `CDaoFieldExchange` 개체입니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setfieldtype"></a>CDaoFieldExchange::SetFieldType  
+##  <a name="setfieldtype"></a>  CDaoFieldExchange::SetFieldType  
  호출 `SetFieldType` 에 프로그램 `CDaoRecordset` 클래스의 `DoFieldExchange` 재정의 합니다.  
   
 ```  

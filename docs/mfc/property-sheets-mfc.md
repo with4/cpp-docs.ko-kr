@@ -1,13 +1,10 @@
 ---
-title: "속성 시트 (MFC) | Microsoft Docs"
-ms.custom: 
+title: 속성 시트 (MFC) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,22 +13,20 @@ helpviewer_keywords:
 - dialog boxes [MFC], property sheets
 - tab dialog boxes
 ms.assetid: 09439f65-921d-45a2-b3cc-e13884a087b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44403cc22e061a5a492c4177d5ba385c17da0e12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08252ed31ddcfc6a5ba7b785dad9787349caee71
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-sheets-mfc"></a>속성 시트(MFC)
 이 문서 모음에서는 MFC 응용 프로그램에서 속성 시트에 대한 지원을 구현하는 방법에 대해 설명합니다. 탭 대화 상자라고도 부르는 속성 시트는 대화 상자에서 대량의 컨트롤을 관리하는 방법을 제공합니다. 속성 시트에는 개별 대화 상자 템플릿 리소스를 기준으로 하는 속성 페이지가 포함됩니다. 대화 상자의 컨트롤을 논리적 그룹으로 나누고, 각 그룹을 고유한 속성 페이지에 넣을 수 있습니다.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [속성 시트 및 속성 페이지](../mfc/property-sheets-and-property-pages-in-mfc.md)  
   

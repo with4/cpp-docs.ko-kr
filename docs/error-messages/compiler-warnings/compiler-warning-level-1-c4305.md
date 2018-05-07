@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 1) C4305 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 1) C4305 | Microsoft Docs
+ms.custom: ''
 ms.date: 1/17/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4305
@@ -16,14 +13,13 @@ helpviewer_keywords:
 - C4305
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fe4b2b420c44584fdd5b4d48b4264bbc7a51bee
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 7694c511f57b6907227d62f969b61218f836cb14
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4305"></a>컴파일러 경고(수준 1) C4305
 
@@ -33,7 +29,7 @@ ms.lasthandoff: 02/14/2018
 
 이 경고는 정보의 손실 더 작은 형식 생성자 인수 또는 초기화는 값이 변환 될 때 발생 합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 샘플에서는 두 가지 방법으로이 경고가 나타날 수 있습니다.
 

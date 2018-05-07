@@ -1,12 +1,9 @@
 ---
-title: "COleDispatchDriver 클래스 | Microsoft Docs"
-ms.custom: 
+title: COleDispatchDriver 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDispatchDriver
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 059ff922689eaf354d4b4ae9b89fb49ab8c5a885
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 57f9eaa33abd0f24a1d584c5ba2a1e4d6f9e5d44
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 클래스
 OLE 자동화의 클라이언트 쪽을 구현합니다.  
@@ -91,7 +86,7 @@ class COleDispatchDriver
 |[COleDispatchDriver::m_lpDispatch](#m_lpdispatch)|에 대 한 포인터를 나타냅니다는 `IDispatch` 이에 연결 된 인터페이스 `COleDispatchDriver`합니다.|  
   
 ## <a name="remarks"></a>설명  
- `COleDispatchDriver`기본 클래스는 없습니다.  
+ `COleDispatchDriver` 기본 클래스는 없습니다.  
   
  OLE 디스패치 인터페이스 개체의 메서드 및 속성에 대 한 액세스를 제공합니다. 멤버 함수 `COleDispatchDriver` 연결, 분리, 생성 및 유형의 디스패치 연결 해제 `IDispatch`합니다. 다른 멤버 함수 호출을 간소화 하기 위해 가변 인수 목록을 사용할 **idispatch:: Invoke**합니다.  
   
@@ -109,7 +104,7 @@ class COleDispatchDriver
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h  
   
-##  <a name="attachdispatch"></a>COleDispatchDriver::AttachDispatch  
+##  <a name="attachdispatch"></a>  COleDispatchDriver::AttachDispatch  
  `AttachDispatch` 멤버 함수를 호출하여 `IDispatch` 개체에 대한 `COleDispatchDriver` 포인터를 연결합니다. 자세한 내용은 [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)을 참조하십시오.  
   
 ```  
@@ -128,10 +123,10 @@ void AttachDispatch(
 ### <a name="remarks"></a>설명  
  이 함수는 `IDispatch` 개체에 이미 연결된 모든 `COleDispatchDriver` 포인터를 해제합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer#3](../../mfc/codesnippet/cpp/coledispatchdriver-class_1.cpp)]  
   
-##  <a name="coledispatchdriver"></a>COleDispatchDriver::COleDispatchDriver  
+##  <a name="coledispatchdriver"></a>  COleDispatchDriver::COleDispatchDriver  
  `COleDispatchDriver` 개체를 생성합니다.  
   
 ```  
@@ -157,10 +152,10 @@ COleDispatchDriver(LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE);
   
  폼 `COleDispatchDriver`()을 만듭니다는 `COleDispatchDriver` 개체 하지만 연결 되어 있지 않고는 `IDispatch` 인터페이스입니다. 사용 하기 전에 `COleDispatchDriver`연결 해야 인수 없이 ()는 `IDispatch` 중 하나를 사용 하 여 [coledispatchdriver:: Createdispatch](#createdispatch) 또는 [COleDispatchDriver::AttachDispatch](#attachdispatch)합니다. 자세한 내용은 [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)을 참조하십시오.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [coledispatchdriver:: Createdispatch](#createdispatch)합니다.  
   
-##  <a name="createdispatch"></a>Coledispatchdriver:: Createdispatch  
+##  <a name="createdispatch"></a>  Coledispatchdriver:: Createdispatch  
  만듭니다는 [IDispatch](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945) 인터페이스 개체에 연결 된 `COleDispatchDriver` 개체입니다.  
   
 ```  
@@ -187,10 +182,10 @@ BOOL CreateDispatch(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아닌 값이고, 실패하면 0입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer#4](../../mfc/codesnippet/cpp/coledispatchdriver-class_2.cpp)]  
   
-##  <a name="detachdispatch"></a>COleDispatchDriver::DetachDispatch  
+##  <a name="detachdispatch"></a>  COleDispatchDriver::DetachDispatch  
  현재 분리 `IDispatch` 이 개체에서 연결 합니다.  
   
 ```  
@@ -205,10 +200,10 @@ LPDISPATCH DetachDispatch();
   
  에 대 한 자세한 내용은 `LPDISPATCH` 입력을 참조 하십시오. [IDispatch 인터페이스 구현](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945) Windows SDK에서 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer#5](../../mfc/codesnippet/cpp/coledispatchdriver-class_3.cpp)]  
   
-##  <a name="getproperty"></a>COleDispatchDriver::GetProperty  
+##  <a name="getproperty"></a>  COleDispatchDriver::GetProperty  
  로 지정 된 개체 속성을 가져옵니다 `dwDispID`합니다.  
   
 ```  
@@ -228,10 +223,10 @@ void GetProperty(
  `pvProp`  
  속성 값을 받을 변수의 주소입니다. 지정한 형식과 일치 해야 `vtProp`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer#6](../../mfc/codesnippet/cpp/coledispatchdriver-class_4.cpp)]  
   
-##  <a name="invokehelper"></a>Coledispatchdriver:: Invokehelper  
+##  <a name="invokehelper"></a>  Coledispatchdriver:: Invokehelper  
  `dwDispID`를 통해 지정된 컨텍스트에서 `wFlags`를 통해 지정된 개체 메서드 또는 속성을 호출합니다.  
   
 ```  
@@ -289,10 +284,10 @@ void AFX_CDECL InvokeHelper(
   
  자세한 내용은 참조 [VARIANTARG](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118), [IDispatch 인터페이스 구현](http://msdn.microsoft.com/library/windows/desktop/ms221037\(v=vs.85\).aspx), [idispatch:: Invoke](http://msdn.microsoft.com/library/windows/desktop/ms221479\(v=vs.85\).aspx), 및 [COM 오류 코드 구조](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows SDK에에서 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [coledispatchdriver:: Createdispatch](#createdispatch)합니다.  
   
-##  <a name="m_bautorelease"></a>COleDispatchDriver::m_bAutoRelease  
+##  <a name="m_bautorelease"></a>  COleDispatchDriver::m_bAutoRelease  
  경우 **TRUE**, 액세스 하 여 COM 개체 [m_lpDispatch](#m_lpdispatch) 때 자동으로 출시 될 예정 [ReleaseDispatch](#releasedispatch) 라고 경우 또는이 `COleDispatchDriver` 개체는 소멸 합니다.  
   
 ```  
@@ -304,10 +299,10 @@ BOOL m_bAutoRelease;
   
  COM 개체 해제에 대 한 자세한 내용은 참조 하십시오. [참조 횟수 구현](http://msdn.microsoft.com/library/windows/desktop/ms693431) 및 [iunknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer#9](../../mfc/codesnippet/cpp/coledispatchdriver-class_5.cpp)]  
   
-##  <a name="m_lpdispatch"></a>COleDispatchDriver::m_lpDispatch  
+##  <a name="m_lpdispatch"></a>  COleDispatchDriver::m_lpDispatch  
  에 대 한 포인터는 `IDispatch` 이에 연결 된 인터페이스 `COleDispatchDriver`합니다.  
   
 ```  
@@ -319,10 +314,10 @@ LPDISPATCH m_lpDispatch;
   
  자세한 내용은 참조 [IDispatch](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [COleDispatchDriver::AttachDispatch](#attachdispatch)합니다.  
   
-##  <a name="operator_eq"></a>COleDispatchDriver::operator =  
+##  <a name="operator_eq"></a>  COleDispatchDriver::operator =  
  소스 값을 복사 하는 `COleDispatchDriver` 개체입니다.  
   
 ```  
@@ -333,17 +328,17 @@ const COleDispatchDriver& operator=(const COleDispatchDriver& dispatchSrc);
  `dispatchSrc`  
  기존에 대 한 포인터 `COleDispatchDriver` 개체입니다.  
   
-##  <a name="operator_lpdispatch"></a>COleDispatchDriver::operator LPDISPATCH  
+##  <a name="operator_lpdispatch"></a>  COleDispatchDriver::operator LPDISPATCH  
  기본 액세스 `IDispatch` 의 포인터는 `COleDispatchDriver` 개체입니다.  
   
 ```  
 operator LPDISPATCH();
 ```   
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer#8](../../mfc/codesnippet/cpp/coledispatchdriver-class_6.cpp)]  
   
-##  <a name="releasedispatch"></a>COleDispatchDriver::ReleaseDispatch  
+##  <a name="releasedispatch"></a>  COleDispatchDriver::ReleaseDispatch  
  릴리스는 `IDispatch` 연결 합니다. 자세한 내용은 참조 [IDispatch 인터페이스 구현](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)  
   
 ```  
@@ -353,10 +348,10 @@ void ReleaseDispatch();
 ### <a name="remarks"></a>설명  
  이 연결에 대 한 자동 릴리스를 설정 하는 경우이 함수 호출 **IDispatch::Release** 인터페이스를 릴리스하기 전에 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [COleDispatchDriver::AttachDispatch](#attachdispatch)합니다.  
   
-##  <a name="setproperty"></a>COleDispatchDriver::SetProperty  
+##  <a name="setproperty"></a>  COleDispatchDriver::SetProperty  
  `dwDispID`에서 지정한 OLE 개체 속성을 설정합니다.  
   
 ```  
@@ -375,7 +370,7 @@ void AFX_CDECL SetProperty(
  *...*  
  `vtProp`에서 지정한 유형의 단일 매개 변수  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer#7](../../mfc/codesnippet/cpp/coledispatchdriver-class_7.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

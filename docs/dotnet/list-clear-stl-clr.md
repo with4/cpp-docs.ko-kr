@@ -1,12 +1,9 @@
 ---
 title: 'list:: clear (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::list::clear
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - clear member [STL/CLR]
 ms.assetid: 5aac9a64-52f6-4a73-8b24-e30ceedcbc20
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: aeb17552a3ba8988de67cfe4d3530fd544b953f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1245dd73d0fa4aee6c7b86c190e088ff7e12c9af
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listclear-stlclr"></a>list::clear(STL/CLR)
 모든 요소를 제거합니다.  
@@ -40,7 +35,7 @@ void clear();
 ## <a name="remarks"></a>설명  
  멤버 함수 시그니처 [list:: erase (STL/CLR)](../dotnet/list-erase-stl-clr.md) `(` [list:: begin (STL/CLR)](../dotnet/list-begin-stl-clr.md) `(),` [list:: end (STL/CLR)](../dotnet/list-end-stl-clr.md) `())`. 제어 되는 시퀀스 비어 있는지 확인 하려면 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_list_clear.cpp   

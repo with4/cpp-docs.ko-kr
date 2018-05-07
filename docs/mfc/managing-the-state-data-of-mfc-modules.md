@@ -1,13 +1,10 @@
 ---
-title: "MFC 모듈의 상태 데이터 관리 | Microsoft Docs"
-ms.custom: 
+title: MFC 모듈의 상태 데이터 관리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - multiple modules [MFC]
 - module state restored [MFC]
 ms.assetid: 81889c11-0101-4a66-ab3c-f81cf199e1bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d070bb91d9c1c229feaa563123c12702a7b5027
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d87b2a601e6e25d61de6ca6ad639ac6a62861ac
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>MFC 모듈의 상태 데이터 관리
 이 문서에서는 MFC 모듈 및 (path 코드는 응용 프로그램을 통해 실행할 때) 실행 흐름을 입력 하 고 하거나 모듈에서 벗어날 때이 상태가 업데이트 되는 방법을 상태 데이터를 설명 합니다. 모듈 상태와 전환의 `AFX_MANAGE_STATE` 및 `METHOD_PROLOGUE` 매크로 대해서도 설명 합니다.  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
  다음 그림에 나와 있는 것 처럼 MFC 응용 프로그램에서 사용 되는 각 모듈에 대 한 상태 데이터에 있습니다. 이 데이터의 예로 Windows 인스턴스 핸들 (리소스 로드에 사용), 현재 포인터 `CWinApp` 및 `CWinThread` 응용 프로그램, OLE 모듈 참조 수 및 다양 한 간의 연결을 유지 관리 하는 맵 개체 Windows 핸들 및 MFC 개체의 해당 인스턴스 개체입니다. 그러나 응용 프로그램에서 여러 모듈이 사용, 각 모듈의 상태 데이터 않습니다 응용 프로그램 너비입니다. 대신, 각 모듈에 MFC의 상태 데이터의 개인 자체 복사본이 있습니다.  
   
- ![단일 모듈 &#40; 응용 프로그램 &#41;의 상태 데이터 ] (../mfc/media/vc387n1.gif "vc387n1")  
+ ![단일 모듈의 데이터를 상태 &#40;응용 프로그램&#41;](../mfc/media/vc387n1.gif "vc387n1")  
 단일 모듈(응용 프로그램)의 상태 데이터  
   
  모듈의 상태 데이터 구조에 포함 하 고는 항상 해당 구조에 대 한 포인터를 통해 사용할 수 있습니다. 다음 그림에 나와 있는 것 처럼 실행 흐름이 특정 모듈을 입력 하면 해당 모듈의 상태는 "현재" 또는 "효율적인" 상태 여야 합니다. 따라서 각 스레드 개체에 해당 응용 프로그램의 유효한 상태 구조체에 대 한 포인터입니다. 이 포인터 전혀 업데이트를 유지 시간이 응용 프로그램의 글로벌 상태를 관리 하 고 각 모듈의 상태의 무결성을 유지 하는 데 반드시 필요 합니다. 전역 상태가 잘못 된 관리 예기치 않은 응용 프로그램 동작이 발생할 수 있습니다.  

@@ -1,13 +1,10 @@
 ---
-title: "프로그래밍 방식으로 ODBC 데이터 원본에 테이블을 만들 | Microsoft Docs"
-ms.custom: 
+title: 프로그래밍 방식으로 ODBC 데이터 원본에 테이블을 만들 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - ODBC data sources, creating tables in
 - tables [C++], creating programmatically
 ms.assetid: 9ca68fb5-c3df-424a-a75c-e3fb01cc1b18
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 43be9c8a2339bb47d598304145a8c34f391b11c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ea8ddc8e683c0e5f0681bdf98cbddca180e4023
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>데이터 소스: ODBC 데이터 소스에서 프로그래밍 방식으로 테이블 작성
 이 항목에서는 데이터에 대 한 테이블을 만드는 방법을 설명 소스를 사용 하 여는 `ExecuteSQL` 클래스의 멤버 함수 `CDatabase`, 함수가 포함 된 문자열을 전달는 **CREATE TABLE** SQL 문입니다.  

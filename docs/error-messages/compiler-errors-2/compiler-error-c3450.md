@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C3450 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C3450 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3450
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3450
 ms.assetid: 78892cf7-0b82-4589-90d0-e06666247003
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 970631a125f07e61a0923703678642e357426dc5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 64cfed070deaef12eb5465a02cc786eb76d83221
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3450"></a>컴파일러 오류 C3450
 'type': 특성이 아닙니다. [System::AttributeUsageAttribute] 또는 [Windows::Foundation::Metadata::AttributeUsageAttribute]를 지정할 수 없습니다.  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
  자세한 내용은 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C3450 오류가 발생하는 경우 및 이를 해결하는 방법을 보여 줍니다.  
   
 ```  

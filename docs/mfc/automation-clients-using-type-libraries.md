@@ -1,13 +1,10 @@
 ---
-title: "자동화 클라이언트: 형식 라이브러리를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: '자동화 클라이언트: 형식 라이브러리를 사용 하 여 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - MkTypLib
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - MkTypLib tool
 - .odl files
 ms.assetid: d405bc47-118d-4786-b371-920d035b2047
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b63f6d05415b163e523589756ba2eb67ab2c61a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 67fa0f5d164ae325caff576fb41695fc8689fda0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-clients-using-type-libraries"></a>자동화 클라이언트: 형식 라이브러리 사용
 자동화 클라이언트는 클라이언트에서 서버의 개체를 조작 하는 경우 서버 개체의 속성 및 메서드에 대 한 정보가 있어야 합니다. 속성에는 데이터 형식입니다. 메서드 반환 값을 매개 변수를 허용 합니다. 클라이언트에는 서버 개체 유형에 정적 바인딩하기 위해서는 모든 속성 및 메서드의 데이터 형식에 대 한 정보를 필요 합니다.  

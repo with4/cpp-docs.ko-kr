@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 컨트롤 마법사, 컨트롤 설정 | Microsoft Docs"
-ms.custom: 
+title: MFC ActiveX 컨트롤 마법사, 컨트롤 설정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.ctl.settings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60828b7f40009a5fd88c7f0a7f820ede3de4aa93
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 2161cea739d918bc0f5772a6cb08c29082a6e670
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>MFC ActiveX 컨트롤 마법사, 컨트롤 설정
 마법사의이 페이지를 사용 하 여 컨트롤이 동작 하는 방법을 지정 합니다. 예를 들어 제어 표준 Windows 컨트롤 형식에 기반 해당 동작과 모양은, 최적화 하거나 컨트롤이 다른 컨트롤에 대 한 컨테이너로 작용할 수 있는지를 나타낼 수 있습니다.  
@@ -43,7 +38,7 @@ ms.lasthandoff: 01/03/2018
 |**편집**|Windows 편집 컨트롤|  
 |**목록 상자**|Windows 목록 상자 컨트롤|  
 |**스크롤 막대**|Windows 스크롤 막대 컨트롤|  
-|**정적**|Windows 정적 컨트롤|  
+|**STATIC**|Windows 정적 컨트롤|  
 |**msctls_hotkey32**|바로 가기 키 공용 컨트롤|  
 |**msctls_progress32**|진행률 표시줄 공용 컨트롤|  
 |**msctls_statusbar32**|상태 표시줄 공용 컨트롤|  

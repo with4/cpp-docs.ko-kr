@@ -1,13 +1,10 @@
 ---
-title: "인터넷의 ActiveX 컨트롤 | Microsoft Docs"
-ms.custom: 
+title: 인터넷의 ActiveX 컨트롤 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c02d807f6b77ca7aa35ffe91b929122a3743be6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1a42a7bc042301cfbd7d62f82b7c676686146850
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-controls-on-the-internet"></a>인터넷의 ActiveX 컨트롤
 ActiveX 컨트롤은 OLE 컨트롤 지정의 업데이트 된 버전입니다. 컨트롤은 다양 한 인터넷에서 COM 인식 웹 브라우저를 비롯 한 다른 컨테이너에에서 사용할 수 있는 프로그래밍 가능한 소프트웨어 구성 요소를 개발 하기 위한 기본 아키텍처입니다. ActiveX 컨트롤은 인터넷 컨트롤이 될 수 있습니다 및 활성 문서에 기능을 추가 하거나 웹 페이지의 일부가 될 수 있습니다. 웹 페이지에 컨트롤은 스크립팅을 사용 하 여 서로 통신할 수 있습니다.  
@@ -113,7 +108,7 @@ ActiveX 컨트롤은 OLE 컨트롤 지정의 업데이트 된 버전입니다. �
   
      참고 AFXCMN를 포함 해야 합니다. H 사용 하 여 `CListCtrl` 클래스입니다.  
   
-4.  컨트롤의 전체 상태가 변경 (예를 들어에 초기화 된 로드 또는 사용자의 대화형)을 호출 `COleControl::InternalSetReadyState`합니다. 컨트롤에는 하나의 데이터 경로 속성을 하는 경우에 코드를 추가할 수 있습니다 **BSCF_LASTDATANOTIFICATION** 다운로드가 완료 되는 컨테이너를 알릴 수 있습니다. 예:  
+4.  컨트롤의 전체 상태가 변경 (예를 들어에 초기화 된 로드 또는 사용자의 대화형)을 호출 `COleControl::InternalSetReadyState`합니다. 컨트롤에는 하나의 데이터 경로 속성을 하는 경우에 코드를 추가할 수 있습니다 **BSCF_LASTDATANOTIFICATION** 다운로드가 완료 되는 컨테이너를 알릴 수 있습니다. 예를 들어:  
   
      [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]  
   
@@ -165,9 +160,9 @@ ActiveX 컨트롤은 OLE 컨트롤 지정의 업데이트 된 버전입니다. �
   
  구현 [비동기 모니커](../mfc/asynchronous-monikers-on-the-internet.md) 를 사용 하 여 `CAsyncMonikerFile` 클래스입니다. 그러나 ActiveX 컨트롤을 사용할 수는 `CDataPathProperty` 클래스에서 파생 된 `CAsyncMonikerFile`, 비동기 컨트롤 속성을 구현할 수 있도록 합니다.  
   
- ASYNDOWN 샘플 데이터를 읽을 타이머를 사용 하는 비동기 루프를 설정 하는 방법을 보여 줍니다. ASYNDOWN "방법:: AsyncDown에서는 비동기 데이터 다운로드" (Q177244) 기술 자료 문서에 자세히 설명 되어 이며 Microsoft 다운로드 센터에서 다운로드할 수 있습니다. (Microsoft 다운로드 센터에서 파일을 다운로드 하는 방법에 대 한 자세한 내용은 "방법 가져올 Microsoft 지원 파일에서 온라인 서비스" (Q119591) Microsoft 기술 자료 문서 참조). 기술 자료 문서를 찾을 수 [http://support.microsoft.com/support](http://support.microsoft.com/support)합니다.  
+ ASYNDOWN 샘플 데이터를 읽을 타이머를 사용 하는 비동기 루프를 설정 하는 방법을 보여 줍니다. ASYNDOWN "방법:: AsyncDown에서는 비동기 데이터 다운로드" (Q177244) 기술 자료 문서에 자세히 설명 되어 이며 Microsoft 다운로드 센터에서 다운로드할 수 있습니다. (Microsoft 다운로드 센터에서 파일을 다운로드 하는 방법에 대 한 자세한 내용은 "방법 가져올 Microsoft 지원 파일에서 온라인 서비스" (Q119591) Microsoft 기술 자료 문서 참조). 기술 자료 문서를 찾을 수 [ http://support.microsoft.com/support ](http://support.microsoft.com/support)합니다.  
   
- 타이머를 설정 하는 ASYNDOWN에 사용 되는 기본 기술은 **CDataPathProperty::OnDataAvailable** 를 나타내는 데이터를 사용할 수 있습니다. 타이머 메시지를 받으면 응용 프로그램 데이터는 128 바이트 블록에서 읽고 편집 컨트롤을 채웁니다. 데이터를 사용할 수 없는 타이머 메시지를 처리할 때 사용 되는 타이머 꺼져 있습니다. `OnDataAvailable`나중에 도착 하면 더 많은 데이터가 사용 되는 타이머를 설정 합니다.  
+ 타이머를 설정 하는 ASYNDOWN에 사용 되는 기본 기술은 **CDataPathProperty::OnDataAvailable** 를 나타내는 데이터를 사용할 수 있습니다. 타이머 메시지를 받으면 응용 프로그램 데이터는 128 바이트 블록에서 읽고 편집 컨트롤을 채웁니다. 데이터를 사용할 수 없는 타이머 메시지를 처리할 때 사용 되는 타이머 꺼져 있습니다. `OnDataAvailable` 나중에 도착 하면 더 많은 데이터가 사용 되는 타이머를 설정 합니다.  
   
 ## <a name="displaying-a-control-on-a-web-page"></a>웹 페이지에 컨트롤 표시  
  개체 태그 및 웹 페이지에 컨트롤 삽입에 대 한 특성의 예를 들면 다음과 같습니다.  

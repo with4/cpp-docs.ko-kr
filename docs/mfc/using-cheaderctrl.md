@@ -1,13 +1,10 @@
 ---
-title: "CHeaderCtrl 사용 | Microsoft Docs"
-ms.custom: 
+title: CHeaderCtrl 사용 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CHeaderCtrl
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - header controls [MFC], using
 - CHeaderCtrl class [MFC]
 ms.assetid: fb3e512b-9539-43c4-a7e7-3fafd6d0706e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88b4da42944c3c42e48fae4c0cf503f7f6ace1a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8825f4cb82d734cee8da410a318a46d57ca61b4b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-cheaderctrl"></a>CHeaderCtrl 사용
 클래스가 나타내는 헤더 컨트롤을 사용 하 여 [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), 열 목록에 대 한 열 헤더를 표시 합니다. 예를 들어 헤더 컨트롤은 스프레드시트에서 열 컨트롤을 구현 하는 데 유용 합니다.  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  [CListCtrl](../mfc/reference/clistctrl-class.md) 포함 된 헤더 컨트롤을 제공 하 고 [CListView](../mfc/reference/clistview-class.md) 캡슐화 `CListCtrl` MFC 클래스에 있습니다. 일반적으로 사용 하 여 생각할 `CHeaderCtrl` 를 직접 그리는 하려는 레이블 목록입니다.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [헤더 컨트롤 및 목록 컨트롤](../mfc/header-control-and-list-control.md)  
   

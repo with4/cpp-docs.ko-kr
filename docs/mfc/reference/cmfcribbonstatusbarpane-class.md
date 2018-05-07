@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonStatusBarPane 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCRibbonStatusBarPane 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonStatusBarPane
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CMFCRibbonStatusBarPane [MFC], StopAnimation
 - CMFCRibbonStatusBarPane [MFC], OnFinishAnimation
 ms.assetid: 5d034c3c-ecca-4267-b88c-0f55a2884dd0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3d5059adf0ebbd1ed651d57354ae73beadb919f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df9109ef4613a2fb905fc5bef525f3553155417b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane 클래스
 `CMFCRibbonStatusBarPane` 리본 메뉴 상태 표시줄에 추가할 수 있는 리본 요소를 구현 하는 클래스입니다.  
@@ -92,7 +87,7 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
 |----------|-----------------|  
 |[CMFCRibbonStatusBarPane::OnFinishAnimation](#onfinishanimation)|창에 할당 하는 애니메이션 중지 될 때 프레임 워크에서 호출 됩니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `CMFCRibbonStatusBarPane` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 이 예제에서는 작성 방법을 보여 주는 `CMFCRibbonStatusBarPane` 개체, 상태 표시줄 창의 레이블의 텍스트 맞춤을 설정, 잘림 없이 상태 표시줄 창에 표시할 수 있습니다, 이미지 목록에 사용할 수 있는 상태 표시줄 창에 연결 하는 가장 긴 텍스트를 정의 nimation, 및 애니메이션 시작 합니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#2](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbarpane-class_1.cpp)]  
@@ -109,7 +104,7 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxribbonstatusbarpane.h  
   
-##  <a name="cmfcribbonstatusbarpane"></a>CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane  
+##  <a name="cmfcribbonstatusbarpane"></a>  CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane  
  상태 표시줄에 창 개체를 생성 합니다.  
   
 ```  
@@ -167,7 +162,7 @@ CMFCRibbonStatusBarPane(
  [in] `uiAnimationListResID`  
  애니메이션에 사용 되는 이미지 목록의 리소스 ID를 지정 합니다.  
   
-##  <a name="getalmostlargetext"></a>CMFCRibbonStatusBarPane::GetAlmostLargeText  
+##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
  상태 표시줄 창을 표시할 수 있는 가장 긴 텍스트 문자열을 가져옵니다.  
   
 ```  
@@ -177,7 +172,7 @@ LPCTSTR GetAlmostLargeText() const;
 ### <a name="return-value"></a>반환 값  
  상태 표시줄 창을 표시할 수 있는 가장 긴 텍스트 문자열입니다.  
   
-##  <a name="gettextalign"></a>CMFCRibbonStatusBarPane::GetTextAlign  
+##  <a name="gettextalign"></a>  CMFCRibbonStatusBarPane::GetTextAlign  
  상태 표시줄 창의 레이블의 텍스트 맞춤의 현재 설정을 가져옵니다.  
   
 ```  
@@ -193,7 +188,7 @@ int GetTextAlign() const;
   
 -   TA_RIGHT 합니다.  
   
-##  <a name="isanimation"></a>CMFCRibbonStatusBarPane::IsAnimation  
+##  <a name="isanimation"></a>  CMFCRibbonStatusBarPane::IsAnimation  
  애니메이션 진행 중인지 여부를 결정 합니다.  
   
 ```  
@@ -201,9 +196,9 @@ BOOL IsAnimation() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`애니메이션; 진행 중인 경우 `FALSE` 그렇지 않은 경우.  
+ `TRUE` 애니메이션; 진행 중인 경우 `FALSE` 그렇지 않은 경우.  
   
-##  <a name="isextended"></a>CMFCRibbonStatusBarPane::IsExtended  
+##  <a name="isextended"></a>  CMFCRibbonStatusBarPane::IsExtended  
  창에서 리본 메뉴 상태 표시줄의 확장된 된 영역에 있는지 여부를 결정 합니다.  
   
 ```  
@@ -211,9 +206,9 @@ BOOL IsExtended() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`창 상태 표시줄 확장된 영역에 있으면 됩니다. 그렇지 않으면 `FALSE`입니다.  
+ `TRUE` 창 상태 표시줄 확장된 영역에 있으면 됩니다. 그렇지 않으면 `FALSE`입니다.  
   
-##  <a name="ondrawborder"></a>CMFCRibbonStatusBarPane::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCRibbonStatusBarPane::OnDrawBorder  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -225,7 +220,7 @@ virtual void OnDrawBorder(CDC*);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onfillbackground"></a>CMFCRibbonStatusBarPane::OnFillBackground  
+##  <a name="onfillbackground"></a>  CMFCRibbonStatusBarPane::OnFillBackground  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -239,7 +234,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onfinishanimation"></a>CMFCRibbonStatusBarPane::OnFinishAnimation  
+##  <a name="onfinishanimation"></a>  CMFCRibbonStatusBarPane::OnFinishAnimation  
  창에 할당 하는 애니메이션 종료 될 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -247,9 +242,9 @@ virtual void OnFinishAnimation();
 ```  
   
 ### <a name="remarks"></a>설명  
- `StopAnimation`메서드 호출의 `OnFinishAnimation` 메서드는 애니메이션 종료 될 때 데이터를 정리 하는 데 사용할 수 있습니다.  
+ `StopAnimation` 메서드 호출의 `OnFinishAnimation` 메서드는 애니메이션 종료 될 때 데이터를 정리 하는 데 사용할 수 있습니다.  
   
-##  <a name="setalmostlargetext"></a>CMFCRibbonStatusBarPane::SetAlmostLargeText  
+##  <a name="setalmostlargetext"></a>  CMFCRibbonStatusBarPane::SetAlmostLargeText  
  잘림 없이 상태 표시줄 창에 표시 될 수 있는 가장 긴 텍스트를 정의 합니다.  
   
 ```  
@@ -263,7 +258,7 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ### <a name="remarks"></a>설명  
  텍스트의 크기를 계산 하는 라이브러리를 `lpszAlmostLargeText` 지정 하 고 그에 따라 창 크기를 조정 합니다. 텍스트는 여전히에 맞지 않는 창의 경우 잘립니다.  
   
-##  <a name="setanimationlist"></a>CMFCRibbonStatusBarPane::SetAnimationList  
+##  <a name="setanimationlist"></a>  CMFCRibbonStatusBarPane::SetAnimationList  
  상태 표시줄 창 애니메이션에 사용할 수 있는 이미지 목록을 연결 합니다.  
   
 ```  
@@ -292,9 +287,9 @@ BOOL SetAnimationList(
  이미지 목록의 리소스 ID를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`이미지 목록 상태 표시줄 창;에 성공적으로 연결 된 경우 `FALSE` 그렇지 않은 경우.  
+ `TRUE` 이미지 목록 상태 표시줄 창;에 성공적으로 연결 된 경우 `FALSE` 그렇지 않은 경우.  
   
-##  <a name="settextalign"></a>CMFCRibbonStatusBarPane::SetTextAlign  
+##  <a name="settextalign"></a>  CMFCRibbonStatusBarPane::SetTextAlign  
  상태 표시줄 창의 레이블의 텍스트 맞춤을 설정합니다.  
   
 ```  
@@ -306,15 +301,15 @@ void SetTextAlign(int nAlign);
  텍스트 맞춤을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
- `nAlign`다음 값 중 하나일 수 있습니다.  
+ `nAlign` 다음 값 중 하나일 수 있습니다.  
   
 - `TA_LEFT`: 왼쪽 맞춤  
   
-- `TA_CENTER:`가운데 맞춤  
+- `TA_CENTER:` 가운데 맞춤  
   
-- `TA_RIGHT:`오른쪽 맞춤  
+- `TA_RIGHT:` 오른쪽 맞춤  
   
-##  <a name="startanimation"></a>CMFCRibbonStatusBarPane::StartAnimation  
+##  <a name="startanimation"></a>  CMFCRibbonStatusBarPane::StartAnimation  
  창에 할당 하는 컨트롤은 애니메이션을 시작 합니다.  
   
 ```  
@@ -333,7 +328,7 @@ void StartAnimation(
 ### <a name="remarks"></a>설명  
  호출 하기 전에 이미지 목록에 대 한 핸들을 지정 해야 `StartAnimation` 를 사용 하 여 `SetAnimationList`합니다.  
   
-##  <a name="stopanimation"></a>CMFCRibbonStatusBarPane::StopAnimation  
+##  <a name="stopanimation"></a>  CMFCRibbonStatusBarPane::StopAnimation  
  상태 표시줄 창에 할당 하는 애니메이션을 중지 합니다.  
   
 ```  

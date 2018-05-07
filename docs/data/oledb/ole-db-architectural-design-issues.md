@@ -1,30 +1,25 @@
 ---
-title: "OLE DB 아키텍처 설계 문제 | Microsoft Docs"
-ms.custom: 
+title: OLE DB 아키텍처 설계 문제 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2cfb6b8ff4941aff1271662c27dddd509b023c55
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 75d996416e92ded920f45d3352c6478dd8c67a86
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-architectural-design-issues"></a>OLE DB 아키텍처 설계 문제
 OLE DB 응용 프로그램을 시작 하기 전에 다음과 같은 문제를 고려해 야 합니다.  
@@ -47,11 +42,11 @@ OLE DB 응용 프로그램을 시작 하기 전에 다음과 같은 문제를 �
   
 -   [Microsoft 데이터 액세스 기술 문서 개요](http://go.microsoft.com/fwlink/p/?linkid=148217)  
   
--   [Visual Studio Solution Center](http://go.microsoft.com/fwlink/p/?linkid=148215)  
+-   [Visual Studio 솔루션 센터](http://go.microsoft.com/fwlink/p/?linkid=148215)  
   
 -   [Microsoft.com 검색](http://search.microsoft.com/)  
   
- 검색을 수행 하면 시나리오;에 가장 잘 맞는 키워드의 조합의 입력 하십시오. 예: ADO 개체는 OLE DB 공급자와 함께 사용할 때 부울 검색을 시도와 **ADO 및 "OLE DB"**합니다. 이전 DAO 코드 ODBC 마이그레이션하려는 경우 "모든 단어"를 선택 하 고 문자열을와 같은 지정 **마이그레이션 DAO**합니다.  
+ 검색을 수행 하면 시나리오;에 가장 잘 맞는 키워드의 조합의 입력 하십시오. 예: ADO 개체는 OLE DB 공급자와 함께 사용할 때 부울 검색을 시도와 **ADO 및 "OLE DB"** 합니다. 이전 DAO 코드 ODBC 마이그레이션하려는 경우 "모든 단어"를 선택 하 고 문자열을와 같은 지정 **마이그레이션 DAO**합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [OLE DB 프로그래밍](../../data/oledb/ole-db-programming.md)   

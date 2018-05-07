@@ -1,37 +1,32 @@
 ---
-title: "MFC ActiveX 컨트롤: 사용자 지정 메서드 추가 | Microsoft Docs"
-ms.custom: 
+title: 'MFC ActiveX 컨트롤: 사용자 지정 메서드 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - PtInCircle custom method [MFC]
 ms.assetid: 8f8dc344-44a0-4021-8db5-4cdd3d700e18
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f79d4c5f7407e3de12ccf180a68b2b22e35bf10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cdf264bd0c2aa44bdeecc58b4bc8eb89c70fb91
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>MFC ActiveX 컨트롤: 사용자 지정 메서드 추가
 사용자 지정 메서드 스톡 메서드 한다는 점에서 다릅니다 의해 이미 구현 되지 않은 `COleControl`합니다. 사용자 컨트롤에 추가한 각 사용자 지정 방법에 대 한 구현을 제공 해야 합니다.  
   
  ActiveX 컨트롤 사용자는 언제 든 지 컨트롤 관련 동작을 수행 하려면 사용자 지정 메서드를 호출할 수 있습니다. 사용자 지정 방법에 대 한 디스패치 맵 항목은 양식의 `DISP_FUNCTION`합니다.  
   
-##  <a name="_core_adding_a_custom_method_with_classwizard"></a>사용 하 여 사용자 지정 메서드 추가 메서드 추가 마법사  
+##  <a name="_core_adding_a_custom_method_with_classwizard"></a> 사용 하 여 사용자 지정 메서드 추가 메서드 추가 마법사  
  다음 절차에서는 사용자 지정 메서드 PtInCircle ActiveX 컨트롤의 기본 코드를 추가 합니다. PtInCircle 좌표는 컨트롤에 전달 된 내부 또는 외부의 원을 있는지 확인 합니다. 이 절차는 다른 사용자 지정 메서드를 추가 하려면 데도 사용할 수 있습니다. 사용자 지정 메서드 이름 및 해당 매개 변수 PtInCircle 메서드 이름과 매개 변수를 대체 합니다.  
   
 > [!NOTE]
@@ -61,7 +56,7 @@ ms.lasthandoff: 12/21/2017
   
 10. **마침**을 클릭합니다.  
   
-##  <a name="_core_classwizard_changes_for_custom_methods"></a>사용자 지정 메서드 추가 마법사 변경 메서드  
+##  <a name="_core_classwizard_changes_for_custom_methods"></a> 사용자 지정 메서드 추가 마법사 변경 메서드  
  사용자 지정 메서드를 추가할 때 메서드 추가 마법사 컨트롤 클래스 헤더에는 일부 변경 (합니다. H) 및 구현 (합니다. CPP) 파일입니다. 컨트롤 클래스 헤더에 디스패치 맵 선언은 다음 줄이 추가 (합니다. H) 파일:  
   
  [!code-cpp[NVC_MFC_AxUI#18](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_1.h)]  

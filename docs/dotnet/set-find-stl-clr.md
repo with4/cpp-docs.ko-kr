@@ -1,12 +1,9 @@
 ---
 title: 'set:: find (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::set::find
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - find member [STL/CLR]
 ms.assetid: 916e581c-2815-4c07-a51a-6c5ddfa730c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 82296d6da1a2b995026d75a2e2973335cd00ef5c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4ec8c6daa61cde042dd928cfb4fea50224b44547
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setfind-stlclr"></a>set::find(STL/CLR)
 지정된 키와 일치하는 요소를 찾습니다.  
@@ -44,7 +39,7 @@ iterator find(key_type key);
 ## <a name="remarks"></a>설명  
  동일 하 게 정렬 된 제어 되는 시퀀스에 요소가 하나 이상 있으면 `key`, 이러한 요소 중 하나를 지정 하는 반복기를 반환 하는 멤버 함수, 그렇지 않으면 반환 [set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`합니다. 지정된 된 키와 일치 하는 제어 된 시퀀스의 현재 요소를 찾을 수 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_set_find.cpp   

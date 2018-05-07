@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C2139 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C2139 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2139
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2139
 ms.assetid: 31e047c0-5bf9-46c2-b6de-b627ea6a5768
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81c1b41a452068d572169d670f2a288f92f93142
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd56ee920d3f53b22d9979b45c39fa78b9054662
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2139"></a>컴파일러 오류 C2139
 'type': 정의 되지 않은 클래스는 컴파일러 내장 형식 특성 '특성'에 대 한 인수로 사용할 수 없습니다  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
  자세한 내용은 참조 [형식 특성에 대 한 컴파일러 지원](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C2139 오류가 발생 합니다.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "데이터 원본에 연결 | Microsoft Docs"
-ms.custom: 
+title: 데이터 원본에 연결 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: ef6c8c98-5979-43a8-9fb5-5bb06fc59f36
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 08872f9e1034c50ca1468d6834f3a44dc06c1ebe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2b6a33f1e2421c56f89184d26185903b4ec7859e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="connecting-to-a-data-source"></a>데이터 소스에 연결
 ODBC 데이터 소스는 특정 집합의 데이터를 해당 데이터와 데이터 소스 이름을 사용 하 여 표시할 수 있는 데이터 원본의 위치에 액세스 하는 데 필요한 정보입니다. 프로그램의 관점에서 데이터 원본에는 데이터, DBMS, 네트워크 (있는 경우) 및 ODBC 포함 됩니다.  

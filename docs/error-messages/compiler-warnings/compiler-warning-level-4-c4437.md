@@ -1,27 +1,22 @@
 ---
-title: "컴파일러 경고 (수준 4) C4437 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 4) C4437 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 dev_langs:
 - C++
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a50534ca7e25b18d32d37a9120e478f78ea56daf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 748ba39d9c22a4071307b8df075eab233f3cfbb1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4437"></a>컴파일러 경고(수준 4) C4437
 가상 기본 'class1'에서 'class2' 사이의 dynamic_cast 일부 컨텍스트에서 실패할 컴파일/v d 2 하거나 적용 'class2' #pragma vtordisp(2)로 정의할 수 없습니다.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  이 경고는 나타냅니다는 `dynamic_cast` 부분적으로 생성 된 개체에서 작동 하는 경우 올바르게 성능이 떨어질 수 있습니다.  이 상황은 생성자 또는 경고에 지정 하는 파생된 클래스를 상속 하는 클래스의 소멸자에서 바깥쪽 함수를 호출할 때 발생 합니다.  경고에 지정 하는 파생된 클래스를 더 이상 파생 된를 또는 바깥쪽 함수의 개체 생성 이나 소멸 중 호출 하지 않으면 경고를 무시할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플 C4437를 생성 하 고 누락 된에서 발생 하는 코드 생성 문제를 보여 줍니다. `vtordisp` 필드입니다.  
   
 ```cpp  

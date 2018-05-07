@@ -1,13 +1,10 @@
 ---
-title: "방법: 시작 후 경과한 시간 검색 (C + + /cli CLI) | Microsoft Docs"
-ms.custom: 
+title: '방법: 시작 후 경과한 시간 검색 (C + + /cli CLI) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,23 +14,21 @@ helpviewer_keywords:
 - tick counts
 - startup
 ms.assetid: a31fdecc-099e-4dd1-a176-f682289c5dd0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2929cd6466b0e05cf2ae029eaee0cbe214d3a17c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4bebd086d24c741f0c5287e8a7fd0de6b535dfc6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-time-elapsed-since-startup-ccli"></a>방법: 시작 후 경과한 시간 검색(C++/CLI)
 Windows 이후 경과 된 시간 (밀리초)로 시작한 또는 다음 코드 예제에는 틱 수를 결정 하는 방법을 보여 줍니다. 이 값에 저장 되는 <xref:System.Environment.TickCount%2A?displayProperty=fullName> 멤버는 32 비트 값 이기 때문에 0으로 다시 설정은 및입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // startup_time.cpp  

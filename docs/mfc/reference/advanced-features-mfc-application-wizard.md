@@ -2,12 +2,9 @@
 title: 고급 기능을 MFC 응용 프로그램 마법사 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.advanced
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c2a9bb9ebb1837dc303e89e04ced496b52d1cdb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c5094c18f72182929565e7c23c38b63443839da1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>MFC 응용 프로그램 마법사, 고급 기능
 이 항목에서는 도움말, 인쇄 지원 등과 같은 응용 프로그램을 위한 추가 기능을 설정할 수 있는 옵션에 대해 설명합니다. 각 섹션에서 이 고급 기능에 추가 지원을 지정하세요.  

@@ -1,13 +1,10 @@
 ---
-title: "연습: MFC 자유 곡선 응용 프로그램 (파트 1) 업데이트 | Microsoft Docs"
-ms.custom: 
+title: '연습: MFC 자유 곡선 응용 프로그램 (파트 1) 업데이트 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,24 +15,22 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65dea486e80e4f6f1b98dffe6c387f2e530c9ef3
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: a2d55768f423feef3b5093ec0af6365aecfaafee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>연습: MFC 자유 곡선 응용 프로그램 (파트 1) 업데이트
 이 연습에서는 리본 메뉴 사용자 인터페이스를 사용하여 기존 MFC 응용 프로그램을 수정하는 방법을 보여 줍니다. Visual Studio는 Office 2007 리본과 Windows 7 Scenic 리본을 지원합니다. 리본 사용자 인터페이스에 대 한 자세한 내용은 참조 [리본](http://go.microsoft.com/fwlink/p/?linkid=129233) MSDN 웹 사이트에 있습니다.  
   
  이 연습에서는 마우스를 사용하여 줄 그리기를 만들 수 있는 클래식 Scribble 1.0 MFC 샘플을 수정합니다. 이 연습 부분에서는 리본 표시줄에 표시되도록 Scribble 샘플을 수정하는 방법을 보여 줍니다. [2 부](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md) 리본 표시줄에 더 많은 단추를 추가 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  [Visual C++ 샘플](../visual-cpp-samples.md)  
   
  [Visual C++ 샘플](../visual-cpp-samples.md)  
@@ -55,7 +50,7 @@ ms.lasthandoff: 01/03/2018
   
 - [응용 프로그램의 모양 설정](#setlook)  
   
-##  <a name="replaceclass"></a>기본 클래스 대체  
+##  <a name="replaceclass"></a> 기본 클래스 대체  
  메뉴를 지원하는 응용 프로그램을 리본을 지원하는 응용 프로그램으로 변환하려면 업데이트된 기본 클래스에서 응용 프로그램 프레임 창 및 도구 모음 클래스를 파생시켜야 합니다. 원래 Scribble 샘플을 수정하지 마십시오. 대신 Scribble 프로젝트를 정리하고, 다른 디렉터리에 복사한 다음 복사본을 수정하십시오.  
   
 #### <a name="to-replace-the-base-classes-in-the-scribble-application"></a>Scribble 응용 프로그램에서 기본 클래스를 대체하려면  
@@ -130,7 +125,7 @@ ms.lasthandoff: 01/03/2018
   
  [[섹션](#top)]  
   
-##  <a name="addbitmap"></a>프로젝트에 비트맵 추가  
+##  <a name="addbitmap"></a> 프로젝트에 비트맵 추가  
  이 연습의 다음 네 개의 단계에서는 비트맵 리소스가 필요합니다. 다양한 방법으로 적절한 비트맵을 얻을 수 있습니다.  
   
 -   사용 하 여는 [리소스 편집기](../windows/resource-editors.md) 사용자 고유의 비트맵 고안 하 고 있습니다. 또는 리소스 편집기를 사용하여 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]에 포함된 이동식 네트워크 그래픽(.png) 이미지에서 비트맵을 어셈블합니다. 이러한 이미지는는 `VS2008ImageLibrary` 디렉터리입니다.  
@@ -175,7 +170,7 @@ ms.lasthandoff: 01/03/2018
   
  [[섹션](#top)]  
   
-##  <a name="addribbon"></a>프로젝트에 리본 리소스 추가  
+##  <a name="addribbon"></a> 프로젝트에 리본 리소스 추가  
  메뉴를 사용하는 응용 프로그램을 리본을 사용하는 응용 프로그램으로 변환하는 경우 기존 메뉴를 제거하거나 사용 안 함으로 설정할 필요가 없습니다. 대신 리본 리소스를 만들고, 리본 단추를 추가한 다음 새 단추를 기존 메뉴 항목에 연결합니다. 메뉴를 더 이상 볼 수 없지만 리본 표시줄에서 메시지는 메뉴를 통해 라우팅됩니다. 또한 메뉴 바로 가기는 계속 작동합니다.  
   
  리본은 리본의 왼쪽 위의 큰 단추인 응용 프로그램 단추와 하나 이상의 범주 탭으로 구성됩니다. 각 범주 탭에는 리본 단추 및 컨트롤에 대한 컨테이너 역할을 하는 패널이 하나 이상 포함되어 있습니다. 다음 절차에서는 리본 리소스를 만든 다음 응용 프로그램 단추를 사용자 지정하는 방법을 보여 줍니다.  
@@ -226,7 +221,7 @@ ms.lasthandoff: 01/03/2018
   
  [[섹션](#top)]  
   
-##  <a name="createinstance"></a>리본 표시줄의 인스턴스 만들기  
+##  <a name="createinstance"></a> 리본 표시줄의 인스턴스 만들기  
  다음 단계에서는 응용 프로그램 시작 시 리본 표시줄의 인스턴스를 만드는 방법을 보여 줍니다. 응용 프로그램에 리본 표시줄을 추가하려면 mainfrm.h 파일에 리본 표시줄을 선언합니다. 그런 다음 mainfrm.cpp 파일에서 리본 리소스를 로드하는 코드를 작성합니다.  
   
 #### <a name="to-create-an-instance-of-the-ribbon-bar"></a>리본 표시줄의 인스턴스를 만들려면  
@@ -250,7 +245,7 @@ ms.lasthandoff: 01/03/2018
   
  [[섹션](#top)]  
   
-##  <a name="addcategory"></a>리본 리소스를 사용자 지정  
+##  <a name="addcategory"></a> 리본 리소스를 사용자 지정  
  응용 프로그램 단추를 만들었으므로 리본에 요소를 추가할 수 있습니다.  
   
 > [!NOTE]
@@ -268,7 +263,7 @@ ms.lasthandoff: 01/03/2018
   
  [[섹션](#top)]  
   
-##  <a name="setlook"></a>응용 프로그램의 모양 설정  
+##  <a name="setlook"></a> 응용 프로그램의 모양 설정  
  A *비주얼 관리자* 는 응용 프로그램에 대 한 모든 그리기를 제어 하는 전역 개체입니다. 원래 Scribble 응용 프로그램은 Office 2000 UI(사용자 인터페이스) 스타일을 사용하므로 해당 응용 프로그램이 더 이상 사용되지 않는 것처럼 보일 수 있습니다. Office 2007 응용 프로그램과 비슷하도록 Office 2007 비주얼 관리자를 사용하여 응용 프로그램을 다시 설정할 수 있습니다.  
   
 #### <a name="to-set-the-look-of-the-application"></a>응용 프로그램의 모양을 설정하려면  

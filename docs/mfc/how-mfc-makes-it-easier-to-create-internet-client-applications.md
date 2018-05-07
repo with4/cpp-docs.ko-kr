@@ -2,12 +2,9 @@
 title: 어떻게 MFC를 사용 하면 인터넷 클라이언트 응용 프로그램을 만드는 쉽게 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - Internet applications [MFC], MFC
 - MFC, Internet applications
 ms.assetid: 94437b3f-f15c-437d-b5fd-264a2efec9ab
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6270cdd3e64d24f1c2000acb9e8466f8c85edba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d04a27a51645fc44296db7f5fd84bc2524804c4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-mfc-makes-it-easier-to-create-internet-client-applications"></a>MFC를 사용하여 인터넷 클라이언트 응용 프로그램을 손쉽게 만드는 방법
 Microsoft Foundation 클래스는 MFC 프로그래머를 위한 친숙 한 컨텍스트를 제공 하는 방식으로 Win32 인터넷 확장 (WinInet) 함수를 캡슐화 합니다. MFC는 세 가지 인터넷 파일 클래스를 제공 ([CInternetFile](../mfc/reference/cinternetfile-class.md), [CHttpFile](../mfc/reference/chttpfile-class.md), 및 [CGopherFile](../mfc/reference/cgopherfile-class.md))에서 파생 된 [CStdioFile](../mfc/reference/cstdiofile-class.md) 클래스 . 뿐만 아니라 방법을 쉽게 검색 하 고 인터넷 데이터 조작을 사용한 프로그래머에 게 익숙한 `CStdioFile` 일관 되 고 투명 하 게의 로컬 파일 및 인터넷 파일 로컬 파일에 있지만이 클래스와 함께 처리할 수 있습니다.  

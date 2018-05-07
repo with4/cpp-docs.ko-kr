@@ -1,13 +1,10 @@
 ---
-title: "레코드 집합: 레코드 집합 (ODBC)를 매개 변수화 | Microsoft Docs"
-ms.custom: 
+title: '레코드 집합: 레코드 집합 (ODBC)를 매개 변수화 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 38b17950a7aaf89cc041c4933768bf6b2da0c9b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 275cd9d2ee7ccbd4c9972c00ae6fbb8f33166a0a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>레코드 집합: 레코드 집합 매개 변수화(ODBC)
 MFC ODBC 클래스에이 항목에 적용 됩니다.  
@@ -44,7 +39,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
 -   [런타임 시 recordset 개체에 매개 변수 정보를 전달 하는 방법을](#_core_passing_parameter_values_at_run_time)합니다.  
   
-##  <a name="_core_parameterized_recordsets"></a>매개 변수가 있는 레코드 집합  
+##  <a name="_core_parameterized_recordsets"></a> 매개 변수가 있는 레코드 집합  
  매개 변수가 있는 레코드 집합 사용 하면 실행 시 매개 변수 정보를 전달할 수 있습니다. 이 두 가지 중요 한 효과가 있습니다.  
   
 -   실행 속도가 빨라질 발생할 수 있습니다.  
@@ -53,7 +48,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
  호출 하는 경우 **열려** 쿼리를 실행 하는 레코드 집합을 사용 하 여 매개 변수 정보 완료 해당 **SQL SELECT** 문. 모든 레코드 집합 매개 변수화 할 수 있습니다.  
   
-##  <a name="_core_when_to_use_parameters"></a>매개 변수를 사용 하는 경우  
+##  <a name="_core_when_to_use_parameters"></a> 매개 변수를 사용 하는 경우  
  매개 변수의 일반적인 용도 다음과 같습니다.  
   
 -   미리 정의 된 쿼리를 실행 시간 인수를 전달 합니다.  
@@ -97,7 +92,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
  필터에 대 한 자세한 내용은 참조 [레코드 집합: 레코드 필터링 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)합니다.  
   
-##  <a name="_core_parameterizing_your_recordset_class"></a>레코드 집합 클래스를 매개 변수화  
+##  <a name="_core_parameterizing_your_recordset_class"></a> 레코드 집합 클래스를 매개 변수화  
   
 > [!NOTE]
 >  이 섹션에서 파생 된 개체에 적용 됩니다. `CRecordset` 에서 대량 행 페치 구현 되지 않았습니다. 대량 행 페치를 구현 하는 매개 변수를 사용 하는 경우 비슷한 프로세스가입니다. 자세한 내용은 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
@@ -149,7 +144,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
 
 >  작업할 가능성이 가장 높은 문자열은 지정한 문자열 (있는 경우)는 클래스에 대 한 [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) 데이터 멤버 이지만 일부 ODBC 드라이버 다른 SQL 절에서 매개 변수를 사용할 수 있습니다.  
   
-##  <a name="_core_passing_parameter_values_at_run_time"></a>실행 시 매개 변수 값 전달  
+##  <a name="_core_passing_parameter_values_at_run_time"></a> 실행 시 매개 변수 값 전달  
  호출 하기 전에 매개 변수 값을 지정 해야 **열려** (새 recordset 개체)에 대 한 또는 **Requery** (에 대 한 기존).  
   
 #### <a name="to-pass-parameter-values-to-a-recordset-object-at-run-time"></a>런타임 시 recordset 개체에 매개 변수 값을 전달 하려면  

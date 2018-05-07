@@ -1,13 +1,10 @@
 ---
-title: "가상 목록 컨트롤 | Microsoft Docs"
-ms.custom: 
+title: 가상 목록 컨트롤 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - list controls [MFC], List view
 - virtual list controls
 ms.assetid: 319f841f-e426-423a-8276-d93f965b0b45
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0223d9733f9290d989183a34b91779ee1f4d5e28
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b580e455aab7ff95beb85c02b8e3ca79dfa8a46
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="virtual-list-controls"></a>가상 목록 컨트롤
 가상 목록 컨트롤은 목록 뷰 컨트롤에는 **LVS_OWNERDATA** 스타일입니다. 이 스타일 최대 항목 수를 지원 하도록 컨트롤을 활성화 한 `DWORD` (기본 항목 수로만 확장 프로그램 `int`). 그러나이 스타일의 가장 큰 장점은 한 번에 메모리에 데이터 항목의 하위 집합을 가질 수 있다는 점입니다. 이렇게 하면 가상 목록 뷰 컨트롤의 정보를 데이터베이스의 크기가 큰 사용 하기 위해 적합을 여기서 데이터에 액세스 하는 특정 메서드가에 이미 준비 되어 있습니다.  
@@ -43,15 +38,15 @@ ms.lasthandoff: 12/21/2017
   
  에 대 한 처리기는 **LVN_GETDISPINFO** 알림 메시지를 보려면 어떤 유형의 정보를 요청 하 고 확인 해야 합니다. 가능한 값은 다음과 같습니다.  
   
--   `LVIF_TEXT``pszText` 구성원을 입력 해야 합니다.  
+-   `LVIF_TEXT` `pszText` 구성원을 입력 해야 합니다.  
   
--   `LVIF_IMAGE``iImage` 구성원을 입력 해야 합니다.  
+-   `LVIF_IMAGE` `iImage` 구성원을 입력 해야 합니다.  
   
 -   **LVIF_INDENT** 는 *iIndent* 멤버 입력 해야 합니다.  
   
--   `LVIF_PARAM`*lParam* 멤버 입력 해야 합니다. (없음 하위 항목에 대 한 합니다.)  
+-   `LVIF_PARAM` *lParam* 멤버 입력 해야 합니다. (없음 하위 항목에 대 한 합니다.)  
   
--   `LVIF_STATE`*상태* 멤버 입력 해야 합니다.  
+-   `LVIF_STATE` *상태* 멤버 입력 해야 합니다.  
   
  다음 프레임 워크에 다시 요청 된 정보를 제공 해야 합니다.  
   

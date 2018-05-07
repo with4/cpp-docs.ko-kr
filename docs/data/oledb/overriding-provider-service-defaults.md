@@ -1,12 +1,9 @@
 ---
-title: "공급자 서비스 기본값 재정의 | Microsoft Docs"
-ms.custom: 
+title: 공급자 서비스 기본값 재정의 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - service providers [OLE DB]
 - OLE DB services [OLE DB], overriding defaults
 ms.assetid: 08e366c0-74d8-463b-93a6-d58a8dc195f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8788de8ad28dc3c746155f59dee3ba5bb763bcaa
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: be802c1c3c6ba4b77d1418c9c620840e9ab10170
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="overriding-provider-service-defaults"></a>공급자 서비스 기본값 재정의
 공급자의 레지스트리 값에 대 한 **OLEDB_SERVICES** 에 대 한 기본 값으로 반환 되는 [DBPROP_INIT_OLEDBSERVICES](https://msdn.microsoft.com/en-us/library/ms716898.aspx) 데이터 원본 개체에서 초기화 속성입니다.  
@@ -35,9 +30,9 @@ ms.lasthandoff: 02/23/2018
 |기본 서비스를 사용할 수|DBPROP_INIT_OLEDBSERVICES 속성 값|연결 문자열의 값|  
 |------------------------------|------------------------------------------------|--------------------------------|  
 |모든 서비스 (기본값)|**DBPROPVAL_OS_ENABLEALL**|"OLE DB 서비스 =-1;"|  
-|풀링 제외 하 고 모두 및 AutoEnlistment|**DBPROPVAL_OS_ENABLEALL &**<br /><br /> **~ DBPROPVAL_OS_RESOURCEPOOLING &**<br /><br /> **~DBPROPVAL_OS_TXNENLISTMENT**|"OLE DB 서비스-; 4 ="|  
+|풀링 제외 하 고 모두 및 AutoEnlistment|**DBPROPVAL_OS_ENABLEALL &AMP;**<br /><br /> **~ DBPROPVAL_OS_RESOURCEPOOLING &AMP;**<br /><br /> **~DBPROPVAL_OS_TXNENLISTMENT**|"OLE DB 서비스-; 4 ="|  
 |클라이언트 커서 제외한 모든 컴퓨터|**DBPROPVAL_OS_ENABLEALL** &<br /><br /> ~**DBPROPVAL_OS_CLIENTCURSOR**|"OLE DB 서비스 =-5;"|  
-|AutoEnlistment, 및 클라이언트 커서 풀링 차트를 제외한 모든|**DBPROPVAL_OS_ENABLEALL &**<br /><br /> **~DBPROPVAL_OS_TXNENLISTMENT &**<br /><br /> **~DBPROPVAL_OS_CLIENTCURSOR**|"OLE DB Services = -7;"|  
+|AutoEnlistment, 및 클라이언트 커서 풀링 차트를 제외한 모든|**DBPROPVAL_OS_ENABLEALL &AMP;**<br /><br /> **~DBPROPVAL_OS_TXNENLISTMENT &**<br /><br /> **~DBPROPVAL_OS_CLIENTCURSOR**|"OLE DB 서비스-7; ="|  
 |서비스|~**DBPROPVAL_OS_ENABLEALL**|"OLE DB 서비스 = 0."|  
   
  공급자에 대 한 레지스트리 항목이 없는 경우 구성 요소 관리자는 공급자의 개체를 집계 하 고 사용자가 명시적으로 요청 서비스가 호출 됩니다.  

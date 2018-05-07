@@ -1,29 +1,24 @@
 ---
-title: "기존 코드-소스 파일 (Visual c + +)에서 새 프로젝트 | Microsoft Docs"
-ms.custom: 
+title: 기존 코드-소스 파일 (Visual c + +)에서 새 프로젝트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.importwiz.location
 dev_langs:
 - C++
 ms.assetid: 29ddffb9-5918-4d72-8c7a-a365f9de96dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04f73f89745f797658029eac2331d1764af4c065
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d85a7b85996ed307596865a31d55cf4b119e5bd5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specify-project-location-and-source-files-create-new-project-from-existing-code-files-wizard"></a>기존 코드 파일에서 새 프로젝트 만들기 마법사, 프로젝트 위치 및 소스 파일 지정
 기존 코드 파일에서 새 프로젝트 만들기 마법사의이 페이지를 사용 하 여 지정할 수 있습니다.  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
  **하위 폴더 추가**  
  디렉터리의 모든 하위 디렉터리에서 코드 파일을 복사 하려면 나열 된 지정 **폴더** 새 프로젝트에는 열입니다.  
   
- **폴더**  
+ **Folder**  
  새 프로젝트에 복사 하려면 기존 코드 파일을 포함 하는 디렉터리의 경로를 나타냅니다. 이 열에서 마법사는 기존 코드 파일에 대 한 검색 하는 모든 디렉터리를 나열 합니다.  
   
  **추가**  

@@ -1,13 +1,10 @@
 ---
-title: "탭 컨트롤 사용 | Microsoft Docs"
-ms.custom: 
+title: 탭 컨트롤 사용 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - tab controls [MFC], working with
 - tab controls [MFC], using
 ms.assetid: 819488e3-4944-44b7-9483-195edb8e0aed
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 261208c92d55bf09de31cd12c21e348c4d7e41fa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4dbc01c83f9561c8174d2a14365a6a8c94e6ded
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-a-tab-control"></a>탭 컨트롤 사용
 탭 컨트롤을 사용 하는 가장 쉬운 방법은 ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) 대화 상자 편집기와 대화 상자 템플릿 리소스를 추가 하는 것입니다. 탭 컨트롤 단독으로 사용할 수도 있습니다. MFC 호출 **InitCommonControls** 드립니다. 주요 작업은 다음과 같습니다.  

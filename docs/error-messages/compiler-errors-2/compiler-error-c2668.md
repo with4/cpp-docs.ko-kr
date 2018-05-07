@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 c 2668 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 c 2668 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2668
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2668
 ms.assetid: 041e9627-1c76-420e-a653-cfc83f933bd3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e45bff3173013e7a26f9682bb10ec4cc1fda9364
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea6cb5f53d3d4d0971398dbba10e24b579ce6c62
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2668"></a>컴파일러 오류 c 2668
 'function': 오버 로드 된 함수에 대 한 호출이 모호 합니다  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  지 원하는 COM 개체를 포함 하는 ATL 프로젝트를 빌드하는 경우 `ISupportErrorInfo`, 기술 자료 문서 q 243298 참조 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 c 2668 오류가 생성 됩니다.  
   
 ```  
@@ -57,7 +52,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 오류를 해결 하려면 또 다른 방법은 한 [선언을 사용 하 여](../../cpp/using-declaration.md):  
   
 ```  
@@ -99,7 +94,7 @@ class MyTestCase : public AppTestCase {
 };  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 오류는 Visual Studio.NET 2003에 대해 수행한 컴파일러 규칙 작업의 결과로 생성 될 수 있습니다: 상수 0의 캐스트에 대 한 모호한 변환 합니다.  
   
  상수 0을 사용 하 여 캐스트에 대 한 변환 int long과 void *에 대 한 변환이 모두 필요 하므로 모호 합니다. 이 오류를 해결 하려면 0을 하 여 변환이 수행 (이 코드는 Visual c + +의 Visual Studio.NET 2003 및 Visual Studio.NET 버전에서 사용할 수 있습니다) 필요가에 사용 되는 함수 매개 변수의 정확한 형식으로 캐스팅 합니다.  
@@ -122,7 +117,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  Float 및 double 형식의 모든 수학 함수에 이제 CRT에 있기 때문에이 오류가 발생할 수 있습니다.  
   
 ```  
@@ -136,7 +131,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  Pow (int, int) CRT의 math.h에서 제거 되었기 때문에이 오류가 발생할 수 있습니다.  
   
 ```  
@@ -148,7 +143,7 @@ int main() {
 }  
 ```
 
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
 이 코드는 Visual Studio 2015에서 성공 하지만 Visual Studio 2017과 C2668를 사용 하 여 나중에 실패 합니다. Visual Studio 2015에서 컴파일러는 일반 copy-initialization과 같은 방식으로 copy-list-initialization을 잘못 처리했고 오버로드 확인을 위해 생성자 변환만 고려했습니다. 
 
 ```

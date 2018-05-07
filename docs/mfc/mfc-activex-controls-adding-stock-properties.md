@@ -2,12 +2,9 @@
 title: 'MFC ActiveX 컨트롤: 스톡 속성 추가 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,20 +15,18 @@ helpviewer_keywords:
 - foreground colors, ActiveX controls
 - foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed6fec6c878fe505b18a39df1200117f4b426878
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c51a2efba3c89b4e216fec96459b14c3d0c637d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC ActiveX 컨트롤: 스톡 속성 추가
-스톡 속성 사용자 지정 속성 한다는 점에서 다릅니다 클래스에 의해 이미 구현 되어 `COleControl`합니다. `COleControl`속성을 지 원하는 공용 컨트롤에 대 한 미리 정의 된 멤버 함수를 포함 합니다. 몇 가지 일반적인 속성 등이 컨트롤의 전경색과 배경색입니다. 다른 스톡 속성에 대 한 자세한 내용은 참조 [속성 추가 마법사가 지 원하는 스톡 속성](#_core_stock_properties_supported_by_classwizard) 이 문서의 뒷부분에 나오는 합니다. 스톡 속성에 대 한 디스패치 맵 항목에는 항상 접두사로 **DISP_STOCKPROP**합니다.  
+스톡 속성 사용자 지정 속성 한다는 점에서 다릅니다 클래스에 의해 이미 구현 되어 `COleControl`합니다. `COleControl` 속성을 지 원하는 공용 컨트롤에 대 한 미리 정의 된 멤버 함수를 포함 합니다. 몇 가지 일반적인 속성 등이 컨트롤의 전경색과 배경색입니다. 다른 스톡 속성에 대 한 자세한 내용은 참조 [속성 추가 마법사가 지 원하는 스톡 속성](#_core_stock_properties_supported_by_classwizard) 이 문서의 뒷부분에 나오는 합니다. 스톡 속성에 대 한 디스패치 맵 항목에는 항상 접두사로 **DISP_STOCKPROP**합니다.  
   
  이 문서 속성 추가 마법사를 사용 하 여 ActiveX 컨트롤에 있는 스톡 속성에 (이 경우, 캡션)를 추가 하는 방법에 설명 하 고 그 결과 코드 수정 사항에 설명 합니다. 다음과 같은 내용을 다룹니다.  
   
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
     > [!NOTE]
     >  일반적으로 Visual Basic 사용자 지정 컨트롤 속성이 위쪽, 왼쪽, 너비, 높이, 맞춤, 태그, 이름, TabIndex, TabStop, 및 부모 등. 하지만 ActiveX 컨트롤 컨테이너는, 이러한 컨트롤 속성을 구현 해야 하 고 ActiveX 컨트롤이 이러한 속성을 지원 하지 않아야 하므로 합니다.  
   
-##  <a name="_core_using_classwizard_to_add_a_stock_property"></a>사용 하는 속성 추가 마법사를 스톡 속성 추가  
+##  <a name="_core_using_classwizard_to_add_a_stock_property"></a> 사용 하는 속성 추가 마법사를 스톡 속성 추가  
  때문에 사용자 지정 속성을 추가 하는 보다 적은 코드가 필요 스톡 속성 추가 자동으로 처리에 대 한 지원이 `COleControl`합니다. 다음 절차는 ActiveX 컨트롤 프레임 워크에 스톡 Caption 속성을 추가 하는 방법을 보여 줍니다 있으며, 다른 스톡 속성 추가를 사용할 수도 있습니다. 캡션에 대 한 선택 된 스톡 속성 이름을 대체 합니다.  
   
 #### <a name="to-add-the-stock-caption-property-using-the-add-property-wizard"></a>스톡 속성 추가 마법사를 사용 하 여 Caption 속성을 추가 하려면  
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
 6.  **마침**을 클릭합니다.  
   
-##  <a name="_core_classwizard_changes_for_stock_properties"></a>속성 추가 마법사 변경 스톡 속성  
+##  <a name="_core_classwizard_changes_for_stock_properties"></a> 속성 추가 마법사 변경 스톡 속성  
  때문에 `COleControl` 지원 스톡 속성에 속성 추가 마법사가 클래스 선언을 변경 되지 않습니다; 속성 디스패치 맵에 추가 합니다. 구현에 있는 컨트롤의 디스패치 맵에 다음 줄을 추가 하는 속성 추가 마법사 (합니다. Cpp) 됩니다.  
   
  [!code-cpp[NVC_MFC_AxUI#22](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_1.cpp)]  
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/21/2017
   
  이렇게 하면 컨트롤의 사용자에 게 사용할 수 Caption 속성입니다. 스톡 속성의 값을 사용 하려면 액세스 멤버 변수 또는 멤버 함수는 `COleControl` 기본 클래스입니다. 이러한 멤버 변수 및 멤버 함수에 대 한 자세한 내용은 속성 추가 마법사가 지 원하는 스톡 속성 다음 섹션을 참조 합니다.  
   
-##  <a name="_core_stock_properties_supported_by_classwizard"></a>스톡 속성에서 지원 되는 속성 추가 마법사  
+##  <a name="_core_stock_properties_supported_by_classwizard"></a> 스톡 속성에서 지원 되는 속성 추가 마법사  
  `COleControl` 클래스 9 개의 스톡 속성을 제공 합니다. 속성 추가 마법사를 사용 하 여 원하는 속성을 추가할 수 있습니다.  
   
 |속성|디스패치 맵 항목|값에 액세스 하는 방법|  
@@ -94,12 +89,12 @@ ms.lasthandoff: 12/21/2017
 |`ForeColor`|**DISP_STOCKPROP_FORECOLOR)**|호출 하 여 액세스할 수 있는 값 `GetForeColor`합니다.|  
 |**hWnd**|**DISP_STOCKPROP_HWND)**|값으로 액세스할 수 있는 `m_hWnd`합니다.|  
 |**텍스트**|**DISP_STOCKPROP_TEXT)**|호출 하 여 액세스할 수 있는 값 `InternalGetText`합니다. 이 속성은 동일 **캡션**, 속성 이름을 제외 하 고 있습니다.|  
-|**ReadyState**|**DISP_STOCKPROP_READYSTATE()**|M_lReadyState로 액세스할 수 있는 값 또는`GetReadyState`|  
+|**ReadyState**|**DISP_STOCKPROP_READYSTATE()**|M_lReadyState로 액세스할 수 있는 값 또는 `GetReadyState`|  
   
-##  <a name="_core_stock_properties_and_notification"></a>스톡 속성 및 알림  
+##  <a name="_core_stock_properties_and_notification"></a> 스톡 속성 및 알림  
  재정의할 수 있는 알림 함수를 포함 하는 대부분의 스톡 속성입니다. 예를 들어, 때마다는 `BackColor` 속성이 변경 되는 `OnBackColorChanged` 함수 (컨트롤 클래스의 멤버 함수)를 호출 합니다. 기본 구현 (에서 `COleControl`) 호출 `InvalidateControl`합니다. 이러한 상황에 대 한 응답에서 추가 작업을 수행 하려는 경우이 함수를 재정의 합니다.  
   
-##  <a name="_core_color_properties"></a>색 속성  
+##  <a name="_core_color_properties"></a> 색 속성  
  재고를 사용할 수 있습니다 `ForeColor` 및 `BackColor` 속성 또는 사용자 고유의 사용자 지정 색 속성 컨트롤을 그릴 때. 색 속성을 사용 하려면 호출는 [COleControl::TranslateColor](../mfc/reference/colecontrol-class.md#translatecolor) 멤버 함수입니다. 이 함수의 매개 변수는 색 속성과 선택적 팔레트 핸들의 값입니다. 반환 값은 한 **COLORREF** 등의 GDI로 전달 될 수 있는 값 함수가 `SetTextColor` 및 `CreateSolidBrush`합니다.  
   
  재고에 대 한 색상 값 `ForeColor` 및 `BackColor` 속성 중 하나를 호출 하 여 액세스는 `GetForeColor` 또는 `GetBackColor` 각각 작동 합니다.  

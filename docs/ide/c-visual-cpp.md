@@ -1,13 +1,10 @@
 ---
 title: '&lt;c&gt; (Visual c + +) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - <c>
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - <c> C++ XML tag
 - c C++ XML tag
 ms.assetid: 3b23fc0f-e10d-4dd0-b197-48a46cbddd9f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8d4ea984864975196251c9f362283a0df1932cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f17d56601f49056144433155e0d898f56c42bdab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltcgt-visual-c"></a>&lt;c&gt; (Visual c + +)
 \<c > 태그 나타냅니다 코드로 설명에서 텍스트를 표시 되어야 합니다. 여러 줄을 코드로 지정하려면 [\<code>](../ide/code-visual-cpp.md)를 사용합니다.  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // xml_c_tag.cpp  

@@ -1,12 +1,9 @@
 ---
-title: "CMFCDropDownToolBar 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCDropDownToolBar 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDropDownToolBar
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CMFCDropDownToolBar [MFC], OnSendCommand
 - CMFCDropDownToolBar [MFC], OnUpdateCmdUI
 ms.assetid: 78818ec5-83ce-42fa-a0d4-2d9d5ecc8770
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a2f53fa75d8637445e155043d6a40787402accb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c4f56a02f469babe22c8e5cbb9ebb4d6b806499f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar 클래스
 사용자가 최상위 도구 모음 단추를 누르고 있을 때 나타나는 도구 모음입니다.  
@@ -86,7 +81,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
   
  도구 모음 단추에 대 한 자세한 내용은 참조 [연습: 도구 모음에 컨트롤 배치](../../mfc/walkthrough-putting-controls-on-toolbars.md)합니다. 예를 보려면 드롭다운 도구 모음이 VisualStudioDemo 샘플 프로젝트를 참조 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 사용 하는 `Create` 에서 메서드는 `CMFCDropDownToolBar` 클래스. 이 코드 조각은의 일부인는 [Visual Studio 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#29](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_1.h)]  
@@ -112,7 +107,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdropdowntoolbar.h  
   
-##  <a name="allowshowonpanemenu"></a>CMFCDropDownToolBar::AllowShowOnPaneMenu  
+##  <a name="allowshowonpanemenu"></a>  CMFCDropDownToolBar::AllowShowOnPaneMenu  
 
   
 ```  
@@ -123,7 +118,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="loadbitmap"></a>CMFCDropDownToolBar::LoadBitmap  
+##  <a name="loadbitmap"></a>  CMFCDropDownToolBar::LoadBitmap  
  응용 프로그램 리소스에서 도구 모음 이미지를 로드합니다.  
   
 ```  
@@ -147,7 +142,7 @@ virtual BOOL LoadBitmap(
  일반 메뉴 이미지를 참조하는 비트맵의 리소스 ID입니다.  
   
  [in] `bLocked`  
- `TRUE`도구 모음을 잠그려면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 도구 모음을 잠그려면 그렇지 않으면 `FALSE`합니다.  
   
  [in] `uiDisabledResID`  
  비활성화된 도구 모음 이미지를 참조하는 비트맵의 리소스 ID입니다.  
@@ -163,7 +158,7 @@ virtual BOOL LoadBitmap(
   
  `LoadBitmapEx` 메서드를 호출하여 도구 모음을 만든 후 추가 이미지를 로드합니다.  
   
-##  <a name="loadtoolbar"></a>CMFCDropDownToolBar::LoadToolBar  
+##  <a name="loadtoolbar"></a>  CMFCDropDownToolBar::LoadToolBar  
 
   
 ```  
@@ -190,7 +185,7 @@ virtual BOOL LoadToolBar(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onlbuttonup"></a>CMFCDropDownToolBar::OnLButtonUp  
+##  <a name="onlbuttonup"></a>  CMFCDropDownToolBar::OnLButtonUp  
 
   
 ```  
@@ -205,7 +200,7 @@ afx_msg void OnLButtonUp(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onmousemove"></a>CMFCDropDownToolBar::OnMouseMove  
+##  <a name="onmousemove"></a>  CMFCDropDownToolBar::OnMouseMove  
 
   
 ```  
@@ -220,7 +215,7 @@ afx_msg void OnMouseMove(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onsendcommand"></a>CMFCDropDownToolBar::OnSendCommand  
+##  <a name="onsendcommand"></a>  CMFCDropDownToolBar::OnSendCommand  
 
   
 ```  
@@ -234,7 +229,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onupdatecmdui"></a>CMFCDropDownToolBar::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>  CMFCDropDownToolBar::OnUpdateCmdUI  
 
   
 ```  

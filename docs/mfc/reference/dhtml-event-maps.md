@@ -1,13 +1,10 @@
 ---
-title: "DHTML 이벤트 맵 | Microsoft Docs"
-ms.custom: 
+title: DHTML 이벤트 맵 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.macros.shared
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - DHTML events [MFC], event map
 - DHTML events [MFC]
 ms.assetid: 9a2c8ae7-7216-4a5e-bc60-6b98695be0c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56e2ebb76da167b6d9d3a790d391dbe4e544bc6b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 224a0c9b837763574c53e8464885f02ec5413971
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dhtml-event-maps"></a>DHTML 이벤트 맵
 DHTML 이벤트를 처리 하는 다음 매크로 사용 하는 수 있습니다.  
@@ -93,7 +88,7 @@ DHTML 이벤트를 처리 하는 다음 매크로 사용 하는 수 있습니다
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="begin_dhtml_event_map"></a>BEGIN_DHTML_EVENT_MAP  
+##  <a name="begin_dhtml_event_map"></a>  BEGIN_DHTML_EVENT_MAP  
  DHTML 이벤트 맵으로 식별 되는 클래스에 대 한 소스 파일에 배치 되는 경우의 시작을 표시 `className`합니다.  
   
 ```   
@@ -114,7 +109,7 @@ BEGIN_DHTML_EVENT_MAP(className)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="begin_dhtml_event_map_inline"></a>BEGIN_DHTML_EVENT_MAP_INLINE  
+##  <a name="begin_dhtml_event_map_inline"></a>  BEGIN_DHTML_EVENT_MAP_INLINE  
  에 대 한 클래스 정의 내 DHTML 이벤트 맵의 시작을 표시 `className`합니다.  
   
 ```   
@@ -136,7 +131,7 @@ BEGIN_DHTML_EVENT_MAP_INLINE(className)
   **헤더** afxdhtml.h  
 
   
-##  <a name="declare_dhtml_event_map"></a>DECLARE_DHTML_EVENT_MAP  
+##  <a name="declare_dhtml_event_map"></a>  DECLARE_DHTML_EVENT_MAP  
  클래스 정의에 DHTML 이벤트 맵을 선언합니다.  
   
 ```   
@@ -155,7 +150,7 @@ DECLARE_DHTML_EVENT_MAP()
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event"></a>DHTML_EVENT  
+##  <a name="dhtml_event"></a>  DHTML_EVENT  
  (문서 수준)으로 식별 하는 이벤트를 처리 `dispid` 으로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```   
@@ -178,7 +173,7 @@ DHTML_EVENT(dispid, elemName,  memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_axcontrol"></a>DHTML_EVENT_AXCONTROL  
+##  <a name="dhtml_event_axcontrol"></a>  DHTML_EVENT_AXCONTROL  
  로 식별 되는 이벤트를 처리 `dispid` 식별 된 ActiveX 컨트롤에 의해 발생 `controlName`합니다.  
   
 ```   
@@ -201,7 +196,7 @@ DHTML_EVENT_AXCONTROL(dispid, controlName,  memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_class"></a>DHTML_EVENT_CLASS  
+##  <a name="dhtml_event_class"></a>  DHTML_EVENT_CLASS  
  (문서 수준)으로 식별 하는 이벤트를 처리 `dispid` 로 식별 되는 CSS 클래스와 모든 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```   
@@ -224,7 +219,7 @@ DHTML_EVENT_CLASS(dispid, elemName,  memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_element"></a>DHTML_EVENT_ELEMENT  
+##  <a name="dhtml_event_element"></a>  DHTML_EVENT_ELEMENT  
  처리 (으로 식별 하는 요소에서 `elemName`)로 식별 되는 이벤트 `dispid`합니다.  
   
 ```   
@@ -251,7 +246,7 @@ DHTML_EVENT_ELEMENT(dispid, elemName,  memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_onafterupdate"></a>DHTML_EVENT_ONAFTERUPDATE  
+##  <a name="dhtml_event_onafterupdate"></a>  DHTML_EVENT_ONAFTERUPDATE  
  (문서 수준)에서 처리는 **onafterupdate** 이벤트로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```   
@@ -271,7 +266,7 @@ DHTML_EVENT_ONAFTERUPDATE(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_onbeforeupdate"></a>DHTML_EVENT_ONBEFOREUPDATE  
+##  <a name="dhtml_event_onbeforeupdate"></a>  DHTML_EVENT_ONBEFOREUPDATE  
  (문서 수준)에서 처리는 **onbeforeupdate** 이벤트로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```   
@@ -291,7 +286,7 @@ DHTML_EVENT_ONBEFOREUPDATE(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_onblur"></a>DHTML_EVENT_ONBLUR  
+##  <a name="dhtml_event_onblur"></a>  DHTML_EVENT_ONBLUR  
  요소 수준에서 처리는 **onblur** 이벤트입니다. Nonbubbling 이벤트입니다.  
   
 ```   
@@ -311,7 +306,7 @@ DHTML_EVENT_ONBLUR(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_onchange"></a>DHTML_EVENT_ONCHANGE  
+##  <a name="dhtml_event_onchange"></a>  DHTML_EVENT_ONCHANGE  
  요소 수준에서 처리는 `onchange` 이벤트입니다. Nonbubbling 이벤트입니다.  
   
 ```   
@@ -331,7 +326,7 @@ DHTML_EVENT_ONCHANGE(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_onclick"></a>DHTML_EVENT_ONCLICK  
+##  <a name="dhtml_event_onclick"></a>  DHTML_EVENT_ONCLICK  
  (문서 수준)에서 처리는 **onclick** 이벤트로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```   
@@ -351,7 +346,7 @@ DHTML_EVENT_ONCLICK(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_ondataavailable"></a>DHTML_EVENT_ONDATAAVAILABLE  
+##  <a name="dhtml_event_ondataavailable"></a>  DHTML_EVENT_ONDATAAVAILABLE  
  (문서 수준)에서 처리는 **ondataavailable** 이벤트로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```   
@@ -371,7 +366,7 @@ DHTML_EVENT_ONDATAAVAILABLE(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_ondatasetchanged"></a>DHTML_EVENT_ONDATASETCHANGED  
+##  <a name="dhtml_event_ondatasetchanged"></a>  DHTML_EVENT_ONDATASETCHANGED  
  (문서 수준)에서 처리는 **ondatasetchanged** 이벤트로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```   
@@ -391,7 +386,7 @@ DHTML_EVENT_ONDATASETCHANGED(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_ondatasetcomplete"></a>DHTML_EVENT_ONDATASETCOMPLETE  
+##  <a name="dhtml_event_ondatasetcomplete"></a>  DHTML_EVENT_ONDATASETCOMPLETE  
  (문서 수준)에서 처리는 **ondatasetcomplete** 이벤트로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```   
@@ -412,7 +407,7 @@ DHTML_EVENT_ONDATASETCOMPLETE(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_ondblclick"></a>DHTML_EVENT_ONDBLCLICK  
+##  <a name="dhtml_event_ondblclick"></a>  DHTML_EVENT_ONDBLCLICK  
  (문서 수준)에서 처리는 **ondblclick** 이벤트로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```   
@@ -432,7 +427,7 @@ DHTML_EVENT_ONDBLCLICK(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_ondragstart"></a>DHTML_EVENT_ONDRAGSTART  
+##  <a name="dhtml_event_ondragstart"></a>  DHTML_EVENT_ONDRAGSTART  
  (문서 수준)에서 처리는 **ondragstart** 이벤트로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```   
@@ -452,7 +447,7 @@ DHTML_EVENT_ONDRAGSTART(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_onerrorupdate"></a>DHTML_EVENT_ONERRORUPDATE  
+##  <a name="dhtml_event_onerrorupdate"></a>  DHTML_EVENT_ONERRORUPDATE  
  (문서 수준)에서 처리는 **onerrorupdate** 이벤트로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```   
@@ -473,7 +468,7 @@ DHTML_EVENT_ONERRORUPDATE(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_onfilterchange"></a>DHTML_EVENT_ONFILTERCHANGE  
+##  <a name="dhtml_event_onfilterchange"></a>  DHTML_EVENT_ONFILTERCHANGE  
  (문서 수준)에서 처리는 **onfilterchange** 이벤트로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```  
@@ -495,7 +490,7 @@ DHTML_EVENT_ONFILTERCHANGE(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_onfocus"></a>DHTML_EVENT_ONFOCUS  
+##  <a name="dhtml_event_onfocus"></a>  DHTML_EVENT_ONFOCUS  
  요소 수준에서 처리는 **onfocus** 이벤트입니다. Nonbubbling 이벤트입니다.  
   
 ```  
@@ -517,7 +512,7 @@ DHTML_EVENT_ONFOCUS(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_onhelp"></a>DHTML_EVENT_ONHELP  
+##  <a name="dhtml_event_onhelp"></a>  DHTML_EVENT_ONHELP  
  (문서 수준)에서 처리는 `onhelp` 이벤트로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```  
@@ -539,7 +534,7 @@ DHTML_EVENT_ONHELP(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_onkeydown"></a>DHTML_EVENT_ONKEYDOWN  
+##  <a name="dhtml_event_onkeydown"></a>  DHTML_EVENT_ONKEYDOWN  
  (문서 수준)에서 처리는 **onkeydown** 이벤트로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```  
@@ -561,7 +556,7 @@ DHTML_EVENT_ONKEYDOWN(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_onkeypress"></a>DHTML_EVENT_ONKEYPRESS  
+##  <a name="dhtml_event_onkeypress"></a>  DHTML_EVENT_ONKEYPRESS  
  (문서 수준)에서 처리는 **onkeypress** 이벤트로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```  
@@ -583,7 +578,7 @@ DHTML_EVENT_ONKEYPRESS(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_onkeyup"></a>DHTML_EVENT_ONKEYUP  
+##  <a name="dhtml_event_onkeyup"></a>  DHTML_EVENT_ONKEYUP  
  (문서 수준)에서 처리는 **onkeyup** 이벤트로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```  
@@ -605,7 +600,7 @@ DHTML_EVENT_ONKEYUP(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_onmousedown"></a>DHTML_EVENT_ONMOUSEDOWN  
+##  <a name="dhtml_event_onmousedown"></a>  DHTML_EVENT_ONMOUSEDOWN  
  (문서 수준)에서 처리는 **onmousedown** 이벤트로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```  
@@ -627,7 +622,7 @@ DHTML_EVENT_ONMOUSEDOWN(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_onmousemove"></a>DHTML_EVENT_ONMOUSEMOVE  
+##  <a name="dhtml_event_onmousemove"></a>  DHTML_EVENT_ONMOUSEMOVE  
  (문서 수준)에서 처리는 `onmousemove` 이벤트로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```  
@@ -649,7 +644,7 @@ DHTML_EVENT_ONMOUSEMOVE(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_onmouseout"></a>DHTML_EVENT_ONMOUSEOUT  
+##  <a name="dhtml_event_onmouseout"></a>  DHTML_EVENT_ONMOUSEOUT  
  (문서 수준)에서 처리는 **onmouseout** 이벤트로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```  
@@ -671,7 +666,7 @@ DHTML_EVENT_ONMOUSEOUT(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_onmouseover"></a>DHTML_EVENT_ONMOUSEOVER  
+##  <a name="dhtml_event_onmouseover"></a>  DHTML_EVENT_ONMOUSEOVER  
  (문서 수준)에서 처리는 **onmouseover** 이벤트로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```  
@@ -693,7 +688,7 @@ DHTML_EVENT_ONMOUSEOVER(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_onmouseup"></a>DHTML_EVENT_ONMOUSEUP  
+##  <a name="dhtml_event_onmouseup"></a>  DHTML_EVENT_ONMOUSEUP  
  (문서 수준)에서 처리는 **onmouseup** 이벤트로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```  
@@ -715,7 +710,7 @@ DHTML_EVENT_ONMOUSEUP(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_onresize"></a>DHTML_EVENT_ONRESIZE  
+##  <a name="dhtml_event_onresize"></a>  DHTML_EVENT_ONRESIZE  
  요소 수준에서 처리는 **onresize** 이벤트입니다. Nonbubbling 이벤트입니다.  
   
 ```  
@@ -737,7 +732,7 @@ DHTML_EVENT_ONRESIZE(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_onrowenter"></a>DHTML_EVENT_ONROWENTER  
+##  <a name="dhtml_event_onrowenter"></a>  DHTML_EVENT_ONROWENTER  
  (문서 수준)에서 처리는 **onrowenter** 이벤트로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```  
@@ -759,7 +754,7 @@ DHTML_EVENT_ONROWENTER(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_onrowexit"></a>DHTML_EVENT_ONROWEXIT  
+##  <a name="dhtml_event_onrowexit"></a>  DHTML_EVENT_ONROWEXIT  
  (문서 수준)에서 처리는 **onrowexit** 이벤트로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```  
@@ -781,7 +776,7 @@ DHTML_EVENT_ONROWEXIT(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_onselectstart"></a>DHTML_EVENT_ONSELECTSTART  
+##  <a name="dhtml_event_onselectstart"></a>  DHTML_EVENT_ONSELECTSTART  
  (문서 수준)에서 처리는 **onselectstart** 이벤트로 식별 되는 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```  
@@ -803,7 +798,7 @@ DHTML_EVENT_ONSELECTSTART(elemName, memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="dhtml_event_tag"></a>DHTML_EVENT_TAG  
+##  <a name="dhtml_event_tag"></a>  DHTML_EVENT_TAG  
  (문서 수준)으로 식별 하는 이벤트를 처리 `dispid` 로 식별 되는 HTML 태그를 가진 모든 HTML 요소에 의해 시작 `elemName`합니다.  
   
 ```   
@@ -826,7 +821,7 @@ DHTML_EVENT_TAG(dispid, elemName,  memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="end_dhtml_event_map"></a>END_DHTML_EVENT_MAP  
+##  <a name="end_dhtml_event_map"></a>  END_DHTML_EVENT_MAP  
  DHTML 이벤트 맵의 끝을 표시 합니다.  
   
 ```   
@@ -839,7 +834,7 @@ END_DHTML_EVENT_MAP()
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="begin_dhtml_url_event_map"></a>BEGIN_DHTML_URL_EVENT_MAP  
+##  <a name="begin_dhtml_url_event_map"></a>  BEGIN_DHTML_URL_EVENT_MAP  
  다중 페이지 대화 상자에서 DHTML 및 URL 이벤트 맵의 정의 시작합니다.  
   
 ```  
@@ -850,13 +845,13 @@ BEGIN_DHTML_URL_EVENT_MAP()
 ### <a name="remarks"></a>설명  
  배치 `BEGIN_DHTML_URL_EVENT_MAP` 의 구현 파일에서 프로그램 [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)-클래스를 파생 합니다. 사용 하 여 수행 [DHTML 이벤트 맵 포함](#begin_embed_dhtml_event_map) 및 [URL 항목](#begin_url_entries), 한 다음 사용 하 여 닫습니다 [END_DHTML_URL_EVENT_MAP](#end_dhtml_url_event_map)합니다. 포함 된 [DECLARE_DHTML_URL_EVENT_MAP](#declare_dhtml_url_event_map) 클래스 정의 내 매크로입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#196](../../mfc/codesnippet/cpp/dhtml-event-maps_1.cpp)]  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="begin_embed_dhtml_event_map"></a>BEGIN_EMBED_DHTML_EVENT_MAP  
+##  <a name="begin_embed_dhtml_event_map"></a>  BEGIN_EMBED_DHTML_EVENT_MAP  
  다중 페이지 대화 상자에 포함 된 DHTML 이벤트 맵의 정의 시작합니다.  
   
 ```  
@@ -878,13 +873,13 @@ BEGIN_EMBED_DHTML_EVENT_MAP(className, mapName)
   
  각 포함 된 이벤트 맵에 해당 필요 [URL 이벤트 항목](#url_event_entry) 매핑할 *맵 이름* (에 지정 된 `BEGIN_EMBED_DHTML_EVENT_MAP`) URL 또는 HTML 리소스입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예제를 참조 [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="begin_url_entries"></a>BEGIN_URL_ENTRIES  
+##  <a name="begin_url_entries"></a>  BEGIN_URL_ENTRIES  
  다중 페이지 대화 상자에서 URL 이벤트 항목 맵 정의를 시작합니다.  
   
 ```  
@@ -899,13 +894,13 @@ BEGIN_URL_ENTRIES(className)
 ### <a name="remarks"></a>설명  
  다중 페이지 DHTML 대화 상자는 여러 HTML 페이지로 구성 됩니다, 때문에 URL 이벤트 항목은 매핑하는 데 사용 Url 또는 HTML 리소스를 해당 [DHTML 이벤트 맵 포함](#begin_embed_dhtml_event_map)합니다. 배치 `URL_EVENT_ENTRY` 간에 매크로 `BEGIN_URL_ENTRIES` 및 [END_URL_ENTRIES](#end_url_entries) 매크로입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예제를 참조 [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="declare_dhtml_url_event_map"></a>DECLARE_DHTML_URL_EVENT_MAP  
+##  <a name="declare_dhtml_url_event_map"></a>  DECLARE_DHTML_URL_EVENT_MAP  
  DHTML 및 URL 이벤트 맵 클래스 정의에 선언합니다.  
   
 ```  
@@ -921,7 +916,7 @@ DECLARE_DHTML_URL_EVENT_MAP()
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="end_dhtml_url_event_map"></a>END_DHTML_URL_EVENT_MAP  
+##  <a name="end_dhtml_url_event_map"></a>  END_DHTML_URL_EVENT_MAP  
  DHTML 및 URL 이벤트 맵의 끝을 표시 합니다.  
   
 ```  
@@ -933,13 +928,13 @@ END_DHTML_URL_EVENT_MAP(className)
  `className`  
  이벤트 맵을 포함 하는 클래스의 이름입니다. 이 클래스에서 직접 또는 간접적으로 파생 해야 [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)합니다. 이것은 일치 해야 `className` 해당 [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map) 매크로입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예제를 참조 [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="end_embed_dhtml_event_map"></a>END_EMBED_DHTML_EVENT_MAP  
+##  <a name="end_embed_dhtml_event_map"></a>  END_EMBED_DHTML_EVENT_MAP  
  포함 된 DHTML 이벤트 맵의 끝을 표시 합니다.  
   
 ```  
@@ -947,13 +942,13 @@ END_EMBED_DHTML_EVENT_MAP()
  
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예제를 참조 [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="end_url_entries"></a>END_URL_ENTRIES  
+##  <a name="end_url_entries"></a>  END_URL_ENTRIES  
  URL 이벤트 항목 맵은의 끝을 표시 합니다.  
   
 ```  
@@ -961,13 +956,13 @@ END_URL_ENTRIES()
  
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예제를 참조 [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdhtml.h  
   
-##  <a name="url_event_entry"></a>URL_EVENT_ENTRY  
+##  <a name="url_event_entry"></a>  URL_EVENT_ENTRY  
  다중 페이지 대화 상자에 있는 페이지를 URL 또는 HTML 리소스를 매핑합니다.  
   
 ```  
@@ -978,7 +973,7 @@ URL_EVENT_ENTRY(className, url,  mapName)
  `className`  
  URL 이벤트 항목 맵을 포함하는 클래스의 이름입니다. 이 클래스에서 직접 또는 간접적으로 파생 해야 [CMultiPageDHtmlDialog](../../mfc/reference/cmultipagedhtmldialog-class.md)합니다. URL 이벤트 항목 맵은 내부에 있어야 합니다.는 [DHTML 및 URL 이벤트 맵](#begin_dhtml_url_event_map)).  
   
- *url*  
+ *Url*  
  페이지에 대 한 URL 또는 HTML 리소스입니다.  
   
  *맵 이름*  
@@ -989,7 +984,7 @@ URL_EVENT_ENTRY(className, url,  mapName)
   
  페이지 식별자 *맵 이름*는 연결 하는 데 사용 되는 임의의 기호 DHTML 이벤트 맵 URL 이벤트 항목 맵에 포함 된 합니다. 이 작업은 DHTML 및 URL 이벤트 맵으로 범위가 제한 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예제를 참조 [BEGIN_DHTML_URL_EVENT_MAP](#begin_dhtml_url_event_map)합니다.  
 
   

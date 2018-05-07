@@ -1,12 +1,9 @@
 ---
-title: "COleConvertDialog 클래스 | Microsoft Docs"
-ms.custom: 
+title: COleConvertDialog 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleConvertDialog
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - COleConvertDialog [MFC], GetSelectionType
 - COleConvertDialog [MFC], m_cv
 ms.assetid: a7c57714-31e8-4b78-834d-8ddd1b856a1c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f93c17416c81d4c152608f4d8a8b78f48e5422c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90453d4e8550038493545b691c978b59bda90fad
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleconvertdialog-class"></a>COleConvertDialog 클래스
 자세한 내용은 참조는 [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Windows SDK에는 구조입니다.  
@@ -102,7 +97,7 @@ class COleConvertDialog : public COleDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxodlgs.h  
   
-##  <a name="coleconvertdialog"></a>COleConvertDialog::COleConvertDialog  
+##  <a name="coleconvertdialog"></a>  COleConvertDialog::COleConvertDialog  
  만 생성 한 `COleConvertDialog` 개체입니다.  
   
 ```  
@@ -124,7 +119,7 @@ explicit COleConvertDialog (
   
 - **CF_SELECTACTIVATEAS** 대화 상자를 호출할 때 다른 이름으로 활성화 라디오 단추는 처음 선택 되도록 지정 합니다.  
   
-- **CF_SETCONVERTDEFAULT** 되도록 지정 클래스 인 **CLSID** 지정는 **clsidConvertDefault** 의 멤버는 `m_cv` 구조는 기본적으로 사용 됩니다 변환 라디오 단추를 선택 하 여 클래스 목록 상자에서 선택할 수 있습니다.  
+- **CF_SETCONVERTDEFAULT** 지정 하는 클래스 인 **CLSID** 지정는 **clsidConvertDefault** 의 멤버는 `m_cv` 구조를 사용 하 여 기본으로 선택 됩니다 클래스 목록에서 라디오 단추를 변환 하는 경우를 표시 합니다.  
   
 - **CF_SETACTIVATEDEFAULT** 되도록 지정 클래스 인 **CLSID** 지정는 **clsidActivateDefault** 의 멤버는 `m_cv` 구조는 기본적으로 사용 됩니다 다른 이름으로 활성화 라디오 단추를 선택 하는 경우 클래스 목록 상자에서 선택할 수 있습니다.  
   
@@ -141,7 +136,7 @@ explicit COleConvertDialog (
   
  자세한 내용은 참조 [CLSID 키](http://msdn.microsoft.com/library/windows/desktop/ms691424) 및 [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) 구조입니다.  
   
-##  <a name="doconvert"></a>COleConvertDialog::DoConvert  
+##  <a name="doconvert"></a>  COleConvertDialog::DoConvert  
  성공적으로 반환 된 후이 함수를 호출 [DoModal](#domodal)변환 하거나 형식의 개체를 활성화 하거나, [COleClientItem](../../mfc/reference/coleclientitem-class.md)합니다.  
   
 ```  
@@ -158,7 +153,7 @@ BOOL DoConvert(COleClientItem* pItem);
 ### <a name="remarks"></a>설명  
  항목 또는 변환 변환 대화 상자에서 사용자가 선택한 정보에 따라 활성화 됩니다.  
   
-##  <a name="domodal"></a>COleConvertDialog::DoModal  
+##  <a name="domodal"></a>  COleConvertDialog::DoModal  
  OLE 변환 대화 상자를 표시 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -179,7 +174,7 @@ virtual INT_PTR DoModal();
   
  경우 `DoModal` 반환 **IDOK**, 다른 멤버를 설정 또는 사용자가 대화 상자에 입력 된 정보를 검색 하는 함수를 호출할 수 있습니다.  
   
-##  <a name="getclassid"></a>COleConvertDialog::GetClassID  
+##  <a name="getclassid"></a>  COleConvertDialog::GetClassID  
  가져오려면이 함수를 호출 하 여 **CLSID** 변환 대화 상자에서 사용자가 선택한 항목과 연결 된 합니다.  
   
 ```  
@@ -194,7 +189,7 @@ REFCLSID GetClassID() const;
   
  자세한 내용은 참조 [CLSID 키](http://msdn.microsoft.com/library/windows/desktop/ms691424) Windows sdk에서입니다.  
   
-##  <a name="getdrawaspect"></a>COleConvertDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>  COleConvertDialog::GetDrawAspect  
  사용자를 아이콘으로 선택한 항목을 표시 하도록 선택 여부를 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -204,16 +199,16 @@ DVASPECT GetDrawAspect() const;
 ### <a name="return-value"></a>반환 값  
  개체를 렌더링 하는 데 필요한 메서드입니다.  
   
-- `DVASPECT_CONTENT`아이콘으로 표시 확인란 선택 하지 않은 경우 반환 됩니다.  
+- `DVASPECT_CONTENT` 아이콘으로 표시 확인란 선택 하지 않은 경우 반환 됩니다.  
   
-- `DVASPECT_ICON`아이콘으로 표시 확인란을 선택 된 경우 반환 됩니다.  
+- `DVASPECT_ICON` 아이콘으로 표시 확인란을 선택 된 경우 반환 됩니다.  
   
 ### <a name="remarks"></a>설명  
  호출 후에이 기능 [DoModal](#domodal) 반환 **IDOK**합니다.  
   
  그리기 측면에 대 한 자세한 내용은 참조는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK에서 데이터 구조입니다.  
   
-##  <a name="geticonicmetafile"></a>COleConvertDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COleConvertDialog::GetIconicMetafile  
  선택한 항목의 아이콘 측면을 포함 하는 메타 파일에 대 한 핸들을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -223,7 +218,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>반환 값  
  아이콘으로 표시 확인란이 선택한 항목의 아이콘 측면을 포함 하는 메타 파일에 대 한 핸들을 선택 하 여 대화 상자를 해제 하는 경우 체크 **확인**고, 그렇지 않으면 **NULL**합니다.  
   
-##  <a name="getselectiontype"></a>COleConvertDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>  COleConvertDialog::GetSelectionType  
  변환 대화 상자에서 선택한 변환 형식을 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -252,7 +247,7 @@ enum Selection {
   
 - **COleConvertDialog::activateAs** 사용자를 활성화 하려면 다른 항목을 선택한 다른 이름으로 활성화 라디오 단추를 선택 하는 경우 반환 되 고 `DoModal` 반환 **IDOK**합니다.  
   
-##  <a name="m_cv"></a>COleConvertDialog::m_cv  
+##  <a name="m_cv"></a>  COleConvertDialog::m_cv  
  형식의 구조 **OLEUICONVERT** 변환 대화 상자의 동작을 제어 하는 데 사용 합니다.  
   
 ```  

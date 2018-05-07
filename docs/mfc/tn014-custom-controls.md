@@ -1,13 +1,10 @@
 ---
-title: "TN014: 사용자 지정 컨트롤 | Microsoft Docs"
-ms.custom: 
+title: 'TN014: 사용자 지정 컨트롤 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.controls
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4ffc4f26ed365673cdfb525c2bf3653827cc4ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54a7ef7f6fd9a9da92c208366ee401d55d07fd5a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn014-custom-controls"></a>TN014: 사용자 지정 컨트롤
 이 노트는 사용자 지정과 자체 그리기 컨트롤에 대한 MFC 지원을 설명합니다. 또한 동적 서브클래싱을 설명 하 고 간의 관계를 설명 [CWnd](../mfc/reference/cwnd-class.md) 개체 및 `HWND`s입니다.  

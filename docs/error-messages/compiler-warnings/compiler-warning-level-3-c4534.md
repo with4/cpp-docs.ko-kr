@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 3) C4534 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 3) C4534 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - c4534
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4534
 ms.assetid: ec2adf3b-d7a1-4005-bb0c-5d219df78dc8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d9ea2cc6fb15edf61610e96a728e985b78be468
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1b765f5f654c8d533b0ae22d874e7657cd10d667
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-3-c4534"></a>컴파일러 경고(수준 3) C4534
 'constructor'를 기본 인수 때문에 ' class' 클래스에 대 한 기본 생성자가 됩니다.  

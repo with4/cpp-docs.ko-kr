@@ -1,12 +1,9 @@
 ---
-title: "연산자&gt; (list) (STL/CLR) | Microsoft Docs"
-ms.custom: 
+title: 연산자&gt; (list) (STL/CLR) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::list::operator>
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator> member [STL/CLR]
 ms.assetid: 58584708-1fa6-4908-84f6-790d53f46d9a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0a50137d309c5913d627a065455061123c0e6146
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa22a7fb3d5b4d3eab464cb453a203944283af59
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operatorgt-list-stlclr"></a>연산자&gt; (list) (STL/CLR)
 목록 비교 보다 큽니다.  
@@ -49,7 +44,7 @@ template<typename Value>
 ## <a name="remarks"></a>설명  
  연산자 함수 반환 `right` `<` `left`합니다. 테스트를 사용 하는지 여부를 `left` 후 정렬 `right` 두 목록의 요소 별로 비교를 하는 경우.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_list_operator_gt.cpp   

@@ -1,13 +1,10 @@
 ---
-title: "Rich Edit 컨트롤의 문자 서식 지정 | Microsoft Docs"
-ms.custom: 
+title: Rich Edit 컨트롤의 문자 서식 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - rich edit controls [MFC], character formatting in
 - CRichEditCtrl class [MFC], character formatting in
 ms.assetid: c80f4305-75ad-45f9-8d17-d83d0fe79be5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93bb2cda113a56276ad54edb5ccdb6c9d430ed06
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c02165635e8715c1fcac28b9fbee72612b72c1f2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="character-formatting-in-rich-edit-controls"></a>Rich Edit 컨트롤의 문자 서식 지정
 Rich edit 컨트롤의 멤버 함수를 사용할 수 있습니다 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 문자 서식을 지정 하 고 서식 지정 정보를 검색 합니다. 문자에 대 한 서체, 크기, 색 및 효과 굵게, 기울임꼴 등을 지정할 수 있으며 보호.  
   
- 문자를 사용 하 여 서식을 적용할 수 있습니다는 [SetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#setselectioncharformat) 및 [SetWordCharFormat](../mfc/reference/cricheditctrl-class.md#setwordcharformat) 멤버 함수입니다. 선택한 텍스트에 대 한 서식을 현재 문자를 확인 하려면 사용 하 여는 [GetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#getselectioncharformat) 멤버 함수입니다. [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) 구조는 문자 특성을 지정 하려면 이러한 멤버 함수와 함께 사용 합니다. 중요 한 멤버 중 하나 **CHARFORMAT** 은 **dwMask**합니다. `SetSelectionCharFormat` 및 `SetWordCharFormat`, **dwMask** 지정 된 문자 특성을이 함수 호출으로 설정 됩니다. `GetSelectionCharFormat`선택 영역의; 첫 번째 문자의 특성을 보고 **dwMask** 선택 영역 전체에 걸쳐 일관적인 특성을 지정 합니다.  
+ 문자를 사용 하 여 서식을 적용할 수 있습니다는 [SetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#setselectioncharformat) 및 [SetWordCharFormat](../mfc/reference/cricheditctrl-class.md#setwordcharformat) 멤버 함수입니다. 선택한 텍스트에 대 한 서식을 현재 문자를 확인 하려면 사용 하 여는 [GetSelectionCharFormat](../mfc/reference/cricheditctrl-class.md#getselectioncharformat) 멤버 함수입니다. [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) 구조는 문자 특성을 지정 하려면 이러한 멤버 함수와 함께 사용 합니다. 중요 한 멤버 중 하나 **CHARFORMAT** 은 **dwMask**합니다. `SetSelectionCharFormat` 및 `SetWordCharFormat`, **dwMask** 지정 된 문자 특성을이 함수 호출으로 설정 됩니다. `GetSelectionCharFormat` 선택 영역의; 첫 번째 문자의 특성을 보고 **dwMask** 선택 영역 전체에 걸쳐 일관적인 특성을 지정 합니다.  
   
  또한 get 하 고 설정할 수는 "기본 문자 형식" 이후에 삽입 된 문자에 적용 되는 합니다. 예를 들어 응용 프로그램의 기본 문자를 굵게 서식 설정 하는 경우 사용자는 문자를 입력 한 다음 문자를 굵게 표시 됩니다. 사용 하 여 가져오고 기본 문자 형식을 지정 하는 [GetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#getdefaultcharformat) 및 [SetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#setdefaultcharformat) 멤버 함수입니다.  
   

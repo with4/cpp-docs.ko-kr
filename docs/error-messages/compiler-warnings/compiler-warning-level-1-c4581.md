@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 1) C4581 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 1) C4581 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4581
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59bf4eafe722283f5fced046e845c6b46ca3ce82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 415fb9ffc3e53ddfe9edcee2ec99361b38de0dea
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4581"></a>컴파일러 경고(수준 1) C4581
 사용 되지 않는 동작: '"string1" ' '문자열 2' 프로세스 특성으로 대체  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
  이전 버전에서는 특성 값은 따옴표로 묶여 있는지 여부 허용 되었습니다. 열거형 값을 사용 하는 경우 하지 따옴표에 포함 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C4581 오류가 발생 합니다.  
   
 ```  

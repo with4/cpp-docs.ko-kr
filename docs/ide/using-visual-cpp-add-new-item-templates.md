@@ -2,12 +2,9 @@
 title: Visual c + +를 사용 하 여 새 항목 추가 템플릿 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c2326dc87c0490256972bfe23df5cc7ed13a787
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 50bf1bdeeed862ecbc03270e403ccafaf32bfde8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Visual C++ 새 항목 추가 템플릿 사용
 사용 하 여 Visual c + + 프로젝트에 공통 된 항목을 쉽게 추가할 수 있습니다는 **새 항목 추가** 명령입니다. 사용 하는 경우는 **새 항목 추가** 명령을 `Add New Item` 적절 한 파일을 프로젝트에 추가 하는 항목 템플릿 목록이 있는 대화 상자가 나타납니다.  

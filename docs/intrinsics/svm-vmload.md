@@ -1,12 +1,9 @@
 ---
 title: __svm_vmload | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __svm_vmload
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - __svm_vmload intrinsic
 - VMLOAD instruction
 ms.assetid: b46a5592-db76-4ffc-8694-2f3494e28bed
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63799583aa70bac60dacb29d11eaa6efd3170a3d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 66cd8164da7be750310f133bb25c17f8cdb21f38
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="svmvmload"></a>__svm_vmload
 **Microsoft 전용**  
@@ -48,7 +43,7 @@ void __svm_vmload(
 |[in] `VmcbPhysicalAddress`|VMCB의 실제 주소입니다.|  
   
 ## <a name="remarks"></a>설명  
- `__svm_vmload` 함수는 동일는 `VMLOAD` 컴퓨터 명령입니다. 이 함수는 게스트 운영 체제 및 해당 응용 프로그램과 호스트 가상 컴퓨터 모니터의 상호 작용을 지원합니다. 자세한 내용을 보려면 문서에 대 한 검색 "AMD64 아키텍처 프로그래머의 수동 볼륨 2: 시스템 프로그래밍" 24593, 3.11, 수정 버전 번호에 문서는 [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) 사이트입니다.  
+ `__svm_vmload` 함수는 동일는 `VMLOAD` 컴퓨터 명령입니다. 이 함수는 게스트 운영 체제 및 해당 응용 프로그램과 호스트 가상 머신 모니터의 상호 작용을 지원합니다. 자세한 내용을 보려면 문서에 대 한 검색 "AMD64 아키텍처 프로그래머의 수동 볼륨 2: 시스템 프로그래밍" 24593, 3.11, 수정 버전 번호에 문서는 [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) 사이트입니다.  
   
 ## <a name="requirements"></a>요구 사항  
   

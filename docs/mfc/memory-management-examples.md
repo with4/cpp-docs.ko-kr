@@ -1,13 +1,10 @@
 ---
-title: "메모리 관리: 예 | Microsoft Docs"
-ms.custom: 
+title: '메모리 관리: 예 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - frame allocation [MFC]
 - memory allocation [MFC], data structures
 ms.assetid: f10240f8-b698-4c83-9288-97a54318930b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc937e64a09ecedb127524de384d48860da5764f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 84bc2ce7c084f2951d63eee546df3bf70a2ba1fe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="memory-management-examples"></a>메모리 관리: 예
 이 문서에서는 MFC 프레임 할당과 힙 할당에 대 한 성능을 각 메모리 할당의 세 가지 일반적인 종류를 설명 합니다.  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [개체](#_core_allocation_of_an_object)  
   
-##  <a name="_core_allocation_of_an_array_of_bytes"></a>바이트 배열 할당  
+##  <a name="_core_allocation_of_an_array_of_bytes"></a> 바이트 배열 할당  
   
 #### <a name="to-allocate-an-array-of-bytes-on-the-frame"></a>프레임에 바이트 배열을 할당 하려면  
   
@@ -69,7 +64,7 @@ ms.lasthandoff: 12/21/2017
   
      [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]  
   
-##  <a name="_core_allocation_of_a_data_structure"></a>데이터 구조의 할당  
+##  <a name="_core_allocation_of_a_data_structure"></a> 데이터 구조의 할당  
   
 #### <a name="to-allocate-a-data-structure-on-the-frame"></a>프레임에는 데이터 구조를 할당 하려면  
   
@@ -85,7 +80,7 @@ ms.lasthandoff: 12/21/2017
   
      [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]  
   
-##  <a name="_core_allocation_of_an_object"></a>개체의 할당  
+##  <a name="_core_allocation_of_an_object"></a> 개체의 할당  
   
 #### <a name="to-allocate-an-object-on-the-frame"></a>프레임에 개체를 할당  
   

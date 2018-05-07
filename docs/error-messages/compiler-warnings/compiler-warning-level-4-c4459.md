@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 4) C4459 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 4) C4459 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4459
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4459
 ms.assetid: ee9f6287-9c70-4b10-82a0-add82a13997f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47380915dd18387fa3cc2af54d42a3777aab3f5a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93bdbfe6cceff664e7b7a5f8cee20e8df51e2fb4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4459"></a>컴파일러 경고 (수준 4) C4459
   
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
 이 경고는 Visual c + + 컴파일러 버전 18.00 Visual Studio 2015의 새로운 했습니다. 컴파일러 또는 코드를 마이그레이션하는 동안 나중에 해당 버전에서 발생 한 경고를 표시 하지 않으려면 사용는 [/wv: 18](../../build/reference/compiler-option-warning-level.md) 컴파일러 옵션입니다. 
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
   
  다음 샘플에서는 C4459 오류가 생성 됩니다.  
   

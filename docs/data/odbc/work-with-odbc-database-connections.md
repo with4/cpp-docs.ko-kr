@@ -1,13 +1,10 @@
 ---
-title: "ODBC 데이터베이스 연결을 사용한 작업 | Microsoft Docs"
-ms.custom: 
+title: ODBC 데이터베이스 연결을 사용한 작업 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - databases [C++], connecting to
 - ODBC connections [C++], databases
 ms.assetid: f41a67c7-168d-4657-9999-257535e44c87
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 739c1f106b4da7eac1b9667e55ff07e6ff4fc392
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 02c77f028cdd3e792aa03967f6716b3ce7ce27b3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="work-with-odbc-database-connections"></a>ODBC 데이터베이스 연결을 사용한 작업
 다음 항목에서는 ODBC 데이터 원본에 연결 하는 방법을 설명 합니다.  

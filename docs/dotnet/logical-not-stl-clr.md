@@ -1,12 +1,9 @@
 ---
 title: logical_not (STL/CLR) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::logical_not
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - logical_not function [STL/CLR]
 ms.assetid: 32a2c6e2-1c58-41ac-8827-f3ee5adfe81d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8d27e18d540d9638caf819636a37f243b362d369
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4048c642a1c562237bccba8fa3e5fd5429bba4e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logicalnot-stlclr"></a>logical_not(STL/CLR)
 함수를 설명 하는 템플릿 클래스, 호출 되 면 true를 반환 하거나 경우에 해당 인수를 false로 테스트 합니다. 사용 하면 해당 인수 형식 기준으로 함수 개체를 지정 합니다.  
@@ -78,7 +73,7 @@ public:
   
  함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_logical_not.cpp   

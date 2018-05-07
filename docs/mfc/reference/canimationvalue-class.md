@@ -1,12 +1,9 @@
 ---
-title: "CAnimationValue 클래스 | Microsoft Docs"
-ms.custom: 
+title: CAnimationValue 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationValue
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b37801619fae84519dde000c922d34c4b9e1509
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 923b1b74a50fd13a57c1d9c7696f81acb28453e3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationvalue-class"></a>CAnimationValue 클래스
 하나의 값을 갖는 애니메이션 개체 기능을 구현합니다.  
@@ -83,7 +78,7 @@ class CAnimationValue : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[CAnimationValue::m_value](#m_value)|캡슐화 된 애니메이션 변수 애니메이션 값을 나타냅니다.|  
   
@@ -100,7 +95,7 @@ class CAnimationValue : public CAnimationBaseObject;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationValue::AddTransition  
+##  <a name="addtransition"></a>  CAnimationValue::AddTransition  
  값에 적용할 수에 전환을 추가 합니다.  
   
 ```  
@@ -114,7 +109,7 @@ void AddTransition(CBaseTransition* pTransition);
 ### <a name="remarks"></a>설명  
  애니메이션 변수에 적용할 변환의 내부 목록에 전환을 추가 하려면이 함수를 호출 합니다. 전환에 추가 하면 하지 즉시 적용 되며 내부 목록에 저장 합니다. 전환 (특정 값에 대 한 스토리 보드에 추가 된) 적용 CAnimationController::AnimateGroup를 호출 하는 경우.  
   
-##  <a name="canimationvalue"></a>CAnimationValue::CAnimationValue  
+##  <a name="canimationvalue"></a>  CAnimationValue::CAnimationValue  
  CAnimationValue 개체를 만듭니다.  
   
 ```  
@@ -144,7 +139,7 @@ CAnimationValue(
 ### <a name="remarks"></a>설명  
  기본 속성으로 CAnimationValue 개체를 생성: 기본 값, 그룹 ID 및 개체 ID는 0으로 설정 됩니다.  
   
-##  <a name="getanimationvariablelist"></a>CAnimationValue::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>  CAnimationValue::GetAnimationVariableList  
  목록에 캡슐화 된 애니메이션 변수를 추가합니다.  
   
 ```  
@@ -157,7 +152,7 @@ virtual void GetAnimationVariableList(
  `lst`  
  함수가 반환 될 때 애니메이션된 값을 나타내는 CAnimationVariable에 대 한 포인터를 포함 합니다.  
   
-##  <a name="getvalue"></a>CAnimationValue::GetValue  
+##  <a name="getvalue"></a>  CAnimationValue::GetValue  
  현재 값을 검색 합니다.  
   
 ```  
@@ -178,7 +173,7 @@ BOOL GetValue(INT32& nValue);
 ### <a name="remarks"></a>설명  
  현재 값을 검색 하려면이 함수를 호출 합니다. 이 구현 캡슐화 된 COM 개체를 호출 하 고 호출이 실패 하는 경우이 메서드 SetDefaultValue 사용 하거나 생성자에서 이전에 설정 된 기본 값을 반환 합니다.  
   
-##  <a name="getvariable"></a>CAnimationValue::GetVariable  
+##  <a name="getvariable"></a>  CAnimationValue::GetVariable  
  캡슐화 된 애니메이션 변수에 대 한 액세스를 제공합니다.  
   
 ```  
@@ -191,14 +186,14 @@ CAnimationVariable& GetVariable();
 ### <a name="remarks"></a>설명  
  캡슐화 된 애니메이션 변수에 액세스 하려면이 메서드를 사용 합니다. CAnimationVariable에서 해당 포인터 애니메이션 변수 생성 되지 않은 경우 NULL이 될 수 기본 IUIAnimationVariable 개체에 액세스할 수 있게 합니다.  
   
-##  <a name="m_value"></a>CAnimationValue::m_value  
+##  <a name="m_value"></a>  CAnimationValue::m_value  
  캡슐화 된 애니메이션 변수 애니메이션 값을 나타냅니다.  
   
 ```  
 CAnimationVariable m_value;  
 ```  
   
-##  <a name="operator_double"></a>CAnimationValue::operator DOUBLE  
+##  <a name="operator_double"></a>  CAnimationValue::operator DOUBLE  
  CAnimationValue 및 DOUBLE 간의 변환 기능을 제공 합니다.  
   
 ```  
@@ -211,7 +206,7 @@ operator DOUBLE();
 ### <a name="remarks"></a>설명  
  CAnimationValue 및 DOUBLE 간의 변환 기능을 제공 합니다. 내부적으로이 메서드는 GetValue를 호출 하 고 오류를 확인 하지 않습니다. Getvalue가 실패 하는 경우 반환 되는 값 또는 SetDefaultValue 생성자에서 이전에 설정한 기본값을 포함 됩니다.  
   
-##  <a name="operator_int32"></a>CAnimationValue::operator INT32  
+##  <a name="operator_int32"></a>  CAnimationValue::operator INT32  
  CAnimationValue와 INT32 간의 변환 기능을 제공 합니다.  
   
 ```  
@@ -224,7 +219,7 @@ operator INT32();
 ### <a name="remarks"></a>설명  
  CAnimationValue와 INT32 간의 변환 기능을 제공 합니다. 내부적으로이 메서드는 GetValue를 호출 하 고 오류를 확인 하지 않습니다. Getvalue가 실패 하는 경우 반환 되는 값 또는 SetDefaultValue 생성자에서 이전에 설정한 기본값을 포함 됩니다.  
   
-##  <a name="operator_eq"></a>CAnimationValue::operator =  
+##  <a name="operator_eq"></a>  CAnimationValue::operator =  
  CAnimationValue를 DOUBLE 값을 할당합니다.  
   
 ```  
@@ -242,7 +237,7 @@ void operator=(INT32 nVal);
 ### <a name="remarks"></a>설명  
  CAnimationValue를 DOUBLE 값을 할당합니다. 이 값은 캡슐화 된 애니메이션 변수의 기본 값으로 설정 합니다. 이 애니메이션 개체 (재정의 또는 IntegerValueChanged) 이벤트를 구독 하는 경우 이러한 이벤트를 다시 사용 하도록 설정 해야 합니다.  
   
-##  <a name="setdefaultvalue"></a>CAnimationValue::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>  CAnimationValue::SetDefaultValue  
  기본값을 설정합니다.  
   
 ```  

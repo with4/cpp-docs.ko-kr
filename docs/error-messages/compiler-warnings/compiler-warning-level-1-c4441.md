@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 1) C4441 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 1) C4441 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4441
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C4441
 ms.assetid: 7fc540a5-e41f-47cf-aa37-b2b699c2685e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33337741819d908ce9445d82d905ecfc5738acda
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c2abf64be0e9b80bb4158b0ed163906adc09945
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4441"></a>컴파일러 경고(수준 1) C4441
 호출 규칙의 'cc1'가 무시 됩니다. ' cc2'를 대신 사용  
   
  관리 되는 사용자 정의 형식 및 전역 함수 제네릭 멤버 함수를 사용 해야 합니다는 [__clrcall](../../cpp/clrcall.md) 호출 규칙입니다.  사용 된 컴파일러 `__clrcall`합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C4441 오류가 발생 합니다.  
   
 ```  

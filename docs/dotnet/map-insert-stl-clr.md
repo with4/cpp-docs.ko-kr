@@ -1,12 +1,9 @@
 ---
 title: 'map:: insert (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::map::insert
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - insert member [STL/CLR]
 ms.assetid: 599c702e-7db0-45b8-8247-4ff041a3639c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 495a3e80e28ea70f1784f12ee9750050847e6e2a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a06fa94e9752d72e8743d3a360ffd81bc9322db1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapinsert-stlclr"></a>map::insert(STL/CLR)
 요소를 추가합니다.  
@@ -70,7 +65,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
   
  제어 된 시퀀스의 요소 수 로그 비례 하는 시간을 사용 하는 각 요소를 삽입 합니다. 그러나 삽입 발생할 수 있습니다 분할 상환된 상수 시간에 삽입 지점에 인접 하는 요소를 지정 하는 힌트를 제공 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_map_insert.cpp   

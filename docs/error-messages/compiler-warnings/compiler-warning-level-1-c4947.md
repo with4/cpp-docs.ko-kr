@@ -2,12 +2,9 @@
 title: 컴파일러 경고 (수준 1) C4947 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C4947
 dev_langs:
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C4947
 ms.assetid: 5a1d484e-b4c7-4de2-a145-d8dcfc2fc1d2
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e24b2ec34c81152088bf2e9cee73237dfa43b41b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eee8c74e6767f881358db3d4ce21887b56da123e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4947"></a>컴파일러 경고(수준 1) C4947
 'type_or_member': 사용되지 않는 것으로 표시되었습니다.  
   
 멤버 또는 형식이 <xref:System.ObsoleteAttribute> 클래스에서 사용되지 않는 것으로 표시되었습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
 다음 샘플에서는 C4947을 생성합니다.  
   
 ```cpp  

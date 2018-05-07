@@ -1,13 +1,10 @@
 ---
-title: "문서, 뷰 및 프레임 워크 | Microsoft Docs"
-ms.custom: 
+title: 문서, 뷰 및 프레임 워크 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - MFC object relationships
 - thread objects [MFC]
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e48872907b07b0adf18cf17cca6ec6ecabe9e2de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2a30f2ccf1963fe2985794a2bf8eca0c49474cb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="documents-views-and-the-framework"></a>문서, 뷰 및 프레임워크
 MFC 프레임 워크의 핵심에는 문서 및 보기의 개념입니다. 문서에는 편집 세션에는 사용자가 데이터 개체입니다. 의해 만들어집니다는 `New` 또는 **열려** 명령을 **파일** 메뉴 일반적으로 파일에 저장 됩니다. (클래스에서 파생 되는 표준 MFC 문서 **CDocument**, 액티브 문서 및 OLE의 복합 문서와 다릅니다.) 뷰를 통해 사용자 상호 작용 하는 문서와 window 개체는.  

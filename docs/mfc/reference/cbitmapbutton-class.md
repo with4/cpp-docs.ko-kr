@@ -1,12 +1,9 @@
 ---
-title: "CBitmapButton 클래스 | Microsoft Docs"
-ms.custom: 
+title: CBitmapButton 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBitmapButton
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d926e538cf9f9f1cb4935a1d53ba6c1fd7f4696e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ba2a3f54ff39341c43ee497fcccda43cd3625fa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbitmapbutton-class"></a>CBitmapButton 클래스
 텍스트가 아닌 비트맵 이미지로 레이블이 표시된 누름 단추 컨트롤을 만듭니다.  
@@ -61,7 +56,7 @@ class CBitmapButton : public CButton
 |[CBitmapButton::SizeToContent](#sizetocontent)|비트맵에 맞게 단추 크기를 조정 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CBitmapButton`개체 단추 간주 될 수 있는 여러 상태에 대 한 이미지를 포함 하는 최대 4 개의 비트맵에 포함: 위쪽 (또는 일반) 아래쪽 (또는 선택한) 치중 하 고 사용 하지 않도록 설정 합니다. 첫 번째 비트맵에만 필수 사항입니다. 나머지는 선택 사항입니다.  
+ `CBitmapButton` 개체 단추 간주 될 수 있는 여러 상태에 대 한 이미지를 포함 하는 최대 4 개의 비트맵에 포함: 위쪽 (또는 일반) 아래쪽 (또는 선택한) 치중 하 고 사용 하지 않도록 설정 합니다. 첫 번째 비트맵에만 필수 사항입니다. 나머지는 선택 사항입니다.  
   
  비트맵 단추 이미지의 테두리는 이미지 뿐만 아니라 이미지 자체 포함 됩니다. 테두리는 일반적으로 한 역할 단추의 상태를 표시 합니다. 예를 들어 포커스가 있는 상태에 대 한 비트맵은 일반적으로 같은 테두리 또는 테두리에 굵은 실선에서 파선된 사각형 inset 하면서도 최신 상태에 대 한 하나입니다. 비트맵의 disabled 일반적으로 상태에 대 한 유사 한 놓여 않았으나 낮은 대비 (예: 회색 또는 흐리게 메뉴 선택)에 대 한 합니다.  
   
@@ -102,7 +97,7 @@ class CBitmapButton : public CButton
   
 6.  에 `CDialog` 개체의 [OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) 루틴을 호출은 `CBitmapButton` 개체의 [AutoLoad](#autoload) 단추의 컨트롤 ID의 매개 변수로 사용 하 여 작동할 및 `CDialog` 개체의 **이** 포인터입니다.  
   
- 와 같은 Windows 알림 메시지를 처리 하려면 **BN_CLICKED**를 해당 부모 스 비트맵 단추 컨트롤에서 보낸, (클래스에서 파생 되는 일반적으로 **CDialog)**에 추가 `CDialog`-파생 된 각 메시지에 대 한 메시지 맵 항목 및 메시지 처리기 멤버 함수는 개체입니다. 보낸 알림의 `CBitmapButton` 전송한 것과 동일 하 게 한 [CButton](../../mfc/reference/cbutton-class.md) 개체입니다.  
+ 와 같은 Windows 알림 메시지를 처리 하려면 **BN_CLICKED**를 해당 부모 스 비트맵 단추 컨트롤에서 보낸, (클래스에서 파생 되는 일반적으로 **CDialog)** 에 추가 `CDialog`-파생 된 각 메시지에 대 한 메시지 맵 항목 및 메시지 처리기 멤버 함수는 개체입니다. 보낸 알림의 `CBitmapButton` 전송한 것과 동일 하 게 한 [CButton](../../mfc/reference/cbutton-class.md) 개체입니다.  
   
  클래스 [CToolBar](../../mfc/reference/ctoolbar-class.md) 비트맵 단추에는 다른 방식을 사용 합니다.  
   
@@ -122,7 +117,7 @@ class CBitmapButton : public CButton
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxext.h  
   
-##  <a name="autoload"></a>CBitmapButton::AutoLoad  
+##  <a name="autoload"></a>  CBitmapButton::AutoLoad  
  대화 상자에서 단추의 개체와 연결 된 `CBitmapButton` 클래스 이름으로는 bitmap(s)를 로드 하 고 비트맵에 맞게 단추 크기를 조정 합니다.  
   
 ```  
@@ -144,10 +139,10 @@ BOOL AutoLoad(
 ### <a name="remarks"></a>설명  
  사용 하 여는 `AutoLoad` 소유자 그리기 단추는 비트맵 단추와 대화 상자에서 초기화 하는 함수입니다. 이 함수를 사용 하기 위한 지침은 대 한 설명에는 `CBitmapButton` 클래스입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCControlLadenDialog#75](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]  
   
-##  <a name="cbitmapbutton"></a>CBitmapButton::CBitmapButton  
+##  <a name="cbitmapbutton"></a>  CBitmapButton::CBitmapButton  
  
           `CBitmapButton` 개체를 만듭니다.  
   
@@ -158,10 +153,10 @@ CBitmapButton();
 ### <a name="remarks"></a>설명  
  C + +를 만든 후 `CBitmapButton` 개체, 호출 [CButton::Create](../../mfc/reference/cbutton-class.md#create) Windows 단추 컨트롤을 만들고에 연결 하는 `CBitmapButton` 개체입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCControlLadenDialog#57](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]  
   
-##  <a name="loadbitmaps"></a>CBitmapButton::LoadBitmaps  
+##  <a name="loadbitmaps"></a>  CBitmapButton::LoadBitmaps  
  리소스 이름 또는 ID 번호 또는 사용할 수 없는 경우를 식별 하는 비트맵 이미지를 로드 하려는 경우이 함수를 사용 하 여는 `AutoLoad` 예를 들어 대화 상자에 속하지 않는 하는 비트맵 단추 만들어지기 때문에 작동 합니다.  
   
 ```  
@@ -207,17 +202,17 @@ BOOL LoadBitmaps(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCControlLadenDialog#58](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]  
   
-##  <a name="sizetocontent"></a>CBitmapButton::SizeToContent  
+##  <a name="sizetocontent"></a>  CBitmapButton::SizeToContent  
  비트맵 단추는 비트맵의 크기를 조정 하려면이 함수를 호출 합니다.  
   
 ```  
 void SizeToContent();
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCControlLadenDialog#59](../../mfc/codesnippet/cpp/cbitmapbutton-class_4.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

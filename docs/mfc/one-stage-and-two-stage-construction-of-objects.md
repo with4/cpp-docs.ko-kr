@@ -1,13 +1,10 @@
 ---
-title: "1 단계 및 2 단계 개체 생성 | Microsoft Docs"
-ms.custom: 
+title: 1 단계 및 2 단계 개체 생성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - objects [MFC], graphic objects
 - one-stage and two-stage construction of objects [MFC]
 ms.assetid: 5a1c410c-4a4b-4dd9-a2ec-ced831aa7f21
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 677a29d4f0b65a9490f24a5906d606a05bb4573b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c53f99932887acad4d2eab5c15ed73b66b359fd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="one-stage-and-two-stage-construction-of-objects"></a>1단계 및 2단계 개체 생성
 펜과 브러시와 같은 그래픽 개체를 만들기 위한 다음 두 가지 기술 중 하나를 선택을 해야 합니다.  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFCDocViewSDI#6](../mfc/codesnippet/cpp/one-stage-and-two-stage-construction-of-objects_1.cpp)]  
   
-### <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+### <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [그래픽 개체](../mfc/graphic-objects.md)  
   

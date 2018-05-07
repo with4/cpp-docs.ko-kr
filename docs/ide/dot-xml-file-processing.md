@@ -1,29 +1,24 @@
 ---
-title: ". Xml 파일 처리 | Microsoft Docs"
-ms.custom: 
+title: . Xml 파일 처리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b3340df4ef1d36994182e2315c8eb437e76fd4e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cf6f5660e1aaeaeff4050bb80009eda7d14c3ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="xml-file-processing"></a>.Xml 파일 처리
 컴파일러는 문서 생성을 위해 태그가 지정되는 코드의 각 구문에 대해 ID 문자열을 생성합니다. 자세한 내용은 참조 [태그 문서 주석에 권장](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)합니다. ID 문자열은 구문을 고유하게 식별합니다. .Xml 파일을 처리 하는 프로그램 ID 문자열을 사용 설명서 적용 되는 해당.NET Framework 리플렉션 또는 메타 데이터 항목을 식별할 수 있습니다.  
@@ -93,7 +88,7 @@ ms.lasthandoff: 12/21/2017
   
      제네릭 형식 매개 변수는 메서드의 제네릭 형식 매개 변수로, 백 틱 앞에 추가 되는 번호로 지정 됩니다 (예를 들어 \`0, \`1).  각 숫자는 해당 형식의 제네릭 매개 변수에 대한 0부터 시작되는 배열 표기법을 나타냅니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예에서는 클래스에 대 한 ID 문자열 하는 방법을 보여 줍니다. 및 해당 멤버 생성 됩니다.  
   
 ```  

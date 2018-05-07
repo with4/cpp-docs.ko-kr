@@ -1,12 +1,9 @@
 ---
-title: "심각한 오류 C1010 | Microsoft Docs"
-ms.custom: 
+title: 심각한 오류 C1010 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C1010
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b2123118be2a8a382f6b718499c5af16f88d111
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf8af35b28cfa02bd2723ff3c78db04a27cc39ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fatal-error-c1010"></a>심각한 오류 C1010
 미리 컴파일된 헤더를 찾는 동안 예기치 않은 파일의 끝이 나타났습니다. 추가 하 였는 ' #include 이름 ' 소스에?  
@@ -44,4 +39,4 @@ ms.lasthandoff: 12/21/2017
   
     4.  오른쪽 창에서 클릭 **미리 컴파일된 헤더 만들기/사용**, 클릭 하 고 **미리 컴파일된 헤더 사용 안 함**합니다.  
   
--   잘못 삭제, 바꾸었거나 헤더 파일을 제거 되었는지 확인 (기본적으로 stdafx.h) 현재 프로젝트에서. 이 파일은 또한 사용 하 여 소스 파일의 다른 코드 보다 먼저 포함 될 필요 **#include "stdafx.h"**합니다. (으로이 헤더 파일을 지정 **파일에서 PCH 만들기/사용** 프로젝트 속성)
+-   잘못 삭제, 바꾸었거나 헤더 파일을 제거 되었는지 확인 (기본적으로 stdafx.h) 현재 프로젝트에서. 이 파일은 또한 사용 하 여 소스 파일의 다른 코드 보다 먼저 포함 될 필요 **#include "stdafx.h"** 합니다. (으로이 헤더 파일을 지정 **파일에서 PCH 만들기/사용** 프로젝트 속성)

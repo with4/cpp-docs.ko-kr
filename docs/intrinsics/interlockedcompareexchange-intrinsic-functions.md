@@ -1,12 +1,9 @@
 ---
-title: "_InterlockedCompareExchange 내장 함수 | Microsoft Docs"
-ms.custom: 
+title: _InterlockedCompareExchange 내장 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _InterlockedCompareExchange_HLERelease
@@ -57,17 +54,15 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a59050eede8a89825f54e1d5b0d13dd95a22670a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3b0fc52585171df740f70e12d81d849e3726dcd7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>_InterlockedCompareExchange 내장 함수
 **Microsoft 전용**  
@@ -228,7 +223,7 @@ __int64 _InterlockedCompareExchange64_rel(
   
  이러한 루틴은 내장 함수로만 사용할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 간단한 하위 수준 스레드 동기화에 `_InterlockedCompareExchange`를 사용합니다. 이 방식은 다중 스레드 프로그래밍의 기준으로 사용하기에는 한계가 있으며, 일반적인 연관 내장 함수 사용 방법을 보여 주기 위한 용도로 제공됩니다. 최상의 결과를 얻으려면 Windows API를 사용합니다. 다중 스레드 프로그래밍에 대 한 자세한 내용은 참조 하십시오. [다중 스레드 Win32 프로그램 작성](../parallel/writing-a-multithreaded-win32-program.md)합니다.  
   
 ```  

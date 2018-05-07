@@ -1,12 +1,9 @@
 ---
-title: "CMFCDesktopAlertWnd 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCDesktopAlertWnd 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDesktopAlertWnd
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfebb488921d81c36f842885ad49eae3f40a37fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cf09b2f598391a599df5106fcf8933c580dd30e3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 `CMFCDesktopAlertWnd` 클래스는 이벤트에 대 한 사용자에 게 화면에 나타나는 모덜리스 대화 상자의 기능을 구현 합니다.  
@@ -130,7 +125,7 @@ class CMFCDesktopAlertWnd : public CWnd
   
 -   호출 하 여 캡션 크기를 작음으로 변경 [CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption)합니다. 작은 캡션은 높은 7 픽셀입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다양 한 메서드를 사용 하는 방법을 보여 주는 다음 예제는 `CMFCDesktopAlertWnd` 구성 하는 클래스는 `CMFCDesktopAlertWnd` 개체입니다. 애니메이션 유형을 설정, 팝업 창의 투명도 설정 하 고, 작은 캡션 경고 창에 표시 되는지 지정 하 고 경고 창이 자동으로 닫힙니다. 되기 전 까지의 경과 시간을 설정 하는 방법을 보여 줍니다. 만들고 바탕 화면 경고 창이 초기화 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [바탕 화면 경고 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#1](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwnd-class_1.cpp)]  
@@ -147,7 +142,7 @@ class CMFCDesktopAlertWnd : public CWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxDesktopAlertWnd.h  
   
-##  <a name="create"></a>Cmfcdesktopalertwnd:: Create  
+##  <a name="create"></a>  Cmfcdesktopalertwnd:: Create  
  만들고 바탕 화면 경고 창이 초기화 합니다.  
   
 ```  
@@ -167,7 +162,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] [out]`pWndOwner`  
+ [in] [out] `pWndOwner`  
  경고 창의 소유자를 지정합니다. 해당 소유자는 바탕 화면 경고 창이 대 한 모든 알림을 받을 것입니다. 이 값은 `NULL`일 수 없습니다.  
   
  [in] `uiDlgResID`  
@@ -186,7 +181,7 @@ virtual BOOL Create(
  경고 창을 만드는 데 사용 되는 매개 변수를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`경고 창이 성공적으로 만들어진 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 경고 창이 성공적으로 만들어진 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  경고 창을 만들도록이 메서드를 호출 합니다. 경고 창의 클라이언트 영역에는 사용자에 게 표시 되는 모든 컨트롤을 호스트 하는 자식 대화 상자가 포함 되어 있습니다.  
@@ -195,7 +190,7 @@ virtual BOOL Create(
   
  두 번째 메서드 오버 로드에는 기본 컨트롤을 포함 하는 경고 창을 만듭니다. 컨트롤을 수정 하 여 표시를 지정할 수 있습니다는 [CMFCDesktopAlertWndInfo 클래스](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)합니다.  
   
-##  <a name="getanimationspeed"></a>CMFCDesktopAlertWnd::GetAnimationSpeed  
+##  <a name="getanimationspeed"></a>  CMFCDesktopAlertWnd::GetAnimationSpeed  
  애니메이션 속도 반환합니다.  
   
 ```  
@@ -208,7 +203,7 @@ UINT GetAnimationSpeed() const;
 ### <a name="remarks"></a>설명  
  애니메이션 속도 경고 창이 열리고 닫힙니다 속도 설명 합니다.  
   
-##  <a name="getanimationtype"></a>CMFCDesktopAlertWnd::GetAnimationType  
+##  <a name="getanimationtype"></a>  CMFCDesktopAlertWnd::GetAnimationType  
  애니메이션 형식을 반환합니다.  
   
 ```  
@@ -228,7 +223,7 @@ CMFCPopupMenu::ANIMATION_TYPE GetAnimationType();
   
 - `SYSTEM_DEFAULT_ANIMATION`  
   
-##  <a name="getautoclosetime"></a>CMFCDesktopAlertWnd::GetAutoCloseTime  
+##  <a name="getautoclosetime"></a>  CMFCDesktopAlertWnd::GetAutoCloseTime  
  자동 닫기 제한 시간을 반환합니다.  
   
 ```  
@@ -241,7 +236,7 @@ int GetAutoCloseTime() const;
 ### <a name="remarks"></a>설명  
  이 메서드를 사용 하 여 경고 창이 자동으로 닫힙니다. 전에 남은 시간 경과 결정 합니다.  
   
-##  <a name="getcaptionheight"></a>CMFCDesktopAlertWnd::GetCaptionHeight  
+##  <a name="getcaptionheight"></a>  CMFCDesktopAlertWnd::GetCaptionHeight  
  캡션 높이 반환합니다.  
   
 ```  
@@ -254,7 +249,7 @@ virtual int GetCaptionHeight();
 ### <a name="remarks"></a>설명  
  이 메서드는 파생된 클래스에서 재정의할 수 있습니다. 기본 구현 중 하나: 작은 캡션 또는 Windows API 함수에서 얻은 값 팝업 창이 표시 되는 경우 작은 캡션 높이 값 (7 픽셀)를 반환 `GetSystemMetrics(SM_CYSMCAPTION)`합니다.  
   
-##  <a name="getlastpos"></a>CMFCDesktopAlertWnd::GetLastPos  
+##  <a name="getlastpos"></a>  CMFCDesktopAlertWnd::GetLastPos  
  화면에서 바탕 화면 경고 창이의 마지막 위치를 반환합니다.  
   
 ```  
@@ -267,7 +262,7 @@ CPoint GetLastPos() const;
 ### <a name="remarks"></a>설명  
  이 메서드는 화면에 경고 창의 마지막 유효한 위치를 반환합니다.  
   
-##  <a name="gettransparency"></a>CMFCDesktopAlertWnd::GetTransparency  
+##  <a name="gettransparency"></a>  CMFCDesktopAlertWnd::GetTransparency  
  투명도 수준을 반환합니다.  
   
 ```  
@@ -280,7 +275,7 @@ BYTE GetTransparency() const;
 ### <a name="remarks"></a>설명  
  이 메서드를 사용 하 여 경고 창이 현재 투명도 수준을 검색할 수 있습니다.  
   
-##  <a name="hassmallcaption"></a>CMFCDesktopAlertWnd::HasSmallCaption  
+##  <a name="hassmallcaption"></a>  CMFCDesktopAlertWnd::HasSmallCaption  
  작은 캡션 또는 보통 크기로 캡션 바탕 화면 경고 창이 있는지 여부를 결정 합니다.  
   
 ```  
@@ -288,12 +283,12 @@ BOOL HasSmallCaption() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`작은 캡션; 팝업 창이 표시 되는 경우 `FALSE` 보통 크기의 캡션을 사용 하 여 팝업 창이 표시 됩니다.  
+ `TRUE` 작은 캡션; 팝업 창이 표시 되는 경우 `FALSE` 보통 크기의 캡션을 사용 하 여 팝업 창이 표시 됩니다.  
   
 ### <a name="remarks"></a>설명  
  작은 캡션 또는 보통 크기로 캡션 팝업 창에 있는지 확인 하려면이 메서드를 사용 합니다. 기본적으로 작은 캡션은 높은 7 픽셀입니다. Windows API 함수를 호출 하 여 보통 크기로 캡션의 높이 가져올 수 있습니다 `GetSystemMetrics(SM_CYCAPTION)`합니다.  
   
-##  <a name="onbeforeshow"></a>CMFCDesktopAlertWnd::OnBeforeShow  
+##  <a name="onbeforeshow"></a>  CMFCDesktopAlertWnd::OnBeforeShow  
 
   
 ```  
@@ -307,7 +302,7 @@ virtual BOOL OnBeforeShow(CPoint&);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onclicklinkbutton"></a>CMFCDesktopAlertWnd::OnClickLinkButton  
+##  <a name="onclicklinkbutton"></a>  CMFCDesktopAlertWnd::OnClickLinkButton  
  바탕 화면 알림 메뉴에 있는 링크 단추를 클릭할 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -324,7 +319,7 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ### <a name="remarks"></a>설명  
  파생된 클래스에서이 메서드를 재정의 하 여 알림 창에서 링크를 클릭할 때 알림을 받을 수 있습니다.  
   
-##  <a name="oncommand"></a>CMFCDesktopAlertWnd::OnCommand  
+##  <a name="oncommand"></a>  CMFCDesktopAlertWnd::OnCommand  
 
   
 ```  
@@ -341,7 +336,7 @@ virtual BOOL OnCommand(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ondraw"></a>CMFCDesktopAlertWnd::OnDraw  
+##  <a name="ondraw"></a>  CMFCDesktopAlertWnd::OnDraw  
 
   
 ```  
@@ -353,7 +348,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="processcommand"></a>CMFCDesktopAlertWnd::ProcessCommand  
+##  <a name="processcommand"></a>  CMFCDesktopAlertWnd::ProcessCommand  
 
   
 ```  
@@ -367,7 +362,7 @@ BOOL ProcessCommand(HWND hwnd);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setanimationspeed"></a>CMFCDesktopAlertWnd::SetAnimationSpeed  
+##  <a name="setanimationspeed"></a>  CMFCDesktopAlertWnd::SetAnimationSpeed  
  새 애니메이션 속도 설정합니다.  
   
 ```  
@@ -381,7 +376,7 @@ void SetAnimationSpeed(UINT nSpeed);
 ### <a name="remarks"></a>설명  
  경고 창에 대 한 애니메이션 속도 설정 하려면이 메서드를 호출 합니다. 기본 애니메이션 속도 30 밀리초입니다.  
   
-##  <a name="setanimationtype"></a>CMFCDesktopAlertWnd::SetAnimationType  
+##  <a name="setanimationtype"></a>  CMFCDesktopAlertWnd::SetAnimationType  
  애니메이션 유형을 설정합니다.  
   
 ```  
@@ -405,7 +400,7 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
   
 - `SYSTEM_DEFAULT_ANIMATION`  
   
-##  <a name="setautoclosetime"></a>CMFCDesktopAlertWnd::SetAutoCloseTime  
+##  <a name="setautoclosetime"></a>  CMFCDesktopAlertWnd::SetAutoCloseTime  
  자동 닫기 제한 시간을 설정합니다.  
   
 ```  
@@ -419,7 +414,7 @@ void SetAutoCloseTime(int nTime);
 ### <a name="remarks"></a>설명  
  사용자는 창 상호 작용 하지 하는 경우 지정된 된 시간 이후에 경고 창이 자동으로 닫혀 있습니다.  
   
-##  <a name="setsmallcaption"></a>CMFCDesktopAlertWnd::SetSmallCaption  
+##  <a name="setsmallcaption"></a>  CMFCDesktopAlertWnd::SetSmallCaption  
  캡션 작고 보통 크기로 전환 합니다.  
   
 ```  
@@ -428,12 +423,12 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bSmallCaption`  
- `TRUE`작은 캡션; 알림 창에 표시 되는지 지정 하려면 그렇지 않으면 `FALSE` 경고 창이 보통 크기로 캡션이 표시 되는지 지정 하려면.  
+ `TRUE` 작은 캡션; 알림 창에 표시 되는지 지정 하려면 그렇지 않으면 `FALSE` 경고 창이 보통 크기로 캡션이 표시 되는지 지정 하려면.  
   
 ### <a name="remarks"></a>설명  
  소형 또는 보통 크기로 캡션을 표시 하려면이 메서드를 호출 합니다. 기본적으로 작은 캡션은 높은 7 픽셀입니다. Windows API 함수를 호출 하 여 일반 캡션의 크기를 가져올 수 있습니다 `GetSystemMetrics(SM_CYCAPTION)`합니다.  
   
-##  <a name="settransparency"></a>CMFCDesktopAlertWnd::SetTransparency  
+##  <a name="settransparency"></a>  CMFCDesktopAlertWnd::SetTransparency  
  팝업 창의 투명도 수준을 설정합니다.  
   
 ```  
@@ -447,7 +442,7 @@ void SetTransparency(BYTE nTransparency);
 ### <a name="remarks"></a>설명  
  팝업 창의 투명도 수준을 설정 하려면이 함수를 호출 합니다.  
   
-##  <a name="getdialogsize"></a>CMFCDesktopAlertWnd::GetDialogSize  
+##  <a name="getdialogsize"></a>  CMFCDesktopAlertWnd::GetDialogSize  
 
   
 ```  

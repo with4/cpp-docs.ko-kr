@@ -1,12 +1,9 @@
 ---
-title: "CSmoothStopTransition 클래스 | Microsoft Docs"
-ms.custom: 
+title: CSmoothStopTransition 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSmoothStopTransition
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CSmoothStopTransition [MFC], m_dblFinalValue
 - CSmoothStopTransition [MFC], m_maximumDuration
 ms.assetid: e1a4b476-6f96-43dd-90db-870a64406b85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50753ab65b960ac590c3f859133adf9da903aeda
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e7f87c83b9f4c3840318b27922f758787d929d1e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csmoothstoptransition-class"></a>CSmoothStopTransition 클래스
 부드러운 중지 전환을 캡슐화합니다.  
@@ -78,7 +73,7 @@ class CSmoothStopTransition : public CBaseTransition;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="create"></a>CSmoothStopTransition::Create  
+##  <a name="create"></a>  CSmoothStopTransition::Create  
  캡슐화 된 전환 COM 개체를 만드는 전환 라이브러리를 호출 합니다.  
   
 ```  
@@ -94,7 +89,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>반환 값  
  TRUE 이면 전환을 만들었습니다. 그렇지 않으면 FALSE입니다.  
   
-##  <a name="csmoothstoptransition"></a>CSmoothStopTransition::CSmoothStopTransition  
+##  <a name="csmoothstoptransition"></a>  CSmoothStopTransition::CSmoothStopTransition  
  부드러운 중지 전환을 생성 하 고 해당 최대 기간 및 최종 값을 초기화 합니다.  
   
 ```  
@@ -110,14 +105,14 @@ CSmoothStopTransition(
  `dblFinalValue`  
  전환의 끝에서 애니메이션 변수의 값입니다.  
   
-##  <a name="m_dblfinalvalue"></a>CSmoothStopTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>  CSmoothStopTransition::m_dblFinalValue  
  전환의 끝에서 애니메이션 변수의 값입니다.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="m_maximumduration"></a>CSmoothStopTransition::m_maximumDuration  
+##  <a name="m_maximumduration"></a>  CSmoothStopTransition::m_maximumDuration  
  전환의 최대 기간입니다.  
   
 ```  

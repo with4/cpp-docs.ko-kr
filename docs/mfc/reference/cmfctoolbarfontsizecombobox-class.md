@@ -1,12 +1,9 @@
 ---
-title: "CMFCToolBarFontSizeComboBox 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCToolBarFontSizeComboBox 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarFontSizeComboBox
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ba8dde4142cff3606cc2b5ad1861096637f68c7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b2c5734618bf1bedc72fe78dbeaada8c437391f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>CMFCToolBarFontSizeComboBox 클래스
 글꼴 크기를 선택할 수 있도록 해 주는 콤보 상자 컨트롤을 포함 하는 도구 모음 단추입니다.  
@@ -67,7 +62,7 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
   
  사용자가 새 글꼴을 선택 하는 경우는 `CMFCToolBarFontComboBox` 개체를 사용 하 여 지원 되는 크기를 글꼴에 대 한 글꼴 크기 콤보 상자를 채울 수 있습니다는 [CMFCToolBarFontSizeComboBox::RebuildFontSizes](#rebuildfontsizes) 메서드.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서 다양 한 메서드를 사용 하는 방법을 보여 줍니다는 `CMFCToolBarFontSizeComboBox` 구성 하는 클래스는 `CMFCToolBarFontSizeComboBox` 개체입니다. 이 예제에서는 트윕의 글꼴 크기, 텍스트 상자에서 검색 하 고 모든 유효한 크기가 지정 된 글꼴의 글꼴 크기 콤보 상자 채우기 트윕에서 글꼴 크기를 지정 하는 방법을 보여 줍니다. 이 코드 조각은 [워드 패드 샘플](../../visual-cpp-samples.md)의 일부입니다.  
   
  [!code-cpp[NVC_MFC_WordPad#8](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontsizecombobox-class_1.cpp)]  
@@ -84,14 +79,14 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxtoolbarfontcombobox.h  
   
-##  <a name="cmfctoolbarfontsizecombobox"></a>CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox  
+##  <a name="cmfctoolbarfontsizecombobox"></a>  CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox  
  `CMFCToolBarFontSizeComboBox` 개체를 생성합니다.  
   
 ```  
 CMFCToolBarFontSizeComboBox();
 ```  
   
-##  <a name="gettwipsize"></a>CMFCToolBarFontSizeComboBox::GetTwipSize  
+##  <a name="gettwipsize"></a>  CMFCToolBarFontSizeComboBox::GetTwipSize  
  글꼴 크기 콤보 상자의 텍스트 상자에서 트윕의 글꼴 크기를 검색합니다.  
   
 ```  
@@ -101,7 +96,7 @@ int GetTwipSize() const;
 ### <a name="return-value"></a>반환 값  
  반환 값이 양수 일 경우 트윕에서 글꼴 크기입니다. 것은 콤보 상자의 텍스트 상자가 비어 있으면-1입니다. -2는 오류가 발생 하는 경우.  
   
-##  <a name="rebuildfontsizes"></a>CMFCToolBarFontSizeComboBox::RebuildFontSizes  
+##  <a name="rebuildfontsizes"></a>  CMFCToolBarFontSizeComboBox::RebuildFontSizes  
  모든 유효한 크기 지정 된 글꼴의 글꼴 크기 콤보 상자를 채웁니다.  
   
 ```  
@@ -115,7 +110,7 @@ void RebuildFontSizes(const CString& strFontName);
 ### <a name="remarks"></a>설명  
  글꼴 콤보 상자에서 선택 하 고 글꼴 크기 콤보 상자와 같은 동기화 하려는 경우이 함수를 호출는 [CMFCToolBarFontComboBox 클래스](../../mfc/reference/cmfctoolbarfontcombobox-class.md)합니다.  
   
-##  <a name="settwipsize"></a>CMFCToolBarFontSizeComboBox::SetTwipSize  
+##  <a name="settwipsize"></a>  CMFCToolBarFontSizeComboBox::SetTwipSize  
  라운드 지정된 된 크기 (트윕) 점 및 다음 집합에서 가장 가까운 크기를 해당 값에 콤보 상자에서 선택한 크기입니다.  
   
 ```  

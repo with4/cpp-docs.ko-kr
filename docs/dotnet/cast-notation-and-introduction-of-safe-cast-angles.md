@@ -1,13 +1,10 @@
 ---
-title: "캐스트 표기법 및 safe_cast의 도입&lt; &gt; | Microsoft Docs"
-ms.custom: 
+title: 캐스트 표기법 및 safe_cast의 도입&lt; &gt; | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - C-style casts and /clr, motivation for new cast notation
 - safe_cast keyword [C++]
 ms.assetid: 4eb1d000-3b93-4394-a37b-8b8563f8dc4d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 80d1a6e8b1a1691b4e76bfdc1232c95c22d01408
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b9432b40099f9893d7fd270faf5375646fb0493
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cast-notation-and-introduction-of-safecastltgt"></a>캐스트 표기법 및 safe_cast의 도입&lt;&gt;
 캐스트 표기법 Visual c + + Managed Extensions for c + + 변경 되었습니다.  
@@ -78,7 +73,7 @@ X x = X::X( 10 );
   
  제안서를 이전 상태로 만드는 추가 고려 사항에 대 한 여러 대체 표기법이 고려 되었으며 되었고 가지 위원회 폼의 하므로 (`?type`)는 알 수-표시 된 즉, 동적 특성입니다. 이 표기법을 사용 하면 정적 또는 동적 두 형식 사이 전환 하는 기능 아무도 하지만 너무 되어 기쁩니다. 따라서부터 다시 했습니다. 세 번째 및 성공이 이제 표준 `dynamic_cast<type>`, 4 개의 새 스타일의 캐스트 표기법의 집합에 일반화 된입니다.  
   
- ISO-c + +에서 `dynamic_cast` 반환 `0` 적절 하지 않은 포인터 형식에 적용 하 고 throw 하는 경우는 `std::bad_cast` 참조 형식에 적용 하는 동안 예외가 발생 했습니다. Managed extensions for c + +에서는 적용 `dynamic_cast` 항상 반환 됩니다 (포인터 표현)로 인해 관리 되는 참조 형식에 `0`합니다. `__try_cast<type>`함수와 유사한 버전으로의 변형을 throw 된 예외에 도입 된는 `dynamic_cast`throw 한다는 점을 제외 하 고, `System::InvalidCastException` 캐스팅에 실패 하는 경우.  
+ ISO-c + +에서 `dynamic_cast` 반환 `0` 적절 하지 않은 포인터 형식에 적용 하 고 throw 하는 경우는 `std::bad_cast` 참조 형식에 적용 하는 동안 예외가 발생 했습니다. Managed extensions for c + +에서는 적용 `dynamic_cast` 항상 반환 됩니다 (포인터 표현)로 인해 관리 되는 참조 형식에 `0`합니다. `__try_cast<type>` 함수와 유사한 버전으로의 변형을 throw 된 예외에 도입 된는 `dynamic_cast`throw 한다는 점을 제외 하 고, `System::InvalidCastException` 캐스팅에 실패 하는 경우.  
   
 ```  
 public __gc class ItemVerb;  

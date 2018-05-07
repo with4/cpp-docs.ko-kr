@@ -1,13 +1,10 @@
 ---
-title: "사용자 인터페이스 개체 및 명령 Id | Microsoft Docs"
-ms.custom: 
+title: 사용자 인터페이스 개체 및 명령 Id | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - command routing [MFC], MFC
 - command handling [MFC], user-interface objects
 ms.assetid: 4ea19e9b-ed1e-452e-bd33-7f509107a45b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e085c6d9e4d030c8db44e11e570ffa1033abee35
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b56babf0e42dde521a6bda3a7d9713db519182c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-interface-objects-and-command-ids"></a>사용자 인터페이스 개체 및 명령 ID
 메뉴 항목과 도구 모음 단추 액셀러레이터 키 "사용자 인터페이스 개체"은 명령을 생성할 수 있습니다. 각 사용자 인터페이스 개체에는 ID가 있습니다. 명령을 사용 하 여 개체 및 명령에는 동일한 ID를 지정 하 여 사용자 인터페이스 개체를 연결 합니다. 에 설명 된 대로 [메시지](../mfc/messages.md), 특별 한 메시지로 명령을 구현 됩니다. 그림 "명령에 다음 프레임 워크" 프레임 워크 명령을 관리 하는 방법을 보여 줍니다. 사용자 인터페이스 개체를 생성할 때, 명령의 같은 `ID_EDIT_CLEAR_ALL`, 명령을 처리 응용 프로그램의 개체 중 하나-문서 개체 아래 그림에 `OnEditClearAll` 문서의 메시지 맵을 통해 호출 합니다.  

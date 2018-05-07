@@ -1,12 +1,9 @@
 ---
-title: "동적 접근자 사용 | Microsoft Docs"
-ms.custom: 
+title: 동적 접근자 사용 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/14/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - accessors [C++], dynamic
 - dynamic accessors
 ms.assetid: e5d5bfa6-2b1d-49d0-8ced-914666422431
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ce2763749537a77664f2971adac65b17e4bde28b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 700a959742fafd4478659ff08821b043aff8bc14
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-dynamic-accessors"></a>동적 접근자 사용
 
@@ -37,7 +32,7 @@ ms.lasthandoff: 02/23/2018
 
 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) 데이터베이스 스키마 (데이터베이스의 기본 구조)의 모를 때 데이터 소스에 액세스할 수 있습니다. `CDynamicAccessor` 메서드는 데이터 형식 열 이름, 수 등 열 정보를 가져옵니다. 이 열 정보를 사용 하 여 접근자를 런타임에 동적으로 만듭니다. 열 정보를 만들고이 클래스에서 관리 하는 버퍼에 저장 됩니다. 사용 하 여 버퍼에서 데이터를 가져올는 [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md) 메서드.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ### <a name="code"></a>코드
 
@@ -111,7 +106,7 @@ int main(int argc, char* argv[] )
 
 사용 하 여 `CDynamicStringAccessor` 열 정보를 가져오는 방법입니다. 이 열 정보를 사용 하 여 접근자를 런타임에 동적으로 만듭니다. 열 정보는이 클래스에서 만들고 관리 하는 버퍼에 저장 됩니다. 사용 하 여 버퍼에서 데이터를 가져올 [cdynamicstringaccessor:: Getstring](../../data/oledb/cdynamicstringaccessor-getstring.md) 사용 하 여 버퍼에 저장 하거나 [cdynamicstringaccessor:: Setstring](../../data/oledb/cdynamicstringaccessor-setstring.md)합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ### <a name="code"></a>코드
 
@@ -175,7 +170,7 @@ int main(int argc, char* argv[] )
 
 이 클래스는 SQL Server 저장 프로시저를 실행 하 고 출력 매개 변수 값을 가져올를 사용 하는 방법을 보여 주는 예제를 참조 하십시오.는 [DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) 샘플의 코드는 [Microsoft VCSamples](https://github.com/Microsoft/VCSamples) GitHub의 리포지토리를 제공 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [접근자 사용](../../data/oledb/using-accessors.md)  
 [CDynamicAccessor 클래스](../../data/oledb/cdynamicaccessor-class.md)  

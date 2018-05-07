@@ -1,30 +1,25 @@
 ---
-title: "MFC ActiveX 컨트롤: ActiveX 컨트롤 그리기 | Microsoft Docs"
-ms.custom: 
+title: 'MFC ActiveX 컨트롤: ActiveX 컨트롤 그리기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], painting
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2a2dc7b0cebbfaa6f6fe7dbe7dc69e5d4f80121
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7026dd5ffaab04eb445ae68449127e65c772394
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX 컨트롤: ActiveX 컨트롤 그리기
 이 문서에서는 ActiveX 컨트롤 그리기 프로세스와 프로세스를 최적화하는 그리기 코드를 변경하는 방법을 설명합니다. (참조 [컨트롤 그리기 최적화](../mfc/optimizing-control-drawing.md) 이전에 선택한 GDI 개체를 복원 하 여 개별적으로 컨트롤 없이 그리기를 최적화 하는 방법은 대. 모든 컨트롤이 그려진 후 컨테이너에서 원래 개체를 자동으로 복원할 수 있습니다.  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [메타 파일을 사용 하 여 컨트롤을 그리는 방법](#_core_painting_your_control_using_metafiles)  
   
-##  <a name="_core_the_painting_process_of_an_activex_control"></a>ActiveX 컨트롤의 그리기 프로세스  
+##  <a name="_core_the_painting_process_of_an_activex_control"></a> ActiveX 컨트롤의 그리기 프로세스  
  ActiveX 컨트롤이 처음 표시되거나 다시 그려지는 경우 해당 컨트롤은 MFC를 사용하여 개발된 다른 응용 프로그램과 유사한 그리기 프로세스를 따릅니다. 중요한 차이점 하나는 ActiveX 컨트롤이 활성 또는 비활성 상태가 될 수 있다는 점입니다.  
   
  활성 컨트롤은 자식 창에서 ActiveX 컨트롤 컨테이너에 표시됩니다. 다른 창과 마찬가지로 `WM_PAINT` 메시지가 수신될 때 직접 그려야 합니다. 컨트롤의 기본 클래스 [COleControl](../mfc/reference/colecontrol-class.md)에서이 메시지를 처리 합니다. 해당 `OnPaint` 함수입니다. 이 기본 구현은 컨트롤의 `OnDraw` 함수를 호출합니다.  
@@ -62,14 +57,14 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  컨트롤을 그릴 때 수 정도 해서는 안 변수로 전달 되는 장치 컨텍스트의 상태에 대 한는 *pdc* 매개 변수는 `OnDraw` 함수입니다. 경우에 따라 장치 컨텍스트는 컨테이너 응용 프로그램에서 제공되며 반드시 기본 상태로 초기화되지 않습니다. 특히 펜, 브러시, 색, 글꼴 및 그리기 코드가 종속된 다른 리소스를 명시적으로 선택합니다.  
   
-##  <a name="_core_optimizing_your_paint_code"></a>그리기 코드 최적화  
+##  <a name="_core_optimizing_your_paint_code"></a> 그리기 코드 최적화  
  컨트롤을 성공적으로 그린 후 다음 단계는 `OnDraw` 함수를 최적화하는 것입니다.  
   
  ActiveX 컨트롤 그리기의 기본 구현은 전체 컨트롤 영역을 그리는 것입니다. 이 작업은 간단한 컨트롤에 충분하지만 전체 컨트롤 대신 업데이트가 필요한 부분이 다시 그려질 경우에만 대부분의 컨트롤 다시 그리기는 더 빨라집니다.  
   
  `OnDraw` 함수는 다시 그려야 하는 컨트롤의 사각형 영역인 `rcInvalid`를 전달하여 최적화하는 쉬운 방법을 제공합니다. 그리기 프로세스의 속도를 높이려면 일반적으로 전체 컨트롤 영역보다 더 작은 이 영역을 사용합니다.  
   
-##  <a name="_core_painting_your_control_using_metafiles"></a>메타 파일을 사용 하 여 컨트롤 그리기  
+##  <a name="_core_painting_your_control_using_metafiles"></a> 메타 파일을 사용 하 여 컨트롤 그리기  
  대부분의 경우 `pdc` 함수에 대한 `OnDraw` 매개 변수는 화면 DC(장치 컨텍스트)를 가리킵니다. 그러나 컨트롤의 이미지를 그릴 때 또는 인쇄 미리 보기 세션 중 렌더링을 위해 받은 DC는 "메타파일 DC"라는 특별한 형식입니다. 전송된 요청을 즉시 처리하는 화면 DC와는 달리 메타파일 DC는 나중에 재생하기 위해 요청을 저장합니다. 일부 컨테이너 응용 프로그램은 디자인 모드에서 메타파일 DC를 사용하여 컨트롤 이미지를 렌더링하도록 선택할 수도 있습니다.  
   
  두 인터페이스 함수를 통해 컨테이너에 의해 메타 파일 그리기 요청을 만들 수 있습니다: **IViewObject::Draw** (이 함수 라고도 비 메타 파일 그리기에 대 한) 및 **idataobject:: Getdata**합니다. MFC 프레임 워크를 호출 하는 경우에 메타 파일 DC 매개 변수 중 하나로 전달 됩니다 [colecontrol:: Ondrawmetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile)합니다. 이 함수는 가상 멤버 함수이므로 특수한 처리 작업을 수행할 컨트롤 클래스에서 이 함수를 재정의합니다. 기본 동작은 `COleControl::OnDraw`를 호출합니다.  
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/21/2017
   
 |Arc|BibBlt|Chord|  
 |---------|------------|-----------|  
-|**타원**|**이스케이프**|`ExcludeClipRect`|  
+|**타원**|**Esc**|`ExcludeClipRect`|  
 |`ExtTextOut`|`FloodFill`|`IntersectClipRect`|  
 |`LineTo`|`MoveTo`|`OffsetClipRgn`|  
 |`OffsetViewportOrg`|`OffsetWindowOrg`|`PatBlt`|  

@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonSeparator 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCRibbonSeparator 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonSeparator
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36f05d89388d8722fab7853dc3c1e5bcb4d9a2f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b1c4c3b286f020d8d409b344c5d8c05ebc200425
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonseparator-class"></a>CMFCRibbonSeparator 클래스
 리본 메뉴 구분 기호를 구현합니다.  
@@ -107,7 +102,7 @@ pMainPanel->Add(new CMFCRibbonSeparator(TRUE));
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxbaseribbonelement.h  
   
-##  <a name="addtolistbox"></a>CMFCRibbonSeparator::AddToListBox  
+##  <a name="addtolistbox"></a>  CMFCRibbonSeparator::AddToListBox  
  에 구분 기호를 추가 **명령을** 목록에 **사용자 지정** 대화 상자.  
   
 ```  
@@ -126,7 +121,7 @@ virtual int AddToListBox(
 ### <a name="return-value"></a>반환 값  
  목록 상자에서 지정한 문자열에 0부터 시작 인덱스 `pWndListBox`합니다.  
   
-##  <a name="cmfcribbonseparator"></a>CMFCRibbonSeparator::CMFCRibbonSeparator  
+##  <a name="cmfcribbonseparator"></a>  CMFCRibbonSeparator::CMFCRibbonSeparator  
  `CMFCRibbonSeparator` 개체를 생성합니다.  
   
 ```  
@@ -140,12 +135,12 @@ CMFCRibbonSeparator(BOOL bIsHoriz = FALSE);
 ### <a name="remarks"></a>설명  
  가로 구분 기호는 응용 프로그램 메뉴에 사용 됩니다. 세로 구분 기호는 도구 모음에 사용 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는의 개체를 생성 하는 `CMFCRibbonSeparator` 클래스입니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#19](../../mfc/reference/codesnippet/cpp/cmfcribbonseparator-class_1.cpp)]  
   
-##  <a name="copyfrom"></a>CMFCRibbonSeparator::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCRibbonSeparator::CopyFrom  
  다른 개체에서를 구분 멤버 변수를 설정 하는 복사 메서드.  
   
 ```  
@@ -156,7 +151,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
  [in] `Src`  
  복사할 소스 리본 요소입니다.  
   
-##  <a name="getregularsize"></a>CMFCRibbonSeparator::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonSeparator::GetRegularSize  
  구분 기호의 크기를 반환 합니다.  
   
 ```  
@@ -170,7 +165,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="return-value"></a>반환 값  
  크기 지정 된 장치 컨텍스트에 대 한 구분 기호입니다.  
   
-##  <a name="isseparator"></a>CMFCRibbonSeparator::IsSeparator  
+##  <a name="isseparator"></a>  CMFCRibbonSeparator::IsSeparator  
  구분 기호 인지 여부를 나타냅니다.  
   
 ```  
@@ -180,7 +175,7 @@ virtual BOOL IsSeparator() const;
 ### <a name="return-value"></a>반환 값  
  항상 `TRUE` 이 클래스에 대 한 합니다.  
   
-##  <a name="istabstop"></a>CMFCRibbonSeparator::IsTabStop  
+##  <a name="istabstop"></a>  CMFCRibbonSeparator::IsTabStop  
  이 탭은 인지를 나타냅니다.  
   
 ```  
@@ -193,7 +188,7 @@ virtual BOOL IsTabStop() const;
 ### <a name="remarks"></a>설명  
  리본 메뉴 구분 기호 탭은 아닙니다.  
   
-##  <a name="ondraw"></a>CMFCRibbonSeparator::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonSeparator::OnDraw  
  빠른 실행 도구 모음 또는 리본 메뉴에서 구분 기호를 그리는 데 시스템에서 호출 됩니다.  
   
 ```  
@@ -204,7 +199,7 @@ virtual void OnDraw(CDC* pDC);
  [in] `pDC`  
  장치 컨텍스트에 대한 포인터입니다.  
   
-##  <a name="ondrawonlist"></a>CMFCRibbonSeparator::OnDrawOnList  
+##  <a name="ondrawonlist"></a>  CMFCRibbonSeparator::OnDrawOnList  
  시스템의 구분 기호 의해 호출 된 **명령을** 목록입니다.  
   
 ```  

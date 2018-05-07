@@ -1,12 +1,9 @@
 ---
-title: "C 런타임 오류 R6035 | Microsoft Docs"
-ms.custom: 
+title: C 런타임 오류 R6035 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - R6035
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - R6035
 ms.assetid: f8fb50b8-18bf-4258-b96a-b0a9de468d16
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b5f9fb1f7562b26382c6b36e3947367013631bf
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: ecadf1793475e1cf5f354796c71a1894884e24e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-runtime-error-r6035"></a>C 런타임 오류 R6035
 Microsoft Visual c + + 런타임 라이브러리, 오류 R6035-이 응용 프로그램의 모듈을 초기화 하 고 모듈의 전역 보안 쿠키 보안 쿠키에 의존 하는 함수를 활성화 합니다.  이전 __security_init_cookie를 호출 합니다.  

@@ -2,28 +2,23 @@
 title: C 런타임 오류 R6002 R6035 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - c.errors
 dev_langs:
 - C++
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
-caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c5f4c10f99611d7452e42ab9b4be58f6b09125d
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: d856fef8e8915683b77ada2bb8f669e303f1b5a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="c-runtime-errors-r6002-through-r6035"></a>C 런타임 오류 R6002 ~ R6035
 
@@ -65,6 +60,6 @@ Microsoft의 공개 포럼에서 오류 및 경고에 대 한 추가 지원을 �
 
 [C 런타임 오류 R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [C++ 빌드 오류](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)  

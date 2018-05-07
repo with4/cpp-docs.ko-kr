@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonMiniToolBar 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCRibbonMiniToolBar 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonMiniToolBar
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], Show
 - CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62a2006423f8e6196f9fac4d8f336ced8b5416f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1d8aebd796e0edb587e18db910df808fa349ca37
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar 클래스
 상황별 팝업 도구 모음을 구현합니다.  
@@ -92,7 +87,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxRibbonMiniToolBar.h  
   
-##  <a name="setcommands"></a>CMFCRibbonMiniToolBar::SetCommands  
+##  <a name="setcommands"></a>  CMFCRibbonMiniToolBar::SetCommands  
  도구 모음에 표시되는 명령의 목록을 설정합니다.  
   
 ```  
@@ -111,12 +106,12 @@ void SetCommands(
 ### <a name="remarks"></a>설명  
  이 함수를 사용 하 여 미니 도구 모음에 표시 되는 명령의 목록을 설정 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 사용 하는 `SetCommands` 의 메서드는 `CMFCRibbonMiniToolBar` 클래스. 이 코드 조각은의 일부인는 [MS Office 2007 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
   
-##  <a name="show"></a>CMFCRibbonMiniToolBar::Show  
+##  <a name="show"></a>  CMFCRibbonMiniToolBar::Show  
  지정된 화면 좌표에 미니 도구 모음을 표시합니다.  
   
 ```  
@@ -133,9 +128,9 @@ BOOL Show(
  화면 좌표에 미니 도구 모음은의 세로 위치를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`미니 도구 모음을 성공적으로 표시 된 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 미니 도구 모음을 성공적으로 표시 된 경우 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="showwithcontextmenu"></a>CMFCRibbonMiniToolBar::ShowWithContextMenu  
+##  <a name="showwithcontextmenu"></a>  CMFCRibbonMiniToolBar::ShowWithContextMenu  
  상황에 맞는 메뉴와 함께 미니 도구 모음을 표시합니다.  
   
 ```  
@@ -160,12 +155,12 @@ BOOL ShowWithContextMenu(
  상황에 맞는 메뉴에서 메시지를 수신 하는 창을 식별 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`상황에 맞는 메뉴를 성공적으로 표시 된 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 상황에 맞는 메뉴를 성공적으로 표시 된 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수를 사용 하 여 상황에 맞는 메뉴에 있는 미니 도구 모음을 표시 합니다. 상황에 맞는 메뉴는 미니 도구 모음 아래 15 픽셀을 위치 지정된입니다.  
   
-##  <a name="iscontextmenumode"></a>CMFCRibbonMiniToolBar::IsContextMenuMode  
+##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -176,7 +171,7 @@ BOOL IsContextMenuMode() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="isribbonminitoolbar"></a>CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
+##  <a name="isribbonminitoolbar"></a>  CMFCRibbonMiniToolBar::IsRibbonMiniToolBar  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  

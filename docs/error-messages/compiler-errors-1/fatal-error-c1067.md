@@ -1,12 +1,9 @@
 ---
-title: "심각한 오류 C1067 | Microsoft Docs"
-ms.custom: 
+title: 심각한 오류 C1067 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C1067
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C1067
 ms.assetid: e2c94be6-4573-4571-aac9-73d657fe9f96
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8889ccbfcac31917948da719444dab68a2d1b9c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 89ac7084e92f7f2ed496a4c1572e94a4fa46862f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fatal-error-c1067"></a>심각한 오류 C1067
 컴파일러 한계: 형식 레코드 크기의 64k 한도 초과 했습니다  

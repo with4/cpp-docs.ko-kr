@@ -1,13 +1,10 @@
 ---
-title: "TN028: 상황에 맞는 도움말 지원 | Microsoft Docs"
-ms.custom: 
+title: 'TN028: 상황에 맞는 도움말 지원 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.help
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8054fe4fae4aafa88c34833a5a2a92a6b9b44bf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 58caed14e6b7080405cceb30cfb90623d28dc83e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028: 상황에 맞는 도움말 지원
 이 노트 도움말 컨텍스트 Id와 MFC에서 기타 도움말 문제를 지정 하는 것에 대 한 규칙을 설명 합니다. 상황에 맞는 도움말 지원에는 Visual c + +에서 사용할 수 있는 도움말 컴파일러가 필요 합니다.  
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
   
  방식과 관계 없이 `ID_HELP` 명령이 생성, 명령 처리기에 도달할 때까지 일반적인 명령으로 라우팅됩니다. MFC 명령 라우팅 아키텍처에 대 한 자세한 내용은를 참조 [기술 참고 21](../mfc/tn021-command-and-message-routing.md)합니다. 응용 프로그램에 도움말을 사용 하는 경우는 `ID_HELP` 명령에서 처리 되는 [CWinApp::OnHelp](../mfc/reference/cwinapp-class.md#onhelp)합니다. Application 개체 도움말 메시지를 받고 한 후 명령의 적절 하 게 라우팅합니다. 가장 구체적인 컨텍스트 확인에 적합 하지 않은 기본 명령 라우팅 있으므로이 과정이 필요 합니다.  
   
- `CWinApp::OnHelp`다음과 같은 순서로 WinHelp를 시작 하려고 합니다.  
+ `CWinApp::OnHelp` 다음과 같은 순서로 WinHelp를 시작 하려고 합니다.  
   
 1.  활성 검사 `AfxMessageBox` 호출는 도움말 id. 메시지 상자가 현재 활성 상태 이면 WinHelp 해당 messagebox에 적절 한 상황에 맞는으로 시작 됩니다.  
   
@@ -99,7 +94,7 @@ afx_msg LRESULT CWnd::OnCommandHelp(WPARAM wParam, LPARAM lParam)
  WM_COMMANDHELP는 도움말을 요청할 때 활성 창에서 수신 하는 개인 Windows MFC 메시지입니다. 창에서이 메시지를 받으면 호출할 수 있습니다 `CWinApp::WinHelp` 창 내부 상태와 일치 하는 컨텍스트를 사용 합니다.  
   
  `lParam`  
- 현재 사용할 수 있는 도움말 컨텍스트를 포함 합니다. `lParam`도움말 컨텍스트가 없는 확인 된 경우에 0입니다. 구현 `OnCommandHelp` 에 컨텍스트 ID를 사용할 수 `lParam` 에 다른 컨텍스트를 결정 하거나 전달 방금 수 `CWinApp::WinHelp`합니다.  
+ 현재 사용할 수 있는 도움말 컨텍스트를 포함 합니다. `lParam` 도움말 컨텍스트가 없는 확인 된 경우에 0입니다. 구현 `OnCommandHelp` 에 컨텍스트 ID를 사용할 수 `lParam` 에 다른 컨텍스트를 결정 하거나 전달 방금 수 `CWinApp::WinHelp`합니다.  
   
  `wParam`  
  사용 되지 않으며 0이 됩니다.  
@@ -115,7 +110,7 @@ afx_msg LRESULT CWnd::OnCommandHelp(WPARAM wParam, LPARAM lParam)
   
  번역 또는 동작 수행에 배치할 경우 특정는 `PreTranslateMessage` 안 도중 발생 하는 SHIFT + F1 도움말 모드를 확인 해야 함수는 `m_bHelpMode` 소속 `CWinApp` 이러한 작업을 수행 하기 전에. `CDialog` 구현의 `PreTranslateMessage` 호출 하기 전에이 확인 `IsDialogMessage`, 예를 들어 있습니다. 그러면 SHIFT + f 1 모드에 있는 동안 모덜리스 대화 상자에 "대화 탐색" 키를 해제합니다. 또한 `CWinApp::OnIdle` 는이 루프 중 호출 됩니다.  
   
- 해당 명령에 대 한 도움말으로 처리 되는 메뉴에서 명령의 선택 하는 경우 (통해 **WM_COMMANDHELP**, 아래 참조). 사용자가 응용 프로그램 창의 표시 영역을 클릭 하면 사용할지 여부를 결정 한 비클라이언트 또는 클라이언트 클릭 결정이 이루어집니다. `OnContextHelp`비클라이언트의 핸들 매핑을 자동으로 클라이언트 클릭에 클릭합니다. 그런 다음 보냅니다 클라이언트 클릭 인 경우는 **WM_HELPHITTEST** 클릭 된 창에 있습니다. 해당 창에서 0이 아닌 값을 반환 하는 경우 해당 값에 대 한 도움말 컨텍스트도 사용 됩니다. 0을 반환 하는 경우 `OnContextHelp` 시도 부모 창 (및 해당 스레드가 없으면 해당 부모와 같이). 기본값은 보낼 도움말 컨텍스트를 확인할 수 없는 경우는 **ID_DEFAULT_HELP** 명령을에 매핑되는 다음 일반적으로 주 창에 `CWinApp::OnHelpIndex`합니다.  
+ 해당 명령에 대 한 도움말으로 처리 되는 메뉴에서 명령의 선택 하는 경우 (통해 **WM_COMMANDHELP**, 아래 참조). 사용자가 응용 프로그램 창의 표시 영역을 클릭 하면 사용할지 여부를 결정 한 비클라이언트 또는 클라이언트 클릭 결정이 이루어집니다. `OnContextHelp` 비클라이언트의 핸들 매핑을 자동으로 클라이언트 클릭에 클릭합니다. 그런 다음 보냅니다 클라이언트 클릭 인 경우는 **WM_HELPHITTEST** 클릭 된 창에 있습니다. 해당 창에서 0이 아닌 값을 반환 하는 경우 해당 값에 대 한 도움말 컨텍스트도 사용 됩니다. 0을 반환 하는 경우 `OnContextHelp` 시도 부모 창 (및 해당 스레드가 없으면 해당 부모와 같이). 기본값은 보낼 도움말 컨텍스트를 확인할 수 없는 경우는 **ID_DEFAULT_HELP** 명령을에 매핑되는 다음 일반적으로 주 창에 `CWinApp::OnHelpIndex`합니다.  
   
 ## <a name="wmhelphittest"></a>WM_HELPHITTEST  
   
@@ -141,7 +136,7 @@ WPARAM, LPARAM lParam)
 ## <a name="mfc-application-wizard-support-and-makehm"></a>MFC 응용 프로그램 마법사 지원 및 MAKEHM  
  MFC 응용 프로그램 마법사 도움말 파일 (.cnt 및.hpj 파일)을 작성 하는 데 필요한 파일을 만듭니다. Microsoft 도움말 컴파일러에서 허용 되는 미리 작성 된.rtf 파일 수가 포함 됩니다. 대부분의 항목은이 완료 되 면 하지만 특정 응용 프로그램에 맞게 수정 해야 할 수 있습니다.  
   
- "매핑 도움말" 파일의 자동 만들기 MAKEHM 라는 유틸리티에서 지원 됩니다. MAKEHM 유틸리티 응용 프로그램의 리소스를 변환할 수 있습니다. H 파일 도움말 매핑 파일입니다. 예:  
+ "매핑 도움말" 파일의 자동 만들기 MAKEHM 라는 유틸리티에서 지원 됩니다. MAKEHM 유틸리티 응용 프로그램의 리소스를 변환할 수 있습니다. H 파일 도움말 매핑 파일입니다. 예를 들어:  
   
 ```  
 #define IDD_MY_DIALOG   2000  

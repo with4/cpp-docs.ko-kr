@@ -1,13 +1,10 @@
 ---
-title: "동적 개체 만들기 | Microsoft Docs"
-ms.custom: 
+title: 동적 개체 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - objects [MFC], creating dynamically at run time
 - dynamic object creation [MFC]
 ms.assetid: 3e0f51cb-3e24-4231-817f-1c0ce9f2d5df
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 755cbf614966ad6faedbe8db9bbf11ac88c63328
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5763e3f0f3ee5a0e58ac20fe9f637e4f7e097999
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamic-object-creation"></a>동적 개체 만들기
 이 문서를 런타임에 동적으로 개체를 만드는 방법을 설명 합니다. 프로시저는 문서에 설명 된 대로 런타임 클래스 정보를 사용 하 여 [런타임 클래스 정보 액세스](../mfc/accessing-run-time-class-information.md)합니다.  

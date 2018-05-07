@@ -1,13 +1,10 @@
 ---
-title: "서버: 서버 문서 구현 | Microsoft Docs"
-ms.custom: 
+title: '서버: 서버 문서 구현 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - servers, server documents
 - server documents [MFC], implementing
 ms.assetid: cca1451a-ad09-47ed-b56e-bccd78fc86d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c4b8618e4951ac499d504cc68b0552ea45eed03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f15dbd16b48aade59470bfbf7e84faf4aeb03c61
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers-implementing-server-documents"></a>서버: 서버 문서 구현
 이 문서에서는 응용 프로그램 마법사에서 OLE 서버 옵션을 지정 하지 않은 서버 문서를 성공적으로 구현 하는 위해 수행 해야 하는 단계를 설명 합니다.  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  구현 된 `OnGetEmbeddedItem` 서버 문서 클래스의 멤버 함수입니다.  
   
-     `OnGetEmbeddedItem`컨테이너 응용 프로그램의 사용자가 만들거나 포함된 된 항목을 편집할 때 호출 됩니다. 전체 문서를 나타내는 항목을 반환 합니다. 이 경고가의 개체 수에 `COleServerItem`-클래스를 파생 합니다.  
+     `OnGetEmbeddedItem` 컨테이너 응용 프로그램의 사용자가 만들거나 포함된 된 항목을 편집할 때 호출 됩니다. 전체 문서를 나타내는 항목을 반환 합니다. 이 경고가의 개체 수에 `COleServerItem`-클래스를 파생 합니다.  
   
 4.  재정의 `Serialize` 문서 내용을 serialize 할 멤버 함수입니다. 문서에 네이티브 데이터를 표시 하는 데 사용 하는 경우가 아니면 서버 항목의 목록을 serialize 할 필요가 없습니다. 자세한 내용은 참조 *서버 항목 구현* 문서의 [서버: 서버 항목](../mfc/servers-server-items.md)합니다.  
   

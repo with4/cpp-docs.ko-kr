@@ -1,13 +1,10 @@
 ---
-title: "Windows 소켓: 소켓 알림 | Microsoft Docs"
-ms.custom: 
+title: 'Windows 소켓: 소켓 알림 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - notifications [MFC], socket
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa9fb14dd09ace2d641fa69fa4cf39ccefeb3d01
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b51bf2b562f0d4eff5b9cfef557e62f996d53470
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows 소켓: 소켓 알림
 이 문서는 소켓 클래스의 알림 함수를 설명합니다. 이러한 멤버 함수는 프레임 워크는 중요 한 이벤트 소켓 개체에 알리기 위해 호출 하는 콜백 함수입니다. 알림 기능은 다음과 같습니다.  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
  클래스에서 파생 하는 경우 `CAsyncSocket`, 이벤트를 응용 프로그램 네트워크에 대 한 알림 함수를 재정의 해야 합니다. 클래스에서 클래스를 파생 하는 경우 `CSocket`, 관심 있는 알림 함수를 무시할 것인지 사용자 옵션입니다. 사용할 수도 있습니다 `CSocket` 자체는 경우 알림을 함수 기본적으로 아무 작업도 수행 합니다.  
   
- 이러한 함수는 재정의할 수 있는 콜백 함수입니다. `CAsyncSocket`및 `CSocket` 알림, convert 메시지 하지만 사용 하려는 경우 응답 알림을 작동 하는 방법을 구현 해야 합니다. 알림 함수 소켓 데이터를 읽을 수 있는지 여부 등의 관련 이벤트를 알려 줍니다 때 호출 됩니다.  
+ 이러한 함수는 재정의할 수 있는 콜백 함수입니다. `CAsyncSocket` 및 `CSocket` 알림, convert 메시지 하지만 사용 하려는 경우 응답 알림을 작동 하는 방법을 구현 해야 합니다. 알림 함수 소켓 데이터를 읽을 수 있는지 여부 등의 관련 이벤트를 알려 줍니다 때 호출 됩니다.  
   
  MFC는 알림을 받을 때 소켓의 동작을 사용자 지정할 수 있도록 알림 함수를 호출 합니다. 예를 들어, 호출할 수 있습니다 **수신** 에서 프로그램 `OnReceive` 알림 기능, 즉 않게 알림을 읽을 데이터를 호출 합니다 **수신** 을 읽을 수 있습니다. 이 방법은 작업은 필요 하지 않은 적합 한 시나리오입니다. 진행률을 추적 하려면 알림 함수를 사용할 수 있습니다 인쇄 **추적** 메시지 및 등입니다.  
   

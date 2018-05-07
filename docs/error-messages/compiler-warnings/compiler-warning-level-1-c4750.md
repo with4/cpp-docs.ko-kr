@@ -1,13 +1,10 @@
 ---
-title: "컴파일러 경고 (수준 1) C4750 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 1) C4750 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C4750
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4750
 ms.assetid: b0b2c938-7d2a-4c36-8270-7daee15ffee3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e1c880e07a56be1dd7b8c82f5e6f0473ededdd7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7ffe378f8d2466e702c90127e44f3b48831abf50
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4750"></a>컴파일러 경고(수준 1) C4750
 'identifier': 루프에 인라이닝된 _alloca()를 사용하는 함수  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  스택 오버플로를 catch하는 [try-excep 문](../../c-runtime-library/reference/alloca.md) 에 [_alloca](../../cpp/try-except-statement.md) 함수를 배치합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제는 루프에서 `MyFunction` 을 호출하고 `MyFunction` 은 `_alloca` 함수를 호출합니다. `__forceinline` 한정자로 인해 `_alloca` 함수의 인라인 확장이 발생합니다.  
   
 ```  

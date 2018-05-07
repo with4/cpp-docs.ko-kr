@@ -1,13 +1,10 @@
 ---
-title: "C + +-clr 응용 프로그램 이전 런타임 버전을 실행 | Microsoft Docs"
-ms.custom: 
+title: C + +-clr 응용 프로그램 이전 런타임 버전을 실행 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - common language runtime [C++], version specified
 - deploying applications [C++], runtime version specified
 ms.assetid: 940171b7-6937-4b14-8e87-c199e23f4f2e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f64c0dc31be260332d4d79e8fa38d63bbf6357c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f8e76930eb9191d27085d92a9d3a678812715fc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>이전 버전의 런타임에서 C++ /clr 응용 프로그램 실행
 별도로 지정 하지 않으면 컴파일러를 사용 하 여 응용 프로그램을 빌드할 공용 언어 런타임 (CLR) 버전에서 실행 하는 c + +.NET Framework 응용 프로그램이 만들어집니다. 그러나 특정 버전의 런타임을 필수 기능을 제공 하는 다른 모든 버전에서 실행에 대해 작성 하는.exe 응용 프로그램에 대 한 같습니다.  

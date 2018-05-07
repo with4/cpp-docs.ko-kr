@@ -2,35 +2,30 @@
 title: 문자열 리터럴이 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - string literals
 - strings [C++], string literals
 ms.assetid: 6d1fc3f8-0d58-4d68-9678-16b4f6dc4766
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: dd62f85b87473d1371daf2d2fa009d8620e59b57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9ac847f67421802fe4d31f2d66b34128e4b24794
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="string-literal"></a>문자열 리터럴
 문자열 리터럴 처리의 Visual c + + Managed Extensions for c + + 변경 되었습니다.  
   
- 문자열 리터럴을 앞으로 지정 된 관리 되는 문자열 리터럴을 Managed extensions for c + + 언어 디자인은 `S`합니다. 예:  
+ 문자열 리터럴을 앞으로 지정 된 관리 되는 문자열 리터럴을 Managed extensions for c + + 언어 디자인은 `S`합니다. 예를 들어:  
   
 ```  
 String *ps1 = "hello";  
@@ -55,13 +50,13 @@ stloc.0
   
  방금 기억 (또는 학습)는 리터럴 문자열 접두사를 지정 하는 뛰어난 절감 비율이입니다는 `S`합니다. 새 구문에서 사용 하 여 컨텍스트에서 확인 된 문자열 리터럴 처리 투명 하 게 구성 됩니다. `S` 더 이상 지정 해야 합니다.  
   
- 어떤 점이 있는 해야 명시적으로 하는 경우에는 컴파일러 특정 해석을에 지시할? 이러한 경우에 명시적 캐스트가 적용 했습니다. 예:  
+ 어떤 점이 있는 해야 명시적으로 하는 경우에는 컴파일러 특정 해석을에 지시할? 이러한 경우에 명시적 캐스트가 적용 했습니다. 예를 들어:  
   
 ```  
 f( safe_cast<String^>("ABC") );  
 ```  
   
- 또한, 리터럴 문자열은 이제는 `String` 표준 변환이 아닌 간단한 변환을 사용 합니다. 이렇게 하지 같지만 포함 하는 오버 로드 된 함수 집합의 해상도 변경 하기는 훨씬 동안는 `String` 및 `const char*` 경쟁 정식 매개 변수로 서 합니다. 이전에 해상도 `const char*` 인스턴스는 이제 모호한 것으로 표시 됩니다. 예:  
+ 또한, 리터럴 문자열은 이제는 `String` 표준 변환이 아닌 간단한 변환을 사용 합니다. 이렇게 하지 같지만 포함 하는 오버 로드 된 함수 집합의 해상도 변경 하기는 훨씬 동안는 `String` 및 `const char*` 경쟁 정식 매개 변수로 서 합니다. 이전에 해상도 `const char*` 인스턴스는 이제 모호한 것으로 표시 됩니다. 예를 들어:  
   
 ```  
 ref struct R {  

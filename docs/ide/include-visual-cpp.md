@@ -2,12 +2,9 @@
 title: '&lt;포함&gt; (Visual c + +) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - include
 - <include>
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - include C++ XML tag
 - <include> C++ XML tag
 ms.assetid: 392a3e61-0371-4617-8362-446650876ce3
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9a6b07ce540d67a44e46a24fb943dac93bb95a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b4c1a75acb89d9510dd7f489e5d0d582611da8de
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltincludegt-visual-c"></a>&lt;포함&gt; (Visual c + +)
 \<include> 태그를 사용하면 소스 코드의 형식과 멤버를 설명하는 다른 파일의 주석을 참조할 수 있습니다. 소스 코드 파일에 직접 문서 주석을 포함하는 대신 사용되는 대안입니다.  사용할 수는 예를 들어 \<포함 >를 팀 이나 회사에서 사용 되는 표준 "상용구" 주석을 삽입 합니다.  
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
  [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다중 파일 예제입니다. 사용 하는 첫 번째 파일이 \<포함 >, 다음과 같은 문서 주석을 포함:  
   
 ```  

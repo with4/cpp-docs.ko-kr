@@ -1,26 +1,21 @@
 ---
-title: "Platform:: weakreference 클래스 | Microsoft Docs"
-ms.custom: 
+title: 'Platform:: weakreference 클래스 | Microsoft Docs'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - Platform::WeakReference
 ms.assetid: 8cfe1977-a8c7-4b7b-b539-25c77ed4c5f1
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59d87d2e00ef567c0273e71410ad58ebf0a5c061
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a8db5c855b6a377a0202183d48b8fd34e93b6072
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformweakreference-class"></a>Platform::WeakReference 클래스
 ref 클래스 인스턴스에 대한 약한 참조를 나타냅니다.  
@@ -39,7 +34,7 @@ class WeakReference
   
 |멤버|설명|  
 |------------|-----------------|  
-|[WeakReference::WeakReference](#ctor)|WeakReference 클래스의 새 인스턴스를 초기화합니다.|  
+|[Weakreference:: Weakreference](#ctor)|WeakReference 클래스의 새 인스턴스를 초기화합니다.|  
   
 ### <a name="methods"></a>메서드  
   
@@ -57,7 +52,7 @@ class WeakReference
 ### <a name="remarks"></a>설명  
  WeakReference 클래스 자체는 ref 클래스가 아니므로 Platform::Object^에서 상속하지 않으며 public 메서드의 시그니처에 사용될 수 없습니다.  
 
-## <a name="operator-assign"></a> WeakReference::operator=
+## <a name="operator-assign"></a> WeakReference::operator =
 WeakReference에 값을 할당합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -97,7 +92,7 @@ T^ Resolve() const
 ### <a name="property-valuereturn-value"></a>속성 값/반환 값  
  WeakReference 개체가 이전에 연결되었던 ref 클래스에 대한 핸들 또는 nullptr입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  코드 예제에 대한 설명입니다.  
   
 ```  
@@ -127,7 +122,7 @@ WeakReference(const WeakReference& otherArg);
 WeakReference(WeakReference&& otherArg);  
 explicit WeakReference(const volatile ::Platform::Object^ const otherArg);  
 ```  
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp    
 MyClass^ mc = ref new MyClass();  

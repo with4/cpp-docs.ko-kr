@@ -1,12 +1,9 @@
 ---
-title: "CD2DGradientBrush 클래스 | Microsoft Docs"
-ms.custom: 
+title: CD2DGradientBrush 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DGradientBrush
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CD2DGradientBrush [MFC], m_extendMode
 - CD2DGradientBrush [MFC], m_pGradientStops
 ms.assetid: 5bf133e6-16b7-4e3a-845d-0ce63fafe5ec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c03d489b3059ddadf5783719f297371433a599e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c01dbb3b14c13182afc85412b5c3ffa3ac0e9cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dgradientbrush-class"></a>CD2DGradientBrush 클래스
 CD2DLinearGradientBrush 및 CD2DRadialGradientBrush 클래스의 기본 클래스입니다.  
@@ -65,7 +60,7 @@ class CD2DGradientBrush : public CD2DBrush;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[CD2DGradientBrush::m_arGradientStops](#m_argradientstops)|D2D1_GRADIENT_STOP 구조체의 배열입니다.|  
 |[CD2DGradientBrush::m_colorInterpolationGamma](#m_colorinterpolationgamma)|어떤 색 그라데이션 중지점 사이의 보간을 수행 되는 공간입니다.|  
@@ -84,14 +79,14 @@ class CD2DGradientBrush : public CD2DBrush;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dgradientbrush"></a>CD2DGradientBrush:: ~ CD2DGradientBrush  
+##  <a name="_dtorcd2dgradientbrush"></a>  CD2DGradientBrush:: ~ CD2DGradientBrush  
  소멸자입니다. D2D 그라데이션 브러시 개체가 소멸 될 때 호출 됩니다.  
   
 ```  
 virtual ~CD2DGradientBrush();
 ```  
   
-##  <a name="cd2dgradientbrush"></a>CD2DGradientBrush::CD2DGradientBrush  
+##  <a name="cd2dgradientbrush"></a>  CD2DGradientBrush::CD2DGradientBrush  
  CD2DGradientBrush 개체를 만듭니다.  
   
 ```  
@@ -127,35 +122,35 @@ CD2DGradientBrush(
  `bAutoDestroy`  
  개체를 소유자 (pParentTarget)에 의해 폐기 수를 나타냅니다.  
   
-##  <a name="destroy"></a>CD2DGradientBrush::Destroy  
+##  <a name="destroy"></a>  CD2DGradientBrush::Destroy  
  CD2DGradientBrush 개체를 소멸 시킵니다.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="m_argradientstops"></a>CD2DGradientBrush::m_arGradientStops  
+##  <a name="m_argradientstops"></a>  CD2DGradientBrush::m_arGradientStops  
  D2D1_GRADIENT_STOP 구조체의 배열입니다.  
   
 ```  
 CArray<D2D1_GRADIENT_STOP, D2D1_GRADIENT_STOP> m_arGradientStops;  
 ```  
   
-##  <a name="m_colorinterpolationgamma"></a>CD2DGradientBrush::m_colorInterpolationGamma  
+##  <a name="m_colorinterpolationgamma"></a>  CD2DGradientBrush::m_colorInterpolationGamma  
  어떤 색 그라데이션 중지점 사이의 보간을 수행 되는 공간입니다.  
   
 ```  
 D2D1_GAMMA m_colorInterpolationGamma;  
 ```  
   
-##  <a name="m_extendmode"></a>CD2DGradientBrush::m_extendMode  
+##  <a name="m_extendmode"></a>  CD2DGradientBrush::m_extendMode  
  [0, 1]의 표준화 된 범위를 벗어난 그라데이션의 동작입니다.  
   
 ```  
 D2D1_EXTEND_MODE m_extendMode;  
 ```  
   
-##  <a name="m_pgradientstops"></a>CD2DGradientBrush::m_pGradientStops  
+##  <a name="m_pgradientstops"></a>  CD2DGradientBrush::m_pGradientStops  
  D2D1_GRADIENT_STOP 구조의 배열에 대 한 포인터입니다.  
   
 ```  

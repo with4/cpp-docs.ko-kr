@@ -1,12 +1,9 @@
 ---
 title: 'pair:: swap (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::pair::swap
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - swap member [STL/CLR]
 ms.assetid: 7f5cbfa0-3702-40ab-a3f4-ffde02126095
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: af5f109fe4e0b132c42054eb37263b82285d8dc3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 537cbbfcc3c2ad92dd023d3733e6420a2af9e32a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="pairswap-stlclr"></a>pair::swap(STL/CLR)
 두 쌍의 내용을 바꿉니다.  
@@ -44,7 +39,7 @@ void swap(pair<Value1, Value2>% right);
 ## <a name="remarks"></a>설명  
  멤버 함수 사이 값의 저장 된 쌍을 바꿉니다 `*this` 및 `right`합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_pair_swap.cpp   

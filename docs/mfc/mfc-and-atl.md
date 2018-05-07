@@ -1,27 +1,22 @@
 ---
-title: "MFC 및 ATL | Microsoft Docs"
-ms.custom: 
+title: MFC 및 ATL | Microsoft Docs
+ms.custom: ''
 ms.date: 01/24/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b863b002f6ab8362ed51e8cb16747de53eeb1b8
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 081414d3835a8a6efcc831b6c303b774361b743b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-and-atl"></a>MFC 및 ATL
 MFC(Microsoft Foundation Class)는 Win32를 통해 C++ 개체 지향 래퍼를 제공하여 네이티브 데스크톱 응용 프로그램을 신속하게 개발할 수 있습니다. ATL(액티브 템플릿 라이브러리)은 COM 개발을 간단하게 하는 래퍼 라이브러리이며 ActiveX 컨트롤을 만드는 데 광범위하게 사용됩니다.  

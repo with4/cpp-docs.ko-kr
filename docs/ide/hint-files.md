@@ -1,13 +1,10 @@
 ---
-title: "힌트 파일 | Microsoft Docs"
-ms.custom: 
+title: 힌트 파일 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - cpp.hint
 - vc.hint.file
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 432b5fa5041a7997c9df0593dc511c29854387ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 687e5cba94693a752f934d7816e6a7c36e318354
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hint-files"></a>힌트 파일
 A *힌트 파일* Visual Studio를 통해 통합된 개발 환경 (IDE) 함수 및 매크로의 이름과 같은 Visual c + + 식별자를 해석 합니다. Visual c + + 프로젝트, IDE를 열면 *구문 분석 시스템* 프로젝트의 각 소스 파일의 코드를 분석 하 고 모든 식별자에 대 한 정보를 수집 합니다. IDE와 같은 기능을 지원 하기 위해 해당 정보를 사용 하 여는 **클래스 뷰** 브라우저 및 **탐색 모음**합니다.  
@@ -107,12 +102,12 @@ STDMETHOD(myMethod)(int parameter1);
   
 |구문|의미|  
 |------------|-------------|  
-|`#define`*힌트 이름* *대체 문자열*<br /><br /> `#define`*힌트 이름* `(` *매개 변수*,... `)` *대체 문자열*|새 힌트를 정의 하거나 기존 힌트를 재정의 하는 전처리기 지시문 전처리기 지시문, 뒤의 각 항목을 대체 *힌트 이름* 만으로도 소스 코드에서 *대체 문자열*합니다.<br /><br /> 두 번째 구문 형식 함수 형식 힌트를 정의합니다. 각 항목에 전처리기 함수 형식 힌트에 소스 코드에서 발생 하는 경우 먼저 대체 *매개 변수* 에 *대체 문자열* 소스 코드 및 대체에는 해당 인수 사용 *힌트 이름* 와 *대체 문자열*합니다.|  
+|`#define` *힌트 이름* *대체 문자열*<br /><br /> `#define` *힌트 이름* `(` *매개 변수*,... `)` *대체 문자열*|새 힌트를 정의 하거나 기존 힌트를 재정의 하는 전처리기 지시문 전처리기 지시문, 뒤의 각 항목을 대체 *힌트 이름* 만으로도 소스 코드에서 *대체 문자열*합니다.<br /><br /> 두 번째 구문 형식 함수 형식 힌트를 정의합니다. 각 항목에 전처리기 함수 형식 힌트에 소스 코드에서 발생 하는 경우 먼저 대체 *매개 변수* 에 *대체 문자열* 소스 코드 및 대체에는 해당 인수 사용 *힌트 이름* 와 *대체 문자열*합니다.|  
 |`@<`|힌트 파일 특정 *대체 문자열* 의 지도 요소 집합의 시작을 나타내는입니다.|  
 |`@=`|힌트 파일 특정 *대체 문자열* 중간 지도 요소를 나타내는입니다. 지도 요소가 여러 개 있을 수 있습니다.|  
 |`@>`|힌트 파일 특정 *대체 문자열* 의 지도 요소 집합의 끝을 나타내는입니다.|  
-|`#undef`*힌트 이름*|기존 힌트를 삭제 하는 전처리기 지시문 힌트의 이름을 제공는 *힌트 이름* 식별자입니다.|  
-|`//`*주석*|한 줄 주석입니다.|  
+|`#undef` *힌트 이름*|기존 힌트를 삭제 하는 전처리기 지시문 힌트의 이름을 제공는 *힌트 이름* 식별자입니다.|  
+|`//` *주석*|한 줄 주석입니다.|  
 |`/*` *comment* `*/`|여러 줄 설명입니다.|  
   
 ## <a name="what-macros-require-a-hint"></a>어떤 힌트가 필요한 매크로?  
@@ -162,7 +157,7 @@ static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 #define START_NAMESPACE namespace MyProject {  
 ```  
   
-### <a name="maps"></a>지도  
+### <a name="maps"></a>맵  
  지도 요소를 시작, 끝 요소 및 0 개 이상의 중간 요소를 지정 하는 매크로 구성 됩니다. 각 지도 매크로 C/c + + 언어 요소를 숨깁니다 전체 C/c + + 문 구문에 서로 다른 여러 매크로 분산 하기 때문에 지도 해석 하는 구문 분석 시스템입니다.  
   
  다음 소스 코드에서 정의 된 `BEGIN_CATEGORY_MAP`, `IMPLEMENTED_CATEGORY`, 및 `END_CATEGORY_MAP` 매크로입니다.  
@@ -238,13 +233,13 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 #define STDMETHOD(methodName) void* methodName  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 힌트가 힌트 파일에서 누적 되는 방법을 보여 줍니다. 이 예에서 중지 파일 사용 되지 않습니다.  
   
  다음 그림은 Visual c + + 프로젝트에 있는 실제 디렉터리 중 일부를 보여 줍니다. 힌트 파일은는 `vcpackages`, `Debug`, `A1`, 및 `A2` 디렉터리입니다.  
   
 ### <a name="hint-file-directories"></a>힌트 파일 디렉터리  
- ![일반 및 프로젝트 &#45; 특정 힌트 파일 디렉터리입니다. ] (../ide/media/hintfile.png "HintFile")  
+ ![일반 및 프로젝트&#45;특정 힌트 파일 디렉터리입니다. ] (../ide/media/hintfile.png "HintFile")  
   
 ### <a name="directories-and-hint-file-contents"></a>디렉터리 및 힌트 파일 내용  
  다음 목록은 힌트 파일 및 해당 힌트 파일의 내용을 포함 하는이 프로젝트의 디렉터리를 나타냅니다. 일부에 있는 여러 힌트는 `vcpackages` 디렉터리 힌트 파일 나열 됩니다.  

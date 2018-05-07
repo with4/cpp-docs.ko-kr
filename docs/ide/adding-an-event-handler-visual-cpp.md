@@ -1,13 +1,10 @@
 ---
-title: "이벤트 처리기 (Visual c + +)를 추가 | Microsoft Docs"
-ms.custom: 
+title: 이벤트 처리기 (Visual c + +)를 추가 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.eventhandler.overview
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - properties [Visual Studio], MSBuild
 - MSBuild, properties
 ms.assetid: 050bebf0-a9e0-474b-905c-796fe5ac8fc3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9a5380bf335a13bbf7b2f54840c9d1160187167
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 184161b22358f77845b5f7c4b6da0bb42f3ea15f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-an-event-handler-visual-c"></a>이벤트 처리기 추가(Visual C++)
 리소스 편집기에서 새 이벤트 처리기를 추가 하거나 기존 이벤트 처리기를 사용 하 여 대화 상자 컨트롤을 편집할 수는 [이벤트 처리기 마법사](../ide/event-handler-wizard.md)합니다.  

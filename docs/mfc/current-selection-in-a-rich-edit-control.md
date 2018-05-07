@@ -2,12 +2,9 @@
 title: Rich Edit 컨트롤의 현재 선택 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - rich edit controls [MFC], current selection in
 - selection, current in CRichEditCtrl
 ms.assetid: f6b2a2b6-5481-4ad3-9720-6dd772ea6fc8
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5f0d9332d1118809ae3d62c187ec848ec95ffbf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 782984bc53bc16f8dc89e4e705811fef24b8931e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="current-selection-in-a-rich-edit-control"></a>Rich Edit 컨트롤의 현재 선택
 사용자 서식 있는 편집 컨트롤에서 텍스트를 선택할 수 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 마우스나 키보드를 사용 하 여 합니다. 현재 선택 영역이 선택 된 문자의 범위 또는 문자가 없는 경우 삽입 지점의 위치를 선택 합니다. 응용 프로그램 현재 선택 영역에 대 한 정보를 가져올 수, 현재 선택 영역을 설정, 현재 선택 영역이 변경 하 고 표시 또는 숨기기 선택 항목 강조 표시는 시기를 결정 합니다.  

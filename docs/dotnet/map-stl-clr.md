@@ -1,12 +1,9 @@
 ---
 title: map (STL/CLR) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::map
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - map class [STL/CLR]
 - <cliext/map> header [STL/CLR]
 ms.assetid: 8b0a7764-b5e4-4175-a802-82b72eb8662a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c90fcb415b186257cd2aef801867918b367413b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cda679ed01e5266f0605639df45940d8f17e506d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="map-stlclr"></a>map(STL/CLR)
 이 템플릿 클래스는 다양 한 길이의 요소 시퀀스를 양방향 액세스할 수 있는 제어 하는 개체를 설명 합니다. 컨테이너를 사용 하 여 `map` 하나의 요소 저장 하 고 각 노드의 정렬 된 나무를 균형 있게 (거의)으로 요소의 시퀀스를 관리할 수 있습니다. 요소 순서는 시퀀스와 경험해를 따라 이동 하는 매핑된 값에 대 한 키를 구성 됩니다.  
@@ -39,9 +34,9 @@ ms.lasthandoff: 12/21/2017
   
  다음은 각 문자에 대한 설명입니다.  
   
- `GKey`동일 `Key` 후자 형식인 ref 하지 않는 한 경우에서 이기`Key^`  
+ `GKey` 동일 `Key` 후자 형식인 ref 하지 않는 한 경우에서 이기 `Key^`  
   
- `GMapped`동일 `Mapped` 후자 형식인 ref 하지 않는 한 경우에서 이기`Mapped^`  
+ `GMapped` 동일 `Mapped` 후자 형식인 ref 하지 않는 한 경우에서 이기 `Mapped^`  
   
 ## <a name="syntax"></a>구문  
   
@@ -143,7 +138,7 @@ template<typename Key,
   
  이러한 대리자 개체 유형의 키에 대해 엄밀히 약한 정렬을 적용 해야 합니다 [map:: key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md)합니다. 모든 두 개의 키 즉 `X` 및 `Y`:  
   
- `key_comp()(X, Y)`동일한 부울 결과를 반환 모든 호출 합니다.  
+ `key_comp()(X, Y)` 동일한 부울 결과를 반환 모든 호출 합니다.  
   
  경우 `key_comp()(X, Y)` 가 true 이면 `key_comp()(Y, X)` false 이어야 합니다.  
   

@@ -1,29 +1,24 @@
 ---
-title: "마법사 역할을 속성 시트 | Microsoft Docs"
-ms.custom: 
+title: 마법사 역할을 속성 시트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - property sheets, as wizards
 ms.assetid: 1ea66ecb-23b0-484a-838d-58671a2999b5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65aedc5dbeb8a740d5713983f66eefe693864937
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 634359763f24e02987664fe3de1094e3e7fec64c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-sheets-as-wizards"></a>마법사 역할을 하는 속성 시트
 마법사 속성 시트의 주요 특징은 탐색 탭 대신 다음 또는 다시, 완료 및 취소 단추와 함께 제공 됩니다. 호출 해야 [CPropertySheet::SetWizardMode](../mfc/reference/cpropertysheet-class.md#setwizardmode) 호출 하기 전에 [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal) 에이 기능을 활용 하려면 속성 시트 개체입니다.  
@@ -32,7 +27,7 @@ ms.lasthandoff: 12/21/2017
   
  모든 기본 단추를 표시 하려면 모두 "마침" 단추를 표시 하 고 단추를 이동 합니다. 다음 단추를 상대 위치 유지 되도록 뒤로 단추를 이동 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#5](../mfc/codesnippet/cpp/property-sheets-as-wizards_1.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

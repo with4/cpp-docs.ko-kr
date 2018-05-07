@@ -1,13 +1,10 @@
 ---
-title: "TN040: MFC OLE 내부 크기 조정 및 확대/축소 | Microsoft Docs"
-ms.custom: 
+title: 'TN040: MFC OLE 내부 크기 조정 및 확대/축소 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1113da01e58ec00cd4420aab4424b1c20e127e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf8b90aed96135967167c8048f775fc7530f85d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: MFC/OLE 내부 크기 조정 및 확대/축소
 > [!NOTE]
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
  확대/축소 수준은 올바르게 예제 보려면 MFC OLE 샘플 [HIERSVR](../visual-cpp-samples.md)합니다. 텍스트를 표시 하 고 텍스트를 일반적으로 확장 되지 않습니다 (힌트, 인쇄 규칙, 디자인 너비 및 높이 모든 해당 문제 복잡 하 게)를 순서 대로 복잡 HIERSVR에서 확대/축소 합니다. 그렇지만 HIERSVR은 올바르게, 확대/축소 구현에 대 한 적절 한 참조 이므로 MFC 자습서 [SCRIBBLE](../visual-cpp-samples.md) (단계 7).  
   
- `COleServerDoc::GetZoomFactor`서로 다른 사용 가능한 메트릭 또는 컨테이너에서의 구현에서 수에 따라 확대/축소 비율을 결정 하면 `COleServerItem` 및 `COleServerDoc` 클래스입니다. 즉, 현재 확대/축소 비율 다음 수식에 의해 결정 됩니다.  
+ `COleServerDoc::GetZoomFactor` 서로 다른 사용 가능한 메트릭 또는 컨테이너에서의 구현에서 수에 따라 확대/축소 비율을 결정 하면 `COleServerItem` 및 `COleServerDoc` 클래스입니다. 즉, 현재 확대/축소 비율 다음 수식에 의해 결정 됩니다.  
   
 ```  
 Position Rectangle (PR) / Container Extent (CE)  
@@ -64,7 +59,7 @@ Position Rectangle (PR) / Container Extent (CE)
   
  컨테이너 범위는 계산에 약간 더 복잡 합니다. 컨테이너를 호출한 경우 `COleServerItem::OnSetExtent` (을 호출 하 여 `COleClientItem::SetExtent`), 컨테이너 범위 논리 인치 당 픽셀 수에 따라 픽셀에 변환 된이 값은입니다. 컨테이너 SetExtent (이 일반적으로 경우)를 호출 하지 않은 경우 컨테이너 범위 내에서 반환 되는 크기는 `COleServerItem::OnGetExtent`합니다. 따라서 컨테이너가 SetExtent 호출 하는 경우 프레임 워크 가정 했을 경우 컨테이너는가 호출 되도록 것 자연 범위의 100% (에서 반환 된 값 **COleServerItem::GetExtent**). 즉, 프레임 워크 컨테이너가 항목의 100% (더 이상, no 작음)를 표시 하는 것으로 가정 합니다.  
   
- 하지만 해야 `COleServerItem::OnSetExtent` 및 `COleServerItem::OnGetExtent` 이름이 유사한 항목의 동일한 특성을 조작 하지 않습니다. `OnSetExtent`서버에서 개체의 표시 되는 (확대/축소 비율)에 관계 없이 컨테이너에서 파악 하기 위해 호출 하 고 `OnGetExtent` 개체의 이상적인 크기를 결정 하 고 컨테이너에 의해 호출 됩니다.  
+ 하지만 해야 `COleServerItem::OnSetExtent` 및 `COleServerItem::OnGetExtent` 이름이 유사한 항목의 동일한 특성을 조작 하지 않습니다. `OnSetExtent` 서버에서 개체의 표시 되는 (확대/축소 비율)에 관계 없이 컨테이너에서 파악 하기 위해 호출 하 고 `OnGetExtent` 개체의 이상적인 크기를 결정 하 고 컨테이너에 의해 호출 됩니다.  
   
  각 관련 된 Api를 살펴보면 좀더 명확한을 얻을 수 있습니다.  
   

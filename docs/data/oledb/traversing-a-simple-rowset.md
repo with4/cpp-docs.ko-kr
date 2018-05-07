@@ -1,12 +1,9 @@
 ---
-title: "단순 행 집합 검색 | Microsoft Docs"
-ms.custom: 
+title: 단순 행 집합 검색 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7006d10191c3a2df31d3784a95b01f0adad0e202
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a29d7a226d12f9c464d91ec356ae8a1a02091f1e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="traversing-a-simple-rowset"></a>단순 행 집합 검색
 다음 예에서는 명령을 포함 하지 않는 쉽고 빠르게 데이터베이스 액세스를 보여 줍니다. 라는 테이블에서 레코드를 검색 하는 다음 소비자 코드는 ATL 프로젝트에서 *예술가* Microsoft Access에서 Microsoft OLE DB Provider for ODBC 사용 하 여 데이터베이스입니다. 코드는 만듭니다는 [CTable](../../data/oledb/ctable-class.md) table 개체 접근자를 가진 사용자 레코드 클래스에 따라 `CArtists`합니다. 연결을 엽니다, 그리고 연결에서 세션을 열고 세션에 있는 테이블을 엽니다.  

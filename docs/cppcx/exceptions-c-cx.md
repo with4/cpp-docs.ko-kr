@@ -1,24 +1,19 @@
 ---
-title: "예외 (C + + /cli CX) | Microsoft Docs"
-ms.custom: 
+title: 예외 (C + + /cli CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7e54d98ac4e1398753746dcac074de53ee2e7a0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 5e58ad68f4cfc7d514c4d8434cf52f6d348640c4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-ccx"></a>예외(C++/CX)
 
@@ -38,7 +33,7 @@ C + + /cli CX는 일반적인 HRESULT 오류를 나타내는 표준 예외 집�
 
 다음 표에서는 표준 예외를 보여 줍니다.
 
-|name|내부 HRESULT|설명|
+|이름|내부 HRESULT|설명|
 |----------|------------------------|-----------------|
 |COMException|*사용자 정의 hresult*|COM 메서드 호출에서 인식할 수 없는 HRESULT가 반환되는 경우에 throw됩니다.|
 |AccessDeniedException|E\_액세스 실패|리소스 또는 기능에 대한 액세스가 거부된 경우 throw됩니다.|
@@ -113,7 +108,7 @@ void App::OnUnhandledException(Platform::Object^ sender, Windows::ApplicationMod
 
 C + + /cli CX 사용 하지 않습니다는 `finally` 절.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [Visual c + + 언어 참조](visual-c-language-reference-c-cx.md)  
 [네임 스페이스 참조](namespaces-reference-c-cx.md)  

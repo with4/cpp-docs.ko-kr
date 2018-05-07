@@ -1,11 +1,8 @@
 ---
 title: 'Platform:: metadata Namespace | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Metadata
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Metadata Namespace
 ms.assetid: e3e114d8-a4b0-47f0-865a-9ce9d7212e86
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61824ff4eb91fa7d62bb663e713bc269f50b4e01
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 11dc54463207efade9a8ebb7179654d0b1e18909
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformmetadata-namespace"></a>Platform::Metadata 네임스페이스
 이 네임스페이스는 형식 선언을 수정하는 특성을 포함합니다.  
@@ -41,7 +36,7 @@ namespace Platform {
 ### <a name="members"></a>멤버  
  이 네임스페이스는 내부용으로 설계되었지만 브라우저에서 이 네임스페이스의 다음 멤버를 표시할 수 있습니다.  
   
-|name|설명|  
+|이름|설명|  
 |----------|------------|  
 |특성|특성의 기본 클래스입니다.|  
 |[Platform::Metadata::DefaultMemberAttribute 특성](../cppcx/platform-metadata-defaultmemberattribute-attribute.md)|몇 가지 가능한 오버로드된 함수 중에서 호출할 기본 설정 함수를 나타냅니다.|  

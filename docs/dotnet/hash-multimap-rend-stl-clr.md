@@ -2,11 +2,8 @@
 title: 'hash_multimap:: rend (STL/CLR) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multimap::rend
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - rend member [STL/CLR]
 ms.assetid: 7cbed963-7615-40bf-80f2-37b878a64453
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8dcea5e6036790e2de1a7142b6a887587de159c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7978c0bba27b34997fdbd2500e578fdb785c2425
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultimaprend-stlclr"></a>hash_multimap::rend(STL/CLR)
 제어되는 역방향 시퀀스의 끝을 지정합니다.  
@@ -40,7 +35,7 @@ reverse_iterator rend();
 ## <a name="remarks"></a>설명  
  멤버 함수는 제어 된 시퀀스의 시작 부분 바로 다음 가리키는 역방향 반복기를 반환합니다. 따라서을 지정 된 `end` 역방향 시퀀스의 합니다. 지정 하는 반복기를 사용 하면는 `current` 제어 된 시퀀스를 역순으로 표시 하지만 해당 상태의 끝 제어 된 시퀀스의 길이가 변경 되 면 변경할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_multimap_rend.cpp   
