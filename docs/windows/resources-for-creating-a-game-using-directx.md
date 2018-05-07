@@ -1,4 +1,4 @@
----
+﻿---
 title: DirectX를 사용 하 여 게임을 만들기 위한 리소스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016

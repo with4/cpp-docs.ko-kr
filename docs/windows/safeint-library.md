@@ -1,4 +1,4 @@
----
+﻿---
 title: SafeInt 라이브러리 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016

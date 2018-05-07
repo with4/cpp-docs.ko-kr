@@ -1,5 +1,5 @@
----
-title: Windows 데스크톱 응용 프로그램 (C++) | Microsoft Docs
+﻿---
+title: "Windows 데스크톱 응용 프로그램 (C++) | Microsoft Docs"
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''

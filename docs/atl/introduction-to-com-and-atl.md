@@ -1,4 +1,4 @@
----
+﻿---
 title: COM 및 ATL 소개 | Microsoft Docs
 ms.custom: index-page
 ms.date: 11/04/2016
@@ -40,5 +40,5 @@ ms.lasthandoff: 05/03/2018
  액티브 템플릿 라이브러리를 사용하여 프로그래밍하는 방법에 대한 개념 항목의 링크를 제공합니다.  
   
  [ATL 클래스 개요](../atl/atl-class-overview.md)  
- 참조 정보를 제공 하는 ATL 클래스에 연결 합니다.
+ 참조 정보를 제공하는 ATL 클래스에 연결 합니다.
 
