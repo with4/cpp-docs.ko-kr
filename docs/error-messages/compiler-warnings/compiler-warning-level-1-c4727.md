@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 1) C4727 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 1) C4727 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4727
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4727
 ms.assetid: 991b0087-3a50-40f5-9cdb-cdc367cd472c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 813c2ab18cc81c4477ae094e6c2aa771e3135b7a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c92e42fe275f821e333a0f04a116034a5bb849a1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4727"></a>컴파일러 경고(수준 1) C4727
 "PCH obj_file_1 및 obj_file_2에 타임 스탬프가 동일한 pch_file를 라는 하는 데 사용 합니다.  첫 번째 PCH를 사용합니다.  
@@ -46,6 +41,6 @@ ms.lasthandoff: 12/21/2017
   
  자세한 내용은 다음 항목을 참조하세요.  
   
--   [/Yc (미리 컴파일된 헤더 파일 만들기)](../../build/reference/yc-create-precompiled-header-file.md)  
+-   [/Yc(미리 컴파일된 헤더 파일 만들기)](../../build/reference/yc-create-precompiled-header-file.md)  
   
--   [/Yu (미리 컴파일된 헤더 파일 사용)](../../build/reference/yu-use-precompiled-header-file.md)
+-   [/Yu(미리 컴파일된 헤더 파일 사용)](../../build/reference/yu-use-precompiled-header-file.md)

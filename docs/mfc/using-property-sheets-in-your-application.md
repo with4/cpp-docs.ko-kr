@@ -1,13 +1,10 @@
 ---
-title: "속성 시트를 사용 하 여 응용 프로그램에서 | Microsoft Docs"
-ms.custom: 
+title: 속성 시트를 사용 하 여 응용 프로그램에서 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4247a40fa364774674c1c79845625df51ecd34ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74e63faf5b1cac5e0cb841a28fd59ecee47c9970
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-property-sheets-in-your-application"></a>응용 프로그램에서 속성 시트 사용
 응용 프로그램에서 속성 시트를 사용 하려면 다음 단계를 수행 합니다.  
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
     -   호출 [CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage) 각 페이지에 대 한 합니다.  
   
-     가 만드는 개체 일반적으로 `CPropertySheet` 도 만듭니다는 `CPropertyPage` 이 단계에서는 개체입니다. 그러나 구현 하는 경우는 `CPropertySheet`-파생 클래스를 포함할 수 있습니다는 `CPropertyPage` 개체에 `CPropertySheet` 개체와 호출 `AddPage` 에서 각 페이지에 대 한는 `CPropertySheet`-클래스 생성자를 파생 합니다. `AddPage`추가 `CPropertyPage` 페이지의 속성 시트의 변수에 개체 이지만 실제로 해당 페이지에 대 한 창을 만들지 않습니다. 따라서 필요한 경우가 아니라면 호출 하는 속성 시트 창 만들 때까지 대기 하도록 `AddPage`; 호출할 수 있습니다 `AddPage` 속성 시트의 생성자에서 합니다.  
+     가 만드는 개체 일반적으로 `CPropertySheet` 도 만듭니다는 `CPropertyPage` 이 단계에서는 개체입니다. 그러나 구현 하는 경우는 `CPropertySheet`-파생 클래스를 포함할 수 있습니다는 `CPropertyPage` 개체에 `CPropertySheet` 개체와 호출 `AddPage` 에서 각 페이지에 대 한는 `CPropertySheet`-클래스 생성자를 파생 합니다. `AddPage` 추가 `CPropertyPage` 페이지의 속성 시트의 변수에 개체 이지만 실제로 해당 페이지에 대 한 창을 만들지 않습니다. 따라서 필요한 경우가 아니라면 호출 하는 속성 시트 창 만들 때까지 대기 하도록 `AddPage`; 호출할 수 있습니다 `AddPage` 속성 시트의 생성자에서 합니다.  
   
      기본적으로 속성 시트 속성 시트의 단일 행에 들어가는 것 보다 더 많은 탭에 여러 행에는 탭 스택 됩니다. 호출 스택 사용 하지 않으려면 [CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) 로 설정 하는 매개 변수와 함께 **FALSE**합니다. 호출 해야 `EnableStackedTabs` 속성 시트를 만들 때.  
   

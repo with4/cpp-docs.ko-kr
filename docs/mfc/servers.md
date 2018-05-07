@@ -1,13 +1,10 @@
 ---
-title: "서버 | Microsoft Docs"
-ms.custom: 
+title: 서버 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - OLE server applications [MFC], server types
 - server applications [MFC]
 ms.assetid: e45172e8-eae3-400a-8139-0fa009a42fdc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0a011201a521ed97cf9ebe4c0a8249526b9d7c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d153d73889520deaff12b64da36567a8b9a4087
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers"></a>서버
 서버 응용 프로그램 (또는 구성 요소 응용 프로그램) 컨테이너 응용 프로그램에서 사용 하기 위해 OLE 항목 (또는 구성 요소)를 만듭니다. 비주얼 편집 서버 응용 프로그램 비주얼 편집 또는 내부 활성화에도 지원합니다. OLE 서버의 또 다른 형태는 [자동화 서버](../mfc/automation-servers.md)합니다. 일부 서버 응용 프로그램만 포함 된 항목; 만들기를 지원합니다. 다른 사람이 포함 및 연결 된 항목의 생성을 지원 합니다. 일부 지원 링크에이 드물지만 합니다. 사용자가 항목을 편집 하려고 할 때 모든 서버 응용 프로그램 컨테이너 응용 프로그램에서 활성화를 지원 해야 합니다. 응용 프로그램 컨테이너와 서버 둘 다를 수 있습니다. 즉, 수 둘 다 해당 문서에 데이터를 통합 하 고 다른 응용 프로그램의 문서에 항목으로 포함 될 수 있는 데이터를 만듭니다.  

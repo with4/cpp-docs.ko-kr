@@ -1,13 +1,10 @@
 ---
-title: "응용 프로그램 프레임 워크 | Microsoft Docs"
-ms.custom: 
+title: 응용 프로그램 프레임 워크 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - applications [MFC]
 - application framework [MFC]
 ms.assetid: 912684e6-4418-49dc-9877-a4cd19d69d20
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a071a5246d00bbc2f4f82255af1aaf80b7b6f2f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c91706f5d222753a355897de943f78faf6104cb3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="application-framework"></a>응용 프로그램 프레임워크
 Microsoft Foundation 클래스 (MFC) 라이브러리의 핵심은 c + + 형식으로 Windows API의 많은 부분이의 캡슐화 합니다. 라이브러리 클래스 일반적인 GDI 개체 브러시 및 펜, 컨트롤 및 기타 표준 Windows 항목 예: windows, 대화 상자, 장치 컨텍스트를 나타냅니다. 이 클래스는 편리한 제공 캡슐화 하는 Windows의 구조에 c + + 멤버 함수 인터페이스입니다. 이러한 클래스를 사용 하는 방법에 대 한 자세한 내용은 [창 개체 항목](../mfc/window-objects.md)합니다.  

@@ -1,30 +1,25 @@
 ---
-title: "Visual c + + ActiveX 컨트롤 재배포 | Microsoft Docs"
-ms.custom: 
+title: Visual c + + ActiveX 컨트롤 재배포 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], redistributing
 - controls [C++], distributing
 ms.assetid: eefbb7e4-d28c-4c35-98bf-d9540cfaae83
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c520d365a259c36baab8edeb9049aab9ac89925a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2b770bbacca06c6edfb3b9b4eda53fc7be8a7ae0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Visual C++ ActiveX 컨트롤 재배포
 Visual c + + 6.0 제공 ActiveX 컨트롤 다음 다시 배포 하는 응용 프로그램에서 사용할 수 있습니다. 이러한 컨트롤은 더 이상 Visual c + +에 포함 됩니다. Visual c + + 6.0에 대 한 사용권 계약에 따라 Visual c + +에서 개발 된 응용 프로그램으로 이러한 컨트롤을 재배포할 수 있습니다.  
@@ -46,7 +41,7 @@ Visual c + + 6.0 제공 ActiveX 컨트롤 다음 다시 배포 하는 응용 프
   
 -   stdole2.tlb  
   
- 이러한 Dll을 대상 시스템에서 사용할 수 없는 경우 해당 운영 체제를 업데이트 하기 위한 미리 지정된 된 메커니즘을 사용 하 여 업데이트 해야 합니다. Windows 운영 체제에 대 한 최신 서비스 팩을 다운로드할 수 [http://windowsupdate.microsoft.com](http://windowsupdate.microsoft.com)합니다.  
+ 이러한 Dll을 대상 시스템에서 사용할 수 없는 경우 해당 운영 체제를 업데이트 하기 위한 미리 지정된 된 메커니즘을 사용 하 여 업데이트 해야 합니다. Windows 운영 체제에 대 한 최신 서비스 팩을 다운로드할 수 [ http://windowsupdate.microsoft.com ](http://windowsupdate.microsoft.com)합니다.  
   
  응용 프로그램 데이터베이스에 연결 하는 ActiveX 컨트롤 중 하나를 사용 하는 Microsoft 데이터 액세스 구성 요소 (MDAC) 대상 시스템에 설치 되어 있어야 합니다. 자세한 내용은 참조 [데이터베이스 지원 파일 재배포](../ide/redistributing-database-support-files.md)합니다.  
   

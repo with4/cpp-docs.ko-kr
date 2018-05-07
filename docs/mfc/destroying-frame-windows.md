@@ -1,13 +1,10 @@
 ---
-title: "프레임 창 소멸 시키기 | Microsoft Docs"
-ms.custom: 
+title: 프레임 창 소멸 시키기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - PostNcDestroy
 dev_langs:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - OnClose method [MFC]
 - PostNcDestroy method [MFC]
 ms.assetid: 5affca77-1999-4507-a2b2-9aa226611b4b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1cbd96f5044626c7c3c07e8fca115c2b1dca8cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81182c0e5633e19126d3036b5793de7658ad3d2a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="destroying-frame-windows"></a>프레임 창 제거
 MFC 프레임 워크는 프레임 워크 문서 및 뷰를와 연결 된 해당 창에 대 한 작성 뿐만 아니라 창 소멸을 관리 합니다. 추가로 창을 만드는 모르는 경우을 제거 해야 합니다.  
@@ -43,7 +38,7 @@ MFC 프레임 워크는 프레임 워크 문서 및 뷰를와 연결 된 해당 
   
  주 창을 닫거나 응용 프로그램을 종료 합니다. 저장 되지 않은 문서 수정 되 면 프레임 워크 문서를 저장 해야 하는 경우 요청 하는 메시지 상자를 표시 하 고 필요한 경우 적절 한 문서는 저장 확인 합니다.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [문서 프레임 창 만들기](../mfc/creating-document-frame-windows.md)  
   

@@ -1,13 +1,10 @@
 ---
-title: "TN026: DDX 및 DDV 루틴 | Microsoft Docs"
-ms.custom: 
+title: 'TN026: DDX 및 DDV 루틴 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - DDX
 - DDV
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - TN026
 - DDV (dialog data validation), procedures
 ms.assetid: c2eba87a-4b47-4083-b28b-e2fa77dfb4c4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c2309e8080892bdca2753c1ea6128ce419862f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44a946b21908f45b595056a956c75b234fdbb886
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026: DDX 및 DDV 루틴
 > [!NOTE]
@@ -78,7 +73,7 @@ DDV_Custom(pDX,
   
  데이터의 초기 값이 블록에 일반적으로 표준 c + + 생성자에서 설정 됩니다 `//{{AFX_DATA_INIT` 및 `//}}AFX_DATA_INIT` 메모 합니다.  
   
- `CWnd::UpdateData`초기화 및 오류에 대 한 호출 주위 처리를 수행 하는 작업은 `DoDataExchange`합니다.  
+ `CWnd::UpdateData` 초기화 및 오류에 대 한 호출 주위 처리를 수행 하는 작업은 `DoDataExchange`합니다.  
   
  호출할 수 있습니다 `CWnd::UpdateData` 언제 든 지 데이터 교환 및 유효성 검사를 수행 합니다. 기본적으로 `UpdateData`기본에서 (TRUE) 라고 `CDialog::OnOK` 처리기 및 `UpdateData`기본에서 (FALSE) 라고 `CDialog::OnInitDialog`합니다.  
   
@@ -99,7 +94,7 @@ DDV_Custom(pDX,
   
 - `m_pDlgWnd`: 창 (일반적으로 대화 상자) 컨트롤이 들어 있는입니다. 모든 DDX/DDV 루틴을를 't h i s'를 전달 하는 것과 DDX_ DDV_ 전역 함수 및 호출자가입니다.  
   
-- `PrepareCtrl`및 `PrepareEditCtrl`: 데이터 교환에 대 한 대화 상자 컨트롤을 준비 합니다. 유효성 검사에 실패할 경우 포커스를 설정 하는 것에 대 한 해당 컨트롤의 핸들을 저장 합니다. `PrepareCtrl`nonedit 컨트롤에 사용 되 고 `PrepareEditCtrl` 편집 컨트롤에 사용 됩니다.  
+- `PrepareCtrl`및 `PrepareEditCtrl`: 데이터 교환에 대 한 대화 상자 컨트롤을 준비 합니다. 유효성 검사에 실패할 경우 포커스를 설정 하는 것에 대 한 해당 컨트롤의 핸들을 저장 합니다. `PrepareCtrl` nonedit 컨트롤에 사용 되 고 `PrepareEditCtrl` 편집 컨트롤에 사용 됩니다.  
   
 - **실패**: 사용자 입력된 오류를 경고 메시지 상자를 표시 한 후 호출 합니다. 이 루틴 마지막 컨트롤에 포커스를 복원 합니다 (마지막으로 호출한 `PrepareCtrl` / `PrepareEditCtrl`) 예외를 throw 합니다. 이 멤버 함수는 DDX_와 DDV_ 루틴에서 호출할 수 있습니다.  
   

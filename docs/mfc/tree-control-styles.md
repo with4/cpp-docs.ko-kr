@@ -1,13 +1,10 @@
 ---
-title: "트리 컨트롤 스타일 | Microsoft Docs"
-ms.custom: 
+title: 트리 컨트롤 스타일 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - TVS_SINGLEEXPAND
 - TVS_LINESATROOT
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - TVS_HASBUTTONS [MFC]
 - tree controls [MFC], styles
 ms.assetid: f43faebd-a355-479e-888a-bf0673d5e1b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c141a2b0db673f8d3c5f2c116de5b5d2ec81a8ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c0158bfc24eb86f88695b58943989fbb7cac435
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-styles"></a>트리 컨트롤 스타일
 Tree 컨트롤 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 스타일 트리 컨트롤의 모양을 제어 합니다. 트리 컨트롤을 만들 때 초기 스타일을 설정 합니다. 검색 하 고 사용 하 여 트리 컨트롤을 만든 후 스타일을 변경할 수는 [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) 및 [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) 지정 하는 Windows 기능의 **GWL_STYLE** 에 대 한 `nIndex` 매개 변수입니다. 스타일의 전체 목록은 참조 하십시오. [트리 뷰 컨트롤 창 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760013) Windows sdk에서입니다.  

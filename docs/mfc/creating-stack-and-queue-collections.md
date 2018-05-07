@@ -1,13 +1,10 @@
 ---
-title: "스택 및 큐 컬렉션 만들기 | Microsoft Docs"
-ms.custom: 
+title: 스택 및 큐 컬렉션 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,22 +17,20 @@ helpviewer_keywords:
 - stack collections
 - collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd3c4d587f64fc89bf25cfd127e6b7efc490df8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5545a1803675965cdea716e009ab70d2d72a31f4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-stack-and-queue-collections"></a>스택 및 큐 컬렉션 만들기
 이 문서와 같은 기타 데이터 구조를 만드는 방법에 설명 [스택](#_core_stacks) 및 [큐](#_core_queues), MFC에서 클래스를 나열 합니다. 파생 된 클래스를 사용 하는 예제 `CList`, 하지만 사용할 수 있습니다 `CList` 직접 기능을 추가 하는 제외 합니다.  
   
-##  <a name="_core_stacks"></a>스택  
+##  <a name="_core_stacks"></a> 스택  
  표준 목록 컬렉션 앞면과 뒷면 모두이 이기 때문에 마지막에서 첫 번째 아웃 스택의 동작을 모방 하는 파생 된 목록 컬렉션을 만들 쉽습니다. 스택 식당에 접시 더미와 비슷합니다. 트레이 스택에 추가 되 면 스택 맨 위에 이동 합니다. 마지막에 추가한 접시 제거할 첫 번째 단원입니다. 목록 컬렉션 멤버 함수 `AddHead` 및 `RemoveHead` 목록의 헤드에서 구체적으로 요소를 제거를 따라서 가장 최근에 추가 된 요소는 제거 될 첫 번째 및 추가 하려면 사용할 수 있습니다.  
   
 #### <a name="to-create-a-stack-collection"></a>스택 컬렉션을 만들려면  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  이 방법은 기본을 노출 하는 참고 `CObList` 클래스입니다. 사용자를 호출할 수 `CObList` 멤버 함수를 있는지 여부는 스택에 대 한 것이 좋습니다.  
   
-##  <a name="_core_queues"></a>큐  
+##  <a name="_core_queues"></a> 큐  
  표준 목록 컬렉션 앞면과 뒷면 모두 있어서 쉽게 선입 선출 큐의 동작을 모방 하는 파생 된 목록 컬렉션을 만들 수 이기도 합니다. 큐는 식당에는 사용자의 줄 비슷합니다. 줄에 첫 번째 사용자는 첫 번째 서비스할 수입니다. 더 많은 사람들이으로 순서를 대기 하는 줄의 끝으로 이동 합니다. 목록 컬렉션 멤버 함수 `AddTail` 및 `RemoveHead` 추가 하는 데 사용 될 및 특히 h e a d 또는 목록 꼬리에서 요소를 제거할; 따라서 가장 최근에 추가 된 요소는 항상 마지막으로 제거할 수 있습니다.  
   
 #### <a name="to-create-a-queue-collection"></a>큐 컬렉션을 만들려면  

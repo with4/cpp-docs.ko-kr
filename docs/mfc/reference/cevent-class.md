@@ -1,12 +1,9 @@
 ---
-title: "CEvent 클래스 | Microsoft Docs"
-ms.custom: 
+title: CEvent 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CEvent
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0646e703f172777817aa569fa28d3430624ccae8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1da3dc6df825988794481795ca7e47e72b5736bb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cevent-class"></a>CEvent 클래스
 다른 이벤트가 발생 했음을 알리기 위해 하나의 스레드 수 있도록 하는 동기화 개체인 이벤트를 나타냅니다.  
@@ -66,7 +61,7 @@ class CEvent : public CSyncObject
 ## <a name="remarks"></a>설명  
  이벤트는 스레드 해당 작업을 수행 하는 시기를 알고 있어야 하는 경우에 유용 합니다. 예를 들어, 데이터 보관 데이터를 복사 하는 스레드는 새 데이터를 사용할 때 알림을 받아야 합니다. 사용 하 여는 `CEvent` 개체에 새 데이터를 사용할 수 있는 경우 복사 스레드를 알리기 위해 스레드가 가능한 한 빨리 해당 작업을 수행할 수 있습니다.  
   
- `CEvent`개체에는 두 가지 유형을 갖는: 수동 및 자동입니다.  
+ `CEvent` 개체에는 두 가지 유형을 갖는: 수동 및 자동입니다.  
   
  자동 `CEvent` 개체 신호 (사용할 수 없음) 상태에 하나 이상의 스레드가 해제 된 후 자동으로 반환 합니다. 기본적으로는 `CEvent` 개체는 전달 하지 않으면 자동 `TRUE` 에 대 한는 `bManualReset` 생성 하는 동안 매개 변수입니다.  
   
@@ -80,7 +75,7 @@ class CEvent : public CSyncObject
   
  사용 하는 방법에 대 한 자세한 내용은 `CEvent` 개체 참조 [다중 스레딩: 동기화 클래스 사용 방법](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities#45](../../mfc/codesnippet/cpp/cevent-class_1.cpp)]  
   
  [!code-cpp[NVC_MFC_Utilities#46](../../mfc/codesnippet/cpp/cevent-class_2.cpp)]  
@@ -95,7 +90,7 @@ class CEvent : public CSyncObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxmt.h  
   
-##  <a name="cevent"></a>CEvent::CEvent  
+##  <a name="cevent"></a>  CEvent::CEvent  
  명명 되거나 명명 되지 않은 `CEvent` 개체입니다.  
   
 ```  
@@ -127,7 +122,7 @@ CEvent(
 > [!IMPORTANT]
 >  만든 후의 `CEvent` 개체를 가져오려면 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) 뮤텍스가 존재 하지 않는 새로운 되도록 합니다. 뮤텍스 예기치 않게 존재 않는 rogue 프로세스가 무단 점유 되 고 뮤텍스를 악의적으로 사용 하도록 의도 수를 나타낼 수 있습니다. 이 경우 보안을 중요시 위한 권장된 절차는 핸들을 종료 하 고 것 처럼 계속 개체 만들기에 오류가 발생 한 것입니다.  
   
-##  <a name="pulseevent"></a>CEvent::PulseEvent  
+##  <a name="pulseevent"></a>  CEvent::PulseEvent  
  설정 하는 신호를 이벤트의 상태 (사용 가능), 모든 대기 중인 스레드를 해제 하 고 다시 설정를 신호 없음으로 (사용 불가) 자동으로 합니다.  
   
 ```  
@@ -142,9 +137,9 @@ BOOL PulseEvent();
   
  대기 중인 스레드가 없는 경우 스레드가 즉시 해제 될 수 `PulseEvent` 이벤트의 상태를 신호 없음으로 설정 하 고 반환 합니다.  
   
- `PulseEvent`기본 Win32를 사용 하 여 `PulseEvent` 함수는 커널 모드 비동기 프로시저 호출에서 대기 상태에서 일시적으로 제거할 수 있습니다. 따라서 `PulseEvent` 안정적이 지 고 새 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 참조는 [PulseEvent 함수](http://msdn.microsoft.com/library/windows/desktop/ms684914)합니다.  
+ `PulseEvent` 기본 Win32를 사용 하 여 `PulseEvent` 함수는 커널 모드 비동기 프로시저 호출에서 대기 상태에서 일시적으로 제거할 수 있습니다. 따라서 `PulseEvent` 안정적이 지 고 새 응용 프로그램에서 사용할 수 없습니다. 자세한 내용은 참조는 [PulseEvent 함수](http://msdn.microsoft.com/library/windows/desktop/ms684914)합니다.  
   
-##  <a name="resetevent"></a>CEvent::ResetEvent  
+##  <a name="resetevent"></a>  CEvent::ResetEvent  
  상태를 설정 하려면 이벤트의까지 신호 없음으로 여에 신호를 명시적으로 설정 된 [SetEvent](#setevent) 멤버 함수입니다.  
   
 ```  
@@ -159,7 +154,7 @@ BOOL ResetEvent();
   
  이 멤버 함수는 자동 이벤트에 의해 사용 되지 않습니다.  
   
-##  <a name="setevent"></a>CEvent::SetEvent  
+##  <a name="setevent"></a>  CEvent::SetEvent  
  모든 대기 중인 스레드에 해제를 신호 이벤트의 상태를 설정 합니다.  
   
 ```  
@@ -172,7 +167,7 @@ BOOL SetEvent();
 ### <a name="remarks"></a>설명  
  수동 인 이벤트 신호를 받은 될 때까지 유지 됩니다 [ResetEvent](#resetevent) 호출 됩니다. 이 경우 둘 이상의 스레드를 릴리스할 수 있습니다. 이 이벤트는 자동이 단일 스레드가 해제 될 때까지 이벤트 신호를 받은 상태로 유지 됩니다. 다음 시스템을 신호 없음으로 이벤트 상태를 설정 합니다. 대기 중인 스레드가 없는 경우에 한 스레드가 해제 될 때까지 상태 신호를 받은 상태로 유지 됩니다.  
   
-##  <a name="unlock"></a>CEvent::Unlock  
+##  <a name="unlock"></a>  CEvent::Unlock  
  이벤트 개체를 해제합니다.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "표준 컨트롤에서 컨트롤 파생 시키기 | Microsoft Docs"
-ms.custom: 
+title: 표준 컨트롤에서 컨트롤 파생 시키기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Windows common controls [MFC], deriving from
 - standard controls
 ms.assetid: a6f84315-7007-4e0e-8576-78be81254802
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b93bc07fc5ab4680caaa276daaeca86189b8ce5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50db9d4c99e8ef538ffaa5352f9ec96e5b08217f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>표준 컨트롤에서 컨트롤 파생시키기
 마찬가지로 [CWnd](../mfc/reference/cwnd-class.md)-파생 클래스를 기존 컨트롤 클래스에서 새 클래스를 파생 하 여 컨트롤의 동작을 수정할 수 있습니다.  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  재정의 `OnInitDialog` 멤버 함수를 호출 하 여 대화 상자 클래스에는 `SubclassDlgItem` 파생 컨트롤 멤버 함수입니다.  
   
- `SubclassDlgItem`"동적으로 서브 클래스" 컨트롤이 대화 상자 템플릿에서 생성 합니다. 컨트롤은 동적으로 하위 클래스에서는 있습니다 Windows에 후크를 사용자의 응용 프로그램 내에서 일부 메시지를 처리 다음 Windows에 로그온 할 나머지 메시지를 전달 합니다. 자세한 내용은 참조는 [SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem) 클래스의 멤버 함수 `CWnd` 에 *MFC 참조*합니다. 다음 예제에서는 재정의 작성 하는 방법을 보여 줍니다. `OnInitDialog` 호출할 `SubclassDlgItem`:  
+ `SubclassDlgItem` "동적으로 서브 클래스" 컨트롤이 대화 상자 템플릿에서 생성 합니다. 컨트롤은 동적으로 하위 클래스에서는 있습니다 Windows에 후크를 사용자의 응용 프로그램 내에서 일부 메시지를 처리 다음 Windows에 로그온 할 나머지 메시지를 전달 합니다. 자세한 내용은 참조는 [SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem) 클래스의 멤버 함수 `CWnd` 에 *MFC 참조*합니다. 다음 예제에서는 재정의 작성 하는 방법을 보여 줍니다. `OnInitDialog` 호출할 `SubclassDlgItem`:  
   
  [!code-cpp[NVC_MFCControlLadenDialog#3](../mfc/codesnippet/cpp/deriving-controls-from-a-standard-control_1.cpp)]  
   

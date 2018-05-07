@@ -1,13 +1,10 @@
 ---
-title: "TN039: MFC OLE 자동화 구현 | Microsoft Docs"
-ms.custom: 
+title: 'TN039: MFC OLE 자동화 구현 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - TN039
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18a5962c9b9254233b0990f19cdc1ff4f562d9cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c6475e8c259026618192489ac2c67c20ed03d92
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039: MFC/OLE 자동화 구현
 > [!NOTE]
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
 -   디스패치 맵 가장 많이 파생 된 클래스 (상대 0)에서 거리  
   
- **DISPID** 두 부분으로 나뉘어 있습니다. **LOWORD** 의 **DISPID** 디스패치 맵 위쪽에서 거리 첫 번째 구성 요소를 포함 합니다. **HIWORD** 거리 가장 많이 파생 된 클래스를 포함 합니다. 예:  
+ **DISPID** 두 부분으로 나뉘어 있습니다. **LOWORD** 의 **DISPID** 디스패치 맵 위쪽에서 거리 첫 번째 구성 요소를 포함 합니다. **HIWORD** 거리 가장 많이 파생 된 클래스를 포함 합니다. 예를 들어:  
   
 ```  
 class CDispPoint : public CCmdTarget  
@@ -188,7 +183,7 @@ property Y    (DISPID)0x00010002
  공간 문자열 각 매개 변수에 대해 VTS_를 구분합니다.  
   
 ## <a name="remarks"></a>설명  
- 과 거의 동일한는 `DISP_PROPERTY_EX` 매크로이 매크로 별도 Get 및 Set 멤버 함수를 사용 하 여 액세스 속성을 정의 합니다. 그러나이 매크로 사용 하면 속성에 대 한 매개 변수 목록을 지정할 수 있습니다. 이 다른 방법으로 매개 변수화 되거나 인덱싱된 속성을 구현 하는 데 유용 합니다. 매개 변수를 항상 겁니다 먼저 다음에 속성에 대 한 새 값. 예:  
+ 과 거의 동일한는 `DISP_PROPERTY_EX` 매크로이 매크로 별도 Get 및 Set 멤버 함수를 사용 하 여 액세스 속성을 정의 합니다. 그러나이 매크로 사용 하면 속성에 대 한 매개 변수 목록을 지정할 수 있습니다. 이 다른 방법으로 매개 변수화 되거나 인덱싱된 속성을 구현 하는 데 유용 합니다. 매개 변수를 항상 겁니다 먼저 다음에 속성에 대 한 새 값. 예를 들어:  
   
 ```  
 DISP_PROPERTY_PARAM(CMyObject, "item",
@@ -273,7 +268,7 @@ void CMyObject::SetItem(short row,
  공간 문자열 각 매개 변수에 대해 VTS_를 구분합니다.  
   
 ## <a name="remarks"></a>설명  
- 이러한 매크로 사용 하면 지정 하는 **DISPID** MFC를 자동으로 하도록 하는 대신 하나를 할당 합니다. 이러한 고급 매크로 이름은 해당 ID는 매크로 이름에 추가 되는 점을 제외 하 고 (예: **DISP_PROPERTY_ID**) 및 ID 바로 뒤에 지정 된 매개 변수에 의해 결정 됩니다는 `pszName` 매개 변수입니다. AFXDISP를 참조 하십시오. 이러한 매크로 대 한 자세한 내용은 H입니다. **_ID** 항목 디스패치 맵에의 끝에 배치 해야 합니다. 자동에 영향을 줍니다 **DISPID** 동일한 방식으로 비-세대**_ID** 매크로의 버전은 (는 **DISPID**의위치에 따라 결정 됩니다). 예:  
+ 이러한 매크로 사용 하면 지정 하는 **DISPID** MFC를 자동으로 하도록 하는 대신 하나를 할당 합니다. 이러한 고급 매크로 이름은 해당 ID는 매크로 이름에 추가 되는 점을 제외 하 고 (예: **DISP_PROPERTY_ID**) 및 ID 바로 뒤에 지정 된 매개 변수에 의해 결정 됩니다는 `pszName` 매개 변수입니다. AFXDISP를 참조 하십시오. 이러한 매크로 대 한 자세한 내용은 H입니다. **_ID** 항목 디스패치 맵에의 끝에 배치 해야 합니다. 자동에 영향을 줍니다 **DISPID** 동일한 방식으로 비-세대 **_ID** 매크로의 버전은 (는 **DISPID**의위치에 따라 결정 됩니다). 예를 들어:  
   
 ```  
 BEGIN_DISPATCH_MAP(CDisp3DPoint,

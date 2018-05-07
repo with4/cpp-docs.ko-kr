@@ -1,12 +1,9 @@
 ---
-title: "CMFCWindowsManagerDialog 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCWindowsManagerDialog 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCWindowsManagerDialog
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCWindowsManagerDialog [MFC], CMFCWindowsManagerDialog
 ms.assetid: 35b4b0db-33c4-4b22-94d8-5e3396341340
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f20a93135a6f310b626cbe12f68f72c64e4ce8e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6900164b3ce89031d0db7630c026a302616511c5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcwindowsmanagerdialog-class"></a>CMFCWindowsManagerDialog 클래스
 `CMFCWindowsManagerDialog` 개체를 사용 하면 사용자가 MDI 응용 프로그램에서 MDI 자식 창을 관리할 수 있습니다.  
@@ -49,9 +44,9 @@ class CMFCWindowsManagerDialog : public CDialog
 ## <a name="remarks"></a>설명  
  `CMFCWindowsManagerDialog` 응용 프로그램에서 현재 열려 있는 MDI 자식 창 목록을 포함 합니다. 수동으로 사용자가 대화 상자를 사용 하 여 MDI 자식 창의 상태를 제어할 수 있습니다.  
   
- `CMFCWindowsManagerDialog`내에 포함 되어는 [CMDIFrameWndEx 클래스](../../mfc/reference/cmdiframewndex-class.md)합니다. `CMFCWindowsManagerDialog` 수동으로 만들어야 하는 클래스가 아닙니다. 함수를 호출 하는 대신, [CMDIFrameWndEx::ShowWindowsDialog](../../mfc/reference/cmdiframewndex-class.md#showwindowsdialog)는 만들고 표시 하 고는 `CMFCWindowsManagerDialog` 개체입니다.  
+ `CMFCWindowsManagerDialog` 내에 포함 되어는 [CMDIFrameWndEx 클래스](../../mfc/reference/cmdiframewndex-class.md)합니다. `CMFCWindowsManagerDialog` 수동으로 만들어야 하는 클래스가 아닙니다. 함수를 호출 하는 대신, [CMDIFrameWndEx::ShowWindowsDialog](../../mfc/reference/cmdiframewndex-class.md#showwindowsdialog)는 만들고 표시 하 고는 `CMFCWindowsManagerDialog` 개체입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 생성 하는 방법을 `CMFCWindowsManagerDialog` 호출 하 여 개체 `CMDIFrameWndEx::ShowWindowsDialog`합니다. 이 코드 조각은의 일부인는 [Visual Studio 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmfcwindowsmanagerdialog-class_1.cpp)]  
@@ -70,7 +65,7 @@ class CMFCWindowsManagerDialog : public CDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxWindowsManagerDialog.h  
   
-##  <a name="cmfcwindowsmanagerdialog"></a>CMFCWindowsManagerDialog::CMFCWindowsManagerDialog  
+##  <a name="cmfcwindowsmanagerdialog"></a>  CMFCWindowsManagerDialog::CMFCWindowsManagerDialog  
  생성 된 [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) 개체입니다.  
   
 ```  

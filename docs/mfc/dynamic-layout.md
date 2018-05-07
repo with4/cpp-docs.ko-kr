@@ -1,27 +1,22 @@
 ---
-title: "동적 레이아웃 | Microsoft Docs"
-ms.custom: 
+title: 동적 레이아웃 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e309d8ef023346c0e37babeabe23f7e6e1762939
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7518e2fdd07254b8b1991fae8a41f26058920858
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamic-layout"></a>동적 레이아웃
 Visual Studio 2015의 mfc를 조정할 수 있는 대화 상자를 만들 수 있습니다 및 레이아웃 크기 변경에 따라 조정 하는 방식을 제어할 수 있습니다. 예를 들어 항상 맨 아래에 유지되도록 대화 상자의 맨 아래 단추를 아래쪽 가장자리에 연결할 수 있습니다. 사용자가 대화 상자를 확장할 때 확장되도록 ListBox, EditBox 및 텍스트 필드와 같은 특정 컨트롤을 설정할 수도 있습니다.  
@@ -46,7 +41,7 @@ Visual Studio 2015의 mfc를 조정할 수 있는 대화 상자를 만들 수 �
   
      ![리소스 편집기에서 대화 상자를 엽니다. ] (../mfc/media/mfcdynamiclayout3.png "mfcdynamiclayout3")  
   
-2.  컨트롤을 선택하고 속성 창에서 동적 레이아웃 속성을 설정합니다. **동적 레이아웃** 속성을 포함 하는 속성 창에서 섹션 **이동 유형**, **크기 조정 유형**, 그리고 해당 속성에 대해 선택한 값에 따라 얼마나 많은 컨트롤을 정의 하는 특정 속성 이동 하거나 크기를 변경 합니다. **이동 유형** 는 컨트롤은 이동 하는 방법을 결정 대화 상자의 크기를 변경할; **크기 조정 유형** 컨트롤 크기를 조정 방법을 결정 대화 상자의 크기가 변경 될 때입니다. **이동 유형** 및 **크기 조정 유형** 수 **가로**, **세로**, **둘 다**, 또는 **없음** 동적으로 변경 하려는 차원에 따라 합니다. 가로는 X 차원이고, 세로는 Y 방향입니다.  
+2.  컨트롤을 선택하고 속성 창에서 동적 레이아웃 속성을 설정합니다. **동적 레이아웃** 속성을 포함 하는 속성 창에서 섹션 **이동 유형**, **크기 조정 유형**, 그리고 해당 속성에 대해 선택한 값에 따라 얼마나 많은 컨트롤을 정의 하는 특정 속성 이동 하거나 크기를 변경 합니다. **이동 유형** 는 컨트롤은 이동 하는 방법을 결정 대화 상자의 크기를 변경할; **크기 조정 유형** 컨트롤 크기를 조정 방법을 결정 대화 상자의 크기가 변경 될 때입니다. **이동 유형** 및 **크기 조정 유형** 수 **가로**, **세로**, **둘 다**, 또는 **None**동적으로 변경 하려는 차원에 따라 합니다. 가로는 X 차원이고, 세로는 Y 방향입니다.  
   
 3.  일반적으로 고정된 크기에 오른쪽 아래에는 그대로 유지 하는 단추와 같은 제어 하려는 경우는 **확인** 또는 **취소** 단추는 **크기 조정 유형** 를 **None**를 설정 하 고는 **이동 유형** 를 **둘 다**합니다. 에 대 한는 **X 이동** 및 **Y 이동** 아래 값 **이동 유형**를 100%로 인해 컨트롤이 오른쪽 모서리에 있는 맨 아래에서 고정된 된 거리를 유지 하도록 설정 합니다.  
   

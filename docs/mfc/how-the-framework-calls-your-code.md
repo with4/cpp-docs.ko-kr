@@ -1,13 +1,10 @@
 ---
-title: "프레임 워크 코드를 호출 하는 방법 | Microsoft Docs"
-ms.custom: 
+title: 프레임 워크 코드를 호출 하는 방법 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - application-specific events [MFC]
 - command routing [MFC], MFC
 ms.assetid: 39e68189-a580-40d0-9e35-bf5cd24a8ecf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83eeb1c7fd3032ae33c213f17522b171bdb46e55
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f746ce3c3d658ab1dccc098939410b52d91b1188
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-the-framework-calls-your-code"></a>프레임워크가 코드를 호출하는 방법
 것 MFC 프레임 워크에서 코드와 소스 코드 사이의 관계를 이해 하는 데 중요 합니다. 응용 프로그램을 실행 하는 경우 대부분의 제어 흐름의 프레임 워크의 코드에 상주 합니다. 프레임 워크는 메시지 루프를 메시지에서 Windows 사용자 명령을 선택 하 고 편집 보기에서 데이터를 관리 합니다. 프레임 워크는 자체적으로 처리할 수 있는 이벤트 코드에 대해 전혀 사용 하지 마세요. 예를 들어 프레임 워크 창을 닫고 하는 방법과 사용자 명령에 대 한 응답으로 응용 프로그램을 종료 하는 방법을 알고 있습니다. 이러한 작업을 처리 프레임 워크를 사용 하 여 메시지 처리기 및 가상 함수를 c + + 에서도 이러한 이벤트에 응답 하는 기회를 제공 합니다. 그러나; 컨트롤에 없는 코드는 프레임 워크가입니다.  

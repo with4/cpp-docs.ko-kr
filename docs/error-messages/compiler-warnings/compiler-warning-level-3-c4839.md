@@ -1,8 +1,8 @@
 ---
-title: "컴파일러 경고 (수준 3) C4839 | Microsoft Docs"
+title: 컴파일러 경고 (수준 3) C4839 | Microsoft Docs
 ms.date: 10/25/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4839
@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: f4f99066-9258-4330-81a8-f4a75a1d95ee
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aee1e564ffd72b9b08d883c94311c2bca72b5aef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b72289eef03c56356865b0b62a999c417da570a6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4839"></a>컴파일러 경고 (수준 4) C4839
 
@@ -28,7 +27,7 @@ ms.lasthandoff: 12/21/2017
 
 Visual Studio 2017 클래스 또는 구조체는 variadic에 전달 되는 함수에서 같은 `printf` 일반적으로 복사할 수 여야 합니다. 해당 개체를 전달할 때 컴파일러는 비트 복사본을 만들기만 하고 생성자 또는 소멸자를 호출하지 않습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 샘플에서는 C4839 오류가 생성 됩니다.
 

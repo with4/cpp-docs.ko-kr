@@ -1,12 +1,9 @@
 ---
-title: "링커 도구 경고 LNK4086 | Microsoft Docs"
-ms.custom: 
+title: 링커 도구 경고 LNK4086 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK4086
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK4086
 ms.assetid: ea1eecbb-ba2c-41bb-9a4f-fa0808a4b92d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcd701401c798d7126be4f4239ee533b14d90652
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b7b3ad3a8ceebf97ccdcf7a1d8079886f54a3984
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-warning-lnk4086"></a>링커 도구 경고 LNK4086
 entrypoint 'function' 'number' 바이트; 인수가 있는 __stdcall이 아닙니다. 이미지가 실행 되지 않습니다.  

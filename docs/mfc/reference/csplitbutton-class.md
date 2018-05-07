@@ -1,12 +1,9 @@
 ---
-title: "CSplitButton 클래스 | Microsoft Docs"
-ms.custom: 
+title: CSplitButton 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSplitButton
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4188647b821fc233835ea4780804848c4b03228
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac4241bb19c6abc0fbbf489bf4efb43f56ede72e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csplitbutton-class"></a>CSplitButton 클래스
 `CSplitButton` 클래스 분할 단추 컨트롤을 나타냅니다. 분할 단추 컨트롤은 사용자가 단추의 주요 부분을 클릭할 때 기본 동작을 수행하고 사용자가 단추의 드롭다운 화살표를 클릭하면 드롭다운 메뉴를 표시합니다.  
@@ -90,7 +85,7 @@ class CSplitButton : public CButton
   
  이 클래스에 대 한 추가 요구 사항은 [빌드 요구 사항에 대 한 Windows Vista 공용 컨트롤](../../mfc/build-requirements-for-windows-vista-common-controls.md)합니다.  
   
-##  <a name="create"></a>CSplitButton::Create  
+##  <a name="create"></a>  CSplitButton::Create  
  지정 된 스타일으로 분할 단추 컨트롤을 만들고 현재 연결 `CSplitButton` 개체입니다.  
   
 ```  
@@ -113,7 +108,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>반환 값  
  이 메서드가 성공적으로 수행되면 `true`이고, 그렇지 않으면 `false`입니다.  
   
-##  <a name="csplitbutton"></a>CSplitButton::CSplitButton  
+##  <a name="csplitbutton"></a>  CSplitButton::CSplitButton  
  `CSplitButton` 개체를 생성합니다. 생성자의 매개 변수는 분할 단추 컨트롤의 드롭다운 화살표를 클릭할 때 표시 되는 하위 메뉴를 지정 합니다.  
   
 ```  
@@ -137,7 +132,7 @@ CSplitButton(CMenu* pMenu)
 ### <a name="remarks"></a>설명  
  사용 하 여는 [CSplitButton::Create](#create) 분할 단추 컨트롤을 만들고에 연결 하는 메서드는 `CSplitButton` 개체입니다.  
   
-##  <a name="ondropdown"></a>CSplitButton::OnDropDown  
+##  <a name="ondropdown"></a>  CSplitButton::OnDropDown  
  처리는 `BCN_DROPDOWN` 현재 분할 단추 컨트롤의 드롭다운 화살표를 클릭 하면 시스템에서 보내는 알림입니다.  
   
 ```  
@@ -167,7 +162,7 @@ BEGIN_MESSAGE_MAP(CMySplitButton,
 END_MESSAGE_MAP()  
 ```  
   
-##  <a name="setdropdownmenu"></a>CSplitButton::SetDropDownMenu  
+##  <a name="setdropdownmenu"></a>  CSplitButton::SetDropDownMenu  
  현재는 분할 단추 컨트롤의 드롭다운 화살표를 클릭할 때 표시 되는 드롭다운 메뉴를 설정 합니다.  
   
 ```  
@@ -193,7 +188,7 @@ void SetDropDownMenu(CMenu* pMenu);
   
  ![Splitbutton 및 pager 컨트롤이 있는 대화 상자. ] (../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 코드 예제에서 첫 번째 문과 [CSplitButton::SetDropDownMenu](#setdropdownmenu) 메서드. 만든 메뉴는 Visual studio 메뉴 모음 ID 이름이 자동으로 지정 하는 리소스 편집기 `IDR_MENU1`합니다. `nSubMenuId` 매개 변수를 0 인 메뉴 표시줄의 유일한 하위 메뉴를 가리킵니다.  
   
  [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/csplitbutton-class_1.cpp)]  

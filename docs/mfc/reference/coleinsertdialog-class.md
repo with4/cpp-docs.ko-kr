@@ -1,12 +1,9 @@
 ---
-title: "COleInsertDialog 클래스 | Microsoft Docs"
-ms.custom: 
+title: COleInsertDialog 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleInsertDialog
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleInsertDialog [MFC], GetSelectionType
 - COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4638471ed199d08bb21bcf16465fe933af3a584c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 041b707bec58abeb19617fbfd275428ca2cf67e7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleinsertdialog-class"></a>COleInsertDialog 클래스
 OLE 개체 삽입 대화 상자에 사용합니다.  
@@ -108,7 +103,7 @@ class COleInsertDialog : public COleDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxodlgs.h  
   
-##  <a name="coleinsertdialog"></a>COleInsertDialog::COleInsertDialog  
+##  <a name="coleinsertdialog"></a>  COleInsertDialog::COleInsertDialog  
  이 함수가 구성 된 `COleInsertDialog` 개체입니다.  
   
 ```  
@@ -141,7 +136,7 @@ COleInsertDialog (
 ### <a name="remarks"></a>설명  
  대화 상자를 표시 하려면 호출는 [DoModal](#domodal) 함수입니다.  
   
-##  <a name="createitem"></a>COleInsertDialog::CreateItem  
+##  <a name="createitem"></a>  COleInsertDialog::CreateItem  
  형식의 개체를 만들려면이 함수를 호출 [COleClientItem](../../mfc/reference/coleclientitem-class.md) 경우에만 [DoModal](#domodal) 반환 **IDOK**합니다.  
   
 ```  
@@ -158,7 +153,7 @@ BOOL CreateItem(COleClientItem* pItem);
 ### <a name="remarks"></a>설명  
  할당 해야 합니다는 `COleClientItem` 이 함수를 호출 하기 전에 개체입니다.  
   
-##  <a name="domodal"></a>COleInsertDialog::DoModal  
+##  <a name="domodal"></a>  COleInsertDialog::DoModal  
  OLE 개체 삽입 대화 상자를 표시 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -174,9 +169,9 @@ INT_PTR
  `dwFlags`  
  다음 값 중 하나입니다.  
   
- `COleInsertDialog::DocObjectsOnly`만 DocObjects를 삽입합니다.  
+ `COleInsertDialog::DocObjectsOnly` 만 DocObjects를 삽입합니다.  
   
- `COleInsertDialog::ControlsOnly`ActiveX 컨트롤에만 삽입합니다.  
+ `COleInsertDialog::ControlsOnly` ActiveX 컨트롤에만 삽입합니다.  
   
  0는 DocObject 아니고 ActiveX 컨트롤을 삽입합니다. 위에 나열 된 첫 번째 프로토타입으로 동일 하 게 구현에서이 값 결과입니다.  
   
@@ -194,7 +189,7 @@ INT_PTR
   
  경우 `DoModal` 반환 IDOK, 다른 구성원 설정 또는 사용자가 대화 상자에 대 한 정보 입력을 검색 하는 함수를 호출할 수 있습니다.  
   
-##  <a name="getclassid"></a>COleInsertDialog::GetClassID  
+##  <a name="getclassid"></a>  COleInsertDialog::GetClassID  
  가져오려면이 함수를 호출 하는 **CLSID** 연결 된 경우에만 선택한 항목 [DoModal](#domodal) 반환 **IDOK** 이며 선택 형식만 **COleInsertDialog:: createNewItem**합니다.  
   
 ```  
@@ -207,7 +202,7 @@ REFCLSID GetClassID() const;
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [CLSID 키](http://msdn.microsoft.com/library/windows/desktop/ms691424) Windows sdk에서입니다.  
   
-##  <a name="getdrawaspect"></a>COleInsertDialog::GetDrawAspect  
+##  <a name="getdrawaspect"></a>  COleInsertDialog::GetDrawAspect  
  사용자를 아이콘으로 선택한 항목을 표시 하도록 선택 하는 경우를 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -217,16 +212,16 @@ DVASPECT GetDrawAspect() const;
 ### <a name="return-value"></a>반환 값  
  개체를 렌더링 하는 데 필요한 메서드입니다.  
   
-- `DVASPECT_CONTENT`아이콘으로 표시 확인란 선택 하지 않은 경우 반환 됩니다.  
+- `DVASPECT_CONTENT` 아이콘으로 표시 확인란 선택 하지 않은 경우 반환 됩니다.  
   
-- `DVASPECT_ICON`아이콘으로 표시 확인란을 선택 된 경우 반환 됩니다.  
+- `DVASPECT_ICON` 아이콘으로 표시 확인란을 선택 된 경우 반환 됩니다.  
   
 ### <a name="remarks"></a>설명  
  경우에만이 함수 호출 [DoModal](#domodal) 반환 **IDOK**합니다.  
   
  그리기 측면에 대 한 자세한 내용은 참조 하십시오. [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows SDK에서 데이터 구조입니다.  
   
-##  <a name="geticonicmetafile"></a>COleInsertDialog::GetIconicMetafile  
+##  <a name="geticonicmetafile"></a>  COleInsertDialog::GetIconicMetafile  
  선택한 항목의 아이콘 측면을 포함 하는 메타 파일에 대 한 핸들을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -236,7 +231,7 @@ HGLOBAL GetIconicMetafile() const;
 ### <a name="return-value"></a>반환 값  
  아이콘으로 표시 확인란이 선택한 항목의 아이콘 측면을 포함 하는 메타 파일에 대 한 핸들을 선택 하 여 대화 상자를 해제 하는 경우 체크 **확인**고, 그렇지 않으면 **NULL**합니다.  
   
-##  <a name="getpathname"></a>COleInsertDialog::GetPathName  
+##  <a name="getpathname"></a>  COleInsertDialog::GetPathName  
  경우에만 선택한 파일의 전체 경로 가져오려면이 함수를 호출 [DoModal](#domodal) 반환 **IDOK** 선택 유형을 아니며 **COleInsertDialog::createNewItem**합니다.  
   
 ```  
@@ -246,7 +241,7 @@ CString GetPathName() const;
 ### <a name="return-value"></a>반환 값  
  대화 상자에서 선택한 파일에 대 한 전체 경로입니다. 선택 영역 형식이 `createNewItem`,이 함수는 반환 된 의미 없는 `CString` 릴리스 모드에서 또는 디버그 모드에서 어설션을 발생 시킵니다.  
   
-##  <a name="getselectiontype"></a>COleInsertDialog::GetSelectionType  
+##  <a name="getselectiontype"></a>  COleInsertDialog::GetSelectionType  
  개체 삽입 대화 상자를 선택 하 여 해제할 때 선택한 선택 유형을 가져오려면이 함수를 호출 **확인**합니다.  
   
 ```  
@@ -275,7 +270,7 @@ enum Selection {
   
 - **COleInsertDialog::linkToFile** The 파일에서 만들기 라디오 단추가 선택 된 하 고 링크 확인란이 선택 되어 있습니다.  
   
-##  <a name="m_io"></a>COleInsertDialog::m_io  
+##  <a name="m_io"></a>  COleInsertDialog::m_io  
  형식의 구조 **OLEUIINSERTOBJECT** 개체 삽입 대화 상자의 동작을 제어 하는 데 사용 합니다.  
   
 ```  

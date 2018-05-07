@@ -1,29 +1,24 @@
 ---
-title: "MFC 응용 프로그램을 빌드하기 위한 작업 시퀀스 | Microsoft Docs"
-ms.custom: 
+title: MFC 응용 프로그램을 빌드하기 위한 작업 시퀀스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - applications [MFC], developing
 ms.assetid: 6973c714-fe20-48c6-926b-de88356b3a3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae1169b438a181e22696502352c19353421469b1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1bafcec75643c292a887b54de1b852609dd251c0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>MFC 응용 프로그램을 빌드하는 작업 시퀀스
 다음 표에서 일반적인 순서 MFC 응용 프로그램을 개발할 때 일반적으로 수행 될 수 있습니다.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
 |스크롤 기능을 추가 합니다.|뷰 클래스 또는 클래스에서 파생 되 스크롤을 지원 하도록 해야 할 경우 [CScrollView](../mfc/reference/cscrollview-class.md)합니다.|뷰는 뷰 창에는 너무 작아 때 자동으로 스크롤 막대를 추가 합니다.|  
 |폼 보기를 만듭니다.|뷰 클래스 또는 클래스에서 파생 될 기본 대화 상자 템플릿 리소스에 대 한 뷰에 하려면 [CFormView](../mfc/reference/cformview-class.md)합니다.|보기 대화 상자 템플릿 리소스를 사용 하 여 컨트롤을 표시 합니다. 사용자 컨트롤 보기에 컨트롤의 탭 수 있습니다.|  
 |데이터베이스 폼을 만듭니다.|폼 기반 데이터 액세스 응용 프로그램에서 뷰 클래스를 파생을 [CRecordView](../mfc/reference/crecordview-class.md) (ODBC 프로그래밍)에 대 한 합니다.|폼 보기와 같은 보기 작동 하지만 해당 컨트롤의 필드에 연결 되어 한 [CRecordset](../mfc/reference/crecordset-class.md) 데이터베이스 테이블을 나타내는 개체입니다. MFC를 컨트롤과 레코드 집합 간에 데이터를 이동합니다.|  
-|간단한 텍스트 편집기를 만듭니다.|뷰 클래스 또는 클래스에서 파생 되 여 뷰를 간단한 텍스트 편집기를 사용 하도록 하려는 경우 [CEditView](../mfc/reference/ceditview-class.md) 또는 [CRichEditView](../mfc/reference/cricheditview-class.md)합니다.|이 뷰는 함수, 클립보드 지원 및 입/출력 파일을 편집 합니다. `CRichEditView`스타일이 적용 된 텍스트를 제공합니다.|  
+|간단한 텍스트 편집기를 만듭니다.|뷰 클래스 또는 클래스에서 파생 되 여 뷰를 간단한 텍스트 편집기를 사용 하도록 하려는 경우 [CEditView](../mfc/reference/ceditview-class.md) 또는 [CRichEditView](../mfc/reference/cricheditview-class.md)합니다.|이 뷰는 함수, 클립보드 지원 및 입/출력 파일을 편집 합니다. `CRichEditView` 스타일이 적용 된 텍스트를 제공합니다.|  
 |분할 창을 추가 합니다.|창을 분할을 지원 하려면 추가 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) SDI 프레임 창 또는 MDI 자식 창으로 개체를 창에 후크 [OnCreateClient](../mfc/reference/cframewnd-class.md#oncreateclient) 멤버 함수입니다.|프레임 워크에서 스크롤 막대 옆에 있는 분할 상자 컨트롤을 제공 하 고 보기 다중 창으로 분할을 관리 합니다. 사용자가 창을 분할 프레임 워크 만들고 문서에 추가 뷰 개체를 연결 합니다.|  
 |빌드, 테스트 및 응용 프로그램을 디버깅 합니다.|빌드, 테스트 및 응용 프로그램을 디버깅 하려면 Visual c + +의 기능을 사용 합니다.|Visual c + +를 사용 하면 컴파일, 링크 및 기타 옵션을 조정할 수 있습니다. 또한 소스 코드와 클래스 구조를 찾아볼 수 있습니다.|  
   

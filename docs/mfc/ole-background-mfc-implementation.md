@@ -1,13 +1,10 @@
 ---
-title: "OLE 백그라운드: MFC 구현 | Microsoft Docs"
-ms.custom: 
+title: 'OLE 백그라운드: MFC 구현 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IMarshall
 - IMoniker
@@ -23,24 +20,22 @@ helpviewer_keywords:
 - OLE IMoniker interface
 - OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 530cc14135fd38e2177e00dc87974e96ffe24b6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 124bec9bfdbdc4e39bab71a80f77d7a06d8444a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-background-mfc-implementation"></a>OLE 백그라운드: MFC 구현
 원시 OLE API의 크기와 복잡성으로 인해 OLE 응용 프로그램을 직접 작성하기 위해 호출하는 데 시간이 오래 걸릴 수 있습니다. OLE의 MFC 라이브러리 구현의 목표는 완벽한 기능을 갖춘 OLE 지원 응용 프로그램을 작성하기 위해 해야 할 작업의 양을 줄이는 것입니다.  
   
  이 문서에서는 MFC 내부에서 구현되지 않은 OLE API 부분을 설명합니다. 토론에는 구현 된 사항이 매핑되는 방식을 Windows SDK의 OLE 섹션에 설명 합니다.  
   
-##  <a name="_core_portions_of_ole_not_implemented_by_the_class_library"></a>클래스 라이브러리에서 구현 되지 않은 ole 부분  
+##  <a name="_core_portions_of_ole_not_implemented_by_the_class_library"></a> 클래스 라이브러리에서 구현 되지 않은 ole 부분  
  OLE의 몇 가지 인터페이스와 기능은 MFC에서 직접 지원하지 않습니다. 이러한 기능을 사용하는 경우 OLE API를 직접 호출할 수 있습니다.  
   
  IMoniker 인터페이스  

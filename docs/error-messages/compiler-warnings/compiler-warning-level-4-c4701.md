@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 4) C4701 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 4) C4701 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4701
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C4701
 ms.assetid: d7c76c66-1f3f-4d3c-abe4-5d94c84a5a1f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d001827c1d3e73ee4724aa52543231a43d41af5c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c48df2f4ac3d5aad4ae82abf76dab4d96e8af89a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4701"></a>컴파일러 경고(수준 4) C4701
 'name'가 사용 되는 잠재적으로 초기화 되지 않은 지역 변수  
   
  지역 변수 *이름* 값을 할당 하지 않고 사용 되었을 수 있습니다. 예기치 않은 결과가 발생할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드는 C4701 및 C4703을 생성합니다.  
   
 ```cpp  
