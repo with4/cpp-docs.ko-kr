@@ -1,12 +1,9 @@
 ---
-title: "COleLinkingDoc 클래스 | Microsoft Docs"
-ms.custom: 
+title: COleLinkingDoc 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleLinkingDoc
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 611d09a12da1d2ebf6fcae8d7573cc48a5318f97
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe37e1a159fa0138c237b58ffbd622292dcba714
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc 클래스
 포함된 항목에 대한 연결을 지원하는 OLE 컨테이너 문서의 기본 클래스입니다.  
@@ -105,7 +100,7 @@ class COleLinkingDoc : public COleDocument
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxole.h  
   
-##  <a name="colelinkingdoc"></a>COleLinkingDoc::COleLinkingDoc  
+##  <a name="colelinkingdoc"></a>  COleLinkingDoc::COleLinkingDoc  
  생성 된 `COleLinkingDoc` OLE 시스템 Dll와의 통신을 시작 하지 않고 개체입니다.  
   
 ```  
@@ -115,7 +110,7 @@ COleLinkingDoc();
 ### <a name="remarks"></a>설명  
  호출 해야 합니다는 `Register` 문서가 열려 OLE를 알리기 위해 멤버 함수입니다.  
   
-##  <a name="onfindembeddeditem"></a>COleLinkingDoc::OnFindEmbeddedItem  
+##  <a name="onfindembeddeditem"></a>  COleLinkingDoc::OnFindEmbeddedItem  
  지정한 이름 가진 포함된 된 OLE 항목은 문서에 포함 되어 있는지 확인 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -132,7 +127,7 @@ virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 ### <a name="remarks"></a>설명  
  기본 구현 (이름을 비교는 대/소문자 구분)으로 지정된 된 이름 가진 항목에 대 한 포함 된 항목의 목록을 검색 합니다. 고유한 방법으로 저장 하거나 포함 된 OLE 항목 이름 지정을 사용 하는 경우이 함수를 재정의 합니다.  
   
-##  <a name="ongetlinkeditem"></a>COleLinkingDoc::OnGetLinkedItem  
+##  <a name="ongetlinkeditem"></a>  COleLinkingDoc::OnGetLinkedItem  
  지정 된 이름의 연결 된 서버 항목을 문서에 포함 되는지 여부를 확인 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -149,7 +144,7 @@ virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 ### <a name="remarks"></a>설명  
  기본 `COleLinkingDoc` 구현 시 항상 반환 **NULL**합니다. 이 함수는 파생된 클래스에서 재정의 된 `COleServerDoc` (이름을 비교는 대/소문자 구분) 지정 된 이름의 연결된 된 항목에 대 한 OLE 서버 항목의 목록을 검색할 수 있습니다. 으로 저장 하거나 연결 된 서버 항목을 검색 하는 사용자 고유의 메서드를 구현한 경우이 함수를 재정의 합니다.  
   
-##  <a name="register"></a>COleLinkingDoc::Register  
+##  <a name="register"></a>  COleLinkingDoc::Register  
  문서를 열면 OLE 시스템 Dll에 알립니다.  
   
 ```  
@@ -173,7 +168,7 @@ BOOL Register(
   
  사용 중인 경우 `COleTemplateServer` 응용 프로그램에서 `Register` 의해 라고 `COleLinkingDoc`의의 구현 `OnNewDocument`, `OnOpenDocument`, 및 `OnSaveDocument`합니다.  
   
-##  <a name="revoke"></a>COleLinkingDoc::Revoke  
+##  <a name="revoke"></a>  COleLinkingDoc::Revoke  
  문서를 열면 더 이상 OLE 시스템 Dll에 알립니다.  
   
 ```  
@@ -183,7 +178,7 @@ void Revoke();
 ### <a name="remarks"></a>설명  
  OLE 시스템 Dll에 문서 등록을 취소 하려면이 함수를 호출 합니다.  
   
- 명명된 된 파일을 닫을 때이 함수를 호출 해야 하지만 일반적으로 불필요를 직접 호출할 수 있습니다. `Revoke`의해 라고 `COleLinkingDoc`의 구현의 `OnCloseDocument`, `OnNewDocument`, `OnOpenDocument`, 및 `OnSaveDocument`합니다.  
+ 명명된 된 파일을 닫을 때이 함수를 호출 해야 하지만 일반적으로 불필요를 직접 호출할 수 있습니다. `Revoke` 의해 라고 `COleLinkingDoc`의 구현의 `OnCloseDocument`, `OnNewDocument`, `OnOpenDocument`, 및 `OnSaveDocument`합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [MFC 샘플 OCLIENT](../../visual-cpp-samples.md)   

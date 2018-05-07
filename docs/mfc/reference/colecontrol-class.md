@@ -1,12 +1,9 @@
 ---
-title: "COleControl 클래스 | Microsoft Docs"
-ms.custom: 
+title: COleControl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleControl
@@ -343,17 +340,15 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 895091131bf8a62a13527f717831a34764c931ff
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 0b2a9f7a506c5ebc1d6fdf1a37960a9322fde131
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colecontrol-class"></a>COleControl 클래스
 OLE 컨트롤을 개발할 수 있는 강력한 기본 클래스입니다.  
@@ -1101,7 +1096,7 @@ void AFX_CDECL FireEvent(
 ### <a name="remarks"></a>설명  
  일반적으로이 함수를 직접 호출 하지 해야 합니다. 대신 컨트롤의 클래스 선언의 이벤트 맵 섹션에서 이벤트 발생 함수를 호출 합니다.  
   
- `pbParams` 인수는 공백으로 구분 된 목록이 **VTS_**합니다. 공백(쉼표가 아님)으로 구분된 이러한 값 중 하나 이상이 함수의 매개 변수 목록을 지정합니다. 다음과 같은 값을 사용할 수 있습니다.  
+ `pbParams` 인수는 공백으로 구분 된 목록이 **VTS_** 합니다. 공백(쉼표가 아님)으로 구분된 이러한 값 중 하나 이상이 함수의 매개 변수 목록을 지정합니다. 다음과 같은 값을 사용할 수 있습니다.  
   
 |기호|매개 변수 형식|  
 |------------|--------------------|  
@@ -1426,7 +1421,7 @@ BOOL GetAmbientProperty(
  앰비언트 속성이 지원 되 면 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 사용 하는 경우 `GetAmbientProperty` 앰비언트 DisplayName 및 ScaleUnits 속성을 검색 하려면 설정 `vtProp` 를 `VT_BSTR` 및 `pvProp` 를 **CString\***합니다. 앰비언트 글꼴 속성을 검색 하는 경우 설정 `vtProp` 를 **VT_FONT** 및 `pvProp` 를 **LPFONTDISP\***합니다.  
+ 사용 하는 경우 `GetAmbientProperty` 앰비언트 DisplayName 및 ScaleUnits 속성을 검색 하려면 설정 `vtProp` 를 `VT_BSTR` 및 `pvProp` 를 **CString\*** 합니다. 앰비언트 글꼴 속성을 검색 하는 경우 설정 `vtProp` 를 **VT_FONT** 및 `pvProp` 를 **LPFONTDISP\*** 합니다.  
   
  함수가 이미 제공 일반적인 앰비언트 속성에 대 한 같은 참고 [AmbientBackColor](#ambientbackcolor) 및 [AmbientFont](#ambientfont)합니다.  
   

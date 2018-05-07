@@ -2,12 +2,9 @@
 title: 깜빡임 없는 활성화 제공 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,20 +12,18 @@ helpviewer_keywords:
 - flicker, MFC ActiveX controls
 - activation [MFC], flicker-free
 ms.assetid: bcb24b77-31d8-44a0-8c58-2ea6213b4c43
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f14998ce663e5a8e53901acf9192719fa41e724
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9d9c0108ce4afd2e65678280248488181ad34f2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providing-flicker-free-activation"></a>깜빡임 없는 활성화 제공
-그리기 작업 및 깜빡임을 비활성 사이 전환할 때는 일반적으로 발생 하는 경우 컨트롤의 비활성 및 활성 상태에서 동일 하 게 자신을 그릴 (창 없는 활성화를 사용 하지 않는)을 제거할 수 있습니다. 및 활성 상태입니다. 이 작업을 수행 하려면 포함 된 **noFlickerActivate** 에서 반환 하는 플래그 집합에서 플래그 [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags)합니다. 예:  
+그리기 작업 및 깜빡임을 비활성 사이 전환할 때는 일반적으로 발생 하는 경우 컨트롤의 비활성 및 활성 상태에서 동일 하 게 자신을 그릴 (창 없는 활성화를 사용 하지 않는)을 제거할 수 있습니다. 및 활성 상태입니다. 이 작업을 수행 하려면 포함 된 **noFlickerActivate** 에서 반환 하는 플래그 집합에서 플래그 [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags)합니다. 예를 들어:  
   
  [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-flicker-free-activation_1.cpp)]  
 [!code-cpp[NVC_MFC_AxOpt#13](../mfc/codesnippet/cpp/providing-flicker-free-activation_2.cpp)]  

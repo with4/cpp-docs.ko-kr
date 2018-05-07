@@ -1,13 +1,10 @@
 ---
-title: "달력 컨트롤의 한 월의 일 상태 설정 | Microsoft Docs"
-ms.custom: 
+title: 달력 컨트롤의 한 월의 일 상태 설정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - MCN_GETDAYSTATE
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MCN_GETDAYSTATE notification [MFC]
 - month calendar controls [MFC], day state info
 ms.assetid: 435d1b11-ec0e-4121-9e25-aaa6af812a3c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c634815065c68cceb3c528222c0fd60e19b6827
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 611397a329e177689a7bd8386963ea1c29ce9e5a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>MonthCalendar 컨트롤의 일 상태 설정
 Monthcalendar 컨트롤의 특성 하나 라고 하는 컨트롤의 일 상태 각 날짜의 월에 대 한 정보를 저장 하는 기능입니다. 이 정보는 현재 표시 된 월에 대 한 특정 날짜를 강조 하기 위해 사용 됩니다.  

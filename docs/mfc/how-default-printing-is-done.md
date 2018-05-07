@@ -1,13 +1,10 @@
 ---
-title: "기본 인쇄가 수행 되는 방법 | Microsoft Docs"
-ms.custom: 
+title: 기본 인쇄가 수행 되는 방법 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - printing [MFC], default
 - defaults, printing
 ms.assetid: 0f698459-0fc9-4d43-97da-29cf0f65daa2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5001026f1e5fe9e1fed86a49b0565b09ddd6b555
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2cf5b4a9bda3506a9558d5b723020dfe6d43396
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-default-printing-is-done"></a>기본 인쇄가 수행되는 방법
 이 문서에서는 MFC 프레임워크의 관점에서 Windows의 기본 인쇄 프로세스에 대해 설명합니다.  
   
- MFC 응용 프로그램에서 뷰 클래스에는 모든 그리기 코드를 포함하는 `OnDraw`라는 멤버 함수가 포함되어 있습니다. `OnDraw`에 대 한 포인터는 [CDC](../mfc/reference/cdc-class.md) 개체를 매개 변수로 합니다. 이 `CDC` 개체는 `OnDraw`에서 생성되는 이미지를 수신하기 위한 장치 컨텍스트를 나타냅니다. 문서를 표시 하는 창 받을 때는 [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) 메시지, 프레임 워크를 호출 하 여 `OnDraw` 화면에 대 한 장치 컨텍스트를 전달 합니다 (한 [CPaintDC](../mfc/reference/cpaintdc-class.md) 에 정확 하 게 개체). 따라서 `OnDraw`의 출력이 화면으로 이동합니다.  
+ MFC 응용 프로그램에서 뷰 클래스에는 모든 그리기 코드를 포함하는 `OnDraw`라는 멤버 함수가 포함되어 있습니다. `OnDraw` 에 대 한 포인터는 [CDC](../mfc/reference/cdc-class.md) 개체를 매개 변수로 합니다. 이 `CDC` 개체는 `OnDraw`에서 생성되는 이미지를 수신하기 위한 장치 컨텍스트를 나타냅니다. 문서를 표시 하는 창 받을 때는 [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) 메시지, 프레임 워크를 호출 하 여 `OnDraw` 화면에 대 한 장치 컨텍스트를 전달 합니다 (한 [CPaintDC](../mfc/reference/cpaintdc-class.md) 에 정확 하 게 개체). 따라서 `OnDraw`의 출력이 화면으로 이동합니다.  
   
  Windows 프로그래밍에서 프린터로 출력을 전송하는 것은 화면으로 출력을 전송하는 것과 매우 비슷합니다. 그 이유는 Windows GDI(그래픽 장치 인터페이스)가 하드웨어에 독립적이기 때문입니다. 단순히 적절한 장치 컨텍스트만 사용해도 화면 표시 또는 인쇄를 위해 동일한 GDI 함수를 사용할 수 있습니다. `CDC`가 수신하는 `OnDraw` 개체가 프린터를 나타낼 경우, `OnDraw`의 출력은 프린터로 이동합니다.  
   

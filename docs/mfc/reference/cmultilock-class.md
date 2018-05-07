@@ -1,12 +1,9 @@
 ---
-title: "CMultiLock 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMultiLock 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMultiLock
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CMultiLock [MFC], Lock
 - CMultiLock [MFC], Unlock
 ms.assetid: c5b7c78b-1f81-4387-b7dd-2c813c5b6b61
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc3c391c624351b2835e1ec497d78bc191eb1fe7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b5c5424018c3863ce64435bcc09d2d539560285e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmultilock-class"></a>CMultiLock 클래스
 다중 스레드 프로그램에 대한 액세스를 제어할 때 사용하는 액세스 제어 메커니즘을 나타냅니다.  
@@ -61,7 +56,7 @@ class CMultiLock
 |[CMultiLock::Unlock](#unlock)|모든 소유 동기화 개체를 해제합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CMultiLock`기본 클래스는 없습니다.  
+ `CMultiLock` 기본 클래스는 없습니다.  
   
  동기화 클래스 사용 [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), 및 [CEvent](../../mfc/reference/cevent-class.md)를 만들 수 있습니다는 **CMultiLock** 또는 [경우 CSingleLock](../../mfc/reference/csinglelock-class.md) 개체를 대기 하 고 동기화 개체를 해제 합니다. 사용 하 여 **CMultiLock** 때 특정 시간에 사용할 수 있는 개체가 여러 개 있습니다. 사용 하 여 `CSingleLock` 때 하기만 하면 한 번에 하나의 개체에 대해 기다려야 합니다.  
   
@@ -77,7 +72,7 @@ class CMultiLock
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxmt.h  
   
-##  <a name="cmultilock"></a>CMultiLock::CMultiLock  
+##  <a name="cmultilock"></a>  CMultiLock::CMultiLock  
  생성 된 **CMultiLock** 개체입니다.  
   
 ```  
@@ -100,7 +95,7 @@ CMultiLock(
 ### <a name="remarks"></a>설명  
  이 함수는 동기화 개체에서 대기한 배열을 만든 후 호출 됩니다. 일반적으로 사용 가능 해질 동기화 개체 중 하나에 대해 기다려야 하는 스레드 내에서 호출 됩니다.  
   
-##  <a name="islocked"></a>CMultiLock::IsLocked  
+##  <a name="islocked"></a>  CMultiLock::IsLocked  
  지정된 된 개체를 신호 없음으로 인지 여부를 확인 (사용 불가)입니다.  
   
 ```  
@@ -114,7 +109,7 @@ BOOL IsLocked(DWORD dwItem);
 ### <a name="return-value"></a>반환 값  
  지정된 된 개체가 잠겨 있으면 0이 아닌 그렇지 않으면 0입니다.  
   
-##  <a name="lock"></a>CMultiLock::Lock  
+##  <a name="lock"></a>  CMultiLock::Lock  
  하나 이상의에 제공 되는 동기화 개체에 의해 제어 되는 리소스에 액세스 하려면이 함수 호출의 **CMultiLock** 생성자입니다.  
   
 ```  
@@ -158,7 +153,7 @@ DWORD Lock(
   
  경우 `Lock` 에 지정 된 밀리초 수 이내로 기다리는 즉시 반환 수 없으면는 *dwTimeOut* 반환 하기 전에 매개 변수입니다. 경우 *dwTimeOut* 은 **무한**, `Lock` 개체에 대 한 액세스는 또는 구성 요소에 지정 된 조건이 될 때까지 반환 되지 것입니다 `dwWakeMask` 충족 했습니다. 그렇지 않은 경우, `Lock` 된 동기화 개체를 획득할 수를 반환 합니다 성공적으로; 그렇지 않으면 실패를 반환 합니다.  
   
-##  <a name="unlock"></a>CMultiLock::Unlock  
+##  <a name="unlock"></a>  CMultiLock::Unlock  
  가 소유 하는 동기화 개체를 해제 `CMultiLock`합니다.  
   
 ```  
@@ -183,7 +178,7 @@ BOOL Unlock(
 ### <a name="remarks"></a>설명  
  이 함수를 호출 하 `CMultiLock`의 소멸자입니다.  
   
- 첫 번째 형태 `Unlock` 에서 관리 하는 동기화 개체의 잠금을 해제 하려고 `CMultiLock`합니다. 두 번째 형식의 `Unlock` 잠금을 해제 하려고는 `CSemaphore` 가 소유한 개체 `CMultiLock`합니다. 경우 `CMultiLock` 소유 하지 않는 잠긴 `CSemaphore` 개체를 반환 하 고 **FALSE**, 그렇지 않으면 반환 **TRUE**합니다. `lCount`및 `lpPrevCount` 은의 매개 변수와 동일 [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)합니다. 두 번째 형식의 `Unlock` 거의 multilock 상황에 적용 됩니다.  
+ 첫 번째 형태 `Unlock` 에서 관리 하는 동기화 개체의 잠금을 해제 하려고 `CMultiLock`합니다. 두 번째 형식의 `Unlock` 잠금을 해제 하려고는 `CSemaphore` 가 소유한 개체 `CMultiLock`합니다. 경우 `CMultiLock` 소유 하지 않는 잠긴 `CSemaphore` 개체를 반환 하 고 **FALSE**, 그렇지 않으면 반환 **TRUE**합니다. `lCount` 및 `lpPrevCount` 은의 매개 변수와 동일 [CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock)합니다. 두 번째 형식의 `Unlock` 거의 multilock 상황에 적용 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [계층 구조 차트](../../mfc/hierarchy-chart.md)

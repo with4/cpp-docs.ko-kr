@@ -1,12 +1,9 @@
 ---
-title: "ICommandSource 인터페이스 | Microsoft Docs"
-ms.custom: 
+title: ICommandSource 인터페이스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - ICommandSource
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc8ad34ccce059caca8e86a014622e29c14022ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ff57ec9deea4ff8b39e572d720ad7e0fdaa15dd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="icommandsource-interface"></a>ICommandSource 인터페이스
 사용자 정의 컨트롤에 명령 원본 개체에서 전송 되는 명령을 관리 합니다.  
@@ -74,7 +69,7 @@ interface class ICommandSource
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxwinforms.h (atlmfc\lib\mfcmifc80.dll 어셈블리에에서 정의 됨)  
   
-## <a name="addcommandhandler"></a>ICommandSource::AddCommandHandler
+## <a name="addcommandhandler"></a>  ICommandSource::AddCommandHandler
 명령 원본 개체에 명령 처리기를 추가합니다.
 ```
 void AddCommandHandler(
@@ -92,7 +87,7 @@ void AddCommandHandler(
 이 메서드는 명령 처리기 cmdHandler 명령 원본 개체를 추가 하 고 처리기 cmdID에 매핑됩니다.
 참조 [하는 방법: Windows Forms 컨트롤에 명령 라우팅 추가](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) AddCommandHandler를 사용 하는 방법의 예입니다.
 
-## <a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler
+## <a name="addcommandrangehandler"></a> ICommandSource::AddCommandRangeHandler
 
 명령 원본 개체에 명령 처리기의 그룹을 추가 합니다.
 ```
@@ -111,7 +106,7 @@ void AddCommandRangeHandler(
 ### <a name="remarks"></a>설명
 이 메서드는 명령 Id의 연속 된 범위 단일 메시지 처리기에 매핑하고 명령 원본 개체에 추가 합니다. 이 한 방법으로 관련 된 단추 그룹을 처리 하기 위한 사용 됩니다.
 
-## <a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler
+## <a name="addcommandrangeuihandler"></a> ICommandSource::AddCommandRangeUIHandler
 명령 원본 개체에 사용자 인터페이스 명령 메시지 처리기의 그룹을 추가 합니다.
 ```
 void AddCommandRangeUIHandler(
@@ -130,7 +125,7 @@ void AddCommandRangeUIHandler(
 ### <a name="remarks"></a>설명
 이 메서드는 단일 사용자 인터페이스 명령 메시지 처리기를 명령 Id의 연속 된 범위를 매핑하고 명령 원본 개체에 추가 합니다. 이 한 방법으로 관련 된 단추 그룹을 처리 하기 위한 사용 됩니다.
 
-## <a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler
+## <a name="addcommanduihandler"></a> ICommandSource::AddCommandUIHandler
 명령 원본 개체에는 사용자 인터페이스 명령 메시지 처리기를 추가합니다.
 ```
 void AddCommandUIHandler(
@@ -146,7 +141,7 @@ void AddCommandUIHandler(
 ### <a name="remarks"></a>설명
 이 메서드는 사용자 인터페이스 명령 메시지 처리기 cmdHandler 명령 원본 개체를 추가 하 고 처리기 cmdID에 매핑됩니다.
 
-## <a name="postcommand"></a>ICommandSource::PostCommand
+## <a name="postcommand"></a> ICommandSource::PostCommand
 처리 되기를 기다리지 않고 메시지를 게시 합니다.
 ```
 void PostCommand(unsigned int command);
@@ -158,7 +153,7 @@ void PostCommand(unsigned int command);
 이 메서드는 비동기적으로 명령에 의해 지정 된 ID에 매핑된 메시지를 게시 합니다. 창의 메시지 큐에 메시지를 저장 하는 CWnd::PostMessage를 호출 하 고 해당 창 메시지를 처리할 때까지 기다리지 않고 반환 합니다.
 
 
-## <a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler
+## <a name="removecommandhandler"></a> ICommandSource::RemoveCommandHandler
 명령 원본 개체에서 명령 처리기를 제거합니다.
 ```
 void RemoveCommandHandler(unsigned int cmdID);
@@ -170,7 +165,7 @@ void RemoveCommandHandler(unsigned int cmdID);
 이 메서드는 명령 원본 개체에서 cmdID에 매핑된 명령 처리기를 제거 합니다.
 
 
-## <a name="removecommandrangecommandhandler"></a>ICommandSource::RemoveCommandRangeHandler 
+## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler 
 명령 원본 개체에서 명령 처리기의 그룹을 제거합니다.
 ```
 void RemoveCommandRangeUIHandler(
@@ -185,7 +180,7 @@ void RemoveCommandRangeUIHandler(
 ### <a name="remarks"></a>설명
 이 메서드는 메시지 처리기, 명령 원본 개체에서 cmdIDMin 및 cmdIDMax, 명령 Id 지정에 매핑된의 그룹을 제거 합니다.
 
-## <a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler 
+## <a name="removecommandrangeuihandler"></a> ICommandSource::RemoveCommandRangeUIHandler 
 명령 원본 개체에서 사용자 인터페이스 명령 메시지 처리기의 그룹을 제거합니다.
 ```
 void RemoveCommandRangeUIHandler(
@@ -200,7 +195,7 @@ void RemoveCommandRangeUIHandler(
 ### <a name="remarks"></a>설명
 이 메서드는 사용자 인터페이스 명령 메시지 처리기를 명령 원본 개체에서 cmdIDMin 및 cmdIDMax, 명령 Id 지정에 매핑된의 그룹을 제거 합니다.
 
-## <a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler 
+## <a name="removecommanduihandler"></a> ICommandSource::RemoveCommandUIHandler 
 명령 원본 개체에서 사용자 인터페이스 명령 메시지 처리기를 제거합니다.
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
@@ -211,7 +206,7 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ### <a name="remarks"></a>설명
 이 메서드는 명령 원본 개체에서 cmdID에 매핑된 사용자 인터페이스 명령 메시지 처리기를 제거 합니다.
 
-## <a name="sendcommand"></a>ICommandSource::SendCommand 
+## <a name="sendcommand"></a> ICommandSource::SendCommand 
 메시지를 보내고 반환 하기 전에 처리 되기를 기다립니다.
 ```
 void SendCommand(unsigned int command);

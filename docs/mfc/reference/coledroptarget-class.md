@@ -1,12 +1,9 @@
 ---
-title: "COleDropTarget 클래스 | Microsoft Docs"
-ms.custom: 
+title: COleDropTarget 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDropTarget
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fecdedc84f4fd93cbd9efe5e525c1771c5eb1c7e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb52739977b641cd5d52f018efcd30a51ecf1e32
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget 클래스
 창과 OLE 라이브러리 사이의 통신 메커니즘을 제공합니다.  
@@ -92,7 +87,7 @@ class COleDropTarget : public CCmdTarget
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxole.h  
   
-##  <a name="coledroptarget"></a>COleDropTarget::COleDropTarget  
+##  <a name="coledroptarget"></a>  COleDropTarget::COleDropTarget  
  클래스의 개체를 생성 `COleDropTarget`합니다.  
   
 ```  
@@ -102,7 +97,7 @@ COleDropTarget();
 ### <a name="remarks"></a>설명  
  호출 [등록](#register) 창에이 개체를 연결할 수 있습니다.  
   
-##  <a name="ondragenter"></a>COleDropTarget::OnDragEnter  
+##  <a name="ondragenter"></a>  COleDropTarget::OnDragEnter  
  커서를 먼저 창으로 끌 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -129,22 +124,22 @@ virtual DROPEFFECT OnDragEnter(
 ### <a name="return-value"></a>반환 값  
  삭제 하 여 지정 된 위치의 시도한 경우 발생 하는 효과 `point`합니다. 다음 중 하나 이상을 수 있습니다.  
   
-- `DROPEFFECT_NONE`드롭 것은 허용 되지 않습니다.  
+- `DROPEFFECT_NONE` 드롭 것은 허용 되지 않습니다.  
   
-- `DROPEFFECT_COPY`복사 작업을 수행 합니다.  
+- `DROPEFFECT_COPY` 복사 작업을 수행 합니다.  
   
-- `DROPEFFECT_MOVE`이동 작업을 수행 합니다.  
+- `DROPEFFECT_MOVE` 이동 작업을 수행 합니다.  
   
-- `DROPEFFECT_LINK`원래 데이터를 전송 된 데이터에서 링크를 설정할 수는 있습니다.  
+- `DROPEFFECT_LINK` 원래 데이터를 전송 된 데이터에서 링크를 설정할 수는 있습니다.  
   
-- `DROPEFFECT_SCROLL`끌기 스크롤 작업이 수행 되려고 하거나 대상에서 발생 합니다.  
+- `DROPEFFECT_SCROLL` 끌기 스크롤 작업이 수행 되려고 하거나 대상에서 발생 합니다.  
   
 ### <a name="remarks"></a>설명  
  놓기 작업을 창에서 수행할 수 있도록이 함수를 재정의 합니다. 기본 구현 호출 [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter)만 반환 `DROPEFFECT_NONE` 기본적으로 합니다.  
   
  자세한 내용은 참조 [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) Windows sdk에서입니다.  
   
-##  <a name="ondragleave"></a>COleDropTarget::OnDragLeave  
+##  <a name="ondragleave"></a>  COleDropTarget::OnDragLeave  
  커서가 끌기 작업이 적용 되는 동안 창을 벗어날 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -160,7 +155,7 @@ virtual void OnDragLeave(CWnd* pWnd);
   
  자세한 내용은 참조 [IDropTarget::DragLeave](http://msdn.microsoft.com/library/windows/desktop/ms680110) Windows sdk에서입니다.  
   
-##  <a name="ondragover"></a>COleDropTarget::OnDragOver  
+##  <a name="ondragover"></a>  COleDropTarget::OnDragOver  
  커서를 창 위로 끌 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -187,25 +182,25 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="return-value"></a>반환 값  
  삭제 하 여 지정 된 위치의 시도한 경우 발생 하는 효과 `point`합니다. 다음 중 하나 이상을 수 있습니다.  
   
-- `DROPEFFECT_NONE`드롭 것은 허용 되지 않습니다.  
+- `DROPEFFECT_NONE` 드롭 것은 허용 되지 않습니다.  
   
-- `DROPEFFECT_COPY`복사 작업을 수행 합니다.  
+- `DROPEFFECT_COPY` 복사 작업을 수행 합니다.  
   
-- `DROPEFFECT_MOVE`이동 작업을 수행 합니다.  
+- `DROPEFFECT_MOVE` 이동 작업을 수행 합니다.  
   
-- `DROPEFFECT_LINK`원래 데이터를 전송 된 데이터에서 링크를 설정할 수는 있습니다.  
+- `DROPEFFECT_LINK` 원래 데이터를 전송 된 데이터에서 링크를 설정할 수는 있습니다.  
   
-- `DROPEFFECT_SCROLL`끌기 스크롤 작업이 수행 되려고 하거나 대상에서 발생 하는 나타냅니다.  
+- `DROPEFFECT_SCROLL` 끌기 스크롤 작업이 수행 되려고 하거나 대상에서 발생 하는 나타냅니다.  
   
 ### <a name="remarks"></a>설명  
  놓기 작업을 창에서 수행할 수 있도록이 함수를 재정의 해야 합니다. 이 함수의 기본 구현을 호출 [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover)를 반환 하 `DROPEFFECT_NONE` 기본적으로 합니다. 이 함수를 끌어서 놓기 작업 동안 자주 호출 했으므로 최적화 해야 최대한 많이 있습니다.  
   
  자세한 내용은 참조 [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
   
-##  <a name="ondragscroll"></a>COleDropTarget::OnDragScroll  
+##  <a name="ondragscroll"></a>  COleDropTarget::OnDragScroll  
  호출 하기 전에 프레임 워크에서 호출 [OnDragEnter](#ondragenter) 또는 [OnDragOver](#ondragover) 확인 하려면 여부 `point` 스크롤 영역에 있습니다.  
   
 ```  
@@ -228,20 +223,20 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="return-value"></a>반환 값  
  삭제 하 여 지정 된 위치의 시도한 경우 발생 하는 효과 `point`합니다. 다음 중 하나 이상을 수 있습니다.  
   
-- `DROPEFFECT_NONE`드롭 것은 허용 되지 않습니다.  
+- `DROPEFFECT_NONE` 드롭 것은 허용 되지 않습니다.  
   
-- `DROPEFFECT_COPY`복사 작업을 수행 합니다.  
+- `DROPEFFECT_COPY` 복사 작업을 수행 합니다.  
   
-- `DROPEFFECT_MOVE`이동 작업을 수행 합니다.  
+- `DROPEFFECT_MOVE` 이동 작업을 수행 합니다.  
   
-- `DROPEFFECT_LINK`원래 데이터를 전송 된 데이터에서 링크를 설정할 수는 있습니다.  
+- `DROPEFFECT_LINK` 원래 데이터를 전송 된 데이터에서 링크를 설정할 수는 있습니다.  
   
-- `DROPEFFECT_SCROLL`끌기 스크롤 작업이 수행 되려고 하거나 대상에서 발생 하는 나타냅니다.  
+- `DROPEFFECT_SCROLL` 끌기 스크롤 작업이 수행 되려고 하거나 대상에서 발생 하는 나타냅니다.  
   
 ### <a name="remarks"></a>설명  
  이 이벤트에 대 한 특별 한 동작을 제공 하려는 경우이 함수를 재정의 합니다. 이 함수의 기본 구현을 호출 [CView::OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll)를 반환 하 `DROPEFFECT_NONE` 및 커서는 창의 테두리 내 기본 스크롤 영역 안으로 끌 때 창을 스크롤합니다.  
   
-##  <a name="ondrop"></a>COleDropTarget::OnDrop  
+##  <a name="ondrop"></a>  COleDropTarget::OnDrop  
  놓기 작업이 발생 될 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -262,11 +257,11 @@ virtual BOOL OnDrop(
  `dropEffect`  
  Drop 작업에 대 한 사용자를 선택 하는 효과입니다. 다음 중 하나 이상을 수 있습니다.  
   
-- `DROPEFFECT_COPY`복사 작업을 수행 합니다.  
+- `DROPEFFECT_COPY` 복사 작업을 수행 합니다.  
   
-- `DROPEFFECT_MOVE`이동 작업을 수행 합니다.  
+- `DROPEFFECT_MOVE` 이동 작업을 수행 합니다.  
   
-- `DROPEFFECT_LINK`원래 데이터를 전송 된 데이터에서 링크를 설정할 수는 있습니다.  
+- `DROPEFFECT_LINK` 원래 데이터를 전송 된 데이터에서 링크를 설정할 수는 있습니다.  
   
  `point`  
  화면에 대해를 픽셀 단위로 커서의 위치를 포함합니다.  
@@ -281,7 +276,7 @@ virtual BOOL OnDrop(
   
  자세한 내용은 참조 [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) Windows sdk에서입니다.  
   
-##  <a name="ondropex"></a>COleDropTarget::OnDropEx  
+##  <a name="ondropex"></a>  COleDropTarget::OnDropEx  
  놓기 작업이 발생 될 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -319,19 +314,19 @@ virtual DROPEFFECT OnDropEx(
   
  끌어서 놓기 작업 결과 놓기 작업과 관련 된 동작에 설명 합니다. 끌어서 놓기 작업 결과의 다음 목록을 참조 하세요.  
   
-- `DROPEFFECT_NONE`드롭 것은 허용 되지 않습니다.  
+- `DROPEFFECT_NONE` 드롭 것은 허용 되지 않습니다.  
   
-- `DROPEFFECT_COPY`복사 작업을 수행 합니다.  
+- `DROPEFFECT_COPY` 복사 작업을 수행 합니다.  
   
-- `DROPEFFECT_MOVE`이동 작업을 수행 합니다.  
+- `DROPEFFECT_MOVE` 이동 작업을 수행 합니다.  
   
-- `DROPEFFECT_LINK`원래 데이터를 전송 된 데이터에서 링크를 설정할 수는 있습니다.  
+- `DROPEFFECT_LINK` 원래 데이터를 전송 된 데이터에서 링크를 설정할 수는 있습니다.  
   
-- `DROPEFFECT_SCROLL`끌기 스크롤 작업이 수행 되려고 하거나 대상에서 발생 하는 나타냅니다.  
+- `DROPEFFECT_SCROLL` 끌기 스크롤 작업이 수행 되려고 하거나 대상에서 발생 하는 나타냅니다.  
   
  자세한 내용은 참조 [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) Windows sdk에서입니다.  
   
-##  <a name="register"></a>COleDropTarget::Register  
+##  <a name="register"></a>  COleDropTarget::Register  
  사용자가 창을 OLE Dll은 유효한 놓기 대상으로 등록 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -350,7 +345,7 @@ BOOL Register(CWnd* pWnd);
   
  자세한 내용은 참조 [RegisterDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms678405) Windows sdk에서입니다.  
   
-##  <a name="revoke"></a>COleDropTarget::Revoke  
+##  <a name="revoke"></a>  COleDropTarget::Revoke  
  이 함수를 호출 하 여 놓기 대상으로 등록 된 모든 창을 삭제 하기 전에 호출 [등록](#register) 놓기 대상의 목록에서 제거 하려면.  
   
 ```  

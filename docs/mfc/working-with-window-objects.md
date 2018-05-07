@@ -1,30 +1,25 @@
 ---
-title: "창 개체 작업 | Microsoft Docs"
-ms.custom: 
+title: 창 개체 작업 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - child windows [MFC], working with
 - window objects [MFC], working with
 ms.assetid: f73aa254-90e3-46a9-8e9b-d78b7054a331
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1eb8622c18a9b9539388ad2b3162916288cb28af
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e4c00649c51e34bbbac7adbf7aa5f3c7d04790ad
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-window-objects"></a>창 개체 작업
 두 종류의 작업에 대 한 windows 호출 작업:  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  어떤 경우 든, 그리기에 대 한 장치 컨텍스트를 해야 합니다. 스톡 펜, 브러시 및 창과 연결 된 장치 컨텍스트에 포함 된 기타 그래픽 개체를 사용할 수 있습니다. 또는 필요한 그리기 효과 가져올이 개체를 수정할 수 있습니다. 디바이스 컨텍스트를 원하는 대로 설정, 멤버 함수를 호출 클래스의 [CDC](../mfc/reference/cdc-class.md) (디바이스 컨텍스트 클래스) 줄, 도형 및 텍스트를 그리는 데; 색상을 사용 하도록 및 좌표계에서 실행 되도록 합니다.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [메시지 처리 및 매핑](../mfc/message-handling-and-mapping.md)  
   

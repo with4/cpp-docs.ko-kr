@@ -1,13 +1,10 @@
 ---
-title: "TN041: MFC OLE 2로 MFC OLE1 마이그레이션 | Microsoft Docs"
-ms.custom: 
+title: 'TN041: MFC OLE 2로 MFC OLE1 마이그레이션 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.ole
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - upgrading Visual C++ applications [MFC], OLE1 to OLE2
 - TN041
 ms.assetid: 67f55552-4b04-4ddf-af0b-4d9eaf5da957
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894c171c025ef125495faad21dba2a98c08e8b88
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78faa19263ff0ea03aac891c9be3a6114f7f9a48
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: MFC/OLE 2로 MFC/OLE1 마이그레이션
 > [!NOTE]
@@ -312,7 +307,7 @@ ON_COMMAND(ID_OLE_EDIT_CONVERT,
 ## <a name="adding-visual-editing"></a>"비주얼 편집"을 추가합니다.  
  OLE의 가장 흥미로운 기능 중 하나에 내부 활성화 (또는 "비주얼 편집")입니다. 이 기능을 사용자에 대 한 보다 원활한 편집 인터페이스를 제공 하는 컨테이너의 사용자 인터페이스의 일부를 받으시겠습니까 서버 응용 프로그램이 있습니다. OCLIENT에 내부 활성화를 구현 하려면 몇 가지 특별 한 리소스를 몇 가지 추가 코드 뿐만 아니라 추가 해야 합니다. 이러한 리소스와 코드는 일반적으로 응용 프로그램 마법사에서 제공-실제로 "Container"를 지 원하는 새로운 응용 프로그램 마법사 응용 프로그램에서 직접 가져온가 여기에 코드의 대부분 합니다.  
   
- 우선,에 내부 활성화 항목 없을 때 사용 되는 메뉴 리소스를 추가할 필요는. Visual c + +에서 IDR_OCLITYPE 리소스를 복사 하는 파일 및 창 팝업을 제외 하 고 모두 제거 하 여이 추가 메뉴 리소스를 만들 수 있습니다. 두 개의 구분 기호 막대를 나타내는 그룹을 분리 하 여 파일 및 창 팝업 사이 삽입 됩니다 (이 파일은 같아야: 파일 &#124; &#124; 창)입니다. 이러한 구분 기호 무엇을 의미 하 고 서버 및 컨테이너 메뉴를 병합 하는 방법에 대 한 자세한 내용은 "메뉴 및 리소스:: 메뉴 병합"의 참조 *OLE 2 클래스*합니다.  
+ 우선,에 내부 활성화 항목 없을 때 사용 되는 메뉴 리소스를 추가할 필요는. Visual c + +에서 IDR_OCLITYPE 리소스를 복사 하는 파일 및 창 팝업을 제외 하 고 모두 제거 하 여이 추가 메뉴 리소스를 만들 수 있습니다. 두 개의 구분 기호 막대를 나타내는 그룹을 분리 하 여 파일 및 창 팝업 사이 삽입 됩니다 (이 파일은 같아야: 파일 &#124; &#124; 창). 이러한 구분 기호 무엇을 의미 하 고 서버 및 컨테이너 메뉴를 병합 하는 방법에 대 한 자세한 내용은 "메뉴 및 리소스:: 메뉴 병합"의 참조 *OLE 2 클래스*합니다.  
   
  만든 이러한 메뉴를 사용 하는 후 프레임 워크 사항을 파악 해야 합니다. 호출 하 여 이렇게 `CDocTemplate::SetContainerInfo` 프로그램 InitInstance에 문서 템플릿 목록에 추가 하기 전에 문서 서식 파일에 대 한 합니다. 문서 서식 파일을 등록 하는 새 코드는 다음과 같습니다.  
   
@@ -672,7 +667,7 @@ CSize CServerItem::CalcNodeSize()
 \hiersvr\svrview.cpp(325) : error C2660: 'CopyToClipboard' : function does not take 2 parameters  
 ```  
   
- `COleServerItem::CopyToClipboard`더 이상 'bIncludeNative' 플래그를 지원합니다. 원시 데이터 (데이터 서버 항목의 Serialize 함수에 의해 기록)이 첫 번째 매개 변수를 제거 하므로 항상 복사 됩니다. 또한 `CopyToClipboard` FALSE를 반환 하는 대신 오류가 발생할 때 예외가 throw 됩니다. 다음과 같이 CServerView::OnEditCopy에 대 한 코드를 변경 합니다.  
+ `COleServerItem::CopyToClipboard` 더 이상 'bIncludeNative' 플래그를 지원합니다. 원시 데이터 (데이터 서버 항목의 Serialize 함수에 의해 기록)이 첫 번째 매개 변수를 제거 하므로 항상 복사 됩니다. 또한 `CopyToClipboard` FALSE를 반환 하는 대신 오류가 발생할 때 예외가 throw 됩니다. 다음과 같이 CServerView::OnEditCopy에 대 한 코드를 변경 합니다.  
   
 ```  
 void CServerView::OnEditCopy()  
@@ -733,7 +728,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
     AfxGetApp()->m_pMainWnd);
 ```  
   
- 에 대 한 참조를 확인할 **AfxGetApp() m_pMainWnd->**합니다. 서버가 활성화 될 때 주 창 및 m_pMainWnd 설정 되어 있으며 일반적으로 표시 되지 않습니다. 또한이 창 참조 하는 *주* 응용 프로그램 창, 서버를 완벽 하 게 표시 되는 MDI 프레임 창 열기 또는 독립 실행형 실행 합니다. 활성 프레임이 창을 참조 하지 않는-때 내부 활성화 되는 프레임에서 파생 된 창 `COleIPFrameWnd`합니다. 내부 편집,이 버전의 MFC는 새 함수를 추가 하는 경우에 올바른 활성 창 하기 위해 `AfxGetMainWnd`합니다. 대신이 함수를 사용 해야 하는 일반적으로 **AfxGetApp() m_pMainWnd->**합니다. 이 코드는 다음과 같이 변경 해야 합니다.  
+ 에 대 한 참조를 확인할 **AfxGetApp() m_pMainWnd->** 합니다. 서버가 활성화 될 때 주 창 및 m_pMainWnd 설정 되어 있으며 일반적으로 표시 되지 않습니다. 또한이 창 참조 하는 *주* 응용 프로그램 창, 서버를 완벽 하 게 표시 되는 MDI 프레임 창 열기 또는 독립 실행형 실행 합니다. 활성 프레임이 창을 참조 하지 않는-때 내부 활성화 되는 프레임에서 파생 된 창 `COleIPFrameWnd`합니다. 내부 편집,이 버전의 MFC는 새 함수를 추가 하는 경우에 올바른 활성 창 하기 위해 `AfxGetMainWnd`합니다. 대신이 함수를 사용 해야 하는 일반적으로 **AfxGetApp() m_pMainWnd->** 합니다. 이 코드는 다음과 같이 변경 해야 합니다.  
   
 ```  
 pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,  
@@ -750,7 +745,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
   
 -   선택 항목으로 컨테이너 창을 스크롤하여 변경 됩니다.  
   
- MFC 3.0에서 HIERSVR 샘플 약간 다른 디자인을 사용 하 여 해당 서버 항목에 대 한 합니다. 메모리를 절약 고 링크를 더 융통성이 있습니다. HIERSVR의 2.0 버전으로는 트리의 각 노드에 *동등* `COleServerItem`합니다. `COleServerItem`이러한 각 노드를 반드시 필요한 것 보다 좀 더 오버 헤드를 전달 하지만 `COleServerItem` 활성 각 링크에 대해 필요 합니다. 그러나 대부분의 경우 사항이 매우 적은 활성 링크 지정된 된 시간에 있습니다. 보다 효율적인이 수행 하려면이 버전의 MFC에서 HIERSVR 구분에서 노드는 `COleServerItem`합니다. 두 CServerNode 있기 및 **CServerItem** 클래스입니다. **CServerItem** (에서 파생 된 `COleServerItem`) 필요에 따라 생성 됩니다. 컨테이너 (또는 컨테이너)에 해당 특정 노드의 해당 특정 링크를 사용 하 여 중지 된 CServerNode와 연결 된 CServerItem 개체 삭제 됩니다. 이 디자인 더 효율적이 고 보다 유연한입니다. 유동성이 처리할 여러 개의 링크를 선택 하는 경우 제공 됩니다. HIERSVR의 이러한 두 버전 모두에서 다중 선택을 지원 하지만 것이 훨씬 쉽게 추가할 (및 이러한 선택 항목에 대 한 링크를 지원 하기 위해) HIERSVR의 MFC 3.0 버전과 이후는 `COleServerItem` 원시 데이터에서 구분 됩니다.  
+ MFC 3.0에서 HIERSVR 샘플 약간 다른 디자인을 사용 하 여 해당 서버 항목에 대 한 합니다. 메모리를 절약 고 링크를 더 융통성이 있습니다. HIERSVR의 2.0 버전으로는 트리의 각 노드에 *동등* `COleServerItem`합니다. `COleServerItem` 이러한 각 노드를 반드시 필요한 것 보다 좀 더 오버 헤드를 전달 하지만 `COleServerItem` 활성 각 링크에 대해 필요 합니다. 그러나 대부분의 경우 사항이 매우 적은 활성 링크 지정된 된 시간에 있습니다. 보다 효율적인이 수행 하려면이 버전의 MFC에서 HIERSVR 구분에서 노드는 `COleServerItem`합니다. 두 CServerNode 있기 및 **CServerItem** 클래스입니다. **CServerItem** (에서 파생 된 `COleServerItem`) 필요에 따라 생성 됩니다. 컨테이너 (또는 컨테이너)에 해당 특정 노드의 해당 특정 링크를 사용 하 여 중지 된 CServerNode와 연결 된 CServerItem 개체 삭제 됩니다. 이 디자인 더 효율적이 고 보다 유연한입니다. 유동성이 처리할 여러 개의 링크를 선택 하는 경우 제공 됩니다. HIERSVR의 이러한 두 버전 모두에서 다중 선택을 지원 하지만 것이 훨씬 쉽게 추가할 (및 이러한 선택 항목에 대 한 링크를 지원 하기 위해) HIERSVR의 MFC 3.0 버전과 이후는 `COleServerItem` 원시 데이터에서 구분 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [번호별 기술 참고 사항](../mfc/technical-notes-by-number.md)   

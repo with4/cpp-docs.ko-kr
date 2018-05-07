@@ -1,13 +1,10 @@
 ---
-title: "문서를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: 문서를 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - printing [MFC], documents
 - writing to files [MFC]
 ms.assetid: f390d6d8-d0e1-4497-9b6a-435f7ce0776c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 691d8d00b9c4671ea4b9c318313851a7fab73f7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 48f3bd6c6463bbbe26214a29960260d2be583e20
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-documents"></a>문서 사용
 문서 및 뷰를 함께 작동 합니다.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
  데이터 관리에 특히 관련 된 문서가 있습니다. 문서 클래스 멤버 변수에서 일반적으로 데이터를 저장 합니다. 보기 표시에 대 한 데이터를 액세스 하 고 업데이트할 이러한 변수를 사용 합니다. 문서의 기본 serialization 메커니즘 데이터 읽기 및 쓰기는 파일로 / 파일에서 관리 합니다. 문서를 처리할 수도 명령 (하지 Windows 이외의 다른 메시지 하지만 **WM_COMMAND**).  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [CDocument에서에서 문서 클래스 파생](../mfc/deriving-a-document-class-from-cdocument.md)  
   

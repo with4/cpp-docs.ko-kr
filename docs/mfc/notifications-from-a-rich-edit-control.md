@@ -1,13 +1,10 @@
 ---
-title: "Edit 컨트롤 Rich에서 보내는 알림 | Microsoft Docs"
-ms.custom: 
+title: Edit 컨트롤 Rich에서 보내는 알림 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - rich edit controls [MFC], notifications
 - notifications [MFC], from CRichEditCtrl
 ms.assetid: eb5304fe-f4f3-4557-9ebf-3095dea383c4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcfcb2e4fe333db1ed629489b405255d4ab050b9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c678af3444ef408a0a9c50e972942d67e2d3cf1b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="notifications-from-a-rich-edit-control"></a>Rich Edit 컨트롤에서 보내는 알림
 알림 메시지 보고서 컨트롤을 편집 하는 다양 한 기능의 영향을 주는 이벤트 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). 이러한 부모 창에서 처리할 수 또는 메시지 리플렉션을 사용 하는 rich edit 컨트롤 자체. Rich edit 컨트롤 모든 편집 컨트롤 뿐 아니라 몇 가지 추가 구성을 사용 하는 알림 메시지를 지원 합니다. 알림 메시지를 rich edit 컨트롤의 부모 창 "이벤트 마스크입니다."를 설정 하 여 보내는 것을 확인할 수 있습니다.  

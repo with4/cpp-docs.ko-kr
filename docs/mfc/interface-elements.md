@@ -1,30 +1,25 @@
 ---
-title: "인터페이스 요소 | Microsoft Docs"
-ms.custom: 
+title: 인터페이스 요소 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab3da476a4e8b18d5ac864f0cf690a6a113db11e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 25f9de4ab5f7d12d240625e0fdf5f857563e8ce2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interface-elements"></a>인터페이스 요소
 이 문서에서 도입 된 인터페이스 요소에 설명 [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] s p 1에서는 라이브러리의 이전 버전으로 차이 설명 합니다.  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
  도킹 사이트 (또는 주 프레임 창)에 모든 창 및 응용 프로그램에서 미니 프레임 창을 소유합니다. 도킹 사이트에는 [CDockingManager](../mfc/reference/cdockingmanager-class.md) 멤버입니다. 이 멤버는 도킹 사이트에 속하는 모든 창 목록을 유지 관리 합니다. 도크 사이트의 외부 가장자리에서 생성 하는 창이 목록의 시작 부분에 배치 됩니다 되도록 목록 정렬 되어 있습니다. 프레임 워크는 도킹 사이트를 다시 그립니다,이 목록을 반복 하 고 도킹 사이트의 현재 경계 사각형을 포함 하도록 각 창 레이아웃을 조정 합니다. 호출할 수 있습니다 `AdjustDockingLayout` 또는 `RecalcLayout` 도킹 레이아웃을 조정 해야 할 시점과 프레임 워크 도킹 관리자에 게이 호출을 리디렉션합니다.  
   
 ## <a name="dock-bars"></a>도킹 막대  
- 각 주 프레임 창 위치를 지정할 수 *막대 도킹* 테두리를 따라 합니다. 도킹 막대는 속해 있는 창은 [CDockSite 클래스](../mfc/reference/cdocksite-class.md)합니다. 도킹 막대에서 파생 된 개체를 허용할 수 [CPane](../mfc/reference/cpane-class.md), 예: 도구 모음입니다. 도킹 막대를 만들려면 주 프레임 창이 초기화 될 때 호출 `EnableDocking`합니다. 자동 숨기기 막대를 사용 하도록 설정 하려면 호출 `EnableAutoHideBars`합니다. `EnableAutoHideBars`만듭니다 [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md) 개체, 및 각 도킹 표시줄 옆에 있는 워크시트입니다.  
+ 각 주 프레임 창 위치를 지정할 수 *막대 도킹* 테두리를 따라 합니다. 도킹 막대는 속해 있는 창은 [CDockSite 클래스](../mfc/reference/cdocksite-class.md)합니다. 도킹 막대에서 파생 된 개체를 허용할 수 [CPane](../mfc/reference/cpane-class.md), 예: 도구 모음입니다. 도킹 막대를 만들려면 주 프레임 창이 초기화 될 때 호출 `EnableDocking`합니다. 자동 숨기기 막대를 사용 하도록 설정 하려면 호출 `EnableAutoHideBars`합니다. `EnableAutoHideBars` 만듭니다 [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md) 개체, 및 각 도킹 표시줄 옆에 있는 워크시트입니다.  
   
  각 도킹 막대 도킹 행으로 구분 됩니다. 도킹 행으로 표시 됩니다는 [CDockingPanesRow 클래스](../mfc/reference/cdockingpanesrow-class.md)합니다. 각 도킹 행에는 도구 모음 목록이 포함 되어 있습니다. 사용자는 도구 모음을 도킹 하거나 도구 모음을 한 행에서 동일한 도킹 가로 막대 내의 다른 위치로 이동, 프레임 워크 중 하나 새 행을 만들고 적절 하 게 도킹 막대의 크기를 조정 하거나 기존 행에 도구 모음을 배치 합니다.  
   
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
  기본적으로 각 `CDockablePane` 자동 숨기기 기능을 지원 합니다. 캡션에서 핀 단추를 클릭할 때는 `CDockablePane`, 프레임 워크의 창 자동 숨기기 모드로 전환 합니다. 프레임 워크 클릭을 처리 하려면 만듭니다는 [CMFCAutoHideBar 클래스](../mfc/reference/cmfcautohidebar-class.md) 및 [CMFCAutoHideButton 클래스](../mfc/reference/cmfcautohidebutton-class.md) 와 관련 된는 `CMFCAutoHideBar` 개체입니다. 프레임 워크에서는 새 `CMFCAutoHideBar` 에 [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md)합니다. 프레임 워크 또한 연결 된 `CMFCAutoHideButton` 도구 모음에 있습니다. [CDockingManager 클래스](../mfc/reference/cdockingmanager-class.md) 유지 관리는 `CDockablePane`합니다.  
   
 ## <a name="tabbed-control-bars-and-outlook-bars"></a>탭된 컨트롤 막대 및 Outlook 표시줄  
- [CMFCBaseTabCtrl 클래스](../mfc/reference/cmfcbasetabctrl-class.md) 분리 가능한 탭이 포함 된 탭 창의 기본 기능을 구현 합니다. 사용 하는 `CMFCBaseTabCtrl` 개체, 초기화는 [CBaseTabbedPane 클래스](../mfc/reference/cbasetabbedpane-class.md) 응용 프로그램에서 합니다. `CBaseTabbedPane`파생 된 `CDockablePane` 포인터를 관리 하 고는 `CMFCBaseTabCtrl` 개체입니다. `CBaseTabbedPane` 도킹 하 고 탭된 컨트롤 막대의 크기를 조정할 수 있습니다. 사용 하 여 [CDockablePane::AttachToTabWnd](../mfc/reference/cdockablepane-class.md#attachtotabwnd) 도킹 되 고 탭 컨트롤 막대를 동적으로 만들려고 합니다.  
+ [CMFCBaseTabCtrl 클래스](../mfc/reference/cmfcbasetabctrl-class.md) 분리 가능한 탭이 포함 된 탭 창의 기본 기능을 구현 합니다. 사용 하는 `CMFCBaseTabCtrl` 개체, 초기화는 [CBaseTabbedPane 클래스](../mfc/reference/cbasetabbedpane-class.md) 응용 프로그램에서 합니다. `CBaseTabbedPane` 파생 된 `CDockablePane` 포인터를 관리 하 고는 `CMFCBaseTabCtrl` 개체입니다. `CBaseTabbedPane` 도킹 하 고 탭된 컨트롤 막대의 크기를 조정할 수 있습니다. 사용 하 여 [CDockablePane::AttachToTabWnd](../mfc/reference/cdockablepane-class.md#attachtotabwnd) 도킹 되 고 탭 컨트롤 막대를 동적으로 만들려고 합니다.  
   
  Outlook 표시줄 컨트롤은 또한 탭된 막대 기반으로 합니다. [CMFCOutlookBar 클래스](../mfc/reference/cmfcoutlookbar-class.md) 에서 파생 된 `CBaseTabbedPane`합니다. Outlook 표시줄을 사용 하는 방법에 대 한 자세한 내용은 참조 [CMFCOutlookBar 클래스](../mfc/reference/cmfcoutlookbar-class.md)합니다.  
   

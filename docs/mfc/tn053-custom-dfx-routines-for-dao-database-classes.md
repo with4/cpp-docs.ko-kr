@@ -1,13 +1,10 @@
 ---
-title: "TN053: DAO에 대 한 사용자 지정 DFX 루틴 데이터베이스 클래스 | Microsoft Docs"
-ms.custom: 
+title: 'TN053: DAO에 대 한 사용자 지정 DFX 루틴 데이터베이스 클래스 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.dfx
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - DFX (DAO record field exchange) [MFC]
 - custom DFX routines [MFC]
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6935e4b3f2c8159677d1d322f6f875246160da2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47d1c9769055e0ab69f57f58b136b7844cb1f860
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053: DAO 데이터베이스 클래스에 대한 사용자 지정 DFX 루틴
 > [!NOTE]
@@ -59,7 +54,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  동적 바인딩 및 DFX 되지 않으므로 상호 배타적인 정적 및 동적 바인딩의 혼합 사용을 사용할 수 있습니다.  
   
-## <a name="_mfcnotes_tn053_examples"></a>DAO 레코드 필드 교환만 예제 1-사용  
+## <a name="_mfcnotes_tn053_examples"></a> DAO 레코드 필드 교환만 예제 1-사용  
   
  (가정 `CDaoRecordset` -파생 클래스 `CMySet` 이미 열려)  
   
@@ -122,7 +117,7 @@ PopUpEmployeeData(emp.m_strFirstName,
     varPhoto);
 ```  
   
-## <a name="_mfcnotes_tn053_how_dfx_works"></a>DFX의 작동 원리  
+## <a name="_mfcnotes_tn053_how_dfx_works"></a> DFX의 작동 원리  
   
  DFX 메커니즘은 MFC ODBC 클래스에서 사용 하는 레코드 필드 교환 (RFX) 메커니즘을 유사한 방식으로 작동 합니다. RFX와 DFX의 원칙 동일 하지만 내부 차이가 많습니다. DFX 함수 디자인 개별 DFX 루틴에서 거의 모든 코드 공유 되도록 했습니다. 만 가장 높은 수준 DFX에 몇 가지를 수행 하지 않습니다.  
   
@@ -164,12 +159,12 @@ PopUpEmployeeData(emp.m_strFirstName,
   
 -   DAO도 "으로 다시 호출할" 가변 길이 열에 대 한 호출자가 호출자가 메모리를 할당할 수 있도록 합니다. 이 두 번째 기능은 클래스의 멤버에는 데이터를 직접 저장할 수 있도록 뿐만 아니라 데이터의 복사본 수를 최소화 하는 이점이 (의 `CDaoRecordset` 파생 클래스). 이 두 번째 메커니즘은 MFC의 데이터 멤버에 바인딩하는 사용 하 여 메서드 `CDaoRecordset` 파생 클래스입니다.  
   
-##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a>사용자 지정 DFX 루틴에서 수행 하는 작업  
+##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a> 사용자 지정 DFX 루틴에서 수행 하는 작업  
  DFX 함수에서 구현 되는 가장 중요 한 작업 호출 하려면 필요한 데이터 구조를 설정 하는 기능 해야 합니다.이 설명에서 하는지가 명확 `GetRows`합니다. DFX 함수도 지원 해야 하는 다른 작업이 있지만 없음 중요 하거나 올바르게 준비로 복잡 한으로 여러 가지가 `GetRows` 호출 합니다.  
   
  DFX의 사용은 온라인 설명서에 설명 되어 있습니다. 기본적으로, 두 가지 요구 사항이 있습니다. 첫째, 멤버를에 추가 해야 합니다는 `CDaoRecordset` 각 바인딩된 필드 및 매개 변수 클래스를 파생 합니다. 다음 `CDaoRecordset::DoFieldExchange` 재정의 해야 합니다. 데이터 멤버의 형식이 중요 합니다. 최소한 해당 형식으로 변환할 수 또는 데이터베이스의 필드에서 데이터와 일치 해야 합니다. 예를 들어 정수 (long)를 같은 데이터베이스에 있는 숫자 필드 항상 텍스트로 변환 및 바인딩할 수는 `CString` 멤버 이지만 데이터베이스의 텍스트 필드 반드시 및 될 수 등 정수 (long) 숫자 표현으로 변환 긴 integ에 바인딩된 er 멤버입니다. DAO 및 Microsoft Jet 데이터베이스 엔진에서 변환 (아님 MFC)에 대 한 책임이 있습니다.  
   
-##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a>DFX_Text의 세부 정보  
+##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a> DFX_Text의 세부 정보  
  앞에서 언급 한 DFX 작동 하는 방법을 설명 하는 가장 좋은 방법은 때 예를 통해 작동 하도록 합니다. 내부를 진행 하 고이 위해 `DFX_Text` DFX의 적어도 한 기본적인 이해를 제공 하기 위하여 매우 편리 하 게 작동 해야 합니다.  
   
  **AddToParameterList**  

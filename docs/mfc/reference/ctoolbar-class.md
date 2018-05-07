@@ -1,12 +1,9 @@
 ---
-title: "CToolBar 클래스 | Microsoft Docs"
-ms.custom: 
+title: CToolBar 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CToolBar
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dec2dac93dae9860dfadd347584fbdf465d15838
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2a80ea4cb188d879b9af0a7901ffbe89b8673df6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctoolbar-class"></a>CToolBar 클래스
 비트맵 단추의 행과 구분 기호(선택 사항)가 있는 컨트롤 막대입니다.  
@@ -106,9 +101,9 @@ class CToolBar : public CControlBar
 |[CToolBar::SetSizes](#setsizes)|단추와 해당 비트맵의 크기를 설정합니다.|  
   
 ## <a name="remarks"></a>설명  
- 단추는 누름 단추, 확인란 단추 또는 라디오 단추 처럼 작동할 수 있습니다. `CToolBar`개체는 일반적으로 포함 된 클래스에서 파생 되는 프레임 창 개체 멤버 [CFrameWnd](../../mfc/reference/cframewnd-class.md) 또는 [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)합니다.  
+ 단추는 누름 단추, 확인란 단추 또는 라디오 단추 처럼 작동할 수 있습니다. `CToolBar` 개체는 일반적으로 포함 된 클래스에서 파생 되는 프레임 창 개체 멤버 [CFrameWnd](../../mfc/reference/cframewnd-class.md) 또는 [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md)합니다.  
   
- [CToolBar::GetToolBarCtrl](#gettoolbarctrl), 멤버 함수 새 MFC 4.0 허용 도구 모음 사용자 지정 및 추가 기능에 대 한 Windows 공용 컨트롤 지원 기능을 사용할 수 있습니다. `CToolBar`멤버 함수는 대부분의 Windows 공용 컨트롤; 기능 제공. 그러나 호출 하는 경우 `GetToolBarCtrl`, 도구 모음을 Windows 95/98 도구 모음의 특징 중 이상용으로 지정할 수 있습니다. 호출 하는 경우 `GetToolBarCtrl`에 대 한 참조를 반환 합니다는 `CToolBarCtrl` 개체입니다. 참조 [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) Windows 공용 컨트롤을 사용 하 여 도구 모음을 디자인 하는 방법에 대 한 자세한 내용은 합니다. 공용 컨트롤에 대 한 자세한 내용은 참조 하십시오. [공용 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb775493) Windows sdk에서입니다.  
+ [CToolBar::GetToolBarCtrl](#gettoolbarctrl), 멤버 함수 새 MFC 4.0 허용 도구 모음 사용자 지정 및 추가 기능에 대 한 Windows 공용 컨트롤 지원 기능을 사용할 수 있습니다. `CToolBar` 멤버 함수는 대부분의 Windows 공용 컨트롤; 기능 제공. 그러나 호출 하는 경우 `GetToolBarCtrl`, 도구 모음을 Windows 95/98 도구 모음의 특징 중 이상용으로 지정할 수 있습니다. 호출 하는 경우 `GetToolBarCtrl`에 대 한 참조를 반환 합니다는 `CToolBarCtrl` 개체입니다. 참조 [CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md) Windows 공용 컨트롤을 사용 하 여 도구 모음을 디자인 하는 방법에 대 한 자세한 내용은 합니다. 공용 컨트롤에 대 한 자세한 내용은 참조 하십시오. [공용 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb775493) Windows sdk에서입니다.  
   
  Visual c + + 도구 모음을 만들려면 두 가지 방법을 제공 합니다. 리소스 편집기를 사용 하 여 도구 모음 리소스를 만들려면 다음이 단계를 수행 합니다.  
   
@@ -141,11 +136,11 @@ class CToolBar : public CControlBar
  각 단추에는 하나의 이미지를 있습니다. 여러 단추 상태 및 스타일이 (누름된 up, 위로, 사용 안 함, 아래쪽, 사용 안 함 및 확인할 수 없는) 하나의 해당 이미지에서 생성 됩니다. 비트맵에서 색을 사용할 수 있지만 흑백 회색 음영 인 이미지와 함께 최상의 결과 얻을 수 있습니다.  
   
 > [!WARNING]
-> `CToolBar`최대 16 개의 색 비트맵을 지원합니다. 도구 모음 편집기에 이미지를 로드 Visual Studio가 자동으로 필요한 경우 이미지는 16 색 비트맵에 변환 및 이미지 변환 된 경우 경고 메시지를 표시 합니다. 이미지 (이미지를 편집 하는 외부 편집기 사용) 하는 16 개 색을 사용 하면 응용 프로그램이 예기치 않게 동작할 수 있습니다.  
+> `CToolBar` 최대 16 개의 색 비트맵을 지원합니다. 도구 모음 편집기에 이미지를 로드 Visual Studio가 자동으로 필요한 경우 이미지는 16 색 비트맵에 변환 및 이미지 변환 된 경우 경고 메시지를 표시 합니다. 이미지 (이미지를 편집 하는 외부 편집기 사용) 하는 16 개 색을 사용 하면 응용 프로그램이 예기치 않게 동작할 수 있습니다.  
   
  도구 모음 단추는 기본적으로 누름 단추를 모방 합니다. 그러나 확인란 단추 또는 라디오 단추 도구 모음 단추 모방 수도 있습니다. 확인란 단추는 세 가지 상태: 확인 된 지워지고 비활성화 상태입니다. 라디오 단추 두 가지 상태: 되 고 비활성화 합니다.  
   
- 배열을 가리키는 없이 개별 단추 또는 구분 기호 스타일을 설정 하려면 호출 [GetButtonStyle](#getbuttonstyle) 스타일을 검색 한 다음 호출 하 [SetButtonStyle](#setbuttonstyle) 대신 `SetButtons`합니다. `SetButtonStyle`런타임 시 단추의 스타일을 변경 하려는 경우 가장 유용 합니다.  
+ 배열을 가리키는 없이 개별 단추 또는 구분 기호 스타일을 설정 하려면 호출 [GetButtonStyle](#getbuttonstyle) 스타일을 검색 한 다음 호출 하 [SetButtonStyle](#setbuttonstyle) 대신 `SetButtons`합니다. `SetButtonStyle` 런타임 시 단추의 스타일을 변경 하려는 경우 가장 유용 합니다.  
   
  단추에 표시할 텍스트를 할당 하려면 호출 [GetButtonText](#getbuttontext) 을 단추에 다음 텍스트를 검색할 [SetButtonText](#setbuttontext) 텍스트를 설정 합니다.  
   
@@ -169,7 +164,7 @@ class CToolBar : public CControlBar
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxext.h  
   
-##  <a name="commandtoindex"></a>CToolBar::CommandToIndex  
+##  <a name="commandtoindex"></a>  CToolBar::CommandToIndex  
  이 멤버 함수는 첫 번째 도구 모음 단추를 위치 0에서 시작 명령 ID를 가진 일치 인덱스를 반환 합니다. `nIDFind`합니다.  
   
 ```  
@@ -183,7 +178,7 @@ int CommandToIndex(UINT nIDFind) const;
 ### <a name="return-value"></a>반환 값  
  단추나 없는 단추에 지정 된 명령 id입니다.-1의 인덱스  
   
-##  <a name="create"></a>CToolBar::Create  
+##  <a name="create"></a>  CToolBar::Create  
  이 멤버 함수 Windows 도구 모음 (자식 창)을 만들고 사용 하 여 연결 된 `CToolBar` 개체입니다.  
   
 ```  
@@ -200,13 +195,13 @@ virtual BOOL Create(
  `dwStyle`  
  도구 모음 스타일입니다. 지원 되는 추가 도구 모음 스타일은  
   
-- `CBRS_TOP`컨트롤 막대 프레임 창의 위쪽에입니다.  
+- `CBRS_TOP` 컨트롤 막대 프레임 창의 위쪽에입니다.  
   
-- `CBRS_BOTTOM`컨트롤 막대 프레임 창 맨 아래에입니다.  
+- `CBRS_BOTTOM` 컨트롤 막대 프레임 창 맨 아래에입니다.  
   
-- `CBRS_NOALIGN`부모 크기를 조정할 때 컨트롤 막대 위치가 변경 되지 않습니다.  
+- `CBRS_NOALIGN` 부모 크기를 조정할 때 컨트롤 막대 위치가 변경 되지 않습니다.  
   
-- `CBRS_TOOLTIPS`컨트롤 막대에는 도구 설명을 표시합니다.  
+- `CBRS_TOOLTIPS` 컨트롤 막대에는 도구 설명을 표시합니다.  
   
 - **CBRS_SIZE_DYNAMIC** 동적 컨트롤 막대입니다.  
   
@@ -214,7 +209,7 @@ virtual BOOL Create(
   
 - **CBRS_FLOATING** 컨트롤 막대 부동 합니다.  
   
-- `CBRS_FLYBY`상태 표시줄 단추에 대 한 정보를 표시합니다.  
+- `CBRS_FLYBY` 상태 표시줄 단추에 대 한 정보를 표시합니다.  
   
 - **CBRS_HIDE_INPLACE** 컨트롤 막대 사용자에 게 표시 되지 않습니다.  
   
@@ -227,10 +222,10 @@ virtual BOOL Create(
 ### <a name="remarks"></a>설명  
  또한 도구 모음 높이 기본값으로 설정합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#179](../../mfc/codesnippet/cpp/ctoolbar-class_1.cpp)]  
   
-##  <a name="createex"></a>CToolBar::CreateEx  
+##  <a name="createex"></a>  CToolBar::CreateEx  
  Windows 도구 모음 (자식 창)을 만들고 사용 하 여 연결 하려면이 함수를 호출 하 여 `CToolBar` 개체입니다.  
   
 ```  
@@ -270,10 +265,10 @@ virtual BOOL CreateEx(
   
  사용 하 여 `CreateEx`, 대신 [만들기](#create)포함 된 도구 모음 컨트롤을 만들 때 특정 스타일 있어야 하는 경우. 예를 들어 설정 `dwCtrlStyle` 를 **TBSTYLE_FLAT &#124; TBSTYLE_TRANSPARENT** Internet Explorer 4 도구 모음 유사한 도구 모음을 만들려면 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#180](../../mfc/codesnippet/cpp/ctoolbar-class_2.cpp)]  
   
-##  <a name="ctoolbar"></a>CToolBar::CToolBar  
+##  <a name="ctoolbar"></a>  CToolBar::CToolBar  
  이 멤버 함수를 생성 한 `CToolBar` 개체를 기본 크기를 설정 합니다.  
   
 ```  
@@ -283,7 +278,7 @@ CToolBar();
 ### <a name="remarks"></a>설명  
  호출 된 [만들기](#create) 멤버 함수를 만드는 도구 모음 창.  
   
-##  <a name="getbuttoninfo"></a>CToolBar::GetButtonInfo  
+##  <a name="getbuttoninfo"></a>  CToolBar::GetButtonInfo  
  이 멤버 함수는 컨트롤 ID, 스타일 및 도구 모음 단추 또는 지정 된 위치에 구분의 이미지 인덱스 검색 *nIndex 합니다.*  
   
 ```  
@@ -312,7 +307,7 @@ void GetButtonInfo(
   
  경우 `nIndex` 는 구분 기호를 지정 `iImage` 구분 기호 너비 (픽셀)에서로 설정 됩니다.  
   
-##  <a name="getbuttonstyle"></a>CToolBar::GetButtonStyle  
+##  <a name="getbuttonstyle"></a>  CToolBar::GetButtonStyle  
  단추 또는 도구 모음에서 구분 기호 스타일을 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -329,7 +324,7 @@ UINT GetButtonStyle(int nIndex) const;
 ### <a name="remarks"></a>설명  
  단추의 스타일 사용자 입력에 응답 하 고 단추가 표시 되는 방식을 결정 합니다. 참조 [SetButtonStyle](#setbuttonstyle) 단추 스타일에 대 한 예제입니다.  
   
-##  <a name="getbuttontext"></a>CToolBar::GetButtonText  
+##  <a name="getbuttontext"></a>  CToolBar::GetButtonText  
  단추에 표시 되는 텍스트를 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -353,7 +348,7 @@ void GetButtonText(
 ### <a name="remarks"></a>설명  
  이 멤버에 두 번째 형태 채우기 함수는 `CString` 문자열 텍스트와 함께 개체입니다.  
   
-##  <a name="getitemid"></a>CToolBar::GetItemID  
+##  <a name="getitemid"></a>  CToolBar::GetItemID  
  이 멤버 함수 단추를 클릭 하거나 지정 된 구분 기호 명령 ID를 반환 합니다. `nIndex`합니다.  
   
 ```  
@@ -370,7 +365,7 @@ UINT GetItemID(int nIndex) const;
 ### <a name="remarks"></a>설명  
  구분 기호 반환 **ID_SEPARATOR**합니다.  
   
-##  <a name="getitemrect"></a>CToolBar::GetItemRect  
+##  <a name="getitemrect"></a>  CToolBar::GetItemRect  
  이 멤버 함수는 채웁니다는 `RECT` 에 주소가 포함 된 구조 `lpRect` 단추 또는 지정 된 구분 기호 좌표로 `nIndex`합니다.  
   
 ```  
@@ -391,10 +386,10 @@ virtual void GetItemRect(
   
  사용 하 여 `GetItemRect` 콤보 상자나 기타 컨트롤으로 교체 하려면 구분의 좌표를 얻으려고 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CToolBar::SetSizes](#setsizes)합니다.  
   
-##  <a name="gettoolbarctrl"></a>CToolBar::GetToolBarCtrl  
+##  <a name="gettoolbarctrl"></a>  CToolBar::GetToolBarCtrl  
  이 멤버 함수에는 기본 공용 컨트롤에 직접 액세스할을 수 있습니다.  
   
 ```  
@@ -409,10 +404,10 @@ CToolBarCtrl& GetToolBarCtrl() const;
   
  공용 컨트롤을 사용 하는 방법에 대 한 자세한 내용은 문서 참조 [컨트롤](../../mfc/controls-mfc.md) 및 [공용 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb775493) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocViewSDI#15](../../mfc/codesnippet/cpp/ctoolbar-class_3.cpp)]  
   
-##  <a name="loadbitmap"></a>CToolBar::LoadBitmap  
+##  <a name="loadbitmap"></a>  CToolBar::LoadBitmap  
  로 지정 된 비트맵을 로드 하려면이 함수를 호출 `lpszResourceName` 또는 `nIDResource`합니다.  
   
 ```  
@@ -434,9 +429,9 @@ BOOL LoadBitmap(UINT nIDResource);
  비트맵 각 도구 모음 단추에 대 한 이미지를 포함 해야 합니다. 이미지 없는 경우 표준 크기 (16 픽셀 너비 및 높이가 15 픽셀)의 호출 [SetSizes](#setsizes) 단추 크기 및 해당 이미지를 설정할 수 있습니다.  
   
 > [!WARNING]
-> `CToolBar`최대 16 개의 색 비트맵을 지원합니다. 도구 모음 편집기에 이미지를 로드 Visual Studio가 자동으로 필요한 경우 이미지는 16 색 비트맵에 변환 및 이미지 변환 된 경우 경고 메시지를 표시 합니다. 이미지 (이미지를 편집 하는 외부 편집기 사용) 하는 16 개 색을 사용 하면 응용 프로그램이 예기치 않게 동작할 수 있습니다.  
+> `CToolBar` 최대 16 개의 색 비트맵을 지원합니다. 도구 모음 편집기에 이미지를 로드 Visual Studio가 자동으로 필요한 경우 이미지는 16 색 비트맵에 변환 및 이미지 변환 된 경우 경고 메시지를 표시 합니다. 이미지 (이미지를 편집 하는 외부 편집기 사용) 하는 16 개 색을 사용 하면 응용 프로그램이 예기치 않게 동작할 수 있습니다.  
   
-##  <a name="loadtoolbar"></a>CToolBar::LoadToolBar  
+##  <a name="loadtoolbar"></a>  CToolBar::LoadToolBar  
  이 멤버 함수를 로드 하 여 지정 된 도구 모음 호출 `lpszResourceName` 또는 `nIDResource`합니다.  
   
 ```  
@@ -457,10 +452,10 @@ BOOL LoadToolBar(UINT nIDResource);
 ### <a name="remarks"></a>설명  
  참조 [도구 모음 편집기](../../windows/toolbar-editor.md) 에서 도구 모음 리소스를 만들기에 대 한 자세한 내용은 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CToolBar::CreateEx](#createex)합니다.  
   
-##  <a name="setbitmap"></a>CToolBar::SetBitmap  
+##  <a name="setbitmap"></a>  CToolBar::SetBitmap  
  도구 모음에 대 한 비트맵 이미지를 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -477,7 +472,7 @@ BOOL SetBitmap(HBITMAP hbmImageWell);
 ### <a name="remarks"></a>설명  
  예를 들어 호출 `SetBitmap` 단추의 동작을 변경 하는 문서에 작업을 수행 하는 사용자 한 다음 비트맵 이미지를 변경 하려면.  
   
-##  <a name="setbuttoninfo"></a>CToolBar::SetButtonInfo  
+##  <a name="setbuttoninfo"></a>  CToolBar::SetButtonInfo  
  단추의 명령 ID, 스타일 및 이미지 수를 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -525,7 +520,7 @@ void SetButtonInfo(
   
  비트맵 이미지 및 단추에 대 한 내용은 참조는 [CToolBar](../../mfc/reference/ctoolbar-class.md) 개요 및 [CToolBar::LoadBitmap](#loadbitmap)합니다.  
   
-##  <a name="setbuttons"></a>CToolBar::SetButtons  
+##  <a name="setbuttons"></a>  CToolBar::SetButtons  
  각 도구 모음 단추의 명령 ID 배열의 해당 요소에 지정 된 값으로 설정 하는이 멤버 함수 `lpIDArray`합니다.  
   
 ```  
@@ -551,7 +546,7 @@ BOOL SetButtons(
   
  경우 `lpIDArray` 은 **NULL**, 지정 된 항목 수에 대 한 공간을 할당 하는이 함수 `nIDCount`합니다. 사용 하 여 [SetButtonInfo](#setbuttoninfo) 각 항목의 특성을 설정 합니다.  
   
-##  <a name="setbuttonstyle"></a>CToolBar::SetButtonStyle  
+##  <a name="setbuttonstyle"></a>  CToolBar::SetButtonStyle  
  단추 또는 구분 기호 또는 단추를 그룹 스타일을 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -591,7 +586,7 @@ void SetButtonStyle(
 > [!NOTE]
 >  사용 하 여 단추 상태를 설정할 수도 있습니다는 `nStyle` 매개 변수 이지만 단추 상태에 의해 제어 되므로 [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) 사용 하 여 설정 상태 처리기를 모든 `SetButtonStyle` 다음 동안 손실 됩니다 유휴 처리 중입니다. 참조 [사용자 인터페이스 개체 업데이트 하는 방법을](../../mfc/how-to-update-user-interface-objects.md) 및 [TN031: 컨트롤 막대](../../mfc/tn031-control-bars.md) 자세한 정보에 대 한 합니다.  
   
-##  <a name="setbuttontext"></a>CToolBar::SetButtonText  
+##  <a name="setbuttontext"></a>  CToolBar::SetButtonText  
  단추 텍스트를 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -610,10 +605,10 @@ BOOL SetButtonText(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CToolBar::GetToolBarCtrl](#gettoolbarctrl)합니다.  
   
-##  <a name="setheight"></a>CToolBar::SetHeight  
+##  <a name="setheight"></a>  CToolBar::SetHeight  
  도구 모음의 높이 (픽셀)에 지정 된 값으로 설정 하는이 멤버 함수 `cyHeight`합니다.  
   
 ```  
@@ -629,7 +624,7 @@ void SetHeight(int cyHeight);
   
  이 함수를 호출 하지 않은 경우 프레임 워크를 사용 하 여 단추의 크기 도구 모음의 높이 결정 합니다.  
   
-##  <a name="setsizes"></a>CToolBar::SetSizes  
+##  <a name="setsizes"></a>  CToolBar::SetSizes  
  도구 모음 단추에 지정 된 픽셀 단위로 크기를 설정 하려면이 함수를 호출 *sizeButton*합니다.  
   
 ```  
@@ -650,7 +645,7 @@ void SetSizes(
   
  준수 하지 않는 도구 모음에 대해서만이 함수를 호출 *소프트웨어 디자인에 대 한 Windows 인터페이스 지침* 단추와 이미지 크기에 대 한 권장 사항입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCListView#8](../../atl/reference/codesnippet/cpp/ctoolbar-class_4.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

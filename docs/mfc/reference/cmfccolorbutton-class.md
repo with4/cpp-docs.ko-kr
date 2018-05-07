@@ -1,12 +1,9 @@
 ---
-title: "CMFCColorButton 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCColorButton 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCColorButton
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e49cec1c34af066d6f30cf70003252f28e2bb8dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cea6fc2a543a528a0838479b2c47bea99f21cf96
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton 클래스
 `CMFCColorButton` 및 [CMFCColorBar 클래스](../../mfc/reference/cmfccolorbar-class.md) 클래스는 색 선택 컨트롤을 구현 하는 데 함께 사용 됩니다.  
@@ -111,7 +106,7 @@ class CMFCColorButton : public CMFCButton
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |`m_bAltColorDlg`|부울입니다. 경우 `TRUE`, 프레임 워크가 표시는 [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) 색 대화 상자는 *다른* 단추를 클릭할 경우 `FALSE`, 시스템 색 대화 상자. 기본값은 `TRUE`입니다. 자세한 내용은 참조 [CMFCColorButton::EnableOtherButton](#enableotherbutton)합니다.|  
 |`m_bAutoSetFocus`|부울입니다. 경우 `TRUE`, 프레임 워크는 메뉴가 표시 되 면 또는 경우 색상 메뉴에 포커스를 설정 `FALSE`, 포커스 변경 되지 않습니다. 기본값은 `TRUE`입니다.|  
@@ -136,7 +131,7 @@ class CMFCColorButton : public CMFCButton
   
  `CMFCColorButton` 개체 알립니다 전송 하 여 색을 변경 하 고 있는 해당 부모는 `WM_COMMAND | BN_CLICKED` 알림입니다. 사용 하 여 부모는 [CMFCColorButton::GetColor](#getcolor) 현재 색을 검색 하는 메서드입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 색 단추에서 다양 한 메서드를 사용 하 여 구성 하는 방법의 `CMFCColorButton` 클래스입니다. 색 단추와 해당 열 수의 색을 설정 하 고 자동 및 기타 단추를 사용 하도록 설정 하는 메서드. 이 예제는의 일부는 [상태 표시줄 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_StatusBarDemo#10](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_1.h)]  
@@ -145,14 +140,14 @@ class CMFCColorButton : public CMFCButton
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcolorbutton.h  
   
-##  <a name="cmfccolorbutton"></a>CMFCColorButton::CMFCColorButton  
+##  <a name="cmfccolorbutton"></a>  CMFCColorButton::CMFCColorButton  
  새 `CMFCColorButton` 개체를 생성합니다.  
   
 ```  
 CMFCColorButton();
 ```  
   
-##  <a name="enableautomaticbutton"></a>CMFCColorButton::EnableAutomaticButton  
+##  <a name="enableautomaticbutton"></a>  CMFCColorButton::EnableAutomaticButton  
  설정 또는 색 선택 컨트롤의 "자동" 단추를 사용 하지 않도록 설정 하 고 자동 (기본) 색을 설정 합니다.  
   
 ```  
@@ -174,7 +169,7 @@ void EnableAutomaticButton(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="enableotherbutton"></a>CMFCColorButton::EnableOtherButton  
+##  <a name="enableotherbutton"></a>  CMFCColorButton::EnableOtherButton  
  일반 색 단추 아래에 표시 "기타" 단추를 사용 하지 않도록 설정 하거나 사용 합니다.  
   
 ```  
@@ -197,7 +192,7 @@ void EnableOtherButton(
 ### <a name="remarks"></a>설명  
  색 대화 상자를 표시 하려면 "기타" 단추를 클릭 합니다. 경우는 *bAltColorDlg* 매개 변수는 `TRUE`, [CMFCColorDialog 클래스](../../mfc/reference/cmfccolordialog-class.md) 표시 됩니다. 그렇지 않으면, 시스템 색 대화 상자 표시 됩니다.  
   
-##  <a name="getautomaticcolor"></a>CMFCColorButton::GetAutomaticColor  
+##  <a name="getautomaticcolor"></a>  CMFCColorButton::GetAutomaticColor  
  현재 자동 (기본) 색을 검색 합니다.  
   
 ```  
@@ -210,7 +205,7 @@ COLORREF GetAutomaticColor() const;
 ### <a name="remarks"></a>설명  
  현재 자동 색으로 설정 됩니다는 [CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton) 메서드.  
   
-##  <a name="getcolor"></a>CMFCColorButton::GetColor  
+##  <a name="getcolor"></a>  CMFCColorButton::GetColor  
  현재 선택 된 색을 검색 합니다.  
   
 ```  
@@ -222,7 +217,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="isdrawxptheme"></a>CMFCColorButton::IsDrawXPTheme  
+##  <a name="isdrawxptheme"></a>  CMFCColorButton::IsDrawXPTheme  
  Windows xp 시각적 스타일에 현재 색 단추가 표시 되는지 여부를 나타냅니다.  
   
 ```  
@@ -230,9 +225,9 @@ BOOL IsDrawXPTheme() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`비주얼 스타일은 지원 및 Windows XP;의 비주얼 스타일에 현재 색 단추가 표시 되는지를 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 비주얼 스타일은 지원 및 Windows XP;의 비주얼 스타일에 현재 색 단추가 표시 되는지를 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="m_benabledincustomizemode"></a>CMFCColorButton::m_bEnabledInCustomizeMode  
+##  <a name="m_benabledincustomizemode"></a>  CMFCColorButton::m_bEnabledInCustomizeMode  
  사용자 지정 모드를 색 단추를 설정합니다.  
   
 ```  
@@ -242,7 +237,7 @@ BOOL m_bEnabledInCustomizeMode;
 ### <a name="remarks"></a>설명  
  설정 하 여 색 단추는 사용자 지정 대화 상자 페이지를 추가 합니다 (또는 사용자가 사용자 지정 하는 동안 다른 색 옵션을 선택 하도록 허용) 해야 할 경우 활성화 단추는 `m_bEnabledInCustomizeMode` 멤버 `TRUE`합니다. 기본적으로이 멤버 설정 `FALSE`합니다.  
   
-##  <a name="ondraw"></a>CMFCColorButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCColorButton::OnDraw  
  단추의 이미지를 렌더링 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -265,7 +260,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>설명  
  렌더링 프로세스를 사용자 지정 하려면이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawborder"></a>CMFCColorButton::OnDrawBorder  
+##  <a name="ondrawborder"></a>  CMFCColorButton::OnDrawBorder  
  단추의 테두리를 표시 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -288,7 +283,7 @@ virtual void OnDrawBorder(
 ### <a name="remarks"></a>설명  
  색 단추의 테두리 모양을 사용자 지정 하려면이 함수를 재정의 합니다.  
   
-##  <a name="ondrawfocusrect"></a>CMFCColorButton::OnDrawFocusRect  
+##  <a name="ondrawfocusrect"></a>  CMFCColorButton::OnDrawFocusRect  
  단추에 포커스가 있을 때 포커스 영역을 표시 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -307,7 +302,7 @@ virtual void OnDrawFocusRect(
 ### <a name="remarks"></a>설명  
  포커스 사각형의 모양을 사용자 지정 하려면이 메서드를 재정의 합니다.  
   
-##  <a name="onshowcolorpopup"></a>CMFCColorButton::OnShowColorPopup  
+##  <a name="onshowcolorpopup"></a>  CMFCColorButton::OnShowColorPopup  
  팝업 색 막대에 표시 되기 전에 호출 됩니다.  
   
 ```  
@@ -316,7 +311,7 @@ virtual void OnShowColorPopup();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="rebuildpalette"></a>CMFCColorButton::RebuildPalette  
+##  <a name="rebuildpalette"></a>  CMFCColorButton::RebuildPalette  
  초기화는 `m_pPalette` 지정된 색상표 또는 기본 시스템 팔레트에 대 한 데이터 멤버를 보호 합니다.  
   
 ```  
@@ -329,7 +324,7 @@ void RebuildPalette(CPalette* pPal);
 |---------------|-----------------|  
 |[in] `pPal`|논리 팔레트에 대 한 포인터 또는 `NULL`합니다. 경우 `NULL`, 기본 시스템 색상표가 사용 됩니다.|  
   
-##  <a name="setcolor"></a>CMFCColorButton::SetColor  
+##  <a name="setcolor"></a>  CMFCColorButton::SetColor  
  단추의 색을 지정합니다.  
   
 ```  
@@ -342,7 +337,7 @@ void SetColor(COLORREF color);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setcolorname"></a>CMFCColorButton::SetColorName  
+##  <a name="setcolorname"></a>  CMFCColorButton::SetColorName  
  색의 이름을 지정합니다.  
   
 ```  
@@ -361,7 +356,7 @@ static void SetColorName(
 ### <a name="remarks"></a>설명  
  색 이름 중 목록은 응용 프로그램당 공통 됩니다. 이 메서드 매개 변수를 이동 하는 따라서 [CMFCColorBar::SetColorName](../../mfc/reference/cmfccolorbar-class.md#setcolorname)합니다.  
   
-##  <a name="setcolumnsnumber"></a>CMFCColorButton::SetColumnsNumber  
+##  <a name="setcolumnsnumber"></a>  CMFCColorButton::SetColumnsNumber  
  사용자의 색 선택 프로세스 중 사용자에 게 제공 되는 색의 테이블에 표시 되는 열 수를 정의 합니다.  
   
 ```  
@@ -375,7 +370,7 @@ void SetColumnsNumber(int nColumns);
 ### <a name="remarks"></a>설명  
  사용자는 미리 정의 된 색의 표를 표시 하는 팝업 색 막대에서 색을 선택할 수 있습니다. 이 메서드를 사용 하 여 테이블의 열 수를 정의 합니다.  
   
-##  <a name="setdocumentcolors"></a>CMFCColorButton::SetDocumentColors  
+##  <a name="setdocumentcolors"></a>  CMFCColorButton::SetDocumentColors  
  색 및 해당 집합의 이름 집합을 지정합니다. 사용 하 여 일련의 색이 표시는 [CMFCColorBar 클래스](../../mfc/reference/cmfccolorbar-class.md) 개체입니다.  
   
 ```  
@@ -394,7 +389,7 @@ void SetDocumentColors(
 ### <a name="remarks"></a>설명  
  A `CMFCColorButton` 개체에 전송 되는 RGB 값의 목록을 유지 관리는 [CMFCColorBar 클래스](../../mfc/reference/cmfccolorbar-class.md) 개체입니다. 이러한 색 레이블을 지정 하는 특별 한 섹션에 표시 됩니다 색 막대를 표시할 때는 `lpszLabel` 매개 변수입니다.  
   
-##  <a name="setpalette"></a>CMFCColorButton::SetPalette  
+##  <a name="setpalette"></a>  CMFCColorButton::SetPalette  
  팝업 색 막대에 표시할 표준 색을 지정 합니다.  
   
 ```  
@@ -407,7 +402,7 @@ void SetPalette(CPalette* pPalette);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="sizetocontent"></a>CMFCColorButton::SizeToContent  
+##  <a name="sizetocontent"></a>  CMFCColorButton::SizeToContent  
  단추 컨트롤의 텍스트 및 이미지에 맞게 크기가 조정 됩니다.  
   
 ```  
@@ -423,7 +418,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="updatecolor"></a>CMFCColorButton::UpdateColor  
+##  <a name="updatecolor"></a>  CMFCColorButton::UpdateColor  
  사용자가 색 단추를 클릭할 때 표시 하는 색 막대에서 색을 선택할 때 프레임 워크에서 호출 됩니다.  
   
 ```  
