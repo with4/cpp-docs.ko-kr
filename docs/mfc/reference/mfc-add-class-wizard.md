@@ -1,13 +1,10 @@
 ---
-title: "MFC 클래스 추가 마법사 | Microsoft Docs"
-ms.custom: 
+title: MFC 클래스 추가 마법사 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.mfc.simple.overview
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC Add Class Wizard
 - wizards [MFC]
 ms.assetid: ad3b0989-d307-43b2-9417-3f9a78889024
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4c65785008c7257fc2f3714d9bf78395f4a8e40
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9560dec12a7710076f752d5329269c844f0d3a8b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-add-class-wizard"></a>MFC 클래스 추가 마법사
 이 코드 마법사를 사용 하 여 기존 MFC 프로젝트에 클래스를 추가 또는 MFC를 지 원하는 ATL 프로젝트에 클래스를 추가 합니다. 또한 MFC 지원을 지 Win32 프로젝트를 MFC 클래스를 추가할 수 있습니다. 프로젝트를 만들 때 지정한 기능이 대화 상자에서 사용할 수 있는 옵션을 결정 합니다.  

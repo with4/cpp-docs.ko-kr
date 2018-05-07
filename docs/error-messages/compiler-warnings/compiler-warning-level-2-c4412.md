@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 2) C4412 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 2) C4412 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4412
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41ecffdd760374ce5b96039e81a467572f977bcd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3d186a237c7eb21cdcdc51a896d58d11bc19c5b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-2-c4412"></a>컴파일러 경고(수준 2) C4412
 'function': 함수 시그니처에 ' type'; C + + 개체는 순수 코드 간에 전달 하는 안전 하지 않은 혼합형 / 네이티브는입니다.  
@@ -43,7 +38,7 @@ ms.lasthandoff: 02/14/2018
   
  이 경고를 해결 하려면 형식에서 모든 기능을 제거 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 c4412 오류가 발생 합니다.  
   
 ```  
@@ -70,7 +65,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플은 두 가지 형식을 선언 하는 헤더 파일입니다. `Unsafe` 멤버 기능이 있기 때문에 형식은 안전 하지 않습니다.  
   
 ```  
@@ -89,7 +84,7 @@ struct Safe {
 };  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 샘플의 헤더 파일에 정의 된 형식으로 함수를 내보냅니다.  
   
 ```  
@@ -105,7 +100,7 @@ __declspec(dllexport) Unsafe * __cdecl func() { return new Unsafe; }
 __declspec(dllexport) Safe * __cdecl func2() { return new Safe; }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  기본 호출 규칙는 **/clr: pure** 컴파일 네이티브 컴파일 간에 차이가 있는 합니다.  C4412.h 포함 되 면 `Test` 기본값으로 `__clrcall`합니다. 컴파일 및이 프로그램을 실행 하는 경우 (사용 하지 않는 **/c**), 프로그램에 예외가 throw 됩니다.  
   
  다음 샘플에서는 c4412 오류가 발생 합니다.  

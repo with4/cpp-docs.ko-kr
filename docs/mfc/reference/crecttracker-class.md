@@ -1,12 +1,9 @@
 ---
-title: "CRectTracker 클래스 | Microsoft Docs"
-ms.custom: 
+title: CRectTracker 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRectTracker
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f870ef92296636c8d27fc166d41cdefc54d1585
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eff57e1fde0af6e794c2c47db7d1e31daf545715
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crecttracker-class"></a>CRectTracker 클래스
 항목을을 표시, 이동, 다른 방식에서 크기를 조정할 수 있습니다.  
@@ -102,11 +97,11 @@ class CRectTracker
 |[CRectTracker::m_sizeMin](#m_sizemin)|최소 너비와 높이 결정합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CRectTracker`기본 클래스는 없습니다.  
+ `CRectTracker` 기본 클래스는 없습니다.  
   
  하지만 `CRectTracker` 클래스는 사용자가 그래픽 인터페이스를 사용 하 여 OLE 항목와 상호 작용할 수 있도록 설계 되었습니다, 용도 OLE 지원 응용 프로그램 제한 되지 않습니다. 사용할 수 있도록 사용자 인터페이스가 필요한 모든 곳에서 합니다.  
   
- `CRectTracker`테두리 단색 수 또는 점선입니다. 항목을 교차 무늬 테두리를 지정 또는 항목의 다양 한 상태를 나타내기 위해 빗살 무늬로로 중첩 수 있습니다. 외부 또는 내부에 8 개의 크기 조정 핸들을 배치할 수 있습니다 항목의 테두리입니다. (참조에 대 한 크기 조정 핸들 설명은 [GetHandleMask](#gethandlemask).) 마지막으로, 한 `CRectTracker` 항목의 크기를 조정 하는 동안 방향을 변경할 수 있습니다.  
+ `CRectTracker` 테두리 단색 수 또는 점선입니다. 항목을 교차 무늬 테두리를 지정 또는 항목의 다양 한 상태를 나타내기 위해 빗살 무늬로로 중첩 수 있습니다. 외부 또는 내부에 8 개의 크기 조정 핸들을 배치할 수 있습니다 항목의 테두리입니다. (참조에 대 한 크기 조정 핸들 설명은 [GetHandleMask](#gethandlemask).) 마지막으로, 한 `CRectTracker` 항목의 크기를 조정 하는 동안 방향을 변경할 수 있습니다.  
   
  사용 하도록 `CRectTracker`, 생성 한 `CRectTracker` 개체와 표시 상태를 확인할 초기화 된 지정 합니다. 와 연결 된 OLE 항목의 현재 상태에 사용자 시각적 피드백을 제공 하려면이 인터페이스를 유도할 수 있습니다는 `CRectTracker` 개체입니다.  
   
@@ -118,7 +113,7 @@ class CRectTracker
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxext.h  
   
-##  <a name="adjustrect"></a>CRectTracker::AdjustRect  
+##  <a name="adjustrect"></a>  CRectTracker::AdjustRect  
  추적 사각형 크기 조정 핸들을 사용 하 여 크기를 조정할 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -141,7 +136,7 @@ virtual void AdjustRect(
   
  직접 지원 하지 않는 특수 기능 `CRectTracker`와 같은 눈금에 또는 유지-가로 세로 비율,이 함수를 재정의 하 여 구현할 수 있습니다.  
   
-##  <a name="crecttracker"></a>CRectTracker::CRectTracker  
+##  <a name="crecttracker"></a>  CRectTracker::CRectTracker  
  만들고 초기화는 `CRectTracker` 개체입니다.  
   
 ```  
@@ -175,7 +170,7 @@ CRectTracker(
 ### <a name="remarks"></a>설명  
  기본 생성자는 초기화는 `CRectTracker` 개체의 값으로 `lpSrcRect` 다른 크기 시스템 기본값으로 초기화 합니다. 매개 변수가 없는 개체가 생성 되는 경우는 `m_rect` 및 `m_nStyle` 데이터 멤버는 초기화 되지 않습니다.  
   
-##  <a name="draw"></a>CRectTracker::Draw  
+##  <a name="draw"></a>  CRectTracker::Draw  
  사각형의 외부 선과 내부 영역을 그리는이 함수를 호출 합니다.  
   
 ```  
@@ -189,7 +184,7 @@ void Draw(CDC* pDC) const;
 ### <a name="remarks"></a>설명  
  추적기 스타일 그리기 수행 하는 방법을 결정 합니다. 에 대 한 생성자를 참조 하십시오. `CRectTracker` 사용할 수 있는 스타일에 대 한 자세한 내용은 합니다.  
   
-##  <a name="drawtrackerrect"></a>CRectTracker::DrawTrackerRect  
+##  <a name="drawtrackerrect"></a>  CRectTracker::DrawTrackerRect  
  추적기의 위치가 변경 될 때마다 프레임 워크에서 호출 하는 동안 내부는 `Track` 또는 `TrackRubberBand` 멤버 함수입니다.  
   
 ```  
@@ -218,7 +213,7 @@ virtual void DrawTrackerRect(
   
  작업을 추적 하는 동안 다른 피드백을 제공 하려면이 함수를 재정의 합니다.  
   
-##  <a name="gethandlemask"></a>CRectTracker::GetHandleMask  
+##  <a name="gethandlemask"></a>  CRectTracker::GetHandleMask  
  프레임 워크는 사각형의 크기 조정 핸들에 대 한 마스크를 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -231,7 +226,7 @@ virtual UINT GetHandleMask() const;
 ### <a name="remarks"></a>설명  
  크기 조정 핸들 양쪽 및 사각형의 모퉁이에 표시 됨을 셰이프 및 사각형의 크기를 제어 하려면 사용자입니다.  
   
- 사각형에는 번호가 0-7 8 크기 조정 핸들에 있습니다. 각 크기 조정 핸들 나타내는 비트 마스크;에 해당 비트의 값은 2 ^  *n* 여기서  *n*  크기 조정 핸들 수입니다. 0-3 비트 이동 왼쪽 상단 시계 반대 방향으로 시작 하는 모퉁이 크기 조정 핸들에 해당 합니다. 크기 조정 핸들 시계 방향으로 맨 위부터 bits 4-7 측면에 해당 합니다. 다음 그림에는 사각형의 크기 조정 핸들 및 핸들 번호 및 값 크기 조정의 해당 보여 줍니다.  
+ 사각형에는 번호가 0-7 8 크기 조정 핸들에 있습니다. 각 크기 조정 핸들 나타내는 비트 마스크;에 해당 비트의 값은 2 ^ *n*여기서 *n* 크기 조정 핸들 수입니다. 0-3 비트 이동 왼쪽 상단 시계 반대 방향으로 시작 하는 모퉁이 크기 조정 핸들에 해당 합니다. 크기 조정 핸들 시계 방향으로 맨 위부터 bits 4-7 측면에 해당 합니다. 다음 그림에는 사각형의 크기 조정 핸들 및 핸들 번호 및 값 크기 조정의 해당 보여 줍니다.  
   
  ![크기 조정 핸들 번호](../../mfc/reference/media/vc35dp1.gif "vc35dp1")  
   
@@ -239,7 +234,7 @@ virtual UINT GetHandleMask() const;
   
  숨기 거 나 표시 된 크기 조정 핸들을 표시 하려면이 멤버 함수를 재정의 합니다.  
   
-##  <a name="gettruerect"></a>CRectTracker::GetTrueRect  
+##  <a name="gettruerect"></a>  CRectTracker::GetTrueRect  
  사각형의 좌표를 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -253,7 +248,7 @@ void GetTrueRect(LPRECT lpTrueRect) const;
 ### <a name="remarks"></a>설명  
  사각형의 크기 높이 너비의 바깥쪽 테두리에 있는 모든 크기 조정 핸들을 포함 합니다. 를 반환 하면 `lpTrueRect` 는 항상 정규화 된 장치 좌표로 사각형입니다.  
   
-##  <a name="hittest"></a>CRectTracker::HitTest  
+##  <a name="hittest"></a>  CRectTracker::HitTest  
  사용자가 크기 조정 핸들을 잡고 여부를 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -287,7 +282,7 @@ int HitTest(CPoint point) const;
   
 - **CRectTracker::hitMiddle** 8  
   
-##  <a name="m_nhandlesize"></a>CRectTracker::m_nHandleSize  
+##  <a name="m_nhandlesize"></a>  CRectTracker::m_nHandleSize  
  크기를 픽셀 단위로는 `CRectTracker` 크기 조정 핸들입니다.  
   
 ```  
@@ -297,14 +292,14 @@ int m_nHandleSize;
 ### <a name="remarks"></a>설명  
  시스템 기본값을 사용 하 여 초기화 합니다.  
   
-##  <a name="m_rect"></a>M_rect  
+##  <a name="m_rect"></a>  M_rect  
  사각형의 현재 위치를 클라이언트 좌표 (픽셀)입니다.  
   
 ```  
 CRect m_rect;  
 ```  
   
-##  <a name="m_sizemin"></a>CRectTracker::m_sizeMin  
+##  <a name="m_sizemin"></a>  CRectTracker::m_sizeMin  
  사각형의 최소 크기입니다.  
   
 ```  
@@ -314,7 +309,7 @@ CSize m_sizeMin;
 ### <a name="remarks"></a>설명  
  두 기본 값, **cx** 및 **cy**, 테두리 너비에 대 한 기본 시스템 값에서 계산 됩니다. 이 데이터 멤버에만 사용 되는 `AdjustRect` 멤버 함수입니다.  
   
-##  <a name="m_nstyle"></a>CRectTracker::m_nStyle  
+##  <a name="m_nstyle"></a>  CRectTracker::m_nStyle  
  사각형의 현재 스타일입니다.  
   
 ```  
@@ -324,7 +319,7 @@ UINT m_nStyle;
 ### <a name="remarks"></a>설명  
  참조 [CRectTracker::CRectTracker](#crecttracker) 가능한 스타일의 목록에 대 한 합니다.  
   
-##  <a name="normalizehit"></a>CRectTracker::NormalizeHit  
+##  <a name="normalizehit"></a>  CRectTracker::NormalizeHit  
  잠재적으로 반전 된 핸들을 변환 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -341,7 +336,7 @@ int NormalizeHit(int nHandle) const;
 ### <a name="remarks"></a>설명  
  때 `CRectTracker::Track` 또는 `CRectTracker::TrackRubberBand` 라고 허용 반전와 x 축, y 축, 또는 둘 다 반전 사각형입니다. 이 경우 `HitTest` 사각형에 대해 반전도 되며 핸들을 반환 합니다. 이 피드백은 수정할 수는 데이터 구조를 사각형 부분의 사각형의 화면 위치에 따라 달라 지므로 그리기 커서 피드백에 대 한 적합 하지 않습니다.  
   
-##  <a name="onchangedrect"></a>CRectTracker::OnChangedRect  
+##  <a name="onchangedrect"></a>  CRectTracker::OnChangedRect  
  추적기 사각형을 호출 하는 동안 변경 될 때마다 프레임 워크에서 호출 `Track`합니다.  
   
 ```  
@@ -357,7 +352,7 @@ virtual void OnChangedRect(const CRect& rectOld);
   
  사각형의 크기가 조정 후 모든 작업을 수행 하려는 경우이 함수를 재정의 합니다.  
   
-##  <a name="setcursor"></a>CRectTracker::SetCursor  
+##  <a name="setcursor"></a>  CRectTracker::SetCursor  
  위에 있는 동안 커서 모양을 변경 하려면이 함수 호출의 `CRectTracker` 개체의 영역입니다.  
   
 ```  
@@ -379,7 +374,7 @@ BOOL SetCursor(
 ### <a name="remarks"></a>설명  
  사용자가 창 처리 하는 함수 내에서이 함수 호출의 `WM_SETCURSOR` 메시지 (일반적으로 `OnSetCursor`).  
   
-##  <a name="track"></a>CRectTracker::Track  
+##  <a name="track"></a>  CRectTracker::Track  
  사각형의 크기를 조정 하는 것에 대 한 사용자 인터페이스를 표시 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -413,7 +408,7 @@ BOOL Track(
   
  경우 `bAllowInvert` 은 **TRUE**, x 축 또는 y 축에서 추적 사각형을 반전 시킬 수 있습니다.  
   
-##  <a name="trackrubberband"></a>Crecttracker:: Trackrubberband  
+##  <a name="trackrubberband"></a>  Crecttracker:: Trackrubberband  
  고무 밴드 선택을 수행 하려면이 함수를 호출 합니다.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "대화 상자 데이터 교환 | Microsoft Docs"
-ms.custom: 
+title: 대화 상자 데이터 교환 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - UpdateData method [MFC]
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35f280228d523c7401e2a90ca395a79a9c87cd51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10d488ff21501eb83ef8f3115bdc2e4d899a68d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-data-exchange"></a>대화 상자 데이터 교환
 DDX 메커니즘을 사용 하는 경우 대화 상자의 초기 값 개체의 멤버 변수를 설정 하면 일반적으로 프로그램 `OnInitDialog` 처리기 또는 대화 생성자입니다. 프레임 워크의 DDX 메커니즘 표시 되는 위치 대화 상자에서 컨트롤을 멤버 변수의 값을 전송 대화 상자가 표시 되기 전에 즉시 자체 대화 상자가 표시 되 면 대 한 응답으로 `DoModal` 또는 **만들기** . 기본 구현은 `OnInitDialog` 에 `CDialog` 호출은 `UpdateData` 클래스의 멤버 함수 `CWnd` 대화 상자에서 컨트롤을 초기화 합니다.  
@@ -50,7 +45,7 @@ DDX 메커니즘을 사용 하는 경우 대화 상자의 초기 값 개체의 �
  ![대화 상자 데이터 교환](../mfc/media/vc379d1.gif "vc379d1")  
 대화 상자 데이터 교환  
   
- `UpdateData`에 지정 된 대로 두 방향에서 작동 하는 **BOOL** 매개 변수를 전달 합니다. Exchange를 수행 하려면 `UpdateData` 를 설정는 `CDataExchange` 대화 상자 클래스의 개체 및 호출의 재정의 `CDialog`의 `DoDataExchange` 멤버 함수입니다. `DoDataExchange`형식의 인수를 사용 `CDataExchange`합니다. `CDataExchange` 에 전달 된 개체 `UpdateData` 교환의 방향으로 이러한 정보를 정의 교환의 컨텍스트를 나타냅니다.  
+ `UpdateData` 에 지정 된 대로 두 방향에서 작동 하는 **BOOL** 매개 변수를 전달 합니다. Exchange를 수행 하려면 `UpdateData` 를 설정는 `CDataExchange` 대화 상자 클래스의 개체 및 호출의 재정의 `CDialog`의 `DoDataExchange` 멤버 함수입니다. `DoDataExchange` 형식의 인수를 사용 `CDataExchange`합니다. `CDataExchange` 에 전달 된 개체 `UpdateData` 교환의 방향으로 이러한 정보를 정의 교환의 컨텍스트를 나타냅니다.  
   
  사용자 (또는 코드 마법사) 재정의 하는 경우 `DoDataExchange`, 데이터 멤버 (컨트롤) 당 하나의 DDX 함수에 대 한 호출을 지정 합니다. 각 DDX 함수 양방향 제공한 컨텍스트를 기반으로 데이터를 교환 하는 방법을 알고는 `CDataExchange` 인수에 전달 된 프로그램 `DoDataExchange` 여 `UpdateData`합니다.  
   

@@ -1,12 +1,9 @@
 ---
-title: "CAnimationController 클래스 | Microsoft Docs"
-ms.custom: 
+title: CAnimationController 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationController
@@ -112,17 +109,15 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79343615b633b583775a482f0a9d2155e79ede10
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2ec93c2d39206bbc0c3076835f55e624d3eef715
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController 클래스
 애니메이션을 만들고 관리하기 위한 중앙 인터페이스를 제공하는 애니메이션 컨트롤러를 구현합니다.  
@@ -194,7 +189,7 @@ class CAnimationController : public CObject;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|스토리 보드의 시작을 나타내는 키 프레임입니다.|  
 |[CAnimationController::m_bIsValid](#m_bisvalid)|애니메이션 컨트롤러 유효한 지 여부를 지정 합니다. 이 멤버는 현재 운영 체제에서 Windows 애니메이션 API를 지원 하지 않으면 FALSE로 설정 됩니다.|  
@@ -216,14 +211,14 @@ class CAnimationController : public CObject;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="_dtorcanimationcontroller"></a>CAnimationController:: ~ CAnimationController  
+##  <a name="_dtorcanimationcontroller"></a>  CAnimationController:: ~ CAnimationController  
  소멸자입니다. 애니메이션 컨트롤러 개체가 소멸 될 때 호출 됩니다.  
   
 ```  
 virtual ~CAnimationController(void);
 ```   
   
-##  <a name="addanimationobject"></a>CAnimationController::AddAnimationObject  
+##  <a name="addanimationobject"></a>  CAnimationController::AddAnimationObject  
  애니메이션 컨트롤러에 속해 있는 그룹에 애니메이션 개체를 추가 합니다.  
   
 ```  
@@ -240,7 +235,7 @@ CAnimationGroup* AddAnimationObject(CAnimationBaseObject* pObject);
 ### <a name="remarks"></a>설명  
  애니메이션 개체는 애니메이션 컨트롤러를 추가 하려면이 메서드를 호출 합니다. 개체는 개체의 그룹 Id에 따라 그룹에 추가 됩니다 (CAnimationBaseObject::SetID 참조). 애니메이션 컨트롤러가 지정된 된 GroupID로 추가 되는 첫 번째 개체를이 새 그룹을 만듭니다. 애니메이션 개체는 애니메이션 컨트롤러만에 추가할 수 있습니다. 다른 컨트롤러에 개체를 추가 해야 할 경우 먼저 RemoveAnimationObject를 호출 합니다. 그룹에 이미 추가 된 개체에 대 한 새 GroupID로 SetID를 호출 하는 경우 개체에서 이전 그룹 제거 되며 지정한 id입니다. 지정 된 다른 그룹에 추가  
   
-##  <a name="addkeyframetogroup"></a>CAnimationController::AddKeyframeToGroup  
+##  <a name="addkeyframetogroup"></a>  CAnimationController::AddKeyframeToGroup  
  키 프레임을 그룹에 추가합니다.  
   
 ```  
@@ -262,7 +257,7 @@ BOOL AddKeyframeToGroup(
 ### <a name="remarks"></a>설명  
  일반적으로 되 고이 그룹에 자동으로 만든된 키 프레임을 추가 하려면이 메서드를 호출 하십시오 CAnimationController::CreateKeyframe를 대신 사용 하 여 필요 하지 않습니다.  
   
-##  <a name="animategroup"></a>CAnimationController::AnimateGroup  
+##  <a name="animategroup"></a>  CAnimationController::AnimateGroup  
  애니메이션을 실행 하려면 그룹을 준비 하 고 필요에 따라 일정을 조정 합니다.  
   
 ```  
@@ -284,14 +279,14 @@ BOOL AnimateGroup(
 ### <a name="remarks"></a>설명  
  이 메서드는 스토리 보드를 만들고, 애니메이션 변수를 추가, 전환 적용, 키 프레임을 설정 및 실제 작업을 수행 합니다. BScheduleNow을 FALSE로 설정 하는 경우 일정을 지연 시키는 것 같습니다. 이 경우 지정된 된 그룹 애니메이션에 대 한 설정 된 스토리 보드를 보관 합니다. 해당 시점에 스토리 보드 및 애니메이션 변수에 대 한 이벤트를 설정할 수 있습니다. 실제로 중지 해야 CAnimationController::ScheduleGroup 애니메이션 호출을 실행 합니다.  
   
-##  <a name="canimationcontroller"></a>CAnimationController::CAnimationController  
+##  <a name="canimationcontroller"></a>  CAnimationController::CAnimationController  
  애니메이션 컨트롤러를 생성 합니다.  
   
 ```  
 CAnimationController(void);
 ```   
   
-##  <a name="cleanupgroup"></a>CAnimationController::CleanUpGroup  
+##  <a name="cleanupgroup"></a>  CAnimationController::CleanUpGroup  
  애니메이션 예약 된 경우에 그룹을 정리 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -309,7 +304,7 @@ void CleanUpGroup(CAnimationGroup* pGroup);
 ### <a name="remarks"></a>설명  
  이 메서드는 애니메이션을 예약한 후 적용 되지 않습니다 하기 때문에 지정된 된 그룹에서 모든 전환 및 키프레임을 제거 합니다.  
   
-##  <a name="createkeyframe"></a>CAnimationController::CreateKeyframe  
+##  <a name="createkeyframe"></a>  CAnimationController::CreateKeyframe  
  전환을 사용하는 키 프레임을 만들어 지정된 그룹에 추가합니다.  
   
 ```  
@@ -343,7 +338,7 @@ CKeyFrame* CreateKeyframe(
 ### <a name="remarks"></a>설명  
  반환된 포인터를 저장하고 새로 만든 키 프레임을 다른 키 프레임의 기반으로 사용할 수 있습니다(두 번째 오버로드 참조). 키 프레임에서 전환을 시작할 수 있습니다(CBaseTransition::SetKeyframes 참조). 이런 방법으로 만든 키 프레임은 애니메이션 그룹에 의해 자동으로 삭제되기 때문에 삭제할 필요가 없습니다. 다른 키 프레임 및 전환을 기반으로 하여 키 프레임을 만들 때는 순환 참조가 발생하지 않도록 주의하세요.  
   
-##  <a name="enableanimationmanagerevent"></a>CAnimationController::EnableAnimationManagerEvent  
+##  <a name="enableanimationmanagerevent"></a>  CAnimationController::EnableAnimationManagerEvent  
  애니메이션 관리자의 상태가 변경 될 때 호출할 처리기를 해제 하거나 설정 합니다.  
   
 ```  
@@ -360,7 +355,7 @@ virtual BOOL EnableAnimationManagerEvent(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>설명  
  처리기 (활성화) 설정 된 경우 애니메이션 관리자의 상태가 변경 될 때 Windows Animation OnAnimationManagerStatusChanged를 호출 합니다.  
   
-##  <a name="enableanimationtimereventhandler"></a>CAnimationController::EnableAnimationTimerEventHandler  
+##  <a name="enableanimationtimereventhandler"></a>  CAnimationController::EnableAnimationTimerEventHandler  
  타이밍 이벤트에 대 한 처리기 및 타이밍 업데이트에 대 한 이벤트 처리기를 해제 하거나 설정 합니다.  
   
 ```  
@@ -382,7 +377,7 @@ virtual BOOL EnableAnimationTimerEventHandler(
 ### <a name="remarks"></a>설명  
  처리기는이 설정 된 경우 (활성화) Windows 애니메이션 API 호출, OnAnimationTimerPreUpdate OnAnimationTimerPostUpdate, OnRenderingTooSlow 메서드. 애니메이션 타이머 Windows 애니메이션 API 업데이트 스토리 보드를 사용 하도록 설정 해야 합니다. 그렇지 않으면 모든 애니메이션 변수 값을 업데이트 하는 관리자 CAnimationController::UpdateAnimationManager 애니메이션 지시 하기 위해 호출 해야 합니다.  
   
-##  <a name="enableprioritycomparisonhandler"></a>Canimationcontroller:: Enableprioritycomparisonhandler  
+##  <a name="enableprioritycomparisonhandler"></a>  Canimationcontroller:: Enableprioritycomparisonhandler  
  우선 순위 비교 호출할 처리기입니다 결정 하기 위해 예약 된 스토리 보드 수 수 취소, 완료, 잘려 압축을 해제 하거나 설정 합니다.  
   
 ```  
@@ -399,7 +394,7 @@ virtual BOOL EnablePriorityComparisonHandler(DWORD dwHandlerType);
 ### <a name="remarks"></a>설명  
  Windows Animation dwHandlerType에 따라 다음과 같은 가상 메서드를 호출 처리기 (활성화) 설정 된 경우: OnHasPriorityCancel, OnHasPriorityConclude, OnHasPriorityTrim, OnHasPriorityCompress 합니다. dwHandler 플래그의 조합일 수 있으며: UI_ANIMATION_PHT_NONE-릴리스 모든 처리기 UI_ANIMATION_PHT_CANCEL-설정 취소 비교 처리기 UI_ANIMATION_PHT_CONCLUDE-Conclude 비교 처리기 UI_ANIMATION_PHT_COMPRESS 설정-설정 압축 비교 처리기 UI_ANIMATION_PHT_TRIM-트림 비교 처리기 UI_ANIMATION_PHT_CANCEL_REMOVE 설정-취소 비교 처리기 UI_ANIMATION_PHT_CONCLUDE_REMOVE 제거-Conclude 비교 처리기 UI_ANIMATION_PHT_COMPRESS_를 제거 합니다. 제거-압축 비교 처리기 UI_ANIMATION_PHT_TRIM_REMOVE-제거 트림 비교 처리기를 제거 합니다.  
   
-##  <a name="enablestoryboardeventhandler"></a>CAnimationController::EnableStoryboardEventHandler  
+##  <a name="enablestoryboardeventhandler"></a>  CAnimationController::EnableStoryboardEventHandler  
  스토리 보드 상태 및 업데이트 이벤트에 대 한 처리기를 해제 하거나 설정 합니다.  
   
 ```  
@@ -421,7 +416,7 @@ virtual BOOL EnableStoryboardEventHandler(
 ### <a name="remarks"></a>설명  
  처리기를 설정 된 경우 (활성화) Windows 애니메이션 API OnStoryboardStatusChanges 및 OnStoryboardUpdated 가상 메서드를 호출 합니다. 처리기는 캡슐화 된 IUIAnimationStoryboard 개체를 만들기 때문에 지정 된 애니메이션 그룹에 대 한 CAnimationController::Animate가 호출 된 후 설정 되어야 합니다.  
   
-##  <a name="findanimationgroup"></a>CAnimationController::FindAnimationGroup  
+##  <a name="findanimationgroup"></a>  CAnimationController::FindAnimationGroup  
  Id입니다. 해당 그룹에서 애니메이션 그룹을 찾습니다.  
   
 ```  
@@ -442,7 +437,7 @@ CAnimationGroup* FindAnimationGroup(IUIAnimationStoryboard* pStoryboard);
 ### <a name="remarks"></a>설명  
  이 메서드를 사용 하 여 런타임 시 애니메이션 그룹을 찾을 수 있습니다. 그룹 만들고 특정 GroupID로 첫 번째 애니메이션 개체는 애니메이션 컨트롤러에 추가 될 때 애니메이션 그룹의 내부 목록에 추가 합니다.  
   
-##  <a name="findanimationobject"></a>CAnimationController::FindAnimationObject  
+##  <a name="findanimationobject"></a>  CAnimationController::FindAnimationObject  
  지정 된 애니메이션 변수를 포함 하는 애니메이션 개체를 찾습니다.  
   
 ```  
@@ -468,14 +463,14 @@ BOOL FindAnimationObject(
 ### <a name="remarks"></a>설명  
  들어오는 애니메이션 변수에서 애니메이션 개체를 찾아야 할 때 이벤트 처리기에서 호출 됩니다.  
   
-##  <a name="g_keyframestoryboardstart"></a>CAnimationController::gkeyframeStoryboardStart  
+##  <a name="g_keyframestoryboardstart"></a>  CAnimationController::gkeyframeStoryboardStart  
  스토리 보드의 시작을 나타내는 키 프레임입니다.  
   
 ```  
 static CBaseKeyFrame gkeyframeStoryboardStart;  
 ```  
   
-##  <a name="getkeyframestoryboardstart"></a>CAnimationController::GetKeyframeStoryboardStart  
+##  <a name="getkeyframestoryboardstart"></a>  CAnimationController::GetKeyframeStoryboardStart  
  스토리 보드의 시작 부분을 식별 하는 키 프레임을 반환 합니다.  
   
 ```  
@@ -488,7 +483,7 @@ static CBaseKeyFrame* GetKeyframeStoryboardStart();
 ### <a name="remarks"></a>설명  
  기준으로 다른 키 프레임 또는 전환을 순간에 스토리 보드를 시작할 때이 키 프레임을 가져옵니다.  
   
-##  <a name="getuianimationmanager"></a>CAnimationController::GetUIAnimationManager  
+##  <a name="getuianimationmanager"></a>  CAnimationController::GetUIAnimationManager  
  캡슐화 된 IUIAnimationManager 개체에 대 한 액세스를 제공합니다.  
   
 ```  
@@ -501,7 +496,7 @@ IUIAnimationManager* GetUIAnimationManager();
 ### <a name="remarks"></a>설명  
  현재 운영 체제 Windows 애니메이션 API를 지원 하지 않으면 NULL이 반환 하 고 그 후 모든 후속 호출은 CAnimationController::IsValid에서 FALSE를 반환 합니다. IUIAnimationManager 하지 애니메이션 컨트롤러에 의해 래핑되는 해당 인터페이스 메서드를 호출 하기 위해 액세스 해야 합니다.  
   
-##  <a name="getuianimationtimer"></a>CAnimationController::GetUIAnimationTimer  
+##  <a name="getuianimationtimer"></a>  CAnimationController::GetUIAnimationTimer  
  캡슐화 된 IUIAnimationTimer 개체에 대 한 액세스를 제공합니다.  
   
 ```  
@@ -514,7 +509,7 @@ IUIAnimationTimer* GetUIAnimationTimer();
 ### <a name="remarks"></a>설명  
  현재 운영 체제 Windows 애니메이션 API를 지원 하지 않으면 NULL이 반환 하 고 그 후 모든 후속 호출은 CAnimationController::IsValid에서 FALSE를 반환 합니다.  
   
-##  <a name="getuitransitionfactory"></a>CAnimationController::GetUITransitionFactory  
+##  <a name="getuitransitionfactory"></a>  CAnimationController::GetUITransitionFactory  
  IUIAnimationTransitionFactory 인터페이스 또는 전환 라이브러리 생성에 실패 하는 경우에 NULL 포인터입니다.  
   
 ```  
@@ -527,7 +522,7 @@ IUIAnimationTransitionFactory* GetUITransitionFactory();
 ### <a name="remarks"></a>설명  
  현재 운영 체제 Windows 애니메이션 API를 지원 하지 않으면 NULL이 반환 하 고 그 후 모든 후속 호출은 CAnimationController::IsValid에서 FALSE를 반환 합니다.  
   
-##  <a name="getuitransitionlibrary"></a>CAnimationController::GetUITransitionLibrary  
+##  <a name="getuitransitionlibrary"></a>  CAnimationController::GetUITransitionLibrary  
  캡슐화 된 IUIAnimationTransitionLibrary 개체에 대 한 액세스를 제공합니다.  
   
 ```  
@@ -540,7 +535,7 @@ IUIAnimationTransitionLibrary* GetUITransitionLibrary();
 ### <a name="remarks"></a>설명  
  현재 운영 체제 Windows 애니메이션 API를 지원 하지 않으면 NULL이 반환 하 고 그 후 모든 후속 호출은 CAnimationController::IsValid에서 FALSE를 반환 합니다.  
   
-##  <a name="isanimationinprogress"></a>CAnimationController::IsAnimationInProgress  
+##  <a name="isanimationinprogress"></a>  CAnimationController::IsAnimationInProgress  
  하나 이상의 그룹에 애니메이션을 재생 하 고 있는지 여부를 알려 줍니다.  
   
 ```  
@@ -553,7 +548,7 @@ virtual BOOL IsAnimationInProgress();
 ### <a name="remarks"></a>설명  
  애니메이션 관리자의 상태를 검사 하 고 UI_ANIMATION_MANAGER_BUSY 상태인 경우 TRUE를 반환 합니다.  
   
-##  <a name="isvalid"></a>CAnimationController::IsValid  
+##  <a name="isvalid"></a>  CAnimationController::IsValid  
  애니메이션 컨트롤러 올바른지 여부를 알려 줍니다.  
   
 ```  
@@ -566,56 +561,56 @@ BOOL IsValid() const;
 ### <a name="remarks"></a>설명  
  등록 되지 않은 Windows 애니메이션 API에서 현재 운영 체제 및 애니메이션 관리자 만들기 지원 되지 않는 하는 경우에 FALSE를 반환 하지 못했습니다. 이 플래그의 설정은 시키려면 COM 라이브러리의 초기화 된 후 한 번 이상 GetUIAnimationManager를 호출 해야 합니다.  
   
-##  <a name="m_bisvalid"></a>CAnimationController::m_bIsValid  
+##  <a name="m_bisvalid"></a>  CAnimationController::m_bIsValid  
  애니메이션 컨트롤러 유효한 지 여부를 지정 합니다. 이 멤버는 현재 운영 체제에서 Windows 애니메이션 API를 지원 하지 않으면 FALSE로 설정 됩니다.  
   
 ```  
 BOOL m_bIsValid;  
 ```  
   
-##  <a name="m_lstanimationgroups"></a>CAnimationController::m_lstAnimationGroups  
+##  <a name="m_lstanimationgroups"></a>  CAnimationController::m_lstAnimationGroups  
  이 애니메이션 컨트롤러에 속해 있는 애니메이션 그룹의 목록.  
   
 ```  
 CList<CAnimationGroup*, CAnimationGroup*> m_lstAnimationGroups;  
 ```  
   
-##  <a name="m_panimationmanager"></a>CAnimationController::m_pAnimationManager  
+##  <a name="m_panimationmanager"></a>  CAnimationController::m_pAnimationManager  
  애니메이션 관리자 COM 개체에 대 한 포인터를 저장합니다.  
   
 ```  
 ATL::CComPtr<IUIAnimationManager> m_pAnimationManager;  
 ```  
   
-##  <a name="m_panimationtimer"></a>CAnimationController::m_pAnimationTimer  
+##  <a name="m_panimationtimer"></a>  CAnimationController::m_pAnimationTimer  
  애니메이션 타이머 COM 개체에 대 한 포인터를 저장합니다.  
   
 ```  
 ATL::CComPtr<IUIAnimationTimer> m_pAnimationTimer;  
 ```  
   
-##  <a name="m_prelatedwnd"></a>CAnimationController::m_pRelatedWnd  
+##  <a name="m_prelatedwnd"></a>  CAnimationController::m_pRelatedWnd  
  애니메이션 관리자의 상태가 변경 된 또는 사후 업데이트 이벤트가 발생 하는 경우 자동으로 다시 관련된 CWnd 개체에 대 한 포인터입니다. NULL이 될 수 있습니다.  
   
 ```  
 CWnd* m_pRelatedWnd;  
 ```  
   
-##  <a name="m_ptransitionfactory"></a>CAnimationController::m_pTransitionFactory  
+##  <a name="m_ptransitionfactory"></a>  CAnimationController::m_pTransitionFactory  
  전환 팩터리 COM 개체에 대 한 포인터를 저장합니다.  
   
 ```  
 ATL::CComPtr<IUIAnimationTransitionFactory> m_pTransitionFactory;  
 ```  
   
-##  <a name="m_ptransitionlibrary"></a>CAnimationController::m_pTransitionLibrary  
+##  <a name="m_ptransitionlibrary"></a>  CAnimationController::m_pTransitionLibrary  
  전환 라이브러리 COM 개체에 대 한 포인터를 저장합니다.  
   
 ```  
 ATL::CComPtr<IUIAnimationTransitionLibrary> m_pTransitionLibrary;  
 ```  
   
-##  <a name="onafterschedule"></a>CAnimationController::OnAfterSchedule  
+##  <a name="onafterschedule"></a>  CAnimationController::OnAfterSchedule  
  지정된 된 그룹에 대 한 애니메이션만 예약 된 경우에 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -629,7 +624,7 @@ virtual void OnAfterSchedule(CAnimationGroup* pGroup);
 ### <a name="remarks"></a>설명  
  기본 구현에서는 지정된 된 그룹에서 키 프레임을 제거 하 고 지정된 된 그룹에 속하는 애니메이션 변수의에서 전환 합니다. 애니메이션 일정에 따라 추가 작업을 수행 하기 위해 파생된 클래스에서 재정의할 수 있습니다.  
   
-##  <a name="onanimationintegervaluechanged"></a>CAnimationController::OnAnimationIntegerValueChanged  
+##  <a name="onanimationintegervaluechanged"></a>  CAnimationController::OnAnimationIntegerValueChanged  
  애니메이션 변수의 정수 값이 변경 되었을 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -660,7 +655,7 @@ virtual void OnAnimationIntegerValueChanged(
 ### <a name="remarks"></a>설명  
  이 메서드는 특정 애니메이션 변수 또는 애니메이션 개체에 대해 호출 EnableIntegerValueChangedEvent와 애니메이션 변수 이벤트를 사용 하는 경우 호출 됩니다. 응용 프로그램별 작업을 수행하기 위해 파생된 클래스에서 재정의될 수 있습니다.  
   
-##  <a name="onanimationmanagerstatuschanged"></a>CAnimationController::OnAnimationManagerStatusChanged  
+##  <a name="onanimationmanagerstatuschanged"></a>  CAnimationController::OnAnimationManagerStatusChanged  
  애니메이션 관리자의 StatusChanged 이벤트에 대 한 응답에서 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -679,7 +674,7 @@ virtual void OnAnimationManagerStatusChanged(
 ### <a name="remarks"></a>설명  
  이 메서드는 EnableAnimationManagerEvent 사용 하 여 애니메이션 관리자 이벤트를 사용 하는 경우 호출 됩니다. 응용 프로그램별 작업을 수행하기 위해 파생된 클래스에서 재정의될 수 있습니다. 기본 구현은 SetRelatedWnd로 설정 된 경우 관련된 창을 업데이트 합니다.  
   
-##  <a name="onanimationtimerpostupdate"></a>CAnimationController::OnAnimationTimerPostUpdate  
+##  <a name="onanimationtimerpostupdate"></a>  CAnimationController::OnAnimationTimerPostUpdate  
  애니메이션 업데이트가 완료 된 후 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -689,7 +684,7 @@ virtual void OnAnimationTimerPostUpdate();
 ### <a name="remarks"></a>설명  
  이 메서드는 EnableAnimationTimerEventHandler를 사용 하 여 타이머 이벤트 처리기를 사용 하는 경우 호출 됩니다. 응용 프로그램별 작업을 수행하기 위해 파생된 클래스에서 재정의될 수 있습니다.  
   
-##  <a name="onanimationtimerpreupdate"></a>CAnimationController::OnAnimationTimerPreUpdate  
+##  <a name="onanimationtimerpreupdate"></a>  CAnimationController::OnAnimationTimerPreUpdate  
  애니메이션 업데이트가 시작 되기 전에 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -699,7 +694,7 @@ virtual void OnAnimationTimerPreUpdate();
 ### <a name="remarks"></a>설명  
  이 메서드는 EnableAnimationTimerEventHandler를 사용 하 여 타이머 이벤트 처리기를 사용 하는 경우 호출 됩니다. 응용 프로그램별 작업을 수행하기 위해 파생된 클래스에서 재정의될 수 있습니다.  
   
-##  <a name="onanimationtimerrenderingtooslow"></a>CAnimationController::OnAnimationTimerRenderingTooSlow  
+##  <a name="onanimationtimerrenderingtooslow"></a>  CAnimationController::OnAnimationTimerRenderingTooSlow  
  애니메이션 렌더링 프레임 속도가 최소 원하는 프레임 속도 미만으로 떨어질 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -713,7 +708,7 @@ virtual void OnAnimationTimerRenderingTooSlow(UINT32 fps);
 ### <a name="remarks"></a>설명  
  이 메서드는 EnableAnimationTimerEventHandler를 사용 하 여 타이머 이벤트 처리기를 사용 하는 경우 호출 됩니다. 응용 프로그램별 작업을 수행하기 위해 파생된 클래스에서 재정의될 수 있습니다. 원하는 최소 프레임 속도 IUIAnimationTimer::SetFrameRateThreshold를 호출 하 여 지정 됩니다.  
   
-##  <a name="onanimationvaluechanged"></a>CAnimationController::OnAnimationValueChanged  
+##  <a name="onanimationvaluechanged"></a>  CAnimationController::OnAnimationValueChanged  
  애니메이션 변수 값 변경 될 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -744,7 +739,7 @@ virtual void OnAnimationValueChanged(
 ### <a name="remarks"></a>설명  
  이 메서드는 특정 애니메이션 변수 또는 애니메이션 개체에 대해 호출 EnableValueChangedEvent와 애니메이션 변수 이벤트를 사용 하는 경우 호출 됩니다. 응용 프로그램별 작업을 수행하기 위해 파생된 클래스에서 재정의될 수 있습니다.  
   
-##  <a name="onbeforeanimationstart"></a>CAnimationController::OnBeforeAnimationStart  
+##  <a name="onbeforeanimationstart"></a>  CAnimationController::OnBeforeAnimationStart  
  프레임 워크에서 오른쪽 되기 전에 호출 애니메이션이 예약 됩니다.  
   
 ```  
@@ -758,7 +753,7 @@ virtual void OnBeforeAnimationStart(CAnimationGroup* pGroup);
 ### <a name="remarks"></a>설명  
  이 호출은 관련된 CWnd에 라우팅 된다고 하 고 지정된 된 그룹에 대 한 애니메이션을 시작 하기 전에 추가 작업을 수행 하려면 파생된 클래스에서 재정의할 수 있습니다.  
   
-##  <a name="onhasprioritycancel"></a>CAnimationController::OnHasPriorityCancel  
+##  <a name="onhasprioritycancel"></a>  CAnimationController::OnHasPriorityCancel  
  일정 충돌을 해결하기 위해 프레임워크에 의해 호출됩니다.  
   
 ```  
@@ -782,9 +777,9 @@ virtual BOOL OnHasPriorityCancel(
  pGroupNew에서 소유한 스토리보드가 우선인 경우 TRUE를 반환해야 합니다. pGroupScheduled에서 소유한 스토리보드가 우선인 경우 FALSE를 반환해야 합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 CAnimationController::EnablePriorityComparisonHandler를 사용하여 우선 순위 비교 이벤트를 활성화하고 UI_ANIMATION_PHT_CANCEL을 지정하는 경우 호출됩니다. 응용 프로그램별 작업을 수행하기 위해 파생된 클래스에서 재정의될 수 있습니다. 충돌 관리(http://msdn.microsoft.com/ko-kr/library/dd371759(VS.85).aspx)에 대한 자세한 내용은 Windows 애니메이션 API 설명서를 참조하세요.  
+ 이 메서드는 CAnimationController::EnablePriorityComparisonHandler를 사용하여 우선 순위 비교 이벤트를 활성화하고 UI_ANIMATION_PHT_CANCEL을 지정하는 경우 호출됩니다. 응용 프로그램별 작업을 수행하기 위해 파생된 클래스에서 재정의될 수 있습니다. 충돌 관리에 대 한 자세한 내용은 Windows 애니메이션 API 설명서 (http://msdn.microsoft.com/library/dd371759(VS.85).aspx)합니다.  
   
-##  <a name="onhasprioritycompress"></a>CAnimationController::OnHasPriorityCompress  
+##  <a name="onhasprioritycompress"></a>  CAnimationController::OnHasPriorityCompress  
  일정 충돌을 해결하기 위해 프레임워크에 의해 호출됩니다.  
   
 ```  
@@ -808,9 +803,9 @@ virtual BOOL OnHasPriorityCompress(
  pGroupNew에서 소유한 스토리보드가 우선인 경우 TRUE를 반환해야 합니다. pGroupScheduled에서 소유한 스토리보드가 우선인 경우 FALSE를 반환해야 합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 CAnimationController::EnablePriorityComparisonHandler를 사용하여 우선 순위 비교 이벤트를 활성화하고 UI_ANIMATION_PHT_COMPRESS를 지정하는 경우 호출됩니다. 응용 프로그램별 작업을 수행하기 위해 파생된 클래스에서 재정의될 수 있습니다. 충돌 관리(http://msdn.microsoft.com/ko-kr/library/dd371759(VS.85).aspx)에 대한 자세한 내용은 Windows 애니메이션 API 설명서를 참조하세요.  
+ 이 메서드는 CAnimationController::EnablePriorityComparisonHandler를 사용하여 우선 순위 비교 이벤트를 활성화하고 UI_ANIMATION_PHT_COMPRESS를 지정하는 경우 호출됩니다. 응용 프로그램별 작업을 수행하기 위해 파생된 클래스에서 재정의될 수 있습니다. 충돌 관리에 대 한 자세한 내용은 Windows 애니메이션 API 설명서 (http://msdn.microsoft.com/library/dd371759(VS.85).aspx)합니다.  
   
-##  <a name="onhaspriorityconclude"></a>CAnimationController::OnHasPriorityConclude  
+##  <a name="onhaspriorityconclude"></a>  CAnimationController::OnHasPriorityConclude  
  일정 충돌을 해결하기 위해 프레임워크에 의해 호출됩니다.  
   
 ```  
@@ -834,9 +829,9 @@ virtual BOOL OnHasPriorityConclude(
  pGroupNew에서 소유한 스토리보드가 우선인 경우 TRUE를 반환해야 합니다. pGroupScheduled에서 소유한 스토리보드가 우선인 경우 FALSE를 반환해야 합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 CAnimationController::EnablePriorityComparisonHandler를 사용하여 우선 순위 비교 이벤트를 활성화하고 UI_ANIMATION_PHT_TRIM을 지정하는 경우 호출됩니다. 응용 프로그램별 작업을 수행하기 위해 파생된 클래스에서 재정의될 수 있습니다. 충돌 관리(http://msdn.microsoft.com/ko-kr/library/dd371759(VS.85).aspx)에 대한 자세한 내용은 Windows 애니메이션 API 설명서를 참조하세요.  
+ 이 메서드는 CAnimationController::EnablePriorityComparisonHandler를 사용하여 우선 순위 비교 이벤트를 활성화하고 UI_ANIMATION_PHT_TRIM을 지정하는 경우 호출됩니다. 응용 프로그램별 작업을 수행하기 위해 파생된 클래스에서 재정의될 수 있습니다. 충돌 관리에 대 한 자세한 내용은 Windows 애니메이션 API 설명서 (http://msdn.microsoft.com/library/dd371759(VS.85).aspx)합니다.  
   
-##  <a name="onhasprioritytrim"></a>CAnimationController::OnHasPriorityTrim  
+##  <a name="onhasprioritytrim"></a>  CAnimationController::OnHasPriorityTrim  
  일정 충돌을 해결하기 위해 프레임워크에 의해 호출됩니다.  
   
 ```  
@@ -860,9 +855,9 @@ virtual BOOL OnHasPriorityTrim(
  pGroupNew에서 소유한 스토리보드가 우선인 경우 TRUE를 반환해야 합니다. pGroupScheduled에서 소유한 스토리보드가 우선인 경우 FALSE를 반환해야 합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 CAnimationController::EnablePriorityComparisonHandler를 사용하여 우선 순위 비교 이벤트를 활성화하고 UI_ANIMATION_PHT_TRIM을 지정하는 경우 호출됩니다. 응용 프로그램별 작업을 수행하기 위해 파생된 클래스에서 재정의될 수 있습니다. 충돌 관리(http://msdn.microsoft.com/ko-kr/library/dd371759(VS.85).aspx)에 대한 자세한 내용은 Windows 애니메이션 API 설명서를 참조하세요.  
+ 이 메서드는 CAnimationController::EnablePriorityComparisonHandler를 사용하여 우선 순위 비교 이벤트를 활성화하고 UI_ANIMATION_PHT_TRIM을 지정하는 경우 호출됩니다. 응용 프로그램별 작업을 수행하기 위해 파생된 클래스에서 재정의될 수 있습니다. 충돌 관리에 대 한 자세한 내용은 Windows 애니메이션 API 설명서 (http://msdn.microsoft.com/library/dd371759(VS.85).aspx)합니다.  
   
-##  <a name="onstoryboardstatuschanged"></a>CAnimationController::OnStoryboardStatusChanged  
+##  <a name="onstoryboardstatuschanged"></a>  CAnimationController::OnStoryboardStatusChanged  
  스토리 보드의 상태가 변경 될 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -885,7 +880,7 @@ virtual void OnStoryboardStatusChanged(
 ### <a name="remarks"></a>설명  
  이 메서드는 CAnimationController::EnableStoryboardEventHandler를 사용 하 여 스토리 보드 이벤트를 사용 하는 경우 호출 됩니다. 응용 프로그램별 작업을 수행하기 위해 파생된 클래스에서 재정의될 수 있습니다.  
   
-##  <a name="onstoryboardupdated"></a>CAnimationController::OnStoryboardUpdated  
+##  <a name="onstoryboardupdated"></a>  CAnimationController::OnStoryboardUpdated  
  스토리 보드 업데이트 되었을 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -899,7 +894,7 @@ virtual void OnStoryboardUpdated(CAnimationGroup* pGroup);
 ### <a name="remarks"></a>설명  
  이 메서드는 CAnimationController::EnableStoryboardEventHandler를 사용 하 여 스토리 보드 이벤트를 사용 하는 경우 호출 됩니다. 응용 프로그램별 작업을 수행하기 위해 파생된 클래스에서 재정의될 수 있습니다.  
   
-##  <a name="removeallanimationgroups"></a>CAnimationController::RemoveAllAnimationGroups  
+##  <a name="removeallanimationgroups"></a>  CAnimationController::RemoveAllAnimationGroups  
  모든 애니메이션 그룹 애니메이션 컨트롤러에서 제거합니다.  
   
 ```  
@@ -909,7 +904,7 @@ void RemoveAllAnimationGroups();
 ### <a name="remarks"></a>설명  
  모든 그룹이 삭제가 포인터는 응용 프로그램 수준에 저장 하는 경우 무효화 되어야 합니다. 삭제 된 그룹에 대 한 CAnimationGroup::m_bAutodestroyAnimationObjects 결과가 TRUE 이면 해당 그룹에 속한 모든 애니메이션 개체 삭제 됩니다. 그렇지 않으면 부모 애니메이션 컨트롤러에 해당 참조가 NULL로 설정 되 고 다른 컨트롤러에 추가할 수 있습니다.  
   
-##  <a name="removeanimationgroup"></a>CAnimationController::RemoveAnimationGroup  
+##  <a name="removeanimationgroup"></a>  CAnimationController::RemoveAnimationGroup  
  애니메이션 컨트롤러에서 지정 된 ID 애니메이션 그룹을 제거 합니다.  
   
 ```  
@@ -923,7 +918,7 @@ void RemoveAnimationGroup(UINT32 nGroupID);
 ### <a name="remarks"></a>설명  
  이 메서드는 그룹의 내부 목록에서 애니메이션 그룹을 제거 하 고 삭제, 따라서 해당 애니메이션 그룹에 대 한 포인터를 저장 한 경우 무효화 시켜야 합니다. CAnimationGroup::m_bAutodestroyAnimationObjects 결과가 TRUE 이면 해당 그룹에 속한 모든 애니메이션 개체 삭제 됩니다. 그렇지 않으면 부모 애니메이션 컨트롤러에 해당 참조가 NULL로 설정 되 고 다른 컨트롤러에 추가할 수 있습니다.  
   
-##  <a name="removeanimationobject"></a>CAnimationController::RemoveAnimationObject  
+##  <a name="removeanimationobject"></a>  CAnimationController::RemoveAnimationObject  
  애니메이션 컨트롤러에서 애니메이션 개체를 제거 합니다.  
   
 ```  
@@ -942,7 +937,7 @@ void RemoveAnimationObject(
 ### <a name="remarks"></a>설명  
  애니메이션 컨트롤러와 애니메이션 그룹에서 애니메이션 개체를 제거합니다. 특정 개체를 더 이상 애니메이션 하지 또는 다른 애니메이션 컨트롤러에 개체를 이동 해야 할 경우이 함수를 호출 합니다. 다음 시간이 내의 사례 bNoDelete TRUE 여야 합니다.  
   
-##  <a name="removetransitions"></a>CAnimationController::RemoveTransitions  
+##  <a name="removetransitions"></a>  CAnimationController::RemoveTransitions  
  전환이 지정된 된 그룹에 속해 있는 애니메이션 개체에서 제거 합니다.  
   
 ```  
@@ -956,7 +951,7 @@ void RemoveTransitions(UINT32 nGroupID);
 ### <a name="remarks"></a>설명  
  그룹의 애니메이션 개체를 반복 하 고 각 애니메이션 개체에 대 한 ClearTransitions(FALSE)를 호출 합니다. 이 메서드는 애니메이션을 예약한 후 프레임 워크에서 호출 됩니다.  
   
-##  <a name="schedulegroup"></a>CAnimationController::ScheduleGroup  
+##  <a name="schedulegroup"></a>  CAnimationController::ScheduleGroup  
  애니메이션을 예약합니다.  
   
 ```  
@@ -978,7 +973,7 @@ BOOL ScheduleGroup(
 ### <a name="remarks"></a>설명  
  매개 변수 bScheduleNow 이전 ScheduleGroup FALSE로 설정 된 AnimateGroup를 호출 해야 합니다. 원하는 애니메이션 시간 IUIAnimationTimer::GetTime에서 가져온 지정할 수 있습니다. 시간 매개 변수가 0.0 인 경우 현재 시간에 대 한 애니메이션 예약 됩니다.  
   
-##  <a name="setrelatedwnd"></a>CAnimationController::SetRelatedWnd  
+##  <a name="setrelatedwnd"></a>  CAnimationController::SetRelatedWnd  
  애니메이션 컨트롤러와 창 사이의 관계를 설정 합니다.  
   
 ```  
@@ -992,7 +987,7 @@ void SetRelatedWnd(CWnd* pWnd);
 ### <a name="remarks"></a>설명  
  경우에 관련된 CWnd 개체가 설정 된 애니메이션 컨트롤러 자동으로 업데이트할 수 (WM_PAINT 메시지 보내기) 때 애니메이션 관리자의 상태가 변경 되거나 타이머 사후 업데이트 이벤트가 발생 했습니다.  
   
-##  <a name="updateanimationmanager"></a>CAnimationController::UpdateAnimationManager  
+##  <a name="updateanimationmanager"></a>  CAnimationController::UpdateAnimationManager  
  모든 애니메이션 변수 값을 업데이트 하 여 애니메이션 관리자를 지시 합니다.  
   
 ```  

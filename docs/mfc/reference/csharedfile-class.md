@@ -1,12 +1,9 @@
 ---
-title: "CSharedFile 클래스 | Microsoft Docs"
-ms.custom: 
+title: CSharedFile 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSharedFile
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CSharedFile [MFC], Detach
 - CSharedFile [MFC], SetHandle
 ms.assetid: 5d000422-9ede-4318-a8c9-f7412b674f39
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27c749f86f9e3fbd310fd03b3a82768d58632087
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bee22940fb197d480f4ae3550d8dd59780c256b5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csharedfile-class"></a>CSharedFile 클래스
 [CMemFile](../../mfc/reference/cmemfile-class.md)-공유 메모리 파일을 지 원하는 클래스를 파생된 합니다.  
@@ -66,7 +61,7 @@ class CSharedFile : public CMemFile
   
  유의 사항: `CSharedFile` 사용 메모리 매핑된 파일 하지 않으며 데이터 직접 프로세스 간에 공유할 수 없습니다.  
   
- `CSharedFile`개체의 경우 자동으로 자체 메모리를 할당할 수 하거나 사용자 고유의 메모리 블록을 연결할 수 있습니다는 `CSharedFile` 호출 하 여 개체 [CSharedFile::SetHandle](#sethandle)합니다. 두 경우 모두 자동으로 증가 하 고 메모리 파일에 대 한 메모리에 할당 됩니다 `nGrowBytes`-크기 만큼 경우 `nGrowBytes` 0이 아닙니다.  
+ `CSharedFile` 개체의 경우 자동으로 자체 메모리를 할당할 수 하거나 사용자 고유의 메모리 블록을 연결할 수 있습니다는 `CSharedFile` 호출 하 여 개체 [CSharedFile::SetHandle](#sethandle)합니다. 두 경우 모두 자동으로 증가 하 고 메모리 파일에 대 한 메모리에 할당 됩니다 `nGrowBytes`-크기 만큼 경우 `nGrowBytes` 0이 아닙니다.  
   
  자세한 내용은 문서 참조 [MFC의 파일](../../mfc/files-in-mfc.md) 및 [파일 처리](../../c-runtime-library/file-handling.md) 에 *런타임 라이브러리 참조*합니다.  
   
@@ -82,7 +77,7 @@ class CSharedFile : public CMemFile
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxadv.h  
   
-##  <a name="csharedfile"></a>CSharedFile::CSharedFile  
+##  <a name="csharedfile"></a>  CSharedFile::CSharedFile  
  생성 된 `CSharedFile` 개체와 메모리를 할당 합니다.  
   
 ```  
@@ -98,7 +93,7 @@ CSharedFile(
  `nGrowBytes`  
  바이트의 메모리 할당 증가 합니다.  
   
-##  <a name="detach"></a>CSharedFile::Detach  
+##  <a name="detach"></a>  CSharedFile::Detach  
  메모리 파일을 메모리 블록에서 컬렉션을 분리 하 여이 함수를 호출 합니다.  
   
 ```  
@@ -111,7 +106,7 @@ HGLOBAL Detach();
 ### <a name="remarks"></a>설명  
  호출 하 여 다시 열 수 있습니다 [SetHandle](#sethandle)에서 반환 된 핸들을 사용 하 여 **분리**합니다.  
   
-##  <a name="sethandle"></a>CSharedFile::SetHandle  
+##  <a name="sethandle"></a>  CSharedFile::SetHandle  
  전역 메모리 블록을 연결 하려면이 함수 호출의 `CSharedFile` 개체입니다.  
   
 ```  

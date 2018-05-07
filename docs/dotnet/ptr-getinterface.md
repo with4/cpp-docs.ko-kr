@@ -1,12 +1,9 @@
 ---
 title: ptr::GetInterface | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - ptr::GetInterface
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - GetInterface method
 ms.assetid: d85553ec-fb88-4fd6-9df2-ddcaa8b2dc70
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 286a0dfa19d5d18d76dea1164d9d038667e1ef57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 99a4163da3692d66c71eba8b4f1eacc872cbc560
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptrgetinterface"></a>ptr::GetInterface
 소유 하는 COM 개체에 대 한 포인터를 반환합니다.  
@@ -50,7 +45,7 @@ _interface_type * GetInterface();
 ## <a name="remarks"></a>설명  
  `com::ptr` 호출자를 대신 하 여 COM 개체에 대 한 참조를 추가 하 고 자체 참조는 COM 개체에서 유지 합니다. 호출자에 게 반환된 된 개체에 대 한 참조를 궁극적으로 해제 해야 하거나 소멸 되지 않습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. `GetDocument` 멤버 함수를 사용 하 여 `GetInterface` 를 COM 개체에 대 한 포인터를 반환 합니다.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "CDaoParameterInfo 구조체 | Microsoft Docs"
-ms.custom: 
+title: CDaoParameterInfo 구조체 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoParameterInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CDaoParameterInfo structure [MFC]
 - DAO (Data Access Objects), Parameters collection
 ms.assetid: 45fd53cd-cb84-4e12-b48d-7f2979f898ad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aabdb1dd59e1039f81d2ffe75c0d9e0770e43db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1e743e7456c185acd100c898cfb946182d63ce63
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoparameterinfo-structure"></a>CDaoParameterInfo 구조체
 `CDaoParameterInfo` 구조 데이터 액세스 개체 (DAO)에 대해 정의 된 매개 변수 개체에 대 한 정보를 포함 합니다.  
@@ -62,7 +57,7 @@ struct CDaoParameterInfo
 > [!NOTE]
 >  Get 또는 매개 변수 값 설정, 사용 하려는 경우는 [GetParamValue](../../mfc/reference/cdaorecordset-class.md#getparamvalue) 및 [SetParamValue](../../mfc/reference/cdaorecordset-class.md#setparamvalue) 클래스의 멤버 함수 `CDaoRecordset`합니다.  
   
- `CDaoParameterInfo`또한 정의 `Dump` 디버그에서 멤버 함수를 작성 합니다. 사용할 수 있습니다 `Dump` 의 내용을 덤프 하는 `CDaoParameterInfo` 개체입니다.  
+ `CDaoParameterInfo` 또한 정의 `Dump` 디버그에서 멤버 함수를 작성 합니다. 사용할 수 있습니다 `Dump` 의 내용을 덤프 하는 `CDaoParameterInfo` 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdao.h  

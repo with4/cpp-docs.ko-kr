@@ -1,24 +1,19 @@
 ---
-title: "형식 시스템 (C + + /cli CX) | Microsoft Docs"
-ms.custom: 
+title: 형식 시스템 (C + + /cli CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/03/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f7c34e5c48e264c1a3c9ab3bd8cba7c896e1962
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0a1016836d44b8ee83b033bf2d542d4e9b1db413
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-system-ccx"></a>형식 시스템(C++/CX)
 Windows 런타임 아키텍처를 사용 하 여 다음을 사용할 수 있습니다 C + + /CX, Visual Basic, Visual C# 및 JavaScript 앱과 직접 Windows API에 액세스 하 고 다른 Windows 런타임 앱 및 구성 요소와 상호 운용 하는 구성 요소를 쓸 수 있습니다. C + +로 작성 된 유니버설 Windows 플랫폼 앱은 CPU에서 직접 실행 하는 네이티브 코드로 컴파일됩니다. C# 또는 Visual Basic로 작성 하는 유니버설 Windows 플랫폼 앱 Microsoft MSIL (intermediate language)로 컴파일되고 공용 언어 런타임 (CLR)에서 실행 됩니다. JavaScript로 작성 된 유니버설 Windows 플랫폼 앱 런타임 환경에서 실행 됩니다. Windows 런타임 운영 체제 구성 요소 자체는 c + +에서 작성 되 고 네이티브 코드로 실행 합니다. 이러한 구성 요소 및 유니버설 Windows 플랫폼 앱의 모든 Windows 런타임 응용 프로그램 이진 인터페이스 ABI ()를 통해 직접 통신합니다.  
@@ -27,15 +22,15 @@ Windows 런타임 아키텍처를 사용 하 여 다음을 사용할 수 있습�
   
  C++/CX 언어 프로젝션 및 작동 방법에 대한 자세한 내용은 다음 블로그 게시물을 참조하세요.  
   
-1.  [C + + /CX 파트 0 / \[ n \]: 소개](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)  
+1.  [C + + /CX 파트 0 / \[n\]: 소개](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)  
   
-2.  [C + + /CX 파트 1 \[ n \]: 간단한 클래스](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)  
+2.  [C + + /CX 파트 1 \[n\]: 간단한 클래스](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)  
   
-3.  [C + + /CX 파트 2 / \[ n \]: 유형](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)  
+3.  [C + + /CX 파트 2 / \[n\]: 유형](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)  
   
-4.  [C + + /CX 파트 3 \[ n \]: 작성 중](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)  
+4.  [C + + /CX 파트 3 \[n\]: 작성 중](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)  
   
-5.  [C + + /CX 파트 4 / \[ n \]: 정적 멤버 함수](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)  
+5.  [C + + /CX 파트 4 / \[n\]: 정적 멤버 함수](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)  
   
 ## <a name="windows-metadata-winmd-files"></a>Windows 메타데이터(.winmd) 파일  
  C + +로 작성 하는 유니버설 Windows 플랫폼 앱을 컴파일할 때 컴파일러는 네이티브 컴퓨터 코드에서 실행 파일을 생성 하 공용 Windows 런타임 형식의 설명을 포함 하는 별도 Windows 메타 데이터 (.winmd) 파일 생성 클래스, 구조체, 열거형, 인터페이스, 매개 변수화 된 인터페이스 및 대리자 등입니다. 메타데이터의 형식은 .NET Framework 어셈블리에 사용된 형식과 유사합니다.  C++ 구성 요소에서 .winmd 파일은 메타데이터만 포함합니다. 실행 코드는 별도의 파일에 상주합니다. 이 경우 Windows에 포함 되는 Windows 런타임 구성 요소에 대 한 합니다. WinMD 파일 이름은 소스 코드의 루트 네임스페이스의 접두사와 일치하거나 그 접두사여야 합니다. .NET Framework 언어의 경우 .winmd 파일에는 .NET Framework 어셈블리와 마찬가지로 코드와 메타데이터가 둘 다 포함됩니다.  

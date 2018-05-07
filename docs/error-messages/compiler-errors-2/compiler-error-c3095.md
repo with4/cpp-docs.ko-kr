@@ -1,13 +1,10 @@
 ---
-title: "컴파일러 오류 C3095 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C3095 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C3095
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3095
 ms.assetid: cde725be-0936-40f6-9e57-e1d7d0710f83
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 265062e7ba739dbef8e917d44d46ebd9261a289e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71dc9a7cb84df15bc47b7b351d59612f44d8bec0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3095"></a>컴파일러 오류 C3095
 'attribute': 특성을 반복할 수 없습니다.  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
  자세한 내용은 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C3095를 생성합니다.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "속성 시트 및 MFC의 속성 페이지 | Microsoft Docs"
-ms.custom: 
+title: 속성 시트 및 MFC의 속성 페이지 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - property sheets, MFC
 - tab dialog boxes
 ms.assetid: e1bede2b-0285-4b88-a052-0f8a372807a2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24a66bf9e062e43225827afdbb0bba45511c5f13
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a54469672c67e43d3692bc47d0b3efa00c18f8f6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-sheets-and-property-pages-in-mfc"></a>MFC의 속성 시트 및 속성 페이지
 으로 알려진 탭 대화 상자는 속성 시트는 속성 페이지를 포함 하는 대화 상자. 각 속성 페이지 대화 상자 템플릿 리소스를 기반으로 하며 컨트롤을 포함 합니다. 위에 표시 탭 된 페이지에 묶여 있습니다. 탭은 페이지에 이름을 지정 하 고 용도 나타냅니다. 사용자가 컨트롤의 집합을 선택 하 고 속성 시트에 탭을 클릭 합니다.  

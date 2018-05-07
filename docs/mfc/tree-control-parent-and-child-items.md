@@ -1,13 +1,10 @@
 ---
-title: "트리 컨트롤 부모 및 자식 항목 | Microsoft Docs"
-ms.custom: 
+title: 트리 컨트롤 부모 및 자식 항목 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CTreeCtrl class [MFC], parent and child items
 - tree controls [MFC], parent and child items
 ms.assetid: abcea1e4-fe9b-40d9-86dc-1db235f8f103
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: feaf59932da66be2bf269316c7ee9587d4037b3f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 260cbf640f6c57e4b145d01e8f883025a4dc6507
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tree-control-parent-and-child-items"></a>트리 컨트롤 부모 및 자식 항목
 트리 컨트롤의 모든 항목 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 연결 된 자식 항목 이라고 하는 하위 항목의 목록을 사용할 수 있습니다. 하나 이상의 자식 항목이 포함 된 항목을 부모 항목을 라고 합니다. 자식 항목을 해당 부모 항목 아래에 표시 되 고 부모에 종속 되었음을 나타내기 위해 들여쓰게 됩니다. 부모가 없는 항목은 계층의 최상위에 있으며은 루트 항목 이라고 합니다.  

@@ -1,12 +1,9 @@
 ---
-title: "CComClassFactory2 클래스 | Microsoft Docs"
-ms.custom: 
+title: CComClassFactory2 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComClassFactory2
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - CComClassFactory2 class
 ms.assetid: 19b66fd6-b9ed-47a0-822c-8132184f5a3e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5b1626a9ce7ef729416f7e6e1a6d3c60836dbed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da2b47290d3d0be525ca65b16733c9f42835d24e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2 클래스
 이 클래스가 구현 하는 [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) 인터페이스입니다.  
@@ -68,9 +63,9 @@ class CComClassFactory2 : public IClassFactory2,
 |[CComClassFactory2::RequestLicKey](#requestlickey)|만들고 라이선스 키를 반환 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CComClassFactory2`구현 하는 [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) 확장인 인터페이스의 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)합니다. **IClassFactory2** 컨트롤 라이선스를 통해 생성 개체입니다. 클래스 팩터리를 실행 하는 사용이 허가 된 컴퓨터에 런타임 라이선스 키를 제공할 수 있습니다. 이 라이선스 키를 통해 개체를 인스턴스화하는 전체 컴퓨터 라이선스 존재 하지 않을 때 응용 프로그램입니다.  
+ `CComClassFactory2` 구현 하는 [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720) 확장인 인터페이스의 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)합니다. **IClassFactory2** 컨트롤 라이선스를 통해 생성 개체입니다. 클래스 팩터리를 실행 하는 사용이 허가 된 컴퓨터에 런타임 라이선스 키를 제공할 수 있습니다. 이 라이선스 키를 통해 개체를 인스턴스화하는 전체 컴퓨터 라이선스 존재 하지 않을 때 응용 프로그램입니다.  
   
- ATL 개체에서 파생 하 여 일반적으로 클래스 팩터리를 획득 [CComCoClass](../../atl/reference/ccomcoclass-class.md)합니다. 이 클래스는 매크로 포함 [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)를 선언 하는 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) 기본 클래스 팩터리로 합니다. 사용 하도록 `CComClassFactory2`, 지정는 [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) 개체의 클래스 정의에 매크로입니다. 예:  
+ ATL 개체에서 파생 하 여 일반적으로 클래스 팩터리를 획득 [CComCoClass](../../atl/reference/ccomcoclass-class.md)합니다. 이 클래스는 매크로 포함 [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)를 선언 하는 [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) 기본 클래스 팩터리로 합니다. 사용 하도록 `CComClassFactory2`, 지정는 [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) 개체의 클래스 정의에 매크로입니다. 예를 들어:  
   
  [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomclassfactory2-class_1.h)]  
   
@@ -78,7 +73,7 @@ class CComClassFactory2 : public IClassFactory2,
   
  [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]  
   
- `CComClassFactory2`둘 다에서 파생 **CComClassFactory2Base** 및 *라이선스*합니다. **CComClassFactory2Base**,에서 파생 **IClassFactory2** 및 **CComObjectRootEx\< CComGlobalsThreadModel >**합니다.  
+ `CComClassFactory2` 둘 다에서 파생 **CComClassFactory2Base** 및 *라이선스*합니다. **CComClassFactory2Base**,에서 파생 **IClassFactory2** 및 **CComObjectRootEx\< CComGlobalsThreadModel >** 합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `CComObjectRootBase`  
@@ -94,7 +89,7 @@ class CComClassFactory2 : public IClassFactory2,
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="createinstance"></a>CComClassFactory2::CreateInstance  
+##  <a name="createinstance"></a>  CComClassFactory2::CreateInstance  
  지정된 된 CLSID의 개체를 만들고이 개체에 대 한 인터페이스 포인터를 검색 합니다.  
   
 ```
@@ -117,7 +112,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="remarks"></a>설명  
  완벽 하 게 사용 허가 받아야 하는 컴퓨터가 필요 합니다. 전체 컴퓨터 라이선스가 없는 경우 호출 [CreateInstanceLic](#createinstancelic)합니다.  
   
-##  <a name="createinstancelic"></a>CComClassFactory2::CreateInstanceLic  
+##  <a name="createinstancelic"></a>  CComClassFactory2::CreateInstanceLic  
  비슷한 [CreateInstance](#createinstance)제외 하 고 `CreateInstanceLic` 라이센스 키가 필요 합니다.  
   
 ```
@@ -152,7 +147,7 @@ STDMETHOD(CreateInstanceLic)(
 ### <a name="remarks"></a>설명  
  라이선스 사용 하 여 키를 가져올 수 있습니다 [RequestLicKey](#requestlickey)합니다. 호출 해야 허가 되지 않은 컴퓨터에 있는 개체를 만들려면 `CreateInstanceLic`합니다.  
   
-##  <a name="getlicinfo"></a>CComClassFactory2::GetLicInfo  
+##  <a name="getlicinfo"></a>  CComClassFactory2::GetLicInfo  
  채웁니다는 [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) 클래스 팩터리를 설명 하는 정보로 구조체의 라이센스 권한입니다.  
   
 ```
@@ -169,7 +164,7 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 ### <a name="remarks"></a>설명  
  `fRuntimeKeyAvail` 이 구조체의 멤버 수 있는지 여부를, 라이선스 키가 지정 된, 클래스 팩터리 개체를 않은 시스템에서 만들 수를 나타냅니다. *fLicVerified* 멤버는 전체 컴퓨터 라이선스 있는지 여부를 나타냅니다.  
   
-##  <a name="lockserver"></a>CComClassFactory2::LockServer  
+##  <a name="lockserver"></a>  CComClassFactory2::LockServer  
  증가 하 고 호출 하 여 모듈 잠금 횟수를 감소 **_Module::Lock** 및 **_Module::Unlock**각각.  
   
 ```
@@ -188,7 +183,7 @@ STDMETHOD(LockServer)(BOOL fLock);
   
  호출 `LockServer` 여러 개체를 신속 하 게 만들 수 있도록 클래스 팩터리를 보유할지 클라이언트 수 있습니다.  
   
-##  <a name="requestlickey"></a>CComClassFactory2::RequestLicKey  
+##  <a name="requestlickey"></a>  CComClassFactory2::RequestLicKey  
  만들고 라이선스 키를 제공 하는 반환는 `fRuntimeKeyAvail` 의 멤버는 [LICINFO](http://msdn.microsoft.com/library/windows/desktop/ms690590) 구조는 **TRUE**합니다.  
   
 ```

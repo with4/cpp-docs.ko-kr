@@ -1,13 +1,10 @@
 ---
-title: "비트맵 구조 | Microsoft Docs"
-ms.custom: 
+title: 비트맵 구조 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - BITMAP
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - BITMAP structure [MFC]
 ms.assetid: 05d33b4d-7232-4643-a108-87dda8ff5f22
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ed782c3e67a55797bfb2d302265924393946962
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa8bb4ab914b4e05eb21cfc45a243328d32bb6d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bitmap-structure"></a>BITMAP 구조체
 **비트맵** 높이, 너비, 색상 형식 및 논리적 비트맵의 비트 값 구조 정의**합니다.**  
@@ -69,7 +64,7 @@ typedef struct tagBITMAP {  /* bm */
 ## <a name="remarks"></a>설명  
  현재 사용되는 비트맵 형식은 흑백 및 컬러입니다. 흑백 비트맵에는 1비트, 1평면 형식이 사용됩니다. 각 스캔은 16비트의 배수입니다.  
   
- 검사 높이의 흑백 비트맵에 대해 다음과 같이 구성 됩니다  *n* :  
+ 검사 높이의 흑백 비트맵에 대해 다음과 같이 구성 됩니다 *n*:  
   
  `Scan 0`  
   

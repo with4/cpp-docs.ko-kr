@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 1) C4747 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 1) C4747 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4747
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4747
 ms.assetid: af37befd-ba1f-4bdc-96e1-a953f7a2ad9c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 094576ec19582b640ba0d4c57dfa34593177a267
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 203943f3741d07e278652a7032a6dcdcb305a384
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4747"></a>컴파일러 경고(수준 1) C4747
 관리 되는 '진입점' 호출: DLL 진입점 및 DLL 진입점에서 접근 하는 호출을 포함 하 여 로더 잠금 상태에서 관리 되는 코드는 실행 되지 않을 수 있습니다  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  표시 된 진입점 함수가 `#pragma unmanaged`합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C4747 경고가 발생 합니다.  
   
 ```  

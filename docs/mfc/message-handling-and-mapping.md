@@ -1,13 +1,10 @@
 ---
-title: "메시지 처리 및 매핑 | Microsoft Docs"
-ms.custom: 
+title: 메시지 처리 및 매핑 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - message handling [MFC]
 - message maps [MFC]
 ms.assetid: 62fe2a1b-944c-449d-a0f0-63c11ee0a3cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e6c13ed0bb19ef1ed2864378e151c6be8d98887
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66171c5df636597a2ff6be0438b558dc418b72af
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="message-handling-and-mapping"></a>메시지 처리 및 매핑
 이 문서에서는 MFC 프레임 워크에 의해 메시지 및 명령 처리 되는 방법 및 연결을 하는 방법은 해당 처리기 함수를 설명 합니다.  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  메시지와 Windows의 메시지 큐에 대 한 일반 정보를 참조 하십시오. [메시지와 메시지 큐](http://msdn.microsoft.com/library/windows/desktop/ms632590) Windows sdk에서입니다.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [프레임워크의 메시지 및 명령](../mfc/messages-and-commands-in-the-framework.md)  
   

@@ -1,13 +1,10 @@
 ---
-title: "연습: 명령줄에서 네이티브 c + + 프로그램 컴파일 | Microsoft Docs"
-ms.custom: 
+title: '연습: 명령줄에서 네이티브 c + + 프로그램 컴파일 | Microsoft Docs'
+ms.custom: conceptual
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0a14fdba2ece8d077a844685384483ce35146bd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c2ba3d1da27b3300f6299e902c35157cfe421f5c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>연습: 명령줄에서 네이티브 C++ 프로그램 컴파일
 Visual c + + 유니버설 Windows 플랫폼 앱에 대 한 기본적인 콘솔 앱, 데스크톱 앱, 장치 드라이버 및.NET 구성 요소에서 모든 항목을 만드는 데 사용할 수 있는 명령줄 c + + 컴파일러가 포함 되어 있습니다.  
@@ -35,7 +30,7 @@ Visual c + + 유니버설 Windows 플랫폼 앱에 대 한 기본적인 콘솔 �
   
  이 연습에서는 표시되는 내용을 입력하는 대신 Visual C++ 프로그램을 사용하거나 다른 도움말 문서의 Visual C++ 코드 샘플을 사용할 수 있습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료 하려면 설치 해야 Visual Studio 및 선택적 Visual c + + 구성 요소 또는 Microsoft Visual c + + 빌드 도구입니다.  
   
  Visual Studio는 다양 한 언어 및 플랫폼에 대 한 완전 한 기능의 편집기, 리소스 관리자, 디버거, 및 컴파일러를 지 강력한 통합된 개발 환경입니다. 이러한 기능 및 다운로드 하 고 무료 Visual Studio Community 버전을 비롯해 Visual Studio를 설치 하는 방법에 대 한 내용은 [VisualStudio.com](https://www.visualstudio.com/)합니다.  
@@ -180,6 +175,6 @@ Visual c + + 유니버설 Windows 플랫폼 앱에 대 한 기본적인 콘솔 �
  Visual c + + 컴파일러는 ISO C99 표준에 일반적으로 호환 되지만 규격을 엄격 하 게 따르지 않는 한 C 런타임 라이브러리 (CRT)를 포함 합니다. 대부분의 경우 이식 가능한 코드를 컴파일하고 예상 대로 실행 합니다. Visual c + + ISO c 11의 CRT 변경 내용 중 일부을 지원 하지 않습니다. 특정 라이브러리 함수 및 POSIX 함수 이름이 Visual c + + 컴파일러에 의해 사용 되지 않습니다. 함수를 지원 하지만 기본 이름이 변경 되었습니다. 자세한 내용은 참조 [CRT의 보안 기능](../c-runtime-library/security-features-in-the-crt.md) 및 [컴파일러 경고 (수준 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [C + + 언어 참조](../cpp/cpp-language-reference.md)   
+ [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [C/C++ 프로그램 빌드](../build/building-c-cpp-programs.md)   
  [컴파일러 옵션](../build/reference/compiler-options.md)

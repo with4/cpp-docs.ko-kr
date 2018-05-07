@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C3530 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C3530 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3530
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3530
 ms.assetid: 21be81ce-b699-4c74-81bc-80a0c34d2d5a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a71820e6303c67e3d247c7da6dddc184e5cb41a1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b6514d655ab813ae21ecb440415f87bce63f3591
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3530"></a>컴파일러 오류 C3530
 'auto' 다른 형식 지정자와 함께 사용할 수 없습니다.  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  사용 하는 변수 선언에 형식 지정자를 사용 하지 마십시오는 `auto` 키워드입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 때문에 c 3530 변수 `x` 함께 선언 되는 `auto` 키워드 및 형식 `int`, 때문이 예제에서는 컴파일된 **/zc: auto**합니다.  
   
 ```  

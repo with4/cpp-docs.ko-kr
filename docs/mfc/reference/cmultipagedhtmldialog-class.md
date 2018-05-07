@@ -1,12 +1,9 @@
 ---
-title: "CMultiPageDHtmlDialog 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMultiPageDHtmlDialog 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMultiPageDHtmlDialog
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f7b2e504738839b965dcdbc9a2a9835250fa8b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2be83e3791121bdea4d7f650f7d6801517df31ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog 클래스
 여러 페이지로 구성된 대화 상자는 여러 HTML 페이지를 순차적으로 표시하고 각 페이지의 이벤트를 처리합니다.  
@@ -50,7 +45,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 ## <a name="remarks"></a>설명  
  이 작업을 수행 하기 위한 메커니즘은는 [DHTML 및 URL 이벤트 맵](dhtml-event-maps.md), 포함 된 각 페이지에 대 한 이벤트 맵을 포함 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 다중 페이지 대화 상자에서는 간단한 마법사와 비슷한 기능을 정의 하는 세 가지 HTML 리소스를 가정 합니다. 첫 번째 페이지에는 `Next` 단추, 두 번째는 **Prev** 및 `Next` 단추 및 세 번째는 **Prev** 단추입니다. 처리기 함수를 호출 하는 단추 중 하나를 누르면 [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) 적절 한 새 페이지를 로드 합니다.  
   
  (CMyMultiPageDlg.h)에서 클래스 선언의 관련 부분인:  
@@ -85,7 +80,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdhtml.h  
   
-##  <a name="cmultipagedhtmldialog"></a>CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
+##  <a name="cmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
  여러 페이지 (마법사-스타일) DHTML 대화 개체를 만듭니다.  
   
 ```  
@@ -119,7 +114,7 @@ CMultiPageDHtmlDialog();
  `nHtmlResID`  
  HTML 리소스의 ID 번호를 포함합니다.  
   
-##  <a name="_dtorcmultipagedhtmldialog"></a>CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  
+##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  
  다중 페이지 DHTML 대화 상자 개체를 제거합니다.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "멤버의 포인터에 | Microsoft Docs"
-ms.custom: 
+title: 멤버의 포인터에 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60ad14627abb5438526e97d6aea82127d107cfde
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 6312186ec47014ff11e18450543d8f98178a776b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pointers-to-members"></a>pointers_to_members
 멤버에 대한 포인터 선언은 포인터 선언의 특별한 경우입니다.  이러한 함수는 다음 시퀀스를 사용하여 선언됩니다.  
@@ -53,7 +48,7 @@ ms.lasthandoff: 03/16/2018
   
     -   :: 연산자  
   
-    -    **\***  연산자입니다.  
+    -   **\*** 연산자입니다.  
   
     -   선택적 **const** 및/또는 `volatile` 지정자입니다.  
   
@@ -61,9 +56,9 @@ ms.lasthandoff: 03/16/2018
   
     -   선택적 이니셜라이저:  
   
-  **=**  연산자입니다.  
+ **=** 연산자입니다.  
   
-  **&**  연산자입니다.  
+ **&** 연산자입니다.  
   
  클래스의 정규화된 이름  
   
@@ -95,7 +90,7 @@ int main()
 }  
 ```  
   
- 앞의 예제에서 `pwCaption` 클래스의 모든 멤버에 대 한 포인터 `Window` 형식을 가진를 **char\***합니다. `pwCaption`의 형식은 `char * Window::*`입니다. 다음 코드에서는 `SetCaption` 및 `GetCaption` 멤버 함수에 대한 포인터를 선언합니다.  
+ 앞의 예제에서 `pwCaption` 클래스의 모든 멤버에 대 한 포인터 `Window` 형식을 가진를 **char\*** 합니다. `pwCaption`의 형식은 `char * Window::*`입니다. 다음 코드에서는 `SetCaption` 및 `GetCaption` 멤버 함수에 대한 포인터를 선언합니다.  
   
 ```  
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
@@ -117,7 +112,7 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';  
 ```  
   
- 차이 **.\***  및  **-> \***  연산자 (멤버 포인터 연산자)의 **.\***  연산자 멤버를 선택 하는 동안 개체 또는 개체 참조에 따라는  **-> \***  연산자는 포인터를 통해 멤버를 선택 합니다. (이러한 연산자에 대 한 자세한 내용은 [멤버 포인터 연산자가 있는 식](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
+ 차이 **.\***  및 **-> \*** 연산자 (멤버 포인터 연산자)의 **.\***  연산자 멤버를 선택 하는 동안 개체 또는 개체 참조에 따라는 **-> \*** 연산자는 포인터를 통해 멤버를 선택 합니다. (이러한 연산자에 대 한 자세한 내용은 [멤버 포인터 연산자가 있는 식](../cpp/pointer-to-member-operators-dot-star-and-star.md).)  
   
  멤버 포인터 연산자의 결과 멤버의 유형을-이 경우 **char \*** 합니다.  
   

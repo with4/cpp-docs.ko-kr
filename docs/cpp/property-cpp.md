@@ -1,12 +1,9 @@
 ---
-title: "속성 (c + +) | Microsoft Docs"
-ms.custom: 
+title: 속성 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - property_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - property __declspec keyword
 - __declspec keyword [C++], property
 ms.assetid: f3b850ba-bf48-4df7-a1d6-8259d97309ce
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 313123a75c2fbcf295d1c1d87aa423e76154091e
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: a791615f7fd91a7ccfcda45b23fc524ebd9b6400
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="property-c"></a>속성 (C++)
 **Microsoft 전용**  
@@ -45,7 +40,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="remarks"></a>설명  
  컴파일러가 멤버 선택 연산자의 오른쪽에이 특성으로 선언 된 데이터 멤버를 확인 하는 경우 ("**.**"또는"**->**"), 작업을 변환는 **가져오기** 또는 **배치** 이러한 식은 l-value 또는 r-value 인지에 따라 함수입니다. 보다 복잡 한 컨텍스트에서와 같은 "`+=`", 다시 작성 둘 다 수행 하 여 수행 됩니다 **가져오기** 및 **배치**합니다.  
   
- 이 특성은 클래스 또는 구조체 정의에 있는 빈 배열의 선언에서도 사용할 수 있습니다. 예:  
+ 이 특성은 클래스 또는 구조체 정의에 있는 빈 배열의 선언에서도 사용할 수 있습니다. 예를 들어:  
   
 ```  
 __declspec(property(get=GetX, put=PutX)) int x[];  
@@ -55,7 +50,7 @@ __declspec(property(get=GetX, put=PutX)) int x[];
   
  **Microsoft 전용 종료**  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // declspec_property.cpp  

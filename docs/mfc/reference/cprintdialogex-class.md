@@ -1,12 +1,9 @@
 ---
-title: "CPrintDialogEx 클래스 | Microsoft Docs"
-ms.custom: 
+title: CPrintDialogEx 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPrintDialogEx
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aefa1a0e879cbacbf3a971bff2887f72d13f303
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 7f511eb1414a5cd5e22b9a3e05f81caef15b908e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx 클래스
 Windows의 인쇄 속성 시트에서 제공 하는 서비스를 캡슐화 합니다.  
@@ -214,7 +209,7 @@ BOOL GetDefaults();
 ### <a name="remarks"></a>설명  
  프린터 장치 컨텍스트 (DC)를 만듭니다.는 [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) 및 [DEVNAMES](../../mfc/reference/devnames-structure.md) 구조입니다.  
   
- `GetDefaults`인쇄 속성 시트를 표시 하지 않습니다. 대신, 설정는 **hDevNames** 및 **hDevMode** 의 멤버 [m_pdex](#m_pdex) 에 대 한 핸들에는 [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) 및 [DEVNAMES ](../../mfc/reference/devnames-structure.md) 시스템 기본 프린터에 대해 초기화 되는 구조입니다. 둘 다 **hDevNames** 및 **hDevMode** null, 또는 `GetDefaults` 실패 합니다.  
+ `GetDefaults` 인쇄 속성 시트를 표시 하지 않습니다. 대신, 설정는 **hDevNames** 및 **hDevMode** 의 멤버 [m_pdex](#m_pdex) 에 대 한 핸들에는 [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) 및 [DEVNAMES ](../../mfc/reference/devnames-structure.md) 시스템 기본 프린터에 대해 초기화 되는 구조입니다. 둘 다 **hDevNames** 및 **hDevMode** null, 또는 `GetDefaults` 실패 합니다.  
   
  경우는 **PD_RETURNDC** 플래그가 설정 되 면이 반환 되지 것입니다만 **hDevNames** 및 **hDevMode** (에 **m_pdex.hDevNames** 및 **m_pdex.hDevMode**) 호출자에 게에 있는 프린터 DC도 반환 하지만 **m_pdex.hDC**합니다. 호출자가 프린터 DC를 삭제 하 고 Windows를 호출 하는 작업은 [작업](http://msdn.microsoft.com/library/windows/desktop/aa366579) 작업이 종료 된 경우 핸들에 대해 함수는 `CPrintDialogEx` 개체입니다.  
   

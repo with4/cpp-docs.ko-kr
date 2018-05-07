@@ -1,12 +1,9 @@
 ---
-title: "CTabCtrl 클래스 | Microsoft Docs"
-ms.custom: 
+title: CTabCtrl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTabCtrl
@@ -81,17 +78,15 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed981a2f7345a59f3df479bcd82b9326fd84de12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1e46a7d5720be765f2523ebde5d40655fb47b057
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl 클래스
 Windows의 공용 탭 컨트롤의 기능을 제공합니다.  
@@ -166,7 +161,7 @@ class CTabCtrl : public CWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcmn.h  
   
-##  <a name="adjustrect"></a>CTabCtrl::AdjustRect  
+##  <a name="adjustrect"></a>  CTabCtrl::AdjustRect  
  창 사각형을 지정 하는 탭 컨트롤의 표시 영역을 계산 하거나 축의 특정된 디스플레이 영역에 해당 하는 창 사각형을 계산 합니다.  
   
 ```  
@@ -180,10 +175,10 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
  `lpRect`  
  에 대 한 포인터는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 구조를 지정된 된 사각형을 지정 하 고 계산 된 사각형을 받습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTabCtrl#1](../../mfc/reference/codesnippet/cpp/ctabctrl-class_1.cpp)]  
   
-##  <a name="create"></a>CTabCtrl::Create  
+##  <a name="create"></a>  CTabCtrl::Create  
  탭 컨트롤을 만들고의 인스턴스에 연결 된 `CTabCtrl` 개체입니다.  
   
 ```  
@@ -227,10 +222,10 @@ virtual BOOL Create(
   
  확장된 창 스타일을 사용 하 여 탭 컨트롤을 만들려면 호출 [CTabCtrl::CreateEx](#createex) 대신 **만들기**합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTabCtrl#2](../../mfc/reference/codesnippet/cpp/ctabctrl-class_2.cpp)]  
   
-##  <a name="createex"></a>CTabCtrl::CreateEx  
+##  <a name="createex"></a>  CTabCtrl::CreateEx  
  에 연결 하 고 컨트롤 (자식 창)을 만듭니다.는 `CTabCtrl` 개체입니다.  
   
 ```  
@@ -262,18 +257,18 @@ virtual BOOL CreateEx(
  성공 하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 사용 하 여 `CreateEx` 대신 [만들기](#create) Windows 확장된 스타일 접두사에 의해 지정 된 확장된 창 스타일을 적용할 **WS_EX_**합니다.  
+ 사용 하 여 `CreateEx` 대신 [만들기](#create) Windows 확장된 스타일 접두사에 의해 지정 된 확장된 창 스타일을 적용할 **WS_EX_** 합니다.  
   
- `CreateEx`로 지정 된 확장된 창 스타일와 컨트롤을 만듭니다 `dwExStyle`합니다. 스타일을 사용 하 여 컨트롤에만 확장 집합 [SetExtendedStyle](#setextendedstyle)합니다. 사용 예를 들어 `CreateEx` 으로 이러한 스타일을 설정 하려면 **WS_EX_CONTEXTHELP**를 사용 하지만 `SetExtendedStyle` 으로 이러한 스타일을 설정 하려면 **TCS_EX_FLATSEPARATORS**합니다. 자세한 내용은 뒷부분에 있는 스타일을 참조 하십시오. [탭 컨트롤 확장 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760546) Windows sdk에서입니다.  
+ `CreateEx` 로 지정 된 확장된 창 스타일와 컨트롤을 만듭니다 `dwExStyle`합니다. 스타일을 사용 하 여 컨트롤에만 확장 집합 [SetExtendedStyle](#setextendedstyle)합니다. 사용 예를 들어 `CreateEx` 으로 이러한 스타일을 설정 하려면 **WS_EX_CONTEXTHELP**를 사용 하지만 `SetExtendedStyle` 으로 이러한 스타일을 설정 하려면 **TCS_EX_FLATSEPARATORS**합니다. 자세한 내용은 뒷부분에 있는 스타일을 참조 하십시오. [탭 컨트롤 확장 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760546) Windows sdk에서입니다.  
   
-##  <a name="ctabctrl"></a>CTabCtrl::CTabCtrl  
+##  <a name="ctabctrl"></a>  CTabCtrl::CTabCtrl  
  `CTabCtrl` 개체를 생성합니다.  
   
 ```  
 CTabCtrl();
 ```  
   
-##  <a name="deleteallitems"></a>CTabCtrl::DeleteAllItems  
+##  <a name="deleteallitems"></a>  CTabCtrl::DeleteAllItems  
  탭 컨트롤에서 모든 항목을 제거합니다.  
   
 ```  
@@ -283,7 +278,7 @@ BOOL DeleteAllItems();
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-##  <a name="deleteitem"></a>CTabCtrl::DeleteItem  
+##  <a name="deleteitem"></a>  CTabCtrl::DeleteItem  
  탭 컨트롤에서 지정된 된 항목을 제거합니다.  
   
 ```  
@@ -297,10 +292,10 @@ BOOL DeleteItem(int nItem);
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTabCtrl#3](../../mfc/reference/codesnippet/cpp/ctabctrl-class_3.cpp)]  
   
-##  <a name="deselectall"></a>CTabCtrl::DeselectAll  
+##  <a name="deselectall"></a>  CTabCtrl::DeselectAll  
  탭 컨트롤을 누르는 된 선택 취소의 항목을 다시 설정 합니다.  
   
 ```  
@@ -314,7 +309,7 @@ void DeselectAll(BOOL fExcludeFocus);
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TCM_DESELECTALL](http://msdn.microsoft.com/library/windows/desktop/bb760579)Windows SDK에 설명 된 대로 합니다.  
   
-##  <a name="drawitem"></a>CTabCtrl::DrawItem  
+##  <a name="drawitem"></a>  CTabCtrl::DrawItem  
  소유자 그리기 탭 컨트롤 변경의 시각적 측면이 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -332,7 +327,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  응용 프로그램에 제공 된 디스플레이 컨텍스트에 대해 선택한 모든 그래픽 장치 GDI (인터페이스) 개체를 복원 해야 `lpDrawItemStruct` 함수 종료 전에이 멤버입니다.  
   
-##  <a name="getcurfocus"></a>CTabCtrl::GetCurFocus  
+##  <a name="getcurfocus"></a>  CTabCtrl::GetCurFocus  
  현재 포커스가 있는 탭의 인덱스를 검색합니다.  
   
 ```  
@@ -342,7 +337,7 @@ int GetCurFocus() const;
 ### <a name="return-value"></a>반환 값  
  현재 포커스가 있는 탭의 0부터 시작 하는 인덱스입니다.  
   
-##  <a name="getcursel"></a>CTabCtrl::GetCurSel  
+##  <a name="getcursel"></a>  CTabCtrl::GetCurSel  
  탭 컨트롤의 현재 선택 된 탭을 검색합니다.  
   
 ```  
@@ -352,7 +347,7 @@ int GetCurSel() const;
 ### <a name="return-value"></a>반환 값  
  성공 하는 경우 선택한 탭 이나-1 없는 탭이 선택의 0부터 시작 인덱스입니다.  
   
-##  <a name="getextendedstyle"></a>CTabCtrl::GetExtendedStyle  
+##  <a name="getextendedstyle"></a>  CTabCtrl::GetExtendedStyle  
  현재 사용 중인 탭 컨트롤에 대 한 확장된 스타일을 검색 합니다.  
   
 ```  
@@ -365,7 +360,7 @@ DWORD GetExtendedStyle();
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TCM_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760585)Windows SDK에 설명 된 대로 합니다.  
   
-##  <a name="getimagelist"></a>CTabCtrl::GetImageList  
+##  <a name="getimagelist"></a>  CTabCtrl::GetImageList  
  탭 컨트롤에 연관된 이미지 목록을 검색합니다.  
   
 ```  
@@ -375,7 +370,7 @@ CImageList* GetImageList() const;
 ### <a name="return-value"></a>반환 값  
  성공 하면 컨트롤의 탭의 이미지 목록에 대 한 포인터 그렇지 않으면 **NULL**합니다.  
   
-##  <a name="getitem"></a>CTabCtrl::GetItem  
+##  <a name="getitem"></a>  CTabCtrl::GetItem  
  탭 컨트롤의 탭에 대 한 정보를 검색 합니다.  
   
 ```  
@@ -398,15 +393,15 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
  **마스크**  
  지정 하는 값 `TCITEM` 구조체 멤버를 검색 하거나 설정 합니다. 이 멤버는 0 이거나 조합 다음 값 중 하나일 수 있습니다.  
   
-- `TCIF_TEXT`**pszText** 멤버는 사용할 수 있습니다.  
+- `TCIF_TEXT` **pszText** 멤버는 사용할 수 있습니다.  
   
-- `TCIF_IMAGE``iImage` 멤버는 사용할 수 있습니다.  
+- `TCIF_IMAGE` `iImage` 멤버는 사용할 수 있습니다.  
   
-- `TCIF_PARAM`**lParam** 멤버는 사용할 수 있습니다.  
+- `TCIF_PARAM` **lParam** 멤버는 사용할 수 있습니다.  
   
-- `TCIF_RTLREADING`텍스트 **pszText** 오른쪽에서 왼쪽 읽기 순서를 사용 하 여 히브리어 또는 아랍어 시스템에 표시 됩니다.  
+- `TCIF_RTLREADING` 텍스트 **pszText** 오른쪽에서 왼쪽 읽기 순서를 사용 하 여 히브리어 또는 아랍어 시스템에 표시 됩니다.  
   
-- `TCIF_STATE`**dwState** 멤버는 사용할 수 있습니다.  
+- `TCIF_STATE` **dwState** 멤버는 사용할 수 있습니다.  
   
  **pszText**  
  구조는 탭에 대 한 정보를 포함 하는 경우에 탭 텍스트를 포함 하는 null로 끝나는 문자열에 대 한 포인터입니다. 구조 정보를 받는 경우이 멤버는 탭 텍스트를 수신 하는 버퍼의 주소를 지정 합니다.  
@@ -420,10 +415,10 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
  **lParam**  
  키와 연결 된 응용 프로그램 정의 데이터입니다. 응용 프로그램 구조를 정의 하 고 대신 사용 해야 4 바이트 이상 탭당 응용 프로그램 정의 데이터의 경우는 `TCITEM` 구조입니다. 응용 프로그램 정의 된 구조체의 첫 번째 멤버 이어야 합니다는 [TCITEMHEADER](http://msdn.microsoft.com/library/windows/desktop/bb760556)구조입니다. **TCITEMHEADER** 구조는 동일는 `TCITEM` 구조, 없이 **lParam** 멤버입니다. 크기의 구조와의 크기의 차이 **TCITEMHEADER** 구조 탭당 추가 바이트의 수와 같아야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  
   
-##  <a name="getitemcount"></a>CTabCtrl::GetItemCount  
+##  <a name="getitemcount"></a>  CTabCtrl::GetItemCount  
  탭 컨트롤의 탭 수를 검색합니다.  
   
 ```  
@@ -433,10 +428,10 @@ int GetItemCount() const;
 ### <a name="return-value"></a>반환 값  
  탭 컨트롤의 항목 수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)합니다.  
   
-##  <a name="getitemrect"></a>CTabCtrl::GetItemRect  
+##  <a name="getitemrect"></a>  CTabCtrl::GetItemRect  
  탭 컨트롤의 지정된 된 탭에 대 한 경계 사각형을 검색 합니다.  
   
 ```  
@@ -453,10 +448,10 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)합니다.  
   
-##  <a name="getitemstate"></a>CTabCtrl::GetItemState  
+##  <a name="getitemstate"></a>  CTabCtrl::GetItemState  
  로 식별 되는 탭 컨트롤 항목의 상태를 검색 `nItem`합니다.  
   
 ```  
@@ -483,7 +478,7 @@ DWORD GetItemState(
 ### <a name="remarks"></a>설명  
  항목의 상태를 지정 하 여는 **dwState** 의 멤버는 `TCITEM` 구조입니다.  
   
-##  <a name="getrowcount"></a>CTabCtrl::GetRowCount  
+##  <a name="getrowcount"></a>  CTabCtrl::GetRowCount  
  탭 컨트롤에서 행의 현재 수를 검색 합니다.  
   
 ```  
@@ -496,7 +491,7 @@ int GetRowCount() const;
 ### <a name="remarks"></a>설명  
  만 있는 컨트롤 탭은 **TCS_MULTILINE** 스타일 탭의 여러 행을 가질 수 있습니다.  
   
-##  <a name="gettooltips"></a>CTabCtrl::GetToolTips  
+##  <a name="gettooltips"></a>  CTabCtrl::GetToolTips  
  탭 컨트롤에 연결 된 도구 설명 컨트롤의 핸들을 검색 합니다.  
   
 ```  
@@ -509,7 +504,7 @@ CToolTipCtrl* GetToolTips() const;
 ### <a name="remarks"></a>설명  
  탭 컨트롤에 있는 경우 도구 설명 컨트롤을 만듭니다는 **TCS_TOOLTIPS** 스타일입니다. 사용 하 여 탭 컨트롤에 도구 설명 컨트롤을 할당할 수도 있습니다는 `SetToolTips` 멤버 함수입니다.  
   
-##  <a name="highlightitem"></a>CTabCtrl::HighlightItem  
+##  <a name="highlightitem"></a>  CTabCtrl::HighlightItem  
  탭 항목 강조 표시 상태를 설정합니다.  
   
 ```  
@@ -529,7 +524,7 @@ BOOL HighlightItem(int idItem,   BOOL fHighlight = TRUE);
 ### <a name="remarks"></a>설명  
  이 멤버 함수 구현 Win32 메시지 [TCM_HIGHLIGHTITEM](http://msdn.microsoft.com/library/windows/desktop/bb760602)Windows SDK에 설명 된 대로 합니다.  
   
-##  <a name="hittest"></a>CTabCtrl::HitTest  
+##  <a name="hittest"></a>  CTabCtrl::HitTest  
  지정 된 화면 위치에는 있는 경우 탭을 결정 합니다.  
   
 ```  
@@ -543,7 +538,7 @@ int HitTest(TCHITTESTINFO* pHitTestInfo) const;
 ### <a name="return-value"></a>반환 값  
  탭이 않을 경우 지정된 된 위치에 탭 또는-1의 0부터 시작 하는 인덱스를 반환 합니다.  
   
-##  <a name="insertitem"></a>CTabCtrl::InsertItem  
+##  <a name="insertitem"></a>  CTabCtrl::InsertItem  
  기존 탭 컨트롤에 새 탭을 삽입합니다.  
   
 ```  
@@ -597,15 +592,15 @@ LONG InsertItem(
  `nMask`  
  지정 `TCITEM` 설정할 특성을 구성 합니다. 0 또는 다음 값의 조합 될 수 있습니다.  
   
-- `TCIF_TEXT`**pszText** 멤버는 사용할 수 있습니다.  
+- `TCIF_TEXT` **pszText** 멤버는 사용할 수 있습니다.  
   
-- `TCIF_IMAGE``iImage` 멤버는 사용할 수 있습니다.  
+- `TCIF_IMAGE` `iImage` 멤버는 사용할 수 있습니다.  
   
-- `TCIF_PARAM`**lParam** 멤버는 사용할 수 있습니다.  
+- `TCIF_PARAM` **lParam** 멤버는 사용할 수 있습니다.  
   
-- `TCIF_RTLREADING`텍스트 **pszText** 오른쪽에서 왼쪽 읽기 순서를 사용 하 여 히브리어 또는 아랍어 시스템에 표시 됩니다.  
+- `TCIF_RTLREADING` 텍스트 **pszText** 오른쪽에서 왼쪽 읽기 순서를 사용 하 여 히브리어 또는 아랍어 시스템에 표시 됩니다.  
   
-- `TCIF_STATE`**dwState** 멤버는 사용할 수 있습니다.  
+- `TCIF_STATE` **dwState** 멤버는 사용할 수 있습니다.  
   
  `lParam`  
  키와 연결 된 응용 프로그램 정의 데이터입니다.  
@@ -619,10 +614,10 @@ LONG InsertItem(
 ### <a name="return-value"></a>반환 값  
  성공 하면 새 탭의 0부터 시작 인덱스 그렇지 않으면-1입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CTabCtrl#5](../../mfc/reference/codesnippet/cpp/ctabctrl-class_5.cpp)]  
   
-##  <a name="removeimage"></a>CTabCtrl::RemoveImage  
+##  <a name="removeimage"></a>  CTabCtrl::RemoveImage  
  탭 컨트롤의 이미지 목록에서 지정된 된 이미지를 제거합니다.  
   
 ```  
@@ -636,7 +631,7 @@ void RemoveImage(int nImage);
 ### <a name="remarks"></a>설명  
  탭 컨트롤 각 탭에 같은 이미지와 연결 되어 있도록 각 탭의 이미지 인덱스를 업데이트 합니다.  
   
-##  <a name="setcurfocus"></a>CTabCtrl::SetCurFocus  
+##  <a name="setcurfocus"></a>  CTabCtrl::SetCurFocus  
  탭 컨트롤의 지정된 된 탭에 포커스를 설정 합니다.  
   
 ```  
@@ -650,7 +645,7 @@ void SetCurFocus(int nItem);
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TCM_SETCURFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb760610)Windows SDK에 설명 된 대로 합니다.  
   
-##  <a name="setcursel"></a>CTabCtrl::SetCurSel  
+##  <a name="setcursel"></a>  CTabCtrl::SetCurSel  
  탭 컨트롤의 탭을 선택합니다.  
   
 ```  
@@ -667,7 +662,7 @@ int SetCurSel(int nItem);
 ### <a name="remarks"></a>설명  
  탭 컨트롤을 전송 하지 않습니다는 **TCN_SELCHANGING** 또는 **TCN_SELCHANGE** 알림 메시지를이 함수를 사용 하는 탭을 선택 합니다. 사용 하 여 이러한 알림을 보내기 **WM_NOTIFY**, 사용자가 클릭 또는 키보드를 사용 하 여 탭을 변경 합니다.  
   
-##  <a name="setextendedstyle"></a>CTabCtrl::SetExtendedStyle  
+##  <a name="setextendedstyle"></a>  CTabCtrl::SetExtendedStyle  
  탭 컨트롤에 대 한 확장된 스타일을 설정합니다.  
   
 ```  
@@ -687,7 +682,7 @@ DWORD SetExtendedStyle(DWORD dwNewStyle,   DWORD dwExMask = 0);
 ### <a name="return-value"></a>반환 값  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TCM_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760627)Windows SDK에 설명 된 대로 합니다.  
   
-##  <a name="setimagelist"></a>CTabCtrl::SetImageList  
+##  <a name="setimagelist"></a>  CTabCtrl::SetImageList  
  탭 컨트롤에는 이미지 목록에 할당합니다.  
   
 ```  
@@ -701,7 +696,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ### <a name="return-value"></a>반환 값  
  이전 이미지 목록에 대 한 포인터를 반환 하거나 **NULL** 이전 이미지 목록이 없는 경우.  
   
-##  <a name="setitem"></a>CTabCtrl::SetItem  
+##  <a name="setitem"></a>  CTabCtrl::SetItem  
  탭의 속성의 일부나 전부를 설정합니다.  
   
 ```  
@@ -718,10 +713,10 @@ BOOL SetItem(int nItem,   TCITEM* pTabCtrlItem);
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [GetItem](#getitem)합니다.  
   
-##  <a name="setitemextra"></a>CTabCtrl::SetItemExtra  
+##  <a name="setitemextra"></a>  CTabCtrl::SetItemExtra  
  응용 프로그램 정의 데이터 탭 컨트롤에 대 한 예약 탭 당 바이트 수를 설정 합니다.  
   
 ```  
@@ -738,7 +733,7 @@ BOOL SetItemExtra(int nBytes);
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TCM_SETITEMEXTRA](http://msdn.microsoft.com/library/windows/desktop/bb760633)Windows SDK에 설명 된 대로 합니다.  
   
-##  <a name="setitemsize"></a>CTabCtrl::SetItemSize  
+##  <a name="setitemsize"></a>  CTabCtrl::SetItemSize  
  탭 컨트롤 항목의 높이 및 너비를 설정합니다.  
   
 ```  
@@ -752,7 +747,7 @@ CSize SetItemSize(CSize size);
 ### <a name="return-value"></a>반환 값  
  탭 제어 항목의 이전 높이 및 너비를 반환합니다.  
   
-##  <a name="setitemstate"></a>CTabCtrl::SetItemState  
+##  <a name="setitemstate"></a>  CTabCtrl::SetItemState  
  로 식별 되는 탭 컨트롤 항목의 상태를 설정 `nItem`합니다.  
   
 ```  
@@ -780,7 +775,7 @@ BOOL SetItemState(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-##  <a name="setmintabwidth"></a>CTabCtrl::SetMinTabWidth  
+##  <a name="setmintabwidth"></a>  CTabCtrl::SetMinTabWidth  
  탭 컨트롤에서 항목의 최소 너비를 설정합니다.  
   
 ```  
@@ -797,7 +792,7 @@ int SetMinTabWidth(int cx);
 ### <a name="return-value"></a>반환 값  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [TCM_SETMINTABWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760637)Windows SDK에 설명 된 대로 합니다.  
   
-##  <a name="setpadding"></a>CTabCtrl::SetPadding  
+##  <a name="setpadding"></a>  CTabCtrl::SetPadding  
  각 탭의 아이콘 및 탭 컨트롤의 레이블 (패딩) 하는 공간의 크기를 설정 합니다.  
   
 ```  
@@ -808,7 +803,7 @@ void SetPadding(CSize size);
  `size`  
  각 탭의 아이콘 및 탭 컨트롤의 레이블 (패딩) 하는 공간의 크기를 설정 합니다.  
   
-##  <a name="settooltips"></a>CTabCtrl::SetToolTips  
+##  <a name="settooltips"></a>  CTabCtrl::SetToolTips  
  탭 컨트롤에 도구 설명 컨트롤을 할당합니다.  
   
 ```  
@@ -822,7 +817,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 ### <a name="remarks"></a>설명  
  탭 컨트롤을 호출 하 여 연결 된 도구 설명 컨트롤을 가져올 수 있습니다 `GetToolTips`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

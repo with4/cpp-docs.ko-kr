@@ -1,13 +1,10 @@
 ---
-title: "데이터 소스: ODBC 데이터 소스를 프로그래밍 방식으로 구성 | Microsoft Docs"
-ms.custom: 
+title: '데이터 소스: ODBC 데이터 소스를 프로그래밍 방식으로 구성 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 f1_keywords:
 - SQLConfigDataSource
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ac5756452a8b1c2d5dbf2f27ac7d3e1a8b069ca2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e1f46ad566874d80b45593e7aecfeee2d5d88841
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>데이터 소스: 프로그래밍 방식으로 ODBC 데이터 소스 구성
 이 항목에서는 프로그래밍 방식으로 데이터 원본 이름은 ODBC Open Database Connectivity ()를 구성 하는 방법에 대해 설명 합니다. 이 방법을 사용 하면 데이터 액세스를 명시적으로 데이터 원본의 이름을 지정 하려면 ODBC 관리자 또는 다른 프로그램을 사용 하도록 사용자를 강요 하지 않고도.  
@@ -105,7 +100,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
     -   32 비트에 대 한 키를 찾을 **HKEY_CURRENT_USER\Software\ODBC\ODBC 합니다. 데이터 원본 INI\ODBC** 왼쪽된 창에서.  
   
-         오른쪽 창에는 형식의 항목 나열: "pub: REG_SZ:*<data source name>*" 여기서  *<data source name>*  은 하려는 드라이버에 대 한 원하는 설정으로 이미 구성 된 데이터 원본 사용 합니다. 예를 들어 SQL Server, 원하는 데이터 원본을 선택 합니다. 문자열 다음에 나오는 항목 "pub:"에서는 순서, 키 이름 및 값에서 사용 하 여 `lpszAttributes` 매개 변수입니다.  
+         오른쪽 창에는 형식의 항목 나열: "pub: REG_SZ:*<data source name>*" 여기서 *<data source name>* 은 하려는 드라이버에 대 한 원하는 설정으로 이미 구성 된 데이터 원본 사용 합니다. 예를 들어 SQL Server, 원하는 데이터 원본을 선택 합니다. 문자열 다음에 나오는 항목 "pub:"에서는 순서, 키 이름 및 값에서 사용 하 여 `lpszAttributes` 매개 변수입니다.  
   
     -   16 비트를 표시 하는 Odbc.ini 파일의 섹션을 찾습니다 [*\<데이터 원본 이름 >*].  
   

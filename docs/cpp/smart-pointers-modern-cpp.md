@@ -2,26 +2,21 @@
 title: 스마트 포인터 (최신 c + +) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 909ef870-904c-49b6-b8cd-e9d0b7dc9435
-caps.latest.revision: 26
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c92a0a6030f8e46fb52beee0bf8fd661b47cdf95
-ms.sourcegitcommit: cff1a8a49f0cd50f315a250c5dd27e15c173845f
+ms.openlocfilehash: 7d532a693414fee7845c45fd548b7513ed99b38d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="smart-pointers-modern-c"></a>스마트 포인터(최신 C++)
 최신 c + + 프로그래밍에서 표준 라이브러리 포함 *스마트 포인터*, 메모리의 사용할 수 있는 프로그램이 수 있도록 하는 데 사용 되는 및 리소스 누수 예외 로부터 안전한 됩니다.  

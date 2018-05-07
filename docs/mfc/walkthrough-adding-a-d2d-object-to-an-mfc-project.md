@@ -1,30 +1,25 @@
 ---
-title: "연습: MFC 프로젝트에 D2D 개체 추가 | Microsoft Docs"
-ms.custom: 
+title: '연습: MFC 프로젝트에 D2D 개체 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC, D2D
 - D2D [MFC]
 ms.assetid: dda36c33-c231-4da6-a62f-72d69a12b6dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98c14611bbca828f6264c3fcfa66462c02320432
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7985b36c0eeaa7adf5441a7a6fbb3314bac8353f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>연습: MFC 프로젝트에 D2D 개체 추가
 이 연습에서는 기본 Direct2D를 추가 하는 방법에 설명 (D2D) Visual c + +, Microsoft Foundation 클래스 라이브러리 (MFC) 프로젝트 개체를 출력 하는 응용 프로그램에 다음 프로젝트를 빌드합니다 "Hello, world" 그라데이션 배경의 합니다.  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  [!INCLUDE[note_settings_general](../mfc/includes/note_settings_general_md.md)]  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 Visual Studio가 필요합니다.  
   
 ### <a name="to-create-an-mfc-application"></a>MFC 응용 프로그램을 만들려면  

@@ -1,13 +1,10 @@
 ---
-title: "OLE 컨트롤 클래스 | Microsoft Docs"
-ms.custom: 
+title: OLE 컨트롤 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.ole
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - OLE control classes [MFC]
 - reusable component classes [MFC]
 ms.assetid: 96495ec3-319e-4163-b839-1af0428ed9dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e61d0ca8ed269557efbd566da1aca160ef669e83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5dcbda85c33bab37babe5da861067d25cf31e32c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-control-classes"></a>OLE 컨트롤 클래스
 이들은 OLE 컨트롤을 작성할 때 사용 하는 기본 클래스입니다. `COleControlModule` OLE 컨트롤 모듈에서 클래스와 비슷합니다는 [CWinApp](../mfc/reference/cwinapp-class.md) 응용 프로그램의 클래스입니다. 각 모듈에는 하나 이상의 OLE 컨트롤; 구현 이러한 컨트롤은 `COleControl` 개체입니다. 이러한 컨트롤을 사용 하는 컨테이너와 통신 `CConnectionPoint` 개체입니다.  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
  [CFontHolder](../mfc/reference/cfontholder-class.md)  
  Windows 글꼴 개체의 기능을 캡슐화 하며 `IFont` COM 인터페이스; OLE 컨트롤의 스톡 글꼴 속성을 구현 하는 데 사용 합니다.  
   
- [에서는 COlePropertyPage](../mfc/reference/colepropertypage-class.md)  
+ [COlePropertyPage](../mfc/reference/colepropertypage-class.md)  
  대화 상자와 유사한 그래픽 인터페이스에서 제어 OLE의 속성을 표시 합니다.  
   
  [CPropExchange](../mfc/reference/cpropexchange-class.md)  

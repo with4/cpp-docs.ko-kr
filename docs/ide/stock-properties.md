@@ -1,30 +1,25 @@
 ---
-title: "스톡 속성 | Microsoft Docs"
-ms.custom: 
+title: 스톡 속성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: a89fc454-0b8e-447a-9033-4c8af46a24d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bbc721669d51860c01c760a8d1f9fb899e019e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3586fb33c30148c870b096d0d49a41d7ad8c6c8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stock-properties"></a>스톡 속성
 사용 하 여 MFC dispinterface 속성을 추가 하는 경우는 [속성 추가 마법사](../ide/idl-attributes-add-property-wizard.md)에서 스톡 속성을 선택할 수는 **속성 이름** 목록에 [이름](../ide/names-add-property-wizard.md) 의 페이지는 마법사입니다. 속성은 다음과 같습니다.  

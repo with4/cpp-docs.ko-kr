@@ -1,29 +1,24 @@
 ---
-title: "컴파일러 오류 C2813 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C2813 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - C2813
 ms.assetid: 6cf2135f-7b82-42d1-909a-5e864308a09c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3cc6ac0e287894dc2202814c55dac37569650f5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 253f0d54b603c2b859f806053a906378025a39ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2813"></a>컴파일러 오류 C2813
 \#/MP와 가져오기가 지원 되지 않습니다.  
@@ -32,7 +27,7 @@ ms.lasthandoff: 12/21/2017
   
  컴파일러 오류가 고 **/MP** 컴파일러 옵션은 Visual Studio 2008의 새로운 기능입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C2813을 생성합니다. "compile with:" 주석의 명령줄은 **/MP** 및 **/c** 컴파일러 옵션을 사용하여 여러 파일을 컴파일하도록 컴파일러에 알립니다. 파일 중 하나 이상에 [#import](../../preprocessor/hash-import-directive-cpp.md) 지시문이 포함되어 있습니다. 이 예제를 테스트하기 위해 동일한 파일을 두 번 사용합니다.  
   
 ```  

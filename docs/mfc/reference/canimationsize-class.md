@@ -1,12 +1,9 @@
 ---
-title: "CAnimationSize 클래스 | Microsoft Docs"
-ms.custom: 
+title: CAnimationSize 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationSize
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CAnimationSize [MFC], m_cxValue
 - CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2acbdad3ec5b08ef5d83b3a6cfdb2eadd3c0e17
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1002ace78cf58c34c5e89bbafd81460ec5dabc1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationsize-class"></a>CAnimationSize 클래스
 차원에 애니메이션을 적용할 수 있는 크기 개체 기능을 구현합니다.  
@@ -90,7 +85,7 @@ class CAnimationSize : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[CAnimationSize::m_cxValue](#m_cxvalue)|캡슐화 된 애니메이션 변수 애니메이션 크기의 너비를 나타내는입니다.|  
 |[CAnimationSize::m_cyValue](#m_cyvalue)|캡슐화 된 애니메이션 변수 애니메이션 크기의 높이 나타내는입니다.|  
@@ -108,7 +103,7 @@ class CAnimationSize : public CAnimationBaseObject;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationSize::AddTransition  
+##  <a name="addtransition"></a>  CAnimationSize::AddTransition  
  너비와 높이 대 한 변환을 추가합니다.  
   
 ```  
@@ -127,7 +122,7 @@ void AddTransition(
 ### <a name="remarks"></a>설명  
  지정된 된 전환을 너비와 높이 대 한 변수 애니메이션에 적용할 변환의 내부 목록에 추가 하려면이 함수를 호출 합니다. 전환에 추가 하면 하지 즉시 적용 되며 내부 목록에 저장 합니다. 전환 (특정 값에 대 한 스토리 보드에 추가 된) 적용 CAnimationController::AnimateGroup를 호출 하는 경우. 전환을 차원 중 하나에 적용할 필요가 없으면 NULL을 전달할 수 있습니다.  
   
-##  <a name="canimationsize"></a>CAnimationSize::CAnimationSize  
+##  <a name="canimationsize"></a>  CAnimationSize::CAnimationSize  
  애니메이션 크기 개체를 생성 합니다.  
   
 ```  
@@ -157,7 +152,7 @@ CAnimationSize(
 ### <a name="remarks"></a>설명  
  너비, 높이 대 한 기본 값으로 개체가 생성 될 개체 ID 및 그룹 ID를 0으로 설정 됩니다. 값은 SetDefaultValue 및 SetID를 사용 하 여 런타임에 나중에 변경할 수 있습니다.  
   
-##  <a name="getanimationvariablelist"></a>CAnimationSize::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>  CAnimationSize::GetAnimationVariableList  
  목록에 캡슐화 된 애니메이션 변수를 추가합니다.  
   
 ```  
@@ -170,7 +165,7 @@ virtual void GetAnimationVariableList(
  `lst`  
  함수가 반환할 때 너비와 높이 나타내는 두 CAnimationVariable 개체에 대 한 포인터를 포함 합니다.  
   
-##  <a name="getcx"></a>CAnimationSize::GetCX  
+##  <a name="getcx"></a>  CAnimationSize::GetCX  
  CAnimationVariable 너비를 나타내는에 대 한 액세스를 제공 합니다.  
   
 ```  
@@ -183,7 +178,7 @@ CAnimationVariable& GetCX();
 ### <a name="remarks"></a>설명  
  너비를 나타내는 기본 CAnimationVariable에 대 한 직접 액세스를 가져오려면이 메서드를 호출할 수 있습니다.  
   
-##  <a name="getcy"></a>CAnimationSize::GetCY  
+##  <a name="getcy"></a>  CAnimationSize::GetCY  
  CAnimationVariable 높이 나타내는에 대 한 액세스를 제공 합니다.  
   
 ```  
@@ -196,7 +191,7 @@ CAnimationVariable& GetCY();
 ### <a name="remarks"></a>설명  
  높이 나타내는 기본 CAnimationVariable에 대 한 직접 액세스를 가져오려면이 메서드를 호출할 수 있습니다.  
   
-##  <a name="getdefaultvalue"></a>CAnimationSize::GetDefaultValue  
+##  <a name="getdefaultvalue"></a>  CAnimationSize::GetDefaultValue  
  너비와 높이 대 한 기본값을 반환 합니다.  
   
 ```  
@@ -209,7 +204,7 @@ CSize GetDefaultValue();
 ### <a name="remarks"></a>설명  
  생성자 또는 SetDefaultValue 여 이전에 설정 된 기본값을 검색 하려면이 함수를 호출 합니다.  
   
-##  <a name="getvalue"></a>CAnimationSize::GetValue  
+##  <a name="getvalue"></a>  CAnimationSize::GetValue  
  현재 값을 반환 합니다.  
   
 ```  
@@ -226,21 +221,21 @@ BOOL GetValue(CSize& szValue);
 ### <a name="remarks"></a>설명  
  애니메이션 크기의 현재 값을 검색 하려면이 함수를 호출 합니다. 이 방법이 실패 하면 너비 및 크기에 대 한 기본 COM 개체 초기화 되지 않은 경우 szValue SetDefaultValue 통하거나 생성자에서 이전에 설정 된 기본값을 포함 합니다.  
   
-##  <a name="m_cxvalue"></a>CAnimationSize::m_cxValue  
+##  <a name="m_cxvalue"></a>  CAnimationSize::m_cxValue  
  캡슐화 된 애니메이션 변수 애니메이션 크기의 너비를 나타내는입니다.  
   
 ```  
 CAnimationVariable m_cxValue;  
 ```  
   
-##  <a name="m_cyvalue"></a>CAnimationSize::m_cyValue  
+##  <a name="m_cyvalue"></a>  CAnimationSize::m_cyValue  
  캡슐화 된 애니메이션 변수 애니메이션 크기의 높이 나타내는입니다.  
   
 ```  
 CAnimationVariable m_cyValue;  
 ```  
   
-##  <a name="operator_csize"></a>CAnimationSize::operator CSize  
+##  <a name="operator_csize"></a>  CAnimationSize::operator CSize  
  CAnimationSize는 CSize 변환합니다.  
   
 ```  
@@ -253,7 +248,7 @@ operator CSize();
 ### <a name="remarks"></a>설명  
  이 함수는 GetValue 내부적으로 호출 합니다. Getvalue가 어떤 이유로 실패 하는 경우 반환 되는 크기는 너비와 높이 대 한 기본값이 포함 됩니다.  
   
-##  <a name="operator_eq"></a>CAnimationSize::operator =  
+##  <a name="operator_eq"></a>  CAnimationSize::operator =  
  CAnimationSize szSrc 할당합니다.  
   
 ```  
@@ -267,7 +262,7 @@ void operator=(const CSize& szSrc);
 ### <a name="remarks"></a>설명  
  CAnimationSize szSrc 할당합니다. 이 연산자 SetDefaultValue 생성 된 너비 및 높이 대 한 기본 COM 개체를 다시 호출 하기 때문에 애니메이션이 시작 되기 전에 하는 것이 좋습니다. 이 애니메이션 개체 (재정의 또는 IntegerValueChanged) 이벤트를 구독 하는 경우 이러한 이벤트를 다시 사용 하도록 설정 해야 합니다.  
   
-##  <a name="setdefaultvalue"></a>CAnimationSize::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>  CAnimationSize::SetDefaultValue  
  기본값을 설정합니다.  
   
 ```  

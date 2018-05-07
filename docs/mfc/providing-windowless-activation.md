@@ -1,13 +1,10 @@
 ---
-title: "창 없는 활성화 제공 | Microsoft Docs"
-ms.custom: 
+title: 창 없는 활성화 제공 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], activate options
 - activation [MFC], windowless
 ms.assetid: 094903b5-c344-42fa-96ff-ce01e16891c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb33f1dd9f8be8cb06cdfcc2aeecb653c2762410
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbe72fcaf26a245d40544acaf59def9e24e0fa6e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providing-windowless-activation"></a>창 없는 활성화 제공
 창 생성 코드 (호출할 때 발생 하는, 즉 모든 **CreateWindow**) 실행 하는 데 비용이 많이 듭니다. 화면 상의 창을 유지 관리하는 컨트롤은 창에 대한 메시지를 관리해야 합니다. 따라서 창 없는 컨트롤은 창을 포함하는 컨트롤 보다 더 빠릅니다.  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
  창 없는 컨트롤은 고유 창을 갖지 않으므로 창 있는 컨테이너는 그렇지 않은 경우 컨트롤의 고유 창으로 제공되어야 할 서비스를 제공해야 합니다. 예를 들어 컨트롤이 키보드 포커스를 쿼리하거나, 마우스를 캡처하거나, 장치 컨텍스트를 가져와야 할 경우, 이러한 작업이 컨테이너에서 관리됩니다. 컨테이너는 `IOleInPlaceObjectWindowless` 인터페이스를 사용해서 해당 창에 전송된 사용자 입력 메시지를 적절한 창 없는 컨트롤로 라우팅합니다. (참조는 *ActiveX SDK* 이 인터페이스의 설명에 대 한 합니다.) `COleControl` 멤버 함수는 컨테이너에서 이러한 서비스를 호출 합니다.  
   
- 창 없는 활성화를 사용 하 여 컨트롤을 포함 된 **windowlessActivate** 에서 반환 하는 플래그 집합에서 플래그 [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags)합니다. 예:  
+ 창 없는 활성화를 사용 하 여 컨트롤을 포함 된 **windowlessActivate** 에서 반환 하는 플래그 집합에서 플래그 [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags)합니다. 예를 들어:  
   
  [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-windowless-activation_1.cpp)]  
 [!code-cpp[NVC_MFC_AxOpt#6](../mfc/codesnippet/cpp/providing-windowless-activation_2.cpp)]  
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
  창 없는 컨트롤에서는 해당 `COleControl` 멤버 함수 또는 관련 Win32 API 함수 대신 항상 `CWnd` 멤버 함수를 사용해야 합니다.  
   
- 창 없는 컨트롤을 OLE 끌어서 놓기 작업의 대상으로 지정할 수 있습니다. 일반적으로 이를 위해서는 컨트롤의 창이 놓기 대상으로 등록되어야 합니다. 컨트롤에는 고유 창이 없으므로 컨테이너가 고유 창을 놓기 대상으로 사용합니다. 컨트롤은 컨테이너가 적절한 시간에 호출을 위임할 수 있는 `IDropTarget` 인터페이스의 구현을 제공합니다. 이 인터페이스를 컨테이너에 노출 하기 위해 재정의 [colecontrol:: Getwindowlessdroptarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget)합니다. 예:  
+ 창 없는 컨트롤을 OLE 끌어서 놓기 작업의 대상으로 지정할 수 있습니다. 일반적으로 이를 위해서는 컨트롤의 창이 놓기 대상으로 등록되어야 합니다. 컨트롤에는 고유 창이 없으므로 컨테이너가 고유 창을 놓기 대상으로 사용합니다. 컨트롤은 컨테이너가 적절한 시간에 호출을 위임할 수 있는 `IDropTarget` 인터페이스의 구현을 제공합니다. 이 인터페이스를 컨테이너에 노출 하기 위해 재정의 [colecontrol:: Getwindowlessdroptarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget)합니다. 예를 들어:  
   
  [!code-cpp[NVC_MFC_AxOpt#8](../mfc/codesnippet/cpp/providing-windowless-activation_4.cpp)]  
   

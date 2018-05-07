@@ -1,10 +1,7 @@
 ---
-title: "ATL 텍스트 함수 인코딩 | Microsoft Docs"
-ms.custom: 
+title: ATL 텍스트 함수 인코딩 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetHexValue
@@ -30,12 +27,11 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-caps.latest.revision: "3"
-ms.openlocfilehash: d92ce766ea0fff11f104ae4f6d260d44faf85292
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 26eb0709c4009070e6255c6ee178f19d13d8a9c3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-text-encoding-functions"></a>ATL 텍스트 인코딩 함수
 이러한 함수는 텍스트 인코딩 및 디코딩을 지원 합니다.
@@ -69,7 +65,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlenc.h  
  
-## <a name="atlgethexvalue"></a>AtlGetHexValue
+## <a name="atlgethexvalue"></a> AtlGetHexValue
 16진수의 숫자 값을 가져오려면 이 함수를 호출합니다.  
   
 ```    
@@ -83,7 +79,7 @@ inline char AtlGetHexValue(char chIn) throw();
 ### <a name="return-value"></a>반환 값  
  16 진수 자리 수로 해석 하는 입력 문자의 숫자 값입니다. 예를 들어 0 값을 반환 하는 '0'을 입력 하 고 'A'의 입력 값이 10 반환 합니다. 입력된 문자가 16 진수가 아닌 경우이 함수는-1을 반환 합니다.  
   
-## <a name="atlgetversion"></a>AtlGetVersion
+## <a name="atlgetversion"></a> AtlGetVersion
 사용 중인 ATL 라이브러리의 버전을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -97,7 +93,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 ### <a name="return-value"></a>반환 값  
  반환 된 `DWORD` 컴파일 또는 실행 여부를 지정 하는 ATL 라이브러리 버전의 정수 값입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  함수는 다음과 같이 호출 되어야 합니다.  
   
  [!code-cpp[NVC_ATL_Utilities#95](../../atl/codesnippet/cpp/atl-text-encoding-functions_1.cpp)]  
@@ -105,7 +101,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 ### <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
 
-## <a name="atlhexdecode"></a>AtlHexDecode
+## <a name="atlhexdecode"></a> AtlHexDecode
 에 대 한 이전 호출에서와 같이 16 진수 텍스트로 인코딩된 데이터의 문자열을 디코딩합니다 [AtlHexEncode](#atlhexencode)합니다.  
   
 ```    
@@ -132,7 +128,7 @@ inline BOOL AtlHexDecode(
 ### <a name="return-value"></a>반환 값  
  반환 **TRUE** 성공 **FALSE** 실패 합니다.  
   
-## <a name="atlhexdecodegetrequiredlength"></a>AtlHexDecodeGetRequiredLength
+## <a name="atlhexdecodegetrequiredlength"></a> AtlHexDecodeGetRequiredLength
 지정된 길이의 16진수로 인코딩된 문자열에서 디코딩된 데이터를 포함할 수 있는 버퍼를 바이트 크기로 가져오려면 이 함수를 호출합니다.  
   
 ```  
@@ -146,7 +142,7 @@ inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="return-value"></a>반환 값  
  디코딩된 문자열을 갖는 버퍼에 대 한 필요한 바이트 수가 `nSrcLen` 문자입니다.  
   
-## <a name="atlhexencode"></a>AtlHexEncode
+## <a name="atlhexencode"></a> AtlHexEncode
 16진수 텍스트 문자열로 일부 데이터를 인코딩하려면 이 함수를 호출합니다.  
   
 ```  
@@ -176,7 +172,7 @@ int * pnDestLen) throw();
 ### <a name="remarks"></a>설명  
  원본 데이터의 각 바이트는 16 진수 문자를 2로 인코딩됩니다.  
   
-## <a name="atlhexencodegetrequiredlength"></a>AtlHexEncodeGetRequiredLength
+## <a name="atlhexencodegetrequiredlength"></a> AtlHexEncodeGetRequiredLength
 지정된 크기의 데이터에서 디코딩된 문자열을 포함할 수 있는 버퍼를 문자 크기로 가져오려면 이 함수를 호출합니다.  
   
 ```  
@@ -190,7 +186,7 @@ inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="return-value"></a>반환 값  
  인코딩된 데이터를 포함할 수 있는 버퍼 필요한 문자 수 `nSrcLen` 바이트입니다.  
   
-## <a name="atlhexvalue"></a>AtlHexValue
+## <a name="atlhexvalue"></a> AtlHexValue
 16진수의 숫자 값을 가져오려면 이 함수를 호출합니다.  
   
 ```  
@@ -204,7 +200,7 @@ inline short AtlHexValue(char chIn) throw();
 ### <a name="return-value"></a>반환 값  
  16 진수 자리 수로 해석 하는 입력 문자의 숫자 값입니다. 예를 들어 0 값을 반환 하는 '0'을 입력 하 고 'A'의 입력 값이 10 반환 합니다. 입력된 문자가 16 진수가 아닌 경우이 함수는-1을 반환 합니다.  
   
-## <a name="atlunicodetoutf8"></a>AtlUnicodeToUTF8
+## <a name="atlunicodetoutf8"></a> AtlUnicodeToUTF8
 유니코드 문자열을 UTF-8로 변환하려면 이 함수를 호출합니다.  
   
 ```  
@@ -234,7 +230,7 @@ ATL_NOINLINE inline int AtlUnicodeToUTF8(
 ### <a name="remarks"></a>설명  
  변환 된 문자열에 필요한 버퍼의 크기를 결정 하려면에 대 한 0을 전달 합니다.이 함수를 호출 `szDest` 및 `nDest`합니다.  
   
-## <a name="bencode"></a>BEncode  
+## <a name="bencode"></a> BEncode  
 "B" 인코딩을 사용하여 일부 데이터를 변환하려면 이 함수를 호출합니다.  
   
 ```  
@@ -268,7 +264,7 @@ inline BOOL BEncode(
 ### <a name="remarks"></a>설명  
  RFC 2047에서 설명 하는 "B" 인코딩 체계 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="bencodegetrequiredlength"></a>BEncodeGetRequiredLength 
+## <a name="bencodegetrequiredlength"></a> BEncodeGetRequiredLength 
 지정된 크기의 데이터에서 디코딩된 문자열을 포함할 수 있는 버퍼를 문자 크기로 가져오려면 이 함수를 호출합니다.  
   
 ```  
@@ -288,7 +284,7 @@ inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="remarks"></a>설명  
  RFC 2047에서 설명 하는 "B" 인코딩 체계 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="escapexml"></a>EscapeXML
+## <a name="escapexml"></a> EscapeXML
 XML에서 사용하기에 안전하지 않은 문자를 안전한 문자로 변환하려면 이 함수를 호출합니다.  
   
 ```  
@@ -316,8 +312,8 @@ inline int EscapeXML(
  `dwFlags`  
  변환이 수행 하는 하는 방법을 설명 하는 ATL_ESC 플래그입니다. 
 
-- `ATL_ESC_FLAG_NONE`기본 동작입니다. 인용 부호와 아포스트로피 변환 되지 않습니다.
-- `ATL_ESC_FLAG_ATTR`따옴표 표시와 아포스트로피 변환할 `&quot;` 및 `&apos;` 각각.
+- `ATL_ESC_FLAG_NONE` 기본 동작입니다. 인용 부호와 아포스트로피 변환 되지 않습니다.
+- `ATL_ESC_FLAG_ATTR` 따옴표 표시와 아포스트로피 변환할 `&quot;` 및 `&apos;` 각각.
 
 
   
@@ -335,7 +331,7 @@ inline int EscapeXML(
 |'|&apos;|  
 |"|&quot;|  
   
-## <a name="getextendedchars"></a>GetExtendedChars
+## <a name="getextendedchars"></a> GetExtendedChars
 문자열에서 확장된 문자 수를 가져오려면 이 함수를 호출합니다.  
   
 ```  
@@ -352,7 +348,7 @@ inline int GetExtendedChars(LPCSTR szSrc, int nSrcLen) throw();
 ### <a name="return-value"></a>반환 값  
  확장된 문자를 기준으로 하는 문자열 내에 있는 수를 반환 [IsExtendedChar](#isextendedchar)합니다.  
   
-## <a name="isextendedchar"></a>IsExtendedChar
+## <a name="isextendedchar"></a> IsExtendedChar
 지정한 문자가 확장된 문자(32보다 작거나 126보다 크고 탭, 줄 바꿈 또는 캐리지 리턴이 아님)인지 확인하려면 이 함수를 호출합니다.  
   
 ```  
@@ -366,7 +362,7 @@ inline int IsExtendedChar(char ch) throw();
 ### <a name="return-value"></a>반환 값  
  **True 이면** 문자가 확장 **FALSE** 그렇지 않은 경우.  
   
-## <a name="qencode"></a>QEncode
+## <a name="qencode"></a> QEncode
 "Q" 인코딩을 사용하여 일부 데이터를 변환하려면 이 함수를 호출합니다.  
   
 ```  
@@ -404,7 +400,7 @@ inline BOOL QEncode(
 ### <a name="remarks"></a>설명  
  "Q" 인코딩 체계 RFC 2047에 설명 되어 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="qencodegetrequiredlength"></a>QEncodeGetRequiredLength 
+## <a name="qencodegetrequiredlength"></a> QEncodeGetRequiredLength 
 지정된 크기의 데이터에서 디코딩된 문자열을 포함할 수 있는 버퍼를 문자 크기로 가져오려면 이 함수를 호출합니다.  
   
 ```  
@@ -424,7 +420,7 @@ inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="remarks"></a>설명  
  "Q" 인코딩 체계 RFC 2047에 설명 되어 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt)).  
   
-## <a name="qpdecode"></a>QPDecode
+## <a name="qpdecode"></a> QPDecode
 에 대 한 이전 호출에서와 같은 quoted-printable 형식에서 인코딩된 데이터의 문자열을 디코딩합니다 [QPEncode](#qpencode)합니다.  
   
 ```  
@@ -458,7 +454,7 @@ inline BOOL QPDecode(
 ### <a name="remarks"></a>설명  
  따옴표 붙은 인쇄 가능한 인코딩 체계 RFC 2045에 설명 되어 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="qpdecodegetrequiredlength"></a>QPDecodeGetRequiredLength
+## <a name="qpdecodegetrequiredlength"></a> QPDecodeGetRequiredLength
 지정된 길이의 quoted-printable로 인코딩된 문자열에서 디코딩된 데이터를 포함할 수 있는 버퍼를 바이트 크기로 가져오려면 이 함수를 호출합니다.  
   
 ```  
@@ -475,7 +471,7 @@ inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="remarks"></a>설명  
  따옴표 붙은 인쇄 가능한 인코딩 체계 RFC 2045에 설명 되어 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="qpencode"></a>QPEncode
+## <a name="qpencode"></a> QPEncode
 quoted-printable 형식으로 일부 데이터를 인코딩하려면 이 함수를 호출합니다.  
   
 ```  
@@ -502,8 +498,8 @@ inline BOOL QPEncode(
   
  `dwFlags`  
  변환이 수행 하는 하는 방법을 설명 하는 ATLSMTP_QPENCODE 플래그입니다. 
-- `ATLSMTP_QPENCODE_DOT`마침표는 줄의 시작 부분에 표시 되 면 것은 출력에 추가으로 인코딩됩니다.
-- `ATLSMTP_QPENCODE_TRAILING_SOFT`추가 `=\r\n` 인코딩된 문자열입니다.
+- `ATLSMTP_QPENCODE_DOT` 마침표는 줄의 시작 부분에 표시 되 면 것은 출력에 추가으로 인코딩됩니다.
+- `ATLSMTP_QPENCODE_TRAILING_SOFT` 추가 `=\r\n` 인코딩된 문자열입니다.
 
 따옴표 붙은 인쇄 가능한 인코딩 체계에 설명 되어 [RFC 2045](http://www.ietf.org/rfc/rfc2045.txt)합니다.
   
@@ -513,7 +509,7 @@ inline BOOL QPEncode(
 ### <a name="remarks"></a>설명  
  따옴표 붙은 인쇄 가능한 인코딩 체계 RFC 2045에 설명 되어 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="qpencodegetrequiredlength"></a>QPEncodeGetRequiredLength
+## <a name="qpencodegetrequiredlength"></a> QPEncodeGetRequiredLength
 지정된 크기의 데이터에서 디코딩된 문자열을 포함할 수 있는 버퍼를 문자 크기로 가져오려면 이 함수를 호출합니다.  
   
 ```  
@@ -530,7 +526,7 @@ inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="remarks"></a>설명  
  따옴표 붙은 인쇄 가능한 인코딩 체계 RFC 2045에 설명 되어 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt)).  
   
-## <a name="uudecode"></a>UUDecode
+## <a name="uudecode"></a> UUDecode
 에 대 한 이전 호출에서와 같이 uuencode 된 데이터의 문자열을 디코딩합니다 [UUEncode](#uuencode)합니다.  
   
 ```  
@@ -560,7 +556,7 @@ inline BOOL UUDecode(
 ### <a name="remarks"></a>설명  
  이 uuencoding 구현은 POSIX P1003.2b/D11 사양을 따릅니다.  
   
-## <a name="uudecodegetrequiredlength"></a>UUDecodeGetRequiredLength
+## <a name="uudecodegetrequiredlength"></a> UUDecodeGetRequiredLength
 지정된 길이의 uuencode된 문자열에서 디코딩된 데이터를 포함할 수 있는 버퍼를 바이트 크기로 가져오려면 이 함수를 호출합니다.  
   
 ```  
@@ -577,7 +573,7 @@ inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="remarks"></a>설명  
  이 uuencoding 구현은 POSIX P1003.2b/D11 사양을 따릅니다.  
   
-## <a name="uuencode"></a>UUEncode
+## <a name="uuencode"></a> UUEncode
 일부 데이터를 uuencode하려면 이 함수를 호출합니다.  
   
 ```  
@@ -608,9 +604,9 @@ inline BOOL UUEncode(
   
  `dwFlags`  
  이 함수의 동작을 제어 하는 플래그입니다. 
-- `ATLSMTP_UUENCODE_HEADE`인코딩할 헤더입니다.
-- `ATLSMTP_UUENCODE_END`인코딩할 끝입니다.
-- `ATLSMTP_UUENCODE_DOT`데이터 채우기가 수행 됩니다.  
+- `ATLSMTP_UUENCODE_HEADE` 인코딩할 헤더입니다.
+- `ATLSMTP_UUENCODE_END` 인코딩할 끝입니다.
+- `ATLSMTP_UUENCODE_DOT` 데이터 채우기가 수행 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  반환 **TRUE** 성공 **FALSE** 실패 합니다.  
@@ -618,7 +614,7 @@ inline BOOL UUEncode(
 ### <a name="remarks"></a>설명  
  이 uuencoding 구현은 POSIX P1003.2b/D11 사양을 따릅니다.  
   
-## <a name="uuencodegetrequiredlength"></a>UUEncodeGetRequiredLength
+## <a name="uuencodegetrequiredlength"></a> UUEncodeGetRequiredLength
 지정된 크기의 데이터에서 디코딩된 문자열을 포함할 수 있는 버퍼를 문자 크기로 가져오려면 이 함수를 호출합니다.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "클립보드: Windows 클립보드 사용 | Microsoft Docs"
-ms.custom: 
+title: '클립보드: Windows 클립보드 사용 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - Windows Clipboard [MFC]
 - Clipboard [MFC], Windows Clipboard API
 ms.assetid: 24415b42-9301-4a70-b69a-44c97918319f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6063a27495d46e4b54f3133b92689e4b0faaa631
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ed1b3e9cc0cdd368a37657a751df67bed3f72dc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard-using-the-windows-clipboard"></a>클립보드: Windows 클립보드 사용
 이 항목에서는 MFC 응용 프로그램 내에서 표준 Windows 클립보드 API를 사용 하는 방법을 설명 합니다.  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
  메뉴 명령, 실행 취소 같은 편집 다른 구현 (**ID_EDIT_UNDO**) 및 다시 실행 (**ID_EDIT_REDO**), 문서를 참조도 됩니다. 응용 프로그램에서 이러한 명령을 지원 하지 않는 경우 쉽게 삭제할 수 있습니다 이러한 Visual c + + 리소스 편집기를 사용 하 여 리소스 파일에서.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [데이터 복사 및 붙여넣기](../mfc/clipboard-copying-and-pasting-data.md)  
   

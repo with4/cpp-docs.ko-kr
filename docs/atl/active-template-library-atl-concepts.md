@@ -2,28 +2,23 @@
 title: 액티브 템플릿 라이브러리 (ATL) 개념 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: a3960991-4d76-4da5-9568-3fa7fde53ff4
-caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7cf2568005049cfabd9178ea4c8732a5a985954
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5636f92df42116b838c24c21d81f0b320f7d69c1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="active-template-library-atl-concepts"></a>ATL(액티브 템플릿 라이브러리) 개념
 액티브 템플릿 라이브러리 (ATL)는 작고 빠른 구성 요소 개체 모델(COM, Component Object Model)을 만들 수 있도록 해 주는 템플릿 기반의 C++ 클래스의 집합입니다. 스토크 구현, 이중 인터페이스, 표준 COM 열거자 인터페이스, 연결 지점, 분리 인터페이스 및 ActiveX 컨트롤을 포함한 핵심 COM 기능에 대한 특별한 지원을 해 줍니다.  
@@ -32,7 +27,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="in-this-section"></a>섹션 내용  
  [ATL 자습서](../atl/active-template-library-atl-tutorial.md)  
- 컨트롤 생성을 안내 하고 프로세스에서 일부 ATL 기초를 보여 줍니다.  
+ 컨트롤 생성을 안내하고 프로세스에서 일부 ATL 기초를 보여줍니다.  
   
  [COM 및 ATL 소개](../atl/introduction-to-com-and-atl.md)  
  구성 요소 개체 모델(COM) 이면의 주요 개념을 소개합니다. 이 문서에서 ATL 정의 및 사용 시기에 대해서도 간략하게 설명합니다.  

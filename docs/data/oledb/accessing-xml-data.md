@@ -1,12 +1,9 @@
 ---
-title: "XML 데이터 액세스 | Microsoft Docs"
-ms.custom: 
+title: XML 데이터 액세스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - rowsets [C++], retrieving XML data
 - CStreamRowset class, retrieving XML data
 ms.assetid: 6b693d55-a554-4846-8118-e8773b79b572
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c25e5019ebe930cec1dc5cf7c547e9bc03a3ffa8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f3abe00adee2a88d0414d688984232422a5bcfc0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="accessing-xml-data"></a>XML 데이터 액세스
 데이터 소스에서 XML 데이터를 검색 하는 두 개의 메서드가: 하나 사용 하 여 [CStreamRowset](../../data/oledb/cstreamrowset-class.md) 다른 사용 [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)합니다.  
@@ -49,7 +44,7 @@ ms.lasthandoff: 02/23/2018
 CCommand<CAccessor<CMyAccessor>, CStreamRowset> myCmd;  
 ```  
   
- 또는  
+ -또는-  
   
 ```  
 CCommand<CNoAccessor, CStreamRowset> myCmd;  
@@ -57,7 +52,7 @@ CCommand<CNoAccessor, CStreamRowset> myCmd;
   
  일반적으로 호출 하는 경우 `CCommand::Open` (예를 들어 지정 하 `CRowset` 으로 `TRowset` 클래스)을 가져와서는 `IRowset` 포인터. `ICommand::Execute` 반환는 `IRowset` 에 저장 된 포인터는 `m_spRowset` 의 멤버는 `CRowset` 개체입니다. 와 같은 메서드 `MoveFirst`, `MoveNext`, 및 `GetData` 해당 포인터를 사용 하 여 데이터를 검색 합니다.  
   
- 이와 반대로 호출 하는 경우 `CCommand::Open` (하지만 지정 `CStreamRowset` 로 `TRowset` 클래스), `ICommand::Execute` 반환는 `ISequentialStream` 에 저장 된 포인터는 `m_spStream` 데이터 멤버의 [CStreamRowset](../../data/oledb/cstreamrowset-class.md). 사용 하 여는 `Read` 메서드를 XML 형식 (유니코드 문자열) 데이터를 검색 합니다. 예:  
+ 이와 반대로 호출 하는 경우 `CCommand::Open` (하지만 지정 `CStreamRowset` 로 `TRowset` 클래스), `ICommand::Execute` 반환는 `ISequentialStream` 에 저장 된 포인터는 `m_spStream` 데이터 멤버의 [CStreamRowset](../../data/oledb/cstreamrowset-class.md). 사용 하 여는 `Read` 메서드를 XML 형식 (유니코드 문자열) 데이터를 검색 합니다. 예를 들어:  
   
 ```  
 myCmd.m_spStream->Read()  

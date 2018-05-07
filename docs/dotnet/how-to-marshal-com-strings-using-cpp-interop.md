@@ -1,13 +1,10 @@
 ---
-title: "방법: c + + Interop를 사용 하 여 COM 문자열 마샬링 | Microsoft Docs"
-ms.custom: 
+title: '방법: c + + Interop를 사용 하 여 COM 문자열 마샬링 | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 45a79f3aa78d229c71aba5a1d1144d05afe7bbd7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 918825dd6563f59167baa844b94edfc1033498a6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-marshal-com-strings-using-c-interop"></a>방법: C++ Interop를 사용하여 COM 문자열 마샬링
 이 항목에서 설명 하는 BSTR (COM 프로그래밍에서 선호 하는 기본 문자열 형식) 수 있는 방법은 관리 되지 않는 함수를 코드와 관리 되는 전달 합니다. 다른 문자열 형식 상호 작용을 하기 위한 다음 항목을 참조 합니다.  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  다음 코드 예제에서 사용 된 [관리, 관리 되지 않는](../preprocessor/managed-unmanaged.md) #pragma 지시문을 구현 하 관리는 관리 되지 않는 함수에서 동일한 파일에 별도 파일에 정의 된 경우 이러한 함수가 동일한 방식으로 상호 운용 합니다. 관리 되지 않는 함수만 포함 된 파일 사용 하 여 컴파일할 필요가 없습니다 [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 BSTR (COM 프로그래밍에서 사용 하는 문자열 형식)를 전달할 수 있습니다 어떻게 관리 되는 관리 되지 않는 함수입니다. 호출 함수 사용 하 여 관리 되는 <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> .NET System.String의 내용에 대 한 BSTR 표현의 주소를 가져옵니다. 이 포인터를 사용 하 여 고정 [pin_ptr (C + + /cli CLI)](../windows/pin-ptr-cpp-cli.md) 관리 되지 않는 함수를 실행 하는 동안 실제 주소가 가비지 수집 주기 동안 변경 되지 않도록 할 수 있도록 합니다. 가비지 수집기가 이동 될 때까지 메모리에서 허용 되지 않습니다는 [pin_ptr (C + + CLI)](../windows/pin-ptr-cpp-cli.md) 범위를 벗어나게 합니다.  
   
 ```  
@@ -75,7 +70,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 BSTR 전달 하는 방법 관리 되지 않는 함수에 관리 되지 않는 합니다. 관리 되는 함수에 문자열을 사용 하 여 BSTR로 하거나 사용 하 여 수신 <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> 변환할는 <xref:System.String> 다른 용도로 함수를 관리 합니다. BSTR를 나타내는 메모리 할당 되기 때문에 관리 되지 않는 힙에서 고정 작업이, 필요 하지는 관리 되지 않는 힙에서 가비지 컬렉션 때문에 있습니다.  
   
 ```  

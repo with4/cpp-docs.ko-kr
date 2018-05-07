@@ -1,13 +1,10 @@
 ---
-title: "대화 상자 컨트롤 및 변수 형식 | Microsoft Docs"
-ms.custom: 
+title: 대화 상자 컨트롤 및 변수 형식 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: f9cd9cea-45a6-4349-8358-e5efbcdcff76
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 744b9da2db456a72ed386806d8a4aa34c5942f69
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2fbae37072f50898181334a9059a7dc9c6a83a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-box-controls-and-variable-types"></a>대화 상자 컨트롤 및 변수 형식
 사용할 수는 [멤버 변수 추가 마법사](../ide/add-member-variable-wizard.md) MFC를 사용 하 여 만든 대화 상자 컨트롤 멤버 변수를 추가 합니다. 멤버 변수를 추가 하는 컨트롤의 형식 대화 상자에 표시 되는 옵션을 결정 합니다.  

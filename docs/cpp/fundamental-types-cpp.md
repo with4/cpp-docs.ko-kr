@@ -1,12 +1,9 @@
 ---
-title: "기본 형식 (c + +) | Microsoft Docs"
-ms.custom: 
+title: 기본 형식 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __int128_cpp
@@ -52,17 +49,15 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb52d6a987289ed77d7b63a5497323ddad2b467
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c24ee360f1c14aa9b355f45ec1c12877efa306c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fundamental-types--c"></a>기본 형식 (C++)
 C++의 기본 형식은 정수 계열, 부동 소수점 및 void의 세 가지 범주로 구분됩니다. 정수 계열 형식은 정수를 처리할 수 있습니다. 부동 소수점 형식은 소수 부분이 있을 수 있는 값을 지정할 수 있습니다.  
@@ -85,9 +80,9 @@ C++의 기본 형식은 정수 계열, 부동 소수점 및 void의 세 가지 �
 ||`bool`|`bool` 형식은 `true` 또는 `false`의 두 값 중 하나를 가질 수 있는 정수 계열 형식입니다. 크기는 지정되지 않습니다.|  
 ||`short`|`short` `int` 형식(또는 단순히 `short`)은 `char`형식의 크기보다 크거나 같고 `int`형식의 크기보다 짧거나 같은 정수 계열 형식입니다.<br /><br /> `short` 형식의 개체를 `signed` `short` 또는 `unsigned short`로 선언할 수 있습니다. `Signed short` 와 `short`는 동의어입니다.|  
 ||`int`|`int` 형식은 `short` `int`형식의 크기보다 크거나 같고 `long`형식의 크기보다 짧거나 같은 정수 계열 형식입니다.<br /><br /> `int` 형식의 개체를 `signed` `int` 또는 `unsigned` `int`로 선언할 수 있습니다. `Signed` `int` 와 `int`는 동의어입니다.|  
-||`__int8`, `__int16`, `__int32`, `__int64`|크기가 지정된 정수 `__int n`입니다. 여기서 `n` 은 정수 변수의 크기(비트)입니다. `__int8`, `__int16`, `__int32` 과 `__int64` 은 Microsoft 전용 키워드입니다. 일부 아키텍처에서 모든 형식을 사용할 수 있습니다. `(__int128`지원 되지 않습니다.)|  
+||`__int8`, `__int16`, `__int32`, `__int64`|크기가 지정된 정수 `__int n`입니다. 여기서 `n` 은 정수 변수의 크기(비트)입니다. `__int8`, `__int16`, `__int32` 과 `__int64` 은 Microsoft 전용 키워드입니다. 일부 아키텍처에서 모든 형식을 사용할 수 있습니다. `(__int128` 지원 되지 않습니다.)|  
 ||`long`|`long` 형식(또는 `long` `int`)은 `int`형식의 크기보다 크거나 같은 정수 계열 형식입니다.<br /><br /> `long` 형식의 개체를 `signed` `long` 또는 `unsigned` `long`로 선언할 수 있습니다. `Signed` `long` 와 `long`는 동의어입니다.|  
-||`long` `long`|부호 없는 `long`보다 큽니다.<br /><br /> `long long` 형식의 개체를 `signed` `long long` 또는 `unsigned` `long long`로 선언할 수 있습니다. `signed``long long` 에 대 한 동의어 `long long`합니다.|  
+||`long` `long`|부호 없는 `long`보다 큽니다.<br /><br /> `long long` 형식의 개체를 `signed` `long long` 또는 `unsigned` `long long`로 선언할 수 있습니다. `signed` `long long` 에 대 한 동의어 `long long`합니다.|  
 ||`wchar_t`, `__wchar_t`|`wchar_t` 형식의 변수는 와이드 문자 또는 멀티바이트 문자 형식을 지정합니다. 기본적으로 `wchar_t` 는 네이티브 형식이지만, [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 를 사용하여 `wchar_t` 를 `unsigned short`에 대한 typedef로 만들 수 있습니다. `__wchar_t` 형식은 네이티브 `wchar_t` 형식의 Microsoft 전용 동의어입니다.<br /><br /> 문자 또는 문자열 리터럴 앞에 L 접두사를 사용하여 와이드 문자 형식을 지정합니다.|  
 |부동 소수점|`float`|`float` 형식은 가장 작은 부동 소수점 형식입니다.|  
 ||`double`|`double` 형식은 `float`형식보다 크거나 같지만 `long` `double`형식의 크기보다 짧거나 같은 부동 소수점 형식입니다.<br /><br /> Microsoft 전용: `long double` 과 `double` 의 표현은 동일합니다. 그러나 `long double` 및 `double` 은 별개 형식입니다.|  

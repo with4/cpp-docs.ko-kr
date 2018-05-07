@@ -1,13 +1,10 @@
 ---
-title: "&lt;참조&gt; (Visual c + +) | Microsoft Docs"
-ms.custom: 
+title: '&lt;참조&gt; (Visual c + +) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - <see>
 - see
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - <see> C++ XML tag
 - see C++ XML tag
 ms.assetid: 20ef66f4-b278-45cf-8613-63919edf5720
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15e1aedefe6d20c181ff208f76a61f49e15f5214
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a03dd56320b948d47c765f253bf3e6b706ed2b56
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ltseegt-visual-c"></a>&lt;참조&gt; (Visual c + +)
 \<see> 태그를 사용하면 텍스트 내부에서 링크를 지정할 수 있습니다. 사용 하 여 [ \<seealso >](../ide/seealso-visual-cpp.md) 참고 항목 섹션에 나타낼 수 있는 텍스트를 지정 합니다.  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  Visual C++ 컴파일러에서는 문서 주석을 통해 단일 패스로 cref 참조를 확인하려고 합니다.  따라서 C++ 조회 규칙을 사용하는 경우 컴파일러에서 기호를 찾을 수 없으며 참조는 확인되지 않음으로 표시됩니다. 참조 [ \<seealso >](../ide/seealso-visual-cpp.md) 자세한 정보에 대 한 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플은 제네릭 형식에 대 한 cref 참조를 확인할 수 있는 방법은 되도록, 컴파일러 참조를 확인 합니다.  
   
 ```  

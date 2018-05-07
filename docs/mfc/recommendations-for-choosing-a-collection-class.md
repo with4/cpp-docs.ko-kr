@@ -1,13 +1,10 @@
 ---
-title: "컬렉션 클래스 선택에 대 한 권장 사항 | Microsoft Docs"
-ms.custom: 
+title: 컬렉션 클래스 선택에 대 한 권장 사항 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f389a621991418c054b62be477a64f02c4afaae2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28527f9668b9ca6a9ef00cf399a04ce9bad65716
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>컬렉션 클래스 선택에 대한 권장 사항
 이 문서에서는 특정 응용 프로그램 요구 사항에 적합한 컬렉션을 선택하는 데 도움이 되는 자세한 정보를 제공합니다.  

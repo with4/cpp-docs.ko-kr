@@ -1,16 +1,12 @@
 ---
-title: "컴파일러 오류 C2400 C2499 ~ | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C2400 C2499 ~ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -23,7 +19,6 @@ f1_keywords:
 - C2497
 helpviewer_keywords:
 - C2416
-- C2429
 - C2442
 - C2453
 - C2454
@@ -37,17 +32,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27327069f687c8d3ef33c97f4efbdeaac14bf1ec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 208698ca27cadca128ec6e4ed1f99f1b9ea713f9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>컴파일러 오류 C2400 ~ C2499
 
@@ -88,7 +81,7 @@ ms.lasthandoff: 12/21/2017
 |[컴파일러 오류 C2426](compiler-error-c2426.md)|'*토큰*':에 잘못 된 연산자 '*컨텍스트*'|
 |[컴파일러 오류 C2427](compiler-error-c2427.md)|'*클래스*':이 범위에서 클래스를 정의할 수 없습니다|
 |[컴파일러 오류 C2428](compiler-error-c2428.md)|'*작업*': 'bool' 형식의 피연산자에 사용할 수 없습니다|
-|컴파일러 오류 C2429|*상황에 맞는* '*컨텍스트*'컴파일러 플래그 필요'*옵션*'|
+|[컴파일러 오류 C2429](compiler-error-c2429.md)|'*언어 기능*'컴파일러 플래그 필요'*컴파일러 옵션*'|
 |[컴파일러 오류 C2430](compiler-error-c2430.md)|에 인덱스 레지스터가 두 개 이상의 '*컨텍스트*'|
 |[컴파일러 오류 C2431](compiler-error-c2431.md)|에 잘못 된 인덱스 레지스터가 '*컨텍스트*'|
 |[컴파일러 오류 C2432](compiler-error-c2432.md)|16 비트 데이터에 대 한 참조가 잘못 되었습니다 '*컨텍스트*'|
@@ -149,7 +142,7 @@ ms.lasthandoff: 12/21/2017
 |[컴파일러 오류 C2491](compiler-error-c2491.md)|'*식별자*': dllimport의 정의 *함수* 허용 되지 않습니다|
 |[컴파일러 오류 C2492](compiler-error-c2492.md)|'*변수*': 스레드 저장 기간이 있는 데이터에는 dll 인터페이스를 사용할 수 없습니다|
 |[컴파일러 오류 C2493](compiler-error-c2493.md)|__based의 형식이|
-|[컴파일러 오류 C2494](compiler-error-c2494.md)|'*키워드*' 필터 식 내에서 호출할 수 없습니다 또는 &#95; &#95; 마지막 으로/finally 블록|
+|[컴파일러 오류 C2494](compiler-error-c2494.md)|'*키워드*' 필터 식 내에서 호출할 수 없습니다 또는 &#95; &#95;마지막/finally 블록|
 |[컴파일러 오류 C2495](compiler-error-c2495.md)|'*식별자*': '__declspec(noexcept)'는 함수 선언 또는 정의에 적용 될 수 있습니다|
 |[컴파일러 오류 C2496](compiler-error-c2496.md)|'*식별자*': 'selectany' 외부 링크가 있는 데이터 항목에만 적용 될 수 있습니다|
 |컴파일러 오류 C2497|'*식별자*': 'implementation_key'는 함수 선언에만 적용할 수 있습니다|

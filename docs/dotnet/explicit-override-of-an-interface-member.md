@@ -1,13 +1,10 @@
 ---
-title: "인터페이스 멤버 명시적 재정의 | Microsoft Docs"
-ms.custom: 
+title: 인터페이스 멤버 명시적 재정의 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,23 +14,21 @@ helpviewer_keywords:
 - functions [C++], overriding
 - explicit override of virtual function
 ms.assetid: 46f1f536-bf43-4311-9a17-ff2282e528a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 85681b2e2aeeb6dbeb6ffdf511827fb1fc1cb029
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 811112d2721edccede6c7b4a278189fdec874523
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="explicit-override-of-an-interface-member"></a>인터페이스 멤버 명시적 재정의
 선언 클래스 내에서 인터페이스 멤버 명시적 재정의 구문은 Visual c + + Managed Extensions for c + + 변경 되었습니다.  
   
- -클래스 개체 인터페이스 핸들을 통해 조작 때 사용 되는 클래스 인터페이스를 통해 클래스 개체를 사용 하는 경우 사용 되는 인터페이스를 구현 하는 클래스 내에서 인터페이스 멤버의 두 인스턴스를 제공 하고자 합니다. 예:  
+ -클래스 개체 인터페이스 핸들을 통해 조작 때 사용 되는 클래스 인터페이스를 통해 클래스 개체를 사용 하는 경우 사용 되는 인터페이스를 구현 하는 클래스 내에서 인터페이스 멤버의 두 인스턴스를 제공 하고자 합니다. 예를 들어:  
   
 ```  
 public __gc class R : public ICloneable {  
@@ -64,4 +59,4 @@ public:
   
 ## <a name="see-also"></a>참고 항목  
  [클래스 또는 인터페이스 내에서 멤버 선언 (C + + /cli CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [명시적 재정](../windows/explicit-overrides-cpp-component-extensions.md)
+ [명시적 재정의](../windows/explicit-overrides-cpp-component-extensions.md)

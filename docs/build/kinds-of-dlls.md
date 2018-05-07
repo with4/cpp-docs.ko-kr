@@ -1,13 +1,10 @@
 ---
-title: "Dll의 종류 | Microsoft Docs"
-ms.custom: 
+title: Dll의 종류 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47ce4a9264a59f88f22cd40bc3b6d6620c9702c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 605d60535df8d0a94d58e120df89f975402b8a22
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="kinds-of-dlls"></a>DLL 종류
 이 항목에서는 작성 하는 DLL의 종류를 결정 하는 데 유용한 정보를 제공 합니다.  
   
-##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a>다른 종류의 사용 가능한 Dll  
+##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a> 다른 종류의 사용 가능한 Dll  
  Visual c + +를 사용 하 여 Microsoft Foundation 클래스 (MFC) 라이브러리를 사용 하지 않는 C 또는 c + +에서 Win32 Dll을 빌드할 수 있습니다. Win32 응용 프로그램 마법사로 비 MFC DLL 프로젝트를 만들 수 있습니다.  
   
  MFC 라이브러리 자체는 여러 MFC DLL 마법사로 Dll 또는 정적 연결 라이브러리 중 하나에 사용할 수 있습니다. DLL에서 MFC를 사용 중인 경우 Visual c + + 3 가지 다른 DLL 개발 시나리오를 지원 합니다.  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [사용 하는 DLL의 종류](#_core_which_kind_of_dll_to_use)  
   
-##  <a name="_core_which_kind_of_dll_to_use"></a>사용 하 여 DLL의 종류를 결정합니다.  
+##  <a name="_core_which_kind_of_dll_to_use"></a> 사용 하 여 DLL의 종류를 결정합니다.  
  DLL에서 MFC를 사용 하지 않는 Visual c + +를 사용 하 여 비 MFC Win32 DLL을 빌드합니다. 메모리 및 디스크 공간을 많이 차지 (정적 또는 동적으로)을 MFC DLL을 링크 합니다. DLL이 MFC 실제로 사용 하지 않는 한 MFC에 링크 하지 말아야 합니다.  
   
  DLL MFC를 사용 하는 MFC 또는 비 MFC 응용 프로그램에서 사용할 경우 동적으로 MFC에 링크 하는 MFC 기본 DLL 또는 정적으로 MFC에 링크 하는 MFC 기본 DLL 빌드해야 합니다. 대부분의 경우에서 동적으로 MFC에 링크 하는 DLL의 파일 크기는 훨씬 더 작은 되 고 공유 버전의 MFC 사용 하 여 메모리에 공간 절약에 대해서는 중요할 수 있습니다는 MFC 기본 DLL를 사용 하려고 할 합니다. MFC에 정적으로 링크 하는 경우 DLL의 파일 크기 보다 큰 되며 MFC 라이브러리 코드의 개인 복사본이 로드 때문에 잠재적으로 추가 메모리를 차지 합니다.  

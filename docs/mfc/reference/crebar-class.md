@@ -1,12 +1,9 @@
 ---
-title: "CReBar 클래스 | Microsoft Docs"
-ms.custom: 
+title: CReBar 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CReBar
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2cd32c4df0465426d99ca6246648520d160f382e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 94fc1e0ccad8980e0ed5a1cc0f8c0262502e1398
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crebar-class"></a>CReBar 클래스
 rebar 컨트롤의 레이아웃, 지속성 및 상태 정보를 제공하는 컨트롤 막대입니다.  
@@ -79,7 +74,7 @@ class CReBar : public CControlBar
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxext.h  
   
-##  <a name="addbar"></a>CReBar::AddBar  
+##  <a name="addbar"></a>  CReBar::AddBar  
  에 rebar 밴드 추가 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -120,10 +115,10 @@ BOOL AddBar(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CReBarCtrl#1](../../mfc/reference/codesnippet/cpp/crebar-class_1.cpp)]  
   
-##  <a name="create"></a>CReBar::Create  
+##  <a name="create"></a>  CReBar::Create  
  이를 rebar 만드는 함수를 호출 합니다.  
   
 ```  
@@ -150,10 +145,10 @@ virtual BOOL Create(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CReBar::AddBar](#addbar)합니다.  
   
-##  <a name="getrebarctrl"></a>CReBar::GetReBarCtrl  
+##  <a name="getrebarctrl"></a>  CReBar::GetReBarCtrl  
  이 멤버 함수에는 기본 공용 컨트롤에 직접 액세스할을 수 있습니다.  
   
 ```  
@@ -168,7 +163,7 @@ CReBarCtrl& GetReBarCtrl() const;
   
  사용에 대 한 자세한 내용은 `CReBarCtrl` 프로그램 rebar를 사용자 지정 하려면 참조 [CReBarCtrl 사용 하 여](../../mfc/using-crebarctrl.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CReBarCtrl#2](../../mfc/reference/codesnippet/cpp/crebar-class_2.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

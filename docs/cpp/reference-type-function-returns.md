@@ -1,12 +1,9 @@
 ---
-title: "참조 형식 함수 반환 | Microsoft Docs"
-ms.custom: 
+title: 참조 형식 함수 반환 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - data types [C++], function return types
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3a5d0b299b2bc38c95420515ab49eabd1268305
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 867313625ccc90924eed0c0c9405970f2cb90f8a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reference-type-function-returns"></a>참조 형식 함수 반환
 참조 형식을 반환하도록 함수를 선언할 수 있습니다. 이렇게 선언하는 데에는 다음과 같은 두 가지 이유가 있습니다.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  함수가 l-value로 계산되어야 하는 경우에도 참조 반환 형식이 유용할 수 있습니다. 대부분의 오버로드된 연산자, 특히 할당 연산자가 이 범주에 속합니다. 오버 로드 된 연산자에 대해서는 설명 [오버 로드 된 연산자](../cpp/operator-overloading.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  `Point` 예제를 참조하십시오.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "TN042: ODBC 드라이버 개발자 권장 사항 | Microsoft Docs"
-ms.custom: 
+title: 'TN042: ODBC 드라이버 개발자 권장 사항 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.odbc
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - databases [MFC], ODBC
 - TN042
 ms.assetid: ecc6b5d9-f480-4582-9e22-8309fe561dad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad6361266ebf2f09b8f34d150de835b25c55720b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35c75f5c5bae3a1b56abe91340de00f373663792
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn042-odbc-driver-developer-recommendations"></a>TN042: ODBC 드라이버 개발자 권장 사항
 > [!NOTE]
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
  **SQLGetInfo SQL_DATABASE_NAME** 호출 됩니다.  
   
 ## <a name="begintrans-committrans-rollback"></a>BeginTrans, CommitTrans 롤백  
- **SQLSetConnectOption SQL_AUTOCOMMIT** 및 **SQLTransact SQL_COMMIT**, **SQL_ROLLBACK** 및 **SQL_AUTOCOMMIT** 경우 호출 될 트랜잭션 만들어진 요청입니다.  
+ **SQLSetConnectOption SQL_AUTOCOMMIT** 및 **SQLTransact SQL_COMMIT**, **SQL_ROLLBACK** 및 **SQL_AUTOCOMMIT** 트랜잭션 요청 하는 경우 호출 됩니다 수행 됩니다.  
   
 ## <a name="crecordsets"></a>CRecordsets  
  **SQLAllocStmt**, **SQLPrepare**, **SQLExecute** (에 대 한 **열려** 및 **Requery**), **SQLExecDirect**  (업데이트 작업의 경우)을 위한 **SQLFreeStmt** 지원 되어야 합니다. **SQLNumResultCols** 및 **SQLDescribeCol** 결과 집합에서 다양 한 시기에 호출 됩니다.  

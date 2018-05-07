@@ -1,38 +1,33 @@
 ---
-title: "방법: 추가 명령 라우팅 windows Forms 컨트롤 | Microsoft Docs"
-ms.custom: 
+title: '방법: 추가 명령 라우팅 windows Forms 컨트롤 | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - command routing [C++], adding to Windows Forms controls
 - Windows Forms controls [C++], command routing
 ms.assetid: bf138ece-b463-442a-b0a0-de7063a760c0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bcd082b22c61e2444d70d936c225e538c2429222
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c13b0bedf7c81431449aaed8d4fa8f067cdf3d9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>방법: Windows Forms 컨트롤에 명령 라우팅 추가
 [CWinFormsView](../mfc/reference/cwinformsview-class.md) MFC 명령 (예를 들어 프레임 메뉴 항목 및 도구 모음 단추)을 처리할 수 있도록 허용 하는 사용자 정의 컨트롤에 명령 및 명령 업데이트 UI 메시지를 라우팅합니다.  
   
  사용자 정의 컨트롤 사용 하 여 [ICommandTarget::Initialize](../mfc/reference/icommandtarget-interface.md#initialize) 에서 명령 원본 개체에 대 한 참조를 저장 하 `m_CmdSrc`다음 예제에 나온 것 처럼 합니다. 사용 하도록 `ICommandTarget` mfcmifc80.dll에 대 한 참조를 추가 해야 합니다.  
   
- `CWinFormsView`관리 되는 사용자 정의 컨트롤에 전달 하 여 몇 가지 일반적인 MFC 뷰 알림을 처리 합니다. 이러한 알림에 포함 된 [OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate), [OnUpdate](../mfc/reference/iview-interface.md#onupdate) 및 [OnActivateView](../mfc/reference/iview-interface.md#onactivateview) 메서드.  
+ `CWinFormsView` 관리 되는 사용자 정의 컨트롤에 전달 하 여 몇 가지 일반적인 MFC 뷰 알림을 처리 합니다. 이러한 알림에 포함 된 [OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate), [OnUpdate](../mfc/reference/iview-interface.md#onupdate) 및 [OnActivateView](../mfc/reference/iview-interface.md#onactivateview) 메서드.  
   
  이 항목에서는 이전에 완료 된 [하는 방법: 대화 상자에 사용자 정의 컨트롤 및 호스트 만들기](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) 및 [하는 방법: 사용자 정의 컨트롤 및 호스트 MDI 뷰 만들기](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)합니다.  
   

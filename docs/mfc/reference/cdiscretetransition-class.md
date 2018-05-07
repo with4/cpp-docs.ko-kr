@@ -1,12 +1,9 @@
 ---
-title: "CDiscreteTransition 클래스 | Microsoft Docs"
-ms.custom: 
+title: CDiscreteTransition 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDiscreteTransition
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CDiscreteTransition [MFC], m_delay
 - CDiscreteTransition [MFC], m_hold
 ms.assetid: b4d84fb3-ccaa-451c-a69b-6b50dcb9b9c8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd4b1b7c868c13176d2cd99204b0bae1e2b9992d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 858304a41cb015711393ea6cc41e73ddbcc8cd8b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdiscretetransition-class"></a>CDiscreteTransition 클래스
 불연속 전환을 캡슐화합니다.  
@@ -81,7 +76,7 @@ class CDiscreteTransition : public CBaseTransition;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="cdiscretetransition"></a>CDiscreteTransition::CDiscreteTransition  
+##  <a name="cdiscretetransition"></a>  CDiscreteTransition::CDiscreteTransition  
  불연속 전환을 개체를 생성 하 고 해당 매개 변수를 초기화 합니다.  
   
 ```  
@@ -101,7 +96,7 @@ CDiscreteTransition(
  `hold`  
  으로 최종 값에서 변수를 유지 하는 시간의 양입니다.  
   
-##  <a name="create"></a>CDiscreteTransition::Create  
+##  <a name="create"></a>  CDiscreteTransition::Create  
  캡슐화 된 전환 COM 개체를 만드는 전환 라이브러리를 호출 합니다.  
   
 ```  
@@ -117,21 +112,21 @@ virtual BOOL Create(
 ### <a name="return-value"></a>반환 값  
  TRUE 이면 전환을 만들었습니다. 그렇지 않으면 FALSE입니다.  
   
-##  <a name="m_dblfinalvalue"></a>CDiscreteTransition::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>  CDiscreteTransition::m_dblFinalValue  
  전환의 끝에서 애니메이션 변수의 값입니다.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="m_delay"></a>CDiscreteTransition::m_delay  
+##  <a name="m_delay"></a>  CDiscreteTransition::m_delay  
  최종 값으로 인스턴스화 스위치를 지연 하는 기준인 시간의 양입니다.  
   
 ```  
 UI_ANIMATION_SECONDS m_delay;  
 ```  
   
-##  <a name="m_hold"></a>CDiscreteTransition::m_hold  
+##  <a name="m_hold"></a>  CDiscreteTransition::m_hold  
  으로 최종 값에서 변수를 유지 하는 시간의 양입니다.  
   
 ```  

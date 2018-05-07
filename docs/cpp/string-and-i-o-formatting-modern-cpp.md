@@ -1,27 +1,22 @@
 ---
-title: "문자열 및 I/o 서식 (최신 c + +) | Microsoft Docs"
-ms.custom: 
+title: 문자열 및 I/o 서식 (최신 c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a13861fe03547e37c4de72c21a528e297a217511
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 391648d71fa3d38a0f704a014c163b7f8b102e40
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-and-io-formatting-modern-c"></a>문자열 및 I/O 서식 지정(최신 C++)
 C + + [iostreams](../standard-library/iostream.md) 서식이 지정 된 문자열 I/O 수 있습니다. 예를 들어 다음 코드를 보여 줍니다 출력 16 진수, 먼저 현재 상태를 저장 하 고 다시 상태 서식을 cout에 전달 되 고 나면 이런 방식으로 한 줄에 대 한 뿐 아니라 변경 될 때까지 유지 됩니다 때문에 이후에 설정 하는 정수에 서식을 지정 하려면 cout를 설정 하는 방법 코드입니다.  
@@ -78,7 +73,7 @@ int main()
   
 ## <a name="see-also"></a>참고 항목  
  [C + +의 진화](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C + + 언어 참조](../cpp/cpp-language-reference.md)   
+ [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [C++ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)   
  [\<iostream >](../standard-library/iostream.md)   
  [\<제한 >](../standard-library/limits.md)   

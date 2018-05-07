@@ -1,27 +1,22 @@
 ---
-title: "컴파일러 경고 (수준 1) C4436 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 1) C4436 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 dev_langs:
 - C++
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1018d678b6105f2d727f7806326218c168d8f728
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1da06a329a9c0bdfcff6877ce69c8e3672619bb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4436"></a>컴파일러 경고(수준 1) C4436
 생성자 또는 소멸자에서 가상 기본 'class1'에서 'class2'로의 dynamic_cast는 부분적으로 생성된 개체와 함께 실패할 수 있습니다.        /vd2를 사용해서 컴파일하거나 해당 #pragma vtordisp(2)에 'class2'를 정의하십시오.  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  경고는 부분적으로 생성된 개체에서 작동할 경우 `dynamic_cast`가 올바르게 작동하지 않을 수 있음을 나타냅니다.  이 경우는 파생된 생성자/소멸자가 추가로 파생된 일부 개체의 하위 개체에서 작동하는 경우에 발생합니다.  경고에 지정된 파생된 클래스가 더 이상 파생되지 않을 경우 경고를 무시해도 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플은 C4436을 생성하고 누락된 `vtordisp` 필드로부터 발생하는 코드 생성 문제를 보여줍니다.  
   
 ```cpp  

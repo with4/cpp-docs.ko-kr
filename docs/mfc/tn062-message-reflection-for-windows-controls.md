@@ -1,13 +1,10 @@
 ---
-title: "TN062: Windows 컨트롤에 대 한 리플렉션의 메시지 | Microsoft Docs"
-ms.custom: 
+title: 'TN062: Windows 컨트롤에 대 한 리플렉션의 메시지 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.controls.messages
 dev_langs:
@@ -36,17 +33,15 @@ helpviewer_keywords:
 - WM_NOTIFY message [MFC]
 - ON_CONTROL_REFLECT macro
 ms.assetid: 53efb0ba-fcda-4fa0-a3c7-14e0b78fb494
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdf9a0dd227cb54ba85c85901f706966326b1b66
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba8e9cac3b7f7997da8c620966234a630b9b9fbd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>TN062: Windows 컨트롤에 대한 메시지 리플렉션
 > [!NOTE]
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
   
  특정 메시지에 대 한 처리기를 제공 했지만 또는 부모 창의 클래스에서 메시지의 범위에 대 한이 파일로 재정의 됩니다 하는 경우 사용자 고유의 처리기에서 기본 클래스 처리기 함수를 호출 하지 않으면 제공 동일한 메시지에 대 한 메시지 처리기를 반영 합니다. 예를 들어, 처리 하는 경우 `WM_CTLCOLOR` 대화 상자 클래스를 처리 리플 렉 트 된 메시지 처리기를 재정의 합니다.  
   
- 특정에 대 한 처리기에서 부모 창 클래스를 제공 하는 경우 **WM_NOTIFY** 메시지 또는 요소의 범위 **WM_NOTIFY** 메시지를 해당 메시지를 전송 하는 자식 컨트롤에 있는 경우에 호출할 수 처리기 리플 렉 트 된 메시지 처리기를 통해 없는 **ON_NOTIFY_REFLECT()**합니다. 사용 하는 경우 **ON_NOTIFY_REFLECT_EX()** 메시지 맵에서 메시지 처리기 수 또는 부모 창 메시지를 처리 하기를 사용할 수 없습니다. 처리기에서 반환 하는 경우 **FALSE**, 메시지를 반환 하는 호출 하는 동안 부모도에서 처리 되는 **TRUE** 취급 하는 데 부모를 허용 하지 않습니다. 참고 리플 렉 트 된 메시지는 알림 메시지 보다 먼저 처리 됩니다.  
+ 특정에 대 한 처리기에서 부모 창 클래스를 제공 하는 경우 **WM_NOTIFY** 메시지 또는 요소의 범위 **WM_NOTIFY** 메시지를 해당 메시지를 전송 하는 자식 컨트롤에 있는 경우에 호출할 수 처리기 리플 렉 트 된 메시지 처리기를 통해 없는 **ON_NOTIFY_REFLECT()** 합니다. 사용 하는 경우 **ON_NOTIFY_REFLECT_EX()** 메시지 맵에서 메시지 처리기 수 또는 부모 창 메시지를 처리 하기를 사용할 수 없습니다. 처리기에서 반환 하는 경우 **FALSE**, 메시지를 반환 하는 호출 하는 동안 부모도에서 처리 되는 **TRUE** 취급 하는 데 부모를 허용 하지 않습니다. 참고 리플 렉 트 된 메시지는 알림 메시지 보다 먼저 처리 됩니다.  
   
  경우는 **WM_NOTIFY** 메시지가 전송 된, 컨트롤은 첫 번째 예외를 처리를 제공 합니다. 다른 리플 렉 트 된 메시지를 보내는 경우 부모 창에는 첫 번째 예외를 처리 하 고 리플 렉 트 된 메시지를 받을 컨트롤입니다. 이렇게 하려면 처리기 함수 및 컨트롤의 클래스 메시지 맵에 적합 한 항목 필요 합니다.  
   

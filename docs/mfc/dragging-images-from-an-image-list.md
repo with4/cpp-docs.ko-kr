@@ -1,13 +1,10 @@
 ---
-title: "이미지 목록에서 이미지 끌기 | Microsoft Docs"
-ms.custom: 
+title: 이미지 목록에서 이미지 끌기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - image lists [MFC], dragging images from
 - images [MFC], dragging from image lists
 ms.assetid: af691db8-e4f0-4046-b7b9-9acc68d3713d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 792f112952493fe1ee86d52a6a235604ebee9db5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d54984cdc1dc7897fb4f5d1d9680c6a2b95a787d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dragging-images-from-an-image-list"></a>이미지 목록에서 이미지 끌기
 [CImageList](../mfc/reference/cimagelist-class.md) 화면에 이미지를 끌어 올 함수가 포함 됩니다. 끌기 함수가 컬러 상태로 커서의 깜빡임 없이 이미지를 원활 하 게 이동합니다. 마스크 및 마스크 해제 된 이미지를 끌 수 있습니다.  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
  [수행](../mfc/reference/cimagelist-class.md#dragenter) 멤버 함수는 창 내에서 끌기 이미지의 초기 위치를 설정 하 고 위치에서 이미지를 그립니다. 매개 변수를 이미지와 창 내에서 처음 위치 좌표를 지정 하는 지점을 그릴 창에 대 한 포인터를 포함 합니다. 좌표는 클라이언트 영역이 아니라 창의 왼쪽 위 모퉁이 기준으로 합니다. 모든 좌표를 매개 변수로 사용 하는 이미지 끌기 함수에도 마찬가지입니다. 즉, 좌표를 지정 하는 경우의 테두리, 제목 표시줄 및 메뉴 모음 같은 창 요소의 너비에 대 한 보완 해야 합니다. 지정 하는 경우는 **NULL** 창 핸들을 호출할 때 `DragEnter`, 끌기 함수가 바탕 화면 창와 연결 된 장치 컨텍스트에 이미지를 그리기 및 좌표는 화면의 왼쪽 위 모퉁이 기준으로 합니다.  
   
- `DragEnter`끌기 작업 중 지정된 된 창에 다른 모든 업데이트를 잠급니다. 끌어서 놓기 작업의 대상 강조 하는 등의 끌기 작업 중에 그리기를 수행 해야 할 경우 임시로 숨길 수 있습니다 끌어온된 이미지를 사용 하 여는 [현재의](../mfc/reference/cimagelist-class.md#dragleave) 멤버 함수입니다. 사용할 수도 있습니다는 [DragShowNoLock](../mfc/reference/cimagelist-class.md#dragshownolock) 멤버 함수입니다.  
+ `DragEnter` 끌기 작업 중 지정된 된 창에 다른 모든 업데이트를 잠급니다. 끌어서 놓기 작업의 대상 강조 하는 등의 끌기 작업 중에 그리기를 수행 해야 할 경우 임시로 숨길 수 있습니다 끌어온된 이미지를 사용 하 여는 [현재의](../mfc/reference/cimagelist-class.md#dragleave) 멤버 함수입니다. 사용할 수도 있습니다는 [DragShowNoLock](../mfc/reference/cimagelist-class.md#dragshownolock) 멤버 함수입니다.  
   
  호출 [EndDrag](../mfc/reference/cimagelist-class.md#enddrag) 완료 하면 이미지를 끌기 합니다.  
   

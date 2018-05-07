@@ -1,13 +1,10 @@
 ---
-title: "구조체, 스타일, 콜백 및 메시지 맵 | Microsoft Docs"
-ms.custom: 
+title: 구조체, 스타일, 콜백 및 메시지 맵 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.structures
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - message classes [MFC], MFC
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c341f208d9aa54e60568b066f462db65b9172394
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d0b4a296ddad00b284dc9de5be7f4027adfd3406
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>구조체, 스타일, 콜백 및 메시지 맵
 이 단원에서는 MFC 라이브러리와 MFC 메시지 맵에 사용되는 구조체, 스타일 및 콜백 함수를 설명합니다.  

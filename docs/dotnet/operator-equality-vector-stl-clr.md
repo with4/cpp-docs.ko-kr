@@ -1,12 +1,9 @@
 ---
-title: "연산자 = = (vector) (STL/CLR) | Microsoft Docs"
-ms.custom: 
+title: 연산자 = = (vector) (STL/CLR) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::vector::operator==
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator== member [STL/CLR]
 ms.assetid: b552c9a1-8d06-4090-b394-d08a84947594
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 860f25b0d38f6689927eebd5cb1359d33d03332d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b75b02bd424ab4cc360c34b715a6c8f811ab3d81
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-vector-stlclr"></a>operator== (vector)(STL/CLR)
 벡터 같은지 비교 합니다.  
@@ -49,7 +44,7 @@ template<typename Value>
 ## <a name="remarks"></a>설명  
  연산자 함수는 시퀀스에 의해 제어 하는 경우에 true를 반환 `left` 및 `right` 동일한 길이 및 각 위치에 대 한 `i`, `left[i] ==` `right[i]`합니다. 테스트를 사용 하는지 여부를 `left` 와 동일 하 게 정렬 되 `right` 두 벡터 요소에서 비교 된 요소를가 하는 경우.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_vector_operator_eq.cpp   

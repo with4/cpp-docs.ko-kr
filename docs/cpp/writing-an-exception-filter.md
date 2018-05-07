@@ -1,29 +1,24 @@
 ---
-title: "예외 필터 작성 | Microsoft Docs"
-ms.custom: 
+title: 예외 필터 작성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - exception handling [C++], filters
 ms.assetid: 47fc832b-a707-4422-b60a-aaefe14189e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40afc6872ac04522c4c42f0a0d890b791ac03d53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 138bb17b8ccbb13371a1c31e4f7347a9bbdbf64b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="writing-an-exception-filter"></a>예외 필터 작성
 예외 처리기의 수준으로 이동하거나 계속 실행하여 예외를 처리할 수 있습니다. 예외 및 제어를 처리 하는 예외 처리기 코드를 사용 하는 대신 사용할 수 있습니다 *필터* 문제를 정리 하 고 그런 다음-1을 반환 하 여 스택을 삭제 하지 않고 정상 흐름 재개 하 합니다.  
@@ -60,7 +55,7 @@ int Eval_Exception ( int n_except ) {
   
  함수 호출을 사용 하는 것이 좋습니다는 *필터* 식 때마다 *필터* 아무것도 복잡 한 작업을 수행 해야 합니다. 식을 계산하면 함수가 실행됩니다. 이 경우에는 `Eval_Exception`입니다.  
   
- 사용 하 여 [GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356) 하 여 예외를 확인 합니다. 필터 자체 내에서 이 함수를 호출해야 합니다. `Eval_Exception`호출할 수 없습니다 **GetExceptionCode**, 없지만 예외 코드를 전달 해야 합니다.  
+ 사용 하 여 [GetExceptionCode](http://msdn.microsoft.com/library/windows/desktop/ms679356) 하 여 예외를 확인 합니다. 필터 자체 내에서 이 함수를 호출해야 합니다. `Eval_Exception` 호출할 수 없습니다 **GetExceptionCode**, 없지만 예외 코드를 전달 해야 합니다.  
   
  이 처리기는 예외가 정수 또는 부동 소수점 오버플로가 아닌 경우 제어를 다른 처리기에 전달합니다. 그럴 경우 처리기는 함수(`ResetVars`가 유일한 예이며, API 함수가 아님)를 호출하여 일부 전역 변수를 다시 설정합니다. *문 블록 2*,이 예제에서는 비어 실행 될 수 없습니다 때문에 `Eval_Exception` EXCEPTION_EXECUTE_HANDLER (1)을 반환 하지 않습니다.  
   

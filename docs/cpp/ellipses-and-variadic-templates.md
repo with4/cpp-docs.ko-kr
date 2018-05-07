@@ -1,27 +1,22 @@
 ---
-title: "Ellipses 및 Variadic 템플릿 | Microsoft Docs"
-ms.custom: 
+title: Ellipses 및 Variadic 템플릿 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6d3d0fa1dc4e2e4d817280fa83b26c56732cb2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2eddd87660d996e0d726c4453e0eb732a5553b99
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ellipses-and-variadic-templates"></a>Ellipses 및 Variadic 템플릿
 이 문서에서는 가변 매개 변수를 사용 하는 방법을 보여 줍니다 (`...`) c + + variadic 템플릿으로 합니다. 줄임표는 C 및 c + +에서 다양 한 용도로 되었습니다. 여기에 함수에 대 한 가변 인수 목록을 포함 합니다. `printf()` C 런타임 라이브러리에서 함수는 잘 알려진 예 중 하나입니다.  
@@ -132,7 +127,7 @@ void tfunc(const Arguments&... args)
   
 -   매개 변수 이름 바로 뒤에 줄임표가 표시된 경우 매개 변수 팩 확장이 있는 것입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  기능 중 일부의 다시 쓰기를 사용 하는 variadic 템플릿 함수 메커니즘을 설명 하는 좋은 방법 `printf`:  
   
 ```cpp  

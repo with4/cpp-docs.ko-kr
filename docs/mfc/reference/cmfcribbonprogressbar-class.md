@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonProgressBar 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCRibbonProgressBar 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonProgressBar
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetPos
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1354b0b15837a733a890c438c7771ffe39526773
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2b9d0d1ab9722b14caddc3935d820301ae229f5a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar 클래스
 긴 작업의 진행률을 시각적으로 나타내는 컨트롤을 구현합니다.  
@@ -81,7 +76,7 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 ## <a name="remarks"></a>설명  
  A `CMFCRibbonProgressBar` 두 가지 모드로 작동할 수 있습니다: 일반 및 무한 합니다. 일반 모드에서 진행률 표시줄이 왼쪽에서 오른쪽으로 채워지는 하 고 최대값에 도달 하면 중지 합니다. 무한 모드에서 진행률 표시줄은 반복적으로 최 댓 값의 최소값에서 채워집니다. 작업이 진행 중인지 완료 시간 알려져 있지만 무한 모드를 사용할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `CMFCRibbonProgressBar` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 진행률 표시줄에 대 한 최소 및 최대 값을 설정 하 고 진행률 표시줄의 현재 위치를 설정 합니다 (여기서는 작업의 완료 시간 알 수는 없습니다) 무한 모드에서 작동 하도록 진행률 표시줄을 설정 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [MS Office 2007 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]  
@@ -96,7 +91,7 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxRibbonProgressBar.h  
   
-##  <a name="cmfcribbonprogressbar"></a>CMFCRibbonProgressBar::CMFCRibbonProgressBar  
+##  <a name="cmfcribbonprogressbar"></a>  CMFCRibbonProgressBar::CMFCRibbonProgressBar  
  생성 하 고 초기화는 [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md) 개체입니다.  
   
 ```  
@@ -119,7 +114,7 @@ CMFCRibbonProgressBar(
  [in] `nHeight`  
  리본 진행률 표시줄의 픽셀 단위에서 높이 지정합니다.  
   
-##  <a name="getpos"></a>CMFCRibbonProgressBar::GetPos  
+##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
  진행률 표시줄의 현재 위치를 반환합니다.  
   
 ```  
@@ -132,7 +127,7 @@ int GetPos () const;
 ### <a name="remarks"></a>설명  
  설정 범위에서 지정한 범위 내에 있어야 합니다.는 [CMFCRibbonProgressBar::SetRange](#setrange) 메서드.  
   
-##  <a name="getrangemax"></a>CMFCRibbonProgressBar::GetRangeMax  
+##  <a name="getrangemax"></a>  CMFCRibbonProgressBar::GetRangeMax  
  진행률 표시줄의 현재 반환 최 댓 값입니다.  
   
 ```  
@@ -144,7 +139,7 @@ int GetRangeMax() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getrangemin"></a>CMFCRibbonProgressBar::GetRangeMin  
+##  <a name="getrangemin"></a>  CMFCRibbonProgressBar::GetRangeMin  
  진행률 표시줄의 현재 반환 최소 범위 값입니다.  
   
 ```  
@@ -154,7 +149,7 @@ int GetRangeMin() const;
 ### <a name="return-value"></a>반환 값  
  현재 범위에 대 한 최소 값입니다.  
   
-##  <a name="getregularsize"></a>CMFCRibbonProgressBar::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonProgressBar::GetRegularSize  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -168,7 +163,7 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="isinfinitemode"></a>CMFCRibbonProgressBar::IsInfiniteMode  
+##  <a name="isinfinitemode"></a>  CMFCRibbonProgressBar::IsInfiniteMode  
  진행률 표시줄이 무한 모드에서 작동 하는지 여부를 지정 합니다.  
   
 ```  
@@ -176,12 +171,12 @@ BOOL IsInfiniteMode() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`진행률 표시줄; 무한 모드인 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 진행률 표시줄; 무한 모드인 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  무한 모드에서 진행률 표시줄을 채웁니다 반복 해 서 최소값에서 최대값입니다. 작업이 진행 중인지 완료 시간 알려져 있지만 무한 모드를 사용할 수 있습니다.  
   
-##  <a name="ondraw"></a>CMFCRibbonProgressBar::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonProgressBar::OnDraw  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -193,7 +188,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setinfinitemode"></a>CMFCRibbonProgressBar::SetInfiniteMode  
+##  <a name="setinfinitemode"></a>  CMFCRibbonProgressBar::SetInfiniteMode  
  진행률 표시줄 무한 모드에서 작동 하도록 설정 합니다.  
   
 ```  
@@ -202,12 +197,12 @@ void SetInfiniteMode(BOOL bSet = TRUE);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bSet`  
- `TRUE`진행률 표시줄 무한 모드 임을 지정 하려면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 진행률 표시줄 무한 모드 임을 지정 하려면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  일반적으로 진행률 표시줄 무한 모드인 경우는 작업이 진행 되지만 완료 시간 알려져 있지 사용자 지정 되어 있습니다. 따라서 진행률 표시줄이 채웁니다 반복 해 서 최소값에서 최대값.  
   
-##  <a name="setpos"></a>CMFCRibbonProgressBar::SetPos  
+##  <a name="setpos"></a>  CMFCRibbonProgressBar::SetPos  
  진행률 표시줄의 현재 위치를 설정합니다.  
   
 ```  
@@ -226,7 +221,7 @@ void SetPos(
 ### <a name="remarks"></a>설명  
  설정 범위에서 지정한 범위 내에 있어야 합니다.는 [CMFCRibbonProgressBar::SetRange](#setrange) 메서드.  
   
-##  <a name="setrange"></a>CMFCRibbonProgressBar::SetRange  
+##  <a name="setrange"></a>  CMFCRibbonProgressBar::SetRange  
  진행률 표시줄에 대 한 최소 및 최대 값을 설정합니다.  
   
 ```  

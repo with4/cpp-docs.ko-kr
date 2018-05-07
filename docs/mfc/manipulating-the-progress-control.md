@@ -1,13 +1,10 @@
 ---
-title: "진행률 컨트롤 조작 | Microsoft Docs"
-ms.custom: 
+title: 진행률 컨트롤 조작 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - controlling progress controls [MFC]
 - CProgressCtrl class [MFC], using
 ms.assetid: 9af561d1-980b-4003-a6da-ff79be15bf23
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c75866cdcf947745db741a6626f01215e58932e3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 415061306c5e743b9ed95ee5c7105133d2e4d340
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="manipulating-the-progress-control"></a>진행률 컨트롤 조작
 진행률 컨트롤의 현재 위치를 변경 하는 방법은 세 가지가 ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)).  
@@ -45,11 +40,11 @@ ms.lasthandoff: 12/21/2017
 2.  사용 하 여는 [StepIt](../mfc/reference/cprogressctrl-class.md#stepit) 위치를 증가 시키는 멤버 함수입니다. 이렇게 하면 컨트롤을 다시 그리도록 합니다.  
   
     > [!NOTE]
-    >  `StepIt`래핑할 위치를 하면 됩니다. 예를 들어 20, 단계 및 90의 위치 1-100의 범위 지정 된 `StepIt` 위치 10으로 설정 됩니다.  
+    >  `StepIt` 래핑할 위치를 하면 됩니다. 예를 들어 20, 단계 및 90의 위치 1-100의 범위 지정 된 `StepIt` 위치 10으로 설정 됩니다.  
   
 ### <a name="to-change-the-position-by-an-arbitrary-amount"></a>임의의 값에 따라 위치를 변경 하려면  
   
-1.  사용 하 여 [OffsetPos](../mfc/reference/cprogressctrl-class.md#offsetpos) 위치를 변경 하려면 멤버 함수입니다. `OffsetPos`음수 값이 허용 됩니다.  
+1.  사용 하 여 [OffsetPos](../mfc/reference/cprogressctrl-class.md#offsetpos) 위치를 변경 하려면 멤버 함수입니다. `OffsetPos` 음수 값이 허용 됩니다.  
   
     > [!NOTE]
     >  `OffsetPos`달리 `StepIt`, 위치에 배치 되지 것입니다. 새 위치는 범위 내에 유지 하도록 조정 됩니다.  

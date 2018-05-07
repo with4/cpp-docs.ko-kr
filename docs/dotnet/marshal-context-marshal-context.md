@@ -1,12 +1,9 @@
 ---
 title: 'marshal_context:: marshal_context | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - msclr::interop::marshal_context::marshal_context
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - marshal_context class [C++], operations
 ms.assetid: 5f08c895-60b0-4f72-97ff-7ae37c68e853
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a91b4f1c5f30711c46550dabb4369e380214fce1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1e8838864c4ec1c6414401608b848cb12b01c16e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="marshalcontextmarshalcontext"></a>marshal_context::marshal_context
 생성 된 `marshal_context` 관리 / 네이티브 데이터 형식 간의 데이터 변환에 사용할 개체입니다.  
@@ -43,7 +38,7 @@ marshal_context();
 ## <a name="remarks"></a>설명  
  데이터 변환 중 일부는 마샬링 컨텍스트가 필요합니다. 참조 [개요의 c + + 마샬링](../dotnet/overview-of-marshaling-in-cpp.md) 어떤 번역 컨텍스트에 필요한 및 응용 프로그램에 포함할 어떤 마샬링 파일에 대 한 자세한 내용은 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  예를 참조 [marshal_context:: marshal_as](../dotnet/marshal-context-marshal-as.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  

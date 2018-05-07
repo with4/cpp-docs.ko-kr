@@ -1,13 +1,10 @@
 ---
-title: "끌어서 놓기: 사용자 지정 | Microsoft Docs"
-ms.custom: 
+title: '끌어서 놓기: 사용자 지정 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - drag and drop [MFC], calling DoDragDrop
 - OLE drag and drop [MFC], customizing behavior
 ms.assetid: 03369d3e-46bf-4140-b58c-d0c9657cf38a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 387344160cf2009b19ad8de820eabc6063ae1f7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 59ec5a5a493106750fa7bb8c7ec31b8dbb011070
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="drag-and-drop-customizing"></a>끌어서 놓기: 사용자 지정
 대부분의 응용 프로그램에서는 끌어 놓기 기능의 기본 구현으로도 충분합니다. 하지만 일부 응용 프로그램에서는 이러한 표준 동작을 변경해야 할 수 있습니다. 이 문서에서는 이러한 기본값을 변경하는 데 필요한 단계를 설명합니다. 또한 이 기술을 사용해서 놓기 대상으로 복합 문서를 지원하지 않는 응용 프로그램을 설정할 수 있습니다.  

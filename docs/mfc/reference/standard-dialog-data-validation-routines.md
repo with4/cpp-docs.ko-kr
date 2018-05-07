@@ -1,29 +1,24 @@
 ---
-title: "표준 대화 상자 데이터 유효성 검사 루틴 | Microsoft Docs"
-ms.custom: 
+title: 표준 대화 상자 데이터 유효성 검사 루틴 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33566bcdfab1a618dc8ff79deb375b3f9d1221f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17b99d87db2fee3cf80c25157cdb2b2d2b54903b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-dialog-data-validation-routines"></a>표준 대화 상자 데이터 유효성 검사 루틴
 이 항목에서는 일반적인 MFC 대화 상자 컨트롤에 사용 되는 표준 대화 상자 데이터 유효성 검사 (DDV) 루틴을 나열 합니다.  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 
   
-##  <a name="ddv_maxchars"></a>DDV_MaxChars  
+##  <a name="ddv_maxchars"></a>  DDV_MaxChars  
  호출 `DDV_MaxChars` 컨트롤에 있는 문자의 크기 연관 확인 하려면 *값* 초과 하지 않는 *nChars*합니다.  
   
 ```   
@@ -79,7 +74,7 @@ void AFXAPI DDV_MaxChars(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddv_minmaxbyte"></a>DDV_MinMaxByte  
+##  <a name="ddv_minmaxbyte"></a>  DDV_MinMaxByte  
  호출 `DDV_MinMaxByte` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
   
 ```   
@@ -109,7 +104,7 @@ void AFXAPI DDV_MinMaxByte(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddv_minmaxdatetime"></a>DDV_MinMaxDateTime  
+##  <a name="ddv_minmaxdatetime"></a>  DDV_MinMaxDateTime  
  호출 `DDV_MinMaxDateTime` 컨트롤 날짜 및 시간 선택에서 날짜/시간 값을 확인 하려면 ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md))와 관련 된 *refValue* 사이가 `refMinRange` 및 `refMaxRange`합니다.  
   
 ```   
@@ -145,7 +140,7 @@ void AFXAPI DDV_MinMaxDateTime(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddv_minmaxdouble"></a>DDV_MinMaxDouble  
+##  <a name="ddv_minmaxdouble"></a>  DDV_MinMaxDouble  
  호출 `DDV_MinMaxDouble` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
   
 ```   
@@ -175,7 +170,7 @@ void AFXAPI DDV_MinMaxDouble(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddv_minmaxdword"></a>DDV_MinMaxDWord  
+##  <a name="ddv_minmaxdword"></a>  DDV_MinMaxDWord  
  호출 `DDV_MinMaxDWord` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
   
 ```   
@@ -205,7 +200,7 @@ void AFXAPI DDV_MinMaxDWord(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddv_minmaxfloat"></a>DDV_MinMaxFloat  
+##  <a name="ddv_minmaxfloat"></a>  DDV_MinMaxFloat  
  호출 `DDV_MinMaxFloat` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
   
 ```   
@@ -235,7 +230,7 @@ void AFXAPI DDV_MinMaxFloat(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddv_minmaxint"></a>DDV_MinMaxInt  
+##  <a name="ddv_minmaxint"></a>  DDV_MinMaxInt  
  호출 `DDV_MinMaxInt` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
   
 ```   
@@ -265,7 +260,7 @@ void AFXAPI DDV_MinMaxInt(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddv_minmaxlong"></a>DDV_MinMaxLong  
+##  <a name="ddv_minmaxlong"></a>  DDV_MinMaxLong  
  호출 `DDV_MinMaxLong` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
   
 ```   
@@ -295,7 +290,7 @@ void AFXAPI DDV_MinMaxLong(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddv_minmaxlonglong"></a>DDV_MinMaxLongLong  
+##  <a name="ddv_minmaxlonglong"></a>  DDV_MinMaxLongLong  
  호출 `DDV_MinMaxLongLong` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
   
 ```   
@@ -325,7 +320,7 @@ void AFXAPI DDV_MinMaxLongLong(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddv_minmaxmonth"></a>DDV_MinMaxMonth  
+##  <a name="ddv_minmaxmonth"></a>  DDV_MinMaxMonth  
  호출 `DDV_MinMaxMonth` 컨트롤 월 달력에서 날짜/시간 값을 확인 하려면 ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md))와 관련 된 *refValue* 사이가 `refMinRange` 및 `refMaxRange`합니다.  
   
 ```   
@@ -361,7 +356,7 @@ void AFXAPI DDV_MinMaxMonth(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddv_minmaxshort"></a>DDV_MinMaxShort  
+##  <a name="ddv_minmaxshort"></a>  DDV_MinMaxShort  
  호출 `DDV_MinMaxShort` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
   
 ```   
@@ -391,7 +386,7 @@ void AFXAPI DDV_MinMaxShort(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddv_minmaxslider"></a>DDV_MinMaxSlider  
+##  <a name="ddv_minmaxslider"></a>  DDV_MinMaxSlider  
  호출 `DDV_MinMaxSlider` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
   
 ```   
@@ -421,7 +416,7 @@ void AFXAPI DDV_MinMaxSlider(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddv_minmaxuint"></a>DDV_MinMaxUInt  
+##  <a name="ddv_minmaxuint"></a>  DDV_MinMaxUInt  
  호출 `DDV_MinMaxUInt` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
   
 ```   
@@ -451,7 +446,7 @@ void AFXAPI DDV_MinMaxUInt(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddv_minmaxulonglong"></a>DDV_MinMaxULongLong  
+##  <a name="ddv_minmaxulonglong"></a>  DDV_MinMaxULongLong  
  호출 `DDV_MinMaxULongLong` 연결 된 컨트롤의 값을 확인 하려면 *값* 사이가 `minVal` 및 `maxVal`합니다.  
   
 ```   

@@ -1,13 +1,10 @@
 ---
-title: "메뉴 및 리소스: 컨테이너 추가 | Microsoft Docs"
-ms.custom: 
+title: '메뉴 및 리소스: 컨테이너 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - IDP_OLE_INIT_FAILED
 - IDP_FAILED_TO_CREATE
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 654efeaacd08e0d2c8c51cee012fd58dcbf071ab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c71e8a79652a86ba412ef829ac1151256d1bf65
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="menus-and-resources-container-additions"></a>메뉴 및 리소스: 컨테이너 추가
 이 문서에서는 메뉴 및 기타 시각적 편집 컨테이너 응용 프로그램 리소스에 적용 하는 변경 사항을 설명 합니다.  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [문자열 테이블 추가](#_core_string_table_additions_for_container_applications)  
   
-##  <a name="_core_container_menu_additions"></a>컨테이너 메뉴 추가  
+##  <a name="_core_container_menu_additions"></a> 컨테이너 메뉴 추가  
  편집 메뉴에 다음 항목을 추가 해야 합니다.  
   
 |항목|용도|  
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
  포함 된 항목의 내부 활성화를 지원 하려는 경우 컨테이너 응용 프로그램에 대 한 새 메뉴를 만들어야 합니다. 이 메뉴는 같은 파일 메뉴 및 이들 사이 배치 하는 두 개의 구분 기호에 있지만 파일을 열 때 사용 되는 창 팝업 메뉴 구성 됩니다. 이러한 구분 기호는 서버 (구성 요소) 항목 (응용 프로그램)에 활성화 될 때 해당 메뉴를 배치 해야 나타내는 데 사용 됩니다. 이 메뉴 병합 하는 방법에 대 한 자세한 내용은 참조 하십시오. [메뉴 및 리소스: 메뉴 병합](../mfc/menus-and-resources-menu-merging.md)합니다.  
   
-##  <a name="_core_container_application_accelerator_table_additions"></a>컨테이너 응용 프로그램 액셀러레이터 키 테이블 추가  
+##  <a name="_core_container_application_accelerator_table_additions"></a> 컨테이너 응용 프로그램 액셀러레이터 키 테이블 추가  
  컨테이너 응용 프로그램의 액셀러레이터 키 테이블 리소스를 작은 변경이 내부 활성화를 지 원하는 경우에 필요 합니다. 첫 번째 변경 (ESC) 내부 편집 모드를 취소 하려면 esc 키를 눌러야 수 있습니다. 기본 액셀러레이터 키 테이블에 다음 항목을 추가 합니다.  
   
 |ID|Key|형식|  
@@ -85,7 +80,7 @@ ms.lasthandoff: 12/21/2017
 |**ID_PREV_PANE**|SHIFT + VK_F6|**VIRTKEY**|  
 |**ID_CANCEL_EDIT_CNTR**|VK_ESCAPE|**VIRTKEY**|  
   
-##  <a name="_core_string_table_additions_for_container_applications"></a>컨테이너 응용 프로그램에 대 한 문자열 테이블 추가  
+##  <a name="_core_string_table_additions_for_container_applications"></a> 컨테이너 응용 프로그램에 대 한 문자열 테이블 추가  
  에 설명 된 추가 메뉴 항목에 해당 하는 대부분의 컨테이너 응용 프로그램에 대 한 문자열 테이블 내용 [컨테이너 메뉴 추가](#_core_container_menu_additions)합니다. 이러한 각 메뉴 항목 표시 되 면 상태 표시줄에 표시 되는 텍스트를 제공 합니다. 다음은 예를 들어, 응용 프로그램 마법사에서 생성 하는 문자열 테이블 항목입니다.  
   
 |ID|문자열|  

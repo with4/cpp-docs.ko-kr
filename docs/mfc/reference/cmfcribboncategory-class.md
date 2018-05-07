@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonCategory 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCRibbonCategory 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonCategory
@@ -139,17 +136,15 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c4e78017946ef335e04c8190b6ec4cd20e74ca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 91dbbe3b3207eba50fd9206719de2fd4afd5cc5b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory 클래스
 `CMFCRibbonCategory` 클래스 구현 그룹을 포함 하는 리본 탭 [리본 패널](../../mfc/reference/cmfcribbonpanel-class.md)합니다.  
@@ -271,7 +266,7 @@ class CMFCRibbonCategory : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxribboncategory.h  
   
-##  <a name="addhidden"></a>CMFCRibbonCategory::AddHidden  
+##  <a name="addhidden"></a>  CMFCRibbonCategory::AddHidden  
  사용자 지정 대화 상자에 표시 되는 리본 요소의 배열에 지정 된 리본 요소를 추가 합니다.  
   
 ```  
@@ -285,7 +280,7 @@ void AddHidden(CMFCRibbonBaseElement* pElem);
 ### <a name="remarks"></a>설명  
  사용자 지정 대화 상자에 리본 요소는 빠른 실행 도구 모음에 추가할 수 있는 명령.  
   
-##  <a name="addpanel"></a>CMFCRibbonCategory::AddPanel  
+##  <a name="addpanel"></a>  CMFCRibbonCategory::AddPanel  
  리본 범주에 대 한 리본 패널을 만듭니다.  
   
 ```  
@@ -313,12 +308,12 @@ CMFCRibbonPanel* AddPanel(
   
  리본 요소를 표시 하려면 공간이 부족 하 여 리본 패널에 대 한 기본 아이콘이 표시 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 사용 하는 `AddPanel` 에서 메서드는 `CMFCRibbonCategory` 클래스.  
   
  [!code-cpp[NVC_MFC_RibbonApp#10](../../mfc/reference/codesnippet/cpp/cmfcribboncategory-class_1.cpp)]  
   
-##  <a name="cmfcribboncategory"></a>CMFCRibbonCategory::CMFCRibbonCategory  
+##  <a name="cmfcribboncategory"></a>  CMFCRibbonCategory::CMFCRibbonCategory  
  생성 하 고 초기화는 [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) 개체입니다.  
   
 ```  
@@ -352,7 +347,7 @@ CMFCRibbonCategory(
  [in] `sizeLargeImage`  
  기본 리본 범주에 있는 리본 요소에 대 한 큰 이미지의 크기입니다.  
   
-##  <a name="copyfrom"></a>CMFCRibbonCategory::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCRibbonCategory::CopyFrom  
  지정된 된 상태의 복사 [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) 현재 [CMFCRibbonCategory](../../mfc/reference/cmfcribboncategory-class.md) 개체입니다.  
   
 ```  
@@ -365,7 +360,7 @@ virtual void CopyFrom(CMFCRibbonCategory& src);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="findbydata"></a>CMFCRibbonCategory::FindByData  
+##  <a name="findbydata"></a>  CMFCRibbonCategory::FindByData  
  지정된 된 데이터와 연결 된 리본 요소를 검색 합니다.  
   
 ```  
@@ -379,14 +374,14 @@ CMFCRibbonBaseElement* FindByData(
  리본 요소에 연결 된 데이터입니다.  
   
  [in] `bVisibleOnly`  
- `TRUE`검색에 대 한 빠른 액세스 리본 요소를 포함 하려면 `FALSE` 검색에 대 한 빠른 액세스 리본 요소를 제외 합니다.  
+ `TRUE` 검색에 대 한 빠른 액세스 리본 요소를 포함 하려면 `FALSE` 검색에 대 한 빠른 액세스 리본 요소를 제외 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 리본 요소에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="findbyid"></a>CMFCRibbonCategory::FindByID  
+##  <a name="findbyid"></a>  CMFCRibbonCategory::FindByID  
  지정한 명령 ID와 연결 된 리본 요소를 검색  
   
 ```  
@@ -400,14 +395,14 @@ CMFCRibbonBaseElement* FindByID(
  리본 요소에 연결 된 명령 ID입니다.  
   
  [in] `bVisibleOnly`  
- `TRUE`검색에 대 한 빠른 액세스 리본 요소를 포함 하려면 `FALSE` 검색에 대 한 빠른 액세스 리본 요소를 제외 합니다.  
+ `TRUE` 검색에 대 한 빠른 액세스 리본 요소를 포함 하려면 `FALSE` 검색에 대 한 빠른 액세스 리본 요소를 제외 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 리본 요소에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="findpanelwithelem"></a>CMFCRibbonCategory::FindPanelWithElem  
+##  <a name="findpanelwithelem"></a>  CMFCRibbonCategory::FindPanelWithElem  
  지정 된 리본 요소를 포함 하는 리본 패널을 검색 합니다.  
   
 ```  
@@ -423,7 +418,7 @@ CMFCRibbonPanel* FindPanelWithElem(const CMFCRibbonBaseElement* pElement);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getcontextid"></a>CMFCRibbonCategory::GetContextID  
+##  <a name="getcontextid"></a>  CMFCRibbonCategory::GetContextID  
  리본 범주의 컨텍스트 ID를 검색합니다.  
   
 ```  
@@ -436,7 +431,7 @@ UINT GetContextID() const;
 ### <a name="remarks"></a>설명  
  컨텍스트 ID은 리본 범주 상황에 맞는 리본 범주를 없으면 0입니다.  
   
-##  <a name="getdata"></a>CMFCRibbonCategory::GetData  
+##  <a name="getdata"></a>  CMFCRibbonCategory::GetData  
  리본 범주와 연결 된 사용자 정의 데이터를 검색 합니다.  
   
 ```  
@@ -446,7 +441,7 @@ DWORD_PTR GetData() const;
 ### <a name="return-value"></a>반환 값  
  리본 범주와 연결 된 사용자 정의 데이터입니다.  
   
-##  <a name="getdroppeddown"></a>CMFCRibbonCategory::GetDroppedDown  
+##  <a name="getdroppeddown"></a>  CMFCRibbonCategory::GetDroppedDown  
  현재 표시 되는 팝업 메뉴에 있는 리본 요소에 대 한 포인터를 검색 합니다.  
   
 ```  
@@ -458,7 +453,7 @@ CMFCRibbonBaseElement* GetDroppedDown();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getelements"></a>CMFCRibbonCategory::GetElements  
+##  <a name="getelements"></a>  CMFCRibbonCategory::GetElements  
  리본 범주에서 모든 리본 요소를 검색 합니다.  
   
 ```  
@@ -473,7 +468,7 @@ void GetElements(
 ### <a name="remarks"></a>설명  
  빠른 실행 도구 모음에서 사용 하도록 디자인 된 리본 요소 배열에 포함 됩니다.  
   
-##  <a name="getelementsbyid"></a>CMFCRibbonCategory::GetElementsByID  
+##  <a name="getelementsbyid"></a>  CMFCRibbonCategory::GetElementsByID  
  지정한 명령 ID와 연결 된 모든 리본 요소를 검색 합니다.  
   
 ```  
@@ -492,7 +487,7 @@ void GetElementsByID(
 ### <a name="remarks"></a>설명  
  빠른 실행 도구 모음에서 사용 하도록 디자인 된 리본 요소 배열에 포함 됩니다.  
   
-##  <a name="getfirstvisibleelement"></a>CMFCRibbonCategory::GetFirstVisibleElement  
+##  <a name="getfirstvisibleelement"></a>  CMFCRibbonCategory::GetFirstVisibleElement  
  리본 범주에 속하는 첫 번째 표시 요소를 검색 합니다.  
   
 ```  
@@ -504,7 +499,7 @@ CMFCRibbonBaseElement* GetFirstVisibleElement() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getfocused"></a>CMFCRibbonCategory::GetFocused  
+##  <a name="getfocused"></a>  CMFCRibbonCategory::GetFocused  
  포커스가 지정된 요소를 반환합니다.  
   
 ```  
@@ -516,7 +511,7 @@ CMFCRibbonBaseElement* GetFocused();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="gethighlighted"></a>CMFCRibbonCategory::GetHighlighted  
+##  <a name="gethighlighted"></a>  CMFCRibbonCategory::GetHighlighted  
  강조 표시 된 요소를 반환합니다.  
   
 ```  
@@ -528,7 +523,7 @@ CMFCRibbonBaseElement* GetHighlighted();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getimagecount"></a>CMFCRibbonCategory::GetImageCount  
+##  <a name="getimagecount"></a>  CMFCRibbonCategory::GetImageCount  
  리본 범주에 포함 된 지정 된 이미지 목록의 이미지의 수를 검색 합니다.  
   
 ```  
@@ -537,14 +532,14 @@ int GetImageCount(BOOL bIsLargeImage) const;
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bIsLargeImage`  
- `TRUE`큰 이미지 목록의 이미지의 수에 대 한 `FALSE` 작은 이미지 목록의 이미지의 수에 대 한 합니다.  
+ `TRUE` 큰 이미지 목록의 이미지의 수에 대 한 `FALSE` 작은 이미지 목록의 이미지의 수에 대 한 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  지정 된 이미지 목록의 이미지의 수입니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getimagesize"></a>CMFCRibbonCategory::GetImageSize  
+##  <a name="getimagesize"></a>  CMFCRibbonCategory::GetImageSize  
  리본 범주에 포함 된 지정 된 이미지 목록의 이미지의 크기를 검색 합니다.  
   
 ```  
@@ -553,7 +548,7 @@ CSize GetImageSize(BOOL bIsLargeImage) const;
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bIsLargeImage`  
- `TRUE`큰 이미지;의 크기에 대 한 `FALSE` 작은 이미지의 크기에 대 한 합니다.  
+ `TRUE` 큰 이미지;의 크기에 대 한 `FALSE` 작은 이미지의 크기에 대 한 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  지정 된 이미지 목록의 이미지의 크기입니다.  
@@ -561,7 +556,7 @@ CSize GetImageSize(BOOL bIsLargeImage) const;
 ### <a name="remarks"></a>설명  
  검색 된 크기에는 전역 이미지 배율을 포함 됩니다.  
   
-##  <a name="getitemidslist"></a>CMFCRibbonCategory::GetItemIDsList  
+##  <a name="getitemidslist"></a>  CMFCRibbonCategory::GetItemIDsList  
  리본 범주에 포함 된 리본 요소에 대 한 명령 Id를 검색 합니다.  
   
 ```  
@@ -575,11 +570,11 @@ void GetItemIDsList(
  리본 범주에 있는 리본 요소에 대 한 명령 Id의 목록.  
   
  [in] `bHiddenOnly`  
- `TRUE`리본 범주;에 있는 리본 패널에 표시 되는 리본 요소를 제외 하려면 `FALSE` 리본 범주에 있는 모든 리본 요소를 포함 하도록 합니다.  
+ `TRUE` 리본 범주;에 있는 리본 패널에 표시 되는 리본 요소를 제외 하려면 `FALSE` 리본 범주에 있는 모든 리본 요소를 포함 하도록 합니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getlargeimages"></a>CMFCRibbonCategory::GetLargeImages  
+##  <a name="getlargeimages"></a>  CMFCRibbonCategory::GetLargeImages  
  리본 범주에 포함 된 큰 이미지 목록을 검색 합니다.  
   
 ```  
@@ -589,7 +584,7 @@ CMFCToolBarImages& GetLargeImages();
 ### <a name="return-value"></a>반환 값  
  리본 범주에 포함 된 큰 이미지의 목록.  
   
-##  <a name="getlastvisibleelement"></a>CMFCRibbonCategory::GetLastVisibleElement  
+##  <a name="getlastvisibleelement"></a>  CMFCRibbonCategory::GetLastVisibleElement  
  리본 범주에 속하는 보이는 마지막 요소로 검색 합니다.  
   
 ```  
@@ -601,7 +596,7 @@ CMFCRibbonBaseElement* GetLastVisibleElement() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getmaxheight"></a>CMFCRibbonCategory::GetMaxHeight  
+##  <a name="getmaxheight"></a>  CMFCRibbonCategory::GetMaxHeight  
  리본 범주에 포함 된 리본 패널의 최대 높이 검색 합니다.  
   
 ```  
@@ -618,7 +613,7 @@ int GetMaxHeight(CDC* pDC);
 ### <a name="remarks"></a>설명  
  검색 된 값에는 리본 패널에 대 한 위쪽 및 아래쪽 여백 높이 포함 됩니다.  
   
-##  <a name="getname"></a>CMFCRibbonCategory::GetName  
+##  <a name="getname"></a>  CMFCRibbonCategory::GetName  
  리본 범주 이름을 검색합니다.  
   
 ```  
@@ -630,7 +625,7 @@ LPCTSTR GetName() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getpanel"></a>CMFCRibbonCategory::GetPanel  
+##  <a name="getpanel"></a>  CMFCRibbonCategory::GetPanel  
  지정된 된 인덱스에 있는 리본 패널에 대 한 포인터를 반환 합니다.  
   
 ```  
@@ -647,7 +642,7 @@ CMFCRibbonPanel* GetPanel(int nIndex);
 ### <a name="remarks"></a>설명  
  예외가 발생 하는 경우 `nIndex` 범위를 벗어났습니다.  
   
-##  <a name="getpanelcount"></a>CMFCRibbonCategory::GetPanelCount  
+##  <a name="getpanelcount"></a>  CMFCRibbonCategory::GetPanelCount  
  리본 범주에 있는 리본 패널 수를 반환합니다.  
   
 ```  
@@ -657,7 +652,7 @@ int GetPanelCount() const;
 ### <a name="return-value"></a>반환 값  
  리본 범주에 있는 리본 패널의 수입니다.  
   
-##  <a name="getpanelfrompoint"></a>CMFCRibbonCategory::GetPanelFromPoint  
+##  <a name="getpanelfrompoint"></a>  CMFCRibbonCategory::GetPanelFromPoint  
  지정 된 위치에 있으면 리본 패널에 대 한 포인터를 검색 합니다.  
   
 ```  
@@ -674,7 +669,7 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 ### <a name="remarks"></a>설명  
  리본 범주에 포함 된 리본 패널만 테스트 됩니다.  
   
-##  <a name="getpanelindex"></a>CMFCRibbonCategory::GetPanelIndex  
+##  <a name="getpanelindex"></a>  CMFCRibbonCategory::GetPanelIndex  
  지정 된 리본 패널의 0부터 시작 하는 인덱스를 검색합니다.  
   
 ```  
@@ -691,7 +686,7 @@ int GetPanelIndex(const CMFCRibbonPanel* pPanel) const;
 ### <a name="remarks"></a>설명  
  리본 범주에 포함 된 리본 패널만 검색 됩니다.  
   
-##  <a name="getparentbutton"></a>CMFCRibbonCategory::GetParentButton  
+##  <a name="getparentbutton"></a>  CMFCRibbonCategory::GetParentButton  
  리본 범주에 속하는 부모 리본 요소를 검색합니다.  
   
 ```  
@@ -703,7 +698,7 @@ CMFCRibbonBaseElement* GetParentButton() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getparentmenubar"></a>CMFCRibbonCategory::GetParentMenuBar  
+##  <a name="getparentmenubar"></a>  CMFCRibbonCategory::GetParentMenuBar  
  부모 메뉴 모음에 대 한 포인터를 반환 합니다.는 `CMFCRibbonCategory` 개체입니다.  
   
 ```  
@@ -715,7 +710,7 @@ CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getparentribbonbar"></a>CMFCRibbonCategory::GetParentRibbonBar  
+##  <a name="getparentribbonbar"></a>  CMFCRibbonCategory::GetParentRibbonBar  
  리본 범주에 대 한 부모 리본 표시줄을 검색합니다.  
   
 ```  
@@ -727,7 +722,7 @@ CMFCRibbonBar* GetParentRibbonBar() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getrect"></a>CMFCRibbonCategory::GetRect  
+##  <a name="getrect"></a>  CMFCRibbonCategory::GetRect  
  리본 범주에 대 한 표시 사각형을 검색합니다.  
   
 ```  
@@ -740,7 +735,7 @@ CRect GetRect() const;
 ### <a name="remarks"></a>설명  
  리본 범주에 대 한 표시 사각형 범주 탭을 포함 되지 않습니다.  
   
-##  <a name="getsmallimages"></a>CMFCRibbonCategory::GetSmallImages  
+##  <a name="getsmallimages"></a>  CMFCRibbonCategory::GetSmallImages  
  리본 범주에 포함 된 작은 이미지 목록을 검색 합니다.  
   
 ```  
@@ -750,7 +745,7 @@ CMFCToolBarImages& GetSmallImages();
 ### <a name="return-value"></a>반환 값  
  리본 범주에 포함 된 작은 이미지의 목록.  
   
-##  <a name="gettabcolor"></a>CMFCRibbonCategory::GetTabColor  
+##  <a name="gettabcolor"></a>  CMFCRibbonCategory::GetTabColor  
  리본 범주 탭에 현재 색을 반환합니다.  
   
 ```  
@@ -777,7 +772,7 @@ AFX_RibbonCategoryColor GetTabColor() const;
   
 -   AFX_CategoryColor_Violet  
   
-##  <a name="gettabrect"></a>CMFCRibbonCategory::GetTabRect  
+##  <a name="gettabrect"></a>  CMFCRibbonCategory::GetTabRect  
  리본 범주 탭에 대 한 표시 사각형을 검색합니다.  
   
 ```  
@@ -789,7 +784,7 @@ CRect GetTabRect() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="gettexttopline"></a>CMFCRibbonCategory::GetTextTopLine  
+##  <a name="gettexttopline"></a>  CMFCRibbonCategory::GetTextTopLine  
  큰 이미지를 표시 하는 리본 범주에 있는 리본 단추의 텍스트의 세로 위치를 검색 합니다.  
   
 ```  
@@ -801,7 +796,7 @@ int GetTextTopLine() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getvisibleelements"></a>CMFCRibbonCategory::GetVisibleElements  
+##  <a name="getvisibleelements"></a>  CMFCRibbonCategory::GetVisibleElements  
  리본 범주에 속하는 모든 요소를 검색 합니다.  
   
 ```  
@@ -816,7 +811,7 @@ void GetVisibleElements(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="highlightpanel"></a>CMFCRibbonCategory::HighlightPanel  
+##  <a name="highlightpanel"></a>  CMFCRibbonCategory::HighlightPanel  
  지정 된 리본 패널에 강조 표시합니다.  
   
 ```  
@@ -838,7 +833,7 @@ CMFCRibbonPanel* HighlightPanel(
 ### <a name="remarks"></a>설명  
  리본 패널에 강조 표시 하는 방법에 대 한 자세한 내용은 참조 [CMFCRibbonPanel::Highlight](../../mfc/reference/cmfcribbonpanel-class.md#highlight)합니다.  
   
-##  <a name="hittest"></a>CMFCRibbonCategory::HitTest  
+##  <a name="hittest"></a>  CMFCRibbonCategory::HitTest  
  지정 된 위치에 있으면 리본 요소에 대 한 포인터를 검색 합니다.  
   
 ```  
@@ -852,7 +847,7 @@ CMFCRibbonBaseElement* HitTest(
  창의 왼쪽 위 모퉁이 기준으로 마우스 포인터의 x 및 y 좌표입니다.  
   
  [in] `bCheckPanelCaption`  
- `TRUE`리본 패널 캡션; 테스트 하려면 `FALSE` 를 리본 패널 캡션 제외 합니다.  
+ `TRUE` 리본 패널 캡션; 테스트 하려면 `FALSE` 를 리본 패널 캡션 제외 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 리본 요소에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
@@ -860,7 +855,7 @@ CMFCRibbonBaseElement* HitTest(
 ### <a name="remarks"></a>설명  
  리본 요소에만 리본 범주에 포함 된 테스트 됩니다.  
   
-##  <a name="hittestex"></a>CMFCRibbonCategory::HitTestEx  
+##  <a name="hittestex"></a>  CMFCRibbonCategory::HitTestEx  
  지정 된 위치에 있으면 리본 요소의 0부터 시작 인덱스를 검색 합니다.  
   
 ```  
@@ -877,7 +872,7 @@ int HitTestEx(CPoint point) const;
 ### <a name="remarks"></a>설명  
  리본 요소에만 리본 범주에 포함 된 테스트 됩니다.  
   
-##  <a name="hittestscrollbuttons"></a>CMFCRibbonCategory::HitTestScrollButtons  
+##  <a name="hittestscrollbuttons"></a>  CMFCRibbonCategory::HitTestScrollButtons  
  리본 범주를 왼쪽 또는 오른쪽 스크롤 단추 내에서 한 지점을 뒤쳐지면 단추에 대 한 포인터를 반환 합니다.  
   
 ```  
@@ -893,7 +888,7 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="isactive"></a>CMFCRibbonCategory::IsActive  
+##  <a name="isactive"></a>  CMFCRibbonCategory::IsActive  
  리본 범주 리본 표시줄의 활성 범주 인지를 나타냅니다.  
   
 ```  
@@ -901,12 +896,12 @@ BOOL IsActive() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`리본 범주 활성 범주; 이면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 리본 범주 활성 범주; 이면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  활성화 된 리본 범주는 리본 패널을 표시합니다.  
   
-##  <a name="isvisible"></a>CMFCRibbonCategory::IsVisible  
+##  <a name="isvisible"></a>  CMFCRibbonCategory::IsVisible  
  리본 범주에 표시 되는지 여부를 나타냅니다.  
   
 ```  
@@ -914,12 +909,12 @@ BOOL IsVisible() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`리본 범주에 표시 되 면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 리본 범주에 표시 되 면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  표시 되는 리본 범주에 범주 탭이 표시 됩니다.  
   
-##  <a name="iswindows7look"></a>CMFCRibbonCategory::IsWindows7Look  
+##  <a name="iswindows7look"></a>  CMFCRibbonCategory::IsWindows7Look  
  부모 리본 (작은 사각형 응용 프로그램 단추)를 확인 하는 Windows 7에 있는지 여부를 나타냅니다.  
   
 ```  
@@ -927,11 +922,11 @@ BOOL IsWindows7Look() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`부모 리본에 Windows 7; 확인 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 부모 리본에 Windows 7; 확인 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="notifycontrolcommand"></a>CMFCRibbonCategory::NotifyControlCommand  
+##  <a name="notifycontrolcommand"></a>  CMFCRibbonCategory::NotifyControlCommand  
  모든 WM_NOTIFY 명령 메시지를 배달할 `CMFCRibbonPanel` 의 요소는 `CMFCRibbonCategory` 메시지 처리 될 때까지 합니다.  
   
 ```  
@@ -944,7 +939,7 @@ virtual BOOL NotifyControlCommand(
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bAccelerator`  
- `TRUE`이 명령은 액셀러레이터에서 생성 된 경우 또는 `FALSE` 그렇지 않은 경우.  
+ `TRUE` 이 명령은 액셀러레이터에서 생성 된 경우 또는 `FALSE` 그렇지 않은 경우.  
   
  [in] `nNotifyCode`  
  알림 코드입니다.  
@@ -960,7 +955,7 @@ virtual BOOL NotifyControlCommand(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="oncancelmode"></a>CMFCRibbonCategory::OnCancelMode  
+##  <a name="oncancelmode"></a>  CMFCRibbonCategory::OnCancelMode  
  모든 취소 모드를 호출 하는 `CMFCRibbonPanel` 의 요소는 `CMFCRibbonCategory`합니다.  
   
 ```  
@@ -969,7 +964,7 @@ virtual void OnCancelMode();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ondraw"></a>CMFCRibbonCategory::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonCategory::OnDraw  
  리본 범주를 그리기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -982,7 +977,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ondrawimage"></a>CMFCRibbonCategory::OnDrawImage  
+##  <a name="ondrawimage"></a>  CMFCRibbonCategory::OnDrawImage  
  리본 범주에 지정된 된 이미지를 그리기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -1006,20 +1001,20 @@ virtual BOOL OnDrawImage(
  이미지가 포함 된 리본 요소에 대 한 포인터입니다.  
   
  [in] `bIsLargeImage`  
- `TRUE`이미지가; 크기가 큰 경우 `FALSE` 이미지가 크기가 작은 경우.  
+ `TRUE` 이미지가; 크기가 큰 경우 `FALSE` 이미지가 크기가 작은 경우.  
   
  [in] `nImageIndex`  
  리본 범주에 포함 된 이미지 배열에 있는 이미지의 인덱스 0부터 시작 합니다.  
   
  [in] `bCenter`  
- `TRUE`이미지의 표시 사각형; 센터로 `FALSE` 표시 사각형의 왼쪽 위 모퉁이에 이미지를 그릴 수 있습니다.  
+ `TRUE` 이미지의 표시 사각형; 센터로 `FALSE` 표시 사각형의 왼쪽 위 모퉁이에 이미지를 그릴 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ondrawmenuborder"></a>CMFCRibbonCategory::OnDrawMenuBorder  
+##  <a name="ondrawmenuborder"></a>  CMFCRibbonCategory::OnDrawMenuBorder  
  팝업 메뉴의 테두리를 그리는 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -1038,7 +1033,7 @@ virtual void OnDrawMenuBorder(
 ### <a name="remarks"></a>설명  
  기본적으로이 메서드는 아무 작업도 수행 하지 않습니다. 팝업 메뉴의 테두리를 그리는이 메서드를 재정의 합니다.  
   
-##  <a name="onkey"></a>CMFCRibbonCategory::OnKey  
+##  <a name="onkey"></a>  CMFCRibbonCategory::OnKey  
  사용자가 키보드 단추를 누를 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -1051,7 +1046,7 @@ virtual BOOL OnKey(UINT nChar);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onlbuttondown"></a>CMFCRibbonCategory::OnLButtonDown  
+##  <a name="onlbuttondown"></a>  CMFCRibbonCategory::OnLButtonDown  
  사용자가 왼쪽된 마우스 단추를 누를 때 지정된 된 지점 아래에 있는 리본 요소를 검색 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -1067,7 +1062,7 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onlbuttonup"></a>CMFCRibbonCategory::OnLButtonUp  
+##  <a name="onlbuttonup"></a>  CMFCRibbonCategory::OnLButtonUp  
  리본 범주 위에 포인터를 마우스 왼쪽된 단추를 놓을 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -1080,7 +1075,7 @@ virtual void OnLButtonUp(CPoint point);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onmousemove"></a>CMFCRibbonCategory::OnMouseMove  
+##  <a name="onmousemove"></a>  CMFCRibbonCategory::OnMouseMove  
  포인터를 움직이면 리본 표시줄에서 리본 범주 표시를 업데이트 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -1093,7 +1088,7 @@ virtual void OnMouseMove(CPoint point);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onrtlchanged"></a>CMFCRibbonCategory::OnRTLChanged  
+##  <a name="onrtlchanged"></a>  CMFCRibbonCategory::OnRTLChanged  
  레이아웃 방향 변경 될 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -1102,12 +1097,12 @@ virtual void OnRTLChanged(BOOL bIsRTL);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bIsRTL`  
- `TRUE`레이아웃은 오른쪽에서 왼쪽; 경우 `FALSE` 경우 레이아웃은 왼쪽에서 오른쪽입니다.  
+ `TRUE` 레이아웃은 오른쪽에서 왼쪽; 경우 `FALSE` 경우 레이아웃은 왼쪽에서 오른쪽입니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드는 모든 리본 패널 및 리본 범주에 포함 된 리본 요소의 레이아웃을 조정 합니다.  
   
-##  <a name="onscrollhorz"></a>CMFCRibbonCategory::OnScrollHorz  
+##  <a name="onscrollhorz"></a>  CMFCRibbonCategory::OnScrollHorz  
  리본 범주에서 가로 방향으로 스크롤합니다.  
   
 ```  
@@ -1118,17 +1113,17 @@ virtual BOOL OnScrollHorz(
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bScrollLeft`  
- `TRUE`왼쪽으로 스크롤하여 `FALSE` 오른쪽으로 스크롤해야 합니다.  
+ `TRUE` 왼쪽으로 스크롤하여 `FALSE` 오른쪽으로 스크롤해야 합니다.  
   
  [in] `nScrollOffset`  
  스크롤 거리 (픽셀)입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`리본 범주를 가로 방향으로;에서 이동 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 리본 범주를 가로 방향으로;에서 이동 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onupdatecmdui"></a>CMFCRibbonCategory::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>  CMFCRibbonCategory::OnUpdateCmdUI  
  호출 된 `OnUpdateCmdUI` 의 각 멤버 함수는 `CMFCRibbonPanel` 의 요소는 `CMFCRibbonCategory` 여기에 사용자 인터페이스 요소를 사용 하지 않도록 설정 하거나 설정 하려면.  
   
 ```  
@@ -1146,11 +1141,11 @@ virtual void OnUpdateCmdUI(
  설정 하거나 사용자 인터페이스 요소의 해제를 제어 하는 창에 대 한 포인터입니다.  
   
  [in] `bDisableIfNoHndler`  
- `TRUE`메시지 맵;에 정의 되어 있는 경우 처리기 사용자 인터페이스 항목을 비활성화 하려면 있습니다. 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 메시지 맵;에 정의 되어 있는 경우 처리기 사용자 인터페이스 항목을 비활성화 하려면 있습니다. 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="recalclayout"></a>CMFCRibbonCategory::RecalcLayout  
+##  <a name="recalclayout"></a>  CMFCRibbonCategory::RecalcLayout  
  리본 범주에 있는 모든 컨트롤의 레이아웃을 조정합니다.  
   
 ```  
@@ -1163,7 +1158,7 @@ virtual void RecalcLayout(CDC* pDC);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="removepanel"></a>CMFCRibbonCategory::RemovePanel  
+##  <a name="removepanel"></a>  CMFCRibbonCategory::RemovePanel  
  리본 범주에서 리본 패널을 제거합니다.  
   
 ```cpp  
@@ -1177,12 +1172,12 @@ BOOL RemovePanel(
  제거할 패널의 인덱스 번호입니다. 호출 하 여 가져온는 [CMFCRibbonCategory::GetPanelIndex](#getpanelindex) 메서드.  
   
  [in] `bDelete`  
- `TRUE`메모리에서 패널 개체를 삭제 하려면 `FALSE` 삭제 하지 않고 패널 개체를 제거할 수 있습니다.  
+ `TRUE` 메모리에서 패널 개체를 삭제 하려면 `FALSE` 삭제 하지 않고 패널 개체를 제거할 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
  메서드가 성공했으면 `TRUE`이고, 실패했으면 `FALSE`입니다.  
   
-##  <a name="repospanels"></a>CMFCRibbonCategory::ReposPanels  
+##  <a name="repospanels"></a>  CMFCRibbonCategory::ReposPanels  
  리본 범주에 포함 된 리본 패널에 있는 모든 컨트롤의 레이아웃을 조정 합니다.  
   
 ```  
@@ -1195,7 +1190,7 @@ virtual void ReposPanels(CDC* pDC);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setcollapseorder"></a>CMFCRibbonCategory::SetCollapseOrder  
+##  <a name="setcollapseorder"></a>  CMFCRibbonCategory::SetCollapseOrder  
  리본 범주의 리본 패널을 축소 하는 순서를 정의 합니다.  
   
 ```  
@@ -1213,12 +1208,12 @@ void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
   
  예를 들어 범주 리본 패널 세 개 있으며 모든 패널 완전히 축소 된 상태로 될 때까지 여러 번 축소할 수 있습니다. 다음 축소 순서를 설정할 수 있습니다: 0, 0, 2, 2입니다. 이 경우 범주 0 패널 두 번 축소 됩니다, 그리고 2 패널 두 배입니다. Uncollapsed 패널 1의 인덱스에 유지 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 사용 하는 `SetCollapseOrder` 에서 메서드는 `CMFCRibbonCategory` 클래스. 이 예제에서는 리본 범주를 축소 순서를 설정 하는 방법 및 축소 주문에 대 한 배열을 생성 하는 방법을 보여 줍니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#13](../../mfc/reference/codesnippet/cpp/cmfcribboncategory-class_2.cpp)]  
   
-##  <a name="setdata"></a>CMFCRibbonCategory::SetData  
+##  <a name="setdata"></a>  CMFCRibbonCategory::SetData  
  리본 범주와 연결 되도록 사용자 지정 데이터를 설정 합니다.  
   
 ```  
@@ -1229,7 +1224,7 @@ void SetData(DWORD_PTR dwData);
  [in] `dwData`  
  사용자 정의 데이터입니다.  
   
-##  <a name="setkeys"></a>CMFCRibbonCategory::SetKeys  
+##  <a name="setkeys"></a>  CMFCRibbonCategory::SetKeys  
  리본 범주에는 keytip을 할당합니다.  
   
 ```  
@@ -1243,7 +1238,7 @@ void SetKeys(LPCTSTR lpszKeys);
 ### <a name="remarks"></a>설명  
  키 팁에는 사용자가 Alt 키 또는 F10 키를 누를 때 표시 됩니다.  
   
-##  <a name="setname"></a>CMFCRibbonCategory::SetName  
+##  <a name="setname"></a>  CMFCRibbonCategory::SetName  
  이름 및 keytip 리본 범주에 할당합니다.  
   
 ```  
@@ -1257,7 +1252,7 @@ void SetName(LPCTSTR lpszName);
 ### <a name="remarks"></a>설명  
  리본 범주에 대 한 keytip을 설정 하려면 추가를 keytip 문자로 이어지는 줄 바꿈 이스케이프 시퀀스 `lpszName`합니다.  
   
-##  <a name="settabcolor"></a>Cmfcribboncategory:: Settabcolor  
+##  <a name="settabcolor"></a>  Cmfcribboncategory:: Settabcolor  
  리본 범주의 색을 설정 합니다.  
   
 ```  

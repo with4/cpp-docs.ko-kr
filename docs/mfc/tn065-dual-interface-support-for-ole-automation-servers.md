@@ -1,13 +1,10 @@
 ---
-title: "TN065: OLE 자동화 서버에 대 한 이중 인터페이스 지원 | Microsoft Docs"
-ms.custom: 
+title: 'TN065: OLE 자동화 서버에 대 한 이중 인터페이스 지원 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.ole
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 959938be27e66a765ee0ae9e5aef9b3c1f1aed6f
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 3b1c0d30938529d9eb432e6171b546a42f87905a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: OLE 자동화 서버에 대한 이중 인터페이스 지원
 > [!NOTE]
@@ -330,7 +325,7 @@ AfxOleRegisterTypeLib(AfxGetInstanceHandle(), LIBID_ACDual, _T("AutoClik.TLB"));
     미리 컴파일된 헤더와 하지 구축 해야 합니다.  
       #<a name="include-ole2h"></a>< ole2.h >를 포함 합니다.  
       #<a name="include-initguidh"></a>< d. h >를 포함 합니다.  
-      #<a name="include-acdualh"></a>include "acdual.h"  
+      #<a name="include-acdualh"></a>"acdual.h"를 포함 합니다.  
  ```  
   
 3.  On the **Build** menu, click **Settings**, and then select INITIIDS.CPP from the file list for each configuration.  
@@ -397,16 +392,16 @@ STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::AddRef()
 STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::Release()   
 {   
     METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
-    return pThis->ExternalRelease();
+    반환 pThis ExternalRelease();->
 
 }   
-STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::QueryInterface( REFIID iid, LPVOID* ppvObj)   
+STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::QueryInterface (REFIID iid, LPVOID ppvObj)   
 {   
     METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
     return pThis->ExternalQueryInterface(&iid, ppvObj);
 
 }   
-STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::InterfaceSupportsErrorInfo( REFIID iid)   
+STDMETHODIMP CAutoClickDoc::XSupportErrorInfo::InterfaceSupportsErrorInfo REFIID iid)   
 {   
     METHOD_PROLOGUE(CAutoClickDoc, SupportErrorInfo)   
     반환 (iid IID_IDualAClick = =) S_OK: S_FALSE;   

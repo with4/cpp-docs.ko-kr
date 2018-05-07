@@ -1,13 +1,10 @@
 ---
 title: '방법: PInvoke를 사용 하 여 구조체 마샬링 | Microsoft Docs'
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-caps.latest.revision: 30
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e7f08d42946eec22d616e6d964feda78e1358228
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: 4ff1801c9bb2de06ae2717e8f69bcd39fdf3bc98
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>방법: PInvoke를 사용하여 구조체 마샬링
 이 문서에서는 어떻게 네이티브 함수를 P/Invoke를 사용 하 여 관리 되는 함수에서 C 스타일 구조체를 호출할 수 있습니다. 있지만 대신 c + + Interop 기능을 사용 하는 것이 좋습니다 P/Invoke P/Invoke 거의 컴파일 타임 오류 보고를 제공 하기 때문에 형식이 안전한 아니며 관리 되지 않는 API는 DLL로 패키지와 소스 코드를 없는 경우 구현 하는 것 P/Invoke를 사용할 수 있는 유일한 옵션입니다. 다음 문서를 참조 하십시오.  

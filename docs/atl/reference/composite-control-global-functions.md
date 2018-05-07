@@ -2,11 +2,8 @@
 title: 복합 컨트롤 전역 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - atlhost/ATL::AtlAxDialogBox
@@ -27,17 +24,15 @@ dev_langs:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5a062ea9477df9db026c75bc775df804ed86da4
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 7c62d5056f28460644084296598ae865c6ff5f48
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="composite-control-global-functions"></a>복합 컨트롤 전역 함수
 이러한 함수를 작성, 호스팅 및 ActiveX 컨트롤 라이센스 획득 하 고 대화 상자 만들기에 대 한 지원을 제공 합니다.  
@@ -103,7 +98,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100  
 ```  
   
- 리소스 스크립트 편집에 대 한 자세한 내용은 참조 하십시오. [하는 방법: 리소스 스크립트 파일을 텍스트 형식으로 열기](../../windows/how-to-open-a-resource-script-file-in-text-format.md)합니다. 리소스 정의 제어문에 대 한 자세한 내용은 참조 하십시오. [공통 제어 매개 변수](http://msdn.microsoft.com/library/windows/desktop/aa380902) Windows SDK에서*: SDK 도구*합니다.  
+ 리소스 스크립트 편집에 대 한 자세한 내용은 참조 하십시오. [하는 방법: 리소스 스크립트 파일을 텍스트 형식으로 열기](../../windows/how-to-open-a-resource-script-file-in-text-format.md)합니다. 리소스 정의 제어문에 대 한 자세한 내용은 참조 하십시오. [공통 제어 매개 변수](http://msdn.microsoft.com/library/windows/desktop/aa380902) Windows SDK에서 *: SDK 도구*합니다.  
   
  일반적으로 대화 상자에 대 한 자세한 내용은 참조 [대화 상자](http://msdn.microsoft.com/library/windows/desktop/ms645452) 및 [CreateDialogParam](http://msdn.microsoft.com/library/windows/desktop/ms645445) Windows sdk에서입니다.  
   
@@ -161,11 +156,11 @@ ATLAPI AtlAxCreateControl(
   
 -   ProgID "MSCAL 예:. Calendar.7 "  
   
--   A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"  
+-   "{8E27C92B-1264-101C-8A2F-040224009C02}"와 같은 CLSID  
   
 -   와 같은 URL "http://www.microsoft.com"  
   
--   A reference to an Active document such as "file://\\\Documents\MyDoc.doc"  
+-   와 같은 액티브 문서에 대 한 참조 "file://\\\Documents\MyDoc.doc"  
   
 -   와 같은 HTML 조각을 "MSHTML:\<HTML >\<본문 > 텍스트의 줄\</본문 >\</HTML >"  
   
@@ -209,11 +204,11 @@ ATLAPI AtlAxCreateControlEx(
   
 -   ProgID "MSCAL 예:. Calendar.7 "  
   
--   A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"  
+-   "{8E27C92B-1264-101C-8A2F-040224009C02}"와 같은 CLSID  
   
 -   와 같은 URL "http://www.microsoft.com"  
   
--   A reference to an Active document such as "file://\\\Documents\MyDoc.doc"  
+-   와 같은 액티브 문서에 대 한 참조 "file://\\\Documents\MyDoc.doc"  
   
 -   와 같은 HTML 조각을 "MSHTML:\<HTML >\<본문 > 텍스트의 줄\</본문 >\</HTML >"  
   
@@ -264,11 +259,11 @@ ATLAPI AtlAxCreateControlLic(
   
 -   ProgID "MSCAL 예:. Calendar.7 "  
   
--   A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"  
+-   "{8E27C92B-1264-101C-8A2F-040224009C02}"와 같은 CLSID  
   
 -   와 같은 URL "http://www.microsoft.com"  
   
--   A reference to an Active document such as "file://\\\Documents\MyDoc.doc"  
+-   와 같은 액티브 문서에 대 한 참조 "file://\\\Documents\MyDoc.doc"  
   
 -   와 같은 HTML 조각을 "MSHTML:\<HTML >\<본문 > 텍스트의 줄\</본문 >\</HTML >"  
   
@@ -314,11 +309,11 @@ ATLAPI AtlAxCreateControlLicEx(
   
 -   ProgID "MSCAL 예:. Calendar.7 "  
   
--   A CLSID such as "{8E27C92B-1264-101C-8A2F-040224009C02}"  
+-   "{8E27C92B-1264-101C-8A2F-040224009C02}"와 같은 CLSID  
   
 -   와 같은 URL "http://www.microsoft.com"  
   
--   A reference to an Active document such as "file://\\\Documents\MyDoc.doc"  
+-   와 같은 액티브 문서에 대 한 참조 "file://\\\Documents\MyDoc.doc"  
   
 -   와 같은 HTML 조각을 "MSHTML:\<HTML >\<본문 > 텍스트의 줄\</본문 >\</HTML >"  
   

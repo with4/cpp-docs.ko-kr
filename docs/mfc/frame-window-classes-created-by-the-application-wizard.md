@@ -1,13 +1,10 @@
 ---
-title: "응용 프로그램 마법사로 만든 프레임 창 클래스 | Microsoft Docs"
-ms.custom: 
+title: 응용 프로그램 마법사로 만든 프레임 창 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CMainFrame
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - frame window classes [MFC], created by application wizards
 - CMainFrame class [MFC]
 ms.assetid: 9947df73-4470-49a0-ac61-7b6ee401a74e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 497dd21bba3e807349b793e3b37e774c833ccb40
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d3446de072266fdf7661d2e8d8ca0fc968279646
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>응용 프로그램 마법사로 만든 프레임 창 클래스
 사용 하는 경우는 [응용 프로그램 마법사](../ide/creating-desktop-projects-by-using-application-wizards.md) 응용 프로그램, 문서 및 뷰 클래스 외에도 기본 응용 프로그램을 만드는 응용 프로그램 마법사는 응용 프로그램의 주 프레임 창에 대 한 파생된 프레임 창 클래스를 만듭니다. 라고 `CMainFrame` 를 포함 하는 파일이 고, 기본적으로 해당 라고 합니다. H와 해당 합니다. CPP 합니다.  

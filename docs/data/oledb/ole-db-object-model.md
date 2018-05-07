@@ -1,12 +1,9 @@
 ---
-title: "OLE DB 개체 모델 | Microsoft Docs"
-ms.custom: 
+title: OLE DB 개체 모델 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - rowsets, OLE DB object model
 - OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2cd8fb90b7418b45f6bc011e8d4d0db6e04c08df
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ba9fd9b7ba5503f6ed5e1837147524f5abc7c31b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-object-model"></a>OLE DB 개체 모델
 OLE DB 개체 모델에는 다음 개체 또는 구성 요소 구성 됩니다. 처음 4 개의 개체나 나열 된 구성 요소 (데이터 원본, 세션, 명령 및 행 집합) 데이터 원본에 연결 하 고 볼 수 있도록 합니다. 접근자 이하의 나머지 표시 되 면 데이터 작업과 관련이 있습니다.  

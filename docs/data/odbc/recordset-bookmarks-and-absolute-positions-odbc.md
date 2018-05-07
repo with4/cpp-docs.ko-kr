@@ -2,12 +2,9 @@
 title: '레코드 집합: 책갈피와 절대 위치 (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 f1_keywords:
 - SetAbsolutePosition
 dev_langs:
@@ -30,18 +27,16 @@ helpviewer_keywords:
 - GetBookmark method
 - SetAbsolutePosition method, bookmarks
 ms.assetid: 189788d6-33c1-41c5-9265-97db2a5d43cc
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4b206e5d09d86613af0585df7510b0f88397984a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e5e45d2f9dd942e76ccce4231e8280a142e66e56
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>레코드 집합: 책갈피와 절대 위치(ODBC)
 MFC ODBC 클래스에이 항목에 적용 됩니다.  
@@ -54,7 +49,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
 -   [절대 위치를 사용 하 여 현재 레코드를 설정 하는 방법](#_core_absolute_positions_in_mfc_odbc)합니다.  
   
-##  <a name="_core_bookmarks_in_mfc_odbc"></a>MFC ODBC의 책갈피  
+##  <a name="_core_bookmarks_in_mfc_odbc"></a> MFC ODBC의 책갈피  
  책갈피는 레코드를 고유 하 게 식별합니다. 레코드 집합을 탐색할 때 항상 보장이 없는 레코드의 절대 위치 레코드 집합에서 레코드를 삭제할 수 있습니다. 레코드의 위치를 추적 하기 위해 신뢰할 수 있는 방법은 책갈피를 사용 하는 것입니다. 클래스 `CRecordset` 멤버 함수를 제공 합니다.  
   
 -   변수에 저장할 수 있도록 현재 레코드의 책갈피 가져오기 ([GetBookmark](../../mfc/reference/crecordset-class.md#getbookmark)).  
@@ -81,7 +76,7 @@ rs.SetBookmark( varRecordToReturnTo );
 > [!NOTE]
 >  ODBC 드라이버와 레코드 집합 형식에 따라 책갈피 지원 되지 않을 수 있습니다. 책갈피를 호출 하 여 사용할 수 있는지 여부를 쉽게 확인할 수 있습니다 [CRecordset::CanBookmark](../../mfc/reference/crecordset-class.md#canbookmark)합니다. 또한 책갈피는 지원 되는 경우 명시적으로 선택 해야 지정 하 여 구현 하는 데는 **CRecordset::useBookmarks** 옵션에 [crecordset:: Open](../../mfc/reference/crecordset-class.md#open) 멤버 함수입니다. 특정 레코드 집합 작업 후 책갈피의 지 속성을 확인 해야 합니다. 예를 들어 경우 없습니다 **Requery** 레코드 집합 책갈피가 더 이상 유효할 수 없습니다. 호출 [CDatabase::GetBookmarkPersistence](../../mfc/reference/cdatabase-class.md#getbookmarkpersistence) 안전 하 게 호출할 수 있는지 여부를 확인 하려면 `SetBookmark`합니다.  
   
-##  <a name="_core_absolute_positions_in_mfc_odbc"></a>MFC ODBC의 절대 위치  
+##  <a name="_core_absolute_positions_in_mfc_odbc"></a> MFC ODBC의 절대 위치  
  책갈피 외 클래스 `CRecordset` 는 서 수 위치를 지정 하 여 현재 레코드를 설정할 수 있습니다. 절대 위치 라고 합니다.  
   
 > [!NOTE]

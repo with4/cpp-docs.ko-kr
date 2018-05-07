@@ -1,12 +1,9 @@
 ---
-title: "CAnimationPoint 클래스 | Microsoft Docs"
-ms.custom: 
+title: CAnimationPoint 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationPoint
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ab685c223c4a86c35ba0feb578d93f58844734b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f7b81c49ce96fd026cd1974e505ac50dec131611
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint 클래스
 좌표에 애니메이션을 적용할 수 있는 점 기능을 구현합니다.  
@@ -90,7 +85,7 @@ class CAnimationPoint : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[CAnimationPoint::m_xValue](#m_xvalue)|X 나타내는 캡슐화 된 애니메이션 변수 애니메이션 점의 좌표입니다.|  
 |[CAnimationPoint::m_yValue](#m_yvalue)|캡슐화 된 애니메이션 변수 애니메이션 점의 Y 좌표를 나타내는입니다.|  
@@ -108,7 +103,7 @@ class CAnimationPoint : public CAnimationBaseObject;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationPoint::AddTransition  
+##  <a name="addtransition"></a>  CAnimationPoint::AddTransition  
  X에 대 한 변환을 추가 및 Y 좌표입니다.  
   
 ```  
@@ -127,7 +122,7 @@ void AddTransition(
 ### <a name="remarks"></a>설명  
  지정된 된 전환을 X에 대 한 변수 애니메이션에 적용할 변환의 내부 목록에 추가 하려면이 함수를 호출 및 Y 좌표입니다. 전환에 추가 하면 하지 즉시 적용 되며 내부 목록에 저장 합니다. 전환 (특정 값에 대 한 스토리 보드에 추가 된) 적용 CAnimationController::AnimateGroup를 호출 하는 경우. 전환을 좌표 중 하나에 적용할 필요가 없으면 NULL을 전달할 수 있습니다.  
   
-##  <a name="canimationpoint"></a>CAnimationPoint::CAnimationPoint  
+##  <a name="canimationpoint"></a>  CAnimationPoint::CAnimationPoint  
  CAnimationPoint 개체를 만듭니다.  
   
 ```  
@@ -157,7 +152,7 @@ CAnimationPoint(
 ### <a name="remarks"></a>설명  
  기본 속성으로 CAnimationPoint 개체를 생성: 점 좌표를 기본값, 그룹 ID 및 개체 ID는 0으로 설정 됩니다.  
   
-##  <a name="getanimationvariablelist"></a>CAnimationPoint::GetAnimationVariableList  
+##  <a name="getanimationvariablelist"></a>  CAnimationPoint::GetAnimationVariableList  
  목록에 캡슐화 된 애니메이션 변수를 추가합니다.  
   
 ```  
@@ -168,7 +163,7 @@ virtual void GetAnimationVariableList(CList<CAnimationVariable*, CAnimationVaria
  `lst`  
  함수가 반환할 때 X 및 Y 좌표를 나타내는 두 개의 CAnimationVariable 개체에 대 한 포인터를 포함 합니다.  
   
-##  <a name="getdefaultvalue"></a>CAnimationPoint::GetDefaultValue  
+##  <a name="getdefaultvalue"></a>  CAnimationPoint::GetDefaultValue  
  X에 대 한 기본값을 반환 및 Y 좌표입니다.  
   
 ```  
@@ -181,7 +176,7 @@ CPoint GetDefaultValue();
 ### <a name="remarks"></a>설명  
  생성자 또는 SetDefaultValue 여 이전에 설정 된 기본값을 검색 하려면이 함수를 호출 합니다.  
   
-##  <a name="getvalue"></a>CAnimationPoint::GetValue  
+##  <a name="getvalue"></a>  CAnimationPoint::GetValue  
  현재 값을 반환 합니다.  
   
 ```  
@@ -198,7 +193,7 @@ BOOL GetValue(CPoint& ptValue);
 ### <a name="remarks"></a>설명  
  애니메이션 포인트의 현재 값을 검색 하려면이 함수를 호출 합니다. 이 메서드가 실패 또는 기본 COM 개체 X에 대 한 Y 좌표 초기화 되지 않은 경우 ptValue SetDefaultValue 통하거나 생성자에서 이전에 설정 된 기본값을 포함 합니다.  
   
-##  <a name="getx"></a>CAnimationPoint::GetX  
+##  <a name="getx"></a>  CAnimationPoint::GetX  
  X 좌표에 대 한 CAnimationVariable에 대 한 액세스를 제공합니다.  
   
 ```  
@@ -211,7 +206,7 @@ CAnimationVariable& GetX();
 ### <a name="remarks"></a>설명  
  기본 CAnimationVariable 나타내는 X에 대 한 직접 액세스를 가져오려면이 메서드를 호출할 수를 조정 합니다.  
   
-##  <a name="gety"></a>CAnimationPoint::GetY  
+##  <a name="gety"></a>  CAnimationPoint::GetY  
  CAnimationVariable에 Y 좌표에 대 한 액세스를 제공합니다.  
   
 ```  
@@ -224,21 +219,21 @@ CAnimationVariable& GetY();
 ### <a name="remarks"></a>설명  
  Y 좌표를 나타내는 기본 CAnimationVariable에 대 한 직접 액세스를 가져오려면이 메서드를 호출할 수 있습니다.  
   
-##  <a name="m_xvalue"></a>CAnimationPoint::m_xValue  
+##  <a name="m_xvalue"></a>  CAnimationPoint::m_xValue  
  X 나타내는 캡슐화 된 애니메이션 변수 애니메이션 점의 좌표입니다.  
   
 ```  
 CAnimationVariable m_xValue;  
 ```  
   
-##  <a name="m_yvalue"></a>CAnimationPoint::m_yValue  
+##  <a name="m_yvalue"></a>  CAnimationPoint::m_yValue  
  캡슐화 된 애니메이션 변수 애니메이션 점의 Y 좌표를 나타내는입니다.  
   
 ```  
 CAnimationVariable m_yValue;  
 ```  
   
-##  <a name="operator_cpoint"></a>CAnimationPoint::operator CPoint  
+##  <a name="operator_cpoint"></a>  CAnimationPoint::operator CPoint  
  CPoint는 CAnimationPoint 변환합니다.  
   
 ```  
@@ -251,7 +246,7 @@ operator CPoint();
 ### <a name="remarks"></a>설명  
  이 함수는 GetValue 내부적으로 호출 합니다. Getvalue가 어떤 이유로 실패 하는 경우 반환 된 X에 대 한 기본 값이 포함 됩니다 및 Y 좌표입니다.  
   
-##  <a name="operator_eq"></a>CAnimationPoint::operator =  
+##  <a name="operator_eq"></a>  CAnimationPoint::operator =  
  CAnimationPoint ptSrc 할당합니다.  
   
 ```  
@@ -265,7 +260,7 @@ void operator=(const CPoint& ptSrc);
 ### <a name="remarks"></a>설명  
  CAnimationPoint ptSrc 할당합니다. 애니메이션이 시작 되기 전에이 연산자는 SetDefaultValue을 호출 하기 때문에 다시 기본 COM 개체가 하 만든 경우 X 및 Y 좌표에 대 한 작업을 수행 하는 것이 좋습니다. 이 애니메이션 개체 (재정의 또는 IntegerValueChanged) 이벤트를 구독 하는 경우 이러한 이벤트를 다시 사용 하도록 설정 해야 합니다.  
   
-##  <a name="setdefaultvalue"></a>CAnimationPoint::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>  CAnimationPoint::SetDefaultValue  
  기본값을 설정합니다.  
   
 ```  

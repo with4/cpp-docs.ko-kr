@@ -1,12 +1,9 @@
 ---
 title: PROPERTY_INFO_ENTRY_EX | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - PROPERTY_INFO_ENTRY_EX
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - PROPERTY_INFO_ENTRY_EX macro
 ms.assetid: af32dfcd-4c50-449d-af3b-48d21bd67a04
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6696067e94a10e57d52f5875b712f100c5ac6902
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 186c30584c5c5844614994700bf2a7958a73ce2d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="propertyinfoentryex"></a>PROPERTY_INFO_ENTRY_EX
 속성 집합의 특정 속성을 나타냅니다.  
@@ -57,7 +52,7 @@ PROPERTY_INFO_ENTRY_EX(dwPropID
 ## <a name="remarks"></a>설명  
  이 매크로를 사용하면 `DWORD` 형식의 속성 값뿐만 아니라 옵션 및 플래그를 직접 지정할 수 있습니다. 속성을 ATLDB.H에 정의된 기본값으로 설정하려면 [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md)를 사용합니다. 옵션 또는 플래그를 설정하지 않고 선택한 값으로 속성을 설정하려면 [PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)를 사용합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  

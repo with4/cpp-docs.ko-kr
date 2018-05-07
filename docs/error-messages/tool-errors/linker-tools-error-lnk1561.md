@@ -1,12 +1,9 @@
 ---
-title: "링커 도구 오류 LNK1561 | Microsoft Docs"
-ms.custom: 
+title: 링커 도구 오류 LNK1561 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK1561
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK1561
 ms.assetid: cb0b709b-7c9c-4496-8a4e-9e1e4aefe447
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cbd0ca9e932bdb2845ada2f47b569391e943cb9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8de3a8eebb8cc023f3ee6f2d2e4c82e718fe79e7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk1561"></a>링커 도구 오류 LNK1561
 진입점을 정의 해야 합니다.  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 응용 프로그램을 빌드할 때 링커 코드를 시작 하기 위해 호출 하는 진입점 함수를 찾습니다. 응용 프로그램이 로드 되 고 런타임에 초기화 후에 호출 되는 함수입니다. 응용 프로그램에 대 한 진입점 함수를 제공 해야 하거나 응용 프로그램을 실행할 수 없습니다. 진입점은 DLL에 대 한 선택 사항입니다. 기본적으로 링커 중 하나가 있는 몇 가지 특정 이름 및 서명을 같은 진입점 함수에 대 한 찾습니다 `int main(int, char**)`합니다. 항목으로 다른 함수 이름을 지정할 수 있습니다 /ENTRY 링커 옵션을 사용 하 여 지점입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 LNK1561 오류가 생성 됩니다.  
   
 ```cpp  

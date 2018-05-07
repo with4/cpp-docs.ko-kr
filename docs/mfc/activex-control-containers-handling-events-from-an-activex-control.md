@@ -2,12 +2,9 @@
 title: 'ActiveX 컨트롤 컨테이너: ActiveX 컨트롤에서 이벤트를 처리 합니다. | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84e1571f400297584e12a40dfd2bfcc3c0b525d2
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: f142fc49d2759c4edd7cdb8701b300d435e67f54
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX 컨트롤 컨테이너: ActiveX 컨트롤에서 보낸 이벤트 처리
 이 문서에서는 ActiveX 컨트롤 컨테이너에서 ActiveX 컨트롤에 대 한 이벤트 처리기를 설치 하려면 속성 창을 사용 하 여 설명 합니다. 이벤트 처리기는 특정 이벤트 (컨트롤)에서 알림 받기 및 응답에 일부 작업을 수행 하는 데 사용 됩니다. 이 알림은 이벤트를 "발생" 라고 합니다.  
@@ -72,7 +67,7 @@ ms.lasthandoff: 04/10/2018
   
 4.  원하는 이벤트를 처리 하는 대화 상자 클래스를 선택 합니다. 이 예에서는 선택 **클릭**합니다.  
   
-5.  오른쪽의 드롭다운 목록 상자에서 선택 ** \<추가 > ClickCircctrl1**합니다.  
+5.  오른쪽의 드롭다운 목록 상자에서 선택  **\<추가 > ClickCircctrl1**합니다.  
   
 6.  이벤트 처리기 코드 구현에서으로 이동 하려면 클래스 뷰에서 새 처리기 함수를 두 번 클릭 (합니다. Cpp)의 `CContainerDlg`합니다.  
   

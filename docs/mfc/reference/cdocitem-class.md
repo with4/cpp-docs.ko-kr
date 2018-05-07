@@ -1,12 +1,9 @@
 ---
-title: "CDocItem 클래스 | Microsoft Docs"
-ms.custom: 
+title: CDocItem 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDocItem
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CDocItem [MFC], GetDocument
 - CDocItem [MFC], IsBlank
 ms.assetid: 84fb8610-a4c8-4211-adc0-e70e8d002c11
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a4987554965674612eaf8d9aa78c659f7f28b75
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 724e5017f51a3527e2ad81bcf707179053cc3e88
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdocitem-class"></a>CDocItem 클래스
 문서 데이터의 구성 요소로, 문서 항목에 대한 기본 클래스입니다.  
@@ -50,7 +45,7 @@ class CDocItem : public CCmdTarget
 |[CDocItem::IsBlank](#isblank)|항목 정보를 포함 하는지 여부를 결정 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CDocItem`개체는 클라이언트와 서버 문서에서 OLE 항목을 나타내는 데 사용 됩니다.  
+ `CDocItem` 개체는 클라이언트와 서버 문서에서 OLE 항목을 나타내는 데 사용 됩니다.  
   
  자세한 내용은 문서 참조 [컨테이너: 컨테이너 구현](../../mfc/containers-implementing-a-container.md)합니다.  
   
@@ -64,7 +59,7 @@ class CDocItem : public CCmdTarget
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxole.h  
   
-##  <a name="getdocument"></a>CDocItem::GetDocument  
+##  <a name="getdocument"></a>  CDocItem::GetDocument  
  항목이 포함 된 문서를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -77,7 +72,7 @@ CDocument* GetDocument() const;
 ### <a name="remarks"></a>설명  
  이 함수는 파생된 클래스에서 재정의 되는 [COleClientItem](../../mfc/reference/coleclientitem-class.md) 및 [COleServerItem](../../mfc/reference/coleserveritem-class.md), 포인터 중 하나를 반환 하는 [COleDocument](../../mfc/reference/coledocument-class.md), [ COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md), 또는 [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) 개체입니다.  
   
-##  <a name="isblank"></a>CDocItem::IsBlank  
+##  <a name="isblank"></a>  CDocItem::IsBlank  
  기본 serialization 발생할 때 프레임 워크에서 호출 합니다.  
   
 ```  

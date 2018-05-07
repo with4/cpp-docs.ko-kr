@@ -1,13 +1,10 @@
 ---
-title: "슬라이더 컨트롤 스타일 | Microsoft Docs"
-ms.custom: 
+title: 슬라이더 컨트롤 스타일 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - styles [MFC], CSliderCtrl
 - styles [MFC], slider controls
 ms.assetid: 64c491fc-5af1-4f97-ae30-854071b3dc02
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 747f5d55821c6911e80087ebbad65b2169e6fc49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9fa099e050bd460756ff9e2584d37f9e628293f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="slider-control-styles"></a>슬라이더 컨트롤 스타일
 슬라이더 컨트롤 ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) 세로 또는 가로 방향을 가질 수 있습니다. 어느 쪽에 눈금 표시를 보유할 수 있는 면, 또는 모두 둘 다 합니다. 연속 값의 범위를 지정 하도 사용할 수 있습니다. 이러한 속성은 슬라이더 컨트롤을 만들 때 지정 하는 슬라이더 컨트롤 스타일을 사용 하 여 제어 됩니다.  

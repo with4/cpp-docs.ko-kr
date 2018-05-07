@@ -1,12 +1,9 @@
 ---
-title: "delete 연산자 (c + +) | Microsoft Docs"
-ms.custom: 
+title: delete 연산자 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - delete_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36da346329341221d43af2ec96aa17be4f819bf8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b523f5c10cbd28dfb2d584ea8241bc1518cf925
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-operator-c"></a>delete 연산자 (C++)
 메모리 블록을 할당 취소합니다.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ```  
   
 ## <a name="remarks"></a>설명  
- *캐스트 식* 인수를 사용 하 여 만든 개체에 대해 이전에 할당 된 메모리 블록에 대 한 포인터 이어야는 [new 연산자](../cpp/new-operator-cpp.md)합니다. **삭제** 연산자의 결과 유형 `void` 있으며 값을 반환 하지 않습니다. 예:  
+ *캐스트 식* 인수를 사용 하 여 만든 개체에 대해 이전에 할당 된 메모리 블록에 대 한 포인터 이어야는 [new 연산자](../cpp/new-operator-cpp.md)합니다. **삭제** 연산자의 결과 유형 `void` 있으며 값을 반환 하지 않습니다. 예를 들어:  
   
 ```  
 CDialog* MyDialog = new CDialog;  
@@ -93,7 +88,7 @@ int main()
   
  개체에 대해 delete의 배열 형태(delete [ ])를 사용하는 경우와 배열에 대해 delete의 비배열 형태를 사용하는 경우에는 정의되지 않은 결과가 생성됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  에 대 한 예제 **삭제**, 참조 [new 연산자](../cpp/new-operator-cpp.md)합니다.  
   
 ## <a name="how-delete-works"></a>delete 작동 방식  

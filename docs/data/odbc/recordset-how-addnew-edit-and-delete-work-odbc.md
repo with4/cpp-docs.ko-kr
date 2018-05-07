@@ -2,12 +2,9 @@
 title: '레코드 집합: AddNew, Edit 및 Delete 작동 방식 (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -26,18 +23,16 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: dbbf224797bd7d2eed2b085a6a7dd8eb1865de1c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e3d9dc82f4ea31557c4ec330b9737579021a8d35
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>레코드 집합: AddNew, Edit 및 Delete의 작동 방식(ODBC)
 MFC ODBC 클래스에이 항목에 적용 됩니다.  
@@ -57,7 +52,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
  읽을 하려는 보완, [레코드 필드 교환: RFX 작동 방식](../../data/odbc/record-field-exchange-how-rfx-works.md), RFX의 업데이트 작업에 해당 역할을 설명 하는 합니다.  
   
-##  <a name="_core_adding_a_record"></a>레코드 추가  
+##  <a name="_core_adding_a_record"></a> 레코드 추가  
 
  레코드 집합의 호출에서는 레코드 집합에 새 레코드를 추가 [AddNew](../../mfc/reference/crecordset-class.md#addnew) 새 레코드의 필드 데이터 멤버의 값을 설정 하 고 호출 된 멤버 함수는 [업데이트](../../mfc/reference/crecordset-class.md#update) 작성 하는 멤버 함수 데이터 원본에는 레코드입니다.  
   
@@ -95,7 +90,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
     > [!TIP]
     >  MFC 사용 하 여 레코드 집합 데이터 멤버 값을 변경 하는 경우를 검색 하려면는 **PSEUDO_NULL** 레코드 집합에 저장할 수 있는 각 데이터 형식에 적절 한 값입니다. 명시적 필드를 설정 해야 하는 경우는 **PSEUDO_NULL** 값과 필드 Null을 표시 하려면 이미 발생도 호출 해야 `SetFieldNull`, 첫 번째 매개 변수에서 필드의 주소를 전달 하 고 **FALSE**에서 두 번째 매개 변수입니다.  
   
-##  <a name="_core_visibility_of_added_records"></a>추가 된 레코드 표시  
+##  <a name="_core_visibility_of_added_records"></a> 추가 된 레코드 표시  
  추가 된 레코드를 레코드 집합 표시 인가요? 추가 된 레코드가 있고 경우에 따라 두 가지 작업에 따라 표시 되지 않습니다.  
   
 -   드라이버는 수 있습니다.  
@@ -104,7 +99,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
  ODBC 드라이버가 지원는 **:: SQLSetPos** MFC ODBC API 함수는 함수를 사용 하 여 레코드를 추가 합니다. 와 **:: SQLSetPos**, 추가 된 레코드를 업데이트할 수 있는 모든 MFC 레코드 집합으로 볼 수 있습니다. 함수에 대 한 지원, 추가 된 레코드가 표시 되는 호출 해야 **Requery** 를 보겠습니다. 사용 하 여 **:: SQLSetPos** 효율적입니다.  
   
-##  <a name="_core_editing_an_existing_record"></a>기존 레코드를 편집  
+##  <a name="_core_editing_an_existing_record"></a> 기존 레코드를 편집  
  레코드 집합에서 기존 레코드를 편집 하려면 레코드 집합의 레코드를 하려면 스크롤하고 [편집](../../mfc/reference/crecordset-class.md#edit) 새 레코드의 필드 데이터 멤버의 값을 설정 하 고 호출 된 멤버 함수는 [업데이트](../../mfc/reference/crecordset-class.md#update)멤버 함수를 데이터 소스에 변경 된 레코드를 기록 합니다.  
   
  호출에 대 한 전제 조건으로 **편집**, 업데이트 가능 하 고 레코드에서 해당 레코드 있어야 합니다. `CanUpdate` 및 `IsDeleted` 멤버 함수를 사용 하 여 이러한 조건을 확인할 수 있습니다. 또한 현재 레코드가 이미 삭제 되지 않으며 레코드 집합에 레코드가 있어야 합니다. (둘 다 `IsBOF` 및 `IsEOF` 0을 반환).  
@@ -122,7 +117,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
 -   ODBC 드라이버가 지원는 **:: SQLSetPos** MFC ODBC API 함수는 함수를 사용 하 여 데이터 원본에서 레코드를 업데이트 합니다. 와 **:: SQLSetPos**, 드라이버 프로그램 편집 버퍼 두 개의 서로 다른 서버에 레코드를 업데이트 하는 서버에 있는 해당 레코드와 비교 합니다. 와 **:: SQLSetPos**, MFC를 업데이트할 수는 레코드 보다 효율적으로 생성 하 고 SQL 문을 처리 하는 없기 때문입니다.  
   
-     또는  
+     -또는-  
   
 -   경우 **:: SQLSetPos** 수 없습니다을 사용 하는 MFC에서 다음을 수행 합니다.  
   
@@ -140,7 +135,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
     > [!TIP]
     >  호출 하는 경우 `AddNew` 또는 **편집** 호출 하기 전에 두 함수 호출 후 **업데이트**, 대체 새롭거나 편집 된 레코드에 저장된 된 레코드와 편집 버퍼는 새로 고쳐지고 진행 중입니다. 이 동작을 중단 하는 방법을 제공는 `AddNew` 또는 **편집** 하 고 새 시작: 진행률 레코드에 결함이 있는 인지를 확인 하는 경우 단순히 호출 **편집** 또는 `AddNew` 다시 합니다.  
   
-##  <a name="_core_deleting_a_record"></a>레코드 삭제  
+##  <a name="_core_deleting_a_record"></a> 레코드 삭제  
  레코드 집합에서 레코드를 삭제 하면 스크롤하고 레코드로 호출 레코드 집합의 [삭제](../../mfc/reference/crecordset-class.md#delete) 멤버 함수입니다. 와 달리 `AddNew` 및 **편집**, **삭제** 에 대 한 일치 하는 호출 하지 않아도 **업데이트**합니다.  
   
  호출에 대 한 전제 조건으로 **삭제**레코드 집합을 업데이트할 수 있어야 하 고 레코드에 있어야 합니다. `CanUpdate`, `IsBOF`, `IsEOF`, 및 `IsDeleted` 멤버 함수를 사용 하 여 이러한 조건을 확인할 수 있습니다.  
@@ -149,7 +144,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
 -   ODBC 드라이버가 지원는 **:: SQLSetPos** MFC ODBC API 함수는 함수를 사용 하 여 데이터 원본에서 레코드를 삭제 합니다. 사용 하 여 **:: SQLSetPos** SQL을 사용 하 여 보다 일반적으로 더 효율적입니다.  
   
-     또는  
+     -또는-  
   
 -   경우 **:: SQLSetPos** 수 없습니다을 사용 하는 MFC에서 다음을 수행 합니다.  
   

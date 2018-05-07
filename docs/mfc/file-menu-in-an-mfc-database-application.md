@@ -1,30 +1,25 @@
 ---
-title: "MFC 데이터베이스 응용 프로그램에서 파일 메뉴 | Microsoft Docs"
-ms.custom: 
+title: MFC 데이터베이스 응용 프로그램에서 파일 메뉴 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - File menu
 - database applications [MFC], File menu commands
 ms.assetid: 92dafb75-c1b3-4860-80a0-87a83bfc36f2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f630f5a3fe1ee5833ac2796ff2acb1841af4c1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71e669336e4a23f1a34e0bbd65bd8123e0df3335
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>MFC 데이터베이스 응용 프로그램의 파일 메뉴
 어떻게 해야 하면 해석 열기, 닫기, 저장 및 다른 이름으로 저장 명령을 파일 메뉴에서 MFC 데이터베이스 응용 프로그램을 만들고 serialization을 사용 하지 않는 경우 다음은 몇 가지 제안 사항이이 질문에 대 한 스타일 지정 지침 없음 상태인:  

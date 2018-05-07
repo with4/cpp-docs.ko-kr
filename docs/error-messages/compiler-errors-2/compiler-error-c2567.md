@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C2567 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C2567 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2567
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2567
 ms.assetid: 9c140ac9-7059-47e6-9ba1-e7939c8c0dc3
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28cd1dc74e15ae3cd63286fc6de9c3508bb1d279
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05f89362f36a6ba576e9829153f0d8931c4975c6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2567"></a>컴파일러 오류 C2567
 'file'에서 메타 데이터를 열 수 없습니다 파일 수 삭제 되었거나 이동 되었음을  

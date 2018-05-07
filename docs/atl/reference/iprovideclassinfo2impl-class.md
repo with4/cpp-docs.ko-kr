@@ -1,12 +1,9 @@
 ---
-title: "IProvideClassInfo2Impl 클래스 | Microsoft Docs"
-ms.custom: 
+title: IProvideClassInfo2Impl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IProvideClassInfo2Impl
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - IProvideClassInfo2 ATL implementation
 - class information, ATL
 ms.assetid: d74956e8-9c69-4cba-b99d-ca1ac031bb9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fe466608acaecfaf6219b6d15d27e0611ac2511
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a970b0258c8d353dabad96d712598416caf2acb4
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl 클래스
 이 클래스의 기본 구현을 제공는 [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) 및 [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) 메서드.  
@@ -71,7 +66,7 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
   
 ### <a name="constructors"></a>생성자  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[IProvideClassInfo2Impl::IProvideClassInfo2Impl](#iprovideclassinfo2impl)|생성자입니다.|  
   
@@ -84,14 +79,14 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[IProvideClassInfo2Impl::_tih](#_tih)|Coclass에 대 한 형식 정보를 관리합니다.|  
   
 ## <a name="remarks"></a>설명  
  [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) 확장 [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) 추가 하 여는 `GetGUID` 메서드. 이 메서드는 클라이언트를 기본 이벤트 집합에 대 한 개체의 나가는 인터페이스 IID를 검색할 수 있습니다. 클래스 `IProvideClassInfo2Impl` 의 기본 구현을 제공는 **IProvideClassInfo** 및 `IProvideClassInfo2` 메서드.  
   
- `IProvideClassInfo2Impl`형식의 정적 멤버가 포함 된 `CComTypeInfoHolder` coclass에 대 한 형식 정보를 관리 하는 합니다.  
+ `IProvideClassInfo2Impl` 형식의 정적 멤버가 포함 된 `CComTypeInfoHolder` coclass에 대 한 형식 정보를 관리 하는 합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `IProvideClassInfo2`  
@@ -101,7 +96,7 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="getclassinfo"></a>IProvideClassInfo2Impl::GetClassInfo  
+##  <a name="getclassinfo"></a>  IProvideClassInfo2Impl::GetClassInfo  
  검색 한 `ITypeInfo` coclass의 형식 정보에 대 한 포인터입니다.  
   
 ```
@@ -111,7 +106,7 @@ STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 ### <a name="remarks"></a>설명  
  참조 [IProvideClassInfo::GetClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms690192) in the Windows SDK입니다.  
   
-##  <a name="getguid"></a>IProvideClassInfo2Impl::GetGUID  
+##  <a name="getguid"></a>  IProvideClassInfo2Impl::GetGUID  
  개체의 나가는 dispinterface에 대 한 GUID를 검색합니다.  
   
 ```
@@ -123,7 +118,7 @@ STDMETHOD(GetGUID)(
 ### <a name="remarks"></a>설명  
  참조 [IProvideClassInfo2::GetGUID](http://msdn.microsoft.com/library/windows/desktop/ms679721) in the Windows SDK입니다.  
   
-##  <a name="iprovideclassinfo2impl"></a>IProvideClassInfo2Impl::IProvideClassInfo2Impl  
+##  <a name="iprovideclassinfo2impl"></a>  IProvideClassInfo2Impl::IProvideClassInfo2Impl  
  생성자입니다.  
   
 ```
@@ -133,7 +128,7 @@ IProvideClassInfo2Impl();
 ### <a name="remarks"></a>설명  
  호출 `AddRef` 에 [_tih](#_tih) 멤버입니다. 소멸자 호출 **릴리스**합니다.  
   
-##  <a name="_tih"></a>IProvideClassInfo2Impl::_tih  
+##  <a name="_tih"></a>  IProvideClassInfo2Impl::_tih  
  이 정적 데이터 멤버는 클래스 템플릿 매개 변수 인스턴스의 `tihclass`, 기본적으로 `CComTypeInfoHolder`합니다.  
   
 ```
@@ -142,7 +137,7 @@ static  tihclass
 ```     
   
 ### <a name="remarks"></a>설명  
- `_tih`coclass에 대 한 형식 정보를 관리합니다.  
+ `_tih` Coclass에 대 한 형식 정보를 관리합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [클래스 개요](../../atl/atl-class-overview.md)

@@ -1,12 +1,9 @@
 ---
-title: "DATE 형식 | Microsoft Docs"
-ms.custom: 
+title: DATE 형식 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - DATE
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - MFC, date and time
 - hour values representation
 ms.assetid: 695853ed-b614-4575-b793-b8c287372038
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f1ed7eb2b467fd52545f65f98b87e8e34ad71f3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5aafed046fa5724442e30014aa5634542de0f4aa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="date-type"></a>날짜 형식
 **날짜** 형식이 8 바이트 부동 소수점 숫자를 사용 하 여 구현 됩니다. 일은 1899 년 12 월 30 일 자정 0 시로로 시작 하는 정수 증분으로 표시 됩니다. 시간 값은 숫자의 소수 부분의 절대값으로 표시 됩니다. 다음 표에서 여러 가지 날짜와 함께 설명의 **날짜** 형식 숫자 값:  

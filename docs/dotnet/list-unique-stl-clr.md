@@ -1,12 +1,9 @@
 ---
 title: 'list:: unique (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::list::unique
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - unique member [STL/CLR]
 ms.assetid: c3a29e4e-0ec1-4472-b050-7a9511037132
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 056f15dc0e7808a7f0ada7267a60e13d4c75d83b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d5dbfab0fb53a4ca11128d01e7b32060c6428549
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listunique-stlclr"></a>list::unique(STL/CLR)
 지정된 테스트를 통과하는 인접 요소를 제거합니다.  
@@ -48,7 +43,7 @@ template<typename Pred2>
   
  두 번째 멤버 함수는 동일 하 게 동작 첫 번째, 각 요소를 제거 한다는 점을 제외 하면 `Y` 요소는 다음에 오는 `X` 입니다 `pred(X, Y)`합니다. 조건자 함수 또는 사용자가 지정한 대리자를 충족 하는 인접 요소의 모든 하위 시퀀스의 복사본을 하나만 남기고 모두 제거 하려면 사용 합니다. 되는 경우 제어 되는 시퀀스 정렬 되는 경우 등으로 호출 하 여 `sort(pred)`, 멤버 함수는 다른 요소와 순서 지정이 동일할 갖지 않는 요소만를 둡니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_list_unique.cpp   

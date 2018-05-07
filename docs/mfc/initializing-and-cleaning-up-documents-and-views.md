@@ -1,13 +1,10 @@
 ---
-title: "초기화 및 문서 및 뷰 정리 | Microsoft Docs"
-ms.custom: 
+title: 초기화 및 문서 및 뷰 정리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - document objects [MFC], life cycle of
 - initializing views [MFC]
 ms.assetid: 95d6f09b-a047-4079-856a-ae7d0548e9d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0546bfc0a5226c6cd22497acae1bb364ceba107b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0f59dcfbdac4a2d5da732c5e7f8cfc78083bf843
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="initializing-and-cleaning-up-documents-and-views"></a>문서 및 뷰 초기화 및 정리
 초기화 하 고 문서 및 뷰 정리에 대 한 다음 지침을 따르세요.  
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
  SDI 응용 프로그램에서 1 단계 문서 처음 만들 때 한 번 수행 됩니다. 그런 다음 2-4 단계 반복 하 여 수행 새 문서를 열 때마다 합니다. 새 문서는 기존 문서 개체를 다시 사용합니다. 마지막으로, 응용 프로그램이 종료 될 때 5 단계를 수행 합니다.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [문서 및 뷰 초기화](../mfc/initializing-documents-and-views.md)  
   

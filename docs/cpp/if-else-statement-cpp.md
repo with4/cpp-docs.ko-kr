@@ -1,12 +1,9 @@
 ---
-title: "if-else 문 (c + +) | Microsoft Docs"
-ms.custom: 
+title: if-else 문 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 07/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - else_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - else keyword [C++]
 - if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96233323e5a95f88a43fb56162393238f8c2e091
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8de2511096766cc4852c1c612eccb7dc65713218
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="if-else-statement-c"></a>if-else 문 (C++)
 조건부 분기를 제어 합니다. *if 블록* 경우에 실행 되는 *if 식을* 0이 아닌 값으로 계산 (또는 `true`). 하는 경우의 값 *식* 이 값은 0 *statement1* 및 블록의 다른 문이 실행 되 고 블록에서는 다른 있는 경우를 건너뜁니다. 하는 경우의 값 *식* 가 0 이면 다음 if 블록이 생략 되 고 다른-블록이 있는 경우 실행 됩니다. 0이 아닌 값을 평가 하는 식은
@@ -76,7 +71,7 @@ else  // optional
    ...
 } 
 ```  
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
 ```  
 // if_else_statement.cpp  
 #include <iostream>
@@ -176,7 +171,7 @@ int main()
  **다른** 절은 `if...else` 문은 가장 가까운와 연결 된 이전 **경우** 해당 하지 않은 동일한 범위에서 문을 **다른** 문입니다.   
 
 ## <a name="constexpr-if-statements"></a>constexpr 경우 문
-**Visual Studio 2017 15.3 이상 버전** (사용할 수 있는 [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 함수 템플릿을 사용할 수 있습니다는 **constexpr 경우** 문을 컴파일할 분기 결정을 내릴 수 함수 오버 로드를 여러 개에 의존 하지 않고도 합니다. 예를 들어 해당 핸들 매개 변수의 압축을 푼 (0이 매개 변수 오버 로드가 필요) 함수를 하나 작성할 수 있습니다. 
+**Visual Studio 2017 15.3 이상 버전** (사용할 수 있는 [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 함수 템플릿을 사용할 수 있습니다는 **constexpr 경우** 문 없이 컴파일 타임 분기 결정을 내릴 수 여러 함수 오버 로드에 필요 합니다. 예를 들어 해당 핸들 매개 변수의 압축을 푼 (0이 매개 변수 오버 로드가 필요) 함수를 하나 작성할 수 있습니다. 
 
 ```cpp
 template <class T, class... Rest>

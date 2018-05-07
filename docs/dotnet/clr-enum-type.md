@@ -1,13 +1,10 @@
 ---
-title: "CLR 열거형 형식 | Microsoft Docs"
-ms.custom: 
+title: CLR 열거형 형식 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,23 +12,21 @@ helpviewer_keywords:
 - enum struct keyword [C++]
 - enum class keyword [C++]
 ms.assetid: 4541d952-97bb-4e35-a7f8-d14f5f6a6606
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ad82c1d867c511121cd024f2affd5df98b4642bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2416a306373db08c5e925b4987fc8a9273973c39
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-enum-type"></a>CLR 열거형 형식
 선언 및 열거형의 동작에서에서 변경 되었습니다 Managed Extensions for c + + Visual c + +입니다.  
   
- Managed Extensions 열거형 선언 앞에서 `__value` 키워드입니다. 네이티브 열거형에서 파생 된 CLR 열거형에서 구분 하기 위해 여기서는 `System::ValueType`, 유사한 기능을 제안 하는 중입니다. 예:  
+ Managed Extensions 열거형 선언 앞에서 `__value` 키워드입니다. 네이티브 열거형에서 파생 된 CLR 열거형에서 구분 하기 위해 여기서는 `System::ValueType`, 유사한 기능을 제안 하는 중입니다. 예를 들어:  
   
 ```  
 __value enum e1 { fail, pass };  

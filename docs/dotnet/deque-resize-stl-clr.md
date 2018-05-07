@@ -2,11 +2,8 @@
 title: 'deque:: resize (STL/CLR) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::deque::resize
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - resize member [STL/CLR]
 ms.assetid: c83f3c57-38b3-4706-a124-59bafbf88484
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fac11adade64d03696cbe73b09d1c35dfdd026b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0d7e68fa1a58e70d4b414f81ca826e632c8706bd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dequeresize-stlclr"></a>deque::resize(STL/CLR)
 요소의 수를 변경합니다.  
@@ -48,7 +43,7 @@ void resize(size_type new_size, value_type val);
 ## <a name="remarks"></a>설명  
  두 멤버 함수를 확인 하는 [deque:: size (STL/CLR)](../dotnet/deque-size-stl-clr.md) `()` 예측이 반환 `new_size`합니다. 제어되는 시퀀스 길이를 늘려야 할 경우 첫 번째 멤버 함수는 값이 `value_type()`인 요소를 추가하지만, 두 번째 멤버 함수는 값이 `val`인 요소를 추가합니다. 더 짧은 제어 되는 시퀀스를 두 멤버 함수는 효과적으로 지울 마지막 요소 [deque:: size (STL/CLR)](../dotnet/deque-size-stl-clr.md) `() -` `new_size` 시간입니다. 제어 되는 시퀀스의 크기가을 사용 하면 `new_size`, 트리밍 하거나 현재 제어 되는 시퀀스를 패딩 하 여 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_deque_resize.cpp   

@@ -2,12 +2,9 @@
 title: CDaoFieldInfo 구조체 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoFieldInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Fields collection
 - CDaoFieldInfo structure [MFC]
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63fdab9bae7238f427ff2015beffd53570603af4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d08dd9d877d8872c5c8a930e84ae0496c745709
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo 구조체
 `CDaoFieldInfo` 구조 데이터 액세스 개체 (DAO)에 대해 정의 된 field 개체에 대 한 정보를 포함 합니다.  
@@ -80,7 +75,7 @@ struct CDaoFieldInfo
   
 - **dbLongBinary** 긴 이진 (OLE 개체); MFC 클래스를 사용 하려는 경우도 [CByteArray](../../mfc/reference/cbytearray-class.md) 클래스 대신 `CLongBinary` 으로 `CByteArray` 풍부 하 고 보다 쉽게 사용할 수 있습니다.  
   
-- **dbMemo** 메모; 참조 MFC 클래스`CString`  
+- **dbMemo** 메모; 참조 MFC 클래스 `CString`  
   
 - **dbGUID** A 전역 고유 식별자/범용 고유 식별자 원격 프로시저 호출에 사용 합니다. 자세한 내용은 DAO 도움말의 "Type 속성" 항목을 참조 합니다.  
   
@@ -159,7 +154,7 @@ struct CDaoFieldInfo
   
  개체 속성을 검사 하기 위한 용도 외에도 사용할 수도 있습니다 `CDaoFieldInfo` 테이블 정의에서 새 필드를 만들기 위한 입력된 매개 변수를 생성 합니다. 간단한 옵션은이 작업을 사용할 수 있지만 보다 세부적으로 제어 하려는 경우에의 버전을 사용할 수 있습니다 [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield) 를 사용 하는 `CDaoFieldInfo` 매개 변수입니다.  
   
- 검색 한 정보는 `GetFieldInfo` (필드를 포함 하는 클래스)의 멤버 함수에 저장 되는 `CDaoFieldInfo` 구조입니다. 호출 된 `GetFieldInfo` 필드 개체가 보관 되어 있는 Fields 컬렉션에 포함 하는 개체의 멤버 함수입니다. `CDaoFieldInfo`또한 정의 `Dump` 디버그에서 멤버 함수를 작성 합니다. 사용할 수 있습니다 `Dump` 의 내용을 덤프 하는 `CDaoFieldInfo` 개체입니다.  
+ 검색 한 정보는 `GetFieldInfo` (필드를 포함 하는 클래스)의 멤버 함수에 저장 되는 `CDaoFieldInfo` 구조입니다. 호출 된 `GetFieldInfo` 필드 개체가 보관 되어 있는 Fields 컬렉션에 포함 하는 개체의 멤버 함수입니다. `CDaoFieldInfo` 또한 정의 `Dump` 디버그에서 멤버 함수를 작성 합니다. 사용할 수 있습니다 `Dump` 의 내용을 덤프 하는 `CDaoFieldInfo` 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdao.h  

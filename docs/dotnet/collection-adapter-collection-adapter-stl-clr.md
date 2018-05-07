@@ -1,12 +1,9 @@
 ---
 title: 'collection_adapter:: collection_adapter (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::collection_adapter
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - collection_adapter member [STL/CLR]
 ms.assetid: 7e2bb75b-d735-4135-9523-719683e06fe9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 190379cbfeea0f1bbf747d537f9501f076f6bb0e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ddb802e372dfb10acdc6280622bf1ed59a422987
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collectionadaptercollectionadapter-stlclr"></a>collection_adapter::collection_adapter(STL/CLR)
 어댑터 개체를 생성 합니다.  
@@ -73,7 +68,7 @@ collection_adapter(Coll^ collection);
   
  사용 된 저장된 핸들 초기화 `collection`합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_collection_adapter_construct.cpp   

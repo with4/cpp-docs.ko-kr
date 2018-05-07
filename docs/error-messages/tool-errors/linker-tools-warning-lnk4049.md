@@ -1,12 +1,9 @@
 ---
-title: "링커 도구 경고 LNK4049 | Microsoft Docs"
-ms.custom: 
+title: 링커 도구 경고 LNK4049 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK4049
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK4049
 ms.assetid: 5fd5fb24-c860-4149-a557-0ac26a65d97c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f44634bd99e485e444ffe9cee7747f31374becf4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b50dadc9c160ac8902cedcd60c954b565dce6e24
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-warning-lnk4049"></a>링커 도구 경고 LNK4049
 로컬 정의 클래스 가져온 ' symbol' 기호  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
  자세한 정보를 가져오고 내보내려면 데이터 선언에 대 한 참조 [dllexport, dllimport](../../cpp/dllexport-dllimport.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 두 개의 모듈 연결 LNK4049 생성 됩니다. 첫 번째 모듈 단일 내보낸된 함수를 포함 하는 개체 파일을 생성 합니다.  
   
 ```  
@@ -65,7 +60,7 @@ __declspec(dllexport) int func()
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  두 번째 모듈 내에서이 함수를 호출 하는 첫 번째 모듈에서 내보낸 함수에 대 한 정방향 선언에 포함 된 개체 파일을 생성 된 `main` 함수입니다. 첫 번째 모듈을 사용 하 여이 모듈을 연결 하면 LNK4049 생성 됩니다. 제거는 `__declspec(dllimport)` 선언 하면 경고가 해결 됩니다.  
   
 ```  

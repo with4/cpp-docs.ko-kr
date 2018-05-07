@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 2) C4244 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 2) C4244 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4244
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4244
 ms.assetid: 2c19d157-21d1-42c2-a6c0-3f30f2ce3813
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d1920fbc2ed78cf498df61c7177796645730cc2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de3b2392575f069c9ffc7b661cbd647f81f9557b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-2-c4244"></a>컴파일러 경고(수준 2) C4244
 'argument': 'type1'에서 'type2', 데이터가 손실 될 수로 변환  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
  C4244 오류가 수준 3 및 4;에서 발생할 수도 있습니다. 참조 [컴파일러 경고 (수준 3 및 4) C4244](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md) 자세한 정보에 대 한 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C4244 오류가 발생하는 경우를 보여 줍니다.  
   
 ```  

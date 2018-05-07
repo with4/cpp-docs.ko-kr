@@ -1,30 +1,25 @@
 ---
 title: 어휘 규칙 | Microsoft Docs
-ms.custom: ''
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: 'index-page '
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - lexical conventions
 - conventions, lexical
 ms.assetid: 03f9efff-bb95-45ef-9157-0a3fac809ccf
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894baf715113ebdf8dbead6600f9c906784fbd37
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: 79588c700201a8b59053af3e0007216bfc8f4aec
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lexical-conventions"></a>어휘 규칙
 이 단원에서는 C++ 프로그램의 기본 요소를 소개합니다. 문, 정의, 선언 등을 생성하는 "어휘 요소" 또는 "토큰"이라고 하는 요소를 사용하여 완전한 프로그램을 구성할 수 있습니다. 이 단원에서 설명하는 어휘 요소는 다음과 같습니다.

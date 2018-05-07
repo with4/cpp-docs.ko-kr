@@ -1,12 +1,9 @@
 ---
 title: 'deque:: pop_front (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::deque::pop_front
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - pop_front member [STL/CLR]
 ms.assetid: 5042df47-b226-4b16-982e-6a4543b8e00b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4a6eab42a6fe3880c3c76f537f3c39b9e663a4f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d52387bc3de6da5808ea135ddc5b75e03c3fa3f8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dequepopfront-stlclr"></a>deque::pop_front(STL/CLR)
 첫 번째 요소를 제거합니다.  
@@ -40,7 +35,7 @@ void pop_front();
 ## <a name="remarks"></a>설명  
  멤버 함수는 비어 있어야 하는 제어 된 시퀀스의 첫 번째 요소를 제거 합니다. 앞에 한 요소 deque를 줄이기 위해 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_deque_pop_front.cpp   

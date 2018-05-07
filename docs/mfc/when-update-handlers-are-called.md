@@ -1,13 +1,10 @@
 ---
-title: "업데이트 처리기가 호출 하는 경우 | Microsoft Docs"
-ms.custom: 
+title: 업데이트 처리기가 호출 하는 경우 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - command routing [MFC], update handlers
 - update handlers, calling
 ms.assetid: 7359f6b1-4669-477d-bd99-690affed08d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eaf2773a2d9e393c783a39e01c75f8efa62796df
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d899d9952ae13b23121fb0b7a188f8136315c342
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="when-update-handlers-are-called"></a>업데이트 처리기가 호출되는 시점
 에서는 오류가 발생 하는 파일 메뉴에서 마우스를 클릭할 경우를 가정해 볼는 `WM_INITMENUPOPUP` 메시지입니다. 사용자가 볼 수 있도록 메뉴가 드롭다운 전에 프레임 워크의 업데이트 메커니즘 전체적으로 파일 메뉴에 있는 모든 항목을 업데이트 합니다.  

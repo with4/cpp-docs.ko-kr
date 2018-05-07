@@ -1,30 +1,25 @@
 ---
-title: "공급자에 인터페이스 추가 | Microsoft Docs"
-ms.custom: 
+title: 공급자에 인터페이스 추가 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d62f3e4fc3a12c1aeb58f4d6d42ded38d4dfe58
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3d6bc5d1b6c47d2ffa26bffa98d47b930d6ed193
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-an-interface-to-your-provider"></a>공급자에 인터페이스 추가
 인터페이스를 추가 합니다 (일반적으로 데이터 원본, 행 집합, 명령 또는 세션 개체 OLE DB 공급자 마법사가 만든)에 추가할 개체를 결정 합니다. 인터페이스를 추가 해야 해당 개체가 공급자 지원 하지 않는 하나 임을 것 같습니다. ATL OLE DB 공급자 마법사 개체를 만드는 경우에 실행 합니다. 클래스 뷰에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 여, **클래스 추가** 에서 **추가** 메뉴를 차례로 클릭 **ATL OLE DB Provider**합니다. 별도 디렉터리에 인터페이스 코드를 입력 한 다음 공급자 프로젝트에는 파일을 복사 할 수 있습니다.  
@@ -38,7 +33,7 @@ class CAgentRowset :
     public IRowsetIndexImpl< ... >   
 ```  
   
- 인터페이스를 추가 **COM_MAP** COM_INTERFACE_ENTRY 매크로 사용 하 여 개체에서입니다. 맵이 없는 경우 만듭니다. 예:  
+ 인터페이스를 추가 **COM_MAP** COM_INTERFACE_ENTRY 매크로 사용 하 여 개체에서입니다. 맵이 없는 경우 만듭니다. 예를 들어:  
   
 ```cpp  
 BEGIN_COM_MAP(CAgentRowset)  

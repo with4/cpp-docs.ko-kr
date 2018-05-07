@@ -2,12 +2,9 @@
 title: 기본 MFC Dll에서 데이터베이스, OLE 및 소켓 MFC 확장 Dll을 사용 하 여 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0042dd5dc6049447868cf5ca5ea1112b3695f3a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f902f3b512b5684cf185829fdf4346b8851ff8ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>기본 MFC Dll에서 데이터베이스, OLE 및 소켓 MFC 확장명 Dll 사용
 MFC 확장 DLL 연결 되어 있지 않습니다에 MFC 확장 DLL 기본 MFC DLL에서 사용 하는 경우는 **CDynLinkLibrary** 체인 개체 기본 MFC dll에 일련의 관련된 문제를 하나 이상에 실행할 수 있습니다. MFC 데이터베이스, OLE 및 소켓의 디버그 버전을 지원 하기 때문에 Dll이 MFC 확장 Dll로 구현 됩니다, 그리고 사용자의 MFC 확장 Dll 명시적으로 사용 하지 않아도 하는 경우에 이러한 MFC를 사용 하는 경우 비슷한 문제가 기능 발생할 수 있습니다. 이러한 문제는:  
@@ -38,7 +33,7 @@ MFC 확장 DLL 연결 되어 있지 않습니다에 MFC 확장 DLL 기본 MFC DL
   
 -   `DllGetClassObject``DllCanUnloadNow`, 및 `UpdateRegistry`, `Revoke`, `RevokeAll`, 및 `RegisterAll` 의 멤버 함수 `COleObjectFactory` MFC 확장 DLL에에서 정의 된 클래스 팩터리를 찾지 못합니다.  
   
--   `AfxDoForAllClasses`모든 클래스는 MFC 확장 DLL에에서 대해서는 작동 하지 않습니다.  
+-   `AfxDoForAllClasses` 모든 클래스는 MFC 확장 DLL에에서 대해서는 작동 하지 않습니다.  
   
 -   표준 MFC 데이터베이스, 소켓 또는 / / OLE 리소스 로드 하지 못했습니다. 예를 들어 **AfxLoadString**(**AFX_IDP_SQL_CONNECT_FAIL**) 기본 MFC DLL은 MFC 데이터베이스 클래스를 사용 하 여 제대로 하는 경우에 빈 문자열을 반환 합니다.  
   

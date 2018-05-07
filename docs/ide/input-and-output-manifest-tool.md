@@ -1,13 +1,10 @@
 ---
-title: "매니페스트 도구 입 / 출력 속성 (Visual c + +) | Microsoft Docs"
-ms.custom: 
+title: 매니페스트 도구 입 / 출력 속성 (Visual c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCManifestTool.OutputManifestFile
 - VC.Project.VCManifestTool.InputResourceManifests
@@ -19,17 +16,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: a8bb20f6-7ace-45ca-bab0-b4f4a5caf170
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77137e9bc0a4af60080234aac85afa59034d2c6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 15be7636188bb670febd7875974d683c1d78360f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>입력 및 출력, 매니페스트 도구, 구성 속성, &lt;Projectname&gt; 속성 페이지 대화 상자
 이 대화 상자를 사용 하 여 입력 및 출력 옵션을 지정 하려면 [Mt.exe](http://msdn.microsoft.com/library/aa375649)합니다.  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
  사용 하 여는 **/manifest** 병합 하거나 매니페스트 도구에서 처리 하는 추가 매니페스트 파일의 전체 경로 지정 하는 옵션입니다. 전체 경로 세미콜론으로 구분 됩니다.  
   
  **입력 리소스 매니페스트**  
- 사용 하 여는 **/inputresource** 매니페스트 도구에 입력을 RT_MANIFEST 형식의 리소스의 전체 경로 지정 하는 옵션입니다. 경로 지정 된 리소스 ID가 올 수 있습니다. 예:  
+ 사용 하 여는 **/inputresource** 매니페스트 도구에 입력을 RT_MANIFEST 형식의 리소스의 전체 경로 지정 하는 옵션입니다. 경로 지정 된 리소스 ID가 올 수 있습니다. 예를 들어:  
   
  `dll_with_manifest.dll;#1`  
   
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
  사용 하 여는 **/makecdfs** 는 매니페스트 생성 됩니다. 카탈로그를 만드는 데 사용 되는 카탈로그 정의 파일 (.cdf 파일)을 지정 하는 옵션입니다.  
   
  **ManagedAssembly에서 매니페스트를 생성 합니다.**  
- 관리 되는 어셈블리에서 매니페스트를 생성 합니다. (**-managedassemblyname:***파일*).  
+ 관리 되는 어셈블리에서 매니페스트를 생성 합니다. (**-managedassemblyname: * * * 파일*).  
   
  **Dependency 요소를 표시 안 함**  
  함께 사용 된 **-managedassembly** 옵션입니다. 이 태그에는 최종 매니페스트에서 종속성 요소 생성이 되지 않습니다.  

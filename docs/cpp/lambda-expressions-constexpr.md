@@ -2,28 +2,23 @@
 title: c + +의 람다 식 constexpr | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - lambda expressions [C++], constexpr
 ms.assetid: b56346cd-fbff-475f-aeaa-ed2010c6d6f7
-caps.latest.revision: 0
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 307ce6ab87ca36de561ebcf1ad8bd30eb73e4192
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1e01f41aaf8b761020f57625e7cbf06f8fba2659
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>constexpr c + +의 람다 식
 **Visual Studio 2017 버전 15.3 이상** (사용할 수 있는 [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 람다 식으로 선언할 수 있습니다 `constexpr` contant 식에서 사용할 때 각 데이터 멤버의 초기화 한다는 캡처하거나 소개 상수 식 내에 허용 됩니다.  
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
 ```
   
 ## <a name="see-also"></a>참고 항목  
- [C + + 언어 참조](../cpp/cpp-language-reference.md)   
+ [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [C + + 표준 라이브러리에 함수 개체](../standard-library/function-objects-in-the-stl.md)   
  [함수 호출](../cpp/function-call-cpp.md)   
  [for_each](../standard-library/algorithm-functions.md#for_each)

@@ -1,12 +1,9 @@
 ---
-title: "CComEnum 클래스 | Microsoft Docs"
-ms.custom: 
+title: CComEnum 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComEnum
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - CComEnum class
 ms.assetid: bff7dd7b-eb6e-4d6e-96ed-2706e66c8b3b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 792c5ff95858936d38d9a87350dd3ca405c5ec66
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17046239cf4ca5cc95afbc709f10b9c8aedaa9fb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomenum-class"></a>CComEnum 클래스
 이 클래스는 배열을 기반으로 하는 COM 열거자 개체를 정의 합니다.  
@@ -59,11 +54,11 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
  클래스의 스레딩 모델입니다. 이 매개 변수 프로젝트에 사용 되는 전역 개체 스레드 모델 기본값으로 사용 됩니다.  
   
 ## <a name="remarks"></a>설명  
- `CComEnum`배열을 기반으로 COM 열거자 개체를 정의 합니다. 이 클래스는 유사 [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) c + + 표준 라이브러리 컨테이너에 기반 하는 열거자를 구현 하는 합니다. 이 클래스를 사용 하기 위한 일반적인 단계는 다음과 같습니다. 자세한 내용은 참조 [ATL 컬렉션 및 열거자](../../atl/atl-collections-and-enumerators.md)합니다.  
+ `CComEnum` 배열을 기반으로 COM 열거자 개체를 정의 합니다. 이 클래스는 유사 [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) c + + 표준 라이브러리 컨테이너에 기반 하는 열거자를 구현 하는 합니다. 이 클래스를 사용 하기 위한 일반적인 단계는 다음과 같습니다. 자세한 내용은 참조 [ATL 컬렉션 및 열거자](../../atl/atl-collections-and-enumerators.md)합니다.  
   
 ## <a name="to-use-this-class"></a>이 클래스를 사용 합니다.  
   
-- `typedef`이 클래스의 특수화입니다.  
+- `typedef` 이 클래스의 특수화입니다.  
   
 -   사용 하 여 `typedef` 의 특수화의 템플릿 인수로 `CComObject`합니다.  
   
@@ -87,7 +82,7 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  아래 표시 된 코드 만들기 및 초기화 열거자 개체에 대 한 재사용 가능한 함수를 제공 합니다.  
   
  [!code-cpp[NVC_ATL_COM#32](../../atl/codesnippet/cpp/ccomenum-class_1.h)]  

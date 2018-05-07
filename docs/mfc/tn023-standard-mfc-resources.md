@@ -1,13 +1,10 @@
 ---
-title: "TN023: 표준 MFC 리소스 | Microsoft Docs"
-ms.custom: 
+title: 'TN023: 표준 MFC 리소스 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.resources
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fded011fda52dfde46804b03699dc93469e5e32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61d6520aef1ec04c6419fb1c9c901475c9c109f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023: 표준 MFC 리소스
 이 메모와 함께 제공 되 고 MFC 라이브러리에 필요한 표준 리소스를 설명 합니다.  
@@ -84,7 +79,7 @@ ms.lasthandoff: 12/21/2017
 >  .Rc 리소스 파일에는 특별 한 있습니다 `TEXTINCLUDE` 에 실수로 위에 표준.rc 파일에 저장 하면 방해 하는 리소스입니다.  
   
 ### <a name="customizing-standard-framework-resources"></a>표준 프레임 워크 리소스를 사용자 지정  
- 표준 프레임 워크 리소스를 사용 하 여 응용 프로그램에 포함 된 일반적으로 # 응용 프로그램의 리소스 파일에 명령을 include 합니다. 응용 프로그램 마법사는 리소스 파일을 생성 합니다. 이 파일에는 선택한 응용 프로그램 마법사 옵션에 따라 적절 한 표준 프레임 워크 리소스를 포함 합니다. 검토 지정, 추가 또는 제거 컴파일 타임 지시문을 변경 하 여 어떤 리소스가 포함 됩니다. 이 작업을 수행 하려면 엽니다는 **리소스** 메뉴와 선택 **Set Includes**합니다. "컴파일 타임 지시문" 참조 항목을 편집 합니다. 예:  
+ 표준 프레임 워크 리소스를 사용 하 여 응용 프로그램에 포함 된 일반적으로 # 응용 프로그램의 리소스 파일에 명령을 include 합니다. 응용 프로그램 마법사는 리소스 파일을 생성 합니다. 이 파일에는 선택한 응용 프로그램 마법사 옵션에 따라 적절 한 표준 프레임 워크 리소스를 포함 합니다. 검토 지정, 추가 또는 제거 컴파일 타임 지시문을 변경 하 여 어떤 리소스가 포함 됩니다. 이 작업을 수행 하려면 엽니다는 **리소스** 메뉴와 선택 **Set Includes**합니다. "컴파일 타임 지시문" 참조 항목을 편집 합니다. 예를 들어:  
   
 ```  
 #include "afxres.rc"  

@@ -1,12 +1,9 @@
 ---
 title: priority_queue (STL/CLR) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::priority_queue
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <queue> header [STL/CLR]
 - <cliext/queue> header [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: b7d1459da07f7e392a2da1fbf5d6e9d72c8f4653
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 63e806603a795a71dc2afb95ae17779d1c6f210b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue(STL/CLR)
 이 템플릿 클래스는 다양 한 길이의 액세스가 제한 된 요소의 시퀀스를 정렬 된 제어 하는 개체를 설명 합니다. 컨테이너 어댑터를 사용 하 여 `priority_queue` 우선 순위 큐는 기본 컨테이너를 관리할 수 있습니다.  
@@ -102,7 +97,7 @@ template<typename Value,
   
  이러한 대리자 개체 형식의 값에 엄밀히 약한 정렬을 적용 해야 합니다 [priority_queue:: value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)합니다. 모든 두 개의 키 즉 `X` 및 `Y`:  
   
- `value_comp()(X, Y)`동일한 부울 결과를 반환 모든 호출 합니다.  
+ `value_comp()(X, Y)` 동일한 부울 결과를 반환 모든 호출 합니다.  
   
  경우 `value_comp()(X, Y)` 가 true 이면 `value_comp()(Y, X)` false 이어야 합니다.  
   

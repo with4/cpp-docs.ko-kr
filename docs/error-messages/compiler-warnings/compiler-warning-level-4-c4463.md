@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 4) C4463 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 4) C4463 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4463
@@ -15,25 +12,23 @@ dev_langs:
 helpviewer_keywords:
 - C4463
 ms.assetid: a07ae70c-db4e-472b-8b58-9137d9997323
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71b438de515a4fd01e7714de685ee0a89adb609e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c13e0a79c667ecedbf3fd065338892d3af9c2ee
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4463"></a>컴파일러 경고 (수준 4) C4463  
   
 > 오버플로. 할당 *값* 값만 포함할 수 있는 비트 필드에 *low_value* 를 *high_value*  
   
-할당 된 *값* 비트 필드에서 보유할 수 있는 값의 범위를 벗어났습니다. 부호 있는 비트 필드 형식을 사용 하 여 상위 비트가 부호에 대 한 비트가 하면  *n*  는 부호 있는 비트 필드는-2 비트 필드 크기 범위<sup>n-1</sup> 2로<sup>n-1</sup>-1을 반환 하는 동안 부호 없는 비트 필드는 0에서 2 사이의<sup>n</sup>-1입니다.  
+할당 된 *값* 비트 필드에서 보유할 수 있는 값의 범위를 벗어났습니다. 부호 있는 비트 필드 형식 상위 비트가 부호 비트를 사용 하면 *n* 는 부호 있는 비트 필드는-2 비트 필드 크기 범위<sup>n-1</sup> 2로<sup>n-1</sup>서명 되지 않은 동안-1 비트 필드는 0에서 2 사이의<sup>n</sup>-1입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 형식의 비트 필드에 값 3 할당 하려고 했기 때문에이 예제에서는 C4463 `int` 1-2에서 범위 크기가 2가 있습니다.  
   

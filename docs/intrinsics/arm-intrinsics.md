@@ -1,12 +1,9 @@
 ---
-title: "ARM 내장 함수 | Microsoft Docs"
-ms.custom: 
+title: ARM 내장 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - arm_neon/vsetq_lane_p8
@@ -1940,17 +1937,15 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c34855fa3099fa9c91badba96d39b90f4c25792b
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 305c4251808e7a9cbe152f3bbae043080dcb7d1e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="arm-intrinsics"></a>ARM 내장 함수
 Visual C++ 컴파일러에서 다음 내장 함수를 ARM 아키텍처에서 사용 가능하도록 만듭니다. ARM에 대 한 자세한 내용은 참조는 [ARM 아키텍처 참조 설명서](http://go.microsoft.com/fwlink/p/?LinkId=522049) 및 [ARM 어셈블러 도구 가이드](http://go.microsoft.com/fwlink/p/?LinkId=246102) ARM Infocenter 웹 사이트에 있습니다.  
@@ -2082,10 +2077,10 @@ Visual C++ 컴파일러에서 다음 내장 함수를 ARM 아키텍처에서 사
 |__isb|ISB|void __isb(unsigned int _Type)<br /><br /> 명령 스트림에 메모리 장벽 작업을 삽입합니다. 매개 변수 `_Type`은 장벽이 적용하는 제한의 종류를 지정 합니다.<br /><br /> 적용할 수 있는 제한의 종류에 대 한 자세한 내용은 참조 하십시오. [메모리 장벽 제한](#BarrierRestrictions)합니다.|  
 |__emit||void __emit (부호 없는 \__int32 opcode)<br /><br /> 컴파일러로 출력된 명령 스트림에 지정된 명령을 삽입합니다.<br /><br /> `opcode`의 값은 컴파일 타임에 알려진 상수 식이어야 합니다. 명령 단어의 크기는 16비트이며 `opcode`의 최상위 16비트는 무시됩니다.<br /><br /> 컴파일러는 `opcode`의 내용을 해석하지 않으며 삽입된 명령이 실행되기 전에 CPU 또는 메모리 상태를 보장하지 않습니다.<br /><br /> 컴파일러는 삽입된 명령이 실행된 후 CPU 및 메모리 상태가 변경되지 않는다고 가정합니다. 따라서 상태를 변경하는 명령은 컴파일러에 의해 생성된 일반 코드에 나쁜 영향을 미칠 수 있습니다.<br /><br /> 이러한 이유로 `emit`는 보조 프로세서 상태와 같은 컴파일러가 일반적으로 처리하지 않으며 CPU 상태에 영향을 주는 명령을 삽입하는 경우 또는 `declspec(naked)`을 사용하여 선언된 함수를 구현하는 경우에만 사용합니다.|  
 |__hvc|HVC|unsigned int __hvc(unsigned int, ...)|  
-|__iso_volatile_load16||__int16 \__iso_volatile_load16(const volatile \__int16 *)<br /><br /> 자세한 내용은 참조 [__iso_volatile_load/store instrinsics](#IsoVolatileLoadStore)합니다.|  
-|__iso_volatile_load32||__int32 \__iso_volatile_load32(const volatile \__int32 *)<br /><br /> 자세한 내용은 참조 [__iso_volatile_load/store instrinsics](#IsoVolatileLoadStore)합니다.|  
-|__iso_volatile_load64||__int64 \__iso_volatile_load64(const volatile \__int64 *)<br /><br /> 자세한 내용은 참조 [__iso_volatile_load/store instrinsics](#IsoVolatileLoadStore)합니다.|  
-|__iso_volatile_load8||__int8 \__iso_volatile_load8(const volatile \__int8 *)<br /><br /> 자세한 내용은 참조 [__iso_volatile_load/store instrinsics](#IsoVolatileLoadStore)합니다.|  
+|__iso_volatile_load16||__int16 \__iso_volatile_load16 (const volatile \__int16 *)<br /><br /> 자세한 내용은 참조 [__iso_volatile_load/store instrinsics](#IsoVolatileLoadStore)합니다.|  
+|__iso_volatile_load32||__int32 \__iso_volatile_load32 (const volatile \__int32 *)<br /><br /> 자세한 내용은 참조 [__iso_volatile_load/store instrinsics](#IsoVolatileLoadStore)합니다.|  
+|__iso_volatile_load64||__int64 \__iso_volatile_load64 (const volatile \__int64 *)<br /><br /> 자세한 내용은 참조 [__iso_volatile_load/store instrinsics](#IsoVolatileLoadStore)합니다.|  
+|__iso_volatile_load8||__int8 \__iso_volatile_load8 (const volatile \__int8 *)<br /><br /> 자세한 내용은 참조 [__iso_volatile_load/store instrinsics](#IsoVolatileLoadStore)합니다.|  
 |__iso_volatile_store16||void __iso_volatile_store16(volatile \__int16 *, \__int16)<br /><br /> 자세한 내용은 참조 [__iso_volatile_load/store instrinsics](#IsoVolatileLoadStore)합니다.|  
 |__iso_volatile_store32||void __iso_volatile_store32(volatile \__int32 *, \__int32)<br /><br /> 자세한 내용은 참조 [__iso_volatile_load/store instrinsics](#IsoVolatileLoadStore)합니다.|  
 |__iso_volatile_store64||void __iso_volatile_store64(volatile \__int64 *, \__int64)<br /><br /> 자세한 내용은 참조 [__iso_volatile_load/store instrinsics](#IsoVolatileLoadStore)합니다.|  
@@ -2109,9 +2104,9 @@ Visual C++ 컴파일러에서 다음 내장 함수를 ARM 아키텍처에서 사
 |_CountLeadingSigns||unsigned int _CountLeadingSigns(long)|  
 |_CountLeadingSigns64||unsigned int _CountLeadingSigns64(\__int64)|  
 |_CountLeadingZeros||unsigned int _CountLeadingZeros(unsigned long)|  
-|_CountLeadingZeros64||unsigned int _CountLeadingZeros64(unsigned \__int64)|  
+|_CountLeadingZeros64||unsigned int _CountLeadingZeros64 (부호 없는 \__int64)|  
 |_CountOneBits||unsigned int _CountOneBits(unsigned long)|  
-|_CountOneBits64||unsigned int _CountOneBits64(unsigned \__int64)|  
+|_CountOneBits64||unsigned int _CountOneBits64 (부호 없는 \__int64)|  
 |_DAddSatInt|QDADD|int _DAddSatInt(int, int)|  
 |_DSubSatInt|QDSUB|int _DSubSatInt(int, int)|  
 |_isunordered||int _isunordered(double, double)|  
@@ -2470,10 +2465,10 @@ void _MoveFromCoprocessor64(
 |_InterlockedCompareExchange8_acq|char _InterlockedCompareExchange8_acq(char volatile *, char, char)|  
 |_InterlockedCompareExchange8_nf|char _InterlockedCompareExchange8_nf(char volatile *, char, char)|  
 |_InterlockedCompareExchange8_rel|char _InterlockedCompareExchange8_rel(char volatile *, char, char)|  
-|_InterlockedCompareExchangePointer|void * _InterlockedCompareExchangePointer(void \* volatile \*, void \*, void \*)|  
+|_InterlockedCompareExchangePointer|void * _InterlockedCompareExchangePointer (void \* volatile \*, void \*, void \*)|  
 |_InterlockedCompareExchangePointer_acq|void * _InterlockedCompareExchangePointer_acq(void \* volatile \*, void \*, void \*)|  
 |_InterlockedCompareExchangePointer_nf|void * _InterlockedCompareExchangePointer_nf(void \* volatile \*, void \*, void \*)|  
-|_InterlockedCompareExchangePointer_rel|void * _InterlockedCompareExchangePointer_rel(void \* volatile \*, void \*, void \*)|  
+|_InterlockedCompareExchangePointer_rel|void * _InterlockedCompareExchangePointer_rel (void \* volatile \*, void \*, void \*)|  
 |_InterlockedCompareExchange_acq|long _InterlockedCompareExchange_acq(long volatile *, long, long)|  
 |_InterlockedCompareExchange_nf|long _InterlockedCompareExchange_nf(long volatile *, long, long)|  
 |_InterlockedCompareExchange_rel|long _InterlockedCompareExchange_rel(long volatile *, long, long)|  
@@ -2516,8 +2511,8 @@ void _MoveFromCoprocessor64(
 |_InterlockedExchangeAdd_nf|long _InterlockedExchangeAdd_nf(long volatile *, long)|  
 |_InterlockedExchangeAdd_rel|long _InterlockedExchangeAdd_rel(long volatile *, long)|  
 |_InterlockedExchangePointer|void * _InterlockedExchangePointer (void \* volatile \* _Target void \*)|  
-|_InterlockedExchangePointer_acq|void * _InterlockedExchangePointer_acq(void \* volatile \* _Target, void \*)|  
-|_InterlockedExchangePointer_nf|void * _InterlockedExchangePointer_nf(void \* volatile \* _Target, void \*)|  
+|_InterlockedExchangePointer_acq|void * _interlockedexchangepointer (void \* volatile \* _Target void \*)|  
+|_InterlockedExchangePointer_nf|void * _interlockedexchangepointer (void \* volatile \* _Target void \*)|  
 |_InterlockedExchange_acq|long _InterlockedExchange_acq(long volatile * _Target, long)|  
 |_InterlockedExchange_nf|long _InterlockedExchange_nf(long volatile * _Target, long)|  
 |_InterlockedIncrement|long __cdecl _InterlockedIncrement(long volatile *)|  

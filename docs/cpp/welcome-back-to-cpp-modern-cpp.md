@@ -1,27 +1,22 @@
 ---
-title: "C + + (최신 c + +)를 다시 시작 | Microsoft Docs"
-ms.custom: 
+title: C + + (최신 c + +)를 다시 시작 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e45c48671a0df62103a58a89d0c351209c71ed2
-ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
+ms.openlocfilehash: 63e73657c7e018d2a4eb71170561e310aeba9d5b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++의 진화(최신 C++)
 C++는 전세계적으로 가장 널리 사용되는 프로그래밍 언어 중 하나입니다. 잘 작성된 C++ 프로그램은 빠르고 효율적입니다. 이 언어는 재미있고 흥미로운 게임에서 고성능 과학 소프트웨어, 장치 드라이버, 포함 프로그램 및 Windows 클라이언트 응용 프로그램에 이르기까지 다양한 응용 프로그램을 만드는 데 사용할 수 있으며 유연성이 다른 언어보다 훨씬 더 뛰어납니다. C++는 20년 이상 이러한 문제와 기타 문제를 해결하는 데 사용되었습니다. 여러분은 모르겠지만, 오래된 C 스타일 프로그래밍을 접고 대신 최신 C++를 사용하는 C++ 프로그래머의 수가 점점 증가하고 있습니다.  
@@ -36,7 +31,7 @@ C++는 전세계적으로 가장 널리 사용되는 프로그래밍 언어 중 
   
 -   원시 포인터가 아닌 스마트 포인터  
   
--   `std::string`및 `std::wstring` 형식 (참조 [ \<문자열 >](../standard-library/string.md)) 대신 원시 `char[]` 배열입니다.  
+-   `std::string` 및 `std::wstring` 형식 (참조 [ \<문자열 >](../standard-library/string.md)) 대신 원시 `char[]` 배열입니다.  
   
 -   [C + + 표준 라이브러리](../standard-library/cpp-standard-library-header-files.md) 컨테이너와 같은 `vector`, `list`, 및 `map` 기본 배열 또는 사용자 지정 컨테이너 대신 합니다. 참조 [ \<벡터 >](../standard-library/vector.md), [ \<목록 >](../standard-library/list.md), 및 [ \<지도 >](../standard-library/map.md)합니다.  
   
@@ -143,7 +138,7 @@ void f()
  자세한 내용은 StackOverflow 문서 참조 [어떤 c + + 관용구는 C + + 11에서 사용 되지 않습니다](http://go.microsoft.com/fwlink/p/?linkid=402836)  
   
 ## <a name="see-also"></a>참고 항목  
- [C + + 언어 참조](../cpp/cpp-language-reference.md)   
+ [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [람다 식](../cpp/lambda-expressions-in-cpp.md)   
  [C++ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)  
  [Visual C++ 언어 규칙](../visual-cpp-language-conformance.md)  

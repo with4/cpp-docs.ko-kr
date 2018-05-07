@@ -1,12 +1,9 @@
 ---
-title: "OLE DB 공급자 만들기 | Microsoft Docs"
-ms.custom: 
+title: OLE DB 공급자 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - OLE DB providers, creating
 - OLE DB provider templates, creating providers
 ms.assetid: f73017c3-c89f-41a6-a306-ea992cf6092c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: bd59e8e9456cac830e6e86faf404c76816e45349
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f649b5b4c79c4148d0aed026b044485ca2b1eaa7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-an-ole-db-provider"></a>OLE DB 공급자 만들기
 OLE DB 공급자를 만들려면 마법사를 사용 하는 ATL COM 프로젝트와 공급자를 만들고 다음 OLE DB 템플릿을 사용 하 여 파일을 수정 하는 것이 좋습니다. 공급자를 사용자 지정할 때에 필요 하지 않은 속성을 주석 수 있으며 선택적 인터페이스를 추가할 수 있습니다.  

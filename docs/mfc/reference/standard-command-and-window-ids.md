@@ -1,13 +1,10 @@
 ---
-title: "표준 명령 및 창 Id | Microsoft Docs"
-ms.custom: 
+title: 표준 명령 및 창 Id | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - standard command and Window IDs
 ms.assetid: 0424805c-fff8-4531-8f0c-15cfb13aa612
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c8195b1ab967a0d6692e839b1db1e89ee6694d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 72b50108a9b880961f0dd8bcded1126a635fb9e7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-command-and-window-ids"></a>표준 명령 및 창 ID
 Microsoft Foundation Class 라이브러리는 Afxres.h의 여러 표준 명령 및 창 ID를 정의합니다. 이러한 ID는 메시지를 처리기 함수에 매핑하기 위해 리소스 편집기 및 속성 창 내에서 일반적으로 사용됩니다. 모든 표준 명령는 **ID_** 접두사입니다. 예를 들어 메뉴 편집기를 사용 하면 일반적으로 파일 열기 메뉴 항목에 연결한 표준 `ID_FILE_OPEN` 명령 id입니다.  

@@ -2,12 +2,9 @@
 title: 명령 대상 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - messages, command [MFC]
 - command routing [MFC], command targets
 ms.assetid: b0f784e5-c6dc-4391-9e71-aa7b7dcbe9f0
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb8d2bff69e95a089827c85ade6dc4bcd67eb7ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cbcfa1042a8430c704bad93e4bc0ce5655b5921
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-targets"></a>명령 대상
 그림 [프레임 워크의 명령](../mfc/user-interface-objects-and-command-ids.md) 메뉴 항목 및 개체를 클릭할 때 발생 하는 명령을 수행 하는 프레임 워크를 호출 하는 처리기 함수는 사용자 인터페이스 개체 간의 연결을 보여 줍니다.  

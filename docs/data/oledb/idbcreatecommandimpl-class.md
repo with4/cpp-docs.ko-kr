@@ -1,12 +1,9 @@
 ---
-title: "IDBCreateCommandImpl 클래스 | Microsoft Docs"
-ms.custom: 
+title: IDBCreateCommandImpl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::IDBCreateCommandImpl
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - IDBCreateCommandImpl class
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3a4e5d676c004c7439b58631e87fbe0ac1e1af22
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: cc032a488626f2d366152f2d2b70b2539b9137b9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl 클래스
 구현을 제공는 [IDBCreateCommand](https://msdn.microsoft.com/en-us/library/ms711625.aspx) 인터페이스입니다.  

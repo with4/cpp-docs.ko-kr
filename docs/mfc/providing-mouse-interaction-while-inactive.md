@@ -1,29 +1,24 @@
 ---
-title: "비활성 상태 중 마우스 상호 작용 제공 | Microsoft Docs"
-ms.custom: 
+title: 비활성 상태 중 마우스 상호 작용 제공 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], mouse interaction
 ms.assetid: b09106bf-44c7-4b9b-a6d9-0d624f16f5b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2f8991b6cc827c35c94b0989ef82e32422fd5c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: faf1ea1958d6a6381bbe1c6e7d3db26f5f5b7c17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="providing-mouse-interaction-while-inactive"></a>비활성 상태 중 마우스 상호 작용 제공
 컨트롤을 즉시 활성화 되지 않은 경우 계속 경우 처리할 수 `WM_SETCURSOR` 및 `WM_MOUSEMOVE` 컨트롤에 창이 자체의 경우에 메시지입니다. 이 사용 하 여 수행할 수 있습니다 `COleControl`의 구현의 `IPointerInactive` 인터페이스에는 기본적으로 해제 합니다. (참조는 *ActiveX SDK* 이 인터페이스의 설명에 대 한 합니다.) 를 사용 하려면 포함 된 `pointerInactive` 에서 반환 하는 플래그 집합에서 플래그 [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags):  

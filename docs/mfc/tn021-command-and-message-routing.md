@@ -1,13 +1,10 @@
 ---
-title: "TN021: 명령 및 메시지 라우팅 | Microsoft Docs"
-ms.custom: 
+title: 'TN021: 명령 및 메시지 라우팅 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.routing
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - command routing [MFC], technical note TN021
 - Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1854be249db91257228e6dab70fc7ff2f50664ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5a1061f4a7d4394cb84c26514795c406f78146df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021: 명령 및 메시지 라우팅
 > [!NOTE]
@@ -200,7 +195,7 @@ void CMyApp::OnUpdateNewChart(CCmdUI* pCmdUI)
   
  보조 노트에는 두 개의 **CWnd** 파생된 클래스에서 지정 된 스크롤 막대 스타일 생성 시간 트래핑 아니며 Windows로 전달 되지 않습니다. 작성 루틴에 전달 될 때 **WS_HSCROLL** 및 **WS_VSCROLL** 독립적으로 설정할 수 없습니다, 후에 만들기를 변경할 수 없습니다. 물론, 직접 테스트 하거나 해야는 자신이 만든 창 WS_SCROLL 스타일 비트가 설정 합니다.  
   
- 에 대 한 **CMDIFrameWnd** 스크롤 막대 스타일에 전달할 있습니다 **만들기** 또는 **LoadFrame** 는 MDICLIENT를 만드는 데 사용 됩니다. 스크롤 막대의 스타일으로 설정 해야 스크롤 가능한 MDICLIENT 영역 (같은 Windows 프로그램 관리자)을 두려는 경우 둘 다 (**WS_HSCROLL** &#124; **WS_VSCROLL**)를 만드는 데 사용 되는 스타일에 대 한는 **CMDIFrameWnd**합니다.  
+ 에 대 한 **CMDIFrameWnd** 스크롤 막대 스타일에 전달할 있습니다 **만들기** 또는 **LoadFrame** 는 MDICLIENT를 만드는 데 사용 됩니다. 스크롤 막대의 스타일으로 설정 해야 스크롤 가능한 MDICLIENT 영역 (같은 Windows 프로그램 관리자)을 두려는 경우 둘 다 (**WS_HSCROLL** &#124; **WS_VSCROLL**)는 를만드는데스타일에대한**CMDIFrameWnd**합니다.  
   
  에 대 한 **CSplitterWnd** 분할 영역에 대 한 특별 한 공유 스크롤 막대에 스크롤 막대 스타일 적용. 정적 분할 창에 대 한 아닌 일반적인 두 가지 스크롤 막대 스타일을 설정 합니다. 동적 분할 창에 대 한 있습니다은 일반적으로 스크롤 막대 스타일 집합 즉, 분할 하는 방향에 대 한 **WS_HSCROLL** 행을 분할할 수 하는 경우 **WS_VSCROLL** 경우 열을 분할할 수 있습니다.  
   

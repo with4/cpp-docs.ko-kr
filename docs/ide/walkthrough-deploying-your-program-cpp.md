@@ -1,13 +1,10 @@
 ---
-title: "연습: 프로그램 (c + +)를 배포 | Microsoft Docs"
-ms.custom: 
+title: '연습: 프로그램 (c + +)를 배포 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,24 +15,22 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce59dc7b767c8ff8e988ac7a765d3bb5f1cdfffc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e1753c63673b9dd083e2b690788801bd467938c3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>연습: 프로그램 배포(C++)
 이전 관련된 연습을에 나열 된 완료 하 여 응용 프로그램을 만든 다음에 이제 [c + + 데스크톱 개발을 위한 Visual Studio IDE를 사용 하 여](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), 마지막 단계는 다른 사용자가 수행할 수 있도록 하는 설치 관리자를 만드는 것 자신의 컴퓨터에서 프로그램을 설치 합니다. 이렇게 하려면 기존 솔루션에 새 프로젝트를 추가합니다. 이 새 프로젝트에서 다른 컴퓨터에 응용 프로그램을 설치하는 setup.exe 파일이 생성됩니다.  
   
  이 연습에서는 Windows Installer를 사용하여 응용 프로그램을 배포하는 방법을 보여 줍니다. ClickOnce를 사용하여 응용 프로그램을 배포할 수도 있습니다. 자세한 내용은 [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md)를 참조하세요. 배포에 대 한 자세한 내용은 참조 일반적으로 [응용 프로그램 배포, 서비스 및 구성 요소](/visualstudio/deployment/deploying-applications-services-and-components)합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
   
 -   이 연습에서는 사용자가 C++ 언어의 기본적인 사항을 알고 있는 것으로 가정합니다.  
   
@@ -99,6 +94,6 @@ ms.lasthandoff: 12/21/2017
  **이전:** [연습: 프로젝트 (c + +) 디버깅](../ide/walkthrough-debugging-a-project-cpp.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [C + + 언어 참조](../cpp/cpp-language-reference.md)   
+ [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [C/C++ 프로그램 빌드](../build/building-c-cpp-programs.md)  
  [데스크톱 응용 프로그램 배포](../ide/deploying-native-desktop-applications-visual-cpp.md)

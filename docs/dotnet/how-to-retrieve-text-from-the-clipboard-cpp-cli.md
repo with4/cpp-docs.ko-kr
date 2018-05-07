@@ -2,35 +2,30 @@
 title: '방법: 클립보드에서 텍스트 검색 (C + + /cli CLI) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - text, retrieving from Clipboard
 - Clipboard, retrieving text
 ms.assetid: 99e77ba0-8573-4030-92d8-de8aa7623ee4
-caps.latest.revision: 11
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 255f2fb393ecf2c2748beada4b250b60ca965e25
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ee1b2475e0d32b857ef5adfa2e75fb02e287d42f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-retrieve-text-from-the-clipboard-ccli"></a>방법: 클립보드에서 텍스트 검색(C++/CLI)
 다음 코드 예제에서는 <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> 멤버 함수에 대 한 포인터를 반환 하는 <xref:System.Windows.Forms.IDataObject> 인터페이스입니다. 그런 다음이 인터페이스는 데이터의 형식에 대해 쿼리할 하며, 실제 데이터를 검색 하는 데 사용 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // read_clipboard.cpp  

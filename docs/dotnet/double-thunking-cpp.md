@@ -1,13 +1,10 @@
 ---
-title: "이중 썽킹 (c + +) | Microsoft Docs"
-ms.custom: 
+title: 이중 썽킹 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1d905f962af6a9cf07ecb0926503fc24e21c0136
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47d5bbbecc8e1b9743c543a503df1a0afa0dc0ae
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="double-thunking-c"></a>이중 썽킹(C++)
 이중 썽킹 Visual c + + 관리 되는 함수는 프로그램 실행 하 고 관리 되는 컨텍스트 호출에 함수 호출 함수의 네이티브 진입점을 관리 되는 함수를 호출 하려면 호출할 때 발생할 수 있는 성능 저하를 가리킵니다. 이 항목에서는 이중 썽킹 발생 하는 위치 및 성능을 향상 시키기 위해를 방지 하는 방법을 설명 합니다.  
@@ -40,9 +35,9 @@ ms.lasthandoff: 12/21/2017
   
  마찬가지로, 내보내면 ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) 관리 되는 함수 네이티브 진입점이 생성 되 고 네이티브 진입점을 통해 가져오고 해당 함수를 호출 하는 모든 함수를 호출 합니다. 이 경우 이중 썽킹를 방지 하려면 기본 내보내기/가져오기 의미 체계;을 사용 하지 마십시오 통해 메타 데이터를 단순히 참조 `#using` (참조 [#using 지시문](../preprocessor/hash-using-directive-cpp.md)).  
   
- 이중 썽킹 불필요 한 줄이기 위해 컴파일러 업데이트 되었습니다. 로 모든 함수는 시그니처 (반환 형식 포함)에서 관리 되는 유형으로 암시적으로 표시 됩니다 예를 들어 `__clrcall`합니다. 이중 썽크 제거에 대 한 자세한 내용은 참조 하십시오. [http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx](http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx)합니다.  
+ 이중 썽킹 불필요 한 줄이기 위해 컴파일러 업데이트 되었습니다. 로 모든 함수는 시그니처 (반환 형식 포함)에서 관리 되는 유형으로 암시적으로 표시 됩니다 예를 들어 `__clrcall`합니다. 이중 썽크 제거에 대 한 자세한 내용은 참조 하십시오. [ http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx ](http://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
  다음 예제에서는 이중 썽킹 네이티브 컴파일하면 (없이 **/clr**)의 가상 함수에 대 한 호출 `main` 를 한 번 호출 생성 `T`의 복사 생성자와 소멸자를 한 번 호출 합니다. 가상 함수가 선언 되는 경우 비슷한 동작이 이루어집니다 **/clr** 및 `__clrcall`합니다. 그러나으로 컴파일하는 경우 **/clr**, 함수 호출에서 복사 생성자를 호출 하지만 네이티브-관리 되는 썽크 인해 복사 생성자에 대 한 호출이 있습니다.  

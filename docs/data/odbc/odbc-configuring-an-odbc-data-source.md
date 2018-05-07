@@ -1,13 +1,10 @@
 ---
-title: "ODBC: ODBC 데이터 소스 구성 | Microsoft Docs"
-ms.custom: 
+title: 'ODBC: ODBC 데이터 소스 구성 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: 1cd03e6a-8d59-4eca-a8c6-1010582d5e67
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5bf7d2b1708e74d50adb417f531c741a467ed889
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93b2158005b7cd31fc6a3710812d54a3968ee014
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-configuring-an-odbc-data-source"></a>ODBC: ODBC 데이터 소스 구성
 사용 하는 [데이터 원본](../../data/odbc/data-source-odbc.md) 개발한 응용 프로그램을 구성 하려면 ODBC 관리자를 사용 해야 합니다. 사용 가능한 데이터 원본 및 연결 정보는 Windows 레지스트리에 ODBC 관리자는 추적 합니다. ODBC 관리자를 추가, 수정 및 삭제할 데이터 원본에 사용 하 여는 **데이터 소스** 대화 상자를 추가 하 고 삭제할 ODBC 드라이버.  

@@ -1,13 +1,10 @@
 ---
-title: "연습: 테스트 프로젝트 (c + +) | Microsoft Docs"
-ms.custom: 
+title: '연습: 테스트 프로젝트 (c + +) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ba928d4a81252b76856273160af63ed8707e7e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3a9455fa9bf3c9f903f5018a1263978913aa35b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-testing-a-project-c"></a>연습: 프로젝트 테스트(C++)
 디버그 모드에서 프로그램을 실행 하는 경우에 변수 및 개체의 상태를 검사 하는 프로그램을 일시 중지 중단점을 사용할 수 있습니다.  
   
  이 연습에서는 프로그램이 실행 될 때 변수 값을 확인 하 고 다른 값이 기대 하는 이유를 추론 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
   
 -   이 연습에서는 사용자가 C++ 언어의 기본적인 사항을 알고 있는 것으로 가정합니다.  
   
@@ -72,5 +67,5 @@ ms.lasthandoff: 12/21/2017
  **이전:** [연습: 프로젝트 (c + +) 빌드](../ide/walkthrough-building-a-project-cpp.md) &#124; **다음:**[연습: 프로젝트 (c + +) 디버깅](../ide/walkthrough-debugging-a-project-cpp.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [C + + 언어 참조](../cpp/cpp-language-reference.md)   
+ [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [C/C++ 프로그램 빌드](../build/building-c-cpp-programs.md)

@@ -1,13 +1,10 @@
 ---
-title: "고객에 게 ODBC 구성 요소 재배포 | Microsoft Docs"
-ms.custom: 
+title: 고객에 게 ODBC 구성 요소 재배포 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - components [C++]
 - components [C++], redistributing
 ms.assetid: 17b065b4-a307-4b89-99ac-d05831cfab87
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aad9f1dbd4542ad763e7303d9a750f1856208025
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0427228b8fb3e852cf1d9ee66a10c9290b860b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-odbc-components-to-your-customers"></a>고객에게 ODBC 구성 요소 재배포
 응용 프로그램에 ODBC 관리자 프로그램의 기능을 통합 하는 경우도 배포 해야 사용자에 게 이러한 프로그램을 실행 하는 파일입니다. 이 ODBC 파일의 Visual c + + CD-ROM \OS\System 디렉터리에 있어야 합니다. Redistrb.wri 파일과 동일한 디렉터리에 사용권 계약에는 재배포할 수 있는 ODBC 파일 목록이 포함 되어 있습니다.  

@@ -1,13 +1,10 @@
 ---
-title: "TN058: MFC 모듈 상태 구현 | Microsoft Docs"
-ms.custom: 
+title: 'TN058: MFC 모듈 상태 구현 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.implementation
 dev_langs:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - DLLs [MFC], module states
 - process state [MFC]
 ms.assetid: 72f5b36f-b3da-4009-a144-24258dcd2b2f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed7bc195c771026ff3e58d53f9e3936791810e76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90e407299f67922aa855a51b9983af074cdbd4fc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn058-mfc-module-state-implementation"></a>TN058: MFC 모듈 상태 구현
 > [!NOTE]
@@ -55,15 +50,15 @@ ms.lasthandoff: 12/21/2017
   
  거의 되도록 모듈 상태를 설정 하 고 다음 하지 다시 설정 합니다. 대부분의 경우 "push" 자체적으로 모듈을 현재 하 고을 완료 한 후 "pop" 원래 컨텍스트로 다시 합니다. 매크로 의해 이렇게 [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) 및 특수 클래스 **AFX_MAINTAIN_STATE**합니다.  
   
- `CCmdTarget`모듈 상태 전환 지원 하기 위한 특수 기능에 있습니다. 특히, 한 `CCmdTarget` 진입점 OLE COM 및 OLE 자동화에 사용 된 루트 클래스입니다. 마찬가지로 다른 진입점을 시스템에 노출 이러한 진입점에서 올바른 모듈 상태 설정 해야 합니다. 어떻게 않습니다는 주어진 `CCmdTarget` 보유 "올바른" 모듈 상태 해야 "를 기억 하 여" "현재" 모듈 상태 이란 생성 될 때, 설정할 수 있도록 하는 현재 모듈 상태 "기억" 이후 때 값이 호출에 대 한 대답은 알고 합니다. 결과적으로 모듈을 사용 함을 제시는 주어진 `CCmdTarget` 개체가 연결 된와 현재 개체를 생성 하는 경우의 모듈 상태입니다. INPROC 서버 로드, 개체 생성 및 해당 메서드 호출의 간단한 예를 수행 합니다.  
+ `CCmdTarget` 모듈 상태 전환 지원 하기 위한 특수 기능에 있습니다. 특히, 한 `CCmdTarget` 진입점 OLE COM 및 OLE 자동화에 사용 된 루트 클래스입니다. 마찬가지로 다른 진입점을 시스템에 노출 이러한 진입점에서 올바른 모듈 상태 설정 해야 합니다. 어떻게 않습니다는 주어진 `CCmdTarget` 보유 "올바른" 모듈 상태 해야 "를 기억 하 여" "현재" 모듈 상태 이란 생성 될 때, 설정할 수 있도록 하는 현재 모듈 상태 "기억" 이후 때 값이 호출에 대 한 대답은 알고 합니다. 결과적으로 모듈을 사용 함을 제시는 주어진 `CCmdTarget` 개체가 연결 된와 현재 개체를 생성 하는 경우의 모듈 상태입니다. INPROC 서버 로드, 개체 생성 및 해당 메서드 호출의 간단한 예를 수행 합니다.  
   
 1.  OLE에서 DLL이 로드를 사용 하 여 **LoadLibrary**합니다.  
   
 2. **RawDllMain** 먼저 호출 됩니다. DLL에 대 한 모듈 상태 정적 모듈을 알려진된 상태로 설정합니다. 이러한 이유로 **RawDllMain** DLL에 정적으로 연결 됩니다.  
   
-3.  이 개체와 관련 된 클래스 팩터리에 대 한 생성자를 호출 합니다. `COleObjectFactory`파생 된 `CCmdTarget` 어떤 모듈 상태의 인스턴스화할 기억 결과적으로, 하 고 있습니다. 이 중요-개체를 만드는 클래스 팩터리 물으면 알고 이제 현재 레코드로 모듈 상태입니다.  
+3.  이 개체와 관련 된 클래스 팩터리에 대 한 생성자를 호출 합니다. `COleObjectFactory` 파생 된 `CCmdTarget` 어떤 모듈 상태의 인스턴스화할 기억 결과적으로, 하 고 있습니다. 이 중요-개체를 만드는 클래스 팩터리 물으면 알고 이제 현재 레코드로 모듈 상태입니다.  
   
-4. `DllGetClassObject`클래스 팩터리를 가져오는 위해 호출 됩니다. MFC는이 모듈에 연결 된 클래스 팩터리 목록을 검색 하 고 반환 합니다.  
+4. `DllGetClassObject` 클래스 팩터리를 가져오는 위해 호출 됩니다. MFC는이 모듈에 연결 된 클래스 팩터리 목록을 검색 하 고 반환 합니다.  
   
 5. **COleObjectFactory::XClassFactory2::CreateInstance** 호출 됩니다. 모듈 상태 3 단계에서 현재 모듈 상태를이 함수는 개체를 만들고 반환 하기 전에 설정 (된 현재 시기는 `COleObjectFactory` 인스턴스화한). 내부에 이렇게 [METHOD_PROLOGUE](com-interface-entry-points.md)합니다.  
   
@@ -87,7 +82,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState())
   
  경우 리소스 Dll에서 문제가 발생 합니다는 `AFX_MODULE_STATE` 매크로 사용 되지 않습니다. 기본적으로 MFC 리소스 템플릿을 로드 하는 주 응용 프로그램의 리소스 핸들을 사용 합니다. 이 서식 파일은 실제로 DLL에 저장 됩니다. 근본 원인이 MFC의 모듈 상태 정보도 전환 하지는 `AFX_MODULE_STATE` 매크로입니다. 리소스 핸들 MFC 모듈 상태에서 복구 됩니다. 모듈 상태를 전환 하지 않으면 잘못 리소스 핸들을 사용 하면 됩니다.  
   
- `AFX_MODULE_STATE`모든 DLL의에서 함수에 추가 될 필요가 없습니다. 예를 들어 `InitInstance` 없이 응용 프로그램에는 MFC 코드에서 호출할 수 있습니다 `AFX_MODULE_STATE` MFC 모듈 상태 하기 전에 자동으로 이동 하기 때문에 `InitInstance` 및 후에 백업 하는 스위치 다음 `InitInstance` 반환 합니다. 모든 메시지 맵 처리기에도 마찬가지입니다. 일반 MFC Dll에는 실제로 메시지를 라우팅하기 전에 모듈 상태를 자동으로 전환 하는 특수 한 마스터 창 프로시저 있는데  
+ `AFX_MODULE_STATE` 모든 DLL의에서 함수에 추가 될 필요가 없습니다. 예를 들어 `InitInstance` 없이 응용 프로그램에는 MFC 코드에서 호출할 수 있습니다 `AFX_MODULE_STATE` MFC 모듈 상태 하기 전에 자동으로 이동 하기 때문에 `InitInstance` 및 후에 백업 하는 스위치 다음 `InitInstance` 반환 합니다. 모든 메시지 맵 처리기에도 마찬가지입니다. 일반 MFC Dll에는 실제로 메시지를 라우팅하기 전에 모듈 상태를 자동으로 전환 하는 특수 한 마스터 창 프로시저 있는데  
   
 ## <a name="process-local-data"></a>로컬 데이터 처리  
  로컬 데이터 처리는 이러한 크게 문제가 수 없습니다 것 되지 않은 Win32s DLL 모델의 어려움에 대 한. W i n 32에서 여러 응용 프로그램에서 로드 하는 경우에 모든 Dll의 글로벌 데이터를 공유 합니다. 이 각 DLL의 DLL에 연결 하는 각 프로세스에서 데이터 공간을 별도 복사본을 가져옵니다 "실제" Win32 DLL 데이터 모델에서 매우 다릅니다. 복잡성을 추가 하려면 Win32s DLL에 힙에 할당 된 데이터는 실제로 프로세스 특정 (적어도 오래 되는 소유권 만큼). 다음 데이터와 코드를 고려 합니다.  
@@ -141,9 +136,9 @@ void GetGlobalString(LPCTSTR lpsz, size_t cb)
 }  
 ```  
   
- MFC는 두 단계로이 구현 합니다. 첫째,은 Win32 위의 계층으로 **Tls\***  Api (**TlsAlloc**, **TlsSetValue**, **TlsGetValue**등)는 두 개의 TLS 인덱스 프로세스당 있는 Dll에 관계 없이 사용 됩니다. 두 번째는 `CProcessLocal` 템플릿을이 데이터에 액세스 하기 위해 제공 됩니다. 연산자를 재정의 하는 것은 위에서 참조 하는 직관적인 구문을 할 수-> 합니다. 로 래핑된 개체를 모두 `CProcessLocal` 에서 파생 되어야 합니다 `CNoTrackObject`합니다. `CNoTrackObject`하위 수준 할당자를 제공 (**LocalAlloc**/**LocalFree**)와 가상 소멸자는 프로세스가 때 MFC 로컬 개체 처리를 자동으로 제거할 수 있도록 종료 되었습니다. 이러한 개체는 추가 정리 해야 하는 경우 사용자 정의 소멸자를 사용할 수 있습니다. 위의 예제에서는 컴파일러에서 제거할 포함 된 기본 소멸자를 생성 하므로, 필요 하지 않습니다 `CString` 개체입니다.  
+ MFC는 두 단계로이 구현 합니다. 첫째,은 Win32 위의 계층으로 **Tls\***  Api (**TlsAlloc**, **TlsSetValue**, **TlsGetValue**등)는 두 개의 TLS 인덱스 프로세스당 있는 Dll에 관계 없이 사용 됩니다. 두 번째는 `CProcessLocal` 템플릿을이 데이터에 액세스 하기 위해 제공 됩니다. 연산자를 재정의 하는 것은 위에서 참조 하는 직관적인 구문을 할 수-> 합니다. 로 래핑된 개체를 모두 `CProcessLocal` 에서 파생 되어야 합니다 `CNoTrackObject`합니다. `CNoTrackObject` 하위 수준 할당자를 제공 (**LocalAlloc**/**LocalFree**)와 가상 소멸자는 프로세스가 종료 될 때 MFC 로컬 개체 처리를 자동으로 제거할 수 있도록 합니다. 이러한 개체는 추가 정리 해야 하는 경우 사용자 정의 소멸자를 사용할 수 있습니다. 위의 예제에서는 컴파일러에서 제거할 포함 된 기본 소멸자를 생성 하므로, 필요 하지 않습니다 `CString` 개체입니다.  
   
- 이 방법에 관심 있는 다른 장점이 있습니다. 뿐만 아니라는 모두 `CProcessLocal` 개체 소멸을 자동으로 필요할 때까지 생성 되지 않은 됩니다. `CProcessLocal::operator->`연결된 된 개체가 처음으로 호출 되 고 즉시 인스턴스화입니다. 따라서 위의 예제에는 '`strGlobal`' 문자열 처음까지 생성 되지 것입니다 **SetGlobalString** 또는 **GetGlobalString** 호출 됩니다. 경우에 따라 DLL 시작 시간을 절약할 수 있습니다이 있습니다.  
+ 이 방법에 관심 있는 다른 장점이 있습니다. 뿐만 아니라는 모두 `CProcessLocal` 개체 소멸을 자동으로 필요할 때까지 생성 되지 않은 됩니다. `CProcessLocal::operator->` 연결된 된 개체가 처음으로 호출 되 고 즉시 인스턴스화입니다. 따라서 위의 예제에는 '`strGlobal`' 문자열 처음까지 생성 되지 것입니다 **SetGlobalString** 또는 **GetGlobalString** 호출 됩니다. 경우에 따라 DLL 시작 시간을 절약할 수 있습니다이 있습니다.  
   
 ## <a name="thread-local-data"></a>스레드 로컬 데이터  
  로컬 데이터를 처리 하는 마찬가지로 스레드 로컬 데이터 때 사용 됩니다 데이터는 지정 된 스레드에 대해 로컬 이어야 합니다. 즉, 해당 데이터에 액세스 하는 각 스레드에 대 한 데이터의 개별 인스턴스가 필요 합니다. 이 여러 번 사용할 수 있습니다 광범위 한 동기화 메커니즘 대신이 대화 상자. 데이터는 다중 스레드에서 공유 필요가 없는 경우 비용이 많이 들고 불필요 한 메커니즘이 수 있습니다. 가정해는 `CString` 개체 (위의 예제 처럼). 에서는 스레드 로컬 하 여 만들 수와 묶어서는 `CThreadLocal` 템플릿:  

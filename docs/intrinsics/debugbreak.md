@@ -1,12 +1,9 @@
 ---
 title: __debugbreak | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __debugbreak_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - breakpoints, __debugbreak intrinsic
 - __debugbreak intrinsic
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e9aa50ee6cf450276dce70bfa38162a2f6392ed
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1a3dcead3129c87b2d02f8822019af763c0fe8b8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="debugbreak"></a>__debugbreak
 **Microsoft 전용**  
@@ -52,7 +47,7 @@ void __debugbreak();
 > [!NOTE]
 >  로 컴파일할 때 **/clr**를 포함 하는 함수 `__debugbreak` MSIL로 컴파일할 수 있습니다. `asm int 3`은 함수를 네이티브로 컴파일하도록 합니다. 자세한 내용은 참조 [__asm](../assembler/inline/asm.md)합니다.  
   
- 예:  
+ 예를 들어:  
   
 ```  
 main() {  

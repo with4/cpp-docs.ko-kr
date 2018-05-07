@@ -1,13 +1,10 @@
 ---
-title: "예외 클래스 | Microsoft Docs"
-ms.custom: 
+title: 예외 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.exception
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - exception handling [MFC], exception classes
 - MFC, exceptions
 ms.assetid: 1a2caf12-b3e9-4189-86d2-bf7a595bf025
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b848cf1a839940925222a50ce016ba91da4d371d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ce4085d0f5f2dcc73d126d04b7560ef8360ffd9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-classes"></a>예외 클래스
 클래스 라이브러리는 `CException` 클래스를 기반으로 예외 처리 메커니즘을 제공합니다. 응용 프로그램 프레임 워크는 해당 코드에서 예외를 사용합니다. 사용자도 자신의 코드에서 예외를 사용할 수 있습니다. 자세한 내용은 문서 참조 [예외](../mfc/exception-handling-in-mfc.md)합니다. 사용자는 `CException`에서 고유한 예외 형식을 파생할 수 있습니다.  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
  [CDaoException](../mfc/reference/cdaoexception-class.md)  
  DAO 데이터베이스 작업의 오류로 인해 발생하는 예외입니다.  
   
- [잠금](../mfc/reference/cdbexception-class.md)  
+ [CDBException](../mfc/reference/cdbexception-class.md)  
  ODBC 데이터베이스 처리 중 오류로 인해 발생하는 예외입니다.  
   
  [CFileException](../mfc/reference/cfileexception-class.md)  

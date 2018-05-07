@@ -1,13 +1,10 @@
 ---
-title: "메뉴 및 리소스: 메뉴 병합 | Microsoft Docs"
-ms.custom: 
+title: '메뉴 및 리소스: 메뉴 병합 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c686d461a3052feb4a55cf7948b58102f10ac1f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 252619872fc53e06629a4cbded7e3640131dc94a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="menus-and-resources-menu-merging"></a>메뉴 및 리소스: 메뉴 병합
 이 문서는 OLE 문서 응용 프로그램에서 내부 활성화 제대로 비주얼 편집을 처리 하는 데 필요한 단계를 설명 합니다. 내부 활성화 사용 하는 경우 컨테이너와 서버 모두에 대 한 응용 프로그램 (구성 요소). 사용자 (컨테이너 문서의 컨텍스트) 내에서 동일한 프레임 창에 남아 있지만 실제로 다른 응용 프로그램 (서버)를 실행 합니다. 이 컨테이너 및 서버 응용 프로그램의 리소스 간에 조정을 해야합니다.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 - [도구 모음 및 상태 표시줄](#_core_toolbars_and_status_bars)  
   
-##  <a name="_core_menu_layouts"></a>메뉴 레이아웃  
+##  <a name="_core_menu_layouts"></a> 메뉴 레이아웃  
  메뉴 레이아웃을 조정 하는 첫 번째 단계가입니다. 자세한 내용은 참조는 **메뉴 만들기** 섹션 [메뉴 프로그래밍 고려 사항](https://msdn.microsoft.com/library/ms647557.aspx) Windows sdk에서입니다.  
   
  컨테이너 응용 프로그램 내부에서 포함 된 항목은 활성화 하는 경우에 사용할 수 있는 새 메뉴를 만들어야 합니다. 이 메뉴에는 최소한 나열 된 순서로 다음으로 구성 되어야:  
@@ -113,7 +108,7 @@ END
   
  포함된 된 항목에에서 활성화 되 면 프레임 워크 내부 메뉴를 로드 합니다. 서버 응용 프로그램에 내부 활성화를 요청 하 고 구분 기호는 위치에 삽입 합니다. 메뉴 결합 하는 방법을입니다. 메뉴 컨테이너에서 파일 및 창 배치에 대해 작업 만들어지고 해당 항목을 작동 하는 것에 대 한 서버에서 메뉴를 가져옵니다.  
   
-##  <a name="_core_toolbars_and_status_bars"></a>도구 모음 및 상태 표시줄  
+##  <a name="_core_toolbars_and_status_bars"></a> 도구 모음 및 상태 표시줄  
  서버 응용 프로그램 도구 모음을 새로 만들고 해당 비트맵 별도 파일에 저장 해야 합니다. 이 비트맵 ITOOLBAR 라는 파일에 저장 하는 응용 프로그램 마법사에서 생성 된 응용 프로그램입니다. BMP 합니다. 새 도구 모음에서 서버 항목이 장소에서 활성화 되 고 해야 하면 일반 도구 모음과 동일한 항목을 포함 하지만 파일 및 창 메뉴에 있는 항목을 나타내는 아이콘은 제거 컨테이너 응용 프로그램의 도구 모음을 대체 합니다.  
   
  이 도구 모음에 로드 될 프로그램 `COleIPFrameWnd`-응용 프로그램 마법사에서 만든 클래스를 파생 합니다. 상태 표시줄 컨테이너 응용 프로그램에서 처리 됩니다. 내부 프레임 창 구현에 대 한 자세한 내용은 참조 하십시오. [서버: 서버 구현](../mfc/servers-implementing-a-server.md)합니다.  

@@ -1,13 +1,10 @@
 ---
 title: Windows | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - MFC, windows
 - window objects [MFC], MFC Framework
 ms.assetid: dd92bf34-842e-40fe-8aea-3028b55314d5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e81be5ef0216f7d8a28ea7d5046c127f18670a6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 88ba41b7bb921cc2834b4d45712be768b2d19f8e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows"></a>Windows
 다음이의 문서에서는 MFC 프레임 워크의 창 개체를 설명합니다. 모든 MFC 창 클래스에서 파생 [CWnd](../mfc/reference/cwnd-class.md), 프레임 창, 보기, 대화 상자 및 컨트롤을 포함 합니다.  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
  문서의 두 번째 그룹 설명 [프레임 창](../mfc/frame-windows.md)-콘텐츠 주위에 프레임을 배치 하는 windows-특히 합니다. 이 그룹에는 MFC 프레임 워크 프레임 창 및 컨트롤 막대, 보기 등 프레임 내용을 관리 하는 방법에 대 한 정보를 참조 하십시오.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
  *일반적인 창 개체에 대 한 항목*  
   
 -   [창 개체 소멸 시키기](../mfc/window-objects.md)  

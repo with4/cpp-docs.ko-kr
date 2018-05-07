@@ -2,11 +2,8 @@
 title: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l | Microsoft 문서
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - _mbctohira
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-caps.latest.revision: 19
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80f82098a033f7a3dec8cdb475476644381bed8d
-ms.sourcegitcommit: ef859ddf5afea903711e36bfd89a72389a12a8d6
+ms.openlocfilehash: 85c5cbca9d5decee1719f575f60db725c285d607
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mbctohira-mbctohiral-mbctokata-mbctokatal"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
@@ -106,7 +101,7 @@ unsigned int _mbctokata_l(
 |**_mbctohira**, **_mbctohira_l**|멀티바이트 가타카나를 멀티바이트 히라가나로 변환|
 |**_mbctokata**, **_mbctokata_l**|멀티바이트 히라가나를 멀티바이트 가타카나로 변환|
 
-출력 값은의 설정에 영향을 **LC_CTYPE** 로캘 범주 설정; 참조 [setlocale](setlocale-wsetlocale.md) 자세한 정보에 대 한 합니다. 접미사가 한다는 점을 제외 하면 이러한 함수 버전은 동일가 **_l** 접미사 접미사가 없는 및이 로캘 종속 동작에 대 한 현재 로캘을 사용는 **_l** 대신 접미사 에 전달 된 로캘 매개 변수를 사용 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
+출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따른 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. 접미사가 한다는 점을 제외 하면 이러한 함수 버전은 동일가 **_l** 접미사 접미사가 없는 및이 로캘 종속 동작에 대 한 현재 로캘을 사용는 **_l** 대신 접미사 에 전달 된 로캘 매개 변수를 사용 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
 이전 버전에서는 **_mbctohira** 변수의 이름이 **jtohira** 및 **_mbctokata** 변수의 이름이 **jtokata**합니다. 새 코드에서는 새 이름을 사용하세요.
 

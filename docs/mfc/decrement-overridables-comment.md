@@ -1,13 +1,10 @@
 ---
-title: "-재정의 가능 주석 | Microsoft Docs"
-ms.custom: 
+title: -재정의 가능 주석 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - overriding, Overridables comment in MFC source files
 - comments, MFC
 ms.assetid: 8968dea5-0d94-451f-bcb2-991580e65ba2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca52bcc3846971af1811551411199785c3d4e102
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1b71d61175e5446ac33dd0ff6a011d06f601b5a1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-overridables-comment"></a>// 재정의 가능 주석
 `// Overridables` MFC 클래스 선언의 섹션 가상 함수가 포함 된 기본 클래스의 동작을 수정 해야 하는 경우 파생된 클래스에서 재정의할 수 있습니다. 일반적으로 이름으로 지정 된 "On"로 시작 하지만 꼭 필요 하지 않음. 여기에서 함수는 재정의할 수 종종 구현 하거나 어떤 종류의 "callback" 또는 "후크"를 제공 하도록 설계 되었습니다. 일반적으로 이러한 구성원 보호 됩니다.  

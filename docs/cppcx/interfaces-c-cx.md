@@ -1,24 +1,19 @@
 ---
-title: "인터페이스 (C + + /cli CX) | Microsoft Docs"
-ms.custom: 
+title: 인터페이스 (C + + /cli CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa87713b49fe41dbdb7eb8f9e6382c8f78b51d0c
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 6be3b207f6bd64685f7ec1d3f6d2271ec3b83f17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interfaces-ccx"></a>인터페이스(C++/CX)
 ref 클래스가 상속할 수 있는 구체적 기본 클래스는 하나뿐이지만 구현할 수 있는 인터페이스 클래스의 개수에는 제한이 없습니다. 인터페이스 클래스(또는 인터페이스 구조체) 자체는 여러 인터페이스 클래스를 상속하거나 필요로 할 수 있고, 멤버 함수를 오버로드할 수 있으며, 형식 매개 변수를 사용할 수 있습니다.  
@@ -93,7 +88,7 @@ ref 클래스가 상속할 수 있는 구체적 기본 클래스는 하나뿐이
   
 -   폐쇄형 제네릭 인터페이스에는 암시적으로 생성된 UUID가 있습니다. 사용자가 UUID를 지정할 수 없습니다.  
   
--   인터페이스에서 메서드 매개 변수, 반환 값 또는 속성에 있는 현재 인터페이스에 대한 모든 참조는 현재 인스턴스화에 대한 참조로 간주됩니다. 예를 들어 *IMyIntf* 의미 *IMyIntf\<T >*합니다.  
+-   인터페이스에서 메서드 매개 변수, 반환 값 또는 속성에 있는 현재 인터페이스에 대한 모든 참조는 현재 인스턴스화에 대한 참조로 간주됩니다. 예를 들어 *IMyIntf* 의미 *IMyIntf\<T >* 합니다.  
   
 -   메서드 매개 변수의 형식이 형식 매개 변수일 경우 해당 매개 변수 또는 변수 선언에 포인터, 네이티브 참조 또는 핸들 선언자 없이 형식 매개 변수의 이름이 사용됩니다. 따라서 "T^"를 작성할 필요가 없습니다.  
   

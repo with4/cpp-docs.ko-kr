@@ -1,13 +1,10 @@
 ---
-title: "일반 클래스 디자인 원칙 | Microsoft Docs"
-ms.custom: 
+title: 일반 클래스 디자인 원칙 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - classes [MFC], MFC class design
 - Windows API [MFC], and MFC
 ms.assetid: e6861ae0-1581-4d9c-9ddf-63f9afcdb913
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c174b06b27e78ca61d2608b8e04205068ac436e9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7b2d0915c4b2940e93b781e7a56e2640c64a7f20
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-class-design-philosophy"></a>일반 클래스 디자인 원칙
 Microsoft Windows는 c + + 언어 유행 훨씬 전에 설계 되었습니다. 응용 프로그램 C 언어 Windows 응용 프로그램 프로그래밍 인터페이스 (API)를 사용 하므로 해당 인터페이스 장래에 유지 됩니다. 따라서 모든 c + + Windows 인터페이스를 설명 하는 절차는 C 언어 API를 기반으로 빌드해야 합니다. 이 c + + 응용 프로그램 C 응용 프로그램과 함께 사용할 수 있는지를 보장 합니다.  

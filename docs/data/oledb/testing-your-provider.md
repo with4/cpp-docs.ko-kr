@@ -1,12 +1,9 @@
 ---
-title: "공급자 테스트 | Microsoft Docs"
-ms.custom: 
+title: 공급자 테스트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - testing providers
 - OLE DB providers, testing
 ms.assetid: bf824fe4-81af-4ffb-beb3-4fa2928dc450
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0d273c746a27c85dbcd58cb5e7fb544a0fc6a0bb
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c35b1391e5b8cbfb073255b3680b0376d19ae040
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="testing-your-provider"></a>공급자 테스트
 공급자를 해제 하기 전에 다음 테스트를 아래 순서로 수행 해야 합니다. 이러한 테스트의 대부분 사용자가 제대로 공급자 작동 하는지 확인 합니다.  

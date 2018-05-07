@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 1) C4789 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 1) C4789 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4789
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fde48ccbcf3a4ddec6884ac9e0c259739954772
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f8b16fada030783f5f9e3aa3d1f9a04e7743a13c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4789"></a>컴파일러 경고(수준 1) C4789
 버퍼 'identifier'(크기: N바이트)이(가) 오버런됩니다. M바이트가 오프셋 L부터 쓰입니다.  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
  이렇게 하면 Visual C++에서 특정 코드 블록에 대해 경고를 생성하지 않습니다. `#pragma(push)`는 `#pragma warning(disable: 4789)`에서 변경하기 전까지 기존 상태를 유지합니다. `#pragma(pop)`는 푸시된 상태를 복원하고 `#pragma warning(disable:4789)`의 효과를 제거합니다. C + + 전처리기 지시문에 대 한 자세한 내용은 `#pragma`, 참조 [경고](../../preprocessor/warning.md) 및 [Pragma 지시문 및 __Pragma 키워드](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C4789를 생성합니다.  
   
 ```  
@@ -77,7 +72,7 @@ int main()
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  또한 다음 샘플에서는 C4789를 생성합니다.  
   
 ```  

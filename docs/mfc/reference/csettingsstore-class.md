@@ -1,12 +1,9 @@
 ---
-title: "CSettingsStore 클래스 | Microsoft Docs"
-ms.custom: 
+title: CSettingsStore 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSettingsStore
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8ed7cc6c6671e85c21379c4804df4d2f3e3d99d
-ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
+ms.openlocfilehash: f5ed7d1dad634d330ac857f52d6ef35ef36c9c9a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 Windows API 함수를 래핑하여 레지스트리에 액세스하는 데 사용할 수 있는 개체 지향 인터페이스를 제공합니다.  
@@ -75,7 +70,7 @@ class CSettingsStore : public CObject
 ## <a name="remarks"></a>설명  
  멤버 함수 `CreateKey` 및 `Open` 는 매우 유사 합니다. 레지스트리 키가 이미 있는 경우 `CreateKey` 및 `Open` 같은 방식으로 함수입니다. 그러나 레지스트리 키가 없는 경우, `CreateKey` 반면 만들 `Open` 오류 값을 반환 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는의 Open 및 읽기 메서드를 사용 하 여 `CSettingsStore` 클래스입니다. 이 코드 조각은의 일부인는 [도구 팁 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_ToolTipDemo#1](../../mfc/reference/codesnippet/cpp/csettingsstore-class_1.cpp)]  
@@ -88,7 +83,7 @@ class CSettingsStore : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxsettingsstore.h  
   
-##  <a name="close"></a>CSettingsStore::Close  
+##  <a name="close"></a>  CSettingsStore::Close  
  열린 레지스트리 키를 닫습니다.  
   
 ```  
@@ -98,7 +93,7 @@ virtual void Close();
 ### <a name="remarks"></a>설명  
  기본적으로이 메서드는의 소멸자에서는 [CSettingsStore 클래스](../../mfc/reference/csettingsstore-class.md)합니다.  
   
-##  <a name="createkey"></a>CSettingsStore::CreateKey  
+##  <a name="createkey"></a>  CSettingsStore::CreateKey  
  레지스트리 키를 열거나 존재 하지 않는 경우 만듭니다.  
   
 ```  
@@ -113,9 +108,9 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
  성공 하면 0 그렇지 않으면 0이 아닌 값입니다.  
   
 ### <a name="remarks"></a>설명  
- `CreateKey`사용 하 여 `m_hKey` 레지스트리 조회의 루트 라고 합니다. 검색할 `pszPath` 의 하위 키로 `m_hKey`합니다. 키가 없는 경우 `CreateKey` 을 만듭니다. 그렇지 않으면 키를 엽니다. `CreateKey`다음 설정 `m_hKey` 만들거나 열린 키에 있습니다.  
+ `CreateKey` 사용 하 여 `m_hKey` 레지스트리 조회의 루트 라고 합니다. 검색할 `pszPath` 의 하위 키로 `m_hKey`합니다. 키가 없는 경우 `CreateKey` 을 만듭니다. 그렇지 않으면 키를 엽니다. `CreateKey` 다음 설정 `m_hKey` 만들거나 열린 키에 있습니다.  
   
-##  <a name="csettingsstore"></a>CSettingsStore::CSettingsStore  
+##  <a name="csettingsstore"></a>  CSettingsStore::CSettingsStore  
  
           `CSettngsStore` 개체를 만듭니다.  
   
@@ -139,7 +134,7 @@ CSettingsStore(
   
  에 대 한 소멸자 `CSettingsStore` 해제 `m_hKey` 자동으로 합니다.  
   
-##  <a name="deletekey"></a>CSettingsStore::DeleteKey  
+##  <a name="deletekey"></a>  CSettingsStore::DeleteKey  
  레지스트리 키 및 모든 자식 노드를 삭제합니다.  
   
 ```  
@@ -163,7 +158,7 @@ virtual BOOL DeleteKey(
   
  경우 매개 변수 `bAdmin` 0 이면 `DeleteKey` 에서 삭제 하는 키에 대 한 검색 `HKEY_CURRENT_USER`합니다. 경우 `bAdmin` 이 값은 0 `DeleteKey` 에서 삭제 하는 키에 대 한 검색 `HKEY_LOCAL_MACHINE`합니다.  
   
-##  <a name="deletevalue"></a>CSettingsStore::DeleteValue  
+##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue  
  값을 삭제 `m_hKey`합니다.  
   
 ```  
@@ -177,7 +172,7 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-##  <a name="open"></a>CSettingsStore::Open  
+##  <a name="open"></a>  CSettingsStore::Open  
  레지스트리 키를 엽니다.  
   
 ```  
@@ -194,7 +189,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ### <a name="remarks"></a>설명  
  이 메서드는 지정 된 키 성공적으로 열리면 설정 `m_hKey` 이 키의 핸들을 합니다.  
   
-##  <a name="read"></a>CSettingsStore::Read  
+##  <a name="read"></a>  CSettingsStore::Read  
  레지스트리 키에서 값을 읽습니다.  
   
 ```  
@@ -322,9 +317,9 @@ virtual BOOL Read(
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- `Read`에 대 한 확인 `pszKey` 의 하위 키로 `m_hKey`합니다.  
+ `Read` 에 대 한 확인 `pszKey` 의 하위 키로 `m_hKey`합니다.  
   
-##  <a name="write"></a>CSettingsStore::Write  
+##  <a name="write"></a>  CSettingsStore::Write  
  열린 키 아래의 레지스트리 값을 씁니다.  
   
 ```  

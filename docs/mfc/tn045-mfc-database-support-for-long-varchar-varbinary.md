@@ -1,13 +1,10 @@
 ---
-title: "TN045: Long Varchar Varbinary MFC 데이터베이스 지원 | Microsoft Docs"
-ms.custom: 
+title: 'TN045: Long Varchar Varbinary MFC 데이터베이스 지원 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.data
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1c9b64ef3b164c45a1633281bbaebd6525df659
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bd5201661afcdf6f4ae9676323f3f644817bcf7d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045: Long Varchar/Varbinary에 대한 MFC/데이터베이스 지원
 > [!NOTE]
@@ -76,7 +71,7 @@ void AFXAPI RFX_Binary(CFieldExchange* pFX,
  에 대 한 long 데이터 열을 검색 하는 경우는 `CString` 또는 `CByteArray`, 최대 데이터 양은, 기본적으로 255 바이트를 반환 합니다. 이 여분의 무시 됩니다. 이 경우 프레임 워크에서는 예외를 throw **AFX_SQL_ERROR_DATA_TRUNCATED**합니다. 다행히 명시적으로 향상 시킬 수 있습니다 nMaxLength 값 보다 큰 값을 최대 **MAXINT**합니다.  
   
 > [!NOTE]
->  NMaxLength의 값은 MFC를 설정할 때 사용의 로컬 버퍼는 **SQLBindColumn** 함수입니다. 이 데이터의 저장소에 대 한 로컬 버퍼 이며 ODBC 드라이버에서 반환 된 데이터의 양을 실제로 영향을 주지 않습니다. `RFX_Text`및 `RFX_Binary` 만 사용 하 여 호출 하나를 만들어 **SQLFetch** 백 엔드 데이터베이스에서 데이터를 검색할 수 있습니다. 각 ODBC 드라이버의 단일 인출에서 반환할 수는 데이터 양에 대 다른 제한이 있습니다. 이 한도 있으며이 경우는 예외에 nMaxLength에 설정 된 값 보다 훨씬 더 작은 수 **AFX_SQL_ERROR_DATA_TRUNCATED** throw 됩니다. 이러한 상황에서는 사용 하도록 전환 `RFX_LongBinary` 대신 `RFX_Text` 또는 `RFX_Binary` 모든 데이터를 검색할 수 있도록 합니다.  
+>  NMaxLength의 값은 MFC를 설정할 때 사용의 로컬 버퍼는 **SQLBindColumn** 함수입니다. 이 데이터의 저장소에 대 한 로컬 버퍼 이며 ODBC 드라이버에서 반환 된 데이터의 양을 실제로 영향을 주지 않습니다. `RFX_Text` 및 `RFX_Binary` 만 사용 하 여 호출 하나를 만들어 **SQLFetch** 백 엔드 데이터베이스에서 데이터를 검색할 수 있습니다. 각 ODBC 드라이버의 단일 인출에서 반환할 수는 데이터 양에 대 다른 제한이 있습니다. 이 한도 있으며이 경우는 예외에 nMaxLength에 설정 된 값 보다 훨씬 더 작은 수 **AFX_SQL_ERROR_DATA_TRUNCATED** throw 됩니다. 이러한 상황에서는 사용 하도록 전환 `RFX_LongBinary` 대신 `RFX_Text` 또는 `RFX_Binary` 모든 데이터를 검색할 수 있도록 합니다.  
   
  클래스 마법사 바인딩합니다는 **SQL_LONGVARCHAR** 에 `CString`, 또는 **SQL_LONGVARBINARY** 에 `CByteArray` 드립니다. 검색할 수 있는 긴 데이터 열에 255 바이트 이상의 할당 하려는 경우 다음 nMaxLength에 명시적 값을 제공할 수 있습니다.  
   

@@ -1,12 +1,9 @@
 ---
 title: 'Ccommand:: Close | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CCommand.Close
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - Close method
 ms.assetid: 4da9c02c-7082-4e47-a0fa-78b546f0f7d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d25c726ef5961f7504eb72fef230a94588e7734
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5723c358e0af7cf9b92952bfd843ba90577333e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccommandclose"></a>CCommand::Close
 명령과 연결 된 접근자 행 집합을 해제 합니다.  
@@ -45,7 +40,7 @@ void Close();
   
  호출 하 여 각 결과 집합 접근자를 해제 해야 반복 해 서 동일한 명령을 실행 하려는 경우 `Close` 호출 하기 전에 `Execute`합니다. 계열의 끝에 호출 하 여 매개 변수 접근자를 해제 해야 `ReleaseCommand`합니다. 출력 매개 변수가 있는 저장된 프로시저를 호출 하는 또 다른 일반적인 시나리오입니다. 대부분의 공급자 (예: SQL Server 용 OLE DB 공급자)에 출력 매개 변수 값은 액세스할 수 없습니다 결과 set 접근자를 닫을 때까지. 호출 `Close` 반환 된 행 집합 및 결과 집합 접근자 있지만 하지 매개 변수 접근자를 닫으려면 수 있도록 출력 매개 변수 값을 검색할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 호출 하는 방법을 보여 줍니다. `Close` 및 `ReleaseCommand` 반복 해 서 동일한 명령을 실행할 때.  
   
  [!code-cpp[NVC_OLEDB_Consumer#2](../../data/oledb/codesnippet/cpp/ccommand-close_1.cpp)]  

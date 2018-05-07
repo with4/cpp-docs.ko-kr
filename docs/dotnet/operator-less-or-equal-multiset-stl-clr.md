@@ -1,12 +1,9 @@
 ---
-title: "연산자&lt;= (multiset) (STL/CLR) | Microsoft Docs"
-ms.custom: 
+title: 연산자&lt;= (multiset) (STL/CLR) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multiset::operator<=
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator<= member [STL/CLR]
 ms.assetid: 58eb92fd-eac2-462d-b5e9-582bf95b501b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 49cab5907a045a5ec8f4dfbd543942a8f9922e9c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f65507e2c3db8d875616e06cbf0ca9324d392fac
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operatorlt-multiset-stlclr"></a>연산자&lt;= (multiset) (STL/CLR)
 목록 보다 작거나 같은지 비교 합니다.  
@@ -49,7 +44,7 @@ template<typename Key>
 ## <a name="remarks"></a>설명  
  연산자 함수 반환 `!(right < left)`합니다. 테스트를 사용 하는지 여부를 `left` 후 정렬 되지 않은 `right` 때 두 개의 다중 집합은 요소 별로 비교 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_multiset_operator_le.cpp   

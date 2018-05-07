@@ -1,11 +1,8 @@
 ---
-title: "Platform:: exception 클래스 | Microsoft Docs"
-ms.custom: 
+title: 'Platform:: exception 클래스 | Microsoft Docs'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Exception::Exception
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51df721524fa871b28cc7e4bcb088d4a82a0d1ad
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e5adab38c3dc09c533c4df90f313346b22f888c0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformexception-class"></a>Platform::Exception 클래스
 응용 프로그램을 실행할 때 나타나는 오류를 나타냅니다. 사용자 지정 예외 클래스는 `Platform::Exception`에서 파생될 수 없습니다. 사용자 지정 예외가 필요한 경우 `Platform::COMException` 을 사용하고 앱 관련 HRESULT를 지정할 수 있습니다.  
@@ -120,7 +115,7 @@ Exception(int32 hresult, ::Platform::String^ message)
   
 
 
-## <a name="hresult"></a>  Exception::HResult Property
+## <a name="hresult"></a>  Exception:: hresult 속성
 예외에 해당하는 HRESULT입니다.  
   
 ### <a name="syntax"></a>구문  

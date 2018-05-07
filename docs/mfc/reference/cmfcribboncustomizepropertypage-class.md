@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonCustomizePropertyPage 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCRibbonCustomizePropertyPage 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonCustomizePropertyPage
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMFCRibbonCustomizePropertyPage [MFC], AddCustomCategory
 - CMFCRibbonCustomizePropertyPage [MFC], OnOK
 ms.assetid: ea32a99a-dfbe-401e-8975-aa191552532f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ad58cb0b062e25a52742eec5491489d3744a9ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b6c5501159cfdb46107b4fef34637195d52f465
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>CMFCRibbonCustomizePropertyPage 클래스
 에 대 한 사용자 지정 페이지를 구현 하는 **사용자 지정** 리본 기반 응용 프로그램에서 대화 상자.  
@@ -65,7 +60,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 ## <a name="remarks"></a>설명  
  사용자 지정 명령을 추가 하려는 경우는 **사용자 지정** 대화 상자, AFX_WM_ON_RIBBON_CUSTOMIZE 메시지를 처리 해야 합니다. 메시지 처리기에서 인스턴스화하는 `CMFCRibbonCustomizePropertyPage` 스택에 개체입니다. 사용자 지정 명령 목록을 만들고 호출 `AddCustomCategory` 새 페이지를 추가 하는 **사용자 지정** 대화 상자.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 생성 하는 방법을 `CMFCRibbonCustomizePropertyPage` 개체를 사용자 지정 범주를 추가 합니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#22](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizepropertypage-class_1.cpp)]  
@@ -88,7 +83,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxribboncustomizedialog.h  
   
-##  <a name="addcustomcategory"></a>CMFCRibbonCustomizePropertyPage::AddCustomCategory  
+##  <a name="addcustomcategory"></a>  CMFCRibbonCustomizePropertyPage::AddCustomCategory  
  사용자 지정 범주를 추가 하는 **명령을** 콤보 상자입니다.  
   
 ```  
@@ -108,7 +103,7 @@ void AddCustomCategory(
 ### <a name="remarks"></a>설명  
  이 메서드는 명명 된 범주 추가 `lpszName` 에 **명령을** 콤보 상자입니다. 사용자가 범주를 선택 하는 경우 명령에 지정 된 `lstIDS` 명령 목록에 표시 합니다.  
   
-##  <a name="cmfcribboncustomizepropertypage"></a>CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
+##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  `CMFCRibbonCustomizePropertyPage` 개체를 생성합니다.  
   
 ```  
@@ -119,7 +114,7 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
  [in] `pRibbonBar`  
  리본 컨트롤에 대 한 포인터를 사용자 지정 하는 옵션입니다.  
   
-##  <a name="onok"></a>CMFCRibbonCustomizePropertyPage::OnOK  
+##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK  
  사용자가 클릭할 때 시스템에서 Calleld **확인** 에 **사용자 지정** 대화 상자.  
   
 ```  

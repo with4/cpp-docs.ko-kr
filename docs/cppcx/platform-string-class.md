@@ -1,11 +1,8 @@
 ---
-title: "Platform:: string 클래스 | Microsoft Docs"
-ms.custom: 
+title: 'Platform:: string 클래스 | Microsoft Docs'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::String::String
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c665b6767ea7a7a7d97d232f5253f8e182e6b0a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: e7a18b1a8ced533389b5938d44a73589336f717f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformstring-class"></a>Platform::String 클래스
 텍스트를 나타내는 데 사용되는 유니코드 문자의 순차적인 컬렉션을 나타냅니다. 자세한 내용 및 예제에 대 한 참조 [문자열](../cppcx/strings-c-cx.md)합니다.  
@@ -342,7 +337,7 @@ bool String::operator+( String^ str1, String^ str2)
 ### <a name="remarks"></a>설명  
  이 연산자는 두 피연산자의 데이터가 들어 있는 `String^` 개체를 만듭니다. 매우 높은 성능이 중요하지 않은 경우 편의를 위해 이를 사용합니다. 함수에서 "`+`"를 몇 번 호출하는 것은 그렇게 눈에 띄지 않지만 대행 개체나 텍스트 데이터를 연속해서 조작하는 경우 표준 C++ 매커니즘과 형식을 사용하십시오.  
   
-##  <a name="operator-equality">String:: operator = = 연산자</a>
+##  <a name="operator-equality"></a> String:: operator = = 연산자
 지정된 두 String 개체의 텍스트 값이 같은지 여부를 나타냅니다.  
   
 ### <a name="syntax"></a>구문  
@@ -431,7 +426,7 @@ bool String::operator!=( String^ str1, String^ str2)
  `true`가 `str1`와 다르면 `str2`이고, 그러지 않으면 `false`입니다.   
 
 
-## <a name="operator-less-than"></a> String::operator&lt; 
+## <a name="operator-less-than"></a> String:: operator&lt; 
 String 개체 값이 두 번째 String 개체 값보다 작은지 여부를 나타냅니다.  
   
 ### <a name="syntax"></a>구문  
@@ -470,7 +465,7 @@ String(char16* s, unsigned int n)
   
 ### <a name="remarks"></a>설명  
  성능이 중요 하며 소스 문자열의 수명을 제어 하는 경우 사용할 수 있습니다 [platform:: stringreference](../cppcx/platform-stringreference-class.md) 문자열 대신 합니다.  
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```cpp  
 String^ s = L"Hello!";  

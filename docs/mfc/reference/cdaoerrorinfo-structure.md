@@ -1,13 +1,10 @@
 ---
-title: "CDaoErrorInfo 구조체 | Microsoft Docs"
-ms.custom: 
+title: CDaoErrorInfo 구조체 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoErrorInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CDaoErrorInfo structure [MFC]
 - DAO (Data Access Objects), Errors collection
 ms.assetid: cd37ef71-b0b3-401d-bc2b-540c9147f532
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da47b4b68a9fd73b3962254121006eff47282336
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c11ebaa7d315d09cea40b4ddc94d5afff498bf7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoerrorinfo-structure"></a>CDaoErrorInfo 구조체
 `CDaoErrorInfo` 구조 데이터 액세스 개체 (DAO)에 대해 정의 된 오류 개체에 대 한 정보를 포함 합니다.  
@@ -65,7 +60,7 @@ struct CDaoErrorInfo
   
  DAO 오류를 처리 하는 방법에 대 한 자세한 내용은 문서 참조 [예외: 데이터베이스 예외](../../mfc/exceptions-database-exceptions.md)합니다. 관련된 정보에 대 한 DAO 도움말의 "Error 개체" 항목을 참조 합니다.  
   
- 검색 한 정보는 [CDaoException::GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) 멤버 함수에 저장 되는 `CDaoErrorInfo` 구조입니다. 검사는 [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) 에서 데이터 멤버는 `CDaoException` 예외 처리기 또는 호출에서 파악 하는 개체 `GetErrorInfo` 에서 `CDaoException` 있을 수 있는 오류를 확인 하기 위해 명시적으로 만든 개체 DAO 인터페이스를 직접 호출 하는 동안 발생 했습니다. `CDaoErrorInfo`또한 정의 `Dump` 디버그에서 멤버 함수를 작성 합니다. 사용할 수 있습니다 `Dump` 의 내용을 덤프 하는 `CDaoErrorInfo` 개체입니다.  
+ 검색 한 정보는 [CDaoException::GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo) 멤버 함수에 저장 되는 `CDaoErrorInfo` 구조입니다. 검사는 [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo) 에서 데이터 멤버는 `CDaoException` 예외 처리기 또는 호출에서 파악 하는 개체 `GetErrorInfo` 에서 `CDaoException` 있을 수 있는 오류를 확인 하기 위해 명시적으로 만든 개체 DAO 인터페이스를 직접 호출 하는 동안 발생 했습니다. `CDaoErrorInfo` 또한 정의 `Dump` 디버그에서 멤버 함수를 작성 합니다. 사용할 수 있습니다 `Dump` 의 내용을 덤프 하는 `CDaoErrorInfo` 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdao.h  

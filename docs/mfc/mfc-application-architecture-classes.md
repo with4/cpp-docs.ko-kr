@@ -1,13 +1,10 @@
 ---
-title: "MFC 응용 프로그램 아키텍처 클래스 | Microsoft Docs"
-ms.custom: 
+title: MFC 응용 프로그램 아키텍처 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - classes [MFC], MFC
 - application architecture classes [MFC]
 ms.assetid: 71b2de54-b44d-407e-9c71-9baf954e18d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 623775d6c3306ba4afdb01eb78ea70b05f7a3365
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b1174a994f345f4b7733e82603b5a49ed8977651
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-application-architecture-classes"></a>MFC 응용 프로그램 아키텍처 클래스
 이 항목의 클래스는 프레임 워크 응용 프로그램의 아키텍처에 영향을 줍니다. 대부분의 응용 프로그램에 공통 기능을 제공합니다. 응용 프로그램 관련 기능을 추가 하기 위해 프레임 워크에 정보를 입력 합니다. 일반적으로 이렇게 하면 아키텍처 클래스에서 새 클래스를 파생 하 고 다음 새 멤버를 추가 하거나 기존 멤버 함수를 재정의 하 여 됩니다.  

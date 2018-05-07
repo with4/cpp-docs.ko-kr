@@ -1,13 +1,10 @@
 ---
-title: "프로젝트 변환 혼합 모드를 순수 Intermediate Language | Microsoft Docs"
-ms.custom: 
+title: 프로젝트 변환 혼합 모드를 순수 Intermediate Language | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0276d5b5420ed0294b2cf3438190f79d03585744
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad39f7943effdea8029390971071724bf2294bdf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>프로젝트를 혼합 모드에서 순수 IL로 변환
 모든 Visual c + + CLR 프로젝트는 기본적으로 C 런타임 라이브러리에 연결합니다. 따라서 이러한 프로젝트는 공용 언어 런타임 (관리 코드)를 대상으로 하는 코드와 네이티브 코드를 결합 하기 때문에 혼합 모드 응용 프로그램으로 분류 됩니다. 컴파일되는 경우, 중간 언어 (IL) 라고도 Microsoft MSIL (intermediate language)로 컴파일됩니다.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
     3.  에 **고급** 프로젝트 속성 페이지에는 **링커**을 선택는 **진입점** 다음을 입력 하 고 **Main** 이 필드에 합니다.  
   
-    4.  콘솔 응용 프로그램의 경우에 **시스템** 프로젝트 속성 페이지에 대 한는 **링커**을 선택는 **하위 시스템** 필드 하 고이를 변경 하 **콘솔 (/ SUBSYSTEM:CONSOLE)**합니다.  
+    4.  콘솔 응용 프로그램의 경우에 **시스템** 프로젝트 속성 페이지에 대 한는 **링커**을 선택는 **하위 시스템** 필드 하 고이를 변경 하 **콘솔 (/ SUBSYSTEM:CONSOLE)** 합니다.  
   
         > [!NOTE]
         >  때문에 Windows Forms 응용 프로그램에 대 한이 속성을 설정할 필요가 없습니다는 **하위 시스템** 필드가로 설정 된 **Windows (/ 하위 시스템: WINDOWS)** 기본적으로 합니다.  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
         // #include <tchar.h>  
         ```  
   
-         또는  
+         -또는-  
   
          예를 들어 Windows Forms 응용 프로그램:  
   
@@ -65,7 +60,7 @@ ms.lasthandoff: 12/21/2017
         // #include <tchar.h>  
         ```  
   
-    6.  Form1.cpp에 Windows Forms 응용 프로그램을 주석으로 처리에 대 한는 `#include` windows.h 참조 하는 문입니다. 예:  
+    6.  Form1.cpp에 Windows Forms 응용 프로그램을 주석으로 처리에 대 한는 `#include` windows.h 참조 하는 문입니다. 예를 들어:  
   
         ```  
         // #include <windows.h>  
@@ -104,4 +99,4 @@ ms.lasthandoff: 12/21/2017
         |[UInt32](https://msdn.microsoft.com/en-us/library/system.uint32\(v=vs.140\).aspx)|32비트 부호 없는 정수를 나타냅니다.|  
         |[UInt64](https://msdn.microsoft.com/en-us/library/system.uint64\(v=vs.140\).aspx)|64비트 부호 없는 정수를 나타냅니다.|  
         |[UIntPtr](https://msdn.microsoft.com/en-us/library/system.uintptr\(v=vs.140\).aspx)|포인터나 핸들을 나타내는 데 사용되는 플랫폼별 형식입니다.|  
-        |[Void](https://msdn.microsoft.com/en-us/library/system.void\(v=vs.140\).aspx)|값을 반환 하지 않는 메서드를 나타냅니다. 즉, 메서드는 void 반환 형식이.|
+        |[void](https://msdn.microsoft.com/en-us/library/system.void\(v=vs.140\).aspx)|값을 반환 하지 않는 메서드를 나타냅니다. 즉, 메서드는 void 반환 형식이.|

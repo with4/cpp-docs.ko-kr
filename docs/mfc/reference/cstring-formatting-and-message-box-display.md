@@ -1,13 +1,10 @@
 ---
-title: "CString 서식 지정 및 메시지 상자 표시 | Microsoft Docs"
-ms.custom: 
+title: CString 서식 지정 및 메시지 상자 표시 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.strings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bc86e066e57978bee0953e233edbb2aefbe61c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8074d84d739b59acfa0c6040bedf76f46b6ea9c6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>CString 서식 지정 및 메시지 상자 표시
 다양 한 함수가 서식을 지정 하 고 구문 분석을 제공 `CString` 개체입니다. 조작할 수 있는 경우 이러한 함수를 사용할 수 있습니다 `CString` 있지만 개체는 메시지 상자 텍스트에 표시 되는 문자열 형식 지정 하는 데 특히 유용 합니다.  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxwin.h  
   
-##  <a name="afxextractsubstring"></a>AfxExtractSubString  
+##  <a name="afxextractsubstring"></a>  AfxExtractSubString  
  이 전역 함수는 지정 된 소스 문자열에서 하위 문자열을 추출할 데 사용할 수 있습니다.  
   
 ```   
@@ -76,13 +71,13 @@ BOOL AFXAPI AfxExtractSubString (
   
  이 함수는 경우 FALSE를 반환 합니다 `lpszFullString` 로 설정 된 **NULL** 되거나 함수 끝에 도달 `lpszFullString` 찾지 못한 채 `iSubString`+ 1 발견 되는 지정 된 구분 기호 문자입니다. `rString` 매개 변수는 경우 원래 값에서 수정 되지 것입니다 `lpszFullString` 로 설정 된 **NULL**, 그렇지 않으면는 `rString` 매개 변수가 빈 문자열으로 설정 되어 있는 부분 문자열을 추출할 수 없습니다 지정 된 인덱스입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities#48](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_1.cpp)]  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxwin.h  
   
-##  <a name="afxformatstring1"></a>AfxFormatString1  
+##  <a name="afxformatstring1"></a>  AfxFormatString1  
  `lpsz1`으로 식별되는 템플릿 문자열 리소스에서 문자 "%1"의 모든 인스턴스에 대해 `nIDS`이 가리키는 문자열을 대체합니다.  
   
 ```  
@@ -107,13 +102,13 @@ void  AfxFormatString1(
   
  서식 문자 "%1"이(가) 두 번 이상 문자열에 나타나는 경우 대체가 여러 번 수행됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities#25](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_2.cpp)]  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxwin.h  
   
-##  <a name="afxformatstring2"></a>AfxFormatString2  
+##  <a name="afxformatstring2"></a>  AfxFormatString2  
  가 가리키는 문자열을 대체 `lpsz1` 의 "%1", 문자 및 가리키는 문자열의 모든 인스턴스에 대해 `lpsz2` 로 식별 되는 템플릿 문자열 리소스의 문자 "%2"의 모든 인스턴스에 대해 `nIDS`합니다.  
   
 ```   
@@ -142,13 +137,13 @@ void AfxFormatString2(
   
  형식 문자 "%1" 또는 "%2" 문자열에 두 번 이상 나타날 경우 대체가 여러 수행 됩니다. 숫자 순서로 배열 될 필요가 없습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities#26](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_3.cpp)]  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxwin.h  
   
-##  <a name="afxmessagebox"></a>AfxMessageBox  
+##  <a name="afxmessagebox"></a>  AfxMessageBox  
  화면에 있는 메시지 상자를 표시합니다.  
   
 ```  
@@ -202,7 +197,7 @@ int AFXAPI AfxMessageBox(
   
  함수의 두 번째 형식 문자열 리소스를 사용 하 여 ID를 가진 `nIDPrompt` 메시지 상자에는 메시지를 표시 합니다. 값을 통해 연결 된 도움말 페이지를 찾을 수 `nIDHelp`합니다. 경우 기본값인 `nIDHelp` 은 사용 되는 (-1), 문자열 리소스 ID `nIDPrompt`, 도움말 컨텍스트에 대 한 사용 됩니다. 도움말 컨텍스트를 정의 하는 방법에 대 한 자세한 내용은 참조 [기술 참고 28](../../mfc/tn028-context-sensitive-help-support.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#133](../../mfc/reference/codesnippet/cpp/cstring-formatting-and-message-box-display_4.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

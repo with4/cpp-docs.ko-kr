@@ -1,12 +1,9 @@
 ---
 title: 'multimap:: iterator (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multimap::iterator
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - iterator member [STL/CLR]
 ms.assetid: 2923f4bc-b216-477b-b10e-22bf15847c67
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1d9401017d59f2c7d02c4c67dedd361552e54f82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2e482a3af17e0bff6349d72db4c44cdcd2ece318
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multimapiterator-stlclr"></a>multimap::iterator(STL/CLR)
 제어되는 시퀀스에 대한 반복기의 형식입니다.  
@@ -40,7 +35,7 @@ typedef T1 iterator;
 ## <a name="remarks"></a>설명  
  이 형식은 지정 되지 않은 형식의 개체를 설명 `T1` 제어 되는 시퀀스에 대 한 양방향 반복기로 사용할 수 있는 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_multimap_iterator.cpp   

@@ -2,35 +2,30 @@
 title: '방법: Windows 레지스트리에 데이터 쓰기 (C + + /cli CLI) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - registry, writing to
 - Visual C++, writing to Windows Registry
 ms.assetid: 3d40b978-4baa-4779-bfe3-47e2917b757f
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f3bd5cedbf3c981964c9d03eb8a30fc5e1652081
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 304bc224be8776c9793af07283c6a5697a4e49eb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-write-data-to-the-windows-registry-ccli"></a>방법: Windows 레지스트리에 데이터 쓰기(C++/CLI)
 다음 코드 예제에서는 <xref:Microsoft.Win32.Registry.CurrentUser> 의 쓰기 가능한 인스턴스를 만드는 키는 <xref:Microsoft.Win32.RegistryKey> 클래스에 해당 하는 **소프트웨어** 키입니다. <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A> 메서드는 다음 새 키를 만들고 키/값 쌍을 추가 하는 데 사용 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="code"></a>코드  
   

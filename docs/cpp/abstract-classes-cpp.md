@@ -1,12 +1,9 @@
 ---
-title: "추상 클래스 (c + +) | Microsoft Docs"
-ms.custom: 
+title: 추상 클래스 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - abstract classes [C++]
 - derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23cdff4d0e2eb213a98b2e90d7df41af226edd86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60f46ccdae3b92f60708354078fafb244d29bbe3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="abstract-classes-c"></a>추상 클래스 (C++)
 추상 클래스는 보다 구체적인 클래스가 파생될 수 있는 일반 개념의 식 역할을 합니다. 추상 클래스 형식의 개체를 만들 수는 없지만, 추상 클래스 형식에 대한 포인터와 참조를 사용할 수 있습니다.  
@@ -66,7 +61,7 @@ private:
   
  순수 가상 함수에 대한 추상 클래스를 정의할 수 있지만 직접 호출하려면 반드시 다음의 구문을 사용해야 합니다.  
   
- *추상 클래스 이름* `::` *함수 이름***)**  
+ *추상 클래스 이름* `::` *함수-name * * *)**  
   
  개체를 제거하는 과정에서 기본 클래스 소멸자가 항상 호출되기 때문에 기본 클래스가 순수 가상 소멸자를 포함하는 클래스 계층 구조를 설계할 때 도움이 됩니다. 다음 예제를 참조하세요.  
   

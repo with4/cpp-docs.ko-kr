@@ -1,12 +1,9 @@
 ---
-title: "COleStreamFile 클래스 | Microsoft Docs"
-ms.custom: 
+title: COleStreamFile 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleStreamFile
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efb042f87e10bec9fff53fcb1d22d56ed3c68ef3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 805c32145d844cc1103cab7c4987c0595ff5935f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile 클래스
 데이터 스트림을 나타냅니다 ( `IStream`) OLE 구조적 저장소의 일부로 복합 파일입니다.  
@@ -72,7 +67,7 @@ class COleStreamFile : public CFile
 ## <a name="remarks"></a>설명  
  `IStorage` 열거나 메모리 스트림을 경우가 아니라면를 만들 수 있는 스트림 수 전에 개체가 존재 해야 합니다.  
   
- `COleStreamFile`개체와 똑같이 조작 [CFile](../../mfc/reference/cfile-class.md) 개체입니다.  
+ `COleStreamFile` 개체와 똑같이 조작 [CFile](../../mfc/reference/cfile-class.md) 개체입니다.  
   
  스트림 및 저장소를 조작 하는 방법에 대 한 자세한 내용은 문서 참조 [컨테이너: 복합 파일](../../mfc/containers-compound-files.md)...  
   
@@ -88,7 +83,7 @@ class COleStreamFile : public CFile
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxole.h  
   
-##  <a name="attach"></a>COleStreamFile::Attach  
+##  <a name="attach"></a>  COleStreamFile::Attach  
  사용 하 여 제공 된 OLE 스트림을 연결의 `COleStreamFile` 개체입니다.  
   
 ```  
@@ -104,7 +99,7 @@ void Attach(LPSTREAM lpStream);
   
  자세한 내용은 참조 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows sdk에서입니다.  
   
-##  <a name="colestreamfile"></a>COleStreamFile::COleStreamFile  
+##  <a name="colestreamfile"></a>  COleStreamFile::COleStreamFile  
  
           `COleStreamFile` 개체를 만듭니다.  
   
@@ -121,7 +116,7 @@ COleStreamFile(LPSTREAM lpStream = NULL);
   
  자세한 내용은 참조 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows sdk에서입니다.  
   
-##  <a name="creatememorystream"></a>COleStreamFile::CreateMemoryStream  
+##  <a name="creatememorystream"></a>  COleStreamFile::CreateMemoryStream  
  안전 하 게 오류는 일반, 예상 조건 공유, 글로벌 메모리 부족 새 스트림을 만듭니다.  
   
 ```  
@@ -140,7 +135,7 @@ BOOL CreateMemoryStream(CFileException* pError = NULL);
   
  자세한 내용은 참조 [CreateStreamOnHGlobal](http://msdn.microsoft.com/library/windows/desktop/aa378980) Windows sdk에서입니다.  
   
-##  <a name="createstream"></a>COleStreamFile::CreateStream  
+##  <a name="createstream"></a>  COleStreamFile::CreateStream  
  오류는 일반, 예상 조건 제공 되는 저장소 개체에 새 스트림을 안전 하 게 만듭니다.  
   
 ```  
@@ -172,7 +167,7 @@ BOOL CreateStream(
   
  자세한 내용은 참조 [IStorage::CreateStream](http://msdn.microsoft.com/library/windows/desktop/aa380020) Windows sdk에서입니다.  
   
-##  <a name="detach"></a>COleStreamFile::Detach  
+##  <a name="detach"></a>  COleStreamFile::Detach  
  스트림을 닫지 않고 스트림을 개체에서 연결을 끊습니다.  
   
 ```  
@@ -187,7 +182,7 @@ LPSTREAM Detach();
   
  자세한 내용은 참조 [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034) Windows sdk에서입니다.  
   
-##  <a name="getstream"></a>COleStreamFile::GetStream  
+##  <a name="getstream"></a>  COleStreamFile::GetStream  
  현재 스트림에 대 한 포인터를 반환 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -197,7 +192,7 @@ IStream* GetStream() const;
 ### <a name="return-value"></a>반환 값  
  현재 스트림 인터페이스에 대 한 포인터 ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034)).  
   
-##  <a name="openstream"></a>COleStreamFile::OpenStream  
+##  <a name="openstream"></a>  COleStreamFile::OpenStream  
  기존 스트림을 엽니다.  
   
 ```  

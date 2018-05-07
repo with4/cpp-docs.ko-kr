@@ -2,11 +2,8 @@
 title: __super | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - __super_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 93585337ae34e7c95d1c11b0a970afc8b36987bb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 91ce48232884d1ab242ed52f82f614de058a2f91
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="super"></a>__super
 **Microsoft 전용**  
@@ -51,7 +46,7 @@ member_function
   
  도입으로 [특성](../windows/cpp-attributes-reference.md) 코드를 삽입 하 여 코드 이름 해당 모를 수에 포함 된 메서드를 호출 하려는 하나 이상의 기본 클래스가 포함 될 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // deriv_super.cpp  

@@ -1,12 +1,9 @@
 ---
-title: "소프트웨어 예외 발생 | Microsoft Docs"
-ms.custom: 
+title: 소프트웨어 예외 발생 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - software exceptions [C++]
 - formats [C++], exception codes
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eb616945a831502077066bdf306bef306f543eb
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 9fa925a01633d72f43b165b87c27e5203a143d1e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="raising-software-exceptions"></a>소프트웨어 예외 발생
 프로그램 오류의 가장 일반적인 원인 중 몇 가지는 시스템에서 예외로 플래그가 지정되지 않습니다. 예를 들어 메모리 블록을 할당하려고 시도하지만 메모리가 부족한 경우, 런타임 또는 API 함수에서 예외를 발생시키지 않지만 오류 코드를 반환합니다.  
@@ -74,7 +69,7 @@ if (lpstr == NULL)
   
  예외를 발생시키기만 하려면 마지막 세 매개 변수를 0으로 설정하면 됩니다. 마지막 세 매개 변수는 추가 정보를 전달하고 처리기가 계속 실행되지 않도록 하는 플래그를 설정하는 데 유용합니다. 참조는 [RaiseException](http://msdn.microsoft.com/library/windows/desktop/ms680552) 함수는 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] 자세한 정보에 대 한 합니다.  
   
- 이렇게 하면 예외 처리 필터에서 사용자가 정의한 코드를 테스트할 수 있습니다. 예:  
+ 이렇게 하면 예외 처리 필터에서 사용자가 정의한 코드를 테스트할 수 있습니다. 예를 들어:  
   
 ```  
 __try {  

@@ -1,30 +1,25 @@
 ---
-title: "MFC ActiveX 컨트롤: 사용자 지정 속성 추가 | Microsoft Docs"
-ms.custom: 
+title: 'MFC ActiveX 컨트롤: 사용자 지정 속성 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f64154142c4c5f0fb3f24dc63120799132983880
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fc3aa3f7aa8b6f4abf28c12a11f75540f59238e4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX 컨트롤: 사용자 지정 속성 추가
 스톡 속성에서 사용자 지정 속성 다를 사용자 지정 속성에서 아직 구현 되지 않는 한다는 점에서 `COleControl` 클래스입니다. 사용자 지정 속성은 특정 상태 또는 컨트롤을 사용 하 여 프로그래머에 ActiveX 컨트롤의 모양을을 노출할 사용 됩니다.  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
      매개 변수가 있는 구현은 속성 추가 마법사에서 지원 됩니다. 매개 변수가 있는 속성 (속성 배열 라고도 함) 값 집합을 단일 사용자 컨트롤의 속성을 통해 액세스 데 사용할 수 있습니다. 이 구현에 대 한 디스패치 맵 항목 매크로 `DISP_PROPERTY_PARAM`합니다. 이 형식을 구현에 대 한 자세한 내용은 참조 하십시오. [매개 변수가 있는 속성을 구현](../mfc/mfc-activex-controls-advanced-topics.md) 문서의 ActiveX 컨트롤: 고급 항목입니다.  
   
-##  <a name="_core_using_classwizard_to_add_a_custom_property"></a>사용 하는 속성 추가 마법사 사용자 지정 속성을 추가 하려면  
+##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> 사용 하는 속성 추가 마법사 사용자 지정 속성을 추가 하려면  
  다음 절차 CircleOffset Get/Set 메서드 구현을 사용 하 여 사용자 지정 속성을 추가 하는 방법을 보여 줍니다. CircleOffset 사용자 지정 속성에는 컨트롤의 사용자를를 컨트롤의 경계 사각형의 중앙에서 원을 오프셋할 수 있습니다. Get/Set 메서드 이외의 구현 사용 하 여 사용자 지정 속성을 추가 하기 위한 절차는 매우 비슷합니다.  
   
  이 절차는 다른 사용자 지정 속성을 추가 하려면 데도 사용할 수 있습니다. 사용자 지정 속성 이름을 CircleOffset 속성 이름 및 매개 변수를 대체 합니다.  
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/21/2017
   
 9. **마침**을 클릭합니다.  
   
-##  <a name="_core_classwizard_changes_for_custom_properties"></a>속성 추가 마법사 변경에 대 한 사용자 지정 속성  
+##  <a name="_core_classwizard_changes_for_custom_properties"></a> 속성 추가 마법사 변경에 대 한 사용자 지정 속성  
  CircleOffset 사용자 지정 속성을 추가 하는 때 속성 추가 마법사 헤더에는 변경 (합니다. H)와 구현 (합니다. 컨트롤 클래스의 CPP) 파일입니다.  
   
  다음 줄에 추가 되 고 있습니다. H 이라는 두 개의 함수를 선언 하는 파일 `GetCircleOffset` 및 `SetCircleOffset`:  

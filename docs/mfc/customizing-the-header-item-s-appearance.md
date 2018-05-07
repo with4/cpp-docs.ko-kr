@@ -1,13 +1,10 @@
 ---
-title: "헤더 항목 &#39; 사용자 지정 모양을 s | Microsoft Docs"
-ms.custom: 
+title: 헤더 항목을 사용자 지정&#39;s 모양 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,19 +12,17 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], customizing the items
 - HDS_ styles
 ms.assetid: b1e1e326-ec7d-4dbd-a46f-96a3e2055618
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dacb5cc7aa1c6d7c74a07ee911c5887efe1d877b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b58af1efc0558fe9195f56c31df11827d57f731
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="customizing-the-header-item39s-appearance"></a>헤더 항목 &#39; 사용자 지정 s 모양
+# <a name="customizing-the-header-item39s-appearance"></a>헤더 항목을 사용자 지정&#39;s 모양
 설정 하 여는 *dwStyle* 헤더 컨트롤을 처음 만들 때 매개 변수 ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create)), 모양을 정의할 수 있습니다 및 머리글의 동작 항목 또는 헤더의 자체를 제어 합니다.  
   
  샘플을 설정할 수 있습니다, 스타일 및 각각의 용도 다음과 같습니다.  

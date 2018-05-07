@@ -2,12 +2,9 @@
 title: ATL 모듈 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - ATL, module classes
 - module classes
 ms.assetid: fd75382d-c955-46ba-a38e-37728b7fa00f
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b254edfe75cfcdaee7ab15351f7c05c3d163e301
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 777d81fbe1de48289863fda00591a5328b40cf4c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-module-classes"></a>ATL 모듈 클래스
 이 항목에서는 ATL 7.0에 새로 추가 된 모듈 클래스에 설명 합니다.  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
     -   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) Windows NT 및 Windows 2000 서비스를 만드는 지원을 제공 합니다.  
   
- `CComModule`이전 버전과 호환성을 위해 계속 사용할 수 있습니다.  
+ `CComModule` 이전 버전과 호환성을 위해 계속 사용할 수 있습니다.  
   
 ## <a name="reasons-for-distributing-ccommodule-functionality"></a>CComModule 기능을 배포 하는 이유  
  기능 `CComModule` 와 함께 다음과 같은 이유로 새로운 몇 가지 클래스로 배포:  

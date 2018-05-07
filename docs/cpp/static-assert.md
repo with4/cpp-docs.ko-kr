@@ -1,12 +1,9 @@
 ---
 title: static_assert | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - static_assert_cpp
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 660b91f4902e42d393509aa190172e53839b2621
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47046090da45d963cc0005f47e2bea680ad17795
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="staticassert"></a>static_assert
 컴파일 시 소프트웨어 어설션을 테스트합니다. 지정 된 상수 식이 `false`, 컴파일러, 제공 된 경우 지정된 된 메시지를 표시 하 고 컴파일은 C2338 오류와 함께 실패, 선언에 영향을 주지 않습니다.  
@@ -70,7 +65,7 @@ static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");
 ## <a name="description"></a>설명  
  다음 예제에서 `static_assert` 선언은 클래스 범위를 갖습니다. `static_assert` 는 템플릿 매개 변수 인지 확인 한 *일반 이전 데이터* (POD) 형식입니다. 컴파일러는 `static_assert`가 선언되면 그 선언을 검사하지만 `constant-expression` 클래스 템플릿이 `basic_string`에서 인스턴스화될 때까지 `main()` 매개 변수를 확인하지 않습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 #include <type_traits>  
@@ -98,7 +93,7 @@ int main()
 ## <a name="description"></a>설명  
  다음 예제에서 `static_assert` 선언은 블록 범위를 갖습니다. `static_assert`는 VMPage 구조체의 크기가 시스템의 가상 메모리 페이지 크기와 같은지 확인합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 #include <sys/param.h> // defines PAGESIZE  

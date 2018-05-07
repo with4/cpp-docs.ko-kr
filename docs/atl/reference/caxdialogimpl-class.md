@@ -2,11 +2,8 @@
 title: CAxDialogImpl 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CAxDialogImpl
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - CAxDialogImpl class
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2db97c0de9f262936212cf7f38abddf7c91eb5a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e3e1b7d4f88428060f4aa4d01180bce1e970b650
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl 클래스
 이 클래스는 ActiveX 컨트롤을 호스팅하는 (모달 및 모덜리스) 대화 상자를 구현합니다.  
@@ -75,14 +70,14 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[CAxDialogImpl::m_bModal](#m_bmodal)|디버그에만 존재 하는 변수 빌드되고 모달 대화 상자를 true로 설정 됩니다.|  
   
 ## <a name="remarks"></a>설명  
- `CAxDialogImpl`모달 또는 모덜리스 대화 상자를 만들 수 있습니다. `CAxDialogImpl`기본 메시지 맵을 메시지를 적절 한 처리기를 사용 하 여 대화 상자 프로시저를 제공 합니다.  
+ `CAxDialogImpl` 모달 또는 모덜리스 대화 상자를 만들 수 있습니다. `CAxDialogImpl` 기본 메시지 맵을 메시지를 적절 한 처리기를 사용 하 여 대화 상자 프로시저를 제공 합니다.  
   
- `CAxDialogImpl`파생 `CDialogImplBaseT`에서 파생 됩니다는 *TBase* (기본적으로 `CWindow`) 및 `CMessageMap`합니다.  
+ `CAxDialogImpl` 파생 `CDialogImplBaseT`에서 파생 됩니다는 *TBase* (기본적으로 `CWindow`) 및 `CMessageMap`합니다.  
   
  클래스 대화 상자 템플릿 리소스 id입니다. 지정 하는 IDD 멤버를 정의 해야 합니다. 예를 들어, 사용 하 여 ATL 대화 상자 개체를 추가 **클래스 추가** 대화 상자 클래스에 다음 줄을 자동으로 추가 합니다.  
   
@@ -110,7 +105,7 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
   
-##  <a name="advisesinkmap"></a>CAxDialogImpl::AdviseSinkMap  
+##  <a name="advisesinkmap"></a>  CAxDialogImpl::AdviseSinkMap  
  Advise 하거나 unadvise 개체의 싱크 맵 이벤트 맵에서 모든 항목에이 메서드를 호출 합니다.  
   
 ```
@@ -124,7 +119,7 @@ HRESULT AdviseSinkMap(bool bAdvise);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="create"></a>CAxDialogImpl::Create  
+##  <a name="create"></a>  CAxDialogImpl::Create  
  모덜리스 대화 상자를 만들려면이 메서드를 호출 합니다.  
   
 ```
@@ -139,7 +134,7 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
  `dwInitParam`  
  [in] 대화 상자에 전달할 값을 지정 된 `lParam` 의 매개 변수는 **WM_INITDIALOG** 메시지입니다.  
   
- **RECT &**  
+ **RECT &AMP;**  
  이 매개 변수는 사용되지 않습니다. 이 매개 변수는에 의해 전달 된 `CComControl`합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -150,7 +145,7 @@ HWND Create(HWND hWndParent, RECT&, LPARAM dwInitParam = NULL);
   
  두 번째 재정의 대화 상자와 함께 사용할 수 있도록 제공 됩니다 [CComControl](../../atl/reference/ccomcontrol-class.md)합니다.  
   
-##  <a name="destroywindow"></a>CAxDialogImpl::DestroyWindow  
+##  <a name="destroywindow"></a>  CAxDialogImpl::DestroyWindow  
  모덜리스 대화 상자를 삭제 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -163,7 +158,7 @@ BOOL DestroyWindow();
 ### <a name="remarks"></a>설명  
  호출 하지 마십시오 `DestroyWindow` 모달 대화 상자를 제거할 수 있습니다. 호출 [EndDialog](#enddialog) 대신 합니다.  
   
-##  <a name="domodal"></a>CAxDialogImpl::DoModal  
+##  <a name="domodal"></a>  CAxDialogImpl::DoModal  
  모달 대화 상자를 만들려면이 메서드를 호출 합니다.  
   
 ```
@@ -187,7 +182,7 @@ INT_PTR DoModal(
   
  모덜리스 대화 상자를 만들려면 호출 [만들기](#create)합니다.  
   
-##  <a name="enddialog"></a>CAxDialogImpl::EndDialog  
+##  <a name="enddialog"></a>  CAxDialogImpl::EndDialog  
  모달 대화 상자를 삭제 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -202,12 +197,12 @@ BOOL EndDialog(int nRetCode);
  TRUE 이면 대화 상자가 소멸 됩니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- `EndDialog`대화 상자 프로시저를 통해 호출 되어야 합니다. Windows 대화 상자 소멸 되기 후의 값을 사용 `nRetCode` 에 대 한 반환 값으로 `DoModal`, 대화 상자를 생성 합니다.  
+ `EndDialog` 대화 상자 프로시저를 통해 호출 되어야 합니다. Windows 대화 상자 소멸 되기 후의 값을 사용 `nRetCode` 에 대 한 반환 값으로 `DoModal`, 대화 상자를 생성 합니다.  
   
 > [!NOTE]
 >  호출 하지 마십시오 `EndDialog` 모덜리스 대화 상자를 제거할 수 있습니다. 호출 [DestroyWindow](#destroywindow) 대신 합니다.  
   
-##  <a name="getdialogproc"></a>CAxDialogImpl::GetDialogProc  
+##  <a name="getdialogproc"></a>  CAxDialogImpl::GetDialogProc  
  이 메서드를 호출에 대 한 포인터를 가져오는 `DialogProc` 콜백 함수입니다.  
   
 ```
@@ -220,7 +215,7 @@ virtual DLGPROC GetDialogProc();
 ### <a name="remarks"></a>설명  
  `DialogProc` 함수는 응용 프로그램에서 정의 된 콜백 함수입니다.  
   
-##  <a name="getidd"></a>CAxDialogImpl::GetIDD  
+##  <a name="getidd"></a>  CAxDialogImpl::GetIDD  
  대화 상자 템플릿 리소스 ID를 가져옵니다.이 메서드를 호출 합니다.  
   
 ```
@@ -230,7 +225,7 @@ int GetIDD();
 ### <a name="return-value"></a>반환 값  
  대화 상자 템플릿 리소스 ID를 반환 합니다.  
   
-##  <a name="isdialogmessage"></a>CAxDialogImpl::IsDialogMessage  
+##  <a name="isdialogmessage"></a>  CAxDialogImpl::IsDialogMessage  
  이 대화 상자는 메시지는 보내집니다 있는지 여부를 확인 하려면이 메서드를 호출 하 고 그럴 경우 메시지를 처리 합니다.  
   
 ```
@@ -247,7 +242,7 @@ BOOL IsDialogMessage(LPMSG pMsg);
 ### <a name="remarks"></a>설명  
  이 메서드는 메시지 루프 내에서 호출 하는 데 사용 됩니다.  
   
-##  <a name="m_bmodal"></a>CAxDialogImpl::m_bModal  
+##  <a name="m_bmodal"></a>  CAxDialogImpl::m_bModal  
  디버그에만 존재 하는 변수 빌드되고 모달 대화 상자를 true로 설정 됩니다.  
   
 ```

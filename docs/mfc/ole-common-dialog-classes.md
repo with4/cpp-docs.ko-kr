@@ -1,13 +1,10 @@
 ---
-title: "OLE 일반 대화 상자 클래스 | Microsoft Docs"
-ms.custom: 
+title: OLE 일반 대화 상자 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.ole
 dev_langs:
@@ -18,23 +15,21 @@ helpviewer_keywords:
 - OLE common dialog classes [MFC]
 - common dialog classes [MFC]
 ms.assetid: 706526ae-f94f-4909-a0f8-6b5fe954fd97
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0617354337e75e2c2431df894c054722349e2306
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2e3cedbe3cd08a425bd2bde2b4a6ca8c5a493c72
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-common-dialog-classes"></a>OLE 일반 대화 상자 클래스
 이러한 클래스는 다양 한 표준 OLE 대화 상자를 구현 하 여 일반적인 OLE 작업을 처리 합니다. 또한 OLE 기능에 대 한 일관 된 사용자 인터페이스를 제공 합니다.  
   
  [COleDialog](../mfc/reference/coledialog-class.md)  
- 프레임 워크에서 모든 OLE 대화 상자에 대 한 일반적인 구현을 포함 하는 데 사용 합니다. 사용자 인터페이스 범주에 있는 모든 대화 상자 클래스는이 기본 클래스에서 파생 됩니다. `COleDialog`직접 사용할 수 없습니다.  
+ 프레임 워크에서 모든 OLE 대화 상자에 대 한 일반적인 구현을 포함 하는 데 사용 합니다. 사용자 인터페이스 범주에 있는 모든 대화 상자 클래스는이 기본 클래스에서 파생 됩니다. `COleDialog` 직접 사용할 수 없습니다.  
   
  [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
  새 OLE 삽입 연결 항목 또는 포함에 대 한 표준 사용자 인터페이스 개체 삽입 대화 상자를 표시 합니다.  

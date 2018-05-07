@@ -1,25 +1,23 @@
 ---
-title: "컴파일러 옵션 사전순 목록 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 옵션 사전순 목록 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/22/2018
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - compiler options, C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7906893c1dce20344a9da805ad508a7836b1291d
-ms.sourcegitcommit: d24de38f9da844f824acb9d200a3f263077145fc
+ms.openlocfilehash: 259958d789ed189c38b75fe708034fb0d76fc35c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compiler-options-listed-alphabetically"></a>컴파일러 옵션 사전순 목록
 

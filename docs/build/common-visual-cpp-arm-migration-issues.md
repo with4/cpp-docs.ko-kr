@@ -1,27 +1,22 @@
 ---
-title: "일반적인 Visual c + + ARM 마이그레이션 문제 | Microsoft Docs"
-ms.custom: 
+title: 일반적인 Visual c + + ARM 마이그레이션 문제 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcc34d472fb6db02eb902001ad5aac77dea5baf0
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 04253b5d71de75f6a06f2934dae24df2e6d4e3e2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>일반적인 Visual C++ ARM 마이그레이션 문제
 
@@ -68,7 +63,7 @@ ARM 아키텍처에서 값으로 이동할 수 왼쪽 또는 오른쪽 최대 25
 
 ### <a name="variable-arguments-varargs-behavior"></a>가변 인수 (varargs) 동작
 
-ARM 아키텍처에서 스택에 전달 되는 가변 인수 목록에서 매개 변수 맞춤 적용 됩니다. 예를 들어 64 비트 매개 변수는 64 비트 경계에 정렬 됩니다. X86 및 x64에서 인수는 스택에 전달 되는 적용 되지 않습니다 맞춤 및 팩 긴밀 하 게. 이러한 차이 같은 variadic 함수 하면 `printf` 메모리 주소를 ARM에 안쪽 여백으로 가변 인수 목록의 예상 되는 레이아웃 정확 하 게 일치 하지 않는 경우 x86 일부 값의 하위 집합에 대 한 못할 경우에 읽을 수 또는 x64 아키텍처. 다음 예제를 고려해 보십시오.
+ARM 아키텍처에서 스택에 전달 되는 가변 인수 목록에서 매개 변수 맞춤 적용 됩니다. 예를 들어 64 비트 매개 변수는 64 비트 경계에 정렬 됩니다. X86 및 x64에서 인수는 스택에 전달 되는 적용 되지 않습니다 맞춤 및 팩 긴밀 하 게. 이러한 차이 같은 variadic 함수 하면 `printf` 메모리 주소를 ARM에 안쪽 여백으로 가변 인수 목록의 예상 되는 레이아웃 정확 하 게 일치 하지 않는 경우 x86 일부 값의 하위 집합에 대 한 못할 경우에 읽을 수 또는 x64 아키텍처. 다음 예제를 고려해 보세요.
 
 ```C
 // notice that a 64-bit integer is passed to the function, but '%d' is used to read it.
@@ -112,6 +107,6 @@ MSVC 컴파일러 지원의 서로 다른 두 가지로 해석은 `volatile` 컴
 
 기본값은 x86 및 x64 아키텍처에서 **/volatile:ms** 사용 하기 때문에 이미 만들어져 있는 이러한 아키텍처에 대 한 MSVC를 사용 하 여 소프트웨어의 많은에 해당 합니다. X86 및 x64 프로그램을 컴파일할 때 지정할 수 있습니다는 **/volatile:iso** 기존의 휘발성 의미 체계에 대 한 불필요 한 의존도 방지 하 고 이식성을 승격 하는 스위치입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [ARM 프로세서에 대한 Visual C++ 구성](../build/configuring-programs-for-arm-processors-visual-cpp.md)  

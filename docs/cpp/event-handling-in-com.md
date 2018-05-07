@@ -1,12 +1,9 @@
 ---
-title: "COM에서 이벤트 처리 | Microsoft Docs"
-ms.custom: 
+title: COM에서 이벤트 처리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - declaring events, in COM
 - declaring events, event handling in COM
 ms.assetid: 6b4617d4-a58e-440c-a8a6-1ad1c715b2bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c57b8429a05ab3989dce318f4c16a58475560a1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ccf5ad83afe2151ac9ceb90029780989ca33487
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="event-handling-in-com"></a>COM에서 이벤트 처리
 COM 이벤트 처리를 설정 하는 이벤트 소스와 이벤트 수신기를 사용 하는 [event_source](../windows/event-source.md) 및 [event_receiver](../windows/event-receiver.md) 특성에 각각 지정 `type` = **com**합니다. 적용되는 클래스가 COM 연결 지점을 통해 이벤트를 발생시키고 처리할 수 있도록 이러한 특성은 사용자 지정, 디스패치 및 이중 인터페이스에 대한 적절한 코드를 삽입합니다.  
@@ -165,7 +160,7 @@ MyHandler1 was called with value 123.
 MyHandler2 was called with value 123.  
 ```  
   
-##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a>레이아웃 종속 COM 이벤트  
+##  <a name="vcconeventhandlingincomanchorlayoutdependentcomevents"></a> 레이아웃 종속 COM 이벤트  
  레이아웃 종속성은 COM 프로그래밍에만 문제가 됩니다. 네이티브 및 관리되는 이벤트 처리에서 처리기의 시그니처(반환 형식, 호출 규칙 및 인수)는 해당 이벤트와 일치해야 하지만 처리기 이름은 해당 이벤트와 일치하지 않아도 됩니다.  
   
  그러나 COM 이벤트 처리를 설정 하는 경우에 *layout_dependent* 의 매개 변수 **event_receiver** 를 **true**, 이름 및 서명 일치 적용 됩니다. 즉, 이벤트 수신기에 있는 처리기의 이름 및 시그니처가 후크되어 있는 이벤트의 이름 및 시그니처와 정확하게 일치해야 합니다.  

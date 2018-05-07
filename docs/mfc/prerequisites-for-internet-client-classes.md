@@ -1,13 +1,10 @@
 ---
-title: "인터넷 클라이언트 클래스에 대 한 필수 조건 | Microsoft Docs"
-ms.custom: 
+title: 인터넷 클라이언트 클래스에 대 한 필수 조건 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - prerequisites, Internet client classes [MFC]
 - Gopher client applications [MFC]
 ms.assetid: c51d1dfe-260c-4228-8100-e4efd90e9599
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77d73ef71854753ffd561053cc71509c7654d33b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b6c16c3658ee5d27def4892997c50115dc0b8831
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="prerequisites-for-internet-client-classes"></a>인터넷 클라이언트 클래스의 필수 구성 요소
 (예를 들어 파일을 읽는) 인터넷 클라이언트에서 수행한 일부 작업에 (이 경우 인터넷 연결을 설정) 동작을 수행 해야 합니다. 다음 표에서 일부 클라이언트 작업에 대 한 필수 구성 요소를 보여 줍니다.  

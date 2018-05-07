@@ -1,12 +1,9 @@
 ---
-title: "CBitmap 클래스 | Microsoft Docs"
-ms.custom: 
+title: CBitmap 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CBitmap
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22922d29c09ee97a8b2a292953b4bf903ab6649e
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: e5b931c7ad4b560ce247f78dcb126f9669bceb67
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cbitmap-class"></a>CBitmap 클래스
 Windows GDI(그래픽 장치 인터페이스) 비트맵을 캡슐화하고 비트맵을 조작하는 멤버 함수를 제공합니다.  
@@ -111,7 +106,7 @@ class CBitmap : public CGdiObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="cbitmap"></a>CBitmap::CBitmap  
+##  <a name="cbitmap"></a>  CBitmap::CBitmap  
  `CBitmap` 개체를 생성합니다.  
   
 ```  
@@ -121,7 +116,7 @@ CBitmap();
 ### <a name="remarks"></a>설명  
  초기화 멤버 함수 중 하나가 지정 된 결과 개체를 초기화 합니다.  
   
-##  <a name="createbitmap"></a>CBitmap::CreateBitmap  
+##  <a name="createbitmap"></a>  CBitmap::CreateBitmap  
  너비, 높이 및 비트 패턴이 지정되어 있는 장치 종속적 메모리 비트맵을 초기화합니다.  
   
 ```  
@@ -161,7 +156,7 @@ BOOL CreateBitmap(
   
  자세한 내용은 **BITMAP** 구조체에서 **bmBits** 필드에 대한 설명을 참조하세요. [비트맵](../../mfc/reference/bitmap-structure.md) 구조 아래에 설명 된 [cbitmap:: Createbitmapindirect](#createbitmapindirect) 멤버 함수입니다.  
   
-##  <a name="createbitmapindirect"></a>Cbitmap:: Createbitmapindirect  
+##  <a name="createbitmapindirect"></a>  Cbitmap:: Createbitmapindirect  
  너비, 높이 및 비트 패턴 (하나는 지정 된 경우)에서 가리키는 구조에 있는 비트맵을 초기화 합니다 `lpBitmap`합니다.  
   
 ```  
@@ -182,7 +177,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
   
  사용을 완료 하면는 `CBitmap` 개체를 사용 하 여 만든 `CreateBitmapIndirect` 함수, 먼저 비트맵 장치 컨텍스트를 선택한 다음 삭제는 `CBitmap` 개체입니다.  
   
-##  <a name="createcompatiblebitmap"></a>CBitmap::CreateCompatibleBitmap  
+##  <a name="createcompatiblebitmap"></a>  CBitmap::CreateCompatibleBitmap  
  로 지정 된 장치에 호환 되는 비트맵을 초기화 합니다 `pDC`합니다.  
   
 ```  
@@ -216,7 +211,7 @@ BOOL CreateCompatibleBitmap(
   
  사용을 완료 하면는 `CBitmap` 사용 하 여 만든 개체는 `CreateCompatibleBitmap` 함수, 먼저 비트맵 장치 컨텍스트를 선택한 다음 삭제는 `CBitmap` 개체입니다.  
   
-##  <a name="creatediscardablebitmap"></a>CBitmap::CreateDiscardableBitmap  
+##  <a name="creatediscardablebitmap"></a>  CBitmap::CreateDiscardableBitmap  
  지정 된 디바이스 컨텍스트 호환 되는 무시할 수 비트맵을 초기화 합니다 `pDC`합니다.  
   
 ```  
@@ -246,7 +241,7 @@ BOOL CreateDiscardableBitmap(
   
  사용을 완료 하면는 `CBitmap` 사용 하 여 만든 개체는 `CreateDiscardableBitmap` 함수, 먼저 비트맵 장치 컨텍스트를 선택한 다음 삭제는 `CBitmap` 개체입니다.  
   
-##  <a name="fromhandle"></a>CBitmap::FromHandle  
+##  <a name="fromhandle"></a>  CBitmap::FromHandle  
  에 대 한 포인터를 반환 합니다.는 `CBitmap` 개체 Windows GDI 비트맵에 대 한 핸들을 지정 합니다.  
   
 ```  
@@ -263,7 +258,7 @@ static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 ### <a name="remarks"></a>설명  
  경우는 `CBitmap` 개체가 이미 임시 핸들에 연결 되지 않은 `CBitmap` 개체가 생성 되 고 연결 합니다. 이 임시 `CBitmap` 개체는 다음에 응용 프로그램의 경우 이벤트 루프 유휴 시간에 인 될 때까지 모든 임시 그래픽 대답 하에서 개체를 삭제만 유효 합니다. 임시 개체가 올바른지만 한 창 메시지를 처리 하는 동안는 하는 또 다른 방법은 말하면 합니다.  
   
-##  <a name="getbitmap"></a>CBitmap::GetBitmap  
+##  <a name="getbitmap"></a>  CBitmap::GetBitmap  
  연결 된 비트맵에 대 한 이미지 속성을 검색합니다.  
   
 ```  
@@ -279,7 +274,7 @@ int GetBitmap(BITMAP* pBitMap);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getbitmapbits"></a>CBitmap::GetBitmapBits  
+##  <a name="getbitmapbits"></a>  CBitmap::GetBitmapBits  
  지정된 된 버퍼에 연결 된 비트맵의 비트 패턴을 복사합니다.  
   
 ```  
@@ -301,7 +296,7 @@ DWORD GetBitmapBits(
 ### <a name="remarks"></a>설명  
  사용 하 여 [CBitmap::GetBitmap](#getbitmap) 필요한 버퍼 크기를 결정 합니다.  
   
-##  <a name="getbitmapdimension"></a>CBitmap::GetBitmapDimension  
+##  <a name="getbitmapdimension"></a>  CBitmap::GetBitmapDimension  
  비트맵의 높이 너비를 반환합니다.  
   
 ```  
@@ -314,7 +309,7 @@ CSize GetBitmapDimension() const;
 ### <a name="remarks"></a>설명  
  높이 너비를 사용 하 여 이전에 설정한로 가정 됩니다는 [SetBitmapDimension](#setbitmapdimension) 멤버 함수입니다.  
   
-##  <a name="loadbitmap"></a>CBitmap::LoadBitmap  
+##  <a name="loadbitmap"></a>  CBitmap::LoadBitmap  
  로 명명 된 비트맵 리소스 로드 `lpszResourceName` 의 ID 번호로 식별 하거나 `nIDResource` 에서 응용 프로그램의 실행 파일입니다.  
   
 ```  
@@ -348,7 +343,7 @@ BOOL LoadBitmap(UINT nIDResource);
   
  이러한 비트맵 3.0 및 이전 Windows 버전에 대 한 장치 드라이버에 제공 하지 않습니다. 비트맵 및 표시 되는 디스플레이 전체 목록을 Windows SDK를 참조 하십시오.  
   
-##  <a name="loadmappedbitmap"></a>CBitmap::LoadMappedBitmap  
+##  <a name="loadmappedbitmap"></a>  CBitmap::LoadMappedBitmap  
  현재 시스템 색상을 색상에 매핑한 비트맵을 로드 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -380,7 +375,7 @@ BOOL LoadMappedBitmap(
   
  매핑된 비트맵 만들기에 대 한 정보에 대 한 Windows 함수를 참조 하십시오. [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) 및 [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) Windows SDK에는 구조입니다.  
   
-##  <a name="loadoembitmap"></a>CBitmap::LoadOEMBitmap  
+##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap  
  Windows에서 사용 되는 미리 정의 된 비트맵을 로드 합니다.  
   
 ```  
@@ -419,7 +414,7 @@ BOOL LoadOEMBitmap(UINT nIDBitmap);
   
  상수 **OEMRESOURCE** WINDOWS를 포함 하기 전에 정의 해야 합니다. 하나를 사용 하려면 H는 **OBM_** 상수입니다.  
   
-##  <a name="operator_hbitmap"></a>HBITMAP CBitmap::operator  
+##  <a name="operator_hbitmap"></a>  HBITMAP CBitmap::operator  
  이 연산자를 사용 하 여의 연결 된 Windows GDI 핸들을 가져올 수는 `CBitmap` 개체입니다.  
   
 ```  
@@ -434,7 +429,7 @@ operator HBITMAP() const;
   
  그래픽 개체를 사용 하는 방법에 대 한 자세한 내용은 참조 [그래픽 개체](http://msdn.microsoft.com/library/windows/desktop/dd144962) Windows sdk에서입니다.  
   
-##  <a name="setbitmapbits"></a>CBitmap::SetBitmapBits  
+##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
  제공한 비트 값으로 설정 하는 비트맵의 비트 `lpBits`합니다.  
   
 ```  
@@ -453,7 +448,7 @@ DWORD SetBitmapBits(
 ### <a name="return-value"></a>반환 값  
  비트맵 비트; 설정에 사용 된 바이트 수 함수가 실패 한 경우 0입니다.  
   
-##  <a name="setbitmapdimension"></a>CBitmap::SetBitmapDimension  
+##  <a name="setbitmapdimension"></a>  CBitmap::SetBitmapDimension  
  0.1 밀리미터 단위로 비트맵에 너비와 높이 할당합니다.  
   
 ```  

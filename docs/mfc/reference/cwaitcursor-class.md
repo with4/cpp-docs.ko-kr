@@ -1,12 +1,9 @@
 ---
-title: "CWaitCursor 클래스 | Microsoft Docs"
-ms.custom: 
+title: CWaitCursor 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWaitCursor
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CWaitCursor [MFC], CWaitCursor
 - CWaitCursor [MFC], Restore
 ms.assetid: 5dfae2ff-d7b6-4383-b0ad-91e0868c67b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cf5c850158e445e7695b85e540b1e0c162e621c
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 1e7bc4755d2e96c78735f1b3ef175ff3603686fb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwaitcursor-class"></a>CWaitCursor 클래스
 사용자가 장기 작업을 수행하는 동안 대기 커서를 표시하는 한 가지 방법(일반적으로 모래시계로 표시됨)을 제공합니다.  
@@ -55,7 +50,7 @@ class CWaitCursor
 |[CWaitCursor::Restore](#restore)|변경 된 후 대기 커서를 복원 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CWaitCursor`기본 클래스는 없습니다.  
+ `CWaitCursor` 기본 클래스는 없습니다.  
   
  좋은 Windows 프로그래밍 방법 때마다 시간이 오래 걸리는 하는 작업을 수행 하는 대기 커서를 표시 해야 합니다.  
   
@@ -79,10 +74,10 @@ class CWaitCursor
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#62](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_1.cpp)]  
   
-##  <a name="cwaitcursor"></a>CWaitCursor::CWaitCursor  
+##  <a name="cwaitcursor"></a>  CWaitCursor::CWaitCursor  
  대기 커서를 표시 하려면 선언는 `CWaitCursor` 시간이 오래 걸리는 작업을 수행 하는 코드 앞에 개체입니다.  
   
 ```  
@@ -99,10 +94,10 @@ CWaitCursor();
 > [!NOTE]
 >  해당 생성자 및 소멸자의 작동 방식을 인해 `CWaitCursor` 개체는 항상 지역 변수로 선언-전역 변수로 선언 되지 나 사용 하 여 이러한 할당은 **새**합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#63](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_2.cpp)]  
   
-##  <a name="restore"></a>CWaitCursor::Restore  
+##  <a name="restore"></a>  CWaitCursor::Restore  
  대기 커서를 복원 하려면 메시지 상자 또는 다른 커서에 대기 커서를 변경 될 수 있는 대화 상자를 표시 하는 등의 작업을 수행한 후이 함수를 호출 합니다.  
   
 ```  
@@ -114,7 +109,7 @@ void Restore();
   
  에 있는 것 이외의 다른 함수에 있는 동안 대기 커서를 복원 해야 하는 경우는 `CWaitCursor` 호출할 수 있습니다, 개체를 선언 [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#64](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_3.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 C4867 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 C4867 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4867
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4867
 ms.assetid: 8a257d70-c3a7-462d-b285-e57c952a8bf7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a412080d05e570711fcc65926459f9d2fcc45ed3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b46bf4866791ec82ac5984132903e22ab16e07ad
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-c4867"></a>컴파일러 경고 C4867
 'function': 함수 호출 인수 목록이 없습니다. '호출'을 사용 하 여 멤버에 대 한 포인터를 만들려면  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
  항상이 경고는 오류로 발생 됩니다. [warning](../../preprocessor/warning.md) pragma를 사용하여 이 경고를 사용하지 않도록 설정합니다. C4867 및 MFC/ATL에 대 한 자세한 내용은 참조 [_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 c4867 오류가 발생 합니다.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "CMFCPopupMenuBar 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCPopupMenuBar 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPopupMenuBar
@@ -55,17 +52,15 @@ helpviewer_keywords:
 - CMFCPopupMenuBar [MFC], StartPopupMenuTimer
 - CMFCPopupMenuBar [MFC], m_bDisableSideBarInXPMode
 ms.assetid: 4c93c459-7f70-4240-8c63-280bb811e374
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 002e059fd905930409cb5f2745628f8ac1dea103
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ef3d04291c874bf91ac6ae25fb15929a5c7317f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar 클래스
 팝업 메뉴에 포함된 메뉴 모음입니다.  
@@ -104,14 +99,14 @@ class CMFCPopupMenuBar : public CMFCToolBar
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|응용 프로그램은 Windows XP 모양을 때 회색 세로 막대를 표시할지 여부를 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
  `CMFCPopupMenuBar` 와 동시에 생성 됩니다는 [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md) 및 그 안에 포함 합니다. `CMFCPopupMenuBar` 의 전체 클라이언트 영역에서 `CMFCPopupMenu` 개체입니다. 키보드 및 마우스 입력을 지원 합니다. 또한 입력이 있는 통신는 `CMFCPopupMenu` 및 최상위 프레임 창에 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 초기화 하는 방법을 `CMFCPopupMenuBar` 에서 개체는 `CMFCPopupMenu` 개체입니다. 이 코드 조각은 [클라이언트 그리기 샘플](../../visual-cpp-samples.md)의 일부입니다.  
   
  [!code-cpp[NVC_MFC_DrawClient#7](../../mfc/reference/codesnippet/cpp/cmfcpopupmenubar-class_1.cpp)]  
@@ -136,7 +131,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxpopupmenubar.h  
   
-##  <a name="adjustsizeimmediate"></a>CMFCPopupMenuBar::AdjustSizeImmediate  
+##  <a name="adjustsizeimmediate"></a>  CMFCPopupMenuBar::AdjustSizeImmediate  
  팝업 메뉴 표시줄 창 레이아웃을 즉시 다시 계산 합니다. (재정의 [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate)합니다.  
   
 ```  
@@ -145,11 +140,11 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bRecalcLayout`  
- `TRUE`팝업 메뉴 표시줄 창;의 레이아웃을 자동으로 다시 계산 하려면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 팝업 메뉴 표시줄 창;의 레이아웃을 자동으로 다시 계산 하려면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="buildorigitems"></a>CMFCPopupMenuBar::BuildOrigItems  
+##  <a name="buildorigitems"></a>  CMFCPopupMenuBar::BuildOrigItems  
  지정 된 메뉴 리소스에서 팝업 메뉴 항목을 로드합니다.  
   
 ```  
@@ -165,7 +160,7 @@ BOOL BuildOrigItems(UINT uiMenuResID);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="closedelayedsubmenu"></a>CMFCPopupMenuBar::CloseDelayedSubMenu  
+##  <a name="closedelayedsubmenu"></a>  CMFCPopupMenuBar::CloseDelayedSubMenu  
  연기 된 팝업 메뉴 단추를 닫습니다.  
   
 ```  
@@ -174,7 +169,7 @@ virtual void CloseDelayedSubMenu();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="exporttomenu"></a>CMFCPopupMenuBar::ExportToMenu  
+##  <a name="exporttomenu"></a>  CMFCPopupMenuBar::ExportToMenu  
  팝업 메뉴 단추에서 메뉴를 만듭니다.  
   
 ```  
@@ -186,7 +181,7 @@ virtual HMENU ExportToMenu() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="finddestintationtoolbar"></a>CMFCPopupMenuBar::FindDestintationToolBar  
+##  <a name="finddestintationtoolbar"></a>  CMFCPopupMenuBar::FindDestintationToolBar  
  지정된 된 지점에 있는 도구 모음을 찾습니다.  
   
 ```  
@@ -202,7 +197,7 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getcurrentmenuimagesize"></a>CMFCPopupMenuBar::GetCurrentMenuImageSize  
+##  <a name="getcurrentmenuimagesize"></a>  CMFCPopupMenuBar::GetCurrentMenuImageSize  
  메뉴 단추 이미지의 크기를 나타냅니다.  
   
 ```  
@@ -214,7 +209,7 @@ virtual CSize GetCurrentMenuImageSize() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getdefaultmenuid"></a>CMFCPopupMenuBar::GetDefaultMenuId  
+##  <a name="getdefaultmenuid"></a>  CMFCPopupMenuBar::GetDefaultMenuId  
  기본 메뉴 항목의 식별자를 반환합니다.  
   
 ```  
@@ -226,7 +221,7 @@ UINT GetDefaultMenuId() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getlastcommandindex"></a>CMFCPopupMenuBar::GetLastCommandIndex  
+##  <a name="getlastcommandindex"></a>  CMFCPopupMenuBar::GetLastCommandIndex  
  가장 최근에 호출 메뉴 명령의 인덱스를 가져옵니다.  
   
 ```  
@@ -238,7 +233,7 @@ static int __stdcall GetLastCommandIndex();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getoffset"></a>CMFCPopupMenuBar::GetOffset  
+##  <a name="getoffset"></a>  CMFCPopupMenuBar::GetOffset  
  팝업 메뉴 표시줄의 행 오프셋을 가져옵니다.  
   
 ```  
@@ -251,7 +246,7 @@ int GetOffset() const;
 ### <a name="remarks"></a>설명  
  사용 하 여이 값은 설정 [CMFCPopupMenuBar::SetOffset](#setoffset)합니다.  
   
-##  <a name="importfrommenu"></a>CMFCPopupMenuBar::ImportFromMenu  
+##  <a name="importfrommenu"></a>  CMFCPopupMenuBar::ImportFromMenu  
  지정한 메뉴 팝업 메뉴 단추를 가져옵니다.  
   
 ```  
@@ -265,14 +260,14 @@ virtual BOOL ImportFromMenu(
  팝업 메뉴 단추를 가져올 메뉴입니다.  
   
  [in] `bShowAllCommands`  
- `TRUE`메뉴에 있는 모든 명령을 가져올 하려는 경우 또는 `FALSE` 경우 거의 사용된 되지 않는 것이 숨겨져 있을 수 있습니다.  
+ `TRUE` 메뉴에 있는 모든 명령을 가져올 하려는 경우 또는 `FALSE` 경우 거의 사용된 되지 않는 것이 숨겨져 있을 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
  반환 `TRUE` 메뉴 단추 메뉴에서 성공적으로 가져왔는지 하지 않은 경우 또는 `FALSE` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="isdropdownlistmode"></a>CMFCPopupMenuBar::IsDropDownListMode  
+##  <a name="isdropdownlistmode"></a>  CMFCPopupMenuBar::IsDropDownListMode  
  팝업 메뉴 모음 드롭 다운 목록 모드 인지 여부를 나타냅니다.  
   
 ```  
@@ -284,7 +279,7 @@ BOOL IsDropDownListMode() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ispalettemode"></a>CMFCPopupMenuBar::IsPaletteMode  
+##  <a name="ispalettemode"></a>  CMFCPopupMenuBar::IsPaletteMode  
  팝업 메뉴 모음 팔레트 모드 인지 여부를 나타냅니다.  
   
 ```  
@@ -297,7 +292,7 @@ BOOL IsPaletteMode() const;
 ### <a name="remarks"></a>설명  
  메뉴 모음 팔레트 모드로 설정 되 면 여러 열과 제한 된 수의 행에 있는 메뉴 항목 표시 합니다.  
   
-##  <a name="isribbonpanel"></a>CMFCPopupMenuBar::IsRibbonPanel  
+##  <a name="isribbonpanel"></a>  CMFCPopupMenuBar::IsRibbonPanel  
  리본 패널 인지를 나타냅니다 ( `FALSE` 기본적으로).  
   
 ```  
@@ -309,7 +304,7 @@ virtual BOOL IsRibbonPanel() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="isribbonpanelinregularmode"></a>CMFCPopupMenuBar::IsRibbonPanelInRegularMode  
+##  <a name="isribbonpanelinregularmode"></a>  CMFCPopupMenuBar::IsRibbonPanelInRegularMode  
  일반 모드에서 리본 패널 인지 여부를 나타냅니다 ( `FALSE` 기본적으로).  
   
 ```  
@@ -321,7 +316,7 @@ virtual BOOL IsRibbonPanelInRegularMode() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="loadfromhash"></a>CMFCPopupMenuBar::LoadFromHash  
+##  <a name="loadfromhash"></a>  CMFCPopupMenuBar::LoadFromHash  
  보관 된 메뉴를 로드합니다.  
   
 ```  
@@ -337,7 +332,7 @@ BOOL LoadFromHash(HMENU hMenu);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="m_bdisablesidebarinxpmode"></a>CMFCPopupMenuBar::m_bDisableSideBarInXPMode  
+##  <a name="m_bdisablesidebarinxpmode"></a>  CMFCPopupMenuBar::m_bDisableSideBarInXPMode  
  Windows XP 모양을 설치 된 응용 프로그램 회색 세로 막대에 있는지 여부를 나타내는 부울 매개 변수입니다.  
   
 ```  
@@ -349,7 +344,7 @@ BOOL m_bDisableSideBarInXPMode;
   
  기본값은 `FALSE`입니다.  
   
-##  <a name="restoredelayedsubmenu"></a>CMFCPopupMenuBar::RestoreDelayedSubMenu  
+##  <a name="restoredelayedsubmenu"></a>  CMFCPopupMenuBar::RestoreDelayedSubMenu  
  팝업 메뉴 모음을 닫기 위한 지연 된 메뉴 단추를 복원 합니다.  
   
 ```  
@@ -358,7 +353,7 @@ virtual void RestoreDelayedSubMenu();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setbuttonstyle"></a>CMFCPopupMenuBar::SetButtonStyle  
+##  <a name="setbuttonstyle"></a>  CMFCPopupMenuBar::SetButtonStyle  
  지정된 된 인덱스에서 도구 모음 단추 스타일을 설정합니다. (재정의 [CMFCToolBar::SetButtonStyle](../../mfc/reference/cmfctoolbar-class.md#setbuttonstyle).)  
   
 ```  
@@ -376,7 +371,7 @@ virtual void SetButtonStyle(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setoffset"></a>CMFCPopupMenuBar::SetOffset  
+##  <a name="setoffset"></a>  CMFCPopupMenuBar::SetOffset  
  팝업 메뉴 모음에 대 한 행 오프셋을 설정합니다.  
   
 ```  
@@ -389,7 +384,7 @@ void SetOffset(int iOffset);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="startpopupmenutimer"></a>CMFCPopupMenuBar::StartPopupMenuTimer  
+##  <a name="startpopupmenutimer"></a>  CMFCPopupMenuBar::StartPopupMenuTimer  
  지정 된 지연 된 팝업 메뉴 단추에 대 한 타이머를 시작 합니다.  
   
 ```  

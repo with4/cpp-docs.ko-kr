@@ -1,30 +1,25 @@
 ---
-title: "방법: 빌드할 프로젝트 출력 파일 구성 | Microsoft Docs"
-ms.custom: 
+title: '방법: 빌드할 프로젝트 출력 파일 구성 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++, output files
 - output files, organizing
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 648321c41fe02541eeb746bae24236c40dc5325e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a0d1e7f8ea67db0e87199e0c12128555fa039112
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-organize-project-output-files-for-builds"></a>방법: 빌드할 프로젝트 출력 파일 구성
 이 항목에서는 프로젝트 출력 파일 구성에 대 한 모범 사례를 설명 합니다. 빌드 오류가 있습니다 프로젝트 출력 파일을 잘못 설정 하는 경우 발생할 수 있습니다. 이 항목에는 또한 각 대체 프로젝트 출력 파일을 구성 하기 위한의 장단점 간략하게 설명 합니다.  

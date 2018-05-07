@@ -1,35 +1,30 @@
 ---
-title: "방법: 같음 여부 테스트 (C + + /cli CLI) | Microsoft Docs"
-ms.custom: 
+title: '방법: 같음 여부 테스트 (C + + /cli CLI) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - equality, testing for
 ms.assetid: 9115e298-9f75-452d-bdfb-6eeb0fa0b3c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 19b573ca0069031cda6d7c8108d51f8bf4fa83ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c32bd9c73b7251f311593b547d4f3abdd33d7c5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-test-for-equality-ccli"></a>방법: 같음 여부 테스트(C++/CLI)
 다음 샘플에서는 c + +에 대 한 관리 되는 확장을 사용 하 여 같음 테스트를 기반으로를 핸들 참조 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // mcppv2_equality_test.cpp  

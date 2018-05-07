@@ -1,12 +1,9 @@
 ---
 title: _mm_insert_si64, _mm_inserti_si64 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _mm_inserti_si64
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - _mm_insert_si64 intrinsic
 - _mm_inserti_si64 intrinsic
 ms.assetid: 897a4b36-8b08-4b00-a18f-7850f5732d7d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc85f56660702afe1c05f3626b3b28b0b566dbd5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 72597007922e78ab9b83687cb5b80bd6ecef7d01
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64, _mm_inserti_si64
 **Microsoft 전용**  
@@ -84,7 +79,7 @@ __m128i _mm_inserti_si64(
   
  에 대 한 하드웨어 지원을 확인 하는 `insertq` 명령 호출은 `__cpuid` 포함 된 내장 함수 `InfoType=0x80000001` 의 6 비트를 확인 하 고 `CPUInfo[2] (ECX)`합니다. 그렇지 않으면이 비트는 명령의 지원 되 면 1과 0 수 있습니다. 하는 경우 코드를 실행 하면 사용 하 여이 내장 함수를 지원 하지 않는 하드웨어에는 `insertq` 명령 결과 예측할 수 없습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // Compile this sample with: /EHsc  
@@ -129,7 +124,7 @@ result3 = 0xfffffffff3210fff
 ```  
   
 **Microsoft 전용 종료**  
- Copyright 2007 by Advanced Micro Devices, Inc. All rights reserved. 고급 마이크로 장치, Inc. 로부터 사용 권한을 승인 하에 복제  
+ 고급 마이크로 장치, inc 2007 저작권 All rights reserved. 고급 마이크로 장치, Inc. 로부터 사용 권한을 승인 하에 복제  
   
 ## <a name="see-also"></a>참고 항목  
  [_mm_extract_si64, _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)   

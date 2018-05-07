@@ -1,38 +1,33 @@
 ---
-title: "방법: 이진 파일 읽기 (C + + /cli CLI) | Microsoft Docs"
-ms.custom: 
+title: '방법: 이진 파일 읽기 (C + + /cli CLI) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - files [C++], binary
 - binary files, reading in C++
 ms.assetid: 41ad9ad1-5cac-489c-874e-4bb3a649073a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3714ba3df6d44559db66b56ea1a0f8a3ff7f3f44
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8411971c8bca79d9cb1809481b5a6be61b052262
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-read-a-binary-file-ccli"></a>방법: 이진 파일 읽기(C++/CLI)
-다음 코드 예제에는 두 개의 클래스에서 사용 하 여 파일에서 이진 데이터를 읽는 방법을 보여 줍니다는 <xref:System.IO?displayProperty=fullName> 네임 스페이스: <xref:System.IO.FileStream> 및 <xref:System.IO.BinaryReader>합니다. <xref:System.IO.FileStream>실제 파일을 나타냅니다. <xref:System.IO.BinaryReader>이진 액세스를 허용 하는 스트림에 대 한 인터페이스를 제공 합니다.  
+다음 코드 예제에는 두 개의 클래스에서 사용 하 여 파일에서 이진 데이터를 읽는 방법을 보여 줍니다는 <xref:System.IO?displayProperty=fullName> 네임 스페이스: <xref:System.IO.FileStream> 및 <xref:System.IO.BinaryReader>합니다. <xref:System.IO.FileStream> 실제 파일을 나타냅니다. <xref:System.IO.BinaryReader> 이진 액세스를 허용 하는 스트림에 대 한 인터페이스를 제공 합니다.  
   
  코드 예제에서는 이름이 data.bin 및 이진 형식에서 정수를 포함 하는 파일을 읽습니다. 이런이 종류의 파일에 대 한 정보를 참조 하십시오. [하는 방법: 이진 파일 쓰기 (C + + /cli CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // binary_read.cpp  

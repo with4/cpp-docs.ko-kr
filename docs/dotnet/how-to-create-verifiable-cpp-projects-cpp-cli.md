@@ -1,13 +1,10 @@
 ---
-title: "방법: 안정형 c + + 프로젝트 만들기 (C + + /cli CLI) | Microsoft Docs"
-ms.custom: 
+title: '방법: 안정형 c + + 프로젝트 만들기 (C + + /cli CLI) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - conversions, C++ projects
 - Visual C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4d6a7806183766d96c0d106d9d9e890b046f4563
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a012e52a8eb825c3ffc6b694c888cef8a174f37e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>방법: 안정형 C++ 프로젝트 만들기(C++/CLI)
 Visual c + + 응용 프로그램 마법사는 확인할 수 있는 프로젝트를 만들지 않습니다 되지만 프로젝트를 확인할 수 있으려면 변환할 수 있습니다. 이 항목에서는 프로젝트 속성을 설정 하 고 확인할 수 있는 응용 프로그램을 생성 하 여 Visual c + + 프로젝트를 변환할 프로젝트 소스 파일을 수정 하는 방법에 설명 합니다.  
@@ -38,9 +33,9 @@ Visual c + + 응용 프로그램 마법사는 확인할 수 있는 프로젝트�
   
 1.  프로젝트 속성 페이지를 표시 합니다. 자세한 내용은 참조 [프로젝트 속성 작업](../ide/working-with-project-properties.md)합니다.  
   
-2.  에 **일반** 페이지는 **구성 속성** 노드를 설정의 **공용 언어 런타임 지원** 속성을 **안전 MSIL 공용 언어 런타임 지원 (/: safe)**합니다.  
+2.  에 **일반** 페이지는 **구성 속성** 노드를 설정의 **공용 언어 런타임 지원** 속성을 **안전 MSIL 공용 언어 런타임 지원 (/: safe)** 합니다.  
   
-3.  에 **고급** 페이지는 **링커** 노드를 설정의 **CLR 이미지 형식을** 속성을 **안전 IL 이미지 강제 (/: safe)**합니다.  
+3.  에 **고급** 페이지는 **링커** 노드를 설정의 **CLR 이미지 형식을** 속성을 **안전 IL 이미지 강제 (/: safe)** 합니다.  
   
 ## <a name="removing-native-data-types"></a>네이티브 데이터 형식 제거  
  네이티브 데이터 형식은 실제로 사용 되지 않는 경우에 비안정형 이므로 네이티브 형식이 포함 된 모든 헤더 파일을 제거 해야 합니다.  

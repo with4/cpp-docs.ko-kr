@@ -1,26 +1,21 @@
 ---
-title: "기본 네임 스페이스 | Microsoft Docs"
-ms.custom: 
+title: 기본 네임 스페이스 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96b4fc906048d8f8e02d5359526e095c0f12118d
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 3f4386d3636744a673a10dd9530fd3836fdb78e6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="default-namespace"></a>default 네임스페이스
 `default` 네임 스페이스 범위에서 C + 지원 되는 기본 제공 형식 + CX 합니다.  
@@ -43,7 +38,7 @@ namespace default;
   
 ### <a name="built-in-types"></a>기본 제공 형식  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |`char16`|유니코드(UTF-16) 코드 포인트를 나타내는 숫자가 아닌 16비트 값입니다.|  
 |`float32`|32비트 IEEE 754 부동 소수점 숫자입니다.|  

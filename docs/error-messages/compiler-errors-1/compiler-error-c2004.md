@@ -1,13 +1,10 @@
 ---
-title: "컴파일러 오류 C2004 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C2004 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C2004
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2004
 ms.assetid: d81526dd-3a00-4593-87b0-d910d3d29bca
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 754f0099ac0b69eebbc98a34f7f6206591c75925
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4030ea3c82c1a893ebf35903d3fbc362c594282
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2004"></a>컴파일러 오류 C2004
 'defined(id)'가 필요합니다.  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
  이 오류는 Visual Studio .NET 2003에 대해 수행한 컴파일러 규칙 작업의 결과로 생성될 수도 있습니다. 전처리기 지시문에 괄호가 없습니다. 전처리기 지시문에 닫는 괄호가 없는 경우 컴파일러에서 오류를 생성합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C2004를 생성합니다.  
   
 ```  
@@ -50,7 +45,7 @@ int main()
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  해결 방법:  
   
 ```  

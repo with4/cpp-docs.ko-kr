@@ -1,12 +1,9 @@
 ---
-title: "네임 스페이스 (c + +) | Microsoft Docs"
-ms.custom: 
+title: 네임 스페이스 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/30/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - namespace_CPP
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - global namespace
 - Visual C++, namespaces
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 801bd8ee8e81c0126ae88c1fb9213b25b9f103dd
-ms.sourcegitcommit: 4e01d36ffa64ea11bacf589f79d2f1df947e2510
+ms.openlocfilehash: aac72a23e50ca3bc6d5b737d533bd11a40ed9da3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="namespaces-c"></a>네임스페이스 (C++)
 네임스페이스는 내부 식별자(형식, 함수, 변수 등의 이름)에 범위를 제공하는 선언적 영역입니다. 네임스페이스는 코드를 논리 그룹으로 구성하고 특히 코드베이스에 여러 라이브러리가 포함된 경우 발생할 수 있는 이름 충돌을 방지하는 데 사용됩니다. 네임스페이스 범위에 있는 모든 식별자는 한정 없이 서로에게 표시됩니다. 네임 스페이스 외부 식별자 예를 들어 각 식별자에 대 한 정규화 된 이름을 사용 하 여 멤버에 액세스할 수 `std::vector<std::string> vec;`, 또는 [선언을 사용 하 여](../cpp/using-declaration.md) 단일 식별자에 대 한 (`using std::string`), 또는 [지시문을 사용 하 여](../cpp/namespaces-cpp.md#using_directives) 네임 스페이스의 모든 식별자에 대 한 (`using namespace std;`). 헤더 파일의 코드는 항상 정규화된 네임스페이스 이름을 사용해야 합니다.  
@@ -116,7 +111,7 @@ int ContosoDataServer::Bar(){return 0;}
   
  단일 파일의 여러 블록과 여러 파일에서 네임스페이스를 선언할 수 있습니다. 컴파일러가 전처리 중에 파트를 결합하며, 결과로 생성된 네임스페이스에는 모든 파트에서 선언된 멤버가 모두 포함됩니다. 이러한 예로 표준 라이브러리의 각 헤더 파일에서 선언된 std 네임스페이스가 있습니다.  
   
- 명명 된 네임 스페이스의 멤버를 정의 하 고 이름의 명시적 정규화 하 여 선언 된 네임 스페이스 외부 정의할 수 있습니다. 그러나 정의는 선언의 네임스페이스를 포함하는 네임스페이스의 선언 위치 다음에 표시되어야 합니다. 예:  
+ 명명 된 네임 스페이스의 멤버를 정의 하 고 이름의 명시적 정규화 하 여 선언 된 네임 스페이스 외부 정의할 수 있습니다. 그러나 정의는 선언의 네임스페이스를 포함하는 네임스페이스의 선언 위치 다음에 표시되어야 합니다. 예를 들어:  
   
 ```cpp  
 // defining_namespace_members.cpp  
@@ -260,7 +255,7 @@ namespace Contoso
 ```  
   
 ## <a id="namespace_aliases"></a> Namespace 별칭  
- 네임스페이스 이름은 고유해야 하며, 이는 대체로 이름이 너무 짧지 않아야 함을 의미합니다. 이름의 길이로 인해 코드를 읽기 어렵거나 using 지시문을 사용할 수 없는 헤더 파일에 입력하기 번거로운 경우 실제 이름의 약어로 사용되는 네임스페이스 별칭을 만들 수 있습니다. 예:  
+ 네임스페이스 이름은 고유해야 하며, 이는 대체로 이름이 너무 짧지 않아야 함을 의미합니다. 이름의 길이로 인해 코드를 읽기 어렵거나 using 지시문을 사용할 수 없는 헤더 파일에 입력하기 번거로운 경우 실제 이름의 약어로 사용되는 네임스페이스 별칭을 만들 수 있습니다. 예를 들어:  
   
 ```cpp  
 namespace a_very_long_namespace_name { class Foo {}; }  

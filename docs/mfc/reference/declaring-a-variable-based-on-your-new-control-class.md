@@ -1,13 +1,10 @@
 ---
-title: "새 컨트롤 클래스에 따라 변수 선언 | Microsoft Docs"
-ms.custom: 
+title: 새 컨트롤 클래스에 따라 변수 선언 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.classes.control.variable
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - control classes [MFC], variables
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5aa98f815d9f9322c11d4256c13c0c7a42b4ab66
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 677006d441c940f478b3d23744d1057667307e1a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>새 컨트롤 클래스 기반의 변수 선언
 MFC 컨트롤 클래스를 만든 후에 따라 변수를 선언할 수 있습니다. 새 변수에 대 한 컨텍스트를 제공 하려면 대화 상자 편집기를 열고 편집 대화 상자를 다시 사용할 수 있는 컨트롤을 사용 하려면. 또한 대화 상자에는 관련 된 클래스가 있어야 합니다. 대화 상자 편집기를 사용 하는 방법은 참조 하십시오. [대화 상자 편집기](../../windows/dialog-editor.md)합니다.  

@@ -1,29 +1,24 @@
 ---
-title: "시각화 관리자 | Microsoft Docs"
-ms.custom: 
+title: 시각화 관리자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visualization Manager
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 654ffc0f3fb4c33f153f3389442486ffa86b74a8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 40d16e1373d347b4a715cd6f073211796913bd21
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visualization-manager"></a>시각화 관리자
 비주얼 관리자는 전체 응용 프로그램의 모양을 제어 하는 개체입니다. 동작 하는 단일 클래스 응용 프로그램에 대 한 모든 그리기 코드를 입력할 수 있는 합니다. MFC 라이브러리는 몇 가지 비주얼 관리자를 포함합니다. 응용 프로그램에 대 한 사용자 지정 보기를 만들려는 경우에 고유한 비주얼 관리자를 만들 수 있습니다. 다음 그림은 비주얼 관리자를 다른 설정 된 경우 동일한 응용 프로그램을 보여 줍니다.  

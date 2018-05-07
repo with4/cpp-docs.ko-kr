@@ -1,13 +1,10 @@
 ---
-title: "CToolBarCtrl 개체 만들기 | Microsoft Docs"
-ms.custom: 
+title: CToolBarCtrl 개체 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CToolBarCtrl
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - toolbar controls [MFC], creating
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: a4f6bf0c-0195-4dbf-a09e-aee503e19dc3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e86fad8191c4dea2eed3ae34ec96ed853ac1deae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6c5e2ee8c0e2239de86252b3d0fb8ec0ab7cc182
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-ctoolbarctrl-object"></a>CToolBarCtrl 개체 만들기
 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) 여러 개의 내부 데이터 구조를 포함 하는 개체-단추 이미지 비트맵의 목록, 단추 레이블 문자열의 목록 및 목록이 `TBBUTTON` 구조-있는 이미지로 연결 및/또는 위치, 스타일, 상태를 포함 하는 문자열 및 단추의 명령 ID입니다. 각각의 이러한 데이터 구조 요소에서 참조 하는 0부터 시작 인덱스입니다. 사용 하기 전에 `CToolBarCtrl` 개체를 이러한 데이터 구조를 설정 해야 합니다. 목록이 데이터 구조에 대 한 참조 [도구 모음 컨트롤](controls-mfc.md) Windows sdk에서입니다. 단추 레이블;에 대 한 문자열 목록에만 사용할 수 있습니다. 도구 모음에서 문자열을 검색할 수 없습니다.  

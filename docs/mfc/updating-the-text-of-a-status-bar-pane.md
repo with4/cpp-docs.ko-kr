@@ -1,13 +1,10 @@
 ---
-title: "상태 표시줄 창의 텍스트 업데이트 | Microsoft Docs"
-ms.custom: 
+title: 상태 표시줄 창의 텍스트 업데이트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - panes, status bar
 - status bars [MFC], updating
 ms.assetid: 4984a3f4-9905-4d8c-a927-dca19781053b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fb0f9bdaa032340256eee4781bfd775767f62ee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbb2f14f274be3c7282a897c271049fe46434f3b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>상태 표시줄 창의 텍스트 업데이트
 이 문서에서는 MFC 상태 표시줄 창에 표시 되는 텍스트를 변경 하는 방법에 설명 합니다. 상태 표시줄-window 개체 클래스의 [CStatusBar](../mfc/reference/cstatusbar-class.md) -여러 개의 "창이 있습니다."를 포함 합니다. 각 창에 정보를 표시 하는 데 사용할 수 있는 상태 표시줄의 사각형 영역입니다. 예를 들어 많은 응용 프로그램 맨 오른쪽 창에 CAPS LOCK, NUM LOCK 및 다른 키의 상태를 표시 합니다. 응용 프로그램 에서도 대개 유용한 정보가 표시 (0 창)에서 가장 왼쪽 창에서 "메시지 창입니다." 라고도 함 예를 들어 기본 MFC 상태 표시줄 메시지 창을 사용 하 여 현재 선택 된 메뉴 항목이 나 도구 모음 단추를 설명 하는 문자열을 표시 합니다. 이 그림에서 [상태 표시줄](../mfc/status-bar-implementation-in-mfc.md) MFC 응용 프로그램 마법사로 만든 응용 프로그램에서 상태 표시줄을 표시 합니다.  
@@ -82,7 +77,7 @@ ms.lasthandoff: 12/21/2017
   
  값을 정의 하면는 `m_nPage` 멤버 변수 (클래스의 `CMainFrame`),이 방법을 사용 하면 페이지 번호를 동일한 방식으로 다른 지표는 응용 프로그램을 업데이트 하도록 유휴 처리 하는 동안 창에 표시 합니다. 경우 `m_nPage` 다음 유휴 루프 중 표시 변경 내용입니다.  
   
-### <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+### <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [사용자 인터페이스 개체 업데이트 (프로그램 상태가 변경 됨에 따라 도구 모음 단추 및 메뉴 항목을 업데이트 하는 방법)](../mfc/how-to-update-user-interface-objects.md)  
   

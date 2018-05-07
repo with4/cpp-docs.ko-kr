@@ -1,29 +1,24 @@
 ---
-title: "표준 대화 상자 데이터 교환 루틴 | Microsoft Docs"
-ms.custom: 
+title: 표준 대화 상자 데이터 교환 루틴 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca598a9ac6a146457d24bcc80e54d003123d7dd4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f6c79a96439605bcf9ab670c1f75dda2d50169f6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>표준 대화 상자 데이터 교환 루틴
 이 항목에서는 일반적인 MFC 대화 상자 컨트롤에 사용 되는 표준 대화 상자 데이터 교환 (DDX) 루틴을 나열 합니다.  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
 |[DDX_Slider](#ddx_slider)|초기화 하거나 슬라이더 컨트롤의 위치 조정 컨트롤의 현재 위치를 검색 합니다.|  
 |[DDX_Text](#ddx_text)|초기화 하거나 편집 컨트롤의 현재 값을 검색 합니다.|  
   
-##  <a name="ddx_cbindex"></a>DDX_CBIndex  
+##  <a name="ddx_cbindex"></a>  DDX_CBIndex  
  `DDX_CBIndex` 함수의 전송을 관리 `int` 대화 상자에서 콤보 상자 컨트롤 간의 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 `int` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
   
 ```  
@@ -69,7 +64,7 @@ void AFXAPI DDX_CBIndex(
  `nIDC`  
  콤보 상자 컨트롤에 연결 된 컨트롤 속성의 리소스 ID입니다.  
   
- *인덱스*  
+ *index*  
  멤버 변수 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체 데이터를 교환에 대 한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -80,7 +75,7 @@ void AFXAPI DDX_CBIndex(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddx_cbstring"></a>DDX_CBString  
+##  <a name="ddx_cbstring"></a>  DDX_CBString  
  `DDX_CBString` 함수의 전송을 관리 `CString` 대화 상자에서 콤보 상자 컨트롤의 편집 컨트롤 간의 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 `CString` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
   
 ```  
@@ -111,7 +106,7 @@ void AFXAPI DDX_CBString(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddx_cbstringexact"></a>DDX_CBStringExact  
+##  <a name="ddx_cbstringexact"></a>  DDX_CBStringExact  
  `DDX_CBStringExact` 함수의 전송을 관리 `CString` 대화 상자에서 콤보 상자 컨트롤의 편집 컨트롤 간의 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 `CString` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
   
 ```  
@@ -142,7 +137,7 @@ void AFXAPI DDX_CBStringExact(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddx_check"></a>DDX_Check  
+##  <a name="ddx_check"></a>  DDX_Check  
  `DDX_Check` 함수의 전송을 관리 `int` 대화 상자에서 확인란 컨트롤 간의 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 `int` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
   
 ```  
@@ -170,7 +165,7 @@ void AFXAPI DDX_Check(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddx_control"></a>DDX_Control  
+##  <a name="ddx_control"></a>  DDX_Control  
  `DDX_Control` 로 지정 된 컨트롤을 서브 클래스 함수 `nIDC`, 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체입니다.  
   
 ```  
@@ -198,7 +193,7 @@ void AFXAPI DDX_Control(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddx_datetimectrl"></a>DDX_DateTimeCtrl  
+##  <a name="ddx_datetimectrl"></a>  DDX_DateTimeCtrl  
  `DDX_DateTimeCtrl` 함수는 날짜 및 시간 선택 컨트롤 간의 날짜 및/또는 시간 데이터의 전송을 관리 ( [CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)) 대화 상자 또는 폼 뷰 개체 및 중 하나는 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 또는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 대화 상자나 폼 뷰 개체의 데이터 멤버입니다.  
   
 ```  
@@ -241,7 +236,7 @@ void AFXAPI DDX_DateTimeCtrl(
    
 
  
-## <a name="ddx_managedcontrol"></a>DDX_ManagedControl
+## <a name="ddx_managedcontrol"></a>  DDX_ManagedControl
 컨트롤의 리소스 id입니다. 일치 하는.NET 컨트롤을 만듭니다.  
    
 ### <a name="syntax"></a>구문  
@@ -263,7 +258,7 @@ void DDX_ManagedControl(
  에 대 한 참조는 [CWinFormsControl 클래스](cwinformscontrol-class.md) 개체입니다.  
    
 ### <a name="remarks"></a>설명  
- `DDX_ManagedControl`호출 [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) 리소스 컨트롤 id입니다. 일치 하는 컨트롤을 만들려면 사용 하 여 `DDX_ManagedControl` 컨트롤에 리소스 Id 중에서 만들려는 [CDialog::OnInitDialog](cdialog-class.md#oninitdialog)합니다. 데이터 교환에 대 한 Windows Forms 컨트롤에서 DDX/DDV 함수를 사용할 필요가 없습니다.  
+ `DDX_ManagedControl` 호출 [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol) 리소스 컨트롤 id입니다. 일치 하는 컨트롤을 만들려면 사용 하 여 `DDX_ManagedControl` 컨트롤에 리소스 Id 중에서 만들려는 [CDialog::OnInitDialog](cdialog-class.md#oninitdialog)합니다. 데이터 교환에 대 한 Windows Forms 컨트롤에서 DDX/DDV 함수를 사용할 필요가 없습니다.  
   
  자세한 내용은 참조 [하는 방법: Windows Forms에서 DDX/DDV 데이터 바인딩 수행](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)합니다.  
    
@@ -276,7 +271,7 @@ void DDX_ManagedControl(
  
 
   
-##  <a name="ddx_ipaddress"></a>DDX_IPAddress  
+##  <a name="ddx_ipaddress"></a>  DDX_IPAddress  
  `DDX_IPAddress` 함수 IP 주소 컨트롤 및 컨트롤 뷰 개체의 데이터 멤버 간의 데이터 전송을 관리 합니다.  
   
 ```  
@@ -313,7 +308,7 @@ void AFXAPI DDX_IPAddress(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddx_lbindex"></a>DDX_LBIndex  
+##  <a name="ddx_lbindex"></a>  DDX_LBIndex  
  `DDX_LBIndex` 함수의 전송을 관리 `int` 대화 상자에서 목록 상자 컨트롤 간의 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 `int` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
   
 ```  
@@ -330,7 +325,7 @@ void AFXAPI DDX_LBIndex(
  `nIDC`  
  목록 상자 컨트롤에 연결 된 컨트롤 속성의 리소스 ID입니다.  
   
- *인덱스*  
+ *index*  
  멤버 변수 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체 데이터를 교환에 대 한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -341,7 +336,7 @@ void AFXAPI DDX_LBIndex(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddx_lbstring"></a>DDX_LBString  
+##  <a name="ddx_lbstring"></a>  DDX_LBString  
  `DDX_LBString` 함수의 전송을 관리 `CString` 대화 상자에서 목록 상자 컨트롤 간의 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 `CString` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
   
 ```  
@@ -374,7 +369,7 @@ void AFXAPI DDX_LBString(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddx_lbstringexact"></a>DDX_LBStringExact  
+##  <a name="ddx_lbstringexact"></a>  DDX_LBStringExact  
  `DDX_CBStringExact` 함수의 전송을 관리 `CString` 대화 상자에서 목록 상자 컨트롤의 편집 컨트롤 간의 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 `CString` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
   
 ```  
@@ -407,7 +402,7 @@ void AFXAPI DDX_LBStringExact(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddx_monthcalctrl"></a>DDX_MonthCalCtrl  
+##  <a name="ddx_monthcalctrl"></a>  DDX_MonthCalCtrl  
  `DDX_MonthCalCtrl` 함수 month calendar 컨트롤 간의 날짜 데이터의 전송을 관리 ( [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)) 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체 및 중 하나에 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 또는 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
   
 ```  
@@ -444,7 +439,7 @@ void AFXAPI DDX_MonthCalCtrl(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddx_radio"></a>DDX_Radio  
+##  <a name="ddx_radio"></a>  DDX_Radio  
  `DDX_Radio` 함수의 전송을 관리 `int` 대화 상자에 라디오 컨트롤 그룹 간에 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 `int` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다. 값은 `int` 데이터 멤버는 그룹 내에서 단추를 선택 된 라디오 단추가 따라 결정 됩니다.  
   
 ```  
@@ -474,7 +469,7 @@ void AFXAPI DDX_Radio(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddx_scroll"></a>DDX_Scroll  
+##  <a name="ddx_scroll"></a>  DDX_Scroll  
  `DDX_Scroll` 함수의 전송을 관리 `int` 대화 상자에서 스크롤 막대 컨트롤 간의 데이터 폼 뷰 또는 컨트롤 뷰 개체 및 `int` 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
   
 ```  
@@ -502,7 +497,7 @@ void AFXAPI DDX_Scroll(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddx_slider"></a>DDX_Slider  
+##  <a name="ddx_slider"></a>  DDX_Slider  
  `DDX_Slider` 함수의 전송을 관리 `int` 대화 상자나 폼 보기에서 슬라이더 컨트롤 간에 데이터 및 `int` 대화 상자나 폼 뷰 개체의 데이터 멤버입니다.  
   
 ```  
@@ -530,7 +525,7 @@ void AFXAPI DDX_Slider(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdd_.h  
   
-##  <a name="ddx_text"></a>DDX_Text  
+##  <a name="ddx_text"></a>  DDX_Text  
  `DDX_Text` 함수의 전송을 관리 `int`, **UINT**, **긴**, `DWORD`, `CString`, **float**, 또는  **이중** 대화 상자에서 편집 컨트롤 간의 데이터 폼 보기, 또는 컨트롤 뷰 및 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 대화 상자, 폼 뷰 또는 컨트롤 뷰 개체의 데이터 멤버입니다.  
   
 ```  

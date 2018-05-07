@@ -1,13 +1,10 @@
 ---
-title: "ATL 컬렉션 및 열거자 | Microsoft Docs"
-ms.custom: 
+title: ATL 컬렉션 및 열거자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - enumerators, ATL classes
 - collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52b74f51733947ca46c0ddb1039f92ce7f69e670
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 537d7e8b7264beddc68805ab8b8dec2ce7883859
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL 컬렉션 및 열거자
 A `collection` (원시 데이터 또는 기타 개체) 데이터 항목의 그룹에 대 한 액세스를 허용 하는 인터페이스를 제공 하는 COM 개체입니다. 개체의 그룹에 대 한 액세스를 제공 하 라고에 대 한 표준을 따르는 인터페이스는 *컬렉션 인터페이스*합니다.  

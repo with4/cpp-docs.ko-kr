@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 2) C4275 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 2) C4275 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4275
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4275
 ms.assetid: 18de967a-0a44-4dbc-a2e8-fc4c067ba909
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8434194a216ba233cec26a5700cf4864a0eca8c9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5d2a3cd7c4b937f8bee1b8f8e37e0619cc224ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-2-c4275"></a>컴파일러 경고(수준 2) C4275
 비-DLL 인터페이스 classkey 'identifier' 기준으로 사용 DLL 인터페이스 classkey 'identifier'  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
  함수 및 가상 함수를 사용 하 여 클래스를 정의 하는 DLL 인스턴스화하기 위해 호출할 수를 정의 하 고 유형의 개체를 삭제 하면 클래스를 내보내지 방지할 수 있습니다.  그런 다음 가상 함수 형식에만 호출할 수 있습니다.  
   
- 서식 파일을 내보내는 방법에 대 한 자세한 내용은 참조 하십시오. [하십시오. EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958)합니다.  
+ 서식 파일을 내보내는 방법에 대 한 자세한 내용은 참조 하십시오. [ http://support.microsoft.com/default.aspx?scid=KB; EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958)합니다.  
   
  디버그 릴리스를 컴파일하면 c + + 표준 라이브러리의 형식에서 파생 하는 경우 Visual c + +에서 c 4275를 무시할 수 있습니다 (**/MTd**) 하 고 _Container_base 컴파일러 오류 메시지는 위치입니다.  
   

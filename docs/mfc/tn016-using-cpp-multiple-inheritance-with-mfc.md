@@ -1,13 +1,10 @@
 ---
-title: "TN016: MFC c + + 다중 상속 사용 | Microsoft Docs"
-ms.custom: 
+title: 'TN016: MFC c + + 다중 상속 사용 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.inheritance
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MI (Multiple Inheritance)
 - multiple inheritance, MFC support for
 ms.assetid: 4ee27ae1-1410-43a5-b111-b6af9b84535d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b276e316ffc8ce04577532ac3b15400ee28f9f33
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe1e79324c4c1f7408e1b801cf2be581b9884717
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: MFC에서 C++ 다중 상속 사용
 이 노트 Microsoft Foundation Classes와 다중 상속 (MI)를 사용 하는 방법을 설명 합니다. MI 사용 하는 MFC와 함께 필요 하지 않습니다. MI 모든 MFC 클래스에서 사용 되지 않으며 클래스 라이브러리를 작성할 필요가 없습니다.  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
  대신 사용 하는 것은 `dynamic_cast` 연산자입니다. MI의 기본 클래스 중 하나를 가진 개체를 캐스팅 하도록 컴파일러에 제공 된 기본 클래스에는 함수를 사용 하 여 강제로 됩니다. 자세한 내용은 참조 [dynamic_cast Operator](../cpp/dynamic-cast-operator.md)합니다.  
   
 ## <a name="cobject---the-root-of-all-classes"></a>CObject-모든 클래스의 루트  
- 모든 중요 한 클래스 클래스에서 직접 또는 간접적으로 파생 `CObject`합니다. `CObject`가 멤버 데이터가 있지만 몇 가지 기본 기능입니다. MI를 사용 하면 일반적으로 두 개 이상의에서 상속 됩니다 `CObject`-파생 된 클래스입니다. 다음 예제에서는 클래스에서 상속할 수 있습니다 어떻게는 [CFrameWnd](../mfc/reference/cframewnd-class.md) 및 [CObList](../mfc/reference/coblist-class.md):  
+ 모든 중요 한 클래스 클래스에서 직접 또는 간접적으로 파생 `CObject`합니다. `CObject` 가 멤버 데이터가 있지만 몇 가지 기본 기능입니다. MI를 사용 하면 일반적으로 두 개 이상의에서 상속 됩니다 `CObject`-파생 된 클래스입니다. 다음 예제에서는 클래스에서 상속할 수 있습니다 어떻게는 [CFrameWnd](../mfc/reference/cframewnd-class.md) 및 [CObList](../mfc/reference/coblist-class.md):  
   
 ```  
 class CListWnd : public CFrameWnd, public CObList  

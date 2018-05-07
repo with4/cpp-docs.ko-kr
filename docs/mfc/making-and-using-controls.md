@@ -1,13 +1,10 @@
 ---
-title: "컨트롤 만들기 및 사용 | Microsoft Docs"
-ms.custom: 
+title: 컨트롤 만들기 및 사용 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - Windows common controls [MFC], about common controls
 - common controls [MFC], about common controls
 ms.assetid: a252acad-3cc0-440e-bbc6-43eaaf8cb7bb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaae665311db47a7129ecaaef816dc3c3b546d45
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 60cf03eb655e1eb26351ed300f27c1965bbfa281
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="making-and-using-controls"></a>컨트롤 만들기 및 사용
 Visual c + +에서 대화 상자에 대 한 대부분의 컨트롤을 만들면 [대화 상자 편집기](../windows/dialog-editor.md)합니다. 하지만 모든 대화 상자 또는 창에 컨트롤을 만들 수도 있습니다.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [대화 상자에서 공용 컨트롤 사용](../mfc/using-common-controls-in-a-dialog-box.md)  
   

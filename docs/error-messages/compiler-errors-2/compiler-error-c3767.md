@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C3767 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C3767 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3767
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3767
 ms.assetid: 5247cdcd-639c-4527-bd37-37e74c4e8fab
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 731327af2c4c220a3779ddce007c6544db0a3128
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2e7e5e422206f3ee58b95024a3b96244d848e1b0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3767"></a>컴파일러 오류 C3767
 'function' 후보 함수에 액세스할 수 없습니다.  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
  C3767 주요 변경 내용으로 발생할 수 있습니다: 네이티브 형식에 기본적으로 private 됩니다는 **/clr** 컴파일 시 참조 [표시 유형 입력](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) 에 대 한 자세한 내용은 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C3767 오류가 생성 됩니다.  
   
 ```  

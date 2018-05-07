@@ -1,13 +1,10 @@
 ---
-title: "방법: 변환 char * 문자열 system:: byte 배열로 | Microsoft Docs"
-ms.custom: 
+title: '방법: 변환 char * 문자열 system:: byte 배열로 | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,23 +13,21 @@ helpviewer_keywords:
 - character arrays, converting to System::Byte arrays
 - examples [C++], arrays
 ms.assetid: de9bc4eb-773c-4796-a496-9b90ca986503
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5c8a1dd1b126b77f14815a90e7b4599fe0ce14bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e42294ad2c2e0bef77d29f6d47a5373dc0f728bd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-convert-char--string-to-systembyte-array"></a>방법: char * 문자열을 System::Byte 배열로 변환
 변환 하는 가장 효율적인 방법은 `char *` 문자열을 한 <xref:System.Byte> 배열을 사용 하는 것 <xref:System.Runtime.InteropServices.Marshal> 클래스입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // convert_native_string_to_Byte_array.cpp  

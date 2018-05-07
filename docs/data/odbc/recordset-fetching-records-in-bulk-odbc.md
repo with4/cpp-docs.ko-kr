@@ -1,13 +1,10 @@
 ---
-title: "레코드 집합: 대량 (ODBC) 레코드 페치 | Microsoft Docs"
-ms.custom: 
+title: '레코드 집합: 대량 (ODBC) 레코드 페치 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,18 +20,16 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8d9738af557cb8d4dd26b792851f8be276e91380
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ef8803459edeba98e472a0e7fd07e7f5daf2c4e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-fetching-records-in-bulk-odbc"></a>레코드 집합: 대량 레코드 페치(ODBC)
 MFC ODBC 클래스에이 항목에 적용 됩니다.  
@@ -49,7 +44,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
 -   [대량 레코드 필드 교환을 구현 하는 방법을](#_core_how_to_implement_bulk_record_field_exchange)합니다.  
   
-##  <a name="_core_how_crecordset_supports_bulk_row_fetching"></a>대량 행 페치 CRecordset을 지 원하는 방법  
+##  <a name="_core_how_crecordset_supports_bulk_row_fetching"></a> 대량 행 페치 CRecordset을 지 원하는 방법  
  레코드 집합 개체를 열기 전에 행 집합 크기를 정의할 수 있습니다는 `SetRowsetSize` 멤버 함수입니다. 행 집합 크기는 단일 패치에서 검색할 레코드 수를 지정 합니다. 대량 행 페치 구현 되는 경우 기본 행 집합 크기는 25입니다. 대량 행 페치 구현 되지 않은 경우 행 집합 크기가 1로 고정 됩니다.  
   
  행 집합 크기를 초기화 한 후 호출 된 [열려](../../mfc/reference/crecordset-class.md#open) 멤버 함수입니다. 여기서 지정 해야 합니다는 `CRecordset::useMultiRowFetch` 옵션의는 **dwOptions** 매개 변수를 대량 행 페치를 구현 합니다. 또한 설정할 수 있습니다는 **CRecordset::userAllocMultiRowBuffers** 옵션입니다. 대량 레코드 필드 교환 메커니즘 배열을 사용 하 여 여러 행을 인출 하는 동안 검색 데이터의를 저장 합니다. 프레임 워크에서이 저장 버퍼를 자동으로 할당 하거나 수동으로 할당할 수 있습니다. 지정 하는 **CRecordset::userAllocMultiRowBuffers** 옵션은 할당을 수행 합니다.  
@@ -67,7 +62,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
 |[SetRowsetCursorPosition](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|행 집합 내의 특정 행에는 커서를 이동합니다.|  
 |[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|지정된 된 값으로 행 집합 크기에 대 한 설정을 변경 하는 가상 함수입니다.|  
   
-##  <a name="_core_special_considerations"></a>특별 고려 사항  
+##  <a name="_core_special_considerations"></a> 특별 고려 사항  
  성능 향상은 대량 행 페치를 특정 기능이 다르게 작동 합니다. 대량 행 페치를 구현 하기 전에 다음 사항을 고려 합니다.  
   
 -   프레임 워크에서 자동으로 호출 된 `DoBulkFieldExchange` recordset 개체에 데이터 원본에서 데이터를 전송 하도록 멤버 함수입니다. 그러나 데이터는 데이터 소스에 다시 레코드 집합에서 전송 되지 않습니다. 호출 된 `AddNew`, **편집**, **삭제**, 또는 **업데이트** 실패 한 어설션의 멤버 함수 결과입니다. 하지만 `CRecordset` 현재 메커니즘을 제공 하지 않는 데이터의 대량 행을 업데이트 하기 위한 ODBC API 함수를 사용 하 여 사용자 고유의 함수를 작성할 수 있습니다 **SQLSetPos**합니다. 에 대 한 자세한 내용은 **SQLSetPos**, 참조는 *ODBC SDK Programmer's Reference* MSDN 설명서에 있습니다.  
@@ -78,7 +73,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
 -   레코드 필드 교환 달리 마법사는 대량 레코드 필드 교환을 지원 하지 않습니다. 필드 데이터 멤버를 선언 하 고 수동으로 재정의 해야 합니다 즉 `DoBulkFieldExchange` 대량 RFX 함수에 대 한 호출을 작성 하 여 합니다. 자세한 내용은 참조 [레코드 필드 교환 함수](../../mfc/reference/record-field-exchange-functions.md) 에 *클래스 라이브러리 참조*합니다.  
   
-##  <a name="_core_how_to_implement_bulk_record_field_exchange"></a>대량 레코드 필드 교환을 구현 하는 방법  
+##  <a name="_core_how_to_implement_bulk_record_field_exchange"></a> 대량 레코드 필드 교환을 구현 하는 방법  
  대량 레코드 필드 교환 recordset 개체를 데이터 원본의 행 집합의 데이터를 전송합니다. 대량 RFX 함수를 사용 하 여이 데이터를 저장 하는 배열을 행 집합의 각 데이터 항목의 길이 저장 하는 배열입니다. 클래스 정의 배열 데이터에 액세스에 대 한 포인터와 필드 데이터 멤버를 정의 해야 합니다. 또한 길이 배열에 액세스 하 던 포인터 집합이 정의 해야 합니다. 매개 변수 데이터 멤버 포인터;로 선언할 수 없습니다. 대량 레코드 필드 교환을 사용 하는 경우 매개 변수 데이터 멤버 선언 레코드 필드 교환을 사용 하는 경우 선언와 같습니다. 다음 코드에서는 간단한 예를 보여 줍니다.  
   
 ```  

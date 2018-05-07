@@ -1,12 +1,9 @@
 ---
-title: "CDynamicAccessor 클래스 | Microsoft Docs"
-ms.custom: 
+title: CDynamicAccessor 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL.CDynamicAccessor
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - CDynamicAccessor class
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1f07ceae02c9c243f59f37ea49e77ef3113b5a54
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2a4006afa9ebdfcf95a01103d1fd97643a6b749f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor 클래스
 데이터베이스 스키마(데이터베이스의 내부 구조)에 대해 모를 때 데이터 소스에 액세스할 수 있습니다.  

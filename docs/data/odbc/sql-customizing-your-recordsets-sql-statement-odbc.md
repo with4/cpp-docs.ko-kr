@@ -2,12 +2,9 @@
 title: 'SQL: 레코드 집합의 SQL 문 (ODBC) 사용자 지정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - overriding, SQL statements
 - SQL, opening recordsets
 ms.assetid: 72293a08-cef2-4be2-aa1c-30565fcfbaf9
-caps.latest.revision: 7
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3099fbf6b97f3ad18a28c071fcd08ec8280fa24a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f385127d1b61e1453eb7a079963da727f82f1874
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL: 레코드 집합의 SQL 문 사용자 지정(ODBC)
 이 항목에 설명 합니다.  
@@ -69,7 +64,7 @@ SELECT rfx-field-list FROM table-name [WHERE m_strFilter]
 > [!NOTE]
 >  필터 (또는 SQL 문의 다른 부분)에서 리터럴 문자열을 사용 하는 경우 "인용 부호" 해야 할 수 있습니다 (지정 된 구분 기호로 포함) 이러한 문자열 리터럴 및 DBMS 관련 리터럴 접두사와 접미사 문자 (또는 문자)입니다.  
   
- DBMS에 따라 외부 조인과 같은 작업에 대 한 구문 특별 한 요구도 발생할 수 있습니다. ODBC 함수를 사용 하 여 DBMS에 대 한 드라이버에서이 정보를 얻을 수 있습니다. 예를 들어 호출 **:: SQLGetTypeInfo** 특정 데이터 형식에 대 한 같은 **SQL_VARCHAR**, 요청 하는 **LITERAL_PREFIX** 및 **LITERAL_SUFFIX** 문자입니다. 데이터베이스에 독립적인 코드를 작성 하는 경우 참조에서 부록 C는 *ODBC SDK**Programmer's Reference* 자세한 구문 정보에 대 한 MSDN 라이브러리 CD에 있습니다.  
+ DBMS에 따라 외부 조인과 같은 작업에 대 한 구문 특별 한 요구도 발생할 수 있습니다. ODBC 함수를 사용 하 여 DBMS에 대 한 드라이버에서이 정보를 얻을 수 있습니다. 예를 들어 호출 **:: SQLGetTypeInfo** 특정 데이터 형식에 대 한 같은 **SQL_VARCHAR**, 요청 하는 **LITERAL_PREFIX** 및 **LITERAL_SUFFIX** 문자입니다. 데이터베이스에 독립적인 코드를 작성 하는 경우 참조에서 부록 C는 *ODBC SDK * * Programmer's Reference* 자세한 구문 정보에 대 한 MSDN 라이브러리 CD에 있습니다.  
   
  레코드 집합 개체에는 레코드를 선택 하 여 사용자 지정 SQL 문을 전달 하지 않으면 사용 하는 SQL 문을 생성 합니다. 주로에 전달 하는 값에 따라 달라 집니다 방식은 `lpszSQL` 의 매개 변수는 **열려** 멤버 함수입니다.  
   
@@ -80,7 +75,7 @@ SELECT [ALL | DISTINCT] column-list FROM table-list
     [WHERE search-condition][ORDER BY column-list [ASC | DESC]]  
 ```  
   
- 추가 하는 한 가지 방법은 **DISTINCT** 레코드 집합의 SQL 문에 키워드의 첫 번째 RFX 함수 호출에 키워드를 포함 하는 것 `DoFieldExchange`합니다. 예:  
+ 추가 하는 한 가지 방법은 **DISTINCT** 레코드 집합의 SQL 문에 키워드의 첫 번째 RFX 함수 호출에 키워드를 포함 하는 것 `DoFieldExchange`합니다. 예를 들어:  
   
 ```  
 ...  
@@ -98,13 +93,13 @@ SELECT [ALL | DISTINCT] column-list FROM table-list
   
 |Case|LpszSQL에 전달|결과 SELECT 문에|  
 |----------|------------------------------|------------------------------------|  
-|1|**NULL**|**선택** *rfx 필드 목록* **FROM** *테이블 이름*<br /><br /> `CRecordset::Open`호출 `GetDefaultSQL` 테이블 이름을 가져오지 못했습니다. 결과 문자열은 다음 중 한 경우 2 ~ 5, 물품에 따라 `GetDefaultSQL` 반환 합니다.|  
+|1|**NULL**|**선택** *rfx 필드 목록* **FROM** *테이블 이름*<br /><br /> `CRecordset::Open` 호출 `GetDefaultSQL` 테이블 이름을 가져오지 못했습니다. 결과 문자열은 다음 중 한 경우 2 ~ 5, 물품에 따라 `GetDefaultSQL` 반환 합니다.|  
 |2|테이블 이름|**선택** *rfx 필드 목록* **FROM** *테이블 이름*<br /><br /> 필드 목록에 있는 RFX 문은에서 가져온 것 `DoFieldExchange`합니다. 경우 **m_strFilter** 및 `m_strSort` 비어 있지 않으며, 추가는 **여기서** 및/또는 **ORDER BY** 절.|  
 |3 *|전체 **선택** 문 없이 **여기서** 또는 **ORDER BY** 절|성공 합니다. 경우 **m_strFilter** 및 `m_strSort` 비어 있지 않으며, 추가는 **여기서** 및/또는 **ORDER BY** 절.|  
 |4 *|전체 **선택** 문을 **여기서** 및/또는 **ORDER BY** 절|성공 합니다. **m_strFilter** 및/또는 `m_strSort` 해야 비어 있거나 두 개의 필터 유지 및/또는 정렬 문이 생성 됩니다.|  
 |5 *|저장된 프로시저에 대 한 호출|성공 합니다.|  
   
- \*`m_nFields` 에 지정 된 열 개수 보다 작거나 같아야 합니다는 **선택** 문. 에 지정 된 각 열의 데이터 형식을 **선택** 문은 해당 되는 RFX 출력 열의 데이터 형식과 동일 해야 합니다.  
+ \* `m_nFields` 에 지정 된 열 개수 보다 작거나 같아야 합니다는 **선택** 문. 에 지정 된 각 열의 데이터 형식을 **선택** 문은 해당 되는 RFX 출력 열의 데이터 형식과 동일 해야 합니다.  
   
 ### <a name="case-1---lpszsql--null"></a>사례 1 lpszSQL = NULL  
  레코드 집합 선택에 따라 달라 집니다 `GetDefaultSQL` 될 때 반환 `CRecordset::Open` 에서 호출 합니다. 2 ~ 5의 경우 가능한 문자열을 설명 합니다.  

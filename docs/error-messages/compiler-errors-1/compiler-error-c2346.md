@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C2346 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C2346 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2346
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2346
 ms.assetid: 246145be-5645-4cd6-867c-e3bc39e33dca
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 769d5addc47ead8ffb338d5fbef313cd46735d31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9459d7330738180e92776e93fcba9a07bfd39640
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2346"></a>컴파일러 오류 C2346
 'function' 네이티브로 컴파일할 수 없습니다: 이유  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  사용 하 여 모듈을 컴파일하지 않거나 하나 **/clr**, 또는 관리 되지 않는 pragma 관리 되지 않는 함수로 표시 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C2346 오류가 발생 합니다.  
   
 ```  

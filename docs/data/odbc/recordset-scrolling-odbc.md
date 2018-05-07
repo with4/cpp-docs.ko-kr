@@ -2,12 +2,9 @@
 title: '레코드 집합: 스크롤 (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - scrolling [C++], recordsets
 - Move method (recordsets)
 ms.assetid: f38d2dcb-1e88-4e41-af25-98b00c276be4
-caps.latest.revision: 8
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 34dcfb9cb1d45710accba2ee6155e3c741b727be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19058ec3d9a7840fc0e90be84f2734c49f2c8e85
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-scrolling-odbc"></a>레코드 집합: 스크롤(ODBC)
 MFC ODBC 클래스에이 항목에 적용 됩니다.  
@@ -44,7 +39,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
 -   [아래 스크롤 지원 되는 상황과 지원 되지 않습니다](#_core_when_scrolling_is_supported)합니다.  
   
-##  <a name="_core_scrolling_from_one_record_to_another"></a>레코드 스크롤  
+##  <a name="_core_scrolling_from_one_record_to_another"></a> 레코드 스크롤  
  클래스 `CRecordset` 제공는 **이동** 레코드 집합 내에서 스크롤할 수 있도록 멤버 함수입니다. 이러한 함수는 행 집합에서 현재 레코드를 이동합니다. 대량 행 페치를 구현한 경우에 **이동** 작업은 행 집합의 크기에 따라 레코드 집합의 위치를 변경 합니다. 대량 행 페치를 호출 하지 않은 경우는 **이동** 함수 위치를 변경 하는 레코드 집합 한 각 시간입니다. 대량 행 페치에 대 한 자세한 내용은 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
   
 > [!NOTE]
@@ -100,11 +95,11 @@ while( !rsCustSet.IsBOF( ) )
 rsCustSet.MoveFirst( );  
 ```  
   
- `IsEOF`레코드 집합은 마지막 레코드를 지난 배치 되 면 0이 아닌 값을 반환 합니다. `IsBOF`레코드 집합 (하기 전에 모든 레코드)는 첫 번째 레코드에 있으면 0이 아닌 값을 반환 합니다. 두 경우 모두에서 작동 하도록 현재 레코드가 있습니다. 호출 하는 경우 `MovePrev` 때 `IsBOF` 이미 **TRUE** 호출 또는 `MoveNext` 때 `IsEOF` 이미 **TRUE**, 프레임 워크를 throw 한 `CDBException`합니다. 사용할 수도 있습니다 `IsBOF` 및 `IsEOF` 빈 레코드 집합에 대 한 확인 합니다.  
+ `IsEOF` 레코드 집합은 마지막 레코드를 지난 배치 되 면 0이 아닌 값을 반환 합니다. `IsBOF` 레코드 집합 (하기 전에 모든 레코드)는 첫 번째 레코드에 있으면 0이 아닌 값을 반환 합니다. 두 경우 모두에서 작동 하도록 현재 레코드가 있습니다. 호출 하는 경우 `MovePrev` 때 `IsBOF` 이미 **TRUE** 호출 또는 `MoveNext` 때 `IsEOF` 이미 **TRUE**, 프레임 워크를 throw 한 `CDBException`합니다. 사용할 수도 있습니다 `IsBOF` 및 `IsEOF` 빈 레코드 집합에 대 한 확인 합니다.  
   
  레코드 집합 탐색에 대 한 자세한 내용은 참조 [레코드 집합: 책갈피와 절대 위치 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)합니다.  
   
-##  <a name="_core_when_scrolling_is_supported"></a>스크롤이 지원 되는  
+##  <a name="_core_when_scrolling_is_supported"></a> 스크롤이 지원 되는  
  원래 SQL 스크롤 앞 으로만 제공 하지만 ODBC 스크롤 기능을 확장 합니다. 드라이버의 ODBC API 규칙에 따라 수준에 따라 응용 프로그램이 작동 하는 ODBC 드라이버에 따라 스크롤에 대 한 지원의 사용 가능한 수준을 메모리로 ODBC 커서 라이브러리가 로드 되었는지 여부 및 합니다. 자세한 내용은 참조 [ODBC](../../data/odbc/odbc-basics.md) 및 [ODBC: ODBC 커서 라이브러리](../../data/odbc/odbc-the-odbc-cursor-library.md)합니다.  
   
 > [!TIP]

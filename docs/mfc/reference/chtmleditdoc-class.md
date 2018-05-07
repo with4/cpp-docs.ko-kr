@@ -1,12 +1,9 @@
 ---
-title: "CHtmlEditDoc 클래스 | Microsoft Docs"
-ms.custom: 
+title: CHtmlEditDoc 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHtmlEditDoc
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CHtmlEditDoc [MFC], IsModified
 - CHtmlEditDoc [MFC], OpenURL
 ms.assetid: b2cca61f-e5d6-4099-b0d1-46bf85f0bd64
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1e60c3b175346268b2c6b755786adbd8eb86467
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de452365a02b69798c62e2eecfd8051afcf08bb8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chtmleditdoc-class"></a>CHtmlEditDoc 클래스
 와 [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), MFC 문서 뷰 아키텍처 컨텍스트 내에서 WebBrowser 편집 플랫폼의 기능을 제공 합니다.  
@@ -72,14 +67,14 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxhtml.h  
   
-##  <a name="chtmleditdoc"></a>CHtmlEditDoc::CHtmlEditDoc  
+##  <a name="chtmleditdoc"></a>  CHtmlEditDoc::CHtmlEditDoc  
  생성 된 **CHtmlEditDoc** 개체입니다.  
   
 ```  
 CHtmlEditDoc();
 ```  
   
-##  <a name="getview"></a>CHtmlEditDoc::GetView  
+##  <a name="getview"></a>  CHtmlEditDoc::GetView  
  검색 된 [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) 개체는이 문서에 연결 합니다.  
   
 ```  
@@ -89,14 +84,14 @@ virtual CHtmlEditView* GetView() const;
 ### <a name="return-value"></a>반환 값  
  다음은 문서에 대 한 포인터를 반환 **CHtmlEditView** 개체입니다.  
   
-##  <a name="ismodified"></a>CHtmlEditDoc::IsModified  
+##  <a name="ismodified"></a>  CHtmlEditDoc::IsModified  
  관련된 보기 WebBrowser 컨트롤은 사용자가 수정 된 문서에 포함 되는지 여부를 반환 합니다.  
   
 ```  
 virtual BOOL IsModified();
 ```  
   
-##  <a name="openurl"></a>CHtmlEditDoc::OpenURL  
+##  <a name="openurl"></a>  CHtmlEditDoc::OpenURL  
  URL을 엽니다.  
   
 ```  

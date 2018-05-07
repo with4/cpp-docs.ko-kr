@@ -1,12 +1,9 @@
 ---
-title: "링커 도구 오류 LNK2039 | Microsoft Docs"
-ms.custom: 
+title: 링커 도구 오류 LNK2039 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2039
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK2039
 ms.assetid: eaa296bd-4901-41f6-8410-6d03ee827144
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 441765d85ce65a80102ed94b3f4394ae48c0e29f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 954ea12eb9b49c2bdf59b31a1ec2ec2e66c124ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2039"></a>링커 도구 오류 LNK2039
 ref 클래스를 가져오는\<유형 >' another.obj에 정의 된; 중 하나 가져온 또는 정의 여야 합니다  

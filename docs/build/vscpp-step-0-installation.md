@@ -1,9 +1,9 @@
 ---
-title: "Visual Studio에서 c + + 지원 설치 | Microsoft Docs"
-description: "Visual c + +에 대 한 Visual Studio 지원 설치"
+title: Visual Studio에서 c + + 지원 설치 | Microsoft Docs
+description: Visual c + +에 대 한 Visual Studio 지원 설치
 ms.custom: mvc
 ms.date: 12/12/2017
-ms.topic: get-started-article
+ms.topic: tutorial
 ms.technology:
 - devlang-C++
 ms.devlang: C++
@@ -12,20 +12,19 @@ dev_langs:
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b895569e5535fb05c1e2383df224f149815dd47f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 69092cdd6d79197fb7a2cbdc60b783174b70950b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-c-support-in-visual-studio"></a>Visual Studio에서 c + + 지원 설치
 
 다운로드 하 고 Visual Studio 및 Visual c + + 도구를 아직 설치 하지 않은 경우 시작 방법은 다음과 같습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 - 광대역 인터넷 연결 합니다. Visual Studio 설치 관리자는 여러 기가바이트 데이터를 다운로드할 수 있습니다.
 

@@ -1,12 +1,9 @@
 ---
 title: operator! = (stack) (STL/CLR) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::stack::operator!=
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator!= member [STL/CLR]
 ms.assetid: d28aca6a-685c-4d3d-bc97-de80d75ccd60
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e368bd30279d6fab091fa88af5eb8b094ca6a9d4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f00a61ba2d14632f8d36a75fc0ef35735cd8c551
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-stack-stlclr"></a>operator!= (stack)(STL/CLR)
 같지 않음 비교를 스택 합니다.  
@@ -50,7 +45,7 @@ template<typename Value,
 ## <a name="remarks"></a>설명  
  연산자 함수 반환 `!(left == right)`합니다. 테스트를 사용 하는지 여부를 `left` 동일 정렬 되지 않은 `right` 두 스택 요소 별로 비교를 하는 경우.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_stack_operator_ne.cpp   

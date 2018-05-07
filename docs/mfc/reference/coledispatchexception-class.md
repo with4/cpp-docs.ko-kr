@@ -1,12 +1,9 @@
 ---
-title: "COleDispatchException 클래스 | Microsoft Docs"
-ms.custom: 
+title: COleDispatchException 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDispatchException
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - COleDispatchException [MFC], m_strSource
 - COleDispatchException [MFC], m_wCode
 ms.assetid: 0e95c8be-e21a-490c-99ec-181c6a9a26d0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d90c59e4f85c871c113e51063ef1d50997bb508b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2ed492198c5c667fa1ffadcaa9a3bcc0461c16d4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledispatchexception-class"></a>COleDispatchException 클래스
 OLE 자동화의 핵심인 OLE `IDispatch` 인터페이스에만 해당하는 예외를 처리합니다.  
@@ -75,7 +70,7 @@ class COleDispatchException : public CException
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h  
   
-##  <a name="m_dwhelpcontext"></a>COleDispatchException::m_dwHelpContext  
+##  <a name="m_dwhelpcontext"></a>  COleDispatchException::m_dwHelpContext  
  응용 프로그램의 도움말의 도움말 컨텍스트를 식별 (합니다. HLP) 파일입니다.  
   
 ```  
@@ -85,10 +80,10 @@ DWORD m_dwHelpContext;
 ### <a name="remarks"></a>설명  
  이 멤버 함수에 의해 설정 되어 [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) 때 예외가 throw 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [coledispatchdriver:: Createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)합니다.  
   
-##  <a name="m_strdescription"></a>COleDispatchException::m_strDescription  
+##  <a name="m_strdescription"></a>  COleDispatchException::m_strDescription  
  "디스크가 꽉 찼습니다." 등의 일반 언어로 된 오류 설명을 포함합니다.  
   
 ```  
@@ -98,27 +93,27 @@ CString m_strDescription;
 ### <a name="remarks"></a>설명  
  이 멤버 함수에 의해 설정 되어 [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) 때 예외가 throw 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [coledispatchdriver:: Createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)합니다.  
   
-##  <a name="m_strhelpfile"></a>COleDispatchException::m_strHelpFile  
+##  <a name="m_strhelpfile"></a>  COleDispatchException::m_strHelpFile  
  응용 프로그램의 도움말 파일의 이름으로이 문자열의 프레임 워크를 채웁니다.  
   
 ```  
 CString m_strHelpFile;  
 ```  
   
-##  <a name="m_strsource"></a>COleDispatchException::m_strSource  
+##  <a name="m_strsource"></a>  COleDispatchException::m_strSource  
  프레임 워크 예외를 생성 하는 응용 프로그램의 이름으로이 문자열을 채웁니다.  
   
 ```  
 CString m_strSource;  
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [coledispatchdriver:: Createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)합니다.  
   
-##  <a name="m_wcode"></a>COleDispatchException::m_wCode  
+##  <a name="m_wcode"></a>  COleDispatchException::m_wCode  
  응용 프로그램에 오류 코드가 포함 되어 있습니다.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "CAnimationGroup 클래스 | Microsoft Docs"
-ms.custom: 
+title: CAnimationGroup 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationGroup
@@ -55,17 +52,15 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d047940ac1ef3103168aa40b53c726ce0767b52
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 11b78cf273fd510b8ce224004c759dcc5bbe3bec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup 클래스
 애니메이션 스토리 보드, 애니메이션 개체 및 애니메이션을 정의 하는 전환 결합 하는 애니메이션 그룹을 구현 합니다.  
@@ -119,7 +114,7 @@ class CAnimationGroup;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[CAnimationGroup::m_nGroupID](#m_ngroupid)|애니메이션 그룹의 고유 식별자입니다.|  
 |[CAnimationGroup::m_pParentController](#m_pparentcontroller)|이 그룹이 속한는 애니메이션 컨트롤러에 대 한 포인터입니다.|  
@@ -133,14 +128,14 @@ class CAnimationGroup;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="_dtorcanimationgroup"></a>CAnimationGroup:: ~ CAnimationGroup  
+##  <a name="_dtorcanimationgroup"></a>  CAnimationGroup:: ~ CAnimationGroup  
  소멸자입니다. 애니메이션 그룹 소멸 될 때 호출 됩니다.  
   
 ```  
 ~CAnimationGroup();
 ```  
   
-##  <a name="addkeyframes"></a>CAnimationGroup::AddKeyframes  
+##  <a name="addkeyframes"></a>  CAnimationGroup::AddKeyframes  
  스토리 보드에 키 프레임을 추가 하는 도우미입니다.  
   
 ```  
@@ -154,7 +149,7 @@ void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
  `bAddDeep`  
  이 메서드는 다른 키 프레임에 종속 된 스토리 보드 키 프레임에 추가 해야 하는지 여부를 지정 합니다.  
   
-##  <a name="addtransitions"></a>CAnimationGroup::AddTransitions  
+##  <a name="addtransitions"></a>  CAnimationGroup::AddTransitions  
  스토리 보드에 전환을 추가 하는 도우미입니다.  
   
 ```  
@@ -169,7 +164,7 @@ void AddTransitions(
   
  `bDependOnKeyframes`  
   
-##  <a name="animate"></a>CAnimationGroup::Animate  
+##  <a name="animate"></a>  CAnimationGroup::Animate  
  그룹 애니메이션 효과 적용 합니다.  
   
 ```  
@@ -190,7 +185,7 @@ BOOL Animate(
 ### <a name="remarks"></a>설명  
  이 메서드는 내부 스토리 보드를 만들고, 및 전환을 적용 만들고 bScheduleNow TRUE 인 경우 애니메이션을 예약 합니다. BScheduleNow FALSE 인 경우 지정된 된 시간에 애니메이션을 시작 하는 일정을 호출 해야 합니다.  
   
-##  <a name="applytransitions"></a>CAnimationGroup::ApplyTransitions  
+##  <a name="applytransitions"></a>  CAnimationGroup::ApplyTransitions  
  전환 애니메이션 개체에 적용 됩니다.  
   
 ```  
@@ -200,7 +195,7 @@ void ApplyTransitions();
 ### <a name="remarks"></a>설명  
  이 메서드는 스토리 보드 생성 되지 않은 경우 디버그 모드에서 어설션 합니다. 모든 전환을 먼저 다음 "정적" 키프레임을 (오프셋에 종속 된 키프레임) 추가, 키 프레임에 의존 하지 않는 전환을 추가합니다, 그리고 및 기타 키프레임을 전환에 따라 추가 만들고 마지막 전환 키 프레임에 의존 하는 추가 .  
   
-##  <a name="canimationgroup"></a>CAnimationGroup::CAnimationGroup  
+##  <a name="canimationgroup"></a>  CAnimationGroup::CAnimationGroup  
  애니메이션 그룹을 생성 합니다.  
   
 ```  
@@ -214,7 +209,7 @@ CAnimationGroup(CAnimationController* pParentController, UINT32 nGroupID);
  `nGroupID`  
  그룹 Id를 지정합니다.  
   
-##  <a name="createtransitions"></a>CAnimationGroup::CreateTransitions  
+##  <a name="createtransitions"></a>  CAnimationGroup::CreateTransitions  
  COM 전환을 개체를 생성 하는 도우미입니다.  
   
 ```  
@@ -224,7 +219,7 @@ BOOL CreateTransitions();
 ### <a name="return-value"></a>반환 값  
  TRUE는 메서드가 성공 하면, 그렇지 않으면 FALSE입니다.  
   
-##  <a name="findanimationobject"></a>CAnimationGroup::FindAnimationObject  
+##  <a name="findanimationobject"></a>  CAnimationGroup::FindAnimationObject  
  지정된 된 애니메이션 변수를 포함 하는 애니메이션 개체를 찾습니다.  
   
 ```  
@@ -238,7 +233,7 @@ CAnimationBaseObject* FindAnimationObject(IUIAnimationVariable* pVariable);
 ### <a name="return-value"></a>반환 값  
  애니메이션 개체 또는 애니메이션 개체를 찾지 못한 경우 NULL 포인터입니다.  
   
-##  <a name="getgroupid"></a>CAnimationGroup::GetGroupID  
+##  <a name="getgroupid"></a>  CAnimationGroup::GetGroupID  
  그룹 Id를 반환합니다.  
   
 ```  
@@ -248,63 +243,63 @@ UINT32 GetGroupID() const;
 ### <a name="return-value"></a>반환 값  
  그룹 식별자입니다.  
   
-##  <a name="m_bautocleartransitions"></a>CAnimationGroup::m_bAutoclearTransitions  
+##  <a name="m_bautocleartransitions"></a>  CAnimationGroup::m_bAutoclearTransitions  
  전환 애니메이션 개체 그룹에 속해 있는에서 선택을 취소 하는 방법을 지정 합니다. 이 멤버가 TRUE 이면 전환 애니메이션 예약 된 경우 자동으로 제거 됩니다. 그렇지 않으면 전환을 수동으로 제거 해야 합니다.  
   
 ```  
 BOOL m_bAutoclearTransitions;  
 ```  
   
-##  <a name="m_bautodestroyanimationobjects"></a>CAnimationGroup::m_bAutodestroyAnimationObjects  
+##  <a name="m_bautodestroyanimationobjects"></a>  CAnimationGroup::m_bAutodestroyAnimationObjects  
  애니메이션 개체를 소멸 하는 방법을 지정 합니다. 이 매개 변수가 TRUE 인 경우 그룹 소멸 될 때 애니메이션 개체 자동으로 제거 됩니다. 그렇지 않으면 애니메이션 개체는 수동으로 제거 되어야 합니다. 기본값은 FALSE입니다. 그룹에 속해 있는 모든 애니메이션 개체 new 연산자를 사용 하 여 동적으로 할당 된 경우에이 값을 TRUE로 설정 합니다.  
   
 ```  
 BOOL m_bAutodestroyAnimationObjects;  
 ```  
   
-##  <a name="m_bautodestroykeyframes"></a>CAnimationGroup::m_bAutodestroyKeyframes  
+##  <a name="m_bautodestroykeyframes"></a>  CAnimationGroup::m_bAutodestroyKeyframes  
  키 프레임을 제거 하는 방법을 지정 합니다. 모든 키 프레임 제거 되 고 삭제 합니다;이 값이 TRUE 이면 그렇지 않으면만 목록에서 제거 됩니다. 기본값은 TRUE입니다.  
   
 ```  
 BOOL m_bAutodestroyKeyframes;  
 ```  
   
-##  <a name="m_lstanimationobjects"></a>CAnimationGroup::m_lstAnimationObjects  
+##  <a name="m_lstanimationobjects"></a>  CAnimationGroup::m_lstAnimationObjects  
  애니메이션 개체의 목록을 포함합니다.  
   
 ```  
 CObList m_lstAnimationObjects;  
 ```  
   
-##  <a name="m_lstkeyframes"></a>CAnimationGroup::m_lstKeyFrames  
+##  <a name="m_lstkeyframes"></a>  CAnimationGroup::m_lstKeyFrames  
  키 프레임의 목록을 포함합니다.  
   
 ```  
 CObList m_lstKeyFrames;  
 ```  
   
-##  <a name="m_ngroupid"></a>CAnimationGroup::m_nGroupID  
+##  <a name="m_ngroupid"></a>  CAnimationGroup::m_nGroupID  
  애니메이션 그룹의 고유 식별자입니다.  
   
 ```  
 UINT32 m_nGroupID;  
 ```  
   
-##  <a name="m_pparentcontroller"></a>CAnimationGroup::m_pParentController  
+##  <a name="m_pparentcontroller"></a>  CAnimationGroup::m_pParentController  
  이 그룹이 속한는 애니메이션 컨트롤러에 대 한 포인터입니다.  
   
 ```  
 CAnimationController* m_pParentController;  
 ```  
   
-##  <a name="m_pstoryboard"></a>CAnimationGroup::m_pStoryboard  
+##  <a name="m_pstoryboard"></a>  CAnimationGroup::m_pStoryboard  
  애니메이션 스토리 보드를 가리킵니다. 이 포인터가 애니메이션에 호출한 후에 유효합니다.  
   
 ```  
 ATL::CComPtr<IUIAnimationStoryboard> m_pStoryboard;  
 ```  
   
-##  <a name="removekeyframes"></a>CAnimationGroup::RemoveKeyframes  
+##  <a name="removekeyframes"></a>  CAnimationGroup::RemoveKeyframes  
  제거 하 고 선택적으로 애니메이션 그룹에 속해 있는 모든 키 프레임을 제거 합니다.  
   
 ```  
@@ -314,7 +309,7 @@ void RemoveKeyframes();
 ### <a name="remarks"></a>설명  
  키 프레임 제거 되 고 소멸 된 후 m_bAutodestroyKeyframes 멤버가 TRUE 키프레임을 키 프레임의 내부 목록에서 방금 제거 되는 그렇지 않은 경우.  
   
-##  <a name="removetransitions"></a>CAnimationGroup::RemoveTransitions  
+##  <a name="removetransitions"></a>  CAnimationGroup::RemoveTransitions  
  전환 애니메이션 그룹에 속해 있는 애니메이션 개체에서 제거 합니다.  
   
 ```  
@@ -324,7 +319,7 @@ void RemoveTransitions();
 ### <a name="remarks"></a>설명  
  M_bAutoclearTransitions 플래그가 TRUE로 설정 된 경우이 메서드는 그룹에 속한 모든 애니메이션 개체를 반복 하 고 CAnimationObject::ClearTransitions(FALSE)를 호출 합니다.  
   
-##  <a name="schedule"></a>CAnimationGroup::Schedule  
+##  <a name="schedule"></a>  CAnimationGroup::Schedule  
  지정된 된 시간에 애니메이션을 예약 합니다.  
   
 ```  
@@ -344,7 +339,7 @@ BOOL Schedule(IUIAnimationTimer* pTimer, UI_ANIMATION_SECONDS time);
 ### <a name="remarks"></a>설명  
  지정된 된 시간에 애니메이션을 예약 하려면이 함수를 호출 합니다. BScheduleNow 먼저 FALSE로 설정 된 애니메이션을 호출 해야 합니다.  
   
-##  <a name="setautodestroytransitions"></a>CAnimationGroup::SetAutodestroyTransitions  
+##  <a name="setautodestroytransitions"></a>  CAnimationGroup::SetAutodestroyTransitions  
  자동으로 그룹에 속하는 모든 애니메이션 개체 전환을 소멸 지시 합니다.  
   
 ```  

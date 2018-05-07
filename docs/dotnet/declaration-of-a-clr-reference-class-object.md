@@ -1,31 +1,26 @@
 ---
-title: "CLR 참조 클래스 개체의 선언 | Microsoft Docs"
-ms.custom: 
+title: CLR 참조 클래스 개체의 선언 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - types [C++], reference types
 - reference types, CLR
 ms.assetid: 6d64f746-3715-4948-ada3-88859f4150e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0e026855abef535e0ca58662335772e49dc5fa1f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 12cead3a142c69da56390ca6f5bf32cecc3b0075
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declaration-of-a-clr-reference-class-object"></a>CLR 참조 클래스 개체 선언
 선언 하 고 참조 클래스 형식의 개체를 인스턴스화하는 구문 Visual c + + Managed Extensions for c + + 변경 되었습니다.  
@@ -131,7 +126,7 @@ Object * obj = 0;
 Object * obj2 = 1;  
 ```  
   
- 새 구문에서 초기화 또는 할당 된 값의 형식에 `Object` 하면 해당 값 형식의 암시적 boxing 합니다. 새 구문에서 모두 `obj` 및 `obj2` boxed Int32 개체로 값 0과 1, 각각 해결으로 초기화 됩니다. 예:  
+ 새 구문에서 초기화 또는 할당 된 값의 형식에 `Object` 하면 해당 값 형식의 암시적 boxing 합니다. 새 구문에서 모두 `obj` 및 `obj2` boxed Int32 개체로 값 0과 1, 각각 해결으로 초기화 됩니다. 예를 들어:  
   
 ```  
 // causes the implicit boxing of both 0 and 1  

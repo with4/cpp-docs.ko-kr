@@ -2,12 +2,9 @@
 title: MFC 프로젝트에 ATL 지원 추가 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.adding.atl.mfc
 dev_langs:
@@ -16,23 +13,21 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92a4e9096cf72f6556c8ceb36e12cdff97139712
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2d7794d5c3777a208fef6371009771fc5b43c97
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>MFC 프로젝트에 ATL 지원 추가
 MFC 기반 응용 프로그램을 이미 만든 경우 다음 지원을 추가할 수 있습니다 액티브 템플릿 라이브러리 (ATL)에 대 한 쉽게 MFC 프로젝트 마법사에는 ATL 지원 추가 실행 하 여 합니다.  
   
 > [!NOTE]
->  ATL 및 MFC는 일반적으로 Visual Studio의 Express 버전에서는 지원 되지 않습니다.  
+>  일반적으로 ATL 및 MFC는 Visual Studio의 Express 버전에서는 지원 되지 않습니다.  
   
 > [!NOTE]
 >  이 지원은 MFC 실행 파일 또는 DLL 프로젝트에 추가 하는 간단한 COM 개체에만 적용 됩니다. MFC 프로젝트에 다른 COM 개체 (ActiveX 컨트롤 포함)를 추가할 수는 있지만 개체가 예상 대로 작동 하지 않을 수 있습니다.  

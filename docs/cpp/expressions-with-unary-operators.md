@@ -1,12 +1,9 @@
 ---
-title: "단항 연산자가 있는 식 | Microsoft Docs"
-ms.custom: 
+title: 단항 연산자가 있는 식 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - unary operators [C++], expressions with
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44485f0c5749db36ececd2061955f9956cb49ece
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0e1b8db2e02e6ab3e2a70d94ba5f6fe3516e464e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expressions-with-unary-operators"></a>단항 연산자가 있는 식
 단항 연산자는 하나의 식에서 하나의 피연산자에 대해서만 작동합니다. 단항 연산자의 종류는 다음과 같습니다.  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [__alignof 연산자](../cpp/alignof-operator.md)  
   
--   [new 연산자](../cpp/new-operator-cpp.md)  
+-   [New 연산자](../cpp/new-operator-cpp.md)  
   
 -   [delete 연산자](../cpp/delete-operator-cpp.md)  
   
@@ -64,17 +59,17 @@ ms.lasthandoff: 12/21/2017
   
 -   *postfix-expression*  
   
--   `++`*단항 식*  
+-   `++` *단항 식*  
   
--   `--`*단항 식*  
+-   `--` *단항 식*  
   
 -   *단항 연산자* *캐스트 식*  
   
--   `sizeof`*단항 식*  
+-   `sizeof` *단항 식*  
   
--   `sizeof(`*형식-이름이*`)`  
+-   `sizeof(` *형식 이름* `)`  
   
--   `decltype(`*식*`)`  
+-   `decltype(` *식* `)`  
   
 -   *할당 식*  
   
@@ -82,7 +77,7 @@ ms.lasthandoff: 12/21/2017
   
  모든 *후 위 식* 것으로 간주 됩니다는 *단항 식*, 모든 기본 식으로 간주 하기 때문에 및는 *후 위 식*, 모든 기본 식 것으로 간주 한 *단항 식* 도 합니다. 자세한 내용은 참조 [후 위 식](../cpp/postfix-expressions.md) 및 [기본 식](../cpp/primary-expressions.md)합니다.  
   
- A *단항 연산자* 다음 기호 중 하나 이상의 구성 됩니다.`* & + - ! ~`  
+ A *단항 연산자* 다음 기호 중 하나 이상의 구성 됩니다. `* & + - ! ~`  
   
  *캐스트 식* 은 단항 식 유형을 변경 하는 선택적 캐스팅을 사용 합니다. 자세한 내용은 참조 [캐스트 연산자: ()](../cpp/cast-operator-parens.md)합니다.  
   

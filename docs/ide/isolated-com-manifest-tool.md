@@ -1,13 +1,10 @@
 ---
-title: "매니페스트 도구 속성 (Visual c + +) COM 격리 | Microsoft Docs"
-ms.custom: 
+title: 매니페스트 도구 속성 (Visual c + +) COM 격리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCManifestTool.RegistrarScriptFile
 - VC.Project.VCManifestTool.ComponentFileName
@@ -16,17 +13,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 457582b8-cfde-49c0-92e3-3a6b9e8c08eb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe2098c4caead6ebc9ad4747354ae96f093f2c91
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c425a71f8bb8a7972ade29fb0d18cf3eab7debb5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>구성 속성, 매니페스트 도구, COM 격리 &lt;Projectname&gt; 속성 페이지 대화 상자
 이 대화 상자를 사용 하 여 지정 **격리 COM** 에 대 한 옵션 [Mt.exe](http://msdn.microsoft.com/library/aa375649)합니다.  

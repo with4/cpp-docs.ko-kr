@@ -2,12 +2,9 @@
 title: CDaoTableDefInfo 구조체 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoTableDefInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CDaoTableDefInfo structure [MFC]
 - DAO (Data Access Objects), TableDefs collection
 ms.assetid: c01ccebb-5615-434e-883c-4f60eac943dd
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e949cb0348cb55fcee5a940b5753a5a8197e600b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53e20ca3f483bd9c00b298c69a526d8f5dd31cdb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo 구조체
 `CDaoTableDefInfo` 구조 데이터 액세스 개체 (DAO)에 대해 정의 된 테이블 정의 개체에 대 한 정보를 포함 합니다.  
@@ -54,7 +49,7 @@ struct CDaoTableDefInfo
  고유 하 게 테이블 정의 개체의 이름을 지정 합니다. 이 속성의 값을 직접 검색 하 여 테이블 정의 개체를 호출 [GetName](../../mfc/reference/cdaotabledef-class.md#getname) 멤버 함수입니다. 자세한 내용은 DAO 도움말의 "Name 속성" 항목을 참조 합니다.  
   
  `m_bUpdatable`  
- 테이블에 변경 내용을 만들 수 있는지 여부를 나타냅니다. 열려는 테이블을 업데이트할 수 있는지 여부를 확인 하는 빠른 방법은는 `CDaoTableDef` 테이블에 대 한 개체와 개체의 호출 [CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate) 멤버 함수입니다. `CanUpdate`항상 0이 아닌 값을 반환 합니다 (**TRUE**) tabledef 새로 만든된 개체 및 0에 대 한 (**FALSE**) 연결 된 테이블 정의 개체에 대 한 합니다. 새 테이블 정의 개체는 현재 사용자에 대 한 쓰기 권한이 있는 데이터베이스에만 추가할 수 있습니다. 테이블에만 업데이트할 수 없는 필드가 포함 하는 경우 `CanUpdate` 0을 반환 합니다. 하나 이상의 필드를 업데이트할 수, `CanUpdate` 0이 아닌 값을 반환 합니다. 업데이트할 수 있는 필드에만 편집할 수 있습니다. 자세한 내용은 DAO 도움말의 "업데이트할 수 있는 Property" 항목을 참조 합니다.  
+ 테이블에 변경 내용을 만들 수 있는지 여부를 나타냅니다. 열려는 테이블을 업데이트할 수 있는지 여부를 확인 하는 빠른 방법은는 `CDaoTableDef` 테이블에 대 한 개체와 개체의 호출 [CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate) 멤버 함수입니다. `CanUpdate` 항상 0이 아닌 값을 반환 합니다 (**TRUE**) tabledef 새로 만든된 개체 및 0에 대 한 (**FALSE**) 연결 된 테이블 정의 개체에 대 한 합니다. 새 테이블 정의 개체는 현재 사용자에 대 한 쓰기 권한이 있는 데이터베이스에만 추가할 수 있습니다. 테이블에만 업데이트할 수 없는 필드가 포함 하는 경우 `CanUpdate` 0을 반환 합니다. 하나 이상의 필드를 업데이트할 수, `CanUpdate` 0이 아닌 값을 반환 합니다. 업데이트할 수 있는 필드에만 편집할 수 있습니다. 자세한 내용은 DAO 도움말의 "업데이트할 수 있는 Property" 항목을 참조 합니다.  
   
  `m_lAttributes`  
  테이블 정의 개체로 표시 된 테이블의 특성을 지정 합니다. 테이블 정의의 현재 속성을 검색 하려면 해당 [GetAttributes](../../mfc/reference/cdaotabledef-class.md#getattributes) 멤버 함수입니다. 반환 되는 값이 긴 상수의 조합 수 (비트 OR를 사용 하 여 (**&#124;**) 연산자).  
@@ -95,7 +90,7 @@ struct CDaoTableDefInfo
 ## <a name="remarks"></a>설명  
  테이블 정의 클래스의 개체 [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)합니다. 주, 보조 및 위의 모든에 대 한 참조 정보에서 반환 되는 방법을 나타내는 [GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) 클래스에서 멤버 함수 `CDaoDatabase`합니다.  
   
- 검색 한 정보는 [CDaoDatabase::GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) 멤버 함수에 저장 되는 `CDaoTableDefInfo` 구조입니다. 호출 된 `GetTableDefInfo` 의 멤버 함수는 `CDaoDatabase` 테이블 정의 개체는 저장 된 해당 TableDefs 컬렉션 개체입니다. `CDaoTableDefInfo`또한 정의 `Dump` 디버그에서 멤버 함수를 작성 합니다. 사용할 수 있습니다 `Dump` 의 내용을 덤프 하는 `CDaoTableDefInfo` 개체입니다.  
+ 검색 한 정보는 [CDaoDatabase::GetTableDefInfo](../../mfc/reference/cdaodatabase-class.md#gettabledefinfo) 멤버 함수에 저장 되는 `CDaoTableDefInfo` 구조입니다. 호출 된 `GetTableDefInfo` 의 멤버 함수는 `CDaoDatabase` 테이블 정의 개체는 저장 된 해당 TableDefs 컬렉션 개체입니다. `CDaoTableDefInfo` 또한 정의 `Dump` 디버그에서 멤버 함수를 작성 합니다. 사용할 수 있습니다 `Dump` 의 내용을 덤프 하는 `CDaoTableDefInfo` 개체입니다.  
   
  날짜 및 시간 설정에 기본 테이블을 만들거나 마지막으로 업데이트 하는 컴퓨터에서 파생 됩니다. 다중 사용자 환경에서 사용자가 이러한는 DateCreated에서 불일치를 방지 하기 위해 파일 서버에서 직접 설정 및 LastUpdated 속성 설정을 받아야 합니다.  
   

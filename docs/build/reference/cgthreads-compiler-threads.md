@@ -1,13 +1,10 @@
 ---
-title: "-CGTHREADS (컴파일러 스레드) | Microsoft Docs"
-ms.custom: 
+title: -CGTHREADS (컴파일러 스레드) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - -CGTHREADS linker option
 - CGTHREADS linker option
 ms.assetid: 4b52cfdb-3702-470b-9580-fabeb1417488
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 542e35ecbb5e56ae0d13861b9885936f3b47c9da
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5905c29170a7ad636420a9bcdbd282ccfc2e7ec3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cgthreads-compiler-threads"></a>/CGTHREADS(컴파일러 스레드)
 링크 타임 코드 생성이 지정된 경우 최적화 및 코드 생성에 사용할 cl.exe 스레드의 수를 설정합니다.  

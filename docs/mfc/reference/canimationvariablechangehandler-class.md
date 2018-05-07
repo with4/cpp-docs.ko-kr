@@ -1,12 +1,9 @@
 ---
-title: "CAnimationVariableChangeHandler 클래스 | Microsoft Docs"
-ms.custom: 
+title: CAnimationVariableChangeHandler 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationVariableChangeHandler
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CAnimationVariableChangeHandler [MFC], OnValueChanged
 - CAnimationVariableChangeHandler [MFC], SetAnimationController
 ms.assetid: 2ea4996d-5c04-4dfc-be79-d42d55050795
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f70e8d59e291362496ec2555cf2838bf2df41d3a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2e35fc33b26fa6bead73458a46d7c4edee1cf136
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationvariablechangehandler-class"></a>CAnimationVariableChangeHandler 클래스
 애니메이션 변수 값이 변경될 때 애니메이션 API에서 호출하는 콜백을 구현합니다.  
@@ -69,7 +64,7 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="onvaluechanged"></a>CAnimationVariableChangeHandler::OnValueChanged  
+##  <a name="onvaluechanged"></a>  CAnimationVariableChangeHandler::OnValueChanged  
  애니메이션 변수 값이 변경 될 때 호출 합니다.  
   
 ```  
@@ -96,7 +91,7 @@ IFACEMETHOD(OnValueChanged) (
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK를 반환 합니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.  
   
-##  <a name="setanimationcontroller"></a>CAnimationVariableChangeHandler::SetAnimationController  
+##  <a name="setanimationcontroller"></a>  CAnimationVariableChangeHandler::SetAnimationController  
  경로 이벤트에는 애니메이션 컨트롤러에 대 한 포인터를 저장합니다.  
   
 ```  

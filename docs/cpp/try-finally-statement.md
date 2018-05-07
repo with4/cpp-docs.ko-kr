@@ -2,11 +2,8 @@
 title: try-finally 문 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - __try
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c57676cace8451de266d30d4c146e3ae0c3cb1b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a6457e92b7f4b57c7c181705e369e8582fb54f9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="try-finally-statement"></a>try-finally 문
 **Microsoft 전용**  
@@ -55,9 +50,9 @@ __finally {
   
 ## <a name="grammar"></a>문법  
  *try-finally-statement*:  
- `__try`*복합 문*  
+ `__try` *복합 문*  
   
- `__finally`*복합 문*  
+ `__finally` *복합 문*  
   
  `try-finally` 문은 C 및 C++ 언어의 Microsoft 확장으로서, 코드 블록 실행이 중단된 경우 대상 응용 프로그램이 정리 코드를 실행하게 해줍니다. 정리는 메모리 할당 해제, 파일 닫기 및 파일 핸들 해제와 같은 작업으로 구성됩니다. `try-finally` 문은 루틴으로부터 중간에 반환되게 만들 수 있는 오류가 있는지 확인하기 위해 검사가 수행되는 위치가 많은 루틴에 특히 유용합니다.  
   
@@ -80,7 +75,7 @@ __finally {
   
  예를 들어, 일련의 함수 호출 링크에서는 함수 A를 D에 연결한다고 가정합니다(아래 그림 참조). 각 함수에는 종료 처리기가 하나씩 있습니다. 예외가 D 함수에서 발생하고 A에서 처리될 경우 시스템이 스택 D, C, B를 해제하면 그 순서대로 종료 처리기가 호출됩니다.  
   
- ![종료 &#45;순서; 처리기 실행](../cpp/media/vc38cx1.gif "vc38CX1")  
+ ![종료의 순서&#45;처리기 실행](../cpp/media/vc38cx1.gif "vc38CX1")  
 종료 처리기 실행 순서  
   
 > [!NOTE]

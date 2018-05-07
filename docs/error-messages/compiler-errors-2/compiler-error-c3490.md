@@ -1,13 +1,10 @@
 ---
-title: "컴파일러 오류 C3490 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C3490 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C3490
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3490
 ms.assetid: 7638559a-fd06-4527-a9c1-0c8ae68b3123
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6439b48dc752d2bed01371cae59b2d77db16f1f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 593e5509ada926f27243a761da3470eb2d846a22
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3490"></a>컴파일러 오류 C3490
 'var'는 const 개체를 통해 액세스되고 있으므로 수정할 수 없습니다.  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
 -   메서드 선언에서 `const` 한정자를 제거합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `_i` 메서드의 멤버 변수 `const` 를 수정하므로 C3490을 생성합니다.  
   
 ```  
@@ -54,7 +49,7 @@ class C
 };  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 메서드 선언에서 `const` 한정자를 제거하여 C3490를 해결합니다.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: 'multiset:: generic_container (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multiset::generic_container
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - generic_container member [STL/CLR]
 ms.assetid: 292d6592-e22b-432a-b64d-c8937f19f417
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 00b15b44cf115b8e315fa620141b6c5e49da9bc3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c3179eb1d6579323840eee8ee065a237eda5f79d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multisetgenericcontainer-stlclr"></a>multiset::generic_container(STL/CLR)
 컨테이너에 대 한 제네릭 인터페이스의 형식입니다.  
@@ -42,7 +37,7 @@ typedef Microsoft::VisualC::StlClr::
 ## <a name="remarks"></a>설명  
  이 형식은이 서식 파일 컨테이너 클래스에 대 한 제네릭 인터페이스를 설명 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_multiset_generic_container.cpp   

@@ -1,12 +1,9 @@
 ---
-title: "CSyncObject 클래스 | Microsoft Docs"
-ms.custom: 
+title: CSyncObject 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSyncObject
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CSyncObject [MFC], Unlock
 - CSyncObject [MFC], m_hObject
 ms.assetid: c62ea6eb-a17b-4e01-aed4-321fc435a5f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b0c5f53c80bed1814295fd190cf73675a269b32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1712f0d26fc0d9ac3dcfb0f2a15a906351f43154
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csyncobject-class"></a>CSyncObject 클래스
 Win32의 동기화 개체에 일반적인 기능을 제공하는 순수 가상 클래스입니다.  
@@ -84,7 +79,7 @@ class CSyncObject : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxmt.h  
   
-##  <a name="csyncobject"></a>CSyncObject::CSyncObject  
+##  <a name="csyncobject"></a>  CSyncObject::CSyncObject  
  제공 된 이름 가진 동기화 개체를 만듭니다.  
   
 ```  
@@ -96,7 +91,7 @@ virtual ~CSyncObject();
  `pstrName`  
  개체의 이름입니다. 경우 **NULL**, *pstrName* null이 됩니다.  
   
-##  <a name="lock"></a>CSyncObject::Lock  
+##  <a name="lock"></a>  CSyncObject::Lock  
  동기화 개체에 의해 제어 되는 리소스에 액세스 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -113,14 +108,14 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ### <a name="remarks"></a>설명  
  동기화 개체가 신호를 받으면 `Lock` 성공적으로 반환 하 고 스레드가 이제 개체를 소유 합니다. 동기화 개체가 신호 없음으로 (사용 불가) `Lock` 신호를 받을 수에 지정 된 시간 (밀리초). 한도까지 동기화 개체에 대 한 대기는 *dwTimeOut* 매개 변수입니다. 동기화 개체는 지정 된 기간에 신호 되지 않은 경우 `Lock` 오류를 반환 합니다.  
   
-##  <a name="m_hobject"></a>CSyncObject::m_hObject  
+##  <a name="m_hobject"></a>  CSyncObject::m_hObject  
  기본 동기화 개체에 대 한 핸들입니다.  
   
 ```  
 HANDLE m_hObject;  
 ```  
   
-##  <a name="operator_handle"></a>CSyncObject::operator 핸들  
+##  <a name="operator_handle"></a>  CSyncObject::operator 핸들  
  이 연산자를 사용 하 여의 핸들을 가져올 수는 `CSyncObject` 개체입니다.  
   
 ```  
@@ -133,7 +128,7 @@ operator HANDLE() const;
 ### <a name="remarks"></a>설명  
  Windows Api를 직접 호출 하는 핸들을 사용할 수 있습니다.  
   
-##  <a name="unlock"></a>CSyncObject::Unlock  
+##  <a name="unlock"></a>  CSyncObject::Unlock  
  선언 `Unlock` 매개 변수가 없는 순수 가상 함수 이며에서 파생 된 모든 클래스에서 재정의 되어야 `CSyncObject`합니다.  
   
 ```  

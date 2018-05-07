@@ -2,11 +2,8 @@
 title: CMapStringToOb 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMapStringToOb
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a840677819710247e73aa8e3bcb904be756f852
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 52adc7ce08644fb002b2a0a2cd91d20d15d4f24a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb 클래스
 고유한 `CString` 개체를 `CObject` 포인터에 매핑하는 사전 컬렉션 클래스입니다.  
@@ -101,7 +96,7 @@ class CMapStringToOb : public CObject
   
  형식의 변수 **위치** 모든 지도 변형에 대 한 대체 항목 액세스에 사용 됩니다. 사용할 수는 **위치** 항목 "기억" 하 고 맵을 통해 반복 하 합니다. 이 반복은 키 값으로 순차적 이라고 생각할 수도 있습니다. 그것이 아니야. 검색 된 요소의 순서는 결정 되지 않습니다.  
   
- `CMapStringToOb`는 serialization 및 요소 덤프를 지원하기 위해 `IMPLEMENT_SERIAL` 매크로를 통합합니다. 지도 오버 로드 된 삽입을 사용 하 여 보관 저장소에 저장 되는 경우 각 요소가 차례로 serialize 됩니다 ( ** << **) 연산자 또는 `Serialize` 멤버 함수입니다.  
+ `CMapStringToOb`는 serialization 및 요소 덤프를 지원하기 위해 `IMPLEMENT_SERIAL` 매크로를 통합합니다. 지도 오버 로드 된 삽입을 사용 하 여 보관 저장소에 저장 되는 경우 각 요소가 차례로 serialize 됩니다 ( **<<**) 연산자 또는 `Serialize` 멤버 함수입니다.  
   
  지도에 있는 개별 요소의 진단 덤프 해야 하는 경우 (의 `CString` 값 및 `CObject` 내용을), 덤프 컨텍스트 깊이 1 이상으로 설정 해야 합니다.  
   
@@ -231,12 +226,12 @@ void GetNextAssoc(
   
 |클래스|멤버 함수|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**GetNextAssoc void (위치 &** *rNextPosition* **, void\* & ** *rKey* **, void\* & ** *rValue* **) const;**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**GetNextAssoc void (위치 &** *rNextPosition* **, void\* & ** *rKey* **, WORD 및** *rValue* **) const;**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**GetNextAssoc void (위치 &** *rNextPosition* **, CString &** *rKey* **, void\* & ** *rValue* **) const;**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**GetNextAssoc void (위치 &** *rNextPosition* **, void\* &**  *rKey* **, void\* &**  *rValue* **) const;**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**GetNextAssoc void (위치 &** *rNextPosition* **, void\* &**  *rKey* **, WORD 및** *rValue* **) const;**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**GetNextAssoc void (위치 &** *rNextPosition* **, CString &** *rKey* **, void\* &**  *rValue* **) const;**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**GetNextAssoc void (위치 &** *rNextPosition* **, CString &** *rKey* **, CString &** *rValue* **) const;**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**GetNextAssoc void (위치 &** *rNextPosition* **, WORD &** *rKey* **, CObject\* & ** *rValue* **) const;**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**GetNextAssoc void (위치 &** *rNextPosition* **, WORD &** *rKey* **, void\* & ** *rValue* **) const;**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**GetNextAssoc void (위치 &** *rNextPosition* **, WORD &** *rKey* **, CObject\* &**  *rValue* **) const;**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**GetNextAssoc void (위치 &** *rNextPosition* **, WORD &** *rKey* **, void\* &**  *rValue* **) const;**|  
   
 ### <a name="example"></a>예제  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
@@ -326,8 +321,8 @@ UINT HashKey(LPCTSTR key) const;
   
 |클래스|멤버 함수|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**UINT HashKey (void\* ** `key` **) const;**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**UINT HashKey (void\* ** `key` **) const;**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**UINT HashKey (void\***  `key` **) const;**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**UINT HashKey (void\***  `key` **) const;**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**UINT HashKey (LPCTSTR** `key` **) const;**|  
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**UINT HashKey (LPCTSTR** `key` **) const;**|  
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**UINT HashKey (WORD** `key` **) const;**|  
@@ -414,12 +409,12 @@ BOOL Lookup(
   
 |클래스|멤버 함수|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**BOOL 조회 (void\* ** `key` **, void\* & ** `rValue` **) const;**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**BOOL 조회 (void\* ** `key` **, WORD &** `rValue` **) const;**|  
-|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL 조회 (LPCTSTR** `key` **, void\* & ** `rValue` **) const;**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**BOOL 조회 (void\***  `key` **, void\* &**  `rValue` **) const;**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**BOOL 조회 (void\***  `key` **, WORD &** `rValue` **) const;**|  
+|[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL 조회 (LPCTSTR** `key` **, void\* &**  `rValue` **) const;**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL 조회 (LPCTSTR** `key` **, CString &** `rValue` **) const;**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**BOOL 조회 (WORD** `key` **, CObject\* & ** `rValue` **) const;**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**BOOL 조회 (WORD** `key` **, void\* & ** `rValue` **) const;**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**BOOL 조회 (WORD** `key` **, CObject\* &**  `rValue` **) const;**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**BOOL 조회 (WORD** `key` **, void\* &**  `rValue` **) const;**|  
   
 ### <a name="example"></a>예제  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
@@ -475,11 +470,11 @@ CObject*& operator[ ](lpctstr key);
 |클래스|멤버 함수|  
 |-----------|---------------------|  
 |[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void\*& operator[](void\*** `key` **\);**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**WORD & 연산자 (void\* ** `key` ** \);**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**WORD & 연산자 (void\***  `key`  **\);**|  
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void\*& operator[](lpctstr** `key` **\);**|  
-|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**CString & 연산자 (lpctstr** `key` ** \);**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**CObject\*& 연산자 (word** `key` ** \);**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void\*& operator[](word** `key` **\);**|  
+|[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**CString & 연산자 (lpctstr** `key`  **\);**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**CObject\*& 연산자 (word** `key`  **\);**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void\*& 연산자 (word** `key`  **\);**|  
   
 ### <a name="example"></a>예제  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
@@ -547,8 +542,8 @@ BOOL RemoveKey(LPCTSTR key);
 |[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**BOOL RemoveKey( void\*** `key` **);**|  
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**BOOL RemoveKey( LPCTSTR** `key` **);**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**BOOL RemoveKey( LPCTSTR** `key` **);**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**BOOL RemoveKey( WORD** `key` **);**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**BOOL RemoveKey( WORD** `key` **);**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**BOOL RemoveKey (WORD** `key` **);**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**BOOL RemoveKey (WORD** `key` **);**|  
   
 ### <a name="example"></a>예제  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
@@ -588,12 +583,12 @@ void SetAt(
   
 |클래스|멤버 함수|  
 |-----------|---------------------|  
-|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**void SetAt( void\*** `key` **, void\*** `newValue` **);**|  
-|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**void SetAt( void\*** `key` **, WORD** `newValue` **);**|  
+|[CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)|**SetAt void (void\***  `key` **, void\***  `newValue` **);**|  
+|[CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)|**SetAt void (void\***  `key` **, WORD** `newValue` **);**|  
 |[CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)|**void SetAt( LPCTSTR** `key` **, void\*** `newValue` **);**|  
 |[CMapStringToString](../../mfc/reference/cmapstringtostring-class.md)|**void SetAt( LPCTSTR** `key` **, LPCTSTR** `newValue` **);**|  
-|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void SetAt( WORD** `key` **, CObject\*** `newValue` **);**|  
-|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void SetAt( WORD** `key` **, void\*** `newValue` **);**|  
+|[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**SetAt void (WORD** `key` **, CObject\***  `newValue` **);**|  
+|[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**SetAt void (WORD** `key` **, void\***  `newValue` **);**|  
   
 ### <a name="example"></a>예제  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  

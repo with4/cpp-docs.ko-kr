@@ -1,13 +1,10 @@
 ---
-title: "방법: 표준 문자열을 system:: string으로 변환 | Microsoft Docs"
-ms.custom: 
+title: '방법: 표준 문자열을 system:: string으로 변환 | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,23 +12,21 @@ helpviewer_keywords:
 - string conversion [C++], C++ Standard Library string
 - strings [C++], converting
 ms.assetid: 1fde79a0-9d0b-44e5-981b-e8f2676c199d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c6a2bc4fb1a73954e182ea192047a7ec6ca20c1d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4910ca322b71e8570aebd9196b106680454fd261
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-convert-standard-string-to-systemstring"></a>방법: 표준 문자열을 System::String으로 변환
 이 항목에서는 c + + 표준 라이브러리 문자열로 변환 하는 방법을 ([\<문자열 >](../standard-library/string.md))에 <xref:System.String>합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // convert_standard_string_to_system_string.cpp  

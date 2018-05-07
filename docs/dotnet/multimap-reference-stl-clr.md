@@ -1,12 +1,9 @@
 ---
 title: 'multimap:: reference (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multimap::reference
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - reference member [STL/CLR]
 ms.assetid: bc402641-8310-479f-b345-b9646e534c00
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ae8e185723a9dea535fc420c5f8006ed7eee4c7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9e41b689996f0f6004b1ae91e755311bd9295c7c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multimapreference-stlclr"></a>multimap::reference(STL/CLR)
 요소에 대한 참조의 형식입니다.  
@@ -40,7 +35,7 @@ typedef value_type% reference;
 ## <a name="remarks"></a>설명  
  이 형식은 요소에 대 한 참조를 설명 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_multimap_reference.cpp   

@@ -1,13 +1,10 @@
 ---
-title: "레코드 집합: 집합 만들기 및 닫기 (ODBC) 레코드 집합 | Microsoft Docs"
-ms.custom: 
+title: '레코드 집합: 집합 만들기 및 닫기 (ODBC) 레코드 집합 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9ec09c08aa4730c11960d675aef68c8a1007c900
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bbf020e12151e666aa8f88098865b1624403b828
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>레코드 집합: 레코드 집합 만들기 및 닫기(ODBC)
 MFC ODBC 클래스에이 항목에 적용 됩니다.  
@@ -44,7 +39,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
 -   [레코드 집합 개체를 닫는 방법과 시기](#_core_closing_a_recordset)합니다.  
   
-##  <a name="_core_creating_recordsets_at_run_time"></a>런타임 시 레코드 집합 만들기  
+##  <a name="_core_creating_recordsets_at_run_time"></a> 런타임 시 레코드 집합 만들기  
  프로그램에서 레코드 집합 개체를 만들 수 있습니다, 전에 일반적으로 응용 프로그램 관련 레코드 집합 클래스를 작성 합니다. 이 예비 단계에 대 한 자세한 내용은 참조 [MFC ODBC 소비자 추가](../../mfc/reference/adding-an-mfc-odbc-consumer.md)합니다.  
   
  데이터 원본에서 레코드를 선택 해야 스냅숏 엽니다. 만들 개체의 형식은 필요한 항목에 따라 다릅니다. 지 원하는 ODBC 드라이버와 응용 프로그램에 데이터를 사용 합니다. 자세한 내용은 참조 [다이너셋](../../data/odbc/dynaset.md) 및 [스냅숏](../../data/odbc/snapshot.md)합니다.  
@@ -89,7 +84,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 > [!TIP]
 >  개발 중에 사용 되는 연결 문자열 최종 사용자에 게 필요한 동일한 연결 문자열을 수 있습니다. 이런 점에서 응용 프로그램을 일반화 하는 방법에 대 한 아이디어를 참조 하십시오. [데이터 소스: 연결 관리 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)합니다.  
   
-##  <a name="_core_setting_recordset_options"></a>레코드 집합 옵션 설정  
+##  <a name="_core_setting_recordset_options"></a> 레코드 집합 옵션 설정  
  레코드 집합 개체를 생성 한 후 있지만 호출 하기 전에 **열려** 레코드를 선택 하려면 레코드 집합의 동작을 제어 하는 몇 가지 옵션을 설정 수 있습니다. 모든 레코드 집합에 대 한 다음 작업을 수행할 수 있습니다.  
   
 -   지정 된 [필터](../../data/odbc/recordset-filtering-records-odbc.md) 레코드 선택을 제한 하 합니다.  
@@ -105,7 +100,7 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 > [!NOTE]
 >  레코드 선택에 영향을 주지만 하려면 설정 해야를 호출 하기 전에 이러한 옵션은 **열려** 멤버 함수입니다.  
   
-##  <a name="_core_closing_a_recordset"></a>레코드 집합을 닫으면  
+##  <a name="_core_closing_a_recordset"></a> 레코드 집합을 닫으면  
  레코드 집합을 마치면 삭제 하 고 메모리 할당을 취소 해야 합니다.  
   
 #### <a name="to-close-a-recordset"></a>레코드 집합을 닫으려면  

@@ -1,12 +1,9 @@
 ---
-title: "CWindowDC 클래스 | Microsoft Docs"
-ms.custom: 
+title: CWindowDC 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWindowDC
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CWindowDC [MFC], CWindowDC
 - CWindowDC [MFC], m_hWnd
 ms.assetid: 876a3641-4cde-471c-b0d1-fe58b32af79c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9bc3219ff6570fab18b19f350f7dca3171ab4832
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7867f35a66abf0f5a33ecd411b81111e84e3800f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwindowdc-class"></a>CWindowDC 클래스
 `CDC`에서 파생됩니다.  
@@ -50,7 +45,7 @@ class CWindowDC : public CDC
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[CWindowDC::m_hWnd](#m_hwnd)|`HWND` 이 `CWindowDC` 연결 됩니다.|  
   
@@ -69,7 +64,7 @@ class CWindowDC : public CDC
 ## <a name="requirements"></a>요구 사항  
  헤더: afxwin.h  
   
-##  <a name="cwindowdc"></a>CWindowDC::CWindowDC  
+##  <a name="cwindowdc"></a>  CWindowDC::CWindowDC  
  생성 된 `CWindowDC` 의 전체 화면 영역 (클라이언트 및 비클라이언트)에 액세스 하는 개체는 `CWnd` 가리키는 개체 `pWnd`합니다.  
   
 ```  
@@ -85,10 +80,10 @@ explicit CWindowDC(CWnd* pWnd);
   
  예외 (형식의 `CResourceException`) 하는 경우 throw 되는 Windows `GetWindowDC` 호출이 실패 합니다. 장치 컨텍스트에 Windows 이미 할당 된 모든 사용 가능한 장치 컨텍스트에서 사용할 수 있는 수 있습니다. Windows에서 언제 든 지 사용할 수 있는 5 개의 일반적인 디스플레이 컨텍스트를 위한 응용 프로그램 완료 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#188](../../mfc/codesnippet/cpp/cwindowdc-class_1.cpp)]  
   
-##  <a name="m_hwnd"></a>CWindowDC::m_hWnd  
+##  <a name="m_hwnd"></a>  CWindowDC::m_hWnd  
  `HWND` 의 `CWnd` 포인터를 사용 하 여 생성에 `CWindowDC` 개체입니다.  
   
 ```  
@@ -96,9 +91,9 @@ HWND m_hWnd;
 ```  
   
 ### <a name="remarks"></a>설명  
- `m_hWnd`보호 된 형식 변수의 `HWND`합니다.  
+ `m_hWnd` 보호 된 형식 변수의 `HWND`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CWindowDC::CWindowDC](#cwindowdc)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

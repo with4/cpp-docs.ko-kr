@@ -1,12 +1,9 @@
 ---
-title: "CRect 클래스 | Microsoft Docs"
-ms.custom: 
+title: CRect 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRect
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067f683b5322b11a4ca33f015d64850c8113ce18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a819cfc95588dc9225570a82b8a359d90a8f6b9f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crect-class"></a>CRect 클래스
 Windows 비슷합니다 [RECT](../../mfc/reference/rect-structure1.md) 구조입니다.  
@@ -84,7 +79,7 @@ class CRect : public tagRECT
 |[CRect::Height](#height)|높이 계산 `CRect`합니다.|  
 |[CRect::InflateRect](#inflaterect)|너비 및 높이 늘리는 `CRect`합니다.|  
 |[CRect::IntersectRect](#intersectrect)|집합 `CRect` 두 개의 사각형의 교차 부분으로 동일 합니다.|  
-|[CRect::IsRectEmpty](#isrectempty)|결정 여부 `CRect` 비어 있습니다. `CRect`너비 또는 높이 0 경우 비어 있습니다.|  
+|[CRect::IsRectEmpty](#isrectempty)|결정 여부 `CRect` 비어 있습니다. `CRect` 너비 또는 높이 0 경우 비어 있습니다.|  
 |[CRect::IsRectNull](#isrectnull)|결정 여부는 **top**, **아래쪽**, **왼쪽**, 및 **오른쪽** 멤버 변수는 모두 0으로 동등 합니다.|  
 |[CRect::MoveToX](#movetox)|이동 `CRect` 에 지정 된 x-좌표입니다.|  
 |[CRect::MoveToXY](#movetoxy)|이동 `CRect` 에 지정 된 x 및 y-좌표입니다.|  
@@ -107,8 +102,8 @@ class CRect : public tagRECT
 |[LPCRECT CRect::operator](#operator_lpcrect)|변환 된 `CRect` 에 **LPCRECT**합니다.|  
 |[LPRECT CRect::operator](#operator_lprect)|변환 된 `CRect` 에 `LPRECT`합니다.|  
 |[CRect::operator! =](#operator_neq)|결정 여부 `CRect` 사각형 같지 않습니다.|  
-|[CRect::operator&amp;](#operator_amp)|교차 만듭니다 `CRect` 사각형 결과 반환 하 고 `CRect`합니다.|  
-|[CRect::operator&amp;=](#operator_amp_eq)|집합 `CRect` 의 교차점으로 같은 `CRect` 사각형입니다.|  
+|[CRect::operator &amp;](#operator_amp)|교차 만듭니다 `CRect` 사각형 결과 반환 하 고 `CRect`합니다.|  
+|[CRect::operator &amp;=](#operator_amp_eq)|집합 `CRect` 의 교차점으로 같은 `CRect` 사각형입니다.|  
 |[CRect::operator |](#operator_or)|합집합을 만듭니다 `CRect` 사각형 결과 반환 하 고 `CRect`합니다.|  
 |[CRect::operator |=](#operator_or_eq)|집합 `CRect` 의 합집합 같음 `CRect` 사각형입니다.|  
 |[CRect::operator +](#operator_add)|에 대 한 지정 된 오프셋이 추가 `CRect` 팽창 또는 `CRect` 결과 반환 하 고 `CRect`합니다.|  
@@ -118,7 +113,7 @@ class CRect : public tagRECT
 |[CRect::operator = =](#operator_eq_eq)|결정 여부 `CRect` 사각형 같습니다.|  
   
 ## <a name="remarks"></a>설명  
- `CRect`또한 조작 하는 멤버 함수를 포함 `CRect` 개체 및 Windows `RECT` 구조입니다.  
+ `CRect` 또한 조작 하는 멤버 함수를 포함 `CRect` 개체 및 Windows `RECT` 구조입니다.  
   
  A `CRect` 개체를 함수 매개 변수로 전달할 수 있습니다 위치는 `RECT` 구조, **LPCRECT**, 또는 `LPRECT` 전달 될 수 있습니다.  
   
@@ -142,7 +137,7 @@ class CRect : public tagRECT
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atltypes.h  
   
-##  <a name="bottomright"></a>CRect::BottomRight  
+##  <a name="bottomright"></a>  CRect::BottomRight  
  좌표에 대 한 참조로 반환 되는 [CPoint](cpoint-class.md) 개체에 포함 된 `CRect`합니다.  
   
 ```  
@@ -156,7 +151,7 @@ const CPoint& BottomRight() const throw();
 ### <a name="remarks"></a>설명  
  Get 또는 set 사각형의 오른쪽 아래 모서리를이 함수를 사용할 수 있습니다. 할당 연산자의 왼쪽에이 함수를 사용 하 여 모퉁이 설정 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  // use BottomRight() to retrieve the bottom
  // right POINT 
@@ -181,7 +176,7 @@ rect2.BottomRight() = ptLow;
    ASSERT(rect2 == CRect(10, 10, 180, 180));   
 ```
   
-##  <a name="centerpoint"></a>CRect::CenterPoint 
+##  <a name="centerpoint"></a>  CRect::CenterPoint 
  중심점 계산 `CRect` 왼쪽 및 오른쪽 값을 추가 하 고 2로 나눈 하 고 위쪽 및 아래쪽 값을 추가 되며 두 나누어 합니다.  
   
 ```  
@@ -191,7 +186,7 @@ CPoint CenterPoint() const throw();
 ### <a name="return-value"></a>반환 값  
  A `CPoint` 개체의 중심점입니다 `CRect`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
 // Code from this OnPaint() implementation can be pasted into your own application
 // to draw lines that would look like a letter "Y" within your dialog. 
@@ -242,7 +237,7 @@ void CMyDlg::OnPaint()
 }
 ```
   
-##  <a name="copyrect"></a>CRect::CopyRect  
+##  <a name="copyrect"></a>  CRect::CopyRect  
  복사본의 `lpSrcRect` 사각형으로 `CRect`합니다.  
   
 ```  
@@ -253,7 +248,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
  `lpSrcRect`  
  가리키는 [RECT](../../mfc/reference/rect-structure1.md) 구조 또는 `CRect` 를 복사할 개체입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  CRect rectSource(35, 10, 125, 10);
  CRect rectDest;
@@ -275,7 +270,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 ```
 
   
-##  <a name="crect"></a>CRect::CRect  
+##  <a name="crect"></a>  CRect::CRect  
  `CRect` 개체를 생성합니다.  
   
 ```  
@@ -323,7 +318,7 @@ CRect(POINT topLeft, POINT bottomRight) throw();
   
  `CRect`(**const RECT &**) 및 `CRect`(**LPCRECT**) 생성자는 수행 된 [CopyRect](#copyrect)합니다. 다른 생성자는 직접 개체의 멤버 변수를 초기화 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  // default constructor doesn't initialize!
  CRect rectUnknown;
@@ -361,8 +356,8 @@ CRect(POINT topLeft, POINT bottomRight) throw();
  ASSERT(rect5 == rect4);  
 ```
   
-##  <a name="deflaterect"></a>CRect::DeflateRect  
- `DeflateRect`수축 `CRect` 의 측면의 중심 쪽으로 이동 하 여 합니다.  
+##  <a name="deflaterect"></a>  CRect::DeflateRect  
+ `DeflateRect` 수축 `CRect` 의 측면의 중심 쪽으로 이동 하 여 합니다.  
   
 ```  
 void DeflateRect(int x, int y) throw();
@@ -401,7 +396,7 @@ void DeflateRect(int l, int t, int r, int b) throw();
   
  처음 두 개의 오버 로드는 두 쌍의 다른 쪽의 deflate `CRect` 를 두 번의 전체 너비 감소 *x* (또는 `cx`) 두 번의 전체 높이 감소 및 *y* 드 ( 또는 `cy`). 다른 두 오버 로드의 양쪽을 deflate `CRect` 독립적입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
    CRect rect(10, 10, 50, 50);
    rect.DeflateRect(1, 2);
@@ -415,7 +410,7 @@ void DeflateRect(int l, int t, int r, int b) throw();
    ASSERT(rect2.top == 12 && rect2.bottom == 46);   
 ```
   
-##  <a name="equalrect"></a>CRect::EqualRect  
+##  <a name="equalrect"></a>  CRect::EqualRect  
  결정 여부 `CRect` 지정된 된 사각형 같습니다.  
   
 ```  
@@ -432,7 +427,7 @@ BOOL EqualRect(LPCRECT lpRect) const throw();
 > [!NOTE]
 >  사각형의 둘 다을 정규화 해야 하거나이 함수는 실패할 수 있습니다. 호출할 수 있습니다 [NormalizeRect](#normalizerect) 를이 함수를 호출 하기 전에 사각형을 정규화 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
    CRect rect1(35, 150, 10, 25);
    CRect rect2(35, 150, 10, 25);
@@ -450,7 +445,7 @@ ASSERT(rect1.EqualRect(rect2));
  ASSERT(rect1.EqualRect(&test));  
 ```
 
-##  <a name="height"></a>CRect::Height  
+##  <a name="height"></a>  CRect::Height  
  높이 계산 `CRect` 하위 값의 맨 위에 있는 값을 빼서 합니다.  
   
 ```  
@@ -466,7 +461,7 @@ int Height() const throw();
 > [!NOTE]
 >  사각형을 정규화 해야 하거나이 함수는 실패할 수 있습니다. 호출할 수 있습니다 [NormalizeRect](#normalizerect) 를이 함수를 호출 하기 전에 사각형을 정규화 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  CRect rect(20, 30, 80, 70);
  int nHt = rect.Height();
@@ -480,8 +475,8 @@ int nHt = rect.Height();
 ```
 
   
-##  <a name="inflaterect"></a>CRect::InflateRect  
- `InflateRect`팽창 `CRect` 중심을 관통 밖의 측면을 이동 하 여 합니다.  
+##  <a name="inflaterect"></a>  CRect::InflateRect  
+ `InflateRect` 팽창 `CRect` 중심을 관통 밖의 측면을 이동 하 여 합니다.  
   
 ```  
 void InflateRect(int x, int y) throw();
@@ -520,7 +515,7 @@ void InflateRect(int l, int t, int r,  int b) throw();
   
  처음 두 개의 오버 로드는 두 쌍의 다른 쪽의 확장할 `CRect` 총 너비가 두 배로 증가 되도록 *x* (또는 `cx`) 두 번 총 높이 만큼 증가 및 *y* 드 ( 또는 `cy`). 다른 두 오버 로드의 양쪽 확장할 `CRect` 독립적입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  CRect rect(0, 0, 300, 300);
  rect.InflateRect(50, 200);
@@ -529,7 +524,7 @@ void InflateRect(int l, int t, int r,  int b) throw();
  ASSERT(rect == CRect(-50, -200, 350, 500));  
 ```
   
-##  <a name="intersectrect"></a>CRect::IntersectRect  
+##  <a name="intersectrect"></a>  CRect::IntersectRect  
  만듭니다는 `CRect` 두 개의 기존 사각형의 교차 부분으로 동일 합니다.  
   
 ```  
@@ -552,7 +547,7 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 > [!NOTE]
 >  사각형의 둘 다을 정규화 해야 하거나이 함수는 실패할 수 있습니다. 호출할 수 있습니다 [NormalizeRect](#normalizerect) 를이 함수를 호출 하기 전에 사각형을 정규화 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  CRect rectOne(125, 0, 150, 200);
  CRect rectTwo(0, 75, 350,  95);
@@ -572,7 +567,7 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
  ASSERT(rectInter2 == CRect(125, 75, 150, 95));  
 ```
   
-##  <a name="isrectempty"></a>CRect::IsRectEmpty  
+##  <a name="isrectempty"></a>  CRect::IsRectEmpty  
  결정 여부 `CRect` 비어 있습니다.  
   
 ```  
@@ -588,7 +583,7 @@ BOOL IsRectEmpty() const throw();
 > [!NOTE]
 >  사각형을 정규화 해야 하거나이 함수는 실패할 수 있습니다. 호출할 수 있습니다 [NormalizeRect](#normalizerect) 를이 함수를 호출 하기 전에 사각형을 정규화 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  CRect rectNone(0, 0, 0, 0);
  CRect rectSome(35, 50, 135, 150);
@@ -603,7 +598,7 @@ CRect rectEmpty(35, 35, 35, 35);
 ```
 
   
-##  <a name="isrectnull"></a>CRect::IsRectNull  
+##  <a name="isrectnull"></a>  CRect::IsRectNull  
  위쪽, 왼쪽, 아래쪽 있는지 여부를 결정 및의 값을 오른쪽 `CRect` 은 모두 0입니다.  
   
 ```  
@@ -616,7 +611,7 @@ BOOL IsRectNull() const throw();
 ### <a name="remarks"></a>설명  
  와 다른 `IsRectEmpty`를 사각형 비어 있는지 여부를 결정 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  CRect rectNone(0, 0, 0, 0);
  CRect rectSome(35, 50, 135, 150);
@@ -632,7 +627,7 @@ ASSERT(rectNone.IsRectNull());
  ASSERT(!rectNotNull.IsRectNull());  
 ```
   
-##  <a name="movetox"></a>CRect::MoveToX  
+##  <a name="movetox"></a>  CRect::MoveToX  
  사각형으로 지정 된 절대 x-좌표를 이동 하려면이 함수를 호출 *x*합니다.  
   
 ```  
@@ -643,7 +638,7 @@ void MoveToX(int x) throw();
  *x*  
  사각형의 왼쪽 위 모퉁이 대 한 절대 x 좌표입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  CRect rect(0, 0, 100, 100);
  rect.MoveToX(10);
@@ -656,7 +651,7 @@ rect.MoveToX(10);
    ASSERT(rect == CRect(10, 0, 110, 100));   
 ```
   
-##  <a name="movetoxy"></a>CRect::MoveToXY  
+##  <a name="movetoxy"></a>  CRect::MoveToXY  
  에 절대 x 및 y 좌표 지정 된 사각형을 이동 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -674,7 +669,7 @@ void MoveToXY(POINT point) throw();
  `point`  
  A **지점** 사각형의 절대 왼쪽 위 모퉁이 지정 하는 구조입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  CRect rect(0, 0, 100, 100);
  rect.MoveToXY(10, 10);
@@ -687,7 +682,7 @@ void MoveToXY(POINT point) throw();
 ```
 
   
-##  <a name="movetoy"></a>CRect::MoveToY  
+##  <a name="movetoy"></a>  CRect::MoveToY  
  사각형으로 지정 된 절대 y-좌표를 이동 하려면이 함수를 호출 *y*합니다.  
   
 ```  
@@ -698,7 +693,7 @@ void MoveToY(int y) throw();
  *y*  
  사각형의 왼쪽 위 모퉁이 대 한 절대 y 좌표입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  CRect rect(0, 0, 100, 100);
  rect.MoveToY(10);
@@ -711,7 +706,7 @@ void MoveToY(int y) throw();
 ```
 
   
-##  <a name="normalizerect"></a>Crect:: Normalizerect  
+##  <a name="normalizerect"></a>  Crect:: Normalizerect  
  정규화 `CRect` 높이 너비는 양수 수 있도록 합니다.  
   
 ```  
@@ -719,12 +714,12 @@ void NormalizeRect() throw();
 ```  
   
 ### <a name="remarks"></a>설명  
- Windows 좌표에 대 한 일반적으로 사용 하는 네 번째 구성 요소 위치 지정에 대 한 사각형 정규화 됩니다. `NormalizeRect`위쪽 및 아래쪽 값을 비교 하 고 맨 아래 보다 큰 경우 바꿉니다. 마찬가지로, 왼쪽에서 오른쪽 보다 큰 경우 left 및 right 값 바꿉니다. 이 함수는 서로 다른 매핑 모드를 처리할 때 유용 하 고 사각형을 반전 합니다.  
+ Windows 좌표에 대 한 일반적으로 사용 하는 네 번째 구성 요소 위치 지정에 대 한 사각형 정규화 됩니다. `NormalizeRect` 위쪽 및 아래쪽 값을 비교 하 고 맨 아래 보다 큰 경우 바꿉니다. 마찬가지로, 왼쪽에서 오른쪽 보다 큰 경우 left 및 right 값 바꿉니다. 이 함수는 서로 다른 매핑 모드를 처리할 때 유용 하 고 사각형을 반전 합니다.  
   
 > [!NOTE]
->  다음 `CRect` 멤버 함수는 정규화 된 사각형 제대로 작동 하려면 필요: [높이](#height), [너비](#width), [크기](#size), [ IsRectEmpty](#isrectempty), [PtInRect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [ SubtractRect](#subtractrect), [연산자 = =](#operator_eq_eq), [연산자! =](#operator_neq), [연산자 &#124;](#operator_or), [연산자 &#124;=](#operator_or_eq), [연산자 &](#operator_amp), 및 [연산자 & =](#operator_amp_eq)합니다.  
+>  다음 `CRect` 멤버 함수는 정규화 된 사각형 제대로 작동 하려면 필요: [높이](#height), [너비](#width), [크기](#size), [ IsRectEmpty](#isrectempty), [PtInRect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [ SubtractRect](#subtractrect), [연산자 = =](#operator_eq_eq), [연산자! =](#operator_neq), [연산자 &#124; ](#operator_or), [연산자 &#124;=](#operator_or_eq), [연산자 &](#operator_amp), 및 [연산자 & =](#operator_amp_eq)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  CRect rect1(110, 100, 250, 310);
  CRect rect2(250, 310, 110, 100);
@@ -737,7 +732,7 @@ rect1.NormalizeRect();
  ASSERT(rect1 == rect2);  
 ```
   
-##  <a name="offsetrect"></a>CRect::OffsetRect  
+##  <a name="offsetrect"></a>  CRect::OffsetRect  
  이동 `CRect` 지정 된 오프셋으로 합니다.  
   
 ```  
@@ -762,7 +757,7 @@ void OffsetRect(SIZE size) throw();
 ### <a name="remarks"></a>설명  
  이동 `CRect` *x* x 축 단위 및 *y* y 축의 단위입니다. *x* 및 *y* 매개 변수는 부호 있는 값 이므로 `CRect` 왼쪽 이동 하거나 오른쪽 및 위나 아래로 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  CRect rect(0, 0, 35, 35);
  rect.OffsetRect(230, 230);
@@ -776,7 +771,7 @@ void OffsetRect(SIZE size) throw();
 ```
 
   
-##  <a name="operator_lpcrect"></a>CRect::operator LPCRECT 변환은 `CRect` 에 [LPCRECT](../../mfc/reference/data-types-mfc.md)합니다.  
+##  <a name="operator_lpcrect"></a>  CRect::operator LPCRECT 변환은 `CRect` 에 [LPCRECT](../../mfc/reference/data-types-mfc.md)합니다.  
 
   
 ```  
@@ -787,7 +782,7 @@ operator LPCRECT() const throw();
  이 기능을 사용할 때의 주소 필요 하지 않습니다 (**&**) 연산자. 전달 하는 경우이 연산자 자동으로 사용 된 `CRect` 필요로 하는 함수에는 개체는 **LPCRECT**합니다.  
   
 
-##  <a name="operator_lprect"></a>LPRECT CRect::operator  
+##  <a name="operator_lprect"></a>  LPRECT CRect::operator  
  변환 된 `CRect` 에 [LPRECT](../../mfc/reference/data-types-mfc.md)합니다.  
 
   
@@ -798,10 +793,10 @@ operator LPRECT() throw();
 ### <a name="remarks"></a>설명  
  이 기능을 사용할 때의 주소 필요 하지 않습니다 (**&**) 연산자. 전달 하는 경우이 연산자 자동으로 사용 된 `CRect` 필요로 하는 함수에는 개체는 `LPRECT`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [CRect::operator LPCRECT](#operator_lpcrect)합니다.  
   
-##  <a name="operator_eq"></a>CRect::operator =  
+##  <a name="operator_eq"></a>  CRect::operator =  
  할당 *srcRect* 를 `CRect`합니다.  
   
 ```  
@@ -812,7 +807,7 @@ void operator=(const RECT& srcRect) throw();
  *srcRect*  
  소스 사각형을 가리킵니다. 일 수 있습니다는 [RECT](../../mfc/reference/rect-structure1.md) 또는 `CRect`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  CRect rect(0, 0, 127, 168);
  CRect rect2;
@@ -826,7 +821,7 @@ void operator=(const RECT& srcRect) throw();
 ```
 
   
-##  <a name="operator_eq_eq"></a>CRect::operator = =  
+##  <a name="operator_eq_eq"></a>  CRect::operator = =  
  결정 여부 `rect` 같으면 `CRect` 의 왼쪽 및 오른쪽 아래 모퉁이의 좌표를 비교 하 여 합니다.  
   
 ```  
@@ -845,7 +840,7 @@ BOOL operator==(const RECT& rect) const throw();
 > [!NOTE]
 >  사각형의 둘 다을 정규화 해야 하거나이 함수는 실패할 수 있습니다. 호출할 수 있습니다 [NormalizeRect](#normalizerect) 를이 함수를 호출 하기 전에 사각형을 정규화 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  CRect rect1(35, 150, 10, 25);
  CRect rect2(35, 150, 10, 25);
@@ -868,7 +863,7 @@ ASSERT(rect1 == rect2);
 ```
 
   
-##  <a name="operator_neq"></a>CRect::operator! =  
+##  <a name="operator_neq"></a>  CRect::operator! =  
  결정 여부 `rect` 과 같지 않은 `CRect` 의 왼쪽 및 오른쪽 아래 모퉁이의 좌표를 비교 하 여 합니다.  
   
 ```  
@@ -887,7 +882,7 @@ BOOL operator!=(const RECT& rect) const throw();
 > [!NOTE]
 >  사각형의 둘 다을 정규화 해야 하거나이 함수는 실패할 수 있습니다. 호출할 수 있습니다 [NormalizeRect](#normalizerect) 를이 함수를 호출 하기 전에 사각형을 정규화 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  CRect rect1(35, 150, 10, 25);
  CRect rect2(35, 150, 10, 25);
@@ -909,7 +904,7 @@ ASSERT(rect1 != rect3);
  ASSERT(rect3 != test);  
 ```
   
-##  <a name="operator_add_eq"></a>CRect::operator + =  
+##  <a name="operator_add_eq"></a>  CRect::operator + =  
  처음 두 개의 오버 로드가 이동 `CRect` 지정 된 오프셋으로 합니다.  
   
 ```  
@@ -933,7 +928,7 @@ void operator+=(LPCRECT lpRect) throw();
   
  세 번째 오버 로드 팽창 `CRect` 매개 변수의 각 멤버에 지정 된 단위 수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  CRect rect1(100, 235, 200, 335);
  CPoint pt(35, 65);
@@ -948,7 +943,7 @@ void operator+=(LPCRECT lpRect) throw();
    ASSERT(rect1 == rect2);   
 ```
   
-##  <a name="operator_-_eq"></a>-= CRect::operator  
+##  <a name="operator_-_eq"></a>  -= CRect::operator  
  처음 두 개의 오버 로드가 이동 `CRect` 지정 된 오프셋으로 합니다.  
   
 ```  
@@ -972,7 +967,7 @@ void operator-=(LPCRECT lpRect) throw();
   
  세 번째 오버 로드 수축 `CRect` 매개 변수의 각 멤버에 지정 된 단위 수입니다. 이 오버 로드와 같은 함수는 [DeflateRect](#deflaterect)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  CRect rect1(100, 235, 200, 335);
  CPoint pt(35, 65);
@@ -987,7 +982,7 @@ void operator-=(LPCRECT lpRect) throw();
    ASSERT(rect1 == rectResult);   
 ```
   
-##  <a name="operator_amp_eq"></a>CRect::operator&amp;=  
+##  <a name="operator_amp_eq"></a>  CRect::operator &amp;=  
  집합 `CRect` 의 교차점으로 같은 `CRect` 및 `rect`합니다.  
   
 ```  
@@ -1004,10 +999,10 @@ void operator&=(const RECT& rect) throw();
 > [!NOTE]
 >  사각형의 둘 다을 정규화 해야 하거나이 함수는 실패할 수 있습니다. 호출할 수 있습니다 [NormalizeRect](#normalizerect) 를이 함수를 호출 하기 전에 사각형을 정규화 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [CRect::IntersectRect](#intersectrect)합니다.  
   
-##  <a name="operator_or_eq"></a>CRect::operator &#124; =  
+##  <a name="operator_or_eq"></a>  CRect::operator &#124;=  
  집합 `CRect` 의 합집합 같음 `CRect` 및 `rect`합니다.  
   
 ```  
@@ -1024,7 +1019,7 @@ void operator|=(const RECT& rect) throw();
 > [!NOTE]
 >  사각형의 둘 다을 정규화 해야 하거나이 함수는 실패할 수 있습니다. 호출할 수 있습니다 [NormalizeRect](#normalizerect) 를이 함수를 호출 하기 전에 사각형을 정규화 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  CRect rect1(100,   0, 200, 300);
  CRect rect2( 0, 100, 300, 200);
@@ -1040,7 +1035,7 @@ void operator|=(const RECT& rect) throw();
 ```
 
   
-##  <a name="operator_add"></a>CRect::operator +  
+##  <a name="operator_add"></a>  CRect::operator +  
  처음 두 개의 오버 로드 반환는 `CRect` 개체와 같은 `CRect` 지정 된 오프셋에 의해 치환입니다.  
   
 ```  
@@ -1067,7 +1062,7 @@ CRect operator+(SIZE size) const throw();
   
  세 번째 오버 로드 반환 새 `CRect` 같거나 `CRect` 매개 변수의 각 멤버에 지정 된 단위 수로 확장 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
    CRect   rect1(100, 235, 200, 335);
    CPoint pt(35, 65);
@@ -1079,7 +1074,7 @@ CRect operator+(SIZE size) const throw();
 ```
 
   
-##  <a name="operator_-"></a>CRect::operator-  
+##  <a name="operator_-"></a>  CRect::operator-  
  처음 두 개의 오버 로드 반환는 `CRect` 개체와 같은 `CRect` 지정 된 오프셋에 의해 치환입니다.  
   
 ```  
@@ -1106,7 +1101,7 @@ CRect operator-(LPCRECT lpRect) const throw();
   
  세 번째 오버 로드 반환 새 `CRect` 같거나 `CRect` 매개 변수의 각 멤버에 지정 된 단위 수로 축소 됩니다. 이 오버 로드와 같은 함수는 [DeflateRect](#deflaterect)이 아니라 [SubtractRect](#subtractrect)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
    CRect   rect1(100, 235, 200, 335);
    CPoint pt(35, 65);
@@ -1118,7 +1113,7 @@ CRect operator-(LPCRECT lpRect) const throw();
 ```
 
   
-##  <a name="operator_amp"></a>CRect::operator&amp;  
+##  <a name="operator_amp"></a>  CRect::operator &amp;  
  반환 된 `CRect` 의 교차 부분 즉 `CRect` 및 *rect2*합니다.  
   
 ```  
@@ -1138,7 +1133,7 @@ CRect operator&(const RECT& rect2) const throw();
 > [!NOTE]
 >  사각형의 둘 다을 정규화 해야 하거나이 함수는 실패할 수 있습니다. 호출할 수 있습니다 [NormalizeRect](#normalizerect) 를이 함수를 호출 하기 전에 사각형을 정규화 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
    CRect   rect1(100,  0, 200, 300);
    CRect   rect2(0, 100, 300, 200);
@@ -1150,7 +1145,7 @@ CRect operator&(const RECT& rect2) const throw();
 ```
 
   
-##  <a name="operator_or"></a>CRect::operator &#124;  
+##  <a name="operator_or"></a>  CRect::operator&#124;  
  반환 된 `CRect` 의 합집합 즉 `CRect` 및 *rect2*합니다.  
   
 ```   
@@ -1171,7 +1166,7 @@ rect2) const throw();
 > [!NOTE]
 >  사각형의 둘 다을 정규화 해야 하거나이 함수는 실패할 수 있습니다. 호출할 수 있습니다 [NormalizeRect](#normalizerect) 를이 함수를 호출 하기 전에 사각형을 정규화 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  CRect rect1(100,   0, 200, 300);
  CRect rect2( 0, 100, 300, 200);
@@ -1188,7 +1183,7 @@ rect2) const throw();
 ```
 
   
-##  <a name="ptinrect"></a>CRect::PtInRect  
+##  <a name="ptinrect"></a>  CRect::PtInRect  
  지정된 된 지점 내에 있는지 여부를 확인 `CRect`합니다.  
   
 ```   
@@ -1208,7 +1203,7 @@ BOOL PtInRect(POINT point) const throw();
 > [!NOTE]
 >  사각형을 정규화 해야 하거나이 함수는 실패할 수 있습니다. 호출할 수 있습니다 [NormalizeRect](#normalizerect) 를이 함수를 호출 하기 전에 사각형을 정규화 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  CRect rect(5, 5, 100, 100);
  CPoint pt1(35, 50);
@@ -1235,7 +1230,7 @@ BOOL PtInRect(POINT point) const throw();
  ASSERT(rect.PtInRect(pt));  
 ```
   
-##  <a name="setrect"></a>CRect::SetRect  
+##  <a name="setrect"></a>  CRect::SetRect  
  크기를 설정 `CRect` 지정된 된 좌표에 있습니다.  
   
 ```   
@@ -1255,7 +1250,7 @@ void SetRect(int x1, int y1, int x2, int y2) throw();
  `y2`  
  오른쪽 아래 모퉁이의 y 좌표를 지정합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  CRect rect;
  rect.SetRect(256, 256, 512, 512);
@@ -1267,14 +1262,14 @@ void SetRect(int x1, int y1, int x2, int y2) throw();
 ```
 
   
-##  <a name="setrectempty"></a>CRect::SetRectEmpty  
+##  <a name="setrectempty"></a>  CRect::SetRectEmpty  
  에서는 `CRect` 모든 좌표가 0으로 설정 하 여 null 사각형입니다.  
   
 ```  
 void SetRectEmpty() throw();
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
 CRect rect;
 rect.SetRectEmpty();
@@ -1283,7 +1278,7 @@ rect.SetRectEmpty();
 ASSERT(rect.IsRectEmpty());  
 ```
   
-##  <a name="size"></a>CRect::SIZE 
+##  <a name="size"></a>  CRect::SIZE 
  `cx` 및 `cy` 반환 값의 멤버를 포함 하는의 높이 너비 `CRect`합니다.  
   
 ```  
@@ -1299,14 +1294,14 @@ CSize Size() const throw();
 > [!NOTE]
 >  사각형을 정규화 해야 하거나이 함수는 실패할 수 있습니다. 호출할 수 있습니다 [NormalizeRect](#normalizerect) 를이 함수를 호출 하기 전에 사각형을 정규화 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
  CRect rect(10, 10, 50, 50);
  CSize sz = rect.Size();
  ASSERT(sz.cx == 40 && sz.cy == 40);  
 ```
 
-##  <a name="subtractrect"></a>CRect::SubtractRect  
+##  <a name="subtractrect"></a>  CRect::SubtractRect  
  크기를 사용 하면는 **CRect** 의 빼기 같음 `lpRectSrc2` 에서 `lpRectSrc1`합니다.  
   
 ```  
@@ -1330,12 +1325,12 @@ BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
   
  예를 들어 경우 `lpRectSrc1` 되었습니다 (10,10, 100100) 및 `lpRectSrc2` 되었습니다 (50,50, 150,150) 가리키는 사각형 `lpRectSrc1` 되지 변경 된 함수가 반환 될 때입니다. 그러나 경우 `lpRectSrc1` 되었습니다 (10,10, 100100) 및 `lpRectSrc2` 되었습니다 (50,10, 150,150) 사각형에서 가리키는 `lpRectSrc1` (10,10, 50,100) 정보를 포함 하는 함수가 반환 될 때.  
   
- `SubtractRect`와 동일 하지는 [연산자-](#operator_-) 나 [-= 연산자](#operator_-_eq)합니다. 이러한 연산자의 어느 적이 호출 `SubtractRect`합니다.  
+ `SubtractRect` 와 동일 하지는 [연산자-](#operator_-) 나 [-= 연산자](#operator_-_eq)합니다. 이러한 연산자의 어느 적이 호출 `SubtractRect`합니다.  
   
 > [!NOTE]
 >  사각형의 둘 다을 정규화 해야 하거나이 함수는 실패할 수 있습니다. 호출할 수 있습니다 [NormalizeRect](#normalizerect) 를이 함수를 호출 하기 전에 사각형을 정규화 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
    RECT   rectOne;
    RECT   rectTwo;
@@ -1368,7 +1363,7 @@ CRect   rectResult(10, 10, 50, 100);
    ASSERT(rectResult == rectOut);   
 ```
   
-##  <a name="topleft"></a>CRect::TopLeft  
+##  <a name="topleft"></a>  CRect::TopLeft  
  좌표에 대 한 참조로 반환 되는 [CPoint](cpoint-class.md) 개체에 포함 된 `CRect`합니다.  
   
 ```  
@@ -1382,10 +1377,10 @@ const CPoint& TopLeft() const throw();
 ### <a name="remarks"></a>설명  
  Get 또는 set 사각형의 왼쪽 위 모퉁이를이 함수를 사용할 수 있습니다. 할당 연산자의 왼쪽에이 함수를 사용 하 여 모퉁이 설정 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [CRect::CenterPoint](#centerpoint)합니다.  
   
-##  <a name="unionrect"></a>CRect::UnionRect  
+##  <a name="unionrect"></a>  CRect::UnionRect  
  크기를 사용 하면 `CRect` 같은 두 개의 소스 사각형의 합집합입니다.  
   
 ```  
@@ -1410,7 +1405,7 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 > [!NOTE]
 >  사각형의 둘 다을 정규화 해야 하거나이 함수는 실패할 수 있습니다. 호출할 수 있습니다 [NormalizeRect](#normalizerect) 를이 함수를 호출 하기 전에 사각형을 정규화 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp  
    CRect   rect1(100,  0, 200, 300);
    CRect   rect2(0, 100, 300, 200);
@@ -1421,7 +1416,7 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
    ASSERT(rectResult == rect3);   
 ```
  
-##  <a name="width"></a>CRect::Width  
+##  <a name="width"></a>  CRect::Width  
  너비를 계산 `CRect` 오른쪽 값의 왼쪽된 값을 빼서 합니다.  
   
 ```  
@@ -1437,7 +1432,7 @@ int Width() const throw();
 > [!NOTE]
 >  사각형을 정규화 해야 하거나이 함수는 실패할 수 있습니다. 호출할 수 있습니다 [NormalizeRect](#normalizerect) 를이 함수를 호출 하기 전에 사각형을 정규화 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 
 ```cpp  
    CRect rect(20, 30, 80, 70);

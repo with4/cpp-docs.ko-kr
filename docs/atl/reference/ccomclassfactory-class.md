@@ -1,12 +1,9 @@
 ---
-title: "CComClassFactory 클래스 | Microsoft Docs"
-ms.custom: 
+title: CComClassFactory 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComClassFactory
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CComClassFactory class
 ms.assetid: e56dacf7-d5c4-4c42-aef4-a86d91981a1b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2af57c666cf2ee452d2707045d259ada695a2848
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7a144f4ff9902a633933ae556df872a9d55a5409
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomclassfactory-class"></a>CComClassFactory 클래스
 이 클래스가 구현 하는 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) 인터페이스입니다.  
@@ -51,7 +46,7 @@ class CComClassFactory
 |[CComClassFactory::LockServer](#lockserver)|메모리에서 클래스 팩터리를 잠급니다.|  
   
 ## <a name="remarks"></a>설명  
- `CComClassFactory`구현 하는 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) 인터페이스 특정 CLSID의 개체를 만드는 수 있을 뿐만 아니라 새 개체를 보다 신속 하 게 만들 수 있도록 메모리에서 클래스 팩터리 잠금에 대 한 메서드가 포함 되어 있습니다. **IClassFactory** 시스템 레지스트리에 및 CLSID 할당를 등록 하는 모든 클래스에 대해 구현 해야 합니다.  
+ `CComClassFactory` 구현 하는 [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) 인터페이스 특정 CLSID의 개체를 만드는 수 있을 뿐만 아니라 새 개체를 보다 신속 하 게 만들 수 있도록 메모리에서 클래스 팩터리 잠금에 대 한 메서드가 포함 되어 있습니다. **IClassFactory** 시스템 레지스트리에 및 CLSID 할당를 등록 하는 모든 클래스에 대해 구현 해야 합니다.  
   
  ATL 개체에서 파생 하 여 일반적으로 클래스 팩터리를 획득 [CComCoClass](../../atl/reference/ccomcoclass-class.md)합니다. 이 클래스는 매크로 포함 [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)를 선언 하는 `CComClassFactory` 기본 클래스 팩터리로 합니다. 이 기본값을 재정의 하려면 지정 중 하나는 `DECLARE_CLASSFACTORY` *XXX* 클래스 정의에 매크로입니다. 예를 들어는 [DECLARE_CLASSFACTORY_EX](aggregation-and-class-factory-macros.md#declare_classfactory_ex) 매크로 클래스 팩터리에 대 한 지정된 된 클래스를 사용 하 여:  
   
@@ -70,7 +65,7 @@ class CComClassFactory
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcom.h  
   
-##  <a name="createinstance"></a>CComClassFactory::CreateInstance  
+##  <a name="createinstance"></a>  CComClassFactory::CreateInstance  
  지정된 된 CLSID의 개체를 만들고이 개체에 대 한 인터페이스 포인터를 검색 합니다.  
   
 ```
@@ -90,7 +85,7 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-##  <a name="lockserver"></a>CComClassFactory::LockServer  
+##  <a name="lockserver"></a>  CComClassFactory::LockServer  
  증가 하 고 호출 하 여 모듈 잠금 횟수를 감소 **_Module::Lock** 및 **_Module::Unlock**각각.  
   
 ```

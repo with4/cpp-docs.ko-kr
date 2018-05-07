@@ -1,13 +1,10 @@
 ---
-title: "Windows 소켓: 아카이브를 함께 사용 하는 소켓 작동 방식 | Microsoft Docs"
-ms.custom: 
+title: 'Windows 소켓: 아카이브를 함께 사용 하는 소켓 작동 방식 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b6ff5f07e3662e61a7ba6260bb90459f3aebd7d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c03ae586e346be2ba1e7c71475b69318ded0dd18
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows 소켓: 소켓과 아카이브를 함께 사용하는 방법
 이 문서에서는 설명 어떻게는 [CSocket](../mfc/reference/csocket-class.md) 개체는 [CSocketFile](../mfc/reference/csocketfile-class.md) 개체 및 [CArchive](../mfc/reference/carchive-class.md) 개체는 Windows 통해 데이터 보내기 및 받기 간소화 하기 위해 결합 됩니다 소켓입니다.  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
  A `CArchive` 개체 버퍼를 관리 합니다. 저장 (송신) 보관 저장소가 버퍼가 꽉 차면, 연결 된 `CFile` 개체는 버퍼의 내용을 씁니다. 버퍼를 플러시하는 소켓에 연결 하는 보관의 메시지를 보내는 것과 같습니다. 로드 (수신) 보관의 버퍼가 꽉 차면는 `CFile` 버퍼를 다시 사용할 수 있는 될 때까지 개체 읽기를 중지 합니다.  
   
- 클래스 `CSocketFile` 에서 파생 `CFile`, 하지만 지원 하지 않습니다 [CFile](../mfc/reference/cfile-class.md) 위치 지정 함수 같은 멤버 함수 (`Seek`, `GetLength`, `SetLength`등), (함수 잠금 `LockRange`, `UnlockRange`), 또는 `GetPosition` 함수입니다. 모든는 [CSocketFile](../mfc/reference/csocketfile-class.md) 개체 작업을 수행 해야 쓰기 또는 읽기에서 연결 된 바이트 시퀀스는 `CSocket` 개체입니다. 파일은 관여 하지 않기 때문에와 같은 작업 `Seek` 및 `GetPosition` 의미가 있습니다. `CSocketFile`파생 된 `CFile`이므로 이러한 멤버 함수는 모두 상속 일반적으로 것입니다. 이 지원 되지 않는 방지 하기 위해 `CFile` 에서 멤버 함수를 재정의할 `CSocketFile` throw 하는 [CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md)합니다.  
+ 클래스 `CSocketFile` 에서 파생 `CFile`, 하지만 지원 하지 않습니다 [CFile](../mfc/reference/cfile-class.md) 위치 지정 함수 같은 멤버 함수 (`Seek`, `GetLength`, `SetLength`등), (함수 잠금 `LockRange`, `UnlockRange`), 또는 `GetPosition` 함수입니다. 모든는 [CSocketFile](../mfc/reference/csocketfile-class.md) 개체 작업을 수행 해야 쓰기 또는 읽기에서 연결 된 바이트 시퀀스는 `CSocket` 개체입니다. 파일은 관여 하지 않기 때문에와 같은 작업 `Seek` 및 `GetPosition` 의미가 있습니다. `CSocketFile` 파생 된 `CFile`이므로 이러한 멤버 함수는 모두 상속 일반적으로 것입니다. 이 지원 되지 않는 방지 하기 위해 `CFile` 에서 멤버 함수를 재정의할 `CSocketFile` throw 하는 [CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md)합니다.  
   
  `CSocketFile` 개체 멤버의 함수를 호출 해당 `CSocket` 를 보내거나 받는 데이터 개체입니다.  
   

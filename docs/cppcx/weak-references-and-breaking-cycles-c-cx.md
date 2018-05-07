@@ -1,24 +1,19 @@
 ---
-title: "약한 참조 및 순환 끊기 (C + + /cli CX) | Microsoft Docs"
-ms.custom: 
+title: 약한 참조 및 순환 끊기 (C + + /cli CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 1acb6402-05f0-4951-af94-0e9dab41c53e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a98dc4dd43b40f378a91713770c4c5500c790d0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 48b5d73d85383056b17c806e061b131b12d821a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="weak-references-and-breaking-cycles-ccx"></a>약한 참조 및 순환 중단(C++/CX)
 참조 횟수를 기반으로 하는 모든 형식 시스템에서는 형식 참조가 *순환*을 형성할 수 있는 문제가 있습니다. 즉, 하나의 개체가 두 번째 개체를 참조하고, 두 번째 개체가 세 번째 개체를 참조하는 식으로 최종 개체가 첫 번째 개체를 다시 참조할 때까지 진행됩니다. 이러한 순환에서는 한 개체의 참조 횟수가 0인 경우 개체를 올바르게 삭제할 수 없습니다. C +이 문제 해결을 돕기 위해 + CX 제공는 [platform:: weakreference 클래스](../cppcx/platform-weakreference-class.md) 클래스입니다. `WeakReference` 개체는 [Resolve](../cppcx/platform-weakreference-class.md#resolve) 메서드를 지원하며, 이 메서드는 개체가 더 이상 존재하지 않는 경우 null을 반환하고 개체가 활성 상태이지만 [형식이 아닌 경우](../cppcx/platform-invalidcastexception-class.md) Platform::InvalidCastException `T`을 throw합니다.  

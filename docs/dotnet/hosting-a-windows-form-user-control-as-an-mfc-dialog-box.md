@@ -1,13 +1,10 @@
 ---
-title: "사용자 정의 컨트롤을 MFC 대화 상자로 형성 Windows 호스팅 | Microsoft Docs"
-ms.custom: 
+title: 사용자 정의 컨트롤을 MFC 대화 상자로 형성 Windows 호스팅 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,21 +12,19 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7ad1d800619eb84a470dbc5e472e9191d13e8796
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b356bff4974b43445524d9bc07e1e37c62a6f8d4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Windows Form 사용자 정의 컨트롤을 MFC 대화 상자로 호스팅
-템플릿 클래스를 제공 하는 MFC [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) Windows Forms 사용자 정의 컨트롤을 호스팅할 수 있습니다 (<xref:System.Windows.Forms.UserControl>) 모달 또는 모덜리스 MFC 대화 상자에서 합니다. `CWinFormsDialog`MFC 클래스에서 파생 된 [CDialog](../mfc/reference/cdialog-class.md)이므로 modal 또는 모덜리스 대화 상자를 시작할 수 있습니다.  
+템플릿 클래스를 제공 하는 MFC [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) Windows Forms 사용자 정의 컨트롤을 호스팅할 수 있습니다 (<xref:System.Windows.Forms.UserControl>) 모달 또는 모덜리스 MFC 대화 상자에서 합니다. `CWinFormsDialog` MFC 클래스에서 파생 된 [CDialog](../mfc/reference/cdialog-class.md)이므로 modal 또는 모덜리스 대화 상자를 시작할 수 있습니다.  
   
  프로세스는 `CWinFormsDialog` 사용자 컨트롤을 호스트 하는 데 사용 하는에 설명 된 유사 [MFC 대화 상자에서 Windows Form 사용자 정의 컨트롤 호스팅](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)합니다. 그러나 `CWinFormsDialog` 초기화 및 직접 프로그래밍할 수 하지 않아도 되도록 사용자 정의 컨트롤의 호스팅 관리 합니다.  
   
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
      **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭는 **MFC03** 프로젝트 노드를 마우스 선택 **속성**합니다. **속성 페이지** 대화 상자가 나타납니다.  
   
-     에 **속성 페이지** 대화 상자는 **구성 속성** 트리 컨트롤 **일반**, 그런 다음는 **프로젝트 기본값**섹션에서 설정 **공용 언어 런타임 지원** 를 **공용 언어 런타임 지원 (/ clr)**합니다. **확인**을 클릭합니다.  
+     에 **속성 페이지** 대화 상자는 **구성 속성** 트리 컨트롤 **일반**, 그런 다음는 **프로젝트 기본값**섹션에서 설정 **공용 언어 런타임 지원** 를 **공용 언어 런타임 지원 (/ clr)** 합니다. **확인**을 클릭합니다.  
   
 3.  .NET 컨트롤에 대 한 참조를 추가 합니다.  
   

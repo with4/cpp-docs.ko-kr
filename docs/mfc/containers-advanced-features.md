@@ -1,13 +1,10 @@
 ---
-title: "컨테이너: 고급 기능 | Microsoft Docs"
-ms.custom: 
+title: '컨테이너: 고급 기능 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e79b1c88996e835a907129fa5810d4c4dca0770
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ff48585a7f3e19939e8d951c513a8d39c0de47e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="containers-advanced-features"></a>컨테이너: 고급 기능
 이 문서에서는 기존 컨테이너 응용 프로그램에 선택적 고급 기능을 통합 하는 데 필요한 단계를 설명 합니다. 이러한 기능은 다음과 같습니다.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [포함된 된 개체에 대 한 OLE 링크](#_core_links_to_embedded_objects)  
   
-##  <a name="_core_creating_a_container_server_application"></a>컨테이너/서버 응용 프로그램 만들기  
+##  <a name="_core_creating_a_container_server_application"></a> 컨테이너/서버 응용 프로그램 만들기  
  컨테이너/서버 응용 프로그램은 컨테이너 및 서버 역할을 하는 응용 프로그램. Windows 용 Microsoft Word는이의 예시입니다. 다른 응용 프로그램에 Windows 용 Word 문서를 포함할 수 있습니다 및 Windows 용 Word 문서에서 항목을 포함할 수도 있습니다. 컨테이너 응용 프로그램에 컨테이너와 전체 서버 (조합 역할 응용 프로그램을 만들 수 없습니다)를 수정 하기 위한 프로세스는 전체 서버를 만들기 위한 프로세스와 유사 합니다.  
   
  문서 [서버: 서버 구현](../mfc/servers-implementing-a-server.md) 서버 응용 프로그램을 구현 하는 데 필요한 작업 수를 나열 합니다. 컨테이너/서버 응용 프로그램에는 컨테이너 응용 프로그램으로 변환 하면 다음 수행 해야 이러한 동일한 작업의 일정 컨테이너에 코드를 추가 합니다. 다음은 고려해 야 할 중요 한 사항에 대 한 설명입니다.  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
  참고 그 자체에 MDI 응용 프로그램를 삽입할 수 없습니다. SDI 응용 프로그램은 아닌 경우 컨테이너/서버 응용 프로그램 자체에 삽입할 수 없습니다.  
   
-##  <a name="_core_links_to_embedded_objects"></a>포함 된 개체에 대 한 링크  
+##  <a name="_core_links_to_embedded_objects"></a> 포함 된 개체에 대 한 링크  
  포함 된 개체의 기능에 대 한 연결을 선택 하면 문서 컨테이너 응용 프로그램 내부에 포함된 된 개체에 대 한 OLE 링크를 만들 수 있습니다. 예를 들어 포함 된 스프레드시트를 포함 하는 워드 프로세서에서 문서를 만듭니다. 응용 프로그램이 포함 된 개체에 대 한 링크를 지 원하는 경우에 워드 프로세서 문서에 포함 된 스프레드시트에 대 한 링크를 붙여넣을 수입니다. 이 기능 여기서 워드 프로세서 원래 받기 알 필요 없이 스프레드시트에 포함 된 정보를 사용 하도록 응용 프로그램을 사용 합니다.  
   
 #### <a name="to-link-to-embedded-objects-in-your-application"></a>응용 프로그램에 포함 된 개체에 연결 하려면  

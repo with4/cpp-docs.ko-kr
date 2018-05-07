@@ -1,11 +1,8 @@
 ---
-title: "Platform:: object 클래스 | Microsoft Docs"
-ms.custom: 
+title: 'Platform:: object 클래스 | Microsoft Docs'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Object::Object
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa882c22aab21fe82abb2884305bc314997f36a4
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a7fc6dc1df1d1e22032dbe7322b9a6ead8334ddc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformobject-class"></a>Platform::Object 클래스
 Ref 클래스 및 ref 구조체는 Windows 런타임 앱에 대 한 일반적인 동작을 제공 합니다. 모든 ref 클래스 및 ref 구조체 인스턴스는 Platform::Object^로 암시적으로 변환될 수 있고 해당하는 가상 ToString 메서드를 재정의할 수 있습니다.  

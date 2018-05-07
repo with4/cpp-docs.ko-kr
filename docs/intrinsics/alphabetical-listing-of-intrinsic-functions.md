@@ -1,12 +1,9 @@
 ---
-title: "내장 함수 목록 사전순 | Microsoft Docs"
-ms.custom: 
+title: 내장 함수 목록 사전순 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad46e20a0182923593f20bd8a56269af18772876
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 84e4418835d29fed1f054888f16b188a8775307d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>내장 함수의 알파벳순 목록
 다음 섹션에서는 일부 또는 모든 아키텍처에서 사용할 수 있는 Microsoft 관련 내장 함수에 대해 설명합니다. 지원되는 기타 내장 함수에 대한 설명은 프로세서 제조업체에서 제공하는 헤더 파일이나 제조업체 웹 사이트에 나와 있습니다. 참조는 [ARM 내장 함수](../intrinsics/arm-intrinsics.md), [x86 내장 함수](../intrinsics/x86-intrinsics-list.md), 및 [x64 내장 함수](../intrinsics/x64-amd64-intrinsics-list.md) 섹션 제조업체 설명서에 대 한 링크입니다. 내장 함수가을 구현 하는 C 런타임 라이브러리 (CRT) 함수; 여기 설명 하지 않습니다. 이러한 함수는에 설명 되어는 [C 런타임 라이브러리 참조](../c-runtime-library/c-run-time-library-reference.md)합니다.  

@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 1 및 수준 4) C4700 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 1 및 수준 4) C4700 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/21/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4700
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4700
 ms.assetid: 2da0deb4-77dd-4b05-98d3-b78d74ac4ca7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00b871d6199338cc3040d6bddedb85f8732dfccd
-ms.sourcegitcommit: 4e416049665819ac62f5300ddf86e94adede4ba0
+ms.openlocfilehash: 876ae98fb2fdea5a9d8bdaecb93b8c229213d329
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-and-level-4-c4700"></a>컴파일러 경고(수준 1 및 수준 4) C4700
 
@@ -35,7 +30,7 @@ ms.lasthandoff: 02/23/2018
 
 이 문제를 해결 하려면 선언 될 때 지역 변수를 초기화할 수도 있고 사용 하기 전에 값을 할당할 수 있습니다. 해당 주소 포인터 매개 변수로 전달 되는 경우 또는 참조 매개 변수로 전달 되는 변수를 초기화 함수를 사용할 수 있습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 샘플에서는 초기화 되 고 발생할 수 있는 가비지 값의 종류를 보여 줍니다. 하려면 먼저 변수 t, u 및 v 사용 될 때 C4700를 생성 합니다. 변수 x, y 및 z 사용 하기 전에 초기화 되기 때문에 경고를 발생 하지 수행:
 

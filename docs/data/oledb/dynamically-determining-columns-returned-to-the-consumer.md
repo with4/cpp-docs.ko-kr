@@ -1,12 +1,9 @@
 ---
-title: "소비자에 게 반환 동적으로 열 결정 | Microsoft Docs"
-ms.custom: 
+title: 소비자에 게 반환 동적으로 열 결정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - bookmarks [C++], dynamically determining columns
 - dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: da3d6e700ef69bda084a6bc5c010957c7fddd0c4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fd84b6f9451e924fac9e3630df38719c83ff583a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>소비자에게 반환되는 열을 동적으로 결정
 PROVIDER_COLUMN_ENTRY 매크로 정상적으로 처리는 **icolumnsinfo:: Getcolumnsinfo** 호출 합니다. 그러나 소비자는 책갈피를 사용 하도록 선택할 수도, 때문에 공급자는 소비자는 책갈피를 요청 하는 여부에 따라 반환 되는 열을 변경 하려면 수 있어야 합니다.  

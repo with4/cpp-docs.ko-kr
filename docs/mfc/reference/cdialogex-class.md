@@ -2,11 +2,8 @@
 title: CDialogEx 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDialogEx
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CDialogEx [MFC], SetBackgroundColor
 - CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c22e258c8306eab1f55fa94f875dde5b68256c71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42da6afd054f05bb37ac0b4ea8bf497a31e433b8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdialogex-class"></a>CDialogEx 클래스
 `CDialogEx` 클래스는 대화 상자의 배경 색과 배경 이미지를 지정합니다.  
@@ -79,7 +74,7 @@ class CDialogEx : public CDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdialogex.h  
   
-##  <a name="cdialogex"></a>CDialogEx::CDialogEx  
+##  <a name="cdialogex"></a>  CDialogEx::CDialogEx  
  `CDialogEx` 개체를 생성합니다.  
   
 ```  
@@ -110,7 +105,7 @@ CDialogEx(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setbackgroundcolor"></a>CDialogEx::SetBackgroundColor  
+##  <a name="setbackgroundcolor"></a>  CDialogEx::SetBackgroundColor  
  대화 상자의 배경 색을 설정합니다.  
   
 ```  
@@ -124,11 +119,11 @@ void SetBackgroundColor(
  RGB 색상 값입니다.  
   
  [in] `bRepaint`  
- `TRUE`즉시; 화면을 업데이트 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
+ `TRUE` 즉시; 화면을 업데이트 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setbackgroundimage"></a>CDialogEx::SetBackgroundImage  
+##  <a name="setbackgroundimage"></a>  CDialogEx::SetBackgroundImage  
  대화 상자의 배경 이미지를 설정합니다.  
   
 ```  
@@ -156,10 +151,10 @@ BOOL SetBackgroundImage(
  중 하나는 `CDialogEx::BackgroundLocation` 이미지의 위치를 지정 하는 값입니다. 유효한 값 BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT, 및 BACKGR_BOTTOMRIGHT 포함 됩니다. 기본값은 BACKGR_TILE 합니다.  
   
  [in] `bAutoDestroy`  
- `TRUE`배경 이미지를 자동으로 제거 하려면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 배경 이미지를 자동으로 제거 하려면 그렇지 않으면 `FALSE`합니다.  
   
  [in] `bRepaint`  
- `TRUE`대화 상자;을 즉시 다시 그리게 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 대화 상자;을 즉시 다시 그리게 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="return-value"></a>반환 값  
  두 번째 방법은 구문, 오버 로드 `TRUE` 방법이 고, 그러지 않으면 경우 `FALSE`합니다.  

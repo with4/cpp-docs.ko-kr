@@ -1,29 +1,24 @@
 ---
-title: "매크로 및 Dll을 관리 하기 위한 함수 | Microsoft Docs"
-ms.custom: 
+title: 매크로 및 Dll을 관리 하기 위한 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/03/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 535045d715651d6393227457068a86f240c27dce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e5e79556bf6e3ae92f7a8d4975dbd30f199e2ca8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>매크로 및 Dll을 관리 하기 위한 함수
 
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 |[AfxTermExtensionModule]()#afxtermextensionmodule)|MFC 할 있습니다 정리 MFC 확장을 DLL 각 프로세스 DLL에서 분리 하는 경우.|
 
 
-## <a name="afx_ext_class"></a>AFX_EXT_CLASS
+## <a name="afx_ext_class"></a>  AFX_EXT_CLASS
 [MFC 확장 Dll](../../build/extension-dlls.md) 매크로 사용 하 여 **AFX_EXT_CLASS** 내보낼 클래스, 클래스를 가져오려면 매크로 사용 하는 MFC 확장 DLL에 연결 된 실행 합니다.  
    
 ### <a name="remarks"></a>설명  
@@ -58,9 +53,9 @@ class AFX_EXT_CLASS CMyClass : public CDocument
  자세한 내용은 참조 [내보내기 및 가져오기를 사용 하 여 AFX_EXT_CLASS](../../build/exporting-and-importing-using-afx-ext-class.md)합니다.  
    
 ### <a name="requirements"></a>요구 사항  
- 헤더: **afxv_**dll.h  
+ 헤더: **afxv_** dll.h  
    
-## <a name="afx_manage_state"></a>AFX_MANAGE_STATE
+## <a name="afx_manage_state"></a>  AFX_MANAGE_STATE
 DLL에서 내보낸된 함수 보호 하기 위해이 매크로 호출 합니다.  
    
 ### <a name="syntax"></a>구문    
@@ -89,7 +84,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
 ### <a name="see-also"></a>참고 항목  
  [AfxGetStaticModuleState](#afxgetstaticmodulestate)
 
-## <a name="a-nameafxoleinitmodulea-afxoleinitmodule"></a><a name="afxoleinitmodule"><a/>AfxOleInitModule
+## <a name="a-nameafxoleinitmodulea-afxoleinitmodule"></a><a name="afxoleinitmodule"><a/> AfxOleInitModule
 동적으로 MFC에 링크 하는 MFC 기본 DLL에서 OLE 지원에 대 한 기본 MFC DLL의에이 함수를 호출 `CWinApp::InitInstance` MFC OLE DLL을 초기화 하는 함수입니다.  
    
 ### <a name="syntax"></a>구문    
@@ -98,7 +93,7 @@ void AFXAPI AfxOleInitModule( );
 ```  
    
 ### <a name="remarks"></a>설명  
- MFC OLE DLL이 MFC 확장 DLL; MFC 확장 DLL 가져오기에 유선 하려면에서는 **CDynLinkLibrary** 만들어야 하 체인은 **CDynLinkLibrary** 은 사용 하는 모든 모듈의 컨텍스트에서 개체입니다. `AfxOleInitModule`만듭니다는 **CDynLinkLibrary** 기본 MFC DLL의 컨텍스트에서 개체에 유선 가져옵니다 있도록는 **CDynLinkLibrary** 체인 기본 MFC DLL의 개체입니다.  
+ MFC OLE DLL이 MFC 확장 DLL; MFC 확장 DLL 가져오기에 유선 하려면에서는 **CDynLinkLibrary** 만들어야 하 체인은 **CDynLinkLibrary** 은 사용 하는 모든 모듈의 컨텍스트에서 개체입니다. `AfxOleInitModule` 만듭니다는 **CDynLinkLibrary** 기본 MFC DLL의 컨텍스트에서 개체에 유선 가져옵니다 있도록는 **CDynLinkLibrary** 체인 기본 MFC DLL의 개체입니다.  
   
  OLE 컨트롤을 작성 하는 사용 하는 경우 `COleControlModule`를 호출 하지 않아야 **AfxOleInitModule** 때문에 `InitInstance` 멤버 함수에 대 한 `COleControlModule` 호출 `AfxOleInitModule`합니다.  
    
@@ -109,7 +104,7 @@ void AFXAPI AfxOleInitModule( );
  [매크로 및 전역](mfc-macros-and-globals.md)   
  [AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)
 
-## <a name="afxnetinitmodule"></a>AfxNetInitModule
+## <a name="afxnetinitmodule"></a>  AfxNetInitModule
 동적으로 MFC에 링크 하는 MFC 기본 DLL에서 MFC 소켓 지원, 기본 MFC DLL에이 함수에 대 한 호출 추가 **CWinApp::InitInstance** MFC 소켓 DLL을 초기화 하는 함수입니다.  
    
 ### <a name="syntax"></a>구문    
@@ -118,7 +113,7 @@ void AFXAPI AfxNetInitModule( );
 ```  
    
 ### <a name="remarks"></a>설명  
- MFC 소켓 DLL은 MFC 확장 DLL; MFC 확장 DLL 가져오기에 유선 하려면에서는 **CDynLinkLibrary** 만들어야 하 체인은 **CDynLinkLibrary** 은 사용 하는 모든 모듈의 컨텍스트에서 개체입니다. `AfxNetInitModule`만듭니다는 **CDynLinkLibrary** 기본 MFC DLL의 컨텍스트에서 개체에 유선 가져옵니다 있도록는 **CDynLinkLibrary** 체인 기본 MFC DLL의 개체입니다.  
+ MFC 소켓 DLL은 MFC 확장 DLL; MFC 확장 DLL 가져오기에 유선 하려면에서는 **CDynLinkLibrary** 만들어야 하 체인은 **CDynLinkLibrary** 은 사용 하는 모든 모듈의 컨텍스트에서 개체입니다. `AfxNetInitModule` 만듭니다는 **CDynLinkLibrary** 기본 MFC DLL의 컨텍스트에서 개체에 유선 가져옵니다 있도록는 **CDynLinkLibrary** 체인 기본 MFC DLL의 개체입니다.  
    
 ### <a name="requirements"></a>요구 사항  
  **헤더:** < afxdll_.h >  
@@ -127,7 +122,7 @@ void AFXAPI AfxNetInitModule( );
  [매크로 및 전역](mfc-macros-and-globals.md)   
  [AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)
 
-## <a name="afxgetambientactctx"></a>AfxGetAmbientActCtx
+## <a name="afxgetambientactctx"></a> AfxGetAmbientActCtx
 MFC의 WinSxS 동작에 영향을 주는 당 모듈 상태 플래그의 현재 상태를 가져오려면이 함수를 사용 합니다.  
    
 ### <a name="syntax"></a>구문    
@@ -154,7 +149,7 @@ BOOL AFXAPI AfxGetAmbientActCtx();
  [MFC 모듈의 상태 데이터 관리](../managing-the-state-data-of-mfc-modules.md)   
  [AfxSetAmbientActCtx](#setambientactctx)
  
-## <a name="afxgetstaticmodulestate"></a>AfxGetStaticModuleState
+## <a name="afxgetstaticmodulestate"></a> AfxGetStaticModuleState
 초기화 하기 전에 모듈 상태를 설정 및/또는 정리 후 이전 모듈 상태를 복원 하려면이 함수를 호출 합니다.  
    
 ### <a name="syntax"></a>구문    
@@ -183,7 +178,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
  **헤더:** afxstat_.h  
    
 
-## <a name="afxinitextensionmodule"></a>AfxInitExtensionModule
+## <a name="afxinitextensionmodule"></a> AfxInitExtensionModule
 MFC 확장 DLL의에이 함수를 호출 `DllMain` DLL을 초기화 합니다.  
    
 ### <a name="syntax"></a>구문    
@@ -201,7 +196,7 @@ BOOL AFXAPI AfxInitExtensionModule( AFX_EXTENSION_MODULE& state,  HMODULE hModul
  **True 이면** MFC 확장 DLL이 성공적으로 초기화 된 고, 그렇지 않으면 **FALSE**합니다.  
    
 ### <a name="remarks"></a>설명  
- 예:  
+ 예를 들어:  
   
 ```cpp
 static AFX_EXTENSION_MODULE NVC_MFC_DLLDLL = { NULL, NULL };
@@ -221,7 +216,7 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 
 ```
   
- `AfxInitExtensionModule`dll의 복사본을 만들어 **HMODULE** 및 캡처 DLL의 런타임 클래스 (`CRuntimeClass` 구조)의 개체 팩터리 뿐만 아니라 (`COleObjectFactory` 개체) 사용 하기 위해 뒷부분에 나오는 경우에는 **CDynLinkLibrary**개체가 만들어집니다.    
+ `AfxInitExtensionModule` dll의 복사본을 만들어 **HMODULE** 및 캡처 DLL의 런타임 클래스 (`CRuntimeClass` 구조)의 개체 팩터리 뿐만 아니라 (`COleObjectFactory` 개체) 사용 하기 위해 뒷부분에 나오는 경우에는 **CDynLinkLibrary**개체가 만들어집니다.    
  MFC 확장 Dll 두 가지를 수행 해야 자신의 `DllMain` 함수:    
 -   호출 [AfxInitExtensionModule](#_mfc_afxinitextensionmodule) 반환 값을 확인 합니다.   
 -   만들기는 **CDynLinkLibrary** DLL를 내보내는 경우 개체 [CRuntimeClass 구조](cruntimeclass-structure.md) 자체 사용자 지정 리소스 또는 개체입니다.    
@@ -234,7 +229,7 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
  [매크로 및 전역](mfc-macros-and-globals.md)   
  [AfxTermExtensionModule](#afxtermextensionmodule)
 
- ## <a name="afxsetambientactctx"></a>AfxSetAmbientActCtx
+ ## <a name="afxsetambientactctx"></a>  AfxSetAmbientActCtx
 이 함수를 사용 하 여 MFC의 WinSxS 동작에 영향을 주는 당 모듈 상태 플래그를 설정 합니다.  
    
 ### <a name="syntax"></a>구문  
@@ -251,7 +246,7 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
  플래그가 설정 되지 않은 경우 모듈의 컨텍스트 항목에 대해 활성화 되지 않았습니다.    
  모듈의 컨텍스트는 일반적으로 리소스 모듈에에서 포함 된 매니페스트에서에서 결정 됩니다.  
    
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  ```cpp
 BOOL CMFCListViewApp::InitInstance()
 {
@@ -268,7 +263,7 @@ BOOL CMFCListViewApp::InitInstance()
  [AFX_MANAGE_STATE](#afx_manage_state)   
  [MFC 모듈의 상태 데이터 관리](../managing-the-state-data-of-mfc-modules.md) 
 
-## <a name="afxtermextensionmodule"></a>AfxTermExtensionModule
+## <a name="afxtermextensionmodule"></a>  AfxTermExtensionModule
 
 이 함수를 허용 하도록 MFC 정리에 MFC 확장 DLL DLL에서 각 프로세스를 분리할 때 호출 (때나의 결과로 DLL이 언로드되어 프로세스가 종료 될 때 발생 하는 `AfxFreeLibrary` 호출).  
    
@@ -284,7 +279,7 @@ void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = 
  경우 **TRUE**정리, MFC 확장 DLL 모듈을 모두 합니다. 그렇지 않고 현재 DLL 모듈을 정리 합니다.  
    
 ### <a name="remarks"></a>설명  
- `AfxTermExtensionModule`모듈에 연결 된 모든 로컬 저장소를 삭제 하 고 메시지 맵 캐시에서 항목을 제거 합니다. 예:  
+ `AfxTermExtensionModule` 모듈에 연결 된 모든 로컬 저장소를 삭제 하 고 메시지 맵 캐시에서 항목을 제거 합니다. 예를 들어:  
   
 ```cpp
 static AFX_EXTENSION_MODULE NVC_MFC_DLLDLL = { NULL, NULL };

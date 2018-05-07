@@ -1,13 +1,10 @@
 ---
-title: "명령 라우팅 설명 | Microsoft Docs"
-ms.custom: 
+title: 명령 라우팅 설명 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - command handling [MFC], routing commands
 - command routing [MFC], OnCmdMsg handler
 ms.assetid: 4b7b4741-565f-4878-b076-fd85c670f87f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24ac591005d5df6b18102d296352b8b2528ba839
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a12a5cd19177761dfbf484c64f528d8def194ca5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="command-routing-illustration"></a>명령 라우팅 설명
 예를 들어 MDI 응용 프로그램의 편집 메뉴에서 메뉴 항목 모두 지우기 명령 메시지를 것이 좋습니다. 이 명령의 처리기 함수 발생 하는 응용 프로그램의 문서 클래스의 멤버 함수로 가정 합니다. 메뉴 항목을 선택한 후 해당 명령에 해당 처리기 도달 하는 방법을 다음과 같습니다.  

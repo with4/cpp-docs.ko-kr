@@ -1,12 +1,9 @@
 ---
 title: 'hash_multimap:: value_comp (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multimap::value_comp
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - value_comp member [STL/CLR]
 ms.assetid: ec6108b8-a529-499b-bc7f-dce41f5b6175
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5e4fe0e12febfd1aea0f3c44baa30afad0514d76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9ef59cd84466f02d480e5c147e779bdcff0bbc90
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultimapvaluecomp-stlclr"></a>hash_multimap::value_comp(STL/CLR)
 두 요소 값에 대 한 순서 지정 대리자를 복사합니다.  
@@ -40,7 +35,7 @@ value_compare^ value_comp();
 ## <a name="remarks"></a>설명  
  멤버 함수는 제어 되는 시퀀스를 정렬 하는 데 사용 되는 정렬 대리자를 반환 합니다. 두 요소 값 비교를 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_multimap_value_comp.cpp   

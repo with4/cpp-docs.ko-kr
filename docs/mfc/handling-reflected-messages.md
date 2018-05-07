@@ -1,30 +1,25 @@
 ---
-title: "리플렉션된 메시지 처리 | Microsoft Docs"
-ms.custom: 
+title: 리플렉션된 메시지 처리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - message handling [MFC], reflected messages
 - reflected messages, handling
 ms.assetid: 147a4e0c-51cc-4447-a8e1-c28b4cece578
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c3576e93ce7ce2d972e78433065feaf06f3ae15
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05b5f62169d2b65010ec75ab8c8b5c30959b77b2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-reflected-messages"></a>리플렉션된 메시지 처리
 반사를 사용 하면 같은 컨트롤에 대 한 메시지를 처리 하는 메시지 `WM_CTLCOLOR`, **WM_COMMAND**, 및 **WM_NOTIFY**, 컨트롤 자체 내에서. 그러면 컨트롤의 독립성 및 이식성이 향상됩니다. 이 메커니즘은 Windows 공용 컨트롤 및 ActiveX 컨트롤(이전의 OLE 컨트롤)에서 작동합니다.  

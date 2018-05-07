@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 c 2780 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 c 2780 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2780
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2780
 ms.assetid: 423793d8-a3b2-4f35-85f8-ae1d043e2b69
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8acea179c73b5a4821f2c13645b594c71413e426
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fba3d16284e8f56dd3583cb73d4b8fec56222a38
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2780"></a>컴파일러 오류 c 2780
 'declaration' : 인수가 N개 있어야 하는데 M개를 사용했습니다.  

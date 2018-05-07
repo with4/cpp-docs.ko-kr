@@ -1,12 +1,9 @@
 ---
-title: "_U_MENUorID 클래스 | Microsoft Docs"
-ms.custom: 
+title: _U_MENUorID 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - ATL._U_MENUorID
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - U_MENUorID class
 - _U_MENUorID class
 ms.assetid: cfc8032b-61b4-4a68-ba3a-92b82500ccae
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ddde6ff5d45c90e675bd2e44ac421e840d1357b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 847a735cdba6b9ff4173e23acf78ea7dc4d3034c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="umenuorid-class"></a>_U_MENUorID 클래스
 이 클래스에 대 한 래퍼를 제공 **CreateWindow** 및 **CreateWindowEx**합니다.  
@@ -67,14 +62,14 @@ class _U_MENUorID
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
   
-##  <a name="_u_menuorid__m_hmenu"></a>_U_MENUorID::m_hMenu  
+##  <a name="_u_menuorid__m_hmenu"></a>  _U_MENUorID::m_hMenu  
  클래스를 공용 생성자 중 하나에 전달 된 값을 보유 `HMENU` 데이터 멤버입니다.  
   
 ```
 HMENU m_hMenu;
 ```  
   
-##  <a name="_u_menuorid___u_menuorid"></a>_U_MENUorID::_U_MENUorID  
+##  <a name="_u_menuorid___u_menuorid"></a>  _U_MENUorID::_U_MENUorID  
  **UINT** 인수를 캐스팅 하기만 됩니다는 `HMENU` 생성자는 클래스의 단일 데이터 멤버에 저장 된 결과에서 [m_hMenu](#_u_menuorid__m_hmenu)합니다.  
   
 ```

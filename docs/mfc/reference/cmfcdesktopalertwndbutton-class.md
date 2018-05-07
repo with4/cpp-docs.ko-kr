@@ -1,12 +1,9 @@
 ---
-title: "CMFCDesktopAlertWndButton 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCDesktopAlertWndButton 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDesktopAlertWndButton
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndButton [MFC], IsCaptionButton
 - CMFCDesktopAlertWndButton [MFC], IsCloseButton
 ms.assetid: df39a0c8-0c39-4ab0-8c64-78c5b2c4ecaf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae1153546851e6a34c14dacd33db04091de24557
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: efabaabdcc3f08a58cb7dc0a7845a56e5238548d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>CMFCDesktopAlertWndButton 클래스
 바탕 화면 경고 대화 상자에 추가 하는 단추를 허용 합니다.  
@@ -62,7 +57,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
   
 |||  
 |-|-|  
-|name|설명|  
+|이름|설명|  
 |`CMFCDesktopAlertWndButton::m_bIsCaptionButton`|단추 캡션 영역 경고 대화 상자에에서 표시 되는지 여부를 지정 하는 부울 값입니다.|  
 |`CMFCDesktopAlertWndButton::m_bIsCloseButton`|단추 경고 대화 상자를 닫고 있는지 여부를 지정 하는 부울 값입니다.|  
   
@@ -71,7 +66,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
   
  추가 `CMFCDesktopAlertWndButton` 개체를 한 `CMFCDesktopAlertDialog` 개체 모든 단추를 추가 합니다. 에 대 한 자세한 내용은 `CMFCDesktopAlertDialog`, 참조 [CMFCDesktopAlertDialog 클래스](../../mfc/reference/cmfcdesktopalertdialog-class.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 사용 하는 `SetImage` 에서 메서드는 `CMFCDesktopAlertWndButton` 클래스. 이 코드 조각은의 일부인는 [바탕 화면 경고 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#4](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_1.h)]  
@@ -93,7 +88,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdesktopalertwnd.h  
   
-##  <a name="iscaptionbutton"></a>CMFCDesktopAlertWndButton::IsCaptionButton  
+##  <a name="iscaptionbutton"></a>  CMFCDesktopAlertWndButton::IsCaptionButton  
  캡션 영역의 경고 대화 상자에는 단추가 표시 되는지를 있는지 여부를 결정 합니다.  
   
 ```  
@@ -103,7 +98,7 @@ BOOL IsCaptionButton() const;
 ### <a name="return-value"></a>반환 값  
  단추 경고 대화 상자; 캡션 영역에 표시 되 면 0이 아닌 그렇지 않으면 0입니다.  
   
-##  <a name="isclosebutton"></a>CMFCDesktopAlertWndButton::IsCloseButton  
+##  <a name="isclosebutton"></a>  CMFCDesktopAlertWndButton::IsCloseButton  
  단추 경고 대화 상자를 닫고 있는지 여부를 결정 합니다.  
   
 ```  

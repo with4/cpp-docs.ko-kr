@@ -1,12 +1,9 @@
 ---
-title: "링커 도구 오류 LNK2001 | Microsoft Docs"
-ms.custom: 
+title: 링커 도구 오류 LNK2001 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK2001
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51f78f436d0e19779d0ebca499a559a60d12bcf9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78dc0c0a3a030ecb88d7138484e2c64e145f69ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk2001"></a>링커 도구 오류 LNK2001
 확인 되지 않은 외부 기호 "*기호*"  
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
   
 이 오류 코드는 라이브러리의 한 버전에서 기호를 참조 하지만 서로 다른 버전의 링커를 라이브러리를 제공 하는 경우에 발생할 수 있습니다. 일반적으로 개체 파일 또는 라이브러리가 다른 버전의 컴파일러에 대해 작성 된 혼합할 수 없습니다. 새 버전에 제공 되는 라이브러리를 반대로 및 이전 버전에 포함 된 라이브러리에서 찾을 수 없는 기호를 포함할 수 있습니다. 이 문제를 해결 하려면 함께 연결 하기 전에 모든 개체 파일 및 라이브러리와 동일한 버전의 컴파일러를 빌드하십시오.  
   
--  도구 &#124; 옵션 &#124; 프로젝트 &#124; 라이브러리 파일 선택 영역에서의 VC + + 디렉터리 대화 상자를 사용 하면 라이브러리 검색 순서를 변경할 수 있습니다. 프로젝트의 속성 페이지 대화 상자에서 링커 폴더 만료 될 수 있는 경로 포함할 수도 있습니다.  
+-  도구 &#124; 옵션 &#124; 프로젝트 &#124; 라이브러리 파일 선택 영역에서 VC + + 디렉터리 대화 상자, 라이브러리 검색 순서를 변경할 수 있습니다. 프로젝트의 속성 페이지 대화 상자에서 링커 폴더 만료 될 수 있는 경로 포함할 수도 있습니다.  
   
 -  이 문제는 (다른 위치에), 새로운는 SDK가 설치 및 검색 순서 새 위치를 가리키도록 업데이트 되지 않습니다 때 나타날 수 있습니다. 일반적으로 넣어야 경로를 새 SDK 포함 및 라이브러리의 기본 Visual c + + 위치 앞에 디렉터리입니다. 또한 포함 된 경로 포함 하는 프로젝트 경로 이전 경로 유효 하지만 서로 다른 위치에 설치 하는 새 버전에서 추가 된 새로운 기능에 대해 만료 된를 여전히 가리킬 수 있습니다.  
   
@@ -112,7 +107,7 @@ C + + 컴파일러 및 링커 사용 [이름 데코레이션](../../error-messag
   
 경우에 따라 링커가 기호에 대 한 데코 레이트 된 이름을만 보고할 수 있습니다. UNDNAME 명령줄 도구를 사용 하 여 데코레이팅되지 않은 형태의 데코레이팅된 이름 가져올 수 있습니다.  
   
-## <a name="additional-resources"></a>추가 리소스  
+## <a name="additional-resources"></a>추가 자료  
   
 LNK2001에 대 한 가능한 원인 및 해결 하는 방법에 대 한 자세한 내용은 스택 오버플로 질문을 참조 하십시오. [정의 되지 않은 참조/확인 되지 않은 외부 기호 오류가 란 무엇이 고 어떻게 해결 하나요?](http://stackoverflow.com/q/12573816/2002113)합니다.  
 

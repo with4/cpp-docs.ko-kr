@@ -1,12 +1,9 @@
 ---
 title: __ud2 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __ud2
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - UD2 instruction
 - __ud2 intrinsic
 ms.assetid: 0831cd5a-8b65-402e-bb57-11e1d5d7ffd2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c24ef85598b94280badd31c5f4570ee6915100b5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c282456f74fa86940e3d1ffc77d0226a28ed0b80
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ud2"></a>__ud2
 **Microsoft 전용**  
@@ -54,7 +49,7 @@ void __ud2();
   
 **Microsoft 전용 종료**  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 예외가 발생 하는 정의 되지 않은 명령을 실행 합니다. 예외 처리기 하나에 0에서 반환 코드를 변경합니다.  
   
 ```  

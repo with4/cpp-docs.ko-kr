@@ -2,11 +2,8 @@
 title: 함수 (c + +) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/25/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46ed90500ce0b31ce3dbd2348bc8d871ba13911f
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 720147992540b53c51e731db361cd9946a7a5313
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="functions-c"></a>함수(C++)
 
@@ -310,35 +305,6 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
-<<<<<<< HEAD
-4. 반환 값 자체를 사용 하는 것 외에도 "값을 반환할 있습니다" 개수에 관계 없이 함수를 수정 하거나 호출자에 게 제공 하는 개체의 값을 초기화할 수 있도록 참조로 전달에 사용할 매개 변수를 정의 하 여 합니다. 자세한 내용은 참조 [참조 형식 함수 인수](reference-type-function-arguments.md)합니다.  
-  
-## <a name="function-pointers"></a>함수 포인터  
- C++은 C 언어와 동일한 방식으로 함수 포인터를 지원합니다. 그러나 일반적으로 함수 개체를 사용하면 형식이 보다 더 안전합니다.  
-  
- 함수 포인터 형식을 반환하는 함수를 선언할 경우 `typedef`를 사용하여 함수 포인터 형식에 대한 별칭을 선언하는 것이 좋습니다.  예  
-  
-```  
-typedef int (*fp)(int);  
-fp myFunction(char* s); // function returning function pointer  
-```  
-  
- 다른 방법으로, 식별자(위 예제에서 `fp`)를 함수 이름 및 인수 목록으로 대체하여 함수 선언의 올바른 구문을 함수 포인터의 선언자 구문에서 추론할 수 있습니다. 예제는 다음과 같습니다.  
-  
-```  
-int (*myFunction(char* s))(int);  
-```  
-  
- 앞의 선언은 위에서 typedef를 사용한 선언과 같습니다.  
-  
-## <a name="see-also"></a>참고 항목  
- [함수 오버 로드](../cpp/function-overloading.md)   
- [가변 인수 목록 가진 함수](../cpp/functions-with-variable-argument-lists-cpp.md)   
- [명시적으로 기본 설정 및 삭제 된 함수](../cpp/explicitly-defaulted-and-deleted-functions.md)   
- [함수에 대 한 인수 종속 이름 (Koenig) 조회](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)   
- [기본 인수](../cpp/default-arguments.md)   
- [인라인 함수](../cpp/inline-functions-cpp.md)
-=======
 ## <a name="returning-multiple-values-from-a-function"></a>함수에서 여러 값을 반환합니다.
 
 여러 가지 방법으로 함수에서 둘 이상의 값을 반환 합니다.
@@ -475,4 +441,3 @@ int (*myFunction(char* s))(int);
 - [함수에 대한 인수 종속 이름(Koenig) 조회](../cpp/argument-dependent-name-koenig-lookup-on-functions.md)
 - [기본 인수](../cpp/default-arguments.md)
 - [인라인 함수](../cpp/inline-functions-cpp.md)
->>>>>>> master

@@ -1,24 +1,19 @@
 ---
-title: "이벤트 (C + + /cli CX) | Microsoft Docs"
-ms.custom: 
+title: 이벤트 (C + + /cli CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef32e8310454005fa01a3e23dcd8739dcdbaa647
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 98231f0803270a9e033529e163ff2cc23cdd64e9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="events-ccx"></a>이벤트(C++/CX)
 Windows 런타임 형식을 선언할 수 있습니다 (즉, 게시) 이벤트 및 동일한 구성 요소 또는 다른 구성 요소의 클라이언트 코드는 메서드 호출 연결 하 여 이러한 이벤트에 가입할 수 *이벤트 처리기* 이벤트와 합니다. 여러 이벤트 처리기를 단일 이벤트에 연결할 수 있습니다. 게시 개체에서 이벤트가 발생하면 호출되는 모든 이벤트 처리기가 발생됩니다. 이 방법으로 구독 클래스에서는 게시자가 이벤트를 발생시킬 때 적절한 사용자 지정 작업은 무엇이든 수행할 수 있습니다. 이벤트에는 모든 이벤트 처리기에서 이벤트를 구독하기 위해 필요한 서명을 지정하는 대리자 형식이 있습니다.  

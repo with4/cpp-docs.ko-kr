@@ -1,12 +1,9 @@
 ---
-title: "CDumpContext 클래스 | Microsoft Docs"
-ms.custom: 
+title: CDumpContext 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDumpContext
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CDumpContext [MFC], HexDump
 - CDumpContext [MFC], SetDepth
 ms.assetid: 98c52b2d-14b5-48ed-b423-479a4d1c60fa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d54a461bece96faeb11f78a1788049abcabbae0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e7acd7e94dbb45439a1812f8572ef442e43f9dab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdumpcontext-class"></a>CDumpContext 클래스
 사용자가 읽을 수 있는 텍스트 형식으로 스트림 지향 진단 출력을 지원합니다.  
@@ -70,10 +65,10 @@ class CDumpContext
   
 |이름|설명|  
 |----------|-----------------|  
-|[CDumpContext::operator&lt;&lt;](#operator_lt_lt)|에 덤프 컨텍스트 변수 및 개체를 삽입합니다.|  
+|[CDumpContext::operator &lt;&lt;](#operator_lt_lt)|에 덤프 컨텍스트 변수 및 개체를 삽입합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CDumpContext`기본 클래스는 없습니다.  
+ `CDumpContext` 기본 클래스는 없습니다.  
   
  사용할 수 있습니다 [afxDump](diagnostic-services.md#afxdump)는 미리 선언 된 `CDumpContext` 대부분의 프로그램 덤프에 대 한 개체입니다. `afxDump` 개체는 Microsoft Foundation Class 라이브러리의 디버그 버전에만 사용할 수 있습니다.  
   
@@ -81,7 +76,7 @@ class CDumpContext
   
  Windows 환경에서 미리 정의 된 출력에서 `afxDump` 개념적으로 유사한 개체는 `cerr` 스트림, Windows 함수를 통해 디버거에 라우팅 된다고 **OutputDebugString**합니다.  
   
- `CDumpContext` 클래스에 오버 로드 된 삽입 (  **<<** )에 대 한 연산자 `CObject` 개체의 데이터를 덤프 하는 포인터입니다. 파생된 된 개체에 대 한 사용자 지정 덤프 형식 해야 하는 경우 재정의 [CObject::Dump](../../mfc/reference/cobject-class.md#dump)합니다. 대부분 Microsoft Foundation 클래스에서 재정의 된 구현 `Dump` 멤버 함수입니다.  
+ `CDumpContext` 클래스에 오버 로드 된 삽입 ( **<<**)에 대 한 연산자 `CObject` 개체의 데이터를 덤프 하는 포인터입니다. 파생된 된 개체에 대 한 사용자 지정 덤프 형식 해야 하는 경우 재정의 [CObject::Dump](../../mfc/reference/cobject-class.md#dump)합니다. 대부분 Microsoft Foundation 클래스에서 재정의 된 구현 `Dump` 멤버 함수입니다.  
   
  클래스에서 파생 되지 않은 `CObject`와 같은 `CString`, `CTime`, 및 `CTimeSpan`, 자신의 오버 로드 된가 `CDumpContext` 삽입 연산자와 같은 자주 사용 하는 do 구조체로 **CFileStatus**, `CPoint`, 및 `CRect`합니다.  
   
@@ -101,7 +96,7 @@ class CDumpContext
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afx.h  
   
-##  <a name="cdumpcontext"></a>CDumpContext::CDumpContext  
+##  <a name="cdumpcontext"></a>  CDumpContext::CDumpContext  
  클래스의 개체를 생성 `CDumpContext`합니다.  
   
 ```  
@@ -117,10 +112,10 @@ CDumpContext(CFile* pFile = NULL);
   
  내부에 쓰지 않아도 `CFile` 덤프 컨텍스트 활성 상태가 아니면 동안 덤프를 방해할 수 있습니다. Windows 환경에서 출력 하 고 디버거 Windows 함수를 통해 라우팅됩니다 **OutputDebugString**합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities#12](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]  
   
-##  <a name="dumpashex"></a>CDumpContext::DumpAsHex  
+##  <a name="dumpashex"></a>  CDumpContext::DumpAsHex  
  16 진수 숫자로 지정된 된 형식으로 덤프 합니다.  
   
 ```  
@@ -140,20 +135,20 @@ CDumpContext& DumpAsHex(WORD w);
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 16 진수 숫자로 지정 된 형식의 항목을 덤프를 호출 합니다. 배열 덤프 하려면 호출 [CDumpContext::HexDump](#hexdump)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities#13](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]  
   
-##  <a name="flush"></a>CDumpContext::Flush  
+##  <a name="flush"></a>  CDumpContext::Flush  
  덤프 컨텍스트에 연결 된 파일에 기록 하는 버퍼에 남아 있는 모든 데이터를 수행 하도록 합니다.  
   
 ```  
 void Flush();
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities#14](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]  
   
-##  <a name="getdepth"></a>CDumpContext::GetDepth  
+##  <a name="getdepth"></a>  CDumpContext::GetDepth  
  프로세스에서 전체 또는 단순 덤프 인지 확인 합니다.  
   
 ```  
@@ -163,10 +158,10 @@ int GetDepth() const;
 ### <a name="return-value"></a>반환 값  
  설정한 대로 덤프의 깊이 `SetDepth`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [SetDepth](#setdepth)합니다.  
   
-##  <a name="hexdump"></a>CDumpContext::HexDump  
+##  <a name="hexdump"></a>  CDumpContext::HexDump  
  덤프를 16 진수로 서식이 지정 된 바이트 배열입니다.  
   
 ```  
@@ -193,10 +188,10 @@ void HexDump(
 ### <a name="remarks"></a>설명  
  16 진수를 나타내는 단일, 특정 항목 형식을 덤프 하려면 호출 [CDumpContext::DumpAsHex](#dumpashex)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities#15](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]  
   
-##  <a name="operator_lt_lt"></a>CDumpContext::operator&lt;&lt;  
+##  <a name="operator_lt_lt"></a>  CDumpContext::operator &lt;&lt;  
  덤프 컨텍스트를 지정된 된 데이터를 출력합니다.  
   
 ```  
@@ -231,10 +226,10 @@ CDumpContext& operator<<(HFONT h);
   
  사용 하는 경우는 `IMPLEMENT_DYNAMIC` 또는 `IMPLEMENT_SERIAL` 클래스에 다음 삽입 연산자의 구현에서 매크로 통해 `CObject::Dump`의 이름을 인쇄 프로그램 `CObject`-클래스를 파생 합니다. 그렇지 않은 경우 인쇄 됩니다 `CObject`합니다. 재정의 하는 경우는 `Dump` 함수 클래스에 다음의 16 진수 덤프 하는 대신 개체의 내용의 좀 더 의미 있는 출력을 제공할 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities#17](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]  
   
-##  <a name="setdepth"></a>CDumpContext::SetDepth  
+##  <a name="setdepth"></a>  CDumpContext::SetDepth  
  덤프에 대 한 깊이 가져오거나 설정 합니다.  
   
 ```  
@@ -251,7 +246,7 @@ void SetDepth(int nNewDepth);
 > [!NOTE]
 >  순환 참조는 전체 덤프에서 찾을 수 없습니다 및 무한 루프가 발생할 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities#16](../../mfc/codesnippet/cpp/cdumpcontext-class_6.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

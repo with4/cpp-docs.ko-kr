@@ -1,13 +1,10 @@
 ---
-title: "도구 모음 컨트롤의 모양 사용자 지정 | Microsoft Docs"
-ms.custom: 
+title: 도구 모음 컨트롤의 모양 사용자 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - TBSTYLE_
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], object styles
 - toolbar controls [MFC], style
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c40b7e055585a11b90c2cec1fefb967b51b35cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 96ec459e1c956c805991f2e37d22b8260f0ffdf2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>도구 모음 컨트롤의 모양 사용자 지정
 클래스 `CToolBarCtrl` 모양을 (및 경우에 따라서는 동작)의 도구 모음 개체에 영향을 주는 많은 스타일을 제공 합니다. 도구 모음 개체를 설정 하 여 수정는 `dwCtrlStyle` 의 매개 변수는 `CToolBarCtrl::Create` (또는 `CToolBar::CreateEx`) 도구 모음 컨트롤을 처음 만들 때 멤버 함수입니다.  
@@ -57,11 +52,11 @@ ms.lasthandoff: 12/21/2017
   
  나머지 스타일 도구 모음 개체의 시각적 및 표시 되지 않는 측면을 영향을 줍니다.  
   
--   `TBSTYLE_WRAPABLE`여러 줄의 단추를 가질 수 있는 도구 모음을 만듭니다. 도구 모음 단추 "바꿈하여" 다음 줄으로 도구 모음 같은 줄에서 모든 단추를 포함 하는 범위가 너무 좁으면 해지면 합니다. 분리 및 바꿈은 경계에서 발생 합니다.  
+-   `TBSTYLE_WRAPABLE` 여러 줄의 단추를 가질 수 있는 도구 모음을 만듭니다. 도구 모음 단추 "바꿈하여" 다음 줄으로 도구 모음 같은 줄에서 모든 단추를 포함 하는 범위가 너무 좁으면 해지면 합니다. 분리 및 바꿈은 경계에서 발생 합니다.  
   
 -   **TBSTYLE_CUSTOMERASE** 생성 **NM_CUSTOMDRAW** 알림 메시지를 처리할 때 `WM_ERASEBKGND` 메시지입니다.  
   
--   `TBSTYLE_TOOLTIPS`응용 프로그램 도구 모음에서 단추에 대 한 설명 텍스트를 표시 하는 데 사용할 수 있는 도구 설명 컨트롤을 만듭니다.  
+-   `TBSTYLE_TOOLTIPS` 응용 프로그램 도구 모음에서 단추에 대 한 설명 텍스트를 표시 하는 데 사용할 수 있는 도구 설명 컨트롤을 만듭니다.  
   
  도구 모음 스타일과 확장 된 스타일의 전체 목록을 보려면 [도구 모음 컨트롤과 단추 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760439) 및 [확장 스타일 도구 모음](http://msdn.microsoft.com/library/windows/desktop/bb760430) Windows sdk에서입니다.  
   

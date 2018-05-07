@@ -2,11 +2,8 @@
 title: 'priority_queue:: top (STL/CLR) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::priority_queue::top
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - top member [STL/CLR]
 ms.assetid: e45211d5-e6df-4c03-97fd-57afb87af58c
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c1614d1babb06aa3b36b6932fd23c1f2700a3ee3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cf02100bf08ad78452368f633443b8d738730a0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="priorityqueuetop-stlclr"></a>priority_queue::top(STL/CLR)
 우선 순위가 가장 높은 요소에 액세스 합니다.  
@@ -40,7 +35,7 @@ reference top();
 ## <a name="remarks"></a>설명  
  멤버 함수는 비어 있는 제어 된 시퀀스의 최상위 (가장 높은 우선 순위) 요소에 대 한 참조를 반환 합니다. 존재 하는 것을 알고 있는 경우 우선 순위가 가장 높은 요소를 액세스할 수 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_priority_queue_top.cpp   

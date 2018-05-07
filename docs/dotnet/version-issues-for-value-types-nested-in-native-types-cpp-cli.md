@@ -1,38 +1,33 @@
 ---
-title: "네이티브 형식에 중첩 된 값 형식의 버전 문제 (C + + /cli CLI) | Microsoft Docs"
-ms.custom: 
+title: 네이티브 형식에 중첩 된 값 형식의 버전 문제 (C + + /cli CLI) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - __nogc type declarations
 - __value keyword, issues when nesting
 ms.assetid: 0a3b1a43-39c6-4b52-be2f-1074690188aa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 29a5eb3a085682f243f1497e56b12a0b7d760edb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4c4f2598594930f49c1217c937c9142b3f84a47e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="version-issues-for-value-types-nested-in-native-types-ccli"></a>네이티브 형식에 중첩된 값 형식의 버전 문제(C++/CLI)
 클라이언트 어셈블리를 제조 하는 데 사용 하는 서명된 (강력한 이름) 어셈블리 구성 요소를 고려 합니다. 구성 요소에는 네이티브 공용 구조체, 클래스 또는 배열 멤버에 대 한 형식으로 클라이언트에 사용 되는 값 형식이 포함 되어 있습니다. 이후 버전의 구성 요소 크기 또는 값 형식의 레이아웃을 변경 하는 경우 클라이언트 다시 컴파일해야 합니다.  
   
  키와 파일을 만들려면 [sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) (`sn -k mykey.snk`).  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플 구성 요소입니다.  
   
 ```  
@@ -50,7 +45,7 @@ public value struct S {
 };  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 샘플은 클라이언트:  
   
 ```  

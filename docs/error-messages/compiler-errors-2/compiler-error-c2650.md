@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C2650 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C2650 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2650
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C2650
 ms.assetid: 49a8ac6e-aa6d-4616-917c-a3cfcdbad5a4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b975eb131951712fd5615041dcdb2391784e8003
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ee76b2d80ff76033f6776b91ee90e52ef5e200cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2650"></a>컴파일러 오류 C2650
 'operator': 가상 함수 일 수 없습니다  
   
  A `new` 또는 `delete` 연산자가 선언 `virtual`합니다. 이러한 연산자는 `static` 멤버 함수 및 커야 `virtual`합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C2650 오류가 생성 됩니다.  
   
 ```  

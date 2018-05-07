@@ -1,12 +1,9 @@
 ---
-title: "연산자&lt; (stack) (STL/CLR) | Microsoft Docs"
-ms.custom: 
+title: 연산자&lt; (stack) (STL/CLR) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::stack::operator<
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator< member [STL/CLR]
 ms.assetid: 77f8dd42-89d1-4ce1-a7ec-04c3a45dd3ee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5146a1cfd6c7140ba63b1e9e1756c843325222e6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 77ed992b33dee758b6ca7d2997135b704863c02c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operatorlt-stack-stlclr"></a>연산자&lt; (stack) (STL/CLR)
 스택 비교 보다 작습니다.  
@@ -50,7 +45,7 @@ template<typename Value,
 ## <a name="remarks"></a>설명  
  연산자 함수 이면 true를 반환, 가장 낮은 위치에 대 한 `i` 를 `!(right[i] < left[i])` 도 true 하는 것이 `left[i] < right[i]`합니다. 그렇지 않으면 반환 `left->` [stack:: size (STL/CLR)](../dotnet/stack-size-stl-clr.md) `() <` `right->size()` 테스트를 사용 하는지 여부를 `left` 앞에 정렬 `right` 두 스택 요소 별로 비교를 하는 경우.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_stack_operator_lt.cpp   

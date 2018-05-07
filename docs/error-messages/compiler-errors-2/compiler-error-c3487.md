@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C3487 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C3487 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3487
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3487
 ms.assetid: 39bda474-4418-4a79-98bf-2b22fa92eaaa
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 566f130e3d65826feecc02afae0cc1a7db335efe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb30b9a2cb0b77eff0888da6c387bd3b06182721
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3487"></a>컴파일러 오류 C3487
 'return type': 모든 반환 식은 같은 형식에 추론되어야 합니다. 이전에는 'return type'이었습니다.  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
 -   람다에 후행 반환 형식을 지정합니다. 람다의 모든 반환 값이 동일한 형식이거나 반환 형식으로 암시적으로 변환할 수 있는지 확인합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 람다의 반환 형식이 일치하지 않으므로 C3487을 생성합니다.  
   
 ```  

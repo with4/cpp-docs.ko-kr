@@ -1,12 +1,9 @@
 ---
-title: "CSingleDocTemplate 클래스 | Microsoft Docs"
-ms.custom: 
+title: CSingleDocTemplate 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSingleDocTemplate
@@ -17,15 +14,13 @@ dev_langs:
 helpviewer_keywords:
 - CSingleDocTemplate [MFC], CSingleDocTemplate
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.openlocfilehash: e23db022f62dab171359f2d0a9cdb158c36557c8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 413b7b4a7cf11ff7e83596ecc61423d4bc4f0358
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csingledoctemplate-class"></a>CSingleDocTemplate 클래스
 SDI(단일 문서 인터페이스)를 구현하는 문서 템플릿을 정의합니다.  
@@ -73,7 +68,7 @@ class CSingleDocTemplate : public CDocTemplate
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="csingledoctemplate"></a>CSingleDocTemplate::CSingleDocTemplate  
+##  <a name="csingledoctemplate"></a>  CSingleDocTemplate::CSingleDocTemplate  
  `CSingleDocTemplate` 개체를 생성합니다.  
   
 ```  
@@ -88,7 +83,7 @@ CSingleDocTemplate(
  `nIDResource`  
  문서 종류를 사용 하는 리소스의 ID를 지정 합니다. 이 메뉴, 아이콘, 액셀러레이터 키 테이블 및 문자열 리소스 포함 될 수 있습니다.  
   
- '\N' 문자로 구분 되는 최대 7 개의 부분 문자열로 이루어진 문자열 리소스 구성 (부분 문자열에 포함 되지 않은 경우 '\n' 문자 자리 표시자로 필요한; 그러나 후행 '\n' 문자가 필요 하지 않은); 이러한 부분 문자열에는 문서 유형에 대해 설명합니다. 부분 문자열에 대 한 정보를 참조 하십시오. [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)합니다. 이 문자열 리소스를 응용 프로그램의 리소스 파일에서 찾을 수 있습니다. 예:  
+ '\N' 문자로 구분 되는 최대 7 개의 부분 문자열로 이루어진 문자열 리소스 구성 (부분 문자열에 포함 되지 않은 경우 '\n' 문자 자리 표시자로 필요한; 그러나 후행 '\n' 문자가 필요 하지 않은); 이러한 부분 문자열에는 문서 유형에 대해 설명합니다. 부분 문자열에 대 한 정보를 참조 하십시오. [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)합니다. 이 문자열 리소스를 응용 프로그램의 리소스 파일에서 찾을 수 있습니다. 예를 들어:  
   
  `// MYCALC.RC`  
   
@@ -116,7 +111,7 @@ CSingleDocTemplate(
 ### <a name="remarks"></a>설명  
  동적으로 할당 한 `CSingleDocTemplate` 개체를 전달 `CWinApp::AddDocTemplate` 에서 `InitInstance` 응용 프로그램 클래스의 멤버 함수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocViewSDI#13](../../mfc/codesnippet/cpp/csingledoctemplate-class_1.cpp)]  
   
  [!code-cpp[NVC_MFCDocViewSDI#14](../../mfc/codesnippet/cpp/csingledoctemplate-class_2.cpp)]  

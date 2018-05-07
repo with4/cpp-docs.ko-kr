@@ -2,11 +2,8 @@
 title: 'vector:: front (STL/CLR) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::vector::front
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - front member [STL/CLR]
 ms.assetid: 37a36157-8220-4d5b-85b5-c6a63211a322
-caps.latest.revision: 18
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 29e90f91d2f43be2bc9cb1635e701615d2135bf0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c85f7d65e94ca35a052840317c2f4644fdd048c6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vectorfront-stlclr"></a>vector::front(STL/CLR)
 첫 번째 요소에 액세스합니다.  
@@ -40,7 +35,7 @@ reference front();
 ## <a name="remarks"></a>설명  
  멤버 함수는 비어 있어야 하는 제어 된 시퀀스의 첫 번째 요소에 대 한 참조를 반환 합니다. 읽기 또는 존재 하는 것을 알고 있는 경우 첫 번째 요소를 쓰기를 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_vector_front.cpp   

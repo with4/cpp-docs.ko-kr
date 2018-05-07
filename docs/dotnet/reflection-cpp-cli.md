@@ -1,13 +1,10 @@
 ---
-title: "리플렉션 (C + + /cli CLI) | Microsoft Docs"
-ms.custom: 
+title: 리플렉션 (C + + /cli CLI) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - data types [C++], reflection
 - reflection [C++}
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fab5bb3c912aeea2598189965d424ba4508cf5c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7f5b6e9aa8614248bc0e1215067e495cb4dce702
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="reflection-ccli"></a>리플렉션(C++/CLI)
 리플렉션 알려진된 데이터 형식은 런타임에 검사할 수 있습니다. 리플렉션이 특정된 어셈블리에 있는 데이터 형식의 열거형을 사용 하면 및 지정 된 클래스 또는 값 형식의 멤버를 검색할 수 있습니다. 형식을 알 수 없거나 컴파일 타임에 참조 된 여부에 관계 없이 유용 합니다. 이렇게 하면 리플렉션 개발 및 코드 관리 도구에 대 한 유용한 기능입니다.  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  자세한 내용은 참조 [System.Reflection Namespace](https://msdn.microsoft.com/en-us/library/system.reflection.aspx)  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  `GetType` 에 대 한 포인터를 반환 하는 메서드는 <xref:System.Type> 클래스 개체에는 개체를 기반으로 하는 경우에 형식에 설명 합니다. (의 **형식** 개체는 인스턴스 관련 정보를 포함 하지 않습니다.) 이러한 항목은 다음과 같이 표시 될 수 있는 형식의 전체 이름:  
   
  형식 이름 형식을 정의 되어 있는, 네임 스페이스를 포함 하 여 전체 범위를 포함 하 고 범위 확인 연산자도 점이 있는.NET 구문에서 표시 되는 참고 합니다.  
@@ -68,7 +63,7 @@ int main() {
 full type name of 'sample string' is 'System.String'  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  값 형식에 사용할 수는 `GetType` 에서도 작동 하지만 먼저 boxed 수 있어야 합니다.  
   
 ```  
@@ -86,7 +81,7 @@ int main() {
 type of i = 'System.Int32'  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  와 마찬가지로 `GetType` 메서드는 [typeid](../windows/typeid-cpp-component-extensions.md) 연산자에 대 한 포인터를 반환 합니다.는 **형식** 개체,이 코드는 유형 이름을 나타냅니다 **System.Int32**합니다. 형식 이름 표시 리플렉션의 가장 기본적인 기능 않으며 더 유용한 방법은 검사 하거나 열거 형식에 대 한 유효한 값을 검색 하는 것입니다. 정적을 사용 하 여이 작업을 수행할 수 있습니다 **Enum::GetNames** 함수를 반환 하는 문자열의 배열을 각각은 텍스트 형식에서 열거형 값을 포함 합니다.  다음 샘플에 대 한 열거형 값에 설명 하는 문자열의 배열을 검색는 **옵션** (CLR) 열거형 루프에 표시 됩니다.  
   
  네 번째 옵션에 추가 되 면는 **옵션** 열거형이이 코드는 열거형은 별도 어셈블리에 정의 되어 있는 경우에 다시 컴파일하지 않고 새로운 옵션을 보고 합니다.  
@@ -122,7 +117,7 @@ there are 3 options in enum 'Options'
 value of 'o' is Option2  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  `GetType` 개체가 다양 한 멤버와는 형식을 검사 하는 데 사용할 수 있는 속성을 지원 합니다. 이 코드를 검색 하 고이 정보 중 일부가 표시 됩니다.  
   
 ```  
@@ -160,7 +155,7 @@ is array: False
 is class: True  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  리플렉션에는 어셈블리 내에서 형식 및 클래스 내에서 멤버를 열거할 수 있습니다. 이 기능을 보여 주기 위해 간단한 클래스를 정의 합니다.  
   
 ```  
@@ -181,7 +176,7 @@ public:
 };  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  위의 코드 vcpp_reflection_6.dll를 호출 하는 DLL로 컴파일될 경우이 어셈블리의 내용을 확인 하려면 다음 리플렉션을 사용할 수 있습니다. 정적 리플렉션 API 함수를 사용 하는 것이 [Assembly::Load](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx) 어셈블리를 로드 합니다. 주소를 반환 하는이 함수는 **어셈블리** 모듈 및 내의 형식에 대 한 다음 쿼리할 수 있는 개체입니다.  
   
  리플렉션 시스템 어셈블리의 배열에서 성공적으로 로드 되 면 **형식** 개체와 함께 검색 되는 [Assembly::GetTypes](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.gettypes.aspx) 함수입니다. 이 경우 클래스를 하나만 정의 하지만 다른 형식에 대 한 정보를 포함 하는 각 배열 요소 합니다. 루프를 사용 하 여 각 **형식** 이 배열에 사용 하 여 형식 멤버에 대 한 쿼리는 **Type::GetMembers** 함수입니다. 이 함수는의 배열을 반환 **MethodInfo** 개체, 각 개체에 멤버 함수, 데이터 멤버 또는 형식의 속성에에서 대 한 정보가 들어 있는입니다.  

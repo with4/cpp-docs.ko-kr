@@ -1,13 +1,10 @@
 ---
-title: "리플 렉 트 된 메시지에 대 한 메시지 처리기를 정의 | Microsoft Docs"
-ms.custom: 
+title: 리플 렉 트 된 메시지에 대 한 메시지 처리기를 정의 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.defining.msg.msghandler
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - messages [MFC], reflected
 - message handling [MFC], reflected messages
 ms.assetid: 5a403528-58c5-46e7-90d5-4a77f0ab9b9c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9f5e1c472cdbca177b91851f9b8104094c41047
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3ed941816824c77f14a3364b06af0b3da171ee8f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>리플렉트된 메시지의 메시지 처리기 정의
 새 MFC 컨트롤 클래스를 만든 후에 대 한 메시지 처리기를 정의할 수 있습니다. 리플 렉 트 된 메시지 처리기는 부모는 메시지를 받기 전에 자체 메시지를 처리 하도록 컨트롤 클래스를 허용 합니다. MFC를 사용할 수 있습니다 [CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage) 함수를 부모 창에 사용자 컨트롤에서 메시지를 전송 합니다.  

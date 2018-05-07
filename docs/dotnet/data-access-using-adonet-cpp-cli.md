@@ -1,13 +1,10 @@
 ---
-title: "ADO.NET를 사용 하 여 데이터 액세스 (C + + /cli CLI) | Microsoft Docs"
-ms.custom: 
+title: ADO.NET를 사용 하 여 데이터 액세스 (C + + /cli CLI) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - data access [C++], ADO.NET
 - data [C++], ADO.NET
 ms.assetid: b0cd987d-1ea7-4f76-ba01-cbd52503d06d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fb7d184ebdb537c02b79a412d69a4bdcaabde424
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21d19955e19931a573836baa6e0e0fee841e3548
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="data-access-using-adonet-ccli"></a>ADO.NET을 사용하여 데이터 액세스(C++/CLI)
 ADO.NET은 데이터 액세스를 위한.NET Framework API 및 성능과 이전 데이터 액세스 솔루션에서 일치 하지 않는 사용 편의성을 제공 합니다. 이 섹션에 네이티브 형식을 마샬링하 등의 Visual c + + 사용자 고유의 ADO.NET 관련 문제 중 일부를 설명 합니다.  

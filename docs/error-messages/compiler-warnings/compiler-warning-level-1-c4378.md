@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 1) C4378 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 1) C4378 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4378
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fea0b26b6aeaaa1c10316a8b17c6a988f3130bf3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 92f7fa0c455332c443d2651a377d870f12e59522
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4378"></a>컴파일러 경고(수준 1) C4378
 이니셜라이저; 실행에 대 한 함수 포인터 얻어야 합니다. resolvemethodhandle  
   
  아래 **/clr**, 이니셜라이저 기호 함수 토큰이 함수 포인터가 아닌 포함 합니다.  사용 하 여 포인터를 토큰을 변환 해야 할 <xref:System.ModuleHandle.ResolveMethodHandle%2A>합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C4378 오류가 발생 합니다.  
   
 ```  
@@ -75,7 +70,7 @@ int main () {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플 C4378 해결 하는 방법을 보여 줍니다.  
   
 ```  

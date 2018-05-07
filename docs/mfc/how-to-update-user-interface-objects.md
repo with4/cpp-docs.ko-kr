@@ -1,13 +1,10 @@
 ---
-title: "방법: 사용자 인터페이스 개체 업데이트 | Microsoft Docs"
-ms.custom: 
+title: '방법: 사용자 인터페이스 개체 업데이트 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - commands [MFC], updating UI
 - enabling menus [MFC]
 ms.assetid: 82f09773-c978-427b-b321-05a6143b7369
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91e6d13e840c29d3ea9600183fafd9260966a2f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 422be3d80614c526c7e634d22a0930458e4b4e26
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-update-user-interface-objects"></a>방법: 사용자 인터페이스 개체 업데이트
 일반적으로, 메뉴와 도구 모음 단추는 하나 이상의 상태를 포함 합니다. 예를 들어 현재 컨텍스트에서 사용할 수 없는 경우 메뉴 항목을 흐리게 흐리게 표시 됩니다. 메뉴 항목 checked 또는 unchecked 될 수도 있습니다. 도구 모음 단추를 사용할 수 없는 경우에 비활성화 수 또는 확인할 수 있습니다.  

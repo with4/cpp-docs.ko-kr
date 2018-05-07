@@ -2,12 +2,9 @@
 title: 강력한 이름 어셈블리 (어셈블리 서명) (C + + /cli CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - linker [C++], assembly signing
 - strong-named assemblies [C++]
 ms.assetid: c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2099389131145838a70b579053c65698dbc3a857
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5d7ae911d2572a35ee8dbb21d5484b4679b64c4d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>강력한 이름 어셈블리(어셈블리 서명)(C++/CLI)
 이 항목 라고도 어셈블리에 강력한 이름을 지정 하면 어셈블리를 서명할 수 방법을 설명 합니다.  
@@ -51,11 +46,11 @@ ms.lasthandoff: 12/21/2017
   
  어셈블리 서명 다음 링커 옵션을 지원 합니다.  
   
--   [/DELAYSIGN (부분적으로 어셈블리 서명)](../build/reference/delaysign-partially-sign-an-assembly.md)  
+-   [/DELAYSIGN(어셈블리에 부분적으로 서명)](../build/reference/delaysign-partially-sign-an-assembly.md)  
   
--   [/KEYFILE (어셈블리에 서명할 키 또는 키 쌍 지정)](../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
+-   [/KEYFILE(어셈블리에 서명할 키 또는 키 쌍 지정)](../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
   
--   [/KEYCONTAINER (어셈블리에 서명할 키 컨테이너 지정)](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
+-   [/KEYCONTAINER(어셈블리에 서명할 키 컨테이너 지정)](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
   
  강력한 이름의 어셈블리에 대 한 자세한 내용은 참조 하십시오. [and using strong-named Assemblies](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)합니다.  
   

@@ -1,13 +1,10 @@
 ---
-title: "클래스 라이브러리 개요 | Microsoft Docs"
-ms.custom: 
+title: 클래스 라이브러리 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.mfc
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - class libraries, MFC
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce5a658c86611c9fdd0663145ae3c09ef6544aa0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f144ce4dd6ed9cd29adca27aaff51a79af0abec1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-library-overview"></a>클래스 라이브러리 개요
 이 개요 분류 하는 클래스에는 Microsoft Foundation 클래스 라이브러리 (MFC) 버전 9.0에 설명 합니다. 전체적으로, MFC의 클래스를 응용 프로그램 프레임 워크 구성-Windows API에 대 한 작성 된 응용 프로그램의 프레임 워크입니다. 프로그래밍 작업 응용 프로그램에 적용 되는 코드를 입력 하는 것입니다.  

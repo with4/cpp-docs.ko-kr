@@ -1,12 +1,9 @@
 ---
-title: "CRegKey 클래스 | Microsoft Docs"
-ms.custom: 
+title: CRegKey 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CRegKey
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dffc650c54c4a50fb4b3b1fe2c22ac82501b8b45
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b6daec3347aecaed3ba0aba5dec106d049a6a701
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cregkey-class"></a>CRegKey 클래스
 이 클래스는 시스템 레지스트리에서 항목을 조작 하기 위한 메서드를 제공 합니다.  
@@ -132,9 +127,9 @@ class CRegKey
 |[CRegKey::m_pTM](#m_ptm)|에 대 한 포인터 `CAtlTransactionManager` 개체|  
   
 ## <a name="remarks"></a>설명  
- `CRegKey`만들고에서 시스템 레지스트리 키와 값을 삭제 하기 위한 메서드를 제공 합니다. 레지스트리는 설치 관련 집합이 소프트웨어 버전 번호, 설치 된 하드웨어 및 COM 개체의 논리적 물리적 매핑을 등의 시스템 구성 요소에 대 한 정의 포함합니다.  
+ `CRegKey` 만들고에서 시스템 레지스트리 키와 값을 삭제 하기 위한 메서드를 제공 합니다. 레지스트리는 설치 관련 집합이 소프트웨어 버전 번호, 설치 된 하드웨어 및 COM 개체의 논리적 물리적 매핑을 등의 시스템 구성 요소에 대 한 정의 포함합니다.  
   
- `CRegKey`지정된 된 컴퓨터에 대 한 시스템 레지스트리에 프로그래밍 인터페이스를 제공합니다. 예를 들어 특정 레지스트리 키를 열려면 호출 `CRegKey::Open`합니다. 호출을 검색 하거나 데이터 값을 수정 하려면 `CRegKey::QueryValue` 또는 `CRegKey::SetValue`각각. 호출 하는 키를 닫으려면 `CRegKey::Close`합니다.  
+ `CRegKey` 지정된 된 컴퓨터에 대 한 시스템 레지스트리에 프로그래밍 인터페이스를 제공합니다. 예를 들어 특정 레지스트리 키를 열려면 호출 `CRegKey::Open`합니다. 호출을 검색 하거나 데이터 값을 수정 하려면 `CRegKey::QueryValue` 또는 `CRegKey::SetValue`각각. 호출 하는 키를 닫으려면 `CRegKey::Close`합니다.  
   
  키를 닫을 때 레지스트리 데이터에 기록 됩니다 (플러시된) 하드 디스크. 이 프로세스는 몇 초 정도 걸릴 수 있습니다. 응용 프로그램이 명시적으로 레지스트리 데이터를 써야 하드 디스크를 호출할 수 있습니다는 [RegFlushKey](http://msdn.microsoft.com/library/windows/desktop/ms724867) Win32 함수입니다. 그러나 **RegFlushKey** 많은 시스템 리소스를 사용 하 고 반드시 필요한 경우에 호출할 수 있습니다.  
   
@@ -144,7 +139,7 @@ class CRegKey
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
-##  <a name="attach"></a>CRegKey::Attach  
+##  <a name="attach"></a>  CRegKey::Attach  
  에 HKEY 첨부 하려면이 메서드를 호출 하는 `CRegKey` 설정 하 여 개체는 [m_hKey](#m_hkey) 멤버 핸들을 `hKey`합니다.  
   
 ```
@@ -158,7 +153,7 @@ void Attach(HKEY hKey) throw();
 ### <a name="remarks"></a>설명  
  **연결** 하는 경우에 어설션 `m_hKey` null입니다.  
   
-##  <a name="close"></a>CRegKey::Close  
+##  <a name="close"></a>  CRegKey::Close  
  해제 하기 위해이 메서드를 호출 하는 [m_hKey](#m_hkey) 멤버 처리 하 고 NULL로 설정 합니다.  
   
 ```
@@ -168,7 +163,7 @@ LONG Close() throw();
 ### <a name="return-value"></a>반환 값  
  성공 하면 반환 ERROR_SUCCESS; 그렇지 않은 경우 오류 값을 반환 합니다.  
   
-##  <a name="create"></a>CRegKey::Create  
+##  <a name="create"></a>  CRegKey::Create  
  하위 키로 존재 하지 않는 경우 지정 된 키를 만들려면이 메서드를 호출 `hKeyParent`합니다.  
   
 ```
@@ -210,7 +205,7 @@ LONG Create(
 ### <a name="remarks"></a>설명  
  **만들** 설정는 [m_hKey](#m_hkey) 이 키의 핸들에 대 한 멤버입니다.  
   
-##  <a name="cregkey"></a>CRegKey::CRegKey  
+##  <a name="cregkey"></a>  CRegKey::CRegKey  
  생성자입니다.  
   
 ```
@@ -233,7 +228,7 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 ### <a name="remarks"></a>설명  
  새 `CRegKey` 개체를 만듭니다. 기존 개체를 만들 수 `CRegKey` 개체 또는 레지스트리 키에 대 한 핸들입니다.  
   
-##  <a name="dtor"></a>CRegKey:: ~ CRegKey  
+##  <a name="dtor"></a>  CRegKey:: ~ CRegKey  
  소멸자입니다.  
   
 ```
@@ -243,7 +238,7 @@ CRegKey(CAtlTransactionManager* pTM) throw();
 ### <a name="remarks"></a>설명  
  소멸자 릴리스 `m_hKey`합니다.  
   
-##  <a name="deletesubkey"></a>CRegKey::DeleteSubKey  
+##  <a name="deletesubkey"></a>  CRegKey::DeleteSubKey  
  레지스트리에서 지정된 된 키를 제거 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -258,9 +253,9 @@ LONG DeleteSubKey(LPCTSTR lpszSubKey) throw();
  성공 하면 ERROR_SUCCESS를 반환 합니다. 메서드가 실패 하는 경우 반환 값은 WINERROR에 정의 된 0이 아닌 오류 코드입니다. 8.  
   
 ### <a name="remarks"></a>설명  
- `DeleteSubKey`하위 키가 없는 키를 삭제할 수 있습니다. 키 하위 키가 있으면 호출 [RecurseDeleteKey](#recursedeletekey) 대신 합니다.  
+ `DeleteSubKey` 하위 키가 없는 키를 삭제할 수 있습니다. 키 하위 키가 있으면 호출 [RecurseDeleteKey](#recursedeletekey) 대신 합니다.  
   
-##  <a name="deletevalue"></a>CRegKey::DeleteValue  
+##  <a name="deletevalue"></a>  CRegKey::DeleteValue  
  값 필드를 제거 하려면이 메서드를 호출 [m_hKey](#m_hkey)합니다.  
   
 ```
@@ -274,7 +269,7 @@ LONG DeleteValue(LPCTSTR lpszValue) throw();
 ### <a name="return-value"></a>반환 값  
  성공 하면 ERROR_SUCCESS를 반환 합니다. 메서드가 실패 하는 경우 반환 값은 WINERROR에 정의 된 0이 아닌 오류 코드입니다. 8.  
   
-##  <a name="detach"></a>CRegKey::Detach  
+##  <a name="detach"></a>  CRegKey::Detach  
  분리 하려면이 메서드를 호출 하는 [m_hKey](#m_hkey) 에서 멤버 핸들은 `CRegKey` 개체 및 설정 `m_hKey` NULL로 합니다.  
   
 ```
@@ -284,7 +279,7 @@ HKEY Detach() throw();
 ### <a name="return-value"></a>반환 값  
  와 연결 된 HKEY는 `CRegKey` 개체입니다.  
   
-##  <a name="enumkey"></a>CRegKey::EnumKey  
+##  <a name="enumkey"></a>  CRegKey::EnumKey  
  열린 레지스트리 키의 하위 키 열거 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -314,7 +309,7 @@ LONG EnumKey(
 ### <a name="remarks"></a>설명  
  하위 키 열거 하려면 호출 `CRegKey::EnumKey` 0의 인덱스를 포함 합니다. 인덱스 값이 증가 하 고 메서드가 ERROR_NO_MORE_ITEMS 반환 될 때까지 반복 합니다. 자세한 내용은 참조 [RegEnumKeyEx](http://msdn.microsoft.com/library/windows/desktop/ms724862) Windows sdk에서입니다.  
   
-##  <a name="flush"></a>CRegKey::Flush  
+##  <a name="flush"></a>  CRegKey::Flush  
  레지스트리에 모든 열린 레지스트리 키의 특성을 작성 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -327,7 +322,7 @@ LONG Flush() throw();
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [RegEnumFlush](http://msdn.microsoft.com/library/windows/desktop/ms724867) Windows sdk에서입니다.  
   
-##  <a name="getkeysecurity"></a>CRegKey::GetKeySecurity  
+##  <a name="getkeysecurity"></a>  CRegKey::GetKeySecurity  
  열린 레지스트리 키를 보호 하는 보안 설명자의 복사본을 검색 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -353,14 +348,14 @@ LONG GetKeySecurity(
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [RegGetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379313)합니다.  
   
-##  <a name="m_hkey"></a>CRegKey::m_hKey  
+##  <a name="m_hkey"></a>  CRegKey::m_hKey  
  와 연결 된 레지스트리 키의 핸들을 포함 된 `CRegKey` 개체입니다.  
   
 ```
 HKEY m_hKey;
 ```  
   
-##  <a name="m_ptm"></a>CRegKey::m_pTM  
+##  <a name="m_ptm"></a>  CRegKey::m_pTM  
  `CAtlTransactionManager` 개체에 대한 포인터입니다.  
   
 ```
@@ -369,7 +364,7 @@ CAtlTransactionManager* m_pTM;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="notifychangekeyvalue"></a>CRegKey::NotifyChangeKeyValue  
+##  <a name="notifychangekeyvalue"></a>  CRegKey::NotifyChangeKeyValue  
  이 메서드는 특성 또는 열린 레지스트리 키의 내용에 대 한 변경에 대 한 호출자에 게를 알립니다.  
   
 ```
@@ -410,7 +405,7 @@ LONG NotifyChangeKeyValue(
   
  자세한 내용과 샘플 프로그램에 대 한 참조 [RegNotifyChangeKeyValue](http://msdn.microsoft.com/library/windows/desktop/ms724892)합니다.  
   
-##  <a name="open"></a>CRegKey::Open  
+##  <a name="open"></a>  CRegKey::Open  
  지정된 된 키를 열고 설정 하려면이 메서드를 호출 [m_hKey](#m_hkey) 이 키의 핸들을 합니다.  
   
 ```
@@ -438,14 +433,14 @@ LONG Open(
   
  와 달리 [CRegKey::Create](#create), **열려** 존재 하지 않는 경우 지정된 된 키를 만들지 것입니다.  
   
-##  <a name="operator_hkey"></a>CRegKey::operator HKEY  
+##  <a name="operator_hkey"></a>  CRegKey::operator HKEY  
  변환 된 `CRegKey` 개체는 HKEY입니다.  
   
 ```  
 operator HKEY() const throw();
 ```  
   
-##  <a name="operator_eq"></a>CRegKey::operator =  
+##  <a name="operator_eq"></a>  CRegKey::operator =  
  대입 연산자입니다.  
   
 ```
@@ -462,7 +457,7 @@ CRegKey& operator= (CRegKey& key) throw();
 ### <a name="remarks"></a>설명  
  이 연산자를 분리 `key` 개체는 현재 개체 로부터 할당 된 `CRegKey` 개체를 대신 합니다.  
   
-##  <a name="querybinaryvalue"></a>CRegKey::QueryBinaryValue  
+##  <a name="querybinaryvalue"></a>  CRegKey::QueryBinaryValue  
  지정 된 값이 이름에 대 한 이진 데이터를 검색 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -491,7 +486,7 @@ LONG QueryBinaryValue(
 > [!IMPORTANT]
 >  이 메서드는 호출자가 잠재적으로 신뢰할 수 없는 데이터를 읽는 모든 레지스트리 위치를 지정할 수 있습니다. 또한는 [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) 이 메서드에서 사용 되는 함수는 NULL 종료 문자열을 명시적으로 처리 하지 않습니다. 두 조건이 모두 호출 코드에서 확인 해야 합니다.  
   
-##  <a name="querydwordvalue"></a>CRegKey::QueryDWORDValue  
+##  <a name="querydwordvalue"></a>  CRegKey::QueryDWORDValue  
  지정 된 값이 이름에 대 한 DWORD 데이터를 검색 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -516,7 +511,7 @@ LONG QueryDWORDValue(
 > [!IMPORTANT]
 >  이 메서드는 호출자가 잠재적으로 신뢰할 수 없는 데이터를 읽는 모든 레지스트리 위치를 지정할 수 있습니다. 또한는 [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) 이 메서드에서 사용 되는 함수는 NULL 종료 문자열을 명시적으로 처리 하지 않습니다. 두 조건이 모두 호출 코드에서 확인 해야 합니다.  
   
-##  <a name="queryguidvalue"></a>CRegKey::QueryGUIDValue  
+##  <a name="queryguidvalue"></a>  CRegKey::QueryGUIDValue  
  지정 된 값이 이름에 대 한 GUID 데이터를 검색 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -541,7 +536,7 @@ LONG QueryGUIDValue(
 > [!IMPORTANT]
 >  이 메서드는 호출자가 잠재적으로 신뢰할 수 없는 데이터를 읽는 모든 레지스트리 위치를 지정할 수 있습니다.  
   
-##  <a name="querymultistringvalue"></a>CRegKey::QueryMultiStringValue  
+##  <a name="querymultistringvalue"></a>  CRegKey::QueryMultiStringValue  
  지정 된 값이 이름에 대 한 다중 문자열 데이터를 검색 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -570,7 +565,7 @@ LONG QueryMultiStringValue(
 > [!IMPORTANT]
 >  이 메서드는 호출자가 잠재적으로 신뢰할 수 없는 데이터를 읽는 모든 레지스트리 위치를 지정할 수 있습니다. 또한는 [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) 이 메서드에서 사용 되는 함수는 NULL 종료 문자열을 명시적으로 처리 하지 않습니다. 두 조건이 모두 호출 코드에서 확인 해야 합니다.  
   
-##  <a name="queryqwordvalue"></a>CRegKey::QueryQWORDValue  
+##  <a name="queryqwordvalue"></a>  CRegKey::QueryQWORDValue  
  지정 된 값이 이름에 대 한 QWORD 데이터를 검색 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -595,7 +590,7 @@ LONG QueryQWORDValue(
 > [!IMPORTANT]
 >  이 메서드는 호출자가 잠재적으로 신뢰할 수 없는 데이터를 읽는 모든 레지스트리 위치를 지정할 수 있습니다. 또한는 [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) 이 메서드에서 사용 되는 함수는 NULL 종료 문자열을 명시적으로 처리 하지 않습니다. 두 조건이 모두 호출 코드에서 확인 해야 합니다.  
   
-##  <a name="querystringvalue"></a>CRegKey::QueryStringValue  
+##  <a name="querystringvalue"></a>  CRegKey::QueryStringValue  
  지정 된 값이 이름에 대 한 문자열 데이터를 검색 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -624,7 +619,7 @@ LONG QueryStringValue(
 > [!IMPORTANT]
 >  이 메서드는 호출자가 잠재적으로 신뢰할 수 없는 데이터를 읽는 모든 레지스트리 위치를 지정할 수 있습니다. 또한는 [RegQueryValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724911) 이 메서드에서 사용 되는 함수는 NULL 종료 문자열을 명시적으로 처리 하지 않습니다. 두 조건이 모두 호출 코드에서 확인 해야 합니다.  
   
-##  <a name="queryvalue"></a>CRegKey::QueryValue  
+##  <a name="queryvalue"></a>  CRegKey::QueryValue  
  지정 된 값 필드에 대 한 데이터를 검색 하려면이 메서드를 호출 [m_hKey](#m_hkey)합니다. 이 메서드의 이전 버전 이상 지원 되지 않습니다 및로 표시 된 **ATL_DEPRECATED**합니다.  
   
 ```
@@ -680,7 +675,7 @@ ATL_DEPRECATED LONG QueryValue(
 > [!IMPORTANT]
 >  이 메서드는 호출자가 잠재적으로 신뢰할 수 없는 데이터를 읽는 모든 레지스트리 위치를 지정할 수 있습니다. 또한이 방법으로 사용 되는 RegQueryValueEx 함수가 문자열을 명시적으로 처리 하지 않는 `NULL` 종료 합니다. 두 조건이 모두 호출 코드에서 확인 해야 합니다.  
   
-##  <a name="recursedeletekey"></a>CRegKey::RecurseDeleteKey  
+##  <a name="recursedeletekey"></a>  CRegKey::RecurseDeleteKey  
  레지스트리에서 지정된 된 키를 제거 하 고 모든 하위 키를 명시적으로 제거 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -697,7 +692,7 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
 ### <a name="remarks"></a>설명  
  키에 하위 키의 키를 삭제 하려면이 메서드를 호출 해야 합니다.  
   
-##  <a name="setbinaryvalue"></a>CRegKey::SetBinaryValue  
+##  <a name="setbinaryvalue"></a>  CRegKey::SetBinaryValue  
  레지스트리 키의 이진 값을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -723,7 +718,7 @@ LONG SetBinaryValue(
 ### <a name="remarks"></a>설명  
  이 방법은 사용 하 여 [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) 레지스트리 값을 작성할 수 있습니다.  
   
-##  <a name="setdwordvalue"></a>CRegKey::SetDWORDValue  
+##  <a name="setdwordvalue"></a>  CRegKey::SetDWORDValue  
  레지스트리 키 DWORD 값을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -743,7 +738,7 @@ LONG SetDWORDValue(LPCTSTR pszValueName, DWORD dwValue) throw();
 ### <a name="remarks"></a>설명  
  이 방법은 사용 하 여 [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) 레지스트리 값을 작성할 수 있습니다.  
   
-##  <a name="setguidvalue"></a>CRegKey::SetGUIDValue  
+##  <a name="setguidvalue"></a>  CRegKey::SetGUIDValue  
  레지스트리 키의 GUID 값을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -763,7 +758,7 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 ### <a name="remarks"></a>설명  
  이 메서드를 사용 하 `CRegKey::SetStringValue` 고 사용 하 여 문자열을 GUID 변환 [StringFromGUID2](http://msdn.microsoft.com/library/windows/desktop/ms683893)합니다.  
   
-##  <a name="setkeyvalue"></a>CRegKey::SetKeyValue  
+##  <a name="setkeyvalue"></a>  CRegKey::SetKeyValue  
  지정된 된 키의 지정 된 값 필드에 데이터를 저장 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -789,7 +784,7 @@ LONG SetKeyValue(
 ### <a name="remarks"></a>설명  
  만들거나 열이 메서드를 호출 하는 `lpszKeyName` 키 및 저장는 `lpszValue` 의 데이터는 `lpszValueName` 값 필드입니다.  
   
-##  <a name="setkeysecurity"></a>CRegKey::SetKeySecurity  
+##  <a name="setkeysecurity"></a>  CRegKey::SetKeySecurity  
  레지스트리 키의 보안을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -816,7 +811,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 ### <a name="remarks"></a>설명  
  키의 보안 특성을 설정합니다. 참조 [RegSetKeySecurity](http://msdn.microsoft.com/library/windows/desktop/aa379314) 내용을 확인 합니다.  
   
-##  <a name="setmultistringvalue"></a>CRegKey::SetMultiStringValue  
+##  <a name="setmultistringvalue"></a>  CRegKey::SetMultiStringValue  
  레지스트리 키의 다중 문자열 값을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -836,7 +831,7 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 ### <a name="remarks"></a>설명  
  이 방법은 사용 하 여 [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) 레지스트리 값을 작성할 수 있습니다.  
   
-##  <a name="setqwordvalue"></a>CRegKey::SetQWORDValue  
+##  <a name="setqwordvalue"></a>  CRegKey::SetQWORDValue  
  레지스트리 키의 QWORD 값을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -856,7 +851,7 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 ### <a name="remarks"></a>설명  
  이 방법은 사용 하 여 [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923) 레지스트리 값을 작성할 수 있습니다.  
   
-##  <a name="setstringvalue"></a>CRegKey::SetStringValue  
+##  <a name="setstringvalue"></a>  CRegKey::SetStringValue  
  레지스트리 키의 문자열 값을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -882,7 +877,7 @@ LONG SetStringValue(
 ### <a name="remarks"></a>설명  
  이 방법은 사용 하 여 [RegSetValueEx](http://msdn.microsoft.com/library/windows/desktop/ms724923\(v=vs.85\).aspx) 레지스트리 값을 작성할 수 있습니다.  
   
-##  <a name="setvalue"></a>CRegKey::SetValue  
+##  <a name="setvalue"></a>  CRegKey::SetValue  
  지정 된 값 필드에 데이터를 저장 하려면이 메서드를 호출 [m_hKey](#m_hkey)합니다. 이 메서드의 이전 버전 이상 지원 되지 않습니다 및로 표시 된 **ATL_DEPRECATED**합니다.  
   
 ```

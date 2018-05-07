@@ -1,12 +1,9 @@
 ---
 title: 'map:: swap (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::map::swap
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - swap member [STL/CLR]
 ms.assetid: b36ed982-21ce-40e5-9636-ecdbaf1b7eec
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f82ac0547b58d3e85afdf8fe1c951ed8cec1f742
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2492a1f2d174522522f937584f82f51122074391
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapswap-stlclr"></a>map::swap(STL/CLR)
 두 컨테이너의 내용을 바꿉니다.  
@@ -44,7 +39,7 @@ void swap(map<Key, Mapped>% right);
 ## <a name="remarks"></a>설명  
  멤버 함수는 `this` 와 `right`간에 제어되는 시퀀스를 교환합니다. 일정 한 시간에 작업을 수행 하 고 예외가 throw 됩니다. 두 컨테이너의 내용을 교환에 신속 하 게 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_map_swap.cpp   

@@ -1,12 +1,9 @@
 ---
-title: "COleVariant 클래스 | Microsoft Docs"
-ms.custom: 
+title: COleVariant 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleVariant
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c3c9d961c69616df05975f2d484d0bbfd43f514
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b7f0da1f53bf2c6b0e216195be37746eab9abd1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colevariant-class"></a>COleVariant 클래스
 [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) 데이터 형식을 캡슐화합니다.  
@@ -77,7 +72,7 @@ class COleVariant : public tagVARIANT
 |[COleVariant::operator LPVARIANT](#operator_lpvariant)|변환 된 `COleVariant` 개체는 `LPVARIANT`합니다.|  
 |[COleVariant::operator =](#operator_eq)|복사는 `COleVariant` 값입니다.|  
 |[COleVariant::operator = =](#operator_eq_eq)|두 `COleVariant` 값입니다.|  
-|[COleVariant::operator &lt; &lt;,&gt;&gt;](#operator_lt_lt__gt_gt)|출력을 `COleVariant` 값을 `CArchive` 또는 `CDumpContext` 을 입력 하 고는 `COleVariant` 에서 개체 `CArchive`합니다.|  
+|[COleVariant::operator &lt; &lt;, &gt;&gt;](#operator_lt_lt__gt_gt)|출력을 `COleVariant` 값을 `CArchive` 또는 `CDumpContext` 을 입력 하 고는 `COleVariant` 에서 개체 `CArchive`합니다.|  
   
 ## <a name="remarks"></a>설명  
  이 데이터 형식은 OLE 자동화에 사용 됩니다. 특히,는 [DISPPARAMS](http://msdn.microsoft.com/en-us/a16e5a21-766e-4287-b039-13429aa78f8b) 구조에 대 한 포인터의 배열에 포함 된 **VARIANT** 구조입니다. A **DISPPARAMS** 구조는 매개 변수를 전달 하는 데 사용 되 [idispatch:: Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d)합니다.  
@@ -99,7 +94,7 @@ class COleVariant : public tagVARIANT
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h  
   
-##  <a name="attach"></a>COleVariant::Attach  
+##  <a name="attach"></a>  COleVariant::Attach  
  연결 하려면이 함수를 호출 하는 주어진 [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) 개체를 현재 `COleVariant` 개체입니다.  
   
 ```  
@@ -115,7 +110,7 @@ void Attach(VARIANT& varSrc);
   
  자세한 내용은 참조는 [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) 및 [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) Windows SDK의 항목입니다.  
   
-##  <a name="colevariant"></a>COleVariant::COleVariant  
+##  <a name="colevariant"></a>  COleVariant::COleVariant  
  `COleVariant` 개체를 생성합니다.  
   
 ```  
@@ -213,7 +208,7 @@ COleVariant(LPCITEMIDLIST pidl);
   
  대 한 자세한 내용은 `SCODE`, 참조 [COM 오류 코드 구조](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows sdk에서입니다.  
   
-##  <a name="changetype"></a>COleVariant::ChangeType  
+##  <a name="changetype"></a>  COleVariant::ChangeType  
  이 variant 값의 형식을 변환 `COleVariant` 개체입니다.  
   
 ```  
@@ -230,7 +225,7 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조는 [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118), [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4), 및 [VariantChangeType](http://msdn.microsoft.com/en-us/48a51e32-95d7-4eeb-8106-f5043ffa2fd1) Windows SDK의 항목입니다.  
   
-##  <a name="clear"></a>COleVariant::Clear  
+##  <a name="clear"></a>  COleVariant::Clear  
  지웁니다는 **VARIANT**합니다.  
   
 ```  
@@ -242,7 +237,7 @@ void Clear();
   
  자세한 내용은 참조는 `VARIANT`, `VARTYPE`, 및 `VariantClear` Windows SDK의 항목입니다.  
   
-##  <a name="detach"></a>COleVariant::Detach  
+##  <a name="detach"></a>  COleVariant::Detach  
  내부 분리 [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) 이 개체 `COleVariant` 개체입니다.  
   
 ```  
@@ -257,7 +252,7 @@ VARIANT Detach();
   
  자세한 내용은 참조는 [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118), [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4), 및 [VariantClear](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835) Windows SDK의 항목입니다.  
   
-##  <a name="getbytearrayfromvariantarray"></a>COleVariant::GetByteArrayFromVariantArray  
+##  <a name="getbytearrayfromvariantarray"></a>  COleVariant::GetByteArrayFromVariantArray  
  기존 variant 배열에서 바이트 배열을 검색합니다  
   
 ```  
@@ -268,7 +263,7 @@ void GetByteArrayFromVariantArray(CByteArray& bytes);
  `bytes`  
  기존에 대 한 참조 [CByteArray](../../mfc/reference/cbytearray-class.md) 개체입니다.  
   
-##  <a name="operator_lpcvariant"></a>COleVariant::operator LPCVARIANT  
+##  <a name="operator_lpcvariant"></a>  COleVariant::operator LPCVARIANT  
  이 캐스팅 연산자를 반환는 `VARIANT` 구조에서이 값을 갖는 복사 `COleVariant` 개체입니다.  
   
 ```  
@@ -277,7 +272,7 @@ operator LPCVARIANT() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="operator_lpvariant"></a>COleVariant::operator LPVARIANT  
+##  <a name="operator_lpvariant"></a>  COleVariant::operator LPVARIANT  
  호출에 내부 액세스 하려면이 캐스팅 연산자 `VARIANT` 이 대 한 구조 `COleVariant` 개체입니다.  
   
 ```  
@@ -289,7 +284,7 @@ operator LPVARIANT();
 > [!CAUTION]
 >  에 값을 변경는 **VARIANT** 이 함수에서 반환 된 포인터에 의해 액세스 되는 구조는이 값을 변경 하면 `COleVariant` 개체입니다.  
   
-##  <a name="operator_eq"></a>COleVariant::operator =  
+##  <a name="operator_eq"></a>  COleVariant::operator =  
  이러한 오버 로드 된 할당 연산자 복사할 소스 값이 `COleVariant` 개체입니다.  
   
 ```  
@@ -312,7 +307,7 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
 ### <a name="remarks"></a>설명  
  각 연산자에 대 한 간단한 설명은 다음과 같습니다.  
   
-- **operator = (** *varSrc***)** 기존 복사 **VARIANT** 또는 `COleVariant` 개체로이 개체입니다.  
+- **operator = (** *varSrc * * *)** 기존 복사 **VARIANT** 또는 `COleVariant` 개체로이 개체입니다.  
   
 - **operator = (** `pSrc` **)** 복사본은 **VARIANT** 액세스 한 개체가 `pSrc` 이 개체에 있습니다.  
   
@@ -338,7 +333,7 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
   
  자세한 내용은 참조는 [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) 및 [VARTYPE](http://msdn.microsoft.com/en-us/317b911b-1805-402d-a9cb-159546bc88b4) Windows SDK의 항목입니다.  
   
-##  <a name="operator_eq_eq"></a>COleVariant::operator = =  
+##  <a name="operator_eq_eq"></a>  COleVariant::operator = =  
  이 연산자는 variant 두 값을 비교 하 고 동일; 하면 0이 아닌 반환 그렇지 않으면 0입니다.  
   
 ```  
@@ -346,7 +341,7 @@ BOOL operator==(const VARIANT& varSrc) const;
 BOOL operator==(LPCVARIANT pSrc) const;
 ```  
   
-##  <a name="operator_lt_lt__gt_gt"></a>COleVariant::operator &lt; &lt;,&gt;&gt;  
+##  <a name="operator_lt_lt__gt_gt"></a>  COleVariant::operator &lt; &lt;, &gt;&gt;  
  출력을 `COleVariant` 값을 `CArchive` 또는 **CdumpContext** 을 입력 하 고는 `COleVariant` 에서 개체 `CArchive`합니다.  
   
 ```  
@@ -364,9 +359,9 @@ friend CArchive& AFXAPI operator>>(
 ```  
   
 ### <a name="remarks"></a>설명  
- `COleVariant` 삽입 (  **< \<** ) 연산자 진단 덤핑 및 보관 파일에 저장을 지원 합니다. 추출 (  **>>** ) 연산자는 보관 파일에서 로드를 지원 합니다.  
+ `COleVariant` 삽입 ( **< \<**) 연산자 진단 덤핑 및 보관 파일에 저장을 지원 합니다. 추출 ( **>>**) 연산자는 보관 파일에서 로드를 지원 합니다.  
   
-##  <a name="setstring"></a>COleVariant::SetString  
+##  <a name="setstring"></a>  COleVariant::SetString  
  특정 형식에는 문자열을 설정합니다.  
   
 ```  
@@ -381,7 +376,7 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
  **VARTYPE** 새 `COleVariant` 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 매개 변수 `vtSrc` 해야 `VT_BSTR` (유니코드) 또는 `VT_BSTRT` (ANSI)입니다. `SetString`일반적으로 대 한 기본 이후 ansi 문자열을 설정 하는 데 사용 되는 [COleVariant::COleVariant](#colevariant) 생성자는 문자열이 나 문자열 포인터 매개 변수 및 no **VARTYPE** 은 유니코드입니다.  
+ 매개 변수 `vtSrc` 해야 `VT_BSTR` (유니코드) 또는 `VT_BSTRT` (ANSI)입니다. `SetString` 일반적으로 대 한 기본 이후 ansi 문자열을 설정 하는 데 사용 되는 [COleVariant::COleVariant](#colevariant) 생성자는 문자열이 나 문자열 포인터 매개 변수 및 no **VARTYPE** 은 유니코드입니다.  
   
  DAO 레코드 집합 유니코드가 아닌 빌드에는 문자열을 ANSI 필요 합니다. 따라서 dao 사용 하는 함수 `COleVariant` 사용 해야 유니코드 레코드 집합을 만들지 않는 경우 개체는 **COleVariant::COleVariant (** `lpszSrc` **,** `vtSrc` **)**  생성자 형태의 `vtSrc` 로 설정 `VT_BSTRT` (ANSI) 하거나 사용 하 여 `SetString` 와 `vtSrc` 로 설정 `VT_BSTRT` ANSI 문자열을 확인 하려면. 예를 들어는 `CDaoRecordset` 함수 [CDaoRecordset::Seek](../../mfc/reference/cdaorecordset-class.md#seek) 및 [CDaoRecordset::SetFieldValue](../../mfc/reference/cdaorecordset-class.md#setfieldvalue) 사용 `COleVariant` 개체를 매개 변수로 합니다. 이러한 개체는 DAO 레코드 집합 유니코드가 아닌 경우 ANSI 이어야 합니다.  
   

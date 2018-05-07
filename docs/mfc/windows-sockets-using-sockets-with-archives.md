@@ -1,13 +1,10 @@
 ---
-title: "Windows 소켓: 소켓과 아카이브 함께 사용 | Microsoft Docs"
-ms.custom: 
+title: 'Windows 소켓: 소켓과 아카이브 함께 사용 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - archives [MFC], and Windows Sockets
 - CSocket class [MFC], programming model
 ms.assetid: 17e71a99-a09e-4e1a-9fda-13d62805c824
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9956e48f88988dfec7e04cda5bba95e514ec109
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b7ad4e5b94403582f9073e4d3bd3542f8aa75d08
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows 소켓: 소켓과 아카이브 함께 사용
-이 문서에서는 설명는 [CSocket 프로그래밍 모델](#_core_the_csocket_programming_model)합니다. 클래스 [CSocket](../mfc/reference/csocket-class.md) 클래스 보다 더 높은 수준의 추상화에서 소켓 지원을 제공 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)합니다. `CSocket`MFC 통해 소켓 개체 간에 데이터를 전달 하는 버전의 MFC serialization 프로토콜을 사용 하 여 [CArchive](../mfc/reference/carchive-class.md) 개체입니다. `CSocket`은 차단을 제공하며(Windows 메시지의 백그라운드 처리 관리), 원시 API 또는 `CArchive`클래스를 사용할 경우 직접 수행해야 하는 문서의 여러 측면에 대한 관리 작업을 수행하는 `CAsyncSocket`에 액세스할 수 있게 해줍니다.  
+이 문서에서는 설명는 [CSocket 프로그래밍 모델](#_core_the_csocket_programming_model)합니다. 클래스 [CSocket](../mfc/reference/csocket-class.md) 클래스 보다 더 높은 수준의 추상화에서 소켓 지원을 제공 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)합니다. `CSocket` MFC 통해 소켓 개체 간에 데이터를 전달 하는 버전의 MFC serialization 프로토콜을 사용 하 여 [CArchive](../mfc/reference/carchive-class.md) 개체입니다. `CSocket`은 차단을 제공하며(Windows 메시지의 백그라운드 처리 관리), 원시 API 또는 `CArchive`클래스를 사용할 경우 직접 수행해야 하는 문서의 여러 측면에 대한 관리 작업을 수행하는 `CAsyncSocket`에 액세스할 수 있게 해줍니다.  
   
 > [!TIP]
 >  `CSocket`의 편리한 버전으로 `CAsyncSocket` 클래스를 직접 사용할 수 있지만 가장 간단한 프로그래밍 모델은 `CSocket` 개체에 `CArchive`을 사용하는 것입니다.  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  설정된(MFC 이외) 서버와 통신하도록 MFC 클라이언트 프로그램을 작성하는 경우 아카이브를 통해 C++ 개체를 전송하지 마십시오. 사용자가 전송하려는 개체 종류를 인식하는 MFC 응용 프로그램이 아니면 개체를 수신하고 이를 deserialize할 수 없습니다. 비 MFC 응용 프로그램과 통신의 주제 관련된 자료에 대 한 문서를 참조도 [Windows 소켓: 바이트 순서 지정](../mfc/windows-sockets-byte-ordering.md)합니다.  
   
-##  <a name="_core_the_csocket_programming_model"></a>CSocket 프로그래밍 모델  
+##  <a name="_core_the_csocket_programming_model"></a> CSocket 프로그래밍 모델  
  `CSocket` 개체 사용 시에는 여러 MFC 클래스 개체를 함께 만들고 연결하는 작업이 포함됩니다. 아래의 일반 절차에서 각 단계는 각 소켓 유형에 서로 다른 작업이 필요한 3단계를 제외하고 서버 소켓과 클라이언트 소켓 모두에서 수행됩니다.  
   
 > [!TIP]
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  클라이언트 소켓을 사용 하는 경우 호출 [CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect) 서버 소켓의 소켓 개체를 연결할 수 있습니다.  
   
-     또는  
+     -또는-  
   
      서버 소켓을 사용 하는 경우 호출 [CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen) 시작 하려면 클라이언트에서 연결 시도 대 한 수신 대기 합니다. 연결 요청을 받으면 호출 하 여 수락 [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept)합니다.  
   

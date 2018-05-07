@@ -1,12 +1,9 @@
 ---
 title: 'multimap:: generic_value (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multimap::generic_value
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - generic_value member [STL/CLR]
 ms.assetid: e403233f-5132-45ca-be04-2c85e923f37d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f4c0ea94aa0e37c89e09e053e81bb4f01decdad8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0a0febedc05b0d40b6d92a8c20e3b527f913e642
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multimapgenericvalue-stlclr"></a>multimap::generic_value(STL/CLR)
 컨테이너에 대 한 제네릭 인터페이스와 함께 사용 하기 위해 요소의 형식입니다.  
@@ -40,7 +35,7 @@ typedef GValue generic_value;
 ## <a name="remarks"></a>설명  
  이 형식은 형식의 개체를 설명 `GValue` 이 서식 파일 컨테이너 클래스에 대 한 제네릭 인터페이스와 함께 사용 하기 위해 저장 된 요소 값을 설명 하는 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_multimap_generic_value.cpp   

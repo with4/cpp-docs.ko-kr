@@ -1,13 +1,10 @@
 ---
-title: "현재 뷰 관리 | Microsoft Docs"
-ms.custom: 
+title: 현재 뷰 관리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - deactivating views [MFC]
 - current view in frame window [MFC]
 ms.assetid: 0a1cc22d-d646-4536-9ad2-3cb6d7092e4a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1510b005f452174acfe8ad65ae3f66cf8aafaa2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 323903d2e1285a4ee697bbd9d0c3a29c2e1248d4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-the-current-view"></a>현재 뷰 관리
 프레임 창의 기본 구현의 일부로 프레임 창은 현재 활성 뷰의 추적을 유지합니다. 프레임 창에 두 개 이상의 뷰가 포함된 경우(예: 분할자 창), 현재 뷰가 최근에 사용된 뷰입니다. 활성 뷰는 Windows의 활성 창 또는 현재 입력 포커스와 독립적입니다.  

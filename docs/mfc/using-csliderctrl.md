@@ -1,13 +1,10 @@
 ---
-title: "CSliderCtrl 사용 | Microsoft Docs"
-ms.custom: 
+title: CSliderCtrl 사용 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CSliderCtrl
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CSliderCtrl class [MFC], using
 - slider controls [MFC], using
 ms.assetid: 242c7bcd-126e-4b9b-8f76-8082ad06fe73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e92358b3aa7d8cffb0c05112e9b8b3587ee6590
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3df9233a8b638dbf22d778d9a14fe513232ecdcf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-csliderctrl"></a>CSliderCtrl 사용
 [CSliderCtrl](../mfc/reference/csliderctrl-class.md) 클래스는 trackbar 라고도 하는 슬라이더 컨트롤을 나타냅니다. "슬라이더 컨트롤"은 슬라이더 및 선택적 눈금에 포함 된 창을 표시 합니다. 사용자가 마우스 또는 화살표 키를 사용 하 여 슬라이더를 이동, 슬라이더 컨트롤 변경 내용을 나타내는 알림 메시지를 보냅니다.  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
  슬라이더 컨트롤의 슬라이더에서 만들 때 지정 하는 이동 합니다. 예를 들어 슬라이더 컨트롤 다섯 개 범위에 있어야을 지정 하면 슬라이더 수만 자리를 차지 6: 범위에서 각 증가값에 대해 하나의 위치 및 슬라이더 컨트롤의 왼쪽에 위치 합니다. 일반적으로 이러한 각 위치를 눈금으로 식별 됩니다.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [슬라이더 컨트롤 사용](../mfc/using-slider-controls.md)  
   

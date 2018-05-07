@@ -1,13 +1,10 @@
 ---
-title: "CDaoWorkspaceInfo 구조체 | Microsoft Docs"
-ms.custom: 
+title: CDaoWorkspaceInfo 구조체 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoWorkspaceInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - CDaoWorkspaceInfo structure [MFC]
 - DAO (Data Access Objects), Workspaces collection
 ms.assetid: a1f4b25e-f9c6-4196-b075-d1df99c54124
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e154e2672a9410af979c2e5aa0f6fb0aba7a50f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd6979124916e8a9cc1dc723008491bababc0322
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoworkspaceinfo-structure"></a>CDaoWorkspaceInfo 구조체
 `CDaoWorkspaceInfo` 구조 데이터 액세스 개체 (DAO) 데이터베이스 액세스에 대해 정의 된 작업 영역에 대 한 정보를 포함 합니다.  
@@ -55,7 +50,7 @@ struct CDaoWorkspaceInfo
 ## <a name="remarks"></a>설명  
  클래스의 개체를 영역은 [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)합니다. 주, 보조 및 위의 모든에 대 한 참조 정보에서 반환 되는 방법을 나타내는 [GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo) 클래스에서 멤버 함수 `CDaoWorkspace`합니다.  
   
- 검색 한 정보는 [CDaoWorkspace::GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo) 멤버 함수에 저장 되는 `CDaoWorkspaceInfo` 구조입니다. `CDaoWorkspaceInfo`또한 정의 `Dump` 디버그에서 멤버 함수를 작성 합니다. 사용할 수 있습니다 `Dump` 의 내용을 덤프 하는 `CDaoWorkspaceInfo` 개체입니다.  
+ 검색 한 정보는 [CDaoWorkspace::GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo) 멤버 함수에 저장 되는 `CDaoWorkspaceInfo` 구조입니다. `CDaoWorkspaceInfo` 또한 정의 `Dump` 디버그에서 멤버 함수를 작성 합니다. 사용할 수 있습니다 `Dump` 의 내용을 덤프 하는 `CDaoWorkspaceInfo` 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdao.h  

@@ -1,13 +1,10 @@
 ---
-title: "Typelib 마법사에서 클래스를 추가 합니다. | Microsoft Docs"
-ms.custom: 
+title: Typelib 마법사에서 클래스를 추가 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.typelib
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4aad89b6f3227cac59b6429cc67975db3dad424
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a4eaf4b800fdc1954c54043aa7e2669613e6b27e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-class-from-typelib-wizard"></a>Typelib에서 클래스 추가 마법사
 사용 가능한 형식 라이브러리에서 MFC 클래스를 추가 하려면이 마법사를 사용 합니다. 마법사는 선택한 형식 라이브러리에서 추가한 각 인터페이스에 대 한 클래스를 만듭니다.  
@@ -58,9 +53,9 @@ ms.lasthandoff: 12/21/2017
 |**<\<**|클래스를 모두 제거는 **생성 된 클래스** 목록입니다. 흐리게 표시 된 경우에는 **생성 된 클래스** 목록이 비어 있습니다.|  
   
  **생성 된 클래스**  
- 사용 하 여 추가 된 인터페이스에서 생성 된 클래스 이름으로 지정 하는  **>**  또는  **>>**  단추입니다. 클릭할 수 있는 클래스를 다음 위쪽 또는 아래쪽 키 목록를 하려면이 상자에서 클래스 이름을 확인할는 `Class` 상자 및 파일 이름에는 **파일** 클릭 하면 마법사에서 생성 하는 상자  **마침**합니다. 이 상자에서 한 번에 하나의 클래스를 선택할 수 있습니다.  
+ 사용 하 여 추가 된 인터페이스에서 생성 된 클래스 이름으로 지정 하는 **>** 또는 **>>** 단추입니다. 클릭할 수 있는 클래스를 다음 위쪽 또는 아래쪽 키 목록를 하려면이 상자에서 클래스 이름을 확인할는 `Class` 상자 및 파일 이름에는 **파일** 클릭 하면 마법사에서 생성 하는 상자  **마침**합니다. 이 상자에서 한 번에 하나의 클래스를 선택할 수 있습니다.  
   
- 이 목록에서 선택 하 고 클릭 하 여 클래스를 제거할 수 있습니다  **<** 합니다. 모든 클래스; 제거 하기 위해 생성 된 클래스 상자에서 클래스를 선택할 필요가 없습니다. 클릭 하 여  **<<** , 모든 클래스를 제거할 수는 **생성 된 클래스** 상자입니다.  
+ 이 목록에서 선택 하 고 클릭 하 여 클래스를 제거할 수 있습니다 **<** 합니다. 모든 클래스; 제거 하기 위해 생성 된 클래스 상자에서 클래스를 선택할 필요가 없습니다. 클릭 하 여 **<<**, 모든 클래스를 제거할 수는 **생성 된 클래스** 상자입니다.  
   
  `Class`  
  선택한 클래스의 이름을 지정는 **생성 된 클래스** 클릭 하면 마법사에서 추가 하는 상자 **마침**합니다. 이름을 편집할 수는 `Class` 상자입니다.  

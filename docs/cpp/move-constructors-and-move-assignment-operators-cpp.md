@@ -2,28 +2,23 @@
 title: '방법: 이동 생성자 및 이동 할당 연산자 (c + +) 정의 합니다. | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/05/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bc9ce3d397b96ec45a0dbee5fefdb09d01b3f28
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: ad5f54bc0366b0da9286631294a10f4904b7cb30
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>이동 생성자 및 이동 할당 연산자(C++)
 이 항목에서는 작성 하는 방법을 설명는 *이동 생성자* 및 c + + 클래스에 대 한 이동 할당 연산자입니다. 이동 생성자를 복사 하지 않고를 lvalue로 이동 될는 rvalue 개체를 소유한 리소스 수 있습니다. 이동 의미 체계에 대 한 자세한 내용은 참조 [Rvalue 참조 선언 자: & &](../cpp/rvalue-reference-declarator-amp-amp.md)합니다.  

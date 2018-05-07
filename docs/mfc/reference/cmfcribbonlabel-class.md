@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonLabel 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCRibbonLabel 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonLabel
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CMFCRibbonLabel [MFC], CMFCRibbonLabel
 - CMFCRibbonLabel [MFC], SetACCData
 ms.assetid: 0346c891-83bf-4f20-b8a1-c84cf2aadced
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32732c08542ff766c265fda93b8cf09ad04387ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcbc552560325e844cf0812a3002088f829d6c60
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel 클래스
 리본에 대해 클릭할 수 없는 텍스트 레이블을 구현합니다.  
@@ -74,7 +69,7 @@ class CMFCRibbonLabel : public CMFCRibbonButton
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxRibbonLabel.h  
   
-##  <a name="cmfcribbonlabel"></a>CMFCRibbonLabel::CMFCRibbonLabel  
+##  <a name="cmfcribbonlabel"></a>  CMFCRibbonLabel::CMFCRibbonLabel  
  생성 하 고 초기화는 [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) 지정된 된 텍스트 문자열을 표시 하는 개체입니다.  
   
 ```  
@@ -88,9 +83,9 @@ CMFCRibbonLabel(
  레이블에 표시할 텍스트입니다.  
   
  [in] `bIsMultiLine`  
- `TRUE`레이블이 있는 여러 줄 레이블을; 임을 지정 하려면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 레이블이 있는 여러 줄 레이블을; 임을 지정 하려면 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="setaccdata"></a>CMFCRibbonLabel::SetACCData  
+##  <a name="setaccdata"></a>  CMFCRibbonLabel::SetACCData  
  현재 리본 label 요소에 대 한 내게 필요한 옵션 데이터를 결정합니다.  
   
 ```  
@@ -107,7 +102,7 @@ virtual BOOL SetACCData(
  형식의 개체 `CAccessibilityData` 현재 리본 레이블의 내게 필요한 옵션 데이터는 채워집니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`경우는 `data` 매개 변수가 고, 현재 리본 레이블의 내게 필요한 옵션 데이터와 함께 채워진 않으면 그렇지 `FALSE`합니다.  
+ `TRUE` 경우는 `data` 매개 변수가 고, 현재 리본 레이블의 내게 필요한 옵션 데이터와 함께 채워진 않으면 그렇지 `FALSE`합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [계층 구조 차트](../../mfc/hierarchy-chart.md)   

@@ -1,13 +1,10 @@
 ---
-title: "Visual c + + 프로젝트 형식 | Microsoft Docs"
-ms.custom: 
+title: Visual c + + 프로젝트 형식 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/30/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - applications [C++], projects
 - Visual C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a837aa04b0e0c2b8d3d9f5cfd48181a9ea23b346
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 80ac3479338dcb7f6be9e7e5f3f150cc8e15a9a9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-c-project-types"></a>Visual C++ 프로젝트 형식
 
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 프로젝트를 만드는 데 템플릿을 사용할 필요는 없지만 대부분의 경우에는 템플릿을 사용하는 것이 더 효율적입니다. 프로젝트 파일과 구조를 새로 만드는 것보다는 제공된 프로젝트 파일과 구조를 수정하는 것이 더 쉽기 때문입니다.  
   
 > [!NOTE]
-> C++ 프로젝트 템플릿을 사용하여 C 언어 프로젝트를 만들 수 있습니다. 생성된 프로젝트에서 파일 이름 확장명이 .cpp인 파일을 찾아 확장명을 .c로 변경합니다. 그런 다음 솔루션이 아닌 프로젝트의 **프로젝트 속성** 페이지에서 **구성 속성**, **C/C++** 를 차례로 확장하고 **고급**을 선택합니다. **컴파일 옵션** 설정을 **C 코드로 컴파일(/TC)**로 변경합니다.
+> C++ 프로젝트 템플릿을 사용하여 C 언어 프로젝트를 만들 수 있습니다. 생성된 프로젝트에서 파일 이름 확장명이 .cpp인 파일을 찾아 확장명을 .c로 변경합니다. 그런 다음 솔루션이 아닌 프로젝트의 **프로젝트 속성** 페이지에서 **구성 속성**, **C/C++** 를 차례로 확장하고 **고급**을 선택합니다. **컴파일 옵션** 설정을 **C 코드로 컴파일(/TC)** 로 변경합니다.
 
 ## <a name="project-templates"></a>프로젝트 템플릿
 

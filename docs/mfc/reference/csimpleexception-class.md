@@ -1,12 +1,9 @@
 ---
-title: "CSimpleException 클래스 | Microsoft Docs"
-ms.custom: 
+title: CSimpleException 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSimpleException
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CSimpleException [MFC], CSimpleException
 - CSimpleException [MFC], GetErrorMessage
 ms.assetid: be0eb8ef-e5b9-47d6-b0fb-efaff2d1e666
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7730fdd356b8145b771a85b8449974c2c8fa007
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d04a2f643add489d3302e58a9bde995303ecddd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csimpleexception-class"></a>CSimpleException 클래스
 이 클래스는 리소스에 중요한 MFC 예외의 기본 클래스입니다.  
@@ -55,7 +50,7 @@ class AFX_NOVTABLE CSimpleException : public CException
 |[CSimpleException::GetErrorMessage](#geterrormessage)|발생 한 오류에 대 한 텍스트를 제공 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CSimpleException`리소스에 중요 한 MFC 예외에 대 한 기본 클래스 이며 소유권 및 오류 메시지의 초기화를 처리 합니다. 다음 사용 하는 클래스 `CSimpleException` 그 기본 클래스로:  
+ `CSimpleException` 리소스에 중요 한 MFC 예외에 대 한 기본 클래스 이며 소유권 및 오류 메시지의 초기화를 처리 합니다. 다음 사용 하는 클래스 `CSimpleException` 그 기본 클래스로:  
   
 |||  
 |-|-|  
@@ -79,7 +74,7 @@ class AFX_NOVTABLE CSimpleException : public CException
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afx.h  
   
-##  <a name="csimpleexception"></a>CSimpleException::CSimpleException  
+##  <a name="csimpleexception"></a>  CSimpleException::CSimpleException  
  생성자입니다.  
   
 ```  
@@ -94,7 +89,7 @@ explicit CSimpleException(BOOL bAutoDelete);
 ### <a name="remarks"></a>설명  
  이 생성자를 직접 호출 필요가 하는 것은 일반적으로 없습니다. 인스턴스를 만들도록 예외를 throw 하는 함수는 `CException`-파생 클래스와 MFC 중 하나를 사용 해야 함수 같은 throw 되거나 해당 생성자를 호출 [AfxThrowFileException](exception-processing.md#afxthrowfileexception), 미리 정의 된 형식이 throw 합니다.  
   
-##  <a name="geterrormessage"></a>CSimpleException::GetErrorMessage  
+##  <a name="geterrormessage"></a>  CSimpleException::GetErrorMessage  
  발생 한 오류에 대 한 텍스트를 제공 하려면이 함수를 호출 합니다.  
   
 ```  

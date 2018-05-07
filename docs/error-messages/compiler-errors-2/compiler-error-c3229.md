@@ -1,13 +1,10 @@
 ---
-title: "컴파일러 오류 C3229 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C3229 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C3229
 dev_langs:
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C3229
 ms.assetid: f2d90923-aa8b-444f-ab10-1f37dbb864e1
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24911d0ccd78788e37379dd7757fe97785cdd5a4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55cf49ba63a0156565b36d654343cd96d827a5b0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3229"></a>컴파일러 오류 C3229
 'type': 제네릭 형식 매개 변수에 대한 간접 참조는 허용되지 않습니다.  
   
  `*`, `^`또는 `&`와 제네릭 매개 변수를 사용할 수 없습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C3229를 생성합니다.  
   
 ```  
@@ -50,7 +45,7 @@ ref class D {
 };  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C3229를 생성합니다.  
   
 ```  

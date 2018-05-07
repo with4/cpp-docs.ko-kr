@@ -1,12 +1,9 @@
 ---
 title: 'deque:: erase (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::deque::erase
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - erase member [STL/CLR]
 ms.assetid: 831fbc2b-604f-446b-88bc-b37531304c33
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7cd061a112be18a0a8e3f2e2531db8fa0940e48c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5afcc69c27cf96f31d85b4c48d57540669941cbc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dequeerase-stlclr"></a>deque::erase(STL/CLR)
 지정된 위치에 있는 요소를 제거합니다.  
@@ -57,7 +52,7 @@ iterator erase(iterator first, iterator last);
   
  요소를 지운 경우에 요소 복사본의 수는 시퀀스의 할수록 끝과 여 지우기의 끝 간 요소 수에 비례 합니다. (시퀀스의 끝에 하나 이상의 요소를 지우는 중 요소 복사본이 발생 합니다.)  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```cpp  
 // cliext_deque_erase.cpp   

@@ -1,12 +1,9 @@
 ---
-title: "CTypedPtrArray 클래스 | Microsoft Docs"
-ms.custom: 
+title: CTypedPtrArray 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTypedPtrArray
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e08749341bd7865c89e397e36aeff3a6ccc0d71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dbbe2d9ed6ab7a17ccbd110d12070d4e295a62ec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray 클래스
 `CPtrArray` 또는 `CObArray`클래스의 개체에 대해 형식 안전 "래퍼"를 제공합니다.  
@@ -98,7 +93,7 @@ class CTypedPtrArray : public BASE_CLASS
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxtempl.h  
   
-##  <a name="add"></a>CTypedPtrArray::Add  
+##  <a name="add"></a>  CTypedPtrArray::Add  
  이 멤버 함수를 호출 `BASE_CLASS` **:: 추가**합니다.  
   
 ```  
@@ -118,7 +113,7 @@ INT_PTR Add(TYPE newElement);
 ### <a name="remarks"></a>설명  
  설명에 자세한 참조 [CObArray::Add](../../mfc/reference/cobarray-class.md#add)합니다.  
   
-##  <a name="append"></a>CTypedPtrArray::Append  
+##  <a name="append"></a>  CTypedPtrArray::Append  
  이 멤버 함수를 호출 `BASE_CLASS` **:: Append**합니다.  
   
 ```  
@@ -141,7 +136,7 @@ INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="remarks"></a>설명  
  설명에 자세한 참조 [CObArray::Append](../../mfc/reference/cobarray-class.md#append)합니다.  
   
-##  <a name="copy"></a>CTypedPtrArray::Copy  
+##  <a name="copy"></a>  CTypedPtrArray::Copy  
  이 멤버 함수를 호출 `BASE_CLASS` **:: Copy**합니다.  
   
 ```  
@@ -161,7 +156,7 @@ void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="remarks"></a>설명  
  설명에 자세한 참조 [CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)합니다.  
   
-##  <a name="elementat"></a>CTypedPtrArray::ElementAt  
+##  <a name="elementat"></a>  CTypedPtrArray::ElementAt  
  이 인라인 함수가 호출 `BASE_CLASS` **:: ElementAt**합니다.  
   
 ```  
@@ -181,7 +176,7 @@ TYPE& ElementAt(INT_PTR nIndex);
 ### <a name="remarks"></a>설명  
  설명에 자세한 참조 [CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)합니다.  
   
-##  <a name="getat"></a>CTypedPtrArray::GetAt  
+##  <a name="getat"></a>  CTypedPtrArray::GetAt  
  이 인라인 함수가 호출 `BASE_CLASS` **:: GetAt**합니다.  
   
 ```  
@@ -201,7 +196,7 @@ TYPE GetAt(INT_PTR nIndex) const;
 ### <a name="remarks"></a>설명  
  설명에 자세한 참조 [CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)  
   
-##  <a name="insertat"></a>CTypedPtrArray::InsertAt  
+##  <a name="insertat"></a>  CTypedPtrArray::InsertAt  
  이 멤버 함수를 호출 `BASE_CLASS` **:: InsertAt**합니다.  
   
 ```  
@@ -241,7 +236,7 @@ void InsertAt(
 ### <a name="remarks"></a>설명  
  설명에 자세한 참조 [CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)합니다.  
   
-##  <a name="operator_at"></a>CTypedPtrArray::operator]  
+##  <a name="operator_at"></a>  CTypedPtrArray::operator]  
  이러한 인라인 연산자 호출 `BASE_CLASS` **:: operator**합니다.  
   
 ```  
@@ -261,7 +256,7 @@ TYPE operator[ ](int_ptr nindex) const;
   
  라이브러리의 디버그 버전 (중 하나에 대입문의 왼쪽 또는 오른쪽) 아래 첨자 벗어났습니다.이 경우 어설션 합니다.  
   
-##  <a name="setat"></a>CTypedPtrArray::SetAt  
+##  <a name="setat"></a>  CTypedPtrArray::SetAt  
  이 멤버 함수를 호출 `BASE_CLASS` **:: SetAt**합니다.  
   
 ```  
@@ -283,7 +278,7 @@ void SetAt(
 ### <a name="remarks"></a>설명  
  설명에 자세한 참조 [CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)합니다.  
   
-##  <a name="setatgrow"></a>CTypedPtrArray::SetAtGrow  
+##  <a name="setatgrow"></a>  CTypedPtrArray::SetAtGrow  
  이 멤버 함수를 호출 `BASE_CLASS` **:: SetAtGrow**합니다.  
   
 ```  

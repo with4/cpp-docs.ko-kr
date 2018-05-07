@@ -1,29 +1,24 @@
 ---
-title: "COM + 1.0, ATL COM + 1.0 구성 요소 마법사 | Microsoft Docs"
-ms.custom: 
+title: COM + 1.0, ATL COM + 1.0 구성 요소 마법사 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 dev_langs:
 - C++
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 102e6a0a9b7055000d051f5fb729dd45863a16cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9a23f148fbdc611c8a11d8116b2e7dff34fc9d8f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, ATL COM+ 1.0 구성 요소 마법사
 지원 해야 하는 인터페이스 형식 및 추가 인터페이스를 지정 하는 ATL COM + 1.0 구성 요소 마법사의이 페이지를 사용 합니다.  

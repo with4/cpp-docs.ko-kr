@@ -1,30 +1,25 @@
 ---
-title: "집계 | Microsoft Docs"
-ms.custom: 
+title: 집계 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - aggregation [C++]
 - aggregate objects [C++]
 ms.assetid: 7125bb8e-b269-4b50-9bba-295b467a54cc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dbb0332bc7e55464e5b8af9d0b57e236f23dc86
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 760a595274ba7a1901138cc0cceceddf97122725
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregation"></a>집계
 경우 개체의 구현 자가 하려는 다른, 미리 작성 된 개체에서 제공 하는 서비스를 활용 하는 경우가 있습니다. 또한이 두 번째 개체를 첫 번째의 일부로 표시 하 려 합니다. 모두 COM 달성 포함 및 집계를 통해 이러한 목표입니다.  

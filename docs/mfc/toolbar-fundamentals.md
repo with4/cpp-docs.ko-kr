@@ -1,13 +1,10 @@
 ---
-title: "도구 모음 기본 사항 | Microsoft Docs"
-ms.custom: 
+title: 도구 모음 기본 사항 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - RT_TOOLBAR
 dev_langs:
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - frame window classes [MFC], toolbar embedded in
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 136b9f5dd36c9e4092b8e5c15ac1738541cf71f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcb63ade0d1f2ad179448f448a10d88b71b91037
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="toolbar-fundamentals"></a>도구 모음 기본 사항
 이 문서에서는 응용 프로그램 마법사에서 옵션을 선택 하 여 응용 프로그램에 기본 도구 모음을 추가할 수 있는 기본 MFC 구현을 설명 합니다. 다루는 항목은 다음과 같습니다.  
@@ -52,14 +47,14 @@ ms.lasthandoff: 12/21/2017
   
 -   [여러 도구 모음](#_core_multiple_toolbars)  
   
-##  <a name="_core_the_appwizard_toolbar_option"></a>응용 프로그램 마법사 도구 모음 옵션  
+##  <a name="_core_the_appwizard_toolbar_option"></a> 응용 프로그램 마법사 도구 모음 옵션  
  기본 단추가 포함 된 단일 도구 모음을 가져오려면 사용자 인터페이스 기능 페이지에서 표준 도킹 도구 모음 옵션을 선택 합니다. 그러면 응용 프로그램에 코드를 추가 하는:  
   
 -   도구 모음 개체를 만듭니다.  
   
 -   도킹 또는 고정 해제 하는 기능을 포함 하 여 도구 모음을 관리 합니다.  
   
-##  <a name="_core_the_toolbar_in_code"></a>코드에서 도구 모음  
+##  <a name="_core_the_toolbar_in_code"></a> 코드에서 도구 모음  
  도구 모음을 한 [CToolBar](../mfc/reference/ctoolbar-class.md) 개체가 응용 프로그램의 데이터 멤버로 선언 **CMainFrame** 클래스입니다. 즉, 도구 모음 개체 주 프레임 창 개체에 포함 됩니다. 즉, 프레임 창을 만들고 프레임 창을 제거 하는 경우 도구 모음을 삭제 하는 경우 MFC 도구 모음을 만듭니다. 여러 문서 MDI (인터페이스) 응용 프로그램의 경우 다음의 partial 클래스 선언 포함된 된 도구 모음 및 포함 된 상태 표시줄에 대 한 데이터 멤버를 보여 줍니다. 또한 재정의 표시는 `OnCreate` 멤버 함수입니다.  
   
  [!code-cpp[NVC_MFCListView#6](../atl/reference/codesnippet/cpp/toolbar-fundamentals_1.h)]  
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
   
  도킹, 부동 및 도구 설명 호출은 선택적입니다. 해당 행을 제거할 수 있습니다 `OnCreate` 하려는 경우. 고정 하거나 다시 도킹할 수 없습니다 및 도구 설명을 표시할 수 없습니다 상태를 유지 하는 도구 모음이 만들어집니다.  
   
-##  <a name="_core_editing_the_toolbar_resource"></a>도구 모음 리소스 편집  
+##  <a name="_core_editing_the_toolbar_resource"></a> 도구 모음 리소스 편집  
  기반 응용 프로그램 마법사로 가져오는 기본 도구는 **RT_TOOLBAR** MFC 버전 4.0에서에서 도입 하는 사용자 지정 리소스입니다. 로이 리소스를 편집할 수는 [도구 모음 편집기](../windows/toolbar-editor.md)합니다. 편집기를 사용 하면 쉽게 추가, 삭제 및 단추를 다시 정렬할 수 있습니다. Visual c + +에서 일반 그래픽 편집기와 매우 비슷한 단추에 대 한 그래픽 편집기를 포함 합니다. 이전 버전의 Visual c + + 도구 모음을 편집한 경우 있습니다 작업이 훨씬 더 쉽게 이제 합니다.  
   
  도구 모음 단추를 명령에 연결 하려면 하면 단추 명령 ID와 같은 `ID_MYCOMMAND`합니다. 속성 페이지의 도구 모음 편집기에서 단추의 명령 ID를 지정 합니다. 그런 다음 명령에 대 한 처리기 함수를 만듭니다 (참조 [함수에 메시지 매핑](../mfc/reference/mapping-messages-to-functions.md) 자세한 정보에 대 한).  
@@ -86,7 +81,7 @@ ms.lasthandoff: 12/21/2017
   
  도구 모음 편집기를 사용 하는 방법에 대 한 세부 정보를 참조 하십시오. [도구 모음 편집기](../windows/toolbar-editor.md)합니다.  
   
-##  <a name="_core_multiple_toolbars"></a>여러 도구 모음  
+##  <a name="_core_multiple_toolbars"></a> 여러 도구 모음  
  응용 프로그램 마법사 하나의 기본 도구 모음을 제공합니다. 응용 프로그램에 둘 이상의 도구 모음을 필요한 경우에 기본 도구 모음에 대 한 마법사에서 생성 된 코드에 따라 추가 도구 모음에 대 한 코드를 모델링할 수 있습니다.  
   
  명령의 결과로 도구 모음을 표시 하려는 경우 해야 합니다.  
@@ -97,7 +92,7 @@ ms.lasthandoff: 12/21/2017
   
 -   적절 한 함수를 호출 하는 확인 `OnCreate` 를 도킹 하거나 부동 도구 모음의 스타일을 설정 합니다.  
   
-### <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+### <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [MFC 도구 모음 구현 (도구 모음에 대 한 개요 정보)](../mfc/mfc-toolbar-implementation.md)  
   

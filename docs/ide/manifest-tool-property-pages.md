@@ -1,29 +1,24 @@
 ---
-title: "매니페스트 도구 속성 페이지 | Microsoft Docs"
-ms.custom: 
+title: 매니페스트 도구 속성 페이지 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Manifest Tool property pages
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a99e8f39baa3ab3753e68ee87ecbb25d73f1a0a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2221430522329616dd19f32484b66dc957593c3a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="manifest-tool-property-pages"></a>매니페스트 도구 속성 페이지
 사용 하 여는 **매니페스트 도구** 설정 하려면 속성 페이지 빌드 mt.exe에 대 한 옵션입니다.  

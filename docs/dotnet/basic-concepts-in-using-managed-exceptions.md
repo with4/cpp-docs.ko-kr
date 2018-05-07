@@ -2,12 +2,9 @@
 title: 관리 되는 예외 사용의 기본 개념 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5e2faf56f050610e6c98ff82cdca10333a54fd93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 255a7d053228b73b2b0eb13f4732e9a7829549ba
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>관리되는 예외 사용의 기본 개념
 이 항목에서는 관리 되는 응용 프로그램에서 예외 처리를 설명 합니다. 즉, 응용 프로그램을 사용 하 여 컴파일한는 **/clr** 컴파일러 옵션입니다.  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  관리 되는, 관리 되지 않는 응용 프로그램에서 예외 처리에서 차이점에 대 한 자세한 내용은 참조 [예외 처리 동작에서 Managed Extensions for c + +의에서 차이](../dotnet/differences-in-exception-handling-behavior-under-clr.md)합니다.  
   
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a>/Clr에서 예외를 throw합니다.  
+##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a> /Clr에서 예외를 throw합니다.  
  CLR 형식에 대 한 핸들을 throw 하는 c + + throw 식 확장 됩니다. 다음 예제에서는 사용자 지정 예외 유형을 만들고 해당 형식의 인스턴스를 throw 합니다.  
   
 ```  
@@ -80,7 +75,7 @@ void GlobalFunction() {
 }  
 ```  
   
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a>Try/Catch 블록 CLR 확장에 대 한  
+##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a> Try/Catch 블록 CLR 확장에 대 한  
  동일한 **시도**/**catch** CLR와 네이티브 예외를 catch 하기 위한 블록 구조를 사용할 수 있습니다.  
   
 ```  

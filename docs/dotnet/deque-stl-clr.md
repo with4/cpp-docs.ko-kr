@@ -1,12 +1,9 @@
 ---
 title: deque (STL/CLR) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::deque
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - <deque> header [STL/CLR]
 - <cliext/deque> header [STL/CLR]
 ms.assetid: dd669da3-3c0e-45e9-8596-f6b483720941
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9bd847b2641e6670a91d2edf1eb926aca423ad2f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 11436466dadf4b06e604af6e2b5150a22c4ed241
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="deque-stlclr"></a>deque(STL/CLR)
 템플릿 클래스는 임의 액세스를 가진 요소의 다양 한 길이의 시퀀스를 제어 하는 개체를 설명 합니다. 컨테이너를 사용 하 여 `deque` 인접 한 블록 저장소의 처럼 보입니다. 하지만 늘리거나 모든 나머지 요소를 복사할 필요 없이 양쪽 끝 줄일 수 있는 요소의 시퀀스를 관리할 수 있습니다. 따라서 구현할 수 있는 효율적으로 한 `double-ended queue`합니다. (따라서 이름입니다.)  

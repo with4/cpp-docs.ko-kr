@@ -1,13 +1,10 @@
 ---
-title: "예외: 생성자의 예외 | Microsoft Docs"
-ms.custom: 
+title: '예외: 생성자의 예외 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - throwing exceptions [MFC], in constructors
 - exceptions [MFC], in constructors
 ms.assetid: a78eae5a-5821-4b27-9478-1436320ed1e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc17821e2dd358a4b8f596492fa46c2b7412feed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8336700cc0137efe3bc106871ebd76b8de7a99af
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-exceptions-in-constructors"></a>예외: 생성자의 예외
 생성자에서는 예외를 throw 하는 경우에 설명 된 대로 된 예외를 throw 하기 전에 내용을 모든 개체 및 메모리 할당 정리 [예외: 사용자 자신의 함수에서 예외를 Throw](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)합니다.  

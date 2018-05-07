@@ -1,12 +1,9 @@
 ---
-title: "RMyProviderRowset의 상속 수정 | Microsoft Docs"
-ms.custom: 
+title: RMyProviderRowset의 상속 수정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - RMyProviderRowset
 - inheritance [C++]
 ms.assetid: 33089c90-98a4-43e7-8e67-d4bb137e267e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f63e13b36f723decab9c5886b0523454d7c26fd7
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 75acbc8370c1ea164c72aa6f0c61a95fe287e3d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>RMyProviderRowset의 상속 수정
 추가 하는 `IRowsetLocate` 단순한 읽기 전용 공급자 예제 인터페이스를의 상속 수정 **RMyProviderRowset**합니다. 처음에 **RMyProviderRowset** 에서 상속 `CRowsetImpl`합니다. 상속 하도록 수정 해야 할 **CRowsetBaseImpl**합니다.  

@@ -1,12 +1,9 @@
 ---
-title: "CSocket 클래스 | Microsoft Docs"
-ms.custom: 
+title: CSocket 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSocket
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CSocket [MFC], IsBlocking
 - CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ae8a30697783b478e9ffdb1c247f52d7b9f2ac2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0bfaf418ec78a750f6030683801d00a1450364d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csocket-class"></a>CSocket 클래스
 파생 `CAsyncSocket`, Windows 소켓 API의 해당 캡슐화를 상속 하 고 보다 상위 수준의 추상을 나타내는 `CAsyncSocket` 개체입니다.  
@@ -75,7 +70,7 @@ class CSocket : public CAsyncSocket
 |[CSocket::OnMessagePending](#onmessagepending)|차단 호출이 완료 되기를 기다리는 동안 보류 중인 메시지는 처리 하기 위해 호출 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CSocket`클래스와 함께 사용 `CSocketFile` 및 `CArchive` 보내고 받는 데이터를 관리할 수 있습니다.  
+ `CSocket` 클래스와 함께 사용 `CSocketFile` 및 `CArchive` 보내고 받는 데이터를 관리할 수 있습니다.  
   
  A `CSocket` 개체도 제공 차단의 동기 작업 하는 데 필수적인 `CArchive`합니다. 와 같은 기능을 차단 `Receive`, `Send`, `ReceiveFrom`, `SendTo`, 및 `Accept` (에서 상속 된 모든 `CAsyncSocket`)를 반환 하지 않는 한 `WSAEWOULDBLOCK` 에 오류가 `CSocket`합니다. 대신 이러한 함수는 작업이 완료 될 때까지 기다립니다. 오류가 발생 하 여 원래 호출 또한 끝납니다 `WSAEINTR` 경우 `CancelBlockingCall` 이러한 함수 중 하나를 차단 하는 동안 호출 됩니다.  
   
@@ -104,7 +99,7 @@ class CSocket : public CAsyncSocket
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxsock.h  
   
-##  <a name="attach"></a>CSocket::Attach  
+##  <a name="attach"></a>  CSocket::Attach  
  연결 하려면이 함수를 호출는 `hSocket` 에 대 한 핸들을 `CSocket` 개체입니다.  
   
 ```  
@@ -123,14 +118,14 @@ BOOL Attach(SOCKET hSocket);
   
  자세한 내용은 참조 [Windows 소켓: 아카이브 함께 사용 하 여 소켓](../../mfc/windows-sockets-using-sockets-with-archives.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCSocketThread#1](../../mfc/reference/codesnippet/cpp/csocket-class_2.h)]  
   
  [!code-cpp[NVC_MFCSocketThread#2](../../mfc/reference/codesnippet/cpp/csocket-class_3.cpp)]  
   
  [!code-cpp[NVC_MFCSocketThread#3](../../mfc/reference/codesnippet/cpp/csocket-class_4.cpp)]  
   
-##  <a name="cancelblockingcall"></a>CSocket::CancelBlockingCall  
+##  <a name="cancelblockingcall"></a>  CSocket::CancelBlockingCall  
  현재 진행 중인 차단 호출을 취소 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -146,7 +141,7 @@ void CancelBlockingCall();
   
  자세한 내용은 참조 [Windows 소켓: 아카이브 함께 사용 하 여 소켓](../../mfc/windows-sockets-using-sockets-with-archives.md)합니다.  
   
-##  <a name="create"></a>CSocket::Create  
+##  <a name="create"></a>  CSocket::Create  
  호출 된 **만들기** Windows 소켓을 만들를 연결 하는 소켓 개체를 생성 한 후 멤버 함수입니다.  
   
 ```  
@@ -181,7 +176,7 @@ BOOL Create(
   
  스트림 및 데이터 그램 소켓에 대 한 자세한 내용은 문서를 참조 [Windows 소켓: 백그라운드](../../mfc/windows-sockets-background.md), [Windows 소켓: 포트 및 소켓 주소](../../mfc/windows-sockets-ports-and-socket-addresses.md), 및 [Windows 소켓:를 사용 하 여 아카이브를 함께 사용 하는 소켓](../../mfc/windows-sockets-using-sockets-with-archives.md)합니다.  
   
-##  <a name="csocket"></a>CSocket::CSocket  
+##  <a name="csocket"></a>  CSocket::CSocket  
  `CSocket` 개체를 생성합니다.  
   
 ```  
@@ -193,7 +188,7 @@ CSocket();
   
  자세한 내용은 참조 [Windows 소켓: 아카이브 함께 사용 하 여 소켓](../../mfc/windows-sockets-using-sockets-with-archives.md)합니다.  
   
-##  <a name="fromhandle"></a>CSocket::FromHandle  
+##  <a name="fromhandle"></a>  CSocket::FromHandle  
  에 대 한 포인터를 반환 합니다.는 `CSocket` 개체입니다.  
   
 ```  
@@ -212,7 +207,7 @@ static CSocket* PASCAL FromHandle(SOCKET hSocket);
   
  자세한 내용은 참조 [Windows 소켓: 아카이브 함께 사용 하 여 소켓](../../mfc/windows-sockets-using-sockets-with-archives.md)합니다.  
   
-##  <a name="isblocking"></a>CSocket::IsBlocking  
+##  <a name="isblocking"></a>  CSocket::IsBlocking  
  차단 호출이 진행에서 중인지 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -225,7 +220,7 @@ BOOL IsBlocking();
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [Windows 소켓: 아카이브 함께 사용 하 여 소켓](../../mfc/windows-sockets-using-sockets-with-archives.md)합니다.  
   
-##  <a name="onmessagepending"></a>CSocket::OnMessagePending  
+##  <a name="onmessagepending"></a>  CSocket::OnMessagePending  
  Windows에서 특정 메시지를 검색 하 고 프로그램 소켓에 응답할 수를이 멤버 함수를 재정의 합니다.  
   
 ```  

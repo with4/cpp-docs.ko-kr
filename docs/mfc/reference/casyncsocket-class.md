@@ -1,12 +1,9 @@
 ---
-title: "CAsyncSocket 클래스 | Microsoft Docs"
-ms.custom: 
+title: CAsyncSocket 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAsyncSocket
@@ -83,17 +80,15 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24ef9c6e39d72e756b95472daee46b7d39503943
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5eaefa40be2a6cf1d57326c2135d848fa08dbc87
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket 클래스
 Windows 소켓 나타냅니다 — 네트워크 통신의 끝점입니다.  
@@ -187,7 +182,7 @@ class CAsyncSocket : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxsock.h  
   
-##  <a name="accept"></a>CAsyncSocket::Accept  
+##  <a name="accept"></a>  CAsyncSocket::Accept  
  이 소켓에 대 한 연결을 수락 하도록 함수를 호출 합니다.  
   
 ```  
@@ -222,7 +217,7 @@ virtual BOOL Accept(
   
 - **WSAEMFILE** 큐 적용할 시작 시 비어 있고 사용 가능한 더 설명자 있습니다.  
   
-- `WSAENOBUFS`사용할 수 있는 버퍼 공간이 없습니다.  
+- `WSAENOBUFS` 사용할 수 있는 버퍼 공간이 없습니다.  
   
 - **WSAENOTSOCK** 설명자 소켓 아닙니다.  
   
@@ -235,7 +230,7 @@ virtual BOOL Accept(
   
  인수 `lpSockAddr` 통신 계층에 알려진 소켓에는 연결의 주소를 사용 하 여 입력은 결과 매개 변수입니다. **수락** 와 같은 소켓 연결 기반 형식을 함께 사용 **SOCK_STREAM**합니다.  
   
-##  <a name="asyncselect"></a>CAsyncSocket::AsyncSelect  
+##  <a name="asyncselect"></a>  CAsyncSocket::AsyncSelect  
  이 소켓에 대 한 이벤트 알림을 요청할 수 함수를 호출 합니다.  
   
 ```  
@@ -270,9 +265,9 @@ BOOL AsyncSelect(long lEvent = FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONN
 - **WSAEINPROGRESS** 차단 Windows 소켓 작업이 진행 중입니다.  
   
 ### <a name="remarks"></a>설명  
- 소켓에 대 한 MFC 콜백 알림 함수를 호출할지를 지정 하려면이 함수가 사용 됩니다. `AsyncSelect`이 소켓 비차단 모드 자동 설정 됩니다. 자세한 내용은 문서 참조 [Windows 소켓: 소켓 알림](../../mfc/windows-sockets-socket-notifications.md)합니다.  
+ 소켓에 대 한 MFC 콜백 알림 함수를 호출할지를 지정 하려면이 함수가 사용 됩니다. `AsyncSelect` 이 소켓 비차단 모드 자동 설정 됩니다. 자세한 내용은 문서 참조 [Windows 소켓: 소켓 알림](../../mfc/windows-sockets-socket-notifications.md)합니다.  
   
-##  <a name="attach"></a>CAsyncSocket::Attach  
+##  <a name="attach"></a>  CAsyncSocket::Attach  
  연결 하려면이 멤버 함수 호출의 `hSocket` 에 대 한 핸들는 `CAsyncSocket` 개체입니다.  
   
 ```  
@@ -305,7 +300,7 @@ BOOL Attach(
 ### <a name="remarks"></a>설명  
  **소켓** 핸들 개체의에 저장 된 [m_hSocket](#m_hsocket) 데이터 멤버입니다.  
   
-##  <a name="bind"></a>CAsyncSocket::Bind  
+##  <a name="bind"></a>  CAsyncSocket::Bind  
  로컬 주소 소켓 연결 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -349,14 +344,14 @@ BOOL Bind (
   
 - **WSAEINVAL** 소켓 주소에 이미 바인딩되어 있습니다.  
   
-- `WSAENOBUFS`부족 합니다. 사용할 수 있는 버퍼를 너무 많은 연결이 있습니다.  
+- `WSAENOBUFS` 부족 합니다. 사용할 수 있는 버퍼를 너무 많은 연결이 있습니다.  
   
 - **WSAENOTSOCK** 설명자 소켓 아닙니다.  
   
 ### <a name="remarks"></a>설명  
  이 루틴은 연결 되지 않은 데이터 그램 또는 스트림 소켓에 전에 사용 후속 **연결** 또는 `Listen` 호출 합니다. 서버 소켓의 수신 대기 포트 번호를 선택 하며 쉽게 알려진 Windows 소켓을 호출 하 여 연결 요청을 허용 하려면, **바인딩할**합니다. **바인딩** 명명 되지 않은 소켓에 대 한 로컬 이름을 지정 하 여 소켓의 로컬 연결 (호스트 주소/포트 번호)을 설정 합니다.  
   
-##  <a name="casyncsocket"></a>CAsyncSocket::CAsyncSocket  
+##  <a name="casyncsocket"></a>  CAsyncSocket::CAsyncSocket  
  빈 소켓 개체를 만듭니다.  
   
 ```  
@@ -366,7 +361,7 @@ CAsyncSocket();
 ### <a name="remarks"></a>설명  
  호출 해야 개체를 생성 한 후 해당 **만들기** 만들려는 멤버 함수는 **소켓** 데이터 구조를 해당 주소를 바인딩합니다. (Windows 소켓 통신을 수신 대기 소켓에서 사용 하는 소켓이 생성 하는 경우 서버 쪽에서의 **Accept** 호출을 호출 하지 않으면 **만들기** 해당 소켓에 대 한 합니다.)  
   
-##  <a name="close"></a>CAsyncSocket::Close  
+##  <a name="close"></a>  CAsyncSocket::Close  
  소켓을 닫습니다.  
   
 ```  
@@ -378,7 +373,7 @@ virtual void Close();
   
  에 대 한 `CAsyncSocket`, 아니라 `CSocket`의 의미 체계 **닫기** 소켓 옵션의 영향을 받는 **SO_LINGER** 및 **SO_DONTLINGER**합니다. 자세한 내용은 멤버 함수를 참조 하십시오. `GetSockOpt`합니다.  
   
-##  <a name="connect"></a>CAsyncSocket::Connect  
+##  <a name="connect"></a>  CAsyncSocket::Connect  
  연결 되지 않은 스트림 또는 데이터 그램 소켓에 연결 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -434,7 +429,7 @@ BOOL Connect(
   
 - **WSAENETUNREACH** 지금이 호스트에서 네트워크에 연결할 수 없습니다.  
   
-- `WSAENOBUFS`사용할 수 있는 버퍼 공간이 없습니다. 소켓을 연결할 수 없습니다.  
+- `WSAENOBUFS` 사용할 수 있는 버퍼 공간이 없습니다. 소켓을 연결할 수 없습니다.  
   
 - **WSAENOTSOCK** 설명자 소켓 아닙니다.  
   
@@ -449,7 +444,7 @@ BOOL Connect(
   
  데이터 그램 소켓에 대 한 (형식 **SOCK_DGRAM**), 기본 대상 설정 되어 다음에 사용 될 **보낼** 및 **수신** 호출 합니다.  
   
-##  <a name="create"></a>CAsyncSocket::Create  
+##  <a name="create"></a>  CAsyncSocket::Create  
  호출 된 **만들기** Windows 소켓을 만들를 연결 하는 소켓 개체를 생성 한 후 멤버 함수입니다.  
   
 ```  
@@ -498,7 +493,7 @@ BOOL Create(
   
 - **WSAEMFILE** 더 이상 파일 설명자를 사용할 수 있습니다.  
   
-- `WSAENOBUFS`사용할 수 있는 버퍼 공간이 없습니다. 소켓을 만들 수 없습니다.  
+- `WSAENOBUFS` 사용할 수 있는 버퍼 공간이 없습니다. 소켓을 만들 수 없습니다.  
   
 - **WSAEPROTONOSUPPORT** 지정된 된 포트는 지원 되지 않습니다.  
   
@@ -521,14 +516,14 @@ BOOL Create(
   
  스트림 및 데이터 그램 소켓에 대 한 자세한 내용은 문서를 참조 [Windows 소켓: 백그라운드](../../mfc/windows-sockets-background.md) 및 [Windows 소켓: 포트 및 소켓 주소](../../mfc/windows-sockets-ports-and-socket-addresses.md) 및 [Windows 소켓 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673).  
   
-##  <a name="detach"></a>CAsyncSocket::Detach  
+##  <a name="detach"></a>  CAsyncSocket::Detach  
  이를 분리 함수를 호출는 **소켓** 에서 처리는 `m_hSocket` 에서 데이터 멤버는 `CAsyncSocket` 개체 및 설정 `m_hSocket` 를 **NULL**합니다.  
   
 ```  
 SOCKET Detach();
 ```  
   
-##  <a name="fromhandle"></a>CAsyncSocket::FromHandle  
+##  <a name="fromhandle"></a>  CAsyncSocket::FromHandle  
  에 대 한 포인터를 반환 합니다.는 `CAsyncSocket` 개체입니다.  
   
 ```  
@@ -545,7 +540,7 @@ static CAsyncSocket* PASCAL FromHandle(SOCKET hSocket);
 ### <a name="remarks"></a>설명  
  지정 된 경우는 **소켓** 경우 처리는 `CAsyncSocket` 멤버 함수가 반환 개체가 핸들에 연결 되지 않은, **NULL**합니다.  
   
-##  <a name="getlasterror"></a>CAsyncSocket::GetLastError  
+##  <a name="getlasterror"></a>  CAsyncSocket::GetLastError  
  실패 한 마지막 작업에 대 한 오류 상태를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -560,7 +555,7 @@ static int PASCAL GetLastError();
   
  오류 코드에 대 한 자세한 내용은 참조 [Windows 소켓 2 API](http://msdn.microsoft.com/library/windows/desktop/ms740673)합니다.  
   
-##  <a name="getpeername"></a>CAsyncSocket::GetPeerName  
+##  <a name="getpeername"></a>  CAsyncSocket::GetPeerName  
  이이 소켓 연결 된 피어 소켓의 주소를 가져오는 함수를 호출 합니다.  
   
 ```  
@@ -605,7 +600,7 @@ BOOL GetPeerName(
 ### <a name="remarks"></a>설명  
  IPv6 주소를 처리 하려면 [CAsyncSocket::GetPeerNameEx](#getpeernameex)합니다.  
   
-##  <a name="getpeernameex"></a>CAsyncSocket::GetPeerNameEx  
+##  <a name="getpeernameex"></a>  CAsyncSocket::GetPeerNameEx  
  이 소켓을 연결 된 (핸들 IPv6 주소) 피어 소켓의 주소를 얻기 위해이 함수를 호출 합니다.  
   
 ```  
@@ -639,7 +634,7 @@ BOOL GetPeerNameEx(
 ### <a name="remarks"></a>설명  
  이 함수는 동일 [CAsyncSocket::GetPeerName](#getpeername) IPv6 처리 한다는 점을 제외 하면 오래 된 파일로 프로토콜을 해결 합니다.  
   
-##  <a name="getsockname"></a>CAsyncSocket::GetSockName  
+##  <a name="getsockname"></a>  CAsyncSocket::GetSockName  
  소켓에 대 한 로컬 이름을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -686,7 +681,7 @@ BOOL GetSockName(
   
  IPv6 주소를 처리 하려면 [CAsyncSocket::GetSockNameEx](#getsocknameex)  
   
-##  <a name="getsocknameex"></a>CAsyncSocket::GetSockNameEx  
+##  <a name="getsocknameex"></a>  CAsyncSocket::GetSockNameEx  
  소켓 (핸들 IPv6 주소)에 대 한 로컬 이름을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -722,7 +717,7 @@ BOOL GetSockNameEx(
   
  이 호출은 때 특히 유용는 **연결** 호출 수행 하지 않고는 **바인딩할** 이 호출은으로 설정 된 로컬 연결을 확인할 수 있는 유일한 수단을 제공 하는 먼저;는 시스템입니다.  
   
-##  <a name="getsockopt"></a>CAsyncSocket::GetSockOpt  
+##  <a name="getsockopt"></a>  CAsyncSocket::GetSockOpt  
  소켓 옵션을 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -762,7 +757,7 @@ BOOL GetSockOpt(
 - **WSAENOTSOCK** 설명자 소켓 아닙니다.  
   
 ### <a name="remarks"></a>설명  
- `GetSockOpt`모든 상태에서 모든 형식의 소켓와 연결 된 소켓 옵션에 대 한 현재 값을 검색 하 고 해당 결과 `lpOptionValue`합니다. 옵션 패킷과 대역폭을 벗어난 데이터 전송 등의 라우팅 등의 소켓 작업을 영향을 줍니다.  
+ `GetSockOpt` 모든 상태에서 모든 형식의 소켓와 연결 된 소켓 옵션에 대 한 현재 값을 검색 하 고 해당 결과 `lpOptionValue`합니다. 옵션 패킷과 대역폭을 벗어난 데이터 전송 등의 라우팅 등의 소켓 작업을 영향을 줍니다.  
   
  에 대해 다음 옵션은 지원 `GetSockOpt`합니다. 형식으로 주소가 지정 된 데이터의 형식을 식별 `lpOptionValue`합니다. **TCP_NODELAY** 옵션 수준을 사용 하 여 **IPPROTO_TCP**; 다른 모든 옵션에 수준을 사용 하 여 **SOL_SOCKET**합니다.  
   
@@ -796,7 +791,7 @@ BOOL GetSockOpt(
   
  호출 `GetSockOpt` 는 지원 되지 않는 옵션을 사용 하면 오류 코드 **WSAENOPROTOOPT** 에서 반환 되 고 `GetLastError`합니다.  
   
-##  <a name="ioctl"></a>CAsyncSocket::IOCtl  
+##  <a name="ioctl"></a>  CAsyncSocket::IOCtl  
  소켓의 모드를 제어 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -836,7 +831,7 @@ BOOL IOCtl(
   
  이 함수는 하위 집합만 **ioctl()** Berkeley 소켓에서 사용 되는 합니다. 특히 해당 하는 명령이 없기 **FIOASYNC**, 동안 **SIOCATMARK** 지원 되는 소켓 수준 명령입니다.  
   
-##  <a name="listen"></a>CAsyncSocket::Listen  
+##  <a name="listen"></a>  CAsyncSocket::Listen  
  들어오는 연결 요청을 수신 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -864,27 +859,27 @@ BOOL Listen(int nConnectionBacklog = 5);
   
 - **WSAEMFILE** 더 이상 파일 설명자를 사용할 수 있습니다.  
   
-- `WSAENOBUFS`사용할 수 있는 버퍼 공간이 없습니다.  
+- `WSAENOBUFS` 사용할 수 있는 버퍼 공간이 없습니다.  
   
 - **WSAENOTSOCK** 설명자 소켓 아닙니다.  
   
 - **WSAEOPNOTSUPP** 참조 된 소켓을 지 원하는 유형이 않습니다는 `Listen` 작업 합니다.  
   
 ### <a name="remarks"></a>설명  
- 연결을 허용 하도록 소켓 처음 만들어질와 **만들기**, 들어오는 연결에 대 한 백로그가 지정 된 `Listen`, 및 연결 된 수락 다음 **Accept**합니다. `Listen`형식의 속성이 연결을 지원 하므로, 즉 소켓에만 적용 **SOCK_STREAM**합니다. 이 소켓 "수동" 모드 들어오는 연결의 승인 및 프로세스에 의해 승인 보류 중인 큐에 대기 위치에 배치 됩니다.  
+ 연결을 허용 하도록 소켓 처음 만들어질와 **만들기**, 들어오는 연결에 대 한 백로그가 지정 된 `Listen`, 및 연결 된 수락 다음 **Accept**합니다. `Listen` 형식의 속성이 연결을 지원 하므로, 즉 소켓에만 적용 **SOCK_STREAM**합니다. 이 소켓 "수동" 모드 들어오는 연결의 승인 및 프로세스에 의해 승인 보류 중인 큐에 대기 위치에 배치 됩니다.  
   
  이 함수는 일반적으로 서버 (또는 연결을 허용 하는 모든 응용 프로그램)가 사용 되어 한 번에 둘 이상의 연결 요청을 사용할 수 있는: 클라이언트 의표시와함께오류가표시됩니다는큐가꽉찼습니다함께도착한연결요청을하는경우 **WSAECONNREFUSED**합니다.  
   
- `Listen`에 계속 사용할 수 있는 포트 (설명자) 없는 경우 합리적으로 기능을 시도 합니다. 큐를 비울 때까지 연결을 허용 합니다. 포트 사용 가능 하 게 하는 경우 한 이후의 호출 `Listen` 또는 **Accept** 가능 하면 현재 또는 가장 최근 "백로그에" 큐를 다시 채우는 하 고 들어오는 연결을 수신 대기를 다시 시작 됩니다.  
+ `Listen` 에 계속 사용할 수 있는 포트 (설명자) 없는 경우 합리적으로 기능을 시도 합니다. 큐를 비울 때까지 연결을 허용 합니다. 포트 사용 가능 하 게 하는 경우 한 이후의 호출 `Listen` 또는 **Accept** 가능 하면 현재 또는 가장 최근 "백로그에" 큐를 다시 채우는 하 고 들어오는 연결을 수신 대기를 다시 시작 됩니다.  
   
-##  <a name="m_hsocket"></a>CAsyncSocket::m_hSocket  
+##  <a name="m_hsocket"></a>  CAsyncSocket::m_hSocket  
  포함 된 **소켓** 이 캡슐화 된 소켓에 대 한 처리 `CAsyncSocket` 개체입니다.  
   
 ```  
 SOCKET m_hSocket;  
 ```  
   
-##  <a name="onaccept"></a>CAsyncSocket::OnAccept  
+##  <a name="onaccept"></a>  CAsyncSocket::OnAccept  
  호출 하 여 보류 중인 연결 요청 받을 수 있는 수신 대기 소켓에 알리기 위해 프레임 워크에서 호출 된 [Accept](#accept) 멤버 함수입니다.  
   
 ```  
@@ -902,7 +897,7 @@ virtual void OnAccept(int nErrorCode);
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [Windows 소켓: 소켓 알림](../../mfc/windows-sockets-socket-notifications.md)합니다.  
   
-##  <a name="onclose"></a>CAsyncSocket::OnClose  
+##  <a name="onclose"></a>  CAsyncSocket::OnClose  
  해당 프로세스에 의해 연결 된 소켓 닫았는지이 소켓에 알리기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -924,7 +919,7 @@ virtual void OnClose(int nErrorCode);
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [Windows 소켓: 소켓 알림](../../mfc/windows-sockets-socket-notifications.md)합니다.  
   
-##  <a name="onconnect"></a>CAsyncSocket::OnConnect  
+##  <a name="onconnect"></a>  CAsyncSocket::OnConnect  
  이 소켓에 연결에 해당 연결 시도가 완료 되 면 성공적으로 또는 오류가 있는지 여부를 알리기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -957,7 +952,7 @@ virtual void OnConnect(int nErrorCode);
   
 - **WSAENETUNREACH** 지금이 호스트에서 네트워크에 연결할 수 없습니다.  
   
-- `WSAENOBUFS`사용할 수 있는 버퍼 공간이 없습니다. 소켓을 연결할 수 없습니다.  
+- `WSAENOBUFS` 사용할 수 있는 버퍼 공간이 없습니다. 소켓을 연결할 수 없습니다.  
   
 - **WSAENOTCONN** 소켓 연결 되어 있지 않습니다.  
   
@@ -972,10 +967,10 @@ virtual void OnConnect(int nErrorCode);
   
  자세한 내용은 참조 [Windows 소켓: 소켓 알림](../../mfc/windows-sockets-socket-notifications.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCAsyncSocket#1](../../mfc/reference/codesnippet/cpp/casyncsocket-class_1.cpp)]  
   
-##  <a name="onoutofbanddata"></a>CAsyncSocket::OnOutOfBandData  
+##  <a name="onoutofbanddata"></a>  CAsyncSocket::OnOutOfBandData  
  보내는 소켓에 밴드의 범위를 벗어난 보낼 데이터를 받는 소켓에 알리기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -995,7 +990,7 @@ virtual void OnOutOfBandData(int nErrorCode);
   
  MFC 지원 있지만 클래스의 사용자가 대역폭을 벗어난 데이터 `CAsyncSocket` 사용 해서는 안 됩니다. 쉬운 방법이 이러한 데이터를 전달 하기 위한 두 번째 소켓을 만드는 것입니다. 대역폭을 벗어난 데이터에 대 한 자세한 내용은 참조 [Windows 소켓: 소켓 알림](../../mfc/windows-sockets-socket-notifications.md)합니다.  
   
-##  <a name="onreceive"></a>CAsyncSocket::OnReceive  
+##  <a name="onreceive"></a>  CAsyncSocket::OnReceive  
  호출 하 여 검색할 수 있는 버퍼의 데이터는이 소켓에 알리기 위해 프레임 워크에서 호출 된 **수신** 멤버 함수입니다.  
   
 ```  
@@ -1013,10 +1008,10 @@ virtual void OnReceive(int nErrorCode);
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [Windows 소켓: 소켓 알림](../../mfc/windows-sockets-socket-notifications.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCAsyncSocket#2](../../mfc/reference/codesnippet/cpp/casyncsocket-class_2.cpp)]  
   
-##  <a name="onsend"></a>CAsyncSocket::OnSend  
+##  <a name="onsend"></a>  CAsyncSocket::OnSend  
  호출 하 여 데이터 보내기 이제 수 소켓에 알리기 위해 프레임 워크에서 호출 된 **보낼** 멤버 함수입니다.  
   
 ```  
@@ -1034,10 +1029,10 @@ virtual void OnSend(int nErrorCode);
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [Windows 소켓: 소켓 알림](../../mfc/windows-sockets-socket-notifications.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCAsyncSocket#3](../../mfc/reference/codesnippet/cpp/casyncsocket-class_3.cpp)]  
   
-##  <a name="operator_eq"></a>CAsyncSocket::operator =  
+##  <a name="operator_eq"></a>  CAsyncSocket::operator =  
  에 새 값을 할당 한 `CAsyncSocket` 개체입니다.  
   
 ```  
@@ -1051,7 +1046,7 @@ void operator=(const CAsyncSocket& rSrc);
 ### <a name="remarks"></a>설명  
  이 함수는 기존 복사를 호출 `CAsyncSocket` 개체를 다른 `CAsyncSocket` 개체입니다.  
   
-##  <a name="operator_socket"></a>CAsyncSocket::operator 소켓  
+##  <a name="operator_socket"></a>  CAsyncSocket::operator 소켓  
  이 연산자를 사용 하 여 검색 하는 **소켓** 의 처리는 `CAsyncSocket` 개체입니다.  
   
 ```  
@@ -1064,7 +1059,7 @@ operator SOCKET() const;
 ### <a name="remarks"></a>설명  
  Windows Api를 직접 호출 하는 핸들을 사용할 수 있습니다.  
   
-##  <a name="receive"></a>CAsyncSocket::Receive  
+##  <a name="receive"></a>  CAsyncSocket::Receive  
  이 소켓에서 데이터를 받는 함수를 호출 합니다.  
   
 ```  
@@ -1126,10 +1121,10 @@ virtual int Receive(
   
  **수신** 각 시간에 대해 한 번만 호출 해야 [CAsyncSocket::OnReceive](#onreceive) 호출 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CAsyncSocket::OnReceive](#onreceive)합니다.  
   
-##  <a name="receivefrom"></a>CAsyncSocket::ReceiveFrom  
+##  <a name="receivefrom"></a>  CAsyncSocket::ReceiveFrom  
  데이터 그램을 수신 하 고에 소스 주소를 저장 하려면이 함수 호출의 [SOCKADDR](../../mfc/reference/sockaddr-structure.md) 구조 또는 `rSocketAddress`합니다.  
   
 ```  
@@ -1217,7 +1212,7 @@ int ReceiveFrom(
   
  소켓 형식인 경우 **SOCK_STREAM** 원격측에 연결이 정상적으로 종료, 및는 `ReceiveFrom` 받은 0 바이트와 함께 즉시 완료 됩니다.  
   
-##  <a name="receivefromex"></a>CAsyncSocket::ReceiveFromEx  
+##  <a name="receivefromex"></a>  CAsyncSocket::ReceiveFromEx  
  데이터 그램을 수신 하 고에 소스 주소를 저장 하려면이 함수 호출의 [SOCKADDR](../../mfc/reference/sockaddr-structure.md) 구조 또는 `rSocketAddress` (IPv6 주소 처리).  
   
 ```  
@@ -1291,7 +1286,7 @@ int ReceiveFromEx(
   
  소켓 형식인 경우 **SOCK_STREAM** 원격측에 연결이 정상적으로 종료, 및는 `ReceiveFromEx` 받은 0 바이트와 함께 즉시 완료 됩니다.  
   
-##  <a name="send"></a>CAsyncSocket::Send  
+##  <a name="send"></a>  CAsyncSocket::Send  
  연결된 된 소켓에서 데이터를 전송 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -1330,7 +1325,7 @@ virtual int Send(
   
 - **WSAENETRESET** Windows 소켓 구현을 삭제 하기 때문에 연결을 다시 설정 해야 합니다.  
   
-- `WSAENOBUFS`Windows 소켓 구현이 버퍼 교착 상태를 보고합니다.  
+- `WSAENOBUFS` Windows 소켓 구현이 버퍼 교착 상태를 보고합니다.  
   
 - **WSAENOTCONN** 소켓 연결 되어 있지 않습니다.  
   
@@ -1357,10 +1352,10 @@ virtual int Send(
   
  `CAsyncSocket` 유형의 개체 **SOCK_STREAM**, 쓴 바이트 수는 1부터 로컬 및 외부 호스트의 버퍼 가용성에 따라 요청 된 길이 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CAsyncSocket::OnSend](#onsend)합니다.  
   
-##  <a name="sendto"></a>CAsyncSocket::SendTo  
+##  <a name="sendto"></a>  CAsyncSocket::SendTo  
  이 데이터를 특정 대상에 보내도록 함수를 호출 합니다.  
   
 ```  
@@ -1423,7 +1418,7 @@ int SendTo(
   
 - **WSAENETRESET** Windows 소켓 구현을 삭제 하기 때문에 연결을 다시 설정 해야 합니다.  
   
-- `WSAENOBUFS`Windows 소켓 구현이 버퍼 교착 상태를 보고합니다.  
+- `WSAENOBUFS` Windows 소켓 구현이 버퍼 교착 상태를 보고합니다.  
   
 - **WSAENOTCONN** 소켓 연결 되어 있지 않습니다 ( **SOCK_STREAM** 만).  
   
@@ -1450,17 +1445,17 @@ int SendTo(
 - **WSAENETUNREACH** 지금이 호스트에서 네트워크에 연결할 수 없습니다.  
   
 ### <a name="remarks"></a>설명  
- `SendTo`데이터 그램 또는 스트림 소켓에 사용 되 고 소켓에 보내는 데이터를 쓰는 데 사용 되 합니다. 데이터 그램 소켓에 대 한 주의 해야 하 여 제공 된 원본으로 사용 하는 서브넷의 최대 IP 패킷 크기를 초과 하지는 **iMaxUdpDg** 요소에는 [WSADATA](../../mfc/reference/wsadata-structure.md) 구조 여 채울 [ AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)합니다. 데이터가 너무 길어 원자 단위로 오류 기본 프로토콜을 통해 전달할 경우 **WSAEMSGSIZE** 반환 되 면 데이터가 전송 됩니다.  
+ `SendTo` 데이터 그램 또는 스트림 소켓에 사용 되 고 소켓에 보내는 데이터를 쓰는 데 사용 되 합니다. 데이터 그램 소켓에 대 한 주의 해야 하 여 제공 된 원본으로 사용 하는 서브넷의 최대 IP 패킷 크기를 초과 하지는 **iMaxUdpDg** 요소에는 [WSADATA](../../mfc/reference/wsadata-structure.md) 구조 여 채울 [ AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)합니다. 데이터가 너무 길어 원자 단위로 오류 기본 프로토콜을 통해 전달할 경우 **WSAEMSGSIZE** 반환 되 면 데이터가 전송 됩니다.  
   
  성공적으로 완료 한 `SendTo` 성공적으로 전달 된 데이터를 나타내지 않습니다.  
   
- `SendTo`에 사용 되는 **SOCK_DGRAM** 는 데이터 그램을 보낼 특정 소켓으로 식별 하는 소켓의 `lpSockAddr` 매개 변수입니다.  
+ `SendTo` 에 사용 되는 **SOCK_DGRAM** 는 데이터 그램을 보낼 특정 소켓으로 식별 하는 소켓의 `lpSockAddr` 매개 변수입니다.  
   
  브로드캐스트를 보내도록 (에 **SOCK_DGRAM** 만)에 있는 주소는 `lpSockAddr` 특수 IP 주소를 사용 하 여 매개 변수를 생성 해야 **INADDR_BROADCAST** (Windows 소켓 헤더에 정의 합니다. WINSOCK 파일입니다. H)와 함께 의도 한 포트 번호입니다. 또는 경우에는 `lpszHostAddress` 매개 변수는 **NULL**, 소켓 브로드캐스트에 구성 되어 있습니다. 일반적으로 조각화가 발생할 수 크기를 초과 하는 브로드캐스트 데이터 그램에 바람직하지 않습니다 데이터 그램 (머리글은 제외)의 데이터 부분 512 바이트를 넘지 않아야을 의미 합니다.  
   
  IPv6 주소를 처리 하려면 [CAsyncSocket::SendToEx](#sendtoex)합니다.  
   
-##  <a name="sendtoex"></a>CAsyncSocket::SendToEx  
+##  <a name="sendtoex"></a>  CAsyncSocket::SendToEx  
  데이터를 특정 대상 (핸들 IPv6 주소)를 전송 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -1509,7 +1504,7 @@ int SendToEx(
   
 - **WSAENETRESET** Windows 소켓 구현을 삭제 하기 때문에 연결을 다시 설정 해야 합니다.  
   
-- `WSAENOBUFS`Windows 소켓 구현이 버퍼 교착 상태를 보고합니다.  
+- `WSAENOBUFS` Windows 소켓 구현이 버퍼 교착 상태를 보고합니다.  
   
 - **WSAENOTCONN** 소켓 연결 되어 있지 않습니다 ( **SOCK_STREAM** 만).  
   
@@ -1538,15 +1533,15 @@ int SendToEx(
 ### <a name="remarks"></a>설명  
  이 메서드는 동일 [CAsyncSocket::SendTo](#sendto) IPv6 처리 한다는 점을 제외 하면 오래 된 파일로 프로토콜을 해결 합니다.  
   
- `SendToEx`데이터 그램 또는 스트림 소켓에 사용 되 고 소켓에 보내는 데이터를 쓰는 데 사용 되 합니다. 데이터 그램 소켓에 대 한 주의 해야 하 여 제공 된 원본으로 사용 하는 서브넷의 최대 IP 패킷 크기를 초과 하지는 **iMaxUdpDg** 요소에는 [WSADATA](../../mfc/reference/wsadata-structure.md) 구조 여 채울 [ AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)합니다. 데이터가 너무 길어 원자 단위로 오류 기본 프로토콜을 통해 전달할 경우 **WSAEMSGSIZE** 반환 되 면 데이터가 전송 됩니다.  
+ `SendToEx` 데이터 그램 또는 스트림 소켓에 사용 되 고 소켓에 보내는 데이터를 쓰는 데 사용 되 합니다. 데이터 그램 소켓에 대 한 주의 해야 하 여 제공 된 원본으로 사용 하는 서브넷의 최대 IP 패킷 크기를 초과 하지는 **iMaxUdpDg** 요소에는 [WSADATA](../../mfc/reference/wsadata-structure.md) 구조 여 채울 [ AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)합니다. 데이터가 너무 길어 원자 단위로 오류 기본 프로토콜을 통해 전달할 경우 **WSAEMSGSIZE** 반환 되 면 데이터가 전송 됩니다.  
   
  성공적으로 완료 한 `SendToEx` 성공적으로 전달 된 데이터를 나타내지 않습니다.  
   
- `SendToEx`에 사용 되는 **SOCK_DGRAM** 는 데이터 그램을 보낼 특정 소켓으로 식별 하는 소켓의 `lpSockAddr` 매개 변수입니다.  
+ `SendToEx` 에 사용 되는 **SOCK_DGRAM** 는 데이터 그램을 보낼 특정 소켓으로 식별 하는 소켓의 `lpSockAddr` 매개 변수입니다.  
   
  브로드캐스트를 보내도록 (에 **SOCK_DGRAM** 만)에 있는 주소는 `lpSockAddr` 특수 IP 주소를 사용 하 여 매개 변수를 생성 해야 **INADDR_BROADCAST** (Windows 소켓 헤더에 정의 합니다. WINSOCK 파일입니다. H)와 함께 의도 한 포트 번호입니다. 또는 경우에는 `lpszHostAddress` 매개 변수는 **NULL**, 소켓 브로드캐스트에 구성 되어 있습니다. 일반적으로 조각화가 발생할 수 크기를 초과 하는 브로드캐스트 데이터 그램에 바람직하지 않습니다 데이터 그램 (머리글은 제외)의 데이터 부분 512 바이트를 넘지 않아야을 의미 합니다.  
   
-##  <a name="setsockopt"></a>CAsyncSocket::SetSockOpt  
+##  <a name="setsockopt"></a>  CAsyncSocket::SetSockOpt  
  이 소켓 옵션을 설정 하려면 함수를 호출 합니다.  
   
 ```  
@@ -1592,9 +1587,9 @@ BOOL SetSockOpt(
 - **WSAENOTSOCK** 설명자 소켓 아닙니다.  
   
 ### <a name="remarks"></a>설명  
- `SetSockOpt`모든 상태에서 모든 형식의 소켓와 연결 된 소켓 옵션에 대 한 현재 값을 설정 합니다. 여러 프로토콜 수준에서 옵션 수 있어도이 사양은 맨 위 "소켓" 수준에 존재 하는 옵션을 정의 합니다. 옵션 여부 브로드캐스트 메시지는 소켓에 보낼 수 있습니다 및 등 일반 데이터 스트림의 발송 된 데이터가 수신 되는 여부와 같은 소켓 작업을 영향을 줍니다.  
+ `SetSockOpt` 모든 상태에서 모든 형식의 소켓와 연결 된 소켓 옵션에 대 한 현재 값을 설정 합니다. 여러 프로토콜 수준에서 옵션 수 있어도이 사양은 맨 위 "소켓" 수준에 존재 하는 옵션을 정의 합니다. 옵션 여부 브로드캐스트 메시지는 소켓에 보낼 수 있습니다 및 등 일반 데이터 스트림의 발송 된 데이터가 수신 되는 여부와 같은 소켓 작업을 영향을 줍니다.  
   
- 소켓 옵션에 두 가지: 기능 또는 동작을 활성화 또는 비활성화 하는 부울 옵션 및 옵션은 정수 값 또는 구조를 요구 합니다. 부울 옵션을 사용 하도록 설정 하려면 `lpOptionValue` 0이 아닌 정수를 가리킵니다. 옵션을 사용 하지 않도록 설정 하려면 `lpOptionValue` 0과 같은 정수를 가리킵니다. `nOptionLen`같아야 하 **sizeof(BOOL)** 부울 옵션에 대 한 합니다. 다른 옵션에 대 한 `lpOptionValue` 클래스 또는 구조체에 대 한 옵션을 원하는 값을 포함 하는 정수를 가리키는 및 `nOptionLen` 시간은 클래스 또는 구조체는 정수입니다.  
+ 소켓 옵션에 두 가지: 기능 또는 동작을 활성화 또는 비활성화 하는 부울 옵션 및 옵션은 정수 값 또는 구조를 요구 합니다. 부울 옵션을 사용 하도록 설정 하려면 `lpOptionValue` 0이 아닌 정수를 가리킵니다. 옵션을 사용 하지 않도록 설정 하려면 `lpOptionValue` 0과 같은 정수를 가리킵니다. `nOptionLen` 같아야 하 **sizeof(BOOL)** 부울 옵션에 대 한 합니다. 다른 옵션에 대 한 `lpOptionValue` 클래스 또는 구조체에 대 한 옵션을 원하는 값을 포함 하는 정수를 가리키는 및 `nOptionLen` 시간은 클래스 또는 구조체는 정수입니다.  
   
  **SO_LINGER** 때 수행 되는 작업 보내지 데이터는 큐에 대기 소켓에서 컨트롤 및 **닫습니다** 소켓을 닫을 수 함수를 호출 합니다.  
   
@@ -1637,7 +1632,7 @@ BOOL SetSockOpt(
 |**SO_TYPE**|`int`|소켓의 형식입니다.|  
 |**IP_OPTIONS**||IP 헤더에 옵션 필드를 설정 합니다.|  
   
-##  <a name="shutdown"></a>CAsyncSocket::ShutDown  
+##  <a name="shutdown"></a>  CAsyncSocket::ShutDown  
  사용 하지 않도록 설정 하려면이 멤버 함수를 통해로 호출 받는 소켓에 또는 둘 다 합니다.  
   
 ```  
@@ -1670,16 +1665,16 @@ BOOL ShutDown(int nHow = sends);
 - **WSAENOTSOCK** 설명자 소켓 아닙니다.  
   
 ### <a name="remarks"></a>설명  
- `ShutDown`आ स ा, 전송, 또는 둘 다 사용 하지 않도록 설정 하는 소켓의 모든 형식에 사용 됩니다. 경우 `nHow` 0 일에서 받는 후속 소켓을 사용할 수 없습니다. 이 구문은 아무 효과가 하위 프로토콜 계층에 있습니다.  
+ `ShutDown` आ स ा, 전송, 또는 둘 다 사용 하지 않도록 설정 하는 소켓의 모든 형식에 사용 됩니다. 경우 `nHow` 0 일에서 받는 후속 소켓을 사용할 수 없습니다. 이 구문은 아무 효과가 하위 프로토콜 계층에 있습니다.  
   
  에 대 한 프로토콜 TCP (Transmission Control), TCP 창 변경 되지 않은 들어오는 유지 되며 데이터가 창이 가득 찰 때까지 하지 확인) (않음 허용 합니다. 에 대 한 프로토콜 UDP (User Datagram), 들어오는 데이터 그램은 허용 되 고 큐에 대기 합니다. 없는 경우 오류 ICMP 패킷을 생성 됩니다. 경우 `nHow` 는 1, 후속 보냅니다는 허용 되지 않습니다. TCP 소켓에 대 한 한 FIN 전송 됩니다. 설정 `nHow` 2를 모두 사용 하지 않도록 설정 하 고 위에서 설명한 대로 받습니다.  
   
  `ShutDown` 않습니다 하지 닫기 소켓과 소켓에 연결 된 리소스가 해제 되지 것입니다까지 **닫습니다** 호출 됩니다. 응용 프로그램을 종료 한 후에 소켓을 다시 사용 되지는지 않습니다. 사용을 지 원하는 Windows 소켓 구현이 필요 하지는 특히 **연결** 이러한 소켓에 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CAsyncSocket::OnReceive](#onreceive)합니다.  
   
-##  <a name="socket"></a>CASyncSocket::Socket  
+##  <a name="socket"></a>  CASyncSocket::Socket  
  소켓 핸들을 할당합니다.  
   
 ```  

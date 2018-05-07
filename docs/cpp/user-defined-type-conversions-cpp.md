@@ -1,12 +1,9 @@
 ---
-title: "사용자 정의 형식 변환 (c + +) | Microsoft Docs"
-ms.custom: 
+title: 사용자 정의 형식 변환 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - explicit_cpp
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - conversions [C++], by constructors
 - data type conversion [C++], explicit
 ms.assetid: d40e4310-a190-4e95-a34c-22c5c20aa0b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 561730527a215d5314f7239affc764d9f5925f67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dfe76a74a46a6da48e22cc07232457f8c0957fbc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-defined-type-conversions-c"></a>사용자 정의 형식 변환(C++)
 A *변환* 다른 형식의 값에서 일부 형식의 새 값을 생성 합니다. *표준 변환* 없으며 해당 기본 제공 형식, 만들 c + + 언어 및 지원에는 기본 제공 *사용자 정의 변환* , 또는 사용자 정의 형식 간의 변환을 수행 하기 위해 합니다.  
@@ -83,7 +78,7 @@ A *변환* 다른 형식의 값에서 일부 형식의 새 값을 생성 합니�
   
  `explicit` 키워드는 C++98부터는 변환 생성자에, C++11부터는 변환 함수에 적용할 수 있습니다. 다음 섹션에서는 `explicit` 키워드를 사용하는 방법을 자세히 보여줍니다.  
   
-##  <a name="ConvCTOR"></a>변환 생성자  
+##  <a name="ConvCTOR"></a> 변환 생성자  
  변환 생성자는 사용자 정의 또는 기본 제공 형식에서 사용자 정의 형식으로의 변환을 정의합니다. 다음 예제에서는 기본 제공 형식인 `double`을 사용자 정의 형식인 `Money`로 변환하는 변환 생성자를 보여줍니다.  
   
 ```  
@@ -164,7 +159,7 @@ int main(int argc, char* argv[])
   
  암시적 변환을 유도할 수 있다는 편리함이 있긴 하지만 찾기 어려운 버그가 발생할 수도 있습니다. 경험에 따르면, 암시적으로 발생될 특정 변환을 원하는 것이 확실한 경우 이외에는 모든 변환 생성자를 명시적으로 사용하는 것이 좋습니다.  
   
-##  <a name="ConvFunc"></a>변환 함수  
+##  <a name="ConvFunc"></a> 변환 함수  
  변환 함수는 사용자 정의 형식에서 다른 형식으로의 변환을 정의합니다. 변환 생성자와 함께 이러한 함수는 값이 다른 형식으로 캐스트될 때 호출되기 때문에 종종 "캐스트 연산자"라고 합니다. 다음 예제에서는 사용자 정의 형식인 `Money`를 기본 제공 형식인 `double`로 변환하는 변환 함수를 보여줍니다.  
   
 ```  

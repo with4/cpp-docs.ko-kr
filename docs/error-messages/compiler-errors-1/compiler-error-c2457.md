@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C2457 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C2457 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2457
@@ -15,25 +12,23 @@ dev_langs:
 helpviewer_keywords:
 - C2457
 ms.assetid: 347e169d-23ad-434f-8836-5b09b53980ff
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff89bb3635936ae0f797438d73f71adf1ef08de7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61cdb4f4b679bab858717a6fb96838f389822a6b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2457"></a>컴파일러 오류 C2457
 
 > '*매크로*': 미리 정의 된 매크로 함수 본문 외부에 사용할 수 없습니다
 
-와 같은 미리 정의 된 매크로 사용 하려고 했습니다. [&#95; &#95; 함수 &#95; #95 ](../../preprocessor/predefined-macros.md), 전역 공간에서 합니다.
+와 같은 미리 정의 된 매크로 사용 하려고 했습니다. [ &#95; &#95;함수&#95;&#95;](../../preprocessor/predefined-macros.md), 전역 공간에서 합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 샘플에서는 C2457 오류가 발생 하 고 올바른 사용법을 보여 줍니다.
 

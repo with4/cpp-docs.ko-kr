@@ -1,12 +1,9 @@
 ---
-title: "CAnimateCtrl 클래스 | Microsoft Docs"
-ms.custom: 
+title: CAnimateCtrl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimateCtrl
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58918a45daa1a6f64c160d79f52503e3a3c61cff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c1032ffac46af6370c45f4bcb2c251ddae73ce69
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl 클래스
 Windows 공용 애니메이션 컨트롤의 기능을 제공합니다.  
@@ -112,7 +107,7 @@ class CAnimateCtrl : public CWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcmn.h  
   
-##  <a name="canimatectrl"></a>CAnimateCtrl::CAnimateCtrl  
+##  <a name="canimatectrl"></a>  CAnimateCtrl::CAnimateCtrl  
  `CAnimateCtrl` 개체를 생성합니다.  
   
 ```  
@@ -122,10 +117,10 @@ CAnimateCtrl();
 ### <a name="remarks"></a>설명  
  호출 해야 합니다는 [만들기](#create) 만들면 개체에 다른 작업을 수행 하기 전에 멤버 함수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCControlLadenDialog#56](../../mfc/codesnippet/cpp/canimatectrl-class_1.cpp)]  
   
-##  <a name="close"></a>CAnimateCtrl::Close  
+##  <a name="close"></a>  CAnimateCtrl::Close  
  애니메이션 컨트롤 (있는 경우)에서 이전에 연 AVI 클립 닫고 메모리에서 제거 합니다.  
   
 ```  
@@ -135,10 +130,10 @@ BOOL Close();
 ### <a name="return-value"></a>반환 값  
  성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CAnimateCtrl::CAnimateCtrl](#canimatectrl)합니다.  
   
-##  <a name="create"></a>CAnimateCtrl::Create  
+##  <a name="create"></a>  CAnimateCtrl::Create  
  애니메이션 컨트롤을 만들고에 연결 된 `CAnimateCtrl` 개체입니다.  
   
 ```  
@@ -172,7 +167,7 @@ virtual BOOL Create(
   
 - **WS_CHILD** 항상  
   
-- **WS_VISIBLE** 일반적으로  
+- **WS_VISIBLE** Usually  
   
 - **WS_DISABLED** 거의  
   
@@ -180,10 +175,10 @@ virtual BOOL Create(
   
  위에 나열 된 창 스타일, 외에도 애니메이션 컨트롤 스타일 중 하나 이상을 애니메이션 컨트롤에 적용 하는 것이 좋습니다. 자세한 내용은 Windows SDK에서 참조 [애니메이션 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb761886)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CAnimateCtrl::CAnimateCtrl](#canimatectrl)합니다.  
   
-##  <a name="createex"></a>CAnimateCtrl::CreateEx  
+##  <a name="createex"></a>  CAnimateCtrl::CreateEx  
  에 연결 하 고 컨트롤 (자식 창)을 만듭니다.는 `CAnimateCtrl` 개체입니다.  
   
 ```  
@@ -215,9 +210,9 @@ virtual BOOL CreateEx(
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 사용 하 여 `CreateEx` 대신 [만들기](#create) Windows 확장된 스타일 접두사에 의해 지정 된 확장된 창 스타일을 적용할 **WS_EX_**합니다.  
+ 사용 하 여 `CreateEx` 대신 [만들기](#create) Windows 확장된 스타일 접두사에 의해 지정 된 확장된 창 스타일을 적용할 **WS_EX_** 합니다.  
   
-##  <a name="isplaying"></a>CAnimateCtrl::IsPlaying  
+##  <a name="isplaying"></a>  CAnimateCtrl::IsPlaying  
  Audio-video 인터리빙 된 (AVI) 클립 재생 되 고 있는지 여부를 나타냅니다.  
   
 ```  
@@ -225,12 +220,12 @@ BOOL IsPlaying() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `true`AVI 클립; 재생 하는 경우 그렇지 않으면 `false`합니다.  
+ `true` AVI 클립; 재생 하는 경우 그렇지 않으면 `false`합니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드는 전송 된 [ACM_ISPLAYING](http://msdn.microsoft.com/library/windows/desktop/bb761895) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
-##  <a name="open"></a>CAnimateCtrl::Open  
+##  <a name="open"></a>  CAnimateCtrl::Open  
  AVI 클립을 열고 해당 첫 번째 프레임을 표시 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -259,10 +254,10 @@ BOOL Open(UINT nID);
   
  애니메이션 컨트롤에 있는 경우는 `ACS_TRANSPARENT` 스타일을 첫 번째 프레임에 투명 한 배경을 사용 하 여 그려집니다에 지정 된 배경색 보다는 애니메이션 클립 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CAnimateCtrl::CAnimateCtrl](#canimatectrl)합니다.  
   
-##  <a name="play"></a>CAnimateCtrl::Play  
+##  <a name="play"></a>  CAnimateCtrl::Play  
  애니메이션 컨트롤 AVI 클립을 재생 하는 데이 함수를 호출 합니다.  
   
 ```  
@@ -288,10 +283,10 @@ BOOL Play(
 ### <a name="remarks"></a>설명  
  애니메이션 컨트롤 스레드가 계속 실행 하는 동안 백그라운드에서 클립을 재생 됩니다. 애니메이션 컨트롤에 있는 경우 `ACS_TRANSPARENT` 스타일 AVI 클립 재생 될 애니메이션 클립에 지정 된 배경색 보다는 투명 한 배경을 사용 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CAnimateCtrl::CAnimateCtrl](#canimatectrl)합니다.  
   
-##  <a name="seek"></a>CAnimateCtrl::Seek  
+##  <a name="seek"></a>  CAnimateCtrl::Seek  
  정적으로 AVI 클립의 단일 프레임을 표시 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -308,10 +303,10 @@ BOOL Seek(UINT nTo);
 ### <a name="remarks"></a>설명  
  애니메이션 컨트롤에 있는 경우 `ACS_TRANSPARENT` 스타일, 투명 한 배경을 사용 하 여 AVI 클립을 그려집니다에 지정 된 배경색 보다는 애니메이션 클립 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CAnimateCtrl::CAnimateCtrl](#canimatectrl)합니다.  
   
-##  <a name="stop"></a>CAnimateCtrl::Stop  
+##  <a name="stop"></a>  CAnimateCtrl::Stop  
  AVI 클립 애니메이션 컨트롤에서 재생을 중지 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -321,7 +316,7 @@ BOOL Stop();
 ### <a name="return-value"></a>반환 값  
  성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CAnimateCtrl::CAnimateCtrl](#canimatectrl)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

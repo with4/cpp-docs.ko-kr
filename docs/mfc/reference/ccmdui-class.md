@@ -1,12 +1,9 @@
 ---
-title: "CCmdUI 클래스 | Microsoft Docs"
-ms.custom: 
+title: CCmdUI 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCmdUI
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pOther
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32413fe7939b5e5d5d3d41bf32a923dd308f0395
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cf80f2ebea8fe27596ce1b240cc414cc0db7a8db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccmdui-class"></a>CCmdUI 클래스
 내 에서만 사용 되는 `ON_UPDATE_COMMAND_UI` 의 처리기는 `CCmdTarget`-클래스를 파생 합니다.  
@@ -79,7 +74,7 @@ class CCmdUI
 |[CCmdUI::m_pSubMenu](#m_psubmenu)|가 나타내는 포함 된 하위 메뉴를 가리키는 `CCmdUI` 개체입니다.|  
   
 ## <a name="remarks"></a>설명  
- `CCmdUI`기본 클래스는 없습니다.  
+ `CCmdUI` 기본 클래스는 없습니다.  
   
  때 응용 프로그램의 사용자 메뉴, 각 메뉴 항목 알아야 것을 표시 해야 하는지를 사용 또는 사용 안 함 아래로 끌어옵니다. 구현 하 여이 정보를 제공 하는 메뉴 명령 대상일은 `ON_UPDATE_COMMAND_UI` 처리기입니다. 각 응용 프로그램의 명령 사용자 인터페이스 개체에 대 한 각 처리기에 대 한 메시지 맵 항목 및 함수 프로토타입을 만드는 속성 창을 사용 합니다.  
   
@@ -94,8 +89,8 @@ class CCmdUI
 |Menu item|사용 가능 / 불가능|선택 하거나 선택 취소|점을 사용 하 여 검사|집합 텍스트 항목|  
 |도구 모음 단추|사용 가능 / 불가능|선택 하는,을 선택 취소 또는 결정 되지 않은|`SetCheck`과 같음|(해당 없음)|  
 |상태 표시줄 창|텍스트를 표시 하거나 숨길 만듭니다.|집합 팝아웃 또는 일반 테두리|`SetCheck`과 같음|창 텍스트를 설정합니다.|  
-|일반 단추`CDialogBar`|사용 가능 / 불가능|확인란을 선택 하거나 선택 취소|`SetCheck`과 같음|단추 텍스트 설정|  
-|일반적인 제어`CDialogBar`|사용 가능 / 불가능|(해당 없음)|(해당 없음)|창 텍스트를 설정합니다.|  
+|일반 단추 `CDialogBar`|사용 가능 / 불가능|확인란을 선택 하거나 선택 취소|`SetCheck`과 같음|단추 텍스트 설정|  
+|일반적인 제어 `CDialogBar`|사용 가능 / 불가능|(해당 없음)|(해당 없음)|창 텍스트를 설정합니다.|  
   
  이 클래스의 사용에 관한 자세한 내용은 [사용자 인터페이스 개체 업데이트 하는 방법을](../../mfc/how-to-update-user-interface-objects.md)합니다.  
   
@@ -105,7 +100,7 @@ class CCmdUI
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="continuerouting"></a>CCmdUI::ContinueRouting  
+##  <a name="continuerouting"></a>  CCmdUI::ContinueRouting  
  명령 라우팅 메커니즘의 처리기 체인에서 현재 메시지를 라우팅하기 계속 하 게이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -115,7 +110,7 @@ void ContinueRouting();
 ### <a name="remarks"></a>설명  
  와 함께에서 사용 해야 하는 고급 멤버 함수는 `ON_COMMAND_EX` 반환 하는 처리기 **FALSE**합니다. 자세한 내용은 참조 [기술 참고 6](../../mfc/tn006-message-maps.md)합니다.  
   
-##  <a name="enable"></a>CCmdUI::Enable  
+##  <a name="enable"></a>  CCmdUI::Enable  
  이 명령에 대 한 사용자 인터페이스 항목을 사용 하지 않도록 설정 하거나 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -126,26 +121,26 @@ virtual void Enable(BOOL bOn = TRUE);
  `bOn`  
  **True 이면** 해당 항목을 사용할 수 있도록 **FALSE** 사용 하지 않도록 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#46](../../mfc/codesnippet/cpp/ccmdui-class_1.cpp)]  
   
  [!code-cpp[NVC_MFCDocView#47](../../mfc/codesnippet/cpp/ccmdui-class_2.cpp)]  
   
-##  <a name="m_nid"></a>CCmdUI::m_nID  
+##  <a name="m_nid"></a>  CCmdUI::m_nID  
  메뉴 항목, 도구 모음 단추 또는가 나타내는 다른 사용자 인터페이스 개체의 ID는 `CCmdUI` 개체입니다.  
   
 ```  
 UINT m_nID;  
 ```  
   
-##  <a name="m_nindex"></a>CCmdUI::m_nIndex  
+##  <a name="m_nindex"></a>  CCmdUI::m_nIndex  
  메뉴 항목, 도구 모음 단추 또는가 나타내는 다른 사용자 인터페이스 개체의 인덱스는 `CCmdUI` 개체입니다.  
   
 ```  
 UINT m_nIndex;  
 ```  
   
-##  <a name="m_pmenu"></a>CCmdUI::m_pMenu  
+##  <a name="m_pmenu"></a>  CCmdUI::m_pMenu  
  포인터 (의 `CMenu` 형식)으로 표시 되는 메뉴에는 `CCmdUI` 개체입니다.  
   
 ```  
@@ -155,7 +150,7 @@ CMenu* m_pMenu;
 ### <a name="remarks"></a>설명  
  **NULL** 경우 메뉴 항목이 아닙니다.  
   
-##  <a name="m_psubmenu"></a>CCmdUI::m_pSubMenu  
+##  <a name="m_psubmenu"></a>  CCmdUI::m_pSubMenu  
  포인터 (의 `CMenu` 형식)으로 표시 되는 포함 된 하위 메뉴에는 `CCmdUI` 개체입니다.  
   
 ```  
@@ -165,7 +160,7 @@ CMenu* m_pSubMenu;
 ### <a name="remarks"></a>설명  
  **NULL** 경우 메뉴 항목이 아닙니다. 하위 메뉴 팝업 경우 `m_nID` 팝업 메뉴의 첫 번째 항목의 ID를 포함 합니다. 자세한 내용은 참조 [기술 참고 21](../../mfc/tn021-command-and-message-routing.md)합니다.  
   
-##  <a name="m_pother"></a>CCmdUI::m_pOther  
+##  <a name="m_pother"></a>  CCmdUI::m_pOther  
  포인터 (형식의 `CWnd`) 알림을 전송 하는 도구 또는 상태 표시줄 등의 창 개체입니다.  
   
 ```  
@@ -175,7 +170,7 @@ CWnd* m_pOther;
 ### <a name="remarks"></a>설명  
  **NULL** 항목이 메뉴 또는 비-인지 `CWnd` 개체입니다.  
   
-##  <a name="setcheck"></a>CCmdUI::SetCheck  
+##  <a name="setcheck"></a>  CCmdUI::SetCheck  
  이 명령에 대 한 사용자 인터페이스 항목 적절 한 선택 상태를 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -189,7 +184,7 @@ virtual void SetCheck(int nCheck = 1);
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 메뉴 항목 및 도구 모음 단추에 대 한 작동합니다. 비활성화 상태 도구 모음 단추에만 적용 됩니다.  
   
-##  <a name="setradio"></a>CCmdUI::SetRadio  
+##  <a name="setradio"></a>  CCmdUI::SetRadio  
  이 명령에 대 한 사용자 인터페이스 항목 적절 한 선택 상태를 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -203,7 +198,7 @@ virtual void SetRadio(BOOL bOn = TRUE);
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 같은 있는데 `SetCheck`라디오 그룹의 일부로 작동 하는 사용자 인터페이스 항목에 작동 한다는 점을 제외 하면, 합니다. 그룹에 다른 항목을 선택 취소 하면 자체 라디오 그룹 동작을 유지 하지 않는 한 자동 되지 않습니다.  
   
-##  <a name="settext"></a>CCmdUI::SetText  
+##  <a name="settext"></a>  CCmdUI::SetText  
  이 명령에 대 한 사용자 인터페이스 항목의 텍스트를 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -214,7 +209,7 @@ virtual void SetText(LPCTSTR lpszText);
  `lpszText`  
  텍스트 문자열에 대 한 포인터입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#48](../../mfc/codesnippet/cpp/ccmdui-class_3.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

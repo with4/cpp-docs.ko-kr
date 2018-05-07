@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C3400 c 3499 통해 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C3400 c 3499 통해 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3401
@@ -107,17 +104,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: a5651dfb-c402-4e01-b3ae-28f371e51d6a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3842530bdec6a1247e8a6f5a4fc1f99d13a537ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bcc3a06a5c39aff2fea0850879a8d95f757e1b66
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3400-through-c3499"></a>컴파일러 오류 C3400 c 3499 통해
 
@@ -173,8 +168,8 @@ ms.lasthandoff: 12/21/2017
 |컴파일러 오류 C3441|'*선언*': '*키워드*' 클래스를 정의한 후에 적용할 수 없습니다|
 |컴파일러 오류 C3442|공용 구조체의 여러 멤버를 초기화 하는 중: '*member1*'및'*member2*'|
 |컴파일러 오류 C3443|에 대 한 기본 멤버 이니셜라이저 '*클래스*' 재귀적입니다.|
-|컴파일러 오류 C3444|집계 클래스의 빈*클래스*' '{}'를 사용 하 여 초기화 해야 합니다|
-|컴파일러 오류 C3445|초기화-복사-목록 '*형식*' 명시적 생성자를 사용할 수 없습니다|
+|컴파일러 오류 C3444|집계 클래스의 빈*클래스*'로 초기화 해야'{}'|
+|[컴파일러 오류 C3445](compiler-error-c3445.md)|초기화-복사-목록 '*형식*' 명시적 생성자를 사용할 수 없습니다|
 |[컴파일러 오류 C3446](compiler-error-c3446.md)|'*클래스*': 값 클래스의 멤버는 기본 멤버 이니셜라이저 허용 되지 않습니다.|
 |컴파일러 오류 C3447|사용되지 않습니다.|
 |컴파일러 오류 C3448|사용되지 않습니다.|

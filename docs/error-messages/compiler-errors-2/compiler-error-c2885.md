@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C2885 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C2885 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2885
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98f3501cc029094d7f00e941026c0f7d1ed7d80b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f37ea0f9fadb74b44eea5ad110f7f12b884f0e41
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2885"></a>컴파일러 오류 C2885
 'class::identifier': 하지 유효한 using 선언에서 비 클래스 범위로  
   
  사용한는 [를 사용 하 여](../../cpp/using-declaration.md) 선언 잘못 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 오류는 Visual c + + 2005에 대해 수행한 컴파일러 규칙 작업의 결과로 생성 될 수 없습니다: 다은 더 이상는 `using` 중첩된 형식이 선언을 이름을에 형식을 배치 하는 중첩 형식 선언을 명시적으로 정규화 해야 공간, 또는 typedef를 만들어야 합니다.  
   
  다음 샘플에서는 C2885 오류가 발생 합니다.  
@@ -64,7 +59,7 @@ int main () {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  사용 하는 경우는 `using` 키워드와 c + + 클래스 멤버 (파생된 클래스)의 다른 클래스 안에 해당 멤버를 정의 해야 합니다.  
   
  다음 샘플에서는 C2885 오류가 발생 합니다.  

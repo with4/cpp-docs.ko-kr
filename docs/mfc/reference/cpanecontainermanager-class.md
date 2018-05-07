@@ -1,12 +1,9 @@
 ---
-title: "CPaneContainerManager 클래스 | Microsoft Docs"
-ms.custom: 
+title: CPaneContainerManager 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPaneContainerManager
@@ -115,17 +112,15 @@ helpviewer_keywords:
 - CPaneContainerManager [MFC], SetResizeMode
 - CPaneContainerManager [MFC], StoreRecentDockSiteInfo
 ms.assetid: 3d974c15-a62f-4648-bb5b-cc31ab7950af
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9185aee3b8a6750260549d5d180fa7e30e1fc321
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 77bdbaf70cd0290376132a7558293ec587fbebaa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpanecontainermanager-class"></a>CPaneContainerManager 클래스
 `CPaneContainerManager` 저장 및 표시 현재 도킹 레이아웃의 클래스를 관리 합니다.  
@@ -199,7 +194,7 @@ class CPaneContainerManager : public CObject
   
  `CPaneContainerManager` 에서 빌드한 이진 트리의 루트에 대 한 포인터를 저장 하는 클래스 [CPaneContainer](../../mfc/reference/cpanecontainer-class.md) 개체입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에 대 한 참조를 가져오는 방법을 `CPaneContainerManager` 개체입니다. 이 코드 조각은의 일부인는 [창 크기 설정 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_SetPaneSize#5](../../mfc/reference/codesnippet/cpp/cpanecontainermanager-class_1.cpp)]  
@@ -212,7 +207,7 @@ class CPaneContainerManager : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxpanecontainermanager.h  
   
-##  <a name="addpane"></a>CPaneContainerManager::AddPane  
+##  <a name="addpane"></a>  CPaneContainerManager::AddPane  
 
   
 ```  
@@ -224,7 +219,7 @@ virtual void AddPane(CDockablePane* pControlBarToAdd);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="addpanecontainermanager"></a>CPaneContainerManager::AddPaneContainerManager  
+##  <a name="addpanecontainermanager"></a>  CPaneContainerManager::AddPaneContainerManager  
 
   
 ```  
@@ -251,7 +246,7 @@ virtual BOOL AddPaneContainerManager(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="addpanecontainermanagertodockablepane"></a>CPaneContainerManager::AddPaneContainerManagerToDockablePane  
+##  <a name="addpanecontainermanagertodockablepane"></a>  CPaneContainerManager::AddPaneContainerManagerToDockablePane  
 
   
 ```  
@@ -268,7 +263,7 @@ virtual BOOL AddPaneContainerManagerToDockablePane(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="addpanestolist"></a>CPaneContainerManager::AddPanesToList  
+##  <a name="addpanestolist"></a>  CPaneContainerManager::AddPanesToList  
 
   
 ```  
@@ -283,7 +278,7 @@ void AddPanesToList(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="addpanetolist"></a>CPaneContainerManager::AddPaneToList  
+##  <a name="addpanetolist"></a>  CPaneContainerManager::AddPaneToList  
 
   
 ```  
@@ -295,7 +290,7 @@ void AddPaneToList(CDockablePane* pControlBarToAdd);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="addpanetorecentpanecontainer"></a>CPaneContainerManager::AddPaneToRecentPaneContainer  
+##  <a name="addpanetorecentpanecontainer"></a>  CPaneContainerManager::AddPaneToRecentPaneContainer  
 
   
 ```  
@@ -312,7 +307,7 @@ virtual CDockablePane* AddPaneToRecentPaneContainer(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="calcrects"></a>CPaneContainerManager::CalcRects  
+##  <a name="calcrects"></a>  CPaneContainerManager::CalcRects  
 
   
 ```  
@@ -337,7 +332,7 @@ void CalcRects(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="canbeattached"></a>CPaneContainerManager::CanBeAttached  
+##  <a name="canbeattached"></a>  CPaneContainerManager::CanBeAttached  
 
   
 ```  
@@ -348,7 +343,7 @@ virtual BOOL CanBeAttached() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="checkandremovenonvalidpane"></a>CPaneContainerManager::CheckAndRemoveNonValidPane  
+##  <a name="checkandremovenonvalidpane"></a>  CPaneContainerManager::CheckAndRemoveNonValidPane  
 
   
 ```  
@@ -362,7 +357,7 @@ BOOL CheckAndRemoveNonValidPane(CWnd* pWnd);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="checkforminiframeandcaption"></a>CPaneContainerManager::CheckForMiniFrameAndCaption  
+##  <a name="checkforminiframeandcaption"></a>  CPaneContainerManager::CheckForMiniFrameAndCaption  
 
   
 ```  
@@ -379,7 +374,7 @@ virtual BOOL CheckForMiniFrameAndCaption(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="create"></a>CPaneContainerManager::Create  
+##  <a name="create"></a>  CPaneContainerManager::Create  
 
   
 ```  
@@ -398,7 +393,7 @@ virtual BOOL Create(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="doesallowdyninsertbefore"></a>CPaneContainerManager::DoesAllowDynInsertBefore  
+##  <a name="doesallowdyninsertbefore"></a>  CPaneContainerManager::DoesAllowDynInsertBefore  
 
   
 ```  
@@ -409,7 +404,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="doescontainfloatingpane"></a>CPaneContainerManager::DoesContainFloatingPane  
+##  <a name="doescontainfloatingpane"></a>  CPaneContainerManager::DoesContainFloatingPane  
 
   
 ```  
@@ -420,7 +415,7 @@ virtual BOOL DoesContainFloatingPane();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="enablegrippers"></a>CPaneContainerManager::EnableGrippers  
+##  <a name="enablegrippers"></a>  CPaneContainerManager::EnableGrippers  
 
   
 ```  
@@ -432,7 +427,7 @@ virtual void EnableGrippers(BOOL bEnable);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="findpanecontainer"></a>CPaneContainerManager::FindPaneContainer  
+##  <a name="findpanecontainer"></a>  CPaneContainerManager::FindPaneContainer  
 
   
 ```  
@@ -449,7 +444,7 @@ virtual CPaneContainer* FindPaneContainer(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="findtabbedpane"></a>CPaneContainerManager::FindTabbedPane  
+##  <a name="findtabbedpane"></a>  CPaneContainerManager::FindTabbedPane  
 
   
 ```  
@@ -463,7 +458,7 @@ CDockablePane* FindTabbedPane(UINT nID);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getavailablespace"></a>CPaneContainerManager::GetAvailableSpace  
+##  <a name="getavailablespace"></a>  CPaneContainerManager::GetAvailableSpace  
 
   
 ```  
@@ -475,7 +470,7 @@ virtual void GetAvailableSpace(CRect& rect) const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getdefaultpanedivider"></a>CPaneContainerManager::GetDefaultPaneDivider  
+##  <a name="getdefaultpanedivider"></a>  CPaneContainerManager::GetDefaultPaneDivider  
 
   
 ```  
@@ -486,7 +481,7 @@ CPaneDivider* GetDefaultPaneDivider() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getdocksiteframewnd"></a>CPaneContainerManager::GetDockSiteFrameWnd  
+##  <a name="getdocksiteframewnd"></a>  CPaneContainerManager::GetDockSiteFrameWnd  
 
   
 ```  
@@ -497,7 +492,7 @@ virtual CWnd* GetDockSiteFrameWnd();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getfirstpane"></a>CPaneContainerManager::GetFirstPane  
+##  <a name="getfirstpane"></a>  CPaneContainerManager::GetFirstPane  
 
   
 ```  
@@ -508,7 +503,7 @@ virtual CBasePane* GetFirstPane() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getfirstvisiblepane"></a>CPaneContainerManager::GetFirstVisiblePane  
+##  <a name="getfirstvisiblepane"></a>  CPaneContainerManager::GetFirstVisiblePane  
 
   
 ```  
@@ -519,7 +514,7 @@ virtual CWnd* GetFirstVisiblePane() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getminmaxoffset"></a>CPaneContainerManager::GetMinMaxOffset  
+##  <a name="getminmaxoffset"></a>  CPaneContainerManager::GetMinMaxOffset  
 
   
 ```  
@@ -538,7 +533,7 @@ virtual void GetMinMaxOffset(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getminsize"></a>CPaneContainerManager::GetMinSize  
+##  <a name="getminsize"></a>  CPaneContainerManager::GetMinSize  
 
   
 ```  
@@ -550,7 +545,7 @@ virtual void GetMinSize(CSize& size);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getnodecount"></a>CPaneContainerManager::GetNodeCount  
+##  <a name="getnodecount"></a>  CPaneContainerManager::GetNodeCount  
 
   
 ```  
@@ -561,7 +556,7 @@ int GetNodeCount() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getpanecontainerrtc"></a>CPaneContainerManager::GetPaneContainerRTC  
+##  <a name="getpanecontainerrtc"></a>  CPaneContainerManager::GetPaneContainerRTC  
 
   
 ```  
@@ -572,7 +567,7 @@ CRuntimeClass* GetPaneContainerRTC() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getpanecount"></a>CPaneContainerManager::GetPaneCount  
+##  <a name="getpanecount"></a>  CPaneContainerManager::GetPaneCount  
 
   
 ```  
@@ -583,7 +578,7 @@ int GetPaneCount() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="gettotalrefcount"></a>CPaneContainerManager::GetTotalRefCount  
+##  <a name="gettotalrefcount"></a>  CPaneContainerManager::GetTotalRefCount  
 
   
 ```  
@@ -594,7 +589,7 @@ int GetTotalRefCount() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getvisiblepanecount"></a>CPaneContainerManager::GetVisiblePaneCount  
+##  <a name="getvisiblepanecount"></a>  CPaneContainerManager::GetVisiblePaneCount  
 
   
 ```  
@@ -605,7 +600,7 @@ virtual int GetVisiblePaneCount() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getwindowrect"></a>CPaneContainerManager::GetWindowRect  
+##  <a name="getwindowrect"></a>  CPaneContainerManager::GetWindowRect  
 
   
 ```  
@@ -617,7 +612,7 @@ virtual void GetWindowRect(CRect& rect) const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="hideall"></a>CPaneContainerManager::HideAll  
+##  <a name="hideall"></a>  CPaneContainerManager::HideAll  
 
   
 ```  
@@ -626,7 +621,7 @@ virtual void HideAll();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="insertpane"></a>CPaneContainerManager::InsertPane  
+##  <a name="insertpane"></a>  CPaneContainerManager::InsertPane  
 
   
 ```  
@@ -649,7 +644,7 @@ virtual BOOL InsertPane(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="isautohidemode"></a>CPaneContainerManager::IsAutoHideMode  
+##  <a name="isautohidemode"></a>  CPaneContainerManager::IsAutoHideMode  
 
   
 ```  
@@ -660,7 +655,7 @@ BOOL IsAutoHideMode() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="isempty"></a>CPaneContainerManager::IsEmpty  
+##  <a name="isempty"></a>  CPaneContainerManager::IsEmpty  
 
   
 ```  
@@ -671,7 +666,7 @@ BOOL IsEmpty() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="isrootpanecontainervisible"></a>CPaneContainerManager::IsRootPaneContainerVisible  
+##  <a name="isrootpanecontainervisible"></a>  CPaneContainerManager::IsRootPaneContainerVisible  
 
   
 ```  
@@ -682,7 +677,7 @@ virtual BOOL IsRootPaneContainerVisible() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="notifypanedivider"></a>CPaneContainerManager::NotifyPaneDivider  
+##  <a name="notifypanedivider"></a>  CPaneContainerManager::NotifyPaneDivider  
 
   
 ```  
@@ -691,7 +686,7 @@ void NotifyPaneDivider();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onpanedividermove"></a>CPaneContainerManager::OnPaneDividerMove  
+##  <a name="onpanedividermove"></a>  CPaneContainerManager::OnPaneDividerMove  
 
   
 ```  
@@ -712,7 +707,7 @@ virtual int OnPaneDividerMove(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onshowpane"></a>CPaneContainerManager::OnShowPane  
+##  <a name="onshowpane"></a>  CPaneContainerManager::OnShowPane  
 
   
 ```  
@@ -729,7 +724,7 @@ virtual BOOL OnShowPane(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="panefrompoint"></a>CPaneContainerManager::PaneFromPoint  
+##  <a name="panefrompoint"></a>  CPaneContainerManager::PaneFromPoint  
 
   
 ```  
@@ -752,7 +747,7 @@ virtual CDockablePane* PaneFromPoint(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="releaseemptypanecontainers"></a>CPaneContainerManager::ReleaseEmptyPaneContainers  
+##  <a name="releaseemptypanecontainers"></a>  CPaneContainerManager::ReleaseEmptyPaneContainers  
 
   
 ```  
@@ -761,7 +756,7 @@ void ReleaseEmptyPaneContainers();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="removeallpanesandpanedividers"></a>CPaneContainerManager::RemoveAllPanesAndPaneDividers  
+##  <a name="removeallpanesandpanedividers"></a>  CPaneContainerManager::RemoveAllPanesAndPaneDividers  
 
   
 ```  
@@ -770,7 +765,7 @@ void RemoveAllPanesAndPaneDividers();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="removenonvalidpanes"></a>CPaneContainerManager::RemoveNonValidPanes  
+##  <a name="removenonvalidpanes"></a>  CPaneContainerManager::RemoveNonValidPanes  
 
   
 ```  
@@ -779,7 +774,7 @@ void RemoveNonValidPanes();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="removepanedivider"></a>CPaneContainerManager::RemovePaneDivider  
+##  <a name="removepanedivider"></a>  CPaneContainerManager::RemovePaneDivider  
 
   
 ```  
@@ -791,7 +786,7 @@ virtual void RemovePaneDivider(CPaneDivider* pSlider);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="removepanefrompanecontainer"></a>CPaneContainerManager::RemovePaneFromPaneContainer  
+##  <a name="removepanefrompanecontainer"></a>  CPaneContainerManager::RemovePaneFromPaneContainer  
 
   
 ```  
@@ -805,7 +800,7 @@ virtual BOOL RemovePaneFromPaneContainer(CDockablePane* pControlBar);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="replacepane"></a>CPaneContainerManager::ReplacePane  
+##  <a name="replacepane"></a>  CPaneContainerManager::ReplacePane  
 
   
 ```  
@@ -822,7 +817,7 @@ virtual BOOL ReplacePane(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="resizepanecontainers"></a>CPaneContainerManager::ResizePaneContainers  
+##  <a name="resizepanecontainers"></a>  CPaneContainerManager::ResizePaneContainers  
 
   
 ```  
@@ -847,7 +842,7 @@ virtual void ResizePaneContainers(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="serialize"></a>CPaneContainerManager::Serialize  
+##  <a name="serialize"></a>  CPaneContainerManager::Serialize  
 
   
 ```  
@@ -859,7 +854,7 @@ void Serialize(CArchive& ar);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setdefaultpanedividerforpanes"></a>CPaneContainerManager::SetDefaultPaneDividerForPanes  
+##  <a name="setdefaultpanedividerforpanes"></a>  CPaneContainerManager::SetDefaultPaneDividerForPanes  
 
   
 ```  
@@ -871,7 +866,7 @@ void SetDefaultPaneDividerForPanes(CPaneDivider* pSlider);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setpanecontainerrtc"></a>CPaneContainerManager::SetPaneContainerRTC  
+##  <a name="setpanecontainerrtc"></a>  CPaneContainerManager::SetPaneContainerRTC  
 
   
 ```  
@@ -883,7 +878,7 @@ void SetPaneContainerRTC(CRuntimeClass* pContainerRTC);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setresizemode"></a>CPaneContainerManager::SetResizeMode  
+##  <a name="setresizemode"></a>  CPaneContainerManager::SetResizeMode  
 
   
 ```  
@@ -895,7 +890,7 @@ virtual void SetResizeMode(BOOL bResize);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="storerecentdocksiteinfo"></a>CPaneContainerManager::StoreRecentDockSiteInfo  
+##  <a name="storerecentdocksiteinfo"></a>  CPaneContainerManager::StoreRecentDockSiteInfo  
 
   
 ```  

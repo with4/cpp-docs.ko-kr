@@ -1,12 +1,9 @@
 ---
-title: "CPaneDialog 클래스 | Microsoft Docs"
-ms.custom: 
+title: CPaneDialog 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPaneDialog
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CPaneDialog [MFC], HandleInitDialog
 - CPaneDialog [MFC], SetOccDialogInfo
 ms.assetid: 48a6bb91-4b92-40f5-8907-b3270b146cf6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e247d1d824d710cfa9588a01d73e1ca611d77ed
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 36f620f0a29e7d1715e7cb5bfb83c0685f97f643
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog 클래스
 `CPaneDialog` 클래스는 도킹 가능한 모덜리스 대화 상자를 지원 합니다.  
@@ -63,7 +58,7 @@ class CPaneDialog : public CDockablePane
 |`CPaneDialog::OnLButtonDblClk`|처리는 [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) 메시지입니다. (재정의 [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
 |`CPaneDialog::OnLButtonDown`|처리는 [WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607) 메시지입니다. (재정의 [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
 |`CPaneDialog::OnUpdateCmdUI`|대화 상자 창을 업데이트 하기 위해 프레임 워크에서 호출 됩니다. (재정의 [cdockablepane:: Onupdatecmdui](http://msdn.microsoft.com/en-us/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
-|`CPaneDialog::OnWindowPosChanging`|처리는 [WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653) 메시지입니다. (Redefines [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
+|`CPaneDialog::OnWindowPosChanging`|처리는 [WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653) 메시지입니다. (재정의 [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|OLE 컨트롤 컨테이너의 대화 상자에 대 한 서식 파일을 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -158,7 +153,7 @@ BOOL Create(
   
 ### <a name="remarks"></a>설명  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 사용 하는 `Create` 에서 메서드는 `CPaneDialog` 클래스. 이 예제는의 일부는 [창 크기 설정 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanedialog-class_1.h)]  

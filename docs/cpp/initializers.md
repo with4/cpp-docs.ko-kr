@@ -1,12 +1,9 @@
 ---
-title: "이니셜라이저 | Microsoft Docs"
-ms.custom: 
+title: 이니셜라이저 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be05c53e6f41c4df4d62bd4ba1920fcf57c1f0cb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 072b6a62bde2ab58909fd0c8dd1954e7d330ced5
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="initializers"></a>이니셜라이저
 이니셜라이저는 변수의 초기 값을 지정합니다. 변수를 초기화할 수 있는 컨텍스트는 다음과 같습니다.  
@@ -128,7 +123,7 @@ int main() {
 }  
 ```  
   
-### <a name="default_initialization"></a>기본 초기화  
+### <a name="default_initialization"></a> 기본 초기화  
  기본 생성자를 사용하는 클래스, 구조체 및 공용 구조체에 대한 기본 초기화입니다. 기본 생성자는 초기화 식 없이 또는 `new` 키워드를 사용하여 호출할 수 있습니다.  
   
 ```cpp  
@@ -370,7 +365,7 @@ int main() {
 }  
 ```  
   
-### <a name="agginit"></a>집합체 초기화  
+### <a name="agginit"></a> 집합체 초기화  
  집합체 초기화는 다음과 같은 일종의 배열 또는 클래스 형식(대개 구조체 또는 공용 구조체) 목록 초기화입니다.  
   
 -   전용 또는 보호된 멤버 없음  
@@ -479,7 +474,7 @@ int main() {
 ```  
   
 ### <a name="reference-initialization"></a>참조 초기화  
- 참조 형식의 변수는 참조 형식이 파생된 형식의 개체 또는 참조 형식이 파생된 형식으로 변환될 수 있는 형식의 개체를 사용하여 초기화되어야 합니다. 예:  
+ 참조 형식의 변수는 참조 형식이 파생된 형식의 개체 또는 참조 형식이 파생된 형식으로 변환될 수 있는 형식의 개체를 사용하여 초기화되어야 합니다. 예를 들어:  
   
 ```  
 // initializing_references.cppint   
@@ -502,25 +497,25 @@ int main()
   
  참조 형식 변수는 다음에서만 이니셜라이저 없이 선언될 수 있습니다.  
   
--   함수 선언(프로토타입). 예:  
+-   함수 선언(프로토타입). 예를 들어:  
   
     ```  
     int func( int& );  
     ```  
   
--   함수 반환 형식 선언. 예:  
+-   함수 반환 형식 선언. 예를 들어:  
   
     ```  
     int& func( int& );  
     ```  
   
--   참조 형식 클래스 멤버의 선언. 예:  
+-   참조 형식 클래스 멤버의 선언. 예를 들어:  
   
     ```  
     class c {public:   int& i;};  
     ```  
   
--   `extern`으로 명시적으로 지정된 변수의 선언. 예:  
+-   `extern`으로 명시적으로 지정된 변수의 선언. 예를 들어:  
   
     ```  
     extern int& iVal;  
@@ -531,7 +526,7 @@ int main()
  ![의사 결정 그래프 초기화 참조 형식에 대 한](../cpp/media/vc38s71.gif "vc38S71")  
 참조 형식 초기화를 위한 결정 그래프  
   
- 에 대 한 참조 `volatile` 형식 (으로 선언 `volatile` *typename*  **&**  *식별자*)으로 초기화할 수 `volatile` 으로 선언 되지 않은 개체와 형식이 나 동일한 형식의 개체 `volatile`합니다. 그러나 사용 하 여 초기화, 수 없습니다, **const** 해당 형식의 개체입니다. 마찬가지로,에 대 한 참조 **const** 형식 (으로 선언 **const** *typename*  **&**  *식별자* )으로 초기화할 수 **const** 동일한 유형의 개체 (또는 변환으로 선언 되지 않은 개체 또는 해당 형식에 있는 모든 **const**). 그러나 해당 형식의 `volatile` 개체를 사용하여 초기화될 수는 없습니다.  
+ 에 대 한 참조 `volatile` 형식 (으로 선언 `volatile` *typename * * * &** *식별자*)으로 초기화할 수 `volatile` 또는 동일한 유형의 개체 으로 선언 되지 않은 개체 `volatile`합니다. 그러나 사용 하 여 초기화, 수 없습니다, **const** 해당 형식의 개체입니다. 마찬가지로,에 대 한 참조 **const** 형식 (으로 선언 **const** *typename * * * &** *식별자*) 수 사용 하 여 초기화 **const** 동일한 유형의 개체 (또는 변환으로 선언 되지 않은 개체 또는 해당 형식에 있는 모든 **const**). 그러나 해당 형식의 `volatile` 개체를 사용하여 초기화될 수는 없습니다.  
   
  사용 하 여 정규화 되지 않은 참조는 **const** 또는 `volatile` 키워드로 선언 하는 개체 에서만 초기화 될 수 있습니다 **const** 나 `volatile`합니다.  
   

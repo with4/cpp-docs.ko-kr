@@ -1,12 +1,9 @@
 ---
-title: "CStatusBar 클래스 | Microsoft Docs"
-ms.custom: 
+title: CStatusBar 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CStatusBar
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c373f21762c1bf7f21d2a775453bab74c735891d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 199aa7adc6cb96a4bc92e196ff94d57abdedfede
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cstatusbar-class"></a>CStatusBar 클래스
 텍스트 출력 창의 행 또는 "지표"가 있는 컨트롤 막대입니다.  
@@ -96,7 +91,7 @@ class CStatusBar : public CControlBar
 ## <a name="remarks"></a>설명  
  일반적으로 출력 창이 상태 표시기와 메시지 줄으로 사용 됩니다. 선택 된 메뉴 명령을 간략하게 설명 하는 메뉴 도움말 메시지 줄 및 SCROLL LOCK, NUM LOCK 및 다른 키의 상태를 나타내는 표시기를 예로 들 수 있습니다.  
   
- [CStatusBar::GetStatusBarCtrl](#getstatusbarctrl), 멤버 함수 새 MFC 4.0 허용 상태 표시줄 사용자 지정 및 추가 기능에 대 한 Windows 공용 컨트롤 지원 기능을 사용할 수 있습니다. `CStatusBar`멤버 함수는 대부분의 Windows 공용 컨트롤; 기능 제공. 그러나 호출 하는 경우 `GetStatusBarCtrl`, 상태 표시줄을 Windows 95/98 상태 표시줄의 특징 중 이상용으로 지정할 수 있습니다. 호출 하는 경우 `GetStatusBarCtrl`에 대 한 참조를 반환 합니다는 `CStatusBarCtrl` 개체입니다. 참조 [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) Windows 공용 컨트롤을 사용 하 여 도구 모음을 디자인 하는 방법에 대 한 자세한 내용은 합니다. 공용 컨트롤에 대 한 자세한 내용은 참조 하십시오. [공용 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb775493) Windows sdk에서입니다.  
+ [CStatusBar::GetStatusBarCtrl](#getstatusbarctrl), 멤버 함수 새 MFC 4.0 허용 상태 표시줄 사용자 지정 및 추가 기능에 대 한 Windows 공용 컨트롤 지원 기능을 사용할 수 있습니다. `CStatusBar` 멤버 함수는 대부분의 Windows 공용 컨트롤; 기능 제공. 그러나 호출 하는 경우 `GetStatusBarCtrl`, 상태 표시줄을 Windows 95/98 상태 표시줄의 특징 중 이상용으로 지정할 수 있습니다. 호출 하는 경우 `GetStatusBarCtrl`에 대 한 참조를 반환 합니다는 `CStatusBarCtrl` 개체입니다. 참조 [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) Windows 공용 컨트롤을 사용 하 여 도구 모음을 디자인 하는 방법에 대 한 자세한 내용은 합니다. 공용 컨트롤에 대 한 자세한 내용은 참조 하십시오. [공용 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb775493) Windows sdk에서입니다.  
   
  프레임 워크 위치 0에 가장 왼쪽에 있는 표시기 배열 표시기 정보를 저장합니다. 상태 표시줄을 만들 때 해당 표시기와 함께 프레임 워크를 연결 하는 Id 문자열의 배열을 사용 합니다. 다음 표시기를 액세스 하는 문자열 ID 또는 인덱스를 사용할 수 있습니다.  
   
@@ -136,7 +131,7 @@ class CStatusBar : public CControlBar
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxext.h  
   
-##  <a name="commandtoindex"></a>CStatusBar::CommandToIndex  
+##  <a name="commandtoindex"></a>  CStatusBar::CommandToIndex  
  Id가 지정 된 ID에 대 한 표시기 인덱스를 가져옵니다.  
   
 ```  
@@ -153,7 +148,7 @@ int CommandToIndex(UINT nIDFind) const;
 ### <a name="remarks"></a>설명  
  첫 번째 표시기의 인덱스는 0입니다.  
   
-##  <a name="create"></a>CStatusBar::Create  
+##  <a name="create"></a>  CStatusBar::Create  
  상태 표시줄 (자식 창)을 만들고 사용 하 여 연결 된 `CStatusBar` 개체입니다.  
   
 ```  
@@ -170,11 +165,11 @@ virtual BOOL Create(
  `dwStyle`  
  상태 표시줄 스타일입니다. 표준 Windows 뿐 아니라 [스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles), 이러한 스타일은 지원 됩니다.  
   
-- `CBRS_TOP`컨트롤 막대 프레임 창의 위쪽에입니다.  
+- `CBRS_TOP` 컨트롤 막대 프레임 창의 위쪽에입니다.  
   
-- `CBRS_BOTTOM`컨트롤 막대 프레임 창 맨 아래에입니다.  
+- `CBRS_BOTTOM` 컨트롤 막대 프레임 창 맨 아래에입니다.  
   
-- `CBRS_NOALIGN`부모 크기를 조정할 때 컨트롤 막대 위치가 변경 되지 않습니다.  
+- `CBRS_NOALIGN` 부모 크기를 조정할 때 컨트롤 막대 위치가 변경 되지 않습니다.  
   
  `nID`  
  도구 모음의 자식 창 id입니다.  
@@ -185,7 +180,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>설명  
  또한 초기 글꼴을 설정 하 고 설정 하는 상태 막대의 높이 기본값으로 합니다.  
   
-##  <a name="createex"></a>CStatusBar::CreateEx  
+##  <a name="createex"></a>  CStatusBar::CreateEx  
  상태 표시줄 (자식 창)을 만들어 사용 하 여 연결 하려면이 함수 호출의 `CStatusBar` 개체입니다.  
   
 ```  
@@ -223,14 +218,14 @@ virtual BOOL CreateEx(
   
  사용 하 여 `CreateEx`, 대신 [만들기](#create)포함 된 상태 표시줄 컨트롤을 만들 때 특정 스타일 있어야 하는 경우. 예를 들어 설정 `dwCtrlStyle` 를 **SBT_TOOLTIPS** 상태 표시줄 개체에서 도구 설명을 표시 하도록 합니다.  
   
-##  <a name="cstatusbar"></a>CStatusBar::CStatusBar  
+##  <a name="cstatusbar"></a>  CStatusBar::CStatusBar  
  생성 된 `CStatusBar` 개체, 필요한 경우 기본 상태 표시줄 글꼴 만들고 글꼴 특성을 기본값으로 설정 합니다.  
   
 ```  
 CStatusBar();
 ```  
   
-##  <a name="drawitem"></a>CStatusBar::DrawItem  
+##  <a name="drawitem"></a>  CStatusBar::DrawItem  
  이 멤버 함수는 소유자가 그린 상태 표시줄이 변경의 시각적 측면이 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -244,7 +239,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="remarks"></a>설명  
  **itemAction** 의 멤버는 `DRAWITEMSTRUCT` 구조 정의 그리기 작업을 수행 하는 것입니다. 소유자 그리기에 대 한 그리기를 구현 하려면이 멤버 함수 재정의 `CStatusBar` 개체입니다. 응용 프로그램에 제공 된 디스플레이 컨텍스트에 대해 선택한 모든 그래픽 장치 GDI (인터페이스) 개체를 복원 해야 `lpDrawItemStruct` 이 멤버 함수 종료 전에 합니다.  
   
-##  <a name="getitemid"></a>CStatusBar::GetItemID  
+##  <a name="getitemid"></a>  CStatusBar::GetItemID  
  로 지정 된 표시기의 ID를 반환 `nIndex`합니다.  
   
 ```  
@@ -258,7 +253,7 @@ UINT GetItemID(int nIndex) const;
 ### <a name="return-value"></a>반환 값  
  ID에서 지정한 표시기의 `nIndex`합니다.  
   
-##  <a name="getitemrect"></a>CStatusBar::GetItemRect  
+##  <a name="getitemrect"></a>  CStatusBar::GetItemRect  
  복사로 지정 된 표시기의 좌표 `nIndex` 에서 가리키는 구조에 `lpRect`합니다.  
   
 ```  
@@ -277,7 +272,7 @@ void GetItemRect(
 ### <a name="remarks"></a>설명  
  좌표는 픽셀 상태 표시줄의 왼쪽 위 모퉁이가 기준입니다.  
   
-##  <a name="getpaneinfo"></a>CStatusBar::GetPaneInfo  
+##  <a name="getpaneinfo"></a>  CStatusBar::GetPaneInfo  
  집합 `nID`, `nStyle`, 및 `cxWidth` ID, 스타일 및 지정 된 위치에서 표시기 창의 너비를 `nIndex`합니다.  
   
 ```  
@@ -301,7 +296,7 @@ void GetPaneInfo(
  `cxWidth`  
  창의 너비를 설정 하는 정수에 대 한 참조입니다.  
   
-##  <a name="getpanestyle"></a>CStatusBar::GetPaneStyle  
+##  <a name="getpanestyle"></a>  CStatusBar::GetPaneStyle  
  상태 표시줄의 창 스타일을 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -320,7 +315,7 @@ UINT GetPaneStyle(int nIndex) const;
   
  상태 표시줄에서 사용할 수 있는 스타일의 목록이 참조 [만들기](#create)합니다.  
   
-##  <a name="getpanetext"></a>CStatusBar::GetPaneText  
+##  <a name="getpanetext"></a>  CStatusBar::GetPaneText  
  상태 표시줄 창에 나타나는 텍스트를 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -340,7 +335,7 @@ CString GetPaneText(int nIndex) const;  void GetPaneText(int nIndex, CString& rS
 ### <a name="remarks"></a>설명  
  이 멤버에 두 번째 형태 채우기 함수는 `CString` 문자열 텍스트와 함께 개체입니다.  
   
-##  <a name="getstatusbarctrl"></a>CStatusBar::GetStatusBarCtrl  
+##  <a name="getstatusbarctrl"></a>  CStatusBar::GetStatusBarCtrl  
  이 멤버 함수에는 기본 공용 컨트롤에 직접 액세스할을 수 있습니다.  
   
 ```  
@@ -355,7 +350,7 @@ CStatusBarCtrl& GetStatusBarCtrl() const;
   
  공용 컨트롤에 대 한 자세한 내용은 참조 하십시오. [공용 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb775493) Windows sdk에서입니다.  
   
-##  <a name="setindicators"></a>CStatusBar::SetIndicators  
+##  <a name="setindicators"></a>  CStatusBar::SetIndicators  
  각 표시기의 ID를 배열의 해당 요소에 지정 된 값으로 설정 `lpIDArray`, 각 ID에 의해 지정 된 문자열 리소스를 로드 하 고 표시기의 텍스트를 문자열로 설정 합니다.  
   
 ```  
@@ -374,7 +369,7 @@ BOOL SetIndicators(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-##  <a name="setpaneinfo"></a>CStatusBar::SetPaneInfo  
+##  <a name="setpaneinfo"></a>  CStatusBar::SetPaneInfo  
  새 ID, 스타일 및 두께를 지정 된 표시기 창의 설정합니다.  
   
 ```  
@@ -411,7 +406,7 @@ void SetPaneInfo(
   
 - **SBPS_NORMAL** 없거나 스트레치, 테두리, 팝아웃 합니다.  
   
-##  <a name="setpanestyle"></a>CStatusBar::SetPaneStyle  
+##  <a name="setpanestyle"></a>  CStatusBar::SetPaneStyle  
  상태 표시줄의 창 스타일을 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -432,7 +427,7 @@ void SetPaneStyle(
   
  상태 표시줄에서 사용할 수 있는 스타일의 목록이 참조 [SetPaneInfo](#setpaneinfo)합니다.  
   
-##  <a name="setpanetext"></a>CStatusBar::SetPaneText  
+##  <a name="setpanetext"></a>  CStatusBar::SetPaneText  
  가 가리키는 문자열에 창 텍스트를 설정 하려면이 함수를 호출 `lpszNewText`합니다.  
   
 ```  
@@ -458,7 +453,7 @@ BOOL SetPaneText(
 ### <a name="remarks"></a>설명  
  호출한 후 `SetPaneText`, 상태 표시줄에 새 텍스트를 표시 하려면 UI 업데이트 처리기를 추가 해야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#176](../../mfc/codesnippet/cpp/cstatusbar-class_1.cpp)]  
   
  [!code-cpp[NVC_MFCDocView#177](../../mfc/codesnippet/cpp/cstatusbar-class_2.cpp)]  

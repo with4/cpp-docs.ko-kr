@@ -1,12 +1,9 @@
 ---
-title: "CReversalTransition 클래스 | Microsoft Docs"
-ms.custom: 
+title: CReversalTransition 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CReversalTransition
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CReversalTransition [MFC], Create
 - CReversalTransition [MFC], m_duration
 ms.assetid: e89516be-2d07-4885-95a8-fc278f46e3ad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdce13f41e95cda592fec03fcedb01984fb34ab9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 623e341610fbecb3dfc9ea0c2e2eed5ee06abebb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creversaltransition-class"></a>CReversalTransition 클래스
 역방향 전환을 캡슐화합니다.  
@@ -75,7 +70,7 @@ class CReversalTransition : public CBaseTransition;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="create"></a>CReversalTransition::Create  
+##  <a name="create"></a>  CReversalTransition::Create  
  캡슐화 된 전환 COM 개체를 만드는 전환 라이브러리를 호출 합니다.  
   
 ```  
@@ -91,7 +86,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>반환 값  
  TRUE 이면 전환을 만들었습니다. 그렇지 않으면 FALSE입니다.  
   
-##  <a name="creversaltransition"></a>CReversalTransition::CReversalTransition  
+##  <a name="creversaltransition"></a>  CReversalTransition::CReversalTransition  
  반전 전환 개체를 생성 하 고 기간을 초기화 합니다.  
   
 ```  
@@ -102,7 +97,7 @@ CReversalTransition(UI_ANIMATION_SECONDS duration);
  `duration`  
  전환의 기간입니다.  
   
-##  <a name="m_duration"></a>CReversalTransition::m_duration  
+##  <a name="m_duration"></a>  CReversalTransition::m_duration  
  전환의 기간입니다.  
   
 ```  

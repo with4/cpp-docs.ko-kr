@@ -1,12 +1,9 @@
 ---
-title: "CD2DSizeU 클래스 | Microsoft Docs"
-ms.custom: 
+title: CD2DSizeU 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DSizeU
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CD2DSizeU [MFC], CD2DSizeU
 - CD2DSizeU [MFC], IsNull
 ms.assetid: 6e679ba8-2112-43c3-8275-70b660856f02
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bb2f18426394c63dc6ce45870d394ed536d6031
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa7c42216f55479050812b559f533829d55162b9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dsizeu-class"></a>CD2DSizeU 클래스
 D2D1_SIZE_U에 대 한 래퍼입니다.  
@@ -68,7 +63,7 @@ class CD2DSizeU : public D2D1_SIZE_U;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxrendertarget.h  
   
-##  <a name="cd2dsizeu"></a>CD2DSizeU::CD2DSizeU  
+##  <a name="cd2dsizeu"></a>  CD2DSizeU::CD2DSizeU  
  CD2DSizeU CSize 개체에서 개체를 만듭니다.  
   
 ```  
@@ -92,7 +87,7 @@ CD2DSizeU(
  `cy`  
  원본 높이  
   
-##  <a name="isnull"></a>CD2DSizeU::IsNull  
+##  <a name="isnull"></a>  CD2DSizeU::IsNull  
  식에 유효 하지 않은 데이터 (Null)이 포함 되어 있는지 여부를 나타내는 부울 값을 반환 합니다.  
   
 ```  
@@ -102,7 +97,7 @@ BOOL IsNull() const;
 ### <a name="return-value"></a>반환 값  
  너비와 높이; 비어 있으면 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
-##  <a name="operator_csize"></a>CD2DSizeU::operator CSize  
+##  <a name="operator_csize"></a>  CD2DSizeU::operator CSize  
  CD2DSizeU CSize 개체로 변환합니다.  
   
 ```  

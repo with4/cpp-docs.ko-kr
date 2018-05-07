@@ -1,31 +1,26 @@
 ---
-title: "관리 되는 형식 (c + + CL) | Microsoft Docs"
-ms.custom: 
+title: 관리 되는 형식 (c + + CL) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - __gc types
 - types [C++], CLR
 ms.assetid: 1ddd114e-be02-4de7-a4dd-a2d72ad8ff81
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9e7bbd9687c3cc696b35e0284d55a18f59c898cc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42426c45f4b8caf3cd4cb61ee867470dc9ea639f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managed-types-ccl"></a>관리되는 형식(C++/CL)
 이러한 형식의 개체의 관리 되는 형식 및는 생성의 선언 및 사용에 대 한 구문 크게에서 변경 되었습니다 Managed Extensions for c + + Visual c + +입니다. 이 ISO c + + 형식 시스템 내에서 통합을 강화 하기 위해서입니다. 이러한 변경 내용은 다음 하위 섹션에서 자세히 표시 됩니다.  

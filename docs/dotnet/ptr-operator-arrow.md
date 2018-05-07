@@ -1,12 +1,9 @@
 ---
 title: ptr::operator-&gt; | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - msclr.com.ptr.operator->
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr::operator->
 ms.assetid: e752b549-74ed-430d-9a60-6c8e0e441998
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9814413a77275183e6f36b49bf721f9b305d9763
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f18329bc7d3e1d3e76074e9fdb20c7f6dbe10c5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptroperator-gt"></a>ptr::operator-&gt;
 멤버 액세스 연산자를 소유 하는 COM 개체에서 메서드를 호출 하는 데 사용 합니다.  
@@ -49,7 +44,7 @@ _detail::smart_com_ptr<_interface_type> operator->();
 ## <a name="remarks"></a>설명  
  이 연산자를 사용 하면 소유한 COM 개체의 메서드를 호출할 수 있습니다. 임시 반환 `smart_com_ptr` 자동으로 처리 하는 자체 `AddRef` 및 `Release`합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. `WriteDocument` 사용 하 여 함수 `operator->` 호출 하 여 `get_firstChild` 문서 개체의 멤버입니다.  
   
 ```  
