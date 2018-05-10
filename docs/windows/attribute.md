@@ -1,13 +1,10 @@
 ---
-title: "특성 | Microsoft Docs"
-ms.custom: 
+title: 특성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.attribute
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - attribute attribute
 - attributes [C++], custom
 ms.assetid: 8cb3489f-65c4-44ea-b0aa-3c3c6b15741d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42ea9049fdd97691bd139599705856baa8acfee1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9826b689e2b8a640efe66e8625b97b3cec347acf
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute"></a>특성
 사용자 지정 특성을 만들 수 있습니다.  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  `attribute` 특성은 이제 사용 되지 않습니다.  사용자 정의 특성을 만들려면 공용 언어 런타임 특성 System.Attribute 직접를 사용 합니다.  자세한 내용은 참조 [사용자 정의 특성](../windows/user-defined-attributes-cpp-component-extensions.md)합니다.  
   
- 정의 하는 [사용자 지정 특성](../windows/custom-attributes-cpp.md) 배치 하 여는 `attribute` 관리 되는 클래스 또는 구조체 정의에 특성입니다. 클래스의 이름에는 사용자 지정 특성입니다. 예:  
+ 정의 하는 [사용자 지정 특성](../windows/custom-attributes-cpp.md) 배치 하 여는 `attribute` 관리 되는 클래스 또는 구조체 정의에 특성입니다. 클래스의 이름에는 사용자 지정 특성입니다. 예를 들어:  
   
 ```  
 [ attribute(Parameter) ]  
@@ -149,7 +144,7 @@ ref class MyAttr
 ref class MyAttr : System::Attribute   // OK, but redundant.  
 ```  
   
- `attribute`에 대 한 별칭은 <xref:System.AttributeUsageAttribute?displayProperty=fullName> (AttributeAttribute 하지 않으면 특성 명명 규칙에 대 한 예외입니다).  
+ `attribute` 에 대 한 별칭은 <xref:System.AttributeUsageAttribute?displayProperty=fullName> (AttributeAttribute 하지 않으면 특성 명명 규칙에 대 한 예외입니다).  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -157,14 +152,14 @@ ref class MyAttr : System::Attribute   // OK, but redundant.
   
 |||  
 |-|-|  
-|**적용 대상**|`ref`**클래스**, **ref 구조체**|  
+|**적용 대상**|`ref` **클래스**, **ref 구조체**|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
 |**잘못된 특성**|없음|  
   
  특성 컨텍스트에 대한 자세한 내용은 [특성 컨텍스트](../windows/attribute-contexts.md)를 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cpp_attr_ref_attribute_4.cpp  
@@ -179,7 +174,7 @@ ref struct ABC {
 ref class MyClass {};  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  `Inherited` 명명 된 인수는 기본 클래스에 적용 하는 사용자 지정 특성의 파생된 클래스는 리플렉션에 표시 됩니다 있는지 여부를 지정 합니다.  
   
 ```  

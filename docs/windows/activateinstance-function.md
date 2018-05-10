@@ -2,11 +2,8 @@
 title: ActivateInstance 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - client/Windows::Foundation::ActivateInstance
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - ActivateInstance function
 ms.assetid: 8cfd1dd9-5fda-4cc2-acf8-d40e783b3875
-caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d4ccf4195ac81188520ced79581c131c564cfbb9
-ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
+ms.openlocfilehash: c0bf945dd8225ca3c153d7f497ded6b83ebd022d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="activateinstance-function"></a>ActivateInstance 함수
 등록 하 고 id가 지정 된 클래스 ID에 정의 된 지정 된 형식의 인스턴스를 검색  
@@ -58,7 +53,7 @@ inline HRESULT ActivateInstance(
 ## <a name="requirements"></a>요구 사항  
  **헤더:** client.h  
   
- **Namespace:** Windows::Foundation  
+ **Namespace:** windows:: foundation  
   
 ## <a name="see-also"></a>참고 항목  
  [Windows::Foundation 네임스페이스](../windows/windows-foundation-namespace.md)

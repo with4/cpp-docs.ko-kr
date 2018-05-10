@@ -1,13 +1,10 @@
 ---
-title: "공용 구조체 선언 | Microsoft Docs"
-ms.custom: 
+title: 공용 구조체 선언 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - union keyword [C], declarations
 - variant records
 ms.assetid: 978c6165-e0ae-4196-afa7-6d94e24f62f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4088aea4025e7c51aba75efe28978d05c0e48730
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d8c52752c1e05cb3c9f2b18a827fb493ba503ad
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="union-declarations"></a>공용 구조체 선언
 "공용 구조체 선언"은 변수 값의 집합을 지정하고 공용 구조체 이름을 지정하는 태그를 선택적으로 지정합니다. 변수 값을 공용 구조체의 "멤버"라고 하며 변수 값은 다른 형식이 될 수 있습니다. 공용 구조체는 다른 언어의 "가변 레코드"와 비슷합니다.  
   
 ## <a name="syntax"></a>구문  
  *struct-or-union-specifier*:  
- *struct-or-union identifier* opt**{** *struct-declaration-list* **}**  
+ *struct-or-union identifier* opt **{** *struct-declaration-list* **}**  
   
  *struct-or-union identifier*  
   

@@ -1,13 +1,10 @@
 ---
 title: com_interface_entry (c + +) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.com_interface_entry
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 58c74602c4170cbe0816dcdf14e0196cca44af42
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b0fb7de1987d77f19e04f867aac68cbcc67c1f1e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry(C++)
 대상 클래스의 COM 맵에 인터페이스 항목을 추가합니다.  
@@ -72,7 +67,7 @@ ms.lasthandoff: 12/21/2017
    };  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드는 두 항목의 기존 COM 인터페이스 지도에 추가 **CMyBaseClass**합니다. 첫 번째는 표준 인터페이스가 고 두 번째 숨기는 **IDebugTest** 인터페이스입니다.  
   
 ```  

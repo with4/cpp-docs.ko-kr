@@ -1,13 +1,10 @@
 ---
-title: "아이콘 또는 다른 이미지 (아이콘에 대 한 이미지 편집기) 만들기 | Microsoft Docs"
-ms.custom: 
+title: 아이콘 또는 다른 이미지 (아이콘에 대 한 이미지 편집기) 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 dev_langs:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - graphics [C++], creating
 - Image editor [C++], creating images
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae1cc8525b0c93cff5564c2185d80480a632718b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2138e32b18f2e15de027e3cc04fb1bd7ee46ecd5
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-an-icon-or-other-image-image-editor-for-icons"></a>아이콘 또는 다른 이미지 만들기(아이콘에 대한 이미지 편집기)
 새 이미지 (비트맵, 아이콘, 커서 또는 도구 모음)를 만든 다음 이미지 편집기를 사용 하 여 모양을 사용자 지정할 수 있습니다. 새 비트맵을 만들 수도 있습니다는 [템플릿](../windows/how-to-use-resource-templates.md)합니다.  

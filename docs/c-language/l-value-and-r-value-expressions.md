@@ -1,13 +1,10 @@
 ---
-title: "L-Value 및 R-Value 식 | Microsoft Docs"
-ms.custom: 
+title: L-Value 및 R-Value 식 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - R-value expressions
 - subscript expressions
 ms.assetid: b790303e-ec6f-4d0d-bc55-df42da267172
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fb26b4488f6c75c0d9d7b70afb68c3c1b5e3178
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 654805750b3cd17e2157fa3710791493970b371f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="l-value-and-r-value-expressions"></a>L-Value 및 R-Value 식
 메모리 위치를 참조하는 식을 "l-value" 식이라고 합니다. l-value는 저장소 영역의 "로케이터" 값이나 "왼쪽" 값을 나타내므로 등호(**=**)의 왼쪽에 나타날 수 있습니다. l-value는 대개 식별자입니다.  
@@ -43,7 +38,7 @@ ms.lasthandoff: 03/16/2018
   
 -   멤버 선택 식(**->** 또는 **.**)  
   
--   배열을 참조하지 않는 단항 간접 참조 식(**\****)  
+-   배열을 참조하지 않는 단항 간접 참조 식(**\***)  
   
 -   괄호로 묶인 l-value 식  
   

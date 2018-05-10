@@ -1,29 +1,24 @@
 ---
-title: "토큰 계산 | Microsoft Docs"
-ms.custom: 
+title: 토큰 계산 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - tokens, evaluating
 ms.assetid: 28870b62-dff6-4644-8b75-d58f340b48d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be73ad565b3e240ceb21a9c7e3d185f327524d19
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: baebf5c7b00dc069a1b0f97a9bc5ffb54f856980
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="evaluation-of-tokens"></a>토큰 계산
 컴파일러는 토큰을 해석할 때 다음 토큰으로 이동하기 전에 단일 토큰에 최대한 많은 문자를 포함합니다. 이러한 동작 때문에 토큰을 공백으로 적절하게 구분하지 않으면 컴파일러가 토큰을 올바르게 해석하지 못할 수 있습니다. 다음 식을 살펴보십시오.  

@@ -1,13 +1,10 @@
 ---
-title: "이진 데이터 찾기 | Microsoft Docs"
-ms.custom: 
+title: 이진 데이터 찾기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.binary
 dev_langs:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - binary data, finding
 - ASCII characters, finding in binary data
 ms.assetid: 1675b19c-66e3-4040-82c2-5dde4b1793f8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60e37ee1412639f68cc21e65154e4537b244ac9a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 815975ac693885842d2e4b2287e14957abe8375f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="finding-binary-data"></a>이진 데이터 찾기
 ASCII 문자열 또는 16 진수 바이트에 대 한 검색할 수 있습니다. 예를 들어 "Hello"를 찾기 위해 또는 검색할 수 있습니다에 대 한 문자열 "Hello"에 대 한 "48 65 6C 6 C 6F" (16 진수).  

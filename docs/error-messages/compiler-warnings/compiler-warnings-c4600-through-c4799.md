@@ -1,8 +1,8 @@
 ---
-title: "컴파일러 경고 C4600 C4799 ~ | Microsoft Docs"
+title: 컴파일러 경고 C4600 C4799 ~ | Microsoft Docs
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4602
@@ -68,14 +68,13 @@ dev_langs:
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5d7121e01b651e87630fe18bec21e3d999ed0e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5ad29989e89bfe60f2180ee48c411ebd4d3098ce
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>컴파일러 경고 C4600 C4799 ~
 
@@ -164,7 +163,7 @@ ms.lasthandoff: 12/21/2017
 |[컴파일러 경고 (오류) C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'class': 봉인된 추상 클래스는 ' interface '인터페이스를 구현할 수 없습니다|
 |컴파일러 경고 (수준 1) C4688|'constraint': 제약 조건 목록에 어셈블리 전용 형식 'type'이 있습니다.|
 |컴파일러 경고 (수준 1) C4689|'%c': 문자; #pragma detect_mismatch에 지원 되지 않습니다. #pragma 무시|
-|컴파일러 경고 (수준 4) C4690|[emitidl (pop)]: 푸시 횟수 보다 팝|
+|컴파일러 경고 (수준 4) C4690|[ emitidl ( pop ) ]: 푸시 횟수 보다 팝|
 |[컴파일러 경고(수준 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md)|'type': 참조 하는 형식이 참조 되지 않은 어셈블리 'file'를 대신 사용 하는 현재 변환 단위에 정의 된 형식에에서 필요|
 |[컴파일러 경고(수준 1) C4692](../../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)|'function': 전용이 아닌 멤버의 시그니처에 어셈블리 전용 네이티브 형식 'native_type'이(가) 있습니다.|
 |[컴파일러 경고 (수준 1, 오류) C4693](../../error-messages/compiler-warnings/compiler-warning-c4693.md)|'class': 봉인된 추상 클래스 인스턴스 멤버 '인스턴스 멤버' 가질 수 없습니다|
@@ -204,7 +203,7 @@ ms.lasthandoff: 12/21/2017
 |[컴파일러 경고(수준 1) C4742](../../error-messages/compiler-warnings/compiler-warning-level-1-c4742.md)|'var'에 'file1' 및 'file2'에서 서로 다른 맞춤: 번호와 번호|
 |[컴파일러 경고(수준 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|'type'에 'file1' 및 'file2'에서 다른 크기: 수와 바이트 수입니다.|
 |[컴파일러 경고(수준 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|'var'의 'file1' 및 'file2'에서 형식이 다릅니다.: 'type1' 및 'type2'|
-|[컴파일러 경고 C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|volatile 액세스 '*식*' /volatile:\<iso &#124; ms > __iso_volatile_load/store 내장 함수를 사용 하 여 고려 설정;|
+|[컴파일러 경고 C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|volatile 액세스 '*식*' /volatile:\<iso&#124;ms > __iso_volatile_load/store 내장 함수를 사용 하 여 고려 설정;|
 |[컴파일러 경고(수준 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|관리 되는 '진입점' 호출: DLL 진입점 및 DLL 진입점에서 접근 하는 호출을 포함 하 여 로더 잠금 상태에서 관리 되는 코드는 실행 되지 않을 수 있습니다|
 |컴파일러 경고 (수준 4) C4749|조건에 따라 지원: non standard-레이아웃 형식에 적용 된 offsetof '*형식*'|
 |컴파일러 경고 (수준 1) C4750|'identifier': 루프에 인라이닝된 _alloca()를 사용하는 함수|

@@ -1,13 +1,10 @@
 ---
-title: "동시성 런타임 | Microsoft Docs"
-ms.custom: 
+title: 동시성 런타임 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d7822c552345f9492dcca6822a133290c2a82be
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fc147a2cd0c75bb57f12be4dd5e90e63ab4ec0d2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-runtime"></a>동시성 런타임
 C++용 동시성 런타임은 강력하고 확장 가능하며 응답성이 높은 병렬 응용 프로그램을 작성하는 데 도움이 됩니다. 이는 동시성과 관련된 인프라 세부 정보를 관리할 필요가 없도록 추상화 수준을 높입니다. 또한 이러한 동시성 런타임을 사용하여 응용 프로그램의 서비스 품질 요구 사항을 충족하는 일정 예약 정책을 지정할 수도 있습니다. 다음 리소스는 동시성 런타임 작업을 시작하는 데 도움이 됩니다.  

@@ -1,13 +1,10 @@
 ---
 title: (c + +) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.in
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - in attribute
 ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 37eaee8d796897b14d4780f0cf65e36908d7c66b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0cb730163b9048005d3af64bb42ae9113681d52b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="in-c"></a>in(C++)
 매개 변수가 호출된 된 프로시저를 호출 하는 프로시저에서 전달 하도록 임을 나타냅니다.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  **에** c + + 특성에 동일한 기능을는 [에](http://msdn.microsoft.com/library/windows/desktop/aa367051) MIDL 특성입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  참조 [바인딩 가능한](../windows/bindable.md) 사용 하는 방법의 예 **에서**합니다.  
   
 ## <a name="requirements"></a>요구 사항  

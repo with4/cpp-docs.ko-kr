@@ -1,13 +1,10 @@
 ---
-title: "버퍼 오버플로 | Microsoft Docs"
-ms.custom: 
+title: 버퍼 오버플로 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - buffer overflows [C++]
 - MBCS [C++], buffer overflow
 ms.assetid: f2b7e40a-f02b-46d8-a449-51d26fc0c663
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4bfad181ee7c6b702af87bc8ff0a49ccfb42cb65
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13d01460e7ed9cb95d92303d82ea136803737331
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="buffer-overflow"></a>버퍼 오버플로
 문자 크기를 다르게 문자 버퍼에 배치할 때 문제가 발생할 수 있습니다. 문자열에서 문자를 복사, 다음 코드는 `sz`, 버퍼로 `rgch`:  
@@ -60,7 +55,7 @@ while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
 }  
 ```  
   
- 이 코드는 루프에서 가능한 버퍼 오버플로 대 한 테스트 사용 하 여 테스트 `_mbclen` 에서 가리키는 현재 문자 크기를 테스트 하려면 `sz`합니다. 호출 하 여는 `_mbsnbcpy` 함수에 코드를 대체할 수 있습니다는 `while` 코드 한 줄으로 루프입니다. 예:  
+ 이 코드는 루프에서 가능한 버퍼 오버플로 대 한 테스트 사용 하 여 테스트 `_mbclen` 에서 가리키는 현재 문자 크기를 테스트 하려면 `sz`합니다. 호출 하 여는 `_mbsnbcpy` 함수에 코드를 대체할 수 있습니다는 `while` 코드 한 줄으로 루프입니다. 예를 들어:  
   
 ```  
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );  

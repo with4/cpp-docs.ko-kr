@@ -1,13 +1,10 @@
 ---
-title: "방법: 다양 한 문자열 형식으로 변환할 | Microsoft Docs"
-ms.custom: 
+title: '방법: 다양 한 문자열 형식으로 변환할 | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15ebbbbb08d5415cdf55d9b98b44b327dc256879
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44b80fcafa15a472f4bfc68dd74ff0acc40bb2ad
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-convert-between-various-string-types"></a>방법: 다양한 문자열 형식 간 변환
 이 항목에는 다양 한 Visual c + + 문자열 형식을 다른 문자열로 변환 하는 방법을 보여 줍니다. 적용 되는 문자열 형식에는 `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md), 및 <xref:System.String?displayProperty=fullName>합니다. 모든 경우에는 문자열의 복사본에 새 유형으로 변환할 때 이루어집니다. 새 문자열을 변경한 원래 문자열에 영향을 주지 것입니다 및 그 반대의 경우도 마찬가지입니다.  
   
 ## <a name="converting-from-char-"></a>Char에서 변환 *  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
  변환 하는 방법을 보여 주는이 예제는 `char *` 위에 나열 된 다른 문자열 형식으로. A `char *` 문자열 (라고도 C 스타일 문자열) null 문자를 사용 하 여 문자열의 끝을 나타냅니다. C 스타일 문자열 대개 문자당 1 바이트가 필요 하지만 2 바이트를 사용할 수도 있습니다. 아래 예제에서 `char *` 문자열은 라고도 멀티 바이트 문자열의 유니코드 문자열에서 변환 결과로 생성 되는 경우 문자열 데이터. 단일 싱글바이트 및 멀티 바이트 문자 (`MBCS`) 함수에서 작동할 수 `char *` 문자열입니다.  
@@ -134,7 +129,7 @@ Hello, World! (System::String)
   
 ## <a name="converting-from-wchart-"></a>변환에서 wchar_t *  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
  변환 하는 방법을 보여 주는이 예제는 `wchar_t *` 위에 나열 된 다른 문자열 형식으로. 몇 가지을 비롯 한 형식 문자열 `wchar_t *`, 와이드 문자 형식을 구현 합니다. 와 같은 단일 함수 호출을 사용할 수는 멀티 바이트 및 와이드 문자 형식 간의 문자열 변환, `mbstowcs_s` 또는 클래스에 대 한 생성자 호출 like `CStringA`합니다.  
@@ -259,7 +254,7 @@ Hello, World! (System::String)
   
 ## <a name="converting-from-bstrt"></a>_Bstr_t에서 변환  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
  변환 하는 방법을 보여 주는이 예제는 `_bstr_t` 위에 나열 된 다른 문자열 형식으로. `_bstr_t` 개체는 와이드 문자를 캡슐화 하는 방법을 `BSTR` 문자열입니다. BSTR 문자열 길이 값은이 고 문자열 종료 null 문자를 사용 하지 않는 있지만를 변환 하는 문자열 형식에는 종료 null 필요할 수 있습니다.  
@@ -360,7 +355,7 @@ Hello, World! (System::String)
   
 ## <a name="converting-from-ccombstr"></a>CComBSTR에서 변환  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
  변환 하는 방법을 보여 주는이 예제는 `CComBSTR` 위에 나열 된 다른 문자열 형식으로. _Bstr_t 처럼는 `CComBSTR` 개체는 와이드 문자 BSTR 문자열을 캡슐화 하는 방법을 합니다. BSTR 문자열 길이 값은이 고 문자열 종료 null 문자를 사용 하지 않는 있지만를 변환 하는 문자열 형식에는 종료 null 필요할 수 있습니다.  
@@ -471,12 +466,12 @@ Hello, World! (System::String)
   
 ## <a name="converting-from-cstring"></a>CString에서 변환  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
- 변환 하는 방법을 보여 주는이 예제는 `CString` 위에 나열 된 다른 문자열 형식으로. `CString`차례로 있는지 여부에 따라 달라 지는 TCHAR 데이터 형식에 따라 기호 `_UNICODE` 정의 됩니다. 경우 `_UNICODE` 정의 되지 않은 `TCHAR` char 정의 됩니다. 및 `CString` 경우 멀티 바이트 문자열; 포함 `_UNICODE` 정의 된 `TCHAR` 다음과 같이 정의 됩니다 `wchar_t` 및 `CString` 와이드 문자를 포함 합니다. 문자열입니다.  
+ 변환 하는 방법을 보여 주는이 예제는 `CString` 위에 나열 된 다른 문자열 형식으로. `CString` 차례로 있는지 여부에 따라 달라 지는 TCHAR 데이터 형식에 따라 기호 `_UNICODE` 정의 됩니다. 경우 `_UNICODE` 정의 되지 않은 `TCHAR` char 정의 됩니다. 및 `CString` 경우 멀티 바이트 문자열; 포함 `_UNICODE` 정의 된 `TCHAR` 다음과 같이 정의 됩니다 `wchar_t` 및 `CString` 와이드 문자를 포함 합니다. 문자열입니다.  
   
- `CStringA`이 멀티 바이트 문자열 항상 버전의 `CString`, `CStringW` 는 와이드 문자 문자열 유일한 버전입니다. 모두 `CStringA` 나 `CStringW` 사용 `_UNICODE` 컴파일 방식을 결정 하 합니다. `CStringA`및 `CStringW` 할당 된 버퍼 크기가 작은 차이 분명히 설명 하 고 출력 처리에이 예제에서 사용 됩니다.  
+ `CStringA` 이 멀티 바이트 문자열 항상 버전의 `CString`, `CStringW` 는 와이드 문자 문자열 유일한 버전입니다. 모두 `CStringA` 나 `CStringW` 사용 `_UNICODE` 컴파일 방식을 결정 하 합니다. `CStringA` 및 `CStringW` 할당 된 버퍼 크기가 작은 차이 분명히 설명 하 고 출력 처리에이 예제에서 사용 됩니다.  
   
 ### <a name="code"></a>코드  
   
@@ -717,7 +712,7 @@ Hello, World! (System::String)
   
 ## <a name="converting-from-systemstring"></a>System:: string에서 변환  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
  와이드 문자 (유니코드)에서 변환 하는 방법을 보여 주는이 예제 [system:: string](assetId:///System::String?qualifyHint=True&autoUpgrade=True) 위에 나열 된 다른 문자열 형식으로.  

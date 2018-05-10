@@ -1,30 +1,25 @@
 ---
-title: "문자열 리터럴 연결 | Microsoft Docs"
-ms.custom: 
+title: 문자열 리터럴 연결 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - concatenating strings
 - strings [C++], concatenating
 ms.assetid: 51486b1f-4b1e-4061-9add-1aa38c6cdb3c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de245a061ed7d269aaafc856df0a422e31fd6d77
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5975e47585f3b5a995d8eb839c21d419756edd42
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-literal-concatenation"></a>문자열 리터럴 연결
 두 줄 이상이 필요한 문자열 리터럴을 형성하려면 두 문자열을 연결합니다. 이렇게 하려면 백슬래시를 입력한 다음 리턴 키를 누릅니다. 백슬래시를 사용하면 컴파일러가 다음 줄 바꿈 문자를 무시합니다. 예를 들어, 다음 문자열 리터럴은  

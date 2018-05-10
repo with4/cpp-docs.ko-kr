@@ -1,13 +1,10 @@
 ---
-title: "예외 처리 상수 | Microsoft Docs"
-ms.custom: 
+title: 예외 처리 상수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - EXCEPTION_CONTINUE_SEARCH
 - c.constants
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION constant
 - EH constants
 ms.assetid: e1870f41-be9e-46a3-a2ea-830dfbaa18fb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98ff527e9abbb4e80e9a2460cce9ea067b09a557
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 47f23fd421d5108648d88c9eeda83c255f9861dc
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exception-handling-constants"></a>예외 처리 상수
 **try-except** 문의 가드된 섹션을 실행하는 중 예외가 발생하면 `EXCEPTION_CONTINUE_SEARCH`, `EXCEPTION_CONTINUE_EXECUTION` 또는 `EXCEPTION_EXECUTE_HANDLER` 상수가 반환됩니다. 반환 값에 따라 예외 처리 방법이 결정됩니다. 자세한 내용은 *C++ 언어 참조*의 [try-except Statement](../cpp/try-except-statement.md)을 참조하세요.  

@@ -1,13 +1,10 @@
 ---
-title: "C 대입 연산자 | Microsoft Docs"
-ms.custom: 
+title: C 대입 연산자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -39,17 +36,15 @@ helpviewer_keywords:
 - operator >>=, C assignment operators
 - <<= operator
 ms.assetid: 11688dcb-c941-44e7-a636-3fc98e7dac40
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c839538b94ff8f80eabed98dbaf16e4009d3e500
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9a13f3b36ae4f5bbd11f170d78d735427882d2ff
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-assignment-operators"></a>C 할당 연산자
 할당 연산자는 오른쪽 피연산자의 값을 왼쪽 피연산자에서 이름을 지정한 저장소 위치에 할당합니다. 따라서 할당 연산의 왼쪽 피연산자는 수정할 수 있는 l-value이어야 합니다. 할당 후 할당 식은 왼쪽 피연산자의 값을 갖지만 l-value는 아닙니다.  

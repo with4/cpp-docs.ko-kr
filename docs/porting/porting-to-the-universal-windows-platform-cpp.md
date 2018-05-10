@@ -1,27 +1,22 @@
 ---
-title: "유니버설 Windows 플랫폼으로 포팅(C++) | Microsoft 문서"
-ms.custom: 
+title: 유니버설 Windows 플랫폼으로 포팅(C++) | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ece050614481bdc0adbe417448711376666b2b9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f2f94e54a8525d8d633374b3a23bafdfd93fee56
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>유니버설 Windows 플랫폼으로 포팅(C++)
 이 항목에서는 Windows 10 앱 플랫폼인 유니버설 Windows 플랫폼에 기존 C++ 코드를 이식하는 방법에 대한 정보를 찾을 수 있습니다. *유니버설* 이라는 용어는 코드가 데스크톱, 휴대폰, 태블릿 및 앞으로 제공될 장치(Windows 10 실행)를 비롯하여 Windows 10을 실행하는 모든 장치에서 실행될 수 있음을 의미합니다. Windows 10을 실행하는 모든 장치에서 제대로 작동하는 단일 XAML 기반 사용자 인터페이스 및 단일 프로젝트를 만듭니다. XAML의 동적 레이아웃 기능을 사용하여 앱 UI를 다른 디스플레이 크기에 맞출 수 있습니다.  
@@ -78,7 +73,7 @@ ms.lasthandoff: 02/14/2018
   
      이러한 문은 각각 UWP 앱, Windows Phone 스토어 앱 중 하나 또는 둘 다에 적용되거나 적용되지 않습니다(클래식 Win32 데스크톱만 해당). 이러한 매크로는 Windows SDK 8.1 이상에서만 사용할 수 있으므로 이전 버전의 Windows SDK 또는 Windows 이외의 다른 플랫폼 용으로 코드를 컴파일해야 하면 이러한 매크로가 정의되지 않은 경우도 고려해야 합니다.  
   
-11. 앱이 지원하는 각 장치 종류에 대해 에뮬레이터 또는 실제 장치에서 앱을 실행하고 디버그합니다. 에뮬레이터를 실행하려면 가상 컴퓨터가 아닌 실제 컴퓨터에서 Visual Studio를 실행해야 합니다.  
+11. 앱이 지원하는 각 장치 종류에 대해 에뮬레이터 또는 실제 장치에서 앱을 실행하고 디버그합니다. 에뮬레이터를 실행하려면 가상 머신이 아닌 실제 컴퓨터에서 Visual Studio를 실행해야 합니다.  
   
 ##  <a name="BK_81Component"></a> Windows 8.1 런타임 구성 요소를 UWP에 이식  
  Windows 8.1 스토어 앱에서 이미 작동되는 DLL 또는 Windows 런타임 구성 요소가 있는 경우 다음 절차에 따라 구성 요소 또는 DLL이 UWP 및 Windows 10에서 작동되도록 할 수 있습니다. 기본 절차는 새 프로젝트를 만들고 코드를 복사하는 것입니다.  

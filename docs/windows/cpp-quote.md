@@ -1,13 +1,10 @@
 ---
 title: cpp_quote | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.cpp_quote
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95b43856401b5bccfa9a0bef12fdc93ec886cea1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 38ecabcde55f49687abf7caff66fb2c316fab0fe
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="cppquote"></a>cpp_quote
 생성 된.idl 파일에 인용 문자 없이 지정된 된 문자열을 내보냅니다.  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  **cpp_quote** 특성와 동일한 기능에는 [cpp_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) MIDL 특성입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  예를 참조 [이중](../windows/dual.md) 예제를 보려면 사용 하는 방법을 사용 하 여 **cpp_quote**합니다.  
   
 ## <a name="requirements"></a>요구 사항  

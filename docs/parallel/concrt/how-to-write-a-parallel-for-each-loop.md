@@ -1,35 +1,30 @@
 ---
-title: "방법: parallel_for_each 루프 작성 | Microsoft Docs"
-ms.custom: 
+title: '방법: parallel_for_each 루프 작성 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - writing a parallel_for_each loop [Concurrency Runtime]
 - parallel_for_each function, example
 ms.assetid: fa9c0ba6-ace0-4f88-8681-c7c1f52aff20
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 179fa4b055b4743303f5d72ebec851a1d10def93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68ba40b7d9ea93e73d9d18d3548b0c0f34c6411f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-write-a-parallelforeach-loop"></a>방법: parallel_for_each 루프 작성
 사용 하는 방법을 보여 주는이 예제는 [concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) 알고리즘에서 소수의 수를 계산 하는 [std:: array](../../standard-library/array-class-stl.md) 병렬로 개체입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 두 번 배열에서 소수의 수를 계산 합니다. 이 예제에서는 먼저 사용 하 여는 [for_each](../../standard-library/algorithm-functions.md#for_each) 알고리즘의 수를 연속으로 계산을 합니다. 이 예제에서는 다음 사용 하 여는 `parallel_for_each` 알고리즘을 동시에 동일한 작업을 수행 합니다. 또한 이 예제에서는 두 계산을 모두 수행하는 데 필요한 시간을 콘솔에 출력합니다.  
   
  [!code-cpp[concrt-parallel-count-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-write-a-parallel-for-each-loop_1.cpp)]  

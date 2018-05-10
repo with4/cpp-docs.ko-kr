@@ -1,13 +1,10 @@
 ---
-title: "C 명령줄 처리 사용자 지정 | Microsoft Docs"
-ms.custom: 
+title: C 명령줄 처리 사용자 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - suppressing environment processing
 - _exec function
 ms.assetid: c20fa11d-b35b-4f3e-93b6-2cd5a1c3c993
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60f0c14382190cb724c4e4a84488006c54813558
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 824de86ec0930fb93bf5fa0a2a8ac15a4237e4fb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="customizing-c-command-line-processing"></a>C 명령줄 처리 사용자 지정
 프로그램에서 명령줄 인수를 사용하지 않는 경우 명령줄 처리를 수행하는 라이브러리 루틴의 사용을 억제하여 약간의 공간을 절약할 수 있습니다. 이 루틴을 **_setargv**(또는 와이드 문자 환경에서는 **_wsetargv**)라고 합니다([와일드카드 인수 확장명](../c-language/expanding-wildcard-arguments.md) 참조). 이 루틴의 사용을 억제하려면 **main** 함수를 포함하는 파일에서 아무 작업도 수행하지 않는 루틴을 정의하고 **_setargv**(또는 와이드 문자 환경에서는 **_wsetargv**)라는 이름을 지정합니다. **_setargv** 또는 **_wsetargv**를 호출하면 정의한 **_setargv** 또는 **_wsetargv**가 실행되며 라이브러리 버전이 로드되지 않습니다.  

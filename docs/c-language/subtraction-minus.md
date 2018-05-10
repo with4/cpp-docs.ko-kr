@@ -1,30 +1,25 @@
 ---
-title: "빼기(-) | Microsoft Docs"
-ms.custom: 
+title: 빼기(-) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - operators [C], subtraction
 - subtraction operator, syntax
 ms.assetid: 9cacba7d-20b3-4372-8a63-ba5d8ee64177
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b32986513a94c20f0fb0cd1b4c65dd21e8c9e8aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 295c6bc33b42ed34fd476dbc72bec9dd398efa14
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subtraction--"></a>빼기(–)
 빼기 연산자(**-**)는 두 번째 피연산자를 첫 번째 피연산자에서 뺍니다. 두 피연산자 모두 정수 계열 또는 부동 형식이 되거나 하나는 포인터가 되고 다른 하나는 정수가 될 수 있습니다.  

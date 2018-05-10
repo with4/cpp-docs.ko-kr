@@ -1,30 +1,25 @@
 ---
-title: "8진 및 16진 문자 사양 | Microsoft Docs"
-ms.custom: 
+title: 8진 및 16진 문자 사양 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - octal characters
 - hexadecimal characters
 ms.assetid: 9264f3ec-46b8-41a5-b21a-8f7ed0a11871
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf3a27dc61543482d1d6484d0edd4b5e1bb04373
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f5709ef6fdcaaceecc79cd635374ee77d537100
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>8진 및 16진 문자 사양
 **\\***ooo* 시퀀스는 ASCII 문자 집합의 문자를 세 자리 8진수 문자 코드로 지정할 수 있음을 의미합니다. 8진수 정수의 숫자 값은 원하는 문자 또는 와이드 문자의 값을 지정합니다.  

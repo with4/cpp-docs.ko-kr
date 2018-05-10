@@ -1,31 +1,26 @@
 ---
-title: "(아이콘에 대 한 이미지 편집기) 프로젝트 외부의 이미지 편집 | Microsoft Docs"
-ms.custom: 
+title: (아이콘에 대 한 이미지 편집기) 프로젝트 외부의 이미지 편집 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Image editor [C++], editing images
 - images [C++], editing
 ms.assetid: ac297b51-95c2-4512-a07f-b5d1596fc61e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c45a813e34aa04ee41487cf6d25a8a7eab152741
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e376aef574c1daa700ca98e714825a6cf7e4c66d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="editing-an-image-outside-of-a-project-image-editor-for-icons"></a>프로젝트 외부의 이미지 편집(아이콘에 대한 이미지 편집기)
 열 및 모든 그래픽 응용 프로그램에서와 마찬가지로 개발 환경에서 이미지를 편집할 수 있습니다. 작업할 이미지 독립형 편집에 대 한 Visual Studio 프로젝트의 일부가 일 필요 없습니다.  

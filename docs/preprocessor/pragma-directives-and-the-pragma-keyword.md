@@ -1,12 +1,9 @@
 ---
-title: "Pragma 지시문 및 __Pragma 키워드 | Microsoft Docs"
-ms.custom: 
+title: Pragma 지시문 및 __Pragma 키워드 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#pragma'
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ccc6ab8fe90b8b97dee213d65e19eb903249da6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b20a476e1701f58782b97f986ee6c3d4b310b566
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Pragma 지시문 및 __Pragma 키워드
 Pragma 지시문이 컴퓨터 또는 운영 체제 관련 컴파일러 기능을 지정합니다. Microsoft 컴파일러 전용인 `__pragma` 키워드를 사용하여 매크로 정의 안에 pragma 지시문을 코딩할 수 있습니다.  

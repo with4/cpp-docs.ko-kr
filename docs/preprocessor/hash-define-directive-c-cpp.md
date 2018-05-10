@@ -1,12 +1,9 @@
 ---
-title: "#define 지시문 (C/c + +) | Microsoft Docs"
-ms.custom: 
+title: '#define 지시문 (C/c + +) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#define'
@@ -19,23 +16,21 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d06a24d969f0ae7545f1b9ec0401e098a2bcf54
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 8875c2b2c744a16f936fd2220826f23413a0e6c9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="define-directive-cc"></a>#define 지시문 (C/C++)
 `#define` 만듭니다는 *매크로*, 식별자 또는 매개 변수화 된 식별자와 토큰 문자열 연결 하는입니다. 매크로가 정의된 후 컴파일러는 소스 파일에서 발생하는 각 식별자를 토큰 문자열로 대체할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
- `#define` *identifier* *token-string*opt  
+ `#define` *식별자* *토큰 문자열*선택  
   
  `#define` *식별자* `(` *식별자*opt`,`*...*  `,` *식별자*opt`)`*토큰 문자열*선택  
   

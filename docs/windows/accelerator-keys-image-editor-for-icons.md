@@ -1,13 +1,10 @@
 ---
-title: "액셀러레이터 키 (아이콘에 대 한 이미지 편집기) | Microsoft Docs"
-ms.custom: 
+title: 액셀러레이터 키 (아이콘에 대 한 이미지 편집기) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c992ed83f5c86fdd770bda8f9970ff98a90c2722
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2b19fb16410f7d720d11e8b8560cde4cadf10b1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="accelerator-keys-image-editor-for-icons"></a>액셀러레이터 키(아이콘에 대한 이미지 편집기)
 다음은 기본적으로 키에 바인딩된 이미지 편집기 명령에 대 한 액셀러레이터 키입니다. 액셀러레이터 키를 변경 하려면 클릭 **옵션** 에 **도구** 메뉴를 선택한 후 **키보드** 아래는 **환경** 폴더입니다. 자세한 내용은 [바로 가기 키 식별 및 사용자 지정](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)을 참조하세요.  

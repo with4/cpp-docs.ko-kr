@@ -1,13 +1,10 @@
 ---
-title: "바이너리 편집기 | Microsoft Docs"
-ms.custom: 
+title: 바이너리 편집기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.binary.F1
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - resource editors, Binary editor
 - Binary editor
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4dade674fb32615e23904e6dbaf03d6c6ee0a371
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d5deb511069830de5ea7aa542bb010f57be5af9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="binary-editor"></a>바이너리 편집기
 > [!WARNING]
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
  바이너리 편집기를 사용하면 16진수 또는 ASCII 형식으로 바이너리 수준에서 리소스를 편집할 수 있습니다. 또한 [찾기 명령](/visualstudio/ide/reference/find-command) 을 사용하여 ASCII 문자열 또는 16진수 바이트를 검색할 수도 있습니다. Visual Studio 환경에서 지원하지 않는 사용자 지정 리소스 또는 리소스 형식을 보거나 조금 변경해야 하는 경우에만 바이너리 편집기를 사용해야 합니다.  
   
- 바이너리 편집기를 열려면 먼저 선택 **파일 &#124; 새로 만들기 &#124; 파일** 주 메뉴에서 옆에 드롭다운 화살표를 클릭 한 다음 편집할 파일을 선택 된 **열려** 단추를 선택한 **프로그램 &#124; 바이너리 편집기**합니다.  
+ 바이너리 편집기를 열려면 먼저 선택 **파일 &#124; 새로 &#124; 파일** 주 메뉴에서 옆에 드롭다운 화살표를 클릭 한 다음 편집할 파일을 선택는 **열고** 단추를 선택한 **로 열기 &#124; 바이너리 편집기**합니다.  
   
 > [!CAUTION]
 >  바이너리 편집기에서 대화 상자, 이미지 또는 메뉴와 같은 리소스를 편집하는 것은 위험합니다. 잘못된 편집으로 리소스가 손상되어 해당 네이티브 편집기에서 읽지 못하게 될 수 있습니다.  

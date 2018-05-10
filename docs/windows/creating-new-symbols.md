@@ -1,13 +1,10 @@
 ---
-title: "새 기호 만들기 | Microsoft Docs"
-ms.custom: 
+title: 새 기호 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.creating
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - New Symbol dialog box
 - symbols, creating
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b01146297307de92d3e79844ac0488b5ff13e29
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2dd895f130161174d457b974e822b02b5ed7e8e2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-new-symbols"></a>새 기호 만들기
 새 프로젝트를 시작하는 경우 기호 이름이 할당될 리소스를 만들기 전에 필요한 기호 이름을 매핑하는 것이 편리하다는 것을 알 수 있습니다.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  할당된 기호 값을 적용합니다.  
   
-     또는  
+     -또는-  
   
      에 **값** 상자에 새 값을 입력 합니다.  
   
