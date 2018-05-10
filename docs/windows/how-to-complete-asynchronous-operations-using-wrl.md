@@ -1,28 +1,23 @@
 ---
-title: "방법: WRL을 사용 하 여 비동기 작업 완료 | Microsoft Docs"
-ms.custom: 
+title: '방법: WRL을 사용 하 여 비동기 작업 완료 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3b5ff1f5bd36c2cf834375ac0999db835b731284
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fff0a6e98dd6fdd28b1fbc2e9146d5b68975e0f0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>방법: WRL을 사용하여 비동기 작업 완료
 이 문서에서는 Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 사용 하 여 비동기 작업을 시작 하 고 작업 완료 시 작업을 수행 하는 방법을 보여 줍니다.  
@@ -128,7 +123,7 @@ ms.lasthandoff: 02/14/2018
 ### <a name="compiling-the-code"></a>코드 컴파일  
  코드를 컴파일하려면 코드를 복사 하 고 다음 Visual Studio 프로젝트에 붙여 하거나 라는 파일에 붙여 `wrl-consume-asyncOp.cpp` 후 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행 합니다.  
   
- **cl.exe wrl-consume-asyncOp.cpp runtimeobject.lib**  
+ **cl.exe wrl 소비 asyncOp.cpp runtimeobject.lib**  
   
 ## <a name="see-also"></a>참고 항목  
  [Windows 런타임 C++ 템플릿 라이브러리(WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

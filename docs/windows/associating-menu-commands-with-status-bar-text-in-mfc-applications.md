@@ -1,31 +1,26 @@
 ---
-title: "메뉴 명령과 상태 표시줄 텍스트 MFC 응용 프로그램에 연결 | Microsoft Docs"
-ms.custom: 
+title: 메뉴 명령과 상태 표시줄 텍스트 MFC 응용 프로그램에 연결 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - status bars, associating menu items
 - menus, status bar text
 ms.assetid: 757c0e02-bc97-493f-bccd-6cc6887ebc64
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ea0f68bbd0c426aee8141c27d6852bfaaa6ed523
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17326bdb8fe01c9ad329db0a6c7e8178fdbb25e7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="associating-menu-commands-with-status-bar-text-in-mfc-applications"></a>MFC 응용 프로그램에서 메뉴 명령과 상태 표시줄 텍스트 연결
 응용 프로그램은 사용자가 선택할 수 있는 각 메뉴 명령에 대한 설명 텍스트를 표시할 수 있습니다. 속성 창에서 **프롬프트** 속성을 사용하여 각 메뉴 명령에 텍스트 문자열을 할당하면 됩니다. 명령과 동일한 ID를 가진 문자열이 [문자열 테이블](../windows/string-editor.md) 에 있는 경우 MFC 응용 프로그램은 사용자가 메뉴 항목 위로 마우스를 가져갈 때 실행 중인 응용 프로그램의 상태 표시줄에 이 문자열 리소스를 자동으로 표시합니다.  

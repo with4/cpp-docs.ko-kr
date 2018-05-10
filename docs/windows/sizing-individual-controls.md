@@ -1,13 +1,10 @@
 ---
-title: "각 컨트롤 크기 조정 | Microsoft Docs"
-ms.custom: 
+title: 각 컨트롤 크기 조정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - text, autosizing controls to fit text
 - controls [C++], sizing
 ms.assetid: 14ccba02-7171-463a-a121-7018cf1e2e5a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b019cd2bbf68a4321bafd6dd960ffbcdba2dddf7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 03577dbf831c21ec9878a787d937d39b5e8bcd66
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="sizing-individual-controls"></a>각 컨트롤 크기 조정
 컨트롤의 크기를 조정 하려면 크기 조정 핸들을 사용 합니다. 크기 조정 핸들에 포인터를 컨트롤을 조정할 수 있는 지침을 나타내는 셰이프를 변경 됩니다. 현재 크기 조정 핸들은 실선입니다. 크기 조정 핸들을 빈 경우 해당 축을 따라 컨트롤을 조정할 수 없습니다.  

@@ -1,13 +1,10 @@
 ---
-title: "메뉴 편집기 | Microsoft Docs"
-ms.custom: 
+title: 메뉴 편집기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.menu.F1
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - Menu editor
 - menus, Menu editor
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5580c32b76af4b1115c9327b3387aa6de4baa32a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5626e370dbeac9339dd603781e96f64377308899
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="menu-editor"></a>메뉴 편집기
 메뉴를 통해 논리적이고 찾기 쉬운 방식으로 명령을 정렬할 수 있습니다. 메뉴 편집기를 사용하면 완성된 응용 프로그램과 매우 유사한 메뉴 모음을 직접 활용하여 메뉴를 만들고 편집할 수 있습니다.  

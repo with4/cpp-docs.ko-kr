@@ -1,13 +1,10 @@
 ---
 title: SafeSubtract | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeSubtract
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeSubtract function
 ms.assetid: c2712ddc-173f-46a1-b09c-e7ebbd9e68b2
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b94d84e6a348b68258fc1b57c2e0ad9ad30e36d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 300959fe64d280ff3e2c19fd579e8f447a2402eb
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safesubtract"></a>SafeSubtract
 오버플로 방지 하는 방식으로 두 개의 숫자를 뺍니다.  
@@ -53,7 +48,7 @@ inline bool SafeSubtract (
  매개 변수가 있는 `SafeSubtract` 결과 저장 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true`오류가 발생 하지 않으면; `false` 오류가 발생 합니다.  
+ `true` 오류가 발생 하지 않으면; `false` 오류가 발생 합니다.  
   
 ## <a name="remarks"></a>설명  
  이 메서드는의 일부 [SafeInt 라이브러리](../windows/safeint-library.md) 용인지 단일 빼기 작업의 인스턴스를 만들지 않고 및는 [SafeInt 클래스](../windows/safeint-class.md)합니다.  

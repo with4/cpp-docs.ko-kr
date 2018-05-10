@@ -1,13 +1,10 @@
 ---
-title: "리소스 기호 대화 상자 | Microsoft Docs"
-ms.custom: 
+title: 리소스 기호 대화 상자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.resourcesymbols
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - Resource Symbols dialog box
 - Change Symbol dialog box
 ms.assetid: 9706cde3-1f48-4fcd-bedb-2b03b455e3c1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0e21f60fb2ca90e9e4825e93103fa74be3563780
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 486d4c6c89a43c9d91c655911fa7fee8a31ebd32
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="resource-symbols-dialog-box"></a>리소스 기호 대화 상자
 **리소스 기호** 대화 상자를 사용 하면 기호를 사용에서 하는 소스 코드의 특정 위치에 건너뛸지 표시 되는 기호를 변경, 새 리소스 기호를 추가할 수 있습니다.  

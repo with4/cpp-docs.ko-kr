@@ -1,13 +1,10 @@
 ---
-title: "IDL 특성 | Microsoft Docs"
-ms.custom: 
+title: IDL 특성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - IDL files, attributes
 - .idl files
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 447c4369d7a80348dfb6c5eee54c49d76c1e8a4c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5c522c039a0471240ba319561485e8cc7f348aaa
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="idl-attributes"></a>IDL 특성
 일반적으로.idl 파일을 유지 해야 했습니다 의미 합니다.  
@@ -84,7 +79,7 @@ ms.lasthandoff: 12/21/2017
 |[lcid](../windows/lcid.md)|로캘 식별자는 함수에 전달할 수 있습니다.|  
 |[length_is](../windows/length-is.md)|전송할 배열 요소의 수를 지정 합니다.|  
 |[licensed](../windows/licensed.md)|적용 되는 coclass 사용이 허가 되 고 사용 하 여 인스턴스화할 수 나타냅니다 **IClassFactory2**합니다.|  
-|[로컬](../windows/local-cpp.md)|MIDL 컴파일러 인터페이스 헤더에서 사용 될 때 헤더 생성기로 사용할 수 있습니다. 개별 함수를 사용할 경우 로컬 없는 스텁을 생성 되는 프로시저를 지정 합니다.|  
+|[local](../windows/local-cpp.md)|MIDL 컴파일러 인터페이스 헤더에서 사용 될 때 헤더 생성기로 사용할 수 있습니다. 개별 함수를 사용할 경우 로컬 없는 스텁을 생성 되는 프로시저를 지정 합니다.|  
 |[max_is](../windows/max-is.md)|유효한 배열 인덱스에 대 한 최대값을 지정합니다.|  
 |[모듈](../windows/module-cpp.md)|.Idl 파일의 라이브러리 블록을 정의합니다.|  
 |[ms_union](../windows/ms-union.md)|Nonencapsulated 공용 구조체의 네트워크 데이터 표현 맞춤을 제어합니다.|  
@@ -105,7 +100,7 @@ ms.lasthandoff: 12/21/2017
 |[propput](../windows/propput.md)|속성 설정 함수를 지정합니다.|  
 |[ptr](../windows/ptr.md)|전체 포인터도 포인터를 지정합니다.|  
 |[public](../windows/public-cpp-attributes.md)|.Idl 파일 내에서 참조 하지 않는 경우에 형식 라이브러리로 typedef 상태로 진행 될를 확인 합니다.|  
-|[범위](../windows/range-cpp.md)|형식 정의 나 런타임에 해당 값이 설정 되는 필드에 대 한 허용 가능한 값의 범위를 지정 합니다.|  
+|[range](../windows/range-cpp.md)|형식 정의 나 런타임에 해당 값이 설정 되는 필드에 대 한 허용 가능한 값의 범위를 지정 합니다.|  
 |[readonly](../windows/readonly-cpp.md)|변수에 할당을 금지합니다.|  
 |[ref](../windows/ref-cpp.md)|참조 포인터를 식별합니다.|  
 |[requestedit](../windows/requestedit.md)|속성을 지원 하는지 나타냅니다는 **OnRequestEdit** 알림입니다.|  

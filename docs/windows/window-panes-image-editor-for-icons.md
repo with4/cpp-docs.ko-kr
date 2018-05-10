@@ -1,13 +1,10 @@
 ---
-title: "창 (아이콘에 대 한 이미지 편집기) | Microsoft Docs"
-ms.custom: 
+title: 창 (아이콘에 대 한 이미지 편집기) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - graphics editor [C++]
 - Image editor [C++], panes
 ms.assetid: d66ea5b3-e2e2-4fc4-aa99-f50022cc690e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c4b28d49d698f5bc39d8a3915c635c28ecca4193
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e899729e70db089c1c55f00aa9c4196a22c67060
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="window-panes-image-editor-for-icons"></a>창(아이콘에 대한 이미지 편집기)
 일반적으로 이미지 편집기 창 분할 막대로 구분 된 두 창에 이미지를 표시 합니다. 그 중 하나는 실제 크기 및 다른 확대 됩니다 (기본 확대 계수는 6). 이러한 두 창의 뷰를 자동으로 업데이트 됩니다: 하나의 창에서 수행한 변경 내용을 다른에 즉시 표시 됩니다. 두 개의 창이 쉽게 확대해 수 개별 픽셀을 구분 하 고 있는, 같은 시간에 이미지의 실제 크기 보기에서 작업의 효과 확인 합니다. 이미지에서 작업할 수 있습니다.  

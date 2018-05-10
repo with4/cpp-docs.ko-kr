@@ -1,13 +1,10 @@
 ---
-title: "이미지 (아이콘에 대 한 이미지 편집기)의 일부 편집 | Microsoft Docs"
-ms.custom: 
+title: 이미지 (아이콘에 대 한 이미지 편집기)의 일부 편집 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - images [C++], pasting into
 - graphics [C++], editing
 ms.assetid: ff4f5fef-71a4-4fd8-825e-049399fed391
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: acd4859bf7c80cf2bbe6cd2d86c39d0fc596351d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b33a591a2f38062b5eaf81b0f56ab73a36f4c90c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="editing-parts-of-an-image-image-editor-for-icons"></a>이미지의 일부 편집(아이콘에 대한 이미지 편집기)
 표준 편집 작업을 수행할 수 있습니다-잘라내기, 복사, 해제 및 이동-에 [선택](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), 선택 항목의 일부 또는 전체 이미지 인지 여부입니다. 이미지 편집기를 Windows 클립보드를 사용 하므로 이미지 편집기와 다른 Windows 응용 프로그램 간에 이미지를 전송할 수 있습니다.  

@@ -2,27 +2,22 @@
 title: C + +의 Windows 프로그래밍 개요 | Microsoft Docs
 ms.custom: ''
 ms.date: 04/06/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0e00159c828a87eba58920f90b6cd73d1b216232
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 2096c36ec24c1ca7e20c789b8a1eb8c24589ccc1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++의 Windows 프로그래밍 개요
 
@@ -70,7 +65,7 @@ Windows 10에서 데스크톱 프로그램의 많은 종류를 만드는 Visual 
 
 - 정교한 그래픽 사용자 인터페이스의 소비자 응용 프로그램 자세한 내용은 [Hilo: Windows용 C++ 응용 프로그램 개발](http://go.microsoft.com/fwlink/p/?LinkId=256417)을 참조하세요.
 
-- .NET Framework에서 실행 하는 엔터프라이즈 및 기간 업무 앱입니다. 대부분의.NET Framework 응용 프로그램은 C# 또는 Visual Basic에서 기록 됩니다. 에서는 C + + /cli.NET 코드를 네이티브 c + + 라이브러리를 사용할 수 있도록 하는 interop 레이어를 만들려면 CLI 합니다. 자세한 내용은 참조 [.NET 프로그래밍 C + + /cli CLI (Visual c + +)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)합니다.
+- .NET Framework에서 실행 하는 엔터프라이즈 및 기간 업무 앱입니다. 대부분의.NET Framework 응용 프로그램은 C# 또는 Visual Basic에서 기록 됩니다. 에서는 C + + /cli.NET 코드를 네이티브 c + + 라이브러리를 사용할 수 있도록 하는 interop 레이어를 만들려면 CLI 합니다. 자세한 내용은 [.NET 프로그래밍 C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)를 참조합니다.
 
 - 네이티브 코드에서 실행되는 SQL 데이터베이스 클라이언트 자세한 내용은 참조 [SQL Server Native Client](/sql/relational-databases/native-client/odbc/sql-server-native-client-odbc)합니다.
 

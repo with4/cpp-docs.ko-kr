@@ -1,13 +1,10 @@
 ---
-title: "방법: 복사 하는 동안 언어 또는 리소스의 조건은 변경 | Microsoft Docs"
-ms.custom: 
+title: '방법: 복사 하는 동안 언어 또는 리소스의 조건은 변경 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.resvw.resource.changing
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - Language property
 - condition property of resource
 ms.assetid: 8f622ab0-bac2-468f-ae70-78911afc4759
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3655366e8851494482e628b9c260c796df3f64bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fcddbc0bb5a2afe807cbe8ca7643a831c28ad50f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying"></a>방법: 복사할 때 리소스의 언어 또는 조건 변경
 리소스에서 복사하는 동안 언어 속성이나 조건 속성 또는 두 가지 모두를 변경할 수 있습니다.  

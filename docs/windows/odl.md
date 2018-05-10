@@ -1,13 +1,10 @@
 ---
 title: odl | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.odl
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - odl attribute
 ms.assetid: 75dcb314-b50f-4a63-9180-507ac1bc78f3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb7525fb57a336defd6d2d50dae4bc0ee988c1ae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 559d149cfbe2fac7a5d648d56cb4e34d427cedc8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="odl"></a>odl
 개체 설명 언어 ODL () 인터페이스는 인터페이스를 식별합니다. MIDL 컴파일러 필요 하지 않습니다는 **odl** 특성; 이전.odl 파일의 호환에만 인식 됩니다.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  **odl** c + + 특성에 동일한 기능을는 [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) MIDL 특성입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cpp_attr_ref_odl.cpp  

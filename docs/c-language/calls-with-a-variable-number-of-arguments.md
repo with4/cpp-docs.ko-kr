@@ -1,13 +1,10 @@
 ---
-title: "가변적인 개수의 인수를 사용하여 호출 | Microsoft Docs"
-ms.custom: 
+title: 가변적인 개수의 인수를 사용하여 호출 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - '... ellipsis'
 - function calls, variable number of arguments
 ms.assetid: 8808fb26-4822-42f5-aba3-ac64b54e151b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446e15a6f578413cf3f0ddefa980303c10a5d280
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bee194177acc9f2e63719b4ecd16593db7fe048f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calls-with-a-variable-number-of-arguments"></a>가변적인 개수의 인수를 사용하여 호출
 쉼표 뒤에 마침표 3개(**, ...**)가 오는 줄임표 표기법으로 부분적 매개 변수 목록을 종료하여 함수에 전달되는 인수가 더 있을 수도 있지만 관련 정보가 더 이상 없음을 나타낼 수 있습니다. 이 인수에 대해 형식 검사를 수행하지 않습니다. 줄임표 표기법 앞에 하나 이상의 매개 변수가 와야 하며 매개 변수 목록에서 줄임표 표기법이 마지막 토큰이어야 합니다. 줄임표 표기법을 사용하지 않으면 매개 변수 목록에 선언된 매개 변수 외에 매개 변수가 수신될 경우 함수의 동작이 정의되지 않습니다.  

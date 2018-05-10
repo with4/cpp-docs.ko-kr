@@ -1,13 +1,10 @@
 ---
 title: SafeAdd | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeAdd
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeAdd function
 ms.assetid: 3f82b91d-59fe-4ee1-873b-d056182fa8be
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8b668f5b164934cff6643d73d9b4b6169a9d4b5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b0450820afdde3eb330948a65f8d052fa54017dc
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safeadd"></a>SafeAdd
 오버플로 방지 하는 방식으로 두 개의 숫자를 추가 합니다.  
@@ -53,7 +48,7 @@ inline bool SafeAdd (
  매개 변수가 있는 `SafeAdd` 결과 저장 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true`오류가 발생 하지 않으면; `false` 오류가 발생 합니다.  
+ `true` 오류가 발생 하지 않으면; `false` 오류가 발생 합니다.  
   
 ## <a name="remarks"></a>설명  
  이 메서드는의 일부 [SafeInt 라이브러리](../windows/safeint-library.md) 용인지 단일 추가 작업의 인스턴스를 만들지 않고 및는 [SafeInt 클래스](../windows/safeint-class.md)합니다.  

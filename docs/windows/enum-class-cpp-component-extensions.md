@@ -1,28 +1,23 @@
 ---
-title: "enum 클래스 (c + + 구성 요소 확장명) | Microsoft Docs"
-ms.custom: 
+title: enum 클래스 (c + + 구성 요소 확장명) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 876cab344f1177000f63740ca6c33bc1db1afefe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e17c5e2055ef478dc7cafd5a7b2677f47bb9e074
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="enum-class--c-component-extensions"></a>enum 클래스(C++ 구성 요소 확장)
 열거자라는 명명된 상수 집합으로 구성된 사용자 정의 형식인 열거형을 네임스페이스 범위에서 선언합니다.  
@@ -69,7 +64,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
   
  자세한 내용과 예제는 [열거형](http://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx)을 참조하세요.  
   
- 컴파일러는 열거자의 값을 정의하는 상수 식을 *underlying-type*으로 표현할 수 없는 경우 오류 메시지를 내보냅니다.  그러나 컴파일러는 내부 형식에 적합하지 않은 값에 대해 오류를 보고하지 않습니다. 예:  
+ 컴파일러는 열거자의 값을 정의하는 상수 식을 *underlying-type*으로 표현할 수 없는 경우 오류 메시지를 내보냅니다.  그러나 컴파일러는 내부 형식에 적합하지 않은 값에 대해 오류를 보고하지 않습니다. 예를 들어:  
   
 -   *underlying-type* 이 숫자이고, 열거자가 해당 형식의 최대값을 지정하는 경우, 그 다음에 암시적으로 정의되는 열거형 값은 표현할 수 없습니다.  
   

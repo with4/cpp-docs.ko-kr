@@ -1,13 +1,10 @@
 ---
-title: "제네릭 함수 (C + + /cli CLI) | Microsoft Docs"
-ms.custom: 
+title: 제네릭 함수 (C + + /cli CLI) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9ebafa409680609d6e097b803be2b539ccdc7601
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66eb27b28a1b18942c0a8a9a77a877a2f0b2ef8c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-functions-ccli"></a>제네릭 함수(C++/CLI)
 제네릭 함수는 형식 매개 변수 선언 된 함수입니다. 호출 되 면 실제 형식은 형식 매개 변수 대신 사용 됩니다.  
@@ -66,7 +61,7 @@ return-type identifier<type-parameter identifier(s)>
  추가 선언 정보입니다. 특성 및 특성 클래스에 대 한 자세한 내용은 특성을 참조 합니다.  
   
  *한정자* (선택 사항)  
- 정적 같은 함수에 대 한 한정자입니다.  `virtual`가상 메서드를 제네릭 될 수 있으므로 허용 되지 않습니다.  
+ 정적 같은 함수에 대 한 한정자입니다.  `virtual` 가상 메서드를 제네릭 될 수 있으므로 허용 되지 않습니다.  
   
  *반환 형식*  
  메서드에서 반환하는 형식입니다. 반환 형식이 void 인 경우 반환 값 없음은 필요 합니다.  
@@ -153,7 +148,7 @@ ref struct MyClass {
   
  **예제**  
   
- 다음 예제에서는 제네릭 함수를 사용 하 여 배열에서 첫 번째 요소를 찾을 수 있습니다. 선언 `MyClass`, 기본 클래스에서 상속 되 `MyBaseClass`합니다. `MyClass`제네릭 함수를 포함 `MyFunction`, 다른 제네릭 함수를 호출 하는 `MyBaseClassFunction`, 기본 클래스 내에서. **주**, 제네릭 함수 `MyFunction`, 다른 형식 인수를 사용 하 여 호출 됩니다.  
+ 다음 예제에서는 제네릭 함수를 사용 하 여 배열에서 첫 번째 요소를 찾을 수 있습니다. 선언 `MyClass`, 기본 클래스에서 상속 되 `MyBaseClass`합니다. `MyClass` 제네릭 함수를 포함 `MyFunction`, 다른 제네릭 함수를 호출 하는 `MyBaseClassFunction`, 기본 클래스 내에서. **주**, 제네릭 함수 `MyFunction`, 다른 형식 인수를 사용 하 여 호출 됩니다.  
   
 ```  
 // generics_generic_function_3.cpp  

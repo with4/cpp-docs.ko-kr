@@ -1,13 +1,10 @@
 ---
-title: "제한 된 | Microsoft Docs"
-ms.custom: 
+title: 제한 된 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.restricted
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 569d57da691f40857f54dcae1c383ff7758564f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e1d688d4ebca5d2cc01901f5fe1afaa4536b71bb
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="restricted"></a>restricted
 모듈, 인터페이스 또는 dispinterface의 멤버를 임의로 호출할 수 없도록 지정 합니다.  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  **제한** c + + 특성에 동일한 기능을는 [제한](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL 특성입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에서는 사용 하 여 **제한** 특성:  
   
 ```  
@@ -79,7 +74,7 @@ class c : public a, public b
   
 |||  
 |-|-|  
-|**적용 대상**|인터페이스 메서드를 `interface`, **클래스**,`struct`|  
+|**적용 대상**|인터페이스 메서드를 `interface`, **클래스**, `struct`|  
 |**반복 가능**|아니요|  
 |**필수 특성**|**coclass** ( **클래스** 또는 `struct`에 적용된 경우)|  
 |**잘못된 특성**|없음|  

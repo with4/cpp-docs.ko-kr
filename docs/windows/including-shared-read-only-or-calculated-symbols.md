@@ -1,13 +1,10 @@
 ---
-title: "포함 하 여 공유 (읽기 전용) 또는 계산 된 기호 | Microsoft Docs"
-ms.custom: 
+title: 포함 하 여 공유 (읽기 전용) 또는 계산 된 기호 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.shared.calculated
 dev_langs:
@@ -21,25 +18,23 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 32b77faf-a066-4371-a072-9a5b84c0766d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bf0beeb90e2d4c4d22f45322f881bb7a247acf12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c56e8af65d27bda8ef04655f40bdd2e335067d3c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="including-shared-read-only-or-calculated-symbols"></a>공유(읽기 전용) 또는 계산된 기호 포함
 다른 응용 프로그램에서 만든 리소스 파일을 처음으로 개발 환경에서 읽는 경우 포함된 헤더 파일을 모두 읽기 전용으로 표시합니다. 그런 다음, 사용할 수는 [리소스 내용 대화 상자](../windows/resource-includes-dialog-box.md) 추가 읽기 전용 기호 헤더 파일을 추가 합니다.  
   
  읽기 전용 기호 정의를 사용하려는 한 가지 이유는 여러 프로젝트에서 공유하려고 하는 기호 파일 때문입니다.  
   
- 또한 단순 정수 대신 식을 사용하여 기호 값을 정의하는 기호 정의를 사용하는 기존 리소스가 있는 경우에 포함된 기호 파일을 사용할 수 있습니다. 예:  
+ 또한 단순 정수 대신 식을 사용하여 기호 값을 정의하는 기호 정의를 사용하는 기존 리소스가 있는 경우에 포함된 기호 파일을 사용할 수 있습니다. 예를 들어:  
   
 ```  
 #define   IDC_CONTROL1 2100  

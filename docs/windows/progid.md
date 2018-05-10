@@ -1,13 +1,10 @@
 ---
 title: progid | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.progid
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - progid attribute
 ms.assetid: afcf559c-e432-481f-aa9a-bd3bb72c02a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 862629af7e279cf1f03a5e9adc9424b330ee1d90
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2b2d2168b568c74c5404cc83bab1e5f77570773
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="progid"></a>progid
 COM 개체에 대 한 ProgID를 지정합니다.  
@@ -57,7 +52,7 @@ COM 개체에 대 한 ProgID를 지정합니다.
   
  ATL을 사용 하는 프로젝트 내에서이 특성을 사용 하는 경우 특성의 동작이 변경 됩니다. 위의 동작 외에도이 특성으로 지정 된 정보에 사용 되는 **GetProgID** 함수에 의해 삽입 된 **coclass** 특성입니다. 자세한 내용은 참조는 [coclass](../windows/coclass.md) 특성입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  예를 참조 [coclass](../windows/coclass.md) 의 샘플 사용에 대 한 **progid**합니다.  
   
 ## <a name="requirements"></a>요구 사항  

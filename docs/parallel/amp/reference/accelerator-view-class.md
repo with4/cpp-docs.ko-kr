@@ -1,12 +1,9 @@
 ---
-title: "accelerator_view 클래스 | Microsoft Docs"
-ms.custom: 
+title: accelerator_view 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - accelerator_view
@@ -30,17 +27,15 @@ dev_langs:
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5160e0fa37ed8c1c40a3cdfd6ca63d3b76e2d980
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1aa0e365ac531a5e1bb7b87a38fc86fb20032d20
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="acceleratorview-class"></a>accelerator_view 클래스
 C + + AMP 데이터 병렬 가속기에서 가상 장치 추상화를 나타냅니다.  
@@ -238,7 +233,7 @@ Accelerator_view 개체 DEBUG 레이어가 활성화 광범위 한 오류 보고
 __declspec(property(get= get_is_debug)) bool is_debug;  
 ```  
   
-## <a name="accelerator_view__operator_neq"></a> operator! = 
+## <a name="accelerator_view__operator_neq"></a> operator!= 
 
 이 accelerator_view 개체를 다른 비교 하 고 반환 `false` 않으면는 동일 합니다; 그렇지 않으면 반환 `true`합니다.  
   
@@ -272,7 +267,7 @@ accelerator_view & operator= (    const accelerator_view & _Other );
 ### <a name="return-value"></a>반환 값  
  수정된 `accelerator_view` 개체에 대한 참조입니다.  
   
-## <a name="accelerator_view__operator_eq_eq"></a> operator== 
+## <a name="accelerator_view__operator_eq_eq"></a> 연산자 = = 
 
 이 accelerator_view 개체를 다른 비교 하 고 반환 `true` 않으면는 동일 합니다; 그렇지 않으면 반환 `false`합니다.  
   

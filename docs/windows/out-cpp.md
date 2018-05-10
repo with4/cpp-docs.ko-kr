@@ -1,13 +1,10 @@
 ---
 title: out (c + +) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.out
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ee63988571f7db0a872bf0286dae952f3066f0e7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b23ff91a67962ec36cf6a9c2f5ebbf8122ab73c1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="out-c"></a>out(C++)
 호출된 프로시저에서 호출하는 프로시저로 반환된(서버에서 클라이언트로 반환된) 포인터 매개 변수를 식별합니다.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  **out** C++ 특성에는 [out](http://msdn.microsoft.com/library/windows/desktop/aa367136) MIDL 특성과 동일한 기능이 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [out](../windows/bindable.md) 의 샘플 사용에 대해서는 **bindable**에 대한 예제를 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  

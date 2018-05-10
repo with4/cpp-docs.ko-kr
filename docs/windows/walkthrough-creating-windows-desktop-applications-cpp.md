@@ -1,12 +1,10 @@
 ---
-title: "연습: 기존의 Windows 데스크톱 응용 프로그램 (c + +) 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: 기존의 Windows 데스크톱 응용 프로그램 (c + +) 만들기 | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 1/11/2018
-ms.reviewer: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,15 +13,14 @@ helpviewer_keywords:
 - Windows API [C++]
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce3c18abbace2181b2d31e0621b6e376021be68a
-ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
+ms.openlocfilehash: e5581292ec163a2e745802c66a87c14a8457f141
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>연습: 기존의 Windows 데스크톱 응용 프로그램 (c + +) 만들기
 
@@ -34,7 +31,7 @@ Windows API (라고도: Win32 API, Windows 데스크톱 API 및 Windows 클래�
 > [!IMPORTANT]
 > 간단히 하기 위해 텍스트에는 일부 코드 문은 생략 됩니다. [코드](#build-the-code) 섹션 끝이 문서에는 전체 코드를 보여 줍니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 - Microsoft Windows 7 이상을 실행 하는 컴퓨터입니다. 개발 환경을 최적화 하려면 Windows 10이 좋습니다.
 
@@ -54,13 +51,13 @@ Windows API (라고도: Win32 API, Windows 데스크톱 API 및 Windows 클래�
 
 1. **파일** 메뉴에서 **새로 만들기**, **프로젝트**를 차례로 선택합니다.
 
-1. 에 **새 프로젝트** 대화 상자의 왼쪽된 창에서 **설치 됨**, **Visual c + +**을 선택한 후 **Windows 바탕 화면**합니다. 가운데 창에서 선택 **Windows 바탕 화면 마법사**합니다.
+1. 에 **새 프로젝트** 대화 상자의 왼쪽된 창에서 **설치 됨**, **Visual c + +** 을 선택한 후 **Windows 바탕 화면**합니다. 가운데 창에서 선택 **Windows 바탕 화면 마법사**합니다.
 
    에 **이름** 상자 예를 들어 프로젝트에 대 한 이름을 입력 합니다 *DesktopApp*합니다. **확인**을 선택합니다.
 
    ![DesktopApp 프로젝트 이름을](../build/media/desktop-app-new-project-name-153.png "DesktopApp 프로젝트 이름을")
 
-1. 에 **Windows 데스크톱 프로젝트** 대화 아래 **응용 프로그램 종류**선택, **Windows 응용 프로그램 (.exe)**합니다. **추가 옵션**에서 **빈 프로젝트**를 선택합니다. 선택 **확인** 프로젝트를 만듭니다.
+1. 에 **Windows 데스크톱 프로젝트** 대화 아래 **응용 프로그램 종류**선택, **Windows 응용 프로그램 (.exe)** 합니다. **추가 옵션**에서 **빈 프로젝트**를 선택합니다. 선택 **확인** 프로젝트를 만듭니다.
 
    ![Windows 데스크톱 프로젝트 마법사에서 DesktopApp 만들기](../build/media/desktop-app-new-project-wizard-153.png "DesktopApp Windows 데스크톱 프로젝트 마법사에서 만들기")
 
@@ -68,17 +65,17 @@ Windows API (라고도: Win32 API, Windows 데스크톱 API 및 Windows 클래�
 
    ![DesktopApp 프로젝트에 새 항목 추가](../build/media/desktop-app-project-add-new-item-153.gif "DesktopApp 프로젝트에 새 항목 추가")
 
-1. **새 항목 추가** 대화 상자에서 **C++ 파일(.cpp)**을 선택합니다. 에 **이름** 상자 예를 들어 파일에 대 한 이름을 입력 합니다 *HelloWindowsDesktop.cpp*합니다. **추가**를 선택합니다.
+1. **새 항목 추가** 대화 상자에서 **C++ 파일(.cpp)** 을 선택합니다. 에 **이름** 상자 예를 들어 파일에 대 한 이름을 입력 합니다 *HelloWindowsDesktop.cpp*합니다. **추가**를 선택합니다.
 
    ![추가.cpp 파일을 DesktopApp 프로젝트](../build/media/desktop-app-add-cpp-file-153.png "DesktopApp 프로젝트에.cpp 파일 추가")
 
 프로젝트가 이제 만들어지고 프로그램 소스 파일은 편집기에서 열립니다. 계속 하려면으로 바로 이동 [코드를 만들](#create-the-code)합니다.
 
-### <a id="create-in-vs2017-rtm"></a>Visual Studio 2017 RTM에서 Windows 데스크톱 프로젝트를 만들려면
+### <a id="create-in-vs2017-rtm"></a> Visual Studio 2017 RTM에서 Windows 데스크톱 프로젝트를 만들려면
 
 1. **파일** 메뉴에서 **새로 만들기**, **프로젝트**를 차례로 선택합니다.
 
-1. 에 **새 프로젝트** 대화 상자의 왼쪽된 창에서 **설치 됨**, **템플릿**, **Visual c + +**를 선택한 후 **Win32**합니다. 가운데 창에서 **Win32 프로젝트**를 선택합니다.
+1. 에 **새 프로젝트** 대화 상자의 왼쪽된 창에서 **설치 됨**, **템플릿**, **Visual c + +** 를 선택한 후 **Win32**합니다. 가운데 창에서 **Win32 프로젝트**를 선택합니다.
 
    에 **이름** 상자 예를 들어 프로젝트에 대 한 이름을 입력 합니다 *DesktopApp*합니다. **확인**을 선택합니다.
 
@@ -96,7 +93,7 @@ Windows API (라고도: Win32 API, Windows 데스크톱 API 및 Windows 클래�
 
    ![DesktopApp 프로젝트에 새 항목 추가](../build/media/desktop-app-project-add-new-item-150.gif "DesktopApp 프로젝트에 새 항목 추가")
 
-1. **새 항목 추가** 대화 상자에서 **C++ 파일(.cpp)**을 선택합니다. 에 **이름** 상자 예를 들어 파일에 대 한 이름을 입력 합니다 *HelloWindowsDesktop.cpp*합니다. **추가**를 선택합니다.
+1. **새 항목 추가** 대화 상자에서 **C++ 파일(.cpp)** 을 선택합니다. 에 **이름** 상자 예를 들어 파일에 대 한 이름을 입력 합니다 *HelloWindowsDesktop.cpp*합니다. **추가**를 선택합니다.
 
    ![추가.cpp 파일을 DesktopApp 프로젝트](../build/media/desktop-app-add-cpp-file-150.png "DesktopApp 프로젝트에.cpp 파일 추가")
 
@@ -369,7 +366,7 @@ Windows API (라고도: Win32 API, Windows 데스크톱 API 및 Windows 클래�
    }
    ```
 
-   `HDC`이 코드는 장치 컨텍스트에 그래픽 하위 시스템과 통신 하는 응용 프로그램을 사용 하도록 설정 하려면 Windows에서 사용 하는 데이터 구조에 대 한 핸들입니다. `BeginPaint` 및 `EndPaint` 함수 확인 응용 프로그램이 수행 하 게 작동 하 고 필요한 것 보다 더 이상에 대 한 장치 컨텍스트를 사용 하지 않습니다. 이렇게 하면 그래픽 하위 시스템은 다른 응용 프로그램에서 사용할 수 있습니다.
+   `HDC` 이 코드는 장치 컨텍스트에 그래픽 하위 시스템과 통신 하는 응용 프로그램을 사용 하도록 설정 하려면 Windows에서 사용 하는 데이터 구조에 대 한 핸들입니다. `BeginPaint` 및 `EndPaint` 함수 확인 응용 프로그램이 수행 하 게 작동 하 고 필요한 것 보다 더 이상에 대 한 장치 컨텍스트를 사용 하지 않습니다. 이렇게 하면 그래픽 하위 시스템은 다른 응용 프로그램에서 사용할 수 있습니다.
 
 1. 응용 프로그램 일반적으로 많은 기타 메시지 처리, 예를 들어 [WM_CREATE](https://msdn.microsoft.com/library/windows/desktop/ms632619) 창이 처음 만들어질 때 및 [WM_DESTROY](https://msdn.microsoft.com/library/windows/desktop/ms632620) 은 창이 닫힐 때. 다음 코드에서는 기본적인 전체 `WndProc` 함수를 보여 줍니다.
 

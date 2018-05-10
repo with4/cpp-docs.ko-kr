@@ -1,13 +1,10 @@
 ---
 title: switch_is | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.switch_is
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fcf2345774b6df2453dcc4be3c0022e61792b716
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05805bff0044838aaea2af2013fa951c5d3be9a1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="switchis"></a>switch_is
 식 또는 공용 구조체 멤버를 선택 하 고 union 판별 역할 식별자를 지정 합니다.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  **switch_is** c + + 특성에 동일한 기능을는 [switch_is](http://msdn.microsoft.com/library/windows/desktop/aa367275) MIDL 특성입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  참조는 [대/소문자](../windows/case-cpp.md) 의 샘플 사용에 대 한 예제 **switch_is**합니다.  
   
 ## <a name="requirements"></a>요구 사항  

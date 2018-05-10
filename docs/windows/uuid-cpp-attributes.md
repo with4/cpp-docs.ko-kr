@@ -1,13 +1,10 @@
 ---
-title: "uuid (c + + 특성) | Microsoft Docs"
-ms.custom: 
+title: uuid (c + + 특성) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.uuid
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba35dc89ae2567a499d4623f0c74293d2dbdcca2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e56793855b278e0631c39ebfcdc51669a001a24b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="uuid-c-attributes"></a>uuid(C++ 특성)
 클래스 또는 인터페이스에 대 한 고유 ID를 지정합니다.  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
  또한 ATL을 사용 하지는 않는 프로젝트를 사용할 경우 지정 하는 `uuid` 특성을 지정 하는 것과 같습니다는 [uuid](../cpp/uuid-cpp.md) __declspec 한정자입니다. 검색 하는 `uuid` 사용할 수는 클래스의 [__uuidof](../cpp/uuidof-operator.md)  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  참조는 [바인딩 가능한](../windows/bindable.md) 의 샘플 사용에 대 한 예제 `uuid`합니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|**적용 대상**|**클래스**, `struct`, `interface`, **union**,`enum`|  
+|**적용 대상**|**클래스**, `struct`, `interface`, **union**, `enum`|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
 |**잘못된 특성**|없음|  

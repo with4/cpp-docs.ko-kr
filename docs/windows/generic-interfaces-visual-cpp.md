@@ -1,31 +1,26 @@
 ---
-title: "제네릭 인터페이스 (Visual c + +) | Microsoft Docs"
-ms.custom: 
+title: 제네릭 인터페이스 (Visual c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - generic interfaces
 - interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b08ab6585cd4d8c7a4da93273f99d47c0265608c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8e16a2ab8a1ee0c9255f394d033bda2a7afc2b7e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generic-interfaces-visual-c"></a>제네릭 인터페이스(Visual C++)
 클래스에 매개 변수를 형식에 적용 되는 제한 사항을 인터페이스에 형식 매개 변수를 적용 하는 것과 동일 (참조 [제네릭 클래스 (C + + /cli CLI)](../windows/generic-classes-cpp-cli.md)).  
@@ -71,7 +66,7 @@ ms.lasthandoff: 12/21/2017
  *선언 자* (선택 사항)  
  이 형식에 기반 하 여 변수를 선언 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에는 선언 하 고 제네릭 인터페이스를 인스턴스화하는 방법을 보여 줍니다. 예제에서는 제네릭 인터페이스 `IList<ItemType>` 선언 됩니다. 다음 두 개의 제네릭 클래스에 의해 구현 되며 `List1<ItemType>` 및 `List2<ItemType>`, 다른 구현으로 합니다.  
   
 ```  
@@ -247,7 +242,7 @@ Array List
 List2  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 제네릭 인터페이스를 선언 `IMyGenIface`, 및 두 개의 제네릭이 아닌 인터페이스 `IMySpecializedInt` 및 `ImySpecializedString`을 특수화 하는 `IMyGenIface`합니다. 두 개의 특수 인터페이스는 다음 두 개의 클래스에서 구현 `MyIntClass` 및 `MyStringClass`합니다. 제네릭 인터페이스를 특수화할 제네릭 및 제네릭이 아닌 인터페이스를 인스턴스화하고 인터페이스에 명시적으로 구현 된 멤버를 호출 하는 방법을 보여 줍니다.  
   
 ```  

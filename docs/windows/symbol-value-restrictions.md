@@ -1,13 +1,10 @@
 ---
-title: "기호 값 제한 | Microsoft Docs"
-ms.custom: 
+title: 기호 값 제한 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.restrictions.value
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - symbols, value restrictions
 - restrictions, symbol values
 ms.assetid: 32467ec3-690b-4cd0-a4d0-7d189a3296cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5f2188d6904274fabce0f8626fa2f440ac324ff5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3432ca82d9557fbcb47da65be148bedb0f47f8b8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="symbol-value-restrictions"></a>기호 값 제한
 기호 값은 #define 전처리기 지시문에 대해 일반적인 방식으로 표현된 정수일 수 있습니다. 다음은 기호 값의 몇 가지 예입니다.  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
     #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported  
     ```  
   
--   인수가 있는 전처리기 매크로는 값 정의로 사용할 수 없습니다. 예:  
+-   인수가 있는 전처리기 매크로는 값 정의로 사용할 수 없습니다. 예를 들어:  
   
     ```  
     #define   IDD_ABOUT  ID(7) //not supported  

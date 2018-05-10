@@ -1,13 +1,10 @@
 ---
-title: "콤보 상자 및 드롭다운 목록의 크기 설정 작업 | Microsoft Docs"
-ms.custom: 
+title: 콤보 상자 및 드롭다운 목록의 크기 설정 작업 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.combo
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - combo boxes, sizing
 - controls [C++], sizing
 ms.assetid: 51fb53cf-9ddf-4a20-962e-8553938e55ee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8cac985a4cc723e2e0b5db9812e29b8b9632f26
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1ee46502fee6f37d926580863dfc91edb276a846
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="setting-the-size-of-the-combo-box-and-its-drop-down-list"></a>콤보 상자 및 드롭다운 목록의 크기 설정
 대화 상자에 추가 하면 콤보 상자 크기. 드롭다운 목록 상자의 크기를 지정할 수 있습니다.  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  아래쪽 크기 조정 핸들을 사용 하 여 드롭다운 목록에서 영역의 초기 크기를 변경 합니다.  
   
-     ![콤보 &#45; MFC 프로젝트의 상자 크기 조정](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")  
+     ![콤보&#45;MFC 프로젝트의 상자 크기 조정](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")  
   
 3.  콤보 상자의 드롭다운 목록에서 부분을 다시 드롭다운 화살표를 클릭 합니다.  
   

@@ -1,12 +1,9 @@
 ---
-title: "Simpleclassfactory:: Createinstance 메서드 | Microsoft Docs"
-ms.custom: 
+title: 'Simpleclassfactory:: Createinstance 메서드 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::SimpleClassFactory::CreateInstance
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - CreateInstance method
 ms.assetid: 17b7947a-2608-49d9-b730-fef76501c9bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 68778eb1b5421cfcf22261d8b1c1efd99bc32c50
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a31d364a6464962b8243cfaced03131a20f9324
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="simpleclassfactorycreateinstance-method"></a>SimpleClassFactory::CreateInstance 메서드
 
@@ -61,7 +56,7 @@ SimpleClassFactory 집계를 지원 하지 않습니다. 집계 된 지원 하 �
 
 ## <a name="remarks"></a>설명
 
-경우 &#95; &#95; WRL_STRICT &#95; #95 정의 assert 오류가 면 내보내집니다 클래스 템플릿 매개 변수에서 지정 된 기본 클래스에서 파생 되지 않습니다 [RuntimeClass](../windows/runtimeclass-class.md), 않거나 ClassicCom 또는 WinRtClassicComMix 구성 되지 않았습니다 [RuntimeClassType ](../windows/runtimeclasstype-enumeration.md) 열거형 값입니다.
+경우 &#95; &#95;WRL_STRICT&#95; &#95; 은 정의 assert 오류가 면 내보내집니다 클래스 템플릿 매개 변수에서 지정 된 기본 클래스에서 파생 되지 않습니다 [RuntimeClass](../windows/runtimeclass-class.md)는 ClassicCom를 사용 하 여 구성 되지 않았습니다 또는 또는 WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 열거형 값입니다.
 
 ## <a name="requirements"></a>요구 사항
 

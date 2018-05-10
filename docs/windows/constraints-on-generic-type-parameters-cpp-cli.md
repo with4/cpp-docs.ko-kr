@@ -1,13 +1,10 @@
 ---
-title: "제네릭에 대 한 제약 조건 형식 매개 변수 (C + + /cli CLI) | Microsoft Docs"
-ms.custom: 
+title: 제네릭에 대 한 제약 조건 형식 매개 변수 (C + + /cli CLI) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - where
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e59c5ecb6101667c7d8546afcc6cbbfb9e024488
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c9787eb87ab701d067762a436d92b2fba3fabcbb
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>제네릭 형식 매개 변수에 대한 제약 조건(C++/CLI)
 제네릭 형식 또는 메서드 선언에는 제약 조건이 있는 형식 매개 변수를 한정할 수 있습니다. 제약 조건은 형식 인수로 사용되는 형식이 충족해야 하는 요구 사항입니다. 예를 들어, 형식 인수가 특정 인터페이스를 구현하거나 특정 클래스에서 상속해야 제한할 수 있습니다.  
@@ -92,7 +87,7 @@ where T : List<T>, IComparable<T>
 ref class List {};  
 ```  
   
- 여러 개의 형식 매개 변수를 사용 하 여 하나 **여기서** 각 형식 매개 변수에 대 한 절. 예:  
+ 여러 개의 형식 매개 변수를 사용 하 여 하나 **여기서** 각 형식 매개 변수에 대 한 절. 예를 들어:  
   
 ```  
 // generics_constraints_3.cpp  
@@ -112,7 +107,7 @@ ref class Dictionary {};
   
 -   제약 조건은 추상 기본 클래스와 같은 클래스 형식일 수도 있습니다. 그러나 제약 조건은 값 형식 또는 sealed 클래스일 수 없습니다.  
   
--   제약 조건 자체가 형식 매개 변수가 될 수 없지만, 개방형 생성 형식에 형식 매개 변수를 포함할 수 있습니다. 예:  
+-   제약 조건 자체가 형식 매개 변수가 될 수 없지만, 개방형 생성 형식에 형식 매개 변수를 포함할 수 있습니다. 예를 들어:  
   
     ```  
     // generics_constraints_4.cpp  
@@ -125,7 +120,7 @@ ref class Dictionary {};
     ref class G2{};  
     ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 제약 조건을 사용하여 형식 매개 변수에서 인스턴스 메서드를 호출하는 방법을 보여 줍니다.  
   
 ```  
@@ -186,7 +181,7 @@ int main() {
 "grandfather" is a senior  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  제네릭 형식 매개 변수를 제약 조건으로 사용하면 naked 형식 제약이라고 합니다. 고유한 형식 매개 변수가 있는 멤버 함수가 포함 형식의 형식 매개 변수에 해당 매개 변수를 제한할 필요가 있을 때 naked 형식 제약 조건이 유용합니다.  
   
  다음 예제에서 T는 Add 메서드의 컨텍스트에서 naked 형식 제약 조건입니다.  

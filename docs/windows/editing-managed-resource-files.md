@@ -1,13 +1,10 @@
 ---
-title: "관리 되는 리소스 파일 편집 | Microsoft Docs"
-ms.custom: 
+title: 관리 되는 리소스 파일 편집 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vb.xmldesigner.data
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - resource files, editing
 - resx files, editing
 ms.assetid: 42593030-7897-4bf3-920c-e0b2d11c5bbd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 936f6a3bab0a5ad3c6e9cf33110ba67056a918e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 269fc34ad67ce99ba390e41cda2510a2c84ec1da
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="editing-managed-resource-files"></a>관리되는 리소스 파일 편집
 관리 되는 리소스 파일 (.resx)는 XML 파일입니다. 관리 되는 리소스 파일에서 프로젝트에 추가 되는 경우는 **새 항목 추가** 대화 상자는 **관리 되는 리소스 편집기** 기본적으로 열립니다.  

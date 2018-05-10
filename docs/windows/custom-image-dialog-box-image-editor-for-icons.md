@@ -1,13 +1,10 @@
 ---
-title: "사용자 지정 이미지 대화 상자 (아이콘에 대 한 이미지 편집기) | Microsoft Docs"
-ms.custom: 
+title: 사용자 지정 이미지 대화 상자 (아이콘에 대 한 이미지 편집기) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.customimage
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Custom Image dialog box
 ms.assetid: 68e2cc5c-19de-428e-bc25-ec6b260247d0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0fe8a0087c6f1d1d1ac90f2d379dd812d6dcdf1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a0f8f4506d21c530f5131363cea9a9d142d5957
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="custom-image-dialog-box-image-editor-for-icons"></a>사용자 지정 이미지 대화 상자(아이콘에 대한 이미지 편집기)
 사용자 지정 크기 및 색상 수와 새 이미지를 만들 수 있습니다.

@@ -1,13 +1,10 @@
 ---
-title: "모듈 (c + +) | Microsoft Docs"
-ms.custom: 
+title: 모듈 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.module
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 75b41ea146096a60210918b5f21e7b6278e35001
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce7925fd15a7a332dbfb18e2a22dc104783300b7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="module-c"></a>module(C++)
 .Idl 파일의 라이브러리 블록을 정의합니다.  
@@ -73,7 +68,7 @@ ms.lasthandoff: 12/21/2017
  라이브러리 블록에 할당하려는 버전 번호입니다. 기본값은 1.0입니다.  
   
  `uuid`  
- 라이브러리에 대한 고유 ID입니다. 이 매개 변수를 생략하면 라이브러리에 대한 ID가 자동으로 생성됩니다. 라이브러리 블록의 *uuid* 를 검색해야 할 수 있습니다. **__uuidof(***libraryname***)**식별자를 사용하여 수행할 수 있습니다.  
+ 라이브러리에 대한 고유 ID입니다. 이 매개 변수를 생략하면 라이브러리에 대한 ID가 자동으로 생성됩니다. 검색 해야 할 수 있습니다는 *uuid* 식별자를 사용 하 여 수행할 수 있는 프로그램 라이브러리 블록의 **__uuidof (***libraryname***)** 합니다.  
   
  **lcid**  
  지역화 매개 변수입니다. 자세한 내용은 [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) 를 참조하세요.  
@@ -103,7 +98,7 @@ ms.lasthandoff: 12/21/2017
  라이브러리의 멤버를 임의로 호출할 수 없습니다. 자세한 내용은 [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL 특성을 참조하세요.  
   
  ***custom***  (선택 사항)  
- 하나 이상의 특성입니다. [custom](../windows/custom-cpp.md) 특성과 비슷합니다. `custom` 에 대한 첫 번째 매개 변수는 특성이 GUID입니다. 예:  
+ 하나 이상의 특성입니다. [custom](../windows/custom-cpp.md) 특성과 비슷합니다. `custom` 에 대한 첫 번째 매개 변수는 특성이 GUID입니다. 예를 들어:  
   
 ```  
 [module(custom={guid,1}, custom={guid1,2})]  
@@ -140,7 +135,7 @@ ms.lasthandoff: 12/21/2017
   
      모듈 특성과 관련된 ATL 코드의 삽입이 사용되지 않습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드는 생성된 .idl 파일의 라이브러리 블록을 만드는 방법을 보여 줍니다.  
   
 ```  

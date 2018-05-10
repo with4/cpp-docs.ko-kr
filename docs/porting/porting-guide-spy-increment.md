@@ -1,27 +1,22 @@
 ---
-title: "포팅 가이드: Spy++ | Microsoft 문서"
-ms.custom: 
+title: '포팅 가이드: Spy++ | Microsoft 문서'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5043e77826e2210f45b70d564313ae6fd976d93a
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.openlocfilehash: f645d1202149ae2625d5a15df5be61029beb6ab1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="porting-guide-spy"></a>포팅 가이드: Spy++
 이 포팅 사례 연구는 일반적인 포팅 프로젝트, 발생할 수 있는 문제 유형 및 포팅 문제를 다루기 위한 몇 가지 일반적인 팁과 트릭에 대한 아이디어를 제공하도록 설계되었습니다. 프로젝트 포팅 경험은 코드의 세부 사항에 따라 달라지므로 결정적인 포팅 가이드는 아닙니다.  
@@ -655,7 +650,7 @@ strFace.ReleaseBuffer();
  이러한 기술을 통해 안전한 CRT 함수를 사용하도록 코드를 변환하는 데 약 반나절이 걸렸습니다. 템플릿 오버로드를 선택하지 않고 크기 매개 변수를 수동으로 추가하는 경우 두세 배의 시간이 걸릴 것입니다.  
   
 ##  <a name="deprecated_forscope"></a> 13단계. /Zc:forScope가 사용되지 않음  
- Visual C++ 6.0 이후 컴파일러는 루프에서 선언된 변수의 범위를 루프 범위로 제한하는 현재 표준을 준수합니다. 컴파일러 옵션 [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)(프로젝트 속성의 **루프 범위 강제 규칙**)는 이를 오류로 보고할지 여부를 제어합니다. 부합되도록 코드를 업데이트하고 루프 바깥쪽에 선언을 추가해야 합니다. 코드 변경을 방지하기 위해 C++ 프로젝트 속성의 언어 섹션에서 해당 설정을 **아니요(/Zc:forScope-)**로 변경할 수 있습니다. 그러나 Visual C++의 이후 릴리스에서 **/Zc:forScope-**가 제거될 수도 있으므로 결국 표준에 맞게 코드를 변경해야 합니다.  
+ Visual C++ 6.0 이후 컴파일러는 루프에서 선언된 변수의 범위를 루프 범위로 제한하는 현재 표준을 준수합니다. 컴파일러 옵션 [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)(프로젝트 속성의 **루프 범위 강제 규칙**)는 이를 오류로 보고할지 여부를 제어합니다. 부합되도록 코드를 업데이트하고 루프 바깥쪽에 선언을 추가해야 합니다. 코드 변경을 방지하기 위해 C++ 프로젝트 속성의 언어 섹션에서 해당 설정을 **아니요(/Zc:forScope-)** 로 변경할 수 있습니다. 그러나 Visual C++의 이후 릴리스에서 **/Zc:forScope-** 가 제거될 수도 있으므로 결국 표준에 맞게 코드를 변경해야 합니다.  
   
  이러한 문제는 비교적 쉽게 해결되지만, 코드에 따라 많은 코드에 영향을 줄 수 있습니다. 다음은 일반적인 문제입니다.  
   

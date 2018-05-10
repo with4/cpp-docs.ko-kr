@@ -1,12 +1,9 @@
 ---
-title: "클래스를 세마포 | Microsoft Docs"
-ms.custom: 
+title: 클래스를 세마포 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Semaphore
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Semaphore class
 ms.assetid: ded53526-17b4-4381-9c60-ea5e77363db6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60373c12220fce57672389b98455a123990f3c93
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1219c2118f9cde18fe1909a2edd02d58a4be2341
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="semaphore-class"></a>Semaphore 클래스
 제한된 사용자 수를 지원할 수 있는 공유 리소스를 제어하는 동기화 개체를 나타냅니다.  

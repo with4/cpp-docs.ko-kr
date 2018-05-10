@@ -1,13 +1,10 @@
 ---
-title: "색 (아이콘에 대 한 이미지 편집기)를 사용 하 여 이미지 경계 영역을 채우는 | Microsoft Docs"
-ms.custom: 
+title: 색 (아이콘에 대 한 이미지 편집기)를 사용 하 여 이미지 경계 영역을 채우는 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - Image editor [C++], colors
 - Fill tool
 ms.assetid: e647ef83-421b-4818-855d-249b4c4cb5f2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dd951e22286b255ea504ba5764f76ba8b4020924
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f70decbfd0de1a31024482806594ca3c2b12aa8a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>이미지 경계 영역을 색으로 채우기(아이콘에 대한 이미지 편집기)
 이미지 편집기는 **채우기** 도구가 포함 된 현재 그리기 색 이나 현재 배경색으로 이미지 영역입니다.  

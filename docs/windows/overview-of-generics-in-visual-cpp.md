@@ -1,13 +1,10 @@
 ---
-title: "Visual c + +의 제네릭 개요 | Microsoft Docs"
-ms.custom: 
+title: Visual c + +의 제네릭 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5082f603c64e796ef369044e3586ae5bfe85605a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19200e3c3c4ed67960905b697187dbb6b37a65e9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="overview-of-generics-in-visual-c"></a>Visual C++의 제네릭 개요
 제네릭은 공용 언어 런타임에서 지원하는 매개 변수화된 형식입니다. 매개 변수화된 형식은 제네릭이 사용될 때 지정되는 알 수 없는 형식 매개 변수로 정의된 형식입니다.  
@@ -77,7 +72,7 @@ ms.lasthandoff: 12/21/2017
  제약 조건은 형식 매개 변수로 사용할 수 있는 형식에 대한 제한입니다. 예를 들어, 주어진 제네릭 클래스는 지정된 클래스에서 상속되는 클래스만 허용되고 지정된 인터페이스를 구현할 수 있습니다. 자세한 내용은 참조 [제네릭 형식 매개 변수에 대 한 제약 조건 (C + + /cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)합니다.  
   
 ## <a name="reference-types-and-value-types"></a>참조 형식 및 값 형식  
- 핸들 형식 및 값 형식을 형식 인수로 사용할 수 있습니다. 어느 한 형식이 사용될 수 있는 제네릭 정의에서 구문은 참조 형식입니다. 예를 들어는  **->**  여부는 결국 사용 되는 형식이 참조 형식 또는 값 형식이 형식 매개 변수의 형식의 멤버 액세스 연산자를 사용 합니다. 값 형식이 형식 인수로 사용되면, 런타임은 값 형식을 직접 boxing하지 않고 값 형식을 사용하는 코드를 생성합니다.  
+ 핸들 형식 및 값 형식을 형식 인수로 사용할 수 있습니다. 어느 한 형식이 사용될 수 있는 제네릭 정의에서 구문은 참조 형식입니다. 예를 들어는 **->** 여부는 결국 사용 되는 형식이 참조 형식 또는 값 형식이 형식 매개 변수의 형식의 멤버 액세스 연산자를 사용 합니다. 값 형식이 형식 인수로 사용되면, 런타임은 값 형식을 직접 boxing하지 않고 값 형식을 사용하는 코드를 생성합니다.  
   
  참조 형식을 제네릭 형식 인수로 사용하는 경우, 핸들 구문을 사용합니다. 값 형식을 제네릭 형식 인수로 사용할 경우, 직접 형식 이름을 사용합니다.  
   
@@ -135,7 +130,7 @@ int main() {
   
  이러한 제한은 연산자에도 적용됩니다. 제한되지 않은 제네릭 형식 매개 변수는 `==` 및 `!=` 연산자를 지원하지 않는 형식인 경우에 형식 매개 변수의 두 인스턴스를 비교하기 위해 사용하지 않습니다. 이러한 검사는 템플릿이 아닌 제네릭에 필요합니다. 제네릭은 유효하지 않은 멤버 사용을 확인하기에 너무 늦을 때, 런타임에 제약 조건을 만족시키는 클래스를 사용하여 특수화될 수 있기 때문입니다.  
   
- 형식 매개 변수의 기본 인스턴스는 `()` 연산자를 사용하여 만들어질 수 있습니다. 예:  
+ 형식 매개 변수의 기본 인스턴스는 `()` 연산자를 사용하여 만들어질 수 있습니다. 예를 들어:  
   
  `T t = T();`  
   

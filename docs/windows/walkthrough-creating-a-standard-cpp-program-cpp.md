@@ -1,13 +1,10 @@
 ---
 title: '연습: 표준 C++ 프로그램(C++) 만들기 | Microsoft Docs'
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 f1_keywords:
 - vcfirstapp
 - vccreatefirst
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-caps.latest.revision: 36
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52066be1d67bddb7173841e9df6c5013c86ac0dd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f563e318f2defcbf36139f1f6d49e3986db5f946
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>연습: 표준 C++ 프로그램(C++) 만들기
 표준 C++ 프로그램을 만들어 Visual Studio 통합 개발 환경(IDE)에서 Visual C++를 사용할 수 있습니다. 이 연습 단계를 수행하면 Visual Studio에서 프로젝트를 만들고, 만든 프로젝트에 파일을 추가하며 C++ 코드를 추가하고 컴파일 및 실행까지 일련의 과정을 수행할 수 있습니다[!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  표준 준수가 필요한 경우 사용 된 **/Za** 컴파일러 옵션을 표준에 대 한 Microsoft 확장을 사용 하지 않도록 설정 합니다. 자세한 내용은 참조 [/Za, /Ze (언어 확장명 사용 안 함)](../build/reference/za-ze-disable-language-extensions.md)합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 C++ 언어의 기본적인 사항을 알고 있어야 합니다.  
   
 ### <a name="to-create-a-project-and-add-a-source-file"></a>프로젝트를 만들고 소스 파일을 추가 하려면  
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
     1.  **솔루션 탐색기**에서 **소스 파일** 폴더를 마우스 오른쪽 단추로 클릭하고 **추가**를 클릭 후 **새 항목**을 선택합니다.  
   
-    2.  **코드** 노드에서 **C++ 파일(.cpp)**을 클릭하고, 파일 이름을 입력한 다음 **추가**를 클릭합니다.  
+    2.  **코드** 노드에서 **C++ 파일(.cpp)** 을 클릭하고, 파일 이름을 입력한 다음 **추가**를 클릭합니다.  
   
      .cpp 파일의 원본 파일 폴더에 나타납니다. **솔루션 탐색기**, Visual Studio 편집기에서 파일이 열립니다.  
   

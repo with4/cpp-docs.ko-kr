@@ -1,31 +1,26 @@
 ---
-title: "메서드 특성 | Microsoft Docs"
-ms.custom: 
+title: 메서드 특성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - method attributes
 - attributes [C++], reference topics
 ms.assetid: b2313352-480d-488b-8c35-6242ffd3a549
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f2413543e7638f47db13799e0549a415ee92c1c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9d2efe55058ab2ace7530afee7255b2ba08377b0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="method-attributes"></a>메서드 특성
 다음 특성은 클래스, coclass 등 또는 인터페이스의 메서드에 적용 합니다.  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
 |---------------|-----------------|  
 |[bindable](../windows/bindable.md)|속성이 데이터 바인딩을 지원 하는지 나타냅니다.|  
 |[call_as](../windows/call-as.md)|원격 가능 하지 함수를 원격 함수에 매핑할 수 있습니다.|  
-|[사용자 지정](../windows/custom-cpp.md)|특성을 직접 정의할 수 있습니다.|  
+|[custom](../windows/custom-cpp.md)|특성을 직접 정의할 수 있습니다.|  
 |[db_column](../windows/db-column.md)|행 집합을 지정된 된 열에 바인딩합니다.|  
 |[db_command](../windows/db-command.md)|OLE DB 명령을 만듭니다.|  
 |[db_param](../windows/db-param.md)|지정 된 멤버 변수는 입력 또는 출력 매개 변수 연결 하 고 변수를 구분 합니다.|  
@@ -52,13 +47,13 @@ ms.lasthandoff: 12/21/2017
 |[ID](../windows/id.md)|멤버 함수 (속성 또는 메서드를 인터페이스 또는 dispinterface)에 대 한 DISPID를 지정합니다.|  
 |[immediatebind](../windows/immediatebind.md)|데이터 바인딩된 개체의 속성에 대 한 모든 변경의 데이터베이스를 즉시 된다는 있는지를 나타냅니다.|  
 |[in](../windows/in-cpp.md)|매개 변수가 호출된 된 프로시저를 호출 하는 프로시저에서 전달 하도록 임을 나타냅니다.|  
-|[로컬](../windows/local-cpp.md)|MIDL 컴파일러 인터페이스 헤더에서 사용 될 때 헤더 생성기로 사용할 수 있습니다. 개별 함수를 사용할 경우 로컬 없는 스텁을 생성 되는 프로시저를 지정 합니다.|  
+|[local](../windows/local-cpp.md)|MIDL 컴파일러 인터페이스 헤더에서 사용 될 때 헤더 생성기로 사용할 수 있습니다. 개별 함수를 사용할 경우 로컬 없는 스텁을 생성 되는 프로시저를 지정 합니다.|  
 |[nonbrowsable](../windows/nonbrowsable.md)|인터페이스 멤버를 속성 브라우저에 표시 되지 해야 나타냅니다.|  
 |[propget](../windows/propget.md)|속성 접근자 함수를 지정합니다.|  
 |[propput](../windows/propput.md)|속성 설정 함수를 지정합니다.|  
 |[propputref](../windows/propputref.md)|값을 대신 참조를 사용 하는 속성 설정 함수를 지정 합니다.|  
 |[ptr](../windows/ptr.md)|전체 포인터도 포인터를 지정합니다.|  
-|[범위](../windows/range-cpp.md)|형식 정의 나 런타임에 해당 값이 설정 되는 필드에 대 한 허용 가능한 값의 범위를 지정 합니다.|  
+|[range](../windows/range-cpp.md)|형식 정의 나 런타임에 해당 값이 설정 되는 필드에 대 한 허용 가능한 값의 범위를 지정 합니다.|  
 |[requestedit](../windows/requestedit.md)|속성을 지원 하는지 나타냅니다는 **OnRequestEdit** 알림입니다.|  
 |[restricted](../windows/restricted.md)|모듈, 인터페이스 또는 dispinterface의 멤버를 임의로 호출할 수 없도록 지정 합니다.|  
 |[satype](../windows/satype.md)|데이터 형식을 지정 된 **SAFEARRAY** 구조입니다.|  

@@ -1,13 +1,10 @@
 ---
-title: "방법: 컴파일 타임에 리소스 포함 | Microsoft Docs"
-ms.custom: 
+title: '방법: 컴파일 타임에 리소스 포함 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.resvw.resource.including
 - vc.resvw.resource.including
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - '#include directive'
 - include directive (#include)
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 201985a10d0f5a58fc7d617e307d2715bf29be32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 765d78ef5371015fdce3e505e7a2454c29c6c97e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>방법: 컴파일 타임에 리소스 포함
 일반적으로 하나의 리소스 스크립트(.rc) 파일에서 모든 리소스의 기본 배열을 사용하는 것이 쉽고 편리합니다. 그러나에 추가할 수 있습니다 리소스 다른 파일에 있는 현재 프로젝트 컴파일 타임에 나열 된 **컴파일 타임 지시문** 상자에 [리소스 내용 대화 상자](../windows/resource-includes-dialog-box.md)합니다.  

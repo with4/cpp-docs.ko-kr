@@ -1,13 +1,10 @@
 ---
 title: retval | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.retval
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: cf7aa0cf8dd9767f603807ee18e23fe02d3446c7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1c0bf7ecd989b51a17c853c6d2986db204c3ce34
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="retval"></a>retval
 멤버의 반환 값을 받는 매개 변수를 지정 합니다.  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
  **retval** 마지막 인수는 함수 선언에서에 표시 되어야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  예를 참조 [바인딩 가능한](../windows/bindable.md) 의 샘플 사용에 대 한 **retval**합니다.  
   
 ## <a name="requirements"></a>요구 사항  

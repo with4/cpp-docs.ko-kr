@@ -1,13 +1,10 @@
 ---
-title: "원본 (c + +) | Microsoft Docs"
-ms.custom: 
+title: 원본 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.source
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f4bfc79a76ece278c62b4895cdeb2e10d6df42aa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 11ee58fb2d500a7194fb08ee18b1af5cc7897830
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="source-c"></a>source(C++)
 클래스를 연결 지점에 대 한 COM 개체의 소스 인터페이스를 지정합니다. 속성 또는 메서드 멤버 개체 또는 이벤트의 원본인 VARIANT를 반환 하는지 나타냅니다.  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  사용할 수는 [기본](../windows/default-cpp.md) 을 개체에 대 한 기본 소스 인터페이스를 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cpp_attr_ref_source.cpp  
@@ -89,7 +84,7 @@ class NN : public b
   
 |||  
 |-|-|  
-|**적용 대상**|**클래스**, `struct`,`interface`|  
+|**적용 대상**|**클래스**, `struct`, `interface`|  
 |**반복 가능**|아니요|  
 |**필수 특성**|**coclass** (클래스 또는 구조체에 적용 됨) 하는 경우|  
 |**잘못된 특성**|없음|  

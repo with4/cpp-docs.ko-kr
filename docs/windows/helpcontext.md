@@ -1,13 +1,10 @@
 ---
 title: helpcontext | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.helpcontext
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ac1915a74aac329ef8b3c94db997dd80ff7905b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 317e204c7292c4a7cccb1f81f6bc9d2a2fbfd407
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="helpcontext"></a>helpcontext
 사용자는 도움말 파일에서이 요소에 대 한 정보를 볼 수 있는 컨텍스트 ID를 지정 합니다.  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  **helpcontext** c + + 특성에 동일한 기능을는 [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) MIDL 특성입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  예를 참조 [defaultvalue](../windows/defaultvalue.md) 사용 하는 방법의 예 **helpcontext**합니다.  
   
 ## <a name="requirements"></a>요구 사항  

@@ -1,36 +1,31 @@
 ---
-title: "return 문 (C) | Microsoft Docs"
-ms.custom: 
+title: return 문 (C) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - ( ) parentheses in return statements
 ms.assetid: 18cd82cf-f899-4b28-83ad-4eff353ddcb4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d5ec29b7348d858b502f292efd797020a17bfa0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 08407f26e3c3d9064fded1620538262b0c91e2ba
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="return-statement-c"></a>return 문 (C)
 `return` 문은 함수 실행을 종료하고 호출 함수로 컨트롤을 반환합니다. 호출 바로 다음 지점의 호출 함수에서 실행을 다시 시작합니다. `return` 문은 호출 함수로 값을 반환할 수도 있습니다. 자세한 내용은 [반환 형식](../c-language/return-type.md)을 참조하세요.  
   
 ## <a name="syntax"></a>구문  
  *점프 문*:  
- **return**  *expression* opt**;**  
+ **return**  *expression* opt **;**  
   
  *expression*의 값(있는 경우)이 호출 함수로 반환됩니다. *expression*을 생략하면 함수의 반환 값이 정의되지 않습니다. 식이 있는 경우 평가된 다음 함수에서 반환한 형식으로 변환됩니다. 함수가 반환 형식 `void`로 선언되는 경우 식이 포함된 `return` 문은 경고를 발생시키고 식은 계산되지 않습니다.  
   

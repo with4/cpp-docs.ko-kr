@@ -1,13 +1,10 @@
 ---
-title: "아이콘 및 커서: 디스플레이 장치 (아이콘에 대 한 이미지 편집기)에 대 한 이미지 리소스 | Microsoft Docs"
-ms.custom: 
+title: '아이콘 및 커서: 디스플레이 장치 (아이콘에 대 한 이미지 편집기)에 대 한 이미지 리소스 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.icon
 dev_langs:
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - cursors [C++], hot spots
 - icons [C++], types
 ms.assetid: 8f0809a8-0cf0-4da9-b23d-51f28bf15f5b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 99ed2e99c3a08b473dcc786ed47bc088b8fd8a4f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a977629cbae140afa1463a7765f193a7519e1f68
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons"></a>아이콘 및 커서: 디스플레이 장치용 이미지 리소스(아이콘에 대한 이미지 편집기)
 아이콘 및 커서는 다양한 유형의 디스플레이 장치에 맞는 다양한 크기 및 색 구성표의 여러 이미지를 포함할 수 있는 그래픽 리소스입니다. 또한 커서에는 Windows에서 해당 위치를 추적하는 데 사용하는 위치인 "핫스팟"이 있습니다. 비트맵 및 기타 이미지와 마찬가지로 아이콘과 커서는 모두 이미지 편집기를 사용하여 생성하고 편집할 수 있습니다.  

@@ -1,30 +1,25 @@
 ---
-title: "Simpleactivationfactory:: Getruntimeclassname 메서드 | Microsoft Docs"
-ms.custom: 
+title: 'Simpleactivationfactory:: Getruntimeclassname 메서드 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::SimpleActivationFactory::GetRuntimeClassName
 dev_langs:
 - C++
 ms.assetid: 3aa07487-9a42-46f8-8893-37ba6315e50b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73431c7a0f719579caf3df146b69dd8d7248d0a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e001d0269c21026bdd00abcdd4d257f11d601cf6
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="simpleactivationfactorygetruntimeclassname-method"></a>SimpleActivationFactory::GetRuntimeClassName 메서드
 
@@ -49,7 +44,7 @@ STDMETHOD( GetRuntimeClassName )(
 
 ## <a name="remarks"></a>설명
 
-경우 &#95; &#95; WRL_STRICT &#95; #95 정의 어설션 오류가 발생 하 여 지정 된 클래스가 `Base` 클래스 템플릿 매개 변수에서 파생 되지 않습니다 [RuntimeClass](../windows/runtimeclass-class.md), WinRt 또는 WinRtClassicComMix 구성 되지 않았습니다 또는 [ RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 열거형 값입니다.
+경우 &#95; &#95;WRL_STRICT&#95; &#95; 은 정의 어설션 오류가 발생 하 여 지정 된 클래스가 `Base` 클래스 템플릿 매개 변수에서 파생 되지 않습니다 [RuntimeClass](../windows/runtimeclass-class.md), 또는 사용 하 여 구성 되지 않습니다는 WinRt 또는 WinRtClassicComMix [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 열거형 값입니다.
 
 ## <a name="requirements"></a>요구 사항
 

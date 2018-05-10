@@ -1,12 +1,9 @@
 ---
-title: "#지시문 (c + +) 가져오기 | Microsoft Docs"
-ms.custom: 
+title: '#지시문 (c + +) 가져오기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#import'
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbf8a35022638884733f5151fffb2a3a0a2946c3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4e649e458a6275ea369031416c379721c3f9af0e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="import-directive-c"></a>#import 지시문 (C++)
 **C + + 전용**  
@@ -51,7 +46,7 @@ ms.lasthandoff: 02/23/2018
   
 -   .olb, .tlb 또는 .dll 파일 등 형식 라이브러리를 포함하는 파일 이름입니다. 키워드를 **파일:**, 각 파일 이름 앞에 올 수 있습니다.  
   
--   형식 라이브러리에서 제어의 progid입니다. 키워드를 **progid:**, 각 progid 앞에 올 수 있습니다. 예:  
+-   형식 라이브러리에서 제어의 progid입니다. 키워드를 **progid:**, 각 progid 앞에 올 수 있습니다. 예를 들어:  
   
     ```  
     #import "progid:my.prog.id.1.5"  
@@ -61,13 +56,13 @@ ms.lasthandoff: 02/23/2018
   
      64비트 운영 체제에서 크로스 컴파일러를 사용하여 컴파일할 때 컴파일러는 32비트 레지스트리 하이브만 읽을 수 있습니다. 64비트 형식 라이브러리를 빌드 및 등록하기 위해 네이티브 64비트 컴파일러를 사용할 수도 있습니다.  
   
--   형식 라이브러리의 라이브러리 ID입니다. 키워드를 **libid:**, 앞 각 라이브러리 id입니다. 예:  
+-   형식 라이브러리의 라이브러리 ID입니다. 키워드를 **libid:**, 앞 각 라이브러리 id입니다. 예를 들어:  
   
     ```  
     #import "libid:12341234-1234-1234-1234-123412341234" version("4.0") lcid("9")  
     ```  
   
-     버전 또는 lcid를 지정 하지 않으면는 [규칙](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber) 에 적용 되는 **progid:** 에 적용 **libid:**합니다.  
+     버전 또는 lcid를 지정 하지 않으면는 [규칙](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber) 에 적용 되는 **progid:** 에 적용 **libid:** 합니다.  
   
 -   실행 파일(.exe)입니다.  
   
@@ -78,13 +73,13 @@ ms.lasthandoff: 02/23/2018
 -   인식할 수 있는 다른 임의의 파일 형식은 **LoadTypeLib** API입니다.  
   
  `attributes`  
- 하나 이상의 [#import 특성](#_predir_the_23import_directive_import_attributes)합니다. 공백이나 쉼표를 사용하여 특성을 구분합니다. 예:  
+ 하나 이상의 [#import 특성](#_predir_the_23import_directive_import_attributes)합니다. 공백이나 쉼표를 사용하여 특성을 구분합니다. 예를 들어:  
   
 ```  
 #import "..\drawctl\drawctl.tlb" no_namespace, raw_interfaces_only  
 ```  
   
- 또는  
+ -또는-  
   
 ```  
 #import "..\drawctl\drawctl.tlb" no_namespace raw_interfaces_only  
@@ -101,7 +96,7 @@ ms.lasthandoff: 02/23/2018
 |꺾쇠 괄호 형식|전처리기가 다음 경로에 따라 형식 라이브러리 파일을 검색하도록 지시합니다.<br /><br /> 1.  **경로** 환경 변수 경로 목록<br />2.  **LIB** 환경 변수 경로 목록<br />3.  /I에서 지정 된 경로 (추가 포함 디렉터리) 컴파일러 옵션을 컴파일러와 다른 형식 라이브러리에서 참조 되는 형식 라이브러리에 대 한 검색은 제외 하 고 [no_registry](../preprocessor/no-registry.md) 특성입니다.|  
   
 ##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a> 지역화 ID 및 버전 번호 지정  
- progid를 지정할 때 progid의 지역화 ID 및 버전 번호를 지정할 수도 있습니다. 예:  
+ progid를 지정할 때 progid의 지역화 ID 및 버전 번호를 지정할 수도 있습니다. 예를 들어:  
   
 ```  
 #import "progid:my.prog.id" lcid("0") version("4.0)  
@@ -190,7 +185,7 @@ using namespace MyLib;
  자세한 내용은 기술 자료 문서인 "#import Wrapper Methods May Cause Access Violation"(Q242527) 또는 "Compiler Errors When You Use #import with XML"(Q269194)를 참조하십시오. 또는 MSDN Library 미디어에서 기술 자료 문서를 찾을 수 [Microsoft 지원](https://support.microsoft.com/)합니다.  
   
 ##  <a name="_predir_the_23import_directive_import_attributes"></a> #import 특성  
- `#import`는 하나 이상의 특성을 선택적으로 포함할 수 있습니다. 이러한 특성은 컴파일러가 형식 라이브러리 헤더의 콘텐츠를 수정하도록 지시합니다. 백슬래시 (**\\**) 추가 줄을 포함할 단일에서 기호를 사용할 수 `#import` 문. 예:  
+ `#import`는 하나 이상의 특성을 선택적으로 포함할 수 있습니다. 이러한 특성은 컴파일러가 형식 라이브러리 헤더의 콘텐츠를 수정하도록 지시합니다. 백슬래시 (**\\**) 추가 줄을 포함할 단일에서 기호를 사용할 수 `#import` 문. 예를 들어:  
   
 ```  
 #import "test.lib" no_namespace \  

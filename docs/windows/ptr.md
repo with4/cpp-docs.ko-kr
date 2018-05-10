@@ -1,13 +1,10 @@
 ---
 title: ptr | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.ptr
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 183671fd4a2a0cb783a5f4644411f5d3ac5faf5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ef98cd3ac446c41143fc8e1f3f5a731f05ab3c45
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="ptr"></a>ptr
 전체 포인터도 포인터를 지정합니다.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  **ptr** c + + 특성에 동일한 기능을는 [ptr](http://msdn.microsoft.com/library/windows/desktop/aa367149) MIDL 특성입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  예를 참조 [defaultvalue](../windows/defaultvalue.md) 의 샘플 사용에 대 한 **ptr**합니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|**적용 대상**|인터페이스 메서드를 인터페이스 매개 변수`typedef`|  
+|**적용 대상**|인터페이스 메서드를 인터페이스 매개 변수 `typedef`|  
 |**반복 가능**|아니요|  
 |**필수 특성**|없음|  
 |**잘못된 특성**|없음|  

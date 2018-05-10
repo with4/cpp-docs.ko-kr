@@ -1,13 +1,10 @@
 ---
-title: "도구 모음 편집기 | Microsoft Docs"
-ms.custom: 
+title: 도구 모음 편집기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.toolbar.F1
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - toolbars [C++], editing
 - Toolbar editor
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4358e01575ec7d4dfb2dea48499466f1cc0a4766
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc902a0bb90194c463ebb874234f65230cd502b4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="toolbar-editor"></a>도구 모음 편집기
 도구 모음 편집기에서는 도구 모음 리소스를 만들고 비트맵을 도구 모음 리소스로 변환할 수 있습니다. 도구 모음 편집기에서는 그래픽 표시를 사용하여 완료된 응용 프로그램에서 보이는 모양과 거의 유사한 도구 모음과 단추를 표시합니다.  

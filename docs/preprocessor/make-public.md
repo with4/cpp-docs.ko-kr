@@ -1,12 +1,9 @@
 ---
 title: make_public | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.make_public
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, make_public
 - make_public pragma
 ms.assetid: c3665f4d-268a-4932-9661-c37c8ae6a341
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 484462d5a705297f65e82f70fccc23a81eeb719e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 27db5ac934973178e2485327090ed70f994becec
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="makepublic"></a>make_public
 네이티브 형식이 공용 어셈블리 액세스 가능성을 갖도록 지정합니다.  
@@ -48,7 +43,7 @@ ms.lasthandoff: 02/23/2018
   
 네이티브 형식으로 암시적 또는 명시적으로 개인; 수 있습니다. 참조 [형식 표시 유형](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) 자세한 정보에 대 한 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
 다음 샘플은 두 네이티브 구조체에 대한 정의가 포함된 .h 파일의 내용입니다.  
   
 ```cpp  
@@ -57,7 +52,7 @@ struct Native_Struct_1 { int i; };
 struct Native_Struct_2 { int i; };  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
 다음 코드 샘플에서는 헤더 파일을 사용하며, `make_public`을 사용하여 네이티브 구조체를 명시적으로 public으로 표시하지 않는 경우 공용 관리되는 형식의 공용 함수 시그니처에서 네이티브 구조체를 사용하려고 하면 컴파일러에서 경고를 생성하는 것을 보여 줍니다.  
   
 ```cpp  

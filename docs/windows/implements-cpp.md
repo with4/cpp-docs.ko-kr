@@ -2,12 +2,9 @@
 title: 구현 (c + +) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.implements
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bab33955ebeb1473839a1549ca1817f520e1a9fd
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: 118487d533e8f4701f52804ebbe1e669d29fc4cb
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="implements-c"></a>implements(C++)
 IDL coclass의 구성원이 될 해야 하는 디스패치 인터페이스를 지정 합니다.  
@@ -43,7 +38,7 @@ IDL coclass의 구성원이 될 해야 하는 디스패치 인터페이스를 �
   
 #### <a name="parameters"></a>매개 변수  
  **interfaces**  
- 쉼표로 구분한 목록 IDL coclass의 멤버는 인터페이스입니다. 단일 인터페이스를 지정 하기 위한 줄임 메서드는 **구현 (***interface_name***)**합니다.  
+ 쉼표로 구분한 목록 IDL coclass의 멤버는 인터페이스입니다. 단일 인터페이스를 지정 하기 위한 줄임 메서드는 **구현 (***interface_name***)** 합니다.  
   
  **dispinterfaces**  
  쉼표로 구분한 목록 IDL coclass의 구성원이 될 dispinterface입니다. 단일 dispinterface 지정 하기 위한 줄임 메서드는 **구현(dispinterface** *= dispinterface_name***)** 합니다.  

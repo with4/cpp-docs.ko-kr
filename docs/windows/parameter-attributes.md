@@ -1,38 +1,33 @@
 ---
-title: "매개 변수 특성 | Microsoft Docs"
-ms.custom: 
+title: 매개 변수 특성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], parameter attributes
 - parameter attributes
 ms.assetid: 024c2dd5-49d7-4ced-a17a-c56c1bc485b6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9856cec61b48c8cdfaf6b4e9acfe8137d8edae0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2bd1f0d395375b09a192a68c8a60ea3a367115c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="parameter-attributes"></a>매개 변수 특성
 다음 특성은 클래스 또는 인터페이스에 있는 메서드의 매개 변수를 적용 합니다.  
   
 |특성|설명|  
 |---------------|-----------------|  
-|[사용자 지정](../windows/custom-cpp.md)|특성을 직접 정의할 수 있습니다.|  
+|[custom](../windows/custom-cpp.md)|특성을 직접 정의할 수 있습니다.|  
 |[defaultvalue](../windows/defaultvalue.md)|형식화 된 선택적 매개 변수 기본값을의 지정을 허용 합니다.|  
 |[first_is](../windows/first-is.md)|전송 될 첫 번째 배열 요소의 인덱스를 지정 합니다.|  
 |[iid_is](../windows/iid-is.md)|전송 될 첫 번째 배열 요소의 인덱스를 지정 합니다.|  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 |[max_is](../windows/max-is.md)|유효한 배열 인덱스에 대 한 최대값을 지정합니다.|  
 |[(옵션)](../windows/optional-cpp.md)|멤버 함수에 대 한 선택적 매개 변수를 지정합니다.|  
 |[out](../windows/out-cpp.md)|호출된 프로시저에서 호출하는 프로시저로 반환된(서버에서 클라이언트로 반환된) 포인터 매개 변수를 식별합니다.|  
-|[범위](../windows/range-cpp.md)|형식 정의 나 런타임에 해당 값이 설정 되는 필드에 대 한 허용 가능한 값의 범위를 지정 합니다.|  
+|[range](../windows/range-cpp.md)|형식 정의 나 런타임에 해당 값이 설정 되는 필드에 대 한 허용 가능한 값의 범위를 지정 합니다.|  
 |[ref](../windows/ref-cpp.md)|참조 포인터를 식별합니다.|  
 |[retval](../windows/retval.md)|멤버의 반환 값을 받는 매개 변수를 지정 합니다.|  
 |[satype](../windows/satype.md)|데이터 형식을 지정 된 **SAFEARRAY** 구조입니다.|  

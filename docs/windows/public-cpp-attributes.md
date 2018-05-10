@@ -1,13 +1,10 @@
 ---
-title: "public (c + + 특성) | Microsoft Docs"
-ms.custom: 
+title: public (c + + 특성) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.public
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - public attribute
 ms.assetid: c42e1fd5-6cb1-48fe-8a03-95f2a2e0137c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ce61e03be94695aa48b842b2136b2361c0272cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1d798d828dd252ce8b5f3f49d5a9aaf525acc986
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="public-c-attributes"></a>public(C++ 특성)
 .Idl 파일 내에서 참조 하지 않는 경우에 형식 라이브러리로 typedef 상태로 진행 될를 확인 합니다.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  **공용** c + + 특성에 동일한 기능을는 [공용](http://msdn.microsoft.com/library/windows/desktop/aa367150) MIDL 특성입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에서는 사용 하 여 **공용** 특성:  
   
 ```  

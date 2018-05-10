@@ -1,30 +1,25 @@
 ---
-title: "Windows 런타임 및 관리 되는 템플릿 (c + + 구성 요소 확장명) | Microsoft Docs"
-ms.custom: 
+title: Windows 런타임 및 관리 되는 템플릿 (c + + 구성 요소 확장명) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - templates, with CLR types
 ms.assetid: cf59d16b-5514-448b-9a95-e0b4fcb616a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81e803db04ebd9d3a851a04e8656131d85649751
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e9053b101428ac26e96446d9c6756ec5de35e06c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows 런타임 및 관리되는 템플릿(C++ 구성 요소 확장명)
 템플릿을 사용하면 공용 언어 런타임 형식 또는 Windows 런타임의 프로토타입을 정의한 다음, 다른 템플릿 형식 매개 변수를 사용하여 해당 형식의 변형을 인스턴스화할 수 있습니다.  

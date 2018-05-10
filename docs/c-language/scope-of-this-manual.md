@@ -1,27 +1,22 @@
 ---
-title: "이 설명서의 범위 | Microsoft Docs"
-ms.custom: 
+title: 이 설명서의 범위 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 406e7cc0-27cb-46b4-b38e-c200f3fddafd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cd9c040ba6c2afc76966c1268b3765ec2119bdd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50352e68c8481023a6e419bc9fc436e7abbb3797
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scope-of-this-manual"></a>이 설명서의 범위
 C는 프로그래머가 많은 프로그래밍 결정을 내릴 수 있는 유연한 언어입니다. 이 원리를 유지하면서 C에서는 형식 변환과 같은 문제에 대한 제한이 거의 없습니다. 언어의 이런 특성은 프로그래밍 작업을 쉽게 해주지만 프로그램이 동작하는 방식을 이해하려면 언어에 대해 잘 알고 있어야 합니다. 이 책에서는 Microsoft 구현의 C 언어 구성 요소 및 기능에 대한 정보를 제공합니다. C 언어에 대한 구문은 ANSI X3.159-1989, *미국 국립 표준 정보 시스템 - 프로그래밍 언어 - C*에서 비롯되었습니다. 이 프로그래밍 언어는 ANSI C 표준의 일부는 아니지만 ANSI C 표준이라고 합니다. [C 언어 구문 요약](../c-language/c-language-syntax-summary.md)은 구문 및 구문 정의를 읽고 사용하는 방법에 대한 설명을 제공합니다.  

@@ -1,31 +1,26 @@
 ---
-title: "도구 모음에서 단추 사이의 공백 제거 | Microsoft Docs"
-ms.custom: 
+title: 도구 모음에서 단추 사이의 공백 제거 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Toolbar editor, spacing toolbar buttons
 - toolbar buttons (in Toolbar editor), space between buttons
 ms.assetid: 3bbbacec-cd42-4c35-9ea5-de62daa4041d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a9a29b770f4935eafb0fa787cebdadc2f18c3486
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed0c35f779749ca434feeb4ca1aef4e49e8a711f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="removing-space-between-buttons-on-a-toolbar"></a>도구 모음에서 단추 사이의 공백 제거
 다음 절차는 도구 모음에서 단추 사이의 공백을 제거 하는 방법을 보여 줍니다.  
