@@ -1,32 +1,27 @@
 ---
-title: "타일을 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: 타일을 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aed7ed0ed32f73927f3755c0ba3733aaef084818
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4e3d1e37562e9e14bbbeda5a01198358b4615d3c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-tiles"></a>타일 사용
 바둑판식 배열 응용 프로그램의 가속을 최대화 하기 위해 사용할 수 있습니다. 바둑판식 배열 사각형 동일한 하위 집합으로 스레드를 분할 또는 *타일*합니다. 적절 한 타일 크기와 바둑판식으로 배열 된 알고리즘을 사용 하면 c + + AMP 코드에서 더 많은 가속을 얻을 수 있습니다. 바둑판식 배열 기본 구성 요소입니다.  
   
-- `tile_static`변수입니다. 바둑판식 배열의 주요 이점은 성능 향상은 `tile_static` 액세스 합니다. 데이터에 대 한 액세스 `tile_static` 메모리 전역 공간에서 데이터에 대 한 액세스 보다 훨씬 빠르게 작성할 수 있습니다 (`array` 또는 `array_view` 개체). 인스턴스는 `tile_static` 각 타일에 대 한 변수 만들어지고 타일의 모든 스레드가 변수에 액세스할 수 있어야 합니다. 일반적인 바둑판식으로 배열 된 알고리즘에서 데이터에 복사 됩니다 `tile_static` 전역 메모리에서 한 번 메모리에서 여러 번 액세스 하 고는 `tile_static` 메모리입니다.  
+- `tile_static` 변수입니다. 바둑판식 배열의 주요 이점은 성능 향상은 `tile_static` 액세스 합니다. 데이터에 대 한 액세스 `tile_static` 메모리 전역 공간에서 데이터에 대 한 액세스 보다 훨씬 빠르게 작성할 수 있습니다 (`array` 또는 `array_view` 개체). 인스턴스는 `tile_static` 각 타일에 대 한 변수 만들어지고 타일의 모든 스레드가 변수에 액세스할 수 있어야 합니다. 일반적인 바둑판식으로 배열 된 알고리즘에서 데이터에 복사 됩니다 `tile_static` 전역 메모리에서 한 번 메모리에서 여러 번 액세스 하 고는 `tile_static` 메모리입니다.  
   
 - [tile_barrier:: wait 메서드](reference/tile-barrier-class.md#wait)합니다. 에 대 한 호출 `tile_barrier::wait` 모든 스레드가 동일한 타일에 대 한 호출에 도달할 때까지 현재 스레드의 실행을 일시 중단 `tile_barrier::wait`합니다. 스레드가 실행 될에 대 한 호출을 지 나 타일에서 스레드가 실행 되는 순서를 보장할 수 `tile_barrier::wait` 호출에 도달 했으므로 모든 스레드가 될 때까지 합니다. 사용 하 여 즉는 `tile_barrier::wait` 메서드를 스레드-스레드 단위가 아닌 타일에서 타일 기준 작업을 수행할 수 있습니다. 일반적인 바둑판식 배열 알고리즘에는 초기화 하는 코드는 `tile_static` 전체 타일에 대 한 메모리를 호출 하 여 다음 `tile_barrer::wait`합니다. 다음 코드를 `tile_barrier::wait` 모든에 액세스 해야 하는 계산에 포함 되어는 `tile_static` 값입니다.  
 
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="example-of-global-tile-and-local-indices"></a>전역의 예, 타일 및 로컬 인덱스  
  다음 다이어그램 2 x 3 타일에 있는 데이터는 8 x 9 매트릭스를 나타냅니다.  
   
- ![8 &#45; 여 &#45; 여; #45 2로 나눈 9 매트릭스 &#45; 3 타일](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")  
+ ![8&#45;여&#45;9 매트릭스 분할 2로&#45;여&#45;3 타일](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")  
   
  다음 예제에서는 전역, 타일을 표시 하 고이 로컬 인덱스 행렬 바둑판식으로 표시 합니다. `array_view` 형식의 요소를 사용 하 여 개체가 만들어질 `Description`합니다. `Description` 전역,이 고, 타일 및 행렬에 있는 요소의 로컬 인덱스입니다. 코드에 대 한 호출에서 `parallel_for_each` 전역 값, 타일 및 로컬 인덱스의 각 요소를 설정 합니다. 출력의 값이 표시 됩니다는 `Description` 구조입니다.  
   

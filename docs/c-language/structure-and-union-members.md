@@ -1,13 +1,10 @@
 ---
-title: "구조체 및 공용 구조체 멤버 | Microsoft Docs"
-ms.custom: 
+title: 구조체 및 공용 구조체 멤버 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - operators [C], member selection
 - structure member selection
 ms.assetid: bb1fe304-af49-4f98-808d-afdc99b3e319
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2183aead53ee02f36bc982e4f33ad174346da5f2
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 7cf98987323b96c8b3977e9a6d2bc590e0b612b8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="structure-and-union-members"></a>구조체 및 공용 구조체 멤버
 "멤버 선택 식"은 구조체와 공용 구조체의 멤버를 참조합니다. 이러한 식은 선택한 멤버의 값과 형식을 갖게 됩니다.  
@@ -54,7 +49,7 @@ identifier
   
  두 가지 형태의 멤버 선택 식은 비슷한 효과가 있습니다.  
   
- 마침표(**.**) 앞의 식이 포인터 값에 적용된 간접 참조 연산자(**\****)로 구성된 경우 멤버 선택 연산자(**->**)를 포함하는 식은 마침표를 사용하는 식의 약식 버전입니다. 따라서  
+ 마침표(**.**) 앞의 식이 포인터 값에 적용된 간접 참조 연산자(**\***)로 구성된 경우 멤버 선택 연산자(**->**)를 포함하는 식은 마침표를 사용하는 식의 약식 버전입니다. 따라서  
   
 ```  
   
@@ -78,7 +73,7 @@ identifier
  여기서 *expression*은 포인터 값입니다.  
   
 ## <a name="examples"></a>예제  
- 다음 예제에서는 이 구조체 선언을 참조합니다. 이러한 예제에서 사용하는 간접 참조 연산자(**\****)에 대한 자세한 내용은 [간접 참조 및 주소 연산자](../c-language/indirection-and-address-of-operators.md)를 참조하세요.  
+ 다음 예제에서는 이 구조체 선언을 참조합니다. 이러한 예제에서 사용하는 간접 참조 연산자(**\***)에 대한 자세한 내용은 [간접 참조 및 주소 연산자](../c-language/indirection-and-address-of-operators.md)를 참조하세요.  
   
 ```  
 struct pair   

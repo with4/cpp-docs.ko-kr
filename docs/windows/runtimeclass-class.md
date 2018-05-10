@@ -1,12 +1,9 @@
 ---
-title: "RuntimeClass 클래스 | Microsoft Docs"
-ms.custom: 
+title: RuntimeClass 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::RuntimeClass
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - RuntimeClass class
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5c75492b55cd1c238798d3500e2157738c3c58f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 26c3542f5bea21d1b705cd3253e6828ff73677df
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass 클래스
 지정된 된 인터페이스를 상속 하 고 지정 된 Windows 런타임, 클래식 COM 및 약한 참조 지원을 제공 하는 WinRT 또는 COM 클래스를 나타냅니다.  
@@ -48,7 +43,7 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 인터페이스 목록 개체가 구현 하는 IUnknown, IInspectable 또는 다른 인터페이스에 의해 제어 외 [RuntimeClassType](../windows/runtimeclasstype-enumeration.md)합니다. 또한 개체를 agile 고 IMarshal 구현가 특히 Microsoft::WRL::FtmBase에서 파생 될 다른 클래스도 나열할 수 있습니다.
   
 ## <a name="members"></a>멤버  
-`RuntimeClassInitialize`MakeAndInitialize 템플릿 함수는 개체를 생성 하는 데 사용 되는 경우 개체를 초기화 하는 함수입니다. 초기화에 실패 한 경우 성공적으로 초기화 되었으므로 개체 하면 s_ok이 고 또는 COM 오류 코드가 반환 합니다. COM 오류 코드가 MakeAndInitialize의 반환 값으로 전파 됩니다. Note 만들기 템플릿 함수 개체를 만드는 데 사용 되는 경우 RuntimeClassInitialize 메서드가 호출 되지 않습니다.
+`RuntimeClassInitialize` MakeAndInitialize 템플릿 함수는 개체를 생성 하는 데 사용 되는 경우 개체를 초기화 하는 함수입니다. 초기화에 실패 한 경우 성공적으로 초기화 되었으므로 개체 하면 s_ok이 고 또는 COM 오류 코드가 반환 합니다. COM 오류 코드가 MakeAndInitialize의 반환 값으로 전파 됩니다. Note 만들기 템플릿 함수 개체를 만드는 데 사용 되는 경우 RuntimeClassInitialize 메서드가 호출 되지 않습니다.
 
 ### <a name="public-constructors"></a>Public 생성자  
   

@@ -1,29 +1,24 @@
 ---
-title: "컨텍스트 | Microsoft Docs"
-ms.custom: 
+title: 컨텍스트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - contexts [Concurrency Runtime]
 ms.assetid: 10c1d861-8fbb-4ba0-b2ec-61876b11176e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01ec145de3c41aeb30bdd308794d9f8d90a3f3e1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9a8297c8a7a779140f6464f39491e73950ddaeeb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="contexts"></a>컨텍스트
 
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  0 (영)에 대해 전달 된 `milliseconds` 매개 변수를 다른 모든 활성 컨텍스트가 작업을 수행 하도록 기회가 될 때까지 현재 컨텍스트를 일시 중단 런타임이 합니다. 이렇게 하면 다른 모든 활성 작업에 작업을 생성 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  사용 하는 예제에 대 한는 `wait` 함수를 현재 컨텍스트를 생성 하 고 참조를 실행 하려면 다른 컨텍스트에서 사용할 수 있으므로 [하는 방법: 실행의 영향 범위 순서를 사용 하 여 일정 그룹](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)합니다.  
   
 ## <a name="the-context-class"></a>Context 클래스  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
  [concurrency::Context::Yield](reference/context-class.md#yield) 메서드는 런타임에서 다른 작업을 수행 하 고 다음 실행할 컨텍스트를 다시 예약할 수 있도록 실행을 양보 합니다. 호출 하는 경우는 `Context::Block` 메서드, 런타임 컨텍스트 일정을 변경 하지 않습니다.  
 
   
-#### <a name="example"></a>예  
+#### <a name="example"></a>예제  
  사용 하는 예제에 대 한는 `Context::Block`, `Context::Unblock`, 및 `Context::Yield` 공동 작업 세마포 클래스를 구현 하는 방법을 참조 [하는 방법: 컨텍스트 클래스를 사용 하 여 공동 작업 세마포 구현](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)합니다.  
   
 ##### <a name="oversubscription"></a>초과 구독  
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  런타임에서 throw [concurrency:: invalid_oversubscribe_operation](../../parallel/concrt/reference/invalid-oversubscribe-operation-class.md) 초과 구독을 활성화 하기 전 비활성화 된 경우.  
   
-###### <a name="example"></a>예  
+###### <a name="example"></a>예제  
  네트워크 연결에서 데이터 읽기를 통해 발생 하는 대기 시간 오프셋을 초과 구독을 사용 하는 예제를 참조 하십시오. [하는 방법: 대기 시간 오프셋을 사용 하 여 초과 구독](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

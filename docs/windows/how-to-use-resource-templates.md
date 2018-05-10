@@ -1,13 +1,10 @@
 ---
-title: "방법: 리소스 템플릿 사용 | Microsoft Docs"
-ms.custom: 
+title: '방법: 리소스 템플릿 사용 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - resources [Visual Studio], templates
 - .rct files
 ms.assetid: bdfe7060-f98e-4859-8285-9c8570360e9d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bace4f6d8835d9aece7679fa1bb89af3d7a20ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 534a86d10a4bcbc34e6cef29fbb77d7caa2c64b9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-use-resource-templates"></a>방법: 리소스 템플릿 사용
 리소스 템플릿은 .rct 파일로 저장한 사용자 지정 리소스입니다. 리소스 템플릿을 다른 리소스를 만들기 위한 시작 지점으로 사용할 수 있습니다. 리소스 템플릿을 사용하면 표준 컨트롤 및 기타 반복 요소와 같이 기능을 공유하는 추가 리소스 또는 리소스 그룹을 개발하는 시간을 절약할 수 있습니다. 예를 들어 여러 대화 상자에 도움말 단추와 회사 로고 아이콘을 포함할 수 있습니다. 이 작업을 빠르게 하려면 새 대화 상자 템플릿을 만들고 로고와 도움말 단추를 사용하여 템플릿을 사용자 지정합니다.  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  바로 가기 메뉴에서 선택 **추가**, 클릭 **새 항목 추가**합니다.  
   
-3.  에 **새 항목 추가** 대화 상자는 **템플릿:** 창 선택 **리소스 템플릿 파일 (.rct)**합니다.  
+3.  에 **새 항목 추가** 대화 상자는 **템플릿:** 창 선택 **리소스 템플릿 파일 (.rct)** 합니다.  
   
 4.  이름 및 새.rct 파일의 위치를 제공 하 고 클릭 **열려**합니다.  
   
@@ -61,7 +56,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  [.Rc 파일을 독립 실행형 파일로 엽니다](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)합니다.  
   
-2.  에 **파일** 메뉴를 클릭 하 여  **저장 \<* 파일 이름*>으로 * * 합니다.  
+2.  에 **파일** 메뉴를 클릭 하 여 **저장 \< *파일 이름*>으로**합니다.  
   
 3.  위치를 지정 하 고 클릭 **확인**합니다.  
   

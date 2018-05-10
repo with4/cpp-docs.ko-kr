@@ -1,12 +1,9 @@
 ---
 title: omp_test_lock | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - omp_test_lock
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - omp_test_lock OpenMP function
 ms.assetid: 314ca85e-0749-4c16-800f-b0f36fed256d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4acf73f72bde16d5bcc1dba47ab7958f9dc2b6d9
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a4bb63974f5d1864fe7b1c6359f7e8bda19b90c2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="omptestlock"></a>omp_test_lock
 잠금을 설정 하려고 시도 하지만 스레드 실행을 차단 하지 않습니다.  
@@ -47,7 +42,7 @@ int omp_test_lock(
 ## <a name="remarks"></a>설명  
  자세한 내용은 참조 [3.2.5 omp_test_lock and omp_test_nest_lock 함수](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // omp_test_lock.cpp  

@@ -1,27 +1,22 @@
 ---
-title: "E. 구현 정의 동작 OpenMP C/c + +에서 | Microsoft Docs"
-ms.custom: 
+title: E. 구현 정의 동작 OpenMP C/c + +에서 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: b8d660ca-9bb3-4b6b-87af-45c67d43a731
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fe890248ad2eb3bcee024bf12ccf4039484e7b2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 598964ec6a12ac4c357efc04df78bfbe3af798a5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="e-implementation-defined-behaviors-in-openmp-cc"></a>E. 구현 정의 동작 OpenMP C/c + +에서
 이 부록 "구현에서 정의 된"이 api에서로 설명 하는 동작을 요약 합니다.  각 동작은 다시 상호 참조 하도록 주 사양에서 설명 합니다.  
@@ -65,14 +60,14 @@ ms.lasthandoff: 12/21/2017
   
      Visual c + +에서 스레드 수는 운영 체제에 의해 결정 됩니다.  
   
--   `OMP_SCHEDULE`환경 변수:이 환경 변수에 대 한 기본값은 구현 시 정의 (참조 [섹션 4.1](../../parallel/openmp/4-1-omp-schedule.md) 페이지 코어 48 개).  
+-   `OMP_SCHEDULE` 환경 변수:이 환경 변수에 대 한 기본값은 구현 시 정의 (참조 [섹션 4.1](../../parallel/openmp/4-1-omp-schedule.md) 페이지 코어 48 개).  
   
      일정 유형은 Visual c + +에서 `static` 청크 크기가 없습니다.  
   
--   `OMP_NUM_THREADS`환경 변수: 없는 값을 지정 하는 경우는 `OMP_NUM_THREADS` 환경 변수를 지정한 값이 양의 정수 또는 사용할 스레드 수는 값은 시스템에서 지원할 수 스레드의 최대 개수 보다 큰 경우 구현 시 정의 (참조 [섹션 4.2](../../parallel/openmp/4-2-omp-num-threads.md) 페이지 코어 48 개).  
+-   `OMP_NUM_THREADS` 환경 변수: 없는 값을 지정 하는 경우는 `OMP_NUM_THREADS` 환경 변수를 지정한 값이 양의 정수 또는 사용할 스레드 수는 값은 시스템에서 지원할 수 스레드의 최대 개수 보다 큰 경우 구현 시 정의 (참조 [섹션 4.2](../../parallel/openmp/4-2-omp-num-threads.md) 페이지 코어 48 개).  
   
      Visual c + +에서 값을 지정 하는 경우가 0 또는 이하인 스레드 수는 프로세서 수와 같습니다.  값은 64 보다 큰 경우 스레드 수가 64입니다.  
   
--   `OMP_DYNAMIC`환경 변수: 기본값은 구현 시 정의 (참조 [섹션 4.3](../../parallel/openmp/4-3-omp-dynamic.md) 49 페이지).  
+-   `OMP_DYNAMIC` 환경 변수: 기본값은 구현 시 정의 (참조 [섹션 4.3](../../parallel/openmp/4-3-omp-dynamic.md) 49 페이지).  
   
      기본값은 Visual c + +에서 `FALSE`합니다.

@@ -1,30 +1,25 @@
 ---
-title: "C + + UWP 앱 용 비동기 작업 만들기 | Microsoft Docs"
-ms.custom: 
+title: C + + UWP 앱 용 비동기 작업 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 99251cbf6627d07075dad3d7dfa3fd4d9651fea8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 24ea9cc47ea9fa78c5efaf6c922f9f01dd3ff963
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>C + + UWP 앱 용 비동기 작업 만들기
 이 문서에서는 런타임 UWP (유니버설 Windows) 응용 프로그램에서 Windows ThreadPool 기반 비동기 작업을 생성 하기 위해 태스크 클래스를 사용할 때 염두에서에 둬야 할 주요 사항 들을 설명 합니다.  
@@ -168,7 +163,7 @@ ms.lasthandoff: 02/14/2018
 
 >  STA에서 실행되는 연속의 본문에서 [concurrency::task::wait](reference/task-class.md#wait) 를 호출하지 마세요. 호출하는 경우 이 메서드가 현재 스레드를 차단하고 앱이 응답하지 않게 만들 수 있기 때문에 런타임에서 [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) 을 throw합니다. 그러나 [concurrency::task::get](reference/task-class.md#get) 메서드를 호출하여 작업 기반 연속에서 선행 작업의 결과를 받을 수 있습니다.  
   
-##  <a name="example-app">예: c + + 및 XAML는 Windows 런타임 앱에서 실행 제어</a>  
+##  <a name="example-app"></a> 예: c + + 및 XAML는 Windows 런타임 앱에서 실행 제어  
  디스크에서 파일을 읽고 해당 파일에서 가장 일반적인 단어를 찾은 다음 UI에 결과를 표시하는 C++ XAML 앱을 살펴보겠습니다. 이 앱을 만들려면 시작, Visual Studio에서 만들어는 **비어 있는 앱 (유니버설 Windows)** 프로젝트 및 이름을 지정 하 고 `CommonWords`합니다. 앱 매니페스트에서 **문서 라이브러리** 접근 권한을 지정하여 앱이 문서 폴더에 액세스할 수 있도록 합니다. 또한 텍스트(.txt) 파일 형식을 앱 매니페스트의 선언 섹션에 추가합니다. 앱 기능 및 선언에 대한 자세한 내용은 [앱 패키지 및 배포](http://msdn.microsoft.com/library/windows/apps/hh464929.aspx)를 참조하세요.  
   
  MainPage.xaml에서 `Grid` 요소를 업데이트하여 `ProgressRing` 요소와 `TextBlock` 요소를 포함합니다. `ProgressRing` 은 작업이 진행 중임을 나타내고, `TextBlock` 은 계산의 결과를 보여 줍니다.  

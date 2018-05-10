@@ -1,30 +1,25 @@
 ---
-title: "방법: 스케줄러 인스턴스 관리 | Microsoft Docs"
-ms.custom: 
+title: '방법: 스케줄러 인스턴스 관리 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2e4916e0f563c4034dc27be1e3d911f42a65319
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 699abcbc75dc4f0df40d07d26c0e6987d4711fe3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>방법: 스케줄러 인스턴스 관리
 스케줄러 인스턴스를 사용 하면 다양 한 종류의 작업 부하를 특정 일정 예약 정책을 연결 합니다. 이 항목에는 만들고 스케줄러 인스턴스를 관리 하는 방법을 보여 주는 두 가지 기본 예제가 포함 되어 있습니다.  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
 8.  호출 된 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211) 함수를 이벤트 개체에 대 한 핸들을 닫습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에는 스케줄러 인스턴스를 관리 하는 두 가지 방법을 보여 줍니다. 각 예에서는 먼저 기본 스케줄러를 사용 하 여 현재 스케줄러의 고유 식별자를 출력 하는 작업을 수행 합니다. 각 예에서는 다음 스케줄러 인스턴스를 사용 하 여 같은 작업을 다시 수행 합니다. 마지막으로, 각 예에서는 현재 기본 스케줄러를 복원 하 고 작업을 한 번 더 수행 합니다.  
   
  사용 하 여 첫 번째 예제는 [concurrency:: currentscheduler](../../parallel/concrt/reference/currentscheduler-class.md) 스케줄러 인스턴스를 만들고 현재 컨텍스트와 연결 하는 클래스입니다. 사용 하 여 두 번째 예제는 [concurrency:: scheduler](../../parallel/concrt/reference/scheduler-class.md) 동일한 작업을 수행 하는 클래스입니다. 일반적으로 `CurrentScheduler` 클래스 현재 스케줄러를 사용 하는 데 사용 됩니다. 사용 하는 두 번째 예는 `Scheduler` 클래스, 스케줄러를 현재 컨텍스트와 연결 하는 경우 또는 특정 작업을 특정 스케줄러를 연결 하려면 제어 하려는 경우에 유용 합니다.  

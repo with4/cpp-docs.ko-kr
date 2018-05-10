@@ -1,37 +1,32 @@
 ---
-title: "복합 문 (C) | Microsoft Docs"
-ms.custom: 
+title: 복합 문 (C) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - compound statements
 - statements, compound
 ms.assetid: 32d1bf86-cbbc-42a9-ba3a-1be1c6c7754c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9422e3229aa5e800859f50e1ca058e32a4120074
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e25bef33e374d7e0dbf97a337cb58146b05bd093
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compound-statement-c"></a>복합 문 (C)
 "블록"이라고도 하는 복합 문은 일반적으로 **if** 문 같은 다른 문의 본문으로 나타납니다. [선언 및 형식](../c-language/declarations-and-types.md)에서는 복합 문 헤드에 나타날 수 있는 선언의 형태와 의미에 대해 설명합니다.  
   
 ## <a name="syntax"></a>구문  
  *compound-statement*:  
- **{**  *declaration-list* opt*statement-list*opt**}**  
+ **{**  *declaration-list* opt*statement-list*opt **}**  
   
  *declaration-list*:  
  *declaration*  

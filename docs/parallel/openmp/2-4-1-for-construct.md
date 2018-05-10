@@ -1,27 +1,22 @@
 ---
-title: "2.4.1 for 구문 | Microsoft Docs"
-ms.custom: 
+title: 2.4.1 for 구문 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 27d2cbce-786b-4819-91d3-d55b2cc57a5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd861da77b549a73edf9aeface714b0066d88344
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d5165c21f0bf6f2b9757550208d5e8e26a2bd3b1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="241-for-construct"></a>2.4.1 for 구문
 **에 대 한** 지시문 병렬로 연결 된 루프의 반복을 실행할지를 지정 하는 반복 작업 공유 생성자를 식별 합니다. 반복 된 **에 대 한** 루프 실행을 바인딩하는 병렬 구문 팀에 이미 있는 스레드 간에 배포 됩니다. 구문은 **에 대 한** 구문은 다음과 같습니다.  
@@ -32,15 +27,15 @@ ms.lasthandoff: 12/21/2017
   
  절은 다음 중 하나입니다.  
   
- **개인 (** *변수 목록* **)**  
+ **private(** *variable-list* **)**  
   
- **firstprivate (** *변수 목록* **)**  
+ **firstprivate(** *variable-list* **)**  
   
- **lastprivate (** *변수 목록* **)**  
+ **lastprivate(** *variable-list* **)**  
   
- **감소 (** *연산자* **:** *변수 목록***)**  
+ **감소 (** *연산자* **:** *변수-목록 * * *)**  
   
- **정렬**  
+ **ordered**  
   
  **일정 (** *종류*[, *chunk_size*]**)**  
   
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
  **에 대 한** 지시문에서는 해당 구조에 제한 **에 대 한** 루프입니다. 특히, 해당 **에 대 한** 루프 정식 셰이프 있어야 합니다.:  
   
- **에 대 한 (** *init expr* **;** *var 논리 op b*; *incr expr***)**  
+ **에 대 한 (** *init expr* **;** *var 논리 op b*; *incr-expr * * *)**  
   
  *init expr*  
  다음 중 하나:  
@@ -60,11 +55,11 @@ ms.lasthandoff: 12/21/2017
  *incr expr*  
  다음 중 하나:  
   
- ++*var*  
+ ++*Var*  
   
  *var* ++  
   
- -- *var*  
+ -- *Var*  
   
  *var* --  
   
@@ -103,9 +98,9 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|정적|때 **일정 (정적** *chunk_size***)** 반복으로 지정 된 크기의 청크로 나뉩니다. 지정 된 *chunk_size*합니다. 청크는 스레드 번호 순서 대로 라운드 로빈 방식으로 팀의 스레드에 정적으로 할당 됩니다. No *chunk_size* 를 지정 하는 각 스레드에 할당 하는 하나의 청크 크기가 약 같은 것 청크로 반복 나뉩니다.|  
-|dynamic|때 **일정 (동적** *chunk_size***)** 지정, 청크를 포함 하는 일련의 반복 횟수는 나뉩니다 *chunk_size* 반복 합니다. 각 청크 할당에 대 한 대기 중인 스레드에 할당 됩니다. 스레드는 반복의 청크를 실행 하 고 그런 다음 할당할 청크가 없습니다 남을 때까지 그 다음 할당을 기다립니다. 참고 할당할 마지막 청크는 더 적은 수의 반복을 있을 수 있습니다. No *chunk_size* 지정, 기본값은 1입니다.|  
-|문제 해결|때 **일정 (문제 해결,** *chunk_size***)** 반복 청크 크기를 줄여 채웁니다 스레드에 할당 된 지정 된 합니다. 이때 스레드가 완료 반복의 할당 된 해당 청크 하는 경우 더 이상 없을 때까지 다른 청크 동적으로 할당 됩니다. 에 대 한는 *chunk_size* 1 인 각 청크 크기가 약에서 할당 되지 않은 반복 횟수의 스레드 수로 나눈 값입니다. 이러한 크기 감소 지 수 적으로 1로 약 합니다. 에 대 한는 *chunk_size* 값을 가진 *k* 1 보다 큰 경우 크기가 감소 약 기하급수적으로 *k*한다는 점을 제외 하 고 마지막 청크 보다 적은 있을 수 있습니다  *k* 반복 합니다. No *chunk_size* 지정, 기본값은 1입니다.|  
+|정적|때 **일정 (정적** *chunk_size * * *)** 반복으로 지정 된 크기의 청크로 나뉩니다. 지정 된 *chunk_size*합니다. 청크는 스레드 번호 순서 대로 라운드 로빈 방식으로 팀의 스레드에 정적으로 할당 됩니다. No *chunk_size* 를 지정 하는 각 스레드에 할당 하는 하나의 청크 크기가 약 같은 것 청크로 반복 나뉩니다.|  
+|dynamic|때 **일정 (동적** *chunk_size * * *)** 지정 된, 청크를 포함 하는 일련의 반복 횟수는 나뉩니다 *chunk_size* 반복 합니다. 각 청크 할당에 대 한 대기 중인 스레드에 할당 됩니다. 스레드는 반복의 청크를 실행 하 고 그런 다음 할당할 청크가 없습니다 남을 때까지 그 다음 할당을 기다립니다. 참고 할당할 마지막 청크는 더 적은 수의 반복을 있을 수 있습니다. No *chunk_size* 지정, 기본값은 1입니다.|  
+|문제 해결|때 **일정 (문제 해결,** *chunk_size * * *)** 반복 청크 크기를 줄여 채웁니다 스레드에 할당 된 지정 된 합니다. 이때 스레드가 완료 반복의 할당 된 해당 청크 하는 경우 더 이상 없을 때까지 다른 청크 동적으로 할당 됩니다. 에 대 한는 *chunk_size* 1 인 각 청크 크기가 약에서 할당 되지 않은 반복 횟수의 스레드 수로 나눈 값입니다. 이러한 크기 감소 지 수 적으로 1로 약 합니다. 에 대 한는 *chunk_size* 값을 가진 *k* 1 보다 큰 경우 크기가 감소 약 기하급수적으로 *k*한다는 점을 제외 하 고 마지막 청크 보다 적은 있을 수 있습니다  *k* 반복 합니다. No *chunk_size* 지정, 기본값은 1입니다.|  
 |런타임(runtime)|때 **schedule (runtime)** 지정에 대 한 일정은 런타임이 될 때까지 지연 의사 결정 합니다. 일정 *종류* 환경 변수를 설정 하 여 런타임 시 청크 크기를 선택할 수 있습니다 및 **OMP_SCHEDULE**합니다. 이 환경 변수를 설정 하지 않으면 결과 일정 구현 시 정의 됩니다. 때 **schedule (runtime)** 지정 된 *chunk_size* 지정 하면 안 됩니다.|  
   
  명시적으로 정의 된 없을 경우에서 **일정** 절, 기본 **일정** 구현 시 정의 됩니다.  

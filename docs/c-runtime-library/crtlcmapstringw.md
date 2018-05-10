@@ -1,13 +1,10 @@
 ---
 title: __crtLCMapStringW | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - __crtLCMapStringW
 apilocation:
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - __crtLCMapStringW
 ms.assetid: 45b4ac0e-438c-4fa3-b4d1-34195f4467d9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 261fb23c96bee0d646f64d587d9f7afecc59d4d2
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: b12bdb89a038ccd420748c1b855f21e1b9e4d93a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 지정된 로캘 종속 변환을 수행하여 하나의 문자열을 다른 문자열에 매핑합니다. 이 함수는 입력 문자열에 대한 정렬 키를 생성하는 데에도 사용될 수 있습니다.  

@@ -1,13 +1,10 @@
 ---
-title: "scanf 너비 사양 | Microsoft Docs"
-ms.custom: 
+title: scanf 너비 사양 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr100.dll
 - msvcr120.dll
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee2fa7f80f47e2d3379bc4e68aec4496e8f4f01a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f0052f4b270366b2f3aa1e1550f790efcb860597
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="scanf-width-specification"></a>scanf 너비 사양
 이 정보는 `scanf_s`와 같은 보안 버전을 비롯하여 함수의 `scanf` 패밀리에서 형식 문자열의 해석에 적용됩니다. 다음 함수는 일반적으로 입력 스트림이 일련의 토큰으로 나뉜다고 가정합니다. 토큰은 공백(공백, 탭 또는 줄 바꿈)으로 구분되거나 숫자 형식의 경우 숫자 텍스트로 변환할 수 없는 첫 번째 문자가 나타내는 숫자 데이터 형식의 자연스러운 끝으로 구분됩니다. 입력 구문 분석을 토큰의 자연스러운 끝 이전에 중단하는 데 너비 지정을 사용할 수 있습니다.  
@@ -91,7 +86,7 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
 ## <a name="reading-undelimited-strings"></a>구분되지 않은 문자열 읽기  
  공백 문자로 구분되지 않은 문자열을 읽으려면 대괄호(**[ ]**)로 둘러싸인 문자 집합이 **s**(문자열) 형식 문자를 대신할 수 있습니다. 대괄호로 둘러싸인 문자 집합을 제어 문자열이라고 합니다. 해당 입력된 필드는 제어 문자열에 나타나지 않는 첫 번째 문자까지 읽힙니다. 집합의 첫 번째 문자가 캐럿(**^**)이면 반대로 적용됩니다. 즉, 문자 집합의 나머지 부분에 나타나는 않는 첫 번째 문자까지 입력 필드가 읽힙니다.  
   
- **%[a-z]** 및 **%[z-a]**는 **%[abcde...z]**와 동일한 것으로 해석됩니다. 이는 공통 `scanf` 함수 확장이지만 ANSI 표준에는 이러한 확장이 필요하지 않습니다.  
+ **%[a-z]** 및 **%[z-a]** 는 **%[abcde...z]** 와 동일한 것으로 해석됩니다. 이는 공통 `scanf` 함수 확장이지만 ANSI 표준에는 이러한 확장이 필요하지 않습니다.  
   
 ## <a name="reading-unterminated-strings"></a>종결되지 않은 문자열 읽기  
  null 종결 문자('\0')를 저장하지 않고 문자열을 저장하려면 사양 `%`*n***c**를 사용합니다. 여기서 *n*은 10진수입니다. 이 경우에 **c** 형식 문자는 인수가 문자 배열에 대한 포인터임을 나타냅니다. 입력 스트림에서 지정된 위치로 다음 *n*개 문자를 읽고 null 문자('\0')는 추가되지 않습니다. *n*이 지정되어 있지 않으면 기본값은 1입니다.  

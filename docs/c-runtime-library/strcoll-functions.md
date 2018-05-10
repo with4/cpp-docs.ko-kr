@@ -1,13 +1,10 @@
 ---
-title: "strcoll 함수 | Microsoft Docs"
-ms.custom: 
+title: strcoll 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr120.dll
 - msvcr110_clr0400.dll
@@ -26,17 +23,15 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: c09eeff3-8aba-4cfb-a524-752436d85573
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5f025d90d4ffac5f9dc293f621023591b5eb4f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e97e16ec3360764411b36bf129c344a3455ce6a6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="strcoll-functions"></a>strcoll 함수
 각 `strcoll` 및 `wcscoll` 함수는 현재 사용 중인 로캘 코드 페이지의 `LC_COLLATE` 범주 설정에 따라 두 개의 문자열을 비교합니다. 각 `_mbscoll` 함수는 현재 사용 중인 멀티바이트 코드 페이지에 따라 두 개의 문자열을 비교합니다. `coll` 함수는 현재 코드 페이지에서 문자 집합 순서와 사전적 문자 순서가 다르며 이러한 차이가 비교 시 중요한 경우의 문자열 비교에 사용합니다. 문자열 일치만 테스트하려면 해당 `cmp` 함수를 사용합니다.  

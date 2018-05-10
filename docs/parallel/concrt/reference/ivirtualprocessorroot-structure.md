@@ -1,12 +1,9 @@
 ---
-title: "IVirtualProcessorRoot 구조체 | Microsoft Docs"
-ms.custom: 
+title: IVirtualProcessorRoot 구조체 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IVirtualProcessorRoot
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IVirtualProcessorRoot structure
 ms.assetid: 5ef371b8-9e4f-4fef-bb0d-49099693dd2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a385bc12d3add9dd445243794135083c7cc1b3c1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9620ee391b525356bfdb50b00d7e76c03b480815
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot 구조체
 스레드 프록시가 실행될 수 있는 하드웨어 스레드의 추상화입니다.  
@@ -120,7 +115,7 @@ virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
   
  가상 프로세서 루트를 비활성화 하는 작업의 기본 하드웨어 스레드 구독 수준 하나 감소 합니다. 구독 수준에 대 한 자세한 내용은 참조 하십시오. [iexecutionresource:: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)합니다.  
   
-##  <a name="ensurealltasksvisible"></a>  IVirtualProcessorRoot::EnsureAllTasksVisible Method  
+##  <a name="ensurealltasksvisible"></a>  Ivirtualprocessorroot:: Ensurealltasksvisible 메서드  
  시스템에서 모든 프로세서에 표시 될 수 개별 프로세서의 메모리 계층 구조에 저장 된 데이터를 하면 됩니다. 메서드가 반환 되기 전에 전체 메모리 펜스 모든 프로세서에서 실행 된 있는지 확인 합니다.  
   
 ```
@@ -140,7 +135,7 @@ virtual void EnsureAllTasksVisible(_Inout_ IExecutionContext* pContext) = 0;
   
  `invalid_operation` 가상 프로세서 루트 활성화 되지 않은 경우 throw 되는 인수 또는 `pContext` 이 가상 프로세서 루트에 의해 가장 최근에 반환 된 실행 컨텍스트를 나타내지 않습니다.  
   
-##  <a name="getid"></a>  IVirtualProcessorRoot::GetId Method  
+##  <a name="getid"></a>  Ivirtualprocessorroot:: Getid 메서드  
  가상 프로세서 루트에 대 한 고유 식별자를 반환합니다.  
   
 ```

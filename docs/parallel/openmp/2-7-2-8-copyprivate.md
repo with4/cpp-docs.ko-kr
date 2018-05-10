@@ -1,27 +1,22 @@
 ---
 title: 2.7.2.8 copyprivate | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: c382348c-c785-45b2-8ee6-a66b76b97f3e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21d739fb3ead0512776cfd996b59f1ceab5e8250
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c809f297da5059a98915e8055dfe23f45074366f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="2728-copyprivate"></a>2.7.2.8 copyprivate
 **copyprivate** 절 다른 구성원에 게 팀의 멤버 중 하나에서 값을 브로드캐스트할 개인 변수를 사용 하는 메커니즘을 제공 합니다. 것 (예를 들어, 각 수준에서 서로 다른 변수를 요구 하는 재귀)에서 어려울 수는 공유 변수를 제공 하는 경우 값에 대 한 공유 변수를 사용 하는 대신 합니다. **copyprivate** 절에 나타날 수는 **단일** 지시문입니다.  

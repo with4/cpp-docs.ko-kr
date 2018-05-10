@@ -1,27 +1,22 @@
 ---
-title: "2.6.5 flush 지시문 | Microsoft Docs"
-ms.custom: 
+title: 2.6.5 flush 지시문 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a2ec5f74-9c37-424a-8376-47ab4a5829a2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7607070692941606b863be9248b2d69f093f3a13
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad3b34195015f57955c5be685807ec43f0a8f8c6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="265-flush-directive"></a>2.6.5 flush 지시문
 **플러시** 지시문을 명시적 또는 묵시적 여부를 지정 되는 구현이 팀의 모든 스레드가 (아래)에 지정 하는 특정 개체의 일관 된 뷰를 갖도록 하는 데 필요 "스레드 간" 시퀀스 위치 메모리입니다. 이 해당 개체를 참조 하는 식에 대 한 이전 평가 완료 하 고 다음 계산은 수행이 아직 시작 되지 않은 의미 합니다. 예를 들어 컴파일러 메모리, 레지스터에서 개체의 값에 복원 해야 하 고 하드웨어 메모리에 대 한 쓰기 버퍼를 플러시하고 메모리에서 개체의 값을 다시 로드 해야 할 수 있습니다.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 -   항목의 시작과 종료가에서 **중요**  
   
--   항목의 시작과 종료가에서`ordered`  
+-   항목의 시작과 종료가에서 `ordered`  
   
 -   항목의 시작과 종료가에서 **병렬**  
   

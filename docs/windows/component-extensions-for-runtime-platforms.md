@@ -1,13 +1,10 @@
 ---
-title: "런타임 플랫폼의 구성 요소 확장명 | Microsoft Docs"
-ms.custom: 
+title: 런타임 플랫폼의 구성 요소 확장명 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e32057e17614da98c78d877fe95180dd02500909
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e60a1285f54de6b1cbfe311d4d9cbbc547785176
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="component-extensions-for-runtime-platforms"></a>런타임 플랫폼의 구성 요소 확장명
 Visual C++에서는 런타임 플랫폼을 대상으로 프로그래밍할 수 있도록 언어 확장을 제공합니다. 통해 C + + /CX에서는 유니버설 Windows 플랫폼 앱 및 구성 요소는 네이티브 코드로 컴파일할 프로그래밍할 수 있습니다. C +를 사용 하 여 Windows 런타임 COM 인터페이스에 대해 직접 프로그래밍 하 여 유니버설 Windows 플랫폼 앱을 만들 수 있지만 + /CX에서는 생성자, 예외 및 기타 최신 c + + 프로그래밍 관용구와 작업할 수 있습니다. .NET 플랫폼에서 관리 되는 실행 환경에서 c + + 프로그래밍을 사용 하도록 설정 하려면 다음을 사용할 수 있습니다 C + + /cli CLI 합니다.  
@@ -39,7 +34,7 @@ Visual C++에서는 런타임 플랫폼을 대상으로 프로그래밍할 수 �
   
  C + +에서 유니버설 Windows 플랫폼 앱을 만드는 방법에 대 한 자세한 내용은 참조 [로드맵 Windows 런타임 앱 용 c + +를 사용 하 여](http://msdn.microsoft.com/library/windows/apps/hh700360.aspx)합니다.  
   
- C + + /cli CLI ISO/ANSI c + + 표준을 확장 하 고 정의 된 아래 Ecma C + + /cli CLI 표준입니다. 자세한 내용은 참조 [.NET 프로그래밍 C + + /cli CLI (Visual c + +)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)합니다.  
+ C + + /cli CLI ISO/ANSI c + + 표준을 확장 하 고 정의 된 아래 Ecma C + + /cli CLI 표준입니다. 자세한 내용은 [.NET 프로그래밍 C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)를 참조합니다.  
   
 ## <a name="data-type-keywords"></a>데이터 형식 키워드  
  언어 확장에 포함 *집계 키워드*는 공백으로 구분 된 두 개의 토큰으로 구성 된 키워드입니다. 토큰은 별도로 사용될 때의 의미와 함께 사용될 때의 의미가 있을 수 있습니다. 예를 들어 "ref"라는 단어는 일반 식별자이고 "class"라는 단어는 네이티브 클래스를 선언하는 키워드입니다. 이러한 단어를 폼에 결합 되 면 하지만 `ref class`, 라고 하는 엔터티를 선언 하는 경우 결과 집계 키워드는 *런타임 클래스*합니다.  
@@ -122,7 +117,7 @@ Visual C++에서는 런타임 플랫폼을 대상으로 프로그래밍할 수 �
 |`__cplusplus_cli`|[미리 정의된 매크로](../preprocessor/predefined-macros.md)|  
 |[사용자 지정 특성](../windows/custom-attributes-cpp.md)|사용자 고유의 CLR 특성을 정의하는 방법을 설명합니다.|  
 |[예외 처리](../windows/exception-handling-cpp-component-extensions.md)|예외 처리에 대한 개요를 제공합니다.|  
-|[명시적 재정](../windows/explicit-overrides-cpp-component-extensions.md)|멤버 함수에서 임의 멤버를 재정의하는 방법을 보여 줍니다.|  
+|[명시적 재정의](../windows/explicit-overrides-cpp-component-extensions.md)|멤버 함수에서 임의 멤버를 재정의하는 방법을 보여 줍니다.|  
 |[Friend 어셈블리(C++)](../dotnet/friend-assemblies-cpp.md)|클라이언트 어셈블리에서 어셈블리 구성 요소의 모든 형식에 액세스할 수 있는 방법을 설명합니다.|  
 |[Boxing](../windows/boxing-cpp-component-extensions.md)|값 형식이 boxing되는 조건을 보여 줍니다.|  
 |[형식 특성에 대 한 컴파일러 지원](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)|컴파일 시간에 형식의 특성을 검색하는 방법을 설명합니다.|  

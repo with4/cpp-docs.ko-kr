@@ -1,13 +1,10 @@
 ---
-title: "표준 형식 | Microsoft Docs"
-ms.custom: 
+title: 표준 형식 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - __time64_t
 - _diskfree_t
@@ -169,17 +166,15 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd51f03d9a4134ee7193d5aede410bb541cd19f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a66b351ba03ad6d8afb9d7423a2d1833eec8e2b7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="standard-types"></a>표준 형식
 Microsoft 런타임 라이브러리는 다음과 같은 표준 형식 및 typedefs를 정의합니다.  
@@ -211,7 +206,7 @@ Microsoft 런타임 라이브러리는 다음과 같은 표준 형식 및 typede
 |`_CrtMemState` 구조체|C 런타임 디버그 힙의 현재 상태에 대한 정보를 제공합니다.|CRTDBG.H|  
 |`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|[_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)에서 호출되는 콜백 함수에 대한 형식이 정의됩니다.<br /><br /> 이 함수에 대한 매개 변수는 보고서 유형, 출력 메시지 및 콜백 함수의 반환 값입니다.|CRTDBG.H|  
 |`dev_t`, `_dev_t` short 또는 부호 없는 정수|장치 핸들을 나타냅니다.|SYS\TYPES.H|  
-|`_diskfree_t` 구조체|디스크 드라이브에 대한 정보가 들어 있습니다. [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)**.**에 의해 사용됩니다.|DOS.H 및 DIRECT.H|  
+|`_diskfree_t` 구조체|디스크 드라이브에 대한 정보가 들어 있습니다. [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)**.** 에 의해 사용됩니다.|DOS.H 및 DIRECT.H|  
 |`div_t`, `ldiv_t` 및 `lldiv_t` 구조|[div](../c-runtime-library/reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md) 및 [lldiv](../c-runtime-library/reference/ldiv-lldiv.md)에 의해 반환된 값을 각각 저장합니다.|STDLIB.H|  
 |`errno_t` 정수|`errno`의 오류 코드를 처리하는 매개 변수 또는 함수 반환 형식에 사용됩니다.|STDDEF.H,<br /><br /> CRTDEFS.H|  
 |`_exception` 구조체|[_matherr](../c-runtime-library/reference/matherr.md)에 대한 오류 정보를 저장합니다.|MATH.H|  

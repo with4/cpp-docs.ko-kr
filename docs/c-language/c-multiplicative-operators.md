@@ -1,13 +1,10 @@
 ---
-title: "C 곱하기 연산자 | Microsoft Docs"
-ms.custom: 
+title: C 곱하기 연산자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,20 +17,18 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8fbcbb5579c63ef0cab375ec19e2afee47e97ee
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 1810cc9dd7a991e302e0e9e2db69f65aebebc613
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-multiplicative-operators"></a>곱하기 연산자
-곱하기 연산자는 곱하기(**\****), 나누기(**/**) 및 나머지(`%`) 연산을 수행합니다.  
+곱하기 연산자는 곱하기(**\***), 나누기(**/**) 및 나머지(`%`) 연산을 수행합니다.  
   
  **구문**  
   
@@ -46,7 +41,7 @@ ms.lasthandoff: 03/16/2018
   
  *multiplicative-expression*  **%**  *cast-expression*  
   
- 나머지 연산자의 피연산자(`%`)는 정수 계열이어야 합니다. 곱하기(**\****) 및 나누기(**/**) 연산자는 정수 계열 또는 부동 형식 피연산자를 사용할 수 있습니다. 따라서 피연산자의 형식은 다를 수도 있습니다.  
+ 나머지 연산자의 피연산자(`%`)는 정수 계열이어야 합니다. 곱하기(**\***) 및 나누기(**/**) 연산자는 정수 계열 또는 부동 형식 피연산자를 사용할 수 있습니다. 따라서 피연산자의 형식은 다를 수도 있습니다.  
   
  곱셈 연산자는 피연산자에 대한 일반적인 산술 변환을 수행합니다. 결과 형식은 변환 후의 피연산자 형식과 동일합니다.  
   
@@ -105,7 +100,7 @@ n = i % j;
   
  **Microsoft 전용**  
   
- 나머지의 부호는 피제수의 부호와 동일합니다. 예를 들어:  
+ 나머지의 부호는 피제수의 부호와 동일합니다. 예:  
   
 ```  
 50 % -6 = 2  

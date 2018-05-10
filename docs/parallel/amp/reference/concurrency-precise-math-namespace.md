@@ -1,12 +1,9 @@
 ---
 title: 'Concurrency:: precise_math Namespace | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP_MATH/Concurrency::acos
@@ -142,17 +139,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: ba653308-dc28-4384-b2fd-6cd718a72f91
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7016b2b9ff925164510644b743e0459a3011b5dc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 181b80f97dd7ae3e44d3c7c51139d492da967ba3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math 네임스페이스
 함수는 `precise_math` 네임 스페이스는 C99 규정을 준수 합니다. 전체 자릿수 단일 및 이중 정밀도 버전의 각 함수가 포함 되었습니다. 예를 들어 `acos` 배정도 버전 및 `acosf` 단 정밀도 버전입니다. 단 정밀도 함수를 포함 하 여 이러한 함수에는 액셀러레이터에서 확장 된 배정도 지원을 해야 합니다. 사용할 수는 [accelerator:: supports_double_precision](accelerator-class.md#supports_double_precision) 를 결정 하는 경우 특정 가속기에서 이러한 함수를 실행할 수 있습니다. 

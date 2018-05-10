@@ -1,30 +1,25 @@
 ---
-title: "다중 스레드 프로그램 | Microsoft Docs"
-ms.custom: 
+title: 다중 스레드 프로그램 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - threading [C++], about threading
 - multithreading [C++], about threads
 ms.assetid: 02443596-f7e1-48d0-b3a4-39ee0e54e444
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ff73b4d3a1c8ee6971fbd3f88f491c2a5c76311
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ece834bd6bf85daacbbaf50110e6e278da1ae099
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithread-programs"></a>다중 스레드 프로그램
 스레드는 기본적으로 프로그램을 통해 실행 경로입니다. Win32 일정을 예약 하는 실행의 최소 단위 이기도 합니다. CPU 레지스터와 시스템 스케줄러의 실행 목록에 있는 항목의 상태는 스택, 스레드 구성 됩니다. 각 스레드는 프로세스의 모든 리소스를 공유합니다.  

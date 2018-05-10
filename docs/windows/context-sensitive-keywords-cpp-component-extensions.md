@@ -1,13 +1,10 @@
 ---
-title: "상황에 맞는 키워드 (c + + 구성 요소 확장명) | Microsoft Docs"
-ms.custom: 
+title: 상황에 맞는 키워드 (c + + 구성 요소 확장명) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - internal_CPP
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d5af53c04c6ff9ec28e7b83cd3a8f9bce8307c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ceea3242087d89b511f6309003efe38d155735d2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="context-sensitive-keywords--c-component-extensions"></a>상황에 맞는 키워드(C++ 구성 요소 확장)
 *상황에 맞는 키워드* 는 특정 컨텍스트에서만에서 인식 되는 언어 요소입니다. 특정 컨텍스트가 아닐 경우 상황에 맞는 키워드는 사용자 정의 기호일 수 있습니다.  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
--   `where`(의 일부가 [제네릭](../windows/generics-cpp-component-extensions.md))  
+-   `where` (의 일부가 [제네릭](../windows/generics-cpp-component-extensions.md))  
   
  가독성을 위해 사용자 정의 기호로 상황에 맞는 키워드의 사용을 제한 하는 것이 좋습니다.  
   

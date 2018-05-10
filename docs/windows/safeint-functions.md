@@ -1,30 +1,25 @@
 ---
-title: "SafeInt 함수 | Microsoft Docs"
-ms.custom: 
+title: SafeInt 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - functions, SafeInt
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6ae482b7f58d64a46b82b32c6c6d62d7f69f0dce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 97edd25abca3c9e80a35745165eedc93cc13a9b9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safeint-functions"></a>SafeInt 함수
 SafeInt 라이브러리의 인스턴스를 만들지 않고 사용할 수 있는 여러 함수를 제공 된 [SafeInt 클래스](../windows/safeint-class.md)합니다. 정수 오버플로에서 단일 수학 연산을 보호 하려는 경우 이러한 함수를 사용할 수 있습니다. 여러 수학 연산을 보호 하려는 경우 만든 `SafeInt` 개체입니다. 것이 보다 효과적으로 만들 `SafeInt` 를 사용 하 여 이러한 함수가 여러 번 보다는 개체입니다.  
@@ -40,7 +35,7 @@ SafeInt 라이브러리의 인스턴스를 만들지 않고 사용할 수 있는
 |[SafeAdd](../windows/safeadd.md)|두 숫자를 더하고 오버플로 방지 합니다.|  
 |[SafeCast](../windows/safecast.md)|한 가지 유형의 다른 형식으로 매개 변수를 캐스팅합니다.|  
 |[SafeDivide](../windows/safedivide.md)|두 숫자를 나누고 분모가 0을 방지 합니다.|  
-|[SafeEquals](../windows/safeequals.md), [SafeGreaterThan](../windows/safegreaterthan.md), [SafeGreaterThanEquals](../windows/safegreaterthanequals.md), [SafeLessThan](../windows/safelessthan.md), [SafeLessThanEquals](../windows/safelessthanequals.md), [SafeNotEquals](../windows/safenotequals.md)|두 숫자를 비교합니다. 이러한 함수를 사용 하 여 해당 형식을 변경 하지 않고 두 개의 다른 형식의 숫자를 비교할 수 있습니다.|  
+|[SafeEquals](../windows/safeequals.md), [SafeGreaterThan](../windows/safegreaterthan.md), [SafeGreaterThanEquals](../windows/safegreaterthanequals.md), [SafeLessThan](../windows/safelessthan.md), [SafeLessThanEquals](../windows/safelessthanequals.md), [ SafeNotEquals](../windows/safenotequals.md)|두 숫자를 비교합니다. 이러한 함수를 사용 하 여 해당 형식을 변경 하지 않고 두 개의 다른 형식의 숫자를 비교할 수 있습니다.|  
 |[SafeModulus](../windows/safemodulus.md)|두 숫자에 대해 모듈러스 연산을 수행합니다.|  
 |[SafeMultiply](../windows/safemultiply.md)|두 숫자를 곱합니다 및 넘침을 방지 합니다.|  
 |[SafeSubtract](../windows/safesubtract.md)|두 숫자를 빼고 오버플로 방지 합니다.|  

@@ -1,13 +1,10 @@
 ---
-title: "링크 옵션 | Microsoft 문서"
-ms.custom: 
+title: 링크 옵션 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -38,17 +35,15 @@ helpviewer_keywords:
 - threadlocale.obj
 - pnoarg.obj
 ms.assetid: 05b5a77b-9dd1-494b-ae46-314598c770bb
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0108ecd9d0b9caaa2df3d450c185d5937a96463
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: c7cccd76f428ea2e1234a0e2da54452c051e683d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="link-options"></a>링크 옵션
 CRT 라이브러리 디렉터리에는 코드를 변경하지 않고도 특정 CRT 기능을 사용할 수 있는 작은 개체 파일이 여러 개 포함되어 있습니다. 이러한 파일은 링커 명령줄에 추가하기만 하면 사용할 수 있기 때문에 "링크 옵션"이라고 합니다.  

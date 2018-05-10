@@ -1,13 +1,10 @@
 ---
-title: "방법: 데이터 파이프라인에서 transformer 사용 | Microsoft Docs"
-ms.custom: 
+title: '방법: 데이터 파이프라인에서 transformer 사용 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,24 +12,22 @@ helpviewer_keywords:
 - data pipelines, using transformer [Concurrency Runtime]
 - using transformer in data pipelines [Concurrency Runtime]
 ms.assetid: ca49cb3f-4dab-4b09-a9c9-d3a109ae4c29
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76c8a50bd5a58d9fe6e4a68f05d9732e50fd04e8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a291b5c53338137ae59d9361ee36b6df29df277e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-transformer-in-a-data-pipeline"></a>방법: 데이터 파이프라인에서 transformer 사용
 이 항목에서는 사용 하는 방법을 보여 주는 기본 예제는 [concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md) 데이터 파이프라인에서 클래스입니다. 이미지 처리를 수행 하는 데이터 파이프라인을 사용 하는 자세한 예제를 참조 하십시오. [연습: 이미지 처리 네트워크 만들기](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)합니다.  
   
  *데이터 파이프라인* 동시 프로그래밍의 일반적인 패턴입니다. 데이터 파이프라인은 일련의 단계로, 여기서 각 단계 작업을 수행 하 고 다음 해당 작업의 결과 다음 단계로 전달 이루어져 있습니다. `transformer` 데이터의 핵심 구성 요소는 입력된 값을 수신 하기 때문에 파이프라인 클래스 해당 값에 대해 작업을 수행 하 고 다음 사용 하도록 다른 구성 요소에 대 한 결과 생성 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예에서는 다음과 같은 데이터 파이프라인을 사용 하 여 일련의 초기 입력된 값을 지정 하는 변환 수행:  
   
 1.  첫 번째 단계에서는 입력 값의 절대값을 계산 합니다.  

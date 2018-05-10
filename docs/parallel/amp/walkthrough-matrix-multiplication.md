@@ -1,32 +1,27 @@
 ---
-title: "연습: 매트릭스 곱 | Microsoft Docs"
-ms.custom: 
+title: '연습: 매트릭스 곱 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f91bed0b33ae29d7928ec7df3420eb4878b51eef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d0c61bff6251d5ae833611161ef7b1bb06e6f39a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-matrix-multiplication"></a>연습: 매트릭스 곱
 이 단계별 연습 매트릭스 곱의 실행을 가속화 하 c + + AMP를 사용 하는 방법을 보여 줍니다. 두 알고리즘 바둑판식 배열 없는 및 바둑판식으로 표시 됩니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  시작하기 전에  
   
 -   읽기 [c + + AMP 개요](../../parallel/amp/cpp-amp-overview.md)합니다.  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  Visual Studio의 메뉴 모음에서 **파일**, **새로**, **프로젝트**합니다.  
   
-2.  아래 **설치 됨** 템플릿 창에서 선택 **Visual c + +**합니다.  
+2.  아래 **설치 됨** 템플릿 창에서 선택 **Visual c + +** 합니다.  
   
 3.  선택 **빈 프로젝트**, 입력 `MatrixMultiply` 에 **이름** 상자를 선택한 후는 **확인** 단추입니다.  
   
@@ -52,13 +47,13 @@ ms.lasthandoff: 12/21/2017
 ## <a name="multiplication-without-tiling"></a>바둑판식 배열 없이 곱하기  
  이 섹션에서는 ´ ï ´ ù A와 B 라는 두 행렬의 곱하기를 고려 합니다.  
   
- ![3 &#45; 여 &#45; 2 행렬](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")  
+ ![3&#45;여&#45;2 행렬](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")  
   
- ![2 &#45; 여 &#45; 3 매트릭스](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")  
+ ![2&#45;여&#45;3 행렬](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")  
   
  A는 3-2 매트릭스 및 B는 2-3 매트릭스가 나와 있습니다. B가 곱하는 A의 제품은 다음과 같은 3-3 매트릭스가 나와 있습니다. 제품 B 요소 열에 의해 A의 행을 곱하여 계산 됩니다.  
   
- ![3 &#45; 여 &#45; 3 매트릭스](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")  
+ ![3&#45;여&#45;3 행렬](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")  
   
 ### <a name="to-multiply-without-using-c-amp"></a>C + + AMP를 사용 하지 않고 곱할  
   
@@ -172,21 +167,21 @@ void main() {
   
  를 사용 하려면 바둑판식 배열 매트릭스 곱의 알고리즘 행렬 바둑판식 배열로 분할 하며 다음 타일 데이터를 복사 `tile_static` 액세스 속도 대 한 변수입니다. 이 예제에서는 행렬은 동일한 크기의 submatrices로 분할 됩니다. 제품을는 submatrices 곱하여 찾을 수 있습니다. 두 매트릭스 및이 예에서 해당 제품입니다.  
   
- ![4 &#45; 여 &#45; 4 매트릭스](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")  
+ ![4&#45;여&#45;4 행렬](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")  
   
- ![4 &#45; 여 &#45; 4 매트릭스](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")  
+ ![4&#45;여&#45;4 행렬](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")  
   
- ![4 &#45; 여 &#45; 4 매트릭스](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")  
+ ![4&#45;여&#45;4 행렬](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")  
   
  매트릭스는 다음과 같이 정의 된 4 개의 2x2 매트릭스로 분할 됩니다.  
   
- ![4 &#45; 여 &#45;분할 &#2; 45로; 하 여 4 행렬 &#45; 하위 2 &#45; 행렬](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")  
+ ![4&#45;여&#45;4 매트릭스를 2로 분할&#45;여&#45;2 sub&#45;행렬](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")  
   
- ![4 &#45; 여 &#45;분할 &#2; 45로; 하 여 4 행렬 &#45; 하위 2 &#45; 행렬](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")  
+ ![4&#45;여&#45;4 매트릭스를 2로 분할&#45;여&#45;2 sub&#45;행렬](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")  
   
  제품 a 및 B 이제 기록 고 다음과 같이 계산할 수 있습니다.  
   
- ![4 &#45; 여 &#45;분할 &#2; 45로; 하 여 4 행렬 &#45; 하위 2 &#45; 행렬](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")  
+ ![4&#45;여&#45;4 매트릭스를 2로 분할&#45;여&#45;2 sub&#45;행렬](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")  
   
  때문에 행렬 `a` 통해 `h` 2x2 행렬의 모든 제품 이므로 그중에서 합계도 2x2 행렬입니다. 또한 _ A * B는 4x4 매트릭스는 예상 대로 합니다. 알고리즘을 신속 하 게 확인 하려면 첫 번째 행의 요소, 제품의 첫 번째 열 값을 계산 합니다. 예제에서는 되는 요소의 값과 첫 번째 행의 첫 번째 열에 `ae + bg`합니다. 첫 번째 열, 첫 번째 행의 계산 하기만 하면 `ae` 및 `bg` 각 용어에 대 한 합니다. 해당 값에 대 한 `ae` 은 `1*1 + 2*5 = 11`합니다. 에 대 한 값 `bg` 은 `3*1 + 4*5 = 23`합니다. 최종 값은 `11 + 23 = 34`, 올바른지입니다.  
   

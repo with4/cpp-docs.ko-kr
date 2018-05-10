@@ -1,30 +1,25 @@
 ---
-title: "방법: 특정 스케줄러 정책을 사용 하는 에이전트 만들기 | Microsoft Docs"
-ms.custom: 
+title: '방법: 특정 스케줄러 정책을 사용 하는 에이전트 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - scheduler policies, agents [Concurrency Runtime]
 - creating agents that use specific policies [Concurrency Runtime]
 ms.assetid: 46a3e265-0777-4ec3-a142-967bafc49d67
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d465b39e00bee0911fb5b04bbe60af68e1f296c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9efa40d24ed4eaee5b9fd3995a4cf9ed696eb39a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-agents-that-use-specific-scheduler-policies"></a>방법: 특정 스케줄러 정책을 사용하는 에이전트 만들기
 에이전트는 큰 계산 작업을 해결 하기 위해 다른 구성 요소를 비동기적으로 사용 하는 응용 프로그램 구성 요소입니다. 에이전트는 일반적으로 수명 주기가 설정 하 고 상태를 유지 합니다.  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
  비동기 에이전트 라이브러리, 에이전트, 메시지 블록 및 메시지 전달 함수 같은 작업을 수행 하도록 기능을 사용 하는이 항목입니다. 비동기 에이전트 라이브러리에 대 한 자세한 내용은 참조 [비동기 에이전트 라이브러리](../../parallel/concrt/asynchronous-agents-library.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 두 개의 클래스에서 파생 되는 [concurrency:: agent](../../parallel/concrt/reference/agent-class.md): `permutor` 및 `printer`합니다. `permutor` 클래스는 지정 된 입력된 문자열의 모든 순열을 계산 합니다. `printer` 클래스 콘솔에 진행률 메시지를 인쇄 합니다. `permutor` 클래스 계산이 많은 작업을 수행 하면 모든 사용 가능한 컴퓨팅 리소스를 사용할 수도 있습니다. 유용 하 게는 `printer` 클래스 적절 한 시간 내에 각 진행률 메시지를 출력 해야 합니다.  
   
  제공 하는 `printer` 클래스 컴퓨팅 리소스에 상당한 액세스를 사용 하는이 예제에 설명 된 단계를 [하는 방법: 스케줄러 인스턴스 관리](../../parallel/concrt/how-to-manage-a-scheduler-instance.md) 사용자 지정 정책이 적용 된 스케줄러 인스턴스를 만듭니다. 사용자 지정 정책 가장 높은 우선 순위 클래스로 스레드 우선 순위를 지정 합니다.  

@@ -1,12 +1,9 @@
 ---
 title: code_seg | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - code_seg_CPP
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, code_seg
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57511efccff22a1f1d6e7dcd957d75066b072c55
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f958d1652f82f297ae530c1e24bdf331976e0dc0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="codeseg"></a>code_seg
 함수가 .obj 파일에 저장되는 텍스트 세그먼트를 지정합니다.  
@@ -66,7 +61,7 @@ ms.lasthandoff: 02/23/2018
   
  사용할 수는 [DUMPBIN 합니다. EXE](../build/reference/dumpbin-command-line.md) .obj 파일을 보려면 응용 프로그램입니다. 지원되는 각 대상 아키텍처의 DUMPBIN 버전은 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)]에 포함되어 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 `code_seg` pragma 지시문을 사용하여 개체 코드를 배치하는 위치를 제어하는 방법을 보여 줍니다.  
   
 ```  

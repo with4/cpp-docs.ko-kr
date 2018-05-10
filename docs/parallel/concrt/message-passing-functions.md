@@ -1,29 +1,24 @@
 ---
-title: "메시지 전달 함수 | Microsoft Docs"
-ms.custom: 
+title: 메시지 전달 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9c2daa3f34ba4e73b28e11241d0f64680851fcc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9eecb7d2a45079ff14740167a192eafaab268150
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="message-passing-functions"></a>메시지 전달 함수
 비동기 에이전트 라이브러리 구성 요소 간에 메시지를 전달할 수 있는 여러 함수를 제공 합니다.  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [예제](#examples)  
   
-##  <a name="send"></a>send 및 asend  
+##  <a name="send"></a> send 및 asend  
 
  [concurrency:: send](reference/concurrency-namespace-functions.md#send) 함수 지정된 된 대상에 동기적으로 메시지를 보냅니다 및 [concurrency:: asend](reference/concurrency-namespace-functions.md#asend) 함수 지정된 된 대상에 비동기적으로 메시지를 보냅니다. 둘 다는 `send` 및 `asend` 함수는 것은 결국 수락 또는 거부 메시지 대상 나타냅니다 될 때까지 기다립니다.  
   
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="receive"></a>수신 및 try_receive  
+##  <a name="receive"></a> 수신 및 try_receive  
 
  [concurrency:: receive](reference/concurrency-namespace-functions.md#receive) 및 [concurrency:: try_receive](reference/concurrency-namespace-functions.md#try_receive) 함수는 지정 된 소스에서 데이터를 읽습니다. `receive` 함수에 데이터를 사용할 수 있을 때까지 대기 반면는 `try_receive` 함수는 즉시 반환 합니다.  
   

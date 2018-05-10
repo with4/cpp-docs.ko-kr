@@ -1,27 +1,22 @@
 ---
-title: "2.5.2 parallel sections 구문 | Microsoft Docs"
-ms.custom: 
+title: 2.5.2 parallel sections 구문 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 94220e27-14f8-465c-bd8d-eb960b4b5dee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3a76a950d547effccf0b50fa04799814597bc5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b6f7a84e322cb273733c6a724ee2563928df8362
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="252-parallel-sections-construct"></a>2.5.2 parallel sections 구문
 **섹션 병렬** 지시어를 지정 하기 위한 바로 가기 형식을 제공는 **병렬** 하나만 포함 된 영역 **섹션** 지시문입니다. 의미 체계는 명시적으로 지정 하는 **병렬** 지시문 바로 뒤에 **섹션** 지시문입니다. 구문은 **섹션 병렬** 지시문은 다음과 같습니다.  

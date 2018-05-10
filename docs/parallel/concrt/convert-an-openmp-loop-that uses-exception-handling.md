@@ -1,30 +1,25 @@
 ---
-title: "방법: 동시성 런타임을 사용 하기 위해 예외 처리를 사용 하는 OpenMP 루프 변환 | Microsoft Docs"
-ms.custom: 
+title: '방법: 동시성 런타임을 사용 하기 위해 예외 처리를 사용 하는 OpenMP 루프 변환 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - exception handling, converting from OpenMP to the Concurrency Runtime
 - converting from OpenMP to the Concurrency Runtime, exception handling
 ms.assetid: 03c28196-21ba-439e-8641-afab1c283e1a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2964c629ce8a3a83799278ac822b589992b4995
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b96273589fb4e7d7e73e7bc72da03a92d5587de8
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-exception-handling-to-use-the-concurrency-runtime"></a>방법: 동시성 런타임을 사용하기 위해 예외 처리를 사용하는 OpenMP 루프 변환
 OpenMP 변환 하는 방법을 보여 주는이 예제 [병렬](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[에 대 한](../../parallel/openmp/reference/for-openmp.md) 동시성 런타임에서 예외 처리 메커니즘을 사용 하는 예외 처리를 수행 하는 루프입니다.  
@@ -36,7 +31,7 @@ OpenMP 변환 하는 방법을 보여 주는이 예제 [병렬](../../parallel/c
 
 
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  OpenMP에서 예외를 처리 하는 방법을 보여 주는이 예제 `parallel` 영역에 대 한 호출에서 `parallel_for`합니다. `do_work` 성공 하지 못하고 따라서 형식의 예외를 throw 하는 메모리 할당 요청을 수행 하는 함수 [std:: bad_alloc](../../standard-library/bad-alloc-class.md)합니다. OpenMP를 사용 하는 버전에서 예외를 throw 하는 스레드도 catch 해야 것입니다. 즉, OpenMP 병렬 루프의 각 반복 예외를 처리 해야 합니다. 동시성 런타임을 사용 하는 버전, 주 스레드가 다른 스레드에서 throw 되는 예외를 catch 합니다.  
   
  [!code-cpp[concrt-openmp#3](../../parallel/concrt/codesnippet/cpp/convert-an-openmp-loop-that uses-exception-handling_1.cpp)]  

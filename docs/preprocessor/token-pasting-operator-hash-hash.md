@@ -1,12 +1,9 @@
 ---
-title: "토큰 붙여넣기 연산자 (#) | Microsoft Docs"
-ms.custom: 
+title: 토큰 붙여넣기 연산자 (#) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '##'
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - preprocessor, operators
 - '## preprocessor operator'
 ms.assetid: 4f173503-990f-4bff-aef3-ec4d1f1458ef
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3a8c2cef3560a6823314a4edb2cba78994864ce
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c6e224c0327a7ba50c3e13ca78d749f41ad4641f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="token-pasting-operator-"></a>토큰 붙여넣기 연산자 (##)
 이중 숫자 기호 또는 "토큰 붙여넣기" 연산자 (**##**)을 모두 개체 형식 및 함수 형식 매크로에 사용 되는 "병합" 연산자 라고도 합니다. 이 연산자는 별도의 토큰이 단일 토큰으로 조인되도록 허용하므로 매크로 정의의 첫 번째 토큰 또는 마지막 토큰이 될 수 없습니다.  
@@ -60,7 +55,7 @@ printf_s( "token" "9" " = %d", token9 );
 printf_s( "token9 = %d", token9 );  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // preprocessor_token_pasting.cpp  

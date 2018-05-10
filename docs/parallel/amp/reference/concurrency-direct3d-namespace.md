@@ -1,12 +1,9 @@
 ---
 title: 'Concurrency:: direct3d Namespace | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp/Concurrency::direct3d
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 607a3f25c2dfea5eee833f3608021547d8cd7c44
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9516e3f89d393405a5f71af569a50e46e381d579
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencydirect3d-namespace"></a>Concurrency::direct3d 네임스페이스
 `direct3d` 네임 스페이스를 지 원하는 D3D 상호 운용성 기능을 제공 합니다. 그 AMP 코드에는 계산에 대 한 D3D 리소스를 원활 하 게 사용 하도록 설정으로 중간 중복 복사본을 만들지 않고 AMP에 D3D 코드에서 생성 된 리소스의 사용을 허용 합니다. 증분 AMP 계산에서 생성 되는 데이터의 D3D API를 사용 하 c + + AMP를 사용 하 여 DirectX 응용 프로그램의 계산 집약적인 섹션을 가속화할 수 있습니다.  

@@ -1,29 +1,24 @@
 ---
-title: "사용되지 않는 함수 선언 및 정의 폼 | Microsoft Docs"
-ms.custom: 
+title: 사용되지 않는 함수 선언 및 정의 폼 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - old style function declarations
 ms.assetid: 67c5038f-0529-4f29-9d0f-c27580977b50
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7de356abb7078b7dd50f0d90bf4ecb0a046945b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d7bb117ff75ae96c8cfa7041534ed0696ad03e0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>사용되지 않는 함수 선언 및 정의 폼
 이전 스타일 함수 선언 및 정의는 매개 변수 선언에 대해 ANSI C 표준에 의해 권장되는 구문과 약간 다른 규칙을 사용합니다. 첫째로 이전 스타일 선언에는 매개 변수 목록이 없습니다. 둘째로 함수 정의에서는 매개 변수가 나열되지만 해당 형식은 매개 변수 목록에 선언되지 않습니다. 형식 선언은 함수 본문을 구성하는 복합 문의 앞에 와야 합니다. 이전 스타일 구문은 사용되지 않으며 새 코드에 사용하면 안 됩니다. 그러나 이전 스타일 구문을 사용하는 코드는 여전히 지원됩니다. 다음 예제에서는 사용되지 않는 선언 및 정의 형태를 보여 줍니다.  

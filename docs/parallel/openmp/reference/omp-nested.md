@@ -1,12 +1,9 @@
 ---
 title: OMP_NESTED | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - OMP_NESTED
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - OMP_NESTED OpenMP environment variable
 ms.assetid: c43f5287-a548-40d0-bd54-0c6b2b9f9a53
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 363a125cb7f9858b1ef4105234344d2a8d35b707
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c6b51df88ae700f81cf84250cc06ae24c9131fec
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ompnested"></a>OMP_NESTED
 중첩 된 병렬 처리 하지 않을 지와 사용 하지 않도록 설정 하지 않으면 중첩 된 병렬 처리는 활성화 여부를 지정 `omp_set_nested`합니다.  
@@ -43,7 +38,7 @@ set OMP_NESTED[=TRUE | =FALSE]
   
  자세한 내용은 참조 [4.4 OMP_NESTED](../../../parallel/openmp/4-4-omp-nested.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 명령 집합의 `OMP_NESTED` 환경 변수를 true로:  
   
 ```  

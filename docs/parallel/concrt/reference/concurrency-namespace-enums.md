@@ -1,10 +1,7 @@
 ---
-title: "동시성 네임 스페이스 열거형 | Microsoft Docs"
-ms.custom: 
+title: 동시성 네임 스페이스 열거형 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CONCRT/concurrency::Agents_EventType
@@ -19,17 +16,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: def29c9253071bb13b2c128a0e581c14328bfa4a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 068aa89c10e92203ce0e826e3aaca101f4786cbb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-enums"></a>동시성 네임 스페이스 열거형
 ||||  
@@ -40,7 +35,7 @@ ms.lasthandoff: 02/23/2018
 |[WinRTInitializationType](#winrtinitializationtype)|[agent_status](#agent_status)|[join_type](#join_type)|  
 |[message_status](#message_status)|[task_group_status](#task_group_status)|  
   
-##  <a name="agent_status"></a>  agent_status Enumeration  
+##  <a name="agent_status"></a>  agent_status 열거형  
  `agent`에 유효한 상태입니다.  
   
 ```
@@ -129,7 +124,7 @@ enum Concrt_TraceFlags;
 ### <a name="requirements"></a>요구 사항  
  **헤더:** concrt.h
 
-##  <a name="criticalregiontype"></a>  CriticalRegionType Enumeration  
+##  <a name="criticalregiontype"></a>  CriticalRegionType 열거형  
  컨텍스트가 있는 위험 영역의 형식입니다.  
   
 ```
@@ -146,7 +141,7 @@ enum CriticalRegionType;
 ### <a name="requirements"></a>요구 사항  
  **헤더:** concrtrm.h 
 
-##  <a name="dynamicprogressfeedbacktype"></a>  DynamicProgressFeedbackType Enumeration  
+##  <a name="dynamicprogressfeedbacktype"></a>  DynamicProgressFeedbackType 열거형  
  `DynamicProgressFeedback` 정책에서 스케줄러에 대한 리소스를 스케줄러에서 수집한 통계 정보에 따라 균형을 조정할지, 아니면 `IVirtualProcessorRoot` 인터페이스의 `Activate` 및 `Deactivate` 메서드 호출을 통해 유휴 상태로 들어오고 나가는 가상 프로세서를 기준으로만 균형을 조정할지를 설명하는 데 사용됩니다. 사용 가능한 스케줄러 정책에 대 한 자세한 내용은 참조 하십시오. [PolicyElementKey](concurrency-namespace-enums.md)합니다.  
   
 ```
@@ -158,7 +153,7 @@ enum DynamicProgressFeedbackType;
 |----------|-----------------|  
 |`ProgressFeedbackDisabled`|스케줄러에서 진행률 정보를 수집 하지 않습니다. 균형 조정 기본 하드웨어 스레드의 구독 수준에 따라 수행 됩니다. 구독 수준에 대 한 자세한 내용은 참조 하십시오. [iexecutionresource:: Currentsubscriptionlevel](IExecutionResource-structure.md)합니다.<br /><br /> 이 값은 런타임에서 사용 하기 위해 예약 되어 있습니다.|  
 |`ProgressFeedbackEnabled`|스케줄러는 진행률 정보를 수집 하 고 리소스 관리자에 게 전달 합니다. 리소스 관리자는 리소스를 다시 분산 기본 하드웨어 스레드의 구독 수준 외에도 스케줄러를 대신 하 여이 통계 정보를 사용 합니다. 구독 수준에 대 한 자세한 내용은 참조 하십시오. [iexecutionresource:: Currentsubscriptionlevel](IExecutionResource-structure.md)합니다.|  
-##  <a name="join_type"></a>  join_type Enumeration  
+##  <a name="join_type"></a>  join_type 열거형  
  `join` 메시징 블록의 형식입니다.  
   
 ```
@@ -269,7 +264,7 @@ enum SwitchingProxyState;
   
  이 형식은 사용 방법에 대 한 자세한 내용은 참조 하십시오. [ithreadproxy:: Switchto](ithreadproxy-structure.md#switchto)합니다.  
   
-##  <a name="task_group_status"></a>  task_group_status Enumeration  
+##  <a name="task_group_status"></a>  task_group_status 열거형  
  `task_group` 또는 `structured_task_group` 개체의 실행 상태를 설명합니다. 이 형식의 값은 작업 그룹에 예약된 작업이 완료되기를 기다리는 수많은 메서드에 의해 반환됩니다.  
   
 ```
@@ -286,7 +281,7 @@ enum task_group_status;
 ### <a name="requirements"></a>요구 사항  
  **헤더:** pplinterface.h  
 
-##  <a name="winrtinitializationtype"></a>  WinRTInitializationType Enumeration  
+##  <a name="winrtinitializationtype"></a>  WinRTInitializationType 열거형  
  `WinRTInitialization` 정책에서 Windows 8 또는 그 이상 버전의 운영 체제에서 실행되는 응용 프로그램에 대한 스케줄러 스레드에서 Windows 런타임이 초기화될지 여부와 초기화되는 방법을 설명하는데 사용됩니다. 사용 가능한 스케줄러 정책에 대 한 자세한 내용은 참조 하십시오. [PolicyElementKey](concurrency-namespace-enums.md)합니다.  
   
 ```

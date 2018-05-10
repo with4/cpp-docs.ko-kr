@@ -1,12 +1,9 @@
 ---
-title: "전처리기 문법 | Microsoft Docs"
-ms.custom: 
+title: 전처리기 문법 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02b3597b035e3ea4bfa1670aa405109f4c01a077
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d14a3e00e18a2d3ac69dd472ac4056a379ada224
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="preprocessor-grammar"></a>전처리기 문법
 **#define**  *identifier* *token-string*opt  
   
- *#* **정의***식별자*[**(** *식별자*opt**,** *...*  **,** *식별자*opt **)**] *토큰 문자열*선택    
+ *#* **정의***식별자*[**(** *식별자*opt **,** *...*  **,** *식별자*opt **)**] *토큰 문자열*선택  
   
  **defined(**  *identifier* **)**  
   
@@ -40,7 +35,7 @@ ms.lasthandoff: 02/23/2018
   
  `#include` **\<***path-spec***>**  
   
- **#line**  *digit-sequence*  **"** *filename* **"**opt  
+ **#line**  *digit-sequence*  **"** *filename* **"** opt  
   
  *#* **undef**  *identifier*  
   
@@ -48,7 +43,7 @@ ms.lasthandoff: 02/23/2018
   
  **#pragma**  *token-string*  
   
- *conditional* :  
+ *조건부* :  
  *if 부분 elif 부품*opt*else 부분*opt*endif 줄*  
   
  *if-part* :  
@@ -106,7 +101,7 @@ ms.lasthandoff: 02/23/2018
  *path-spec* :  
  Legal file path  
   
- *text* :  
+ *텍스트* :  
  임의의 텍스트 시퀀스  
   
 > [!NOTE]

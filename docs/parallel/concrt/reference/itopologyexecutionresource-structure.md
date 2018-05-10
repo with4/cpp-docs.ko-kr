@@ -1,12 +1,9 @@
 ---
-title: "ITopologyExecutionResource 구조체 | Microsoft Docs"
-ms.custom: 
+title: ITopologyExecutionResource 구조체 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ITopologyExecutionResource
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - ITopologyExecutionResource structure
 ms.assetid: e36756f7-4cd9-4fa6-ba60-23fea58ef2bf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9b044575fdaccead8c30bd8dca955923a8c5f9e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: adb456315b2c6d15b7a3696df9a6845a2bd2b899
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="itopologyexecutionresource-structure"></a>ITopologyExecutionResource 구조체
 리소스 관리자에 의해 정의된 실행 리소스에 대한 인터페이스입니다.  
@@ -59,7 +54,7 @@ struct ITopologyExecutionResource;
   
  **네임스페이스:** 동시성  
   
-##  <a name="getid"></a>  ITopologyExecutionResource::GetId Method  
+##  <a name="getid"></a>  Itopologyexecutionresource:: Getid 메서드  
  이 실행 리소스에 대한 리소스 관리자의 고유 식별자를 반환합니다.  
   
 ```
@@ -69,7 +64,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>반환 값  
  이 실행 리소스에 대한 리소스 관리자의 고유 식별자입니다.  
   
-##  <a name="getnext"></a>  ITopologyExecutionResource::GetNext Method  
+##  <a name="getnext"></a>  Itopologyexecutionresource:: Getnext 메서드  
  열거 순서에서 다음 실행 리소스에 대한 인터페이스를 반환합니다.  
   
 ```

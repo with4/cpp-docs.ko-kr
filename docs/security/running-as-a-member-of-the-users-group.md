@@ -1,13 +1,10 @@
 ---
-title: "사용자 그룹의 멤버로 실행 | Microsoft Docs"
-ms.custom: 
+title: 사용자 그룹의 멤버로 실행 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - PRJ0050
 - VCD0047
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - user accounts [C++]
 - administrator (not running as) [C++]
 ms.assetid: e48a03ec-d345-49f6-809a-1a291eecbc81
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff2a33cd113b631ab6c17cdb02fb29e27d663c1e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4faeae9100cf6e60a2eeda19baea20ba42be197f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="running-as-a-member-of-the-users-group"></a>사용자 그룹의 멤버로 실행
 이 항목에서는 Windows 사용자 계정을 관리자 그룹이 아닌 사용자 그룹의 멤버로 구성하면 악의적인 코드에 감염될 가능성이 줄어들어 보안이 강화된다는 점에 대해 설명합니다.  

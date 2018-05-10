@@ -1,13 +1,10 @@
 ---
-title: "우선 순위 및 식 평가 순서 | Microsoft Docs"
-ms.custom: 
+title: 우선 순위 및 식 평가 순서 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - data binding [C++], operator precedence
 - operators [C++], precedence
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0baad2e1003898e84169e20d3c8a839b8865a7e0
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 84c3ec69c936605729f6813f28450ee1194951c7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="precedence-and-order-of-evaluation"></a>우선 순위 및 식 평가 순서
 C 연산자의 우선 순위와 결합성은 식의 피연산자 그룹화 및 계산에 영향을 줍니다. 연산자의 우선 순위는 우선 순위가 더 높거나 낮은 다른 연산자가 있는 경우에만 의미가 있습니다. 우선 순위가 높은 연산자가 있는 식이 먼저 계산됩니다. 우선 순위는 단어 "바인딩"으로도 설명할 수 있습니다. 우선 순위가 높은 연산자는 더욱 엄격한 바인딩을 가져야 합니다.  
@@ -58,7 +53,7 @@ C 연산자의 우선 순위와 결합성은 식의 피연산자 그룹화 및 �
   
  2. 모든 단순 및 복합 할당 연산자의 우선 순위는 같습니다.  
   
- 식에 우선 순위가 같은 여러 연산자가 포함될 수 있습니다. 여러 연산자가 하나의 식에 같은 수준으로 표시된 경우, 오른쪽에서 왼쪽 또는 왼쪽에서 오른쪽으로 연산자의 연관성에 따라 계산이 진행됩니다. 계산의 방향은 같은 수준에 있는 곱하기(**\***), 더하기(**+**) 또는 이진 비트(**& &#124; ^***) 연산자가 둘 이상 포함된 식의 결과에 영향을 주지 않습니다. 연산 순서는 언어에 따라 정의되지 않습니다. 컴파일러는 일관된 결과를 보장할 수 있는 경우 어떠한 순서로든 이러한 식을 자유롭게 계산합니다.  
+ 식에 우선 순위가 같은 여러 연산자가 포함될 수 있습니다. 여러 연산자가 하나의 식에 같은 수준으로 표시된 경우, 오른쪽에서 왼쪽 또는 왼쪽에서 오른쪽으로 연산자의 연관성에 따라 계산이 진행됩니다. 계산의 방향은 같은 수준에 있는 곱하기(**\***), 더하기(**+**) 또는 이진 비트(**& &#124; ^**) 연산자가 둘 이상 포함된 식의 결과에 영향을 주지 않습니다. 연산 순서는 언어에 따라 정의되지 않습니다. 컴파일러는 일관된 결과를 보장할 수 있는 경우 어떠한 순서로든 이러한 식을 자유롭게 계산합니다.  
   
  순차적 계산(**,**), 논리적 AND(**&&**), 논리적 OR(`||`), 조건식(**? :**) 및 함수 호출 연산자만 시퀀스 위치를 구성하므로 피연산자에 대한 특정 계산 순서를 보장합니다. 함수 호출 연산자는 함수 식별자 뒤에 오는 괄호의 집합입니다. 순차적 계산 연산자(**,**)는 피연산자를 왼쪽에서 오른쪽으로 계산합니다. 함수 호출의 쉼표 연산자는 순차적 계산 연산자와 동일하지 않으며 동일하다는 보장도 제공하지 않습니다. 자세한 내용은 [시퀀스 위치](../c-language/c-sequence-points.md)를 참조하세요.  
   

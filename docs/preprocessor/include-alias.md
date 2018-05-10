@@ -1,12 +1,9 @@
 ---
 title: include_alias | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.include_alias
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a2e3b6f6b8bbbc17073b5bf43b54fff3a619793
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 84e09b51d6f234bdc17353c358e378f18e153567
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="includealias"></a>include_alias
 
@@ -72,7 +67,7 @@ ms.lasthandoff: 02/23/2018
 
 > /YcAppleSystemHeaderStop.h
 
-사용할 수는 **include_alias** pragma를 다른 모든 헤더 파일 이름을 매핑할 수 있습니다. 예:
+사용할 수는 **include_alias** pragma를 다른 모든 헤더 파일 이름을 매핑할 수 있습니다. 예를 들어:
 
 ```cpp
 #pragma include_alias( "api.h", "c:\version1.0\api.h" )
@@ -94,7 +89,7 @@ ms.lasthandoff: 02/23/2018
 #pragma include_alias(<header.h>, "header.h")  // Error
 ```
 
-파일 이름 값의 미리 정의 된 또는 오류 메시지에 보고 **&#95; &#95; 파일 &#95; #95**  매크로 대체가 수행 된 후 파일의 이름이 됩니다. 예를 들어 다음 지시문 뒤 출력을 참조 하십시오.
+파일 이름 값의 미리 정의 된 또는 오류 메시지에 보고 **&#95; &#95;파일&#95; &#95;** 매크로 대체가 수행 된 후 파일의 이름이 됩니다. 예를 들어 다음 지시문 뒤 출력을 참조 하십시오.
 
 ```cpp
 #pragma include_alias( "VeryLongFileName.H", "myfile.h" )

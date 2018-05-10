@@ -1,30 +1,25 @@
 ---
-title: "방법: 다양 한 공급자 / 소비자 패턴 구현 | Microsoft Docs"
-ms.custom: 
+title: '방법: 다양 한 공급자 / 소비자 패턴 구현 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - producer-consumer patterns, implementing [Concurrency Runtime]
 - implementing producer-consumer patterns [Concurrency Runtime]
 ms.assetid: 75f2c7cc-5399-49ea-98eb-847fe6747169
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0efafe17cd524c241e709d3c3c59233a130cdf95
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 50a6683db37fb6e994c1957a8df3ab6469acff6d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-implement-various-producer-consumer-patterns"></a>방법: 다양한 공급자/소비자 패턴 구현
 이 항목에서는 응용 프로그램에서 공급자-소비자 패턴을 구현 하는 방법을 설명 합니다. 이 패턴에서 *생산자*는 메시지 블록에 메시지를 보내고 *소비자*는 해당 블록에서 메시지를 읽습니다.  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
  비동기 에이전트에 대 한 자세한 내용은 참조 [비동기 에이전트](../../parallel/concrt/asynchronous-agents.md)합니다. 메시지 블록 및 메시지 전달 함수에 대 한 자세한 내용은 참조 [비동기 메시지 블록](../../parallel/concrt/asynchronous-message-blocks.md) 및 [메시지 전달 함수](../../parallel/concrt/message-passing-functions.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 공급자 에이전트를 소비자 에이전트 일련의 숫자를 보냅니다. 소비자는 이러한 각 숫자 받아의 평균을 계산 합니다. 응용 프로그램의 평균을 콘솔에 씁니다.  
   
  사용 하 여이 예제는 [concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) 개체를 사용 하 여 공급자 메시지를 큐에 있습니다. `unbounded_buffer` 클래스 구현 `ITarget` 및 `ISource` 생산자와 소비자 보내고 공유 버퍼에서 메시지를 받을 수 있도록 합니다. `send` 및 `receive` 함수 소비자에 게 데이터 생산자를 전파 하는 작업을 조정 합니다.  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 The average is 50.  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 공급자 에이전트를 소비자 에이전트 일련의 주식 시세를 보냅니다. 소비자 에이전트인 현재 견적 주기적으로 읽고를 콘솔에 출력 합니다.  
   
  이 예제에서는 이전 예제와 유사를 사용 하는 [concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) 개체를 사용 하 여 공급자 하나의 메시지 소비자와 공유할 수 있습니다. 앞의 예와 `overwrite_buffer` 클래스 구현 `ITarget` 및 `ISource` 생산자와 소비자는 공유 메시지 버퍼에서 작동할 수 있도록 합니다.  

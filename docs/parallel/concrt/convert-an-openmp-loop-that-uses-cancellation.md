@@ -1,37 +1,32 @@
 ---
-title: "방법: 동시성 런타임을 사용 하기 위해 취소를 사용 하는 OpenMP 루프 변환 | Microsoft Docs"
-ms.custom: 
+title: '방법: 동시성 런타임을 사용 하기 위해 취소를 사용 하는 OpenMP 루프 변환 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, cancellation
 - cancellation, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 4b0b3c33-bfa9-4e96-ae08-aef245a39cbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3c4d37dfe5182e375e7581d6f5ef8188b922e5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9dae22a46d6570d7ef7abbdfc08cb2c6d76d0c08
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>방법: 동시성 런타임을 사용하기 위해 취소를 사용하는 OpenMP 루프 변환
 병렬 루프 모든 반복 실행 될 필요가 없습니다. 예를 들어 값을 검색 하는 알고리즘은 값을 찾은 후 종료 될 수 있습니다. OpenMP 병렬 루프를 중단 하는 메커니즘을 제공 하지 않습니다. 그러나 솔루션을 찾았습니다 나타내려면 루프의 반복을 사용 하도록 설정 하는 부울 값입니다. 또는 플래그를 사용할 수 있습니다. 동시성 런타임에서 아직 시작 되지 않은 다른 작업을 취소 한 작업을 수 있는 기능을 제공 합니다.  
   
  OpenMP 변환 하는 방법을 보여 주는이 예제 [병렬](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[에 대 한](../../parallel/openmp/reference/for-openmp.md) 동시성 런타임에서 취소 메커니즘을 사용 하도록 모든 반복을 실행에 대 한 필요 하지 않은 루프입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
 
  이 예제에서는 OpenMP와 동시성 런타임을 사용 하 여의 병렬 버전을 구현 하는 [std::any_of](../../standard-library/algorithm-functions.md#any_of) 알고리즘입니다. 이 예제의 OpenMP 버전 플래그를 사용 하 여 조건이 충족 하는 모든 병렬 루프 반복 간에 조정. 동시성 런타임을 사용 하는 버전 사용 하 여 [concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) 메서드는 조건이 충족 되 면 전체 작업을 중지 하려면.  
 

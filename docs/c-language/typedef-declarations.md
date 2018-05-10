@@ -1,13 +1,10 @@
 ---
-title: "Typedef 선언 | Microsoft Docs"
-ms.custom: 
+title: Typedef 선언 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - typedef declarations
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 851776be55ce485d660aa46f4338235c3a1a413a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 192f7ab037362219261852cfdb0a5eac53e5df9f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="typedef-declarations"></a>Typedef 선언
 typedef 선언은 typedef를 저장소 클래스로 사용하는 선언입니다. 선언자는 새 형식이 됩니다. typedef 선언을 사용하여 C에서 이미 정의된 형식이나 사용자가 선언한 형식에 대한 보다 짧거나 의미 있는 이름을 생성할 수 있습니다. typedef 이름을 사용하면 변경될 수 있는 구현 정보를 캡슐화할 수 있습니다.  
@@ -34,7 +29,7 @@ typedef 선언은 typedef를 저장소 클래스로 사용하는 선언입니다
   
 ## <a name="syntax"></a>구문  
  `declaration`:  
- *declaration-specifiers init-declarator-list* opt**;**  
+ *declaration-specifiers init-declarator-list* opt **;**  
   
  *declaration-specifiers*:  
  *storage-class-specifier declaration-specifiers* opt  

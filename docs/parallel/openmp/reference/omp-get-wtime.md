@@ -1,12 +1,9 @@
 ---
 title: omp_get_wtime | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - omp_get_wtime
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - omp_get_wtime OpenMP function
 ms.assetid: c8dee105-ec1b-42e5-a6e3-edeedcf9854c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57307df6a2e13c6bd3dbd90892669119f8526d70
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 0ff7942a694bda3c28133aa0536fcacf9b341087
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ompgetwtime"></a>omp_get_wtime
 특정 시점에서 경과 된 시간 (초)에서 값을 반환 합니다.  
@@ -44,7 +39,7 @@ double omp_get_wtime( );
   
  자세한 내용은 참조 [3.3.1 omp_get_wtime 함수](../../../parallel/openmp/3-3-1-omp-get-wtime-function.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // omp_get_wtime.cpp  

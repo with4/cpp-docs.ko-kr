@@ -1,13 +1,10 @@
 ---
-title: "C + + AMP 개요 | Microsoft Docs"
-ms.custom: 
+title: C + + AMP 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,24 +14,22 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0ee5b9c04794c531e2fa16cee72d6eee607dfbd
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: f8de31ab9009a84c04e594837a0c4fbf30758fea
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="c-amp-overview"></a>C++ AMP 개요
 C + + Accelerated Massive Parallelism (c + + AMP)의 개별 그래픽 카드에 데이터 병렬 등의 하드웨어 그래픽 처리 장치 (GPU) 사용 하 여 c + + 코드의 실행 속도 높여 합니다. C + + AMP를 사용 하 여 유형이 다른 하드웨어에서 병렬 처리를 사용 하 여 실행 속도가 빨라질 수 있습니다 수 있도록 다차원 데이터 알고리즘을 코딩할 수 있습니다. C++ AMP 프로그래밍 모델에는 다차원 배열, 인덱싱, 메모리 전송, 바둑판식 배열 및 수학 함수 라이브러리가 포함됩니다. 성능을 향상 시킬 수 있도록 CPU에서 GPU 및 역방향으로 데이터는 이동 하는 방법을 제어 하려면 c + + AMP 언어 확장을 사용할 수 있습니다.  
   
 ## <a name="system-requirements"></a>시스템 요구 사항  
   
-- [!INCLUDE[win7](../../build/includes/win7_md.md)][!INCLUDE[win8](../../build/reference/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)], 또는 [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
+- [!INCLUDE[win7](../../build/includes/win7_md.md)], [!INCLUDE[win8](../../build/reference/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)] 또는 [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)]  
   
 -   DirectX 11 기능 수준 11.0 또는 이후 하드웨어  
   

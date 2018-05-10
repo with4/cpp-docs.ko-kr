@@ -1,27 +1,22 @@
 ---
-title: "2.7.1 threadprivate 지시문 | Microsoft Docs"
-ms.custom: 
+title: 2.7.1 threadprivate 지시문 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 08e0b70f-5359-4607-b0ca-38c2d570d7b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22bb7f477be397f01ee4bd82f472ff26a26ce811
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c9912ccbfa6f5773ec1e523245f75e675bb82244
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="271-threadprivate-directive"></a>2.7.1 threadprivate 지시문
 `threadprivate` 명명 된 파일 범위, 네임 스페이스 범위 또는 블록 범위의 정적 변수에 지정 된 지시문을 사용 하면는 *변수 목록* 스레드에 한정 합니다. *변수 목록* 불완전 한 형식을 갖지 않는 변수의 쉼표로 구분 된 목록입니다. 구문은 `threadprivate` 지시문은 다음과 같습니다.  
@@ -82,4 +77,4 @@ void f(int n) {
   
 -   동적 스레드 참조 [섹션 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) 39 페이지.  
   
--   `OMP_DYNAMIC`환경 변수를 참조 [섹션 4.3](../../parallel/openmp/4-3-omp-dynamic.md) 페이지 49에 있습니다.
+-   `OMP_DYNAMIC` 환경 변수를 참조 [섹션 4.3](../../parallel/openmp/4-3-omp-dynamic.md) 페이지 49에 있습니다.

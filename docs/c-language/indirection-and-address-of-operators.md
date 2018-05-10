@@ -1,13 +1,10 @@
 ---
-title: "연산자 주소 및 간접 참조 | Microsoft Docs"
-ms.custom: 
+title: 연산자 주소 및 간접 참조 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/16/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - '* operator, address-of operator'
 - operators [C++], indirection
 ms.assetid: 10d62b00-12ba-4ea9-a2d5-09ac29ca2232
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d65a380194e5634d5873e9b060c49096197e48f2
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 75afd44b8c0a31d9f3731a4c6f9fb86c15de4328
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="indirection-and-address-of-operators"></a>연산자 주소 및 간접 참조
 
@@ -54,7 +49,7 @@ ms.lasthandoff: 02/21/2018
 
 단항 주소 연산자(**&**)는 해당 피연산자의 주소를 제공합니다. 피연산자는 __레지스터__로 선언되지 않고 비트 필드가 아닌 개체를 지정하는 lvalue이거나, 단항 __&#42;__ 연산자 또는 배열 역참조(__&#91;&#93;__) 연산자 또는 함수 지정자여야 합니다. 형식의 결과는 *형식*의 피연산자에 대한 형식 *형식에 대한 포인터*입니다.
 
-피연산자가 단항 __&#42;__ 연산자의 결과이면, 연산자가 평가되지 않고 결과는 둘 다 생략된 것과 같습니다. 결과는 lvalue가 아니며 연산자에 대한 제약 조건이 여전히 적용됩니다. 피연산자가 __&#91;&#93;__ 연산자의 결과인 경우, __&__ 연산자도 __&#91;&#93;__ 연산자에 의해 함축된 단항 __&#42;__는 평가되지 않습니다. 결과는 __&__ 연산자를 제거하고 __&#91;&#93;__ 연산자를 __+__ 연산자로 변경하는 것과 동일한 효과가 있습니다. 그렇지 않은 경우 결과는 피연산자가 지정한 개체 또는 함수에 대한 포인터입니다.
+피연산자가 단항 __&#42;__ 연산자의 결과이면, 연산자가 평가되지 않고 결과는 둘 다 생략된 것과 같습니다. 결과는 lvalue가 아니며 연산자에 대한 제약 조건이 여전히 적용됩니다. 피연산자가 __&#91;&#93;__ 연산자의 결과인 경우, __&__ 연산자도 __&#91;&#93;__ 연산자에 의해 함축된 단항 __& #42;__ 는 평가되지 않습니다. 결과는 __&__ 연산자를 제거하고 __&#91;&#93;__ 연산자를 __+__ 연산자로 변경하는 것과 동일한 효과가 있습니다. 그렇지 않은 경우 결과는 피연산자가 지정한 개체 또는 함수에 대한 포인터입니다.
 
 
 ## <a name="examples"></a>예제

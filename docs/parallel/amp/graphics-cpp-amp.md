@@ -2,26 +2,21 @@
 title: 그래픽 (c + + AMP) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-caps.latest.revision: 27
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c187ebc4eeb3917ce01e63c6c0769ffa0a570368
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: HT
+ms.openlocfilehash: daff070700c37734e6239514d196f02ee1351c00
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="graphics-c-amp"></a>그래픽(C++ AMP)
 C + + AMP에 여러 Api가 포함 된 [concurrency:: graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) gpu의 텍스처 지원에 액세스 하는 데 사용할 수 있는 네임 스페이스입니다. 다음은 몇 가지 일반 시나리오입니다.  
@@ -148,7 +143,7 @@ void createTextureWithBPC() { // Create the source data.
 |-------------|---------------------|  
 |질감\<T 1 >|16384|  
 |질감\<T 2 >|16384|  
-|질감\<T 2 >|2048|  
+|질감\<T 3 >|2048|  
   
 ### <a name="reading-from-texture-objects"></a>텍스처 개체에서 읽기  
  읽을 수는 `texture` 개체를 사용 하 여 [texture:: operator\[\]](reference/texture-class.md#operator_at), [질감:: operator () 연산자](reference/texture-class.md#operator_call), 또는 [texture:: get메서드](reference/texture-class.md#get). 두 연산자에는 참조가 아닌 값을 반환 합니다. 따라서 `texture`를 사용하여 `texture::operator\[\]` 개체에 쓸 수 없습니다.  

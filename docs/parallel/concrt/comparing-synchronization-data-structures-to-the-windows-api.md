@@ -1,30 +1,25 @@
 ---
-title: "동기화 데이터 구조와 Windows API의 비교 | Microsoft Docs"
-ms.custom: 
+title: 동기화 데이터 구조와 Windows API의 비교 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - synchronization data structures, compared to Windows API
 - event class, example
 ms.assetid: 8b0b1a3a-ef80-408c-91fa-93e6af920b4e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4590724bfc34d0ed9136e74e85b09db6a805c50c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d1470911b13243a7c8b3befc627801368e89f04
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>동기화 데이터 구조와 Windows API의 비교
 이 항목에서는 Windows API에서 제공 된, 동시성 런타임에서 제공 되는 동기화 데이터 구조체의 동작을 비교 합니다.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="event"></a>이벤트(event)  
  [concurrency:: event](../../parallel/concrt/reference/event-class.md) 명명 되지 않은 Windows 수동 재설정 이벤트와 유사 합니다. 그러나는 `event` 선점 하 여 Windows 이벤트 동작 하지만 개체는 협조적으로 동작 합니다. Windows 이벤트에 대 한 자세한 내용은 참조 [이벤트 개체](http://msdn.microsoft.com/library/windows/desktop/ms682655)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
  간의 차이 더 잘 이해 하려면는 `event` 클래스 및 Windows 이벤트를 다음 예제를 참조 하세요. 최대 두 개의 동시 작업 및 사용 하는 두 개의 비슷한 함수 호출을 만드는 스케줄러를 사용 하는이 예제는 `event` 클래스와 Windows 수동 다시 설정 이벤트입니다. 각 함수는 먼저 공유 이벤트가 신호를 받을 때까지 대기 하는 여러 작업을 만듭니다. 각 함수 다음 실행 중인 작업을 생성 하 고 이벤트에 신호를 보냅니다. 그런 다음 각 함수는 신호를 받은 이벤트 기다립니다.  

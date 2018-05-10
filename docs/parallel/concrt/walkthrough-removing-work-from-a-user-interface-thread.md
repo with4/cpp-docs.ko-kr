@@ -1,37 +1,32 @@
 ---
-title: "연습: 사용자 인터페이스 스레드에서 작업 제거 | Microsoft Docs"
-ms.custom: 
+title: '연습: 사용자 인터페이스 스레드에서 작업 제거 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c32613aa6938b873a820fbb491fa2c507605a6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0502ce728c35b08d927cea48ee5b82756980aec5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>연습: 사용자 인터페이스 스레드에서 작업 제거
 이 문서에는 작업자 스레드를 Microsoft Foundation 클래스 (MFC) 응용 프로그램의 사용자 인터페이스 (UI) 스레드에서 수행 하는 작업을 이동 하려면 동시성 런타임을 사용 하는 방법을 보여 줍니다. 이 문서에는 긴 그리기 작업의 성능을 개선 하는 방법을 보여 줍니다.  
   
  차단 작업 오프 로드 하 여 UI 스레드에서 작업을 제거, 예를 들어 그리기 작업자 스레드 수를 향상 시킬 수 응용 프로그램의 응답성. 이 연습에서는 긴 차단 작업을 보여 주기 위해 Mandelbrot 프랙탈을 생성 하는 그리기 루틴을 사용 합니다. Mandelbrot 프랙탈 생성 각 픽셀의 계산이 다른 모든 계산 독립적 이므로 병렬화에 대 한 적합 이기도 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 시작 하기 전에 다음 항목을 읽어보세요.  
   
 -   [작업 병렬 처리](../../parallel/concrt/task-parallelism-concurrency-runtime.md)  
@@ -59,14 +54,14 @@ ms.lasthandoff: 12/21/2017
   
 -   [취소에 대 한 지원 추가](#cancellation)  
   
-##  <a name="application"></a>MFC 응용 프로그램 만들기  
+##  <a name="application"></a> MFC 응용 프로그램 만들기  
  이 섹션에서는 기본 MFC 응용 프로그램을 만드는 방법을 설명 합니다.  
   
 ### <a name="to-create-a-visual-c-mfc-application"></a>Visual c + + MFC 응용 프로그램을 만들려면  
   
 1.  **파일** 메뉴에서 **새로 만들기**를 클릭한 다음 **프로젝트**를 클릭합니다.  
   
-2.  에 **새 프로젝트** 대화 상자는 **설치 된 템플릿** 창 선택 **Visual c + +**를 선택한 후는 **템플릿** 창 선택 **MFC 응용 프로그램**합니다. 예를 들어 프로젝트에 대 한 이름을 입력 `Mandelbrot`, 클릭 하 고 **확인** 표시 하는 **MFC 응용 프로그램 마법사**합니다.  
+2.  에 **새 프로젝트** 대화 상자는 **설치 된 템플릿** 창 선택 **Visual c + +** 를 선택한 후는 **템플릿** 창 선택 **MFC 응용 프로그램**합니다. 예를 들어 프로젝트에 대 한 이름을 입력 `Mandelbrot`, 클릭 하 고 **확인** 표시 하는 **MFC 응용 프로그램 마법사**합니다.  
   
 3.  에 **응용 프로그램 종류** 창 선택 **단일 문서**합니다. 확인 된 **문서/뷰 아키텍처 지원** 확인란의 선택을 취소 합니다.  
   
@@ -74,7 +69,7 @@ ms.lasthandoff: 12/21/2017
   
      응용 프로그램 빌드 및 실행 하 여 만들어졌는지 확인 합니다. 에 응용 프로그램을 작성 하는 **빌드** 메뉴를 클릭 하 여 **솔루션 빌드**합니다. 응용 프로그램이 성공적으로 빌드되면를 클릭 하 여 응용 프로그램을 실행 **디버깅 시작** 에 **디버그** 메뉴.  
   
-##  <a name="serial"></a>직렬 버전 Mandelbrot 응용 프로그램의 구현  
+##  <a name="serial"></a> 직렬 버전 Mandelbrot 응용 프로그램의 구현  
  이 섹션에서는 Mandelbrot 프랙탈을 그리는 방법을 설명 합니다. 이 버전 Mandelbrot 프랙탈을 그립니다는 [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] [비트맵](https://msdn.microsoft.com/library/ms534420.aspx) 개체를 다음 해당 비트맵의 내용을 클라이언트 창에 복사 합니다.  
   
 #### <a name="to-implement-the-serial-version-of-the-mandelbrot-application"></a>Mandelbrot 응용 프로그램의 직렬 버전을 구현 하려면  
@@ -123,7 +118,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="removing-work"></a>UI 스레드에서 작업 제거  
+##  <a name="removing-work"></a> UI 스레드에서 작업 제거  
  이 섹션에는 Mandelbrot 응용 프로그램의 UI 스레드에서 그리기 작업을 제거 하는 방법을 보여 줍니다. 그리기 작업을 UI 스레드와에서 작업자 스레드를 이동 하 여 UI 스레드 백그라운드에서 이미지를 생성 하는 작업자 스레드가 메시지를 처리할 수 있습니다.  
   
  동시성 런타임 작업을 실행 하려면 세 가지 방법을 제공: [작업 그룹](../../parallel/concrt/task-parallelism-concurrency-runtime.md), [비동기 에이전트](../../parallel/concrt/asynchronous-agents.md), 및 [간단한 작업](../../parallel/concrt/task-scheduler-concurrency-runtime.md)합니다. 이 예에서는 이러한 메커니즘 중 하나를 사용 하 여 UI 스레드에서 작업을 제거할 수 있지만 한 [concurrency:: task_group](reference/task-group-class.md) 작업 그룹이 취소를 지원 하기 때문에 개체입니다. 이 연습에서는 클라이언트 창의 크기를 조정할 때 수행 되는 작업의 양을 줄이기 위해 및 창이 소멸 될 때 정리 작업을 나중에 취소를 사용 합니다.  
@@ -162,7 +157,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="performance"></a>그리기 성능 향상  
+##  <a name="performance"></a> 그리기 성능 향상  
 
  Mandelbrot 프랙탈의 생성은 각 픽셀의 수치는 다른 모든 계산의 독립적 병렬화에 대 한 적합 합니다. 그리기 프로시저를 병렬화 하는 외부 변환 `for` 루프는 `CChildView::DrawMandelbrot` 메서드를 호출 하 여 [concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) 알고리즘을 다음과 같이 합니다.  
 
@@ -173,7 +168,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="cancellation"></a>취소에 대 한 지원 추가  
+##  <a name="cancellation"></a> 취소에 대 한 지원 추가  
  이 섹션에는 창 크기 조정을 처리 하는 방법 및 창이 소멸 될 때 모든 활성 그리기 작업을 취소 하는 방법을 설명 합니다.  
   
  문서 [PPL에서의 취소](cancellation-in-the-ppl.md) 런타임에에서 취소가 작동 하는 방법에 대해 설명 합니다. 취소는 협조적입니다. 따라서 즉시 실행 되지 않습니다. 취소 된 작업을 중지 하려면 런타임에서 런타임에 태스크에서 후속 호출 하는 동안 내부 예외가 throw 됩니다. 이전 섹션에서는 사용 하는 `parallel_for` 그리기 작업의 성능을 향상 시키기 위해 알고리즘입니다. 에 대 한 호출 `parallel_for` 하면 런타임에서 해당 작업을 중지 하 고 작동 하도록 하므로 취소가 있습니다.  
