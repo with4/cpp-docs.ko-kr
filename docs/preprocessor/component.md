@@ -1,12 +1,9 @@
 ---
-title: "구성 요소 | Microsoft Docs"
-ms.custom: 
+title: 구성 요소 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.component
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - component pragma
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3edb2f68b479eeadca777e0707dd96e148d13fe8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5bb453e8fe9d21c25292c4e5f94de90dcc67676a
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="component"></a>구성 요소
 소스 파일 내에서의 찾아보기 정보 또는 종속성 정보의 수집을 제어합니다.  
@@ -57,7 +52,7 @@ ms.lasthandoff: 02/23/2018
 > [!NOTE]
 >  이 pragma 사용 하 여 찾아보기 정보 수집을 설정 하려면 [찾아보기 정보를 먼저 활성화 해야](../build/reference/building-browse-information-files-overview.md)합니다.  
   
- **참조** 여부에 관계 없이 옵션을 사용할 수 있습니다는 *이름* 인수입니다. 하지만 사용 하 여 **참조** 없이 *이름* 는 참조 수집을 해제 하거나 (다른 찾아보기 정보가 계속 수집 됨). 예:  
+ **참조** 여부에 관계 없이 옵션을 사용할 수 있습니다는 *이름* 인수입니다. 하지만 사용 하 여 **참조** 없이 *이름* 는 참조 수집을 해제 하거나 (다른 찾아보기 정보가 계속 수집 됨). 예를 들어:  
   
 ```  
 #pragma component(browser, off, references)  
@@ -65,7 +60,7 @@ ms.lasthandoff: 02/23/2018
   
  컴파일러에서 참조 정보 수집을 중지합니다.  
   
- 사용 하 여 **참조** 와 *이름* 및 **오프** 에 대 한 참조를 방지 *이름* 찾아보기 정보 창에 나타나지 않습니다. 관심 없는 이름 및 형식을 무시하고 찾아보기 정보 파일의 크기를 줄이려면 이 구문을 사용합니다. 예:  
+ 사용 하 여 **참조** 와 *이름* 및 **오프** 에 대 한 참조를 방지 *이름* 찾아보기 정보 창에 나타나지 않습니다. 관심 없는 이름 및 형식을 무시하고 찾아보기 정보 파일의 크기를 줄이려면 이 구문을 사용합니다. 예를 들어:  
   
 ```  
 #pragma component(browser, off, references, DWORD)  

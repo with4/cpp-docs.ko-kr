@@ -1,35 +1,30 @@
 ---
-title: "연습: 에이전트 기반 응용 프로그램 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: 에이전트 기반 응용 프로그램 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a49c8deb9185b024dfcca977ab229bf594e05101
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 78826bb9f00e77a80fb65dd3a3ceda7eedb38796
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>연습: 에이전트 기반 응용 프로그램 만들기
 이 항목에서는 기본 에이전트 기반 응용 프로그램을 만드는 방법을 설명 합니다. 이 연습에서는 텍스트 파일에서 데이터를 비동기적으로 읽는 에이전트를 만들 수 있습니다. 응용 프로그램 adler-32 체크섬 알고리즘을 사용 하 여 해당 파일의 내용 체크섬을 계산 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료 하려면 다음 항목을 이해 해야 합니다.  
   
 - [비동기 에이전트](../../parallel/concrt/asynchronous-agents.md)  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 - [File_reader 클래스를 사용 하 여 응용 프로그램에서](#useagentclass)  
   
-##  <a name="createapplication"></a>콘솔 응용 프로그램 만들기  
+##  <a name="createapplication"></a> 콘솔 응용 프로그램 만들기  
  이 섹션에 적용 하는 헤더 파일을 참조 하는 Visual c + + 콘솔 응용 프로그램을 만드는 방법을 보여 줍니다.  
   
 #### <a name="to-create-a-visual-c-application-by-using-the-win32-console-application-wizard"></a>Win32 콘솔 응용 프로그램 마법사를 사용 하 여 Visual c + + 응용 프로그램을 만들려면  
@@ -70,12 +65,12 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="createagentclass"></a>File_reader 클래스 만들기  
+##  <a name="createagentclass"></a> File_reader 클래스 만들기  
  이 섹션에서는를 만드는 방법을 보여 줍니다.는 `file_reader` 클래스입니다. 런타임 자체 컨텍스트에서 작업을 수행 하려는 각 에이전트를 예약 합니다. 따라서 작업을 동기적으로 수행 하지만 비동기적으로 다른 구성 요소와 상호 작용 하는 에이전트를 만들 수 있습니다. `file_reader` 클래스가 지정된 된 입력된 파일에서 데이터를 읽고 해당 파일에서 지정된 된 대상 컴퓨터에 데이터를 보냅니다.  
   
 #### <a name="to-create-the-filereader-class"></a>File_reader 클래스를 만들려면  
   
-1.  새 c + + 헤더 파일을 프로젝트에 추가 합니다. 이렇게 하려면 마우스 오른쪽 단추로 클릭는 **헤더 파일** 노드에서 **솔루션 탐색기**, 클릭 **추가**, 클릭 하 고 **새 항목**합니다. 에 **템플릿** 창 선택 **헤더 파일 (.h)**합니다. 에 **새 항목 추가** 대화 상자에서 `file_reader.h` 에 **이름** 상자 한 다음 클릭 **추가**합니다.  
+1.  새 c + + 헤더 파일을 프로젝트에 추가 합니다. 이렇게 하려면 마우스 오른쪽 단추로 클릭는 **헤더 파일** 노드에서 **솔루션 탐색기**, 클릭 **추가**, 클릭 하 고 **새 항목**합니다. 에 **템플릿** 창 선택 **헤더 파일 (.h)** 합니다. 에 **새 항목 추가** 대화 상자에서 `file_reader.h` 에 **이름** 상자 한 다음 클릭 **추가**합니다.  
   
 2.  File_reader.h, 다음 코드를 추가 합니다.  
   
@@ -120,7 +115,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="useagentclass"></a>File_reader 클래스를 사용 하 여 응용 프로그램에서  
+##  <a name="useagentclass"></a> File_reader 클래스를 사용 하 여 응용 프로그램에서  
  이 섹션에서는 사용 하는 `file_reader` 클래스 텍스트 파일의 내용을 읽을 수 있습니다. 만드는 방법을 보여 줍니다는 [concurrency:: call](../../parallel/concrt/reference/call-class.md) 이 파일 데이터를 받고 해당 adler-32 체크섬을 계산 하는 개체입니다.  
   
 #### <a name="to-use-the-filereader-class-in-your-application"></a>응용 프로그램에서 file_reader 클래스를 사용 하려면  

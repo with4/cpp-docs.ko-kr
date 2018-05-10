@@ -1,28 +1,23 @@
 ---
-title: "Visual C++ 2003 ~ 2015의 새로운 기능 | Microsoft 문서"
-ms.custom: 
+title: Visual C++ 2003 ~ 2015의 새로운 기능 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp
 - devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0e5090bc914648e527f335b261ad7838ad3d0bc
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4ae41c373257202cb08b7f8760acac4ad14dff19
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 2003 ~ 2015의 새로운 기능
 
@@ -34,7 +29,7 @@ ms.lasthandoff: 02/14/2018
 
 Visual Studio 2015 이상 버전에서 컴파일러 규칙이 지속적으로 향상됨으로써 컴파일러에서 기존의 소스 코드를 인식하는 방식이 변경되는 경우가 있습니다. 이로 인해 빌드 중 새로운 오류 또는 다른 오류가 발생하거나, 이전에 빌드되어 올바르게 실행되는 것처럼 보이는 코드가 다르게 동작할 수도 있습니다.
 
- 다행히 이러한 차이는 대부분의 소스 코드에 거의 또는 전혀 영향을 주지 않으며, 차이를 해결하기 위해 소스 코드 변경이나 기타 변경이 필요한 경우에도 대체로 간단히 처리할 수 있는 사소한 수정입니다. 이전에는 허용되는 소스 코드였지만 변경해야 할 수 있는 코드*(이전)* 및 수정 코드*(이후)*의 많은 예가 포함되어 있습니다.
+ 다행히 이러한 차이는 대부분의 소스 코드에 거의 또는 전혀 영향을 주지 않으며, 차이를 해결하기 위해 소스 코드 변경이나 기타 변경이 필요한 경우에도 대체로 간단히 처리할 수 있는 사소한 수정입니다. 이전에는 허용되는 소스 코드였지만 변경해야 할 수 있는 코드 *(이전)* 및 수정 코드 *(이후)* 의 많은 예가 포함되어 있습니다.
 
  이러한 차이가 소스 코드나 다른 빌드 아티팩트에 영향을 줄 수도 있지만 Visual C++ 버전 업데이트 간의 이진 호환성에는 영향을 주지 않습니다. 보다 심각한 종류의 변경인 *주요 변경 내용*은 이진 호환성에 영향을 줄 수 있지만 이러한 종류의 이진 호환성 중단은 Visual C++의 주 버전 간에만 발생합니다. 예를 들어 Visual C++ 2013과 Visual C++ 2015 간에 발생합니다. Visual C++ 2013과 Visual C++ 2015 사이에 발생한 주요 변경 내용에 대한 자세한 내용은 [Visual C++ 변경 기록 2003 - 2015](../porting/visual-cpp-change-history-2003-2015.md)를 참조하세요.
 

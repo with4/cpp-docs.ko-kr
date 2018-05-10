@@ -1,13 +1,10 @@
 ---
-title: "국가-지역 문자열 | Microsoft Docs"
-ms.custom: 
+title: 국가-지역 문자열 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.strings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94ad99ebd05fa9e37a56f2e12818f30f1f4b1212
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ffa2ac8d08e28cac4f5798868013fe9883fac5d9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="countryregion-strings"></a>Country/Region Strings
 국가 및 지역 문자열을 언어 문자열과 결합하여 `setlocale`, `_wsetlocale`, `_create_locale`및 `_wcreate_locale` 함수에 대한 로캘 사양을 만들 수 있습니다. 다양한 Windows 운영 체제 버전에서 지원되는 국가/지역 이름 목록은 [NLS(국가별 언어 지원) API 참조(영문)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx)를 참조하세요. 목록에서 국가/지역 문자열은 **로캘 - 국가/지역별 언어** 열의 국가 값 또는 **국가 또는 지역별 이름 약어**의 약어 중 하나일 수 있습니다. 버전별 Windows 운영 체제의 언어 지원에 대한 자세한 내용은 [MS-LCID]: Windows LCID(언어 코드 식별자) 참조의 [부록 A: 제품 동작(영문)](http://msdn.microsoft.com/goglobal/bb896001.aspx)을 참조하세요.  

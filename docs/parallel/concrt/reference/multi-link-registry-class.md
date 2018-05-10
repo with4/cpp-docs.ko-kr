@@ -1,12 +1,9 @@
 ---
-title: "multi_link_registry 클래스 | Microsoft Docs"
-ms.custom: 
+title: multi_link_registry 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - multi_link_registry
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f87da4852fff0256b5ca55cfd47d839531b8a03
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 5fbe52298f267fabb2ba326e3e1c7b66f4ad49ef
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry 클래스
 `multi_link_registry` 개체는 여러 소스 블록 또는 여러 대상 블록을 관리하는 `network_link_registry`입니다.  
@@ -64,7 +59,7 @@ class multi_link_registry : public network_link_registry<_Block>;
 |----------|-----------------|  
 |[add](#add)|한 링크를 추가 하는 `multi_link_registry` 개체입니다. (재정의 [network_link_registry:: add](network-link-registry-class.md#add).)|  
 |[begin](#begin)|첫 번째 요소에 반복기를 반환 합니다.는 `multi_link_registry` 개체입니다. (재정의 [network_link_registry:: begin](network-link-registry-class.md#begin).)|  
-|[contains](#contains)|검색 된 `multi_link_registry` 지정된 된 블록에 대 한 개체입니다. (재정의 [network_link_registry:: contains](network-link-registry-class.md#contains).)|  
+|[포함](#contains)|검색 된 `multi_link_registry` 지정된 된 블록에 대 한 개체입니다. (재정의 [network_link_registry:: contains](network-link-registry-class.md#contains).)|  
 |[count](#count)|에 있는 항목의 개수는 `multi_link_registry` 개체입니다. (재정의 [network_link_registry:: count](network-link-registry-class.md#count).)|  
 |[remove](#remove)|링크를 제거는 `multi_link_registry` 개체입니다. (재정의 [network_link_registry:: remove](network-link-registry-class.md#remove).)|  
 |[set_bound](#set_bound)|링크의 수에 대 한 상한을 설정는 `multi_link_registry` 개체가 보유할 수 있습니다.|  

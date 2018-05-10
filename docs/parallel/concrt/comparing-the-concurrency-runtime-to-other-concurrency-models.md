@@ -1,29 +1,24 @@
 ---
-title: "동시성 런타임과 기타 동시성 모델 비교 | Microsoft Docs"
-ms.custom: 
+title: 동시성 런타임과 기타 동시성 모델 비교 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e20523eb8a2c78cfa72b6c3084e9ca9f620a916c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d3fa78ac5dbb5d3872c27db3c4ab3e8778fe1668
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>동시성 런타임과 기타 동시성 모델 비교
 이 문서에서는 동시성 런타임과 기타 기술의 기능 및 프로그래밍 모델 간 차이점에 대해 설명합니다. 동시성 런타임의 이점을 다른 프로그래밍 모델의 이점과 비교하는 방법을 이해하면 응용 프로그램 요구 사항에 가장 적합한 기술을 선택할 수 있습니다.  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
  선점형 일정 모델과 협조적 일정 모델은 여러 작업이 프로세서나 하드웨어 스레드 같은 컴퓨팅 리소스를 공유하도록 해주는 두 가지 일반적인 방법입니다.  
   
 ### <a name="preemptive-and-cooperative-scheduling"></a>선점형 일정 및 협조적 일정  
- *선점형 일정* 은 지정된 시간 동안 모든 작업에 번갈아가며 컴퓨팅 리소스에 대한 독점적 액세스를 제공하는 우선 순위 기반의 라운드 로빈 메커니즘입니다. 선점형 일정은 Windows와 같은 멀티태스킹 운영 체제에서 일반적입니다*. 협조적 일정*은 작업이 완료될 때까지 또는 작업이 액세스를 다른 리소스에 양보할 때까지 모든 작업에 컴퓨팅 리소스에 대한 독점적 액세스를 제공하는 메커니즘입니다. 동시성 런타임은 처리 리소스를 최대한 사용하기 위해 협조적 일정을 운영 체제의 선점형 스케줄러와 함께 사용합니다.  
+ *선점형 일정* 은 지정된 시간 동안 모든 작업에 번갈아가며 컴퓨팅 리소스에 대한 독점적 액세스를 제공하는 우선 순위 기반의 라운드 로빈 메커니즘입니다. 선점형 일정은 Windows와 같은 멀티태스킹 운영 체제에서 일반적입니다 *. 협조적 일정*은 작업이 완료될 때까지 또는 작업이 액세스를 다른 리소스에 양보할 때까지 모든 작업에 컴퓨팅 리소스에 대한 독점적 액세스를 제공하는 메커니즘입니다. 동시성 런타임은 처리 리소스를 최대한 사용하기 위해 협조적 일정을 운영 체제의 선점형 스케줄러와 함께 사용합니다.  
   
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>선점형 스케줄러와 협조적 스케줄러의 차이점  
  선점형 스케줄러는 여러 스레드에 컴퓨팅 리소스에 대한 동일한 액세스를 제공하여 모든 스레드가 진행될 수 있도록 합니다. 컴퓨팅 리소스가 많은 컴퓨터에서는 공정한 액세스를 보장하는 것은 별로 문제가 되지 않으며, 오히려 리소스의 충분한 활용을 보장하는 것이 더 문제가 됩니다.  

@@ -1,37 +1,32 @@
 ---
-title: "방법: 특정 스케줄러 정책 지정 | Microsoft Docs"
-ms.custom: 
+title: '방법: 특정 스케줄러 정책 지정 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - specifying scheduler policies [Concurrency Runtime]
 - scheduler policies, specifying [Concurrency Runtime]
 ms.assetid: 9c5149f9-ac34-4ff3-9e79-0bad103e4e6b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af30b38a89eb7e4b50c7d31be2d3ba6572843b1e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 988540c19ab94e841e274637b581f0ce8031df13
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-specify-specific-scheduler-policies"></a>방법: 특정 Scheduler 정책 지정
 스케줄러 정책을 스케줄러가 작업을 관리할 때 사용 하는 전략을 제어할 수 있습니다. 이 항목에는 스케줄러 정책을 사용 하는 진행률 표시기는 콘솔에 출력 하는 작업의 스레드 우선 순위 증가 하는 방법을 보여 줍니다.  
   
  비동기 에이전트와 함께 사용자 지정 스케줄러 정책을 사용 하는 예제를 보려면 [하는 방법: 에이전트를 사용 하 여 특정 스케줄러 정책 만들기](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 동시에 두 가지 작업을 수행 합니다. 첫 번째 작업은 n 계산<sup>번째</sup> 피보나치 수 있습니다. 두 번째 작업은 콘솔에 진행률 표시기를 인쇄합니다.  
   
  첫 번째 작업 재귀적 분해를 사용 하 여 피보나치 수를 계산 합니다. 즉, 각 작업 재귀적으로 하위 작업이 전체 결과 계산을 만듭니다. 재귀적 분해를 사용 하는 작업 사용 가능한 모든 리소스를 사용할 수도 있으며 함으로써 다른 작업 메모리가 부족할 수 있습니다. 이 예제에서는 진행률 표시기를 출력 하는 작업의 컴퓨팅 리소스에 대 한 적절 한 액세스를 받지 못할 수 있습니다.  

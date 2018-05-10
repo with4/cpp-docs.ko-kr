@@ -1,27 +1,22 @@
 ---
-title: "고정된 개수의 스레드를 지정 하는 A.11 | Microsoft Docs"
-ms.custom: 
+title: 고정된 개수의 스레드를 지정 하는 A.11 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 1d06b142-4c35-44b8-994b-20f2aed5462b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72c8aca2b90f021771ba9f9fc8a86d784ffe24a9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 71d09c470b76b61c6737566f7833334aeec6c63a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="a11---specifying-a-fixed-number-of-threads"></a>A.11   고정된 수의 스레드 지정
 일부 응용 프로그램 스레드를 제대로 실행할 고정, 미리 지정한 숫자에 의존 합니다.  구현에서 정의 된 스레드 수를 동적으로 조정에 대 한 기본 설정 이기 때문에 이러한 프로그램 동적 스레드 기능을 해제 하 고 명시적으로 이동성을 보장 하는 스레드 수를 설정 하도록 선택할 수 있습니다. 사용 하는 방법을 보여 주는 다음 예제 `omp_set_dynamic` ([섹션 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) 페이지 39), 및 `omp_set_num_threads` ([섹션 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) 페이지 36):  

@@ -1,13 +1,10 @@
 ---
-title: "함수 선언이 포함된 저장소 클래스 지정자 | Microsoft Docs"
-ms.custom: 
+title: 함수 선언이 포함된 저장소 클래스 지정자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - external linkage, function declarations
 - external linkage, storage-class specifiers
 ms.assetid: 801d7df2-efa9-4924-a725-274a5654cfd4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7d8b6ba1c0287492195ee891b1a573bf74de6cf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f84455dd29023194e64fa4e594419630ef2656e6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storage-class-specifiers-with-function-declarations"></a>함수 선언이 포함된 저장소 클래스 지정자
 함수 선언에서 **static** 또는 `extern` 저장소 클래스 지정자를 사용할 수 있습니다. 함수에는 항상 전역 수명이 있습니다.  

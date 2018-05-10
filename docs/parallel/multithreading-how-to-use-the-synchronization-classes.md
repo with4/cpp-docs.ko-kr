@@ -1,13 +1,10 @@
 ---
-title: "다중 스레딩: 동기화 클래스 사용 방법 | Microsoft Docs"
-ms.custom: 
+title: '다중 스레딩: 동기화 클래스 사용 방법 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - multithreading [C++], synchronization classes
 - threading [C++], thread-safe class design
 ms.assetid: f266d4c6-0454-4bda-9758-26157ef74cc5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d85ea58588ea889fc8294b23604d47aef725135
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 49b0737a794216c4899b280bc049a1cdc0fe0948
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-how-to-use-the-synchronization-classes"></a>다중 스레딩: 동기화 클래스 사용 방법
 스레드 간에 리소스 액세스를 동기화는 다중 스레드 응용 프로그램 작성 시에 일반적인 문제입니다. 두 개 이상의 있는 스레드에서 동시에 액세스 동일한 데이터 바람직하지 않은 및 예기치 않은 결과가 발생할 수 있습니다. 예를 들어 스레드를 하나씩 업데이트할 수 있습니다는 구조체의 내용을 다른 스레드가 동일한 구조체의 내용을 읽는 동안 합니다. 알 수 없기 데이터 읽기는 스레드가: 이전 데이터를 새로 작성된 된 데이터 또는 둘 모두 합니다. MFC는 다양 한 동기화 및이 문제를 해결 하기 위해에 동기화 액세스 클래스를 제공 합니다. 이 클래스를 사용할 수 및 일반적인 다중 스레드 응용 프로그램 스레드로부터 안전한 클래스를 만드는 데 사용할 하는 방법을 설명 합니다.  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  이 예제 응용 프로그램에는 세 가지 유형의 동기화 클래스를 모두 사용합니다. 사용 하 여 최대 3 개의 계정을 한 번에 검사할 수 수 있기 때문에 [CSemaphore](../mfc/reference/csemaphore-class.md) 3 개의 뷰 개체에 대 한 액세스를 제한할 수 있습니다. 확인 하려고 할 때 네 번째 계정 발생 하면 응용 프로그램 처음 3 개 창 중 하나를 닫습니다 하거나 실패할 때까지 기다리거나 합니다. 응용 프로그램에 사용 하 여 계정을 업데이트 되 면 [아니오](../mfc/reference/ccriticalsection-class.md) 계정 하나에 한 번에 업데이트 됩니다. 업데이트가 성공 하면 신호를 보내고 [CEvent](../mfc/reference/cevent-class.md), 이벤트 신호를 기다리는 스레드를 해제 합니다. 이 스레드는 데이터 보관을 새 데이터를 보냅니다.  
   
-##  <a name="_mfc_designing_a_thread.2d.safe_class"></a>스레드 안전 클래스 디자인  
+##  <a name="_mfc_designing_a_thread.2d.safe_class"></a> 스레드 안전 클래스 디자인  
  완전 한 스레드 안전 클래스를 확인, 먼저에 적절 한 동기화 클래스를 추가 공유 클래스를 데이터 멤버로 합니다. 이전 계정 관리 예제에서는 **CSemaphore** 데이터 멤버는 뷰 클래스에 추가 됩니다 한 `CCriticalSection` 데이터 멤버는 연결 리스트 클래스에 추가 됩니다 및 `CEvent` 데이터 멤버는 데이터에 추가 됩니다 저장소 클래스입니다.  
   
  클래스의 데이터를 수정 하거나 제어 된 리소스에 액세스 하는 모든 멤버 함수에 대 한 동기화 호출 다음에 추가 합니다. 각 함수에서 만들어야 중 하나는 [경우 CSingleLock](../mfc/reference/csinglelock-class.md) 또는 [CMultiLock](../mfc/reference/cmultilock-class.md) 개체와 해당 개체의 호출 `Lock` 함수입니다. 개체의 소멸자가 호출 하는 잠금 개체 범위를 벗어나면 소멸 될 때 `Unlock` , 리소스를 해제 합니다. 호출할 수는 물론, `Unlock` 직접 들어 있습니다.  

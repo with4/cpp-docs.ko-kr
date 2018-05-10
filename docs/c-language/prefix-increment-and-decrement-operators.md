@@ -1,13 +1,10 @@
 ---
-title: "접두사 증가 및 감소 연산자 | Microsoft Docs"
-ms.custom: 
+title: 접두사 증가 및 감소 연산자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - decrement operators, syntax
 - decrement operators
 ms.assetid: 9a441bb9-d94a-4b6a-9db2-0d0d76bc480d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84d8c3f5a1b43fdec5554003e32db4f23b4f0406
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 116921ea46418db5c8eff3327de73a40aa42533c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prefix-increment-and-decrement-operators"></a>접두사 증가 및 감소 연산자
 증가 또는 감소 연산자가 피연산자 앞에 올 때 단항 연산자(`++` 및 **--**)를 "접두사" 증가 또는 감소 연산자라고 합니다. 후위 증가 및 감소는 전위 증가 및 감소보다 우선 순위가 높습니다. 피연산자는 정수, 부동 및 포인터 형식이어야 하며 수정할 수 있는 l-value 식(**const** 특성이 없는 식)이어야 합니다. 결과는 l-value입니다.  

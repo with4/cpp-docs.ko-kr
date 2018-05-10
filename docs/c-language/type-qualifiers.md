@@ -1,13 +1,10 @@
 ---
-title: "형식 한정자 | Microsoft Docs"
-ms.custom: 
+title: 형식 한정자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - memory, access using volatile
 - volatile keyword [C], type specifier
 ms.assetid: bb4c6744-1dd7-40a8-b4eb-f5585be30908
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8fc671e624b16299db3366885f7bcd38b8518ee5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74f51dfe3b0b45fb08bc30f9b0d158275112bcf9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-qualifiers"></a>형식 한정자
 형식 한정자는 두 속성 중 하나를 식별자에 제공합니다. **const** 형식 한정자는 개체를 수정할 수 없는 것으로 선언합니다. `volatile` 형식 한정자가 선언하는 항목의 값은 해당 항목이 나타나는 프로그램의 제어를 벗어난 요소(예: 동시에 실행되는 스레드)가 올바르게 변경할 수 있습니다.  

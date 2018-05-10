@@ -1,13 +1,10 @@
 ---
-title: "동시성 런타임에서 예외 처리 | Microsoft Docs"
-ms.custom: 
+title: 동시성 런타임에서 예외 처리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - agents, exception handling [Concurrency Runtime]
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72cde17c0bcb6a3582305167e6358f761c16f248
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f30c98a8800c3aeaaf5ff1dab5bee9bdba971a6
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>동시성 런타임에서 예외 처리
 동시성 런타임은 c + + 예외 처리를 다양 한 종류의 오류 통신에 사용 합니다. 이러한 오류는 작업 및 작업 그룹에 제공 하는 작업 함수에 런타임과 리소스를 획득 하는 오류와 같은 런타임 오류가 발생 하는 오류를 잘못 사용을 포함 합니다. 작업 또는 작업 그룹이 예외를 throw 하면 런타임에서 해당 예외를 보유 하 고 작업 또는 작업 그룹이 완료 되기를 기다리는 컨텍스트에 마샬링합니다. 예: 간단한 작업 및 에이전트 구성 요소에 대 한 런타임 예외를 관리 하지 않습니다. 이러한 경우 예외 처리 메커니즘을 직접 구현 해야 합니다. 이 항목에는 런타임에 작업, 작업 그룹, 간단한 작업, 및 비동기 에이전트에 의해 throw 되는 예외를 처리 하는 방법 및 응용 프로그램에 예외에 응답 하는 방법을 설명 합니다.  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 -   런타임에서 간단한 작업 및 에이전트에 대 한 예외를 관리 하지 않습니다.  
   
-##  <a name="top"></a>이 문서에서  
+##  <a name="top"></a> 이 문서에서  
   
 - [작업 및 연속 작업](#tasks)  
   
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
 - [비동기 에이전트](#agents)  
   
-##  <a name="tasks"></a>작업 및 연속 작업  
+##  <a name="tasks"></a> 작업 및 연속 작업  
  이 섹션에서는 런타임에 의해 throw 되는 예외를 처리 하는 방법을 설명 [concurrency:: task](../../parallel/concrt/reference/task-class.md) 개체 및 작업의 연속입니다. 작업 및 연속 모델에 대 한 자세한 내용은 참조 [작업 병렬 처리](../../parallel/concrt/task-parallelism-concurrency-runtime.md)합니다.  
   
  에 전달 하는 작업 함수의 본문에서 예외를 throw 하는 경우는 `task` 개체 런타임에서 해당 예외를 저장 하 고 호출 하는 컨텍스트에 마샬링합니다 [concurrency::task::get](reference/task-class.md#get) 또는 [동시성:: task:: wait](reference/task-class.md#wait)합니다. 문서 [작업 병렬 처리](../../parallel/concrt/task-parallelism-concurrency-runtime.md) 설명 값 기반 연속을 요약 하면, 하지만 값 기반 연속과 작업 기반 형식의 매개 변수 `T` 형식의 매개 변수를 사용 하는 작업 기반 연속 및 `task<T>`. throw 하는 작업에 하나 이상의 값 기반 연속을 연속 작업 실행 되도록 예약 되지 않은 합니다. 다음은 이 동작에 대한 예입니다.  
@@ -97,7 +92,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="task_groups"></a>작업 그룹 및 병렬 알고리즘  
+##  <a name="task_groups"></a> 작업 그룹 및 병렬 알고리즘  
 
  이 섹션에서는 런타임 작업 그룹에 의해 throw 되는 예외를 처리 하는 방법을 설명 합니다. 이 섹션에도 적용 됩니다 병렬 알고리즘 같은 [concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)작업 그룹을 기반으로 하기 때문에, 합니다.  
   
@@ -123,7 +118,7 @@ X = 15, Y = 30Caught exception: point is NULL.
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="runtime"></a>런타임에 의해 발생 한 예외  
+##  <a name="runtime"></a> 런타임에 의해 발생 한 예외  
  런타임에 대 한 호출에서 예외가 발생할 수 있습니다. 대부분의 예외 종류를 제외 하 고 [concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md) 및 [concurrency::operation_timed_out](../../parallel/concrt/reference/operation-timed-out-class.md), 프로그래밍 오류를 나타냅니다. 이러한 오류는 일반적으로 복구할 수 및 따라서 발생 하거나 안 응용 프로그램 코드에서 처리 합니다. 만 catch 하거나는 프로그래밍 오류를 진단 하려는 경우 응용 프로그램 코드에서 복구할 수 없는 오류를 처리는 것이 좋습니다. 그러나 런타임에 의해 정의 된 예외 형식을 이해 프로그래밍 오류를 진단 하는 데 도움이 됩니다.  
   
  예외 처리 메커니즘은 작업 함수에서 throw 된 예외는 런타임에서 throw 된 예외에 대 한 같습니다. 예를 들어는 [concurrency:: receive](reference/concurrency-namespace-functions.md#receive) 함수가 throw `operation_timed_out` 때 메시지를 지정된 된 기간 내에 수신 되지 않으면 합니다. 경우 `receive` 작업 그룹에 전달 하면, 런타임에서 해당 예외를 저장 하 고 호출 하는 컨텍스트에 마샬링합니다 작업 함수에서 예외를 throw `task_group::wait`, `structured_task_group::wait`, `task_group::run_and_wait`, 또는 `structured_task_group::run_and_wait`합니다.  
@@ -142,7 +137,7 @@ The operation timed out.
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="multiple"></a>여러 예외  
+##  <a name="multiple"></a> 여러 예외  
  작업 또는 병렬 알고리즘을 여러 예외를 수신 하는 경우 런타임에서 호출 컨텍스트에 해당 예외 중 하나만 마샬링합니다. 런타임 예외 마샬링합니다 것을 보장 하지 않습니다.  
   
  다음 예제에서는 `parallel_for` 숫자를 콘솔에 인쇄 하는 알고리즘입니다. 입력된 값이 일부 최소 값 보다 작거나 최대값 보다 큰 경우 예외를 throw 합니다. 이 예제에서는 여러 작업 함수는 예외를 throw 합니다.  
@@ -157,17 +152,17 @@ The operation timed out.
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="cancellation"></a>취소  
+##  <a name="cancellation"></a> 취소  
  일부 예외는 오류를 나타냅니다. 예를 들어 검색 알고리즘 결과 발견 하면 연결된 된 작업을 중지 하려면 예외 처리를 사용할 수 있습니다. 코드에서 취소 메커니즘을 사용 하는 방법에 대 한 자세한 내용은 참조 [PPL에서의 취소](../../parallel/concrt/cancellation-in-the-ppl.md)합니다.  
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="lwts"></a>간단한 작업  
+##  <a name="lwts"></a> 간단한 작업  
  간단한 작업에서 직접 예약 하는 작업은 한 [concurrency:: scheduler](../../parallel/concrt/reference/scheduler-class.md) 개체입니다. 간단한 작업은 일반적인 작업 보다 오버 헤드가 적습니다. 그러나 런타임에 간단한 작업에서 throw 된 예외를 catch 하지 않습니다. 대신 예외는 기본적으로 프로세스를 종료 하는 처리 되지 않은 예외 처리기에 의해 검색 되었습니다. 따라서 응용 프로그램에서 적절 한 오류 처리 메커니즘을 사용 합니다. 간단한 작업에 대 한 자세한 내용은 참조 [작업 스케줄러](../../parallel/concrt/task-scheduler-concurrency-runtime.md)합니다.  
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="agents"></a>비동기 에이전트  
+##  <a name="agents"></a> 비동기 에이전트  
  런타임에서 간단한 작업과 마찬가지로 비동기 에이전트에서 throw 된 예외를 관리 하지 않습니다.  
   
  다음 예제에서 파생 된 클래스에서 예외를 처리 하는 방법을 보여 줍니다. [concurrency:: agent](../../parallel/concrt/reference/agent-class.md)합니다. 이 예에서는 정의 `points_agent` 클래스입니다. `points_agent::run` 메서드 읽기 `point` 메시지 버퍼에서 개체를 콘솔에 출력 합니다. `run` 수신 하는 경우 메서드는 예외를 throw 한 `NULL` 포인터입니다.  

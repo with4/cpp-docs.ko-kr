@@ -1,13 +1,10 @@
 ---
-title: "동시성 런타임 개요 | Microsoft Docs"
-ms.custom: 
+title: 동시성 런타임 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c604ebc03204ca0dff24e2ceccdf6bb6dd543df
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 67f0497f600cf5d528b2c41601b7a02c08771861
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>동시성 런타임 개요
 이 문서에서는 동시성 런타임에 대한 개요를 제공합니다. 또한 동시성 런타임의 이점, 사용할 시기, 구성 요소가 서로 상호 작용하는 방식과 운영 체제 및 응용 프로그램과 상호 작용하는 방식에 대해 설명합니다.  
@@ -45,7 +40,7 @@ ms.lasthandoff: 02/14/2018
   
 -   [Requirements](#requirements)  
   
-##  <a name="runtime">이유는 동시성 런타임이 중요 한</a>  
+##  <a name="runtime"></a> 이유는 동시성 런타임이 중요 한  
  동시성 런타임은 동시에 실행되는 응용 프로그램 및 응용 프로그램 구성 요소에 통일성 및 예측 가능성을 제공합니다. 동시성 런타임의 이점의 두 가지 예는 *협조적 작업 일정* 및 *협조적 차단*합니다.  
   
  동시성 런타임에서는 작업 가로채기 알고리즘을 구현하는 협조적 작업 스케줄러를 사용하여 컴퓨팅 리소스 간에 작업을 효율적으로 분산시킵니다. 예를 들어 두 스레드가 동일한 런타임에서 관리되는 응용 프로그램을 살펴보겠습니다. 한 스레드가 예약된 작업을 완료하면 다른 스레드에서 작업을 오프로드할 수 있습니다. 이 메커니즘은 응용 프로그램의 전체 작업을 분산시킵니다.  
@@ -98,7 +93,7 @@ ms.lasthandoff: 02/14/2018
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="lambda">C + + 람다 식</a>  
+##  <a name="lambda"></a> C + + 람다 식  
  동시성 런타임에 의해 정의되는 많은 형식 및 알고리즘은 C++ 템플릿으로 구현됩니다. 이러한 형식 및 알고리즘의 일부는 작업을 수행하는 루틴을 매개 변수로 사용합니다. 이러한 매개 변수는 람다 함수, 함수 개체 또는 함수 포인터일 수 있습니다. 이러한 엔터티는 라고도 *작업 함수* 또는 *작업 루틴*합니다.  
   
  람다 식은 중요한 새 Visual C++ 언어 기능으로 병렬 처리를 위한 작업 함수를 정의하는 간단한 방법을 제공합니다. 함수 개체 및 함수 포인터를 사용하면 기존 코드에서 동시성 런타임을 사용할 수 있습니다. 그러나 제공되는 안전성 및 생산성 이점으로 인해 새 코드를 작성하는 경우에는 람다 식을 사용하는 것이 좋습니다.  

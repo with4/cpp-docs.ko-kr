@@ -1,13 +1,10 @@
 ---
-title: "기본 함수 및 프로그램 실행 | Microsoft Docs"
-ms.custom: 
+title: 기본 함수 및 프로그램 실행 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9967481734c49d40d3121f825783b1824ad6f4f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca08ecc5be82ec256320c87a9a49e354dccd40f8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="main-function-and-program-execution"></a>기본 함수 및 프로그램 실행
 모든 C 프로그램에는 **main**이라는 이름을 지정해야 하는 기본(main) 함수가 있습니다. 코드가 유니코드 프로그래밍 모델을 따르는 경우 **main**의 와이드 문자 버전인 **wmain**을 사용할 수 있습니다. **main** 함수는 프로그램 실행을 위한 시작 지점 역할을 하며, 일반적으로 프로그램의 다른 함수로 호출을 보내 프로그램 실행을 제어합니다. 프로그램은 여러 가지 이유로 프로그램의 다른 지점에서 종료될 수 있지만 대개 **main** 끝에서 실행을 중지합니다. 때때로 특정 오류가 감지될 때 등에 프로그램을 강제 종료해야 할 수 있습니다. 이렇게 하려면 **exit** 함수를 사용합니다. [exit](../c-runtime-library/reference/exit-exit-exit.md) 함수 사용에 대한 정보 및 예제는 *런타임 라이브러리 참조*를 참조하세요.  

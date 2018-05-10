@@ -1,27 +1,22 @@
 ---
-title: "람다, 함수 개체 및 제한 된 함수를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: 람다, 함수 개체 및 제한 된 함수를 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 25346cc9-869d-4ada-aad3-e2228cad3d6c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afec84ba6e3c007e576c37b4a7afc71fe62691ea
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e3e5ab742335cfd6bb47a5105995d7339c7c36a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>람다, 함수 개체 및 제한 함수 사용
 액셀러레이터에서 실행 하려는 하는 c + + AMP 코드에 대 한 호출에서 인수로 지정 된 [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each) 메서드. 람다 식 또는 함수 개체 (함수)를 해당 인수로 제공할 수 있습니다. 또한 람다 식 또는 함수 개체는 c + + AMP 제한 함수를 호출할 수 있습니다. 이 항목 람다, 함수 개체 및 제한 된 기능을 보여 주기 위해 배열 추가 알고리즘을 사용 합니다. 다음 예제에서는 c + + AMP 코드 없이 알고리즘을 보여 줍니다. 동일한 길이의 두 1 차원 배열이 생성 됩니다. 해당 정수 요소는 추가 하 고 세 번째 1 차원 배열에 저장 됩니다. C + + AMP 사용 되지 않습니다.  

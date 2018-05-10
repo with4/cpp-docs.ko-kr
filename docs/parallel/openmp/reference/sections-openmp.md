@@ -1,12 +1,9 @@
 ---
-title: "섹션 (OpenMP) | Microsoft Docs"
-ms.custom: 
+title: 섹션 (OpenMP) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - section
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - sections OpenMP directive
 ms.assetid: 4cd1d776-e198-470e-930a-01fb0ab0a0bd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cdc8a79f95f2a2a4dee3c43c067177f0924b46f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 60bc94685a7e6128e22cc3545ae8702abe6d472e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sections-openmp"></a>sections (OpenMP)
 모든 스레드가에서 나눌 수 있는 코드 섹션을 식별 합니다.  
@@ -68,7 +63,7 @@ ms.lasthandoff: 02/23/2018
   
  자세한 내용은 참조 [2.4.2 sections 구문](../../../parallel/openmp/2-4-2-sections-construct.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // omp_sections.cpp  

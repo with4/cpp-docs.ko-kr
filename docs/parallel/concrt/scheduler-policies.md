@@ -1,29 +1,24 @@
 ---
-title: "스케줄러 정책 | Microsoft Docs"
-ms.custom: 
+title: 스케줄러 정책 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c2e669a429bebbfde19f54200610819d0849d8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7d9c855260df34290d01f1eeeee89e8bfe8988de
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-policies"></a>Scheduler 정책
 이 문서에서는 동시성 런타임에서 스케줄러 정책의 역할을 설명 합니다. A *스케줄러 정책을* 스케줄러가 작업을 관리할 때 사용 하는 전략을 제어 합니다. 예를 들어, 일부 작업은 `THREAD_PRIORITY_NORMAL`에서 실행해야 하고 다른 작업은 `THREAD_PRIORITY_HIGHEST`에서 실행해야 하는 응용 프로그램을 고려해 보겠습니다.  두 가지 스케줄러 인스턴스를 만들 수 있으며, 하나는 `ContextPriority` 정책을 `THREAD_PRIORITY_NORMAL`로 지정하고, 다른 하나는 동일한 정책을 `THREAD_PRIORITY_HIGHEST`로 지정합니다.  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 |`MinConcurrency`|`unsigned int` 스케줄러를 사용 하는 동시성 리소스의 최소 수를 지정 하는 값입니다.|`1`|  
 |`TargetOversubscriptionFactor`|`unsigned int` 각 처리 리소스를 할당할 스레드의 수를 지정 하는 값입니다.|`1`|  
 |`LocalContextCacheSize`|`unsigned int` 각 가상 프로세서의 로컬 큐에 캐시 될 수 있는 컨텍스트의 최대 수를 지정 하는 값입니다.|`8`|  
-|`ContextStackSize`|`unsigned int` (킬로바이트) 각 컨텍스트에 대 한 예약 하는 스택 크기를 지정 하는 값입니다.|`0`(기본 스택 크기를 사용 하 여)|  
+|`ContextStackSize`|`unsigned int` (킬로바이트) 각 컨텍스트에 대 한 예약 하는 스택 크기를 지정 하는 값입니다.|`0` (기본 스택 크기를 사용 하 여)|  
 |`ContextPriority`|`int` 컨텍스트마다의 스레드 우선 순위를 지정 하는 값입니다. 이에 전달할 수 있는 모든 값이 될 수 있습니다 [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) 또는 `INHERIT_THREAD_PRIORITY`합니다.|`THREAD_PRIORITY_NORMAL`|  
 
 |`SchedulingProtocol`| A [concurrency:: schedulingprotocoltype](reference/concurrency-namespace-enums.md#schedulingprotocoltype) 사용할 예약 알고리즘을 지정 하는 값입니다. |`EnhanceScheduleGroupLocality`|  
@@ -64,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
  사용 하 여는 [concurrency::CurrentScheduler::GetPolicy](reference/currentscheduler-class.md#getpolicy) 및 [concurrency::Scheduler::GetPolicy](reference/scheduler-class.md#getpolicy) 스케줄러 정책의 복사본을 검색 하는 메서드. 이러한 방법 중에서 수신 하는 정책 값은 스케줄러를 만들 때 지정 하는 정책 값은 다를 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  스케줄러의 동작을 제어 하려면 특정 스케줄러 정책을 사용 하는 예제를 검사 하려면 참조 [하는 방법: 특정 스케줄러 정책 지정](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) 및 [하는 방법: 에이전트를 사용 하 여 특정 스케줄러 정책만들기](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).  
   
 ## <a name="see-also"></a>참고 항목  

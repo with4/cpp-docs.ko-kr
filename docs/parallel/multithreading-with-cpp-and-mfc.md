@@ -1,13 +1,10 @@
 ---
-title: "C + + 및 MFC를 사용한 다중 스레딩 | Microsoft Docs"
-ms.custom: 
+title: C + + 및 MFC를 사용한 다중 스레딩 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - threading [MFC]
 - user interface threads [C++]
 ms.assetid: 979605f8-3988-44b5-ac9c-b8cce7fcce14
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14d076865cd83837e2de218ad0189c037c78cd83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 778602a0e9236ad8cc788d8a2306e8f2d143ec49
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-with-c-and-mfc"></a>C++ 및 MFC에서 다중 스레딩
 Microsoft Foundation 클래스 (MFC) 라이브러리는 다중 스레드 응용 프로그램에 대 한 지원을 제공합니다. 이 항목에서는 프로세스 및 스레드 및 MFC 접근 방식을 설명의 다중 스레딩과 합니다.  
@@ -43,7 +38,7 @@ Microsoft Foundation 클래스 (MFC) 라이브러리는 다중 스레드 응용 
   
  원하는 경우 응용 프로그램에서 추가 스레드를 만들 수 있습니다. 완료 되기를 기다려야 사용자 하지 않을 때 백그라운드 또는 유지 관리 작업을 처리 하 이렇게 할 수 있습니다. MFC 응용 프로그램의 모든 스레드가 표시 됩니다 [CWinThread](../mfc/reference/cwinthread-class.md) 개체입니다. 대부분의 경우에도 않아도 명시적으로 이러한 개체를 만드는; 프레임 워크 도우미 함수를 호출 하는 대신 [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), 만듦는 `CWinThread` 있습니다에 대 한 개체입니다.  
   
- 두 가지 유형의 스레드를 구분 하는 MFC: 사용자 인터페이스 스레드와 작업자 스레드 수입니다. 사용자 인터페이스 스레드 이벤트와 사용자에 의해 생성 된 메시지에 응답 하 고 사용자 입력을 처리 하려면 일반적으로 사용 됩니다. 작업자 스레드 등의 작업을 다시 계산, 사용자 입력이 필요 하지 않은 완료 하려면 일반적으로 사용 됩니다. Win32 API 유형의 스레드; 간에 구분 되지 않습니다. 방금 스레드 실행을 시작할 수 있도록 스레드의 시작 주소를 알고 있어야 합니다. MFC는 메시지 펌프 사용자 인터페이스에서 이벤트를 제공 하 여 특수 사용자 인터페이스 스레드를 처리 합니다. `CWinApp`한 예로 사용자 인터페이스 스레드 개체에서 파생 되므로 `CWinThread` 이벤트 및 사용자에 의해 생성 된 메시지를 처리 합니다.  
+ 두 가지 유형의 스레드를 구분 하는 MFC: 사용자 인터페이스 스레드와 작업자 스레드 수입니다. 사용자 인터페이스 스레드 이벤트와 사용자에 의해 생성 된 메시지에 응답 하 고 사용자 입력을 처리 하려면 일반적으로 사용 됩니다. 작업자 스레드 등의 작업을 다시 계산, 사용자 입력이 필요 하지 않은 완료 하려면 일반적으로 사용 됩니다. Win32 API 유형의 스레드; 간에 구분 되지 않습니다. 방금 스레드 실행을 시작할 수 있도록 스레드의 시작 주소를 알고 있어야 합니다. MFC는 메시지 펌프 사용자 인터페이스에서 이벤트를 제공 하 여 특수 사용자 인터페이스 스레드를 처리 합니다. `CWinApp` 한 예로 사용자 인터페이스 스레드 개체에서 파생 되므로 `CWinThread` 이벤트 및 사용자에 의해 생성 된 메시지를 처리 합니다.  
   
  여러 스레드에서 동일한 개체에 대 한 액세스를 필요할 수 있습니다 하는 경우에는 특별 한 주의 해야 합니다. [다중 스레딩: 프로그래밍 팁](../parallel/multithreading-programming-tips.md) 이러한 상황에서 발생할 수 있는 문제를 해결 하는 데 사용할 수 있는 기술에 설명 합니다. [다중 스레딩: 동기화 클래스를 사용 하는 방법을](../parallel/multithreading-how-to-use-the-synchronization-classes.md) 단일 개체에 액세스 여러 스레드를 동기화에 사용할 수 있는 클래스를 사용 하는 방법을 설명 합니다.  
   

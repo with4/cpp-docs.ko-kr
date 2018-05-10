@@ -1,13 +1,10 @@
 ---
-title: "방법: call 및 transformer 클래스에 작업 함수 제공 | Microsoft Docs"
-ms.custom: 
+title: '방법: call 및 transformer 클래스에 작업 함수 제공 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - using the transformer class [Concurrency Runtime]
 - using the call class [Concurrency Runtime]
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52ab28a015fa0312a5d064401451640c2747e9db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca7948a1258ac1b5193d379dd37f426360edc42e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>방법: call 및 transformer 클래스에 작업 함수 제공
 이 항목에서는 여러 가지 방법으로 작업 함수를 제공 하는 [concurrency:: call](../../parallel/concrt/reference/call-class.md) 및 [concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md) 클래스입니다.  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
  이 항목의 모든 예제 사용 하 여 이해를 돕기는 `call` 클래스입니다. 사용 하는 예제는 `transformer` 클래스를 참조 하십시오. [하는 방법: 데이터 파이프라인에서 transformer 사용](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 일반적으로 사용 하 여 `call` 클래스입니다. 이 예제에서는 전달 하는 람다 함수는 `call` 생성자입니다.  
   
  [!code-cpp[concrt-call-lambda#1](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_1.cpp)]  
@@ -45,12 +40,12 @@ ms.lasthandoff: 12/21/2017
 13 squared is 169.  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제를 사용 한다는 점을 제외 하 고 이전 쿼리와 비슷하지만 `call` 함수 개체 (함수)와 함께 클래스입니다.  
   
  [!code-cpp[concrt-call-functor#1](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_2.cpp)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
 
  다음 예제를 사용 한다는 점을 제외 하 고 이전 쿼리와 비슷하지만 [std::bind1st](../../standard-library/functional-functions.md#bind1st) 및 [std::mem_fun](../../standard-library/functional-functions.md#mem_fun) 바인딩할 함수는 `call` 클래스 메서드는 개체입니다.  
 

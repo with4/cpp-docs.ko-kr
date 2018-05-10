@@ -1,29 +1,24 @@
 ---
-title: "병렬 알고리즘 | Microsoft Docs"
-ms.custom: 
+title: 병렬 알고리즘 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbabb499d67a2248ebaefa5cbc787afe2c6cfc08
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 365acd15c61b52631fc75018ab4c3a017d3eed8f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="parallel-algorithms"></a>병렬 알고리즘
 병렬 패턴 라이브러리 (PPL) 동시에 데이터 컬렉션에 대 한 작업을 수행 하는 알고리즘을 제공 합니다. 이러한 알고리즘 비슷한 c + + 표준 라이브러리에서 제공 합니다.  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
     - [정렬 알고리즘 선택](#choose_sort)  
   
-##  <a name="parallel_for"></a>Parallel_for 알고리즘  
+##  <a name="parallel_for"></a> Parallel_for 알고리즘  
 
  [concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) 알고리즘 반복 해 서 동시에 같은 작업을 수행 합니다. 이러한 각 태스크는 반복 값에 의해 매개 변수화 됩니다. 이 알고리즘은 해당 루프의 반복 간에 리소스를 공유 하지 않는 루프 본문이 있는 경우에 유용 합니다.  
   
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  부하 분산와 취소와 같은 기능에 대 한 지원의 결과 병렬로 루프 본문이 실행의 이점 크지 않을 수 있습니다 일정 비용, 특히 루프 본문 경우 상대적으로 작은. 병렬 루프에 파티셔너를 사용하여 이러한 오버헤드를 최소화할 수 있습니다. 자세한 내용은 참조 [분할 작업](#partitions) 이 문서의 뒷부분에 나오는 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는의 기본 구조는 `parallel_for` 알고리즘입니다. 이 예에서는 각 값이 동시에 [1, 5] 범위에 콘솔에 출력 합니다.  
   
  [!code-cpp[concrt-parallel-for-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_1.cpp)]  
@@ -96,7 +91,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="parallel_for_each"></a>Parallel_for_each 알고리즘  
+##  <a name="parallel_for_each"></a> Parallel_for_each 알고리즘  
 
  [concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) 알고리즘에서 병렬로 c + + 표준 라이브러리에서 제공 하는 반복 컨테이너에 작업을 수행 합니다. 동일한 분할 논리를 사용 하는 `parallel_for` 알고리즘에서 사용 합니다.  
   
@@ -104,7 +99,7 @@ ms.lasthandoff: 12/21/2017
   
  하지만 `parallel_for_each` 정방향 반복기와 임의 액세스 반복기를 둘 다에서 작동 하는 알고리즘, 성능이 더 빠른 임의 액세스 반복기입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는의 기본 구조는 `parallel_for_each` 알고리즘입니다. 이 예제에서는 콘솔에 출력의 각 값을 [std:: array](../../standard-library/array-class-stl.md) 병렬로 개체입니다.  
   
  [!code-cpp[concrt-parallel-for-each-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_2.cpp)]  
@@ -121,7 +116,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="parallel_invoke"></a>Parallel_invoke 알고리즘  
+##  <a name="parallel_invoke"></a> Parallel_invoke 알고리즘  
 
  [concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) 알고리즘 일련의 작업을 병렬로 실행 합니다. 각 작업이 완료 될 때까지 반환 하지 않습니다. 이 알고리즘은 동시에 실행 하려는 여러 독립 된 작업이 있는 경우에 유용 합니다.  
   
@@ -129,7 +124,7 @@ ms.lasthandoff: 12/21/2017
   
  다른 병렬 알고리즘과 마찬가지로 `parallel_invoke` 는 특정 순서로 작업을 실행 하지 않습니다. 항목 [작업 병렬 처리](../../parallel/concrt/task-parallelism-concurrency-runtime.md) 설명 방법을 `parallel_invoke` 알고리즘 작업 및 작업 그룹을 연결 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는의 기본 구조는 `parallel_invoke` 알고리즘입니다. 이 예제에서는 동시에 호출 된 `twice` 함수 세 지역 변수를 하 고 결과를 콘솔에 출력 합니다.  
   
  [!code-cpp[concrt-parallel-invoke-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_3.cpp)]  
@@ -144,14 +139,14 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="parallel_transform_reduce"></a>Parallel_transform 및 parallel_reduce 알고리즘  
+##  <a name="parallel_transform_reduce"></a> Parallel_transform 및 parallel_reduce 알고리즘  
 
  [concurrency:: parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) 및 [concurrency:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) 알고리즘은 c + + 표준 라이브러리 알고리즘의 병렬 버전 [std:: transform](../../standard-library/algorithm-functions.md#transform)및 [std:: accumulate](../../standard-library/numeric-functions.md#accumulate)각각. 동시성 런타임 버전은 제외 하 고 동시에 실행 되기 때문에 작업 순서가 정해져 있지는 c + + 표준 라이브러리 버전 처럼 작동 합니다. 병렬 처리에 따른 성능 및 확장성 효과를 볼만큼 큰 집합으로 작업할 때 이 알고리즘을 사용합니다.  
   
 > [!IMPORTANT]
 >  `parallel_transform` 및 `parallel_reduce` 알고리즘은 임의 액세스, 양방향 및 정방향 반복기만 지원합니다. 이들 반복기는 안정적인 메모리 주소를 생성하기 때문입니다. 또한 이들 반복기는 비`const` l-value를 생성해야 합니다.  
   
-###  <a name="parallel_transform"></a>Parallel_transform 알고리즘  
+###  <a name="parallel_transform"></a> Parallel_transform 알고리즘  
  `parallel transform` 알고리즘을 사용하여 많은 데이터 병렬화 작업을 수행할 수 있습니다. 예를 들어 다음 작업을 할 수 있습니다.  
   
 -   이미지 밝기를 조정하고 기타 이미지 처리 작업을 수행합니다.  
@@ -174,7 +169,7 @@ ms.lasthandoff: 12/21/2017
 > [!IMPORTANT]
 >  `parallel_transform`의 출력에 제공하는 반복기는 입력 반복기와 완전히 겹치거나 아예 겹치지 않아야 합니다. 입력 및 출력 반복기가 부분적으로 겹치는 경우 이 알고리즘의 동작은 지정되지 않습니다.  
   
-###  <a name="parallel_reduce"></a>Parallel_reduce 알고리즘  
+###  <a name="parallel_reduce"></a> Parallel_reduce 알고리즘  
  `parallel_reduce` 알고리즘은 결합형 속성을 만족하는 작업 시퀀스가 있을 경우 유용합니다. 이 알고리즘에는 가환적 속성이 필요하지 않습니다. 다음은 `parallel_reduce`로 수행할 수 있는 작업 중 일부입니다.  
   
 -   매트릭스 시퀀스를 곱하여 매트릭스를 구합니다.  
@@ -191,7 +186,7 @@ ms.lasthandoff: 12/21/2017
   
  대부분의 경우에서 생각할 수 있습니다 `parallel_reduce` 약어가 사용에 대 한는 `parallel_for_each` 와 함께 알고리즘의 [concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) 클래스입니다.  
   
-###  <a name="map_reduce_example"></a>예: 매핑 및 줄이기 병렬로 수행  
+###  <a name="map_reduce_example"></a> 예: 매핑 및 줄이기 병렬로 수행  
 
  A *지도* 작업 시퀀스의 각 값에 함수를 적용 합니다. A *줄일* 작업 하나의 값으로 시퀀스의 요소를 결합 합니다. C + + 표준 라이브러리를 사용할 수 [std:: transform](../../standard-library/algorithm-functions.md#transform) 및 [std:: accumulate](../../standard-library/numeric-functions.md#accumulate) 매핑 수행 및 줄이기 작업을 하는 함수입니다. 그러나 많은 문제에 대해 `parallel_transform` 알고리즘을 사용하여 매핑 작업을 병렬로 수행하고, `parallel_reduce` 알고리즘을 사용하여 줄이기 작업을 병렬로 수행할 수 있습니다.  
 
@@ -204,7 +199,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="partitions"></a>분할 작업  
+##  <a name="partitions"></a> 분할 작업  
  데이터 원본에 대 한 작업을 병렬화 하는 필수 단계는 *파티션* 소스 여러 스레드에서 동시에 액세스할 수 있는 여러 구간으로 분할 합니다. 파티셔너는 병렬 알고리즘이 여러 스레드로 범위를 분할하는 방법을 지정합니다. 이 문서의 앞부분에서 설명한 바와 같이 PPL은 초기 작업 부하를 만든 다음 작업 부하가 분산되지 않은 경우 작업 가로채기 알고리즘과 범위 도용을 사용하여 이러한 파티션을 분산시키는 기본 분할 메커니즘을 사용합니다. 예를 들어, 하나의 루프 반복이 반복 범위를 마치면 런타임에서 스레드 간에 작업을 재배포합니다. 그러나 시나리오에 따라 문제에 더 적합한 다른 분할 메커니즘을 지정할 수 있습니다.  
   
  `parallel_for`, `parallel_for_each` 및 `parallel_transform` 알고리즘은 추가 매개 변수인 `_Partitioner`를 사용하는 오버로드된 버전을 제공합니다. 이 매개 변수는 작업을 나누는 파티셔너 형식을 정의합니다. 다음은 PPL이 정의하는 파티셔너 종류입니다.  
@@ -235,11 +230,11 @@ ms.lasthandoff: 12/21/2017
 > [!CAUTION]
 >  협조적 차단 기능으로 `static_partitioner` 또는 `affinity_partitioner`를 사용하는 기존 코드를 수정할 때 주의하십시오. 이러한 파티셔너 형식은 부하 분산이나 범위 도용을 사용하지 않으므로 응용 프로그램 동작을 변경할 수 있습니다.  
   
- 해당 시나리오에서 파티셔너를 사용할지 여부를 결정하려면 대표적인 부하 및 컴퓨터 구성에서 작업 완료에 걸리는 시간을 실제로 측정하는 것이 가장 좋습니다. 예를 들어 정적 분할 상당히 높일 수 있는 몇 가지 코어, 다중 코어 컴퓨터에 있지만 상대적으로 많은 코어를 포함 하는 컴퓨터에서 성능 저하를 발생할 수 있습니다.  
+ 해당 시나리오에서 파티셔너를 사용할지 여부를 결정하려면 대표적인 부하 및 컴퓨터 구성에서 작업 완료에 걸리는 시간을 실제로 측정하는 것이 가장 좋습니다. 예를 들어 정적 분할은 몇 개의 코어만 있는 멀티 코어 컴퓨터에서 상당한 속도 향상을 제공할 수 있지만, 비교적 많은 코어가 있는 컴퓨터에서는 속도 저하가 발생할 수 있습니다.  
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="parallel_sorting"></a>병렬 정렬  
+##  <a name="parallel_sorting"></a> 병렬 정렬  
 
  PPL은 세 가지 정렬 알고리즘을 제공: [concurrency:: parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort), [concurrency:: parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort), 및 [concurrency:: parallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort)합니다. 이러한 정렬 알고리즘은 병렬로 정렬의 효과를 볼 수 있는 데이터 집합이 있는 경우 유용합니다. 특히 병렬로 정렬은 큰 데이터 집합이 있거나 많은 계산이 필요한 비교 작업을 사용하여 데이터를 정렬할 때 유용합니다. 각 알고리즘은 요소를 정렬합니다.  
 
@@ -287,7 +282,7 @@ ms.lasthandoff: 12/21/2017
   
  해시 함수는 정수 계열 형식을 반환 해야 합니다 ([is_integral](../../standard-library/is-integral-class.md) 해야 `true`). 이 정수 계열 형식을 `size_t` 형식으로 변환할 수 있어야 합니다.  
   
-###  <a name="choose_sort"></a>정렬 알고리즘 선택  
+###  <a name="choose_sort"></a> 정렬 알고리즘 선택  
  대부분의 경우 `parallel_sort`는 적절한 속도와 메모리 성능을 제공합니다. 그러나 데이터 집합 크기, 사용 가능한 프로세서 수 또는 비교 함수의 복잡성을 늘리면 `parallel_buffered_sort` 또는 `parallel_radixsort` 성능이 향상될 수 있습니다. 주어진 시나리오에서 정렬 알고리즘을 사용할지 여부를 결정하려면 대표적인 컴퓨터 구성에서 일반적인 데이터를 정렬하는데 걸리는 시간을 실제로 측정하는 것이 가장 좋습니다. 정렬 전략을 선택할 때 다음 지침을 염두에 두십시오.  
   
 -   데이터 집합의 크기 이 문서에는 *작은* 1000 개 이상의 요소를 포함 하는 데이터 집합은 *중간* 10000에서 100000 요소 간의 데이터 집합에는 및 *큰* 데이터 집합에 포함 100, 000 개 이상의 요소입니다.  
@@ -302,7 +297,7 @@ ms.lasthandoff: 12/21/2017
   
  사용 가능한 컴퓨팅 리소스가 많거나 비교 함수나 해시 함수가 비교적 많은 양의 작업을 수행할 때도 작은 데이터 집합을 병렬로 정렬하는 것은 가치가 없습니다. 사용할 수 있습니다 [std:: sort](../../standard-library/algorithm-functions.md#sort) 작은 데이터 집합을 정렬 하는 함수입니다. 그러나 (`parallel_sort` 및 `parallel_buffered_sort` 호출 `sort` 데이터 집합 보다 큰 청크 크기를 지정 하는 경우 `parallel_buffered_sort` 잠금 경합이 나 메모리 할당으로 인해 시간이 더 소요 될 수 있습니다는 o (n) 공간을 할당 해야 합니다.)  
   
- 메모리를 보존해야 하거나 메모리 할당자가 잠금 경합을 따르는 경우 `parallel_sort`를 사용하여 중간 크기의 데이터 집합을 정렬하십시오. `parallel_sort`공간이 필요 하지 않으며 추가 합니다. 다른 알고리즘에는 o (n) 공간이 필요합니다.  
+ 메모리를 보존해야 하거나 메모리 할당자가 잠금 경합을 따르는 경우 `parallel_sort`를 사용하여 중간 크기의 데이터 집합을 정렬하십시오. `parallel_sort` 공간이 필요 하지 않으며 추가 합니다. 다른 알고리즘에는 o (n) 공간이 필요합니다.  
   
  사용 하 여 `parallel_buffered_sort` 중간 규모의 데이터 집합 및 응용 프로그램에서 추가 o (n) 공간이 요구를 충족 하는 경우를 정렬 합니다. `parallel_buffered_sort`는 많은 계산이 필요한 비교 함수 또는 해시 함수나 많은 컴퓨팅 리소스가 있을 경우 특히 유용합니다.  
   

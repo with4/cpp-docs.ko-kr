@@ -1,12 +1,9 @@
 ---
-title: "에이전트 클래스 | Microsoft Docs"
-ms.custom: 
+title: 에이전트 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - agent
@@ -26,17 +23,15 @@ dev_langs:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4617007525fdd924dce7b09f1d351c7c18cc96
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fbc8542af8073b2cb95517ea39d89258afac633c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="agent-class"></a>에이전트 클래스
 모든 독립 에이전트에 대한 기본 클래스로 사용되는 클래스입니다. 다른 에이전트로부터 상태를 숨기고 메시지 전달을 사용하여 상호 작용하는 데 사용됩니다.  
@@ -72,7 +67,7 @@ class agent;
   
 |이름|설명|  
 |----------|-----------------|  
-|[done](#done)|이동에 에이전트는 `agent_done` 에이전트가 완료 되었음을 나타내는 상태입니다.|  
+|[작업 수행](#done)|이동에 에이전트는 `agent_done` 에이전트가 완료 되었음을 나타내는 상태입니다.|  
 |[run](#run)|에이전트의 기본 작업을 나타냅니다. `run` 파생된 클래스에서 재정의 하 고 에이전트가 수행할 동작을 지정 합니다. 이미 시작 되었습니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -108,7 +103,7 @@ agent(ScheduleGroup& _PGroup);
 ### <a name="remarks"></a>설명  
  런타임에서 지정 하지 않을 경우 기본 스케줄러를 사용 하 여 `_PScheduler` 또는 `_PGroup` 매개 변수입니다.  
   
-##  <a name="dtor"></a> ~agent 
+##  <a name="dtor"></a> ~ 에이전트 
 
  에이전트를 제거합니다.  
   

@@ -1,12 +1,9 @@
 ---
-title: "IUMSUnblockNotification 구조체 | Microsoft Docs"
-ms.custom: 
+title: IUMSUnblockNotification 구조체 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IUMSUnblockNotification
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - IUMSUnblockNotification structure
 ms.assetid: eaca9529-c1cc-472b-8ec6-722a1ff0fa2a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9058b2f16532f99e1beea8133fd5187ac296920e
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: bda4f6e2b0565d39fd604767f3a89bcdd9a6df2c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iumsunblocknotification-structure"></a>IUMSUnblockNotification 구조체
 차단되었으며 스케줄러의 지정된 일정 컨텍스트로의 반환을 트리거한 스레드 프록시가 차단 해제되고 예약할 준비가 되었다는 리소스 관리자의 알림을 나타냅니다. `GetContext` 메서드에서 반환된 스레드 프록시의 연결된 실행 컨텍스트가 다시 예약된 후에는 이 인터페이스가 유효하지 않습니다.  

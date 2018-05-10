@@ -1,13 +1,10 @@
 ---
-title: "비동기 메시지 블록 | Microsoft Docs"
-ms.custom: 
+title: 비동기 메시지 블록 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - asynchronous message blocks
 - greedy join [Concurrency Runtime]
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97669589af295c681fa21d6faeb31ec01be37e51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5de4a9ed20e20c03f44f8b8d421a628f220099f7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="asynchronous-message-blocks"></a>비동기 메시지 블록
 
@@ -60,14 +55,14 @@ ms.lasthandoff: 12/21/2017
   
 - [메시지 예약](#reservation)  
   
-##  <a name="sources_and_targets"></a>소스 및 대상  
+##  <a name="sources_and_targets"></a> 소스 및 대상  
  소스 및 대상 메시지 전달에 중요 한 두 참가자가 됩니다. A *소스* 은 메시지를 보내는 통신의 끝점을 나타냅니다. A *대상* 은 메시지를 수신 하는 통신의 끝점을 나타냅니다. 읽을 수 있는 끝점으로 원본과 대상에 작성 하는 끝점으로 생각할 수 있습니다. 응용 프로그램 폼에 소스 및 대상 함께 연결 *메시징 네트워크*합니다.  
   
  에이전트 라이브러리는 두 가지 추상 클래스를 사용 하 여 원본 및 대상을 나타내는: [concurrency:: isource](../../parallel/concrt/reference/isource-class.md) 및 [concurrency:: itarget](../../parallel/concrt/reference/itarget-class.md)합니다. 메시지 블록 형식은 형식을 작동 하는 원본에서 파생 `ISource`; 메시지 블록 형식은 형식을 작동 하는 대상에서 파생 `ITarget`합니다. 메시지 블록 원본으로 작동 하는 형식 및 대상 모두에서 파생 `ISource` 및 `ITarget`합니다.  
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="propagation"></a>메시지 전파  
+##  <a name="propagation"></a> 메시지 전파  
  *메시지 전파* 다른 하나의 구성 요소에서 메시지를 전송 하는 행위입니다. 메시지 블록은 제공 된 경우 적용을 거부 하거나 해당 메시지를 연기할 수 것 합니다. 모든 메시지 블록 형식은 저장 하 고 다른 방법으로 메시지를 전송 합니다. 예를 들어는 `unbounded_buffer` 클래스는 메시지를 개수에 제한 없이 저장 된 `overwrite_buffer` 한 번에 하나의 메시지를 저장 하는 클래스 및 transformer 클래스는 각 메시지의 변경된 된 버전을 저장 합니다. 이러한 메시지 블록 형식은이 문서의 뒷부분에 자세히 설명 되어 있습니다.  
   
  메시지 블록에서 메시지를 수락 하는 경우 수 필요에 따라 작업을 수행 하 고, 메시지 블록 소스, 결과 메시지는 네트워크의 다른 멤버에 전달 합니다. 메시지 블록 필터 함수를 사용 하 여 메시지를 수신 하지 않을 것을 거부 하 수 있습니다. 필터 섹션에이 항목의 뒷부분에 자세히 설명 되어 [메시지 필터링](#filtering)합니다. 메시지 블록 메시지를 연기 하는 해당 메시지를 예약 하 고 나중에 사용할 수 있습니다. 메시지 예약 섹션에서이 항목의 뒷부분에 자세히 설명 되어 [메시지 예약](#reservation)합니다.  
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="overview"></a>메시지 블록 형식 개요  
+##  <a name="overview"></a> 메시지 블록 형식 개요  
  다음 표에서 중요 한 메시지 블록 형식은의 역할을 간략하게 설명합니다.  
   
  [unbounded_buffer](#unbounded_buffer)  
@@ -91,19 +86,19 @@ ms.lasthandoff: 12/21/2017
  [single_assignment](#single_assignment)  
  한 번에 기록 하 고 여러 번에서 읽을 수 있는 하나의 메시지를 저장 합니다.  
   
- [호출](#call)  
+ [call](#call)  
  메시지를 받을 경우 작업을 수행 합니다.  
   
  [transformer](#transformer)  
  데이터를 수신 하 고 다른 대상 블록에 해당 작업의 결과 보내는 경우 작업을 수행 합니다. `transformer` 클래스는 서로 다른 입력 및 출력 형식에서 작동할 수 있습니다.  
   
- [선택](#choice)  
+ [choice](#choice)  
  소스 집합에서 가능한 첫 번째 메시지를 선택합니다.  
   
  [조인 및 다중 조인](#join)  
  모든 메시지를 다른 메시지 블록에 대 한 하나의 메시지에 메시지를 결합 한 다음 소스 집합에서 받을 수를 기다립니다.  
   
- [타이머](#timer)  
+ [timer](#timer)  
  일정 한 간격으로 대상 블록에 메시지를 보냅니다.  
   
  이러한 메시지 블록 형식을 다양 한 상황에 유용 하 게 하는 다른 특징을 갖습니다. 다음은 일부의 특성입니다.  
@@ -134,10 +129,10 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="unbounded_buffer"></a>unbounded_buffer 클래스  
+##  <a name="unbounded_buffer"></a> unbounded_buffer 클래스  
  [concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) 클래스는 일반적인 용도의 비동기 메시징 구조를 나타냅니다. 이 클래스는 여러 소스가 기록하거나 여러 대상이 읽을 수 있는 메시지의 FIFO(선입 선출) 큐를 저장합니다. 대상에서 메시지를 받을 때는 `unbounded_buffer` 개체를 해당 메시지가 메시지 큐에서 제거 됩니다. 따라서 있지만 `unbounded_buffer` 개체에는 여러 대상이 있을 수 있습니다, 하나의 대상만 각 메시지를 수신 합니다. `unbounded_buffer` 클래스는 여러 메시지를 다른 구성 요소에 전달하려고 할 때 유용하고 해당 구성 요소는 각 메시지를 수신해야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 작업을 하는 방법의 기본 구조는 `unbounded_buffer` 클래스입니다. 이 예제에서는 세 가지 값을 보냅니다는 `unbounded_buffer` 개체와 동일한 개체에서 다시 다음 해당 값을 읽습니다.  
   
  [!code-cpp[concrt-unbounded_buffer-structure#1](../../parallel/concrt/codesnippet/cpp/asynchronous-message-blocks_1.cpp)]  
@@ -152,12 +147,12 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="overwrite_buffer"></a>overwrite_buffer 클래스  
+##  <a name="overwrite_buffer"></a> overwrite_buffer 클래스  
  [concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) 클래스와 유사는 `unbounded_buffer` 점을 제외 하 고 클래스는 `overwrite_buffer` 하나의 메시지를 저장 하는 개체입니다. 대상에서 메시지를 받을 때 또한는 `overwrite_buffer` 개체를 버퍼에서 해당 메시지가 제거 되지 않습니다. 따라서 여러 대상이 하나의 메시지 복사본을 수신합니다.  
   
  `overwrite_buffer` 클래스는 다른 구성 요소에 여러 메시지를 전달 하려고 하지만 해당 구성 요소에 최신 값만 필요한 경우 유용 합니다. 이 클래스는 여러 구성 요소에 메시지를 브로드캐스트하려고 할 때도 유용합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 작업을 하는 방법의 기본 구조는 `overwrite_buffer` 클래스입니다. 이 예제에서는 세 가지 값을 보냅니다는 `overwrite _buffer` 개체를 다음 동일한 개체에서 현재 값을 세 번 읽습니다. 이 예제는에 대 한 예제와 비슷한는 `unbounded_buffer` 클래스입니다. 그러나는 `overwrite_buffer` 클래스 하나만 메시지를 저장 합니다. 또한 런타임에서 메시지를 제거 하지 않습니다는 `overwrite_buffer` 를 읽은 다음 개체입니다.  
   
  [!code-cpp[concrt-overwrite_buffer-structure#1](../../parallel/concrt/codesnippet/cpp/asynchronous-message-blocks_2.cpp)]  
@@ -172,10 +167,10 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="single_assignment"></a>single_assignment 클래스  
+##  <a name="single_assignment"></a> single_assignment 클래스  
  [concurrency:: single_assignment](../../parallel/concrt/reference/single-assignment-class.md) 클래스와 유사는 `overwrite_buffer` 점을 제외 하 고 클래스는 `single_assignment` 개체에 한 번만 쓸 수 있습니다. `overwrite_buffer` 클래스처럼 대상이 `single_assignment` 개체에서 메시지를 수신할 때 해당 메시지는 해당 개체에서 제거되지 않습니다. 따라서 여러 대상이 하나의 메시지 복사본을 수신합니다. `single_assignment` 클래스는 여러 구성 요소에 하나의 메시지를 브로드캐스트 하려고 할 때 유용 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 작업을 하는 방법의 기본 구조는 `single_assignment` 클래스입니다. 이 예제에서는 세 가지 값을 보냅니다는 `single_assignment` 개체를 다음 동일한 개체에서 현재 값을 세 번 읽습니다. 이 예제는에 대 한 예제와 비슷한는 `overwrite_buffer` 클래스입니다. 하지만 둘 다는 `overwrite_buffer` 및 `single_assignment` 클래스 단일 메시지를 저장는 `single_assignment` 클래스에 한 번만 쓸 수 있습니다.  
   
  [!code-cpp[concrt-single_assignment-structure#1](../../parallel/concrt/codesnippet/cpp/asynchronous-message-blocks_3.cpp)]  
@@ -190,10 +185,10 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="call"></a>call 클래스  
+##  <a name="call"></a> call 클래스  
  [concurrency:: call](../../parallel/concrt/reference/call-class.md) 클래스의 데이터를 받을 경우 작업 함수에서 수행 하는 메시지 받는 사람 역할입니다. 이 작업 함수는 람다 식, 함수 개체 또는 함수 포인터 수 있습니다. A `call` 개체에 메시지를 보낼 수 있는 다른 구성 요소에 병렬로 작동 하기 때문에 일반 함수 호출 다르게 동작 합니다. 경우는 `call` 개체는 메시지를 받을 때 작업을 수행 중인, 해당 메시지를 큐에 추가 합니다. 모든 `call` 대기 중인 메시지는 수신 된 순서 개체 처리 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 작업을 하는 방법의 기본 구조는 `call` 클래스입니다. 이 예제에서는 만듭니다는 `call` 콘솔에 수신 하는 각 값을 출력 하는 개체입니다. 예제에서는 다음 세 가지 값을 전달 하는 `call` 개체입니다. 때문에 `call` 별도 스레드에서 메시지를 처리 하는 개체, 또한이 예제에서는 카운터 변수 및 [이벤트](../../parallel/concrt/reference/event-class.md) 충족 되도록 하는 개체는 `call` 하기 전에 모든 메시지를 처리 하는 개체는 `wmain` 함수 반환합니다.  
   
  [!code-cpp[concrt-call-structure#1](../../parallel/concrt/codesnippet/cpp/asynchronous-message-blocks_4.cpp)]  
@@ -208,14 +203,14 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="transformer"></a>transformer 클래스  
+##  <a name="transformer"></a> transformer 클래스  
  [concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md) 클래스 역할 모두 메시지 받는 사람 및 메시지 보낸 사람으로 합니다. `transformer` 클래스와 유사는 `call` 데이터를 받을 때 사용자 지정 작업 함수를 수행 하기 때문에 클래스입니다. 그러나는 `transformer` 클래스 수신기 개체에도 작업 함수의 결과 보냅니다. 마찬가지로 `call` 개체는 `transformer` 개체는 메시지를 보내는 다른 구성 요소에 병렬로 역할입니다. 경우는 `transformer` 개체는 메시지를 받을 때 작업을 수행 중인, 해당 메시지를 큐에 추가 합니다. 모든 `transformer` 개체는 수신 된 순서에 해당 큐에 대기 중인된 메시지를 처리 합니다.  
   
  `transformer` 클래스를 하나의 대상에는 메시지를 보냅니다. 설정 하는 경우는 `_PTarget` 생성자의 매개 변수 `NULL`를 호출 하 여 대상 나중에 지정할 수 있습니다는 [concurrency::link_target](reference/source-block-class.md#link_target) 메서드.  
   
  에이전트 라이브러리에서 제공 되는 다른 모든 비동기 메시지 블록 종류와 달리는 `transformer` 클래스는 서로 다른 입력 및 출력 형식에서 작동할 수 있습니다. 이 기능을 위해 다른 한 형식에서 데이터를 변환의 `transformer` 많은 동시 네트워크의 핵심 구성 요소 클래스입니다. 작업 함수에 더 세분화 된 병렬 기능을 추가할 수는 또한는 `transformer` 개체입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 작업을 하는 방법의 기본 구조는 `transformer` 클래스입니다. 이 예제에서는 만듭니다는 `transformer` 배수는 각 입력을 하는 개체 `int` 값을 생성 하기 위해 0.33으로는 `double` 출력으로 값입니다. 그런 다음 예제에서는 동일한는 변환 된 값을 받습니다 `transformer` 개체는 콘솔에 출력 합니다.  
   
  [!code-cpp[concrt-transformer-structure#1](../../parallel/concrt/codesnippet/cpp/asynchronous-message-blocks_5.cpp)]  
@@ -230,7 +225,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="choice"></a>choice 클래스  
+##  <a name="choice"></a> choice 클래스  
  [concurrency:: choice](../../parallel/concrt/reference/choice-class.md) 클래스 원본 집합에서 가능한 첫 번째 메시지를 선택 합니다. `choice` 클래스는 데이터 흐름 메커니즘 대신 흐름 제어 메커니즘을 나타냅니다 (항목 [비동기 에이전트 라이브러리](../../parallel/concrt/asynchronous-agents-library.md) 데이터 흐름 및 제어 흐름 간의 차이점을 설명).  
   
  선택한 개체에서 읽는 유사한 Windows API 함수를 호출 `WaitForMultipleObjects` 할당 했을 때의 `bWaitAll` 매개 변수 설정 `FALSE`합니다. 그러나는 `choice` 클래스에서 이벤트 자체 대신 외부 동기화 개체를 데이터 바인딩합니다.  
@@ -241,7 +236,7 @@ ms.lasthandoff: 12/21/2017
   
  소스를 연결 하는 순서는 `choice` 개체는 어떤 메시지 선택 결정할 수 없기 때문에 중요 합니다. 예를 들어 메시지를 이미 포함 하는 여러 메시지 버퍼를 연결 하는 경우는 `choice` 개체입니다. `choice` 개체에 연결 된 첫 번째 소스에서 메시지를 선택 합니다. 모든 원본에 연결한 후의 `choice` 각 원본 메시지를 수신 하는 순서를 유지 하는 개체입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 
  다음 예제에서는 작업을 하는 방법의 기본 구조는 `choice` 클래스입니다. 사용 하 여이 예제는 [concurrency::make_choice](reference/concurrency-namespace-functions.md#make_choice) 만들기 함수를 한 `choice` 메시지 블록도 3 개 중 하나를 선택 하는 개체입니다. 그런 다음 여러 피보나치 수를 계산 하 고 다른 메시지 블록의 각 결과 저장 합니다. 이 예제에서는 다음 출력 콘솔 먼저 완료 한 작업을 기반으로 하는 메시지입니다.  
 
@@ -263,7 +258,7 @@ fib35 received its value first. Result = 9227465
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="join"></a>조인 및 multitype_join 클래스  
+##  <a name="join"></a> 조인 및 multitype_join 클래스  
  [concurrency:: join](../../parallel/concrt/reference/join-class.md) 및 [concurrency::multitype_join](../../parallel/concrt/reference/multitype-join-class.md) 클래스 메시지를 받으려면 소스 집합의 각 멤버에 대해 대기할 수 있습니다. `join` 일반적인 메시지 유형이 있는 소스 개체에서 클래스 동작 합니다. `multitype_join` 서로 다른 메시지 형식을 가질 수 있는 소스 개체에서 클래스 동작 합니다.  
   
  읽기는 `join` 또는 `multitype_join` 개체 유사한 Windows API 함수를 호출 `WaitForMultipleObjects` 할당 했을 때의 `bWaitAll` 매개 변수 설정 `TRUE`합니다. 그러나 마찬가지로 `choice` 개체 `join` 및 `multitype_join` 이벤트 자체 대신 외부 동기화 개체를 데이터에 바인딩하는 이벤트 메커니즘을 사용 하는 개체입니다.  
@@ -275,7 +270,7 @@ fib35 received its value first. Result = 9227465
   
  Greedy 조인 메시지를 즉시 수락 하기 때문에 non-greedy 조인 보다 더 잘 수행 합니다. 그러나 드문 경우 지만 greedy 조인 하면 교착 상태가 발생할 수도 있습니다. Non-greedy 조인을 사용 하 여 하나 이상의 공유 소스 개체를 포함 하는 여러 조인이 있는 경우.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 
  다음 예제에서는 작업을 하는 방법의 기본 구조는 `join` 클래스입니다. 사용 하 여이 예제는 [concurrency::make_join](reference/concurrency-namespace-functions.md#make_join) 함수를 만드는 `join` 3 개에서 수신 하는 개체 `single_assignment` 개체입니다. 이 예제에서는 여러 피보나치 수를 계산 합니다., 각 결과 다른 저장 `single_assignment` 개체 및를 각 콘솔에 다음 출력 하는 결과 `join` 개체에 포함 합니다. 이 예제는에 대 한 예제와 비슷한는 `choice` 점을 제외 하 고 클래스는 `join` 클래스 모든 소스 메시지 블록 메시지를 받을 때까지 대기 합니다.  
   
@@ -293,7 +288,7 @@ fib35 = 9227465fib37 = 24157817half_of_fib42 = 1.33957e+008
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="timer"></a>timer 클래스  
+##  <a name="timer"></a> timer 클래스  
  동시성::[timer 클래스](../../parallel/concrt/reference/timer-class.md) 메시지 소스 역할을 합니다. A `timer` 개체 시간이 경과한 후 대상에 메시지를 보냅니다. `timer` 클래스는 메시지를 보내는 연기 해야 하거나 정기적으로 메시지를 전송 하려는 경우 유용 합니다.  
   
 
@@ -304,7 +299,7 @@ fib35 = 9227465fib37 = 24157817half_of_fib42 = 1.33957e+008
   
  에이전트 라이브러리 만듭니다 `timer` 시작 되지 않은 상태에 있는 개체입니다. 타이머 개체를 시작 하려면 호출는 [concurrency::timer::start](reference/timer-class.md#start) 메서드. 중지 한 `timer` 개체, 개체 또는 호출 삭제는 [concurrency::timer::stop](reference/timer-class.md#stop) 메서드. 반복 되는 타이머를 일시 중지, 호출 된 [concurrency::timer::pause](reference/timer-class.md#pause) 메서드.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 작업을 하는 방법의 기본 구조는 `timer` 클래스입니다. 이 예에서는 사용 `timer` 및 `call` 긴 작업의 진행률을 보고할 개체입니다.  
   
  [!code-cpp[concrt-timer-structure#1](../../parallel/concrt/codesnippet/cpp/asynchronous-message-blocks_8.cpp)]  
@@ -319,7 +314,7 @@ Computing fib(42)..................................................result is 267
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="filtering"></a>메시지 필터링  
+##  <a name="filtering"></a> 메시지 필터링  
  메시지 블록 개체를 만들 때 제공할 수 있습니다는 *filter 함수* 결정 하는 메시지 블록 허용 여부는 메시지를 거부 합니다. 필터 함수에 메시지 블록에 특정 값만 수신 되는지 보장 하는 유용한 방법은입니다.  
   
  만드는 방법을 보여 주는 다음 예제는 `unbounded_buffer` 짝수만 허용 하도록 필터 함수를 사용 하는 개체입니다. `unbounded_buffer` 개체 홀수 번호를 거부 하 고 홀수 번호는 대상 블록에 전파 하지 않습니다.  
@@ -345,7 +340,7 @@ bool (T const &)
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="reservation"></a>메시지 예약  
+##  <a name="reservation"></a> 메시지 예약  
  *예약은 메시지* 나중에 사용에 대 한 메시지를 예약 하 고 메시지 블록을 사용 하도록 설정 합니다. 일반적으로 메시지 예약 직접 사용 되지 않습니다. 그러나 이해 메시지 예약 데 도움이 됩니다는 미리 정의 된 메시지 블록 형식 중 일부의 동작을 이해 합니다.  
   
  식별 및 greedy 조인을 것이 좋습니다. 메시지 예약을 사용 하 여 나중에 사용에 대 한 메시지를 예약 하 고 둘 다에 해당 합니다. 설명자 이전에 non-greedy 조인 메시지 수신 이라는 두 단계로 진행에서 합니다. 첫 번째 단계, non-greedy `join` 개체가 각 메시지를 소스에 대 한 대기 합니다. Non-greedy 조인 각 메시지를 예약 하려고 합니다. 각 메시지를 예약할 수 있는 모든 메시지를 사용 하 고 대상에 전파 합니다. 그렇지 않으면, 해제, 또는 메시지 예약을 취소를 다시 각 원본 메시지를 받을 때까지 대기 합니다.  

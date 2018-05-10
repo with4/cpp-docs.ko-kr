@@ -1,13 +1,10 @@
 ---
-title: "기호 또는 기호 이름 (ID) 변경 | Microsoft Docs"
-ms.custom: 
+title: 기호 또는 기호 이름 (ID) 변경 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.changing
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - symbol names
 - symbols, names
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b0ed56fc3663b99af311c52e463bd2f16fcef0a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28d31fc27fdc51a3a5b05dba96ab9decf4fc7e00
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="changing-a-symbol-or-symbol-name-id"></a>기호 또는 기호 이름(ID) 변경
 새 리소스 또는 리소스 개체를 만들 때 개발 환경에서 IDD_DIALOG1과 같은 기본 기호 이름을 할당합니다. 사용할 수는 [속성 창](/visualstudio/ide/reference/properties-window) 를 기본 기호 이름을 변경 하거나 이미 리소스와 연결 된 기호의 이름을 변경할 수 있습니다.  

@@ -1,13 +1,10 @@
 ---
-title: "다중 스레드 Win32 프로그램 작성 | Microsoft Docs"
-ms.custom: 
+title: 다중 스레드 Win32 프로그램 작성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,22 +20,20 @@ helpviewer_keywords:
 - mutex [C++]
 - threading [C++], thread stacks
 ms.assetid: 1415f47d-417f-4f42-949b-946fb28aab0e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ede0e6dc1740f93f4905dc69b1927aee0d1a7ff
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2d88add7830316ae192a728f9c9ff10320657eaf
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="writing-a-multithreaded-win32-program"></a>다중 스레드 Win32 프로그램 작성
 여러 스레드를 사용 하 여 프로그램을 작성 하는 경우의 동작을 조정 해야 하 고 [프로그램의 리소스 사용](#_core_sharing_common_resources_between_threads)합니다. 각 스레드에 있는지 확인 해야 [스레드 스택](#_core_thread_stacks)합니다.  
   
-##  <a name="_core_sharing_common_resources_between_threads"></a>스레드 간 공용 리소스 공유  
+##  <a name="_core_sharing_common_resources_between_threads"></a> 스레드 간 공용 리소스 공유  
   
 > [!NOTE]
 >  MFC의 관점에서 비슷한 논의 알려면 [다중 스레딩: 프로그래밍 팁](../parallel/multithreading-programming-tips.md) 및 [다중 스레딩: 동기화 클래스를 사용 하는 경우](../parallel/multithreading-when-to-use-the-synchronization-classes.md)합니다.  
@@ -62,7 +57,7 @@ fwrite( data, sizeof( data ), 1, fp );
 ReleaseMutex( hIOMutex);  
 ```  
   
-##  <a name="_core_thread_stacks"></a>스레드 스택  
+##  <a name="_core_thread_stacks"></a> 스레드 스택  
  응용 프로그램의 기본 스택 공간은 모두 스레드 1 이라고 하는 실행의 첫 번째 스레드가 할당 됩니다. 결과적으로, 프로그램 추가 각 스레드에 대 한 별도 스택에 할당할 메모리 양이 필요한 지정 해야 합니다. 필요한 경우 운영 체제는 스레드에 대 한 추가 스택 공간을 할당 하지만 기본값을 지정 해야 합니다.  
   
  첫 번째 인수는 `_beginthread` 호출에 대 한 포인터는는 **BounceProc** 스레드를 실행 하는 함수입니다. 두 번째 인수는 스레드에 대 한 기본 스택 크기를 지정합니다. 마지막 인수에 전달 되는 ID 번호는 **BounceProc**합니다. **BounceProc** ID 번호를 사용 하 여 난수 생성기 초기값으로 사용할 스레드의 color 특성을 선택 하 고 문자 표시를 합니다.  

@@ -1,13 +1,10 @@
 ---
-title: "외부 수준 선언에 대한 저장소 클래스 지정자 | Microsoft Docs"
-ms.custom: 
+title: 외부 수준 선언에 대한 저장소 클래스 지정자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - visibility, variables
 - static storage class specifiers
 ms.assetid: b76b623a-80ec-4d5d-859b-6cef422657ee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3764eb29cc46ec7b6159456131dde1024b187f61
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cfdae4791b89ffd78661a983fdc8c1beec77edea
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>외부 수준 선언에 대한 저장소 클래스 지정자
 외부 변수는 파일 범위의 변수이며, 함수 외부에서 정의되고 잠재적으로 많은 함수에서 사용될 수 있습니다. 함수는 외부 수준에서만 정의될 수 있으므로 중첩될 수 없습니다. 기본적으로 이름이 같은 외부 변수와 함수에 대한 모든 참조는 같은 개체에 대한 참조이며, 이는 "외부 링크"를 갖고 있다는 의미입니다. **static** 키워드를 사용하여 이를 재정의할 수 있습니다. **static**에 대한 자세한 내용은 이 섹션 뒤에 나오는 정보를 참조하세요.  

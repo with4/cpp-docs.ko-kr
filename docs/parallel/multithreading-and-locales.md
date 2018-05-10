@@ -1,13 +1,10 @@
 ---
-title: "다중 스레딩 및 로캘 | Microsoft Docs"
-ms.custom: 
+title: 다중 스레딩 및 로캘 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - threading [C++], locales
 - per-thread locale
 ms.assetid: d6fb159a-eaca-4130-a51a-f95d62f71485
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e60235bb011cb130b06a51a498cd8b5b88a56232
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 19cc3817faab71c209586ad952162229f846e0a7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-and-locales"></a>다중 스레딩 및 로캘
 C 런타임 라이브러리와 c + + 표준 라이브러리는 프로그램의 로캘 변경을 대 한 지원을 제공 합니다. 이 항목에서는 다중 스레드 응용 프로그램에서 두 라이브러리의 로캘 기능을 사용 하는 경우 발생 하는 문제를 설명 합니다.  
@@ -43,7 +38,7 @@ C 런타임 라이브러리와 c + + 표준 라이브러리는 프로그램의 �
   
  다음 예제를 사용 하는 방법을 보여 줍니다는 [setlocale](../preprocessor/setlocale.md) 함수는 [locale 클래스](../standard-library/locale-class.md), 및 [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) 함수에서 응용 프로그램의 로캘을 변경 하려면 몇 가지 다른 시나리오입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 주 스레드는 두 개의 하위 스레드를 생성 합니다. 첫 번째 스레드가 스레드 A 스레드별 로캘 호출 하 여 사용 하도록 설정 `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`합니다. 두 번째 스레드가, 스레드 B 뿐 아니라 주 스레드 로컬을 사용 하지 마십시오. 그런 다음 A를 사용 하 여 로캘 변경 스레드에서 [setlocale](../preprocessor/setlocale.md) C 런타임 라이브러리의 기능입니다.  
   
  이후 스레드 A는 스레드 단위 로캘을 사용 하 고, "프랑스어" 로캘을 사용 하 여 스레드 A 시작에서 C 런타임 라이브러리 함수에만 합니다. 주 스레드 및 스레드 B에서 C 런타임 라이브러리 함수는 "C" 로캘에서 사용 하 여 계속 합니다. 또한 [setlocale](../preprocessor/setlocale.md) 개체는 계속 "C" 로캘에서 사용 하는 모든 c + + 표준 라이브러리는 c + + 표준 라이브러리 로캘의 영향을 주지 않습니다.  
@@ -141,7 +136,7 @@ unsigned __stdcall RunThreadB(void *params)
 [Thread main] locale::global is set to "C"  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 주 스레드는 두 개의 하위 스레드를 생성 합니다. 첫 번째 스레드가 스레드 A 스레드별 로캘 호출 하 여 사용 하도록 설정 `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`합니다. 두 번째 스레드가, 스레드 B 뿐 아니라 주 스레드 로컬을 사용 하지 마십시오. 그런 다음 A를 사용 하 여 로캘 변경 스레드에서 [locale:: global](../standard-library/locale-class.md#global) c + + 표준 라이브러리의 메서드.  
   
  이후 스레드 A는 스레드 단위 로캘을 사용 하 고, "프랑스어" 로캘을 사용 하 여 스레드 A 시작에서 C 런타임 라이브러리 함수에만 합니다. 주 스레드 및 스레드 B에서 C 런타임 라이브러리 함수는 "C" 로캘에서 사용 하 여 계속 합니다. 그러나 이후에 [locale:: global](../standard-library/locale-class.md#global) 메서드는 "전역"은 로컬 변경, 모든 스레드에서 모든 c + + 표준 라이브러리 개체 "프랑스" 로캘을 사용 하 여 시작 합니다.  
@@ -239,7 +234,7 @@ unsigned __stdcall RunThreadB(void *params)
 [Thread main] locale::global is set to "French_France.1252"  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 주 스레드는 두 개의 하위 스레드를 생성 합니다. 첫 번째 스레드가 스레드 A 스레드별 로캘 호출 하 여 사용 하도록 설정 `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`합니다. 두 번째 스레드가, 스레드 B 뿐 아니라 주 스레드 로컬을 사용 하지 마십시오. 그런 다음 B 스레드에서 사용 하 여 로캘을 변경할 수는 [setlocale](../preprocessor/setlocale.md) C 런타임 라이브러리의 기능입니다.  
   
  스레드 B 스레드 단위 로캘을 사용할 수 없으므로 주 스레드 및 스레드 B에서 C 런타임 라이브러리 함수는 "프랑스" 로캘을 사용 하 여 시작 합니다. C 런타임 라이브러리 스레드 A는 스레드 단위 로캘을 사용 하기 때문에 "C" 로캘에서 사용 하는 스레드 계속 작동 합니다. 또한 [setlocale](../preprocessor/setlocale.md) 개체는 계속 "C" 로캘에서 사용 하는 모든 c + + 표준 라이브러리는 c + + 표준 라이브러리 로캘의 영향을 주지 않습니다.  
@@ -341,7 +336,7 @@ unsigned __stdcall RunThreadB(void *params)
 [Thread main] locale::global is set to "C"  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 주 스레드는 두 개의 하위 스레드를 생성 합니다. 첫 번째 스레드가 스레드 A 스레드별 로캘 호출 하 여 사용 하도록 설정 `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`합니다. 두 번째 스레드가, 스레드 B 뿐 아니라 주 스레드 로컬을 사용 하지 마십시오. 그런 다음 B 스레드에서 사용 하 여 로캘을 변경할 수는 [locale:: global](../standard-library/locale-class.md#global) c + + 표준 라이브러리의 메서드.  
   
  스레드 B 스레드 단위 로캘을 사용할 수 없으므로 주 스레드 및 스레드 B에서 C 런타임 라이브러리 함수는 "프랑스" 로캘을 사용 하 여 시작 합니다. C 런타임 라이브러리 스레드 A는 스레드 단위 로캘을 사용 하기 때문에 "C" 로캘에서 사용 하는 스레드 계속 작동 합니다. 그러나 이후에 [locale:: global](../standard-library/locale-class.md#global) 메서드는 "전역"은 로컬 변경, 모든 스레드에서 모든 c + + 표준 라이브러리 개체 "프랑스" 로캘을 사용 하 여 시작 합니다.  

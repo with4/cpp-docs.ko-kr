@@ -1,27 +1,22 @@
 ---
-title: "D. 일정 절을 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: D. 일정 절을 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: bf3d8f51-ea05-4803-bf55-657c12e91efe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b51eeb36a4cffafde0e90586fec08d28b9672e5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8987c4505adfde8534d57346cd6725231efa022f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="d-using-the-schedule-clause"></a>D. 일정 절 사용
 병렬 영역의 끝에 하나 이상의 장벽 있으며 추가적인 문제 그 안에 있을 수 있습니다. 각 장벽에는 팀의 다른 멤버 도착 하는 마지막 스레드가 기다려야 합니다. 이 대기 시간을 최소화 하려면 공유 작업을 동시에 대 한 장벽에 도착 하는 모든 스레드가 배포 되어야 합니다. 작업에 포함 되어 있으면 공유 중 일부를 **에 대 한** 구문을 `schedule` 절이 용도로 사용할 수 있습니다.  
@@ -84,7 +79,7 @@ for(i=0; i<n; i++) {
 }  
 ```  
   
- 마찬가지로 **동적**, **단계별** 스레드가 다른 스레드에서 해당 최종 반복 실행 하는 것 보다 더 길거나 최종 장벽에 대기 하는 보증 예약 *k* 반복 하는 경우의 청크 크기 *k* 지정 됩니다. 이러한 일정 중에서 **단계별** 일정의 특징은 속성 수가 가장 적은 동기화 필요 하다는 것입니다. 청크 크기에 대 한 *k*, 일반적인 구현에서 할당 *q ceiling(n/p) =* 반복이 첫 번째 사용 가능한 스레드를 설정  *n*  더 큰 숫자를 의*n q* 및 *p\*k*, 모든 반복에 할당 된 때까지 반복 합니다.  
+ 마찬가지로 **동적**, **단계별** 스레드가 다른 스레드에서 해당 최종 반복 실행 하는 것 보다 더 길거나 최종 장벽에 대기 하는 보증 예약 *k* 반복 하는 경우의 청크 크기 *k* 지정 됩니다. 이러한 일정 중에서 **단계별** 일정의 특징은 속성 수가 가장 적은 동기화 필요 하다는 것입니다. 청크 크기에 대 한 *k*, 일반적인 구현에서 할당 *q ceiling(n/p) =* 반복이 첫 번째 사용 가능한 스레드를 설정 *n* 더 큰 숫자를 *n-q* 및 *p\*k*, 모든 반복에 할당 된 때까지 반복 합니다.  
   
  최적 일정의 선택이 이러한 예는 달리 명확 하 게 하는 경우는 **런타임** 일정 작업할 수 있도록 각기 다른 일정과 청크 크기를 수정 하 고 프로그램을 다시 컴파일할 필요 없이 편리한 기능입니다. 또한 유용 때 프로그램 적용 되는 입력된 데이터에 최적 일정 (일부 예측 가능한 방식)에 따라 달라 집니다.  
   

@@ -1,12 +1,9 @@
 ---
-title: "감소 | Microsoft Docs"
-ms.custom: 
+title: 감소 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - reduction
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - reduction OpenMP clause
 ms.assetid: a2b051af-5a1b-4c00-9cc7-692bb43653fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f43ae9afac7bdbabe12b7532e2bbc7005fe59a0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e20ae1ad9c549aed176d26667d9bdc62a32b8dc7
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="reduction"></a>reduction
 각 스레드에 private 되는 하나 이상의 변수에 병렬 영역 끝날 때 감소 작업의 제목을 지정 합니다.  
@@ -52,11 +47,11 @@ reduction(operation:var)
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [섹션](../../../parallel/openmp/reference/sections-openmp.md)  
   
  자세한 내용은 참조 [2.7.2.6 감소](../../../parallel/openmp/2-7-2-6-reduction.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // omp_reduction.cpp  

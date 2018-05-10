@@ -1,12 +1,9 @@
 ---
-title: "전처리기 연산자 | Microsoft Docs"
-ms.custom: 
+title: 전처리기 연산자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - preprocessor operators
 - operators [C++], preprocessor
 ms.assetid: 884126d1-0ce2-48b6-9e06-8a2d7c4a9656
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 551b2c3ba8a5055fc6b6dfd1b94c461c37e72209
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: da6ff2a87007892cb5a76e7fc003e1d172056fb0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="preprocessor-operators"></a>전처리 연산자
 네 가지 전처리기 관련 연산자가의 컨텍스트에서 사용 되는 `#define` 지시문 (각각에 대 한 요약에 대 한 다음 목록 참조). 문자열 화, charizing, 및 토큰 붙여넣기 연산자는 다음 3 개의 섹션에 설명 되어 있습니다. 에 대 한 내용은 **정의** 연산자 참조 [#if, #elif, #else, 및 #endif 지시문](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)합니다.  

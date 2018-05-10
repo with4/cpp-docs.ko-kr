@@ -1,12 +1,9 @@
 ---
-title: "propagator_block 클래스 | Microsoft Docs"
-ms.custom: 
+title: propagator_block 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - propagator_block
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - propagator_block class
 ms.assetid: 86aa75fd-eda5-42aa-aadf-25c0c1c9742d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ff6e543702fc366e72f1473f0f70608a1daabc6
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: eb908bf108bb3ddff375506225b9be97b2898ca5
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="propagatorblock-class"></a>propagator_block 클래스
 `propagator_block` 클래스는 소스인 동시에 대상인 메시지 블록에 대한 추상 기본 클래스입니다. `source_block` 및 `target_block` 클래스의 기능을 결합합니다.  
@@ -76,7 +71,7 @@ class propagator_block : public source_block<_TargetLinkRegistry,
 |이름|설명|  
 |----------|-----------------|  
 |[propagator_block](#ctor)|`propagator_block` 개체를 생성합니다.|  
-|[~propagator_block Destructor](#dtor)|`propagator_block` 개체를 제거합니다.|  
+|[~ propagator_block 소멸자](#dtor)|`propagator_block` 개체를 제거합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   

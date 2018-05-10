@@ -2,12 +2,9 @@
 title: '형식 사양 구문: printf 및 wprintf 함수 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 437657857b87f2f7df140576d09467d6276549f6
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
-ms.translationtype: MT
+ms.openlocfilehash: c15ba418657dde291c6833caafae071ca0260a65
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>형식 사양 구문: printf 및 wprintf 함수
 
@@ -134,7 +129,7 @@ Visual Studio 2015 이전에는 CRT에서 제한 없음, 무한 및 NAN 값의 �
 |----------|-------------|-------------|
 |**-**|지정한 필드 너비 내에서 결과를 왼쪽에 맞춰 표시합니다.|오른쪽에 맞춰 표시합니다.|
 |**+**|부호 있는 형식에는 기호(+ 또는 –)를 사용하여 출력 값에 접두사를 추가합니다.|부호 있는 음수 값(-)에 대해서만 기호가 표시됩니다.|
-|**0**|*width*에 **0**이 접두사로 붙은 경우, 최소 너비에 도달할 때까지 선행 0이 추가됩니다. **0**과 **-**가 둘 다 표시되는 경우 **0**은 무시됩니다. **0**이 정수 형식(**i**, **u**, **x**, **X**, **o**, **d**)에 대해 지정되고 전체 자릿수 사양도 있는 경우(예: `%04.d`) **0**은 무시됩니다. **0**이 **a** 또는 **A** 부동 소수점 형식에 대해 지정된 경우, 선행 0은 `0x` 또는 `0X` 접두사 뒤의 가수 앞에 붙습니다.|패딩이 없습니다.|
+|**0**|*width*에 **0**이 접두사로 붙은 경우, 최소 너비에 도달할 때까지 선행 0이 추가됩니다. **0**과 **-** 가 둘 다 표시되는 경우 **0**은 무시됩니다. **0**이 정수 형식(**i**, **u**, **x**, **X**, **o**, **d**)에 대해 지정되고 전체 자릿수 사양도 있는 경우(예: `%04.d`) **0**은 무시됩니다. **0**이 **a** 또는 **A** 부동 소수점 형식에 대해 지정된 경우, 선행 0은 `0x` 또는 `0X` 접두사 뒤의 가수 앞에 붙습니다.|패딩이 없습니다.|
 |**blank** (' ')|부호 있는 양수 출력 값에는 공백을 접두사로 추가합니다. 공백과 + 플래그가 모두 표시되는 경우 공백은 무시됩니다.|공백이 표시되지 않습니다.|
 |**#**|**#** 플래그가 **o**, **x** 또는 **X** 형식과 함께 사용되는 경우 이 플래그는 0, 0x 또는 0X를 각각 사용하여 0이 아닌 모든 출력 값에 접두사를 추가합니다.|공백이 표시되지 않습니다.|
 ||**e**, **E**, **f**, **F**, **a** 또는 **A** 형식과 함께 사용하는 경우 **#** 플래그는 출력 값에 소수점을 강제로 포함시킵니다.|소수점 뒤에 숫자가 있는 경우에만 소수점이 표시됩니다.|

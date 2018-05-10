@@ -1,32 +1,27 @@
 ---
-title: "목록 없이 플러시 지시문을 사용 하 여 A.14 | Microsoft Docs"
-ms.custom: 
+title: 목록 없이 플러시 지시문을 사용 하 여 A.14 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 9e63141a-d0c6-43a5-ac16-b0bd7c89b871
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2a88558de3c04f1ae05922b1ad5bc7f63aed996
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8dd4ad0246d097b252c486abaec7729ed1db4605
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="a14---using-the-flush-directive-without-a-list"></a>A.14   목록이 없는 flush 지시문 사용
 다음 예제에서는 (에 대 한 [섹션 2.6.5](../../parallel/openmp/2-6-5-flush-directive.md) 페이지 20) 영향을 받는 공유 개체를 구별는 `flush` 영향을 받지 않는 공유 개체와에서 목록이 없는 지시문:  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="code"></a>코드  
   

@@ -1,13 +1,10 @@
 ---
-title: "C 복합 대입 | Microsoft Docs"
-ms.custom: 
+title: C 복합 대입 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - compound assignment operators
 - assignment operators, compound
 ms.assetid: db7b5893-cd56-4f1c-9981-5a024200ab63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b8b9166c1beae167f6d31913c3df10a8f57bbef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7ef882deb6a96117ec572aa675fe80158d192ce7
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-compound-assignment"></a>C 복합 할당
 복합 할당 연산자는 단순 할당 연산자에 다른 이항 연산자를 결합한 것입니다. 복합 할당 연산자는 추가 연산자로 지정된 연산을 수행한 다음 결과를 왼쪽 피연산자에 할당합니다. 예를 들어 다음과 같은 복합 할당 식은  

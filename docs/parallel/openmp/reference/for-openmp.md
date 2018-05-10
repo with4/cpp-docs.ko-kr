@@ -1,12 +1,9 @@
 ---
-title: "(OpenMP)에 대 한 | Microsoft Docs"
-ms.custom: 
+title: (OpenMP)에 대 한 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - for
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - for OpenMP directive
 ms.assetid: 8b54e034-9db2-4c1a-a2b1-72e14e930506
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab923dd43dfb29a458d12f57eb1ceefdb5539daf
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 10f5aebaf586581446293147f56dfbce8bd3519a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="for-openmp"></a>for (OpenMP)
 수행 된 작업을 발생 한 스레드 간에 나눠집니다 병렬 영역 내부 루프에 대 한 합니다.  
@@ -67,7 +62,7 @@ ms.lasthandoff: 02/23/2018
   
  자세한 내용은 참조 [2.4.1 for 구문](../../../parallel/openmp/2-4-1-for-construct.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // omp_for.cpp  

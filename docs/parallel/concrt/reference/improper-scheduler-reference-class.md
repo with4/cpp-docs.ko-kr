@@ -1,12 +1,9 @@
 ---
-title: "improper_scheduler_reference 클래스 | Microsoft Docs"
-ms.custom: 
+title: improper_scheduler_reference 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - improper_scheduler_reference
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - improper_scheduler_reference class
 ms.assetid: 434a7512-7796-4255-92a7-f3bf71c6a7a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fe3662d64ae03c242a3f3c3fefd4c3880d4157f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 320e0f4560baa5b07c982ca9af6134cf2bfdc292
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="improperschedulerreference-class"></a>improper_scheduler_reference 클래스
 이 클래스는 스케줄러에 속하지 않는 컨텍스트에서 종료되는 `Scheduler` 개체에 대해 `Reference` 메서드를 호출하는 경우 발생하는 예외를 설명합니다.  

@@ -1,13 +1,10 @@
 ---
-title: "C 부동 소수점 상수 | Microsoft Docs"
-ms.custom: 
+title: C 부동 소수점 상수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - floating-point constants, about floating-point constants
 - double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67883acbb2a6d5c0df075c47b7eda0d40a568f38
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3608e40db2aa3eb0c49942de278c1d428e26689f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-floating-point-constants"></a>C 부동 소수점 상수
 "부동 소수점 상수"는 부호 있는 실수를 나타내는 10진수 숫자입니다. 부호 있는 실수 표현에는 정수 부분, 분수 부분 및 지수가 포함됩니다. 부동 소수점 상수를 사용하여 변경할 수 없는 부동 소수점 값을 나타냅니다.  

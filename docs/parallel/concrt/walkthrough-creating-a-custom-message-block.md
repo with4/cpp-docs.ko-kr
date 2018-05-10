@@ -1,37 +1,32 @@
 ---
-title: "연습: 사용자 지정 메시지 블록 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: 사용자 지정 메시지 블록 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - creating custom message blocks Concurrency Runtime]
 - custom message blocks, creating [Concurrency Runtime]
 ms.assetid: 4c6477ad-613c-4cac-8e94-2c9e63cd43a1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ff7dd60dbb91d88377f481510ea0e213f18098a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa70cf40851815ff92f01405d47015afd2e3e444
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>연습: 사용자 지정 메시지 블록 만들기
 이 문서에는 우선 순위에 따라 들어오는 메시지를 정리 하는 사용자 지정 메시지 블록 형식을 만드는 방법을 설명 합니다.  
   
  기본 제공 메시지 블록 형식을 다양 한 기능을 제공 하지만 메시지 블록 형식을 만들고 응용 프로그램의 요구 사항에 맞게 사용자 지정할 수 있습니다. 비동기 에이전트 라이브러리에서 제공 되는 기본 제공 메시지 블록 형식에 대 한 참조 [비동기 메시지 블록](../../parallel/concrt/asynchronous-message-blocks.md)합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 시작 하기 전에 다음 문서를 읽어 보십시오.  
   
 - [비동기 메시지 블록](../../parallel/concrt/asynchronous-message-blocks.md)  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
   
 - [전체 예제](#complete)  
   
-##  <a name="design"></a>사용자 지정 메시지 블록 디자인  
+##  <a name="design"></a> 사용자 지정 메시지 블록 디자인  
  메시지 블록 메시지 송신 및 수신 하는 작업에 참여 합니다. 메시지를 보내는 메시지 블록 라고는 *소스 블록*합니다. 메시지를 수신 하는 메시지 블록 라고는 *대상 블록*합니다. 보내고 메시지를 수신 하는 메시지 블록 라고는 *전파자 블록*합니다. 에이전트 라이브러리는 추상 클래스를 사용 하 여 [concurrency:: isource](../../parallel/concrt/reference/isource-class.md) 소스 블록을 나타내고 추상 클래스 [concurrency:: itarget](../../parallel/concrt/reference/itarget-class.md) 을 대상 블록을 나타냅니다. 메시지 블록 형식은 형식을 작동 하는 원본에서 파생 `ISource`; 메시지 블록 형식은 형식을 작동 하는 대상에서 파생 `ITarget`합니다.  
   
  직접 메시지 블록 형식을 파생할 수 있지만 `ISource` 및 `ITarget`, 에이전트 라이브러리는 대부분의 공통 된 모든 메시지 블록 형식에 예를 들어 오류 처리 기능을 수행 하는 세 가지 기본 클래스를 정의 하 고 메시지 블록에는 동시성 으로부터 안전한 방식으로 함께 연결 합니다. [concurrency:: source_block](../../parallel/concrt/reference/source-block-class.md) 클래스에서 파생 `ISource` 하 고 다른 블록에 메시지를 보냅니다. [concurrency:: target_block](../../parallel/concrt/reference/target-block-class.md) 클래스에서 파생 `ITarget` 다른 블록에서 메시지를 받습니다. [concurrency:: propagator_block](../../parallel/concrt/reference/propagator-block-class.md) 클래스에서 파생 `ISource` 및 `ITarget` 고 메시지를 다른 블록에 보내고 다른 블록에서 메시지를 수신 합니다. 이러한 세 가지 기본 클래스를 사용 하 여 메시지 블록의 동작에 집중할 수 있도록 인프라 세부 정보를 처리 하는 것이 좋습니다.  
@@ -73,10 +68,10 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="class"></a>Priority_buffer 클래스를 정의합니다.  
+##  <a name="class"></a> Priority_buffer 클래스를 정의합니다.  
  `priority_buffer` 클래스는 우선 순위별로 정리한 다음 메시지는 수신 된 순서에 따라 들어오는 메시지를 먼저 정리 하는 사용자 지정 메시지 블록 형식을 합니다. `priority_buffer` 클래스와 유사는 [concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) 메시지 큐를 유지 하 고 있어 클래스도 소스 및 대상 메시지 블록 역할을 하며 여러 소스 및 여러를 가질 수 있으므로 대상으로 합니다. 그러나 `unbounded_buffer` 메시지를 전파할 때만 소스에서 메시지를 받는 순서 전파 합니다.  
   
- `priority_buffer` 클래스 형식의 메시지를 받는 std::[튜플](../../standard-library/tuple-class.md) 포함 하는 `PriorityType` 및 `Type` 요소입니다. `PriorityType`각 메시지의 우선 순위를 보유 하는 형식을 참조합니다 `Type` 메시지의 데이터 부분을 참조 합니다. `priority_buffer` 클래스 형식의 메시지를 보냅니다 `Type`합니다. `priority_buffer` 클래스에는 또한 두 개의 메시지 큐 관리:는 [std::priority_queue](../../standard-library/priority-queue-class.md) 들어오는 메시지에 대 한 개체 및는 std::[큐](../../standard-library/queue-class.md) 보내는 메시지에 대 한 개체입니다. 우선 순위에 따라 메시지 순서 지정은 같은 경우 유용는 `priority_buffer` 개체가 동시에 여러 메시지를 받을 또는 소비자가 메시지를 읽기 전에 여러 메시지를 받는 경우입니다.  
+ `priority_buffer` 클래스 형식의 메시지를 받는 std::[튜플](../../standard-library/tuple-class.md) 포함 하는 `PriorityType` 및 `Type` 요소입니다. `PriorityType` 각 메시지의 우선 순위를 보유 하는 형식을 참조합니다 `Type` 메시지의 데이터 부분을 참조 합니다. `priority_buffer` 클래스 형식의 메시지를 보냅니다 `Type`합니다. `priority_buffer` 클래스에는 또한 두 개의 메시지 큐 관리:는 [std::priority_queue](../../standard-library/priority-queue-class.md) 들어오는 메시지에 대 한 개체 및는 std::[큐](../../standard-library/queue-class.md) 보내는 메시지에 대 한 개체입니다. 우선 순위에 따라 메시지 순서 지정은 같은 경우 유용는 `priority_buffer` 개체가 동시에 여러 메시지를 받을 또는 소비자가 메시지를 읽기 전에 여러 메시지를 받는 경우입니다.  
   
  7 개의 메서드 외에도 파생 되는 클래스가 `propagator_block` 구현 해야 합니다는 `priority_buffer` 클래스도 재정의 `link_target_notification` 및 `send_message` 메서드. `priority_buffer` 클래스에는 또한 두 개의 공용 도우미 메서드를 정의 `enqueue` 및 `dequeue`, 전용 도우미 메서드 및 `propagate_priority_order`합니다.  
   
@@ -193,7 +188,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="complete"></a>전체 예제  
+##  <a name="complete"></a> 전체 예제  
  다음 예제에서는의 완전 한 정의 `priority_buffer` 클래스입니다.  
   
  [!code-cpp[concrt-priority-buffer#18](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_19.h)]  

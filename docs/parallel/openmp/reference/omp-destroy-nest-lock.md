@@ -1,12 +1,9 @@
 ---
 title: omp_destroy_nest_lock | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - omp_destroy_nest_lock
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - omp_destroy_nest_lock OpenMP function
 ms.assetid: 0ab1352b-668f-43dd-b441-31ec4cc53e68
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7c62ba49f98581c233966dd8d7d71bb3433ae3f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a01ff1b0e8b37a9bd8d380b6e0e59794412e51f8
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ompdestroynestlock"></a>omp_destroy_nest_lock
 중첩 잠금 초기화를 취소 합니다.  
@@ -47,7 +42,7 @@ void omp_destroy_nest_lock(
 ## <a name="remarks"></a>설명  
  자세한 내용은 참조 [3.2.2 omp_destroy_lock and omp_destroy_nest_lock 함수](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  참조 [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md) 사용 하는 예제에 대 한 `omp_destroy_nest_lock`합니다.  
   
 ## <a name="see-also"></a>참고 항목  

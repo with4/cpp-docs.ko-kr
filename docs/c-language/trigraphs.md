@@ -1,13 +1,10 @@
 ---
-title: "삼중자 | Microsoft Docs"
-ms.custom: 
+title: 삼중자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - ??! trigraph
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d96088102cafe1b3bbdb7222cec33fc313774f41
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b3c83fc3feecc1b79f28c1b00b94469d30b93d8b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="trigraphs"></a>삼중자
 C 소스 프로그램의 소스 문자 집합은 7비트 ASCII 문자 집합에 포함되지만 ISO 646-1983 고정 코드 집합의 상위 집합입니다. 삼중자 시퀀스를 사용하면 C 프로그램을 ISO(International Standards Organization) 고정 코드 집합만을 사용하여 쓸 수 있습니다. 삼중자는 컴파일러가 해당 문장 부호 문자로 대체하는 세 문자(두 개의 연속된 물음표로 시작)의 시퀀스입니다. 삼중자는 특정 문장 부호 문자에 대한 편리한 그래픽 표현을 포함하지 않는 문자 집합이 사용되는 C 소스 파일에서 사용할 수 있습니다.  
@@ -61,7 +56,7 @@ C 소스 프로그램의 소스 문자 집합은 7비트 ASCII 문자 집합에 
   
  삼중자는 항상 단일 소스 문자로 처리됩니다. 삼중자 변환은 문자열 리터럴 및 문자 상수에서 이스케이프 문자를 인식하기 전에 첫 번째 [변환 단계](../preprocessor/phases-of-translation.md)에서 발생합니다. 위의 표에 나와 있는 9개의 삼중자만 인식됩니다. 다른 모든 문자 시퀀스는 변환되지 않고 유지됩니다.  
   
- 문자 이스케이프 시퀀스인 **\\?**는 삼중자와 비슷한 문자 시퀀스가 잘못 해석되는 것을 방지합니다. 이스케이프 시퀀스에 대한 자세한 내용은 [이스케이프 시퀀스](../c-language/escape-sequences.md)를 참조하세요. 예를 들어, `What??!` 문자열을 이 `printf` 문으로 출력하려고 하면  
+ 문자 이스케이프 시퀀스인 **\\?** 는 삼중자와 비슷한 문자 시퀀스가 잘못 해석되는 것을 방지합니다. 이스케이프 시퀀스에 대한 자세한 내용은 [이스케이프 시퀀스](../c-language/escape-sequences.md)를 참조하세요. 예를 들어, `What??!` 문자열을 이 `printf` 문으로 출력하려고 하면  
   
 ```  
 printf( "What??!\n" );  

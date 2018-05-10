@@ -1,13 +1,10 @@
 ---
-title: "연습: c + + AMP 응용 프로그램을 디버깅 | Microsoft Docs"
-ms.custom: 
+title: '연습: c + + AMP 응용 프로그램을 디버깅 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cfc12a238ccaff90fa7c22e8a67d8e10d0796e6
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 2f1308462133c11c8f945416a13fb5542c1d2da8
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>연습: C++ AMP 응용 프로그램 디버깅
 이 항목에는 처리 GPU (그래픽 장치)를 활용 하기 위해 c + + Accelerated Massive Parallelism (c + + AMP)를 사용 하는 응용 프로그램을 디버깅 하는 방법을 보여 줍니다. 큰 정수 배열의을 요약 하는 병렬 감소 프로그램을 사용 합니다. 이 연습에서는 다음 작업을 수행합니다.  
@@ -43,7 +38,7 @@ ms.lasthandoff: 01/03/2018
   
 -   코드에서 특정 위치에 조각의 모든 스레드를 실행 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습 시작 하기 전에:  
   
 -   읽기 [c + + AMP 개요](../../parallel/amp/cpp-amp-overview.md)합니다.  
@@ -60,7 +55,7 @@ ms.lasthandoff: 01/03/2018
   
 2.  메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.  
   
-3.  아래 **설치 됨** 템플릿 창에서 선택 **Visual c + +**합니다.  
+3.  아래 **설치 됨** 템플릿 창에서 선택 **Visual c + +** 합니다.  
   
 4.  선택 **Win32 콘솔 응용 프로그램**, 형식 `AMPMapReduce` 에 **이름** 상자를 선택한 후는 **확인** 단추입니다.  
   
@@ -305,7 +300,7 @@ GPU 스레드 DataTip
   
      해당 열 머리글을 선택 하 여 지정 된 식을 사용 하 여 정렬할 수 있습니다.  
   
-     선택 된 **localA [localIdx [0]]** 열을 정렬 하려면 열 머리글입니다. 다음 그림에서 정렬 결과 보여 줍니다. **localA [localIdx [0]]**합니다.  
+     선택 된 **localA [localIdx [0]]** 열을 정렬 하려면 열 머리글입니다. 다음 그림에서 정렬 결과 보여 줍니다. **localA [localIdx [0]]** 합니다.  
   
      ![정렬 된 결과가 포함 된 병렬 조사식 창](../../parallel/amp/media/campf.png "campf")  
  정렬 결과  

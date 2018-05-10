@@ -1,12 +1,9 @@
 ---
-title: "개인 (OpenMP) | Microsoft Docs"
-ms.custom: 
+title: 개인 (OpenMP) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - private
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - private OpenMP clause
 ms.assetid: 772904a2-1345-4562-90e6-eb4dc85aea1a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91be79ddda664ffea2bc06dfb5f4cede7c4e8880
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4af88f450ce6c77a6b0753917516719331199dfd
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="private-openmp"></a>private (OpenMP)
 각 스레드에 변수의 자체 인스턴스가 있어야 한다는 것을 지정 합니다.  
@@ -49,13 +44,13 @@ private(var)
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [섹션](../../../parallel/openmp/reference/sections-openmp.md)  
   
 -   [single](../../../parallel/openmp/reference/single.md)  
   
  자세한 내용은 참조 [개인 2.7.2.1](../../../parallel/openmp/2-7-2-1-private.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // openmp_private.c  

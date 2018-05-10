@@ -1,22 +1,20 @@
 ---
-title: "Visual C++ 도구 집합의 문제를 보고하는 방법 | Microsoft 문서"
+title: Visual C++ 도구 집합의 문제를 보고하는 방법 | Microsoft 문서
 ms.date: 1/11/2018
 ms.technology:
-- cpp
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-ide
+ms.topic: conceptual
 dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd7ba80e60251c56fd28a1c380d395e686fc27a4
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e8be0a5e42caf12c4e1415cf88143b84a9971cd2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Visual C++ 도구 집합의 문제를 보고하는 방법
 
@@ -108,7 +106,7 @@ usage: cl [ option... ] filename... [ /link linkoption... ]
 
 좋은 재현의 조건은 다음과 같습니다.
 
-- **최소**. 재현은 발생한 문제를 정확하게 보여 주면서도 최대한 작아야 합니다. 재현은 복잡하거나 현실적일 필요가 없습니다. 표준 또는 문서화된 컴파일러 구현을 따르는 코드 또는 진단이 누락된 경우 따르지 않은 코드를 보여주기만 하면 됩니다. 간단하게 말해서, 문제를 보여주는 데 필요한 만큼만 코드를 포함하는 재현이 가장 좋습니다. 코드를 제거 또는 간소화하면서도 준수 상태를 유지하고 문제를 변경되지 않은 상태로 유지할 수 있는 경우 그렇게 해주세요. 작동하는 카운터 코드 예제는 필요 없습니다. 
+- **최소**. 재현은 발생한 문제를 정확하게 보여 주면서도 최대한 작아야 합니다. 재현은 복잡하거나 현실적일 필요가 없습니다. 표준 또는 문서화된 컴파일러 구현을 따르는 코드 또는 진단이 누락된 경우 따르지 않은 코드를 보여주기만 하면 됩니다. 간단하게 말해서, 문제를 보여주는 데 필요한 만큼만 코드를 포함하는 재현이 가장 좋습니다. 코드를 제거 또는 간소화하면서도 준수 상태를 유지하고 문제를 변경되지 않은 상태로 유지할 수 있는 경우 그렇게 해주세요. 작동하는 카운터 코드 예제는 필요 없습니다.
 
 - **자체 포함**. 재현에서 불필요한 종속성을 피해야 합니다. 가능한 한, 타사 라이브러리 없이 문제를 재현할 수 있도록 합니다. 간단한 출력 문 이외의 라이브러리 코드 없이 문제를 재현할 수 있는 경우(예: `puts("this shouldn't compile");`, `std::cout << value;`, 및 `printf("%d\n", value);`는 상관 없음) 그렇게 해주세요. 사용자 헤더에 대한 참조 없이 예제를 단일 소스 코드 파일로 요약할 수 있다면 가장 좋습니다. 가능한 문제 원인으로 고려해야 하는 코드 양을 줄이면 도움이 됩니다.
 
@@ -116,13 +114,13 @@ usage: cl [ option... ] filename... [ /link linkoption... ]
 
 - 관련된 경우 **다른 컴파일러에서 확인**하세요. 포팅 가능한 C++ 코드를 포함하는 재현은 가능한 경우 다른 컴파일러에서 동작을 확인해야 합니다. Standard는 궁극적으로 프로그램 정확성을 결정하며 어떤 컴파일러도 완벽하지는 않습니다. 그러나 Clang 및 GCC는 진단 없이 코드를 수락하고 MSVC는 수락하지 않으면 컴파일러에 버그가 있을 가능성이 높습니다. (그 외의 가능성으로 Unix와 Windows의 동작이 서로 다르거나 C++ 표준 구현의 수준이 다를 수 있습니다.) 반면, 모든 컴파일러에서 코드를 거부하는 경우 코드가 잘못되었을 가능성이 높습니다. 여러 오류 메시지를 보면 직접 문제를 진단하는 데 도움이 될 수 있습니다.
 
-   ISO C++ 웹 사이트의 [온라인 C++ 컴파일러](https://isocpp.org/blog/2013/01/online-c-compilers)에서 또는 GitHub의 엄선된 [온라인 C++ 컴파일러 목록](https://arnemertz.github.io/online-compilers/)에서 코드를 테스트할 온라인 컴파일러 목록을 찾을 수 있습니다. 몇 가지 구체적인 예제로 [Wandbox](https://wandbox.org/), [컴파일러 탐색기](https://godbolt.org/) 및 [Coliru](http://coliru.stacked-crooked.com/)가 포함됩니다. 
+   ISO C++ 웹 사이트의 [온라인 C++ 컴파일러](https://isocpp.org/blog/2013/01/online-c-compilers)에서 또는 GitHub의 엄선된 [온라인 C++ 컴파일러 목록](https://arnemertz.github.io/online-compilers/)에서 코드를 테스트할 온라인 컴파일러 목록을 찾을 수 있습니다. 몇 가지 구체적인 예제로 [Wandbox](https://wandbox.org/), [컴파일러 탐색기](https://godbolt.org/) 및 [Coliru](http://coliru.stacked-crooked.com/)가 포함됩니다.
 
    > [!NOTE]
    > 온라인 컴파일러 웹 사이트는 Microsoft와 관련이 없습니다. 많은 온라인 컴파일러 웹 사이트가 개인 프로젝트로 실행되며 이러한 사이트 중에는 현재 사용할 수 없는 곳도 있을 것입니다. 하지만 검색을 통해 사용 가능한 다른 사이트를 찾을 수 있습니다.
 
 컴파일러, 링커 및 라이브러리의 문제는 특정 방식으로 드러나는 경향이 있습니다. 발생한 문제 종류에 따라 보고서에 포함해야 하는 재현 종류가 결정됩니다. 적절한 재현이 없으면 아무것도 조사할 수 없습니다. 다음은 여러분이 목격할 수 있는 몇 가지 종류의 문제와 각 문제 유형을 보고할 때 사용할 재현을 생성하는 방법에 대한 지침입니다.
- 
+
 #### <a name="frontend-parser-crash"></a>프런트 엔드(파서) 충돌
 
 프런트 엔드 충돌은 컴파일러의 구문 분석 단계 중에 발생합니다. 일반적으로 컴파일러는 [심각한 오류 C1001](error-messages/compiler-errors-1/fatal-error-c1001.md)을 내보내고 오류가 발생한 소스 코드 파일 및 줄 번호를 참조합니다. msc1.cpp 파일을 언급하는 경우도 많지만 이 세부 정보는 무시해도 됩니다.

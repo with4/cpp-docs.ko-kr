@@ -1,12 +1,9 @@
 ---
-title: "overwrite_buffer 클래스 | Microsoft Docs"
-ms.custom: 
+title: overwrite_buffer 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - overwrite_buffer
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59eeadecdcf5d1a6333f08b68f98976ce9e6ea78
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: dccde651898bf5ff0986dc2e577a1d2ee5765e3f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overwritebuffer-class"></a>overwrite_buffer 클래스
 `overwrite_buffer` 메시징 블록은 한 번에 하나의 메시지를 저장할 수 있는, 순서가 지정된 다중 대상 다중 소스 `propagator_block`입니다. 새 메시지가 이전에 보유한 메시지를 덮어씁니다.  
@@ -62,7 +57,7 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
 |이름|설명|  
 |----------|-----------------|  
 |[overwrite_buffer](#ctor)|오버로드됨. 생성 된 `overwrite_buffer` 메시징 블록입니다.|  
-|[~overwrite_buffer Destructor](#dtor)|소멸 된 `overwrite_buffer` 메시징 블록입니다.|  
+|[~ overwrite_buffer 소멸자](#dtor)|소멸 된 `overwrite_buffer` 메시징 블록입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   

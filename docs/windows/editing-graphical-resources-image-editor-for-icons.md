@@ -1,13 +1,10 @@
 ---
-title: "그래픽 리소스 (아이콘에 대 한 이미지 편집기) 편집 | Microsoft Docs"
-ms.custom: 
+title: 그래픽 리소스 (아이콘에 대 한 이미지 편집기) 편집 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.bitmap
 dev_langs:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - graphics [C++], Image editor
 - graphics [C++], editing
 ms.assetid: 09e422c5-f712-4378-b973-c7a3bbc92b9c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8ffdc026c53a9f26e68d9f0e8626ebb03fac6ffc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1de0c53240b1b25d84ae6a61c31d4f734f5c8313
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="editing-graphical-resources-image-editor-for-icons"></a>그래픽 리소스 편집(아이콘에 대한 이미지 편집기)
 그래픽 리소스는 응용 프로그램에 대해 정의 하는 이미지입니다. 자유형 그리기 또는 셰이프를 사용 하 여 그릴 수 있습니다. 편집, 대칭 이동 또는 크기 조정에 대 한 이미지의 부분을 선택할 수 있고 이미지의 선택한 부분에서 사용자 지정 브러시 만들기 해당 브러시를 사용 하 여 그릴 수 있습니다. 이미지 속성을 정의 하 고, 서로 다른 형식으로 이미지를 저장 하 고, 이미지를 다른 형식 으로부터 변환 수입니다.  

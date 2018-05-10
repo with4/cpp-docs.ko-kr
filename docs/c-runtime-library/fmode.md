@@ -1,13 +1,10 @@
 ---
-title: "_fmode | Microsoft 문서"
-ms.custom: 
+title: _fmode | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - fmode
 - _fmode
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - fmode function
 - _fmode function
 ms.assetid: ac6df9eb-e5cc-4c54-aff3-373c21983118
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4fdaeb0e67832f4f9e0c657e48fe74a88b86292
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9dfb5343e7a9ab64b2a1bd5cdb6edea0821e1559
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fmode"></a>_fmode
 `_fmode` 변수는 텍스트 또는 이진 변환에 대한 기본 파일 변환 모드를 설정합니다. 이 전역 변수는 전역 변수 대신 사용되어야 할 보안 기능이 보다 강화된 버전인 [_get_fmode](../c-runtime-library/reference/get-fmode.md) 및 [_set_fmode](../c-runtime-library/reference/set-fmode.md)에 대해서는 더 이상 사용되지 않습니다. 이 변수는 Stdlib.h에 다음과 같이 선언됩니다.  

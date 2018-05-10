@@ -1,12 +1,9 @@
 ---
 title: OMP_DYNAMIC | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - OMP_DYNAMIC
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - OMP_DYNAMIC OpenMP environment variable
 ms.assetid: e306049d-b644-4b73-8b63-46c835bff98b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fcff25541921ccac9dc2e205480dc6277f620b1
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: de4a81d861bf72943a67356577da37c36df63f69
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ompdynamic"></a>OMP_DYNAMIC
 실행 시간 OpenMP 병렬 영역에 있는 스레드의 수를 조정할 수 있는지 여부를 지정 합니다.  
@@ -43,7 +38,7 @@ set OMP_DYNAMIC[=TRUE | =FALSE]
   
  자세한 내용은 참조 [4.3 OMP_DYNAMIC](../../../parallel/openmp/4-3-omp-dynamic.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 명령 집합의 `OMP_DYNAMIC` 환경 변수를 true로:  
   
 ```  

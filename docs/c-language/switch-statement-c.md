@@ -1,13 +1,10 @@
 ---
-title: "switch 문 (C) | Microsoft Docs"
-ms.custom: 
+title: switch 문 (C) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 f1_keywords:
 - switch
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - switch keyword [C]
 ms.assetid: fbede014-23bd-4ab1-8094-c8d9d9cb963a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84594f668d0fc807ebb815cc519c7d45f62e8b12
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0fab1f385556346ff81f89e94d20c5f416ff67b9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="switch-statement-c"></a>switch 문 (C)
 `switch` 및 **case** 문은 복잡한 조건부 및 분기 작업을 제어하는 데 도움이 됩니다. `switch` 문은 해당 본문 내의 문으로 제어를 전달합니다.  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
  **default :**  *statement*  
   
- **case** *constant-expression*이 **switch(** *expression* **)**의 값과 일치하는 문으로 제어가 전달됩니다. `switch` 문에는 **case** 인스턴스가 개수에 제한 없이 포함될 수 있지만 동일한 `switch` 문 내에 값이 같은 두 case 상수가 존재할 수는 없습니다. 문 본문의 실행은 선택된 문에서 시작되고 본문의 끝에 도달하거나 **break** 문이 본문 밖으로 제어를 전달할 때까지 계속됩니다.  
+ **case** *constant-expression*이 **switch(** *expression* **)** 의 값과 일치하는 문으로 제어가 전달됩니다. `switch` 문에는 **case** 인스턴스가 개수에 제한 없이 포함될 수 있지만 동일한 `switch` 문 내에 값이 같은 두 case 상수가 존재할 수는 없습니다. 문 본문의 실행은 선택된 문에서 시작되고 본문의 끝에 도달하거나 **break** 문이 본문 밖으로 제어를 전달할 때까지 계속됩니다.  
   
  `switch` 문의 사용은 대개 다음과 같습니다.  
   
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
   
  **break** 문을 사용하여 `switch` 문 내의 특정 case 처리를 종료하고 `switch` 문의 끝으로 분기할 수 있습니다. **break**가 없는 경우 프로그램은 다음 case로 지속되어 **break** 또는 문의 끝에 도달할 때까지 문을 실행합니다. 어떤 상황에서는 이러한 지속이 바람직할 수 있습니다.  
   
- **default** 문은 **case** *constant-expression*이 **switch(** *expression* **)**의 값과 같지 않은 경우 실행됩니다. **default** 문이 생략되는 경우 **case** 일치가 발견되지 않으면 `switch` 본문의 문이 실행되지 않습니다. **default** 문은 하나만 존재할 수 있습니다. **default** 문은 끝에 와야 할 필요가 없으며 `switch` 문의 본문 어느 위치에나 나타날 수 있습니다. **case** 또는 **default** 레이블은 `switch` 문 안에서만 나타날 수 있습니다.  
+ **default** 문은 **case** *constant-expression*이 **switch(** *expression* **)** 의 값과 같지 않은 경우 실행됩니다. **default** 문이 생략되는 경우 **case** 일치가 발견되지 않으면 `switch` 본문의 문이 실행되지 않습니다. **default** 문은 하나만 존재할 수 있습니다. **default** 문은 끝에 와야 할 필요가 없으며 `switch` 문의 본문 어느 위치에나 나타날 수 있습니다. **case** 또는 **default** 레이블은 `switch` 문 안에서만 나타날 수 있습니다.  
   
  `switch` *expression* 및 **case** *constant-expression*의 형식은 정수여야 합니다. 각 **case** *constant-expression*의 값은 문 본문 내에서 고유해야 합니다.  
   

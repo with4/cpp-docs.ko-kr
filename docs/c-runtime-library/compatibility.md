@@ -1,13 +1,10 @@
 ---
-title: "호환성 | Microsoft 문서"
-ms.custom: 
+title: 호환성 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.programs
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bed3ebc3723bfe6af8e3d12fc3702ecb0dda7b4f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: b3933f6b4a40250ea099f4de4ce640a9505b2072
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="compatibility"></a>호환성
 UCRT(유니버설 C 런타임 라이브러리)는 C++ 규칙에 필요한 C 표준 라이브러리를 대부분 지원합니다. \<tgmath.h>에 정의된 형식 제네릭 매크로와 \<complex.h>의 엄격한 형식 호환성을 제외하고 C99(ISO/IEC 9899:1999) 라이브러리를 구현합니다. 또한 UCRT는 POSIX.1(ISO/IEC 9945-1:1996, POSIX 시스템 응용 프로그램 인터페이스) C 라이브러리의 큰 하위 집합을 구현하지만 어떠한 특정 POSIX 표준에도 완전히 부합되지 않습니다.  뿐만 아니라 UCRT는 표준에 속하지 않는 여러 Microsoft 특정 함수 및 매크로를 구현합니다.  

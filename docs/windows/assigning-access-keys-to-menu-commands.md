@@ -1,13 +1,10 @@
 ---
-title: "메뉴 명령에 대 한 액세스 키 할당 | Microsoft Docs"
-ms.custom: 
+title: 메뉴 명령에 대 한 액세스 키 할당 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - mnemonics, uniqueness checking
 - Check Mnemonics command
 ms.assetid: fbcf1a00-af6a-4171-805a-0ac01d4e8b0d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ccf64739d0a54b5a96551b3a8145dc3c3f8378c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44a21e5930d0d8f2fcaad79cc5cef5bc984ad8b5
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="assigning-access-keys-to-menu-commands"></a>메뉴 명령에 대한 선택키 할당
 액세스 키(사용자가 키보드로 메뉴를 선택할 수 있게 하는 니모닉)를 메뉴 및 메뉴 명령에 할당할 수 있습니다.  

@@ -1,13 +1,10 @@
 ---
-title: "커서 &#39; 설정 s 핫 스폿 (아이콘에 대 한 이미지 편집기) | Microsoft Docs"
-ms.custom: 
+title: 커서를 설정&#39;s 핫 스폿 (아이콘에 대 한 이미지 편집기) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.editing
 dev_langs:
@@ -16,20 +13,18 @@ helpviewer_keywords:
 - cursors, hot spots
 - hot spots
 ms.assetid: a610388a-45c8-43cd-98a2-fd31f29238b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1bcfccb7b9252bf28e5b180b1df6b6d36fcbfbd0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 527cdeabb6f45601641fcc64d3b82bb36652e002
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>커서 &#39; 설정 s 핫 스폿 (아이콘에 대 한 이미지 편집기)
+# <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>커서를 설정&#39;s 핫 스폿 (아이콘에 대 한 이미지 편집기)
 핫 스폿은 [커서](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) 지점 Windows에서 커서의 위치를 추적 참조에 있습니다. 기본적으로 핫 스폿 커서 (좌표 0, 0)의 왼쪽 위 모퉁이에 설정 됩니다. 핫스폿 속성에는 [속성 창](/visualstudio/ide/reference/properties-window) 핫 스폿 좌표가 표시 합니다.  
   
 ### <a name="to-set-a-cursors-hot-spot"></a>커서의 핫 스폿 설정 하려면  

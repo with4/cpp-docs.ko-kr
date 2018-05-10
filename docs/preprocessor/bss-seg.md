@@ -1,12 +1,9 @@
 ---
 title: bss_seg | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.bss_seg
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, bss_seg
 - bss_seg pragma
 ms.assetid: 755f0154-de51-4778-97d3-c9b24e445079
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4c253cd24bd8246469532cd283e97be4b21f46d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1b82027066e66cc51be8982a19ab6209ff236ef2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="bssseg"></a>bss_seg
 .obj 파일에 초기화되지 않은 변수가 저장되는 세그먼트를 지정합니다.  
@@ -61,7 +56,7 @@ ms.lasthandoff: 02/23/2018
  *"세그먼트 클래스"* (선택 사항)  
  C++ 2.0 이전 버전과의 호환성을 위해 포함됩니다. 무시됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // pragma_directive_bss_seg.cpp  

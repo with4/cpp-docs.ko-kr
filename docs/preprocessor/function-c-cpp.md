@@ -1,12 +1,9 @@
 ---
-title: "함수 (C/c + +) | Microsoft Docs"
-ms.custom: 
+title: 함수 (C/c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - function_CPP
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - function pragma
 - pragmas, function
 ms.assetid: cbd1bd60-fabf-4b5a-9c3d-2d9f4b871365
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b6f83e92cdcfe6434c99497a9eddf496027798f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 1e24dac191e05cc3b47192cb6ec7fb0fc48dd447
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="function-cc"></a>함수 (C/C++)
 pragma의 인수 목록에서 지정된 함수에 대한 호출이 생성되도록 지정합니다.  
@@ -44,7 +39,7 @@ pragma의 인수 목록에서 지정된 함수에 대한 호출이 생성되도�
   
  내장 형식을 있는 함수 목록에 대 한 참조 [내장 #pragma](../preprocessor/intrinsic.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // pragma_directive_function.cpp  

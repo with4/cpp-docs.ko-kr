@@ -1,12 +1,9 @@
 ---
-title: "정렬 (OpenMP 지시문) | Microsoft Docs"
-ms.custom: 
+title: 정렬 (OpenMP 지시문) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-parallel
 ms.topic: reference
 f1_keywords:
 - ordered
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ordered OpenMP directive
 ms.assetid: e1aa703e-d07d-4f6a-9b2a-f4f25203d850
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: def203120826d78481956b0efbde8831d624a4ce
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 48bf2ec3362a1053cf2fd14cb6a066aaa3d370af
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ordered-openmp-directives"></a>ordered (OpenMP 지시문)
 순차 루프와 같은 루프를 실행 해야 해당 코드는 병렬화 된에서 지정 합니다.  
@@ -44,7 +39,7 @@ ms.lasthandoff: 02/23/2018
   
  자세한 내용은 참조 [2.6.6 ordered 구문](../../../parallel/openmp/2-6-6-ordered-construct.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // omp_ordered.cpp  

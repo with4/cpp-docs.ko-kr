@@ -1,37 +1,32 @@
 ---
-title: "식 문 (C) | Microsoft Docs"
-ms.custom: 
+title: 식 문 (C) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - statements, expression
 - expression statements
 ms.assetid: 1085982b-dc16-4c1e-9ddd-0cd85c8fe2e3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75bad42ddff5f20d14d627e3f036659f030bb3f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 18d28cdc695ae600616d63575328eeaf171bc28c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expression-statement-c"></a>식 문 (C)
 식 문이 실행되면 [식 및 할당](../c-language/expressions-and-assignments.md)에 설명된 규칙에 따라 식이 계산됩니다.  
   
 ## <a name="syntax"></a>구문  
  *expression-statement*:  
- *expression* opt**;**  
+ *expression* opt **;**  
   
  식 문의 다음 문은 식 계산의 모든 파생 작업이 완료된 후에 실행됩니다. 빈 식 문을 null 문이라고 합니다. 자세한 내용은 [Null 문](../c-language/null-statement-c.md)을 참조하세요.  
   

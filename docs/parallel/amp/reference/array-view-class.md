@@ -1,12 +1,9 @@
 ---
-title: "array_view 클래스 | Microsoft Docs"
-ms.custom: 
+title: array_view 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - array_view
@@ -35,17 +32,15 @@ dev_langs:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54202618f578b9a5e6fd602924a37d7ea0825353
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2e53b4927b102fc64a32f73ca5be78e71954b45f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="arrayview-class"></a>array_view 클래스
 다른 컨테이너에 보관 된 데이터를 통해 N 차원 보기를 나타냅니다.  
@@ -117,7 +112,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[extent](#extent)|`extent` 개체의 모양을 정의하는 `array_view` 개체를 가져옵니다.|  
 |[source_accelerator_view](#source_accelerator_view)|가져옵니다는 [accelerator_view](accelerator-view-class.md) 여기서의 데이터 소스는 `array_view` 위치한|  
@@ -528,7 +523,7 @@ typename details::_Projection_result_type<value_type,_Rank>::_Const_result_type 
 ### <a name="return-value"></a>반환 값  
  매개 변수 또는 매개 변수로 지정 된 요소의 값입니다.  
   
-##  <a name="operator_at"></a> operator[] 
+##  <a name="operator_at"></a> operator] 
 
  매개 변수에 의해 지정 된 요소를 반환 합니다.  
   

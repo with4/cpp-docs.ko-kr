@@ -1,30 +1,25 @@
 ---
-title: "방법: 컨텍스트 클래스를 사용 하 여 공동 작업 세마포 구현 | Microsoft Docs"
-ms.custom: 
+title: '방법: 컨텍스트 클래스를 사용 하 여 공동 작업 세마포 구현 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - cooperative semaphore implementing
 - context class
 ms.assetid: 22f4b9c0-ca22-4a68-90ba-39e99ea76696
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03884d69877053976fdaf04e507c4c1c4214026e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 481c5f092becee7f455294437bdc695a6e1e4057
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>방법: 컨텍스트 클래스를 사용하여 공동 작업 세마포 구현
 이 항목에서는 concurrency::Context 클래스를 사용 하 여 공동 작업 세마포 클래스를 구현 하는 방법을 보여 줍니다.  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[concrt-cooperative-semaphore#5](../../parallel/concrt/codesnippet/cpp/how-to-use-the-context-class-to-implement-a-cooperative-semaphore_5.cpp)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  `semaphore` 때문에이 예에서 클래스는 협조적 동작는 `Context::Block` 및 `Context::Yield` 메서드는 런타임에서 다른 작업을 수행할 수 있도록 실행을 양보 합니다.  
   
  `acquire` 카운터를 하지만 종료 되지 않습니다 다른 상황에 맞는 호출 하기 전에 대기 큐에 컨텍스트를 추가 하는 메서드 감소는 `release` 메서드. 이 고려 하는 `release` 메서드를 호출 하는 스핀 루프를 사용 하 여는 [concurrency::Context::Yield](reference/context-class.md#yield) 때까지 대기 하는 메서드는 `acquire` 메서드 컨텍스트를 추가 작업을 마칩니다.  
