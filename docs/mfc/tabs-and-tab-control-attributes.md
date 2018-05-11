@@ -1,13 +1,10 @@
 ---
-title: "탭 및 탭 컨트롤 특성 | Microsoft Docs"
-ms.custom: 
+title: 탭 및 탭 컨트롤 특성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - tabs [MFC], attributes
 - CTabCtrl class [MFC], tab control attributes
 ms.assetid: ecf190cb-f323-4751-bfdb-766dbe6bb553
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d10db5f1282c726b30536be35b348d50c8bb4a14
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f925f8b6a5c522e22890ee2c1082ae8d709d2220
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tabs-and-tab-control-attributes"></a>탭 및 탭 컨트롤 특성
 모양 및 탭 컨트롤을 구성 하는 탭의 동작을 상당히 제어할 수 있습니다 ([CTabCtrl](../mfc/reference/ctabctrl-class.md)). 각 탭 레이블, 아이콘, 항목 상태 및 연결 된 하는 응용 프로그램 정의 32 비트 값을 포함할 수 있습니다. 각 탭에 대 한 아이콘, 레이블, 또는 둘 모두를 표시할 수 있습니다.  

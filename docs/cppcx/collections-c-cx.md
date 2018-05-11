@@ -1,31 +1,26 @@
 ---
-title: "컬렉션 (C + + /cli CX) | Microsoft Docs"
-ms.custom: 
+title: 컬렉션 (C + + /cli CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b4f98b17ceb7e7ccde15d2b7def17ee1e57b5ff
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0296422ce0f9ef49b096d5ea8512530871fc733b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collections-ccx"></a>컬렉션(C++/CX)
 C + + /CX 프로그램 템플릿 STL (표준 라이브러리) 컨테이너 또는 다른 모든 사용자 정의 컬렉션 형식을 자유롭게 사용할 만들 수 있습니다. 그러나 전달 하는 경우 컬렉션에서 Windows 런타임 응용 프로그램 이진 인터페이스 ABI ()를 통해-예를 들어 XAML 컨트롤 또는 JavaScript 클라이언트로-Windows 런타임 컬렉션 형식을 사용 해야 합니다.  
   
  컬렉션 및 관련된 형식 및 C +에 대 한 인터페이스를 정의 하는 Windows 런타임 + CX collection.h header 파일의 구체적 c + + 구현을 제공 합니다. 다음 그림에서는 컬렉션 형식 간의 관계를 보여 줍니다.  
   
- ![C# 43; &#43; &#47; 컬렉션 형식에 대 한 /CX 상속 트리](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")  
+ ![C&#43;&#43;&#47;컬렉션 형식에 대 한 /CX 상속 트리](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")  
   
 -   [Platform::Collections::Vector 클래스](../cppcx/platform-collections-vector-class.md) 는 [std::vector 클래스](../standard-library/vector-class.md)와 유사합니다.  
   
@@ -71,7 +66,7 @@ C + + /CX 프로그램 템플릿 STL (표준 라이브러리) 컨테이너 또�
   
  다음 그림에서는 `range for` 에 대한 `IVector<Person^>`루프를 보여 줍니다. 64번 줄의 중단점에서 실행이 중지됩니다. **간략한 조사식** 창에서 반복기 변수 `p` 가 실제로는 `VectorProxy<Person^>` 및 `m_v` 멤버 변수가 있는 `m_i` 라는 것을 확인할 수 있습니다. 그러나 이 변수에 대해 `GetType` 을 호출하면 `Person` 인스턴스 `p2`와 동일한 형식이 반환됩니다. `VectorProxy` 및 `ArrowProxy` 는 **간략한 조사식**, 디버거 특정 컴파일러 오류 또는 기타 위치에 나타날 수 있지만 일반적으로 해당 항목을 명시적으로 코딩할 필요는 없습니다.  
   
- ![범위 &#45; VectorProxy 루프에 대 한 기반](../cppcx/media/vectorproxy-1.png "VectorProxy_1")  
+ ![범위에 VectorProxy&#45;루프에 대 한 기반](../cppcx/media/vectorproxy-1.png "VectorProxy_1")  
   
  프록시 개체를 코딩해야 하는 시나리오 중 하나는 `dynamic_cast` 요소 컬렉션에서 특정 형식의 XAML 개체를 찾을 때 등에 요소에 대해 `UIElement` 를 수행해야 하는 경우입니다. 이 경우 먼저 요소를 [Platform::Object](../cppcx/platform-object-class.md)^으로 캐스팅한 다음 동적 캐스팅을 수행해야 합니다.  
   

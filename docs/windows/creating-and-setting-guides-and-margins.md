@@ -1,13 +1,10 @@
 ---
-title: "안내선 및 여백 만들기 및 설정 | Microsoft Docs"
-ms.custom: 
+title: 안내선 및 여백 만들기 및 설정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,18 +17,16 @@ helpviewer_keywords:
 - guides, moving
 - margins, moving
 ms.assetid: fafa4545-8f00-436f-b590-300e76601156
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e767eaa8fbb91f0cf49c63d5d7aca3a05c5dd518
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0b548f48fc079fe26ae43c0553bef27f2348bad6
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>안내선과 여백 만들기 및 설정
 이동 하는 컨트롤에 컨트롤을 추가 하거나 현재 레이아웃을 다시 정렬, 안내선 수 있는지 여부를 정확 하 게 내 대화 상자에서 컨트롤 정렬 합니다. 안내선은 눈금자 (위쪽에 대화 상자 편집기의 왼쪽을 따라)에서 해당 화살표 편집기에 표시 되는 대화 상자에서 파란색 점선으로 나타납니다.  

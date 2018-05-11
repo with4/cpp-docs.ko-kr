@@ -1,13 +1,10 @@
 ---
-title: "MIDL 속성 페이지 | Microsoft Docs"
-ms.custom: 
+title: MIDL 속성 페이지 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - MIDL, property pages
 - property pages, MIDL
 ms.assetid: 57498a01-fccc-4a0e-a036-6ff702f83126
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61bf005ca65948ea347fb6fed71db108628402b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f4b32aaa7626bcb5cfabc59e0d3b9554d73379e5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="midl-property-pages"></a>MIDL 속성 페이지
 **MIDL** 노드에 여러 속성 페이지가 포함 되어 있습니다. 이러한 페이지에 액세스하려면 .idl 파일을 마우스 오른쪽 단추로 클릭 **솔루션 탐색기**합니다.  

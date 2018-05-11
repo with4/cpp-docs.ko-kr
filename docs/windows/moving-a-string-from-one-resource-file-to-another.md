@@ -1,13 +1,10 @@
 ---
-title: "리소스 파일 사이의 문자열 이동 | Microsoft Docs"
-ms.custom: 
+title: 리소스 파일 사이의 문자열 이동 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - string editing, moving strings between resources
 - String editor, moving strings between files
 ms.assetid: 94f8ee81-9b4c-4788-ba95-68c58db38029
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ecb999052aa23d173a6a4113007cbd8452510e5f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1481f04b88d6ab63486885d93b971c3023d3e0d2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="moving-a-string-from-one-resource-file-to-another"></a>리소스 파일 사이의 문자열 이동
 ### <a name="to-move-a-string-from-one-resource-script-file-to-another"></a>문자열을 하나의 리소스 스크립트 파일에서 다른 컴퓨터로 이동 하려면  

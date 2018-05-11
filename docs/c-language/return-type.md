@@ -1,13 +1,10 @@
 ---
-title: "반환 형식 | Microsoft Docs"
-ms.custom: 
+title: 반환 형식 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - return keyword [C++], function return types
 - functions [C++], return types
 ms.assetid: 3e5b8a97-b341-48c5-8be8-8986980ef586
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9768baa53e39f1b3243aba24385d592010c3d81a
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 18d90604ccaebab2d3ed7812835c711d4d56995a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="return-type"></a>반환 형식
 함수의 반환 형식은 함수에 의해 반환된 값의 크기와 형식을 설정하며, 아래 구문에 나타난 type-specifier에 대응됩니다.  
@@ -38,7 +33,7 @@ ms.lasthandoff: 03/16/2018
  *function-definition*:  
  *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
   
- /\* *attribute-seq*는 Microsoft 전용임 \*/  
+ /\* *attribute-seq*는 Microsoft 전용임 */  
   
  *declaration-specifiers*:  
  *storage-class-specifier declaration-specifiers* opt  

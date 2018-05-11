@@ -1,12 +1,9 @@
 ---
-title: "관리 되는, 관리 되지 않는 | Microsoft Docs"
-ms.custom: 
+title: 관리 되는, 관리 되지 않는 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.unmanaged
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - pragmas, managed
 - unmanaged pragma
 ms.assetid: f072ddcc-e1ec-408a-8ce1-326ddb60e4a4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc7e86e053cec68a3a25c753b7c3b7fb8ab50363
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 316866ac047b607ec4c92d7c6d4f8ff233ed9a3f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="managed-unmanaged"></a>관리되는, 관리되지 않는
 함수를 관리되거나 관리되지 않는 것으로 컴파일하기 위해 함수 수준 제어를 사용하도록 설정합니다.  
@@ -65,7 +60,7 @@ ms.lasthandoff: 02/23/2018
   
  자세한 내용은 참조 [혼합형 어셈블리 초기화](../dotnet/initialization-of-mixed-assemblies.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```cpp  
 // pragma_directives_managed_unmanaged.cpp  

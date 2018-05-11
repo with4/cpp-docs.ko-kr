@@ -1,13 +1,10 @@
 ---
-title: "환경 변수 매크로 | Microsoft Docs"
-ms.custom: 
+title: 환경 변수 매크로 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - environment variables, macros in NMAKE
 - macros, environment-variable
 ms.assetid: f8e96635-0906-47b0-9f56-12a6fdf5e347
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69fae15b7a12d990d2fb2c8e457bfdc0407f7702
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9ebebb6e7d237746f96c7ac7e27c249244ff825b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="environment-variable-macros"></a>환경 변수 매크로
 NMAKE는 매크로 정의 대 한 세션을 시작 하기 전에 존재 하는 환경 변수를 상속 합니다. 변수를 설정한 경우 운영 체제 환경에서 NMAKE 매크로로 제공 됩니다. 상속 된 이름은 대문자로 변환 됩니다. 상속 전처리 하기 전에 발생합니다. 메이크파일의에 같은 이름의 모든 매크로 재정의 하려면 환경 변수에서 상속 하는 매크로를 /E 옵션을 사용 합니다.  

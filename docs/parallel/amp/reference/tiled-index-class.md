@@ -1,12 +1,9 @@
 ---
-title: "tiled_index 클래스 | Microsoft Docs"
-ms.custom: 
+title: tiled_index 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - tiled_index
@@ -28,17 +25,15 @@ dev_langs:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1ecd2e852dd36e51b158db9a5c6cd13be5c8d5c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fd28ab01d0d4180cc518cff230eb7df8261f4940
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tiledindex-class"></a>tiled_index 클래스
 에 대 한 인덱스를 제공는 [tiled_extent](tiled-extent-class.md) 개체입니다. 이 클래스에 전역 원점을 기준으로 로컬 타일 원점을 기준으로 요소에 액세스 하는 속성이 있습니다. 바둑판식으로 배열 된 공간에 대 한 자세한 내용은 참조 [를 사용 하 여 타일](../../../parallel/amp/using-tiles.md)합니다.  
@@ -103,9 +98,9 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 |[rank 상수](#tiled_index__rank)|차수를 저장 된 `tiled_index` 개체입니다.|  
 |[tile 상수](#tiled_index__tile)|저장소는 `index` 차수 1, 2 또는 3의 현재 타일의 좌표를 나타내는의 개체는 `tiled_extent` 개체입니다.|  
 |[tile_dim0 Constant](#tiled_index__tile_dim0)|가장 중요 한 차원 길이 저장합니다.|  
-|[tile_dim1 Constant](#tiled_index__tile_dim1)|다음 가장 중요 한 차원 길이 저장합니다.|  
+|[tile_dim1 상수](#tiled_index__tile_dim1)|다음 가장 중요 한 차원 길이 저장합니다.|  
 |[tile_dim2 Constant](#tiled_index__tile_dim2)|가장 덜 중요 한 차원 길이 저장합니다.|  
-|[tile_origin Constant](#tiled_index__tile_origin)|저장소는 `index` 개체의 현재 타일의 원점의 전역를 나타내는 차수 1, 2 또는 3 좌표는 `tiled_extent` 개체입니다.|  
+|[tile_origin 상수](#tiled_index__tile_origin)|저장소는 `index` 개체의 현재 타일의 원점의 전역를 나타내는 차수 1, 2 또는 3 좌표는 `tiled_extent` 개체입니다.|  
 
   
 ### <a name="public-data-members"></a>공용 데이터 멤버  
@@ -126,7 +121,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
  **네임스페이스:** 동시성  
 
 
-## <a name="tiled_index__ctor">tiled_index 생성자</a>  
+## <a name="tiled_index__ctor"></a>  tiled_index 생성자  
 `tiled_index` 클래스의 새 인스턴스를 초기화합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -166,7 +161,7 @@ tiled_index(
   
 |||  
 |-|-|  
-|name|설명|  
+|이름|설명|  
 |`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|새 인스턴스를 초기화는 `tile_index` 전역 좌표에서 타일 및 타일 로컬 좌표에 내의 상대적인 위치의 인덱스에서 클래스입니다. `_Global` 및 `_Tile_origin` 매개 변수에서 계산 됩니다.|  
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|새 인스턴스를 초기화는 `tile_index` 지정 된 복사 하 여 클래스 `tiled_index` 개체입니다.|  
 
@@ -219,7 +214,7 @@ const index<rank> local;
 static const int rank = _Rank;  
 ```  
 
-## <a name="tiled_index__tile"></a>  tile   
+## <a name="tiled_index__tile"></a>  바둑판식으로 배열   
 저장소는 [인덱스](index-class.md) 차수 1, 2 또는 3의 현재 타일의 좌표를 나타내는의 개체는 [tiled_extent](tiled-extent-class.md) 개체입니다.  
   
 ## <a name="syntax"></a>구문  

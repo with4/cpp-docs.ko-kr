@@ -1,12 +1,9 @@
 ---
 title: 'map:: clear (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::map::clear
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - clear member [STL/CLR]
 ms.assetid: 2a6a01fe-2998-447d-9ae8-6cb6343d0dfa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0af5d2bc19422c3e28550863d2197ebc5dd5343f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3e8f453e777bb1320fd88aeee68882f96d41d2fa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapclear-stlclr"></a>map::clear(STL/CLR)
 모든 요소를 제거합니다.  
@@ -40,7 +35,7 @@ void clear();
 ## <a name="remarks"></a>설명  
  멤버 함수 시그니처 [map:: erase (STL/CLR)](../dotnet/map-erase-stl-clr.md) `(` [map:: begin (STL/CLR)](../dotnet/map-begin-stl-clr.md) `(),` [map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md) `())`. 제어 되는 시퀀스 비어 있는지 확인 하려면 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_map_clear.cpp   

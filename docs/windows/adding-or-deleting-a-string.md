@@ -1,13 +1,10 @@
 ---
-title: "추가 또는 삭제 String | Microsoft Docs"
-ms.custom: 
+title: 추가 또는 삭제 String | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.string
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - strings [C++], deleting in string tables
 - string tables, adding strings
 ms.assetid: 077077b4-0f4b-4633-92d6-60b321164cab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0e485e1c689814e63c5a43edba2ded80967d576a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e15e29c99dba89ef29ba5b909c62f819bedf63f4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="adding-or-deleting-a-string"></a>문자열 추가 또는 삭제
 문자열 편집기를 사용 하 여 문자열 테이블에 새 항목을 신속 하 게 삽입할 수 있습니다. 새 문자열 테이블의 끝에 배치 되 고 사용 가능한 식별자가 지정 됩니다. ID, 값 또는 캡션 속성을 편집할 수 있습니다는 [속성 창](/visualstudio/ide/reference/properties-window) 필요에 따라 합니다.  

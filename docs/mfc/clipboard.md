@@ -1,13 +1,10 @@
 ---
-title: "클립보드 | Microsoft Docs"
-ms.custom: 
+title: 클립보드 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - Clipboard, programming
 - transferring data
 ms.assetid: a71b2824-1f14-4914-8816-54578d73ad4e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 304f20f94880b0bd8cb671788c5c06b69d25d377
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f2ad21bcbff31335f6ec79a4527ef7d99e07e547
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clipboard"></a>클립보드
 이 문서에서는 MFC 응용 프로그램에서 Windows 클립보드에 대 한 지원을 구현 하는 방법을 설명 합니다. 두 가지 방법으로 Windows 클립보드 사용 됩니다.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  클립보드는 핸들 또는 자체의 클래스를 포함 하지 않도록 Windows 세션 전체에서 공유 하는 시스템 서비스입니다. 클래스의 멤버 함수를 통해 클립보드 관리 [CWnd](../mfc/reference/cwnd-class.md)합니다.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [각 클립보드 메커니즘을 사용 하는 경우](../mfc/clipboard-when-to-use-each-clipboard-mechanism.md)  
   

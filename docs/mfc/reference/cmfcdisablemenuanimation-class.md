@@ -1,12 +1,9 @@
 ---
-title: "CMFCDisableMenuAnimation 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCDisableMenuAnimation 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDisableMenuAnimation
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 458a35e708db41ee393da70aedd653aca44cf802
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3a7a2449fe65a0b17bf770ea2bfb8f3fe750cba0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation 클래스
 팝업 메뉴 애니메이션 사용 하지 않도록 설정 합니다.  
@@ -59,7 +54,7 @@ class CMFCDisableMenuAnimation
   
 |||  
 |-|-|  
-|name|설명|  
+|이름|설명|  
 |`CMFCDisableMenuAnimation::m_animType`|이전 팝업 메뉴 애니메이션 형식을 저장합니다.|  
   
 ### <a name="remarks"></a>설명  
@@ -69,7 +64,7 @@ class CMFCDisableMenuAnimation
   
  만들 수는 `CMFCDisableMenuAnimation` 단일 함수 전체에서 팝업 메뉴 애니메이션 사용 하지 않으려면 스택에 개체입니다. 팝업 메뉴 애니메이션 함수 사이 사용 하지 않도록 설정 하려는 경우 만들기는 `CMFCDisableMenuAnimation` 개체 힙에 대 한 다음 팝업 메뉴 애니메이션 복원 하려는 경우 삭제 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 스택 메뉴 애니메이션을 일시적으로 사용 하는 방법을 보여 줍니다.  
   
  [!code-cpp[NVC_MFC_Misc#1](../../mfc/reference/codesnippet/cpp/cmfcdisablemenuanimation-class_1.h)]  
@@ -80,7 +75,7 @@ class CMFCDisableMenuAnimation
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxpopupmenu.h  
   
-##  <a name="restore"></a>CMFCDisableMenuAnimation::Restore  
+##  <a name="restore"></a>  CMFCDisableMenuAnimation::Restore  
  프레임 워크 팝업 메뉴를 표시 하는 데 사용 하는 이전 애니메이션을 복원 합니다.  
   
 ```  

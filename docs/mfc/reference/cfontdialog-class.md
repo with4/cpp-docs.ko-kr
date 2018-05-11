@@ -1,12 +1,9 @@
 ---
-title: "CFontDialog 클래스 | Microsoft Docs"
-ms.custom: 
+title: CFontDialog 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFontDialog
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab9420ce86785595bb2d172ef32afe89c2845374
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d64ec306f77174b72c130c3afc14a732464c43be
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfontdialog-class"></a>CFontDialog 클래스
 글꼴 선택 대화 상자 응용 프로그램에 통합할 수 있습니다.  
@@ -102,13 +97,13 @@ class CFontDialog : public CCommonDialog
   
  한 번는 `CFontDialog` 개체 생성 되었으며, 사용할 수 있습니다는 `m_cf` 구조를 값 이나 대화 상자에서 컨트롤의 상태를 초기화 합니다. [m_cf](#m_cf) 형식의 구조는 [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832)합니다. 이 구조에 대 한 자세한 내용은 Windows SDK를 참조 하십시오.  
   
- 대화 개체의 컨트롤을 초기화 한 다음 호출에서 `DoModal` 멤버 함수를 대화 상자를 표시 하 고 글꼴을 선택 하는 데 사용할 수 있습니다. `DoModal`사용자는 확인 선택 여부를 반환 합니다 ( **IDOK**) 또는 취소 ( **IDCANCEL**) 단추입니다.  
+ 대화 개체의 컨트롤을 초기화 한 다음 호출에서 `DoModal` 멤버 함수를 대화 상자를 표시 하 고 글꼴을 선택 하는 데 사용할 수 있습니다. `DoModal` 사용자는 확인 선택 여부를 반환 합니다 ( **IDOK**) 또는 취소 ( **IDCANCEL**) 단추입니다.  
   
  경우 `DoModal` 반환 **IDOK**, 중 하나를 사용 `CFontDialog`의 사용자가 입력 정보를 검색 하는 멤버 함수입니다.  
   
  Windows를 사용할 수 있습니다 [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) 함수는 오류에 대 한 자세한 내용을 보려면 및 대화 상자를 초기화 하는 동안 오류가 발생 한 것인지 확인 합니다. 이 함수에 대 한 자세한 내용은 Windows SDK를 참조 하십시오.  
   
- `CFontDialog`COMMDLG에 의존합니다. Windows 버전 3.1 이상와 함께 제공 되는 DLL 파일입니다.  
+ `CFontDialog` COMMDLG에 의존합니다. Windows 버전 3.1 이상와 함께 제공 되는 DLL 파일입니다.  
   
  대화 상자를 사용자 지정 하려면 클래스를 파생 `CFontDialog`, 사용자 지정 대화 상자 템플릿을 제공 하 고 확장 된 컨트롤에서 알림 메시지를 처리 한 메시지 맵을 추가 합니다. 처리 되지 않은 모든 메시지는 기본 클래스에 전달 되어야 합니다.  
   
@@ -132,7 +127,7 @@ class CFontDialog : public CCommonDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdlgs.h  
   
-##  <a name="cfontdialog"></a>CFontDialog::CFontDialog  
+##  <a name="cfontdialog"></a>  CFontDialog::CFontDialog  
  `CFontDialog` 개체를 생성합니다.  
   
 ```  
@@ -150,7 +145,7 @@ CFontDialog(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- l`plfInitial`  
+ L `plfInitial`  
  에 대 한 포인터는 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) 일부 글꼴 특성을 설정할 수 있는 데이터 구조입니다.  
   
  `charFormat`  
@@ -171,10 +166,10 @@ CFontDialog(
 > [!NOTE]
 >  rich edit 컨트롤이 지원되지 않는 경우에만 이 함수의 첫 번째 버전이 제공됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#78](../../mfc/codesnippet/cpp/cfontdialog-class_1.cpp)]  
   
-##  <a name="domodal"></a>CFontDialog::DoModal  
+##  <a name="domodal"></a>  CFontDialog::DoModal  
  Windows 일반 글꼴 대화 상자를 표시 하 고 사용자가 글꼴을 선택할 수 있도록 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -191,10 +186,10 @@ virtual INT_PTR DoModal();
   
  경우 `DoModal` 반환 **IDOK**, 다른 멤버를 설정 또는 사용자가 정보 입력 대화 상자에 검색 함수를 호출할 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   에 대 한 예제를 참조 하십시오. [CFontDialog::CFontDialog](#cfontdialog) 및 [CFontDialog::GetColor](#getcolor)합니다.  
   
-##  <a name="getcharformat"></a>CFontDialog::GetCharFormat  
+##  <a name="getcharformat"></a>  CFontDialog::GetCharFormat  
  선택한 글꼴의 문자 형식을 검색 합니다.  
   
 ```  
@@ -205,7 +200,7 @@ void GetCharFormat(CHARFORMAT& cf) const;
  `cf`  
  A [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) 선택한 글꼴의 문자 서식에 대 한 정보가 포함 된 구조입니다.  
   
-##  <a name="getcolor"></a>CFontDialog::GetColor  
+##  <a name="getcolor"></a>  CFontDialog::GetColor  
  선택한 글꼴 색을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -215,10 +210,10 @@ COLORREF GetColor() const;
 ### <a name="return-value"></a>반환 값  
  선택한 글꼴의 색입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#79](../../mfc/codesnippet/cpp/cfontdialog-class_2.cpp)]  
   
-##  <a name="getcurrentfont"></a>CFontDialog::GetCurrentFont  
+##  <a name="getcurrentfont"></a>  CFontDialog::GetCurrentFont  
  멤버에는 현재 선택 된 글꼴 특성을 할당 하려면이 함수를 호출 하는 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) 구조입니다.  
   
 ```  
@@ -234,10 +229,10 @@ void GetCurrentFont(LPLOGFONT lplf);
   
  이 함수를 호출 하는 동안 호출 되 면 [DoModal](#domodal), 시간에 현재 선택 영역을 반환 합니다 (사용자에 게 표시 하거나이 대화 상자에서 변경). 이 함수를 호출한 후 호출 되 면 `DoModal` (경우에만 `DoModal` 반환 **IDOK**), 실제 선택 된 사용자를 반환 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#80](../../mfc/codesnippet/cpp/cfontdialog-class_3.cpp)]  
   
-##  <a name="getfacename"></a>CFontDialog::GetFaceName  
+##  <a name="getfacename"></a>  CFontDialog::GetFaceName  
  선택한 글꼴의 글꼴 이름을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -247,10 +242,10 @@ CString GetFaceName() const;
 ### <a name="return-value"></a>반환 값  
  선택한 글꼴의 글꼴 이름을 `CFontDialog` 대화 상자.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#81](../../mfc/codesnippet/cpp/cfontdialog-class_4.cpp)]  
   
-##  <a name="getsize"></a>CFontDialog::GetSize  
+##  <a name="getsize"></a>  CFontDialog::GetSize  
  선택한 글꼴의 크기를 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -260,10 +255,10 @@ int GetSize() const;
 ### <a name="return-value"></a>반환 값  
  글꼴의 크기는 포인트의 1/10 초.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#82](../../mfc/codesnippet/cpp/cfontdialog-class_5.cpp)]  
   
-##  <a name="getstylename"></a>CFontDialog::GetStyleName  
+##  <a name="getstylename"></a>  CFontDialog::GetStyleName  
  선택한 글꼴의 스타일 이름을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -273,10 +268,10 @@ CString GetStyleName() const;
 ### <a name="return-value"></a>반환 값  
  글꼴의 스타일 이름입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#83](../../mfc/codesnippet/cpp/cfontdialog-class_6.cpp)]  
   
-##  <a name="getweight"></a>CFontDialog::GetWeight  
+##  <a name="getweight"></a>  CFontDialog::GetWeight  
  선택한 글꼴의 두께 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -289,10 +284,10 @@ int GetWeight() const;
 ### <a name="remarks"></a>설명  
  글꼴의 두께에 자세한 내용은 참조 [CFont::CreateFont](../../mfc/reference/cfont-class.md#createfont)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#84](../../mfc/codesnippet/cpp/cfontdialog-class_7.cpp)]  
   
-##  <a name="isbold"></a>CFontDialog::IsBold  
+##  <a name="isbold"></a>  CFontDialog::IsBold  
  선택한 글꼴이 굵게 인지 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -302,10 +297,10 @@ BOOL IsBold() const;
 ### <a name="return-value"></a>반환 값  
  선택한 글꼴에 굵게 표시 된 특성, 그렇지 않으면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#85](../../mfc/codesnippet/cpp/cfontdialog-class_8.cpp)]  
   
-##  <a name="isitalic"></a>CFontDialog::IsItalic  
+##  <a name="isitalic"></a>  CFontDialog::IsItalic  
  선택한 글꼴에 기울임꼴 인지 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -315,10 +310,10 @@ BOOL IsItalic() const;
 ### <a name="return-value"></a>반환 값  
  선택한 글꼴에 기울임꼴 특징이, 그렇지 않으면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#86](../../mfc/codesnippet/cpp/cfontdialog-class_9.cpp)]  
   
-##  <a name="isstrikeout"></a>CFontDialog::IsStrikeOut  
+##  <a name="isstrikeout"></a>  CFontDialog::IsStrikeOut  
  선택한 글꼴 서식을 취소선으로 표시 되는지 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -328,10 +323,10 @@ BOOL IsStrikeOut() const;
 ### <a name="return-value"></a>반환 값  
  선택한 글꼴에 취소선 특징, 그렇지 않으면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#87](../../mfc/codesnippet/cpp/cfontdialog-class_10.cpp)]  
   
-##  <a name="isunderline"></a>CFontDialog::IsUnderline  
+##  <a name="isunderline"></a>  CFontDialog::IsUnderline  
  선택한 글꼴 밑줄이 그어집니다 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -341,10 +336,10 @@ BOOL IsUnderline() const;
 ### <a name="return-value"></a>반환 값  
  선택한 글꼴에 밑줄 특징, 그렇지 않으면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#88](../../mfc/codesnippet/cpp/cfontdialog-class_11.cpp)]  
   
-##  <a name="m_cf"></a>CFontDialog::m_cf  
+##  <a name="m_cf"></a>  CFontDialog::m_cf  
  해당 멤버가 대화 상자 개체의 특성을 저장 하는 구조입니다.  
   
 ```  
@@ -354,7 +349,7 @@ CHOOSEFONT m_cf;
 ### <a name="remarks"></a>설명  
  생성 한 후 한 `CFontDialog` 개체를 사용할 수 있습니다 `m_cf` 호출 하기 전에 대화 상자의 다양 한 측면을 수정 하는 `DoModal` 멤버 함수입니다. 이 구조에 대 한 자세한 내용은 참조 하십시오. [CHOOSEFONT](http://msdn.microsoft.com/library/windows/desktop/ms646832) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#89](../../mfc/codesnippet/cpp/cfontdialog-class_12.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

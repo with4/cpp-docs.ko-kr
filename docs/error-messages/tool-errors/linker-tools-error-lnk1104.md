@@ -1,12 +1,9 @@
 ---
-title: "링커 도구 오류 LNK1104 | Microsoft Docs"
-ms.custom: 
+title: 링커 도구 오류 LNK1104 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK1104
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c91853fe3310d8e577ac884545f86d1f4e1d4521
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2b832d4bceab88fbf3fbe8325a414669d11073c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk1104"></a>링커 도구 오류 LNK1104
 
@@ -101,4 +96,4 @@ IDE에서이 문제를 해결 하려면 확인 된 **라이브러리 디렉터�
 
 디스크 공간이 부족 오류가 발생할 수 있습니다. 링커는 여러 사례에서 임시 파일을 사용합니다. 충분 한 디스크 공간이 있는 경우에 매우 큰 링크 상당 부분 사용 하거나 사용 가능한 디스크 공간을 조각 수 있습니다. 사용 하는 것이 좋습니다는 [/OPT (최적화)](../../build/reference/opt-optimizations.md) 옵션; 수행 전이적 COMDAT 제거 읽기 모든 개체 파일 여러 번입니다.
 
-경우는 *filename* LNK 라는*nnn*, 임시 파일의 링커에 의해 생성 된 파일 이름인, TMP 환경 변수에서 지정한 디렉터리가 없거나 둘 이상 TMP 환경 변수에 대 한 디렉터리를 지정할 수 있습니다. TMP 환경 변수에 대해 하나의 디렉터리 경로만 지정 해야 합니다.
+경우는 *filename* LNK 라는*nnn*, 임시 파일의 링커에 의해 생성 된 파일 이름인 TMP 환경 변수에 지정 된 디렉터리가 존재 하지 않을 수 있습니다, 또는 둘 이상의 디렉터리가 될 수 있습니다 TMP 환경 변수에 대해 지정 합니다. TMP 환경 변수에 대해 하나의 디렉터리 경로만 지정 해야 합니다.

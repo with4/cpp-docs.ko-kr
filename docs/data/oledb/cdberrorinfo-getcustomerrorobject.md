@@ -1,12 +1,9 @@
 ---
 title: 'Cdberrorinfo:: Getcustomerrorobject | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CDBErrorInfo::GetCustomErrorObject
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - GetCustomErrorObject method
 ms.assetid: 295c053c-b76c-47a5-adfb-333e65d2df0d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d19513bf854417637c06a322e93c30f16cd2e249
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e0724b88b502eb1c7f573b08673d65c1905b81b4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdberrorinfogetcustomerrorobject"></a>CDBErrorInfo::GetCustomErrorObject
 호출 [IErrorRecords::GetCustomErrorObject](https://msdn.microsoft.com/en-us/library/ms725417.aspx) 를 사용자 지정 오류 개체에는 인터페이스에 대 한 포인터를 반환 합니다.  

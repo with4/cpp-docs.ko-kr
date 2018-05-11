@@ -1,12 +1,9 @@
 ---
-title: "IResourceManager 구조체 | Microsoft Docs"
-ms.custom: 
+title: IResourceManager 구조체 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IResourceManager
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d309e057a8f829b11cc97ad60f3f5d56ff7ecaff
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: afd87a71c8f5d41e38f6a1b18be96a7bab8f3bb8
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="iresourcemanager-structure"></a>IResourceManager 구조체
 동시성 런타임의 리소스 관리자에 대한 인터페이스입니다. 스케줄러가 리소스 관리자와 통신하는 데 사용되는 인터페이스입니다.  
@@ -103,7 +98,7 @@ virtual void CreateNodeTopology(
   
  [invalid_operation](invalid-operation-class.md) 다른 스케줄러는 프로세스에 존재 하는 동안이 메서드를 호출 하면 throw 됩니다.  
   
-##  <a name="getavailablenodecount"></a>  IResourceManager::GetAvailableNodeCount Method  
+##  <a name="getavailablenodecount"></a>  Iresourcemanager:: Getavailablenodecount 메서드  
  리소스 관리자에서 사용할 수 있는 노드의 수를 반환합니다.  
   
 ```
@@ -123,7 +118,7 @@ virtual ITopologyNode* GetFirstNode() const = 0;
 ### <a name="return-value"></a>반환 값  
  리소스 관리자에 의해 정의 된 열거 순서에서 첫 번째 노드.  
   
-##  <a name="iresourcemanager__osversion"></a>  IResourceManager::OSVersion Enumeration  
+##  <a name="iresourcemanager__osversion"></a>  Iresourcemanager:: Osversion 열거형  
  운영 체제 버전을 나타내는 열거 형식입니다.  
   
 ```

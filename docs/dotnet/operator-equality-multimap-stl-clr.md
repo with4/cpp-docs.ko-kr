@@ -1,12 +1,9 @@
 ---
-title: "연산자 = = (multimap) (STL/CLR) | Microsoft Docs"
-ms.custom: 
+title: 연산자 = = (multimap) (STL/CLR) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multimap::operator==
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator== member [STL/CLR]
 ms.assetid: 19f22238-7acf-47dc-b95e-310b39f554ad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a9f6052bb41878c0659b291e512b0274d5205c70
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ba0b7cf96a11e6d80449211782879fa8eee630f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-multimap-stlclr"></a>operator== (multimap)(STL/CLR)
 같음 비교를 나열 합니다.  
@@ -50,7 +45,7 @@ template<typename Key,
 ## <a name="remarks"></a>설명  
  연산자 함수는 시퀀스에 의해 제어 하는 경우에 true를 반환 `left` 및 `right` 동일한 길이 및 각 위치에 대 한 `i`, `left[i] ==` `right[i]`합니다. 테스트를 사용 하는지 여부를 `left` 와 동일 하 게 정렬 되 `right` 두 multimap 경우 요소 별로 비교 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_multimap_operator_eq.cpp   

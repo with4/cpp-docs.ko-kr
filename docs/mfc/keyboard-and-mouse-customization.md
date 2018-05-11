@@ -1,30 +1,25 @@
 ---
-title: "키보드 및 마우스 사용자 지정 | Microsoft Docs"
-ms.custom: 
+title: 키보드 및 마우스 사용자 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - customizations [MFC], keyboard and mouse (MFC Extensions)
 - keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b031c4af05df7ad2b8c0850cefb116d4ac249d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45b073ff2a9565c9106111299ba5b1b9d5a47351
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="keyboard-and-mouse-customization"></a>키보드 및 마우스 사용자 지정
 MFC 응용 프로그램 키보드 및 마우스 입력을 처리 하는 방법을 사용자 지정할 수 있습니다. 사용자 명령에 바로 가기 키를 지정 하 여 키보드 입력을 사용자 지정할 수 있습니다. 사용자를 사용자 지정할 수도 마우스 입력 내부 응용 프로그램의 특정 windows 사용자가 실행 해야 하는 명령을 선택 합니다. 이 응용 프로그램에 대 한 입력을 사용자 지정 하는 방법을 설명 합니다.  

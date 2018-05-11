@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonMainPanel 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCRibbonMainPanel 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonMainPanel
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], AddToRight
 - CMFCRibbonMainPanel [MFC], GetCommandsFrame
 ms.assetid: 1af78798-5e75-4365-9c81-a54aa5679602
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8b5508abdc90c4c566d078f2f75c30822c7a18e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 05257749c95b619c479538a1322746ae2b487b6a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel 클래스
 클릭할 때 표시 되는 리본 패널을 구현 하는 [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)합니다.  
@@ -86,7 +81,7 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxRibbonMainPanel.h  
   
-##  <a name="add"></a>CMFCRibbonMainPanel::Add  
+##  <a name="add"></a>  CMFCRibbonMainPanel::Add  
  응용 프로그램 단추 패널의 왼쪽된 창에는 리본 요소를 추가합니다.  
   
 ```  
@@ -94,13 +89,13 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] [out]`pElem`  
+ [in] [out] `pElem`  
  기본 패널에 추가 하는 리본 요소에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
  패널에 리본 요소를 추가합니다. 이 메서드를 사용 하 여 추가 된 요소는 기본 패널의 왼쪽된 열에 배치 됩니다.  
   
-##  <a name="addrecentfileslist"></a>CMFCRibbonMainPanel::AddRecentFilesList  
+##  <a name="addrecentfileslist"></a>  CMFCRibbonMainPanel::AddRecentFilesList  
  최근 파일 목록 메뉴에 텍스트 문자열을 추가합니다.  
   
 ```  
@@ -118,7 +113,7 @@ void AddRecentFilesList(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="addtobottom"></a>CMFCRibbonMainPanel::AddToBottom  
+##  <a name="addtobottom"></a>  CMFCRibbonMainPanel::AddToBottom  
  응용 프로그램 리본 패널의 아래쪽 창에는 리본 요소를 추가합니다.  
   
 ```  
@@ -126,12 +121,12 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] [out]`pElem`  
+ [in] [out] `pElem`  
  기본 패널의 아래쪽에 추가 하려면 리본 요소에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="addtoright"></a>CMFCRibbonMainPanel::AddToRight  
+##  <a name="addtoright"></a>  CMFCRibbonMainPanel::AddToRight  
  응용 프로그램 단추 패널의 오른쪽 창에는 리본 요소를 추가합니다.  
   
 ```  
@@ -150,7 +145,7 @@ void AddToRight(
 ### <a name="remarks"></a>설명  
  이 함수를 사용 하 여 오른쪽 패널에 리본 요소를 추가 합니다. 오른쪽 패널에는 일반적으로 최근 파일 목록 표시 하지만 다른 모든 리본 요소 여기에 추가할 수 있습니다.  
   
-##  <a name="getcommandsframe"></a>CMFCRibbonMainPanel::GetCommandsFrame  
+##  <a name="getcommandsframe"></a>  CMFCRibbonMainPanel::GetCommandsFrame  
  기본 리본 패널의 영역을 나타내는 사각형을 반환 합니다.  
   
 ```  

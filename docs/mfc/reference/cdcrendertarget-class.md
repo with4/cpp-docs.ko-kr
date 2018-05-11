@@ -1,12 +1,9 @@
 ---
-title: "CDCRenderTarget 클래스 | Microsoft Docs"
-ms.custom: 
+title: CDCRenderTarget 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDCRenderTarget
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], GetDCRenderTarget
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 502c9d7cedf782c6ce23ebaf22d30c9b0e5e7409
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4129f57d8985a6e3368a4caf3574669342f06bc0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdcrendertarget-class"></a>CDCRenderTarget 클래스
 ID2D1DCRenderTarget에 대 한 래퍼입니다.  
@@ -76,7 +71,7 @@ class CDCRenderTarget : public CRenderTarget;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|ID2D1DCRenderTarget 개체에 대 한 포인터입니다.|  
   
@@ -90,7 +85,7 @@ class CDCRenderTarget : public CRenderTarget;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxrendertarget.h  
   
-##  <a name="attach"></a>CDCRenderTarget::Attach  
+##  <a name="attach"></a>  CDCRenderTarget::Attach  
  기존 연결 개체를 대상 인터페이스를 렌더링 합니다.  
   
 ```  
@@ -101,7 +96,7 @@ void Attach(ID2D1DCRenderTarget* pTarget);
  `pTarget`  
  기존 렌더링 대상 인터페이스입니다. NULL 일 수 없습니다.  
   
-##  <a name="binddc"></a>CDCRenderTarget::BindDC  
+##  <a name="binddc"></a>  CDCRenderTarget::BindDC  
  렌더링 대상을 그리기 명령을 실행 하는 장치 컨텍스트를 바인딩합니다.  
   
 ```  
@@ -120,14 +115,14 @@ BOOL BindDC(
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
   
-##  <a name="cdcrendertarget"></a>CDCRenderTarget::CDCRenderTarget  
+##  <a name="cdcrendertarget"></a>  CDCRenderTarget::CDCRenderTarget  
  CDCRenderTarget 개체를 만듭니다.  
   
 ```  
 CDCRenderTarget();
 ```  
   
-##  <a name="create"></a>CDCRenderTarget::Create  
+##  <a name="create"></a>  CDCRenderTarget::Create  
  CDCRenderTarget을 만듭니다.  
   
 ```  
@@ -141,7 +136,7 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
   
-##  <a name="detach"></a>CDCRenderTarget::Detach  
+##  <a name="detach"></a>  CDCRenderTarget::Detach  
  렌더링 대상 인터페이스 개체에서 분리  
   
 ```  
@@ -151,7 +146,7 @@ ID2D1DCRenderTarget* Detach();
 ### <a name="return-value"></a>반환 값  
  대상 인터페이스를 렌더링 하는 분리 된에 대 한 포인터입니다.  
   
-##  <a name="getdcrendertarget"></a>CDCRenderTarget::GetDCRenderTarget  
+##  <a name="getdcrendertarget"></a>  CDCRenderTarget::GetDCRenderTarget  
  반환 ID2D1DCRenderTarget 인터페이스  
   
 ```  
@@ -161,14 +156,14 @@ ID2D1DCRenderTarget* GetDCRenderTarget();
 ### <a name="return-value"></a>반환 값  
  ID2D1DCRenderTarget 인터페이스 또는 개체가 아직 초기화 되지 않은 경우에 NULL 포인터입니다.  
   
-##  <a name="m_pdcrendertarget"></a>CDCRenderTarget::m_pDCRenderTarget  
+##  <a name="m_pdcrendertarget"></a>  CDCRenderTarget::m_pDCRenderTarget  
  ID2D1DCRenderTarget 개체에 대 한 포인터입니다.  
   
 ```  
 ID2D1DCRenderTarget* m_pDCRenderTarget;  
 ```  
   
-##  <a name="operator_id2d1dcrendertarget_star"></a>CDCRenderTarget::operator ID2D1DCRenderTarget *  
+##  <a name="operator_id2d1dcrendertarget_star"></a>  CDCRenderTarget::operator ID2D1DCRenderTarget *  
  반환 ID2D1DCRenderTarget 인터페이스  
   
 ```  

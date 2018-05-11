@@ -1,12 +1,9 @@
 ---
 title: appdomain | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - appdomain_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - appdomain __declspec keyword
 - __declspec keyword [C++], appdomain
 ms.assetid: 29d843cb-cb6b-4d1b-a48d-d928a877234d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36df0066d3e460efceb130d257a1b6f87231dd4a
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 14b6f23e5690c98553448c827fe287bd413d6f97
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appdomain"></a>appdomain
 관리되는 응용 프로그램의 각 응용 프로그램 도메인에 특정 전역 변수 또는 정적 멤버 변수의 자체 복사본이 포함되어야 하도록 지정합니다. 참조 [응용 프로그램 도메인 및 Visual c + +](../dotnet/application-domains-and-visual-cpp.md) 자세한 정보에 대 한 합니다.  
@@ -45,7 +40,7 @@ ms.lasthandoff: 02/14/2018
   
  특정 응용 프로그램 도메인에서 함수를 호출 하는 방법에 대 한 정보를 참조 하십시오. [call_in_appdomain 함수](../dotnet/call-in-appdomain-function.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // declspec_appdomain.cpp  

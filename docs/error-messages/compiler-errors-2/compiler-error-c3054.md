@@ -1,13 +1,10 @@
 ---
-title: "컴파일러 오류 C3054 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C3054 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C3054
 dev_langs:
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C3054
 ms.assetid: 6f4b7ac5-0d12-474b-b611-76ff26ee41ac
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d69936195c138256c984c5e21e1713ad208c8eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e9880373d0d401c15754a2aaf6759fe2c6c68574
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3054"></a>컴파일러 오류 C3054
 현재 제네릭 클래스 또는 함수에서는 '#pragma omp parallel'가 지원되지 않습니다.  
   
  자세한 내용은 참조 [제네릭](../../windows/generics-cpp-component-extensions.md) 및 [OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C3054를 생성합니다.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "연산자&lt; (pair) (STL/CLR) | Microsoft Docs"
-ms.custom: 
+title: 연산자&lt; (pair) (STL/CLR) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::pair::operator<
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator< member [STL/CLR]
 ms.assetid: e7061b29-1289-4ea9-ae69-feea8abbfb25
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3deb4737f8e82dd6fa8cd7ce99bfa67ed9f1b5fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 615056b8a554119a9be1cf49865af66f04db02c7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operatorlt-pair-stlclr"></a>연산자&lt; (pair) (STL/CLR)
 쌍 비교를 보다 작음입니다.  
@@ -50,7 +45,7 @@ template<typename Value1,
 ## <a name="remarks"></a>설명  
  연산자 함수 반환 `left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second`합니다. 테스트를 사용 하는지 여부를 `left` 정렬 되는 하기 전에 `right` 때 두 쌍은 요소 별로 비교 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_pair_operator_lt.cpp   

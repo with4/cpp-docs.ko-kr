@@ -1,29 +1,24 @@
 ---
-title: "사용자 정의 도구 | Microsoft Docs"
-ms.custom: 
+title: 사용자 정의 도구 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17f0751a2cb3f78730ec948d737dc99b85c2e735
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3b755fc35c98652ab87231e9d8f58cde748bfc0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-defined-tools"></a>사용자 정의 형식
 MFC는 사용자 지정 도구를 지원합니다. 사용자 정의 도구는 외부 사용자가 지정한 프로그램을 실행 하는 특별 한 명령입니다. 사용자 정의 도구를 관리 하려면 사용자 지정 프로세스를 사용할 수 있습니다. 그러나 응용 프로그램 개체에서 파생 되지 않은 경우이 과정을 사용할 수 없습니다 [CWinAppEx 클래스](../mfc/reference/cwinappex-class.md)합니다. 사용자 지정 하는 방법에 대 한 자세한 내용은 참조 [MFC에 대 한 사용자 지정](../mfc/customization-for-mfc.md)합니다.  

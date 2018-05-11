@@ -1,13 +1,10 @@
 ---
-title: "메모리 관리: 크기 조정 가능한 메모리 블록 | Microsoft Docs"
-ms.custom: 
+title: '메모리 관리: 크기 조정 가능한 메모리 블록 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - blocks [MFC], memory allocation
 - resizable memory blocks [MFC]
 ms.assetid: f0efe6f4-a3ed-4541-9195-51ec1291967a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fce06d27a091ad1740c882367358cf69a6dc3e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3bbd97899261f85454824fcab261d330b04e25fd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="memory-management-resizable-memory-blocks"></a>메모리 관리: 크기 조정 가능한 메모리 블록
 **새** 및 **삭제** 연산자, 문서에 설명 된 [메모리 관리: 예](../mfc/memory-management-examples.md)는 것이 좋지만 할당 및 고정 크기의 메모리 블록을 취소 하 고 개체입니다. 경우에 따라서는 응용 프로그램 크기 조정 가능한 메모리 블록을 할 수 있습니다. 표준 C 런타임 라이브러리 함수를 사용 해야 [malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md), 및 [무료](../c-runtime-library/reference/free.md) 힙의 크기 조정 가능한 메모리 블록을 관리할 수 있습니다.  

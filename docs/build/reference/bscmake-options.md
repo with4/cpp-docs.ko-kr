@@ -2,12 +2,9 @@
 title: BSCMAKE 옵션 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCBscMakeTool.OutputFile
 - VC.Project.VCBscMakeTool.SuppressStartupBanner
@@ -38,17 +35,15 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46c258a5591615bb277823ccc5261fade3c5e2af
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 16fd9bc8813179d23e83ab0a21a84ad815501bf6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bscmake-options"></a>BSCMAKE 옵션
 이 섹션에서는 BSCMAKE를 제어 하는 것에 대 한 사용할 수 있는 옵션을 설명 합니다. 몇 가지 옵션에는 특정 정보를 포함 시키거나 제외 시켜 찾아보기 정보 파일의 내용을 제어 합니다. 제외 옵션 BSCMAKE 더 빠르게 실행을 허용할 수 하 고 더 작은.bsc 파일이 될 수 있습니다. 옵션 이름은 대/소문자 구분 됩니다 (제외 하 고 **/help** 및 **/NOLOGO**).  
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
  /Es  
  모든 include 파일은 절대 경로로 지정 되지 않았거나 INCLUDE 환경 변수에 지정 된 절대 경로에서 찾아보기 정보 파일에서 제외 합니다. (시스템 이들은 일반적으로 많은 찾아보기 정보 파일에 필요 하지 않을 수 있는 정보가 포함 된 파일을 포함 합니다.) 이 옵션 없이 경로 또는 상대 경로 또는 INCLUDE에 상대 경로에 파일을 지정 된 파일을 제외 하지 않습니다. 사용할 수는 **/Ei** 옵션과 함께 **/Es** 파일을 제외 하려면 **/Es** 제외 하지 않습니다. 파일 중 일부만 제외 하려면 있는 **/Es** 제외를 사용 하 여 **/Ei** 대신 **/Es** 제외 하려는 파일을 나열 하 고 합니다.  
   
- /errorreport: [없음 &#124; 프롬프트 &#124; queue&#124; 송신]  
+ /errorreport: [없음 &#124; 프롬프트 &#124; 큐 &#124; 송신]  
  Bscmake.exe의 내부 오류에 대 한 정보를 Microsoft로 보낼 수 있습니다.  
   
  대 한 자세한 내용은 **/errorreport**, 참조 [/errorReport (내부 컴파일러 오류 보고)](../../build/reference/errorreport-report-internal-compiler-errors.md)합니다.  
@@ -82,12 +77,12 @@ ms.lasthandoff: 12/21/2017
  참조 되지 않은 기호를 포함합니다. BSCMAKE는 기본적으로 정의 되었지만 참조 되지 않는 모든 기호 기록 하지 않습니다. .Sbr 파일 압축 된, 하는 경우이 옵션은 컴파일러가 이미 참조 되지 않은 기호를 제거 하기 때문에 해당 입력된 파일에 대 한 효과가 없습니다.  
   
  /n  
- 비증분 빌드를 강제로 수행합니다. 사용 하 여  **/n**  .bsc 파일이 존재 하는지 여부와 상관 없이 찾아보기 정보 파일의 전체 빌드를 수행 하 고.sbr 파일이 잘리지 않도록 합니다. 참조 [BSCMAKE.bsc 파일을 빌드하는 방법](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md)합니다.  
+ 비증분 빌드를 강제로 수행합니다. 사용 하 여 **/n** .bsc 파일이 존재 하는지 여부와 상관 없이 찾아보기 정보 파일의 전체 빌드를 수행 하 고.sbr 파일이 잘리지 않도록 합니다. 참조 [BSCMAKE.bsc 파일을 빌드하는 방법](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md)합니다.  
   
  /NOLOGO  
  BSCMAKE 저작권 메시지를 표시 하지 않습니다.  
   
- /o`filename`  
+ /o `filename`  
  찾아보기 정보 파일에 대 한 이름을 지정합니다. 기본적으로 BSCMAKE.bsc 확장명 첫 번째.sbr 파일의 기본 이름과 찾아보기 정보 파일을 제공합니다.  
   
  /S ( `filename`...)  

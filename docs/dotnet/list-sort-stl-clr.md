@@ -1,12 +1,9 @@
 ---
 title: 'list:: sort (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::list::sort
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - sort member [STL/CLR]
 ms.assetid: f811d5f4-a19e-4194-8765-1e68097c52f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 159391bc7d362c755c194f478692b2a271d779ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 670b18e5901ef264474256a1a1e57cde7a28ef01
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listsort-stlclr"></a>list::sort(STL/CLR)
 제어 된 시퀀스를 정렬 합니다.  
@@ -50,7 +45,7 @@ template<typename Pred2>
   
  모두 안정적인 정렬 수행 하는 기능이-결과 제어 된 시퀀스에서 제어 되는 원래 시퀀스의 요소 쌍 없는 속도가 반대로 바뀝니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_list_sort.cpp   

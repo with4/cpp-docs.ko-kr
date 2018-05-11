@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C3201 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C3201 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3201
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3201
 ms.assetid: ec19cd64-1789-40a3-b2db-dff2852b9d98
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a2bcae07f4e66fec1ed6fb9eb95e87e83557e53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 51ebf253a1d1e5963ff05aa343295e133a0641c1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3201"></a>컴파일러 오류 C3201
 클래스 템플릿 'template'에 대한 템플릿 매개 변수 목록이 템플릿 매개 변수 'template'에 대한 템플릿 매개 변수 목록과 일치하지 않습니다.  

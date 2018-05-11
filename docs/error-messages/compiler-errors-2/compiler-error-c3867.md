@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C3867 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C3867 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3867
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c5fdcdfed8393402d9514a286469d0cbe4f0e7b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f39abadc4b8947c4b3c4ce24b847c8c3fc20bf6d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3867"></a>컴파일러 오류 C3867
 'func': 함수 호출에 인수 목록이 없습니다. '&func'을(를) 사용하여 멤버에 대한 포인터를 만드세요.  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
  이 오류는 Visual C++ 2005에 대해 수행한 컴파일러 규칙 작업의 결과로 생성될 수도 있습니다. 멤버 포인터 규칙이 향상되었습니다. Visual C++ 2005 이전에 컴파일된 코드에서는 C3867 오류가 발생합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  잘못 제안된 해결 방법을 통해 컴파일러에서 C3867 오류가 발생할 수 있습니다. 가능하면 항상 최다 파생 클래스를 사용하세요.  
   
  다음 샘플에서는 C3867 오류가 발생하는 경우 및 이를 해결하는 방법을 보여 줍니다.  
@@ -57,7 +52,7 @@ void Derived::Bar() {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C3867 오류가 발생하는 경우 및 이를 해결하는 방법을 보여 줍니다.  
   
 ```  
@@ -88,7 +83,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C3867 오류가 발생하는 경우 및 이를 해결하는 방법을 보여 줍니다.  
   
 ```  
@@ -106,7 +101,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C3867 오류가 발생하는 경우를 보여 줍니다.  
   
 ```  
@@ -129,7 +124,7 @@ public:
 };  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C3867 오류가 발생하는 경우를 보여 줍니다.  
   
 ```  

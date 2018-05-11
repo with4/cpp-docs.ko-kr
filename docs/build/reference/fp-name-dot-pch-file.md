@@ -1,13 +1,10 @@
 ---
-title: "-Fp (이름입니다. Pch 파일) | Microsoft Docs"
-ms.custom: 
+title: -Fp (이름입니다. Pch 파일) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.PrecompiledHeaderFile
 - /fp
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - precompiled header files, naming
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77ba54705ec4037f1c98a2ae1832dddcc551956e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 80f59477695b83b33dd3cfa2b37837c5b52c8002
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fp-name-pch-file"></a>/Fp(.PCH 파일 이름 지정)
 기본 경로 이름을 사용 하는 대신 미리 컴파일된 헤더에 대 한 경로 이름을 제공 합니다.  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 > **/Fp**_경로 이름_  
   
 ## <a name="remarks"></a>설명  
- 이 옵션을 사용 하 여 [/Yc (미리 컴파일된 헤더 파일 만들기)](../../build/reference/yc-create-precompiled-header-file.md) 또는 [/Yu (미리 컴파일된 헤더 파일 사용)](../../build/reference/yu-use-precompiled-header-file.md) 기본 경로 이름을 사용 하는 대신 미리 컴파일된 헤더에 대 한 경로 이름을 제공 합니다. 사용할 수도 있습니다 **/Fp** 와 **/Yc** 와 다른 미리 컴파일된 헤더 파일의 사용을 지정할 수는 **/Yc***filename* 인수 및 소스 파일의 기본 이름입니다.  
+ 이 옵션을 사용 하 여 [/Yc (미리 컴파일된 헤더 파일 만들기)](../../build/reference/yc-create-precompiled-header-file.md) 또는 [/Yu (미리 컴파일된 헤더 파일 사용)](../../build/reference/yu-use-precompiled-header-file.md) 기본 경로 이름을 사용 하는 대신 미리 컴파일된 헤더에 대 한 경로 이름을 제공 합니다. 사용할 수도 있습니다 **/Fp** 와 **/Yc** 다른 미리 컴파일된 헤더 파일의 사용을 지정할는 **/Yc * * * filename* 인수 및 소스 파일의 기본 이름에서.  
   
  경로 이름의 일부로 확장을 지정 하지 않으면 한 확장명을.pch 간주 됩니다. 파일 이름 없이 디렉터리를 지정 하는 경우 기본 파일 이름은 VC*x*0.pch, 여기서 *x* 은 사용 중인 Visual c + +의 주 버전.  
   
@@ -64,14 +59,14 @@ ms.lasthandoff: 12/21/2017
   
 -   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderFile%2A>을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  프로그램의 디버깅 버전에 대 한 미리 컴파일된 헤더 파일을 만들려고 할 헤더 파일과 소스 코드를 컴파일하는 경우와 같은 명령을 지정할 수 있습니다.  
   
 ```  
 CL /DDEBUG /Zi /Yc /FpDPROG.PCH PROG.CPP  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 명령은 MYPCH.pch 라는 미리 컴파일된 헤더 파일의 사용을 지정 합니다. 컴파일러는 PROG.cpp의 소스 코드 미리 컴파일 MYAPP.h 통해 하며 MYPCH.pch에 미리 컴파일된 코드를 가정 합니다. MYPCH.pch 콘텐츠를 사용 하 고.obj 파일을 만드는 PROG.cpp의 나머지를 컴파일합니다. 이 예의 출력은 PROG.exe 이라는 파일로 내보내집니다.  
   
 ```  

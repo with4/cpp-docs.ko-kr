@@ -1,13 +1,10 @@
 ---
-title: "Windows 소켓: 백그라운드 | Microsoft Docs"
-ms.custom: 
+title: 'Windows 소켓: 백그라운드 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - sequenced data flow
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446719d9d37d2930e08dc66303fd2d952fd88820
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fda86bbbeb49bcb253348ed02abef4fb8d4cff9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-background"></a>Windows 소켓: 백그라운드
 이 문서와 Windows 소켓의 목적을 설명합니다. 문서도 합니다.  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
 > [!TIP]
 >  "정보 고속도로."에 대해 인터넷 통신을 지 원하는 응용 프로그램에 대 한 기본 경로 소켓 인터넷 프로토콜 도구 모음을 사용 하므로  
   
-##  <a name="_core_definition_of_a_socket"></a>소켓 정의  
+##  <a name="_core_definition_of_a_socket"></a> 소켓 정의  
  소켓은 통신 끝점-를 통해 Windows 소켓 응용 프로그램을 보내거나 받는 데이터의 패킷을 네트워크를 통해 개체입니다. 소켓에 형식이 있고 실행 중인 프로세스에 연결 하 고 이름이 있을 수 있습니다. 현재, 소켓은 일반적으로 동일한 "통신 도메인에서" 인터넷 프로토콜 도구 모음을 사용 하 여 다른 소켓에만 데이터를 교환 합니다.  
   
  두 종류의 소켓은 양방향입니다. 양방향으로 동시에 통신할 수 있는 데이터 흐름 (양방향).  
@@ -84,12 +79,12 @@ ms.lasthandoff: 12/21/2017
   
  이러한 형식에 대 한 정보에 대 한 소켓, 사용 하 여 어떤 상황에서 참조의 종류 및 [Windows 소켓: 스트림 소켓](../mfc/windows-sockets-stream-sockets.md) 및 [Windows 소켓: 데이터 그램 소켓](../mfc/windows-sockets-datagram-sockets.md)합니다.  
   
-##  <a name="_core_the_socket_data_type"></a>소켓 데이터 형식  
+##  <a name="_core_the_socket_data_type"></a> 소켓 데이터 형식  
  각 MFC 소켓 개체 Windows 소켓 개체에 대 한 핸들을 캡슐화합니다. 이 핸들의 데이터 형식이 **소켓**합니다. A **소켓** 핸들은 비슷합니다는 `HWND` 창에 대 한 합니다. MFC 소켓 클래스는 캡슐화 된 핸들에 대 한 작업을 제공합니다.  
   
  **소켓** 데이터 형식은 Windows SDK에서 자세히 설명 되어 있습니다. Windows 소켓에서 "소켓 데이터 형식과 오류 값"을 참조 하십시오.  
   
-##  <a name="_core_uses_for_sockets"></a>소켓의 용도  
+##  <a name="_core_uses_for_sockets"></a> 소켓의 용도  
  소켓은 세 개 이상의 통신 상황에서 매우 유용 합니다.  
   
 -   클라이언트/서버 모델입니다.  

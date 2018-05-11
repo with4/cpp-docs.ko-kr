@@ -1,13 +1,10 @@
 ---
-title: "연습: 디버깅 프로젝트 (c + +) | Microsoft Docs"
-ms.custom: 
+title: '연습: 디버깅 프로젝트 (c + +) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c9789a7deafacf09ad615f416a446da4eba8150
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ecfda5e2549b3aa9be1f0471e301cc2a21c6fd5a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>연습: 프로젝트 디버깅(C++)
 이 연습에서는 프로젝트를 테스트할 때 발견 된 문제를 해결 하려면 프로그램을 수정 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
   
 -   이 연습에서는 사용자가 C++ 언어의 기본적인 사항을 알고 있는 것으로 가정합니다.  
   
@@ -68,5 +63,5 @@ ms.lasthandoff: 12/21/2017
  **이전:** [연습: 프로젝트 (c + +) 테스트](../ide/walkthrough-testing-a-project-cpp.md) &#124; **다음:**[연습: 프로그램 (c + +) 배포](../ide/walkthrough-deploying-your-program-cpp.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [C + + 언어 참조](../cpp/cpp-language-reference.md)   
+ [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [C/C++ 프로그램 빌드](../build/building-c-cpp-programs.md)

@@ -1,13 +1,10 @@
 ---
-title: "이벤트 맵 | Microsoft Docs"
-ms.custom: 
+title: 이벤트 맵 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 130e4ecf7534b16ecabf4c35665a4dabe9eee34e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: db309833604b4e833dfd22a090a8f258333da360
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="event-maps"></a>이벤트 맵
 컨트롤 (컨트롤 개발자가 결정) 일부 동작 (예: 키, 마우스 클릭 또는 컨트롤의 상태에 대 한 변경) 발생 하는 해당 컨테이너에 알리기 위해 하지 않고자 한다면 때마다 이벤트 발생 함수를 호출 합니다. 이 함수는 관련 된 이벤트를 발생 시켜 서 몇 가지 중요 한 작업을 수행한 컨트롤 컨테이너를 알립니다.  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
 |[ON_OLEVERB](#on_oleverb)|OLE 컨트롤에서 처리 한 사용자 지정 동사를 나타냅니다.|  
 |[ON_STDOLEVERB](#on_stdoleverb)|OLE 컨트롤의 표준 동사 매핑이 무시 됩니다.|  
   
-##  <a name="declare_event_map"></a>DECLARE_EVENT_MAP  
+##  <a name="declare_event_map"></a>  DECLARE_EVENT_MAP  
  각 `COleControl`-프로그램의 파생된 클래스에서 컨트롤은 발생 이벤트를 지정 하는 event 맵이 제공할 수 있습니다.  
   
 ```   
@@ -77,7 +72,7 @@ DECLARE_EVENT_MAP()
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxctl.h  
   
-##  <a name="begin_event_map"></a>BEGIN_EVENT_MAP  
+##  <a name="begin_event_map"></a>  BEGIN_EVENT_MAP  
  이벤트 맵 정의 시작 합니다.  
   
 ```   
@@ -99,7 +94,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxctl.h  
   
-##  <a name="end_event_map"></a>END_EVENT_MAP  
+##  <a name="end_event_map"></a>  END_EVENT_MAP  
  사용 된 `END_EVENT_MAP` 이벤트 맵의 정의를 끝내는 매크로입니다.  
   
 ```   
@@ -109,7 +104,7 @@ END_EVENT_MAP()
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxctl.h  
   
-##  <a name="event_custom"></a>EVENT_CUSTOM  
+##  <a name="event_custom"></a>  EVENT_CUSTOM  
  사용자 지정 이벤트에 대 한 이벤트 맵 항목을 정의합니다.  
   
 ```   
@@ -127,7 +122,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
  함수의 매개 변수 목록을 지정 하는 하나 이상의 상수의 공백으로 구분 된 목록.  
   
 ### <a name="remarks"></a>설명  
- `vtsParams` 매개 변수는 공백으로 구분 된 목록에서 값의 **VTS_** 상수입니다. 공백 (쉼표가 아님)으로 구분 된 이러한 값 중 하나 이상이 함수의 매개 변수 목록을 지정 합니다. 예:  
+ `vtsParams` 매개 변수는 공백으로 구분 된 목록에서 값의 **VTS_** 상수입니다. 공백 (쉼표가 아님)으로 구분 된 이러한 값 중 하나 이상이 함수의 매개 변수 목록을 지정 합니다. 예를 들어:  
   
  [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]  
   
@@ -171,7 +166,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxctl.h  
   
-##  <a name="event_custom_id"></a>EVENT_CUSTOM_ID  
+##  <a name="event_custom_id"></a>  EVENT_CUSTOM_ID  
  이벤트 발생 하 여 지정 된 디스패치 ID에 속하는 사용자 지정 이벤트에 대 한 함수 정의 `dispid`합니다.  
   
 ```   
@@ -197,7 +192,7 @@ EVENT_CUSTOM_ID(
  이벤트가 발생 하는 경우 컨트롤 컨테이너에 가변 매개 변수 목록을 전달.  
   
 ### <a name="remarks"></a>설명  
- `vtsParams` 인수는 공백으로 구분 된 목록에서 값의 **VTS_** 상수입니다. 쉼표가 아닌 공백으로 구분 된 다음이 값 중 하나 이상을 함수의 매개 변수 목록을 지정 합니다. 예:  
+ `vtsParams` 인수는 공백으로 구분 된 목록에서 값의 **VTS_** 상수입니다. 쉼표가 아닌 공백으로 구분 된 다음이 값 중 하나 이상을 함수의 매개 변수 목록을 지정 합니다. 예를 들어:  
   
  [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]  
   
@@ -208,7 +203,7 @@ EVENT_CUSTOM_ID(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxctl.h  
   
-##  <a name="on_oleverb"></a>ON_OLEVERB  
+##  <a name="on_oleverb"></a>  ON_OLEVERB  
  이 매크로 사용자 지정 동사 컨트롤의 특정 멤버 함수에 매핑되는 메시지 맵 항목을 정의 합니다.  
   
 ```   
@@ -237,7 +232,7 @@ ON_OLEVERB(idsVerbName,  memberFxn)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxole.h  
   
-##  <a name="on_stdoleverb"></a>ON_STDOLEVERB  
+##  <a name="on_stdoleverb"></a>  ON_STDOLEVERB  
  이 매크로 사용 하 여 표준 동사 기본 동작을 재정의 합니다.  
   
 ```   
@@ -252,7 +247,7 @@ ON_STDOLEVERB(iVerb,   memberFxn)
  동사를 호출할 때 프레임 워크에서 호출 하는 함수입니다.  
   
 ### <a name="remarks"></a>설명  
- 폼의 표준 동사 인덱스는 **OLEIVERB_**동작 이어집니다. `OLEIVERB_SHOW``OLEIVERB_HIDE`, 및 `OLEIVERB_UIACTIVATE` 표준 동사의 일부의 예입니다.  
+ 폼의 표준 동사 인덱스는 **OLEIVERB_** 동작 이어집니다. `OLEIVERB_SHOW``OLEIVERB_HIDE`, 및 `OLEIVERB_UIACTIVATE` 표준 동사의 일부의 예입니다.  
   
  참조 [ON_OLEVERB](#on_oleverb) 에 대 한 설명은로 사용할 함수 프로토타입에 `memberFxn` 매개 변수입니다.  
 

@@ -1,12 +1,9 @@
 ---
-title: "CWinFormsDialog 클래스 | Microsoft Docs"
-ms.custom: 
+title: CWinFormsDialog 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWinFormsDialog
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c59faec7fc981cff31bea4ce6e846d89d0b8bf99
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b7596140f48b62a63189444bee6fb363552766fe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog 클래스
 Windows Forms 사용자 정의 컨트롤을 호스팅하는 MFC 대화 상자 클래스의 래퍼입니다.  
@@ -68,20 +63,20 @@ class CWinFormsDialog :
   
 ### <a name="public-operators"></a>Public 연산자  
   
-|name||  
+|이름||  
 |----------|-|  
 |[CWinFormsDialog::operator-&gt;](#operator_-_gt)|대체 [CWinFormsDialog::GetControl](#getcontrol) 식에 있습니다.|  
 |[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|Windows Forms 사용자 정의 컨트롤에 대 한 참조로 형식을 캐스팅합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CWinFormsDialog`MFC 대화 상자 클래스에 대 한 래퍼 인지 ( [CDialog](../../mfc/reference/cdialog-class.md))를 호스팅하는 Windows Forms 사용자 정의 컨트롤입니다. 이.NET Framework는 모달 또는 모덜리스 MFC 대화 상자 컨트롤에 표시할 수 있습니다.  
+ `CWinFormsDialog` MFC 대화 상자 클래스에 대 한 래퍼 인지 ( [CDialog](../../mfc/reference/cdialog-class.md))를 호스팅하는 Windows Forms 사용자 정의 컨트롤입니다. 이.NET Framework는 모달 또는 모덜리스 MFC 대화 상자 컨트롤에 표시할 수 있습니다.  
   
  Windows Forms를 사용 하 여에 대 한 자세한 내용은 참조 하십시오. [MFC의 Windows Form 사용자 정의 컨트롤을 사용 하 여](../../dotnet/using-a-windows-form-user-control-in-mfc.md) 및 [는 Windows Form 사용자 정의 컨트롤을 MFC 대화 상자로 호스팅](../../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwinforms.h  
   
-##  <a name="cwinformsdialog"></a>CWinFormsDialog::CWinFormsDialog  
+##  <a name="cwinformsdialog"></a>  CWinFormsDialog::CWinFormsDialog  
  `CWinFormsDialog` 개체를 생성합니다.  
   
 ```  
@@ -92,7 +87,7 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
  `nIDTemplate`  
  대화 상자 템플릿 리소스의 ID를 포함 합니다. 대화 상자 편집기를 사용 하 여 대화 상자 템플릿을 만들고 응용 프로그램의 리소스 스크립트 파일에 저장 합니다. 대화 상자 템플릿에 대 한 자세한 내용은 참조 하십시오. [CDialog 클래스](../../mfc/reference/cdialog-class.md)합니다.  
   
-##  <a name="getcontrol"></a>CWinFormsDialog::GetControl  
+##  <a name="getcontrol"></a>  CWinFormsDialog::GetControl  
  Windows Forms 사용자 정의 컨트롤에 대 한 참조를 검색합니다.  
   
 ```  
@@ -102,7 +97,7 @@ inline TManagedControl^ GetControl() const;
 ### <a name="return-value"></a>반환 값  
  MFC 대화 상자에서 Windows Forms 컨트롤에 대 한 참조를 반환합니다.  
   
-##  <a name="getcontrolhandle"></a>CWinFormsDialog::GetControlHandle  
+##  <a name="getcontrolhandle"></a>  CWinFormsDialog::GetControlHandle  
  Windows Forms 사용자 정의 컨트롤에 대 한 창 핸들을 검색합니다.  
   
 ```  
@@ -112,7 +107,7 @@ inline HWND GetControlHandle() const throw();
 ### <a name="return-value"></a>반환 값  
  Windows Forms 사용자 정의 컨트롤에 대 한 창 핸들을 반환합니다.  
   
-##  <a name="oninitdialog"></a>CWinFormsDialog::OnInitDialog  
+##  <a name="oninitdialog"></a>  CWinFormsDialog::OnInitDialog  
  MFC 대화 상자를 만들고에 Windows Forms 사용자 정의 컨트롤 호스팅 하 여 초기화 합니다.  
   
 ```  
@@ -127,7 +122,7 @@ virtual BOOL OnInitDialog();
   
  대화 상자 초기화 될 때 특수 한 처리를 수행 해야 할 경우이 멤버 함수를 재정의 합니다. 이 메서드를 사용 하 여에 대 한 자세한 내용은 참조 하십시오. [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)합니다.  
   
-##  <a name="operator_-_gt"></a>CWinFormsDialog::operator-&gt;  
+##  <a name="operator_-_gt"></a>  CWinFormsDialog::operator-&gt;  
  대체 [CWinFormsDialog::GetControl](#getcontrol) 식에 있습니다.  
   
 ```  
@@ -139,7 +134,7 @@ inline TManagedControl^  operator->() const throw();
   
  Windows Forms를 사용 하는 방법은 참조 하십시오. [MFC의 Windows Form 사용자 정의 컨트롤을 사용 하 여](../../dotnet/using-a-windows-form-user-control-in-mfc.md)합니다.  
   
-##  <a name="operator_tmanagedcontrol_xor"></a>CWinFormsDialog::operator TManagedControl ^  
+##  <a name="operator_tmanagedcontrol_xor"></a>  CWinFormsDialog::operator TManagedControl ^  
  Windows Forms 사용자 정의 컨트롤에 대 한 참조로 형식을 캐스팅합니다.  
   
 ```  

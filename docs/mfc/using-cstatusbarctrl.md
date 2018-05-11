@@ -1,13 +1,10 @@
 ---
-title: "CStatusBarCtrl을 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: CStatusBarCtrl을 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CStatusBarCtrl
 dev_langs:
@@ -16,22 +13,20 @@ helpviewer_keywords:
 - CStatusBarCtrl class [MFC], using
 - status bar controls [MFC], about status bar controls
 ms.assetid: 08b39f83-580d-439a-b93e-7ef9e2a5702a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8960d7093fcc950eb3118115459a414bc0f0fda3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8dd62dc3083959a20387a684f41164c3647c2c22
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-cstatusbarctrl"></a>CStatusBarCtrl 사용
 상태 표시줄 컨트롤을 사용할 수 있습니다 ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) 다양 한 종류의 응용 프로그램에 대 한 상태 정보를 반영 하는 컨트롤 창을 만들 수 있습니다. 상태 창은 두 가지 이상의 정보 유형을 표시하는 여러 부분으로 나눌 수 있습니다.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [상태 표시줄을 만드는 방법](../mfc/methods-of-creating-a-status-bar.md)  
   

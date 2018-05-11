@@ -1,12 +1,9 @@
 ---
-title: "CUIntArray 클래스 | Microsoft Docs"
-ms.custom: 
+title: CUIntArray 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CUIntArray
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: d71f3d8f-ef9f-4e48-9b69-7782c0e2ddf7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5132dddcdd707d6fef63627c48e4b5619cead084
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb8c7d46a2ffc2d569cc123d51aaebbf43b5e328
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cuintarray-class"></a>CUIntArray 클래스
 부호 없는 정수의 배열을 지원합니다.  
@@ -118,7 +113,7 @@ class CUIntArray : public CObject
 ## <a name="remarks"></a>설명  
  부호 없는 정수로 또는 **UINT**, 단어 및 2 배 워드 하에서 다른의 실제 크기는 **UINT** 대상 운영 환경에 따라 변경할 수 있습니다. A **UINT** 는 워드 단위와 같은 크기입니다.  
   
- `CUIntArray`통합 된 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) 런타임 형식 액세스 및 덤프를 지원 하기 위해 매크로 [CDumpContext](../../mfc/reference/cdumpcontext-class.md) 개체입니다. 부호 없는 정수 개별 요소의 덤프가 필요한 경우 덤프 컨텍스트 깊이 1 이상으로 설정 해야 합니다. 부호 없는 정수 배열은 직렬화 할 수 없습니다.  
+ `CUIntArray` 통합 된 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) 런타임 형식 액세스 및 덤프를 지원 하기 위해 매크로 [CDumpContext](../../mfc/reference/cdumpcontext-class.md) 개체입니다. 부호 없는 정수 개별 요소의 덤프가 필요한 경우 덤프 컨텍스트 깊이 1 이상으로 설정 해야 합니다. 부호 없는 정수 배열은 직렬화 할 수 없습니다.  
   
 > [!NOTE]
 >  배열을 사용하기 전에 `SetSize`를 사용하여 배열 크기를 설정하고 배열에 대해 메모리를 할당합니다. `SetSize`를 사용하지 않는 경우 배열에 요소를 추가하면 배열이 자주 다시 할당되고 복사됩니다. 이처럼 다시 할당 및 복사가 자주 수행되면 효율성이 떨어지며 메모리가 조각화될 수 있습니다.  

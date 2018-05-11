@@ -1,12 +1,9 @@
 ---
-title: "CDefaultCharTraits 클래스 | Microsoft Docs"
-ms.custom: 
+title: CDefaultCharTraits 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CDefaultCharTraits
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CDefaultCharTraits class
 ms.assetid: f94a3934-597f-401d-8513-ed6924ae069a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 283f588af0e824801fbec13f32ae1276c13eb724
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24aa01ec29f063c1fa65ebe24c707deb1ea58556
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cdefaultchartraits-class"></a>CDefaultCharTraits 클래스
 이 클래스는 대 문자와 소문자 사이 문자를 변환 하기 위한 두 개의 정적 함수를 제공 합니다.  
@@ -59,7 +54,7 @@ class CDefaultCharTraits
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlcoll.h  
   
-##  <a name="chartolower"></a>CDefaultCharTraits::CharToLower  
+##  <a name="chartolower"></a>  CDefaultCharTraits::CharToLower  
  문자를 소문자로 변환 하려면이 함수를 호출 합니다.  
   
 ```
@@ -71,10 +66,10 @@ static char CharToLower(char x);
  *x*  
  소문자로 변환할 문자입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_Utilities#132](../../atl/codesnippet/cpp/cdefaultchartraits-class_1.cpp)]  
   
-##  <a name="chartoupper"></a>CDefaultCharTraits::CharToUpper  
+##  <a name="chartoupper"></a>  CDefaultCharTraits::CharToUpper  
  문자를 대문자로 변환 하려면이 함수를 호출 합니다.  
   
 ```

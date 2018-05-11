@@ -1,13 +1,10 @@
 ---
-title: "여러 문서 형식, 뷰 및 프레임 창 | Microsoft Docs"
-ms.custom: 
+title: 여러 문서 형식, 뷰 및 프레임 창 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,22 +21,20 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ab8bff6484f81c482ddd8629ff33772fab1aeba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5640c3bb66bee0641b0c153ae10dc146bb1c1dd8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>여러 문서 형식, 뷰 및 프레임 창
 문서, 뷰 및 프레임 창의 기본 관계는 [문서/뷰 만들기](../mfc/document-view-creation.md)에서 설명합니다. 대부분의 응용 프로그램은 단일한 뷰와 문서당 하나의 프레임 창만 사용하는 단일한 문서 형식(그러나 해당 형식의 문서는 여러 개 열 수 있음)을 지원합니다. 그러나 일부 응용 프로그램에서는 이러한 기본 설정을 하나 이상 변경해야 할 수도 있습니다.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [Multiple document types](#_core_multiple_document_types)  
   
@@ -75,7 +70,7 @@ ms.lasthandoff: 12/21/2017
   
  다음 그림은 a, b, 및 c로 나누어 세 개의 사용자 인터페이스 모델을 위에서 설명한 순서로 보여 줍니다.  
   
- ![여러 &#45; 뷰 사용자 인터페이스](../mfc/media/vc37a71.gif "vc37a71")  
+ ![여러&#45;사용자 인터페이스를 볼](../mfc/media/vc37a71.gif "vc37a71")  
 여러 뷰 사용자 인터페이스  
   
  프레임워크에서는 새 창 명령을 구현하고 [분할 창](../mfc/reference/csplitterwnd-class.md)에서 설명한 대로 [CSplitterWnd](#_core_splitter_windows)클래스를 제공하여 이 세 가지 모델을 제공합니다. 이 방법으로 시작하여 다른 모델을 구현할 수도 있습니다. 다른 구성의 뷰, 프레임 창 및 분할 창을 보여 주는 샘플 프로그램은 [MFC 샘플](../visual-cpp-samples.md)을 참조하세요.  

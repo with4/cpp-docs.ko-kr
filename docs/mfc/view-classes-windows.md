@@ -1,13 +1,10 @@
 ---
-title: "클래스 (Windows) 보기 | Microsoft Docs"
-ms.custom: 
+title: 클래스 (Windows) 보기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.view
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d737176df2676f543f47bb77a0d205fa7c908fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 28dbcd246033dd53788861b97a0c678c1be2aa17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="view-classes-windows"></a>뷰 클래스(Windows)
-`CView`및 그 파생된 클래스는 프레임 창의 클라이언트 영역을 나타내는 자식 창. 뷰는 데이터를 표시 및 문서에 대 한 입력을 허용 합니다.  
+`CView` 및 그 파생된 클래스는 프레임 창의 클라이언트 영역을 나타내는 자식 창. 뷰는 데이터를 표시 및 문서에 대 한 입력을 허용 합니다.  
   
  뷰 클래스 문서 클래스 및 문서 템플릿 개체를 사용 하 여 프레임 창 클래스와 관련이 있습니다.  
   
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/21/2017
  Windows 트리 컨트롤을 포함 하는 뷰 (참조 [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). 트리 컨트롤에 아이콘과 레이블을 파일 탐색기의 왼쪽된 창에 비슷한 방식으로 정렬의 계층 목록을 표시 합니다.  
   
 ## <a name="related-classes"></a>관련된 클래스  
- `CSplitterWnd`단일 한 프레임 창 내에서 여러 뷰를 포함할 수 있습니다. `CPrintDialog`및 `CPrintInfo` 뷰의 인쇄 및 인쇄 미리 보기 기능을 지원 합니다. `CRichEditDoc`및 `CRichEditCntrItem` 와 함께 사용 됩니다 `CRichEditView` OLE 컨테이너 기능을 구현 하 합니다.  
+ `CSplitterWnd` 단일 한 프레임 창 내에서 여러 뷰를 포함할 수 있습니다. `CPrintDialog` 및 `CPrintInfo` 뷰의 인쇄 및 인쇄 미리 보기 기능을 지원 합니다. `CRichEditDoc` 및 `CRichEditCntrItem` 와 함께 사용 됩니다 `CRichEditView` OLE 컨테이너 기능을 구현 하 합니다.  
   
  [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)  
  사용자를 여러 개의 창으로 분할할 수 있는 창입니다. 이러한 창이 고 사용자 또는 고정된 크기가 크기 조정할 수 있습니다.  

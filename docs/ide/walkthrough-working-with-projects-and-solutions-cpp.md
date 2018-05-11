@@ -1,13 +1,10 @@
 ---
-title: "연습: 프로젝트 및 솔루션 (c + +) 작업 | Microsoft Docs"
-ms.custom: 
+title: '연습: 프로젝트 및 솔루션 (c + +) 작업 | Microsoft Docs'
+ms.custom: ''
 ms.date: 12/13/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a20c0ee933d49465a841b638a8260181d7175ac5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f62b2317669949473c8b0e68ad4410a3d9b03806
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>연습: 프로젝트 및 솔루션 작업(C++)
 
@@ -48,7 +43,7 @@ C + + 언어의 기본적인 사항을 이해 하 고 컴파일러, 링커 및 �
 
 1. 메뉴 모음에서 **파일 > 새로 만들기 > 프로젝트**합니다.
 
-1. 왼쪽된 창에는 **새 프로젝트** 대화 상자에서 **설치 됨** 선택 **Visual c + +**아직 열려 있지 않은 경우, 합니다.
+1. 왼쪽된 창에는 **새 프로젝트** 대화 상자에서 **설치 됨** 선택 **Visual c + +** 아직 열려 있지 않은 경우, 합니다.
 
 1. 가운데 창에서 설치 된 템플릿 목록에서 선택 **Windows 콘솔 응용 프로그램**합니다.
 
@@ -226,7 +221,7 @@ C + + 언어의 기본적인 사항을 이해 하 고 컴파일러, 링커 및 �
 **이전:** [c + + 데스크톱 개발을 위한 Visual Studio IDE를 사용 하 여](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)합니다.  
 **다음:** [연습: 프로젝트 (c + +) 빌드](../ide/walkthrough-building-a-project-cpp.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [C++ 언어 참조](../cpp/cpp-language-reference.md)  
 [C/C++ 프로그램 빌드](../build/building-c-cpp-programs.md)

@@ -1,12 +1,9 @@
 ---
 title: 'hash_multimap:: const_iterator (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multimap::const_iterator
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - const_iterator member [STL/CLR]
 ms.assetid: 3d54185c-7d30-41e6-8837-92e62448bc8e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 84cfd4f8926b1a11d909c02fb962bdd7d395c4f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 16f0c0a0ddef4a90dc0b63954746427315d48c26
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultimapconstiterator-stlclr"></a>hash_multimap::const_iterator(STL/CLR)
 제어되는 시퀀스에 대한 상수 반복기의 형식입니다.  
@@ -40,7 +35,7 @@ typedef T2 const_iterator;
 ## <a name="remarks"></a>설명  
  이 형식은 지정 되지 않은 형식의 개체를 설명 `T2` 제어 되는 시퀀스에 대 한 양방향 상수 반복기로 사용할 수 있는 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_multimap_const_iterator.cpp   

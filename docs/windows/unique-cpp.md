@@ -1,13 +1,10 @@
 ---
 title: unique (c + +) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.unique
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 88ba3e46a9a383ee72f3e979b23a275cc6f95d0e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ebb492d576e82c276aeb1cb464a39b558040fdc5
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="unique-c"></a>unique(C++)
 고유한 포인터를 지정합니다.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  **고유** c + + 특성에 동일한 기능을는 [고유](http://msdn.microsoft.com/library/windows/desktop/aa367294) MIDL 특성입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  참조는 [ref](../windows/ref-cpp.md) 의 샘플 사용에 대 한 예제 **고유**합니다.  
   
 ## <a name="requirements"></a>요구 사항  

@@ -1,24 +1,19 @@
 ---
-title: "Ref 클래스 및 구조체 (C + + /cli CX) | Microsoft Docs"
-ms.custom: 
+title: Ref 클래스 및 구조체 (C + + /cli CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d8b7717c98ebd4bab8c0d3d8c20a594a3f4d58e
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: be0a8adbb2bf20e4f92edf16fa2217a7d2b40eab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Ref 클래스 및 구조체(C++/CX)
 C + + /cli CX 지원 사용자 정의 *ref 클래스* 및 *ref 구조체*, 사용자 정의 및 *값 클래스* 및 *값 구조체*합니다. 이러한 데이터 구조는는 기본 컨테이너는 C + + /cli CX Windows 런타임 형식 시스템을 지원 합니다. 해당 콘텐츠는 특정 규칙에 따라 메타 데이터로 내보내집니다 및 c + + 또는 다른 언어로 작성 된 유니버설 Windows 플랫폼 앱 및 Windows 런타임 구성 요소 간에 전달 될 수 있도록 합니다.  

@@ -1,12 +1,9 @@
 ---
-title: "CMFCOutlookBarPane 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCOutlookBarPane 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCOutlookBarPane
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59eb92e44a26577866a797243f3a32d53b854365
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fe72b43d8930e77bea274e20e5f150cc93617c20
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane 클래스
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -121,7 +116,7 @@ class CMFCOutlookBarPane : public CMFCToolBar
   
  Outlook 표시줄의 예로, OutlookDemo 샘플 프로젝트를 참조 하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는의 다양 한 메서드를 사용 하 여 `CMFCOutlookBarPane` 클래스입니다. 예제에는 Outlook 표시줄 창을 만들, 페이지 스크롤 모드를 사용 하도록 설정, 도킹, 설정 및 Outlook 표시줄의 배경색을 설정 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [Outlook 다중 보기 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_OutlookMultiViews#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_1.h)]  
@@ -147,7 +142,7 @@ class CMFCOutlookBarPane : public CMFCToolBar
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxoutlookbarpane.h  
   
-##  <a name="addbutton"></a>CMFCOutlookBarPane::AddButton  
+##  <a name="addbutton"></a>  CMFCOutlookBarPane::AddButton  
  Outlook 표시줄 창에 단추를 추가 합니다.  
   
 ```  
@@ -216,7 +211,7 @@ BOOL AddButton(
  버튼의 아이콘에 대 한 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`단추 성공적으로 추가 된 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 단추 성공적으로 추가 된 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드를 사용 하 여 Outlook 표시줄의 페이지에 새 단추를 삽입 합니다. 응용 프로그램 리소스 또는 디스크 파일에서 단추의 이미지를 로드할 수 있습니다.  
@@ -225,7 +220,7 @@ BOOL AddButton(
   
  지정 된 인덱스의 경우 `iInsertAt` 은-1, 단추 페이지의 끝에 추가 됩니다.  
   
-##  <a name="canbeattached"></a>CMFCOutlookBarPane::CanBeAttached  
+##  <a name="canbeattached"></a>  CMFCOutlookBarPane::CanBeAttached  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -236,7 +231,7 @@ virtual BOOL CanBeAttached() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="clearall"></a>CMFCOutlookBarPane::ClearAll  
+##  <a name="clearall"></a>  CMFCOutlookBarPane::ClearAll  
  Outlook 표시줄 창의 이미지를 사용 하는 리소스를 해제 합니다.  
   
 ```  
@@ -246,7 +241,7 @@ void ClearAll();
 ### <a name="remarks"></a>설명  
  이 메서드를 직접 호출 [CMFCToolBarImages::Clear](../../mfc/reference/cmfctoolbarimages-class.md#clear)는 Outlook 표시줄 창에서 사용 되는 이미지에 대해 호출 됩니다.  
   
-##  <a name="create"></a>CMFCOutlookBarPane::Create  
+##  <a name="create"></a>  CMFCOutlookBarPane::Create  
  Outlook 표시줄 창을 만듭니다.  
   
 ```  
@@ -271,14 +266,14 @@ virtual BOOL Create(
  Outlook 표시줄에서 분리 될 때 Outlook 표시줄 창 컨트롤의 동작을 정의 하는 특별 한 스타일을 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  생성 하는 `CMFCOutlookBarPane` 개체 먼저 생성자를 호출 하 고, 호출 하 `Create`, Outlook 표시줄 창 컨트롤을 만들고에 연결 하는 `CMFCOutlookBarPane` 개체입니다.  
   
  에 대 한 자세한 내용은 `dwControlBarStyle` 참조 [cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex)합니다.  
   
-##  <a name="enablecontextmenuitems"></a>CMFCOutlookBarPane::EnableContextMenuItems  
+##  <a name="enablecontextmenuitems"></a>  CMFCOutlookBarPane::EnableContextMenuItems  
  사용자 지정 모드에 표시 되는 바로 가기 메뉴 항목을 지정 합니다.  
   
 ```  
@@ -305,7 +300,7 @@ virtual BOOL EnableContextMenuItems(
 > [!NOTE]
 > *상황에 맞는 메뉴* 바로 가기 메뉴에 대 한 동의어.  
   
-##  <a name="enablepagescrollmode"></a>CMFCOutlookBarPane::EnablePageScrollMode  
+##  <a name="enablepagescrollmode"></a>  CMFCOutlookBarPane::EnablePageScrollMode  
  Outlook 표시줄 창에 있는 스크롤 화살표 단추 하 여 단추 또는 페이지 별로 단추의 목록을 이동할지 여부.  
   
 ```  
@@ -316,7 +311,7 @@ void EnablePageScrollMode(BOOL bPageScroll=TRUE);
  [in] `bPageScroll`  
  경우 `TRUE`, 페이지 스크롤 모드를 사용 하도록 설정 합니다. 경우 `FALSE`, 페이지 스크롤 모드를 사용 하지 않도록 설정 합니다.  
   
-##  <a name="getregularcolor"></a>CMFCOutlookBarPane::GetRegularColor  
+##  <a name="getregularcolor"></a>  CMFCOutlookBarPane::GetRegularColor  
  일반적인 반환 (즉, 선택 되지 않은) Outlook 표시줄 창의 텍스트 색입니다.  
   
 ```  
@@ -329,7 +324,7 @@ DECLARE_MESSAGE_MAPCOLORREF GetRegularColor() const;
 ### <a name="remarks"></a>설명  
  사용 하 여 [CMFCOutlookBarPane::SetTextColor](#settextcolor) Outlook 표시줄의 현재 (일반 및 선택한) 텍스트 색을 설정 합니다. 호출 하 여 기본 텍스트 색을 가져올 수 있습니다는 [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) 작동는 `COLOR_WINDOW` 인덱스입니다.  
   
-##  <a name="isbackgroundtexture"></a>CMFCOutlookBarPane::IsBackgroundTexture  
+##  <a name="isbackgroundtexture"></a>  CMFCOutlookBarPane::IsBackgroundTexture  
  Outlook 표시줄 창에 대해 로드 된 배경 이미지 인지 확인 합니다.  
   
 ```  
@@ -337,14 +332,14 @@ BOOL IsBackgroundTexture() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`이면; 표시 되도록 배경 이미지 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 이면; 표시 되도록 배경 이미지 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  호출 하 여 배경 이미지를 추가할 수 있습니다 [CMFCOutlookBarPane::SetBackImage](#setbackimage) 함수입니다.  
   
  사용 하 여 지정 된 색으로 백그라운드를 그리는 배경 이미지가 없습니다 이면 [CMFCOutlookBarPane::SetBackColor](#setbackcolor)합니다.  
   
-##  <a name="isdrawshadedhighlight"></a>CMFCOutlookBarPane::IsDrawShadedHighlight  
+##  <a name="isdrawshadedhighlight"></a>  CMFCOutlookBarPane::IsDrawShadedHighlight  
  단추가 강조 표시 하 고 배경 이미지를 표시 된 단추 테두리 음영 처리 된 인지 확인 합니다.  
   
 ```  
@@ -352,16 +347,16 @@ BOOL IsDrawShadedHighlight() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`단추의 테두리; 회색으로 표시 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 단추의 테두리; 회색으로 표시 그렇지 않으면 `FALSE`합니다.  
   
-##  <a name="removeallbuttons"></a>CMFCOutlookBarPane::RemoveAllButtons  
+##  <a name="removeallbuttons"></a>  CMFCOutlookBarPane::RemoveAllButtons  
  Outlook 표시줄 창에서 모든 단추를 제거합니다.  
   
 ```  
 virtual void RemoveAllButtons();
 ```  
   
-##  <a name="removebutton"></a>CMFCOutlookBarPane::RemoveButton  
+##  <a name="removebutton"></a>  CMFCOutlookBarPane::RemoveButton  
  단추는 지정한 명령 ID를 제거 합니다.  
   
 ```  
@@ -373,9 +368,9 @@ BOOL RemoveButton(UINT iIdCommand);
  제거할 단추의 명령 ID를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`단추는 성공적으로 제거 되었으면; `FALSE` 경우 지정한 명령 ID가 올바르지 않습니다.  
+ `TRUE` 단추는 성공적으로 제거 되었으면; `FALSE` 경우 지정한 명령 ID가 올바르지 않습니다.  
   
-##  <a name="setbackcolor"></a>CMFCOutlookBarPane::SetBackColor  
+##  <a name="setbackcolor"></a>  CMFCOutlookBarPane::SetBackColor  
  Outlook 표시줄의 배경색을 설정합니다.  
   
 ```  
@@ -389,7 +384,7 @@ void SetBackColor(COLORREF color);
 ### <a name="remarks"></a>설명  
  Outlook 표시줄에 대 한 현재 배경색을 설정 하려면이 함수를 호출 합니다. 명령 프롬프트 창의 배경색 배경 이미지가 없는 경우에 사용 됩니다.  
   
-##  <a name="setbackimage"></a>CMFCOutlookBarPane::SetBackImage  
+##  <a name="setbackimage"></a>  CMFCOutlookBarPane::SetBackImage  
  배경 이미지를 설정합니다.  
   
 ```  
@@ -403,7 +398,7 @@ void SetBackImage(UINT uiImageID);
 ### <a name="remarks"></a>설명  
  Outlook을 설정 하려면이 메서드를 호출 표시줄의 배경 이미지입니다. 배경 이미지 목록은 관리 되는 포함 된 여 [CMFCToolBarImages 클래스](../../mfc/reference/cmfctoolbarimages-class.md) 개체입니다.  
   
-##  <a name="setdefaultstate"></a>CMFCOutlookBarPane::SetDefaultState  
+##  <a name="setdefaultstate"></a>  CMFCOutlookBarPane::SetDefaultState  
  Outlook 표시줄 창을 원래 단추 집합을 다시 설정합니다.  
   
 ```  
@@ -413,14 +408,14 @@ void SetDefaultState();
 ### <a name="remarks"></a>설명  
  이 메서드는 원래 집합에 Outlook 표시줄 단추를 복원합니다. 이 방법은 `CMFCOutlookBarPane::RestoreOriginalstate`제외 하 고 Outlook 표시줄 창의 다시 그리기를 트리거하지 않습니다.  
   
-##  <a name="setextraspace"></a>CMFCOutlookBarPane::SetExtraSpace  
+##  <a name="setextraspace"></a>  CMFCOutlookBarPane::SetExtraSpace  
  Outlook 표시줄 창에 단추 주위에 사용 되는 패딩 픽셀 수를 설정 합니다.  
   
 ```  
 void SetExtraSpace()  
 ```  
   
-##  <a name="settextcolor"></a>CMFCOutlookBarPane::SetTextColor  
+##  <a name="settextcolor"></a>  CMFCOutlookBarPane::SetTextColor  
  Outlook 표시줄 창에 일반적인 및 강조 표시 된 텍스트의 색을 설정합니다.  
   
 ```  
@@ -436,7 +431,7 @@ void SetTextColor(
  [in] `clrSelText`  
  선택한 텍스트에 대 한 새로운 색을 지정합니다.  
   
-##  <a name="settransparentcolor"></a>CMFCOutlookBarPane::SetTransparentColor  
+##  <a name="settransparentcolor"></a>  CMFCOutlookBarPane::SetTransparentColor  
  Outlook 표시줄 창에 대 한 투명 한 색을 설정합니다.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "예외: MFC 예외 매크로에서 변환 | Microsoft Docs"
-ms.custom: 
+title: '예외: MFC 예외 매크로에서 변환 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - catch blocks [MFC], delimiting
 - exception handling [MFC], converting exceptions
 ms.assetid: bd3ac3b3-f3ce-4fdd-a168-a2cff13ed796
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36adda235cf71d1a44218c98c109e72847ca9136
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8953cc28e35974f7a2a63754533ffd851ca62a3e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-converting-from-mfc-exception-macros"></a>예외: MFC 예외 매크로에서 변환
 고급 항목입니다.  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [C + + 예외 사용의 예외 매크로 사용 하 여 코드 변환](#_core_doing_the_conversion)  
   
-##  <a name="_core_advantages_of_converting"></a>변환의 이점  
+##  <a name="_core_advantages_of_converting"></a> 변환의 이점  
  아마도 필요가 없습니다 기존 코드를 변환할 있지만 이전 버전에서 구현 및 mfc 버전 3.0 매크로 구현 방식 간의 차이점을 알고 있어야 합니다. 이러한 차이점 및 코드 동작의 후속 변경 내용은에 설명 되어 [예외: 버전 3.0의 예외 매크로 변경](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)합니다.  
   
  변환의 기본 이점은 다음과 같습니다.  
@@ -67,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
      에 대 한 예외 선언이 **catch** 키워드에서는이 구문을 사용 합니다.  
   
-     **catch (** *exception_type* *exception_name***)**  
+     **catch (** *exception_type* *exception_name * * *)**  
   
      이 예외 선언문 예외 catch의 유형을 나타내는 블록이 처리 합니다.  
   
@@ -81,7 +76,7 @@ ms.lasthandoff: 12/21/2017
   
      매크로 사용 하 여 `THROW_LAST` 를 다시 현재 예외를 throw 합니다. `throw` 키워드 없는 인수를 사용 하는 같습니다.  
   
-##  <a name="_core_doing_the_conversion"></a>변환을 수행  
+##  <a name="_core_doing_the_conversion"></a> 변환을 수행  
   
 #### <a name="to-convert-code-using-macros-to-use-the-c-exception-handling-keywords"></a>매크로 사용 하 여 c + + 예외 처리 키워드를 사용 하도록 코드를 변환 하려면  
   
@@ -93,13 +88,13 @@ ms.lasthandoff: 12/21/2017
   
      **CATCH** (바꿀 **catch**)  
   
-     `AND_CATCH`(사용 하 여 대체 **catch**)  
+     `AND_CATCH` (사용 하 여 대체 **catch**)  
   
-     `END_CATCH`(삭제)  
+     `END_CATCH` (삭제)  
   
      **THROW** (바꿀 `throw`)  
   
-     `THROW_LAST`(사용 하 여 대체 `throw`)  
+     `THROW_LAST` (사용 하 여 대체 `throw`)  
   
 3.  유효한 예외 선언이 형성 매크로 인수를 수정 합니다.  
   

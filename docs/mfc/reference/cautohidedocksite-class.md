@@ -1,12 +1,9 @@
 ---
-title: "CAutoHideDockSite 클래스 | Microsoft Docs"
-ms.custom: 
+title: CAutoHideDockSite 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAutoHideDockSite
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8cc4e9158ae9ff2ef6fd4d48483aa5a75dd9617
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4abdb76523f0b7b1ab87beb6daaf723c4dff5cc8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cautohidedocksite-class"></a>CAutoHideDockSite 클래스
 `CAutoHideDockSite` 확장는 [CDockSite 클래스](../../mfc/reference/cdocksite-class.md) 자동 숨김 도킹 창을 구현 하 합니다.  
@@ -80,7 +75,7 @@ class CAutoHideDockSite : public CDockSite
   
 |||  
 |-|-|  
-|name|설명|  
+|이름|설명|  
 |[CAutoHideDockSite::m_nExtraSpace](#m_nextraspace)|도구 모음 및 도킹 막대의 가장자리 사이의 간격 크기를 정의합니다. 이 공간은 왼쪽된 가장자리 또는 도킹 공간에 대 한 맞춤에 따라 위쪽 가장자리에서 측정 됩니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -99,7 +94,7 @@ class CAutoHideDockSite : public CDockSite
   
  [CDockSite](../../mfc/reference/cdocksite-class.md)  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 검색 하는 방법을 `CAutoHideDockSite` 에서 개체는 `CMFCAutoHideBar` 개체 및 도킹 막대의 왼쪽 및 오른쪽 여백을 설정 하는 방법입니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#29](../../mfc/reference/codesnippet/cpp/cautohidedocksite-class_1.cpp)]  
@@ -107,7 +102,7 @@ class CAutoHideDockSite : public CDockSite
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxautohidedocksite.h  
   
-##  <a name="canacceptpane"></a>CAutoHideDockSite::CanAcceptPane  
+##  <a name="canacceptpane"></a>  CAutoHideDockSite::CanAcceptPane  
  기본 창 인지를 확인 한 [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) 또는 개체에서 파생 된 `CMFCAutoHideBar`합니다.  
   
 ```  
@@ -122,12 +117,12 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 |[in] `pBar`|프레임 워크에서 테스트 하는 기본 창입니다.|  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`경우 `pBar` 에서 파생 된 `CMFCAutoHideBar`; `FALSE` 그렇지 않은 경우.  
+ `TRUE` 경우 `pBar` 에서 파생 된 `CMFCAutoHideBar`; `FALSE` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
  기본 창 개체에서 파생 된 경우 `CMFCAutoHideBar`를 포함할 수 있습니다는 `CAutoHideDockSite`합니다.  
   
-##  <a name="dockpane"></a>CAutoHideDockSite::DockPane  
+##  <a name="dockpane"></a>  CAutoHideDockSite::DockPane  
  이 창을 도킹 [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md) 개체입니다.  
   
 ```  
@@ -151,7 +146,7 @@ virtual void DockPane(
   
  경우 `lpRect` 은 `NULL`, 프레임 워크는 창에서 도킹 사이트에서 기본 위치에 배치 합니다. 도킹 사이트 가로 이면 왼쪽에 도킹 사이트의 기본 위치는입니다. 그렇지 않으면 기본 위치는 도킹 사이트 맨 위에 있는 합니다.  
   
-##  <a name="getalignrect"></a>CAutoHideDockSite::GetAlignRect  
+##  <a name="getalignrect"></a>  CAutoHideDockSite::GetAlignRect  
  화면 좌표에서 도킹 사이트의 크기를 검색 합니다.  
   
 ```  
@@ -168,7 +163,7 @@ void GetAlignRect(CRect& rect) const;
 ### <a name="remarks"></a>설명  
  사각형은 포함 되지 않도록 오프셋된 여백에 대해 조정 됩니다.  
   
-##  <a name="m_nextraspace"></a>CAutoHideDockSite::m_nExtraSpace  
+##  <a name="m_nextraspace"></a>  CAutoHideDockSite::m_nExtraSpace  
  가장자리 사이의 간격 크기는 [CAutoHideDockSite 클래스](../../mfc/reference/cautohidedocksite-class.md) 및 [CMFCAutoHideBar 클래스](../../mfc/reference/cmfcautohidebar-class.md) 개체입니다.  
   
 ```  
@@ -178,7 +173,7 @@ static int m_nExtraSpace;
 ### <a name="remarks"></a>설명  
  경우는 `CMFCAutoHideBar` 에 도킹 한 `CAutoHideDockSite`, 전체 도킹 사이트를 차지 하지 해야 합니다. 이 전역 변수의 왼쪽 또는 위쪽 테두리 사이의 추가 공백 제어는 `CMFCAutoHideBar` 및 해당 `CAutoHideDockSite` 가장자리입니다. 위쪽 또는 왼쪽 가장자리 사용 여부는 현재 맞춤에 따라 달라 집니다.  
   
-##  <a name="setoffsetleft"></a>CAutoHideDockSite::SetOffsetLeft  
+##  <a name="setoffsetleft"></a>  CAutoHideDockSite::SetOffsetLeft  
  도킹 모음 왼쪽에 여백을 설정 합니다.  
   
 ```  
@@ -192,7 +187,7 @@ void SetOffsetLeft(int nOffset);
 ### <a name="remarks"></a>설명  
  [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) 개체에 정적으로 배치 되는 `CAutoHideDockSite` 개체입니다. 즉, 사용자의 위치를 변경할 수 없는 수동으로 `CMFCAutoHideBar` 개체입니다. `SetOffsetLeft` 메서드에서 컨트롤 왼쪽 맨 왼쪽 사이의 간격 `CMFCAutoHideBar` 및의 왼쪽은 `CAutoHideDockSite`합니다.  
   
-##  <a name="setoffsetright"></a>CAutoHideDockSite::SetOffsetRight  
+##  <a name="setoffsetright"></a>  CAutoHideDockSite::SetOffsetRight  
  도킹 표시줄의 오른쪽에 여백을 설정 합니다.  
   
 ```  
@@ -206,7 +201,7 @@ void SetOffsetRight(int nOffset);
 ### <a name="remarks"></a>설명  
  [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) 개체에 정적으로 배치 되는 `CAutoHideDockSite` 개체입니다. 즉, 사용자의 위치를 변경할 수 없는 수동으로 `CMFCAutoHideBar` 개체입니다. `SetOffsetRight` 맨 오른쪽의 오른쪽 간 간격을 제어 하는 메서드 `CMFCAutoHideBar` 및 오른쪽에는 `CAutoHideDockSite`합니다.  
   
-##  <a name="repositionpanes"></a>CAutoHideDockSite::RepositionPanes  
+##  <a name="repositionpanes"></a>  CAutoHideDockSite::RepositionPanes  
  에 창이 다시 그립니다는 [CAutoHideDockSite](../../mfc/reference/cautohidedocksite-class.md)합니다.  
   
 ```  
@@ -223,7 +218,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 ### <a name="remarks"></a>설명  
  기본 구현에서는 사용 하지 않는 `rectNewClientArea`합니다. 일반 도구 모음 여백 및 단추 간격입니다. 창을 다시 그립니다.  
   
-##  <a name="unsetautohidemode"></a>CAutoHideDockSite::UnSetAutoHideMode  
+##  <a name="unsetautohidemode"></a>  CAutoHideDockSite::UnSetAutoHideMode  
  호출 [CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) 개체는 도킹 사이트에 대 한 합니다.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "MFC 클래스 추가 | Microsoft Docs"
-ms.custom: 
+title: MFC 클래스 추가 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.codewiz.classes.adding.mfc
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - classes [MFC], adding MFC
 - MFC, adding classes
 ms.assetid: 9a96b67f-40bf-43d4-8872-2f8dfc5404f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ab339ce7dc883c80941f0fe7f72da7ef852af52
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ae1f1585170026f7c99c024ba9c82c26cbece3c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-an-mfc-class"></a>MFC 클래스 추가
 프로젝트에 Microsoft Foundation 클래스 (MFC) 라이브러리 클래스에서 파생 된 클래스를 추가 하려면 사용 된 **클래스 추가** 에서 사용할 수 있는 명령 [클래스 뷰](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)합니다. 새 클래스의 이름을 지정 하 고 기본 클래스를 선택한 다음 ID (있는 경우) 연결 되어 있는 대화 상자를 선택 합니다. 코드 마법사 헤더 파일과 구현 파일 만들고 프로젝트에 추가 합니다.  

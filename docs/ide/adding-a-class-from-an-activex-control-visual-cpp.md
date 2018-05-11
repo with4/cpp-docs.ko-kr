@@ -1,30 +1,25 @@
 ---
-title: "ActiveX 컨트롤 (Visual c + +)에서 클래스를 추가 | Microsoft Docs"
-ms.custom: 
+title: ActiveX 컨트롤 (Visual c + +)에서 클래스를 추가 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ActiveX controls [C++], adding classes
 - classes [C++], creating
 ms.assetid: 729fcb37-54b8-44d5-9b4e-50bb16e0eea4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f059396c91ddb51247347d10e6c8f79a6c95522f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 793adf38da33808371a0df71f671c3e29da75326
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-a-class-from-an-activex-control-visual-c"></a>ActiveX 컨트롤의 클래스 추가(Visual C++)
 이 마법사를 사용 하 여 사용 가능한 ActiveX 컨트롤의 인터페이스에서 MFC 클래스를 만듭니다. 에 MFC 클래스를 추가할 수는 [MFC 응용 프로그램](../mfc/reference/creating-an-mfc-application.md), [MFC DLL](../mfc/reference/creating-an-mfc-dll-project.md), 또는 [MFC ActiveX 컨트롤](../mfc/reference/creating-an-mfc-activex-control.md)합니다.  

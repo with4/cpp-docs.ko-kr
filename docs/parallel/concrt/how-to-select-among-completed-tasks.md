@@ -1,35 +1,30 @@
 ---
-title: "방법: 완료 된 작업 간 선택 | Microsoft Docs"
-ms.custom: 
+title: '방법: 완료 된 작업 간 선택 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - selecting among completed tasks [Concurrency Runtime]
 - completed tasks, selecting among [Concurrency Runtime]
 ms.assetid: c8ccc160-043f-4599-847b-32ed270bb257
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cce496f205052bdb6986abc0cee158622e93545
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a485eb87f2caa62a382983c1cda2b9c098742d42
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-select-among-completed-tasks"></a>방법: 완료된 작업 중에서 선택
 사용 하는 방법을 보여 주는이 예제는 [concurrency:: choice](../../parallel/concrt/reference/choice-class.md) 및 [concurrency:: join](../../parallel/concrt/reference/join-class.md) 검색 알고리즘을 완료 하려면 첫 번째 작업을 선택 하는 클래스입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 두 가지 검색 알고리즘을 병렬로 수행 하 고 완료 하는 첫 번째 알고리즘을 선택 합니다. 이 예에서는 정의 `employee` 직원에 대 한 숫자 식별자 및는 급여를 보유 하는 형식입니다. `find_employee` 함수는 제공 된 식별자가 제공 된 급여 된 첫 번째 직원을 찾습니다. `find_employee` 함수도 직원에 제공 된 식별자 또는 급여 된 경우를 처리 합니다. `wmain` 함수 배열을 만듭니다 `employee` 개체와 여러 가지 식별자와 급여 값을 검색 합니다.  
   
  이 예제에서는 사용 된 `choice` 다음 경우 중에서 선택할 개체:  

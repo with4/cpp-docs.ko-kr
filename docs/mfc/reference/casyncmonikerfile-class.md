@@ -1,12 +1,9 @@
 ---
-title: "CAsyncMonikerFile 클래스 | Microsoft Docs"
-ms.custom: 
+title: CAsyncMonikerFile 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAsyncMonikerFile
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStartBinding
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 546e251f3387175812e6ba7f8cfed5d8a878d658
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 16d4b5169ffa93892b8a3076cbfa24227ccf569f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile 클래스
 ActiveX 컨트롤(이전의 OLE 컨트롤)에서 비동기 모니커를 사용할 수 있도록 기능을 제공합니다.  
@@ -117,7 +112,7 @@ class CAsyncMonikerFile : public CMonikerFile
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxole.h  
   
-##  <a name="casyncmonikerfile"></a>CAsyncMonikerFile::CAsyncMonikerFile  
+##  <a name="casyncmonikerfile"></a>  CAsyncMonikerFile::CAsyncMonikerFile  
  `CAsyncMonikerFile` 개체를 생성합니다.  
   
 ```  
@@ -125,11 +120,11 @@ CAsyncMonikerFile();
 ```  
   
 ### <a name="remarks"></a>설명  
- 생성 하지 않습니다는 `IBindHost` 인터페이스입니다. `IBindHost`제공 하는 경우에 사용 되는 **열려** 멤버 함수입니다.  
+ 생성 하지 않습니다는 `IBindHost` 인터페이스입니다. `IBindHost` 제공 하는 경우에 사용 되는 **열려** 멤버 함수입니다.  
   
  에 대 한 설명은 `IBindHost` 인터페이스는 Windows SDK를 참조 하십시오.  
   
-##  <a name="close"></a>CAsyncMonikerFile::Close  
+##  <a name="close"></a>  CAsyncMonikerFile::Close  
  닫고 모든 리소스를 해제 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -139,7 +134,7 @@ virtual void Close();
 ### <a name="remarks"></a>설명  
  열려 있지 않은 또는 이미 닫힌 파일에 대해 호출할 수 있습니다.  
   
-##  <a name="createbindstatuscallback"></a>CAsyncMonikerFile::CreateBindStatusCallback  
+##  <a name="createbindstatuscallback"></a>  CAsyncMonikerFile::CreateBindStatusCallback  
  구현 하는 COM 개체를 만듭니다. `IBindStatusCallback`합니다.  
   
 ```  
@@ -154,15 +149,15 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
  경우 `pUnkControlling` 않습니다 **NULL**, 내부 예외에 대 한 포인터를 반환 하는 함수 **IUnknown** 지 원하는 새로운 COM 개체에 `IBindStatusCallback`합니다. 경우 `pUnkControlling` 은 **NULL**, 함수 반환에 대 한 포인터는 **IUnknown** 지 원하는 새로운 COM 개체에 `IBindStatusCallback`합니다.  
   
 ### <a name="remarks"></a>설명  
- `CAsyncMonikerFile`구현 하는 COM 개체가 필요 `IBindStatusCallback`합니다. MFC는 이러한 개체를 구현 하며 집계할 수 있습니다. 재정의할 수 `CreateBindStatusCallback` 고유한 COM 개체를 반환 합니다. COM 개체를 호출 하 여 MFC 구현을 집계할 수 `CreateBindStatusCallback` 와 COM 개체의 제어 알 수 없음. COM 개체를 사용 하 여 구현 된 `CCmdTarget` COM 지원 제어 알 수 없는 사용 하면 검색 수 **CCmdTarget::GetControllingUnknown**합니다.  
+ `CAsyncMonikerFile` 구현 하는 COM 개체가 필요 `IBindStatusCallback`합니다. MFC는 이러한 개체를 구현 하며 집계할 수 있습니다. 재정의할 수 `CreateBindStatusCallback` 고유한 COM 개체를 반환 합니다. COM 개체를 호출 하 여 MFC 구현을 집계할 수 `CreateBindStatusCallback` 와 COM 개체의 제어 알 수 없음. COM 개체를 사용 하 여 구현 된 `CCmdTarget` COM 지원 제어 알 수 없는 사용 하면 검색 수 **CCmdTarget::GetControllingUnknown**합니다.  
   
- 또는 COM 개체를 호출 하 여 MFC의 구현에 위임할 수 **CreateBindStatusCallback (NULL)**합니다.  
+ 또는 COM 개체를 호출 하 여 MFC의 구현에 위임할 수 **CreateBindStatusCallback (NULL)** 합니다.  
   
  [CAsyncMonikerFile::Open](#open) 호출 `CreateBindStatusCallback`합니다.  
   
  비동기 모니커 및 비동기 바인딩에 대 한 자세한 내용은 참조는 [IBindStatusCallback](http://msdn.microsoft.com/library/ie/ms775060) 인터페이스 및 [비동기 바인딩 방법 및 저장소 작업](http://msdn.microsoft.com/library/windows/desktop/aa379152)합니다. 집계의 논의 알려면 [집계](http://msdn.microsoft.com/library/windows/desktop/ms686558)합니다. 모든 세 항목이 Windows SDK에 포함 되어 있습니다.  
   
-##  <a name="getbindinfo"></a>CAsyncMonikerFile::GetBindInfo  
+##  <a name="getbindinfo"></a>  CAsyncMonikerFile::GetBindInfo  
  바인딩할은 원하는 비동기 모니커를 확인 하는 비동기 모니커의 클라이언트에서 호출 됩니다.  
   
 ```  
@@ -177,7 +172,7 @@ virtual DWORD GetBindInfo() const;
   
  이 작업을 위한 한 가지 이유 데이터 끌어오기 모델을 사용 하 여 데이터를 밀어 넣기 모델 대신 바인딩할 수 있습니다. 데이터 끌어오기 모델에서는 클라이언트 드라이브 바인딩 작업 하 고 모니커를 읽을 때 클라이언트에 데이터만 제공 합니다. 데이터 푸시 모델에서 모니커 비동기 바인드 드라이브 하 고 지속적으로 새 데이터를 사용할 수 있는 경우 클라이언트에 알립니다.  
   
-##  <a name="getbinding"></a>CAsyncMonikerFile::GetBinding  
+##  <a name="getbinding"></a>  CAsyncMonikerFile::GetBinding  
  바인딩 비동기 전송에 대 한 포인터를 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -192,7 +187,7 @@ IBinding* GetBinding() const;
   
  에 대 한 설명은 `IBinding` 인터페이스는 Windows SDK를 참조 하십시오.  
   
-##  <a name="getformatetc"></a>CAsyncMonikerFile::GetFormatEtc  
+##  <a name="getformatetc"></a>  CAsyncMonikerFile::GetFormatEtc  
  스트림의 데이터의 형식을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -202,7 +197,7 @@ FORMATETC* GetFormatEtc() const;
 ### <a name="return-value"></a>반환 값  
  Windows 구조에 대 한 포인터 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 현재 열린된 스트림에 대 한 합니다. 반환 **NULL** 모니커 바인딩되지 않은, 비동기, 없는 경우 또는 비동기 작업이 시작 되지 않은 경우.  
   
-##  <a name="getpriority"></a>CAsyncMonikerFile::GetPriority  
+##  <a name="getpriority"></a>  CAsyncMonikerFile::GetPriority  
  바인딩 프로세스 스레드에 대해 지정 되는 바인딩 작업에 대 한 우선 순위를 수신 하기 시작 비동기 모니커 클라이언트에서 호출 합니다.  
   
 ```  
@@ -213,9 +208,9 @@ virtual LONG GetPriority() const;
  우선 순위는 비동기 전송 수행 됩니다. 표준 스레드 우선 순위 플래그 중 하나가: **THREAD_PRIORITY_ABOVE_NORMAL**, **THREAD_PRIORITY_BELOW_NORMAL**, **THREAD_PRIORITY_HIGHEST**,  **THREAD_PRIORITY_IDLE**, **THREAD_PRIORITY_LOWEST**, **THREAD_PRIORITY_NORMAL**, 및 **THREAD_PRIORITY_TIME_CRITICAL**합니다. Windows 함수를 참조 [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) 에 대 한 설명은 다음이 값입니다.  
   
 ### <a name="remarks"></a>설명  
- `GetPriority`호출할 수 없습니다 직접 합니다. **THREAD_PRIORITY_NORMAL** 기본 구현에 의해 반환 됩니다.  
+ `GetPriority` 호출할 수 없습니다 직접 합니다. **THREAD_PRIORITY_NORMAL** 기본 구현에 의해 반환 됩니다.  
   
-##  <a name="ondataavailable"></a>CAsyncMonikerFile::OnDataAvailable  
+##  <a name="ondataavailable"></a>  CAsyncMonikerFile::OnDataAvailable  
  비동기 모니커 호출 `OnDataAvailable` 하기를 사용할 수 있도록 클라이언트에 데이터를 제공, 비동기 동안 바인딩할 작업 합니다.  
   
 ```  
@@ -238,10 +233,10 @@ virtual void OnDataAvailable(DWORD dwSize, DWORD bscfFlag);
 ### <a name="remarks"></a>설명  
  이 함수의 기본 구현은 아무 작업도 수행하지 않습니다. 샘플 구현 보려면 다음 예제를 참조 하십시오.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWinInet#5](../../mfc/codesnippet/cpp/casyncmonikerfile-class_1.cpp)]  
   
-##  <a name="onlowresource"></a>CAsyncMonikerFile::OnLowResource  
+##  <a name="onlowresource"></a>  CAsyncMonikerFile::OnLowResource  
  리소스가 부족 한지 모니커에서 호출 됩니다.  
   
 ```  
@@ -251,7 +246,7 @@ virtual void OnLowResource();
 ### <a name="remarks"></a>설명  
  기본 구현 호출 `GetBinding( )-> Abort( )`합니다.  
   
-##  <a name="onprogress"></a>CAsyncMonikerFile::OnProgress  
+##  <a name="onprogress"></a>  CAsyncMonikerFile::OnProgress  
  반복, 일반적으로 시간이 오래 걸리는 작업 하는 동안 적절 한 간격으로이 바인딩 작업의 현재 진행률을 표시 하 여 모니커에서 호출 됩니다.  
   
 ```  
@@ -305,7 +300,7 @@ virtual void OnProgress(
  **BINDSTATUS_CLASSIDAVAILABLE**  
  에 바인딩되는 개체의 인스턴스를 만들 수에 대 한 됩니다. `szStatusText` 원하는 경우에서 클라이언트 바인딩 작업을 취소할 수 있도록 하는 문자열 형식으로 새 개체의 CLSID를 제공 합니다.  
   
-##  <a name="onstartbinding"></a>CAsyncMonikerFile::OnStartBinding  
+##  <a name="onstartbinding"></a>  CAsyncMonikerFile::OnStartBinding  
  바인딩 시작 될 때 작업을 수행 하 여 파생된 클래스에서이 함수를 재정의 합니다.  
   
 ```  
@@ -315,7 +310,7 @@ virtual void OnStartBinding();
 ### <a name="remarks"></a>설명  
  이 함수는 모니커가 다시 호출 됩니다. 기본 구현은 아무 작업도 수행하지 않습니다.  
   
-##  <a name="onstopbinding"></a>CAsyncMonikerFile::OnStopBinding  
+##  <a name="onstopbinding"></a>  CAsyncMonikerFile::OnStopBinding  
  모니커 바인딩 작업의 끝에 의해 호출 됩니다.  
   
 ```  
@@ -334,7 +329,7 @@ virtual void OnStopBinding(HRESULT hresult, LPCTSTR szError);
   
  에 대 한 설명은 `IBinding` 인터페이스는 Windows SDK를 참조 하십시오.  
   
-##  <a name="open"></a>CAsyncMonikerFile::Open  
+##  <a name="open"></a>  CAsyncMonikerFile::Open  
  이 파일을 비동기적으로 함수를 호출 합니다.  
   
 ```  
@@ -388,13 +383,13 @@ virtual BOOL Open(
  비동기 모니커 인터페이스에 대 한 포인터 `IMoniker`,으로 검색할 수 있는 문서의 모니커를 조합한 결과인 정확한 모니커 **IOleClientSite::GetMoniker (** *OLEWHICHMK_ 컨테이너* **)**, 및 경로 이름에서 생성 하는 모니커입니다. 컨트롤을 바인딩하려면이 모니커를 사용할 수 있지만 이것이 컨트롤을 저장 해야 모니커 아닙니다.  
   
  *pBindHost*  
- 에 대 한 포인터는 `IBindHost` 잠재적으로 상대 경로 이름에서 모니커를 만드는 데 사용할 수는 인터페이스입니다. 바인딩 호스트 유효 하지 않거나 모니커를 제공 하지 않습니다, 호출의 기본값은 **열기 (** `lpszFileName` **,**`pError`**)**합니다. 에 대 한 설명은 `IBindHost` 인터페이스는 Windows SDK를 참조 하십시오.  
+ 에 대 한 포인터는 `IBindHost` 잠재적으로 상대 경로 이름에서 모니커를 만드는 데 사용할 수는 인터페이스입니다. 바인딩 호스트 유효 하지 않거나 모니커를 제공 하지 않습니다, 호출의 기본값은 **열기 (** `lpszFileName` **,**`pError`**)** 합니다. 에 대 한 설명은 `IBindHost` 인터페이스는 Windows SDK를 참조 하십시오.  
   
  `pServiceProvider`  
- 에 대 한 포인터는 `IServiceProvider` 인터페이스입니다. 서비스 공급자가 잘못 되었거나 서비스를 제공 하지 못하면 경우 `IBindHost`, 기본적으로 호출 **열기 (** `lpszFileName` **,**`pError`**)**합니다.  
+ 에 대 한 포인터는 `IServiceProvider` 인터페이스입니다. 서비스 공급자가 잘못 되었거나 서비스를 제공 하지 못하면 경우 `IBindHost`, 기본적으로 호출 **열기 (** `lpszFileName` **,**`pError`**)** 합니다.  
   
  *pUnknown*  
- 에 대 한 포인터는 **IUnknown** 인터페이스입니다. 경우 `IServiceProvider` 발견 되 면에 대 한 함수 쿼리 `IBindHost`합니다. 서비스 공급자가 잘못 되었거나 서비스를 제공 하지 못하면 경우 `IBindHost`, 기본적으로 호출 **열기 (** `lpszFileName` **,**`pError`**)**합니다.  
+ 에 대 한 포인터는 **IUnknown** 인터페이스입니다. 경우 `IServiceProvider` 발견 되 면에 대 한 함수 쿼리 `IBindHost`합니다. 서비스 공급자가 잘못 되었거나 서비스를 제공 하지 못하면 경우 `IBindHost`, 기본적으로 호출 **열기 (** `lpszFileName` **,**`pError`**)** 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  파일을 성공적으로 열 0이 아닌 그렇지 않으면 0입니다.  
@@ -402,7 +397,7 @@ virtual BOOL Open(
 ### <a name="remarks"></a>설명  
  이 호출 하는 바인딩 프로세스를 시작합니다.  
   
- URL 또는 파일 이름을 사용할 수 있습니다는 `lpszURL` 매개 변수입니다. 예:  
+ URL 또는 파일 이름을 사용할 수 있습니다는 `lpszURL` 매개 변수입니다. 예를 들어:  
   
  [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/casyncmonikerfile-class_2.cpp)]  
   

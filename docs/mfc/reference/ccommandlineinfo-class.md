@@ -1,12 +1,9 @@
 ---
-title: "CCommandLineInfo 클래스 | Microsoft Docs"
-ms.custom: 
+title: CCommandLineInfo 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCommandLineInfo
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CCommandLineInfo [MFC], m_strPrinterName
 - CCommandLineInfo [MFC], m_strRestartIdentifier
 ms.assetid: 3e313ddb-0a82-4991-87ac-a27feff4668c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd5f24ccf18f39ef231f19aa5b837914104b57c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 43bd8f7b12eee847fd6b8784d21f4b565c7fc6a5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccommandlineinfo-class"></a>CCommandLineInfo 클래스
 응용 프로그램을 시작할 때 명령줄을 구문 분석하는 데 유용합니다.  
@@ -97,11 +92,11 @@ class CCommandLineInfo : public CObject
 |*응용 프로그램* 파일 이름|파일을 엽니다.|  
 |*응용 프로그램* `/p` 파일 이름|파일을 기본 프린터로 인쇄 합니다.|  
 |*응용 프로그램* `/pt` filename 프린터 드라이버 포트|파일을 지정된 된 프린터를 인쇄 합니다.|  
-|*응용 프로그램*`/dde`|시작 하 고 DDE 명령의 기다립니다.|  
-|*응용 프로그램*`/Automation`|OLE 자동화 서버를 시작 합니다.|  
-|*응용 프로그램*`/Embedding`|포함된 된 OLE 항목 편집을 시작 합니다.|  
-|*응용 프로그램*`/Register`<br /><br /> *응용 프로그램*`/Regserver`|등록 작업 수행 하기 위해 응용 프로그램을 알립니다.|  
-|*응용 프로그램*`/Unregister`<br /><br /> *응용 프로그램*`/Unregserver`|등록 취소 작업 수행 하기 위해 응용 프로그램을 알립니다.|  
+|*응용 프로그램* `/dde`|시작 하 고 DDE 명령의 기다립니다.|  
+|*응용 프로그램* `/Automation`|OLE 자동화 서버를 시작 합니다.|  
+|*응용 프로그램* `/Embedding`|포함된 된 OLE 항목 편집을 시작 합니다.|  
+|*응용 프로그램* `/Register`<br /><br /> *응용 프로그램* `/Regserver`|등록 작업 수행 하기 위해 응용 프로그램을 알립니다.|  
+|*응용 프로그램* `/Unregister`<br /><br /> *응용 프로그램* `/Unregserver`|등록 취소 작업 수행 하기 위해 응용 프로그램을 알립니다.|  
   
  새 클래스를 파생 `CCommandLineInfo` 다른 플래그와 매개 변수 값을 처리할 수 있습니다. 재정의 [ParseParam](#parseparam) 새 플래그를 처리할 수 있습니다.  
   
@@ -113,7 +108,7 @@ class CCommandLineInfo : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="ccommandlineinfo"></a>CCommandLineInfo::CCommandLineInfo  
+##  <a name="ccommandlineinfo"></a>  CCommandLineInfo::CCommandLineInfo  
  이 생성자는 `CCommandLineInfo` 기본값을 사용 하는 개체입니다.  
   
 ```  
@@ -125,10 +120,10 @@ CCommandLineInfo();
   
  응용 프로그램 프레임 워크 호출 [ParseParam](#parseparam) 을이 개체의 데이터 멤버를 채웁니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#54](../../mfc/codesnippet/cpp/ccommandlineinfo-class_1.cpp)]  
   
-##  <a name="m_brunautomated"></a>CCommandLineInfo::m_bRunAutomated  
+##  <a name="m_brunautomated"></a>  CCommandLineInfo::m_bRunAutomated  
  나타냅니다는 `/Automation` 명령줄에서 플래그를 찾았습니다.  
   
 ```  
@@ -138,7 +133,7 @@ BOOL m_bRunAutomated;
 ### <a name="remarks"></a>설명  
  경우 `TRUE`, 즉, OLE 자동화 서버 시작 합니다.  
   
-##  <a name="m_brunembedded"></a>CCommandLineInfo::m_bRunEmbedded  
+##  <a name="m_brunembedded"></a>  CCommandLineInfo::m_bRunEmbedded  
  나타냅니다는 `/Embedding` 명령줄에서 플래그를 찾았습니다.  
   
 ```  
@@ -148,7 +143,7 @@ BOOL m_bRunEmbedded;
 ### <a name="remarks"></a>설명  
  경우 `TRUE`, 즉, 포함된 된 OLE 항목 편집을 시작 합니다.  
   
-##  <a name="m_bshowsplash"></a>CCommandLineInfo::m_bShowSplash  
+##  <a name="m_bshowsplash"></a>  CCommandLineInfo::m_bShowSplash  
  시작 화면을 표시 해야 함을 나타냅니다.  
   
 ```  
@@ -158,7 +153,7 @@ BOOL m_bShowSplash;
 ### <a name="remarks"></a>설명  
  경우 `TRUE`, 즉, 시작 화면 시작 하는 동안이 응용 프로그램을 표시 해야 합니다. 기본 구현은 [ParseParam](#parseparam) 이 데이터 멤버 설정 하는 `TRUE` 경우 [m_nShellCommand](#m_nshellcommand) 같으면 `CCommandLineInfo::FileNew`합니다.  
   
-##  <a name="m_nshellcommand"></a>CCommandLineInfo::m_nShellCommand  
+##  <a name="m_nshellcommand"></a>  CCommandLineInfo::m_nShellCommand  
  응용 프로그램의이 인스턴스에 대 한 셸 명령을 나타냅니다.  
   
 ```  
@@ -184,28 +179,28 @@ enum {
   
  에 대 한 간략 한 설명은 다음이 값을 다음 목록을 참조 합니다.  
   
-- `CCommandLineInfo::FileNew`파일 이름을 명령줄에서 찾지 못했습니다. 나타냅니다.  
+- `CCommandLineInfo::FileNew` 파일 이름을 명령줄에서 찾지 못했습니다. 나타냅니다.  
   
-- `CCommandLineInfo::FileOpen`명령줄에서 파일 이름을 찾을 수 있는지와 명령줄에서이 찾지 못한 다음 플래그를 나타냅니다: `/p`, `/pt`, `/dde`합니다.  
+- `CCommandLineInfo::FileOpen` 명령줄에서 파일 이름을 찾을 수 있는지와 명령줄에서이 찾지 못한 다음 플래그를 나타냅니다: `/p`, `/pt`, `/dde`합니다.  
   
-- `CCommandLineInfo::FilePrint`나타냅니다는 `/p` 명령줄에서 플래그를 찾았습니다.  
+- `CCommandLineInfo::FilePrint` 나타냅니다는 `/p` 명령줄에서 플래그를 찾았습니다.  
   
-- `CCommandLineInfo::FilePrintTo`나타냅니다는 `/pt` 명령줄에서 플래그를 찾았습니다.  
+- `CCommandLineInfo::FilePrintTo` 나타냅니다는 `/pt` 명령줄에서 플래그를 찾았습니다.  
   
-- `CCommandLineInfo::FileDDE`나타냅니다는 `/dde` 명령줄에서 플래그를 찾았습니다.  
+- `CCommandLineInfo::FileDDE` 나타냅니다는 `/dde` 명령줄에서 플래그를 찾았습니다.  
   
-- `CCommandLineInfo::AppRegister`나타냅니다는 `/Register` 또는 `/Regserver` 플래그를 명령줄에서 찾을 수 및 응용 프로그램을 등록 하 라는 요청입니다.  
+- `CCommandLineInfo::AppRegister` 나타냅니다는 `/Register` 또는 `/Regserver` 플래그를 명령줄에서 찾을 수 및 응용 프로그램을 등록 하 라는 요청입니다.  
   
-- `CCommandLineInfo::AppUnregister`나타냅니다는 `/Unregister` 또는 `/Unregserver` 응용 프로그램의 등록을 취소 하 라는 요청입니다.  
+- `CCommandLineInfo::AppUnregister` 나타냅니다는 `/Unregister` 또는 `/Unregserver` 응용 프로그램의 등록을 취소 하 라는 요청입니다.  
   
-- `CCommandLineInfo::RestartByRestartManager`되는 응용 프로그램 다시 시작 관리자가 다시 시작 되었음을 나타냅니다.  
+- `CCommandLineInfo::RestartByRestartManager` 되는 응용 프로그램 다시 시작 관리자가 다시 시작 되었음을 나타냅니다.  
   
-- `CCommandLineInfo::FileNothing`시작할 때 새 MDI 자식 창이 표시 되지 않습니다. 기본적으로 응용 프로그램 마법사에서 생성 된 MDI 응용 프로그램 시작 시 새 자식 창을 표시. 이 기능을 해제 하려면 응용 프로그램 사용 `CCommandLineInfo::FileNothing` 셸 명령을 호출할 때 [ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)합니다. `ProcessShellCommand`에 의해 호출 됩니다는 `InitInstance( )` 모든 `CWinApp` 파생 클래스입니다.  
+- `CCommandLineInfo::FileNothing` 시작할 때 새 MDI 자식 창이 표시 되지 않습니다. 기본적으로 응용 프로그램 마법사에서 생성 된 MDI 응용 프로그램 시작 시 새 자식 창을 표시. 이 기능을 해제 하려면 응용 프로그램 사용 `CCommandLineInfo::FileNothing` 셸 명령을 호출할 때 [ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)합니다. `ProcessShellCommand` 에 의해 호출 됩니다는 `InitInstance( )` 모든 `CWinApp` 파생 클래스입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#55](../../mfc/codesnippet/cpp/ccommandlineinfo-class_2.cpp)]  
   
-##  <a name="m_strdrivername"></a>CCommandLineInfo::m_strDriverName  
+##  <a name="m_strdrivername"></a>  CCommandLineInfo::m_strDriverName  
  명령줄에서 세 번째 비 플래그 매개 변수의 값을 저장합니다.  
   
 ```  
@@ -215,7 +210,7 @@ CString m_strDriverName;
 ### <a name="remarks"></a>설명  
  이 매개 변수는 일반적으로 인쇄에 셸 명령에 대 한 프린터 드라이버의 이름입니다. 기본 구현은 [ParseParam](#parseparam) 설정 하는 경우에만이 데이터 멤버는 `/pt` 명령줄에서 플래그를 찾았습니다.  
   
-##  <a name="m_strfilename"></a>CCommandLineInfo::m_strFileName  
+##  <a name="m_strfilename"></a>  CCommandLineInfo::m_strFileName  
  명령줄에서 첫 번째 비 플래그 매개 변수의 값을 저장합니다.  
   
 ```  
@@ -225,7 +220,7 @@ CString m_strFileName;
 ### <a name="remarks"></a>설명  
  이 매개 변수는 일반적으로 열 파일의 이름입니다.  
   
-##  <a name="m_strportname"></a>CCommandLineInfo::m_strPortName  
+##  <a name="m_strportname"></a>  CCommandLineInfo::m_strPortName  
  명령줄에서 네 번째 비 플래그 매개 변수 값을 저장합니다.  
   
 ```  
@@ -235,7 +230,7 @@ CString m_strPortName;
 ### <a name="remarks"></a>설명  
  이 매개 변수는 일반적으로 인쇄에 셸 명령에 대 한 프린터 포트의 이름입니다. 기본 구현은 [ParseParam](#parseparam) 설정 하는 경우에만이 데이터 멤버는 `/pt` 명령줄에서 플래그를 찾았습니다.  
   
-##  <a name="m_strprintername"></a>CCommandLineInfo::m_strPrinterName  
+##  <a name="m_strprintername"></a>  CCommandLineInfo::m_strPrinterName  
  명령줄에서 두 번째 비 플래그 매개 변수 값을 저장합니다.  
   
 ```  
@@ -245,7 +240,7 @@ CString m_strPrinterName;
 ### <a name="remarks"></a>설명  
  이 매개 변수는 일반적으로 인쇄에 셸 명령에 대 한 프린터의 이름입니다. 기본 구현은 [ParseParam](#parseparam) 설정 하는 경우에만이 데이터 멤버는 `/pt` 명령줄에서 플래그를 찾았습니다.  
   
-##  <a name="m_strrestartidentifier"></a>CCommandLineInfo::m_strRestartIdentifier  
+##  <a name="m_strrestartidentifier"></a>  CCommandLineInfo::m_strRestartIdentifier  
  고유 식별자는 명령줄에서를 다시 시작합니다.  
   
 ```  
@@ -257,7 +252,7 @@ CString m_strRestartIdentifier;
   
  다시 시작 관리자는 응용 프로그램을 종료 하 고 다시 시작 하도록 구성 된, 다시 시작 관리자 실행 응용 프로그램 다시 시작 식별자를 사용 하 여 명령줄에서 선택적 매개 변수로 사용 합니다. 다시 시작 관리자를 다시 시작 식별자가 사용 될 경우 응용 프로그램 이전에 열려 있는 문서를 다시 열를 업데이트 하 고 자동 저장 된 파일을 복구할 수 있습니다.  
   
-##  <a name="parseparam"></a>CCommandLineInfo::ParseParam  
+##  <a name="parseparam"></a>  CCommandLineInfo::ParseParam  
  프레임 워크 명령줄에서 개별 매개 변수를 구문 분석/해석 하려면이 함수를 호출 합니다. 두 번째 버전은 첫 번째에서 다른 유니코드 프로젝트에만 합니다.  
   
 ```  
@@ -284,7 +279,7 @@ virtual void ParseParam(
  이 마지막 매개 변수 또는 명령줄에서 플래그는 경우를 나타냅니다.  
   
 ### <a name="remarks"></a>설명  
- [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) 호출 `ParseParam` 한 번 각 매개 변수 또는 명령줄에서 플래그에 대 한 인수를 전달 `pszParam`합니다. 매개 변수의 첫 번째 문자는 경우는 '  **-** '또는'  **/** ', 없어지기 다음 및 *bFlag* 로 설정 된 `TRUE`합니다. 마지막 매개 변수를 구문 분석할 때 `bLast` 로 설정 된 `TRUE`합니다.  
+ [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) 호출 `ParseParam` 한 번 각 매개 변수 또는 명령줄에서 플래그에 대 한 인수를 전달 `pszParam`합니다. 매개 변수의 첫 번째 문자는 경우는 ' **-**'또는' **/**', 없어지기 다음 및 *bFlag* 로 설정 된 `TRUE`합니다. 마지막 매개 변수를 구문 분석할 때 `bLast` 로 설정 된 `TRUE`합니다.  
   
  이 함수의 기본 구현은 다음과 같은 플래그 인식: `/p`, `/pt`, `/dde`, `/Automation`, 및 `/Embedding`다음 표에 표시 된 것 처럼:  
   
@@ -294,13 +289,13 @@ virtual void ParseParam(
 |*응용 프로그램* 파일 이름|파일을 엽니다.|  
 |*응용 프로그램* `/p` 파일 이름|파일을 기본 프린터로 인쇄 합니다.|  
 |*응용 프로그램* `/pt` filename 프린터 드라이버 포트|파일을 지정된 된 프린터를 인쇄 합니다.|  
-|*응용 프로그램*`/dde`|시작 하 고 DDE 명령의 기다립니다.|  
-|*응용 프로그램*`/Automation`|OLE 자동화 서버를 시작 합니다.|  
-|*응용 프로그램*`/Embedding`|포함된 된 OLE 항목 편집을 시작 합니다.|  
-|*응용 프로그램*`/Register`<br /><br /> *응용 프로그램*`/Regserver`|등록 작업 수행 하기 위해 응용 프로그램을 알립니다.|  
-|*응용 프로그램*`/Unregister`<br /><br /> *응용 프로그램*`/Unregserver`|등록 취소 작업 수행 하기 위해 응용 프로그램을 알립니다.|  
+|*응용 프로그램* `/dde`|시작 하 고 DDE 명령의 기다립니다.|  
+|*응용 프로그램* `/Automation`|OLE 자동화 서버를 시작 합니다.|  
+|*응용 프로그램* `/Embedding`|포함된 된 OLE 항목 편집을 시작 합니다.|  
+|*응용 프로그램* `/Register`<br /><br /> *응용 프로그램* `/Regserver`|등록 작업 수행 하기 위해 응용 프로그램을 알립니다.|  
+|*응용 프로그램* `/Unregister`<br /><br /> *응용 프로그램* `/Unregserver`|등록 취소 작업 수행 하기 위해 응용 프로그램을 알립니다.|  
   
- 이 정보에 저장 됩니다 [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), 및 [m_nShellCommand](#m_nshellcommand)합니다. 플래그는 슬래시로 표시 된 '  **/** '또는 하이픈'  **-** '.  
+ 이 정보에 저장 됩니다 [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), 및 [m_nShellCommand](#m_nshellcommand)합니다. 플래그는 슬래시로 표시 된 ' **/**'또는 하이픈' **-**'.  
   
  기본 구현에 첫 번째 비 플래그 매개 변수를 배치 [m_strFileName](#m_strfilename)합니다. 경우에 `/pt` 플래그를 기본 구현은 배치 두 번째, 세 번째 및 네 번째 비 플래그 매개 변수를 [m_strPrinterName](#m_strprintername), [m_strDriverName](#m_strdrivername), 및 [m_ strPortName](#m_strportname)각각.  
   

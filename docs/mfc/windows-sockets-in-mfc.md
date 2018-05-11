@@ -1,13 +1,10 @@
 ---
-title: "MFC의 Windows 소켓 | Microsoft Docs"
-ms.custom: 
+title: MFC의 Windows 소켓 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - WSOCK32.DLL
 - sockets [MFC], MFC
 ms.assetid: 1f3c476a-9c68-49fe-9a25-d22971a334d0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 187a58e719ad320975deba7429d6ec04a70143ac
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 84fc25ab6515b22fa647b3cc32833c791b59f2b8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-in-mfc"></a>MFC의 Windows 소켓
 > [!NOTE]
@@ -39,7 +34,7 @@ ms.lasthandoff: 02/09/2018
   
  Windows 소켓, 소켓 개념에 대 한 설명을 포함 하 여에 대 한 내용은 [Windows 소켓: 백그라운드](../mfc/windows-sockets-background.md)합니다.  
   
-##  <a name="_core_sockets_programming_models"></a>소켓 프로그래밍 모델  
+##  <a name="_core_sockets_programming_models"></a> 소켓 프로그래밍 모델  
  프로그래밍 모델 두 MFC Windows 소켓 클래스에서 지원 됩니다.  
   
 -   `CAsyncSocket`  
@@ -52,7 +47,7 @@ ms.lasthandoff: 02/09/2018
   
  만들기 및 사용 하 여 `CSocket` 및 `CAsyncSocket` 개체에서 설명 [Windows 소켓: 아카이브 함께 사용 하 여 소켓](../mfc/windows-sockets-using-sockets-with-archives.md) 및 [Windows 소켓: 클래스를 사용 하 여 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)합니다.  
   
-##  <a name="_core_mfc_socket_samples_and_windows_sockets_dlls"></a>Windows 소켓 Dll  
+##  <a name="_core_mfc_socket_samples_and_windows_sockets_dlls"></a> Windows 소켓 Dll  
  Microsoft Windows 운영 체제에서는 Windows 소켓 동적 연결 라이브러리 (DLL)를 제공합니다. Visual c + +에는 적절 한 헤더 파일, 라이브러리 및 Windows 소켓 사양을 제공합니다.  
   
  Windows 소켓에 대 한 자세한 내용은 다음을 참조 하세요.  

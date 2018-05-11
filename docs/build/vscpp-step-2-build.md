@@ -1,9 +1,9 @@
 ---
-title: "C + + 콘솔 응용 프로그램 프로젝트 빌드 및 실행 | Microsoft Docs"
-description: "빌드 및 Visual c + +에서는 Hello World 콘솔 응용 프로그램 실행"
+title: C + + 콘솔 응용 프로그램 프로젝트 빌드 및 실행 | Microsoft Docs
+description: 빌드 및 Visual c + +에서는 Hello World 콘솔 응용 프로그램 실행
 ms.custom: mvc
 ms.date: 12/12/2017
-ms.topic: get-started-article
+ms.topic: tutorial
 ms.technology:
 - devlang-C++
 ms.devlang: C++
@@ -12,20 +12,19 @@ dev_langs:
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 119d39c6aac479c8e08cd017b4d5f8da794c836d
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: fa63175e086fcb22552d0b7fd027b380d9766739
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>C + + 콘솔 응용 프로그램 프로젝트 빌드 및 실행
 
 C + + 콘솔 응용 프로그램 프로젝트를 만들고 코드를 입력 했을 때 빌드하고 수 있습니다 및 Visual Studio 내에서 실행 한 다음 명령줄에서 독립 실행형 앱으로 실행 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 - 설치 하 고 컴퓨터에서 실행 중인 작업의 c + + 데스크톱 개발을 사용한 Visual Studio가 있습니다. 아직 설치 되지 않은 경우의 단계에 따라 [Visual Studio에서 c + + 설치 지원](../build/vscpp-step-0-installation.md)합니다.
 

@@ -1,12 +1,9 @@
 ---
-title: "CMFCDesktopAlertWndInfo 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCDesktopAlertWndInfo 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDesktopAlertWndInfo
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndInfo [MFC], m_strText
 - CMFCDesktopAlertWndInfo [MFC], m_strURL
 ms.assetid: 5c9bb84e-6c96-4748-8e74-6951b6ae8e84
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f257575abbf405177b2524c4c803c0b3d250187
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b775b06f605edc68c6f1dbe47035d9ecf214b396
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>CMFCDesktopAlertWndInfo 클래스
 `CMFCDesktopAlertWndInfo` 클래스와 함께 사용 되는 [CMFCDesktopAlertWnd 클래스](../../mfc/reference/cmfcdesktopalertwnd-class.md)합니다. 바탕 화면 경고 창이 표시될 경우 표시되는 컨트롤을 지정합니다.  
@@ -60,7 +55,7 @@ class CMFCDesktopAlertWndInfo
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|표시 되는 아이콘에 대 한 핸들입니다.|  
 |[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|바탕 화면 경고 창이에서 링크와 관련 된 명령 ID입니다.|  
@@ -78,7 +73,7 @@ class CMFCDesktopAlertWndInfo
   
  기본 대화 상자 충분 하지 않은 경우 사용자 지정 대화 상자를 만들 있고에 전달 된 [cmfcdesktopalertwnd:: Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) 이 클래스를 사용 하는 대신 메서드. 자세한 내용은 참조 [CMFCDesktopAlertDialog 클래스](../../mfc/reference/cmfcdesktopalertdialog-class.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는에서 다양 한 멤버를 사용 하 여 `CMFCDesktopAlertWndInfo` 클래스입니다. 바탕 화면 경고 창이, 바탕 화면 경고 창이에 표시 되는 링크 및 바탕 화면 경고 창이에서 링크와 연결 된 명령 ID에 표시 되는 텍스트 아이콘 표시 되는 핸들을 설정 하는 방법을 보여가 줍니다. 이 예제는의 일부는 [바탕 화면 경고 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#3](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndinfo-class_1.cpp)]  
@@ -89,7 +84,7 @@ class CMFCDesktopAlertWndInfo
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxDesktopAlertDialog.h  
   
-##  <a name="operator_eq"></a>CMFCDesktopAlertWndInfo::operator =  
+##  <a name="operator_eq"></a>  CMFCDesktopAlertWndInfo::operator =  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -103,7 +98,7 @@ CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="m_hicon"></a>CMFCDesktopAlertWndInfo::m_hIcon  
+##  <a name="m_hicon"></a>  CMFCDesktopAlertWndInfo::m_hIcon  
  표시 되는 아이콘에 대 한 핸들입니다.  
   
 ```  
@@ -112,7 +107,7 @@ HICON m_hIcon;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="m_nurlcmdid"></a>CMFCDesktopAlertWndInfo::m_nURLCmdID  
+##  <a name="m_nurlcmdid"></a>  CMFCDesktopAlertWndInfo::m_nURLCmdID  
  바탕 화면 경고 창이에서 링크와 관련 된 명령 ID입니다.  
   
 ```  
@@ -122,7 +117,7 @@ UINT m_nURLCmdID;
 ### <a name="remarks"></a>설명  
  명령 ID로 지정 된 링크를 클릭할 때 팝업 창의 소유자에 게 전송 되 [CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)합니다.  
   
-##  <a name="m_strtext"></a>CMFCDesktopAlertWndInfo::m_strText  
+##  <a name="m_strtext"></a>  CMFCDesktopAlertWndInfo::m_strText  
  바탕 화면 경고 창이에 표시 되는 텍스트입니다.  
   
 ```  
@@ -131,7 +126,7 @@ CString m_strText;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="m_strurl"></a>CMFCDesktopAlertWndInfo::m_strURL  
+##  <a name="m_strurl"></a>  CMFCDesktopAlertWndInfo::m_strURL  
  바탕 화면 경고 창이에 표시 되는 링크입니다.  
   
 ```  

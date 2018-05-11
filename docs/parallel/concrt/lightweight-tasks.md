@@ -1,29 +1,24 @@
 ---
-title: "간단한 작업 | Microsoft Docs"
-ms.custom: 
+title: 간단한 작업 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - lightweight tasks
 ms.assetid: b6dcfc7a-9fa9-4144-96a6-2845ea272017
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 010f5fd443271bec1d28b6760f0c17f4e17d803b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d602f83cfe2da6bc1506e07720d3ef021ebce04a
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="lightweight-tasks"></a>간단한 작업
 이 문서에서는 동시성 런타임에서 간단한 작업의 역할을 설명 합니다. A *간단한 작업* 에서 직접 예약 하는 작업은 한 `concurrency::Scheduler` 또는 `concurrency::ScheduleGroup` 개체입니다. 간단한 작업을 Windows API를 제공 하는 함수를 유사한 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) 함수입니다. 따라서 간단한 작업은 동시성 런타임의 일정 예약 기능을 사용 하도록 기존 코드를 조정 하는 경우 유용 합니다. 동시성 런타임 자체에서 간단한 작업을 사용 하 여 비동기 에이전트를 예약 하 고 비동기 메시지 블록 간에 메시지를 전송 합니다.  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
  간단한 작업을 만들려면 호출는 [concurrency::ScheduleGroup::ScheduleTask](reference/schedulegroup-class.md#scheduletask), [concurrency::CurrentScheduler::ScheduleTask](reference/currentscheduler-class.md#scheduletask), 또는 [concurrency::Scheduler::ScheduleTask ](reference/scheduler-class.md#scheduletask) 메서드. 간단한 작업이 끝나기를 때까지 기다리려면 부모 스케줄러가 종료 하거나 같은 동기화 메커니즘을 사용 하는 [concurrency:: event](../../parallel/concrt/reference/event-class.md) 개체입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  간단한 작업을 사용 하도록 기존 코드를 조정 하는 방법을 보여 주는 예제를 보려면 [연습: 간단한 작업 사용 하도록 기존 코드 조정](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -1,13 +1,10 @@
 ---
-title: "메모리 관리 | Microsoft Docs"
-ms.custom: 
+title: 메모리 관리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - memory [MFC], managing
 - memory allocation [MFC], MFC
 ms.assetid: 934ac81b-d630-4232-88e5-ea74f7187987
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a9e31fc1136249f843aa5dc96a4caffcccc7a85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 928a954be6a96f5026a98f724a77bebd51be27f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="memory-management"></a>메모리 관리
 다음이 문서에는의 MFC Microsoft Foundation 클래스 라이브러리 ()에 메모리 관리와 관련 된 일반적인 서비스를 활용 하는 방법을 설명 합니다. 메모리 할당은 두 가지 주요 범주로 나눌 수 있습니다: 프레임 할당과 힙 할당.  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
  Windows 용 프로그램에서 메모리 관리에 대 한 비 MFC 내용은 [메모리 관리](http://msdn.microsoft.com/library/windows/desktop/aa366779) Windows SDK에서 합니다.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [프레임 할당](../mfc/memory-management-frame-allocation.md)  
   

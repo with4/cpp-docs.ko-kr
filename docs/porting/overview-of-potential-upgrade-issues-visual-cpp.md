@@ -1,23 +1,18 @@
 ---
-title: "잠재적인 업그레이드 문제 개요(Visual C++) | Microsoft 문서"
-ms.custom: 
+title: 잠재적인 업그레이드 문제 개요(Visual C++) | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3c01256e852f179d9f9cb02b5658898f5a1c96d
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: e5cdded022a495b85570ba7f1ad86179b6210356
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>잠재적인 업그레이드 문제 개요(Visual C++)
 
@@ -92,7 +87,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t(wchar_t를 네이티브 형식으로 인식)
 
-Microsoft Visual C++ 6.0 및 이전 버전에서는 `wchar_t`가 기본 제공 형식으로 구현되지 않고 wchar.h에서 unsigned short에 대한 typedef로 선언되었습니다. C++ 표준에서는 `wchar_t`가 기본 제공 형식이어야 합니다. typedef 버전을 사용하면 이식성 문제가 발생할 수 있습니다. 이전 버전의 Visual Studio에서 업그레이드하고 코드가 `wchar_t`를 `unsigned short`로 암시적으로 변환하려 하기 때문에 컴파일러 오류 C2664가 발생하는 경우 **/Zc:wchar_t-**를 설정하는 대신 오류를 수정하기 위해 코드를 변경하는 것이 좋습니다. 자세한 내용은 [/Zc:wchar_t(wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)를 참조하세요.
+Microsoft Visual C++ 6.0 및 이전 버전에서는 `wchar_t`가 기본 제공 형식으로 구현되지 않고 wchar.h에서 unsigned short에 대한 typedef로 선언되었습니다. C++ 표준에서는 `wchar_t`가 기본 제공 형식이어야 합니다. typedef 버전을 사용하면 이식성 문제가 발생할 수 있습니다. 이전 버전의 Visual Studio에서 업그레이드하고 코드가 `wchar_t`를 `unsigned short`로 암시적으로 변환하려 하기 때문에 컴파일러 오류 C2664가 발생하는 경우 **/Zc:wchar_t-** 를 설정하는 대신 오류를 수정하기 위해 코드를 변경하는 것이 좋습니다. 자세한 내용은 [/Zc:wchar_t(wchar_t는 네이티브 형식임)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)를 참조하세요.
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>/NODEFAULTLIB, /ENTRY 및 /NOENTRY 링커 옵션을 사용하여 업그레이드
 

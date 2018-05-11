@@ -1,12 +1,9 @@
 ---
-title: "스키마 행 집합 지원 | Microsoft Docs"
-ms.custom: 
+title: 스키마 행 집합 지원 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b4dc655710c9c9cc4bb9a2549136f772b192f739
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 95f1455fde75ec835486cbcc3d590822891d14f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="supporting-schema-rowsets"></a>스키마 행 집합 지원
 스키마 행 집합 통해 소비자의 기본 구조 또는 스키마를 몰라도 데이터 저장소에 대 한 정보를 얻을 수 있습니다. 예를 들어 데이터 저장소 읽는 것 외에 스키마를 알 수 없으므로 때문에 사용자 정의 계층으로 구성 된 테이블을 할 수 있습니다. (또 다른 예로, note는 Visual c + + 마법사 사용 하 여 스키마 행 집합 생성 소비자에 대 한 접근자입니다.) 이 작업을 수행 하는 소비자를 허용 하려면 공급자의 세션 개체에 메서드를 노출 된 [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) 인터페이스입니다. Visual c + + 응용 프로그램에서 사용 하는 [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) 구현할 클래스를 **IDBSchemaRowset**합니다.  
@@ -114,7 +109,7 @@ class CUpdateSessionTRSchemaRowset :
   
  기본적으로 구현 (제한 사항을 지원 하지 않음)에 모든 요청에 대해 0을 반환 합니다. UpdatePV는에서는 제한 사항을 지원 하는 공급자의 예시입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  이 코드에서 가져온 것은 [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) 샘플. UpdatePv 세 가지 필수 스키마 행 집합을 지원: `DBSCHEMA_TABLES`, **DBSCHEMA_COLUMNS**, 및 **DBSCHEMA_PROVIDER_TYPES**합니다. 스키마 지원 공급자에 구현 하는 방법의 예를 들어이 항목에서는 합니다 구현는 **DBSCHEMA_TABLE** 행 집합입니다.  
   
 > [!NOTE]

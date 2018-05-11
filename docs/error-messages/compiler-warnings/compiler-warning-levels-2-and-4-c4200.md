@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 2 및 4) C4200 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 2 및 4) C4200 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4200
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4200
 ms.assetid: e44d6073-937f-42b7-acc1-65e802b475c6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f160476deb2ab3e4ad0ff00100305c934dfb14c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ffc789c3c4da5caf50f0657e17ddabe40a5773c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-levels-2-and-4-c4200"></a>컴파일러 경고(수준 2 및 4) C4200
 비표준 확장이 사용됨: 구조체/공용 구조체의 배열 크기가 0입니다.  
@@ -46,7 +41,7 @@ int main() {
   
  이 비표준 확장은 코드가 가변 길이의 외부 데이터 구조체와 상호 작용하도록 하는 데 사용되는 경우가 많습니다. 사용 중인 코드에 이러한 시나리오가 적용되는 경우에는 경고가 표시되지 않도록 설정할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```cpp  
 // C4200b.cpp  

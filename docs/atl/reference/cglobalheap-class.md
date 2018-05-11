@@ -1,12 +1,9 @@
 ---
-title: "CGlobalHeap 클래스 | Microsoft Docs"
-ms.custom: 
+title: CGlobalHeap 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CGlobalHeap
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - CGlobalHeap class
 ms.assetid: e348d838-3aa7-4bee-a1b3-cd000c99f834
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 566d9fac60f082b8dbf46724b463a9ac07732449
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bef811807c90507184690d1a29d4debd00cc6fda
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cglobalheap-class"></a>CGlobalHeap 클래스
 이 클래스는 구현 [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) Win32 글로벌 힙 함수를 사용 합니다.  
@@ -56,12 +51,12 @@ class CGlobalHeap : public IAtlMemMgr
 |[Cglobalheap:: Reallocate](#reallocate)|이 메모리 관리자에 의해 할당된 메모리를 다시 할당하려면 이 메서드를 호출합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CGlobalHeap`Win32 전역 힙 함수를 사용 하 여 메모리 할당 함수를 구현 합니다.  
+ `CGlobalHeap` Win32 전역 힙 함수를 사용 하 여 메모리 할당 함수를 구현 합니다.  
   
 > [!NOTE]
 >  전역 힙 함수 다른 메모리 관리 기능이 보다 속도가 느립니다와 많은 기능을 제공 하지 않습니다. 따라서 새 응용 프로그램을 사용 해야는 [함수 힙](http://msdn.microsoft.com/library/windows/desktop/aa366711)합니다. 사용할 수는 [CWin32Heap](../../atl/reference/cwin32heap-class.md) 클래스입니다. 전역 함수 DDE 및 클립보드 함수에서 계속 사용 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  예를 참조 [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
@@ -72,7 +67,7 @@ class CGlobalHeap : public IAtlMemMgr
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlmem.h  
   
-##  <a name="allocate"></a>Cglobalheap:: Allocate  
+##  <a name="allocate"></a>  Cglobalheap:: Allocate  
  메모리 블록을 할당하려면 이 메서드를 호출합니다.  
   
 ```
@@ -91,7 +86,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
   
  사용 하 여 구현 [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) 의 플래그 매개 변수와 함께 **GMEM_FIXED**합니다.  
   
-##  <a name="free"></a>Cglobalheap::  
+##  <a name="free"></a>  Cglobalheap::  
  이 메모리 관리자에 의해 할당 된 메모리 블록을 해제 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -105,7 +100,7 @@ virtual void Free(void* p) throw();
 ### <a name="remarks"></a>설명  
  사용 하 여 구현 [작업](http://msdn.microsoft.com/library/windows/desktop/aa366579)합니다.  
   
-##  <a name="getsize"></a>CGlobalHeap::GetSize  
+##  <a name="getsize"></a>  CGlobalHeap::GetSize  
  이 메모리 관리자에 의해 할당 된 메모리 블록의 할당 된 크기를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -122,7 +117,7 @@ virtual size_t GetSize(void* p) throw();
 ### <a name="remarks"></a>설명  
  사용 하 여 구현 [GlobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593)합니다.  
   
-##  <a name="reallocate"></a>Cglobalheap:: Reallocate  
+##  <a name="reallocate"></a>  Cglobalheap:: Reallocate  
  이 메모리 관리자에 의해 할당된 메모리를 다시 할당하려면 이 메서드를 호출합니다.  
   
 ```

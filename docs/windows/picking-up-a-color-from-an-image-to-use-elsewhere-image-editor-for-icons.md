@@ -1,13 +1,10 @@
 ---
-title: "하 여 다른 곳 (아이콘에 대 한 이미지 편집기) 이미지에서 색을 선택 | Microsoft Docs"
-ms.custom: 
+title: 하 여 다른 곳 (아이콘에 대 한 이미지 편집기) 이미지에서 색을 선택 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.color
 dev_langs:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - Image editor [C++], colors
 - Select Color tool
 ms.assetid: b2753617-bde6-4e18-a441-20b9fa6d3cb1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a42e514c3b13a1e958c4ff08d51bb330653ce18
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c8c946d0343c45ca5223f9bf976a94b67c70a2b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>이미지에서 색을 선택하여 다른 곳에 사용(아이콘에 대한 이미지 편집기)
 **색 선택**, 색-픽업 도구를 통해 이미지에서 색 현재 전경색 또는 배경색의 왼쪽 또는 오른쪽 마우스 단추를 눌러 여부에 따라 또는 합니다. 취소 하 고 **색 선택** 도구를 다른 도구를 선택 합니다.  

@@ -1,12 +1,9 @@
 ---
-title: "concurrent_queue 클래스 | Microsoft Docs"
-ms.custom: 
+title: concurrent_queue 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_queue
@@ -25,17 +22,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b577b0f652070fa2a80d06e2f44ccad0a421af5
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a9a3ee82b8b81532b4e63f080ad321a93725ce41
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue 클래스
 `concurrent_queue` 클래스는 해당 요소에 대해 선입 선출 액세스를 허용하는 시퀀스 컨테이너 클래스입니다. `push` 및 `try_pop`과 같은 동시성으로부터 안전한 작업의 제한된 집합을 사용할 수 있게 합니다.  
@@ -74,7 +69,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 |이름|설명|  
 |----------|-----------------|  
 |[concurrent_queue](#ctor)|오버로드됨. 동시 큐를 생성 합니다.|  
-|[~concurrent_queue Destructor](#dtor)|동시 큐를 제거합니다.|  
+|[~ concurrent_queue 소멸자](#dtor)|동시 큐를 제거합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   

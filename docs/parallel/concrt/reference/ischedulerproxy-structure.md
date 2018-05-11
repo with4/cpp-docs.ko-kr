@@ -1,12 +1,9 @@
 ---
-title: "ISchedulerProxy 구조체 | Microsoft Docs"
-ms.custom: 
+title: ISchedulerProxy 구조체 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - ISchedulerProxy
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - ISchedulerProxy structure
 ms.assetid: af416973-7a1c-4c30-aa3b-4161c2aaea54
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa2a67b432fac1dc7ec685e6563acb87fd69087
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 65198998666391763ef32a55cd12e86529e619ed
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy 구조체
 스케줄러가 리소스 할당을 협상하기 위해 동시성 런타임의 리소스 관리자와 통신하는 데 사용되는 인터페이스입니다.  
@@ -67,7 +62,7 @@ struct ISchedulerProxy;
   
  **네임스페이스:** 동시성  
   
-##  <a name="bindcontext"></a>  ISchedulerProxy::BindContext Method  
+##  <a name="bindcontext"></a>  Ischedulerproxy:: Bindcontext 메서드  
  아직 하 나와 연결 되지 않은 경우 실행 컨텍스트는 스레드 프록시를 연결 합니다.  
   
 ```
@@ -102,7 +97,7 @@ virtual IVirtualProcessorRoot* CreateOversubscriber(_Inout_ IExecutionResource* 
   
  `IVirtualProcessorRoot` 인터페이스가 `IExecutionResource` 인터페이스에서 상속하기 때문에 기존 가상 프로세서 루트를 초과 구독할 수도 있습니다.  
   
-##  <a name="requestinitialvirtualprocessors"></a>  ISchedulerProxy::RequestInitialVirtualProcessors Method  
+##  <a name="requestinitialvirtualprocessors"></a>  Ischedulerproxy:: Requestinitialvirtualprocessors 메서드  
  가상 프로세서 루트의 초기 할당을 요청합니다. 모든 가상 프로세서 루트는 스케줄러에 대 한 작업을 수행할 수 있는 하나의 스레드를 실행 하는 기능을 나타냅니다.  
   
 ```
@@ -158,7 +153,7 @@ virtual IExecutionResource* SubscribeCurrentThread() = 0;
   
  스레드의 구독에 대 한 수준의 기본 하드웨어 스레드 하나 증가 합니다. 구독이 종료 되 면 구독 수준은 1 씩 감소 합니다. 구독 수준에 대 한 자세한 내용은 참조 하십시오. [iexecutionresource:: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)합니다.  
   
-##  <a name="unbindcontext"></a>  ISchedulerProxy::UnbindContext Method  
+##  <a name="unbindcontext"></a>  Ischedulerproxy:: Unbindcontext 메서드  
  로 지정 된 실행 컨텍스트를 스레드 프록시 연결을 해제는 `pContext` 매개 변수 스레드 프록시 팩터리의 사용 가능한 풀으로 반환 합니다. 이 메서드는 실행 컨텍스트를 통해 바인딩된에 호출할 수는 [ischedulerproxy:: Bindcontext](#bindcontext) 메서드 되 고 통해 아직 시작 되지 않은 `pContext` 의 매개 변수는 [ithreadproxy:: Switchto ](ithreadproxy-structure.md#switchto) 메서드를 호출 합니다.  
   
 ```

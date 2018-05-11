@@ -1,13 +1,10 @@
 ---
-title: "일반 대화 상자 클래스 | Microsoft Docs"
-ms.custom: 
+title: 일반 대화 상자 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - dialog classes [MFC], common
 - common dialog boxes [MFC]
 ms.assetid: 5c4f6443-896c-4b05-a7df-8169fdadc71d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d76c387c9aa9f53f8503d3606b2b47cdb5c6be6d
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 1cb8a9bacf7414a5a2fff246d796c94a8a1598d7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="common-dialog-classes"></a>일반 대화 상자 클래스
 클래스 외에도 [CDialog](../mfc/reference/cdialog-class.md), MFC 여러 클래스에서 파생 된 제공 `CDialog` 다음 표와 같이 자주 사용 되는 대화 상자를 캡슐화 하 합니다. 캡슐화 된 대화 상자 "일반 대화 상자" 이라고 하며 일부 Windows 공용 대화 라이브러리 (COMMDLG 합니다. DLL)입니다. 버전 3.1 이상 Windows의 일부인 일반 대화 상자 템플릿 리소스 및 이러한 클래스에 대 한 코드 창에 제공 됩니다.  

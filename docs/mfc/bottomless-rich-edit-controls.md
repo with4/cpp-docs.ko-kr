@@ -1,13 +1,10 @@
 ---
-title: "바닥 없는 Rich Edit 컨트롤 | Microsoft Docs"
-ms.custom: 
+title: 바닥 없는 Rich Edit 컨트롤 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - rich edit controls [MFC], bottomless
 - CRichEditCtrl class [MFC], bottomless
 ms.assetid: 2877dd32-1e9a-4fd1-98c0-66dcbbeef1de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8a92b180ed44937c29cd880dea7439e0cfe20b6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f2b08f6c04d345b4ae3ab32c6d0f17a1d8a4647
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bottomless-rich-edit-controls"></a>바닥 없는 Rich Edit 컨트롤
 응용 프로그램 rich edit 컨트롤 크기를 조정할 수 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))은 항상 해당 콘텐츠와 동일한 크기가 되도록 필요에 따라 합니다. Rich edit 컨트롤의 부모 창에 전송 하 여이 이른바 "바닥 없음" 기능을 지원 한 [EN_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787983) 해당 콘텐츠의 크기가 변경 될 때마다 알림 메시지입니다.  

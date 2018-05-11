@@ -1,13 +1,10 @@
 ---
-title: "도구 설명 알림 처리 | Microsoft Docs"
-ms.custom: 
+title: 도구 설명 알림 처리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - notifications [MFC], tool tips
 - tool tips [MFC], notifications
 ms.assetid: ddb93b5f-2e4f-4537-8053-3453c86e2bbb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b7668420b849dc08215a4fc309edf86e9171462
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b9dffa2513c11a5feb3228cb4fdb1f6efbebe7a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="handling-tool-tip-notifications"></a>도구 설명 알림 처리
 지정 하는 경우는 `TBSTYLE_TOOLTIPS` 도구 모음 스타일을 만들고 도구 설명 컨트롤을 관리 합니다. 도구 설명에는 도구 모음 단추를 설명 하는 텍스트 줄을 포함 하는 작은 팝업 창인은 합니다. 사용자가 도구 모음 단추에 커서 있고 그대로 있을 약 절반에 대 한 두 번째 경우에 나타나는 도구 설명 숨겨져 있습니다. 커서 주위 도구 설명이 표시 됩니다.  

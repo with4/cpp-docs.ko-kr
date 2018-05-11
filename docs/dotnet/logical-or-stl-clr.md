@@ -2,11 +2,8 @@
 title: logical_or (STL/CLR) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::logical_or
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - logical_or function [STL/CLR]
 ms.assetid: 3b5eac9b-4aaf-4395-8d76-49100487d85a
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7d80fd86c0426d54a803c3111911f284507bcb11
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 225064209417da2ffefbaa62fdd7d1add2267c5b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="logicalor-stlclr"></a>logical_or(STL/CLR)
 함수를 설명 하는 템플릿 클래스는 호출 되 면 true를 반환 하는 첫 번째 인수 또는 두 번째 테스트가 true 일 경우에 합니다. 사용 하면 해당 인수 형식 기준으로 함수 개체를 지정 합니다.  
@@ -81,7 +76,7 @@ public:
   
  함수 인수는 형식의 개체를 전달할 수도 있습니다 `delegate_type^` 적절 하 게 변환 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_logical_or.cpp   

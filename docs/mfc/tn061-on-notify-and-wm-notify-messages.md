@@ -1,13 +1,10 @@
 ---
-title: "TN061: ON_NOTIFY 및 WM_NOTIFY 메시지 | Microsoft Docs"
-ms.custom: 
+title: 'TN061: ON_NOTIFY 및 WM_NOTIFY 메시지 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - ON_NOTIFY
 - WM_NOTIFY
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - notification messages
 - WM_NOTIFY message
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9cd99f2ff37effb1e153a759eb36c9adba5f3671
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dc8e49ec04e1932c7bac4faa9a8737b480d8ef54
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061: ON_NOTIFY 및 WM_NOTIFY 메시지
 > [!NOTE]
@@ -93,7 +88,7 @@ typedef struct tagLV_KEYDOWN {
 |**NM_KILLFOCUS**|컨트롤에 입력된 포커스가 손실 되었습니다.|  
 |**NM_OUTOFMEMORY**|없기 때문에 메모리가 부족 하 여 사용 가능한 컨트롤이는 작업을 완료할 수 없습니다.|  
   
-##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a>ON_NOTIFY: MFC 응용 프로그램에서 WM_NOTIFY 메시지를 처리합니다.  
+##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY: MFC 응용 프로그램에서 WM_NOTIFY 메시지를 처리합니다.  
  함수 `CWnd::OnNotify` 알림 메시지를 처리 합니다. 기본 구현에 알림 처리기를 호출에 대 한 메시지 맵을 확인 합니다. 재정의 하지 않으면 일반적으로 `OnNotify`합니다. 대신, 처리기 함수를 제공 하 고 해당 처리기에 대 한 메시지 맵 항목을 소유자 창 클래스의 메시지 맵에 추가 합니다.  
   
  클래스 마법사 클래스 마법사 속성 시트를 통해서만 만들 수는 `ON_NOTIFY` 메시지-맵 항목 뼈대 처리기 함수를 제공 합니다. 클래스 마법사를 사용 하 여 쉽게이에 대 한 자세한 내용은 참조 하십시오. [함수에 메시지 매핑](../mfc/reference/mapping-messages-to-functions.md)합니다.  
@@ -141,7 +136,7 @@ pNotifyStruct  , LRESULT* result);
  *결과*  
  결과 코드에 대 한 포인터를 반환 하기 전에 설정 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  멤버 함수를 지정 하려면 `OnKeydownList1` 처리 하 **LVN_KEYDOWN** 에서 메시지는 `CListCtrl` ID가 갖는 `IDC_LIST1`, 메시지 맵에 다음을 추가 하 여 클래스 마법사를 사용 하면:  
   
 ```  
@@ -163,7 +158,7 @@ void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
   
  참고 클래스 마법사 적절 한 형식의 포인터를 자동으로 제공 합니다. 알림 구조 중 하나를 통해 액세스할 수 `pNMHDR` 또는 `pLVKeyDow`합니다.  
   
-##  <a name="_mfcnotes_on_notify_range"></a>ON_NOTIFY_RANGE  
+##  <a name="_mfcnotes_on_notify_range"></a> ON_NOTIFY_RANGE  
  동일한 처리 해야 하는 경우 **WM_NOTIFY** 메시지에 대 한 컨트롤 집합을 사용할 수 있습니다 **ON_NOTIFY_RANGE** 대신 `ON_NOTIFY`합니다. 예를 들어, 특정 알림 메시지에 대 한 같은 작업을 수행 하려는 단추 집합을 할 수 있습니다.  
   
  사용 하는 경우 **ON_NOTIFY_RANGE**, 인접 한 범위의 시작을 지정 하 고 자식 식별자의 범위를 종료 하 여 알림 메시지를 처리 하려는 자식 식별자를 지정 합니다.  
@@ -223,7 +218,7 @@ pNotifyStruct  ,
  *결과*  
  결과 코드에 대 한 포인터를 반환 하기 전에 설정 합니다.  
   
-##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a>ON_NOTIFY_EX, ON_NOTIFY_EX_RANGE  
+##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX, ON_NOTIFY_EX_RANGE  
  알림 영역에서 둘 이상의 개체에 대 한 라우팅을 메시지를 처리를 사용할 수 있습니다 **ON_NOTIFY_EX** (또는 **ON_NOTIFY_EX_RANGE**) 보다는 `ON_NOTIFY` (또는 **ON_NOTIFY_RANGE** ). 간의 유일한 차이점은 **EX** 버전과 일반 버전은 멤버 함수에 대 한 호출 되도록는 **EX** 버전 반환는 **BOOL** 나타내는 여부 메시지 처리를 계속 합니다. 반환 **FALSE** 이 함수에서 둘 이상의 개체에 동일한 메시지를 처리할 수 있습니다.  
   
  클래스 마법사 처리 하지 않는 **ON_NOTIFY_EX** 또는 **ON_NOTIFY_EX_RANGE**; 그 중 하나를 사용 하려는 경우 메시지 맵에 직접 편집 해야 합니다.  

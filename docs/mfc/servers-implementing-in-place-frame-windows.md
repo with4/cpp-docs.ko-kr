@@ -1,13 +1,10 @@
 ---
-title: "서버: 내부 프레임 창 구현 | Microsoft Docs"
-ms.custom: 
+title: '서버: 내부 프레임 창 구현 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - frame windows [MFC], in-place
 - in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e26cbb0099f897c65ab3e39338f3c36e77112e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1cc26e2874921d30ef233509ee46b776ec8e3e9b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>서버: 내부 프레임 창 구현
 이 문서에서는 서버 응용 프로그램을 만들 때 응용 프로그램 마법사를 사용하지 않는 경우, 시각적인 편집 서버 응용 프로그램에서 내부 프레임 창을 구현하기 위해 수행해야 하는 작업에 대해 설명합니다. 이 문서에 설명 된 절차를 수행 하는 대신 응용 프로그램 마법사에서 생성 된 응용 프로그램 또는 Visual c + +와 함께 제공 되는 샘플에서 기존에 내부 frame-window 클래스를 사용할 수 있습니다.  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  도구 모음이 있으면 frame-window 클래스에서 `CToolBar` 멤버를 선언합니다.  
   
-     서버가 내부에서 활성 상태일 때 도구 모음을 만들도록 `OnCreateControlBars` 멤버 함수를 재정의합니다. 예:  
+     서버가 내부에서 활성 상태일 때 도구 모음을 만들도록 `OnCreateControlBars` 멤버 함수를 재정의합니다. 예를 들어:  
   
      [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]  
   

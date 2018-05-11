@@ -1,13 +1,10 @@
 ---
-title: "CL 명령 파일 | Microsoft Docs"
-ms.custom: 
+title: CL 명령 파일 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - cl
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - command files
 - command files, CL compiler
 ms.assetid: ec3cea06-2af0-4fe9-a94c-119c9d31b3a9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a711b2f4a484a6370af828c5d0aad522686ca3f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 367ea6dc22777b473cad44f35b1f5e4c34528471
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cl-command-files"></a>CL 명령 파일
 명령 파일은 옵션과에 입력 하지 않으면 파일 이름이 포함 된 텍스트 파일의 [명령줄](../../build/reference/compiler-command-line-syntax.md) 사용 하 여 지정 하거나는 [CL 환경 변수](../../build/reference/cl-environment-variables.md)합니다. Cl 컴파일러 명령 파일을 CL 환경 변수에서 또는 명령줄에서를 인수로 사용 합니다. 명령줄이나 CL 환경 변수와는 달리 명령 파일을 사용하면 여러 줄로 구성된 옵션과 파일 이름을 사용할 수 있습니다.  

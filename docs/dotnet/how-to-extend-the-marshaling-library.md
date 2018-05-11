@@ -1,30 +1,25 @@
 ---
-title: "방법: 마샬링 라이브러리 확장명 | Microsoft Docs"
-ms.custom: 
+title: '방법: 마샬링 라이브러리 확장명 | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ee919e1faa37959d25e8e42581c8cde80d640337
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f6503cbb0006c0c8b2e1ed113a798a23ac2ff55
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>방법: 마샬링 라이브러리 확장명
 이 데이터 형식 사이 더 많은 변환을 수 있도록 마샬링 라이브러리를 확장 하는 방법을 설명 합니다. 사용자는 현재 지원 하지 않는 라이브러리에서 데이터 변환에 대 한 마샬링 라이브러리를 확장할 수 있습니다.  
@@ -115,7 +110,7 @@ namespace msclr {
 }   
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제는 컨텍스트를 필요 하지 않은 변환을 마샬링 라이브러리를 확장 합니다. 이 예제에서는 코드 네이티브 데이터 형식에서 직원 정보를 관리 되는 데이터 형식으로 변환합니다.  
   
 ```  
@@ -176,7 +171,7 @@ Managed address: 123 Main Street
 Managed zip code: 98111  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 네이티브 데이터 형식으로 관리 되는 데이터 형식에서 직원 정보를 변환합니다. 이 변환은 마샬링 컨텍스트가 필요합니다.  
   
 ```  

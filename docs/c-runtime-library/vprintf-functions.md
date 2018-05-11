@@ -1,13 +1,10 @@
 ---
-title: "vprintf 함수 | Microsoft Docs"
-ms.custom: 
+title: vprintf 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr110.dll
 - msvcr120.dll
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9820836096cb173cae54de496b6d10de8fe48a48
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d63e5da79b0f78e701f3ababaf54bef41fbf88a1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="vprintf-functions"></a>vprintf 함수
 이러한 `vprintf` 함수는 각각 인수 목록에 대한 포인터를 가져오며 지정된 데이터의 형식을 지정하고 특정 대상에 지정된 데이터를 씁니다. 이러한 함수는 수행되는 매개 변수 유효성 검사, 함수가 와이드 문자를 사용하는지 또는 싱글바이트 문자열을 사용하는지, 출력 대상 및 형식 문자열에 매개 변수가 사용되는 순서를 지정하는 기능에 대한 지원 측면에서 다릅니다.  

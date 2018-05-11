@@ -1,12 +1,9 @@
 ---
-title: "CCheckListBox 클래스 | Microsoft Docs"
-ms.custom: 
+title: CCheckListBox 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCheckListBox
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64e22176d0df2408db8a8c9435fde5b4c6775d21
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4129da35eca5aecfb1e976361d1716d1cd78e906
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox 클래스
 Windows 검사 목록 상자의 기능을 제공합니다.  
@@ -84,7 +79,7 @@ class CCheckListBox : public CListBox
 ## <a name="remarks"></a>설명  
  "검사 목록 상자의" 파일 이름과 같은 항목의 목록이 표시 됩니다. 목록의 각 항목 옆에 있는 사용자 수 선택 하거나 선택 취소 하는 확인란에 있습니다.  
   
- `CCheckListBox`소유자가 그린 컨트롤에 대해서만 되므로 둘 이상의 텍스트 문자열 목록에 포함 합니다. 가장 간단한 텍스트 문자열 및 확인란 검사 목록 상자를 포함 하지만 텍스트를 전혀 없이 필요는 없습니다. 예를 들어, 각 항목 옆에 확인란을 사용 하는 작은 비트맵 목록이 있을 수 있습니다.  
+ `CCheckListBox` 소유자가 그린 컨트롤에 대해서만 되므로 둘 이상의 텍스트 문자열 목록에 포함 합니다. 가장 간단한 텍스트 문자열 및 확인란 검사 목록 상자를 포함 하지만 텍스트를 전혀 없이 필요는 없습니다. 예를 들어, 각 항목 옆에 확인란을 사용 하는 작은 비트맵 목록이 있을 수 있습니다.  
   
  고유한 클래스를 파생 해야 사용자가 직접 검사 목록 상자를 만들려면 `CCheckListBox`합니다. 사용자 고유의 클래스를 파생 파생된 클래스에 대 한 생성자를 작성 하려면 호출 **만들기**합니다.  
   
@@ -92,7 +87,7 @@ class CCheckListBox : public CListBox
   
  각 메시지 맵 항목은 다음 형식을 사용 합니다.  
   
- **ON_**알림 **(**`id`, `memberFxn` **)**  
+ **ON_** 알림 **(**`id`, `memberFxn` **)**  
   
  여기서 `id` 알림을 전송 하는 컨트롤의 자식 창 ID를 지정 하 고 `memberFxn` 알림을 처리 하도록 작성 한 부모 멤버 함수의 이름입니다.  
   
@@ -122,7 +117,7 @@ class CCheckListBox : public CListBox
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="cchecklistbox"></a>CCheckListBox::CCheckListBox  
+##  <a name="cchecklistbox"></a>  CCheckListBox::CCheckListBox  
  `CCheckListBox` 개체를 생성합니다.  
   
 ```  
@@ -132,10 +127,10 @@ CCheckListBox();
 ### <a name="remarks"></a>설명  
  생성할는 `CCheckListBox` 두 단계를 수행에서 하는 개체입니다. 파생 된 클래스를 먼저 정의 `CCheckListBox`, 호출 **만들기**, Windows 검사 목록 상자를 초기화 하 고에 연결 하는 `CCheckListBox` 개체입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCControlLadenDialog#60](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
   
-##  <a name="create"></a>CCheckListBox::Create  
+##  <a name="create"></a>  CCheckListBox::Create  
  Windows 검사 목록 상자를 만들고 연결 하는 `CCheckListBox` 개체입니다.  
   
 ```  
@@ -173,7 +168,7 @@ virtual BOOL Create(
   
 - **WS_CHILD** 항상  
   
-- **WS_VISIBLE** 일반적으로  
+- **WS_VISIBLE** Usually  
   
 - **WS_DISABLED** 거의  
   
@@ -185,7 +180,7 @@ virtual BOOL Create(
   
 - **WS_TABSTOP** 허용이 컨트롤에 탭 이동 하려면  
   
-##  <a name="drawitem"></a>CCheckListBox::DrawItem  
+##  <a name="drawitem"></a>  CCheckListBox::DrawItem  
  소유자가 그린 검사 목록 상자 변경의 시각적 측면이 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -205,7 +200,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  검사 목록 상자 스타일 검사 목록 상자 항목 높이가 모두 없는 경우 (에 지정 된 **만들기**) 이어야 합니다 **LBS_OWNERVARIABLE**를 재정의 해야 하 고는 [MeasureItem](#measureitem) 함수입니다.  
   
-##  <a name="enable"></a>CCheckListBox::Enable  
+##  <a name="enable"></a>  CCheckListBox::Enable  
  검사 목록 상자 항목을 사용 하지 않도록 설정 하거나 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -221,7 +216,7 @@ void Enable(
  `bEnabled`  
  항목이 사용 되는지 여부를 지정 합니다.  
   
-##  <a name="getcheck"></a>CCheckListBox::GetCheck  
+##  <a name="getcheck"></a>  CCheckListBox::GetCheck  
  지정 된 확인란의 상태를 검색합니다.  
   
 ```  
@@ -241,7 +236,7 @@ int GetCheck(int nIndex);
 |`BST_UNCHECKED`|확인란 확인 하지 않습니다.|  
 |`BST_INDETERMINATE`|확인란 상태가 비활성화 상태입니다.|  
   
-##  <a name="getcheckstyle"></a>CCheckListBox::GetCheckStyle  
+##  <a name="getcheckstyle"></a>  CCheckListBox::GetCheckStyle  
  검사 목록 상자의 스타일을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -254,7 +249,7 @@ UINT GetCheckStyle();
 ### <a name="remarks"></a>설명  
  참조 가능한 스타일에 대 한 내용은 [SetCheckStyle](#setcheckstyle)합니다.  
   
-##  <a name="isenabled"></a>CCheckListBox::IsEnabled  
+##  <a name="isenabled"></a>  CCheckListBox::IsEnabled  
  항목을 사용할 수 있는지 여부를 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -268,7 +263,7 @@ BOOL IsEnabled(int nIndex);
 ### <a name="return-value"></a>반환 값  
  항목이 활성화 되 면 0이 아닌 그렇지 않으면 0입니다.  
   
-##  <a name="measureitem"></a>CCheckListBox::MeasureItem  
+##  <a name="measureitem"></a>  CCheckListBox::MeasureItem  
  기본값이 아닌 스타일으로 검사 목록 상자를 만들 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -282,7 +277,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="remarks"></a>설명  
  기본적으로이 멤버 함수는 아무 작업도 수행 하지 않습니다. 이 멤버 함수를 재정의 하 고 입력의 `MEASUREITEMSTRUCT` Windows 검사 목록 상자 항목의 크기를 알리기 위해 구조입니다. 검사 목록 상자의 만들어진 경우는 [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) 스타일, 프레임 워크가 멤버 함수 목록 상자에서 각 항목에 대 한 호출 합니다. 그렇지 않은 경우이 멤버는 한 번만 호출 됩니다.  
   
-##  <a name="ongetcheckposition"></a>CCheckListBox::OnGetCheckPosition  
+##  <a name="ongetcheckposition"></a>  CCheckListBox::OnGetCheckPosition  
  프레임 워크에서 항목 확인란의 크기와 위치를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -304,7 +299,7 @@ virtual CRect OnGetCheckPosition(
 ### <a name="remarks"></a>설명  
  기본 위치와 크기 확인란의 기본 구현은 반환 ( `rectCheckBox`). 기본적으로 항목의 왼쪽 위 모퉁이에서 정렬 되는 확인란과 표준 확인란 크기입니다. 오른쪽에 있는 확인란을 선택 하거나 더 크거나 작게 확인란이 있는 경우가 있을 수 있습니다. 이러한 경우 재정의 `OnGetCheckPosition` 확인란 위치와 해당 항목 내에서 크기를 변경할 수 있습니다.  
   
-##  <a name="setcheck"></a>CCheckListBox::SetCheck  
+##  <a name="setcheck"></a>  CCheckListBox::SetCheck  
  지정 된 확인란의 상태를 설정합니다.  
   
 ```  
@@ -329,7 +324,7 @@ void SetCheck(
 |**BST_UNCHECKED**|지정 된 확인란의 선택을 취소 합니다.|  
 |**BST_INDETERMINATE**|지정 된 확인란 상태를 확인할 수 없는 설정.<br /><br /> 이 상태는 확인란 스타일을 사용 하는 경우에 사용할 수만 `BS_AUTO3STATE` 또는 `BS_3STATE`합니다. 자세한 내용은 참조 [단추 스타일](../../mfc/reference/styles-used-by-mfc.md#button-styles)합니다.|  
   
-##  <a name="setcheckstyle"></a>CCheckListBox::SetCheckStyle  
+##  <a name="setcheckstyle"></a>  CCheckListBox::SetCheckStyle  
  검사 목록 상자에서 확인란의 스타일을 설정 하려면이 함수를 호출 합니다.  
   
 ```  

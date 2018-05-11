@@ -1,13 +1,10 @@
 ---
-title: "문서 클래스 | Microsoft Docs"
-ms.custom: 
+title: 문서 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.document
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - document classes [MFC]
 ms.assetid: 4bf19b02-0a4f-4319-b68e-cddcba2705cb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a2436b46b7486bd30398dffc530d2adea3d2e48
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2073e432dd0d0792e358a3f159892aea405197c9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="document-classes"></a>문서 클래스
 문서 클래스 개체, 문서 템플릿 개체에서 만든 응용 프로그램의 데이터를 관리 합니다. 이러한 클래스 중 하나에서 문서에 대 한 클래스를 파생 합니다.  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
  Rich edit 컨트롤에 있는 OLE 클라이언트 항목의 목록을 유지 관리 합니다. 함께 사용할 [CRichEditView](../mfc/reference/cricheditview-class.md) 및 [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)합니다.  
   
  [COleServerDoc](../mfc/reference/coleserverdoc-class.md)  
- 서버 응용 프로그램 문서 클래스에 대 한 기본 클래스로 사용 합니다. `COleServerDoc`개체와의 상호 작용을 통해 서버 지원 대량의 제공 [COleServerItem](../mfc/reference/coleserveritem-class.md) 개체입니다. 비주얼 편집 기능은 클래스 라이브러리의 문서/뷰 아키텍처를 사용 하 여 제공 됩니다.  
+ 서버 응용 프로그램 문서 클래스에 대 한 기본 클래스로 사용 합니다. `COleServerDoc` 개체와의 상호 작용을 통해 서버 지원 대량의 제공 [COleServerItem](../mfc/reference/coleserveritem-class.md) 개체입니다. 비주얼 편집 기능은 클래스 라이브러리의 문서/뷰 아키텍처를 사용 하 여 제공 됩니다.  
   
  [CHtmlEditDoc](../mfc/reference/chtmleditdoc-class.md)  
  제공 된 [CHtmlEditView](../mfc/reference/chtmleditview-class.md), MFC 문서 뷰 아키텍처 컨텍스트 내에서 WebBrowser HTML 편집 플랫폼의 기능입니다.  
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
  [CArchive](../mfc/reference/carchive-class.md)  
  와 협력 하 여 한 [CFile](../mfc/reference/cfile-class.md) serialization 통해 개체에 대 한 영구 저장소를 구현 하는 개체 (참조 [cobject:: Serialize](../mfc/reference/cobject-class.md#serialize)).  
   
- 문서는 OLE 개체를 포함할 수도 있습니다. `CDocItem`서버 및 클라이언트 항목의 기본 클래스가입니다.  
+ 문서는 OLE 개체를 포함할 수도 있습니다. `CDocItem` 서버 및 클라이언트 항목의 기본 클래스가입니다.  
   
  [CDocItem](../mfc/reference/cdocitem-class.md)  
  추상 기본 클래스의 [COleClientItem](../mfc/reference/coleclientitem-class.md) 및 [COleServerItem](../mfc/reference/coleserveritem-class.md)합니다. 클래스의 개체에서 파생 된 `CDocItem` 문서의 일부를 나타냅니다.  

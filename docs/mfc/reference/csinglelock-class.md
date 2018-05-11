@@ -1,12 +1,9 @@
 ---
-title: "경우 CSingleLock 클래스 | Microsoft Docs"
-ms.custom: 
+title: 경우 CSingleLock 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CSingleLock
@@ -23,15 +20,13 @@ helpviewer_keywords:
 - CSingleLock [MFC], Lock
 - CSingleLock [MFC], Unlock
 ms.assetid: 7dae7288-8066-4a3e-85e0-78d28bfc6bc8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.openlocfilehash: 0dd07d79c97a9fb3368d20ee68df2332ba7ce5cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.openlocfilehash: 1ae72b7c9c2acf4fa8600903061869ba049cd58c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="csinglelock-class"></a>경우 CSingleLock 클래스
 다중 스레드 프로그램에서 한 리소스에 대한 액세스를 제어할 때 사용하는 액세스 제어 메커니즘을 나타냅니다.  
@@ -59,13 +54,13 @@ class CSingleLock
 |[CSingleLock::Unlock](#unlock)|동기화 개체를 해제합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CSingleLock`기본 클래스는 없습니다.  
+ `CSingleLock` 기본 클래스는 없습니다.  
   
  동기화 클래스 사용 하기 위해 [CSemaphore](../../mfc/reference/csemaphore-class.md), [CMutex](../../mfc/reference/cmutex-class.md), [아니오](../../mfc/reference/ccriticalsection-class.md), 및 [CEvent](../../mfc/reference/cevent-class.md)를 하나 만들어야 합니다는 `CSingleLock` 또는 [CMultiLock](../../mfc/reference/cmultilock-class.md) 개체를 대기 하 고 동기화 개체를 해제 합니다. 사용 하 여 `CSingleLock` 때 하기만 하면 한 번에 하나의 개체에 대해 기다려야 합니다. 사용 하 여 **CMultiLock** 때 특정 시간에 사용할 수 있는 개체가 여러 개 있습니다.  
   
  사용 하는 `CSingleLock` 개체, 제어 된 리소스의 클래스에서 멤버 함수 내 해당 생성자를 호출 합니다. 그런 다음 호출에서 [IsLocked](#islocked) 멤버 함수를 리소스에 사용할 수 있는지 확인 합니다. 이 경우 나머지 멤버 함수를 계속 합니다. 리소스를 사용할 수 없는 경우 지정된 된 양의 출시 될 리소스에 대 한 시간에 대 한 대기 또는 실패를 반환 합니다. 리소스 사용을 완료 된 후 호출 하거나는 [잠금 해제](#unlock) 경우 함수는 `CSingleLock` 개체를 다시 사용 하거나 허용 하는 `CSingleLock` 개체 소멸 될 예정입니다.  
   
- `CSingleLock`개체에서 파생 된 개체의 존재에 필요한 [CSyncObject](../../mfc/reference/csyncobject-class.md)합니다. 이것이 일반적으로 제어 되는 리소스의 클래스의 데이터 멤버입니다. 사용 하는 방법에 대 한 자세한 내용은 `CSingleLock` 개체, 문서를 참조 하십시오. [다중 스레딩: 동기화 클래스 사용 방법](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)합니다.  
+ `CSingleLock` 개체에서 파생 된 개체의 존재에 필요한 [CSyncObject](../../mfc/reference/csyncobject-class.md)합니다. 이것이 일반적으로 제어 되는 리소스의 클래스의 데이터 멤버입니다. 사용 하는 방법에 대 한 자세한 내용은 `CSingleLock` 개체, 문서를 참조 하십시오. [다중 스레딩: 동기화 클래스 사용 방법](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `CSingleLock`  
@@ -73,7 +68,7 @@ class CSingleLock
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxmt.h  
   
-##  <a name="csinglelock"></a>CSingleLock::CSingleLock  
+##  <a name="csinglelock"></a>  CSingleLock::CSingleLock  
  `CSingleLock` 개체를 생성합니다.  
   
 ```  
@@ -95,7 +90,7 @@ explicit CSingleLock(
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities#19](../../mfc/codesnippet/cpp/csinglelock-class_1.h)]  
   
-##  <a name="islocked"></a>CSingleLock::IsLocked  
+##  <a name="islocked"></a>  CSingleLock::IsLocked  
  와 관련 된 개체가 결정는 `CSingleLock` 개체를 신호 없음으로 (사용할 수 없음).  
   
 ```  
@@ -108,7 +103,7 @@ BOOL IsLocked();
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities#20](../../mfc/codesnippet/cpp/csinglelock-class_2.h)]  
   
-##  <a name="lock"></a>CSingleLock::Lock  
+##  <a name="lock"></a>  CSingleLock::Lock  
  호출에 제공 된 동기화 개체에 의해 제어 되는 리소스에 액세스 하려면이 함수는 `CSingleLock` 생성자입니다.  
   
 ```  
@@ -128,7 +123,7 @@ BOOL Lock(DWORD dwTimeOut = INFINITE);
 ### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities#21](../../mfc/codesnippet/cpp/csinglelock-class_3.h)]  
   
-##  <a name="unlock"></a>CSingleLock::Unlock  
+##  <a name="unlock"></a>  CSingleLock::Unlock  
  가 소유 하는 동기화 개체를 해제 `CSingleLock`합니다.  
   
 ```  

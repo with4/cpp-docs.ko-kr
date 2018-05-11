@@ -1,29 +1,24 @@
 ---
-title: "이름, 속성 추가 마법사 | Microsoft Docs"
-ms.custom: 
+title: 이름, 속성 추가 마법사 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.prop.overview
 dev_langs:
 - C++
 ms.assetid: 0453b7ea-89cb-41a1-80a2-d45f61589c0a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c1728dfda3ec29e8df2b7f5480e9bffb161da7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 17c3fd5cfc86f76fcdc1c301bd92bb1fdfac3b9c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="names-add-property-wizard"></a>속성 추가 마법사, 이름
 이 마법사를 사용 하 여 인터페이스에 속성을 추가 합니다.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 |MFC dispinterface, MFC ActiveX 컨트롤 dispinterface|속성 이름을 입력 하거나 목록에서 스톡 속성을 선택 합니다. 목록에서 속성을 선택 하는 경우 적절 한 값에 표시 된 **속성 형식** 상자입니다. 이 형식에서 선택한 항목에 따라 변경할 수 있습니다 **구현 형식**합니다.|  
   
  **반환 형식**  
- ATL 인터페이스에만 해당 합니다. 속성에 대 한 반환 형식을 설정 합니다. 이중 인터페이스에 대 한 `HRESULT` 은 항상 반환 형식 및이 상자는 사용할 수 없습니다. 사용자 지정 인터페이스에 대 한 반환 형식 목록에서 선택할 수 있습니다. `HRESULT`것이 좋습니다 오류를 반환 하는 표준 방법을 제공 하기 때문에 있습니다.  
+ ATL 인터페이스에만 해당 합니다. 속성에 대 한 반환 형식을 설정 합니다. 이중 인터페이스에 대 한 `HRESULT` 은 항상 반환 형식 및이 상자는 사용할 수 없습니다. 사용자 지정 인터페이스에 대 한 반환 형식 목록에서 선택할 수 있습니다. `HRESULT` 것이 좋습니다 오류를 반환 하는 표준 방법을 제공 하기 때문에 있습니다.  
   
  **변수 이름**  
  MFC dispinterface에만 해당 합니다. 지정 하는 경우에 사용할 수 있는 **멤버 변수** 아래 **구현 형식**합니다. 속성에 연결 된 멤버 변수의 이름을 설정 합니다. 기본적으로 변수 이름에 m_ 설정*PropertyName*합니다. 이 이름을 편집할 수 있습니다.  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
  **Get 함수**  
  에 대 한 MFC dispinterface 합니다. 지정 하는 경우에 사용할 수 있는 **Get/Set 메서드** 아래 **구현 형식**합니다. 속성을 가져오는 함수 이름을 설정 합니다. 기본적으로 Get 함수의 이름을 가져오도록 설정*PropertyName*합니다. 이 이름을 편집할 수 있습니다. 함수 이름을 삭제 하면 [GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported) 인터페이스 디스패치 맵에 삽입 됩니다. Get*PropertyName* 함수를 지정 하는 속성으로 읽을 수 있습니다.  
   
- **Set 함수**  
+ **set 함수**  
  MFC dispinterface에만 해당 합니다. 지정 하는 경우에 사용할 수 있는 **Get/Set 메서드** 아래 **구현 형식**합니다. 속성을 설정 하는 함수 이름을 설정 합니다. 기본적으로 집합 함수의 이름 집합으로 설정*PropertyName*합니다. 이 이름을 편집할 수 있습니다. 함수 이름을 삭제 하면 [SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported) 인터페이스 디스패치 맵에 삽입 됩니다. 집합*PropertyName* 속성이 쓰기 가능 인지 지정 하는 함수입니다.  
   
  **구현 형식**  

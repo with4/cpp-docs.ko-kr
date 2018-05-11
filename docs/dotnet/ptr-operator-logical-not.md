@@ -1,12 +1,9 @@
 ---
-title: "ptr::operator! | Microsoft 문서"
-ms.custom: 
+title: ptr::operator! | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - ptr::operator!
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr::operator!
 ms.assetid: 7f4101dc-2045-42e7-abb1-6a30e17147f2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d3ef67f9ef6128560d8bb6fef9d0d6fd75d08aca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b4dfb28d246e708c248b4d094a8e2ae127c60b0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptroperator"></a>ptr::operator!
 소유 하는 COM 개체가 유효한 지 확인 하는 연산자입니다.  
@@ -41,12 +36,12 @@ bool operator!();
 ```  
   
 ## <a name="return-value"></a>반환 값  
- `true`소유 하는 COM 개체가 잘못 되었습니다; 없는 경우 `false` 그렇지 않은 경우.  
+ `true` 소유 하는 COM 개체가 잘못 되었습니다; 없는 경우 `false` 그렇지 않은 경우.  
   
 ## <a name="remarks"></a>설명  
  소유 된 COM 개체는이 아닌 경우 유효 `nullptr`합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다.  `CreateInstance` 멤버 함수를 사용 하 여 `operator!` 확인 하는 문서 개체 이미 소유 하 고, 고 개체가 유효 하지 않을 경우에 새 인스턴스를 만듭니다.  
   
 ```  

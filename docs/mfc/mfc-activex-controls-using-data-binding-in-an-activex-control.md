@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 컨트롤: ActiveX 컨트롤에서 데이터 바인딩 사용 | Microsoft Docs"
-ms.custom: 
+title: 'MFC ActiveX 컨트롤: ActiveX 컨트롤에서 데이터 바인딩 사용 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - bindable
 - requestedit
@@ -23,24 +20,22 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 691f832717f5a71c461316b725ee9a69d1350124
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ab5195cc2381e515688182ad73452b07afd06b98
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX 컨트롤: ActiveX 컨트롤에서 데이터 바인딩 사용
 ActiveX 컨트롤의 보다 강력한 용도 중 하나는 데이터베이스의 특정 필드와 바인딩하려면 컨트롤의 속성 수 있는 데이터 바인딩입니다. 바인딩된 속성의 데이터를 수정할 때 컨트롤에는 데이터베이스 및 레코드 필드를 업데이트 해야 하는 요청에 알립니다. 데이터베이스에는 다음 요청이 실패 또는 성공 컨트롤에 알립니다.  
   
  이 문서에서는 제어 측면에서의 작업에 설명 합니다. 데이터베이스와 데이터 바인딩 상호 작용을 구현 하는 것은 컨트롤 컨테이너의 책임입니다. 이 설명서의 범위를 벗어납니다 컨테이너의 데이터베이스 상호 작용을 관리 하는 방법. 이 문서의 나머지 부분에서 데이터 바인딩에 대 한 제어를 준비 하는 방법을 설명 합니다.  
   
- ![바인딩된 컨트롤; 데이터 & # 45의 개념적 다이어그램](../mfc/media/vc374v1.gif "vc374v1")  
+ ![데이터의 개념적 다이어그램&#45;바인딩된 컨트롤](../mfc/media/vc374v1.gif "vc374v1")  
 데이터 바인딩된 컨트롤의 개념적 다이어그램  
   
  `COleControl` 클래스 바인딩 쉬운 작업을 구현 하는 데이터를 구성 하는 두 개의 멤버 함수를 제공 합니다. 첫 번째 함수 [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), 속성 값을 변경할 수 있는 권한을 요청 하는 데 사용 됩니다. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), 두 번째 함수는 속성 값이 성공적으로 변경 후에 호출 됩니다.  
@@ -51,7 +46,7 @@ ActiveX 컨트롤의 보다 강력한 용도 중 하나는 데이터베이스의
   
 -   [바인딩 가능한 Get/Set 메서드 만들기](#vchowcreatingbindablegetsetmethod)  
   
-##  <a name="vchowcreatingbindablestockproperty"></a>바인딩할 수 있는 스톡 속성 만들기  
+##  <a name="vchowcreatingbindablestockproperty"></a> 바인딩할 수 있는 스톡 속성 만들기  
  더 많이 사용할 수 있습니다 하지만 데이터 바인딩 스톡 속성을 만들 수는 [바인딩 가능한 get/set 메서드에](#vchowcreatingbindablegetsetmethod)합니다.  
   
 > [!NOTE]
@@ -79,7 +74,7 @@ ActiveX 컨트롤의 보다 강력한 용도 중 하나는 데이터베이스의
   
  이제 컨트롤을 등록 하는 프로젝트를 빌드할 수 있습니다. 대화 상자에 컨트롤을 삽입 하는 경우는 **데이터 필드** 및 **데이터 원본** 속성은 추가 되 고 이제 데이터 원본 및 컨트롤에 표시할 필드를 선택할 수 있습니다.  
   
-##  <a name="vchowcreatingbindablegetsetmethod"></a>바인딩 가능한 Get/Set 메서드 만들기  
+##  <a name="vchowcreatingbindablegetsetmethod"></a> 바인딩 가능한 Get/Set 메서드 만들기  
  데이터 바인딩 get/set 메서드 외에도 만들 수도 있습니다는 [바인딩할 수 있는 스톡 속성](#vchowcreatingbindablestockproperty)합니다.  
   
 > [!NOTE]

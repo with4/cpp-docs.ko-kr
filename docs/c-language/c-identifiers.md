@@ -1,13 +1,10 @@
 ---
-title: "C 식별자 | Microsoft Docs"
-ms.custom: 
+title: C 식별자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - identifiers, case sensitivity
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfe8ab231d6bf4051cc730ff1beb23f93a8f301d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cca0381392a1f7c2f227c3296597dc3c614ae0b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-identifiers"></a>C 식별자
 "식별자" 또는 "기호"는 프로그램에서 변수, 형식, 함수 및 레이블에 제공하는 이름입니다. 식별자 이름은 어떤 키워드와도 철자 및 대/소문자가 달라야 합니다. C 또는 Microsoft 키워드를 식별자로 사용할 수 없습니다. 이러한 키워드는 특별한 용도로 예약되어 있습니다. 식별자는 변수, 형식 또는 함수 선언에서 지정하여 만듭니다. 이 예제에서 `result`는 정수 변수에 대한 식별자이며, `main` 및 `printf`는 함수에 대한 식별자 이름입니다.  

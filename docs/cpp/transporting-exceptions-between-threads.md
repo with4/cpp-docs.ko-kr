@@ -1,12 +1,9 @@
 ---
-title: "스레드 간 예외 전송 | Microsoft Docs"
-ms.custom: 
+title: 스레드 간 예외 전송 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11cfed55ce872fde3a2f20a1b8f01a371857b374
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61847500e9e4fbcfc0912e51afe599ed31601ec2
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="transporting-exceptions-between-threads"></a>스레드 간 예외 전송
 Visual c + + 지원 *예외 전송* 다른 스레드 간에 합니다. 예외 전송으로 하나의 스레드에서 예외를 잡아내어 다른 스레드에서 예외가 throw되어 나타나도록 합니다. 예를 들어, 이 기능을 사용하여 기본 스레드가 보조 스레드에서 throw되는 모든 예외를 처리하는 위치에 있는 다중 스레드 응용 프로그램을 작성할 수 있습니다. 예외 전송 병렬 프로그래밍 라이브러리를 만들거나 시스템 개발자에 주로 유용합니다. Visual c + + 제공 전송 예외를 구현 하려면는 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) 유형 및 [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), 및 [make_ exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) 함수입니다.  
@@ -150,7 +145,7 @@ namespace std
   
  응용 프로그램에는 일반적으로 `make_exception_ptr` 함수가 필요하지 않으며 이 함수를 사용하지 않는 것이 좋습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 표준 C++ 예외와 사용자 지정 C++ 예외를 한 스레드에서 다른 스레드로 전송합니다.  
   
 ```  
@@ -259,4 +254,4 @@ exception_ptr 1: Caught a  myException exception.
 ## <a name="see-also"></a>참고 항목  
  [예외 처리](../cpp/exception-handling-in-visual-cpp.md)     
  [/EH (예외 처리 모델)](../build/reference/eh-exception-handling-model.md)   
- [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)
+ [/clr(공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)

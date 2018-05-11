@@ -2,26 +2,21 @@
 title: 예외 및 스택 해제 c + +에서 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: a1a57eae-5fc5-4c49-824f-3ce2eb8129ed
-caps.latest.revision: 6
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2b354ebaa72c5257e2752a948ece6320a5d8e70
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b05b2f6240876540cd9e67d83bcb88242b68827b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>C++에서 예외 및 스택 해제
 C++ 예외 메커니즘에서 컨트롤은 throw 문에서 throw된 형식을 처리할 수 있는 첫 번째 catch 문으로 이동합니다. 로 알려진 프로세스에서 삭제 하 catch 문이 도달 하면 모든 자동 변수는 throw 사이의 범위 및 catch 문 *스택 해제*합니다. 스택 해제에서 실행은 다음과 같이 진행됩니다.  

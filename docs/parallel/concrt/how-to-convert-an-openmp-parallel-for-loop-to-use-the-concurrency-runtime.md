@@ -1,13 +1,10 @@
 ---
-title: "방법: for 루프 동시성 런타임을 사용 하기 위해 OpenMP parallel 변환 | Microsoft Docs"
-ms.custom: 
+title: '방법: for 루프 동시성 런타임을 사용 하기 위해 OpenMP parallel 변환 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,23 +13,21 @@ helpviewer_keywords:
 - parallel for loops, converting from OpenMP to the Concurrency Runtime
 - parallel loops, converting from OpenMP to the Concurrency Runtime
 ms.assetid: d8a7b656-f86c-456e-9c5d-a7d52f94646e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a27e07884b4ada54f694136ea2fbca474c9d214d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 93538e3188f0086039ecc0b681f936954d82ae97
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>방법: 동시성 런타임을 사용하기 위해 OpenMP parallel for 루프 변환
 
 OpenMP를 사용 하는 기본 루프를 변환 하는 방법을 보여 주는이 예제 [병렬](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) 및 [에 대 한](../../parallel/openmp/reference/for-openmp.md) 동시성 런타임을 사용 하는 지시문 [concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) 알고리즘입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 OpenMP와 동시성 런타임을 모두을 사용 하 여 난수 값의 배열에서 소수의 수를 계산 합니다.  
   
  [!code-cpp[concrt-openmp#1](../../parallel/concrt/codesnippet/cpp/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_1.cpp)]  
@@ -52,7 +47,7 @@ found 107254 prime numbers.
   
  에 대 한 자세한 내용은 `parallel_for` 오류 코드 및 기타 병렬 알고리즘을 참조 하십시오. [병렬 알고리즘](../../parallel/concrt/parallel-algorithms.md)합니다. 에 대 한 자세한 내용은 `combinable` 클래스를 참조 하십시오. [병렬 컨테이너 및 개체](../../parallel/concrt/parallel-containers-and-objects.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
 
  이 예에서는 예제를 수정 이전에 [std:: array](../../standard-library/array-class-stl.md) 개체 대신 네이티브 배열입니다. OpenMP 2.0 버전을 2.5 가능 하 게 정수 인덱스 형식에만 서명 때문에 `parallel_for` 구문에 동시에 c + + 표준 라이브러리 컨테이너의 요소에 액세스 하려면 반복기를 사용할 수 없습니다. 병렬 패턴 라이브러리 (PPL)은 제공는 [concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) 에서 c + + 표준 라이브러리에서 제공 하는 것과 같은 반복 컨테이너는으로 병렬 작업을 수행 하는 알고리즘입니다. 동일한 분할 논리를 사용 하는 `parallel_for` 알고리즘에서 사용 합니다. `parallel_for_each` 알고리즘에는 c + + 표준 라이브러리와 유사 [for_each](../../standard-library/algorithm-functions.md#for_each) 점을 제외 하 고 알고리즘에서 `parallel_for_each` 알고리즘의 작업을 동시에 실행 합니다.  
   

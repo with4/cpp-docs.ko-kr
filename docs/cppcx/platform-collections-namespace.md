@@ -1,11 +1,8 @@
 ---
 title: 'Platform:: collections Namespace | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2018
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections
@@ -14,17 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Collections Namespace
 ms.assetid: b5042864-5f22-40b7-b7a5-c0691f65cc47
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f7c99f99e0935fd96aa02240de2c0c72ce890a0
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 2b4e38d6a051481b2b5f642c6b4de3c837f8fbfd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollections-namespace"></a>Platform::Collections 네임스페이스
 
@@ -47,7 +42,7 @@ using namespace Platform::Collections;
 
 이 네임스페이스에는 다음 멤버가 포함되어 있습니다.
 
-|name|설명|
+|이름|설명|
 |----------|-----------------|
 |[Platform::Collections::BackInsertIterator 클래스](../cppcx/platform-collections-backinsertiterator-class.md)|컬렉션 끝 부분에 요소를 삽입하는 반복기를 나타냅니다.|
 |[Platform::Collections::InputIterator 클래스](../cppcx/platform-collections-inputiterator-class.md)|컬렉션 시작 부분에 요소를 삽입하는 반복기를 나타냅니다.|
@@ -70,6 +65,6 @@ using namespace Platform::Collections;
 
 **컴파일러 옵션:** /ZW
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [플랫폼 Namespace](../cppcx/platform-namespace-c-cx.md)  

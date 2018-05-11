@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 4) C4221 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 4) C4221 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4221
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C4221
 ms.assetid: 8532bd68-54dc-4526-8597-f61dcb0a0129
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a08b300961bd19cc0355cc556d52dd00d05632e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1e602eb662533207a1f2957d3b11a0823e4b83af
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4221"></a>컴파일러 경고(수준 4) C4221
 비표준 확장이 사용 됨: 'identifier': 자동 변수의 주소를 사용 하 여 초기화할 수 없습니다.  
   
  기본 Microsoft 확장 (/Ze)을 사용 하면 집계 형식의 초기화할 수 있습니다 (**배열**, `struct`, 또는 **union**) 로컬 (자동) 변수의 주소를 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // C4221.c  

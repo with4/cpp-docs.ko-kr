@@ -1,13 +1,10 @@
 ---
-title: "Serialization 메커니즘 건너뛰기 | Microsoft Docs"
-ms.custom: 
+title: Serialization 메커니즘 건너뛰기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - serialization [MFC], role of framework
 - serialization [MFC], overriding
 ms.assetid: 48d4a279-b51c-4ba5-81cd-ed043312b582
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 510e6ed244fb8920c55c4b3ffedcbd0801c3e202
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a45779034534ce87bd6bd4f55dfda4985a36f01
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>Serialization 메커니즘 건너뛰기
 위에서 설명한 것 처럼 프레임 워크 데이터 읽기 및 쓰기 / 파일에서 기본 방법을 제공 합니다. 보관 개체를 통해 직렬화 할 매우 많은 응용 프로그램의 요구 사항을 만족 합니다. 이러한 응용 프로그램 및 파일을 읽고 메모리에 완전히, 사용자가 파일을 업데이트할 수 있습니다 다음 다시 디스크에 업데이트 된 버전을 기록 합니다.  

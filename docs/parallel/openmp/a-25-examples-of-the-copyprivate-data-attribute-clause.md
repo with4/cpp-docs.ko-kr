@@ -1,27 +1,22 @@
 ---
-title: "Copyprivate 데이터 특성 절의 A.25 예 | Microsoft Docs"
-ms.custom: 
+title: Copyprivate 데이터 특성 절의 A.25 예 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 7b1cb6a5-5691-4b95-b3ac-d7543ede6405
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cdf7598e00bab72966fe79454567b0a59dcbaae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c92d9ce6f22c2d53a2e65d7b67c22e4f080f162c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="a25---examples-of-the-copyprivate-data-attribute-clause"></a>A.25   copyprivate 데이터 특성 절 예제
 **예제 1:** 는 `copyprivate` 절 ([2.7.2.8 섹션](../../parallel/openmp/2-7-2-8-copyprivate.md) 페이지 32) 직접 다른 스레드에서 개인 변수의 모든 인스턴스에 단일 스레드에서 획득 값 브로드캐스트에 사용할 수 있습니다.  

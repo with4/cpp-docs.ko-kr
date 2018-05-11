@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 컨트롤: 다른 사용자 지정 속성 페이지 추가 | Microsoft Docs"
-ms.custom: 
+title: 'MFC ActiveX 컨트롤: 다른 사용자 지정 속성 페이지 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ActiveX controls [MFC], property pages
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e342df8bee9b69d0d84e3096f727d2c260b7493
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a0e8713bc228e65cb06e58d7ccb5389f7366e76
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC ActiveX 컨트롤: 다른 사용자 지정 속성 페이지 추가
 경우에 따라서는 ActiveX 컨트롤 한 속성 페이지에 표시 될 수 있는 보다 더 많은 속성을 갖습니다. 이 경우 이러한 속성을 표시 하려면 ActiveX 컨트롤에 속성 페이지를 추가할 수 있습니다.  

@@ -1,13 +1,10 @@
 ---
-title: "스핀 단추 스타일 | Microsoft Docs"
-ms.custom: 
+title: 스핀 단추 스타일 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - styles [MFC], spin button control
 - spin button control, styles
 ms.assetid: fb4a7f6f-9182-47be-bccf-0728fdc5332f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa4b2ae42175e2d4fc2ddb3317ef76b6b4dec8d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 96b559fcda4825aec71ba4b5c1dd8c3cd319b83d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="spin-button-styles"></a>스핀 단추 스타일
 스핀 단추에 대 한 설정의 많은 ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) 스타일에 의해 제어 됩니다. 사용 하 여 다음 스타일을 설정할 수 있습니다는 **속성** 대화 상자 편집기의 창.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 -   **No Thousands** 1000을 삽입 하지 않습니다 버디 창의 캡션의 값에 구분 기호입니다. 연관 된 `UDS_NOTHOUSANDS` 스타일입니다.  
   
     > [!NOTE]
-    >  Buddy 컨트롤에서 정수 값을 대화 상자 데이터 교환 (DDX)를 사용 하려는 경우에이 스타일을 설정 합니다. `DDX_Text`포함 된 천 구분 기호를 허용 하지 않습니다.  
+    >  Buddy 컨트롤에서 정수 값을 대화 상자 데이터 교환 (DDX)를 사용 하려는 경우에이 스타일을 설정 합니다. `DDX_Text` 포함 된 천 구분 기호를 허용 하지 않습니다.  
   
 -   **줄 바꿈** "로 줄 바꿈할" 값이 증가 하거나 감소 하는 컨트롤의 범위를 넘어 위치가 있습니다. 연관 된 `UDS_WRAP` 스타일입니다.  
   

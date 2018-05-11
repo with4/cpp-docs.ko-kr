@@ -1,35 +1,30 @@
 ---
-title: "방법: 취소를 사용 하 여 병렬 루프에서 break | Microsoft Docs"
-ms.custom: 
+title: '방법: 취소를 사용 하 여 병렬 루프에서 break | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - writing a parallel search algorithm [Concurrency Runtime]
 - parallel search algorithm, writing [Concurrency Runtime]
 ms.assetid: 421cd2de-f058-465f-b890-dd8fcc0df273
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27c6b4a216609c788978e4b857b5996587f899f2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b1b5153c225c3bb3a67be4265cf8303da2121c2b
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-cancellation-to-break-from-a-parallel-loop"></a>방법: 취소를 사용하여 병렬 루프 중단
 이 예제에서는 취소를 사용하여 기본적인 병렬 검색 알고리즘을 구현하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
 
  다음 예제에서는 배열의 요소를 검색 하려면 취소를 사용 합니다. `parallel_find_any` 함수는 [concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) 알고리즘 및 [run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token) 함수를 지정된 된 값을 포함 하는 위치를 검색 합니다. 병렬 루프는 값을 찾을 경우 호출 하는 [concurrency::cancellation_token_source::cancel](reference/cancellation-token-source-class.md#cancel) 향후 작업을 취소 하는 메서드.  
 

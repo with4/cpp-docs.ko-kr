@@ -1,32 +1,27 @@
 ---
-title: "C.2 규칙 | Microsoft Docs"
-ms.custom: 
+title: C.2 규칙 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5efa8d0e7cf4118362b7695bafcd4710b4021f6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a3bdf26435fdfeea2196b9ef281d656805f51bf2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="c2-rules"></a>C.2 규칙
 표기법은 6.1 C 표준의 섹션에 설명 되어 있습니다. 이 문법 부록 OpenMP C 및 c + + 지시문에 대 한 기본 언어 문법에 대 한 확장을 보여 줍니다.  
   
- **/\*c + + (ISO/IEC 14882:1998)\*/**  
+ **/\* c + + (ISO/IEC 14882:1998) \*/**  
   
  *문-seq*:  
   
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  *문-seq openmp 지시문*  
   
- **/\*C90에서 (ISO/IEC 9899:1990)\*/**  
+ **/\* C90에서 (ISO/IEC 9899:1990) \*/**  
   
  *statement-list*:  
   
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
  *문 목록 openmp 지시문*  
   
- **/\*C99 (ISO/IEC 9899: 1999)\*/**  
+ **/\* C99 (ISO/IEC 9899: 1999) \*/**  
   
  *블록 항목*:  
   
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
  *statement*:  
   
- **/\*표준 문\*/**  
+ **/\* 표준 문 \*/**  
   
  *openmp 구문*  
   
@@ -136,7 +131,7 @@ ms.lasthandoff: 12/21/2017
   
  *절에 대 한 고유*:  
   
- **정렬**  
+ **ordered**  
   
  **일정 (** *예약 종류가* **)**  
   
@@ -274,7 +269,7 @@ ms.lasthandoff: 12/21/2017
   
  *선언*:  
   
- **/\*표준 선언\*/**  
+ **/\* 표준 선언 \*/**  
   
  *threadprivate 지시문*  
   
@@ -304,9 +299,9 @@ ms.lasthandoff: 12/21/2017
   
  *감소 연산자*:  
   
- *중 하나*:  **+  \* -& ^ &#124; & & &#124; &#124;**  
+ *중 하나*:  **+  \* -& ^ &#124; & &&#124;&#124;**  
   
- **/\*C에서\*/**  
+ **/\* C에서 \*/**  
   
  *변수 목록*:  
   
@@ -314,7 +309,7 @@ ms.lasthandoff: 12/21/2017
   
  *변수 목록* **,** *식별자*  
   
- **/\*c + +\*/**  
+ **/\* c + + \*/**  
   
  *변수 목록*:  
   

@@ -1,30 +1,25 @@
 ---
-title: "연결 지점 (Visual c + +) 구현 | Microsoft Docs"
-ms.custom: 
+title: 연결 지점 (Visual c + +) 구현 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Implement Connection Point Wizard [C++]
 - connection points [C++], implementing
 ms.assetid: 5b37e4f9-73c9-4bef-b26d-365bc0662260
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab065c78d8ea5d2de105abdc2fa651e05f9d1875
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3b75bf145da401ad9889353a1e65448831c602c9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implementing-a-connection-point-visual-c"></a>연결 지점 구현(Visual C++)
 연결 지점 구현 마법사를 사용 하 여 연결점을 구현 하려면 해야 프로젝트를 만들었다고는 ATL 지원을 포함 하는 MFC 응용 프로그램 또는 ATL COM 응용 프로그램으로 합니다. 사용할 수는 [ATL 프로젝트 마법사](../atl/reference/atl-project-wizard.md) ATL 응용 프로그램을 만드는 또는 [MFC 응용 프로그램에 ATL 개체를 추가](../mfc/reference/adding-atl-support-to-your-mfc-project.md) MFC 응용 프로그램에 대 한 ATL 지원을 구현 하 합니다.  

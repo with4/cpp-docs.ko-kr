@@ -1,30 +1,25 @@
 ---
-title: "MFC 인터넷 프로그래밍 작업 | Microsoft Docs"
-ms.custom: 
+title: MFC 인터넷 프로그래밍 작업 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Internet applications [MFC], getting started
 - Internet applications [MFC], first steps
 ms.assetid: 6377e9b8-07c4-4380-b63b-05f5a9061313
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd726860e181eb352d7368f31a31d2cbd7489000
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df7efbc8d29b2e36c6911255389cc270e7bf5e37
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-internet-programming-tasks"></a>MFC 인터넷 프로그래밍 작업
 이 섹션에는 응용 프로그램에 인터넷 지원을 추가 하는 자세한 단계 포함 되어 있습니다. 항목에는 MFC 클래스 인터넷 가능 하 게 기존 응용 프로그램을 사용 하는 방법 및 기존 COM 구성 요소에 활성 문서 지원을 추가 하는 방법을 포함 됩니다. 최신 주식 시세 Pittsburgh의 football 점수를 사용 하 여 문서를 만들려면 원하는 및 남극 대륙 Microsoft에서 최신 온도 다양 한 인터넷을 통해 작업을 수행 하는 데 도움이 되는 기술 제공 합니다.  

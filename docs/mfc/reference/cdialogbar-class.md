@@ -1,12 +1,9 @@
 ---
-title: "CDialogBar 클래스 | Microsoft Docs"
-ms.custom: 
+title: CDialogBar 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDialogBar
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CDialogBar [MFC], CDialogBar
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5663d093022345036f623dd344bae738e0acf5eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7dbb2d8202e9b87d2825b7d40a0dde4323246aa0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdialogbar-class"></a>CDialogBar 클래스
 컨트롤 막대에 Windows 모덜리스 대화 상자의 기능을 제공합니다.  
@@ -78,14 +73,14 @@ class CDialogBar : public CControlBar
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxext.h  
   
-##  <a name="cdialogbar"></a>CDialogBar::CDialogBar  
+##  <a name="cdialogbar"></a>  CDialogBar::CDialogBar  
  `CDialogBar` 개체를 생성합니다.  
   
 ```  
 CDialogBar();
 ```  
   
-##  <a name="create"></a>CDialogBar::Create  
+##  <a name="create"></a>  CDialogBar::Create  
  지정 된 대화 상자 리소스 템플릿을 로드 `lpszTemplateName` 또는 `nIDTemplate`, 대화 상자 막대 창을 만듭니다의 스타일을 설정 하 고 사용 하 여 연결 된 `CDialogBar` 개체입니다.  
   
 ```  
@@ -113,13 +108,13 @@ virtual BOOL Create(
  `nStyle`  
  도구 모음 스타일입니다. 지원 되는 추가 도구 모음 스타일은  
   
-- `CBRS_TOP`컨트롤 막대 프레임 창의 위쪽에입니다.  
+- `CBRS_TOP` 컨트롤 막대 프레임 창의 위쪽에입니다.  
   
-- `CBRS_BOTTOM`컨트롤 막대 프레임 창 맨 아래에입니다.  
+- `CBRS_BOTTOM` 컨트롤 막대 프레임 창 맨 아래에입니다.  
   
-- `CBRS_NOALIGN`부모 크기를 조정할 때 컨트롤 막대 위치가 변경 되지 않습니다.  
+- `CBRS_NOALIGN` 부모 크기를 조정할 때 컨트롤 막대 위치가 변경 되지 않습니다.  
   
-- `CBRS_TOOLTIPS`컨트롤 막대에는 도구 설명을 표시합니다.  
+- `CBRS_TOOLTIPS` 컨트롤 막대에는 도구 설명을 표시합니다.  
   
 - **CBRS_SIZE_DYNAMIC** 동적 컨트롤 막대입니다.  
   
@@ -127,7 +122,7 @@ virtual BOOL Create(
   
 - **CBRS_FLOATING** 컨트롤 막대 부동 합니다.  
   
-- `CBRS_FLYBY`상태 표시줄 단추에 대 한 정보를 표시합니다.  
+- `CBRS_FLYBY` 상태 표시줄 단추에 대 한 정보를 표시합니다.  
   
 - **CBRS_HIDE_INPLACE** 컨트롤 막대 사용자에 게 표시 되지 않습니다.  
   
@@ -143,7 +138,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>설명  
  지정 하는 경우는 `CBRS_TOP` 또는 `CBRS_BOTTOM` 맞춤 스타일 대화 상자 막대 너비 프레임 창의 방식과 높이가 이므로로 지정 된 리소스의 `nIDTemplate`합니다. 지정 하는 경우는 `CBRS_LEFT` 또는 `CBRS_RIGHT` 맞춤 스타일 대화 상자 막대의 높이 프레임 창 이며 너비 지정 하는 리소스의 `nIDTemplate`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCMessageMaps#13](../../mfc/reference/codesnippet/cpp/cdialogbar-class_1.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

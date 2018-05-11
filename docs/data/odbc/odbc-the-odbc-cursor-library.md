@@ -1,13 +1,10 @@
 ---
-title: "ODBC: ODBC 커서 라이브러리 | Microsoft Docs"
-ms.custom: 
+title: 'ODBC: ODBC 커서 라이브러리 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,18 +22,16 @@ helpviewer_keywords:
 - ODBC, timestamp
 - positioning cursors
 ms.assetid: 6608db92-82b1-4164-bb08-78153c227be3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3d849580ce3e9b264c854633c6bb9f274874c21d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e57251263738d534b7e7e22ff287607fbc5159a5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="odbc-the-odbc-cursor-library"></a>ODBC: ODBC 커서 라이브러리
 이 항목에서 ODBC 커서 라이브러리 및 사용 하는 방법을 설명 합니다. 자세한 내용은 다음을 참조하세요.  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  ODBC 커서 라이브러리는 ODBC 드라이버 관리자와 드라이버 사이 있는 동적 연결 라이브러리 (DLL). ODBC에서, 드라이버를 레코드 집합에서의 위치를 추적 하는 커서를 유지 관리 합니다. 커서가 이미 스크롤 했는지 레코드 집합의 위치를 표시 합니다.-현재 레코드입니다.  
   
-##  <a name="_core_the_cursor_library_and_level_1_odbc_drivers"></a>커서 라이브러리와 수준 1 ODBC 드라이버  
+##  <a name="_core_the_cursor_library_and_level_1_odbc_drivers"></a> 커서 라이브러리와 수준 1 ODBC 드라이버  
  ODBC 커서 라이브러리는 다음과 같은 새로운 기능 수준 1 드라이버를 제공 합니다.  
   
 -   앞 이나 뒤로 스크롤입니다. 수준 2 드라이버 커서 라이브러리를 스크롤할 수 있는 이미 있기 때문에 필요 하지 않습니다.  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
  커서 라이브러리는 드라이버에서 지원 하지 않는 경우에 스냅숏 (정적 커서)를 제공 합니다. 드라이버가 정적 커서를 이미 지원 스냅숏 지원을 받는 커서 라이브러리를 로드할 필요가 없습니다. 커서 라이브러리를 사용 하는 경우에 스냅숏 및 앞 으로만 이동 가능한 레코드 집합을 사용할 수 있습니다. 드라이버 지원 다이너셋 (KEYSET_DRIVEN 커서) 사용 하려면 하는 경우에 커서 라이브러리를 사용 해야 합니다. 스냅숏과 다이너셋 사용 하려는 경우 두 개의 다른에 기반 해야 `CDatabase` 드라이버가 둘 다 지원 하지 않는 한 (두 개의 서로 다른 연결) 개체입니다.  
   
-##  <a name="_core_positioned_updates_and_timestamp_columns"></a>위치 지정된 업데이트 및 타임 스탬프 열  
+##  <a name="_core_positioned_updates_and_timestamp_columns"></a> 위치 지정된 업데이트 및 타임 스탬프 열  
   
 > [!NOTE]
 >  ODBC 데이터 소스는이 항목에 설명 된 대로 MFC ODBC 클래스를 통해 또는 MFC 데이터 액세스 개체 (DAO) 클래스를 통해 액세스할 수 있습니다.  
@@ -75,7 +70,7 @@ ms.lasthandoff: 12/21/2017
  클래스의 제한 사항과 관련 된 두 번째 문제 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 와 함께 사용할 경우의 `RFX_Date` 함수를 테이블로 또는 테이블에서 날짜 및 시간 정보를 전송 합니다. 처리는 `CTime` 개체 형식으로 데이터 전송 동안 중간 처리 오버 헤드가 있습니다. 날짜 범위 `CTime` 개체 수 또한 너무 제한적일 수 일부 응용 프로그램에 대 한 합니다. 새 버전의는 `RFX_Date` 함수는 ODBC 사용 **TIMESTAMP_STRUCT** 매개 변수 대신는 `CTime` 개체입니다. 자세한 내용은 참조 `RFX_Date` 에 [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md) 에 *MFC 참조*합니다.  
 
   
-##  <a name="_core_using_the_cursor_library"></a>커서 라이브러리 사용  
+##  <a name="_core_using_the_cursor_library"></a> 커서 라이브러리 사용  
  데이터 원본에 연결할 때-호출 하 여 [CDatabase::OpenEx](../../mfc/reference/cdatabase-class.md#openex) 또는 [CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) -커서 라이브러리를 사용 하 여 데이터 원본에 대 한 것인지를 지정할 수 있습니다. 해당 데이터 원본에 스냅숏 만들기는, 지정는 **CDatabase::useCursorLib** 옵션에 `dwOptions` 매개 변수를 `OpenEx` 지정 또는 **TRUE** 에 대 한는  **bUseCursorLib** 매개 변수를 **열려** (기본값은 **TRUE**). ODBC 드라이버가 지 원하는 경우 데이터 원본에서 다이너셋을 열려는 (것 다이너셋을 일부 드라이버 기능을 마스크) 커서 라이브러리를 사용 하지 마십시오. 이 경우 지정 하지 않으면 **CDatabase::useCursorLib** 에 `OpenEx` 지정 또는 **FALSE** 에 대 한는 **bUseCursorLib** 매개 변수에서 **열**.  
   
 ## <a name="see-also"></a>참고 항목  

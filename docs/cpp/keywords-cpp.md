@@ -1,13 +1,10 @@
 ---
-title: "키워드 (c + +) | Microsoft Docs"
-ms.custom: 
+title: 키워드 (c + +) | Microsoft Docs
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: 'index-page '
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - Microsoft-specific keywords
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db9cd28719b1ced8efee124a4b75fbd362de60e1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 547a38b0adfd6f1dac5d8c181ed98ccfe07aea32
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keywords-c"></a>키워드 (c + +)
 키워드는 특별한 의미가 있는 미리 정의된 예약된 식별자입니다. 따라서 프로그램에서 키워드를 식별자로 사용할 수 없습니다. 다음 키워드는 Microsoft C++에서 예약되었습니다. 밑줄이 앞에 오는 이름은 Microsoft 확장입니다.  

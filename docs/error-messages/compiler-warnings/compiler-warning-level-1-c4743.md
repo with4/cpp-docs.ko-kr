@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 1) C4743 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 1) C4743 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4743
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4743
 ms.assetid: 2ee76ea3-77f3-4c2f-9a57-0751823c89fd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a7169afdf7fb4c9a03e509f0332e738a66a06f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 84b4d5f3aa465257d7efcf9f95584612214165b6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4743"></a>컴파일러 경고(수준 1) C4743
 '*형식*'다른 크기의 '*file1*'및'*file2*': *번호* 및 *번호* 바이트  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
  이 경고를 해결 하려면 같은 형식 정의 사용 하거나 다른 형식 또는 변수 이름을 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 샘플 유형에 대 한 하나의 정의 포함합니다.  
   
 ```  
@@ -55,7 +50,7 @@ void C::f3(void) {}
 C q;  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C4743 오류가 발생 합니다.  
   
 ```  

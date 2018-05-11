@@ -1,13 +1,10 @@
 ---
 title: support_error_info | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.support_error_info
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - support_error_info attribute
 ms.assetid: 20a2b55c-4738-4b35-a71d-e5e9c3a7e3bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b8fec0ff1f76485700199847615ac2d8fcf9e5eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c366a379d15e50aabdc3c2157f57f85b6b5b33b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="supporterrorinfo"></a>support_error_info
 자세한 오류 반환에 대한 지원을 구현합니다.  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  이 특성은 [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) 클래스를 대상 개체에 기본 클래스로 추가합니다. 이는 **ISupportErrorInfo** 의 기본 구현으로 이어지며, 단일 인터페이스가 개체에서 오류를 일으킬 때 사용할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드는 **ISupportErrorInfo** 인터페이스에 대한 기본 지원을 `CMyClass` 개체에 추가합니다.  
   
 ```  

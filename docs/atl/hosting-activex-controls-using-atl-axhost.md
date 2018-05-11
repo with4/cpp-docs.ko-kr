@@ -1,13 +1,10 @@
 ---
-title: "ATL 사용할 수 있는 클래스를 사용 하 여 ActiveX 컨트롤 호스팅 | Microsoft Docs"
-ms.custom: 
+title: ATL 사용할 수 있는 클래스를 사용 하 여 ActiveX 컨트롤 호스팅 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - hosting ActiveX controls
 - AXHost method
 ms.assetid: 2c1200ec-effb-4814-820a-509519699468
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2aac8a8b9cbf0b72378a286943faa6e36a8f3f74
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5057a077e8e778fa3d943b736d51d19af8f60fc6
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hosting-activex-controls-using-atl-axhost"></a>ATL 사용할 수 있는 클래스를 사용 하 여 ActiveX 컨트롤 호스팅
 이 항목의 예제를 사용할 수 있는 클래스를 만드는 방법 및 다양 한 ATL 함수를 사용 하 여 ActiveX 컨트롤을 호스트 하는 방법을 보여 줍니다. 제어 및 싱크 이벤트에 액세스 하는 방법도 보여 줍니다 (사용 하 여 [IDispEventImpl](../atl/reference/idispeventimpl-class.md))에서 호스팅되는 컨트롤입니다. 샘플은 Calendar 컨트롤을 나 자식 창 주 창에 호스팅합니다.  

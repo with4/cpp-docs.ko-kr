@@ -1,12 +1,9 @@
 ---
 title: make_collection (STL/CLR) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::make_collection
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - make_collection function [STL/CLR]
 ms.assetid: c25fb0cb-ebd8-4198-a565-bad28d32ee19
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 718483b6d95e1eb1eb67f66d2b9c18a8e17cae20
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 74d10af361b8ffabca1d31af98cb3170af76f023
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="makecollection-stlclr"></a>make_collection(STL/CLR)
 확인 된 `range_adapter` 반복기 쌍에서입니다.  
@@ -51,7 +46,7 @@ template<typename Iter>
 ## <a name="remarks"></a>설명  
  템플릿 함수가 `gcnew range_adapter<Iter>(first, last)`을 반환합니다. 생성에 사용 된 `range_adapter<Iter>` 반복기의 쌍에서 개체입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```cpp  
 // cliext_make_collection.cpp   

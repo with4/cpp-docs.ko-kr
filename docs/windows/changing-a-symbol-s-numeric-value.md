@@ -1,13 +1,10 @@
 ---
-title: "S 숫자 값 변경 기호 &#39; | Microsoft Docs"
-ms.custom: 
+title: 기호 변경&#39;숫자 값 s | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.changing.value
 dev_langs:
@@ -17,20 +14,18 @@ helpviewer_keywords:
 - symbols, numeric values
 - numeric values, changing symbols
 ms.assetid: 468e903b-9c07-4251-ae09-3b6cb754cc2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ce2c846d844b79a6ff054bb6c209d1f4653a26d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8beacf5195e108d98a0004fe79c2a66cb2b3b610
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="changing-a-symbol39s-numeric-value"></a>기호 &#39; 변경 s 숫자 값
+# <a name="changing-a-symbol39s-numeric-value"></a>기호 변경&#39;s 숫자 값
 단일 리소스와 관련 된 기호를 사용할 수 있습니다는 [속성 창](/visualstudio/ide/reference/properties-window) 기호 값을 변경 합니다. 사용할 수는 [리소스 기호 대화 상자](../windows/resource-symbols-dialog-box.md) 리소스에 할당 되어 있지 않은 기호의 값을 변경 합니다. 자세한 내용은 참조 [할당 되지 않은 기호 변경](../windows/changing-unassigned-symbols.md)합니다.  
   
 ### <a name="to-change-a-symbol-value-assigned-to-a-single-resource-or-object"></a>단일 리소스 또는 개체에 할당된 기호 값을 변경하려면  

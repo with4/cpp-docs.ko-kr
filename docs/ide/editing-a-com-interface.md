@@ -1,13 +1,10 @@
 ---
-title: "COM 인터페이스 편집 | Microsoft Docs"
-ms.custom: 
+title: COM 인터페이스 편집 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.com.editing.interfaces
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - COM interfaces, editing
 - properties [C++], adding to COM interfaces
 ms.assetid: 6c2909e0-af2d-4a37-bb39-ed372e6129cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8911f23ce8e28f2da13c3d8305f4f13a861bb60
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: dd7a61593a1024c00c0fd0de6bd62ff3ee9323b3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="editing-a-com-interface"></a>COM 인터페이스 편집
 클래스 뷰 바로 가기 메뉴에서 명령을 사용 하면 Visual c + + 프로젝트에 새 메서드 및 COM 인터페이스에 대 한 속성을 정의할 수 있습니다. 도구 상자에서 ActiveX 컨트롤의 이벤트를 정의할 수 있습니다.  

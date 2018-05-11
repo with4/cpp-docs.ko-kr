@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C3200 C3299 통해 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C3200 C3299 통해 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3220
@@ -43,17 +40,15 @@ helpviewer_keywords:
 dev_langs:
 - C++
 ms.assetid: 6b3104f6-63bc-4823-b6f3-b8a16be4b87f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 339a4e0f1337e120d192515cecd4dba4e04e310e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 831f51981ff72a67a55698693514dce0a3d87535
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>컴파일러 오류 C3200 c 3299 통해
 
@@ -139,9 +134,9 @@ ms.lasthandoff: 12/21/2017
 |[컴파일러 오류 C3271](compiler-error-c3271.md)|'*필드*': 잘못 된 값 '*번호*' FieldOffset 특성에 대 한|
 |[컴파일러 오류 C3272](compiler-error-c3272.md)|'*기호*': 구조체/클래스의 멤버 이므로 FieldOffset이 필요 합니다 기호 *type_name* StructLayout(LayoutKind::Explicit)를 사용 하 여 정의|
 |[컴파일러 오류 C3273](compiler-error-c3273.md)|'*키워드*': c + + try 블록에 사용할 수 없습니다|
-|[컴파일러 오류 C3274](compiler-error-c3274.md)|마지막으로 / &#95; &#95; 마지막으로 시도 일치 하지|
+|[컴파일러 오류 C3274](compiler-error-c3274.md)|마지막으로 /&#95;&#95;마지막 시도 일치 하지|
 |[컴파일러 오류 C3275](compiler-error-c3275.md)|'*식별자*': 한정자 없이이 기호를 사용할 수 없습니다|
-|[컴파일러 오류 C3276](compiler-error-c3276.md)|'*키워드*': 마지막으로의 외부로 이동할 / &#95; &#95; finally 블록에 정의 되지 않은 동작 종료 처리 중|
+|[컴파일러 오류 C3276](compiler-error-c3276.md)|'*키워드*': 마지막으로의 외부로 이동할 /&#95;&#95;finally 블록에 정의 되지 않은 동작 종료 처리 중|
 |[컴파일러 오류 C3277](compiler-error-c3277.md)|관리 되지 않는 열거형을 정의할 수 없습니다 '*열거형*'내부 관리 되는 '*형식*'|
 |[컴파일러 오류 C3278](compiler-error-c3278.md)|직접 호출 인터페이스 또는 순수 메서드 '*함수*' 런타임 시 실패할 수|
 |[컴파일러 오류 C3279](compiler-error-c3279.md)|cli 네임스페이스에 선언된 클래스 템플릿의 명시적 인스턴스화 및 부분/명시적 특수화는 허용되지 않습니다.|

@@ -2,11 +2,8 @@
 title: 컴파일러 오류 C2679 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2679
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2679
 ms.assetid: 1a5f9d00-9190-4aa6-bc72-949f68ec136f
-caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f5c32e92ccdbccbeb2683e44d6d5aaeabc6db8a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24a304d88ccc6044c5358759efffa2a38dfeaf67
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2679"></a>컴파일러 오류 C2679
 이항 'operator': 'type' 형식의 오른쪽 피연산자를 사용 하는 연산자가 없습니다 발견 (또는 허용 가능한 변환이 없습니다)  

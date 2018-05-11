@@ -1,12 +1,9 @@
 ---
-title: "IThreadProxy 구조체 | Microsoft Docs"
-ms.custom: 
+title: IThreadProxy 구조체 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IThreadProxy
@@ -20,17 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e96f02677e3a79d1a6e15b9b22b777ca794b516d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fbf59302a73374f08f1c226c1e7e56202654dcfb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy 구조체
 실행 스레드에 대한 추상화입니다. 직접 만든 스케줄러의 `SchedulerType` 정책 키에 따라 리소스 관리자는 일반 Win32 스레드 또는 UMS(사용자 모드 예약 가능) 스레드 중 하나에서 지원되는 스레드 프록시를 부여합니다. UMS 스레드는 Windows 7 이상 버전의 64비트 운영 체제에서 지원됩니다.  
@@ -63,7 +58,7 @@ struct IThreadProxy;
   
  **네임스페이스:** 동시성  
   
-##  <a name="getid"></a>  IThreadProxy::GetId Method  
+##  <a name="getid"></a>  Ithreadproxy:: Getid 메서드  
  스레드 프록시에 대 한 고유 식별자를 반환합니다.  
   
 ```
@@ -73,7 +68,7 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>반환 값  
  고유 정수 식별자입니다.  
   
-##  <a name="switchout"></a>  IThreadProxy::SwitchOut Method  
+##  <a name="switchout"></a>  Ithreadproxy:: Switchout 메서드  
  내부 가상 프로세서 루트에서 컨텍스트의 연결을 끊습니다.  
   
 ```
@@ -97,7 +92,7 @@ virtual void SwitchOut(SwitchingProxyState switchState = Blocking) = 0;
   
  Visual Studio 2010과 함께 제공된 헤더 및 라이브러리에서 이 메서드는 매개 변수를 사용하지 않으며 가상 프로세서 루트를 다시 초기화하지 않습니다. 이전 동작을 유지하기 위해 `Blocking`의 기본 매개 변수 값이 제공됩니다.  
   
-##  <a name="switchto"></a>  IThreadProxy::SwitchTo Method  
+##  <a name="switchto"></a>  Ithreadproxy:: Switchto 메서드  
  현재 실행 컨텍스트를 다른 맵으로 협조적 컨텍스트 전환을 수행합니다.  
   
 ```

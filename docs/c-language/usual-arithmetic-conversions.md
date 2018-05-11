@@ -1,13 +1,10 @@
 ---
-title: "일반적인 산술 변환 | Microsoft Docs"
-ms.custom: 
+title: 일반적인 산술 변환 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - conversions [C++], arithmetic
 - arithmetic operators [C++], type conversions
 ms.assetid: bfa49803-0efd-45d0-b987-111412a140d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a73da6d96b0dc03fa3f4c4807d6a2dff4fef2879
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2e17540d8d1e45ace69e45c3eac3444f70c6f343
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="usual-arithmetic-conversions"></a>일반적인 산술 변환
 대부분의 C 연산자는 형식 변환을 수행하여 식의 피연산자를 공용 형식으로 변환하거나 short 값을 컴퓨터 연산에서 사용되는 정수 크기로 확장합니다. C 연산자로 수행되는 변환은 특정 연산자와 피연산자의 형식에 따라 달라집니다. 하지만 많은 연산자는 정수 계열 및 부동 형식의 피연산자에 대해 비슷한 변환을 수행합니다. 이러한 변환을 "산술 변환"이라고 합니다. 피연산자 값을 호환되는 형식으로 변환하는 경우 해당 값이 변경되지 않습니다.  

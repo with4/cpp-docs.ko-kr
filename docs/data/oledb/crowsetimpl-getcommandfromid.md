@@ -1,12 +1,9 @@
 ---
 title: 'Crowsetimpl:: Getcommandfromid | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - CRowsetImpl::GetCommandFromID
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - GetCommandFromID method
 ms.assetid: 9f39cb07-1c40-486f-ba5b-cb4a65fab8a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8f58da41c878fba322d51bdecd8283646a94bdf2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f79e9287bf8d546ba5007257899a6b6ddc27ad40
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crowsetimplgetcommandfromid"></a>CRowsetImpl::GetCommandFromID
 데이터 멤버에 문자열 값을 복사 하는 문자열 값을 포함 하는 매개 변수 중 하나 또는 둘 그리고 있다면 확인 [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) 및 [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)합니다.  

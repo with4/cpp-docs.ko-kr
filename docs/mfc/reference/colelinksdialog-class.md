@@ -1,12 +1,9 @@
 ---
-title: "COleLinksDialog 클래스 | Microsoft Docs"
-ms.custom: 
+title: COleLinksDialog 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleLinksDialog
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - COleLinksDialog [MFC], DoModal
 - COleLinksDialog [MFC], m_el
 ms.assetid: fb2eb638-2809-46db-ac74-392a732affc7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b998cc18ac0c357b57bc841f6db13700b078063
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e190c8b8cb11fefccb2847214dcaebf713f35dc4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colelinksdialog-class"></a>COleLinksDialog 클래스
 OLE 링크 편집 대화 상자에 사용합니다.  
@@ -90,7 +85,7 @@ class COleLinksDialog : public COleDialog
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxodlgs.h  
   
-##  <a name="domodal"></a>COleLinksDialog::DoModal  
+##  <a name="domodal"></a>  COleLinksDialog::DoModal  
  OLE 편집 링크 대화 상자가 표시 됩니다.  
   
 ```  
@@ -109,7 +104,7 @@ virtual INT_PTR DoModal();
 ### <a name="remarks"></a>설명  
  멤버를 설정 하 여 다양 한 대화 상자 컨트롤을 초기화 하려는 경우는 [m_el](#m_el) 구조를 수행 해야 호출 하기 전에 `DoModal`, 대화 상자 개체를 생성 한 후 하지만 합니다.  
   
-##  <a name="colelinksdialog"></a>COleLinksDialog::COleLinksDialog  
+##  <a name="colelinksdialog"></a>  COleLinksDialog::COleLinksDialog  
  `COleLinksDialog` 개체를 생성합니다.  
   
 ```  
@@ -136,7 +131,7 @@ COleLinksDialog (
 ### <a name="remarks"></a>설명  
  이 함수가 구성 된 `COleLinksDialog` 개체입니다. 대화 상자를 표시 하려면 호출는 [DoModal](#domodal) 함수입니다.  
   
-##  <a name="m_el"></a>COleLinksDialog::m_el  
+##  <a name="m_el"></a>  COleLinksDialog::m_el  
  형식의 구조 **OLEUIEDITLINKS** 편집 링크 대화 상자의 동작을 제어 하는 데 사용 합니다.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "프레임 창 사용 | Microsoft Docs"
-ms.custom: 
+title: 프레임 창 사용 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - frame windows [MFC], using
 - MFC, frame windows
 ms.assetid: 4d773238-11f6-4ccf-8114-57310c5aaa2d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e54a232b246665a1ef82fb48166eed2aff0fd9db
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 636762ae7e1b1d1a5dd109bb71b98c81b51fe50b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-frame-windows"></a>프레임 창 사용
 MFC 프레임 워크 만듭니다 문서 프레임 창-보기 및 문서-새로운 기능 및 파일 메뉴에 대 한 열기 명령 기본 구현의 일부로 합니다. 프레임 워크는 대부분의 프레임 창 작업에서, 때문에 만들기, 사용 및 제거 해당 창에서 작은 역할만을 재생 합니다. 하지만 만들 수 있습니다 명시적으로 사용자 고유의 프레임 창 및 자식 창이 특수 목적을 위해.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [문서 프레임 창 만들기](../mfc/creating-document-frame-windows.md)  
   

@@ -1,12 +1,9 @@
 ---
 title: 'Cdynamicparameteraccessor:: Setparam | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - ATL::CDynamicParameterAccessor::SetParam
@@ -22,18 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - SetParam method
 ms.assetid: e2349220-545c-46ad-90da-9113ac52551a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3fcedc0d54e5b25eb4490425253f6c1bfd139a85
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 37f60999eb87d473fb51bb0a493a79d0edf96074
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdynamicparameteraccessorsetparam"></a>CDynamicParameterAccessor::SetParam
 지정된 된 (string이 아닌) 데이터를 사용 하 여 매개 변수 버퍼를 설정 합니다.  
@@ -57,7 +52,7 @@ bool SetParam(TCHAR* pParamName,
  데이터 형식이 템플릿 매개 변수입니다.  
   
  `nParam`  
- [in] 매개 변수 번호입니다(1에서 오프셋). 매개 변수 0은 반환 값으로 예약됩니다. 매개 변수 번호는 SQL 또는 저장 프로시저 호출에서 해당 순서를 기준으로 하는 매개 변수의 인덱스입니다. 예:  
+ [in] 매개 변수 번호입니다(1에서 오프셋). 매개 변수 0은 반환 값으로 예약됩니다. 매개 변수 번호는 SQL 또는 저장 프로시저 호출에서 해당 순서를 기준으로 하는 매개 변수의 인덱스입니다. 예를 들어:  
   
  [!code-cpp[NVC_OLEDB_Consumer#8](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-setparam_1.cpp)]  
   

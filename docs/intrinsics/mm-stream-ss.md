@@ -1,12 +1,9 @@
 ---
 title: _mm_stream_ss | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _mm_stream_ss
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - movntss instruction
 - _mm_stream_ss intrinsic
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 420952d58bb46012741ee95ced4cf39c12d381cd
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b5058ac6c415f155b6a7cab712002d4769983d1f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mmstreamss"></a>_mm_stream_ss  
   
@@ -69,7 +64,7 @@ void _mm_stream_ss(
   
 사용 하는 코드를 실행 하는 경우는 `_mm_stream_ss` 지원 하지 않는 하드웨어에 내장 된 `movntss` 명령 결과 예측할 수 없습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```cpp  
 // Compile this sample with: /EHsc  
@@ -103,7 +98,7 @@ f[2] = -3, f[3] = 3
   
 **Microsoft 전용 종료**  
 
-Copyright 2007 by Advanced Micro Devices, Inc. All rights reserved. 고급 마이크로 장치, Inc. 로부터 사용 권한을 승인 하에 복제  
+고급 마이크로 장치, inc 2007 저작권 All rights reserved. 고급 마이크로 장치, Inc. 로부터 사용 권한을 승인 하에 복제  
   
 ## <a name="see-also"></a>참고 항목  
  [_mm_stream_sd](../intrinsics/mm-stream-sd.md)   

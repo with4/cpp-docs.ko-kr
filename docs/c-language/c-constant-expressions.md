@@ -1,13 +1,10 @@
 ---
-title: "C 상수 식 | Microsoft Docs"
-ms.custom: 
+title: C 상수 식 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - constant expressions
 - expressions [C++], constant
 ms.assetid: d48a6c47-e44c-4be2-9c8b-7944c7ef8de7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 596f558ea5c22f1850800d95b0d4ad0b5edd6a8b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aaeb7ab79777d247f0bc0b2e6d749d8df5a7f8e9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-constant-expressions"></a>C 상수 식
 상수 식은 런타임이 아닌 컴파일 타임에 계산되며, 상수를 사용할 수 있는 모든 위치에서 사용될 수 있습니다. 상수 식은 해당 형식에 대한 표현 가능한 값의 범위에 있는 상수로 계산되어야 합니다. 상수 식의 피연산자는 정수 상수, 문자 상수, 부동 소수점 상수, 열거형 상수, 형식 캐스트, `sizeof` 식 및 기타 상수 식일 수 있습니다.  

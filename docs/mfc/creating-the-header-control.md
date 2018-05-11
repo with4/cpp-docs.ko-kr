@@ -1,30 +1,25 @@
 ---
-title: "헤더 컨트롤 만들기 | Microsoft Docs"
-ms.custom: 
+title: 헤더 컨트롤 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CHeaderCtrl class [MFC], creating
 - header controls [MFC], creating
 ms.assetid: 7864d9d2-4a2c-4622-b58b-7b110a1e28d2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33f536a86a21e56eb36e546109f916ae5d6ca806
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 465c880c480f9ccd3a52f6319ee97ed203c3bd74
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-the-header-control"></a>헤더 컨트롤 만들기
 헤더 컨트롤 (하지만 헤더 컨트롤을 포함 하는 목록 컨트롤을 추가할 수 있습니다) 대화 상자 편집기에서 직접 사용할 수 있는있지 않습니다.  

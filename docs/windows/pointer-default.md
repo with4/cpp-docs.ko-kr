@@ -1,13 +1,10 @@
 ---
 title: pointer_default | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.pointer_default
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b55bf95c7abdffe8dd0a0e0071d86f06baad344e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ee904f9243cf642d3a942d4bc323f5ec381b0480
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="pointerdefault"></a>pointer_default
 매개 변수 목록에 표시 되는 최상위 포인터를 제외 하 고 모든 포인터에 대 한 기본 포인터 특성을 지정 합니다.  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  **pointer_default** c + + 특성에 동일한 기능을는 [pointer_default](http://msdn.microsoft.com/library/windows/desktop/aa367141) MIDL 특성입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  예를 참조 [defaultvalue](../windows/defaultvalue.md) 의 샘플 사용에 대 한 **pointer_default**합니다.  
   
 ## <a name="requirements"></a>요구 사항  

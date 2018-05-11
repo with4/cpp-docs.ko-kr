@@ -1,12 +1,9 @@
 ---
-title: "extent 클래스 (c + + AMP) | Microsoft Docs"
-ms.custom: 
+title: extent 클래스 (c + + AMP) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - extent
@@ -21,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a8606b01ac5d3676b06c93c373677f2eb85d954
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 901ba590d208db7c9cf3803e77e8481a2b896ea2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="extent-class-c-amp"></a>extent 클래스(C++ AMP)
 벡터를 나타냅니다 *N* 의 범위를 지정 하는 정수 값은 *N*-0 원점이 차원 공간입니다. 벡터의 값은 가장 덜 중요 한에 가장 중요 한에서 정렬 됩니다.  
@@ -64,7 +59,7 @@ class extent;
   
 |이름|설명|  
 |----------|-----------------|  
-|[contains](#contains)|확인 하는 지정 된 `extent` 개체에 지정 된 순위입니다.|  
+|[포함](#contains)|확인 하는 지정 된 `extent` 개체에 지정 된 순위입니다.|  
 |[size](#size)|범위 (요소의 단위)에서 총 선형 크기를 반환합니다.|  
 |[tile](#tile)|생성 한 `tiled_extent` 제공한 타일 익스텐트 개체가 크기를 지정 합니다.|  
   
@@ -151,7 +146,7 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
   
  배열 생성에 사용 되는 경우는 `extent` 개체 배열의 길이의 순위와 일치 해야 합니다는 `extent` 개체입니다.  
   
-##  <a name="operator_mod_eq"></a> operator%= 
+##  <a name="operator_mod_eq"></a> operator % = 
 
 해당 요소는를 숫자로 나눌 때의 모듈러스 (나머지)의 각 요소에는 '범위'를 계산 합니다.  
   
@@ -168,7 +163,7 @@ extent<_Rank>& operator%=(int _Rhs) restrict(cpu, direct3d);
 ### <a name="return-value"></a>반환 값  
  `extent` 개체  
   
-##  <a name="operator_star_eq"></a> operator*= 
+##  <a name="operator_star_eq"></a> 연산자 * = 
 
 지정 된 수 '범위' 개체의 각 요소를 곱합니다.  
   
@@ -216,7 +211,7 @@ extent<_Rank> operator++(int)restrict(amp,cpu);
 ### <a name="return-value"></a>반환 값  
  전위 연산자에 대 한는 `extent` 개체 (`*this`). 접미사 연산자에 대 한 새 `extent` 개체입니다.  
   
-##  <a name="operator_add_eq"></a> operator+= 
+##  <a name="operator_add_eq"></a> + = 연산자 
 
 '범위' 개체의 각 요소에 지정된 된 숫자를 추가합니다.  
   

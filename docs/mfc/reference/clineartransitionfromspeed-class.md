@@ -1,12 +1,9 @@
 ---
-title: "CLinearTransitionFromSpeed 클래스 | Microsoft Docs"
-ms.custom: 
+title: CLinearTransitionFromSpeed 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CLinearTransitionFromSpeed
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CLinearTransitionFromSpeed [MFC], m_dblFinalValue
 - CLinearTransitionFromSpeed [MFC], m_dblSpeed
 ms.assetid: 8f159a1c-8893-4017-951e-09e5758aba7d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ae7d972c97bdf2d94596004baa71462de7532c5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 64c8829336378e24759bc26e306fb7b43ab226bc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clineartransitionfromspeed-class"></a>CLinearTransitionFromSpeed 클래스
 선형 속도 전환을 캡슐화합니다.  
@@ -78,7 +73,7 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="clineartransitionfromspeed"></a>CLinearTransitionFromSpeed::CLinearTransitionFromSpeed  
+##  <a name="clineartransitionfromspeed"></a>  CLinearTransitionFromSpeed::CLinearTransitionFromSpeed  
  선형 속도 전환을 개체를 생성 하 고 속도 최종 값으로 초기화 합니다.  
   
 ```  
@@ -94,7 +89,7 @@ CLinearTransitionFromSpeed(
  `dblFinalValue`  
  전환의 끝에서 애니메이션 변수의 값입니다.  
   
-##  <a name="create"></a>CLinearTransitionFromSpeed::Create  
+##  <a name="create"></a>  CLinearTransitionFromSpeed::Create  
  캡슐화 된 전환 COM 개체를 만드는 전환 라이브러리를 호출 합니다.  
   
 ```  
@@ -110,14 +105,14 @@ virtual BOOL Create(
 ### <a name="return-value"></a>반환 값  
  TRUE 이면 전환을 만들었습니다. 그렇지 않으면 FALSE입니다.  
   
-##  <a name="m_dblfinalvalue"></a>CLinearTransitionFromSpeed::m_dblFinalValue  
+##  <a name="m_dblfinalvalue"></a>  CLinearTransitionFromSpeed::m_dblFinalValue  
  전환의 끝에서 애니메이션 변수의 값입니다.  
   
 ```  
 DOUBLE m_dblFinalValue;  
 ```  
   
-##  <a name="m_dblspeed"></a>CLinearTransitionFromSpeed::m_dblSpeed  
+##  <a name="m_dblspeed"></a>  CLinearTransitionFromSpeed::m_dblSpeed  
  변수 속도의 절대 값입니다.  
   
 ```  

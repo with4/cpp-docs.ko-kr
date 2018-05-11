@@ -1,12 +1,9 @@
 ---
 title: 'priority_queue:: empty (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::priority_queue::empty
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - empty member [STL/CLR]
 ms.assetid: bb2bc4cf-395f-4c4f-b432-550b85e1865d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7bb5d02c3a6fb473cc94ad7c365e5a8157edcfb1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8fcaa274302b094071837b8628d2d35259223767
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="priorityqueueempty-stlclr"></a>priority_queue::empty(STL/CLR)
 요소가 있는지 여부를 테스트합니다.  
@@ -40,7 +35,7 @@ bool empty();
 ## <a name="remarks"></a>설명  
  멤버 함수는 빈 제어되는 시퀀스에 대해 true를 반환합니다. 동일 [priority_queue:: size (STL/CLR)](../dotnet/priority-queue-size-stl-clr.md)`() == 0`합니다. Priority_queue 비어 있는지 여부를 테스트 하려면 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_priority_queue_empty.cpp   

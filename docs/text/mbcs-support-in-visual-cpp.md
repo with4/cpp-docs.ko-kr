@@ -1,13 +1,10 @@
 ---
-title: "Visual c + +에서 MBCS 지원 | Microsoft Docs"
-ms.custom: 
+title: Visual c + +에서 MBCS 지원 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - _mbcs
 dev_langs:
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92d0b737c0cfb894f87da61519f30224f6a12fc1
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 41d075edb01fc139660d8e72a7fe53f03ee9e80b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="mbcs-support-in-visual-c"></a>Visual C++에서 MBCS 지원
 MBCS 지원 버전의 Windows 실행 하는 경우 Visual c + + 개발 시스템 등 통합된 소스 코드 편집기, 디버거 및 명령줄 도구는 MBCS 지원, 메모리 창 제외 하 고.  
@@ -50,7 +45,7 @@ MBCS 지원 버전의 Windows 실행 하는 경우 Visual c + + 개발 시스템
   
  이렇게 하려면 적절 한 경우 언제 든 지 visual c + + 더블 바이트 문자를 허용 합니다. 이 경로 이름 및 파일 이름 대화 상자와 아이콘 편집기에서 정적 텍스트 항목 (예를 들어 대화 상자 편집기에서 정적 텍스트) 및 Visual c + + 리소스 편집기에서 텍스트 항목에 포함합니다. 전처리기 일부 더블 바이트 지시문을 인식 하는 또한-예를 들어 파일 이름 `#include` 문, 및의 인수로 서의 **code_seg** 및 **data_seg** pragma입니다. 소스 코드 편집기에서 주석 및 리터럴 문자열에 더블 바이트 문자에 없는 (예: 변수 이름은) C/c + + 언어 요소가 허용 됩니다.  
   
-##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a>지원에 대 한는 입력 (입력기)  
+##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> 지원에 대 한는 입력 (입력기)  
  일반적으로 (예: 일본) MBCS를 사용 하는 동아시아 지역/국가 및 더블 바이트 문자를 모두 입력 하기 위한 Windows IME 지원 용으로 작성 된 응용 프로그램입니다. Visual c + + 개발 환경 IME 수 있는 기능을 포함합니다. 자세한 내용은 참조 [IME 샘플: 컨트롤의 IME 모드 및 IME 수준 3 구현 방법 설명](http://msdn.microsoft.com/en-us/87ebdf65-cef0-451d-a6fc-d5fb64178b14)합니다.  
   
  일본어 키보드 간지 문자를 직접 지원 하지 않습니다. IME 간지 표현 가능한는 다른 일본어 (Romaji, 가타카나, 또는 히라가나) 중 하나에 입력 된 음성 문자열을 변환 합니다. 모호성이 있으면 여러 대체에서 선택할 수 있습니다. IME 간지 문자를 선택한 경우 두 개의 전달 `WM_CHAR` 제어 응용 프로그램 메시지입니다.  

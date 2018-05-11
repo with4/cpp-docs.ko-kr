@@ -1,13 +1,10 @@
 ---
-title: "C 열거형 선언 | Microsoft Docs"
-ms.custom: 
+title: C 열거형 선언 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: bd18f673-4dda-4bc1-92fd-d1ce10074910
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4109bb9ed66a89765b6270fce6a3cd5821698a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 697e4f37c8a59c40df80e29ff89f2021f61fb468
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-enumeration-declarations"></a>C 열거형 선언
 열거형은 명명된 정수 상수의 집합으로 구성됩니다. 열거형 형식 선언은 (선택적) 열거형 태그의 이름을 제공하고 명명된 정수 식별자의 집합("열거형 집합", "열거자 상수", "열거자" 또는 "멤버"라고 함)을 정의합니다. 열거형 형식의 변수는 해당 형식으로 정의된 열거형 집합의 값 중 하나를 저장합니다.  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="syntax"></a>구문  
  *enum-specifier*:  
- **enum**  *identifier* opt**{** *enumerator-list* **}**  
+ **enum**  *identifier* opt **{** *enumerator-list* **}**  
   
  **enum**  *identifier*  
   

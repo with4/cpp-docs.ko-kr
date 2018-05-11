@@ -1,13 +1,10 @@
 ---
-title: "확장 된 콤보 상자 컨트롤에서 이미지 목록 사용 | Microsoft Docs"
-ms.custom: 
+title: 확장 된 콤보 상자 컨트롤에서 이미지 목록 사용 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - extended combo boxes [MFC], images
 - images [MFC], combo box items
 ms.assetid: dfff25fe-af70-47a2-8032-3901d1e6842d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ac69e7d0dbe1748a409b107579c747b7f9a4a7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c9a701871631fead48c22b1ffb2cbc3c386b960
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>확장 콤보 상자 컨트롤에서 이미지 목록 사용
 확장 된 콤보 상자 컨트롤의 주요 기능은는 콤보 상자 컨트롤의 개별 항목과 함께 이미지 목록의 이미지를 연결 하는 기능입니다. 각 항목은 세 가지 서로 다른 이미지를 표시할 수 있으며: 선택 된 상태로, 오버레이 이미지에 대 한 세 번째 이와 선택 되지 않은 상태에 대 한 하나 있습니다.  

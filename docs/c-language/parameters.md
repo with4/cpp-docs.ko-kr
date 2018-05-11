@@ -1,13 +1,10 @@
 ---
-title: "매개 변수 | Microsoft Docs"
-ms.custom: 
+title: 매개 변수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - ellipses (...), parameters
 - '... ellipsis'
 ms.assetid: 8f2b8026-78b5-4e21-86a3-bf0f91f05689
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e73e7aa3ff62782c6ebd3b5a8728aa05e78b1784
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 655cf3ac04385b055dfdf028261a2a61f3bb45f8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parameters"></a>매개 변수
 인수는 함수 호출을 통해 함수에 전달되는 값의 이름입니다. 매개 변수는 함수가 수신할 수 있는 값입니다. 함수 프로토타입에서 함수 이름 뒤의 괄호에는 함수의 전체 매개 변수 및 해당 형식 목록이 포함됩니다. 매개 변수 선언은 형식, 크기 및 매개 변수에 저장된 값의 식별자를 지정합니다.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 03/16/2018
  *function-definition*:  
  *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
   
- /\* *attribute-seq*는 Microsoft 전용임 \*/  
+ /\* *attribute-seq*는 Microsoft 전용임 */  
   
  *declarator* :  
  *pointer* opt*direct-declarator*  

@@ -1,30 +1,25 @@
 ---
-title: "특성 매개 변수 형식 (c + + 구성 요소 확장명) | Microsoft Docs"
-ms.custom: 
+title: 특성 매개 변수 형식 (c + + 구성 요소 확장명) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95e7ec4d1a4a6b473419c23b3565fcce9d5afed6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 64da24a9811046672c317c24bba5332bf09303f9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-parameter-types--c-component-extensions"></a>특성 매개 변수 형식(C++ 구성 요소 확장)
 특성에 전달된 값은 컴파일 타임에 컴파일러에 알려야 합니다.  특성 매개 변수는 다음 형식일 수 있습니다.  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 -   `enum`  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="code"></a>코드  
   

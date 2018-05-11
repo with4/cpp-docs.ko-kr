@@ -1,13 +1,10 @@
 ---
-title: "Visual c + + 프로젝트에서 참조를 추가 합니다. | Microsoft Docs"
-ms.custom: 
+title: Visual c + + 프로젝트에서 참조를 추가 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.References
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7bacb5663d8e06ee5a10629c547de6f96219697e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bda420768b1ff0819ba666f71d62bfffa86e2105
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Visual C++ 프로젝트에서 참조 추가
 프로그램은 매우 일반적으로 DLL, Windows 런타임 구성 요소, 확장 SDK, COM 구성 요소 및 .NET 어셈블리와 같은 다른 이진 파일에서 API를 호출합니다. 프로그램에서 이러한 다른 이진 파일을 찾는 방식은 프로젝트의 형식 및 이진 파일의 형식에 따라 달라집니다.  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
  네이티브 C++ 프로젝트(ATL)에서는 *참조* 의 개념이 공유 프로젝트를 포함한 솔루션의 다른 프로젝트에만 적용되어 **참조 관리자**만 표시되도록 합니다.  
   
- ![Visual C# 43; &#43; 참조 관리자 &#40; ATL 프로젝트 &#41; ] (../ide/media/visual-c---reference-manager--atl-projects-.png "Visual c + + 참조 관리자 (ATL 프로젝트)")  
+ ![Visual C&#43; &#43; 참조 관리자 &#40;ATL 프로젝트&#41;](../ide/media/visual-c---reference-manager--atl-projects-.png "Visual c + + 참조 관리자 (ATL 프로젝트)")  
   
  C++/CLI 또는 유니버설 Windows 플랫폼 프로젝트에서는 참조의 개념이 솔루션의 다른 프로젝트뿐만 아니라 더 많은 종류의 이진 파일에 적용됩니다.  이러한 참조가 모두 **참조 관리자**를 표시합니다.
   

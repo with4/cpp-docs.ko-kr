@@ -1,12 +1,9 @@
 ---
 title: 'hash_set:: make_value (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_set::make_value
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - make_value member [STL/CLR]
 ms.assetid: 19819fee-d3a0-428d-92db-cba7235d37d4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 12b9337ce1dacbeaa6e5f7ff23d90a738a53872d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7c5b65a893657656528fd6ce6371db242ad03810
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashsetmakevalue-stlclr"></a>hash_set::make_value(STL/CLR)
 값 개체를 만듭니다.  
@@ -44,7 +39,7 @@ static value_type make_value(key_type key);
 ## <a name="remarks"></a>설명  
  멤버 함수가 반환 하는 `value_type` 개체 키가 `key`합니다. 여러 다른 멤버 함수 사용에 적합 한 개체를 작성 하려면 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_set_make_value.cpp   

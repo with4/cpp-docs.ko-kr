@@ -1,24 +1,19 @@
 ---
-title: "네임 스페이스 및 형식 표시 유형 (C + + /cli CX) | Microsoft Docs"
-ms.custom: 
+title: 네임 스페이스 및 형식 표시 유형 (C + + /cli CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a489935b72b570f18f6fd75170f215ed751e23
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 07b48d0464dfc36f671f6566ce45894aca76cbc4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>네임스페이스 및 형식 표시 유형(C++/CX)
 네임스페이스는 관련된 기능을 가진 형식을 그룹화하고 라이브러리의 이름 충돌을 방지하기 위한 표준 C++ 구조입니다. Windows 런타임 형식 시스템에서는 사용자 코드에서 포함 하는 모든 공용 Windows 런타임 형식은, 네임 스페이스 범위에서 네임 스페이스에 선언 되어야 합니다. 전역 범위에서 선언되거나 다른 클래스 안에 중첩된 public 형식은 컴파일 타임 오류를 발생시킵니다.  

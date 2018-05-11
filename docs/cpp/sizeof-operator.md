@@ -1,12 +1,9 @@
 ---
-title: "sizeof 연산자 | Microsoft Docs"
-ms.custom: 
+title: sizeof 연산자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sizeof_cpp
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - sizeof operator
 ms.assetid: 8bc3b6fb-54a1-4eb7-ada0-05f8c5efc532
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 072dbd8d41a867f7cd31316ef0bc1c20660952ef
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: ff35b6ef4674121a645fb3d80c96f5da3edded9f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sizeof-operator"></a>sizeof 연산자
 `char` 형식의 크기에 따라 피연산자의 크기를 결과로 생성합니다.  
@@ -49,9 +44,9 @@ sizeof  ( type-name )
   
 -   식입니다. 식과 함께 사용하는 경우 `sizeof`는 괄호를 포함하거나 포함하지 않고 지정할 수 있습니다. 식은 계산되지 않습니다.  
   
- `sizeof` 연산자가 `char` 형식의 개체에 적용되면 1이 결과로 생성됩니다. `sizeof` 연산자가 배열에 적용되면 배열 식별자가 나타내는 포인터의 크기가 아닌 해당 배열의 전체 바이트 수가 결과로 생성됩니다. 배열 식별자가 나타내는 포인터의 크기를 구하려면 `sizeof`가 사용되는 함수에 매개 변수로 전달합니다. 예:  
+ `sizeof` 연산자가 `char` 형식의 개체에 적용되면 1이 결과로 생성됩니다. `sizeof` 연산자가 배열에 적용되면 배열 식별자가 나타내는 포인터의 크기가 아닌 해당 배열의 전체 바이트 수가 결과로 생성됩니다. 배열 식별자가 나타내는 포인터의 크기를 구하려면 `sizeof`가 사용되는 함수에 매개 변수로 전달합니다. 예를 들어:  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 #include <iostream>  

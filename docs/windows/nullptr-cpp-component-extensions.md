@@ -1,31 +1,26 @@
 ---
-title: "nullptr (c + + 구성 요소 확장명) | Microsoft Docs"
-ms.custom: 
+title: nullptr (c + + 구성 요소 확장명) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: be7fcc147a5f6f4b96f7bf7dd68376613489946c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33a276c383618531103a76b1f20c6ad478d57c10
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="nullptr--c-component-extensions"></a>nullptr(C++ 구성 요소 확장)
 `nullptr` 키워드 나타냅니다는 *null 포인터 값*합니다. 개체 핸들, 내부 포인터 또는 원시 포인터 형식 개체를 가리키지 않습니다 나타내기 위해 null 포인터 값을 사용 합니다.  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [typeid](../cpp/typeid-operator.md)  
   
--   `throw nullptr`(하지만 `throw (Object^)nullptr;` 작동)  
+-   `throw nullptr` (하지만 `throw (Object^)nullptr;` 작동)  
   
  `nullptr` 다음 포인터 형식의 초기화에서 키워드를 사용할 수 있습니다.  
   
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
  0;에 대 한 핸들을 초기화할 수 없습니다. 만 `nullptr` 사용할 수 있습니다. 상수 0 개체 핸들을 할당 한 boxed 생성 `Int32` 및 캐스트를 `Object^`합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 것을 보여 줍니다는 `nullptr` 때마다 네이티브 포인터, 핸들에 키워드를 사용할 수 있습니다 또는 함수 인수를 사용할 수 있습니다. 이 예제를 보여 줍니다는 `nullptr` 사용 하기 전에 대 한 참조를 확인 하는 키워드를 사용할 수 있습니다.  
   
 ```  
@@ -91,7 +86,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  **예제**  
   
  다음 코드 예제에서는 `nullptr` 0 네이티브 포인터에 대 한 서로 바꿔 사용할 수 있습니다.  
@@ -133,7 +128,7 @@ pMyClass == nullptr
 pMyClass == 0  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  **예제**  
   
  다음 코드 예제에서는 `nullptr` 모든 형식에 대 한 핸들 또는 네이티브 포인터 형식으로 해석 됩니다. 다른 형식에 대 한 핸들을 사용한 함수 오버 로드의 경우 모호성 오류가 생성 됩니다. `nullptr` 형식으로 명시적으로 캐스팅 해야 합니다.  
@@ -152,7 +147,7 @@ void f_null() {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  **예제**  
   
  다음 코드 예제에서는 해당 캐스팅을 보여 줍니다. `nullptr` 수 있으며 포함 된 캐스트 형식에 대 한 포인터 또는 핸들 반환는 `nullptr` 값입니다.  
@@ -174,7 +169,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  **예제**  
   
  다음 코드 예제에서는 `nullptr` 함수 매개 변수로 사용할 수 있습니다.  
@@ -198,7 +193,7 @@ int main() {
 test  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  **예제**  
   
  다음 코드 예제에서는 핸들은 선언 되 고 명시적으로 초기화 하는 경우는 기본적으로 초기화를 보여 줍니다. `nullptr`합니다.  
@@ -228,7 +223,7 @@ int main() {
 NULL  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  **예제**  
   
  다음 코드 예제에서는 `nullptr` 사용 하 여 컴파일하면 네이티브 포인터에 할당할 수 **/clr**합니다.  

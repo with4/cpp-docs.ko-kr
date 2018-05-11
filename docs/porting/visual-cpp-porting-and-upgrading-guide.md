@@ -1,27 +1,22 @@
 ---
-title: "Visual C++ 포팅 및 업그레이드 가이드 | Microsoft 문서"
-ms.custom: 
+title: Visual C++ 포팅 및 업그레이드 가이드 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5751899dc064da4b17e240411878187a80acbdc
-ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
+ms.openlocfilehash: 084c689ad7720e36670130d552522aa2f593218e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 포팅 및 업그레이드 가이드
 이 항목에서는 Visual C++ 코드를 업그레이드하기 위한 가이드를 제공합니다. 여기에는 최신 릴리스의 도구에서 코드가 올바르게 컴파일 및 실행되도록 하고 새로운 언어와 Visual Studio 기능을 활용하는 방법이 포함됩니다. 또한 이 항목에는 레거시 앱을 최신 플랫폼으로 마이그레이션하는 방법에 대한 정보가 포함되어 있습니다.  

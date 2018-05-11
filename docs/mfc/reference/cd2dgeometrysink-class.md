@@ -1,12 +1,9 @@
 ---
-title: "CD2DGeometrySink 클래스 | Microsoft Docs"
-ms.custom: 
+title: CD2DGeometrySink 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DGeometrySink
@@ -47,17 +44,15 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89286aaccd2c59efb2bac14978a2d8838af7a4e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b67aa3345f8739714cb6758f8363c3d2054dd4e3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dgeometrysink-class"></a>CD2DGeometrySink 클래스
 ID2D1GeometrySink에 대 한 래퍼입니다.  
@@ -104,7 +99,7 @@ class CD2DGeometrySink;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[CD2DGeometrySink::m_pSink](#m_psink)|ID2D1GeometrySink에 대 한 포인터입니다.|  
   
@@ -114,14 +109,14 @@ class CD2DGeometrySink;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dgeometrysink"></a>CD2DGeometrySink:: ~ CD2DGeometrySink  
+##  <a name="_dtorcd2dgeometrysink"></a>  CD2DGeometrySink:: ~ CD2DGeometrySink  
  소멸자입니다. D2D geometry 싱크 개체가 소멸 될 때 호출 됩니다.  
   
 ```  
 virtual ~CD2DGeometrySink();
 ```  
   
-##  <a name="addarc"></a>CD2DGeometrySink::AddArc  
+##  <a name="addarc"></a>  CD2DGeometrySink::AddArc  
  Pathgeometry에 단일 원호를 추가합니다.  
   
 ```  
@@ -132,7 +127,7 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
  `arc`  
  원호 세그먼트는 그림에 추가 하려면  
   
-##  <a name="addbezier"></a>CD2DGeometrySink::AddBezier  
+##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier  
  현재 점과 지정된 끝점 간에 입방형 3차원 곡선을 만듭니다.  
   
 ```  
@@ -143,7 +138,7 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
  `bezier`  
  제어점 및 추가할 베 지 어 곡선의 끝점을 설명 하는 구조입니다.  
   
-##  <a name="addbeziers"></a>CD2DGeometrySink::AddBeziers  
+##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers  
  입방 형 3 차원 곡선의 시퀀스를 만들어 기 하 도형 싱크에를 추가 합니다.  
   
 ```  
@@ -156,7 +151,7 @@ void AddBeziers(
  `beziers`  
  만들려는 베 지 어 곡선을 설명 하는 베 지 어 세그먼트의 배열입니다. 배열의 첫 번째 베 지 어 세그먼트의 끝점에 기 하 도형 싱크 현재 위치 (BeginFigure로 지정 된 위치 또는 그려진 마지막 세그먼트의 끝 지점)에서 곡선이 그려집니다. 배열 하는 추가 베 지 어 세그먼트 들어 있는 경우 각 후속 베 지 어 세그먼트 시작 점으로 위의 베 지 어 세그먼트의 끝점을 사용 합니다.  
   
-##  <a name="addline"></a>CD2DGeometrySink::AddLine  
+##  <a name="addline"></a>  CD2DGeometrySink::AddLine  
  현재 지점과 지정한 끝점 사이 선 세그먼트를 만들어 기 하 도형 싱크를 추가 합니다.  
   
 ```  
@@ -167,7 +162,7 @@ void AddLine(CD2DPointF point);
  `point`  
  그릴 선의 끝점입니다.  
   
-##  <a name="addlines"></a>CD2DGeometrySink::AddLines  
+##  <a name="addlines"></a>  CD2DGeometrySink::AddLines  
  지정된 된 요소를 사용 하 여 줄의 시퀀스를 만들어 기 하 도형 싱크에를 추가 합니다.  
   
 ```  
@@ -180,7 +175,7 @@ void AddLines(
  `points`  
  줄을 그릴를 설명 하는 하나 이상의 포인트의 배열입니다. 배열의 첫 번째 지점에 기 하 도형 싱크 현재 위치 (BeginFigure로 지정 된 위치 또는 그려진 마지막 세그먼트의 끝 지점)에서 선이 그려집니다. 배열에 추가 점을 포함 하는 경우 첫 번째 요소에서 줄에는 세 번째 점과 등 두 번째 요소에서 배열에 두 번째 요소에 그려집니다. 배열을 그릴 선의 시작점과 끝점의 시퀀스입니다.  
   
-##  <a name="addquadraticbezier"></a>CD2DGeometrySink::AddQuadraticBezier  
+##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier  
  현재 점과 지정된 끝점 간에 정방형 3차원 곡선을 만듭니다.  
   
 ```  
@@ -191,7 +186,7 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
  `bezier`  
  제어점 및 추가할 정방형 3 차원 곡선의 끝점을 설명 하는 구조입니다.  
   
-##  <a name="addquadraticbeziers"></a>CD2DGeometrySink::AddQuadraticBeziers  
+##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers  
  한 번의 호출 배열 정방형 3 차원 세그먼트의 시퀀스를 추가 합니다.  
   
 ```  
@@ -204,7 +199,7 @@ void AddQuadraticBeziers(
  `beziers`  
  배열 정방형 3 차원 세그먼트의 시퀀스입니다.  
   
-##  <a name="beginfigure"></a>CD2DGeometrySink::BeginFigure  
+##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure  
  지정된 된 지점에 새 그림을 시작 합니다.  
   
 ```  
@@ -220,7 +215,7 @@ void BeginFigure(
  `figureBegin`  
  여부 비우거나 채울 새 그림 이어야 합니다.  
   
-##  <a name="cd2dgeometrysink"></a>CD2DGeometrySink::CD2DGeometrySink  
+##  <a name="cd2dgeometrysink"></a>  CD2DGeometrySink::CD2DGeometrySink  
  CD2DPathGeometry 개체에서 CD2DGeometrySink 개체를 만듭니다.  
   
 ```  
@@ -231,7 +226,7 @@ CD2DGeometrySink(CD2DPathGeometry& pathGeometry);
  `pathGeometry`  
  기존 CD2DPathGeometry 개체입니다.  
   
-##  <a name="close"></a>CD2DGeometrySink::Close  
+##  <a name="close"></a>  CD2DGeometrySink::Close  
  기 하 도형 싱크를 닫습니다.  
   
 ```  
@@ -241,7 +236,7 @@ BOOL Close();
 ### <a name="return-value"></a>반환 값  
  성공 하면 0이 아닌 그렇지 않으면 FALSE입니다.  
   
-##  <a name="endfigure"></a>CD2DGeometrySink::EndFigure  
+##  <a name="endfigure"></a>  CD2DGeometrySink::EndFigure  
  현재 그림; 종료 필요에 따라 닫습니다.  
   
 ```  
@@ -252,7 +247,7 @@ void EndFigure(D2D1_FIGURE_END figureEnd);
  `figureEnd`  
  현재 형상이 닫혀 있는지 여부를 나타내는 값입니다. 그림 닫혀 있는 경우 현재 지점과 BeginFigure로 지정 된 시작점 간에 선이 그려집니다.  
   
-##  <a name="get"></a>CD2DGeometrySink::Get  
+##  <a name="get"></a>  CD2DGeometrySink::Get  
  반환 ID2D1GeometrySink 인터페이스  
   
 ```  
@@ -262,7 +257,7 @@ ID2D1GeometrySink* Get();
 ### <a name="return-value"></a>반환 값  
  ID2D1GeometrySink 인터페이스 또는 개체가 아직 초기화 되지 않은 경우에 NULL 포인터입니다.  
   
-##  <a name="isvalid"></a>CD2DGeometrySink::IsValid  
+##  <a name="isvalid"></a>  CD2DGeometrySink::IsValid  
  Geometry 싱크 유효성 검사  
   
 ```  
@@ -272,14 +267,14 @@ BOOL IsValid() const;
 ### <a name="return-value"></a>반환 값  
  기 하 도형 싱크 올바르면 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
-##  <a name="m_psink"></a>CD2DGeometrySink::m_pSink  
+##  <a name="m_psink"></a>  CD2DGeometrySink::m_pSink  
  ID2D1GeometrySink에 대 한 포인터입니다.  
   
 ```  
 ID2D1GeometrySink* m_pSink;  
 ```  
   
-##  <a name="operator_id2d1geometrysink_star"></a>CD2DGeometrySink::operator ID2D1GeometrySink *  
+##  <a name="operator_id2d1geometrysink_star"></a>  CD2DGeometrySink::operator ID2D1GeometrySink *  
  반환 ID2D1GeometrySink 인터페이스  
   
 ```  
@@ -289,7 +284,7 @@ operator ID2D1GeometrySink*();
 ### <a name="return-value"></a>반환 값  
  ID2D1GeometrySink 인터페이스 또는 개체가 아직 초기화 되지 않은 경우에 NULL 포인터입니다.  
   
-##  <a name="setfillmode"></a>CD2DGeometrySink::SetFillMode  
+##  <a name="setfillmode"></a>  CD2DGeometrySink::SetFillMode  
  고 포인트 바깥에 있는 요소가이 geometry 싱크에 의해 설명 된 geometry 내부 되는지를 결정 하는 데 사용 하는 방법을 지정 합니다.  
   
 ```  
@@ -300,7 +295,7 @@ void SetFillMode(D2D1_FILL_MODE fillMode);
  `fillMode`  
  지정된 된 지점 기 하 도형의 일부 인지 확인 하는 데 사용 되는 메서드.  
   
-##  <a name="setsegmentflags"></a>CD2DGeometrySink::SetSegmentFlags  
+##  <a name="setsegmentflags"></a>  CD2DGeometrySink::SetSegmentFlags  
  기 하 도형 싱크에 추가 된 새 세그먼트에 적용 될 스트로크 및 조인 옵션을 지정 합니다.  
   
 ```  

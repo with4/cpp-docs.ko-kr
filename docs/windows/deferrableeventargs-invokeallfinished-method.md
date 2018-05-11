@@ -1,28 +1,23 @@
 ---
-title: "Deferrableeventargs:: Invokeallfinished 메서드 | Microsoft Docs"
-ms.custom: 
+title: 'Deferrableeventargs:: Invokeallfinished 메서드 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 86b45205-3edb-4134-9cd0-ed7a7b4c3b1a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ca021d66c615bfec84b8f08df8474eeb20709e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1aaaf8c6849b30e26463810ff353234319960048
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="deferrableeventargsinvokeallfinished-method"></a>DeferrableEventArgs::InvokeAllFinished 메서드
 지연된 이벤트를 처리하는 모든 처리가 완료되었음을 나타내기 위해 호출됩니다.  

@@ -1,13 +1,10 @@
 ---
-title: "Visual c + +의 OpenMP | Microsoft Docs"
-ms.custom: 
+title: Visual c + +의 OpenMP | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - explicit parallelization
 - explicit parallelization, OpenMP in Visual C++
 ms.assetid: 54d8d0da-1f47-4312-9f25-5875c7dc08ed
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 734b118cfdd1523379e9fb1e5e157bf9da9824af
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8bfcf0d83aeffbb4f40e5786b867afcf87aa84cb
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="openmp-in-visual-c"></a>Visual C++의 OpenMP
 OpenMP C 및 c + + 응용 프로그램 인터페이스를 사용 하면 효과적으로 여러 프로세서를 사용 하는 응용 프로그램을 작성할 수 있습니다. Visual c + +에는 OpenMP 2.0 표준을 지원합니다.  
@@ -44,7 +39,7 @@ OpenMP C 및 c + + 응용 프로그램 인터페이스를 사용 하면 효과�
  OpenMP 아키텍처 검토 위원회에서 버전 2.0 사양에 설명 된 대로 OpenMP C 및 c + + API에 설명 합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [/openmp (OpenMP 2.0 지원 활성화)](../../build/reference/openmp-enable-openmp-2-0-support.md)  
+ [/openmp(OpenMP 2.0 지원 사용)](../../build/reference/openmp-enable-openmp-2-0-support.md)  
  컴파일러에서 처리 하도록 `#pragma omp`합니다.  
   
  [미리 정의된 매크로](../../preprocessor/predefined-macros.md)  

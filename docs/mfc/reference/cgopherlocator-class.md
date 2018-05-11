@@ -1,12 +1,9 @@
 ---
-title: "CGopherLocator 클래스 | Microsoft Docs"
-ms.custom: 
+title: CGopherLocator 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CGopherLocator
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CGopherLocator [MFC], CGopherLocator
 - CGopherLocator [MFC], GetLocatorType
 ms.assetid: 6fcc015f-5ae6-4959-b936-858634c71019
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ffe833195e665fad37c6638c83170a1913197d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 377708108f96a42d23dcf3aa5e8214d7bf9ffe5c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cgopherlocator-class"></a>CGopherLocator 클래스
 Gopher 서버에서 gopher "로케이터"를 가져오고 로케이터 형식을 확인 하 고 로케이터를 사용할 수 있도록 [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)합니다.  
@@ -80,7 +75,7 @@ class CGopherLocator : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxinet.h  
   
-##  <a name="cgopherlocator"></a>CGopherLocator::CGopherLocator  
+##  <a name="cgopherlocator"></a>  CGopherLocator::CGopherLocator  
  이 멤버 함수를 만드는 호출 됩니다는 `CGopherLocator` 개체입니다.  
   
 ```  
@@ -94,7 +89,7 @@ CGopherLocator(const CGopherLocator& ref);
 ### <a name="remarks"></a>설명  
  만들지 마십시오는 `CGopherLocator` 개체를 직접 합니다. 대신, 호출 [CGopherConnection::CreateLocator](../../mfc/reference/cgopherconnection-class.md#createlocator) 만들고에 대 한 포인터를 반환 하는 `CGopherLocator` 개체입니다.  
   
-##  <a name="getlocatortype"></a>CGopherLocator::GetLocatorType  
+##  <a name="getlocatortype"></a>  CGopherLocator::GetLocatorType  
  이 로케이터 형식을 가져오는 함수를 호출 합니다.  
   
 ```  
@@ -138,7 +133,7 @@ BOOL GetLocatorType(DWORD& dwRef) const;
 |GOPHER_TYPE_ASK|Ask + 항목입니다.|  
 |GOPHER_TYPE_GOPHER_PLUS|Gopher + 항목입니다.|  
   
-##  <a name="operator_lpctstr"></a>CGopherLocator::operator LPCTSTR  
+##  <a name="operator_lpctstr"></a>  CGopherLocator::operator LPCTSTR  
  이 유용한 캐스팅 연산자를 null로 끝나는 C 문자열에 포함 된에 액세스할 수 있는 효율적인 방법 제공는 `CGopherLocator` 개체입니다.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "코드 보기 (데이터 액세스) 응용 프로그램 마법사로 만든 기록 | Microsoft Docs"
-ms.custom: 
+title: 코드 보기 (데이터 액세스) 응용 프로그램 마법사로 만든 기록 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - record views, refreshing controls
 - record views, application wizard code
 ms.assetid: 18fd4703-5939-491d-b759-985f767b951f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 239ace3f23987bc4f704515e7f87d62ba2e26543
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 15355d156b3c85c8f99ba638b30f831da96686af
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-view-code-created-by-application-wizard--mfc-data-access"></a>응용 프로그램 마법사가 만든 레코드 뷰 코드  (MFC Data Access)
 [MFC 응용 프로그램 마법사](../mfc/reference/database-support-mfc-application-wizard.md) 재정의 보기의 `OnInitialUpdate` 및 `OnGetRecordset` 멤버 함수입니다. 프레임워크는 프레임 창, 문서 및 뷰를 만든 후 `OnInitialUpdate`를 호출하여 뷰를 초기화합니다. `OnInitialUpdate`는 문서에서 레코드 집합에 대한 포인터를 가져옵니다. 기본 클래스에 대 한 호출 [cview:: Oninitialupdate](../mfc/reference/cview-class.md#oninitialupdate) 기능은 레코드 집합을 엽니다. 다음 코드에서는이 프로세스에 대 한는 `CRecordView`:  

@@ -1,40 +1,35 @@
 ---
-title: "연습: 간단한 작업을 사용 하도록 기존 코드를 조정 | Microsoft Docs"
-ms.custom: 
+title: '연습: 간단한 작업을 사용 하도록 기존 코드를 조정 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - using lightweight tasks [Concurrency Runtime]
 - lightweight tasks, using [Concurrency Runtime]
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a50ad04421d7b4bcdc4a2c98de8f5a57b255c75
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c4fe3bb4b576bd1f9160b4a3cdc3142be5cdff05
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>연습: 간단한 작업을 사용하기 위해 기존 코드 조정
 이 항목에서는 Windows API를 사용 하 여 만들고 간단한 작업을 사용 하는 스레드를 실행 하는 기존 코드를 조정 하는 방법을 보여 줍니다.  
   
  A *간단한 작업* 에서 직접 예약 하는 작업은 한 [concurrency:: scheduler](../../parallel/concrt/reference/scheduler-class.md) 또는 [concurrency:: schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md) 개체입니다. 간단한 작업은 동시성 런타임의 일정 예약 기능을 사용하도록 기존 코드를 조정하는 경우에 유용합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 시작 하기 전에 항목을 읽어 [작업 스케줄러](../../parallel/concrt/task-scheduler-concurrency-runtime.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
  다음 예제를 만들고 스레드를 실행 하는 Windows API의 일반적인 사용입니다. 사용 하 여이 예제는 [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) 함수를 호출 하는 `MyThreadFunction` 별도 스레드에서 합니다.  
@@ -91,7 +86,7 @@ Parameters = 50, 100
   
 10. 제거는 `return` 에서 문을 `MyThreadFunction`합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
  다음 완성 된 예제에서는 코드를 호출 하는 간단한 작업을 사용 하 여 `MyThreadFunction` 함수입니다.  

@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 1) C4382 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 1) C4382 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4382
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4382
 ms.assetid: 34be9ad3-bae6-411a-8f80-0c8fd0d2c092
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b0cef09795553759487e28ef61babe75b35ce03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c02f0cb2d22aebb9af31844aec3bf68b97c3442e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4382"></a>컴파일러 경고(수준 1) C4382
 'type'를 throw: __clrcall 소멸자 또는 복사 생성자 인 형식이 /clr에서 낼 수 있습니다: 순수 모듈  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  자세한 내용은 [/clr(공용 언어 런타임 컴파일)](../../build/reference/clr-common-language-runtime-compilation.md)을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C4382 경고가 발생 합니다.  
   
 ```  

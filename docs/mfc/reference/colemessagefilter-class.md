@@ -1,12 +1,9 @@
 ---
-title: "COleMessageFilter 클래스 | Microsoft Docs"
-ms.custom: 
+title: COleMessageFilter 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleMessageFilter
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - COleMessageFilter [MFC], SetMessagePendingDelay
 - COleMessageFilter [MFC], SetRetryReply
 ms.assetid: b1fd1639-fac4-4fd0-bf17-15172deba13c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ea5972a46d6e8d5ff106ddcc1c8692a3cdd8ff3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 85161e7f3dd752c6df27afedf6276f8823e7ec6e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="colemessagefilter-class"></a>COleMessageFilter 클래스
 OLE 응용 프로그램의 상호 작용으로 요구되는 동시성을 관리합니다.  
@@ -102,7 +97,7 @@ class COleMessageFilter : public CCmdTarget
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxole.h  
   
-##  <a name="beginbusystate"></a>COleMessageFilter::BeginBusyState  
+##  <a name="beginbusystate"></a>  COleMessageFilter::BeginBusyState  
  사용 중 상태를 시작 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -116,7 +111,7 @@ virtual void BeginBusyState();
   
  기본적으로 프레임 워크는 상태가 사용 중 수행 하는 유휴 처리 하는 동안 [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)합니다. 응용 프로그램을 처리 하는 동안 **ON_COMMANDUPDATEUI** 유휴 상태 처리가 완료 된 후 알림, 들어오는 호출 나중 처리 됩니다.  
   
-##  <a name="colemessagefilter"></a>COleMessageFilter::COleMessageFilter  
+##  <a name="colemessagefilter"></a>  COleMessageFilter::COleMessageFilter  
  
           `COleMessageFilter` 개체를 만듭니다.  
   
@@ -124,7 +119,7 @@ virtual void BeginBusyState();
 COleMessageFilter();
 ```  
   
-##  <a name="enablebusydialog"></a>COleMessageFilter::EnableBusyDialog  
+##  <a name="enablebusydialog"></a>  COleMessageFilter::EnableBusyDialog  
  사용 하도록 설정 하 고 메시지 보류 중인 지연 만료 될 때 표시 되는 사용 중인 대화 상자를 사용 하지 않도록 설정 (참조 [SetRetryReply](#setretryreply)) OLE 호출 하는 동안 합니다.  
   
 ```  
@@ -135,7 +130,7 @@ void EnableBusyDialog(BOOL bEnableBusy = TRUE);
  *bEnableBusy*  
  "사용 중" 대화 상자가 사용 되는지 여부를 지정 합니다.  
   
-##  <a name="enablenotrespondingdialog"></a>COleMessageFilter::EnableNotRespondingDialog  
+##  <a name="enablenotrespondingdialog"></a>  COleMessageFilter::EnableNotRespondingDialog  
  키보드 또는 마우스 메시지의 보류 중인 경우 표시 되는 "응답 없음" 대화 상자 사용 여부를 설정 하는 동안 OLE 호출과 호출 시간이 초과 되었습니다.  
   
 ```  
@@ -146,7 +141,7 @@ void EnableNotRespondingDialog(BOOL bEnableNotResponding = TRUE);
  *bEnableNotResponding*  
  "응답 없음" 대화 상자가 사용 되는지 여부를 지정 합니다.  
   
-##  <a name="endbusystate"></a>COleMessageFilter::EndBusyState  
+##  <a name="endbusystate"></a>  COleMessageFilter::EndBusyState  
  사용 중 상태를 종료 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -160,7 +155,7 @@ virtual void EndBusyState();
   
  기본적으로 프레임 워크는 상태가 사용 중 수행 하는 유휴 처리 하는 동안 [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)합니다. 응용 프로그램을 처리 하는 동안 `ON_UPDATE_COMMAND_UI` 유휴 상태 처리가 완료 된 후 알림, 들어오는 호출 처리 됩니다.  
   
-##  <a name="onmessagepending"></a>COleMessageFilter::OnMessagePending  
+##  <a name="onmessagepending"></a>  COleMessageFilter::OnMessagePending  
  OLE 호출이 진행 중인 동안에 메시지를 처리 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -179,7 +174,7 @@ virtual BOOL OnMessagePending(const MSG* pMsg);
   
  호출 하 여 메시지 필터를 등록 해야 [등록](#register) 활성화 될 수 있습니다.  
   
-##  <a name="register"></a>COleMessageFilter::Register  
+##  <a name="register"></a>  COleMessageFilter::Register  
  OLE 시스템 Dll 메시지 필터를 등록합니다.  
   
 ```  
@@ -194,7 +189,7 @@ BOOL Register();
   
  프레임 워크의 기본 메시지 필터는 자동으로 초기화 하는 동안 등록 하 고 종료 시 해지 되었습니다.  
   
-##  <a name="revoke"></a>COleMessageFilter::Revoke  
+##  <a name="revoke"></a>  COleMessageFilter::Revoke  
  호출 하 여 수행 합니다. 이전 등록을 취소 [등록](#register)합니다.  
   
 ```  
@@ -206,7 +201,7 @@ void Revoke();
   
  프레임 워크에서 자동으로 등록를 만들고는 기본 메시지 필터도 자동으로 해지 됩니다.  
   
-##  <a name="setbusyreply"></a>COleMessageFilter::SetBusyReply  
+##  <a name="setbusyreply"></a>  COleMessageFilter::SetBusyReply  
  이 함수는 응용 프로그램의 "사용 중 회신입니다."를 설정합니다.  
   
 ```  
@@ -230,7 +225,7 @@ void SetBusyReply(SERVERCALL nBusyReply);
   
  기본적으로 사용 중인 회신은 **SERVERCALL_RETRYLATER**합니다. 이 회신 호출 응용 프로그램을 가능한 한 빨리 다시 호출 하면 됩니다.  
   
-##  <a name="setmessagependingdelay"></a>COleMessageFilter::SetMessagePendingDelay  
+##  <a name="setmessagependingdelay"></a>  COleMessageFilter::SetMessagePendingDelay  
  호출 응용 프로그램 추가 작업을 수행 하기 전에 호출된 응용 프로그램의 응답을 기다리는 기간을 결정 합니다.  
   
 ```  
@@ -244,7 +239,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ### <a name="remarks"></a>설명  
  이 함수는 프로그램과 함께 작동 [SetRetryReply](#setretryreply)합니다.  
   
-##  <a name="setretryreply"></a>COleMessageFilter::SetRetryReply  
+##  <a name="setretryreply"></a>  COleMessageFilter::SetRetryReply  
  호출된 응용 프로그램에서 사용 중 응답을 받을 때 호출 응용 프로그램의 동작을 결정 합니다.  
   
 ```  
@@ -258,7 +253,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
 ### <a name="remarks"></a>설명  
  호출된 응용 프로그램을 사용 중입니다 나타내면, 호출 응용 프로그램 서버 사용량이 더 이상를 즉시 다시 시도 하거나 지정된 된 간격 후에 다시 시도 될 때까지 대기 하도록 결정할 수 없습니다. 호출을 모두 취소 하는 결정할 수도 있습니다.  
   
- 함수에 의해 제어 되는 호출자의 응답 `SetRetryReply` 및 [SetMessagePendingDelay](#setmessagependingdelay)합니다. `SetRetryReply`호출 응용 프로그램이 지정된 된 호출에 대 한 다시 시도 간에 대기 해야 기간을 결정 합니다. `SetMessagePendingDelay`호출 응용 프로그램 서버에서 응답에 대 한 추가 작업을 수행 하기 전에 대기 하는 기간을 결정 합니다.  
+ 함수에 의해 제어 되는 호출자의 응답 `SetRetryReply` 및 [SetMessagePendingDelay](#setmessagependingdelay)합니다. `SetRetryReply` 호출 응용 프로그램이 지정된 된 호출에 대 한 다시 시도 간에 대기 해야 기간을 결정 합니다. `SetMessagePendingDelay` 호출 응용 프로그램 서버에서 응답에 대 한 추가 작업을 수행 하기 전에 대기 하는 기간을 결정 합니다.  
   
  일반적으로 기본값은 허용 되 고 변경 될 필요가 없습니다. 프레임 워크에서 호출을 다시 시도 마다 `nRetryReply` 호출이 진행 되거나 만료 된 메시지 보류 중인 지연 될 때까지 시간 (밀리초)입니다. 값이 0에 대 한 `nRetryReply` 지정는 즉시 재시도 및-1 호출의 취소를 지정 합니다.  
   

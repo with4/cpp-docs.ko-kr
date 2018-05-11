@@ -1,13 +1,10 @@
 ---
-title: "C 문 개요 | Microsoft Docs"
-ms.custom: 
+title: C 문 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - statements, about statements
 - Visual C, statements
 ms.assetid: 0d49837a-5399-4881-b60c-af5f4e9720de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 473a91651e52d04dbeb15301520c6c8984808551
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a3cf80e6237b21101f737f496eb39688ec6ed0a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="overview-of-c-statements"></a>C 문 개요
 C 문은 토큰, 식 및 다른 문으로 구성되어 있습니다. 다른 문의 구성 요소를 형성하는 문을 바깥쪽 문의 "본문"이라고 합니다. 이 단원에서는 다음 구문에 지정된 각 문 형식에 대해 설명합니다.  

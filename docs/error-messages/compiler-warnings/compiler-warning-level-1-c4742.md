@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 1) C4742 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 1) C4742 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4742
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4742
 ms.assetid: e520881d-1eeb-48b1-9df0-8017ee8ba076
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da12d4d1e5e8b6f9be6c21601e04f08d1b269cec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9c5c891699e89b177f9a3c070a95f496e2c77ac
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4742"></a>컴파일러 경고(수준 1) C4742
 'var'에 'file1' 및 'file2'에서 서로 다른 맞춤: 번호와 번호  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
  자세한 내용은 참조 [팩](../../preprocessor/pack.md) 및 [__alignof 연산자](../../cpp/alignof-operator.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  형식을 정의 하는 첫 번째 파일입니다.  
   
 ```  
@@ -47,7 +42,7 @@ struct X {
 } global;  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C4742 오류가 발생 합니다.  
   
 ```  

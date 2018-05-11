@@ -1,30 +1,25 @@
 ---
-title: "개별 항목에 대 한 이미지 설정 | Microsoft Docs"
-ms.custom: 
+title: 개별 항목에 대 한 이미지 설정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - extended combo boxes [MFC], images
 - images [MFC], combo box items
 ms.assetid: bde83db8-23a7-4e35-837a-c86447d2c0af
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d9cb74c2290292f44b8c6c9b8797890e759f315
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b7f3dbdf4d386e40802d74459dd2854035b5b7c8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setting-the-images-for-an-individual-item"></a>개별 항목에 대한 이미지 설정
 여러 종류의 확장 된 콤보 상자 항목에서 사용 하는 이미지의 값에 의해 결정 됩니다는 `iImage`, **iSelectedImage**, 및 **iOverlay** 의 멤버는 [COMBOBOXEXITEM ](http://msdn.microsoft.com/library/windows/desktop/bb775746) 구조입니다. 각 값은 컨트롤의 연결 된 이미지 목록의 이미지의 인덱스입니다. 기본적으로 이러한 멤버는 항목에 대 한 이미지가 표시 하도록 컨트롤을 일으키는 0으로 설정 됩니다. 특정 항목에 대 한 이미지를 사용 하려는 경우 수정할 수 있습니다 구조 적절 하 게 콤보 상자 항목을 삽입할 때 또는 기존 콤보 상자 항목을 수정 하 여 합니다.  

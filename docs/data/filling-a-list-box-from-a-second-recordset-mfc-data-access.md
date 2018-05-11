@@ -1,13 +1,10 @@
 ---
-title: "두 번째 레코드 집합 (데이터 액세스)에서 목록 상자 채우기 | Microsoft Docs"
-ms.custom: 
+title: 두 번째 레코드 집합 (데이터 액세스)에서 목록 상자 채우기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - combo boxes [C++], filling from second recordset
 - CListCtrl class, filling from second recordset
 ms.assetid: 360c0834-da6b-4dc0-bcea-80e9acd611f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6e411ebcf40099a2236048dd8f151b438fe5b947
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed294527b4335459ab6d0658d9f57a5cb64a8fd1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>번째 레코드 집합에서 목록 상자 채우기  (MFC Data Access)
 기본적으로 레코드 뷰는 해당 필드가 레코드 뷰의 컨트롤로 매핑되는 단일 레코드 집합 개체와 연결됩니다. 레코드 뷰에 목록 상자 또는 콤보 상자 컨트롤을 삽입하고 두 번째 레코드 집합 개체의 값을 채우는 경우가 있습니다. 이때 사용자는 목록 상자를 사용하여 레코드 뷰에 표시할 새 정보 범주를 선택할 수 있습니다. 이 항목에서는 이러한 작업을 수행하는 방법과 시기에 대해 설명합니다.  

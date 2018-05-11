@@ -1,12 +1,9 @@
 ---
 title: ptr::Detach | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - ptr.Detach
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr::Detach
 ms.assetid: 23370c8a-8f79-4880-9fa1-46e110c1a92c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: bf50fa11677ea8d93ce557f94015030e8b16331e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24e5c71a20b3bffebd9cd25bf2795fd309491d11
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptrdetach"></a>ptr::Detach
 개체에 대 한 포인터를 반환 하는 COM 개체의 소유권을 제공 합니다.  
@@ -49,9 +44,9 @@ _interface_type * Detach();
  내부적으로 `QueryInterface` 소유한 COM 개체 및 모든 오류를 호출할 `HRESULT` 여 예외로 변환 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>합니다.  
   
 ## <a name="remarks"></a>설명  
- `Detach`먼저 호출자를 대신 하 여 COM 개체에 대 한 참조를 추가 하 고 다음가 소유 하는 모든 참조를 해제는 `com::ptr`합니다.  호출자에 게 반환된 된 개체를 소멸 시킵니다 해제 궁극적으로 해야 합니다.  
+ `Detach` 먼저 호출자를 대신 하 여 COM 개체에 대 한 참조를 추가 하 고 다음가 소유 하는 모든 참조를 해제는 `com::ptr`합니다.  호출자에 게 반환된 된 개체를 소멸 시킵니다 해제 궁극적으로 해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다.  `DetachDocument` 멤버 함수 호출 `Detach` COM 개체의 소유권을 호출자에 대 한 포인터를 반환 합니다.  
   
 ```  

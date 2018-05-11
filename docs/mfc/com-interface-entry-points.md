@@ -1,13 +1,10 @@
 ---
-title: "COM 인터페이스 진입점 | Microsoft Docs"
-ms.custom: 
+title: COM 인터페이스 진입점 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,22 +15,20 @@ helpviewer_keywords:
 - MFC, managing state data
 - COM interfaces, entry points
 ms.assetid: 9e7421dc-0731-4748-9e1b-90acbaf26d77
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 010df3546a6ac2b6276281c39efdd76abd5ec222
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 02aa70706df65318f2fbfd8103dff04a47ae2155
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="com-interface-entry-points"></a>COM 인터페이스 진입점
 COM 인터페이스의 멤버 함수를 사용 하 여는 [METHOD_PROLOGUE](com-interface-entry-points.md#method_prologue) 내보낸된 인터페이스의 메서드를 호출할 때 적절 한 글로벌 상태를 유지 하는 매크로입니다.  
   
- 인터페이스의 멤버 함수에서 일반적으로 구현 `CCmdTarget`-파생된 개체 이미 사용 하 여이 매크로의 자동 초기화를 제공는 `pThis` 포인터입니다. 예:  
+ 인터페이스의 멤버 함수에서 일반적으로 구현 `CCmdTarget`-파생된 개체 이미 사용 하 여이 매크로의 자동 초기화를 제공는 `pThis` 포인터입니다. 예를 들어:  
   
  [!code-cpp[NVC_MFCConnectionPoints#5](../mfc/codesnippet/cpp/com-interface-entry-points_1.cpp)]  
   

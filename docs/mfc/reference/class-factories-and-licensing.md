@@ -1,13 +1,10 @@
 ---
-title: "클래스 팩터리 및 라이선스 | Microsoft Docs"
-ms.custom: 
+title: 클래스 팩터리 및 라이선스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79710cb1fa67ec8315fe287364126f88b4b498d7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b311d81e5e9becab2bf0ab88d30321019e5da95d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="class-factories-and-licensing"></a>클래스 팩터리 및 라이선스
 OLE 컨트롤의 인스턴스를 만들려면 컨테이너 응용 프로그램의 컨트롤의 클래스 팩터리 멤버 함수를 호출 합니다. 컨트롤은 실제 OLE 개체, 클래스 팩터리는 컨트롤의 인스턴스를 만들기 위한 해야 합니다. 모든 OLE 컨트롤 클래스는 클래스 팩터리를 가져야 합니다.  
@@ -44,7 +39,7 @@ OLE 컨트롤의 인스턴스를 만들려면 컨테이너 응용 프로그램�
 |[END_OLEFACTORY](#end_olefactory)|모든 라이선스 함수의 선언을 종료 됩니다.|  
 |[AfxVerifyLicFile](#afxverifylicfile)|컨트롤이 특정 컴퓨터에서 사용 하도록 허가 되어 있는지 여부를 확인 합니다.|  
   
-##  <a name="declare_olecreate_ex"></a>DECLARE_OLECREATE_EX  
+##  <a name="declare_olecreate_ex"></a>  DECLARE_OLECREATE_EX  
  클래스 팩터리를 선언 및 `GetClassID` 컨트롤 클래스의 멤버 함수입니다.  
   
 ```   
@@ -65,7 +60,7 @@ DECLARE_OLECREATE_EX(class_name)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxctl.h  
   
-##  <a name="implement_olecreate_ex"></a>IMPLEMENT_OLECREATE_EX  
+##  <a name="implement_olecreate_ex"></a>  IMPLEMENT_OLECREATE_EX  
  컨트롤의 클래스 팩터리를 구현 하 고 [GetClassID](../../mfc/reference/colecontrol-class.md#getclassid) 컨트롤 클래스의 멤버 함수입니다.  
   
 ```   
@@ -101,7 +96,7 @@ IMPLEMENT_OLECREATE_EX(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxctl.h  
   
-##  <a name="begin_olefactory"></a>BEGIN_OLEFACTORY  
+##  <a name="begin_olefactory"></a>  BEGIN_OLEFACTORY  
  컨트롤 클래스의 헤더 파일에서 클래스 팩터리의 선언을 시작합니다.  
   
 ``` 
@@ -118,7 +113,7 @@ BEGIN_OLEFACTORY(class_name)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxctl.h  
   
-##  <a name="end_olefactory"></a>END_OLEFACTORY  
+##  <a name="end_olefactory"></a>  END_OLEFACTORY  
  컨트롤의 클래스 팩터리의 선언을 종료합니다.  
   
 ```  
@@ -132,7 +127,7 @@ END_OLEFACTORY(class_name)
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxctl.h  
   
-##  <a name="afxverifylicfile"></a>AfxVerifyLicFile  
+##  <a name="afxverifylicfile"></a>  AfxVerifyLicFile  
  이 함수를 확인 하 여 라이선스 파일 라는 호출 `pszLicFileName` OLE 컨트롤에 대 한 유효 합니다.  
   
 ```   

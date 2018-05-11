@@ -1,12 +1,9 @@
 ---
 title: 'hash_set:: clear (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_set::clear
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - clear member [STL/CLR]
 ms.assetid: 9f38b72a-5db8-485a-b41a-7d47ac57f4a9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 900b3562ff0663308bbc580a9fd0ffd3715d9abd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d1280dd73c5175f670003d8f06d520bcb0657eb9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashsetclear-stlclr"></a>hash_set::clear(STL/CLR)
 모든 요소를 제거합니다.  
@@ -40,7 +35,7 @@ void clear();
 ## <a name="remarks"></a>설명  
  멤버 함수 시그니처 [hash_set:: erase (STL/CLR)](../dotnet/hash-set-erase-stl-clr.md) `(` [hash_set:: begin (STL/CLR)](../dotnet/hash-set-begin-stl-clr.md) `(),` [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md) `())`. 제어 되는 시퀀스 비어 있는지 확인 하려면 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_set_clear.cpp   

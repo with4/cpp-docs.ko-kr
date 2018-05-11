@@ -1,12 +1,9 @@
 ---
-title: "CD2DPathGeometry 클래스 | Microsoft Docs"
-ms.custom: 
+title: CD2DPathGeometry 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DPathGeometry
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CD2DPathGeometry [MFC], Stream
 - CD2DPathGeometry [MFC], m_pPathGeometry
 ms.assetid: 686216eb-5080-4242-ace5-8fa1ce96307c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9142b268c5f09a88883d048c35287966d9ef8aab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a3afe8efa5730c3ef0f4448b1c548724b56b7cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dpathgeometry-class"></a>CD2DPathGeometry 클래스
 ID2D1PathGeometry에 대 한 래퍼입니다.  
@@ -79,7 +74,7 @@ class CD2DPathGeometry : public CD2DGeometry;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[CD2DPathGeometry::m_pPathGeometry](#m_ppathgeometry)|ID2D1PathGeometry에 대 한 포인터입니다.|  
   
@@ -95,7 +90,7 @@ class CD2DPathGeometry : public CD2DGeometry;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxrendertarget.h  
   
-##  <a name="attach"></a>CD2DPathGeometry::Attach  
+##  <a name="attach"></a>  CD2DPathGeometry::Attach  
  기존 개체에 대 한 리소스 인터페이스를 연결.  
   
 ```  
@@ -106,7 +101,7 @@ void Attach(ID2D1PathGeometry* pResource);
  `pResource`  
  기존 리소스 인터페이스입니다. NULL 일 수 없습니다.  
   
-##  <a name="cd2dpathgeometry"></a>CD2DPathGeometry::CD2DPathGeometry  
+##  <a name="cd2dpathgeometry"></a>  CD2DPathGeometry::CD2DPathGeometry  
  CD2DPathGeometry 개체를 만듭니다.  
   
 ```  
@@ -122,7 +117,7 @@ CD2DPathGeometry(
  `bAutoDestroy`  
  개체를 소유자 (pParentTarget)에 의해 폐기 수를 나타냅니다.  
   
-##  <a name="create"></a>CD2DPathGeometry::Create  
+##  <a name="create"></a>  CD2DPathGeometry::Create  
  CD2DPathGeometry를 만듭니다.  
   
 ```  
@@ -136,14 +131,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK를 반환 합니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.  
   
-##  <a name="destroy"></a>CD2DPathGeometry::Destroy  
+##  <a name="destroy"></a>  CD2DPathGeometry::Destroy  
  CD2DPathGeometry 개체를 소멸 시킵니다.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DPathGeometry::Detach  
+##  <a name="detach"></a>  CD2DPathGeometry::Detach  
  개체에서 리소스 인터페이스를 분리합니다.  
   
 ```  
@@ -153,7 +148,7 @@ ID2D1PathGeometry* Detach();
 ### <a name="return-value"></a>반환 값  
  분리 된 리소스 인터페이스 포인터입니다.  
   
-##  <a name="getfigurecount"></a>CD2DPathGeometry::GetFigureCount  
+##  <a name="getfigurecount"></a>  CD2DPathGeometry::GetFigureCount  
  Pathgeometry에 숫자 값의 수를 검색 합니다.  
   
 ```  
@@ -163,7 +158,7 @@ int GetFigureCount() const;
 ### <a name="return-value"></a>반환 값  
  Pathgeometry에 숫자 값의 수를 반환합니다.  
   
-##  <a name="getsegmentcount"></a>CD2DPathGeometry::GetSegmentCount  
+##  <a name="getsegmentcount"></a>  CD2DPathGeometry::GetSegmentCount  
  Pathgeometry에 세그먼트의 수를 검색합니다.  
   
 ```  
@@ -173,14 +168,14 @@ int GetSegmentCount() const;
 ### <a name="return-value"></a>반환 값  
  Pathgeometry에 세그먼트의 수를 반환합니다.  
   
-##  <a name="m_ppathgeometry"></a>CD2DPathGeometry::m_pPathGeometry  
+##  <a name="m_ppathgeometry"></a>  CD2DPathGeometry::m_pPathGeometry  
  ID2D1PathGeometry에 대 한 포인터입니다.  
   
 ```  
 ID2D1PathGeometry* m_pPathGeometry;  
 ```  
   
-##  <a name="open"></a>CD2DPathGeometry::Open  
+##  <a name="open"></a>  CD2DPathGeometry::Open  
  숫자 값 및 세그먼트 pathgeometry를 채우는 데 사용 되는 기 하 도형 싱크를 검색 합니다.  
   
 ```  
@@ -190,7 +185,7 @@ ID2D1GeometrySink* Open();
 ### <a name="return-value"></a>반환 값  
  숫자 값 및 세그먼트 pathgeometry를 채우는 데 사용 되는 ID2D1GeometrySink에 대 한 포인터입니다.  
   
-##  <a name="stream"></a>CD2DPathGeometry::Stream  
+##  <a name="stream"></a>  CD2DPathGeometry::Stream  
  지정 된 ID2D1GeometrySink pathgeometry의 내용을 복사합니다.  
   
 ```  

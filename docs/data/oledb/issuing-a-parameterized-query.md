@@ -1,30 +1,25 @@
 ---
-title: "매개 변수가 있는 쿼리를 실행 | Microsoft Docs"
-ms.custom: 
+title: 매개 변수가 있는 쿼리를 실행 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 12363baa4fed5326a4c5c8a84b80eef6e4158d40
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b377df31e9166ee5288d37b0843944a3b2eb6bc7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="issuing-a-parameterized-query"></a>매개 변수가 있는 쿼리 실행
 다음 예제에서는 Microsoft Access 데이터베이스의 테이블에서 레코드 (즉, 30 보다 큰) 나이 필드를 검색 하는 단순 매개 변수가 있는 쿼리를 발급 합니다. 매개 변수를 지원 하려면 사용자 레코드에 추가 맵이 있어야 합니다. 다음 코드는 ATL 프로젝트에서 사용 된 `CCommand` 클래스 대신는 `CTable` 앞의 예에서 사용 되는 클래스 [단순 행 집합 검색](../../data/oledb/traversing-a-simple-rowset.md)합니다.  

@@ -1,13 +1,10 @@
 ---
-title: "대화 상자에 컨트롤 배치 | Microsoft Docs"
-ms.custom: 
+title: 대화 상자에 컨트롤 배치 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - dialog box controls, placement
 - Dialog editor, arranging controls
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 600a4fcf49328c4cfd2bd31e8c36b02cacd9609c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a449fef82b536cdea484a49a52fece86fac21604
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes"></a>대화 상자에 컨트롤 배치
 대화 상자 편집기 맞춤 고 컨트롤을 자동으로 크기를 조정 하는 레이아웃 도구를 제공 합니다. 대부분의 작업에 사용할 수 있습니다는 [대화 상자 편집기 도구 모음](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)합니다. 모든 대화 상자 편집기 도구 모음 명령 서식 메뉴에서 사용 가능 하며 대부분 [바로 가기 키](../windows/accelerator-keys-for-the-dialog-editor.md)합니다.  

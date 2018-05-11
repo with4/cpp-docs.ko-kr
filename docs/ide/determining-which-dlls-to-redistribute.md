@@ -1,13 +1,10 @@
 ---
-title: "재배포할 Dll 확인 | Microsoft Docs"
-ms.custom: 
+title: 재배포할 Dll 확인 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/13/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6f942b01dd9379aea0c0ea2ab3751a6f140ef2a
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: b3ca079fc69fe10f15a55812eaa55d4ba2d2ab04
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>재배포할 DLL 확인
 
@@ -53,17 +48,17 @@ Visual Studio에 포함된 모든 파일을 다시 배포할 수는 없습니다
 
 |Visual C++ 라이브러리|설명|적용 대상|
 |--------------------------|-----------------|----------------|
-|vcruntime*version*.dll|네이티브 코드에 대 한 런타임 라이브러리입니다.|일반 C 및 c + + 언어 startup 및 termination 서비스를 사용 하는 응용 프로그램입니다.|
+|vcruntime*버전*.dll|네이티브 코드에 대 한 런타임 라이브러리입니다.|일반 C 및 c + + 언어 startup 및 termination 서비스를 사용 하는 응용 프로그램입니다.|
 |vccorlib*version*.dll|관리 코드에 대 한 런타임 라이브러리입니다.|관리 코드에 대 한 c + + 언어 서비스를 사용 하는 응용 프로그램입니다.|
 |msvcp*버전*.dll 및 msvcp*버전*_*dotnumber*.dll|네이티브 코드에 대 한 c + + 표준 라이브러리|사용 하는 응용 프로그램의 [c + + 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)합니다.|
 |concrt*version*.dll|네이티브 코드에 대 한 동시성 런타임 라이브러리입니다.|사용 하는 응용 프로그램의 [동시성 런타임](../parallel/concrt/concurrency-runtime.md)합니다.|
 |mfc*version*.dll|MFC(Microsoft Foundation Class) 라이브러리|사용 하는 응용 프로그램의 [MFC 라이브러리](../mfc/mfc-desktop-applications.md)합니다.|
-|mfc*version* *language*.dll|Microsoft Foundation Class 라이브러리 리소스 (MFC).|MFC에 대 한 특정 언어 리소스를 사용 하는 응용 프로그램입니다.|
+|mfc*버전* *언어*.dll|Microsoft Foundation Class 라이브러리 리소스 (MFC).|MFC에 대 한 특정 언어 리소스를 사용 하는 응용 프로그램입니다.|
 |mfc*version*u.dll|유니코드를 지원하는 MFC 라이브러리|사용 하는 응용 프로그램의 [MFC 라이브러리](../mfc/mfc-desktop-applications.md) 및 유니코드를 지원 해야 합니다.|
 |mfcmifc80.dll|MFC 관리되는 인터페이스 라이브러리|사용 하는 응용 프로그램의 [MFC 라이브러리](../mfc/mfc-desktop-applications.md) 와 [Windows Forms 컨트롤](/dotnet/framework/winforms/controls/index)합니다.|
 |mfcm*version*.dll|MFC 관리되는 라이브러리|사용 하는 응용 프로그램의 [MFC 라이브러리](../mfc/mfc-desktop-applications.md) 와 [Windows Forms 컨트롤](/dotnet/framework/winforms/controls/index)합니다.|
 |mfcm*version*u.dll|유니코드를 지원하는 MFC 관리되는 라이브러리|사용 하는 응용 프로그램의 [MFC 라이브러리](../mfc/mfc-desktop-applications.md) 와 [Windows Forms 컨트롤](/dotnet/framework/winforms/controls/index) 및 유니코드를 지원 해야 합니다.|
-|vcamp*version*.dll|네이티브 코드에 대 한 AMP 라이브러리입니다.|사용 하는 응용 프로그램의 [c + + AMP 라이브러리](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md) 코드입니다.|
+|vcamp*버전*.dll|네이티브 코드에 대 한 AMP 라이브러리입니다.|사용 하는 응용 프로그램의 [c + + AMP 라이브러리](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md) 코드입니다.|
 |vcomp*version*.dll|네이티브 코드에 대 한 OpenMP 라이브러리입니다.|사용 하는 응용 프로그램의 [c + +의 OpenMP 라이브러리](../parallel/openmp/openmp-in-visual-cpp.md) 코드입니다.|
 
 > [!NOTE]

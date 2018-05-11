@@ -1,13 +1,10 @@
 ---
-title: "빌드 사용자 지정 문제 해결 | Microsoft Docs"
-ms.custom: 
+title: 빌드 사용자 지정 문제 해결 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - builds [C++], troubleshooting
 - custom build steps [C++], troubleshooting
 ms.assetid: e4ceb177-fbee-4ed3-a7d7-80f0d78c1d07
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fa3b2d3910a71d189f5177e13fbd91930e15ee8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d48e9f7bdcbf422a25fb0bdb40411e6c662fadc2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="troubleshooting-build-customizations"></a>빌드 사용자 지정 문제 해결
 사용자 지정 빌드 단계 또는 이벤트에는 예상 대로 작동 하지 않으면 경우 무엇이 문제 입니까 이해 하려고 할 수 있는 몇 가지 사항이 있습니다.  

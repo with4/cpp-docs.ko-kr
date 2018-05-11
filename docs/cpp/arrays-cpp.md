@@ -1,12 +1,9 @@
 ---
-title: "배열 (c + +) | Microsoft Docs"
-ms.custom: 
+title: 배열 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b23727d7f6f5e8adcc220d57907a1d61f430bde3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0fe8e5f53d05ac159fd577b260268f297b59d146
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="arrays-c"></a>배열 (C++)
 배열은 서로 유사한 개체의 컬렉션입니다. 가장 간단한 배열은 다음과 같은 시퀀스로 선언될 수 있는 벡터입니다.  
@@ -57,7 +52,7 @@ decl-specifier identifier [ constant-expression ]
   
  3. 선택적 이니셜라이저입니다.  참조 [이니셜라이저](../cpp/initializers.md)합니다.  
   
- 배열의 요소 수는 상수 식으로 지정됩니다. 배열의 첫 번째 요소는 0 번째 요소가 고 마지막 요소는는 (*n*-1) 요소를 여기서  *n*  수의 요소를 배열에 포함 될 수 있습니다. *문* 정수 계열 형식 이어야 하며 0 보다 커야 합니다. 크기가 0 인 배열이 배열에서 마지막 필드가 경우에 법적는 `struct` 또는 **union** 있고 Microsoft 확장명 (/Ze)을 사용 합니다.  
+ 배열의 요소 수는 상수 식으로 지정됩니다. 배열의 첫 번째 요소는 0 번째 요소가 고 마지막 요소는는 (*n*-1) 요소를 여기서 *n* 수의 요소를 배열에 포함 될 수 있습니다. *문* 정수 계열 형식 이어야 하며 0 보다 커야 합니다. 크기가 0 인 배열이 배열에서 마지막 필드가 경우에 법적는 `struct` 또는 **union** 있고 Microsoft 확장명 (/Ze)을 사용 합니다.  
   
  다음 예제에서는 런타임에 배열을 정의하는 방법을 보여 줍니다.  
   
@@ -92,10 +87,10 @@ int i2[5][7];
   
  이는 다음 그림과 같이 5개의 행과 7개의 열로 된 2차원 행렬에 개념적으로 정렬된 `int` 형식의 배열을 지정합니다.  
   
- ![다중 &#45;개념적 레이아웃; 차원 배열](../cpp/media/vc38rc1.gif "vc38RC1")  
+ ![다중의 개념적 레이아웃&#45;차원 배열](../cpp/media/vc38rc1.gif "vc38RC1")  
 다차원 배열의 개념적 레이아웃  
   
- 이니셜라이저 목록이 있는 다차원 배열의 선언에서 (에 설명 된 대로 [이니셜라이저](../cpp/initializers.md)), 첫 번째 차원에 대 한 범위를 지정 하는 상수 식을 생략할 수 있습니다. 예:  
+ 이니셜라이저 목록이 있는 다차원 배열의 선언에서 (에 설명 된 대로 [이니셜라이저](../cpp/initializers.md)), 첫 번째 차원에 대 한 범위를 지정 하는 상수 식을 생략할 수 있습니다. 예를 들어:  
   
 ```  
 // arrays2.cpp  
@@ -123,7 +118,7 @@ double TransportCosts[][cMarkets] = {
   
 -   [C++ 배열 순서 지정](../cpp/ordering-of-cpp-arrays.md)  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다차원 배열의 첫 번째 차원에 대한 범위 지정을 생략하는 기술은 함수 선언에 다음과 같이 사용할 수도 있습니다.  
   
 ```  

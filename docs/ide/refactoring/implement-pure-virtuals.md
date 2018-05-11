@@ -1,24 +1,20 @@
 ---
-title: "순수 가상 구현 | Microsoft Docs"
-ms.custom: 
+title: 순수 가상 구현 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/16/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ea9b4719-34a3-474a-b4ec-05b1859f80f1
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f311c2e5832754bfd785084b9aa930b5dbe43845
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: afce516f2718a76658846ed4f992aeabff75330b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implement-pure-virtuals"></a>순수 가상 구현
 **:** 즉시 클래스에서 모든 순수 가상 메서드를 구현 하는 데 필요한 코드를 생성할 수 있습니다. 
@@ -35,7 +31,7 @@ ms.lasthandoff: 03/16/2018
 
 1. 다음 작업 중 하나를 수행합니다.
    * **키보드**
-     * **Ctrl+.**를 눌러 트리거에 **빠른 작업 및 리팩터링** 메뉴와 선택 **클래스의 모든 순수 가상 구현*ClassName*'** 상황에 맞는 메뉴에서 여기서  *ClassName* 선택한 클래스의 이름입니다.
+     * **Ctrl+.** 를 눌러 트리거에 **빠른 작업 및 리팩터링** 메뉴와 선택 **클래스의 모든 순수 가상 구현*ClassName*'** 상황에 맞는 메뉴에서 여기서  *ClassName* 선택한 클래스의 이름입니다.
    * **마우스**
      * 마우스 오른쪽 단추로 클릭 하 고 선택 된 **빠른 작업 및 리팩터링** 메뉴를 선택 **클래스의 모든 순수 가상 구현*ClassName*'** 상황에 맞는 메뉴에서 위치  *ClassName* 선택한 클래스의 이름입니다.
 

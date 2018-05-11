@@ -1,27 +1,22 @@
 ---
-title: "Accelerator 및 accelerator_view 개체를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: Accelerator 및 accelerator_view 개체를 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-amp
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cc676407a88979679a362b3d36f361614524432
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 9e0f86467de8256eaecbfbf42765de551a1e2f6e
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>accelerator 및 accelerator_view 개체 사용
 사용할 수는 [가속기](../../parallel/amp/reference/accelerator-class.md) 및 [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) 장치 또는 에뮬레이터에서 c + + AMP 코드를 실행할 지정 하는 클래스입니다. 여러 장치 또는 에뮬레이터 크기 메모리, 공유 메모리 지원을, 디버깅 지원 또는 이중 정밀도 지원의 차이로 인해를 시스템에 있을 수 있습니다. C + + Accelerated Massive Parallelism (c + + AMP) 사용할 수 있는 액셀러레이터를 검사, 기본으로 설정 하 고, 여러 텍스처가 액셀러레이터 보기에 대 한 여러 호출 parallel_for_each, 지정 하 고 특수 디버깅 작업을 수행 하는 데 사용할 수 있는 Api를 제공 합니다.  

@@ -1,13 +1,10 @@
 ---
-title: "웹 브라우저 스타일 MFC 응용 프로그램 만들기 | Microsoft Docs"
-ms.custom: 
+title: 웹 브라우저 스타일 MFC 응용 프로그램 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcweb.project
 dev_langs:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7b886f2f1eeed327c2f07f1776777771a5d6ad6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 20c7228b08200466bd62d1cdbbf7e2f66f8efebb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>웹 브라우저 스타일 MFC 응용 프로그램 만들기
 네트워크와 로컬 파일 시스템에는 웹 브라우저 스타일 응용 프로그램 폴더 뿐 아니라 (예: HTML 또는 활성 문서) 인터넷 또는 인트라넷에서 정보에 액세스할 수 있습니다. 응용 프로그램의 뷰 클래스를 파생 하 여 [CHtmlView](../../mfc/reference/chtmlview-class.md), 효과적으로 뷰에 WebBrowser 컨트롤이 제공 하 여 응용 프로그램 웹 브라우저 확인 합니다.  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
  때문에 `CHtmlView` 인쇄 다른 유사 하지 않음 하기 위한 지원을 Microsoft 웹 브라우저 컨트롤을 구현 하기만 하면 [CView](../../mfc/reference/cview-class.md)-파생 된 클래스입니다. 대신, 프린터 사용자 인터페이스 및 인쇄 WebBrowser 컨트롤을 구현합니다. 결과적으로, `CHtmlView` 않습니다 인쇄 미리 보기, 지원 하지 않으며 기타 인쇄 지원 기능에 대 한 프레임 워크를 제공 하지 않습니다: 예를 들어 [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting), [CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting), 및 [CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting), 다른 MFC 응용 프로그램에서 사용할 수 있습니다.  
   
- `CHtmlView`응용 프로그램 웹 또는 HTML 페이지는 뷰를 제공 하는 웹 브라우저 컨트롤에 대 한 래퍼 역할을 합니다. 마법사에서는 재정의를 만듭니다.는 [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) Microsoft Visual c + + 웹 사이트를 탐색 링크를 제공 하는 뷰 클래스의 함수:  
+ `CHtmlView` 응용 프로그램 웹 또는 HTML 페이지는 뷰를 제공 하는 웹 브라우저 컨트롤에 대 한 래퍼 역할을 합니다. 마법사에서는 재정의를 만듭니다.는 [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) Microsoft Visual c + + 웹 사이트를 탐색 링크를 제공 하는 뷰 클래스의 함수:  
   
 ```  
 void CWebView::OnInitialUpdate()  
@@ -67,7 +62,7 @@ void CWebView::OnInitialUpdate()
 } 
 ```  
   
- 직접 중 하 나와이 사이트를 교체 하거나, 사용할 수 있습니다는 [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource) 멤버 함수는 보기에 대 한 기본 내용으로 프로젝트의 리소스 스크립트에 있는 HTML 페이지를 엽니다. 예:  
+ 직접 중 하 나와이 사이트를 교체 하거나, 사용할 수 있습니다는 [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource) 멤버 함수는 보기에 대 한 기본 내용으로 프로젝트의 리소스 스크립트에 있는 HTML 페이지를 엽니다. 예를 들어:  
   
 ```  
 void CWebView::OnInitialUpdate()  

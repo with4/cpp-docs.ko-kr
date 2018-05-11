@@ -1,13 +1,10 @@
 ---
-title: "-/ / 작업 주석 | Microsoft Docs"
-ms.custom: 
+title: -/ / 작업 주석 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - comments, MFC
 - MFC source files, Operations comments
 ms.assetid: f3bff48d-26be-4db6-8435-9e4d079838c9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53d2470e0be0ca314da8486d74d8fc618e134c35
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ee6bf4a330a5fdf1ac294157e69dab39b5f2bdd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="-operations-comment"></a>// 작업 주석
 `// Operations` MFC 클래스 선언의 섹션 멤버 함수가 포함 된 작업을 수행 하거나 (작업을 수행 합니다.) 작업을 수행 하기 위해 개체에서 호출할 수 있습니다. 이러한 함수는 일반적으로 비-**const** 부작용을 일반적으로 했기 때문에 있습니다. 가상 또는 클래스의 필요에 따라 비가상 수 있습니다. 일반적으로 이러한 멤버는 public입니다.  

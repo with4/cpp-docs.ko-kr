@@ -1,10 +1,10 @@
 ---
-title: "혼합형된 어셈블리 초기화 | Microsoft Docs"
-ms.custom: 
+title: 혼합형된 어셈블리 초기화 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/09/2018
 ms.technology:
-- cpp-windows
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,15 +18,14 @@ helpviewer_keywords:
 ms.assetid: bfab7d9e-f323-4404-bcb8-712b15f831eb
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c4d569987c20a962b0cecf22cd6888b22c920fb5
-ms.sourcegitcommit: eb246547c7c9adc7d7ac4083ef09bf6e54dec914
+ms.openlocfilehash: 389246b6b002204260170fb44680c2756cd7aa6b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="initialization-of-mixed-assemblies"></a>혼합형 어셈블리 초기화
 
@@ -163,7 +162,7 @@ MSIL 함수를 호출할 때 CLR에서 진단이 생성되면 CLR 실행이 일�
 
    이 작업은 다음 두 가지 방법으로 수행할 수 있습니다. 첫 번째 방법으로 mscoree.dll 및 mscorwks.dll에 대한 PDB를 기호 검색 경로에 추가할 수 있습니다. 이렇게 하려면 기호 검색 경로 옵션 대화 상자를 열어야 합니다. (에서 **도구** 메뉴 선택 **옵션**합니다. 왼쪽된 창에는 **옵션** 열기 대화 상자는 **디버깅** 노드 선택 **기호**.) mscoree.dll 및 mscorwks.dll PDB 파일의 경로를 검색 목록에 추가합니다. 이러한 PDB는 %VSINSTALLDIR%\SDK\v2.0\symbols에 설치됩니다. **확인**을 선택합니다.
 
-   두 번째 방법으로 mscoree.dll 및 mscorwks.dll에 대한 PDB를 Microsoft 기호 서버에서 다운로드할 수 있습니다. 기호 서버를 구성하려면 기호 검색 경로 옵션 대화 상자를 엽니다. (에서 **도구** 메뉴 선택 **옵션**합니다. 왼쪽된 창에는 **옵션** 열기 대화 상자는 **디버깅** 노드 선택 **기호**.) 검색 목록에 http://msdl.microsoft.com/download/symbols 검색 경로를 추가합니다. 기호 서버 캐시 텍스트 상자에 기호 캐시 디렉터리를 추가한 다음 **확인**을 선택합니다.
+   두 번째 방법으로 mscoree.dll 및 mscorwks.dll에 대한 PDB를 Microsoft 기호 서버에서 다운로드할 수 있습니다. 기호 서버를 구성하려면 기호 검색 경로 옵션 대화 상자를 엽니다. (에서 **도구** 메뉴 선택 **옵션**합니다. 왼쪽된 창에는 **옵션** 열기 대화 상자는 **디버깅** 노드 선택 **기호**.) 검색 경로를 검색 목록에 추가: http://msdl.microsoft.com/download/symbols합니다. 기호 서버 캐시 텍스트 상자에 기호 캐시 디렉터리를 추가한 다음 **확인**을 선택합니다.
 
 1. 디버거 모드를 네이티브 전용 모드로 설정합니다.
 
@@ -185,7 +184,7 @@ MSIL 함수를 호출할 때 CLR에서 진단이 생성되면 CLR 실행이 일�
 
 1. 소스 파일을 이동한 다음 시나리오와 시나리오 섹션에 설명 된 솔루션을 사용 하 여 문제가 있는 줄 번호는 이전 단계에서 식별 하 고 정확한 합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ### <a name="description"></a>설명
 
@@ -249,6 +248,6 @@ Module ctor initializing based on global instance of class.
 Test called so linker does not throw away unused object.
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [혼합형(네이티브 및 관리) 어셈블리](../dotnet/mixed-native-and-managed-assemblies.md)

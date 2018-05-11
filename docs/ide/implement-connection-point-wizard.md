@@ -1,13 +1,10 @@
 ---
-title: "연결 지점 구현 마법사 | Microsoft Docs"
-ms.custom: 
+title: 연결 지점 구현 마법사 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.impl.cp.overview
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Implement Connection Point Wizard [C++]
 ms.assetid: c117f6c6-30f0-4adb-82b4-b1f34e0f0fa8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f29b4f25d937c2f538373ff85819f7315150e712
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ef2f7efa92de3714170e403ea50b5f486c8367d6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implement-connection-point-wizard"></a>연결 지점 구현 마법사
 이 마법사는 COM 개체에 대 한 연결 지점을 구현합니다. 연결 가능 개체 (즉, 원본) 한 연결 지점을 자체 인터페이스에 대 한 모든 보내기 인터페이스를 노출할 수 있습니다. Visual c + +와 Windows 모두 나가는 인터페이스가 있는 형식 라이브러리를 제공 합니다. 클라이언트에서는 개체 (싱크)에 대해 각 송신 인터페이스를 구현할 수 있습니다.  

@@ -1,13 +1,10 @@
 ---
-title: "레이아웃 모눈 수정 | Microsoft Docs"
-ms.custom: 
+title: 레이아웃 모눈 수정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - layout grid in Dialog Editor
 - grids, changing size
 ms.assetid: ec31f595-7542-485b-806f-efbaeccc1b3d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 21cfecebe141ea99ff7d0160e74446475efe4df5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f73b1b2e2982d02fae1de67d4e5e2947f728f02
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="modifying-the-layout-grid"></a>레이아웃 모눈 수정
 배치 하거나 대화 상자에서 컨트롤 정렬 하는 경우 보다 정확 하 게 배치 하기 위한 레이아웃 모눈을 사용할 수 있습니다. 표의 상태에서 컨트롤 "에 맞춰서" 눈금의 점선은 자석 마치 나타납니다. 이 "모눈에 맞춤" 기능을 켜고 끄는 하 고 레이아웃 표 형태 셀의 크기를 변경할 수 있습니다.  

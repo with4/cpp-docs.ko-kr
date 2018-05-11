@@ -1,30 +1,25 @@
 ---
-title: "연습: 이미지 처리 네트워크 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: 이미지 처리 네트워크 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b709179cb5bc0fefa3f342374c792656fa1e934
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e66de10879596b0e0877eb70f5ac95e082b8ae31
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>연습: 이미지 처리 네트워크 만들기
 이 문서에는 이미지 처리를 수행 하는 비동기 메시지 블록의 네트워크를 만드는 방법을 보여 줍니다.  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
   
  데이터 흐름에 따라 네트워크를 만듭니다는 *파이프라인* 작업 합니다. 파이프라인의 각 단계는 동시에 전체 작업의 일부를 수행합니다. 이는 자동차 제조 조립 라인에 비유될 수 있습니다. 각 자동차가 조립 라인을 통과할 때 한 스테이션은 프레임을 조립 다른 엔진 및 등을 설치 합니다. 여러 대의 자동차를 동시에 조립할 수를 사용 하 여 조립 라인 한 번에 자동차 전체를 조립 보다 처리량이 향상을 제공 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 시작 하기 전에 다음 문서를 읽어 보십시오.  
   
 -   [비동기 메시지 블록](../../parallel/concrt/asynchronous-message-blocks.md)  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [전체 예제](#complete)  
   
-##  <a name="functionality"></a>이미지 처리 기능을 정의 합니다.  
+##  <a name="functionality"></a> 이미지 처리 기능을 정의 합니다.  
  이 섹션에서는 이미지 처리 네트워크를 사용 하 여 디스크에서 읽은 이미지 작업 지원 기능을 보여 줍니다.  
   
  다음 함수를 `GetRGB` 및 `MakeColor`를 추출 하 고 지정된 된 색의 개별 구성 요소를 각각 결합 합니다.  
@@ -80,7 +75,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="network"></a>이미지 처리 네트워크 만들기  
+##  <a name="network"></a> 이미지 처리 네트워크 만들기  
  이 섹션에서 이미지 처리를 수행 하는 비동기 메시지 블록의 네트워크를 만드는 방법에 설명 모든 [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] 주어진된 디렉터리에서 (.jpg) 이미지입니다. 네트워크는 다음 이미지 처리 작업을 수행합니다.  
   
 1.  Tom 제작 이미지를 회색조를 변환 합니다.  
@@ -135,7 +130,7 @@ ms.lasthandoff: 12/21/2017
 |`colormask`|A `transformer` 주요 색으로 빨강을 포함 하는 이미지에서 녹색 및 파란색 구성 요소를 제거 하는 개체입니다.|  
 |`darken`|A `transformer` 개체 어둡게 주요 색으로 빨강을 포함 하는 이미지입니다.|  
 |`sepiatone`|A `transformer` 세피아 톤 Tom 작성 하지 않고 없고 주로 빨간색 되지 않은 이미지에 적용 되는 개체입니다.|  
-|`save_bitmap`|A `transformer` 저장 하는 처리 된 개체 `image` 비트맵으로 디스크에 있습니다. `save_bitmap`원래 파일 이름을 검색 하는 `map` 개체,.bmp 파일 이름 확장명 코드 변경 내용입니다.|  
+|`save_bitmap`|A `transformer` 저장 하는 처리 된 개체 `image` 비트맵으로 디스크에 있습니다. `save_bitmap` 원래 파일 이름을 검색 하는 `map` 개체,.bmp 파일 이름 확장명 코드 변경 내용입니다.|  
 |`delete_bitmap`|A `transformer` 이미지에 대해서만 메모리를 해제 하는 개체입니다.|  
 |`decrement`|A [concurrency:: call](../../parallel/concrt/reference/call-class.md) 네트워크의 터미널 노드 역할을 하는 개체입니다. 그 감소는 `countdown_event` 신호를 보내 주 응용 프로그램 이미지 처리 된 개체입니다.|  
   
@@ -155,7 +150,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="complete"></a>전체 예제  
+##  <a name="complete"></a> 전체 예제  
  다음 코드에서는 전체 예제를 보여 줍니다. `wmain` 함수를 관리 하는 [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] 라이브러리 및 호출은 `ProcessImages` 함수 프로세스를는 [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] 파일에 `Sample Pictures` 디렉터리입니다.  
   
  [!code-cpp[concrt-image-processing-filter#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_14.cpp)]  
@@ -164,7 +159,7 @@ ms.lasthandoff: 12/21/2017
   
  ![샘플 출력 예제](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")  
   
- `Lighthouse`Tom Alphin이 작성 하 고 따라서 회색조로 변환 됩니다. `Chrysanthemum``Desert`, `Koala`, 및 `Tulips` 주요 색으로 빨강이 따라서 녹색 및 파란색 색상 구성 요소를 제거 및 어 두 됩니다. `Hydrangeas``Jellyfish`, 및 `Penguins` 기본 기준과 일치 하 고 toned 세피아 않기 때문입니다.  
+ `Lighthouse` Tom Alphin이 작성 하 고 따라서 회색조로 변환 됩니다. `Chrysanthemum``Desert`, `Koala`, 및 `Tulips` 주요 색으로 빨강이 따라서 녹색 및 파란색 색상 구성 요소를 제거 및 어 두 됩니다. `Hydrangeas``Jellyfish`, 및 `Penguins` 기본 기준과 일치 하 고 toned 세피아 않기 때문입니다.  
   
  [[맨 위로 이동](#top)]  
   

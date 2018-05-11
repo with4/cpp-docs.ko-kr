@@ -1,12 +1,9 @@
 ---
-title: "CString을 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: CString을 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - CString objects, reference counting
 - CString class (Visual C++)
 ms.assetid: ed018aaf-8b10-46f9-828c-f9c092dc7609
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3844e10dc12207513e074e76e822e4999fadec7f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 591a319671ea42236af5ae7e80ea1cb94c3c446c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-cstring"></a>CString을 사용 하 여
 이 섹션의 항목에서는 `CString`을 사용한 프로그래밍 방법에 대해 설명합니다. 에 대 한 참조 설명서는 `CString` 클래스에 대 한 설명서를 참조 하십시오. [CStringT](../atl-mfc-shared/reference/cstringt-class.md)합니다.  

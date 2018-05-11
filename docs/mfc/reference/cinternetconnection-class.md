@@ -1,12 +1,9 @@
 ---
-title: "CInternetConnection 클래스 | Microsoft Docs"
-ms.custom: 
+title: CInternetConnection 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CInternetConnection
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CInternetConnection [MFC], GetServerName
 - CInternetConnection [MFC], GetSession
 ms.assetid: 62a5d1c3-8471-4e36-a064-48831829b2a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0c20cee097ae0ba61a9106da0476541e7d7c18e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07b269afce3ec0c3ef60e6cc37782fdea18260cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cinternetconnection-class"></a>CInternetConnection 클래스
 인터넷 서버와의 연결을 관리합니다.  
@@ -81,7 +76,7 @@ class CInternetConnection : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxinet.h  
   
-##  <a name="cinternetconnection"></a>CInternetConnection::CInternetConnection  
+##  <a name="cinternetconnection"></a>  CInternetConnection::CInternetConnection  
  이 멤버 함수를 호출 하는 경우는 `CInternetConnection` 개체가 만들어집니다.  
   
 ```  
@@ -116,7 +111,7 @@ CInternetConnection(
   
  에 대 한 기본값 `dwContext` MFC 인증에서 전송 되는 `CInternetConnection`-파생 개체를는 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 만든 개체는 **InternetConnection**-파생 개체입니다. 기본값은 1로 설정 하지만 특정 컨텍스트 식별자에 명시적으로 지정할 수는 [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession) 연결에 대 한 생성자입니다. 개체와 수행 하는 작업 컨텍스트 ID와 가진 연결 됩니다. 컨텍스트 식별자는 되돌아갑니다 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) 식별 되는 개체의 상태를 제공 하 합니다. 문서 참조 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md) 컨텍스트 식별자에 대 한 자세한 내용은 합니다.  
   
-##  <a name="getcontext"></a>CInternetConnection::GetContext  
+##  <a name="getcontext"></a>  CInternetConnection::GetContext  
  이 세션에 대 한 컨텍스트 ID를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -131,7 +126,7 @@ DWORD_PTR GetContext() const;
   
  방법에 대 한 자세한 내용은 **GetContext** 문서를 참조 하는 사용자 상태 정보를 다른 WinInet 클래스와 함께 작동 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md) 컨텍스트에 대 한 자세한 내용은 식별자입니다.  
   
-##  <a name="getservername"></a>CInternetConnection::GetServerName  
+##  <a name="getservername"></a>  CInternetConnection::GetServerName  
  연결이 인터넷에 연결 된 서버 이름을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -141,7 +136,7 @@ CString GetServerName() const;
 ### <a name="return-value"></a>반환 값  
  이 연결 개체 사용 중인 서버의 이름입니다.  
   
-##  <a name="getsession"></a>CInternetConnection::GetSession  
+##  <a name="getsession"></a>  CInternetConnection::GetSession  
  이 멤버 함수에 포인터를 얻으려면 호출는 `CInternetSession` 이 연결에 연관 된 개체입니다.  
   
 ```  
@@ -151,7 +146,7 @@ CInternetSession* GetSession() const;
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 이 인터넷 연결 개체와 연결 된 개체입니다.  
   
-##  <a name="operator_hinternet"></a>CInternetConnection::operator HINTERNET  
+##  <a name="operator_hinternet"></a>  CInternetConnection::operator HINTERNET  
  이 연산자를 사용 하 여 현재 인터넷 세션에 대해 API 수준 핸들을 가져올 수 있습니다.  
   
 ```  

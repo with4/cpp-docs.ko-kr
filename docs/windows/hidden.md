@@ -1,13 +1,10 @@
 ---
-title: "숨겨진 | Microsoft Docs"
-ms.custom: 
+title: 숨겨진 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.hidden
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c038eb4869cb3191dd26b5c4ea8e1c6cc182e366
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 444994f046b58fbd54dcd3982836bb7fc4d53ed1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="hidden"></a>hidden
 항목이 존재 하지만 하지 사용자 기반 브라우저에 표시할지 나타냅니다.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  **숨겨진** c + + 특성에 동일한 기능을는 [숨겨진](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL 특성입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  예를 참조 [바인딩 가능한](../windows/bindable.md) 사용 하는 방법의 예 **숨겨진**합니다.  
   
 ## <a name="requirements"></a>요구 사항  

@@ -1,13 +1,10 @@
 ---
-title: "사용자 지정 지정 빌드 도구 | Microsoft Docs"
-ms.custom: 
+title: 사용자 지정 지정 빌드 도구 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCCustomBuildTool.CustomBuildToolBeforeTargets
 - VC.Project.VCCustomBuildTool.Outputs
@@ -26,14 +23,13 @@ helpviewer_keywords:
 - builds (C++), custom build tools
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4edd3b1fdb2b6d09be6f5fcd9a6c9d08ba7a6994
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 1b8fc10d2a94ab4b26a47991d3dc8923afb28ca3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specify-custom-build-tools"></a>사용자 지정 빌드 도구 지정
 
@@ -65,7 +61,7 @@ A *사용자 지정 빌드 도구* 빌드 시스템에서 특정 입력된 파�
 
       여러 입력 및 출력 파일은 MSBuild 매크로 함께 기호로 지정할 수 있습니다. 파일의 위치 또는 파일 집합의 이름을 지정 하는 방법에 대 한 정보를 참조 하십시오. [빌드 명령 및 속성에 대 한 일반적인 매크로](../ide/common-macros-for-build-commands-and-properties.md)합니다.
 
-      각 환경 변수 대체를 지정 하는 경우 '%' 문자가 MSBuild에 의해 예약 되어 있으므로  **%**  이스케이프 문자는 **%25** 16 진수 이스케이프 시퀀스입니다. 예를 들어 대체 **% WINDIR %** 와 **%25WINDIR %25**합니다. 각 MSBuild 대체 **%25** 가진 시퀀스는  **%**  환경 변수에 액세스 하기 전에 문자입니다.
+      각 환경 변수 대체를 지정 하는 경우 '%' 문자가 MSBuild에 의해 예약 되어 있으므로 **%** 이스케이프 문자는 **%25** 16 진수 이스케이프 시퀀스입니다. 예를 들어 대체 **% WINDIR %** 와 **%25WINDIR %25**합니다. 각 MSBuild 대체 **%25** 가진 시퀀스는 **%** 환경 변수에 액세스 하기 전에 문자입니다.
 
    - **설명**,이 사용자 지정 빌드 도구에 대 한 설명 메시지를 입력 합니다. 메시지에 인쇄 되며는 **출력** 빌드 시스템에서이 도구를 처리할 때 창입니다.
 
@@ -75,7 +71,7 @@ A *사용자 지정 빌드 도구* 빌드 시스템에서 특정 입력된 파�
 
 빌드 시스템의 사용자 지정 빌드 도구에 의해 생성 된 출력 파일에서 작동 되도록 하려는 경우 프로젝트에 수동으로 추가 해야 있습니다. 사용자 지정 빌드 도구에서는 빌드하는 동안 파일을 업데이트 합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 프로젝트에서 parser.l 라는 파일을 포함 하도록 한다고 가정 합니다. 어휘 분석기가 **lexer.exe**, 실행 파일 경로에 있습니다. Parser.l.c 파일은 동일한 기본 이름을 (parser.c)를 생성 하 고 처리를 사용 하려는.
 
@@ -91,7 +87,7 @@ A *사용자 지정 빌드 도구* 빌드 시스템에서 특정 입력된 파�
 
 프로젝트를 빌드할 때 빌드 시스템 parser.l 및 parser.c의 타임 스탬프를 비교 합니다. Parser.l 보다 최신 이거나 parser.c가 존재 하지 않는 빌드 시스템의 값은 실행 된 **명령줄** parser.c 최신 상태로 속성입니다. 또한 parser.c 프로젝트에 추가 합니다 빌드 시스템 parser.c를 컴파일합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [빌드 명령 및 속성에 대한 일반 매크로](../ide/common-macros-for-build-commands-and-properties.md)  
 [빌드 사용자 지정 문제 해결](../ide/troubleshooting-build-customizations.md)  

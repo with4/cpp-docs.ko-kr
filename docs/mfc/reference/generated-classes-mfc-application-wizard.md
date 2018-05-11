@@ -1,13 +1,10 @@
 ---
-title: "MFC 응용 프로그램 마법사, 클래스를 생성 | Microsoft Docs"
-ms.custom: 
+title: MFC 응용 프로그램 마법사, 클래스를 생성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.classes
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC Application Wizard, generated classes
 ms.assetid: 5f33209c-7f01-4f72-8c1c-6f02f507ba9f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c0a5962909c15d881214969c177cad234b2950a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 764a87459df719903f5653c59422ed492db9a077
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>MFC 응용 프로그램 마법사, 생성된 클래스
 이 항목에는 프로젝트에서 생성 되는 기본 클래스 및 파일 이름을 나열 합니다. 기본적으로는 이름에 지정 된 프로젝트 이름에 따라는 **새 프로젝트 대화 상자**합니다. 여기에 설명 된 대로 대부분의이 이름은 변경할 수 있습니다.  

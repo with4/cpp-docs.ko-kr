@@ -9,17 +9,16 @@ ms.technology:
 - cpp-ide
 ms.tgt_pltfrm: windows
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54d1f0cf2a6971435858a1a64bf3e163631822b5
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: c67b7fce0567c2c6daf18b625a2b759c31d0b040
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg: Windows용 C++ 패키지 관리자
 
@@ -31,7 +30,7 @@ vcpkg는 Windows에서 타사 라이브러리 획득 및 설치를 크게 간소
 
 ## <a name="sources-not-binaries"></a>소스는 이진 파일 아님
 
-공용 카탈로그에 있는 라이브러리의 경우 vcpkg는 이진 파일[1] 대신 소스를 다운로드합니다. 이것은 Visual Studio 2017 또는 Visual Studio 2015(2017이 설치되지 않은 경우)를 사용하여 해당 소스를 컴파일합니다. C++에서는 사용하는 라이브러리가 연결된 응용 프로그램 코드와 동일한 컴파일러 및 컴파일러 버전을 사용하여 컴파일되어야 합니다. vcpkg를 사용하여 이진 파일 불일치 및 이로 인해 발생할 수 있는 문제를 제거하거나 적어도 크게 줄일 수 있습니다. 특정 버전의 Visual C++ 컴파일러에서 표준화된 팀에서는 한 팀 구성원이 vcpkg를 사용하여 소스를 다운로드하고 이진 파일 집합을 컴파일한 다음 내보내기 명령을 사용하여 이진 파일과 헤더를 압축하여 다른 팀 구성원에게 내보낼 수 있습니다. 자세한 내용은 컴파일된 이진 파일 및 헤더 내보내기를 참조하세요. 
+공용 카탈로그에 있는 라이브러리의 경우 vcpkg는 이진 파일[1] 대신 소스를 다운로드합니다. 이것은 Visual Studio 2017 또는 Visual Studio 2015(2017이 설치되지 않은 경우)를 사용하여 해당 소스를 컴파일합니다. C++에서는 사용하는 라이브러리가 연결된 응용 프로그램 코드와 동일한 컴파일러 및 컴파일러 버전을 사용하여 컴파일되어야 합니다. vcpkg를 사용하여 이진 파일 불일치 및 이로 인해 발생할 수 있는 문제를 제거하거나 적어도 크게 줄일 수 있습니다. 특정 버전의 Visual C++ 컴파일러에서 표준화된 팀에서는 한 팀 구성원이 vcpkg를 사용하여 소스를 다운로드하고 이진 파일 집합을 컴파일한 다음 내보내기 명령을 사용하여 이진 파일과 헤더를 압축하여 다른 팀 구성원에게 내보낼 수 있습니다. 자세한 내용은 컴파일된 이진 파일 및 헤더 내보내기를 참조하세요.
 
 포트 컬렉션에 있는 개인 라이브러리로 vcpkg 클론을 만들면 미리 작성된 이진 파일 및 헤더를 다운로드 하는 포트를 추가하고 원하는 위치로 해당 파일을 간단히 복사하는 portfile.cmake 파일을 작성할 수 있습니다.
 
@@ -86,6 +85,7 @@ Additional packages (*) will be installed to complete this operation.
 ```
 
 ## <a name="list-the-libraries-already-installed"></a>이미 설치된 라이브러리 나열
+
 일부 라이브러리를 설치한 후에 **vcpkg list**를 사용하여 설치된 라이브러리를 확인할 수 있습니다.
 
 ```cmd
@@ -113,61 +113,63 @@ zlib:x86-windows        1.2.11   A compression library
 
 활성 vcpkg 인스턴스에서 버전과 다른 라이브러리의 특정 버전을 사용해야 하는 경우 다음 단계를 따르세요.
 
-1. vcpkg의 새 클론 생성 
+1. vcpkg의 새 클론 생성
 1. 필요한 버전을 가져오도록 라이브러리의 프로필 수정
-1. **vcpkg install \<library>**를 실행합니다.
+1. **vcpkg install \<library>** 를 실행합니다.
 1. **vcpkg integrate project**를 사용하여 프로젝트 단위로 해당 라이브러리를 참조하는 NuGet 패키지를 만듭니다.
 
 ## <a name="export-compiled-binaries-and-headers"></a>컴파일된 이진 파일 및 헤더 내보내기
 
-모든 팀 구성원이 라이브러리를 다운로드 및 빌드해야 한다면 비효율적일 것입니다. 한 구성원만 해당 작업을 수행한 다음, **vcpkg export**를 사용하여 이진 파일 및 헤더의 Zip 파일을 만들어 다른 팀 구성원이 쉽게 공유하도록 만들 수 있습니다. 
+모든 팀 구성원이 라이브러리를 다운로드 및 빌드해야 한다면 비효율적일 것입니다. 한 구성원만 해당 작업을 수행한 다음, **vcpkg export**를 사용하여 이진 파일 및 헤더의 Zip 파일을 만들어 다른 팀 구성원이 쉽게 공유하도록 만들 수 있습니다.
 
 ## <a name="updateupgrade-installed-libraries"></a>설치된 라이브러리 업데이트/업그레이드
 
 공용 카탈로그는 라이브러리의 최신 버전으로 최신 상태로 유지됩니다. 로컬 라이브러리 중 어떤 것이 오래되었는지 확인하려면 **vcpkg update**를 사용합니다. 포트 컬렉션을 공용 카탈로그의 최신 버전으로 업데이트할 준비가 되면 **vcpkg upgrade** 명령을 실행하여 만료된 설치 라이브러리의 일부를 자동으로 다운로드하고 다시 빌드합니다.
 
-기본적으로는 **upgrade** 명령은 만료된 라이브러리를 나열할 뿐 업그레이드하지는 않습니다. 업그레이드를 수행하려면 **--no-dry-run** 옵션을 사용합니다. 
+기본적으로는 **upgrade** 명령은 만료된 라이브러리를 나열할 뿐 업그레이드하지는 않습니다. 업그레이드를 수행하려면 **--no-dry-run** 옵션을 사용합니다.
 
 ```cmd
-  vcpkg upgrade --no-dry-run 
+  vcpkg upgrade --no-dry-run
 ```
 
 ### <a name="upgrade-options"></a>업그레이드 옵션
 
-- **--no-dry-run** 업그레이드를 수행합니다. 지정되지 않은 경우 명령은 만료된 패키지를 나열합니다. 
-- **--keep-going** 한 번 실패하더라도 패키지를 계속 설치합니다. 
-- **--triplet \<t>** 정규화되지 않은 패키지에 대한 세 가지 기본값을 설정합니다. 
-- **--vcpkg-root \<path>** 현재 디렉터리 또는 도구 디렉터리 대신 사용할 vcpkg 디렉터리를 지정합니다. 
+- **--no-dry-run** 업그레이드를 수행합니다. 지정되지 않은 경우 명령은 만료된 패키지를 나열합니다.
+- **--keep-going** 한 번 실패하더라도 패키지를 계속 설치합니다.
+- **--triplet \<t>** 정규화되지 않은 패키지에 대한 세 가지 기본값을 설정합니다.
+- **--vcpkg-root \<path>** 현재 디렉터리 또는 도구 디렉터리 대신 사용할 vcpkg 디렉터리를 지정합니다.
 
 ### <a name="upgrade-example"></a>업그레이드 예제
 
 ### <a name="per-project"></a>프로젝트 단위
+
 활성 vcpkg 인스턴스에서 버전과 다른 라이브러리의 특정 버전을 사용해야 하는 경우 다음 단계를 따르세요.
 
-1. vcpkg의 새 클론 생성 
+1. vcpkg의 새 클론 생성
 1. 필요한 버전을 가져오도록 라이브러리의 프로필 수정
-1. **vcpkg install \<library>**를 실행합니다.
+1. **vcpkg install \<library>** 를 실행합니다.
 1. **vcpkg integrate project**를 사용하여 프로젝트 단위로 해당 라이브러리를 참조하는 NuGet 패키지를 만듭니다.
 
-
 ## <a name="export-compiled-binaries-and-headers"></a>컴파일된 이진 파일 및 헤더 내보내기
-모든 팀 구성원이 라이브러리를 다운로드 및 빌드해야 한다면 비효율적일 것입니다. 한 구성원만 해당 작업을 수행한 다음, **vcpkg export**를 사용하여 이진 파일 및 헤더의 Zip 파일을 만들어 다른 팀 구성원이 쉽게 공유하도록 만들 수 있습니다. 
+
+모든 팀 구성원이 라이브러리를 다운로드 및 빌드해야 한다면 비효율적일 것입니다. 한 구성원만 해당 작업을 수행한 다음, **vcpkg export**를 사용하여 이진 파일 및 헤더의 Zip 파일을 만들어 다른 팀 구성원이 쉽게 공유하도록 만들 수 있습니다.
 
 ## <a name="updateupgrade-installed-libraries"></a>설치된 라이브러리 업데이트/업그레이드
+
 공용 카탈로그는 라이브러리의 최신 버전으로 최신 상태로 유지됩니다. 로컬 라이브러리 중 어떤 것이 오래되었는지 확인하려면 **vcpkg update**를 사용합니다. 포트 컬렉션을 공용 카탈로그의 최신 버전으로 업데이트할 준비가 되면 **vcpkg upgrade** 명령을 실행하여 만료된 설치 라이브러리의 일부를 자동으로 다운로드하고 다시 빌드합니다.
 
-기본적으로는 **upgrade** 명령은 만료된 라이브러리를 나열할 뿐 업그레이드하지는 않습니다. 업그레이드를 수행하려면 **--no-dry-run** 옵션을 사용합니다. 
+기본적으로는 **upgrade** 명령은 만료된 라이브러리를 나열할 뿐 업그레이드하지는 않습니다. 업그레이드를 수행하려면 **--no-dry-run** 옵션을 사용합니다.
 
 ```cmd
-  vcpkg upgrade --no-dry-run 
+  vcpkg upgrade --no-dry-run
 ```
 
 ### <a name="upgrade-options"></a>업그레이드 옵션
 
-- **--no-dry-run** 업그레이드를 수행합니다. 지정되지 않은 경우 명령은 만료된 패키지를 나열합니다. 
-- **--keep-going** 한 번 실패하더라도 패키지를 계속 설치합니다. 
-- **--triplet \<t>** 정규화되지 않은 패키지에 대한 세 가지 기본값을 설정합니다. 
-- **--vcpkg-root \<path>** 현재 디렉터리 또는 도구 디렉터리 대신 사용할 vcpkg 디렉터리를 지정합니다. 
+- **--no-dry-run** 업그레이드를 수행합니다. 지정되지 않은 경우 명령은 만료된 패키지를 나열합니다.
+- **--keep-going** 한 번 실패하더라도 패키지를 계속 설치합니다.
+- **--triplet \<t>** 정규화되지 않은 패키지에 대한 세 가지 기본값을 설정합니다.
+- **--vcpkg-root \<path>** 현재 디렉터리 또는 도구 디렉터리 대신 사용할 vcpkg 디렉터리를 지정합니다.
 
 ### <a name="upgrade-example"></a>업그레이드 예제
 
@@ -187,24 +189,30 @@ If you are sure you want to rebuild the above packages, run this command with th
 ```
 
 ## <a name="contribute-new-libraries"></a>새 라이브러리 제공
+
 원하는 모든 라이브러리를 개인 포트 컬렉션에 포함할 수 있습니다. 공용 카탈로그에 대한 새 라이브러리를 제안하려면 [GitHub vcpkg 문제 페이지](https://github.com/Microsoft/vcpkg/issues)에서 문제를 엽니다.
 
 ## <a name="remove-a-library"></a>라이브러리를 제거합니다.
+
 **vcpkg remove**를 입력하여 설치된 라이브러리를 제거합니다. 종속된 라이브러리가 있는 경우 모든 다운스트림 라이브러리가 제거되는 **--recurse**를 사용하여 명령을 다시 실행하라는 메시지가 표시됩니다.
 
 ## <a name="customize-vcpkg"></a>Vcpkg 사용자 지정
-원하는 어떤 방식으로든 vcpkg의 클론을 수정할 수 있습니다. 여러 vcpkg 클론을 만들고 각 클론에서 포트 파일을 수정하여 특정 라이브러리 버전을 구하거나 명령줄 매개 변수를 지정할 수 있습니다. 예를 들어 기업에서 한 개발자 그룹은 한 가지 종속성 집합을 가진 소프트웨어로 작업하고 다른 그룹은 다른 집합으로 작업할 수 있습니다. Vcpkg의 두 클론을 설정하고 필요에 따라 라이브러리 및 컴파일 스위치 등의 버전을 다운로드하도록 각 클론을 수정할 수 있습니다. 
+
+원하는 어떤 방식으로든 vcpkg의 클론을 수정할 수 있습니다. 여러 vcpkg 클론을 만들고 각 클론에서 포트 파일을 수정하여 특정 라이브러리 버전을 구하거나 명령줄 매개 변수를 지정할 수 있습니다. 예를 들어 기업에서 한 개발자 그룹은 한 가지 종속성 집합을 가진 소프트웨어로 작업하고 다른 그룹은 다른 집합으로 작업할 수 있습니다. Vcpkg의 두 클론을 설정하고 필요에 따라 라이브러리 및 컴파일 스위치 등의 버전을 다운로드하도록 각 클론을 수정할 수 있습니다.
 
 ## <a name="uninstall-vcpkg"></a>vcpkg 제거
-디렉터리를 삭제하기만 하면 됩니다. 
+
+디렉터리를 삭제하기만 하면 됩니다.
 
 ## <a name="send-feedback-about-vcpkg"></a>vcpkg에 대한 사용자 의견 보내기
+
 **--survey** 명령을 사용하여 기능에 대한 버그 보고서 및 제안을 비롯하여 vcpkg에 대한 사용자 의견을 Microsoft에 보냅니다.
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>Vcpkg 폴더 계층 구조
-모든 vcpkg 기능 및 데이터는 단일 디렉터리 계층 구조에서 독립적이며 "인스턴스"라고 합니다. 레지스트리 설정 또는 환경 변수는 없습니다. 한 컴퓨터에 Vcpkg의 인스턴스가 얼마든지 있을 수 있으며 서로를 방해하지 않습니다. 
 
-Vcpkg 인스턴스의 내용: 
+모든 vcpkg 기능 및 데이터는 단일 디렉터리 계층 구조에서 독립적이며 "인스턴스"라고 합니다. 레지스트리 설정 또는 환경 변수는 없습니다. 한 컴퓨터에 Vcpkg의 인스턴스가 얼마든지 있을 수 있으며 서로를 방해하지 않습니다.
+
+Vcpkg 인스턴스의 내용:
 
 - buildtrees -- 빌드된 각 라이브러리의 소스의 하위 폴더를 포함합니다.
 - docs -- 문서 및 예제
@@ -240,7 +248,8 @@ Vcpkg 인스턴스의 내용:
 |**vcpkg version**|버전 정보 표시|
 |**vcpkg contact**|사용자 의견을 보낼 연락처 정보 표시|
 
-### <a name="options"></a>옵션:
+### <a name="options"></a>옵션
+
 |옵션|설명|
 |---------|---------|
 |**--triplet \<t>**|세 가지 대상 아키텍처를 지정합니다. (기본값: `%VCPKG_DEFAULT_TRIPLET%`, **vcpkg help triplet** 참조)|

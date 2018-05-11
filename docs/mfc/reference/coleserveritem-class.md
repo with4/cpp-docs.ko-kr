@@ -1,12 +1,9 @@
 ---
-title: "COleServerItem 클래스 | Microsoft Docs"
-ms.custom: 
+title: COleServerItem 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleServerItem
@@ -83,17 +80,15 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd64d6a2cf4fe36e62f5c6599521780c4ee002ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4d3165a11aace54ce2062a6321acc7f911fbdc39
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleserveritem-class"></a>COleServerItem 클래스
 OLE 항목에 대한 서버 인터페이스를 제공합니다.  
@@ -181,7 +176,7 @@ class COleServerItem : public CDocItem
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxole.h  
   
-##  <a name="addotherclipboarddata"></a>COleServerItem::AddOtherClipboardData  
+##  <a name="addotherclipboarddata"></a>  COleServerItem::AddOtherClipboardData  
  지정 된 OLE 항목에 대 한 프레젠테이션 및 변환 형식을 추가 하려면이 함수를 호출 `COleDataSource` 개체입니다.  
   
 ```  
@@ -195,7 +190,7 @@ void AddOtherClipboardData(COleDataSource* pDataSource);
 ### <a name="remarks"></a>설명  
  구현 해야 합니다는 [OnDraw](#ondraw) 멤버 함수를 항목에 대 한 표시 형식 (예: 메타 파일 그림)을 제공 합니다. 등록을 지원 하기 위해 다른 변환 형식을 사용 하 여는 [COleDataSource](../../mfc/reference/coledatasource-class.md) 에서 반환 된 개체 [GetDataSource](#getdatasource) 재정의 [OnRenderData](#onrenderdata) 멤버 함수를 지원 하려는 형식의 데이터를에서 제공 합니다.  
   
-##  <a name="coleserveritem"></a>COleServerItem::COleServerItem  
+##  <a name="coleserveritem"></a>  COleServerItem::COleServerItem  
  생성 된 `COleServerItem` 문서 항목의 서버 문서 컬렉션에 추가 하는 개체입니다.  
   
 ```  
@@ -211,7 +206,7 @@ COleServerItem(
  `bAutoDelete`  
  에 대 한 링크가 해제 될 때 개체를 삭제할 수 있는지 여부를 나타내는 플래그입니다. 이 속성을 설정 **FALSE** 경우는 `COleServerItem` 개체를 삭제 해야 하는 문서의 데이터의 필수적인 부분입니다. 이 속성을 설정 **TRUE** 개체는 프레임 워크에서 삭제할 수 있는 문서의 데이터에서 특정 범위를 식별 하는 데 사용 되는 보조 구조 하는 경우.  
   
-##  <a name="copytoclipboard"></a>COleServerItem::CopyToClipboard  
+##  <a name="copytoclipboard"></a>  COleServerItem::CopyToClipboard  
  OLE 항목을 클립보드로 복사 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -225,7 +220,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ### <a name="remarks"></a>설명  
  이 함수를 사용는 [OnGetClipboardData](#ongetclipboarddata) 만들려는 멤버 함수는 [COleDataSource](../../mfc/reference/coledatasource-class.md) 지원 되는 형식에서 OLE 항목의 데이터를 포함 하는 개체입니다. 그런 다음 저장 하는 함수는 `COleDataSource` 개체를 사용 하 여 클립보드에는 [COleDataSource::SetClipboard](../../mfc/reference/coledatasource-class.md#setclipboard) 함수입니다. `COleDataSource` 개체 항목의 네이티브 데이터와 표현 포함 `CF_METAFILEPICT` 으로 형식으로 데이터를 지원 하도록 선택 하면 모든 변환 형식입니다. 구현한 해야 [Serialize](../../mfc/reference/cobject-class.md#serialize) 및 [OnDraw](#ondraw) 작동 하려면이 멤버 함수에 대 한 합니다.  
   
-##  <a name="dodragdrop"></a>COleServerItem::DoDragDrop  
+##  <a name="dodragdrop"></a>  COleServerItem::DoDragDrop  
  호출 된 `DoDragDrop` 멤버 함수를 끌어서 놓기 작업을 수행 합니다.  
   
 ```  
@@ -269,7 +264,7 @@ DROPEFFECT DoDragDrop(
   
  연기 된 정보는 레지스트리에 저장 됩니다는 방법에 대 한 자세한 내용은 끌어에 대 한 또는 합니다. INI 파일 참조 [WriteProfileString](http://msdn.microsoft.com/library/windows/desktop/ms725504) Windows sdk에서입니다.  
   
-##  <a name="getclipboarddata"></a>COleServerItem::GetClipboardData  
+##  <a name="getclipboarddata"></a>  COleServerItem::GetClipboardData  
  이 함수를 지정 된 채우기 호출 [COleDataSource](../../mfc/reference/coledatasource-class.md) 개체를 호출한 경우 클립보드에 복사할 수 있는 모든 데이터로 [CopyToClipboard](#copytoclipboard) (경우에 동일한 데이터를 전송 합니다 있습니다 호출 [DoDragDrop](#dodragdrop)).  
   
 ```  
@@ -298,7 +293,7 @@ void GetClipboardData(
   
  형식에 배치 하려는 경우이 함수를 재정의 한 `COleDataSource` 앞 이나 뒤에서 제공 하는 해당 형식의 개체 `CopyToClipboard`합니다.  
   
-##  <a name="getdatasource"></a>COleServerItem::GetDataSource  
+##  <a name="getdatasource"></a>  COleServerItem::GetDataSource  
  가져오려면이 함수를 호출 하 여 [COleDataSource](../../mfc/reference/coledatasource-class.md) 서버 응용 프로그램이 지 원하는 변환 형식을 저장 하는 데 사용 되는 개체입니다.  
   
 ```  
@@ -311,7 +306,7 @@ COleDataSource* GetDataSource();
 ### <a name="remarks"></a>설명  
  서버 응용 프로그램 작업 데이터를 전송 하는 동안 다양 한 형식에 데이터를 제공 하려는 경우 해당 형식으로 등록 된 `COleDataSource` 이 함수에서 반환 된 개체입니다. 예를 들어, 입력 하려는 경우는 **CF_TEXT** 클립보드 또는 끌어 놓기 작업에 대 한 OLE 항목의 표시를 하는 형식으로 등록 합니다는 `COleDataSource` 이 함수를 반환 하는 개체와 다음 재정의  **OnRenderXxxData** 멤버 함수가 데이터를 제공 합니다.  
   
-##  <a name="getdocument"></a>COleServerItem::GetDocument  
+##  <a name="getdocument"></a>  COleServerItem::GetDocument  
  항목을 포함 하는 문서에 대 한 포인터를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -324,7 +319,7 @@ COleServerDoc* GetDocument() const;
 ### <a name="remarks"></a>설명  
  이렇게 하면에 대 한 인수로 전달 되는 서버 문서에 대 한 액세스는 `COleServerItem` 생성자입니다.  
   
-##  <a name="getembedsourcedata"></a>COleServerItem::GetEmbedSourceData  
+##  <a name="getembedsourcedata"></a>  COleServerItem::GetEmbedSourceData  
  가져오려면이 함수를 호출 하 여 **CF_EMBEDSOURCE** OLE 항목에 대 한 데이터입니다.  
   
 ```  
@@ -342,7 +337,7 @@ void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
   
  자세한 내용은 참조 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Windows sdk에서입니다.  
   
-##  <a name="getitemname"></a>COleServerItem::GetItemName  
+##  <a name="getitemname"></a>  COleServerItem::GetItemName  
  항목의 이름을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -355,7 +350,7 @@ const CString& GetItemName() const;
 ### <a name="remarks"></a>설명  
  일반적으로 연결 된 항목에 대해서만이 함수를 호출 합니다.  
   
-##  <a name="getlinksourcedata"></a>COleServerItem::GetLinkSourceData  
+##  <a name="getlinksourcedata"></a>  COleServerItem::GetLinkSourceData  
  가져오려면이 함수를 호출 하 여 `CF_LINKSOURCE` OLE 항목에 대 한 데이터입니다.  
   
 ```  
@@ -376,7 +371,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
   
  자세한 내용은 참조 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Windows sdk에서입니다.  
   
-##  <a name="getobjectdescriptordata"></a>COleServerItem::GetObjectDescriptorData  
+##  <a name="getobjectdescriptordata"></a>  COleServerItem::GetObjectDescriptorData  
  가져오려면이 함수를 호출 하 여 **CF_OBJECTDESCRIPTOR** OLE 항목에 대 한 데이터입니다.  
   
 ```  
@@ -401,7 +396,7 @@ void GetObjectDescriptorData(
   
  자세한 내용은 참조 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Windows sdk에서입니다.  
   
-##  <a name="isconnected"></a>COleServerItem::IsConnected  
+##  <a name="isconnected"></a>  COleServerItem::IsConnected  
  OLE 항목이 연결 되어 있는지 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -414,7 +409,7 @@ BOOL IsConnected() const;
 ### <a name="remarks"></a>설명  
  OLE 항목에 하나 이상의 컨테이너 항목에 대 한 참조가 있는 경우 연결로 간주 됩니다. 항목 참조 개수가 0 보다 큰 경우 있거나 보고서가 포함된 된 항목에 연결 되어 있습니다.  
   
-##  <a name="islinkeditem"></a>COleServerItem::IsLinkedItem  
+##  <a name="islinkeditem"></a>  COleServerItem::IsLinkedItem  
  OLE 항목이 연결된 된 항목 인지 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -427,9 +422,9 @@ BOOL IsLinkedItem() const;
 ### <a name="remarks"></a>설명  
  항목은 항목이 유효 포함 된 항목의 문서 목록에 반환 되지 않습니다 연결 됩니다. 링크 된 항목 수 또는 컨테이너에 연결 하지 않을 수 있습니다.  
   
- 연결 및 포함 된 항목에 대 한 동일한 클래스를 사용 하는 경우 `IsLinkedItem`대부분의 경우 코드가 자주 발생 하지만 포함 된 항목을 다르게 동작 하는 연결 된 항목을 만들 수 있습니다.  
+ 연결 및 포함 된 항목에 대 한 동일한 클래스를 사용 하는 경우 `IsLinkedItem` 대부분의 경우 코드가 자주 발생 하지만 포함 된 항목을 다르게 동작 하는 연결 된 항목을 만들 수 있습니다.  
   
-##  <a name="m_sizeextent"></a>COleServerItem::m_sizeExtent  
+##  <a name="m_sizeextent"></a>  COleServerItem::m_sizeExtent  
  이 멤버는 개체의 표시 되는 컨테이너 문서의 서버에 알려 줍니다.  
   
 ```  
@@ -439,7 +434,7 @@ CSize m_sizeExtent;
 ### <a name="remarks"></a>설명  
  기본 구현은 [OnSetExtent](#onsetextent) 이 멤버를 설정 합니다.  
   
-##  <a name="notifychanged"></a>COleServerItem::NotifyChanged  
+##  <a name="notifychanged"></a>  COleServerItem::NotifyChanged  
  연결된 된 항목이 변경 되 면이 함수를 호출 합니다.  
   
 ```  
@@ -450,18 +445,18 @@ void NotifyChanged(DVASPECT nDrawAspect = DVASPECT_CONTENT);
  `nDrawAspect`  
  값은 `DVASPECT` 변경 된 OLE 항목의 어떤 부분을 나타내는 열거형입니다. 이 매개 변수는 다음 값 중 하나를 가질 수 있습니다.  
   
-- `DVASPECT_CONTENT`항목은 해당 컨테이너 내에 포함 된 개체로 표시 될 수 하는 방식으로 표시 됩니다.  
+- `DVASPECT_CONTENT` 항목은 해당 컨테이너 내에 포함 된 개체로 표시 될 수 하는 방식으로 표시 됩니다.  
   
-- `DVASPECT_THUMBNAIL`검색 도구에 표시 될 수 있도록 "미리" 표현에서 항목이 렌더링 됩니다.  
+- `DVASPECT_THUMBNAIL` 검색 도구에 표시 될 수 있도록 "미리" 표현에서 항목이 렌더링 됩니다.  
   
-- `DVASPECT_ICON`항목은 아이콘으로 표시 됩니다.  
+- `DVASPECT_ICON` 항목은 아이콘으로 표시 됩니다.  
   
-- `DVASPECT_DOCPRINT`항목 파일 메뉴에서 인쇄 명령을 사용 하 여 인쇄할 때 처럼 표시 됩니다.  
+- `DVASPECT_DOCPRINT` 항목 파일 메뉴에서 인쇄 명령을 사용 하 여 인쇄할 때 처럼 표시 됩니다.  
   
 ### <a name="remarks"></a>설명  
  컨테이너 항목이 들어 자동 링크가 포함 된 문서에 연결 된 경우 해당 항목 변경 내용을 반영 하도록 업데이트 됩니다. Microsoft Foundation Class 라이브러리를 사용 하 여 작성 하는 컨테이너 응용 프로그램에서 [COleClientItem::OnChange](../../mfc/reference/coleclientitem-class.md#onchange) 눌렀을 때 호출 됩니다.  
   
-##  <a name="ondoverb"></a>COleServerItem::OnDoVerb  
+##  <a name="ondoverb"></a>  COleServerItem::OnDoVerb  
  지정된 된 동사를 실행 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -489,7 +484,7 @@ virtual void OnDoVerb(LONG iVerb);
   
  자세한 내용은 참조 [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows sdk에서입니다.  
   
-##  <a name="ondraw"></a>Coleserveritem:: Ondraw  
+##  <a name="ondraw"></a>  Coleserveritem:: Ondraw  
  OLE 항목을 메타 파일로 렌더링 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -511,7 +506,7 @@ virtual BOOL OnDraw(
 ### <a name="remarks"></a>설명  
  OLE 항목의 메타 파일 표시는 컨테이너 응용 프로그램에서 항목을 표시 하는 데 사용 됩니다. 메타 파일에 사용 되는 Microsoft Foundation 클래스 라이브러리와 컨테이너 응용 프로그램 작성 된 있는지는 [그리기](../../mfc/reference/coleclientitem-class.md#draw) 멤버 함수는 해당 [COleClientItem](../../mfc/reference/coleclientitem-class.md) 개체입니다. 기본 구현은 없습니다. 에 지정 된 장치 컨텍스트의 항목을 그릴이 함수를 재정의 해야 합니다.  
   
-##  <a name="ondrawex"></a>COleServerItem::OnDrawEx  
+##  <a name="ondrawex"></a>  COleServerItem::OnDrawEx  
  모든 그리기 위한 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -528,13 +523,13 @@ virtual BOOL OnDrawEx(
  `nDrawAspect`  
  `DVASPECT` 열거형의 값입니다. 이 매개 변수는 다음 값 중 하나를 가질 수 있습니다.  
   
-- `DVASPECT_CONTENT`항목은 해당 컨테이너 내에 포함 된 개체로 표시 될 수 하는 방식으로 표시 됩니다.  
+- `DVASPECT_CONTENT` 항목은 해당 컨테이너 내에 포함 된 개체로 표시 될 수 하는 방식으로 표시 됩니다.  
   
-- `DVASPECT_THUMBNAIL`검색 도구에 표시 될 수 있도록 "미리" 표현에서 항목이 렌더링 됩니다.  
+- `DVASPECT_THUMBNAIL` 검색 도구에 표시 될 수 있도록 "미리" 표현에서 항목이 렌더링 됩니다.  
   
-- `DVASPECT_ICON`항목은 아이콘으로 표시 됩니다.  
+- `DVASPECT_ICON` 항목은 아이콘으로 표시 됩니다.  
   
-- `DVASPECT_DOCPRINT`항목 파일 메뉴에서 인쇄 명령을 사용 하 여 인쇄할 때 처럼 표시 됩니다.  
+- `DVASPECT_DOCPRINT` 항목 파일 메뉴에서 인쇄 명령을 사용 하 여 인쇄할 때 처럼 표시 됩니다.  
   
  `rSize`  
  에 있는 항목의 크기 **HIMETRIC** 단위입니다.  
@@ -547,7 +542,7 @@ virtual BOOL OnDrawEx(
   
  이 함수 이외의 다른 측면에 대 한 프레젠테이션 데이터를 제공 하도록 재정의 `DVASPECT_CONTENT`와 같은 `DVASPECT_ICON` 또는 `DVASPECT_THUMBNAIL`합니다.  
   
-##  <a name="ongetclipboarddata"></a>COleServerItem::OnGetClipboardData  
+##  <a name="ongetclipboarddata"></a>  COleServerItem::OnGetClipboardData  
  가져오려는 프레임 워크에서 호출을 `COleDataSource` 개체를 호출 하 여 클립보드에 배치 하는 모든 데이터를 포함 하는 [CopyToClipboard](#copytoclipboard) 멤버 함수입니다.  
   
 ```  
@@ -573,7 +568,7 @@ virtual COleDataSource* OnGetClipboardData(
 ### <a name="remarks"></a>설명  
  이 함수의 기본 구현을 호출 [GetClipboardData](#getclipboarddata)합니다.  
   
-##  <a name="ongetextent"></a>COleServerItem::OnGetExtent  
+##  <a name="ongetextent"></a>  COleServerItem::OnGetExtent  
  에 크기를 검색 하기 위해 프레임 워크에서 호출 **HIMETRIC** OLE 항목의 단위입니다.  
   
 ```  
@@ -586,13 +581,13 @@ virtual BOOL OnGetExtent(
  `nDrawAspect`  
  검색할 수 있는 경계는 해당 OLE 항목의 모양을 지정 합니다. 이 매개 변수는 다음 값 중 하나를 가질 수 있습니다.  
   
-- `DVASPECT_CONTENT`항목은 해당 컨테이너 내에 포함 된 개체로 표시 될 수 하는 방식으로 표시 됩니다.  
+- `DVASPECT_CONTENT` 항목은 해당 컨테이너 내에 포함 된 개체로 표시 될 수 하는 방식으로 표시 됩니다.  
   
-- `DVASPECT_THUMBNAIL`검색 도구에 표시 될 수 있도록 "미리" 표현에서 항목이 렌더링 됩니다.  
+- `DVASPECT_THUMBNAIL` 검색 도구에 표시 될 수 있도록 "미리" 표현에서 항목이 렌더링 됩니다.  
   
-- `DVASPECT_ICON`항목은 아이콘으로 표시 됩니다.  
+- `DVASPECT_ICON` 항목은 아이콘으로 표시 됩니다.  
   
-- `DVASPECT_DOCPRINT`항목 파일 메뉴에서 인쇄 명령을 사용 하 여 인쇄할 때 처럼 표시 됩니다.  
+- `DVASPECT_DOCPRINT` 항목 파일 메뉴에서 인쇄 명령을 사용 하 여 인쇄할 때 처럼 표시 됩니다.  
   
  `rSize`  
  에 대 한 참조는 `CSize` OLE 항목의 크기를 받게 될 개체입니다.  
@@ -603,7 +598,7 @@ virtual BOOL OnGetExtent(
 ### <a name="remarks"></a>설명  
  Microsoft Foundation Class 라이브러리 사용 하는 컨테이너 응용 프로그램을 작성 하는 경우이 함수는 호출 될 때는 [GetExtent](../../mfc/reference/coleclientitem-class.md#getextent) 멤버 함수는 해당 `COleClientItem` 개체를 호출 합니다. 기본 구현은 아무 작업도 수행하지 않습니다. 사용자가 직접를 그 구현 해야 합니다. OLE 항목의 크기에 대 한 요청을 처리할 때 특수 한 처리를 수행 하려는 경우이 함수를 재정의 합니다.  
   
-##  <a name="onhide"></a>COleServerItem::OnHide  
+##  <a name="onhide"></a>  COleServerItem::OnHide  
  OLE 항목을 숨기기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -611,9 +606,9 @@ virtual void OnHide();
 ```  
   
 ### <a name="remarks"></a>설명  
- 기본 호출 **COleServerDoc::OnShowDocument (FALSE)**합니다. 또한 함수 OLE 항목은 숨겨진 컨테이너 알립니다. OLE 항목을 숨길 때 특수 한 처리를 수행 하려는 경우이 함수를 재정의 합니다.  
+ 기본 호출 **COleServerDoc::OnShowDocument (FALSE)** 합니다. 또한 함수 OLE 항목은 숨겨진 컨테이너 알립니다. OLE 항목을 숨길 때 특수 한 처리를 수행 하려는 경우이 함수를 재정의 합니다.  
   
-##  <a name="oninitfromdata"></a>COleServerItem::OnInitFromData  
+##  <a name="oninitfromdata"></a>  COleServerItem::OnInitFromData  
  내용을 사용 하 여 OLE 항목을 초기화 하기 위해 프레임 워크에서 호출 `pDataObject`합니다.  
   
 ```  
@@ -637,7 +632,7 @@ virtual BOOL OnInitFromData(
   
  자세한 내용은 참조 [IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) Windows sdk에서입니다.  
   
-##  <a name="onopen"></a>COleServerItem::OnOpen  
+##  <a name="onopen"></a>  COleServerItem::OnOpen  
  서버 응용 프로그램의 개별 인스턴스가 아닌 내부 OLE 항목을 표시 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -651,7 +646,7 @@ virtual void OnOpen();
   
  자세한 내용은 참조 [IOleClientSite::OnShowWindow](http://msdn.microsoft.com/library/windows/desktop/ms688658) Windows sdk에서입니다.  
   
-##  <a name="onqueryupdateitems"></a>COleServerItem::OnQueryUpdateItems  
+##  <a name="onqueryupdateitems"></a>  COleServerItem::OnQueryUpdateItems  
  현재 서버 문서에 연결된 된 항목이 만료 되는지 여부를 확인 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -664,7 +659,7 @@ virtual BOOL OnQueryUpdateItems();
 ### <a name="remarks"></a>설명  
  원본 문서 변경 되었지만 연결된 된 항목은 문서의 변경 내용을 반영 하도록 업데이트 되지 않은 경우 항목이 최신이 아닙니다.  
   
-##  <a name="onrenderdata"></a>COleServerItem::OnRenderData  
+##  <a name="onrenderdata"></a>  COleServerItem::OnRenderData  
  지정 된 형식의 데이터를 검색 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -692,7 +687,7 @@ virtual BOOL OnRenderData(
   
  자세한 내용은 참조 [idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431), [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812), [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177), 및 [TYMED](http://msdn.microsoft.com/library/windows/desktop/ms691227) Windows sdk에서입니다.  
   
-##  <a name="onrenderfiledata"></a>COleServerItem::OnRenderFileData  
+##  <a name="onrenderfiledata"></a>  COleServerItem::OnRenderFileData  
  저장소 미디어로 파일을 때 지정 된 형식의 데이터를 검색 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -718,7 +713,7 @@ virtual BOOL OnRenderFileData(
   
  자세한 내용은 참조 [idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) 및 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows sdk에서입니다.  
   
-##  <a name="onrenderglobaldata"></a>COleServerItem::OnRenderGlobalData  
+##  <a name="onrenderglobaldata"></a>  COleServerItem::OnRenderGlobalData  
  지정 된 저장소 미디어로 전역 메모리 때 지정 된 형식의 데이터를 검색 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -746,7 +741,7 @@ virtual BOOL OnRenderGlobalData(
   
  자세한 내용은 참조 [idataobject:: Getdata](http://msdn.microsoft.com/library/windows/desktop/ms678431) 및 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) Windows sdk에서입니다.  
   
-##  <a name="onsetcolorscheme"></a>COleServerItem::OnSetColorScheme  
+##  <a name="onsetcolorscheme"></a>  COleServerItem::OnSetColorScheme  
  OLE 항목을 편집할 때 사용할 색상표를 지정 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -765,7 +760,7 @@ virtual BOOL OnSetColorScheme(const LOGPALETTE* lpLogPalette);
   
  자세한 내용은 참조 [IOleObject::SetColorScheme](http://msdn.microsoft.com/library/windows/desktop/ms683971) Windows sdk에서입니다.  
   
-##  <a name="onsetdata"></a>COleServerItem::OnSetData  
+##  <a name="onsetdata"></a>  COleServerItem::OnSetData  
  지정 된 데이터 OLE 항목의 데이터를 대체 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -795,7 +790,7 @@ virtual BOOL OnSetData(
   
  자세한 내용은 참조 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812), [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177), 및 [ReleaseStgMedium](http://msdn.microsoft.com/library/windows/desktop/ms693491) Windows sdk에서입니다.  
   
-##  <a name="onsetextent"></a>COleServerItem::OnSetExtent  
+##  <a name="onsetextent"></a>  COleServerItem::OnSetExtent  
  컨테이너 문서에 사용 가능한 공간을 OLE 항목에 지시 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -808,13 +803,13 @@ virtual BOOL OnSetExtent(
  `nDrawAspect`  
  해당 범위가 지정 된 OLE 항목의 모양을 지정 합니다. 이 매개 변수는 다음 값 중 하나를 가질 수 있습니다.  
   
-- `DVASPECT_CONTENT`항목은 해당 컨테이너 내에 포함 된 개체로 표시 될 수 하는 방식으로 표시 됩니다.  
+- `DVASPECT_CONTENT` 항목은 해당 컨테이너 내에 포함 된 개체로 표시 될 수 하는 방식으로 표시 됩니다.  
   
-- `DVASPECT_THUMBNAIL`검색 도구에 표시 될 수 있도록 "미리" 표현에서 항목이 렌더링 됩니다.  
+- `DVASPECT_THUMBNAIL` 검색 도구에 표시 될 수 있도록 "미리" 표현에서 항목이 렌더링 됩니다.  
   
-- `DVASPECT_ICON`항목은 아이콘으로 표시 됩니다.  
+- `DVASPECT_ICON` 항목은 아이콘으로 표시 됩니다.  
   
-- `DVASPECT_DOCPRINT`항목 파일 메뉴에서 인쇄 명령을 사용 하 여 인쇄할 때 처럼 표시 됩니다.  
+- `DVASPECT_DOCPRINT` 항목 파일 메뉴에서 인쇄 명령을 사용 하 여 인쇄할 때 처럼 표시 됩니다.  
   
  `size`  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) OLE 항목의 새 크기를 지정 하는 구조입니다.  
@@ -825,7 +820,7 @@ virtual BOOL OnSetExtent(
 ### <a name="remarks"></a>설명  
  Microsoft Foundation Class 라이브러리 사용 하는 컨테이너 응용 프로그램을 작성 하는 경우이 함수는 호출 될 때는 [SetExtent](../../mfc/reference/coleclientitem-class.md#setextent) 멤버 함수는 해당 `COleClientItem` 개체를 호출 합니다. 기본 구현에서는 설정 된 [m_sizeExtent](#m_sizeextent) 멤버 지정된 된 크기를 경우 `nDrawAspect` 은 `DVASPECT_CONTENT`; 그렇지 않으면 0을 반환 합니다. 항목의 크기를 변경 하면 특수 한 처리를 수행 하려면이 함수를 재정의 합니다.  
   
-##  <a name="onshow"></a>COleServerItem::OnShow  
+##  <a name="onshow"></a>  COleServerItem::OnShow  
  원위치에서 OLE 항목을 표시 하는 서버 응용 프로그램에 지시 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -837,7 +832,7 @@ virtual void OnShow();
   
  OLE 항목을 표시할 때 특별 한 처리를 수행 하려는 경우이 함수를 재정의 합니다.  
   
-##  <a name="onupdate"></a>COleServerItem::OnUpdate  
+##  <a name="onupdate"></a>  COleServerItem::OnUpdate  
  항목이 수정 된 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -861,18 +856,18 @@ virtual void OnUpdate(
  `nDrawAspect`  
  `DVASPECT` 열거형의 값입니다. 이 매개 변수는 다음 값 중 하나를 가질 수 있습니다.  
   
-- `DVASPECT_CONTENT`항목은 해당 컨테이너 내에 포함 된 개체로 표시 될 수 하는 방식으로 표시 됩니다.  
+- `DVASPECT_CONTENT` 항목은 해당 컨테이너 내에 포함 된 개체로 표시 될 수 하는 방식으로 표시 됩니다.  
   
-- `DVASPECT_THUMBNAIL`검색 도구에 표시 될 수 있도록 "미리" 표현에서 항목이 렌더링 됩니다.  
+- `DVASPECT_THUMBNAIL` 검색 도구에 표시 될 수 있도록 "미리" 표현에서 항목이 렌더링 됩니다.  
   
-- `DVASPECT_ICON`항목은 아이콘으로 표시 됩니다.  
+- `DVASPECT_ICON` 항목은 아이콘으로 표시 됩니다.  
   
-- `DVASPECT_DOCPRINT`항목 파일 메뉴에서 인쇄 명령을 사용 하 여 인쇄할 때 처럼 표시 됩니다.  
+- `DVASPECT_DOCPRINT` 항목 파일 메뉴에서 인쇄 명령을 사용 하 여 인쇄할 때 처럼 표시 됩니다.  
   
 ### <a name="remarks"></a>설명  
  기본 구현 호출 [NotifyChanged](#notifychanged)힌트 또는 보낸 사람에 관계 없이, 합니다.  
   
-##  <a name="onupdateitems"></a>COleServerItem::OnUpdateItems  
+##  <a name="onupdateitems"></a>  COleServerItem::OnUpdateItems  
  서버 문서에서 모든 항목을 업데이트 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -882,7 +877,7 @@ virtual void OnUpdateItems();
 ### <a name="remarks"></a>설명  
  기본 구현 호출 [UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink) 모든 `COleClientItem` 문서의 개체입니다.  
   
-##  <a name="setitemname"></a>COleServerItem::SetItemName  
+##  <a name="setitemname"></a>  COleServerItem::SetItemName  
  해당 이름을 설정 하는 연결 된 항목을 만들 때이 함수를 호출 합니다.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "컴파일러 오류 C3025 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C3025 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C3025
 dev_langs:
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C3025
 ms.assetid: 4442f5a3-d9ea-4873-b1fb-e7e5bd3cbe5e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ea53babdc7df7e6e95f5d37767d998290afc554
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a74229ab5b40f1f432283d2b2b150ee14edcfec
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3025"></a>컴파일러 오류 C3025
 'clause': 정수 계열 식이 있어야 합니다.  
   
  절에 정수 식이 필요하지만 정수가 아닌 식이 제공되었습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C3025를 생성합니다.  
   
 ```  

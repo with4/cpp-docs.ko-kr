@@ -1,12 +1,9 @@
 ---
 title: ptr::operator bool | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - ptr::operator bool
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr::operator bool
 ms.assetid: 31123377-6ecd-4cef-9b75-3db3996fbcd1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5aaec44d5b8f2e8b43a94fa5d0e8b4250ac7bf49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 263810b4fbd369445c2ead55277381bc81b092d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ptroperator-bool"></a>ptr::operator bool
 사용 하 여에 대 한 연산자 `com::ptr` 조건식에서입니다.  
@@ -42,14 +37,14 @@ operator bool();
 ```  
   
 ## <a name="return-value"></a>반환 값  
- `true`소유 COM 개체가 잘못 되었습니다. `false` 그렇지 않은 경우.  
+ `true` 소유 COM 개체가 잘못 되었습니다. `false` 그렇지 않은 경우.  
   
 ## <a name="remarks"></a>설명  
  소유 된 COM 개체는이 아닌 경우 유효 `nullptr`합니다.  
   
  이 연산자를 실제로 변환 `_detail_class::_safe_bool` 보다 더 안전 하 게 되 `bool` 정수 계열 형식으로 변환할 수 없기 때문입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다. `CreateInstance` 멤버 함수를 사용 하 여 `operator bool` 올바른지와 경우 콘솔에 쓰는 것을 확인 하려면 새 문서 개체를 만든 후 합니다.  
   
 ```  

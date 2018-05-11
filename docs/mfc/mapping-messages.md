@@ -1,13 +1,10 @@
 ---
-title: "메시지 매핑 | Microsoft Docs"
-ms.custom: 
+title: 메시지 매핑 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - mappings [MFC], messages
 - messages [MFC], mapping
 ms.assetid: 996f0652-0698-4b8c-b893-cdaa836d9d0f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c415b12b22c19a5e1f2d19fd9c808a98485eb7ae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f521145599a3d734a22dd3b2707ad4dd16df8e80
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapping-messages"></a>메시지 매핑
 메시지 또는 명령을 받을 수 있는 각 프레임 워크 클래스에 자체 "메시지 맵." 프레임 워크 메시지 맵을 사용 하 여 해당 처리기 함수에 메시지와 명령을 연결. 클래스에서 파생 된 모든 클래스 `CCmdTarget` 메시지 맵이 있을 수 있습니다. 메시지 맵 자세히 설명 하 고 사용 하는 방법에 설명 하는 다른 문서.  

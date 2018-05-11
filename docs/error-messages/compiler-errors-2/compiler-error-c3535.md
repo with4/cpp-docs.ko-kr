@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C3535 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C3535 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3535
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3535
 ms.assetid: 24449c98-f681-484d-a00b-32533dca3a88
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5797d644ec13ed89bad3ddcda23be109df067b03
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ff9935f4a46ba2c3a268ebb761153948ccd82f47
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3535"></a>컴파일러 오류 C3535
 'type1'에서 'type2'에 대 한 형식을 추론할 수 없습니다.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  선언 형식에 대 한 포인터 이면 초기화 식이 인지 확인 포인터 형식입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 C3535 초기화 식의 결과가 `void`합니다.  
   
 ```  
@@ -54,7 +49,7 @@ int main()
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  문은 변수를 선언 하므로 다음 예제에서는 생성 C3535 `x` 이니셜라이저의 형식을 하지만 추론된 된 형식에 대 한 포인터 식이 double입니다. 따라서 컴파일러는 변수의 형식을 추론할 수 없습니다.  
   
 ```  
@@ -67,7 +62,7 @@ int main()
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 생성 C3535 때문에 변수 `p` 추론된 된 형식에 대 한 포인터를 선언 하지만 초기화 식은 포인터 형식이 아닙니다.  
   
 ```  

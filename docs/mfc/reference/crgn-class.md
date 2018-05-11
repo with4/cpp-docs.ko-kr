@@ -1,12 +1,9 @@
 ---
-title: "CRgn 클래스 | Microsoft Docs"
-ms.custom: 
+title: CRgn 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CRgn
@@ -55,17 +52,15 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d5556db19d7f0ec92f915dda49dfeb24390ab70
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b569efb201f95ade8987aaa89bb6cea1bc0c15c1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="crgn-class"></a>CRgn 클래스
 Windows GDI(그래픽 장치 인터페이스) 영역을 캡슐화합니다.  
@@ -131,7 +126,7 @@ class CRgn : public CGdiObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="combinergn"></a>CRgn::CombineRgn  
+##  <a name="combinergn"></a>  CRgn::CombineRgn  
  두 개의 기존 영역을 결합 하 여 새 GDI 영역을 만듭니다.  
   
 ```  
@@ -181,10 +176,10 @@ int CombineRgn(
   
  사용 하 여 [CopyRgn](#copyrgn) 한 지역의 다른 영역에 복사 하 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#144](../../mfc/codesnippet/cpp/crgn-class_1.cpp)]  
   
-##  <a name="copyrgn"></a>CRgn::CopyRgn  
+##  <a name="copyrgn"></a>  CRgn::CopyRgn  
  에 정의 된 영역 복사 `pRgnSrc` 에 `CRgn` 개체입니다.  
   
 ```  
@@ -209,10 +204,10 @@ int CopyRgn(CRgn* pRgnSrc);
 ### <a name="remarks"></a>설명  
  이전에 저장 된 영역을 대체 하는 새 영역은 `CRgn` 개체입니다. 이 함수는 특별 한 경우는 [CombineRgn](#combinergn) 멤버 함수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CRgn::CreateEllipticRgn](#createellipticrgn)합니다.  
   
-##  <a name="createellipticrgn"></a>CRgn::CreateEllipticRgn  
+##  <a name="createellipticrgn"></a>  CRgn::CreateEllipticRgn  
  타원형 영역을 만듭니다.  
   
 ```  
@@ -246,10 +241,10 @@ BOOL CreateEllipticRgn(
   
  마친 다음 사용 하 여 만든 영역을 사용 하는 `CreateEllipticRgn` 함수, 응용 프로그램을 사용 하 여 장치 컨텍스트의 아웃 지역 선택 해야는 `DeleteObject` 함수를 제거 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#145](../../mfc/codesnippet/cpp/crgn-class_2.cpp)]  
   
-##  <a name="createellipticrgnindirect"></a>CRgn::CreateEllipticRgnIndirect  
+##  <a name="createellipticrgnindirect"></a>  CRgn::CreateEllipticRgnIndirect  
  타원형 영역을 만듭니다.  
   
 ```  
@@ -270,10 +265,10 @@ BOOL CreateEllipticRgnIndirect(LPCRECT lpRect);
   
  마친 다음 사용 하 여 만든 영역을 사용 하는 `CreateEllipticRgnIndirect` 함수, 응용 프로그램을 사용 하 여 장치 컨텍스트의 아웃 지역 선택 해야는 `DeleteObject` 함수를 제거 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CRgn::CreateRectRgnIndirect](#createrectrgnindirect)합니다.  
   
-##  <a name="createfromdata"></a>CRgn::CreateFromData  
+##  <a name="createfromdata"></a>  CRgn::CreateFromData  
  지정된 된 지역 및 변환 데이터를 영역을 만듭니다.  
   
 ```  
@@ -299,7 +294,7 @@ BOOL CreateFromData(
 ### <a name="remarks"></a>설명  
  응용 프로그램 호출 하 여 영역에 대 한 데이터를 검색할 수는 `CRgn::GetRegionData` 함수입니다.  
   
-##  <a name="createfrompath"></a>CRgn::CreateFromPath  
+##  <a name="createfrompath"></a>  CRgn::CreateFromPath  
  지정 된 장치 컨텍스트로 선택 된 경로에서 영역을 만듭니다.  
   
 ```  
@@ -316,7 +311,7 @@ BOOL CreateFromPath(CDC* pDC);
 ### <a name="remarks"></a>설명  
  지정 된 디바이스 컨텍스트는 `pDC` 매개 변수는 닫힌된 경로가 포함 되어야 합니다. 후 `CreateFromPath` Windows 영역 경로 장치 컨텍스트에서 닫힌된 경로 삭제 합니다.  
   
-##  <a name="createpolygonrgn"></a>CRgn::CreatePolygonRgn  
+##  <a name="createpolygonrgn"></a>  CRgn::CreatePolygonRgn  
  다각형 영역을 만듭니다.  
   
 ```  
@@ -358,10 +353,10 @@ BOOL CreatePolygonRgn(
   
  응용 프로그램이를 완료할 때 사용 하 여 만든 영역을 사용 하 여 `CreatePolygonRgn` 함수를 사용 하 여 장치 컨텍스트의 아웃 지역 선택 해야는 `DeleteObject` 함수를 제거 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#146](../../mfc/codesnippet/cpp/crgn-class_3.cpp)]  
   
-##  <a name="createpolypolygonrgn"></a>CRgn::CreatePolyPolygonRgn  
+##  <a name="createpolypolygonrgn"></a>  CRgn::CreatePolyPolygonRgn  
  일련의 닫힌된 다각형으로 구성 된 영역을 만듭니다.  
   
 ```  
@@ -409,7 +404,7 @@ BOOL CreatePolyPolygonRgn(
   
  응용 프로그램이를 완료할 때 사용 하 여 만든 영역을 사용 하 여 `CreatePolyPolygonRgn` 함수를 사용 하 여 장치 컨텍스트의 아웃 지역 선택 해야는 [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) 멤버 함수를 제거 합니다.  
   
-##  <a name="createrectrgn"></a>CRgn::CreateRectRgn  
+##  <a name="createrectrgn"></a>  CRgn::CreateRectRgn  
  에 저장 되어 있는 사각형 영역을 만드는 데는 `CRgn` 개체입니다.  
   
 ```  
@@ -441,12 +436,12 @@ BOOL CreateRectRgn(
   
  마친 의해 만들어진 영역을 사용 하 여 `CreateRectRgn`, 응용 프로그램을 사용할지는 [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) 영역을 제거 하는 멤버 함수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#147](../../mfc/codesnippet/cpp/crgn-class_4.cpp)]  
   
  추가 예제를 참조 하십시오. [CRgn::CombineRgn](#combinergn)합니다.  
   
-##  <a name="createrectrgnindirect"></a>CRgn::CreateRectRgnIndirect  
+##  <a name="createrectrgnindirect"></a>  CRgn::CreateRectRgnIndirect  
  에 저장 되어 있는 사각형 영역을 만드는 데는 `CRgn` 개체입니다.  
   
 ```  
@@ -477,10 +472,10 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
   
  마친 의해 만들어진 영역을 사용 하 여 `CreateRectRgnIndirect`, 응용 프로그램을 사용할지는 [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) 영역을 제거 하는 멤버 함수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#148](../../mfc/codesnippet/cpp/crgn-class_5.cpp)]  
   
-##  <a name="createroundrectrgn"></a>CRgn::CreateRoundRectRgn  
+##  <a name="createroundrectrgn"></a>  CRgn::CreateRoundRectRgn  
  에 저장 된 모퉁이가 둥근 사각형 영역을 만드는 데는 `CRgn` 개체입니다.  
   
 ```  
@@ -520,10 +515,10 @@ BOOL CreateRoundRectRgn(
   
  응용 프로그램이를 완료할 때 사용 하 여 만든 영역을 사용 하 여 `CreateRoundRectRgn` 함수를 사용 하 여 장치 컨텍스트의 아웃 지역 선택 해야는 [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) 멤버 함수를 제거 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#149](../../mfc/codesnippet/cpp/crgn-class_6.cpp)]  
   
-##  <a name="crgn"></a>CRgn::CRgn  
+##  <a name="crgn"></a>  CRgn::CRgn  
  `CRgn` 개체를 생성합니다.  
   
 ```  
@@ -533,10 +528,10 @@ CRgn();
 ### <a name="remarks"></a>설명  
  `m_hObject` 데이터 멤버에 없는 Windows GDI 영역이 다른의 하나 이상의 개체가 인스턴스화될 때까지 `CRgn` 멤버 함수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CRgn::CreateRoundRectRgn](#createroundrectrgn)합니다.  
   
-##  <a name="equalrgn"></a>CRgn::EqualRgn  
+##  <a name="equalrgn"></a>  CRgn::EqualRgn  
  지정된 된 영역에 저장 된 영역에 동일한 여부를 확인는 `CRgn` 개체입니다.  
   
 ```  
@@ -550,10 +545,10 @@ BOOL EqualRgn(CRgn* pRgn) const;
 ### <a name="return-value"></a>반환 값  
  두 영역 동일 하면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#150](../../mfc/codesnippet/cpp/crgn-class_7.cpp)]  
   
-##  <a name="fromhandle"></a>CRgn::FromHandle  
+##  <a name="fromhandle"></a>  CRgn::FromHandle  
  에 대 한 포인터를 반환 합니다.는 `CRgn` Windows 영역에 대 한 핸들을 지정 되 면 개체입니다.  
   
 ```  
@@ -570,7 +565,7 @@ static CRgn* PASCAL FromHandle(HRGN hRgn);
 ### <a name="remarks"></a>설명  
  경우는 `CRgn` 개체가 이미 임시 핸들에 연결 되지 않은 `CRgn` 개체가 생성 되 고 연결 합니다. 이 임시 `CRgn` 개체는 다음에 응용 프로그램의 경우 이벤트 루프 유휴 시간에 인 될 때까지 모든 임시 그래픽 대답 하에서 개체를 삭제만 유효 합니다. 임시 개체가 올바른지만 한 창 메시지를 처리 하는 동안는 하는 또 다른 방법은 말하면 합니다.  
   
-##  <a name="getregiondata"></a>CRgn::GetRegionData  
+##  <a name="getregiondata"></a>  CRgn::GetRegionData  
  데이터 영역을 설명 하는 지정된 된 버퍼를 채웁니다.  
   
 ```  
@@ -592,7 +587,7 @@ int GetRegionData(
 ### <a name="remarks"></a>설명  
  이 데이터 영역을 구성 하는 사각형의 크기를 포함 합니다. 이 함수는와 함께에서 사용 되는 `CRgn::CreateFromData` 함수입니다.  
   
-##  <a name="getrgnbox"></a>CRgn::GetRgnBox  
+##  <a name="getrgnbox"></a>  CRgn::GetRgnBox  
  경계 사각형의 좌표를 검색 된 `CRgn` 개체입니다.  
   
 ```  
@@ -626,10 +621,10 @@ int GetRgnBox(LPRECT lpRect) const;
   
 - **SIMPLEREGION** 지역에 겹치는 테두리가 없습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CRgn::CreatePolygonRgn](#createpolygonrgn)합니다.  
   
-##  <a name="offsetrgn"></a>CRgn::OffsetRgn  
+##  <a name="offsetrgn"></a>  CRgn::OffsetRgn  
  에 저장 된 영역으로 이동 된 `CRgn` 개체에서 지정 된 오프셋 합니다.  
   
 ```  
@@ -666,10 +661,10 @@ int OffsetRgn(POINT point);
   
  영역의 좌표 값은 32, 767 및 보다 크거나-32, 768 보다 작아야 합니다. *x* 및 *y* 잘못 된 지역 좌표를 방지 하기 위해 매개 변수를 신중 하 게 선택 해야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CRgn::CreateEllipticRgn](#createellipticrgn)합니다.  
   
-##  <a name="operator_hrgn"></a>HRGN CRgn::operator  
+##  <a name="operator_hrgn"></a>  HRGN CRgn::operator  
  이 연산자를 사용 하 여의 연결 된 Windows GDI 핸들을 가져올 수는 `CRgn` 개체입니다.  
   
 ```  
@@ -684,7 +679,7 @@ operator HRGN() const;
   
  그래픽 개체를 사용 하는 방법에 대 한 자세한 내용은 문서 참조 [그래픽 개체](http://msdn.microsoft.com/library/windows/desktop/dd144962) Windows sdk에서입니다.  
   
-##  <a name="ptinregion"></a>CRgn::PtInRegion  
+##  <a name="ptinregion"></a>  CRgn::PtInRegion  
  확인 여부로 지정한 점을 *x* 및 *y* 에 저장 된 영역에는 `CRgn` 개체입니다.  
   
 ```  
@@ -708,7 +703,7 @@ BOOL PtInRegion(POINT point) const;
 ### <a name="return-value"></a>반환 값  
  지점이; 지역에 있으면 0이 아닌 그렇지 않으면 0입니다.  
   
-##  <a name="rectinregion"></a>CRgn::RectInRegion  
+##  <a name="rectinregion"></a>  CRgn::RectInRegion  
  사각형의 모든 부분에서 지정한 `lpRect` 내에 저장 된 영역의 경계는 `CRgn` 개체입니다.  
   
 ```  
@@ -734,7 +729,7 @@ BOOL RectInRegion(LPCRECT lpRect) const;
 ### <a name="return-value"></a>반환 값  
  지정된 된 사각형의 일부 영역;의 경계 내에 있는 경우 0이 아닌 그렇지 않으면 0입니다.  
   
-##  <a name="setrectrgn"></a>CRgn::SetRectRgn  
+##  <a name="setrectrgn"></a>  CRgn::SetRectRgn  
  사각형 영역을 만듭니다.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "자동화 | Microsoft Docs"
-ms.custom: 
+title: 자동화 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0204ab105b48350ea7fe934c28c5d5f95bea71f
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ce325073d8a1585ffa9e520cebdfc372280306d2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation"></a>자동화
 자동화(이전의 OLE 자동화) 기술은 한 응용 프로그램에서 다른 응용 프로그램에 구현된 개체를 조작하거나 개체를 조작할 수 있도록 노출시키는 것을 가능하게 하는 기술입니다.  
@@ -79,7 +74,7 @@ ms.lasthandoff: 02/14/2018
   
 -   [MFCCALC](../visual-cpp-samples.md) 자동화 클라이언트 응용 프로그램의 예를 보여 줍니다.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [자동화 클라이언트](../mfc/automation-clients.md)  
   

@@ -11,14 +11,13 @@ f1_keywords:
 - USEPROFILE
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b12c2e63d5e65d2528f77852d9466d4161d7cc6a
-ms.sourcegitcommit: ee7d74683af7631441c8c7f65ef5ceceaee4a5ee
+ms.openlocfilehash: 156a571eaa3db31b8c5345f1550346503651665d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="useprofile-run-pgo-in-thread-safe-mode"></a>/USEPROFILE (실행 PGO 스레드 안전 모드에서)
 
@@ -52,7 +51,7 @@ ms.lasthandoff: 03/22/2018
 
 1. 선택 된 **구성 속성** > **링커** > **최적화** 속성 페이지.
 
-1. 에 **링크 타임 코드 생성** 속성을 선택 **링크 타임 코드 생성 사용 (/ LTCG)**합니다.
+1. 에 **링크 타임 코드 생성** 속성을 선택 **링크 타임 코드 생성 사용 (/ LTCG)** 합니다.
 
 1. 선택 된 **구성 속성** > **링커** > **명령줄** 속성 페이지.
 

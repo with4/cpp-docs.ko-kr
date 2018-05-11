@@ -1,13 +1,10 @@
 ---
-title: "연습: join 교착 상태 방지을 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: '연습: join 교착 상태 방지을 사용 하 여 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,24 +13,22 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894ff7da95f09b1aedaa8fd9d1d9b44f77017a8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5deb501cc05c2a771b6e14d5091b1baa95f2f622
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>연습: join을 사용하여 교착 상태 방지
-이 항목에서는 사용 하는 방법을 보여 주기 위해 철학자 들의 만찬 문제 사용는 [concurrency:: join](../../parallel/concrt/reference/join-class.md) 응용 프로그램에서 교착 상태를 방지 하는 클래스입니다. 소프트웨어 응용 프로그램에서 *교착 상태* 두 개 이상의 프로세스 각 리소스를 보유 서로 다른 프로세스를 다른 리소스를 해제 될 때까지 기다릴 때 발생 합니다.  
+이 항목에서는 사용 하는 방법을 보여 주기 위해 철학자 들의 만찬 문제 사용는 [concurrency:: join](../../parallel/concrt/reference/join-class.md) 응용 프로그램에서 교착 상태를 방지 하는 클래스입니다. 소프트웨어 응용 프로그램에서 *교착 상태*는 두 개 이상의 프로세스가 각각 리소스를 보유하고 함께 다른 프로세스가 다른 리소스를 해제할 때까지 대기하는 경우 발생합니다.  
   
  철학자 들의 만찬 문제는 일반 리소스 집합을 여러 개의 동시 프로세스 간에 공유 되는 경우 발생할 수 있는 문제 집합의 한 예입니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 시작 하기 전에 다음 항목을 읽어보세요.  
   
 - [비동기 에이전트](../../parallel/concrt/asynchronous-agents.md)  
@@ -55,7 +50,7 @@ ms.lasthandoff: 12/21/2017
   
 - [교착 상태 방지 하는 조인을 사용 하 여](#solution)  
   
-##  <a name="problem"></a>철학자 들의 만찬 문제  
+##  <a name="problem"></a> 철학자 들의 만찬 문제  
  철학자 들의 만찬 문제는 응용 프로그램에서 교착 상태가 발생 하는 방법을 보여 줍니다. 이 문제에 5 명의 philosophers 원형 테이블에 앉아 합니다. 모든 철학자 생각과 식사를 번갈아 합니다. 왼쪽에 있는 모든 철학자 젓가락을 공유 해야 사람과 오른쪽에 있습니다. 다음 그림에서는이 레이아웃을 보여 줍니다.  
   
  ![철학자 들 음식점 문제](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")  
@@ -64,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="deadlock"></a>Naïve 구현  
+##  <a name="deadlock"></a> Naïve 구현  
  다음 예제에서는 철학자 들의 만찬 문제의 간단한 구현을 보여 줍니다. `philosopher` 클래스에서 파생 된 [concurrency:: agent](../../parallel/concrt/reference/agent-class.md), 각 철학자가 독립적으로 동작할 수 있습니다. 이 예제에서는의 공유 배열을 사용 하 여 [concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md) 각 개체 `philosopher` 젓가락 쌍에 대 한 단독 액세스 개체입니다.  
   
  그림에서는 구현의 관계를 설정 하는 `philosopher` 하나 철학자 클래스를 나타냅니다. `int` 각 젓가락 변수를 나타냅니다. `critical_section` 개체에 젓가락 놓으면 소유자를 토대로 합니다. `run` 메서드는 철학자의 수명의 시뮬레이션 합니다. `think` 생각의 동작을 시뮬레이션 하는 메서드 및 `eat` 메서드 식의 동작을 시뮬레이션 합니다.  
@@ -73,7 +68,7 @@ ms.lasthandoff: 12/21/2017
   
  `pickup_chopsticks` 교착 상태가 발생할 수 있는 메서드를 보여 줍니다. 모든 경우 `philosopher` 개체 잠금 중 다음 없음에 대 한 액세스 권한을 얻습니다 `philosopher` 개체를 다른 잠금은 다른에 의해 제어 되므로 계속 수 `philosopher` 개체입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
   
@@ -87,7 +82,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="solution"></a>교착 상태 방지 하는 조인을 사용 하 여  
+##  <a name="solution"></a> 교착 상태 방지 하는 조인을 사용 하 여  
  이 섹션에는 메시지 버퍼 및 메시지 전달 함수를 사용 하 여 교착 상태의 가능성을 제거 하는 방법을 보여 줍니다.  
   
  이 예에서는 이전 쿼리와 관련 시키기 위해는 `philosopher` 클래스 대신 각 `critical_section` 사용 하 여 개체는 [concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md) 개체 및 `join` 개체입니다. `join` 젓가락 철학자를 제공 하는 중재자 역할입니다.  
@@ -128,7 +123,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[concrt-philosophers-join#7](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_8.cpp)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
  다음은 사용 하는 전체 예제 식별 `join` 교착 상태의 위험이 제거 하는 개체입니다.  

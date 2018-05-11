@@ -1,13 +1,10 @@
 ---
-title: "인터넷 응용 프로그램 테스트 | Microsoft Docs"
-ms.custom: 
+title: 인터넷 응용 프로그램 테스트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - debugging [MFC], Web applications
 - Internet debugging and testing
 ms.assetid: ac4c74e3-d4ad-4e19-8f6c-e270de067f01
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cc214eb98b8aa9e927fd471ba313e4cade426a2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 61ffc5b11783806555b210b8561cbe6cdd2878ef
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="testing-internet-applications"></a>인터넷 응용 프로그램 테스트
 웹 서버에서 실행 중인 응용 프로그램에 대 한 특히 인터넷에 몇 가지 고유한 테스트 방법이 있습니다. 초기 테스트 아마도 수행 됩니다 테스트 서버에 연결 하는 단일 사용자 클라이언트를 사용 하 여 합니다. 이 코드를 디버깅에 유용 합니다.  

@@ -1,13 +1,10 @@
 ---
-title: "컴파일러 오류 C2171 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C2171 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C2171
 dev_langs:
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C2171
 ms.assetid: a80343b5-ab3f-4413-b6f1-3ce9d7e519e5
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8dffa2f0302e80e4bfa702ec3beec71296fdcddc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45d90989b79f4c1eb98b0319137bb9716376fcf8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2171"></a>컴파일러 오류 C2171
 'operator': 'type' 형식의 피연산자에는 맞지 않습니다.  
   
  단항 연산자가 잘못된 피연산자 형식과 함께 사용됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C2171을 생성합니다.  
   
 ```  
@@ -47,7 +42,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C2171을 생성합니다.  
   
 ```  

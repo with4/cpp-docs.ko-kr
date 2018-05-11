@@ -1,13 +1,10 @@
 ---
-title: "회색 및 디더링된 비트맵 함수 | Microsoft Docs"
-ms.custom: 
+title: 회색 및 디더링된 비트맵 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXWIN/AfxDrawGrayBitmap
 - AFXWIN/AfxGetGrayBitmap
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f895fb22e4f4d2649cdec1e4c9925b69b013e49
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de887cdbe80642925bc935eb48726a59850f6f96
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>회색 및 디더링된 비트맵 함수
 **회색 비트맵 함수**  
@@ -86,7 +81,7 @@ void AFXAPI AfxDrawGrayBitmap(
   
  ![회색 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#191](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_1.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  
@@ -117,7 +112,7 @@ void AFXAPI AfxGetGrayBitmap(
   
  ![회색 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#193](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_2.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  
@@ -160,7 +155,7 @@ void AFXAPI AfxDrawDitheredBitmap(
   
  ![디더링된 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#190](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_3.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  
@@ -196,7 +191,7 @@ void AFXAPI AfxGetDitheredBitmap(
   
  ![디더링된 및 기존 아이콘 버전 비교](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#192](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_4.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  

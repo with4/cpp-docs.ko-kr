@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 1) C4624 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 1) C4624 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4624
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4624
 ms.assetid: 14f61769-d92e-482b-9515-debd87b30a66
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a3acf93e1609b6a53f6654afb83a51bad49da84
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d11bc5c8b5034fa305a22ba893c62faff18cc38
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4624"></a>컴파일러 경고(수준 1) C4624
 'derived class': 기본 클래스의 소멸자에 액세스할 수 없거나 이러한 소멸자가 삭제되므로 소멸자가 암시적으로 삭제된 것으로 정의됩니다.  

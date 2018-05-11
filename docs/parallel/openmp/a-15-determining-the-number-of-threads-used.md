@@ -1,27 +1,22 @@
 ---
-title: "사용 되는 스레드 수를 결정 하는 A.15 | Microsoft Docs"
-ms.custom: 
+title: 사용 되는 스레드 수를 결정 하는 A.15 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 026bb59a-f668-40db-a7cb-69a1bae83d2d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8b7fb8cf6218863287d582a097cb43b399cff07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b50858a3384fa5f8d867f13a699e1fc271c101ef
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="a15---determining-the-number-of-threads-used"></a>A.15   사용된 스레드 수 확인
 예를 들어 다음과 같은 잘못 된 (에 대 한 [단원 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) 페이지 37):  

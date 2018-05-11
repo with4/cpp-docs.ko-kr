@@ -1,12 +1,9 @@
 ---
-title: "COleIPFrameWnd 클래스 | Microsoft Docs"
-ms.custom: 
+title: COleIPFrameWnd 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleIPFrameWnd
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - COleIPFrameWnd [MFC], OnCreateControlBars
 - COleIPFrameWnd [MFC], RepositionFrame
 ms.assetid: 24abb2cb-826c-4dda-a287-d8a8900a5763
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1833cbbbfb6706cffe73770bcd9b61ff755a645
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 466948653a5464a940a027e473e79c00dbf9a6ab
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coleipframewnd-class"></a>COleIPFrameWnd 클래스
 응용 프로그램의 내부 편집 창의 기준입니다.  
@@ -76,7 +71,7 @@ class COleIPFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxole.h  
   
-##  <a name="coleipframewnd"></a>COleIPFrameWnd::COleIPFrameWnd  
+##  <a name="coleipframewnd"></a>  COleIPFrameWnd::COleIPFrameWnd  
  생성 된 `COleIPFrameWnd` 개체 하 고 초기화 형식의 구조에 저장 되 고 전체 상태 정보를 **OLEINPLACEFRAMEINFO**합니다.  
   
 ```  
@@ -86,7 +81,7 @@ COleIPFrameWnd();
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) Windows sdk에서입니다.  
   
-##  <a name="oncreatecontrolbars"></a>COleIPFrameWnd::OnCreateControlBars  
+##  <a name="oncreatecontrolbars"></a>  COleIPFrameWnd::OnCreateControlBars  
  호출 하 여 프레임 워크는 `OnCreateControlBars` 항목이 내부 편집에 대 한 활성화 될 때 작동 합니다.  
   
 ```  
@@ -113,7 +108,7 @@ virtual BOOL OnCreateControlBars(
 ### <a name="remarks"></a>설명  
  기본 구현은 아무 작업도 수행하지 않습니다. 컨트롤 막대를 만들 때 필요한 특수 처리를 수행 하려면이 함수를 재정의 합니다.  
   
-##  <a name="repositionframe"></a>COleIPFrameWnd::RepositionFrame  
+##  <a name="repositionframe"></a>  COleIPFrameWnd::RepositionFrame  
  호출 하 여 프레임 워크는 `RepositionFrame` 컨트롤 막대 레이아웃 및 해당 내용을 모두 표시 되는 내부 편집 창의 위치를 변경 하려면 멤버 함수입니다.  
   
 ```  

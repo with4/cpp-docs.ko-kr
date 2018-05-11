@@ -1,12 +1,9 @@
 ---
 title: selectany | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - selectany_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - __declspec keyword [C++], selectany
 - selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d8b4a1a78fb8231d407e60ded2c6dea3f7c891d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4a6543188525bea9a04c82bf5202160b42bcb6b8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="selectany"></a>selectany
 **Microsoft 전용**  
@@ -51,7 +46,7 @@ __declspec( selectany ) declarator
 > [!NOTE]
 >  외부에 표시되는 전역 데이터 항목의 실제 초기화에 한해 `selectany`를 적용할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 코드에서는 `selectany` 특성을 사용하는 방법을 보여 줍니다.  
   
 ```  
@@ -84,7 +79,7 @@ int i;
 __declspec(selectany) X x(1);  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 코드에서는 사용 하는 `selectany` 특성을 사용할 때 데이터 COMDAT 정리는 [/opt: icf](../build/reference/opt-optimizations.md) 링커 옵션입니다. 데이터와 표시 되어 해야 `selectany` 에 배치 하 고는 **const** (읽기 전용) 섹션. 읽기 전용 섹션을 명시적으로 지정해야 합니다.  
   
 ```  

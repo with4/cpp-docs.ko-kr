@@ -1,13 +1,10 @@
 ---
-title: "(아이콘에 대 한 이미지 편집기) 색 작업 | Microsoft Docs"
-ms.custom: 
+title: (아이콘에 대 한 이미지 편집기) 색 작업 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.color
 dev_langs:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - foreground colors, Image editor
 - colors [C++]
 ms.assetid: d34ff96f-241d-494f-abdd-13811ada8cd3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4ad0c7df6804667c3bd243668193283ecee61c8d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1f9016e36ce6b081446a00136445fd7ebdd5a341
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="working-with-color-image-editor-for-icons"></a>색 작업(아이콘에 대한 이미지 편집기)
 이미지 편집기를 처리 하 고 색을 사용자 지정 하는 다양 한 기능을 포함 합니다. 전경 또는 배경 색을 설정 지정, 경계 영역을 색으로 채우기 또는 현재 전경 또는 배경 색으로 사용할 이미지에서 색을 선택 합니다. 도구를 사용할 수는 [이미지 편집기 도구 모음](../windows/toolbar-image-editor-for-icons.md) 색상표에 함께 [색상 창](../windows/colors-window-image-editor-for-icons.md) 이미지를 만드는 합니다.  

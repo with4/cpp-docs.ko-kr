@@ -1,13 +1,10 @@
 ---
-title: "혼합형 (네이티브 및 관리) 어셈블리 | Microsoft Docs"
-ms.custom: 
+title: 혼합형 (네이티브 및 관리) 어셈블리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: aeb0a4f21487d9d230c72bfbfc6a06928455dfe2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ac18841d5050bc8fb849ac542dc298ce89c964f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>혼합형(네이티브 및 관리) 어셈블리
 혼합형된 어셈블리는 관리 되지 않는 컴퓨터 명령과 MSIL 명령이 포함 될 수 있습니다. 따라서 호출 하 고 완전히 관리 되지 않는 구성 요소와의 호환성을 유지 하는 동안에.NET 구성 요소에서 호출할 수 있습니다. 혼합형된 어셈블리를 사용 하 여 작성 하는 스레드와 관리 되지 않는 기능이 함께 사용 하 여 응용 프로그램입니다. 이렇게 하면 혼합형된 어셈블리를 기존 Visual c + + 응용 프로그램을.NET 플랫폼으로 마이그레이션하는 데 적합 합니다.  
@@ -69,7 +64,7 @@ ms.lasthandoff: 12/21/2017
  [방법: CRT 라이브러리 DLL에 대한 종속성을 제거하여 부분적으로 신뢰할 수 있는 응용 프로그램 만들기](../dotnet/create-a-partially-trusted-application.md)  
  Visual c + +를 사용 하 여 msvcm90.dll에 대 한 종속성을 제거 하 여 부분적으로 신뢰할 수 있는 공용 언어 런타임 응용 프로그램을 만드는 방법을 설명 합니다.  
   
- 혼합형된 어셈블리에 대 한 지침을 코딩 하는 방법에 대 한 자세한 내용은 MSDN 문서 "는 개요의 관리 되 는/관리 되지 않는 코드 상호 운용성"에서 참조 [http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp](http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp)합니다.  
+ 혼합형된 어셈블리에 대 한 지침을 코딩 하는 방법에 대 한 자세한 내용은 MSDN 문서 "는 개요의 관리 되 는/관리 되지 않는 코드 상호 운용성"에서 참조 [ http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp ](http://msdn.microsoft.com/netframework/default.aspx?pull=/library/dndotnet/html/manunmancode.asp)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [네이티브 및 .NET 상호 운용성](../dotnet/native-and-dotnet-interoperability.md)

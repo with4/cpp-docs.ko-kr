@@ -1,12 +1,9 @@
 ---
 title: 'Cutlprops:: Onpropertychanged | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - OnPropertyChanged
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - OnPropertyChanged method
 ms.assetid: c5924210-b685-46c4-87f8-1b81e5bd3378
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f87f6842f33bd58be9cde515396f495402235a77
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c9b52949db714206b6118000d004c6248b7d6235
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cutlpropsonpropertychanged"></a>CUtlProps::OnPropertyChanged
 연결 된 속성을 처리 하는 속성을 설정한 후 호출 됩니다.  
@@ -53,7 +48,7 @@ ms.lasthandoff: 02/23/2018
 ## <a name="remarks"></a>설명  
  책갈피나 다른 속성의 값에 의존 하는 값을 포함 하는 업데이트와 같은 연결 된 속성을 처리 하려는 경우이 함수를 재정의 해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 함수를 사용자에서 속성 ID를 가져옵니다는 `DBPROP*` 매개 변수입니다. 이제 체인으로 연결 속성에 대해 ID와 비교 하는 것이 같습니다. 속성을 찾을 때 `SetProperties` 속성을 다른 속성과 함께에서 설정 될 것으로 호출 합니다. 이 경우 하나를 가져오면는 `DBPROP_IRowsetLocate`, `DBPROP_LITERALBOOKMARKS`, 또는 `DBPROP_ORDEREDBOOKMARKS` 속성을 하나 설정할 수 있습니다는 `DBPROP_BOOKMARKS` 속성입니다.  
   
  [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]  

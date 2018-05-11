@@ -1,13 +1,10 @@
 ---
-title: "진단 서비스 | Microsoft Docs"
-ms.custom: 
+title: 진단 서비스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 45c9e8e7cd2b9396592416ea9845c97d75a7d648
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2332090032a93152b6c841336538bf9d45984300
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="diagnostic-services"></a>진단 서비스
 MFC 라이브러리는 프로그램을 더 쉽게 디버그할 수 있는 많은 진단 서비스를 제공합니다. 이러한 진단 서비스에는 매크로 및 전역 함수가 포함되며, 이러한 함수를 통해 프로그램의 메모리 할당을 추적하고 런타임 중 개체의 내용을 덤프하고 런타임 중 디버깅 메시지를 인쇄할 수 있습니다. 진단 서비스의 매크로 및 전역 함수는 다음과 같은 범주로 그룹화됩니다.  
@@ -106,14 +101,14 @@ MFC 라이브러리는 프로그램을 더 쉽게 디버그할 수 있는 많은
 |[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|사용 되지 않는 MFC 함수 사용에 대 한 컴파일러 경고를 표시 하지 않습니다.|  
 
 
-## <a name="afx_secure_no_warnings"></a>_AFX_SECURE_NO_WARNINGS
+## <a name="afx_secure_no_warnings"></a> _AFX_SECURE_NO_WARNINGS
 사용 되지 않는 MFC 함수 사용에 대 한 컴파일러 경고를 표시 하지 않습니다.  
    
 ### <a name="syntax"></a>구문   
 ```  
 _AFX_SECURE_NO_WARNINGS  
 ```     
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  이 코드 샘플 _AFX_SECURE_NO_WARNINGS 정의 되지 않은 경우 컴파일러에서 경고로 인해 합니다.  
   
  ```cpp
@@ -128,7 +123,7 @@ char sz[256];
 pRichEdit->GetSelText(sz);
 ```
 
-## <a name="afxdebugbreak"></a>AfxDebugBreak
+## <a name="afxdebugbreak"></a> AfxDebugBreak
 중단 하려면이 함수를 호출 (위치에 대 한 호출에서 `AfxDebugBreak`) MFC 응용 프로그램의 디버그 버전을 실행 합니다.  
 
 ### <a name="syntax"></a>구문    
@@ -137,7 +132,7 @@ void AfxDebugBreak( );
 ```  
    
 ### <a name="remarks"></a>설명  
- `AfxDebugBreak`MFC 응용 프로그램의 릴리스 버전에서는 아무 효과가 제거 해야 합니다. 이 함수는 MFC 응용 프로그램에만 사용 해야 합니다. Win32 API 버전을 사용 하 여 **DebugBreak**, 비 MFC 응용 프로그램에서 중단이 발생할 수 있습니다.  
+ `AfxDebugBreak` MFC 응용 프로그램의 릴리스 버전에서는 아무 효과가 제거 해야 합니다. 이 함수는 MFC 응용 프로그램에만 사용 해야 합니다. Win32 API 버전을 사용 하 여 **DebugBreak**, 비 MFC 응용 프로그램에서 중단이 발생할 수 있습니다.  
    
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxver_.h   
@@ -167,7 +162,7 @@ ASSERT(booleanExpression)
 > [!NOTE]
 >  이 기능은 MFC의 디버그 버전 에서만 사용할 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities#44](../../mfc/codesnippet/cpp/diagnostic-services_2.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  
@@ -216,7 +211,7 @@ ASSERT_VALID(pObject)
  파생 된 클래스의 개체를 지정 `CObject` 의 재정의 버전을 보유 하는 `AssertValid` 멤버 함수입니다.  
   
 ### <a name="remarks"></a>설명  
- `ASSERT_VALID`호출 된 `AssertValid` 개체의 멤버 함수는 인수로 전달 합니다.  
+ `ASSERT_VALID` 호출 된 `AssertValid` 개체의 멤버 함수는 인수로 전달 합니다.  
   
  MFC의 릴리스 버전에서 `ASSERT_VALID` 는 아무 작업도 수행 합니다. 디버그 버전에서 확인 하 고 포인터에 대 한 검사 **NULL**, 호출 개체의 고유 `AssertValid` 멤버 함수입니다. 경고 메시지와 같은 방식으로 표시 됩니다 테스트 실패에 이러한 경우 [ASSERT](#assert)합니다.  
   
@@ -225,7 +220,7 @@ ASSERT_VALID(pObject)
   
  자세한 내용 및 예제에 대 한 참조 [MFC 응용 프로그램 디버깅](/visualstudio/debugger/mfc-debugging-techniques)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCObjectSample#19](../../mfc/codesnippet/cpp/diagnostic-services_5.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  
@@ -267,13 +262,13 @@ DEBUG_ONLY(expression)
   
  `DEBUG_ONLY` 매크로 주변에 해당 하는 *식* 와 **#ifdef _DEBUG** 및 `#endif`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities#32](../../mfc/codesnippet/cpp/diagnostic-services_6.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afx.h
 
- ### <a name="ensure"></a>확인 및 ENSURE_VALID
+ ### <a name="ensure"></a>  확인 및 ENSURE_VALID
 데이터 정확성의 유효성을 검사 하려면 사용 합니다.  
    
 ### <a name="syntax"></a>구문    
@@ -303,7 +298,7 @@ ENSURE_VALID( booleanExpression  )
  [확인](#verify)   
  [ATLENSURE](#altensure)
 
-## <a name="this_file"></a>THIS_FILE
+## <a name="this_file"></a> THIS_FILE
 컴파일되는 파일의 이름으로 확장 됩니다.  
    
 ### <a name="syntax"></a>구문    
@@ -314,7 +309,7 @@ THIS_FILE
 ### <a name="remarks"></a>설명  
  정보는 사용 되는 **ASSERT** 및 **확인** 매크로입니다. 응용 프로그램 마법사 및 코드 마법사 작성 한 소스 코드 파일에 매크로 배치 합니다.  
    
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
 ```cpp
 #ifdef _DEBUG
 #undef THIS_FILE
@@ -374,13 +369,13 @@ VERIFY(booleanExpression)
   
  MFC의 릴리스 버전에서 **확인** expression을 계산 하지만 인쇄 않거나에 프로그램을 중단 합니다. 예를 들어 식이 함수 호출 이면는 전화 걸 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#198](../../mfc/codesnippet/cpp/diagnostic-services_7.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afx.h
 
-##  <a name="cdumpcontext_in_mfc"></a>afxDump (MFC의 CDumpContext)  
+##  <a name="cdumpcontext_in_mfc"></a>  afxDump (MFC의 CDumpContext)  
  응용 프로그램에서 기본 개체를 덤프 하는 기능을 제공 합니다.  
   
 ```   
@@ -388,20 +383,20 @@ CDumpContext  afxDump;
 ```  
   
 ### <a name="remarks"></a>설명  
- `afxDump`미리 정의 된 [CDumpContext](../../mfc/reference/cdumpcontext-class.md) 보낼 수 있도록 개체 `CDumpContext` 정보 또는 디버그 터미널 디버거 출력 창에 있습니다. 일반적으로 제공 `afxDump` 매개 변수로 `CObject::Dump`합니다.  
+ `afxDump` 미리 정의 된 [CDumpContext](../../mfc/reference/cdumpcontext-class.md) 보낼 수 있도록 개체 `CDumpContext` 정보 또는 디버그 터미널 디버거 출력 창에 있습니다. 일반적으로 제공 `afxDump` 매개 변수로 `CObject::Dump`합니다.  
   
  Windows NT 및 모든 버전의 Windows에서는 아래 `afxDump` 출력은 응용 프로그램을 디버깅할 때 Visual c + + 디버그 출력 창에 전송 됩니다.  
   
  이 변수는 MFC의 디버그 버전에만 정의 됩니다. 대 한 자세한 내용은 `afxDump`, 참조 [MFC 응용 프로그램 디버깅](/visualstudio/debugger/mfc-debugging-techniques)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities#23](../../mfc/codesnippet/cpp/diagnostic-services_8.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afx.h
 
 
-## <a name="afxdump"></a>AfxDump (내부)
+## <a name="afxdump"></a> AfxDump (내부)
 MFC를 사용 하 여 디버깅 하는 동안 개체의 상태를 덤프 내부 함수입니다.  
 
 ### <a name="syntax"></a>구문    
@@ -433,7 +428,7 @@ int  afxMemDF;
 ```  
   
 ### <a name="remarks"></a>설명  
- `afxMemDF`열거형에 지정 된 대로 다음 값을 가질 수 `afxMemDF`:  
+ `afxMemDF` 열거형에 지정 된 대로 다음 값을 가질 수 `afxMemDF`:  
   
 - **allocMemDF** 디버깅 할당자 (디버그 라이브러리의 기본 설정)을 설정 합니다.  
   
@@ -441,7 +436,7 @@ int  afxMemDF;
   
 - **checkAlwaysMemDF** 호출 `AfxCheckMemory` 될 때마다 메모리를 할당 하거나 해제 합니다. 크게 메모리 할당 및 할당 취소 속도가 느려집니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities#30](../../mfc/codesnippet/cpp/diagnostic-services_9.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  
@@ -464,7 +459,7 @@ throw COleException*
 > [!NOTE]
 >  이 함수는 디버그에서 같습니다 및 디버그가 아닌 빌드합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer#33](../../mfc/codesnippet/cpp/diagnostic-services_10.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  
@@ -496,13 +491,13 @@ BOOL  AfxCheckMemory();
   
  이 함수는 MFC의 디버그 버전 에서만에서 작동합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCObjectSample#26](../../mfc/codesnippet/cpp/diagnostic-services_11.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afx.h  
  
-##  <a name="afxdump"></a>AfxDump (MFC)  
+##  <a name="afxdump"></a>  AfxDump (MFC)  
  디버거를 디버깅 하는 동안 개체의 상태를 덤프에 있는 동안이 함수를 호출 합니다.  
   
 ```   
@@ -545,7 +540,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
   
 - **AFX_STACK_DUMP_TARGET_BOTH** 클립보드로 및 출력 보냅니다는 **추적** 매크로 동시에 합니다.  
   
-- **AFX_STACK_DUMP_TARGET_ODS** Win32 함수를 사용 하 여 디버거에 직접 출력을 보내는 **OutputDebugString()**합니다. 이 옵션은 디버그에서 디버거 출력을 생성 하 고 릴리스 빌드 프로세스에 디버거를 연결 합니다. **AFX_STACK_DUMP_TARGET_ODS** 항상 (연결) 하는 경우 디버거 큐에 도달 하 고 리디렉션할 수 없습니다.  
+- **AFX_STACK_DUMP_TARGET_ODS** Win32 함수를 사용 하 여 디버거에 직접 출력을 보내는 **OutputDebugString()** 합니다. 이 옵션은 디버그에서 디버거 출력을 생성 하 고 릴리스 빌드 프로세스에 디버거를 연결 합니다. **AFX_STACK_DUMP_TARGET_ODS** 항상 (연결) 하는 경우 디버거 큐에 도달 하 고 리디렉션할 수 없습니다.  
   
 ### <a name="remarks"></a>설명  
  다음 예제에서는 호출에서 생성 된 출력을 전혀 반영 `AfxDumpStack` MFC 대화 상자 응용 프로그램의 단추 처리기에서:  
@@ -605,7 +600,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 |`void AfxDumpStack(unsigned long)`|함수 프로토타입 호출 됩니다.|  
 |`+ 181 bytes`|함수 프로토타입의 주소에서 바이트에서 오프셋 (이 경우 `void AfxDumpStack(unsigned long)`)에서 반환 주소로 (이 경우 `00427D55`).|  
   
- `AfxDumpStack`MFC 라이브러리;의 디버그 빌드와 버전에서는 사용할 수 그러나 함수는 항상 정적으로 연결, 실행 파일 공유 DLL에서 MFC를 사용 하는 경우에 합니다. 공유 라이브러리 구현에서는 함수는 MFCS42에 있습니다. LIB 라이브러리 (및 그 변형)입니다.  
+ `AfxDumpStack` MFC 라이브러리;의 디버그 빌드와 버전에서는 사용할 수 그러나 함수는 항상 정적으로 연결, 실행 파일 공유 DLL에서 MFC를 사용 하는 경우에 합니다. 공유 라이브러리 구현에서는 함수는 MFCS42에 있습니다. LIB 라이브러리 (및 그 변형)입니다.  
   
  이 함수를 사용 했습니다.  
   
@@ -615,7 +610,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afx.h 
 
-##  <a name="afxenablememoryleakdump"></a>AfxEnableMemoryLeakDump  
+##  <a name="afxenablememoryleakdump"></a>  AfxEnableMemoryLeakDump  
  `AFX_DEBUG_STATE` 소멸자에서 메모리 누수 덤프를 사용하거나 사용하지 않도록 설정합니다.  
   
 ```  
@@ -662,7 +657,7 @@ BOOL AfxEnableMemoryTracking(BOOL bTrack);
 > [!NOTE]
 >  이 함수는 MFC의 디버그 버전 에서만에서 작동합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities#24](../../mfc/codesnippet/cpp/diagnostic-services_12.cpp)]  
   
 ### <a name="requirements"></a>요구 사항  
@@ -694,7 +689,7 @@ BOOL AfxIsMemoryBlock(
 ### <a name="remarks"></a>설명  
  또한 원래 할당 된 크기에 대해 지정된 된 크기를 확인합니다. 함수가 0이 아닌 값을 반환 하는 경우에 할당 순서 번호가 반환 `plRequestNumber`합니다. 이 숫자는 블록은 다른 모든를 기준으로 할당 된 순서를 나타내는 **새** 할당 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities#27](../../mfc/codesnippet/cpp/diagnostic-services_13.cpp)]  
   
 ### <a name="requirements"></a>요구 사항  
@@ -728,7 +723,7 @@ BOOL AfxIsValidAddress(
 ### <a name="remarks"></a>설명  
  주소에 의해 할당 된 블록에 제한 되지 않습니다. **새**합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities#28](../../mfc/codesnippet/cpp/diagnostic-services_14.cpp)]  
   
 ### <a name="requirements"></a>요구 사항  
@@ -755,7 +750,7 @@ BOOL  AfxIsValidString(
   
  디버그가 아닌 빌드에서 경우 0이 아닌 `lpsz` NULL이 고, 그렇지 않으면 0을 않습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities#29](../../mfc/codesnippet/cpp/diagnostic-services_15.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  
@@ -817,7 +812,7 @@ AFXAPI AfxDoForAllClasses(
 > [!NOTE]
 >  이 함수는 MFC의 디버그 버전 에서만에서 작동합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections#113](../../mfc/codesnippet/cpp/diagnostic-services_16.cpp)]  
   
  [!code-cpp[NVC_MFCCollections#114](../../mfc/codesnippet/cpp/diagnostic-services_17.cpp)]  
@@ -847,7 +842,7 @@ void AfxDoForAllObjects(
 > [!NOTE]
 >  이 함수는 MFC의 디버그 버전 에서만에서 작동합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections#115](../../mfc/codesnippet/cpp/diagnostic-services_18.cpp)]  
   
  [!code-cpp[NVC_MFCCollections#116](../../mfc/codesnippet/cpp/diagnostic-services_19.cpp)]  

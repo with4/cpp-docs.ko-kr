@@ -1,13 +1,10 @@
 ---
-title: "부호 있는 정수 형식에서 변환 | Microsoft Docs"
-ms.custom: 
+title: 부호 있는 정수 형식에서 변환 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - data type conversion [C++], signed and unsigned integers
 - type conversion [C++], signed and unsigned integers
 ms.assetid: 5eea32f8-8b14-413d-acac-c063b3d118d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8977c70fc2ebdc6e9fccf22e44a04afaceae1392
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8747f6c1bfde3f076101cc9330d73b1c76c1055b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="conversions-from-signed-integral-types"></a>부호 있는 정수 계열 형식에서 변환
 부호 있는 정수를 크기가 같거나 더 큰 부호 없는 정수로 변환하는데 부호 있는 정수의 값이 음수가 아니면 값이 변경되지 않습니다. 변환은 부호 있는 정수를 부호 확장하여 수행됩니다. 부호 있는 정수는 상위 비트를 잘라 더 짧은 부호 있는 정수로 변환됩니다. 결과는 이 예제에서 볼 수 있는 것과 같이 부호 없는 값으로 해석됩니다.  

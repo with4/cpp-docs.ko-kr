@@ -1,12 +1,9 @@
 ---
-title: "OLE DB에서 트랜잭션 지원 | Microsoft Docs"
-ms.custom: 
+title: OLE DB에서 트랜잭션 지원 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - databases [C++], transactions
 - distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 84849b2d9bfd899a0ffd8a5d8eafe12f91a4adce
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ecd5b7274e62508289a83d6c0420d5f76e239e4d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="supporting-transactions-in-ole-db"></a>OLE DB에서 트랜잭션 지원
 A [트랜잭션](../../data/transactions-mfc-data-access.md) 그룹 또는 일괄 처리는 일련의 데이터 원본에 대 한 업데이트 커밋되지 않으며 (경우 중 하나라도 실패할) 또는 실패 하 고 한 번에 커밋됩니다 모든 되도록 하는 방법 및 전체 트랜잭션이 롤백됩니다. 이 프로세스는 데이터 원본에 대 한 결과의 무결성을 보장 합니다.  

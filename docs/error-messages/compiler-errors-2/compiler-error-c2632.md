@@ -2,11 +2,8 @@
 title: 컴파일러 오류 C2632 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2632
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2632
 ms.assetid: b15a6b1b-42d2-4e1b-8660-e6bfde61052d
-caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03a6d75ab9af6cd45ef982ff9d2e12640266c1b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c3bc07c404a1f4d667045fdfea24009e7d20ad69
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2632"></a>컴파일러 오류 C2632
 'type1' 뒤에 'type2'은 사용할 수 없습니다.  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 int float i;   // C2632  
 ```  
   
- 이 오류는 Visual Studio.NET 2003에 대해 수행한 컴파일러 규칙 작업의 결과로 생성 수 있습니다. `bool`이제는 적절 한 형식이입니다. 이전 버전에서는 `bool` typedef와 였으며 해당 이름의 식별자를 만들 수 있습니다.  
+ 이 오류는 Visual Studio.NET 2003에 대해 수행한 컴파일러 규칙 작업의 결과로 생성 수 있습니다. `bool` 이제는 적절 한 형식이입니다. 이전 버전에서는 `bool` typedef와 였으며 해당 이름의 식별자를 만들 수 있습니다.  
   
  다음 샘플에서는 C2632 오류가 생성 됩니다.  
   

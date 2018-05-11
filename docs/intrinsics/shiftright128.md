@@ -1,12 +1,9 @@
 ---
 title: __shiftright128 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __shiftright128
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - __shiftright128 intrinsic
 ms.assetid: 5419a6c4-0de1-43fb-b314-4faa5b2d051f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 56fbd52709addbba414d6c6fc839baf96f0b2c02
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 393138916bf29fd9adb5dceb0b8612b576b84e76
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="shiftright128"></a>__shiftright128
 **Microsoft 전용**  
@@ -66,7 +61,7 @@ unsigned __int64 __shiftright128(
 ## <a name="remarks"></a>설명  
  `Shift` 값은 항상 64로 나눈 나머지이므로 예를 들어 `__shiftright128(0, 1, 64)`를 호출하면 함수는 상위 부분의 `0`비트를 오른쪽으로 이동하고 일반적인 경우에 반환되는 `0`이 아닌 하위 부분 `1`을 반환합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  예를 들어 참조 [__shiftleft128](../intrinsics/shiftleft128.md)합니다.  
   
 **Microsoft 전용 종료**  

@@ -1,13 +1,10 @@
 ---
-title: "언어 문자열 | Microsoft Docs"
-ms.custom: 
+title: 언어 문자열 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.strings
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85f0c9b06ae85128209f06d95375e09043b3f9c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 92ad129a5703f509cfd9543497cceffae3a6e7b3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="language-strings"></a>Language Strings
 `setlocale` 및 `_create_locale` 함수는 유니코드 코드 페이지를 사용하지 않는 운영 체제에서 Windows NLS API를 지원하는 언어를 사용할 수 있습니다. 운영 체제 버전에서 지원되는 언어 목록은 [NLS(국가별 언어 지원) API 참조](https://www.microsoft.com/resources/msdn/goglobal/default.mspx)를 참조하세요. 언어 문자열은 지원되는 언어 목록의 **언어** 및 **언어 이름 약어** 열에 있는 임의의 값일 수 있습니다. 운영 체제 버전별 언어 지원에 대한 자세한 내용은 [MS-LCID]: Windows LCID(언어 코드 식별자) 참조의 [부록 A: 제품 동작(영문)](http://msdn.microsoft.com/goglobal/bb896001.aspx)을 참조하세요.   

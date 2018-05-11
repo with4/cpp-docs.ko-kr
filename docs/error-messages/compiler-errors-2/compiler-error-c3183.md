@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C3183 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C3183 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3183
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3183
 ms.assetid: dbd0f020-c739-43c9-947e-9ce21537331b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac58735947f7586d3929b4ada6da3e1988b94c9d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4520922550dfcb5050c5e8a122910acf4b124934
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3183"></a>컴파일러 오류 C3183
 WinRT 또는 관리되는 형식 'type' 내부에 명명되지 않은 클래스, 구조체 또는 공용 구조체를 정의할 수 없습니다.  

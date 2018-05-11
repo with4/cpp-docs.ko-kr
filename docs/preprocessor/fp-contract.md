@@ -1,6 +1,6 @@
 ---
 title: fp_contract | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/12/2018
 ms.technology:
 - cpp-tools
@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 15b97338-6680-4287-ba2a-2dccc5b2ccf5
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28c9b6287b71e077a7d91c60d2062b9f7243d103
-ms.sourcegitcommit: eeb2b5ad8d3d22514a7b9bd7d756511b69ae0ccf
+ms.openlocfilehash: 514b4708129d625ea7880e4c61be22c4b1ac2db5
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="fpcontract"></a>fp_contract
 
@@ -45,7 +44,7 @@ ms.lasthandoff: 03/15/2018
 
 - [float_control](../preprocessor/float-control.md)
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 샘플에서 생성 된 코드는 대상 프로세서에서 사용할 수 있는 경우에 fused multiply-add 명령을 사용 하지 않습니다. 주석으로 처리 하는 경우 `#pragma fp_contract (off)`, 사용 가능한 경우 생성된 된 코드 fused multiply-add 명령을 사용할 수 있습니다.  
   
@@ -85,6 +84,6 @@ out = 3.629600000000000e+03
 out = 4.587525000000000e+03
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [Pragma 지시문 및 __Pragma 키워드](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 4) C4754 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 4) C4754 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4754
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae6bad6452e1d119659c8588531c82671d031863
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7f4e42d2e44a55c98abdcd5c3e723e2a9269a1e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4754"></a>컴파일러 경고(수준 4) C4754
 비교에 포함된 산술 연산에 대한 변환 규칙은 하나의 분기를 실행할 수 없음을 의미합니다.  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
  정수 변환 규칙은 복잡하고 많은 미묘한 문제가 있습니다. 각 C4754 경고를 해결 하는 대신, 사용 하도록 코드를 업데이트 하는 [SafeInt 라이브러리](../../windows/safeint-library.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 샘플에서는 C4754 경고가 생성 됩니다.  
   
 ```cpp  
@@ -71,7 +66,7 @@ unsigned long long x =
    (unsigned long long)a + (unsigned long long)b;  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플도 C4754를 생성합니다.  
   
 ```cpp  
@@ -108,7 +103,7 @@ if (a + (unsigned long)sizeof(unsigned long) < a)
   
 ```  
   
- **참고** 컴파일러 경고에서 참조 하는 줄 번호는 문의 마지막 줄. 여러 줄에 걸쳐 있는 복잡한 조건 문에 대한 경고 메시지에서, 코드 결함을 포함하는 줄은 보고된 줄 이전의 여러 줄일 수 있습니다. 예:  
+ **참고** 컴파일러 경고에서 참조 하는 줄 번호는 문의 마지막 줄. 여러 줄에 걸쳐 있는 복잡한 조건 문에 대한 경고 메시지에서, 코드 결함을 포함하는 줄은 보고된 줄 이전의 여러 줄일 수 있습니다. 예를 들어:  
   
 ```cpp  
 unsigned long a;  

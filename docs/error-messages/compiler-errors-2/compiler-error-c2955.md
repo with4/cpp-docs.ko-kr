@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C2955 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C2955 | Microsoft Docs
+ms.custom: ''
 ms.date: 03/28/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2955
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2955
 ms.assetid: 77709fb6-d69b-46fd-a62f-e8564563d01b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ccb8eabf42fdc47b58261633ceb61cf9bc0b15d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 686fb51d1e72f0835a673d00c05ade21a7580515
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2955"></a>컴파일러 오류 C2955
 'identifier' : 클래스 템플릿 또는 별칭 제네릭을 사용하려면 템플릿 또는 제네릭 인수 목록이 필요합니다.  
@@ -82,7 +77,7 @@ int main() {
 }  
 ```
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 **Visual Studio 2017 이상:** 서식 파일 (예를 들어 또는의 일부로 기본 템플릿 인수는 비형식 템플릿 매개 변수) 템플릿 매개 변수 목록에 표시 될 때 올바르게 컴파일러 누락 된 템플릿 인수 목록 진단 합니다. 다음 코드는 Visual Studio 2015에서는 컴파일되지만 Visual Studio 2017에서는 오류를 생성합니다.
 
 ```

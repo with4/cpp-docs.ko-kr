@@ -1,13 +1,10 @@
 ---
-title: "방법: 메이크파일 프로젝트에 IntelliSense 사용 | Microsoft Docs"
-ms.custom: 
+title: '방법: 메이크파일 프로젝트에 IntelliSense 사용 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCNMakeTool.IntelliSense
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - Makefile projects, IntelliSense
 - IntelliSense, Makefile projects
 ms.assetid: 9443f453-f18f-4f12-a9a1-ef9dbf8b188f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fae3ec35259250f71ad672d9468b991033608ae4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9de79d56c6e8b6e496c0e7988ada07ed7595ea70
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-enable-intellisense-for-makefile-projects"></a>방법: 메이크파일 프로젝트에 IntelliSense 사용
 프로젝트 설정, 또는 컴파일러 옵션을 특정 하는 경우 Visual c + + 메이크파일 프로젝트에 대 한 IDE에서 작동 하기 위한 IntelliSense 실패는 잘못 설정 합니다. 메이크파일 프로젝트는 Visual Studio 개발 환경에서 열려 있는 경우 IntelliSense 작동 있도록이 절차를 사용 하 여 Visual c + + 메이크파일 프로젝트를 구성 합니다.  

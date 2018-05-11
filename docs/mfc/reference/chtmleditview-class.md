@@ -1,12 +1,9 @@
 ---
-title: "CHtmlEditView 클래스 | Microsoft Docs"
-ms.custom: 
+title: CHtmlEditView 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHtmlEditView
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98964a48be8b8c36a3d6d5bd708a51b9963ae105
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10f474ce860bf5d9071a93f17654123f4777efa7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView 클래스
 MFC의 문서/뷰 아키텍처 컨텍스트 내에서 WebBrowser 편집 플랫폼의 기능을 제공합니다.  
@@ -82,14 +77,14 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxhtml.h  
   
-##  <a name="chtmleditview"></a>CHtmlEditView::CHtmlEditView  
+##  <a name="chtmleditview"></a>  CHtmlEditView::CHtmlEditView  
  `CHtmlEditView` 개체를 생성합니다.  
   
 ```  
 CHtmlEditView();
 ```  
   
-##  <a name="create"></a>CHtmlEditView::Create  
+##  <a name="create"></a>  CHtmlEditView::Create  
  새 창 개체를 만듭니다.  
   
 ```  
@@ -128,7 +123,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>설명  
  이 메서드에서 포함 된 WebBrowser 호출 또한 **탐색** 기본 문서를 로드 하는 메서드 (참조 [CHtmlEditView::GetStartDocument](#getstartdocument)).  
   
-##  <a name="getdhtmldocument"></a>CHtmlEditView::GetDHtmlDocument  
+##  <a name="getdhtmldocument"></a>  CHtmlEditView::GetDHtmlDocument  
  반환 된 **IHTMLDocument2** 현재 문서에 대 한 인터페이스입니다.  
   
 ```  
@@ -139,7 +134,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
  `ppDocument`  
  [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) 인터페이스입니다.  
   
-##  <a name="getstartdocument"></a>CHtmlEditView::GetStartDocument  
+##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument  
  이 보기에 대 한 기본 문서의 이름을 검색합니다.  
   
 ```  

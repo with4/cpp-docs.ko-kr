@@ -1,13 +1,10 @@
 ---
-title: "DAO 클래스 | Microsoft Docs"
-ms.custom: 
+title: DAO 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.classes.data
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - database classes [MFC], DAO
 - DAO [MFC], classes
 ms.assetid: b15d0cd6-328b-4288-9c19-d037a795db57
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c80351071318b88956fa3717875561bdf30232dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f43595ca5f688372a70999231ceebec5282cd3b6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dao-classes"></a>DAO 클래스
 이러한 클래스는 Microsoft Visual Basic 및 Microsoft Access와 같은 데이터베이스 엔진을 사용 하 여 개체 DAO (Data Access) 데이터베이스에 쉽게 액세스할 수 있도록를 다른 응용 프로그램 프레임 워크 클래스와 함께 작동 합니다. DAO 클래스의 다양 한 데이터베이스 ODBC (Open Connectivity) 드라이버를 사용할 수 있는 데이터베이스 액세스할 수도 있습니다.  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="related-classes"></a>관련된 클래스  
  [CLongBinary](../mfc/reference/clongbinary-class.md)  
- 비트맵과 같은 이진 큰 개체 (BLOB)에 대 한 저장소에 대 한 핸들을 캡슐화합니다. `CLongBinary`개체는 데이터베이스 테이블에 저장 된 큰 데이터 개체를 관리 하는 데 사용 됩니다.  
+ 비트맵과 같은 이진 큰 개체 (BLOB)에 대 한 저장소에 대 한 핸들을 캡슐화합니다. `CLongBinary` 개체는 데이터베이스 테이블에 저장 된 큰 데이터 개체를 관리 하는 데 사용 됩니다.  
   
  [COleCurrency](../mfc/reference/colecurrency-class.md)  
  OLE 자동화 형식에 대 한 래퍼 **통화**, 소수점 앞에 15 자릿수와 뒤에 4 자릿수 고정 소수점 산술 형식인 합니다.  

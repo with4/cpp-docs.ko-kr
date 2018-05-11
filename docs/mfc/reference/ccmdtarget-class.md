@@ -1,12 +1,9 @@
 ---
-title: "CCmdTarget 클래스 | Microsoft Docs"
-ms.custom: 
+title: CCmdTarget 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCmdTarget
@@ -55,17 +52,15 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0bdca1e4193be46a28739b01aed6e26e0e388b13
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b76e4a0c0533ceb0200757f86f332d77c3b39ad
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 클래스
 Microsoft Foundation Class 라이브러리 메시지 맵 아키텍처에 대 한 기본 클래스입니다.  
@@ -115,7 +110,7 @@ class CCmdTarget : public CObject
   
  명령 대상에 대 한 개요 및 `OnCmdMsg` 참조 라우팅 [명령 대상](../../mfc/command-targets.md), [명령 라우팅](../../mfc/command-routing.md), 및 [메시지 매핑](../../mfc/mapping-messages.md)합니다.  
   
- `CCmdTarget`모래 시계 커서의 표시를 처리 하는 멤버 함수를 포함 합니다. 명령을 상당한 시간 간격에 실행을 수행 하는 경우에 모래 시계 커서를 표시 합니다.  
+ `CCmdTarget` 모래 시계 커서의 표시를 처리 하는 멤버 함수를 포함 합니다. 명령을 상당한 시간 간격에 실행을 수행 하는 경우에 모래 시계 커서를 표시 합니다.  
   
  디스패치 맵, 메시지 맵 비슷합니다, OLE 자동화를 노출 하는 데 사용 된 `IDispatch` 기능입니다. 이 인터페이스를 노출 시 킴으로써 다른 응용 프로그램 (예: Visual Basic) 응용 프로그램를 호출할 수 있습니다.  
   
@@ -127,7 +122,7 @@ class CCmdTarget : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="beginwaitcursor"></a>CCmdTarget::BeginWaitCursor  
+##  <a name="beginwaitcursor"></a>  CCmdTarget::BeginWaitCursor  
  명령을 상당한 시간 간격에 실행을 수행 하는 경우 커서 모래시계로 표시 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -141,17 +136,17 @@ void BeginWaitCursor();
   
  호출 `EndWaitCursor` 이전 커서를 복원 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]  
   
-##  <a name="ccmdtarget"></a>CCmdTarget::CCmdTarget  
+##  <a name="ccmdtarget"></a>  CCmdTarget::CCmdTarget  
  `CCmdTarget` 개체를 생성합니다.  
   
 ```  
 CCmdTarget();
 ```  
   
-##  <a name="dooleverb"></a>CCmdTarget::DoOleVerb  
+##  <a name="dooleverb"></a>  CCmdTarget::DoOleVerb  
  OLE 동사를 수행 하 여 지정 된 동작이 발생 합니다.  
   
 ```  
@@ -181,7 +176,7 @@ BOOL DoOleVerb(
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 기본적으로 구현의 [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508)합니다. 가능한 작업 열거 하는 [CCmdTarget::EnumOleVerbs](#enumoleverbs)합니다.  
   
-##  <a name="enableautomation"></a>CCmdTarget::EnableAutomation  
+##  <a name="enableautomation"></a>  CCmdTarget::EnableAutomation  
  OLE 자동화 개체를 사용 하도록 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -191,7 +186,7 @@ void EnableAutomation();
 ### <a name="remarks"></a>설명  
  이 함수는 일반적으로 개체의 생성자에서 호출 되 고 디스패치 맵 클래스에 대해 선언 된 경우에 호출 해야 합니다. 자동화에 대 한 자세한 내용은 문서를 참조 [자동화 클라이언트](../../mfc/automation-clients.md) 및 [자동화 서버](../../mfc/automation-servers.md)합니다.  
   
-##  <a name="enableconnections"></a>CCmdTarget::EnableConnections  
+##  <a name="enableconnections"></a>  CCmdTarget::EnableConnections  
  연결 지점을 통해 이벤트 발생할을 수 있습니다.  
   
 ```  
@@ -201,7 +196,7 @@ void EnableConnections();
 ### <a name="remarks"></a>설명  
  연결점을 사용 하려면 파생된 클래스의 생성자에서이 함수를 호출 합니다.  
   
-##  <a name="enabletypelib"></a>CCmdTarget::EnableTypeLib  
+##  <a name="enabletypelib"></a>  CCmdTarget::EnableTypeLib  
  개체의 형식 라이브러리를 사용 하도록 설정 합니다.  
   
 ```  
@@ -209,9 +204,9 @@ void EnableTypeLib();
 ```  
   
 ### <a name="remarks"></a>설명  
- 생성자에서이 함수를 호출 하면 `CCmdTarget`-형식 정보를 제공 하는 경우 파생 된 개체입니다. 자세한 내용은 Q185720, 기술 자료 문서를 참조 하십시오. "방법: MFC 자동화 서버에서 형식 정보를 제공 합니다." 기술 자료 문서에서 사용할 수 있는 [http://support.microsoft.com](http://support.microsoft.com/)합니다.  
+ 생성자에서이 함수를 호출 하면 `CCmdTarget`-형식 정보를 제공 하는 경우 파생 된 개체입니다. 자세한 내용은 Q185720, 기술 자료 문서를 참조 하십시오. "방법: MFC 자동화 서버에서 형식 정보를 제공 합니다." 기술 자료 문서에서 사용할 수 있는 [ http://support.microsoft.com ](http://support.microsoft.com/)합니다.  
   
-##  <a name="endwaitcursor"></a>CCmdTarget::EndWaitCursor  
+##  <a name="endwaitcursor"></a>  CCmdTarget::EndWaitCursor  
  이 함수를 호출한 후 호출 된 `BeginWaitCursor` 이전 커서 모래 시계 커서에서 반환할 멤버 함수입니다.  
   
 ```  
@@ -221,10 +216,10 @@ void EndWaitCursor();
 ### <a name="remarks"></a>설명  
  프레임 워크는 또한 모래 시계 커서를 호출한 후이 멤버 함수를 호출 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]  
   
-##  <a name="enumoleverbs"></a>CCmdTarget::EnumOleVerbs  
+##  <a name="enumoleverbs"></a>  CCmdTarget::EnumOleVerbs  
  개체의 OLE 동사를 열거합니다.  
   
 ```  
@@ -241,7 +236,7 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 기본적으로 구현의 [IOleObject::EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781)합니다.  
   
-##  <a name="fromidispatch"></a>CCmdTarget::FromIDispatch  
+##  <a name="fromidispatch"></a>  CCmdTarget::FromIDispatch  
  매핑할이 함수를 호출는 `IDispatch` 에 클래스의 자동화 멤버 함수에서 받은 포인터는 `CCmdTarget` 의 인터페이스를 구현 하는 개체는 `IDispatch` 개체입니다.  
   
 ```  
@@ -258,7 +253,7 @@ static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
 ### <a name="remarks"></a>설명  
  이 함수의 결과 멤버 함수에 대 한 호출의 역 `GetIDispatch`합니다.  
   
-##  <a name="getdispatchiid"></a>CCmdTarget::GetDispatchIID  
+##  <a name="getdispatchiid"></a>  CCmdTarget::GetDispatchIID  
  기본 디스패치 인터페이스 ID를 가져옵니다.  
   
 ```  
@@ -275,9 +270,9 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="remarks"></a>설명  
  파생된 클래스에서이 멤버 함수를 재정의 해야 (재정의 되지 않으면 `GetDispatchIID` FALSE를 반환 합니다). 참조 [COleControl](../../mfc/reference/colecontrol-class.md)합니다.  
   
- 자세한 내용은 Q185720, 기술 자료 문서를 참조 하십시오. "방법: MFC 자동화 서버에서 형식 정보를 제공 합니다." 기술 자료 문서에서 사용할 수 있는 [http://support.microsoft.com](http://support.microsoft.com/)합니다.  
+ 자세한 내용은 Q185720, 기술 자료 문서를 참조 하십시오. "방법: MFC 자동화 서버에서 형식 정보를 제공 합니다." 기술 자료 문서에서 사용할 수 있는 [ http://support.microsoft.com ](http://support.microsoft.com/)합니다.  
   
-##  <a name="getidispatch"></a>CCmdTarget::GetIDispatch  
+##  <a name="getidispatch"></a>  CCmdTarget::GetIDispatch  
  검색 하려면이 멤버 함수를 호출는 `IDispatch` 포인터 반환 하나라도 자동화 메서드에서 `IDispatch` 포인터 또는 하나는 `IDispatch` 참조로 포인터입니다.  
   
 ```  
@@ -294,7 +289,7 @@ LPDISPATCH GetIDispatch(BOOL bAddRef);
 ### <a name="remarks"></a>설명  
  에 대 한 호출 하는 개체 `EnableAutomation` 대 한 포인터의 기본 클래스 구현에이 함수를 사용 하는 자동화 하므로 해당 생성자에 반환 `IDispatch` 를 통해 통신 하는 클라이언트가 사용 하는 `IDispatch` 인터페이스입니다. 이 함수를 자동으로 호출 때문에 대 한 호출을 만들 필요가 없습니다 포인터에 대 한 참조를 추가 [iunknown:: Addref](http://msdn.microsoft.com/library/windows/desktop/ms691379)합니다.  
   
-##  <a name="gettypeinfocount"></a>CCmdTarget::GetTypeInfoCount  
+##  <a name="gettypeinfocount"></a>  CCmdTarget::GetTypeInfoCount  
  개체에서 제공 하는 형식 정보 인터페이스의 수를 검색 합니다.  
   
 ```  
@@ -309,7 +304,7 @@ virtual UINT GetTypeInfoCount();
   
  파생된 클래스에는 (0 또는 1)를 제공 하는 형식 정보 인터페이스의 수를 반환 하려면이 함수를 재정의 해야 합니다. 재정의 되지 않으면 **GetTypeInfoCount** 0을 반환 합니다. 를 무시 하려면는 [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) 도 구현 하는 매크로 `GetTypeLib` 및 `GetTypeLibCache`합니다.  
   
-##  <a name="gettypeinfoofguid"></a>CCmdTarget::GetTypeInfoOfGuid  
+##  <a name="gettypeinfoofguid"></a>  CCmdTarget::GetTypeInfoOfGuid  
  지정된 된 GUID에 해당 하는 형식 설명을 검색 합니다.  
   
 ```  
@@ -332,7 +327,7 @@ HRESULT GetTypeInfoOfGuid(
 ### <a name="return-value"></a>반환 값  
  호출의 성공 여부를 나타내는 HRESULT입니다. 성공 하면 * `ppTypeInfo` 형식 정보 인터페이스를 가리킵니다.  
   
-##  <a name="gettypelib"></a>CCmdTarget::GetTypeLib  
+##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
  형식 라이브러리에 대 한 포인터를 가져옵니다.  
   
 ```  
@@ -354,7 +349,7 @@ virtual HRESULT GetTypeLib(
 ### <a name="remarks"></a>설명  
  파생된 클래스에서이 멤버 함수를 재정의 해야 (재정의 되지 않으면 `GetTypeLib` TYPE_E_CANTLOADLIBRARY 반환). 사용 하 여는 [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) 도 구현 하는 매크로 `GetTypeInfoCount` 및 `GetTypeLibCache`합니다.  
   
-##  <a name="gettypelibcache"></a>CCmdTarget::GetTypeLibCache  
+##  <a name="gettypelibcache"></a>  CCmdTarget::GetTypeLibCache  
  형식 라이브러리 캐시를 가져옵니다.  
   
 ```  
@@ -367,7 +362,7 @@ virtual CTypeLibCache* GetTypeLibCache();
 ### <a name="remarks"></a>설명  
  파생된 클래스에서이 멤버 함수를 재정의 해야 (재정의 되지 않으면 **GetTypeLibCache** NULL을 반환). 사용 하 여는 [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) 도 구현 하는 매크로 `GetTypeInfoCount` 및 `GetTypeLib`합니다.  
   
-##  <a name="isinvokeallowed"></a>CCmdTarget::IsInvokeAllowed  
+##  <a name="isinvokeallowed"></a>  CCmdTarget::IsInvokeAllowed  
  MFC의 구현에 의해 호출 되는이 함수 **idispatch:: Invoke** 경우 지정 된 자동화 메서드를 확인 하려면 (로 식별 `dispid`) 호출할 수 있습니다.  
   
 ```  
@@ -386,7 +381,7 @@ virtual BOOL IsInvokeAllowed(DISPID dispid);
   
  파생된 클래스에서 적절 한 값을 반환 하려면이 함수를 재정의할 수 (재정의 되지 않으면 `IsInvokeAllowed` TRUE 반환). 특히 참조 [COleControl::IsInvokeAllowed](../../mfc/reference/colecontrol-class.md#isinvokeallowed)합니다.  
   
-##  <a name="isresultexpected"></a>CCmdTarget::IsResultExpected  
+##  <a name="isresultexpected"></a>  CCmdTarget::IsResultExpected  
  사용 하 여 `IsResultExpected` 클라이언트 자동화 기능에 대 한 호출에서 반환 값이 필요한 지 여부를 확인 합니다.  
   
 ```  
@@ -401,9 +396,9 @@ BOOL IsResultExpected();
   
  이 함수를 호출 하기 자동화 함수에서 하는 경우 다른 자동화 함수에서 유효한 반환 값을 받이 됩니다 수 있도록 클라이언트가 호출 한 번만 0을 반환 합니다.  
   
- `IsResultExpected`자동화 함수 호출이 진행 중이 될 때 호출 하는 경우 0이 아닌 값을 반환 합니다.  
+ `IsResultExpected` 자동화 함수 호출이 진행 중이 될 때 호출 하는 경우 0이 아닌 값을 반환 합니다.  
   
-##  <a name="oncmdmsg"></a>CCmdTarget::OnCmdMsg  
+##  <a name="oncmdmsg"></a>  CCmdTarget::OnCmdMsg  
  명령은 사용자 인터페이스 개체 업데이트를 처리 하 고 라우팅하고 명령 메시지를 디스패치하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -447,12 +442,12 @@ virtual BOOL OnCmdMsg(
 |CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)*|  
 |CN_OLE_UNREGISTER|NULL|  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#44](../../mfc/codesnippet/cpp/ccmdtarget-class_2.cpp)]  
   
  [!code-cpp[NVC_MFCDocView#45](../../mfc/codesnippet/cpp/ccmdtarget-class_3.cpp)]  
   
-##  <a name="onfinalrelease"></a>CCmdTarget::OnFinalRelease  
+##  <a name="onfinalrelease"></a>  CCmdTarget::OnFinalRelease  
  개체로 / 로부터 마지막 OLE 참조가 해제 될 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -462,14 +457,14 @@ virtual void OnFinalRelease();
 ### <a name="remarks"></a>설명  
  이러한 상황에 대 한 특수 처리를 제공 하려면이 함수를 재정의 합니다. 기본 구현에서 개체를 삭제합니다.  
   
-##  <a name="restorewaitcursor"></a>CCmdTarget::RestoreWaitCursor  
+##  <a name="restorewaitcursor"></a>  CCmdTarget::RestoreWaitCursor  
  시스템 커서 (예를 들어 메시지 상자는 열린 후 닫으면 시간이 오래 걸리는 작업 중에) 변경 된 후 적절 한 모래 시계 커서를 복원 하려면이 함수를 호출 합니다.  
   
 ```  
 void RestoreWaitCursor();
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

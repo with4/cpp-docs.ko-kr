@@ -1,13 +1,10 @@
 ---
-title: "TN017: 창 개체 제거 | Microsoft Docs"
-ms.custom: 
+title: 'TN017: 창 개체 제거 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.objects
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - TN017
 - PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d9aa4cabaafd4eebc3a0fb0b0023a82d446d74a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c6bba255403d31e7a1fa03febb0c760d20cdc81c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn017-destroying-window-objects"></a>TN017: 창 개체 제거
 사용을 설명 하는이 노트는 [CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) 메서드. 사용자 지정 자동으로 할당 하려는 경우이 메서드를 사용 하 여 `CWnd`-파생 개체입니다. 이 노트도 사용 하는 이유 설명 [CWnd::DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) 대신 c + + Windows 개체를 제거 하는 `delete` 연산자입니다.  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
  두 번째 경우, 사용 된 `delete` Windows 개체에 연산자는 거의 발생 하지 않아야 합니다. 다음은 사용 하는 경우에 따라 `delete` 올바른 선택입니다.  
   
 ## <a name="auto-cleanup-with-cwndpostncdestroy"></a>CWnd::PostNcDestroy와 자동 정리  
- 창에 전송 마지막 Windows 메시지는 Windows 창을 제거 하는 시스템 때 `WM_NCDESTROY`합니다. 기본 `CWnd` 해당 메시지에 대 한 처리기는 [:: Onncdestroy](../mfc/reference/cwnd-class.md#onncdestroy)합니다. `OnNcDestroy`분리 됩니다는 `HWND` 가상 함수를 호출 하 고 개체는 c + +에서 `PostNcDestroy`합니다. 일부 클래스는 c + + 개체를 삭제 하려면이 함수를 재정의 합니다.  
+ 창에 전송 마지막 Windows 메시지는 Windows 창을 제거 하는 시스템 때 `WM_NCDESTROY`합니다. 기본 `CWnd` 해당 메시지에 대 한 처리기는 [:: Onncdestroy](../mfc/reference/cwnd-class.md#onncdestroy)합니다. `OnNcDestroy` 분리 됩니다는 `HWND` 가상 함수를 호출 하 고 개체는 c + +에서 `PostNcDestroy`합니다. 일부 클래스는 c + + 개체를 삭제 하려면이 함수를 재정의 합니다.  
   
  기본 구현은 `CWnd::PostNcDestroy` 아무 것도 수행 된 스택 프레임에 할당 된 파일이 나 다른 개체에 포함 된 창 개체에 대 한 적합 합니다. 다른 개체가 없는 힙에 할당 하도록 설계 된 창 개체에 대 한 적합 하지 않습니다. 즉, 다른 c + + 개체에 포함 되지 않는 창 개체에 대 한 적합 하지 않습니다.  
   

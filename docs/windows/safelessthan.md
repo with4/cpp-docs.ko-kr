@@ -1,13 +1,10 @@
 ---
 title: SafeLessThan | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeLessThan
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeLessThan function
 ms.assetid: 9d85bc0d-8d94-4d59-9b72-ef3c63a120a0
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4c490f02f6c27d517095ab3f75a31bb03fe14f63
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ed6f114d13b006425cd3e94e898b2fe924ec732d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safelessthan"></a>SafeLessThan
 한 숫자가 다른 노드보다 작은지 여부를 결정 합니다.  
@@ -49,7 +44,7 @@ inline bool SafeLessThan (
  두 번째 번호입니다. U 형식이어야 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true`경우 `t` 는 보다 작은 `u`고, 그렇지 않으면 `false`합니다.  
+ `true` 경우 `t` 는 보다 작은 `u`고, 그렇지 않으면 `false`합니다.  
   
 ## <a name="remarks"></a>설명  
  때문에이 메서드는 표준 비교 연산자를 향상 `SafeLessThan` 을 두 가지 다른 형식의 숫자를 비교할 수 있습니다.  

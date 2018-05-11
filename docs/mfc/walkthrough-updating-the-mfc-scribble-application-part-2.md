@@ -1,34 +1,29 @@
 ---
-title: "연습: MFC 자유 곡선 응용 프로그램 (2 부) 업데이트 | Microsoft Docs"
-ms.custom: 
+title: '연습: MFC 자유 곡선 응용 프로그램 (2 부) 업데이트 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 861e0b1f76fcd441ccf5da8f56d5c5dcb23a2b8d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eae1dd3c1662aafb6b52d2ecb821e073adc0bfd5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>연습: MFC 자유 곡선 응용 프로그램 업데이트(파트 2)
 [1 부](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) 자유 곡선 응용 프로그램이 연습을 기본 Office Fluent 리본 메뉴를 추가 하는 방법에 설명 했습니다. 이 부분에는 리본 패널 및 메뉴 및 명령을 대신 사용자가 사용할 수 있는 컨트롤을 추가 하는 방법을 보여 줍니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  [Visual C++ 샘플](../visual-cpp-samples.md)  
   
 ##  <a name="top"></a> 섹션  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 - [펜을 초기화 하 고 저장 환경](#initpensave)  
   
-##  <a name="addnewpanel"></a>리본 메뉴에 새 패널 추가  
+##  <a name="addnewpanel"></a> 리본 메뉴에 새 패널 추가  
  이러한 단계에 추가 하는 방법을 보여 줍니다는 **보기** 도구 모음 및 상태 표시줄의 표시 유형을 제어 하는 확인란이 두 개 포함 된 패널 및는 **창** 세로 방향된 분할 포함 된 패널 생성 및 다중 문서 인터페이스 (mdi 다중) 창 배열을 제어 하는 단추입니다.  
   
 #### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>리본 표시줄에 뷰 패널 및 창 패널을 추가 하려면  
@@ -81,7 +76,7 @@ ms.lasthandoff: 12/21/2017
   
  [[섹션](#top)]  
   
-##  <a name="addhelppanel"></a>리본에 도움말 패널 추가  
+##  <a name="addhelppanel"></a> 리본에 도움말 패널 추가  
  명명 된 리본 단추에 자유 곡선 응용 프로그램에 정의 되어 있는 두 개의 메뉴 항목을 할당할 수 이제 **도움말 항목** 및 **에 대 한 자유 곡선**합니다. 라는 새 패널에 단추가 추가 됩니다 **도움말**합니다.  
   
 #### <a name="to-add-a-help-panel"></a>도움말 패널을 추가 하려면  
@@ -101,7 +96,7 @@ ms.lasthandoff: 12/21/2017
   
  [[섹션](#top)]  
   
-##  <a name="addpenpanel"></a>리본에 펜 패널 추가  
+##  <a name="addpenpanel"></a> 리본에 펜 패널 추가  
  이제 추가 펜의 색 및 두께 제어 하는 단추가 표시할 패널입니다. 이 패널 굵은 /가 펜을 전환 하는 확인란을 포함 합니다. 기능의 구문과 유사 합니다는 **두꺼운 선** 자유 곡선 응용 프로그램에서 메뉴 항목입니다.  
   
  원래 Scribble 응용 프로그램 사용자가 클릭할 때 표시 되는 대화 상자에서 펜 너비를 선택할 수 있습니다. **펜 너비** 메뉴. 리본 표시줄 새 컨트롤에 대 한 충분 한 공간을 사용 하므로 리본 메뉴에서 두 개의 콤보 상자를 사용 하 여 대화 상자를 바꿀 수 있습니다. 씬 펜의 너비를 조정 하는 하나의 콤보 상자 및 콤보 상자 굵게 펜의 너비를 조정 합니다.  
@@ -177,7 +172,7 @@ if (nCurSel>= 0)
   
  [[섹션](#top)]  
   
-##  <a name="addcolorbutton"></a>펜 패널에 색 단추를 추가합니다.  
+##  <a name="addcolorbutton"></a> 펜 패널에 색 단추를 추가합니다.  
  다음에 추가 [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md) 사용자 수 있는 개체 컬러로 scribble 합니다.  
   
 #### <a name="to-add-a-color-button-to-the-pen-panel"></a>펜 패널에 색 단추를 추가 하려면  
@@ -192,8 +187,8 @@ if (nCurSel>= 0)
   
  [[섹션](#top)]  
   
-##  <a name="addcolormember"></a>문서 클래스에 색 멤버 추가  
- 원래 Scribble 응용 프로그램에 컬러 펜이 없기 때문에 구현을 작성 해야 합니다. 펜 색입니다. 문서를 저장 하기 위해 문서 클래스에 새 멤버 추가`CscribbleDoc.`  
+##  <a name="addcolormember"></a> 문서 클래스에 색 멤버 추가  
+ 원래 Scribble 응용 프로그램에 컬러 펜이 없기 때문에 구현을 작성 해야 합니다. 펜 색입니다. 문서를 저장 하기 위해 문서 클래스에 새 멤버 추가 `CscribbleDoc.`  
   
 #### <a name="to-add-a-color-member-to-the-document-class"></a>문서 클래스에 색 구성원을 추가 하려면  
   
@@ -289,7 +284,7 @@ ASSERT_VALID(pRibbon);
   
  [[섹션](#top)]  
   
-##  <a name="initpensave"></a>펜을 초기화 하 고 저장 환경  
+##  <a name="initpensave"></a> 펜을 초기화 하 고 저장 환경  
  다음으로, 색 및 펜의 너비를 초기화 합니다. 마지막으로 저장 하 고 파일에서 그리기 색을 로드 합니다.  
   
 #### <a name="to-initialize-controls-on-the-ribbon-bar"></a>리본 표시줄에 컨트롤을 초기화  
@@ -298,7 +293,7 @@ ASSERT_VALID(pRibbon);
   
      scribdoc.cpp에 다음 코드를 추가 `CScribbleDoc::InitDocument` 메서드 이후에 `m_sizeDoc = CSize(200,200)` 문.  
   
- ```*/ UI 리본 CMFCRibbonBar 해당 초기 값으로 다시 설정 /* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd()) GetRibbonBar();-> ASSERT_VALID(pRibbon);
+ ``` *UI 리본 CMFCRibbonBar 해당 초기 값으로 다시 설정* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd()) GetRibbonBar();-> ASSERT_VALID(pRibbon);
 
  CMFCRibbonColorButton pColorBtn = DYNAMIC_DOWNCAST (CMFCRibbonColorButton, pRibbon-> FindByID(ID_PEN_COLOR)); * / 설정 / 검정색으로 ColorButton  
     pColorBtn SetColor RGB ((0, 0, 0));->

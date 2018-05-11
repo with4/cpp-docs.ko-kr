@@ -1,13 +1,10 @@
 ---
-title: "방법: PInvoke를 사용 하 여 배열 마샬링 | Microsoft Docs"
-ms.custom: 
+title: '방법: PInvoke를 사용 하 여 배열 마샬링 | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,23 +13,21 @@ helpviewer_keywords:
 - interop [C++], arrays
 - data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 50ff0e0a6e61b3c2c691296f92f6ad471a3007e9
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 03e3cf184828c33c63c5252344eb0041640729cb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-marshal-arrays-using-pinvoke"></a>방법: PInvoke를 사용하여 배열 마샬링
 이 항목에서는 CLR 문자열 형식을 사용 하 여 C 스타일 문자열을 호출할 수를 허용 하는 방법을 네이티브 함수를 설명 <xref:System.String> 지원.NET Framework 플랫폼 호출을 사용 하 여 합니다. Visual c + + 프로그래머는 P/Invoke는 작은 컴파일 타임 오류를 보고, 형식 안전 하지 않은 및는 것을 제공 하므로 (가능한 경우) 대신 c + + Interop 기능을 사용 하는 것이 좋습니다. P/Invoke 유일한 옵션은 관리 되지 않는 API는 DLL로 패키지 하는 경우 소스 코드를 사용할 수 없습니다 (그렇지 않은 경우 참조 [c + + Interop를 사용 하 여 (암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)).  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  네이티브 및 관리 되는 배열은 메모리에 다른 방식으로 배치 된, 때문에 변환 중 하나 또는 마샬링 필요는 관리 되 는/관리 되지 않는 경계를 넘어 성공적으로 전달 합니다. 이 항목에서는 관리 코드에서 네이티브 함수에 단순 (blitable) 항목의 배열에 전달 하는 방법  
   
  관리 되 는/관리 되지 않는 데이터는 일반적으로 마샬링 true 인는 <xref:System.Runtime.InteropServices.DllImportAttribute> 특성이 사용 되는 각 네이티브 함수에 대 한 관리 되는 진입점을 만드는 데 사용 됩니다. 배열을 인수로 사용 하는 함수의 경우는 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성 데이터를 마샬링하는 방법을 지정할 컴파일러에도 사용할 수 있습니다. 다음 예제에서는 <xref:System.Runtime.InteropServices.UnmanagedType> 열거형 관리 되는 배열의 C 스타일 배열로 마샬링하 나타내는 데 사용 됩니다.  

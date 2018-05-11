@@ -1,26 +1,21 @@
 ---
-title: "Platform::Collections::UnorderedMap 클래스 | Microsoft Docs"
-ms.custom: 
+title: Platform::Collections::UnorderedMap 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 248b25e61af0ce766c81d480d7ebf39618a8dfec
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: fbc1905023f64c4983cf041eda244b28ce507abc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap 클래스
 
@@ -91,7 +86,7 @@ ref class Map sealed;
 
 |||
 |-|-|
-|name|설명|
+|이름|설명|
 |[Map:: mapchanged](#mapchanged) 이벤트|Map이 변경될 때 발생합니다.|
 
 ## <a name="inheritance-hierarchy"></a>상속 계층
@@ -370,7 +365,7 @@ UnorderedMap(
 *last*  
 현재 UnorderedMap을 초기화하는 데 사용되는 요소 범위 다음의 첫 번째 요소의 입력 반복기입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [플랫폼 Namespace](platform-namespace-c-cx.md)  
 [Platform::Collections 네임스페이스](../cppcx/platform-collections-namespace.md)  

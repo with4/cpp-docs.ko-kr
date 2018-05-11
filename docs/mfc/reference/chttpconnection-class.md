@@ -1,12 +1,9 @@
 ---
-title: "CHttpConnection 클래스 | Microsoft Docs"
-ms.custom: 
+title: CHttpConnection 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHttpConnection
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - CHttpConnection [MFC], CHttpConnection
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a5236a4a957c742074a1305ba2d4359da3ed967
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 808c88e3a98df12d35afa9ce207f57456520b169
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection 클래스
 HTTP 서버와의 연결을 관리합니다.  
@@ -74,7 +69,7 @@ class CHttpConnection : public CInternetConnection
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxinet.h  
   
-##  <a name="chttpconnection"></a>CHttpConnection::CHttpConnection  
+##  <a name="chttpconnection"></a>  CHttpConnection::CHttpConnection  
  이 멤버 함수를 생성 하 라고 하는 `CHttpConnection` 개체입니다.  
   
 ```  
@@ -128,7 +123,7 @@ CHttpConnection(
   
 |`pstrUserName`|`pstrPassword`|FTP 서버에 전송 하는 사용자 이름|FTP 서버에 전송 하는 암호|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
-|**NULL** 또는 ""|**NULL** 또는 ""|"익명"|사용자의 전자 메일 이름|  
+|**NULL** 또는 ""|**NULL** 또는 ""|"anonymous"|사용자의 전자 메일 이름|  
 |비- **NULL** 문자열|**NULL** 또는 ""|`pstrUserName`|" "|  
 |**NULL** 비- **NULL** 문자열|**오류**|**오류**||  
 |비- **NULL** 문자열|비- **NULL** 문자열|`pstrUserName`|`pstrPassword`|  
@@ -139,7 +134,7 @@ CHttpConnection(
 ### <a name="remarks"></a>설명  
  만들지 마십시오는 `CHttpConnection` 직접 합니다. 대신, 호출 하 여 개체를 만들면 [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)합니다.  
   
-##  <a name="openrequest"></a>CHttpConnection::OpenRequest  
+##  <a name="openrequest"></a>  CHttpConnection::OpenRequest  
  HTTP 연결을 열려면 이 멤버 함수를 호출합니다.  
   
 ```  

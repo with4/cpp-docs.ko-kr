@@ -1,12 +1,9 @@
 ---
-title: "COleTemplateServer 클래스 | Microsoft Docs"
-ms.custom: 
+title: COleTemplateServer 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleTemplateServer
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4bf5f696eeff3e4e26a9d77714c0d5a6f093aaa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 90b24d65dbd6f800dda0b25088288bee6fdcf3c2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer 클래스
 OLE 비주얼 편집 서버, 자동화 서버 및 링크 컨테이너(포함에 대한 링크를 지원하는 응용 프로그램)에 사용합니다.  
@@ -61,9 +56,9 @@ class COleTemplateServer : public COleObjectFactory
 |[COleTemplateServer::UpdateRegistry](#updateregistry)|문서 형식을 OLE 시스템 레지스트리에 등록합니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 클래스는 클래스에서 파생 된 [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); 일반적으로 사용할 수 있습니다 `COleTemplateServer` 사용자 고유의 클래스를 파생 하는 대신 직접 합니다. `COleTemplateServer`사용 하 여 한 [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) 서버 문서를 관리 하는 개체입니다. 사용 하 여 `COleTemplateServer` 전체 서버, 즉, 독립 실행형 응용 프로그램으로 실행할 수 있는 서버를 구현 하는 경우. 단일 문서 SDI (인터페이스) 응용 프로그램 지원 되기는 하지만 전체 서버는 일반적으로 여러 문서 MDI (인터페이스) 응용 프로그램입니다. 하나의 `COleTemplateServer` 응용 프로그램이 지 원하는 서버 문서의 각 유형에 대해 개체가 필요. 즉, 서버 응용 프로그램이 모두 워크시트 및 차트를 지 원하는 경우 여야 두 `COleTemplateServer` 개체입니다.  
+ 이 클래스는 클래스에서 파생 된 [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); 일반적으로 사용할 수 있습니다 `COleTemplateServer` 사용자 고유의 클래스를 파생 하는 대신 직접 합니다. `COleTemplateServer` 사용 하 여 한 [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) 서버 문서를 관리 하는 개체입니다. 사용 하 여 `COleTemplateServer` 전체 서버, 즉, 독립 실행형 응용 프로그램으로 실행할 수 있는 서버를 구현 하는 경우. 단일 문서 SDI (인터페이스) 응용 프로그램 지원 되기는 하지만 전체 서버는 일반적으로 여러 문서 MDI (인터페이스) 응용 프로그램입니다. 하나의 `COleTemplateServer` 응용 프로그램이 지 원하는 서버 문서의 각 유형에 대해 개체가 필요. 즉, 서버 응용 프로그램이 모두 워크시트 및 차트를 지 원하는 경우 여야 두 `COleTemplateServer` 개체입니다.  
   
- `COleTemplateServer`재정의 `OnCreateInstance` 멤버 함수에 정의 된 `COleObjectFactory`합니다. 이 멤버 함수는 올바른 형식의 c + + 개체를 만드는 프레임 워크에서 호출 됩니다.  
+ `COleTemplateServer` 재정의 `OnCreateInstance` 멤버 함수에 정의 된 `COleObjectFactory`합니다. 이 멤버 함수는 올바른 형식의 c + + 개체를 만드는 프레임 워크에서 호출 됩니다.  
   
  서버에 대 한 자세한 내용은 문서 참조 [서버: 서버 구현](../../mfc/servers-implementing-a-server.md)합니다.  
   
@@ -79,7 +74,7 @@ class COleTemplateServer : public COleObjectFactory
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h  
   
-##  <a name="coletemplateserver"></a>COleTemplateServer::COleTemplateServer  
+##  <a name="coletemplateserver"></a>  COleTemplateServer::COleTemplateServer  
  `COleTemplateServer` 개체를 생성합니다.  
   
 ```  
@@ -89,7 +84,7 @@ COleTemplateServer();
 ### <a name="remarks"></a>설명  
  용도 대 한 간단한 설명을 `COleTemplateServer` 클래스를 참조 하십시오.는 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md) 클래스 개요입니다.  
   
-##  <a name="connecttemplate"></a>COleTemplateServer::ConnectTemplate  
+##  <a name="connecttemplate"></a>  COleTemplateServer::ConnectTemplate  
  문서 서식 파일에서 가리키는 연결 `pDocTemplate` 기본 [COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md) 개체입니다.  
   
 ```  
@@ -112,7 +107,7 @@ void ConnectTemplate(
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [CLSID 키](http://msdn.microsoft.com/library/windows/desktop/ms691424) Windows sdk에서입니다.  
   
-##  <a name="unregister"></a>COleTemplateServer::Unregister  
+##  <a name="unregister"></a>  COleTemplateServer::Unregister  
  관련된 문서 서식 파일을 등록 취소합니다.  
   
 ```  
@@ -125,7 +120,7 @@ BOOL Unregister();
 ### <a name="remarks"></a>설명  
  EnterRemarks  
   
-##  <a name="updateregistry"></a>COleTemplateServer::UpdateRegistry  
+##  <a name="updateregistry"></a>  COleTemplateServer::UpdateRegistry  
  문서 템플릿 문자열에서 파일 형식 정보를 로드 하 고 OLE 시스템 레지스트리에 해당 정보를 보관 합니다.  
   
 ```  
@@ -140,13 +135,13 @@ void UpdateRegistry(
  `nAppType`  
  값은 **OLE_APPTYPE** AFXDISP에 정의 된 열거형입니다. 8. 다음 값 중 하나를 가질 수 있습니다.  
   
-- `OAT_INPLACE_SERVER`서버에는 전체 서버 사용자 인터페이스에 있습니다.  
+- `OAT_INPLACE_SERVER` 서버에는 전체 서버 사용자 인터페이스에 있습니다.  
   
-- `OAT_SERVER`서버 지원만 포함 합니다.  
+- `OAT_SERVER` 서버 지원만 포함 합니다.  
   
-- `OAT_CONTAINER`컨테이너는 포함 된 개체에 대 한 링크를 지원합니다.  
+- `OAT_CONTAINER` 컨테이너는 포함 된 개체에 대 한 링크를 지원합니다.  
   
-- `OAT_DISPATCH_OBJECT`개체는 `IDispatch`-가능 합니다.  
+- `OAT_DISPATCH_OBJECT` 개체는 `IDispatch`-가능 합니다.  
   
 - **OAT_DOC_OBJECT_SERVER** 모두 서버 지원 포함 및 Document 개체 구성 요소 모델입니다.  
   

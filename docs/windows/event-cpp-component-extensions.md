@@ -1,13 +1,10 @@
 ---
-title: "이벤트 (c + + 구성 요소 확장명) | Microsoft Docs"
-ms.custom: 
+title: 이벤트 (c + + 구성 요소 확장명) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - event
 - event_cpp
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdaef6a98e080da2e1290f1191590b7509c2eccd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7859b8b58bbd8765c38daea46efea5859ba61d67
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="event--c-component-extensions"></a>event(C++ 구성 요소 확장)
 `event` 키워드로 선언 된는 *이벤트*, 등록 된 구독자에 게 알리는 (*이벤트 처리기*) 특정 상황이 발생 합니다.  
@@ -59,13 +54,13 @@ modifiereventdelegate^ event_name
  *delegate*  
  [위임](../windows/delegate-cpp-component-extensions.md), 시그니처를 가진 이벤트 처리기가 일치 해야 합니다.  
   
- *e n t _*  
+ *event_name*  
  이벤트의 이름입니다.  
   
  *return_value*  
  이벤트 접근자 메서드의 반환 값입니다.  확인할 수 있으려면 반환 형식이 `void`여야 합니다.  
   
- *매개 변수*  
+ *parameters*  
  (선택 사항) 에 대 한 매개 변수는 `raise` 의 시그니처와 일치 하는 메서드는 *위임* 매개 변수입니다.  
   
  **주의**  
@@ -82,7 +77,7 @@ modifiereventdelegate^ event_name
   
  `operators+=` 및 `operator-=`를 사용하여 이벤트 처리기를 추가 및 제거하거나 `add()` 및 `remove()` 메서드를 명시적으로 호출할 수 있습니다.  
   
- `event`상황에 맞는 키워드입니다. 참조 [상황에 맞는 키워드](../windows/context-sensitive-keywords-cpp-component-extensions.md) 자세한 정보에 대 한 합니다.  
+ `event` 상황에 맞는 키워드입니다. 참조 [상황에 맞는 키워드](../windows/context-sensitive-keywords-cpp-component-extensions.md) 자세한 정보에 대 한 합니다.  
   
 ## <a name="windows-runtime"></a>Windows 런타임  
   
@@ -121,13 +116,13 @@ modifiereventdelegate^ event_name
  *delegate*  
  [위임](../windows/delegate-cpp-component-extensions.md), 시그니처를 가진 이벤트 처리기가 일치 해야 합니다.  
   
- *e n t _*  
+ *event_name*  
  이벤트의 이름입니다.  
   
  *return_value*  
  이벤트 접근자 메서드의 반환 값입니다.  확인할 수 있으려면 반환 형식이 `void`여야 합니다.  
   
- *매개 변수*  
+ *parameters*  
  (선택 사항) 에 대 한 매개 변수는 `raise` 의 시그니처와 일치 하는 메서드는 *위임* 매개 변수입니다.  
   
  **주의**  

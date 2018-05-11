@@ -1,13 +1,10 @@
 ---
-title: "기능 수준 지정 | Microsoft Docs"
-ms.custom: 
+title: 기능 수준 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - run-time class [MFC], information support
 - levels [MFC]
 ms.assetid: 562669ba-c858-4f66-b5f1-b3beeea4f486
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a2897d5e442794198870e7f6bed36196744888
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f32b9502d2e8bd1c1483d817b759ca204f5c9c1a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="specifying-levels-of-functionality"></a>기능 수준 지정
 이 문서에서는 다음과 같은 수준의 기능을 추가 하는 방법을 설명 프로그램 [CObject](../mfc/reference/cobject-class.md)-파생 클래스:  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
  에 대 한 일반적인 설명은 `CObject` 기능을 문서 참조 [CObject에서 클래스를 파생](../mfc/deriving-a-class-from-cobject.md)합니다.  
   
 -   [런타임 클래스 정보](#_core_to_add_run.2d.time_class_information)  
-#### <a name="_core_to_add_run.2d.time_class_information"></a>런타임 클래스 정보를 추가 하려면  
+#### <a name="_core_to_add_run.2d.time_class_information"></a> 런타임 클래스 정보를 추가 하려면  
   
 1.  클래스를 파생 `CObject`에 설명 된 대로 [CObject에서 클래스를 파생](../mfc/deriving-a-class-from-cobject.md) 문서.  
   
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  항상 `IMPLEMENT_DYNAMIC` 구현 파일에서 (합니다. CPP) 클래스에 대 한 합니다. `IMPLEMENT_DYNAMIC` 매크로 컴파일하는 동안 한 번만 평가 해야 하 고 따라서 안되며 인터페이스 파일에 (합니다. H)는 둘 이상의 파일에 잠재적으로 포함 될 수 있습니다.  
   
-#### <a name="_core_to_add_dynamic_creation_support"></a>동적 만들기 지원 기능을 추가 하려면  
+#### <a name="_core_to_add_dynamic_creation_support"></a> 동적 만들기 지원 기능을 추가 하려면  
   
 1.  클래스를 파생 `CObject`합니다.  
   
@@ -68,7 +63,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  사용 하 여는 `IMPLEMENT_DYNCREATE` 클래스 구현 파일에는 매크로입니다.  
   
-#### <a name="_core_to_add_serialization_support"></a>Serialization 지원을 추가 하려면  
+#### <a name="_core_to_add_serialization_support"></a> Serialization 지원을 추가 하려면  
   
 1.  클래스를 파생 `CObject`합니다.  
   

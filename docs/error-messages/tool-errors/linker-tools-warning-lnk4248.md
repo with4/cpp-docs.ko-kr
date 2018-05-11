@@ -1,12 +1,9 @@
 ---
-title: "링커 도구 경고 LNK4248 | Microsoft Docs"
-ms.custom: 
+title: 링커 도구 경고 LNK4248 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK4248
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK4248
 ms.assetid: e40523ff-e3cb-4ba6-ab79-23f0f339f6cf
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01053ddbbb0c7d234f6b465392f5bbe991ea329c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e3b67661d1ad260f388f8425420711ae2f708ce3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-warning-lnk4248"></a>링커 도구 경고 LNK4248
 확인 되지 않은 형식 정의 토큰 (토큰) 'type'; 이미지가 실행 되지 않습니다.  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  MSIL 모듈의 형식 정의 제공 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 LNK4248 합니다. 해결 하려면 구조체 A를 정의 합니다.  
   
 ```  
@@ -59,7 +54,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 형식의 앞으로 정의 합니다.  
   
 ```  
@@ -75,7 +70,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 LNK4248 합니다.  
   
 ```  

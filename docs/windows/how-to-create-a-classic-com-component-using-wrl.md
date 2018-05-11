@@ -1,28 +1,23 @@
 ---
-title: "방법: WRL을 사용 하 여 클래식 COM 구성 요소 만들기 | Microsoft Docs"
-ms.custom: 
+title: '방법: WRL을 사용 하 여 클래식 COM 구성 요소 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4b665ae9ce10b4fbf5bd1baa7563e0f94b7fb991
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 00f00b265128ca388a3e9d4eb77631a320fbda81
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>방법: WRL을 사용하여 기본 COM 구성 요소 만들기
 사용 하 여 유니버설 Windows 플랫폼 (UWP) 앱에 대 한 뿐 아니라 데스크톱 앱에서 사용 하기 위해 기본 클래식 COM 구성 요소를 만들려면 Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 사용할 수 있습니다. COM 구성 요소 만들기에 대 한 Windows 런타임 c + + 템플릿 라이브러리에 ATL 보다 적은 코드가 필요할 수 있습니다. COM 지 원하는 Windows 런타임 c + + 템플릿 라이브러리의 하위 집합에 대 한 정보를 참조 하십시오. [Windows 런타임 c + + 템플릿 라이브러리 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)합니다.  

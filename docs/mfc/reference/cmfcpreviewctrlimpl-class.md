@@ -1,12 +1,9 @@
 ---
-title: "CMFCPreviewCtrlImpl 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCPreviewCtrlImpl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPreviewCtrlImpl
@@ -45,17 +42,15 @@ helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], m_font
 - CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8def8a8085bebdd09ce58cb6d9abd026fe713fe8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb1ef84aabed69554ded868bbe9092c3e8b7082f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl 클래스
 이 클래스는 for Rich Preview 셸에서 제공 하는 호스 창에 배치 하는 창을 구현 합니다.  
@@ -97,7 +92,7 @@ class CMFCPreviewCtrlImpl : public CWnd;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[CMFCPreviewCtrlImpl::m_clrBackColor](#m_clrbackcolor)|미리 보기 창의 배경색입니다.|  
 |[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|미리 보기 창의 텍스트 색입니다.|  
@@ -116,13 +111,13 @@ class CMFCPreviewCtrlImpl : public CWnd;
   
  [CMFCPreviewCtrlImpl](../../mfc/reference/cmfcpreviewctrlimpl-class.md)
 
-## <a name="cmfcpreviewctrlimpl"></a>CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
+## <a name="cmfcpreviewctrlimpl"></a> CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl
 미리 보기 컨트롤 개체를 만듭니다.
 
 ### <a name="syntax"></a>구문
 CMFCPreviewCtrlImpl();  
 
-## <a name="create"></a>CMFCPreviewCtrlImpl::Create
+## <a name="create"></a> CMFCPreviewCtrlImpl::Create
 오버로드됨. Windows 창을 만들기 위해 서식 있는 미리 보기 처리기에서 호출 됩니다.  
   
 ### <a name="syntax"></a>구문  
@@ -150,9 +145,9 @@ virtual BOOL Create(
  컨텍스트를 만들지에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`만들기 성공 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 만들기 성공 그렇지 않으면 `FALSE`합니다.  
   
-## <a name="destroy"></a>CMFCPreviewCtrlImpl::Destroy
+## <a name="destroy"></a> CMFCPreviewCtrlImpl::Destroy
 이 컨트롤을 삭제 하는 데 필요한 풍부한 미리 보기 처리기에서 호출 됩니다.  
   
 ### <a name="syntax"></a>구문  
@@ -161,7 +156,7 @@ virtual BOOL Create(
 virtual void Destroy();  
 ```  
   
-## <a name="dopaint"></a>CMFCPreviewCtrlImpl::DoPaint  
+## <a name="dopaint"></a> CMFCPreviewCtrlImpl::DoPaint  
 미리 보기를 렌더링 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ### <a name="syntax"></a>구문  
@@ -177,7 +172,7 @@ virtual void DoPaint(
  그리기 장치 컨텍스트 포인터입니다.  
 
 
-## <a name="focus"></a>CMFCPreviewCtrlImpl::Focus  
+## <a name="focus"></a> CMFCPreviewCtrlImpl::Focus  
 입력이 컨트롤에 포커스를 설정 합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -185,7 +180,7 @@ virtual void DoPaint(
 ```  
 virtual void Focus();  
 ```  
-## <a name="getdocument"></a>CMFCPreviewCtrlImpl::GetDocument
+## <a name="getdocument"></a> CMFCPreviewCtrlImpl::GetDocument
 이 미리 보기 컨트롤에 연결 하는 문서를 반환 합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -197,7 +192,7 @@ ATL::IDocument* GetDocument();
 ### <a name="return-value"></a>반환 값  
  컨트롤에서 해당 콘텐츠를 미리 볼 문서에 대 한 포인터입니다.
 
-## <a name="m_clrbackcolor"></a>CMFCPreviewCtrlImpl::m_clrBackColor  
+## <a name="m_clrbackcolor"></a> CMFCPreviewCtrlImpl::m_clrBackColor  
 미리 보기 창의 배경색입니다.  
   
 ### <a name="syntax"></a>구문  
@@ -206,7 +201,7 @@ ATL::IDocument* GetDocument();
 COLORREF m_clrBackColor;  
 ```  
 
-## <a name="m_clrtextcolor"></a>CMFCPreviewCtrlImpl::m_clrTextColor
+## <a name="m_clrtextcolor"></a> CMFCPreviewCtrlImpl::m_clrTextColor
 미리 보기 창의 텍스트 색입니다.  
   
 ### <a name="syntax"></a>구문  
@@ -214,14 +209,14 @@ COLORREF m_clrBackColor;
 ```  
 COLORREF m_clrTextColor;  
 ```  
-## <a name="m_font"></a>미리 보기 창에 텍스트를 표시 하는 데 사용 되는 CMFCPreviewCtrlImpl::m_font 글꼴입니다.  
+## <a name="m_font"></a> 미리 보기 창에 텍스트를 표시 하는 데 사용 되는 CMFCPreviewCtrlImpl::m_font 글꼴입니다.  
   
 ### <a name="syntax"></a>구문  
   
 ```  
 CFont m_font;  
 ```  
-## <a name="m_pdocument"></a>CMFCPreviewCtrlImpl::m_pDocument  
+## <a name="m_pdocument"></a> CMFCPreviewCtrlImpl::m_pDocument  
 컨트롤에서 해당 콘텐츠를 미리 볼 문서에 대 한 포인터입니다.  
   
 ### <a name="syntax"></a>구문  
@@ -230,7 +225,7 @@ CFont m_font;
 ATL::IDocument* m_pDocument;  
 ```  
 
-## <a name="redraw"></a>CMFCPreviewCtrlImpl::Redraw  
+## <a name="redraw"></a> CMFCPreviewCtrlImpl::Redraw  
 이 컨트롤을 다시 그리게 지시 합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -238,7 +233,7 @@ ATL::IDocument* m_pDocument;
 ```  
 virtual void Redraw();  
 ```  
-## <a name="setdocument"></a>CMFCPreviewCtrlImpl::SetDocument 
+## <a name="setdocument"></a> CMFCPreviewCtrlImpl::SetDocument 
 문서 구현 및 미리 보기 컨트롤 간의 관계를 만드는 미리 보기 처리기에서 호출 됩니다.  
   
 ### <a name="syntax"></a>구문  
@@ -253,7 +248,7 @@ void SetDocument(
  `pDocument`  
  문서 구현에 대 한 포인터입니다.  
 
-## <a name="sethost"></a>CMFCPreviewCtrlImpl::SetHost  
+## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost  
 이 컨트롤에 대 한 새 부모를 설정합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -268,7 +263,7 @@ virtual void SetHost(
  `hWndParent`  
  새 부모 창에 대 한 핸들입니다.  
 
-## <a name="setpreviewvisuals"></a>CMFCPreviewCtrlImpl::SetPreviewVisuals  
+## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals  
 호출한 풍부한 미리 보기 처리기 풍부한 미리 보기의 시각적 개체를 설정 해야 할 때 콘텐츠 됩니다.  
   
 ### <a name="syntax"></a>구문  
@@ -291,7 +286,7 @@ virtual void SetPreviewVisuals(
  `plf`  
  미리 보기 창에 텍스트를 표시 하는 데 사용 하는 글꼴입니다. 
 
-##  <a name="setrect"></a>CMFCPreviewCtrlImpl::SetRect  
+##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect  
 이 컨트롤에 대 한 새로운 경계 사각형을 설정합니다.  
   
 ### <a name="syntax"></a>구문  
@@ -313,7 +308,7 @@ virtual void SetRect(
 ### <a name="remarks"></a>설명  
  일반적으로 새 경계 사각형에 호스트 컨트롤의 크기를 조정할 때 설정 됩니다.  
 
-## <a name="dtor"></a>CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl  
+## <a name="dtor"></a> CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl  
 미리 보기 컨트롤 개체를 destructs 합니다.  
   
 ### <a name="syntax"></a>구문  

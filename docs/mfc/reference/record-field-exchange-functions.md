@@ -1,13 +1,10 @@
 ---
-title: "레코드 필드 교환 함수 | Microsoft Docs"
-ms.custom: 
+title: 레코드 필드 교환 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - AFXDB/RFX_Binary
 - AFXDB/RFX_Bool
@@ -54,17 +51,15 @@ helpviewer_keywords:
 - RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94491a2df64017ea381377af8518414e80130d6a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 564d797a30e4b2d8518c73c5f7589aae205b6907
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="record-field-exchange-functions"></a>레코드 필드 교환 함수
 이 항목에서는 레코드 필드 교환 (RFX, 대량 RFX와 DFX) 레코드 집합 개체와 해당 데이터 소스 간의 데이터 전송을 자동화 하 고 데이터에 다른 작업을 수행 하는 데 사용 되는 함수입니다.  
@@ -157,7 +152,7 @@ void RFX_Binary(
 ### <a name="remarks"></a>설명  
  이러한 종류의 데이터 소스에 데이터 형식에서 매핑된 `CByteArray` 레코드 집합의 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [RFX_Text](#rfx_text)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -185,7 +180,7 @@ void RFX_Bool(
  *값*  
  표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 전송 하기 위해서는 형식의 값을 데이터 원본에 대 한 **BOOL**, 지정된 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [RFX_Text](#rfx_text)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -213,7 +208,7 @@ void RFX_Byte(
  *값*  
  표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 전송 하기 위해서는 형식의 값을 데이터 원본에 대 한 **바이트**, 지정된 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [RFX_Text](#rfx_text)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -258,7 +253,7 @@ void RFX_Date(
 ### <a name="remarks"></a>설명  
  `CTime` 버전의 함수는 일부 중간 처리 오버 헤드가 있으며 다소 제한 된 범위입니다. 너무 제한적 이러한 요소 중 하나를 찾을 경우 두 번째 버전의 함수를 사용 합니다. 그러나 해당 코드 마법사 및 DDX 지원 및 요구 사항을 설정 하는 구조 직접 부족 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [RFX_Text](#rfx_text)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -286,7 +281,7 @@ void RFX_Double(
  *값*  
  표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 전송 하기 위해서는 형식의 값을 데이터 원본에 대 한 **double**, 지정된 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [RFX_Text](#rfx_text)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -314,7 +309,7 @@ void RFX_Int(
  *값*  
  표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 전송 하기 위해서는 형식의 값을 데이터 원본에 대 한 `int`, 지정된 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [RFX_Text](#rfx_text)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -343,7 +338,7 @@ value );
  *값*  
  표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 전송 하기 위해서는 형식의 값을 데이터 원본에 대 한 **긴**, 지정된 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [RFX_Text](#rfx_text)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -371,7 +366,7 @@ void RFX_LongBinary(
  *값*  
  표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 전송 하기 위해서는 형식의 값을 데이터 원본에 대 한 `CLongBinary`, 지정된 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [RFX_Text](#rfx_text)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -399,7 +394,7 @@ void RFX_Single(
  *값*  
  표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 전송 하기 위해서는 형식의 값을 데이터 원본에 대 한 **float**, 지정된 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [RFX_Text](#rfx_text)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -438,12 +433,12 @@ void RFX_Text(
  매개 변수에 대해 주로 사용 합니다. 매개 변수의 데이터 형식을 나타내는 정수입니다. 폼의 ODBC 데이터 형식 형식이 **SQL_XXX**합니다.  
   
  `nScale`  
- ODBC 형식의 값에 대 한 소수 자릿수를 지정 **SQL_DECIMAL** 또는 **SQL_NUMERIC**합니다. `nScale`유용한 경우에 매개 변수 값을 설정 합니다. 자세한 내용은 부록 D /의 "전체 자릿수, 소수 자릿수, 길이 및 표시 크기" 항목을 참조는 *ODBC SDK Programmer's Reference*합니다.  
+ ODBC 형식의 값에 대 한 소수 자릿수를 지정 **SQL_DECIMAL** 또는 **SQL_NUMERIC**합니다. `nScale` 유용한 경우에 매개 변수 값을 설정 합니다. 자세한 내용은 부록 D /의 "전체 자릿수, 소수 자릿수, 길이 및 표시 크기" 항목을 참조는 *ODBC SDK Programmer's Reference*합니다.  
   
 ### <a name="remarks"></a>설명  
  이러한 형식의 모든 데이터 원본의 데이터에에서 매핑된 `CString` 레코드 집합의 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  이 예제를 여러 번 호출 `RFX_Text`합니다. 두 번 호출 또한 확인 `CFieldExchange::SetFieldType`합니다. 매개 변수에 대 한 호출을 작성 해야 `SetFieldType` 및 RFX 호출 합니다. 출력 열 호출 및 해당 관련된 RFX 호출 코드 마법사에 의해 일반적으로 기록 됩니다.  
   
 ```cpp  
@@ -508,7 +503,7 @@ void RFX_Binary_Bulk(
   
  자세한 내용은 문서를 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [Exchange RFX (레코드 필드)](../../data/odbc/record-field-exchange-rfx.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [RFX_Text_Bulk](#rfx_text_bulk)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -550,7 +545,7 @@ void RFX_Bool_Bulk(
   
  자세한 내용은 문서를 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [Exchange RFX (레코드 필드)](../../data/odbc/record-field-exchange-rfx.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [RFX_Text_Bulk](#rfx_text_bulk)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -592,7 +587,7 @@ void RFX_Byte_Bulk(
   
  자세한 내용은 문서를 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [Exchange RFX (레코드 필드)](../../data/odbc/record-field-exchange-rfx.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [RFX_Text_Bulk](#rfx_text_bulk)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -634,7 +629,7 @@ void RFX_Date_Bulk(
   
  자세한 내용은 문서를 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [Exchange RFX (레코드 필드)](../../data/odbc/record-field-exchange-rfx.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [RFX_Text_Bulk](#rfx_text_bulk)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -676,7 +671,7 @@ void RFX_Double_Bulk(
   
  자세한 내용은 문서를 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [Exchange RFX (레코드 필드)](../../data/odbc/record-field-exchange-rfx.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [RFX_Text_Bulk](#rfx_text_bulk)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -704,7 +699,7 @@ void RFX_Int(
  *값*  
  표시된 데이터 멤버에 저장된 값(전송할 값)입니다. 레코드 집합에서 전송 하기 위해서는 형식의 값을 데이터 원본에 대 한 `int`, 지정된 된 데이터 멤버에서 가져옵니다. 데이터 소스에서 레코드 집합으로 전송하기 위해서는 값이 지정된 데이터 멤버에 저장됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [RFX_Text](#rfx_text)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -746,7 +741,7 @@ void RFX_Long_Bulk(
   
  자세한 내용은 문서를 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [Exchange RFX (레코드 필드)](../../data/odbc/record-field-exchange-rfx.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [RFX_Text_Bulk](#rfx_text_bulk)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -788,7 +783,7 @@ void RFX_Single_Bulk(
   
  자세한 내용은 문서를 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [Exchange RFX (레코드 필드)](../../data/odbc/record-field-exchange-rfx.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [RFX_Text_Bulk](#rfx_text_bulk)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -835,7 +830,7 @@ void RFX_Text_Bulk(
   
  자세한 내용은 문서를 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) 및 [Exchange RFX (레코드 필드)](../../data/odbc/record-field-exchange-rfx.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  호출 직접 작성 해야 하면 `DoBulkFieldExchange` 재정의 합니다. 에 대 한 호출을 보여 주는이 예제 `RFX_Text_Bulk`에 대 한 호출 뿐 아니라 `RFX_Long_Bulk`, 데이터 전송에 대 한 합니다. 이러한 호출에 대 한 호출 다음에 오는 [CFieldExchange::SetFieldType](CFieldExchange::SetFieldType.md)합니다. 매개 변수를 대량 RFX 함수 대신 RFX 함수를 호출 해야 합니다.  
   
 ```cpp  
@@ -892,7 +887,7 @@ void AFXAPI DFX_Binary(
 ### <a name="remarks"></a>설명  
  형식 간에 데이터가 매핑되는 **DAO_BYTES** DAO 및 형식 [CByteArray](cbytearray-class.md) 레코드 집합의 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [DFX_Text](#dfx_text)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -931,7 +926,7 @@ void AFXAPI DFX_Bool(
 ### <a name="remarks"></a>설명  
  형식 간에 데이터가 매핑되는 **DAO_BOOL** DAO 및 형식 **BOOL** 레코드 집합의 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [DFX_Text](#dfx_text)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -969,7 +964,7 @@ void AFXAPI DFX_Byte(
 ### <a name="remarks"></a>설명  
  형식 간에 데이터가 매핑되는 **DAO_BYTES** DAO 및 형식 **바이트** 레코드 집합의 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [DFX_Text](#dfx_text)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -1007,7 +1002,7 @@ void AFXAPI DFX_Currency(
 ### <a name="remarks"></a>설명  
  형식 간에 데이터가 매핑되는 **DAO_CURRENCY** DAO 및 형식 [COleCurrency](colecurrency-class.md) 레코드 집합의 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [DFX_Text](#dfx_text)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -1046,9 +1041,9 @@ void AFXAPI DFX_DateTime(
  형식 간에 데이터가 매핑되는 **DAO_DATE** DAO 및 형식 [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) 레코드 집합의 합니다.  
   
 > [!NOTE]
->  `COleDateTime`대체 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 및 **TIMESTAMP_STRUCT** DAO 클래스에이 목적에 대 한 합니다. `CTime`및 **TIMESTAMP_STRUCT** 않은 ODBC 기반 데이터 액세스 클래스에 사용 합니다.  
+>  `COleDateTime` 대체 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 및 **TIMESTAMP_STRUCT** DAO 클래스에이 목적에 대 한 합니다. `CTime` 및 **TIMESTAMP_STRUCT** 않은 ODBC 기반 데이터 액세스 클래스에 사용 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [DFX_Text](#dfx_text)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -1086,7 +1081,7 @@ void AFXAPI DFX_Double(
 ### <a name="remarks"></a>설명  
  형식 간에 데이터가 매핑되는 **DAO_R8** DAO 및 형식 **double 부동 소수점** 레코드 집합의 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [DFX_Text](#dfx_text)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -1124,7 +1119,7 @@ void AFXAPI DFX_Long(
 ### <a name="remarks"></a>설명  
  형식 간에 데이터가 매핑되는 **DAO_I4** DAO 및 형식 **긴** 레코드 집합의 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [DFX_Text](#dfx_text)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -1165,9 +1160,9 @@ void AFXAPI DFX_LongBinary(
 >  여부 데이터가 이중 버퍼링 되는지 기본적으로 설정 하 여 제어할 수 있습니다 [cdaorecordset:: M_bcheckcachefordirtyfields](cdaorecordset-class.md#m_bcheckcachefordirtyfields)합니다.  
   
 ### <a name="remarks"></a>설명  
- `DFX_LongBinary`MFC ODBC 클래스와 호환성을 위해 제공 됩니다. `DFX_LongBinary` 클래스를 사용 하 여 이진 대형 개체 (BLOB) 데이터를 전송 하는 함수 `CLongBinary` 의 필드 데이터 멤버 간에 [CDaoRecordset](cdaorecordset-class.md) 개체와 데이터 소스에서 레코드의 열입니다. 형식 간에 데이터가 매핑되는 **DAO_BYTES** DAO 및 형식 [CLongBinary](clongbinary-class.md) 레코드 집합의 합니다.  
+ `DFX_LongBinary` MFC ODBC 클래스와 호환성을 위해 제공 됩니다. `DFX_LongBinary` 클래스를 사용 하 여 이진 대형 개체 (BLOB) 데이터를 전송 하는 함수 `CLongBinary` 의 필드 데이터 멤버 간에 [CDaoRecordset](cdaorecordset-class.md) 개체와 데이터 소스에서 레코드의 열입니다. 형식 간에 데이터가 매핑되는 **DAO_BYTES** DAO 및 형식 [CLongBinary](clongbinary-class.md) 레코드 집합의 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [DFX_Text](#dfx_text)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -1206,9 +1201,9 @@ void AFXAPI DFX_Short(
  형식 간에 데이터가 매핑되는 **DAO_I2** DAO 및 형식 **짧은** 레코드 집합의 합니다.  
   
 > [!NOTE]
->  `DFX_Short`에 해당 [RFX_Int](#rfx_int) ODBC 기반 클래스에 대 한 합니다.  
+>  `DFX_Short` 에 해당 [RFX_Int](#rfx_int) ODBC 기반 클래스에 대 한 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [DFX_Text](#dfx_text)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -1247,7 +1242,7 @@ void AFXAPI DFX_Single(
 ### <a name="remarks"></a>설명  
  형식 간에 데이터가 매핑되는 **DAO_R4** DAO 및 형식 **float** 레코드 집합의 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  참조 [DFX_Text](#dfx_text)합니다.  
   
 ### <a name="requirements"></a>요구 사항  
@@ -1289,7 +1284,7 @@ void AFXAPI DFX_Text(
 ### <a name="remarks"></a>설명  
  형식 간에 데이터가 매핑되는 **DAO_CHAR** DAO에서 (또는 경우 기호 **_UNICODE** 정의 된 **DAO_WCHAR**) 및 형식 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 에 레코드 집합입니다.  n
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  이 예제를 여러 번 호출 `DFX_Text`합니다. 두 번 호출 또한 확인 [CDaoFieldExchange::SetFieldType](cdaofieldexchange-class.md#setfieldtype)합니다. 첫 번째 호출을 작성 해야 `SetFieldType` 및 해당 **DFX** 호출 합니다. 두 번째 호출 및 관련 **DFX** 호출은 클래스를 생성 하는 코드 마법사가 정상적으로 작성 됩니다.  
   
 ```cpp  

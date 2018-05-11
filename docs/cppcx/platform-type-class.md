@@ -1,11 +1,8 @@
 ---
-title: "Platform:: type 클래스 | Microsoft Docs"
-ms.custom: 
+title: 'Platform:: type 클래스 | Microsoft Docs'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Type::GetTypeCode
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cabfa3d382d44448b2c06d0a16864a4fdd0e66bf
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 358bd57dc1c7272818b1dc542991caa59d3663d4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformtype-class"></a>Platform::Type 클래스
 특정 형식에 대한 런타임 정보(문자열 이름 및 형식 코드)를 포함합니다. 호출 하 여 가져온 [object:: gettype](../cppcx/platform-object-class.md#gettype) 임의 개체에서 또는 또는 사용 하 여는 [typeid](../windows/typeid-cpp-component-extensions.md) 클래스 또는 구조체 이름에는 연산자입니다.  
@@ -83,7 +78,7 @@ String^ FullName();
   
 ### <a name="return-value"></a>반환 값  
  형식의 이름입니다.  
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```  
   
@@ -114,7 +109,7 @@ Platform::TypeCode GetTypeCode();
 ### <a name="remarks"></a>설명  
  Gettypecode () 멤버 메서드에 해당 합니다는 `typeid` 속성입니다.
 
-## <a name="tostring">Type::ToString 메서드</a>
+## <a name="tostring"></a> Type::ToString 메서드
 검색 한 형식의 이름입니다.  
   
 ### <a name="syntax"></a>구문  

@@ -1,13 +1,10 @@
 ---
-title: "함수와 매크로 중 선택에 대한 권장 사항 | Microsoft Docs"
-ms.custom: 
+title: 함수와 매크로 중 선택에 대한 권장 사항 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.functions
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - functions [CRT], vs. macros
 - macros, vs. functions
 ms.assetid: 18a633d6-cf1c-470c-a649-fa7677473e2b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 810a4c2dbf5c80688dd739c48df0056ab394cafd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4577ac1a0e1cac90a3436809722978d119c6b557
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="recommendations-for-choosing-between-functions-and-macros"></a>함수와 매크로 중 선택에 대한 권장 사항
 대부분의 Microsoft 런타임 라이브러리 루틴은 컴파일되거나 어셈블된 함수입니다. 그러나 일부 루틴은 매크로로 구현됩니다. 항상 함수 선언 이후에 매크로가 나타나기 때문에 헤더 파일에서 함수 버전의 루틴과 매크로 버전의 루틴을 모두 선언할 때 매크로 정의가 우선 적용됩니다. 함수와 매크로 모두로 구현되는 루틴을 호출할 때 컴파일러에서 다음 두 가지 방법으로 함수 버전을 사용하도록 강제 설정할 수 있습니다.  

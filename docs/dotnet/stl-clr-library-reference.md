@@ -1,12 +1,9 @@
 ---
-title: "STL/CLR 라이브러리 참조 | Microsoft Docs"
-ms.custom: 
+title: STL/CLR 라이브러리 참조 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - STL/CLR, redistribution
 - cliext directory
 ms.assetid: a9d9ca00-7bf2-48c1-b205-3ae6f8c25f82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: aecb7c509fc1b072086a8772c3430c43b67350be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8cab573b0c1de57ef2629f662108098095b722eb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stlclr-library-reference"></a>STL/CLR 라이브러리 참조
 STL/CLR 라이브러리는 c + + 및.NET Framework 공용 언어 런타임 (CLR) 사용 하기 위해 c + + 표준 라이브러리의 하위 집합의 패키징. STL/CLR 컨테이너, 반복기 및 알고리즘의 관리 되는 환경에서 표준 라이브러리를 사용할 수 있습니다.  

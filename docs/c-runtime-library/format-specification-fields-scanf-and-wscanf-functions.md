@@ -1,13 +1,10 @@
 ---
-title: "형식 사양 필드: scanf 및 wscanf 함수 | Microsoft 문서"
-ms.custom: 
+title: '형식 사양 필드: scanf 및 wscanf 함수 | Microsoft 문서'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 apilocation:
 - msvcr80.dll
 - msvcr110.dll
@@ -30,17 +27,15 @@ helpviewer_keywords:
 - format specification fields for scanf function
 - type fields
 ms.assetid: 7e95de1b-0b71-4de3-9f81-c9560c78e039
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2286d7a6b82cf917c264cc43b82dec3939af6d94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c99b951e0cbbb5d2a295eb336a856bdb6c4cc0e1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>형식 사양 필드: scanf 및 wscanf 함수
 이 정보는 안전한 버전을 포함한 전체 `scanf` 함수 패밀리에 적용되며, `scanf`용 입력 스트림 `stdin`과 같은 입력 스트림을 프로그램 변수로 삽입된 값으로 구문 분석하는 방법을 `scanf` 함수에 지시하는 데 사용하는 기호를 설명합니다.  

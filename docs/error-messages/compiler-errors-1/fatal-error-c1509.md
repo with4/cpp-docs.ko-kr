@@ -1,12 +1,9 @@
 ---
-title: "심각한 오류 C1509 | Microsoft Docs"
-ms.custom: 
+title: 심각한 오류 C1509 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C1509
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C1509
 ms.assetid: 40dd100d-c6ba-451c-bd26-2c99ec1c36d6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22cb22ea2186b16fd98d2714779b2475c51d15bc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fec83f6b6138eacc613e560b9da4557079d6677d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fatal-error-c1509"></a>심각한 오류 C1509
 컴파일러 한계: ' function '함수에에서 예외 처리기 상태가 너무 많습니다. 함수를 단순화 합니다.  

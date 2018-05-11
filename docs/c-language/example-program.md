@@ -1,27 +1,22 @@
 ---
-title: "예제 프로그램 | Microsoft Docs"
-ms.custom: 
+title: 예제 프로그램 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: fc22ef82-9caa-425f-b201-2891bc123d1f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 903e4890bfad23310f0663fde52af4065e78486e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b148e14dad4df43dfe55d89172c557d6d2cc4c0
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="example-program"></a>예제 프로그램
 다음 C 소스 프로그램은 두 개의 소스 파일로 구성됩니다. 이 프로그램에서는 C 프로그램에서 가능한 다양한 선언 및 정의 중 몇 가지를 간략하게 보여 줍니다. 이 설명서의 이후 섹션에서는 이러한 선언, 정의 및 초기화를 작성하는 방법과 **static** 및 `extern` 등의 C 키워드를 사용하는 방법을 설명합니다. `printf` 함수는 C 헤더 파일 STDIO.H에서 선언됩니다.  

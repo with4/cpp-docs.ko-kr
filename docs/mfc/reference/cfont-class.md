@@ -1,12 +1,9 @@
 ---
-title: "CFont 클래스 | Microsoft Docs"
-ms.custom: 
+title: CFont 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CFont
@@ -29,17 +26,15 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5431461c7c2cc33131f72f059edcfbd984eae5fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c26cf70ad52037b4ebe88b983e6d9a91273897cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cfont-class"></a>CFont 클래스
 Windows GDI(그래픽 장치 인터페이스) 글꼴을 캡슐화하고 글꼴 조작을 위한 멤버 함수를 제공합니다.  
@@ -92,7 +87,7 @@ class CFont : public CGdiObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="cfont"></a>CFont::CFont  
+##  <a name="cfont"></a>  CFont::CFont  
  `CFont` 개체를 생성합니다.  
   
 ```  
@@ -102,10 +97,10 @@ CFont();
 ### <a name="remarks"></a>설명  
  사용 하 여 결과 개체를 초기화 해야 `CreateFont`, `CreateFontIndirect`, `CreatePointFont`, 또는 `CreatePointFontIndirect` 사용할 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#70](../../mfc/codesnippet/cpp/cfont-class_1.cpp)]  
   
-##  <a name="createfont"></a>CFont::CreateFont  
+##  <a name="createfont"></a>  CFont::CreateFont  
  초기화 한 `CFont` 지정 된 특성을 가진 개체입니다.  
   
 ```  
@@ -191,10 +186,10 @@ BOOL CreateFont(
   
  사용을 완료 하면는 `CFont` 하 여 만든 개체는 `CreateFont` 함수를 사용 하 여 `CDC::SelectObject` 장치 컨텍스트로 다른 글꼴을 선택 하려면 삭제는 `CFont` 개체가 더 이상 필요 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#71](../../mfc/codesnippet/cpp/cfont-class_2.cpp)]  
   
-##  <a name="createfontindirect"></a>CFont::CreateFontIndirect  
+##  <a name="createfontindirect"></a>  CFont::CreateFontIndirect  
  초기화 한 `CFont` 에 지정 된 특성을 가진 개체는 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)구조입니다.  
   
 ```  
@@ -215,10 +210,10 @@ BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
   
  더 이상 필요는 `CFont` 하 여 만든 개체는 `CreateFontIndirect` 함수를 사용 하 여 `CDC::SelectObject` 장치 컨텍스트로 다른 글꼴을 선택 하려면 삭제는 `CFont` 개체가 더 이상 필요 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#72](../../mfc/codesnippet/cpp/cfont-class_3.cpp)]  
   
-##  <a name="createpointfont"></a>CFont::CreatePointFont  
+##  <a name="createpointfont"></a>  CFont::CreatePointFont  
  이 함수는 지정 된 서체의 글꼴을 만들고 포인트 크기 하는 간단한 방법을 제공 합니다.  
   
 ```  
@@ -246,10 +241,10 @@ BOOL CreatePointFont(
   
  사용을 완료 하면는 `CFont` 하 여 만든 개체는 `CreatePointFont` 함수, 먼저 글꼴 장치 컨텍스트를 선택한 다음 삭제는 `CFont` 개체입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#73](../../mfc/codesnippet/cpp/cfont-class_4.cpp)]  
   
-##  <a name="createpointfontindirect"></a>CFont::CreatePointFontIndirect  
+##  <a name="createpointfontindirect"></a>  CFont::CreatePointFontIndirect  
  이 함수는 동일 [CreateFontIndirect](#createfontindirect) 점을 제외 하 고는 **lfHeight** 의 멤버는 `LOGFONT` 장치가 아닌 포인트 단위의 1/10 초에서 해석 됩니다.  
   
 ```  
@@ -273,10 +268,10 @@ BOOL CreatePointFontIndirect(
   
  사용을 완료 하면는 `CFont` 하 여 만든 개체는 `CreatePointFontIndirect` 함수, 먼저 글꼴 장치 컨텍스트를 선택한 다음 삭제는 `CFont` 개체입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#74](../../mfc/codesnippet/cpp/cfont-class_5.cpp)]  
   
-##  <a name="fromhandle"></a>CFont::FromHandle  
+##  <a name="fromhandle"></a>  CFont::FromHandle  
  에 대 한 포인터를 반환 합니다.는 `CFont` 지정 되 면 개체는 **HFONT** Windows GDI 글꼴 개체에 대 한 핸들입니다.  
   
 ```  
@@ -293,10 +288,10 @@ static CFont* PASCAL FromHandle(HFONT hFont);
 ### <a name="remarks"></a>설명  
  경우는 `CFont` 개체가 이미 임시 핸들에 연결 되지 않은 `CFont` 개체가 생성 되 고 연결 합니다. 이 임시 `CFont` 개체는 다음에 응용 프로그램의 경우 이벤트 루프 유휴 시간에 인 될 때까지 모든 임시 그래픽 대답 하에서 개체를 삭제만 유효 합니다. 이 말하면 한 창 메시지를 처리 하는 동안에 해당 임시 개체가 유효 된다는 점입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#75](../../mfc/codesnippet/cpp/cfont-class_6.cpp)]  
   
-##  <a name="getlogfont"></a>CFont::GetLogFont  
+##  <a name="getlogfont"></a>  CFont::GetLogFont  
  복사본을 검색 하려면이 함수를 호출 하는 `LOGFONT` 에 대 한 구조 `CFont`합니다.  
   
 ```  
@@ -310,10 +305,10 @@ int GetLogFont(LOGFONT* pLogFont);
 ### <a name="return-value"></a>반환 값  
  그렇지 않으면 0 함수가 성공 하면 0이 아닙니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#76](../../mfc/codesnippet/cpp/cfont-class_7.cpp)]  
   
-##  <a name="operator_hfont"></a>HFONT CFont::operator  
+##  <a name="operator_hfont"></a>  HFONT CFont::operator  
  이 연산자를 사용 하 여에 연결 된 글꼴의 Windows GDI 핸들을 가져올 수는 `CFont` 개체입니다.  
   
 ```  
@@ -328,7 +323,7 @@ operator HFONT() const;
   
  그래픽 개체를 사용 하는 방법에 대 한 자세한 내용은 참조 [그래픽 개체](http://msdn.microsoft.com/library/windows/desktop/dd144962) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#77](../../mfc/codesnippet/cpp/cfont-class_8.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

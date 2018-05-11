@@ -2,11 +2,8 @@
 title: 'list:: assign (STL/CLR) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::list::assign
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - assign member [STL/CLR]
 ms.assetid: c5f2b131-d0e1-4188-9d4b-d617280e4032
-caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e4c5e670b4fca5998a21b8ae3554f31697cb3fac
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 02b579038d8945423d18d856e0682fe22245c563
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listassign-stlclr"></a>list::assign(STL/CLR)
 모든 요소를 바꿉니다.  
@@ -63,7 +58,7 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
   
  열거자에 지정 된 시퀀스와 제어 된 시퀀스를 대체 하는 세 번째 멤버 함수 `right`합니다. 제어 되는 시퀀스의 사본을 열거형에서 설명 하는 순서를 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_list_assign.cpp   

@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 4) C4703 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 4) C4703 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4703
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C4703
 ms.assetid: 5dad454e-69e3-4931-9168-050a861c05f8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8c2bacdb938cacc451011cffed2b41a1092dabe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d47cc6eb5692e39bfaa810bc15862bffb30083f2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4703"></a>컴파일러 경고(수준 4) C4703
 초기화되지 않았을 수 있는 로컬 포인터 변수 'name'이(가) 사용되었습니다.  
   
  로컬 포인터 변수 *이름* 값을 할당 하지 않고 사용 되었을 수 있습니다. 예기치 않은 결과가 발생할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드는 C4701 및 C4703을 생성합니다.  
   
 ```cpp  

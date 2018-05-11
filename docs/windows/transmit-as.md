@@ -1,13 +1,10 @@
 ---
 title: transmit_as | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.transmit_as
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 36541f7ebb417302023d214695d07f498808718a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d0c4d5fc3101e7eb0e09f33c95cb0f73dd0d2b3d
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="transmitas"></a>transmit_as
 전송된 유형 클라이언트와 서버 응용 프로그램에서 조작 하는 제공 된 형식 연결 컴파일러에 지시 합니다.  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  **transmit_as** c + + 특성에 동일한 기능을는 [transmit_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) MIDL 특성입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에서는 사용 하 여 **transmit_as** 특성:  
   
 ```  

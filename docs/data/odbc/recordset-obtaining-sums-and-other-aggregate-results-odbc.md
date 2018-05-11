@@ -1,13 +1,10 @@
 ---
-title: "레코드 집합: 합계 및 다른 집계 결과 (ODBC) 구하기 | Microsoft Docs"
-ms.custom: 
+title: '레코드 집합: 합계 및 다른 집계 결과 (ODBC) 구하기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4753193789c95b726a8770cef9a153b041fa762c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4aa6de58e7e2c530a7a353281ba5af747f48cd4e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>레코드 집합: 합계 및 다른 집계 결과 구하기(ODBC)
 MFC ODBC 클래스에이 항목에 적용 됩니다.  
@@ -50,7 +45,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
  데이터 원본에서 레코드를 추출 하기 보다는 데이터 원본에서 레코드에 대 한 통계 정보에 이러한 SQL 함수를 사용 합니다. 일반적으로 만든 레코드 집합 하나로 구성 값을 포함 하는 레코드 (모든 열이 집계) 하는 경우. (사용 하는 경우 하나 이상의 레코드 수는 **GROUP BY** 절.) 이 값은 계산 이나 SQL 함수에 의해 추출 된의 결과입니다.  
   
 > [!TIP]
->  SQL을 추가 하려면 **GROUP BY** 절 (해야 했으며는 **HAVING** 절)을 SQL 문에의 끝에 추가할 **m_strFilter**합니다. 예:  
+>  SQL을 추가 하려면 **GROUP BY** 절 (해야 했으며는 **HAVING** 절)을 SQL 문에의 끝에 추가할 **m_strFilter**합니다. 예를 들어:  
   
 ```  
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";  

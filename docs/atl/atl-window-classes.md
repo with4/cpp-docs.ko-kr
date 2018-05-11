@@ -1,13 +1,10 @@
 ---
-title: "ATL 창 클래스 | Microsoft Docs"
-ms.custom: 
+title: ATL 창 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-atl
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - superclassing
 - superclassing, ATL
 ms.assetid: 1d12b708-de3e-49d5-9e41-42fe4769fa62
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4cce6fd98d4ea476900d8b248442fdddbe3c2d2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 907b6ef49287bfb521b953e42c8f900fc4b6dc10
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="atl-window-classes"></a>ATL 창 클래스
 ATL 사용 하 고 windows를 구현할 수 있는 여러 클래스가 포함 되어 있습니다. 다른 ATL 클래스와 마찬가지로 이러한 클래스는 코드에는 오버 헤드를 부여 하지 않는 효율적인 구현을 제공 합니다.  

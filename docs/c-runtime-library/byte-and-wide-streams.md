@@ -1,13 +1,10 @@
 ---
-title: "바이트 및 와이드 스트림 | Microsoft Docs"
-ms.custom: 
+title: 바이트 및 와이드 스트림 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Byte and Wide Streams
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - byte streams
 - wide streams
 ms.assetid: 61ef0587-4cbc-4eb8-aae5-4c298dbbc6f9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d09e110fd428b13e501647d97a0878df0e9392a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: de026c8887e19e76bbce533db8997193679d1371
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="byte-and-wide-streams"></a>바이트 및 와이드 스트림
 바이트 스트림은 파일을 바이트의 시퀀스로 처리합니다. 프로그램에서 스트림은 바이트 시퀀스와 동일합니다.  

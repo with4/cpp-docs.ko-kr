@@ -1,13 +1,10 @@
 ---
-title: "다중 스레딩: 스레드 종료 | Microsoft Docs"
-ms.custom: 
+title: '다중 스레딩: 스레드 종료 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 f1_keywords:
 - CREATE_SUSPENDED
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c287de62169ef5d205ac791071cee4b103f60abc
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: bdf9376e9f8c9e9d74d88d0bef40dc71fd43d51f
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="multithreading-terminating-threads"></a>다중 스레딩: 스레드 종료
 두 가지 일반적인 문제 때문 스레드가 종료: 제어 함수 종료 또는 스레드 실행을 완료할 수 없습니다. 백그라운드 인쇄를 위해 스레드를 사용 하는 워드 프로세서를 제어 하는 함수는 정상적으로 종료 성공적으로 완료 된 인쇄 하는 경우. 그러나 사용자가 인쇄 작업을 취소, 백그라운드 인쇄 스레드가 완전히 종료 되어야 합니다. 이 항목에는 각 상황을 구현 하는 방법 및 종료 된 후 스레드 종료 코드를 가져오는 방법을 모두 설명 합니다.  
@@ -43,17 +38,17 @@ ms.lasthandoff: 01/29/2018
   
 -   [스레드 종료 코드를 검색합니다.](#_core_retrieving_the_exit_code_of_a_thread)  
   
-##  <a name="_core_normal_thread_termination"></a>정상적인 스레드 종료  
+##  <a name="_core_normal_thread_termination"></a> 정상적인 스레드 종료  
  작업자 스레드에 대 한 일반 스레드 종료는 간단: 제어 함수를 종료 하 고 종료 이유를 나타내는 값을 반환 합니다. 하나를 사용할 수는 [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) 함수 또는 `return` 문. 일반적으로 0을 성공적으로 완료를 사용 하지만 사용자의 책임입니다.  
   
  사용자 인터페이스 스레드는 프로세스를 단순하게:에서 호출 하는 사용자 인터페이스 스레드 내에서 [경우도](http://msdn.microsoft.com/library/windows/desktop/ms644945) 에 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]합니다. 유일한 매개 변수는 **경우도** 하나 스레드 종료 코드입니다. 작업자 스레드 마찬가지로 0을 사용 하 여 성공적으로 완료 된 경우를 나타냅니다.  
   
-##  <a name="_core_premature_thread_termination"></a>스레드 완전 종료  
+##  <a name="_core_premature_thread_termination"></a> 스레드 완전 종료  
  스레드를 완전히 종료 하는 것은 간단: 호출 [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread) 에서 스레드 내에서. 원하는 종료 코드를 유일한 매개 변수로 전달 합니다. 이 스레드의 실행이 중지 되, 스레드의 스택 할당을 취소, 분리 하는 스레드에 연결 된 모든 Dll 및 스레드 개체가 메모리에서 삭제 합니다.  
   
- `AfxEndThread`스레드 종료 내에서 호출 되어야 합니다. 다른 스레드의 스레드를 종료 하려면 두 스레드 간의 통신 방법을 설정 해야 합니다.  
+ `AfxEndThread` 스레드 종료 내에서 호출 되어야 합니다. 다른 스레드의 스레드를 종료 하려면 두 스레드 간의 통신 방법을 설정 해야 합니다.  
   
-##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a>스레드 종료 코드를 검색합니다.  
+##  <a name="_core_retrieving_the_exit_code_of_a_thread"></a> 스레드 종료 코드를 검색합니다.  
  사용자 인터페이스 스레드 또는 작업자의 종료 코드를 가져오려면 호출는 [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190) 함수입니다. 이 함수에 대 한 정보를 참조 하십시오.는 [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]합니다. 이 함수는 스레드에 대 한 핸들을 사용 (에 저장 된는 `m_hThread` 데이터 멤버의 `CWinThread` 개체)의 주소는 `DWORD`합니다.  
   
  스레드가 아직 활성 상태인 경우 **GetExitCodeThread** 배치 **STILL_ACTIVE** 에 제공 된 `DWORD` 주소; 이외에 종료 코드는이 주소에 배치 합니다.  

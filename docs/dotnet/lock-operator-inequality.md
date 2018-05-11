@@ -1,12 +1,9 @@
 ---
 title: lock::operator! = | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - lock.operator!=
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - lock::operator!=
 ms.assetid: ed1d674e-9ee9-4257-8a7e-2e3567d50222
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7285a974b788fd2f6e885a67dab9257a83886d6d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6b34eb410e05bd102f7a10205e57b3731b8f476d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lockoperator"></a>lock::operator!=
 같지 않음 연산자입니다.  
@@ -49,7 +44,7 @@ template<class T> bool operator!=(
 ## <a name="return-value"></a>반환 값  
  반환 `true` 경우 `t` 은 잠금 개체에서 다른 `false` 그렇지 않은 경우.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // msl_lock_op_ineq.cpp  

@@ -1,13 +1,10 @@
 ---
-title: "인터페이스 구현 마법사 | Microsoft Docs"
-ms.custom: 
+title: 인터페이스 구현 마법사 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.impl.interface.overview
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Implement Interface Wizard [C++]
 ms.assetid: 947c329e-0815-4ca7-835e-c41dfeb75f9e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d224546eb8bb06421c2e84206e1f4d4dc77f9668
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bf2ddf83b7a03f8d4e01b61f82e46e0d26a5547b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="implement-interface-wizard"></a>인터페이스 구현 마법사
 이 마법사는 COM 개체에 대 한 인터페이스를 구현합니다. 여러 인터페이스의 구현은 Visual Studio 및 Windows에 사용할 수 있는 COM 라이브러리에 포함 됩니다. 해당 개체의 인스턴스를 만들고 개체에서 제공 하는 서비스를 제공 하는 경우 인터페이스를 구현할 때 개체와 연결 됩니다.  

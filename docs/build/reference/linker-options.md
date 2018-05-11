@@ -19,11 +19,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57f313f82b0b75776b9a7a06a045bef1b7002f56
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: HT
+ms.openlocfilehash: 835d7b1b74c8d465b44ec6274926f0b06d4f1296
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-options"></a>링커 옵션
 
@@ -116,6 +116,7 @@ LINK.exe는 COFF(Common Object File Format) 개체 파일과 라이브러리를 
 |[/PDBALTPATH](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)|PDB 파일을 저장할 다른 위치를 사용합니다.|
 |[/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)|전용 기호가 없는 PDB(프로그램 데이터베이스) 파일을 만듭니다.|
 |[/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)|프로필 기반 최적화에 필요한 .pgd 파일을 지정합니다.|
+|[/POGOSAFEMODE](../../build/reference/pogosafemode-linker-option.md)|**사용 되지 않는** 스레드로부터 안전한 PGO 계측 된 빌드를 만듭니다.|
 |[/PROFILE](../../build/reference/profile-performance-tools-profiler.md)|성능 도구 프로파일러와 함께 사용할 수 있는 출력 파일을 생성합니다.|
 |[/RELEASE](../../build/reference/release-set-the-checksum.md)|.exe 헤더의 체크섬을 설정합니다.|
 |[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)|이미지에 안전한 예외 처리기 테이블을 포함하도록 지정합니다.|
@@ -127,6 +128,7 @@ LINK.exe는 COFF(Common Object File Format) 개체 파일과 라이브러리를 
 |[/TLBID](../../build/reference/tlbid-specify-resource-id-for-typelib.md)|링커 생성 형식 라이브러리의 리소스 ID를 지정합니다.|
 |[/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)|.tlb 파일과 기타 MIDL 출력 파일의 이름을 지정합니다.|
 |[/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md)|터미널 서버에서 실행되는 특별히 디자인된 응용 프로그램을 만듭니다.|
+|[/USEPROFILE](../../build/reference/useprofile.md)|최적화 학습 데이터를 사용 하 여 프로필 기반 최적화 된 이미지를 만듭니다.|
 |[/VERBOSE](../../build/reference/verbose-print-progress-messages.md)|링커 진행 메시지를 출력합니다.|
 |[/VERSION](../../build/reference/version-version-information.md)|버전 번호를 할당합니다.|
 |[/ WHOLEARCHIVE](../../build/reference/wholearchive-include-all-library-object-files.md)|지정 된 정적 라이브러리에서 모든 개체 파일에 포함 됩니다.|

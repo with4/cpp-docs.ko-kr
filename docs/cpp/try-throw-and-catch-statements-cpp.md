@@ -1,12 +1,9 @@
 ---
-title: "시도, throw 및 catch 문 (c + +) | Microsoft Docs"
-ms.custom: 
+title: 시도, throw 및 catch 문 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - catch_cpp
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - throwing exceptions [C++]
 - throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b100f1ee61b06639e75290fafd01dca6a10a820c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fac31e9a31ab560973e986e37b4cf56f5d7e4621
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="try-throw-and-catch-statements-c"></a>Try, Throw 및 Catch 문(C++)
 C++에서 예외 처리를 구현하려면 `try`, `throw` 및 `catch` 식을 사용합니다.  
@@ -51,7 +46,7 @@ C++에서 예외 처리를 구현하려면 `try`, `throw` 및 `catch` 식을 사
   
  이 예제에서는 `try` 블록과 해당 처리기를 보여 줍니다. `GetNetworkResource()`가 네트워크 연결을 통해 데이터를 받고 두 개의 예외 형식은 `std::exception`에서 파생된 사용자 정의 클래스라고 가정합니다. 예외는 `const` 문의 `catch` 참조를 통해 catch됩니다. 값으로 예외를 throw하고 상수 참조로 catch하는 것이 좋습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
   

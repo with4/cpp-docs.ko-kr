@@ -1,12 +1,9 @@
 ---
-title: "링커 도구 오류 LNK1123 | Microsoft Docs"
-ms.custom: 
+title: 링커 도구 오류 LNK1123 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/29/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK1123
@@ -16,14 +13,13 @@ helpviewer_keywords:
 - LNK1123
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90d46a97e27d43f97bfabd1b8ff5eab873c602a3
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: b12a65e61c5677943b4ea1b4b85c12cfc796af45
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-error-lnk1123"></a>링커 도구 오류 LNK1123
 
@@ -48,7 +44,7 @@ ms.lasthandoff: 01/03/2018
 
 - 파일이 손상되지 않았는지 확인합니다. 필요한 경우 다시 빌드합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [링커 입력 파일로 사용하는 .Obj 파일](../../build/reference/dot-obj-files-as-linker-input.md)  
 [EDITBIN 참조](../../build/reference/editbin-reference.md)  

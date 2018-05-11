@@ -1,30 +1,25 @@
 ---
-title: "연습: MFC 프로젝트에 애니메이션 추가 | Microsoft Docs"
-ms.custom: 
+title: '연습: MFC 프로젝트에 애니메이션 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - animation [MFC]
 - MFC, animation
 ms.assetid: 004f832c-9fd5-4f88-9ca9-ae65dececdc2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f027da0e90bc8dde015c2d42bd72ceb388aa0bba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e8ae7496daf6827a6be7769d60af10bca45f7a3d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>연습: MFC 프로젝트에 애니메이션 추가
 이 연습에서는 Visual c + +, Microsoft Foundation 클래스 라이브러리 (MFC) 프로젝트에 기본 애니메이션된 개체를 추가 하는 방법에 설명 합니다.  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
  [!INCLUDE[note_settings_general](../mfc/includes/note_settings_general_md.md)]  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 Visual Studio가 필요합니다.  
   
 ### <a name="to-create-an-mfc-application"></a>MFC 응용 프로그램을 만들려면  

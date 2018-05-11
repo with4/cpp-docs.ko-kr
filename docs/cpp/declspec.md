@@ -1,12 +1,9 @@
 ---
 title: __declspec | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 1/23/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __declspec_cpp
@@ -16,14 +13,13 @@ helpviewer_keywords:
 - __declspec keyword [C++]
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51a08092160ecb288decae343713e5a4f6e507b1
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: c610da3545e7269c307542930140616dc6af9dce
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declspec"></a>__declspec
 
@@ -34,7 +30,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="grammar"></a>문법
 
 *decl-specifier*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (**  *extended-decl-modifier-seq*  **)**
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (***확장-decl-한정자-seq***)** 
 
 *extended-decl-modifier-seq*:  
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub>  
@@ -45,7 +41,7 @@ ms.lasthandoff: 01/25/2018
 &nbsp;&nbsp;&nbsp;&nbsp;**allocate("** *segname* **")**  
 &nbsp;&nbsp;&nbsp;&nbsp;**appdomain**  
 &nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**  
-&nbsp;&nbsp;&nbsp;&nbsp;**deprecated**  
+&nbsp;&nbsp;&nbsp;&nbsp;**사용 되지 않음**  
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**  
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**  
 &nbsp;&nbsp;&nbsp;&nbsp;**jitintrinsic**  
@@ -57,7 +53,7 @@ ms.lasthandoff: 01/25/2018
 &nbsp;&nbsp;&nbsp;&nbsp;**novtable**  
 &nbsp;&nbsp;&nbsp;&nbsp;**프로세스**  
 &nbsp;&nbsp;&nbsp;&nbsp;**property(** { **get=**_get_func_name_ &#124; **,put=**_put_func_name_ } **)**  
-&nbsp;&nbsp;&nbsp;&nbsp;**restrict**  
+&nbsp;&nbsp;&nbsp;&nbsp;**제한**  
 &nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**  
 &nbsp;&nbsp;&nbsp;&nbsp;**selectany**  
 &nbsp;&nbsp;&nbsp;&nbsp;**spectre(nomitigation)**  
@@ -72,13 +68,13 @@ ms.lasthandoff: 01/25/2018
 
 **__declspec** 키워드는 단순한 선언 시작 부분에 배치 해야 합니다. 경고 없이 컴파일러 무시 **__declspec** 뒤에 키워드 배치 * 또는 & 선언에 변수 식별자 앞에 있습니다.
 
-A **__declspec** 사용자 정의 형식 선언의 시작 부분에 지정 된 특성 해당 형식의 변수에 적용 됩니다. 예:
+A **__declspec** 사용자 정의 형식 선언의 시작 부분에 지정 된 특성 해당 형식의 변수에 적용 됩니다. 예를 들어:
 
 ```cpp
 __declspec(dllimport) class X {} varX;
 ```
 
-이 경우 특성이 `varX`에 적용됩니다. A **__declspec** 특성 뒤에 배치 된 **클래스** 또는 **구조체** 키워드는 사용자 정의 형식에 적용 됩니다. 예:
+이 경우 특성이 `varX`에 적용됩니다. A **__declspec** 특성 뒤에 배치 된 **클래스** 또는 **구조체** 키워드는 사용자 정의 형식에 적용 됩니다. 예를 들어:
 
 ```cpp
 class __declspec(dllimport) X {};
@@ -90,7 +86,7 @@ class __declspec(dllimport) X {};
 
 *decl-specifier-seq* *init-declarator-list*;
 
-*decl-지정자-seq* 을 포함 해야 무엇 보다도 기본 형식 (예: **int**, **float**, **typedef**, 또는 클래스 이름), 즉 저장소 클래스 (예: **정적**, **extern**), 또는 **__declspec** 확장 합니다. *init 선언 자 목록* 해야 부분을 포함, 무엇 보다도 포인터의 선언입니다. 예:
+*decl-지정자-seq* 을 포함 해야 무엇 보다도 기본 형식 (예: **int**, **float**, **typedef**, 또는 클래스 이름), 즉 저장소 클래스 (예: **정적**, **extern**), 또는 **__declspec** 확장 합니다. *init 선언 자 목록* 해야 부분을 포함, 무엇 보다도 포인터의 선언입니다. 예를 들어:
 
 ```cpp
 __declspec(selectany) int * pi1 = 0;   //Recommended, selectany & int both part of decl-specifier
@@ -107,7 +103,7 @@ __declspec( thread ) int tls_i = 1;
 
 **Microsoft 전용 종료**
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [키워드](../cpp/keywords-cpp.md)  
 [C 확장 저장소 클래스 특성](../c-language/c-extended-storage-class-attributes.md)  

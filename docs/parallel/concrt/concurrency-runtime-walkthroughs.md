@@ -1,30 +1,25 @@
 ---
-title: "동시성 런타임 연습 | Microsoft Docs"
-ms.custom: 
+title: 동시성 런타임 연습 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - walkthroughs [Concurrency Runtime]
 - Concurrency Runtime, walkthroughs
 ms.assetid: 7374c5e9-54eb-44bf-9ed9-5e190cfd290b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c5716bcfa997a45ab44fcb1026d7e082026a7a8
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 05e50530bf1c7aa401a7422a0119f004e30234a9
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-runtime-walkthroughs"></a>동시성 런타임 연습
 이 섹션에서는 시나리오 기반 항목에는 다양 한 동시성 런타임 기능을 사용 하는 방법을 보여 줍니다.  

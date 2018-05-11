@@ -1,12 +1,9 @@
 ---
-title: "norm_2 클래스 | Microsoft Docs"
-ms.custom: 
+title: norm_2 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2::set_x
@@ -37,17 +34,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 80703f9b-61f4-414a-93fd-bc774f7d3393
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8a3cf125ab89c159f27fe212018780699926e79
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 2bcdb86d63af4f920e1df3dffd920195aa7a00d8
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="norm2-class"></a>norm_2 클래스
 두 일반 숫자의 short 벡터를 나타냅니다.  
@@ -106,7 +101,7 @@ class norm_2;
   
 |이름|설명|  
 |----------|-----------------|  
-|[size Constant](#norm_2__size)||  
+|[상수 크기](#norm_2__size)||  
   
 ### <a name="public-data-members"></a>공용 데이터 멤버  
   

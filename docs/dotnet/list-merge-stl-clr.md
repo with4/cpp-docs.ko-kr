@@ -1,12 +1,9 @@
 ---
 title: 'list:: merge (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::list::merge
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - merge member [STL/CLR]
 ms.assetid: f8e93cd3-bd08-4086-859b-08a2899cc9a6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 0fdf7ee26bdb465e8a86109a4450353c4dc642a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ff5ba18dea3b33d1cf3a50dedfc5e90055e69c3e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listmerge-stlclr"></a>list::병합(STL/CLR)
 제어 된 시퀀스를 정렬 된 두 개의 병합 합니다.  
@@ -53,7 +48,7 @@ template<typename Pred2>
   
  모두 안정적인 병합을 수행 하는 함수에 결과 제어 된 시퀀스에서 원래 제어 된 시퀀스 중 하나에 있는 요소의 없는 쌍 속도가 반대로 바뀝니다. 또한 경우 요소의 쌍 `X` 및 `Y` 순서 지정이 동일할-결과 제어 되는 시퀀스에 `!(X < Y) && !(X < Y)` -제어 되는 원래 시퀀스에서 요소 에의해제어되는시퀀스에서요소앞에표시되`right`.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_list_merge.cpp   

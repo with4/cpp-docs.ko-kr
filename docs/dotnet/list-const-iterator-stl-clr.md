@@ -1,12 +1,9 @@
 ---
 title: 'list:: const_iterator (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::list::const_iterator
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - const_iterator member [STL/CLR]
 ms.assetid: 24e19077-02d2-456e-a3f1-7caaf0b6c974
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4927349bc0f6519bfaa2b64e8de89d8ad74a4b7b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7136e07d3bd6ae6b58bc94c5a4f8e8db222ca97f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listconstiterator-stlclr"></a>list::const_iterator(STL/CLR)
 제어되는 시퀀스에 대한 상수 반복기의 형식입니다.  
@@ -40,7 +35,7 @@ typedef T2 const_iterator;
 ## <a name="remarks"></a>설명  
  이 형식은 지정 되지 않은 형식의 개체를 설명 `T2` 제어 되는 시퀀스에 대 한 상수 임의 액세스 반복기로 사용할 수 있는 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_list_const_iterator.cpp   

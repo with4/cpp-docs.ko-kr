@@ -1,13 +1,10 @@
 ---
-title: "대화 상자 데이터 교환 및 유효성 검사 | Microsoft Docs"
-ms.custom: 
+title: 대화 상자 데이터 교환 및 유효성 검사 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,22 +21,20 @@ helpviewer_keywords:
 - dialog boxes [MFC], retrieving data
 - retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af38919a65c7ecb16692f5833873a630e713951c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0cc12a76f73e2d84a4cb5df66a6dd3d01249265a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-data-exchange-and-validation"></a>대화 상자 데이터 교환 및 유효성 검사
 대화 상자 데이터 교환 (DDX)에 대화 상자 컨트롤을 초기화 하 고 사용자가 데이터 입력을 수집 하기 위해 쉬운 방법입니다. 대화 상자 데이터 유효성 검사 (DDV) 대화 상자에서 데이터 항목을 확인할 쉽습니다. 활용 하기 위해 DDX 및 DDV 대화 상자에서를 사용 하 여는 [멤버 변수 추가 마법사](../ide/add-member-variable-wizard.md) 에 데이터 멤버를 만들고 데이터 형식으로 설정 하 고 유효성 검사 규칙을 지정 합니다.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [대화 상자 데이터 교환](../mfc/dialog-data-exchange.md)  
   

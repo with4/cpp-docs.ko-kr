@@ -1,12 +1,9 @@
 ---
-title: "CD2DMesh 클래스 | Microsoft Docs"
-ms.custom: 
+title: CD2DMesh 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CD2DMesh
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CD2DMesh [MFC], Open
 - CD2DMesh [MFC], m_pMesh
 ms.assetid: 11a2c78a-1367-40e8-a34f-44aa0509a4c9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b1a83fb222c1133e8ea59c7daf53a49b4472de2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce3ad5cfa7df335b5633dffbdd221bf59f01bb29
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cd2dmesh-class"></a>CD2DMesh 클래스
 ID2D1Mesh에 대 한 래퍼입니다.  
@@ -83,7 +78,7 @@ class CD2DMesh : public CD2DResource;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[CD2DMesh::m_pMesh](#m_pmesh)|ID2D1Mesh에 대 한 포인터입니다.|  
   
@@ -97,14 +92,14 @@ class CD2DMesh : public CD2DResource;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dmesh"></a>CD2DMesh:: ~ CD2DMesh  
+##  <a name="_dtorcd2dmesh"></a>  CD2DMesh:: ~ CD2DMesh  
  소멸자입니다. D2D 메시 개체가 소멸 될 때 호출 됩니다.  
   
 ```  
 virtual ~CD2DMesh();
 ```  
   
-##  <a name="attach"></a>CD2DMesh::Attach  
+##  <a name="attach"></a>  CD2DMesh::Attach  
  기존 개체에 대 한 리소스 인터페이스를 연결.  
   
 ```  
@@ -115,7 +110,7 @@ void Attach(ID2D1Mesh* pResource);
  `pResource`  
  기존 리소스 인터페이스입니다. NULL 일 수 없습니다.  
   
-##  <a name="cd2dmesh"></a>CD2DMesh::CD2DMesh  
+##  <a name="cd2dmesh"></a>  CD2DMesh::CD2DMesh  
  CD2DMesh 개체를 만듭니다.  
   
 ```  
@@ -131,7 +126,7 @@ CD2DMesh(
  `bAutoDestroy`  
  개체를 소유자 (pParentTarget)에 의해 폐기 수를 나타냅니다.  
   
-##  <a name="create"></a>CD2DMesh::Create  
+##  <a name="create"></a>  CD2DMesh::Create  
  CD2DMesh를 만듭니다.  
   
 ```  
@@ -145,14 +140,14 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK를 반환 합니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.  
   
-##  <a name="destroy"></a>CD2DMesh::Destroy  
+##  <a name="destroy"></a>  CD2DMesh::Destroy  
  CD2DMesh 개체를 소멸 시킵니다.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DMesh::Detach  
+##  <a name="detach"></a>  CD2DMesh::Detach  
  개체에서 리소스 인터페이스를 분리합니다.  
   
 ```  
@@ -162,7 +157,7 @@ ID2D1Mesh* Detach();
 ### <a name="return-value"></a>반환 값  
  분리 된 리소스 인터페이스 포인터입니다.  
   
-##  <a name="get"></a>CD2DMesh::Get  
+##  <a name="get"></a>  CD2DMesh::Get  
  반환 ID2D1Mesh 인터페이스  
   
 ```  
@@ -172,7 +167,7 @@ ID2D1Mesh* Get();
 ### <a name="return-value"></a>반환 값  
  ID2D1Mesh 인터페이스 또는 개체가 아직 초기화 되지 않은 경우에 NULL 포인터입니다.  
   
-##  <a name="isvalid"></a>CD2DMesh::IsValid  
+##  <a name="isvalid"></a>  CD2DMesh::IsValid  
  리소스 유효성 검사  
   
 ```  
@@ -182,14 +177,14 @@ virtual BOOL IsValid() const;
 ### <a name="return-value"></a>반환 값  
  리소스 올바르면 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
-##  <a name="m_pmesh"></a>CD2DMesh::m_pMesh  
+##  <a name="m_pmesh"></a>  CD2DMesh::m_pMesh  
  ID2D1Mesh에 대 한 포인터입니다.  
   
 ```  
 ID2D1Mesh* m_pMesh;  
 ```  
   
-##  <a name="open"></a>CD2DMesh::Open  
+##  <a name="open"></a>  CD2DMesh::Open  
  모집단에 대 한 메시를 엽니다.  
   
 ```  
@@ -199,7 +194,7 @@ ID2D1TessellationSink* Open();
 ### <a name="return-value"></a>반환 값  
  메시를 채우는 데 사용 되는 ID2D1TessellationSink에 대 한 포인터입니다.  
   
-##  <a name="operator_id2d1mesh_star"></a>CD2DMesh::operator ID2D1Mesh *  
+##  <a name="operator_id2d1mesh_star"></a>  CD2DMesh::operator ID2D1Mesh *  
  반환 ID2D1Mesh 인터페이스  
   
 ```  

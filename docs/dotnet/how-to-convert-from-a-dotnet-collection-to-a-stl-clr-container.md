@@ -2,11 +2,8 @@
 title: 방법:.NET 컬렉션에서 STL/CLR 컨테이너로 변환 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - STL/CLR, converting from .NET collections
 - STL/CLR Containers [STL/CLR]
 ms.assetid: bb927c48-78e8-4150-bd0b-787c651f4a87
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6366dd10e60d8f2ea60811f74ba2b2e10457dd84
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8b6469c035a1f0daca5c789525778aab1119c9f6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>방법: .NET 컬렉션에서 STL/CLR 컨테이너로 변환
 이 항목에 해당 하는 STL/CLR 컨테이너와 해당.NET 컬렉션으로 변환 하는 방법을 보여 줍니다. 예를 들어.NET 변환 하는 방법을 알아보겠습니다 <xref:System.Collections.Generic.List%601> STL/clr [벡터](../dotnet/vector-stl-clr.md) .NET 변환 하는 방법 및 <xref:System.Collections.Generic.Dictionary%602> STL/clr [맵](../dotnet/map-stl-clr.md), 절차는 모든 컬렉션 및 컨테이너에 대 한 유사 하지만 .  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
      두 번째 예제에서는이 절차를 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 제네릭 만듭니다 <xref:System.Collections.Generic.List%601> 5 개 요소를 추가 합니다. 그런 다음 만듭니다는 `vector` 사용 하는 생성자를 사용 하 여는 <xref:System.Collections.Generic.IEnumerable%601> 를 인수로 합니다.  
   
 ```  
@@ -89,7 +84,7 @@ The contents of the cliext::vector are:
 11  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 제네릭 만듭니다 <xref:System.Collections.Generic.Dictionary%602> 5 개 요소를 추가 합니다. 만들 그런 다음는 `collection_adapter` 를 래핑하는 <xref:System.Collections.Generic.Dictionary%602> 간단한 STL/CLR 컨테이너입니다. 마지막으로 만듭니다는 `map` 의 내용을 복사는 <xref:System.Collections.Generic.Dictionary%602> 에 `map` 반복 하 여는 `collection_adapter`합니다. 이 과정에서 사용 하 여 새 쌍을 만듭니다는 `make_pair` 함수를 하 고 새 쌍에 직접 삽입는 `map`합니다.  
   
 ```  

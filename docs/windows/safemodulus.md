@@ -1,13 +1,10 @@
 ---
 title: SafeModulus | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SafeModulus
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - SafeModulus function
 ms.assetid: ae5c81eb-5dcf-45a5-aa76-465fdfe68654
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 383382de2720ac7a72403bd3578e235af7bdbe05
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 653293ac04be1e3a04e90412a9d9d8b988773329
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safemodulus"></a>SafeModulus
 두 숫자에 대해 모듈러스 연산을 수행합니다.  
@@ -53,7 +48,7 @@ inline bool SafeModulus (
  매개 변수가 있는 `SafeModulus` 결과 저장 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true`오류가 발생 하지 않으면; `false` 오류가 발생 합니다.  
+ `true` 오류가 발생 하지 않으면; `false` 오류가 발생 합니다.  
   
 ## <a name="remarks"></a>설명  
  이 메서드는의 일부 [SafeInt 라이브러리](../windows/safeint-library.md) 용인지 단일 모듈러스 연산의 인스턴스를 만들지 않고 및는 [SafeInt 클래스](../windows/safeint-class.md)합니다.  

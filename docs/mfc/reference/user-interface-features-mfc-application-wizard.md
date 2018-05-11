@@ -1,13 +1,10 @@
 ---
-title: "MFC 응용 프로그램 마법사, 사용자 인터페이스 기능 | Microsoft Docs"
-ms.custom: 
+title: MFC 응용 프로그램 마법사, 사용자 인터페이스 기능 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.exe.ui
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MFC Application Wizard, user interface features
 ms.assetid: 59e7b829-a665-42eb-be23-3f2a36eb2dad
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5906cf607e09df536825eed88e7b1be59d8fdee2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 42196e437c8ff2ee43f733e1826b2a19c5dbb0a5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>MFC 응용 프로그램 마법사, 사용자 인터페이스 기능
 이 항목에서는 응용 프로그램의 모양을 지정 하는 데 사용할 수 있는 옵션에 설명 합니다. 프로젝트에 사용할 수 있는 사용자 인터페이스 기능에는 지정 된 응용 프로그램의 유형에 따라 달라는 [MFC 응용 프로그램 마법사, 응용 프로그램 종류](../../mfc/reference/application-type-mfc-application-wizard.md) MFC 응용 프로그램 마법사의 페이지입니다. 예를 들어 단일 문서 인터페이스 응용 프로그램을 만드는 경우 자식 프레임 스타일을 추가할 수 없습니다.  

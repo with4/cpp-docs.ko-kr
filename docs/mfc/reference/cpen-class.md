@@ -1,12 +1,9 @@
 ---
-title: "CPen 클래스 | Microsoft Docs"
-ms.custom: 
+title: CPen 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPen
@@ -27,17 +24,15 @@ helpviewer_keywords:
 - CPen [MFC], GetExtLogPen
 - CPen [MFC], GetLogPen
 ms.assetid: 93175a3a-d46c-4768-be8d-863254f97a5f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51ea9aadc5d5ca8fb5a5a253d2ddb5972bf0dfdc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 995e3f85ec21cae1be18f0bf7b6548c912ca5254
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpen-class"></a>CPen 클래스
 Windows GDI(그래픽 장치 인터페이스) 펜을 캡슐화합니다.  
@@ -85,7 +80,7 @@ class CPen : public CGdiObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="cpen"></a>CPen::CPen  
+##  <a name="cpen"></a>  CPen::CPen  
  `CPen` 개체를 생성합니다.  
   
 ```  
@@ -124,7 +119,7 @@ CPen(
   
 - **PS_INSIDEFRAME** 줄의 경계 사각형을 지정 하는 Windows GDI 출력 함수를 통해 얻은 프레임 내부를 그리는 펜을 만듭니다 (예를 들어는 **타원**, **사각형** , `RoundRect`, `Pie`, 및 `Chord` 멤버 함수). 이 스타일은 경계 사각형을 지정 하지 않는 Windows GDI 출력 함수와 함께 사용 하는 경우 (예를 들어는 `LineTo` 멤버 함수), 펜의 그리기 영역 프레임으로 제한 되지 않습니다.  
   
- 두 번째 버전은 `CPen` 생성자 유형, 스타일, 끝 단면 및 조인 특성의 조합을 지정 합니다. 비트 OR 연산자 (&#124;)를 사용 하 여 각 범주에서 값을 결합할 수 해야 합니다. 펜 종류는 다음 값 중 하나일 수 있습니다.  
+ 두 번째 버전은 `CPen` 생성자 유형, 스타일, 끝 단면 및 조인 특성의 조합을 지정 합니다. 비트 OR 연산자를 사용 하 여 각 범주에서 값을 ठ ा (&#124;). 펜 종류는 다음 값 중 하나일 수 있습니다.  
   
 - **PS_GEOMETRIC** 기하학적 펜을 만듭니다.  
   
@@ -176,10 +171,10 @@ CPen(
   
  인수를 사용 하는 생성자를 사용 하는 경우 없습니다 추가 초기화가 필요 합니다. 인수를 사용 하 여 생성자 인수 없는 생성자 항상 성공 하는 동안 오류가 발생 하는 경우 예외를 throw 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#99](../../mfc/codesnippet/cpp/cpen-class_1.cpp)]  
   
-##  <a name="createpen"></a>CPen::CreatePen  
+##  <a name="createpen"></a>  CPen::CreatePen  
  지정 된 스타일, 두께 및 브러시 특성을 사용 하 여 논리 형식적 또는 기하학적 펜을 만들고에 연결 된 `CPen` 개체입니다.  
   
 ```  
@@ -240,10 +235,10 @@ BOOL CreatePen(
   
  응용 프로그램에 더 이상 특정된 펜 필요를 호출 해야는 [CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) 멤버 함수 또는 파괴는 `CPen` 리소스가 더 이상 사용 중입니다. 개체입니다. 장치 컨텍스트에에서 펜을 선택할 때 응용 프로그램 펜을 삭제 해야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#100](../../mfc/codesnippet/cpp/cpen-class_2.cpp)]  
   
-##  <a name="createpenindirect"></a>CPen::CreatePenIndirect  
+##  <a name="createpenindirect"></a>  CPen::CreatePenIndirect  
  스타일, 두께 및 색에서 가리키는 구조에 있는 펜 초기화 `lpLogPen`합니다.  
   
 ```  
@@ -262,10 +257,10 @@ BOOL CreatePenIndirect(LPLOGPEN lpLogPen);
   
  펜 있으면는 **PS_INSIDEFRAME** 스타일과 색 논리 색상표에서 색이 일치 하지 않는 펜 디더링된 색으로 그려집니다. **PS_INSIDEFRAME** 스타일은 동일 **PS_SOLID** 펜 굵기 1 보다 작은 경우.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#101](../../mfc/codesnippet/cpp/cpen-class_3.cpp)]  
   
-##  <a name="fromhandle"></a>CPen::FromHandle  
+##  <a name="fromhandle"></a>  CPen::FromHandle  
  에 대 한 포인터를 반환 합니다.는 `CPen` 개체는 Windows GDI pen 개체에 대 한 핸들을 지정 합니다.  
   
 ```  
@@ -274,7 +269,7 @@ static CPen* PASCAL FromHandle(HPEN hPen);
   
 ### <a name="parameters"></a>매개 변수  
  *hPen*  
- `HPEN`Windows GDI 펜에 대 한 핸들입니다.  
+ `HPEN` Windows GDI 펜에 대 한 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 `CPen` 성공 되지 않으면 개체 **NULL**합니다.  
@@ -282,10 +277,10 @@ static CPen* PASCAL FromHandle(HPEN hPen);
 ### <a name="remarks"></a>설명  
  `CPen` 개체가 핸들에 연결되지 않은 경우 임시 `CPen` 개체를 만들어 연결합니다. 이 임시 `CPen` 개체는 다음에 응용 프로그램의 경우 이벤트 루프 유휴 시간에 인 될 때까지 모든 임시 그래픽 대답 하에서 개체를 삭제만 유효 합니다. 즉, 임시 개체는 한 창 메시지를 처리 동안에 유효 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#105](../../mfc/codesnippet/cpp/cpen-class_4.cpp)]  
   
-##  <a name="getextlogpen"></a>CPen::GetExtLogPen  
+##  <a name="getextlogpen"></a>  CPen::GetExtLogPen  
  가져옵니다는 **EXTLOGPEN** 구조 원본으로 사용 합니다.  
   
 ```  
@@ -312,12 +307,12 @@ int GetExtLogPen(EXTLOGPEN* pLogPen);
   
 - [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705)  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 코드 예제에서는 호출 `GetExtLogPen` 을 펜의 특성을 검색 한 다음 같은 색으로 외관으로 새롭게 펜을 만들어야 합니다.  
   
  [!code-cpp[NVC_MFCDocView#102](../../mfc/codesnippet/cpp/cpen-class_5.cpp)]  
   
-##  <a name="getlogpen"></a>CPen::GetLogPen  
+##  <a name="getlogpen"></a>  CPen::GetLogPen  
  가져옵니다는 `LOGPEN` 구조 원본으로 사용 합니다.  
   
 ```  
@@ -342,12 +337,12 @@ int GetLogPen(LOGPEN* pLogPen);
   
 - [LOGPEN](http://msdn.microsoft.com/library/windows/desktop/dd145041)  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 코드 예제에서는 호출 `GetLogPen` 펜의 문자를 가져오고 다음 새, 단색 펜 색으로 만듭니다.  
   
  [!code-cpp[NVC_MFCDocView#103](../../mfc/codesnippet/cpp/cpen-class_6.cpp)]  
   
-##  <a name="operator_hpen"></a>HPEN CPen::operator  
+##  <a name="operator_hpen"></a>  HPEN CPen::operator  
  연결 된 Windows GDI 핸들을 가져옵니다는 `CPen` 개체입니다.  
   
 ```  
@@ -362,7 +357,7 @@ operator HPEN() const;
   
  그래픽 개체를 사용 하는 방법에 대 한 자세한 내용은 문서 참조 [그래픽 개체](http://msdn.microsoft.com/library/windows/desktop/dd144962) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#104](../../mfc/codesnippet/cpp/cpen-class_7.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

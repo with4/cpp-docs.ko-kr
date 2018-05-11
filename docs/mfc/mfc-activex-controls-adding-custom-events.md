@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 컨트롤: 사용자 지정 이벤트 추가 | Microsoft Docs"
-ms.custom: 
+title: 'MFC ActiveX 컨트롤: 사용자 지정 이벤트 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,22 +21,20 @@ helpviewer_keywords:
 - custom events [MFC]
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bbf62500d3aaca21e9b01401e839d08fa56755c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5b82232b8f2ad7a5e3bc1ff8fed0e8a38b1a7d66
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC ActiveX 컨트롤: 사용자 지정 이벤트 추가
 사용자 지정 이벤트 스톡 이벤트 한다는 점에서 다릅니다 클래스에 의해 자동으로 발생 되지 않습니다 `COleControl`합니다. 사용자 지정 이벤트는 컨트롤 개발자는 이벤트에 의해 결정 된 특정 작업을 인식 합니다. 사용자 지정 이벤트에 대 한 이벤트 맵 항목으로 표시 됩니다는 `EVENT_CUSTOM` 매크로입니다. 다음 섹션에는 ActiveX 컨트롤 마법사를 사용 하 여 만든 ActiveX 컨트롤 프로젝트에 대 한 사용자 지정 이벤트를 구현 합니다.  
   
-##  <a name="_core_adding_a_custom_event_with_classwizard"></a>추가 된 사용자 지정 이벤트는 이벤트 추가 마법사  
+##  <a name="_core_adding_a_custom_event_with_classwizard"></a> 추가 된 사용자 지정 이벤트는 이벤트 추가 마법사  
  다음 절차에는 특정 사용자 지정 이벤트를 ClickIn 추가합니다. 다른 사용자 지정 이벤트를 추가 하려면이 절차를 사용할 수 있습니다. 사용자 지정 이벤트 이름 및 해당 매개 변수 ClickIn 이벤트 이름 및 매개 변수를 대체 합니다.  
   
 #### <a name="to-add-the-clickin-custom-event-using-the-add-event-wizard"></a>이벤트 추가 마법사를 사용 하 여 사용자 지정 ClickIn 이벤트를 추가 하려면  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
 8.  클릭 **마침** 여 이벤트를 만듭니다.  
   
-##  <a name="_core_classwizard_changes_for_custom_events"></a>사용자 지정 이벤트 추가 마법사 변경 이벤트  
+##  <a name="_core_classwizard_changes_for_custom_events"></a> 사용자 지정 이벤트 추가 마법사 변경 이벤트  
  사용자 지정 이벤트를 추가 하면 해당 변경을 컨트롤 클래스에 않습니다. H입니다. CPP, 및입니다. IDL 파일입니다. 다음 코드 샘플 ClickIn 이벤트에 적용 됩니다.  
   
  다음 줄의 헤더에 추가 됩니다 (합니다. H) 컨트롤 클래스의 파일:  
@@ -83,7 +78,7 @@ ms.lasthandoff: 12/21/2017
   
  이 줄 ClickIn 이벤트 이벤트 추가 마법사 이벤트 목록에서 이벤트의 위치에서 가져온 특정 ID 번호를 할당 합니다. 이벤트 목록에 항목 컨테이너를를 해당 이벤트를 예상할 수 있습니다. 예를 들어 이벤트가 발생할 때 실행 되는 처리기 코드를 제공할 수 있습니다.  
   
-##  <a name="_core_calling_fireclickin"></a>FireClickIn 호출  
+##  <a name="_core_calling_fireclickin"></a> FireClickIn 호출  
  이벤트 추가 마법사를 사용 하 여 사용자 지정 ClickIn 이벤트를 추가한 했으므로이 이벤트는 시작 될 시기를 결정 해야 합니다. 호출 하 여이 작업을 수행 `FireClickIn` 적절 한 조치에 발생 합니다. 이 설명에서는 컨트롤이 사용 하는 `InCircle` 함수 내는 `WM_LBUTTONDOWN` 원형 또는 타원형 영역 내부를 클릭할 때 ClickIn 이벤트를 발생 시키는 메시지 처리기입니다. 다음 절차에서는 추가 `WM_LBUTTONDOWN` 처리기입니다.  
   
 #### <a name="to-add-a-message-handler-with-the-add-event-wizard"></a>이벤트 추가 마법사와 메시지 처리기를 추가 하려면  
@@ -117,7 +112,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxUI#12](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_6.h)]  
   
-##  <a name="_core_custom_events_with_stock_names"></a>주식 이름 사용 하 여 사용자 지정 이벤트  
+##  <a name="_core_custom_events_with_stock_names"></a> 주식 이름 사용 하 여 사용자 지정 이벤트  
  동일한 컨트롤에 둘 다를 구현 하지 수 있지만 스톡 이벤트로 이름이 같은 사용자 지정 이벤트를 만들 수 있습니다. 예를 들어 스톡 이벤트 클릭 정상적으로 발생 하는 경우에 발생 하지 않는 Click 이라는 사용자 지정 이벤트를 만들 수도 있습니다. 그런 다음 해당 발생 함수를 호출 하 여 언제 든 지 Click 이벤트를 실행 수 있습니다.  
   
  다음 절차는 추가 사용자 지정 클릭 이벤트입니다.  

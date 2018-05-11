@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 1) C4906 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 1) C4906 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4906
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4906
 ms.assetid: 05318e74-799b-412a-9dce-f02b8161d762
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba4ce917a0ed9b4c900ba39f5ab2d84f02ca44be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35d022b7b82d8a5ff8a74fe7348040a710f557b0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4906"></a>컴파일러 경고(수준 1) C4906
 문자열 리터럴을 'LPWSTR'로 캐스팅했습니다.  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
  기본적으로 이 경고는 해제되어 있습니다. 자세한 내용은 [기본적으로 해제되어 있는 컴파일러 경고](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 를 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C4906 오류가 생성 됩니다.  
   
 ```  

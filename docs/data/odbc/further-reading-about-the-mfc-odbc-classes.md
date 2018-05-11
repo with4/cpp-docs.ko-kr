@@ -1,30 +1,25 @@
 ---
-title: "추가 MFC ODBC 클래스에 대 한 정보 | Microsoft Docs"
-ms.custom: 
+title: 추가 MFC ODBC 클래스에 대 한 정보 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5f43b8fa403aad5b2df6aebf07c1aaf3b0dd191b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8e0a5a99146ae178d06e2ec097ab85c0f1c54eb9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>MFC ODBC 클래스에 대한 추가 정보
 다음 항목을 추가 개념 및이 항목에서 소개 하는 기술을 설명 합니다.  

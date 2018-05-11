@@ -1,13 +1,10 @@
 ---
-title: "컨트롤 | Microsoft Docs"
-ms.custom: 
+title: 컨트롤 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.control
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 00e9ce0a3e310ad9d07f41b0053ed5249a35a339
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d8e80736ca84b551f197cc475aed4c7b54b9bf52
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="control"></a>컨트롤
 사용자 정의 형식 컨트롤 임을 지정 합니다.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  **제어** 내재 하 고는 [coclass](../windows/coclass.md) 특성입니다. **제어** c + + 특성에 동일한 기능을는 [제어](http://msdn.microsoft.com/library/windows/desktop/aa366764) MIDL 특성입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cpp_attr_ref_control.cpp  

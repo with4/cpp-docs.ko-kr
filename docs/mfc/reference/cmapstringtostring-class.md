@@ -1,12 +1,9 @@
 ---
-title: "CMapStringToString 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMapStringToString 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMapStringToString
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 142a000b5521458e3bdace8f840295efd07209fc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a196e2f3f4641d94bbbbda57dd1471066fb1dfa2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmapstringtostring-class"></a>CMapStringToString 클래스
 `CString` 개체로 키가 지정된 `CString` 개체의 맵을 지원합니다.  
@@ -118,10 +113,10 @@ class CMapStringToString : public CObject
   
 |이름|설명|  
 |----------|-----------------|  
-|[CMapStringToOb::operator]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|지도 요소를 삽입-한 연산자의 대체 `SetAt`합니다.|  
+|[CMapStringToOb::operator [ ]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|지도 요소를 삽입-한 연산자의 대체 `SetAt`합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CMapStringToString`는 serialization 및 요소 덤프를 지원하기 위해 `IMPLEMENT_SERIAL` 매크로를 통합합니다. 지도 오버 로드 된 삽입을 사용 하 여 보관 저장소에 저장 되는 경우 각 요소가 차례로 serialize 됩니다 (  **<<** ) 연산자 또는 `Serialize` 멤버 함수입니다.  
+ `CMapStringToString`는 serialization 및 요소 덤프를 지원하기 위해 `IMPLEMENT_SERIAL` 매크로를 통합합니다. 지도 오버 로드 된 삽입을 사용 하 여 보관 저장소에 저장 되는 경우 각 요소가 차례로 serialize 됩니다 ( **<<**) 연산자 또는 `Serialize` 멤버 함수입니다.  
   
  개인의 덤프 해야 할 경우 `CString` -  `CString` 요소를 1 이상으로 덤프 컨텍스트 깊이 설정 해야 합니다.  
   
@@ -137,7 +132,7 @@ class CMapStringToString : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcoll.h  
   
-##  <a name="cpair"></a>CMapStringToString::CPair  
+##  <a name="cpair"></a>  CMapStringToString::CPair  
  키 값과 연결 된 문자열 개체의 값을 포함합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -151,10 +146,10 @@ class CMapStringToString : public CObject
   
  반환 값을 저장 하는 데 사용 됩니다 [CMapStringToString::PLookup](#plookup), [CMapStringToString::PGetFirstAssoc](#pgetfirstassoc), 및 [CMapStringToString::PGetNextAssoc](#pgetnextassoc)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   사용의 예에 대 한 예제를 참조 하십시오. [CMapStringToString::PLookup](#plookup)합니다.  
   
-##  <a name="pgetfirstassoc"></a>CMapStringToString::PGetFirstAssoc  
+##  <a name="pgetfirstassoc"></a>  CMapStringToString::PGetFirstAssoc  
  Map 개체의 첫 번째 항목을 반환합니다.  
   
 ```  
@@ -169,10 +164,10 @@ CPair* PGetFirstAssoc();
 ### <a name="remarks"></a>설명  
  Map 개체에 대 한 포인터는 첫 번째 요소를 반환 하려면이 함수를 호출 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections#73](../../mfc/codesnippet/cpp/cmapstringtostring-class_1.cpp)]  
   
-##  <a name="pgetnextassoc"></a>CMapStringToString::PGetNextAssoc  
+##  <a name="pgetnextassoc"></a>  CMapStringToString::PGetNextAssoc  
  가 가리키는 지도 요소를 검색 `pAssocRec`합니다.  
   
 ```  
@@ -191,10 +186,10 @@ CPair *PGetNextAssoc(const CPair* pAssoc);
 ### <a name="remarks"></a>설명  
  Map의 모든 요소를 반복 하는이 메서드를 호출 합니다. 첫 번째 요소를 호출 하 여 검색 `PGetFirstAssoc` 는 지도에 대 한 연속 호출은을 반복 하 고 `PGetNextAssoc`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CMapStringToString::PGetFirstAssoc](#pgetfirstassoc)합니다.  
   
-##  <a name="plookup"></a>CMapStringToString::PLookup  
+##  <a name="plookup"></a>  CMapStringToString::PLookup  
  지정된 된 키에 매핑된 값을 찾습니다.  
   
 ```  
@@ -213,7 +208,7 @@ CPair* PLookup(LPCTSTR key);
 ### <a name="remarks"></a>설명  
  지정된 된 키를 정확 하 게 일치 하는 키를 사용 하 여 지도 요소에 대 한 검색 하려면이 메서드를 호출 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCCollections#74](../../mfc/codesnippet/cpp/cmapstringtostring-class_2.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonFontComboBox 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCRibbonFontComboBox 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonFontComboBox
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMFCRibbonFontComboBox [MFC], RebuildFonts
 - CMFCRibbonFontComboBox [MFC], SetFont
 ms.assetid: 33b4db50-df4f-45fa-8f05-2e6e73c31435
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fab339300de907169ab7f4471d9892feadffad81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 86a46614cdb61e39af1016e496b12518b87f59ed
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox 클래스
 글꼴 목록이 포함된 콤보 상자를 구현합니다. 콤보 상자를 리본 패널에 배치합니다.  
@@ -99,7 +94,7 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxRibbonComboBox.h  
   
-##  <a name="buildfonts"></a>CMFCRibbonFontComboBox::BuildFonts  
+##  <a name="buildfonts"></a>  CMFCRibbonFontComboBox::BuildFonts  
  글꼴로 리본 메뉴의 콤보 상자를 채웁니다.  
   
 ```  
@@ -119,7 +114,7 @@ void BuildFonts(
  [in] `nPitchAndFamily`  
  피치 및 패밀리를 추가 하려면 글꼴을 지정 합니다.  
   
-##  <a name="cmfcribbonfontcombobox"></a>CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
+##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
  생성 하 고 초기화는 [CMFCRibbonFontComboBox](../../mfc/reference/cmfcribbonfontcombobox-class.md) 개체입니다.  
   
 ```  
@@ -152,7 +147,7 @@ CMFCRibbonFontComboBox(
   
  에 할당 될 수 있는 유효한 문자 집합에 대 한 자세한 내용은 `nCharSet`, 및 유효한 값을 지정할 수 있는 `nPitchAndFamily`, 참조 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) Windows SDK 설명서에서입니다.  
   
-##  <a name="getfontdesc"></a>CMFCRibbonFontComboBox::GetFontDesc  
+##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -166,7 +161,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="rebuildfonts"></a>CMFCRibbonFontComboBox::RebuildFonts  
+##  <a name="rebuildfonts"></a>  CMFCRibbonFontComboBox::RebuildFonts  
  이전에 지정한 글꼴 종류, 문자 집합 및 피치 및 패밀리 글꼴로 리본 메뉴의 콤보 상자를 채웁니다.  
   
 ```  
@@ -176,7 +171,7 @@ void RebuildFonts();
 ### <a name="remarks"></a>설명  
  글꼴 종류, 문자 집합을 지정할 수 있으며 피치 및 패밀리 리본 글꼴 콤보에 포함할 글꼴의 상자에 [생성자](#cmfcribbonfontcombobox) 이 클래스 또는 호출 하 여 [CMFCRibbonFontComboBox::BuildFonts](#buildfonts).  
   
-##  <a name="setfont"></a>CMFCRibbonFontComboBox::SetFont  
+##  <a name="setfont"></a>  CMFCRibbonFontComboBox::SetFont  
  콤보 상자에서 지정된 글꼴을 선택합니다.  
   
 ```  
@@ -194,14 +189,14 @@ BOOL SetFont(
  문자 집합 선택한 글꼴을 지정 합니다.  
   
  `bExact`  
- `TRUE`문자 집합; 글꼴을 선택할 때와 일치 해야 함을 지정 하려면 `FALSE` 지정할 글꼴을 선택 하는 경우에 문자 집합을 무시할 수 있습니다.  
+ `TRUE` 문자 집합; 글꼴을 선택할 때와 일치 해야 함을 지정 하려면 `FALSE` 지정할 글꼴을 선택 하는 경우에 문자 집합을 무시할 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
  지정된 된 글꼴을 찾아 선택한; 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getcharset"></a>CMFCRibbonFontComboBox::GetCharSet  
+##  <a name="getcharset"></a>  CMFCRibbonFontComboBox::GetCharSet  
  지정된 문자 집합을 반환합니다.  
   
 ```  
@@ -213,7 +208,7 @@ BYTE GetCharSet() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getfonttype"></a>CMFCRibbonFontComboBox::GetFontType  
+##  <a name="getfonttype"></a>  CMFCRibbonFontComboBox::GetFontType  
  콤보 상자에 표시할 글꼴 종류를 반환합니다. 유효한 옵션 DEVICE_FONTTYPE, RASTER_FONTTYPE, TRUETYPE_FONTTYPE 또는 이러한 옵션의 비트 조합입니다.  
   
 ```  
@@ -225,7 +220,7 @@ int GetFontType() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getpitchandfamily"></a>CMFCRibbonFontComboBox::GetPitchAndFamily  
+##  <a name="getpitchandfamily"></a>  CMFCRibbonFontComboBox::GetPitchAndFamily  
  콤보 상자에 표시되는 글꼴의 피치 및 패밀리를 반환합니다.  
   
 ```  

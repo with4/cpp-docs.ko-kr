@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 1 및 3) C4793 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 1 및 3) C4793 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4793
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - C6637
 - C4793
 ms.assetid: 819ada53-1d9c-49b8-a629-baf8c12314e6
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca10ae4303a77d65c7ad88ba08b20e06a31e4bf1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 56b60a028f3fa1a847d4242c0768f8082d6a686e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-and-3-c4793"></a>컴파일러 경고(수준 1 및 3) C4793
 'function': 함수가 네이티브 코드로 컴파일 되었습니다. 'reason'  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
 |이유 메시지|설명|  
 |--------------------|-------------|  
 |정렬 된 데이터 형식은 관리 코드에서 지원 되지 않습니다.|CLR에서는 수 있어야 필요에 따라 데이터를 할당할 수 있는 하지 못할 수도 있습니다는 데이터와 같은 선언을 사용 하 여 정렬 된 경우 [__m128](../../cpp/m128.md) 또는 [맞춤](../../cpp/align-cpp.md)합니다.|  
-|관리 코드에서 '__ImageBase'를 사용 하는 함수를 사용할 수 없습니다.|`__ImageBase`일반적으로 DLL을 로드 하는 하위 수준 네이티브 코드 에서만 사용 되는 특별 한 링커 기호가입니다.|  
+|관리 코드에서 '__ImageBase'를 사용 하는 함수를 사용할 수 없습니다.|`__ImageBase` 일반적으로 DLL을 로드 하는 하위 수준 네이티브 코드 에서만 사용 되는 특별 한 링커 기호가입니다.|  
 |varargs에서 지원 되지 않는 ' / clr' 컴파일러 옵션|네이티브 함수에는 관리 되는 함수를 호출할 수 없습니다 [가변 인수 목록을 얻으려면](../../cpp/functions-with-variable-argument-lists-cpp.md) (varargs) 함수에 다른 스택을 레이아웃 요구 사항 때문에 있습니다. 그러나 지정 하는 경우는 `/clr:pure` 컴파일러 옵션을 가변 인수 목록은 어셈블리에 함수를 관리 되는 작업만 포함 될 수 있으므로 지원 됩니다. 자세한 내용은 참조 [순수형 및 안정형 코드 (C + + /cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)합니다.|  
 |64 비트 CLR __ptr32 한정자로 선언 된 데이터를 지원 하지 않습니다.|포인터 크기가 현재 플랫폼에서 네이티브 포인터와 동일 해야 합니다. 자세한 내용은 참조 [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md)합니다.|  
 |32 비트 CLR __ptr64 한정자로 선언 된 데이터를 지원 하지 않습니다.|포인터 크기가 현재 플랫폼에서 네이티브 포인터와 동일 해야 합니다. 자세한 내용은 참조 [__ptr32, \__ptr64](../../cpp/ptr32-ptr64.md)합니다.|  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
 |__Clrcall이 아닌 가상 함수 썽크는 네이티브로 컴파일해야 합니다.|비-[__clrcall](../../cpp/clrcall.md) 가상 함수 썽크는 관리 되지 않는 주소를 사용 해야 합니다.|  
 |'_Setjmp'를 사용 하는 함수는 네이티브로 컴파일해야 합니다.|CLR은 프로그램 실행을 제어할 수 있어야 합니다. 그러나는 [setjmp](../../cpp/using-setjmp-longjmp.md) 함수는 저장 및 레지스터 및 실행 상태와 같은 하위 수준 정보를 복원 하 여 일반적인 프로그램 실행을 건너뜁니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C4793 합니다.  
   
 ```  
@@ -76,7 +71,7 @@ warning C4793: 'asmfunc' : function is compiled as native code:
         Inline native assembly ('__asm') is not supported in managed code  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C4793 합니다.  
   
 ```  

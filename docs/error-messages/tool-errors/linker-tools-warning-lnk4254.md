@@ -1,12 +1,9 @@
 ---
-title: "링커 도구 경고 LNK4254 | Microsoft Docs"
-ms.custom: 
+title: 링커 도구 경고 LNK4254 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK4254
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK4254
 ms.assetid: 6f41dfb3-ca21-40d3-bac7-b637e578efa4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e17bcd03f92114c1b7cd21e63220cf6372c17bf2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb57882ab4269c06a53ed73fed2a9d6caf2f2c85
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-warning-lnk4254"></a>링커 도구 경고 LNK4254
 '사항 구역 1' 섹션 (오프셋) 'section2'에 병합 (오프셋) 다양 한 특성  
@@ -38,11 +33,11 @@ ms.lasthandoff: 12/21/2017
   
  자세한 내용은 다음 항목을 참조하세요.  
   
--   [/ 병합 (섹션 결합)](../../build/reference/merge-combine-sections.md)  
+-   [/MERGE(섹션 결합)](../../build/reference/merge-combine-sections.md)  
   
 -   [C 주석(C/C++)](../../preprocessor/comment-c-cpp.md)  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 LNK4254 경고가 발생 합니다.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
 title: BEGIN_PROPERTY_SET_EX | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - BEGIN_PROPERTY_SET_EX
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - BEGIN_PROPERTY_SET_EX macro
 ms.assetid: c95e7fab-edce-47b8-b282-200e53a2ea8a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 46f20308e037942ef3259d930fa89a3e08dca93d
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 239ee5810b0ebf46e01c9c97b01a36fdca4a1392
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="beginpropertysetex"></a>BEGIN_PROPERTY_SET_EX
 속성에는 속성의 시작 부분을 설정 하는 부호 맵을 설정 합니다.  
@@ -45,7 +40,7 @@ BEGIN_PROPERTY_SET_EX(guid
  `flags`  
  [in] **UPROPSET_HIDDEN** , 노출 하지 않으려면 속성 집합에 또는 **UPROPSET_PASSTHROUGH** 공급자의 공급자의 범위 외부에 정의 된 속성을 노출 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  

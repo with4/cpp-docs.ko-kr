@@ -1,31 +1,26 @@
 ---
-title: "레코드의 기능 볼 클래스 (MFC 데이터 액세스) | Microsoft Docs"
-ms.custom: 
+title: 레코드의 기능 볼 클래스 (MFC 데이터 액세스) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - record views, classes
 - record view classes
 ms.assetid: e7b2820f-09c4-483f-83c0-317e8be42bdf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1c975aac0459a13a3fb95fdec3dff1a648b0efec
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9b6717c0ef1167e01df2f5e8de14408b23a9dbb1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="features-of-record-view-classes--mfc-data-access"></a>레코드 뷰 클래스의 기능  (MFC Data Access)
 클래스와 함께 양식 기반 데이터 액세스 프로그래밍을 수행할 수 [CFormView](../mfc/reference/cformview-class.md), 하지만 [CRecordView](../mfc/reference/crecordview-class.md) 는 일반적으로 더 나은 클래스에서 파생 되도록 합니다. 외에 해당 `CFormView` 기능 `CRecordView`:  

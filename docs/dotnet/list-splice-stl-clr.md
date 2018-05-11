@@ -1,12 +1,9 @@
 ---
 title: 'list:: splice (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::list::splice
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - splice member [STL/CLR]
 ms.assetid: ebc424b9-8341-4a88-b101-86d56324f5ac
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ba4513f8ff7e6ce51a50faacbdbe08c6fca34d01
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0c92faf6a4ec84e6ed65c58d02337038398d37e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="listsplice-stlclr"></a>list::splice(STL/CLR)
 노드 간 링크 restitch 합니다.  
@@ -61,7 +56,7 @@ void splice(iterator where, list<Value>% right,
   
  세 번째 멤버 함수에 지정 된 하위 범위를 삽입 [`first`, `last`)으로 제어 되는 시퀀스에서 `right` 가리키는 제어 된 시퀀스의 요소 앞 `where`합니다. 또한 `right`로 제어되는 시퀀스에서 원래 하위 범위를 제거합니다. (If `right` `==` `this`, 범위 [`first`, `last`)로 가리키는 요소를 포함 하지 않아야 `where`.) Splice 다른 파티션으로 한 목록에서 0 개 이상의 요소는 하위 시퀀스를 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_list_splice.cpp   

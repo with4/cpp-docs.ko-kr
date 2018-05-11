@@ -1,12 +1,9 @@
 ---
-title: "CAnimationVariable 클래스 | Microsoft Docs"
-ms.custom: 
+title: CAnimationVariable 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CAnimationVariable
@@ -53,17 +50,15 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a90db931ca53687c42263df6a4112eb478059227
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: efaf47ef434e4f6c63b937d1f360851fa9826e3d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable 클래스
 애니메이션 변수를 나타냅니다.  
@@ -114,7 +109,7 @@ class CAnimationVariable;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|IUIAnimationVariable로 전파 되는 기본값을 지정 합니다.|  
 |[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|이 애니메이션 변수 애니메이션 효과 적용 하는 전환 목록을 포함 합니다.|  
@@ -130,14 +125,14 @@ class CAnimationVariable;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="_dtorcanimationvariable"></a>CAnimationVariable:: ~ CAnimationVariable  
+##  <a name="_dtorcanimationvariable"></a>  CAnimationVariable:: ~ CAnimationVariable  
  소멸자입니다. CAnimationVariable 개체가 소멸 될 때 호출 됩니다.  
   
 ```  
 virtual ~CAnimationVariable();
 ```  
   
-##  <a name="addtransition"></a>CAnimationVariable::AddTransition  
+##  <a name="addtransition"></a>  CAnimationVariable::AddTransition  
  전환을 추가 합니다.  
   
 ```  
@@ -151,7 +146,7 @@ void AddTransition(CBaseTransition* pTransition);
 ### <a name="remarks"></a>설명  
  애니메이션 변수에 적용할 변환의 내부 목록에 전환을 추가 하려면이 메서드는 합니다. 이 목록은 애니메이션 예약 된 경우 지워야 합니다.  
   
-##  <a name="applytransitions"></a>CAnimationVariable::ApplyTransitions  
+##  <a name="applytransitions"></a>  CAnimationVariable::ApplyTransitions  
  스토리 보드에 내부 목록에서 전환을 추가 합니다.  
   
 ```  
@@ -174,7 +169,7 @@ void ApplyTransitions(
 ### <a name="remarks"></a>설명  
  이 메서드는 스토리 보드에 내부 목록에서 전환을 추가 합니다. 호출 될 최상위 수준 코드에서 여러 번 전환을 사용 하 여 키 프레임에 따라 달라 집니다 전환 키 프레임에 의존 하는 추가 추가 합니다. 애니메이션 변수 기본 COM 개체를 만들지 않은 경우이 메서드가이 단계에서 만듭니다.  
   
-##  <a name="canimationvariable"></a>CAnimationVariable::CAnimationVariable  
+##  <a name="canimationvariable"></a>  CAnimationVariable::CAnimationVariable  
  애니메이션 변수 개체를 생성 합니다.  
   
 ```  
@@ -188,7 +183,7 @@ CAnimationVariable(DOUBLE dblDefaultValue = 0.0);
 ### <a name="remarks"></a>설명  
  애니메이션 변수 개체를 생성 하 고 기본값을 설정 합니다. 기본 값에는 변수 움직이지 않으면 또는 애니메이션을 적용할 수 없을 때 사용 됩니다.  
   
-##  <a name="cleartransitions"></a>CAnimationVariable::ClearTransitions  
+##  <a name="cleartransitions"></a>  CAnimationVariable::ClearTransitions  
  전환을 지웁니다.  
   
 ```  
@@ -202,7 +197,7 @@ void ClearTransitions(BOOL bAutodestroy);
 ### <a name="remarks"></a>설명  
  이 메서드는 모든 전환을 전환의 내부 목록에서 제거합니다. BAutodestroy TRUE, 또는 m_bAutodestroyTransitions은 TRUE, 전환 삭제 됩니다. 그렇지 않은 경우 호출자에 게 전환 개체 할당을 취소 해야 합니다.  
   
-##  <a name="create"></a>CAnimationVariable::Create  
+##  <a name="create"></a>  CAnimationVariable::Create  
  기본 애니메이션 변수 COM 개체를 만듭니다.  
   
 ```  
@@ -219,7 +214,7 @@ virtual BOOL Create(IUIAnimationManager* pManager);
 ### <a name="remarks"></a>설명  
  이 메서드 내부 애니메이션 변수 COM 개체를 만들고 기본값을 설정 합니다.  
   
-##  <a name="createtransitions"></a>CAnimationVariable::CreateTransitions  
+##  <a name="createtransitions"></a>  CAnimationVariable::CreateTransitions  
  이 애니메이션 변수에 적용 될 모든 전환을 만듭니다.  
   
 ```  
@@ -238,7 +233,7 @@ BOOL CreateTransitions(
 ### <a name="remarks"></a>설명  
  이 메서드는 전환의 변수의 내부 목록에 추가 된 전환 해야 할 때 프레임 워크에서 호출 됩니다.  
   
-##  <a name="enableintegervaluechangedevent"></a>CAnimationVariable::EnableIntegerValueChangedEvent  
+##  <a name="enableintegervaluechangedevent"></a>  CAnimationVariable::EnableIntegerValueChangedEvent  
  사용 하거나 IntegerValueChanged 이벤트를 사용 하지 않도록 설정 합니다.  
   
 ```  
@@ -257,7 +252,7 @@ void EnableIntegerValueChangedEvent (
 ### <a name="remarks"></a>설명  
  필요한 경우 재정의 사용 하는 프레임 워크 CAnimationController::OnAnimationIntegerValueChanged 가상 메서드를 호출 합니다. 이 이벤트를 처리 하기 위해 CAnimationController에서 파생 된 클래스에서 재정의 해야 합니다. 이 메서드는 애니메이션 변수의 정수 값이 변경 될 때마다 호출 됩니다.  
   
-##  <a name="enablevaluechangedevent"></a>CAnimationVariable::EnableValueChangedEvent  
+##  <a name="enablevaluechangedevent"></a>  CAnimationVariable::EnableValueChangedEvent  
  사용 하거나 경우 재정의 사용 하지 않도록 설정 합니다.  
   
 ```  
@@ -276,7 +271,7 @@ void EnableValueChangedEvent (
 ### <a name="remarks"></a>설명  
  필요한 경우 재정의 사용 하는 프레임 워크 CAnimationController::OnAnimationValueChanged 가상 메서드를 호출 합니다. 이 이벤트를 처리 하기 위해 CAnimationController에서 파생 된 클래스에서 재정의 해야 합니다. 이 메서드는 애니메이션 변수의 값이 변경 될 때마다 호출 됩니다.  
   
-##  <a name="getdefaultvalue"></a>CAnimationVariable::GetDefaultValue  
+##  <a name="getdefaultvalue"></a>  CAnimationVariable::GetDefaultValue  
  기본값을 반환합니다.  
   
 ```  
@@ -289,7 +284,7 @@ DOUBLE GetDefaultValue() const;
 ### <a name="remarks"></a>설명  
  이 함수를 사용 하 여 애니메이션 변수의 기본값을 얻습니다. 생성자에서 나 SetDefaultValue 방법에는 기본값을 설정할 수 있습니다.  
   
-##  <a name="getparentanimationobject"></a>CAnimationVariable::GetParentAnimationObject  
+##  <a name="getparentanimationobject"></a>  CAnimationVariable::GetParentAnimationObject  
  부모를 반환 애니메이션 개체입니다.  
   
 ```  
@@ -302,7 +297,7 @@ CAnimationBaseObject* GetParentAnimationObject();
 ### <a name="remarks"></a>설명  
  부모 애니메이션 개체 (컨테이너)에 대 한 포인터를 검색 하려면이 메서드를 호출할 수 있습니다.  
   
-##  <a name="getvalue"></a>CAnimationVariable::GetValue  
+##  <a name="getvalue"></a>  CAnimationVariable::GetValue  
  애니메이션 변수의 현재 값을 반환합니다.  
   
 ```  
@@ -323,7 +318,7 @@ HRESULT GetValue(INT32& nValue);
 ### <a name="remarks"></a>설명  
  애니메이션 변수의 현재 값을 검색 하려면이 메서드를 호출할 수 있습니다. 기본 COM 개체를 만들지 않은 경우 함수가 반환할 때 dblValue 기본값을 포함 됩니다.  
   
-##  <a name="getvariable"></a>CAnimationVariable::GetVariable  
+##  <a name="getvariable"></a>  CAnimationVariable::GetVariable  
  IUIAnimationVariable COM 개체에 대 한 포인터를 반환합니다.  
   
 ```  
@@ -336,7 +331,7 @@ IUIAnimationVariable* GetVariable();
 ### <a name="remarks"></a>설명  
  이 함수를 사용 하 여 내부 IUIAnimationVariable COM 개체에 액세스 하 고 필요한 경우 해당 메서드를 직접 호출 합니다.  
   
-##  <a name="m_bautodestroytransitions"></a>CAnimationVariable::m_bAutodestroyTransitions  
+##  <a name="m_bautodestroytransitions"></a>  CAnimationVariable::m_bAutodestroyTransitions  
  관련 된 전환을 개체를 삭제할지 여부를 지정 합니다.  
   
 ```  
@@ -346,35 +341,35 @@ BOOL m_bAutodestroyTransitions;
 ### <a name="remarks"></a>설명  
  전환의 내부 목록에서 제거 될 때 변환 개체를 강제 삭제 true 이면이 값을 설정 합니다. 이 값이 FALSE는 전환은 응용 프로그램을 호출 하 여 삭제 해야 합니다. 애니메이션을 예약한 후의 전환 목록은 항상 지워집니다. 기본값은 FALSE입니다.  
   
-##  <a name="m_dbldefaultvalue"></a>CAnimationVariable::m_dblDefaultValue  
+##  <a name="m_dbldefaultvalue"></a>  CAnimationVariable::m_dblDefaultValue  
  IUIAnimationVariable로 전파 되는 기본값을 지정 합니다.  
   
 ```  
 DOUBLE m_dblDefaultValue;  
 ```  
   
-##  <a name="m_lsttransitions"></a>CAnimationVariable::m_lstTransitions  
+##  <a name="m_lsttransitions"></a>  CAnimationVariable::m_lstTransitions  
  이 애니메이션 변수 애니메이션 효과 적용 하는 전환 목록을 포함 합니다.  
   
 ```  
 CObList m_lstTransitions;  
 ```  
   
-##  <a name="m_pparentobject"></a>CAnimationVariable::m_pParentObject  
+##  <a name="m_pparentobject"></a>  CAnimationVariable::m_pParentObject  
  이 애니메이션 변수를 캡슐화 하는 애니메이션 개체에 대 한 포인터입니다.  
   
 ```  
 CAnimationBaseObject* m_pParentObject;  
 ```  
   
-##  <a name="m_variable"></a>CAnimationVariable::m_variable  
+##  <a name="m_variable"></a>  CAnimationVariable::m_variable  
  IUIAnimationVariable COM 개체에 대 한 포인터를 저장합니다. COM 개체에 아직 생성 되지 않았거나 만들지 못한 NULL입니다.  
   
 ```  
 ATL::CComPtr<IUIAnimationVariable> m_variable;  
 ```  
   
-##  <a name="setdefaultvalue"></a>CAnimationVariable::SetDefaultValue  
+##  <a name="setdefaultvalue"></a>  CAnimationVariable::SetDefaultValue  
  기본값을 설정 하 고 IUIAnimationVariable COM 개체를 해제 합니다.  
   
 ```  
@@ -388,7 +383,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 ### <a name="remarks"></a>설명  
  이 메서드를 사용 하 여 기본값을 다시 설정 합니다. 이 메서드는 해제 내부 IUIAnimationVariable COM 개체를 따라서 애니메이션 변수 다시 만들어질 때, 내부 COM 개체의 새 기본값을 가져옵니다 합니다. 애니메이션 변수를 나타내는 COM 개체를 만들지 않은 경우 또는 변수 애니메이션이 적용 되지 경우 기본값 GetValue에 의해 반환 됩니다.  
   
-##  <a name="setparentanimationobject"></a>CAnimationVariable::SetParentAnimationObject  
+##  <a name="setparentanimationobject"></a>  CAnimationVariable::SetParentAnimationObject  
  애니메이션 변수 및 애니메이션 개체 간의 관계를 설정합니다.  
   
 ```  

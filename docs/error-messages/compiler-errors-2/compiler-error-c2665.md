@@ -2,11 +2,8 @@
 title: 컴파일러 오류 C2665 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: ''
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2665
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2665
 ms.assetid: a7f99b61-2eae-4f2b-ba75-ea68fd1e8312
-caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdf6737c881df52793e1f59f04a1821a3c788134
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 18cc99d6ea0a45e7c096a13cfe57dc841ca351bf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2665"></a>컴파일러 오류 C2665
 'function': 'type' 형식에서 매개 변수 번호 2를 변환할 수는 번호 1 오버 로드가  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
 -   명시적 변환을 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C2665 오류가 발생 합니다.  
   
 ```  

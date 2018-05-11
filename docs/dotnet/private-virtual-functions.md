@@ -1,13 +1,10 @@
 ---
-title: "전용 가상 함수 | Microsoft Docs"
-ms.custom: 
+title: 전용 가상 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,23 +13,21 @@ helpviewer_keywords:
 - access modifiers [C++], for class members
 - member access [C++], virtual members
 ms.assetid: 04448086-bf72-44be-9c1f-dfda1744949e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 9b407bc469a345706f99cf5bad578f678e652a4c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 97b4d7d9f47901fa69aa50bfc6f405355cf378b8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="private-virtual-functions"></a>전용 가상 함수
 개인 가상 함수가 파생된 클래스에서 처리 되는 방법은 Visual c + + Managed Extensions for c + + 변경 되었습니다.  
   
- Managed extensions에서 액세스 수준에는 가상 함수는 파생된 클래스에서 재정의 해야 하는 기능을 제한 하지 않습니다. 새 구문에서 가상 함수에 액세스할 수 없는 기본 클래스 가상 함수를 재정의할 수 없습니다. 예:  
+ Managed extensions에서 액세스 수준에는 가상 함수는 파생된 클래스에서 재정의 해야 하는 기능을 제한 하지 않습니다. 새 구문에서 가상 함수에 액세스할 수 없는 기본 클래스 가상 함수를 재정의할 수 없습니다. 예를 들어:  
   
 ```  
 __gc class MyBaseClass {  

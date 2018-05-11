@@ -2,11 +2,8 @@
 title: 'collection_adapter:: size (STL/CLR) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::collection_adapter::size
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - size member [STL/CLR]
 ms.assetid: 71866719-9e29-4572-bfb9-60321f2937c5
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 670b91a1b01f3234cf3a41b89498994836691fc4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b2e8ae7183d54badfcd379f059efd21cd7f63f1a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="collectionadaptersize-stlclr"></a>collection_adapter::size(STL/CLR)
 요소 수를 계산합니다.  
@@ -40,7 +35,7 @@ size_type size();
 ## <a name="remarks"></a>설명  
  멤버 함수는 제어되는 시퀀스의 길이를 반환합니다. 에 대 한 특수화에 정의 되지 않은 `IEnumerable` 또는 `IEnumerable<Value>`합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_collection_adapter_size.cpp   

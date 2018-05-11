@@ -1,27 +1,22 @@
 ---
-title: "2.6.6 ordered 구문 | Microsoft Docs"
-ms.custom: 
+title: 2.6.6 ordered 구문 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 5b3c1ba5-cfb8-4b05-865b-f446ae1c9f7c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e09a9d756cd068df9345034e26a4f152d3ac19fe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa66d9fb8a0a9af2fc33497690bfe67a3ea5d717
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="266-ordered-construct"></a>2.6.6 ordered 구문
 구조화 된 블록 다음은 **정렬** 지시문 반복 하면 순차 루프에 실행할 수 있는 순서 대로 실행 됩니다. 구문은 **정렬** 지시문은 다음과 같습니다.  

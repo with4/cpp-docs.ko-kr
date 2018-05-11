@@ -2,29 +2,24 @@
 title: CLR 배열 선언 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - array keyword [C++]
 ms.assetid: 36a8883c-2663-43f0-a90c-28f27035e036
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3f263227d437ddafb65ac3da0829414e4af05855
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8d8b2a5d348887d56a1221a5a9125449e5356b9f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declaration-of-a-clr-array"></a>CLR 배열 선언
 선언 구문은 인스턴스화하고 관리 되는 배열 초기화에서 변경 되었습니다 Managed Extensions for c + + Visual c + +.  
@@ -43,7 +38,7 @@ void PrintValues( array<Object^>^ myArr );
 void PrintValues( array<int,3>^ myArr );  
 ```  
   
- 되기 때문에 참조 형식은 개체가 아니라 추적 핸들을 함수 반환 형식으로 CLR 배열을 지정할 수 있습니다. (반대로 네이티브 배열을 함수 반환 형식으로 지정할 수 있습니다.) Managed extensions에서이 작업을 수행 하는 구문은 약간 비 직관적 했습니다. 예:  
+ 되기 때문에 참조 형식은 개체가 아니라 추적 핸들을 함수 반환 형식으로 CLR 배열을 지정할 수 있습니다. (반대로 네이티브 배열을 함수 반환 형식으로 지정할 수 있습니다.) Managed extensions에서이 작업을 수행 하는 구문은 약간 비 직관적 했습니다. 예를 들어:  
   
 ```  
 Int32 f() [];  
@@ -57,7 +52,7 @@ array<Int32>^ f();
 array<int>^ GetArray();  
 ```  
   
- 로컬 관리 되는 배열의 줄임 초기화 언어의 두 버전에서 지원 됩니다. 예:  
+ 로컬 관리 되는 배열의 줄임 초기화 언어의 두 버전에서 지원 됩니다. 예를 들어:  
   
 ```  
 int GetArray() __gc[] {  
@@ -93,7 +88,7 @@ array<Object^>^ myArray = gcnew array<Object^>(2);
 array<String^,2>^ myMat = gcnew array<String^,2>(4,4);  
 ```  
   
- 새 구문에서 명시적 초기화 목록을 따를 수는 `gcnew` 식; Managed extensions에서이 지원 되지 않습니다. 예:  
+ 새 구문에서 명시적 초기화 목록을 따를 수는 `gcnew` 식; Managed extensions에서이 지원 되지 않습니다. 예를 들어:  
   
 ```  
 // explicit initialization list following gcnew   

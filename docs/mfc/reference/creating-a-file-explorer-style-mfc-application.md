@@ -1,13 +1,10 @@
 ---
-title: "파일 탐색기 스타일 MFC 응용 프로그램 만들기 | Microsoft Docs"
-ms.custom: 
+title: 파일 탐색기 스타일 MFC 응용 프로그램 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcexplorer.project
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MFC applications [MFC], Windows Explorer-style
 - Explorer-style applications [MFC], creating
 ms.assetid: f843ab5d-2d5d-41ca-88a4-badc0d2f8052
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6098e451b4ebc4caf2bb7fad99ea2e407e4872c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5b0f5d4bdabc987d4f4177f616ce756c351b8b5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>파일 탐색기 스타일 MFC 응용 프로그램 만들기
 파일 탐색기에 대 한 사용자 인터페이스 (UI)를 사용 하는 많은 Windows 시스템 응용 프로그램. 예를 들어, 파일 탐색기를 시작 하면 응용 프로그램을 수직 분할 분할 막대 클라이언트 영역을 표시 됩니다. 클라이언트 영역의 오른쪽 세부 정보를 표시 선택한 항목과 관련 된 왼쪽된 창에서 및 클라이언트 영역의 왼쪽 탐색 및 검색 기능을 제공 합니다. 사용자가 왼쪽된 창에서 항목을 응용 프로그램에 오른쪽 창을 다시 채워집니다. MDI 응용 프로그램에서 명령을 사용할 수는 **보기** 메뉴 오른쪽 창에 표시 되는 세부의 크기를 변경할 수 있습니다. (SDI 또는 다중 최상위 문서 응용 프로그램에서 변경할 수 있습니다만 도구 모음 단추를 사용 하 여 세부 정보.)  

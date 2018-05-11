@@ -1,13 +1,10 @@
 ---
-title: "TN002: 영구 개체 데이터 형식 | Microsoft Docs"
-ms.custom: 
+title: 'TN002: 영구 개체 데이터 형식 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.data
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - persistent C++ objects [MFC]
 - TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca6a78f19b43ded59efb56b87f9fe3f44887a31a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ca145ff871e1c5ccff27bdebe473c6cb6f39073a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002: 영구 개체 데이터 형식
 이 노트 파일에 저장 될 때 영구 c + + 개체와 개체 데이터의 형식을 지 원하는 MFC 루틴을 설명 합니다. 이 클래스에만 적용 됩니다는 [DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial) 및 [IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial) 매크로입니다.  
@@ -77,7 +72,7 @@ ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))
   
  이전에 개체를 저장 하지 않은 경우 두 가지 가능성이 고려해 야 할: 개체와 개체의 정확한 유형 (즉, 클래스)이 보관 컨텍스트에 새 않거나 개체를 이미 확인 정확한 형식입니다. 형식을 볼 되어 있는지 여부를 확인 하려면 코드 쿼리는 `m_pStoreMap` 에 대 한는 [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) 일치 하는 개체는 `CRuntimeClass` 저장 되는 개체와 연결 된 개체입니다. 일치 하는 경우 `WriteObject` 태그에 대 한 비트에 삽입 `OR` 의 `wOldClassTag` 와이 인덱스입니다. 경우는 `CRuntimeClass` 보관 컨텍스트에이 새로운 `WriteObject` 해당 클래스에 새 PID를 할당 하 고 앞에, 보관 저장소에 삽입 하는 `wNewClassTag` 값입니다.  
   
- 이 클래스에 대 한 설명자를 사용 하 여 보관 된 삽입 한 다음는 `CRuntimeClass::Store` 메서드. `CRuntimeClass::Store`클래스는 ASCII 텍스트 이름과 클래스 (아래 참조)의 스키마 번호를 삽입합니다. 참고 ASCII 텍스트 이름의 사용 응용 프로그램 전반에 보관 파일의 고유성을 보장 하지 않습니다. 따라서 데이터 파일 손상을 방지 하기 위해 태그 해야 있습니다. 클래스 정보를 삽입 하는 다음 보관 파일에 개체를 배치는 `m_pStoreMap` 를 호출 하 여 `Serialize` 클래스 관련 데이터를 삽입 하는 메서드. 개체에 배치 된 `m_pStoreMap` 호출 하기 전에 `Serialize` 개체의 여러 복사본을 저장소에 저장 되지 않도록 방지 합니다.  
+ 이 클래스에 대 한 설명자를 사용 하 여 보관 된 삽입 한 다음는 `CRuntimeClass::Store` 메서드. `CRuntimeClass::Store` 클래스는 ASCII 텍스트 이름과 클래스 (아래 참조)의 스키마 번호를 삽입합니다. 참고 ASCII 텍스트 이름의 사용 응용 프로그램 전반에 보관 파일의 고유성을 보장 하지 않습니다. 따라서 데이터 파일 손상을 방지 하기 위해 태그 해야 있습니다. 클래스 정보를 삽입 하는 다음 보관 파일에 개체를 배치는 `m_pStoreMap` 를 호출 하 여 `Serialize` 클래스 관련 데이터를 삽입 하는 메서드. 개체에 배치 된 `m_pStoreMap` 호출 하기 전에 `Serialize` 개체의 여러 복사본을 저장소에 저장 되지 않도록 방지 합니다.  
   
  호출 해야 합니다 (일반적으로 네트워크 개체의 루트)에서 초기 호출자에 반환할 때 [CArchive::Close](../mfc/reference/carchive-class.md#close)합니다. 다른 수행 하려는 경우 [CFile](../mfc/reference/cfile-class.md)호출 해야 작업을는 `CArchive` 메서드 [플러시](../mfc/reference/carchive-class.md#flush) 보관 파일의 손상을 방지 하려면.  
   

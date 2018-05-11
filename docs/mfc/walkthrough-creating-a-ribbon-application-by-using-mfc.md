@@ -1,35 +1,30 @@
 ---
-title: "연습: MFC를 사용 하 여 리본 응용 프로그램 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: MFC를 사용 하 여 리본 응용 프로그램 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfad78b64f72b9ee9a896832e008039aa241e2ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7f715830c110f03811202d2e98dc097bfe712208
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>연습: MFC를 사용하여 리본 응용 프로그램 만들기
 이 연습에서는 사용 하는 방법을 보여 줍니다.는 **MFC 응용 프로그램 마법사** 기본적으로 리본 메뉴를 포함 하는 응용 프로그램을 만들려고 합니다. 추가 하 여 리본 메뉴를 확장 한 다음는 **사용자 지정** 있는 리본 범주는 **즐겨찾기** 리본 패널 및 다음 자주 사용 되는 일부 패널에 명령을 추가 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습에서는 설정 가정 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 사용할 **일반 개발 설정**합니다. 다른 설정을 사용할 경우, 다음 지침에서 참조되는 UI(사용자 인터페이스) 요소 중 일부가 표시되지 않을 수도 있습니다. 설정을 변경 하는 방법에 대 한 정보를 참조 하십시오. [하는 방법: 사용자 기본 설정](http://msdn.microsoft.com/en-us/c95c51be-e609-4769-abba-65e6beedec76)합니다.  
   
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>리본 메뉴를 포함하고 있는 MFC 응용 프로그램을 만들려면  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  첫 번째 페이지에는 **MFC 응용 프로그램 마법사**, 클릭 **다음**합니다.  
   
-4.  에 **응용 프로그램 종류** 페이지의 **비주얼 스타일과 색**선택, **Office 2007 (파랑 테마)**합니다. 다른 설정은 그대로 둡니다. **다음**을 클릭합니다.  
+4.  에 **응용 프로그램 종류** 페이지의 **비주얼 스타일과 색**선택, **Office 2007 (파랑 테마)** 합니다. 다른 설정은 그대로 둡니다. **다음**을 클릭합니다.  
   
 5.  에 **복합 문서 지원** 페이지에서 다음 사항을 확인 **None** 을 선택 하 고 클릭 **다음**합니다.  
   

@@ -1,13 +1,10 @@
 ---
-title: "Visual c + +에서 프로젝트 폴더를 열고 | Microsoft Docs"
-ms.custom: 
+title: Visual c + +에서 프로젝트 폴더를 열고 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 721dd39cf8cda6277eb129f259b7ede2d9f0da28
-ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
+ms.openlocfilehash: 0fe4eba09f06b987ab11f35429e13796fe6baafb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Visual c + +에서 폴더 프로젝트 열기
 Visual Studio 2017 소스 파일의 폴더를 열고 즉시 IntelliSense, 검색, 리팩터링, 디버깅을 지원 하 여 코딩을 시작 및 등을 사용할 수 있는 "폴더 열기" 기능을 소개 합니다. .Sln 또는.vcxproj 파일이 로드 됩니다. 필요에 따라 빌드 및 간단한.json 파일을 통해 매개 변수를 시작 하는 것은 물론 사용자 지정 작업을 지정할 수 있습니다. 열려 있는 폴더에서 구동, Visual c + + 이제 지원할 수 파일의 느슨한 컬렉션 뿐만 아니라도 거의 모든 빌드 시스템을 CMake, 등 닌자, QMake (하 프로젝트)의 경우, gyp, SCons, Gradle, 프로세스, 만들기. 
 
-열려 있는 폴더를 사용 하려면 주 메뉴에서 선택 *파일 | 열기 | 폴더* 하거나 키를 눌러 *Ctrl + Shift + Alt + O*합니다. 솔루션 탐색기는 즉시 폴더에 있는 모든 파일을 표시합니다. 편집을 시작할 수 있는 모든 파일을 클릭할 수 있습니다. 백그라운드에서 Visual Studio IntelliSense, 탐색 및 리팩터링 기능을 사용 하도록 설정 하려면 파일을 시작 합니다. 편집, 만들기, 이동 하거나 파일을 삭제, Visual Studio에서 변경 내용을 자동으로 추적 하 고 지속적으로 IntelliSense 해당 항목이 있는 인덱스를 업데이트 합니다. 
+열려 있는 폴더를 사용 하려면 주 메뉴에서 선택 *파일 | 열기 | 폴더* 하거나 키를 눌러 *Ctrl + Shift + Alt + O*합니다. 솔루션 탐색기는 즉시 폴더에 있는 모든 파일을 표시합니다. 파일을 클릭하여 편집을 시작할 수 있습니다. 백그라운드에서 Visual Studio는 IntelliSense, 탐색 및 리팩터링 기능을 사용할 수 있도록 파일 인덱싱을 시작합니다. 파일을 편집, 생성, 이동 또는 삭제하면 Visual Studio는 변경 내용을 자동으로 추적하고 해당 IntelliSense 인덱스를 계속해서 업데이트합니다. 
   
 ## <a name="cmake-projects"></a>CMake 프로젝트
 CMake Visual c + +, c + + 데스크톱 작업 부하의 구성 요소에 대 한 Visual Studio IDE에서 CMake 도구와 통합 되어 있습니다. 자세한 내용은 [Visual C++용 CMake 도구](cmake-tools-for-visual-cpp.md)를 참조하세요.
@@ -43,8 +39,8 @@ CMake Visual c + +, c + + 데스크톱 작업 부하의 구성 요소에 대 한
 |||
 |-|-|
 |CppProperties.json|검색에 대 한 사용자 지정 구성 정보를 지정 합니다. 루트 프로젝트 폴더에 필요한 경우이 파일을 만듭니다.|
-|launch.vs.json|명령줄 인수를 지정 합니다. 통해 액세스 되는 **솔루션 탐색기** 상황에 맞는 메뉴 항목 **디버그 및 시작 설정을**합니다.|
-|tasks.vs.json|사용자 지정 빌드 명령 및 컴파일러 스위치를 지정 합니다. 통해 액세스 되는 **솔루션 탐색기** 상황에 맞는 메뉴 항목 **구성 작업**합니다.|
+|launch.vs.json|명령줄 인수를 지정 합니다. **솔루션 탐색기**의 상황에 맞는 메뉴 항목 **디버그 및 시작 설정**을 통해 액세스합니다.|
+|tasks.vs.json|사용자 지정 빌드 명령 및 컴파일러 스위치를 지정 합니다. **솔루션 탐색기**의 상황에 맞는 메뉴 항목 **작업 구성**을 통해 액세스합니다.|
 
 ### <a name="configure-intellisense-with-cpppropertiesjson"></a>IntelliSense CppProperties.json를 사용 하 여 구성
 정의 하는 현재 빌드 구성에 따라 달라 집니다 IntelliSense 및 검색 동작이 부분적으로 #include 경로, 컴파일러 스위치 및 다른 매개 변수입니다. 기본적으로 Visual Studio 디버그 및 릴리스 구성을 제공합니다. 일부 프로젝트에 IntelliSense 및 검색 기능이 완벽 하 게 코드를 이해 하기 위해 사용자 지정 구성을 만들려면 할 수 있습니다. 새 구성을 정의 하려면 루트 폴더에 CppProperties.json 라는 파일을 만듭니다. 예를 들면 다음과 같습니다.
@@ -248,12 +244,12 @@ CppProperties.json에 임의 개수의 구성 만들 수 있습니다. 각 구�
   ]
 }
 ```
-### <a name="define-tasks-with-tasksvsjson"></a>Tasks.vs.json 사용 하 여 작업을 정의 합니다.
-빌드 스크립트 또는 기타 IDE에서 직접 작업으로이 실행 하 여 현재 작업 영역에 있는 파일에 대해 외부 작업을 자동화할 수 있습니다. 파일 또는 폴더를 마우스 오른쪽 단추로 클릭 하 고 선택 하 여 새 작업을 구성할 수 있습니다 **구성 작업**합니다. 
+### <a name="define-tasks-with-tasksvsjson"></a>tasks.vs.json으로 작업 정의
+현재 작업 영역에 있는 파일에 대한 빌드 스크립트 또는 기타 외부 작업을 IDE에서 직접 작업으로 실행하여 자동화할 수 있습니다. 파일 또는 폴더를 마우스 오른쪽 단추로 클릭하고 **작업 구성**을 선택하여 새 작업을 구성할 수 있습니다. 
 
 ![작업을 구성 하는 폴더 열기](media/open-folder-config-tasks.png)
 
-이렇게 (만들거나 엽니다)는 `tasks.vs.json` 파일을 Visual Studio 프로젝트 루트 폴더에 만드는.vs 폴더에 있습니다. 이 파일에 임의 작업을 정의 하 고 다음에서 호출 수는 **솔루션 탐색기** 상황에 맞는 메뉴입니다. 다음 예제에서는 단일 작업을 정의 하는 tasks.vs.json 파일을 보여 줍니다. `taskName`상황에 맞는 메뉴에 표시 되는 이름을 정의 합니다. `appliesTo`명령에서 수행할 수 있는 파일을 정의 합니다. `command` 속성 (Windows에서 cmd.exe) 콘솔에 대 한 경로 식별 하는 COMSPEC 환경 변수를 가리킵니다. CppProperties.json 또는 CMakeSettings.json에 선언 되어 있는 환경 변수를 참조할 수 있습니다. `args` 속성 호출할 명령줄을 지정 합니다. `${file}` 매크로에서 선택한 파일을 검색 **솔루션 탐색기**합니다. 다음 예에서는 현재 선택 된.cpp 파일의 파일 이름을 표시 합니다.
+이렇게 (만들거나 엽니다)는 `tasks.vs.json` 파일을 Visual Studio 프로젝트 루트 폴더에 만드는.vs 폴더에 있습니다. 이 파일에 임의 작업을 정의 하 고 다음에서 호출 수는 **솔루션 탐색기** 상황에 맞는 메뉴입니다. 다음 예제에서는 단일 작업을 정의 하는 tasks.vs.json 파일을 보여 줍니다. `taskName` 상황에 맞는 메뉴에 표시 되는 이름을 정의 합니다. `appliesTo` 명령에서 수행할 수 있는 파일을 정의 합니다. `command` 속성 (Windows에서 cmd.exe) 콘솔에 대 한 경로 식별 하는 COMSPEC 환경 변수를 가리킵니다. CppProperties.json 또는 CMakeSettings.json에 선언 되어 있는 환경 변수를 참조할 수 있습니다. `args` 속성 호출할 명령줄을 지정 합니다. `${file}` 매크로는 **솔루션 탐색기**에서 선택한 파일을 검색합니다. 다음 예에서는 현재 선택 된.cpp 파일의 파일 이름을 표시 합니다.
 
 ```json
 {
@@ -274,11 +270,11 @@ Tasks.vs.json을 저장 한 후 폴더의 모든.cpp 파일을 마우스 오른�
 
 
 #### <a name="appliesto"></a>appliesTo
-이름을 지정 하 여 파일이 나 폴더에 대 한 작업을 만들 수 있습니다는 `appliesTo` 예를 들어 필드 `"appliesTo" : "hello.cpp"`합니다. 다음 파일 마스크 값으로 사용할 수 있습니다.
+`appliesTo` 필드에 이름을 지정하여 모든 파일 또는 폴더에 대한 작업을 만들 수 있습니다(예: `"appliesTo" : "hello.cpp"`). 다음 파일 마스크를 값으로 사용할 수 있습니다.
 |||
 |-|-|
-|`"*"`| 작업은 모든 파일 및 폴더 작업 영역에서 사용할 수|
-|`"*/"`| 작업은 작업 영역에서 모든 폴더에 사용할 수|
+|`"*"`| 작업 영역의 모든 파일 및 폴더에서 작업을 사용할 수 있음|
+|`"*/"`| 작업 영역의 모든 폴더에서 작업을 사용할 수 있음|
 |`"*.cpp"`| 작업은 작업 영역에서 확장명이.cpp 인 파일을 모두 사용할 수 있습니다.|
 |`"/*.cpp"`| 작업은 작업 영역 루트에서 확장명이.cpp 인 파일을 모두 사용할 수 있습니다.|
 |`"src/*/"`| 작업은 "원본" 폴더의 모든 하위 폴더에 사용할 수|
@@ -286,13 +282,13 @@ Tasks.vs.json을 저장 한 후 폴더의 모든.cpp 파일을 마우스 오른�
 |`"/makefile"`| 작업은 작업 영역 루트에서 메이크파일에만 사용할 수|
 
 #### <a name="output"></a>출력
-사용 하 여는 `output` 를 누를 때 시작 하는 실행 파일을 지정 하는 속성 **F5**합니다. 예:
+사용 하 여는 `output` 를 누를 때 시작 하는 실행 파일을 지정 하는 속성 **F5**합니다. 예를 들어:
 
 ```json
       "output": "${workspaceRoot}\\bin\\hellomake.exe" 
 ```
 
-#### <a name="macros-for-tasksvsjson"></a>Tasks.vs.json 매크로
+#### <a name="macros-for-tasksvsjson"></a>tasks.vs.json의 매크로
 
 |||
 |-|-|

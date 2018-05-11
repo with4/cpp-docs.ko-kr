@@ -1,13 +1,10 @@
 ---
-title: "인터넷 URL 전역 구문 분석 및 도우미 | Microsoft Docs"
-ms.custom: 
+title: 인터넷 URL 전역 구문 분석 및 도우미 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/03/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.isapi
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29ae754e7f5b078c23f0cdf27c0a280cd28b40a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 02b7ea1a6d22d3e16230acafa25c53f8748a825a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>인터넷 URL 전역 구문 분석 및 도우미
 클라이언트가 인터넷 서버에는 쿼리 보내면 클라이언트에 대 한 정보를 추출 하는 URL 전역 구문 분석 중 하나를 사용할 수 있습니다. 도우미 함수는 다른 인터넷 기능을 제공합니다.
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 |[AfxThrowInternetException](#afxthrowinternetexception)|인터넷 연결 관련 예외를 throw 합니다.|
 |[AfxGetInternetHandleType](#afxgetinternethandletype)|인터넷 핸들의 형식을 결정합니다.|
   
-##  <a name="afxparseurl"></a>AfxParseURL  
+##  <a name="afxparseurl"></a>  AfxParseURL  
  이 전역에 사용 되 [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)합니다.  
   
 ```   
@@ -110,13 +105,13 @@ BOOL AFXAPI AfxParseURL(
   
  예를 들어 `AfxParseURL` 형식의 Url을 구문 분석 **service://server/dir/dir/object.ext:port** 다음과 같이 저장 된 해당 구성 요소를 반환 합니다.  
   
- `strServer`"server" = =  
+ `strServer` "server" = =  
   
- `strObject`= = "/ dir/dir/object/object.ext"  
+ `strObject` = = "/ dir/dir/object/object.ext"  
   
- `nPort`#port = =  
+ `nPort` #port = =  
   
- `dwServiceType`#service = =  
+ `dwServiceType` #service = =  
   
 > [!NOTE]
 >  이 함수를 호출 하려면 프로젝트 AFXINET 포함 되어야 합니다. 8.  
@@ -124,7 +119,7 @@ BOOL AFXAPI AfxParseURL(
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxinet.h  
   
-##  <a name="afxparseurlex"></a>AfxParseURLEx  
+##  <a name="afxparseurlex"></a>  AfxParseURLEx  
  이 전역 함수는 확장 된 버전의 [AfxParseURL](#afxparseurl) 에 사용 되 고 [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl)합니다.  
   
 ```   
@@ -219,7 +214,7 @@ BOOL AFXAPI AfxParseURLEx(
 ## <a name="see-also"></a>참고 항목  
  [매크로 및 전역](../../mfc/reference/mfc-macros-and-globals.md)
  
-## <a name="afxgetinternethandletype"></a>AfxGetInternetHandleType
+## <a name="afxgetinternethandletype"></a>  AfxGetInternetHandleType
 이 전역 함수를 사용 하 여 인터넷 핸들의 형식을 결정 합니다.  
    
 ### <a name="syntax"></a>구문  
@@ -272,7 +267,7 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
  [매크로 및 전역](mfc-macros-and-globals.md)   
  [AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
  
-## <a name="afxthrowinternetexception"></a>AfxThrowInternetException
+## <a name="afxthrowinternetexception"></a>  AfxThrowInternetException
 인터넷 예외가 throw 됩니다.  
    
 ### <a name="syntax"></a>구문    

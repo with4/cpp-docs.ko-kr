@@ -1,13 +1,10 @@
 ---
-title: "방법: 상태 표시줄에 명령 정보를 표시 합니다. | Microsoft Docs"
-ms.custom: 
+title: '방법: 상태 표시줄에 명령 정보를 표시 합니다. | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - status bars [MFC], message area
 - status bars [MFC], displaying command information
 ms.assetid: de895cbe-61ee-46bf-9787-76b247527d6d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da836f48592d97b3526c568eb9d9a830428f53a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 440e550e6e1ba5a82cac3f35dcb3c76b346b5343
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-display-command-information-in-the-status-bar"></a>방법: 상태 표시줄에 명령 정보 표시
 응용 프로그램의 기초를 만드는 응용 프로그램 마법사를 실행 하면 도구 모음 및 상태 표시줄을 지원할 수 있습니다. 응용 프로그램 마법사에서 하나의 옵션 모두 지원 합니다. 상태 표시줄에 있는 경우 메뉴 항목 위에 포인터를 이동할 때 응용 프로그램이 자동으로 유용한 피드백을 제공 합니다. 응용 프로그램 자동으로 프롬프트 문자열을 표시 상태 표시줄에 메뉴 항목이 강조 됩니다. 예를 들어, 사용자 이동 하면 포인터는 **잘라내기** 명령을 **편집** 메뉴 상태 표시줄에 "선택 영역을 잘라내어 클립보드에 저장 합니다." 상태 표시줄의 메시지 영역에 표시 될 수 있습니다. 프롬프트를 통해 사용자는 메뉴 항목의 목적을 이해 합니다. 사용자가 도구 모음 단추를 클릭 하는 경우에 작동 합니다.  

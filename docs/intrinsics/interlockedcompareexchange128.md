@@ -1,12 +1,9 @@
 ---
 title: _InterlockedCompareExchange128 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - _InterlockedCompareExchange128_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - cmpxchg16b instruction
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2850be4b93738c61e22c5ca841e07f1901ec01e2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f491f59289a2e3b951e1bad60f260a801ea68bea
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
 **Microsoft 전용**  
@@ -83,7 +78,7 @@ unsigned char _InterlockedCompareExchange128(
   
  이 루틴은 내장 함수로 사용할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예에서는 `_InterlockedCompareExchange128` 두 개의 64 비트 정수 배열의 높은 단어는 고가 및 저가 단어의 합으로 컨트롤러를 바꾸려면 낮은 단어 증가 합니다. BigInt.Int 배열에 대 한 액세스가 원자성을 하지만이 예제에서는 단일 스레드를 사용 하 고 단순성에 대 한 잠금을 무시 합니다.  
   
 ```  
@@ -133,7 +128,7 @@ BigInt.Int[1] = 34, BigInt.Int[0] = 12
 ```  
   
 **Microsoft 전용 종료**  
- Copyright 2007 by Advanced Micro Devices, Inc. All rights reserved. 고급 마이크로 장치, Inc. 로부터 사용 권한을 승인 하에 복제  
+ 고급 마이크로 장치, inc 2007 저작권 All rights reserved. 고급 마이크로 장치, Inc. 로부터 사용 권한을 승인 하에 복제  
   
 ## <a name="see-also"></a>참고 항목  
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)   

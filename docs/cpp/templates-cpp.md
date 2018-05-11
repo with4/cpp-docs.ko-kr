@@ -1,12 +1,9 @@
 ---
-title: "템플릿 (c + +) | Microsoft Docs"
-ms.custom: 
+title: 템플릿 (c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - template_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 935bee8447ad0d49ae965fb92538d2e260ec68ef
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f5aa532246054ff0a0b67b9560e40ae704a40fc8
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="templates-c"></a>템플릿 (C++)
 서식 파일에는 c + +의 제네릭 프로그래밍을 위한 기반이 됩니다. 강력한 형식의 언어가 c + +는 특정 형식에서 프로그래머가 선언 명시적으로 또는 컴파일러에 의해 추론 된 모든 변수가 필요 합니다. 그러나 많은 데이터 구조 및 알고리즘 확인에 적용 될 형식에 관계 없이 동일 합니다. 이러한 작업 형식을 클래스 또는 함수를의 작업을 정의 하 여 사용자가 어떤 콘크리트 지정 템플릿 사용에서 작동 해야 합니다.  
@@ -42,7 +37,7 @@ T minimum(const T& lhs, const T& rhs)
 }  
 ```  
   
- 위의 코드는 단일 형식 매개 변수를 사용 하는 제네릭 함수에 대 한 템플릿을 설명 `T`, 해당 반환 값 및 매개 변수 (lhs 및 rhs) 호출 하는이 형식의 모든 합니다. 이름은 형식 매개 변수 수, 규칙 단일 대문자에서 가장 흔히 사용 됩니다. `T`템플릿 매개 변수입니다. `typename` 키워드가 매개이 변수는 형식에 대 한 자리 표시자 라고 표시 합니다. 컴파일러의 모든 인스턴스에 바뀝니다 함수를 호출할 때 `T` 사용자가 지정 되거나 컴파일러에 의해 추론 된 되는 구체적인 형식 인수를 사용 합니다. 컴파일러는 클래스를 생성 하거나 템플릿에서 함수 라고 하는 프로세스 *템플릿 인스턴스화*;   `minimum<int>` 은 템플릿 인스턴스화 `minimum<T>`합니다.  
+ 위의 코드는 단일 형식 매개 변수를 사용 하는 제네릭 함수에 대 한 템플릿을 설명 `T`, 해당 반환 값 및 매개 변수 (lhs 및 rhs) 호출 하는이 형식의 모든 합니다. 이름은 형식 매개 변수 수, 규칙 단일 대문자에서 가장 흔히 사용 됩니다. `T` 템플릿 매개 변수입니다. `typename` 키워드가 매개이 변수는 형식에 대 한 자리 표시자 라고 표시 합니다. 컴파일러의 모든 인스턴스에 바뀝니다 함수를 호출할 때 `T` 사용자가 지정 되거나 컴파일러에 의해 추론 된 되는 구체적인 형식 인수를 사용 합니다. 컴파일러는 클래스를 생성 하거나 템플릿에서 함수 라고 하는 프로세스 *템플릿 인스턴스화*;   `minimum<int>` 은 템플릿 인스턴스화 `minimum<T>`합니다.  
   
  다른 곳에서 사용자 int 특수화 된 서식 파일의 인스턴스를 선언할 수 있습니다. Get_a()와 get_b() int를 반환 하는 함수는 가정 합니다.  
   
@@ -70,7 +65,7 @@ int i = minimum(a, b);
   
  컴파일러가 함수 템플릿에서 형식 추론을 수행 하는 방법에 대 한 규칙은 일반 함수에 대 한 규칙을 기반으로 합니다. 자세한 내용은 참조 [오버 로드 확인 함수 템플릿 호출](../cpp/overload-resolution-of-function-template-calls.md)합니다.  
   
-## <a id="type_parameters"></a>형식 매개 변수  
+## <a id="type_parameters"></a> 형식 매개 변수  
  에 `minimum` 위의 서식 파일을 확인 하는 형식 매개 변수 `T` const 및 참조 한정자 추가 위치 함수 호출 매개 변수에서 사용 될 때까지 어떤 방식으로든에서 한정 되지 않습니다.  
   
  형식 매개 변수 수에 제한이 있습니다. 여러 매개 변수를 쉼표로 구분 합니다.  
@@ -153,7 +148,7 @@ MyArray<MyClass*, 10> arr;
   
  다른 종류의 포인터 및 참조를 포함 하 여 값 형식이 아닌 매개 변수로 전달할 수 있습니다. 예를 들어, 함수 또는 템플릿 코드 내의 일부 작업을 사용자 지정 함수 개체에 대 한 포인터에 전달할 수 있습니다.  
   
-## <a id="template_parameters"></a>템플릿 매개 변수로 서 서식 파일  
+## <a id="template_parameters"></a> 템플릿 매개 변수로 서 서식 파일  
  서식 파일에는 템플릿 매개 변수 수 있습니다. 이 예제에서는 MyClass2에 두 개의 템플릿 매개 변수: typename 매개 변수 `T` 템플릿 매개 변수 및 `Arr`:  
   
 ```cpp  

@@ -1,12 +1,9 @@
 ---
 title: lock::lock | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - lock::lock
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - lock constructor
 ms.assetid: c9ad6c71-36ec-49c5-8ebd-f5c3a0cc94f0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5148da4421b24a64dca97288975af42b9688e4ae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: df35eed8711e83174316ac9912f7ba535ef9ebf9
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="locklock"></a>lock::lock
 생성 한 `lock` 시간의 되거나 전혀 지정된 된 시간에 대 한 잠금을 영원히 획득 하려고 대기 하는 선택적 개체입니다.  
@@ -67,13 +62,13 @@ template<class T> lock(
 ## <a name="remarks"></a>설명  
  생성자에는 처음 세 가지 시도 대 한 잠금을 얻기 위해 `_object` 지정된 된 제한 시간 내에서 (또는 <xref:System.Threading.Timeout.Infinite> 지정 되지 않은 경우).  
   
- 네 번째 형식의 생성자에 잠금을 획득 하지 `_object`합니다. `lock_later`구성원은 [lock_when 열거형](../dotnet/lock-when-enum.md)합니다. 사용 하 여 [lock::acquire](../dotnet/lock-acquire.md) 또는 [lock::try_acquire](../dotnet/lock-try-acquire.md) 이 경우에 잠금을 획득 하려고 합니다.  
+ 네 번째 형식의 생성자에 잠금을 획득 하지 `_object`합니다. `lock_later` 구성원은 [lock_when 열거형](../dotnet/lock-when-enum.md)합니다. 사용 하 여 [lock::acquire](../dotnet/lock-acquire.md) 또는 [lock::try_acquire](../dotnet/lock-try-acquire.md) 이 경우에 잠금을 획득 하려고 합니다.  
   
  소멸자가 호출 되는 경우에 자동으로 잠금이 해제 됩니다.  
   
  `_object`가 <xref:System.Threading.ReaderWriterLock>이 될 수 없는 경우  인 경우 컴파일러 오류가 발생 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다.  클래스를 사용 하 여 잠금을 자체에서 내부 데이터에 대 한 액세스가 각 스레드에 대해 일관적인 지 확인 합니다.  기본 응용 프로그램 스레드는 주기적으로 확인 하는 경우 모든 작업자 스레드 여전히 존재 하며, 해당 작업을 완료 될 때까지 모든 작업자 스레드가 끝나기를 대기 하는 클래스의 동일한 인스턴스에 잠금을 사용 합니다.  
   
 ```  

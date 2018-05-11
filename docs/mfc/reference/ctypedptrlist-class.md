@@ -1,12 +1,9 @@
 ---
-title: "CTypedPtrList 클래스 | Microsoft Docs"
-ms.custom: 
+title: CTypedPtrList 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CTypedPtrList
@@ -35,17 +32,15 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 318373755ff05667d94b051dabf42822b34894b0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: afb32a662c538526c4fe26f6abf46e56a42de728
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ctypedptrlist-class"></a>CTypedPtrList 클래스
 클래스 `CPtrList`의 개체에 대한 형식 안전 "래퍼"를 제공합니다.  
@@ -94,7 +89,7 @@ class CTypedPtrList : public BASE_CLASS
   
  사용 하 여 대 한 자세한 내용은 `CTypedPtrList`, 문서를 참조 [컬렉션](../../mfc/collections.md) 및 [템플릿 기반 클래스](../../mfc/template-based-classes.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예의 인스턴스를 만들고 `CTypedPtrList`, 하나의 개체 추가, 디스크, 목록 또는 그 반대로 serialize 하 고 다음 개체를 삭제 합니다.  
   
  [!code-cpp[NVC_MFCCollections#110](../../mfc/codesnippet/cpp/ctypedptrlist-class_1.cpp)]  
@@ -111,7 +106,7 @@ class CTypedPtrList : public BASE_CLASS
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxtempl.h  
   
-##  <a name="addhead"></a>CTypedPtrList::AddHead  
+##  <a name="addhead"></a>  CTypedPtrList::AddHead  
  이 멤버 함수를 호출 `BASE_CLASS` **:: AddHead**합니다.  
   
 ```  
@@ -138,7 +133,7 @@ void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>설명  
  첫 번째 버전 목록의 시작 하기 전에 새 요소를 추가 합니다. 두 번째 버전은 다른 목록 헤드 하기 전에 요소를 추가합니다.  
   
-##  <a name="addtail"></a>CTypedPtrList::AddTail  
+##  <a name="addtail"></a>  CTypedPtrList::AddTail  
  이 멤버 함수를 호출 `BASE_CLASS` **:: AddTail**합니다.  
   
 ```  
@@ -165,7 +160,7 @@ void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ### <a name="remarks"></a>설명  
  첫 번째 버전 목록 꼬리 후 새 요소를 추가합니다. 두 번째 버전은 목록 꼬리 후 다른 목록 요소를 추가합니다.  
   
-##  <a name="getat"></a>CTypedPtrList::GetAt  
+##  <a name="getat"></a>  CTypedPtrList::GetAt  
  형식의 변수 **위치** 목록에 대 한 키입니다.  
   
 ```  
@@ -186,13 +181,13 @@ TYPE GetAt(POSITION position) const;
  목록에 직접 또는 포인터를 통해 액세스 하는 경우는 `CTypedPtrList`, 다음 `GetAt` 템플릿 매개 변수로 지정 된 형식의 포인터에 대 한 참조를 반환 *형식*합니다. 이 대입 문의 양쪽에 사용 될 함수를 통해 목록 항목을 수정할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
- 인덱스를 동일 하지 않습니다 및 작업할 수 없습니다. 한 **위치** 직접 값입니다. `GetAt`검색 된 `CObject` 지정된 된 위치와 연결 된 포인터입니다.  
+ 인덱스를 동일 하지 않습니다 및 작업할 수 없습니다. 한 **위치** 직접 값입니다. `GetAt` 검색 된 `CObject` 지정된 된 위치와 연결 된 포인터입니다.  
   
  확인 해야 하면 **위치** 값 목록에서 올바른 위치를 나타냅니다. 유효 하지 않으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다.  
   
  이 인라인 함수가 호출 `BASE_CLASS` **:: GetAt**합니다.  
   
-##  <a name="gethead"></a>CTypedPtrList::GetHead  
+##  <a name="gethead"></a>  CTypedPtrList::GetHead  
  이 목록의 헤드 요소를 나타내는 포인터를 가져옵니다.  
   
 ```  
@@ -212,7 +207,7 @@ TYPE GetHead() const;
 ### <a name="remarks"></a>설명  
  목록을 호출 하기 전에 비어 있지 않은지 확인 해야 `GetHead`합니다. 목록이 비어 있으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다. 사용 하 여 [IsEmpty](../../mfc/reference/coblist-class.md#isempty) 목록 요소에 포함 되었는지 확인 합니다.  
   
-##  <a name="getnext"></a>CTypedPtrList::GetNext  
+##  <a name="getnext"></a>  CTypedPtrList::GetNext  
  로 식별 되는 목록 요소를 가져옵니다 `rPosition`, 다음 설정 `rPosition` 에 **위치** 목록에서 다음 항목의 값입니다.  
   
 ```  
@@ -241,7 +236,7 @@ TYPE GetNext(POSITION& rPosition) const;
   
  반복 하는 동안 요소를 제거 하는 것이 불가능 합니다. 예를 참조 [CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat)합니다.  
   
-##  <a name="getprev"></a>CTypedPtrList::GetPrev  
+##  <a name="getprev"></a>  CTypedPtrList::GetPrev  
  로 식별 되는 목록 요소를 가져옵니다 `rPosition`, 다음 설정 `rPosition` 에 **위치** 목록에서 이전 항목의 값입니다.  
   
 ```  
@@ -268,7 +263,7 @@ TYPE GetPrev(POSITION& rPosition) const;
   
  검색된 된 요소 목록에서 첫 번째 다음의 새 값 이면의 `rPosition` 로 설정 된 **NULL**합니다.  
   
-##  <a name="gettail"></a>CTypedPtrList::GetTail  
+##  <a name="gettail"></a>  CTypedPtrList::GetTail  
  이 목록의 헤드 요소를 나타내는 포인터를 가져옵니다.  
   
 ```  
@@ -288,7 +283,7 @@ TYPE GetTail() const;
 ### <a name="remarks"></a>설명  
  목록을 호출 하기 전에 비어 있지 않은지 확인 해야 `GetTail`합니다. 목록이 비어 있으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다. 사용 하 여 [IsEmpty](../../mfc/reference/coblist-class.md#isempty) 목록 요소에 포함 되었는지 확인 합니다.  
   
-##  <a name="removehead"></a>CTypedPtrList::RemoveHead  
+##  <a name="removehead"></a>  CTypedPtrList::RemoveHead  
  목록의 시작에서 요소를 제거 하 고 반환 합니다.  
   
 ```  
@@ -305,7 +300,7 @@ TYPE RemoveHead();
 ### <a name="remarks"></a>설명  
  목록을 호출 하기 전에 비어 있지 않은지 확인 해야 `RemoveHead`합니다. 목록이 비어 있으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다. 사용 하 여 [IsEmpty](../../mfc/reference/coblist-class.md#isempty) 목록 요소에 포함 되었는지 확인 합니다.  
   
-##  <a name="removetail"></a>CTypedPtrList::RemoveTail  
+##  <a name="removetail"></a>  CTypedPtrList::RemoveTail  
  목록 꼬리에서 요소를 제거 하 고 반환 합니다.  
   
 ```  
@@ -322,7 +317,7 @@ TYPE RemoveTail();
 ### <a name="remarks"></a>설명  
  목록을 호출 하기 전에 비어 있지 않은지 확인 해야 `RemoveTail`합니다. 목록이 비어 있으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다. 사용 하 여 [IsEmpty](../../mfc/reference/coblist-class.md#isempty) 목록 요소에 포함 되었는지 확인 합니다.  
   
-##  <a name="setat"></a>CTypedPtrList::SetAt  
+##  <a name="setat"></a>  CTypedPtrList::SetAt  
  이 멤버 함수를 호출 `BASE_CLASS` **:: SetAt**합니다.  
   
 ```  
@@ -340,7 +335,7 @@ void SetAt(POSITION pos, TYPE newElement);
  목록에 기록할 개체 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
- 형식의 변수 **위치** 목록에 대 한 키입니다. 인덱스를 동일 하지 않습니다 및 작업할 수 없습니다. 한 **위치** 직접 값입니다. `SetAt`목록에서 지정된 된 위치에 개체 포인터를 씁니다.  
+ 형식의 변수 **위치** 목록에 대 한 키입니다. 인덱스를 동일 하지 않습니다 및 작업할 수 없습니다. 한 **위치** 직접 값입니다. `SetAt` 목록에서 지정된 된 위치에 개체 포인터를 씁니다.  
   
  확인 해야 하면 **위치** 값 목록에서 올바른 위치를 나타냅니다. 유효 하지 않으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다.  
   

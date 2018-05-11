@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C2674 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C2674 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2674
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C2674
 ms.assetid: 7cbd70d8-d992-44d7-a5cb-dd8cf9c759d2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e95a91ac0610661d739ff7f2a4964ac45725b74e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 77559679e4bb4f5a4d1f6f49223b21033c22e5c4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2674"></a>컴파일러 오류 C2674
 제네릭 선언은이 컨텍스트에서 사용할 수 없습니다.  
   
  제네릭 잘못 선언 되었습니다. 자세한 내용은 [제네릭](../../windows/generics-cpp-component-extensions.md)을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C2674 오류가 발생 합니다.  
   
 ```  

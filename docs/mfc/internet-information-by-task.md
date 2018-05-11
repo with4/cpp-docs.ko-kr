@@ -1,29 +1,24 @@
 ---
-title: "작업별 인터넷 정보 | Microsoft Docs"
-ms.custom: 
+title: 작업별 인터넷 정보 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC, Internet applications
 ms.assetid: da078bf5-53c3-4167-b1ef-509b5a544ad9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8b76495ce5418be052ee0fba8a1eb420a51db4b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 086955d2d5668b447163e7b14677c265d4823190
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="internet-information-by-task"></a>작업별 인터넷 정보
 이 항목에 나열 된 작업을 수행 하려는 작업에 따라 정렬 됩니다.  
@@ -36,7 +31,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="what-do-you-want-to-do"></a>뭘 하고 싶으세요  
   
-###  <a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a>ActiveX 컨트롤, 문서 및 비동기 모니커 작업  
+###  <a name="_core_activex_controls.2c_.documents_and_asynchronous_moniker_tasks"></a> ActiveX 컨트롤, 문서 및 비동기 모니커 작업  
   
 -   [액티브 문서에 알아보기](../mfc/active-documents-on-the-internet.md)  
   
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [MFC 및 ATL 컨트롤에 대 한 서명 된 CAB 파일 만들기](http://msdn.microsoft.com/en-us/14e50724-2505-4258-ae6b-326b706de409)  
   
-###  <a name="_core_wininet_tasks"></a>WinInet 작업  
+###  <a name="_core_wininet_tasks"></a> WinInet 작업  
   
 -   [WinInet, 인터넷 액세스를 위해 Win32 API 함수에 대 한 자세한 내용은](../mfc/wininet-basics.md)  
   

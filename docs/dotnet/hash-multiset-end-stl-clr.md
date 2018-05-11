@@ -2,11 +2,8 @@
 title: 'hash_multiset:: end (STL/CLR) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_multiset::end
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - end member [STL/CLR]
 ms.assetid: 6f4b222c-2f82-445e-80e5-6e2afd233d4b
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1be1fd2fe32687f27f17f6a29e0e5b97eadc4a13
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ee532acbb163242477fcfd00c74f48651a9c759
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmultisetend-stlclr"></a>hash_multiset::end(STL/CLR)
 제어되는 시퀀스의 끝을 지정합니다.  
@@ -40,7 +35,7 @@ iterator end();
 ## <a name="remarks"></a>설명  
  멤버 함수는 제어 된 시퀀스의 끝 바로 다음을 가리키는 양방향 반복기를 반환합니다. 제어 된 시퀀스의 끝을 지정 하는 반복기를 가져올 사용 해당 상태 대상이 제어 된 시퀀스의 길이가 변경 하는 경우 변경 되지 않습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_multiset_end.cpp   

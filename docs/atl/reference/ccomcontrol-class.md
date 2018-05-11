@@ -1,12 +1,9 @@
 ---
-title: "CComControl 클래스 | Microsoft Docs"
-ms.custom: 
+title: CComControl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CComControl
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - ambient properties
 - controls [ATL], properties
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae81e2b6beac11f94f8d117b004da2f8d0db8724
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6017d06715146a0440887a2a2e10828398d5044b
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ccomcontrol-class"></a>CComControl 클래스
 이 클래스는 만들고 ATL 컨트롤을 관리 하기 위한 메서드를 제공 합니다.  
@@ -80,7 +75,7 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 |[CComControl::MessageBox](#messagebox)|만들기, 표시 및 메시지 상자를 작동 하려면이 메서드를 호출 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CComControl`유용한 컨트롤 도우미 함수 및 ATL 컨트롤에 대 한 필수 데이터 멤버의 집합이 허용 합니다. 표준 컨트롤 또는 ATL 컨트롤 마법사를 사용 하 여 DHTML 컨트롤을 만들 때 마법사는 자동으로에서 파생 `CComControl`합니다. `CComControl`대부분의 메서드는 파생 [CComControlBase](../../atl/reference/ccomcontrolbase-class.md)합니다.  
+ `CComControl` 유용한 컨트롤 도우미 함수 및 ATL 컨트롤에 대 한 필수 데이터 멤버의 집합이 허용 합니다. 표준 컨트롤 또는 ATL 컨트롤 마법사를 사용 하 여 DHTML 컨트롤을 만들 때 마법사는 자동으로에서 파생 `CComControl`합니다. `CComControl` 대부분의 메서드는 파생 [CComControlBase](../../atl/reference/ccomcontrolbase-class.md)합니다.  
   
  컨트롤을 만드는 방법에 대 한 자세한 내용은 참조는 [ATL 자습서](../../atl/active-template-library-atl-tutorial.md)합니다. ATL 프로젝트 마법사에 대 한 자세한 내용은 문서 참조 [ATL 프로젝트 만들기](../../atl/reference/creating-an-atl-project.md)합니다.  
   
@@ -96,7 +91,7 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlctl.h  
   
-##  <a name="ccomcontrol"></a>CComControl::CComControl  
+##  <a name="ccomcontrol"></a>  CComControl::CComControl  
  생성자입니다.  
   
 ```
@@ -106,7 +101,7 @@ CComControl();
 ### <a name="remarks"></a>설명  
  호출 된 [CComControlBase](ccomcontrolbase-class.md#ccomcontrolbase) 전달 하는 생성자는 `m_hWnd` 데이터 멤버를 통해 상속 [CWindowImpl](../../atl/reference/cwindowimpl-class.md)합니다.  
   
-##  <a name="controlqueryinterface"></a>CComControl::ControlQueryInterface  
+##  <a name="controlqueryinterface"></a>  CComControl::ControlQueryInterface  
  요청된 인터페이스에 대한 포인터를 검색합니다.  
   
 ```
@@ -123,10 +118,10 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 ### <a name="remarks"></a>설명  
  에서는 COM 맵 테이블의 인터페이스만 처리 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrol-class_1.cpp)]  
   
-##  <a name="createcontrolwindow"></a>CComControl::CreateControlWindow  
+##  <a name="createcontrolwindow"></a>  CComControl::CreateControlWindow  
  기본적으로 호출 하 여 컨트롤에 대 한 창을 만듭니다 `CWindowImpl::Create`합니다.  
   
 ```
@@ -143,10 +138,10 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 ### <a name="remarks"></a>설명  
  되돌리기 작업을 수행 하려는 경우이 메서드를 재정의 합니다. 이외의 다른 단일 창을 만들고, 예를 들어 두 개의 창을 만들려면 중 하나는 되는 도구 모음 컨트롤에 대 한 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_COM#16](../../atl/codesnippet/cpp/ccomcontrol-class_2.cpp)]  
   
-##  <a name="fireonchanged"></a>CComControl::FireOnChanged  
+##  <a name="fireonchanged"></a>  CComControl::FireOnChanged  
  컨테이너의 싱크를 컨트롤 속성이 변경 되었음을 알립니다.  
   
 ```
@@ -165,10 +160,10 @@ HRESULT FireOnChanged(DISPID dispID);
   
  이 메서드는 안전 컨트롤 연결 지점을 지원 하지 않는 경우에 호출 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_COM#17](../../atl/codesnippet/cpp/ccomcontrol-class_3.cpp)]  
   
-##  <a name="fireonrequestedit"></a>CComControl::FireOnRequestEdit  
+##  <a name="fireonrequestedit"></a>  CComControl::FireOnRequestEdit  
  컨트롤 속성이 변경 되기 하 고 계속 하는 방법을 개체는 싱크는 질문 및 컨테이너의 싱크를에 알립니다.  
   
 ```
@@ -188,10 +183,10 @@ HRESULT FireOnRequestEdit(DISPID dispID);
   
  이 메서드는 안전 컨트롤 연결 지점을 지원 하지 않는 경우에 호출 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_ATL_COM#18](../../atl/codesnippet/cpp/ccomcontrol-class_4.cpp)]  
   
-##  <a name="messagebox"></a>CComControl::MessageBox  
+##  <a name="messagebox"></a>  CComControl::MessageBox  
  만들기, 표시 및 메시지 상자를 작동 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -215,7 +210,7 @@ int MessageBox(
  아래 나열 된 메뉴 항목 값 중 하나를 지정 하는 정수 값을 반환 [MessageBox](http://msdn.microsoft.com/library/windows/desktop/ms645505) Windows SDK 설명서에서입니다.  
   
 ### <a name="remarks"></a>설명  
- `MessageBox`개발 및 사용자에 게 오류 또는 경고 메시지를 표시 하는 쉬운 방법으로는 유용 합니다.  
+ `MessageBox` 개발 및 사용자에 게 오류 또는 경고 메시지를 표시 하는 쉬운 방법으로는 유용 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CWindowImpl 클래스](../../atl/reference/cwindowimpl-class.md)   

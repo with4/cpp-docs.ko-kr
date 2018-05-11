@@ -1,12 +1,9 @@
 ---
-title: "CriticalSectionTraits 구조체 | Microsoft Docs"
-ms.custom: 
+title: CriticalSectionTraits 구조체 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - CriticalSectionTraits structure
 ms.assetid: c515a1b5-4eb0-40bc-9035-c4d9352c9de7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c24d8dea31a87094329276af3ebfaf9f06136adc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5534173d594b8fc09ceca8ec44a1c1223bc550b2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits 구조체
 잘못 된 임계 또는 중요 한 섹션을 해제 하는 함수를 지원 하기 위해 CriticalSection 개체를 특수화입니다.  
@@ -43,7 +38,7 @@ struct CriticalSectionTraits;
   
 |이름|설명|  
 |----------|-----------------|  
-|`Type`|A `typedef` 임계 영역에 대 한 포인터를 정의 하 합니다. `Type`로 정의 `typedef CRITICAL_SECTION* Type;`합니다.|  
+|`Type`|A `typedef` 임계 영역에 대 한 포인터를 정의 하 합니다. `Type` 로 정의 `typedef CRITICAL_SECTION* Type;`합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   

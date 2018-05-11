@@ -1,12 +1,9 @@
 ---
-title: "float_4 클래스 | Microsoft Docs"
-ms.custom: 
+title: float_4 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_wyxz
@@ -277,17 +274,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f4e168215270cca2112efa43b7faa225b972c34
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f5420cbaf6710f12852575926fc6280e1a33ce66
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="float4-class"></a>float_4 클래스
 4 개의 부동 소수점의 short 벡터를 나타냅니다.  
@@ -470,7 +465,7 @@ class float_4;
   
 |이름|설명|  
 |----------|-----------------|  
-|[size Constant](#float_4__size)||  
+|[상수 크기](#float_4__size)||  
   
 ### <a name="public-data-members"></a>공용 데이터 멤버  
   

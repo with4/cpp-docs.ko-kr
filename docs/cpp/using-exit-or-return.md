@@ -1,12 +1,9 @@
 ---
-title: "사용 하 여 종료 하거나 반환할 | Microsoft Docs"
-ms.custom: 
+title: 사용 하 여 종료 하거나 반환할 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - Exit
@@ -16,22 +13,20 @@ helpviewer_keywords:
 - exit function
 - return keyword [C++], using for program termination
 ms.assetid: b5136c5c-2505-4229-8691-2a1d6a98760b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f5c9fdb17811206732811db4e27006dc5e0ed84
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 45885cc6dbac50a693bb84abb797469d8aff93a3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-exit-or-return"></a>exit 또는 return 사용
 호출 하는 경우 **종료** 하거나 실행 한 `return` 에서 문을 **주**, 정적 개체 초기화의 역순으로 제거 됩니다. 다음 예제에서는 이러한 초기화 및 정리가 작동하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // using_exit_or_return1.cpp  

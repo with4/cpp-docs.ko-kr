@@ -1,27 +1,22 @@
 ---
-title: "1.3 실행 모델 | Microsoft Docs"
-ms.custom: 
+title: 1.3 실행 모델 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 85ae8bc4-5bf0-45e0-a45f-02de9adaf716
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce9c2398b38effebbca428c811d86481ca94e7cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0acdd7a5d9f2dcb58850254281b5c18fd0d1123c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="13-execution-model"></a>1.3 실행 모델
 OpenMP 병렬 실행 분기-조인 모델을 사용합니다. 이 분기-조인 모델 하는 다양 한 문제를 해결 하는 데 유용 하지만 다소 큰 배열 기반 응용 프로그램에 대 한 맞는 합니다. OpenMP 지원 프로그램을 실행 됩니다 올바르게 둘 다 병렬 프로그램 (다중 스레드 실행 및 전체 OpenMP 지원 라이브러리) 하 고 순차적 프로그램 (무시 지시문 및 간단한 OpenMP 스텁 라이브러리)로 것뿐입니다. 그러나 불가능 하 고 순차적으로 실행 하는 경우 올바르게 동작 하지 않는 하는 프로그램을 개발 허용 합니다. 또한 서로 다른 수준의 병렬 처리 수준 수치 연산의 연결의 변경으로 인해 다른 숫자 결과 발생할 수 있습니다. 예를 들어 직렬 더하기 감소 병렬 감소 보다 추가 연결의 다른 패턴을 있을 수 있습니다. 이러한 서로 다른 연결 부동 소수점 더하기의 결과 변경할 수 있습니다.  

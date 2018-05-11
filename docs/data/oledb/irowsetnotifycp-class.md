@@ -1,12 +1,9 @@
 ---
-title: "IRowsetNotifyCP 클래스 | Microsoft Docs"
-ms.custom: 
+title: IRowsetNotifyCP 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - IRowsetNotifyCP
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - IRowsetNotifyCP class
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a43825ee3fa676ce07dcd3bc4e121abd400ef322
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 19147710ce8965222eed998e1a7ab4baa1e32caf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP 클래스
 연결 지점 인터페이스에 대 한 공급자 사이트 구현 [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)합니다.  
@@ -51,7 +46,7 @@ class IRowsetNotifyCP :
  재입력을 지 원하는 mutex 클래스 (기본값은 **CComSharedMutex**). 뮤텍스는 한 스레드가 리소스에 상호 배타적 액세스 허용 하는 동기화 개체입니다.  
   
  `piid`  
- 인터페이스 ID 포인터 (**IID\***)에 대 한 프로그램 **IRowsetNotify** 연결 지점 인터페이스입니다. 기본값은 **& __uuidof(IRowsetNotify)**합니다.  
+ 인터페이스 ID 포인터 (**IID\***)에 대 한 프로그램 **IRowsetNotify** 연결 지점 인터페이스입니다. 기본값은 **& __uuidof(IRowsetNotify)** 합니다.  
   
  `DynamicUnkArray`  
  형식의 배열 [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), 되는 동적으로 할당 된 배열을 **IUnknown** 클라이언트에 대 한 포인터 싱크 인터페이스입니다.  

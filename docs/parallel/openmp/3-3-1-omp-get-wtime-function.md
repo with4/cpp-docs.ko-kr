@@ -1,27 +1,22 @@
 ---
-title: "3.3.1 omp_get_wtime 함수 | Microsoft Docs"
-ms.custom: 
+title: 3.3.1 omp_get_wtime 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 90188bd2-c53e-4398-8946-d3ecc92fa0f6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f89a71d1b91a27dfdd0abf13be4a5f0e30b3fd9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d71296d23df72464ed730713566c95e2403760a1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="331-ompgetwtime-function"></a>3.3.1 omp_get_wtime 함수
 `omp_get_wtime` 함수 반환 배정밀도 부동 소수점 값 경과 된 벽 시계 시간을 몇 가지 "과거의 지정 시간" 이후의 초 단위입니다.  실제 "과거의 지정 시간"은 선택적 요소 이지만를 응용 프로그램의 실행 하는 동안 변경 하지 않도록 보장 됩니다. 형식은 다음과 같습니다.  

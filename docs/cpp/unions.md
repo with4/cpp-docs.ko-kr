@@ -1,12 +1,9 @@
 ---
-title: "공용 구조체 | Microsoft Docs"
-ms.custom: 
+title: 공용 구조체 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - union_cpp
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9371aaf978f2ea9498445d0124b9be16cf3b0fa7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 066f7c50940e6c68bb0fca554bb3bc56fc20b93c
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="unions"></a>Unions
 `union`은 모든 멤버가 동일한 메모리 위치를 공유하는 사용자 정의 형식입니다. 즉, 지정된 시간에 공용 구조체에는 멤버 목록의 개체가 둘 이상 포함될 수 없습니다. 또한 공용 구조체의 멤버 수에 관계없이 항상 가장 큰 멤버를 저장할 수 있을 만큼 충분한 메모리를 사용해야 합니다.  
@@ -645,7 +640,7 @@ int main()
  ![숫자 형식 공용 구조체에 데이터 저장](../cpp/media/vc38ul1.png "vc38UL1")  
 NumericType 공용 구조체에 데이터 저장  
   
-## <a name="anonymous_unions"></a>익명 공용 구조체  
+## <a name="anonymous_unions"></a> 익명 공용 구조체  
  익명 공용 구조체는 없이 선언 된 공용 구조체는 *클래스 이름* 또는 *선언 자 목록*합니다.  
   
 ```cpp  

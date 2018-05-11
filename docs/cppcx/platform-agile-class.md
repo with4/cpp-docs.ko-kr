@@ -1,11 +1,8 @@
 ---
-title: "Platform:: agile 클래스 | Microsoft Docs"
-ms.custom: 
+title: 'Platform:: agile 클래스 | Microsoft Docs'
+ms.custom: ''
 ms.date: 12/30/2016
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
@@ -19,17 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c670ffc10858e709129caf9fabf80b656cbdb18
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 4d7d2299dd1395e93f4cd88cbeaec6c0b9467308
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="platformagile-class"></a>Platform::Agile 클래스
 MashalingBehavior=Standard를 agile 개체로 나타냅니다. 이를 통해 런타임 스레딩 예외가 발생할 가능성이 매우 감소합니다. `Agile<T>` 를 사용하여 agile이 아닌 개체가 같거나 다른 스레드를 호출하거나 해당 스레드에서 호출될 수 있습니다. 자세한 내용은 참조 [스레딩 및 마샬링](../cppcx/threading-and-marshaling-c-cx.md)합니다.  
@@ -145,7 +140,7 @@ Agile 클래스의 현재 인스턴스를 제거합니다.
   
  반환 값의 형식은 실제로 알려지지 않은 내부 형식입니다. 반환 값을 포함 하는 편리한 방법을 지정 하는 것으로 선언 된 변수에 **자동** 형식 추론 키워드입니다. 예를 들어, `auto x = myAgileTvariable->Get();`을 입력합니다.  
   
-## <a name="getaddressof"></a>  Agile::GetAddressOf Method
+## <a name="getaddressof"></a>  Agile:: getaddressof 메서드
 현재 Agile 개체를 다시 초기화하고 핸들 주소를 `T`형식 개체에 반환합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -217,7 +212,7 @@ const throw();
   
  이 연산자는 실제로 알려지지 않은 내부 형식을 반환합니다. 반환 값을 포함 하는 편리한 방법을 지정 하는 것으로 선언 된 변수에 **자동** 형식 추론 키워드입니다.  
 
-## <a name="operator-assign"></a>  Agile::operator= Operator
+## <a name="operator-assign"></a>  Agile:: operator = 연산자
 지정한 개체를 현재 Agile 개체에 할당합니다.  
   
 ## <a name="syntax"></a>구문  

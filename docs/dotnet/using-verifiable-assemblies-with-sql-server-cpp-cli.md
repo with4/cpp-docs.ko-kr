@@ -2,36 +2,31 @@
 title: SQL Server에 안정형 어셈블리 사용 (C + + /cli CLI) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d03d54dd52f95f3fbba35bb896594e90aa92e867
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f172eea3108771e129636e9aa95d721d45c99609
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>SQL Server에 안정형 어셈블리 사용(C++/CLI)
 동적 연결 라이브러리 (Dll)로 패키지 하는 확장된 저장된 프로시저에는 Visual c + +를 사용 하 여 개발 하는 기능을 통해 SQL Server 기능을 확장 하는 방법을 제공 합니다. 확장된 저장된 프로시저 Dll 내에서 함수로 구현 됩니다. 함수 외에 확장된 저장된 프로시저를 정의할 수도 [사용자 정의 형식](../cpp/classes-and-structs-cpp.md) 및 [집계 함수는](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (예: SUM 또는 AVG).  
   
  클라이언트가 확장된 저장된 프로시저를 실행할 때 SQL Server DLL에 대 한 확장된 저장된 프로시저와 관련 된 검색과 해당 DLL을 로드 합니다. SQL Server는 요청 된 확장된 저장된 프로시저를 호출 하 고 지정 된 보안 컨텍스트 내에서 실행 합니다. 확장 저장 프로시저는 전달 결과 집합 및 매개 변수를 서버에 다시 반환 합니다.  
   
- [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)]transact-sql에 (T-SQL) SQL Server에 안정형 어셈블리를 설치할 수 있도록 확장을 제공 합니다. SQL Server 사용 권한 집합에는 다음과 같은 수준의 보안으로 보안 컨텍스트를 지정합니다.  
+ [!INCLUDE[sqprsqlong](../dotnet/includes/sqprsqlong_md.md)] transact-sql에 (T-SQL) SQL Server에 안정형 어셈블리를 설치할 수 있도록 확장을 제공 합니다. SQL Server 사용 권한 집합에는 다음과 같은 수준의 보안으로 보안 컨텍스트를 지정합니다.  
   
 -   무제한 모드:; 위험은 사용자가 코드를 실행 합니다. 코드 형식 안전성이 없는 합니다.  
   
@@ -57,7 +52,7 @@ RETURNS returnType
 [EXTERNAL NAME <AssemblyName>:<ClassName>::<StaticMethodName>]  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  SQL Server에 어셈블리를 로드 하 고 클래스의 메서드를 사용할 수 있도록 하는 다음 SQL 스크립트 (예를 들어 명명 된 "MyScript.sql").  
   
 ```  

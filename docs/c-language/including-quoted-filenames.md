@@ -1,27 +1,22 @@
 ---
-title: "따옴표로 묶인 파일 이름 포함 | Microsoft Docs"
-ms.custom: 
+title: 따옴표로 묶인 파일 이름 포함 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 ms.assetid: 789a047e-ea38-4c99-b71d-a2ad9c81daee
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 75b9e308fec394825b3113a716ead2c93e9bb290
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 80f6afbc503b52d1ef620050bf5592eb84e75fa9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="including-quoted-filenames"></a>따옴표로 묶은 파일 이름 포함
 **ANSI 3.8.2** 포함 가능한 소스 파일에 대한 따옴표 붙은 이름 지원  

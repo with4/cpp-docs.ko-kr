@@ -1,12 +1,9 @@
 ---
-title: "CDaoRecordset 클래스 | Microsoft Docs"
-ms.custom: 
+title: CDaoRecordset 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDaoRecordset
@@ -175,17 +172,15 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e50e83a2d52567d30901cea33cfccec3e236fe67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 603cd1658af417dfbb7f2d8aa8022275e866a706
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset 클래스
 데이터 소스에서 선택한 레코드 집합을 나타냅니다.  
@@ -327,7 +322,7 @@ class CDaoRecordset : public CObject
   
  개체의 멤버 함수 및 데이터 멤버를 사용 하 여 작업할 및 레코드를 스크롤합니다. 사용 가능한 작업 개체 인지 여부는 테이블 형식의 레코드 집합, 다이너셋 형식 recordset 스냅숏 형식 레코드 집합 및 업데이트 가능 하거나 읽기 전용 인지에 따라 달라 집니다-이 데이터베이스 또는 연결 ODBC (Open Database)의 기능에 따라 결정 데이터 원본입니다. 새로 고침 레코드 변경 되거나 이후 추가 된 수에 **열려** 호출, 개체의 [Requery](#requery) 멤버 함수입니다. 개체의 **닫기** 멤버 함수를 함께 했으면 개체를 삭제 합니다.  
   
- `CDaoRecordset`DAO 레코드 필드 교환 (DFX)의 형식이 안전한 c + + 멤버를 통해 읽기 및 레코드 필드의 업데이트를 지원 하기 위해 사용 하 여 프로그램 `CDaoRecordset` 또는 `CDaoRecordset`-클래스를 파생 합니다. 사용 하 여 DFX 메커니즘을 사용 하지 않고 데이터베이스의 열 동적 바인딩을 구현할 수도 있습니다 [GetFieldValue](#getfieldvalue) 및 [SetFieldValue](#setfieldvalue)합니다.  
+ `CDaoRecordset` DAO 레코드 필드 교환 (DFX)의 형식이 안전한 c + + 멤버를 통해 읽기 및 레코드 필드의 업데이트를 지원 하기 위해 사용 하 여 프로그램 `CDaoRecordset` 또는 `CDaoRecordset`-클래스를 파생 합니다. 사용 하 여 DFX 메커니즘을 사용 하지 않고 데이터베이스의 열 동적 바인딩을 구현할 수도 있습니다 [GetFieldValue](#getfieldvalue) 및 [SetFieldValue](#setfieldvalue)합니다.  
   
  관련된 정보에 대 한 DAO 도움말의 "Recordset 개체" 항목을 참조 합니다.  
   
@@ -339,7 +334,7 @@ class CDaoRecordset : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdao.h  
   
-##  <a name="addnew"></a>CDaoRecordset::AddNew  
+##  <a name="addnew"></a>  CDaoRecordset::AddNew  
  테이블 형식 또는 다이너셋 형식의 레코드 집합에 새 레코드를 추가 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -377,7 +372,7 @@ virtual void AddNew();
   
  관련된 정보에 대 한 "AddNew 메서드", "CancelUpdate 메서드", "LastModified Property" 및 DAO 도움말의 "EditMode Property" 항목을 참조 합니다.  
   
-##  <a name="canappend"></a>CDaoRecordset::CanAppend  
+##  <a name="canappend"></a>  CDaoRecordset::CanAppend  
  이전에 열린된 레코드 집합 수를 호출 하 여 새 레코드를 추가할 수 있는지 여부를 확인 하려면이 멤버 함수 호출의 [AddNew](#addnew) 멤버 함수입니다.  
   
 ```  
@@ -385,12 +380,12 @@ BOOL CanAppend() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 레코드 집합; 새 레코드를 추가할 수 있습니다. 0이 아닌 그렇지 않으면 0입니다. `CanAppend`읽기 전용으로 레코드 집합을 연 경우에 0을 반환 합니다.  
+ 레코드 집합; 새 레코드를 추가할 수 있습니다. 0이 아닌 그렇지 않으면 0입니다. `CanAppend` 읽기 전용으로 레코드 집합을 연 경우에 0을 반환 합니다.  
   
 ### <a name="remarks"></a>설명  
  관련된 정보에 대 한 DAO 도움말의 "추가 방법" 항목을 참조 합니다.  
   
-##  <a name="canbookmark"></a>CDaoRecordset::CanBookmark  
+##  <a name="canbookmark"></a>  CDaoRecordset::CanBookmark  
  개별적으로 책갈피를 사용 하 여 레코드를 표시 하 여 이전에 열린된 레코드 집합 수 있는지 여부를 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -405,7 +400,7 @@ BOOL CanBookmark();
   
  관련된 정보에 대 한 DAO 도움말의 "책갈피를 설정할 Property" 항목을 참조 합니다.  
   
-##  <a name="cancelupdate"></a>CDaoRecordset::CancelUpdate  
+##  <a name="cancelupdate"></a>  CDaoRecordset::CancelUpdate  
  `CancelUpdate` 로 인해 모든 보류 중인 업데이트를 취소 하는 멤버 함수는 [편집](#edit) 또는 [AddNew](#addnew) 작업 합니다.  
   
 ```  
@@ -422,7 +417,7 @@ virtual void CancelUpdate();
   
  관련된 정보에 대 한 DAO 도움말의 "CancelUpdate Method" 항목을 참조 합니다.  
   
-##  <a name="canrestart"></a>CDaoRecordset::CanRestart  
+##  <a name="canrestart"></a>  CDaoRecordset::CanRestart  
  레코드 집합의 쿼리 (해당 레코드를 새로 고침)를 호출 하 여 다시 시작을 허용 하는지 여부를 확인 하려면이 멤버 함수 호출의 **Requery** 멤버 함수입니다.  
   
 ```  
@@ -439,7 +434,7 @@ BOOL CanRestart();
   
  관련된 정보에 대 한 DAO 도움말의 "다시 시작 가능 Property" 항목을 참조 합니다.  
   
-##  <a name="canscroll"></a>CDaoRecordset::CanScroll  
+##  <a name="canscroll"></a>  CDaoRecordset::CanScroll  
  레코드 집합 스크롤을 허용 하는지 여부를 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -454,7 +449,7 @@ BOOL CanScroll() const;
   
  관련된 정보에 대 한 DAO 도움말의 "DAO를 사용 하 여 현재 레코드 포인터 위치 지정" 항목을 참조 합니다.  
   
-##  <a name="cantransact"></a>CDaoRecordset::CanTransact  
+##  <a name="cantransact"></a>  CDaoRecordset::CanTransact  
  레코드 집합 트랜잭션을 허용 하는지 여부를 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -467,7 +462,7 @@ BOOL CanTransact();
 ### <a name="remarks"></a>설명  
  관련된 정보에 대 한 DAO 도움말의 "트랜잭션 Property" 항목을 참조 합니다.  
   
-##  <a name="canupdate"></a>CDaoRecordset::CanUpdate  
+##  <a name="canupdate"></a>  CDaoRecordset::CanUpdate  
  레코드 집합을 업데이트할 수 있는지 여부를 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -482,7 +477,7 @@ BOOL CanUpdate() const;
   
  관련된 정보에 대 한 "AddNew 메서드", "편집 메서드", "Delete 메서드", "Update 메서드" 및 "업데이트할 수 있는 속성" DAO 도움말의 항목을 참조 합니다.  
   
-##  <a name="cdaorecordset"></a>CDaoRecordset::CDaoRecordset  
+##  <a name="cdaorecordset"></a>  CDaoRecordset::CDaoRecordset  
  `CDaoRecordset` 개체를 생성합니다.  
   
 ```  
@@ -501,7 +496,7 @@ CDaoRecordset(CDaoDatabase* pDatabase = NULL);
   
  전달 **NULL** 있어야 recordset 생성자에는 `CDaoDatabase` 개체 구현 되 고 하기 위해 자동으로 연결 합니다. 이것은 생성 하 고 연결할 필요가 없는 유용한 바로 가기는 `CDaoDatabase` 레코드 집합을 생성 하기 전에 개체입니다. 경우는 `CDaoDatabase` 개체 열려 있지 않으면는 [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) 개체의 기본 작업 영역을 사용 하 여을 생성 됩니다. 자세한 내용은 참조 [CDaoDatabase::CDaoDatabase](../../mfc/reference/cdaodatabase-class.md#cdaodatabase)합니다.  
   
-##  <a name="close"></a>CDaoRecordset::Close  
+##  <a name="close"></a>  CDaoRecordset::Close  
  닫기는 `CDaoRecordset` 개체 관련된 데이터베이스에서 열려 있는 레코드 집합이의 컬렉션에서 제거 합니다.  
   
 ```  
@@ -517,7 +512,7 @@ virtual void Close();
   
  관련된 정보에 대 한 "Close 메서드" DAO 도움말의 항목을 참조 합니다.  
   
-##  <a name="delete"></a>CDaoRecordset::Delete  
+##  <a name="delete"></a>  CDaoRecordset::Delete  
  열려 있는 다이너셋 형식 또는 테이블 형식 recordset 개체의 현재 레코드를 삭제 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -538,7 +533,7 @@ virtual void Delete();
   
  관련된 정보에 대 한 "AddNew 메서드", "편집 메서드", "Delete 메서드", "Update 메서드" 및 "업데이트할 수 있는 속성" DAO 도움말의 항목을 참조 합니다.  
   
-##  <a name="dofieldexchange"></a>CDaoRecordset::DoFieldExchange  
+##  <a name="dofieldexchange"></a>  CDaoRecordset::DoFieldExchange  
  프레임 워크는 자동으로 레코드 집합 개체의 필드 데이터 멤버와 데이터 소스에서 현재 레코드의 해당 열 간에 데이터를 교환 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -558,7 +553,7 @@ virtual void DoFieldExchange(CDaoFieldExchange* pFX);
   
  [!code-cpp[NVC_MFCDatabase#2](../../mfc/codesnippet/cpp/cdaorecordset-class_2.cpp)]  
   
-##  <a name="edit"></a>CDaoRecordset::Edit  
+##  <a name="edit"></a>  CDaoRecordset::Edit  
  현재 레코드에 대 한 변경을 허용 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -598,7 +593,7 @@ virtual void Edit();
   
  관련된 정보에 대 한 "AddNew 메서드", "편집 메서드", "Delete 메서드", "Update 메서드" 및 "업데이트할 수 있는 속성" DAO 도움말의 항목을 참조 합니다.  
   
-##  <a name="fillcache"></a>CDaoRecordset::FillCache  
+##  <a name="fillcache"></a>  CDaoRecordset::FillCache  
  지정된 된 수의 레코드 집합의 레코드를 캐시 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -623,11 +618,11 @@ void FillCache(
   
  캐시에서 인출 된 레코드는 다른 사용자가 원본 데이터에 동시에 변경한 내용을 반영 하지 않습니다.  
   
- `FillCache`아직 캐시 된 레코드에만 인출 합니다. 모든 캐시 된 데이터의 업데이트를 실행 하려면 호출는 `SetCacheSize` 와 멤버 함수는 `lSize` 매개 변수를 0으로 호출 `SetCacheSize` 사용 하 여 다시는 `lSize` 매개 변수는 캐시의 크기를 원래 요청을 호출`FillCache`.  
+ `FillCache` 아직 캐시 된 레코드에만 인출 합니다. 모든 캐시 된 데이터의 업데이트를 실행 하려면 호출는 `SetCacheSize` 와 멤버 함수는 `lSize` 매개 변수를 0으로 호출 `SetCacheSize` 사용 하 여 다시는 `lSize` 매개 변수는 캐시의 크기를 원래 요청을 호출`FillCache`.  
   
  관련된 정보에 대 한 DAO 도움말의 "FillCache Method" 항목을 참조 합니다.  
   
-##  <a name="find"></a>CDaoRecordset::Find  
+##  <a name="find"></a>  CDaoRecordset::Find  
  이 비교 연산자를 사용 하 여 다이너셋 또는 스냅숏 형식 레코드 집합에서 특정 문자열을 찾을 수 함수를 호출 합니다.  
   
 ```  
@@ -649,7 +644,7 @@ virtual BOOL Find(
 - **AFX_DAO_LAST** 일치 하는 문자열의 마지막 위치를 확인 합니다.  
   
  `lpszFilter`  
- 문자열 식 (같은 **여기서** 단어 없이 SQL 문에 절 **여기서**) 레코드를 찾는 데 사용 합니다. 예:  
+ 문자열 식 (같은 **여기서** 단어 없이 SQL 문에 절 **여기서**) 레코드를 찾는 데 사용 합니다. 예를 들어:  
   
  [!code-cpp[NVC_MFCDatabase#3](../../mfc/codesnippet/cpp/cdaorecordset-class_3.cpp)]  
   
@@ -666,7 +661,7 @@ virtual BOOL Find(
   
  관련된 정보에 대 한 항목을 DAO 도움말의 "FindFirst, FindLast, FindNext, FindPrevious 메서드" 참조 합니다.  
   
-##  <a name="findfirst"></a>CDaoRecordset::FindFirst  
+##  <a name="findfirst"></a>  CDaoRecordset::FindFirst  
  이 지정 된 조건과 일치 하는 첫 번째 레코드를 찾을 수 함수를 호출 합니다.  
   
 ```  
@@ -716,7 +711,7 @@ BOOL FindFirst(LPCTSTR lpszFilter);
   
  관련된 정보에 대 한 항목을 DAO 도움말의 "FindFirst, FindLast, FindNext, FindPrevious 메서드" 참조 합니다.  
   
-##  <a name="findlast"></a>CDaoRecordset::FindLast  
+##  <a name="findlast"></a>  CDaoRecordset::FindLast  
  이 지정 된 조건과 일치 하는 마지막 레코드를 찾을 수 함수를 호출 합니다.  
   
 ```  
@@ -754,7 +749,7 @@ BOOL FindLast(LPCTSTR lpszFilter);
   
  관련된 정보에 대 한 항목을 DAO 도움말의 "FindFirst, FindLast, FindNext, FindPrevious 메서드" 참조 합니다.  
   
-##  <a name="findnext"></a>CDaoRecordset::FindNext  
+##  <a name="findnext"></a>  CDaoRecordset::FindNext  
  이 지정된 된 조건과 일치 하는 다음 레코드를 찾을 수 함수를 호출 합니다.  
   
 ```  
@@ -792,7 +787,7 @@ BOOL FindNext(LPCTSTR lpszFilter);
   
  관련된 정보에 대 한 항목을 DAO 도움말의 "FindFirst, FindLast, FindNext, FindPrevious 메서드" 참조 합니다.  
   
-##  <a name="findprev"></a>CDaoRecordset::FindPrev  
+##  <a name="findprev"></a>  CDaoRecordset::FindPrev  
  이 지정 된 조건과 일치 하는 이전 레코드를 찾을 수 함수를 호출 합니다.  
   
 ```  
@@ -830,7 +825,7 @@ BOOL FindPrev(LPCTSTR lpszFilter);
   
  관련된 정보에 대 한 항목을 DAO 도움말의 "FindFirst, FindLast, FindNext, FindPrevious 메서드" 참조 합니다.  
   
-##  <a name="getabsoluteposition"></a>CDaoRecordset::GetAbsolutePosition  
+##  <a name="getabsoluteposition"></a>  CDaoRecordset::GetAbsolutePosition  
  레코드 집합 개체의 현재 레코드의 레코드 번호를 반환합니다.  
   
 ```  
@@ -853,7 +848,7 @@ long GetAbsolutePosition();
   
  관련된 정보에 대 한 DAO 도움말의 "AbsolutePosition Property" 항목을 참조 합니다.  
   
-##  <a name="getbookmark"></a>CDaoRecordset::GetBookmark  
+##  <a name="getbookmark"></a>  CDaoRecordset::GetBookmark  
  이 특정 레코드에 책갈피 값을 가져오는 함수를 호출 합니다.  
   
 ```  
@@ -873,7 +868,7 @@ COleVariant GetBookmark();
   
  관련된 정보에 대 한 DAO 도움말의 "책갈피 Property" 항목을 참조 합니다.  
   
-##  <a name="getcachesize"></a>CDaoRecordset::GetCacheSize  
+##  <a name="getcachesize"></a>  CDaoRecordset::GetCacheSize  
  캐시 된 레코드의 수를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -890,7 +885,7 @@ long GetCacheSize();
   
  관련된 내용은 DAO 도움말의 "CacheSize CacheStart 속성" 항목을 참조 합니다.  
   
-##  <a name="getcachestart"></a>CDaoRecordset::GetCacheStart  
+##  <a name="getcachestart"></a>  CDaoRecordset::GetCacheStart  
  캐시할 레코드 집합의 첫 번째 레코드의 책갈피 값을 얻기 위해이 함수를 호출 합니다.  
   
 ```  
@@ -908,7 +903,7 @@ COleVariant GetCacheStart();
   
  관련된 내용은 DAO 도움말의 "CacheSize CacheStart 속성" 항목을 참조 합니다.  
   
-##  <a name="getcurrentindex"></a>CDaoRecordset::GetCurrentIndex  
+##  <a name="getcurrentindex"></a>  CDaoRecordset::GetCurrentIndex  
  인덱싱된 테이블 형식에서 사용 중인 현재 인덱스를 확인 하려면이 함수를 호출 `CDaoRecordset` 개체입니다.  
   
 ```  
@@ -925,7 +920,7 @@ CString GetCurrentIndex();
   
  관련된 정보 항목 "Index 개체" 및 "현재 인덱스" DAO 도움말의 정의 참조 하십시오.  
   
-##  <a name="getdatecreated"></a>CDaoRecordset::GetDateCreated  
+##  <a name="getdatecreated"></a>  CDaoRecordset::GetDateCreated  
  기본 테이블을 만든 시간과 날짜를 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -940,7 +935,7 @@ COleDateTime GetDateCreated();
   
  관련된 내용은 DAO 도움말의 "DateCreated LastUpdated 속성" 항목을 참조 합니다.  
   
-##  <a name="getdatelastupdated"></a>CDaoRecordset::GetDateLastUpdated  
+##  <a name="getdatelastupdated"></a>  CDaoRecordset::GetDateLastUpdated  
  스키마 마지막으로 업데이트 된 시간과 날짜를 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -955,7 +950,7 @@ COleDateTime GetDateLastUpdated();
   
  관련된 내용은 DAO 도움말의 "DateCreated LastUpdated 속성" 항목을 참조 합니다.  
   
-##  <a name="getdefaultdbname"></a>CDaoRecordset::GetDefaultDBName  
+##  <a name="getdefaultdbname"></a>  CDaoRecordset::GetDefaultDBName  
  이 레코드 집합에 대 한 데이터베이스의 이름을 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -972,7 +967,7 @@ virtual CString GetDefaultDBName();
   
  [!code-cpp[NVC_MFCDatabase#4](../../mfc/codesnippet/cpp/cdaorecordset-class_4.cpp)]  
   
-##  <a name="getdefaultsql"></a>CDaoRecordset::GetDefaultSQL  
+##  <a name="getdefaultsql"></a>  CDaoRecordset::GetDefaultSQL  
  프레임 워크 멤버 가져오려면이 함수를 레코드 집합의 기반이 되는 기본 SQL 문을 호출 합니다.  
   
 ```  
@@ -989,7 +984,7 @@ virtual CString GetDefaultSQL();
   
  Null SQL 문자열을 전달 하는 경우 [열려](#open), 레코드 집합에 대 한 테이블 이름이 나 SQL을 확인 하려면이 함수 호출 됩니다.  
   
-##  <a name="geteditmode"></a>CDaoRecordset::GetEditMode  
+##  <a name="geteditmode"></a>  CDaoRecordset::GetEditMode  
  이 함수를 호출의 편집 상태를 확인 하는 다음 값 중 하나:  
   
 ```  
@@ -1005,11 +1000,11 @@ short GetEditMode();
 |-----------|-----------------|  
 |**dbEditNone**|편집 작업이 진행 중입니다.|  
 |**dbEditInProgress**|**편집** 가 호출 되었습니다.|  
-|**dbEditAdd**|`AddNew`가 호출 되었습니다.|  
+|**dbEditAdd**|`AddNew` 가 호출 되었습니다.|  
   
  관련된 정보에 대 한 DAO 도움말의 "EditMode Property" 항목을 참조 합니다.  
   
-##  <a name="getfieldcount"></a>CDaoRecordset::GetFieldCount  
+##  <a name="getfieldcount"></a>  CDaoRecordset::GetFieldCount  
  레코드 집합에 정의 된 필드 (열)의 수를 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -1022,7 +1017,7 @@ short GetFieldCount();
 ### <a name="remarks"></a>설명  
  관련된 정보에 대 한 항목 DAO 도움말의 "Count 속성"을 참조 합니다.  
   
-##  <a name="getfieldinfo"></a>CDaoRecordset::GetFieldInfo  
+##  <a name="getfieldinfo"></a>  CDaoRecordset::GetFieldInfo  
  레코드 집합의 필드에 대 한 정보를 얻으려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -1048,11 +1043,11 @@ void GetFieldInfo(
  `dwInfoOptions`  
  검색할 레코드 집합에 대 한 정보를 지정 하는 옵션입니다. 사용 가능한 옵션은 반환 하는 함수를 입히기 무엇 함께 나열 됩니다. 최상의 성능을 위해 필요한 정보 수준의 검색:  
   
-- `AFX_DAO_PRIMARY_INFO`(기본값) 이름, 유형, 크기, 속성  
+- `AFX_DAO_PRIMARY_INFO` (기본값) 이름, 유형, 크기, 속성  
   
-- `AFX_DAO_SECONDARY_INFO`기본 정보, 플러스: 서 수 위치에 필요한 길이, 데이터 정렬 순서, 외부 이름, 원본 필드, 원본 테이블 0 허용  
+- `AFX_DAO_SECONDARY_INFO` 기본 정보, 플러스: 서 수 위치에 필요한 길이, 데이터 정렬 순서, 외부 이름, 원본 필드, 원본 테이블 0 허용  
   
-- `AFX_DAO_ALL_INFO`기본 및 보조 정보 플러스: Default Value, 유효성 검사 규칙 유효성 검사 텍스트  
+- `AFX_DAO_ALL_INFO` 기본 및 보조 정보 플러스: Default Value, 유효성 검사 규칙 유효성 검사 텍스트  
   
  `lpszName`  
  @FSHO2@필드의 이름입니다.  
@@ -1064,7 +1059,7 @@ void GetFieldInfo(
   
  관련된 정보에 대 한 DAO 도움말의 "특성 Property" 항목을 참조 합니다.  
   
-##  <a name="getfieldvalue"></a>CDaoRecordset::GetFieldValue  
+##  <a name="getfieldvalue"></a>  CDaoRecordset::GetFieldValue  
  레코드 집합에서 데이터를 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1102,11 +1097,11 @@ virtual COleVariant GetFieldValue(int nIndex);
   
  사용 하 여 `GetFieldValue` 및 [SetFieldValue](#setfieldvalue) 실행된 시간 보다는 정적으로 사용 하 여 바인딩 열 필드를 동적으로 바인딩하는 [DoFieldExchange](#dofieldexchange) 메커니즘입니다.  
   
- `GetFieldValue`및 `DoFieldExchange` 메커니즘을 조합 하 여 성능을 향상 시킬 수 있습니다. 사용 예를 들어 `GetFieldValue` , 필요할 경우에 해야 하는 값을 검색 하 호출 하는 인터페이스의 "추가 정보" 단추를 할당 합니다.  
+ `GetFieldValue` 및 `DoFieldExchange` 메커니즘을 조합 하 여 성능을 향상 시킬 수 있습니다. 사용 예를 들어 `GetFieldValue` , 필요할 경우에 해야 하는 값을 검색 하 호출 하는 인터페이스의 "추가 정보" 단추를 할당 합니다.  
   
  관련된 정보에 대 한 "Field 개체"과 "값 속성" DAO 도움말의 항목을 참조 합니다.  
   
-##  <a name="getindexcount"></a>CDaoRecordset::GetIndexCount  
+##  <a name="getindexcount"></a>  CDaoRecordset::GetIndexCount  
  테이블 형식 레코드 집합에서 사용할 수 있는 인덱스 번호를 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1117,11 +1112,11 @@ short GetIndexCount();
  테이블 형식 레코드 집합의 인덱스 수입니다.  
   
 ### <a name="remarks"></a>설명  
- `GetIndexCount`레코드 집합의 모든 인덱스를 통해 반복 하는 데 유용 합니다. 이 위해 사용 하 여 `GetIndexCount` 함께에서 [GetIndexInfo](#getindexinfo)합니다. 다이너셋 형식 또는 스냅숏 형식 레코드 집합에서이 함수를 호출 하는 경우 MFC 예외를 throw 합니다.  
+ `GetIndexCount` 레코드 집합의 모든 인덱스를 통해 반복 하는 데 유용 합니다. 이 위해 사용 하 여 `GetIndexCount` 함께에서 [GetIndexInfo](#getindexinfo)합니다. 다이너셋 형식 또는 스냅숏 형식 레코드 집합에서이 함수를 호출 하는 경우 MFC 예외를 throw 합니다.  
   
  관련된 정보에 대 한 DAO 도움말의 "특성 Property" 항목을 참조 합니다.  
   
-##  <a name="getindexinfo"></a>CDaoRecordset::GetIndexInfo  
+##  <a name="getindexinfo"></a>  CDaoRecordset::GetIndexInfo  
  다양 한 종류의 레코드 집합을 원본 기본 테이블에 정의 된 인덱스에 대 한 정보를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -1147,11 +1142,11 @@ void GetIndexInfo(
  `dwInfoOptions`  
  인덱스를 검색 하는 방법에 대 한 정보를 지정 하는 옵션입니다. 사용 가능한 옵션은 반환 하는 함수를 입히기 무엇 함께 나열 됩니다. 최상의 성능을 위해 필요한 정보 수준의 검색:  
   
-- `AFX_DAO_PRIMARY_INFO`(기본값) 이름, 필드 정보 필드  
+- `AFX_DAO_PRIMARY_INFO` (기본값) 이름, 필드 정보 필드  
   
-- `AFX_DAO_SECONDARY_INFO`기본 정보, 플러스: 주, Unique, 클러스터형, 필수, IgnoreNulls 외부  
+- `AFX_DAO_SECONDARY_INFO` 기본 정보, 플러스: 주, Unique, 클러스터형, 필수, IgnoreNulls 외부  
   
-- `AFX_DAO_ALL_INFO`기본 및 보조 정보 플러스: 고유 카운트  
+- `AFX_DAO_ALL_INFO` 기본 및 보조 정보 플러스: 고유 카운트  
   
  `lpszName`  
  이름별으로 조회에 대 한 인덱스 개체의 이름에 대 한 포인터입니다.  
@@ -1163,7 +1158,7 @@ void GetIndexInfo(
   
  관련된 정보에 대 한 DAO 도움말의 "특성 Property" 항목을 참조 합니다.  
   
-##  <a name="getlastmodifiedbookmark"></a>CDaoRecordset::GetLastModifiedBookmark  
+##  <a name="getlastmodifiedbookmark"></a>  CDaoRecordset::GetLastModifiedBookmark  
  가장 최근에 추가 되거나 업데이트 된 레코드의 책갈피를 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -1180,7 +1175,7 @@ COleVariant GetLastModifiedBookmark();
   
  관련된 정보에 대 한 DAO 도움말의 "LastModified Property" 항목을 참조 합니다.  
   
-##  <a name="getlockingmode"></a>CDaoRecordset::GetLockingMode  
+##  <a name="getlockingmode"></a>  CDaoRecordset::GetLockingMode  
  레코드 집합에 대 한 잠금 유형을 결정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -1199,7 +1194,7 @@ BOOL GetLockingMode();
   
  관련된 정보에 대 한 "LockEdits 속성" 및 "잠금 동작에 여러 사용자 용 응용 프로그램" DAO 도움말의 항목을 참조 합니다.  
   
-##  <a name="getname"></a>CDaoRecordset::GetName  
+##  <a name="getname"></a>  CDaoRecordset::GetName  
  레코드 집합의 이름을 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -1214,7 +1209,7 @@ CString GetName();
   
  관련된 정보에 대 한 항목 DAO 도움말의 "Name 속성"을 참조 합니다.  
   
-##  <a name="getparamvalue"></a>CDaoRecordset::GetParamValue  
+##  <a name="getparamvalue"></a>  CDaoRecordset::GetParamValue  
  기본 DAOParameter 개체에 저장 된 지정된 된 매개 변수의 현재 값을 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -1237,7 +1232,7 @@ virtual COleVariant GetParamValue(LPCTSTR lpszName);
   
  관련된 정보에 대 한 DAO 도움말의 "매개 변수 개체" 항목을 참조 합니다.  
   
-##  <a name="getpercentposition"></a>CDaoRecordset::GetPercentPosition  
+##  <a name="getpercentposition"></a>  CDaoRecordset::GetPercentPosition  
  호출 하는 경우 다이너셋 형식 또는 스냅숏 형식 레코드 집합으로 작업할 때 `GetPercentPosition` 레코드 집합을 완벽 하 게 채우기, 전에 이동은 호출 하 여 표시 된 대로 액세스 하는 레코드의 수를 기준으로 [GetRecordCount](#getrecordcount).  
   
 ```  
@@ -1254,7 +1249,7 @@ float GetPercentPosition();
   
  관련된 정보에 대 한 DAO 도움말의 "PercentPosition Property" 항목을 참조 합니다.  
   
-##  <a name="getrecordcount"></a>CDaoRecordset::GetRecordCount  
+##  <a name="getrecordcount"></a>  CDaoRecordset::GetRecordCount  
  레코드 집합의 레코드 수가 액세스 했는지 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -1265,7 +1260,7 @@ long GetRecordCount();
  레코드 집합 개체에 액세스 하는 레코드의 수를 반환 합니다.  
   
 ### <a name="remarks"></a>설명  
- `GetRecordCount`모든 레코드 액세스 되기 전까지 다이너셋 형식 또는 스냅숏 형식 레코드 집합에 포함 된 개수 레코드를 나타내지 않습니다. 이 멤버 함수 호출을 완료 하는 데 시간이 많이 걸릴 수 있습니다.  
+ `GetRecordCount` 모든 레코드 액세스 되기 전까지 다이너셋 형식 또는 스냅숏 형식 레코드 집합에 포함 된 개수 레코드를 나타내지 않습니다. 이 멤버 함수 호출을 완료 하는 데 시간이 많이 걸릴 수 있습니다.  
   
  마지막 레코드에 액세스 되 면 반환 값은 레코드 집합에서 삭제 되지 않은 레코드의 총 수를 나타냅니다. 에 액세스 하는 마지막 레코드를 강제로 표시 하려면 호출는 `MoveLast` 또는 `FindLast` 레코드 집합에 대 한 멤버 함수입니다. 또한 쿼리는 반환 된 레코드의 대략적인 수를 확인 하려면 SQL 수를 사용할 수 있습니다.  
   
@@ -1279,7 +1274,7 @@ long GetRecordCount();
   
  관련된 정보에 대 한 DAO 도움말의 "RecordCount Property" 항목을 참조 합니다.  
   
-##  <a name="getsql"></a>CDaoRecordset::GetSQL  
+##  <a name="getsql"></a>  CDaoRecordset::GetSQL  
  이 멤버 함수는가 열려 있을 때 레코드 집합의 레코드를 선택 하는 데 사용 된 SQL 문이를 호출 합니다.  
   
 ```  
@@ -1299,7 +1294,7 @@ CString GetSQL() const;
   
  관련된 정보에 대 한 DAO 도움말의 "SQL Property" 항목을 참조 합니다.  
   
-##  <a name="gettype"></a>CDaoRecordset::GetType  
+##  <a name="gettype"></a>  CDaoRecordset::GetType  
  레코드 집합 개체의 형식을 확인 하는 레코드 집합을 연 후이 함수를 호출 합니다.  
   
 ```  
@@ -1318,7 +1313,7 @@ short GetType();
 ### <a name="remarks"></a>설명  
  관련된 정보에 대 한 항목 DAO 도움말의 "Type 속성"을 참조 합니다.  
   
-##  <a name="getvalidationrule"></a>CDaoRecordset::GetValidationRule  
+##  <a name="getvalidationrule"></a>  CDaoRecordset::GetValidationRule  
  데이터 유효성 검사에 사용 되는 규칙을 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1335,7 +1330,7 @@ CString GetValidationRule();
   
  관련된 정보에 대 한 DAO 도움말의 "ValidationRule Property" 항목을 참조 합니다.  
   
-##  <a name="getvalidationtext"></a>CDaoRecordset::GetValidationText  
+##  <a name="getvalidationtext"></a>  CDaoRecordset::GetValidationText  
  기본 필드 개체의 유효성 검사 텍스트 속성의 텍스트를 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -1348,7 +1343,7 @@ CString GetValidationText();
 ### <a name="remarks"></a>설명  
  관련된 정보에 대 한 DAO 도움말의 "유효성 검사 텍스트 Property" 항목을 참조 합니다.  
   
-##  <a name="isbof"></a>CDaoRecordset::IsBOF  
+##  <a name="isbof"></a>  CDaoRecordset::IsBOF  
  레코드 집합의 첫 번째 레코드 바로 앞를 벗어났는지 여부를 알아보려면 레코드로 레코드에서 스크롤하기 전에이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -1388,14 +1383,14 @@ BOOL IsBOF() const;
   
 ||IsBOF|IsEOF|  
 |------|-----------|-----------|  
-|**MoveFirst**,`MoveLast`|0이 아닌|0이 아닌|  
+|**MoveFirst**, `MoveLast`|0이 아닌|0이 아닌|  
 |**이동** 0|변경 안 함|변경 안 함|  
 |`MovePrev`**이동** < 0|0이 아닌|변경 안 함|  
 |`MoveNext`**이동** > 0|변경 안 함|0이 아닌|  
   
  관련된 내용은 항목을 참조 하십시오. "BOF, EOF 속성" DAO 도움말의 합니다.  
   
-##  <a name="isdeleted"></a>CDaoRecordset::IsDeleted  
+##  <a name="isdeleted"></a>  CDaoRecordset::IsDeleted  
  현재 레코드 삭제 되었는지 여부를 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1415,7 +1410,7 @@ BOOL IsDeleted() const;
   
  관련된 정보에 대 한 "Delete 메서드", "LastModified Property" 및 DAO 도움말의 "EditMode Property" 항목을 참조 합니다.  
   
-##  <a name="iseof"></a>CDaoRecordset::IsEOF  
+##  <a name="iseof"></a>  CDaoRecordset::IsEOF  
  레코드 집합의 마지막 레코드 범위를 벗어났는지 여부를 알아보려면 레코드로 레코드에서 스크롤할 때이 함수를 호출 합니다.  
   
 ```  
@@ -1455,14 +1450,14 @@ BOOL IsEOF() const;
   
 ||IsBOF|IsEOF|  
 |------|-----------|-----------|  
-|**MoveFirst**,`MoveLast`|0이 아닌|0이 아닌|  
+|**MoveFirst**, `MoveLast`|0이 아닌|0이 아닌|  
 |**이동** 0|변경 안 함|변경 안 함|  
 |`MovePrev`**이동** < 0|0이 아닌|변경 안 함|  
 |`MoveNext`**이동** > 0|변경 안 함|0이 아닌|  
   
  관련된 내용은 항목을 참조 하십시오. "BOF, EOF 속성" DAO 도움말의 합니다.  
   
-##  <a name="isfielddirty"></a>CDaoRecordset::IsFieldDirty  
+##  <a name="isfielddirty"></a>  CDaoRecordset::IsFieldDirty  
  다이너셋의 지정 된 필드 데이터 멤버 "더티"으로 플래그가 지정 되었는지 여부를 확인 하려면 (변경)이 함수를 호출 합니다.  
   
 ```  
@@ -1479,9 +1474,9 @@ BOOL IsFieldDirty(void* pv);
 ### <a name="remarks"></a>설명  
  모든 더티 필드 데이터 멤버의 데이터를 전송할 레코드를 데이터 원본에 대해를 호출 하 여 현재 레코드가 업데이트 될 때는 **업데이트** 의 멤버 함수 `CDaoRecordset` (호출한 이후 **편집**또는 `AddNew`). 이 정보를 진행할 수 있습니다 더,와 같은 해제 필드 데이터 멤버는 데이터 소스에 쓸 수는 열을 표시 합니다.  
   
- `IsFieldDirty`이 통해 구현 `DoFieldExchange`합니다.  
+ `IsFieldDirty` 이 통해 구현 `DoFieldExchange`합니다.  
   
-##  <a name="isfieldnull"></a>CDaoRecordset::IsFieldNull  
+##  <a name="isfieldnull"></a>  CDaoRecordset::IsFieldNull  
  지정 된 필드 데이터 멤버는 레코드 집합의 Null로 플래그가 지정 되었는지 여부를 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1506,7 +1501,7 @@ BOOL IsFieldNull(void* pv);
 > [!NOTE]
 >  파생 하지 않고도 동적 레코드 바인딩을 사용 중인 경우 `CDaoRecordset`을 사용 해야 **VT_NULL** 예제에서와 같이 합니다.  
   
-##  <a name="isfieldnullable"></a>CDaoRecordset::IsFieldNullable  
+##  <a name="isfieldnullable"></a>  CDaoRecordset::IsFieldNullable  
  이 멤버 함수는 지정 된 필드 데이터 멤버 "null"이 허용 되는지 확인 하려면 (설정 될 수 있습니다; Null 값으로 호출 C + + **NULL** Null 이며 데이터베이스 용어에서 의미 같지는 않습니다 "가치가 없음").  
   
 ```  
@@ -1523,7 +1518,7 @@ BOOL IsFieldNullable(void* pv);
 ### <a name="remarks"></a>설명  
  Null이 될 수 없는 필드 값이 있어야 합니다. 데이터 소스를 추가 또는 업데이트를 거부 이러한 필드를 추가 하거나 레코드를 업데이트할 때 Null로 설정 하려고 하면 및 **업데이트** 예외가 throw 됩니다. 호출 하면 예외가 발생 **업데이트**호출할 때가 아니라, `SetFieldNull`합니다.  
   
-##  <a name="isopen"></a>CDaoRecordset::IsOpen  
+##  <a name="isopen"></a>  CDaoRecordset::IsOpen  
  레코드 집합 열기 인지 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1535,7 +1530,7 @@ BOOL IsOpen() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="m_bcheckcachefordirtyfields"></a>Cdaorecordset:: M_bcheckcachefordirtyfields  
+##  <a name="m_bcheckcachefordirtyfields"></a>  Cdaorecordset:: M_bcheckcachefordirtyfields  
  여부 캐시 된 필드는 자동으로 표시 커밋되지 않음 (변경) 나타내는 플래그를 포함 및 Null입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1543,7 +1538,7 @@ BOOL IsOpen() const;
   
  이 데이터 멤버를 호출 하기 전에 설정 **열려**합니다. 이 메커니즘은 주로 사용 하기 쉬운 됩니다. 성능 변경 내용을 적용할 때 이중 버퍼링 필드의 때문에 느려질 수 있습니다.  
   
-##  <a name="m_nfields"></a>CDaoRecordset::m_nFields  
+##  <a name="m_nfields"></a>  CDaoRecordset::m_nFields  
  레코드 집합 클래스의 필드 데이터 멤버의 수와 데이터 소스에서 레코드 집합에서 선택한 열 수가 포함 되어 있습니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1556,7 +1551,7 @@ BOOL IsOpen() const;
   
  동적으로 여 통해의 열을 바인딩할 수 `CDaoRecordset::GetFieldValue` 및 `CDaoRecordset::SetFieldValue`합니다. 이렇게 하면 불필요의 수를 증가 `m_nFields` 의 호출 DFX 함수의 수를 반영 하도록 프로그램 `DoFieldExchange` 멤버 함수입니다.  
   
-##  <a name="m_nparams"></a>CDaoRecordset::m_nParams  
+##  <a name="m_nparams"></a>  CDaoRecordset::m_nParams  
  레코드 집합 클래스의 매개 변수 데이터 멤버의 개수가-레코드 집합의 쿼리와 함께 전달 되는 매개 변수 수입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1569,7 +1564,7 @@ BOOL IsOpen() const;
   
  관련된 정보에 대 한 DAO 도움말의 "매개 변수 개체" 항목을 참조 합니다.  
   
-##  <a name="m_pdaorecordset"></a>CDaoRecordset::m_pDAORecordset  
+##  <a name="m_pdaorecordset"></a>  CDaoRecordset::m_pDAORecordset  
  DAO 레코드 집합 개체 내부에 대 한 OLE 인터페이스에 대 한 포인터는 `CDaoRecordset` 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1577,7 +1572,7 @@ BOOL IsOpen() const;
   
  관련된 정보에 대 한 DAO 도움말의 "Recordset 개체" 항목을 참조 합니다.  
   
-##  <a name="m_pdatabase"></a>CDaoRecordset::m_pDatabase  
+##  <a name="m_pdatabase"></a>  CDaoRecordset::m_pDatabase  
  에 대 한 포인터는 `CDaoDatabase` 레코드 집합을 데이터 원본에 연결 되어 있는 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1587,7 +1582,7 @@ BOOL IsOpen() const;
   
  관련된 정보에 대 한 DAO 도움말의 "데이터베이스 개체가" 항목을 참조 합니다.  
   
-##  <a name="m_strfilter"></a>CDaoRecordset::m_strFilter  
+##  <a name="m_strfilter"></a>  CDaoRecordset::m_strFilter  
  생성 하는 데 사용 되는 문자열을 포함 된 **여기서** SQL 문의 절.  
   
 ### <a name="remarks"></a>설명  
@@ -1597,7 +1592,7 @@ BOOL IsOpen() const;
   
  관련된 정보에 대 한 DAO 도움말의 "필터 Property" 항목을 참조 합니다.  
   
-##  <a name="m_strsort"></a>CDaoRecordset::m_strSort  
+##  <a name="m_strsort"></a>  CDaoRecordset::m_strSort  
  포함 하는 문자열을 포함 된 **ORDERBY** 예약어 없이 SQL 문의 절 **ORDERBY**합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1609,7 +1604,7 @@ BOOL IsOpen() const;
   
  관련된 정보에 대 한 "Sort 속성" DAO 도움말의 항목을 참조 합니다.  
   
-##  <a name="move"></a>CDaoRecordset::Move  
+##  <a name="move"></a>  CDaoRecordset::Move  
  레코드 집합을 배치 하려면이 함수를 호출 `lRows` 현재 레코드에서 레코드입니다.  
   
 ```  
@@ -1621,7 +1616,7 @@ virtual void Move(long lRows);
  앞으로 또는 뒤로 이동 하는 레코드의 수입니다. 양수 값을 레코드 집합의 끝 부분으로 앞으로 이동 합니다. 음수 값 시작 부분을 향해 뒤로 이동합니다.  
   
 ### <a name="remarks"></a>설명  
- 앞으로 또는 뒤로 이동할 수 있습니다. `Move( 1 )`에 해당 `MoveNext`, 및 `Move( -1 )` 같습니다 `MovePrev`합니다.  
+ 앞으로 또는 뒤로 이동할 수 있습니다. `Move( 1 )` 에 해당 `MoveNext`, 및 `Move( -1 )` 같습니다 `MovePrev`합니다.  
   
 > [!CAUTION]
 >  중 하나를 호출는 **이동** 함수 레코드 집합에 레코드가 없는 경우 예외를 throw 합니다. 일반적으로 모두 호출 `IsBOF` 및 `IsEOF` 레코드 집합에 레코드가 있는지 확인 하기 위해 이동 작업이 하기 전에. 호출한 후 **열려** 또는 **Requery**, 호출 `IsBOF` 또는 `IsEOF`합니다.  
@@ -1638,7 +1633,7 @@ virtual void Move(long lRows);
   
  관련된 정보에 대 한 "Move 메서드" 항목을 참조 하 고 "MoveFirst, MoveLast, MoveNext, MovePrevious 메서드" DAO 도움말의 합니다.  
   
-##  <a name="movefirst"></a>CDaoRecordset::MoveFirst  
+##  <a name="movefirst"></a>  CDaoRecordset::MoveFirst  
  (있는 경우) 레코드 집합의 첫 번째 레코드를 확인 하려면이 함수를 호출 하면 현재 레코드입니다.  
   
 ```  
@@ -1666,7 +1661,7 @@ void MoveFirst();
   
  관련된 정보에 대 한 "Move 메서드" 항목을 참조 하 고 "MoveFirst, MoveLast, MoveNext, MovePrevious 메서드" DAO 도움말의 합니다.  
   
-##  <a name="movelast"></a>CDaoRecordset::MoveLast  
+##  <a name="movelast"></a>  CDaoRecordset::MoveLast  
  현재 레코드가 레코드 집합의 마지막 레코드 (해당 되는 경우)를 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -1691,7 +1686,7 @@ void MoveLast();
   
  관련된 정보에 대 한 "Move 메서드" 항목을 참조 하 고 "MoveFirst, MoveLast, MoveNext, MovePrevious 메서드" DAO 도움말의 합니다.  
   
-##  <a name="movenext"></a>CDaoRecordset::MoveNext  
+##  <a name="movenext"></a>  CDaoRecordset::MoveNext  
  현재 레코드가 레코드 집합의 다음 레코드를 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -1715,7 +1710,7 @@ void MoveNext();
   
  관련된 정보에 대 한 "Move 메서드" 항목을 참조 하 고 "MoveFirst, MoveLast, MoveNext, MovePrevious 메서드" DAO 도움말의 합니다.  
   
-##  <a name="moveprev"></a>CDaoRecordset::MovePrev  
+##  <a name="moveprev"></a>  CDaoRecordset::MovePrev  
  레코드 집합의 현재 레코드의 이전 레코드를 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -1741,7 +1736,7 @@ void MovePrev();
   
  관련된 정보에 대 한 "Move 메서드" 항목을 참조 하 고 "MoveFirst, MoveLast, MoveNext, MovePrevious 메서드" DAO 도움말의 합니다.  
   
-##  <a name="open"></a>Cdaorecordset:: Open  
+##  <a name="open"></a>  Cdaorecordset:: Open  
  레코드 집합에 대 한 레코드를 검색 하려면이 멤버 함수를 호출 해야 합니다.  
   
 ```  
@@ -1838,7 +1833,7 @@ virtual void Open(
   
  첫 번째 버전에 대 한 **열려** 를 사용 하는 `lpszSQL` 매개 변수를 레코드는 다음 표에 표시 된 기준에 따라 선택된 합니다.  
   
-|`lpszSQL` 매개 변수의 값|선택한 레코드에 따라 다릅니다.|예|  
+|`lpszSQL` 매개 변수의 값|선택한 레코드에 따라 다릅니다.|예제|  
 |--------------------------------------|----------------------------------------|-------------|  
 |**NULL**|반환한 문자열 `GetDefaultSQL`합니다.||  
 |하나 이상의 테이블 정의 및/또는 쿼리 정의 이름을 포함 하는 쉼표로 구분 된 목록입니다.|모든 열에 표시 된 `DoFieldExchange`합니다.|`"Customer"`|  
@@ -1863,7 +1858,7 @@ virtual void Open(
   
  관련된 정보에 대 한 DAO 도움말의 "OpenRecordset Method" 항목을 참조 합니다.  
   
-##  <a name="requery"></a>CDaoRecordset::Requery  
+##  <a name="requery"></a>  CDaoRecordset::Requery  
  레코드 집합 (새로 고침)를 다시 작성 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -1877,7 +1872,7 @@ virtual void Requery();
   
  다이너셋 또는 스냅숏으로 대 한 호출 **Requery** 매개 변수 값을 사용 하 여 레코드 집합 다시 작성 하려면 언제 든 지 합니다. 설정 하 여 새 필터 또는 정렬 설정 [m_strFilter](#m_strfilter) 및 [m_strSort](#m_strsort) 호출 하기 전에 **Requery**합니다. 새 값을 호출 하기 전에 매개 변수 데이터 멤버에 할당 하 여 새 매개 변수를 설정 **Requery**합니다.  
   
- 레코드 집합 다시 시도가 실패 하면 레코드 집합 닫혀 있습니다. 호출 하기 전에 **Requery**를 호출 하 여 레코드 집합 다시 쿼리되어 수 있는지 여부를 확인할 수 있습니다는 [CanRestart](#canrestart) 멤버 함수입니다. `CanRestart`에서는 프로시저를 **Requery** 성공 합니다.  
+ 레코드 집합 다시 시도가 실패 하면 레코드 집합 닫혀 있습니다. 호출 하기 전에 **Requery**를 호출 하 여 레코드 집합 다시 쿼리되어 수 있는지 여부를 확인할 수 있습니다는 [CanRestart](#canrestart) 멤버 함수입니다. `CanRestart` 에서는 프로시저를 **Requery** 성공 합니다.  
   
 > [!CAUTION]
 >  호출 **Requery** 호출한 후에 **열려**합니다.  
@@ -1891,7 +1886,7 @@ virtual void Requery();
   
  관련된 정보에 대 한 DAO 도움말의 "Requery 메서드" 항목을 참조 합니다.  
   
-##  <a name="seek"></a>CDaoRecordset::Seek  
+##  <a name="seek"></a>  CDaoRecordset::Seek  
  이 현재 지정된 된 조건을 인덱싱하고 레코드를 현재 레코드로 다음 사항을 충족 하는 인덱싱된 테이블 형식 레코드 집합 개체에서 레코드를 찾을 수 함수를 호출 합니다.  
   
 ```  
@@ -1936,11 +1931,11 @@ BOOL Seek(
 ### <a name="remarks"></a>설명  
  두 번째 (배열) 버전을 사용 하 여 `Seek` 4 개의 필드의 인덱스 또는 더 처리할 수 있습니다.  
   
- `Seek`테이블 형식의 레코드 집합에 대 한 검색 하는 고성능 인덱스를 설정 합니다. 호출 하 여 현재 인덱스를 설정 해야 `SetCurrentIndex` 호출 하기 전에 `Seek`합니다. 인덱스가 고유 하지 않은 키 필드 또는 필드를 식별 하는 경우 `Seek` 조건을 충족 하는 첫 번째 레코드를 찾습니다. 인덱스를 설정 하지 않으면 예외가 throw 됩니다.  
+ `Seek` 테이블 형식의 레코드 집합에 대 한 검색 하는 고성능 인덱스를 설정 합니다. 호출 하 여 현재 인덱스를 설정 해야 `SetCurrentIndex` 호출 하기 전에 `Seek`합니다. 인덱스가 고유 하지 않은 키 필드 또는 필드를 식별 하는 경우 `Seek` 조건을 충족 하는 첫 번째 레코드를 찾습니다. 인덱스를 설정 하지 않으면 예외가 throw 됩니다.  
   
  유니코드 레코드 집합을 만들지 않는 경우, `COleVariant` 개체 명시적으로 선언 해야 ANSI 합니다. 사용 하 여이 작업을 수행할 수 있습니다는 [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** 형태의 생성자 와 `vtSrc` 로 설정 `VT_BSTRT` (ANSI) 또는 사용 하 여는 **COleVariant** 함수 [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** 와 `vtSrc` 로 설정 `VT_BSTRT`합니다.  
   
- 호출 하는 경우 `Seek`, 하나 이상의 키 값과 비교 연산자를 전달 하면 ("<","\<=", "=" "> =", 또는 ">"). `Seek`지정 된 키 필드를 통해 검색 하 고 첫 번째 레코드에 지정 된 조건에 맞는 `lpszComparison` 및 `pKey1`합니다. 한 번 발견 `Seek` 0이 아니면을 반환 하며 현재 해당 레코드를 만듭니다. 경우 `Seek` 을 일치 하는 항목을 찾지 못하는 `Seek` , 0을 반환 하 고 현재 레코드 정의 되지 않습니다. 직접 DAO를 사용 하 여, 명시적으로 NoMatch 속성이 검사 해야 합니다.  
+ 호출 하는 경우 `Seek`, 하나 이상의 키 값과 비교 연산자를 전달 하면 ("<","\<=", "=" "> =", 또는 ">"). `Seek` 지정 된 키 필드를 통해 검색 하 고 첫 번째 레코드에 지정 된 조건에 맞는 `lpszComparison` 및 `pKey1`합니다. 한 번 발견 `Seek` 0이 아니면을 반환 하며 현재 해당 레코드를 만듭니다. 경우 `Seek` 을 일치 하는 항목을 찾지 못하는 `Seek` , 0을 반환 하 고 현재 레코드 정의 되지 않습니다. 직접 DAO를 사용 하 여, 명시적으로 NoMatch 속성이 검사 해야 합니다.  
   
  경우 `lpszComparison` 는 "=" "> =", 또는 ">", `Seek` 인덱스의 시작 부분에서 시작 합니다. 경우 `lpszComparison` 은 "<" 또는 "< =", `Seek` 인덱스의 끝에서 시작 하 고 중복 인덱스 항목 끝에는 없는 경우 뒤로 검색 합니다. 이 경우 `Seek` 항목 인덱스의 끝에 중복 인덱스 항목 중에서 임의의 항목부터 시작 합니다.  
   
@@ -1952,7 +1947,7 @@ BOOL Seek(
   
  관련된 정보에 대 한 DAO 도움말의 "방법 검색" 항목을 참조 합니다.  
   
-##  <a name="setabsoluteposition"></a>CDaoRecordset::SetAbsolutePosition  
+##  <a name="setabsoluteposition"></a>  CDaoRecordset::SetAbsolutePosition  
  레코드 집합 개체의 현재 레코드의 상대적인 레코드 번호를 설정합니다.  
   
 ```  
@@ -1978,7 +1973,7 @@ void SetAbsolutePosition(long lPosition);
   
  관련된 정보에 대 한 DAO 도움말의 "AbsolutePosition Property" 항목을 참조 합니다.  
   
-##  <a name="setbookmark"></a>CDaoRecordset::SetBookmark  
+##  <a name="setbookmark"></a>  CDaoRecordset::SetBookmark  
  지정된 된 책갈피를 포함 하는 레코드를 레코드 집합을 배치 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -1999,7 +1994,7 @@ void SetBookmark(COleVariant varBookmark);
   
  관련된 정보에 대 한 항목을 참조 "책갈피" 속성과 책갈피를 설정할 속성을 "DAO 도움말의 합니다.  
   
-##  <a name="setcachesize"></a>CDaoRecordset::SetCacheSize  
+##  <a name="setcachesize"></a>  CDaoRecordset::SetCacheSize  
  캐시할 레코드의 수를 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -2017,7 +2012,7 @@ void SetCacheSize(long lSize);
   
  관련된 내용은 DAO 도움말의 "CacheSize CacheStart 속성" 항목을 참조 합니다.  
   
-##  <a name="setcachestart"></a>CDaoRecordset::SetCacheStart  
+##  <a name="setcachestart"></a>  CDaoRecordset::SetCacheStart  
  캐시할 레코드 집합의 첫 번째 레코드의 책갈피를 지정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -2041,7 +2036,7 @@ void SetCacheStart(COleVariant varBookmark);
   
  관련된 정보에 대 한 항목을 참조 CacheSize, CacheStart 속성 "DAO 도움말의 합니다.  
   
-##  <a name="setcurrentindex"></a>CDaoRecordset::SetCurrentIndex  
+##  <a name="setcurrentindex"></a>  CDaoRecordset::SetCurrentIndex  
  테이블 형식 레코드 집합에 인덱스를 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -2061,7 +2056,7 @@ void SetCurrentIndex(LPCTSTR lpszIndex);
   
  관련된 정보 항목 "Index 개체" 및 "현재 인덱스" DAO 도움말의 정의 참조 하십시오.  
   
-##  <a name="setfielddirty"></a>CDaoRecordset::SetFieldDirty  
+##  <a name="setfielddirty"></a>  CDaoRecordset::SetFieldDirty  
  변경 되거나 변경 되지 않은 서 레코드 집합의 필드 데이터 멤버 플래그를 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -2099,9 +2094,9 @@ void SetFieldDirty(
   
  즉, 설정할 수 없습니다. 모든 **param** 필드를 **NULL**있습니다, **outputColumn** 필드입니다.  
   
- `SetFieldDirty`이 통해 구현 `DoFieldExchange`합니다.  
+ `SetFieldDirty` 이 통해 구현 `DoFieldExchange`합니다.  
   
-##  <a name="setfieldnull"></a>CDaoRecordset::SetFieldNull  
+##  <a name="setfieldnull"></a>  CDaoRecordset::SetFieldNull  
  Null (특히 값 예:) 또는 Null이 아닌 레코드 집합의 필드 데이터 멤버 플래그를 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -2118,7 +2113,7 @@ void SetFieldNull(
  필드 데이터 멤버 (Null) 값이 없는 것으로 플래그가 지정 되어야 하는 경우에 0이 아닙니다. 필드 데이터 멤버는 Null이 아닌으로 플래그를 설정 하는 경우 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- `SetFieldNull`에 바인딩된 필드에 사용 되는 `DoFieldExchange` 메커니즘입니다.  
+ `SetFieldNull` 에 바인딩된 필드에 사용 되는 `DoFieldExchange` 메커니즘입니다.  
   
  레코드 집합에 새 레코드를 추가 하는 경우 모든 필드 데이터 멤버 처음 Null 값으로 설정 되며 "더티" (변경) 것으로 플래그가 지정 합니다. 데이터 원본에서 레코드를 검색 하는 경우 열이 이미 값 또는 null입니다. 필드가 Null 적합 하지 않은 경우는 [CDaoException](../../mfc/reference/cdaoexception-class.md) throw 됩니다.  
   
@@ -2137,7 +2132,7 @@ void SetFieldNull(
   
  만 설정 됩니다 **outputColumn** 필드를 **NULL**; **param** 필드에 영향을 받지 않습니다.  
   
-##  <a name="setfieldvalue"></a>CDaoRecordset::SetFieldValue  
+##  <a name="setfieldvalue"></a>  CDaoRecordset::SetFieldValue  
  서 수 위치 별로 또는 문자열의 값을 변경 하 여 필드의 값을 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -2181,7 +2176,7 @@ void SetFieldValue(
   
  관련된 정보에 대 한 "Field 개체"과 "값 속성" DAO 도움말의 항목을 참조 합니다.  
   
-##  <a name="setfieldvaluenull"></a>CDaoRecordset::SetFieldValueNull  
+##  <a name="setfieldvaluenull"></a>  CDaoRecordset::SetFieldValueNull  
  필드를 Null 값을 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -2201,7 +2196,7 @@ void SetFieldValueNull(LPCTSTR lpszName);
   
  관련된 정보에 대 한 "Field 개체"과 "값 속성" DAO 도움말의 항목을 참조 합니다.  
   
-##  <a name="setlockingmode"></a>CDaoRecordset::SetLockingMode  
+##  <a name="setlockingmode"></a>  CDaoRecordset::SetLockingMode  
  레코드 집합에 대 한 잠금 유형을 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -2223,7 +2218,7 @@ void SetLockingMode(BOOL bPessimistic);
   
  ODBC 데이터 소스를 사용할 때는 잠금 모드 낙관적 항상입니다.  
   
-##  <a name="setparamvalue"></a>CDaoRecordset::SetParamValue  
+##  <a name="setparamvalue"></a>  CDaoRecordset::SetParamValue  
  레코드 집합의 실행 시 매개 변수 값을 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -2252,7 +2247,7 @@ virtual void SetParamValue(
   
  으로 설정 하려면 값을 지정 된 `COleVariant` 개체입니다. 원하는 값과의 형식을 설정 하는 방법에 대 한 정보에 대 한 프로그램 `COleVariant` 개체 클래스를 참조 하십시오. [COleVariant](../../mfc/reference/colevariant-class.md)합니다. 유니코드 레코드 집합을 만들지 않는 경우, `COleVariant` 개체가 명시적으로 선언 해야 ANSI 합니다. 사용 하 여이 작업을 수행할 수 있습니다는 [COleVariant::COleVariant](../../mfc/reference/colevariant-class.md#colevariant)**(** `lpszSrc` **,** `vtSrc` **)** 형태의 생성자 와 `vtSrc` 로 설정 `VT_BSTRT` (ANSI) 또는 사용 하 여는 **COleVariant** 함수 [SetString](../../mfc/reference/colevariant-class.md#setstring)**(** `lpszSrc` **,** `vtSrc` **)** 와 `vtSrc` 로 설정 `VT_BSTRT`합니다.  
   
-##  <a name="setparamvaluenull"></a>CDaoRecordset::SetParamValueNull  
+##  <a name="setparamvaluenull"></a>  CDaoRecordset::SetParamValueNull  
  Null 값으로 매개 변수를 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -2270,7 +2265,7 @@ void SetParamValueNull(LPCTSTR lpszName);
 ### <a name="remarks"></a>설명  
  C + + **NULL** Null 이며 데이터베이스 용어에서 의미 같지는 않습니다 "가치가 없습니다."  
   
-##  <a name="setpercentposition"></a>CDaoRecordset::SetPercentPosition  
+##  <a name="setpercentposition"></a>  CDaoRecordset::SetPercentPosition  
  레코드 집합에 있는 레코드의 백분율을 기반으로 하는 레코드 집합 개체의 현재 레코드의 대략적인 위치를 변경 하는 값을 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -2291,7 +2286,7 @@ void SetPercentPosition(float fPosition);
   
  관련된 정보에 대 한 DAO 도움말의 "PercentPosition Property" 항목을 참조 합니다.  
   
-##  <a name="update"></a>CDaoRecordset::Update  
+##  <a name="update"></a>  CDaoRecordset::Update  
  이 멤버 함수를 호출한 후 호출 된 `AddNew` 또는 **편집** 멤버 함수입니다.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "Catch 블록 평가 (c + +) 하는 방법 | Microsoft Docs"
-ms.custom: 
+title: Catch 블록 평가 (c + +) 하는 방법 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - exception handling, catching and deleting exceptions
 - types [C++], exception handling
 ms.assetid: 202dbf07-8ace-4b3b-b3ae-4b45c275e0b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 744f75f86fd7d3e2ca2a2545a7914f923c4454b7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6343abec7e80bcbc47595856e6fd71a3e204ed54
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Catch 블록 평가 방법 (C++)
 일반적으로 std::exception에서 파생되는 형식을 throw할 것을 권장하지만 C++를 사용하면 모든 형식의 예외를 throw할 수 있습니다. c + + 예외를 낼 수 있습니다는 **catch** 나 어떤 형식의 예외를 catch 할 수 있는 처리기는 throw 된 예외와 같은 형식을 지정 하는 처리기.  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
 -   throw된 포인터 개체가 표준 포인터 변환 규칙을 통해 변환될 수 있는 대상 포인터를 허용하는 처리기.  
   
- 순서를 **catch** 처리기 중요는 표시 하기 때문에 대 한 처리기는 주어진 **시도** 블록 표시 되는 순서 대로 검사 됩니다. 예를 들어 파생 클래스의 처리기 앞에 기본 클래스의 처리기를 배치하면 오류가 발생합니다. 일치 하는 **catch** 처리기가 발견, 처리기 검사 하지 않습니다. 따라서 줄임표 **catch** 처리기에 대 한 마지막 처리기 여야 합니다 해당 **시도** 블록입니다. 예:  
+ 순서를 **catch** 처리기 중요는 표시 하기 때문에 대 한 처리기는 주어진 **시도** 블록 표시 되는 순서 대로 검사 됩니다. 예를 들어 파생 클래스의 처리기 앞에 기본 클래스의 처리기를 배치하면 오류가 발생합니다. 일치 하는 **catch** 처리기가 발견, 처리기 검사 하지 않습니다. 따라서 줄임표 **catch** 처리기에 대 한 마지막 처리기 여야 합니다 해당 **시도** 블록입니다. 예를 들어:  
   
 ```  
 // ...  

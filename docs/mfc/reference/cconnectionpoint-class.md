@@ -1,12 +1,9 @@
 ---
-title: "CConnectionPoint 클래스 | Microsoft Docs"
-ms.custom: 
+title: CConnectionPoint 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CConnectionPoint
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CConnectionPoint [MFC], OnAdvise
 - CConnectionPoint [MFC], QuerySinkInterface
 ms.assetid: f0f23a1e-5e8c-41a9-aa6c-1a4793b28e8f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6a9e9fafc2bbee9959a939815a92c9bc63a650f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 22793706a67a3d301f88700ca6b43fb9c83e4dc3
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cconnectionpoint-class"></a>CConnectionPoint 클래스
 "연결점"이라고 하는 다른 OLE 개체와 통신하는 데 사용하는 특별한 형식의 인터페이스를 정의합니다.  
@@ -112,14 +107,14 @@ class CConnectionPoint : public CCmdTarget
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h  
   
-##  <a name="cconnectionpoint"></a>CConnectionPoint::CConnectionPoint  
+##  <a name="cconnectionpoint"></a>  CConnectionPoint::CConnectionPoint  
  `CConnectionPoint` 개체를 생성합니다.  
   
 ```  
 CConnectionPoint();
 ```  
   
-##  <a name="getconnections"></a>CConnectionPoint::GetConnections  
+##  <a name="getconnections"></a>  CConnectionPoint::GetConnections  
  연결 지점에 대 한 모든 활성 연결을 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -129,7 +124,7 @@ const CPtrArray* GetConnections();
 ### <a name="return-value"></a>반환 값  
  활성 연결 (싱크)의 배열에 대 한 포인터입니다. 배열에서 포인터의 일부가 NULL 수도 있습니다. 이 배열에 있는 각 NULL이 아닌 포인터는 캐스트 연산자를 사용 하 여 싱크 인터페이스에 대 한 포인터를 안전 하 게 변환할 수 있습니다.  
   
-##  <a name="getcontainer"></a>CConnectionPoint::GetContainer  
+##  <a name="getcontainer"></a>  CConnectionPoint::GetContainer  
  검색 하기 위해 프레임 워크에서 호출 된 **IConnectionPointContainer** 연결점에 대 한 합니다.  
   
 ```  
@@ -142,7 +137,7 @@ virtual LPCONNECTIONPOINTCONTAINER GetContainer();
 ### <a name="remarks"></a>설명  
  이 함수는 일반적으로 구현 하는 `BEGIN_CONNECTION_PART` 매크로입니다.  
   
-##  <a name="getiid"></a>CConnectionPoint::GetIID  
+##  <a name="getiid"></a>  CConnectionPoint::GetIID  
  연결 지점의 인터페이스 ID를 검색 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -155,7 +150,7 @@ virtual REFIID GetIID() = 0;
 ### <a name="remarks"></a>설명  
  이 연결점에 대 한 인터페이스 ID를 반환 하려면이 함수를 재정의 합니다.  
   
-##  <a name="getmaxconnections"></a>CConnectionPoint::GetMaxConnections  
+##  <a name="getmaxconnections"></a>  CConnectionPoint::GetMaxConnections  
  연결 지점에서 지원 되는 연결의 최대 수를 검색 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -170,7 +165,7 @@ virtual int GetMaxConnections();
   
  컨트롤에 연결할 수 있는 싱크의 수를 제한 하려는 경우이 함수를 재정의 합니다.  
   
-##  <a name="getnextconnection"></a>CConnectionPoint::GetNextConnection  
+##  <a name="getnextconnection"></a>  CConnectionPoint::GetNextConnection  
  에 있는 연결 요소에 대 한 포인터를 검색 `pos`합니다.  
   
 ```  
@@ -187,10 +182,10 @@ LPUNKNOWN GetNextConnection(POSITION& pos) const;
 ### <a name="remarks"></a>설명  
  이 함수는 연결 맵에 있는 모든 요소를 통해 반복 하는 데 가장 유용 합니다. 계산할 때,이 함수에서 반환 된 Null을 건너뜁니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCConnectionPoints#4](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]  
   
-##  <a name="getstartposition"></a>CConnectionPoint::GetStartPosition  
+##  <a name="getstartposition"></a>  CConnectionPoint::GetStartPosition  
  가 반환 하 여 맵 반복을 시작할는 **위치** 에 전달 될 수 있는 값을 [GetNextConnection](#getnextconnection) 호출 합니다.  
   
 ```  
@@ -203,10 +198,10 @@ POSITION GetStartPosition() const;
 ### <a name="remarks"></a>설명  
  반복 순서는 예측할 수 없으며; 따라서 "맵 내에서 요소 첫 번째" 특별 한 의미가 없습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CConnectionPoint::GetNextConnection](#getnextconnection)합니다.  
   
-##  <a name="onadvise"></a>CConnectionPoint::OnAdvise  
+##  <a name="onadvise"></a>  CConnectionPoint::OnAdvise  
  설정 되거나 끊어지면가 연결 될 때 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -222,7 +217,7 @@ virtual void OnAdvise(BOOL bAdvise);
   
  싱크에 연결 하거나 연결 지점에서 연결을 끊을 때 알림을 원하는 경우이 함수를 재정의 합니다.  
   
-##  <a name="querysinkinterface"></a>CConnectionPoint::QuerySinkInterface  
+##  <a name="querysinkinterface"></a>  CConnectionPoint::QuerySinkInterface  
  요청 된 싱크 인터페이스에 대 한 포인터를 검색합니다.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
-title: "포인터 형식과의 변환 | Microsoft Docs"
-ms.custom: 
+title: 포인터 형식과의 변환 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - type casts, involving pointers
 - void pointers
 ms.assetid: 3facc56f-06d3-4570-b1a2-7d4927b83086
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca8507d8890b1f1865ccefd6ce56a1b6f069d0f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81cfe434397d45ef42b2f8ee3ebceae61098e36f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>포인터 형식과의 변환
 값의 한 형식에 대한 포인터는 다른 형식에 대한 포인터로 변환될 수 있습니다. 그러나 저장소의 정렬 요구 사항 및 여러 형식의 크기 때문에 결과가 정의되지 않을 수 있습니다. 개체에 대한 포인터는 형식이 덜 엄격하거나 동일하게 엄격한 저장소 정렬을 요구하는 개체에 대한 포인터로 변환된 다음 다시 변경 없이 되돌릴 수 있습니다.  

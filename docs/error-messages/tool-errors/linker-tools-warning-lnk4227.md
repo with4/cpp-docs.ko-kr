@@ -1,12 +1,9 @@
 ---
-title: "링커 도구 경고 LNK4227 | Microsoft Docs"
-ms.custom: 
+title: 링커 도구 경고 LNK4227 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK4227
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK4227
 ms.assetid: 941a0414-9964-4e02-8487-f9daa42ef7f9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c603110d77b06fac59a725ba448f058bd4ad7a38
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4b56617ee355654dfbb198252ea37cdb344950cf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-warning-lnk4227"></a>링커 도구 경고 LNK4227  
   
@@ -43,7 +38,7 @@ LNK4227 다른 도구에서 발생 하는 문제를 보고에도 사용 됩니�
   
 경고를 해결 하려면 메타 데이터 문제를 수정 해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 참조 된 어셈블리가 참조 하는 어셈블리와 다르게 서명 LNK4227 생성 됩니다.  
   
@@ -76,7 +71,7 @@ ref class MyClass
 };  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 잘못 된 형식으로 버전 번호는 어셈블리 특성에 전달 될 때 LNK4227 생성할 수도 있습니다.  ' *' 표기법은 관련 된 `AssemblyVersionAttribute`합니다.  이 경고를 해결 하려면 사용 하 여만에 번호를 버전 특성 이외의 `AssemblyVersionAttribute`합니다.  
   

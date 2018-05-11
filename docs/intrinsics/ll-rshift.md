@@ -1,12 +1,9 @@
 ---
 title: __ll_rshift | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __ll_rshift_cpp
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - __ll_rshift intrinsic
 - ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e404375eefaf456ae22d2eca5cb66a13dd6a72ae
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 4e086339c41f789323cb4aab386a96dae27a0eeb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="llrshift"></a>__ll_rshift
 **Microsoft 전용**  
@@ -64,7 +59,7 @@ __int64 __ll_rshift(
 ## <a name="remarks"></a>설명  
  두 번째 매개 변수 64 x64 (x86 32) 보다 큰 경우 해당 개수 계산 된 것 (x86 32) 64로 나눈 나머지 이동할 비트 수를 결정 합니다. `ll` 접두사에는 작업 임을 나타냅니다. `long long`, 다른 이름을 `__int64`, 64 비트 부호 있는 정수 형식입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // ll_rshift.cpp  

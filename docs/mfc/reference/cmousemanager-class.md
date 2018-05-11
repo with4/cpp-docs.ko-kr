@@ -1,12 +1,9 @@
 ---
-title: "CMouseManager 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMouseManager 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMouseManager
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d019bedd63e7b7700ec91309c9ccaa0a41bf1ed
-ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
+ms.openlocfilehash: c58469086089dafe2447446723e06d6aa20a845c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmousemanager-class"></a>CMouseManager 클래스
 사용자가 다양 한 명령어를 특정 연결 하도록 허용 [CView](../../mfc/reference/cview-class.md) 사용자가 뷰 안에서 두 번 클릭할 때 개체입니다.  
@@ -122,7 +117,7 @@ BOOL AddView(
   
  사용자 지정 마우스 동작을 제공 하는 방법에 대 한 자세한 내용은 참조 [키보드 및 마우스 사용자 지정](../../mfc/keyboard-and-mouse-customization.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에 대 한 포인터를 검색 하는 방법을 보여 줍니다는 `CMouseManager` 사용 하 여 개체는 `CWinAppEx::GetMouseManager` 메서드 및 `AddView` 에서 메서드는 `CMouseManager` 클래스입니다. 이 코드 조각은의 일부인는 [상태 컬렉션 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_StateCollection#4](../../mfc/reference/codesnippet/cpp/cmousemanager-class_1.cpp)]  

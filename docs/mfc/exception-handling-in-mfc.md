@@ -1,13 +1,10 @@
 ---
-title: "MFC의 예외 처리 | Microsoft Docs"
-ms.custom: 
+title: MFC의 예외 처리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -42,17 +39,15 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 544130f27fb01d0d29652087351c8a5bbc5bd5c7
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 0792ddf067f6289d612a9adb0c8ffeaf8e554ed6
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exception-handling-in-mfc"></a>MFC의 예외 처리
 이 문서에서는 MFC에서 제공 되는 예외 처리 메커니즘에 설명 합니다. 두 가지 메커니즘을 사용할 수 있습니다.  
@@ -78,7 +73,7 @@ ms.lasthandoff: 01/03/2018
   
 -   [예외에 대 한 추가 정보](#_core_further_reading_about_exceptions)  
   
-##  <a name="_core_when_to_use_exceptions"></a>예외를 사용 하는 경우  
+##  <a name="_core_when_to_use_exceptions"></a> 예외를 사용 하는 경우  
  결과의 세 가지 범주는 프로그램 실행 시 함수를 호출 하는 경우에 발생할 수 있습니다: 정상적인 실행, 잘못 된 실행 또는 비정상 실행 합니다. 각 범주에 대 한 설명은 다음과 같습니다.  
   
 -   정상적인 실행  
@@ -95,7 +90,7 @@ ms.lasthandoff: 01/03/2018
   
  예외를 사용 하는 것은 비정상 실행 특히 적합 합니다.  
   
-##  <a name="_core_mfc_exception_support"></a>MFC 예외 지원  
+##  <a name="_core_mfc_exception_support"></a> MFC 예외 지원  
  사용할 것인지를 c + + 예외를 직접 사용 하거나 MFC 예외 매크로 사용 하 여 [CException 클래스](../mfc/reference/cexception-class.md) 또는 `CException`-응용 프로그램 또는 프레임 워크에 의해 throw 될 수 있는 개체를 파생 합니다.  
   
  다음 표에서 MFC에서 제공 하는 미리 정의 된 예외를 보여 줍니다.  
@@ -116,7 +111,7 @@ ms.lasthandoff: 01/03/2018
 > [!NOTE]
 >  MFC는 c + + 예외와 MFC 예외 매크로 모두 지원합니다. MFC에서 직접 지원 하지 Windows NT 구조적 예외 처리기 (SEH)에 설명 된 대로 [구조적 예외 처리](http://msdn.microsoft.com/library/windows/desktop/ms680657)합니다.  
   
-##  <a name="_core_further_reading_about_exceptions"></a>예외에 대 한 추가 정보  
+##  <a name="_core_further_reading_about_exceptions"></a> 예외에 대 한 추가 정보  
  MFC 라이브러리를 사용 하 여 예외 처리를 위해 다음 문서에서 설명 합니다.  
   
 -   [예외: 예외 Catch 및 삭제](../mfc/exceptions-catching-and-deleting-exceptions.md)  

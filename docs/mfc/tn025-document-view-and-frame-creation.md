@@ -1,13 +1,10 @@
 ---
-title: "TN025: 문서, 뷰 및 프레임 만들기 | Microsoft Docs"
-ms.custom: 
+title: 'TN025: 문서, 뷰 및 프레임 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.creation
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - documents [MFC], view and frame creation
 - TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ca395b19a36c42163b854c8997cce424352ead
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6a5fd603fdb45ac0f754858384df1455f559222e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn025-document-view-and-frame-creation"></a>TN025: 문서, 뷰 및 프레임 만들기
 > [!NOTE]
@@ -52,7 +47,7 @@ AddDocTemplate(pTemplate);
 ## <a name="doctemplates"></a>DocTemplates  
  `CDocTemplate`는 문서의 생성자 및 관리자입니다. 이 템플릿은 생성되는 문서를 소유합니다. 응용 프로그램에 아래에 설명된 리소스 기반 접근 방법이 사용될 경우 `CDocTemplate`에서 파생될 필요가 없습니다.  
   
- SDI 응용 프로그램의 경우 `CSingleDocTemplate` 클래스는 하나의 열린 문서를 추적합니다. MDI 응용 프로그램의 경우 `CMultiDocTemplate` 클래스는 해당 템플릿으로부터 생성된 모든 현재 열린 문서의 목록(`CPtrList`)을 유지합니다. `CDocTemplate::AddDocument` 및 `CDocTemplate::RemoveDocument`는 템플릿에서 문서를 추가 또는 제거하기 위한 가상 멤버 함수를 제공합니다. `CDocTemplate`friend가 **CDocument** 보호 된 설정할 수 있습니다 **cdocument:: M_pdoctemplate** 문서를 생성 한 doc 템플릿을 다시 가리키도록 후방 포인터입니다.  
+ SDI 응용 프로그램의 경우 `CSingleDocTemplate` 클래스는 하나의 열린 문서를 추적합니다. MDI 응용 프로그램의 경우 `CMultiDocTemplate` 클래스는 해당 템플릿으로부터 생성된 모든 현재 열린 문서의 목록(`CPtrList`)을 유지합니다. `CDocTemplate::AddDocument` 및 `CDocTemplate::RemoveDocument`는 템플릿에서 문서를 추가 또는 제거하기 위한 가상 멤버 함수를 제공합니다. `CDocTemplate` friend가 **CDocument** 보호 된 설정할 수 있습니다 **cdocument:: M_pdoctemplate** 문서를 생성 한 doc 템플릿을 다시 가리키도록 후방 포인터입니다.  
   
  `CWinApp`은 기본 `OnFileOpen` 구현을 처리하며, 이 구현은 다시 모든 doc 템플릿을 쿼리합니다. 이러한 구현에는 이미 열린 문서 조사 및 새 문서를 여는 데 사용할 형식 결정이 포함됩니다.  
   

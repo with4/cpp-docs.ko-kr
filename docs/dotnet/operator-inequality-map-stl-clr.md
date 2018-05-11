@@ -1,12 +1,9 @@
 ---
 title: operator! = (map) (STL/CLR) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::map::operator!=
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - operator!= member [STL/CLR]
 ms.assetid: 335c3b24-27ed-4cc8-b49d-02b83ec5fd0b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 705289c4ca29df6360fea7b0f8fee89f4a5a7c5e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 66c3ac75105f22269acbd23497363d3dd4b84abc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="operator-map-stlclr"></a>operator!= (map)(STL/CLR)
 같지 않음 비교를 나열 합니다.  
@@ -50,7 +45,7 @@ template<typename Key,
 ## <a name="remarks"></a>설명  
  연산자 함수 반환 `!(left == right)`합니다. 테스트를 사용 하는지 여부를 `left` 동일 정렬 되지 않은 `right` 두 개의 맵이 경우 요소 별로 비교 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_map_operator_ne.cpp   

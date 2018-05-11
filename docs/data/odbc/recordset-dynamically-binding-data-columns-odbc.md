@@ -1,13 +1,10 @@
 ---
-title: "레코드 집합: 데이터 열 (ODBC)을 동적으로 바인딩 | Microsoft Docs"
-ms.custom: 
+title: '레코드 집합: 데이터 열 (ODBC)을 동적으로 바인딩 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2e834820266e83d2c07bbe46f07e2ac48b0d18e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9fe71707de20ba02228039e5693cab9c9401d560
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>레코드 집합: 데이터 열 동적 바인딩(ODBC)
 MFC ODBC 클래스에이 항목에 적용 됩니다.  
@@ -42,7 +37,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
 > [!NOTE]
 >  이 항목에서 파생 된 개체에 적용 됩니다. `CRecordset` 에서 대량 행 페치 구현 되지 않았습니다. 대량 행 페치 사용 하는 경우에 일반적으로 설명 하는 기술은 권장 되지 않습니다. 대량 행 페치에 대 한 자세한 내용은 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
   
-##  <a name="_core_when_you_might_bind_columns_dynamically"></a>동적으로 열을 바인딩할 수 있습니다는 경우  
+##  <a name="_core_when_you_might_bind_columns_dynamically"></a> 동적으로 열을 바인딩할 수 있습니다는 경우  
  MFC 응용 프로그램 마법사 디자인 타임에 또는 [MFC ODBC 소비자 마법사](../../mfc/reference/adding-an-mfc-odbc-consumer.md) (에서 **클래스 추가**) 알려진된 테이블 및 데이터 원본에 열을 기반으로 하는 레코드 집합 클래스를 만듭니다. 데이터베이스를 디자인할 때 당시 응용 프로그램 실행 시 해당 테이블 및 열을 사용 하는 경우 달라질 수 있습니다. 또는 다른 사용자 수 추가 또는 삭제 테이블 또는 추가 하거나 응용 프로그램의 레코드 집합에 의존 하는 테이블에서 열을 삭제 합니다. 아마도 아닌 모든 데이터 액세스 응용 프로그램에 대 한 우려 하지만 사용자에 대 한 경우 어떻게 하면 문제를 처리할 수를 다시 디자인 하거나 다시 컴파일하지 데이터베이스 스키마의 변경 내용으로? 이 항목의 목적은 해당 질문에 대답 하는 것입니다.  
   
  이 항목에서는 동적으로 열 바인딩 수 있는 가장 일반적인 경우를 설명-실행 시 추가 열을 처리 하려는 알려진된 데이터베이스 스키마를 기반으로 레코드 집합 되기 시작 합니다. 항목을 추가 가정 하며 추가 열을 `CString` 제안 다른 데이터 형식을 관리할 수 있도록 매핑된다고 필드 데이터 멤버에는 가장 일반적인 경우입니다.  
@@ -57,12 +52,12 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
  이 항목에서 삭제 된 테이블 또는 열 같은 동적 바인딩 경우도 다루지 않습니다. 이러한 경우에 대 한 보다 직접 ODBC API 호출을 사용 해야 합니다. 내용은 ODBC SDK를 참조 하십시오. *Programmer's Reference* MSDN 라이브러리 CD에 있습니다.  
   
-##  <a name="_core_how_to_bind_columns_dynamically"></a>열을 동적으로 바인딩하는 방법  
+##  <a name="_core_how_to_bind_columns_dynamically"></a> 열을 동적으로 바인딩하는 방법  
  열을 동적으로 바인딩하 해야 알고 (또는을 결정할 수) 추가 열 이름입니다. 또한 추가 필드 데이터 멤버에 대 한 저장소를 할당, 이름과 형식을 지정 하며 추가 하는 열 수를 지정 합니다.  
   
  다음 논의 두 개의 레코드 집합에 언급 합니다. 첫 번째는 대상 테이블에서 레코드를 선택 하는 기본 레코드 집합입니다. 두 번째는 특별 한 열 레코드 집합 대상 테이블의 열에 대 한 정보를 가져오는 데 사용 합니다.  
   
-###  <a name="_core_the_general_process"></a>일반 프로세스  
+###  <a name="_core_the_general_process"></a> 일반 프로세스  
  가장 일반적인 수준에서 다음이 단계를 수행 합니다.  
   
 1.  기본 레코드 집합 개체를 생성 합니다.  
@@ -77,7 +72,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
      레코드 집합 레코드를 선택 하 고는 정적 열 (레코드 집합 필드 데이터 멤버에 매핑된) 및 (할당 하는 추가 저장소에 매핑된) 동적 열 모두에 바인딩할 레코드 필드 교환 (RFX)를 사용 합니다.  
   
-###  <a name="_core_adding_the_columns"></a>열 추가  
+###  <a name="_core_adding_the_columns"></a> 열 추가  
  동적으로 바인딩 추가 하려면 다음 단계를 런타임에 열.  
   
 1.  대상 테이블의 열은 런타임에 결정 합니다. 레코드 집합 클래스 수 있도록 설계 된 테이블에 추가 된 열 목록이 해당 정보를 추출 합니다.  
@@ -94,7 +89,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
      기본 레코드 집합의 루프를 추가 하는 한 가지 방법은 `DoFieldExchange` 목록의 각 열에 대 한 적절 한 RFX 함수를 호출 합니다. 새 열의 목록 반복 하는 함수입니다. 각 RFX 호출에서 열 이름 목록 및 해당 멤버의 결과 값 목록에서 저장 위치에서 열 이름을 전달 합니다.  
   
-###  <a name="_core_lists_of_columns"></a>열 목록  
+###  <a name="_core_lists_of_columns"></a> 열 목록  
  사용 하는 네 개의 목록은 다음 표에 표시 됩니다.  
   
  **현재 테이블 열 (그림에서 1 목록)** 데이터 소스의 테이블에 현재 있는 열의 목록입니다. 이 목록에 현재 레코드 집합의 바인딩된 열 목록이 일치 될 수 있습니다.  
@@ -108,7 +103,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
  **동적 열 값 (그림에서 4 목록)**  
  동적으로 바인딩할 열에서 값에 대 한 저장소를 포함 하는 목록을 검색 합니다. 이 목록의 요소에 열-에-Bind-동적으로 한 일에 해당합니다.  
   
-###  <a name="_core_building_your_lists"></a>목록 만들기  
+###  <a name="_core_building_your_lists"></a> 목록 만들기  
  염두에서 일반적인 전략, 세부 정보를 설정할 수 있습니다. 이 항목의 나머지 부분의 절차에 표시 된 목록을 작성 하는 방법을 보여 줍니다. [열 목록](#_core_lists_of_columns)합니다. 절차를 안내합니다.  
   
 -   [레코드 집합에 없는 열 이름 확인](#_core_determining_which_table_columns_are_not_in_your_recordset)합니다.  
@@ -117,7 +112,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
 -   [새 열에 대 한 호출 RFX를 동적으로 추가](#_core_adding_rfx_calls_to_bind_the_columns)합니다.  
   
-###  <a name="_core_determining_which_table_columns_are_not_in_your_recordset"></a>레코드 집합에 없는 테이블 열은 어떤 결정  
+###  <a name="_core_determining_which_table_columns_are_not_in_your_recordset"></a> 레코드 집합에 없는 테이블 열은 어떤 결정  
  이미 기본 레코드 집합의 바인딩된 열 목록이 포함 된 (바인딩-레코드 집합-열, 그림에서 값 2 목록에서와 같이) 목록을 작성 합니다. 주 레코드 집합에 없는 데이터 원본에 테이블에 있는 열 이름을 포함 하는 목록의 (열-에-Bind-동적으로 현재 테이블-열 및 바운드 레코드 집합 열에서 파생)을 작성 합니다.  
   
 ##### <a name="to-determine-the-names-of-columns-not-in-the-recordset-columns-to-bind-dynamically"></a>레코드 집합 (열-에-Bind-동적으로)에 없는 열 이름을 확인 하려면  
@@ -138,7 +133,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
      이 목록의 요소 역할을 새 레코드 집합의 필드 데이터 멤버 합니다. 동적 열이 바인딩되는 저장소 위치는입니다. 목록의 설명은 참조 하세요. [열 목록](#_core_lists_of_columns)합니다.  
   
-###  <a name="_core_providing_storage_for_the_new_columns"></a>새 열에 대 한 저장소 제공  
+###  <a name="_core_providing_storage_for_the_new_columns"></a> 새 열에 대 한 저장소 제공  
  다음으로 동적으로 바인딩할 열에 대 한 저장소 위치를 설정 합니다. 아이디어는 각 열의 값을 저장 하는 목록 요소를 제공 합니다. 이러한 저장소 위치와 일반적으로 바인딩된 열을 저장 하는 레코드 집합 멤버 변수와 유사 합니다.  
   
 ##### <a name="to-provide-dynamic-storage-for-new-columns-dynamic-column-values"></a>새 열 (동적 열 값)에 대 한 동적 저장소를 제공 하려면  
@@ -154,7 +149,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
 > [!TIP]
 >  새 열이 동일한 데이터 형식이 모두, 경우에 추가 병렬 목록을 열 목록에서 각 해당 요소의 형식을 정의 하는 항목을 포함 하는 것이 좋습니다. (값을 사용할 수 **AFX_RFX_BOOL**, **AFX_RFX_BYTE**, 등의 원하는이 경우가에 대 한 합니다. 이러한 상수는 AFXDB에 정의 됩니다. 8.) 열 데이터 형식을 표시 하는 방법에 따라 목록 형식을 선택 합니다.  
   
-###  <a name="_core_adding_rfx_calls_to_bind_the_columns"></a>열에 바인딩할 RFX 호출 추가  
+###  <a name="_core_adding_rfx_calls_to_bind_the_columns"></a> 열에 바인딩할 RFX 호출 추가  
  RFX에 새 열에 대 한 호출을 배치 하 여 발생 하도록 동적 바인딩에 대 한 마지막으로, 정렬 프로그램 `DoFieldExchange` 함수입니다.  
   
 ##### <a name="to-dynamically-add-rfx-calls-for-new-columns"></a>새 열에 대해 RFX 호출을 동적으로 추가 하려면  

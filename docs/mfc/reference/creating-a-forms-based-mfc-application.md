@@ -1,13 +1,10 @@
 ---
-title: "폼 기반 MFC 응용 프로그램 만들기 | Microsoft Docs"
-ms.custom: 
+title: 폼 기반 MFC 응용 프로그램 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfcforms.project
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - applications [MFC], forms-based
 - forms-based applications [MFC]
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e5d43412da21edce2633c17b5a38e4b1b787495
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a5ee588d7fe90e5bfc39aa8e4ab7a7499b62ad98
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>폼 기반 MFC 응용 프로그램 만들기
 양식은은 사용자에 액세스 하 고 데이터를 변경할 수 있도록 하는 컨트롤이 있는 대화 상자입니다. 사용자 양식 중에서 선택이 선택 하는 응용 프로그램을 개발할 수도 있습니다. 폼 기반 응용 프로그램을 클릭 하 여 사용자 액세스 폼을 수 있습니다는 일반적으로 **새로** 에서 **파일** 메뉴. 사용자에 대 한 액세스를 제공 하지 않는 대화 상자 기반 응용 프로그램은 **새로** 옵션에 **파일** 메뉴는 폼 기반 응용 프로그램으로 간주 됩니다.  

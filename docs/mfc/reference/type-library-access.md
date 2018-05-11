@@ -1,13 +1,10 @@
 ---
-title: "형식 라이브러리 액세스 | Microsoft Docs"
-ms.custom: 
+title: 형식 라이브러리 액세스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bbc5ceabe60d7ee15d85495bb1a431955a589849
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fb81a8aa7d9262992da29a2d93cf770fad754316
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="type-library-access"></a>형식 라이브러리 액세스
 형식 라이브러리는 다른 OLE 인식 응용 프로그램에 있는 OLE 컨트롤의 인터페이스를 노출합니다. 하나 이상의 인터페이스를 노출 해야 하는 경우 각 OLE 컨트롤 형식 라이브러리를 가져야 합니다.  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 |[DECLARE_OLETYPELIB](#declare_oletypelib)|선언 된 `GetTypeLib` (클래스 선언에 사용 해야 합니다) OLE 컨트롤의 멤버 함수입니다.|  
 |[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|구현 된 `GetTypeLib` (클래스 구현에 사용 해야 합니다) OLE 컨트롤의 멤버 함수입니다.|  
   
-##  <a name="declare_oletypelib"></a>DECLARE_OLETYPELIB  
+##  <a name="declare_oletypelib"></a>  DECLARE_OLETYPELIB  
  선언 된 `GetTypeLib` 컨트롤 클래스의 멤버 함수입니다.  
   
 ```   
@@ -56,7 +51,7 @@ DECLARE_OLETYPELIB(class_name)
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h  
 
-##  <a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB  
+##  <a name="implement_oletypelib"></a>  IMPLEMENT_OLETYPELIB  
  컨트롤의 구현 `GetTypeLib` 멤버 함수입니다.  
   
 ```   

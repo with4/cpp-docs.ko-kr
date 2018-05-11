@@ -1,13 +1,10 @@
 ---
 title: '방법: 관리 되지 않는 메모리에 개체 참조 유지 | Microsoft Docs'
-ms.custom: ''
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,23 +13,21 @@ helpviewer_keywords:
 - references, to objects in native functions
 - gcroot keyword [C++], object reference in native function
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: debda931ae121e109c4b1008054ace11a714f065
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: adff91c4cbceb61a7b6d8996b6f90e7350ae637d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>방법: 관리되지 않는 메모리에 개체 참조 유지
 래핑하는 gcroot.h를 사용할 수 있습니다 <xref:System.Runtime.InteropServices.GCHandle>관리 되지 않는 메모리에서 CLR 개체 참조를 유지 합니다. 사용할 수 있습니다 `GCHandle` 직접 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // hold_object_reference.cpp  
@@ -68,8 +63,8 @@ int main() {
 StringWrapper::x == ManagedString  
 ```  
   
-## <a name="example"></a>예  
- `GCHandle`관리 되지 않는 메모리에서 관리 되는 개체 참조를 유지 하는 수단을 제공 합니다.  사용 된 <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> 불투명 핸들 관리 되는 개체를 만드는 메서드를 및 <xref:System.Runtime.InteropServices.GCHandle.Free%2A> 분리 합니다. 또한는 <xref:System.Runtime.InteropServices.GCHandle.Target%2A> 메서드를 사용 하면 관리 코드에 대 한 핸들에서 다시 개체 참조를 가져올 수 있습니다.  
+## <a name="example"></a>예제  
+ `GCHandle` 관리 되지 않는 메모리에서 관리 되는 개체 참조를 유지 하는 수단을 제공 합니다.  사용 된 <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> 불투명 핸들 관리 되는 개체를 만드는 메서드를 및 <xref:System.Runtime.InteropServices.GCHandle.Free%2A> 분리 합니다. 또한는 <xref:System.Runtime.InteropServices.GCHandle.Target%2A> 메서드를 사용 하면 관리 코드에 대 한 핸들에서 다시 개체 참조를 가져올 수 있습니다.  
   
 ```  
 // hold_object_reference_2.cpp  

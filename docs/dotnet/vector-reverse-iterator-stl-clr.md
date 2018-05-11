@@ -1,12 +1,9 @@
 ---
 title: 'vector:: reverse_iterator (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::vector::reverse_iterator
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - reverse_iterator member [STL/CLR]
 ms.assetid: 0a90c5ee-a95f-4f71-a027-f1668000ccd4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 476cf4370e7f2a94f41b9186042b70b15df81a68
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e56c25735cd8f0fd7fdf374ce8edfa512d8b6f1a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vectorreverseiterator-stlclr"></a>vector::reverse_iterator(STL/CLR)
 제어되는 시퀀스에 대한 반대 반복기의 형식입니다.  
@@ -40,7 +35,7 @@ typedef T3 reverse_iterator;
 ## <a name="remarks"></a>설명  
  이 형식은 제어된 시퀀스에 대해 반대 반복기로 사용될 수 있는 지정되지 않은 `T3` 형식의 개체를 설명합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_vector_reverse_iterator.cpp   

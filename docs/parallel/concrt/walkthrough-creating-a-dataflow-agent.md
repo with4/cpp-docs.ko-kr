@@ -1,30 +1,25 @@
 ---
-title: "연습: 데이터 흐름 에이전트 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: 데이터 흐름 에이전트 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - creating dataflow agents [Concurrency Runtime]
 - dataflow agents, creating [Concurrency Runtime]
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f92dc200f29f5fd20c8dd1cc27508b9c7cdf4ce
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 33f7c7cf5e64d2ddf751bb97ee1b617d09df6af3
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>연습: 데이터 흐름 에이전트 만들기
 이 문서에서는 제어 흐름의 데이터 흐름을 기반으로 하는 에이전트 기반 응용 프로그램을 만드는 방법을 보여 줍니다.  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
   
  비동기 에이전트에는 제어 흐름 및 데이터 흐름 프로그래밍 모델 모두 지원 합니다. 제어 흐름 모델 적합 하지만 대부분의 경우에서 데이터 흐름 모델은 적합 한 경우도 예를 들어, 에이전트 데이터를 수신 하 고 해당 데이터의 페이로드를 기반으로 하는 동작을 수행 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 시작 하기 전에 다음 문서를 읽어 보십시오.  
   
 - [비동기 에이전트](../../parallel/concrt/asynchronous-agents.md)  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
 - [메시지 로깅 에이전트 만들기](#logging)  
   
-##  <a name="control-flow"></a>기본 제어 흐름 에이전트 만들기  
+##  <a name="control-flow"></a> 기본 제어 흐름 에이전트 만들기  
  예를 들어 다음을 정의 하는 `control_flow_agent` 클래스입니다. `control_flow_agent` 세 개의 메시지 버퍼에서 클래스 동작: 하나의 입력 버퍼와 출력 버퍼 두 개 있습니다. `run` 메서드는 루프에서 소스 메시지 버퍼에서 읽고 조건문 사용 하 여 프로그램 실행의 흐름. 에이전트 음수, 0이 아닌 값에 대 한 하나의 카운터를 증가 하 고, 0이 아닌 양수 값에 대 한 다른 카운터를 증가 합니다. 에이전트 센티널 값 0 받은 후 카운터 값에서 출력 메시지 버퍼에 보냅니다. `negatives` 및 `positives` 메서드를 사용 하면 응용 프로그램 에이전트에서 양수 및 음수 값의 개수를 읽을 수 있습니다.  
   
  [!code-cpp[concrt-dataflow-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_1.cpp)]  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="dataflow"></a>기본 데이터 흐름 에이전트 만들기  
+##  <a name="dataflow"></a> 기본 데이터 흐름 에이전트 만들기  
  이 섹션에서는 변환 하는 방법을 보여 줍니다.는 `control_flow_agent` 동일한 작업을 수행 하려면 데이터 흐름 모델을 사용 하는 클래스입니다.  
   
  데이터 흐름 에이전트는 특정 용도로 사용 되는 메시지 버퍼의 네트워크를 만들어 작동 합니다. 특정 메시지 블록 필터 함수를 사용 하 여를 수락 하거나 페이로드를 기준으로 메시지를 거부 합니다. 필터 함수 메시지 블록에 특정 값만 수신 되는지 확인 합니다.  
@@ -130,7 +125,7 @@ There are 499477 positive numbers.
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="logging"></a>메시지 로깅 에이전트 만들기  
+##  <a name="logging"></a> 메시지 로깅 에이전트 만들기  
  다음 예제와 `log_agent` 클래스와 유사한는 `dataflow_agent` 클래스입니다. `log_agent` 쓰기 파일 및 콘솔에 메시지를 기록 하는 비동기 로깅 에이전트 클래스를 구현 합니다. `log_agent` 클래스를 사용 하면 메시지를 정보, 경고 또는 오류를 분류 하는 응용 프로그램입니다. 또한 응용 프로그램을 로그 범주별 파일, 콘솔, 또는 둘 다에 기록 되는지 여부를 지정할 수 있습니다. 이 예제에서는 콘솔에 모든 파일에 로그 메시지 및 오류 메시지만 씁니다.  
   
  [!code-cpp[concrt-log-filter#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_8.cpp)]  

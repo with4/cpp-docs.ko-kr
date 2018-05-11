@@ -1,13 +1,10 @@
 ---
-title: "전역 상수 | Microsoft Docs"
-ms.custom: 
+title: 전역 상수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.constants
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - global constants
 ms.assetid: 778d86fd-3ca6-4d2b-b4c5-aee6dc1efe6b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 552ce3e1e1f535cf01f458af28c44aeb5cf8980b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d405e35f2f9bb2c403ad7775ce905b9af9f8e4a9
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="global-constants"></a>전역 상수
 Microsoft 런타임 라이브러리에는 라이브러리 루틴에서 사용하는 전역 상수에 대한 정의가 포함됩니다. 이러한 상수를 사용하려면 각 상수에 대한 설명에 표시된 대로 적절한 헤더 파일을 포함합니다. 다음 표에서는 전역 상수를 보여 줍니다.  

@@ -1,13 +1,10 @@
 ---
-title: "Windows 소켓: 차단 | Microsoft Docs"
-ms.custom: 
+title: 'Windows 소켓: 차단 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - sockets [MFC], behavior on different Windows platforms
 - blocking mode sockets
 ms.assetid: 10aca9b1-bfba-41a8-9c55-ea8082181e63
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4b54b78034037e9f3b015d7c1f67bb33771248c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 400114e557632c9a1dd11cc2f9ec5b3101eb8c37
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="windows-sockets-blocking"></a>Windows 소켓: 차단
 이 문서 및 두 개의 참조 문서에서는 Windows 소켓 프로그래밍의 몇 가지 문제를 설명합니다. 이 문서는 차단에 대해 설명합니다. 다른 문제는 문서에서 다루지: [Windows 소켓: 바이트 순서 지정](../mfc/windows-sockets-byte-ordering.md) 및 [Windows 소켓: 문자열 변환](../mfc/windows-sockets-converting-strings.md)합니다.  

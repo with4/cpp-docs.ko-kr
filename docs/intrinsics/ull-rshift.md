@@ -1,12 +1,9 @@
 ---
 title: __ull_rshift | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __ull_rshift
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - ull_rshift intrinsic
 - __ull_rshift intrinsic
 ms.assetid: b7ff5254-3540-4e6e-b57c-a6c4beb7dca2
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0193bad5b9184e3168c618b9bc4e3afc5e27abc
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: e5248792d04efca518fc425a144c692cd88cf8d1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ullrshift"></a>__ull_rshift
 **Microsoft 전용**  
@@ -63,7 +58,7 @@ unsigned __int64 __ull_rshift(
 ## <a name="remarks"></a>설명  
  두 번째 매개 변수 (x64 63) x86 31 보다 큰 경우 해당 번호는 32 (x64 64) 모듈로 이동할 비트 수를 결정 사용 합니다. `ull` 이름 나타냅니다 `unsigned long long (unsigned __int64)`합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // ull_rshift.cpp  

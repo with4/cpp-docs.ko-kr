@@ -1,12 +1,9 @@
 ---
-title: "CCtrlView 클래스 | Microsoft Docs"
-ms.custom: 
+title: CCtrlView 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCtrlView
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - CCtrlView [MFC], m_dwDefaultStyle
 - CCtrlView [MFC], m_strClass
 ms.assetid: ff488596-1e71-451f-8fec-b0831a7b44e0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 484abaf5344400e03b53038d2c137497c202345f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c3503f59096d3879f986b2a8c99bdb9823ef4e24
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cctrlview-class"></a>CCtrlView 클래스
 문서 뷰 아키텍처를 Windows 98 및 Windows NT 버전 3.51 이상에서 지원하는 공통의 컨트롤에 맞게 변경합니다.  
@@ -63,7 +58,7 @@ class CCtrlView : public CView
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[CCtrlView::m_dwDefaultStyle](#m_dwdefaultstyle)|뷰 클래스에 대 한 기본 스타일을 포함합니다.|  
 |[CCtrlView::m_strClass](#m_strclass)|뷰 클래스에 대 한 Windows 클래스 이름을 포함합니다.|  
@@ -85,7 +80,7 @@ class CCtrlView : public CView
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="cctrlview"></a>CCtrlView::CCtrlView  
+##  <a name="cctrlview"></a>  CCtrlView::CCtrlView  
  `CCtrlView` 개체를 생성합니다.  
   
 ```  
@@ -104,14 +99,14 @@ CCtrlView(
 ### <a name="remarks"></a>설명  
  새 프레임 창 개체를 만들거나 창이 분할 되어 때 프레임 워크에서는 생성자를 호출 합니다. 재정의 [cview:: Oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate) 문서를 연결한 후에 뷰를 초기화할 수 있습니다. 호출 [CWnd::Create](../../mfc/reference/cwnd-class.md#create) 또는 [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) Windows 개체를 만듭니다.  
   
-##  <a name="m_strclass"></a>CCtrlView::m_strClass  
+##  <a name="m_strclass"></a>  CCtrlView::m_strClass  
  뷰 클래스에 대 한 Windows 클래스 이름을 포함합니다.  
   
 ```  
 CString m_strClass;  
 ```  
   
-##  <a name="m_dwdefaultstyle"></a>CCtrlView::m_dwDefaultStyle  
+##  <a name="m_dwdefaultstyle"></a>  CCtrlView::m_dwDefaultStyle  
  뷰 클래스에 대 한 기본 스타일을 포함합니다.  
   
 ```  
@@ -121,7 +116,7 @@ DWORD m_dwDefaultStyle;
 ### <a name="remarks"></a>설명  
  이 스타일 창을 만들 때 적용 됩니다.  
   
-##  <a name="ondraw"></a>CCtrlView::OnDraw  
+##  <a name="ondraw"></a>  CCtrlView::OnDraw  
  내용을 그리기 위해 프레임 워크에서 호출 된 `CCtrlView` 지정된 된 디바이스 컨텍스트를 사용 하 여 개체입니다.  
   
 ```  
@@ -133,9 +128,9 @@ virtual void OnDraw(CDC* pDC);
  그리기 발생 하는 장치 컨텍스트에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
- `OnDraw`일반적으로 지정 된 화면 장치 컨텍스트를 전달 하는 화면 표시에 대 한 호출 `pDC`합니다.  
+ `OnDraw` 일반적으로 지정 된 화면 장치 컨텍스트를 전달 하는 화면 표시에 대 한 호출 `pDC`합니다.  
   
-##  <a name="precreatewindow"></a>CCtrlView::PreCreateWindow  
+##  <a name="precreatewindow"></a>  CCtrlView::PreCreateWindow  
  이 `CWnd` 개체에 연결된 Windows 창을 만들기 전에 호출됩니다.  
   
 ```  

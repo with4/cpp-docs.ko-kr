@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 컨트롤: 고급 항목 | Microsoft Docs"
-ms.custom: 
+title: 'MFC ActiveX 컨트롤: 고급 항목 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2205862a438099c08801556f511ebf3c5e93a277
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb451abc3aabe52d9aeffbc92f80df38f02e0b99
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX 컨트롤: 고급 항목
 이 문서에서는 ActiveX 컨트롤을 개발 하는 데 관련 된 고급 항목에 설명 합니다. 여기에는 다음이 포함됩니다.  
@@ -46,7 +41,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [런타임 시 표시 되는 대화 상자 컨트롤 액세스](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)  
   
-##  <a name="_core_using_database_classes_in_activex_controls"></a>ActiveX 컨트롤에 데이터베이스 클래스 사용  
+##  <a name="_core_using_database_classes_in_activex_controls"></a> ActiveX 컨트롤에 데이터베이스 클래스 사용  
  ActiveX 컨트롤 클래스는 클래스 라이브러리의 일부 이기 때문에 동일한 절차와 MFC 데이터베이스 클래스를 사용 하는 ActiveX 컨트롤을 개발 하는 표준 MFC 응용 프로그램에서 데이터베이스 클래스 사용에 대 한 규칙을 적용할 수 있습니다.  
   
  MFC 데이터베이스 클래스의 일반적인 개요를 참조 하십시오. [MFC 데이터베이스 클래스 (DAO 및 ODBC)](../data/mfc-database-classes-odbc-and-dao.md)합니다. 문서에서는 MFC ODBC 클래스 및 MFC DAO 클래스와 중 하나에 대 한 자세한 정보를 알려 줍니다.  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  Visual c + + 환경 및 마법사 (DAO 클래스에 포함 되어 있으며 계속 사용할 수 있습니다) 이지만 DAO을 지원 하지 않습니다. 사용 하는 것이 좋습니다 [OLE DB 템플릿](../data/oledb/ole-db-programming.md) 또는 [ODBC 및 MFC](../data/odbc/odbc-and-mfc.md) 새 프로젝트에 대 한 합니다. DAO는 기존 응용 프로그램 유지 관리만 사용할 수 있습니다.  
   
-##  <a name="_core_implementing_a_parameterized_property"></a>매개 변수가 있는 속성 구현  
+##  <a name="_core_implementing_a_parameterized_property"></a> 매개 변수가 있는 속성 구현  
  매개 변수가 있는 속성 (속성 배열 라고도 함)는 컨트롤의 단일 속성으로 같은 형식의 값 컬렉션을 노출 하기 위한 메서드입니다. 예를 들어, 배열 또는 사전 속성으로 노출 하는 매개 변수가 있는 속성을 사용할 수 있습니다. Visual Basic에서 이러한 속성은 배열 표기법을 사용 하 여 액세스 됩니다.  
   
  [!code-vb[NVC_MFC_AxVb#1](../mfc/codesnippet/visualbasic/mfc-activex-controls-advanced-topics_1.vb)]  
@@ -106,7 +101,7 @@ ms.lasthandoff: 12/21/2017
   
  유용 하 게 되려면이 속성에 대 한 유형의 컨트롤 클래스에 2 차원 배열 멤버 변수를 선언할 수 있습니다 **짧은**, 매개 변수가 있는 속성에 대 한 값을 저장 합니다. 다음 매개 변수를 나타내는 것 처럼 적절 한 행과 열에 저장 된 값을 반환 하는 Get 함수를 수정 하 고 행 및 열 매개 변수에서 참조 하는 값을 업데이트 하는 집합 함수를 수정할 수 없습니다.  
   
-##  <a name="_core_handling_errors_in_your_activex_control"></a>ActiveX 컨트롤에서 오류 처리  
+##  <a name="_core_handling_errors_in_your_activex_control"></a> ActiveX 컨트롤에서 오류 처리  
  컨트롤에서 오류 조건이 발생 한 경우 컨트롤 컨테이너에는 오류를 보고 해야 합니다. 오류가 발생 하는 상황에 따라 오류를 보고 하는 방법은 두 가지가 있습니다. 오류가 발생 한 경우는 속성 내에서 Get 또는 Set 함수를 호출 해야 컨트롤 OLE 자동화 메서드 구현 내에서 또는 [COleControl::ThrowError](../mfc/reference/colecontrol-class.md#throwerror), 오류가 발생 했음을 컨트롤 사용자에 게는 신호 합니다. 언제 든 지 오류가 발생 하는 경우 컨트롤 호출 해야 [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror)는 주식 오류 이벤트를 발생 시킵니다.  
   
  컨트롤 종류의 발생 한 오류를 나타내기는 오류 코드를 전달 해야 `ThrowError` 또는 `FireError`합니다. 오류 코드는 32 비트 값이 OLE 상태 코드입니다. 가능한 경우 오류 코드는 OLECTL에 정의 된 코드의 표준 집합에서 선택 합니다. H 헤더 파일입니다. 다음 표에서 이러한 코드를 요약 합니다.  
@@ -156,13 +151,13 @@ ms.lasthandoff: 12/21/2017
 |**CTL_E_SEARCHTEXTNOTFOUND**|검색 텍스트를 찾을 수 없습니다.|  
 |**CTL_E_REPLACEMENTSTOOLONG**|대체 텍스트가 너무 깁니다.|  
   
- 필요한 경우 사용 하 여는 **CUSTOM_CTL_SCODE** 표준 코드 중 하나에 의해 적용 되지 않는 조건에 대 한 사용자 지정 오류 코드를 정의 하는 매크로입니다. 이 매크로 대 한 매개 변수는 1000 사이의 정수 여야 합니다에서 32767 까지입니다. 예:  
+ 필요한 경우 사용 하 여는 **CUSTOM_CTL_SCODE** 표준 코드 중 하나에 의해 적용 되지 않는 조건에 대 한 사용자 지정 오류 코드를 정의 하는 매크로입니다. 이 매크로 대 한 매개 변수는 1000 사이의 정수 여야 합니다에서 32767 까지입니다. 예를 들어:  
   
  [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]  
   
  기존 VBX 컨트롤을 대체 하기 위해 ActiveX 컨트롤을 만드는 경우 VBX 컨트롤이 사용 하 여 오류 코드는 호환 되도록 같은 숫자 값으로는 ActiveX 컨트롤 오류 코드를 정의 합니다.  
   
-##  <a name="_core_handling_special_keys_in_your_control"></a>컨트롤의 특수 키 처리  
+##  <a name="_core_handling_special_keys_in_your_control"></a> 컨트롤의 특수 키 처리  
  경우에 따라 특정 키 입력 조합을 특별 한 방식 처리 하려면 수 있습니다. 삽입 여러 줄 텍스트에서 ENTER 키를 누르면 새 줄 box 컨트롤 또는 편집의 그룹 간에 이동할 때는 방향을 제어 하는 예를 들어 키 누름 ID입니다.  
   
  ActiveX 컨트롤의 기본 클래스가 경우 `COleControl`를 재정의할 수 있습니다 [cwnd:: Pretranslatemessage](../mfc/reference/cwnd-class.md#pretranslatemessage) 컨테이너를 처리 하기 전에 메시지를 처리 하도록 합니다. 이 기술을 사용 하는 경우 항상 반환 **TRUE** 의 재정의에서 메시지를 처리 하는 경우 `PreTranslateMessage`합니다.  
@@ -173,12 +168,12 @@ ms.lasthandoff: 12/21/2017
   
  ActiveX 컨트롤에 대 한 키보드 인터페이스 처리에 대 한 자세한 내용은 ActiveX SDK 설명서를 참조 합니다.  
   
-##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a>런타임 시 표시 되는 대화 상자 컨트롤 액세스  
+##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a> 런타임 시 표시 되는 대화 상자 컨트롤 액세스  
  사용자 인터페이스가 없는 없고 실행 시 표시 되지 않은 대화 상자 컨트롤을 만들 수 있습니다. ActiveX 컨트롤 런타임 시 면 보이지 않는 대화 상자를 사용 하 여 추가 하는 경우 [cwnd:: Getdlgitem](../mfc/reference/cwnd-class.md#getdlgitem) 컨트롤에 액세스 하려면 컨트롤 제대로 작동 하지 것입니다. 대신, 컨트롤을 나타내는 개체를 가져오는 다음 방법 중 하나를 사용 해야 있습니다.  
   
 -   멤버 변수 추가 마법사를 사용 하 여 선택 **제어 변수** 선택한 후 컨트롤의 id입니다. 멤버 변수 이름을 입력 하 고으로 컨트롤의 래퍼 클래스를 선택는 **컨트롤 형식**합니다.  
   
-     또는  
+     -또는-  
   
 -   대화 상자 항목으로 지역 변수 및 하위 클래스를 선언 합니다. 다음과 유사한 코드를 삽입 (`CMyCtrl` 는 래퍼 클래스 `IDC_MYCTRL1` 은 컨트롤의 ID):  
   

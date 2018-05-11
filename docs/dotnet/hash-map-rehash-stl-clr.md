@@ -2,11 +2,8 @@
 title: 'hash_map:: rehash (STL/CLR) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::hash_map::rehash
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - rehash member [STL/CLR]
 ms.assetid: e894157c-4e31-4fbf-8020-b90f236da3e7
-caps.latest.revision: 17
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 3156d5102c4afdf9ec987b8c35870ad46d735b88
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f3223da8a95511f8babadad3e99a46a112c2e74c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="hashmaprehash-stlclr"></a>hash_map::rehash(STL/CLR)
 해시 테이블을 다시 빌드합니다.  
@@ -40,7 +35,7 @@ void rehash();
 ## <a name="remarks"></a>설명  
  멤버 함수를 다시 작성 하는 해시 테이블 [hash_map:: load_factor (STL/CLR)](../dotnet/hash-map-load-factor-stl-clr.md) `() <=` [hash_map:: max_load_factor (STL/CLR)](../dotnet/hash-map-max-load-factor-stl-clr.md)합니다. 그렇지 않은 경우 삽입 후 필요에 따라만 해시 테이블의 크기가 늘어납니다. (자동으로 감소의 크기입니다.) 해시 테이블의 크기를 조정 하려면 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_hash_map_rehash.cpp   

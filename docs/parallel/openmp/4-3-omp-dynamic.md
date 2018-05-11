@@ -1,27 +1,22 @@
 ---
 title: 4.3 OMP_DYNAMIC | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: a15edefb-1f85-4f06-a427-beb3cfc4434f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 103067b28990854fb6522c19f4349a9607d65bab
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f376fe639d9bca58b6e2bd55fd081b88921a7342
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="43-ompdynamic"></a>4.3 OMP_DYNAMIC
 **OMP_DYNAMIC** 환경 변수 사용 하거나 동적인 조절을 명시적으로 사용 하거나는 를호출하여사용하지않도록설정하지않는한병렬영역의실행에사용할수있는스레드수의동적조정을사용하지않도록설정**omp_set_dynamic** 라이브러리 루틴입니다. 변수 값 이어야 합니다 **TRUE** 또는 **FALSE**합니다.  

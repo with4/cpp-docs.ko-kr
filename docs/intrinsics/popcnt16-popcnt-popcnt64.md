@@ -1,12 +1,9 @@
 ---
 title: __popcnt16, __popcnt, __popcnt64 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - __popcnt64
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce622f6283036dc3bde24f526da4c5256474ce00
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a639091bd7c5c263a3f09067858cd0fe4ac631cd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16, __popcnt, __popcnt64
 **Microsoft 전용**  
@@ -73,7 +68,7 @@ unsigned __int64 __popcnt64(
   
  에 대 한 하드웨어 지원을 확인 하는 `popcnt` 명령, 호출의 `__cpuid` 포함 된 내장 함수 `InfoType=0x00000001` 의 23 비트를 확인 하 고 `CPUInfo[2] (ECX)`합니다. 이 비트는 그렇지 않으면 명령이 지원 되 면 1과 0입니다. 하는 경우 코드를 실행 하면 사용 하 여이 내장 함수를 지원 하지 않는 하드웨어에는 `popcnt` 명령 결과 예측할 수 없습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 #include <iostream>   
@@ -111,7 +106,7 @@ __popcnt(0xffffffff) = 32
 ```  
   
 **Microsoft 전용 종료**  
- Copyright 2007 by Advanced Micro Devices, Inc. All rights reserved. 고급 마이크로 장치, Inc. 로부터 사용 권한을 승인 하에 복제  
+ 고급 마이크로 장치, inc 2007 저작권 All rights reserved. 고급 마이크로 장치, Inc. 로부터 사용 권한을 승인 하에 복제  
   
 ## <a name="see-also"></a>참고 항목  
  [컴파일러 내장 함수](../intrinsics/compiler-intrinsics.md)

@@ -1,13 +1,10 @@
 ---
-title: "선언 및 형식 | Microsoft Docs"
-ms.custom: 
+title: 선언 및 형식 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - declarations [C++], C
 - declarations [C++], types
 ms.assetid: 432a2286-cf42-42ce-8baf-c908ffb57ca8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c40f7b236771115d9848abdfccceb0a6e1f8f2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fb45ed5eb068e943bc4de69b916b2c21b7487585
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="declarations-and-types"></a>선언 및 형식
 이 단원에서는 변수, 함수 및 형식의 선언 및 초기화에 대해 설명합니다. C 언어는 기본 데이터 형식의 표준 집합을 포함합니다. 또한 이미 정의된 형식에 따라 새 형식을 선언하여 "파생 형식"이라는 사용자 자신의 데이터 형식을 추가할 수 있습니다. 다음 항목을 다룹니다.  

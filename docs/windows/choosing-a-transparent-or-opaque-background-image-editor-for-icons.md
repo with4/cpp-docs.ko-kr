@@ -1,13 +1,10 @@
 ---
-title: "(아이콘에 대 한 이미지 편집기)는 투명 또는 불투명 배경 선택 | Microsoft Docs"
-ms.custom: 
+title: (아이콘에 대 한 이미지 편집기)는 투명 또는 불투명 배경 선택 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,25 +19,23 @@ helpviewer_keywords:
 - transparency, background
 - transparent backgrounds, images
 ms.assetid: 61b743d9-c86b-405d-9a81-0806431b4363
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4e73ac7122b31ab6880d7d27387937113dee70f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 244e6a63bc16b5e83bb8419dbe1b53741d566e56
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>투명 또는 불투명 배경 선택(아이콘에 대한 이미지 편집기)
 때을 이동 하거나 이미지에서 선택 영역 복사 현재 배경색을 일치 하는 모든 픽셀 선택 영역에는 기본적으로 선택 합니다. 대상 위치에서 픽셀을 숨깁니다 하지 않습니다.  
   
  불투명 한 배경, 투명 한 배경 (기본값)에서 전환 및 복귀 수 있습니다. 선택 도구를 사용 하는 경우는 **투명 한 배경** 및 **불투명 한 배경** 에 옵션 선택기에 옵션이 표시 된 **이미지 편집기** 도구 모음 (아래와 같이).  
   
- ![배경 옵션 &#45; 투명 또는 불투명](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
+ ![배경 옵션 &#45; 불투명 또는 투명](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
 이미지 편집기 도구 모음에서 투명 하 고 불투명 옵션  
   
 ### <a name="to-switch-between-a-transparent-and-opaque-background"></a>투명 하 고 불투명 한 배경 사이 전환 하려면  

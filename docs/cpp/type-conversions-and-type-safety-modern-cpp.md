@@ -2,26 +2,21 @@
 title: 형식 변환 및 형식 안전성 (최신 c + +) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c77b7269ae70d24878ff02c0661b60365c76d1b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 13dabba7b7cfc769d91471c2dfc6f92f1b414996
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>형식 변환 및 형식 안전성(최신 C++)
 이 문서에서는 공용 형식 변환 문제를 식별하고 C++ 코드에서 이 문제를 방지하는 방법에 대해 설명합니다.  
@@ -193,5 +188,5 @@ int(x); // old-style cast, functional syntax
 ## <a name="see-also"></a>참고 항목  
  [C + + 형식 시스템](../cpp/cpp-type-system-modern-cpp.md)   
  [C + +의 진화](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C + + 언어 참조](../cpp/cpp-language-reference.md)   
+ [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [C++ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)

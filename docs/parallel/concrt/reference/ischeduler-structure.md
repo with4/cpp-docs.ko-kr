@@ -1,12 +1,9 @@
 ---
-title: "IScheduler 구조체 | Microsoft Docs"
-ms.custom: 
+title: IScheduler 구조체 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - IScheduler
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a9a90a1d02090971ccb689204492b949f72323a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9c78d02ccd5639369ad8b4d0183458da2ba85269
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ischeduler-structure"></a>IScheduler 구조체
 작업 스케줄러의 추상화에 대한 인터페이스입니다. 동시성 런타임의 리소스 관리자는 이 인터페이스를 사용하여 작업 스케줄러와 통신합니다.  
@@ -56,7 +51,7 @@ struct IScheduler;
 |[IScheduler::NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|배열에서 가상 프로세서 루트의 집합에 의해 표현 되는 하드웨어 스레드가이 스케줄러에 알립니다 `ppVirtualProcessorRoots` 다른 스케줄러에 의해 현재 사용 되 고 있습니다.|  
 |[IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|배열에서 가상 프로세서 루트의 집합에 의해 표현 되는 하드웨어 스레드가이 스케줄러에 알립니다 `ppVirtualProcessorRoots` 다른 스케줄러에 의해 사용 되지 않습니다.|  
 |[IScheduler::RemoveVirtualProcessors](#removevirtualprocessors)|이 스케줄러에 이전에 할당 된 가상 프로세서 루트의 제거를 시작 합니다.|  
-|[IScheduler::Statistics](#statistics)|작업 도착과 완료 속도 및 스케줄러에 대 한 변경의 큐 길이 관련 된 정보를 제공 합니다.|  
+|[Ischeduler:: Statistics](#statistics)|작업 도착과 완료 속도 및 스케줄러에 대 한 변경의 큐 길이 관련 된 정보를 제공 합니다.|  
   
 ## <a name="remarks"></a>설명  
  리소스 관리자와 통신 하는 사용자 지정 스케줄러를 구현 하는 경우에 구현을 제공 해야는 `IScheduler` 인터페이스입니다. 이 인터페이스는 양방향 채널 스케줄러와 리소스 관리자 간의 통신의 한쪽 끝입니다. 다른 쪽 끝으로 표시 됩니다는 `IResourceManager` 및 `ISchedulerProxy` 리소스 관리자에 의해 구현 되는 인터페이스입니다.  

@@ -1,13 +1,10 @@
 ---
-title: "네임스페이스 | Microsoft Docs"
-ms.custom: 
+title: 네임스페이스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,23 +16,21 @@ helpviewer_keywords:
 - tags, structure tags
 - union keyword [C]
 ms.assetid: b4bda1d1-cb5e-4f60-ac2b-29af93d8a9a2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7833c7c1cfd9e7e2b408203f18cf955f6bafedd8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2b0fe8a097da3de67d149665928524395988c730
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="name-spaces"></a>네임스페이스
 컴파일러가 "네임스페이스"를 설정하여 여러 종류의 항목에 사용된 식별자를 구별합니다. 각 네임스페이스에 있는 이름이 고유해야 충돌을 피할 수 있지만 네임스페이스 안에 같은 이름이 두 번 이상 나타날 수도 있습니다. 즉, 항목이 서로 다른 네임스페이스에 있을 경우 2개 이상의 다른 항목에 같은 식별자를 사용할 수 있습니다. 컴파일러는 프로그램에서 식별자의 구문 컨텍스트를 기반으로 참조를 확인할 수 있습니다.  
   
 > [!NOTE]
->  네임스페이스의 제한된 C 개념과 C++ "네임 스페이스" 기능을 혼동하지 마십시오. 자세한 내용은 C*++ 언어 참조*의 [네임스페이스](../cpp/namespaces-cpp.md)를 참조하세요.  
+>  네임스페이스의 제한된 C 개념과 C++ "네임 스페이스" 기능을 혼동하지 마십시오. 자세한 내용은 C *++ 언어 참조*의 [네임스페이스](../cpp/namespaces-cpp.md)를 참조하세요.  
   
  이 목록에서는 C에 사용되는 네임스페이스를 설명합니다.  
   

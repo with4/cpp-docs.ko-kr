@@ -2,11 +2,8 @@
 title: CW2CWEX 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CW2CWEX
@@ -18,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CW2CWEX class
 ms.assetid: d654b22b-05a6-410f-a0ec-9a2cbbb4cca7
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a83f0fefed5e2393c303038346e3b84ec1a3d570
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 671311b0788438d7b92dad9d9137e28cbb88df60
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cw2cwex-class"></a>CW2CWEX 클래스
 이 클래스는 문자열 변환 매크로 사용 `CW2CTEX` 및 `CT2CWEX`, 및 typedef `CW2W`합니다.  
@@ -85,13 +80,13 @@ class CW2CWEX
   
  이러한 텍스트 변환 매크로의 논의 알려면 [ATL 및 MFC 문자열 변환 매크로](string-conversion-macros.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  참조 [ATL 및 MFC 문자열 변환 매크로](string-conversion-macros.md) 이러한 문자열 변환 매크로 사용의 예입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlconv.h  
   
-##  <a name="cw2cwex"></a>CW2CWEX::CW2CWEX  
+##  <a name="cw2cwex"></a>  CW2CWEX::CW2CWEX  
  생성자입니다.  
   
 ```
@@ -109,7 +104,7 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>설명  
  변환 프로세스에서 사용 되는 버퍼를 할당 합니다.  
   
-##  <a name="dtor"></a>CW2CWEX:: ~ CW2CWEX  
+##  <a name="dtor"></a>  CW2CWEX:: ~ CW2CWEX  
  소멸자입니다.  
   
 ```
@@ -119,14 +114,14 @@ CW2CWEX(LPCWSTR psz) throw(...);
 ### <a name="remarks"></a>설명  
  할당된 된 버퍼를 해제합니다.  
   
-##  <a name="m_psz"></a>CW2CWEX::m_psz  
+##  <a name="m_psz"></a>  CW2CWEX::m_psz  
  소스 문자열을 저장 하는 데이터 멤버입니다.  
   
 ```
 LPCWSTR m_psz;
 ```  
   
-##  <a name="operator_lpcwstr"></a>CW2CWEX::operator lpcwstr을 사용  
+##  <a name="operator_lpcwstr"></a>  CW2CWEX::operator lpcwstr을 사용  
  변환 연산자입니다.  
   
 ```  

@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C2146 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C2146 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2146
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7da8021cabb5eab31ae12912374268ee4d7d24b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73367284a8c13316d344a4cff87ccae4ee7c832d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2146"></a>컴파일러 오류 C2146
 구문 오류: 'token' 'identifier' 식별자 앞 누락  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  이 오류는 입력 오류 때문일 수 있습니다. 오류 [C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md) 일반적으로이 오류를 앞에 옵니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 c2146 오류가 발생 합니다.  
   
 ```  
@@ -56,7 +51,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 오류는 Visual Studio.NET 2003에 대해 수행한 컴파일러 규칙 작업의 결과로 생성 될 수 있습니다: 누락 된 `typename` 키워드입니다.  
   
  다음 샘플 Visual Studio.NET 2002에서 컴파일되도록 하지만 Visual Studio.NET 2003에서는 실패 합니다.  
@@ -80,7 +75,7 @@ template <typename T>
 typename X<T>::Y func() { }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  Visual Studio.NET 2003에 대해 수행한 컴파일러 규칙 작업의 결과로이 오류도 표시 됩니다: 명시적 특수화에는 더 이상 기본 템플릿에서 템플릿 매개 변수가 검색 합니다.  
   
  사용 하는 `T` 기본 템플릿에서에서 허용 되지 않는 명시적 특수화입니다. Visual c + +의 Visual Studio.NET 2003 및 Visual Studio.NET 버전에 유효한 것으로 코드에 대 한 모든 인스턴스의 한 특수화에 템플릿 매개 변수를 명시적으로 특수화 된 형식으로 대체 합니다.  

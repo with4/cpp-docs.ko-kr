@@ -1,13 +1,10 @@
 ---
-title: "이 대화 상자의 배경색 설정 | Microsoft Docs"
-ms.custom: 
+title: 이 대화 상자의 배경색 설정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - background colors, dialog boxes
 - MFC dialog boxes [MFC], colors
 ms.assetid: 05ee28a4-f3ae-4203-84ac-022f266ff2ab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 882cede51d83da0bd4ffdc8abcbf6353391c2a5a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 114a1b53e55d6e341c09d2437caa8d26b9c1b0fe
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>대화 상자의 배경색 설정
 대화 상자 창에 대해 `WM_CTLCOLOR` 메시지를 처리하여 대화 상자의 배경 색을 설정할 수 있습니다. 설정한 색은 지정된 대화 상자에만 사용됩니다.  

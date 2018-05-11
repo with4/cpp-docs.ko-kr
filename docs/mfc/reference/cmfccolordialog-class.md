@@ -1,12 +1,9 @@
 ---
-title: "CMFCColorDialog 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCColorDialog 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCColorDialog
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc8b547b72a7094bb6337e9e412f8548a48820f8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21114a3c04f96f2867f5440d47e856958060233e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog 클래스
 `CMFCColorDialog` 색 선택 대화 상자 클래스를 나타냅니다.  
@@ -76,10 +71,10 @@ class CMFCColorDialog : public CDialogEx
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
-|`m_bIsMyPalette`|`TRUE`색 선택 대화 상자는 자체 색상표를 사용 하는 경우 또는 `FALSE` 대화 상자에 지정 된 색상표를 사용 하는 경우는 `CMFCColorDialog` 생성자입니다.|  
-|`m_bPickerMode`|`TRUE`사용자 선택 대화 상자;에서 색을 선택 하는 동안 그렇지 않으면 `FALSE`합니다.|  
+|`m_bIsMyPalette`|`TRUE` 색 선택 대화 상자는 자체 색상표를 사용 하는 경우 또는 `FALSE` 대화 상자에 지정 된 색상표를 사용 하는 경우는 `CMFCColorDialog` 생성자입니다.|  
+|`m_bPickerMode`|`TRUE` 사용자 선택 대화 상자;에서 색을 선택 하는 동안 그렇지 않으면 `FALSE`합니다.|  
 |`m_btnColorSelect`|사용자가 선택한 색 단추입니다.|  
 |`m_CurrentColor`|현재 선택 된 색입니다.|  
 |`m_hcurPicker`|색을 선택 하는 데 사용 되는 커서입니다.|  
@@ -109,7 +104,7 @@ class CMFCColorDialog : public CDialogEx
   
  [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 색 대화 상자에서 다양 한 메서드를 사용 하 여 구성 하는 방법의 `CMFCColorDialog` 클래스입니다. 이 예제에서는 현재 개체와의 대화 상자에서 새 색을 설정 하는 방법과 색 대화의 두 속성 페이지에서 선택한 색의 빨강, 녹색 및 파랑 구성 요소를 설정 하는 방법을 보여 줍니다. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]  
@@ -117,7 +112,7 @@ class CMFCColorDialog : public CDialogEx
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcolordialog.h  
   
-##  <a name="cmfccolordialog"></a>CMFCColorDialog::CMFCColorDialog  
+##  <a name="cmfccolordialog"></a>  CMFCColorDialog::CMFCColorDialog  
  `CMFCColorDialog` 개체를 생성합니다.  
   
 ```  
@@ -145,7 +140,7 @@ CMFCColorDialog(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getcolor"></a>CMFCColorDialog::GetColor  
+##  <a name="getcolor"></a>  CMFCColorDialog::GetColor  
  색 대화 상자에서 사용자가 선택한 색을 검색 합니다.  
   
 ```  
@@ -158,7 +153,7 @@ COLORREF GetColor() const;
 ### <a name="remarks"></a>설명  
  이 함수를 호출한 다음 호출에서 `DoModal` 메서드.  
   
-##  <a name="getpalette"></a>CMFCColorDialog::GetPalette  
+##  <a name="getpalette"></a>  CMFCColorDialog::GetPalette  
  현재 색 대화 상자에서 사용할 수 있는 색상표를 검색 합니다.  
   
 ```  
@@ -171,14 +166,14 @@ CPalette* GetPalette() const;
 ### <a name="remarks"></a>설명  
  색상표에 사용자가 선택할 수는 색을 지정 합니다.  
   
-##  <a name="rebuildpalette"></a>CMFCColorDialog::RebuildPalette  
+##  <a name="rebuildpalette"></a>  CMFCColorDialog::RebuildPalette  
  시스템 표에서 색상표를 파생 시킵니다.  
   
 ```  
 void RebuildPalette();
 ```  
   
-##  <a name="setcurrentcolor"></a>CMFCColorDialog::SetCurrentColor  
+##  <a name="setcurrentcolor"></a>  CMFCColorDialog::SetCurrentColor  
  대화 상자의 현재 색을 설정합니다.  
   
 ```  
@@ -191,7 +186,7 @@ void SetCurrentColor(COLORREF rgb);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setnewcolor"></a>CMFCColorDialog::SetNewColor  
+##  <a name="setnewcolor"></a>  CMFCColorDialog::SetNewColor  
  현재 색 가장 유사한 현재 색상표에서 색을 설정 합니다.  
   
 ```  
@@ -204,7 +199,7 @@ void SetNewColor(COLORREF rgb);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setpageone"></a>CMFCColorDialog::SetPageOne  
+##  <a name="setpageone"></a>  CMFCColorDialog::SetPageOne  
  색 대화의 첫 번째 속성 페이지에서 선택한 색의 빨강, 녹색 및 파랑 구성 요소를 명시적으로 지정합니다.  
   
 ```  
@@ -226,7 +221,7 @@ void SetPageOne(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setpagetwo"></a>CMFCColorDialog::SetPageTwo  
+##  <a name="setpagetwo"></a>  CMFCColorDialog::SetPageTwo  
  색 대화의 두 번째 속성 페이지에서 선택한 색의 빨강, 녹색 및 파랑 구성 요소를 명시적으로 지정합니다.  
   
 ```  

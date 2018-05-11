@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C3743 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C3743 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3743
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3743
 ms.assetid: 7ca9a76e-7b60-46d1-ab8b-18600cf1a306
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11f4387a35bcddd919e0ce648f9409291432521f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc9a0bab67bb4fb15627dde42b1d538a0ecce9d5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3743"></a>컴파일러 오류 C3743
 수만 후크/언 후크 할 전체 인터페이스 event_receiver의 'layout_dependent' 매개 변수 참인 경우  

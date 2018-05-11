@@ -1,27 +1,22 @@
 ---
-title: "(최신 c + +) 컴파일 시간 캡슐화에 대 한 Pimpl | Microsoft Docs"
-ms.custom: 
+title: (최신 c + +) 컴파일 시간 캡슐화에 대 한 Pimpl | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: c3e8a90a-b328-4990-82bb-e1b147f76e07
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a109015f3d30b04eaf89e769e1265c49663599f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f611a898018cee5edc031be1db2fd35af8857e16
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>컴파일 시간 캡슐화에 대한 Pimpl(최신 C++)
 *pimpl 관용구* 은 최신 c + + 기술 구현, 결합, 최소화 하 고 분리 인터페이스를 숨기려면 합니다. Pimpl는 짧은 "포인터"를 구현 합니다. 이미 개념을 잘 알고 있어야 하지만 명칭 또는 컴파일러 방화벽 관용구와 같은 다른 이름으로 알 수 있습니다.  
@@ -69,5 +64,5 @@ my_class::my_class(): pimpl( new impl )
   
 ## <a name="see-also"></a>참고 항목  
  [C + +의 진화](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C + + 언어 참조](../cpp/cpp-language-reference.md)   
+ [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [C++ 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)

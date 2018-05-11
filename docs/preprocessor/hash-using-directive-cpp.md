@@ -1,12 +1,9 @@
 ---
-title: "#using 지시문 (C + + /cli CLR) | Microsoft Docs"
-ms.custom: 
+title: '#using 지시문 (C + + /cli CLR) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - friend_as_cpp
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - preprocessor, directives
 ms.assetid: 870b15e5-f361-40a8-ba1c-c57d75c8809a
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1c43acde6e4f755c6757fc933c80091ba05927c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 053c425a6bb8dcab0dc5cb94db1537f0fff3d9f8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="using-directive-cclr"></a>#using 지시문 (C + + /cli CLR)
 메타 데이터를 사용 하 여 컴파일된 프로그램으로 가져오는 [/clr](../build/reference/clr-common-language-runtime-compilation.md)합니다.  
@@ -85,7 +80,7 @@ ms.lasthandoff: 02/23/2018
   
 -   LIBPATH 환경 변수의 디렉터리  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  어셈블리(C)를 빌드하고 다른 어셈블리(A)를 참조하는 어셈블리(B)를 참조하는 경우 C에서 A 형식 중 하나를 명시적으로 사용하지 않는 한 어셈블리 A를 명시적으로 참조할 필요가 없습니다.  
   
 ```  
@@ -94,7 +89,7 @@ ms.lasthandoff: 02/23/2018
 public ref class A {};  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // using_assembly_B.cpp  
@@ -108,7 +103,7 @@ public:
   
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 프로그램이 using_assembly_A.cpp에 정의된 형식 중 하나를 사용하지 않으므로 using_assembly_A.dll을 사용하여 참조하지 않는 컴파일러 오류가 발생하지 않습니다.  
   
 ```  

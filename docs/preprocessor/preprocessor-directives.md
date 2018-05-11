@@ -1,12 +1,9 @@
 ---
-title: "전처리기 지시문 | Microsoft Docs"
-ms.custom: 
+title: 전처리기 지시문 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,17 +11,15 @@ helpviewer_keywords:
 - directives, preprocessor
 - preprocessor, directives
 ms.assetid: e0fc4564-b6cf-4a36-bf51-6ccd7abd0a94
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2763107b8ca787c6711f1f7d4966c7c530f147af
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: b73f6ce579f94d38621820a63888dc0aa5a75863
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="preprocessor-directives"></a>전처리기 지시문
 전처리기 지시문와 같은 `#define` 및 **#ifdef**, 소스 프로그램을 변경 하기 쉽고 쉽게 여러 실행 환경에서 컴파일할 수 있도록 일반적으로 사용 됩니다. 소스 파일의 지시문은 특정 작업을 수행하도록 전처리기에 지시합니다. 예를 들어 전처리기는 텍스트에서 토큰을 바꾸거나, 다른 파일의 내용을 소스 파일에 삽입하거나, 텍스트 섹션을 제거하여 파일 일부의 컴파일을 억제할 수 있습니다. 전처리기 코드 줄은 매크로 확장 전에 인식되고 수행됩니다. 따라서 매크로가 전처리기 명령처럼 보이는 항목으로 확장되는 경우 해당 명령은 전처리기에서 인식되지 않습니다.  

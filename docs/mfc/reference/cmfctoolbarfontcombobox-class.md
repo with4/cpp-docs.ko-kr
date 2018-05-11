@@ -1,12 +1,9 @@
 ---
-title: "CMFCToolBarFontComboBox 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCToolBarFontComboBox 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCToolBarFontComboBox
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMFCToolBarFontComboBox [MFC], GetFontDesc
 - CMFCToolBarFontComboBox [MFC], SetFont
 ms.assetid: 25f8e08c-aadd-4cb5-9581-a99d49d444b1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f499c5593460b10957c7d09e01c0f458529df0d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ea8f05c20c3a3276f51b4267b6763831dc23eacf
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox 클래스
 사용자가 시스템 글꼴 목록에서 글꼴을 선택할 수 있도록 콤보 상자 컨트롤을 포함 하는 도구 모음 단추입니다.  
@@ -88,7 +83,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxtoolbarfontcombobox.h  
   
-##  <a name="cmfctoolbarfontcombobox"></a>CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
+##  <a name="cmfctoolbarfontcombobox"></a>  CMFCToolBarFontComboBox::CMFCToolBarFontComboBox  
  생성 된 [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md) 개체입니다.  
   
 ```  
@@ -147,12 +142,12 @@ CMFCToolBarFontComboBox();
 ### <a name="remarks"></a>설명  
  일반적으로 `CMFCToolBarFontComboBox` 개체 목록을 사용할 수 있는 글꼴 공유 되는 하나의 저장 `CObList` 개체입니다. 생성자의 두 번째 오버 로드를 사용 하 고에 대 한 유효한 포인터를 제공 하는 경우 `pLstFontsExternal`, 해당 `CMFCToolBarFontComboBox` 개체를 채울 대신는 `CObList` 있는 `pLstFontsExternal` 있는 사용 가능한 글꼴을 가리킵니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 생성 하는 방법을 `CMFCToolBarFontComboBox` 개체입니다. 이 코드 조각은 [워드 패드 샘플](../../visual-cpp-samples.md)의 일부입니다.  
   
  [!code-cpp[NVC_MFC_WordPad#7](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontcombobox-class_1.cpp)]  
   
-##  <a name="getfontdesc"></a>CMFCToolBarFontComboBox::GetFontDesc  
+##  <a name="getfontdesc"></a>  CMFCToolBarFontComboBox::GetFontDesc  
  에 대 한 포인터를 반환 합니다.는 `CMFCFontInfo` 콤보 상자에서 지정한 인덱스에 대 한 개체입니다.  
   
 ```  
@@ -166,7 +161,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 `CMFCFontInfo` 개체입니다. 경우 `iIndex` 유효한 항목 인덱스를 지정 하지 않는 경우 반환 값은 `NULL`합니다.  
   
-##  <a name="m_nfontheight"></a>CMFCToolBarFontComboBox::m_nFontHeight  
+##  <a name="m_nfontheight"></a>  CMFCToolBarFontComboBox::m_nFontHeight  
  콤보 상자에 소유자 그리기 스타일은 글꼴 콤보 상자에 있는 문자의 픽셀 단위 높이 지정 합니다.  
   
 ```  
@@ -176,7 +171,7 @@ static int m_nFontHeight
 ### <a name="remarks"></a>설명  
  경우는 `m_nFontHeight` 변수는 0, 높이 콤보 상자의 기본 글꼴에 따라 자동으로 계산 됩니다. 높이 상승 된 기준선을 초과 하는 문자 및 문자 기준선 아래 디센더 모두 포함 되어 있습니다.  
   
-##  <a name="setfont"></a>CMFCToolBarFontComboBox::SetFont  
+##  <a name="setfont"></a>  CMFCToolBarFontComboBox::SetFont  
  글꼴의 글꼴 이름 및 문자에 따라 글꼴 콤보 상자에서 집합을 선택 합니다. 매개 변수에서 지정 됩니다.  
   
 ```  

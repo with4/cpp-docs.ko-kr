@@ -1,13 +1,10 @@
 ---
-title: "프로젝트 속성 | Microsoft Docs"
-ms.custom: 
+title: 프로젝트 속성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,41 +13,39 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de48e03c62d924334e005ffd7f008e0083fb405f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3c33a18ff0d492ef3a870a342c9d8ff292007748
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="working-with-project-properties"></a>프로젝트 속성 사용
 IDE, 프로젝트를 빌드하는 데 필요한 모든 정보로 노출 됩니다 *속성*합니다. 이 정보에는 응용 프로그램 이름, 확장명 (예: DLL, LIB, EXE), 컴파일러 옵션, 링커 옵션, 디버거 설정, 사용자 지정 빌드 단계 및 다른 많은 항목이 포함 됩니다. 일반적으로 사용 *속성 페이지* ( **프로젝트 &#124; 속성**)를 보고 하 여 이러한 속성을 수정 합니다. 
   
  프로젝트를 만들 때 다양 한 속성의 값을 지정 합니다. 종류에 따라 다소 다를 기본값 옵션을 및 프로젝트의 응용 프로그램 마법사의 선택 합니다. 예를 들어, ATL 프로젝트에 MIDL 파일과 관련 된 속성이 있지만 absent 이들은 기본적인 콘솔 응용 프로그램에서입니다. 기본 속성은 속성 페이지의 일반 창에 표시 됩니다.  
   
- ![Visual C# 43; &#43; 프로젝트 기본값](../ide/media/visual-c---project-defaults.png "Visual c + + 프로젝트 기본값")  
+ ![Visual C&#43; &#43; 기본값 프로젝트](../ide/media/visual-c---project-defaults.png "Visual c + + 프로젝트 기본값")  
   
  응용 프로그램 이름, 같은 일부 속성의 대상 플랫폼 또는 디버그 또는 릴리스 빌드 인지에 관계 없이 모든 빌드 변형에 적용 됩니다. 하지만 대부분의 속성은 구성에 따라 다릅니다. 컴파일러에서 프로그램이 실행 되는 특정 플랫폼을 올바른 코드를 생성 하기 위해 사용 하는 특정 컴파일러 옵션을 알고 있으면 때문입니다. 따라서 속성을 설정 하는 경우 반드시는 구성 및 플랫폼에 적용 해야 새 값에 주의를 기울여야 합니다. Win32 디버그 빌드에만 적용 해야 하거나 해야 것에 적용 디버그 ARM 및 x64 디버그? 예를 들어는 **최적화** , 기본적으로 속성 **속도 최대화 (/ o 2)** 릴리스 구성에서 있지만 디버그 구성에서 사용할 수 없습니다.  
   
  속성 페이지는 구성 및 플랫폼 속성 값을 필요한 경우 수정 하는 경우에 적용 해야 하 고 항상 볼 수 있도록 설계 됩니다. 다음 그림에는 맨 위에 있는 목록 상자에서 속성 페이지 구성 및 플랫폼 정보를 보여 줍니다. 경우는 **최적화** 속성을 설정, 것에 적용 됩니다 Win32 디버그 빌드에는 빨간색 화살표로 표시 된 것 처럼 되는 활성 구성으로 수행 됨.  
   
- ![Visual C# 43; &#43; 활성 구성 표시 하는 속성 페이지](../ide/media/visual-c---property-pages-showing-active-configuration.png "Visual c + + 속성 페이지 표시 된 활성 구성")  
+ ![Visual C&#43; &#43; 속성 페이지 표시 된 활성 구성](../ide/media/visual-c---property-pages-showing-active-configuration.png "Visual c + + 속성 페이지 표시 된 활성 구성")  
   
  다음 그림은 같은 프로젝트 속성 페이지를 보여 줍니다. 하지만 릴리스 구성이 변경 되었습니다. Note 최적화 속성에 대해 다른 값입니다. 활성 구성이 여전히 디버그 참고도 합니다. 여기; 모든 구성에 대 한 속성을 설정할 수 있습니다. 활성 필요는 없습니다.  
   
- ![Visual C# 43; &#43; 속성 페이지를 보여 주는 릴리스 구성](../ide/media/visual-c---property-pages-showing-release-config.png "Visual c + + 속성 페이지 표시 된 릴리스 구성")  
+ ![Visual C&#43; &#43; 속성 페이지 표시 된 릴리스 구성](../ide/media/visual-c---property-pages-showing-release-config.png "Visual c + + 속성 페이지 표시 된 릴리스 구성")  
   
  프로젝트 시스템 자체 MSBuild 파일 형식 및 모든 종류의 프로젝트를 빌드하기 위한 규칙을 정의 하는 기반으로 합니다. MSBuild을 복잡 한 여러 구성 및 플랫폼에 대 한 빌드 관리 하지만 약간 작동 방법에 대 한 이해 하 고 있어야 합니다. 이 다시 사용할 수 있는 공유 하 고 여러 프로젝트로 가져올 수 있는 속성 집합을 만들거나 사용자 지정 구성을 정의 하려는 경우에 특히 중요 합니다.  
   
  프로젝트 속성은 프로젝트 파일 (*.vcxproj)에서 직접 또는 다른 프로젝트 파일 가져오기 및 있는는 기본값을 제공.xml 또는.props 파일에 저장 됩니다. 에서 설명한 것 처럼 동일한 구성에 대 한 동일한 속성 서로 다른 파일에서 다른 값을 할당할 수 있습니다. 프로젝트를 빌드하면 MSBuild 엔진 프로젝트 파일 및 잘 정의 된 순서 (아래 설명 참조)에서 가져온된 모든 파일을 평가 합니다. 각 파일을 평가 하는 대로 모든 속성 값을 해당 파일에 정의 된 기존 값을 재정의 합니다. 지정 되지 않은 모든 값은 이전에 평가 된 파일에서 상속 됩니다. 따라서 속성 페이지를 사용 하 여 속성을 설정 하면 것도 중요 설정 하면에 주의를 기울여야 합니다. .Props 파일에서 "X"로 속성을 설정 하는 경우 프로젝트 파일에서 속성 "Y"로 설정 된 프로젝트 속성을 "Y"로 설정 하 여 작성 합니다. 프로젝트 항목에서 "z".cpp 파일 처럼 동일한 속성을 설정 하는 경우 MSBuild 엔진 "Z" 값을 사용 합니다. 자세한 내용은 참조 [속성 상속](#bkmkPropertyInheritance) 이 문서의 뒷부분에 나오는 합니다.  
   
 ## <a name="build-configurations"></a>빌드 구성  
- 구성을 방금는 임의의 그룹 이름을 지정 하는 속성입니다. Visual Studio 디버그 및 릴리스 구성 이며 각 디버그 빌드 또는 릴리스 빌드에 대해 적절 하 게 다양 한 속성으로 설정 합니다. 사용할 수는 **Configuration Manager** 빌드의 특정 버전에 대 한 그룹 속성을 편리 하 게 사용자 지정 구성을 정의할 수 있습니다. 속성 관리자는 속성을 가진 고급 작업에 사용 하지만 유도 것 여기 속성 구성 시각화는 도움이 되기 때문입니다. 액세스할 **보기 &#124;  속성 관리자** 또는 **보기 &#124; 다른 창 &#124; 속성 관리자** 설정에 따라 합니다. 프로젝트에 각 구성/플랫폼 쌍에 대 한 노드를에 있습니다. 이러한 각 노드에서 해당 구성에 대 한 몇 가지 특정 속성을 설정 하는 속성 시트 (.props 파일)에 대 한 노드입니다.  
+ 구성을 방금는 임의의 그룹 이름을 지정 하는 속성입니다. Visual Studio 디버그 및 릴리스 구성 이며 각 디버그 빌드 또는 릴리스 빌드에 대해 적절 하 게 다양 한 속성으로 설정 합니다. 사용할 수는 **Configuration Manager** 빌드의 특정 버전에 대 한 그룹 속성을 편리 하 게 사용자 지정 구성을 정의할 수 있습니다. 속성 관리자는 속성을 가진 고급 작업에 사용 하지만 유도 것 여기 속성 구성 시각화는 도움이 되기 때문입니다. 액세스할 **보기 &#124; 속성 관리자** 또는 **보기 &#124; 다른 창 &#124; 속성 관리자** 설정에 따라 합니다. 프로젝트에 각 구성/플랫폼 쌍에 대 한 노드를에 있습니다. 이러한 각 노드에서 해당 구성에 대 한 몇 가지 특정 속성을 설정 하는 속성 시트 (.props 파일)에 대 한 노드입니다.  
   
  ![속성 관리자](../ide/media/property-manager.png "속성 관리자")  
   
@@ -69,7 +64,7 @@ IDE, 프로젝트를 빌드하는 데 필요한 모든 정보로 노출 됩니�
 ## <a name="property-pages"></a>속성 페이지  
  Visual c + + 프로젝트 시스템은 기반 앞서 설명한 것 처럼 [MSBuild](/visualstudio/msbuild/msbuild-properties) 값을 저장 하 고 XML 프로젝트 파일에 기본.props 및.targets 파일입니다. Visual Studio 2015에 대 한 이러한 파일은 %programfiles%\microsoft **\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140**합니다. Visual Studio 2017 년에 대 한 이러한 파일은 %programfiles%\microsoft  **\\Program Files (x86)\\Microsoft Visual Studio\\2017\\_edition_\\Common7\\ IDE\\VC\\VCTargets**여기서 _edition_ 은 Visual Studio 버전을 설치 합니다. 속성은 고유한 프로젝트에 추가할 수 있는 모든 사용자 지정.props 파일에도 저장 됩니다. 하지 해당 파일을 수동으로 편집 하는 대신 특히 MSBuild의 매우 양호 이해 하지 못하는 경우 상속에 참여 하는 모든 속성을 수정 하려면 IDE에서 속성 페이지를 사용 하는 것이 좋습니다.  
   
- 다음 그림에는 Visual C++ 프로젝트에 대한 속성 페이지가 나와 있습니다. 왼쪽된 창에서는 **VC + + 디렉터리***규칙* 을 선택 하 고 오른쪽 창에 해당 규칙과 연결 된 모든 속성이 나열 합니다. `$(...)` 값 이라고 하지만 *매크로*합니다. 이들은 *하지* C/c + + 매크로 하지만 단순히 컴파일 시간 상수입니다. 매크로에 대해서는 설명의 [속성 페이지 매크로](#bkmkPropertiesVersusMacros) 이 문서의 뒷부분에 나오는 섹션.)  
+ 다음 그림에는 Visual C++ 프로젝트에 대한 속성 페이지가 나와 있습니다. 왼쪽된 창에서는 **VC + + 디렉터리 * * * 규칙* 을 선택 하 고 오른쪽 창에 해당 규칙과 연결 된 모든 속성이 나열 합니다. `$(...)` 값 이라고 하지만 *매크로*합니다. 이들은 *하지* C/c + + 매크로 하지만 단순히 컴파일 시간 상수입니다. 매크로에 대해서는 설명의 [속성 페이지 매크로](#bkmkPropertiesVersusMacros) 이 문서의 뒷부분에 나오는 섹션.)  
   
  ![프로젝트 속성 페이지](../ide/media/project_property_pages_vc.png "Project_Property_Pages_VC")  
   
@@ -109,7 +104,7 @@ IDE, 프로젝트를 빌드하는 데 필요한 모든 정보로 노출 됩니�
 -   [XML 데이터 생성기 도구 속성 페이지](../ide/xml-data-generator-tool-property-page.md)  
   
 ## <a name="to-quickly-browse-and-search-all-properties"></a>신속 하 게 찾아 검색 모든 속성  
- **모든 옵션** 속성 페이지 (아래에서 **구성 속성 &#124; C/C++** 에서 노드는 **속성 페이지** 대화 상자) 찾아보고 현재 컨텍스트에서 사용할 수 있는 속성을 검색 하는 빠른 방법을 제공 합니다. 이 페이지에는 특수 검색 상자 및 결과를 필터링할 수 있는 간단한 구문이 있습니다.  
+ **모든 옵션** 속성 페이지 (아래에서 **구성 속성 &#124; C/c + +** 에서 노드는 **속성 페이지** 대화 상자) 찾아보고 검색 하는 빠른 방법을 제공 현재 컨텍스트에서 사용할 수 있는 속성입니다. 이 페이지에는 특수 검색 상자 및 결과를 필터링할 수 있는 간단한 구문이 있습니다.  
   
  접두사 없음:  
  속성 이름에서만 검색합니다(부분 문자열 대/소문자 구분 안 함).  
@@ -120,7 +115,7 @@ IDE, 프로젝트를 빌드하는 데 필요한 모든 정보로 노출 됩니�
  v:  
  값에서만 검색합니다(부분 문자열 대/소문자 구분 안 함).  
   
-##  <a name="bkmkPropertiesVersusMacros"></a>속성 페이지 매크로  
+##  <a name="bkmkPropertiesVersusMacros"></a> 속성 페이지 매크로  
  A *매크로* Visual Studio 또는 MSBuild 시스템에서 정의 된 값 또는 사용자 정의 값을 참조할 수 있는 컴파일 타임 상수입니다. 디렉터리 경로와 같이 하드 코딩된 값 대신에 매크로를 사용하여 컴퓨터 간 속성 설정과 Visual Studio 버전 간의 속성 설정을 좀 더 쉽게 공유할 수 있고 프로젝트 설정이 제대로 속성 상속에 참여할 수 있도록 확인합니다. 모든 사용 가능한 매크로의 값을 보려면 속성 편집기를 사용할 수 있습니다.  
   
 ### <a name="predefined-macros"></a>미리 정의된 매크로  
@@ -146,13 +141,13 @@ IDE, 프로젝트를 빌드하는 데 필요한 모든 정보로 노출 됩니�
 ## <a name="property-editor"></a>속성 편집기  
  속성 편집기를 사용하여 특정 문자열 속성을 수정하고 값으로 매크로를 선택할 수 있습니다. 속성 편집기에 액세스하려면 속성 페이지에서 속성을 선택한 후 오른쪽에 있는 아래쪽 화살표 단추를 선택합니다. 드롭다운 목록에 포함 되어 있으면  **\<편집 >**, 해당 속성에 대 한 속성 편집기를 표시 하도록 선택할 수 있습니다.  
   
- ![속성 &#95; 편집기 &#95; 드롭다운](../ide/media/property_editor_dropdown.png "Property_Editor_Dropdown")  
+ ![속성&#95;편집기&#95;드롭다운](../ide/media/property_editor_dropdown.png "Property_Editor_Dropdown")  
   
  속성 편집기에서 수 있습니다는 **매크로** 단추를 사용할 수 있는 매크로 및 현재 값입니다. 다음 그림에 대 한 속성 편집기를 보여 줍니다.는 **추가 포함 디렉터리** 후의 **매크로** 단추 선택 합니다. 경우는 **부모 또는 프로젝트 기본값에서 상속** 확인란을 선택 하 고 새 값을 추가 하 고, 현재 상속 되는 모든 값에 추가 됩니다. 확인란의 선택을 취소하면 새 값이 상속된 값을 대체합니다. 대부분의 경우 확인란을 선택한 상태로 둡니다.  
   
- ![속성 편집기, Visual C# 43; &#43; ] (../ide/media/propertyeditorvc.png "PropertyEditorVC")  
+ ![속성 편집기, Visual C&#43;&#43;](../ide/media/propertyeditorvc.png "PropertyEditorVC")  
   
-##  <a name="bkmkPropertySheets"></a>다시 사용할 수 있는 속성 구성 만들기  
+##  <a name="bkmkPropertySheets"></a> 다시 사용할 수 있는 속성 구성 만들기  
  "전역" 속성을 사용자별, 컴퓨터별로 설정할 수 있지만 이는 권장되지 않습니다. 사용 하는 권장 대신 **속성 관리자** 만들려는 *속성 시트* 각 재사용 하거나 다른 사용자와 공유할 수 있게 되기를 원하는 프로젝트 종류에 대 한 설정을 저장 합니다. 또한 속성 시트를 사용하면 기타 프로젝트 형식에 대한 속성 설정이 실수로 변경될 가능성이 줄어듭니다. 속성 시트에서 자세히 설명 되어 [재사용 가능 속성 구성을 만드는](#bkmkPropertySheets)합니다.  
   
 > [!IMPORTANT]
@@ -191,7 +186,7 @@ IDE, 프로젝트를 빌드하는 데 필요한 모든 정보로 노출 됩니�
   
 3.  **속성 관리자**을 새 속성 시트를 열고 포함할 속성을 설정 합니다.  
   
-##  <a name="bkmkPropertyInheritance"></a>속성 상속  
+##  <a name="bkmkPropertyInheritance"></a> 속성 상속  
  프로젝트 속성이 계층화됩니다. 각 레이어는 이전 레이어의 값을 상속하지만, 속성을 명시적으로 설정하여 이 값을 재정의할 수 있습니다. 다음은 기본 상속 트리입니다.  
   
 1.  MSBuild CPP 도구 집합의 기본 설정(.vcxproj 파일에서 가져온 ..\Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.Cpp.Default.props)  

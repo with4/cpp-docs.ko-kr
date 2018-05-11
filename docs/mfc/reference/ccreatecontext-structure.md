@@ -1,12 +1,9 @@
 ---
-title: "CCreateContext 구조 | Microsoft Docs"
-ms.custom: 
+title: CCreateContext 구조 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCreateContext
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 929ed0971f9b69bf8e98ae247957110e78ac33ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af6e81b9215aa6e7bc9e5f294a1d95aee4b51321
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccreatecontext-structure"></a>CCreateContext 구조
 프레임 워크를 사용 하 여는 `CCreateContext` 프레임 창 및 문서와 연결 된 뷰를 만들 때 구성 합니다.  
@@ -37,7 +32,7 @@ struct CCreateContext
 ```  
   
 ## <a name="remarks"></a>설명  
- `CCreateContext`구조체가 고 기본 클래스는 없습니다.  
+ `CCreateContext` 구조체가 고 기본 클래스는 없습니다.  
   
  창을 만들 때이 구조에서는 값 데이터의 보기를 문서의 구성 요소를 연결 하는 데 사용 되는 정보를 제공 합니다. 사용 해야 `CCreateContext` 생성 프로세스의 일부를 재정의 하는 경우.  
   
@@ -45,7 +40,7 @@ struct CCreateContext
   
 |멤버|형식|이 대 한|  
 |------------|----------|--------------------|  
-|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass`만들려는 새 뷰의 합니다.|  
+|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass` 만들려는 새 뷰의 합니다.|  
 |`m_pCurrentDoc`|`CDocument*`|새 보기와 연결할 기존 문서입니다.|  
 |`m_pNewDocTemplate`|`CDocTemplate*`|새 MDI 프레임 창 만들기와 관련 된 문서 서식 파일|  
 |`m_pLastView`|`CView*`|에 추가 뷰가 모델링 됩니다, 분할 창 보기 생성 또는 문서에 두 번째 뷰 생성에서와 같이 원래 보기입니다.|  
@@ -56,7 +51,7 @@ struct CCreateContext
 > [!NOTE]
 >  포인터의 모든 `CCreateContext` 선택 사항이 며 수 `NULL` 지정 되지 않은 또는 알 수 없는 경우.  
   
- `CCreateContext`아래 나열 된 멤버 함수에서 사용 하는 "를 참조 하십시오." 재정의 하려는 경우 특정 정보에 대 한 이러한 함수의 설명을 참조 하십시오.  
+ `CCreateContext` 아래 나열 된 멤버 함수에서 사용 하는 "를 참조 하십시오." 재정의 하려는 경우 특정 정보에 대 한 이러한 함수의 설명을 참조 하십시오.  
   
  다음은 몇 가지 일반 지침입니다.  
   

@@ -2,11 +2,8 @@
 title: 동시성 Namespace | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue/concurrency
@@ -29,17 +26,15 @@ dev_langs:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-caps.latest.revision: 37
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 79a6334dae9835901198387d58316ef34e81ce50
-ms.sourcegitcommit: 0523c88b24d963c33af0529e6ba85ad2c6ee5afb
+ms.openlocfilehash: d5659c48b73eb8dfde4ffc7683de3c2cf721564d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace"></a>동시성 네임스페이스
 `Concurrency` 네임스페이스는 C++용 동시 프로그래밍 프레임워크인 동시성 런타임에 액세스하는 데 사용할 수 있는 클래스와 함수를 제공합니다. 자세한 내용은 [동시성 런타임](../../../parallel/concrt/concurrency-runtime.md)을 참조하세요.  
@@ -213,7 +208,7 @@ namespace concurrency;
 |[is_current_task_group_canceling 함수](concurrency-namespace-functions.md#is_current_task_group_canceling)|현재 컨텍스트에서 현재 인라인으로 실행 중인 작업 그룹이 활성 취소 중이거나 곧 취소되는지 여부를 나타내는 표시를 반환합니다. 현재 컨텍스트에서 현재 인라인으로 실행 중인 작업 그룹이 없는 경우 `false`가 반환됩니다.|  
 |[make_choice 함수](concurrency-namespace-functions.md#make_choice)|오버로드됨. 선택적 `choice` 또는 `Scheduler`과 두 개 이상의 입력 소스로 `ScheduleGroup` 메시징 블록을 생성합니다.|  
 |[make_greedy_join 함수](concurrency-namespace-functions.md#make_greedy_join)|오버로드됨. 선택적 `greedy multitype_join` 또는 `Scheduler`과 두 개 이상의 입력 소스로 `ScheduleGroup` 메시징 블록을 생성합니다.|  
-|[make_join Function](concurrency-namespace-functions.md#make_join)|오버로드됨. 선택적 `non_greedy multitype_join` 또는 `Scheduler`과 두 개 이상의 입력 소스로 `ScheduleGroup` 메시징 블록을 생성합니다.|  
+|[make_join 함수](concurrency-namespace-functions.md#make_join)|오버로드됨. 선택적 `non_greedy multitype_join` 또는 `Scheduler`과 두 개 이상의 입력 소스로 `ScheduleGroup` 메시징 블록을 생성합니다.|  
 |[make_task 함수](concurrency-namespace-functions.md#make_task)|`task_handle` 개체를 만들기 위한 팩터리 메서드입니다.|  
 |[parallel_buffered_sort 함수](concurrency-namespace-functions.md#parallel_buffered_sort)|오버로드됨. 지정된 범위에 있는 요소를 비내림차순 또는 이진 조건자로 지정한 정렬 기준에 따라 병렬로 정렬합니다. 이 함수는 `O(n)` 추가 공간이 필요하고 정렬되는 요소에 대한 기본 초기화를 요구한다는 점을 제외하고, 비교 기반의 불안정한 내부 정렬이라는 점에서 `std::sort`와 의미 체계가 비슷합니다.|  
 |[parallel_for 함수](concurrency-namespace-functions.md#parallel_for)|오버로드됨. `parallel_for`는 일정 범위의 인덱스를 반복하고 각 반복 시 사용자가 제공한 함수를 병렬로 실행합니다.|  

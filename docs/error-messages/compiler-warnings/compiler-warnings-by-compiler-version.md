@@ -1,13 +1,10 @@
 ---
-title: "컴파일러 버전으로 컴파일러 경고 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 버전으로 컴파일러 경고 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/31/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - devlang-cpp
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: error-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,14 +12,13 @@ helpviewer_keywords:
 - cl.exe compiler, setting warning options
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f6ee65b1001f0cf651fcbbd68170484cd134aa4
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 789121e3adb42cb74087339bb33bb82cb7604a10
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>컴파일러 버전으로 컴파일러 경고
 
@@ -43,7 +39,7 @@ ms.lasthandoff: 02/21/2018
 | Visual c + + 2015 업데이트 1 | 19.00.23506.0 |
 | Visual c + + 2015 업데이트 2 | 19.00.23918.0 |
 | Visual c + + 2015 업데이트 3 | 19.00.24215.1 |
-| Visual C++ 2017 RTM | 19.10.24903.0 |
+| Visual c + + 2017 RTM | 19.10.24903.0 |
 | Visual c + + 2017 15.1 버전 | 19.10.25017.0 |
 | Visual c + + 2017 15.3 버전 | 19.11.25506.0 |
 | Visual c + + 2017 15.5 버전 | 19.12.25827.0 |
@@ -600,7 +596,7 @@ C4794|스레드 로컬 저장소 변수의 세그먼트 '*이름*'에서 변경'
 C4798|p 코드 함수에 대해 생성 된 네이티브 코드 '*이름*' 예외 처리기 또는 해제 의미 체계
 C4799|함수 '*이름*'에 EMMS 명령이 없습니다
 C4803|'*선언*': raise 메서드에 이벤트의 다른 저장소 클래스 '*선언*'
-C4810|value of pragma pack(show) == *number*
+C4810|pragma pack (show)의 값 = = *번호*
 C4811|pragma conform 값 (forScope, show) = = *값*
 C4820|'*형식*': '*번호*' 바이트 채움 문자가 뒤에 추가 *형식* '*형식*'
 C4905|와이드 문자열 리터럴 캐스팅 '*형식*'
@@ -625,7 +621,7 @@ C4944|'*이름*': 기호를 가져올 수 없습니다 '*소스*': '*선언*' �
 C4945|'*이름*': 기호를 가져올 수 없습니다 '*소스*': '*선언*'이미 가져온 다른 어셈블리에서 '*소스*'
 C4946|관련된 클래스 간에 사용 되는 reinterpret_cast: '*선언*'및'*선언*'
 C4995|'*이름*': 이름 #pragma 사용 되지 않는 것으로 표시 되었습니다
-C4996|'*issue*': *description*
+C4996|'*문제*': *설명*
 C4997|'*형식*': coclass가 COM 인터페이스 또는 의사 (pseudo) 인터페이스를 구현 하지 않습니다
 C4998|예상 실패: *설명*(*번호*)
 

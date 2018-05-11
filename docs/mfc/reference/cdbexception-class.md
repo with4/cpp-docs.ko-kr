@@ -1,12 +1,9 @@
 ---
-title: "잠금을 클래스 | Microsoft Docs"
-ms.custom: 
+title: 잠금을 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDBException
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295b0d9ed9ce37988766455741a168b8c1d5ee6b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 824ac88326042eb55ecb9667c39331d1ab5464e7
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdbexception-class"></a>잠금을 클래스
 데이터베이스 클래스에서 발생하는 예외 상태를 나타냅니다.  
@@ -53,7 +48,7 @@ class CDBException : public CException
 |[CDBException::m_strStateNativeOrigin](#m_strstatenativeorigin)|ODBC에서 반환 된 오류 코드를 기준으로 오류를 설명 하는 문자열을 포함 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 클래스는 예외를 설명 하는 텍스트 메시지를 표시 하려면 또는 예외의 원인을 확인 하기 위해 사용할 수 있습니다 하는 두 명의 공용 데이터 멤버를 포함 합니다. `CDBException`개체 생성 되며 데이터베이스 클래스의 멤버 함수에 의해 throw 됩니다.  
+ 클래스는 예외를 설명 하는 텍스트 메시지를 표시 하려면 또는 예외의 원인을 확인 하기 위해 사용할 수 있습니다 하는 두 명의 공용 데이터 멤버를 포함 합니다. `CDBException` 개체 생성 되며 데이터베이스 클래스의 멤버 함수에 의해 throw 됩니다.  
   
 > [!NOTE]
 >  이 클래스는 MFC의 ODBC Open Database Connectivity () 클래스 중 하나입니다. 대신 신규 개체 DAO (Data Access) 클래스를 사용할 경우 사용 하 여 [CDaoException](../../mfc/reference/cdaoexception-class.md) 대신 합니다. 모든 DAO 클래스 이름에는 접두사로 "CDao"는 합니다. 자세한 내용은 문서 참조 [개요: 데이터베이스 프로그래밍](../../data/data-access-programming-mfc-atl.md)합니다.  
@@ -74,7 +69,7 @@ class CDBException : public CException
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdb.h  
   
-##  <a name="m_nretcode"></a>CDBException::m_nRetCode  
+##  <a name="m_nretcode"></a>  CDBException::m_nRetCode  
  형식의 ODBC 오류 코드를 포함 **RETCODE** API (인터페이스) 함수를 프로그래밍 하는 ODBC 응용 프로그램에서 반환 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -124,13 +119,13 @@ class CDBException : public CException
   
  SQL 맨 앞에 나오는 코드는 ODBC에서 정의 됩니다. AFX 맨 앞에 나오는 코드 AFXDB에서 정의 됩니다. H, MFC\INCLUDE에서 찾을 수 있습니다.  
   
-##  <a name="m_strerror"></a>CDBException::m_strError  
+##  <a name="m_strerror"></a>  CDBException::m_strError  
  예외를 발생 시킨 오류를 설명 하는 문자열을 포함 합니다.  
   
 ### <a name="remarks"></a>설명  
  영숫자 측면에서 오류를 설명 하는 문자열입니다. 자세한 내용 및 예제를 참조 하세요. **m_strStateNativeOrigin**합니다.  
   
-##  <a name="m_strstatenativeorigin"></a>CDBException::m_strStateNativeOrigin  
+##  <a name="m_strstatenativeorigin"></a>  CDBException::m_strStateNativeOrigin  
  예외를 발생 시킨 오류를 설명 하는 문자열을 포함 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -146,7 +141,7 @@ class CDBException : public CException
   
  이 문자열을 확인 하는 데 사용 하는 코드에 대 한 자세한 내용은 참조는 [SQLError](https://msdn.microsoft.com/library/ms716312.aspx) 함수는 *ODBC Programmer's Reference*합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   ODBC:에서 "상태: S0022, 네이티브: 207, 원본: [Microsoft] [ODBC SQL Server Driver] [SQL Server] 잘못 된 열 이름 'ColName'"  
   
  **m_strStateNativeOrigin**: "상태: S0022, 네이티브: 207, 원본: [Microsoft] [ODBC SQL Server Driver] [SQL Server]"  

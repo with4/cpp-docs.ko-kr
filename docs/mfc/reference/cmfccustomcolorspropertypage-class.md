@@ -1,12 +1,9 @@
 ---
-title: "CMFCCustomColorsPropertyPage 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCCustomColorsPropertyPage 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCCustomColorsPropertyPage
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCCustomColorsPropertyPage [MFC], Setup
 ms.assetid: 46a45ba2-1fda-440d-8018-d4dcd44f5816
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7dac4260c69e4d2bbf9c74965e73f6961dd6ad6b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8c02c2590e4143460a2cd89bb2b7e7e167c92c0e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfccustomcolorspropertypage-class"></a>CMFCCustomColorsPropertyPage 클래스
 색 대화 상자에서 사용자 지정 색을 선택할 수 있는 속성 페이지를 나타냅니다.  
@@ -59,7 +54,7 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
 ### <a name="remarks"></a>설명  
  `CMFCColorDialog` 클래스가이 클래스를 사용 하 여 사용자 지정 색 속성 페이지를 표시 합니다. 에 대 한 자세한 내용은 `CMFCColorDialog`, 참조 [CMFCColorDialog 클래스](../../mfc/reference/cmfccolordialog-class.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 생성 하는 방법을 `CMFCCustomColorsPropertyPage` 개체 및 속성 페이지의 색상 구성 요소를 설정 합니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#35](../../mfc/reference/codesnippet/cpp/cmfccustomcolorspropertypage-class_1.cpp)]  
@@ -80,7 +75,7 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcustomcolorspropertypage.h  
   
-##  <a name="setup"></a>CMFCCustomColorsPropertyPage::Setup  
+##  <a name="setup"></a>  CMFCCustomColorsPropertyPage::Setup  
  속성 페이지의 색상 구성 요소를 설정합니다.  
   
 ```  

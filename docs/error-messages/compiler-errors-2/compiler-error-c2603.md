@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C2603 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C2603 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2603
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C2603
 ms.assetid: 9ca520d0-f082-4b65-933d-17c3bcf8b02c
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c06c5747a3d785242e8b926fe6e1eaa251a2d8b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68bde3e3fd3319b4c37adcffad4e95aa2544f9fa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2603"></a>컴파일러 오류 C2603  
   
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
   
 이 문제를 해결 하려면 최신 버전의 Visual c + + 컴파일러 도구 집합을 적용 하거나 가능 하면 /Zc:threadSafeInit-컴파일러 옵션을 제거는 것이 좋습니다. 없는 경우에 정적 개체를 결합 하는 것이 좋습니다. 개체가 동일한 형식의 않으면는 해당 유형의 단일 정적 배열 사용 하 여을 필요에 따라 개별 멤버를 참조 합니다.
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 다음 코드에서는 C2603 경고가 발생 하 고를 해결 하는 방법을 보여 줍니다.  
   

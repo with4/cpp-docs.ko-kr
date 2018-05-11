@@ -2,11 +2,8 @@
 title: CHotKeyCtrl 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CHotKeyCtrl
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-caps.latest.revision: 23
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 982d4dec9c00490248da0b0e0dec7fd44376c218
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 590914ac312a4f998eb759beb08ed2e7935874fb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl 클래스
 Windows의 공용 바로 가기 컨트롤의 기능을 제공합니다.  
@@ -95,14 +90,14 @@ class CHotKeyCtrl : public CWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxcmn.h  
   
-##  <a name="chotkeyctrl"></a>CHotKeyCtrl::CHotKeyCtrl  
+##  <a name="chotkeyctrl"></a>  CHotKeyCtrl::CHotKeyCtrl  
  `CHotKeyCtrl` 개체를 생성합니다.  
   
 ```  
 CHotKeyCtrl();
 ```  
   
-##  <a name="create"></a>CHotKeyCtrl::Create  
+##  <a name="create"></a>  CHotKeyCtrl::Create  
  바로 가기 키 컨트롤을 만들고에 연결 된 `CHotKeyCtrl` 개체입니다.  
   
 ```  
@@ -134,7 +129,7 @@ virtual BOOL Create(
   
  컨트롤 확장된 창 스타일을 사용 하려면 호출 [CreateEx](#createex) 대신 **만들기**합니다.  
   
-##  <a name="createex"></a>CHotKeyCtrl::CreateEx  
+##  <a name="createex"></a>  CHotKeyCtrl::CreateEx  
  컨트롤 (자식 창)을 만들고 사용 하 여 연결 하려면이 함수를 호출 하 여 `CHotKeyCtrl` 개체입니다.  
   
 ```  
@@ -166,9 +161,9 @@ virtual BOOL CreateEx(
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 사용 하 여 `CreateEx` 대신 [만들기](#create) Windows 확장된 스타일 접두사에 의해 지정 된 확장된 창 스타일을 적용할 **WS_EX_**합니다.  
+ 사용 하 여 `CreateEx` 대신 [만들기](#create) Windows 확장된 스타일 접두사에 의해 지정 된 확장된 창 스타일을 적용할 **WS_EX_** 합니다.  
   
-##  <a name="gethotkey"></a>CHotKeyCtrl::GetHotKey  
+##  <a name="gethotkey"></a>  CHotKeyCtrl::GetHotKey  
  바로 가기 키 컨트롤에서 가상 키 코드 및 한정자의 플래그 바로 가기 키를 검색합니다.  
   
 ```  
@@ -201,7 +196,7 @@ void GetHotKey(
 ### <a name="remarks"></a>설명  
  가상 키 코드와 함께 보조 키의 바로 가기 키를 정의합니다.  
   
-##  <a name="gethotkeyname"></a>CHotKeyCtrl::GetHotKeyName  
+##  <a name="gethotkeyname"></a>  CHotKeyCtrl::GetHotKeyName  
  바로 가기 키의 지역화 된 이름을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -214,7 +209,7 @@ CString GetHotKeyName() const;
 ### <a name="remarks"></a>설명  
  이 멤버 함수를 반환 하는 이름을 키보드 드라이버에서 제공 됩니다. 지역화 된 버전의 Windows에서의 키보드 지역화 되지 않은 드라이버를 설치할 수 있으며 반대의 합니다.  
   
-##  <a name="getkeyname"></a>CHotKeyCtrl::GetKeyName  
+##  <a name="getkeyname"></a>  CHotKeyCtrl::GetKeyName  
  지정 된 가상 키 코드에 할당 된 키의 지역화 된 이름을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -236,10 +231,10 @@ static CString GetKeyName(
 ### <a name="remarks"></a>설명  
  지역화 된 버전의 Windows에서의 키보드 지역화 되지 않은 드라이버를 설치할 수 있도록 키보드 드라이버에서이 함수가 반환 하는 키 이름을 제공 하며 그 반대 과정도 수행 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCControlLadenDialog#69](../../mfc/codesnippet/cpp/chotkeyctrl-class_1.cpp)]  
   
-##  <a name="sethotkey"></a>CHotKeyCtrl::SetHotKey  
+##  <a name="sethotkey"></a>  CHotKeyCtrl::SetHotKey  
  바로 가기 키 컨트롤에 대 한 바로 가기 키를 설정합니다.  
   
 ```  
@@ -267,7 +262,7 @@ void SetHotKey(
 ### <a name="remarks"></a>설명  
  가상 키 코드와 함께 보조 키의 바로 가기 키를 정의합니다.  
   
-##  <a name="setrules"></a>CHotKeyCtrl::SetRules  
+##  <a name="setrules"></a>  CHotKeyCtrl::SetRules  
  잘못 된 조합 및 바로 가기 키 컨트롤에 대 한 기본 한정자 조합이 정의 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -280,21 +275,21 @@ void SetRules(
  `wInvalidComb`  
  잘못 된 키 조합을 지정 하는 플래그의 배열입니다. 다음 값의 조합 수 있습니다.  
   
-- `HKCOMB_A`ALT  
+- `HKCOMB_A` ALT  
   
-- `HKCOMB_C`CTRL  
+- `HKCOMB_C` CTRL  
   
-- `HKCOMB_CA`CTRL + ALT  
+- `HKCOMB_CA` CTRL + ALT  
   
-- `HKCOMB_NONE`수정 되지 않은 키  
+- `HKCOMB_NONE` 수정 되지 않은 키  
   
-- `HKCOMB_S`SHIFT 키  
+- `HKCOMB_S` SHIFT 키  
   
-- `HKCOMB_SA`SHIFT + ALT  
+- `HKCOMB_SA` SHIFT + ALT  
   
-- `HKCOMB_SC`SHIFT + CTRL  
+- `HKCOMB_SC` SHIFT + CTRL  
   
-- `HKCOMB_SCA`SHIFT + CTRL + ALT  
+- `HKCOMB_SCA` SHIFT + CTRL + ALT  
   
  `wModifiers`  
  잘못 된 조합이 입력할 때 사용할 키 조합을 지정 하는 플래그의 배열입니다. 보조키 플래그에 대 한 자세한 내용은 참조 하십시오. [GetHotKey](#gethotkey)합니다.  

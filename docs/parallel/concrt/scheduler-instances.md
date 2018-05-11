@@ -1,29 +1,24 @@
 ---
-title: "스케줄러 인스턴스 | Microsoft Docs"
-ms.custom: 
+title: 스케줄러 인스턴스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1688a2b689b3fc3391e617f3d65d3c681f05a84f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4f09a5708fd9140619eea60fb8e483c2e26165d1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="scheduler-instances"></a>Scheduler 인스턴스
 이 문서에서는 동시성 런타임 및 사용 하는 방법에 대 한 스케줄러 인스턴스의 역할과 설명는 [concurrency:: scheduler](../../parallel/concrt/reference/scheduler-class.md) 및 [concurrency:: currentscheduler](../../parallel/concrt/reference/currentscheduler-class.md) 만들고 관리 하는 클래스 스케줄러 인스턴스입니다. 스케줄러 인스턴스는 특정 유형의 작업 부하와 명시적 일정 예약 정책을 연결 하려는 경우에 유용 합니다. 예를 들어 높은 스레드 우선 순위로 일부 작업을 실행하기 위한 스케줄러 인스턴스를 하나 만들고, 기본 스케줄러를 사용하여 보통 스레드 우선 순위로 다른 작업을 실행할 수 있습니다.  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [예제](#example)  
   
-##  <a name="classes"></a>스케줄러 및 CurrentScheduler 클래스  
+##  <a name="classes"></a> 스케줄러 및 CurrentScheduler 클래스  
  작업 스케줄러를 사용 하면 하나 이상의 응용 프로그램 *스케줄러 인스턴스* 작업 일정을 예약할 합니다. [concurrency:: scheduler](../../parallel/concrt/reference/scheduler-class.md) 클래스는 스케줄러 인스턴스를 나타내고 작업 예약과 관련 된 기능을 캡슐화 합니다.  
   
  스케줄러에 연결 하는 스레드는 라고는 *실행 컨텍스트*, 또는 그냥 *컨텍스트*합니다. 언제 든 지 한 스케줄러를 현재 컨텍스트에서 활성화할 수 있습니다. 활성 스케줄러가 라고도 *현재 스케줄러*합니다. 동시성 런타임에서 사용 하 여는 [concurrency:: currentscheduler](../../parallel/concrt/reference/currentscheduler-class.md) 를 현재 스케줄러에 대 한 액세스를 제공 하는 클래스입니다. 한 컨텍스트가 대 한 현재 스케줄러 다른 컨텍스트에 대 한 현재 스케줄러에서 다를 수 있습니다. 런타임에서 현재 스케줄러에 대 한 프로세스 수준의 표현을 제공 하지 않습니다.  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="creating"></a>스케줄러 인스턴스 만들기  
+##  <a name="creating"></a> 스케줄러 인스턴스 만들기  
  이러한 세 가지 방법으로 만들려는 `Scheduler` 개체:  
   
 -   스케줄러가 없는 경우 런타임 기능을 예를 들어 병렬 알고리즘을 사용 하 여 작업을 수행 하는 경우 런타임은 기본 스케줄러를 만듭니다. 기본 스케줄러는 병렬 작업을 시작 하는 컨텍스트에 대 한 현재 스케줄러가 됩니다.  
@@ -69,7 +64,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="managing"></a>스케줄러 인스턴스 수명 관리  
+##  <a name="managing"></a> 스케줄러 인스턴스 수명 관리  
  런타임에서 참조 횟수 메커니즘의 수명을 제어를 사용 하 여 `Scheduler` 개체입니다.  
   
 
@@ -98,7 +93,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="features"></a>메서드 및 기능  
+##  <a name="features"></a> 메서드 및 기능  
  이 섹션의 중요 한 메서드에 대해 요약 하는 `CurrentScheduler` 및 `Scheduler` 클래스입니다.  
   
  간주할는 `CurrentScheduler` 으로 현재 컨텍스트에서 사용 하기 위해 스케줄러를 만들기 위한 도우미 클래스입니다. `Scheduler` 클래스를 사용 하면 다른 컨텍스트에 속하는 스케줄러 제어할 수 있습니다.  
@@ -113,7 +108,7 @@ ms.lasthandoff: 12/21/2017
 |[RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent)|런타임에서 현재 스케줄러에서 소멸 될 때 설정 하는 이벤트를 등록 합니다.|  
 |[CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup)|만듭니다는 [concurrency:: schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md) 현재 스케줄러에는 개체입니다.|  
 |[ScheduleTask](reference/currentscheduler-class.md#scheduletask)|현재 스케줄러의 일정 큐에 간단한 작업을 추가합니다.|  
-|[정책 가져오기](reference/currentscheduler-class.md#getpolicy)|연결 된 현재 스케줄러 정책의 복사본을 검색 합니다.|  
+|[GetPolicy](reference/currentscheduler-class.md#getpolicy)|연결 된 현재 스케줄러 정책의 복사본을 검색 합니다.|  
   
  다음 표에서 여 정의 된 중요 한 메서드는 `Scheduler` 클래스입니다.  
   
@@ -126,7 +121,7 @@ ms.lasthandoff: 12/21/2017
 |[RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent)|런타임을 설정 하는 이벤트를 등록 하는 `Scheduler` 개체를 제거 합니다.|  
 |[CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup)|만듭니다는 [concurrency:: schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md) 개체는 `Scheduler` 개체입니다.|  
 |[ScheduleTask](reference/scheduler-class.md#scheduletask)|간단한 작업을 예약 하는 `Scheduler` 개체입니다.|  
-|[정책 가져오기](reference/scheduler-class.md#getpolicy)|연결 된 정책의 복사본을 검색 된 `Scheduler` 개체입니다.|  
+|[GetPolicy](reference/scheduler-class.md#getpolicy)|연결 된 정책의 복사본을 검색 된 `Scheduler` 개체입니다.|  
 |[SetDefaultSchedulerPolicy](reference/scheduler-class.md#setdefaultschedulerpolicy)|기본 스케줄러를 만들 때 사용 하 여 런타임에 대 한 정책을 설정 합니다.|  
 |[ResetDefaultSchedulerPolicy](reference/scheduler-class.md#resetdefaultschedulerpolicy)|기본 정책을 호출 하기 전에 활성 상태 였던 책갈피로 복원 `SetDefaultSchedulerPolicy`합니다. 를이 호출 후 기본 스케줄러를 만드는 경우 런타임 기본 정책 설정과 사용 하 여 스케줄러를 만듭니다.|  
 

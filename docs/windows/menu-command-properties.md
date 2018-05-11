@@ -1,30 +1,25 @@
 ---
-title: "메뉴 명령 속성 | Microsoft Docs"
-ms.custom: 
+title: 메뉴 명령 속성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - menu items, properties
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 186790db57c20abf9f67f693ff60029257ebd4f0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 343c1ce255a26753c2b125d2a0a53e04808a0233
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="menu-command-properties"></a>메뉴 명령 속성
 아래 정보는 메뉴 명령을 선택하면 [속성 창](/visualstudio/ide/reference/properties-window) 에 나타나는 메뉴 속성에 따라 구성됩니다. 이 속성은 사전순으로 나열되어 있으며, 실제 속성 창에서는 이 속성을 범주별로 볼 수 있습니다.  

@@ -1,31 +1,26 @@
 ---
-title: "방법: 대화 상자에 사용자 정의 컨트롤 및 호스트 만들기 | Microsoft Docs"
-ms.custom: 
+title: '방법: 대화 상자에 사용자 정의 컨트롤 및 호스트 만들기 | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: 03a53032-2f03-4fa2-b567-031615a26011
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 81a618c46f08366b9de2a02cbf84f73d42e7b108
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 20472a80b35318fa4c6d34221a61345de9e40f9e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>방법: 대화 상자에 사용자 정의 컨트롤 및 호스트 만들기
 이 문서의 단계를 만들고 있는 대화 상자 기반 가정 ([CDialog 클래스](../mfc/reference/cdialog-class.md)) Microsoft Foundation 클래스 (MFC) 프로젝트에 있지만 추가할 수 있습니다도 Windows Forms 컨트롤에 대 한 지원을 기존 MFC 대화 상자에 있습니다.  
@@ -74,11 +69,11 @@ ms.lasthandoff: 12/21/2017
   
      **솔루션 탐색기**m f c 01 프로젝트 노드를 마우스 오른쪽 단추로 클릭 한 다음 클릭 **속성**합니다.  
   
-     에 **속성 페이지** 대화 상자의 **구성 속성**선택, **일반**합니다. 에 **프로젝트 기본값** 섹션에서 설정 **공용 언어 런타임 지원** 를 **공용 언어 런타임 지원 (/ clr)**합니다.  
+     에 **속성 페이지** 대화 상자의 **구성 속성**선택, **일반**합니다. 에 **프로젝트 기본값** 섹션에서 설정 **공용 언어 런타임 지원** 를 **공용 언어 런타임 지원 (/ clr)** 합니다.  
   
-     아래 **구성 속성**를 확장 하 고 **C/c + +** 선택 하 고는 **일반** 노드. 설정 **디버깅 정보 형식** 를 **프로그램 데이터베이스 (/Zi)**합니다.  
+     아래 **구성 속성**를 확장 하 고 **C/c + +** 선택 하 고는 **일반** 노드. 설정 **디버깅 정보 형식** 를 **프로그램 데이터베이스 (/Zi)** 합니다.  
   
-     선택 된 **코드 생성** 노드. 설정 **최소 다시 빌드를 사용 하도록 설정** 를 **아니요 (/ Gm-)**합니다. 또한 설정 **기본 런타임 검사** 를 **기본**합니다.  
+     선택 된 **코드 생성** 노드. 설정 **최소 다시 빌드를 사용 하도록 설정** 를 **아니요 (/ Gm-)** 합니다. 또한 설정 **기본 런타임 검사** 를 **기본**합니다.  
   
      클릭 **확인** 변경 내용을 적용 합니다.  
   

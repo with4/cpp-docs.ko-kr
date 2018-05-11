@@ -1,13 +1,10 @@
 ---
-title: "CArchive 개체를 만드는 두 가지 | Microsoft Docs"
-ms.custom: 
+title: CArchive 개체를 만드는 두 가지 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - CArchive
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b1db549544d421600ed6dae1a8a987006c2ab6c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87abaa5a3564c61a6944e0cc31e81375f92a3a80
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>CArchive 개체를 만드는 두 가지 방법
 두 가지 방법으로 만들 수는 `CArchive` 개체:  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [CArchive 개체의 명시적 만들기](#_core_explicit_creation_of_a_carchive_object)  
   
-##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a>CArchive 개체는 프레임 워크를 통해 암시적 생성  
+##  <a name="_core_implicit_creation_of_a_carchive_object_via_the_framework"></a> CArchive 개체는 프레임 워크를 통해 암시적 생성  
  가장 일반적이 고, 쉬운 방법은 만드는 프레임 워크는 `CArchive` 저장, 다른 이름으로 저장 및 열기 명령을 파일 메뉴에서 사용 하는 대신에 대 한 개체입니다.  
   
  프레임 워크 이름으로 저장 명령을 파일 메뉴에서를 발급 하는 사용자 응용 프로그램의 경우는 다음과 같습니다.  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
  따라서 만드는 프레임 워크를 사용 하는 경우는 `CArchive` 문서의 구현가 해야 할 모든 개체, 문서에 대 한 `Serialize` 기록 하는 보관 파일에서 읽고 함수입니다. 도 구현 해야 할 `Serialize` 에 대 한 `CObject`-파생 개체를 문서의 `Serialize` 함수를 직접 또는 간접적으로 차례로 serialize 합니다.  
   
-##  <a name="_core_explicit_creation_of_a_carchive_object"></a>CArchive 개체의 명시적 만들기  
+##  <a name="_core_explicit_creation_of_a_carchive_object"></a> CArchive 개체의 명시적 만들기  
  프레임 워크를 통해 문서를 직렬화 하는 작업 외에도 기타 경우 필요할 때에 대해서는 `CArchive` 개체입니다. 가 나타내는 클립보드의 데이터를 serialize 하려는 하는 예를 들어 한 `CSharedFile` 개체입니다. 또는 프레임 워크에서 제공한 것과에서 다른 파일을 저장 하기 위한 사용자 인터페이스를 사용 하는 것이 좋습니다. 이 경우 명시적으로 만들어야는 `CArchive` 개체입니다. 이렇게 하면 프레임 워크는 동일한 방식으로 다음 절차를 사용 합니다.  
   
 #### <a name="to-explicitly-create-a-carchive-object"></a>CArchive 개체를 명시적으로  

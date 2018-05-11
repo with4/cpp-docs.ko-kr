@@ -1,12 +1,9 @@
 ---
-title: "CMFCPropertyGridFontProperty 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCPropertyGridFontProperty 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCPropertyGridFontProperty
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CMFCPropertyGridFontProperty [MFC], GetColor
 - CMFCPropertyGridFontProperty [MFC], GetLogFont
 ms.assetid: 83693f33-bbd3-4fcb-a9ad-fa79fcf2ca24
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 505f48bcfb867ae8444d8dbbee360bb04e23d8e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5e7acda3bf3734a325c7d603489c1305cb63bc3d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty 클래스
 `CMFCPropertyGridFileProperty` 클래스 글꼴 선택 대화 상자를 여는 속성 목록 컨트롤 항목을 지원 합니다.  
@@ -73,7 +68,7 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxpropertygridctrl.h  
   
-##  <a name="cmfcpropertygridfontproperty"></a>CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty  
+##  <a name="cmfcpropertygridfontproperty"></a>  CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty  
  `CMFCPropertyGridFontProperty` 개체를 생성합니다.  
   
 ```  
@@ -108,12 +103,12 @@ CMFCPropertyGridFontProperty(
 ### <a name="remarks"></a>설명  
  A `CMFCPropertyGridFontProperty` 개체 속성 표 글꼴 컨트롤의 글꼴 속성을 나타냅니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는의 개체를 구성 하는 방법을 `CMFCPropertyGridFontProperty` 클래스입니다. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#26](../../mfc/reference/codesnippet/cpp/cmfcpropertygridfontproperty-class_1.cpp)]  
   
-##  <a name="getcolor"></a>CMFCPropertyGridFontProperty::GetColor  
+##  <a name="getcolor"></a>  CMFCPropertyGridFontProperty::GetColor  
  글꼴 대화 상자에서 사용자가 선택한 글꼴 색을 검색 합니다.  
   
 ```  
@@ -125,7 +120,7 @@ COLORREF GetColor() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getlogfont"></a>CMFCPropertyGridFontProperty::GetLogFont  
+##  <a name="getlogfont"></a>  CMFCPropertyGridFontProperty::GetLogFont  
  글꼴 대화 상자에서 사용자가 선택한 글꼴을 가져옵니다.  
   
 ```  

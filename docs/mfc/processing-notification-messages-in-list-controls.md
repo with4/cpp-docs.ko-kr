@@ -1,30 +1,25 @@
 ---
-title: "목록 컨트롤에서 알림 메시지 처리 | Microsoft Docs"
-ms.custom: 
+title: 목록 컨트롤에서 알림 메시지 처리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - processing notifications [MFC]
 - CListCtrl class [MFC], processing notifications
 ms.assetid: 1f0e296e-d2a3-48fc-ae38-51d7fb096f51
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c4a900b6fe0741de852c15afca37a974fc3e989
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af648a0bf4ae78c5c5e8bcceeac12c5dbc87307a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="processing-notification-messages-in-list-controls"></a>목록 컨트롤에서 알림 메시지 처리
 사용자가 열 머리글을 클릭 아이콘, 레이블 및 이런 식으로 목록 컨트롤을 편집 ([CListCtrl](../mfc/reference/clistctrl-class.md))를 해당 부모 창 알림 메시지를 보냅니다. 이에 대한 응답으로 작업을 수행하려는 경우 이러한 메시지를 처리합니다. 예를 들어 사용자가 열 머리글을 클릭할 때 클릭 한 열에서와 같이 Microsoft Outlook의 내용에 따라 항목을 정렬 하는 것이 좋습니다.  

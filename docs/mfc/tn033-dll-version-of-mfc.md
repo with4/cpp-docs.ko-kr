@@ -1,13 +1,10 @@
 ---
-title: "TN033: MFC의 DLL 버전 | Microsoft Docs"
-ms.custom: 
+title: 'TN033: MFC의 DLL 버전 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.dll
 dev_langs:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - DLL version of MFC [MFC]
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba51ca465bec2a6400106071fcba94d36ad100e2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a247ffc36b3e0eb3e52c6f04949c693597d73064
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033: MFC의 DLL 버전
 이 노트 방법을 MFCxx.DLL를 사용할 수 있습니다 및 MFCxxD.DLL (여기서 x는 MFC 버전 번호) 공유 동적 연결 라이브러리 MFC 응용 프로그램 및 MFC 확장 Dll 설명 합니다. 일반 MFC Dll에 대 한 자세한 내용은 참조 [DLL의 일부로 MFC 사용 하 여](../mfc/tn011-using-mfc-as-part-of-a-dll.md)합니다.  
@@ -97,7 +92,7 @@ ms.lasthandoff: 12/21/2017
   
 -   MFCxx.DLL (및 기타) 배송 필요 전달 공유 라이브러리를 사용 하는 응용 프로그램과 함께 라이브러리입니다. 여러 Dll 같은 무료로 재배포할 MFCxx.DLL 이지만 여전히 항상 설치 프로그램에서 DLL를 설치 해야 합니다. 또한 프로그램와 MFC Dll 자체 둘 다에서 사용 되는 C 런타임 라이브러리를 포함 하는 MSVCRTxx.DLL를 배송 해야 합니다.  
   
-##  <a name="_mfcnotes_how_to_write_an_mfc_extension_dll"></a>MFC 확장 DLL을 작성 하는 방법  
+##  <a name="_mfcnotes_how_to_write_an_mfc_extension_dll"></a> MFC 확장 DLL을 작성 하는 방법  
  MFC 확장명 DLL은 클래스와 MFC 클래스의 기능을 멋지게 꾸밀에 기록 하는 함수를 포함 하는 DLL입니다. MFC 확장 DLL 공유 MFC Dll을 사용 하 여 같은 방식으로 응용 프로그램,를 사용 하 여 몇 가지 사항을 추가로 고려해 야 합니다.  
   
 -   빌드 프로세스 공유 MFC 라이브러리를 사용 하 여 몇 가지 추가 컴파일러 및 링커 옵션을 사용 하는 응용 프로그램을 구축 하는 것과 비슷합니다.  
@@ -137,16 +132,16 @@ ms.lasthandoff: 12/21/2017
   
 -   추가 **/D_AFXEXT** 컴파일러 플래그를 합니다. 프로젝트 속성 대화 상자에서 C/c + + 노드를 선택 합니다. 다음 전처리기 범주를 선택 합니다. 추가 `_AFXEXT` 매크로 정의 필드에 각 항목의 세미콜론으로 구분 합니다.  
   
--   제거는 **/Gy** 컴파일러 스위치입니다. 프로젝트 속성 대화 상자에서 C/c + + 노드를 선택 합니다. 다음 코드 생성 범주를 선택 합니다. "함수 수준 링크 사용" 옵션 설정 되어 있지 않은지 확인 합니다. 이 쉽게 클래스를 내보내면 있으므로 링커가 참조 되지 않는 함수를 제거 하지 것입니다. MFC DLL 변경 MFC에 정적으로 링크는 원래 프로젝트 일반 빌드에 사용 되는 경우는 **/MT [d]** 컴파일러 옵션을 **/MD [d]**합니다.  
+-   제거는 **/Gy** 컴파일러 스위치입니다. 프로젝트 속성 대화 상자에서 C/c + + 노드를 선택 합니다. 다음 코드 생성 범주를 선택 합니다. "함수 수준 링크 사용" 옵션 설정 되어 있지 않은지 확인 합니다. 이 쉽게 클래스를 내보내면 있으므로 링커가 참조 되지 않는 함수를 제거 하지 것입니다. MFC DLL 변경 MFC에 정적으로 링크는 원래 프로젝트 일반 빌드에 사용 되는 경우는 **/MT [d]** 컴파일러 옵션을 **/MD [d]** 합니다.  
   
 -   와 내보내기 라이브러리인 빌드는 **/DLL** 링크 하는 옵션입니다. 이 대상 유형으로 Win32 동적 연결 라이브러리를 지정 하는 새 대상을 만들 때 설정 됩니다.  
   
 ### <a name="changing-your-header-files"></a>헤더 파일 변경  
  MFC 확장 DLL의 목표는 일반적으로 해당 기능을 사용할 수 있는 하나 이상의 응용 프로그램에 몇 가지 일반적인 기능을 내보내려면 합니다. 이 클래스와 클라이언트 응용 프로그램에 사용할 수 있는 전역 함수 내보내기에 따라 결정 합니다.  
   
- 이 작업을 수행 하기 위해 가져오거나 적절 하 게 내보낼 처럼 표시 되어 멤버 함수는 각각 되도록 해야 합니다. 이 위해서는 특수 선언: **__declspec (dllexport)** 및 **__declspec (dllimport)**합니다. 클래스는 클라이언트 응용 프로그램에서 사용 되는 경우 원하는로 선언 해야 **__declspec (dllimport)**합니다. MFC 확장 DLL 자체를 작성할 때 것으로 선언 해야 **__declspec (dllexport)**합니다. 또한 함수가 실제로 내보내야 하며, 클라이언트 프로그램을 로드할 때 바인딩하고 되도록 합니다.  
+ 이 작업을 수행 하기 위해 가져오거나 적절 하 게 내보낼 처럼 표시 되어 멤버 함수는 각각 되도록 해야 합니다. 이 위해서는 특수 선언: **__declspec (dllexport)** 및 **__declspec (dllimport)** 합니다. 클래스는 클라이언트 응용 프로그램에서 사용 되는 경우 원하는로 선언 해야 **__declspec (dllimport)** 합니다. MFC 확장 DLL 자체를 작성할 때 것으로 선언 해야 **__declspec (dllexport)** 합니다. 또한 함수가 실제로 내보내야 하며, 클라이언트 프로그램을 로드할 때 바인딩하고 되도록 합니다.  
   
- 전체 클래스를 내보내려면 **AFX_EXT_CLASS** 클래스 정의에 있습니다. 이 매크로로 프레임 워크에 의해 정의 된 **__declspec (dllexport)** 때 **_AFXDLL** 및 `_AFXEXT` 정의 되지만로 정의 **__declspec (dllimport)** 때 `_AFXEXT` 정의 되어 있지 않습니다. `_AFXEXT`MFC 확장 DLL을 빌드하는 경우에 위에서 설명한 대로 정의 됩니다. 예:  
+ 전체 클래스를 내보내려면 **AFX_EXT_CLASS** 클래스 정의에 있습니다. 이 매크로로 프레임 워크에 의해 정의 된 **__declspec (dllexport)** 때 **_AFXDLL** 및 `_AFXEXT` 정의 되지만로 정의 **__declspec (dllimport)** 때 `_AFXEXT` 정의 되어 있지 않습니다. `_AFXEXT` MFC 확장 DLL을 빌드하는 경우에 위에서 설명한 대로 정의 됩니다. 예를 들어:  
   
 ```  
 class AFX_EXT_CLASS CExampleExport : public CObject  
@@ -156,7 +151,7 @@ class AFX_EXT_CLASS CExampleExport : public CObject
 ### <a name="not-exporting-the-entire-class"></a>전체 클래스를 내보내지 않는 경우  
  따라 클래스의 필요한 개별 구성원만 내보낼 할 수도 있습니다. 예를 들어, 내보내는 경우는 `CDialog`-파생 클래스 생성자는 내보낼 하기만 하면 및 `DoModal` 호출 합니다. DLL의를 사용 하 여 이러한 멤버를 내보낼 수 있습니다. DEF 파일 있지만 있습니다 사용할 수도 **AFX_EXT_CLASS** 내보내야 하는 개별 멤버에 거의 동일한 방법으로 합니다.  
   
- 예:  
+ 예를 들어:  
   
 ```  
 class CExampleDialog : public CDialog  
@@ -192,7 +187,7 @@ protected: \
   
  위에서 설명 했 듯이 **AFX_EXT_CLASS** 이런 방식이으로에 이미 정의 되었습니다. 다시 정의 해야 `AFX_DATA` 와 동일 하 게 **AFX_EXT_CLASS** 주위 클래스 정의 합니다.  
   
- 예:  
+ 예를 들어:  
   
 ```  
 #undef  AFX_DATA  
@@ -258,7 +253,7 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ### <a name="not-exporting-the-entire-class"></a>전체 클래스를 내보내지 않는 경우  
  다시, 전체 클래스를 내보내지 않는 경우 각별히 주의 해야 합니다. MFC 매크로로 만들어 필요한 데이터 항목 내보내집니다 확인 해야 합니다. 다시 정의 하 여이 작업을 수행할 수 있습니다 **AFX_DATA** 특정 클래스의 매크로를 합니다. 이렇게 해야 전체 클래스를 내보내지 않는 언제 든 지 합니다.  
   
- 예:  
+ 예를 들어:  
   
 ```  
 // A.H  
@@ -387,9 +382,9 @@ extern "C" extern void WINAPI InitXxxDLL()
   
  Api를 사용 하 여만 특정 위치에서 리소스를 로드 하려는 경우 `AfxGetResourceHandle` 및 `AfxSetResourceHandle` 하 기존 핸들을 저장 하 고 새 핸들을 설정 합니다. 클라이언트 응용 프로그램에 반환 하기 전에 이전 리소스 핸들을 복원 해야 합니다. 샘플 TESTDLL2 메뉴를 명시적으로 로드 하기 위한이 접근 방식을 사용 합니다.  
   
- 목록 트래버스 단점이 약간 느려질 것 및 리소스 ID 범위 관리를 필요로 합니다. MFC 확장 Dll이 몇 개에 연결 하는 클라이언트 응용 프로그램 DLL 인스턴스 핸들을 지정 하지 않고도 DLL에서 제공 하는 리소스를 사용할 수 있다는 이점이 있습니다. `AfxFindResourceHandle`API는 순환 리소스 목록에 대 한 지정 된 일치 하는 합니다. 이름 및 리소스의 형식을 사용 해야 하 고 처음 발견 되는 리소스 핸들 (또는 NULL)를 반환 합니다.  
+ 목록 트래버스 단점이 약간 느려질 것 및 리소스 ID 범위 관리를 필요로 합니다. MFC 확장 Dll이 몇 개에 연결 하는 클라이언트 응용 프로그램 DLL 인스턴스 핸들을 지정 하지 않고도 DLL에서 제공 하는 리소스를 사용할 수 있다는 이점이 있습니다. `AfxFindResourceHandle` API는 순환 리소스 목록에 대 한 지정 된 일치 하는 합니다. 이름 및 리소스의 형식을 사용 해야 하 고 처음 발견 되는 리소스 핸들 (또는 NULL)를 반환 합니다.  
   
-##  <a name="_mfcnotes_writing_an_application_that_uses_the_dll_version"></a>DLL 버전을 사용 하 여 응용 프로그램 작성  
+##  <a name="_mfcnotes_writing_an_application_that_uses_the_dll_version"></a> DLL 버전을 사용 하 여 응용 프로그램 작성  
   
 ### <a name="application-requirements"></a>응용 프로그램 요구 사항  
  MFC의 공유 버전을 사용 하는 응용 프로그램 몇 가지 간단한 규칙을 따라야 합니다.  
@@ -446,7 +441,7 @@ extern "C" extern void WINAPI InitXxxDLL()
   
  MFC Dll을 다시 작성 하면 권장 되지 않습니다.  
   
-##  <a name="_mfcnotes_how_the_mfc30.dll_is_implemented"></a>MFCxx.DLL 구현 방법  
+##  <a name="_mfcnotes_how_the_mfc30.dll_is_implemented"></a> MFCxx.DLL 구현 방법  
  다음 섹션에서는 MFC DLL (MFCxx.DLL 및 MFCxxD.DLL)를 구현 하는 방법을 설명 합니다. 여기에 세부 정보 없는 이해 모든 수행 하려는 경우를 중요 응용 프로그램과 함께 MFC DLL을 사용 합니다. 여기에 세부 정보는 MFC 확장 DLL을 작성 하는 방법을 이해 하는 데 필수적이 지 않은 하지만이 구현을 이해 사용자 고유의 DLL을 작성 하는 데 도움이 될 수 있습니다.  
   
 ### <a name="implementation-overview"></a>구현 개요  

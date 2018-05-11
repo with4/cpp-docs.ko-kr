@@ -1,32 +1,27 @@
 ---
-title: "다중 스레드 C 프로그램 샘플 | Microsoft Docs"
-ms.custom: 
+title: 다중 스레드 C 프로그램 샘플 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 234a24152b0f5ce02caf3948baf7ee3b183622ed
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1584d52f9ea543c95363a0f7f03cdad80442ee1c
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sample-multithread-c-program"></a>샘플 다중 스레드 C 프로그램
 Bounce.c 샘플 다중 스레드 프로그램에서는 새입니다 스레드 때마다 문자는 **는** 또는 **A** 를 입력 합니다. 각 스레드는 화면 다른 색상의 웃는 얼굴을 반송 합니다. 최대 32 개의 스레드를 만들 수 있습니다. 프로그램의 정상적으로 종료 때 `q` 또는 **Q** 를 입력 합니다. 컴파일 및 Bounce.c 연결 하는 방법에 대 한 정보를 참조 하십시오. [프로그램 컴파일 및 링크 다중 스레드](../parallel/compiling-and-linking-multithread-programs.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="code"></a>코드  
   

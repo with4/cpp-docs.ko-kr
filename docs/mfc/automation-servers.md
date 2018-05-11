@@ -1,13 +1,10 @@
 ---
-title: "자동화 서버 | Microsoft Docs"
-ms.custom: 
+title: 자동화 서버 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - dispatch maps [MFC], Automation servers
 - servers, Automation
 ms.assetid: 523fd155-51ce-4f91-b986-b74bdbdd7d92
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a33cf8113825804ac831b518e371c4150f2620ad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 337d5a1ec25e8fc80cf867aecef0452b1d03fb2b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="automation-servers"></a>자동화 서버
 자동화를 다른 응용 프로그램에서 구현 된 개체를 조작 하거나 조작할 수 있도록 개체를 노출 시키는 응용 프로그램에 대 한 수 있게 합니다. 자동화 서버는 다른 응용 프로그램에 프로그래밍 가능 개체 (자동화 개체 라고 함)을 노출 하는 응용 프로그램 (호출 [자동화 클라이언트](../mfc/automation-clients.md)). 자동화 서버는 자동화 구성 요소 라고도 합니다.  
@@ -40,7 +35,7 @@ ms.lasthandoff: 12/21/2017
   
  일반적으로 잘 정의 된 인터페이스를 통해 응용 프로그램의 기능을 노출 하 여 자동화 수 있게 단일 일반 프로그래밍 언어의 대신 Microsoft Visual Basic 같은 다양 한, 응용 프로그램별 매크로에 응용 프로그램 작성 언어들.  
   
-##  <a name="_core_support_for_automation_servers"></a>자동화 서버에 대 한 지원  
+##  <a name="_core_support_for_automation_servers"></a> 자동화 서버에 대 한 지원  
  Visual c + + 및 MFC 프레임 워크 자동화 서버에 대 한 광범위 한 지원을 제공합니다. 응용 프로그램의 기능에 여 노력을 집중할 수 있도록 자동화 서버를 만드는 작업의 오버 헤드의 대부분을 처리 합니다.  
   
  자동화 지원을 위한 프레임 워크의 기본 메커니즘은 디스패치 맵은 선언과 OLE에 대 한 메서드 및 속성을 노출 하는 데 필요한 호출으로 확장 되는 매크로의 집합입니다. 일반적인 디스패치 맵은 다음과 같습니다.  

@@ -1,12 +1,9 @@
 ---
-title: "COleDocument 클래스 | Microsoft Docs"
-ms.custom: 
+title: COleDocument 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - COleDocument
@@ -61,17 +58,15 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 147a3bca2f4ad91aeaa2c74ac7a356d9404943fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6317d7c14f76355df908c9809df633533df3fb61
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="coledocument-class"></a>COleDocument 클래스
 비주얼 편집을 지원하는 OLE 문서에 대한 기본 클래스입니다.  
@@ -123,15 +118,15 @@ class COleDocument : public CDocument
 |[COleDocument::OnUpdatePasteMenu](#onupdatepastemenu)|붙여넣기 메뉴 옵션에 대 한 명령 UI를 업데이트 하기 위해 프레임 워크에서 호출 됩니다.|  
   
 ## <a name="remarks"></a>설명  
- `COleDocument`파생 된 **CDocument**, Microsoft Foundation 클래스 라이브러리에서 제공 하는 문서/뷰 아키텍처를 사용 하도록 OLE 응용 프로그램을 허용 하는 합니다.  
+ `COleDocument` 파생 된 **CDocument**, Microsoft Foundation 클래스 라이브러리에서 제공 하는 문서/뷰 아키텍처를 사용 하도록 OLE 응용 프로그램을 허용 하는 합니다.  
   
- `COleDocument`컬렉션으로 문서를 처리 [CDocItem](../../mfc/reference/cdocitem-class.md) OLE 항목을 처리 하는 개체입니다. 컨테이너와 서버 응용 프로그램 문서 OLE 항목을 포함할 수 있어야 하므로 처럼 아키텍처에 필요 합니다. [COleServerItem](../../mfc/reference/coleserveritem-class.md) 및 [COleClientItem](../../mfc/reference/coleclientitem-class.md) 클래스에서 파생 된 둘 다 `CDocItem`, 응용 프로그램 및 OLE 항목 간의 상호 작용을 관리 합니다.  
+ `COleDocument` 컬렉션으로 문서를 처리 [CDocItem](../../mfc/reference/cdocitem-class.md) OLE 항목을 처리 하는 개체입니다. 컨테이너와 서버 응용 프로그램 문서 OLE 항목을 포함할 수 있어야 하므로 처럼 아키텍처에 필요 합니다. [COleServerItem](../../mfc/reference/coleserveritem-class.md) 및 [COleClientItem](../../mfc/reference/coleclientitem-class.md) 클래스에서 파생 된 둘 다 `CDocItem`, 응용 프로그램 및 OLE 항목 간의 상호 작용을 관리 합니다.  
   
- 간단한 컨테이너 응용 프로그램을 작성 하는 경우 문서에서 파생 `COleDocument`합니다. 해당 문서에 포함 된 포함 된 항목에 연결을 지 원하는 컨테이너 응용 프로그램을 작성 하는 경우 문서에서 파생 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)합니다. 를 작성 하는 서버 응용 프로그램 또는 조합 컨테이너/서버에서 문서 클래스 파생 [COleServerDoc](../../mfc/reference/coleserverdoc-class.md)합니다. `COleLinkingDoc`및 `COleServerDoc` 에서 파생 된 `COleDocument`이러한 클래스에서 사용할 수 있는 모든 서비스를 상속 하므로 `COleDocument` 및 **CDocument**합니다.  
+ 간단한 컨테이너 응용 프로그램을 작성 하는 경우 문서에서 파생 `COleDocument`합니다. 해당 문서에 포함 된 포함 된 항목에 연결을 지 원하는 컨테이너 응용 프로그램을 작성 하는 경우 문서에서 파생 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)합니다. 를 작성 하는 서버 응용 프로그램 또는 조합 컨테이너/서버에서 문서 클래스 파생 [COleServerDoc](../../mfc/reference/coleserverdoc-class.md)합니다. `COleLinkingDoc` 및 `COleServerDoc` 에서 파생 된 `COleDocument`이러한 클래스에서 사용할 수 있는 모든 서비스를 상속 하므로 `COleDocument` 및 **CDocument**합니다.  
   
  사용 하도록 `COleDocument`에서 클래스를 파생 하 고 응용 프로그램의 비 OLE 데이터 뿐만 아니라 포함 또는 연결 된 항목을 관리 하는 기능을 추가 합니다. 정의 하는 경우 `CDocItem`-응용 프로그램의 네이티브 데이터를 저장 하기 위해 파생 클래스에 정의 된 기본 구현을 사용 하 여 `COleDocument` OLE 및 비 OLE 데이터 모두 저장할 수 있습니다. OLE 항목에서 개별적으로 비 OLE 데이터를 저장 하기 위한 사용자 고유의 데이터 구조를 디자인할 수 있습니다. 자세한 내용은 문서 참조 [컨테이너: 복합 파일](../../mfc/containers-compound-files.md)...  
   
- **CDocument** (MAPI) 전자 메일 서비스를 사용할 수 있는 경우 메일을 통해 문서를 보내는 기능을 지원 합니다. `COleDocument`이 업데이트 [OnFileSendMail](#onfilesendmail) 복합 문서를 올바르게 처리 하도록 합니다. 자세한 내용은 문서를 참조 [MAPI](../../mfc/mapi.md) 및 [MFC의 MAPI 지원](../../mfc/mapi-support-in-mfc.md)...  
+ **CDocument** (MAPI) 전자 메일 서비스를 사용할 수 있는 경우 메일을 통해 문서를 보내는 기능을 지원 합니다. `COleDocument` 이 업데이트 [OnFileSendMail](#onfilesendmail) 복합 문서를 올바르게 처리 하도록 합니다. 자세한 내용은 문서를 참조 [MAPI](../../mfc/mapi.md) 및 [MFC의 MAPI 지원](../../mfc/mapi-support-in-mfc.md)...  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -145,7 +140,7 @@ class COleDocument : public CDocument
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxole.h  
   
-##  <a name="additem"></a>COleDocument::AddItem  
+##  <a name="additem"></a>  COleDocument::AddItem  
  문서에 항목을 추가 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -159,7 +154,7 @@ virtual void AddItem(CDocItem* pItem);
 ### <a name="remarks"></a>설명  
  호출 될 때이 함수를 명시적으로 호출할 필요가 없습니다는 `COleClientItem` 또는 `COleServerItem` 문서에 대 한 포인터를 허용 하는 생성자입니다.  
   
-##  <a name="applyprintdevice"></a>COleDocument::ApplyPrintDevice  
+##  <a name="applyprintdevice"></a>  COleDocument::ApplyPrintDevice  
  포함 된 모든 대상 인쇄 장치를 변경 하려면이 함수를 호출 [COleClientItem](../../mfc/reference/coleclientitem-class.md) 응용 프로그램의 컨테이너 문서에 있는 항목입니다.  
   
 ```  
@@ -186,14 +181,14 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
   
  자세한 내용은 참조는 [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) Windows SDK에는 구조입니다.  
   
-##  <a name="coledocument"></a>COleDocument::COleDocument  
+##  <a name="coledocument"></a>  COleDocument::COleDocument  
  `COleDocument` 개체를 생성합니다.  
   
 ```  
 COleDocument();
 ```  
   
-##  <a name="enablecompoundfile"></a>COleDocument::EnableCompoundFile  
+##  <a name="enablecompoundfile"></a>  COleDocument::EnableCompoundFile  
  복합 파일 형식을 사용 하 여 문서를 저장 하려는 경우이 함수를 호출 합니다.  
   
 ```  
@@ -211,7 +206,7 @@ void EnableCompoundFile(BOOL bEnable = TRUE);
   
  복합 파일 지원을 사용 하도록 설정 하거나 문서에 대 한 비활성화 한 후 설정은 문서의 수명 동안 변경할 수 없습니다.  
   
-##  <a name="getinplaceactiveitem"></a>COleDocument::GetInPlaceActiveItem  
+##  <a name="getinplaceactiveitem"></a>  COleDocument::GetInPlaceActiveItem  
  OLE를 가져오려면이 함수를 항목을 호출으로 식별 되는 뷰를 포함 하는 프레임 창에서 현재 위치에서 현재 활성화 된 `pWnd`합니다.  
   
 ```  
@@ -225,7 +220,7 @@ virtual COleClientItem* GetInPlaceActiveItem(CWnd* pWnd);
 ### <a name="return-value"></a>반환 값  
  단일, 내부 활성 OLE 항목;에 대 한 포인터 **NULL** 있는지 OLE 항목이 현재 "내부 활성" 상태에 있습니다.  
   
-##  <a name="getnextclientitem"></a>COleDocument::GetNextClientItem  
+##  <a name="getnextclientitem"></a>  COleDocument::GetNextClientItem  
  각 문서에 클라이언트 항목에 액세스 하려면 반복 해 서이 함수를 호출 합니다.  
   
 ```  
@@ -242,10 +237,10 @@ COleClientItem* GetNextClientItem(POSITION& pos) const;
 ### <a name="remarks"></a>설명  
  값을 각 호출 후 `pos` 수 있거나 클라이언트 항목을 사용할 수 없는 하는 문서에서 다음 항목에 대해 설정 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer#1](../../mfc/codesnippet/cpp/coledocument-class_1.cpp)]  
   
-##  <a name="getnextitem"></a>COleDocument::GetNextItem  
+##  <a name="getnextitem"></a>  COleDocument::GetNextItem  
  각 문서에 항목에 액세스 하려면 반복 해 서이 함수를 호출 합니다.  
   
 ```  
@@ -262,10 +257,10 @@ virtual CDocItem* GetNextItem(POSITION& pos) const;
 ### <a name="remarks"></a>설명  
  값을 각 호출 후 `pos` 로 설정 되는 **위치** 문서에서 다음 항목의 값입니다. 검색된 된 요소는 문서를 새 값의 마지막 요소 이면 `pos` 은 **NULL**합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleContainer#2](../../mfc/codesnippet/cpp/coledocument-class_2.cpp)]  
   
-##  <a name="getnextserveritem"></a>COleDocument::GetNextServerItem  
+##  <a name="getnextserveritem"></a>  COleDocument::GetNextServerItem  
  각 문서에 서버 항목에 액세스 하려면 반복 해 서이 함수를 호출 합니다.  
   
 ```  
@@ -282,10 +277,10 @@ COleServerItem* GetNextServerItem(POSITION& pos) const;
 ### <a name="remarks"></a>설명  
  값을 각 호출 후 `pos` 수 있거나 서버 항목을 사용할 수 없는 하는 문서에서 다음 항목에 대해 설정 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCOleServer#2](../../mfc/codesnippet/cpp/coledocument-class_3.cpp)]  
   
-##  <a name="getprimaryselecteditem"></a>COleDocument::GetPrimarySelectedItem  
+##  <a name="getprimaryselecteditem"></a>  COleDocument::GetPrimarySelectedItem  
  지정된 된 보기에서 현재 선택 된 OLE 항목을 검색 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -302,7 +297,7 @@ virtual COleClientItem* GetPrimarySelectedItem(CView* pView);
 ### <a name="remarks"></a>설명  
  기본 구현은 목록 검색의 포함 된 OLE 단일 항목이 선택된에 대 한 항목 하 고에 대 한 포인터를 반환 합니다. 항목이 선택 또는 선택 하는 둘 이상의 항목이 있는지 함수 반환 **NULL**합니다. 재정의 해야 합니다는 `CView::IsSelected` 작동 하려면이 함수에 대 한 뷰 클래스에 멤버 함수입니다. 사용자 고유의 방법이 포함 된 OLE 항목을 저장할 경우의 경우이 함수를 재정의 합니다.  
   
-##  <a name="getstartposition"></a>COleDocument::GetStartPosition  
+##  <a name="getstartposition"></a>  COleDocument::GetStartPosition  
  문서에서 첫 번째 항목의 위치를 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -315,7 +310,7 @@ virtual POSITION GetStartPosition() const;
 ### <a name="remarks"></a>설명  
  반환 된 값을 전달 `GetNextItem`, `GetNextClientItem`, 또는 `GetNextServerItem`합니다.  
   
-##  <a name="hasblankitems"></a>COleDocument::HasBlankItems  
+##  <a name="hasblankitems"></a>  COleDocument::HasBlankItems  
  문서에 새 항목이 포함 되어 있는지 여부를 확인 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -328,7 +323,7 @@ BOOL HasBlankItems() const;
 ### <a name="remarks"></a>설명  
  빈 항목에는 사용 하나도 인 사각형은 비워 둘 수 있습니다.  
   
-##  <a name="oneditchangeicon"></a>COleDocument::OnEditChangeIcon  
+##  <a name="oneditchangeicon"></a>  COleDocument::OnEditChangeIcon  
  OLE 아이콘 변경 대화 상자를 표시 하 고 사용자가 대화 상자에서 아이콘을 현재 선택 된 OLE 항목을 나타내는 아이콘을 변경 합니다.  
   
 ```  
@@ -336,9 +331,9 @@ afx_msg void OnEditChangeIcon();
 ```  
   
 ### <a name="remarks"></a>설명  
- `OnEditChangeIcon`만들고 시작는 `COleChangeIconDialog` 아이콘 변경 대화 상자.  
+ `OnEditChangeIcon` 만들고 시작는 `COleChangeIconDialog` 아이콘 변경 대화 상자.  
   
-##  <a name="oneditconvert"></a>COleDocument::OnEditConvert  
+##  <a name="oneditconvert"></a>  COleDocument::OnEditConvert  
  OLE 변환 대화 상자를 표시 하 고 변환 또는 대화 상자에서 사용자 선택에 따라 현재 선택 된 OLE 항목을 활성화 합니다.  
   
 ```  
@@ -346,11 +341,11 @@ afx_msg void OnEditConvert();
 ```  
   
 ### <a name="remarks"></a>설명  
- `OnEditConvert`만들고 시작는 `COleConvertDialog` 변환 대화 상자.  
+ `OnEditConvert` 만들고 시작는 `COleConvertDialog` 변환 대화 상자.  
   
  변환의 예로 워드 패드 문서에 Microsoft Word 문서를 변환 합니다.  
   
-##  <a name="oneditlinks"></a>COleDocument::OnEditLinks  
+##  <a name="oneditlinks"></a>  COleDocument::OnEditLinks  
  OLE 편집/연결 대화 상자를 표시합니다.  
   
 ```  
@@ -358,9 +353,9 @@ afx_msg void OnEditLinks();
 ```  
   
 ### <a name="remarks"></a>설명  
- `OnEditLinks`만들고 시작는 `COleLinksDialog` 연결 대화 상자에서 연결 된 개체를 변경할 수 있도록 합니다.  
+ `OnEditLinks` 만들고 시작는 `COleLinksDialog` 연결 대화 상자에서 연결 된 개체를 변경할 수 있도록 합니다.  
   
-##  <a name="onfilesendmail"></a>COleDocument::OnFileSendMail  
+##  <a name="onfilesendmail"></a>  COleDocument::OnFileSendMail  
  상주 메일 호스트를 통해 메시지 (있는 경우) 문서와 함께 첨부 보냅니다.  
   
 ```  
@@ -368,13 +363,13 @@ afx_msg void OnFileSendMail();
 ```  
   
 ### <a name="remarks"></a>설명  
- `OnFileSendMail`호출 `OnSaveDocument` (저장) 한 다음 전자 메일을 통해 전송 된 임시 파일에 제목이 없는 및 수정 된 문서를 serialize 하 합니다. 문서 수정 되지 않은 경우 임시 파일은 필요 하지; 원래 전송 됩니다. `OnFileSendMail`MAPI32를 로드합니다. 로드 되지 않았으면 DLL입니다.  
+ `OnFileSendMail` 호출 `OnSaveDocument` (저장) 한 다음 전자 메일을 통해 전송 된 임시 파일에 제목이 없는 및 수정 된 문서를 serialize 하 합니다. 문서 수정 되지 않은 경우 임시 파일은 필요 하지; 원래 전송 됩니다. `OnFileSendMail` MAPI32를 로드합니다. 로드 되지 않았으면 DLL입니다.  
   
  구현 달리 `OnFileSendMail` 에 대 한 **CDocument**,이 함수는 복합 파일을 올바르게 처리 합니다.  
   
  자세한 내용은 참조는 [MAPI 항목](../../mfc/mapi.md) 및 [MFC의 MAPI 지원](../../mfc/mapi-support-in-mfc.md) 문서...  
   
-##  <a name="onshowviews"></a>COleDocument::OnShowViews  
+##  <a name="onshowviews"></a>  COleDocument::OnShowViews  
  프레임 워크가이 함수를 호출 후 문서의 표시 여부 상태 변경 합니다.  
   
 ```  
@@ -388,7 +383,7 @@ virtual void OnShowViews(BOOL bVisible);
 ### <a name="remarks"></a>설명  
  이 함수의 기본 버전은 효과가 없습니다. 응용 프로그램 문서의 표시 유형 변경 될 때 특수 한 처리를 수행 해야 하는 경우 재정의 합니다.  
   
-##  <a name="onupdateeditchangeicon"></a>COleDocument::OnUpdateEditChangeIcon  
+##  <a name="onupdateeditchangeicon"></a>  COleDocument::OnUpdateEditChangeIcon  
  편집 메뉴에서 변경 아이콘 명령 업데이트 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -400,9 +395,9 @@ afx_msg void OnUpdateEditChangeIcon(CCmdUI* pCmdUI);
  에 대 한 포인터는 `CCmdUI` update 명령을 생성 되는 메뉴를 나타내는 구조입니다. 업데이트 처리기 호출의 **사용** 의 멤버 함수는 `CCmdUI` 통해 구조체 `pCmdUI` 사용자 인터페이스를 업데이트 하 합니다.  
   
 ### <a name="remarks"></a>설명  
- `OnUpdateEditChangeIcon`문서에 올바른 아이콘이 있는지 여부에 따라 명령의 사용자 인터페이스를 업데이트 합니다. 동작을 변경 하려면이 함수를 재정의 합니다.  
+ `OnUpdateEditChangeIcon` 문서에 올바른 아이콘이 있는지 여부에 따라 명령의 사용자 인터페이스를 업데이트 합니다. 동작을 변경 하려면이 함수를 재정의 합니다.  
   
-##  <a name="onupdateeditlinksmenu"></a>COleDocument::OnUpdateEditLinksMenu  
+##  <a name="onupdateeditlinksmenu"></a>  COleDocument::OnUpdateEditLinksMenu  
  편집 메뉴에서 링크 명령 업데이트 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -416,7 +411,7 @@ afx_msg void OnUpdateEditLinksMenu(CCmdUI* pCmdUI);
 ### <a name="remarks"></a>설명  
  문서에서 첫 번째 OLE 항목부터 `OnUpdateEditLinksMenu` 여부를 테스트 하는 항목은 한 링크, 링크가 있으면 연결 명령을 사용 하면, 각 항목에 액세스 합니다. 동작을 변경 하려면이 함수를 재정의 합니다.  
   
-##  <a name="onupdateobjectverbmenu"></a>COleDocument::OnUpdateObjectVerbMenu  
+##  <a name="onupdateobjectverbmenu"></a>  COleDocument::OnUpdateObjectVerbMenu  
  업데이트 하기 위해 프레임 워크에서 호출는 *ObjectName* 명령을 편집 메뉴 및 동사 하위 메뉴에서 액세스 하는 *ObjectName* 명령, 여기서 *ObjectName* 의 이름 OLE 개체는 문서에 포함 합니다.  
   
 ```  
@@ -428,9 +423,9 @@ afx_msg void OnUpdateObjectVerbMenu(CCmdUI* pCmdUI);
  에 대 한 포인터는 `CCmdUI` update 명령을 생성 되는 메뉴를 나타내는 구조입니다. 업데이트 처리기 호출의 **사용** 의 멤버 함수는 `CCmdUI` 통해 구조체 `pCmdUI` 사용자 인터페이스를 업데이트 하 합니다.  
   
 ### <a name="remarks"></a>설명  
- `OnUpdateObjectVerbMenu`업데이트는 *ObjectName* 문서에 적합 한 개체가 있는지 여부에 따라 명령의 사용자 인터페이스입니다. 개체가 있는 경우는 *ObjectName* 편집 메뉴 명령이 활성화 됩니다. 이 메뉴 명령이 옵션을 선택 하면 동사 하위 메뉴가 표시 됩니다. 동사 하위 메뉴에는 편집, 속성, 등과 같은 개체에 사용할 수 있는 모든 동사 명령이 포함 되어 있습니다. 동작을 변경 하려면이 함수를 재정의 합니다.  
+ `OnUpdateObjectVerbMenu` 업데이트는 *ObjectName* 문서에 적합 한 개체가 있는지 여부에 따라 명령의 사용자 인터페이스입니다. 개체가 있는 경우는 *ObjectName* 편집 메뉴 명령이 활성화 됩니다. 이 메뉴 명령이 옵션을 선택 하면 동사 하위 메뉴가 표시 됩니다. 동사 하위 메뉴에는 편집, 속성, 등과 같은 개체에 사용할 수 있는 모든 동사 명령이 포함 되어 있습니다. 동작을 변경 하려면이 함수를 재정의 합니다.  
   
-##  <a name="onupdatepastelinkmenu"></a>COleDocument::OnUpdatePasteLinkMenu  
+##  <a name="onupdatepastelinkmenu"></a>  COleDocument::OnUpdatePasteLinkMenu  
  연결 된 OLE 항목을 클립보드에서 붙여 넣을 수 있는지 여부를 결정 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -444,7 +439,7 @@ afx_msg void OnUpdatePasteLinkMenu(CCmdUI* pCmdUI);
 ### <a name="remarks"></a>설명  
  붙여넣기 메뉴 명령은 사용할지 여부는 항목에 붙여 넣을 수 문서 여부에 따라 합니다.  
   
-##  <a name="onupdatepastemenu"></a>COleDocument::OnUpdatePasteMenu  
+##  <a name="onupdatepastemenu"></a>  COleDocument::OnUpdatePasteMenu  
  포함된 된 OLE 항목 클립보드에서 붙여 넣을 수 있는지 여부를 결정 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -458,7 +453,7 @@ afx_msg void OnUpdatePasteMenu(CCmdUI* pCmdUI);
 ### <a name="remarks"></a>설명  
  붙여넣기 메뉴 명령 및 단추를 사용 하는지 여부는 항목에 붙여 넣을 수 문서 여부에 따라 합니다.  
   
-##  <a name="removeitem"></a>COleDocument::RemoveItem  
+##  <a name="removeitem"></a>  COleDocument::RemoveItem  
  문서에서 항목을 제거 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -472,7 +467,7 @@ virtual void RemoveItem(CDocItem* pItem);
 ### <a name="remarks"></a>설명  
  일반적으로 않아도; 명시적으로이 함수를 호출 하려면 에 대 한 소멸자에 의해 호출 됩니다 `COleClientItem` 및 `COleServerItem`합니다.  
   
-##  <a name="updatemodifiedflag"></a>COleDocument::UpdateModifiedFlag  
+##  <a name="updatemodifiedflag"></a>  COleDocument::UpdateModifiedFlag  
  포함 된 OLE 항목의 수정 된 경우 수정 된 대로 문서를 표시 하려면이 함수를 호출 합니다.  
   
 ```  

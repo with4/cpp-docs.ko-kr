@@ -1,13 +1,10 @@
 ---
-title: "바인딩 가능한 | Microsoft Docs"
-ms.custom: 
+title: 바인딩 가능한 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.bindable
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5266bca832a128242bcbbc8904ad9650e4432fe2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a1cf16bfbeee2231133e60429a4a25e9d4fe85c8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="bindable"></a>bindable
 속성이 데이터 바인딩을 지원 하는지 나타냅니다.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [도구 설명 및 도움말 TESTHELP 샘플: ActiveX 컨트롤](http://msdn.microsoft.com/en-us/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드는 사용 하는 방법을 보여 줍니다. **바인딩 가능한** 속성:  
   
 ```  

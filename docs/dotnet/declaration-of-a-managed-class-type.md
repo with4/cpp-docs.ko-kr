@@ -2,12 +2,9 @@
 title: 관리 되는 클래스 형식 선언의 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - interface class keyword
 - ref keyword [C++]
 ms.assetid: 16de9c94-91d7-492f-8ac7-f0729cc627e9
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: c9e9aba6d2a0485a94385be5b8712d7552261ff1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5c821424d8b2669c78befa604bf2669399c89f75
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="declaration-of-a-managed-class-type"></a>관리되는 클래스 형식 선언
 Visual c + + Managed Extensions for c + + 변경 참조 클래스 형식을 선언 하는 방법입니다.  

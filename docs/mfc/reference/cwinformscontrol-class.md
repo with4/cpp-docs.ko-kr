@@ -1,12 +1,9 @@
 ---
-title: "CWinFormsControl 클래스 | Microsoft Docs"
-ms.custom: 
+title: CWinFormsControl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CWinFormsControl
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2e6bf46cf28c3bca3d71f85cdd681745a0379bd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0d126c7e6ef77142f20a9dd9d7ed68c44ede5fc1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl 클래스
 Windows Forms 컨트롤을 호스팅하기 위한 기본 기능을 제공합니다.  
@@ -85,7 +80,7 @@ class CWinFormsControl : public CWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwinforms.h  
   
-##  <a name="createmanagedcontrol"></a>CWinFormsControl::CreateManagedControl  
+##  <a name="createmanagedcontrol"></a>  CWinFormsControl::CreateManagedControl  
  MFC 컨테이너에는 Windows Forms 컨트롤을 만듭니다.  
   
 ```  
@@ -144,7 +139,7 @@ inline BOOL CreateManagedControl(
 ### <a name="remarks"></a>설명  
  이 메서드는 MFC 컨테이너에서.NET Framework Windows Forms 컨트롤을 인스턴스화합니다.  
   
- 메서드의 첫 번째 오버 로드는.NET Framework 데이터 형식을 수락 `pType` MFC는이 형식의 새 개체를 인스턴스화할 수 있도록 합니다. `pType`있어야는 [형식](https://msdn.microsoft.com/en-us/library/system.type) 데이터 형식입니다.  
+ 메서드의 첫 번째 오버 로드는.NET Framework 데이터 형식을 수락 `pType` MFC는이 형식의 새 개체를 인스턴스화할 수 있도록 합니다. `pType` 있어야는 [형식](https://msdn.microsoft.com/en-us/library/system.type) 데이터 형식입니다.  
   
  메서드의 두 번째 오버 로드에 따라 Windows Forms 컨트롤을 만듭니다.는 `TManagedControl` 템플릿 매개 변수에 `CWinFormsControl` 클래스입니다. 크기와 컨트롤의 위치 기반는 `RECT` 메서드에 전달 하는 구조입니다. 만 `dwStyle` 스타일에 대 한 중요 합니다.  
   
@@ -154,7 +149,7 @@ inline BOOL CreateManagedControl(
   
  참조 [MFC의 Windows Form 사용자 정의 컨트롤을 사용 하 여](../../dotnet/using-a-windows-form-user-control-in-mfc.md) Windows Form을 사용 하는 샘플에 대 한 제어 합니다.  
   
-##  <a name="cwinformscontrol"></a>CWinFormsControl::CWinFormsControl  
+##  <a name="cwinformscontrol"></a>  CWinFormsControl::CWinFormsControl  
  MFC Windows Forms 컨트롤 래퍼 개체를 생성 합니다.  
   
 ```  
@@ -164,7 +159,7 @@ CWinFormsControl();
 ### <a name="remarks"></a>설명  
  호출 하는 경우 Windows Forms 컨트롤을 인스턴스화하 [CWinFormsControl::CreateManagedControl](#createmanagedcontrol)합니다.  
   
-##  <a name="getcontrol"></a>CWinFormsControl::GetControl  
+##  <a name="getcontrol"></a>  CWinFormsControl::GetControl  
  Windows Forms 컨트롤에 대 한 포인터를 검색합니다.  
   
 ```  
@@ -174,10 +169,10 @@ inline TManagedControl^ GetControl() const;
 ### <a name="return-value"></a>반환 값  
  Windows Forms 컨트롤에 대 한 포인터를 반환합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   참조 [CWinFormsControl::CreateManagedControl](#createmanagedcontrol)합니다.  
   
-##  <a name="getcontrolhandle"></a>CWinFormsControl::GetControlHandle  
+##  <a name="getcontrolhandle"></a>  CWinFormsControl::GetControlHandle  
  Windows Forms 컨트롤에 대 한 핸들을 검색합니다.  
   
 ```  
@@ -188,9 +183,9 @@ inline HWND GetControlHandle() const;
  Windows Forms 컨트롤에 대 한 핸들을 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- `GetControlHandle`.NET Framework 컨트롤 속성에 저장 된 창 핸들을 반환 하는 도우미 메서드입니다. 창 핸들 값 복사할 [CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd) 호출 하는 동안 [CWnd::Attach](../../mfc/reference/cwnd-class.md#attach)합니다.  
+ `GetControlHandle` .NET Framework 컨트롤 속성에 저장 된 창 핸들을 반환 하는 도우미 메서드입니다. 창 핸들 값 복사할 [CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd) 호출 하는 동안 [CWnd::Attach](../../mfc/reference/cwnd-class.md#attach)합니다.  
   
-##  <a name="operator_-_gt"></a>CWinFormsControl::operator-&gt;  
+##  <a name="operator_-_gt"></a>  CWinFormsControl::operator-&gt;  
  대체 [CWinFormsControl::GetControl](#getcontrol) 식에 있습니다.  
   
 ```  
@@ -202,7 +197,7 @@ inline TManagedControl^  operator->() const;
   
  Windows Forms에 대 한 자세한 내용은 참조 하십시오. [MFC의 Windows Form 사용자 정의 컨트롤을 사용 하 여](../../dotnet/using-a-windows-form-user-control-in-mfc.md)합니다.  
   
-##  <a name="operator_tmanagedcontrol"></a>CWinFormsControl::operator TManagedControl ^  
+##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl ^  
  Windows Forms 컨트롤에 대 한 포인터로 형식을 캐스팅합니다.  
   
 ```  

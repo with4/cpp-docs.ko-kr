@@ -1,27 +1,22 @@
 ---
-title: "B. 런타임 라이브러리 함수에 대 한 스텁을 | Microsoft Docs"
-ms.custom: 
+title: B. 런타임 라이브러리 함수에 대 한 스텁을 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 733a7cacebfcad6702d471425de7b617a241884f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1207f943560fdc6a22c62a9a8deafa213400f172
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. 런타임 라이브러리 함수에 대 한 스텁
 이 섹션에서는 OpenMP C 및 c + + API에 정의 된 런타임 라이브러리 함수에 대 한 스텁을 제공 합니다. 스텁이는 이식성 OpenMP C 및 c + + API를 지원 하지 않는 플랫폼에 사용할 수 있도록 제공 됩니다. 이러한 플랫폼에서 OpenMP 프로그램 이러한 스텁 함수를 포함 하는 라이브러리와 연결 되어야 합니다. 스텁 함수도 가정 OpenMP 프로그램에서 지시문이 무시 됩니다. 따라서 에뮬레이트할 직렬 의미 합니다.  

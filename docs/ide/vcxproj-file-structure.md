@@ -1,29 +1,24 @@
 ---
-title: ".vcxproj 및.props 파일 구조 | Microsoft Docs"
-ms.custom: 
+title: .vcxproj 및.props 파일 구조 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/27/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d48b16d9a4250de8c8c3dfef62fdcfb5c1434960
-ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
+ms.openlocfilehash: fe466ff9250543a61fde8da41900b152a9874e09
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vcxproj-and-props-file-structure"></a>.vcxproj 및.props 파일 구조
 
@@ -59,7 +54,7 @@ MSBuild는 Visual Studio;에서 기본 프로젝트 시스템 선택 하는 경�
 
 .Vcxproj 파일의 내용을 텍스트 또는 XML 편집기를 사용 하 여 검사할 수 있습니다. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 여 Visual Studio에서 볼 수 있습니다 선택 **프로젝트 언로드** 를 선택한 다음 **편집 Foo.vcxproj**합니다.
 
-유념 해야 할 첫 번째 사항은 해당 최상위 요소가 특정 한 순서로 표시입니다. 예:
+유념 해야 할 첫 번째 사항은 해당 최상위 요소가 특정 한 순서로 표시입니다. 예를 들어:
 
 - 대부분의 속성 그룹 및 항목 정의 그룹 Microsoft.Cpp.Default.props에 대 한 가져오기 후에 발생 합니다.
 - 모든 대상은 파일의 끝에 가져옵니다.
@@ -100,7 +95,7 @@ MSBuild는 Visual Studio;에서 기본 프로젝트 시스템 선택 하는 경�
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns='http://schemas.microsoft.com/developer/msbuild/2003' >
 ```
 
-`Project`루트 노드입니다. 사용할 MSBuild 버전 및이 파일은 MSBuild.exe에 전달 될 때 실행할 기본 대상을 지정 합니다.
+`Project` 루트 노드입니다. 사용할 MSBuild 버전 및이 파일은 MSBuild.exe에 전달 될 때 실행할 기본 대상을 지정 합니다.
 
 ### <a name="projectconfigurations-itemgroup-element"></a>ProjectConfigurations ItemGroup 요소
 
@@ -108,7 +103,7 @@ MSBuild는 Visual Studio;에서 기본 프로젝트 시스템 선택 하는 경�
 <ItemGroup Label="ProjectConfigurations" />
 ```
 
-`ProjectConfigurations`프로젝트 구성 설명을 포함합니다. 예는 Debug | Win32, 릴리스 | Win32, 디버그 | ARM 및 기타 등등입니다. 많은 프로젝트 설정이 지정된 된 구성에 따라 다릅니다. 예를 들어 디버그 빌드가 아닌 하지만 릴리스 빌드에 대 한 최적화 속성을 설정 하려는 것입니다.
+`ProjectConfigurations` 프로젝트 구성 설명을 포함합니다. 예는 Debug | Win32, 릴리스 | Win32, 디버그 | ARM 및 기타 등등입니다. 많은 프로젝트 설정이 지정된 된 구성에 따라 다릅니다. 예를 들어 디버그 빌드가 아닌 하지만 릴리스 빌드에 대 한 최적화 속성을 설정 하려는 것입니다.
 
 `ProjectConfigurations` 항목 그룹 빌드 시 사용 되지 않습니다. Visual Studio IDE는 해당 프로젝트를 로드 하기 위해 필요 합니다. 이 항목 그룹.props 파일으로 이동 하 고.vcxproj 파일을 가져올 수 있습니다. 그러나이 경우 추가 하거나 구성을 제거 해야 할 경우 수동으로 편집 해야.props 파일입니다. IDE를 사용할 수 없습니다.
 
@@ -143,9 +138,9 @@ IDE는 모든 프로젝트 구성 항목에서 사용 되는 구성 및 플랫�
  <PropertyGroup Label="Globals" />
 ```
 
-`Globals`프로젝트 수준 설정을 ProjectGuid, RootNamespace, 스토어로 등 포함 / ApplicationTypeRevision 합니다. 마지막 두 대상 OS 정의 하는 경우가 있습니다. 프로젝트 수를 대상으로 단일 운영 체제 때문을 프로젝트 항목 및 참조 조건을 현재 가질 수 없습니다. 이러한 속성은 일반적으로 재정의 되지 다른 위치에서 프로젝트 파일에서 합니다. 이 그룹 구성에 종속 된 없고 따라서 일반적으로 하나의 전역 그룹 파일에 있는 프로젝트입니다.
+`Globals` 프로젝트 수준 설정을 ProjectGuid, RootNamespace, 스토어로 등 포함 / ApplicationTypeRevision 합니다. 마지막 두 대상 OS 정의 하는 경우가 있습니다. 프로젝트 수를 대상으로 단일 운영 체제 때문을 프로젝트 항목 및 참조 조건을 현재 가질 수 없습니다. 이러한 속성은 일반적으로 재정의 되지 다른 위치에서 프로젝트 파일에서 합니다. 이 그룹 구성에 종속 된 없고 따라서 일반적으로 하나의 전역 그룹 파일에 있는 프로젝트입니다.
 
-### <a name="microsoftcppdefaultprops-import-element"></a>Microsoft.Cpp.default.props Import element
+### <a name="microsoftcppdefaultprops-import-element"></a>Microsoft.Cpp.default.props Import 요소
 
 ```xml
 <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
@@ -191,7 +186,7 @@ A `Configuration` 속성 그룹에는 연결 된 구성 상태 (같은 `Conditio
 <PropertyGroup Label="UserMacros" />
 ```
 
-`UserMacros`속성이 포함 되어 빌드 프로세스를 사용자 지정 하는 데 사용 되는 변수를 만듭니다. 예를 들어 하 $(CustomOutputPath)로 사용자의 사용자 지정 출력 경로 정의 하 고 다른 변수를 정의 하는 데 사용할 사용자 매크로 정의할 수 있습니다. 이 속성 그룹 등의 속성을 보관합니다. Visual Studio에서이 그룹은 채워지지 프로젝트 파일에서 Visual c + + 구성에 대 한 사용자 매크로 지원 하지 않으므로 note 합니다. 사용자 매크로가 속성 시트에서 사용할 수 있습니다.
+`UserMacros` 속성이 포함 되어 빌드 프로세스를 사용자 지정 하는 데 사용 되는 변수를 만듭니다. 예를 들어 하 $(CustomOutputPath)로 사용자의 사용자 지정 출력 경로 정의 하 고 다른 변수를 정의 하는 데 사용할 사용자 매크로 정의할 수 있습니다. 이 속성 그룹 등의 속성을 보관합니다. Visual Studio에서이 그룹은 채워지지 프로젝트 파일에서 Visual c + + 구성에 대 한 사용자 매크로 지원 하지 않으므로 note 합니다. 사용자 매크로가 속성 시트에서 사용할 수 있습니다.
 
 ### <a name="per-configuration-propertygroup-elements"></a>구성별 PropertyGroup 요소
 
@@ -219,7 +214,7 @@ A `Configuration` 속성 그룹에는 연결 된 구성 상태 (같은 `Conditio
 
 프로젝트에서 항목 (소스 파일 등)를 포함합니다. 프로젝트 항목 (즉, 규칙 정의에서 프로젝트 항목으로 처리 되는 항목 형식)에 대 한 조건이 지원 되지 않습니다.
 
-메타 데이터는 모두 동일한 경우에 각 구성에 대 한 조건을 구성 해야 합니다. 예:
+메타 데이터는 모두 동일한 경우에 각 구성에 대 한 조건을 구성 해야 합니다. 예를 들어:
 
    ```xml
    <ItemGroup>
@@ -295,7 +290,7 @@ IDE 설정 하는 경우에 **UseOfAtl** 프로젝트 파일에서 구성 속성
 
 사용자 고유의 속성 시트, VCTargets 폴더에 따라.props 파일 중 하나를 복사 한 용도 맞게 수정 합니다. Visual Studio 2017 Enterprise edition에 대 한 기본 VCTargets 경로가 `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets`합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [프로젝트 속성 사용](working-with-project-properties.md)  
 [속성 페이지 XML 파일](property-page-xml-files.md)  

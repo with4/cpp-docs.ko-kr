@@ -2,11 +2,8 @@
 title: CMFCDropDownToolbarButton 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCDropDownToolbarButton
@@ -51,17 +48,15 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], SetDefaultCommand
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
-caps.latest.revision: 31
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f9481583c56676d206225ad76f8131c2a79821f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9c65cf3070f199b013a0e85c1ae56764174fdc33
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton 클래스
 클릭할 때 일반 단추처럼 동작하는 도구 모음 단추의 한 종류입니다. 그러나 드롭다운 도구 모음이 열립니다 ( [CMFCDropDownToolBar 클래스](../../mfc/reference/cmfcdropdowntoolbar-class.md) 경우 사용자 번 클릭 하 고 도구 모음 단추를 누르고 있습니다.  
@@ -107,7 +102,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)|드롭다운 도구 모음이 표시 될 때까지 사용자를 마우스 단추를 누른 해야 하는 시간의 길이 지정 합니다.|  
   
@@ -128,7 +123,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdropdowntoolbar.h  
   
-##  <a name="copyfrom"></a>CMFCDropDownToolbarButton::CopyFrom  
+##  <a name="copyfrom"></a>  CMFCDropDownToolbarButton::CopyFrom  
  도구 모음 단추 속성은 현재 단추에 복사합니다.  
   
 ```  
@@ -140,9 +135,9 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
  복사할 소스 단추에 대 한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 도구 모음 단추를 도구 모음 단추 복사 하려면이 메서드를 호출 합니다. `src`형식 이어야 합니다 `CMFCDropDownToolbarButton`합니다.  
+ 이 도구 모음 단추를 도구 모음 단추 복사 하려면이 메서드를 호출 합니다. `src` 형식 이어야 합니다 `CMFCDropDownToolbarButton`합니다.  
   
-##  <a name="cmfcdropdowntoolbarbutton"></a>CMFCDropDownToolbarButton::CMFCDropDownToolbarButton  
+##  <a name="cmfcdropdowntoolbarbutton"></a>  CMFCDropDownToolbarButton::CMFCDropDownToolbarButton  
  `CMFCDropDownToolbarButton` 개체를 생성합니다.  
   
 ```  
@@ -166,12 +161,12 @@ CMFCDropDownToolbarButton(
   
  일반적으로 드롭 다운 도구 모음 단추를 도구 모음에서 가장 최근에 사용한 단추에서 텍스트를 사용 하는 `pToolBar` 지정 합니다. 로 지정 된 텍스트를 사용 하 여 `lpszName` 때 단추는 메뉴 단추 또는 변환에 표시 되는 **명령을** 탭은 **사용자 지정** 대화 상자. 에 대 한 자세한 내용은 **사용자 지정** 대화 상자, 참조 [CMFCToolBarsCustomizeDialog 클래스](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는의 개체를 생성 하는 `CMFCDropDownToolbarButton` 클래스입니다. 이 코드 조각은의 일부인는 [Visual Studio 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#31](../../mfc/codesnippet/cpp/cmfcdropdowntoolbarbutton-class_1.cpp)]  
   
-##  <a name="dropdowntoolbar"></a>CMFCDropDownToolbarButton::DropDownToolbar  
+##  <a name="dropdowntoolbar"></a>  CMFCDropDownToolbarButton::DropDownToolbar  
  드롭다운 도구 모음이 열립니다.  
   
 ```  
@@ -192,7 +187,7 @@ BOOL DropDownToolbar(CWnd* pWnd);
   
  이 메서드는 실패 하는 경우 `pWnd` 은 `NULL` 드롭 다운 도구 모음 단추에 부모 창 없는 합니다.  
   
-##  <a name="exporttomenubutton"></a>CMFCDropDownToolbarButton::ExportToMenuButton  
+##  <a name="exporttomenubutton"></a>  CMFCDropDownToolbarButton::ExportToMenuButton  
  도구 모음 단추에서 메뉴에 텍스트를 복사 합니다.  
   
 ```  
@@ -211,7 +206,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
   
  이 메서드는 실패 하는 경우 부모 도구 모음 `m_pToolBar`은 `NULL` 하거나 기본 클래스 구현을 반환 `FALSE`합니다.  
   
-##  <a name="getdropdowntoolbar"></a>CMFCDropDownToolbarButton::GetDropDownToolBar  
+##  <a name="getdropdowntoolbar"></a>  CMFCDropDownToolbarButton::GetDropDownToolBar  
  단추와 연결 된 드롭다운 도구 모음을 검색 합니다.  
   
 ```  
@@ -224,7 +219,7 @@ CMFCToolBar* GetDropDownToolBar() const;
 ### <a name="remarks"></a>설명  
  이 메서드는 반환 된 `m_pToolBar` 데이터 멤버입니다.  
   
-##  <a name="isdropdown"></a>CMFCDropDownToolbarButton::IsDropDown  
+##  <a name="isdropdown"></a>  CMFCDropDownToolbarButton::IsDropDown  
  드롭다운 도구 모음이 현재 열려 있는지 여부를 결정 합니다.  
   
 ```  
@@ -237,7 +232,7 @@ BOOL IsDropDown() const;
 ### <a name="remarks"></a>설명  
  프레임 워크를 사용 하 여 드롭다운 도구 모음이 열립니다는 [CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar) 메서드. 사용자가 드롭다운 도구 모음이의 비클라이언트 영역에서 마우스 왼쪽 단추를 누를 때 프레임 워크 드롭다운 도구 모음이 닫습니다.  
   
-##  <a name="isextrasize"></a>CMFCDropDownToolbarButton::IsExtraSize  
+##  <a name="isextrasize"></a>  CMFCDropDownToolbarButton::IsExtraSize  
  단추가 확장된 테두리 함께 표시 될 수 있는지 여부를 결정 합니다.  
   
 ```  
@@ -250,7 +245,7 @@ virtual BOOL IsExtraSize() const;
 ### <a name="remarks"></a>설명  
  확장 된 테두리에 대 한 자세한 내용은 참조 [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize)합니다.  
   
-##  <a name="m_uishowbardelay"></a>CMFCDropDownToolbarButton::m_uiShowBarDelay  
+##  <a name="m_uishowbardelay"></a>  CMFCDropDownToolbarButton::m_uiShowBarDelay  
  드롭다운 도구 모음이 표시 될 때까지 사용자를 마우스 단추를 누른 해야 하는 시간의 길이 지정 합니다.  
   
 ```  
@@ -260,7 +255,7 @@ static UINT m_uiShowBarDelay;
 ### <a name="remarks"></a>설명  
  지연 시간은 밀리초 단위로 측정 됩니다. 기본값은 500입니다. 이 공유 데이터 멤버의 값을 변경 하 여 다른 지연을 설정할 수 있습니다.  
   
-##  <a name="oncalculatesize"></a>CMFCDropDownToolbarButton::OnCalculateSize  
+##  <a name="oncalculatesize"></a>  CMFCDropDownToolbarButton::OnCalculateSize  
  지정 된 장치 컨텍스트와 도킹 상태에 대 한 단추 크기를 계산 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -286,7 +281,7 @@ virtual SIZE OnCalculateSize(
 ### <a name="remarks"></a>설명  
  이 메서드는 기본 클래스 구현을 확장 ( [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize)) 드롭 다운 화살표 너비 단추 크기의 가로 크기를 추가 하 여 합니다.  
   
-##  <a name="onchangeparentwnd"></a>CMFCDropDownToolbarButton::OnChangeParentWnd  
+##  <a name="onchangeparentwnd"></a>  CMFCDropDownToolbarButton::OnChangeParentWnd  
  새 도구 모음에 단추를 삽입할 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -300,7 +295,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ### <a name="remarks"></a>설명  
  이 메서드는 기본 클래스 구현을 재정의 ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) 텍스트 레이블의 선택을 취소 하 여 ( [CMFCToolBarButton::m_strText](../../mfc/reference/cmfctoolbarbutton-class.md#m_strtext)) 설정의 [ CMFCToolBarButton::m_bText](../../mfc/reference/cmfctoolbarbutton-class.md#m_btext) 및 [CMFCToolBarButton::m_bUserButton](../../mfc/reference/cmfctoolbarbutton-class.md#m_buserbutton) 데이터 멤버를 `FALSE`합니다.  
   
-##  <a name="onclick"></a>CMFCDropDownToolbarButton::OnClick  
+##  <a name="onclick"></a>  CMFCDropDownToolbarButton::OnClick  
  사용자가 마우스 단추를 클릭할 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -314,7 +309,7 @@ virtual BOOL OnClick(
  도구 모음 단추의 부모 창입니다.  
   
  [in] `bDelay`  
- `TRUE`경우 메시지는 지연으로 처리 되어야 합니다.  
+ `TRUE` 경우 메시지는 지연으로 처리 되어야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  단추 클릭 하 여 메시지를 처리 하면 0이 아니고 그렇지 않으면 0입니다.  
@@ -324,7 +319,7 @@ virtual BOOL OnClick(
   
  이 메서드가 만드는 길이에 지정 된 시간을 대기 하는 타이머를 사용자가 도구 모음 단추를 클릭 하면는 [CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay) 데이터 멤버와는 를사용하여도구모음열립니다드롭다운[CMFCDropDownToolbarButton::DropDownToolbar](#dropdowntoolbar) 메서드. 이 메서드는 사용자가 도구 모음 단추를 클릭 한 번 드롭다운 도구 모음이 닫습니다.  
   
-##  <a name="onclickup"></a>CMFCDropDownToolbarButton::OnClickUp  
+##  <a name="onclickup"></a>  CMFCDropDownToolbarButton::OnClickUp  
  사용자가 마우스 단추를 놓을 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -341,7 +336,7 @@ virtual BOOL OnClickUp();
   
  도구 모음 드롭다운 목록 및 드롭다운 도구 모음이 타이머에 대 한 자세한 내용은 참조 [CMFCDropDownToolbarButton::OnClick](#onclick)합니다.  
   
-##  <a name="oncontexthelp"></a>CMFCDropDownToolbarButton::OnContextHelp  
+##  <a name="oncontexthelp"></a>  CMFCDropDownToolbarButton::OnContextHelp  
  부모 도구 모음에서 처리 될 때 프레임 워크에서 호출 된 `WM_HELPHITTEST` 메시지입니다.  
   
 ```  
@@ -360,7 +355,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
   
  에 대 한 자세한 내용은 `WM_HELPHITTEST message, see` [TN028: 상황에 맞는 도움말 지원](../../mfc/tn028-context-sensitive-help-support.md)합니다.  
   
-##  <a name="oncustomizemenu"></a>CMFCDropDownToolbarButton::OnCustomizeMenu  
+##  <a name="oncustomizemenu"></a>  CMFCDropDownToolbarButton::OnCustomizeMenu  
  부모 도구 모음 바로 가기 메뉴를 표시 하는 응용 프로그램 때 제공 된 메뉴를 수정 합니다.  
   
 ```  
@@ -389,7 +384,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
   
  사용자 지정 모드에는 프레임 워크가 표시 하는 바로 가기 메뉴를 수정 하려면이 메서드를 재정의 합니다.  
   
-##  <a name="ondraw"></a>CMFCDropDownToolbarButton::OnDraw  
+##  <a name="ondraw"></a>  CMFCDropDownToolbarButton::OnDraw  
  지정 된 스타일 및 옵션을 사용 하 여 단추를 그리기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -432,7 +427,7 @@ virtual void OnDraw(
 ### <a name="remarks"></a>설명  
  도구 모음 단추 그리기를 사용자 지정 하려면이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawoncustomizelist"></a>CMFCDropDownToolbarButton::OnDrawOnCustomizeList  
+##  <a name="ondrawoncustomizelist"></a>  CMFCDropDownToolbarButton::OnDrawOnCustomizeList  
  단추를 그리기 위해 프레임 워크에서 호출 된 **명령을** 의 창은 **사용자 지정** 대화 상자.  
   
 ```  
@@ -460,7 +455,7 @@ virtual int OnDrawOnCustomizeList(
   
  이 메서드는 기본 클래스 구현을 확장 ( [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)) 단추의 텍스트 레이블을 단추의 이름을 변경 하 여 (즉, 값에는 `lpszName` 전달 된 매개 변수 생성자).  
   
-##  <a name="serialize"></a>CMFCDropDownToolbarButton::Serialize  
+##  <a name="serialize"></a>  CMFCDropDownToolbarButton::Serialize  
  보관 파일에서이 개체를 읽거나 보관 파일에 씁니다.  
   
 ```  
@@ -474,7 +469,7 @@ virtual void Serialize(CArchive& ar);
 ### <a name="remarks"></a>설명  
  이 메서드는 기본 클래스 구현을 확장 ( [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize)) 부모 도구 모음에서의 리소스 ID를 직렬화 하 여 합니다. 보관 파일을 로드 하는 경우 ( [CArchive::IsLoading](../../mfc/reference/carchive-class.md#isloading) 0이 아닌 값을 반환)를 설정 하는이 메서드는 `m_pToolBar` 직렬화 된 리소스 ID를 포함 하는 도구 모음에 데이터 멤버  
   
-##  <a name="setdefaultcommand"></a>CMFCDropDownToolbarButton::SetDefaultCommand  
+##  <a name="setdefaultcommand"></a>  CMFCDropDownToolbarButton::SetDefaultCommand  
  단추를 클릭할 때 프레임 워크를 사용 하는 기본 명령을 설정 합니다.  
   
 ```  

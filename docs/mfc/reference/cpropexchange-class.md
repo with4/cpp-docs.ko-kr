@@ -1,12 +1,9 @@
 ---
-title: "CPropExchange 클래스 | Microsoft Docs"
-ms.custom: 
+title: CPropExchange 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPropExchange
@@ -31,17 +28,15 @@ helpviewer_keywords:
 - CPropExchange [MFC], IsAsynchronous
 - CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5deea89ccc9c340537b1b33563455ea91b46fe8b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5f234b3f06e22308a31e8e5694648fd5664b448a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cpropexchange-class"></a>CPropExchange 클래스
 OLE 컨트롤의 지속성 구현을 지원합니다.  
@@ -68,7 +63,7 @@ class AFX_NOVTABLE CPropExchange
 |[CPropExchange::IsLoading](#isloading)|속성은 되 고 있는지 여부를 나타냅니다. 컨트롤을 컨트롤에 로드 하거나이를 저장 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CPropExchange`기본 클래스는 없습니다.  
+ `CPropExchange` 기본 클래스는 없습니다.  
   
  컨텍스트 및 속성 exchange의 방향을 설정합니다.  
   
@@ -78,7 +73,7 @@ class AFX_NOVTABLE CPropExchange
   
  프레임 워크에 대 한 포인터를 전달 `CPropExchange` 개체를 컨트롤의 `DoPropExchange` 함수입니다. 마법사를 사용 하는 컨트롤을 컨트롤의에 대해 시작 파일을 만들려는 경우 `DoPropExchange` 함수 호출 `COleControl::DoPropExchange`합니다. 기본 클래스 버전 교환 컨트롤의 스톡 속성입니다. 컨트롤에 추가한 exchange 속성을 파생된 클래스의 버전을 수정입니다.  
   
- `CPropExchange`컨트롤의 속성을 serialize 하거나 컨트롤 생성 이나 부하에 따라 컨트롤의 속성을 초기화 데 사용할 수 있습니다. `ExchangeProp` 및 `ExchangeFontProp` 의 멤버 함수 `CPropExchange` 속성을 저장 하 고 다양 한 미디어에서이 로드 합니다.  
+ `CPropExchange` 컨트롤의 속성을 serialize 하거나 컨트롤 생성 이나 부하에 따라 컨트롤의 속성을 초기화 데 사용할 수 있습니다. `ExchangeProp` 및 `ExchangeFontProp` 의 멤버 함수 `CPropExchange` 속성을 저장 하 고 다양 한 미디어에서이 로드 합니다.  
   
  사용 하 여 대 한 자세한 내용은 `CPropExchange`, 문서를 참조 [MFC ActiveX 컨트롤: 속성 페이지](../../mfc/mfc-activex-controls-property-pages.md)합니다.  
   
@@ -88,7 +83,7 @@ class AFX_NOVTABLE CPropExchange
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxctl.h  
   
-##  <a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp  
+##  <a name="exchangeblobprop"></a>  CPropExchange::ExchangeBlobProp  
  이진 대형 개체 (BLOB) 데이터를 저장 하는 속성을 serialize 합니다.  
   
 ```  
@@ -116,7 +111,7 @@ virtual BOOL ExchangeBlobProp(
   
  함수 **CArchivePropExchange::ExchangeBlobProp**, **CResetPropExchange::ExchangeBlobProp**, 및 **CPropsetPropExchange::ExchangeBlobProp** 재정의 이 순수 가상 함수입니다.  
   
-##  <a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp  
+##  <a name="exchangefontprop"></a>  CPropExchange::ExchangeFontProp  
  저장 매체와 컨트롤 간의 글꼴 속성을 교환합니다.  
   
 ```  
@@ -148,7 +143,7 @@ virtual BOOL ExchangeFontProp(
   
  함수 **CArchivePropExchange::ExchangeFontProp**, **CResetPropExchange::ExchangeFontProp**, 및 **CPropsetPropExchange::ExchangeFontProp** 재정의 이 순수 가상 함수입니다.  
   
-##  <a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp  
+##  <a name="exchangepersistentprop"></a>  CPropExchange::ExchangePersistentProp  
  컨트롤 및 파일 간의 속성을 교환합니다.  
   
 ```  
@@ -180,7 +175,7 @@ virtual BOOL ExchangePersistentProp(
   
  함수 **CArchivePropExchange::ExchangePersistentProp**, **CResetPropExchange::ExchangePersistentProp**, 및 **CPropsetPropExchange::ExchangePersistentProp** 이 순수 가상 함수를 재정의 합니다.  
   
-##  <a name="exchangeprop"></a>CPropExchange::ExchangeProp  
+##  <a name="exchangeprop"></a>  CPropExchange::ExchangeProp  
  저장 매체와 컨트롤 간의 속성을 교환합니다.  
   
 ```  
@@ -222,7 +217,7 @@ virtual BOOL ExchangeProp(
   
  함수 **CArchivePropExchange::ExchangeProp**, **CResetPropExchange::ExchangeProp**, 및 **CPropsetPropExchange::ExchangeProp** 이 순수 재정의 가상 함수입니다.  
   
-##  <a name="exchangeversion"></a>CPropExchange::ExchangeVersion  
+##  <a name="exchangeversion"></a>  CPropExchange::ExchangeVersion  
  버전 번호의 지 속성을 처리 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -245,7 +240,7 @@ virtual BOOL ExchangeVersion(
 ### <a name="return-value"></a>반환 값  
  함수가 성공 하면 0이 아니고 그렇지 않으면 0입니다.  
   
-##  <a name="getversion"></a>CPropExchange::GetVersion  
+##  <a name="getversion"></a>  CPropExchange::GetVersion  
  컨트롤의 버전 번호를 검색 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -255,7 +250,7 @@ DWORD GetVersion();
 ### <a name="return-value"></a>반환 값  
  컨트롤의 버전 번호입니다.  
   
-##  <a name="isasynchronous"></a>CPropExchange::IsAsynchronous  
+##  <a name="isasynchronous"></a>  CPropExchange::IsAsynchronous  
  속성 교환을 비동기적으로 하는지 확인 합니다.  
   
 ```  
@@ -265,7 +260,7 @@ BOOL IsAsynchronous();
 ### <a name="return-value"></a>반환 값  
  속성이 있으면 TRUE를 반환 교환 비동기적으로, 그렇지 않으면 FALSE입니다.  
   
-##  <a name="isloading"></a>CPropExchange::IsLoading  
+##  <a name="isloading"></a>  CPropExchange::IsLoading  
  속성은 되 고 있는지 여부를 확인 하려면이 함수를 호출 컨트롤에 로드 하거나이를 저장 합니다.  
   
 ```  

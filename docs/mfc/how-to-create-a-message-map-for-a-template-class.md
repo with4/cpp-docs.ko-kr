@@ -1,30 +1,25 @@
 ---
-title: "방법: 템플릿 클래스에 대 한 메시지 맵 만들기 | Microsoft Docs"
-ms.custom: 
+title: '방법: 템플릿 클래스에 대 한 메시지 맵 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - template classes [MFC], creating message maps
 - message maps [MFC], template classes
 ms.assetid: 4e7e24f8-06df-4b46-82aa-7435c8650de3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e593d1b75265a1c58c82278920bda92ddf58929
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6781ca14b174608a815a0300750dd6a3d9aa96bb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-create-a-message-map-for-a-template-class"></a>방법: 템플릿 클래스에 대한 메시지 맵 만들기
 메시지 매핑 MFC의 Windows 메시지를 적절 한 c + + 개체 인스턴스 수 있는 효율적인 방법을 제공 합니다. MFC 메시지 맵에 대상의 예로 응용 프로그램 클래스, 문서 및 뷰 클래스, 컨트롤 클래스 및 등이 있습니다.  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
   
  제한 사항은 일반 하나는 [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map) 매크로 템플릿 인수를 포함 하는 클래스와 함께에서 사용할 경우에 발생 합니다. 템플릿 클래스를 사용할 때이 매크로 매크로 확장 중 누락 된 템플릿 매개 변수 때문에 컴파일 타임 오류를 발생 합니다. [BEGIN_TEMPLATE_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_template_message_map) 매크로 매핑합니다 메시지를 직접 선언에 대 한 단일 템플릿 인수를 포함 하는 클래스를 허용 하도록 설계 되었습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  예를 살펴보겠습니다 있는 MFC [CListBox](../mfc/reference/clistbox-class.md) 클래스 외부 데이터 원본 사용 하 여 동기화를 제공 하도록 확장 됩니다. 가상의 **CSyncListBox** 클래스는 다음과 같이 선언 됩니다.  
   
  [!code-cpp[NVC_MFC_CListBox#42](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_1.h)]  

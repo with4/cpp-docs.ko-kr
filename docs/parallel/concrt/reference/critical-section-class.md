@@ -1,12 +1,9 @@
 ---
-title: "critical_section 클래스 | Microsoft Docs"
-ms.custom: 
+title: critical_section 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - critical_section
@@ -23,17 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2b5bd48039cdf2cc477035abd2904387e194ee2
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: d0287c74155e7b4fe827bb015b43cfca3384f3b1
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="criticalsection-class"></a>critical_section 클래스
 동시성 런타임을 명시적으로 인식하는 재진입성이 아닌 뮤텍스입니다.  
@@ -132,7 +127,7 @@ native_handle_type native_handle();
 ### <a name="remarks"></a>설명  
  A `critical_section` 개체는 Windows 운영 체제에 대 한 플랫폼 특정 네이티브 핸들 연결 되어 있지 않습니다. 메서드는 단순히 개체 자체에 대 한 참조를 반환합니다.  
   
-##  <a name="critical_section__scoped_lock_class">critical_section:: scoped_lock 클래스</a>  
+##  <a name="critical_section__scoped_lock_class"></a>  critical_section:: scoped_lock 클래스  
  예외 안전한 RAII 래퍼에 대 한는 `critical_section` 개체입니다.  
   
 ```

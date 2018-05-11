@@ -1,13 +1,10 @@
 ---
-title: "디스패치 맵 | Microsoft Docs"
-ms.custom: 
+title: 디스패치 맵 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
 dev_langs:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - dispatch maps [MFC]
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3112c092a4e1d6eb970fb50153c543baa98ee853
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 313e465698da5799a107bc3bdbeb6d2cbbe47303
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dispatch-maps"></a>디스패치 맵
 OLE 자동화 메서드를 호출 하 고 응용 프로그램에서 속성에 액세스 하는 방법을 제공 합니다. 이러한 요청을 디스패치를 위한 Microsoft Foundation Class 라이브러리에서 제공 하는 메커니즘은 "디스패치 맵," 데이터 형식 및 속성 자체의 뿐만 아니라 개체 함수 및 속성의 내부 및 외부 이름을 지정 하는 함수 인수입니다.  
@@ -46,7 +41,7 @@ OLE 자동화 메서드를 호출 하 고 응용 프로그램에서 속성에 �
 |[DISP_PROPERTY_PARAM](#disp_property_param)|Get 및 Set 함수 이름과 매개 변수를 사용 하는 OLE 자동화 속성을 정의 합니다.|  
 |[DISP_DEFVALUE](#disp_defvalue)|기존 속성을 개체의 기본값으로 만듭니다.|  
   
-##  <a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP  
+##  <a name="declare_dispatch_map"></a>  DECLARE_DISPATCH_MAP  
  경우는 `CCmdTarget`-프로그램의 파생된 클래스 자동화를 지 원하는 OLE, 클래스의 메서드 및 속성을 노출 하는 디스패치 맵을 제공 해야 합니다.  
   
 ```   
@@ -61,13 +56,13 @@ DECLARE_DISPATCH_MAP()
   
  응용 프로그램 마법사 및 코드 마법사 자동화 클래스를 만드는 및 디스패치 맵 유지 관리에 도움이 됩니다. 디스패치 맵에 대 한 자세한 내용은 참조 하십시오. [자동화 서버](../../mfc/automation-servers.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCAutomation#10](../../mfc/codesnippet/cpp/dispatch-maps_1.h)]  
 
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
 
-##  <a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP  
+##  <a name="begin_dispatch_map"></a>  BEGIN_DISPATCH_MAP  
  디스패치 맵의 정의 선언합니다.  
   
 ```  
@@ -87,7 +82,7 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h  
 
-##  <a name="end_dispatch_map"></a>END_DISPATCH_MAP  
+##  <a name="end_dispatch_map"></a>  END_DISPATCH_MAP  
  디스패치 맵 정의 끝냅니다.  
   
 ```   
@@ -100,7 +95,7 @@ END_DISPATCH_MAP()
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h  
 
-##  <a name="disp_function"></a>DISP_FUNCTION  
+##  <a name="disp_function"></a>  DISP_FUNCTION  
  디스패치 맵에 OLE 자동화 함수를 정의합니다.  
   
 ```   
@@ -169,7 +164,7 @@ DISP_FUNCTION(
 |**VTS_BOOL**|**BOOL**|  
 |**VTS_VARIANT**|**const VARIANT\***  또는 **VARIANT &**|  
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
-|**VTS_PI2**|**짧은\***|  
+|**VTS_PI2**|**short\***|  
 |**VTS_PI4**|**긴\***|  
 |**VTS_PR4**|**float\***|  
 |**VTS_PR8**|**double\***|  
@@ -186,7 +181,7 @@ DISP_FUNCTION(
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h 
 
-##  <a name="disp_property"></a>DISP_PROPERTY  
+##  <a name="disp_property"></a>  DISP_PROPERTY  
  디스패치 맵에 OLE 자동화 속성을 정의합니다.  
   
 ```   
@@ -233,7 +228,7 @@ DISP_PROPERTY(
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h 
 
-##  <a name="disp_property_ex"></a>DISP_PROPERTY_EX  
+##  <a name="disp_property_ex"></a>  DISP_PROPERTY_EX  
  OLE 자동화 속성과 이름을 가져오고 디스패치 맵에 속성의 값을 설정 하는 데 사용 하는 함수를 정의 합니다.  
   
 ```   
@@ -269,7 +264,7 @@ DISP_PROPERTY_EX(
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h 
 
-##  <a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY  
+##  <a name="disp_property_notify"></a>  DISP_PROPERTY_NOTIFY  
  디스패치 맵에 알림 사용 하 여 OLE 자동화 속성을 정의합니다.  
   
 ```   
@@ -320,7 +315,7 @@ DISP_PROPERTY_NOTIFY(
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h 
 
-##  <a name="disp_property_param"></a>DISP_PROPERTY_PARAM  
+##  <a name="disp_property_param"></a>  DISP_PROPERTY_PARAM  
  별도 사용 하 여 액세스 속성을 정의 **가져오기** 및 `Set` 멤버 함수입니다.  
   
 ```   
@@ -355,7 +350,7 @@ DISP_PROPERTY_PARAM(
 ### <a name="remarks"></a>설명  
  와 달리는 `DISP_PROPERTY_EX` 매크로이 매크로 사용 하면 속성에 대 한 매개 변수 목록을 지정할 수 있습니다. 이 인덱싱된 되거나 매개 변수가 있는 속성을 구현 하는 데 유용 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  Get 다음 선언을 살펴보세요 하 고 사용자 속성에 액세스 하는 경우 특정 행과 열을 요청 하도록 허용 하는 함수 멤버를 설정 합니다.  
   
  [!code-cpp[NVC_MFCActiveXControl#9](../../mfc/codesnippet/cpp/dispatch-maps_3.h)]  
@@ -375,7 +370,7 @@ DISP_PROPERTY_PARAM(
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxdisp.h 
 
-##  <a name="disp_defvalue"></a>DISP_DEFVALUE  
+##  <a name="disp_defvalue"></a>  DISP_DEFVALUE  
  기존 속성을 개체의 기본값으로 만듭니다.  
   
 ```   

@@ -1,12 +1,9 @@
 ---
 title: runtime_checks | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.runtime_checks
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - runtime_checks pragma
 - pragmas, runtime_checks
 ms.assetid: ae50b43f-f88d-47ad-a2db-3389e9e7df5b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c91d04c145435b2570963cac38463061598e805
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 817afaff738b2528bd165e814517c8399cd8a151
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="runtimechecks"></a>runtime_checks
 [/RTC](../build/reference/rtc-run-time-error-checks.md) 설정을 사용할 수 없도록 설정하거나 복원합니다.  
@@ -54,7 +49,7 @@ ms.lasthandoff: 02/23/2018
 |**c**|데이터 손실이 발생하는 더 작은 데이터 형식에 값이 할당되는 경우 이를 보고합니다.|  
 |**u**|정의되기 전에 변수를 사용하면 보고합니다.|  
   
- 이들은 /RTC 컴파일러 옵션과 함께 사용되는 동일한 문자입니다. 예:  
+ 이들은 /RTC 컴파일러 옵션과 함께 사용되는 동일한 문자입니다. 예를 들어:  
   
 ```  
 #pragma runtime_checks( "sc", restore )  

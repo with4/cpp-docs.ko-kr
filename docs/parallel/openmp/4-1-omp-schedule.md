@@ -1,27 +1,22 @@
 ---
 title: 4.1 OMP_SCHEDULE | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: d0dce411-2351-4ee9-a1cc-c0322a58b65c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 330e5ea576e3cd779a7c17c21d00b6459f5e7043
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 7e13332077a40e741f56b5602ac5197bbdfef071
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="41-ompschedule"></a>4.1 OMP_SCHEDULE
 **OMP_SCHEDULE** 에 적용 됩니다 **에 대 한** 및 **에 대 한 병렬** 일정 유형을 가진 지시문 **런타임**합니다. 인식 된 일정 유형 중 하나로 및 선택적를이 환경 변수를 설정 하 여 런타임 시 이러한 모든 루프에 대 한 일정 유형 및 청크 크기를 설정할 수 있습니다 *chunk_size*합니다.  

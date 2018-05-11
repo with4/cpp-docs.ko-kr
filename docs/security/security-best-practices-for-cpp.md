@@ -1,13 +1,10 @@
 ---
-title: "C + +에 대 한 보안 모범 사례 | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: C + +에 대 한 보안 모범 사례 | Microsoft Docs
+ms.custom: ''
+ms.date: 05/08/2018
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - securitybestpracticesVC
 dev_langs:
@@ -17,40 +14,40 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-caps.latest.revision: 
-author: ghogen
-ms.author: ghogen
-manager: ghogen
+author: mikeblome
+ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f1474f44b81a95c119a405dda8a91db62a08417
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 35114d2fff4975cfca1681a7f5861c81bd979ef5
+ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="security-best-practices-for-c"></a>C++의 최선의 보안 구현 방법
+
 이 문서에는 보안 도구와 구현 방법에 대한 정보가 포함되어 있습니다. 이러한 정보를 사용해도 응용 프로그램이 공격으로부터 완전히 보호되는 것은 아니지만 공격 성공 가능성이 줄어듭니다.  
   
-## <a name="visual-c-security-features"></a>Visual C++ 보안 기능  
+## <a name="visual-c-security-features"></a>Visual C++ 보안 기능
+
  이러한 보안 기능은 Visual C++ 컴파일러 및 링커에 기본 제공됩니다.  
   
- [/guard (제어 흐름 보호 사용)](../build/reference/guard-enable-control-flow-guard.md)  
+ [/guard(제어 흐름 보호 사용)](../build/reference/guard-enable-control-flow-guard.md)  
  컴파일러가 컴파일 시간에 간접 호출 대상에 대한 제어 흐름을 분석한 다음 런타임에 대상을 확인하는 코드를 삽입하게 합니다.  
   
- [/GS (버퍼 보안 검사)](../build/reference/gs-buffer-security-check.md)  
+ [/GS(버퍼 보안 검사)](../build/reference/gs-buffer-security-check.md)  
  악용될 위험이 있는 함수에 오버런 감지 코드를 삽입하도록 컴파일러에 지시합니다. 오버런이 감지되면 실행이 중지됩니다. 이 옵션은 기본적으로 켜져 있습니다.  
   
- [/SAFESEH (이미지에 안전한 예외 처리기를 포함)](../build/reference/safeseh-image-has-safe-exception-handlers.md)  
+ [/SAFESEH(이미지에 안전한 예외 처리기 포함)](../build/reference/safeseh-image-has-safe-exception-handlers.md)  
  각 예외 처리기의 주소를 포함하는 테이블을 출력 이미지에 포함하도록 링커에 지시합니다. 런타임에 운영 체제는 이 테이블을 사용하여 적합한 예외 처리기만 실행되도록 합니다. 이렇게 하면 런타임에 악의적인 공격에 의한 예외 처리기 실행을 방지하는 데 도움이 됩니다. 이 옵션은 기본적으로 해제되어 있습니다.  
   
  [/NXCOMPAT](../build/reference/nxcompat.md), [/NXCOMPAT (데이터 실행 방지 기능과 호환)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md)  
  이러한 컴파일러 및 링커 옵션은 DEP(데이터 실행 방지) 호환성을 사용하도록 설정합니다. DEP는 비코드 페이지 실행에 대해 CPU를 보호합니다.  
   
- [/analyze (코드 분석)](../build/reference/analyze-code-analysis.md)  
+ [/analyze(코드 분석)](../build/reference/analyze-code-analysis.md)  
  이 컴파일러 옵션은 버퍼 오버런, 초기화되지 않은 메모리, null 포인터 역참조 및 메모리 누수와 같은 잠재적인 보안 문제를 보고하는 코드 분석을 활성화합니다. 이 옵션은 기본적으로 해제되어 있습니다. 자세한 내용은 참조 [C/c + + 개요에 대 한 코드 분석](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)합니다.  
   
- [/DYNAMICBASE (주소 공간 레이아웃 불규칙화 사용)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)  
+ [/DYNAMICBASE(주소 공간 레이아웃을 임의로 지정)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)  
  이 링커 옵션은 실행을 시작할 때 메모리의 다른 위치에 로드될 수 있는 실행 가능한 이미지를 작성할 수 있게 합니다. 또한 이 옵션을 사용하면 메모리의 스택 위치를 예측하기가 훨씬 어렵습니다.  
   
 ## <a name="security-enhanced-crt"></a>보안이 강화된 CRT  
@@ -89,14 +86,19 @@ ms.lasthandoff: 01/03/2018
 -   일반적인 프로그래밍 실수로 인해 발생하는 잠재적인 응용 프로그램 호환성 오류를 테스트합니다.  
   
 -   응용 프로그램에서 메모리 관련 문제를 검사합니다.  
-  s
+
 -   응용 프로그램에서 잠재적인 보안 문제를 식별합니다.  
   
  AppVerifier에서 사용할 수 있는 Application Compatibility Toolkit의 일부인는 [응용 프로그램 호환성](http://go.microsoft.com/fwlink/p/?linkid=91277) TechNet 웹 사이트에 있습니다.  
   
 
 ## <a name="windows-user-accounts"></a>Windows 사용자 계정  
- Administrators 그룹에 속하는 Windows 사용자 계정을 사용하면 개발자 및 확장에 의해 고객이 보안 위험에 노출됩니다. 자세한 내용은 참조 [Users 그룹의 멤버로 실행](running-as-a-member-of-the-users-group.md) 및 [어떻게 사용자 계정 컨트롤 (UAC)에 영향을 응용 프로그램](how-user-account-control-uac-affects-your-application.md)합니다.  
+ Administrators 그룹에 속하는 Windows 사용자 계정을 사용하면 개발자 및 확장에 의해 고객이 보안 위험에 노출됩니다. 자세한 내용은 참조 [Users 그룹의 멤버로 실행](running-as-a-member-of-the-users-group.md) 및 [어떻게 사용자 계정 컨트롤 (UAC)에 영향을 응용 프로그램](how-user-account-control-uac-affects-your-application.md)합니다.
+
+## <a name="guidance-for-speculative-execution-side-channels"></a>잘못 된 실행 쪽 채널에 대 한 지침
+
+식별 하 고 추론 실행 측면 채널 하드웨어 문제 c + + 소프트웨어에 대 한 완화 하는 방법에 대 한 정보를 참조 하십시오. [잘못 된 실행 쪽 채널에 대 한 c + + 개발자 지침](developer-guidance-speculative-execution.md)합니다.
+
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Security>   

@@ -1,13 +1,10 @@
 ---
-title: "유휴 루프 처리 | Microsoft Docs"
-ms.custom: 
+title: 유휴 루프 처리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - processing [MFC]
 - background processing [MFC]
 ms.assetid: 5c7c46c1-6107-4304-895f-480983bb1e44
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: baabba60ffaf886b7a34acfbff5b923a4495fa1b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d66983eb915c856ecf52e225b71151359a499b4b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="idle-loop-processing"></a>유휴 루프 처리
 대부분의 응용 프로그램 "에서"배경입니다. 시간이 오래 걸리는 처리를 수행합니다. 경우에 따라 성능 고려 사항에 따라 이러한 작업에 다중 스레딩을 사용할. 스레드 관련 별도 개발 오버 헤드 하므로 MFC가 유휴 시간 작업 등의 간단한 작업에 대 한 권장 되지 않습니다는 [OnIdle](../mfc/reference/cwinthread-class.md#onidle) 함수입니다. 이 문서는 유휴 프로세스에 중점을 둡니다. 다중 스레딩, 참조에 대 한 자세한 내용은 [다중 스레딩 항목](../parallel/multithreading-support-for-older-code-visual-cpp.md)합니다.  
@@ -48,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
 -   포함 하는 다른 **PeekMessage** 응용 프로그램에서 다른 위치를 반복 합니다.  
   
-##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a>MFC 메시지 루프의 PeekMessage  
+##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a> MFC 메시지 루프의 PeekMessage  
  MFC를 사용 하 여 개발 된 응용 프로그램에서는 기본 메시지 루프는 `CWinThread` 호출 하는 메시지 루프를 포함 하는 클래스는 [PeekMessage](http://msdn.microsoft.com/library/windows/desktop/ms644943) Win32 API입니다. 이 호출 또한 루프는 `OnIdle` 의 멤버 함수 `CWinThread` 메시지 사이입니다. 응용 프로그램 재정의 하 여 유휴 시간에 메시지를 처리할 수는 `OnIdle` 함수입니다.  
   
 > [!NOTE]
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
  유휴 처리를 수행 하는 방법에 대 한 자세한 내용은 참조 [OnIdle](../mfc/reference/cwinthread-class.md#onidle) 에 *MFC 참조*합니다.  
   
-##  <a name="_core_peekmessage_elsewhere_in_your_application"></a>응용 프로그램의 다른 위치에서 PeekMessage  
+##  <a name="_core_peekmessage_elsewhere_in_your_application"></a> 응용 프로그램의 다른 위치에서 PeekMessage  
  유휴 응용 프로그램에서 처리를 수행 하는 다른 방법은 함수 중 하나에 메시지 루프를 포함 하는 작업이 포함 됩니다. 이 메시지 루프는에서 발견 되는 MFC의 기본 메시지 루프와 매우 비슷합니다 [CWinThread::Run](../mfc/reference/cwinthread-class.md#run)합니다. 즉, MFC를 사용 하 여 개발한 응용 프로그램에서 루프는 다양 한 기본 메시지 루프와 동일한 기능을 수행 해야 합니다. 다음 코드 조각은 MFC 호환 되는 메시지 루프를 작성 하는 방법을 보여 줍니다.  
   
  [!code-cpp[NVC_MFCDocView#8](../mfc/codesnippet/cpp/idle-loop-processing_1.cpp)]  

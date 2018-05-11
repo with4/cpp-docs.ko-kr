@@ -1,13 +1,10 @@
 ---
-title: "문서 뷰 아키텍처에 대 한 자세한 | Microsoft Docs"
-ms.custom: 
+title: 문서 뷰 아키텍처에 대 한 자세한 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - document/view architecture [MFC], about document/view architecture
 - views [MFC], accessing document data from
 ms.assetid: 4e7f65dc-b166-45d8-bcd5-9bb0d399b946
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ceadc55945a31e4787287beb6943897784aeaad
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d366cf7c9aee6988d715edbe30e3938c30557e2a
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>문서/뷰 아키텍처에 대한 자세한 설명
 일반 MFC 응용 프로그램에서 문서 및 뷰 페어링 되었습니다. 데이터는 문서에 저장 되어 있지만 보기에 특권 수준의 권한이 데이터에 대 한 액세스. 표시에서 저장소 및 데이터의 유지 관리를 구분 하는 보기에서 문서를 분리 합니다.  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="updating-multiple-views-of-the-same-document"></a>동일한 문서의 여러 뷰 업데이트  
  동일한 문서의 여러 뷰가 포함 된 응용 프로그램에서-예: 텍스트 편집기에서 분할자 창-보기 먼저 문서에 새 데이터를 전달 합니다. 문서의 호출 [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) 업데이트 되므로, 새 데이터를 반영 하려면 문서의 모든 보기를 알려 주는 멤버 함수입니다. 뷰를 동기화 합니다.  
   
-### <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+### <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [문서/뷰 아키텍처의 이점](../mfc/advantages-of-the-document-view-architecture.md)  
   

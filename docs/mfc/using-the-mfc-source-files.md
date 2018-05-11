@@ -1,13 +1,10 @@
 ---
-title: "MFC를 사용 하 여 소스 파일 | Microsoft Docs"
-ms.custom: 
+title: MFC를 사용 하 여 소스 파일 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - protected member access
 - source files, MFC
 ms.assetid: 3230e8fb-3b69-4ddf-9538-365ac7ea5e72
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 930c205ffd690c190f68766f7a51c83b68ef8d2f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 73177d8b73d5f4be6d886b0bda84f1e1241488cc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-mfc-source-files"></a>MFC 소스 파일 사용
 Microsoft Foundation 클래스 (MFC) 라이브러리는 전체 소스 코드를 제공합니다. 헤더 파일 (.h) \atlmfc\include 디렉터리;에 구현 파일 (.cpp)가 \atlmfc\src\mfc 디렉터리에 있습니다.  

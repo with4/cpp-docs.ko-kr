@@ -1,27 +1,22 @@
 ---
-title: "1.2 용어 정의 | Microsoft Docs"
-ms.custom: 
+title: 1.2 용어 정의 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-parallel
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: fcaa8eb8-bbbf-4a24-ad0e-e299c442db79
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab188c32c633092efc562d0432ebb7c5662b5ff8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8563bb757ad8d30f1639f017769bfd6c4084efa0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="12-definition-of-terms"></a>1.2 용어 정의
 이 문서에는 다음과 같은 용어가 사용 됩니다.  
@@ -63,7 +58,7 @@ ms.lasthandoff: 12/21/2017
  공유 변수는 단일 블록 저장소의 이름을 지정 합니다. 이 변수를 액세스 하는 팀의 모든 스레드는이 단일 블록 저장소에 액세스 합니다.  
   
  구조화 된 블록  
- 구조화 된 블록은 단일 항목 있으며 단일 종료 된 문 (단일 또는 복합)입니다. 문이 없는 경우 구조화 된 블록 안이나 해당 문 밖으로 점프 되 (에 대 한 호출을 포함 하 여 **longjmp**(3 C) 또는 사용은 **throw**에 대 한 호출이 **종료** 는 허용). 복합 문은 항상 실행을 열 때 시작 하는 경우 구조화 된 블록은 **{** 항상 닫는 끝나는 **}**합니다. 식 문, 선택 문, 반복 문 또는 **시도** 블록은 구조화 된 블록에 포함 하 여 해당 복합 문의 얻은 경우 **{** 및 **}** 구조화 된 블록 것입니다. 점프 문, labeled 문 또는 선언문은 구조화 된 블록.  
+ 구조화 된 블록은 단일 항목 있으며 단일 종료 된 문 (단일 또는 복합)입니다. 문이 없는 경우 구조화 된 블록 안이나 해당 문 밖으로 점프 되 (에 대 한 호출을 포함 하 여 **longjmp**(3 C) 또는 사용은 **throw**에 대 한 호출이 **종료** 는 허용). 복합 문은 항상 실행을 열 때 시작 하는 경우 구조화 된 블록은 **{** 항상 닫는 끝나는 **}** 합니다. 식 문, 선택 문, 반복 문 또는 **시도** 블록은 구조화 된 블록에 포함 하 여 해당 복합 문의 얻은 경우 **{** 및 **}** 구조화 된 블록 것입니다. 점프 문, labeled 문 또는 선언문은 구조화 된 블록.  
   
  팀  
  하나 이상의 스레드가 구문의 실행에 협력 합니다.  

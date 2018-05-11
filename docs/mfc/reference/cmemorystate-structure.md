@@ -2,11 +2,8 @@
 title: CMemoryState 구조 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMemoryState
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - memory leaks [MFC], detecting
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
-caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20f4c2d7d33d07a5eca5a980c376056c3fe68e2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d9dbcaa3f8e02a87713363f1ea38c5d2260171df
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 구조
 프로그램에서 메모리 누수 문제를 감지 하는 편리한 방법을 제공 합니다.  
@@ -56,7 +51,7 @@ struct CMemoryState
 |[CMemoryState::DumpStatistics](#dumpstatistics)|에 대 한 메모리 할당 통계 인쇄는 `CMemoryState` 개체입니다.|  
   
 ## <a name="remarks"></a>설명  
- `CMemoryState`구조체가 고 기본 클래스는 없습니다.  
+ `CMemoryState` 구조체가 고 기본 클래스는 없습니다.  
   
  "메모리 누수" 개체에 대 한 메모리 힙에 할당 되는 더 이상 필요 하면 할당이 취소 되지 않는 경우 발생 합니다. 이러한 메모리 누수 결국 메모리 부족 오류가 발생할 수 있습니다. 여러 가지 방법으로 할당 하 고 프로그램에서 메모리 할당을 취소할 수 있습니다.  
   
@@ -66,13 +61,13 @@ struct CMemoryState
   
 -   C + +를 사용 하 여 **새** 및 **삭제** 연산자입니다.  
   
- `CMemoryState` 진단만 메모리를 찾아내는 데 도움이 사용 하 여 메모리 할당 하는 경우에 발생 하는 누수는 **새** 연산자를 사용 하 여 할당 취소 됩니다 **삭제**합니다. 다른 두 그룹의 메모리 관리 함수는 비 c + + 프로그램 및를 사용 하 여 혼합 **새** 및 **삭제** 동일한 프로그램에서 권장 되지 않습니다. 추가 매크로 `DEBUG_NEW`, 대체 하기 위해 제공 됩니다는 **새** 연산자 파일 및 메모리 할당의 줄 번호 추적 해야 합니다. `DEBUG_NEW`일반적으로 사용 하려는 때마다 사용 되는 **새** 연산자입니다.  
+ `CMemoryState` 진단만 메모리를 찾아내는 데 도움이 사용 하 여 메모리 할당 하는 경우에 발생 하는 누수는 **새** 연산자를 사용 하 여 할당 취소 됩니다 **삭제**합니다. 다른 두 그룹의 메모리 관리 함수는 비 c + + 프로그램 및를 사용 하 여 혼합 **새** 및 **삭제** 동일한 프로그램에서 권장 되지 않습니다. 추가 매크로 `DEBUG_NEW`, 대체 하기 위해 제공 됩니다는 **새** 연산자 파일 및 메모리 할당의 줄 번호 추적 해야 합니다. `DEBUG_NEW` 일반적으로 사용 하려는 때마다 사용 되는 **새** 연산자입니다.  
   
  다른 진단와 마찬가지로 `CMemoryState` 진단이 프로그램의 디버그 버전에서 사용할 수만 있습니다. 디버그 버전 있어야는 **_DEBUG** 정의 되는 상수입니다.  
   
  사용할 수 있습니다 프로그램에 메모리 누수가 의심 되는 경우는 `Checkpoint`, **차이**, 및 `DumpStatistics` 프로그램에서 두 개의 서로 다른 시점에서 메모리 상태 (할당 된 개체) 간의 차이 검색 하는 함수 실행 합니다. 이 정보는 함수를 할당 한 모든 개체 정리 있는지 여부를 결정 하는 데 유용할 수 있습니다.  
   
- 단순히 할당 및 할당 취소에 않으므로 이러한 불균형은 발생 한 위치를 알고 있으면 충분 한 정보 제공 하지 않는 경우 사용할 수 있습니다는 `DumpAllObjectsSince` 함수에 대 한 이전 호출 이후에 할당 된 모든 개체를 덤프를 `Checkpoint`합니다. 이 덤프의 할당, 소스 파일 및 줄 개체가 할당 된 순서를 보여 줍니다. (사용 중인 경우 `DEBUG_NEW` 할당에 대 한), 개체, 해당 주소 및 해당 크기의 파생 하 고 있습니다. `DumpAllObjectsSince`각 개체의 호출 `Dump` 함수를 현재 상태에 대 한 정보를 제공 합니다.  
+ 단순히 할당 및 할당 취소에 않으므로 이러한 불균형은 발생 한 위치를 알고 있으면 충분 한 정보 제공 하지 않는 경우 사용할 수 있습니다는 `DumpAllObjectsSince` 함수에 대 한 이전 호출 이후에 할당 된 모든 개체를 덤프를 `Checkpoint`합니다. 이 덤프의 할당, 소스 파일 및 줄 개체가 할당 된 순서를 보여 줍니다. (사용 중인 경우 `DEBUG_NEW` 할당에 대 한), 개체, 해당 주소 및 해당 크기의 파생 하 고 있습니다. `DumpAllObjectsSince` 각 개체의 호출 `Dump` 함수를 현재 상태에 대 한 정보를 제공 합니다.  
   
  사용 하는 방법에 대 한 자세한 내용은 `CMemoryState` 기타 진단 참조 및 [MFC 응용 프로그램 디버깅](/visualstudio/debugger/mfc-debugging-techniques)합니다.  
   
@@ -85,7 +80,7 @@ struct CMemoryState
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afx.h  
   
-##  <a name="checkpoint"></a>CMemoryState::Checkpoint  
+##  <a name="checkpoint"></a>  CMemoryState::Checkpoint  
  스냅숏을 메모리 요약 하 고이 저장 `CMemoryState` 개체입니다.  
   
 ```  
@@ -95,20 +90,20 @@ void Checkpoint();
 ### <a name="remarks"></a>설명  
  `CMemoryState` 멤버 함수 [차이](#difference) 및 [DumpAllObjectsSince](#dumpallobjectssince) 이 스냅숏 데이터를 사용 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조는 [CMemoryState](#cmemorystate) 생성자입니다.  
   
-##  <a name="cmemorystate"></a>CMemoryState::CMemoryState  
+##  <a name="cmemorystate"></a>  CMemoryState::CMemoryState  
  빈 생성 `CMemoryState` 은 입력 해야 하는 개체는 [검사점](#checkpoint) 또는 [차이](#difference) 멤버 함수입니다.  
   
 ```  
 CMemoryState();
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_Utilities#18](../../mfc/codesnippet/cpp/cmemorystate-structure_1.cpp)]  
   
-##  <a name="difference"></a>CMemoryState::Difference  
+##  <a name="difference"></a>  CMemoryState::Difference  
  두 `CMemoryState` 차이이를 저장 한 다음 개체를 `CMemoryState` 개체입니다.  
   
 ```  
@@ -130,10 +125,10 @@ BOOL Difference(
 ### <a name="remarks"></a>설명  
  [검사점](#checkpoint) 두 메모리 상태 매개 변수 마다 호출 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조는 [CMemoryState](#cmemorystate) 생성자입니다.  
   
-##  <a name="dumpallobjectssince"></a>Cmemorystate:: Dumpallobjectssince  
+##  <a name="dumpallobjectssince"></a>  Cmemorystate:: Dumpallobjectssince  
  호출 된 `Dump` 클래스에서 파생 된 유형의 모든 개체에 대 한 함수 `CObject` 는 할당 된 (되며 여전히 할당) 마지막 이후 [검사점](#checkpoint) 이 대 한 호출 `CMemoryState` 개체입니다.  
   
 ```  
@@ -145,10 +140,10 @@ void DumpAllObjectsSince() const;
 ### <a name="remarks"></a>설명  
  호출 `DumpAllObjectsSince` 초기화 되지 않은와 `CMemoryState` 모든 개체의 현재 메모리에에서 개체를 덤프 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조는 [CMemoryState](#cmemorystate) 생성자입니다.  
   
-##  <a name="dumpstatistics"></a>CMemoryState::DumpStatistics  
+##  <a name="dumpstatistics"></a>  CMemoryState::DumpStatistics  
  간결한 메모리 통계 보고서를 인쇄 한 `CMemoryState` 로 채워진 개체는 [차이](#difference) 멤버 함수입니다.  
   
 ```  
@@ -178,7 +173,7 @@ void DumpStatistics() const;
   
  Free 블록은 면 해당 할당 취소가 연기 된 블록 수가 `afxMemDF` 로 설정 된 **delayFreeMemDF**합니다. 자세한 내용은 참조 [afxMemDF](diagnostic-services.md#afxmemdf), "MFC 매크로 및 전역 변수" 섹션에 있습니다. 참조 [디버그 힙의 블록의 형식](http://msdn.microsoft.com/en-us/db2e7f62-0679-4b39-a23f-26f2c2f407c5) 블록 형식의 이러한 이벤트에 대해 자세한 정보에 대 한 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   다음 코드에 배치 해야 *projname*App.cpp 합니다. 다음 전역 변수를 정의 합니다.  
   
  [!code-cpp[NVC_MFC_Utilities#40](../../mfc/codesnippet/cpp/cmemorystate-structure_2.cpp)]  

@@ -1,12 +1,9 @@
 ---
-title: "STL/CLR 컨테이너 | Microsoft Docs"
-ms.custom: 
+title: STL/CLR 컨테이너 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 dev_langs:
 - C++
@@ -14,18 +11,16 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1b8aa8ef5b1425d4aa41b1811dca5ec5d56acd1c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce6a2f096e5ee24716fcffd89411ffdf926a59aa
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="stlclr-containers"></a>STL/CLR 컨테이너
 STL/CLR 라이브러리에 c + + 표준 라이브러리에 있는 동일한 컨테이너가 하지만.NET Framework의 관리 되는 환경 내에서 실행 합니다. C + + 표준 라이브러리에 익숙한 경우 STL/CLR 계속 공용 언어 런타임 (CLR) 대상에 코드를 업그레이드 하는 동안 미리 만들어 둔 기술을 사용 하는 가장 좋은 방법은 됩니다.  
@@ -49,7 +44,7 @@ STL/CLR 라이브러리에 c + + 표준 라이브러리에 있는 동일한 컨�
 ### <a name="handles-to-reference-types"></a>참조 형식에 대 한 핸들  
  STL/CLR 컨테이너에는 참조 형식에 대 한 핸들을 삽입할 수 있습니다. CLR을 대상으로 하는 c + +에 대 한 핸들은 네이티브 c + +에 대 한 포인터와 비슷합니다. 자세한 내용은 참조 [개체 연산자 (^)에 대 한 핸들](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)합니다.  
   
-#### <a name="example"></a>예  
+#### <a name="example"></a>예제  
  다음 예제에는 Employee 개체에 대 한 핸들을 삽입 하는 방법을 보여 줍니다는 [cliext::set](../dotnet/set-stl-clr.md)합니다.  
   
 ```  
@@ -142,7 +137,7 @@ int main()
 ### <a name="reference-types"></a>참조 형식  
  STL/CLR 컨테이너에는 참조 형식 (참조 형식에 대 한 핸들 아님)를 삽입 하는 것도 가능 합니다. 여기서는 중요 한 차이점은 참조 형식의 컨테이너 삭제 되 면 해당 컨테이너 내의 모든 요소에 대해 소멸자가 호출 됩니다. 참조 형식에 대 한 핸들의 컨테이너에서 이러한 요소에 대 한 소멸자가 호출 되지 않습니다.  
   
-#### <a name="example"></a>예  
+#### <a name="example"></a>예제  
  다음 예제에는 Employee 개체를 삽입 하는 방법을 보여 줍니다는 `cliext::set`합니다.  
   
 ```  
@@ -237,7 +232,7 @@ int main()
   
  값 형식 요소와 같은 표준 값 형식 중 하나일 수 있습니다는 `int`와 같은 사용자 정의 값 형식 될 수도 있습니다는 `value class`합니다. 자세한 내용은 참조 [클래스 및 구조체](../windows/classes-and-structs-cpp-component-extensions.md)  
   
-#### <a name="example"></a>예  
+#### <a name="example"></a>예제  
  다음 예제에서는 값 형식 클래스 직원 하 여 첫 번째 예제를 수정 합니다. 이 값 형식이 다음 삽입 한 `cliext::set` 첫 번째 예제에서와 마찬가지로 합니다.  
   
 ```  

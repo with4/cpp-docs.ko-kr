@@ -1,13 +1,10 @@
 ---
 title: appobject | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.appobject
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 19462987cf4f9b5cc295766a694f01b8b4fac8ba
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aca26e156bbb6a883ed6d55a6a01da128982c127
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="appobject"></a>appobject
 전체.exe 응용 프로그램과 연결 된 문서를 나타내고 함수 및 coclass의 속성은이 전체적으로 사용할 수 있는 응용 프로그램 개체를으로 coclass를 식별 [형식 라이브러리](../mfc/automation-clients-using-type-libraries.md)합니다.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  **appobject** c + + 특성에 동일한 기능을는 [appobject](http://msdn.microsoft.com/library/windows/desktop/aa366726) MIDL 특성입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드를 포함 하는 특성 블록 뒤에 단순 클래스 정의 보여 줍니다. **appobject**:  
   
 ```  

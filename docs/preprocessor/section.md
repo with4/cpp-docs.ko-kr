@@ -1,12 +1,9 @@
 ---
-title: "섹션 | Microsoft Docs"
-ms.custom: 
+title: 섹션 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - section_CPP
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, section
 - section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10f5783c6712852bfb53f457cea174f699c01ea0
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a8d113c10ea8370a46560ba8668546c74b19c6f8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="section"></a>section
 .obj 파일에서 섹션을 만듭니다.  
@@ -74,7 +69,7 @@ ms.lasthandoff: 02/23/2018
   
  특성을 지정하지 않으면 섹션이 read 및 write 특성을 갖게 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서 첫 번째 명령은 섹션과 해당 특성을 식별합니다. 정수 `j`는 `mysec` 로 선언되지 않았기 때문에 `__declspec(allocate)`에 삽입되지 않습니다. `j`는 데이터 섹션으로 이동합니다. 정수 `i`는 `mysec` 저장소 클래스 특성의 결과로 `__declspec(allocate)`로 이동합니다.  
   
 ```  

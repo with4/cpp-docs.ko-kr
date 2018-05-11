@@ -1,13 +1,10 @@
 ---
-title: "방법: 정규식을 사용 하 여 문자열 구문 분석 (C + + /cli CLI) | Microsoft Docs"
-ms.custom: 
+title: '방법: 정규식을 사용 하 여 문자열 구문 분석 (C + + /cli CLI) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,23 +13,21 @@ helpviewer_keywords:
 - regular expressions [C++], parsing strings
 - strings [C++], parsing
 ms.assetid: 5b0c7ca3-9bba-4389-a45c-6d373cff91b0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 629486c98888fd8012d616c9e845e7d70a90fdcf
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5940a59d7e9b4e68f289848523710594621e73d4
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="how-to-parse-strings-using-regular-expressions-ccli"></a>방법: 정규식을 사용하여 문자열 구문 분석(C++/CLI)
 다음 코드 예제에서는 간단한 문자열을 사용 하 여 구문 분석 하는 방법을 보여 줍니다는 <xref:System.Text.RegularExpressions.Regex> 클래스에 <xref:System.Text.RegularExpressions?displayProperty=fullName> 네임 스페이스입니다. 여러 유형의 단어 설명자를 포함 하는 문자열을 생성 합니다. 문자열 구문 분석 사용 하 여 <xref:System.Text.RegularExpressions.Regex> 클래스와 함께 <xref:System.Text.RegularExpressions.Match> 클래스입니다. 그런 다음 문장의 각 단어는 별도로 표시 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // regex_parse.cpp  

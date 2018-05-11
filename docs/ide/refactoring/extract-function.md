@@ -1,24 +1,20 @@
 ---
-title: "Extract 함수 | Microsoft Docs"
-ms.custom: 
+title: Extract 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/16/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e31d1249-9705-4511-acbd-9f6fe73bdf2d
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbcd323292e301857c65d908047ab14948b86573
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 7fc4d48c972bca9352f326085574e4cf4df83aea
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="extract-function"></a>Extract 함수
 **:** 자체 함수로 코드의 일부를 회전할 수 있습니다.
@@ -36,9 +32,9 @@ ms.lasthandoff: 03/16/2018
 1. 다음 작업 중 하나를 수행합니다.
    * **키보드**
      * **Ctrl+R**을 누른 다음 **Ctrl+M**을 누릅니다.  바로 가기 키는 선택한 프로필에 따라 다를 수 있습니다.
-     * **Ctrl+.**를 눌러 트리거에 **빠른 작업 및 리팩터링** 메뉴와 선택 **함수 추출 (합니다 실험적)** 상황에 맞는 메뉴에서 합니다.
+     * **Ctrl+.** 를 눌러 트리거에 **빠른 작업 및 리팩터링** 메뉴와 선택 **함수 추출 (합니다 실험적)** 상황에 맞는 메뉴에서 합니다.
    * **마우스**
-     * 선택 **편집 > 리팩터링 > Extract 함수 (실험적)**합니다.
+     * 선택 **편집 > 리팩터링 > Extract 함수 (실험적)** 합니다.
      * 코드를 마우스 오른쪽 단추로 클릭, 선택는 **빠른 작업 및 리팩터링** 메뉴와 선택 **함수 추출 (합니다 실험적)** 상황에 맞는 메뉴에서 합니다.
      * 클릭는 ![전구](images/bulb.png) 선택한 왼쪽된 여백에 표시 되는 아이콘 **함수 추출 (합니다 실험적)** 상황에 맞는 메뉴입니다.
 

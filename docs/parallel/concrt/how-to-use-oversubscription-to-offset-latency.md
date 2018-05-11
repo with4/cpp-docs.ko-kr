@@ -1,35 +1,30 @@
 ---
-title: "방법: 초과 구독을 사용 하 여 대기 오프셋을 | Microsoft Docs"
-ms.custom: 
+title: '방법: 초과 구독을 사용 하 여 대기 오프셋을 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - oversubscription, using [Concurrency Runtime]
 - using oversubscription [Concurrency Runtime]
 ms.assetid: a1011329-2f0a-4afb-b599-dd4043009a10
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1a8f059abffd261de2002ed5d18067c48d74876
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c27864d040d0b6ce7b36087cff85ed750aa7ed2
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>방법: 초과 구독을 사용하여 대기 오프셋
 초과 구독 대기 시간이 없는 작업을 포함 하는 일부 응용 프로그램의 전반적인 효율성을 향상 시킬 수 있습니다. 이 항목에는 네트워크 연결에서 데이터 읽기를 통해 발생 하는 대기 시간 오프셋을 초과 구독을 사용 하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  사용 하 여이 예제는 [비동기 에이전트 라이브러리](../../parallel/concrt/asynchronous-agents-library.md) HTTP 서버에서 파일을 다운로드 합니다. `http_reader` 클래스에서 파생 [concurrency:: agent](../../parallel/concrt/reference/agent-class.md) 및 사용 하 여 다운로드할 URL 이름을 비동기적으로 읽은를 전달 하는 메시지입니다.  
   
  `http_reader` 클래스에서 사용 하는 [concurrency:: task_group](reference/task-group-class.md) 클래스를 동시에 각 파일을 읽습니다. 각 태스크 호출는 [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe) 메서드는 `_BeginOversubscription` 매개 변수 설정 `true` 초과 구독 현재 컨텍스트에서 사용할 수 있도록 합니다. 각 작업 (MFC (Microsoft Foundation Classes)에 다음 사용 하 여 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 및 [CHttpFile](../../mfc/reference/chttpfile-class.md) 클래스 파일을 다운로드 합니다. 마지막으로, 각 태스크 호출 `Context::Oversubscribe` 와 `_BeginOversubscription` 매개 변수 설정 `false` 초과 구독 사용 하지 않으려면입니다.  

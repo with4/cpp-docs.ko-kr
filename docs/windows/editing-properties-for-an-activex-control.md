@@ -1,31 +1,26 @@
 ---
-title: "ActiveX 컨트롤에 대 한 속성을 편집 | Microsoft Docs"
-ms.custom: 
+title: ActiveX 컨트롤에 대 한 속성을 편집 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - controls [C++], editing properties
 - ActiveX controls [C++], properties
 ms.assetid: e5880c62-36c7-4701-bc99-97a82974c22a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dbdf7cd626cca0d333b3979fa30cd8770c940701
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0f99caed2b0ce78635f89d884599ee6d40fc86f4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="editing-properties-for-an-activex-control"></a>ActiveX 컨트롤 속성 편집
 외부 공급 업체에서 제공 하는 ActiveX 컨트롤 속성 및 특성이 있을 수 있습니다. ActiveX 컨트롤에 대 한 속성은 속성 창에 표시 됩니다. ActiveX 컨트롤의 작성자가 만든 모든 속성 페이지에 표시 됩니다는 또한는 **속성 페이지** 대화 상자 (특정 ActiveX 컨트롤에 대 한 속성 페이지를 보려면는 에서속성페이지단추를클릭[속성 창](/visualstudio/ide/reference/properties-window)).  

@@ -1,13 +1,10 @@
 ---
-title: "속성 인덱스 선언 | Microsoft Docs"
-ms.custom: 
+title: 속성 인덱스 선언 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,23 +13,21 @@ helpviewer_keywords:
 - defaults, indexers
 - indexed properties, C++
 ms.assetid: d898fdbc-2106-4b6a-8c5c-9f511d80fc2f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: fbd1158dce82b2cc2ae7d15e7b66d6b9058d8c85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76473ce04cdf5860476b7612ddcbf00b40a0fae1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-index-declaration"></a>속성 인덱스 선언
 인덱싱된 속성을 선언 하는 구문은 Visual c + + Managed Extensions for c + + 변경 되었습니다.  
   
- Managed Extensions 언어 지원 인덱싱된 속성의 두 가지 주요 단점은 클래스 수준 첨자; 제공할 수 즉, 모든 인덱싱된 속성은에 이름을 지정 하는 데 필요 하 고 따라서 방법이 있으면, 예를 들어에 직접 적용할 수 있는 관리 되는 아래 첨자 연산자를 제공 하는 `Vector` 또는 `Matrix` 클래스 개체입니다. 중요 한 단점이 less 잠시는 인덱싱된 속성에서 속성을 구분 하기 위해 시각적으로 어렵습니다 매개 변수 수가 것을 나타냅니다. 마지막으로 인덱싱된 속성에서 인덱싱되지 않은 속성 동일한 문제가 발생-접근자는 원자 단위로 간주 되지 않고 개별 메서드로 분리 하지 않습니다.  예:  
+ Managed Extensions 언어 지원 인덱싱된 속성의 두 가지 주요 단점은 클래스 수준 첨자; 제공할 수 즉, 모든 인덱싱된 속성은에 이름을 지정 하는 데 필요 하 고 따라서 방법이 있으면, 예를 들어에 직접 적용할 수 있는 관리 되는 아래 첨자 연산자를 제공 하는 `Vector` 또는 `Matrix` 클래스 개체입니다. 중요 한 단점이 less 잠시는 인덱싱된 속성에서 속성을 구분 하기 위해 시각적으로 어렵습니다 매개 변수 수가 것을 나타냅니다. 마지막으로 인덱싱된 속성에서 인덱싱되지 않은 속성 동일한 문제가 발생-접근자는 원자 단위로 간주 되지 않고 개별 메서드로 분리 하지 않습니다.  예를 들어:  
   
 ```  
 public __gc class Vector;  
@@ -69,7 +64,7 @@ public:
 };  
 ```  
   
- 새 구문에서 클래스의 개체에 직접 적용할 수 있는 클래스 수준 인덱서를 나타내기 위해는 `default` 키워드를 다시 사용 하 여 명시적 이름으로 대체 합니다. 예:  
+ 새 구문에서 클래스의 개체에 직접 적용할 수 있는 클래스 수준 인덱서를 나타내기 위해는 `default` 키워드를 다시 사용 하 여 명시적 이름으로 대체 합니다. 예를 들어:  
   
 ```  
 public ref class Matrix {  

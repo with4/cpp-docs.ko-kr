@@ -1,13 +1,10 @@
 ---
-title: "국가별 사용 | Microsoft Docs"
-ms.custom: 
+title: 국가별 사용 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce0210546dafd354d0d62225c97df8b36a8d84e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2f4edcae610f17409c319c7b4bd39dc137e1211e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="international-enabling"></a>국가별 사용
 대부분의 일반적인 C 및 c + + 코드에서는 국가별 응용 프로그램에 대 한 잘 작동 하지 않는 문자 및 문자열 조작에 대 한 가정을 합니다. 런타임 라이브러리와 MFC MBCS 또는 유니코드를 지원 하지만 사업이 있으므로 여전히 작업을 수행할 수 있습니다. 이 섹션에서는 사용자를 안내 하 Visual c + +에서 "국가별 사용"의 의미를 설명 합니다.  

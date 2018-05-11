@@ -1,13 +1,10 @@
 ---
-title: "컴파일러 경고 (수준 4) C4125 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 4) C4125 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C4125
 dev_langs:
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C4125
 ms.assetid: a081d1f4-0789-4915-91df-7ff0b28ca245
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6fbd012d11110e17d515021fcd8977ef4e6bd47
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: af7fdd16925f080137be386cb3d2dd0dd3d8b446
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-4-c4125"></a>컴파일러 경고(수준 4) C4125
 10진수가 8진수 이스케이프 시퀀스를 마칩니다.  
   
  컴파일러가 10진수 없는 8진수를 계산하고 10진수를 문자로 가정합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // C4125a.cpp  

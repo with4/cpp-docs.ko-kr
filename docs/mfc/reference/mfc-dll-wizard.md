@@ -1,13 +1,10 @@
 ---
-title: "MFC DLL 마법사 | Microsoft Docs"
-ms.custom: 
+title: MFC DLL 마법사 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.dll.overview
 dev_langs:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - MFC DLLs [MFC]
 - DLLs [MFC], creating
 ms.assetid: 4e936031-7e39-4f40-a295-42a09c5ff264
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f62b3d208d4b5822ab259614823509970b2842
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d02d6e6f598d6d18a6e17e9a99a3190a836dc780
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-dll-wizard"></a>MFC DLL 마법사
 MFC DLL 마법사를 사용 하 여 MFC DLL 프로젝트를 만들 때 시작 응용 프로그램을 사용 된 기본 제공 기능이 있는 게의 기본 기능을 구현 하는 경우는 [DLL](../../build/dlls-in-visual-cpp.md)합니다. C + + 소스 (.cpp) 파일, 리소스 (.rc) 파일 및 프로젝트 (.vcxproj) 파일을 포함 하는 MFC 시작 프로그램입니다. 이 기초 파일에서 생성 된 코드는 MFC를 기반으로 합니다. 자세한 내용은 Visual Studio에서 프로젝트에 대해 생성 되는 Readme.txt 파일 세부 정보를 보려면 및 [클래스와 MFC DLL 마법사에서 생성 된 함수](../../mfc/reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md)  

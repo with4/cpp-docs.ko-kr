@@ -1,13 +1,10 @@
 ---
-title: "/FA, /Fa (목록 파일) | Microsoft Docs"
-ms.custom: 
+title: /FA, /Fa (목록 파일) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.AssemblerListingLocation
 - VC.Project.VCCLCompilerTool.ConfigureASMListing
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0cd569cf16e7b2a14faaa119eacaef0994d09dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1840d2f2ff7d968fdcc19e2013a89af9cec32d24
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa(목록 파일)
 어셈블러 코드가 포함 된 목록 파일을 만듭니다.  
@@ -60,7 +55,7 @@ ms.lasthandoff: 12/21/2017
 `s`  
 선택 사항입니다. 목록에서 소스 코드를 포함 합니다.  
   
-`u`선택 사항입니다. 목록 파일에 utf-8 형식으로 인코딩하고 바이트 순서 마커를 포함 합니다. 기본적으로 파일은 ANSI로 인코딩됩니다. 사용 하 여 `u` 를 모든 시스템에 올바르게 표시 하는 목록 파일을 만드는 컴파일러에 대 한 입력으로 유니코드를 사용 하는 경우 또는 소스 코드 파일.  
+`u` 선택 사항입니다. 목록 파일에 utf-8 형식으로 인코딩하고 바이트 순서 마커를 포함 합니다. 기본적으로 파일은 ANSI로 인코딩됩니다. 사용 하 여 `u` 를 모든 시스템에 올바르게 표시 하는 목록 파일을 만드는 컴파일러에 대 한 입력으로 유니코드를 사용 하는 경우 또는 소스 코드 파일.  
   
 두 `s` 및 `u` 지정 되 고 소스 코드 파일 경우 u t F-8로 다음 코드 줄.asm 파일에 올바르게 표시 되지 않을 이외의 유니코드 인코딩을 사용 합니다.  
   
@@ -95,7 +90,7 @@ ms.lasthandoff: 12/21/2017
   
 -   <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerListingLocation%2A> 또는 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AssemblerOutput%2A>을 참조하십시오. 지정 하려면 `/FAu`, 참조 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
 다음 명령줄을 조합 된 소스를 생성 하 고 기계어 코드 hello.cod:  
   
 ```  

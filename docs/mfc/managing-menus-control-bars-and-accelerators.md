@@ -1,13 +1,10 @@
 ---
-title: "메뉴, 컨트롤 막대 및 액셀러레이터 관리 | Microsoft Docs"
-ms.custom: 
+title: 메뉴, 컨트롤 막대 및 액셀러레이터 관리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - frame windows [MFC], updating
 - status bars [MFC], updating
 ms.assetid: 97ca1997-06df-4373-b023-4f7ecd81047b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74b026f273eec0bc689cc6959890b07beb570893
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1055fd9b1ef75b2090478d85e8251d1800b8b039
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>메뉴, 컨트롤 막대 및 액셀러레이터 관리
 프레임 창 메뉴, 도구 모음 단추, 상태 표시줄 및 액셀러레이터를 포함 하 여 업데이트 사용자 인터페이스 개체를 관리 합니다. 또한 공유 MDI 응용 프로그램의 메뉴 모음을 관리 합니다.  

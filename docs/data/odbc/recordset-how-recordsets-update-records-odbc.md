@@ -1,13 +1,10 @@
 ---
-title: "레코드 집합: 레코드 집합 업데이트 레코드 방법 (ODBC) | Microsoft Docs"
-ms.custom: 
+title: '레코드 집합: 레코드 집합 업데이트 레코드 방법 (ODBC) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-data
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e38f2e62e9aa7b01680e9b2fd1e4a540ee552c3c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b16faf4c5ef0208c946cff123ecbe62b513e65ca
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="recordset-how-recordsets-update-records-odbc"></a>레코드 집합: 레코드 집합의 레코드 업데이트 방법(ODBC)
 MFC ODBC 클래스에이 항목에 적용 됩니다.  
@@ -51,7 +46,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
  [레코드 집합: 자세한 방법에 대 한 업데이트 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) 트랜잭션이 업데이트에 미치는 영향, 레코드 집합을 닫거나 스크롤 업데이트가 진행 중에 미치는 영향 및 업데이트가 다른 업데이트 상호 작용 하는 방법을 설명 하 여 레코드 집합 업데이트 스토리를 완료 합니다. 사용자입니다.  
   
-##  <a name="_core_your_role_in_recordset_updating"></a>레코드 집합 업데이트에서 역할  
+##  <a name="_core_your_role_in_recordset_updating"></a> 레코드 집합 업데이트에서 역할  
  다음 표에서 추가, 편집 또는 프레임 워크에서는을 수행 하는 함께 레코드를 삭제할을 레코드 집합을 사용 하 여 사용자의 역할을 보여 줍니다.  
   
 ### <a name="recordset-updating-you-and-the-framework"></a>레코드 집합 업데이트 중: 하 고 프레임 워크  
@@ -66,7 +61,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
   
  트랜잭션에 대 한 자세한 내용은 참조 하십시오. [트랜잭션 (ODBC)](../../data/odbc/transaction-odbc.md)합니다.  
   
-##  <a name="_core_the_edit_buffer"></a>편집 버퍼  
+##  <a name="_core_the_edit_buffer"></a> 편집 버퍼  
  레코드 집합 레코드 집합의 필드 데이터 멤버에 하나의 레코드를 포함 하는 편집 버퍼를 토대로-현재 레코드입니다. 업데이트 작업의 현재 레코드에서 작동 하도록이 버퍼를 사용 합니다.  
   
 -   레코드를 추가 하는 경우 편집 버퍼 새 레코드를 작성 하는 데 사용 됩니다. 레코드 추가 완료 하면 이전에 현재 레코드가 현재 다시 됩니다.  
@@ -78,7 +73,7 @@ MFC ODBC 클래스에이 항목에 적용 됩니다.
 > [!NOTE]
 >  편집 버퍼 레코드 삭제에서 역할도 하지 않습니다. 현재 레코드를 삭제 하는 경우 레코드는 삭제 된 것으로 표시 되어 있으며이 레코드 집합 "레코드"에 없는 때까지 다른 레코드를 스크롤할 때.  
   
-##  <a name="_core_dynasets_and_snapshots"></a>다이너셋 및 스냅숏  
+##  <a name="_core_dynasets_and_snapshots"></a> 다이너셋 및 스냅숏  
  [다이너셋](../../data/odbc/dynaset.md) 레코드를 스크롤할 때의 내용을 새로 고칩니다. [스냅숏을](../../data/odbc/snapshot.md) 은 나타내므로 호출 하지 않으면의 내용을 새로 고쳐지지 않습니다, 레코드의 정적 상태 [Requery](../../mfc/reference/crecordset-class.md#requery)합니다. 다이너셋의 모든 기능을 사용 하려면 올바른 수준의 ODBC API 지원에 맞는 ODBC 드라이버와 함께 작업 해야 합니다. 자세한 내용은 참조 [ODBC](../../data/odbc/odbc-basics.md) 및 [다이너셋](../../data/odbc/dynaset.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C3068 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C3068 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C3068
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C3068
 ms.assetid: 613e3447-b4a8-4268-a661-297bed63ccdf
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 448a0b9e9c626523c08a0bd30ab285ef2c29312c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8f378a60c79defed4fb1738515ca5b65b2851056
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c3068"></a>컴파일러 오류 C3068
 'function': 'naked' 함수 해제가 필요한 c + + 예외가 발생 하는 개체를 포함할 수 없습니다  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
  예외가 발생 하 고 컴파일러에서 생성 한 코드를 프롤로그 라는 에필로그와에 없는 naked 함수, 함수에 대해 실행 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C3068 오류가 생성 됩니다.  
   
 ```  

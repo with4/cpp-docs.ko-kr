@@ -1,13 +1,10 @@
 ---
-title: "헤더 컨트롤 및 목록 컨트롤 | Microsoft Docs"
-ms.custom: 
+title: 헤더 컨트롤 및 목록 컨트롤 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - header controls [MFC]
 - header controls [MFC], list controls used with
 ms.assetid: b20194b1-1a6b-4e2f-b890-1b3cca6650bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 213d2eeec7628c54d68bbd8f636ae85d90e7e8de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a84386781bf28edb9223f608fa7a64040eb68379
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="header-control-and-list-control"></a>헤더 컨트롤 및 목록 컨트롤
 대부분의 경우 사용 하 여 헤더 컨트롤에 포함 된 한 [CListCtrl](../mfc/reference/clistctrl-class.md) 또는 [CListView](../mfc/reference/clistview-class.md) 개체입니다. 그러나 별도 헤더 컨트롤 개체에 열 이나 행을 정렬 된 데이터를 조작 하는 등 바람직한 경우가 많습니다.는 [CView](../mfc/reference/cview-class.md)-파생 된 개체입니다. 이러한 경우 모양 및 포함 된 헤더 컨트롤의 기본 동작에 대 한 제어 강화 해야합니다.  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFCControlLadenDialog#14](../mfc/codesnippet/cpp/header-control-and-list-control_1.cpp)]  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [이미지 목록과 헤더 컨트롤 함께 사용](../mfc/using-image-lists-with-header-controls.md)  
   

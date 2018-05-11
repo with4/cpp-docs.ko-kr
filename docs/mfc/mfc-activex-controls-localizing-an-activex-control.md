@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 컨트롤: ActiveX 컨트롤 지역화 | Microsoft Docs"
-ms.custom: 
+title: 'MFC ActiveX 컨트롤: ActiveX 컨트롤 지역화 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - LocaleID
 - AfxOleRegisterTypeLib
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd6384507982f74e02e8e4f42c97926f9125981e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: afe134b4acdcea3ec5f1a6ce381be0ca10c321d8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC ActiveX 컨트롤: ActiveX 컨트롤 지역화
 이 문서에서는 ActiveX 컨트롤 인터페이스의 지역화를 위한 절차를 설명 합니다.  
@@ -52,7 +47,7 @@ ms.lasthandoff: 12/21/2017
   
  이 문서의 나머지 부분에서는 두 개의 지역화 전략을 설명 합니다. 첫 번째 전략 [컨트롤의 프로그래밍 기능 인터페이스 보여지는](#_core_localizing_your_control.92.s_programmability_interface) (속성, 메서드 및 이벤트의 이름). 두 번째 전략 [컨트롤의 사용자 인터페이스 보여지는](#_core_localizing_the_control.92.s_user_interface), 컨테이너의 앰비언트 LocaleID 속성을 사용 합니다. 컨트롤 지역화의 데모를 보려면 MFC ActiveX 컨트롤 샘플을 참조 [LOCALIZE](../visual-cpp-samples.md)합니다.  
   
-##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a>컨트롤의 프로그래밍 기능 인터페이스를 지역화합니다.  
+##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a> 컨트롤의 프로그래밍 기능 인터페이스를 지역화합니다.  
  컨트롤의 프로그래밍 인터페이스 (프로그래머가 컨트롤을 사용 하는 응용 프로그램에서 사용 하는 인터페이스)를 지역화 하는 경우 컨트롤의 수정된 버전을 만들어야 합니다. IDL 지원 하려는 각 언어에 대 한 (컨트롤 형식 라이브러리를 작성 하기 위한 스크립트) 파일입니다. 컨트롤 속성 이름을 지역화 하려면 유일한 자리입니다.  
   
  지역화 된 컨트롤을 개발할 때 형식 라이브러리 수준에서 특성으로 로캘 ID를 포함 합니다. 예를 들어 프랑스 지역화 된 속성 이름이 포함 된 형식 라이브러리에 제공 하려는 경우 샘플의 복사본을 만듭니다. IDL 파일을 찾아 SAMPLEFR 호출 합니다. IDL 합니다. 로캘 ID 특성 (프랑스어에 대 한 로캘 ID은 0x040c) 파일을 추가 다음과 비슷합니다.  
@@ -89,7 +84,7 @@ ms.lasthandoff: 12/21/2017
   
  컨트롤 등록 되는 `AfxOleRegisterTypeLib` 함수는 지정 된 항목에 대 한 자동으로 찾습니다. TLB 파일 컨트롤와 동일한 디렉터리에 Windows 등록 데이터베이스에 등록 합니다. 경우는 합니다. TLB 파일을 찾을 수 없습니다, 함수에 영향을 주지 않습니다.  
   
-##  <a name="_core_localizing_the_control.92.s_user_interface"></a>컨트롤의 사용자 인터페이스를 지역화합니다.  
+##  <a name="_core_localizing_the_control.92.s_user_interface"></a> 컨트롤의 사용자 인터페이스를 지역화합니다.  
  컨트롤의 사용자 인터페이스를 지역화 하려면 언어 관련 리소스 Dll에 모든 컨트롤의 사용자가 볼 수 리소스 (예: 속성 페이지 및 오류 메시지)를 배치 합니다. 그런 다음 사용자 로캘에 대 한 적절 한 DLL을 선택 하는 컨테이너의 앰비언트 LocaleID 속성을 사용할 수 있습니다.  
   
  다음 코드 예제를 찾아 특정 로캘에 대 한 리소스 DLL을 로드 하는 한 가지 방법을 보여 줍니다. 이 멤버 함수를 호출 `GetLocalizedResourceHandle` 이 예에서는 ActiveX 컨트롤 클래스의 멤버 함수를 수 있습니다.  

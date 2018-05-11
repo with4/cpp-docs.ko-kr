@@ -1,12 +1,9 @@
 ---
-title: "CPrintDialog 클래스 | Microsoft Docs"
-ms.custom: 
+title: CPrintDialog 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CPrintDialog
@@ -49,17 +46,15 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7834351533cac7f518f5ce5f5558a6be2da34be
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.openlocfilehash: 842565b460ff88ae70d108bc1b1db71b22674eb2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog 클래스
 Windows 공용 대화 상자에서 인쇄용으로 제공하는 서비스를 캡슐화합니다.  
@@ -120,7 +115,7 @@ class CPrintDialog : public CCommonDialog
   
  핸들의 제공 하지 않으면 `m_pd` 에 대 한는 **hDevMode** 및 **hDevNames** 멤버를 Windows 함수를 호출 해야 **작업** 이러한 핸들에 대 한 완료 한 경우 대화 상자와 합니다. 제공 하는 프레임 워크의 인쇄 설정 구현을 사용 하는 경우 `CWinApp::OnFilePrintSetup`, 이러한 핸들을 해제 해야 합니다. 핸들에서 유지 관리 `CWinApp` 에서 해제 되 고 `CWinApp`의 소멸자입니다. 사용 하는 경우 이러한 핸들을 해제 해야 하는 `CPrintDialog` 독립 실행형 합니다.  
   
- 대화 상자 컨트롤을 초기화 한 다음 호출에서 `DoModal` 대화 상자를 표시 하 고 사용자가 인쇄 옵션을 선택 하도록 허용 하려면 멤버 함수입니다. `DoModal`사용자는 확인 선택 여부를 반환 합니다 ( **IDOK**) 또는 취소 ( **IDCANCEL**) 단추입니다.  
+ 대화 상자 컨트롤을 초기화 한 다음 호출에서 `DoModal` 대화 상자를 표시 하 고 사용자가 인쇄 옵션을 선택 하도록 허용 하려면 멤버 함수입니다. `DoModal` 사용자는 확인 선택 여부를 반환 합니다 ( **IDOK**) 또는 취소 ( **IDCANCEL**) 단추입니다.  
   
  경우 `DoModal` 반환 **IDOK**, 중 하나를 사용 `CPrintDialog`의 사용자가 입력 정보를 검색 하는 멤버 함수입니다.  
   
@@ -128,7 +123,7 @@ class CPrintDialog : public CCommonDialog
   
  Windows를 사용할 수 있습니다 **CommDlgExtendedError** 함수는 오류에 대 한 자세한 내용을 보려면 및 대화 상자를 초기화 하는 동안 오류가 발생 한 것인지 확인 합니다. 이 함수에 대 한 자세한 내용은 Windows SDK를 참조 하십시오.  
   
- `CPrintDialog`COMMDLG에 의존합니다. Windows 버전 3.1 이상와 함께 제공 되는 DLL 파일입니다.  
+ `CPrintDialog` COMMDLG에 의존합니다. Windows 버전 3.1 이상와 함께 제공 되는 DLL 파일입니다.  
   
  대화 상자를 사용자 지정 하려면 클래스를 파생 `CPrintDialog`, 사용자 지정 대화 상자 템플릿을 제공 하 고 확장 된 컨트롤에서 알림 메시지를 처리 한 메시지 맵을 추가 합니다. 처리 되지 않은 모든 메시지는 기본 클래스 전달 되어야 합니다. 후크 함수를 사용자 지정 필요 하지 않습니다.  
   
@@ -177,7 +172,7 @@ CPrintDialog(
   
  로 생성자를 호출할 때 `bPrintSetupOnly` 로 설정 **FALSE**, **PD_RETURNDC** 플래그 자동으로 사용 됩니다. 호출한 후 `DoModal`, `GetDefaults`, 또는 `GetPrinterDC`, 프린터 DC에서 반환할 `m_pd.hDC`합니다. 이 DC에 대 한 호출으로 해제 해야 [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) 호출자에 의해 `CPrintDialog`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#174](../../mfc/codesnippet/cpp/cprintdialog-class_1.cpp)]  
   
 ##  <a name="createprinterdc"></a>  CPrintDialog::CreatePrinterDC  
@@ -193,7 +188,7 @@ HDC CreatePrinterDC();
 ### <a name="remarks"></a>설명  
  이 DC는 DC를 현재 프린터 하 프린터 Dc 사용자가 삭제 해야 다른 모든 이전에 가져온. 이 함수를 호출 하 고 현재까지 인쇄 대화 상자를 표시 하지 않고 결과 DC를 사용 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#106](../../mfc/codesnippet/cpp/cprintdialog-class_2.cpp)]  
   
 ##  <a name="domodal"></a>  CPrintDialog::DoModal  
@@ -215,7 +210,7 @@ virtual INT_PTR DoModal();
   
  로 생성자를 호출할 때 `bPrintSetupOnly` 로 설정 **FALSE**, **PD_RETURNDC** 플래그 자동으로 사용 됩니다. 호출한 후 `DoModal`, `GetDefaults`, 또는 `GetPrinterDC`, 프린터 DC에서 반환할 `m_pd.hDC`합니다. 이 DC에 대 한 호출으로 해제 해야 [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) 호출자에 의해 `CPrintDialog`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CPrintDialog::CreatePrinterDC](#createprinterdc)합니다.  
   
 ##  <a name="getcopies"></a>  CPrintDialog::GetCopies  
@@ -231,7 +226,7 @@ int GetCopies() const;
 ### <a name="remarks"></a>설명  
  이 함수를 호출한 후 호출 `DoModal` 를 요청한 복사본 수를 검색 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CPrintDialog::PrintCollate](#printcollate)합니다.  
   
 ##  <a name="getdefaults"></a>  CPrintDialog::GetDefaults  
@@ -251,7 +246,7 @@ BOOL GetDefaults();
   
  경우에 대 한 생성자 `CPrintDialog` 로 호출 했습니다 `bPrintSetupOnly` 로 설정 **FALSE**,이 함수는만 반환 되지 **hDevNames** 및 **hDevMode** (위치: **m_pd.hDevNames** 및 **m_pd.hDevMode**) 호출자에 게에 있는 프린터 DC도 반환 하지만 **m_pd.hDC**합니다. 호출자가 프린터 DC를 삭제 하 고 Windows를 호출 하는 작업은 [작업](http://msdn.microsoft.com/library/windows/desktop/aa366579) 작업이 종료 된 경우 핸들에 대해 함수는 `CPrintDialog` 개체입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  이 코드 조각은 기본 프린터 장치 컨텍스트를 가져오고 인치당 도트 수 프린터 해상도 사용자에 게 보고 합니다. (프린터의 기능의이 특성은 라고도 DPI입니다.)  
   
  [!code-cpp[NVC_MFCDocView#107](../../mfc/codesnippet/cpp/cprintdialog-class_3.cpp)]  
@@ -269,7 +264,7 @@ CString GetDeviceName() const;
 ### <a name="remarks"></a>설명  
  이 함수를 호출한 후 호출 [DoModal](#domodal) 호출한 후 또는 현재 선택 된 프린터의 이름을 검색 하지 [GetDefaults](#getdefaults) 를 기본 프린터의 현재 장치 기본값을 검색 합니다. 에 대 한 포인터를 사용 하 여는 `CString` 에서 반환 된 개체 `GetDeviceName` 의 값으로 `lpszDeviceName` 호출에서 [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  이 코드 조각은 사용자의 기본 프린터 이름 및 프린터를 사용 하 여 스풀러 이름과 함께, 연결 된 포트를 보여 줍니다. 코드 라고 표시 하는 메시지 상자가 표시 될 수 있습니다 "기본 프린터는 HP LaserJet IIIP \\\server\share winspool.를 사용 하 여" 예.  
   
  [!code-cpp[NVC_MFCDocView#108](../../mfc/codesnippet/cpp/cprintdialog-class_4.cpp)]  
@@ -287,7 +282,7 @@ LPDEVMODE GetDevMode() const;
 ### <a name="remarks"></a>설명  
  이 함수를 호출한 후 호출 [DoModal](#domodal) 또는 [GetDefaults](#getdefaults) 인쇄 장치에 대 한 정보를 검색 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CPrintDialog::PrintCollate](#printcollate)합니다.  
   
 ##  <a name="getdrivername"></a>  CPrintDialog::GetDriverName  
@@ -303,7 +298,7 @@ CString GetDriverName() const;
 ### <a name="remarks"></a>설명  
  이 함수를 호출한 후 호출 [DoModal](#domodal) 또는 [GetDefaults](#getdefaults) 시스템에서 정의 된 프린터 장치 드라이버의 이름을 검색할 수 있습니다. 에 대 한 포인터를 사용 하 여는 `CString` 에서 반환 된 개체 `GetDriverName` 의 값으로 `lpszDriverName` 호출에서 [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CPrintDialog::GetDeviceName](#getdevicename)합니다.  
   
 ##  <a name="getfrompage"></a>  CPrintDialog::GetFromPage  
@@ -319,7 +314,7 @@ int GetFromPage() const;
 ### <a name="remarks"></a>설명  
  이 함수를 호출한 후 호출 `DoModal` 를 인쇄할 페이지 범위에 시작 페이지 번호를 검색 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CPrintDialog::m_pd](#m_pd)합니다.  
   
 ##  <a name="getportname"></a>  CPrintDialog::GetPortName  
@@ -335,7 +330,7 @@ CString GetPortName() const;
 ### <a name="remarks"></a>설명  
  이 함수를 호출한 후 호출 [DoModal](#domodal) 또는 [GetDefaults](#getdefaults) 를 현재 선택 된 프린터 포트의 이름을 검색 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CPrintDialog::GetDeviceName](#getdevicename)합니다.  
   
 ##  <a name="getprinterdc"></a>  CPrintDialog::GetPrinterDC  
@@ -351,7 +346,7 @@ HDC GetPrinterDC() const;
 ### <a name="remarks"></a>설명  
  경우는 `bPrintSetupOnly` 의 매개 변수는 `CPrintDialog` 생성자가 **FALSE** (인쇄 대화 상자가 표시 되는지를 나타내는), 다음 `GetPrinterDC` 프린터 장치 컨텍스트에 대 한 핸들을 반환 합니다. Windows를 호출 해야 [DeleteDC](http://msdn.microsoft.com/library/windows/desktop/dd183533) 완료 되 면 장치 컨텍스트를 삭제 하는 함수 사용 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#109](../../mfc/codesnippet/cpp/cprintdialog-class_5.cpp)]  
   
 ##  <a name="gettopage"></a>  CPrintDialog::GetToPage  
@@ -367,7 +362,7 @@ int GetToPage() const;
 ### <a name="remarks"></a>설명  
  이 함수를 호출한 후 호출 `DoModal` 를 인쇄할 페이지 범위에서 끝 페이지 번호를 검색 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CPrintDialog::m_pd](#m_pd)합니다.  
   
 ##  <a name="m_pd"></a>  CPrintDialog::m_pd  
@@ -382,7 +377,7 @@ PRINTDLG& m_pd;
   
  수정 하는 경우는 `m_pd` 데이터 멤버를 직접 모든 기본 동작을 재정의 하 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#111](../../mfc/codesnippet/cpp/cprintdialog-class_6.cpp)]  
   
 ##  <a name="printall"></a>  CPrintDialog::PrintAll  
@@ -398,7 +393,7 @@ BOOL PrintAll() const;
 ### <a name="remarks"></a>설명  
  이 함수를 호출한 후 호출 `DoModal` 인쇄 된 문서의 모든 페이지를 여부를 결정 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CPrintDialog::m_pd](#m_pd)합니다.  
   
 ##  <a name="printcollate"></a>  CPrintDialog::PrintCollate  
@@ -414,7 +409,7 @@ BOOL PrintCollate() const;
 ### <a name="remarks"></a>설명  
  이 함수를 호출한 후 호출 `DoModal` 프린터 모든 인쇄 된 문서의 복사본을 병합 해야 하는지 여부를 확인 하려면.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#110](../../mfc/codesnippet/cpp/cprintdialog-class_7.cpp)]  
   
 ##  <a name="printrange"></a>  CPrintDialog::PrintRange  
@@ -430,7 +425,7 @@ BOOL PrintRange() const;
 ### <a name="remarks"></a>설명  
  이 함수를 호출한 후 호출 `DoModal` 범위는 문서에서 페이지를 인쇄 여부를 결정 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CPrintDialog::m_pd](#m_pd)합니다.  
   
 ##  <a name="printselection"></a>  CPrintDialog::PrintSelection  
@@ -446,7 +441,7 @@ BOOL PrintSelection() const;
 ### <a name="remarks"></a>설명  
  이 함수를 호출한 후 호출 `DoModal` 현재 선택한 항목만 인쇄 여부를 결정 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CPrintDialog::m_pd](#m_pd)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

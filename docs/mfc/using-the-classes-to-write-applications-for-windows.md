@@ -1,13 +1,10 @@
 ---
-title: "Windows 용 응용 프로그램을 작성 하는 클래스를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: Windows 용 응용 프로그램을 작성 하는 클래스를 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - OLE applications [MFC], MFC application framework
 - database applications [MFC], creating
 ms.assetid: 73f63470-857d-43dd-9a54-b38b7be0f1b7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a8edcabee2f835bd3a3acd0ff3789690764c397
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa126f2772e1672a1484453fdffdd487b6c45959
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>클래스를 사용하여 Windows 응용 프로그램 작성
 Microsoft Foundation 클래스 (MFC) 라이브러리의 클래스를 함께 "응용 프로그램 프레임 워크," Windows 운영 체제에 대 한 응용 프로그램을 빌드할 구성 합니다. 매우 일반적인 수준에서 프레임 워크 응용 프로그램의 구조를 정의 하 고 표준 사용자 인터페이스를 구현 하는 구조에 배치할 수를 제공 합니다. 나머지의 구조를 작성 하는 프로그래머 작업은 응용 프로그램에 관련 된 이러한 일 들은입니다. 먼저 매우 철저 하 게 시작 응용 프로그램에 대 한 파일을 만들려면 MFC 응용 프로그램 마법사를 사용 하 여 얻을 수 있습니다. 코드 및 클래스 라이브러리에 이러한 요소를 연결할 명령을 클래스 뷰 사용자 인터페이스 요소를 시각적으로 디자인 하려면 Microsoft Visual c + + 리소스 편집기를 사용 하 여 응용 프로그램별 논리를 구현 합니다.  

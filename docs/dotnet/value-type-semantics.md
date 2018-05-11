@@ -1,13 +1,10 @@
 ---
-title: "값 형식 의미 체계 | Microsoft Docs"
-ms.custom: 
+title: 값 형식 의미 체계 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - pin_ptr keyword [C++]
 - __pin keyword
 ms.assetid: 7f065589-ad25-4850-baf1-985142e35e52
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 21a7d6bcba2fca3fddd6f5e234663d6791398f5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 44662f2ad8e79712b4aab17e2784a72e01ec4116
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="value-type-semantics"></a>값 형식 의미
 값 형식 의미 체계 Visual c + + Managed Extensions for c + + 변경 되었습니다.  
@@ -51,7 +46,7 @@ __box V* pvbx = 0; // Form (4) must be local
 ```  
   
 ## <a name="invoking-inherited-virtual-methods"></a>상속 된 가상 메서드를 호출합니다.  
- `Form (1)`정식 값 개체 이며 같은 상속된 된 가상 메서드를 호출 하려고 할 때 사용자를 제외 하 고 잘 파악 하기 `ToString()`합니다. 예:  
+ `Form (1)` 정식 값 개체 이며 같은 상속된 된 가상 메서드를 호출 하려고 할 때 사용자를 제외 하 고 잘 파악 하기 `ToString()`합니다. 예를 들어:  
   
 ```  
 v.ToString(); // error!  
@@ -91,7 +86,7 @@ v.ToString(); // new syntax
  값 형식 보다는 참조 형식이 double 힙 할당을 방지 하기 위해에서 작은 네이티브 클래스 래핑 싶습니다: 네이티브 형식을 보유할 네이티브 힙과 관리 되는 래퍼를 보유 하는 CLR 힙으로부터 합니다. 값 형식 내에서 네이티브 클래스 래핑 관리 되는 힙 피할 수 있습니다 하지만 네이티브 힙 메모리의 재사용을 자동화할 수 없으므로 제공 합니다. 참조 유형은 특정 기본 클래스를 래핑하는 관리 되는 유일한 형식입니다.  
   
 ## <a name="interior-pointers"></a>내부 포인터  
- `Form (2)`및 `Form (3)` 위에 해결할 수 거의 모든 항목에이 world] 또는 [다음 (즉, 모든 관리 또는 네이티브). 따라서 예를 들어 관리 되는 확장에서 다음 작업을 모두 허용 됩니다.  
+ `Form (2)` 및 `Form (3)` 위에 해결할 수 거의 모든 항목에이 world] 또는 [다음 (즉, 모든 관리 또는 네이티브). 따라서 예를 들어 관리 되는 확장에서 다음 작업을 모두 허용 됩니다.  
   
 ```  
 __value struct V { int i; };  
@@ -126,7 +121,7 @@ V *pv = 0;
 interior_ptr<V> pvgc = nullptr;   
 ```  
   
- `Form (2)`및 `Form (3)` Managed extensions를 매핑할 `interior_ptr<V>`합니다. `Form (4)`추적 핸들이입니다. 관리 되는 힙 내 boxed 전체 개체를 해결 합니다. 에 새 구문에서 변환 되는 `V^`,  
+ `Form (2)` 및 `Form (3)` Managed extensions를 매핑할 `interior_ptr<V>`합니다. `Form (4)` 추적 핸들이입니다. 관리 되는 힙 내 boxed 전체 개체를 해결 합니다. 에 새 구문에서 변환 되는 `V^`,  
   
 ```  
 V^ pvbx = nullptr; // __box V* pvbx = 0;    

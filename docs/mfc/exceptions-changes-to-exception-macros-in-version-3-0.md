@@ -1,13 +1,10 @@
 ---
-title: "예외: 버전 3.0의에서 예외 매크로 변경 사항 | Microsoft Docs"
-ms.custom: 
+title: '예외: 버전 3.0의에서 예외 매크로 변경 사항 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 073715c72dfad83490b377b5d55e1169297be1ef
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 92d1691f9a61a11dc4d9dfe7e869ccb7899746bc
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>예외: 버전 3.0의 예외 매크로 변경 사항
 고급 항목입니다.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 03/16/2018
   
  [!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]  
   
- 로 throw 되는 **CException\***로 생성 되는 경우에 한 **CCustomException**합니다. **CATCH** 이전 사용 하 여 MFC 버전 2.5에서 매크로 `CObject::IsKindOf` 형식을 테스트 하 고 런타임 시에 있습니다. 때문에 식  
+ 로 throw 되는 **CException\*** 로 생성 되는 경우에 한 **CCustomException**합니다. **CATCH** 이전 사용 하 여 MFC 버전 2.5에서 매크로 `CObject::IsKindOf` 형식을 테스트 하 고 런타임 시에 있습니다. 때문에 식  
   
  [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]  
   

@@ -1,12 +1,9 @@
 ---
 title: hdrstop | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - hdrstop_CPP
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - hdrstop pragma
 - pragmas, hdrstop
 ms.assetid: 5ea8370a-10d1-4538-ade6-4c841185da0e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18216663524c48e4ec4ee327ff096c8b3dbd391c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f1c628efaf45be87dcfc046cf1774c762c157f4f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="hdrstop"></a>hdrstop
 사전 컴파일 파일 이름과 컴파일 상태가 저장되는 위치에 대한 추가적 제어를 제공합니다.  
@@ -44,7 +39,7 @@ ms.lasthandoff: 02/23/2018
   
  C 또는 c + + 파일에 포함 된 경우는 **hdrstop** /Yc로 컴파일될 때 pragma를 사용 하면 컴파일러의 pragma의 위치까지 컴파일 상태를 저장 합니다. pragma 뒤에 오는 모든 코드의 컴파일된 상태는 저장되지 않습니다.  
   
- 사용 하 여 *filename* 컴파일된 상태가 저장 되어 있는 미리 컴파일된 헤더 파일 이름을 지정 합니다. 사이 공백을 **hdrstop** 및 *filename* 선택 사항입니다. 지정 된 파일 이름이 **hdrstop** pragma은 문자열 이므로 모든 C 또는 c + + 문자열의 제약 조건에 따릅니다. 특히, 이름을 따옴표로 묶고 이스케이프 문자(백슬래시)를 사용하여 디렉터리 이름을 지정해야 합니다. 예:  
+ 사용 하 여 *filename* 컴파일된 상태가 저장 되어 있는 미리 컴파일된 헤더 파일 이름을 지정 합니다. 사이 공백을 **hdrstop** 및 *filename* 선택 사항입니다. 지정 된 파일 이름이 **hdrstop** pragma은 문자열 이므로 모든 C 또는 c + + 문자열의 제약 조건에 따릅니다. 특히, 이름을 따옴표로 묶고 이스케이프 문자(백슬래시)를 사용하여 디렉터리 이름을 지정해야 합니다. 예를 들어:  
   
 ```  
 #pragma hdrstop( "c:\\projects\\include\\myinc.pch" )  
@@ -77,7 +72,7 @@ ms.lasthandoff: 02/23/2018
   
 -   hdrstop pragma가 헤더 파일 내부가 아닌 소스 파일에 지정되어야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 #include <windows.h>                 // Include several files  

@@ -2,11 +2,8 @@
 title: 'deque:: generic_reverse_iterator (STL/CLR) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::deque::generic_reverse_iterator
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - generic_reverse_iterator member [STL/CLR]
 ms.assetid: e2a837bc-24be-4a99-a0ee-9dc73be97955
-caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a388245addf978e5bb6504d16ea1685efba4115e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 289c3d2c39b622e80dca39df5fba3fbc5aac880e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dequegenericreverseiterator-stlclr"></a>deque::generic_reverse_iterator(STL/CLR)
 컨테이너에 대 한 제네릭 인터페이스와 함께 사용 하기 위해 한 반대 반복기의 형식입니다.  
@@ -41,7 +36,7 @@ typedef Microsoft::VisualC::StlClr::Generic::
 ## <a name="remarks"></a>설명  
  형식은이 서식 파일 컨테이너 클래스에 대 한 제네릭 인터페이스와 함께 사용할 수 있는 제네릭 역방향 반복기를 설명 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_deque_generic_reverse_iterator.cpp   

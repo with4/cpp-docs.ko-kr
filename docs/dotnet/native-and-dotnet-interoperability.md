@@ -1,13 +1,10 @@
 ---
-title: "네이티브 및.NET 상호 운용성 | Microsoft Docs"
-ms.custom: 
+title: 네이티브 및.NET 상호 운용성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,18 +20,16 @@ helpviewer_keywords:
 - Visual C++, interoperability
 - native code [C++], .NET interoperatibility
 ms.assetid: f3ec6c99-c745-4256-b95b-f1d12ba17a5a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6206ddf3802078c49bfc1a83e952ed79afe1ff00
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cabd21f400b7c0c21faefdf2004dee9ae2cc64ac
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="native-and-net-interoperability"></a>네이티브 및 .NET 상호 운용성
 Visual c + +는 스레드와 관리 되지 않는 구문이 공존 하 고 동일한 파일 및 동일한 어셈블리 내에서 상호 운용할 수 있도록 하는 상호 운용성 기능을 지원 합니다. 이 기능을 P/Invoke 등의 작은 하위 집합 뿐, 다른.NET 언어에서 사용할 수 있지만 Visual c + +에서 제공 하는 상호 운용성 지원의 대부분은 다른 언어에서 사용할 수 없습니다.  

@@ -1,24 +1,19 @@
 ---
-title: "기본 형식 (C + + /cli CX) | Microsoft Docs"
-ms.custom: 
+title: 기본 형식 (C + + /cli CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 885b996e94c1c3a3d55e48e0f37c5690ba084cf6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 0da64edaa3f94ac9813408d936e3f83783e6b241
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="fundamental-types-ccx"></a>기본 형식(C++/CX)
 형식 뿐만 아니라는 표준 c + + 기본 제공 C + + /cli CX 기본적인 Windows 런타임 형식 매핑되는 표준 c + + 형식에 대 한 형식 정의 제공 하 여 Windows 런타임 아키텍처에서 정의 된 형식 시스템을 지원 합니다. C + + /cli CX 부울, 문자 및 숫자 기본 형식을 구현 합니다. 이러한 형식 정의는 명시적으로 지정할 필요가 없는 `default` 네임스페이스에서 정의됩니다. 또한 C + + /cli CX 특정 Windows 런타임 형식 및 인터페이스에 대 한 래퍼 및 구체적 구현을 제공 합니다.  
@@ -29,7 +24,7 @@ ms.lasthandoff: 02/14/2018
 |네임스페이스|C + + /cli CX 이름|정의|표준 C++ 이름|값의 범위|  
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|  
 |플랫폼|부울|8비트 부울 값입니다.|bool|`true` (0이 아님) 및 `false` (0)|  
-|default|char16|유니코드(UTF-16) 코드 포인트를 나타내는 숫자가 아닌 16비트 값입니다.|wchar_t<br /><br /> 또는<br /><br /> L'c'|(유니코드 표준으로 지정됨)|  
+|default|char16|유니코드(UTF-16) 코드 포인트를 나타내는 숫자가 아닌 16비트 값입니다.|wchar_t<br /><br /> -또는-<br /><br /> L'c'|(유니코드 표준으로 지정됨)|  
   
 ## <a name="numeric-types"></a>숫자 형식  
  다음 표에는 기본 제공 숫자 형식이 나와 있습니다. 숫자 형식은 `default` 네임스페이스에서 선언되고 해당 C++ 기본 제공 형식의 형식 정의입니다. (예: long) 모든 c + + 기본 제공 형식이 Windows Runtime에서 사용할 수 있습니다. 일관성과 명확성에 대 한 것이 좋습니다를 사용 하는 C + + /cli CX 이름입니다.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 02/14/2018
 ## <a name="windows-runtime-types"></a>Windows 런타임 형식  
  다음 표에서 Windows 런타임 아키텍처에서 정의 되 고 C +에 기본 제공 하는 몇 가지 추가 형식을 + CX 합니다. 개체 및 문자열은 참조 형식입니다. 기타 항목은 값 형식입니다. 이러한 형식은 모두 `Platform` 네임스페이스에서 선언됩니다. 전체 목록은 [Platform namespace](../cppcx/platform-namespace-c-cx.md)를 참조하세요.  
   
-|name|정의|  
+|이름|정의|  
 |----------|----------------|  
 |Object|모든 Windows 런타임 형식을 나타냅니다.|  
 |문자열|텍스트를 나타내는 일련의 문자입니다.|  

@@ -1,12 +1,9 @@
 ---
-title: "CMenu 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMenu 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMenu
@@ -93,17 +90,15 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 104c965da403040308386e019d56684577318eee
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 64682066a93618c8646973c76df395883dddf053
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmenu-class"></a>CMenu 클래스
 Windows `HMENU`의 캡슐화입니다.  
@@ -193,7 +188,7 @@ class CMenu : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="appendmenu"></a>CMenu::AppendMenu  
+##  <a name="appendmenu"></a>  CMenu::AppendMenu  
  메뉴의 끝에 새 항목을 추가 합니다.  
   
 ```  
@@ -242,7 +237,7 @@ BOOL AppendMenu(
   
 - **MF_DISABLED** 를 선택할 수 없는 하지만 그 흐리게 표시 하지 않는 메뉴 항목을 사용 하지 않도록 설정 합니다.  
   
-- `MF_ENABLED`흐리게 표시 된 상태에서 복원 하 고 선택할 수 있도록 메뉴 항목을 사용할 수 있습니다.  
+- `MF_ENABLED` 흐리게 표시 된 상태에서 복원 하 고 선택할 수 있도록 메뉴 항목을 사용할 수 있습니다.  
   
 - **MF_GRAYED** 선택할 수 없습니다 것 흐리게 표시 있도록 메뉴 항목을 사용 하지 않도록 설정 합니다.  
   
@@ -250,7 +245,7 @@ BOOL AppendMenu(
   
 - **MF_MENUBREAK** 팝업 메뉴에 새 열 또는 정적 메뉴에 새 줄에는 항목을 배치 합니다. 열 사이의 구분선이 없이 배치 됩니다.  
   
-- `MF_OWNERDRAW`항목 소유자 그리기 항목 임을 지정 합니다. 메뉴를 소유 하는 창 수신 메뉴는 처음으로 표시 되 면 한 `WM_MEASUREITEM` 메뉴 항목의 너비와 높이 검색 하는 메시지입니다. `WM_DRAWITEM` 메시지는 보내는 때마다 소유자는 메뉴 항목의 시각적 모양을 업데이트 해야 합니다. 이 옵션은 최상위 메뉴 항목에 대 한 유효 하지 않습니다.  
+- `MF_OWNERDRAW` 항목 소유자 그리기 항목 임을 지정 합니다. 메뉴를 소유 하는 창 수신 메뉴는 처음으로 표시 되 면 한 `WM_MEASUREITEM` 메뉴 항목의 너비와 높이 검색 하는 메시지입니다. `WM_DRAWITEM` 메시지는 보내는 때마다 소유자는 메뉴 항목의 시각적 모양을 업데이트 해야 합니다. 이 옵션은 최상위 메뉴 항목에 대 한 유효 하지 않습니다.  
   
 - **MF_POPUP** 메뉴 항목에 연결 된 팝업 메뉴에 포함 되도록 지정 합니다. ID 매개 변수는 항목에 연결 될 팝업 메뉴에 대 한 핸들을 지정 합니다. 이 팝업 메뉴 항목에는 최상위 팝업 메뉴 또는 팝업 메뉴 계층 구조를 추가 하는 데 사용 됩니다.  
   
@@ -270,10 +265,10 @@ BOOL AppendMenu(
   
  (여부 창이 표시 됩니다) 창이 변경 될, 응용 프로그램에 있는 메뉴 때마다 [CWnd::DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CMenu::CreateMenu](#createmenu)합니다.  
   
-##  <a name="attach"></a>CMenu::Attach  
+##  <a name="attach"></a>  CMenu::Attach  
  연결에 기존 Windows 메뉴는 `CMenu` 개체입니다.  
   
 ```  
@@ -292,10 +287,10 @@ BOOL Attach(HMENU hMenu);
   
  조작 하려는 메뉴 창에 연결 되어 있는 경우 사용할 수 있습니다는 [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu) 메뉴에 대 한 핸들을 가져오는 함수를 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#21](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
   
-##  <a name="checkmenuitem"></a>CMenu::CheckMenuItem  
+##  <a name="checkmenuitem"></a>  CMenu::CheckMenuItem  
  확인 표시를 추가 하거나 팝업 메뉴의 메뉴 항목에서 확인 표시를 지웁니다.  
   
 ```  
@@ -327,10 +322,10 @@ UINT CheckMenuItem(
   
  `nIDCheckItem` 매개 변수는 메뉴 항목 뿐만 아니라 팝업 메뉴 항목을 식별할 수 있습니다. 특별 한 단계가 없습니다 팝업 메뉴 항목을 확인 해야 합니다. 최상위 메뉴 항목을 확인할 수 없습니다. 팝업 메뉴 항목을 연결 된 메뉴 항목 식별자 없으므로 위치에서 검사 되어야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CMenu::GetMenuState](#getmenustate)합니다.  
   
-##  <a name="checkmenuradioitem"></a>CMenu::CheckMenuRadioItem  
+##  <a name="checkmenuradioitem"></a>  CMenu::CheckMenuRadioItem  
  지정 된 메뉴 항목을 확인 하 고 라디오 항목을 만듭니다.  
   
 ```  
@@ -365,10 +360,10 @@ BOOL CheckMenuRadioItem(
 ### <a name="remarks"></a>설명  
  같은 시간에 함수는 다른 모든 메뉴 항목에 연결 된 그룹을 선택 하거나 선택 취소 하 고 해당 항목에 대 한 라디오 항목 형식 플래그를 지웁니다. 선택한 항목은 라디오 단추 (또는 글머리 기호) 비트맵을 사용 하 여 확인 표시 비트맵 대신 표시 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [ON_COMMAND_RANGE](message-map-macros-mfc.md#on_command_range)합니다.  
   
-##  <a name="cmenu"></a>CMenu::CMenu  
+##  <a name="cmenu"></a>  CMenu::CMenu  
  빈 메뉴를 만들고 연결 하는 `CMenu` 개체입니다.  
   
 ```  
@@ -388,7 +383,7 @@ CMenu();
   
 - [Attach](#attach)  
   
-##  <a name="createmenu"></a>CMenu::CreateMenu  
+##  <a name="createmenu"></a>  CMenu::CreateMenu  
  메뉴를 만들고 연결 하는 `CMenu` 개체입니다.  
   
 ```  
@@ -405,10 +400,10 @@ BOOL CreateMenu();
   
  를 종료 하기 전에 응용 프로그램의 메뉴 창에 할당 되지 않은 경우 메뉴와 연결 된 시스템 리소스를 해제 해야 합니다. 응용 프로그램 메뉴를 호출 하 여 해제 된 [DestroyMenu](#destroymenu) 멤버 함수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#22](../../mfc/reference/codesnippet/cpp/cmenu-class_2.cpp)]  
   
-##  <a name="createpopupmenu"></a>CMenu::CreatePopupMenu  
+##  <a name="createpopupmenu"></a>  CMenu::CreatePopupMenu  
  팝업 메뉴를 만들고 연결 하는 `CMenu` 개체입니다.  
   
 ```  
@@ -425,10 +420,10 @@ BOOL CreatePopupMenu();
   
  를 종료 하기 전에 응용 프로그램의 메뉴 창에 할당 되지 않은 경우 팝업 메뉴와 연결 된 시스템 리소스를 해제 해야 합니다. 응용 프로그램 메뉴를 호출 하 여 해제 된 [DestroyMenu](#destroymenu) 멤버 함수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CMenu::CreateMenu](#createmenu)합니다.  
   
-##  <a name="deletemenu"></a>CMenu::DeleteMenu  
+##  <a name="deletemenu"></a>  CMenu::DeleteMenu  
  메뉴에서 항목을 삭제합니다.  
   
 ```  
@@ -457,10 +452,10 @@ BOOL DeleteMenu(
   
  (여부 창이 표시 됩니다) 창이 변경 될, 호출 하는 응용 프로그램에 있는 메뉴 때마다 [CWnd::DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu)합니다.  
   
-##  <a name="deletetempmap"></a>CMenu::DeleteTempMap  
+##  <a name="deletetempmap"></a>  CMenu::DeleteTempMap  
  자동으로 호출 된 `CWinApp` 유휴 시간 처리기 임시 삭제 `CMenu` 가 만든 개체는 [FromHandle](#fromhandle) 멤버 함수입니다.  
   
 ```  
@@ -468,12 +463,12 @@ static void PASCAL DeleteTempMap();
 ```  
   
 ### <a name="remarks"></a>설명  
- `DeleteTempMap`임시에 연결 하는 Windows 메뉴 개체를 분리 `CMenu` 개체를 삭제 하기 전에 `CMenu` 개체입니다.  
+ `DeleteTempMap` 임시에 연결 하는 Windows 메뉴 개체를 분리 `CMenu` 개체를 삭제 하기 전에 `CMenu` 개체입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#23](../../mfc/reference/codesnippet/cpp/cmenu-class_3.cpp)]  
   
-##  <a name="destroymenu"></a>CMenu::DestroyMenu  
+##  <a name="destroymenu"></a>  CMenu::DestroyMenu  
  메뉴 및 사용 된 모든 Windows 리소스를 제거 합니다.  
   
 ```  
@@ -486,10 +481,10 @@ BOOL DestroyMenu();
 ### <a name="remarks"></a>설명  
  메뉴에서 분리 되는 `CMenu` 소멸 되기 전에 개체입니다. Windows `DestroyMenu` 함수 자동으로 호출 됩니다는 `CMenu` 소멸자입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CMenu::CreateMenu](#createmenu)합니다.  
   
-##  <a name="detach"></a>CMenu::Detach  
+##  <a name="detach"></a>  CMenu::Detach  
  Windows 메뉴를 분리 한 `CMenu` 개체 핸들을 반환 합니다.  
   
 ```  
@@ -502,10 +497,10 @@ HMENU Detach();
 ### <a name="remarks"></a>설명  
  `m_hMenu` 데이터 멤버가로 설정 된 **NULL**합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#21](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]  
   
-##  <a name="drawitem"></a>CMenu::DrawItem  
+##  <a name="drawitem"></a>  CMenu::DrawItem  
  소유자가 그린 메뉴 변경의 시각적 측면이 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -521,12 +516,12 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  참조 [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) 에 대 한 설명은 `DRAWITEMSTRUCT` 구조입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 코드는 MFC에서 [CTRLTEST](../../visual-cpp-samples.md) 샘플:  
   
  [!code-cpp[NVC_MFCWindowing#24](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]  
   
-##  <a name="enablemenuitem"></a>CMenu::EnableMenuItem  
+##  <a name="enablemenuitem"></a>  CMenu::EnableMenuItem  
  사용 하도록 설정, 해제, 또는 메뉴 항목을 흐리게 표시 합니다.  
   
 ```  
@@ -548,7 +543,7 @@ UINT EnableMenuItem(
   
 - **MF_DISABLED** 를 선택할 수 없는 하지만 그 흐리게 표시 하지 않는 메뉴 항목을 사용 하지 않도록 설정 합니다.  
   
-- `MF_ENABLED`흐리게 표시 된 상태에서 복원 하 고 선택할 수 있도록 메뉴 항목을 사용할 수 있습니다.  
+- `MF_ENABLED` 흐리게 표시 된 상태에서 복원 하 고 선택할 수 있도록 메뉴 항목을 사용할 수 있습니다.  
   
 - **MF_GRAYED** 선택할 수 없습니다 것 흐리게 표시 있도록 메뉴 항목을 사용 하지 않도록 설정 합니다.  
   
@@ -562,10 +557,10 @@ UINT EnableMenuItem(
   
  응용 프로그램을 지정는 **MF_BYCOMMAND** 플래그를 Windows 확인은 종속 된 모든 팝업 메뉴 항목의 `CMenu`이므로, 존재 하지 않는 메뉴 항목이 중복을 사용 하는 `CMenu` 막대는 메뉴의 충분 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#25](../../mfc/reference/codesnippet/cpp/cmenu-class_5.cpp)]  
   
-##  <a name="fromhandle"></a>CMenu::FromHandle  
+##  <a name="fromhandle"></a>  CMenu::FromHandle  
  에 대 한 포인터를 반환 합니다.는 `CMenu` 메뉴에 대 한 창 핸들을 지정 된 개체입니다.  
   
 ```  
@@ -584,10 +579,10 @@ static CMenu* PASCAL FromHandle(HMENU hMenu);
   
  이 임시 `CMenu` 개체는 응용 프로그램에서 모든 임시 개체를 삭제 될 때의 이벤트 루프 유휴 시간에는 다음 때만 유효 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CMenu::CreateMenu](#createmenu)합니다.  
   
-##  <a name="getdefaultitem"></a>CMenu::GetDefaultItem  
+##  <a name="getdefaultitem"></a>  CMenu::GetDefaultItem  
  지정된 된 메뉴에 있는 기본 메뉴 항목을 결정합니다.  
   
 ```  
@@ -614,10 +609,10 @@ UINT GetDefaultItem(
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 Win32 함수의 동작을 구현 [GetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647976)Windows SDK에 설명 된 대로 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CMenu::InsertMenu](#insertmenu)합니다.  
   
-##  <a name="getmenucontexthelpid"></a>CMenu::GetMenuContextHelpId  
+##  <a name="getmenucontexthelpid"></a>  CMenu::GetMenuContextHelpId  
  연결 된 ID 상황에 맞는 도움말 검색 `CMenu`합니다.  
   
 ```  
@@ -627,10 +622,10 @@ DWORD GetMenuContextHelpId() const;
 ### <a name="return-value"></a>반환 값  
  ID가 현재 연결 된 상황에 맞는 도움말 `CMenu` ; 있는 경우 0이 고 그렇지 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CMenu::InsertMenu](#insertmenu)합니다.  
   
-##  <a name="getmenuinfo"></a>CMenu::GetMenuInfo  
+##  <a name="getmenuinfo"></a>  CMenu::GetMenuInfo  
  메뉴에 대 한 정보를 검색합니다.  
   
 ```  
@@ -647,7 +642,7 @@ BOOL GetMenuInfo(LPMENUINFO lpcmi) const;
 ### <a name="remarks"></a>설명  
  메뉴에 대 한 정보를 검색 하려면이 함수를 호출 합니다.  
   
-##  <a name="getmenuitemcount"></a>CMenu::GetMenuItemCount  
+##  <a name="getmenuitemcount"></a>  CMenu::GetMenuItemCount  
  팝업 또는 최상위 메뉴의 항목 수를 결정합니다.  
   
 ```  
@@ -657,10 +652,10 @@ UINT GetMenuItemCount() const;
 ### <a name="return-value"></a>반환 값  
  함수가 성공 하면 메뉴의 항목 수 그렇지 않으면-1입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu)합니다.  
   
-##  <a name="getmenuitemid"></a>CMenu::GetMenuItemID  
+##  <a name="getmenuitemid"></a>  CMenu::GetMenuItemID  
  에 정의 된 위치에 있는 메뉴 항목에 대 한 메뉴 항목 식별자 `nPos`합니다.  
   
 ```  
@@ -674,10 +669,10 @@ UINT GetMenuItemID(int nPos) const;
 ### <a name="return-value"></a>반환 값  
  함수가 성공 하는 경우 팝업 메뉴에서 지정된 된 항목에 대 한 항목 ID입니다. 팝업 메뉴 팝업 메뉴 항목) (반대로 지정된 된 항목을 사용 하는 경우 반환 값은-1입니다. 경우 `nPos` 에 해당 하는 **구분 기호** 메뉴 항목을 반환 값은 0입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CMenu::InsertMenu](#insertmenu)합니다.  
   
-##  <a name="getmenuiteminfo"></a>CMenu::GetMenuItemInfo  
+##  <a name="getmenuiteminfo"></a>  CMenu::GetMenuItemInfo  
  메뉴 항목에 대 한 정보를 검색합니다.  
   
 ```  
@@ -703,10 +698,10 @@ BOOL GetMenuItemInfo(
 ### <a name="remarks"></a>설명  
  동작을 구현 하는이 멤버 함수는 Win32 함수 [GetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms647980)Windows SDK에 설명 된 대로 합니다. MFC 구현에서 `GetMenuItemInfo`, 메뉴에 대 한 핸들을 사용 하지 마십시오.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#26](../../mfc/reference/codesnippet/cpp/cmenu-class_6.cpp)]  
   
-##  <a name="getmenustate"></a>CMenu::GetMenuState  
+##  <a name="getmenustate"></a>  CMenu::GetMenuState  
  팝업 메뉴에 지정 된 메뉴 항목 또는 항목 수의 상태를 반환 합니다.  
   
 ```  
@@ -733,7 +728,7 @@ UINT GetMenuState(
   
 - **MF_DISABLED** 를 선택할 수 없는 하지만 그 흐리게 표시 하지 않는 메뉴 항목을 사용 하지 않도록 설정 합니다.  
   
-- `MF_ENABLED`흐리게 표시 된 상태에서 복원 하 고 선택할 수 있도록 메뉴 항목을 사용할 수 있습니다. Note이 상수의 값이 0; 이 값을 사용 하는 경우 응용 프로그램 오류에 대 한 0에 대 한 테스트 하지 해야 합니다.  
+- `MF_ENABLED` 흐리게 표시 된 상태에서 복원 하 고 선택할 수 있도록 메뉴 항목을 사용할 수 있습니다. Note이 상수의 값이 0; 이 값을 사용 하는 경우 응용 프로그램 오류에 대 한 0에 대 한 테스트 하지 해야 합니다.  
   
 - **MF_GRAYED** 선택할 수 없습니다 것 흐리게 표시 있도록 메뉴 항목을 사용 하지 않도록 설정 합니다.  
   
@@ -745,10 +740,10 @@ UINT GetMenuState(
   
 - **MF_UNCHECKED** 와 토글으로 작동 **MF_CHECKED** 항목 옆에 확인 표시를 제거 합니다. 응용 프로그램이 확인 표시 비트맵을 제공 하는 경우 (참조는 `SetMenuItemBitmaps` 멤버 함수), "해제 확인 표시가" 비트맵 표시 됩니다. Note이 상수의 값이 0; 이 값을 사용 하는 경우 응용 프로그램 오류에 대 한 0에 대 한 테스트 하지 해야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#27](../../mfc/reference/codesnippet/cpp/cmenu-class_7.cpp)]  
   
-##  <a name="getmenustring"></a>CMenu::GetMenuString  
+##  <a name="getmenustring"></a>  CMenu::GetMenuString  
  지정 된 메뉴 항목의 레이블이 지정된 된 버퍼에 복사합니다.  
   
 ```  
@@ -791,20 +786,20 @@ int GetMenuString(
 ### <a name="remarks"></a>설명  
  `nMaxCount` 하나는 문자열 종료 null 문자에 맞게 레이블에 문자 수보다 더 큰 매개 변수 여야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CMenu::InsertMenu](#insertmenu)합니다.  
   
-##  <a name="getsafehmenu"></a>CMenu::GetSafeHmenu  
+##  <a name="getsafehmenu"></a>  CMenu::GetSafeHmenu  
  반환 된 `HMENU` 이 래핑한 `CMenu` 개체 또는 **NULL** `CMenu` 포인터.  
   
 ```  
 HMENU GetSafeHmenu() const;  
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CMenu::LoadMenu](#loadmenu)합니다.  
   
-##  <a name="getsubmenu"></a>CMenu::GetSubMenu  
+##  <a name="getsubmenu"></a>  CMenu::GetSubMenu  
  검색 된 `CMenu` 팝업 메뉴의 개체입니다.  
   
 ```  
@@ -818,10 +813,10 @@ CMenu* GetSubMenu(int nPos) const;
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 `CMenu` 개체 `m_hMenu` 멤버; 지정된 된 위치에 있을 때 팝업 메뉴 팝업 메뉴에 대 한 핸들을 포함 하지 않으면 **NULL**합니다. 경우는 `CMenu` 개체가 존재 하지 않는 경우 임시 생성 됩니다. `CMenu` 반환 된 포인터를 저장 해서는 안 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CMenu::TrackPopupMenu](#trackpopupmenu)합니다.  
   
-##  <a name="insertmenu"></a>CMenu::InsertMenu  
+##  <a name="insertmenu"></a>  CMenu::InsertMenu  
  로 지정 된 위치에 새 메뉴 항목을 삽입 `nPosition` 메뉴를 다른 항목으로 이동 합니다.  
   
 ```  
@@ -855,7 +850,7 @@ BOOL InsertMenu(
  새 메뉴 항목의 명령 ID를 지정 하거나, 있는 경우 `nFlags` 로 설정 된 **MF_POPUP**, 메뉴 핸들 ( `HMENU`) 팝업 메뉴의 합니다. `nIDNewItem` 매개 변수는 (필요 하지 않음) `nFlags` 로 설정 된 **MF_SEPARATOR**합니다.  
   
  `lpszNewItem`  
- 새 메뉴 항목의 내용을 지정합니다. `nFlags`해석 하는 데 사용 될 `lpszNewItem` 다음과 같은 방법으로:  
+ 새 메뉴 항목의 내용을 지정합니다. `nFlags` 해석 하는 데 사용 될 `lpszNewItem` 다음과 같은 방법으로:  
   
 |nFlags|LpszNewItem의 해석|  
 |------------|-----------------------------------|  
@@ -878,10 +873,10 @@ BOOL InsertMenu(
   
  여러 문서 MDI (인터페이스) 자식 창을 최대화 하는 활성 및 응용 프로그램에 팝업 메뉴에 삽입 MDI 응용 프로그램의 메뉴가이 함수를 호출 하 고 지정 하 여는 경우는 **MF_BYPOSITION** 플래그를 메뉴 삽입 한 위치 보다 더 멀리 예상 보다 남아 있습니다. 이 컨트롤 메뉴 활성 MDI 자식 창의 MDI 프레임 창 메뉴 표시줄의 첫 번째 위치에 삽입 됩니다 때문에 발생 합니다. 메뉴를 올바르게 배치 하려면 응용 프로그램이 그렇지 않은 경우에 사용 되는 위치 값에 1을 추가 해야 합니다. 응용 프로그램이 사용할 수는 **WM_MDIGETACTIVE** 현재 활성 자식 창을 최대화 되었는지 여부를 결정 하는 메시지입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#28](../../mfc/reference/codesnippet/cpp/cmenu-class_8.cpp)]  
   
-##  <a name="insertmenuitem"></a>CMenu::InsertMenuItem  
+##  <a name="insertmenuitem"></a>  CMenu::InsertMenuItem  
  메뉴를 통해 지정된 된 위치에 새 메뉴 항목을 삽입합니다.  
   
 ```  
@@ -904,7 +899,7 @@ BOOL InsertMenuItem(
 ### <a name="remarks"></a>설명  
  이 함수는 [InsertMenuItem](http://msdn.microsoft.com/library/windows/desktop/ms647988)Windows SDK에 설명 된 대로 합니다.  
   
-##  <a name="loadmenu"></a>CMenu::LoadMenu  
+##  <a name="loadmenu"></a>  CMenu::LoadMenu  
  응용 프로그램의 실행 파일에서 메뉴 리소스를 로드 하 고에 연결 된 `CMenu` 개체입니다.  
   
 ```  
@@ -925,10 +920,10 @@ BOOL LoadMenu(UINT nIDResource);
 ### <a name="remarks"></a>설명  
  를 종료 하기 전에 응용 프로그램의 메뉴 창에 할당 되지 않은 경우 메뉴와 연결 된 시스템 리소스를 해제 해야 합니다. 응용 프로그램 메뉴를 호출 하 여 해제 된 [DestroyMenu](#destroymenu) 멤버 함수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#29](../../mfc/reference/codesnippet/cpp/cmenu-class_9.cpp)]  
   
-##  <a name="loadmenuindirect"></a>CMenu::LoadMenuIndirect  
+##  <a name="loadmenuindirect"></a>  CMenu::LoadMenuIndirect  
  메모리에 메뉴 서식 파일에서 리소스를 로드 하 고에 연결 된 `CMenu` 개체입니다.  
   
 ```  
@@ -953,20 +948,20 @@ BOOL LoadMenuIndirect(const void* lpMenuTemplate);
   
  를 종료 하기 전에 응용 프로그램의 메뉴 창에 할당 되지 않은 경우 메뉴와 연결 된 시스템 리소스를 해제 해야 합니다. 응용 프로그램 메뉴를 호출 하 여 해제 된 [DestroyMenu](#destroymenu) 멤버 함수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#30](../../mfc/reference/codesnippet/cpp/cmenu-class_10.cpp)]  
   
-##  <a name="m_hmenu"></a>CMenu::m_hMenu  
+##  <a name="m_hmenu"></a>  CMenu::m_hMenu  
  지정 된 `HMENU` 창 메뉴의 핸들에 연결 된는 `CMenu` 개체입니다.  
   
 ```  
 HMENU m_hMenu;  
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CMenu::LoadMenu](#loadmenu)합니다.  
   
-##  <a name="measureitem"></a>CMenu::MeasureItem  
+##  <a name="measureitem"></a>  CMenu::MeasureItem  
  소유자 그리기 스타일을 메뉴 만들어질 때 프레임 워크에서 호출 합니다.  
   
 ```  
@@ -982,12 +977,12 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
   
  참조 [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) 에 대 한 설명은 `MEASUREITEMSTRUCT` 구조입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 코드는 MFC에서 [CTRLTEST](../../visual-cpp-samples.md) 샘플:  
   
  [!code-cpp[NVC_MFCWindowing#31](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]  
   
-##  <a name="modifymenu"></a>CMenu::ModifyMenu  
+##  <a name="modifymenu"></a>  CMenu::ModifyMenu  
  로 지정 된 위치에 있는 기존 메뉴 항목을 변경 `nPosition`합니다.  
   
 ```  
@@ -1042,10 +1037,10 @@ BOOL ModifyMenu(
   
  (여부 창이 표시 됩니다) 창이 변경 될, 응용 프로그램에 있는 메뉴 때마다 `CWnd::DrawMenuBar`합니다. 기존 메뉴 항목의 특성을 변경 하려면 속도가 빠르므로 사용 하 여 `CheckMenuItem` 및 `EnableMenuItem` 멤버 함수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CMenu::InsertMenu](#insertmenu)합니다.  
   
-##  <a name="operator_hmenu"></a>CMenu::operator HMENU  
+##  <a name="operator_hmenu"></a>  CMenu::operator HMENU  
  이 연산자를 사용 하 여의 핸들을 검색 하는 `CMenu` 개체입니다.  
   
 ```  
@@ -1058,7 +1053,7 @@ operator HMENU() const;
 ### <a name="remarks"></a>설명  
  Windows Api를 직접 호출 하는 핸들을 사용할 수 있습니다.  
   
-##  <a name="operator_neq"></a>CMenu::operator! =  
+##  <a name="operator_neq"></a>  CMenu::operator! =  
  이면 두 메뉴 다릅니다 논리적으로 결정 합니다.  
   
 ```  
@@ -1072,7 +1067,7 @@ BOOL operator!=(const CMenu& menu) const;
 ### <a name="remarks"></a>설명  
  메뉴 개체는 왼쪽에서 오른쪽에 메뉴 개체와 같으면 인지 테스트 합니다.  
   
-##  <a name="operator_eq_eq"></a>CMenu::operator = =  
+##  <a name="operator_eq_eq"></a>  CMenu::operator = =  
  두 메뉴는 논리적으로 동일한 여부를 확인 합니다.  
   
 ```  
@@ -1086,7 +1081,7 @@ BOOL operator==(const CMenu& menu) const;
 ### <a name="remarks"></a>설명  
  왼쪽 메뉴 개체와 같은지 여부를 테스트 (의 측면에서 `HMENU` 값) 메뉴 개체 오른쪽에 있습니다.  
   
-##  <a name="removemenu"></a>CMenu::RemoveMenu  
+##  <a name="removemenu"></a>  CMenu::RemoveMenu  
  메뉴 항목과 연결 된 팝업 메뉴는 메뉴에서 삭제합니다.  
   
 ```  
@@ -1115,10 +1110,10 @@ BOOL RemoveMenu(
   
  (여부 창이 표시 됩니다) 창이 변경 될, 호출 하는 응용 프로그램에 있는 메뉴 때마다 `CWnd::DrawMenuBar`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CMenu::InsertMenu](#insertmenu)합니다.  
   
-##  <a name="setdefaultitem"></a>CMenu::SetDefaultItem  
+##  <a name="setdefaultitem"></a>  CMenu::SetDefaultItem  
  지정된 된 메뉴에 대 한 기본 메뉴 항목을 설정합니다.  
   
 ```  
@@ -1140,10 +1135,10 @@ BOOL SetDefaultItem(
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 Win32 함수의 동작을 구현 [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996)Windows SDK에 설명 된 대로 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CMenu::InsertMenu](#insertmenu)합니다.  
   
-##  <a name="setmenucontexthelpid"></a>CMenu::SetMenuContextHelpId  
+##  <a name="setmenucontexthelpid"></a>  CMenu::SetMenuContextHelpId  
  연결 하는 상황에 맞는 도움말 ID `CMenu`합니다.  
   
 ```  
@@ -1160,10 +1155,10 @@ BOOL SetMenuContextHelpId(DWORD dwContextHelpId);
 ### <a name="remarks"></a>설명  
  이 식별자를 공유 하는 모든 메뉴 항목-도움말 컨텍스트 식별자는 개별 메뉴 항목에 연결할 수 없으면입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CMenu::InsertMenu](#insertmenu)합니다.  
   
-##  <a name="setmenuinfo"></a>CMenu::SetMenuInfo  
+##  <a name="setmenuinfo"></a>  CMenu::SetMenuInfo  
  메뉴에 대 한 정보를 설정합니다.  
   
 ```  
@@ -1180,7 +1175,7 @@ BOOL SetMenuInfo(LPCMENUINFO lpcmi);
 ### <a name="remarks"></a>설명  
  메뉴에 대 한 특정 정보를 설정 하려면이 함수를 호출 합니다.  
   
-##  <a name="setmenuitembitmaps"></a>CMenu::SetMenuItemBitmaps  
+##  <a name="setmenuitembitmaps"></a>  CMenu::SetMenuItemBitmaps  
  지정한 비트맵 메뉴 항목과 연결합니다.  
   
 ```  
@@ -1221,12 +1216,12 @@ BOOL SetMenuItemBitmaps(
   
  Windows **GetMenuCheckMarkDimensions** 함수 메뉴 항목에 사용 되는 기본 확인란의 크기를 검색 합니다. 이 함수를 함께 제공 된 비트맵에 대 한 적절 한 크기를 확인 하려면 이러한 값을 사용 하는 응용 프로그램입니다. 크기를 가져오는 비트맵을 만들고 설정 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#32](../../mfc/reference/codesnippet/cpp/cmenu-class_12.cpp)]  
   
  [!code-cpp[NVC_MFCWindowing#33](../../mfc/reference/codesnippet/cpp/cmenu-class_13.cpp)]  
   
-##  <a name="setmenuiteminfo"></a>CMenu::SetMenuItemInfo  
+##  <a name="setmenuiteminfo"></a>  CMenu::SetMenuItemInfo  
  메뉴 항목에 대 한 정보를 변경합니다.  
   
 ```  
@@ -1249,7 +1244,7 @@ BOOL SetMenuItemInfo(
 ### <a name="remarks"></a>설명  
  이 함수는 [SetMenuItemInfo](http://msdn.microsoft.com/library/windows/desktop/ms648001)Windows SDK에 설명 된 대로 합니다.  
   
-##  <a name="trackpopupmenu"></a>CMenu::TrackPopupMenu  
+##  <a name="trackpopupmenu"></a>  CMenu::TrackPopupMenu  
  지정된 된 위치에 부동 팝업 메뉴를 표시 하 고 팝업 메뉴 항목의 선택 집합을 추적 합니다.  
   
 ```  
@@ -1283,10 +1278,10 @@ BOOL TrackPopupMenu(
 ### <a name="remarks"></a>설명  
  부동 팝업 메뉴가 화면에서 아무 곳 이나 나타날 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#34](../../mfc/reference/codesnippet/cpp/cmenu-class_14.cpp)]  
   
-##  <a name="trackpopupmenuex"></a>CMenu::TrackPopupMenuEx  
+##  <a name="trackpopupmenuex"></a>  CMenu::TrackPopupMenuEx  
  지정된 된 위치에 부동 팝업 메뉴를 표시 하 고 팝업 메뉴 항목의 선택 집합을 추적 합니다.  
   
 ```  

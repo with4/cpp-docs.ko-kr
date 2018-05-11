@@ -1,13 +1,10 @@
 ---
-title: "CDaoIndexInfo 구조체 | Microsoft Docs"
-ms.custom: 
+title: CDaoIndexInfo 구조체 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - CDaoIndexInfo
 dev_langs:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Indexes collection
 - CDaoIndexInfo structure [MFC]
 ms.assetid: 251d8285-78ce-4716-a0b3-ccc3395fc437
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2617f8cb0d56098c0fef774dc56d56fa182e2482
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3d8c98181a9ec049308d7b85e57c028740927cc2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo 구조체
 `CDaoIndexInfo` 구조 데이터 액세스 개체 (DAO)에 대해 정의 된 인덱스 개체에 대 한 정보를 포함 합니다.  
@@ -110,9 +105,9 @@ struct CDaoIndexInfo {
   
  Index 개체는 MFC 클래스에 의해 표시 되지 않습니다. 대신, DAO 개체 클래스의 기본 MFC 개체 [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) 또는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 인덱스 컬렉션 이라고 하는 인덱스 개체의 컬렉션을 포함 합니다. 이러한 클래스는 개별 항목의 인덱스 정보에 액세스 하는 멤버 함수를 제공 하거나 인수를 한 번에 모두를 사용 하 여 액세스할 수 있습니다는 `CDaoIndexInfo` 호출 하 여 개체는 `GetIndexInfo` 포함 하는 개체의 멤버 함수입니다.  
   
- `CDaoIndexInfo`에 생성자와 소멸자 제대로 할당 하 고 인덱스 필드 정보에 할당을 취소 하기 위해 `m_pFieldInfos`합니다.  
+ `CDaoIndexInfo` 에 생성자와 소멸자 제대로 할당 하 고 인덱스 필드 정보에 할당을 취소 하기 위해 `m_pFieldInfos`합니다.  
   
- 검색 한 정보는 `GetIndexInfo` tabledef 개체의 멤버 함수에 저장 되는 `CDaoIndexInfo` 구조입니다. 호출 된 `GetIndexInfo` 인덱스 개체가 보관 되어 있는 인덱스 컬렉션에 포함 하는 테이블 정의 개체의 멤버 함수입니다. `CDaoIndexInfo`또한 정의 `Dump` 디버그에서 멤버 함수를 작성 합니다. 사용할 수 있습니다 `Dump` 의 내용을 덤프 하는 `CDaoIndexInfo` 개체입니다.  
+ 검색 한 정보는 `GetIndexInfo` tabledef 개체의 멤버 함수에 저장 되는 `CDaoIndexInfo` 구조입니다. 호출 된 `GetIndexInfo` 인덱스 개체가 보관 되어 있는 인덱스 컬렉션에 포함 하는 테이블 정의 개체의 멤버 함수입니다. `CDaoIndexInfo` 또한 정의 `Dump` 디버그에서 멤버 함수를 작성 합니다. 사용할 수 있습니다 `Dump` 의 내용을 덤프 하는 `CDaoIndexInfo` 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxdao.h  

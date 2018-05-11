@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonCustomizeDialog 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCRibbonCustomizeDialog 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonCustomizeDialog
@@ -17,17 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - CMFCRibbonCustomizeDialog [MFC], CMFCRibbonCustomizeDialog
 ms.assetid: ce67de7f-5eaa-4c75-9b94-f290f36df073
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c674cc127f08109ecf40d99d890b088d55e9c906
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d195b2888c47a318369df13c371f85b21cc7bf84
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribboncustomizedialog-class"></a>CMFCRibbonCustomizeDialog 클래스
 리본에 표시 됩니다 **사용자 지정** 페이지.  
@@ -76,7 +71,7 @@ class CMFCRibbonCustomizeDialog : public CMFCPropertySheet
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxribboncustomizedialog.h  
   
-##  <a name="cmfcribboncustomizedialog"></a>CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog  
+##  <a name="cmfcribboncustomizedialog"></a>  CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog  
  `CMFCRibbonCustomizeDialog` 개체를 생성합니다.  
   
 ```  
@@ -92,7 +87,7 @@ CMFCRibbonCustomizeDialog(
  [in] `pRibbon`  
  에 대 한 포인터는 `CMFCRibbonBar` 를 사용자 지정할 수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 생성 하는 방법을 `CMFCRibbonCustomizeDialog` 개체입니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#18](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizedialog-class_1.cpp)]  

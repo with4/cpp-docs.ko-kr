@@ -1,13 +1,10 @@
 ---
-title: "프레임 창 | Microsoft Docs"
-ms.custom: 
+title: 프레임 창 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,17 +21,15 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14dabd345f47b064f78a4e9a3dede834bddeb9d3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 515df19bcc11f7a6706985014fc44bc4ff315f36
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="frame-windows"></a>프레임 창
 Windows에서 실행 되는 응용 프로그램 프레임 창에 표시 되는 문서와 사용자 상호 작용 합니다. 문서 프레임 창에 두 가지 주요 구성 요소: 프레임과 들어가는 내용이 있습니다. 문서 프레임 창 수는 [단일 문서 인터페이스](../mfc/sdi-and-mdi.md) (SDI) 프레임 창 또는 [다중 문서 인터페이스](../mfc/sdi-and-mdi.md) 자식 창을 (mdi 다중). Windows에서 대부분의 프레임 창에 사용자의 상호 작용: 이동 및 창 크기 조정, 닫기 및 최소화 및 최대화 합니다. 프레임 내의 내용을 관리할 수 있습니다.  
@@ -48,7 +43,7 @@ Windows에서 실행 되는 응용 프로그램 프레임 창에 표시 되는 �
 ## <a name="frame-windows-and-splitter-windows"></a>프레임 창 및 분할 창  
  프레임 창의 경우 여러 뷰를 사용 하 여 일반적으로 규정 하는 또 다른 일반적인 해결 방법은 [분할자 창](../mfc/multiple-document-types-views-and-frame-windows.md)합니다. 분할자 창에서 프레임 창의 클라이언트 영역 분할자 창에는 보기 창 이라고 하는 여러 자식 기간을 차지 합니다.  
   
-### <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+### <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
  **일반 프레임 창 항목**  
   
 -   [창 개체 소멸 시키기](../mfc/window-objects.md)  

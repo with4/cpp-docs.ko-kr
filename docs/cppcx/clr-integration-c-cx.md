@@ -1,24 +1,19 @@
 ---
-title: "CLR 통합 (C + + /cli CX) | Microsoft Docs"
-ms.custom: 
+title: CLR 통합 (C + + /cli CX) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/22/2017
 ms.technology: cpp-windows
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 76e213cf-2f3d-4181-b35b-9fd25d5b307c
-caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d832e3856d7df444663e0b99b759e2ea620b27ed
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 50b455bd3b6fd4a96c3181b60904cb7a3250e866
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="clr-integration-ccx"></a>CLR 통합(C++/CX)
 일부 Windows 런타임 형식은 C + 특수 처리를 수신 + CX 및 공용 언어 런타임 (CLR)을 기반으로 하는 언어입니다. 이 문서에서는 한 언어의 여러 형식을 다른 언어에 매핑하는 방법을 설명합니다. 예를 들어 CLR은 Windows.Foundation.IVector를 System.Collections.IList에 매핑하고, Windows.Foundation.IMap를 System.Collections.IDictionary에 매핑합니다. 마찬가지로, C + + /cli CX에는 특별히 platform:: delegate 및 platform:: string과 같은 형식을 매핑합니다.  

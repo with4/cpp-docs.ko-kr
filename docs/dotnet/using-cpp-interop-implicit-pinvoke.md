@@ -1,13 +1,10 @@
 ---
-title: "C + + Interop (암시적 PInvoke)를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: C + + Interop (암시적 PInvoke)를 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-cli
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -29,18 +26,16 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 78d104a41f052f994a19ebe359c8d3e557274783
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a91c9833358744730b9ad9c63f5a14729d9d0968
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>C++ Interop 사용(암시적 PInvoke)
 다른.NET 언어와 달리 Visual c + +에서는 동일한 응용 프로그램 및 동일한 파일에도 존재 하는 관리 및 비관리 코드를 허용 하는 상호 운용성 지원 (으로 [관리, 관리 되지 않는](../preprocessor/managed-unmanaged.md) pragma). Visual c + + 개발자를 응용 프로그램의 나머지 부분을 방해 하지 않고 기존 Visual c + + 응용 프로그램에.NET 기능을 통합할 수 있습니다.  
@@ -64,7 +59,7 @@ ms.lasthandoff: 02/14/2018
 ## <a name="blittable-types"></a>Blittable 형식  
  간단 하 고 내장 형식을 사용 하는 관리 되지 않는 Api에 대 한 (참조 [blittable 형식 및 비 Blittable 형식](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), 특별 한 코딩이 메모리에 표현이 동일한 이러한 데이터 형식을 더 복잡 한 데이터 형식은 필요 하기 때문에 필요 마샬링 명시적 데이터입니다. 예를 들어 참조 [하는 방법: 관리 되는 코드를 사용 하 여 PInvoke에서 네이티브 Dll 호출](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // vcmcppv2_impl_dllimp.cpp  

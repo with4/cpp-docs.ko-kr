@@ -1,12 +1,9 @@
 ---
-title: "CArchiveException 클래스 | Microsoft Docs"
-ms.custom: 
+title: CArchiveException 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CArchiveException
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CArchiveException [MFC], m_cause
 - CArchiveException [MFC], m_strFileName
 ms.assetid: da31a127-e86c-41d1-b0b6-bed0865b1b49
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c2ca798bf3cac50e00627fc3986072af7b2ff94
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ac864831e9d3a0cf0cd5e67501f1ac8396f99473
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="carchiveexception-class"></a>CArchiveException 클래스
 Serialization 예외 상태를 나타냅니다.  
@@ -60,7 +55,7 @@ class CArchiveException : public CException
 ## <a name="remarks"></a>설명  
  `CArchiveException` 클래스는 예외의 원인을 나타내는 공용 데이터 멤버를 포함 합니다.  
   
- `CArchiveException`개체를 생성 하 고 내부에서 throw [CArchive](../../mfc/reference/carchive-class.md) 멤버 함수입니다. 범위 내에서 이러한 개체에 액세스할 수 있습니다는 **CATCH** 식입니다. 원인을 코드는 별개의 운영 체제입니다. 예외 처리에 대 한 자세한 내용은 참조 [예외 처리 (MFC)](../../mfc/exception-handling-in-mfc.md)합니다.  
+ `CArchiveException` 개체를 생성 하 고 내부에서 throw [CArchive](../../mfc/reference/carchive-class.md) 멤버 함수입니다. 범위 내에서 이러한 개체에 액세스할 수 있습니다는 **CATCH** 식입니다. 원인을 코드는 별개의 운영 체제입니다. 예외 처리에 대 한 자세한 내용은 참조 [예외 처리 (MFC)](../../mfc/exception-handling-in-mfc.md)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -72,7 +67,7 @@ class CArchiveException : public CException
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afx.h  
   
-##  <a name="carchiveexception"></a>CArchiveException::CArchiveException  
+##  <a name="carchiveexception"></a>  CArchiveException::CArchiveException  
  생성 한 `CArchiveException` 의 값을 저장 하는 개체, `cause` 개체에 있습니다.  
   
 ```  
@@ -93,7 +88,7 @@ CArchiveException(
   
  이 생성자를 직접 사용 하지 마십시오 대신, 전역 함수를 호출 `AfxThrowArchiveException`합니다.  
   
-##  <a name="m_cause"></a>CArchiveException::m_cause  
+##  <a name="m_cause"></a>  CArchiveException::m_cause  
  예외의 원인을 지정합니다.  
   
 ```  
@@ -125,7 +120,7 @@ int m_cause;
     > [!NOTE]
     > **CArchiveException::generic** 는 사용 되지 않습니다. 사용 하 여 **genericException** 대신 합니다. 경우 **제네릭** 응용 프로그램에서 사용 되 고 빌드된, /clr을 사용한 있을 구문 하지 않은 오류를 쉽게 이해할 수 있습니다.  
   
-##  <a name="m_strfilename"></a>CArchiveException::m_strFileName  
+##  <a name="m_strfilename"></a>  CArchiveException::m_strFileName  
  이 예외 상태에 대 한 파일의 이름을 지정합니다.  
   
 ```  

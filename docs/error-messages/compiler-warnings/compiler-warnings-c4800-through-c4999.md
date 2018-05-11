@@ -1,8 +1,8 @@
 ---
-title: "컴파일러 경고 C4800 C5999 통해 | Microsoft Docs"
+title: 컴파일러 경고 C4800 C5999 통해 | Microsoft Docs
 ms.date: 11/17/2017
 ms.technology:
-- cpp-tools
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4806
@@ -104,14 +104,13 @@ dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ff52a747d15a3c223ef0510c9195b80c9f21647
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: d13f939fcedc0d7b0c6ee132fda14a628a550dda
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>컴파일러 경고 C4800 C5999 통해
 
@@ -223,7 +222,7 @@ ms.lasthandoff: 02/21/2018
 |컴파일러 경고 (수준 3) C4991|Warbird: 작동 '*함수*' __forceinline로 있으므로 인라인이 아니라 표시의 인라인 보호 수준이 부모 보다 큽니다.|
 |컴파일러 경고 (수준 3) C4992|Warbird: 작동 '*함수*' 아니라 __forceinline로 표시 인라인 보호할 수 없는 인라인 어셈블리를 포함 하기 때문에|
 |[컴파일러 경고(수준 3) C4995](compiler-warning-level-3-c4995.md)|'*함수*': 이름 #pragma 사용 되지 않는 것으로 표시 되었습니다|
-|[컴파일러 경고(수준 3) C4996](compiler-warning-level-3-c4996.md)|'*description*': *message*|
+|[컴파일러 경고(수준 3) C4996](compiler-warning-level-3-c4996.md)|'*설명*': *메시지*|
 |컴파일러 경고 (수준 1) C4997|'*클래스*': coclass가 COM 인터페이스 또는 의사 (pseudo) 인터페이스를 구현 하지 않습니다|
 |컴파일러 경고 (수준 1) C4998|예상 실패: *기대*(*값*)|
 |컴파일러 경고 C4999|알 수 없는 경고 하십시오 Visual c + + 도움말 메뉴에서 [기술 지원] 명령을 선택 하거나 기술 지원 도움말 파일에 대 한 자세한 내용은|

@@ -1,12 +1,9 @@
 ---
-title: "매크로 (C/c + +) | Microsoft Docs"
-ms.custom: 
+title: 매크로 (C/c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
@@ -15,20 +12,18 @@ helpviewer_keywords:
 - preprocessor, macros
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a230abc768b23afd74d1af8a9c178d39d453536a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6794cb56566e552a47f19d53f4092c1a9749969c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="macros-cc"></a>매크로 (C/C++)
-전처리기 지시문에 없는 모든 줄의 매크로 확장 전처리 (갖지 않는 줄은  **#**  는 첫 번째 공백이 아닌 문자)를 생성 하 고의 일환으로 건너뛸 수 없습니다 일부 지시문의 부분에는 조건부 컴파일입니다. "조건부 컴파일" 지시문을 사용하면 상수 식을 테스트하여 소스 파일의 일부 컴파일을 억제하거나 식별자를 사용하여 전처리 과정에서 어떤 텍스트 블록이 컴파일러에 전달되고 어떤 텍스트 블록이 소스 파일에서 제거되는지 결정할 수 있습니다.  
+전처리기 지시문에 없는 모든 줄의 매크로 확장 전처리 (갖지 않는 줄은 **#** 는 첫 번째 공백이 아닌 문자)를 생성 하 고의 일환으로 건너뛸 수 없습니다 일부 지시문의 부분에는 조건부 컴파일입니다. "조건부 컴파일" 지시문을 사용하면 상수 식을 테스트하여 소스 파일의 일부 컴파일을 억제하거나 식별자를 사용하여 전처리 과정에서 어떤 텍스트 블록이 컴파일러에 전달되고 어떤 텍스트 블록이 소스 파일에서 제거되는지 결정할 수 있습니다.  
   
  `#define` 지시문은 일반적으로 의미 있는 식별자와 자음, 키워드, 자주 사용되는 명령문 또는 수식과 연결하는 데 사용합니다. 상수를 나타내는 식별자는 "기호화된 상수" 또는 "매니페스트 상수"라고도 합니다. 문 또는 식을 나타내는 식별자는 "매크로"라고 합니다. 이 전처리기 설명서에서는 "매크로" 용어만 사용됩니다.  
   

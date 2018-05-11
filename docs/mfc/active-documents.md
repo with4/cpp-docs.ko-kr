@@ -1,13 +1,10 @@
 ---
-title: "액티브 문서 | Microsoft Docs"
-ms.custom: 
+title: 액티브 문서 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - views [MFC], active documents
 - active documents [MFC], views
 ms.assetid: 1378f18e-aaa6-420b-8501-4b974905baa0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52f3165f69d47f63fc52ae01bbbd1947e7755a43
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c7a391dda8f8ffee6cec3cebc9d03250336195db
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-documents"></a>액티브 문서
 액티브 문서는 OLE의 복합 문서 기술을 확장합니다. 이러한 확장은 보기를 관리하는 추가 인터페이스의 형태로 제공되므로, 개체가 컨테이너 내에서 작동하면서 해당 표시 및 인쇄 기능에 대한 제어를 계속 유지할 수 있습니다. 이 프로세스는 외부 프레임(예: Microsoft Office Binder 또는 Microsoft Internet Explorer) 및 고유 프레임(예: 제품의 고유 보기 포트)에서 문서를 표시할 수 있게 해줍니다.  
@@ -58,7 +53,7 @@ interface IOleDocument : IUnknown
   
  액티브 문서는 하나 이상의 유형을 만들 수 [뷰](#requirements_for_view_objects) 데이터 (예: 정상, 개요, 페이지, 레이아웃 및 등). 보기는 데이터를 볼 수 있는 필터처럼 작동합니다. 문서에 한 가지 유형의 보기를 하는 경우에 새 창 기능을 지 원하는 하는 방법으로 여러 뷰를 지원 하려는 여전히 (예를 들어는 **새 창** 항목에 **창** Office의 메뉴 응용 프로그램)입니다.  
   
-##  <a name="requirements_for_active_documents"></a>액티브 문서에 대 한 요구 사항  
+##  <a name="requirements_for_active_documents"></a> 액티브 문서에 대 한 요구 사항  
  액티브 문서 컨테이너에 표시할 수 있는 액티브 문서의 요구 사항은 다음과 같습니다.  
   
 -   `IPersistStorage`를 구현하여 OLE의 복합 파일을 저장 메커니즘으로 사용해야 합니다.  
@@ -71,7 +66,7 @@ interface IOleDocument : IUnknown
   
  컨테이너 쪽 인터페이스를 사용하는 경우 및 방법에 대한 지식은 이러한 요구 사항에 암시적으로 포함됩니다.  
   
-##  <a name="requirements_for_view_objects"></a>보기 개체에 대 한 요구 사항  
+##  <a name="requirements_for_view_objects"></a> 보기 개체에 대 한 요구 사항  
  액티브 문서는 해당 데이터에 대해 하나 이상의 보기를 만들 수 있습니다. 기능적으로 이러한 보기는 데이터를 표시하기 위해 특정 메서드로 가는 포트와 비슷합니다. 액티브 문서가 단일 보기만 지원하는 경우 액티브 문서 및 해당 단일 보기는 단일 클래스를 사용해서 구현할 수 있습니다. **Ioledocument:: Createview** 동일한 개체를 반환 `IOleDocumentView` 인터페이스 포인터입니다.  
   
  액티브 문서 컨테이너 내에서 표현할 수 하려면 뷰 구성 요소를 지원 해야 **IOleInPlaceObject** 및 **IOleInPlaceActiveObject** 외에 `IOleDocumentView`:  

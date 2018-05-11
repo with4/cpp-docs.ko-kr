@@ -1,13 +1,10 @@
 ---
-title: "주석 예 | Microsoft Docs"
-ms.custom: 
+title: 주석 예 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - comments, MFC
 - examples [MFC], code comments
 ms.assetid: eb8ddea2-74de-4d5c-93d6-596f7c5e58a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 043bf855c285ee1e473bf9acc017f37a3ae61a00
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4aa6e0f0b69964ac8cadc3518e0540f4e51545fb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="an-example-of-the-comments"></a>주석 예
 클래스의 다음 부분 목록을 `CChildFrame` 대부분의 클래스 멤버를 사용 하는 방식에 따라 구분 하는 클래스에서 MFC에서 사용 하는 표준 주석 사용 합니다.  

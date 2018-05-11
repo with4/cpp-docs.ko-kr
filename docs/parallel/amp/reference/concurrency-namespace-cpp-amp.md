@@ -1,12 +1,9 @@
 ---
-title: "동시성 Namespace (c + + AMP) | Microsoft Docs"
-ms.custom: 
+title: 동시성 Namespace (c + + AMP) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - AMP/Concurrency
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a9f82baade21cdbde41fc49fd0bfe6163c0f6af
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 127c1b63693b128e9cdf23813bbfe8e0ec251f9d
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrency-namespace-c-amp"></a>Concurrency 네임스페이스(C++ AMP)
 클래스와 데이터 병렬 하드웨어에서 c + + 코드의 실행을 가속화 하는 함수를 제공 합니다. 자세한 내용은 참조 [c + + AMP 개요](../cpp-amp-overview.md)  
@@ -70,9 +65,9 @@ namespace Concurrency;
   
 ### <a name="enumerations"></a>열거형  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
-|[access_type Enumeration](concurrency-namespace-enums-amp.md#access_type)|데이터 액세스 유형을 지정합니다.|  
+|[access_type 열거형](concurrency-namespace-enums-amp.md#access_type)|데이터 액세스 유형을 지정합니다.|  
 |[queuing_mode 열거형](concurrency-namespace-enums-amp.md#queuing_mode)|액셀러레이터에서 지원 되는 큐 모드를 지정 합니다.|  
   
 ### <a name="operators"></a>연산자  

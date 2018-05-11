@@ -1,13 +1,10 @@
 ---
-title: "예외: 데이터베이스 예외 | Microsoft Docs"
-ms.custom: 
+title: '예외: 데이터베이스 예외 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e853f2bd6f57c7ccc63e802f013661efb85d9796
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2168bc530accfdde6fad4d41cd68e94d3088f153
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exceptions-database-exceptions"></a>예외: 데이터베이스 예외
 이 문서에서는 데이터베이스 예외를 처리 하는 방법을 설명 합니다. 이 문서에서 대부분 사용 하는 mfc ODBC Open Database Connectivity () 또는 MFC 클래스에 대 한 데이터 액세스 개체 (DAO) 여부를 적용 합니다. 하나 또는 다른 모델에 특정 자료 명시적으로 표시 됩니다. 다음과 같은 내용을 다룹니다.  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [데이터베이스 예외 처리 예](#_core_a_database_exception.2d.handling_example)  
   
-##  <a name="_core_approaches_to_exception_handling"></a>예외 처리 방법  
+##  <a name="_core_approaches_to_exception_handling"></a> 예외 처리 방법  
  DAO 나 ODBC를 사용 하 여 작업할 방법을 같습니다.  
   
  예외 조건을 처리 하는 예외 처리기를 항상 작성 해야 합니다.  
@@ -62,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
  클래스에서 DAO 오류, DAO 오류 개체 유형 및 DAO Errors 컬렉션에 대 한 추가 정보는 [CDaoException](../mfc/reference/cdaoexception-class.md)합니다.  
   
-##  <a name="_core_a_database_exception.2d.handling_example"></a>데이터베이스 예외 처리 예  
+##  <a name="_core_a_database_exception.2d.handling_example"></a> 데이터베이스 예외 처리 예  
  다음 예제에서는 생성 하려고는 [CRecordset](../mfc/reference/crecordset-class.md)-파생 된 개체를 사용 하 여 힙에 **새** 연산자 및 다음의 레코드 집합 (ODBC 데이터 원본)를 엽니다. DAO 클래스에 대 한 유사한 예 "DAO 예외 아래 예제에서는"를 참조 합니다.  
   
 ### <a name="odbc-exception-example"></a>ODBC 예외 예제  

@@ -1,13 +1,10 @@
 ---
-title: "ActiveX 컨트롤 컨테이너: ActiveX 컨트롤 포함 수동 설정 | Microsoft Docs"
-ms.custom: 
+title: 'ActiveX 컨트롤 컨테이너: ActiveX 컨트롤 포함 수동 설정 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], enabling
 - ActiveX controls [MFC], enabling containers
 ms.assetid: 833bcde9-c9ad-4709-ad12-2fc2150fb6a5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bf1ba1273a349f685b70fec6706b566c2b618f23
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fde0ee4dc740826c9efdf7b86cd2f021699f8820
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>ActiveX 컨트롤 컨테이너: ActiveX 컨트롤 포함 수동 설정
 MFC 응용 프로그램 마법사를 사용 하 여 응용 프로그램을 생성 하는 경우 ActiveX 컨트롤을 지 원하는 설정 하지 않은 경우에이 지원을 수동으로 추가 해야 합니다. 이 문서에서는 ActiveX 컨트롤을 포함할 기존 OLE 컨테이너 응용 프로그램에 수동으로 추가 하는 것에 대 한 프로세스를 설명 합니다. 사전에 OLE 컨테이너에서 ActiveX 컨트롤을 지 원하는 한다고 알고 있는 경우 문서를 참조 하십시오. [MFC ActiveX 컨트롤 컨테이너 만들기](../mfc/reference/creating-an-mfc-activex-control-container.md)합니다.  

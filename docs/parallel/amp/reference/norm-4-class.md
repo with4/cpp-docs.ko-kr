@@ -1,12 +1,9 @@
 ---
-title: "norm_4 클래스 | Microsoft Docs"
-ms.custom: 
+title: norm_4 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-amp
 ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::grab
@@ -277,17 +274,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e15af7601483fd1d69462291c9c45dc62b5aded4
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 3df6a0cb46985b90b6b8098d7355c33439143949
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="norm4-class"></a>norm_4 클래스
 4 개의 일반 숫자의 short 벡터를 나타냅니다.  
@@ -470,7 +465,7 @@ class norm_4;
   
 |이름|설명|  
 |----------|-----------------|  
-|[size Constant](#norm_4__size)||  
+|[상수 크기](#norm_4__size)||  
   
 ### <a name="public-data-members"></a>공용 데이터 멤버  
   

@@ -1,30 +1,25 @@
 ---
-title: "MFC 라이브러리 재배포 | Microsoft Docs"
-ms.custom: 
+title: MFC 라이브러리 재배포 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MFC, redistributing
 - redistributing MFC library
 ms.assetid: 72714ce1-385e-4c1c-afa5-96b03e873866
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ca153ec9ca079bf13b1c1c1dcedd6e41497307f
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 19a49bf18721f605abe0c6e496d3532012c9c92c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-the-mfc-library"></a>MFC 라이브러리 재배포
 MFC 라이브러리에 응용 프로그램에 동적으로 연결 하는 경우 일치 하는 MFC DLL을 재배포 해야 합니다. 예를 들어를 Visual Studio 2015와 함께 제공 되는 MFC의 버전을 사용 하 여 MFC 응용 프로그램을 빌드하는 경우 mfc140.dll 또는 좁은 문자 또는 유니코드 지원에 대 한 컴파일된 앱 여부에 따라 mfc140u.dll 재배포 해야 합니다.  

@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 경고 (수준 1) C4010 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 1) C4010 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C4010
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4010
 ms.assetid: d607a9ff-8f8f-45c0-b07b-3b2f439e5485
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a56adb54c4a4b7123bde706a2b6b8bdcb184775
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 06ab6307a34887fe2d8a8719e20c31da9728664b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-1-c4010"></a>컴파일러 경고 (수준 1) C4010
 단일 줄으로 된 주석 줄 연속 문자를 포함합니다.  

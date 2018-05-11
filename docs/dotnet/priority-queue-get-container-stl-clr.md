@@ -1,12 +1,9 @@
 ---
 title: 'priority_queue:: get_container (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::priority_queue::get_container
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - get_container member [STL/CLR]
 ms.assetid: bd3cc63b-776f-495c-bf81-a9e8ba189a56
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 60f2a5d1fa3a5e00d7b3aeb066672464381d45a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5bb6ca83c8be9e1ab7b39a0f3552adc2ebaafa17
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="priorityqueuegetcontainer-stlclr"></a>priority_queue::get_container(STL/CLR)
 기본 컨테이너에 액세스합니다.  
@@ -40,7 +35,7 @@ container_type get_container();
 ## <a name="remarks"></a>설명  
  멤버 함수는 기본 컨테이너를 반환합니다. 컨테이너 래퍼가 설정 된 제한을 사용 하지 않으려면 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_priority_queue_get_container.cpp   

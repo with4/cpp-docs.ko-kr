@@ -1,12 +1,9 @@
 ---
 title: init_seg | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.init_seg
@@ -18,17 +15,15 @@ helpviewer_keywords:
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a092ed554af1b078772d53fd0cc663e250a6ea3c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f3be66fc2639253d1bbcfec21f544d5537e084e8
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="initseg"></a>init_seg
 **C + + 전용**  
@@ -88,7 +83,7 @@ int __cdecl myexit (void (__cdecl *pf)(void))
   
  코드에서 명시적으로 정의하지 않은 사용자 정의 생성자가 개체에 없어도 컴파일러에서 생성자를 만들 수 있습니다. 예를 들어 v-table 포인터를 바인딩하는 경우입니다.  따라서 코드가 컴파일러에서 생성된 생성자를 호출해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // pragma_directive_init_seg.cpp  

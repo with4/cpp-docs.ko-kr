@@ -1,35 +1,30 @@
 ---
-title: "방법: 정기적으로 메시지 보내기 | Microsoft Docs"
-ms.custom: 
+title: '방법: 정기적으로 메시지 보내기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - timer class, example
 - sending messages at regular intervals [Concurrency Runtime]
 ms.assetid: 4b60ea6c-97c8-4d69-9f7b-ad79f3548026
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f12d9f8af028d1e2e1fc149eeb77181c2f6b1730
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6903a7ec6b833f7591afe79dc91d453b3905cc79
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-send-a-message-at-a-regular-interval"></a>방법: 정기적으로 메시지 보내기
 이 예제에는 동시성을 사용 하는 방법을 보여 줍니다::[timer 클래스](../../parallel/concrt/reference/timer-class.md) 정기적으로 메시지를 보내려고 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
 
  다음 예제에서는 `timer` 긴 작업 중 진행 상황을 보고 하는 개체입니다. 이 예제에서는 링크는 `timer` 개체는 [concurrency:: call](../../parallel/concrt/reference/call-class.md) 개체입니다. `call` 개체는 일정 한 간격으로 진행률 표시기를 콘솔에 출력 합니다. [concurrency::timer::start](reference/timer-class.md#start) 메서드 타이머는 별도 컨텍스트를 실행 합니다. `perform_lengthy_operation` 함수 호출의 [concurrency:: wait](reference/concurrency-namespace-functions.md#wait) 에 시간이 많이 걸리는 작업을 시뮬레이션 하는 주 컨텍스트에서 함수입니다.  
 

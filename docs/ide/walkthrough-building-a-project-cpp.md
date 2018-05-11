@@ -1,13 +1,10 @@
 ---
-title: "연습: 빌드 프로젝트 (c + +) | Microsoft Docs"
-ms.custom: 
+title: '연습: 빌드 프로젝트 (c + +) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,22 +12,20 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65d7a4bf7e4b3fd519911a2a127ec0ac2723b630
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0c8d04dc3692076b867302af0e793eaac7ed25cb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-building-a-project-c"></a>연습: 프로젝트 빌드(C++)
 이 연습에서는 코드에 일부러 Visual C++ 구문 오류를 포함한 다음 어떠한 컴파일 오류가 발생하는지 확인하고 이를 수정하는 방법에 대해 살펴봅니다. 프로젝트를 컴파일하면 어디에 어떠한 문제가 있는지 표시하는 오류 메시지가 나타납니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
   
 -   이 연습에서는 사용자가 C++ 언어의 기본적인 사항을 알고 있는 것으로 가정합니다.  
   
@@ -69,5 +64,5 @@ ms.lasthandoff: 12/21/2017
  **이전:** [연습: 프로젝트 및 솔루션 (c + +) 작업](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) &#124; **다음:**[연습: 테스트 프로젝트 (c + +)](../ide/walkthrough-testing-a-project-cpp.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [C + + 언어 참조](../cpp/cpp-language-reference.md)   
+ [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [C/C++ 프로그램 빌드](../build/building-c-cpp-programs.md)

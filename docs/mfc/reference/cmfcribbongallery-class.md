@@ -1,12 +1,9 @@
 ---
-title: "CMFCRibbonGallery 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCRibbonGallery 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCRibbonGallery
@@ -87,17 +84,15 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], SetPaletteID
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cb4772f685a38db39c946a5e6f4e77df87998a5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: da6727c54fd3c1f4ae25f401294861a6c8909e50
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery 클래스
 Office 2007 스타일의 리본 갤러리를 구현합니다.  
@@ -165,7 +160,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 ## <a name="remarks"></a>설명  
  갤러리 단추는 사용자가 열 때 갤러리를 표시 한다는 일반 메뉴 단추 처럼 동작 합니다. 갤러리에서 항목을 선택할 때 프레임 워크 보냅니다는 `WM_COMMAND` 단추의 명령 ID와 함께 메시지입니다. 메시지를 처리 하는 경우 호출 해야 [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) 갤러리에서 선택 된 항목을 찾으려고 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서 다양 한 메서드를 사용 하는 방법을 보여 줍니다는 `CMFCRibbonGallery` 구성 하는 클래스는 `CMFCRibbonGallery` 개체입니다. 이 예제에서는 갤러리의 행 마다 항목의 수를 지정, 메뉴 패널의 크기 조정 가능 하 고, 팝업 메뉴의 왼쪽에 세로 막대를 활성화 하 고 리본 메뉴 모음에 직접 색상표로 리본 갤러리를 표시 하는 방법을 보여 줍니다. 이 코드 조각은 [클라이언트 그리기 샘플](../../visual-cpp-samples.md)의 일부입니다.  
   
  [!code-cpp[NVC_MFC_DrawClient#6](../../mfc/reference/codesnippet/cpp/cmfcribbongallery-class_1.cpp)]  
@@ -178,7 +173,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxRibbonPaletteGallery.h  
   
-##  <a name="addgroup"></a>CMFCRibbonGallery::AddGroup  
+##  <a name="addgroup"></a>  CMFCRibbonGallery::AddGroup  
  갤러리에 새 그룹을 추가합니다.  
   
 ```  
@@ -217,7 +212,7 @@ void AddGroup(
 ### <a name="remarks"></a>설명  
  이 메서드를 호출 하 여 리본 갤러리에 있는 항목이 여러 그룹으로 나눌 수 있습니다. 각 그룹 캡션을 가질 수 있습니다.  
   
-##  <a name="addsubitem"></a>CMFCRibbonGallery::AddSubItem  
+##  <a name="addsubitem"></a>  CMFCRibbonGallery::AddSubItem  
  드롭다운 메뉴에 새 메뉴 항목을 추가합니다.  
   
 ```  
@@ -235,7 +230,7 @@ void AddSubItem(
  위치의 0부터 시작 하는 인덱스 항목을 삽입할 위치를 지정 합니다.  
   
  [in] `bOnTop`  
- `TRUE`리본 갤러리; 하기 전에 항목을 삽입할 지정 하려면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 리본 갤러리; 하기 전에 항목을 삽입할 지정 하려면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드를 호출 하 여 팝업 갤러리 팝업 메뉴 항목과 함께 결합할 수 있습니다. 앞 이나 뒤 갤러리 메뉴 항목을 배치할 수 있습니다.  
@@ -245,7 +240,7 @@ void AddSubItem(
 > [!NOTE]
 >  매개 변수 `nIndex` 갤러리의 위쪽 및 아래쪽 갤러리에 삽입 하는 인덱스를 지정 합니다. 예를 들어 앞에서 갤러리 항목 한 위치는 삽입 해야 설정 `nIndex` 1로 및 `bOnTop` 를 `TRUE`합니다. 마찬가지로, 갤러리 아래에 항목 한 위치를 삽입 해야 하는 경우 설정할 `nIndex` 1 및 `bOnTop` 를 `FALSE`합니다.  
   
-##  <a name="clear"></a>CMFCRibbonGallery::Clear  
+##  <a name="clear"></a>  CMFCRibbonGallery::Clear  
  갤러리의 내용을 지웁니다.  
   
 ```  
@@ -255,7 +250,7 @@ virtual void Clear();
 ### <a name="remarks"></a>설명  
  리본 갤러리에서 모든 콘텐츠를 제거 하려면이 메서드를 호출 합니다. 리본 갤러리에는 새 리본 갤러리 또는 그룹 집합을 연결 하기 전에 수행 되어야 합니다.  
   
-##  <a name="cmfcribbongallery"></a>CMFCRibbonGallery::CMFCRibbonGallery  
+##  <a name="cmfcribbongallery"></a>  CMFCRibbonGallery::CMFCRibbonGallery  
  생성 하 고 초기화는 [CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md) 개체입니다.  
   
 ```  
@@ -319,7 +314,7 @@ CMFCRibbonGallery (
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="enablemenuresize"></a>CMFCRibbonGallery::EnableMenuResize  
+##  <a name="enablemenuresize"></a>  CMFCRibbonGallery::EnableMenuResize  
  메뉴 패널의 크기를 조정 하지 않도록 설정 하거나 사용 합니다.  
   
 ```  
@@ -330,15 +325,15 @@ void EnableMenuResize(
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bEnable`  
- `TRUE`메뉴; 크기를 조정 하는 사용 하도록 설정 하려면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 메뉴; 크기를 조정 하는 사용 하도록 설정 하려면 그렇지 않으면 `FALSE`합니다.  
   
  [in] `bVertcalOnly`  
- `TRUE`갤러리만; 세로로 조정할 수 있는 지정 하려면 `FALSE` 갤러리 수 있도록 지정 하려면 조정할 세로 및 가로로 합니다.  
+ `TRUE` 갤러리만; 세로로 조정할 수 있는 지정 하려면 `FALSE` 갤러리 수 있도록 지정 하려면 조정할 세로 및 가로로 합니다.  
   
 ### <a name="remarks"></a>설명  
  리본 갤러리를 크기 조정 사용 하지 않도록 설정 하거나 설정 하려면이 메서드를 사용 합니다. 크기를 조정할 때 리본 갤러리 사용자 크기를 조정 하는 데 사용할 수 있는 위치 조정 막대를 표시 합니다.  
   
-##  <a name="enablemenusidebar"></a>CMFCRibbonGallery::EnableMenuSideBar  
+##  <a name="enablemenusidebar"></a>  CMFCRibbonGallery::EnableMenuSideBar  
  팝업 메뉴의 왼쪽 세로 막대를 사용 하지 않도록 설정 하거나 사용 합니다.  
   
 ```  
@@ -347,12 +342,12 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bEnable`  
- `TRUE`세로 막대, 로깅을 지정 하려면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 세로 막대, 로깅을 지정 하려면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  메뉴의 왼쪽에 Office XP 스타일 세로 막대를 사용 하지 않도록 설정 하거나 설정 하려면이 메서드를 호출 합니다.  
   
-##  <a name="getcompactsize"></a>CMFCRibbonGallery::GetCompactSize  
+##  <a name="getcompactsize"></a>  CMFCRibbonGallery::GetCompactSize  
 
   
 ```  
@@ -366,7 +361,7 @@ virtual CSize GetCompactSize(CDC* pDC);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getdroppeddown"></a>CMFCRibbonGallery::GetDroppedDown  
+##  <a name="getdroppeddown"></a>  CMFCRibbonGallery::GetDroppedDown  
 
   
 ```  
@@ -377,7 +372,7 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getgroupname"></a>CMFCRibbonGallery::GetGroupName  
+##  <a name="getgroupname"></a>  CMFCRibbonGallery::GetGroupName  
  지정된 된 인덱스에 있는 그룹의 이름을 반환 합니다.  
   
 ```  
@@ -393,7 +388,7 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getgroupoffset"></a>CMFCRibbonGallery::GetGroupOffset  
+##  <a name="getgroupoffset"></a>  CMFCRibbonGallery::GetGroupOffset  
 
   
 ```  
@@ -404,7 +399,7 @@ virtual int GetGroupOffset() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="geticonsinrow"></a>CMFCRibbonGallery::GetIconsInRow  
+##  <a name="geticonsinrow"></a>  CMFCRibbonGallery::GetIconsInRow  
  리본 갤러리의 행에 있는 항목의 수를 반환합니다.  
   
 ```  
@@ -416,7 +411,7 @@ int GetIconsInRow() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getitemtooltip"></a>CMFCRibbonGallery::GetItemToolTip  
+##  <a name="getitemtooltip"></a>  CMFCRibbonGallery::GetItemToolTip  
  갤러리의 항목과 연결 된 도구 설명 텍스트를 반환 합니다.  
   
 ```  
@@ -432,7 +427,7 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getlastselecteditem"></a>CMFCRibbonGallery::GetLastSelectedItem  
+##  <a name="getlastselecteditem"></a>  CMFCRibbonGallery::GetLastSelectedItem  
  사용자가 선택한 리본 갤러리에 있는 마지막 항목의 인덱스를 반환 합니다.  
   
 ```  
@@ -448,7 +443,7 @@ static int GetLastSelectedItem(UINT uiCmdID);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getpaletteid"></a>CMFCRibbonGallery::GetPaletteID  
+##  <a name="getpaletteid"></a>  CMFCRibbonGallery::GetPaletteID  
  현재 색상표의 명령 ID를 반환합니다.  
   
 ```  
@@ -460,7 +455,7 @@ int GetPaletteID() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getregularsize"></a>CMFCRibbonGallery::GetRegularSize  
+##  <a name="getregularsize"></a>  CMFCRibbonGallery::GetRegularSize  
 
   
 ```  
@@ -474,7 +469,7 @@ virtual CSize GetRegularSize(CDC* pDC);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getselecteditem"></a>CMFCRibbonGallery::GetSelectedItem  
+##  <a name="getselecteditem"></a>  CMFCRibbonGallery::GetSelectedItem  
 
   
 ```  
@@ -485,7 +480,7 @@ int GetSelectedItem() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="hasmenu"></a>CMFCRibbonGallery::HasMenu  
+##  <a name="hasmenu"></a>  CMFCRibbonGallery::HasMenu  
 
   
 ```  
@@ -496,7 +491,7 @@ virtual BOOL HasMenu() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="isbuttonmode"></a>CMFCRibbonGallery::IsButtonMode  
+##  <a name="isbuttonmode"></a>  CMFCRibbonGallery::IsButtonMode  
  색상표 갤러리 단추에 포함 되는지 여부를 지정 합니다.  
   
 ```  
@@ -504,11 +499,11 @@ BOOL IsButtonMode() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`색상표 드롭 다운 메뉴 단추;으로 표시 되 면 `FALSE` 이면 색상표 리본 메뉴에 직접 표시 됩니다.  
+ `TRUE` 색상표 드롭 다운 메뉴 단추;으로 표시 되 면 `FALSE` 이면 색상표 리본 메뉴에 직접 표시 됩니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ismenuresizeenabled"></a>CMFCRibbonGallery::IsMenuResizeEnabled  
+##  <a name="ismenuresizeenabled"></a>  CMFCRibbonGallery::IsMenuResizeEnabled  
  메뉴 크기 조정 사용 되는지 여부를 지정 합니다.  
   
 ```  
@@ -516,11 +511,11 @@ BOOL IsMenuResizeEnabled() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`크기 조정 메뉴를 사용할 수 있는; 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 크기 조정 메뉴를 사용할 수 있는; 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ismenuresizevertical"></a>CMFCRibbonGallery::IsMenuResizeVertical  
+##  <a name="ismenuresizevertical"></a>  CMFCRibbonGallery::IsMenuResizeVertical  
 
   
 ```  
@@ -531,7 +526,7 @@ BOOL IsMenuResizeVertical() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ismenusidebar"></a>CMFCRibbonGallery::IsMenuSideBar  
+##  <a name="ismenusidebar"></a>  CMFCRibbonGallery::IsMenuSideBar  
  세로 막대 사용 되는지 여부를 지정 합니다.  
   
 ```  
@@ -539,11 +534,11 @@ BOOL IsMenuSideBar() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`Office XP 스타일 세로 막대는 팝업 메뉴;의 왼쪽에 그려지는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` Office XP 스타일 세로 막대는 팝업 메뉴;의 왼쪽에 그려지는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onafterchangerect"></a>CMFCRibbonGallery::OnAfterChangeRect  
+##  <a name="onafterchangerect"></a>  CMFCRibbonGallery::OnAfterChangeRect  
 
   
 ```  
@@ -555,7 +550,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ondraw"></a>CMFCRibbonGallery::OnDraw  
+##  <a name="ondraw"></a>  CMFCRibbonGallery::OnDraw  
 
   
 ```  
@@ -567,7 +562,7 @@ virtual void OnDraw(CDC* pDC);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ondrawpaletteicon"></a>CMFCRibbonGallery::OnDrawPaletteIcon  
+##  <a name="ondrawpaletteicon"></a>  CMFCRibbonGallery::OnDrawPaletteIcon  
  갤러리 아이콘을 그릴 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -598,7 +593,7 @@ virtual void OnDrawPaletteIcon(
 ### <a name="remarks"></a>설명  
  리본 갤러리의 모양을 사용자 지정 하는 파생된 클래스에서이 메서드를 재정의할 수 있습니다.  
   
-##  <a name="onenable"></a>CMFCRibbonGallery::OnEnable  
+##  <a name="onenable"></a>  CMFCRibbonGallery::OnEnable  
 
   
 ```  
@@ -610,7 +605,7 @@ virtual void OnEnable(BOOL bEnable);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onrtlchanged"></a>CMFCRibbonGallery::OnRTLChanged  
+##  <a name="onrtlchanged"></a>  CMFCRibbonGallery::OnRTLChanged  
 
   
 ```  
@@ -622,7 +617,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="redrawicons"></a>CMFCRibbonGallery::RedrawIcons  
+##  <a name="redrawicons"></a>  CMFCRibbonGallery::RedrawIcons  
  갤러리를 다시 그립니다.  
   
 ```  
@@ -632,7 +627,7 @@ void RedrawIcons();
 ### <a name="remarks"></a>설명  
  갤러리 다시 그리게이 함수를 호출 합니다. 런타임 시 갤러리의 내용을 변경 하면이 메서드를 호출 해야 합니다.  
   
-##  <a name="removeitemtooltips"></a>CMFCRibbonGallery::RemoveItemToolTips  
+##  <a name="removeitemtooltips"></a>  CMFCRibbonGallery::RemoveItemToolTips  
  갤러리에 있는 모든 항목에서 도구 설명을 제거합니다.  
   
 ```  
@@ -641,7 +636,7 @@ void RemoveItemToolTips();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="selectitem"></a>CMFCRibbonGallery::SelectItem  
+##  <a name="selectitem"></a>  CMFCRibbonGallery::SelectItem  
 
   
 ```  
@@ -653,7 +648,7 @@ void SelectItem(int nItemIndex);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setaccdata"></a>CMFCRibbonGallery::SetACCData  
+##  <a name="setaccdata"></a>  CMFCRibbonGallery::SetACCData  
  리본 갤러리에서 내게 필요한 옵션 데이터를 사용하여 지정된 `CAccessibilityData` 개체를 채웁니다.  
   
 ```  
@@ -674,7 +669,7 @@ virtual BOOL SetACCData(
 ### <a name="remarks"></a>설명  
  해당 메서드에 성공하면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다.  
   
-##  <a name="setbuttonmode"></a>CMFCRibbonGallery::SetButtonMode  
+##  <a name="setbuttonmode"></a>  CMFCRibbonGallery::SetButtonMode  
  드롭 다운 단추 또는 리본에서 직접 색상표도 리본 갤러리를 표시할지 여부를 결정 합니다.  
   
 ```  
@@ -683,11 +678,11 @@ void SetButtonMode(BOOL bSet=TRUE);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bSet`  
- `TRUE`리본 갤러리 드롭 다운 메뉴 단추;으로 표시 하려면 `FALSE` 리본에서 직접 리본 갤러리의 내용을 표시 합니다.  
+ `TRUE` 리본 갤러리 드롭 다운 메뉴 단추;으로 표시 하려면 `FALSE` 리본에서 직접 리본 갤러리의 내용을 표시 합니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setgroupname"></a>CMFCRibbonGallery::SetGroupName  
+##  <a name="setgroupname"></a>  CMFCRibbonGallery::SetGroupName  
  그룹의 이름을 설정합니다.  
   
 ```  
@@ -706,7 +701,7 @@ void SetGroupName(
 ### <a name="remarks"></a>설명  
  이름이 변경 되는 그룹 추가 되어를 사용 하 여 [CMFCRibbonGallery::AddGroup](#addgroup) 메서드.  
   
-##  <a name="seticonsinrow"></a>CMFCRibbonGallery::SetIconsInRow  
+##  <a name="seticonsinrow"></a>  CMFCRibbonGallery::SetIconsInRow  
  갤러리에서 각 행의 항목 수를 지정합니다.  
   
 ```  
@@ -720,7 +715,7 @@ void SetIconsInRow(int nIconsInRow);
 ### <a name="remarks"></a>설명  
  리본 갤러리의 너비를 지정 하려면이 메서드를 사용 합니다.  
   
-##  <a name="setitemtooltip"></a>CMFCRibbonGallery::SetItemToolTip  
+##  <a name="setitemtooltip"></a>  CMFCRibbonGallery::SetItemToolTip  
  갤러리에서 항목에 대 한 도구 설명 텍스트를 설정합니다.  
   
 ```  
@@ -738,7 +733,7 @@ void SetItemToolTip(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setpalette"></a>CMFCRibbonGallery::SetPalette  
+##  <a name="setpalette"></a>  CMFCRibbonGallery::SetPalette  
  리본 갤러리를 색상표를 연결합니다.  
   
 ```  
@@ -762,7 +757,7 @@ void SetPalette(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setpaletteid"></a>CMFCRibbonGallery::SetPaletteID  
+##  <a name="setpaletteid"></a>  CMFCRibbonGallery::SetPaletteID  
  전송 된 명령 ID 정의 **WM_COMMAND** 메시지는 사용자가 갤러리 항목을 선택 합니다.  
   
 ```  

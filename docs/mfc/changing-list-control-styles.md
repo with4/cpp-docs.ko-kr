@@ -1,13 +1,10 @@
 ---
-title: "목록 컨트롤 스타일 변경 | Microsoft Docs"
-ms.custom: 
+title: 목록 컨트롤 스타일 변경 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - CListCtrl class [MFC], styles
 - CListCtrl class [MFC], changing styles
 ms.assetid: be74a005-0795-417c-9056-f6342aa74b26
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6758cce9ab42c0dea490dd8ac9803588edceac5d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9d93511ad4f4ca835e09b6eaa3f612f0888e844
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="changing-list-control-styles"></a>목록 컨트롤 스타일 변경
 목록 컨트롤의 창 스타일을 변경할 수 있습니다 ([CListCtrl](../mfc/reference/clistctrl-class.md)) 만든 후 언제 든 지 합니다. 창 스타일을 변경 하 여 보기를 사용 하 여 컨트롤의 종류를 변경 합니다. 예를 들어 탐색기를 에뮬레이트 하려면 제공할 수도 있습니다 메뉴 항목이 나 서로 다른 뷰 사이 있는 컨트롤을 전환 하기 위한 도구 모음 단추: 아이콘 보기, 목록 뷰 등에입니다.  

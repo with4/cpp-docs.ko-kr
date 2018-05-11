@@ -1,12 +1,9 @@
 ---
-title: "링커 도구 경고 LNK4105 | Microsoft Docs"
-ms.custom: 
+title: 링커 도구 경고 LNK4105 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - LNK4105
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - LNK4105
 ms.assetid: 6c7bebf4-4ea6-4533-a6ed-e563d43abbd7
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 913a6da056908def8df5aab1c2425ef9a187c1e2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 0ffdd8953e08f38d36bdfc2e68ad6cb8e06fb85b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="linker-tools-warning-lnk4105"></a>링커 도구 경고 LNK4105
 'option'; 옵션에 지정 된 인수 없음 옵션을 무시합니다.  
@@ -34,7 +29,7 @@ ms.lasthandoff: 12/21/2017
   
  기존 환경 라이브러리 설정을 다시 정의 하도록 필요 하지 않은 경우 링커 명령줄에서 /LIBPATH 옵션을 제거 합니다. 라이브러리에 대 한 대체 검색 경로 사용 하려는 경우 /LIBPATH 옵션 다음에 대체 경로 지정 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 link /libpath:c:\filepath\lib bar.obj  

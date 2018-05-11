@@ -1,12 +1,9 @@
 ---
-title: "CEdit 클래스 | Microsoft Docs"
-ms.custom: 
+title: CEdit 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CEdit
@@ -103,17 +100,15 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e14a675f3dac5f2431622f0dfd6002228abe4d2
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: 72bf4ffb56ad34926b3a47d86d7609aae5dff4f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cedit-class"></a>CEdit Class
 Windows 편집 컨트롤의 기능을 제공합니다.  
@@ -193,7 +188,7 @@ class CEdit : public CWnd
   
  각 메시지 맵 항목은 다음 형식을 사용 합니다.  
   
- **ON_**알림 **(** *id, memberFxn * * *)**  
+ **ON_** 알림 **(** *id, memberFxn * * *)**  
   
  여기서 `id` 알림 메시지를 전송 하는 편집 컨트롤의 자식 창 ID를 지정 하 고 `memberFxn` 알림을 처리 하도록 작성 한 부모 멤버 함수의 이름입니다.  
   
@@ -258,7 +253,7 @@ BOOL CanUndo() const;
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [EM_CANUNDO](http://msdn.microsoft.com/library/windows/desktop/bb775468) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CEdit::Undo](#undo)합니다.  
   
 ##  <a name="cedit"></a>  CEdit::CEdit  
@@ -271,7 +266,7 @@ CEdit();
 ### <a name="remarks"></a>설명  
  사용 하 여 [만들기](#create) Windows 편집 컨트롤을 생성 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#1](../../mfc/reference/codesnippet/cpp/cedit-class_1.cpp)]  
   
 ##  <a name="charfrompos"></a>  CEdit::CharFromPos  
@@ -295,7 +290,7 @@ int CharFromPos(CPoint pt) const;
   
  자세한 내용은 참조 [EM_CHARFROMPOS](http://msdn.microsoft.com/library/windows/desktop/bb761566) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#3](../../mfc/reference/codesnippet/cpp/cedit-class_2.cpp)]  
   
 ##  <a name="clear"></a>  CEdit::Clear  
@@ -312,7 +307,7 @@ void Clear();
   
  자세한 내용은 참조 [WM_CLEAR](http://msdn.microsoft.com/library/windows/desktop/ms649020) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#4](../../mfc/reference/codesnippet/cpp/cedit-class_3.cpp)]  
   
 ##  <a name="copy"></a>  CEdit::Copy  
@@ -325,7 +320,7 @@ void Copy();
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [WM_COPY](http://msdn.microsoft.com/library/windows/desktop/ms649022) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#5](../../mfc/reference/codesnippet/cpp/cedit-class_4.cpp)]  
   
 ##  <a name="create"></a>  CEdit::Create  
@@ -364,7 +359,7 @@ virtual BOOL Create(
   
  다음 적용 [창 스타일](styles-used-by-mfc.md#window-styles) 를 편집 컨트롤입니다.  
   
-- **WS_CHILD** Always  
+- **WS_CHILD** 항상  
   
 - **WS_VISIBLE** Usually  
   
@@ -374,7 +369,7 @@ virtual BOOL Create(
   
 - **WS_TABSTOP** 탭 이동 순서에 편집 컨트롤을 포함 하려면  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#2](../../mfc/reference/codesnippet/cpp/cedit-class_5.cpp)]  
   
 ##  <a name="cut"></a>  CEdit::Cut  
@@ -391,7 +386,7 @@ void Cut();
   
  자세한 내용은 참조 [WM_CUT](http://msdn.microsoft.com/library/windows/desktop/ms649023) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#6](../../mfc/reference/codesnippet/cpp/cedit-class_6.cpp)]  
   
 ##  <a name="emptyundobuffer"></a>  CEdit::EmptyUndoBuffer  
@@ -408,7 +403,7 @@ void EmptyUndoBuffer();
   
  자세한 내용은 참조 [EM_EMPTYUNDOBUFFER](http://msdn.microsoft.com/library/windows/desktop/bb761568) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#7](../../mfc/reference/codesnippet/cpp/cedit-class_7.cpp)]  
   
 ##  <a name="fmtlines"></a>  CEdit::FmtLines  
@@ -434,7 +429,7 @@ BOOL FmtLines(BOOL bAddEOL);
   
  자세한 내용은 참조 [EM_FMTLINES](http://msdn.microsoft.com/library/windows/desktop/bb761570) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#8](../../mfc/reference/codesnippet/cpp/cedit-class_8.cpp)]  
   
 ##  <a name="getcuebanner"></a>  CEdit::GetCueBanner  
@@ -476,7 +471,7 @@ int GetFirstVisibleLine() const;
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [EM_GETFIRSTVISIBLELINE](http://msdn.microsoft.com/library/windows/desktop/bb761574) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#9](../../mfc/reference/codesnippet/cpp/cedit-class_9.cpp)]  
   
 ##  <a name="gethandle"></a>  CEdit::GetHandle  
@@ -501,7 +496,7 @@ HLOCAL GetHandle() const;
   
  자세한 내용은 참조 [EM_GETHANDLE](http://msdn.microsoft.com/library/windows/desktop/bb761576) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#10](../../mfc/reference/codesnippet/cpp/cedit-class_10.cpp)]  
   
 ##  <a name="gethighlight"></a>  CEdit::GetHighlight  
@@ -544,7 +539,7 @@ UINT GetLimitText() const;
   
  자세한 내용은 참조 [EM_GETLIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761582) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#11](../../mfc/reference/codesnippet/cpp/cedit-class_11.cpp)]  
   
 ##  <a name="getline"></a>  CEdit::GetLine  
@@ -579,7 +574,7 @@ int GetLine(
   
  자세한 내용은 참조 [EM_GETLINE](http://msdn.microsoft.com/library/windows/desktop/bb761584) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CEdit::GetLineCount](#getlinecount)합니다.  
   
 ##  <a name="getlinecount"></a>  CEdit::GetLineCount  
@@ -597,7 +592,7 @@ int GetLineCount() const;
   
  자세한 내용은 참조 [EM_GETLINECOUNT](http://msdn.microsoft.com/library/windows/desktop/bb761586) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#12](../../mfc/reference/codesnippet/cpp/cedit-class_12.cpp)]  
   
 ##  <a name="getmargins"></a>  CEdit::GetMargins  
@@ -618,7 +613,7 @@ DWORD GetMargins() const;
   
  자세한 내용은 참조 [EM_GETMARGINS](http://msdn.microsoft.com/library/windows/desktop/bb761590) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl)합니다.  
   
 ##  <a name="getmodify"></a>  CEdit::GetModify  
@@ -636,7 +631,7 @@ BOOL GetModify() const;
   
  자세한 내용은 참조 [EM_GETMODIFY](http://msdn.microsoft.com/library/windows/desktop/bb761592) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#13](../../mfc/reference/codesnippet/cpp/cedit-class_13.cpp)]  
   
 ##  <a name="getpasswordchar"></a>  CEdit::GetPasswordChar  
@@ -654,7 +649,7 @@ TCHAR GetPasswordChar() const;
   
  이 메서드는 전송 된 [EM_GETPASSWORDCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761594) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#14](../../mfc/reference/codesnippet/cpp/cedit-class_14.cpp)]  
   
 ##  <a name="getrect"></a>  CEdit::GetRect  
@@ -675,7 +670,7 @@ void GetRect(LPRECT lpRect) const;
   
  자세한 내용은 참조 [EM_GETRECT](http://msdn.microsoft.com/library/windows/desktop/bb761596) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CEdit::LimitText](#limittext)합니다.  
   
 ##  <a name="getsel"></a>  CEdit::GetSel  
@@ -702,7 +697,7 @@ void GetSel(
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [EM_GETSEL](http://msdn.microsoft.com/library/windows/desktop/bb761598) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#15](../../mfc/reference/codesnippet/cpp/cedit-class_15.cpp)]  
   
 ##  <a name="hideballoontip"></a>  CEdit::HideBalloonTip  
@@ -737,7 +732,7 @@ void LimitText(int nChars = 0);
   
  자세한 내용은 참조 [EM_LIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761607) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#17](../../mfc/reference/codesnippet/cpp/cedit-class_16.cpp)]  
   
 ##  <a name="linefromchar"></a>  CEdit::LineFromChar  
@@ -761,7 +756,7 @@ int LineFromChar(int nIndex = -1) const;
   
  자세한 내용은 참조 [EM_LINEFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761609) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#18](../../mfc/reference/codesnippet/cpp/cedit-class_17.cpp)]  
   
 ##  <a name="lineindex"></a>  CEdit::LineIndex  
@@ -785,7 +780,7 @@ int LineIndex(int nLine = -1) const;
   
  자세한 내용은 참조 [EM_LINEINDEX](http://msdn.microsoft.com/library/windows/desktop/bb761611) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#19](../../mfc/reference/codesnippet/cpp/cedit-class_18.cpp)]  
   
 ##  <a name="linelength"></a>  CEdit::LineLength  
@@ -813,7 +808,7 @@ int LineLength(int nLine = -1) const;
 ### <a name="remarks"></a>설명  
  이 메서드가 지원 되는 [EM_LINELENGTH](http://msdn.microsoft.com/library/windows/desktop/bb761613) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CEdit::LineIndex](#lineindex)합니다.  
   
 ##  <a name="linescroll"></a>  CEdit::LineScroll  
@@ -841,7 +836,7 @@ void LineScroll(
   
  자세한 내용은 참조 [EM_LINESCROLL](http://msdn.microsoft.com/library/windows/desktop/bb761615) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CEdit::GetFirstVisibleLine](#getfirstvisibleline)합니다.  
   
 ##  <a name="paste"></a>  CEdit::Paste  
@@ -856,7 +851,7 @@ void Paste();
   
  자세한 내용은 참조 [WM_PASTE](http://msdn.microsoft.com/library/windows/desktop/ms649028) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#20](../../mfc/reference/codesnippet/cpp/cedit-class_19.cpp)]  
   
 ##  <a name="posfromchar"></a>  CEdit::PosFromChar  
@@ -881,7 +876,7 @@ CPoint PosFromChar(UINT nChar) const;
   
  자세한 내용은 참조 [EM_POSFROMCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761631) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CEdit::LineFromChar](#linefromchar)합니다.  
   
 ##  <a name="replacesel"></a>  CEdit::ReplaceSel  
@@ -905,7 +900,7 @@ void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
   
  자세한 내용은 참조 [EM_REPLACESEL](http://msdn.microsoft.com/library/windows/desktop/bb761633) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CEdit::LineIndex](#lineindex)합니다.  
   
 ##  <a name="setcuebanner"></a>  CEdit::SetCueBanner  
@@ -937,7 +932,7 @@ BOOL SetCueBanner(
 ### <a name="remarks"></a>설명  
  이 메서드는 전송 된 [EM_SETCUEBANNER](http://msdn.microsoft.com/library/windows/desktop/bb761639) 메시지는 Windows SDK에 설명 되어 있습니다. 자세한 내용은 참조는 [Edit_SetCueBannerTextFocused](http://msdn.microsoft.com/library/windows/desktop/bb761703) 매크로입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제는 [CEdit::SetCueBanner](#setcuebanner) 메서드.  
   
  [!code-cpp[NVC_MFC_CEdit_s1#2](../../mfc/reference/codesnippet/cpp/cedit-class_20.cpp)]  
@@ -969,7 +964,7 @@ void SetHandle(HLOCAL hBuffer);
   
  자세한 내용은 참조 [EM_SETHANDLE](http://msdn.microsoft.com/library/windows/desktop/bb761641), [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723), 및 [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#22](../../mfc/reference/codesnippet/cpp/cedit-class_21.cpp)]  
   
 ##  <a name="sethighlight"></a>  CEdit::SetHighlight  
@@ -1011,7 +1006,7 @@ void SetLimitText(UINT nMax);
   
  자세한 내용은 참조 [EM_SETLIMITTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761647) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl)합니다.  
   
 ##  <a name="setmargins"></a>  CEdit::SetMargins  
@@ -1037,7 +1032,7 @@ void SetMargins(
   
  자세한 내용은 참조 [EM_SETMARGINS](http://msdn.microsoft.com/library/windows/desktop/bb761649) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CEditView::GetEditCtrl](ceditview-class.md#geteditctrl)합니다.  
   
 ##  <a name="setmodify"></a>  CEdit::SetModify  
@@ -1056,7 +1051,7 @@ void SetModify(BOOL bModified = TRUE);
   
  자세한 내용은 참조 [EM_SETMODIFY](http://msdn.microsoft.com/library/windows/desktop/bb761651) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CEdit::GetModify](#getmodify)합니다.  
   
 ##  <a name="setpasswordchar"></a>  CEdit::SetPasswordChar  
@@ -1077,11 +1072,11 @@ void SetPasswordChar(TCHAR ch);
   
  경우는 `SetPasswordChar` 멤버 함수를 호출 `CEdit` 로 지정 된 문자를 사용 하 여 표시 되는 문자 모두를 다시 그릴 *ch*합니다.  
   
- 편집 컨트롤이 만들어진 경우는 [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) 스타일이, 기본 암호 문자는 별표로 설정 됩니다 (  **\*** ). 이 스타일이 제거 됩니다 `SetPasswordChar` 사용 하 여 호출 *ch* 0으로 설정 합니다.  
+ 편집 컨트롤이 만들어진 경우는 [ES_PASSWORD](styles-used-by-mfc.md#edit-styles) 스타일이, 기본 암호 문자는 별표로 설정 됩니다 ( **\***). 이 스타일이 제거 됩니다 `SetPasswordChar` 사용 하 여 호출 *ch* 0으로 설정 합니다.  
   
  자세한 내용은 참조 [EM_SETPASSWORDCHAR](http://msdn.microsoft.com/library/windows/desktop/bb761653) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#16](../../mfc/reference/codesnippet/cpp/cedit-class_22.cpp)]  
   
 ##  <a name="setreadonly"></a>  CEdit::SetReadOnly  
@@ -1103,7 +1098,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
   
  자세한 내용은 참조 [EM_SETREADONLY](http://msdn.microsoft.com/library/windows/desktop/bb761655) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#23](../../mfc/reference/codesnippet/cpp/cedit-class_23.cpp)]  
   
 ##  <a name="setrect"></a>  CEdit::SetRect  
@@ -1128,7 +1123,7 @@ void SetRect(LPCRECT lpRect);
   
  자세한 내용은 참조 [EM_SETRECT](http://msdn.microsoft.com/library/windows/desktop/bb761657) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#24](../../mfc/reference/codesnippet/cpp/cedit-class_24.cpp)]  
   
 ##  <a name="setrectnp"></a>  CEdit::SetRectNP  
@@ -1155,7 +1150,7 @@ void SetRectNP(LPCRECT lpRect);
   
  자세한 내용은 참조 [EM_SETRECTNP](http://msdn.microsoft.com/library/windows/desktop/bb761659) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CEdit::SetRect](#setrect)합니다.  
   
 ##  <a name="setsel"></a>  CEdit::SetSel  
@@ -1189,7 +1184,7 @@ void SetSel(
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [EM_SETSEL](http://msdn.microsoft.com/library/windows/desktop/bb761661) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CEdit::GetSel](#getsel)합니다.  
   
 ##  <a name="settabstops"></a>  CEdit::SetTabStops  
@@ -1229,7 +1224,7 @@ BOOL SetTabStops(
   
  자세한 내용은 참조 [EM_SETTABSTOPS](http://msdn.microsoft.com/library/windows/desktop/bb761663) 및 [GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CEditView::SetTabStops](ceditview-class.md#settabstops)합니다.  
   
 ##  <a name="showballoontip"></a>  CEdit::ShowBalloonTip  
@@ -1260,12 +1255,12 @@ BOOL ShowBalloonTip(
 ### <a name="remarks"></a>설명  
  이 함수는 [EM_SHOWBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb761668) 메시지는 Windows SDK에 설명 되어 있습니다. 자세한 내용은 참조는 [Edit_ShowBalloonTip](http://msdn.microsoft.com/library/windows/desktop/bb761707) 매크로입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 코드 예제에서는 변수를 정의 `m_cedit`, 즉 현재 편집 컨트롤에 액세스 하는 데 사용 합니다. 이 변수는 다음 예제에서 사용됩니다.  
   
  [!code-cpp[NVC_MFC_CEdit_s1#1](../../mfc/reference/codesnippet/cpp/cedit-class_25.h)]  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 코드 예제에서는 edit 컨트롤에 대 한 풍선 설명을 표시합니다. [CEdit::ShowBalloonTip](#showballoontip) 메서드 제목과 풍선 팁 텍스트를 지정 합니다.  
   
  [!code-cpp[NVC_MFC_CEdit_s1#3](../../mfc/reference/codesnippet/cpp/cedit-class_26.cpp)]  
@@ -1285,7 +1280,7 @@ BOOL Undo();
   
  자세한 내용은 참조 [EM_UNDO](http://msdn.microsoft.com/library/windows/desktop/bb761670) Windows sdk에서입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFC_CEdit#25](../../mfc/reference/codesnippet/cpp/cedit-class_27.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

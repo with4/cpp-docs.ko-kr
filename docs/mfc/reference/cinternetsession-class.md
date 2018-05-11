@@ -1,12 +1,9 @@
 ---
-title: "CInternetSession 클래스 | Microsoft Docs"
-ms.custom: 
+title: CInternetSession 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CInternetSession
@@ -41,17 +38,15 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7aad2f6ce26fd5ca9ed0ec323a8fcb05ac17f7c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 832ae20ef5bcd1df4741f7e33be2758ab424ea5f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 클래스
 한 개 또는 여러 개의 동시 인터넷 세션을 만들어 초기화하며, 필요한 경우 프록시 서버에 대한 연결을 설명합니다.  
@@ -96,7 +91,7 @@ class CInternetSession : public CObject
 ## <a name="remarks"></a>설명  
  인터넷 연결 응용 프로그램의 기간에 대 한 존재 해야 하는 경우 만들 수 있습니다는 `CInternetSession` 클래스의 멤버 [CWinApp](../../mfc/reference/cwinapp-class.md)합니다.  
   
- 호출할 수 인터넷 세션을 설정 하 고 나면 [OpenURL](#openurl)합니다. `CInternetSession`다음 전역 함수를 호출 하 여 사용자에 대 한 URL을 구문 분석 [AfxParseURL](internet-url-parsing-globals.md#afxparseurl)합니다. 해당 프로토콜 종류에 관계 없이 `CInternetSession` URL을 해석 하 고를 관리 합니다. 지정 된 "file://" URL 리소스를 식별 하는 로컬 파일에 대 한 요청을 처리할 수입니다. `OpenURL`에 대 한 포인터를 반환 합니다는 [CStdioFile](../../mfc/reference/cstdiofile-class.md) 개체를 전달 하는 경우 이름을 로컬 파일입니다.  
+ 호출할 수 인터넷 세션을 설정 하 고 나면 [OpenURL](#openurl)합니다. `CInternetSession` 다음 전역 함수를 호출 하 여 사용자에 대 한 URL을 구문 분석 [AfxParseURL](internet-url-parsing-globals.md#afxparseurl)합니다. 해당 프로토콜 종류에 관계 없이 `CInternetSession` URL을 해석 하 고를 관리 합니다. 지정 된 "file://" URL 리소스를 식별 하는 로컬 파일에 대 한 요청을 처리할 수입니다. `OpenURL` 에 대 한 포인터를 반환 합니다는 [CStdioFile](../../mfc/reference/cstdiofile-class.md) 개체를 전달 하는 경우 이름을 로컬 파일입니다.  
   
  사용 하 여 인터넷 서버에서 URL을 열면 `OpenURL`, 사이트에서 정보를 읽을 수 있습니다. 서버에 있는 파일에서 (예: HTTP, FTP, 또는 gopher) 용 서비스 관련 작업을 수행 하려는 경우 해당 서버에서 적절 한 연결을 설정 해야 합니다. 특정 종류의 특정 서비스에 직접 연결을 열려면 다음 멤버 함수 중 하나를 사용 합니다.  
   
@@ -108,12 +103,12 @@ class CInternetSession : public CObject
   
  [SetOption](#setoption) 횟수, 제한 시간 값과 같은 세션의 쿼리 옵션을 설정할 수 있습니다.  
   
- `CInternetSession`멤버 함수 [SetCookie](#setcookie), [GetCookie](#getcookie), 및 [GetCookieLength](#getcookielength) Win32 쿠키 데이터베이스를 통해 서버와 스크립트 유지 관리 하는 방법을 제공 합니다. 클라이언트 워크스테이션에 대 한 상태 정보입니다.  
+ `CInternetSession` 멤버 함수 [SetCookie](#setcookie), [GetCookie](#getcookie), 및 [GetCookieLength](#getcookielength) Win32 쿠키 데이터베이스를 통해 서버와 스크립트 유지 관리 하는 방법을 제공 합니다. 클라이언트 워크스테이션에 대 한 상태 정보입니다.  
   
  기본 인터넷 프로그래밍 작업에 대 한 자세한 내용은 문서 참조 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md)합니다. MFC WinInet 클래스를 사용 하는 방법에 대 한 일반 정보에 대 한 문서를 참조 [인터넷 WinInet를 사용한 프로그래밍](../../mfc/win32-internet-extensions-wininet.md)합니다.  
   
 > [!NOTE]
-> `CInternetSession`throw 합니다는 [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception) 지원 되지 않는 서비스 형식에 대 한 합니다. 다음 서비스 유형에 현재 지원: FTP, HTTP, gopher, 및 파일입니다.  
+> `CInternetSession` throw 합니다는 [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception) 지원 되지 않는 서비스 형식에 대 한 합니다. 다음 서비스 유형에 현재 지원: FTP, HTTP, gopher, 및 파일입니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -123,7 +118,7 @@ class CInternetSession : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxinet.h  
   
-##  <a name="cinternetsession"></a>CInternetSession::CInternetSession  
+##  <a name="cinternetsession"></a>  CInternetSession::CInternetSession  
  이 멤버 함수를 호출 하는 경우는 `CInternetSession` 개체가 만들어집니다.  
   
 ```  
@@ -141,16 +136,16 @@ CInternetSession(
  응용 프로그램이 나 인터넷 함수 (예를 들어 "Microsoft 인터넷 브라우저")를 호출 하는 엔터티 이름을 식별 하는 문자열에 대 한 포인터입니다. 경우 `pstrAgent` 은 **NULL** 프레임 워크 (기본값), 전역 함수를 호출 [AfxGetAppName](application-information-and-management.md#afxgetappname), 응용 프로그램의 이름을 포함 하는 null로 끝나는 문자열을 반환 하는 합니다. 일부 프로토콜이이 문자열을 사용 하 여 서버에 응용 프로그램을 식별 합니다.  
   
  `dwContext`  
- 작업에 대 한 컨텍스트 식별자입니다. `dwContext`반환한 작업의 상태 정보를 식별 [cinternetsession:: Onstatuscallback](#onstatuscallback)합니다. 기본값은 1로 설정 그러나 작업에 대 한 특정 컨텍스트 ID를 명시적으로 할당할 수 있습니다. 개체와 수행 하는 작업 컨텍스트 ID와 가진 연결 됩니다.  
+ 작업에 대 한 컨텍스트 식별자입니다. `dwContext` 반환한 작업의 상태 정보를 식별 [cinternetsession:: Onstatuscallback](#onstatuscallback)합니다. 기본값은 1로 설정 그러나 작업에 대 한 특정 컨텍스트 ID를 명시적으로 할당할 수 있습니다. 개체와 수행 하는 작업 컨텍스트 ID와 가진 연결 됩니다.  
   
  `dwAccessType`  
  필요한 액세스의 형식입니다. 다음은 유효한 값을는 정확히 하나의 제공 될 수 있습니다.  
   
 - **INTERNET_OPEN_TYPE_PRECONFIG** 레지스트리에서 미리 구성 된 설정을 사용 하 여 연결 합니다. 이 액세스 형식은 기본값으로 설정 됩니다. TIS 프록시를 통해 연결할 설정 `dwAccessType` ;이 값으로 설정한 레지스트리에 적절 하 게 합니다.  
   
-- `INTERNET_OPEN_TYPE_DIRECT`인터넷에 직접 연결 합니다.  
+- `INTERNET_OPEN_TYPE_DIRECT` 인터넷에 직접 연결 합니다.  
   
-- `INTERNET_OPEN_TYPE_PROXY`CERN 프록시를 통해 연결 합니다.  
+- `INTERNET_OPEN_TYPE_PROXY` CERN 프록시를 통해 연결 합니다.  
   
  다양 한 유형의 프록시를 사용 하 여 연결에 대 한 자세한 내용은 참조 [일반적인 FTP 클라이언트 응용 프로그램의 단계를](../../mfc/steps-in-a-typical-ftp-client-application.md)합니다.  
   
@@ -163,29 +158,29 @@ CInternetSession(
  `dwFlags`  
  다양 한 캐싱 옵션을 나타냅니다. 기본값은 0으로 설정 됩니다. 가능한 값은 다음과 같습니다.  
   
-- `INTERNET_FLAG_DONT_CACHE`로컬 또는 게이트웨이 서버를 모두에서 데이터를 캐시 하지 마십시오.  
+- `INTERNET_FLAG_DONT_CACHE` 로컬 또는 게이트웨이 서버를 모두에서 데이터를 캐시 하지 마십시오.  
   
-- `INTERNET_FLAG_OFFLINE`다운로드 작업은 영구 캐시를 통해 도달 됩니다. 항목이 캐시에 없는 경우 적절 한 오류 코드가 반환 됩니다. 이 플래그의 비트와 함께 `OR` ( **&#124;**) 연산자.  
+- `INTERNET_FLAG_OFFLINE` 다운로드 작업은 영구 캐시를 통해 도달 됩니다. 항목이 캐시에 없는 경우 적절 한 오류 코드가 반환 됩니다. 이 플래그의 비트와 함께 `OR` ( **&#124;**) 연산자.  
   
 ### <a name="remarks"></a>설명  
  **CInternetSession** 함수인는 첫 번째 인터넷 응용 프로그램에서 호출 합니다. 내부 데이터 구조를 초기화 하 고 응용 프로그램의 이후 호출에 대해 준비 합니다.  
   
  인터넷 연결을 열 수 있는, `CInternetSession` throw 한 [AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)합니다.  
   
-##  <a name="close"></a>CInternetSession::Close  
+##  <a name="close"></a>  CInternetSession::Close  
  응용 프로그램 사용 하 여 완료 되 면이 함수를 호출는 `CInternetSession` 개체입니다.  
   
 ```  
 virtual void Close();
 ```  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)합니다.  
   
-##  <a name="enablestatuscallback"></a>CInternetSession::EnableStatusCallback  
+##  <a name="enablestatuscallback"></a>  CInternetSession::EnableStatusCallback  
  상태 콜백을 사용 하도록 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -208,7 +203,7 @@ BOOL EnableStatusCallback(BOOL bEnable = TRUE);
   
  모든 작업을 비동기적으로 처리 하려면 고유한 스레드를 만들거나 MFC 없이 WinInet 함수를 사용 해야 합니다.  
   
-##  <a name="getcontext"></a>CInternetSession::GetContext  
+##  <a name="getcontext"></a>  CInternetSession::GetContext  
  특정 응용 프로그램 세션에 대 한 상황에 맞는 값을 가져오려면이 함수를 호출 합니다.  
   
 ```  
@@ -223,7 +218,7 @@ DWORD_PTR GetContext() const;
   
  비동기 작업에 대 한 자세한 내용은 문서 참조 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md)합니다.  
   
-##  <a name="getcookie"></a>CInternetSession::GetCookie  
+##  <a name="getcookie"></a>  CInternetSession::GetCookie  
  이 멤버 함수는 Win32 함수의 동작을 구현 [InternetGetCookie](http://msdn.microsoft.com/library/windows/desktop/aa384710)Windows SDK에 설명 된 대로 합니다.  
   
 ```  
@@ -263,7 +258,7 @@ static BOOL GetCookie(
 ### <a name="remarks"></a>설명  
  두 번째 오버 로드에서 MFC에 제공 된 쿠키 데이터를 검색 `CString` 개체입니다.  
   
-##  <a name="getcookielength"></a>CInternetSession::GetCookieLength  
+##  <a name="getcookielength"></a>  CInternetSession::GetCookieLength  
  이 버퍼에 저장 하는 쿠키의 길이를 가져오는 함수를 호출 합니다.  
   
 ```  
@@ -285,7 +280,7 @@ static DWORD GetCookieLength(
 ### <a name="remarks"></a>설명  
  이 값은 사용 하 여 [GetCookie](#getcookie)합니다.  
   
-##  <a name="getftpconnection"></a>Cinternetsession:: Getftpconnection  
+##  <a name="getftpconnection"></a>  Cinternetsession:: Getftpconnection  
  FTP 연결을 설정 및 가져오기에 대 한 포인터를이 멤버 함수 호출을 `CFtpConnection` 개체입니다.  
   
 ```  
@@ -309,7 +304,7 @@ CFtpConnection* GetFtpConnection(
   
 |`pstrUserName`|`pstrPassword`|FTP 서버에 전송 하는 사용자 이름|FTP 서버에 전송 하는 암호|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
-|**NULL** 또는 ""|**NULL** 또는 ""|"익명"|사용자의 전자 메일 이름|  
+|**NULL** 또는 ""|**NULL** 또는 ""|"anonymous"|사용자의 전자 메일 이름|  
 |비- **NULL** 문자열|**NULL** 또는 ""|`pstrUserName`|" "|  
 |**NULL** 비- **NULL** 문자열|**오류**|**오류**||  
 |비- **NULL** 문자열|비- **NULL** 문자열|`pstrUserName`|`pstrPassword`|  
@@ -324,12 +319,12 @@ CFtpConnection* GetFtpConnection(
  에 대 한 포인터는 [CFtpConnection](../../mfc/reference/cftpconnection-class.md) 개체입니다. 호출이 실패 한 경우 throw 되는 검사 하 여 오류의 원인을 결정 [CInternetException](../../mfc/reference/cinternetexception-class.md) 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- `GetFtpConnection`FTP 서버에 연결 하 고 만들고 반환에 대 한 포인터는 **CFTPConnection** 개체입니다. 서버에 대해 특정 작업을 수행 하지는 않습니다. 파일에 쓰거나 읽을 하려는 별도 단계로 이러한 작업을 수행 해야 예를 들어 있습니다. 클래스를 참조 하십시오. [CFtpConnection](../../mfc/reference/cftpconnection-class.md) 및 [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md) 파일을 검색 하는 방법에 대 한 정보에 대 한 파일을 열을 읽거나 파일에 쓸 수 있습니다. 문서를 참조 [인터넷 WinInet를 사용한 프로그래밍](../../mfc/win32-internet-extensions-wininet.md) 단계에서 일반적인 FTP 연결 작업을 수행 합니다.  
+ `GetFtpConnection` FTP 서버에 연결 하 고 만들고 반환에 대 한 포인터는 **CFTPConnection** 개체입니다. 서버에 대해 특정 작업을 수행 하지는 않습니다. 파일에 쓰거나 읽을 하려는 별도 단계로 이러한 작업을 수행 해야 예를 들어 있습니다. 클래스를 참조 하십시오. [CFtpConnection](../../mfc/reference/cftpconnection-class.md) 및 [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md) 파일을 검색 하는 방법에 대 한 정보에 대 한 파일을 열을 읽거나 파일에 쓸 수 있습니다. 문서를 참조 [인터넷 WinInet를 사용한 프로그래밍](../../mfc/win32-internet-extensions-wininet.md) 단계에서 일반적인 FTP 연결 작업을 수행 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)합니다.  
   
-##  <a name="getgopherconnection"></a>CInternetSession::GetGopherConnection  
+##  <a name="getgopherconnection"></a>  CInternetSession::GetGopherConnection  
  호출에 대 한 포인터를 가져와서 새 gopher 연결을 설정 하려면이 함수는 `CGopherConnection` 개체입니다.  
   
 ```  
@@ -357,9 +352,9 @@ CGopherConnection* GetGopherConnection(
  에 대 한 포인터는 [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) 개체입니다. 호출이 실패 한 경우 throw 되는 검사 하 여 오류의 원인을 결정 [CInternetException](../../mfc/reference/cinternetexception-class.md) 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- `GetGopherConnection`gopher 서버에 연결 하 고 만들고 반환에 대 한 포인터는 `CGopherConnection` 개체입니다. 서버에 대해 특정 작업을 수행 하지는 않습니다. 데이터를 읽거나 하려는 별도 단계로 이러한 작업을 수행 해야 예를 들어 있습니다. 클래스를 참조 하십시오. [CGopherConnection](../../mfc/reference/cgopherconnection-class.md), [CGopherFile](../../mfc/reference/cgopherfile-class.md), 및 [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) 파일을 검색 하는 방법에 대 한 정보에 대 한 파일을 열을 읽거나 파일에 쓸 수 있습니다. FTP 사이트를 탐색 하는 방법에 대 한 정보를 멤버 함수를 참조 하십시오. [OpenURL](#openurl)합니다. 문서 참조 [인터넷 WinInet를 사용한 프로그래밍](../../mfc/win32-internet-extensions-wininet.md) 단계에서 일반적인 gopher 연결 작업을 수행 합니다.  
+ `GetGopherConnection` gopher 서버에 연결 하 고 만들고 반환에 대 한 포인터는 `CGopherConnection` 개체입니다. 서버에 대해 특정 작업을 수행 하지는 않습니다. 데이터를 읽거나 하려는 별도 단계로 이러한 작업을 수행 해야 예를 들어 있습니다. 클래스를 참조 하십시오. [CGopherConnection](../../mfc/reference/cgopherconnection-class.md), [CGopherFile](../../mfc/reference/cgopherfile-class.md), 및 [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) 파일을 검색 하는 방법에 대 한 정보에 대 한 파일을 열을 읽거나 파일에 쓸 수 있습니다. FTP 사이트를 탐색 하는 방법에 대 한 정보를 멤버 함수를 참조 하십시오. [OpenURL](#openurl)합니다. 문서 참조 [인터넷 WinInet를 사용한 프로그래밍](../../mfc/win32-internet-extensions-wininet.md) 단계에서 일반적인 gopher 연결 작업을 수행 합니다.  
   
-##  <a name="gethttpconnection"></a>CInternetSession::GetHttpConnection  
+##  <a name="gethttpconnection"></a>  CInternetSession::GetHttpConnection  
  이 멤버 함수에 대 한 포인터를 HTTP 연결을 설정할 호출는 `CHttpConnection` 개체입니다.  
   
 ```  
@@ -398,9 +393,9 @@ CHttpConnection* GetHttpConnection(
  에 대 한 포인터는 [CHttpConnection](../../mfc/reference/chttpconnection-class.md) 개체입니다. 호출이 실패 한 경우 throw 되는 검사 하 여 오류의 원인을 결정 [CInternetException](../../mfc/reference/cinternetexception-class.md) 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- `GetHttpConnection`HTTP 서버에 연결 하 고 만들고 반환에 대 한 포인터는 `CHttpConnection` 개체입니다. 서버에 대해 특정 작업을 수행 하지는 않습니다. HTTP 헤더를 쿼리 하려는 경우 별도 단계로이 작업을 수행 해야 예를 들어 있습니다. 클래스를 참조 하십시오. [CHttpConnection](../../mfc/reference/chttpconnection-class.md) 및 [CHttpFile](../../mfc/reference/chttpfile-class.md) 작업 대 한 정보는 HTTP 서버에 연결을 사용 하 여 수행할 수 있습니다. HTTP 사이트를 탐색 하는 방법에 대 한 정보를 멤버 함수를 참조 하십시오. [OpenURL](#openurl)합니다. 문서를 참조 [인터넷 WinInet를 사용한 프로그래밍](../../mfc/win32-internet-extensions-wininet.md) 단계에서 일반적인 HTTP 연결 작업을 수행 합니다.  
+ `GetHttpConnection` HTTP 서버에 연결 하 고 만들고 반환에 대 한 포인터는 `CHttpConnection` 개체입니다. 서버에 대해 특정 작업을 수행 하지는 않습니다. HTTP 헤더를 쿼리 하려는 경우 별도 단계로이 작업을 수행 해야 예를 들어 있습니다. 클래스를 참조 하십시오. [CHttpConnection](../../mfc/reference/chttpconnection-class.md) 및 [CHttpFile](../../mfc/reference/chttpfile-class.md) 작업 대 한 정보는 HTTP 서버에 연결을 사용 하 여 수행할 수 있습니다. HTTP 사이트를 탐색 하는 방법에 대 한 정보를 멤버 함수를 참조 하십시오. [OpenURL](#openurl)합니다. 문서를 참조 [인터넷 WinInet를 사용한 프로그래밍](../../mfc/win32-internet-extensions-wininet.md) 단계에서 일반적인 HTTP 연결 작업을 수행 합니다.  
   
-##  <a name="onstatuscallback"></a>Cinternetsession:: Onstatuscallback  
+##  <a name="onstatuscallback"></a>  Cinternetsession:: Onstatuscallback  
  이 멤버 함수는 상태 콜백이 활성화 되어 있고 작업이 보류 중인 상태를 업데이트 하기 위해 프레임 워크에 의해 호출 됩니다.  
   
 ```  
@@ -427,7 +422,7 @@ virtual void OnStatusCallback(
 ### <a name="remarks"></a>설명  
  호출 해야 [EnableStatusCallback](#enablestatuscallback) 상태 콜백 기능을 활용할 수 있습니다.  
   
- `dwInternetStatus` 매개 변수 수행 되는 작업을 나타내며의 내용을 결정 `lpvStatusInformation` 됩니다. `dwStatusInformationLength`에 포함 된 데이터의 길이 나타냅니다 `lpvStatusInformation`합니다. 다음 상태에 대 한 값 `dwInternetStatus` ´ ï ´ ù.  
+ `dwInternetStatus` 매개 변수 수행 되는 작업을 나타내며의 내용을 결정 `lpvStatusInformation` 됩니다. `dwStatusInformationLength` 에 포함 된 데이터의 길이 나타냅니다 `lpvStatusInformation`합니다. 다음 상태에 대 한 값 `dwInternetStatus` ´ ï ´ ù.  
   
 |값|의미|  
 |-----------|-------------|  
@@ -453,7 +448,7 @@ virtual void OnStatusCallback(
   
  비동기 작업에 대 한 자세한 내용은 문서 참조 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md)합니다.  
   
-##  <a name="openurl"></a>CInternetSession::OpenURL  
+##  <a name="openurl"></a>  CInternetSession::OpenURL  
  HTTP 서버에 지정 된 요청을 보내고 MIME 클라이언트 추가 RFC822 지정을 허용 하는 함수 또는 요청과 함께 보낼 HTTP 헤더에는이 멤버를 호출 합니다.  
   
 ```  
@@ -479,11 +474,11 @@ CStdioFile* OpenURL(
   
 - **INTERNET_FLAG_TRANSFER_BINARY** 이진 파일로 파일을 전송 합니다.  
   
-- `INTERNET_FLAG_RELOAD`로컬로 캐시 된 경우에 데이터를 통신에서 가져옵니다.  
+- `INTERNET_FLAG_RELOAD` 로컬로 캐시 된 경우에 데이터를 통신에서 가져옵니다.  
   
-- `INTERNET_FLAG_DONT_CACHE`로컬 또는 게이트웨이 모두에서 데이터를 캐시 하지 마십시오.  
+- `INTERNET_FLAG_DONT_CACHE` 로컬 또는 게이트웨이 모두에서 데이터를 캐시 하지 마십시오.  
   
-- `INTERNET_FLAG_SECURE`이 플래그는 HTTP 요청에 적용할 수 있습니다. Secure Sockets Layer 또는 PCT. 통신 중에 보안 트랜잭션을 요청합니다  
+- `INTERNET_FLAG_SECURE` 이 플래그는 HTTP 요청에 적용할 수 있습니다. Secure Sockets Layer 또는 PCT. 통신 중에 보안 트랜잭션을 요청합니다  
   
 - **INTERNET_OPEN_FLAG_USE_EXISTING_CONNECT** 에 의해 생성 된 새 요청에 대 한 서버에 대 한 기존 연결 다시 사용 가능한 경우 **OpenUrl** 각 연결 요청에 대 한 새 세션을 만드는 대신 합니다.  
   
@@ -510,18 +505,18 @@ CStdioFile* OpenURL(
 ### <a name="remarks"></a>설명  
  매개 변수 `dwFlags` 하나를 포함 해야 **INTERNET_FLAG_TRANSFER_ASCII** 또는 **INTERNET_FLAG_TRANSFER_BINARY**, 둘 중 하나입니다. 나머지 플래그 비트와 결합할 수 있습니다 `OR` 연산자 ( **&#124;**).  
   
- `OpenURL`Win32 함수를 래핑하는 **InternetOpenURL**만 다운로드, 검색 및 인터넷 서버에서 데이터 읽기를 허용 합니다. `OpenURL`no 필요 없는 파일 조작 원격 위치에서 허용 [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) 개체입니다.  
+ `OpenURL`Win32 함수를 래핑하는 **InternetOpenURL**만 다운로드, 검색 및 인터넷 서버에서 데이터 읽기를 허용 합니다. `OpenURL` no 필요 없는 파일 조작 원격 위치에서 허용 [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) 개체입니다.  
   
  특정 연결을 사용 하려면 (즉, 프로토콜 관련) 함수, 파일에 쓰기 등 세션을 열고, 다음 특정 종류의 연결을 열고 다음 해야 해당 연결을 사용 하 여 원하는 모드에서 한 파일을 엽니다. 참조 `CInternetConnection` 연결에 대 한 함수에 대 한 자세한 내용은 합니다.  
   
-##  <a name="operator_hinternet"></a>CInternetSession::operator HINTERNET  
+##  <a name="operator_hinternet"></a>  CInternetSession::operator HINTERNET  
  이 연산자를 사용 하 여 현재 인터넷 세션에 대 한 Windows 핸들을 가져올 수 있습니다.  
   
 ```  
 operator HINTERNET() const;  
 ```  
   
-##  <a name="setcookie"></a>CInternetSession::SetCookie  
+##  <a name="setcookie"></a>  CInternetSession::SetCookie  
  지정된 된 URL에 대 한 쿠키를 설정 합니다.  
   
 ```  
@@ -547,7 +542,7 @@ static BOOL SetCookie(
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 Win32 메시지의 동작을 구현 [InternetSetCookie](http://msdn.microsoft.com/library/windows/desktop/aa385107)Windows SDK에 설명 된 대로 합니다.  
   
-##  <a name="setoption"></a>CInternetSession::SetOption  
+##  <a name="setoption"></a>  CInternetSession::SetOption  
  인터넷 세션에 대 한 옵션을 설정 하려면이 함수를 호출 합니다.  
   
 ```  
@@ -580,9 +575,9 @@ BOOL SetOption(
  `dwFlags`  
  다양 한 캐싱 옵션을 나타냅니다. 기본값은 0으로 설정 됩니다. 가능한 값은 다음과 같습니다.  
   
-- `INTERNET_FLAG_DONT_CACHE`로컬 또는 게이트웨이 서버를 모두에서 데이터를 캐시 하지 마십시오.  
+- `INTERNET_FLAG_DONT_CACHE` 로컬 또는 게이트웨이 서버를 모두에서 데이터를 캐시 하지 마십시오.  
   
-- `INTERNET_FLAG_OFFLINE`다운로드 작업은 영구 캐시를 통해 도달 됩니다. 항목이 캐시에 없는 경우 적절 한 오류 코드가 반환 됩니다. 이 플래그의 비트와 함께 `OR` ( **&#124;**) 연산자.  
+- `INTERNET_FLAG_OFFLINE` 다운로드 작업은 영구 캐시를 통해 도달 됩니다. 항목이 캐시에 없는 경우 적절 한 오류 코드가 반환 됩니다. 이 플래그의 비트와 함께 `OR` ( **&#124;**) 연산자.  
   
 ### <a name="return-value"></a>반환 값  
  작업에 성공 하면 값이 **TRUE** 반환 됩니다. 오류가 발생 한 값 경우 **FALSE** 반환 됩니다. Win32 함수 호출이 실패 한 경우 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) 오류의 원인을 확인 하기 위해 호출할 수 있습니다.  

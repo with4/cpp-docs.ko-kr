@@ -1,13 +1,10 @@
 ---
-title: "컴파일러 경고 (수준 3) C4023 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 경고 (수준 3) C4023 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-diagnostics
+ms.topic: error-reference
 f1_keywords:
 - C4023
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - C4023
 ms.assetid: 615d5374-d7c1-42eb-acfd-917c053270c8
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e22ba0ed3d91f75ba73e68817611302d15fa2039
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 213d72e39575b447787c3e0ead7910baedc8e815
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-warning-level-3-c4023"></a>컴파일러 경고(수준 3) C4023
 'symbol': 기반 포인터가 프로토타입화되지 않은 함수로 전달되었습니다. 매개 변수 number  

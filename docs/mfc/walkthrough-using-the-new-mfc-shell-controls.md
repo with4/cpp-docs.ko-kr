@@ -1,34 +1,29 @@
 ---
-title: "연습: 새 MFC를 사용 하 여 컨트롤을 셸 | Microsoft Docs"
-ms.custom: 
+title: '연습: 새 MFC를 사용 하 여 컨트롤을 셸 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be882671da836f7d96f4c726753d6235735f363d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f19939a50b5bdbf98d087450b6301a923651a433
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>연습: 새 MFC 셸 컨트롤 사용
 이 연습에서 파일 탐색기와 비슷한 응용 프로그램을 만듭니다. 두 개의 창이 포함 된 창을 만듭니다. 왼쪽된 창에 있는 한 [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) 계층적 보기에 데스크톱을 표시 하는 개체입니다. 오른쪽 창에 있는 한 [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) 왼쪽된 창에서 선택 된 폴더의 파일을 표시 하는 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습에서는 가정를 설정한 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 사용할 **일반 개발 설정**합니다. 몇 가지 다양 한 개발 설정을 사용 중인 경우 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 이 연습에서 사용 하는 windows 기본적으로 표시 될 수 있습니다.  
   
 ### <a name="to-create-a-new-mfc-application-by-using-the-mfc-application-wizard"></a>MFC 응용 프로그램 마법사를 사용 하 여 새 MFC 응용 프로그램을 만들려면  

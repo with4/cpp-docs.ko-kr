@@ -1,13 +1,10 @@
 ---
-title: ": Tn055 MFC ODBC 데이터베이스 클래스 응용 프로그램을 MFC DAO 클래스로 마이그레이션 | Microsoft Docs"
-ms.custom: 
+title: ': Tn055 MFC ODBC 데이터베이스 클래스 응용 프로그램을 MFC DAO 클래스로 마이그레이션 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - vc.mfc.odbc
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - porting ODBC database applications to DAO
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8da778dbadf312a6fef18ec8fa0b62a1c7aa6030
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: fa9c7870492fed78e65c3ac25f74726acf35b7eb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: MFC ODBC 데이터베이스 클래스 응용 프로그램을 MFC DAO 클래스로 마이그레이션
 > [!NOTE]
@@ -89,12 +84,12 @@ ms.lasthandoff: 12/21/2017
 ||`DFX_Currency`|  
 |`RFX_Single`|`DFX_Single`|  
 |`RFX_Double`|`DFX_Double`|  
-|**RFX_Date\***|**DFX_Date** (`COleDateTime`-기반)|  
+|**RFX_Date \***|**DFX_Date** (`COleDateTime`-기반)|  
 |`RFX_Text`|`DFX_Text`|  
 |`RFX_Binary`|`DFX_Binary`|  
 |`RFX_LongBinary`|`DFX_LongBinary`|  
   
- \*`RFX_Date` 함수에 따라 `CTime` 및 **TIMESTAMP_STRUCT**합니다.  
+ \*    `RFX_Date` 함수에 따라 `CTime` 및 **TIMESTAMP_STRUCT**합니다.  
   
  사용자 응용 프로그램에 영향을 주거나 단순한 이름 차이 이상의 설명이 필요한 주요 기능 상의 차이는 아래에 나열되어 있습니다.  
   
@@ -114,7 +109,7 @@ ms.lasthandoff: 12/21/2017
   
 -   예외 클래스가 변경되었습니다. **CDBExceptions** ODBC 클래스에서 throw 되 고 **CDaoExceptions** DAO 클래스에서입니다.  
   
--   `RFX_Date`사용 하 여 `CTime` 및 **TIMESTAMP_STRUCT** 하는 동안 개체 **DFX_Date** 사용 하 여 `COleDateTime`합니다. `COleDateTime` 거의 동일한 `CTime`, 8 바이트 OLE를 기반으로 하지만 **날짜** 4 바이트 대신 `time_t` 는 훨씬 더 큰 범위의 데이터를 보유할 수 있도록 합니다.  
+-   `RFX_Date` 사용 하 여 `CTime` 및 **TIMESTAMP_STRUCT** 하는 동안 개체 **DFX_Date** 사용 하 여 `COleDateTime`합니다. `COleDateTime` 거의 동일한 `CTime`, 8 바이트 OLE를 기반으로 하지만 **날짜** 4 바이트 대신 `time_t` 는 훨씬 더 큰 범위의 데이터를 보유할 수 있도록 합니다.  
   
     > [!NOTE]
     >  DAO(`CDaoRecordset`) 스냅숏은 읽기 전용이지만 ODBC(`CRecordset`) 스냅숏은 드라이버 및 ODBC 커서 라이브러리 사용에 따라 업데이트가 가능할 수 있습니다. 커서 라이브러리를 사용하는 경우 `CRecordset` 스냅샷을 업데이트할 수 있습니다. ODBC 커서 라이브러리 없이 Microsoft Desktop Driver Pack 3.0 드라이버를 사용 중이면 `CRecordset` 스냅샷이 읽기 전용입니다. 드라이버의 설명서 있는지를 확인 하는 다른 드라이버를 사용 하는 경우 스냅숏 (**STATIC_CURSORS**)은 읽기 전용입니다.  

@@ -1,13 +1,10 @@
 ---
-title: "대화 상자 | Microsoft Docs"
-ms.custom: 
+title: 대화 상자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8117d175d59859c97a360ca6a6d2af559b403e32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2c8de283d81aa9d260b891f285f06555dc67895f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dialog-boxes"></a>대화 상자
 Windows 용 응용 프로그램은 자주 대화 상자를 통해 사용자와 통신 합니다. 클래스 [CDialog](../mfc/reference/cdialog-class.md) 인터페이스 대화 상자 관리, Visual c + + 대화 상자 편집기를 사용 하면 대화 상자를 디자인 하 고 해당 대화 상자 템플릿 리소스를 만드는 쉽게 있으며의 초기화 프로세스를 간소화 하는 코드 마법사를 제공 하 고 사용자가 입력 한 값을 수집 하 고 대화 상자에서 컨트롤의 유효성 검사.  
@@ -44,7 +39,7 @@ Windows 용 응용 프로그램은 자주 대화 상자를 통해 사용자와 �
   
  [속성 시트](../mfc/property-sheets-mfc.md),으로 알려진 탭 대화 상자는 고유한 대화 상자 컨트롤의 "페이지"를 포함 하는 대화 상자. 각 페이지 위쪽에서 "탭" 파일 폴더를 있습니다. 탭을 클릭 하면 대화 상자의 맨 앞으로이 페이지를 제공 합니다.  
   
-## <a name="what-do-you-want-to-know-more-about"></a>에 대 한 자세한 내용을 하 시겠습니까  
+## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   
 -   [예: 메뉴 명령을 통해 대화 상자 표시](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)  
   

@@ -1,12 +1,9 @@
 ---
-title: "CConstantTransition 클래스 | Microsoft Docs"
-ms.custom: 
+title: CConstantTransition 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CConstantTransition
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CConstantTransition [MFC], Create
 - CConstantTransition [MFC], m_duration
 ms.assetid: f6fa4780-a71b-4cd6-80aa-d4792ace36c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eafd1276b8d4476f5021b3d83a84a1884d78870d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aae427499f443246fe5b8e1c40ac9c3e7334c37d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cconstanttransition-class"></a>CConstantTransition 클래스
 고정 전환을 캡슐화합니다.  
@@ -75,7 +70,7 @@ class CConstantTransition : public CBaseTransition;
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxanimationcontroller.h  
   
-##  <a name="cconstanttransition"></a>CConstantTransition::CConstantTransition  
+##  <a name="cconstanttransition"></a>  CConstantTransition::CConstantTransition  
  전환 개체를 생성 하 고 기간을 초기화 합니다.  
   
 ```  
@@ -86,7 +81,7 @@ CConstantTransition (UI_ANIMATION_SECONDS duration);
  `duration`  
  전환의 기간입니다.  
   
-##  <a name="create"></a>CConstantTransition::Create  
+##  <a name="create"></a>  CConstantTransition::Create  
  캡슐화 된 전환 COM 개체를 만드는 전환 라이브러리를 호출 합니다.  
   
 ```  
@@ -102,7 +97,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>반환 값  
  TRUE 이면 전환을 만들었습니다. 그렇지 않으면 FALSE입니다.  
   
-##  <a name="m_duration"></a>CConstantTransition::m_duration  
+##  <a name="m_duration"></a>  CConstantTransition::m_duration  
  전환의 기간입니다.  
   
 ```  

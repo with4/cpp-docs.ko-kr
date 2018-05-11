@@ -2,12 +2,9 @@
 title: '방법: 제네릭 (Visual c + +) 사용 하 여 성능을 향상 시킬 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - Visual C++, generics
 - generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-caps.latest.revision: ''
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c16dccd78abfc4a90dc0faea534c999a52b7b79
-ms.sourcegitcommit: 1d11412c8f5e6ddf4edded89e0ef5097cc89f812
+ms.openlocfilehash: da74cce5f41c3399fb102180cfdfe8c1215c8bf9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-improve-performance-with-generics-visual-c"></a>방법: 제네릭을 사용하여 성능 개선(Visual C++)
 제네릭을 사용하여 형식 매개 변수를 기반으로 재사용 가능한 코드를 만들 수 있습니다. 형식 매개 변수의 실제 형식은 클라이언트 코드에서 호출할 때까지 지연됩니다. 제네릭에 대 한 자세한 내용은 참조 하십시오. [제네릭](../windows/generics-cpp-component-extensions.md)합니다.  

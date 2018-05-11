@@ -1,12 +1,9 @@
 ---
 title: 'map:: count (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::map::Count
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - count member [STL/CLR]
 ms.assetid: 835f5b11-cb15-4a0b-8808-cd9b36c83e0b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4308f060285918a8436160cdde59860fda39542b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8ef3497c94e45de83afc2412948b354a11e8224d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mapcount-stlclr"></a>map::count(STL/CLR)
 지정한 키와 일치하는 요소의 수를 찾습니다.  
@@ -44,7 +39,7 @@ size_type count(key_type key);
 ## <a name="remarks"></a>설명  
  멤버 함수는 사용 순서 지정이 동일할 제어 된 시퀀스의 요소 수를 반환 `key`합니다. 지정된 된 키와 일치 하는 제어 되는 시퀀스의 현재 요소 수를 확인 하려면 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // cliext_map_count.cpp   

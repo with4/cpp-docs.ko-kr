@@ -1,12 +1,9 @@
 ---
-title: "CMFCMaskedEdit 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCMaskedEdit 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCMaskedEdit
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], SetWindowText
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0ada987b3226d901c3bf01236c2a593c2e36f51
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 985cd4011dbb1ea8ccad7cd40c81833dd5507f11
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit 클래스
 `CMFCMaskedEdit` 클래스 마스크에 대해 사용자 입력의 유효성을 검사 하 고 템플릿에 따라 유효성이 검사 된 결과 표시 하는 마스킹된 편집 컨트롤을 지원 합니다.  
@@ -98,7 +93,7 @@ class CMFCMaskedEdit : public CEdit
   
  마스크, 유효한 문자 및 기본 텍스트를 초기화 하는 하나 이상의 메서드를 호출 하면 마스킹된 편집 컨트롤에 표준 편집 컨트롤의 동작을 동일 하 게 동작 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 마스크 (예: 전화 번호)를 사용 하 여 설정 하는 `EnableMask` 메서드는 마스킹된 편집 컨트롤에 대 한 마스크를 만들는 `SetValidChars` 입력할 수 있는 유효한 문자 및 문자열을지정하는메서드`SetWindowText` 컨트롤을 편집 하는 메서드는 마스크의 프롬프트를 표시 합니다. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#11](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_1.h)]  
@@ -118,7 +113,7 @@ class CMFCMaskedEdit : public CEdit
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxmaskededit.h  
   
-##  <a name="disablemask"></a>CMFCMaskedEdit::DisableMask  
+##  <a name="disablemask"></a>  CMFCMaskedEdit::DisableMask  
  사용자 입력 유효성 검사를 해제 합니다.  
   
 ```  
@@ -128,7 +123,7 @@ void DisableMask();
 ### <a name="remarks"></a>설명  
  사용자 입력된 유효성 검사 하지 않으면 마스킹된 편집 컨트롤에는 편집 컨트롤은 표준와 비슷하게 동작 합니다.  
   
-##  <a name="enablegetmaskedcharsonly"></a>CMFCMaskedEdit::EnableGetMaskedCharsOnly  
+##  <a name="enablegetmaskedcharsonly"></a>  CMFCMaskedEdit::EnableGetMaskedCharsOnly  
  지정 여부는 `GetWindowText` 메서드 마스킹된 문자로 검색 합니다.  
   
 ```  
@@ -137,12 +132,12 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bEnable`  
- `TRUE`지정 하는 [CMFCMaskedEdit::GetWindowText](#getwindowtext) 메서드 검색만 지정할 때;에 마스크 `FALSE` 메서드 전체 텍스트 검색을 지정할 수 있습니다. 기본값은 `TRUE`입니다.  
+ `TRUE` 지정 하는 [CMFCMaskedEdit::GetWindowText](#getwindowtext) 메서드 검색만 지정할 때;에 마스크 `FALSE` 메서드 전체 텍스트 검색을 지정할 수 있습니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드를 사용 하 여 마스킹된 문자 검색을 사용 하도록 설정 합니다. 그런 다음 (425) 555-0187 등의 전화 번호에 해당 하는 마스킹된 편집 컨트롤을 만듭니다. 호출 하는 경우는 `GetWindowText` 반환 "4255550187" 메서드를 합니다. 마스크 된 문자를 검색 사용 하지 않도록 설정 하는 경우는 `GetWindowText` 메서드 "(425) 555-0187" 예를 들어 편집 컨트롤에 표시 되는 텍스트를 반환 합니다.  
   
-##  <a name="enablemask"></a>CMFCMaskedEdit::EnableMask  
+##  <a name="enablemask"></a>  CMFCMaskedEdit::EnableMask  
  초기화 하는 마스킹된 편집 컨트롤입니다.  
   
 ```  
@@ -164,7 +159,7 @@ void EnableMask(
  프레임 워크는 사용자 입력에 잘못 된 각 문자에 대 한 대체 하는 기본 문자입니다. 이 매개 변수의 기본값은 밑줄 ('_').  
   
  [in] `lpszValid`  
- 유효한 문자 집합을 포함 하는 문자열입니다. `NULL`모든 문자가 올바른지를 나타냅니다. 이 매개 변수의 기본값은 `NULL`입니다.  
+ 유효한 문자 집합을 포함 하는 문자열입니다. `NULL` 모든 문자가 올바른지를 나타냅니다. 이 매개 변수의 기본값은 `NULL`입니다.  
   
 ### <a name="remarks"></a>설명  
  마스킹된 편집 컨트롤에 대 한 마스크를 만들려면이 메서드를 사용 합니다. 클래스를 파생는 `CMFCMaskedEdit` 클래스 및 재정의 [CMFCMaskedEdit::IsMaskedChar](#ismaskedchar) 메서드를 사용자 지정 마스크 처리를 위해 사용자 고유의 코드를 사용 합니다.  
@@ -182,7 +177,7 @@ void EnableMask(
 |a|영숫자 문자 또는 공간입니다.|  
 |*|인쇄 가능한 문자입니다.|  
   
-##  <a name="enableselectbygroup"></a>CMFCMaskedEdit::EnableSelectByGroup  
+##  <a name="enableselectbygroup"></a>  CMFCMaskedEdit::EnableSelectByGroup  
  마스킹된 편집 컨트롤 사용자를 특정 그룹을 선택할 입력 또는 모든 입력을 허용 하는지 여부를 지정 합니다.  
   
 ```  
@@ -191,7 +186,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bEnable`  
- `TRUE`그룹에만;를 선택 하려면 `FALSE` 전체 텍스트를 선택 합니다. 기본값은 `TRUE`입니다.  
+ `TRUE` 그룹에만;를 선택 하려면 `FALSE` 전체 텍스트를 선택 합니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수를 사용 하 여 마스킹된 편집 컨트롤에 사용자를 그룹 또는 전체 텍스트로 선택할 수 있는지 여부를 지정 합니다.  
@@ -214,7 +209,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
   
  그룹에 의해 선택을 사용 하는 경우 사용자만는 "425", "555" 또는 "0187" 문자열 그룹을 검색할 수 있습니다. 그룹을 선택 하지 않으면 사용자의 전화 번호의 전체 텍스트를 검색할 수 있습니다: "(425) 555-0187"입니다.  
   
-##  <a name="enablesetmaskedcharsonly"></a>CMFCMaskedEdit::EnableSetMaskedCharsOnly  
+##  <a name="enablesetmaskedcharsonly"></a>  CMFCMaskedEdit::EnableSetMaskedCharsOnly  
  지정 여부는 텍스트의 유효성을 검사 마스킹된 문자로 또는 전체 / / 마스크에 대 한 합니다.  
   
 ```  
@@ -223,9 +218,9 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bEnable`  
- `TRUE`유효성을 검사할 사용자 입력에 대해만 마스크 지정할 때; `FALSE` 전체 마스크를 검사할 수 있습니다. 기본값은 `TRUE`입니다.  
+ `TRUE` 유효성을 검사할 사용자 입력에 대해만 마스크 지정할 때; `FALSE` 전체 마스크를 검사할 수 있습니다. 기본값은 `TRUE`입니다.  
   
-##  <a name="getwindowtext"></a>CMFCMaskedEdit::GetWindowText  
+##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
  마스킹된 편집 컨트롤에서 텍스트 검색의 유효성이 검사.  
   
 ```  
@@ -254,7 +249,7 @@ void GetWindowText(CString& rstrString) const;
   
  이 메서드를 재정의 [CWnd::GetWindowText](../../mfc/reference/cwnd-class.md#getwindowtext)합니다.  
   
-##  <a name="ismaskedchar"></a>CMFCMaskedEdit::IsMaskedChar  
+##  <a name="ismaskedchar"></a>  CMFCMaskedEdit::IsMaskedChar  
  해당 마스크 문자에 대해 지정 된 문자의 유효성을 검사 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -271,12 +266,12 @@ virtual BOOL IsMaskedChar(
  다음 마스크 문자열에서 해당 문자입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`경우는 `chChar` 매개 변수는 형식에서 허용 하는 문자는 `chMaskChar` 매개 변수, 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 경우는 `chChar` 매개 변수는 형식에서 허용 하는 문자는 `chMaskChar` 매개 변수, 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  입력된 문자를 직접 유효성을 검사 하려면이 메서드를 재정의 합니다. 마스크 문자에 대 한 자세한 내용은 참조는 [CMFCMaskedEdit::EnableMask](#enablemask) 메서드.  
   
-##  <a name="setvalidchars"></a>CMFCMaskedEdit::SetValidChars  
+##  <a name="setvalidchars"></a>  CMFCMaskedEdit::SetValidChars  
  사용자가 입력할 수 있는 유효한 문자는 문자열을 지정 합니다.  
   
 ```  
@@ -285,7 +280,7 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `lpszValid`  
- 유효한 입력된 문자 집합을 포함 하는 문자열입니다. `NULL`모든 문자가 유효함을 의미 합니다. 이 매개 변수의 기본값은 `NULL`입니다.  
+ 유효한 입력된 문자 집합을 포함 하는 문자열입니다. `NULL` 모든 문자가 유효함을 의미 합니다. 이 매개 변수의 기본값은 `NULL`입니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드를 사용 하 여 사용할 수 있는 문자 목록을 정의할 수입니다. 이 목록에는 입력된 문자가 없으면 마스킹된 편집 컨트롤은 사용할 수 없는 합니다.  
@@ -294,7 +289,7 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
   
  `//Mask: 0xFFFFm_wndMaskEdit.EnableMask( _T(" AAAA"),                // The mask string. _T("0x____"),               // The literal template string. _T('_'));                   // The default character that replaces the backspace character.// Valid string charactersm_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindowText(_T("0x01AF"));`  
   
-##  <a name="setwindowtext"></a>CMFCMaskedEdit::SetWindowText  
+##  <a name="setwindowtext"></a>  CMFCMaskedEdit::SetWindowText  
  마스킹된 편집 컨트롤에 메시지를 표시 합니다.  
   
 ```  

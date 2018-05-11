@@ -1,12 +1,9 @@
 ---
-title: "concurrent_unordered_multiset 클래스 | Microsoft Docs"
-ms.custom: 
+title: concurrent_unordered_multiset 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-concrt
 ms.topic: reference
 f1_keywords:
 - concurrent_unordered_multiset
@@ -22,17 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - concurrent_unordered_multiset class
 ms.assetid: 219d7d67-1ff0-45f4-9400-e9cc272991a4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de48b73be3a16fd42da097ed402588df988415c8
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: fdfb187e49302f9d885c8810636f1ed638257675
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrentunorderedmultiset-class"></a>concurrent_unordered_multiset 클래스
 `concurrent_unordered_multiset` 클래스는 다양 한 길이의 K. 형식의 요소 시퀀스를 제어 하는 동시성 으로부터 안전한 컨테이너 시퀀스는 동시성 으로부터 안전한 방식으로 표시 됩니다 추가, 요소 액세스, 반복기 액세스 및 반복기 통과 작업 합니다.  
@@ -122,7 +117,7 @@ template <typename K,
  `concurrent_unordered_multiset`  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** concurrent_unordered_set.h  
+ **헤더:** concurrent_unordered_set.h  
   
  **네임스페이스:** 동시성  
   

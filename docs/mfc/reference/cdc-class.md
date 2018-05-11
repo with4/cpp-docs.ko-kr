@@ -2,11 +2,8 @@
 title: CDC 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CDC
@@ -411,17 +408,15 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97099ead68a0060862465c9c3e020da523b85b86
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: e3a677d81343da6185ce37f1f4839f20cef3b943
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cdc-class"></a>CDC 클래스
 디바이스 컨텍스트 개체의 클래스를 정의합니다.  
@@ -723,7 +718,7 @@ int AbortDoc();
   
  인쇄 작업을 시작 하려면 인쇄 관리자를 사용 하는 경우 호출 **AbortDoc** 전체 스풀 작업 지웁니다-nothing 프린터 받습니다. 인쇄 관리자 인쇄 작업을 시작 하는 사용 되지 않은, 경우 데이터 보냈을 수 있습니다 전에 프린터로 **AbortDoc** 호출 되었습니다. 이 경우 프린터 드라이버 (가능한 경우) 프린터를 약 수와 인쇄 작업을 종료 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CDC::StartDoc](#startdoc)합니다.  
   
 ##  <a name="abortpath"></a>  CDC::AbortPath  
@@ -806,7 +801,7 @@ BOOL AlphaBlend(
  `nSrcHeight`  
  소스 사각형의 논리 단위에서 높이 지정합니다.  
   
- *blend*  
+ *Blend*  
  지정 된 [BLENDFUNCTION](http://msdn.microsoft.com/library/windows/desktop/dd183393) 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -916,7 +911,7 @@ BOOL Arc(
   
  원호의 시작점 실제는 지정 된 시작점을 통해 경계 사각형의 중앙에서 가져온 광선 타원 교차 하는 지점입니다. 실제 끝점 호의는 지정 된 끝점을 통해 경계 사각형의 중앙에서 가져온 광선 타원 교차 하는 지점입니다. 시계 반대 방향으로 호를 그릴 수 있습니다. 호 닫힌된 그림 아니므로 채워지지 않습니다. 사각형의 높이 너비는 2 단위 및 보다 작은 32, 767 단위 보다 커야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#29](../../mfc/codesnippet/cpp/cdc-class_1.cpp)]  
   
 ##  <a name="arcto"></a>  CDC::ArcTo  
@@ -1014,7 +1009,7 @@ BOOL BeginPath();
   
  참조 [BeginPath](http://msdn.microsoft.com/library/windows/desktop/dd183363) 패스에서 점을 정의 하는 그리기 함수 목록에 대 한 Windows sdk입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#30](../../mfc/codesnippet/cpp/cdc-class_2.cpp)]  
   
 ##  <a name="bitblt"></a>  CDC::BitBlt  
@@ -1075,7 +1070,7 @@ BOOL BitBlt(
   
  지원 되지 않는 장치 컨텍스트는 `BitBlt`합니다. 지정 된 장치 컨텍스트는 지원 하는지 여부를 확인 하려면 `BitBlt`를 사용 하 여는 `GetDeviceCaps` 멤버 함수를 지정는 **RASTERCAPS** 인덱스입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CDC::CreateCompatibleDC](#createcompatibledc)합니다.  
   
 ##  <a name="cdc"></a>  CDC::CDC  
@@ -1148,7 +1143,7 @@ BOOL Chord(
   
  으로 그린 그림은 `Chord` 함수까지 확장 하는 오른쪽 아래 좌표를 포함 하지 않습니다. 따라서 그림의 높이 `y2`  -  `y1` 그림의 너비가 `x2`  -  `x1`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#31](../../mfc/codesnippet/cpp/cdc-class_3.cpp)]  
   
 ##  <a name="closefigure"></a>  CDC::CloseFigure  
@@ -1187,7 +1182,7 @@ BOOL CreateCompatibleDC(CDC* pDC);
   
  이 함수 에서만 래스터 작업을 지 원하는 장치에 대 한 호환 장치 컨텍스트를 만드는 데 사용할 수 있습니다. 참조는 [cdc:: bitblt](#bitblt) 장치 컨텍스트 간에 비트 블록 전송에 대 한 정보에 대 한 멤버 함수입니다. 장치 컨텍스트에 래스터 작업을 지원 하는지 여부를 알아보려면 참조는 **RC_BITBLT** 멤버 함수에서 래스터 기능 `CDC::GetDeviceCaps`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#32](../../mfc/codesnippet/cpp/cdc-class_4.cpp)]  
   
 ##  <a name="createdc"></a>  CDC::CreateDC  
@@ -1273,7 +1268,7 @@ BOOL DeleteDC();
   
  `DeleteDC` 함수는 일반적으로 사용 하 여 만든 장치 컨텍스트를 삭제 하려면 사용 [CreateDC](#createdc), [CreateIC](#createic), 또는 [CreateCompatibleDC](#createcompatibledc)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CPrintDialog::GetPrinterDC](../../mfc/reference/cprintdialog-class.md#getprinterdc)합니다.  
   
 ##  <a name="deletetempmap"></a>  CDC::DeleteTempMap  
@@ -1379,7 +1374,7 @@ void Draw3dRect(
 ### <a name="remarks"></a>설명  
  사각형에 의해 지정 된 색에서 위쪽과 왼쪽된으로 그려집니다 *clrTopLeft* 아래쪽 및 오른쪽 면에서 지정 된 색에서 `clrBottomRight`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#33](../../mfc/codesnippet/cpp/cdc-class_5.cpp)]  
   
 ##  <a name="drawdragrect"></a>  CDC::DrawDragRect  
@@ -1559,7 +1554,7 @@ BOOL DrawFrameControl(
   
     - **DFCS_SCROLLUP** 위쪽의 스크롤 막대 화살표  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  이 코드 창의 오른쪽 아래 모서리에 크기 위치 조정 막대를 그립니다. 에 적합 한지는 `OnPaint` 처리기의 대화 상자는 스타일이 포함 하 고 일반적으로 (예: 상태 표시줄) 크기 그리퍼 제공할 수 있는 다른 컨트롤을 포함 하지 않습니다.  
   
  [!code-cpp[NVC_MFCDocView#34](../../mfc/codesnippet/cpp/cdc-class_6.cpp)]  
@@ -1600,7 +1595,7 @@ BOOL DrawIcon(
   
  아이콘 리소스 해야 이전에 로드 된 함수를 사용 하 여 `CWinApp::LoadIcon`, `CWinApp::LoadStandardIcon`, 또는 `CWinApp::LoadOEMIcon`합니다. `MM_TEXT` 이 함수를 사용 하기 전에 매핑 모드를 선택 해야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CWnd::IsIconic](../../mfc/reference/cwnd-class.md#isiconic)합니다.  
   
 ##  <a name="drawstate"></a>  CDC::DrawState  
@@ -1877,7 +1872,7 @@ int EndDoc();
   
  이 함수는 메타 파일 내 사용 되지 않습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CDC::StartDoc](#startdoc)합니다.  
   
 ##  <a name="endpage"></a>  CDC::EndPage  
@@ -1895,7 +1890,7 @@ int EndPage();
   
  이 멤버 함수는 **NEWFRAME** 프린터 이스케이프 합니다. 와 달리 **NEWFRAME**,이 함수는 항상 페이지를 인쇄 한 후 호출 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CDC::StartDoc](#startdoc)합니다.  
   
 ##  <a name="endpath"></a>  CDC::EndPath  
@@ -1908,7 +1903,7 @@ BOOL EndPath();
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [cdc:: beginpath](#beginpath)합니다.  
   
 ##  <a name="enumobjects"></a>  CDC::EnumObjects  
@@ -1951,7 +1946,7 @@ int EnumObjects(
   
  모든 콜백 함수 콜백 경계를 넘어 예외를 throw 할 수 없는 이후 창에 반환 하기 전에 Microsoft Foundation 예외를 트래핑 해야 참고 항목 예외에 대 한 자세한 내용은 문서 참조 [예외](../../mfc/exception-handling-in-mfc.md)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#35](../../mfc/codesnippet/cpp/cdc-class_7.cpp)]  
   
 ##  <a name="escape"></a>  CDC::Escape  
@@ -2259,7 +2254,7 @@ BOOL FillRgn(
 ### <a name="remarks"></a>설명  
  브러시 하거나 사용 하 여 만들어야는 `CBrush` 멤버 함수 `CreateHatchBrush`, `CreatePatternBrush`, `CreateSolidBrush`, 하 여 검색할 수 또는 **GetStockObject**합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CRgn::CreateRoundRectRgn](../../mfc/reference/crgn-class.md#createroundrectrgn)합니다.  
   
 ##  <a name="fillsolidrect"></a>  CDC::FillSolidRect  
@@ -2393,7 +2388,7 @@ BOOL FrameRgn(
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CRgn::CombineRgn](../../mfc/reference/crgn-class.md#combinergn)합니다.  
   
 ##  <a name="fromhandle"></a>  CDC::FromHandle  
@@ -2413,7 +2408,7 @@ static CDC* PASCAL FromHandle(HDC hDC);
 ### <a name="remarks"></a>설명  
  `CDC` 개체가 핸들에 연결되지 않은 경우 임시 `CDC` 개체를 만들어 연결합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CPrintDialog::GetPrinterDC](../../mfc/reference/cprintdialog-class.md#getprinterdc)합니다.  
   
 ##  <a name="getarcdirection"></a>  CDC::GetArcDirection  
@@ -2866,7 +2861,7 @@ int GetDeviceCaps(int nIndex) const;
 ### <a name="return-value"></a>반환 값  
  함수가 성공 하는 경우 요청 된 기능의 값입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CPrintDialog::GetDefaults](../../mfc/reference/cprintdialog-class.md#getdefaults)합니다.  
   
 ##  <a name="getfontdata"></a>  CDC::GetFontData  
@@ -3255,7 +3250,7 @@ int GetPath(
 ### <a name="remarks"></a>설명  
  장치 컨텍스트에 닫힌된 경로 포함 해야 합니다. 패스의 점은 논리적 좌표에 반환 됩니다. 포인트 하므로 장치 좌표로 경로에 저장 되도록 `GetPath` 현재 변환의 역 수를 사용 하 여 장치 좌표에서에서 논리적 좌표로 점의 변경 합니다. `FlattenPath` 하기 전에 멤버 함수를 호출할 수 있습니다 `GetPath`경로에 모든 곡선을 선 세그먼트로 전환 하세요.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [cdc:: beginpath](#beginpath)합니다.  
   
 ##  <a name="getpixel"></a>  CDC::GetPixel  
@@ -3850,7 +3845,7 @@ void InvertRect(LPCRECT lpRect);
   
  사각형을 선택 하지 않으면 아무 것도 그려지지 않습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#36](../../mfc/codesnippet/cpp/cdc-class_8.cpp)]  
   
 ##  <a name="invertrgn"></a>  CDC::InvertRgn  
@@ -3907,7 +3902,7 @@ BOOL LineTo(POINT point);
 ### <a name="remarks"></a>설명  
  선택한 펜으로는 선이 그려집니다. 현재 위치 설정 되어 *x*, *y* 또는 `point`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CRect::CenterPoint](../../atl-mfc-shared/reference/crect-class.md#centerpoint)합니다.  
   
 ##  <a name="lptodp"></a>  CDC::LPtoDP  
@@ -4088,7 +4083,7 @@ CPoint MoveTo(POINT point);
 ### <a name="return-value"></a>반환 값  
  로 이전 위치의 x 및 y 좌표는 `CPoint` 개체입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CRect::CenterPoint](../../atl-mfc-shared/reference/crect-class.md#centerpoint)합니다.  
   
 ##  <a name="offsetcliprgn"></a>  CDC::OffsetClipRgn  
@@ -4302,7 +4297,7 @@ BOOL Pie(
   
  이 함수에 의해 그려진 그림 최대 확장 되지만 오른쪽 아래 좌표를 포함 하지 않습니다. 따라서 그림의 높이 `y2`  -  `y1` 그림의 너비가 `x2`  -  `x1`합니다. 경계 사각형의 높이 너비는 2 단위 및 보다 작은 32, 767 단위 보다 커야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#37](../../mfc/codesnippet/cpp/cdc-class_9.cpp)]  
   
 ##  <a name="playmetafile"></a>  CDC::PlayMetaFile  
@@ -4447,7 +4442,7 @@ BOOL PolyBezierTo(
 ### <a name="remarks"></a>설명  
  이 함수로 지정 된 제어점을 사용 하 여 입방 형 Bzier 스플라인을 그립니다는 `lpPoints` 매개 변수입니다. 첫 번째 스플라인을 그립니다 현재 위치에서 세 번째 점과 제어 점으로 처음 두 개의 점을 사용 하 여 합니다. 각 후속 스플라인 함수 정확히 세 개의 지점을 더 이상 필요 하 고 대 한 시작 점으로 이전 스플라인의 끝점을 사용 합니다. `PolyBezierTo` 마지막 Bzier 스플라인의 끝점으로 현재 위치를 이동 합니다. 그림 채워지지 않습니다. 이 함수는 현재 펜을 사용 하 여 선을 그립니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [cdc:: beginpath](#beginpath)합니다.  
   
 ##  <a name="polydraw"></a>  CDC::PolyDraw  
@@ -4490,7 +4485,7 @@ BOOL PolyDraw(
 ### <a name="remarks"></a>설명  
  이 함수는 연속 해 서 호출할 대신 비연속 수치를 그리는 데 사용할 수 있습니다 `CDC::MoveTo`, `CDC::LineTo`, 및 `CDC::PolyBezierTo` 멤버 함수입니다. 선 및 곡선 스플라인 현재 펜을 사용 하 여 그려지고 수치를 채우지 않습니다. 호출 하 여 시작 하는 활성 경로 인지는 `CDC::BeginPath` 멤버 함수를 `PolyDraw` 경로에 추가 합니다. 에 포함 된 요소는 `lpPoints` 배열 및 `lpTypes` 각 지점의 일부 인지 여부를 나타내는 `CDC::MoveTo`, `CDC::LineTo`, 또는 **CDC::BezierTo** 작업 합니다. 폐쇄형 도형도 가능 합니다. 이 함수는 현재 위치를 업데이트 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [cdc:: beginpath](#beginpath)합니다.  
   
 ##  <a name="polygon"></a>  CDC::Polygon  
@@ -4517,7 +4512,7 @@ BOOL Polygon(
   
  현재 다각형 채우기 모드를 검색 하거나 사용 하 여 설정할 수는 `GetPolyFillMode` 및 `SetPolyFillMode` 멤버 함수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#38](../../mfc/codesnippet/cpp/cdc-class_10.cpp)]  
   
 ##  <a name="polyline"></a>  CDC::Polyline  
@@ -4712,7 +4707,7 @@ BOOL Rectangle(LPCRECT lpRect);
   
  사각형까지 확장 되지만 오른쪽 아래 좌표 포함 되지 않습니다. 즉, 사각형의 높이 `y2`  -  `y1` 사각형의 너비 이며 `x2`  -  `x1`합니다. 사각형의 높이 너비는 2 단위 및 보다 작은 32, 767 단위 보다 커야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#39](../../mfc/codesnippet/cpp/cdc-class_11.cpp)]  
   
 ##  <a name="rectvisible"></a>  CDC::RectVisible  
@@ -4842,7 +4837,7 @@ BOOL RoundRect(
   
  이 함수는 그림 최대 확장 되지만 오른쪽 아래 좌표를 포함 하지 않습니다. 따라서 그림의 높이 `y2`  -  `y1` 그림의 너비가 `x2`  -  `x1`합니다. 경계 사각형의 너비와 높이 2 단위 및 보다 작은 32, 767 단위 보다 커야 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCDocView#40](../../mfc/codesnippet/cpp/cdc-class_12.cpp)]  
   
 ##  <a name="savedc"></a>  CDC::SaveDC  
@@ -5235,7 +5230,7 @@ int SetArcDirection(int nArcDirection);
 |---------|---------|  
 |`ArcTo`|**사각형**|  
 |`Chord`|`RoundRect`|  
-|**Ellipse**||  
+|**타원**||  
   
 ##  <a name="setattribdc"></a>  CDC::SetAttribDC  
  특성 장치 컨텍스트를 설정 하려면이 함수를 호출 `m_hAttribDC`합니다.  
@@ -5291,7 +5286,7 @@ int SetBkMode(int nBkMode);
 ### <a name="remarks"></a>설명  
  백그라운드 모드 시스템 그리기 화면에서 기존 배경색과 텍스트, 빗금된 브러시 또는 실선 하지 않은 모든 펜 스타일을 그리기 전에 제거 되는지 여부를 정의 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CWnd::OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor)합니다.  
   
 ##  <a name="setboundsrect"></a>  CDC::SetBoundsRect  
@@ -5498,7 +5493,7 @@ virtual int SetMapMode(int nMapMode);
 > [!NOTE]
 >  호출 하는 경우 [SetLayout](#setlayout) DC (디바이스 컨텍스트) 오른쪽에서 왼쪽 레이아웃을 변경 하려면 **SetLayout** 매핑 모드를 자동으로 변경 `MM_ISOTROPIC`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)합니다.  
   
 ##  <a name="setmapperflags"></a>  CDC::SetMapperFlags  
@@ -5803,7 +5798,7 @@ virtual COLORREF SetTextColor(COLORREF crColor);
   
  장치는 지정 된 색을 나타낼 수 없습니다, 텍스트 색이 가장 가까운 실제 색으로 설정 됩니다. 문자에 대 한 배경 색은에서 지정 된 `SetBkColor` 및 `SetBkMode` 멤버 함수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CWnd::OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor)합니다.  
   
 ##  <a name="settextjustification"></a>  CDC::SetTextJustification  
@@ -5874,7 +5869,7 @@ CSize SetViewportExt(SIZE size);
   
  때 `MM_ISOTROPIC` 모드가 설정 되어, 호출 하는 응용 프로그램의 `SetWindowExt` 멤버 함수를 호출 하기 전에 `SetViewportExt`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)합니다.  
   
 ##  <a name="setviewportorg"></a>  CDC::SetViewportOrg  
@@ -5906,7 +5901,7 @@ CPoint SetViewportOrg(POINT point);
   
  GDI 창 원점으로 지정 된 논리적 좌표계의 점을 매핑되는 장치 좌표계에 위치를 표시 하는 뷰포트 방향을 **SetWindowOrg** 멤버 함수입니다. GDI 창 원점이 뷰포트 원본에 매핑하는 데 필요한 동일한 프로세스를 수행 하 여 다른 모든 요소를 매핑합니다. 예를 들어 뷰포트 원점에서 점 주변 원에 원 창 원점에서 점 주변에서 모든 요소 됩니다. 마찬가지로, 창 원점이 통해 전달 되는 줄의 모든 지점 뷰포트 방향을 통해 전달 되는 줄에 있게 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)합니다.  
   
 ##  <a name="setwindowext"></a>  CDC::SetWindowExt  
@@ -5952,7 +5947,7 @@ CSize SetWindowExt(SIZE size);
   
  때 `MM_ISOTROPIC` 모드가 설정 되어, 호출 하는 응용 프로그램의 `SetWindowExt` 멤버 함수 호출 하기 전에 `SetViewportExt`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)합니다.  
   
 ##  <a name="setwindoworg"></a>  CDC::SetWindowOrg  
@@ -6032,7 +6027,7 @@ int StartDoc(LPCTSTR lpszDocName);
   
  `StartDoc` 메타 파일 안에 사용할 수 없습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  이 코드 조각은 기본 프린터, 인쇄 작업을 엽니다 가져오고에서는 "Hello, World!" 인 한 페이지에 스풀링 삭제 됩니다. 이 코드를 통해 인쇄 된 텍스트는 프린터의 논리 단위에 조정 되지 않습니다, 출력 텍스트 결과 읽을 수는 이러한 소문자로 수 있습니다. 와 같은 기능을 확장 하 여 CDC `SetMapMode`, `SetViewportOrg`, 및 `SetWindowExt`는 크기 조정을 수정 하는 데 사용할 수 있습니다.  
   
  [!code-cpp[NVC_MFCDocView#41](../../mfc/codesnippet/cpp/cdc-class_13.cpp)]  
@@ -6054,7 +6049,7 @@ int StartPage();
   
  시스템 해제는 `ResetDC` 멤버 함수에 대 한 호출 간의 `StartPage` 및 `EndPage`합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CDC::StartDoc](#startdoc)합니다.  
   
 ##  <a name="stretchblt"></a>  CDC::StretchBlt  
@@ -6278,7 +6273,7 @@ BOOL TextOut(
   
  응용 프로그램을 호출 하는 경우 현재 위치를 업데이트 해야 하는 경우 `TextOut`, 응용 프로그램에서 호출할 수는 `SetTextAlign` 멤버 함수를 `nFlags` 로 설정 **TA_UPDATECP**합니다. 이 플래그를 설정 하는 경우 Windows에서 무시는 *x* 및 *y* 후속 호출에서 매개 변수 `TextOut`, 현재 위치를 대신 사용 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [cdc:: beginpath](#beginpath)합니다.  
   
 ##  <a name="transparentblt"></a>  CDC::TransparentBlt  

@@ -1,13 +1,10 @@
 ---
-title: "액티브 문서 서버 | Microsoft Docs"
-ms.custom: 
+title: 액티브 문서 서버 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - servers [MFC], active document
 - active document servers [MFC]
 ms.assetid: 131fec1e-02a0-4305-a7ab-903b911232a7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3dacb923b2e51ddc031165e637b08c9614ee1bf3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7cc207541bda3084db6bc8ab3896f46761587169
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="active-document-servers"></a>액티브 문서 서버
 Word, Excel 또는 PowerPoint와 같은 액티브 문서 서버는 액티브 문서라고 부르는 다른 응용 프로그램 형식의 문서를 호스팅합니다. 다른 문서의 페이지 내에 간단히 표시되는 OLE 포함 개체와 달리 액티브 문서는 문서를 만드는 서버 응용 프로그램의 전체 인터페이스 및 완전한 고유 기능을 제공합니다. 사용자는 원하는 응용 프로그램의 모든 기능을 사용해서 문서를 만들 수 있지만(액티브 문서가 사용하도록 설정된 경우), 결과 프로젝트를 단일 엔터티로 취급할 수 있습니다.  

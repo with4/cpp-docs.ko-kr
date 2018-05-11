@@ -1,12 +1,9 @@
 ---
-title: "컴파일러 오류 C2148 | Microsoft Docs"
-ms.custom: 
+title: 컴파일러 오류 C2148 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-tools
-ms.tgt_pltfrm: 
+- cpp-diagnostics
 ms.topic: error-reference
 f1_keywords:
 - C2148
@@ -15,24 +12,22 @@ dev_langs:
 helpviewer_keywords:
 - C2148
 ms.assetid: e510c2c9-7b57-4ce8-be03-ba363e2cc5d9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66789b0ae6b162f33000299974edf488e2c44aa6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f64f11f94c5a0c5d223d97b6b597f89b89aa160b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="compiler-error-c2148"></a>컴파일러 오류 C2148
 0x7fffffff 바이트 배열의 전체 크기를 초과할 수 없습니다.  
   
  배열에는 제한을 초과합니다. 배열의 크기를 줄입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 C2148 오류가 생성 됩니다.  
   
 ```  

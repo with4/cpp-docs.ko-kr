@@ -1,12 +1,9 @@
 ---
-title: "후 위 증가 및 감소 연산자: + + 및-| Microsoft Docs"
-ms.custom: 
+title: '후 위 증가 및 감소 연산자: + + 및-| Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - --
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e1d6c13da3023073f3d8b3e9625fa141253ba2c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: edfbb5076dfcbcbe511f8ec25c74f698cb82f33e
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>후위 증가 및 감소 연산자: ++ 및 --
 ## <a name="syntax"></a>구문  
@@ -56,7 +51,7 @@ i++;
   
  후위 연산자가 함수 인수에 적용될 때 해당 인수의 값은 함수에 전달된 후에만 증가하거나 감소됩니다.  자세한 내용은 C++ 표준의 1.9.17 단원을 참조하십시오.  
   
- 형식 개체의 배열에 대 한 포인터를 후 위 증가 연산자를 적용 **긴** 포인터의 내부 표현에 4가 실제로 추가 합니다. 이 동작은 이전에 포인터는  *n* 을 가리키는 배열의 th 요소는 (*n*+ 1) 번째 요소입니다.  
+ 형식 개체의 배열에 대 한 포인터를 후 위 증가 연산자를 적용 **긴** 포인터의 내부 표현에 4가 실제로 추가 합니다. 이 동작은 이전에 포인터는 *n*을 가리키는 배열의 th 요소는 (*n*+ 1) 번째 요소입니다.  
   
  후 위 증가 및 감소 연산자의 피연산자는 수정 가능 해야 합니다. (하지 **const**) 산술 또는 포인터 형식의 l-value입니다. 결과 형식은 같습니다는 *후 위 식*, 하지만 더 이상 l-value입니다.  
   

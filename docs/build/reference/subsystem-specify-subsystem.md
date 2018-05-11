@@ -1,13 +1,10 @@
 ---
-title: "-SUBSYSTEM (하위 시스템 지정) | Microsoft Docs"
-ms.custom: 
+title: -SUBSYSTEM (하위 시스템 지정) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - /subsystem
 - VC.Project.VCLinkerTool.SubSystem
@@ -20,17 +17,15 @@ helpviewer_keywords:
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fd96a89ef4228835307f8f8f0d9fff5d61441f9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 70d6f047cf18b8b768d40533e2acc6cb2f649327
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM(하위 시스템 지정)
 ```  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
  WINDOWS  
  사용자와 상호 작용을 위해 고유한 창을 만들기 때문에 응용 프로그램을 콘솔 아마도 필요 하지 않습니다. 경우 `WinMain` 또는 `wWinMain` 네이티브 코드에 대해 정의 된 또는 `WinMain(HISTANCE *, HINSTANCE *, char *, int)` 또는 `wWinMain(HINSTANCE *, HINSTANCE *, wchar_t *, int)` 정의 된 관리 되는 코드에 대 한 WINDOWS가 기본값입니다.  
   
- `Major`및 `minor` (선택 사항)  
+ `Major` 및 `minor` (선택 사항)  
  하위 시스템의 최소 필수 버전을 지정 합니다. 인수는 0-65535 범위의 10 진수 숫자입니다. 자세한 내용은 설명을 참조 하세요. 버전 번호에 대 한 범위 안에 없습니다 있습니다.  
   
 ## <a name="remarks"></a>설명  

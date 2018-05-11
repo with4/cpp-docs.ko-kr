@@ -1,13 +1,10 @@
 ---
-title: "MFC 매크로 및 전역 | Microsoft Docs"
-ms.custom: 
+title: MFC 매크로 및 전역 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
 dev_langs:
@@ -22,17 +19,15 @@ helpviewer_keywords:
 - Afx naming convention
 - macros
 ms.assetid: add4e33f-0e62-4d27-be14-896cb8675d22
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eeb53dea24ccd4d34ef90045e3254915135e70c2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 189e3f272d679030c11fcd11ca4760f59944faeb
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-macros-and-globals"></a>MFC 매크로 및 전역
 Microsoft Foundation Class 라이브러리는 두 개의 주요 섹션으로 나눌 수 있습니다. (1)는 MFC 클래스 및 (2) 매크로 및 전역 합니다. 함수 또는 변수가 없으면 클래스의 멤버인 경우 전역 함수 또는 변수입니다.  

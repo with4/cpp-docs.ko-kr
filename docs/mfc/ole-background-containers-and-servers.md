@@ -1,13 +1,10 @@
 ---
-title: "OLE 백그라운드: 컨테이너 및 서버 | Microsoft Docs"
-ms.custom: 
+title: 'OLE 백그라운드: 컨테이너 및 서버 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - server applications [MFC]
 ms.assetid: dafbb31d-096c-4654-b774-12900d832919
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3c6f3c15b0ea398ec621ba5f6e34a9fb6e0aae8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f9f15ef532ba61a089f8adec9ed20f737c07eae2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-background-containers-and-servers"></a>OLE 백그라운드: 컨테이너 및 서버
 컨테이너 응용 프로그램은 자체 문서에 포함 또는 연결 된 항목을 통합할 수 있는 응용 프로그램. 컨테이너 응용 프로그램에 의해 관리 되는 문서 저장 하 고 응용 프로그램 자체에서 생성 된 데이터 뿐만 아니라 OLE 문서 구성 요소를 표시할 수 있어야 합니다. 컨테이너 응용 프로그램을 새 항목을 삽입 하거나 필요한 경우 서버 응용 프로그램을 활성화 하 여 기존 항목 편집 허용도 해야 합니다. 컨테이너 응용 프로그램의 사용자 인터페이스 요구 사항 문서에 나열 된 [컨테이너: 사용자 인터페이스 문제](../mfc/containers-user-interface-issues.md)합니다.  

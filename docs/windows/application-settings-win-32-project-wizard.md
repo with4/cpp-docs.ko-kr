@@ -2,12 +2,9 @@
 title: Win32 프로젝트 마법사, 응용 프로그램 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.win32.appset
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - application settings [C++]
 - Win32 Project Wizard, application settings
 ms.assetid: d6b818f0-9b23-4793-a6c5-df1c8c594bad
-caps.latest.revision: 10
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f93e81d5d030112f436ad93a53c2a65854b38f7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55ae50d849a67da69cde6a9c4b1529c34ee4b428
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="application-settings-win-32-project-wizard"></a>Win32 프로젝트 마법사, 응용 프로그램 설정
 마법사의이 페이지를 사용 하여 Win32 프로젝트에 대한 옵션을 설정 합니다.  
@@ -37,7 +32,7 @@ ms.lasthandoff: 12/21/2017
   
 |옵션|설명|  
 |------------|-----------------|  
-|**콘솔 응용 프로그램**|콘솔 응용 프로그램을 만듭니다. 콘솔 프로그램은 콘솔 창에서 문자 모드 지원을 제공하는 [콘솔 함수](https://msdn.microsoft.com/en-us/library/ms813137.aspx), 로 개발됩니다. Visual C++ [런타임 라이브러리](../c-runtime-library/c-run-time-library-reference.md)는 또한 **printf_s()** 및 **scanf_s()**와 같은 표준 I/O 함수를 사용하여 콘솔 창에서 출력 및 입력을 제공합니다. 콘솔 응용 프로그램에 그래픽 사용자 인터페이스가 없습니다. .exe로 컴파일되고 명령줄에서 독립 실행형 응용 프로그램으로 실행할 수 있습니다.<br /><br /> Windows 응용 프로그램에 MFC 또는 ATL 지원을 추가할 수 없습니다.|  
+|**콘솔 응용 프로그램**|콘솔 응용 프로그램을 만듭니다. 콘솔 프로그램은 콘솔 창에서 문자 모드 지원을 제공하는 [콘솔 함수](https://msdn.microsoft.com/en-us/library/ms813137.aspx), 로 개발됩니다. Visual C++ [런타임 라이브러리](../c-runtime-library/c-run-time-library-reference.md)는 또한 **printf_s()** 및 **scanf_s()** 와 같은 표준 I/O 함수를 사용하여 콘솔 창에서 출력 및 입력을 제공합니다. 콘솔 응용 프로그램에 그래픽 사용자 인터페이스가 없습니다. .exe로 컴파일되고 명령줄에서 독립 실행형 응용 프로그램으로 실행할 수 있습니다.<br /><br /> Windows 응용 프로그램에 MFC 또는 ATL 지원을 추가할 수 없습니다.|  
 |**Windows 응용 프로그램**|Win32 프로그램을 만듭니다. Win32 프로그램은 실행 가능한 응용 프로그램 (EXE)으로 C 또는 C++로 작성되고, Win32 API를 호출하여 그래픽 사용자 인터페이스를 만들 수 있습니다.<br /><br /> MFC를 추가할 수 없습니다. 또는 Windows 응용 프로그램에 ATL을 지원합니다.|  
 |**DLL**|Win32 동적 연결 라이브러리 (DLL)를 만듭니다. Win32 DLL은 C 또는 C++로 작성된 바이너리 파일로, MFC 클래스 대신 Win32 API를 호출하며 동시에 여러 응용 프로그램에서 사용할 수 있는 함수의 공유 라이브러리 역할을 합니다.<br /><br /> DLL 응용 프로그램에 MFC 또는 ATL 지원을 추가할 수 없습니다. DLL에서 기호를 내보내도록 할 수 있습니다.|  
 |**정적 라이브러리**|정적 라이브러리를 만듭니다. 정적 라이브러리는 개체와 개체 함수 그리고 실행 파일을 빌드할 때 프로그램에 연결되는 데이터를 포함하는 파일입니다. 이 항목에서는 시작 파일을 만드는 방법과 정적 라이브러리에 대한 [프로젝트 속성](../ide/property-pages-visual-cpp.md)에 대해 설명합니다.  정적 라이브러리 파일은 다음과 같은 이점을 제공합니다.<br /><br /> -Win32 정적 라이브러리는 작업 중인 응용 프로그램에서 MFC 클래스 대신 Win32 API를 호출하는 경우에 유용합니다.<br />-Windows 응용 프로그램의 나머지 부분의 C 또는 C++로 작성 여부와 관계없이 연결된 프로세스는 동일합니다.<br />-비 MFC 프로그램과 MFC 기반 프로그램 모두 정적 라이브러리를 연결할 수 있습니다.|  

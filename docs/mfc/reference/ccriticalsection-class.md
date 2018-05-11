@@ -1,12 +1,9 @@
 ---
-title: "아니오 클래스 | Microsoft Docs"
-ms.custom: 
+title: 아니오 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CCriticalSection
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CCriticalSection [MFC], Unlock
 - CCriticalSection [MFC], m_sect
 ms.assetid: f776f74b-5b0b-4f32-9c13-2b8e4a0d7b2b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16364843ca5d85181b84e56f56b43ca4856a1667
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1d6e713f6d5238d99af8f9311eb05a4b2dd39f7b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ccriticalsection-class"></a>아니오 클래스
 "임계 섹션" 나타냅니다-코드 섹션 또는 리소스에 액세스 하려면 한 번에 하나의 스레드를 허용 하는 동기화 개체입니다.  
@@ -99,7 +94,7 @@ class CCriticalSection : public CSyncObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxmt.h  
   
-##  <a name="ccriticalsection"></a>CCriticalSection::CCriticalSection  
+##  <a name="ccriticalsection"></a>  CCriticalSection::CCriticalSection  
  `CCriticalSection` 개체를 생성합니다.  
   
 ```  
@@ -111,10 +106,10 @@ CCriticalSection();
   
  메모리 예외가 필요한 시스템 메모리를 할당 하는 생성자가 실패 하는 경우 (형식의 [CMemoryException](../../mfc/reference/cmemoryexception-class.md))이 자동으로 throw 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CCriticalSection::Lock](#lock)합니다.  
   
-##  <a name="lock"></a>CCriticalSection::Lock  
+##  <a name="lock"></a>  CCriticalSection::Lock  
  임계 영역 개체에 대 한 액세스 권한을 얻으려고이 멤버 함수를 호출 합니다.  
   
 ```  
@@ -124,31 +119,31 @@ BOOL Lock(DWORD dwTimeout);
   
 ### <a name="parameters"></a>매개 변수  
  `dwTimeout`  
- `Lock`이 매개 변수 값을 무시합니다.  
+ `Lock` 이 매개 변수 값을 무시합니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- `Lock`임계 영역 개체의 신호를 보낼 때까지 반환 되지 것입니다 하는 차단 호출 (사용 가능).  
+ `Lock` 임계 영역 개체의 신호를 보낼 때까지 반환 되지 것입니다 하는 차단 호출 (사용 가능).  
   
  대기 시간된을 필요한 경우 사용할 수 있습니다는 [CMutex](../../mfc/reference/cmutex-class.md) 개체가 아니라는 `CCriticalSection` 개체입니다.  
   
  경우 `Lock` 메모리 예외가 필요한 시스템 메모리 할당에 실패 (형식의 [CMemoryException](../../mfc/reference/cmemoryexception-class.md))이 자동으로 throw 됩니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  이 예제에서는 공유 리소스에 대 한 액세스를 제어 하 여 중첩 된 임계 영역 방법을 보여 줍니다 (정적 `_strShared` 개체) 사용 하 여 공유 `CCriticalSection` 개체입니다. `SomeMethod` 함수 안전한 방법으로 공유 리소스를 업데이트 하는 방법을 보여 줍니다.  
   
  [!code-cpp[NVC_MFC_Utilities#11](../../mfc/codesnippet/cpp/ccriticalsection-class_1.h)]  
   
-##  <a name="m_sect"></a>CCriticalSection::m_sect  
+##  <a name="m_sect"></a>  CCriticalSection::m_sect  
  전체에서 사용 되는 임계 영역 개체를 포함 `CCriticalSection` 메서드.  
   
 ```  
 CRITICAL_SECTION m_sect;  
 ```  
   
-##  <a name="operator_critical_section_star"></a>CCriticalSection::operator CRITICAL_SECTION *  
+##  <a name="operator_critical_section_star"></a>  CCriticalSection::operator CRITICAL_SECTION *  
  검색 한 **CRITICAL_SECTION** 개체입니다.  
   
 ```  
@@ -158,7 +153,7 @@ operator CRITICAL_SECTION*();
 ### <a name="remarks"></a>설명  
  내부에 대 한 포인터를 검색 하려면이 함수 호출 **CRITICAL_SECTION** 개체입니다.  
   
-##  <a name="unlock"></a>CCriticalSection::Unlock  
+##  <a name="unlock"></a>  CCriticalSection::Unlock  
  릴리스는 `CCriticalSection` 다른 스레드에서 사용 하기 위한 개체입니다.  
   
 ```  
@@ -171,7 +166,7 @@ BOOL Unlock();
 ### <a name="remarks"></a>설명  
  경우는 `CCriticalSection` 독립 실행형을 사용 하 고 `Unlock` 임계 영역에 의해 제어 되는 리소스의 사용을 완료 한 후 바로 호출 해야 합니다. 경우는 [경우 CSingleLock](../../mfc/reference/csinglelock-class.md) 개체 사용 중인 `CCriticalSection::Unlock` 잠금 개체에서 호출 되며 `Unlock` 멤버 함수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   예를 참조 [CCriticalSection::Lock](#lock)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

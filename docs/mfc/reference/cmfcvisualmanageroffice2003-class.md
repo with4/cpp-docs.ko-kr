@@ -1,12 +1,9 @@
 ---
-title: "CMFCVisualManagerOffice2003 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCVisualManagerOffice2003 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCVisualManagerOffice2003
@@ -101,20 +98,18 @@ dev_langs:
 helpviewer_keywords:
 - CMFCVisualManagerOffice2003 Class [MFC]
 ms.assetid: 115482cd-e349-450a-8dc4-c6023d092aab
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2e3e4bc37bc62d061571d1b52b0f92ac59a949c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55f0c28a5698dfd1d974a48f891615d8c7e77cf2
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 클래스
-`CMFCVisualManagerOffice2003`응용 프로그램에 Microsoft Office 2003 모양을 제공 합니다.  
+`CMFCVisualManagerOffice2003` 응용 프로그램에 Microsoft Office 2003 모양을 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -217,7 +212,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 ## <a name="remarks"></a>설명  
  사용 된 `CMFCVisualManagerOffice2003` Microsoft Office 2003 유사 하 게 응용 프로그램의 시각적 모양을 변경 하는 클래스입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 office 2003 비주얼 관리자를 설정 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [바탕 화면 경고 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#6](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2003-class_1.cpp)]  
@@ -236,7 +231,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxvisualmanageroffice2003.h  
   
-##  <a name="drawcomboborderwinxp"></a>CMFCVisualManagerOffice2003::DrawComboBorderWinXP  
+##  <a name="drawcomboborderwinxp"></a>  CMFCVisualManagerOffice2003::DrawComboBorderWinXP  
  현재 Windows XP 테마를 사용 하 여 콤보 상자 테두리를 그립니다.  
   
 ```  
@@ -269,7 +264,7 @@ virtual BOOL DrawComboBorderWinXP(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="drawcombodropbuttonwinxp"></a>CMFCVisualManagerOffice2003::DrawComboDropButtonWinXP  
+##  <a name="drawcombodropbuttonwinxp"></a>  CMFCVisualManagerOffice2003::DrawComboDropButtonWinXP  
  현재 Windows XP 테마를 사용 하 여 콤보 상자 드롭다운 단추를 그립니다.  
   
 ```  
@@ -302,7 +297,7 @@ virtual BOOL DrawComboDropButtonWinXP(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="drawcustomizebutton"></a>CMFCVisualManagerOffice2003::DrawCustomizeButton  
+##  <a name="drawcustomizebutton"></a>  CMFCVisualManagerOffice2003::DrawCustomizeButton  
  사용자 지정 단추를 그립니다.  
   
 ```  
@@ -323,20 +318,20 @@ virtual void DrawCustomizeButton(
  단추의 경계 사각형  
   
  [in] `bIsHorz`  
- `TRUE`단추가 가로 경우 또는 `FALSE` 세로 이면 합니다.  
+ `TRUE` 단추가 가로 경우 또는 `FALSE` 세로 이면 합니다.  
   
  [in] `state`  
  (일반, 누름 또는 강조 표시 된) 그릴 그대로 단추의 상태가입니다.  
   
  [in] `bIsCustomize`  
- `TRUE`사용자 지정 다운 화살표 또는 왼쪽 화살표 이미지 단추 사각형에 로드 해야 하는 경우 또는 `FALSE` 그렇지 않은 경우.  
+ `TRUE` 사용자 지정 다운 화살표 또는 왼쪽 화살표 이미지 단추 사각형에 로드 해야 하는 경우 또는 `FALSE` 그렇지 않은 경우.  
   
  [in] `bIsMoreButtons`  
- `TRUE`가로 또는 세로 더 단추를 사용자 지정 하는 경우 단추 사각형에 이미지를 그리도록 또는 `FALSE` 그렇지 않은 경우.  
+ `TRUE` 가로 또는 세로 더 단추를 사용자 지정 하는 경우 단추 사각형에 이미지를 그리도록 또는 `FALSE` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="drawpushbuttonwinxp"></a>CMFCVisualManagerOffice2003::DrawPushButtonWinXP  
+##  <a name="drawpushbuttonwinxp"></a>  CMFCVisualManagerOffice2003::DrawPushButtonWinXP  
  현재 Windows XP 테마를 사용 하 여 누름 단추를 그립니다.  
   
 ```  
@@ -361,11 +356,11 @@ virtual BOOL DrawPushButtonWinXP(
  무시됩니다. 상태에서 가져온 것 `pButton`합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`테마 API를 사용 하면 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 테마 API를 사용 하면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getbasethemecolor"></a>CMFCVisualManagerOffice2003::GetBaseThemeColor  
+##  <a name="getbasethemecolor"></a>  CMFCVisualManagerOffice2003::GetBaseThemeColor  
  기본 테마 색을 가져옵니다.  
   
 ```  
@@ -377,7 +372,7 @@ virtual COLORREF GetBaseThemeColor();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="gethighlightmenuitemcolor"></a>CMFCVisualManagerOffice2003::GetHighlightMenuItemColor  
+##  <a name="gethighlightmenuitemcolor"></a>  CMFCVisualManagerOffice2003::GetHighlightMenuItemColor  
  강조 표시 된 메뉴 항목에 사용할 색을 가져옵니다.  
   
 ```  
@@ -389,7 +384,7 @@ virtual COLORREF GetHighlightMenuItemColor() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getpropertygridgroupcolor"></a>CMFCVisualManagerOffice2003::GetPropertyGridGroupColor  
+##  <a name="getpropertygridgroupcolor"></a>  CMFCVisualManagerOffice2003::GetPropertyGridGroupColor  
  프레임 워크는 속성 목록의 배경색을 가져오려면이 메서드를 호출 합니다.  
   
 ```  
@@ -406,7 +401,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 ### <a name="remarks"></a>설명  
  응용 프로그램에서 속성 목록의 배경색을 사용자 지정 하려면이 함수를 재정의 합니다.  
   
-##  <a name="getpropertygridgrouptextcolor"></a>CMFCVisualManagerOffice2003::GetPropertyGridGroupTextColor  
+##  <a name="getpropertygridgrouptextcolor"></a>  CMFCVisualManagerOffice2003::GetPropertyGridGroupTextColor  
  프레임 워크는 속성 목록의 텍스트 색을 검색 하려면이 메서드를 호출 합니다.  
   
 ```  
@@ -423,7 +418,7 @@ virtual COLORREF GetPropertyGridGroupTextColor(CMFCPropertyGridCtrl* pPropList);
 ### <a name="remarks"></a>설명  
  응용 프로그램에서 속성 목록의 텍스트 색을 사용자 지정 하려면이 함수를 재정의 합니다.  
   
-##  <a name="getshowallmenuitemsheight"></a>CMFCVisualManagerOffice2003::GetShowAllMenuItemsHeight  
+##  <a name="getshowallmenuitemsheight"></a>  CMFCVisualManagerOffice2003::GetShowAllMenuItemsHeight  
  모든 메뉴 항목의 높이 반환합니다.  
   
 ```  
@@ -444,7 +439,7 @@ virtual int GetShowAllMenuItemsHeight(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getsmartdockingbaseguidecolors"></a>CMFCVisualManagerOffice2003::GetSmartDockingBaseGuideColors  
+##  <a name="getsmartdockingbaseguidecolors"></a>  CMFCVisualManagerOffice2003::GetSmartDockingBaseGuideColors  
  지정 된 기본 그룹 배경색 및 테두리 색을 설정합니다.  
   
 ```  
@@ -462,7 +457,7 @@ virtual void GetSmartDockingBaseGuideColors(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="getsmartdockinghighlighttonecolor"></a>CMFCVisualManagerOffice2003::GetSmartDockingHighlightToneColor  
+##  <a name="getsmartdockinghighlighttonecolor"></a>  CMFCVisualManagerOffice2003::GetSmartDockingHighlightToneColor  
  톤 강조 색을 반환 합니다.  
   
 ```  
@@ -474,7 +469,7 @@ virtual COLORREF GetSmartDockingHighlightToneColor();
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="gettabframecolors"></a>CMFCVisualManagerOffice2003::GetTabFrameColors  
+##  <a name="gettabframecolors"></a>  CMFCVisualManagerOffice2003::GetTabFrameColors  
  드로잉 탭 창에 대 한 색 집합을 검색 해야 할 때 프레임 워크에서이 함수를 호출 합니다.  
   
 ```  
@@ -520,7 +515,7 @@ virtual void GetTabFrameColors(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="gettoolbarcustomizebuttonmargin"></a>CMFCVisualManagerOffice2003::GetToolBarCustomizeButtonMargin  
+##  <a name="gettoolbarcustomizebuttonmargin"></a>  CMFCVisualManagerOffice2003::GetToolBarCustomizeButtonMargin  
  도구 모음 사용자 지정 단추에 대 한 여백을 가져옵니다.  
   
 ```  
@@ -532,7 +527,7 @@ virtual int GetToolBarCustomizeButtonMargin() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="gettoolbardisabledcolor"></a>CMFCVisualManagerOffice2003::GetToolbarDisabledColor  
+##  <a name="gettoolbardisabledcolor"></a>  CMFCVisualManagerOffice2003::GetToolbarDisabledColor  
  도구 모음에 대 한 비활성화 된 색을 가져옵니다.  
   
 ```  
@@ -544,7 +539,7 @@ virtual COLORREF GetToolbarDisabledColor() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="gettooltipinfo"></a>CMFCVisualManagerOffice2003::GetToolTipInfo  
+##  <a name="gettooltipinfo"></a>  CMFCVisualManagerOffice2003::GetToolTipInfo  
  도구 설명 정보를 가져오기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -565,7 +560,7 @@ virtual BOOL GetToolTipInfo(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="isdefaultwinxpcolorsenabled"></a>CMFCVisualManagerOffice2003::IsDefaultWinXPColorsEnabled  
+##  <a name="isdefaultwinxpcolorsenabled"></a>  CMFCVisualManagerOffice2003::IsDefaultWinXPColorsEnabled  
  비주얼 관리자의 기본 Windows XP 테마 색을 사용 하는지 여부를 나타냅니다.  
   
 ```  
@@ -573,12 +568,12 @@ static BOOL IsDefaultWinXPColorsEnabled();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`비주얼 관리자; 기본 색을 사용 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 비주얼 관리자; 기본 색을 사용 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  기본 색에 대 한 자세한 내용은 참조 [CMFCVisualManagerOffice2003::SetDefaultWinXPColors](#setdefaultwinxpcolors)합니다.  
   
-##  <a name="isdockingtabhasborder"></a>CMFCVisualManagerOffice2003::IsDockingTabHasBorder  
+##  <a name="isdockingtabhasborder"></a>  CMFCVisualManagerOffice2003::IsDockingTabHasBorder  
  현재 비주얼 관리자 도킹 되 고 탭 창 둘레에 테두리를 그릴지 여부를 반환 합니다.  
   
 ```  
@@ -586,11 +581,11 @@ virtual BOOL IsDockingTabHasBorder();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`비주얼 관리자 창 도킹 되 고 탭; 주위에 테두리를 그리는 경우 `FALSE` 그렇지 않은 경우.  
+ `TRUE` 비주얼 관리자 창 도킹 되 고 탭; 주위에 테두리를 그리는 경우 `FALSE` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ishighlightonenotetabs"></a>CMFCVisualManagerOffice2003::IsHighlightOneNoteTabs  
+##  <a name="ishighlightonenotetabs"></a>  CMFCVisualManagerOffice2003::IsHighlightOneNoteTabs  
  OneNote 탭을 강조 해야 하는지 여부를 나타냅니다.  
   
 ```  
@@ -602,7 +597,7 @@ virtual BOOL IsHighlightOneNoteTabs() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="isoffsetpressedbutton"></a>CMFCVisualManagerOffice2003::IsOffsetPressedButton  
+##  <a name="isoffsetpressedbutton"></a>  CMFCVisualManagerOffice2003::IsOffsetPressedButton  
  도구 모음 단추를 그리는 동안 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -614,7 +609,7 @@ virtual BOOL IsOffsetPressedButton() const;
 ### <a name="remarks"></a>설명  
  기본 구현은 `FALSE`를 반환합니다.  
   
-##  <a name="isstatusbarofficexplook"></a>CMFCVisualManagerOffice2003::IsStatusBarOfficeXPLook  
+##  <a name="isstatusbarofficexplook"></a>  CMFCVisualManagerOffice2003::IsStatusBarOfficeXPLook  
  Office XP 모양으로는 상태 표시줄이 있는지 여부를 나타냅니다.  
   
 ```  
@@ -626,7 +621,7 @@ static BOOL __stdcall IsStatusBarOfficeXPLook();
 ### <a name="remarks"></a>설명  
  반환 `TRUE` Office XP 모양 있는 상태 표시줄에 없는 경우 또는 `FALSE` 그렇지 않은 경우.  
   
-##  <a name="istoolbarroundshape"></a>CMFCVisualManagerOffice2003::IsToolbarRoundShape  
+##  <a name="istoolbarroundshape"></a>  CMFCVisualManagerOffice2003::IsToolbarRoundShape  
  지정 된 도구 모음이 라운드 인지를 나타냅니다.  
   
 ```  
@@ -642,7 +637,7 @@ virtual BOOL IsToolbarRoundShape(CMFCToolBar* pToolBar);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="isuseglobaltheme"></a>CMFCVisualManagerOffice2003::IsUseGlobalTheme  
+##  <a name="isuseglobaltheme"></a>  CMFCVisualManagerOffice2003::IsUseGlobalTheme  
  응용 프로그램에서 Windows XP 테마를 사용 하는지 여부를 나타냅니다.  
   
 ```  
@@ -650,12 +645,12 @@ static BOOL IsUseGlobalTheme();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`비주얼 관리자; Windows XP 테마를 사용 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 비주얼 관리자; Windows XP 테마를 사용 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  메서드를 사용 하 여 [CMFCVisualManagerOffice2003::SetUseGlobalTheme](#setuseglobaltheme) 비주얼 관리자는 Windows XP 테마를 사용 하는지 여부를 변경할 수 있습니다.  
   
-##  <a name="iswindowsthemingsupported"></a>CMFCVisualManagerOffice2003::IsWindowsThemingSupported  
+##  <a name="iswindowsthemingsupported"></a>  CMFCVisualManagerOffice2003::IsWindowsThemingSupported  
  Windows 테마 설정 지원 되는지 여부를 나타냅니다.  
   
 ```  
@@ -667,7 +662,7 @@ virtual BOOL IsWindowsThemingSupported() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ondrawautohidebuttonborder"></a>CMFCVisualManagerOffice2003::OnDrawAutoHideButtonBorder  
+##  <a name="ondrawautohidebuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawAutoHideButtonBorder  
  자동 숨기기 단추의 테두리를 그릴 때 프레임워크에서 이 메서드를 호출합니다.  
   
 ```  
@@ -696,7 +691,7 @@ virtual void OnDrawAutoHideButtonBorder(
   
  `rectBorderSize` 매개 변수 테두리의 정보를 포함 하지 않습니다. 테두리의 크기를 포함 하는 것은 `top`, `bottom`, `left`, 및 `right` 데이터 멤버입니다. 값 0 보다 작거나 같은 자동 숨기기 단추의 슬라이드에 테두리가 나타냅니다.  
   
-##  <a name="ondrawbargripper"></a>CMFCVisualManagerOffice2003::OnDrawBarGripper  
+##  <a name="ondrawbargripper"></a>  CMFCVisualManagerOffice2003::OnDrawBarGripper  
  컨트롤 막대에 대 한 위치 조정 막대를 그릴 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -723,7 +718,7 @@ virtual void OnDrawBarGripper(
 ### <a name="remarks"></a>설명  
  이 메서드의 기본 구현 표준 위치 조정 막대를 표시합니다. 위치 조정 막대의 모양을 사용자 지정 하려면 사용자 지정에서 파생 된 클래스에서이 메서드를 재정의 하는 [CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md) 클래스입니다.  
   
-##  <a name="ondrawbrowsebutton"></a>CMFCVisualManagerOffice2003::OnDrawBrowseButton  
+##  <a name="ondrawbrowsebutton"></a>  CMFCVisualManagerOffice2003::OnDrawBrowseButton  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
@@ -746,7 +741,7 @@ virtual BOOL OnDrawBrowseButton(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ondrawbuttonborder"></a>CMFCVisualManagerOffice2003::OnDrawButtonBorder  
+##  <a name="ondrawbuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawButtonBorder  
  도구 모음 단추의 테두리를 그릴 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -775,7 +770,7 @@ virtual void OnDrawButtonBorder(
   
  도구 모음 단추의 가능한 상태는 `ButtonsIsRegular`, `ButtonsIsPressed`, 또는 `ButtonsIsHighlighted`합니다.  
   
-##  <a name="ondrawcaptionbarborder"></a>CMFCVisualManagerOffice2003::OnDrawCaptionBarBorder  
+##  <a name="ondrawcaptionbarborder"></a>  CMFCVisualManagerOffice2003::OnDrawCaptionBarBorder  
  테두리를 그릴 때 프레임 워크에서이 메서드를 호출는 [CMFCCaptionBar 클래스](../../mfc/reference/cmfccaptionbar-class.md) 개체입니다.  
   
 ```  
@@ -801,12 +796,12 @@ virtual void OnDrawCaptionBarBorder(
  테두리의 색입니다.  
   
  [in] `bFlatBorder`  
- `TRUE`테두리를 2D 평평한 모양이 있어야 하는 경우 또는 `FALSE` 그렇지 않은 경우.  
+ `TRUE` 테두리를 2D 평평한 모양이 있어야 하는 경우 또는 `FALSE` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
  캡션 표시줄 테두리의 모양을 사용자 지정 하는 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawcheckboxex"></a>CMFCVisualManagerOffice2003::OnDrawCheckBoxEx  
+##  <a name="ondrawcheckboxex"></a>  CMFCVisualManagerOffice2003::OnDrawCheckBoxEx  
  Checkbox를 그릴 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -830,17 +825,17 @@ virtual void OnDrawCheckBoxEx(
  확인란의 상태: 선택 하지 않는 경우 0, 1, 2 경우 선택 혼합 하는 경우.  
   
  [in] `bHighlighted`  
- `TRUE`이 확인란을 강조 표시 하는 경우 또는 `FALSE` 그렇지 않은 경우.  
+ `TRUE` 이 확인란을 강조 표시 하는 경우 또는 `FALSE` 그렇지 않은 경우.  
   
  [in] `bPressed`  
- `TRUE`checkbox를 누른 경우 또는 `FALSE` 그렇지 않은 경우.  
+ `TRUE` checkbox를 누른 경우 또는 `FALSE` 그렇지 않은 경우.  
   
  [in] `bEnabled`  
- `TRUE`확인란을 사용 하는 경우 또는 `FALSE` 그렇지 않은 경우.  
+ `TRUE` 확인란을 사용 하는 경우 또는 `FALSE` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ondrawcomboborder"></a>CMFCVisualManagerOffice2003::OnDrawComboBorder  
+##  <a name="ondrawcomboborder"></a>  CMFCVisualManagerOffice2003::OnDrawComboBorder  
  인스턴스 주위에 테두리를 그릴 때 프레임 워크에서이 메서드를 호출는 [CMFCToolBarComboBoxButton 클래스](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)합니다.  
   
 ```  
@@ -875,7 +870,7 @@ virtual void OnDrawComboBorder(
 ### <a name="remarks"></a>설명  
  콤보 상자 테두리의 모양을 사용자 지정 하 여 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawcombodropbutton"></a>CMFCVisualManagerOffice2003::OnDrawComboDropButton  
+##  <a name="ondrawcombodropbutton"></a>  CMFCVisualManagerOffice2003::OnDrawComboDropButton  
  드롭 단추를 그릴 때 프레임 워크에서이 메서드를 호출는 [CMFCToolBarComboBoxButton 클래스](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)합니다.  
   
 ```  
@@ -910,7 +905,7 @@ virtual void OnDrawComboDropButton(
 ### <a name="remarks"></a>설명  
  콤보 상자 단추의 드롭 단추 모양을 사용자 지정 하 여 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawcontrolborder"></a>CMFCVisualManagerOffice2003::OnDrawControlBorder  
+##  <a name="ondrawcontrolborder"></a>  CMFCVisualManagerOffice2003::OnDrawControlBorder  
  컨트롤의 테두리를 그릴 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -923,7 +918,7 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ondrawexpandingbox"></a>CMFCVisualManagerOffice2003::OnDrawExpandingBox  
+##  <a name="ondrawexpandingbox"></a>  CMFCVisualManagerOffice2003::OnDrawExpandingBox  
  확장 상자를 그리는 동안 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -942,14 +937,14 @@ virtual void OnDrawExpandingBox(
  확장 상자를 그릴 수의 경계 사각형입니다.  
   
  [in] `bIsOpened`  
- `TRUE`그릴 상자를 연 경우 또는 `FALSE` 그렇지 않은 경우.  
+ `TRUE` 그릴 상자를 연 경우 또는 `FALSE` 그렇지 않은 경우.  
   
  [in] `colorBox`  
  상자를 그릴 수의 바깥쪽 테두리의 색입니다.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ondrawheaderctrlborder"></a>CMFCVisualManagerOffice2003::OnDrawHeaderCtrlBorder  
+##  <a name="ondrawheaderctrlborder"></a>  CMFCVisualManagerOffice2003::OnDrawHeaderCtrlBorder  
  인스턴스 주위에 테두리를 그릴 때 프레임 워크에서이 메서드를 호출는 [CMFCHeaderCtrl 클래스](../../mfc/reference/cmfcheaderctrl-class.md)합니다.  
   
 ```  
@@ -978,7 +973,7 @@ virtual void OnDrawHeaderCtrlBorder(
 ### <a name="remarks"></a>설명  
  헤더 컨트롤의 테두리를 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawmenuborder"></a>CMFCVisualManagerOffice2003::OnDrawMenuBorder  
+##  <a name="ondrawmenuborder"></a>  CMFCVisualManagerOffice2003::OnDrawMenuBorder  
  테두리를 그릴 때 프레임 워크에서이 메서드를 호출는 [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md)합니다.  
   
 ```  
@@ -1001,7 +996,7 @@ virtual void OnDrawMenuBorder(
 ### <a name="remarks"></a>설명  
  이 메서드의 기본 구현에는 표준 메뉴 테두리가 표시 됩니다. 메뉴 테두리의 모양을 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawoutlookbarsplitter"></a>CMFCVisualManagerOffice2003::OnDrawOutlookBarSplitter  
+##  <a name="ondrawoutlookbarsplitter"></a>  CMFCVisualManagerOffice2003::OnDrawOutlookBarSplitter  
  Outlook 표시줄에 대 한 분할을 그릴 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -1020,7 +1015,7 @@ virtual void OnDrawOutlookBarSplitter(
 ### <a name="remarks"></a>설명  
  Outlook 표시줄에서 분할자의 모양을 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawoutlookpagebuttonborder"></a>CMFCVisualManagerOffice2003::OnDrawOutlookPageButtonBorder  
+##  <a name="ondrawoutlookpagebuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawOutlookPageButtonBorder  
  Outlook 페이지 단추의 테두리를 그릴 때 프레임 워크에서 호출 됩니다.  
   
 ```  
@@ -1047,7 +1042,7 @@ virtual void OnDrawOutlookPageButtonBorder(
 ### <a name="remarks"></a>설명  
  Outlook 페이지 단추 모양을 변경 하는 사용자 지정 시각적 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawpaneborder"></a>CMFCVisualManagerOffice2003::OnDrawPaneBorder  
+##  <a name="ondrawpaneborder"></a>  CMFCVisualManagerOffice2003::OnDrawPaneBorder  
  테두리를 그릴 때 프레임 워크에서이 메서드를 호출는 [CPane 클래스](../../mfc/reference/cpane-class.md) 개체입니다.  
   
 ```  
@@ -1070,7 +1065,7 @@ virtual void OnDrawPaneBorder(
 ### <a name="remarks"></a>설명  
  이 메서드의 기본 구현 된 표준 테두리를 표시합니다. 테두리의 모양을 사용자 지정 하는 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawpanecaption"></a>CMFCVisualManagerOffice2003::OnDrawPaneCaption  
+##  <a name="ondrawpanecaption"></a>  CMFCVisualManagerOffice2003::OnDrawPaneCaption  
  에 대 한 캡션을 그릴 때 프레임 워크에서이 메서드를 호출는 [CDockablePane 클래스](../../mfc/reference/cdockablepane-class.md) 개체입니다.  
   
 ```  
@@ -1103,7 +1098,7 @@ virtual COLORREF OnDrawPaneCaption(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ondrawpopupwindowborder"></a>CMFCVisualManagerOffice2003::OnDrawPopupWindowBorder  
+##  <a name="ondrawpopupwindowborder"></a>  CMFCVisualManagerOffice2003::OnDrawPopupWindowBorder  
  팝업 창 테두리를 그릴 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -1121,7 +1116,7 @@ virtual void OnDrawPopupWindowBorder(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ondrawpopupwindowbuttonborder"></a>CMFCVisualManagerOffice2003::OnDrawPopupWindowButtonBorder  
+##  <a name="ondrawpopupwindowbuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawPopupWindowButtonBorder  
  팝업 창에서 단추의 테두리를 그릴 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -1143,7 +1138,7 @@ virtual void OnDrawPopupWindowButtonBorder(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ondrawpopupwindowcaption"></a>CMFCVisualManagerOffice2003::OnDrawPopupWindowCaption  
+##  <a name="ondrawpopupwindowcaption"></a>  CMFCVisualManagerOffice2003::OnDrawPopupWindowCaption  
  팝업 창의 캡션을 그릴 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -1169,7 +1164,7 @@ virtual COLORREF OnDrawPopupWindowCaption(
 ### <a name="remarks"></a>설명  
  팝업 창 캡션의 모양을 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawribbonbuttonsgroup"></a>CMFCVisualManagerOffice2003::OnDrawRibbonButtonsGroup  
+##  <a name="ondrawribbonbuttonsgroup"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonButtonsGroup  
  리본의 단추 그룹을 그릴 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -1195,7 +1190,7 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 ### <a name="remarks"></a>설명  
  리본의 단추 그룹의 모양을 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawribboncategorycaption"></a>CMFCVisualManagerOffice2003::OnDrawRibbonCategoryCaption  
+##  <a name="ondrawribboncategorycaption"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonCategoryCaption  
  리본 범주에 대 한 캡션 표시줄을 그릴 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -1217,7 +1212,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 ### <a name="remarks"></a>설명  
  리본 범주에 대 한 캡션 표시줄의 모양을 사용자 지정 하는 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawribboncategorytab"></a>CMFCVisualManagerOffice2003::OnDrawRibbonCategoryTab  
+##  <a name="ondrawribboncategorytab"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonCategoryTab  
  리본 범주에 대 한 탭을 그릴 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -1235,7 +1230,7 @@ virtual COLORREF OnDrawRibbonCategoryTab(
  리본 탭 개체에 대 한 포인터입니다. 프레임 워크는이 탭을 그립니다.  
   
  [in] `bIsActive`  
- `TRUE`탭이 활성 상태 이면 또는 `FALSE` 그렇지 않은 경우.  
+ `TRUE` 탭이 활성 상태 이면 또는 `FALSE` 그렇지 않은 경우.  
   
 ### <a name="return-value"></a>반환 값  
  리본 범주 탭에서 텍스트에 사용 되는 색입니다.  
@@ -1243,7 +1238,7 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 ### <a name="remarks"></a>설명  
  리본 범주 탭의 모양을 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawribbonprogressbar"></a>CMFCVisualManagerOffice2003::OnDrawRibbonProgressBar  
+##  <a name="ondrawribbonprogressbar"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonProgressBar  
  그릴 때 프레임 워크에서이 메서드를 호출는 [CMFCRibbonProgressBar 클래스](../../mfc/reference/cmfcribbonprogressbar-class.md)개체입니다.  
   
 ```  
@@ -1269,12 +1264,12 @@ virtual void OnDrawRibbonProgressBar(
  진행률 표시줄을 둘러싼 영역의 경계를 지정 하는 사각형입니다.  
   
  [in] `bInfiniteMode`  
- `TRUE`막대 무한 모드인 경우 또는 `FALSE` 그렇지 않은 경우. 기본 구현에서는이 매개 변수를 사용 하지 않습니다.  
+ `TRUE` 막대 무한 모드인 경우 또는 `FALSE` 그렇지 않은 경우. 기본 구현에서는이 매개 변수를 사용 하지 않습니다.  
   
 ### <a name="remarks"></a>설명  
  진행률 표시줄의 모양을 사용자 지정 하는 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawribbonquickaccesstoolbarseparator"></a>CMFCVisualManagerOffice2003::OnDrawRibbonQuickAccessToolBarSeparator  
+##  <a name="ondrawribbonquickaccesstoolbarseparator"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonQuickAccessToolBarSeparator  
  리본 메뉴의 빠른 실행 도구 모음에서 구분 기호를 그릴 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -1297,7 +1292,7 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 ### <a name="remarks"></a>설명  
  빠른 실행 도구 모음의 구분 기호 리본 메뉴의 모양을 사용자 지정 하는 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawribbonsliderchannel"></a>CMFCVisualManagerOffice2003::OnDrawRibbonSliderChannel  
+##  <a name="ondrawribbonsliderchannel"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonSliderChannel  
  채널을 그릴 때 프레임 워크에서이 메서드를 호출는 [CMFCRibbonSlider 클래스](../../mfc/reference/cmfcribbonslider-class.md)합니다.  
   
 ```  
@@ -1320,7 +1315,7 @@ virtual void OnDrawRibbonSliderChannel(
 ### <a name="remarks"></a>설명  
  리본 슬라이더의 채널의 모양을 사용자 지정 하는 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawribbonsliderthumb"></a>CMFCVisualManagerOffice2003::OnDrawRibbonSliderThumb  
+##  <a name="ondrawribbonsliderthumb"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonSliderThumb  
  엄지 단추를 그릴 때 프레임 워크에서이 메서드를 호출는 [CMFCRibbonSlider 클래스](../../mfc/reference/cmfcribbonslider-class.md) 개체  
   
 ```  
@@ -1355,7 +1350,7 @@ virtual void OnDrawRibbonSliderThumb(
 ### <a name="remarks"></a>설명  
  리본 슬라이더 위치 조정 컨트롤의 모양을 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawribbonsliderzoombutton"></a>CMFCVisualManagerOffice2003::OnDrawRibbonSliderZoomButton  
+##  <a name="ondrawribbonsliderzoombutton"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonSliderZoomButton  
  에 대 한 확대/축소 단추를 그릴 때 프레임 워크에서이 메서드를 호출는 [CMFCRibbonSlider 클래스](../../mfc/reference/cmfcribbonslider-class.md) 개체입니다.  
   
 ```  
@@ -1380,7 +1375,7 @@ virtual void OnDrawRibbonSliderZoomButton(
  리본 슬라이더에서 확대/축소 단추 경계를 지정 하는 사각형입니다.  
   
  [in] `bIsZoomOut`  
- `TRUE`프레임 워크와 왼쪽된 단추를 그려야 하는 경우는 "  **-** " out, 확대/축소에 대 한 또는 `FALSE` 프레임 워크와 오른쪽 단추를 그려야 하는 경우는 "  **+** "에서 확대/축소에 대 한 합니다.  
+ `TRUE` 프레임 워크와 왼쪽된 단추를 그려야 하는 경우는 " **-**" out, 확대/축소에 대 한 또는 `FALSE` 프레임 워크와 오른쪽 단추를 그려야 하는 경우는 " **+**"에서 확대/축소에 대 한 합니다.  
   
  [in] `bIsHighlighted`  
  단추가 강조 표시 되는지 여부를 나타내는 부울 매개 변수입니다.  
@@ -1392,9 +1387,9 @@ virtual void OnDrawRibbonSliderZoomButton(
  단추를 사용할 수 있는지 여부를 나타내는 부울 매개 변수입니다.  
   
 ### <a name="remarks"></a>설명  
- 기본적으로 리본 슬라이더에서 확대/축소 단추는 사용 하 여 원을  **+**  또는  **-**  가운데에 로그인 합니다. 확대/축소 단추의 모양을 사용자 지정 하려면 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
+ 기본적으로 리본 슬라이더에서 확대/축소 단추는 사용 하 여 원을 **+** 또는 **-** 가운데에 로그인 합니다. 확대/축소 단추의 모양을 사용자 지정 하려면 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawribbonstatusbarpane"></a>CMFCVisualManagerOffice2003::OnDrawRibbonStatusBarPane  
+##  <a name="ondrawribbonstatusbarpane"></a>  CMFCVisualManagerOffice2003::OnDrawRibbonStatusBarPane  
  창 상태 표시줄에 그릴 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -1420,7 +1415,7 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 ### <a name="remarks"></a>설명  
  상태 표시줄에 창의 모양을 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawscrollbuttons"></a>CMFCVisualManagerOffice2003::OnDrawScrollButtons  
+##  <a name="ondrawscrollbuttons"></a>  CMFCVisualManagerOffice2003::OnDrawScrollButtons  
  스크롤 단추를 그릴 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -1446,11 +1441,11 @@ virtual void OnDrawScrollButtons(
  스크롤 단추에 그릴 이미지의 식별자입니다.  
   
  [in] `bHilited`  
- `TRUE`스크롤 단추 강조 표시 하는 경우 또는 `FALSE` 그렇지 않은 경우.  
+ `TRUE` 스크롤 단추 강조 표시 하는 경우 또는 `FALSE` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ondrawseparator"></a>CMFCVisualManagerOffice2003::OnDrawSeparator  
+##  <a name="ondrawseparator"></a>  CMFCVisualManagerOffice2003::OnDrawSeparator  
  구분 기호를 그릴 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -1472,12 +1467,12 @@ virtual void OnDrawSeparator(
  경계 구분 기호를 지정 하는 사각형입니다.  
   
  [in] `bIsHoriz`  
- `TRUE`창에서 가로로 도킹 되는 경우 또는 `FALSE` 창이 도킹 되어 있는 세로로 하는 경우.  
+ `TRUE` 창에서 가로로 도킹 되는 경우 또는 `FALSE` 창이 도킹 되어 있는 세로로 하는 경우.  
   
 ### <a name="remarks"></a>설명  
  구분 기호는 별도의 관련된 아이콘의 그룹 컨트롤 막대에 사용 됩니다. 이 메서드의 기본 구현에서는 표준 구분 기호를 표시 합니다. 구분 기호 모양을 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawshowallmenuitems"></a>CMFCVisualManagerOffice2003::OnDrawShowAllMenuItems  
+##  <a name="ondrawshowallmenuitems"></a>  CMFCVisualManagerOffice2003::OnDrawShowAllMenuItems  
  메뉴에 있는 모든 항목을 그릴 때 프레임 워크에이 메서드 호출  
   
 ```  
@@ -1499,7 +1494,7 @@ virtual void OnDrawShowAllMenuItems(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="ondrawstatusbarpaneborder"></a>CMFCVisualManagerOffice2003::OnDrawStatusBarPaneBorder  
+##  <a name="ondrawstatusbarpaneborder"></a>  CMFCVisualManagerOffice2003::OnDrawStatusBarPaneBorder  
  테두리를 그릴 때 프레임 워크에서이 메서드를 호출는 [CMFCStatusBar 클래스](../../mfc/reference/cmfcstatusbar-class.md) 개체입니다.  
   
 ```  
@@ -1530,7 +1525,7 @@ virtual void OnDrawStatusBarPaneBorder(
 ### <a name="remarks"></a>설명  
  에 대 한 테두리의 모양을 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 한 `CMFCStatusBar` 개체입니다.  
   
-##  <a name="ondrawstatusbarprogress"></a>CMFCVisualManagerOffice2003::OnDrawStatusBarProgress  
+##  <a name="ondrawstatusbarprogress"></a>  CMFCVisualManagerOffice2003::OnDrawStatusBarProgress  
  진행률 표시기 그릴 때 프레임 워크에이 메서드 호출의 [CMFCStatusBar 클래스](../../mfc/reference/cmfcstatusbar-class.md) 개체  
   
 ```  
@@ -1572,7 +1567,7 @@ virtual void OnDrawStatusBarProgress(
 ### <a name="remarks"></a>설명  
  상태 표시줄에 진행률 표시줄의 모양을 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawstatusbarsizebox"></a>CMFCVisualManagerOffice2003::OnDrawStatusBarSizeBox  
+##  <a name="ondrawstatusbarsizebox"></a>  CMFCVisualManagerOffice2003::OnDrawStatusBarSizeBox  
  에 대 한 크기 상자를 그릴 때 프레임 워크에서이 메서드를 호출는 [CMFCStatusBar 클래스](../../mfc/reference/cmfcstatusbar-class.md)합니다.  
   
 ```  
@@ -1595,7 +1590,7 @@ virtual void OnDrawStatusBarSizeBox(
 ### <a name="remarks"></a>설명  
  상태 표시줄에 크기 상자의 모양을 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawtab"></a>CMFCVisualManagerOffice2003::OnDrawTab  
+##  <a name="ondrawtab"></a>  CMFCVisualManagerOffice2003::OnDrawTab  
  에 대 한 탭을 그릴 때 프레임 워크에서이 메서드를 호출는 [CMFCBaseTabCtrl 클래스](../../mfc/reference/cmfcbasetabctrl-class.md) 개체입니다.  
   
 ```  
@@ -1626,7 +1621,7 @@ virtual void OnDrawTab(
 ### <a name="remarks"></a>설명  
  A `CMFCBaseTabCtrl` 개체를 처리할 때이 메서드를 호출는 `WM_PAINT` 메시지입니다. 탭의 모양 사용자 지정 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawtabsbuttonborder"></a>CMFCVisualManagerOffice2003::OnDrawTabsButtonBorder  
+##  <a name="ondrawtabsbuttonborder"></a>  CMFCVisualManagerOffice2003::OnDrawTabsButtonBorder  
  탭 단추의 테두리를 그릴 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -1657,7 +1652,7 @@ virtual void OnDrawTabsButtonBorder(
 ### <a name="remarks"></a>설명  
  탭 단추의 테두리 모양을 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawtask"></a>CMFCVisualManagerOffice2003::OnDrawTask  
+##  <a name="ondrawtask"></a>  CMFCVisualManagerOffice2003::OnDrawTask  
  그릴 때 프레임 워크에서이 메서드를 호출는 [CMFCTasksPaneTask 클래스](../../mfc/reference/cmfctaskspanetask-class.md) 개체입니다.  
   
 ```  
@@ -1688,7 +1683,7 @@ virtual void OnDrawTask(
 ### <a name="remarks"></a>설명  
  아이콘 및 텍스트를 둘 다로 작업 표시줄에서 프레임 워크에 작업이 표시 됩니다. `pIcons` 매개 변수에 포함 하 여 해당 작업에 대 한 아이콘 `pTask`합니다. 작업 표시줄에 있는 작업의 모양을 사용자 지정 하는 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="ondrawtasksgroupareaborder"></a>CMFCVisualManagerOffice2003::OnDrawTasksGroupAreaBorder  
+##  <a name="ondrawtasksgroupareaborder"></a>  CMFCVisualManagerOffice2003::OnDrawTasksGroupAreaBorder  
  그룹 주위에 테두리를 그릴 때 프레임 워크에서이 메서드를 호출는 [CMFCTasksPane 클래스](../../mfc/reference/cmfctaskspane-class.md) 개체입니다.  
   
 ```  
@@ -1715,7 +1710,7 @@ virtual void OnDrawTasksGroupAreaBorder(
 ### <a name="remarks"></a>설명  
  작업 창에서 그룹 영역 주위의 테두리를 사용자 지정 하는 파생된 클래스에서이 함수를 재정의 합니다.  
   
-##  <a name="ondrawtasksgroupcaption"></a>CMFCVisualManagerOffice2003::OnDrawTasksGroupCaption  
+##  <a name="ondrawtasksgroupcaption"></a>  CMFCVisualManagerOffice2003::OnDrawTasksGroupCaption  
  에 대 한 캡션을 그릴 때 프레임 워크에서이 메서드를 호출는 [CMFCTasksPaneTaskGroup 클래스](../../mfc/reference/cmfctaskspanetaskgroup-class.md) 개체입니다.  
   
 ```  
@@ -1746,7 +1741,7 @@ virtual void OnDrawTasksGroupCaption(
 ### <a name="remarks"></a>설명  
  캡션을 사용자 지정 하려면 파생된 클래스에서이 메서드를 재정의 한 `CMFCTasksPaneTaskGroup`합니다.  
   
-##  <a name="ondrawtearoffcaption"></a>CMFCVisualManagerOffice2003::OnDrawTearOffCaption  
+##  <a name="ondrawtearoffcaption"></a>  CMFCVisualManagerOffice2003::OnDrawTearOffCaption  
  에 대 한 캡션을 그릴 때 프레임 워크에서이 메서드를 호출는 [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md) 개체입니다.  
   
 ```  
@@ -1764,14 +1759,14 @@ virtual void OnDrawTearOffCaption(
  캡션의 경계를 지정 하는 사각형입니다.  
   
  [in] `bIsActive`  
- `TRUE`캡션이 활성화 되 면 `FALSE` 그렇지 않은 경우.  
+ `TRUE` 캡션이 활성화 되 면 `FALSE` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
  프레임 워크에서이 함수가 호출 될 때는 [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md) 프로세스 개체는 `WM_PAINT` 메시지 보내기 및 분리 캡션을 그립니다 해야 합니다.  
   
  분리 막대가 대 한 캡션의 모양 사용자 지정 파생된 클래스에서이 메서드를 재정의 합니다.  
   
-##  <a name="onerasepopupwindowbutton"></a>CMFCVisualManagerOffice2003::OnErasePopupWindowButton  
+##  <a name="onerasepopupwindowbutton"></a>  CMFCVisualManagerOffice2003::OnErasePopupWindowButton  
  팝업 창에 있는 단추를 지울 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -1793,7 +1788,7 @@ virtual void OnErasePopupWindowButton(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onerasetabsarea"></a>CMFCVisualManagerOffice2003::OnEraseTabsArea  
+##  <a name="onerasetabsarea"></a>  CMFCVisualManagerOffice2003::OnEraseTabsArea  
  탭 창의 탭 영역을 지울 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -1818,7 +1813,7 @@ virtual void OnEraseTabsArea(
   
  탭의 모양을 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="onerasetabsbutton"></a>CMFCVisualManagerOffice2003::OnEraseTabsButton  
+##  <a name="onerasetabsbutton"></a>  CMFCVisualManagerOffice2003::OnEraseTabsButton  
  텍스트 및 탭 단추 아이콘을 지울 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -1847,7 +1842,7 @@ virtual void OnEraseTabsButton(
   
  탭 단추 모양 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="onerasetabsframe"></a>CMFCVisualManagerOffice2003::OnEraseTabsFrame  
+##  <a name="onerasetabsframe"></a>  CMFCVisualManagerOffice2003::OnEraseTabsFrame  
  프레임 워크에서 프레임을 지울 때이 메서드를 호출는 [CMFCBaseTabCtrl 클래스](../../mfc/reference/cmfcbasetabctrl-class.md) 개체입니다.  
   
 ```  
@@ -1868,12 +1863,12 @@ virtual BOOL OnEraseTabsFrame(
  탭 창에 대 한 포인터입니다. 프레임 워크는 프레임이 지웁니다 [CMFCBaseTabCtrl 클래스](../../mfc/reference/cmfcbasetabctrl-class.md)합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`메서드가 성공 하면 또는 `FALSE` 그렇지 않은 경우.  
+ `TRUE` 메서드가 성공 하면 또는 `FALSE` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
  이 메서드는 가리키는 영역을 채우는 `rect` 활성 탭의 배경색으로 합니다. 될 때 호출 됩니다는 `CMFCBaseTabCtrl` 프로세스 개체를 `WM_PAINT` 메시지 보내기 및 탭 프레임을 지웁니다.  
   
-##  <a name="onfillautohidebuttonbackground"></a>CMFCVisualManagerOffice2003::OnFillAutoHideButtonBackground  
+##  <a name="onfillautohidebuttonbackground"></a>  CMFCVisualManagerOffice2003::OnFillAutoHideButtonBackground  
  자동 숨기기 단추의 배경을 채울 때 프레임워크에서 이 메서드를 호출합니다.  
   
 ```  
@@ -1896,7 +1891,7 @@ virtual void OnFillAutoHideButtonBackground(
 ### <a name="remarks"></a>설명  
  자동 숨기기 단추의 모양을 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="onfillbarbackground"></a>CMFCVisualManagerOffice2003::OnFillBarBackground  
+##  <a name="onfillbarbackground"></a>  CMFCVisualManagerOffice2003::OnFillBarBackground  
  배경을 채울 때 프레임 워크에서이 메서드를 호출는 [CBasePane 클래스](../../mfc/reference/cbasepane-class.md) 개체입니다.  
   
 ```  
@@ -1929,7 +1924,7 @@ virtual void OnFillBarBackground(
   
  창의 배경을 사용자 지정할 수 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="onfillbuttoninterior"></a>CMFCVisualManagerOffice2003::OnFillButtonInterior  
+##  <a name="onfillbuttoninterior"></a>  CMFCVisualManagerOffice2003::OnFillButtonInterior  
  도구 모음 단추의 배경을 채울 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -1956,7 +1951,7 @@ virtual void OnFillButtonInterior(
 ### <a name="remarks"></a>설명  
  이 메서드의 기본 구현 배경을 채울 기본 색을 사용 합니다. 도구 모음 단추의 배경 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="onfillcommandslistbackground"></a>CMFCVisualManagerOffice2003::OnFillCommandsListBackground  
+##  <a name="onfillcommandslistbackground"></a>  CMFCVisualManagerOffice2003::OnFillCommandsListBackground  
  명령 목록에 속하는 도구 모음 단추의 배경을 채울 때 프레임 워크에서이 메서드를 호출 합니다. 이 명령 목록은 사용자 지정 대화의 일부입니다.  
   
 ```  
@@ -1982,7 +1977,7 @@ virtual COLORREF OnFillCommandsListBackground(
 ### <a name="remarks"></a>설명  
  사용자 지정 목록에 대 한 자세한 내용은 참조 [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)합니다. 이 메서드의 기본 구현에서는 현재 선택 된 스킨의 색 구성표에 기반한 배경을 채웁니다.  
   
-##  <a name="onfillheaderctrlbackground"></a>CMFCVisualManagerOffice2003::OnFillHeaderCtrlBackground  
+##  <a name="onfillheaderctrlbackground"></a>  CMFCVisualManagerOffice2003::OnFillHeaderCtrlBackground  
  헤더 컨트롤의 배경을 채울 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -2005,7 +2000,7 @@ virtual void OnFillHeaderCtrlBackground(
 ### <a name="remarks"></a>설명  
  헤더 컨트롤의 모양을 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="onfillhighlightedarea"></a>CMFCVisualManagerOffice2003::OnFillHighlightedArea  
+##  <a name="onfillhighlightedarea"></a>  CMFCVisualManagerOffice2003::OnFillHighlightedArea  
  도구 모음 단추의 강조 표시 된 영역을 채울 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -2031,7 +2026,7 @@ virtual void OnFillHighlightedArea(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onfilloutlookbarcaption"></a>CMFCVisualManagerOffice2003::OnFillOutlookBarCaption  
+##  <a name="onfilloutlookbarcaption"></a>  CMFCVisualManagerOffice2003::OnFillOutlookBarCaption  
  Outlook 캡션 표시줄의 배경을 채울 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -2056,7 +2051,7 @@ virtual void OnFillOutlookBarCaption(
   
  Outlook 캡션 표시줄의 색을 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="onfilloutlookpagebutton"></a>CMFCVisualManagerOffice2003::OnFillOutlookPageButton  
+##  <a name="onfilloutlookpagebutton"></a>  CMFCVisualManagerOffice2003::OnFillOutlookPageButton  
  프레임 워크 내부 Outlook 페이지 단추를 채울 때이 메서드를 호출 합니다.  
   
 ```  
@@ -2087,7 +2082,7 @@ virtual void OnFillOutlookPageButton(
 ### <a name="remarks"></a>설명  
  Outlook 페이지 단추의 모양을 사용자 지정 하는 파생된 비주얼 관리자에서이 함수를 재정의 합니다.  
   
-##  <a name="onfillpopupwindowbackground"></a>CMFCVisualManagerOffice2003::OnFillPopupWindowBackground  
+##  <a name="onfillpopupwindowbackground"></a>  CMFCVisualManagerOffice2003::OnFillPopupWindowBackground  
  팝업 창의 배경을 채울 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -2106,7 +2101,7 @@ virtual void OnFillPopupWindowBackground(
 ### <a name="remarks"></a>설명  
  팝업 창의 모양을 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="onfilltab"></a>CMFCVisualManagerOffice2003::OnFillTab  
+##  <a name="onfilltab"></a>  CMFCVisualManagerOffice2003::OnFillTab  
  탭 창의 배경을 채울 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -2133,7 +2128,7 @@ virtual void OnFillTab(
  프레임 워크를 배경을 채울 탭의 0부터 시작 하는 탭 인덱스입니다.  
   
  [in] `bIsActive`  
- `TRUE`탭이 활성화 하는 경우 또는 `FALSE` 그렇지 않은 경우.  
+ `TRUE` 탭이 활성화 하는 경우 또는 `FALSE` 그렇지 않은 경우.  
   
  [in] `pTabWnd`  
  부모 탭 컨트롤에 대 한 포인터입니다.  
@@ -2141,7 +2136,7 @@ virtual void OnFillTab(
 ### <a name="remarks"></a>설명  
  탭의 모양을 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="onfilltasksgroupinterior"></a>CMFCVisualManagerOffice2003::OnFillTasksGroupInterior  
+##  <a name="onfilltasksgroupinterior"></a>  CMFCVisualManagerOffice2003::OnFillTasksGroupInterior  
  프레임 워크의 내부를 채웁니다 때이 메서드를 호출는 [CMFCTasksPaneTaskGroup 클래스](../../mfc/reference/cmfctaskspanetaskgroup-class.md) 개체입니다.  
   
 ```  
@@ -2164,7 +2159,7 @@ virtual void OnFillTasksGroupInterior(
 ### <a name="remarks"></a>설명  
  작업 그룹의 모양을 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="onfilltaskspanebackground"></a>CMFCVisualManagerOffice2003::OnFillTasksPaneBackground  
+##  <a name="onfilltaskspanebackground"></a>  CMFCVisualManagerOffice2003::OnFillTasksPaneBackground  
  배경을 채울 때 프레임 워크에서이 메서드를 호출는 [CMFCTasksPane 클래스](../../mfc/reference/cmfctaskspane-class.md) 제어 합니다.  
   
 ```  
@@ -2183,7 +2178,7 @@ virtual void OnFillTasksPaneBackground(
 ### <a name="remarks"></a>설명  
  모양을 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 한 [CMFCTasksPane 클래스](../../mfc/reference/cmfctaskspane-class.md) 개체입니다.  
   
-##  <a name="onhighlightquickcustomizemenubutton"></a>CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton  
+##  <a name="onhighlightquickcustomizemenubutton"></a>  CMFCVisualManagerOffice2003::OnHighlightQuickCustomizeMenuButton  
  이 메서드는 강조 표시 된 그릴 때 빠른-사용자 지정 메뉴 단추는 프레임 워크 호출 합니다.  
   
 ```  
@@ -2205,7 +2200,7 @@ virtual void OnHighlightQuickCustomizeMenuButton(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="onhighlightrarelyusedmenuitems"></a>CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems  
+##  <a name="onhighlightrarelyusedmenuitems"></a>  CMFCVisualManagerOffice2003::OnHighlightRarelyUsedMenuItems  
  강조 표시 된 메뉴 명령 그릴 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -2224,7 +2219,7 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ### <a name="remarks"></a>설명  
  강조 표시 된 메뉴 명령의 모양을 사용자 지정 하는 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="onupdatesystemcolors"></a>CMFCVisualManagerOffice2003::OnUpdateSystemColors  
+##  <a name="onupdatesystemcolors"></a>  CMFCVisualManagerOffice2003::OnUpdateSystemColors  
  시스템 색이 변경 될 때 프레임 워크에서이 함수를 호출 합니다.  
   
 ```  
@@ -2234,7 +2229,7 @@ virtual void OnUpdateSystemColors();
 ### <a name="remarks"></a>설명  
  처리의 일부로이 메서드를 호출 하는 프레임 워크는 `WM_SYSCOLORCHANGE` 메시지입니다. 사용자 지정 코드를 실행 하 여 응용 프로그램에서 색을 변경 하려는 경우에 파생된 비주얼 관리자에서이 메서드를 재정의 합니다.  
   
-##  <a name="setdefaultwinxpcolors"></a>CMFCVisualManagerOffice2003::SetDefaultWinXPColors  
+##  <a name="setdefaultwinxpcolors"></a>  CMFCVisualManagerOffice2003::SetDefaultWinXPColors  
  비주얼 관리자 네이티브 Windows XP 테마 색을 사용할지 또는 색에서 가져온 지정 [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371)합니다.  
   
 ```  
@@ -2250,7 +2245,7 @@ static void SetDefaultWinXPColors(BOOL bDefaultWinXPColors = TRUE);
   
  기본적으로는 `CMFCVisualManagerOffice2003` 개체가 네이티브 Windows XP 테마 색을 사용 합니다.  
   
-##  <a name="setstatusbarofficexplook"></a>CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook  
+##  <a name="setstatusbarofficexplook"></a>  CMFCVisualManagerOffice2003::SetStatusBarOfficeXPLook  
  Windows XP 전역 테마를 사용 해야 함을 지정 합니다.  
   
 ```  
@@ -2259,11 +2254,11 @@ static void __stdcall SetStatusBarOfficeXPLook(BOOL bStatusBarOfficeXPLook = TRU
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bStatusBarOfficeXPLook`  
- `TRUE`Windows XP 전역 테마 해야 하는 경우 (기본값), 사용 또는 `FALSE` 그렇지 않은 경우.  
+ `TRUE` Windows XP 전역 테마 해야 하는 경우 (기본값), 사용 또는 `FALSE` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setuseglobaltheme"></a>CMFCVisualManagerOffice2003::SetUseGlobalTheme  
+##  <a name="setuseglobaltheme"></a>  CMFCVisualManagerOffice2003::SetUseGlobalTheme  
  비주얼 관리자 전역 테마를 사용 하는지 여부를 지정 합니다.  
   
 ```  
@@ -2272,7 +2267,7 @@ static void SetUseGlobalTheme(BOOL bUseGlobalTheme = TRUE);
   
 ### <a name="parameters"></a>매개 변수  
  [in] `bUseGlobalTheme`  
- `TRUE`비주얼 관리자; 전역 테마를 사용 하려는 경우 `FALSE` 그렇지 않은 경우.  
+ `TRUE` 비주얼 관리자; 전역 테마를 사용 하려는 경우 `FALSE` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
  경우는 `CMFCVisualManagerOffice2003` 전역 테마를 사용 하는 개체를 사용 하 여 GUI 요소를 그립니다는 [CMFCVisualManagerWindows 클래스](../../mfc/reference/cmfcvisualmanagerwindows-class.md)합니다.  

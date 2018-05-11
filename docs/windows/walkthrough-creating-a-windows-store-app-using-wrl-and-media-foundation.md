@@ -1,28 +1,23 @@
 ---
-title: "연습: WRL 및 Media Foundation을 사용 하는 UWP 앱 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: WRL 및 Media Foundation을 사용 하는 UWP 앱 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a104cab9ec15872fe9e1b1c7a1eaf7ccd705f7d2
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: 1c9e3f678a65b3dacfc5bba012656118b6fe2fa1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>연습: WRL 및 Media Foundation을 사용 하는 UWP 앱 만들기
 사용 하는 유니버설 Windows 플랫폼 (UWP) 앱을 만들려면 Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 사용 하는 방법에 알아봅니다 [Microsoft 미디어 파운데이션](http://msdn.microsoft.com/library/windows/apps/ms694197)합니다.  
@@ -39,7 +34,7 @@ ms.lasthandoff: 02/14/2018
 > [!NOTE]
 >  이 코드 예제는 길지만, 유용한 Media Foundation 변형을 만드는 데 필요한 최소한의 코드를 보여 줍니다. 이를 사용자 지정 변형의 시작점으로 사용할 수 있습니다. 이 예제는에서 [미디어 확장명 샘플](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)및 디코딩하고, 미디어 스트림을 생성 하는 스키마 처리기를 만드는 비디오에 효과 적용 하려면 미디어 확장을 사용 하 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
   
 -   경험이 [Windows 런타임](http://msdn.microsoft.com/library/windows/apps/br211377.aspx)합니다.  
   
@@ -108,7 +103,7 @@ ms.lasthandoff: 02/14/2018
   
     2.  또한 아래에서 **입력**, 추가 `runtimeobject.lib`, `mfuuid.lib`, 및 `mfplatf.lib` 에 **추가 종속성** 속성입니다.  
   
-    3.  아래 **Windows 메타 데이터**설정, **일반 Windows 메타 데이터** 를 **예 (/ WINMD)**합니다.  
+    3.  아래 **Windows 메타 데이터**설정, **일반 Windows 메타 데이터** 를 **예 (/ WINMD)** 합니다.  
   
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>WRL C# 응용 프로그램에서 사용자 지정 Media Foundation 구성 요소를 사용 하려면  
   
@@ -135,5 +130,5 @@ ms.lasthandoff: 02/14/2018
   
 ## <a name="see-also"></a>참고 항목  
  [Windows 런타임 c + + 템플릿 라이브러리 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)   
- [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197)   
+ [Microsoft 미디어 파운데이션](http://msdn.microsoft.com/library/windows/apps/ms694197)   
  [미디어 확장명 샘플](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

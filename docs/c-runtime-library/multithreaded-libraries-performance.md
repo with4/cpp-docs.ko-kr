@@ -1,13 +1,10 @@
 ---
-title: "다중 스레드 라이브러리 성능 | Microsoft Docs"
-ms.custom: 
+title: 다중 스레드 라이브러리 성능 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-standard-libraries
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - performance, multithreading
 - multithreaded libraries
 ms.assetid: faa5d808-087c-463d-8f0d-8c478d137296
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 240b2baf8f3d59465b7b8313197086fec4c13285
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d738cbfe462543437ed4c620f671bb325263e3e3
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multithreaded-libraries-performance"></a>다중 스레드 라이브러리 성능
 단일 스레드 CRT는 더 이상 사용할 수 없습니다. 이 항목에서는 다중 스레드 라이브러리에서 최대 성능을 얻는 방법에 대해 설명합니다.  

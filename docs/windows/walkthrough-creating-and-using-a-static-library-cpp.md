@@ -1,31 +1,26 @@
 ---
-title: "연습: 만들기 및 정적 라이브러리 (c + +)를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: '연습: 만들기 및 정적 라이브러리 (c + +)를 사용 하 여 | Microsoft Docs'
+ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - libraries [C++], static
 - static libraries [C++]
 ms.assetid: 3cc36411-7d66-4240-851e-dacb9a8fd6ac
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3af6bc41d353f82bb1f95c73f079e530da19dba0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d136dae553f623cbd607a69ab710fa9c6fe6c91b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>연습: 정적 라이브러리 만들기 및 사용(C++)
 이 단계별 연습에서는 C++ 앱에 사용할 수 있도록 정적 라이브러리(.lib 파일)를 만드는 방법을 보여 줍니다. 정적 라이브러리를 사용하면 코드를 매우 편리하게 다시 사용할 수 있습니다. 기능이 필요한 모든 응용 프로그램에서 동일한 루틴을 다시 구현하는 대신 정적 라이브러리에 한 번만 작성한 다음 응용 프로그램에서 루틴을 참조하도록 합니다. 정적 라이브러리에서 연결된 코드는 응용 프로그램의 일부가 되므로 코드를 사용하기 위해 다른 파일을 설치할 필요가 없습니다.  
@@ -42,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [앱 실행](#BKMK_RunApp)  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  C++ 언어의 기본적인 사항을 알고 있어야 합니다.  
   
 ##  <a name="BKMK_CreateLibProject"></a> 정적 라이브러리 프로젝트 만들기  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.  
   
-2.  **새 프로젝트** 대화 상자 왼쪽 창의 **설치됨**, **템플릿**, **Visual C++**를 차례로 확장하고 **Win32**를 선택합니다.  
+2.  **새 프로젝트** 대화 상자 왼쪽 창의 **설치됨**, **템플릿**, **Visual C++** 를 차례로 확장하고 **Win32**를 선택합니다.  
   
 3.  가운데 창에서 **Win32 콘솔 응용 프로그램**을 선택합니다.  
   
@@ -69,13 +64,13 @@ ms.lasthandoff: 12/21/2017
   
 #### <a name="to-add-a-class-to-the-static-library"></a>정적 라이브러리에 클래스를 추가하려면  
   
-1.  새 클래스에 대한 헤더 파일을 만들려면 **솔루션 탐색기** 에서 **MathFuncsLib**프로젝트에 대한 바로 가기 메뉴를 연 후 **추가**, **새 항목**을 선택합니다. **새 항목 추가** 대화 상자의 왼쪽 창에 있는 **Visual C++**에서 **코드**를 선택합니다. 가운데 창에서 **헤더 파일 (.h)**을 선택합니다. 헤더 파일의 이름(예: **MathFuncsLib.h**)을 지정하고 **추가** 단추를 선택합니다. 빈 헤더 파일이 표시됩니다.  
+1.  새 클래스에 대한 헤더 파일을 만들려면 **솔루션 탐색기** 에서 **MathFuncsLib**프로젝트에 대한 바로 가기 메뉴를 연 후 **추가**, **새 항목**을 선택합니다. **새 항목 추가** 대화 상자의 왼쪽 창에 있는 **Visual C++** 에서 **코드**를 선택합니다. 가운데 창에서 **헤더 파일 (.h)** 을 선택합니다. 헤더 파일의 이름(예: **MathFuncsLib.h**)을 지정하고 **추가** 단추를 선택합니다. 빈 헤더 파일이 표시됩니다.  
   
 2.  덧셈, 뺄셈, 곱셈, 나눗셈 같은 일반적인 산술 연산을 수행하는 **MyMathFuncs** 라는 클래스를 추가합니다. 코드는 다음과 비슷합니다.  
   
      [!code-cpp[NVC_Walkthrough_Create_Static_Lib#100](../windows/codesnippet/CPP/walkthrough-creating-and-using-a-static-library-cpp_1.h)]  
   
-3.  새 클래스에 대한 소스 파일을 만들려면 **솔루션 탐색기** 에서 **MathFuncsLib**프로젝트에 대한 바로 가기 메뉴를 연 후 **추가**, **새 항목**을 선택합니다. **새 항목 추가** 대화 상자의 왼쪽 창에 있는 **Visual C++**에서 **코드**를 선택합니다. 가운데 창에서 **C++ 파일 (.cpp)**을 선택합니다. 소스 파일의 이름(예: **MathFuncsLib.cpp**)을 지정하고 **추가** 단추를 선택합니다. 빈 소스 파일이 표시됩니다.  
+3.  새 클래스에 대한 소스 파일을 만들려면 **솔루션 탐색기** 에서 **MathFuncsLib**프로젝트에 대한 바로 가기 메뉴를 연 후 **추가**, **새 항목**을 선택합니다. **새 항목 추가** 대화 상자의 왼쪽 창에 있는 **Visual C++** 에서 **코드**를 선택합니다. 가운데 창에서 **C++ 파일 (.cpp)** 을 선택합니다. 소스 파일의 이름(예: **MathFuncsLib.cpp**)을 지정하고 **추가** 단추를 선택합니다. 빈 소스 파일이 표시됩니다.  
   
 4.  이 소스 파일을 사용하여 **MyMathFuncs**의 기능을 구현합니다. 코드는 다음과 비슷합니다.  
   
@@ -92,7 +87,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.  
   
-2.  왼쪽 창의 **Visual C++**에서 **Win32**를 선택합니다.  
+2.  왼쪽 창의 **Visual C++** 에서 **Win32**를 선택합니다.  
   
 3.  가운데 창에서 **Win32 콘솔 응용 프로그램**을 선택합니다.  
   

@@ -1,13 +1,10 @@
 ---
-title: "내보낸 DLL 함수 시작 지점 | Microsoft Docs"
-ms.custom: 
+title: 내보낸 DLL 함수 시작 지점 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - MFC, managing state data
 - state management [MFC], exported DLLs
 ms.assetid: 3268666e-d24b-44f2-80e8-7c80f73b93ca
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28ded528d584e98b704b5f2d8e6e0a379a6a11a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1be4c74a48f1367369582b433a2a833ceb8e1976
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="exported-dll-function-entry-points"></a>내보낸 DLL 함수 시작 지점
 DLL의 내보낸된 함수에 대 한 사용는 [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) DLL 모듈에서 호출 응용 프로그램의 DLL로 전환 하는 경우 적절 한 글로벌 상태를 유지 하는 매크로입니다.  
@@ -42,7 +37,7 @@ DLL의 내보낸된 함수에 대 한 사용는 [AFX_MANAGE_STATE](reference/ext
   
  경우 리소스 Dll에서 문제가 발생 합니다는 `AFX_MANAGE_STATE` 매크로 사용 되지 않습니다. 기본적으로 MFC 리소스 템플릿을 로드 하는 주 응용 프로그램의 리소스 핸들을 사용 합니다. 이 서식 파일은 실제로 DLL에 저장 됩니다. 근본 원인이 MFC의 모듈 상태 정보도 전환 하지는 `AFX_MANAGE_STATE` 매크로입니다. 리소스 핸들 MFC 모듈 상태에서 복구 됩니다. 모듈 상태를 전환 하지 않으면 잘못 리소스 핸들을 사용 하면 됩니다.  
   
- `AFX_MANAGE_STATE`모든 DLL의에서 함수에 필요 하지 않습니다. 예를 들어 `InitInstance` 없이 응용 프로그램에는 MFC 코드에서 호출할 수 있습니다 `AFX_MANAGE_STATE` MFC 모듈 상태 하기 전에 자동으로 이동 하기 때문에 `InitInstance` 및 후에 백업 하는 스위치 다음 `InitInstance` 반환 합니다. 모든 메시지 맵 처리기에도 마찬가지입니다. 일반 MFC Dll에는 실제로 메시지를 라우팅하기 전에 모듈 상태를 자동으로 전환 하는 특수 한 마스터 창 프로시저 있는데  
+ `AFX_MANAGE_STATE` 모든 DLL의에서 함수에 필요 하지 않습니다. 예를 들어 `InitInstance` 없이 응용 프로그램에는 MFC 코드에서 호출할 수 있습니다 `AFX_MANAGE_STATE` MFC 모듈 상태 하기 전에 자동으로 이동 하기 때문에 `InitInstance` 및 후에 백업 하는 스위치 다음 `InitInstance` 반환 합니다. 모든 메시지 맵 처리기에도 마찬가지입니다. 일반 MFC Dll에는 실제로 메시지를 라우팅하기 전에 모듈 상태를 자동으로 전환 하는 특수 한 마스터 창 프로시저 있는데  
   
 ## <a name="see-also"></a>참고 항목  
  [MFC 모듈의 상태 데이터 관리](../mfc/managing-the-state-data-of-mfc-modules.md)

@@ -2,11 +2,8 @@
 title: CStockPropImpl 클래스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - CStockPropImpl
@@ -73,17 +70,15 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 719ee1e0a39cbf3cd7d7721807bb4a9dcf2883d1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f12cff287b9a9c74b548a08d9a03f73869671fc1
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl 클래스
 이 클래스는 스톡 속성 값을 지원 하기 위한 메서드를 제공 합니다.  
@@ -191,7 +186,7 @@ class ATL_NO_VTABLE CStockPropImpl : public IDispatchImpl<InterfaceName, piid,
 |[putref_Picture](#putref_picture)|참조 횟수로 (아이콘, 비트맵 또는 메타 파일)를 표시 해야 할 그래픽의 그림 속성을 설정 하려면이 메서드를 호출 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CStockPropImpl`제공 **배치** 및 **가져오기** 각 스톡 속성에 대 한 메서드. 이러한 메서드는 각 속성에 연결 된 데이터 멤버를 가져오거나 설정 하 고 팀에 알리고 모든 속성이 변경 되 면 컨테이너와 동기화 하는 데 필요한 코드를 제공 합니다.  
+ `CStockPropImpl` 제공 **배치** 및 **가져오기** 각 스톡 속성에 대 한 메서드. 이러한 메서드는 각 속성에 연결 된 데이터 멤버를 가져오거나 설정 하 고 팀에 알리고 모든 속성이 변경 되 면 컨테이너와 동기화 하는 데 필요한 코드를 제공 합니다.  
   
  Visual c + + 마법사를 통해 스톡 속성에 대 한 지원을 제공합니다. 컨트롤에 스톡 속성을 추가 하는 방법에 대 한 자세한 내용은 참조는 [ATL 자습서](../../atl/active-template-library-atl-tutorial.md)합니다.  
   
@@ -217,7 +212,7 @@ class ATL_NO_VTABLE CStockPropImpl : public IDispatchImpl<InterfaceName, piid,
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlctl.h  
   
-##  <a name="get_appearance"></a>CStockPropImpl::get_Appearance  
+##  <a name="get_appearance"></a>  CStockPropImpl::get_Appearance  
  예를 들어, 단일 컨트롤에 의해 사용 되는 그리기 스타일 또는 3D를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -231,7 +226,7 @@ HRESULT STDMETHODCALLTYPE get_Appearance(SHORT pnAppearance);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_autosize"></a>CStockPropImpl::get_AutoSize  
+##  <a name="get_autosize"></a>  CStockPropImpl::get_AutoSize  
  컨트롤에 다른 크기 반드시 경우를 나타내는 플래그의 상태를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -245,7 +240,7 @@ HRESULT STDMETHODCALLTYPE get_Autosize(VARIANT_BOOL* pbAutoSize);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_backcolor"></a>CStockPropImpl::get_BackColor  
+##  <a name="get_backcolor"></a>  CStockPropImpl::get_BackColor  
  컨트롤의 배경색을 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -259,7 +254,7 @@ HRESULT STDMETHODCALLTYPE get_BackColor(OLE_COLOR* pclrBackColor);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_backstyle"></a>CStockPropImpl::get_BackStyle  
+##  <a name="get_backstyle"></a>  CStockPropImpl::get_BackStyle  
  컨트롤의 배경 스타일, 투명 또는 불투명를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -273,7 +268,7 @@ HRESULT STDMETHODCALLTYPE get_BackStyle(LONG* pnBackStyle);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_bordercolor"></a>CStockPropImpl::get_BorderColor  
+##  <a name="get_bordercolor"></a>  CStockPropImpl::get_BorderColor  
  컨트롤의 테두리 색을 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -287,7 +282,7 @@ HRESULT STDMETHODCALLTYPE get_BorderColor(OLE_COLOR* pclrBorderColor);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_borderstyle"></a>CStockPropImpl::get_BorderStyle  
+##  <a name="get_borderstyle"></a>  CStockPropImpl::get_BorderStyle  
  컨트롤의 테두리 스타일을 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -301,7 +296,7 @@ HRESULT STDMETHODCALLTYPE get_BorderStyle(LONG* pnBorderStyle);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_bordervisible"></a>CStockPropImpl::get_BorderVisible  
+##  <a name="get_bordervisible"></a>  CStockPropImpl::get_BorderVisible  
  컨트롤의 테두리 표시 인지 인지 여부를 나타내는 플래그의 상태를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -315,7 +310,7 @@ HRESULT STDMETHODCALLTYPE get_BorderVisible(VARIANT_BOOL* pbBorderVisible);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_borderwidth"></a>CStockPropImpl::get_BorderWidth  
+##  <a name="get_borderwidth"></a>  CStockPropImpl::get_BorderWidth  
  컨트롤의 테두리의 두께 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -329,7 +324,7 @@ HRESULT STDMETHODCALLTYPE get_BorderWidth(LONG* pnBorderWidth);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_caption"></a>CStockPropImpl::get_Caption  
+##  <a name="get_caption"></a>  CStockPropImpl::get_Caption  
  개체의 캡션에 지정 된 텍스트를 가져오기 위해이 메서드를 호출 합니다.  
   
 ```
@@ -343,7 +338,7 @@ HRESULT STDMETHODCALLTYPE get_Caption(BSTR* pbstrCaption);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_drawmode"></a>CStockPropImpl::get_DrawMode  
+##  <a name="get_drawmode"></a>  CStockPropImpl::get_DrawMode  
  컨트롤의 그리기 모드, 예를 들어, XOR 펜 또는 색 반전를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -357,7 +352,7 @@ HRESULT STDMETHODCALLTYPE get_DrawMode(LONG* pnDrawMode);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_drawstyle"></a>CStockPropImpl::get_DrawStyle  
+##  <a name="get_drawstyle"></a>  CStockPropImpl::get_DrawStyle  
  실선, 파선, 또는 점선 예를 들어, 컨트롤의 그리기 스타일을 가져오려면이 메서드를를 호출 합니다.  
   
 ```
@@ -371,7 +366,7 @@ HRESULT STDMETHODCALLTYPE get_DrawStyle(LONG* pnDrawStyle);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_drawwidth"></a>CStockPropImpl::get_DrawWidth  
+##  <a name="get_drawwidth"></a>  CStockPropImpl::get_DrawWidth  
  그리기 너비 (픽셀 단위) 컨트롤의 그리기 메서드에서 사용을 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -385,7 +380,7 @@ HRESULT STDMETHODCALLTYPE get_DrawWidth(LONG* pnDrawWidth);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_enabled"></a>CStockPropImpl::get_Enabled  
+##  <a name="get_enabled"></a>  CStockPropImpl::get_Enabled  
  컨트롤을 사용할 수 있는지 여부를 나타내는 플래그의 상태를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -399,7 +394,7 @@ HRESULT STDMETHODCALLTYPE get_Enabled(VARIANT_BOOL* pbEnabled);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_fillcolor"></a>CStockPropImpl::get_FillColor  
+##  <a name="get_fillcolor"></a>  CStockPropImpl::get_FillColor  
  컨트롤의 채우기 색을 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -413,7 +408,7 @@ HRESULT STDMETHODCALLTYPE get_FillColor(OLE_COLOR* pclrFillColor);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_fillstyle"></a>CStockPropImpl::get_FillStyle  
+##  <a name="get_fillstyle"></a>  CStockPropImpl::get_FillStyle  
  단색, 투명 또는 크로스해칭 예를 들어, 컨트롤의 채우기 스타일을 가져오려면이 메서드를를 호출 합니다.  
   
 ```
@@ -427,7 +422,7 @@ HRESULT STDMETHODCALLTYPE get_FillStyle(LONG* pnFillStyle);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_font"></a>CStockPropImpl::get_Font  
+##  <a name="get_font"></a>  CStockPropImpl::get_Font  
  컨트롤의 글꼴 속성에 대 한 포인터를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -441,7 +436,7 @@ HRESULT STDMETHODCALLTYPE get_Font(IFontDisp** ppFont);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_forecolor"></a>CStockPropImpl::get_ForeColor  
+##  <a name="get_forecolor"></a>  CStockPropImpl::get_ForeColor  
  컨트롤의 전경색을 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -455,7 +450,7 @@ HRESULT STDMETHODCALLTYPE get_ForeColor(OLE_COLOR* pclrForeColor);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_hwnd"></a>CStockPropImpl::get_HWND  
+##  <a name="get_hwnd"></a>  CStockPropImpl::get_HWND  
  컨트롤과 연결 된 창 핸들을 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -469,7 +464,7 @@ HRESULT STDMETHODCALLTYPE get_HWND(LONG_PTR* phWnd);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_mouseicon"></a>CStockPropImpl::get_MouseIcon  
+##  <a name="get_mouseicon"></a>  CStockPropImpl::get_MouseIcon  
  (아이콘, 비트맵 또는 메타 파일) 마우스가 컨트롤 위에 있을 때 표시할 그래픽의 그림 속성을 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -483,7 +478,7 @@ HRESULT STDMETHODCALLTYPE get_MouseIcon(IPictureDisp** ppPicture);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_mousepointer"></a>CStockPropImpl::get_MousePointer  
+##  <a name="get_mousepointer"></a>  CStockPropImpl::get_MousePointer  
  예를 들어 마우스가 컨트롤 위에 있을 때 표시 되는 마우스 포인터, 화살표, 교차, 또는 모래 시계의 형식을 가져오기 위해이 메서드를 호출 합니다.  
   
 ```
@@ -497,7 +492,7 @@ HRESULT STDMETHODCALLTYPE get_MousePointer(LONG* pnMousePointer);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_picture"></a>CStockPropImpl::get_Picture  
+##  <a name="get_picture"></a>  CStockPropImpl::get_Picture  
  (아이콘, 비트맵 또는 메타 파일)을 표시할 그래픽의 그림 속성에 대 한 포인터를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -511,7 +506,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_readystate"></a>CStockPropImpl::get_ReadyState  
+##  <a name="get_readystate"></a>  CStockPropImpl::get_ReadyState  
  로드 또는 언로드 예를 들어, 컨트롤의 준비 상태를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -525,7 +520,7 @@ HRESULT STDMETHODCALLTYPE get_ReadyState(LONG* pnReadyState);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_tabstop"></a>CStockPropImpl::get_TabStop  
+##  <a name="get_tabstop"></a>  CStockPropImpl::get_TabStop  
  컨트롤 탭은 인지 인지 여부를 나타내는 플래그의 상태를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -539,7 +534,7 @@ HRESULT STDMETHODCALLTYPE get_TabStop(VARIANT_BOOL* pbTabStop);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_text"></a>CStockPropImpl::get_Text  
+##  <a name="get_text"></a>  CStockPropImpl::get_Text  
  컨트롤에서 표시 되는 텍스트를 가져오기 위해이 메서드를 호출 합니다.  
   
 ```
@@ -553,7 +548,7 @@ HRESULT STDMETHODCALLTYPE get_Text(BSTR* pbstrText);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_valid"></a>CStockPropImpl::getvalid  
+##  <a name="get_valid"></a>  CStockPropImpl::getvalid  
  컨트롤은 유효한 여부를 나타내는 플래그의 상태를 가져오려면이 메서드를 호출 합니다.  
   
 ```
@@ -567,7 +562,7 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL* pbValid);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="get_window"></a>CStockPropImpl::get_Window  
+##  <a name="get_window"></a>  CStockPropImpl::get_Window  
  컨트롤과 연결 된 창 핸들을 가져오려면이 메서드를 호출 합니다. 동일 [CStockPropImpl::get_HWND](#get_hwnd)합니다.  
   
 ```
@@ -581,7 +576,7 @@ HRESULT STDMETHODCALLTYPE get_Window(LONG_PTR* phWnd);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_appearance"></a>CStockPropImpl::put_Appearance  
+##  <a name="put_appearance"></a>  CStockPropImpl::put_Appearance  
  예를 들어, 단일 컨트롤에 의해 사용 되는 그리기 스타일 또는 3D를 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -595,7 +590,7 @@ HRESULT STDMETHODCALLTYPE put_Appearance(SHORT nAppearance);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_autosize"></a>CStockPropImpl::put_AutoSize  
+##  <a name="put_autosize"></a>  CStockPropImpl::put_AutoSize  
  컨트롤에 다른 크기 반드시 경우를 나타내는 플래그의 값을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -609,7 +604,7 @@ HRESULT STDMETHODCALLTYPE put_AutoSize(VARIANT_BOOL bAutoSize,);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_backcolor"></a>CStockPropImpl::put_BackColor  
+##  <a name="put_backcolor"></a>  CStockPropImpl::put_BackColor  
  컨트롤의 배경색을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -623,7 +618,7 @@ HRESULT STDMETHODCALLTYPE put_BackColor(OLE_COLOR clrBackColor);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_backstyle"></a>CStockPropImpl::put_BackStyle  
+##  <a name="put_backstyle"></a>  CStockPropImpl::put_BackStyle  
  컨트롤의 배경 스타일을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -637,7 +632,7 @@ HRESULT STDMETHODCALLTYPE put_BackStyle(LONG nBackStyle);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_bordercolor"></a>CStockPropImpl::put_BorderColor  
+##  <a name="put_bordercolor"></a>  CStockPropImpl::put_BorderColor  
  컨트롤의 테두리 색을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -651,7 +646,7 @@ HRESULT STDMETHODCALLTYPE put_BorderColor(OLE_COLOR clrBorderColor);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_borderstyle"></a>CStockPropImpl::put_BorderStyle  
+##  <a name="put_borderstyle"></a>  CStockPropImpl::put_BorderStyle  
  컨트롤의 테두리 스타일을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -665,7 +660,7 @@ HRESULT STDMETHODCALLTYPE put_BorderStyle(LONG nBorderStyle);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_bordervisible"></a>CStockPropImpl::put_BorderVisible  
+##  <a name="put_bordervisible"></a>  CStockPropImpl::put_BorderVisible  
  컨트롤의 테두리 표시 인지 인지 여부를 나타내는 플래그의 값을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -679,7 +674,7 @@ HRESULT STDMETHODCALLTYPE put_BorderVisible(VARIANT_BOOL bBorderVisible);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_borderwidth"></a>CStockPropImpl::put_BorderWidth  
+##  <a name="put_borderwidth"></a>  CStockPropImpl::put_BorderWidth  
  컨트롤의 테두리의 두께 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -693,7 +688,7 @@ HRESULT STDMETHODCALLTYPE put_BorderWidth(LONG nBorderWidth);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_caption"></a>CStockPropImpl::put_Caption  
+##  <a name="put_caption"></a>  CStockPropImpl::put_Caption  
  컨트롤과 함께 표시 될 텍스트를 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -707,7 +702,7 @@ HRESULT STDMETHODCALLTYPE put_Caption(BSTR bstrCaption);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_drawmode"></a>CStockPropImpl::put_DrawMode  
+##  <a name="put_drawmode"></a>  CStockPropImpl::put_DrawMode  
  컨트롤의 그리기 모드, 예를 들어, XOR 펜 또는 색 반전를 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -721,7 +716,7 @@ HRESULT STDMETHODCALLTYPE put_DrawMode(LONG nDrawMode);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_drawstyle"></a>CStockPropImpl::put_DrawStyle  
+##  <a name="put_drawstyle"></a>  CStockPropImpl::put_DrawStyle  
  실선, 파선, 또는 점선 예를 들어, 컨트롤의 그리기 스타일을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -735,7 +730,7 @@ HRESULT STDMETHODCALLTYPE put_DrawStyle(LONG pnDrawStyle);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_drawwidth"></a>CStockPropImpl::put_DrawWidth  
+##  <a name="put_drawwidth"></a>  CStockPropImpl::put_DrawWidth  
  너비 (픽셀 단위) 컨트롤의 그리기 메서드에서 사용 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -749,7 +744,7 @@ HRESULT STDMETHODCALLTYPE put_DrawWidth(LONG nDrawWidth);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_enabled"></a>CStockPropImpl::put_Enabled  
+##  <a name="put_enabled"></a>  CStockPropImpl::put_Enabled  
  컨트롤을 사용할 수 있는지 여부를 나타내는 플래그의 값을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -763,7 +758,7 @@ HRESULT STDMETHODCALLTYPE put_Enabled(VARIANT_BOOL bEnabled);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_fillcolor"></a>CStockPropImpl::put_FillColor  
+##  <a name="put_fillcolor"></a>  CStockPropImpl::put_FillColor  
  컨트롤의 채우기 색을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -777,7 +772,7 @@ HRESULT STDMETHODCALLTYPE put_FillColor(OLE_COLOR clrFillColor);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_fillstyle"></a>CStockPropImpl::put_FillStyle  
+##  <a name="put_fillstyle"></a>  CStockPropImpl::put_FillStyle  
  단색, 투명 또는 교차 무늬 예를 들어, 컨트롤의 채우기 스타일을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -791,7 +786,7 @@ HRESULT STDMETHODCALLTYPE put_FillStyle(LONG nFillStyle);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_font"></a>CStockPropImpl::put_Font  
+##  <a name="put_font"></a>  CStockPropImpl::put_Font  
  컨트롤의 글꼴 속성을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -805,7 +800,7 @@ HRESULT STDMETHODCALLTYPE put_Font(IFontDisp* pFont);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_forecolor"></a>CStockPropImpl::put_ForeColor  
+##  <a name="put_forecolor"></a>  CStockPropImpl::put_ForeColor  
  컨트롤의 전경색을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -819,7 +814,7 @@ HRESULT STDMETHODCALLTYPE put_ForeColor(OLE_COLOR clrForeColor);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_hwnd"></a>CStockPropImpl::put_HWND  
+##  <a name="put_hwnd"></a>  CStockPropImpl::put_HWND  
  이 메서드는 E_FAIL을 반환합니다.  
   
 ```
@@ -827,7 +822,7 @@ HRESULT STDMETHODCALLTYPE put_HWND(LONG_PTR /* hWnd */);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- */\*hWnd\*/*  
+ */\* hWnd \*/*  
  예약됨.  
   
 ### <a name="return-value"></a>반환 값  
@@ -836,7 +831,7 @@ HRESULT STDMETHODCALLTYPE put_HWND(LONG_PTR /* hWnd */);
 ### <a name="remarks"></a>설명  
  창 핸들은 읽기 전용 값입니다.  
   
-##  <a name="put_mouseicon"></a>CStockPropImpl::put_MouseIcon  
+##  <a name="put_mouseicon"></a>  CStockPropImpl::put_MouseIcon  
  (아이콘, 비트맵 또는 메타 파일) 마우스가 컨트롤 위에 있을 때 표시할 그래픽의 그림 속성을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -850,7 +845,7 @@ HRESULT STDMETHODCALLTYPE put_MouseIcon(IPictureDisp* pPicture);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_mousepointer"></a>CStockPropImpl::put_MousePointer  
+##  <a name="put_mousepointer"></a>  CStockPropImpl::put_MousePointer  
  예를 들어 마우스가 컨트롤 위에 있을 때 표시 되는 마우스 포인터, 화살표, 교차, 또는 모래 시계의 유형을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -864,7 +859,7 @@ HRESULT STDMETHODCALLTYPE put_MousePointer(LONG nMousePointer);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_picture"></a>CStockPropImpl::put_Picture  
+##  <a name="put_picture"></a>  CStockPropImpl::put_Picture  
  (아이콘, 비트맵 또는 메타 파일)을 표시할 그래픽의 그림 속성을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -878,7 +873,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_readystate"></a>CStockPropImpl::put_ReadyState  
+##  <a name="put_readystate"></a>  CStockPropImpl::put_ReadyState  
  로드 또는 언로드 예를 들어, 컨트롤의 준비 상태를 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -892,7 +887,7 @@ HRESULT STDMETHODCALLTYPE put_ReadyState(LONG nReadyState);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_tabstop"></a>CStockPropImpl::put_TabStop  
+##  <a name="put_tabstop"></a>  CStockPropImpl::put_TabStop  
  컨트롤 탭은 인지 인지 여부를 나타내는 플래그를 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -906,7 +901,7 @@ HRESULT STDMETHODCALLTYPE put_TabStop(VARIANT_BOOL bTabStop);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_text"></a>CStockPropImpl::put_Text  
+##  <a name="put_text"></a>  CStockPropImpl::put_Text  
  컨트롤에서 표시 되는 텍스트를 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -920,7 +915,7 @@ HRESULT STDMETHODCALLTYPE put_Text(BSTR bstrText);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_valid"></a>CStockPropImpl::putvalid  
+##  <a name="put_valid"></a>  CStockPropImpl::putvalid  
  컨트롤은 유효한 여부를 나타내는 플래그를 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -934,7 +929,7 @@ HRESULT STDMETHODCALLTYPE getvalid(VARIANT_BOOL bValid);
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
-##  <a name="put_window"></a>CStockPropImpl::put_Window  
+##  <a name="put_window"></a>  CStockPropImpl::put_Window  
  이 메서드를 호출 [CStockPropImpl::put_HWND](#put_hwnd), E_FAIL을 반환 하는 합니다.  
   
 ```
@@ -951,7 +946,7 @@ HRESULT STDMETHODCALLTYPE put_Window(LONG_PTR hWnd);
 ### <a name="remarks"></a>설명  
  창 핸들은 읽기 전용 값입니다.  
   
-##  <a name="putref_font"></a>CStockPropImpl::putref_Font  
+##  <a name="putref_font"></a>  CStockPropImpl::putref_Font  
  참조 횟수를 사용 하 여 컨트롤의 글꼴 속성을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -968,7 +963,7 @@ HRESULT STDMETHODCALLTYPE putref_Font(IFontDisp* pFont);
 ### <a name="remarks"></a>설명  
  와 동일 하 게 [CStockPropImpl::put_Font](#put_font), 하지만 참조 횟수입니다.  
   
-##  <a name="putref_mouseicon"></a>CStockPropImpl::putref_MouseIcon  
+##  <a name="putref_mouseicon"></a>  CStockPropImpl::putref_MouseIcon  
  참조 횟수로 (아이콘, 비트맵 또는 메타 파일)를 컨트롤 위로 마우스를 가져갈 때 표시 될 그래픽의 그림 속성을 설정 하려면이 메서드를 호출 합니다.  
   
 ```
@@ -985,7 +980,7 @@ HRESULT STDMETHODCALLTYPE putref_MouseIcon(IPictureDisp* pPicture);
 ### <a name="remarks"></a>설명  
  와 동일 하 게 [CStockPropImpl::put_MouseIcon](#put_mouseicon), 하지만 참조 횟수입니다.  
   
-##  <a name="putref_picture"></a>CStockPropImpl::putref_Picture  
+##  <a name="putref_picture"></a>  CStockPropImpl::putref_Picture  
  참조 횟수로 (아이콘, 비트맵 또는 메타 파일)를 표시 해야 할 그래픽의 그림 속성을 설정 하려면이 메서드를 호출 합니다.  
   
 ```

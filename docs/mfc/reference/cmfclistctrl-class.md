@@ -1,12 +1,9 @@
 ---
-title: "CMFCListCtrl 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMFCListCtrl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMFCListCtrl
@@ -37,17 +34,15 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], SetSortColumn
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 770a1cec528355d6f7be7800ba1f77f2394bef79
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 495bf2a3eab9ceee4ca0bab337d590c1820905e8
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl 클래스
 `CMFCListCtrl` 클래스의 기능을 확장 [CListCtrl 클래스](../../mfc/reference/clistctrl-class.md) 의 고급 헤더 컨트롤 기능을 지원 하 여 클래스는 [CMFCHeaderCtrl 클래스](../../mfc/reference/cmfcheaderctrl-class.md)합니다.  
@@ -77,9 +72,9 @@ class CMFCListCtrl : public CListCtrl
 |[CMFCListCtrl::Sort](#sort)|목록 컨트롤을 정렬합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CMFCListCtrl`두 가지 기능이 향상 제공 [CListCtrl 클래스](../../mfc/reference/clistctrl-class.md) 클래스입니다. 첫째, 열 정렬을 머리글에 정렬 화살표를 자동으로 그려서 사용 가능한 옵션은 나타냅니다. 둘째, 동시에 여러 열에서 정렬 하는 데이터를 지원 합니다.  
+ `CMFCListCtrl` 두 가지 기능이 향상 제공 [CListCtrl 클래스](../../mfc/reference/clistctrl-class.md) 클래스입니다. 첫째, 열 정렬을 머리글에 정렬 화살표를 자동으로 그려서 사용 가능한 옵션은 나타냅니다. 둘째, 동시에 여러 열에서 정렬 하는 데이터를 지원 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `CMFCListCtrl` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 이 예제에는 목록 컨트롤을 만들려면, 삽입 열이, 항목을 삽입할 항목의 텍스트를 설정 및 목록 컨트롤의 글꼴 설정 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [Visual Studio 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#25](../../mfc/codesnippet/cpp/cmfclistctrl-class_1.h)]  
@@ -99,7 +94,7 @@ class CMFCListCtrl : public CListCtrl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxlistctrl.h  
   
-##  <a name="enablemarksortedcolumn"></a>CMFCListCtrl::EnableMarkSortedColumn  
+##  <a name="enablemarksortedcolumn"></a>  CMFCListCtrl::EnableMarkSortedColumn  
  다른 배경색으로 정렬 된 열을 표시합니다.  
   
 ```  
@@ -116,9 +111,9 @@ void EnableMarkSortedColumn(
  컨트롤을 즉시 다시 그리도록 여부를 결정 하는 부울 매개 변수입니다.  
   
 ### <a name="remarks"></a>설명  
- `EnableMarkSortedColumn`메서드를 사용 하 여 `CDrawingManager::PixelAlpha` 에 사용할 색을 계산 하려면 열을 정렬 합니다. 색 선택 일반 배경색을 기반으로 합니다.  
+ `EnableMarkSortedColumn` 메서드를 사용 하 여 `CDrawingManager::PixelAlpha` 에 사용할 색을 계산 하려면 열을 정렬 합니다. 색 선택 일반 배경색을 기반으로 합니다.  
   
-##  <a name="enablemultiplesort"></a>CMFCListCtrl::EnableMultipleSort  
+##  <a name="enablemultiplesort"></a>  CMFCListCtrl::EnableMultipleSort  
  여러 열 목록 컨트롤의 데이터 행을 정렬할 수 있습니다.  
   
 ```  
@@ -132,7 +127,7 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ### <a name="remarks"></a>설명  
  여러 열 기준 정렬을 사용 하는 경우는 열 계층 구조에 않았습니다. 데이터 행을 기본 열에 의해 먼저 정렬 됩니다. 그런 다음 해당 하는 모든 값 우선 순위에 따라 각 후속 열 정렬 됩니다.  
   
-##  <a name="getheaderctrl"></a>CMFCListCtrl::GetHeaderCtrl  
+##  <a name="getheaderctrl"></a>  CMFCListCtrl::GetHeaderCtrl  
  헤더 컨트롤에 대 한 참조를 반환합니다.  
   
 ```  
@@ -145,7 +140,7 @@ virtual CMFCHeaderCtrl& GetHeaderCtrl();
 ### <a name="remarks"></a>설명  
  목록 컨트롤에 대 한 헤더 컨트롤에 열 제목을 포함 하는 창입니다. 일반적으로 열 바로 위에 배치 될 것입니다.  
   
-##  <a name="ismultiplesort"></a>CMFCListCtrl::IsMultipleSort  
+##  <a name="ismultiplesort"></a>  CMFCListCtrl::IsMultipleSort  
  목록 컨트롤의 현재에서 정렬을 지원 하는지를 여러 열에 확인 합니다.  
   
 ```  
@@ -153,12 +148,12 @@ BOOL IsMultipleSort() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`목록 컨트롤에 여러 정렬; 지 원하는 경우 `FALSE` 그렇지 않은 경우.  
+ `TRUE` 목록 컨트롤에 여러 정렬; 지 원하는 경우 `FALSE` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
  경우는 [CMFCListCtrl 클래스](../../mfc/reference/cmfclistctrl-class.md) 여러 정렬을 지원 사용자 여러 열 목록 컨트롤의 데이터를 정렬할 수 있습니다. 여러 정렬 기능을 사용 하려면 호출 [CMFCListCtrl::EnableMultipleSort](#enablemultiplesort)합니다.  
   
-##  <a name="oncompareitems"></a>CMFCListCtrl::OnCompareItems  
+##  <a name="oncompareitems"></a>  CMFCListCtrl::OnCompareItems  
  두 항목을 비교할 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -184,7 +179,7 @@ virtual int OnCompareItems(
 ### <a name="remarks"></a>설명  
  기본 구현에서는 항상 0을 반환합니다. 정렬 알고리즘을 제공 하려면이 함수를 재정의 해야 합니다.  
   
-##  <a name="ongetcellbkcolor"></a>CMFCListCtrl::OnGetCellBkColor  
+##  <a name="ongetcellbkcolor"></a>  CMFCListCtrl::OnGetCellBkColor  
  개별 셀의 배경색을 결정 해야 할 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -206,7 +201,7 @@ virtual COLORREF OnGetCellBkColor(
 ### <a name="remarks"></a>설명  
  기본 구현은 `OnGetCellBkColor` 제공된 된 입력된 매개 변수를 사용 하지 않고 대신 단순히 호출 `GetBkColor`합니다. 따라서 기본적으로 전체 목록 컨트롤에는 동일한 배경색을 갖게 됩니다. 재정의할 수 `OnGetCellBkColor` 별도 배경색으로 개별 셀을 표시 하는 파생된 클래스에서 합니다.  
   
-##  <a name="ongetcellfont"></a>CMFCListCtrl::OnGetCellFont  
+##  <a name="ongetcellfont"></a>  CMFCListCtrl::OnGetCellFont  
  프레임 워크는 개별 셀에 대 한 글꼴 얻을 경우이 메서드를 호출 합니다.  
   
 ```  
@@ -232,7 +227,7 @@ virtual HFONT OnGetCellFont(
 ### <a name="remarks"></a>설명  
  기본적으로이 메서드는 다음과 같이 반환 됩니다. `NULL`합니다. 목록 컨트롤에서 셀을 모두 같은 글꼴이 있어야 합니다. 서로 다른 셀에 대 한 다양 한 글꼴을 제공 하기 위해이 메서드를 재정의 합니다.  
   
-##  <a name="ongetcelltextcolor"></a>CMFCListCtrl::OnGetCellTextColor  
+##  <a name="ongetcelltextcolor"></a>  CMFCListCtrl::OnGetCellTextColor  
  개별 셀의 텍스트 색을 결정 해야 할 때 프레임 워크에서이 메서드를 호출 합니다.  
   
 ```  
@@ -254,7 +249,7 @@ virtual COLORREF OnGetCellTextColor(
 ### <a name="remarks"></a>설명  
  기본적으로이 메서드를 호출 `GetTextColor` 입력된 매개 변수에 관계 없이 합니다. 목록 전체 컨트롤 같은 텍스트 색을 갖게 됩니다. 재정의할 수 `OnGetCellTextColor` 개별 셀을 별도 텍스트 색을 표시 하는 파생된 클래스에서 합니다.  
   
-##  <a name="removesortcolumn"></a>CMFCListCtrl::RemoveSortColumn  
+##  <a name="removesortcolumn"></a>  CMFCListCtrl::RemoveSortColumn  
  정렬 된 열 목록에서 정렬 열을 제거합니다.  
   
 ```  
@@ -268,7 +263,7 @@ void RemoveSortColumn(int iColumn);
 ### <a name="remarks"></a>설명  
  이 메서드는 헤더 컨트롤에서 정렬 열을 제거합니다. 호출 [CMFCHeaderCtrl::RemoveSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#removesortcolumn)합니다.  
   
-##  <a name="setsortcolumn"></a>CMFCListCtrl::SetSortColumn  
+##  <a name="setsortcolumn"></a>  CMFCListCtrl::SetSortColumn  
  현재 정렬 된 열 및 정렬 순서를 설정합니다.  
   
 ```  
@@ -291,7 +286,7 @@ void SetSortColumn(
 ### <a name="remarks"></a>설명  
  이 메서드는 메서드를 사용 하 여 헤더 컨트롤에 입력된 매개 변수를 전달 [CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn)합니다.  
   
-##  <a name="sort"></a>CMFCListCtrl::Sort  
+##  <a name="sort"></a>  CMFCListCtrl::Sort  
  목록 컨트롤을 정렬합니다.  
   
 ```  

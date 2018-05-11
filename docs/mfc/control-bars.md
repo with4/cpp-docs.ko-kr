@@ -1,13 +1,10 @@
 ---
-title: "컨트롤 막대 | Microsoft Docs"
-ms.custom: 
+title: 컨트롤 막대 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - CToolBar class [MFC], control bars
 - CStatusBar class [MFC], control bars
 ms.assetid: 31831910-3d23-4d70-9e71-03cc02f01ec4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3550043e5b85247d4188c830873099c6ea9831a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bd25089594d31de21a3a315d997ee01111aff4fd
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="control-bars"></a>컨트롤 막대
 "컨트롤 막대"에 도구 모음, 상태 표시줄 및 대화 상자 모음에 대 한 일반 이름입니다. MFC 클래스 `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, 및 **CReBar** 클래스에서 파생 [CControlBar](../mfc/reference/ccontrolbar-class.md), 공통 기능을 구현 하는입니다.  
@@ -54,7 +49,7 @@ ms.lasthandoff: 12/21/2017
  컨트롤 막대의 종류에 대 한 간략 한 소개를 수행 합니다. 자세한 내용은 아래 링크를 참조 하세요.  
   
 ## <a name="control-bars"></a>컨트롤 막대  
- 컨트롤 막대 빠른, 1 단계 명령 동작을 제공 하 여 프로그램의 사용 편의성을 크게 향상 합니다. 클래스 `CControlBar` 모든 도구 모음, 상태 표시줄 및 대화 상자 막대의 공통 기능을 제공 합니다. `CControlBar`부모 프레임 창에서 컨트롤 막대 위치를 지정 하는 기능을 제공 합니다. 컨트롤 막대는 일반적으로 부모 프레임 창의 자식 창, 되므로 클라이언트 보기 또는 프레임 창의 MDI 클라이언트에 "형제" 합니다. 컨트롤 막대 개체 자체를 배치 하는 부모 창의 클라이언트 영역에 대 한 정보를 사용 합니다. 그런 다음 클라이언트 보기 또는 MDI 클라이언트 창을 전체 클라이언트 창의 나머지 되도록 부모의 나머지 클라이언트 창 영역을 변경 합니다.  
+ 컨트롤 막대 빠른, 1 단계 명령 동작을 제공 하 여 프로그램의 사용 편의성을 크게 향상 합니다. 클래스 `CControlBar` 모든 도구 모음, 상태 표시줄 및 대화 상자 막대의 공통 기능을 제공 합니다. `CControlBar` 부모 프레임 창에서 컨트롤 막대 위치를 지정 하는 기능을 제공 합니다. 컨트롤 막대는 일반적으로 부모 프레임 창의 자식 창, 되므로 클라이언트 보기 또는 프레임 창의 MDI 클라이언트에 "형제" 합니다. 컨트롤 막대 개체 자체를 배치 하는 부모 창의 클라이언트 영역에 대 한 정보를 사용 합니다. 그런 다음 클라이언트 보기 또는 MDI 클라이언트 창을 전체 클라이언트 창의 나머지 되도록 부모의 나머지 클라이언트 창 영역을 변경 합니다.  
   
 > [!NOTE]
 >  컨트롤 막대의 단추에 없는 경우는 **명령** 또는 **UPDATE_COMMAND_UI** 처리기 프레임 워크에서 단추를 자동으로 비활성화 합니다.  

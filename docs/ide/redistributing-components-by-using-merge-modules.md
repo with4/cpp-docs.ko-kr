@@ -1,30 +1,25 @@
 ---
-title: "병합 모듈을 사용 하 여 구성 요소 재배포 | Microsoft Docs"
-ms.custom: 
+title: 병합 모듈을 사용 하 여 구성 요소 재배포 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - merge modules, using
 - redistributing applications, using merge modules
 ms.assetid: 93b84211-bf9b-4a78-9f22-474ac2ef7840
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 093c732563844b14a3f99662150d4db9b2fac1fb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6d95b6d2a69b4b40c4464136dd33a8c5231185f5
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="redistributing-components-by-using-merge-modules"></a>병합 모듈을 사용하여 구성 요소 재배포
 Visual Studio에 포함 되어 [병합 모듈](http://msdn.microsoft.com/library/aa367434) 응용 프로그램과 함께 재배포할 수 허가 된 사용자는 각 Visual c + + 구성 요소에 대 한 합니다. 병합 모듈이 Windows Installer 설치 파일에서 컴파일되면 특정 플랫폼이 있는 컴퓨터에 특정 DLL을 배포할 수 있습니다. 설치 파일에서 병합 모듈을 응용 프로그램의 필수 구성 요소로 지정합니다. 병합 모듈이 files\common Files\Merge 모듈 설치 된 Visual Studio가 설치 된 경우\\합니다. (Visual c + + Dll의 디버그가 아닌 버전에만 재배포할 수 있습니다.) 자세한 내용 및 재배포에 대 한 라이선스가 있는 병합 모듈의 목록에 대 한 링크에 대 한 참조 [Visual c + + 파일 재배포](../ide/redistributing-visual-cpp-files.md)합니다.  

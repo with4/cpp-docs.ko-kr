@@ -1,12 +1,9 @@
 ---
 title: 'multimap:: multimap (STL/CLR) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::multimap::multimap
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - multimap member [STL/CLR]
 ms.assetid: cdf9c5dc-774c-424e-aeea-7554643e401c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6ab4f50af1a7fd161ec192890fb7be3134ad4c72
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 84d0243ca39aae230f3cfe42d53fdf33d48b7314
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="multimapmultimap-stlclr"></a>multimap::multimap(STL/CLR)
 컨테이너 개체를 만듭니다.  
@@ -110,7 +105,7 @@ multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
   
  열거자에 지정 된 시퀀스와 제어 된 시퀀스를 초기화 `right`, 정렬 조건부와 함께 `pred`합니다. 제어 되는 시퀀스에서 지정 된 정렬 조건부와 함께 열거자를 설명 하는 다른 시퀀스의 복사본 수 있도록 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```cpp  
 // cliext_multimap_construct.cpp   

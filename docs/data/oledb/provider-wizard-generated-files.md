@@ -1,30 +1,25 @@
 ---
-title: "공급자 마법사가 생성 하는 파일 | Microsoft Docs"
-ms.custom: 
+title: 공급자 마법사가 생성 하는 파일 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 ms.assetid: 6e1ac94b-eb90-4abf-82b3-06944b947ebc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9cfcce4242cf985b8ffa50b9df234d609cfe7f3f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: ac23f06bf1ae697ecd627d493aa5902219488138
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="provider-wizard-generated-files"></a>공급자 마법사가 생성하는 파일
 ATL OLE DB 공급자 마법사는 다음 파일을 생성 합니다. 다음 항목에서는 "MyProvider" 짧은 이름을 사용 하지만 정확한 파일 이름을 이름 공급자를 만들 때에 따라 다릅니다.  

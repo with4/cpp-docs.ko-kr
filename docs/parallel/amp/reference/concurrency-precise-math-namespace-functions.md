@@ -1,10 +1,7 @@
 ---
-title: "Concurrency:: precise_math 네임 스페이스 함수 | Microsoft Docs"
-ms.custom: 
+title: 'Concurrency:: precise_math 네임 스페이스 함수 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::precise_math::acos
@@ -97,17 +94,15 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1d329e13d686e7f378646105b4bcaed2dbb3a3a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 31648a07ff09ba5babebda06407ccade6a5d8fad
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Concurrency:: precise_math 네임 스페이스 함수
 ||||  
@@ -752,7 +747,7 @@ inline double expm1(double exponent) restrict(amp);
   
 ### <a name="parameters"></a>매개 변수  
  `exponent`  
- 지 수 용어  *n*  수학 표현식의 `e` <sup> n </sup>여기서 `e` 는 자연 로그의 기본 인터페이스입니다.  
+ 지 수 용어 *n* 수학 표현식의 `e` <sup>n</sup>여기서 `e` 는 자연 로그의 기본 인터페이스입니다.  
   
 ### <a name="return-value"></a>반환 값  
  인수의 밑이 e인 지수 값 - 1을 반환합니다.  
@@ -766,7 +761,7 @@ inline float expm1f(float exponent) restrict(amp);
   
 ### <a name="parameters"></a>매개 변수  
  `exponent`  
- 지 수 용어  *n*  수학 표현식의 `e` <sup> n </sup>여기서 `e` 는 자연 로그의 기본 인터페이스입니다.  
+ 지 수 용어 *n* 수학 표현식의 `e` <sup>n</sup>여기서 `e` 는 자연 로그의 기본 인터페이스입니다.  
   
 ### <a name="return-value"></a>반환 값  
  인수의 밑이 e인 지수 값 - 1을 반환합니다.  
@@ -1076,7 +1071,7 @@ inline double fmod(
  두 번째 부동 소수점 인수입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 나머지 부분에서는 `_X` 나눈 `_Y`;의 값 즉, `_X`  -  `_Y`  *n* 여기서  *n*  되는 정수 되도록의 크기가 `_X`  -  `_Y`  *n*  의 크기 보다 작으면 `_Y`합니다.  
+ 나머지 부분에서는 `_X` 나눈 `_Y`;의 값 즉, `_X`  -  `_Y` *n*여기서 *n* 는 정수 되도록의 크기 `_X`  -  `_Y` *n* 의 크기 보다 작으면 `_Y`합니다.  
   
 ##  <a name="fmodf"></a>  fmodf  
  첫 번째 지정 된 인수 두 번째는 지정 된 인수를 나눈 나머지를 계산 합니다.  
@@ -1095,7 +1090,7 @@ inline float fmodf(
  두 번째 부동 소수점 인수입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 나머지 부분에서는 `_X` 나눈 `_Y`;의 값 즉, `_X`  -  `_Y`  *n* 여기서  *n*  되는 정수 되도록의 크기가 `_X`  -  `_Y`  *n*  의 크기 보다 작으면 `_Y`합니다.  
+ 나머지 부분에서는 `_X` 나눈 `_Y`;의 값 즉, `_X`  -  `_Y` *n*여기서 *n* 는 정수 되도록의 크기 `_X`  -  `_Y` *n* 의 크기 보다 작으면 `_Y`합니다.  
   
 ##  <a name="fpclassify"></a>  fpclassify  
  인수 값을 NaN, infinite, normal, subnormal, 0으로 분류합니다.  

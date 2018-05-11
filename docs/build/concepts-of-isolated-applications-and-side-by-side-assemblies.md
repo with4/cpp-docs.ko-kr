@@ -1,30 +1,25 @@
 ---
-title: "격리 된 응용 프로그램 및 side-by-side-어셈블리의 개념 | Microsoft Docs"
-ms.custom: 
+title: 격리 된 응용 프로그램 및 side-by-side-어셈블리의 개념 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - side-by-side assemblies [C++]
 - isolated assemblies [C++]
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9166f62c51344cc9c620da34d9c6fcee4665f400
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 095737bf4684f4ba9ed58483bca664f734d1a534
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>격리된 응용 프로그램 및 side-by-side 어셈블리 개념
 응용 프로그램의 모든 구성 요소가 [side-by-side 어셈블리](http://msdn.microsoft.com/library/aa375190) 인 경우 해당 응용 프로그램은 [격리된 응용 프로그램](http://msdn.microsoft.com/library/ff951640)으로 간주됩니다. side-by-side 어셈블리는 DLL 그룹, Windows 클래스, COM 서버, 형식 라이브러리 또는 인터페이스 같이 함께 배포되고 런타임에 실행할 응용 프로그램에 사용할 수 있는 리소스의 컬렉션입니다. 일반적으로 side-by-side 어셈블리는 여러 DLL 중 하나입니다.  

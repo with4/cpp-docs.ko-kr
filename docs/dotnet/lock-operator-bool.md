@@ -2,11 +2,8 @@
 title: lock::operator bool | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: ''
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - operator bool
@@ -19,18 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - lock::operator bool
 ms.assetid: 007f0372-f812-4f1e-ba43-2584bd96eb11
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1156576abd9a8fe98270ee6a8edb864793d127fa
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a68093ce1bca76d685a6809b8c2a612acaca9d7e
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="lockoperator-bool"></a>lock::operator bool
 사용 하 여에 대 한 연산자 `lock` 조건식에서입니다.  
@@ -42,12 +37,12 @@ operator bool();
 ```  
   
 ## <a name="return-value"></a>반환 값  
- `true`잠금이 유지 되는 경우 `false` 그렇지 않은 경우.  
+ `true` 잠금이 유지 되는 경우 `false` 그렇지 않은 경우.  
   
 ## <a name="remarks"></a>설명  
  이 연산자를 실제로 변환 `_detail_class::_safe_bool` 보다 더 안전 하 게 되 `bool` 정수 계열 형식으로 변환할 수 없기 때문입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 여러 스레드 간에 클래스의 단일 인스턴스를 사용 합니다.  클래스를 사용 하 여 잠금을 자체에서 내부 데이터에 대 한 액세스가 각 스레드에 대해 일관적인 지 확인 합니다.  기본 응용 프로그램 스레드는 주기적으로 확인 하는 경우 모든 작업자 스레드 여전히 존재 하며, 해당 작업을 완료 될 때까지 모든 작업자 스레드가 끝나기를 대기 하는 클래스의 동일한 인스턴스에 잠금을 사용 합니다.  
   
 ```  

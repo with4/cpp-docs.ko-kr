@@ -1,13 +1,10 @@
 ---
-title: "병렬 패턴 라이브러리의 유용한 | Microsoft Docs"
-ms.custom: 
+title: 병렬 패턴 라이브러리의 유용한 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - best practices, Parallel Patterns Library
 - Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40629b25ebcc954ac19389fbc0abb3aef6e9374a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ce3a4745b52c518484d14eafd483625eed2a0da
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>병렬 패턴 라이브러리의 유용한 정보
 이 문서에서는 PPL(병렬 패턴 라이브러리)을 효율적으로 사용하는 방법을 설명합니다. PPL은 세부적인 병렬 처리를 수행하기 위한 범용 컨테이너, 개체 및 알고리즘을 제공합니다.  
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 - [변수는 작업의 수명 내내 유효한 지 확인](#lifetime)  
   
-##  <a name="small-loops"></a>작은 루프 본문을 평행 화하지 않음  
+##  <a name="small-loops"></a> 작은 루프 본문을 평행 화하지 않음  
  비교적 작은 루프 본문을 평행화하면 관련된 예약 오버헤드가 병렬 처리의 이점보다 더 커질 수 있습니다. 두 배열에 각 요소 쌍을 추가하는 다음 예제를 고려해 보세요.  
   
  [!code-cpp[concrt-small-loops#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_1.cpp)]  
@@ -65,7 +60,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="highest"></a>가능한 가장 높은 수준의 빠른 병렬 처리  
+##  <a name="highest"></a> 가능한 가장 높은 수준의 빠른 병렬 처리  
  낮은 수준에서만 코드를 병렬 처리하는 경우 프로세서 수가 증가할 때 크기가 조정되지 않는 분기-조인 구문이 도입될 수 있습니다. A *분기-조인* 구문은 있는 하나 이상의 태스크 작업으로 더 작은 병렬 하위 나누고 하위 작업이 완료 될 때까지 대기 합니다. 각 하위 작업은 재귀적으로 추가 하위 작업으로 나뉠 수 있습니다.  
   
  분기-조인 모델은 다양한 문제를 해결하는 데 유용할 수 있지만 동기화 오버헤드로 인해 확장성이 감소하는 경우도 있습니다. 예를 들어 이미지 데이터를 처리하는 다음 직렬 코드를 고려해 보세요.  
@@ -92,7 +87,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="divide-and-conquer"></a>Parallel_invoke 계산 및 정복 나누기 문제를 사용 하 여  
+##  <a name="divide-and-conquer"></a> Parallel_invoke 계산 및 정복 나누기 문제를 사용 하 여  
 
  A *나누기 및 정복* 문제는 재귀를 사용 하 여 작업을 하위 작업으로 나누는 분기-조인 구문의 한 형태입니다. 이외에 [concurrency:: task_group](reference/task-group-class.md) 및 [concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) 클래스를 사용할 수도 있습니다는 [concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) 알고리즘을 및 정복 나누기 문제를 해결 합니다. `parallel_invoke` 알고리즘은 작업 그룹 개체보다 구문이 더 간결하며 고정된 개수의 병렬 작업이 있는 경우에 유용합니다.  
   
@@ -106,7 +101,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="breaking-loops"></a>취소 또는 예외 처리를 중단 병렬 루프에서를 사용 하 여  
+##  <a name="breaking-loops"></a> 취소 또는 예외 처리를 중단 병렬 루프에서를 사용 하 여  
  PPL은 작업 그룹 또는 병렬 알고리즘에서 수행하는 병렬 작업을 취소하는 두 가지 방법을 제공합니다. 제공 되는 취소 메커니즘을 사용 하는 한 가지 방법은 것은 [concurrency:: task_group](reference/task-group-class.md) 및 [concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) 클래스입니다. 다른 방법은 작업 함수의 본문에서 예외를 발생시키는 것입니다. 병렬 작업 트리를 취소하는 경우 취소 메커니즘이 예외 처리보다 더 효율적입니다. A *병렬 작업 트리* 는 일부 작업 그룹이 다른 작업 그룹을 포함 하는 관련된 작업 그룹의 그룹입니다. 취소 메커니즘은 하향식으로 작업 그룹 및 자식 작업 그룹을 취소합니다. 반대로 예외 처리는 상향식으로 작동하고 예외가 위쪽으로 전파될 때 각 자식 작업 그룹을 개별적으로 취소해야 합니다.  
   
 
@@ -132,7 +127,7 @@ ms.lasthandoff: 12/21/2017
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="object-destruction"></a>이해 취소 및 예외 처리가 개체 소멸에 미치는 영향  
+##  <a name="object-destruction"></a> 이해 취소 및 예외 처리가 개체 소멸에 미치는 영향  
  병렬 작업 트리에서 취소된 작업은 자식 작업이 실행되지 않도록 합니다. 따라서 자식 작업 중 하나가 리소스 해제와 같이 응용 프로그램에 중요한 작업을 수행하는 경우 문제가 발생할 수 있습니다. 또한 작업 취소로 인해 예외가 개체 소멸자를 통해 전파되고 응용 프로그램에서 정의되지 않은 동작이 발생할 수 있습니다.  
   
  다음 예제에서 `Resource` 클래스는 리소스를 설명하고 `Container` 클래스는 리소스를 보유하는 컨테이너를 설명합니다. 해당 소멸자에서 `Container` 클래스는 `Resource` 멤버 중 두 개에서 `cleanup` 메서드를 병렬로 호출한 다음 세 번째 `Resource` 멤버에서 `cleanup` 메서드를 호출합니다.  
@@ -162,7 +157,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="repeated-blocking"></a>병렬 루프에서 반복적으로 차단 되지 않음  
+##  <a name="repeated-blocking"></a> 병렬 루프에서 반복적으로 차단 되지 않음  
 
  와 같은 병렬 루프 [concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for) 또는 [concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) 차단 하 여 우위를 차지 하 작업 경우 짧은 시간 동안 많은 스레드를 만들를 런타임에 발생할 수 있습니다.  
 
@@ -179,7 +174,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="blocking"></a>병렬 작업을 취소 하는 경우 차단 작업을 수행 하지 않습니다  
+##  <a name="blocking"></a> 병렬 작업을 취소 하는 경우 차단 작업을 수행 하지 않습니다  
 
  가능한 경우 작업 수행 하지 않는 차단 호출 하기 전에 [concurrency::task_group::cancel](reference/task-group-class.md#cancel) 또는 [concurrency::structured_task_group::cancel](reference/structured-task-group-class.md#cancel) 병렬 작업을 취소 하는 메서드.  
 
@@ -203,7 +198,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="shared-writes"></a>병렬 루프에서 공유 데이터에 쓰지 마십시오.  
+##  <a name="shared-writes"></a> 병렬 루프에서 공유 데이터에 쓰지 마십시오.  
  동시성 런타임은 예를 들어 몇 가지 데이터 구조를 제공 [concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md), 공유 데이터에 대 한 동시 액세스를 동기화 하는 합니다. 이러한 데이터 구조는 여러 작업이 가끔 리소스에 대한 공유 액세스를 요구하는 경우 등 여러 경우에서 유용합니다.  
   
  예를 들어 다음을 사용 하는 [concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) 알고리즘 및 `critical_section` 개체에서 소수의 수를 계산 하는 [std:: array](../../standard-library/array-class-stl.md) 개체입니다. 이 예제는 각 스레드가 공유 변수 `prime_sum`에 액세스하기 위해 대기해야 하므로 크기가 조정되지 않습니다.  
@@ -224,7 +219,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="false-sharing"></a>가능한 경우 거짓 공유 방지  
+##  <a name="false-sharing"></a> 가능한 경우 거짓 공유 방지  
  *거짓 공유* 별도 프로세서에서 실행 되는 여러 동시 작업이 동일한 캐시 라인에 있는 변수에 쓸 때 발생 합니다. 한 작업이 변수 중 하나에 쓰는 경우 두 변수에 대한 캐시 라인이 모두 무효화됩니다. 캐시 라인이 무효화될 때마다 각 프로세서가 캐시 라인을 다시 로드해야 합니다. 따라서 거짓 공유로 인해 응용 프로그램 성능이 저하될 수 있습니다.  
   
  다음 기본 예제에서는 각각 공유 카운터 변수를 증가시키는 두 개의 동시 작업을 보여 줍니다.  
@@ -245,7 +240,7 @@ Container 1: Freeing resources...Exiting program...
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="lifetime"></a>변수는 작업의 수명 내내 유효한 지 확인  
+##  <a name="lifetime"></a> 변수는 작업의 수명 내내 유효한 지 확인  
  작업 그룹 또는 병렬 알고리즘에 람다 식을 제공하는 경우 캡처 절은 람다 식의 본문이 값이나 참조로 바깥쪽 범위의 변수에 액세스하는지를 지정합니다. 변수를 참조로 람다 식에 전달하는 경우 작업이 완료될 때까지 해당 변수의 수명이 유지되도록 보장해야 합니다.  
   
  `object` 클래스 및 `perform_action` 함수를 정의하는 다음 예제를 고려해 보세요. `perform_action` 함수는 `object` 변수를 만들고 해당 변수에 대해 비동기적으로 일부 작업을 수행합니다. `perform_action` 함수가 반환되기 전에 작업이 완료되도록 보장되지 않으므로 작업을 실행 중일 때 `object` 변수가 삭제되면 프로그램 작동이 중단되거나 지정되지 않은 동작이 나타납니다.  

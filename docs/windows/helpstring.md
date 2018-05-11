@@ -1,13 +1,10 @@
 ---
 title: helpstring | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.helpstring
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f3df545f5d87d36c26d999dc3a5fbee8720830c6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 81a3e45c5636fd193b7880e093711b5cc584bf99
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="helpstring"></a>helpstring
 적용 되는 요소에 설명 하는 데 사용 되는 문자열을 지정 합니다.  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  **helpstring** c + + 특성에 동일한 기능을는 [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) MIDL 특성입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  예를 참조 [defaultvalue](../windows/defaultvalue.md) 사용 하는 방법의 예 **helpstring**합니다.  
   
 ## <a name="requirements"></a>요구 사항  

@@ -1,12 +1,9 @@
 ---
-title: "__alignof 연산자 | Microsoft Docs"
-ms.custom: 
+title: __alignof 연산자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - alignas_cpp
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - alignof [C++]
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faceca31928d9c49f3c1cf5b933a65767ece7453
-ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
+ms.openlocfilehash: 061557b4d017254584e8ddc3da0127f02d352720
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alignof-operator"></a>__alignof 연산자
 C++11에서는 지정된 형식의 맞춤(바이트)을 반환하는 `alignof` 연산자를 소개합니다. 최대 이식성을 제공하려면 Microsoft 전용 __alignof 연산자가 아닌 alignof 연산자를 사용해야 합니다.  
@@ -47,17 +42,17 @@ C++11에서는 지정된 형식의 맞춤(바이트)을 반환하는 `alignof` �
 ```  
   
 ## <a name="remarks"></a>설명  
- 예:  
+ 예를 들어:  
   
 |식|값|  
 |----------------|-----------|  
-|**__alignof( char )**|1|  
-|**__alignof( short )**|2|  
-|**__alignof( int )**|4|  
+|**__alignof (char)**|1|  
+|**__alignof (short)**|2|  
+|**__alignof (int)**|4|  
 |**__alignof( \__int64 )**|8|  
-|**__alignof( float )**|4|  
+|**__alignof (float)**|4|  
 |**__alignof (double)**|8|  
-|**__alignof( char\* )**|4|  
+|**__alignof (char\* )**|4|  
   
  `__alignof` 값은 기본 유형에 대해 `sizeof`의 값과 동일합니다. 그러나 다음과 같은 예제를 고려해야 합니다.  
   

@@ -1,12 +1,9 @@
 ---
-title: "CMDIFrameWnd 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMDIFrameWnd 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMDIFrameWnd
@@ -43,17 +40,15 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc40ac38d4f74848448b26284ad225faad04864e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 7bb9f87ed5ae3027e7743a36c2484017d6381f95
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd 클래스
 창 관리 멤버와 함께 Windows MDI(다중 문서 인터페이스) 프레임 창 기능을 제공합니다.  
@@ -99,7 +94,7 @@ class CMDIFrameWnd : public CFrameWnd
   
  사용 하 여는 **만들기** 같이 즉시 인수 프레임의 생성 매개 변수를 전달 하는 멤버 함수입니다.  
   
- `LoadFrame`보다 적은 인수를 사용 해야 **만들기**, 대신 프레임의 캡션, 아이콘, 액셀러레이터 키 테이블 및 메뉴를 포함 하 여 리소스에서 대부분의 해당 기본 값을 검색 합니다. 에 액세스 하 여 `LoadFrame`, 이러한 모든 리소스에는 동일한 리소스 ID를 사용 해야 합니다. (예를 들어 **IDR_MAINFRAME**).  
+ `LoadFrame` 보다 적은 인수를 사용 해야 **만들기**, 대신 프레임의 캡션, 아이콘, 액셀러레이터 키 테이블 및 메뉴를 포함 하 여 리소스에서 대부분의 해당 기본 값을 검색 합니다. 에 액세스 하 여 `LoadFrame`, 이러한 모든 리소스에는 동일한 리소스 ID를 사용 해야 합니다. (예를 들어 **IDR_MAINFRAME**).  
   
  하지만 **MDIFrameWnd** 에서 파생 된 `CFrameWnd`, 프레임 창 클래스에서 파생 된 `CMDIFrameWnd` 로 선언 되지 필요 `DECLARE_DYNCREATE`합니다.  
   
@@ -141,7 +136,7 @@ class CMDIFrameWnd : public CFrameWnd
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-##  <a name="cmdiframewnd"></a>CMDIFrameWnd::CMDIFrameWnd  
+##  <a name="cmdiframewnd"></a>  CMDIFrameWnd::CMDIFrameWnd  
  `CMDIFrameWnd` 개체를 생성합니다.  
   
 ```  
@@ -151,10 +146,10 @@ CMDIFrameWnd();
 ### <a name="remarks"></a>설명  
  호출 된 **만들기** 또는 `LoadFrame` 멤버 함수를 표시 하는 MDI 프레임 창을 만듭니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#13](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_1.cpp)]  
   
-##  <a name="createclient"></a>CMDIFrameWnd::CreateClient  
+##  <a name="createclient"></a>  CMDIFrameWnd::CreateClient  
  관리 하는 MDI 클라이언트 창을 만듭니다.는 `CMDIChildWnd` 개체입니다.  
   
 ```  
@@ -176,10 +171,10 @@ virtual BOOL CreateClient(
 ### <a name="remarks"></a>설명  
  재정의 하는 경우이 멤버 함수를 호출 해야는 `OnCreate` 직접 멤버 함수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#14](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_2.cpp)]  
   
-##  <a name="createnewchild"></a>CMDIFrameWnd::CreateNewChild  
+##  <a name="createnewchild"></a>  CMDIFrameWnd::CreateNewChild  
  새 자식 창을 만듭니다.  
   
 ```  
@@ -206,12 +201,12 @@ CMDIChildWnd* CreateNewChild(
 ### <a name="remarks"></a>설명  
  이 함수를 사용 하 여 자식 창을 MDI 프레임 창의 만든 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#15](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_3.cpp)]  
   
- 이 예제는 Q201045, 기술 자료 문서에서 "방법: 여러 창 형식을 비-문서/뷰 MDI 응용 프로그램에 추가 합니다." 기술 자료 문서에서 사용할 수 있는 [http://support.microsoft.com](http://support.microsoft.com/)합니다.  
+ 이 예제는 Q201045, 기술 자료 문서에서 "방법: 여러 창 형식을 비-문서/뷰 MDI 응용 프로그램에 추가 합니다." 기술 자료 문서에서 사용할 수 있는 [ http://support.microsoft.com ](http://support.microsoft.com/)합니다.  
   
-##  <a name="getwindowmenupopup"></a>CMDIFrameWnd::GetWindowMenuPopup  
+##  <a name="getwindowmenupopup"></a>  CMDIFrameWnd::GetWindowMenuPopup  
  이름이 "창" (MDI 창 관리에 대 한 메뉴 항목을 사용 하 여 팝업 메뉴) 인 현재 팝업 메뉴에 핸들을 얻기 위해이 함수를 호출 합니다.  
   
 ```  
@@ -230,10 +225,10 @@ virtual HMENU GetWindowMenuPopup(HMENU hMenuBar);
   
  표준 메뉴 명령 Id를 사용 하지 않는 창 메뉴에 있는 경우이 멤버 함수를 재정의 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#16](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_4.cpp)]  
   
-##  <a name="mdiactivate"></a>CMDIFrameWnd::MDIActivate  
+##  <a name="mdiactivate"></a>  CMDIFrameWnd::MDIActivate  
  다른 MDI 자식 창을 활성화합니다.  
   
 ```  
@@ -252,10 +247,10 @@ void MDIActivate(CWnd* pWndActivate);
 > [!NOTE]
 >  MDI 자식 창은 MDI 프레임 창을 독립적으로 활성화 됩니다. 프레임 활성화 되 면 마지막으로 활성화 된 자식 창을 보내집니다는 [WM_NCACTIVATE](../../mfc/reference/cwnd-class.md#onncactivate) 를 활성 창 프레임 및 캡션 표시줄 하지만 그릴 메시지에서 다른 수신 하지 `WM_MDIACTIVATE` 메시지입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [CMDIFrameWnd::GetWindowMenuPopup](#getwindowmenupopup)합니다.  
   
-##  <a name="mdicascade"></a>CMDIFrameWnd::MDICascade  
+##  <a name="mdicascade"></a>  CMDIFrameWnd::MDICascade  
  계단식 배열 형식에서 모든 MDI 자식 창을 정렬합니다.  
   
 ```  
@@ -270,10 +265,10 @@ void MDICascade(int nType);
 ### <a name="remarks"></a>설명  
  첫 번째 버전 `MDICascade`, 매개 변수 없이 비활성화 된 것을 비롯 한 모든 MDI 자식 창을 계단식으로 배열 합니다. 지정 하는 경우 필요에 따라 두 번째 버전은 사용 하지 않도록 설정 하는 cascade MDI 자식 창을 하지 않는 `MDITILE_SKIPDISABLED` 에 대 한는 `nType` 매개 변수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#17](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_5.cpp)]  
   
-##  <a name="mdigetactive"></a>CMDIFrameWnd::MDIGetActive  
+##  <a name="mdigetactive"></a>  CMDIFrameWnd::MDIGetActive  
  현재 활성 MDI 자식 창, 자식 창을 최대화 되었는지 여부를 나타내는 플래그와 함께 검색 합니다.  
   
 ```  
@@ -287,10 +282,10 @@ CMDIChildWnd* MDIGetActive(BOOL* pbMaximized = NULL) const;
 ### <a name="return-value"></a>반환 값  
  활성 MDI 자식 창에 대 한 포인터입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize)합니다.  
   
-##  <a name="mdiiconarrange"></a>CMDIFrameWnd::MDIIconArrange  
+##  <a name="mdiiconarrange"></a>  CMDIFrameWnd::MDIIconArrange  
  모든 최소화 된 상태로 문서 자식 창을 정렬합니다.  
   
 ```  
@@ -300,10 +295,10 @@ void MDIIconArrange();
 ### <a name="remarks"></a>설명  
  최소화 됩니다 자식 창에는 영향을 주지 않습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [CMDIFrameWnd::MDICascade](#mdicascade)합니다.  
   
-##  <a name="mdimaximize"></a>CMDIFrameWnd::MDIMaximize  
+##  <a name="mdimaximize"></a>  CMDIFrameWnd::MDIMaximize  
  지정된 된 MDI 자식 창을 최대화 합니다.  
   
 ```  
@@ -319,10 +314,10 @@ void MDIMaximize(CWnd* pWnd);
   
  현재 활성 MDI 자식 창이 최대화 될 때 다른 MDI 자식 창이 활성화 되어 있으면 Windows 현재 활성 자식 복원 되 고 새로 활성화 된 자식 창을 최대화 하는.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize)합니다.  
   
-##  <a name="mdinext"></a>CMDIFrameWnd::MDINext  
+##  <a name="mdinext"></a>  CMDIFrameWnd::MDINext  
  현재 활성 자식 창 바로 뒤에 있는 자식 창을 활성화 하 고 다른 모든 자식 창 뒤 현재 활성 자식 창을 배치 합니다.  
   
 ```  
@@ -332,10 +327,10 @@ void MDINext();
 ### <a name="remarks"></a>설명  
  현재 활성 MDI 자식 창을 최대화 하는 경우 멤버 함수는 현재 활성 자식 복원 하 고 새로 활성화 된 자식 극대화 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#18](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_6.cpp)]  
   
-##  <a name="mdiprev"></a>CMDIFrameWnd::MDIPrev  
+##  <a name="mdiprev"></a>  CMDIFrameWnd::MDIPrev  
  이전 자식 창을 활성화 하 고 그 뒤에 즉시 현재 활성 자식 창을 배치 합니다.  
   
 ```  
@@ -345,7 +340,7 @@ void MDIPrev();
 ### <a name="remarks"></a>설명  
  현재 활성 MDI 자식 창을 최대화 하는 경우 멤버 함수는 현재 활성 자식 복원 하 고 새로 활성화 된 자식 극대화 합니다.  
   
-##  <a name="mdirestore"></a>CMDIFrameWnd::MDIRestore  
+##  <a name="mdirestore"></a>  CMDIFrameWnd::MDIRestore  
  MDI 자식 창에 최대화 또는 최소화 된 크기에서 복원합니다.  
   
 ```  
@@ -356,10 +351,10 @@ void MDIRestore(CWnd* pWnd);
  `pWnd`  
  복원 하려면 창을 가리킵니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [CMDIChildWnd::MDIRestore](../../mfc/reference/cmdichildwnd-class.md#mdirestore)합니다.  
   
-##  <a name="mdisetmenu"></a>CMDIFrameWnd::MDISetMenu  
+##  <a name="mdisetmenu"></a>  CMDIFrameWnd::MDISetMenu  
  MDI 프레임 창의 메뉴, 창 팝업 메뉴 또는 둘 다를 바꿉니다.  
   
 ```  
@@ -387,12 +382,12 @@ CMenu* MDISetMenu(
   
  MDI 자식 창을 관리 하는 프레임 워크를 사용 하는 경우에이 멤버 함수를 호출 하지 마십시오.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  [!code-cpp[NVC_MFCWindowing#19](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_7.cpp)]  
   
  [!code-cpp[NVC_MFCWindowing#20](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_8.cpp)]  
   
-##  <a name="mditile"></a>CMDIFrameWnd::MDITile  
+##  <a name="mditile"></a>  CMDIFrameWnd::MDITile  
  모든 자식 창을 바둑판식으로 배열 된 형식으로 정렬합니다.  
   
 ```  
@@ -404,16 +399,16 @@ void MDITile(int nType);
  `nType`  
  바둑판식 배열 플래그를 지정합니다. 이 매개 변수는 다음 플래그의 하나일 수 있습니다.  
   
-- `MDITILE_HORIZONTAL`타일 MDI 자식 창이 한 창을 다른 위에 나타납니다.  
+- `MDITILE_HORIZONTAL` 타일 MDI 자식 창이 한 창을 다른 위에 나타납니다.  
   
-- `MDITILE_SKIPDISABLED`비활성화 된 MDI 자식 창을 바둑판식으로 배열 되 고에서 방지 합니다.  
+- `MDITILE_SKIPDISABLED` 비활성화 된 MDI 자식 창을 바둑판식으로 배열 되 고에서 방지 합니다.  
   
-- `MDITILE_VERTICAL`타일 MDI 자식 창을 므로 다른 옆에 있는 한 해당 창에 나타납니다.  
+- `MDITILE_VERTICAL` 타일 MDI 자식 창을 므로 다른 옆에 있는 한 해당 창에 나타납니다.  
   
 ### <a name="remarks"></a>설명  
  첫 번째 버전 `MDITile`, 매개 변수 없이 Windows 버전 3.1 이상에서 세로로 창을 바둑판식으로 배열 합니다. 두 번째 버전 창을 바둑판식으로 배열 세로 또는 가로로 값에 따라는 `nType` 매개 변수입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  예를 참조 [CMDIFrameWnd::MDICascade](#mdicascade)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

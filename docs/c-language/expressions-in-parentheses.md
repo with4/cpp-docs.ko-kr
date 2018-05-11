@@ -1,13 +1,10 @@
 ---
-title: "괄호를 사용한 식 | Microsoft Docs"
-ms.custom: 
+title: 괄호를 사용한 식 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,17 +13,15 @@ helpviewer_keywords:
 - expressions [C++], evaluating
 - parentheses, expressions
 ms.assetid: b8636147-6982-408c-9e64-29e40678ee43
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c09209a323a06f883a54e7ecaec17c55a3bc6205
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b6c1934cc511073aa38b97228f7ae0f71f06ed31
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="expressions-in-parentheses"></a>괄호를 사용한 식
 괄호 안에 포함된 식의 형식이나 값을 변경하지 않고 임의의 피연산자를 괄호로 묶을 수 있습니다. 예를 들어 다음 식에서  

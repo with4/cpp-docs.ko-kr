@@ -2,11 +2,8 @@
 title: C + + 기본 제공 연산자, 우선 순위 및 결합성 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - C++
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - evaluation order
 - hierarchy, operator
 ms.assetid: 95c1f0ba-dad8-4034-b039-f79a904f112f
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95cbb68740fe43fa8a76624abb57284cb68e7805
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d4d2bb339d4147e6ea82c713d83a046e0e9780bb
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>C + + 기본 제공 연산자, 우선 순위 및 결합성
 
@@ -70,7 +65,7 @@ C++ 언어는 모든 C 연산자를 포함하며 몇 가지 새로운 연산자�
 |[개체 삭제](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|
 |[캐스트](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
 |**왼쪽에서 오른쪽 결합성 그룹 4 우선 순위**|
-|[-멤버 포인터 (개체 또는 포인터)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[. &#42; -> 또는 &#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
+|[-멤버 포인터 (개체 또는 포인터)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[. &#42; 또는->&#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
 |**왼쪽에서 오른쪽 결합성 그룹 5 우선 순위**|
 |[곱하기](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[&#42;](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |[나누기](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|

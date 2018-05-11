@@ -1,13 +1,10 @@
 ---
-title: "CLR을 대상으로 하는 c + + 프로그램 컴파일 | Microsoft Docs"
-ms.custom: 
+title: CLR을 대상으로 하는 c + + 프로그램 컴파일 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,25 +13,23 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eca6960d23c43fbe27d753ab4f79a27dea7bd7e5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d2a7bcb0eead62730f0b70b0b1df64e5ed08f1f0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-compiling-a-c-program-that-targets-the-clr-in-visual-studio"></a>연습: Visual Studio에서 CLR을 대상으로 하는 C++ 프로그램 컴파일
 .NET 클래스를 사용 하 고 Visual Studio 개발 환경 사용 하 여 컴파일하는 Visual c + + 프로그램을 만들 수 있습니다.  
   
  이 절차에 대 한 Visual c + + 프로그램을 직접 입력할 수도 있고 샘플 프로그램 중 하나를 사용 하 여 키를 누릅니다. 이 절차에서 사용 하는 샘플 프로그램 textfile.txt 라는 텍스트 파일을 만들고 프로젝트 디렉터리에 저장 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
- 이러한 항목은 c + + 언어의 기본적인 사항을 이해 해야 가정 합니다.  
+## <a name="prerequisites"></a>전제 조건  
+ 각 항목들은 C++ 언어의 기본적인 사항을 이해하고 있다고 가정합니다.  
   
 ### <a name="to-create-a-new-project-in-visual-studio-and-add-a-new-source-file"></a>Visual Studio에서 새 프로젝트를 만들고 새 소스 파일을 추가 하려면  
   
@@ -74,7 +69,7 @@ ms.lasthandoff: 12/21/2017
   
      변경 하 고 빌드 작업을 수행 하지 않고 프로그램을 실행 하는 경우 대화 상자는 프로젝트는 만료를 나타낼 수 있습니다. 클릭 하기 전에이 대화 상자에서 확인란을 선택 **확인** 빌드할 때마다 메시지를 표시 하는 대신 항상 최신 버전의 파일을 사용 하도록 Visual Studio에 들어 있습니다.  
   
-8.  에 **디버그** 메뉴를 클릭 하 여 **디버깅 하지 않고 시작**합니다.  
+8.  **디버그** 메뉴를 클릭하여 **디버깅하지 않고 시작**을 선택합니다.  
   
 9. 프로그램을 실행할 때 샘플 프로그램을 사용한 텍스트 파일이 만들어졌는지 여부를 나타내는 명령 창을 표시 됩니다. 명령 창을 닫으려면 아무 키나를 누르십시오.  
   
@@ -87,5 +82,5 @@ ms.lasthandoff: 12/21/2017
  **이전:** [연습: 명령줄에서 네이티브 c + + 프로그램 컴파일](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md) &#124; **다음:**[연습: 명령줄에서 C 프로그램 컴파일](../build/walkthrough-compile-a-c-program-on-the-command-line.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [C + + 언어 참조](../cpp/cpp-language-reference.md)   
+ [C++ 언어 참조](../cpp/cpp-language-reference.md)   
  [C/C++ 프로그램 빌드](../build/building-c-cpp-programs.md)

@@ -1,13 +1,10 @@
 ---
-title: "MFC ActiveX 컨트롤: 글꼴 사용 | Microsoft Docs"
-ms.custom: 
+title: 'MFC ActiveX 컨트롤: 글꼴 사용 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 f1_keywords:
 - OnFontChanged
 - HeadingFont
@@ -28,17 +25,15 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a788285aed8e8b7483e13c954ee193aca69d1100
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b53ab98e44a8696795e810b8d6f643720d8f9655
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX 컨트롤: 글꼴 사용
 텍스트를 표시 하는 ActiveX 컨트롤 글꼴 속성을 변경 하 여 텍스트 모양을 변경 하려면 컨트롤 사용자를 허용할 수 있습니다. 글꼴 속성 글꼴 개체로 구현 되 고 두 가지 형식 중 하나일 수 있습니다: 주식 또는 사용자 지정 합니다. 스톡 글꼴 속성은 속성 추가 마법사를 사용 하 여 추가할 수 있는 미리 글꼴 속성입니다. 사용자 지정 글꼴 속성은 하지 미리 및 속성의 동작과 사용 컨트롤 개발자가 결정 합니다.  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [컨트롤에서 사용자 지정 글꼴 속성을 사용 하 여](#_core_implementing_a_custom_font_property)  
   
-##  <a name="_core_using_the_stock_font_property"></a>스톡 글꼴 속성을 사용 하 여  
+##  <a name="_core_using_the_stock_font_property"></a> 스톡 글꼴 속성을 사용 하 여  
  클래스에 의해 스톡 글꼴 속성은 미리 [COleControl](../mfc/reference/colecontrol-class.md)합니다. 또한 표준 글꼴 속성 페이지를 사용할 수 있는 사용자가 font 개체 이름, 크기, 스타일 등의 다양 한 특성을 변경할 수 있도록 이기도 합니다.  
   
  Font 개체를 통해 액세스는 [GetFont](../mfc/reference/colecontrol-class.md#getfont), [SetFont](../mfc/reference/colecontrol-class.md#setfont), 및 [InternalGetFont](../mfc/reference/colecontrol-class.md#internalgetfont) 의 기능 `COleControl`합니다. 컨트롤 사용자가 글꼴 개체를 통해 액세스할는 `GetFont` 및 `SetFont` 동일한 방식으로 다른 Get/Set 속성의 함수입니다. Font 개체에 대 한 액세스 컨트롤 내에서 필요한 경우 사용 된 `InternalGetFont` 함수입니다.  
@@ -102,14 +97,14 @@ ms.lasthandoff: 12/21/2017
   
  [!code-cpp[NVC_MFC_AxFont#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_3.cpp)]  
   
-##  <a name="_core_modifying_the_ondraw_function"></a>OnDraw 함수 수정  
+##  <a name="_core_modifying_the_ondraw_function"></a> OnDraw 함수 수정  
  기본 구현은 `OnDraw` Windows 시스템 글꼴을 사용 하 여 모든 텍스트 컨트롤에 표시 합니다. 이 수정 해야 한다는 의미는 `OnDraw` 장치 컨텍스트로 font 개체를 선택 하 여 코드입니다. 이 작업을 수행 하려면 호출 [COleControl::SelectStockFont](../mfc/reference/colecontrol-class.md#selectstockfont) 다음 예제와 같이 컨트롤의 장치 컨텍스트를 전달 합니다.  
   
  [!code-cpp[NVC_MFC_AxFont#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_4.cpp)]  
   
  이후에 `OnDraw` 함수 font 개체를 사용 하도록 수정 되었습니다, 컨트롤 내에서 모든 텍스트 컨트롤의 스톡 글꼴 속성에서 특성으로 표시 됩니다.  
   
-##  <a name="_core_using_custom_font_properties_in_your_control"></a>컨트롤에서 사용자 지정 글꼴 속성을 사용 하 여  
+##  <a name="_core_using_custom_font_properties_in_your_control"></a> 컨트롤에서 사용자 지정 글꼴 속성을 사용 하 여  
  스톡 글꼴 속성 외에 ActiveX 컨트롤에는 사용자 지정 글꼴 속성이 있을 수 있습니다. 사용자 지정 글꼴 속성을 추가 하려면 다음을 수행 해야 합니다.  
   
 -   속성 추가 마법사를 사용 하 여 사용자 지정 글꼴 속성을 구현 합니다.  
@@ -118,7 +113,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [새 글꼴 알림 인터페이스 구현](#_core_implementing_a_new_font_notification_interface)합니다.  
   
-###  <a name="_core_implementing_a_custom_font_property"></a>사용자 지정 글꼴 속성 구현  
+###  <a name="_core_implementing_a_custom_font_property"></a> 사용자 지정 글꼴 속성 구현  
  사용자 지정 글꼴 속성을 구현 하려면 속성을 추가 하 고 코드에 약간의 수정 후에 속성 추가 마법사를 사용 합니다. 다음 섹션에서는 사용자 지정을 추가 하는 방법에 설명 `HeadingFont` 샘플 컨트롤에는 속성입니다.  
   
 ##### <a name="to-add-the-custom-font-property-using-the-add-property-wizard"></a>속성 추가 마법사를 사용 하 여 사용자 지정 글꼴 속성을 추가 하려면  
@@ -206,7 +201,7 @@ ms.lasthandoff: 12/21/2017
   
  이러한 변경 내용을 적용 된 후 추가 기능을 포함 하도록 전체 프로젝트를 다시 작성 합니다.  
   
-###  <a name="_core_processing_font_notifications"></a>글꼴 알림 처리  
+###  <a name="_core_processing_font_notifications"></a> 글꼴 알림 처리  
  대부분의 경우에서 컨트롤 font 개체의 특성 최근에 수정 되었다면 알고 있어야 합니다. 각 font 개체는 수의 멤버 함수를 호출 하 여 변경 될 때 알림을 제공 하는 **IFontNotification** 에서 구현 된 인터페이스 `COleControl`합니다.  
   
  해당 알림을 처리 하는 컨트롤 스톡 글꼴 속성을 사용할 경우의 `OnFontChanged` 의 멤버 함수 `COleControl`합니다. 사용자 지정 글꼴 속성을 추가 하면 동일한 구현을 사용 되도록 할 수 있습니다. 이전 섹션의 예제에서는이 작업을 수행 했습니다 전달 하 여 &**m_xFontNotification** 초기화할 때는 **m_fontHeading** 멤버 변수입니다.  
@@ -218,7 +213,7 @@ ms.lasthandoff: 12/21/2017
   
  컨트롤의 글꼴 개체 알림 간을 서로 구별 하는 한 가지 방법은 별도의 구현을 만드는 것은 **IFontNotification** 컨트롤에서 각 font 개체에 대 한 인터페이스입니다. 이 기법을 사용 하면 문자열 또는 최근에 수정 된 글꼴을 사용 하는 문자열을 업데이트 하 여 그리기 코드를 최적화할 수 있습니다. 다음 섹션에서는 두 번째 Font 속성에 대 한 별도 알림 인터페이스를 구현 하는 데 필요한 단계를 보여 줍니다. 두 번째 font 속성으로 간주 됩니다는 `HeadingFont` 이전 섹션에 추가 된 속성입니다.  
   
-###  <a name="_core_implementing_a_new_font_notification_interface"></a>새 글꼴 알림 인터페이스 구현  
+###  <a name="_core_implementing_a_new_font_notification_interface"></a> 새 글꼴 알림 인터페이스 구현  
  여러 글꼴 알림의 구분 하기 위해 컨트롤에서 사용 되는 각 글꼴에 대 한 새 알림 인터페이스를 구현 합니다. 다음 섹션에서는 컨트롤 헤더와 구현 파일을 수정 하 여 새 글꼴 알림 인터페이스를 구현 하는 방법에 설명 합니다.  
   
 ### <a name="additions-to-the-header-file"></a>헤더 파일에 대 한 추가  

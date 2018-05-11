@@ -1,12 +1,9 @@
 ---
-title: "com:: ptr 클래스 | Microsoft Docs"
-ms.custom: 
+title: 'com:: ptr 클래스 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-cli
 ms.topic: reference
 f1_keywords:
 - com::ptr
@@ -18,18 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ae02518b60190dd129443f00d82b377317c816b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 27adaa2d91bac38c587ee7e4ec9c805c102d4883
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="comptr-class"></a>com::ptr 클래스
 CLR 클래스의 멤버로 사용할 수 있는 COM 개체에 대한 래퍼입니다.  이 래퍼는 또한 COM 개체의 수명 주기 관리를 자동화하여 소멸자가 호출될 때 개체에서 모든 소유 참조를 해제합니다. 유사 [CComPtr 클래스](../atl/reference/ccomptr-class.md)합니다.  
@@ -52,7 +47,7 @@ ref class ptr;
   
  `com::ptr`은 함수로부터 직접 반환될 수 없습니다. 대신 핸들을 사용하십시오.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 `com::ptr`을 사용해서 해당 개인 멤버 `IXMLDOMDocument` 개체를 래핑하는 CLR 클래스를 구현합니다.  클래스의 공용 메서드를 호출하면 포함된 `IXMLDOMDocument` 개체가 호출됩니다.  이 샘플은 XML 문서의 인스턴스를 만들고, 여기에 일부 간단한 XML을 채우고, 구문 분석된 문서 트리에서 간소화된 노드 작업을 수행하고 XML을 콘솔에 출력합니다.  
   
 ```  

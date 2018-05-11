@@ -1,13 +1,10 @@
 ---
-title: "HTTP 기초 | Microsoft Docs"
-ms.custom: 
+title: HTTP 기초 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-mfc
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,17 +12,15 @@ helpviewer_keywords:
 - return codes [MFC]
 - HTTP requests [MFC], return codes
 ms.assetid: 5b7421bf-42c8-4f3a-8566-8ff5957f58cc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67921e0667267b99b3787d55fa7ff564aa543ae7
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 56a2692edd9d41f80023e44f4ca8172cba8f9d00
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="http-basics"></a>HTTP 기초
 인터넷 응용 프로그램을 작성할 때 자주 검토 하 고 있습니다 HTTP 헤더의 정보를 추가 합니다. 반환 코드는 요청 된 이벤트의 성공 여부를 나타냅니다. 몇 가지 일반적인 반환 코드는 다음 표에 나열 됩니다.  

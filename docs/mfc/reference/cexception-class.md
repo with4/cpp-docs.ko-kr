@@ -1,12 +1,9 @@
 ---
-title: "CException 클래스 | Microsoft Docs"
-ms.custom: 
+title: CException 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CException
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72272630dc475f2c40b8f249e969822a872015e0
-ms.sourcegitcommit: a5a69d2dc3513261e9e28320e4e067aaf40d2ef2
+ms.openlocfilehash: a152c55944fca5fa858c148c009ef6301ff0f762
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cexception-class"></a>CException 클래스
 MFC 라이브러리의 모든 예외에 대한 기본 클래스입니다.  
@@ -122,7 +117,7 @@ void Delete();
   
  호출 하기만 하면 **삭제** 는 c + +를 사용 하는 경우 **시도**- **catch** 메커니즘입니다. MFC 매크로 사용 하는 경우 **시도** 및 **CATCH**, 이들이 매크로 자동으로이 함수를 호출 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  ```cpp  
  CFile* pFile = NULL;
 // Constructing a CFile object with this override may throw
@@ -191,7 +186,7 @@ virtual int ReportError(
 ### <a name="return-value"></a>반환 값  
  `AfxMessageBox` 값, 그렇지 않으면 0 없는 경우 메모리가 부족 하 여 메시지 상자를 표시 합니다. 참조 [AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox) 가능한 반환 값에 대 한 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  사용의 예로 `CException::ReportError`합니다. 또 다른 예에 대 한 예제를 참조 하세요. [CATCH](exception-processing.md#catch)합니다.  
   
 ```cpp  

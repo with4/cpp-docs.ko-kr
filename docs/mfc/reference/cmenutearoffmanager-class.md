@@ -1,12 +1,9 @@
 ---
-title: "CMenuTearOffManager 클래스 | Microsoft Docs"
-ms.custom: 
+title: CMenuTearOffManager 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-mfc
 ms.topic: reference
 f1_keywords:
 - CMenuTearOffManager
@@ -33,17 +30,15 @@ helpviewer_keywords:
 - CMenuTearOffManager [MFC], SetInUse
 - CMenuTearOffManager [MFC], SetupTearOffMenus
 ms.assetid: ab7ca272-ce42-4678-95f7-6ad75038f5a0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efb1b7acc2f4eb779de49559b5b566e89d518a0e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4dcbd5ea33b50e66d1c9e858669a3174042a19e0
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager 클래스
 분리 메뉴를 관리합니다. 분리 메뉴는 메뉴 모음의 메뉴입니다. 사용자는 메뉴 모음에서 분리 메뉴를 제거하여 이동 가능한 상태로 만들 수 있습니다.  
@@ -80,7 +75,7 @@ class CMenuTearOffManager : public CObject
 ## <a name="remarks"></a>설명  
  응용 프로그램에서 분리 메뉴를 사용 하려면 있어야는 `CMenuTearOffManager` 개체입니다. 대부분의 경우에서 만들기 또는 초기화 하지 않습니다는 `CMenuTearOffManager` 개체를 직접 합니다. 이 자동으로 처리를 호출할 때는 [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) 함수입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 생성 하 고 초기화 하는 `CMenuTearOffManager` 호출 하 여 개체는 `CWinAppEX::EnableTearOffMenus` 메서드. 이 코드 조각은 [워드 패드 샘플](../../visual-cpp-samples.md)의 일부입니다.  
   
  [!code-cpp[NVC_MFC_WordPad#12](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]  
@@ -93,7 +88,7 @@ class CMenuTearOffManager : public CObject
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxmenutearoffmanager.h  
   
-##  <a name="build"></a>CMenuTearOffManager::Build  
+##  <a name="build"></a>  CMenuTearOffManager::Build  
 
   
 ```  
@@ -108,7 +103,7 @@ void Build(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="cmenutearoffmanager"></a>CMenuTearOffManager::CMenuTearOffManager  
+##  <a name="cmenutearoffmanager"></a>  CMenuTearOffManager::CMenuTearOffManager  
  생성 된 [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md) 개체입니다.  
   
 ```  
@@ -118,7 +113,7 @@ CMenuTearOffManager();
 ### <a name="remarks"></a>설명  
  대부분의 경우에서 만들지 마십시오는 `CMenuTearOffManager` 수동으로 합니다. 응용 프로그램의 프레임 워크 만듭니다는 `CMenuTearOffManager` 호출 하는 경우 개체 [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)합니다.  
   
-##  <a name="getregpath"></a>CMenuTearOffManager::GetRegPath  
+##  <a name="getregpath"></a>  CMenuTearOffManager::GetRegPath  
 
   
 ```  
@@ -129,7 +124,7 @@ LPCTSTR GetRegPath() const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="initialize"></a>CMenuTearOffManager::Initialize  
+##  <a name="initialize"></a>  CMenuTearOffManager::Initialize  
  초기화는 [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md) 개체입니다.  
   
 ```  
@@ -155,7 +150,7 @@ BOOL Initialize(
 ### <a name="remarks"></a>설명  
  메뉴 Id의 범위 `uiTearOffMenuFirst` 를 `uiTearOffMenuLast` 연속 간격 이어야 합니다. 간격의 응용 프로그램에 동시에 나타날 수 있는 분리 메뉴를 정의 합니다.  
   
-##  <a name="isdynamicid"></a>CMenuTearOffManager::IsDynamicID  
+##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID  
 
   
 ```  
@@ -169,7 +164,7 @@ BOOL IsDynamicID(UINT uiID) const;
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="parse"></a>CMenuTearOffManager::Parse  
+##  <a name="parse"></a>  CMenuTearOffManager::Parse  
 
   
 ```  
@@ -183,7 +178,7 @@ UINT Parse(CString& str);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="reset"></a>CMenuTearOffManager::Reset  
+##  <a name="reset"></a>  CMenuTearOffManager::Reset  
 
   
 ```  
@@ -195,7 +190,7 @@ void Reset(HMENU hmenu);
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setinuse"></a>CMenuTearOffManager::SetInUse  
+##  <a name="setinuse"></a>  CMenuTearOffManager::SetInUse  
 
   
 ```  
@@ -210,7 +205,7 @@ void SetInUse(
   
 ### <a name="remarks"></a>설명  
   
-##  <a name="setuptearoffmenus"></a>CMenuTearOffManager::SetupTearOffMenus  
+##  <a name="setuptearoffmenus"></a>  CMenuTearOffManager::SetupTearOffMenus  
 
   
 ```  

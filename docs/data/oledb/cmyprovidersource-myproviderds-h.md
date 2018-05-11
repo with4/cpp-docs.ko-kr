@@ -1,12 +1,9 @@
 ---
 title: CMyProviderSource (MyProviderDS.H) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - myproviderds.h
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderSource class in MyProviderDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0bdb766abd034868fe12fc0913fbdd99287b9e4f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: f141ad7565a78ff4e7a02b3847287879b81ccd6d
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="cmyprovidersource-myproviderdsh"></a>CMyProviderSource(MyProviderDS.H)
 공급자 클래스는 다중 상속을 사용합니다. 다음 코드에서는 데이터 원본 개체에 대 한 상속 체인을 보여 줍니다.  
@@ -165,7 +160,7 @@ struct UPROPINFO
 ## <a name="user-defined-property-sets"></a>사용자 정의 속성 집합  
  Visual c + + 사용자 정의 속성 집합을 지원합니다. 재정의할 필요가 없습니다 **GetProperties** 또는 `GetPropertyInfo`합니다. 대신, 템플릿을 모든 사용자 정의 속성 집합을 검색 하 고 적절 한 개체에 추가 합니다.  
   
- 초기화 시 사용할 수 있어야 하는 사용자 정의 속성 집합을 사용 하는 경우 (소비자를 호출 하기 전에, 즉 **idbinitialize:: Initialize**)를 사용 하 여이 지정할 수는 **UPROPSET_USERINIT** BEGIN_PROPERTY_SET_EX 매크로와 함께에서 플래그입니다. 속성 집합 (OLE DB 사양에는 다음이 필요 함)으로 작동 하려면이 옵션에 대 한 데이터 원본 개체에 있어야 합니다. 예:  
+ 초기화 시 사용할 수 있어야 하는 사용자 정의 속성 집합을 사용 하는 경우 (소비자를 호출 하기 전에, 즉 **idbinitialize:: Initialize**)를 사용 하 여이 지정할 수는 **UPROPSET_USERINIT** BEGIN_PROPERTY_SET_EX 매크로와 함께에서 플래그입니다. 속성 집합 (OLE DB 사양에는 다음이 필요 함)으로 작동 하려면이 옵션에 대 한 데이터 원본 개체에 있어야 합니다. 예를 들어:  
   
 ```  
 BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)  

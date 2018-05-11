@@ -1,13 +1,10 @@
 ---
-title: "방법: parallel_invoke를 사용 하 여 병렬 정렬 루틴 작성 | Microsoft Docs"
-ms.custom: 
+title: '방법: parallel_invoke를 사용 하 여 병렬 정렬 루틴 작성 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - structured_task_group class, example
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff14294236efc26b83d31ad185dc1cfd6329dbe9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53b9699c7ee5d2bd4775f2d6b97dc4d1c5155ce0
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>방법: parallel_invoke를 사용하여 병렬 정렬 루틴 작성
 이 문서에 사용 하는 방법에 설명 된 [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) 바 이토 닉 정렬 알고리즘의 성능을 향상 시키기 위해 알고리즘입니다. 바 이토 닉 정렬 알고리즘 재귀적으로 입력된 시퀀스를 정렬 된 파티션을 더 작은 나눕니다. 바 이토 닉 정렬 알고리즘은 각 파티션 작업은 다른 모든 작업과 독립적 이므로 병렬로 실행할 수 있습니다.  
@@ -44,14 +39,14 @@ ms.lasthandoff: 12/21/2017
   
 - [병렬로 수행 바 이토 닉 정렬 parallel_invoke를 사용 하 여](#parallel)  
   
-##  <a name="serial"></a>직렬로 바 이토 닉 정렬 수행  
+##  <a name="serial"></a> 직렬로 바 이토 닉 정렬 수행  
  다음 예제에서는 바 이토 닉 정렬 알고리즘의 직렬 버전을 나타냅니다. `bitonic_sort` 함수는 시퀀스를 두 개의 파티션으로 나누고 이러한 파티션을 서로 반대 방향으로 정렬 한 후 결과 병합 합니다. 각 파티션을 정렬에 두 번 재귀적으로이 함수가 자신을 호출 합니다.  
   
  [!code-cpp[concrt-parallel-bitonic-sort#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_1.cpp)]  
   
  [[맨 위로 이동](#top)]  
   
-##  <a name="parallel"></a>병렬로 수행 바 이토 닉 정렬 parallel_invoke를 사용 하 여  
+##  <a name="parallel"></a> 병렬로 수행 바 이토 닉 정렬 parallel_invoke를 사용 하 여  
  이 섹션에서는 사용 하는 방법을 설명는 `parallel_invoke` 병렬로 바 이토 닉 정렬 알고리즘을 수행 하는 알고리즘입니다.  
   
 ### <a name="procedures"></a>절차  

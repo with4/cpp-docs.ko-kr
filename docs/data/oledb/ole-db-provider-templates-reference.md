@@ -1,12 +1,9 @@
 ---
-title: "OLE DB 공급자 템플릿 참조 | Microsoft Docs"
-ms.custom: 
+title: OLE DB 공급자 템플릿 참조 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 f1_keywords:
 - vc.templates.ole
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 68c741f09772c881b42dc4e4cd17de31ed107f8c
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 040e8a5e244b7978a2b9ead394e243207939655c
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="ole-db-provider-templates-reference"></a>OLE DB 공급자 템플릿 참조
 클래스와 OLE DB 공급자 템플릿에 대 한 인터페이스는 다음과 같은 범주로 그룹화 할 수 있습니다. 또한 참조 자료에 대 한 정보를 포함 된 [OLE DB 공급자 템플릿 매크로](../../data/oledb/macros-for-ole-db-provider-templates.md)합니다.  

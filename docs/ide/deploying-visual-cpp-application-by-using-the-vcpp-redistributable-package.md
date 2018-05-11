@@ -1,34 +1,29 @@
 ---
-title: "재배포 가능 패키지 (c + +)를 사용 하 여 응용 프로그램 배포 | Microsoft Docs"
-ms.custom: 
+title: 재배포 가능 패키지 (c + +)를 사용 하 여 응용 프로그램 배포 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52e3b048f896f0cfd532cb3000617756af2dca92
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 37bba00efdf0368973fa4ffbac1cbc6bb6298ce1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>연습: Visual C++ 재배포 가능 패키지를 사용하여 Visual C++ 응용 프로그램 배포
 이 문서에는 Visual c + + 재배포 가능 패키지를 사용 하 여 Visual c + + 응용 프로그램을 배포 하는 방법을 설명 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료 하려면 이러한 구성 요소가 있어야 합니다.  
   
 -   Visual Studio가 설치 되어 있는 컴퓨터입니다.  

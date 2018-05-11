@@ -1,13 +1,10 @@
 ---
-title: "멤버 변수 추가 마법사 | Microsoft Docs"
-ms.custom: 
+title: 멤버 변수 추가 마법사 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.variable.overview
 dev_langs:
@@ -15,17 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Add Member Variable Wizard [C++]
 ms.assetid: 73e8fa99-ac1a-42e2-8fc2-4684b9eb6d4d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b909ec7ccd830e088df81ca0b2db8cda133c7a20
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f3ae6a3aef4bdf774b5630a9bb0b2a0b49f7f29b
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-member-variable-wizard"></a>멤버 변수 추가 마법사
 이 마법사는 헤더 파일에 멤버 변수 선언을 추가 하 고 옵션에 따라.cpp 파일에 코드를 추가할 수 있습니다. 마법사를 사용 하 여 멤버 변수를 추가 하면 개발 환경에서 코드를 편집할 수 있습니다.  

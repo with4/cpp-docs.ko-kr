@@ -1,30 +1,25 @@
 ---
-title: "마법사를 사용 하지 않고 소비자 만들기 | Microsoft Docs"
-ms.custom: 
+title: 마법사를 사용 하지 않고 소비자 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-data
 ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ffc6a92f8fc4e4223e83c3270e28ae68ddc1829a
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: c9f6bbc1ba45ec0b510dac015688fd29801c8449
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>마법사를 사용하지 않고 소비자 만들기
 다음 예에서는 기존 ATL 프로젝트에 OLE DB 소비자 지원을 추가 가정 합니다. MFC 응용 프로그램에 OLE DB 소비자 지원을 추가 하려는 경우 모든 지원이 필요한 만들고 응용 프로그램을 실행 하는 데 필요한 MFC 루틴을 호출 하는 MFC 응용 프로그램 마법사를 실행 해야 합니다.  
@@ -54,7 +49,7 @@ ms.lasthandoff: 02/23/2018
     class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor>>  
     ```  
   
--   호출 **CoInitialize** COM을 초기화 하려면 이 일반적으로 주 코드에 호출 됩니다. 예:  
+-   호출 **CoInitialize** COM을 초기화 하려면 이 일반적으로 주 코드에 호출 됩니다. 예를 들어:  
   
     ```  
     HRESULT hr = CoInitialize(NULL);  
