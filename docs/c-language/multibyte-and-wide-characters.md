@@ -1,13 +1,10 @@
 ---
-title: "멀티바이트 및 와이드 문자 | Microsoft Docs"
-ms.custom: 
+title: 멀티바이트 및 와이드 문자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - character codes [C++], wide
 - character codes [C++], multibyte
 ms.assetid: 1943c469-200d-4724-b18f-781d70520f9e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0b2c07429e4401bbecb5e989ac8fd2ece772e29
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bc259a75ab12352a7d0029241496aea22803152a
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multibyte-and-wide-characters"></a>멀티바이트 및 와이드 문자
 멀티바이트 문자는 하나 이상의 바이트의 시퀀스로 구성된 문자입니다. 각 바이트 시퀀스는 확장된 문자 집합에서 단일 문자를 나타냅니다. 멀티바이트 문자는 한자와 같은 문자 집합에 사용됩니다.  

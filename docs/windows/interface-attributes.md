@@ -1,31 +1,26 @@
 ---
-title: "인터페이스 특성 | Microsoft Docs"
-ms.custom: 
+title: 인터페이스 특성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], reference topics
 - interface attributes
 ms.assetid: 27fcdfee-abce-4585-8b53-ee31635356e8
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ff84939b3211633e199066e1a38da2e91efb1c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6f57cdce20a54b8bc56b804e12f59f92855c7f69
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="interface-attributes"></a>인터페이스 특성
 다음과 같은 특성에 적용 된 [인터페이스 (또는 __interface)](../cpp/interface.md) c + + 키워드입니다.  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
 |특성|설명|  
 |---------------|-----------------|  
 |[async_uuid](../windows/async-uuid.md)|동기 및 비동기 버전 COM 인터페이스의 정의 MIDL 컴파일러에 지시 하 UUID를 지정 합니다.|  
-|[사용자 지정](../windows/custom-cpp.md)|사용자 지정 특성을 정의할 수 있습니다.|  
+|[custom](../windows/custom-cpp.md)|사용자 지정 특성을 정의할 수 있습니다.|  
 |[dispinterface](../windows/dispinterface.md)|.Idl 파일의 인터페이스를 디스패치 인터페이스로 배치합니다.|  
 |[dual](../windows/dual.md)|.Idl 파일에는 이중 인터페이스로 인터페이스를 배치합니다.|  
 |[export](../windows/export.md)|데이터 구조는.idl 파일에 배치 하면 됩니다.|  
@@ -44,7 +39,7 @@ ms.lasthandoff: 12/21/2017
 |[helpstringdll](../windows/helpstringdll.md)|문서 문자열 조회 (지역화)를 수행 하는 데 DLL의 이름을 지정 합니다.|  
 |[hidden](../windows/hidden.md)|항목이 존재 하지만 하지 사용자 기반 브라우저에 표시할지 나타냅니다.|  
 |[library_block](../windows/library-block.md)|.Idl 파일의 라이브러리 블록 내부는 구문을 배치합니다.|  
-|[로컬](../windows/local-cpp.md)|MIDL 컴파일러 인터페이스 헤더에서 사용 될 때 헤더 생성기로 사용할 수 있습니다. 개별 함수를 사용할 경우 로컬 없는 스텁을 생성 되는 프로시저를 지정 합니다.|  
+|[local](../windows/local-cpp.md)|MIDL 컴파일러 인터페이스 헤더에서 사용 될 때 헤더 생성기로 사용할 수 있습니다. 개별 함수를 사용할 경우 로컬 없는 스텁을 생성 되는 프로시저를 지정 합니다.|  
 |[nonextensible](../windows/nonextensible.md)|지정 된 `IDispatch` 구현 속성만 포함 및 메서드와 인터페이스 설명에 나열 된 추가 멤버와 런타임 시 확장할 수 없습니다. 이 특성에만 사용할 수는 [이중](../windows/dual.md) 인터페이스입니다.|  
 |[odl](../windows/odl.md)|개체 설명 언어 ODL () 인터페이스는 인터페이스를 식별합니다.|  
 |[object](../windows/object-cpp.md)|사용자 지정 인터페이스를 식별합니다.|  

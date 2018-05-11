@@ -1,12 +1,9 @@
 ---
-title: "팩 | Microsoft Docs"
-ms.custom: 
+title: 팩 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - pack_CPP
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15625977ab5dd0c20238f52e84f4ecea443d01ed
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6c29c31cae2b7de59d4db5ed6546ad4eda6baecf
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="pack"></a>pack
 구조체, 공용 구조체 및 클래스 멤버에 대한 압축 맞춤을 지정합니다.  
@@ -74,7 +69,7 @@ ms.lasthandoff: 02/23/2018
     > [!WARNING]
     >  Visual Studio 2015 이상에서는 `__alignof` 및 `declspec( align )`와 달리 컴파일러 간에 이식 가능한 표준 alignas 및 alignof 연산자를 사용할 수 있습니다. C++ 표준에서는 압축을 처리하지 않으므로 대상 아키텍처의 단어 크기보다 작은 맞춤을 지정하려면 여전히 `pack` 또는 해당 확장(다른 컴파일러)을 사용해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 `pack` pragma를 사용하여 구조체의 맞춤을 변경하는 방법을 보여 줍니다.  
   
 ```  
@@ -111,7 +106,7 @@ int main() {
 0 4 6  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 사용 하는 **푸시**, **pop**, 및 **표시** 구문입니다.  
   
 ```  

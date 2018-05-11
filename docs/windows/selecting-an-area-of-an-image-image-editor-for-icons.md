@@ -1,13 +1,10 @@
 ---
-title: "(아이콘에 대 한 이미지 편집기) 이미지 영역 선택 | Microsoft Docs"
-ms.custom: 
+title: (아이콘에 대 한 이미지 편집기) 이미지 영역 선택 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.editing
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - images [C++], selecting
 - cursors [C++], selecting areas of
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3060c47af46a39358ac2e8a7ab5b573f50867869
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 07cb7528e25604e873f6da92193a97cf79700799
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="selecting-an-area-of-an-image-image-editor-for-icons"></a>이미지 영역 선택(아이콘에 대한 이미지 편집기)
 잘라내기, 복사, 지우기, 크기 조정, 반전, 또는 이동 하려는 이미지의 영역을 정의 선택 도구를 사용할 수 있습니다. 와 **사각형 선택** 도구 정의 하 고 이미지의 사각형 영역을 선택할 수 있습니다. 와 **부정형** 도구는 잘라내기, 복사 또는 다른 작업에 대 한 선택 하려는 영역의 윤곽선을 자유롭게를 그릴 수 있습니다.  

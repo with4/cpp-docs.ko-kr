@@ -1,13 +1,10 @@
 ---
-title: "MFC Windows 프로그래밍 기호 | Microsoft Docs"
-ms.custom: 
+title: MFC Windows 프로그래밍 기호 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - symbols, MFC
 - Windows programming MFC symbols [C++]
 ms.assetid: fcc2194d-b639-4e0c-be2c-75f5579f2780
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7d2d69cfdfd12f0a8dbdcf3a771e01db19da2c8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 1c4091853274d04d27eb060655650a071ea64d4c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="mfc-windows-programming-symbols"></a>MFC Windows 프로그래밍 기호
 이러한 기호 또한 MFC 지원 파일의 일부 하지만 표준 Windows 응용 프로그램 기능 및 동작을 지원 합니다. 이 기호는 메뉴와 주로 사용 됩니다. 메뉴 편집기에서 메뉴를 사용 하는 경우 이러한 기호는 일반 메뉴 명령과 연결 된 속성 창에 표시 됩니다. 예를 들어, 응용 프로그램의 종료 명령이 파일 메뉴에, 해당 명령을와 연결할 ID_APP_EXIT 기호에는 [속성 창](/visualstudio/ide/reference/properties-window)합니다.  

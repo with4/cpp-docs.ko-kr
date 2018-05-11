@@ -1,30 +1,25 @@
 ---
-title: "범주 특성 | Microsoft Docs"
-ms.custom: 
+title: 범주 특성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], grouped by category
 ms.assetid: 0f0679dc-2c1e-4463-b6a8-5829e36782e1
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0fd2c9754269e339d4aabba2a24f3a626afa4b8e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 3a97cc367c1e4bda6218e30c57b36426395c8331
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-categories"></a>특성 범주
 특성 참조는 다양 한 Visual c + +에서 사용할 수 있는 특성 유형에 대해 설명 합니다.  

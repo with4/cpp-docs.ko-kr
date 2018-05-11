@@ -1,13 +1,10 @@
 ---
-title: "특성 프로그래밍 FAQ | Microsoft Docs"
-ms.custom: 
+title: 특성 프로그래밍 FAQ | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - attributes [C++], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76b7ad2c7acb9d232602c620a70cefabbecee531
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35b57c8813778cf0bbf8efbfcbee8466074b87f0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attribute-programming-faq"></a>특성 프로그래밍 FAQ
 이 항목에는 다음 질문과 대답 합니다.  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
 -   [또한 특성을 사용 하는 클래스에서 파생 된 클래스에서 특성을 사용할 수 있습니까?](#vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor)  
   
-##  <a name="vcconattributeprogrammmingfaqanchor1"></a>HRESULT는 무엇입니까?  
+##  <a name="vcconattributeprogrammmingfaqanchor1"></a> HRESULT는 무엇입니까?  
  `HRESULT` 흔히 사용 되는 반환 값으로 특성 및 ATL 일반적 단순 데이터 형식입니다. 다음 표에서 다양 한 값을 보여 줍니다. 헤더 파일 winerror.h에 더 많은 값이 포함 되어 있습니다.  
   
 |이름|설명|값|  
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
 |E_FAIL|지정 되지 않은 오류|0x80004005|  
 |E_ACCESSDENIED|일반 액세스 거부 오류|0x80070005|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor2"></a>특성에 대 한 매개 변수 이름을 지정 해야 하는 경우는 합니까?  
+##  <a name="vcconattributeprogrammmingfaqanchor2"></a> 특성에 대 한 매개 변수 이름을 지정 해야 하는 경우는 합니까?  
  대부분의 경우에서 특성에 있는 경우 단일 매개 변수를 해당 매개 변수 이름은입니다. 이 이름은 코드의 특성을 삽입할 때 필요 하지 않습니다. 예를 들어 다음과 같이 사용 하면는 [집계할 수](../windows/aggregatable.md) 특성:  
   
 ```  
@@ -103,7 +98,7 @@ class CMyClass
 |[size_is](../windows/size-is.md)|[소스](../windows/source-cpp.md)|[switch_is](../windows/switch-is.md)|  
 |[switch_type](../windows/switch-type.md)|[transmit_as](../windows/transmit-as.md)|[wire_marshal](../windows/wire-marshal.md)|  
   
-##  <a name="vcconattributeprogrammmingfaqanchor3"></a>특성 블록에서 주석을 사용할 수 있습니까?  
+##  <a name="vcconattributeprogrammmingfaqanchor3"></a> 특성 블록에서 주석을 사용할 수 있습니까?  
  특성 블록 내에서 단일 줄과 여러 줄 주석을 사용할 수 있습니다. 그러나 특성의 매개 변수가 들어 괄호 안에 주석의 두 스타일 중 하나를 사용할 수 없습니다.  
   
  다음은 허용 됩니다.  
@@ -125,16 +120,16 @@ class CMyClass
 ]  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqanchor4"></a>특성 않습니다 상속 작용할?  
+##  <a name="vcconattributeprogrammmingfaqanchor4"></a> 특성 않습니다 상속 작용할?  
  특성을 사용 하 고 해결 되지 않은 클래스 수 자체의 원인이 될 여부는 다른 클래스에서 상속할 수 있습니다. 특성 사용된 클래스에서 파생 된 결과 특성 공급자가 해당 코드를 변환 된 후 해당 클래스에서 파생 된와 같습니다. 특성은 파생 클래스 c + + 상속을 통해 전송 되지 않습니다. 특성 공급자만 해당 특성 유사 하 게 코드를 변환합니다.  
   
-##  <a name="vcconattributeprogrammmingfaqanchor5"></a>하지 않는 ATL 프로젝트에서 특성을 사용 하는 방법  
+##  <a name="vcconattributeprogrammmingfaqanchor5"></a> 하지 않는 ATL 프로젝트에서 특성을 사용 하는 방법  
  .Idl 파일에 있는 경우 하지 않는 ATL 프로젝트 없고 특성이 지정 된 개체를 추가 하기 시작 하는 것이 좋습니다. 이 경우 클래스 추가 마법사를 사용 하 여 코드를 제공 합니다.  
   
-##  <a name="vcconattributeprogrammmingfaqanchor6"></a>특성 사용된 프로젝트에.idl 파일을 사용 하려면 어떻게 해야 합니까?  
+##  <a name="vcconattributeprogrammmingfaqanchor6"></a> 특성 사용된 프로젝트에.idl 파일을 사용 하려면 어떻게 해야 합니까?  
  .Idl 파일 특성을 사용 하는 ATL 프로젝트에서 사용 하려는 할 수 있습니다. 사용이 경우는 [importidl](../windows/importidl.md) 특성,.h 파일에.idl 파일을 컴파일하여 (참조는 [MIDL 속성 페이지](../ide/midl-property-pages.md) 프로젝트의 속성 페이지 대화 상자에서), 다음 프로젝트에서.h 파일을 포함 하 고 .  
   
-##  <a name="vcconattributeprogrammmingfaqanchor7"></a>특성에 의해 삽입 된 코드를 수정할 수 있습니까?  
+##  <a name="vcconattributeprogrammmingfaqanchor7"></a> 특성에 의해 삽입 된 코드를 수정할 수 있습니까?  
  일부 특성을 프로젝트에 코드를 삽입합니다. 사용 하 여 삽입 된 코드를 볼 수는 [/Fx](../build/reference/fx-merge-injected-code.md) 컴파일러 옵션입니다. 삽입된 된 파일에서 코드를 복사 하 고 소스 코드에 붙여넣을 수 이기도 합니다. 이 특성의 동작을 수정할 수 있습니다. 그러나도 코드의 다른 부분을 수정할 수 있습니다.  
   
  다음 샘플은 삽입 된 코드를 소스 코드 파일에 복사 하 고의 결과입니다.  
@@ -257,10 +252,10 @@ public:
 int main() {}  
 ```  
   
-##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a>앞으로 특성이 지정 된 인터페이스를 선언할 수는 방법  
+##  <a name="vcconattributeprogrammmingfaqhowcaniforwarddeclareanattributedinterface"></a> 앞으로 특성이 지정 된 인터페이스를 선언할 수는 방법  
  특성 사용된 인터페이스의 정방향 선언 확인 하려는 경우에 실제 인터페이스 선언에 적용 하는 정방향 선언에 동일한 특성을 적용 해야 합니다. 적용 해야는 [내보내기](../windows/export.md) 특성을 정방향 선언 합니다.  
   
-##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a>또한 특성을 사용 하는 클래스에서 파생 된 클래스에서 특성을 사용할 수 있습니까?  
+##  <a name="vcconcaniuseattributesonclassderivedfromclassthatalsousesattributesanchor"></a> 또한 특성을 사용 하는 클래스에서 파생 된 클래스에서 특성을 사용할 수 있습니까?  
  아니요, 또한 특성을 사용 하는 클래스에서 파생 된 클래스에서 특성을 사용 하 여도 지원 되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  

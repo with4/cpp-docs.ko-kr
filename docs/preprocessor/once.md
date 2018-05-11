@@ -1,12 +1,9 @@
 ---
-title: "일단 | Microsoft Docs"
-ms.custom: 
+title: 일단 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.once
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - once pragma
 - pragmas, once
 ms.assetid: c7517556-6403-4b16-8898-f2aa0a6f685f
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f0aea1700feaad1c286386f17a5008514282d52
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9b0e0b2b3667d4a33709caa643e4d26ed70b2990
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="once"></a>once
 소스 코드 파일을 컴파일할 때 컴파일러에서 파일을 한 번만 포함하도록(열도록) 지정합니다.  
@@ -43,7 +38,7 @@ ms.lasthandoff: 02/23/2018
 ## <a name="remarks"></a>설명  
  `#pragma once`를 사용하면 컴파일러에서 전송 단위 내 파일의 첫 번째 #include 다음에 파일을 열고 읽지 않으므로 빌드 시간을 줄일 수 있습니다. 이 라고 *다중 포함 최적화*합니다. 비슷한 효과가 있기는 *#include 가드* 관용구를 사용 하 여 전처리기 매크로 정의 파일의 내용에 대 한 다중 포함을 방지 합니다. 또한 수의 위반을 방지 하는 *단일 정의 규칙*-모든 템플릿, 형식, 함수 및 개체 코드에 둘 이상의 정의가 있는 요구 사항입니다.  
   
- 예:  
+ 예를 들어:  
   
 ```  
 // header.h  

@@ -1,13 +1,10 @@
 ---
-title: "기호: 리소스 식별자 | Microsoft Docs"
-ms.custom: 
+title: '기호: 리소스 식별자 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.identifiers
 dev_langs:
@@ -19,21 +16,19 @@ helpviewer_keywords:
 - symbols, editing
 - resource editors, resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 931ec9cb5d7e756d47a24c0c2b30b8686cd0fd4c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c049aa192aeb253641ab473e5675b1ee5bd685a6
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="symbols-resource-identifiers"></a>기호: 리소스 식별자
-기호는 두 부분 즉, 텍스트 문자열(기호 이름)과 이와 매핑되는 정수 값(기호 값)으로 구성된 리소스 식별자(ID)입니다. 예:  
+기호는 두 부분 즉, 텍스트 문자열(기호 이름)과 이와 매핑되는 정수 값(기호 값)으로 구성된 리소스 식별자(ID)입니다. 예를 들어:  
   
 ```  
 IDC_EDITNAME = 5100  

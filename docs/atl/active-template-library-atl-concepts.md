@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
  구성 요소 개체 모델(COM) 이면의 주요 개념을 소개합니다. 이 문서에서 ATL 정의 및 사용 시기에 대해서도 간략하게 설명합니다.  
   
  [ATL COM 개체 기본 사항](../atl/fundamentals-of-atl-com-objects.md)  
- 다양한 ATL 클래스와 해당 클래스의 구현 방식 간의 관계를 설명 합니다.  
+ 다양 한 ATL 클래스와 해당 클래스의 구현 방식 간의 관계를 설명 합니다.  
   
  [이중 인터페이스 및 ATL](../atl/dual-interfaces-and-atl.md)  
  ATL 측면에서 이중 인터페이스를 설명합니다.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 05/03/2018
  클래스가 자유 스레드 된 마샬러(FTM) 집합을 허용하는 ATL 단순 개체 마법사의 옵션을 자세히 설명합니다.  
   
  [프로젝트의 스레딩 모델 지정](../atl/specifying-the-threading-model-for-a-project-atl.md)  
- 프로젝트의 스레딩과 관련된 런타임 성능을 제어를 사용할 수 있는 매크로 설명 합니다.  
+ 프로젝트의 스레딩과 관련 된 런타임 성능을 제어를 사용할 수 있는 매크로 설명 합니다.  
   
  [ATL 모듈 클래스](../atl/atl-module-classes.md)  
  ATL 7.0에 대한 새 모듈 클래스를 설명합니다. ATL에 필요한 기본 기능을 구현하는 모듈 클래스  
@@ -94,7 +94,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="related-sections"></a>관련 단원  
  [ATL 샘플](../visual-cpp-samples.md)  
- 설명 및 ATL 샘플 프로그램에 대한 링크를 제공 합니다.  
+ 설명 및 ATL 샘플 프로그램에 대 한 링크를 제공 합니다.  
   
  [ATL 프로젝트 만들기](../atl/reference/creating-an-atl-project.md)  
  ATL 프로젝트 마법사에 정보를 포함 합니다.  

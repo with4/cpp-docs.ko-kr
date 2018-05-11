@@ -1,30 +1,25 @@
 ---
-title: "Hstringreference:: Operator! = 연산자 | Microsoft Docs"
-ms.custom: 
+title: 'Hstringreference:: Operator! = 연산자 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator!=
 dev_langs:
 - C++
 ms.assetid: 01ab6691-1fc7-4feb-85f0-fe795593a160
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c55e2fdb2e4fe1396a10563b0b29f5c38818a240
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6ed2eeaceac23dc7a4efb17e2aba03cd9bc88eeb
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="hstringreferenceoperator-operator"></a>HStringReference::Operator!= 연산자
 두 개의 매개 변수가 같지 않은지를 나타냅니다.  
@@ -58,7 +53,7 @@ inline bool operator!=(
  비교할 두 번째 매개 변수입니다.  `rhs`는 HStringReference 개체 또는 HSTRING 핸들일 수 있습니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true`경우는 `lhs` 및 `rhs` 매개 변수는 같고, 그렇지 않으면 `false`합니다.  
+ `true` 경우는 `lhs` 및 `rhs` 매개 변수는 같고, 그렇지 않으면 `false`합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** corewrappers.h  

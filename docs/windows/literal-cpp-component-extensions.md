@@ -1,13 +1,10 @@
 ---
-title: "리터럴 (c + + 구성 요소 확장명) | Microsoft Docs"
-ms.custom: 
+title: 리터럴 (c + + 구성 요소 확장명) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - literal
 - literal_cpp
@@ -16,18 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f858e94bf916c2d441cee607739bb9e08da09b85
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6871f02a1c37def05b6450e7ffad18f6fa45b461
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="literal-c-component-extensions"></a>리터럴(C++ 구성 요소 확장명)
 로 표시 된 변수 (데이터 멤버) `literal` 에 **/clr** 컴파일이입니다. 해당 하는 네이티브는 `static const` 변수입니다.  
@@ -58,7 +53,7 @@ ms.lasthandoff: 12/21/2017
   
  `literal`는 상황에 맞는 키워드입니다. 참조 [상황에 맞는 키워드](../windows/context-sensitive-keywords-cpp-component-extensions.md) 자세한 정보에 대 한 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 `literal` 변수가 `static`을 의미함을 보여 줍니다.  
   
 ```  
@@ -73,7 +68,7 @@ int main() {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 샘플에서는 메타데이터에서 리터럴의 영향을 보여 줍니다.  
   
 ```  
@@ -95,7 +90,7 @@ public ref struct A {
 .field public static literal int32 lit = int32(0x0000000A)  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  C#에서 작성된 다음 샘플은 이전 샘플에서 만든 메타데이터를 참조하고 `literal` 및 `static const` 변수의 영향을 보여 줍니다.  
   
 ```  

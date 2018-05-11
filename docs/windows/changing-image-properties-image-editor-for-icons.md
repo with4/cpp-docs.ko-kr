@@ -1,13 +1,10 @@
 ---
-title: "이미지 속성 (아이콘에 대 한 이미지 편집기) 변경 | Microsoft Docs"
-ms.custom: 
+title: 이미지 속성 (아이콘에 대 한 이미지 편집기) 변경 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - Image editor [C++], image properties
 - Properties window, image editor
 ms.assetid: f6172bf1-08c4-4dfd-b542-dd8749e83fe6
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 96122b2bdc6419b41cd0e00cb544955d8d7c8463
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 79903e198ddd418b96b0fac2a464dc130d81614e
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="changing-image-properties-image-editor-for-icons"></a>이미지 속성 변경(아이콘에 대한 이미지 편집기)
 설정 하거나 사용 하 여 이미지의 속성을 수정할 수는 [속성 창](/visualstudio/ide/reference/properties-window)합니다.  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
     |속성|설명|  
     |--------------|-----------------|  
     |**색**|이미지에 대 한 색 구성표를 지정합니다. 단색, 16, 또는 256, 또는 True 색을 선택 합니다. 이미지에 16 색상표를 사용 하 여 이미지 이미 모델링 다이어그램 단색을 선택 흑백 색에 대 한 대체 하면 합니다. 대비 항상 유지 되지 않습니다: 예를 들어 빨간색 및 녹색의 인접 한 영역 둘 다로 변환할지 검정.|  
-    |**파일 이름**|이미지 파일의 이름을 지정합니다. 기본적으로 Visual Studio에서 기본 리소스 식별자 (IDB_BITMAP1) 적절 한 확장명을 추가 하는 처음 4 자리 ("IDB_")를 제거 하 여 만든 기본 파일 이름을 할당 합니다. 이 예에서 이미지에 대 한 파일 이름을 BITMAP1.bmp 것입니다. MYBITMAP1.bmp 이름을 수 없습니다.|  
+    |**Filename**|이미지 파일의 이름을 지정합니다. 기본적으로 Visual Studio에서 기본 리소스 식별자 (IDB_BITMAP1) 적절 한 확장명을 추가 하는 처음 4 자리 ("IDB_")를 제거 하 여 만든 기본 파일 이름을 할당 합니다. 이 예에서 이미지에 대 한 파일 이름을 BITMAP1.bmp 것입니다. MYBITMAP1.bmp 이름을 수 없습니다.|  
     |**높이**|이미지의 높이 (픽셀)를 설정합니다. 기본값은 48입니다. 이미지 잘리거나 기존 이미지 아래에 공백이 추가 됩니다.|  
     |**ID**|리소스의 식별자를 설정합니다. 이미지에 대 한 Microsoft Visual Studio에서는 기본적으로 할당는 계열에서 사용 가능한 다음 식별자: IDB_BITMAP1, IDB_BITMAP2, 등입니다. 이름이 비슷한 아이콘 및 커서에 사용 됩니다.|  
     |**색상표**|색 속성을 변경 합니다. 색을 선택 하 고 표시를 두 번 클릭은 [사용자 지정 색 선택 대화 상자](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)합니다. 적절 한 텍스트 상자에 RGB 또는 HSL 값을 입력 하 여 색을 정의 합니다.|  

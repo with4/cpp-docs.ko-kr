@@ -1,30 +1,25 @@
 ---
 title: C + + 특성 참조 | Microsoft Docs
-ms.custom: ''
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: ''
-ms.topic: 'index-page '
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-caps.latest.revision: 13
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e371a89a42481f72d3523d8f21852f3f79d19fc7
-ms.sourcegitcommit: 770f6c4a57200aaa9e8ac6e08a3631a4b4bdca05
+ms.openlocfilehash: 307f2e8e99e469face090acd19e7c5f28c5d9140
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="c-attributes-reference"></a>C++ 특성 참조
 Microsoft은.NET Framework 공용 언어 런타임 개발 및 COM 프로그래밍을 단순화 하는 특성 집합을 정의 합니다. 소스 파일에서 특성을 포함 하는 경우 컴파일러 공급자 코드를 삽입 하거나 생성 된 개체 파일의 코드를 수정 하는 Dll와 함께 작동 합니다.  

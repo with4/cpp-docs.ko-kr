@@ -1,27 +1,22 @@
 ---
-title: "방법: 유니버설 Windows 플랫폼 앱에서 기존 C++ 코드 사용 | Microsoft 문서"
-ms.custom: 
+title: '방법: 유니버설 Windows 플랫폼 앱에서 기존 C++ 코드 사용 | Microsoft 문서'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67bed0f5cc3ad07ae7b726b9e120aa56120186e6
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a3f8cb26a66fce9c4b87822ffbfa4005f3a2e758
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>방법: 유니버설 Windows 플랫폼 앱에서 기존 C++ 코드 사용
 데스크톱 프로그램을 UWP 환경에서 실행되게 하는 가장 쉬운 방법은 데스크톱 브리지 기술을 사용하는 것입니다. 여기에는 코드를 변경할 필요 없이 기존 응용 프로그램을 UWP 앱으로 패키징하는 데스크톱 앱 변환기가 포함됩니다. 자세한 내용은 [데스크톱 브리지를 사용하여 데스크톱 앱을 UWP(유니버설 Windows 플랫폼)로 가져오기](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-root)를 참조하세요.
@@ -147,7 +142,7 @@ ms.lasthandoff: 02/14/2018
   
 2.  DLL 프로젝트에 대한 프로젝트 속성을 열고 구성을 **모든 구성**으로 설정합니다.  
   
-3.  프로젝트 속성의 **C/C++**, **일반** 탭에서 **Windows 런타임 확장 사용**을 **예(/ZW)**로 설정합니다. 이렇게 하면 구성 요소 확장명(C++/CX)이 활성화됩니다.  
+3.  프로젝트 속성의 **C/C++**, **일반** 탭에서 **Windows 런타임 확장 사용**을 **예(/ZW)** 로 설정합니다. 이렇게 하면 구성 요소 확장명(C++/CX)이 활성화됩니다.  
   
 4.  **솔루션 탐색기**에서 프로젝트 노드를 선택하고 바로 가기 메뉴를 연 다음 **프로젝트 언로드**를 선택합니다. 그런 다음 언로드된 프로젝트 노드에서 바로 가기 메뉴를 열고 프로젝트 파일을 편집하도록 선택합니다. WindowsTargetPlatformVersion 요소를 찾아 다음 요소로 바꿉니다.  
   
@@ -236,7 +231,7 @@ LNK4264: archiving object file compiled with /ZW into a static library; note tha
   
 6.  이제 중복된 일부 코드가 있을 수도 있습니다. 미리 컴파일된 헤더(예: stdafx.h 및 pch.h)가 두 개 이상 있으면 유지할 헤더를 하나만 선택합니다. 유지할 헤더에 include 문과 같은 필요한 코드를 복사합니다. 그런 다음 다른 헤더를 삭제하고 프로젝트 속성의 **미리 컴파일된 헤더**에서 헤더 파일의 이름이 올바른지 확인합니다.  
   
-     미리 컴파일된 헤더로 사용할 파일을 변경한 경우 각 파일에 대한 미리 컴파일된 헤더 옵션이 올바른지 확인합니다. 각 .cpp 파일을 차례로 선택하고 속성 창을 연 다음 **만들기(/Yc)**로 설정되어야 하는 원하는 미리 컴파일된 헤더를 제외하고 모두 **사용(/Yu)**으로 설정되어 있는지 확인합니다.  
+     미리 컴파일된 헤더로 사용할 파일을 변경한 경우 각 파일에 대한 미리 컴파일된 헤더 옵션이 올바른지 확인합니다. 각 .cpp 파일을 차례로 선택하고 속성 창을 연 다음 **만들기(/Yc)** 로 설정되어야 하는 원하는 미리 컴파일된 헤더를 제외하고 모두 **사용(/Yu)** 으로 설정되어 있는지 확인합니다.  
   
 7.  프로젝트를 빌드하고 모든 오류를 해결합니다. 이러한 오류는 /ZW 옵션을 사용하기 때문에 발생하거나 새로운 버전의 Windows SDK로 인해 발생할 수 있습니다. 또는 라이브러리가 종속된 헤더 파일과 같은 종속성이나 이전 프로젝트와 새 프로젝트 간의 프로젝트 설정 차이를 반영할 수도 있습니다.  
   

@@ -1,13 +1,10 @@
 ---
-title: "방법: 리소스 스크립트 파일 (독립 실행형) 프로젝트 외부에서 열기 | Microsoft Docs"
-ms.custom: 
+title: '방법: 리소스 스크립트 파일 (독립 실행형) 프로젝트 외부에서 열기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.resource
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - .rc files, viewing resources
 - resource script files, viewing resources
 ms.assetid: bc350c60-178d-4c5d-9a7e-6576b0c936e4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2dd3bb3996fca1fd2c73ff98e7f391d27911ad15
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 87dd0cb1e54b6e74c9c4f4fd7d9baff6461ad470
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-project-standalone"></a>방법: 프로젝트 외부에서 리소스 스크립트 파일 열기(독립 실행형)
 프로젝트를 열지 않고도 .rc 파일에서 리소스를 볼 수 있습니다. .Rc 파일에서 열리지 않고 문서 창에 열립니다는 [리소스 뷰](../windows/resource-view-window.md) 창 (즉, 프로젝트 내에서 파일이 열릴 때와).  

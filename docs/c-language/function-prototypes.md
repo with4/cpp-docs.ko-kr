@@ -1,13 +1,10 @@
 ---
-title: "함수 프로토타입 | Microsoft Docs"
-ms.custom: 
+title: 함수 프로토타입 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,26 +14,24 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea02b5b3bb1517623a0c3fc67a752d203f81c5a8
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: 6979bb90debc1734ccadf40b5d0e814d3c28c1ac
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="function-prototypes"></a>함수 프로토타입
 함수 선언은 함수 정의 앞에 오고 이름, 반환 형식, 저장소 클래스 및 함수의 다른 특성을 지정합니다. 프로토타입이 되려면 함수 선언은 함수 인수에 대한 형식 및 식별자도 설정해야 합니다.  
   
 ## <a name="syntax"></a>구문  
  `declaration`:  
- *declaration-specifiers attribute-seq* opt*init-declarator-list* opt**;**  
+ *declaration-specifiers attribute-seq* opt*init-declarator-list* opt **;**  
   
- /\* *attribute-seq* opt는 Microsoft 전용임 \*/  
+ /\* *attribute-seq* opt는 Microsoft 전용임 */  
   
  *declaration-specifiers*:  
  *storage-class-specifier declaration-specifiers* opt  
@@ -61,7 +56,7 @@ ms.lasthandoff: 03/16/2018
  *direct-declarator*: /\* 함수 선언자 \*/  
  *direct-declarator*  **(**  *parameter-type-list*  **)**  /* 새로운 스타일의 선언자 \*/  
   
- *direct-declarator*  **(**  *identifier-list* opt**)** /* 사용되지 않는 스타일의 선언자 \*/  
+ *direct-declarator*  **(**  *identifier-list* opt **)** /* 사용되지 않는 스타일의 선언자 \*/  
   
  프로토타입은 닫는 괄호 바로 다음에 오는 세미콜론으로 종료되므로 본문이 없다는 점을 제외하고 함수 정의와 형태가 동일합니다. 어떤 경우든 간에 반환 형식은 함수 정의에 지정된 반환 형식과 일치해야 합니다.  
   

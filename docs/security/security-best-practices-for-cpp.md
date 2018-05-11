@@ -1,7 +1,7 @@
 ---
 title: C + +에 대 한 보안 모범 사례 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/08/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -14,20 +14,22 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-author: ghogen
-ms.author: ghogen
+author: mikeblome
+ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c7f0860daea5b2e90368c7068c6b13371af3fd8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
-ms.translationtype: HT
+ms.openlocfilehash: 35114d2fff4975cfca1681a7f5861c81bd979ef5
+ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="security-best-practices-for-c"></a>C++의 최선의 보안 구현 방법
+
 이 문서에는 보안 도구와 구현 방법에 대한 정보가 포함되어 있습니다. 이러한 정보를 사용해도 응용 프로그램이 공격으로부터 완전히 보호되는 것은 아니지만 공격 성공 가능성이 줄어듭니다.  
   
-## <a name="visual-c-security-features"></a>Visual C++ 보안 기능  
+## <a name="visual-c-security-features"></a>Visual C++ 보안 기능
+
  이러한 보안 기능은 Visual C++ 컴파일러 및 링커에 기본 제공됩니다.  
   
  [/guard(제어 흐름 보호 사용)](../build/reference/guard-enable-control-flow-guard.md)  
@@ -84,14 +86,19 @@ ms.lasthandoff: 05/07/2018
 -   일반적인 프로그래밍 실수로 인해 발생하는 잠재적인 응용 프로그램 호환성 오류를 테스트합니다.  
   
 -   응용 프로그램에서 메모리 관련 문제를 검사합니다.  
-  s
+
 -   응용 프로그램에서 잠재적인 보안 문제를 식별합니다.  
   
  AppVerifier에서 사용할 수 있는 Application Compatibility Toolkit의 일부인는 [응용 프로그램 호환성](http://go.microsoft.com/fwlink/p/?linkid=91277) TechNet 웹 사이트에 있습니다.  
   
 
 ## <a name="windows-user-accounts"></a>Windows 사용자 계정  
- Administrators 그룹에 속하는 Windows 사용자 계정을 사용하면 개발자 및 확장에 의해 고객이 보안 위험에 노출됩니다. 자세한 내용은 참조 [Users 그룹의 멤버로 실행](running-as-a-member-of-the-users-group.md) 및 [어떻게 사용자 계정 컨트롤 (UAC)에 영향을 응용 프로그램](how-user-account-control-uac-affects-your-application.md)합니다.  
+ Administrators 그룹에 속하는 Windows 사용자 계정을 사용하면 개발자 및 확장에 의해 고객이 보안 위험에 노출됩니다. 자세한 내용은 참조 [Users 그룹의 멤버로 실행](running-as-a-member-of-the-users-group.md) 및 [어떻게 사용자 계정 컨트롤 (UAC)에 영향을 응용 프로그램](how-user-account-control-uac-affects-your-application.md)합니다.
+
+## <a name="guidance-for-speculative-execution-side-channels"></a>잘못 된 실행 쪽 채널에 대 한 지침
+
+식별 하 고 추론 실행 측면 채널 하드웨어 문제 c + + 소프트웨어에 대 한 완화 하는 방법에 대 한 정보를 참조 하십시오. [잘못 된 실행 쪽 채널에 대 한 c + + 개발자 지침](developer-guidance-speculative-execution.md)합니다.
+
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Security>   

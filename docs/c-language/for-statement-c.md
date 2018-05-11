@@ -1,29 +1,24 @@
 ---
-title: "for 문(C) | Microsoft 문서"
-ms.custom: 
+title: for 문(C) | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - for keyword [C]
 ms.assetid: 560a8de4-19db-4868-9f18-dbe51b17900d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18c2b89e8c09ca7ddb6ba7f2cc02c9b400265a35
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 21640d998a2df31a8429e9451bc674c200383f5f
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="for-statement-c"></a>for 문 (C)
 **for** 문을 사용하면 지정한 횟수만큼 문 또는 복합 문을 반복할 수 있습니다. **for** 문의 본문은 선택적 조건이 false가 될 때까지 0번 이상 실행됩니다. **for** 문 내에 선택적 식을 사용하여 **for** 문의 실행 중 값을 초기화하고 변경할 수 있습니다.  

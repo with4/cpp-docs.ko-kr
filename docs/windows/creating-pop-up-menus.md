@@ -1,13 +1,10 @@
 ---
-title: "팝업 메뉴 만들기 | Microsoft Docs"
-ms.custom: 
+title: 팝업 메뉴 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - shortcut menus, creating
 - pop-up menus, displaying
 ms.assetid: dff4dddf-2e8d-4c34-b755-90baae426b58
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6185f52eeaf56ac0d31cb8e9f22715db36514725
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 218ed28a8b44100beead46ab13e04ad07d86c7e5
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-pop-up-menus"></a>팝업 메뉴 만들기
 [팝업 메뉴](../mfc/menus-mfc.md) 에는 자주 사용되는 명령이 표시됩니다. 포인터 위치에 대한 상황에 맞는 메뉴일 수 있습니다. 응용 프로그램에서 팝업 메뉴를 사용하려면 메뉴 자체를 빌드한 후 응용 프로그램 코드에 연결해야 합니다.  

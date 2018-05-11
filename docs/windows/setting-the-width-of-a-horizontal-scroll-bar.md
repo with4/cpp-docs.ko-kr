@@ -1,13 +1,10 @@
 ---
-title: "가로 스크롤 막대의 너비를 설정 합니다. | Microsoft Docs"
-ms.custom: 
+title: 가로 스크롤 막대의 너비를 설정 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - CListBox class, scroll bar width
 - scroll bars, width
 ms.assetid: 51dad141-aa0b-46a3-a82c-46b80d603d94
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7aeabed9eaa164a0c19fd6b425f36e68059a548d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 34545a01c01146992c7d88ecabec1a29a7b438f2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="setting-the-width-of-a-horizontal-scroll-bar"></a>가로 스크롤 막대 너비 설정
 MFC 클래스를 사용 하 여 대화 상자에 가로 스크롤 막대를으로 목록 상자를 추가 하면 응용 프로그램에서 스크롤 막대를 자동으로 나타나지 않습니다.  

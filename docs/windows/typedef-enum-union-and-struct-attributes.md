@@ -1,13 +1,10 @@
 ---
-title: "Typedef, Enum, Union 및 Struct 특성 | Microsoft Docs"
-ms.custom: 
+title: Typedef, Enum, Union 및 Struct 특성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - typedef attributes
 - enum attributes
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2087d4ff4e4905324f9bbdfaa954287f033feafe
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c14881afd000dc5fb4223a2ecfa9dcdc67e7b541
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Typedef, Enum, Union 및 Struct 특성
 다음과 같은 특성에 적용 된 [typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1), [구조체](../cpp/struct-cpp.md), 및 [열거형](../cpp/enumerations-cpp.md) c + + 키워드입니다.  
@@ -38,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 |특성|설명|  
 |---------------|-----------------|  
 |[case](../windows/case-cpp.md)|함께 사용 된 [switch_type](../windows/switch-type.md) 특성에 **union**합니다.|  
-|[사용자 지정](../windows/custom-cpp.md)|특성을 직접 정의할 수 있습니다.|  
+|[custom](../windows/custom-cpp.md)|특성을 직접 정의할 수 있습니다.|  
 |[export](../windows/export.md)|데이터 구조는.idl 파일에 배치 하면 됩니다.|  
 |[first_is](../windows/first-is.md)|전송 될 첫 번째 배열 요소의 인덱스를 지정 합니다.|  
 |[helpcontext](../windows/helpcontext.md)|사용자는 도움말 파일에서이 요소에 대 한 정보를 볼 수 있는 컨텍스트 ID를 지정 합니다.|  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
 |특성|설명|  
 |---------------|-----------------|  
-|[사용자 지정](../windows/custom-cpp.md)|특성을 직접 정의할 수 있습니다.|  
+|[custom](../windows/custom-cpp.md)|특성을 직접 정의할 수 있습니다.|  
 |[export](../windows/export.md)|데이터 구조는.idl 파일에 배치 하면 됩니다.|  
 |[uuid](../windows/uuid-cpp-attributes.md)|클래스 또는 인터페이스에 대 한 고유 ID를 지정합니다.|  
 |[v1_enum](../windows/v1-enum.md)|열거 형식이 지정된 된 16 비트 기본이 아닌 32 비트 엔터티 전송 될 지시 합니다.|  
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
 |특성|설명|  
 |---------------|-----------------|  
-|[사용자 지정](../windows/custom-cpp.md)|특성을 직접 정의할 수 있습니다.|  
+|[custom](../windows/custom-cpp.md)|특성을 직접 정의할 수 있습니다.|  
 |[export](../windows/export.md)|데이터 구조는.idl 파일에 배치 하면 됩니다.|  
 |[first_is](../windows/first-is.md)|전송 될 첫 번째 배열 요소의 인덱스를 지정 합니다.|  
 |[last_is](../windows/last-is.md)|전송할 마지막 배열 요소의 인덱스를 지정 합니다.|  
@@ -93,7 +88,7 @@ ms.lasthandoff: 12/21/2017
 |[coclass](../windows/coclass.md)|ActiveX 컨트롤을 만듭니다.|  
 |[com_interface_entry](../windows/com-interface-entry-cpp.md)|Com에 인터페이스 항목을 추가 합니다.|  
 |[control](../windows/control.md)|사용자 정의 형식 컨트롤 임을 지정 합니다.|  
-|[사용자 지정](../windows/custom-cpp.md)|특성을 직접 정의할 수 있습니다.|  
+|[custom](../windows/custom-cpp.md)|특성을 직접 정의할 수 있습니다.|  
 |[db_column](../windows/db-column.md)|행 집합을 지정된 된 열에 바인딩합니다.|  
 |[db_command](../windows/db-command.md)|OLE DB 명령을 만듭니다.|  
 |[db_param](../windows/db-param.md)|지정 된 멤버 변수는 입력 또는 출력 매개 변수 연결 하 고 변수를 구분 합니다.|  

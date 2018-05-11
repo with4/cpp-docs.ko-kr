@@ -1,13 +1,10 @@
 ---
-title: "일반 속성 페이지 (프로젝트) | Microsoft Docs"
-ms.custom: 
+title: 일반 속성 페이지 (프로젝트) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCConfiguration.IntermediateDirectory
 - VC.Project.VCConfiguration.ConfigurationType
@@ -36,14 +33,13 @@ helpviewer_keywords:
 - Unicode, creating C++ build configuration
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 772192a4b367760e85bb1631f1ef7b50650af0c1
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: ba98f7d9ed14df1e017f8b83e73cf5d318610f9f
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="general-property-page-project"></a>일반 속성 페이지(프로젝트)
 
@@ -115,7 +111,7 @@ Visual C++는 이 옵션을 적용하지 않습니다. C# 및 JavaScript와 같�
 
 - **응용 프로그램 (.exe)**, 링커 도구 집합 (C/c + + 컴파일러, MIDL, 리소스 컴파일러, 링커, BSCMake, XML 웹 서비스 프록시 생성기, 사용자 지정 빌드, 사전 빌드, 사전 링크, 사후 빌드 이벤트)를 표시 합니다.
 
-- **동적 라이브러리 (.dll)**을 링커 도구 집합을 표시, /DLL 링커 옵션을 지정 하 고 CL에 _WINDLL define을 추가 합니다.
+- **동적 라이브러리 (.dll)** 을 링커 도구 집합을 표시, /DLL 링커 옵션을 지정 하 고 CL에 _WINDLL define을 추가 합니다.
 
 - **메이크파일**, 메이크파일 도구 집합 (NMake)을 표시 합니다.
 
@@ -154,6 +150,6 @@ _UNICODE 또는 _MBCS를 설정해야 하는지를 정의합니다. 해당하는
 **Windows 스토어 응용 프로그램 지원**  
 이 프로젝트는 Windows 런타임 (유니버설 Windows 플랫폼) 앱을 지원 하는지 여부를 지정 합니다. 자세한 내용은 참조 [/ZW (Windows 런타임 컴파일)](../build/reference/zw-windows-runtime-compilation.md), 및 Windows 개발자 센터입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [속성 페이지](../ide/property-pages-visual-cpp.md)  

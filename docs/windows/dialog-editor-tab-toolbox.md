@@ -1,13 +1,10 @@
 ---
-title: "대화 상자 편집기 탭, 도구 상자 | Microsoft Docs"
-ms.custom: 
+title: 대화 상자 편집기 탭, 도구 상자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,18 +16,16 @@ helpviewer_keywords:
 - Dialog editor, creating controls
 - controls [C++], adding to dialog boxes
 ms.assetid: 253885c2-dcb9-4d8e-ac9b-805ea31cbf5e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9db31d6e152be10f2c4934b7b1f239d1e08387f5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: eb7da9e08d44435570180859c1614f7817595833
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dialog-editor-tab-toolbox"></a>도구 상자, 대화 상자 편집기 탭
 대화 상자 편집기 탭이 표시는 [도구 상자 창](/visualstudio/ide/reference/toolbox) 대화 상자 편집기에서 작업 하는 경우. 새 대화 상자에 컨트롤을 추가 하려면 컨트롤 도구 상자에서 만들려는 대화 상자로 끌어 (자세한 내용은 참조 [대화 상자에 컨트롤 추가](adding-a-control-to-a-dialog-box.md)). 그런 다음 컨트롤을 주변으로 이동하거나 크기와 모양을 변경할 수 있습니다.  

@@ -1,13 +1,10 @@
 ---
-title: "새 도구 모음 단추 만들기 | Microsoft Docs"
-ms.custom: 
+title: 새 도구 모음 단추 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.toolbar
 dev_langs:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - toolbar buttons (in Toolbar editor), creating
 - toolbar buttons (in Toolbar editor)
 ms.assetid: 46c120fe-4f2a-4887-a08f-bd1fea04b3f4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b89d88d931603f1f8dfd65f08cb78210eac19a3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d883fbb34fe45be2ad84860ea7564350346749f2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-new-toolbar-button"></a>새 도구 모음 단추 만들기
 ### <a name="to-create-a-new-toolbar-button"></a>새 도구 모음 단추를 만들려면  
@@ -43,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
 3.  도구 모음의 오른쪽 끝에 빈 단추에 ID를 지정 합니다. 편집 하 여 그렇게 할 수는 **ID** 속성에는 [속성 창](/visualstudio/ide/reference/properties-window)합니다. 예를 들어 다음 도구 모음 단추 메뉴 옵션으로 동일한 ID를 제공 하는 것이 좋습니다. 이 경우 드롭다운 목록 상자를 사용 하 여 선택 하 고 **ID** 메뉴 옵션입니다.  
   
-     또는  
+     -또는-  
   
      도구 모음 보기 창에서 도구 모음의 오른쪽 끝에 빈 단추를 선택 하 고 그리기를 시작 합니다. 기본 단추 명령 ID가 할당 됩니다 (ID_BUTTON\<n >).  
   

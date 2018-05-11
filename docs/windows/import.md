@@ -1,13 +1,10 @@
 ---
-title: "가져오기 | Microsoft Docs"
-ms.custom: 
+title: 가져오기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.import
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - import attribute
 ms.assetid: ebf07cae-39fb-4047-8b57-54af0a9a83de
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 011cabb37f388d4be6a9a69f685a7c711f0209a6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: b371cd1094a49f8a629cb6f8e880fd1210670f91
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="import"></a>import
 주 프로그램 IDL에서 참조 하려는 정의 포함 하는 다른.idl,.odl, 또는 헤더 파일을 지정 합니다.  
@@ -49,7 +44,7 @@ ms.lasthandoff: 12/21/2017
   
  **가져올** 만 특성; 프로젝트에 의해 생성 되는.idl 파일에 지정된 된 파일을 배치는 **가져올** 특성 사용 소스 코드에서 지정한 파일에 구문 호출 프로젝트입니다.  구문에 지정된 된 파일에서 프로젝트의 소스 코드를 호출 하려면 사용 하거나 [#import](../preprocessor/hash-import-directive-cpp.md) 및 `embedded_idl` 특성 또는 있습니다.h 파일을 포함할 수는 `idl_file`.h 파일이 있는 경우, 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예를 참조하십시오.  
   
 ```  

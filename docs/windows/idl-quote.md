@@ -1,13 +1,10 @@
 ---
 title: idl_quote | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.idl_quote
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 288d90bf2e32024792eaf5ec44825a9ac992bd71
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a8844a4770d0a4746c9d9de32a593d0770dcc9a9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="idlquote"></a>idl_quote
 Visual c + +의 현재 버전에서 지원 되지 않는 IDL 구문을 사용할 수 있습니다 및 생성된 된.idl 파일을 통과 하도록 합니다.  
@@ -47,7 +42,7 @@ Visual c + +의 현재 버전에서 지원 되지 않는 IDL 구문을 사용할
 ## <a name="remarks"></a>설명  
  경우는 **idl_quote** (세미콜론으로 닫는 괄호 뒤)를 독립 실행형 특성으로 다음 c + + 특성은 사용 *텍스트* 그대로 병합 된.idl 파일에 배치 됩니다. 경우 **idl_quote** 를 기호를 사용할 경우 *텍스트* 해당 기호에 대 한 특성 블록 내에 배치 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드는 지원 되지 않는 특성을 지정 하는 방법은 보여 줍니다 (사용 하 여 **에**, 지원 되는) 정의 하는 정의 되지 않은.idl 구문을 사용 하는 방법 및:  
   
 ```  

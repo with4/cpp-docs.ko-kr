@@ -1,13 +1,10 @@
 ---
-title: "선 또는 닫힌된 그림 (아이콘에 대 한 이미지 편집기)를 그리기 | Microsoft Docs"
-ms.custom: 
+title: 선 또는 닫힌된 그림 (아이콘에 대 한 이미지 편집기)를 그리기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - Image editor [C++], drawing lines
 - shapes, drawing
 ms.assetid: 7edd86db-77b1-451f-8001-bbfed9c6304f
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c2f5169c6340b756c31e1986e46b52f48b4edd5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 6e2defbde7963c6e58cdfe3f4a25ea550ad88e5f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>선 또는 닫힌 그림 그리기(아이콘에 대한 이미지 편집기)
 선 그리기에 대 한 이미지 편집기 도구와 동일한 방식으로 닫힌된 그림 작동: 한 지점에 삽입 포인터를 두고 다른 위치로 끕니다. 줄에 대 한 이러한 포인트는 끝점입니다. 닫힌된 그림에 대 한 이러한 지점은 그림 경계 사각형의 모서리를 반대 됩니다.  

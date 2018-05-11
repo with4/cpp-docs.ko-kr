@@ -1,13 +1,10 @@
 ---
-title: "대화 상자에 컨트롤 추가 | Microsoft Docs"
-ms.custom: 
+title: 대화 상자에 컨트롤 추가 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.dialog.dialog
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - dialog box controls, adding to dialog boxes
 - controls [C++], adding to dialog boxes
 ms.assetid: b2a26d19-093f-49ca-93da-fef00dfbb381
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 67d80bf24b2ab9a66e0d4990dca3514461f468b8
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 042d2b63602d8423cfba776ca24585c3c451f4b1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="adding-a-control-to-a-dialog-box"></a>대화 상자에 컨트롤 추가
 ### <a name="to-add-a-control-to-a-dialog-box"></a>대화 상자에 컨트롤을 추가하려면  

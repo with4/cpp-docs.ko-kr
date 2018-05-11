@@ -1,13 +1,10 @@
 ---
-title: "C 함수 정의 | Microsoft Docs"
-ms.custom: 
+title: C 함수 정의 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -21,17 +18,15 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a58adfefc5e2b3b5085a44c38dd392d3369421c8
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 69c9846b2ee192071b951d5b9b196d6e4b1968aa
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-function-definitions"></a>C 함수 정의
 함수 정의는 함수의 이름, 받아야 하는 매개 변수의 형식과 개수 및 반환 형식을 지정합니다. 함수 정의는 지역 변수의 선언과 함수의 기능을 결정하는 문이 있는 함수 본문도 포함합니다.  
@@ -50,7 +45,7 @@ ms.lasthandoff: 03/16/2018
  *function-definition*: /\* 여기서 Declarator는 함수 선언자입니다. \*/  
  *declaration-specifiers* opt*attribute-seq* opt*declarator declaration-list* opt*compound-statement*  
   
- /\* *attribute-seq*는 Microsoft 전용임 \*/  
+ /\* *attribute-seq*는 Microsoft 전용임 */  
   
  프로토타입 매개 변수인 경우:  
   
@@ -72,7 +67,7 @@ ms.lasthandoff: 03/16/2018
  *direct-declarator*: /\* 함수 선언자 \*/  
  *direct-declarator*  **(**  *parameter-type-list*  **)** /* 새로운 스타일의 선언자 \*/  
   
- *direct-declarator*  **(**  *identifier-list* opt**)** /* 사용되지 않는 스타일의 선언자 \*/  
+ *direct-declarator*  **(**  *identifier-list* opt **)** /* 사용되지 않는 스타일의 선언자 \*/  
   
  정의의 매개 변수 목록에서는 다음 구문을 사용합니다.  
   
@@ -101,7 +96,7 @@ ms.lasthandoff: 03/16/2018
  함수 본문에 대한 구문은 다음과 같습니다.  
   
  *compound-statement*: /\* 함수 본문 \*/  
- **{**  `declaration`-*list* opt*statement-list* opt**}**  
+ **{**  `declaration`-*list* opt*statement-list* opt **}**  
   
  함수 선언을 수정할 수 있는 유일한 저장소 클래스 지정자는 `extern` 및 **static**입니다. `extern` 지정자는 다른 파일에서 함수를 참조할 수 있음을 나타냅니다. 즉, 함수 이름이 링커로 내보내집니다. **static** 지정자는 다른 파일에서 함수를 참조할 수 없음을 나타냅니다. 즉, 이름이 링커에 의해 내보내지지 않습니다. 저장소 클래스가 함수 정의에 없을 경우 `extern`으로 간주됩니다. 어떤 경우이든 함수는 정의 지점에서 파일의 끝까지 항상 표시됩니다.  
   

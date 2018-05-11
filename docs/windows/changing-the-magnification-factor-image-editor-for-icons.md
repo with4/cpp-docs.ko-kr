@@ -1,13 +1,10 @@
 ---
-title: "확대 비율 (아이콘에 대 한 이미지 편집기) 변경 | Microsoft Docs"
-ms.custom: 
+title: 확대 비율 (아이콘에 대 한 이미지 편집기) 변경 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - magnification, Image editor
 - Image editor [C++], magnification
 ms.assetid: d1b0c9e0-fe54-4b2a-b75e-ffa0fa7c8cd9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8a1192219bce3fa51177f14ae1345740d0ab53a1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: d7cb78eb93a5817656b6d576a7ee5f88b7aa9e9c
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="changing-the-magnification-factor-image-editor-for-icons"></a>확대 비율 변경(아이콘에 대한 이미지 편집기)
 기본적으로 이미지 편집기는 실제 크기 및 실제 크기 6 배 오른쪽 창에서 보기의 왼쪽된 창에서 보기를 표시 합니다. 확대 비율 (작업 영역 맨 아래에 상태 표시줄에 표시) 이미지의 실제 크기와 표시 크기입니다. 기본 비율 6 이며 범위는 1부터 10 까지입니다.  

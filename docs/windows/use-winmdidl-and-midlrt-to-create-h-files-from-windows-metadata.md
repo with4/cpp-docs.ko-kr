@@ -1,28 +1,23 @@
 ---
-title: "방법: winmdidl.exe 및 midlrt.exe를 사용 하 여 windows 메타 데이터에서.h 파일 만들기를 | Microsoft Docs"
-ms.custom: 
+title: '방법: winmdidl.exe 및 midlrt.exe를 사용 하 여 windows 메타 데이터에서.h 파일 만들기를 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3cb17a3c60f7b3f9271ed5ff569d9cd139ce80fd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 06fef7449a540fbd3cddc2d38c9ce7483a7b5d55
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>방법: winmdidl.exe 및 midlrt.exe를 사용하여 Windows 메타데이터에서 .h 파일 만들기
 Winmdidl.exe 및 midlrt.exe는 Windows 런타임 구성 요소 및 네이티브 C++ 코드 사이의 COM 수준의 상호 작용을 지원합니다. Winmdidl.exe는 입력으로 .winmd 파일을 사용하여 Windows 런타임 구성 요소에 대한 메타데이터를 포함하고 IDL 파일을 출력합니다. Midlrt.exe는 해당 IDL 파일을 C++ 코드에서 사용할 수 있는 헤더 파일로 변환합니다. 두 도구 모두 명령줄에서 실행됩니다.  
@@ -54,7 +49,7 @@ Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:fil
  콘솔 출력에서 총 실행 시간을 표시합니다.  
   
  /outdir:\<dir >  
- 출력 디렉터리를 지정합니다. 경로에 공백이 있으면 따옴표를 사용합니다. 기본 출력 디렉터리는  *\<드라이브 >*: \Users\\*\<사용자 이름 >*\AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12.0\\합니다.  
+ 출력 디렉터리를 지정합니다. 경로에 공백이 있으면 따옴표를 사용합니다. 기본 출력 디렉터리는  *\<드라이브 >*: \Users\\*\<사용자 이름 >* \AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12.0\\합니다.  
   
  `/banner:<file>`  
  기본 저작권 메시지 앞에 오는 사용자 지정 텍스트가 포함된 파일을 지정하고 생성된 .idl 파일의 상단에 winmdidl 버전 번호를 표시합니다. 경로에 공백이 있으면 따옴표를 사용합니다.  

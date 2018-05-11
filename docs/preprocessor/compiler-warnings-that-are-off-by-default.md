@@ -1,5 +1,5 @@
 ---
-title: "기본적으로 해제 되어 있는 컴파일러 경고 | Microsoft Docs"
+title: 기본적으로 해제 되어 있는 컴파일러 경고 | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology:
 - cpp-tools
@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ef690e42088294ac0cebfa2d153f56ccca2cb5c
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
+ms.openlocfilehash: 109f2ef4b494a2af5d52fcc9767b4e3db3833e9f
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>기본적으로 해제 되어 있는 컴파일러 경고
 
@@ -27,7 +26,7 @@ ms.lasthandoff: 03/16/2018
 
 다음 옵션 중 하나를 사용 하 여 이러한 경고를 설정할 수 있습니다.
 
-- **#pragma warning(default :** *warning_number* **)**  
+- **#pragma 경고 (기본값:** *warning_number* **)**  
    지정 된 경고 (*warning_number*) 기본 수준에서 사용 하도록 설정 합니다. 경고 설명서에 경고의 기본 수준이 포함되어 있습니다.
 
 - **#pragma warning(** *warning_level* **:** *warning_number* **)**  

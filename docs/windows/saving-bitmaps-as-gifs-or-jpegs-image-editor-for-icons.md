@@ -1,13 +1,10 @@
 ---
-title: "비트맵을 Gif 또는 Jpeg (아이콘에 대 한 이미지 편집기)로 저장 | Microsoft Docs"
-ms.custom: 
+title: 비트맵을 Gif 또는 Jpeg (아이콘에 대 한 이미지 편집기)로 저장 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.editing
 dev_langs:
@@ -24,18 +21,16 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 115df69f-10fb-4e6f-906b-853c1e4a54af
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f3fe626357283dde8d8f283c6d0aa406ec6c1db0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: aed35f50e8cb874cea833439150b717034244b95
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>비트맵을 GIF 또는 JPEG로 저장(아이콘에 대한 이미지 편집기)
 비트맵을 만들 때 이미지가 비트맵 (.bmp) 형식으로 만들어집니다. 그러나 GIF 나 JPEG로 또는 다른 그래픽 형식에서 이미지를 저장할 수 있습니다.  

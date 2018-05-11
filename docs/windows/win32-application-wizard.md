@@ -1,13 +1,10 @@
 ---
-title: "Win32 응용 프로그램 마법사 | Microsoft Docs"
-ms.custom: 
+title: Win32 응용 프로그램 마법사 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.appwiz.win32.overview
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - Win32 Application Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c97caee74e1ae918924632802c155b23fffe0527
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 18885e36b5f598a8b1dd6128c29a9e520128dcb2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="win32-application-wizard"></a>Win32 응용 프로그램 마법사
 Visual C++ Win32 응용 프로그램 마법사에서는 아래 표의 머리글에 나열된 네 가지 형식의 프로젝트를 만들 수 있습니다. 각각의 경우 연 프로젝트 형식에 적합한 추가 옵션을 지정할 수 있습니다. 다음 표에서는 각 응용 프로그램 유형에 사용할 수 있는 옵션을 나타냅니다.  

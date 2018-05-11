@@ -1,28 +1,23 @@
 ---
-title: "범주별 WRL Api 키 | Microsoft Docs"
-ms.custom: 
+title: 범주별 WRL Api 키 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 7367bacf-6b7c-4ecd-a0ce-a662db46fc66
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ad38d1b24ca40b6209295f873bd44c54c3f6148
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 9936c85443f893111b3c2b9de17ca80e6fb382b2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="key-wrl-apis-by-category"></a>범주별 키 WRL API
 다음 표에서 기본 Windows 런타임 c + + 템플릿 라이브러리 클래스, 구조체, 함수 및 매크로 나열합니다. 도우미 네임 스페이스 및 클래스의 구문 생략 됩니다. 네임 스페이스에 의해 정렬 된 API 설명서를 확장 하는 이러한 목록입니다.  

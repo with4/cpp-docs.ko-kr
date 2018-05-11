@@ -1,30 +1,25 @@
 ---
-title: "Visual Studio의 네이티브 멀티 타기팅을 사용하여 이전 프로젝트 빌드 | Microsoft 문서"
-ms.custom: 
+title: Visual Studio의 네이티브 멀티 타기팅을 사용하여 이전 프로젝트 빌드 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12fabf51f9a6d3db89ea544b5c3df1d59a6d5d02
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 2df0bee37a0bcf0e8162fa692be79bd57b16b3cf
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Visual Studio의 네이티브 멀티 타기팅을 사용하여 이전 프로젝트 빌드
 
@@ -66,7 +61,7 @@ Visual Studio 2008에는 VCBuild라는 C++에 대한 자체 전용 빌드 시스
 
 업그레이드가 완료될 때 로그 보고서에 프로젝트에 대한 오류 또는 경고가 있으면 이를 주의해서 검토합니다. VCBuild에서 MSBuild로 변환하면 문제가 발생할 수 있습니다. 보고서에 나열된 작업 항목을 이해하고 구현해야 합니다. VCBuild에서 MSBuild로 변환할 때 발생할 수 있는 업그레이드 로그 보고서 및 문제에 대한 자세한 내용은 이 [C++ Native Multi-Targeting](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/)(C++ 네이티브 멀티 타기팅) 블로그 게시물을 참조하세요.
 
-프로젝트 업그레이드가 완료되고 로그 파일에서 문제를 수정한 경우 솔루션은 실제로 최신 도구 집합을 대상으로 지정합니다. 마지막 단계로 Visual Studio 2008 도구 집합을 사용하도록 솔루션에서 각 프로젝트에 대한 속성을 변경합니다. 솔루션이 현재 버전의 Visual Studio에 로드된 경우 솔루션의 각 프로젝트에 대해 프로젝트 **속성 페이지** 대화 상자를 엽니다. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **속성 페이지** 대화 상자에서 **구성** 드롭다운 값을 **모든 구성**으로 변경합니다. **구성 속성**에서 **일반**을 선택하고 **플랫폼 도구 집합**을 **Visual Studio 2008(v90)**로 변경합니다.
+프로젝트 업그레이드가 완료되고 로그 파일에서 문제를 수정한 경우 솔루션은 실제로 최신 도구 집합을 대상으로 지정합니다. 마지막 단계로 Visual Studio 2008 도구 집합을 사용하도록 솔루션에서 각 프로젝트에 대한 속성을 변경합니다. 솔루션이 현재 버전의 Visual Studio에 로드된 경우 솔루션의 각 프로젝트에 대해 프로젝트 **속성 페이지** 대화 상자를 엽니다. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **속성 페이지** 대화 상자에서 **구성** 드롭다운 값을 **모든 구성**으로 변경합니다. **구성 속성**에서 **일반**을 선택하고 **플랫폼 도구 집합**을 **Visual Studio 2008(v90)** 로 변경합니다.
 
 이와 같이 변경한 후 Visual Studio 2008 컴파일러 및 라이브러리는 현재 버전의 Visual Studio에서 솔루션을 빌드할 때 프로젝트 이진 파일을 생성하는 데 사용됩니다.
 

@@ -1,13 +1,10 @@
 ---
-title: "속성 페이지 (Visual c + +) | Microsoft Docs"
-ms.custom: 
+title: 속성 페이지 (Visual c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.NotAProp.Edit
 dev_langs:
@@ -23,17 +20,15 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0c342148266dff9551d2705f8095250daf2b096
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: c1dc831dff6d1e3dbef4fc762712e8125a5b20e1
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="property-pages-visual-c"></a>속성 페이지(Visual C++)
 
@@ -145,7 +140,7 @@ ms.lasthandoff: 01/03/2018
 
 [XML 문서 생성기 도구 속성 페이지](../ide/xml-document-generator-tool-property-pages.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [방법: 프로젝트 종속성 만들기 및 제거](/visualstudio/ide/how-to-create-and-remove-project-dependencies)  
 [방법: 구성 만들기 및 편집](/visualstudio/ide/how-to-create-and-edit-configurations)  

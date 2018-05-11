@@ -1,28 +1,23 @@
 ---
-title: "방법: WRL을 사용 하 여 이벤트를 처리 합니다. | Microsoft Docs"
-ms.custom: 
+title: '방법: WRL을 사용 하 여 이벤트를 처리 합니다. | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
 - C++
 ms.assetid: 1c77543f-7b0c-4a94-93bf-e3225885ed76
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f79d35267750c42466a0b2448f9b10c37fe81f05
-ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
+ms.openlocfilehash: a3c1666d1c79414beddc5b5e3ccc03953c92e902
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="how-to-handle-events-using-wrl"></a>방법: WRL을 사용하여 이벤트 처리
 이 문서에 Windows 런타임 c + + 템플릿 라이브러리 (WRL)를 사용 하 여 구독 하 고 Windows 런타임 개체의 이벤트를 처리 하는 방법을 보여 줍니다.  

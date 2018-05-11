@@ -1,13 +1,10 @@
 ---
-title: "1차원 배열 | Microsoft Docs"
-ms.custom: 
+title: 1차원 배열 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -19,17 +16,15 @@ helpviewer_keywords:
 - square brackets [ ], arrays
 - subscript expressions
 ms.assetid: e28536e5-3b77-46b5-97fd-9b938c771816
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 033d772a40ddf55474ca845c9c5708423bcf5e90
-ms.sourcegitcommit: 9239c52c05e5cd19b6a72005372179587a47a8e4
-ms.translationtype: MT
+ms.openlocfilehash: a8d7366a2c0a1b8ae9ed4e37eaaa89de9baf794d
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="one-dimensional-arrays"></a>1차원 배열
 대괄호(**[ ]**) 안의 식이 뒤따르는 후위 식은 배열 개체 요소의 첨자가 있는 표현입니다. 첨자식은 다음과 같이 표현될 때 *postfix-expression*을 벗어나는 *expression* 위치의 주소에 있는 값을 나타냅니다.  
@@ -56,7 +51,7 @@ int main() {
   
  첨자식은 일반적으로 배열 요소를 참조하는 데 사용되지만 포인터에도 첨자를 적용할 수 있습니다. 값의 순서에 관계없이 *expression*은 대괄호(**[ ]**)로 묶어야 합니다.  
   
- 첨자식은 정수 계열 값을 포인터 값에 더한 다음 간접 참조 연산자(**\****)를 결과에 적용하여 평가됩니다. 간접 참조 연산자에 대한 자세한 내용은 [간접 및 주소 연산자](../c-language/indirection-and-address-of-operators.md)를 참조하세요. 1차원 배열의 경우 `a`가 포인터이고 `b`가 정수라고 가정할 때 다음 네 식은 동일합니다.  
+ 첨자식은 정수 계열 값을 포인터 값에 더한 다음 간접 참조 연산자(**\***)를 결과에 적용하여 평가됩니다. 간접 참조 연산자에 대한 자세한 내용은 [간접 및 주소 연산자](../c-language/indirection-and-address-of-operators.md)를 참조하세요. 1차원 배열의 경우 `a`가 포인터이고 `b`가 정수라고 가정할 때 다음 네 식은 동일합니다.  
   
 ```  
 a[b]  

@@ -1,31 +1,26 @@
 ---
-title: "독립 실행형 특성 | Microsoft Docs"
-ms.custom: 
+title: 독립 실행형 특성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - standalone attributes
 - attributes [C++], standalone
 ms.assetid: 0d72e84e-236c-43b3-ac9a-d9b91fcd6794
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a3098fec700a498f73a86f8e1fd40609628a77d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 59846b1ca031cc02c85cb6ace23f96e8c5cc9f37
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="stand-alone-attributes"></a>독립 실행형 특성
 독립 실행형 특성 c + + 키워드에서 작동 하지 않습니다 있지만 코드 줄을 비슷합니다. 독립 실행형 특성 문은 줄의 끝에 세미콜론이 필요합니다.  
@@ -33,7 +28,7 @@ ms.lasthandoff: 12/21/2017
 |특성|설명|  
 |---------------|-----------------|  
 |[cpp_quote](../windows/cpp-quote.md)|생성 된 헤더 파일에 인용 문자 없이 지정된 된 문자열을 내보냅니다.|  
-|[사용자 지정](../windows/custom-cpp.md)|특성을 직접 정의할 수 있습니다.|  
+|[custom](../windows/custom-cpp.md)|특성을 직접 정의할 수 있습니다.|  
 |[db_command](../windows/db-command.md)|OLE DB 명령을 만듭니다.|  
 |[emitidl](../windows/emitidl.md)|모든 후속 IDL 특성 처리 되어 생성된 된.idl 파일에 배치 될 지 여부를 결정 합니다.|  
 |[idl_module](../windows/idl-module.md)|DLL의 진입점을 지정합니다.|  

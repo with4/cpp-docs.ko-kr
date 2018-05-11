@@ -1,30 +1,25 @@
 ---
-title: "방법: 메시지 블록 필터 사용 | Microsoft Docs"
-ms.custom: 
+title: '방법: 메시지 블록 필터 사용 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+- cpp-concrt
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - message-block filters, using [Concurrency Runtime]
 - using message-block filters [Concurrency Runtime]
 ms.assetid: db6b99fb-288d-4477-96dc-b9751772ebb2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: adcb300daa81c1325b216128b1971408a5931553
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 92de322142e56eb9907da2e19d350c3af9c8a7d9
+ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-use-a-message-block-filter"></a>방법: 메시지 블록 필터 사용
 이 문서를 수락 하거나 해당 메시지의 페이로드를 기준으로 메시지를 거부 하 여 비동기 메시지 블록을 사용 하도록 설정 하려면 필터 함수를 사용 하는 방법을 보여 줍니다.  
@@ -35,14 +30,14 @@ ms.lasthandoff: 12/21/2017
   
  이 문서에서는 메시지 필터를 사용 하는 방법의 기본 예제를 제공 합니다. 메시지 필터 및 데이터 흐름 모델을 사용 하 여 메시지 블록을 연결 하는 추가 예제를 보려면 [연습: 데이터 흐름 에이전트 만들기](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md) 및 [연습: 이미지 처리 네트워크 만들기](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md) .  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음과 같은 함수가 있다고 합시다 `count_primes`, 들어오는 메시지를 필터링 하지 않는 메시지 블록의 기본 사용법을 보여 주는 합니다. 메시지 블록에 소수 추가 [std:: vector](../../standard-library/vector-class.md) 개체입니다. `count_primes` 함수 메시지 블록에 여러 개의 번호를 전송, 메시지 블록에서 출력 값을 받는 및 해당는 숫자를 소수를 콘솔에 출력 합니다.  
   
  [!code-cpp[concrt-primes-filter#1](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_1.cpp)]  
   
  `transformer` 모든 입력된 값을 처리 하는 개체; 소수 값만 필요 합니다. 메시지 보낸 사람 소수만 보내도록 있도록 응용 프로그램으로 작성 될 수 없습니다, 메시지 수신기의 요구 사항은 항상 알 수 없습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 함수를 `count_primes_filter`, 동일한 작업을 수행는 `count_primes` 함수입니다. 그러나는 `transformer` 이 버전의 개체 필터 함수를 사용 하 여 소수 값만 수락 하도록 합니다. 작업을 수행 하는 함수는 소수만; 받으므로 따라서 없기를 호출 하 여 `is_prime` 함수입니다.  
   
  때문에 `transformer` 개체 받아들이므로는 `transformer` 개체 자체 소수를 포함할 수 있습니다. 즉,는 `transformer` 이 예제는 개체를 소수를 추가할 필요가 없습니다는 `vector` 개체입니다.  
@@ -51,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  `transformer` 개체는 이제 소수 값만 처리 합니다. 이전 예에서 `transformer` 모든 메시지를 처리 하는 개체입니다. 따라서 이전 예제에는 동일한 수의 보내는 메시지에 받아야 합니다. 결과 사용 하 여이 예제는 [concurrency:: send](reference/concurrency-namespace-functions.md#send) 에서 받을 메시지를 확인 하는 함수는 `transformer` 개체입니다. `send` 함수에서 반환 `true` 메시지 버퍼에서 메시지를 수락 하는 경우 및 `false` 메시지 버퍼에서 메시지를 거부 하는 경우. 따라서 메시지 버퍼에서 메시지를 수락 하는 횟수 소수 개수와 일치 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에서는 전체 예제를 보여 줍니다. 이 예에서는 호출 모두는 `count_primes` 함수 및 `count_primes_filter` 함수입니다.  
   
  [!code-cpp[concrt-primes-filter#3](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_3.cpp)]  

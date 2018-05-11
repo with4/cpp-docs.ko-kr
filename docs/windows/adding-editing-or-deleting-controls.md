@@ -1,13 +1,10 @@
 ---
-title: "추가, 편집 또는 컨트롤 삭제 | Microsoft Docs"
-ms.custom: 
+title: 추가, 편집 또는 컨트롤 삭제 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - dialog box controls, adding to dialog boxes
 - controls [C++], adding to dialog boxes
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f54904a0be2fdb45e17637dbacdb4d8f81dc3dc9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 715093e10d4ed2f72f5a2f6cf1f7ec93f7b5a6d4
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="adding-editing-or-deleting-controls"></a>컨트롤 추가, 편집 및 삭제
 대화 상자 편집기를 사용 하 여 있습니다 수 추가, 크기 조정, 편집 및 대화 상자에서 컨트롤을 삭제 합니다. 해당 ID와 같은 컨트롤의 속성을 편집할 수도 있습니다 여부나 디렉터리 이름이 처음에 표시 되 런타임 시.  

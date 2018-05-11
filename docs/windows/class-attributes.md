@@ -1,31 +1,26 @@
 ---
-title: "클래스 특성 | Microsoft Docs"
-ms.custom: 
+title: 클래스 특성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - attributes [C++], class attributes
 - class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: afc3f277170dbbdf92f280d341bffb042ab70af2
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 8a932fdb1ef1d9e2af2acace901feaa95b6216d1
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="class-attributes"></a>클래스 특성
 다음과 같은 특성에 적용 된 [클래스](../cpp/class-cpp.md) c + + 키워드입니다.  
@@ -39,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 |[coclass](../windows/coclass.md)|ActiveX 컨트롤을 만듭니다.|  
 |[com_interface_entry](../windows/com-interface-entry-cpp.md)|Com에 인터페이스 항목을 추가 합니다.|  
 |[control](../windows/control.md)|사용자 정의 형식 컨트롤 임을 지정 합니다.|  
-|[사용자 지정](../windows/custom-cpp.md)|특성을 직접 정의할 수 있습니다.|  
+|[custom](../windows/custom-cpp.md)|특성을 직접 정의할 수 있습니다.|  
 |[db_command](../windows/db-command.md)|OLE DB 명령을 만듭니다.|  
 |[db_param](../windows/db-param.md)|지정 된 멤버 변수는 입력 또는 출력 매개 변수 연결 하 고 변수를 구분 합니다.|  
 |[db_source](../windows/db-source.md)|데이터 원본에 대 한 연결을 만듭니다.|  

@@ -1,13 +1,10 @@
 ---
-title: "배열 (c + + 구성 요소 확장명) | Microsoft Docs"
-ms.custom: 
+title: 배열 (c + + 구성 요소 확장명) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - cli::array
 - details::array
@@ -21,18 +18,16 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 343f2369260531e828ea8db27cee5e52ea18fd31
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a17649402fa6ebe9c98d768badcf36e5700f5b75
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="arrays-c-component-extensions"></a>배열(C++ 구성 요소 확장명)
 `Platform::Array<T>` 형식이 C + + /CX에서는 또는 `array` 키워드 C + + /CLI로 지정 된 유형과 초기 값의 배열을 선언 합니다.  
@@ -70,7 +65,7 @@ ms.lasthandoff: 12/21/2017
  `array-type`  
  형식 배열 변수입니다. 올바른 유형은 Windows 런타임 클래스 및 기본 형식, ref 클래스 및 구조체, 값 클래스 및 구조체 및 네이티브 포인터 (`type*`).  
   
- `rank`[선택 사항]  
+ `rank` [선택 사항]  
  배열의 차원 수입니다. 1 이어야 합니다.  
   
  `identifier`  
@@ -79,7 +74,7 @@ ms.lasthandoff: 12/21/2017
  `initialization-type`  
  배열을 초기화 하는 값의 형식입니다. 일반적으로 `array-type` 및 `initialization-type` 동일한 형식이 있습니다. 그러나 형식에서 변환 하는 경우 달라질 수 있습니다 `initialization-type` 를 `array-type`-예를 들어 경우 `initialization-type` 에서 파생 된 `array-type`합니다.  
   
- `initialization-list`[선택 사항]  
+ `initialization-list` [선택 사항]  
  배열의 요소를 초기화 하는 중괄호에 있는 값의 쉼표로 구분 된 목록입니다. 예를 들어 경우 `rank-size-list` 된 `(3)`, 1 차원 배열의 요소 3 개를 선언 하는 `initialization list` 수 `{1,2,3}`합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -124,7 +119,7 @@ int main() {
  `array-type`  
  형식 배열 변수입니다. 올바른 유형은 Windows 런타임 클래스 및 기본 형식, ref 클래스 및 구조체, 값 클래스 및 구조체를 네이티브 포인터 (`type*`), 및 네이티브 POD (일반 이전 데이터) 형식입니다.  
   
- `rank`[선택 사항]  
+ `rank` [선택 사항]  
  배열의 차원 수입니다. 기본값은 1입니다. 최대값은 32입니다. 배열의 각 차원 배열입니다.  
   
  `identifier`  
@@ -136,14 +131,14 @@ int main() {
  `rank-size-list`  
  배열의 각 차원 크기의 쉼표로 구분 된 목록입니다. 또는 경우는 `initialization-list` 컴파일러가 각 차원 크기를 추론할 수, 매개 변수를 지정 하 고 `rank-size-list` 생략할 수 있습니다. 
   
- `initialization-list`[선택 사항]  
+ `initialization-list` [선택 사항]  
  배열의 요소를 초기화 하는 중괄호에 있는 값의 쉼표로 구분 된 목록입니다. 또는의 쉼표로 구분 된 목록에 중첩 된 *초기화 목록* 다차원 배열의 요소를에서 초기화 하는 항목입니다.  
   
  예를 들어 경우 `rank-size-list` 된 `(3)`, 1 차원 배열의 요소 3 개를 선언 하는 `initialization list` 수 `{1,2,3}`합니다. If `rank-size-list` 된 `(3,2,4)`, 첫 번째 차원, 2 개 요소, 두 번째에서 및 세 번째, 4 개의 요소가 3 개 요소의 3 차원 배열을 선언 하는 `initialization-list` 수 `{{1,2,3},{0,0},{-5,10,-21,99}}`.)  
   
 ### <a name="remarks"></a>설명  
   
- `array`에 [플랫폼, default 및 cli 네임 스페이스](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) 네임 스페이스입니다.  
+ `array` 에 [플랫폼, default 및 cli 네임 스페이스](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) 네임 스페이스입니다.  
   
  표준 c + +와 마찬가지로 배열 인덱스는 0부터 시작 하 고 대괄호 ()를 사용 하 여 배열 첨자 된 됩니다. 표준 c + +와 달리 다차원 배열 인덱스는 각 차원에 대 한 연산자를 대괄호 () 집합이 아닌 각 차원에 대 한 인덱스의 목록에 지정 됩니다. 예를 들어 *식별자*[*index1*, *index2*] 대신 *식별자*[*index1*] [ *index2*].  
   

@@ -1,13 +1,10 @@
 ---
 title: default (c + +) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.default
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6b24b0ed9b8e547a52388b6f93a4955da782331b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: bb701b91fc1e076dcf4e6540bf8bcaf6141ec6c6
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="default-c"></a>default(C++)
 coclass 내에 정의된 custom 또는 dispinterface가 기본 프로그래밍 인터페이스를 나타낸다는 것을 의미합니다.  
@@ -57,7 +52,7 @@ coclass 내에 정의된 custom 또는 dispinterface가 기본 프로그래밍 �
 ## <a name="remarks"></a>설명  
  **default** C++ 특성에는 [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) MIDL 특성과 동일한 기능이 있습니다. **default** 특성을 [case](../windows/case-cpp.md) 특성과 함께 사용할 수도 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에서는 coclass 정의에서 **default** 를 사용하여 **ICustomDispatch** 를 기본 프로그래밍 인터페이스로 지정하는 방법을 보여 줍니다.  
   
 ```  

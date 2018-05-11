@@ -1,12 +1,9 @@
 ---
-title: "Interfacetraits:: Cancastto 메서드 | Microsoft Docs"
-ms.custom: 
+title: 'Interfacetraits:: Cancastto 메서드 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::InterfaceTraits::CanCastTo
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - CanCastTo method
 ms.assetid: 275847cb-69ea-42bf-910f-05ba6ef8b48d
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d8dfe6c1873d9cf897494eb6157c2be3baeb435
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e2a0a37f4ef9fa8f2aa92405b4b2c01d99386555
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="interfacetraitscancastto-method"></a>InterfaceTraits::CanCastTo 메서드
 WRL 인프라를 지원하며 사용자 코드에서 직접 사용할 수 없습니다.  
@@ -55,7 +50,7 @@ static __forceinline bool CanCastTo(
  이 작업은 성공 하는 경우 `ppv` 로 지정 된 인터페이스를 가리키는 `Base`합니다. 그렇지 않으면 `ppv` 로 설정 된 `nullptr`합니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true`이 작업을 완료 하 고 `ptr` 에 대 한 포인터로 캐스팅 `Base`, 그렇지 않으면 `false` 합니다.  
+ `true` 이 작업을 완료 하 고 `ptr` 에 대 한 포인터로 캐스팅 `Base`, 그렇지 않으면 `false` 합니다.  
   
 ## <a name="remarks"></a>설명  
  지정된 된 포인터에 대 한 포인터로 캐스팅 될 수 있는지 여부를 나타냅니다. `Base`합니다.  

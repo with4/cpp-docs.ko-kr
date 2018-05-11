@@ -1,12 +1,9 @@
 ---
-title: "##elif, if, #else, 및 #endif 지시문 (C/c + +) | Microsoft Docs"
-ms.custom: 
+title: '##elif, if, #else, 및 #endif 지시문 (C/c + +) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - '#else'
@@ -30,23 +27,21 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a684412b0b0b24cbb9067ef6ea4cf78810c37f
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: a9d4f941298159b8a3ea1aa3fe37efd1e6dc68ab
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if, #elif, #else, and #endif 지시문 (C/C++)
 `#if` 지시문은 `#elif`, `#else` 및 `#endif` 지시문과 함께 소스 파일 부분들의 컴파일을 제어합니다. `#if` 뒤에 작성하는 식에 0이 아닌 값이 있는 경우 `#if` 지시문 바로 다음에 나오는 줄 그룹은 변환 단위에서 유지됩니다.  
   
 ## <a name="grammar"></a>문법  
- *conditional* :  
+ *조건부* :  
  *if 부분 elif 부품*opt*else 부분*opt*endif 줄*  
   
  *if-part* :  
@@ -88,7 +83,7 @@ ms.lasthandoff: 02/23/2018
   
  전처리기는 선택한 처리 *텍스트* 컴파일러에 전달 합니다. 경우 *텍스트* 전처리기 지시문, 전처리기가 해당 지시문을 포함 합니다. 전처리기에서 선택한 텍스트 블록만 컴파일됩니다.  
   
- 전처리기는 단일 선택 *텍스트* 항목 다음에 나오는 각 상수 식 평가 하 여 `#if` 또는 `#elif` 상수 식이 true (0이 아님)를 찾을 때까지 지시문입니다. 모든 텍스트를 선택 (부터는 다른 전처리기 지시문을 포함 하 여  **#** ) 연결 된 최대 `#elif`, `#else`, 또는 `#endif`합니다.  
+ 전처리기는 단일 선택 *텍스트* 항목 다음에 나오는 각 상수 식 평가 하 여 `#if` 또는 `#elif` 상수 식이 true (0이 아님)를 찾을 때까지 지시문입니다. 모든 텍스트를 선택 (부터는 다른 전처리기 지시문을 포함 하 여 **#**) 연결 된 최대 `#elif`, `#else`, 또는 `#endif`합니다.  
   
  하는 경우의 항목을 모두 *문* 경우에 없는 경우 또는 `#elif` 지시문, 전처리기가 다음의 텍스트 블록을 선택는 `#else` 절. 경우는 `#else` 절을 생략 하면 및 함수의 모든 인스턴스의 *문* 에 `#if` 블록은 false, 텍스트 블록이 없습니다. 선택 합니다.  
   

@@ -1,13 +1,10 @@
 ---
-title: "새 사용자 지정 또는 데이터 리소스 만들기 | Microsoft Docs"
-ms.custom: 
+title: 새 사용자 지정 또는 데이터 리소스 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.binary
 dev_langs:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [Visual Studio], creating
 ms.assetid: 9918bf96-38fa-43a1-a384-572f95d84950
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb376bd640c5b56bfbe5a855f0df91a9a0cb6b7a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c82e41544bde9cdd945e23f4ea5884e4e76ae22b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-new-custom-or-data-resource"></a>새 사용자 지정 또는 데이터 리소스 만들기
 기본 리소스 스크립트(.rc) 파일 구문을 사용하여 별도의 파일에 리소스를 배치한 후 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **리소스 내용** 을 클릭하여 해당 파일을 포함함으로써 새 사용자 지정 또는 데이터 리소스를 만들 수 있습니다.  
@@ -41,7 +36,7 @@ ms.lasthandoff: 12/21/2017
   
 2.  **솔루션 탐색기**에서 프로젝트의 .rc 파일을 마우스 오른쪽 단추로 클릭한 후 바로 가기 메뉴에서 **리소스 내용** 을 클릭합니다.  
   
-3.  **컴파일 타임 지시문** 상자에, 사용자 지정 리소스를 포함하는 파일의 이름을 지정하는 **#include** 문을 입력합니다. 예:  
+3.  **컴파일 타임 지시문** 상자에, 사용자 지정 리소스를 포함하는 파일의 이름을 지정하는 **#include** 문을 입력합니다. 예를 들어:  
   
  ```  
     #include mydata.rc  

@@ -1,13 +1,10 @@
 ---
-title: "인수 설명 | Microsoft Docs"
-ms.custom: 
+title: 인수 설명 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-language
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 91c2cbe3-9aca-4277-afa1-6137eb8fb704
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3a9597ca8807c8ac1a3182b3daa1891a195c39c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 615fc3a68153386174ce0477ee5c946f50f37d90
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="argument-description"></a>인수 설명
 **main** 및 **wmain** 함수 안의 `argc` 매개 변수는 명령줄에서 프로그램에 전달되는 인수의 개수를 지정하는 정수입니다. 프로그램 이름이 인수로 간주되므로 `argc`의 값이 1 이상입니다.  
@@ -35,7 +30,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>설명  
  `argv` 매개 변수는 프로그램 인수를 나타내며 null로 끝나는 문자열에 대한 포인터의 배열입니다. 배열의 각 요소는 **main** 또는 **wmain**에 전달되는 인수의 문자열 표현을 가리킵니다. 배열에 대한 내용은 [배열 선언](../c-language/array-declarations.md)을 참조하세요. `argv` 형식에 대한 포인터의 배열(`char`) 또는 `char *argv[]` 형식에 대한 포인터의 포인터(`char`)로 `char **argv` 매개 변수를 선언할 수 있습니다. **wmain**의 경우 `wchar_t` 형식에 대한 포인터의 배열(`wchar_t *argv[]`) 또는 `wchar_t` 형식에 대한 포인터의 포인터(`wchar_t **argv`)로 `argv` 매개 변수를 선언할 수 있습니다.  
   
- 규칙에 따라 `argv`**[0]**은 프로그램을 호출하는 데 사용하는 명령입니다.  그러나 [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425)를 사용하여 프로세스를 생성할 수 있으며 첫 번째 인수와 두 번째 인수(`lpApplicationName` 및 `lpCommandLine`)를 모두 사용할 경우 `argv`**[0]**이 실행 파일 이름이 아닐 수 있습니다. 실행 파일 이름을 검색하려면 [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197)을 사용하세요.  
+ 규칙에 따라 `argv`**[0]** 은 프로그램을 호출하는 데 사용하는 명령입니다.  그러나 [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms682425)를 사용하여 프로세스를 생성할 수 있으며 첫 번째 인수와 두 번째 인수(`lpApplicationName` 및 `lpCommandLine`)를 모두 사용할 경우 `argv`**[0]** 이 실행 파일 이름이 아닐 수 있습니다. 실행 파일 이름을 검색하려면 [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197)을 사용하세요.  
   
  마지막 포인터(`argv[argc]`)는 **NULL**입니다. 환경 변수 정보를 가져오기 위한 다른 방법은 *런타임 라이브러리 참조*의 [getenv](../c-runtime-library/reference/getenv-wgetenv.md)를 참조하세요.  
   

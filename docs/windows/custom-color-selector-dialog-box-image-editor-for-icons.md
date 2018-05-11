@@ -1,13 +1,10 @@
 ---
-title: "사용자 지정 색 선택 대화 상자 (아이콘에 대 한 이미지 편집기) | Microsoft Docs"
-ms.custom: 
+title: 사용자 지정 색 선택 대화 상자 (아이콘에 대 한 이미지 편집기) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.customcolorselector
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - Custom Color Selector dialog box
 - colors, image
 ms.assetid: 534d0c2a-b3f6-4f09-9346-3bbf85bb3dd7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7b85b6b650fcff46371e86e61ab96e9d864c4c53
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 76a278ad0a1ba67c7c8f9fb86d20ca842b92b1e2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>사용자 지정 색 선택 대화 상자(아이콘에 대한 이미지 편집기)
 이 대화 상자에는 이미지에 사용할 색을 사용자 지정할 수 있습니다. 자세한 내용은 참조 [사용자 지정 또는 색 변경](../windows/customizing-or-changing-colors-image-editor-for-icons.md)합니다.  
@@ -56,7 +51,7 @@ ms.lasthandoff: 12/21/2017
  **녹색**  
  정의 하는 색의 녹색 값을 지정 합니다. 값 0에서 255 까지입니다.  
   
- **파란색**  
+ **blue**  
  정의 하는 색의 파랑 값을 지정 합니다. 값 0에서 255 까지입니다.  
   
 ## <a name="requirements"></a>요구 사항  

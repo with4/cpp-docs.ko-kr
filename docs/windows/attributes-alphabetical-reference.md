@@ -1,13 +1,10 @@
 ---
-title: "특성 사전순 참조 | Microsoft Docs"
-ms.custom: 
+title: 특성 사전순 참조 | Microsoft Docs
+ms.custom: index-page
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: 'index-page '
+ms.topic: conceptual
 f1_keywords:
 - vc.attributes
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - attributes [C++]
 ms.assetid: fb2216ef-9fbd-44f4-afed-732aa99450e2
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2420ba0d023272a1e6a66687f567bf881b8af35f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5b8e0f40e0633d0ebabbbe2f5f226e0311b1c977
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="attributes-alphabetical-reference"></a>특성 사전순 참조
 다음 특성은 Visual c + +에서 사용할 수 있습니다.  
@@ -45,7 +40,7 @@ ms.lasthandoff: 12/21/2017
 |[com_interface_entry](../windows/com-interface-entry-cpp.md)|Com에 인터페이스 항목을 추가 합니다.|  
 |[control](../windows/control.md)|사용자 정의 형식 컨트롤 임을 지정 합니다.|  
 |[cpp_quote](../windows/cpp-quote.md)|생성 된 헤더 파일에 인용 문자 없이 지정된 된 문자열을 내보냅니다.|  
-|[사용자 지정](../windows/custom-cpp.md)|사용자 지정 특성을 정의할 수 있습니다.|  
+|[custom](../windows/custom-cpp.md)|사용자 지정 특성을 정의할 수 있습니다.|  
 |[db_accessor](../windows/db-accessor.md)|행 집합의 열을 바인딩하는 및 해당 접근자 지도 바인딩합니다.|  
 |[db_column](../windows/db-column.md)|행 집합을 지정된 된 열에 바인딩합니다.|  
 |[db_command](../windows/db-command.md)|OLE DB 명령을 실행합니다.|  
@@ -89,7 +84,7 @@ ms.lasthandoff: 12/21/2017
 |[length_is](../windows/length-is.md)|전송할 배열 요소의 수를 지정 합니다.|  
 |[library_block](../windows/library-block.md)|.Idl 파일의 라이브러리 블록 내부는 구문을 배치합니다.|  
 |[licensed](../windows/licensed.md)|적용 되는 coclass 사용이 허가 되 고 사용 하 여 인스턴스화할 수 나타냅니다 **IClassFactory2**합니다.|  
-|[로컬](../windows/local-cpp.md)|MIDL 컴파일러 인터페이스 헤더에서 사용 될 때 헤더 생성기로 사용할 수 있습니다. 개별 함수를 사용할 경우 로컬 없는 스텁을 생성 되는 프로시저를 지정 합니다.|  
+|[local](../windows/local-cpp.md)|MIDL 컴파일러 인터페이스 헤더에서 사용 될 때 헤더 생성기로 사용할 수 있습니다. 개별 함수를 사용할 경우 로컬 없는 스텁을 생성 되는 프로시저를 지정 합니다.|  
 |[max_is](../windows/max-is.md)|유효한 배열 인덱스에 대 한 최대값을 지정합니다.|  
 |[모듈](../windows/module-cpp.md)|.Idl 파일의 라이브러리 블록을 정의합니다.|  
 |[ms_union](../windows/ms-union.md)|Nonencapsulated 공용 구조체의 네트워크 데이터 표현 맞춤을 제어합니다.|  
@@ -110,7 +105,7 @@ ms.lasthandoff: 12/21/2017
 |[propputref](../windows/propputref.md)|값을 대신 참조를 사용 하는 속성 설정 함수를 지정 합니다.|  
 |[ptr](../windows/ptr.md)|전체 포인터도 포인터를 지정합니다.|  
 |[public](../windows/public-cpp-attributes.md)|.Idl 파일 내에서 참조 하지 않는 경우에 형식 라이브러리로 typedef 상태로 진행 될를 확인 합니다.|  
-|[범위](../windows/range-cpp.md)|형식 정의 나 런타임에 해당 값이 설정 되는 필드에 대 한 허용 가능한 값의 범위를 지정 합니다.|  
+|[range](../windows/range-cpp.md)|형식 정의 나 런타임에 해당 값이 설정 되는 필드에 대 한 허용 가능한 값의 범위를 지정 합니다.|  
 |[rdx](../windows/rdx.md)|만들거나 레지스트리 키를 수정 합니다.|  
 |[readonly](../windows/readonly-cpp.md)|변수에 할당을 금지합니다.|  
 |[ref](../windows/ref-cpp.md)|참조 포인터를 식별합니다.|  

@@ -1,13 +1,10 @@
 ---
-title: "미리 정의 된 Win32 기호 | Microsoft Docs"
-ms.custom: 
+title: 미리 정의 된 Win32 기호 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,18 +12,16 @@ helpviewer_keywords:
 - symbols, Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 865d61611546e2550aaa241220dc226cea9f9b81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: f1ce2ed589d27cd1c0065692a2254bf334f9aa1b
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="win32-predefined-symbols"></a>미리 정의된 Win32 기호
 이러한 기호 Win32 헤더 파일에 정의 하 고 표준 Windows 응용 프로그램 기능 및 동작을 지원 합니다. 이 기호는 일반적인 UI 요소와 주로 사용 됩니다. 리소스 편집기에서 컨트롤을 사용 하는 이러한 기호에 표시 됩니다는 [속성 창](/visualstudio/ide/reference/properties-window) 일반 컨트롤과 연결 되어 있습니다. 예를 들어, 응용 프로그램 아이콘을 표시 하면 도구 모음, 아이콘 기호는 속성 창에서 idi_small과 연결 됩니다.  

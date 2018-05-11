@@ -1,13 +1,10 @@
 ---
 title: db_command | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.db_command
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87209d673da47827723198697a26300d4056d3d0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: e0fe3f712566345bb069b798207cfdb10a0aa636
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dbcommand"></a>db_command
 OLE DB 명령을 만듭니다.  
@@ -76,7 +71,7 @@ binding parameter block 3
   
 -   **[db_column]** - 각 멤버 변수를 행 집합의 열에 바인딩합니다.  
   
--   **[bindto]** ( **[db_column]**과 동일).  
+-   **[bindto]** ( **[db_column]** 과 동일).  
   
 -   **[in]** - 멤버 변수를 입력 매개 변수로 바인딩합니다.  
   
@@ -124,7 +119,7 @@ TCHAR m_state[3] = 'CA';
  *bindings* (선택 사항)  
  OLE DB 명령에서 바인딩 매개 변수를 구분할 수 있습니다.  
   
- `bindings`에 대한 값을 지정하면, **db_command** 는 관련된 값을 구문 분석하고 [`bindtype`] 매개 변수는 구문 분석하지 않습니다. 이 방법에서는 OLE DB 공급자 구문을 사용할 수 있습니다. 구문 분석을 사용하지 않도록 설정하려면 바인딩 매개 변수 없이 **Bindings=""**를 지정합니다.  
+ `bindings`에 대한 값을 지정하면, **db_command** 는 관련된 값을 구문 분석하고 [`bindtype`] 매개 변수는 구문 분석하지 않습니다. 이 방법에서는 OLE DB 공급자 구문을 사용할 수 있습니다. 구문 분석을 사용하지 않도록 설정하려면 바인딩 매개 변수 없이 **Bindings=""** 를 지정합니다.  
   
  `bindings`에 대한 값을 지정하지 않는 경우, **db_command** 는 바인딩 매개 변수 블록을 구문 분석하고 '**(**', 대괄호의 **[**`bindtype`**]** , 이전에 선언된 하나 이상의 C++ 멤버 변수, '**)**'를 차례로 찾습니다. 괄호 안의 모든 텍스트는 결과 명령에서 제거되며, 이 명령에 대한 열 및 매개 변수 바인딩을 구성하는 데 이러한 매개 변수가 사용됩니다.  
   
@@ -146,7 +141,7 @@ TCHAR m_state[3] = 'CA';
   
  컴파일러는 클래스를 이름을 소비자 특성 공급자 클래스에이 특성을 적용 하는 경우 \_ *YourClassName*접근자 여기서 *YourClassName* 제공한 이름인는 클래스 및 컴파일러 라는 클래스를 만들 수도 됩니다 *YourClassName*에서 파생 되는 \_ *YourClassName*접근자입니다.  클래스 뷰에 두 클래스 모두 표시됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 샘플에서는 상태 열이 'CA'와 일치하는 테이블에서 성과 이름을 선택하는 명령을 정의합니다. **db_command** 는 마법사에서 생성한 함수(예: [OpenAll 및 CloseAll](../data/oledb/consumer-wizard-generated-methods.md)) 및 `CRowset` 멤버 함수(예: [MoveNext](../data/oledb/crowset-movenext.md))를 호출할 수 있는 행 집합을 만들고 읽습니다.  
   
  이 코드를 사용하려면 pubs 데이터베이스에 연결되는 고유한 연결 문자열을 제공해야 합니다. 개발 환경에서 이를 수행하는 방법에 대한 자세한 내용은 [How to: Connect to a Database from Server Explorer](http://msdn.microsoft.com/en-us/7c1c3067-0d77-471b-872b-639f9f50db74) 및 [How to: Add New Data Connections in Server Explorer/Database Explorer](http://msdn.microsoft.com/en-us/fb2f513b-ddad-4142-911e-856bba0054c8)를 참조하세요.  
@@ -186,7 +181,7 @@ struct CAuthors {
 };  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 // db_command.cpp  
@@ -216,7 +211,7 @@ int main(int argc, _TCHAR* argv[]) {
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 샘플에서는 데이터 소스 클래스 `db_source` 의 `CMySource`, 명령 클래스 `db_command` 및 `CCommand1` 의 `CCommand2`를 사용합니다.  
   
 ```  

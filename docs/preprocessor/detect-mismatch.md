@@ -1,12 +1,9 @@
 ---
 title: detect_mismatch | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc-pragma.detect_mismatch
@@ -17,17 +14,15 @@ helpviewer_keywords:
 - pragmas, detect_mismatch
 - detect_mismatch pragma
 ms.assetid: ddb13ac9-0e2f-40ce-be69-7e44c04f5a12
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 875b6980a3c55c07b5765d6d0fc12be1796ee3a3
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 9f30afed5acdb9da433f7ce5f992df9bcb6dc8f5
+ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="detectmismatch"></a>detect_mismatch
 레코드를 개체에 배치합니다. 링커는 이러한 레코드를 검사하여 잠재적인 불일치를 확인합니다.  
@@ -43,7 +38,7 @@ ms.lasthandoff: 02/23/2018
   
  이름과 값은 둘 다 문자열 리터럴이며 이스케이프 문자 및 연결과 관련하여 문자열 리터럴에 대한 규칙을 준수합니다. 이름과 값은 대/소문자를 구분하고 쉼표, 등호, 따옴표 또는 `null` 문자를 포함할 수 없습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 같은 버전 레이블에 대한 버전 번호가 서로 다른 두 파일을 만듭니다.  
   
 ```  

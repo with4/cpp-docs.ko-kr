@@ -1,13 +1,10 @@
 ---
-title: "(아이콘에 대 한 이미지 편집기) 사용자 지정 브러시 만들기 | Microsoft Docs"
-ms.custom: 
+title: (아이콘에 대 한 이미지 편집기) 사용자 지정 브러시 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,18 +15,16 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 750881aa-6f47-4de9-8ca6-a7a12afc6383
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38f376053635708372c09a37aa0810e4305db60a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a879850c00957568065150b6c6fc1c801c049fa2
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="creating-a-custom-brush-image-editor-for-icons"></a>사용자 지정 브러시 만들기(아이콘에 대한 이미지 편집기)
 사용자 지정 브러시는를 선택 하 고 하나는 이미지 편집기의 포함 되어 있는 브러시와 같은 사용 되는 이미지의 사각형 부분입니다. 선택 영역에서 수행할 수는 모든 작업을 사용자 지정 브러시에 수행할 수 있습니다.  

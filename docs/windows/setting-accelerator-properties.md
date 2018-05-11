@@ -1,13 +1,10 @@
 ---
-title: "액셀러레이터 키 속성 설정 | Microsoft Docs"
-ms.custom: 
+title: 액셀러레이터 키 속성 설정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -17,18 +14,16 @@ helpviewer_keywords:
 - Key property
 - Modifier property
 ms.assetid: 0fce9156-3025-4e18-b034-e219a4c65812
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 83eea84c89a9f9873b687333b7454d9f3c9c41b3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5198fc1958863d3b5ad560ffeb8c5576506e9e46
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="setting-accelerator-properties"></a>액셀러레이터 키 속성 설정
 액셀러레이터 키 속성을 설정할 수는 [속성 창](/visualstudio/ide/reference/properties-window) 언제 든 지 합니다. 또한 액셀러레이터 키 편집기를 사용하여 액셀러레이터 키 테이블에서 액셀러레이터 키 속성을 수정할 수 있습니다. 속성 창 또는 액셀러레이터 키 편집기를 사용하여 변경한 내용은 결과가 동일합니다. 편집 내용은 액셀러레이터 키 테이블에 바로 반영됩니다.  

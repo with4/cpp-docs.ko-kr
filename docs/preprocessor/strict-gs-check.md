@@ -1,12 +1,9 @@
 ---
 title: strict_gs_check | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-tools
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - strict_gs_check
@@ -16,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - strict_gs_check pragma
 ms.assetid: decfec81-c916-42e0-a07f-8cc26df6a7ce
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76b06f33626dfa237c81e6a23f343bb25ffb7c78
-ms.sourcegitcommit: d51ed21ab2b434535f5c1d553b22e432073e1478
+ms.openlocfilehash: 6b58b02781f266b24fa321b3849f42b2e090b860
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="strictgscheck"></a>strict_gs_check
 이 pragma는 향상된 보안 검사를 제공합니다.  
@@ -48,7 +43,7 @@ ms.lasthandoff: 02/23/2018
   
  이 pragma를 사용하는 경우에도 안전한 코드를 작성하기 위해 노력해야 합니다. 즉, 코드 버퍼 오버런이 발생 하지에 있어야 합니다. strict_gs_check는 응용 프로그램 코드에서 수행 하 게 유지 되는 버퍼 오버런 으로부터 보호할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에서는 배열을 로컬 배열에 복사할 때 버퍼 오버런이 발생합니다. /GS를 사용하여 이 코드를 컴파일하는 경우 배열 데이터 형식이 포인터이기 때문에 쿠키가 스택에 삽입되지 않습니다. strict_gs_check pragma를 추가하면 스택 쿠키가 함수 스택에 삽입됩니다.  
   
 ```cpp  

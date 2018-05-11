@@ -1,31 +1,26 @@
 ---
-title: "문자열 (c + + 구성 요소 확장명) | Microsoft Docs"
-ms.custom: 
+title: 문자열 (c + + 구성 요소 확장명) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - string support with /clr
 - /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e988da5393e32871794a2a1e7565801b0b338c2d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cfab95c400aad949f06a559fffbdb42993910bb7
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="string--c-component-extensions"></a>문자열(C++ 구성 요소 확장)
 Visual c + + 컴파일러에서는 *문자열*, 하는 일련의 문자로 텍스트를 나타내는 개체입니다. Visual c + + 문자열 값이 암시적, 변수와 값은 명시적 따옴표 붙은 문자열 리터럴을 지원 합니다.  
@@ -291,4 +286,4 @@ System.String
 ## <a name="see-also"></a>참고 항목  
  [런타임 플랫폼의 구성 요소 확장명](../windows/component-extensions-for-runtime-platforms.md)   
  [문자열 및 문자 리터럴](../cpp/string-and-character-literals-cpp.md)   
- [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)
+ [/clr(공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)

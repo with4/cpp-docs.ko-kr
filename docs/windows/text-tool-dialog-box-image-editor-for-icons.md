@@ -1,13 +1,10 @@
 ---
-title: "텍스트 도구 대화 상자 (아이콘에 대 한 이미지 편집기) | Microsoft Docs"
-ms.custom: 
+title: 텍스트 도구 대화 상자 (아이콘에 대 한 이미지 편집기) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.editors.texttool
 dev_langs:
@@ -16,18 +13,16 @@ helpviewer_keywords:
 - text, adding to an image
 - Text Tool dialog box
 ms.assetid: a6036ef4-1871-40db-8239-6ddbe8f422f5
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed1a15dbe8947bc52c8a91d94ca12fee6badcf77
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 039158b65664a24280fa8ebac0938892c3fdeb08
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="text-tool-dialog-box-image-editor-for-icons"></a>텍스트 도구 대화 상자(아이콘에 대한 이미지 편집기)
 사용 하 여는 **텍스트 도구** 텍스트 커서, 비트맵, 아이콘 리소스를 추가 하는 대화 상자.  

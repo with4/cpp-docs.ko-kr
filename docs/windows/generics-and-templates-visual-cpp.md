@@ -1,31 +1,26 @@
 ---
-title: "템플릿 (Visual c + +) | Microsoft Docs"
-ms.custom: 
+title: 템플릿 (Visual c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
 - generics [C++], vs. templates
 - templates, C++
 ms.assetid: 63adec79-b1dc-4a1a-a21d-b8a72a8fce31
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 307cc39e64a6fd91f3f5f96da634e47d3e9a9030
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 5d6dc0a64c5d225f6e80a21dc008e5a2486ad3d9
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="generics-and-templates-visual-c"></a>제네릭 및 템플릿(Visual C++)
 제네릭과 템플릿의 지 매개 변수가 있는 형식에 대 한 지원을 제공 하는 두 언어 기능. 그러나 다른 되며 다른 용도로 사용 합니다. 이 항목에서는 많은 차이점에 대 한 개요를 제공 합니다.  
@@ -57,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
 -   제네릭의 기본적인 차이점은 템플릿과 제네릭 결합 하는 응용 프로그램을 빌드하기 위한 영향을 줍니다. 예를 들어 제네릭으로 다른 언어에 해당 서식 파일을 노출 하는 일반 래퍼에 대 한 만들려고 한다고 하는 템플릿 클래스를 있다고 가정 합니다. 제네릭 take 템플릿을 컴파일 타임에 해당 형식 매개 변수가 해야 하므로 다음 하도록 서식 파일을 전달 하는 형식 매개 변수 없지만 런타임이 될 때까지 제네릭 형식 매개 변수를 해결 하지 않습니다. 제네릭 안의 템플릿에 중첩 하거나 수 없으므로 작동 하지 템플릿을 런타임에 인스턴스화할 수 있는 임의의 제네릭 형식에 대 한 컴파일 타임에 확장 방식은 없습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
  다음 예제에서는 템플릿과 제네릭을 함께 사용 하 여의 간단한 예를 보여 줍니다. 이 예제에서는 템플릿 클래스는 제네릭 형식에을 통해 해당 매개 변수를 전달합니다. 반대로 수는 없습니다.  

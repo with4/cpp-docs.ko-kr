@@ -1,13 +1,10 @@
 ---
-title: "safe_cast (c + + 구성 요소 확장명) | Microsoft Docs"
-ms.custom: 
+title: safe_cast (c + + 구성 요소 확장명) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - safe_cast
 - safe_cast_cpp
@@ -17,18 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14bcf198d527fae51a579a2aa6e072a4c57424f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c889d39df4d900beba5c9b41015e62293fdbbcde
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="safecast-c-component-extensions"></a>safe_cast(C++ 구성 요소 확장명)
 `safe_cast` 작업은 성공하는 경우 지정된 식을 지정된 형식으로 반환하고, 그렇지 않은 경우 `InvalidCastException`을 throw합니다.  
@@ -73,7 +68,7 @@ expression
  참조 또는 값 형식에 대한 핸들, 값 형식 또는 참조 또는 값 형식에 대한 추적 참조로 계산되는 식입니다.  
   
 ### <a name="remarks"></a>설명  
- `safe_cast`throw `InvalidCastException` 변환할 수 없는 경우 *식* 하 여 지정 된 형식과 *유형 id*합니다. Catch 하려면 `InvalidCastException`, 지정는 [/EH (예외 처리 모델)](../build/reference/eh-exception-handling-model.md) 컴파일러 옵션 및 try/catch 문 사용 합니다.  
+ `safe_cast` throw `InvalidCastException` 변환할 수 없는 경우 *식* 하 여 지정 된 형식과 *유형 id*합니다. Catch 하려면 `InvalidCastException`, 지정는 [/EH (예외 처리 모델)](../build/reference/eh-exception-handling-model.md) 컴파일러 옵션 및 try/catch 문 사용 합니다.  
   
 ### <a name="requirements"></a>요구 사항  
  컴파일러 옵션: **/ZW**  
@@ -145,7 +140,7 @@ expression
   
  캐스트에 대 한 자세한 내용은 참조 [캐스팅 연산자](../cpp/casting-operators.md)합니다.  
   
- `safe_cast`적용 되지 않습니다는 **const_cast** (캐스팅 **const**).  
+ `safe_cast` 적용 되지 않습니다는 **const_cast** (캐스팅 **const**).  
   
  `safe_cast`는 cli 네임스페이스에 있습니다.  참조 [플랫폼, default 및 cli 네임 스페이스](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) 자세한 정보에 대 한 합니다.  
   

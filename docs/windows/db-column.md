@@ -1,13 +1,10 @@
 ---
 title: db_column | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.db_column
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5fe2d3c5edb4b90676c3880ae422c1fb507cd164
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 35ab2472ac9e46b620ca735d06b23806126871e0
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="dbcolumn"></a>db_column
 행 집합의 변수를 지정된 된 열을 바인딩합니다.  
@@ -78,7 +73,7 @@ ms.lasthandoff: 12/21/2017
   
  샘플을 참조 하는 응용 프로그램에서 사용 되는이 특성의 예에 대 한 [AtlAgent](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409), 및 [MultiRead](http://msdn.microsoft.com/en-us/5a2a915a-77dc-492f-94b2-1b809995dd5e)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 샘플 테이블의 열을 바인딩하는 **긴** 데이터 멤버 상태 및 길이 필드를 지정 합니다.  
   
 ```  
@@ -97,7 +92,7 @@ class CProducts {
 };  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 샘플에는 4 번째 열에 바인딩하는 **긴**, 문자열, 타임 스탬프 및 **DB_NUMERIC** 그 순서 대로 정수입니다.  
   
 ```  

@@ -1,13 +1,10 @@
 ---
 title: idl_module | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-windows
-ms.tgt_pltfrm: 
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - vc-attr.idl_module
 dev_langs:
@@ -15,18 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f052692686149b247a50c0d89e77797f4f48fab3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 11547a3fb1bd46a1e2edb8ce9dd0a6547464f796
+ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="idlmodule"></a>idl_module
 .Dll 파일에는 진입점을 지정합니다.  
@@ -85,7 +80,7 @@ function declaration
   
  사용자를 사용 해야 `idl_module` 두 단계를 수행에서 합니다. 첫째, 이름/DLL 쌍을 정의 해야 합니다. 그런 다음 사용 하는 경우 `idl_module` 진입점을 지정 하려면 이름 및 추가 특성을 지정 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드에서는 사용 하 여 `idl_module` 특성:  
   
 ```  
