@@ -126,11 +126,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 202dd5334e2eb0f133b40198840287af83acee8a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 32cd9dc76954b7b4dc5d38081ed39bc42511ab0e
+ms.sourcegitcommit: 2998488d63f2dd9cbfa1f5cb9a403883b2246949
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="basicstring-class"></a>basic_string 클래스
 
@@ -469,7 +469,7 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 `ptr` 대상 문자열에 할당할 C 문자열에서 문자에 대 한 포인터입니다.
 
-`count` 추가, 최대, 원본 문자열에서 문자 수를 지정 합니다.
+`count` 소스 문자열에서 할당할 문자의 수입니다.
 
 `str` 대상 문자열에 할당할 수 있는 문자는 소스 문자열입니다.
 
