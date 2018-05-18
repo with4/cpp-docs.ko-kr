@@ -1,7 +1,7 @@
 ---
 title: Visual c + +에서 배포 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/13/2018
+ms.date: 05/11/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -15,15 +15,17 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9880272a09cde3bec0dbbbe03bfc30821591d6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b9dfdcdce618df3f2bfec64892f62aec20b6db9
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="deployment-in-visual-c"></a>Visual C++의 개발
 
 개발 컴퓨터 이외의 컴퓨터에서 응용 프로그램 설치 라고 *배포*합니다. 다른 컴퓨터에 Visual c + + 응용 프로그램을 배포 하는 경우 응용 프로그램과 모든 라이브러리 파일에 따라 달라 집니다를 설치 해야 합니다. Visual Studio를 사용 하면 해당 응용 프로그램과 함께 Visual c + + 라이브러리를 배포 하는 세 가지 방법으로: *중앙 배포*, *로컬 배포*, 및 *정적 링크*합니다. 중앙 배포-여기서는 Windows 업데이트 서비스 수를 자동으로 업데이트할 Windows 디렉터리 라이브러리 파일을 가져옵니다. 로컬 배포 응용 프로그램 같은 디렉터리에 라이브러리 파일을 저장합니다. 로컬 배포 된 모든 라이브러리를 다시 배포 해야 직접이 정보도 업데이트 합니다. 정적 연결 라이브러리 코드를 응용 프로그램에 바인딩합니다. 다시 컴파일해야 하 고 활용 하기 위해 모든 업데이트는 라이브러리에 정적 연결을 사용 하는 경우 응용 프로그램을 다시 배포 해야 합니다.
+
+Visual Studio 2015에서는 Microsoft C 런타임 라이브러리는 버전 별로 로컬 라이브러리 구성 요소와 이제 Windows의 일부인 새 유니버설 C 런타임 라이브러리에 리팩터링 합니다. 범용 CRT의 배포에 대 한 세부 정보를 참조 하십시오. [범용 CRT 배포](universal-crt-deployment.md)합니다.
 
 ## <a name="central-deployment"></a>중앙 배포
 
@@ -57,6 +59,7 @@ Microsoft 없습니다 자동으로 하기 때문에 업데이트를 로컬로 V
 
 Visual c + + 라이브러리의 로드 순서는 시스템에 따라 다릅니다. 로더 문제를 진단하려면 depends.exe 또는 where.exe를 사용합니다. 자세한 내용은 참조 [동적 연결 라이브러리 검색 순서 (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682586.aspx)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
-[데스크톱 응용 프로그램 배포](../ide/deploying-native-desktop-applications-visual-cpp.md)
+- [데스크톱 응용 프로그램 배포](../ide/deploying-native-desktop-applications-visual-cpp.md)
+- [범용 CRT 배포](universal-crt-deployment.md)

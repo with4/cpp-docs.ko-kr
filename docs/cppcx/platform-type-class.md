@@ -16,11 +16,11 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 358bd57dc1c7272818b1dc542991caa59d3663d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc70f0a0f714cb6f5a2f4b28d922308d8fe4d645
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="platformtype-class"></a>Platform::Type 클래스
 특정 형식에 대한 런타임 정보(문자열 이름 및 형식 코드)를 포함합니다. 호출 하 여 가져온 [object:: gettype](../cppcx/platform-object-class.md#gettype) 임의 개체에서 또는 또는 사용 하 여는 [typeid](../windows/typeid-cpp-component-extensions.md) 클래스 또는 구조체 이름에는 연산자입니다.  
@@ -54,8 +54,8 @@ public ref class Platform::Type :
   
 |||  
 |-|-|  
-|[연산자 Type^](../cppcx/operator-subtracttype-hat.md)|`Windows::UI::Xaml::Interop::TypeName` 을 `Platform::Type`으로 변환할 수 있습니다.|  
-|[연산자 Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-subtractwindows-ui-xaml-interop-typename.md)|`Platform::Type` 을 `Windows::UI::Xaml::Interop::TypeName`으로 변환할 수 있습니다.|  
+|[operator Type^](../cppcx/operator-type-hat.md)|`Windows::UI::Xaml::Interop::TypeName` 을 `Platform::Type`으로 변환할 수 있습니다.|  
+|[operator Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-windows-ui-xaml-interop-typename.md)|`Platform::Type` 을 `Windows::UI::Xaml::Interop::TypeName`으로 변환할 수 있습니다.|  
   
 ### <a name="requirements"></a>요구 사항  
  **지원 되는 최소 클라이언트:** Windows 8  

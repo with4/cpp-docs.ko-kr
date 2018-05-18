@@ -16,42 +16,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4eccec985e6a9e652f18c6513542942351ff6efc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ee6b48327e8754f9388e0df8f43009a5be70c97
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="compiler-warning-level-1-c4067"></a>컴파일러 경고 (수준 1) C4067
-예기치 않은 토큰이 전처리기 지시문 다음에 줄 바꿈이 필요 합니다.  
-  
- 컴파일러 발견 하 여 전처리기 지시문 다음에서 추가 문자를 무시 합니다. 이 경고는 ANSI 호환성 인 경우에 표시 ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).  
-  
-```  
-// C4067a.cpp  
-// compile with: /DX /Za /W1  
-#pragma warning(default:4067)  
-#if defined(X)  
-#else  
-#endif v   // C4067  
-int main()  
-{  
-}  
-```  
-  
-### <a name="to-resolve-this-warning-try-the-following"></a>이 경고를 해결 하려면 다음을 시도 합니다.  
-  
-1.  사용 하 여 컴파일 **/Ze**합니다.  
-  
-2.  주석 구분 기호를 사용 합니다.  
-  
-```  
-// C4067b.cpp  
-// compile with: /DX /Za /W1  
-#if defined(X)  
-#else  
-#endif  
-int main()  
-{  
-}  
+
+> 예기치 않은 토큰이 전처리기 지시문 다음에 줄 바꿈이 필요 합니다.
+
+## <a name="remarks"></a>설명
+
+컴파일러 발견 하 여 전처리기 지시문 다음에서 추가 문자를 무시 합니다. 이 경우에 일반적인 원인은 흩어진 세미콜론 지시문 뒤에 예기치 않은 문자는 발생할 수 있습니다. 주석에서이 경고를 발생 하지 않습니다. **/Za** 컴파일러 옵션을 사용 하면이 경고를 기본값 보다 더 많은 전처리기 지시문에 대 한 합니다.
+
+## <a name="example"></a>예제
+
+```cpp
+// C4067a.cpp
+// compile with: cl /EHsc /DX /W1 /Za C4067a.cpp
+#include <iostream>
+#include <string> s     // C4067
+#if defined(X);         // C4067
+std::string s{"X is defined"};
+#else
+std::string s{"X is not defined"};
+#endif;                 // C4067 only under /Za
+int main()
+{
+    std::cout << s << std::endl;
+}
+```
+
+이 경고를 해결 하려면 흩어진 문자를 삭제 하거나 주석 블록으로 이동 합니다. 제거 하 여 특정 C4067 경고 비활성화 될 수 있습니다는 **/Za** 컴파일러 옵션입니다.
+
+```cpp
+// C4067b.cpp
+// compile with: cl /EHsc /DX /W1 C4067b.cpp
+#include <iostream>
+#include <string>
+#if defined(X)
+std::string s{"X is defined"};
+#else
+std::string s{"X is not defined"};
+#endif
+int main()
+{
+    std::cout << s << std::endl;
+}
 ```

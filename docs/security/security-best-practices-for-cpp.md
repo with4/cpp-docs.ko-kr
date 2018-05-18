@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35114d2fff4975cfca1681a7f5861c81bd979ef5
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 2a0ed67c85cbd42985448ef9eb1806931d1c294f
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="security-best-practices-for-c"></a>C++의 최선의 보안 구현 방법
 
@@ -99,8 +99,7 @@ ms.lasthandoff: 05/10/2018
 
 식별 하 고 추론 실행 측면 채널 하드웨어 문제 c + + 소프트웨어에 대 한 완화 하는 방법에 대 한 정보를 참조 하십시오. [잘못 된 실행 쪽 채널에 대 한 c + + 개발자 지침](developer-guidance-speculative-execution.md)합니다.
 
-  
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Security>   
- [보안](/dotnet/standard/security/index)   
- [UAC(사용자 계정 컨트롤)가 응용 프로그램에 주는 영향](how-user-account-control-uac-affects-your-application.md)
+- <xref:System.Security>   
+- [보안](/dotnet/standard/security/index)   
+- [UAC(사용자 계정 컨트롤)가 응용 프로그램에 주는 영향](how-user-account-control-uac-affects-your-application.md)

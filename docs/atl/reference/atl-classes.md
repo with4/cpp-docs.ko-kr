@@ -1,7 +1,7 @@
 ---
-title: ATL 클래스 | Microsoft Docs
+title: ATL 클래스 및 구조체 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -15,17 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7483df52f614c26efd5216137ef3144ab04780e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e887f0adb7812664047fd30c3d9bb48368b9b564
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="atl-classes"></a>ATL 클래스
-액티브 템플릿 라이브러리 (ATL)는 다음과 같은 클래스가 포함 되어 있습니다. 특정 클래스를 범주별으로 찾으려면 참조는 [ATL 클래스 개요](../../atl/atl-class-overview.md)합니다.  
+# <a name="atl-classes-and-structs"></a>ATL 클래스 및 구조체
+다음 클래스와 구조체는 ATL 액티브 템플릿 라이브러리 ()에 포함 되어 있습니다. 특정 클래스를 범주별으로 찾으려면 참조는 [ATL 클래스 개요](../../atl/atl-class-overview.md)합니다.  
   
-|클래스|설명|헤더 파일|  
+|클래스 / 구조체|설명|헤더 파일|  
 |-----------|-----------------|-----------------|  
+|[ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)|프린터 및 메타 파일, ActiveX 컨트롤 같은 다양 한 대상에 렌더링에 사용 되는 정보를 포함 합니다.|atlctl.h|
+|[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)|Atl에서 창 작업 코드에 클래스 인스턴스 데이터를 포함합니다.|atlbase.h|
+|[_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)|ATL.를 사용 하는 모든 프로젝트에서 사용|atlbase.h|  
+|[_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)|Atl에서 COM 관련 코드에서 사용 하는| atlbase.h|  
+|[_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)|dispinterface에 메서드 또는 속성을 설명 하는 데 사용 되는 형식 정보를 포함 합니다.|atlcom.h|  
+|[_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)|모든 ATL 모듈에 의해 사용 되는 데이터를 포함 합니다.|atlbase.h|  
+|[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)|Atl에서 창 작업 코드에서 사용 하는|atlbase.h|  
 |[CA2AEX](../../atl/reference/ca2aex-class.md)|이 클래스는 문자열 변환 매크로 사용 `CA2TEX` 및 `CT2AEX`, 및 typedef **CA2A**합니다.|atlconv.h|  
 |[CA2CAEX](../../atl/reference/ca2caex-class.md)|이 클래스는 사용 하 여 문자열 변환 매크로 `CA2CTEX` 및 `CT2CAEX`, 및 typedef **CA2CA**합니다.|atlconv.h|  
 |[CA2WEX](../../atl/reference/ca2wex-class.md)|이 클래스는 문자열 변환 매크로 사용 `CA2TEX`, `CA2CTEX`, `CT2WEX`, 및 `CT2CWEX`, 및 typedef **CA2W**합니다.|atlconv.h|  
@@ -224,7 +231,6 @@ ms.lasthandoff: 05/03/2018
  [ATL COM 데스크톱 구성 요소](../../atl/atl-com-desktop-components.md)   
  [함수](../../atl/reference/atl-functions.md)   
  [전역 변수](../../atl/reference/atl-global-variables.md)   
- [구조체](../../atl/reference/atl-structures.md)   
  [형식 정의](../../atl/reference/atl-typedefs.md)   
  [클래스 개요](../../atl/atl-class-overview.md)
 
