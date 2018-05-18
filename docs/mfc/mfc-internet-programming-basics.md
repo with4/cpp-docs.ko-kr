@@ -26,11 +26,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7014a55ab51f8a1cbe66093763e9a094dc5f2a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6896daddc0eb900f9e2a29497eb2dd8a1dc78446
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC 인터넷 프로그래밍 기본 사항
 Microsoft는 클라이언트와 서버 응용 프로그램 프로그래밍에 대 한 대부분의 Api를 제공 합니다. 인터넷에 대 한 많은 새 응용 프로그램을 쓰고 하 고 기술, 브라우저 기능 및 보안 옵션 변경,으로 새로운 유형의 응용 프로그램 기록 됩니다. World Wide Web에 대 한 액세스를 제공 하 고 텍스트, 그래픽, ActiveX 컨트롤 및 문서를 포함 하는 HTML 페이지를 표시 클라이언트 컴퓨터에서 브라우저를 실행 합니다. 서버는 FTP, HTTP 및 gopher 서비스를 제공 하 고 서버 확장 CGI를 사용 하 여 응용 프로그램을 실행 합니다. 사용자 지정 응용 프로그램 정보를 검색할 수 있습니다 및 인터넷에서 데이터를 제공 합니다.  
@@ -52,8 +52,6 @@ Microsoft는 클라이언트와 서버 응용 프로그램 프로그래밍에 �
 -   [WinInet 기본 사항](../mfc/wininet-basics.md)  
   
 -   [HTML 기본 사항](../mfc/html-basics.md)  
-  
--   [HTTP 기본 사항](../mfc/http-basics.md)  
   
 ## <a name="related-sections"></a>관련 단원  
   
