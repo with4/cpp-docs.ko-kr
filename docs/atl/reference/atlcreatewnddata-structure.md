@@ -19,11 +19,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc8bf88ce5258dc36a06f32ebaa5e2cdf15092fc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 66388c12def72a9da5b5aeb7e4713ca61c23a6e0
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData 구조
 이 구조 ATL에서 창 작업 코드에 클래스 인스턴스 데이터를 포함합니다.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 05/03/2018
  **헤더:** atlbase.h  
   
 ## <a name="see-also"></a>참고 항목  
- [구조체](../../atl/reference/atl-structures.md)
+ [클래스 및 구조체](../../atl/reference/atl-classes.md)
 
 
 

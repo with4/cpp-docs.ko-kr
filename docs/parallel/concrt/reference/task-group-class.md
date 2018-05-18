@@ -1,4 +1,4 @@
-`task_group` 클래스 대기 하거나 취소할 수 있는 병렬 작업의 컬렉션을 나타냅니다.  
+`task_group` 클래스는 대기하거나 취소할 수 있는 병렬 작업 컬렉션을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -19,14 +19,14 @@ class task_group;
   
 |이름|설명|  
 |----------|-----------------|  
-|[취소](#cancel)|이 작업 그룹에서 시작한 작업의 하위 트리를 취소 하려는 시도를 만듭니다. 작업 그룹에 예약 된 모든 작업은 전이적으로 취소 가능한 경우.|  
+|[cancel](#cancel)|이 작업 그룹에서 시작한 작업의 하위 트리를 취소 하려는 시도를 만듭니다. 작업 그룹에 예약 된 모든 작업은 전이적으로 취소 가능한 경우.|  
 |[is_canceling](#is_canceling)|작업 그룹 현재 취소 중은 여부 호출자에 게 알립니다. 이 반드시을 나타내지 않는 `cancel` 메서드가 `task_group` 개체 (반드시 반환 하려면이 메서드 `true`). 대/소문자는 것입니다는 `task_group` 인라인으로 실행 개체 및 작업 그룹을 추가로 구성 작업 트리에서 취소 되었습니다. 이 경우 런타임에서 취소가를 통해 이동 하는 미리 확인할 수 `task_group` 개체 `true` 도 반환 됩니다.|  
 |[run](#run)|오버로드됨. 작업을 예약는 `task_group` 개체입니다. 경우는 `task_handle` 에 대 한 매개 변수로 전달 `run`의 수명을 관리 하는 것에 대 한 호출자가는 `task_handle` 개체입니다. 매개 변수가 포함 될 수 있는 런타임 내부 힙 할당 함수 개체에 대 한 참조를 사용 하는 메서드의 버전에 대 한 참조를 사용 하는 버전을 사용 하 여 보다 성능이 떨어질는 `task_handle` 개체입니다. `_Placement` 매개 변수를 사용하는 버전은 이 매개 변수로 지정된 위치에서 작업이 실행되도록 합니다.|  
 |[run_and_wait](#run_and_wait)|오버로드됨. 사용 하 여 인라인 호출 컨텍스트에서 실행 하는 작업을 예약 된 `task_group` 전체 취소 지원에 대 한 개체입니다. 함수는 다음에 사용 될 때까지 대기는 `task_group` 개체 완료 되거나 취소 되었습니다. 경우는 `task_handle` 에 대 한 매개 변수로 전달 `run_and_wait`의 수명을 관리 하는 것에 대 한 호출자가는 `task_handle` 개체입니다.|  
-|[대기](#wait)|에 사용 될 때까지 대기는 `task_group` 개체 완료 되거나 취소 되었습니다.|  
+|[wait](#wait)|에 사용 될 때까지 대기는 `task_group` 개체 완료 되거나 취소 되었습니다.|  
   
 ## <a name="remarks"></a>설명  
- 매우 제한 된 달리 `structured_task_group` 클래스는 `task_group` 클래스는 훨씬 더 일반적인 구문입니다. 모든에 설명 된 제한 없기 [structured_task_group](structured-task-group-class.md)합니다. `task_group`안전 하 게 개체는 스레드 사용 되 고, 자유 형식 같은 방법으로 사용 될 수 있습니다. 단점은 `task_group` 구문은 수행 하지 않을 수 있습니다 및 `structured_task_group` 적은 양의 작업을 수행 하는 작업에 대 한 작성 합니다.  
+ 매우 제한 된 달리 `structured_task_group` 클래스는 `task_group` 클래스는 훨씬 더 일반적인 구문입니다. 모든에 설명 된 제한 없기 [structured_task_group](structured-task-group-class.md)합니다. `task_group` 안전 하 게 개체는 스레드 사용 되 고, 자유 형식 같은 방법으로 사용 될 수 있습니다. 단점은 `task_group` 구문은 수행 하지 않을 수 있습니다 및 `structured_task_group` 적은 양의 작업을 수행 하는 작업에 대 한 작성 합니다.  
   
  자세한 내용은 참조 [작업 병렬 처리](../task-parallelism-concurrency-runtime.md)합니다.  
   
@@ -38,7 +38,7 @@ class task_group;
   
  **네임스페이스:** 동시성  
   
-##  <a name="cancel"></a>취소 
+##  <a name="cancel"></a> 취소 
 
  이 작업 그룹에서 시작한 작업의 하위 트리를 취소 하려는 시도를 만듭니다. 작업 그룹에 예약 된 모든 작업은 전이적으로 취소 가능한 경우.  
   
@@ -49,7 +49,7 @@ void cancel();
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [취소](../cancellation-in-the-ppl.md)합니다.  
   
-##  <a name="is_canceling"></a>is_canceling 
+##  <a name="is_canceling"></a> is_canceling 
 
  작업 그룹 현재 취소 중은 여부 호출자에 게 알립니다. 이 반드시을 나타내지 않는 `cancel` 메서드가 `task_group` 개체 (반드시 반환 하려면이 메서드 `true`). 대/소문자는 것입니다는 `task_group` 인라인으로 실행 개체 및 작업 그룹을 추가로 구성 작업 트리에서 취소 되었습니다. 이 경우 런타임에서 취소가를 통해 이동 하는 미리 확인할 수 `task_group` 개체 `true` 도 반환 됩니다.  
   
@@ -63,7 +63,7 @@ bool is_canceling();
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [취소](../cancellation-in-the-ppl.md)합니다.  
   
-##  <a name="run"></a>실행 
+##  <a name="run"></a> 실행 
 
  작업을 예약는 `task_group` 개체입니다. 경우는 `task_handle` 에 대 한 매개 변수로 전달 `run`의 수명을 관리 하는 것에 대 한 호출자가는 `task_handle` 개체입니다. 매개 변수가 포함 될 수 있는 런타임 내부 힙 할당 함수 개체에 대 한 참조를 사용 하는 메서드의 버전에 대 한 참조를 사용 하는 버전을 사용 하 여 보다 성능이 떨어질는 `task_handle` 개체입니다. `_Placement` 매개 변수를 사용하는 버전은 이 매개 변수로 지정된 위치에서 작업이 실행되도록 합니다.  
   
@@ -119,7 +119,7 @@ void run(
   
  메서드에서 throw는 [invalid_multiple_scheduling](invalid-multiple-scheduling-class.md) 태스크가 처리 하는 경우 예외에서 제공 된 `_Task_handle` 매개 변수를 통해 작업 그룹 개체에 이미 예약 되어는 `run` 메서드 되어 없습니다 장애가 있는 호출 중 하나로 `wait` 또는 `run_and_wait` 메서드를 해당 작업 그룹입니다.  
   
-##  <a name="run_and_wait"></a>run_and_wait 
+##  <a name="run_and_wait"></a> run_and_wait 
 
  사용 하 여 인라인 호출 컨텍스트에서 실행 하는 작업을 예약 된 `task_group` 전체 취소 지원에 대 한 개체입니다. 함수는 다음에 사용 될 때까지 대기는 `task_group` 개체 완료 되거나 취소 되었습니다. 경우는 `task_handle` 에 대 한 매개 변수로 전달 `run_and_wait`의 수명을 관리 하는 것에 대 한 호출자가는 `task_handle` 개체입니다.  
   
@@ -162,7 +162,7 @@ task_group_status run_and_wait(
   
  두이 방법 중 하나를 호출 해야 실행 비 예외 경로 또는 `wait` 의 소멸자 보다 먼저 메서드는 `task_group` 실행 합니다.  
   
-##  <a name="ctor"></a>task_group 
+##  <a name="ctor"></a> task_group 
 
  새 `task_group` 개체를 생성합니다.  
   
@@ -181,7 +181,7 @@ task_group(
 ### <a name="remarks"></a>설명  
  취소 토큰을 사용하는 생성자는 토큰에 연결된 소스가 취소될 때 취소될 `task_group`을 만듭니다. 명시적 취소 토큰을 제공하면 다른 토큰을 사용하거나 토큰을 사용하지 않는 부모 그룹에서의 암시적 취소에 이 작업 그룹이 참여하지 않도록 격리됩니다.  
   
-##  <a name="dtor"></a>~ task_group 
+##  <a name="dtor"></a> ~ task_group 
 
  `task_group` 개체를 제거합니다. 호출 하지는 않을 `wait` 또는 `run_and_wait` 소멸자가 실행 전에 예외로 인해 스택 해제의 결과로 소멸자는 실행 되지 않는 경우 개체에서 메서드.  
   
@@ -192,7 +192,7 @@ task_group(
 ### <a name="remarks"></a>설명  
  소멸자가 실행 되 고 (예를 들어 스택 해제 되지 않음 예외로 인해) 정상 실행의 결과로 `wait` 나 `run_and_wait` 메서드도 호출 되지 않은, 소멸자 throw 될 수 있습니다는 [missing_wait](missing-wait-class.md) 예외입니다.  
   
-##  <a name="wait"></a>대기 
+##  <a name="wait"></a> 대기 
 
  에 사용 될 때까지 대기는 `task_group` 개체 완료 되거나 취소 되었습니다.  
   

@@ -15,11 +15,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d460733eff0f5ef78ae92a98347f2eec5f84dc0c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9fc2777e32fb6ad95248b266b1ff62b1983c83c2
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atl-macros"></a>ATL 매크로
 ATL 매크로 범주별으로 찾으려면 다음 항목을 참조 합니다.  
@@ -86,6 +86,6 @@ ATL 매크로 범주별으로 찾으려면 다음 항목을 참조 합니다.
  [ATL COM 데스크톱 구성 요소](../../atl/atl-com-desktop-components.md)   
  [함수](../../atl/reference/atl-functions.md)   
  [전역 변수](../../atl/reference/atl-global-variables.md)   
- [구조체](../../atl/reference/atl-structures.md)   
- [형식 정의](../../atl/reference/atl-typedefs.md)   
- [클래스](../../atl/reference/atl-classes.md)
+ [클래스 및 구조체](../../atl/reference/atl-classes.md)  
+ [Typedefs](../../atl/reference/atl-typedefs.md)   
+

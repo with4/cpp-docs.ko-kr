@@ -828,11 +828,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b6dadffe56350904fe4c115550590b21d009868
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8424d4be8ca2de5b1b40a7ed5d0142691b4d776f
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="cwnd-class"></a>CWnd 클래스
 MFC 라이브러리의 모든 Window 클래스의 기본적인 기능을 제공합니다.  
@@ -1113,7 +1113,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnChangeCbChain](#onchangecbchain)|지정된 창이 체인에서 제거됨을 알립니다.|  
 |[CWnd::OnChangeUIState](#onchangeuistate)|UI(사용자 인터페이스) 상태를 변경해야 할 때 호출됩니다.|  
 |[CWnd::OnChar](#onchar)|키 입력이 시스템 문자 이외의 문자로 변환될 때 호출됩니다.|  
-|[CWnd::OnCharToItem](#onchartoitem)|자식 목록 상자에 의해 호출는 [LBS_WANTKEYBOARDINPUT](list-box-styles.md) 스타일에 대 한 응답에는 [WM_CHAR](#onchar) 메시지입니다.|  
+|[CWnd::OnCharToItem](#onchartoitem)|자식 목록 상자에 의해 호출는 [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) 스타일에 대 한 응답에는 [WM_CHAR](#onchar) 메시지입니다.|  
 |[CWnd::OnChildActivate](#onchildactivate)|`CWnd`의 크기 또는 위치가 변경되거나 `CWnd`가 활성화될 때마다 MDI(다중 문서 인터페이스) 자식 창에 대해 호출됩니다.|  
 |[CWnd::OnChildNotify](#onchildnotify)|알림 컨트롤이 컨트롤 알림에 응답할 수 있는 기회를 제공하기 위해 부모 창에서 호출됩니다.|  
 |[CWnd::OnClipboardUpdate](#onclipboardupdate)|클립보드의 내용이 변경될 때 호출됩니다.|  

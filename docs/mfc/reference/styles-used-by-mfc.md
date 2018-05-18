@@ -1,7 +1,7 @@
 ---
 title: MFC에서 사용 되는 스타일 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/03/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -206,19 +206,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1e891c8b24e52b56bd6bed8fb7f931fdd8fb863
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6643a1c70b6a22126222d523de4426e1aebcf85b
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="styles-used-by-mfc"></a>MFC에서 사용하는 스타일  
   
 다음과 같은 스타일 플래그를 사용 하 여 해당 하는 MFC 개체를 만들 때 창 또는 컨트롤의 모양 및 동작을 지정 합니다. 이러한 스타일 설정 된 대부분의 경우에는 `dwStyle` 클래스의 매개 변수 `Create` 함수입니다.  
   
-<a name="button-styles"></a>  
-  
-## <a name="button-styles"></a>단추 스타일  
+## <a name="button-styles"></a> 단추 스타일  
   
 단추 스타일을 적용할 [CButton 클래스](../../mfc/reference/cbutton-class.md) 라디오 단추와 같이 개체 확인란 누름 단추 및 합니다. 스타일의 조합을 지정할는 `dwStyle` 의 매개 변수 [CButton::Create](../../mfc/reference/cbutton-class.md#create)합니다. Windows에서 단추 스타일에 대 한 자세한 내용은 참조 하십시오. [단추 스타일 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775951)합니다.  
   
@@ -287,9 +285,7 @@ ms.lasthandoff: 05/04/2018
 |`BS_MULTILINE`|텍스트 문자열이 너무 길어 단추 사각형에 한 줄 인지 여러 줄으로 단추 텍스트를 래핑합니다.|  
 |`BS_NOTIFY`|보낼 단추를 활성화 `BN_DBLCLK`, `BN_KILLFOCUS`, 및 `BN_SETFOCUS` 알림 메시지를 해당 부모 창입니다. 보내기 단추는 `BN_CLICKED` 이 스타일 지정 되었는지 여부에 관계 없이 알림입니다.|  
   
-<a name="combo-box-styles"></a>  
-  
-## <a name="combo-box-styles"></a>콤보 상자 스타일  
+## <a name="combo-box-styles"></a>  콤보 상자 스타일  
   
 다음 콤보 상자 스타일을 MFC에서 사용할 수 있습니다. Windows에서 콤보 상자 스타일에 대 한 자세한 내용은 참조 [콤보 상자 스타일 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775796)합니다.  
   
@@ -309,9 +305,7 @@ ms.lasthandoff: 05/04/2018
 |`CBS_SORT`|목록 상자에 입력 되는 문자열을 자동으로 정렬 합니다.|  
 |`CBS_UPPERCASE`|선택 필드와 목록에 있는 모든 텍스트를 대문자로 변환 합니다.|  
   
-<a name="edit-styles"></a>  
-  
-## <a name="edit-styles"></a>스타일 편집  
+## <a name="edit-styles"></a>  스타일 편집  
   
 편집 스타일에 적용 [CEdit 클래스](../../mfc/reference/cedit-class.md) 개체입니다. 스타일의 조합을 지정할는 `dwStyle` 의 매개 변수 [CEdit::Create](../../mfc/reference/cedit-class.md#create)합니다. Windows에서 편집 컨트롤 스타일에 대 한 자세한 내용은 참조 [편집 컨트롤 스타일 (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb775464)합니다.  
   
@@ -332,9 +326,7 @@ ms.lasthandoff: 05/04/2018
 |`ES_UPPERCASE`|모든 문자를 입력 한 대로 편집 컨트롤에 대문자로 변환 합니다.|  
 |`ES_WANTRETURN`|대화 상자에서 여러 줄 편집 컨트롤에 텍스트를 입력 하는 동안 사용자가 ENTER 키를 누를 때 캐리지 리턴 삽입할 수를 지정 합니다. 이 스타일을 사용 하지 않으면 ENTER 키를 누르면는 대화 상자 기본 누름 단추를 누르는 것과 같습니다. 이 스타일에 편집 컨트롤을 단일 줄에 적용 되지 않습니다.|  
   
-<a name="frame-window-styles-mfc"></a>  
-  
-## <a name="frame-window-styles"></a>프레임 창 스타일  
+## <a name="frame-window-styles-mfc"></a> 프레임 창 스타일  
   
 프레임 창 스타일을 적용할 [CFrameWnd 클래스](../../mfc/reference/cframewnd-class.md) 개체입니다. 스타일의 조합을 지정할는 `dwStyle` 의 매개 변수 [CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create)합니다.  
   
@@ -342,11 +334,9 @@ ms.lasthandoff: 05/04/2018
 |-----------|-----------------|  
 |`FWS_ADDTOTITLE`|프레임 창 제목의 끝에 추가할 정보를 지정 합니다. 예를 들어 "Microsoft 그리기-그리기에 Document1"입니다. 응용 프로그램 마법사에서 문서 템플릿 문자열 탭에 표시 되는 문자열을 지정할 수 있습니다. 이 옵션을 해제 해야 하는 경우 재정의 `CWnd::PreCreateWindow` 멤버 함수입니다.|  
 |`FWS_PREFIXTITLE`|프레임 창 제목에 응용 프로그램 이름 앞에 문서 이름을 보여 줍니다. 예를 들어 "문서-워드 패드"입니다. 응용 프로그램 마법사에서 문서 템플릿 문자열 탭에 표시 되는 문자열을 지정할 수 있습니다. 이 옵션을 해제 해야 하는 경우 재정의 `CWnd::PreCreateWindow` 멤버 함수입니다.|  
-|`FWS_SNAPTOBARS`|프레임 창의 경우 부동 창에는 대신 프레임 창으로 도킹 막대 컨트롤을 포함 하는 컨트롤 크기 조정 합니다. 이 스타일에 맞게 컨트롤 막대 창 크기 조정 합니다.|  
+|`FWS_SNAPTOBARS`|프레임 창의 경우 부동 창에는 대신 프레임 창으로 도킹 막대 컨트롤을 포함 하는 컨트롤 크기 조정 합니다. 이 스타일에 맞게 컨트롤 막대 창 크기 조정 합니다.|
   
-<a name="list-box-styles"></a>  
-  
-## <a name="list-box-styles"></a>목록 상자 스타일  
+## <a name="list-box-styles"></a> 목록 상자 스타일  
   
 목록 상자 스타일에 적용 [CListBox 클래스](../../mfc/reference/clistbox-class.md) 개체입니다. 스타일의 조합을 지정할는 `dwStyle` 의 매개 변수 [CListBox::Create](../../mfc/reference/clistbox-class.md#create)합니다. Windows에서 목록 상자 스타일에 대 한 자세한 내용은 참조 [목록 상자 스타일 (Windows)](https://msdn.microsoft.com/library/windows/desktop/bb775149)합니다.  
   
@@ -369,9 +359,7 @@ ms.lasthandoff: 05/04/2018
 |`LBS_USETABSTOPS`|목록 상자를를 인식 하 고 해당 문자열을 그릴 때 탭 문자를 확장할 수 있습니다. 기본 탭 위치는 32 대화 상자 단위입니다. (대화 상자 단위는 가로 또는 세로 거리입니다. 하나의 가로 대화 상자 단위는 현재 대화 기본 두께 단위의 1 / 4와 같습니다. 대화 상자 기본 단위는 현재 시스템 글꼴의 너비와 높이에 따라 계산 됩니다. `GetDialogBaseUnits` Windows 함수 현재 대화 상자 기본 단위 픽셀 단위로 반환 합니다.) 이 스타일와 사용할 수 없습니다 `LBS_OWNERDRAWFIXED`합니다.|  
 |`LBS_WANTKEYBOARDINPUT`|목록 상자의 소유자 받는 `WM_VKEYTOITEM` 또는 `WM_CHARTOITEM` 목록 상자에 입력 포커스가 있는 동안 사용자가 키 때마다 메시지입니다. 따라서 입력 하 고 키보드에서 특수 한 처리를 수행할 응용을 프로그램을 수 있습니다.|  
   
-<a name="message-box-styles"></a>  
-  
-## <a name="message-box-styles"></a>메시지 상자 스타일  
+##<a name="message-box-styles"></a>  메시지 상자 스타일  
   
 메시지 상자 스타일에 적용 [AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox) 항목입니다. 스타일의 조합을 지정할는 `nType` 의 매개 변수 `AfxMessageBox`합니다. Windows에서 메시지 상자 스타일에 대 한 자세한 내용은 참조 [MessageBox 함수 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms645505)합니다.  
   
@@ -412,9 +400,7 @@ ms.lasthandoff: 05/04/2018
 |`MB_DEFBUTTON2`|두 번째 단추는 기본값입니다.|  
 |`MB_DEFBUTTON3`|세 번째 단추는 기본값입니다.|  
   
-<a name="scroll-bar-styles"></a>  
-  
-## <a name="scroll-bar-styles"></a>스크롤 막대 스타일  
+## <a name="scroll-bar-styles"></a> 스크롤 막대 스타일  
   
 스크롤 막대 스타일을 적용할 [CScrollBar 클래스](../../mfc/reference/cscrollbar-class.md) 개체입니다. 스타일의 조합을 지정할는 `dwStyle` 의 매개 변수 [CScrollBar::Create](../../mfc/reference/cscrollbar-class.md#create)합니다. 스크롤 막대 컨트롤 스타일 창에 대 한 자세한 내용은 참조 하십시오. [스크롤 막대 컨트롤 스타일 (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb787533)합니다.  
   
@@ -431,9 +417,7 @@ ms.lasthandoff: 05/04/2018
 |`SBS_TOPALIGN`|함께 사용 된 `SBS_HORZ` 스타일입니다. 스크롤 막대의 위쪽 가장자리에 지정 된 사각형의 위쪽 가장자리에 맞춰집니다는 `Create` 멤버 함수입니다. 스크롤 막대에는 시스템 스크롤 막대에 대 한 기본 높이입니다.|  
 |`SBS_VERT`|세로 스크롤 막대를 지정합니다. 모두는 `SBS_RIGHTALIGN` 나 `SBS_LEFTALIGN` 스타일을 지정한 경우 높이, 너비 및 위치에 지정 된 스크롤 막대에는 `Create` 멤버 함수입니다.|  
   
-<a name="static-styles"></a>  
-  
-## <a name="static-styles"></a>정적 스타일  
+## <a name="static-styles"></a> 정적 스타일  
   
 정적 스타일을 적용할 [CStatic 클래스](../../mfc/reference/cstatic-class.md) 개체입니다. 스타일의 조합을 지정할는 `dwStyle` 의 매개 변수 [CStatic::Create](../../mfc/reference/cstatic-class.md#create)합니다. Windows에서 정적 컨트롤 스타일에 대 한 자세한 내용은 참조 [정적 컨트롤 스타일 (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb760773)합니다.  
   
@@ -467,9 +451,7 @@ ms.lasthandoff: 05/04/2018
 |`SS_WHITERECT`|창 배경을 채우는 데 사용 되는 색으로 채워진 사각형을 지정 합니다. 기본값은 흰색입니다.|  
 |`SS_WORDELLIPSIS`|맞지 않는 하 고 줄임표를 추가 하는 텍스트를 자릅니다.|  
   
-<a name="window-styles"></a>  
-  
-## <a name="window-styles"></a>창 스타일  
+## <a name="window-styles"></a> 창 스타일  
   
 창 스타일을 적용할 [CWnd 클래스](../../mfc/reference/cwnd-class.md) 개체입니다. 스타일의 조합을 지정할는 `dwStyle` 의 매개 변수 [CWnd::Create](../../mfc/reference/cwnd-class.md#create) 또는 [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)합니다. Windows의 창 스타일에 대 한 자세한 내용은 참조 [창 스타일 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)합니다.  
   
@@ -503,9 +485,7 @@ ms.lasthandoff: 05/04/2018
 |`WS_VISIBLE`|처음에 표시 되는 창을 만듭니다.|  
 |`WS_VSCROLL`|세로 스크롤 막대를 보유 하는 창을 만듭니다.|  
   
-<a name="extended-window-styles"></a>  
-  
-## <a name="extended-window-styles"></a>확장된 창 스타일  
+## <a name="extended-window-styles"></a> 확장된 창 스타일  
   
 확장된 창 스타일을 적용할 [CWnd 클래스](../../mfc/reference/cwnd-class.md) 개체입니다. 스타일의 조합을 지정할는 `dwExStyle` 의 매개 변수 [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)합니다. Windows에서 확장된 창 스타일에 대 한 자세한 내용은 참조 [확장 창 스타일 (Windows)](https://msdn.microsoft.com/library/windows/desktop/ff700543)합니다.  
   
