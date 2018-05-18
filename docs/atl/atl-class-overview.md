@@ -17,11 +17,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab373cbce85e05d7780ed827f546b649d40ce62f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8eaa712ba8954b8b9b755f8045a81296bb345685
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atl-class-overview"></a>ATL 클래스 개요
 클래스에는 ATL 액티브 템플릿 라이브러리 ()는 다음과 같이 분류할 수 있습니다.  
@@ -49,11 +49,10 @@ ms.lasthandoff: 05/03/2018
  ATL 프로젝트에서 사용할 수 있는 추가 클래스를 참조 하십시오. [공유 클래스](../atl-mfc-shared/atl-mfc-shared-classes.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [클래스](../atl/reference/atl-classes.md)   
- [ATL COM 데스크톱 구성 요소](../atl/atl-com-desktop-components.md)   
+ [클래스 및 구조체](../atl/reference/atl-classes.md)   
+ [ATL COM 데스크톱 구성 요소](../atl/atl-com-desktop-components.md)  
  [함수](../atl/reference/atl-functions.md)   
  [전역 변수](../atl/reference/atl-global-variables.md)   
  [매크로](../atl/reference/atl-macros.md)   
- [구조체](../atl/reference/atl-structures.md)   
  [Typedefs](../atl/reference/atl-typedefs.md)
 
