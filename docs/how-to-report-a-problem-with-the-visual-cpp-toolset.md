@@ -1,6 +1,6 @@
 ---
-title: Visual C++ 도구 집합의 문제를 보고하는 방법 | Microsoft 문서
-ms.date: 1/11/2018
+title: Visual C++ 도구 집합의 문제를 보고하는 방법 | Microsoft Docs
+ms.date: 5/11/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -10,27 +10,27 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8be0a5e42caf12c4e1415cf88143b84a9971cd2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 72721e6a1ee75f7e786bd059c02ede5d275b0f4e
+ms.sourcegitcommit: e1e0104486250e12259c71185b0d1c21ddd16bb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/11/2018
 ---
-# <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>Visual C++ 도구 집합의 문제를 보고하는 방법
+# <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Visual C++ 도구 집합 또는 설명서의 문제를 보고하는 방법
 
-Microsoft Visual C++ 컴파일러, 링커 또는 기타 도구 및 라이브러리에 문제가 발생하는 경우 문제를 파악하고자 합니다.
+Microsoft Visual C++ 컴파일러, 링커 또는 기타 도구 및 라이브러리에 문제가 발생하는 경우 문제를 파악하고자 합니다. 문제가 설명서에 있으면 해당 내용도 알고 싶습니다.
+
+## <a name="how-to-report-a-c-documentation-issue"></a>C++ 설명서 문제를 보고하는 방법
+
+GitHub 문제를 사용하여 설명서에 보고된 문제를 추적합니다. 이제 작성자 및 제품 팀과 훨씬 더 다양한 방식으로 상호 작용할 수 있는 콘텐츠 페이지에서 직접 GitHub 문제를 만들 수 있습니다. 문서, 잘못된 코드 샘플, 혼란스러운 설명, 중요한 누락 또는 오타가 있는 문제가 있으면 편안하게 알려주세요. 페이지 아래쪽으로 스크롤하고 **로그인을 선택하여 설명서 피드백을 제공**합니다. 아직 GitHub 계정이 없는 경우 해당 계정을 만들어야 하지만, 일단 계정이 만들어졌으면 보고된 문제에 대한 변경 내용이 있을 경우 설명서 문제와 해당 상태를 모두 확인하고 알림을 받을 수 있습니다. 자세한 내용은 [새로운 피드백 시스템이 docs.microsoft.com에 제공됩니다](/teamblog/a-new-feedback-system-is-coming-to-docs)를 참조하세요.
+
+설명서 피드백 단추를 사용하여 GitHub에 설명서 문제를 만들면, 문제를 만든 페이지에 대한 일부 정보가 해당 문제에 자동으로 채워져 문제가 있는 위치를 알 수 있습니다. 이 정보는 편집하지 마세요. 잘못된 항목 및 원하는 경우 제안된 해결 방법에 대한 세부 정보를 추가하기만 하면 됩니다. [설명서는 오픈 소스](https://github.com/MicrosoftDocs/cpp-docs/)이므로 실제로 수정하고 직접 제안하려는 경우 그렇게 할 수 있습니다. 설명서에 기여할 수 있는 방법에 대한 자세한 내용은 GitHub의 [기여 가이드](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md)를 참조하세요.
+
+## <a name="how-to-report-a-c-product-issue"></a>C++ 제품 문제를 보고하는 방법
 
 문제를 알리는 가장 좋은 방법은 발생한 문제에 대한 설명, 프로그램 빌드 방법에 대한 세부 정보 및 다른 컴퓨터에서 문제를 재현하는 데 사용할 수 있는 완전한 테스트 사례인 *재현*을 보내는 것입니다. 이 정보를 통해 문제가 코드에 있고 사용자 환경에서만 발생하는 문제가 아님을 빠르게 확인할 수 있으며, 다른 버전의 컴파일러에 영향을 주는지 여부를 확인하고 원인을 진단할 수 있습니다.
 
-이 문서의 내용은 다음과 같습니다.
-
-- [보고서를 준비하는 방법](#how-to-prepare-your-report) 및 좋은 보고서의 요소
-
-- [재현하는 방법](#how-to-generate-a-repro) 및 다양한 종류의 재현
-
-- [보고서를 보내는 방법](#ways-to-send-your-report) 및 차이점
-
-보고서는 Microsoft와 다른 개발자에게 중요합니다. Visual C++ 개선에 도움 주셔서 감사합니다!
+아래 섹션에서는 좋은 보고서를 만드는 방법, 발견한 문제 유형에 대한 재현을 생성하는 방법 및 제품 팀에 보고서를 보내는 방법에 대해 살펴보겠습니다. 보고서는 Microsoft와 다른 개발자에게 중요합니다. Visual C++ 개선에 도움 주셔서 감사합니다!
 
 ## <a name="how-to-prepare-your-report"></a>보고서를 준비하는 방법
 
@@ -291,7 +291,7 @@ CONTEXT:
 
 ## <a name="ways-to-send-your-report"></a>보고서를 보내는 방법
 
-여러 가지 방법으로 보고서를 보낼 수 있습니다. Visual Studio의 기본 제공 [문제 도구 보고](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) 또는 [Visual Studio 개발자 커뮤니티](https://developercommunity.visualstudio.com/) 페이지를 사용할 수 있습니다. 또한 보고서가 포함된 전자 메일을 보낼 수도 있지만 앞서 말한 두 가지 방법이 더 좋습니다. 보고서를 조사할 엔지니어와 상호 작용하려는 방법, 진행 상황을 추적하거나 보고서를 커뮤니티와 공유할지 여부에 따라 선택이 달라집니다.
+여러 가지 방법으로 보고서를 보낼 수 있습니다. Visual Studio의 기본 제공 [문제 도구 보고](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) 또는 [Visual Studio 개발자 커뮤니티](https://developercommunity.visualstudio.com/) 페이지를 사용할 수 있습니다. 이 페이지의 아래쪽에 있는 **제품 피드백** 단추를 선택하여 개발자 커뮤니티 페이지로 직접 이동할 수도 있습니다. 또한 보고서가 포함된 전자 메일을 보낼 수도 있지만 앞서 말한 두 가지 방법이 더 좋습니다. 보고서를 조사할 엔지니어와 상호 작용하려는 방법, 진행 상황을 추적하거나 보고서를 커뮤니티와 공유할지 여부에 따라 선택이 달라집니다.
 
 > [!NOTE]
 > 보고서를 제출하는 방법에 관계없이 Microsoft는 사용자의 개인 정보를 보호합니다. Microsoft에서 사용자가 보낸 데이터를 처리하는 방법에 대한 자세한 내용은 [Microsoft Visual Studio 제품군 개인정보처리방침](https://www.visualstudio.com/dn948229)을 참조하세요.
@@ -334,4 +334,4 @@ Source code and repro steps:
 ```
 
 > [!TIP]
-> Visual Studio에서 발생할 수 있고 도구 집합과 관련이 없는 다른 종류의 문제(예: UI 문제, 손상된 IDE 기능 또는 일반 충돌)에서는 스크린샷 기능과 발생한 문제를 초래하는 UI 작업 기록 기능 때문에 문제 보고 도구가 특히 유용할 수 있습니다. 이러한 다른 종류의 오류는 compilercrash@microsoft.com으로 전자 메일을 전송하여 보고하면 안 됩니다.
+> Visual Studio에서 발생할 수 있고 도구 집합과 관련이 없는 다른 종류의 문제(예: UI 문제, 손상된 IDE 기능 또는 일반 충돌)의 경우 스크린샷 기능 및 발생한 문제를 유발하는 UI 작업 기록 기능 때문에 **문제 보고 도구**가 특히 유용할 수 있습니다. 또한 이러한 종류의 오류는 [개발자 커뮤니티](https://developercommunity.visualstudio.com/) 사이트에서도 보고할 수 있습니다. 이러한 다른 종류의 오류는 compilercrash@microsoft.com으로 전자 메일을 전송하여 보고하면 안 됩니다.

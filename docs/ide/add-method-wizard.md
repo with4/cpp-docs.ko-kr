@@ -1,13 +1,10 @@
 ---
-title: "메서드 추가 마법사 | Microsoft Docs"
-ms.custom: 
+title: 메서드 추가 마법사 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - cpp-ide
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.codewiz.method.overview
 dev_langs:
@@ -16,24 +13,22 @@ helpviewer_keywords:
 - Add Method Wizard [C++]
 - methods [C++], adding using wizards
 ms.assetid: b9a71b0e-9ecf-40fa-9f86-4200cb23d671
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63595fe7fda434b7ee16161bd3afdaf8a46fad82
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cc2ebd18640f0ab778cb45252691e63206861d53
+ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="add-method-wizard"></a>메서드 추가 마법사
 이 마법사를 사용 하 여 인터페이스에 메서드를 추가 합니다. 마법사는 프로젝트 형식 또는 메서드를 추가 되는 인터페이스 형식에 따라 다른 옵션이 표시 됩니다.  
   
 ## <a name="names"></a>이름  
  **반환 형식**  
- 메서드에서 반환 된 데이터 형식입니다. `HRESULT`오류를 반환 하는 표준 방법을 제공 하기 때문에 모든 인터페이스 형식에 권장 됩니다.  
+ 메서드에서 반환 된 데이터 형식입니다. `HRESULT` 오류를 반환 하는 표준 방법을 제공 하기 때문에 모든 인터페이스 형식에 권장 됩니다.  
   
 |인터페이스 유형|설명|  
 |--------------------|-----------------|  
@@ -76,9 +71,9 @@ ms.lasthandoff: 12/21/2017
   
 |매개 변수 특성|설명|가능한 조합|  
 |-------------------------|-----------------|--------------------------|  
-|**In**|호출된 된 프로시저를 호출 하는 프로시저에서 매개 변수 전달 있음을 나타냅니다.|**** 만<br /><br /> **** 및 **아웃**|  
-|**Out**|포인터 매개 변수 (클라이언트에 서버)에서 호출 하는 프로시저를 호출된 된 프로시저 로부터 반환 됨을 나타냅니다.|**out** 만<br /><br /> **** 및 **아웃**<br /><br /> **out** 및 **retval**|  
-|**Retval**|매개 변수는 멤버의 반환 값을 수신 했음을 나타냅니다.|**retval** 및 아웃|  
+|**In**|호출된 된 프로시저를 호출 하는 프로시저에서 매개 변수 전달 있음을 나타냅니다.|**내부** 만<br /><br /> **내부** 및 **아웃**|  
+|**Out**|포인터 매개 변수 (클라이언트에 서버)에서 호출 하는 프로시저를 호출된 된 프로시저 로부터 반환 됨을 나타냅니다.|**out** 만<br /><br /> **내부** 및 **아웃**<br /><br /> **out** 및 **retval**|  
+|**retval**|매개 변수는 멤버의 반환 값을 수신 했음을 나타냅니다.|**retval** 및 아웃|  
   
  **매개 변수 형식**  
  매개 변수의 데이터 형식을 설정합니다. 목록에서 유형을 선택 합니다.  
