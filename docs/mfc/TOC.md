@@ -136,7 +136,6 @@
 ### [인터넷의 액티브 기술](active-technology-on-the-internet.md)
 ### [WinInet 기본 사항](wininet-basics.md)
 ### [HTML 기본 사항](html-basics.md)
-### [HTTP 기본 사항](http-basics.md)
 ## [MFC 인터넷 프로그래밍 작업](mfc-internet-programming-tasks.md)
 ### [응용 프로그램 디자인 선택](application-design-choices.md)
 ### [MFC 응용 프로그램 작성](writing-mfc-applications.md)
