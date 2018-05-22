@@ -75,6 +75,7 @@
 #### [Platform::String 클래스](platform-string-class.md)
 #### [Platform::StringReference 클래스](platform-stringreference-class.md)
 #### [Platform::Type 클래스](platform-type-class.md)
+#### [Platform::Type^ 연산자](operator-type-hat.md)
 #### [Platform::TypeCode 열거형](platform-typecode-enumeration.md)
 #### [Platform::UIntPtr 값 클래스](platform-uintptr-value-class.md)
 #### [Platform::ValueType 클래스](platform-valuetype-class.md)
@@ -113,4 +114,5 @@
 #### [begin 함수](begin-function.md)
 #### [End 함수](end-function.md)
 #### [to_vector 함수](to-vector-function.md)
+### [Windows::UI::Xaml::Interop::TypeName 연산자](operator-windows-ui-xaml-interop-typename.md)
 ## [유니버설 Windows 플랫폼 앱에서 지원되지 않는 CRT 함수](crt-functions-not-supported-in-universal-windows-platform-apps.md)

@@ -419,6 +419,7 @@
 ## [CSpinButtonCtrl 클래스](cspinbuttonctrl-class.md)
 ## [CSplitButton 클래스](csplitbutton-class.md)
 ## [CSplitterWnd 클래스](csplitterwnd-class.md)
+## [CSplitterWndEx 클래스](csplitterwndex-class.md)
 ## [CStatic 클래스](cstatic-class.md)
 ## [CStatusBar 클래스](cstatusbar-class.md)
 ## [CStatusBarCtrl 클래스](cstatusbarctrl-class.md)
