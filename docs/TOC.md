@@ -26,6 +26,7 @@
 # [C++ 보안 모범 사례](security/security-best-practices-for-cpp.md)
 ## [사용자 그룹의 멤버로 실행](security/running-as-a-member-of-the-users-group.md)
 ## [UAC(사용자 계정 컨트롤)가 응용 프로그램에 주는 영향](security/how-user-account-control-uac-affects-your-application.md)
+## [Speculative Execution Side Channels에 대한 C++ 개발자 지침](security/developer-guidance-speculative-execution.md)
 # [Visual C++ 샘플](visual-cpp-samples.md)
 # [Visual C++ 도움말 및 커뮤니티](visual-cpp-help-and-community.md)
 # [Visual C++ 도구 집합의 문제를 보고하는 방법](how-to-report-a-problem-with-the-visual-cpp-toolset.md)

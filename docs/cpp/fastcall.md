@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d69c97294795ed2f3f0b2d82ec8caa4734fa1f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03f286f21f213f5b2a193ccb824ba22b7c7c1f00
+ms.sourcegitcommit: 39585672df8874fb5df4e70de97cd7f328fe9880
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="fastcall"></a>__fastcall
 **Microsoft 전용**  
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/03/2018
 |-------------|--------------------|  
 |인수 전달 순서|왼쪽에서 오른쪽으로 인수 목록에서 발견된 처음 두 개의 DWORD 이하 인수는 ECX 및 EDX 레지스터로 전달되고, 다른 모든 인수는 오른쪽에서 왼쪽으로 스택에 전달됩니다.|  
 |스택 유지 관리 책임|호출된 함수가 스택에서 인수를 꺼냅니다.|  
-|이름 데코레이션 규칙|이름 앞에 at 기호(@)가 붙습니다. 이름 뒤에는 at 기호 다음에 매개 변수 목록의 바이트 수(10진수)가 붙습니다.|  
+|이름 데코레이션 규칙|At 기호 (\@) 맨 앞 이름에는 at 기호 다음 바이트 수 (10 진수) 매개 변수에서 번호 목록이 붙습니다.|  
 |대/소문자 변환 규칙|대/소문자 변환은 수행되지 않습니다.|  
   
 > [!NOTE]

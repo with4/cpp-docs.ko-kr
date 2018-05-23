@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42ff0e71e15c70d8d5d9dee0b398d4f0c075eb47
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cee9df0b137655fe66e68c189de756f15233a94d
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="worker-archetype"></a>작업자 아키타
 준수 하는 클래스는 *작업자* 아키타 스레드 풀 큐에 대기 프로세스 작업 항목에 코드를 제공 합니다.  
@@ -118,7 +118,6 @@ void Terminate(void* pvParam) throw();
  작업자 클래스에 의해 인식 사용자 지정 매개 변수입니다. 또한 전달할 `WorkerArchetype::Initialize` 및 `WorkerArchetype::Execute`합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [아키타](../../atl/reference/atl-archetypes.md)   
  [개념](../../atl/active-template-library-atl-concepts.md)   
  [ATL COM 데스크톱 구성 요소](../../atl/atl-com-desktop-components.md)
 

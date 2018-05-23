@@ -33,11 +33,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb730faae0b70b840b637dc54a9f7b636f1d7a6e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 811dbda4360bcb3a618a4ceaa5228e57dab312ae
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="atl-typedefs"></a>ATL Typedefs
 액티브 템플릿 라이브러리는 다음 형식 정의 포함합니다.  
@@ -308,6 +308,4 @@ typedef CUrl* LPURL;
  [ATL COM 데스크톱 구성 요소](../../atl/atl-com-desktop-components.md)   
  [함수](../../atl/reference/atl-functions.md)   
  [전역 변수](../../atl/reference/atl-global-variables.md)   
- [구조체](../../atl/reference/atl-structures.md)   
- [매크로](../../atl/reference/atl-macros.md)   
- [클래스](../../atl/reference/atl-classes.md)
+ [클래스 및 구조체](../../atl/reference/atl-classes.md) [매크로](../../atl/reference/atl-macros.md)   

@@ -1,12 +1,9 @@
 ---
-title: "IOleInPlaceActiveObjectImpl 클래스 | Microsoft Docs"
-ms.custom: 
+title: IOleInPlaceActiveObjectImpl 클래스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
-- cpp-windows
-ms.tgt_pltfrm: 
+- cpp-atl
 ms.topic: reference
 f1_keywords:
 - IOleInPlaceActiveObjectImpl
@@ -25,17 +22,15 @@ helpviewer_keywords:
 - ActiveX controls [C++], communication between container and control
 - IOleInPlaceActiveObject, ATL implementation
 ms.assetid: 44e6cc6d-a2dc-4187-98e3-73cf0320dea9
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d88f85e83a88b0a1ce2bd4566e3ca479dddc1af
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a0d98b8dd082a09de461452b43b70ddeb9431abe
+ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ioleinplaceactiveobjectimpl-class"></a>IOleInPlaceActiveObjectImpl 클래스
 이 클래스는 전체 컨트롤과 해당 컨테이너 간의 통신을 지원 하기 위한 메서드를 제공 합니다.  
@@ -82,7 +77,7 @@ class IOleInPlaceActiveObjectImpl
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlctl.h  
   
-##  <a name="contextsensitivehelp"></a>IOleInPlaceActiveObjectImpl::ContextSensitiveHelp  
+##  <a name="contextsensitivehelp"></a>  IOleInPlaceActiveObjectImpl::ContextSensitiveHelp  
  상황에 맞는 도움말을 사용 하도록 설정 합니다.  
   
 ```
@@ -95,7 +90,7 @@ HRESULT ContextSensitiveHelp(BOOL fEnterMode);
 ### <a name="remarks"></a>설명  
  참조 [IOleWindow::ContextSensitiveHelp](http://msdn.microsoft.com/library/windows/desktop/ms680059) in the Windows SDK입니다.  
   
-##  <a name="enablemodeless"></a>IOleInPlaceActiveObjectImpl::EnableModeless  
+##  <a name="enablemodeless"></a>  IOleInPlaceActiveObjectImpl::EnableModeless  
  모덜리스 대화 상자를 사용 하도록 설정 합니다.  
   
 ```
@@ -108,7 +103,7 @@ HRESULT EnableModeless(BOOL fEnable);
 ### <a name="remarks"></a>설명  
  참조 [IOleInPlaceActiveObject::EnableModeless](http://msdn.microsoft.com/library/windows/desktop/ms680115) in the Windows SDK입니다.  
   
-##  <a name="getwindow"></a>IOleInPlaceActiveObjectImpl::GetWindow  
+##  <a name="getwindow"></a>  IOleInPlaceActiveObjectImpl::GetWindow  
  컨테이너는 컨트롤의 창 핸들을 가져오려면이 함수를 호출 합니다.  
   
 ```
@@ -116,11 +111,11 @@ HRESULT GetWindow(HWND* phwnd);
 ```  
   
 ### <a name="remarks"></a>설명  
- 일부 컨테이너는 현재 기간 이동 하는 경우에, 창 없는 되었습니다에 있는 컨트롤과 함께 작동 하지 않습니다. ATL의 구현 하는 경우는 **CComControl::m_bWasOnceWindowless** 데이터 멤버는 **TRUE**, 함수 반환 **E_FAIL**합니다. 그렇지 않은 경우, \* *phwnd* 않습니다 **NULL**, `GetWindow` 할당 *phwnd* 컨트롤 클래스의 데이터 멤버를 `m_hWnd` 를반환합니다.`S_OK`.  
+ 일부 컨테이너는 현재 기간 이동 하는 경우에, 창 없는 되었습니다에 있는 컨트롤과 함께 작동 하지 않습니다. ATL의 구현 하는 경우는 **CComControl::m_bWasOnceWindowless** 데이터 멤버는 **TRUE**, 함수 반환 **E_FAIL**합니다. 그렇지 않은 경우, \* *phwnd* 않습니다 **NULL**, `GetWindow` 할당 *phwnd* 컨트롤 클래스의 데이터 멤버를 `m_hWnd` 를반환합니다`S_OK`.  
   
  참조 [IOleWindow::GetWindow](http://msdn.microsoft.com/library/windows/desktop/ms687282) in the Windows SDK입니다.  
   
-##  <a name="ondocwindowactivate"></a>IOleInPlaceActiveObjectImpl::OnDocWindowActivate  
+##  <a name="ondocwindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnDocWindowActivate  
  컨테이너의 문서 창이 활성화 또는 비활성화 하는 경우 컨트롤을 알립니다.  
   
 ```
@@ -133,7 +128,7 @@ HRESULT OnDocWindowActivate(BOOL fActivate);
 ### <a name="remarks"></a>설명  
  참조 [IOleInPlaceActiveObject::OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281) in the Windows SDK입니다.  
   
-##  <a name="onframewindowactivate"></a>IOleInPlaceActiveObjectImpl::OnFrameWindowActivate  
+##  <a name="onframewindowactivate"></a>  IOleInPlaceActiveObjectImpl::OnFrameWindowActivate  
  컨테이너의 최상위 프레임 창이 활성화 또는 비활성화 하는 경우 컨트롤을 알립니다.  
   
 ```
@@ -146,7 +141,7 @@ HRESULT OnFrameWindowActivate(BOOL fActivate);
 ### <a name="remarks"></a>설명  
  참조 [ioleinplaceactiveobject:: Onframewindowactivate](http://msdn.microsoft.com/library/windows/desktop/ms683969) in the Windows SDK입니다.  
   
-##  <a name="resizeborder"></a>IOleInPlaceActiveObjectImpl::ResizeBorder  
+##  <a name="resizeborder"></a>  IOleInPlaceActiveObjectImpl::ResizeBorder  
  테두리의 크기를 조정 하는 데 필요한 컨트롤에 알립니다.  
   
 ```
@@ -162,7 +157,7 @@ HRESULT ResizeBorder(
 ### <a name="remarks"></a>설명  
  참조 [IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053) in the Windows SDK입니다.  
   
-##  <a name="translateaccelerator"></a>IOleInPlaceActiveObjectImpl::TranslateAccelerator  
+##  <a name="translateaccelerator"></a>  IOleInPlaceActiveObjectImpl::TranslateAccelerator  
  컨테이너에서 메뉴 바로 가기 키 메시지를 처리합니다.  
   
 ```
@@ -172,7 +167,7 @@ HRESULT TranslateAccelerator(LPMSG lpmsg);
 ### <a name="return-value"></a>반환 값  
  이 메서드는 다음 반환 값을 지원합니다.  
   
- `S_OK`메시지가 성공적으로 변환 되었습니다 하는 경우.  
+ `S_OK` 메시지가 성공적으로 변환 되었습니다 하는 경우.  
   
  **S_FALSE** 경우 메시지를 번역 되지 않습니다.  
   
