@@ -71,6 +71,7 @@
 ## [Visual C++ 응용 프로그램의 종속성 이해](understanding-the-dependencies-of-a-visual-cpp-application.md)
 ## [재배포할 DLL 확인](determining-which-dlls-to-redistribute.md)
 ## [배포 방법 선택](choosing-a-deployment-method.md)
+## [범용 CRT 배포](universal-crt-deployment.md)
 ## [Visual C++ 파일 재배포](redistributing-visual-cpp-files.md)
 ### [병합 모듈을 사용하여 구성 요소 재배포](redistributing-components-by-using-merge-modules.md)
 ### [Visual C++ ActiveX 컨트롤 재배포](redistributing-visual-cpp-activex-controls.md)
