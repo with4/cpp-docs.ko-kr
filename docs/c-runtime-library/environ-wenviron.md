@@ -23,11 +23,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98106cbcfb08f15b00ceed8b8b5f0db87da7303f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f66e0aa847c0835290895aa7412410b2350d617
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="environ-wenviron"></a>_environ, _wenviron
 `_environ` 변수는 프로세스 환경을 구성하는 멀티바이트 문자열에 대한 포인터 배열의 포인터입니다. 이 전역 변수는 전역 변수 대신 사용되어야 할 보안 기능이 보다 강화된 버전인 [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) 및 [_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md)에 대해서는 더 이상 사용되지 않습니다. `_environ`은 Stdlib.h에서 선언됩니다.  
@@ -56,9 +56,9 @@ extern wchar_t **_wenviron;
   
  와이드 문자 버전의 `_environ`입니다. `wmain` 함수를 사용하는 프로그램에서 `_wenviron`은 프로그램 시작 시 운영 체제 환경에서 가져온 설정에 따라 초기화됩니다.  
   
- 환경이 멀티바이트 문자열로 구성되기 때문에, `main`을 사용하는 프로그램에서 `_wenviron`은 처음에 `NULL`입니다. `_wgetenv` 또는 `_wputenv`에 대한 첫 번째 호출에서 해당하는 와이드 문자열 환경이 만들어지며 `_wenviron`이 이 환경을 가리킵니다.  
+ 환경이 멀티바이트 문자열로 구성되기 때문에, `main`을 사용하는 프로그램에서 `_wenviron`은 처음에 **NULL**입니다. `_wgetenv` 또는 `_wputenv`에 대한 첫 번째 호출에서 해당하는 와이드 문자열 환경이 만들어지며 `_wenviron`이 이 환경을 가리킵니다.  
   
- 마찬가지로, `wmain`을 사용하는 프로그램에서 환경이 와이드 문자열로 구성되기 때문에 `_environ`은 처음에 `NULL`입니다. `_getenv` 또는 `_putenv`에 대한 첫 번째 호출에서 해당하는 멀티바이트 문자열 환경이 만들어지며 `_environ`이 이 환경을 가리킵니다.  
+ 마찬가지로, `wmain`을 사용하는 프로그램에서 환경이 와이드 문자열로 구성되기 때문에 `_environ`은 처음에 **NULL**입니다. `_getenv` 또는 `_putenv`에 대한 첫 번째 호출에서 해당하는 멀티바이트 문자열 환경이 만들어지며 `_environ`이 이 환경을 가리킵니다.  
   
  환경의 두 개의 복사본(MBCS 및 유니코드)이 프로그램에 동시에 존재하는 경우 런타임 시스템은 두 복사본을 모두 유지해야 하며 이에 따라 실행 시간이 늦어집니다. 예를 들어 `_putenv`를 호출할 때마다 `_wputenv`에 대한 호출도 자동으로 실행되어 두 환경 문자열이 일치하게 됩니다.  
   

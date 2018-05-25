@@ -14,14 +14,14 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a89ec2cd0b360f498e52af7e49bd5c6571521e2c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d39011149de0b2fb81b70d58d768a06dc8a95355
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="parameter-validation"></a>매개 변수 유효성 검사
-대부분의 보안이 강화된 CRT 함수 및 여러 기존 함수는 해당 매개 변수의 유효성을 검사합니다. 여기에는 NULL에 대한 포인터 검사, 정수가 올바른 범위에 포함되어 있는지 검사 또는 열거형 값이 올바른지 검사가 포함될 수 있습니다. 잘못된 매개 변수가 검색되면 잘못된 매개 변수 처리기가 실행됩니다.  
+대부분의 보안이 강화된 CRT 함수 및 여러 기존 함수는 해당 매개 변수의 유효성을 검사합니다. 여기에는 **NULL**에 대한 포인터 검사, 정수가 올바른 범위에 포함되어 있는지 검사 또는 열거형 값이 올바른지 검사가 포함될 수 있습니다. 잘못된 매개 변수가 검색되면 잘못된 매개 변수 처리기가 실행됩니다.  
   
 ## <a name="invalid-parameter-handler-routine"></a>잘못된 매개 변수 처리기 루틴  
  C 런타임 라이브러리 함수는 잘못된 매개 변수를 검색하면 오류에 대한 일부 정보를 캡처한 다음 잘못된 매개 변수 처리기 디스패치 함수([_invalid_parameter](../c-runtime-library/reference/invalid-parameter-functions.md), [_invalid_parameter_noinfo](../c-runtime-library/reference/invalid-parameter-functions.md) 또는 [_invalid_parameter_noinfo_noreturn](../c-runtime-library/reference/invalid-parameter-functions.md) 중 하나)를 래핑하는 매크로를 호출합니다. 호출되는 디스패치 함수는 코드가 디버그 빌드인지, 일반 정품 빌드인지 아니면 오류가 복구할 수 있는 것으로 간주되지 않는지에 따라 달라집니다. 

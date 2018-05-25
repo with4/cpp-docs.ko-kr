@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03259f0eff64eb23af87ae18dc68272b5a0bd02f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 34feccd2d4d6de53ed9c5a446bf6c7d065dd4e62
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="clearerrs"></a>clearerr_s
 
@@ -58,13 +58,13 @@ errno_t clearerr_s(
 
 ## <a name="return-value"></a>반환 값
 
-성공 하면 0이 **EINVAL** 경우 *스트림* 은 NULL입니다.
+성공 하면 0이 **EINVAL** 경우 *스트림* 은 **NULL**합니다.
 
 ## <a name="remarks"></a>설명
 
 **clearerr_s** 함수에 대 한 파일 끝 표시기 및 오류 표시기 다시 설정 *스트림*합니다. 오류 표시기; 자동으로 제거 되지 않음 해당 스트림에서 작업을 계속 될 때까지 오류 값을 반환할 지정 된 스트림에 대 한 오류 표시기 설정 되 고 나면 **clearerr_s**, **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, 또는 [rewind](rewind.md) 호출 됩니다.
 
-경우 *스트림* 가 null 인 경우에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 이 함수를 설정 하는 경우 실행을 계속 허용 된, **errno** 를 **EINVAL** 반환 **EINVAL**합니다.
+경우 *스트림* 은 **NULL**에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 이 함수를 설정 하는 경우 실행을 계속 허용 된, **errno** 를 **EINVAL** 반환 **EINVAL**합니다.
 
 ## <a name="requirements"></a>요구 사항
 

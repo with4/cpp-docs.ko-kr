@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: facc4855d1e36965eff7af70c5cb48f8fb77d419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 604ca2d2172e340459d7d5cbf406f01c484750ff
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
 
@@ -94,11 +94,11 @@ size_t _wcstombs_l(
 
 ## <a name="return-value"></a>반환 값
 
-경우 **wcstombs** 성공적으로 멀티 바이트 문자열을 변환 종결 제외 하 고 멀티 바이트 출력 문자열에 쓴 바이트 수를 반환 **NULL** (있는 경우). 경우는 *mbstr* 인수가 **NULL**, **wcstombs** 대상 문자열의 바이트에서 필요한 크기를 반환 합니다. 경우 **wcstombs** 멀티 바이트 문자 변환 될 수 없는 와이드 문자를 만나면 형식으로 캐스팅 하는-1이 반환 **size_t** 설정 **errno** 를 **EILSEQ** .
+경우 **wcstombs** 멀티 바이트 문자열을 성공적으로 변환 (있는 경우)는 종료 null을 제외 하는 멀티 바이트 출력 문자열에 쓴 바이트 수를 반환 합니다. 경우는 *mbstr* 인수가 **NULL**, **wcstombs** 대상 문자열의 바이트에서 필요한 크기를 반환 합니다. 경우 **wcstombs** 멀티 바이트 문자 변환 될 수 없는 와이드 문자를 만나면 형식으로 캐스팅 하는-1이 반환 **size_t** 설정 **errno** 를 **EILSEQ** .
 
 ## <a name="remarks"></a>설명
 
-**wcstombs** 함수가 가리키는 와이드 문자 문자열 변환 *wcstr* 를 해당 멀티 바이트 문자를에서 결과 저장는 *mbstr* 배열입니다. *count* 매개 변수는 멀티 바이트 출력 문자열에 저장할 수 있는 바이트의 최대 수를 나타냅니다 (즉, 크기 *mbstr*). 일반적으로는 와이드 문자열을 변환할 때 필요한 바이트의 수를 알 수 없습니다. 출력 문자열에서 1바이트만 사용하면 되면 되는 와이드 문자도 있고 2바이트를 사용해야 하는 문자도 있습니다. 에 있는 경우 2 바이트 입력된 문자열에서 모든 와이드 문자에 대 한 멀티 바이트 출력 문자열 (와이드 문자를 포함 하 여 **NULL**), 결과에 맞게 보장 됩니다.
+**wcstombs** 함수가 가리키는 와이드 문자 문자열 변환 *wcstr* 를 해당 멀티 바이트 문자를에서 결과 저장는 *mbstr* 배열입니다. *count* 매개 변수는 멀티 바이트 출력 문자열에 저장할 수 있는 바이트의 최대 수를 나타냅니다 (즉, 크기 *mbstr*). 일반적으로는 와이드 문자열을 변환할 때 필요한 바이트의 수를 알 수 없습니다. 출력 문자열에서 1바이트만 사용하면 되면 되는 와이드 문자도 있고 2바이트를 사용해야 하는 문자도 있습니다. 모든 와이드 문자 (와이드 null 포함)는 입력된 문자열에 대 한 멀티 바이트 출력 문자열에는 2 바이트, 경우에 맞게 결과 보장 됩니다.
 
 경우 **wcstombs** 이전 또는 때 와이드 null 문자 (L'\ \0')에서 발생 *count* 발생을 8 비트 0과 중지로 변환 합니다. 따라서 멀티 바이트 문자 문자열에서 *mbstr* 은 null로 끝나는 경우에 **wcstombs** 와이드 null 문자를 변환 하는 동안 발생 합니다. 시퀀스에서 가리키는 경우 *wcstr* 및 *mbstr* 겹치는 경우의 동작 **wcstombs** 정의 되지 않습니다.
 

@@ -37,11 +37,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f60ea8dd05f9dffd6778c001e3f150f95744ae2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0c3bfc7b6abe5f0d5902a02c88e7d5ba16cb24ab
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="lfind"></a>_lfind
 
@@ -84,7 +84,7 @@ void *_lfind(
 
 **_lfind** 함수 값에 대 한 선형 검색을 수행 *키* 배열을 *번호* 의 각 요소 *너비* 바이트입니다. 와 달리 **bsearch**, **_lfind** 정렬할 배열 필요 하지 않습니다. *기본* 인수는 검색할 배열의 기준에 대 한 포인터입니다. *비교* 인수는 두 개의 배열 요소를 비교 하 고 다음의 관계를 지정 하는 값을 반환 하는 사용자 제공 루틴에 대 한 포인터입니다. **_lfind** 호출은 *비교* 일상적인 한 번 이상 호출할 때마다 두 배열 요소에 포인터를 전달 검색 중. *비교* 루틴에서 요소를 비교 하 고 (요소는 서로 다른 의미) 0이 아닌 값을 반환 해야 또는 0 (요소는 동일).
 
-이 함수는 해당 매개 변수의 유효성을 검사합니다. 경우 *비교*, *키* 또는 *번호* 은 **NULL**, if 또는 *기본* null 및 **번호*  이 값은 0 이거나 *너비* 작으면 0 보다는 잘못 된 매개 변수 처리기가 호출에 설명 된 대로 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 하도록 허용 된 경우 **errno** 로 설정 된 **EINVAL** 함수가 반환 하 고 **NULL**합니다.
+이 함수는 해당 매개 변수의 유효성을 검사합니다. 경우 *비교*, *키* 또는 *번호* 은 **NULL**, if 또는 *기본* 은 **NULL**및 *번호* 이 값은 0 이거나 *너비* 작으면 0 보다는 잘못 된 매개 변수 처리기가 호출에 설명 된 대로 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 하도록 허용 된 경우 **errno** 로 설정 된 **EINVAL** 함수가 반환 하 고 **NULL**합니다.
 
 ## <a name="requirements"></a>요구 사항
 

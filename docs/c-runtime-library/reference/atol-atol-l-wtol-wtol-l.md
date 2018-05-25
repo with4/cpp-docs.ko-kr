@@ -53,11 +53,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd31bed09088a73d40fd797da650e70c7f1e6784
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: deb23d856fc0ec5aecfdb726256394d5135a18d4
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="atol-atoll-wtol-wtoll"></a>atol, _atol_l, _wtol, _wtol_l
 
@@ -100,7 +100,7 @@ long _wtol_l(
 
 이러한 함수는 문자열을 정수 (long) 값으로 변환 (**atol**).
 
-입력 문자열은 지정된 형식의 숫자 값으로 해석될 수 있는 문자 시퀀스입니다. 함수는 숫자의 일부로 인식할 수 없는 첫 번째 문자에서 입력 문자열 읽기를 중지합니다. 이 문자 수는 **NULL** 문자 ('\0' 또는 \0 0')는 문자열을 종결 합니다.
+입력 문자열은 지정된 형식의 숫자 값으로 해석될 수 있는 문자 시퀀스입니다. 함수는 숫자의 일부로 인식할 수 없는 첫 번째 문자에서 입력 문자열 읽기를 중지합니다. 이 문자는 문자열을 종결하는 null 문자('\0' 또는 L'\0')일 수 있습니다.
 
 *str* 인수를 **atol** 형식은 다음과 같습니다.
 

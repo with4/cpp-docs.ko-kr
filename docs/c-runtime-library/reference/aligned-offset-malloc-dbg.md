@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e0b0838f75e8fa95d19ed3abfe13b014157a217
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd938b935ff5e69adf4d4e56cd70693cfd1a872d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
 
@@ -66,10 +66,10 @@ void * _aligned_offset_malloc_dbg(
 맞춤을 강제하는 메모리 할당으로의 오프셋입니다.
 
 *filename*<br/>
-할당 작업 또는 NULL을 요청한 소스 파일의 이름에 대한 포인터입니다.
+할당 작업을 요청한 소스 파일의 이름에 대 한 포인터 또는 **NULL**합니다.
 
 *linenumber*<br/>
-할당 작업이 요청되었거나 NULL인 소스 파일의 줄 번호입니다.
+할당 작업이 요청 된 소스 파일의 줄 번호 또는 **NULL**합니다.
 
 ## <a name="return-value"></a>반환 값
 

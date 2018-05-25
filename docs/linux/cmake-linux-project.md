@@ -1,7 +1,9 @@
 ---
 title: Visual Studio에서 Linux CMake 프로젝트 구성 | Microsoft Docs
 ms.custom: ''
-ms.date: 10/25/2107
+ms.date: 04/28/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -12,11 +14,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 43d29513b41cc89f7d4b6ba4e33365dfa60a761a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a49d9364b7b39dfddd982519416c9a12b7adf9e6
+ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/21/2018
 ---
 # <a name="configure-a-linux-cmake-project"></a>Linux CMake 프로젝트 구성
   
@@ -44,7 +46,8 @@ int main(int argc, char* argv[])
 }
 ```
 
-CMakeLists.txt: 
+CMakeLists.txt:
+
 ```cmd
 project (hello-cmake)
 add_executable(hello-cmake hello.cpp)
@@ -58,6 +61,8 @@ add_executable(hello-cmake hello.cpp)
 Linux 대상을 지정하면 Linux 컴퓨터에 소스가 복사됩니다. 그런 다음 Linux 컴퓨터에서 CMake가 실행되어 프로젝트에 대한 CMake 캐시가 생성됩니다.  
 
 ![Linux에서 CMake 캐시 생성](media/cmake-linux-1.png "Linux에서 CMake 캐시 생성")  
+
+**Visual Studio 2017 버전 15.7 이상:** 원격 헤더에 IntelliSense 지원을 제공하기 위해 Visual Studio는 로컬 Windows 컴퓨터의 디렉터리에 IntelliSense를 자동으로 복사합니다. 자세한 내용은 [원격 헤더를 위한 IntelliSense](configure-a-linux-project.md#remote_intellisense)를 참조하세요.
 
 ## <a name="debug-the-project"></a>프로젝트 디버그  
 원격 시스템에서 코드를 디버그하려면 중단점을 설정하고, 프로젝트 설정 옆의 도구 모음 메뉴에서 CMake 대상을 시작 항목으로 선택하고, 실행을 클릭합니다(또는 F5 키 누름).
@@ -84,6 +89,7 @@ Linux 대상을 지정하면 Linux 컴퓨터에 소스가 복사됩니다. 그�
       "inheritEnvironments": [ "linux-x64" ]
 }
 ```
+
 `name` 값은 원하는 값으로 설정할 수 있습니다. `remoteMachineName` 값은 원격 시스템이 여러 개 있을 경우 대상으로 지정할 항목을 지정합니다. 이 필드에는 올바른 시스템을 선택할 수 있도록 IntelliSense가 활성화됩니다. `remoteCMakeListsRoot` 필드는 원격 시스템에서 프로젝트 소스가 복사될 위치를 지정합니다. `remoteBuildRoot` 필드는 원격 시스템에서 빌드 출력이 생성될 위치입니다. 또한 해당 출력은 `buildRoot`로 지정된 위치에 로컬로 복사됩니다.
 
 ## <a name="building-a-supported-cmake-release-from-source"></a>소스로 지원되는 CMake 릴리스 빌드

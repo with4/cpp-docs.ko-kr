@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0c97f46a66a26f107061676dba313b068e9aebf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7af5cce0b17747beb8c136f75489025d741f864a
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="setunexpected-crt"></a>set_unexpected(CRT)
 
@@ -55,7 +55,7 @@ unexpected_function set_unexpected( unexpected_function unexpFunction );
 
 ## <a name="return-value"></a>반환 값
 
-이전 종료 함수에 대 한 포인터에 의해 등록 반환 **_set_unexpected** 이전 함수는 나중에 복원할 수 있도록 합니다. 이전 함수가 설정되지 않은 경우 반환 값은 기본 동작을 복원하는 데 사용되며 이 값은 NULL일 수 있습니다.
+이전 종료 함수에 대 한 포인터에 의해 등록 반환 **_set_unexpected** 이전 함수는 나중에 복원할 수 있도록 합니다. 기본 동작을 복원할 반환 값을 사용할 수 없는 이전 함수에 설정한 경우 이 값이 경우도 **NULL**합니다.
 
 ## <a name="remarks"></a>설명
 

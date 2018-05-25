@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 302cfae33e1567c2dc94c73156df005fcbb667f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63514db5abe0a7cd531590dd419aa4b5931e7729
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="ecvt"></a>_ecvt
 
@@ -71,7 +71,7 @@ char *_ecvt(
 
 ## <a name="return-value"></a>반환 값
 
-**_ecvt** 자릿수; 문자열에 대 한 포인터를 반환 합니다. 오류가 발생 한 경우 NULL입니다.
+**_ecvt** 자릿수; 문자열에 대 한 포인터를 반환 합니다. **NULL** 오류가 발생 합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -85,7 +85,7 @@ char *_ecvt(
 
 **_ecvt** 및 **_fcvt** 변환에 대해 단일 정적으로 할당 된 버퍼를 사용 합니다. 이러한 루틴 중 하나를 호출할 때마다 이전 호출의 결과가 삭제됩니다.
 
-이 함수는 해당 매개 변수의 유효성을 검사합니다. 경우 *dec* 또는 *기호* 가 null 인 경우 또는 *count* 가 0 이면에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 하도록 허용 된 경우 **errno** 로 설정 된 **EINVAL** 및 NULL이 반환 됩니다.
+이 함수는 해당 매개 변수의 유효성을 검사합니다. 경우 *dec* 또는 *기호* 은 **NULL**, 또는 *count* 가 0 이면에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 하도록 허용 된 경우 **errno** 로 설정 된 **EINVAL** 및 **NULL** 반환 됩니다.
 
 ## <a name="requirements"></a>요구 사항
 

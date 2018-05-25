@@ -30,11 +30,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e162c6b16e9ce9d0ea6763f5fb4c75d7975dc7bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 13707791b78de2c000535d60ed3f298046e4576c
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="getmainargs-wgetmainargs"></a>__getmainargs, __wgetmainargs
 명령줄 구문 분석을 호출하고 전달된 포인터를 통해 다시 `main()`으로 인수를 복사합니다.  
@@ -63,10 +63,10 @@ _startupinfo * _StartInfo);
  `argv` 뒤에 오는 인수 개수를 포함하는 정수입니다. `argc` 매개 변수는 항상 1보다 크거나 같습니다.  
   
  `_Argv`  
- 프로그램의 사용자가 입력한 명령줄 인수를 나타내는 null로 끝나는 문자열의 배열입니다. 규칙에 따라 `argv[0]`는 프로그램 호출에 사용되는 명령이며, argv[1]가 첫 번째 명령줄 인수인 식으로 항상 NULL인 argv[argc]까지 진행됩니다. 첫 번째 명령줄 인수는 항상 `argv[1]`이고 마지막 인수는 `argv[argc - 1]`입니다.  
+ 프로그램의 사용자가 입력한 명령줄 인수를 나타내는 null로 끝나는 문자열의 배열입니다. 규칙에 따라 `argv[0]`는 프로그램 호출에 사용되는 명령이며, argv[1]가 첫 번째 명령줄 인수인 식으로 항상 **NULL**인 argv[argc]까지 진행됩니다. 첫 번째 명령줄 인수는 항상 `argv[1]`이고 마지막 인수는 `argv[argc - 1]`입니다.  
   
  `_Env`  
- 사용자 환경에서 설정되는 변수를 나타내는 문자열 배열입니다. 이 배열은 NULL 항목으로 종료됩니다.  
+ 사용자 환경에서 설정되는 변수를 나타내는 문자열 배열입니다. 이 배열은 **NULL** 항목으로 종료됩니다.  
   
  `_DoWildCard`  
  1로 설정하면 명령줄 인수에서 와일드카드를 확장하고 0으로 설정하면 아무 작업도 수행하지 않는 정수입니다.  

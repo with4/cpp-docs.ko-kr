@@ -104,11 +104,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72bf4ffb56ad34926b3a47d86d7609aae5dff4f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7fba91f4c16c5b356b1e7a11e35380a15eb98eb1
+ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="cedit-class"></a>CEdit Class
 Windows 편집 컨트롤의 기능을 제공합니다.  
@@ -188,7 +188,7 @@ class CEdit : public CWnd
   
  각 메시지 맵 항목은 다음 형식을 사용 합니다.  
   
- **ON_** 알림 **(** *id, memberFxn * * *)**  
+  **ON_**_알림_**(** _id_**,** _memberFxn_ **)**
   
  여기서 `id` 알림 메시지를 전송 하는 편집 컨트롤의 자식 창 ID를 지정 하 고 `memberFxn` 알림을 처리 하도록 작성 한 부모 멤버 함수의 이름입니다.  
   

@@ -62,11 +62,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4e394984d742ee565296a452cf553e09f37b0aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 738a69ad0acd1af3b400b56f0f759414b9e28578
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="vsnprintf-vsnprintf-vsnprintfl-vsnwprintf-vsnwprintfl"></a>vsnprintf, _vsnprintf, _vsnprintf_l, _vsnwprintf, _vsnwprintf_l
 
@@ -173,7 +173,7 @@ int _vsnwprintf_l(
 
 이러한 모든 함수에서 반환하는 값에는 작성 여부와 관계없이 종결 null이 포함되지 않습니다. 때 *count* 가 0 이면 함수 작성, 하지 문자 수는 종료 null이 포함 되어 반환 되는 값입니다. 이 결과를 사용하여 문자열과 해당 종결 null에 대해 충분한 버퍼 공간을 할당한 다음 함수를 다시 호출하여 버퍼를 채울 수 있습니다.
 
-경우 *형식* 은 **NULL**, if 또는 *버퍼* 는 NULL 및 *count* 않습니다 0과 같은 이러한 함수는 잘못 된 매개 변수 처리기를 호출 에 설명 된 대로 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 허용 된, 하는 경우 이러한 함수가-1을 반환 하 고 설정 **errno** 를 **EINVAL**합니다.
+경우 *형식* 은 **NULL**, if 또는 *버퍼* 은 **NULL** 및 *count* 이러한 함수를 0과 같지 않은 에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 허용 된, 하는 경우 이러한 함수가-1을 반환 하 고 설정 **errno** 를 **EINVAL**합니다.
 
 ## <a name="remarks"></a>설명
 

@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d300ae9d0b03f5d6b8549026afe106aef32d62d7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5e6f768d6f384e5b3b39e8d2884a7a7cb0362915
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="getunexpected"></a>_get_unexpected
 
@@ -52,7 +52,7 @@ unexpected_function _get_unexpected( void );
 
 ## <a name="return-value"></a>반환 값
 
-[set_unexpected](set-unexpected-crt.md)로 등록된 함수에 대한 포인터를 반환합니다. 함수가 설정되지 않은 경우 반환 값은 기본 동작을 복원하는 데 사용되며 이 값은 NULL일 수 있습니다.
+[set_unexpected](set-unexpected-crt.md)로 등록된 함수에 대한 포인터를 반환합니다. 기본 동작을 복원할 반환 값을 사용할 수 없는 함수가 설정 된 경우 이 값이 경우도 **NULL**합니다.
 
 ## <a name="requirements"></a>요구 사항
 

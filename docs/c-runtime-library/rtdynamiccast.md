@@ -27,11 +27,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fa20222a4d64afa9fcb8d0c1a91e63db989dae2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 90c68ed56b52b57deb234717b3b95ec197d26318
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="rtdynamiccast"></a>__RTDynamicCast
 [dynamic_cast](../cpp/dynamic-cast-operator.md) 연산자의 런타임 구현입니다.  
@@ -65,7 +65,7 @@ PVOID __RTDynamicCast (
  입력이 참조인 경우 `true`이며, 입력이 포인터인 경우 `false`입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공한 경우 적절한 하위 개체에 대한 포인터입니다. 그렇지 않으면 NULL입니다.  
+ 성공한 경우 적절한 하위 개체에 대한 포인터입니다. 그렇지 않으면 **NULL**입니다.  
   
 ## <a name="exceptions"></a>예외  
  `bad_cast()`에 대한 입력이 참조이고 캐스팅이 실패한 경우 `dynamic_cast<>`입니다.  

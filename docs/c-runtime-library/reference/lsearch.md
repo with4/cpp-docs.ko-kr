@@ -38,11 +38,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cfcb5b3182b4d8a30c6bee65bc6efd3199fd3c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2aaf6626b2f7005181640f77026b6924c39cd325
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="lsearch"></a>_lsearch
 
@@ -87,7 +87,7 @@ void *_lsearch(
 
 *비교* 인수는 두 배열 요소를 비교 하 고 서로의 관계를 지정 하는 값을 반환 하는 사용자 제공 루틴에 대 한 포인터입니다. **_lsearch** 호출은 *비교* 일상적인 한 번 이상 호출할 때마다 두 배열 요소에 포인터를 전달 검색 중. *비교* 요소를 비교 하 고 반환 해야 합니다 (요소는 서로 다른 의미) 0이 아닌 값 또는 0 (요소는 동일).
 
-이 함수는 해당 매개 변수의 유효성을 검사합니다. 경우 *비교*, *키* 또는 *번호* 은 **NULL**, if 또는 *기본* null 및 **번호*  이 값은 0 이거나 *너비* 작으면 0 보다는 잘못 된 매개 변수 처리기가 호출에 설명 된 대로 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 하도록 허용 된 경우 **errno** 로 설정 된 **EINVAL** 함수가 반환 하 고 **NULL**합니다.
+이 함수는 해당 매개 변수의 유효성을 검사합니다. 경우 *비교*, *키* 또는 *번호* 은 **NULL**, if 또는 *기본* 은 **NULL**및 *번호* 이 값은 0 이거나 *너비* 작으면 0 보다는 잘못 된 매개 변수 처리기가 호출에 설명 된 대로 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 하도록 허용 된 경우 **errno** 로 설정 된 **EINVAL** 함수가 반환 하 고 **NULL**합니다.
 
 ## <a name="requirements"></a>요구 사항
 

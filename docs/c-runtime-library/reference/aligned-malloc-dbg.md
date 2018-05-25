@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894d227d329a426a2008044d47d126d063db4a15
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 622f48138404425723c226dde52c8621580d0131
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -62,10 +62,10 @@ void * _aligned_malloc_dbg(
 맞춤 값으로 2의 정수 거듭제곱이어야 합니다.
 
 *filename*<br/>
-할당 작업 또는 NULL을 요청한 소스 파일의 이름에 대한 포인터입니다.
+할당 작업을 요청한 소스 파일의 이름에 대 한 포인터 또는 **NULL**합니다.
 
 *linenumber*<br/>
-할당 작업이 요청되었거나 NULL인 소스 파일의 줄 번호입니다.
+할당 작업이 요청 된 소스 파일의 줄 번호 또는 **NULL**합니다.
 
 ## <a name="return-value"></a>반환 값
 
