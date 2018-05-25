@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1522b292f04f1148722ddb0c85473c560372e88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebc1ff83840631074f04704e6df2a88437b8cc71
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="mallocdbg"></a>_malloc_dbg
 
@@ -63,16 +63,16 @@ void *_malloc_dbg(
 요청 된 메모리 블록의 형식: **_CLIENT_BLOCK** 또는 **_NORMAL_BLOCK**합니다.
 
 *filename*<br/>
-할당 작업 또는 NULL을 요청한 소스 파일의 이름에 대한 포인터입니다.
+할당 작업을 요청한 소스 파일의 이름에 대 한 포인터 또는 **NULL**합니다.
 
 *linenumber*<br/>
-할당 작업이 요청되었거나 NULL인 소스 파일의 줄 번호입니다.
+할당 작업이 요청 된 소스 파일의 줄 번호 또는 **NULL**합니다.
 
 *filename* 및 *linenumber* 매개 변수를만 사용할 때 **_malloc_dbg** 명시적으로 호출 되었거나 또는 [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)전처리기 상수가 정의 된 합니다.
 
 ## <a name="return-value"></a>반환 값
 
-성공적으로 완료되면 이 함수는 다시 할당된 메모리 블록의 사용자 부분에 대한 포인터를 반환하거나 새 처리기 함수를 호출하거나 NULL을 반환합니다. 반환 동작에 대한 자세한 설명은 다음 설명 섹션을 참조하세요. 새 처리기 함수를 사용하는 방법에 대한 자세한 내용은 [malloc](malloc.md) 함수를 참조하세요.
+성공적으로 완료 되 면이 함수는 할당 된 메모리 블록의 사용자 부분에 대 한 포인터를 반환, 새 처리기 함수를 호출 또는 반환 **NULL**합니다. 반환 동작에 대한 자세한 설명은 다음 설명 섹션을 참조하세요. 새 처리기 함수를 사용하는 방법에 대한 자세한 내용은 [malloc](malloc.md) 함수를 참조하세요.
 
 ## <a name="remarks"></a>설명
 

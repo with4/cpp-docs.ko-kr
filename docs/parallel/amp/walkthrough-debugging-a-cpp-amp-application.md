@@ -17,11 +17,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f1308462133c11c8f945416a13fb5542c1d2da8
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 1bf80276b5434804651bcc4507397e9479f6e494
+ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>연습: C++ AMP 응용 프로그램 디버깅
 이 항목에는 처리 GPU (그래픽 장치)를 활용 하기 위해 c + + Accelerated Massive Parallelism (c + + AMP)를 사용 하는 응용 프로그램을 디버깅 하는 방법을 보여 줍니다. 큰 정수 배열의을 요약 하는 병렬 감소 프로그램을 사용 합니다. 이 연습에서는 다음 작업을 수행합니다.  
@@ -228,7 +228,9 @@ CPU 중단점
   
 3.  에 **실행할 디버거** 목록에서 **로컬 Windows 디버거**합니다.  
   
-4.  에 **디버거 형식** 목록에서 **GPU 전용**합니다.  
+4.  에 **디버거 형식** 나열 되어 있는지 확인 합니다. **자동** 을 선택 합니다.
+
+    **자동** 기본값입니다. Windows 10 이전 **GPU 전용** 대신 필요한 값은 **자동**합니다.
   
 5.  **확인** 단추를 선택합니다.  
   

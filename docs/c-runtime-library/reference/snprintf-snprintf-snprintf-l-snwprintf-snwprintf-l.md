@@ -58,11 +58,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfaa3b8e7fd8705f23b78b7b4ba4238631cfa4cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 90f931153b4328c404fa4a0e6be8f0c3548c4d95
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 문자열에 서식이 지정된 데이터를 씁니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)를 참조하세요.
@@ -174,7 +174,7 @@ Let **len** 종료 null을 포함 하지 않고 데이터 형식이 지정 된 �
 **snprintf** 함수 및 **_snprintf** 함수 형식 및 저장소의 제품군 *count* 자 미만의 문자 *버퍼*합니다. **snprintf** 함수는 항상 필요한 경우 출력을 잘라냅니다 종료 null 문자를 저장 합니다. **_snprintf** 서식이 지정 된 문자열 길이 엄격 하 게 하는 경우만 종료 null 문자를 추가 함수 패밀리는 보다 작은 *count* 문자입니다. 각 *인수* (있는 경우) 변환 되 고 해당 형식 사양에 따라 출력이 *형식*합니다. 형식은 일반 문자로 구성 되어 있으며 동일한 형태와 기능을는 *형식* 에 대 한 인수 [printf](printf-printf-l-wprintf-wprintf-l.md)합니다. 중복되는 문자열 간에 복사가 이뤄지면 이 동작은 정의되지 않습니다.
 
 > [!IMPORTANT]
-> *format*이 사용자 정의 문자열이 아닌지 확인하세요. 때문에 **_snprintf** 함수는 NULL 종료를 보장 하지 않습니다-특히 반환 값이 *count*-null 종결자를 추가 하는 코드가 뒤에 있는지 확인 합니다. 자세한 내용은 [버퍼 오버런 방지](http://msdn.microsoft.com/library/windows/desktop/ms717795)를 참조하세요.
+> *format*이 사용자 정의 문자열이 아닌지 확인하세요. 때문에 **_snprintf** 함수는 null 종료를 보장 하지 않습니다-특히 반환 값이 *count*-null 종결자를 추가 하는 코드가 뒤에 있는지 확인 합니다. 자세한 내용은 [버퍼 오버런 방지](http://msdn.microsoft.com/library/windows/desktop/ms717795)를 참조하세요.
 
 Visual Studio 2015 및 Windows 10의 UCRT부터 **snprintf** 는 더 이상 동일 **_snprintf**합니다. **snprintf** 함수 동작은 이제 C99 표준을 준수 합니다.
 
@@ -234,7 +234,7 @@ int main(void)
 #else
    const double fp = 1.7320534;
 #endif
-   /* !subtract one to prevent "squeezing out" the terminal nul! */
+   /* !subtract one to prevent "squeezing out" the terminal null! */
    const int bufferSize = sizeof(buffer)/sizeof(buffer[0]) - 1;
    int bufferUsed = 0;
    int bufferLeft = bufferSize - bufferUsed;
@@ -290,8 +290,8 @@ int main(void)
    }
    else
    {
-      /* !store nul because _snprintf doesn't necessarily (if the string
-       * fits without the terminal nul, but not with it)!
+      /* !store null because _snprintf doesn't necessarily (if the string
+       * fits without the terminal null, but not with it)!
        * bufferUsed might be as large as bufferSize, which normally is
        * like going one element beyond a buffer, but in this case
        * subtracted one from bufferSize, so we're ok.

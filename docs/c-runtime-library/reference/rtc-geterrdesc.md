@@ -33,11 +33,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a176aa258f805a516bf36c982ba63e531a74478
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7154f6de192ee6b681ed0419126f3d4b682abb8c
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="rtcgeterrdesc"></a>_RTC_GetErrDesc
 
@@ -58,7 +58,7 @@ const char * _RTC_GetErrDesc(
 
 ## <a name="return-value"></a>반환 값
 
-런타임 오류 검사 시스템에서 검색된 오류 형식 중 하나에 대한 간단한 설명을 포함하는 문자열입니다. 오류는 작거나 0 보다 또는 보다 큰 값을 반환 하는 경우 [_RTC_NumErrors](rtc-numerrors.md), **_RTC_GetErrDesc** NULL을 반환 합니다.
+런타임 오류 검사 시스템에서 검색된 오류 형식 중 하나에 대한 간단한 설명을 포함하는 문자열입니다. 오류는 작거나 0 보다 또는 보다 큰 값을 반환 하는 경우 [_RTC_NumErrors](rtc-numerrors.md), **_RTC_GetErrDesc** 반환 **NULL**합니다.
 
 ## <a name="requirements"></a>요구 사항
 

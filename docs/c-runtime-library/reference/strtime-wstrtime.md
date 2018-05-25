@@ -43,11 +43,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2881cc0b026225674096127eba165b622483de3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b0ca776394b47f5209fbf034cbb10461c220634
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtime-wstrtime"></a>_strtime, _wstrtime
 
@@ -85,7 +85,7 @@ wchar_t *_wstrtime(
 
 **_strtime** 함수는 현재 현지 시간에서 가리키는 버퍼에 복사 *timestr*합니다. 시간 형식으로 지정 된 **hh: mm:** 여기서 **hh** 는 24 시간 표기법의 시간을 나타내는 두 자리 숫자로 **mm** 은 두 자리 시간과 를지난분을나타내는**ss** 은 두 자리 초를 나타내는입니다. 예를 들어 문자열 **18시 23분: 44** 23 분 및 44 지난 초 6 오후를 나타냅니다. 버퍼는 9바이트 이상이어야 합니다.
 
-**_wstrtime** 의 와이드 문자 버전이 **_strtime**; 인수 및 반환 값의 **_wstrtime** 는 와이드 문자 문자열입니다. 이러한 함수 동일 하 게 작동 합니다. 경우 *timestr* 은 **NULL** 포인터 또는 *timestr* 형식이 잘못 되었습니다, 잘못 된에 설명 된 대로 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 예외는 이러한 함수 반환 NULL 및 set 계속 하도록 허용 된 경우 **errno** 를 **EINVAL** 경우 *timestr* NULL 되었거나 설정 **errno**를 **ERANGE** 경우 *timestr* 형식이 잘못 되었습니다.
+**_wstrtime** 의 와이드 문자 버전이 **_strtime**; 인수 및 반환 값의 **_wstrtime** 는 와이드 문자 문자열입니다. 그 외의 경우에는 이들 함수가 동일하게 작동합니다. 경우 *timestr* 는 **NULL** 포인터 또는 *timestr* 형식이 잘못 되었습니다, 잘못 된에 설명 된 대로 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 이러한 함수를 반환 하는 경우는 예외는 계속할 수는 **NULL** 설정 **errno** 를 **EINVAL** 경우 *timestr* 는 했습니다**NULL** 설정 또는 **errno** 를 **ERANGE** 경우 *timestr* 형식이 잘못 되었습니다.
 
 C++에서 이러한 함수는 보다 최신의 보안 대응 함수를 호출하는 템플릿 오버로드를 갖고 있습니다. 자세한 내용은 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)을 참조하세요.
 

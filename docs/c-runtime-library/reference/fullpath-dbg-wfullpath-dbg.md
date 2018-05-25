@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c7ff7b300473389281a7386d49843987456f116
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d04f3d7b53eca27d38a38b0bce284c17b15cae02
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
 
@@ -96,7 +96,7 @@ wchar_t *_wfullpath_dbg(
 
 ## <a name="remarks"></a>설명
 
-**_fullpath_dbg** 및 **_wfullpath_dbg** 함수는 동일 **_fullpath** 및 **_wfullpath** 점을 제외 하 고, **_DEBUG** 은 디버그 버전의를 사용 하 여 이러한 함수 정의 **malloc**, **_malloc_dbg**, NULL은 첫 번째 매개 변수로 전달 되 면 메모리를 할당할 수 있습니다. 디버깅 기능에 대 한 내용은 **_malloc_dbg**, 참조 [_malloc_dbg](malloc-dbg.md)합니다.
+**_fullpath_dbg** 및 **_wfullpath_dbg** 함수는 동일 **_fullpath** 및 **_wfullpath** 점을 제외 하 고, **_DEBUG** 는 디버그 버전의를 사용 하 여 이러한 함수 정의 **malloc**, **_malloc_dbg**, 메모리를 할당 하는 경우 **NULL** 전달 됩니다 로 첫 번째 매개 변수입니다. 디버깅 기능에 대 한 내용은 **_malloc_dbg**, 참조 [_malloc_dbg](malloc-dbg.md)합니다.
 
 대부분의 경우 이러한 함수를 명시적으로 호출할 필요가 없습니다. 대신, 정의할 수 있습니다는 **_CRTDBG_MAP_ALLOC** 플래그입니다. 때 **_CRTDBG_MAP_ALLOC** 정의에 대 한 호출이 **_fullpath** 및 **_wfullpath** 다시 매핑됩니다 **_fullpath_dbg** 및 **_wfullpath_dbg**각각와 *blockType* 로 설정 **_NORMAL_BLOCK**합니다. 따라서 힙 블록으로 표시 하려는 경우가 아니면 이러한 함수를 명시적으로 호출할 필요가 하지 **_CLIENT_BLOCK**합니다. 자세한 내용은 [디버그 힙의 블록 형식](/visualstudio/debugger/crt-debug-heap-details)을 참조하세요.
 

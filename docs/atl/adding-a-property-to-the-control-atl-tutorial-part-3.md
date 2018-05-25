@@ -12,11 +12,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db800de12c0c0e4d7bef2a59a576f1d475e675da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fda9359da6ddc48248874227d58f0c184af45c54
+ms.sourcegitcommit: 9b442b44ee912822d06cabec826aac4a8d82ec75
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>컨트롤에 속성 추가(ATL 자습서, 3부)
 `IPolyCtl` 사용자 지정 컨트롤의 메서드 및 속성을 포함 하는 인터페이스 이며 속성을 추가 합니다.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
      [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]  
   
- `get_Sides` 의 현재 값을 반환 하는 메서드는 `Sides` 속성을 통해는 `pVal` 포인터입니다. 에 `put_Sides` 메서드, 코드를 사용 하면 사용자 설정 하 고는 `Sides` 속성에 적합 한 값을 합니다. 최소한, 2이 고 100은 최대 값에 대 한 적절 한 제한을 점의 배열에는 각 측에 대 한 사용 되므로, 합니다.  
+ `get_Sides` 의 현재 값을 반환 하는 메서드는 `Sides` 속성을 통해는 `pVal` 포인터입니다. 에 `put_Sides` 메서드, 코드를 사용 하면 사용자 설정 하 고는 `Sides` 속성에 적합 한 값을 합니다. 최소 3, 및 100은 최대 값에 대 한 적절 한 제한을 점의 배열에는 각 측에 대 한 사용 되므로.  
   
  이제 라는 속성이 있는 `Sides`합니다. 다음 단계에서 사용 하는 그리기 코드를 변경 합니다.  
   

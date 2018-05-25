@@ -1,10 +1,10 @@
 ---
-title: vcpkg-- Windows용 C++ 패키지 관리자 | Microsoft Docs
+title: vcpkg-- Windows, Linux 및 MacOS용 C++ 패키지 관리자 | Microsoft Docs
 description: vcpkg는 Windows에서 오픈 소스 C++ 라이브러리 획득 및 설치를 크게 간소화하는 명령줄 패키지 관리자입니다.
 keywords: vcpkg
 author: mikeblome
 ms.author: mblome
-ms.date: 04/06/2018
+ms.date: 05/14/2018
 ms.technology:
 - cpp-ide
 ms.tgt_pltfrm: windows
@@ -14,15 +14,15 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c67b7fce0567c2c6daf18b625a2b759c31d0b040
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ca4c672000278fcfc00ba8c08a7a160faff151aa
+ms.sourcegitcommit: 5e932a0e110e80bc241e5f69e3a1a7504bfab1f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/21/2018
 ---
-# <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg: Windows용 C++ 패키지 관리자
+# <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Windows, Linux 및 MacOS용 C++ 패키지 관리자
 
-vcpkg는 Windows에서 타사 라이브러리 획득 및 설치를 크게 간소화하는 명령줄 패키지 관리자입니다. 프로젝트에서 타사 라이브러리를 사용하는 경우 vcpkg를 사용하여 설치하는 것이 좋습니다. vcpkg는 오픈 소스와 독점 라이브러리를 모두 지원합니다. vcpkg 공용 카탈로그의 모든 라이브러리가 Visual Studio 2015 및 Visual Studio 2017과의 호환성 테스트를 거쳤습니다. 2018년 1월을 기준으로 카탈로그에는 600개 이상의 라이브러리가 있으며 C++ 커뮤니티는 지속해서 더 많은 라이브러리를 추가하고 있습니다.
+vcpkg는 Windows, Linux 및 MacOS에서 타사 라이브러리 획득 및 설치를 크게 간소화하는 명령줄 패키지 관리자입니다. 프로젝트에서 타사 라이브러리를 사용하는 경우 vcpkg를 사용하여 설치하는 것이 좋습니다. vcpkg는 오픈 소스와 독점 라이브러리를 모두 지원합니다. vcpkg Windows 카탈로그의 모든 라이브러리가 Visual Studio 2015 및 Visual Studio 2017과의 호환성 테스트를 거쳤습니다. 2018년 5월 현재 Windows 카탈로그에는 900개 이상의 라이브러리가 있고 Linux/MacOS 카탈로그에는 350개 이상의 라이브러리가 있습니다. C++ 커뮤니티는 지속적으로 두 카탈로그에 더 많은 라이브러리를 추가하고 있습니다.
 
 ## <a name="simple-yet-flexible"></a>단순하면서도 유연한
 
@@ -30,19 +30,20 @@ vcpkg는 Windows에서 타사 라이브러리 획득 및 설치를 크게 간소
 
 ## <a name="sources-not-binaries"></a>소스는 이진 파일 아님
 
-공용 카탈로그에 있는 라이브러리의 경우 vcpkg는 이진 파일[1] 대신 소스를 다운로드합니다. 이것은 Visual Studio 2017 또는 Visual Studio 2015(2017이 설치되지 않은 경우)를 사용하여 해당 소스를 컴파일합니다. C++에서는 사용하는 라이브러리가 연결된 응용 프로그램 코드와 동일한 컴파일러 및 컴파일러 버전을 사용하여 컴파일되어야 합니다. vcpkg를 사용하여 이진 파일 불일치 및 이로 인해 발생할 수 있는 문제를 제거하거나 적어도 크게 줄일 수 있습니다. 특정 버전의 Visual C++ 컴파일러에서 표준화된 팀에서는 한 팀 구성원이 vcpkg를 사용하여 소스를 다운로드하고 이진 파일 집합을 컴파일한 다음 내보내기 명령을 사용하여 이진 파일과 헤더를 압축하여 다른 팀 구성원에게 내보낼 수 있습니다. 자세한 내용은 컴파일된 이진 파일 및 헤더 내보내기를 참조하세요.
+Windows 카탈로그에 있는 라이브러리의 경우 vcpkg는 이진 파일[1] 대신 소스를 다운로드합니다. 이것은 Visual Studio 2017 또는 Visual Studio 2015(2017이 설치되지 않은 경우)를 사용하여 해당 소스를 컴파일합니다. C++에서는 사용하는 라이브러리가 연결된 응용 프로그램 코드와 동일한 컴파일러 및 컴파일러 버전을 사용하여 컴파일되어야 합니다. vcpkg를 사용하여 이진 파일 불일치 및 이로 인해 발생할 수 있는 문제를 제거하거나 적어도 크게 줄일 수 있습니다. 특정 버전의 컴파일러에서 표준화된 팀에서는 한 팀 구성원이 vcpkg를 사용하여 소스를 다운로드하고 이진 파일 집합을 컴파일한 다음, 내보내기 명령을 사용하여 이진 파일과 헤더를 압축하여 다른 팀 구성원에게 내보낼 수 있습니다. 자세한 내용은 아래의 [컴파일된 이진 파일 및 헤더 내보내기](#export_binaries_per_project)를 참조하세요.
 
 포트 컬렉션에 있는 개인 라이브러리로 vcpkg 클론을 만들면 미리 작성된 이진 파일 및 헤더를 다운로드 하는 포트를 추가하고 원하는 위치로 해당 파일을 간단히 복사하는 portfile.cmake 파일을 작성할 수 있습니다.
 
 [1] *참고: 일부 독점 라이브러리에서는 소스를 사용할 수 없습니다. Vcpkg는 이러한 경우에 호환되는 미리 작성된 이진 파일을 다운로드합니다.*
 
-## <a name="installation"></a>설치
+## <a name="installation"></a>설치 
 
 GitHub에서 vcpkg 리포지토리를 복제합니다. https://github.com/Microsoft/vcpkg 원하는 폴더 위치에 다운로드할 수 있습니다.
 
-루트 폴더에서 부트스트래퍼 **bootstrap-vcpkg.bat**를 실행합니다.
+다음과 같이 루트 폴더에서 부트스트래퍼를 실행합니다. 
 
-## <a name="basic-tasks"></a>기본 작업
+- **bootstrap-vcpkg.bat**(Windows)
+- **./bootstrap-vcpkg.sh**(Linux, MacOS)
 
 ## <a name="search-the-list-of-available-libraries"></a>사용 가능한 라이브러리 목록 검색
 
@@ -72,7 +73,11 @@ taglib      1.11.1-2   TagLib Audio Meta-Data Library
 
 ### <a name="install-a-library-on-your-local-machine"></a>로컬 컴퓨터에 라이브러리 설치
 
-**vcpkg search**를 사용하여 라이브러리 이름을 찾은 후에 **vcpkg install**을 사용하여 라이브러리를 다운로드하고 컴파일합니다. vcpkg는 포트 디렉터리에 있는 라이브러리의 포트 파일을 사용합니다. 세 가지를 지정하지 않으면 Vcpkg는 x86 Windows에 대해 설치 및 컴파일합니다. 포트 파일이 종속성을 지정하는 경우 vcpkg도 해당 항목을 다운로드하고 설치합니다. 다운로드 후 vcpkg는 라이브러리가 사용하는 빌드 시스템이면 무엇이든 사용하여 라이브러리를 빌드합니다. CMake 및 MSBuild 프로젝트 파일이 선호되지만 MAKE도 다른 빌드 시스템과 함께 지원됩니다. vcpkg가 로컬 컴퓨터에서 지정된 빌드 시스템을 찾을 수 없으면 다운로드하여 설치합니다.
+**vcpkg search**를 사용하여 라이브러리 이름을 찾은 후에 **vcpkg install**을 사용하여 라이브러리를 다운로드하고 컴파일합니다. vcpkg는 포트 디렉터리에 있는 라이브러리의 포트 파일을 사용합니다. triplet을 지정하지 않으면 vcpkg는 대상 플랫폼에 대해 기본 triplet(x86-windows, x64-linux.cmake 또는 x64-osx.cmake)을 설치하고 컴파일합니다.
+
+Linux 라이브러리의 경우 vcpkg는 gcc가 로컬 시스템에 설치되어 있는지 여부에 따라 다릅니다. MacOS에서는 vcpkg가 Clang을 사용합니다. 
+
+포트 파일이 종속성을 지정하는 경우 vcpkg도 해당 항목을 다운로드하고 설치합니다. 다운로드 후 vcpkg는 라이브러리가 사용하는 빌드 시스템이면 무엇이든 사용하여 라이브러리를 빌드합니다. CMake 및 MSBuild 프로젝트(Windows)이 선호되지만 MAKE도 다른 빌드 시스템과 함께 지원됩니다. vcpkg가 로컬 컴퓨터에서 지정된 빌드 시스템을 찾을 수 없으면 다운로드하여 설치합니다.
 
 ```cmd
 > vcpkg install boost:x86-windows
@@ -82,6 +87,14 @@ The following packages will be built and installed:
   * bzip2:x86-windows
   * zlib:x86-windows
 Additional packages (*) will be installed to complete this operation.
+
+```
+
+CMAKE 프로젝트의 경우 CMAKE_TOOLCHAIN_FILE을 사용하여 `find_package()`로 라이브러리를 사용할 수 있도록 합니다. 예:  
+
+```cmd
+cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
+cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg\scripts\buildsystems\vcpkg.cmake (Windows)
 ```
 
 ## <a name="list-the-libraries-already-installed"></a>이미 설치된 라이브러리 나열
@@ -99,7 +112,7 @@ websocketpp:x86-windows 0.7.0    Library that implements RFC6455 The WebSocket P
 zlib:x86-windows        1.2.11   A compression library
 ```
 
-## <a name="integrate-with-visual-studio"></a>Visual Studio와 통합
+## <a name="integrate-with-visual-studio-windows"></a>Visual Studio와 통합(Windows)
 
 ### <a name="per-user"></a>사용자 단위
 
@@ -118,41 +131,18 @@ zlib:x86-windows        1.2.11   A compression library
 1. **vcpkg install \<library>** 를 실행합니다.
 1. **vcpkg integrate project**를 사용하여 프로젝트 단위로 해당 라이브러리를 참조하는 NuGet 패키지를 만듭니다.
 
-## <a name="export-compiled-binaries-and-headers"></a>컴파일된 이진 파일 및 헤더 내보내기
+## <a name="integrate-with-visual-studio-code-linuxmacos"></a>Visual Studio Code와 통합(Linux/MacOS) 
 
-모든 팀 구성원이 라이브러리를 다운로드 및 빌드해야 한다면 비효율적일 것입니다. 한 구성원만 해당 작업을 수행한 다음, **vcpkg export**를 사용하여 이진 파일 및 헤더의 Zip 파일을 만들어 다른 팀 구성원이 쉽게 공유하도록 만들 수 있습니다.
+**vcpkg 통합 설치**를 실행하여 Linux/MacOS에서 vcpkg enlistement의 위치를 사용하여 Visual Studio Code를 구성하고 소스 파일에서 IntelliSense를 활성화합니다.
 
-## <a name="updateupgrade-installed-libraries"></a>설치된 라이브러리 업데이트/업그레이드
+## <a name="target-linux-from-windows-via-wsl"></a>WSL을 통해 Windows에서 Linux 대상 지정
 
-공용 카탈로그는 라이브러리의 최신 버전으로 최신 상태로 유지됩니다. 로컬 라이브러리 중 어떤 것이 오래되었는지 확인하려면 **vcpkg update**를 사용합니다. 포트 컬렉션을 공용 카탈로그의 최신 버전으로 업데이트할 준비가 되면 **vcpkg upgrade** 명령을 실행하여 만료된 설치 라이브러리의 일부를 자동으로 다운로드하고 다시 빌드합니다.
+WSL(Linux용 Windows 하위 시스템)을 사용하여 Windows 컴퓨터에서 Linux 바이너리를 생성할 수 있습니다. [Windows 10에 WSL을 설정](https://docs.microsoft.com/en-us/windows/wsl/install-win10) 지침에 따라 [Linux용 Visual Studio 확장](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/)을 사용하여 구성합니다. Windows와 Linux 모두에 대한 모든 내장 라이브러리를 동일한 폴더에 넣고 Windows와 WSL 모두에서 액세스할 수 있습니다.
 
-기본적으로는 **upgrade** 명령은 만료된 라이브러리를 나열할 뿐 업그레이드하지는 않습니다. 업그레이드를 수행하려면 **--no-dry-run** 옵션을 사용합니다.
 
-```cmd
-  vcpkg upgrade --no-dry-run
-```
+## <a name="export_binaries_per_project"></a> 컴파일된 이진 파일 및 헤더 내보내기
 
-### <a name="upgrade-options"></a>업그레이드 옵션
-
-- **--no-dry-run** 업그레이드를 수행합니다. 지정되지 않은 경우 명령은 만료된 패키지를 나열합니다.
-- **--keep-going** 한 번 실패하더라도 패키지를 계속 설치합니다.
-- **--triplet \<t>** 정규화되지 않은 패키지에 대한 세 가지 기본값을 설정합니다.
-- **--vcpkg-root \<path>** 현재 디렉터리 또는 도구 디렉터리 대신 사용할 vcpkg 디렉터리를 지정합니다.
-
-### <a name="upgrade-example"></a>업그레이드 예제
-
-### <a name="per-project"></a>프로젝트 단위
-
-활성 vcpkg 인스턴스에서 버전과 다른 라이브러리의 특정 버전을 사용해야 하는 경우 다음 단계를 따르세요.
-
-1. vcpkg의 새 클론 생성
-1. 필요한 버전을 가져오도록 라이브러리의 프로필 수정
-1. **vcpkg install \<library>** 를 실행합니다.
-1. **vcpkg integrate project**를 사용하여 프로젝트 단위로 해당 라이브러리를 참조하는 NuGet 패키지를 만듭니다.
-
-## <a name="export-compiled-binaries-and-headers"></a>컴파일된 이진 파일 및 헤더 내보내기
-
-모든 팀 구성원이 라이브러리를 다운로드 및 빌드해야 한다면 비효율적일 것입니다. 한 구성원만 해당 작업을 수행한 다음, **vcpkg export**를 사용하여 이진 파일 및 헤더의 Zip 파일을 만들어 다른 팀 구성원이 쉽게 공유하도록 만들 수 있습니다.
+모든 팀 구성원이 라이브러리를 다운로드 및 빌드해야 한다면 비효율적일 것입니다. 한 구성원만 해당 작업을 수행한 다음, **vcpkg export**를 사용하여 이진 파일 및 헤더의 Zip 파일 또는 NuGet 패키지(다양한 형식 사용 가능)를 만들어 다른 팀 구성원이 쉽게 공유하도록 만들 수 있습니다.
 
 ## <a name="updateupgrade-installed-libraries"></a>설치된 라이브러리 업데이트/업그레이드
 
@@ -206,7 +196,7 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 ## <a name="send-feedback-about-vcpkg"></a>vcpkg에 대한 사용자 의견 보내기
 
-**--survey** 명령을 사용하여 기능에 대한 버그 보고서 및 제안을 비롯하여 vcpkg에 대한 사용자 의견을 Microsoft에 보냅니다.
+**vcpkg contact --survey** 명령을 사용하여 기능에 대한 버그 보고서 및 제안을 비롯하여 vcpkg에 대한 사용자 의견을 Microsoft에 보냅니다.
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>Vcpkg 폴더 계층 구조
 
@@ -241,12 +231,10 @@ Vcpkg 인스턴스의 내용:
 |**vcpkg integrate project**|개별 VS 프로젝트 사용을 위한 참조 NuGet 패키지 생성|
 |**vcpkg export \<pkg>... [opt]...**|패키지 내보내기|
 |**vcpkg edit \<pkg>**|편집할 포트 열기(%EDITOR% 사용, 기본 '코드')|
-|**vcpkg import \<pkg>**|미리 빌드된 라이브러리 가져오기|
 |**vcpkg create \<pkg> \<url> [archivename]**|새 패키지 만들기|
-|**vcpkg owns \<pat>**|설치된 패키지에서 파일 검색|
 |**vcpkg cache**|컴파일된 캐시 패키지 나열|
 |**vcpkg version**|버전 정보 표시|
-|**vcpkg contact**|사용자 의견을 보낼 연락처 정보 표시|
+|**vcpkg contact --survey**|사용자 의견을 보낼 연락처 정보를 표시합니다.|
 
 ### <a name="options"></a>옵션
 
@@ -254,3 +242,4 @@ Vcpkg 인스턴스의 내용:
 |---------|---------|
 |**--triplet \<t>**|세 가지 대상 아키텍처를 지정합니다. (기본값: `%VCPKG_DEFAULT_TRIPLET%`, **vcpkg help triplet** 참조)|
 |**--vcpkg-root \<path>**|vcpkg 루트 디렉터리 지정(기본값: `%VCPKG_ROOT%`)|
+

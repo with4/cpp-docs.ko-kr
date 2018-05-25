@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 546ad1b4bb745274894754a185c57bacb82b0061
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1fd5854bc18cecda1fd3ffee4f28ec2fa5d2a68a
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedreallocdbg"></a>_aligned_realloc_dbg
 
@@ -66,10 +66,10 @@ void * _aligned_realloc_dbg(
 맞춤 값으로 2의 정수 거듭제곱이어야 합니다.
 
 *filename*<br/>
-요청한 소스 파일의 이름에 대 한 포인터는 **realloc** 작업 또는 NULL입니다.
+요청한 소스 파일의 이름에 대 한 포인터는 **realloc** 작업 또는 **NULL**합니다.
 
 *linenumber*<br/>
-소스 파일의 줄 번호 위치는 **realloc** 작업이 요청 되었거나 NULL입니다.
+소스 파일의 줄 번호 위치는 **realloc** 작업이 요청 또는 **NULL**합니다.
 
 ## <a name="return-value"></a>반환 값
 

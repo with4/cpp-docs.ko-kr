@@ -55,11 +55,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a61c2ecd0546162a689278cebd45fe38c92f0a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 851de3810008532efa6683dd29d415560146f274
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
@@ -110,7 +110,7 @@ int _cwscanf_l(
 
 **_cscanf** 함수에 의해 지정 된 위치로 console에서 직접 데이터를 읽습니다 *인수*합니다. [_getche](getch-getwch.md) 함수는 문자를 읽는 데 사용합니다. 각 선택적 매개 변수에의 형식 지정자에 해당 하는 형식의 변수에 대 한 포인터 여야 합니다. *형식*합니다. 형식 컨트롤 입력의 해석은 필드와 같은 형태와 기능을 *형식* 에 대 한 매개 변수는 [scanf](scanf-scanf-l-wscanf-wscanf-l.md) 함수입니다. 동안 **_cscanf** 일반적으로 입력된 문자를 에코 것 이렇게 하지 않으면에 마지막으로 호출한 경우 **_ungetch**합니다.
 
-이 함수는 해당 매개 변수의 유효성을 검사합니다. format이 NULL인 경우 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속 하도록 허용 된 경우 **errno** 로 설정 된 **EINVAL** 함수가 반환 하 고 **EOF**합니다.
+이 함수는 해당 매개 변수의 유효성을 검사합니다. 형식이 **NULL**에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 하도록 허용 된 경우 **errno** 로 설정 된 **EINVAL** 함수가 반환 하 고 **EOF**합니다.
 
 있는 이러한 함수 버전은 **_l** 은 현재 스레드 로캘 대신 전달 된 로캘 매개 변수를 사용 하는 점을 제외 하 고 접미사는 동일 합니다.
 

@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e538ff94a6cd49e4d766dfbca2798aa0daf0e462
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b472987b0cac41c57e5fd22b2eedecef522613b4
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
 
@@ -68,7 +68,7 @@ wchar_t *_wfullpath(
 ### <a name="parameters"></a>매개 변수
 
 *absPath*<br/>
-절대 또는 전체 경로 이름이나 NULL이 포함된 버퍼에 대한 포인터입니다.
+절대 또는 전체 경로 이름을 포함 하는 버퍼에 대 한 포인터 또는 **NULL**합니다.
 
 *relPath*<br/>
 상대 경로 이름입니다.
@@ -82,7 +82,7 @@ wchar_t *_wfullpath(
 
 ## <a name="remarks"></a>설명
 
-**_fullpath** 함수 확장에서 상대 경로 이름을 *relPath* 완전히 정규화 된 또는 절대 경로와 저장소의 이름을이 *absPath*합니다. 경우 *absPath* 이 NULL 이면 **malloc** 경로 이름을 저장할 충분 한 길이의 버퍼를 할당 하는 데 사용 됩니다. 호출자가 이 버퍼를 해제해야 합니다. 상대 경로 이름은 현재 위치에서 시작되는 또 다른 위치에 대한 경로를 지정합니다(예: 현재 작업 디렉터리: "."). 절대 경로 이름은 파일 시스템의 루트에서 원하는 위치에 도달하는 데 필요한 전체 경로를 설명하는 상태 경로 이름의 확장입니다. 와 달리 **_makepath**, **_fullpath** 상대 경로 대 한 절대 경로 이름을 가져오는 데 사용할 수 있습니다 (*relPath*)를 포함 하는 ". /"또는"... / "이름에 있습니다.
+**_fullpath** 함수 확장에서 상대 경로 이름을 *relPath* 완전히 정규화 된 또는 절대 경로와 저장소의 이름을이 *absPath*합니다. 경우 *absPath* 은 **NULL**, **malloc** 경로 이름을 저장할 충분 한 길이의 버퍼를 할당 하는 데 사용 됩니다. 호출자가 이 버퍼를 해제해야 합니다. 상대 경로 이름은 현재 위치에서 시작되는 또 다른 위치에 대한 경로를 지정합니다(예: 현재 작업 디렉터리: "."). 절대 경로 이름은 파일 시스템의 루트에서 원하는 위치에 도달하는 데 필요한 전체 경로를 설명하는 상태 경로 이름의 확장입니다. 와 달리 **_makepath**, **_fullpath** 상대 경로 대 한 절대 경로 이름을 가져오는 데 사용할 수 있습니다 (*relPath*)를 포함 하는 ". /"또는"... / "이름에 있습니다.
 
 예를 들어 C 런타임 루틴을 사용하려면 루틴 선언이 들어 있는 헤더 파일을 응용 프로그램에 포함해야 합니다. 각 헤더 파일의 include 문은 응용 프로그램 작업 디렉터리를 기준으로 한 상대적 방식으로 파일 위치를 참조합니다.
 

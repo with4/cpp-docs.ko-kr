@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46f523ba11902f3eaa74fc649791313ee9388824
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 666cb9954569d4c5bd232f387d63e320af52818a
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale, _wsetlocale
 
@@ -120,7 +120,7 @@ en-US
 
 `setlocale( LC_ALL, "C" );`
 
-*로캘* 인수는 로캘 이름, 언어 문자열, 언어 문자열 및 국가/지역 코드, 코드 페이지 또는 언어 문자열, 국가/지역 코드 및 코드 페이지를 사용할 수 있습니다. 사용 가능한 로캘 이름, 언어, 국가/지역 코드 및 코드 페이지의 집합에는 문자당 2바이트 이상을 필요로 하는 코드 페이지를 제외하고, Windows NLS API에서 지원하는 모든 항목이 포함됩니다(예: UTF-7 및 UTF-8). Utf-7 또는 u t F-8의 코드 페이지 값을 제공 하는 경우 **setlocale** NULL을 반환 실패 합니다. 지원 되는 로캘 이름 집합 **setlocale** 에 설명 된 [로캘 이름, 언어 및 국가/지역 문자열](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)합니다. 지 원하는 언어 및 국가/지역 문자열 집합이 **setlocale** 에 나열 된 [언어 문자열](../../c-runtime-library/language-strings.md) 및 [국가/지역 문자열](../../c-runtime-library/country-region-strings.md)합니다. 코드에 포함되거나 저장소에 직렬화된 로캘 문자열의 성능과 유지 관리를 위해 로캘 이름 형식을 사용하는 것이 좋습니다. 로캘 이름 문자열은 언어와 국가/지역 이름 형식보다 운영 체제 업데이트에 의해 변경될 가능성이 적습니다.
+*로캘* 인수는 로캘 이름, 언어 문자열, 언어 문자열 및 국가/지역 코드, 코드 페이지 또는 언어 문자열, 국가/지역 코드 및 코드 페이지를 사용할 수 있습니다. 사용 가능한 로캘 이름, 언어, 국가/지역 코드 및 코드 페이지의 집합에는 문자당 2바이트 이상을 필요로 하는 코드 페이지를 제외하고, Windows NLS API에서 지원하는 모든 항목이 포함됩니다(예: UTF-7 및 UTF-8). Utf-7 또는 u t F-8의 코드 페이지 값을 제공 하는 경우 **setlocale** 반환 실패 합니다 **NULL**합니다. 지원 되는 로캘 이름 집합 **setlocale** 에 설명 된 [로캘 이름, 언어 및 국가/지역 문자열](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)합니다. 지 원하는 언어 및 국가/지역 문자열 집합이 **setlocale** 에 나열 된 [언어 문자열](../../c-runtime-library/language-strings.md) 및 [국가/지역 문자열](../../c-runtime-library/country-region-strings.md)합니다. 코드에 포함되거나 저장소에 직렬화된 로캘 문자열의 성능과 유지 관리를 위해 로캘 이름 형식을 사용하는 것이 좋습니다. 로캘 이름 문자열은 언어와 국가/지역 이름 형식보다 운영 체제 업데이트에 의해 변경될 가능성이 적습니다.
 
 로 전달 되는 null 포인터는 *로캘* 지정 하는 인수 **setlocale** 가 국제 환경을 설정 하는 대신 쿼리하도록 합니다. 경우는 *로캘* 인수가 null 포인터인 경우 프로그램의 현재 로캘 설정은 변경 되지 않습니다. 대신, **setlocale** 와 연결 된 문자열에 대 한 포인터를 반환 합니다.는 *범주* 스레드의 현재 로캘 합니다. 경우는 *범주* 인수가 **LC_ALL**, 함수는 세미콜론으로 구분 된 각 범주의 현재 설정을 나타내는 문자열을 반환 합니다. 예: 호출 시퀀스
 

@@ -48,11 +48,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 098e5760718e4e2d2a9063700b09d0381e76df1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48d0c3107bf2edc09017ea138e4c8024ce328dd8
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="control87-controlfp-control872"></a>_control87, _controlfp, __control87_2
 
@@ -128,7 +128,7 @@ _controlfp(_DN_FLUSH, _MCW_DN);
 // and x64 processors with SSE2 support. Ignored on other x86 platforms.
 ```
 
-ARM 플랫폼에서 **_control87** 및 **_controlfp** 함수 고 FPSCR 레지스터에 적용 합니다. X64 아키텍처에서는 저장 된 SSE2 제어 단어만는 MXCSR 레지스터에 영향을 합니다. X86 플랫폼에서 **_control87** 및 **_controlfp** 있는 경우는 x87와 SSE2에 대 한 제어 단어에 영향을 줍니다. 함수 **__control87_2** 는 x87와 함께 또는 개별적으로 제어할 수 SSE2 부동 소수점 단위로 사용 하도록 설정 합니다. 두 개의 정수를 주소에 전달 하는 두 장치에 영향을 하려는 경우 **x86_cw** 및 **sse2_cw**합니다. 하나의 유닛에만 영향을 주려는 경우 해당 매개 변수에 대해서는 주소를 전달하지만 다른 매개 변수에 대해서는 0(NULL)을 전달합니다. 이러한 매개 변수 중 하나에 대해 0을 전달하면 함수가 부동 소수점 유닛에는 영향을 주지 않습니다. 이 기능은 코드의 일부에서 x87 부동 소수점 유닛을 사용하고 유닛의 다른 부분에서는 SSE2 부동 소수점 유닛을 사용하는 경우에 유용할 수 있습니다. 사용 하는 경우 **__control87_2** 프로그램의 한 부분에 있는 부동 소수점 제어 단어에 대 한 다른 값을 설정 하 고 다음 **_control87** 또는 **_controlfp** 추가로 그런 다음 제어 단어를 조작 **_control87** 및 **_controlfp** 부동 소수점 두 장치 상태를 나타내는 단일 제어 단어를 반환할 수 수 있습니다. 이 경우 이러한 함수는 다음과 같이 설정 됩니다.는 **EM_AMBIGUOUS** 두 개의 제어 단어 사이 불일치가 임을 나타내기 위해 반환 된 정수 값에 대 한 플래그입니다. 이는 반환된 제어 단어가 두 부동 소수점 제어 단어 모두의 상태를 정확히 나타내지 않을 수 있다는 경고입니다.
+ARM 플랫폼에서 **_control87** 및 **_controlfp** 함수 고 FPSCR 레지스터에 적용 합니다. X64 아키텍처에서는 저장 된 SSE2 제어 단어만는 MXCSR 레지스터에 영향을 합니다. X86 플랫폼에서 **_control87** 및 **_controlfp** 있는 경우는 x87와 SSE2에 대 한 제어 단어에 영향을 줍니다. 함수 **__control87_2** 는 x87와 함께 또는 개별적으로 제어할 수 SSE2 부동 소수점 단위로 사용 하도록 설정 합니다. 두 개의 정수를 주소에 전달 하는 두 장치에 영향을 하려는 경우 **x86_cw** 및 **sse2_cw**합니다. 하나의 단위에 영향을 하려는 경우 해당 매개 변수에 대 한 주소에 전달 하지만 0 전달 (**NULL**) 다른 합니다. 이러한 매개 변수 중 하나에 대해 0을 전달하면 함수가 부동 소수점 유닛에는 영향을 주지 않습니다. 이 기능은 코드의 일부에서 x87 부동 소수점 유닛을 사용하고 유닛의 다른 부분에서는 SSE2 부동 소수점 유닛을 사용하는 경우에 유용할 수 있습니다. 사용 하는 경우 **__control87_2** 프로그램의 한 부분에 있는 부동 소수점 제어 단어에 대 한 다른 값을 설정 하 고 다음 **_control87** 또는 **_controlfp** 추가로 그런 다음 제어 단어를 조작 **_control87** 및 **_controlfp** 부동 소수점 두 장치 상태를 나타내는 단일 제어 단어를 반환할 수 수 있습니다. 이 경우 이러한 함수는 다음과 같이 설정 됩니다.는 **EM_AMBIGUOUS** 두 개의 제어 단어 사이 불일치가 임을 나타내기 위해 반환 된 정수 값에 대 한 플래그입니다. 이는 반환된 제어 단어가 두 부동 소수점 제어 단어 모두의 상태를 정확히 나타내지 않을 수 있다는 경고입니다.
 
 ARM 및 x64 아키텍처에서는 무한대 모드 또는 부동 소수점 전체 자릿수를 변경할 수 없습니다. 정밀도 컨트롤 마스크 x64에 사용 되는 경우 플랫폼에 함수를 어설션을 발생 시키고에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다.
 

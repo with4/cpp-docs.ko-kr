@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 794db055ad433b6f3407c056dcf182e40e24c8f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 02b920832d462c88c13d68525a1a4038cf6720f1
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="alignedoffsetrecallocdbg"></a>_aligned_offset_recalloc_dbg
 
@@ -74,10 +74,10 @@ void * _aligned_offset_recalloc_dbg(
 맞춤을 강제하는 메모리 할당으로의 오프셋입니다.
 
 *filename*<br/>
-Realloc 작업 또는 NULL을 요청한 소스 파일의 이름에 대 한 포인터입니다.
+Realloc 작업을 요청한 소스 파일의 이름에 대 한 포인터 또는 **NULL**합니다.
 
 *linenumber*<br/>
-Realloc 작업이 요청 된 소스 파일의 줄 번호 또는 NULL입니다.
+Realloc 작업이 요청 된 소스 파일의 줄 번호 또는 **NULL**합니다.
 
 ## <a name="return-value"></a>반환 값
 
