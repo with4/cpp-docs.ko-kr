@@ -28,28 +28,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 201f2eb0979857713848a8c381ef0a31ba179c41
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8cb1b2ba71277415fd1ba5124f6120cc2f2c995d
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704713"
 ---
-# <a name="mixed-pure-and-verifiable-feature-comparison-ccli"></a>혼합형, 순수형 및 안정형 기능 비교(C++/CLI)
-이 항목에서는 여러 가지 사이의 기능 비교 **/clr** 컴파일 모드입니다. 자세한 내용은 [/clr(공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)을 참조하세요.  
-  
- **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다.  
-  
-## <a name="feature-comparison"></a>기능 비교  
-  
-|기능|혼합 (/ clr)|순수 (/ clr: pure)|안전 하 게 보호 (/: safe)|관련된 정보|  
-|-------------|---------------------|-------------------------|-------------------------|-------------------------|  
-|CRT 라이브러리|지원|deprecated||[범주별 유버니설 C 런타임 루틴](../c-runtime-library/run-time-routines-by-category.md)|  
-|MFC/ATL|지원|||[MFC 데스크톱 응용 프로그램](../mfc/mfc-desktop-applications.md) &#124; [클래스 개요](../atl/atl-class-overview.md)|  
-|관리 되지 않는 함수|지원|||[혼합형(네이티브 및 관리) 어셈블리](../dotnet/mixed-native-and-managed-assemblies.md)|  
-|관리 되지 않는 데이터|지원|deprecated||[순수형 및 안정형 코드(C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)|  
-|관리 되지 않는 함수에서 호출할 수|지원||||  
-|관리 되지 않는 함수 호출을 지원 합니다.|지원|deprecated|deprecated|[C++ Interop 사용(암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)|  
-|리플렉션을 지원합니다|Dll만|deprecated|deprecated|[리플렉션(C++/CLI)](../dotnet/reflection-cpp-cli.md)|  
-  
-## <a name="see-also"></a>참고 항목  
- [순수형 및 안정형 코드(C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)
+# <a name="mixed-pure-and-verifiable-feature-comparison-ccli"></a>혼합형, 순수형 및 안정형 기능 비교 (C + + /cli CLI)
+
+이 항목에서는 여러 가지 사이의 기능 비교 **/clr** 컴파일 모드입니다. 자세한 내용은 [/clr(공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md)을 참조하세요.
+
+> [!IMPORTANT]
+> **/clr: pure** 및 **/clr: safe** 컴파일러 옵션은 Visual Studio 2015에서는 사용 되지 않으며 Visual Studio 2017에서 지원 되지 않습니다.
+
+## <a name="feature-comparison"></a>기능 비교
+
+|기능|혼합 (/ clr)|순수 (/ clr: pure)|안전 하 게 보호 (/: safe)|관련된 정보|
+|-------------|---------------------|-------------------------|-------------------------|-------------------------|
+|CRT 라이브러리|지원|deprecated||[범주별 유버니설 C 런타임 루틴](../c-runtime-library/run-time-routines-by-category.md)|
+|MFC/ATL|지원|||[MFC 데스크톱 응용 프로그램](../mfc/mfc-desktop-applications.md) &#124; [클래스 개요](../atl/atl-class-overview.md)|
+|관리 되지 않는 함수|지원|||[혼합형(네이티브 및 관리) 어셈블리](../dotnet/mixed-native-and-managed-assemblies.md)|
+|관리 되지 않는 데이터|지원|deprecated||[순수형 및 안정형 코드(C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)|
+|관리 되지 않는 함수에서 호출할 수|지원||||
+|관리 되지 않는 함수 호출을 지원 합니다.|지원|deprecated|deprecated|[C++ Interop 사용(암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)|
+|리플렉션을 지원합니다|Dll만|deprecated|deprecated|[리플렉션(C++/CLI)](../dotnet/reflection-cpp-cli.md)|
+
+## <a name="see-also"></a>참고자료
+
+- [순수형 및 안정형 코드(C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

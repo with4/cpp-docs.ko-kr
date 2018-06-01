@@ -23,11 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d45f5b56dfb84d56bcba8ad0652ed86a8fb5223
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dc4266e8b01201226c53584bed9f90ed9dcabef7
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34703735"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG(링크 타임 코드 생성)
 
@@ -141,7 +142,7 @@ ms.lasthandoff: 05/03/2018
 
 [/GL](../../build/reference/gl-whole-program-optimization.md) 및 [/clr](../../build/reference/clr-common-language-runtime-compilation.md) 을 사용해서 컴파일된 모듈은 **/LTCG** 가 지정된 경우 링커에 대한 입력으로 사용될 수 있습니다.
 
-- **/LTCG** 네이티브 개체 파일을 허용할 수 있으며 혼합 네이티브/관리 개체 파일 (사용 하 여 컴파일된 **/clr**). **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다.
+- **/LTCG** 네이티브 개체 파일을 허용할 수 있으며 혼합 네이티브/관리 개체 파일 (사용 하 여 컴파일된 **/clr**). **/clr: pure** 및 **/clr: safe** 컴파일러 옵션은 Visual Studio 2015에서는 사용 되지 않으며 Visual Studio 2017에서 지원 되지 않습니다.
 
 - **/Ltcg: pgi** 를 사용 하 여 컴파일된 네이티브 모듈을 받아들이지 않는 **/GL** 및 **/clr**
 
@@ -161,5 +162,5 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="see-also"></a>참고자료
 
-[링커 옵션 설정](../../build/reference/setting-linker-options.md)<br/>
-[링커 옵션](../../build/reference/linker-options.md)<br/>
+- [링커 옵션 설정](../../build/reference/setting-linker-options.md)
+- [링커 옵션](../../build/reference/linker-options.md)

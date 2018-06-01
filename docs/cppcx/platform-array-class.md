@@ -17,11 +17,12 @@ author: ghogen
 ms.author: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c6a326db5400d8dfb335f9c9e20867a26db59b0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65c45265714f869de10bdfd450c2b1349d6b526b
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704674"
 ---
 # <a name="platformarray-class"></a>Platform::Array 클래스
 ABI(응용 프로그램 이진 인터페이스)를 통해 받고 전달할 수 있는 수정 가능한 1차원 배열을 나타냅니다.  
@@ -62,7 +63,7 @@ private ref class Array<TArg, 1> :
   
  Windows 런타임 형식 시스템 가변 배열의 개념이 지원 하지 않으며 따라서 IVector를 전달할 수 없습니다 < platform:: array\<T >> 반환 값 또는 메서드 매개 변수로 합니다. ABI 전반에서 가변 배열 또는 시퀀스의 시퀀스를 전달하려면 `IVector<IVector<T>^>`를 사용합니다.  
   
- 이 클래스는 컴파일러가 자동으로 포함하는 vccorlib.h 헤더에 정의됩니다. platform.winmd에 정의된 public 형식이 아니기 때문에 개체 브라우저에는 표시되지 않지만 Intellisense에는 표시됩니다.  
+ 이 클래스는 컴파일러가 자동으로 포함하는 vccorlib.h 헤더에 정의됩니다. Platform.winmd에 정의 된 public 형식이 없기 때문에 개체 브라우저에 되지 않지만 IntelliSense에 표시 됩니다.  
   
 ### <a name="requirements"></a>요구 사항  
  컴파일러 옵션: **/ZW**  
