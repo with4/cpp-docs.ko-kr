@@ -1,6 +1,6 @@
 ---
 title: 컴파일러 경고 C4800 C5999 통해 | Microsoft Docs
-ms.date: 11/17/2017
+ms.date: 05/30/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -106,11 +106,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d13f939fcedc0d7b0c6ee132fda14a628a550dda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06c4d65fe7b6ab2b0238c3a4e4cd081e2dc011b5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704752"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>컴파일러 경고 C4800 C5999 통해
 
@@ -242,10 +243,10 @@ ms.lasthandoff: 05/04/2018
 |컴파일러 경고 C5035|기능을 사용 하 여 '*기능*' 하면 함수 *함수* 게스트 코드로 컴파일할 수를|
 |컴파일러 경고 (수준 1) C5036|/hybrid:x86arm64로 컴파일할 때 varargs 함수 포인터 변환이 있습니다. '*type1*'to'*type2*'|
 |컴파일러 경고 (오류) C5037|'*멤버-함수*': 클래스 템플릿의 멤버는 아웃오브 라인 정의 기본 인수를 가질 수 없습니다|
-|[컴파일러 경고 C5038](c5038.md)|데이터 멤버 '*member1*'초기화 될 데이터 멤버 뒤'*member2*'|
-|컴파일러 경고 C5039|'*함수*': 포인터 또는 함수를 잠재적으로 throw 하는 참조-EHc 아래 extern C 함수에 전달 합니다. 이 함수는 예외를 throw 하는 경우 정의 되지 않은 동작이 발생할 수 있습니다.|
-|컴파일러 경고 C5040|동적 예외 사양은 C + + 14에만 및 이전 버전; 올바른지 noexcept(false)로 처리 하는 방법|
-|컴파일러 경고 C5041|'*정의*': constexpr 정적 데이터 멤버에 대 한 아웃오브 라인 정의 필요 하지 않으며 C + + 17에 사용 되지 않음|
-|컴파일러 경고 C5042|'*선언*': 함수 선언은 블록 범위에서 표준 c + +에서 '인라인'이 지정 된 일 수 없습니다. '인라인' 지정자를 제거 합니다.|
-|컴파일러 경고 C5043|'*사양*': 예외 사양이 이전 선언과 일치 하지 않습니다|
-|컴파일러 경고 C5044|명령줄 옵션에 인수가 *옵션* 경로 가리키는 '*경로*' 존재 하지 않는|
+|[컴파일러 경고 (수준 4) C5038](c5038.md)|데이터 멤버 '*member1*'초기화 될 데이터 멤버 뒤'*member2*'|
+|컴파일러 경고 (수준 4) C5039|'*함수*': 포인터 또는 함수를 잠재적으로 throw 하는 참조-EHc 아래 extern C 함수에 전달 합니다. 이 함수는 예외를 throw 하는 경우 정의 되지 않은 동작이 발생할 수 있습니다.|
+|컴파일러 경고 (수준 3) C5040|동적 예외 사양은 C + + 14에만 및 이전 버전; 올바른지 noexcept(false)로 처리 하는 방법|
+|컴파일러 경고 (수준 1) C5041|'*정의*': constexpr 정적 데이터 멤버에 대 한 아웃오브 라인 정의 필요 하지 않으며 C + + 17에 사용 되지 않음|
+|컴파일러 경고 (수준 3) C5042|'*선언*': 함수 선언은 블록 범위에서 표준 c + +에서 '인라인'이 지정 된 일 수 없습니다. '인라인' 지정자를 제거 합니다.|
+|컴파일러 경고 (수준 2) C5043|'*사양*': 예외 사양이 이전 선언과 일치 하지 않습니다|
+|컴파일러 경고 (수준 4) C5044|명령줄 옵션에 인수가 *옵션* 경로 가리키는 '*경로*' 존재 하지 않는|

@@ -22,58 +22,63 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53fafb1e7be45cd4b48ce51e787b6338dd0f7324
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5746c8f54a51e24bad23dcb66f6648266e2e4b56
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704817"
 ---
 # <a name="ptr32-ptr64"></a>__ptr32, __ptr64
-## <a name="microsoft-specific"></a>Microsoft 전용  
- `__ptr32`는 32비트 시스템의 네이티브 포인터를 나타내는 반면 `__ptr64`는 64비트 시스템의 네이티브 포인터를 나타냅니다.  
-  
- 다음 예제에서는 이러한 포인터 형식 각각을 선언하는 방법을 보여 줍니다.  
-  
-```  
-int * __ptr32 p32;  
-int * __ptr64 p64;  
-```  
-  
- 32비트 시스템에서 `__ptr64`로 선언한 포인터는 32비트 포인터로 잘립니다. 64비트 시스템에서 `__ptr32`로 선언한 포인터는 64비트 포인터로 강제 변환됩니다.  
-  
+
+**Microsoft 전용**
+
+`__ptr32`는 32비트 시스템의 네이티브 포인터를 나타내는 반면 `__ptr64`는 64비트 시스템의 네이티브 포인터를 나타냅니다.
+
+다음 예제에서는 이러한 포인터 형식 각각을 선언하는 방법을 보여 줍니다.
+
+```cpp
+int * __ptr32 p32;
+int * __ptr64 p64;
+```
+
+ 32비트 시스템에서 `__ptr64`로 선언한 포인터는 32비트 포인터로 잘립니다. 64비트 시스템에서 `__ptr32`로 선언한 포인터는 64비트 포인터로 강제 변환됩니다.
+
 > [!NOTE]
->  사용할 수 없습니다 `__ptr32` 또는 `__ptr64` 로 컴파일할 때 **/clr: pure**합니다. 그렇지 않으면 `Compiler Error C2472`가 생성됩니다. **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다.  
-  
-## <a name="example"></a>예제  
- 다음 예제에서는 `__ptr32` 및 `__ptr64` 키워드로 포인터를 선언 및 할당하는 방법을 보여 줍니다.  
-  
-```  
-#include <cstdlib>  
-#include <iostream>  
-  
-int main()  
-{  
-    using namespace std;  
-  
-    int * __ptr32 p32;  
-    int * __ptr64 p64;  
-  
-    p32 = (int * __ptr32)malloc(4);  
-    *p32 = 32;  
-    cout << *p32 << endl;  
-  
-    p64 = (int * __ptr64)malloc(4);  
-    *p64 = 64;  
-    cout << *p64 << endl;  
-}  
-```  
-  
-```Output  
-32  
-64  
-```  
-  
-**Microsoft 전용 종료**  
-  
-## <a name="see-also"></a>참고 항목  
- [기본 형식](../cpp/fundamental-types-cpp.md)
+> 사용할 수 없습니다 `__ptr32` 또는 `__ptr64` 로 컴파일할 때 **/clr: pure**합니다. 그렇지 않으면, 컴파일러 오류 C2472 생성 됩니다. **/clr: pure** 및 **/clr: safe** 컴파일러 옵션은 Visual Studio 2015에서는 사용 되지 않으며 Visual Studio 2017에서 지원 되지 않습니다.
+
+## <a name="example"></a>예
+
+다음 예제에서는 `__ptr32` 및 `__ptr64` 키워드로 포인터를 선언 및 할당하는 방법을 보여 줍니다.
+
+```cpp
+#include <cstdlib>
+#include <iostream>
+
+int main()
+{
+    using namespace std;
+
+    int * __ptr32 p32;
+    int * __ptr64 p64;
+
+    p32 = (int * __ptr32)malloc(4);
+    *p32 = 32;
+    cout << *p32 << endl;
+
+    p64 = (int * __ptr64)malloc(4);
+    *p64 = 64;
+    cout << *p64 << endl;
+}
+```
+
+```Output
+32
+64
+```
+
+**Microsoft 전용 종료**
+
+## <a name="see-also"></a>참고자료
+
+- [기본 형식](../cpp/fundamental-types-cpp.md)

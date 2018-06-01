@@ -1,7 +1,7 @@
 ---
 title: RoInitializeWrapper 클래스 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/20/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,11 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4a4479686d3ca591a9fdd1c0659549a2e0db6e1c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cac71857e6b472f11d1c9eaba48d181ea78fb456
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34705594"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper 클래스
 Windows 런타임을 초기화합니다.  
@@ -31,7 +32,7 @@ class RoInitializeWrapper
 ```  
   
 ## <a name="remarks"></a>설명  
- RoInitializeWrapper는 하는 Windows 런타임에서 초기화 작업이 성공 했는지 여부를 나타내는 HRESULT를 반환 합니다.  
+ RoInitializeWrapper는 하는 Windows 런타임에서 초기화 작업이 성공 했는지 여부를 나타내는 HRESULT를 반환 합니다. 클래스 소멸자를 호출 하기 때문에 `::Windows::Foundation::Uninitialize`, 인스턴스의 `RoInitializeWrapper` 최상위 또는 전역 범위에서 선언 해야 합니다.  
   
 ## <a name="members"></a>멤버  
   

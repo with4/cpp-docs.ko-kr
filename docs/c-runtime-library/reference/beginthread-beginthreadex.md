@@ -39,11 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f8e12e25f64972335cb1a1199ae519de71d43067
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: d56bcc5ec779b077305d9d80e4a4e6b5e511df5e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34704661"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -141,11 +142,11 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 새 스레드 로캘 프로세스별 전역 현재 로캘 정보를 사용 하 여 초기화 됩니다. 스레드별 로캘을 호출 하 여 사용 하도록 설정 하는 경우 [_configthreadlocale](configthreadlocale.md) (전역으로 또는 새 스레드에 대 한만), 스레드 수의 로캘을 독립적으로 다른 스레드에서 호출 하 여 변경할 **setlocale** 또는 **_wsetlocale**합니다. 스레드별 로캘 플래그가 설정 되지 않은 스레드 새로 만든 모든 스레드를 비롯 하 여 모든 스레드는 또한 스레드별 로캘 플래그를 설정 하 고, 필요가 없습니다에 로캘 정보에 영향을 줄 수 있습니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-혼합형 및 순수형 코드에 대 한 **_beginthread** 및 **_beginthreadex** 각각 두 개의 오버 로드를 갖고 있습니다. 하나는 네이티브 호출 규칙 함수 포인터가 고 다른 오버 로드는 **__clrcall** 함수 포인터입니다. 첫 번째 오버로드는 응용 프로그램 도메인에 안전하지 않고 어떤 방법으로도 안전할 수 없습니다. 혼합형 또는 순수형 코드를 작성하는 경우 새 스레드가 관리되는 리소스에 액세스하기 전에 올바른 응용 프로그램 도메인에 들어가는지 확인해야 합니다. 이 작업은 예를 들어 [call_in_appdomain 함수](../../dotnet/call-in-appdomain-function.md)를 사용하여 수행할 수 있습니다. 두 번째 오버 로드는 응용 프로그램 도메인 안전 합니다. 호출자의 응용 프로그램 도메인에서 새로 만든된 스레드에 항상 끝나는 **_beginthread** 또는 **_beginthreadex**합니다.
+에 대 한 **/clr** 코드 **_beginthread** 및 **_beginthreadex** 각각 두 개의 오버 로드를 갖고 있습니다. 하나는 네이티브 호출 규칙 함수 포인터가 고 다른 오버 로드는 **__clrcall** 함수 포인터입니다. 첫 번째 오버로드는 응용 프로그램 도메인에 안전하지 않고 어떤 방법으로도 안전할 수 없습니다. 작성 하는 경우 **/clr** 새 스레드 도메인에 들어가는지 올바른 응용 프로그램에 액세스 하기 전에 확인 해야 하는 코드 관리 되는 리소스입니다. 이 작업은 예를 들어 [call_in_appdomain 함수](../../dotnet/call-in-appdomain-function.md)를 사용하여 수행할 수 있습니다. 두 번째 오버 로드는 응용 프로그램 도메인 안전 합니다. 호출자의 응용 프로그램 도메인에서 새로 만든된 스레드에 항상 끝나는 **_beginthread** 또는 **_beginthreadex**합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴|필수 헤더|
+|루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
 |**_beginthread**|\<process.h>|
 |**_beginthreadex**|\<process.h>|
@@ -158,7 +159,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 사용 하도록 **_beginthread** 또는 **_beginthreadex**, 응용 프로그램은 다중 스레드 C 런타임 라이브러리 중 하 나와 연결 해야 합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 **_beginthread** 및 **_endthread**합니다.
 
@@ -278,7 +279,7 @@ void Bounce( void * parg )
 
 아무 키나 눌러 샘플 응용 프로그램을 종료합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 샘플 코드에서 반환 되는 스레드 핸들을 사용 하는 방법을 보여 줍니다 **_beginthreadex** 동기화 API로 [WaitForSingleObject](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx)합니다. 주 스레드는 두 번째 스레드가 종료할 때까지 기다린 다음 계속합니다. 두 번째 스레드가 호출 하는 경우 **_endthreadex**, 하면 스레드 개체가 신호 된 상태로 이동 합니다. 그러면 기본 스레드를 계속 실행할 수 있습니다. 로 수행할 수 없습니다 **_beginthread** 및 **_endthread**때문에, **_endthread** 호출 **CloseHandle**, 스레드를 소멸 하 개체 신호 된 상태로 설정할 수 있습니다.
 
@@ -330,8 +331,8 @@ Counter should be 1000000; it is-> 1000000
 
 ## <a name="see-also"></a>참고자료
 
-[프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_endthread, _endthreadex](endthread-endthreadex.md)<br/>
-[abort](abort.md)<br/>
-[exit, _Exit, _exit](exit-exit-exit.md)<br/>
-[GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)<br/>
+- [프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)
+- [_endthread, _endthreadex](endthread-endthreadex.md)
+- [abort](abort.md)
+- [exit, _Exit, _exit](exit-exit-exit.md)
+- [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)
