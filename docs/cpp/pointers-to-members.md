@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6312186ec47014ff11e18450543d8f98178a776b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0354d0a910db0f4237a56607a7322acb7a1b57a0
+ms.sourcegitcommit: 3c1930dc1e7e69fdbb431029cd3e9b9b00a140cc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/31/2018
+ms.locfileid: "34686853"
 ---
 # <a name="pointers-to-members"></a>pointers_to_members
 멤버에 대한 포인터 선언은 포인터 선언의 특별한 경우입니다.  이러한 함수는 다음 시퀀스를 사용하여 선언됩니다.  
@@ -90,7 +91,7 @@ int main()
 }  
 ```  
   
- 앞의 예제에서 `pwCaption` 클래스의 모든 멤버에 대 한 포인터 `Window` 형식을 가진를 **char\*** 합니다. `pwCaption`의 형식은 `char * Window::*`입니다. 다음 코드에서는 `SetCaption` 및 `GetCaption` 멤버 함수에 대한 포인터를 선언합니다.  
+ 앞의 예제에서 `pwCaption` 클래스의 모든 멤버에 대 한 포인터 `Window` 형식을 가진를 **char\*** 합니다. `pwCaption`의 형식은 `char * Window::* `입니다. 다음 코드에서는 `SetCaption` 및 `GetCaption` 멤버 함수에 대한 포인터를 선언합니다.  
   
 ```  
 const char * (Window::*pfnwGC)() = &Window::GetCaption;  
