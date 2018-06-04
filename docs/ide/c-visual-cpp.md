@@ -1,5 +1,5 @@
 ---
-title: '&lt;c&gt; (Visual c + +) | Microsoft Docs'
+title: '&lt;c&gt;(Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: f17d56601f49056144433155e0d898f56c42bdab
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329260"
 ---
-# <a name="ltcgt-visual-c"></a>&lt;c&gt; (Visual c + +)
-\<c > 태그 나타냅니다 코드로 설명에서 텍스트를 표시 되어야 합니다. 여러 줄을 코드로 지정하려면 [\<code>](../ide/code-visual-cpp.md)를 사용합니다.  
+# <a name="ltcgt-visual-c"></a>&lt;c&gt;(Visual C++)
+\<c> 태그는 설명 내 텍스트를 코드로 표시해야 함을 나타냅니다. 여러 줄을 코드로 지정하려면 [\<code>](../ide/code-visual-cpp.md)를 사용합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,12 +35,12 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="parameters"></a>매개 변수  
  `text`  
- 코드로 표시 텍스트입니다.  
+ 코드로 표시하려는 텍스트입니다.  
   
 ## <a name="remarks"></a>설명  
  [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // xml_c_tag.cpp  

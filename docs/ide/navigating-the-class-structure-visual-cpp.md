@@ -1,5 +1,5 @@
 ---
-title: 클래스 구조 (Visual c + +) 탐색 | Microsoft Docs
+title: 클래스 구조 탐색(Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,14 +19,15 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: c6612d215902657aed9869e66be93b8b2ea2da25
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330235"
 ---
 # <a name="navigating-the-class-structure-visual-c"></a>클래스 구조 탐색(Visual C++)
-함수, 상속 및 중 하나를 사용 하 여 인터페이스를 포함 하는 프로젝트의 클래스 구조를 탐색할 수 [클래스 뷰](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) 또는 [개체 브라우저](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470)합니다.  
+[클래스 뷰](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) 또는 [개체 브라우저](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470)를 사용하여 함수, 상속 및 인터페이스를 비롯한 프로젝트 클래스 구조를 탐색할 수 있습니다.  
   
- 클래스 뷰에서 함수 이름을 두 번 클릭 하 여 함수 선언으로 이동할 수 있습니다. 클래스 뷰에서 클래스 이름을 두 번 클릭 하 여 클래스 정의로 이동할 수 있습니다.  
+ 클래스 뷰에서 함수 이름을 두 번 클릭하여 함수 선언으로 이동할 수 있습니다. 클래스 뷰에서 클래스 이름을 두 번 클릭하여 클래스 정의로 이동할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [코드 마법사로 기능 추가](../ide/adding-functionality-with-code-wizards-cpp.md)   

@@ -1,5 +1,5 @@
 ---
-title: '&lt;예제&gt; (Visual c + +) | Microsoft Docs'
+title: '&lt;example&gt;(Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: cefd38a18447d0e8c9121d61c0ba963e9da39187
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321433"
 ---
-# <a name="ltexamplegt-visual-c"></a>&lt;예제&gt; (Visual c + +)
-\<example> 태그를 사용하면 메서드 또는 기타 라이브러리 멤버를 사용하는 방법의 예제를 지정할 수 있습니다. 일반적으로도 여기에 사용 된 [ \<코드 >](../ide/code-visual-cpp.md) 태그입니다.  
+# <a name="ltexamplegt-visual-c"></a>&lt;example&gt;(Visual C++)
+\<example> 태그를 사용하면 메서드 또는 기타 라이브러리 멤버를 사용하는 방법의 예제를 지정할 수 있습니다. 일반적으로 여기에는 [\<code>](../ide/code-visual-cpp.md) 태그의 사용도 포함됩니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>설명  
  [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // xml_example_tag.cpp  

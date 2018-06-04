@@ -16,22 +16,23 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 3e8e5065cebab002e9c48aef560eb9f2feab67e3
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321628"
 ---
 # <a name="atl-program-or-control-source-and-header-files"></a>ATL 프로그램 또는 컨트롤 소스 및 헤더 파일
-만들 프로젝트에 대 한 선택 옵션에 따라 Visual Studio에서 ATL 프로젝트를 만들 때에 다음 파일이 생성 됩니다.  
+Visual Studio에서 ATL 프로젝트를 만들 때, 생성하는 프로젝트에 대해 선택한 옵션에 따라 다음 파일이 생성됩니다.  
   
- 에 살고 있는 모든이 파일은 *Projname* 디렉터리 및 헤더 (.h) 파일 폴더 또는 솔루션 탐색기에서 소스 파일 (.cpp 파일) 폴더에 있습니다.  
+ 이러한 파일은 모두 *Projname* 디렉터리와 솔루션 탐색기의 헤더 파일(.h 파일) 폴더 또는 원본 파일(.cpp 파일) 폴더에 있습니다.  
   
 |파일 이름|설명|  
 |---------------|-----------------|  
-|*Projname*.h|C + + 인터페이스 정 및 ATLSample.idl에 정의 된 항목의 GUID 선언이 포함 된 주요 포함 파일입니다. 컴파일 중 MIDL에 의해 다시 생성 됩니다.|  
-|*Projname*.cpp|주 프로그램 소스 파일입니다. 구현 및 DLL의 내보내기 프로세스 서버에 대 한 구현을 포함 `WinMain` 로컬 서버에 대 한 합니다. 서비스에 대 한 모든 서비스 관리 기능 추가로 구현 합니다.|  
-|Resource.h|리소스 파일에 대 한 헤더 파일입니다.|  
+|*Projname*.h|ATLSample.idl에 정의된 항목의 C++ 인터페이스 정의 및 GUID 선언이 포함된 주요 포함 파일입니다. 컴파일하는 동안 MIDL에 의해 다시 생성됩니다.|  
+|*Projname*.cpp|주 프로그램 원본 파일. in-process 서버용 DLL 내보내기 구현과 로컬 서버용 `WinMain` 구현이 포함되어 있습니다. 서비스의 경우 이는 모든 서비스 관리 기능을 추가로 구현합니다.|  
+|Resource.h|리소스 파일용 헤더 파일.|  
 |StdAfx.cpp|StdAfx.h 및 Atlimpl.cpp 파일을 포함합니다.|  
-|StdAfx.h|ATL 헤더 파일에 포함 됩니다.|  
+|StdAfx.h|ATL 헤더 파일을 포함합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Visual C++ 프로젝트용 파일 형식](../ide/file-types-created-for-visual-cpp-projects.md)   

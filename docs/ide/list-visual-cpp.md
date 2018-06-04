@@ -1,5 +1,5 @@
 ---
-title: '&lt;목록&gt; (Visual c + +) | Microsoft Docs'
+title: '&lt;list&gt;(Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: bff8e3588e31414f50cb6d150c0e8c9f2603586b
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323981"
 ---
-# <a name="ltlistgt-visual-c"></a>&lt;목록&gt; (Visual c + +)
+# <a name="ltlistgt-visual-c"></a>&lt;list&gt;(Visual C++)
 \<listheader> 블록은 테이블 또는 정의 목록의 머리글 행을 정의하는 데 사용됩니다. 테이블을 정의할 때는 머리글에 용어 항목만 제공하면 됩니다.  
   
 ## <a name="syntax"></a>구문  
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/04/2018
   
  [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // xml_list_tag.cpp  

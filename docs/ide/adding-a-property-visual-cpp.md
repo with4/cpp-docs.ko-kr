@@ -1,5 +1,5 @@
 ---
-title: 추가 속성 (Visual c + +) | Microsoft Docs
+title: 속성 추가(Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,34 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 45eda098202fdf9286905bdc967b6aa1d7bd7035
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327582"
 ---
 # <a name="adding-a-property-visual-c"></a>속성 추가(Visual C++)
-사용할 수는 [속성 추가 마법사](../ide/names-add-property-wizard.md) 프로젝트에는 인터페이스 메서드를 추가 하 합니다.  
+[속성 추가 마법사](../ide/names-add-property-wizard.md)를 사용하여 프로젝트의 인터페이스에 메서드를 추가할 수 있습니다.  
   
-### <a name="to-add-a-property-to-your-object"></a>개체에 속성을 추가 하려면  
+### <a name="to-add-a-property-to-your-object"></a>개체에 속성을 추가하려면  
   
-1.  [클래스 뷰](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), 속성을 추가 하려면 원하는 인터페이스의 이름을 마우스 오른쪽 단추로 클릭 합니다.  
+1.  [클래스 뷰](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)에서 속성을 추가할 인터페이스의 이름을 마우스 오른쪽 단추로 클릭합니다.  
   
     > [!NOTE]
-    >  Dispinterface 프로젝트 특성을 사용 하지 않으면 라이브러리 노드 내에 중첩 된에 속성을 추가할 수도 있습니다.  
+    >  프로젝트에 특성이 지정되지 않은 경우 라이브러리 노드 내에 중첩된 dispinterface에 속성을 추가할 수도 있습니다.  
   
-2.  바로 가기 메뉴에서 클릭 **추가**, 클릭 하 고 **속성 추가**합니다.  
+2.  바로 가기 메뉴에서 **추가**를 클릭한 다음, **속성 추가**를 클릭합니다.  
   
-3.  에 [속성 추가 마법사](../ide/names-add-property-wizard.md), 속성을 만드는 데 필요한 정보를 제공 합니다.  
+3.  [속성 추가 마법사](../ide/names-add-property-wizard.md)에서 속성을 만드는 데 필요한 정보를 제공합니다.  
   
-4.  에 있는 속성에 대 한 인터페이스 정의 (IDL) 언어 설정을 지정는 [IDL 특성](../ide/idl-attributes-add-property-wizard.md) 마법사의 페이지입니다.  
+4.  마법사의 [IDL 특성](../ide/idl-attributes-add-property-wizard.md) 페이지에서 이 속성에 대한 IDL(인터페이스 정의 언어) 설정을 지정합니다.  
   
-5.  클릭 **마침** 는 속성을 추가 합니다.  
+5.  **마침**을 클릭하여 속성을 추가합니다.  
   
- **가져오기** 및 `Put` 속성의 메서드가 정의 된 인터페이스 클래스 뷰에서 두 개의 아이콘으로 표시 됩니다. .Idl 파일에서 속성 선언을 볼 아이콘 중 하나를 두 번 클릭 수 있습니다.  
+ 속성의 **가져오기** 및 `Put` 메서드는 속성이 정의된 인터페이스에서 클래스 뷰에 두 개의 아이콘으로 표시됩니다. 두 아이콘 중 하나를 두 번 클릭하여 .Idl 파일에서 속성 선언을 볼 수 있습니다.  
   
--   ATL 인터페이스는 **가져오기** 및 **배치** 함수.cpp 파일에 추가 되 고 이러한 함수에 대 한 참조.h 파일에 추가 됩니다.  
+-   ATL 인터페이스의 경우 **Get** 및 **Put** 함수가 .cpp 파일에 추가되고, 이러한 함수에 대한 참조가 .h 파일에 추가됩니다.  
   
--   선택 하는 경우 MFC dispinterface에 대 한 **멤버 변수** 구현 하는 클래스에는 메서드 및 변수를 구현 형식으로 추가 합니다. 선택 하는 경우 **Get/Set 메서드** 구현 형식으로 두 가지 방법을 구현 하는 클래스에 추가 됩니다.  
+-   MFC dispinterface의 경우 구현 형식으로 **멤버 변수**를 선택하면, 메서드 및 변수가 구현 클래스에 추가됩니다. 구현 형식으로 **Get/Set 메서드**를 선택하면 이를 구현하는 클래스에 두 메서드가 추가됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [COM 인터페이스 만들기](../ide/creating-a-com-interface-visual-cpp.md)   

@@ -18,16 +18,17 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 580c11d19a1d2ea5510390296a80589cce988f12
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327813"
 ---
 # <a name="command-line-property-pages"></a>명령줄 속성 페이지
-대부분의 속성 페이지 폴더를 포함 한 **명령줄** 속성 페이지. 이 페이지를 폴더에 설정 되는 속성 표시 합니다. **명령줄** 속성 페이지도 포함 되어 있는 **추가 옵션** 도구에 대 한 유효한 속성을 지정할 수 있는 상자 있지만 폴더에 없는 속성은입니다.  
+대부분의 속성 페이지 폴더에는 **명령줄** 속성 페이지가 포함되어 있습니다. 이 페이지에는 폴더에 설정된 속성이 표시합니다. **명령줄** 속성 페이지에는 도구에 유효하지만, 폴더에 속성이 없는 속성을 지정할 수 있는 **추가 옵션** 상자도 포함되어 있습니다.  
   
- 편집 상자에 입력 하는 모든 명령 폴더에 대 한 도구를 통해 전달 됩니다. 검증 이나 확인은 입력을 수행 하거나 됩니까 모든 종속성을 검사 합니다.  
+ 편집 상자에 입력하는 모든 명령은 폴더의 도구로 전달됩니다. 입력에 대한 확인이나 검사가 수행되지 않으며 종속성 검사도 수행되지 않습니다.  
   
- 액세스 하는 방법에 대 한 내용은 **명령줄** 속성 페이지 참조 [프로젝트 속성 작업](../ide/working-with-project-properties.md)합니다.  
+ **명령줄** 속성 페이지에 액세스하는 방법에 대한 자세한 내용은 [프로젝트 속성 작업](../ide/working-with-project-properties.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [속성 페이지](../ide/property-pages-visual-cpp.md)   
