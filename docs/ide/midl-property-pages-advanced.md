@@ -28,36 +28,37 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 5f87518c23848cea91a3e3c48361aa0a63fa88a2
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330806"
 ---
 # <a name="midl-property-pages-advanced"></a>MIDL 속성 페이지: 고급
-**고급** 속성 페이지에는 **MIDL** 폴더 MIDL 컴파일러 옵션을 지정 합니다.  
+**MIDL** 폴더의 **고급** 속성 페이지에서 다음 MIDL 컴파일러 옵션을 지정합니다.  
   
--   오류 검사 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   오류 검사 사용([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   할당 검사 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   할당 검사([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   범위 확인 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   경계 검사([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   열거형 범위 검사 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   열거형 범위 검사([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   참조 포인터 검사 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   참조 포인터 검사([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   스텁 데이터 검사 ([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
+-   스텁 데이터 검사([/error](http://msdn.microsoft.com/library/windows/desktop/aa367324))  
   
--   매개 변수 유효성 검사 ([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) *  
+-   매개 변수 유효성 검사([/robust](http://msdn.microsoft.com/library/windows/desktop/aa367363)) *  
   
--   구조체 멤버 맞춤 ([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
+-   구조체 멤버 맞춤([/Zp](http://msdn.microsoft.com/library/windows/desktop/aa367388))  
   
--   출력 리디렉션 ([/o](http://msdn.microsoft.com/library/windows/desktop/aa367351))  
+-   출력 리디렉션([/o](http://msdn.microsoft.com/library/windows/desktop/aa367351))  
   
--   C 전처리 옵션 ([/cpp_opt](http://msdn.microsoft.com/library/windows/desktop/aa367318))  
+-   C 전처리 옵션([/cpp_opt](http://msdn.microsoft.com/library/windows/desktop/aa367318))  
   
--   전처리기 정의 해제 ([/U](http://msdn.microsoft.com/library/windows/desktop/aa367373))  
+-   전처리기 정의 해제([/U](http://msdn.microsoft.com/library/windows/desktop/aa367373))  
   
- \* / Windows 2000 또는 이상 컴퓨터에 대해 빌드하는 경우에 사용 강력한 됩니다. ATL 프로젝트를 작성 하는 경우를 사용 하려는 /robust, dlldatax.c 파일에서이 줄을 변경 합니다.  
+ \* /robust는 Windows 2000 이상의 컴퓨터용으로 빌드할 때만 사용합니다. ATL 프로젝트를 빌드하고 /robust를 사용하려면 dlldatax.c 파일에서 이 줄을 변경합니다.  
   
 ```  
 #define _WIN32_WINNT 0x0400   //for Windows NT 4.0 or Windows 95 with DCOM  
@@ -65,9 +66,9 @@ to
 #define _WIN32_WINNT 0x0500   //for Windows NT 4.0 or Windows 95 with DCOM  
 ```  
   
- 액세스 하는 방법에 대 한 내용은 **고급** 속성 페이지에는 **MIDL** 폴더 참조 [프로젝트 속성 작업](../ide/working-with-project-properties.md)합니다.  
+ **MIDL** 폴더에서 **고급** 속성 페이지에 액세스하는 방법에 대한 자세한 내용은 [프로젝트 속성 작업](../ide/working-with-project-properties.md)을 참조하세요.  
   
- 프로그래밍 방식으로 c + + 프로젝트에 대 한 MIDL 옵션에 액세스 하는 방법에 대 한 정보를 참조 하십시오. <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>합니다.  
+ C++ 프로젝트의 MIDL 옵션에 프로그래밍 방식으로 액세스하는 방법에 대한 자세한 내용은 <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [MIDL 속성 페이지](../ide/midl-property-pages.md)

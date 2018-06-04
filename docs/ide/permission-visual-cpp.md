@@ -1,5 +1,5 @@
 ---
-title: '&lt;사용 권한&gt; (Visual c + +) | Microsoft Docs'
+title: '&lt;permission&gt;(Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: e13824780a5c73d4423bd544a97108b45d1b770a
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324085"
 ---
-# <a name="ltpermissiongt-visual-c"></a>&lt;사용 권한&gt; (Visual c + +)
-\<permission> 태그를 사용하면 멤버 액세스 권한을 문서화할 수 있습니다. <xref:System.Security.PermissionSet> 멤버에 대 한 액세스를 지정할 수 있습니다.  
+# <a name="ltpermissiongt-visual-c"></a>&lt;permission&gt;(Visual C++)
+\<permission> 태그를 사용하면 멤버 액세스 권한을 문서화할 수 있습니다. <xref:System.Security.PermissionSet>를 사용하면 멤버 액세스 권한을 지정할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,9 +48,9 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>설명  
  [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
- Visual C++ 컴파일러에서는 문서 주석을 통해 단일 패스로 cref 참조를 확인하려고 합니다.  따라서 C++ 조회 규칙을 사용하는 경우 컴파일러에서 기호를 찾을 수 없으며 참조는 확인되지 않음으로 표시됩니다. 참조 [ \<seealso >](../ide/seealso-visual-cpp.md) 자세한 정보에 대 한 합니다.  
+ Visual C++ 컴파일러에서는 문서 주석을 통해 단일 패스로 cref 참조를 확인하려고 합니다.  따라서 C++ 조회 규칙을 사용하는 경우 컴파일러에서 기호를 찾을 수 없으며 참조는 확인되지 않음으로 표시됩니다. 자세한 내용은 [\<seealso>](../ide/seealso-visual-cpp.md)를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // xml_permission_tag.cpp  

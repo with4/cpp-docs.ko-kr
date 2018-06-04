@@ -1,5 +1,5 @@
 ---
-title: '&lt;paramref&gt; (Visual c + +) | Microsoft Docs'
+title: '&lt;paramref&gt;(Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,12 +20,13 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: fe6bb2d14b79e8080815967f3a666808f2b6efcc
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326585"
 ---
-# <a name="ltparamrefgt-visual-c"></a>&lt;paramref&gt; (Visual c + +)
-\<paramref > 태그는 단어는 매개 변수를 표시 하는 방식이 제공 합니다. 다른 방식으로이 매개 변수 형식을 지정 하는.xml 파일을 처리할 수 있습니다.  
+# <a name="ltparamrefgt-visual-c"></a>&lt;paramref&gt;(Visual C++)
+\<paramref > 태그를 사용하여 단어가 매개 변수임을 나타낼 수 있습니다. .xml 파일을 처리하여 이 매개 변수의 형식을 고유하게 지정할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>설명  
  [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // xml_paramref_tag.cpp  

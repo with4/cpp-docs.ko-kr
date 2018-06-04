@@ -22,9 +22,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 4595ea9ce27c40fb798ac050ce456c4d43b2cacb
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33328089"
 ---
 # <a name="precompiled-header-files"></a>미리 컴파일된 헤더 파일
 이러한 파일은 미리 컴파일된 헤더 파일 *Projname*.pch와 미리 컴파일된 형식 파일 Stdafx.obj를 빌드하는 데 사용됩니다.  
