@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d4f09ebe0cfaca9bb742baa902a256ac0f92996
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b43f9ac9edb0d19af4002bb839f857ae71ad4a11
+ms.sourcegitcommit: 0bc67d40aa283be42f3e1c7190d6a5d9250ecb9b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34762053"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio의 Visual C++
 
@@ -143,7 +144,7 @@ vcpkg 명령줄 도구를 사용하여 600개가 넘는 C++ 오픈 소스 라이
 [표준 C++](http://isocpp.org/)<br/>
 C++에 대해 알아보기, 최신 C++ 개요 살펴보기, 서적, 문서, 토론 및 이벤트 링크 찾기
 
-[Visual C++ 살펴보기](http://msdn.microsoft.com/vstudio/hh386302.aspx)<br/>
+[Visual C++ 살펴보기](build/vscpp-step-1-create.md)<br/>
 C++를 배우기 시작합니다.
 
 ## <a name="see-also"></a>참고 항목

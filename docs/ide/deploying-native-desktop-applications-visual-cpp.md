@@ -20,10 +20,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4f4aa355c132b4c94f085cbdf7aa73785357d0f0
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34259246"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>네이티브 데스크톱 응용 프로그램 배포(Visual C++)

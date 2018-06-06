@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5ab1ed04b9890fbed8de8b59354ab36d7be063e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33340231"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>MFC 프로그램 또는 컨트롤 소스 및 헤더 파일
 Visual Studio에서 MFC 프로젝트를 만들 때, 생성하는 프로젝트에 대해 선택한 옵션에 따라 다음 파일이 생성됩니다. 예를 들어 사용자 프로젝트는 대화 상자 기반 프로젝트 또는 클래스를 만드는 경우에만 *Projname*dlg.cpp 및 *Projname*dlg.h 파일을 포함합니다.  
   
- 이러한 모든 파일은 *Projname* 디렉터리 및 솔루션 탐색기의 헤더 파일(.h 파일) 폴더 또는 소스 파일(.cpp 파일) 폴더에 있습니다.  
+ 이러한 파일은 모두 *Projname* 디렉터리와 솔루션 탐색기의 헤더 파일(.h 파일) 폴더 또는 원본 파일(.cpp 파일) 폴더에 있습니다.  
   
 |파일 이름|설명|  
 |---------------|-----------------|  

@@ -18,10 +18,10 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d2a7bcb0eead62730f0b70b0b1df64e5ed08f1f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33336097"
 ---
 # <a name="walkthrough-compiling-a-c-program-that-targets-the-clr-in-visual-studio"></a>연습: Visual Studio에서 CLR을 대상으로 하는 C++ 프로그램 컴파일

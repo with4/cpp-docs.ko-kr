@@ -17,10 +17,10 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3a9455fa9bf3c9f903f5018a1263978913aa35b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33333566"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>연습: 프로젝트 테스트(C++)
@@ -32,7 +32,7 @@ ms.locfileid: "33333566"
   
 -   이 연습에서는 사용자가 C++ 언어의 기본적인 사항을 알고 있는 것으로 가정합니다.  
   
--   또한 [C++ 데스크톱 개발에 Visual Studio IDE 사용](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)에 나열된 이전 관련 연습을 완료했다고 가정합니다.  
+-   또한 [Visual Studio IDE를 사용하여 C++ 데스크톱 개발](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)에 나열된 이전 관련 연습을 완료했다고 가정합니다.  
   
 ### <a name="to-run-a-program-in-debug-mode"></a>디버그 모드로 프로그램을 실행하려면  
   

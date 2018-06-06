@@ -26,10 +26,10 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5940f0d6efaec402a4a85ed659f42d7eab1bf91d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33334966"
 ---
 # <a name="specifying-build-events"></a>빌드 이벤트 지정
@@ -46,7 +46,7 @@ ms.locfileid: "33334966"
 
 1. **솔루션 탐색기**에서 빌드 이벤트를 지정할 프로젝트를 선택합니다.
 
-1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [프로젝트 속성 사용](../ide/working-with-project-properties.md)을 참조하세요.
+1. 프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [프로젝트 속성 작업](../ide/working-with-project-properties.md)을 참조하세요.
 
 1. **빌드 이벤트** 폴더에서 빌드 이벤트 속성 페이지를 선택합니다.
 

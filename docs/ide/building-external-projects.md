@@ -19,10 +19,10 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 97b6aa1e5939afe55644df6529bf75ba043f20bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33330348"
 ---
 # <a name="building-external-projects"></a>외부 프로젝트 빌드

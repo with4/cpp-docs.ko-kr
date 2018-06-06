@@ -18,10 +18,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 50bf1bdeeed862ecbc03270e403ccafaf32bfde8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33332818"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Visual C++ 새 항목 추가 템플릿 사용
@@ -64,4 +64,4 @@ ms.locfileid: "33332818"
 |XSLT 파일(.xslt)|XML 문서를 변환하는 데 사용하는 파일을 만듭니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [코드 마법사에서 기능 추가](../ide/adding-functionality-with-code-wizards-cpp.md)
+ [코드 마법사로 기능 추가](../ide/adding-functionality-with-code-wizards-cpp.md)
