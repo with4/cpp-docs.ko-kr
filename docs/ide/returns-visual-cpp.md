@@ -1,5 +1,5 @@
 ---
-title: '&lt;반환&gt; (Visual c + +) | Microsoft Docs'
+title: '&lt;returns&gt;(Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,11 +20,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 7b9956299370b4a41ce725cf903ff2aefe55bf53
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336738"
 ---
-# <a name="ltreturnsgt-visual-c"></a>&lt;반환&gt; (Visual c + +)
+# <a name="ltreturnsgt-visual-c"></a>&lt;returns&gt;(Visual C++)
 \<returns> 태그는 메서드 선언의 주석에서 반환 값을 설명하는 데 사용해야 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>설명  
  [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // xml_returns_tag.cpp  

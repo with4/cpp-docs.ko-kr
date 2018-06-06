@@ -20,7 +20,7 @@ ms.openlocfilehash: d86ea6da8a73d9ba2427e9455c4fca87cd32dd2b
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34703667"
 ---
 # <a name="linker-tools-error-lnk2031"></a>링커 도구 오류 LNK2031

@@ -1,7 +1,7 @@
 ---
 title: x86 내장 목록 | Microsoft Docs
 ms.custom: ''
-ms.date: 1/02/2018
+ms.date: 06/01/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 458cd924e071c92ea4f02ee486b43300c3675b95
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ad931eb1c62c4ee9ed8213704cc4be8d1f2aeecd
+ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753671"
 ---
 # <a name="x86-intrinsics-list"></a>x86 내장 목록
 
@@ -30,13 +31,13 @@ ms.lasthandoff: 05/04/2018
 
 - [Intel 내장 함수 가이드](https://software.intel.com/sites/landingpage/IntrinsicsGuide/)합니다. 검색 상자를 사용하여 특정 내장 기능을 찾습니다.
 
-- [Intel 64 및 ia-32 아키텍처 소프트웨어 개발자 설명서](https://software.intel.com/articles/intel-sdm)
+- [Intel 64 및 ia-32 아키텍처 소프트웨어 개발자 설명서](https://go.microsoft.com/fwlink/p/?LinkID=510021)
 
-- [Intel 아키텍처 명령 집합 확장명 프로그래밍 참조](https://software.intel.com/en-us/isa-extensions)
+- [Intel 아키텍처 명령 집합 확장명 프로그래밍 참조](https://go.microsoft.com/fwlink/p/?linkid=874960)
 
-- [Intel AVX](https://www.intel.com/content/www/us/en/architecture-and-technology/avx-512-overview.html)
+- [Intel 고급 벡터 확장 소개](https://go.microsoft.com/fwlink/p/?linkid=874961)
 
-- [AMD 개발자 가이드, 설명서 및 ISA 문서](https://developer.amd.com/resources/developer-guides-manuals/)
+- [AMD 개발자 가이드, 설명서 및 ISA 문서](https://go.microsoft.com/fwlink/p/?linkid=874958)
 
 다음 테이블에서는 x86 프로세서에서 사용할 수 있는 내장 함수를 나열합니다. 기술 열에서 필요한 명령 집합 지원을 나열합니다. [__cpuid](../intrinsics/cpuid-cpuidex.md) 내장 함수를 사용하여 런타임에서 명령 집합 지원을 확인합니다. 두 항목이 하나의 행에 있는 경우 동일한 내장 함수에 대한 다른 진입점을 나타냅니다. A [1]은 내장 함수를 AMD 프로세서에서만 사용할 수 있음을 나타냅니다. A [2]는 내장 함수를 Intel 프로세서에서만 사용할 수 있음을 나타냅니다. [3]은 프로토타입이 매크로임을 나타냅니다. 함수 프로토타입에 필요한 헤더는 Header 열에 나열됩니다. 간단히 나타내기 위해 intrin.h 헤더에는 immintrin.h 및 ammintrin.h가 모두 포함됩니다.
 

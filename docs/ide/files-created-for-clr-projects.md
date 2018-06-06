@@ -17,21 +17,22 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: b9d66c3f55164a743bc395dc5e9b48f8bcd57654
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334667"
 ---
 # <a name="files-created-for-clr-projects"></a>CLR 프로젝트용 파일
-Visual c + + 서식 파일을 사용 하 여 프로젝트를 만들 때 사용 되는 서식 파일에 따라 여러 개의 파일 생성 됩니다. 다음 표에서.NET Framework 프로젝트에 대 한 프로젝트 템플릿으로 만든 모든 파일을 나열 합니다.  
+Visual C++ 템플릿을 사용하여 프로젝트를 만들 때 사용하는 템플릿에 따라 여러 개의 파일이 생성됩니다. 다음 표에서는 .NET Framework 프로젝트의 프로젝트 템플릿에서 만든 모든 파일을 나열합니다.  
   
 |파일 이름|파일 설명|  
 |---------------|----------------------|  
-|AssemblyInfo.cpp|파일 정보 (즉, 특성, 파일, 리소스, 형식, 버전 관리 정보, 서명 정보 및 등)를 포함 하는 프로젝트의 어셈블리 메타 데이터를 수정 합니다. 자세한 내용은 참조 [어셈블리 개념](/dotnet/framework/app-domains/assembly-contents)합니다.|  
-|*projname*.asmx|관리 되는 XML 웹 서비스의 기능을 캡슐화 하는 클래스를 참조 하는 텍스트 파일입니다.|  
-|*Projname*.cpp|주 소스 파일과 진입점 지점 응용 프로그램에는 Visual Studio를 생성 합니다. 프로젝트.dll 파일과 프로젝트 네임 스페이스를 식별합니다. 이 파일에 사용자 고유의 코드를 제공합니다.|  
-|*projname*.vsdisco|XML 웹 서비스에 설명 하는 다른 리소스에 대 한 링크를 포함 하는 XML 배포 파일.|  
-|*Projname*.h|모든 선언, 전역 기호, 포함 하는 프로젝트에 대 한 주 포함 파일 및 `#include` 다른 헤더 파일에 대 한 지시문입니다.|  
-|*projname*.sln|단일 솔루션으로 프로젝트의 모든 요소를 구성 하는 개발 환경 내에서 사용 되는 솔루션 파일입니다.|  
-|*Projname*.suo|개발 환경 내에서 사용 되는 솔루션 옵션 파일입니다.|  
-|*Projname*.vcxproj|이 프로젝트에 대 한 정보를 저장 하는 개발 환경 내에서 사용 되는 프로젝트 파일입니다.|  
-|ReadMe.txt|각 파일에 템플릿으로 만든 실제 파일 이름을 사용 하 여 프로젝트를 설명 하는 파일입니다.|
+|AssemblyInfo.cpp|프로젝트의 어셈블리 메타데이터를 수정하기 위한 정보(즉, 특성, 파일, 리소스, 형식, 버전 정보, 서명 정보 등)를 포함하는 파일입니다. 자세한 내용은 [어셈블리 개념](/dotnet/framework/app-domains/assembly-contents)을 참조하세요.|  
+|*projname*.asmx|XML Web services의 기능을 캡슐화하는 관리 클래스를 참조하는 텍스트 파일입니다.|  
+|*projname*.cpp|Visual Studio에서 만든 주 원본 파일 및 응용 프로그램에 대한 진입점입니다. 프로젝트 .dll 파일 및 프로젝트 네임스페이스를 식별합니다. 이 파일에 사용자 고유의 코드를 제공합니다.|  
+|*projname*.vsdisco|XML Web services를 설명하는 다른 리소스에 대한 링크를 포함하는 XML 배포 파일입니다.|  
+|*projname*.h|모든 선언, 전역 기호 및 다른 헤더 파일의 `#include` 지시문을 포함하는 프로젝트의 주 포함 파일입니다.|  
+|*projname*.sln|프로젝트의 모든 요소를 단일 솔루션으로 구성하기 위해 개발 환경 내에서 사용되는 솔루션 파일입니다.|  
+|*projname*.suo|개발 환경 내에서 사용되는 솔루션 옵션 파일입니다.|  
+|*projname*.vcxproj|이 프로젝트에 특정된 정보를 저장하는 개발 환경 내에서 사용되는 프로젝트 파일입니다.|  
+|ReadMe.txt|템플릿에서 만든 실제 파일 이름을 사용하여 프로젝트의 각 파일을 설명하는 파일입니다.|

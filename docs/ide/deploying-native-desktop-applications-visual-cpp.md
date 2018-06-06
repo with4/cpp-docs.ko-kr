@@ -1,5 +1,5 @@
 ---
-title: 네이티브 데스크톱 응용 프로그램 (Visual c + +) 배포 | Microsoft Docs
+title: 네이티브 데스크톱 응용 프로그램 배포(Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2018
 ms.technology:
@@ -21,17 +21,18 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 4f4aa355c132b4c94f085cbdf7aa73785357d0f0
 ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34259246"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>네이티브 데스크톱 응용 프로그램 배포(Visual C++)
 
 배포는 다른 컴퓨터에 설치할 완성된 응용 프로그램이나 구성 요소를 배포하는 프로세스입니다. 배포 계획은 개발자의 컴퓨터에 응용 프로그램을 만들 때 시작되고, 응용 프로그램이 설치되고 사용자의 컴퓨터에서 실행할 준비가 되면 배포가 종료됩니다.
 
-Visual Studio는 Windows 응용 프로그램을 배포하는 다양한 기술을 제공합니다. 여기에 ClickOnce 배포 및 Windows Installer 배포가 포함 됩니다.
+Visual Studio는 Windows 응용 프로그램을 배포하는 다양한 기술을 제공합니다. 여기에는 ClickOnce 배포 및 Windows Installer 배포가 포함됩니다.
 
-- ClickOnce를 사용 하 여 공용 언어 런타임 (CLR)를 대상으로 하는 c + + 응용 프로그램을 배포할 수-혼합형, 순수형 및 안정형 어셈블리입니다. Windows Installer를 사용 하 여 관리 되는 응용 프로그램을 배포할 수 있지만 매니페스트 서명과 같은.NET Framework 보안 기능을 사용 하기 때문에 ClickOnce를 사용 하는 것이 좋습니다. ClickOnce는 네이티브 c + + 응용 프로그램의 배포를 지원 하지 않습니다. 자세한 내용은 [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md)를 참조하세요.
+- ClickOnce는 혼합형, 순수형 및 안정형 어셈블리의 CLR(공용 언어 런타임)을 대상으로 하는 C++ 응용 프로그램 배포에 사용할 수 있습니다. Windows Installer를 사용하여 관리되는 응용 프로그램을 배포할 수 있지만 매니페스트 서명과 같은 .NET Framework 보안 기능을 활용할 수 있으므로 ClickOnce를 사용하는 것이 좋습니다. ClickOnce는 네이티브 C++ 응용 프로그램의 배포를 지원하지 않습니다. 자세한 내용은 [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md)를 참조하세요.
 
 - Windows Installer 기술은 네이티브 C++ 응용 프로그램 또는 CLR를 대상으로 하는 C++ 응용 프로그램을 배포하는 데 사용할 수 있습니다.
 
@@ -49,7 +50,7 @@ Visual Studio는 Windows 응용 프로그램을 배포하는 다양한 기술을
 
 - [배포 방법 선택](../ide/choosing-a-deployment-method.md)
 
-- [범용 CRT 배포](universal-crt-deployment.md)합니다.
+- [범용 CRT 배포](universal-crt-deployment.md).
 
 - [Visual C++ 파일 재배포](../ide/redistributing-visual-cpp-files.md)
 
@@ -59,7 +60,7 @@ Visual Studio는 Windows 응용 프로그램을 배포하는 다양한 기술을
 
 - [Visual C++ 응용 프로그램의 ClickOnce 배포](../ide/clickonce-deployment-for-visual-cpp-applications.md)
 
-- [이전 런타임 버전에서 c + + /clr 응용 프로그램 실행](../ide/running-a-cpp-clr-application-on-a-previous-runtime-version.md)
+- [이전 버전의 런타임에서 C++ /clr 응용 프로그램 실행](../ide/running-a-cpp-clr-application-on-a-previous-runtime-version.md)
 
 ## <a name="related-sections"></a>관련 단원
 
