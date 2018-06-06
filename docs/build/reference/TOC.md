@@ -204,7 +204,7 @@
 ### [/DELAY(가져오기 설정 로드 지연)](delay-delay-load-import-settings.md)
 ### [/DELAYLOAD(가져오기 로드 지연)](delayload-delay-load-import.md)
 ### [/DELAYSIGN(어셈블리에 부분적으로 서명)](delaysign-partially-sign-an-assembly.md)
-### [/ DEPENDENTLOADFLAGS (기본 종속 부하 플래그를 설정)](dependentloadflags.md)
+### [/ DEPENDENTLOADFLAG (기본 종속 부하 플래그를 설정)](dependentloadflag.md)
 ### [/DLL(DLL 빌드)](dll-build-a-dll.md)
 ### [/DRIVER(Windows NT 커널 모드 드라이버)](driver-windows-nt-kernel-mode-driver.md)
 ### [/DYNAMICBASE(주소 공간 레이아웃을 임의로 지정)](dynamicbase-use-address-space-layout-randomization.md)

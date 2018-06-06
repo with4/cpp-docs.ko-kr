@@ -1,5 +1,5 @@
 ---
-title: 리소스 속성 페이지를 관리 되는 | Microsoft Docs
+title: 관리되는 리소스 속성 페이지 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,27 +20,28 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 2922a0a92a121d6838478daaf2c32f1c7a630d21
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340361"
 ---
 # <a name="managed-resources-property-page"></a>관리되는 리소스 속성 페이지
-리소스 컴파일러에 대 한 설정을 사용 하도록 설정 합니다.  
+리소스 컴파일러에 대한 설정을 사용하도록 설정합니다.  
   
- **관리 되는 리소스** 속성 페이지에는 다음 속성이 포함 됩니다.  
+ **관리되는 리소스** 속성 페이지에는 다음과 같은 속성이 포함되어 있습니다.  
   
- **리소스의 논리적 이름**  
- 지정 된 *논리적 이름* 생성 된 중간.resources 파일의 합니다. 논리적 이름은 리소스를 로드 하는 데 사용 하는 이름이입니다. 논리적 이름이 없는 지정 하는 경우 리소스 (.resx) 파일 이름은 논리적 이름으로 사용 됩니다.  
+ **리소스 논리적 이름**  
+ 생성된 중간 .resources 파일의 *논리적 이름*을 지정합니다. 논리적 이름은 리소스를 로드하는 데 사용되는 이름입니다. 논리적 이름이 지정되지 않는 경우 리소스(.resx) 파일 이름이 논리적 이름으로 사용됩니다.  
   
  **출력 파일 이름**  
- 리소스 (.resx) 파일에 영향을 주는 최종 출력 파일의 이름을 지정 합니다.  
+ 리소스(.resx) 파일이 적용되는 최종 출력 파일 이름을 지정합니다.  
   
- **기본 지역화 된 리소스**  
- 지정된 된.resx 파일을 기본 리소스 또는 위성.dll 기여 있는지 여부를 지정 합니다.  
+ **기본 지역화 리소스**  
+ 기존 .resx 파일이 기본 리소스 또는 위성 .dll에 적용되는지 여부를 지정합니다.  
   
- 액세스 하는 방법에 대 한 내용은 **관리 되는 리소스** 속성 페이지 참조 [프로젝트 속성 작업](../ide/working-with-project-properties.md)합니다.  
+ **관리되는 리소스** 속성 페이지에 액세스하는 방법에 대한 자세한 내용은 [프로젝트 속성 작업](../ide/working-with-project-properties.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [RC (RC 명령줄)를 사용 하 여](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
+ [RC(RC 명령줄) 사용](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
  [속성 페이지](../ide/property-pages-visual-cpp.md)   
  [/ASSEMBLYRESOURCE(관리되는 리소스 포함)](../build/reference/assemblyresource-embed-a-managed-resource.md)

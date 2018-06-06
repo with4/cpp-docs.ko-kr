@@ -22,7 +22,7 @@ ms.openlocfilehash: 98560841b40b7bb4691222dfa254f06a071b07da
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34704635"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>혼합된 모드에서 순수 intermediate language로 프로젝트를 변환

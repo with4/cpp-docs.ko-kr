@@ -1,5 +1,5 @@
 ---
-title: Visual c + + 도구 및 Visual Studio 버전의 기능 | Microsoft Docs
+title: Visual Studio 버전의 Visual C++ 도구 및 기능 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2018
 ms.technology:
@@ -18,11 +18,12 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: a5eace3ef3cfd07847c995151554ba70ca23f820
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337251"
 ---
-# <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Visual c + + 도구 및 Visual Studio 버전의 기능
+# <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Visual Studio 버전의 Visual C++ 도구 및 기능
 
 다음 표에는 Visual Studio에서 사용할 수 있는 Visual C++ 기능이 나와 있습니다. 셀에 X가 있으면 해당 기능을 사용할 수 있음을 나타내고, 셀이 비어 있으면 해당 기능을 사용할 수 없음을 나타냅니다. 괄호 안의 참고 사항은 해당 기능을 사용할 수 있지만 제한됨을 나타냅니다.
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/04/2018
 |플랫폼|Visual Studio Express for Windows 10|Visual Studio Express for Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|
 |Windows 바탕 화면||X|X|X|
 |범용 Windows 플랫폼(휴대폰, 태블릿, PC, Xbox, IoT 및 HoloLens)|X||X|X|
-|Microsoft 스토어 8.1|||X|X|
+|Microsoft Store 8.1|||X|X|
 |Windows Phone 8.0|||X|X|
 |Android|||X|X|
 |iOS|||X|X|
@@ -65,10 +66,10 @@ ms.lasthandoff: 05/04/2018
 |--------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |UWP, Windows 8.1, Windows Phone 8.0용 XAML 템플릿|X||X|X|
 |Direct3D 응용 프로그램|X||X|X|
-|DLL (유니버설 Windows)|X||X|X|
-|정적 라이브러리 (유니버설 Windows)|X||X|X|
+|DLL(유니버설 Windows)|X||X|X|
+|정적 라이브러리(유니버설 Windows)|X||X|X|
 |Windows 런타임 구성 요소|X||X|X|
-|단위 테스트 앱 (유니버설 Windows)|X||X|X|
+|단위 테스트 앱(유니버설 Windows)|X||X|X|
 |ATL 프로젝트|||X|X|
 |클래스 라이브러리(CLR)||X|X|X|
 |CLR 콘솔 응용 프로그램||X|X|X|

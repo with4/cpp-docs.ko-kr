@@ -20,7 +20,7 @@ ms.openlocfilehash: 8ddf078420da8aba170bbd21a0db775f9246cea4
 ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34703644"
 ---
 # <a name="compiler-error-c2435"></a>컴파일러 오류 C2435

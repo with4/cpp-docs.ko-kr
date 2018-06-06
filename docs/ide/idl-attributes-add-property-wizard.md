@@ -1,5 +1,5 @@
 ---
-title: 추가 속성 마법사, IDL 특성 | Microsoft Docs
+title: 속성 추가 마법사, IDL 특성 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,41 +16,42 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 77931296d8d33337c4e630b7327a1ec8fd0a458f
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340192"
 ---
 # <a name="idl-attributes-add-property-wizard"></a>속성 추가 마법사, IDL 특성
-속성 추가 마법사의이 페이지를 사용 하 여 속성에 대 한 인터페이스 정의 (IDL) 언어 설정을 지정 합니다.  
+이 속성에 대한 IDL(인터페이스 정의 언어) 설정을 지정하려면 이 속성 추가 마법사 페이지를 사용합니다.  
   
  **ID**  
- 속성을 식별 하는 숫자 ID를 설정 합니다. 이 옵션은 사용자 지정 인터페이스의 속성에 사용할 수 없습니다. 참조 [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) 에 *MIDL 참조*합니다.  
+ 속성을 식별하는 숫자 ID를 설정합니다. 이 옵션은 사용자 지정 인터페이스의 속성에 사용할 수 없습니다. *MIDL 참조*에서 [id](http://msdn.microsoft.com/library/windows/desktop/aa367040)를 확인합니다.  
   
  **helpcontext**  
- 사용자는 도움말 파일에서이 속성에 대 한 정보를 볼 수 있는 컨텍스트 ID를 지정 합니다. 참조 [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) 에 *MIDL 참조*합니다.  
+ 도움말 파일에서 이 속성에 대한 정보를 볼 수 있는 컨텍스트 ID를 지정합니다. *MIDL 참조*에서 [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851)를 확인합니다.  
   
  **helpstring**  
- 적용 되는 요소에 설명 하는 데 사용 되는 문자열을 지정 합니다. 기본적으로 설정은 "속성 *속성 이름*." 참조 [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) 에 *MIDL 참조*합니다.  
+ 적용되는 요소를 설명하는 데 사용되는 문자열을 지정합니다. 기본적으로 "속성 *속성 이름*"으로 설정됩니다. *MIDL 참조*에서 [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856)을 확인합니다.  
   
 ## <a name="other-options"></a>기타 옵션  
- 일부 옵션은 모든 속성 유형에 사용할 수 있습니다.  
+ 일부 옵션은 모든 속성 유형에 대해 사용할 수 있습니다.  
   
 |옵션|설명|  
 |------------|-----------------|  
-|**bindable**|속성이 데이터 바인딩을 지원 하는지 나타냅니다. 참조 [바인딩 가능한](http://msdn.microsoft.com/library/windows/desktop/aa366738) 에 *MIDL 참조*합니다. 속성 스톡 구현에 대 한이 옵션은 기본적으로 설정 하 고은 변경할 수 없습니다.|  
-|**defaultbind**|나타낸다는 것을 의미이 최상의 바인딩할 수 있는 단일 속성 개체입니다. 참조 [defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) 에 *MIDL 참조*합니다.|  
-|**displaybind**|이 속성으로 바인딩할 수 있는 사용자에 게 표시할지 나타냅니다. 참조 [displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) 에 *MIDL 참조*합니다.|  
-|**immediatebind**|데이터 바인딩된 개체의이 속성에 대 한 모든 변경의 데이터베이스를 즉시 된다는 있는지를 나타냅니다. 참조 [immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045) 에 *MIDL 참조*합니다.|  
-|**defaultcollelem**|속성은 기본 컬렉션의 요소에 대 한 접근자 함수 임을 나타냅니다. 참조 [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) 에 *MIDL 참조*합니다.|  
-|**nonbrowsable**|속성 브라우저에 표시 될 인터페이스 또는 dispinterface 멤버를 태그를 삽입 합니다. 참조 [nonbrowsable](http://msdn.microsoft.com/library/windows/desktop/aa367117) 에 *MIDL 참조*합니다.|  
-|**requestedit**|속성을 지원 하는지 나타냅니다는 **OnRequestEdit** 알림 참조 [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) 에 *MIDL 참조*합니다. 속성 스톡 구현에 대 한이 옵션은 기본적으로 설정 하 고은 변경할 수 없습니다.|  
-|**소스**|이벤트의 소스 속성의 멤버 임을 나타냅니다. 참조 [소스](http://msdn.microsoft.com/library/windows/desktop/aa367166) 에 *MIDL 참조*합니다.|  
-|**hidden**|속성이 있지만 하지 사용자 기반 브라우저에 표시할지 나타냅니다. 참조 [숨겨진](http://msdn.microsoft.com/library/windows/desktop/aa366861) 에 *MIDL 참조*합니다.|  
-|**restricted**|속성 임의로 호출할 수 없도록 지정 합니다. 참조 [제한](http://msdn.microsoft.com/library/windows/desktop/aa367157) 에 *MIDL 참조*합니다.|  
-|`local`|원격 속성이 아님을 MIDL 컴파일러에 지정 합니다. 참조 [로컬](http://msdn.microsoft.com/library/windows/desktop/aa367071) 에 *MIDL 참조*합니다.|  
+|**bindable**|속성이 데이터 바인딩을 지원합니다. *MIDL 참조*에서 [bindable](http://msdn.microsoft.com/library/windows/desktop/aa366738)을 확인합니다. 속성의 스톡 구현의 경우 기본적으로 이 옵션이 설정되며 변경할 수 없습니다.|  
+|**defaultbind**|개체를 가장 잘 나타내는 하나의 바인딩할 수 있는 속성입니다. *MIDL 참조*에서 [defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790)를 확인합니다.|  
+|**displaybind**|사용자에게 바인딩할 수 있는 속성으로 표시합니다. *MIDL 참조*에서 [displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804)를 확인합니다.|  
+|**immediatebind**|데이터 바인딩된 개체의 이 속성에 대한 모든 변경 내용을 데이터베이스에 즉시 알립니다. *MIDL 참조*에서 [immediatebind](http://msdn.microsoft.com/library/windows/desktop/aa367045)를 확인합니다.|  
+|**defaultcollelem**|속성은 기본 컬렉션의 요소에 대한 접근자 함수입니다. *MIDL 참조*에서 [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792)을 확인합니다.|  
+|**nonbrowsable**|속성 브라우저에 표시하지 않아야 할 인터페이스 또는 dispinterface 멤버를 태그합니다. *MIDL 참조*에서 [nonbrowsable](http://msdn.microsoft.com/library/windows/desktop/aa367117)을 확인합니다.|  
+|**requestedit**|속성이 **OnRequestEdit** 알림을 지원합니다. *MIDL 참조*에서 [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155)을 확인합니다. 속성의 스톡 구현의 경우 기본적으로 이 옵션이 설정되며 변경할 수 없습니다.|  
+|**source**|속성의 멤버가 이벤트의 소스입니다. *MIDL 참조*에서 [source](http://msdn.microsoft.com/library/windows/desktop/aa367166)를 확인합니다.|  
+|**hidden**|속성이 존재하지만 사용자 기반 브라우저에는 표시되지 않아야 합니다. *MIDL 참조*에서 [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861)을 확인합니다.|  
+|**restricted**|임의로 속성을 호출할 수 없도록 지정합니다. *MIDL 참조*에서 [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157)를 확인합니다.|  
+|`local`|속성이 원격이 아니라고 MIDL 컴파일러에 지정합니다. *MIDL 참조*에서 [local](http://msdn.microsoft.com/library/windows/desktop/aa367071)을 확인합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [속성 추가](../ide/adding-a-property-visual-cpp.md)   
- [이름, 속성 추가 마법사](../ide/names-add-property-wizard.md)   
+ [속성 추가 마법사, 이름](../ide/names-add-property-wizard.md)   
  [인터페이스 구현](../ide/implementing-an-interface-visual-cpp.md)   
  [스톡 속성](../ide/stock-properties.md)
