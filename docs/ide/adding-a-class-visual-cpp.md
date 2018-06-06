@@ -19,10 +19,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 14e16d8b5c15939adb792a96a828bafd07ba4041
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33333286"
 ---
 # <a name="adding-a-class-visual-c"></a>클래스 추가(Visual C++)
@@ -52,4 +52,4 @@ Visual C++ 프로젝트에서 클래스를 추가하려면 **솔루션 탐색기
  [폼 기반 MFC 응용 프로그램 만들기](../mfc/reference/creating-a-forms-based-mfc-application.md)   
  [클래스 추가 대화 상자](../ide/add-class-dialog-box.md)   
  [응용 프로그램 마법사를 사용하여 데스크톱 프로젝트 만들기](../ide/creating-desktop-projects-by-using-application-wizards.md)   
- [코드 마법사에서 기능 추가](../ide/adding-functionality-with-code-wizards-cpp.md)
+ [코드 마법사로 기능 추가](../ide/adding-functionality-with-code-wizards-cpp.md)

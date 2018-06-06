@@ -20,10 +20,10 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: e1753c63673b9dd083e2b690788801bd467938c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33335538"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>연습: 프로그램 배포(C++)
@@ -35,7 +35,7 @@ ms.locfileid: "33335538"
   
 -   이 연습에서는 사용자가 C++ 언어의 기본적인 사항을 알고 있는 것으로 가정합니다.  
   
--   또한 [C++ 데스크톱 개발에 Visual Studio IDE 사용](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)에 나열된 이전 관련 연습을 완료했다고 가정합니다.  
+-   또한 [Visual Studio IDE를 사용하여 C++ 데스크톱 개발](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)에 나열된 이전 관련 연습을 완료했다고 가정합니다.  
   
 -   Visual Studio Express Edition에서는 이 연습을 수행할 수 없습니다.  
   

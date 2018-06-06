@@ -20,10 +20,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f156d69467f00c4c4a62ec84d3b870e2999d7115
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33327462"
 ---
 # <a name="nmake-property-page"></a>NMake 속성 페이지

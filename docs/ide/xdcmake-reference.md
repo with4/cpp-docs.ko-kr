@@ -17,10 +17,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 383347dc5cd1ce0dcadff6bdee802b90fd52e85d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33333907"
 ---
 # <a name="xdcmake-reference"></a>XDCMake 참조
@@ -28,7 +28,7 @@ xdcmake.exe는 .xdc 파일을 .xml 파일로 컴파일하는 프로그램입니�
   
 ### <a name="to-use-xdcmakeexe-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 xdcmake.exe를 사용하려면  
   
-1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [프로젝트 속성 사용](../ide/working-with-project-properties.md)을 참조하세요.  
+1.  프로젝트의 **속성 페이지** 대화 상자를 엽니다. 자세한 내용은 [프로젝트 속성 작업](../ide/working-with-project-properties.md)을 참조하세요.  
   
 2.  **구성 속성** 폴더를 엽니다.  
   

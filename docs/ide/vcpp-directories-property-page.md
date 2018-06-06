@@ -24,10 +24,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 3acaccff2e2764f4fd7f6f4815f5721f0ba845a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33336084"
 ---
 # <a name="vc-directories-property-page-windows"></a>VC++ 디렉터리 속성 페이지
@@ -111,4 +111,4 @@ IntelliSense에 사용할 소스 파일을 검색할 디렉터리입니다.
 
 ## <a name="sharing-the-settings"></a>설정 공유
 
-프로젝트 속성을 다른 사용자 또는 여러 컴퓨터와 공유할 수 있습니다. 자세한 내용은 [프로젝트 속성 사용](../ide/working-with-project-properties.md)을 참조하세요.
+프로젝트 속성을 다른 사용자 또는 여러 컴퓨터와 공유할 수 있습니다. 자세한 내용은 [프로젝트 속성 작업](../ide/working-with-project-properties.md)을 참조하세요.

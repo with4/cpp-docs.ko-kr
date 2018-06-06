@@ -21,10 +21,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 55a2bb282d19a48cfd510056e327e7abca4de4ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33337043"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>코드 마법사로 기능 추가(C++)
@@ -59,7 +59,7 @@ ms.locfileid: "33337043"
 -   [클래스 뷰 창](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)에서 적절한 노드를 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **추가**를 클릭하면, 함수, 변수, 클래스, 속성, 메서드, 이벤트, 인터페이스, 연결 지점 또는 다른 코드를 프로젝트에 추가할 수 있습니다.  
   
     > [!NOTE]
-    >  Visual Studio에서는 프로젝트에 인터페이스를 추가하는 마법사를 제공하지 않습니다. [ATL 단순 개체 마법사](../atl/reference/atl-simple-object-wizard.md)를 통해 단순 개체를 추가하여 ATL 프로젝트 또는 [MFC 프로젝트에 ATL 지원 추가](../mfc/reference/adding-atl-support-to-your-mfc-project.md)에 인터페이스를 추가할 수 있습니다. 또는 프로젝트의 .idl 파일을 열고 다음을 입력하여 인터페이스를 만듭니다.  
+    >  Visual Studio에서는 프로젝트에 인터페이스를 추가하는 마법사를 제공하지 않습니다. [ATL 단순 개체 마법사](../atl/reference/atl-simple-object-wizard.md)로 간단한 개체를 추가하여 ATL 프로젝트에 인터페이스를 추가하거나 [MFC 프로젝트에 ATL 지원을 추가](../mfc/reference/adding-atl-support-to-your-mfc-project.md)할 수 있습니다. 또는 프로젝트의.idl 파일을 열고 다음을 입력하여 인터페이스를 만듭니다.  
   
     ```  
     interface IMyInterface {  

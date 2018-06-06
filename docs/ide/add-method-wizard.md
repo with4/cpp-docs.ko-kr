@@ -18,10 +18,10 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: cc2ebd18640f0ab778cb45252691e63206861d53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "33340348"
 ---
 # <a name="add-method-wizard"></a>메서드 추가 마법사
