@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e9cd1a0ba57b5a2f0d5afb2d02ff9c21b7e0b2c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: d6912d410018966432ef66331354213bd70dfa8b
+ms.sourcegitcommit: e3b4ef19b534a2ed48bb9091e5197a6e536f16c1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705428"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34814341"
 ---
 # <a name="general-rules-for-operator-overloading"></a>연산자 오버로드에 대한 일반 규칙
 다음 규칙은 오버로드된 연산자를 구현하는 방법을 제한합니다. 그러나에 적용 되지 않습니다는 [새](../cpp/new-operator-cpp.md) 및 [삭제](../cpp/delete-operator-cpp.md) 은 별도로 다루는 연산자.  
@@ -55,7 +55,7 @@ ms.locfileid: "34705428"
   
 -   멤버 함수로 선언된 이항 연산자는 인수를 한 개 사용합니다. 전역 함수로 선언된 경우 인수를 두 개 사용합니다.  
   
--   단항 또는 이항 연산자는 연산자를 사용할 수 있으면 (**&**, **\***, **+**, 및 **-**)를 별도로 각각 사용을 오버 로드할 수 있습니다.  
+-   단항 또는 이항 연산자는 연산자를 사용할 수 있으면 (__&__, __*__, __+__, 및 __-__)를 별도로 각각 사용을 오버 로드할 수 있습니다.  
   
 -   오버로드된 연산자는 기본 인수를 사용할 수 없습니다.  
   
