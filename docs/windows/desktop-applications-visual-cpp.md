@@ -13,14 +13,22 @@ ms.author: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f9c8180288374711db4e6d866c73a0bc8919caf2
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8e7d3612cd306dc2235b9fb4e6051415cba699c5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569796"
 ---
 # <a name="desktop-applications-visual-c"></a>데스크톱 응용 프로그램(Visual C++)
-C++를 이용한 *데스크톱 응용 프로그램*은 전체 Windows API를 모두 사용할 수 있으며 Windows나 시스템 콘솔 창에서 실행할 수 있는 네이티브 응용 프로그램입니다. 데스크톱 응용 프로그램은 Windows XP부터 Windows 10에 이르기까지 실행될 수 있습니다. (Windows XP는 더 이상 공식적으로 지원되지 않으며 이후 도입된 많은 Windows API가 존재합니다.)   데스크톱 응용 프로그램은 Windows 10에서 실행하는 PC, XBox, Windows Phone, Surface Hub 및 기타 장치에서 실행할 수 있는 한 유니버설 Windows 플랫폼(UWP) 앱과 다릅니다. 데스크톱과 UWP 애플리케이션에 대한 차이점은 [기술 선택](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
+C++를 이용한 *데스크톱 응용 프로그램*은 전체 Windows API를 모두 사용할 수 있으며 Windows나 시스템 콘솔 창에서 실행할 수 있는 네이티브 응용 프로그램입니다. 데스크톱 응용 프로그램은 Windows XP부터 Windows 10에 이르기까지 실행될 수 있습니다. (Windows XP는 더 이상 공식적으로 지원되지 않으며 이후 도입된 많은 Windows API가 존재합니다.)
+
+데스크톱 응용 프로그램은 Windows 10에서 실행하는 PC, XBox, Windows Phone, Surface Hub 및 기타 장치에서 실행할 수 있는 한 유니버설 Windows 플랫폼(UWP) 앱과 다릅니다. 데스크톱과 UWP 애플리케이션에 대한 차이점은 [기술 선택](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
+
+
+**데스크톱 브리지** Windows API 설정에서 Windows 10 기존 데스크톱 응용 프로그램 또는 COM 개체를 UWP 앱 패키지를 UWP 터치 또는는 최신에서 Api 호출 등의 기능을 추가할 수 있습니다. 또한 Visual Studio 및 단일에서 함께 패키지 하 고 Windows Api를 사용 하 여 서로 통신 하는 패키지에서 데스크톱 솔루션을 UWP 앱을 추가할 수 있습니다.  
+   
+Visual Studio 2017 15.4 이상 버전에서에서 크게의 기존 데스크톱 응용 프로그램을 패키징 작업을 간소화 하기 위해 Windows 응용 프로그램 패키지 프로젝트를 만들 수 있습니다. 레지스트리 호출에 대해 몇 가지 제한 사항이 적용 또는 데스크톱 응용 프로그램 Api를 사용 하지만 대부분의 경우에서 응용 프로그램 패키지를 실행 하는 동안 유사한 기능을 사용 하는 대체 코드 경로 만들 수 있습니다. 자세한 내용은 참조 [데스크톱 브리지](/windows-uwp/porting/desktop-to-uwp-root)합니다.  
   
  **용어**  
   

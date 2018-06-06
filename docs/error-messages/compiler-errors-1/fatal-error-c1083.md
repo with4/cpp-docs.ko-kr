@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d25914a6b391f54be5b4b60dbbf716436dc4d2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b014ccc46434fd0c3f13689e579ed4798ebcdb2
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569812"
 ---
 # <a name="fatal-error-c1083"></a>심각한 오류 C1083
 
@@ -106,13 +107,15 @@ C1083 오류가 잘못된 버전의 파일이 포함되었음을 나타낼 수�
 
 - 다른을 사용 하 여 파일을 컴파일하 **/analyze** 헤더를 미리 컴파일하는 데 사용 된 컴파일러 옵션 설정입니다. 프로젝트에 대 한 헤더는 미리 컴파일된 경우 모든 사용 해야 동일한 **/analyze** 설정 합니다. 자세한 내용은 [/analyze(코드 분석)](../../build/reference/analyze-code-analysis.md)를 참조하세요.
 
+- 파일 또는 디렉터리 Windows 하위 시스템에서 Linux 용, 디렉터리별 대/소문자 구분을 사용 하도록 설정 만들어졌으며 경로 또는 파일의 지정 된 경우 경로 또는 디스크에 파일의 경우 일치 하지 않습니다.
+
 - 파일, 디렉터리 또는 디스크가 읽기 전용입니다.
 
 - Visual Studio 또는 명령줄 도구 없는 파일 또는 디렉터리를 읽을 수 있는 권한이 충분 합니다. 예를 들어 프로젝트 파일이 Visual Studio 또는 명령줄 도구를 실행 하는 프로세스 보다 서로 다른 소유권이 갖고 있으면이 오류가 발생할 수 있습니다. 경우에 따라 관리자 권한으로 Visual Studio 또는 개발자 명령 프롬프트를 실행 하 여이 문제를 해결할 수 있습니다.
 
 - 파일 핸들이 충분하지 않습니다. 일부 응용 프로그램을 닫은 후 다시 컴파일하십시오. 이러한 경우는 일반적인 상황에서 거의 발생하지 않습니다. 하지만 실제 메모리가 제한된 컴퓨터에서 큰 프로젝트를 빌드하는 경우 발생할 수 있습니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 C1083 오류가 발생 하는 경우 헤더 파일 `"test.h"` 포함 검색 경로에 또는 소스 디렉터리에 존재 하지 않습니다.
 
@@ -127,4 +130,4 @@ IDE 또는 명령줄에서 C/c + + 프로젝트를 빌드하는 방법에 대 �
 
 ## <a name="see-also"></a>참고자료
 
-[MSBuild 속성](/visualstudio/msbuild/msbuild-properties)
+- [MSBuild 속성](/visualstudio/msbuild/msbuild-properties)

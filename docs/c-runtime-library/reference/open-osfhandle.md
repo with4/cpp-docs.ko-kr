@@ -1,7 +1,7 @@
 ---
 title: _open_osfhandle | Microsoft Docs
 ms.custom: ''
-ms.date: 12/12/2017
+ms.date: 05/29/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -34,11 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: beb8c074beeb47274fbae21ea293d0ea55f28d36
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: af3783420389dc008e39c818c39406f0b2af8af5
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569838"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -67,23 +68,22 @@ int _open_osfhandle (
 
 ## <a name="remarks"></a>설명
 
-**_open_osfhandle** 함수 C 런타임 파일 설명자를 할당 하 고 지정 된 운영 체제 파일 핸들에 연결 *osfhandle*합니다. *플래그* 인수가 Fcntl.h에 정의 된 매니페스트 상수 중 하나 이상을에서 형성 하는 정수 식입니다. 매니페스트 상수를 두 개 이상의 형식으로 사용 하는 경우는 *플래그* 인수를 해당 상수는 비트 OR 연산자로 결합 됩니다 ( **&#124;** ).
+**_open_osfhandle** 함수 C 런타임 파일 설명자를 할당 하 고 지정 된 운영 체제 파일 핸들에 연결 *osfhandle*합니다. 컴파일러 경고를 방지 하려면 캐스팅는 *osfhandle* 인수 **처리** 를 **intptr_t**합니다. *플래그* 인수는 하나에서 구성 하는 정수 식 또는에 정의 된 매니페스트 상수 중 \<fcntl.h > 합니다. 매니페스트 상수를 두 개 이상의 형식으로 사용 하는 경우는 *플래그* 인수를 해당 상수는 비트 OR 연산자로 결합 됩니다 ( **&#124;** ).
 
-Fcntl.h 다음 매니페스트 상수를 정의합니다.
+이러한 매니페스트 상수에 정의 된 \<fcntl.h >:
 
-**\_O\_APPEND** 모든 쓰기 작업 전에 파일의 끝에 대 한 파일 포인터를 놓습니다.
+|||
+|-|-|
+**\_O\_추가**|모든 쓰기 작업 전에 파일 포인터를 파일 끝에 배치합니다.
+**\_O\_RDONLY**|읽기 전용으로 파일을 엽니다.
+**\_O\_TEXT**|파일을 텍스트(변환됨) 모드에서 엽니다.
+**\_O\_WTEXT**|파일을 유니코드(변환된 UTF-16) 모드에서 엽니다.
 
-**\_O\_RDONLY** 을 읽기 전용 파일을 엽니다.
-
-**\_O\_텍스트** 텍스트 (변환 됨) 모드에서 파일을 엽니다.
-
-**\_O\_WTEXT** (번역 된 u t F-16)을 유니코드 모드에서 파일을 엽니다.
-
-사용 하 여 열린 파일을 닫으려면 **_open_osfhandle**, 호출 [ \_닫습니다](close.md)합니다. 호출 하 여 기본 OS 파일 핸들도 닫혀 **_close**이므로 Win32 함수를 호출할 필요는 없습니다 **CloseHandle** 원래 핸들입니다. 파일 설명자가 소유 하는 경우는 **파일 &#42;**  다음 호출 하는 스트림 [fclose](fclose-fcloseall.md) 그에 **파일 &#42;**  스트림 파일 설명자를 또한 종료 및 기본 핸들입니다. 이 경우 호출 하지 않으면 **_close** 파일 설명자에 있습니다.
+**_open_osfhandle** 호출 파일 설명자에 Win32 파일 핸들의 소유권을 전송 합니다. 사용 하 여 열린 파일을 닫으려면 **_open_osfhandle**, 호출 [ \_닫습니다](close.md)합니다. 호출 하 여 기본 OS 파일 핸들도 닫혀 **_close**이므로 Win32 함수를 호출할 필요는 없습니다 **CloseHandle** 원래 핸들입니다. 파일 설명자가 소유 하는 경우는 **파일 &#42;**  다음 호출 하는 스트림 [fclose](fclose-fcloseall.md) 그에 **파일 &#42;**  스트림 파일 설명자를 또한 종료 및 기본 핸들입니다. 이 경우 호출 하지 않으면 **_close** 파일 설명자에 있습니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴|필수 헤더|
+|루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
 |**_open_osfhandle**|\<io.h>|
 
