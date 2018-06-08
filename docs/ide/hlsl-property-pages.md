@@ -15,27 +15,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 86bbd23f1c9fcfcc0a19d7a2c1b66f3500d84361
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33323133"
 ---
 # <a name="hlsl-property-pages"></a>HLSL 속성 페이지
-파일이 개별 HLSL 셰이더를 구성 하려면 HLSL 컴파일러 (fxc.exe) 속성 페이지를 사용할 수 있습니다. 속성은 세 가지 범주로 구분 됩니다.  
+HLSL 컴파일러(fxc.exe) 속성 페이지를 사용하여 개별 HLSL 셰이더 파일을 빌드하는 방법을 구성할 수 있습니다. 속성은 세 가지 범주로 나뉩니다.  
   
 -   [HLSL 속성 페이지: 일반](../ide/hlsl-property-pages-general.md)  
   
-     HLSL 컴파일러에 대 한 일반적으로 사용 되는 옵션을 지정 하는 속성을 제공 합니다.  
+     HLSL 컴파일러에 일반적으로 사용되는 옵션을 지정하는 속성을 제공합니다.  
   
 -   [HLSL 속성 페이지: 고급](../ide/hlsl-property-pages-advanced.md)  
   
-     HLSL 컴파일러에 대 한 추가 옵션을 지정 하는 속성을 제공 합니다.  
+     HLSL 컴파일러에 대한 추가 옵션을 지정하는 속성을 제공합니다.  
   
 -   [HLSL 속성 페이지: 출력 파일](../ide/hlsl-property-pages-output-files.md)  
   
-     파일 HLSL 컴파일러에 의해 출력 되 하는 방법을 지정 하는 속성을 제공 합니다.  
+     HLSL 컴파일러가 파일을 출력하는 방법을 지정하는 속성을 제공합니다.  
   
- 사용 하 여 HLSL 컴파일러에 명령줄 인수를 지정할 수 있습니다는 **추가 옵션** 의 속성은 **명령줄** 속성 페이지; 여기에 다른 사용 하 여 구성할 수 없는 인수 HLSL 속성 페이지의 속성입니다. HLSL 컴파일러에 대 한 정보를 참조 하십시오. [효과 컴파일러 도구](http://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409)  
+ **명령줄** 속성 페이지의 **추가 옵션** 속성을 사용하여 HLSL 컴파일러에 명령줄 인수를 지정할 수 있습니다. 여기에는 HLSL 속성 페이지의 다른 속성을 사용하여 구성할 수 없는 인수가 포함됩니다. HLSL 컴파일러에 대한 자세한 내용은 [효과-컴파일러 도구](http://go.microsoft.com/fwlink/p/?LinkID=258285&clcid=0x409)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [속성 페이지](../ide/property-pages-visual-cpp.md)   

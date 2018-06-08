@@ -1,5 +1,5 @@
 ---
-title: '&lt;값&gt; (Visual c + +) | Microsoft Docs'
+title: '&lt;value&gt;(Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,13 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 8e78c8ace8b482baa29fbabaf102a8a1bccadd06
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33325398"
 ---
-# <a name="ltvaluegt-visual-c"></a>&lt;값&gt; (Visual c + +)
-\<값 > 태그를 사용 하면 속성 접근자 메서드 및 속성을 설명 합니다. 참고는 Visual Studio 통합된 개발 환경에서 코드 마법사로 속성을 추가할 때 추가 되는 [ \<요약 >](../ide/summary-visual-cpp.md) 새 속성에 대 한 태그입니다. 그런 다음 \<value> 태그를 수동으로 추가하여 속성이 나타내는 값을 설명해야 합니다.  
+# <a name="ltvaluegt-visual-c"></a>&lt;value&gt;(Visual C++)
+\<value> 태그를 사용하면 속성 및 속성 접근자 메서드를 설명할 수 있습니다. Visual Studio 통합 개발 환경에서 코드 마법사를 사용하여 속성을 추가하면 새 속성에 대해 [\<summary>](../ide/summary-visual-cpp.md) 태그가 추가됩니다. 그런 다음 \<value> 태그를 수동으로 추가하여 속성이 나타내는 값을 설명해야 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="remarks"></a>설명  
  [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // xml_value_tag.cpp  

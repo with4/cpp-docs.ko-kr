@@ -1,5 +1,5 @@
 ---
-title: 추가 클래스 (Visual c + +) | Microsoft Docs
+title: 클래스 추가(Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,36 +19,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 14e16d8b5c15939adb792a96a828bafd07ba4041
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33333286"
 ---
 # <a name="adding-a-class-visual-c"></a>클래스 추가(Visual C++)
-Visual c + + 프로젝트의 클래스에 추가 하려면 **솔루션 탐색기**프로젝트를 마우스 오른쪽 단추로 클릭 하 여 **추가**, 클릭 하 고 **클래스**합니다. 열립니다는 [클래스 추가 대화 상자](../ide/add-class-dialog-box.md) 대화 상자.  
+Visual C++ 프로젝트에서 클래스를 추가하려면 **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고, **추가**를 클릭한 다음, **클래스**를 클릭합니다. 그러면 [클래스 추가 대화 상자](../ide/add-class-dialog-box.md) 대화 상자가 열립니다.  
   
- MFC 또는 ATL.에 이미 존재 하는 클래스에서 다른 이름을 지정 해야 클래스를 추가 하는 경우 라이브러리에 이미 있는 이름을 지정 하면 IDE는 오류 메시지를 표시 합니다.  
+ 클래스를 추가할 때 MFC 또는 ATL에 이미 존재하는 클래스와 다른 이름을 지정해야 합니다. 라이브러리에 이미 있는 이름을 지정하면 IDE에는 오류 메시지가 표시됩니다.  
   
- 프로젝트 명명 규칙에 기존 이름을 사용 해야 하는 경우 다음 변경할 수 있습니다만 이름에 하나 이상 문자의 대/소문자 c + +는 대/소문자 구분 합니다. 예를 들어, 클래스 이름 있지만 `CDocument`, 이름을 지정할 수 있습니다 `cdocument`합니다.  
+ 프로젝트 명명 규칙에서 기존 이름을 사용해야 하는 경우 C++가 대/소문자를 구분하기 때문에 이름 중 하나 이상의 대/소문자를 변경할 수 있습니다. 예를 들어 클래스를 `CDocument`로 명명할 수 없지만 이름을 `cdocument`로 지정할 수 있습니다.  
   
-## <a name="what-kind-of-class-do-you-want-to-add"></a>어떤 종류의 클래스를 추가 하 시겠습니까?  
- 에 **클래스 추가** 확장 대화 상자는 **Visual c + +** 설치 된 템플릿 여러 그룹화 표시 되는 왼쪽된 창에서 노드. 그룹에 포함 **CLR**, **ATL**, **MFC**, 및 **c + +** 합니다. 그룹을 선택 하면 해당 그룹의 사용 가능한 템플릿 목록이 가운데 창에 표시 됩니다. 파일 및 소스 코드는 클래스에 필요한 각 서식 파일에 포함 되어 있습니다.  
+## <a name="what-kind-of-class-do-you-want-to-add"></a>어떤 종류의 클래스를 추가하시겠습니까?  
+ **클래스 추가** 대화 상자의 왼쪽 창에서 **Visual C++** 노드를 확장하면 설치된 템플릿이 여러 개로 그룹화되어 표시됩니다. 그룹에는 **CLR**, **ATL**, **MFC** 및 **C++** 이 포함됩니다. 그룹을 선택하면 해당 그룹에서 사용 가능한 템플릿 목록이 가운데 창에 표시됩니다. 각 템플릿에는 클래스에 필요한 파일 및 소스 코드가 포함되어 있습니다.  
   
- 새 클래스를 생성 하려면 중간 창에서 템플릿을 선택, 클래스에 대 한 이름을 입력 된 **이름** 고 클릭 **추가**합니다. 열립니다는 **클래스 추가 마법사** 클래스에 대 한 옵션을 지정할 수 있도록 합니다.  
+ 새 클래스를 생성하려면 중간 창에서 템플릿을 선택하고, **이름** 상자에 클래스의 이름을 입력하고, **추가**를 클릭합니다. 그러면 클래스의 옵션을 지정할 수 있도록 **클래스 추가 마법사**가 열립니다.  
   
--   MFC 클래스를 만드는 방법에 대 한 자세한 내용은 참조 [MFC 클래스](../mfc/reference/adding-an-mfc-class.md)합니다.  
+-   MFC 클래스를 만드는 방법에 대한 자세한 내용은 [MFC 클래스](../mfc/reference/adding-an-mfc-class.md)를 참조하세요.  
   
--   ATL 클래스를 만드는 방법에 대 한 자세한 내용은 참조 [ATL 단순 개체](../atl/reference/adding-an-atl-simple-object.md)합니다.  
+-   ATL 클래스를 만드는 방법에 대한 자세한 내용은 [ATL 단순 개체](../atl/reference/adding-an-atl-simple-object.md)를 참조하세요.  
   
 > [!NOTE]
->  서식 파일 **MFC에 ATL 지원 추가** 클래스를 만들지 않습니다 하지만 대신 ATL. 사용 하도록 프로젝트를 구성 자세한 내용은 참조 [MFC 프로젝트에 ATL 지원](../mfc/reference/adding-atl-support-to-your-mfc-project.md)합니다.  
+>  템플릿 **MFC에 ATL 지원 추가**에서는 클래스를 만들지 않지만 대신 ATL을 사용하도록 프로젝트를 구성합니다. 자세한 내용은 [MFC 프로젝트의 ATL 지원](../mfc/reference/adding-atl-support-to-your-mfc-project.md)을 참조하세요.  
   
- MFC, ATL 또는 CLR을 사용 하지 않는 c + + 클래스를 사용는 **c + + 클래스** 에서 서식 파일은 **c + +** 설치 된 템플릿 그룹입니다. 자세한 내용은 참조 [일반 c + + 클래스 추가](../ide/adding-a-generic-cpp-class.md)합니다.  
+ C++ 클래스가 MFC, ATL 또는 CLR을 사용하지 않도록 하려면 설치된 템플릿의 **C++** 그룹에서 **C++ 클래스** 템플릿을 사용합니다. 자세한 내용은 [제네릭 C++ 클래스 추가](../ide/adding-a-generic-cpp-class.md)를 참조하세요.  
   
- 두 종류의 양식 기반 c + + 클래스는 사용할 수 있는 합니다. 첫 번째 [CFormView 클래스](../mfc/reference/cformview-class.md) 는 MFC 클래스를 만듭니다. 두 번째는 Windows Forms CLR 클래스를 만듭니다.  
+ 두 종류의 양식 기반 C++클래스가 지원됩니다. 첫 번째 [CFormView 클래스](../mfc/reference/cformview-class.md)는 MFC 클래스를 만듭니다. 두 번째는 Windows Forms CLR 클래스를 만듭니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [폼 기반 MFC 응용 프로그램 만들기](../mfc/reference/creating-a-forms-based-mfc-application.md)   
  [클래스 추가 대화 상자](../ide/add-class-dialog-box.md)   
- [응용 프로그램 마법사를 사용 하 여 데스크톱 프로젝트 만들기](../ide/creating-desktop-projects-by-using-application-wizards.md)   
+ [응용 프로그램 마법사를 사용하여 데스크톱 프로젝트 만들기](../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [코드 마법사로 기능 추가](../ide/adding-functionality-with-code-wizards-cpp.md)

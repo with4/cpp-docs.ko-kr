@@ -39,11 +39,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb0a44414b01d0105f911732bc3dd2662a278158
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bdb9a1f13fcb387aeddf18cc0f734101463bd3eb
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
 
@@ -102,7 +102,7 @@ errno_t _wctomb_s_l(
 
 **wctomb_s** 변환 함수는 *wchar* 인수를 해당 멀티 바이트 문자로에서 결과 저장 하 고 *mbchar*합니다. 모든 프로그램에서 언제든지 이 함수를 호출할 수 있습니다.
 
-경우 **wctomb_s** 와이드 문자 변환 가져가서 바이트 수는 멀티 바이트 문자 (보다 큰는 **MB_CUR_MAX**) 가리키는정수를와이드문자로*pRetValue*합니다. 경우 *wchar* 와이드 null 문자 (L'\ \0')은 **wctomb_s** 채웁니다 *pRetValue* 1입니다. 하는 경우 대상 포인터 *mbchar* 이 NULL 이면 **wctomb_s** 0에 배치 *pRetValue*합니다. 현재 로캘 변환이 가져올 수 없으면 **wctomb_s** 에-1을 넣습니다 *pRetValue*합니다.
+경우 **wctomb_s** 와이드 문자 변환 가져가서 바이트 수는 멀티 바이트 문자 (보다 큰는 **MB_CUR_MAX**) 가리키는정수를와이드문자로*pRetValue*합니다. 경우 *wchar* 와이드 null 문자 (L'\ \0')은 **wctomb_s** 채웁니다 *pRetValue* 1입니다. 하는 경우 대상 포인터 *mbchar* 은 **NULL**, **wctomb_s** 0에 배치 *pRetValue*합니다. 현재 로캘 변환이 가져올 수 없으면 **wctomb_s** 에-1을 넣습니다 *pRetValue*합니다.
 
 **wctomb_s** 로캘 종속 정보에 대 한 현재 로캘을 사용 **_wctomb_s_l** 대신 전달 된 로캘을 사용 한다는 점을 제외 하 고는 동일 합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 

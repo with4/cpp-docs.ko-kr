@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 835d7b1b74c8d465b44ec6274926f0b06d4f1296
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7a7fe51c6f49af4fdd232b860b1f9243c1ea462
+ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753632"
 ---
 # <a name="linker-options"></a>링커 옵션
 
@@ -67,6 +68,7 @@ LINK.exe는 COFF(Common Object File Format) 개체 파일과 라이브러리를 
 |[/DELAY](../../build/reference/delay-delay-load-import-settings.md)|DLL의 지연 로드를 제어합니다.|
 |[/DELAYLOAD](../../build/reference/delayload-delay-load-import.md)|지정한 DLL의 지연 로드를 일으킵니다.|
 |[/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)|어셈블리에 부분적으로 서명합니다.|
+|[/ DEPENDENTLOADFLAG](dependentloadflag.md)|종속 DLL 로드에 기본 플래그를 설정합니다.|
 |[/DLL](../../build/reference/dll-build-a-dll.md)|DLL을 빌드합니다.|
 |[/DRIVER](../../build/reference/driver-windows-nt-kernel-mode-driver.md)|커널 모드 드라이버를 만듭니다.|
 |[/DYNAMICBASE](../../build/reference/dynamicbase-use-address-space-layout-randomization.md)|ASLR(Address Space Layout Randomization) 기능을 사용하여 로드할 때 무작위로 기준 주소를 다시 지정할 수 있는 실행 가능 이미지를 생성할지 여부를 지정합니다.|

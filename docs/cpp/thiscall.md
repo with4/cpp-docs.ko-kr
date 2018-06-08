@@ -17,31 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dccd9e80a23b1636bd869d406824c9997f4cdef
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4912628529ae0b47a5a5b938ab8e6d25a9099510
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34704405"
 ---
 # <a name="thiscall"></a>__thiscall
-## <a name="microsoft-specific"></a>Microsoft 전용  
- `__thiscall` 및 멤버 함수에 사용 되며 가변 인수를 사용 하지 않는 c + + 멤버 함수에 의해 사용 되는 기본 호출 규칙은 호출 규칙입니다. 아래 `__thiscall`, 호출 수신자에 대 한 가능 하지 않은 스택을 정리 `vararg` 함수입니다. 인수를 오른쪽에서 왼쪽으로 스택에서 푸시되는 `this` x86 스택 아니라에 ECX 레지스터를 통해 전달 되 고 포인터 아키텍처.  
-  
- 사용 하는 한 가지 이유 `__thiscall` 클래스 멤버를 가진 함수는 사용 중인 `__clrcall` 기본적으로 합니다. 이 경우 사용할 수 있습니다 `__thiscall` 있도록 개별 멤버 함수의 네이티브 코드에서 호출할 수 있습니다.  
-  
- 로 컴파일할 때 [/clr: pure](../build/reference/clr-common-language-runtime-compilation.md), 모든 함수 및 함수 포인터는 `__clrcall` 달리 지정 되지 않은 합니다. **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다.  
-  
- Visual c + + 2005 이전 버전에서 thiscall 호출 규칙 수 지정 되지 않았습니다. 명시적으로 프로그램에서 때문에 `thiscall` 키워드가 없습니다.  
-  
- `vararg` 멤버 함수는 사용 된 `__cdecl` 호출 규칙입니다. 와 모든 함수 인수는 스택에서 푸시됩니다는 `this` 포인터 마지막 스택에 배치  
-  
- C + +에만 이러한 호출 규칙 적용 되므로 C 이름 데코레이션 구성표가 없습니다.  
-  
- ARM의 및 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 컴퓨터 `__thiscall` 허용 되 고 컴파일러에서 무시 합니다.  
-  
- 비정적 클래스 함수의 경우 함수가 아웃오브 라인으로 정의되면 호출 규칙 한정자를 아웃오브 라인 정의에서 지정하지 않아도 됩니다. 즉, 클래스 비정적 멤버 메서드의 경우 선언하는 동안 지정된 호출 규칙이 정의 시 가정됩니다.  
-  
-**Microsoft 전용 종료**  
-  
-## <a name="see-also"></a>참고 항목  
- [인수 전달 및 명명 규칙](../cpp/argument-passing-and-naming-conventions.md)
+
+**Microsoft 전용**
+
+`__thiscall` 및 멤버 함수에 사용 되며 가변 인수를 사용 하지 않는 c + + 멤버 함수에 의해 사용 되는 기본 호출 규칙은 호출 규칙입니다. 아래 `__thiscall`, 호출 수신자에 대 한 가능 하지 않은 스택을 정리 `vararg` 함수입니다. 인수를 오른쪽에서 왼쪽으로 스택에서 푸시되는 `this` x86 스택 아니라에 ECX 레지스터를 통해 전달 되 고 포인터 아키텍처.
+
+사용 하는 한 가지 이유 `__thiscall` 클래스 멤버를 가진 함수는 사용 중인 `__clrcall` 기본적으로 합니다. 이 경우 사용할 수 있습니다 `__thiscall` 있도록 개별 멤버 함수의 네이티브 코드에서 호출할 수 있습니다.
+
+로 컴파일할 때 [/clr: pure](../build/reference/clr-common-language-runtime-compilation.md), 모든 함수 및 함수 포인터는 `__clrcall` 달리 지정 되지 않은 합니다. **/clr: pure** 및 **/clr: safe** 컴파일러 옵션은 Visual Studio 2015에서는 사용 되지 않으며 Visual Studio 2017에서 지원 되지 않습니다.
+
+Visual c + + 2005 이전 릴리스에서 `__thiscall` 호출 규칙 지정할 수 없습니다 명시적으로 프로그램에서 때문에 `__thiscall` 키워드가 없습니다.
+
+`vararg` 멤버 함수는 사용 된 `__cdecl` 호출 규칙입니다. 와 모든 함수 인수는 스택에서 푸시됩니다는 `this` 포인터 마지막 스택에 배치
+
+C + +에만 이러한 호출 규칙 적용 되므로 C 이름 데코레이션 구성표가 없습니다.
+
+ARM 및 x64 컴퓨터의 경우 `__thiscall` 허용 되 고 컴파일러에서 무시 합니다.
+
+비정적 클래스 함수의 경우 함수가 아웃오브 라인으로 정의되면 호출 규칙 한정자를 아웃오브 라인 정의에서 지정하지 않아도 됩니다. 즉, 클래스 비정적 멤버 메서드의 경우 선언하는 동안 지정된 호출 규칙이 정의 시 가정됩니다.
+
+**Microsoft 전용 종료**
+
+## <a name="see-also"></a>참고자료
+
+- [인수 전달 및 명명 규칙](../cpp/argument-passing-and-naming-conventions.md)

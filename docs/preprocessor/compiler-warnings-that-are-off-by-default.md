@@ -1,6 +1,6 @@
 ---
 title: 기본적으로 해제 되어 있는 컴파일러 경고 | Microsoft Docs
-ms.date: 11/04/2016
+ms.date: 05/30/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -14,31 +14,40 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109f2ef4b494a2af5d52fcc9767b4e3db3833e9f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d311c730781aee70d4b77723ddec98a79407e42a
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705568"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>기본적으로 해제 되어 있는 컴파일러 경고
 
-컴파일러는 대부분의 개발자 하지 않게 하려면 때문에 기본적으로 해제 되어 있는 경고를 포함 합니다. 경우에 따라 스타일 선택 사항을 나타내는 또는 일반적인 구문 이전 코드에서 인지 언어에 대 한 Microsoft 확장을 활용 합니다. 경우에 따라 예기치 않은 또는 정의 되지 않은 동작을 야기할 수 있는 잘못 된 가정을 프로그래머가 자주 확인 영역을 나타냅니다. 이러한 경고 중 일부는 매우 불안정 라이브러리 헤더의 수 있습니다.
+컴파일러는 대부분의 개발자 하지 않게 하려면 때문에 기본적으로 해제 되어 있는 경고를 포함 합니다. 경우에 따라 스타일 선택 사항을 나타내는 또는 일반적인 구문 이전 코드에서 인지 언어에 대 한 Microsoft 확장을 활용 합니다. 경우에 따라 예기치 않은 또는 정의 되지 않은 동작을 야기할 수 있는 잘못 된 가정을 프로그래머가 자주 확인 영역을 나타냅니다. 이러한 경고 중 일부는 매우 불안정 라이브러리 헤더의 수 있습니다. C 런타임 라이브러리 및 c + + 표준 라이브러리는 경고 수준에만 경고가 생성 하기 위한 것 [/W4](../build/reference/compiler-option-warning-level.md)합니다.
 
-다음 옵션 중 하나를 사용 하 여 이러한 경고를 설정할 수 있습니다.
+## <a name="enable-warnings-that-are-off-by-default"></a>기본적으로 해제 되어 있는 경고를 사용 하도록 설정
 
-- **#pragma 경고 (기본값:** *warning_number* **)**  
+일반적으로 해제 되어 기본적으로 다음 옵션 중 하나를 사용 하 여 경고를 설정할 수 있습니다.
+
+- **#pragma 경고 (기본값:** *warning_number* **)**
+
    지정 된 경고 (*warning_number*) 기본 수준에서 사용 하도록 설정 합니다. 경고 설명서에 경고의 기본 수준이 포함되어 있습니다.
 
-- **#pragma warning(** *warning_level* **:** *warning_number* **)**  
+- **#pragma warning(** *warning_level* **:** *warning_number* **)**
+
    지정 된 경고 (*warning_number*) 지정된 된 수준에서 사용 됨 (*warning_level*).
 
-- [/Wall](../build/reference/compiler-option-warning-level.md)  
+- [/Wall](../build/reference/compiler-option-warning-level.md)
+
    **/ 벽** 기본적으로 해제 되어 있는 모든 경고를 활성화 합니다. 사용 하 여 개별 경고 해제할 수 있습니다이 옵션을 사용 하는 경우는 [/wd](../build/reference/compiler-option-warning-level.md) 옵션입니다.
 
-- [/w*lnnnn*](../build/reference/compiler-option-warning-level.md)  
-   이 경고를 통해 *nnnn* 수준에서 *l*합니다.
+- [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
-다음 경고는 기본적으로 해제되어 있습니다.
+   이 경고를 통해 *nnnn* 수준에서 *L*합니다.
+
+## <a name="warnings-that-are-off-by-default"></a>기본적으로 해제 되어 있는 경고
+
+다음과 같은 경고가 Visual Studio 2015 이상 버전에서 기본적으로 해제 됩니다.
 
 |||
 |-|-|
@@ -64,11 +73,12 @@ ms.lasthandoff: 05/07/2018
 |[C4371](../error-messages/compiler-warnings/c4371.md) (수준 3)|'*classname*': 멤버의 압축 기능이 향상 되어 컴파일러의 이전 버전에서 클래스 레이아웃이 변경 될 수 있습니다 '*멤버*'|
 |C4388 (수준 4)|signed 또는 unsigned가 일치하지 않습니다.|
 |[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) (수준 2)|'*함수*': 함수 시그니처에 형식 '*형식*'; C + + 개체는 순수 코드 간에 전달 하는 안전 하지 않은 혼합형 / 네이티브|
-|C4426 (수준 1)|헤더를 포함 한 후 변경 된 최적화 플래그 #pragma optimize() 되었기 때문일 수 있습니다.|
+|C4426 (수준 1)|헤더를 포함 한 후 변경 된 최적화 플래그 #pragma optimize() 되었기 때문일 수 있습니다 <sup>14.1</sup>|
 |[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (수준 4)|'*class1*': 가상 기본으로 인해/v d 2의 개체 레이아웃이 변경 됩니다 '*class2*'|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (수준 4)|가상 기본 사이의 dynamic_cast '*class1*'to'*class2*' 일부 컨텍스트에서 실패할 수 있습니다|
 |C4444 (수준 3)|이 컨텍스트에서는 최상위 '__unaligned'가 구현되지 않았습니다.|
 |[C4464](../error-messages/compiler-warnings/c4464.md) (수준 4)|include에 상대 경로 포함 '..'|
+|[C4471](../error-messages/compiler-warnings/compiler-warning-level-4-c4471.md) (수준 4)|범위가 지정 되지 않은 열거형의 정방향 선언에 (int로 가정)는 내부 형식이 있어야 합니다. <sup>권한</sup>|
 |C 4472 (수준 1)|'*식별자*'가 네이티브 열거형: 관리 되는 열거형을 선언 하려면 액세스 지정자 (전용/공용)를 추가 합니다.|
 |[C4514](../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md) (수준 4)|'*함수*': 참조 되지 않은 인라인 함수를 제거|
 |[C4536](../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md) (수준 4)|'type name': 형식-이름이 메타 데이터 한계인 초과 '*제한*' 문자|
@@ -81,13 +91,16 @@ ms.lasthandoff: 05/07/2018
 |[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) (수준 3)|효과 포함 '__assume' '*효과*'|
 |[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) (수준 4)|변경; Visual c + + 7.1부터 catch (...) 의미 체계를 알림: 구조적된 예외 (SEH) 변경 되었습니다.|
 |C4574 (수준 4)|'*식별자*'같이 정의 됩니다. ' 0': =을 사용 하 여 ' #if *식별자*'?|
+|C4577 (수준 1)|' noexcept' 처리 모드를 지정 합니다; 예외가 함께 사용 예외 시 종료가 보장 되지 않습니다. /EHsc를 지정 합니다.|
 |C4582 (수준 4)|'*형식*': 생성자가 암시적으로 호출 되지 않습니다|
 |C4583 (수준 4)|'*형식*': 소멸자가 암시적으로 호출|
 |C4587 (수준 1)|'*anonymous_structure*': 동작 변경: 생성자가 더 이상 암시적으로 호출|
 |C4588 (수준 1)|'*anonymous_structure*': 동작 변경: 소멸자가 더 이상 암시적으로 호출 되 고 없습니다.|
-|C4598 (수준 1 및 수준 3)|' #include "*헤더*"': 헤더 번호 *번호* 미리 컴파일된 헤더의 해당 위치에서 현재 컴파일의 일치 하지 않습니다|
-|C4599 (수준 3)|'*옵션* *경로*': 명령줄 인수 번호 *번호* 미리 컴파일된 헤더와 일치 하지 않습니다|
+|C4596 (수준 4)|'*식별자*': 멤버 선언의 정규화 된 이름이 잘못 되었습니다. <sup>14.3</sup> <sup>권한</sup>|
+|C4598 (수준 1 및 수준 3)|' #include "*헤더*"': 헤더 번호 *번호* 미리 컴파일된 헤더와 일치 하지 않을 해당 위치에서 현재 컴파일의 <sup>14.3</sup>|
+|C4599 (수준 3)|'*옵션* *경로*': 명령줄 인수 번호 *번호* 미리 컴파일된 헤더와 일치 하지 않습니다 <sup>14.3</sup>|
 |C4605 (수준 1)|' /D*매크로*' 현재 명령줄에 지정 되었지만 미리 컴파일된 헤더 빌드 했을 때 지정 되지 않았습니다|
+|[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) (수준 3)|'*union_member*'가 이미 초기화 되었습니다 이니셜라이저 목록의 다른 공용 구조체 멤버가'*union_member*' <sup>권한</sup>|
 |[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md) (수준 3)|#pragma 경고: 수는 없습니다 경고 '*번호*'|
 |[C4623](../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md) (수준 4)|'derived class': 기본 클래스의 기본 생성자에 액세스할 수 없으므로 기본 생성자를 생성할 수 없습니다.|
 |[C4625](../error-messages/compiler-warnings/compiler-warning-level-4-c4625.md) (수준 4)|'derived class': 기본 클래스의 복사 생성자에 액세스할 수 없으므로 복사 생성자를 생성할 수 없습니다.|
@@ -95,7 +108,7 @@ ms.lasthandoff: 05/07/2018
 |[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) (수준 1)|-Ze에는 digraph가 지원되지 않습니다. 문자 시퀀스 '*digraph*'에 대 한 대체 토큰으로 해석 되지'*char*'|
 |[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) (수준 3)|'*인스턴스*': 지역 정적 개체 생성 스레드로부터 안전 하지 않습니다.|
 |C4647 (수준 3)|동작 변경: __is_pod (*형식*) 이전 버전에 서로 다른 값|
-|C4654 (수준 4)|미리 컴파일된 헤더의 앞에 배치 하는 코드는 무시 됩니다. 미리 컴파일된 헤더에 코드를 추가 합니다.|
+|C4654 (수준 4)|미리 컴파일된 헤더의 앞에 배치 하는 코드는 무시 됩니다. 미리 컴파일된 헤더에 코드를 추가 합니다. <sup>14.1</sup>|
 |[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (수준 4)|'*기호*'에 '0'으로 바뀝니다. 전처리기 매크로로 정의 되지 않은'*지시문*'|
 |[C4682](../error-messages/compiler-warnings/compiler-warning-level-4-c4682.md) (수준 4)|'*기호*': 방향 매개 변수 특성을 지정 하지 [in]를 기본값으로 설정|
 |[C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md) (수준 3)|'*사용자 정의 형식*': 동작 변경 되었을 수, udt 반환 호출 규칙이|
@@ -107,6 +120,7 @@ ms.lasthandoff: 05/07/2018
 |C4767 (수준 4)|섹션 이름 '*기호*' 8 자 보다 긺 및 링커에서 잘립니다|
 |C4768 (수준 3)|링크 사양이 이전 __declspec 특성이 무시 됩니다.|
 |C4774 (수준 4)|'*문자열*': 서식 문자열 인수에 필요한 *번호* 이 문자열 리터럴|
+|C4777 (수준 4)|'*함수*': 서식 문자열 '*문자열*'형식의 인수를 사용 해야'*type1*', 하지만 variadic 인수 *번호* 형식이 '*type2*'|
 |C4786 (수준 3)|'*기호*': 개체 이름으로 잘렸습니다. '*번호*' 디버그 정보에는 문자|
 |[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) (수준 4)|'*바이트*'바이트 채움 문자가 추가 됨' 구문 후*member_name*'|
 |C4826 (수준 2)|변환에서 '*type1*'to'*type2*' 부호가 확장 됩니다. 이렇게 하면 예기치 않은 런타임 동작이 발생할 수 있습니다.|
@@ -131,18 +145,22 @@ ms.lasthandoff: 05/07/2018
 |C5026 (수준 1 및 수준 4)|'*형식*': 이동 생성자가 암시적으로 삭제 된 것으로 정의 됩니다|
 |C5027 (수준 1 및 수준 4)|'*형식*': 이동 할당 연산자가 암시적으로 삭제 된 것으로 정의 됩니다|
 |C5029 (수준 4)|비표준 확장이 사용 됨: 변수, 데이터 멤버 및 태그 형식에만에 c + +의 맞춤 특성 적용|
-|C5031 (수준 4)|#pragma warning(pop): 일치 하지 않을 수, 다른 파일에서 푸시된 경고 상태를 팝 합니다.|
-|C 5032가 발생 (수준 4)|없는 해당 #pragma warning(pop) #pragma warning (push)를 발견 했습니다.|
-|C5035|기능을 사용 하 여 '*기능*' 하면 함수 *함수* 게스트 코드로 컴파일할 수를|
-|C5036 (수준 1)|/hybrid:x86arm64로 컴파일할 때 varargs 함수 포인터 변환이 있습니다. '*type1*'to'*type2*'|
-|[C5038](../error-messages/compiler-warnings/c5038.md)|데이터 멤버 '*member1*'초기화 될 데이터 멤버 뒤'*member2*'|
+|C5031 (수준 4)|#pragma warning(pop): 다른 파일에서 푸시된 경고 상태를 팝 일치 하지 않을 <sup>14.1</sup>|
+|C 5032가 발생 (수준 4)|warning (push) 없는 해당 #pragma warning(pop) #pragma 검색 <sup>14.1</sup>|
+|C5034|내장 함수의 사용 하 여 '*내장*' 하면 함수 *함수* 게스트 코드로 컴파일할 <sup>15.3</sup>|
+|C5035|기능을 사용 하 여 '*기능*' 하면 함수 *함수* 게스트 코드로 컴파일할 <sup>15.3</sup>|
+|C5036 (수준 1)|/hybrid:x86arm64로 컴파일할 때 varargs 함수 포인터 변환이 있습니다. '*type1*'to'*type2*' <sup>15.3</sup>|
+|[C5038](../error-messages/compiler-warnings/c5038.md) (수준 4)|데이터 멤버 '*member1*'초기화 될 데이터 멤버 뒤'*member2*' <sup>15.3</sup>|
+|C5039 (수준 4)|'*함수*': 포인터 또는 함수를 잠재적으로 throw 하는 참조-EHc 아래 extern C 함수에 전달 합니다. 이 함수는 예외를 throw 하는 경우 정의 되지 않은 동작이 발생할 수 있습니다. <sup>15.5</sup>|
+|C5042 (수준 3)|'*함수*': 함수 선언은 블록 범위에서 표준 c + +에서 '인라인'이 지정 된 일 수 없습니다. '인라인' 지정자를 제거 <sup>15.5</sup>|
 
-하지 않는 한 이러한 경고는 해제는 [관대 한 /-](../build/reference/permissive-standards-conformance.md) 컴파일러 옵션을 설정 합니다.
+<sup>14.1</sup> 이 경고는 Visual Studio 2015 업데이트 1부터 사용할 수 있습니다.<br>
+<sup>14.3</sup> 이 경고는 Visual Studio 2015 업데이트 3부터 사용할 수 있습니다.<br>
+<sup>15.3</sup> 이 경고는 Visual Studio 2017 15.3 버전부터 사용할 수 있습니다.<br>
+<sup>15.5</sup> 이 경고는 Visual Studio 2017 15.5 버전부터 사용할 수 있습니다.<br>
+<sup>권한</sup> 하지 않는 한이 경고는 해제 되어는 [관대 한 /-](../build/reference/permissive-standards-conformance.md) 컴파일러 옵션을 설정 합니다.
 
-|||
-|-|-|
-|[C4471 (수준 4)](../error-messages/compiler-warnings/compiler-warning-level-4-c4471.md)|범위가 지정되지 않은 열거형의 정방향 선언에는 내부 형식이 있어야 합니다(int로 가정).|
-|[C4608 (수준 3)](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md)|'*union_member*'가 이미 초기화 되었습니다 이니셜라이저 목록의 다른 공용 구조체 멤버가'*union_member*'|
+## <a name="warnings-off-by-default-in-earlier-versions"></a>이전 버전에서는 기본적으로 경고 해제
 
 이러한 경고의 Visual Studio 2015 이전 컴파일러 버전에서는 기본적으로 해제 했습니다.
 
@@ -153,7 +171,7 @@ ms.lasthandoff: 05/07/2018
 |[C4312](../error-messages/compiler-warnings/compiler-warning-level-1-c4312.md) (수준 1)|'*작업*': 변환할 '*type1*'to'*type2*' 더 큰|
 |[C4319](../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md) (수준 1)|'*연산자*': 0 확장 '*type1*'to'*type2*' 더 큰|
 
-이러한 경고의 Visual Studio 2012 이전의 컴파일러 버전에서는 기본적으로 해제 했습니다.
+이 경고의 Visual Studio 2012 이전의 컴파일러 버전에서는 기본적으로 꺼져 있습니다.
 
 |||
 |-|-|

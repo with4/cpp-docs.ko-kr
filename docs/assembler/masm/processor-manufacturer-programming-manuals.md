@@ -1,7 +1,7 @@
 ---
 title: 프로세서 제조업체 프로그래밍 설명서 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/01/2018
 ms.technology:
 - cpp-masm
 ms.topic: reference
@@ -12,25 +12,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 09da159d982c0a286af36c9345299656772d1b50
-ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
+ms.openlocfilehash: 55d712af448b4e18d853ced3d387918561d235b0
+ms.sourcegitcommit: d1f576a0f59678edc3d93508cf46485138332178
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34753603"
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>프로세서 제조업체 프로그래밍 설명서
-이 문서는 제조, 판매, 또는 하지 Microsoft에서 지 원하는 프로세서에 대 한 프로그래밍 정보를 포함할 수 있는 웹 사이트에 대 한 링크를 제공 합니다. Microsoft는 소유 하거나 웹 사이트 또는에 콘텐츠를 제어 하지 않습니다.  
-  
-## <a name="processor-manufacturer-websites"></a>프로세서 제조업체 웹 사이트  
-  
--   [AMD64 명령 집합 참조 설명서](http://go.microsoft.com/fwlink/p/?LinkID=219796)  
-  
--   [Intel 64 및 ia-32 아키텍처 소프트웨어 개발자 설명서](http://go.microsoft.com/fwlink/p/?LinkID=219798)  
-  
--   [Intel 고급 벡터 확장 (AVX)](http://go.microsoft.com/fwlink/p/?LinkID=219800)  
-  
-## <a name="remarks"></a>설명  
- 모두 [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 하거나 Microsoft Macro Assembler 모든 프로세서를 지원 합니다.  
-  
-## <a name="see-also"></a>참고 항목  
- [Microsoft 매크로 어셈블러 참조](../../assembler/masm/microsoft-macro-assembler-reference.md)
+
+이 문서는 제조, 판매, 또는 하지 Microsoft에서 지 원하는 프로세서에 대 한 프로그래밍 정보를 포함할 수 있는 웹 사이트에 대 한 링크를 제공 합니다. Microsoft는 소유 하거나 웹 사이트 또는에 콘텐츠를 제어 하지 않습니다.
+
+## <a name="processor-manufacturer-websites"></a>프로세서 제조업체 웹 사이트
+
+- [AMD 개발자 가이드, 설명서 및 ISA 문서](https://go.microsoft.com/fwlink/p/?linkid=874958)
+
+- [Intel 64 및 ia-32 아키텍처 소프트웨어 개발자 설명서](https://go.microsoft.com/fwlink/p/?LinkID=510021)
+
+- [Intel 고급 벡터 확장 소개](https://go.microsoft.com/fwlink/p/?linkid=874961)
+
+## <a name="remarks"></a>설명
+
+Visual Studio 나 Microsoft Macro Assembler 모든 프로세서를 지원 합니다.
+
+## <a name="see-also"></a>참고 항목
+
+- [Microsoft 매크로 어셈블러 참조](../../assembler/masm/microsoft-macro-assembler-reference.md)

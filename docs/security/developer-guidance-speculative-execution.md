@@ -1,7 +1,7 @@
 ---
 title: 잘못 된 실행 쪽 채널에 대 한 c + + 개발자 지침 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/03/2018
+ms.date: 05/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -18,25 +18,29 @@ author: mamillmsft
 ms.author: mikeblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a7e7ddb51f07f7fe6be1da017d8feae9cc4919e
-ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
+ms.openlocfilehash: 515e2223e67d86da12488d9880a1a0a258fc4bdf
+ms.sourcegitcommit: 4b2c3b0c720aef42bce7e1e5566723b0fec5ec7f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>잘못 된 실행 쪽 채널에 대 한 c + + 개발자 지침
 
 이 문서를 식별 하 고 c + + 소프트웨어 추론 실행 측면 채널 하드웨어 취약성을 완화을 지원 하기 위해 개발자를 위한 지침을 포함 합니다. 이 트러스트 경계에 걸쳐 중요 한 정보를 공개할 수 문제와 지침의 잘못 된, 순서가의 실행을 지 원하는 프로세서에서 실행 되는 소프트웨어에 영향을 줄 수 있습니다. 이 클래스의 취약점 년 1 월 2018에 설명 된 첫 번째 및 추가 배경 였으며에서 지침을 확인할 수 있습니다 [Microsoft 보안 권고](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)합니다.
 
-이 문서에서 제공 하는 지침 취약점 CVE-2017-5753, 라고도 유령 variant 1 나타내는 클래스와 관련이 있습니다. 이 하드웨어 취약점 클래스에는 조건부 분기 오측 결과로 발생 하는 추론 실행으로 인해 발생할 수 있는 쪽 채널 관련이 있습니다. Visual Studio 2017 (15.5.5 버전부터 시작)에서 Visual c + + 컴파일러에 대 한 지원에는 `/Qspectre` 스위치 CVE-2017-5753 관련 된 잠재적으로 취약 한 코딩 패턴의 제한 된 집합에 대 한 컴파일 시간 완화를 제공 합니다. 에 대 한 설명서는 [/Qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) 플래그 효과 및 사용량에 자세한 정보를 제공 합니다. 
+이 문서에서 제공 하는 지침으로 표시 하는 취약점의 클래스 관련:
+
+1. CVE-2017-5753, 유령 variant 1 라고도 합니다. 이 하드웨어 취약점 클래스에는 조건부 분기 오측 결과로 발생 하는 추론 실행으로 인해 발생할 수 있는 쪽 채널 관련이 있습니다. Visual Studio 2017 (15.5.5 버전부터 시작)에서 Visual c + + 컴파일러에 대 한 지원에는 `/Qspectre` CVE-2017-5753와 관련 된 잠재적으로 취약 한 코딩 패턴의 제한 된 집합에 대 한 컴파일 시간 완화를 제공 하는 스위치입니다. 에 대 한 설명서는 [/Qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) 플래그 효과 및 사용량에 자세한 정보를 제공 합니다.
+
+2. CVE-2018-3639, 또한 다음 이라고 알려집니다 [잘못 된 저장소 사용 안 함 (SSB)](https://aka.ms/sescsrdssb)합니다. 이 하드웨어 취약점 클래스는 잘못 된 실행의 메모리 액세스 오측 결과로 종속 저장소를 미리 로드 되어 발생할 수 있는 쪽 채널 관련이 있습니다.
 
 추론 실행 측면 채널 취약성에 액세스할 수 있는 소개 라는 프레젠테이션에서 있습니다 [유령의 대/소문자 및 Meltdown](https://www.youtube.com/watch?v=_4O0zMW-Zu4) 이러한 문제를 발견 하는 리서치 팀 중 하나에 의해 합니다.
 
 ## <a name="what-are-speculative-execution-side-channel-hardware-vulnerabilities"></a>잘못 된 실행 측면 채널 하드웨어 취약성은 무엇입니까?
 
-최신 Cpu를 늘려 더 높은 수준의 성능 제공 지침의 잘못 된 및의 순서가 실행 사용 합니다. 예를 들어 자주 이렇게 지침 실제 분기 대상이 될 때까지 stall 필요 없도록 하는 예측 된 분기 대상에서 추측을 통해 실행을 시작 하는 CPU 수 있는 분기 (조건부 및 indrect)의 대상 예측 확인. CPU를 나중에 오측 발생 했음을 검색, 추측을 통해 계산 된 컴퓨터 상태가 모두 삭제 됩니다. 이렇게 하면 오측된 추론의 구조적 측면에서 볼 수 영향 않으므로.
+최신 Cpu를 늘려 더 높은 수준의 성능 제공 지침의 잘못 된 및의 순서가 실행 사용 합니다. 예를 들어 자주 이렇게 추측을 통해 예측 된 분기 대상이에 지침을 실행을 시작 하는 CPU 수 있는 분기 (조건부 및 간접)의 대상 예측 stall 필요 없도록 실제 분기 대상이 될 때까지 확인. CPU를 나중에 오측 발생 했음을 검색, 추측을 통해 계산 된 컴퓨터 상태가 모두 삭제 됩니다. 이렇게 하면 오측된 추론의 구조적 측면에서 볼 수 영향 않으므로.
 
-추론 실행 architecturaly 표시 상태에 영향을 주지 않습니다, 동안 잔여 추적 CPU에서 사용 되는 다양 한 캐시 등의 비 아키텍처 상태에서 비워 둘 수 있습니다. 이러한 잔여 추적 쪽 채널 취약점이 발생할 수 있습니다 추론 실행의 경우 이 더 잘 이해 하려면 CVE 2017 5753 (범위 확인 바이패스)의 예를 제공 하는 다음 코드 조각을 고려 합니다.
+추론 실행에 아키텍처 표시 상태 영향을 주지 않습니다, 동안 잔여 추적 CPU에서 사용 되는 다양 한 캐시 등의 비 아키텍처 상태에서 비워 둘 수 있습니다. 이러한 잔여 추적 쪽 채널 취약점이 발생할 수 있습니다 추론 실행의 경우 이 더 잘 이해 하려면 CVE 2017 5753 (범위 확인 바이패스)의 예를 제공 하는 다음 코드 조각을 고려 합니다.
 
 ```cpp
 // A pointer to a shared memory region of size 1MB (256 * 4096)
@@ -50,7 +54,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 }
 ```
 
-이 예제에서는 `ReadByte` 은 해당 버퍼에 버퍼, 버퍼 크기 및 인덱스를 제공 합니다. 인덱스 매개 변수에서 지정한 대로 `untrusted_index`, 작음에서 제공 되는 관리자가 아닌 프로세스와 같은 권한 있는 컨텍스트. 경우 `untrusted_index` 는 보다 작은 `buffer_size`, 해당 인덱스에 있는 문자가에서 읽은 다음 `buffer` 되 고 공유에서 참조 하는 메모리 영역에 인덱스에 사용 된 `shared_buffer`합니다.
+이 예제에서는 `ReadByte` 은 해당 버퍼에 버퍼, 버퍼 크기 및 인덱스를 제공 합니다. 인덱스 매개 변수에서 지정한 대로 `untrusted_index`, 작음에서 제공 되는 관리자가 아닌 프로세스와 같은 권한 있는 컨텍스트. 경우 `untrusted_index` 는 보다 작은 `buffer_size`, 해당 인덱스에 있는 문자가에서 읽은 다음 `buffer` 되 고 공유에서 참조 하는 메모리 영역에 인덱스에 사용 된 `shared_buffer`합니다. 
 
 아키텍처 측면에서 볼 때이 코드 시퀀스는 완벽 하 게 안전 변수 처럼 `untrusted_index` 항상 미만 `buffer_size`합니다. 그러나, 추론 실행 있을 수는 CPU 조건부 분기를 오측 되며 if의 본문을 실행 문의 경우에 `untrusted_index` 보다 크거나 같으면 `buffer_size`합니다. 결과적으로 CPU의 범위에서 일어난 바이트 읽을 추측을 통해 수 `buffer` (암호 일 수 있는)를 통해 후속 부하의 주소를 계산 하는 바이트 값을 사용할 수 없습니다 및 `shared_buffer`합니다. 
 
@@ -68,16 +72,16 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ## <a name="what-software-scenarios-can-be-impacted"></a>어떤 소프트웨어 시나리오는 영향을 받을 수 있습니까?
 
-와 같은 프로세스를 사용 하는 보안 소프트웨어 개발의 [보안 개발 수명 주기](https://www.microsoft.com/en-us/sdl/) SDL ()가 응용 프로그램에 존재 하는 트러스트 경계를 식별 하는 개발자는 일반적으로 필요 합니다. 트러스트 경계 응용 프로그램 시스템의 다른 프로세스 또는 커널 모드 장치 드라이버의 경우 관리자가 아닌 사용자 모드 프로세스와 같은 신뢰할 수 없는 컨텍스트에 의해 제공 되는 데이터 작용할 수 있는 위치에 있습니다. 새 클래스 추론 실행 쪽 채널을 포함 하는 취약점의 다양 한 코드 및 장치에서 데이터를 격리 하는 기존 소프트웨어 보안 모델의 트러스트 경계와 관련 됩니다.
+와 같은 프로세스를 사용 하는 보안 소프트웨어 개발의 [보안 개발 수명 주기](https://www.microsoft.com/en-us/sdl/) SDL ()가 응용 프로그램에 존재 하는 트러스트 경계를 식별 하는 개발자는 일반적으로 필요 합니다. 트러스트 경계 응용 프로그램 시스템의 다른 프로세스 또는 커널 모드 장치 드라이버의 경우 관리자가 아닌 사용자 모드 프로세스와 같은 신뢰할 수 없는 컨텍스트에 의해 제공 되는 데이터 작용할 수 있는 위치에 있습니다. 새 클래스 추론 실행 쪽 채널을 포함 하는 취약점의 다양 한 코드 및 장치에서 데이터를 격리 하는 기존 소프트웨어 보안 모델의 트러스트 경계와 관련 됩니다. 
 
 다음 표에서 이러한 취약점을 발생에 대 한 고려 개발자가 할 수 있는 소프트웨어 보안 모델의 요약을 제공 합니다.
 
 |신뢰 경계|설명|
 |----------------|----------------|
-|가상 컴퓨터 경계|다른 가상 컴퓨터에서 신뢰할 수 없는 데이터를 수신 하는 별도 가상 컴퓨터에서 작업을 격리 하는 응용 프로그램 공격의 대상이 될 수 있습니다.|
-|커널 경계|커널 모드 장치 드라이버 관리자가 아닌 사용자 모드 프로세스에서 신뢰할 수 없는 데이터를 받는 공격의 대상이 될 수 있습니다.|
+|가상 컴퓨터 경계|다른 가상 컴퓨터에서 신뢰할 수 없는 데이터를 수신 하는 별도 가상 컴퓨터에서 작업을 격리 하는 응용 프로그램 공격의 대상이 될 수 있습니다.| 
+|커널 경계|커널 모드 장치 드라이버 관리자가 아닌 사용자 모드 프로세스에서 신뢰할 수 없는 데이터를 받는 공격의 대상이 될 수 있습니다.| 
 |프로세스 경계|원격 프로시저 호출 (RPC), 공유 메모리 또는 다른 프로세스 간 통신 (IPC)를 통해 메커니즘 위험에 노출 될 수와 같은 로컬 시스템에서 실행 되는 다른 프로세스에서 신뢰할 수 없는 데이터를 수신 하는 응용 프로그램.|
-|영토 경계|받는 트러스트는 영토 외부의 데이터를 위험에 노출 될 수 있습니다 않은 (예: Intel SGX) 보안 영토 내에서 실행 되는 응용 프로그램입니다.|
+|영토 경계|영토 외부의 신뢰할 수 없는 데이터를 수신 하는 (예: Intel SGX) 보안 영토 내에서 실행 되는 응용 프로그램 공격의 대상이 될 수 있습니다.|
 |언어 경계|해석 하는 응용 프로그램 또는 jit (JUST-IN-TIME)를 컴파일하고 실행으로 작성 된 코드를 신뢰할 수 없는 고급 언어 위험에 노출 될 수 있습니다.|
 
 공격 노출 위에 신뢰 경계를 식별 하 여 가능한 인스턴스의 추론 실행 측면 채널 취약성을 완화 공격 노출 영역에는 코드를 검토 해야이 있는 응용 프로그램입니다. 원격 네트워크 프로토콜 등의 원격 공격 표면을에 노출 하는 신뢰 경계 추론 실행 측면 채널 취약성에 위험에 노출 되도록 설명 하지는 점에 유의 해야 합니다.
@@ -90,11 +94,11 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 각 예제에 대 한 "추론 장벽" 라는 구 사용 하 여 주석은 개발자 한 완화 수단으로 장벽 얻는데 이러한 위치에 삽입 됩니다. 이 완화 기능에는 섹션에서 자세히 설명 합니다.
 
-### <a name="speculative-out-of-bounds-load"></a>잘못 된 범위를 벗어나는 로드
+## <a name="speculative-out-of-bounds-load"></a>잘못 된 범위를 벗어나는 로드
 
 이러한 종류의 패턴을 코딩 포함 까지로 연결 되는 잘못 된 범위를 벗어나는 조건부 분기 오측 메모리 액세스 합니다.
 
-#### <a name="array-out-of-bounds-load-feeding-a-load"></a>배열 범위를 벗어나는 로드 부하를 제공 합니다.
+### <a name="array-out-of-bounds-load-feeding-a-load"></a>배열 범위를 벗어나는 로드 부하를 제공 합니다.
 
 이 코딩 방식을 CVE 2017 5753 (범위 확인 바이패스)에 대 한 원래 설명된 취약 코딩 패턴입니다. 이 문서의 백그라운드 섹션에는이 패턴을 자세히 설명합니다.
 
@@ -126,7 +130,7 @@ unsigned char ReadBytes(unsigned char *buffer, unsigned int buffer_size) {
 }
 ```
 
-#### <a name="array-out-of-bounds-load-feeding-an-indirect-branch"></a>배열 범위를 벗어나는 로드 간접 분기를 제공 합니다.
+### <a name="array-out-of-bounds-load-feeding-an-indirect-branch"></a>배열 범위를 벗어나는 로드 간접 분기를 제공 합니다.
 
 이 코딩 방식을 조건부 분기 오측 발생할 수 있는 경우 포함 된 대상에는 간접 분기에는 다음 잠재 고객 주소는 함수 포인터의 배열에 대 한 액세스 범위를 벗어나는 읽어 범위를 벗어나는 합니다. 다음 코드 조각은이 보여 주는 예제를 제공 합니다. 
 
@@ -149,9 +153,13 @@ void DispatchMessage(unsigned int untrusted_message_id, unsigned char *buffer, u
 
 배열 범위를 벗어나는 경우와 다른 부하 공급 부하가,이 상태는 오측 인해의 종료 상태를 초과 하는 루프와 함께에서 발생할 수 있습니다.
 
-### <a name="speculative-type-confusion"></a>잘못 된 형식 혼동
+## <a name="speculative-type-confusion"></a>잘못 된 형식 혼동
 
-이 범주 코딩 패턴의 잘못 된 형식 혼동 하는 조건부 분기 오측을 포함 됩니다. 이 섹션의 코딩 패턴 아래 예제 코드를 참조 합니다.
+이 범주에서는 잘못 된 형식 혼동을 낼 수 있는 패턴을 코딩 합니다. 이 아키텍처 경로 따라 잘못 된 형식이 잘못 된 실행 하는 동안 사용 하 여 메모리에 액세스할 때 발생 합니다. 조건부 분기 오측와 잘못 된 저장소 바이패스 모두 잠재적으로 잘못 된 형식 혼란 발생할 수 있습니다. 
+
+잘못 된 저장소 바이패스에 대 한이 시나리오는 컴파일러 다시 여러 종류의 변수에 대 한 스택 위치를 사용 하는 위치에서 발생할 수 있습니다. ¿¡´ 형식의 변수에의 아키텍처는 저장소 `A` 형식의 로드 되므로 무시 될 수 있습니다 `A` 추측을 통해 변수를 할당 하기 전에 실행할 수 있습니다. 이전에 저장 된 변수를 다른 형식의 경우 잘못 된 형식 혼동에 대 한 조건을 만들 수이 합니다.
+
+조건부 분기 오측 다음 코드 조각 설명 하기 위해 사용 됩니다 잘못 된 형식 혼동을 제공할 수 있는 여러 가지 조건으로 업그레이드할 수 있습니다.
 
 ```cpp
 enum TypeName {
@@ -203,13 +211,71 @@ unsigned char ProcessType(CBaseType *obj)
 }
 ```
 
-#### <a name="speculative-type-confusion-leading-to-an-out-of-bounds-load"></a>잘못 된 형식 혼동 하는 범위를 벗어나는 로드
+### <a name="speculative-type-confusion-leading-to-an-out-of-bounds-load"></a>잘못 된 형식 혼동 하는 범위를 벗어나는 로드
 
-이 코딩 방식을에 잘못 된 형식 혼란이 발생할 수 있는 경우 사례를 포함 한 범위를 벗어나는 또는 여기서 로드 된 값 피드 후속 로드 주소 필드 형식 혼동 액세스 합니다. 이 배열 범위를 벗어나는 코딩 방식을 유사 하지만 위에 표시 된 대로 시퀀스를 코딩 하는 대신 통해 명시 됩니다. 이 예제에서는 공격 컨텍스트 상태가 실행을 위해 컨텍스트를 일으킬 수 `ProcessType` 형식의 개체와 여러 번 `CType1` (`type` 필드가 `Type1`). 첫 번째에 대 한 조건부 분기를 학습의 효과 아무런 `if` 문을 예측할 사용 되지 않습니다. 공격 컨텍스트 교착 상태가 발생 컨텍스트를 실행 하면이 다음 `ProcessType` 형식의 개체와 `CType2`합니다. 첫 번째에 대 한 조건부 분기 하는 경우이 잘못 된 형식 혼동 될 수 있습니다 `if` mispredicts 하 고 본문을 실행 하는 문을 `if` 형식의 개체를 캐스팅 하므로 문을 `CType2` 를 `CType1`합니다. 이후 `CType2` 보다 작으면 `CType1`, 메모리 액세스에 `CType1::field2` 가 결과에 잘못 된 범위를 벗어나는 로드 보안 되지 않은 데이터의 합니다. 이 값은에서 로드 한 다음 사용 `shard_buffer` 배열와 마찬가지로 눈에 띄는 부작용을 만들 수 있는 범위를 벗어나는 예제에서는 앞에서 설명한 합니다.
+이 코딩 방식을에 잘못 된 형식 혼란이 발생할 수 있는 경우 사례를 포함 한 범위를 벗어나는 또는 여기서 로드 된 값 피드 후속 로드 주소 필드 형식 혼동 액세스 합니다. 이 배열 범위를 벗어나는 코딩 방식을 유사 하지만 위에 표시 된 대로 시퀀스를 코딩 하는 대신 통해 명시 됩니다. 이 예제에서는 공격 컨텍스트 상태가 실행을 위해 컨텍스트를 일으킬 수 `ProcessType` 형식의 개체와 여러 번 `CType1` (`type` 필드가 `Type1`). 첫 번째에 대 한 조건부 분기를 학습의 효과 아무런 `if` 문을 예측할 사용 되지 않습니다. 공격 컨텍스트 교착 상태가 발생 컨텍스트를 실행 하면이 다음 `ProcessType` 형식의 개체와 `CType2`합니다. 첫 번째에 대 한 조건부 분기 하는 경우이 잘못 된 형식 혼동 될 수 있습니다 `if` mispredicts 하 고 본문을 실행 하는 문을 `if` 형식의 개체를 캐스팅 하므로 문을 `CType2` 를 `CType1`합니다. 이후 `CType2` 보다 작으면 `CType1`, 메모리 액세스에 `CType1::field2` 가 결과에 잘못 된 범위를 벗어나는 로드 보안 되지 않은 데이터의 합니다. 이 값은에서 로드 한 다음 사용 `shared_buffer` 배열와 마찬가지로 눈에 띄는 부작용을 만들 수 있는 범위를 벗어나는 예제에서는 앞에서 설명한 합니다.
 
-#### <a name="speculative-type-confusion-leading-to-an-indirect-branch"></a>잘못 된 형식 혼동 앞에 간접 분기
+### <a name="speculative-type-confusion-leading-to-an-indirect-branch"></a>잘못 된 형식 혼동 앞에 간접 분기
 
-이 코딩 패턴의 경우 잘못 된 실행 하는 동안 잘못 된 형식 혼동은 안전 하지 않은 간접 분기에서 발생할 수 있는 경우 작업이 포함 됩니다. 이 예제에서는 공격 컨텍스트 상태가 실행을 위해 컨텍스트를 일으킬 수 `ProcessType` 형식의 개체와 여러 번 `CType2` (`type` 필드가 `Type2`). 첫 번째에 대 한 조건부 분기를 학습의 효과 아무런 `if` 수행할 문 및 `else if` 문을 사용해 서 합니다. 공격 컨텍스트 교착 상태가 발생 컨텍스트를 실행 하면이 다음 `ProcessType` 형식의 개체와 `CType1`합니다. 첫 번째에 대 한 조건부 분기 하는 경우이 잘못 된 형식 혼동 될 수 있습니다 `if` 문은 예측 수행 및 `else if` 의 본문을 실행 하므로 문을 예측, 사용은 `else if` 형식의개체로캐스팅하고`CType1` 를 `CType2`합니다. 이후는 `CType2::dispatch_routine` 필드와 겹치는 `char` 배열 `CType1::field1`,이 인해 잘못 된 간접 분기에서 의도 하지 않은 분기 대상에 있습니다. 공격 상황에 맞는 경우 바이트 값을 제어할 수는 `CType1::field1` 배열 수 분기 대상 주소를 제어할 수 있습니다.
+이 코딩 방식을 추론 실행 하는 동안 잘못 된 형식 혼동은 안전 하지 않은 간접 분기에서 발생할 수 있는 경우 사례 포함 됩니다. 이 예제에서는 공격 컨텍스트 상태가 실행을 위해 컨텍스트를 일으킬 수 `ProcessType` 형식의 개체와 여러 번 `CType2` (`type` 필드가 `Type2`). 첫 번째에 대 한 조건부 분기를 학습의 효과 아무런 `if` 수행할 문 및 `else if` 문을 사용해 서 합니다. 공격 컨텍스트 교착 상태가 발생 컨텍스트를 실행 하면이 다음 `ProcessType` 형식의 개체와 `CType1`합니다. 첫 번째에 대 한 조건부 분기 하는 경우이 잘못 된 형식 혼동 될 수 있습니다 `if` 문은 예측 수행 및 `else if` 의 본문을 실행 하므로 문을 예측, 사용은 `else if` 형식의개체로캐스팅하고`CType1` 를 `CType2`합니다. 이후는 `CType2::dispatch_routine` 필드와 겹치는 `char` 배열 `CType1::field1`,이 인해 잘못 된 간접 분기에서 의도 하지 않은 분기 대상에 있습니다. 공격 상황에 맞는 경우 바이트 값을 제어할 수는 `CType1::field1` 배열 수 분기 대상 주소를 제어할 수 있습니다.
+
+## <a name="speculative-uninitialized-use"></a>잘못 된 초기화 되지 않은 사용
+
+코딩 패턴의이 범주는 추론 실행 초기화 되지 않은 메모리 액세스 하 고 후속 부하 또는 간접 분기를 제공 하기 위해 사용할 수 있는 시나리오에 포함 됩니다. 될 다음 코딩 패턴의 경우 공격자를 제어 하거나 의미 있게에 사용 되는 컨텍스트별 초기화 되지 않은 상태로 사용 되는 메모리 내용을 영향을 줄 수 해야 합니다.
+
+### <a name="speculative-uninitialized-use-leading-to-an-out-of-bounds-load"></a>잘못 된 초기화 되지 않은 상태로 사용 하는 범위를 벗어나는 로드
+
+잘못 된 초기화 되지 않은 사용으로 인해 생성 될 수는 범위를 벗어나는 제어 하는 공격자가 값을 사용 하 여를 로드 합니다. 값 아래 예제에서는 `index` 할당 된 `trusted_index` 일부 아키텍처 경로에 및 `trusted_index` 보다 크거나 작을 것으로 가정 `buffer_size`합니다. 그러나, 컴파일러에서 생성 하는 코드에 따라 수는 부하를 허용 하는 잘못 된 저장소 바이패스 발생할 수 있습니다 `buffer[index]` 및 종속 식에 대 한 할당 보다 먼저 실행 `index`합니다. 이 경우에 대 한 초기화 되지 않은 값 `index` 에 대 한 오프셋으로 사용 될 `buffer` 공격자가 범위를 벗어나는 중요 한 정보를 읽고의 종속 로드를 통해 쪽 채널을 통해 전달이 수는 `shared_buffer` .
+
+```cpp
+// A pointer to a shared memory region of size 1MB (256 * 4096)
+unsigned char *shared_buffer;
+
+void InitializeIndex(unsigned int trusted_index, unsigned int *index) {
+    *index = trusted_index;
+}
+
+unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned int trusted_index) {
+    unsigned int index;
+
+    InitializeIndex(trusted_index, &index); // not inlined
+
+    // SPECULATION BARRIER
+    unsigned char value = buffer[index];
+    return shared_buffer[value * 4096];
+}
+```
+
+### <a name="speculative-uninitialized-use-leading-to-an-indirect-branch"></a>간접 분기 앞에 잘못 된 초기화 되지 않은 사용
+
+잘못 된 초기화 되지 않은 사용 일으킬 수 간접 분기 분기 대상이 공격자에 의해 제어 되는 위치입니다. 다음 예제에서 `routine` 중 하나에 할당 된 `DefaultMessageRoutine1` 또는 `DefaultMessageRoutine` 값에 따라 `mode`합니다. 아키텍처 경로에서이 결과 `routine` 항상 간접 분기 보다 먼저 초기화 되 고 있습니다. 그러나 컴파일러에서 생성 하는 코드에 따라 잘못 된 저장소 바이패스 발생할 수 있습니다를 통해 간접 분기 수 있도록 `routine` 에 대 한 할당 미리 추측을 통해 실행할 `routine`합니다. 이 문제가 발생 하면 공격자가 할 수는 임의의 주소에서 추측을 통해 실행 공격자가 영향을 줄 수 또는의 초기화 되지 않은 값을 제어 가정 `routine`합니다.
+
+```cpp
+#define MAX_MESSAGE_ID 16
+
+typedef void (*MESSAGE_ROUTINE)(unsigned char *buffer, unsigned int buffer_size);
+
+const MESSAGE_ROUTINE DispatchTable[MAX_MESSAGE_ID];
+extern unsigned int mode;
+
+void InitializeRoutine(MESSAGE_ROUTINE *routine) {
+    if (mode == 1) {
+        *routine = &DefaultMessageRoutine1;
+    }
+    else {
+        *routine = &DefaultMessageRoutine;
+    }
+}
+
+void DispatchMessage(unsigned int untrusted_message_id, unsigned char *buffer, unsigned int buffer_size) {
+    MESSAGE_ROUTINE routine;
+
+    InitializeRoutine(&routine); // not inlined
+
+    // SPECULATION BARRIER
+    routine(buffer, buffer_size);
+}
+```
 
 ## <a name="mitigation-options"></a>완화 옵션
 
@@ -219,12 +285,11 @@ unsigned char ProcessType(CBaseType *obj)
 
 A *추론 장벽* 아키텍처 경로 따라 진행에서 추론 실행을 방지 하기 위해 개발자가 수동으로 삽입할 수 있습니다. 개발자가 조건부 분기) (이후 블록의 시작 부분에서 조건부 블록의 본문에 위험한 코딩 방식 하기 전에 추론 장벽을 삽입할 수는 예를 들어 또는 관심사 첫 번째 로드 하기 전에. 이렇게 하면 실행을 직렬화 함으로써 아키텍처 경로에서 위험한 코드를 실행할 수 없도록 조건부 분기 오측이 되지 것입니다. 추론 장벽 시퀀스는 다음 표에 설명 된 대로 하드웨어 아키텍처 마다 다릅니다.
 
-|아키텍처|추론 장벽|
-|----------------|----------------|
-|x86/x64|_mm_lfence()|
-|ARM|현재 사용할 수 없음|
-|ARM64|현재 사용할 수 없음|
-
+|아키텍처|추론 장벽 CVE-2017-5753에 대 한 내장 함수|추론 장벽-2018-3639에 대 한 내장 함수|
+|----------------|----------------|----------------|
+|x86/x64|_mm_lfence()|_mm_lfence()|
+|ARM|현재 사용할 수 없음|__dsb(0)|
+|ARM64|현재 사용할 수 없음|__dsb(0)|
 
 예를 들어 다음과 같은 코드 패턴 완화할 수 있습니다를 사용 하는 `_mm_lfence` 아래와 같이 내장 함수입니다.
 
@@ -245,12 +310,30 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 Visual Studio 2017 (15.5.5 버전부터 시작)에서 Visual c + + 컴파일러에 대 한 지원에는 `/Qspectre` CVE-2017-5753와 관련 된 잠재적으로 취약 한 코딩 패턴의 제한 된 집합에 대 한 추론 장벽을 자동으로 삽입 되는 스위치입니다. 에 대 한 설명서는 [/Qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre) 플래그 효과 및 사용량에 자세한 정보를 제공 합니다. 이 플래그는 잠재적으로 취약 한 코딩 패턴의 모든 포함 하지 않이 되며 따라서 개발자가 사용해 서는 안 것 취약점의이 클래스에 대 한 포괄적인 완화 수단으로 하는 것이 유용 합니다.
 
-### <a name="removing-sensitive-information-from-memory"></a>메모리에서 중요 한 정보를 제거합니다.
+## <a name="masking-array-indices"></a>배열 인덱스 마스킹
+
+여기서는 잘못 된 범위를 벗어나는 로드 하는 경우에 발생할 수 있습니다, 배열 인덱스를 명시적으로 연결 하는 논리를 추가 하 여 아키텍처 및 아키텍처 경로에 배열 인덱스를 강력 하 게 제한 될 수 있습니다. 예를 들어 2의 거듭제곱에 정렬 되는 크기에 배열을 할당할 수, 하는 경우 다음 간단한 마스크를 사용할 수 있습니다. 여기서 것으로 가정 하는 다음 예제에 설명 되어 `buffer_size` 2의 거듭제곱에 정렬 됩니다. 이렇게 하면 `untrusted_index` 은 항상 미만 `buffer_size`조건부 분기 오측 발생 하는 경우에, 및 `untrusted_index` 보다 크거나 같은 값을 사용 하 여 전달 된 `buffer_size`합니다.
+
+컴파일러에서 생성 되는 코드에 따라 잘못 된 저장소 바이패스 여기 수행 인덱스 마스킹 수 있습니다는 점에 유의 해야 합니다.
+
+```cpp
+// A pointer to a shared memory region of size 1MB (256 * 4096)
+unsigned char *shared_buffer;
+
+unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned int untrusted_index) {
+    if (untrusted_index < buffer_size) {
+        untrusted_index &= (buffer_size - 1);
+        unsigned char value = buffer[untrusted_index];
+        return shared_buffer[value * 4096];
+    }
+}
+```
+
+## <a name="removing-sensitive-information-from-memory"></a>메모리에서 중요 한 정보를 제거합니다.
 
 추론 실행 측면 채널 취약성을 완화 하기 위해 사용할 수 있는 또 다른 방법은 메모리에서 중요 한 정보를 제거 하는 것입니다. 소프트웨어 개발자가 추론 실행 하는 동안 중요 한 정보를 액세스할 수 있도록 해당 응용 프로그램을 리팩터링 기회 찾을 수 있습니다. 리팩터링 별도 프로세스에 중요 한 정보를 격리 하는 응용 프로그램 디자인에서이 수행할 수 있습니다. 예를 들어 웹 브라우저 응용 프로그램에서 잘못 된 실행을 통해 크로스-원본 데이터에 액세스 하지 못하도록 한 프로세스를 방지 하는 별도 프로세스에 연결 된 각 웹 원본의 데이터를 분리 하려고 할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[추론 실행 사이드 채널 취약성을 완화 하기 위해 지침](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)
-
+[추론 실행 사이드 채널 취약성을 완화 하기 위한 지침은](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)
 [추론 실행 측면 채널 하드웨어 취약성 완화](https://blogs.technet.microsoft.com/srd/2018/03/15/mitigating-speculative-execution-side-channel-hardware-vulnerabilities/)

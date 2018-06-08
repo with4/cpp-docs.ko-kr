@@ -40,11 +40,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a18b9ffe4fac351d73e0a78a6e25a71625a47b9e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7f9814bb783c763eef6d94e9d1372316a2393a6
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtimes-wstrtimes"></a>_strtime_s, _wstrtime_s
 
@@ -96,7 +96,7 @@ errno_t _wstrtime_s(
 
 ## <a name="security-issues"></a>보안 문제
 
-경우 버퍼 액세스 위반이 발생에 대 한 잘못 된 NULL이 아닌 값으로 전달 된 *numberOfElements* 매개 변수는 9 보다 큰 합니다.
+잘못 된 전달 비-**NULL** 경우 버퍼 액세스 위반이 발생에 대 한 값은 *numberOfElements* 매개 변수는 9 보다 큰 합니다.
 
 에 대 한 값을 전달 *numberOfElements* 하는 보다 크면 버퍼의 실제 크기는 버퍼 오버런이 발생 합니다.
 

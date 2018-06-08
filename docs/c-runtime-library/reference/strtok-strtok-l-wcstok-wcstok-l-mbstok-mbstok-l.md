@@ -55,11 +55,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 387d8165ad157f5d4b8936b79590d8e3ebbc2810
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45e2155f830a302f316aa96ce41b65a71709bc0d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -103,7 +103,7 @@ unsigned char *_mbstok(
 
 ## <a name="return-value"></a>반환 값
 
-다음 토큰에 대 한 포인터를 반환 *strToken*합니다. 반환 **NULL** 더 이상 토큰이 검색 되 면입니다. 호출할 때마다 수정 *strToken* 대체 하 여 한 **NULL** 반환 된 토큰은 다음에 발생 하는 첫 번째 구분 기호에 대 한 문자입니다.
+다음 토큰에 대 한 포인터를 반환 *strToken*합니다. 반환 **NULL** 더 이상 토큰이 검색 되 면입니다. 호출할 때마다 수정 *strToken* 반환 된 토큰은 다음에 발생 하는 첫 번째 구분 기호에 대 한 null 문자를 대체 하 여 합니다.
 
 ## <a name="remarks"></a>설명
 

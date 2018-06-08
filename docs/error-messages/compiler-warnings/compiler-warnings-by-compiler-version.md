@@ -1,7 +1,7 @@
 ---
 title: 컴파일러 버전으로 컴파일러 경고 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/31/2018
+ms.date: 05/30/2018
 ms.technology:
 - devlang-cpp
 ms.topic: error-reference
@@ -14,15 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 789121e3adb42cb74087339bb33bb82cb7604a10
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e40de8aa08ae12bb0389a113be4d6cbd51196f12
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34704739"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>컴파일러 버전으로 컴파일러 경고
 
-컴파일러를 사용 하 여 지정한 버전 이후 도입 된 경고 표시 하지 않을 수는 [/Wv](../../build/reference/compiler-option-warning-level.md) 컴파일러 옵션입니다. 이 새 도구 집합 버전을 소개 하 고 일시적으로 새 경고를 표시 하지 않을 때 빌드 프로세스를 관리 하는 데 유용 합니다. 이 옵션 새 오류 메시지를 표시 하지 않습니다. 모든 새 경고를 표시 하지 않는 것이 좋습니다 영구적으로! 항상 가장 높은 일반 경고 수준에서 컴파일하는 것이 좋습니다 __/W4__, 제거 하 고는 __/Wv__ 최대한 빨리 옵션 빌드에 있습니다. 
+컴파일러를 사용 하 여 지정한 버전 이후 도입 된 경고 표시 하지 않을 수는 [/Wv](../../build/reference/compiler-option-warning-level.md) 컴파일러 옵션입니다. 이 새 도구 집합 버전을 소개 하 고 일시적으로 새 경고를 표시 하지 않을 때 빌드 프로세스를 관리 하는 데 유용 합니다. 이 옵션 새 오류 메시지를 표시 하지 않습니다. 모든 새 경고를 표시 하지 않는 것이 좋습니다 영구적으로! 항상 가장 높은 일반 경고 수준에서 컴파일하는 것이 좋습니다 __/W4__, 제거 하 고는 __/Wv__ 최대한 빨리 옵션 빌드에 있습니다.
 
 이러한 버전의 컴파일러에 새로운 경고가 소개 되었습니다.
 
@@ -39,26 +40,36 @@ ms.lasthandoff: 05/04/2018
 | Visual c + + 2015 업데이트 1 | 19.00.23506.0 |
 | Visual c + + 2015 업데이트 2 | 19.00.23918.0 |
 | Visual c + + 2015 업데이트 3 | 19.00.24215.1 |
-| Visual c + + 2017 RTM | 19.10.24903.0 |
-| Visual c + + 2017 15.1 버전 | 19.10.25017.0 |
+| Visual c + + 2017 RTM | 19.10.25017.0 |
 | Visual c + + 2017 15.3 버전 | 19.11.25506.0 |
-| Visual c + + 2017 15.5 버전 | 19.12.25827.0 |
+| Visual c + + 2017 15.5 버전 | 19.12.25830.0 |
+| Visual c + + 2017 버전 15.6 | 19.13.26128.0 |
+| Visual c + + 2017 15.7 버전 | 19.14.26428.0 |
 
 주요 번호만, 주 및 부 번호 또는 주, 부를 지정 하 고 빌드 번호를 수는 __/Wv__ 옵션입니다. 컴파일러 버전 지정된 된 수로 시작 하는 일치 하는 모든 경고를 보고 하 고 지정된 된 숫자 보다 큰 버전에 대 한 모든 경고를 표시 하지 않습니다. 예를 들어 __/Wv:17__ 또는 그 이전 버전의 Visual Studio 2012에 도입 된 모든 경고를 보고 하 고 Visual Studio 2013 (버전 18)에서 이상 컴파일러에 의해 정의 된 모든 경고를 표시 하지 않습니다. Visual Studio 2015에서 도입 된 경고를 표시 하지 않는 업데이트 2 이상 버전에서는 사용할 수 있습니다 및 __/Wv:19.00.23506__합니다. 사용 하 여 __/Wv:19.11__ Visual Studio 2017 15.5, 버전 이전에 Visual Studio의 모든 버전에서 도입 되었지만 Visual Studio 2017 15.5 이상 버전에에서 도입 된 경고를 표시 하지 않습니다.이 모든 경고를 보고 합니다.
 
 다음 섹션에서는 목록을 사용 하 여 표시 하지 않을 수 있는 Visual c + +의 각 버전에서 도입 된 경고는 __/Wv__ 컴파일러 옵션입니다. __/Wv__ 옵션 이전의 지정 된 버전의 컴파일러는 나열 되지 않은 경고 표시 하지 않을 수 있습니다.
 
-## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258270"></a>Visual c + + 2017 15.5 (컴파일러 버전 19.12.25827.0) 버전에에서 도입 된 경고
+## <a name="warnings-introduced-in-visual-c-2017-version-157-compiler-version-1914264280"></a>Visual c + + 2017 15.7 (컴파일러 버전 19.14.26428.0) 버전에에서 도입 된 경고
 
-이러한 경고 및 이후 버전에서 모든 경고는 컴파일러 옵션을 사용 하 여 억제 __/Wv:19.11__합니다.
+이러한 경고 및 이후 버전에서 모든 경고는 컴파일러 옵션을 사용 하 여 억제 __/Wv:19.13__합니다.
+
+|||
+|-|-|
+C4642|'*문제*': 제네릭 매개 변수 제약 조건의 가져올 수 없습니다 '*매개 변수*'
+C5045|컴파일러는 유령 완화 삽입 하지 않은 메모리 로드 /Qspectre 전환 하는 경우 지정한에 대 한
+
+## <a name="warnings-introduced-in-visual-c-2017-version-156-compiler-version-1913261280"></a>Visual c + + 2017 15.6 (컴파일러 버전 19.13.26128.0) 버전에에서 도입 된 경고
+
+이러한 경고 및 이후 버전에서 모든 경고는 컴파일러 옵션을 사용 하 여 억제 __/Wv:19.12__합니다.
 
 |||
 |-|-|
 C5044|명령줄 옵션에 인수가 *옵션* 경로 가리키는 '*경로*' 존재 하지 않는
 
-## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>Visual c + + 2017 15.3 (컴파일러 버전 19.11.25506.0) 버전에에서 도입 된 경고
+## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258300"></a>Visual c + + 2017 15.5 (컴파일러 버전 19.12.25830.0) 버전에에서 도입 된 경고
 
-이러한 경고 및 이후 버전에서 모든 경고는 컴파일러 옵션을 사용 하 여 억제 __/Wv:19.10__합니다.
+이러한 경고 및 이후 버전에서 모든 경고는 컴파일러 옵션을 사용 하 여 억제 __/Wv:19.11__합니다.
 
 |||
 |-|-|
@@ -70,9 +81,9 @@ C5041|'*정의*': constexpr 정적 데이터 멤버에 대 한 아웃오브 라�
 C5042|'*선언*': 함수 선언은 블록 범위에서 표준 c + +에서 '인라인'이 지정 된 일 수 없습니다. '인라인' 지정자를 제거 합니다.
 C5043|'*사양*': 예외 사양이 이전 선언과 일치 하지 않습니다
 
-## <a name="warnings-introduced-in-visual-c-2017-version-151-compiler-version-1910250170"></a>Visual c + + 2017 15.1 (컴파일러 버전 19.10.25017.0) 버전에에서 도입 된 경고
+## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>Visual c + + 2017 15.3 (컴파일러 버전 19.11.25506.0) 버전에에서 도입 된 경고
 
-이러한 경고 및 이후 버전에서 모든 경고는 컴파일러 옵션을 사용 하 여 억제 __/Wv:19.10.24903__합니다.
+이러한 경고 및 이후 버전에서 모든 경고는 컴파일러 옵션을 사용 하 여 억제 __/Wv:19.10__합니다.
 
 |||
 |-|-|
@@ -91,7 +102,7 @@ C5036|/hybrid:x86arm64로 컴파일할 때 varargs 함수 포인터 변환이 �
 C5037|'*멤버-함수*': 클래스 템플릿의 멤버는 아웃오브 라인 정의 기본 인수를 가질 수 없습니다
 C5038|데이터 멤버 '*member1*'초기화 될 데이터 멤버 뒤'*member2*'
 
-## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-191024903"></a>Visual c + + 2017 RTM (컴파일러 버전 19.10.24903)에서 시작 하는 경고
+## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-1910250170"></a>Visual c + + 2017 RTM (컴파일러 버전 19.10.25017.0)에서 시작 하는 경고
 
 이러한 경고 및 이후 버전에서 모든 경고는 컴파일러 옵션을 사용 하 여 억제 __/Wv:19.00__합니다.
 
@@ -164,15 +175,15 @@ C4498|비표준 확장이 사용 됨: '*확장*'
 C4499|'*특수화*': 명시적 특수화 (무시 됨)는 저장소 클래스를 가질 수 없습니다
 C4576|괄호로 묶인 이니셜라이저 목록이 옵니다 형식은 비표준 명시적 형식 변환 구문
 C4577|' noexcept' 처리 모드를 지정 합니다; 예외가 함께 사용 예외 시 종료가 보장 되지 않습니다. /EHsc를 지정 합니다.
-C4578|'abs':에서 변환 '*형식*'to'*형식*', 데이터 손실을 (= 호출을 '*이름*' 또는 #include <cmath>?)
+C4578|'abs':에서 변환 '*형식*'to'*형식*', 데이터 손실을 (= 호출을 '*이름*' 또는 #include \<cmath >?)
 C4582|'*형식*': 생성자가 암시적으로 호출 되지 않습니다
 C4583|'*형식*': 소멸자가 암시적으로 호출
 C4587|'*형식*': 동작 변경: 생성자가 더 이상 암시적으로 호출
 C4588|'*형식*': 동작 변경: 소멸자가 더 이상 암시적으로 호출 되 고 없습니다.
 C4589|추상 클래스의 생성자*형식*'가상 기본 클래스에 대 한 이니셜라이저를 무시'*형식*'
-C4591|'constexpr' 호출 깊이 제한 *번호* 초과 (/ constexpr:depth<NUMBER>)
+C4591|'constexpr' 호출 깊이 제한 *번호* 초과 (/ constexpr:depth\<번호 >)
 C4592|'*형식*': 기호가 동적으로 됩니다 (구현 제한)를 초기화 합니다.
-C4593|'*형식*': 'constexpr' 호출 실행 단계 제한의 *값* 을 초과 했습니다; /constexpr:steps를 사용 하 여<NUMBER> 도를 늘리려면
+C4593|'*형식*': 'constexpr' 호출 실행 단계 제한의 *값* 을 초과 했습니다; /constexpr:steps를 사용 하 여\<번호 >도를 늘리려면
 C4647|동작 변경: __is_pod (*형식*) 이전 버전에 서로 다른 값
 C4648|표준 특성 'carries_dependency'는 무시 됩니다.
 C4649|특성이이 컨텍스트에서 무시 됩니다.
@@ -377,10 +388,10 @@ C4633|XML 문서 주석을*설명*: 오류: *설명*
 C4634|XML 문서 주석을*설명*: 적용할 수 없습니다: *설명*
 C4635|XML 문서 주석을*설명*: 잘못 된 형식의 XML: *설명*
 C4636|XML 문서 주석을*설명*: 태그에 비어 있지 않은 필요 '*설명*' 특성입니다.
-C4637|XML 문서 주석을*설명*: <include> 태그가 삭제 되었습니다. *description*
+C4637|XML 문서 주석을*설명*: \<포함 > 태그가 삭제 되었습니다. *description*
 C4638|XML 문서 주석을*설명*: 알 수 없는 기호에 참조 '*설명*'.
 C4639|MSXML 오류, XML 문서 주석이 처리 되지 것입니다. *description*
-C4641|XML 문서 주석에 모호한 상호 참조가 있습니다. 
+C4641|XML 문서 주석에 모호한 상호 참조가 있습니다.
 C4678|기본 클래스*선언*'인덱서보다 접근성 은'*이름*'
 C4679|'*설명*': 멤버를 가져올 수 없습니다
 C4687|'*형식*': 봉인된 추상 클래스는 인터페이스를 구현할 수 없습니다 '*형식*'
@@ -625,7 +636,8 @@ C4996|'*문제*': *설명*
 C4997|'*형식*': coclass가 COM 인터페이스 또는 의사 (pseudo) 인터페이스를 구현 하지 않습니다
 C4998|예상 실패: *설명*(*번호*)
 
-## <a name="see-also"></a>참고 항목
-[/Wv 컴파일러 옵션](../../build/reference/compiler-option-warning-level.md)
-[기본적으로 해제 되어 있는 컴파일러 경고](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
-[경고](../../preprocessor/warning.md)
+## <a name="see-also"></a>참고자료
+
+- [/Wv 컴파일러 옵션](../../build/reference/compiler-option-warning-level.md)
+- [기본적으로 해제 되어 있는 컴파일러 경고](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
+- [warning](../../preprocessor/warning.md)

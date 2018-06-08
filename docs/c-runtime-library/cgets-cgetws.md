@@ -35,11 +35,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c915001716745422299241d3dad469707bf03dc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 144e08278fb37e08d741ac8cb5a441c8df788b5b
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cgets-cgetws"></a>_cgets, _cgetws
 콘솔에서 문자열을 가져옵니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)를 참조하세요.  
@@ -74,7 +74,7 @@ wchar_t *_cgetws(
  데이터의 저장소 위치입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `_cgets` 및 `_cgetws`는 `buffer[2]`에서 문자열의 시작에 대한 포인터를 반환합니다. `buffer`가 `NULL`인 경우 이러한 함수는 [매개 변수 유효성 검사](../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용된 경우, 이러한 함수는 `NULL` 을 반환하고 `errno` 를 `EINVAL`로 설정합니다.  
+ `_cgets` 및 `_cgetws` 는 `buffer[2]`에서 문자열의 시작에 대한 포인터를 반환합니다. `buffer`이 **NULL**인 경우 이러한 함수는 [매개 변수 유효성 검사](../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기를 호출합니다. 계속해서 실행하도록 허용된 경우, 이러한 함수는 **NULL**을 반환하고 `errno`를 `EINVAL`로 설정합니다.  
   
 ## <a name="remarks"></a>설명  
  이러한 함수는 콘솔에서 문자열을 읽고 문자열과 해당 길이를 `buffer`가 가리키는 위치에 저장합니다. `buffer` 매개 변수는 문자 배열에 대한 포인터여야 합니다. 배열의 첫 번째 요소인 `buffer[0]`에는 읽을 문자열의 최대 길이(문자)가 포함되어야 합니다. 배열에 문자열, 종료 null 문자('\0') 및 추가 2바이트를 저장하는 데 충분한 요소가 포함되어야 합니다. 함수는 CR-LF(캐리지 리턴-줄 바꿈) 조합이나 지정된 개수의 문자를 읽을 때까지 문자를 읽습니다. `buffer[2]`부터 시작하여 문자열이 저장됩니다. 함수는 CR-LF를 읽을 경우 null 문자('\0')를 저장합니다. 그런 다음 문자열의 실제 길이를 두 번째 배열 요소인 `buffer[1]`에 저장합니다.  

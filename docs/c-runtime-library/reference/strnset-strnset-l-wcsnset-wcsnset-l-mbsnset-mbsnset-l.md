@@ -75,11 +75,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07fff41a079d64f5416942dcb1fb3c9395b73e5d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9348b2797b137599e8c7f54e41e493003bc4fc58
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strnset-strnsetl-wcsnset-wcsnsetl-mbsnset-mbsnsetl"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 
@@ -150,7 +150,7 @@ unsigned char *_mbsnset_l(
 
 **_wcsnset** 및 **_mbsnset** 와이드 문자 및 멀티 바이트 문자 버전의 **_strnset**합니다. 문자열 인수 및 반환 값이 **_wcsnset** 은 와이드 문자열이 고 **_mbsnset** 는 멀티 바이트 문자 문자열입니다. 그렇지 않으면 이들 세 함수는 동일하게 작동합니다.
 
-**_mbsnset** 경우 해당 매개 변수 유효성을 검사 *str* 가 null 포인터에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 합니다. 실행을 계속 하도록 허용 된 경우 **_mbsnset** NULL을 반환 하 고 설정 **errno** 를 **EINVAL**합니다. **_strnset** 및 **_wcsnset** 매개 변수를 확인 하지 않습니다.
+**_mbsnset** 경우 해당 매개 변수 유효성을 검사 *str* 가 null 포인터에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 합니다. 실행을 계속 하도록 허용 된 경우 **_mbsnset** 반환 **NULL** 설정 **errno** 를 **EINVAL**합니다. **_strnset** 및 **_wcsnset** 매개 변수를 확인 하지 않습니다.
 
 출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따른 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 

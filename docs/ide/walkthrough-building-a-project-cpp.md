@@ -1,5 +1,5 @@
 ---
-title: '연습: 빌드 프로젝트 (c + +) | Microsoft Docs'
+title: '연습: 프로젝트 빌드(C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,10 +17,11 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 0c8d04dc3692076b867302af0e793eaac7ed25cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33332457"
 ---
 # <a name="walkthrough-building-a-project-c"></a>연습: 프로젝트 빌드(C++)
 이 연습에서는 코드에 일부러 Visual C++ 구문 오류를 포함한 다음 어떠한 컴파일 오류가 발생하는지 확인하고 이를 수정하는 방법에 대해 살펴봅니다. 프로젝트를 컴파일하면 어디에 어떠한 문제가 있는지 표시하는 오류 메시지가 나타납니다.  
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/04/2018
   
 -   이 연습에서는 사용자가 C++ 언어의 기본적인 사항을 알고 있는 것으로 가정합니다.  
   
--   또한 이전 관련된 연습에 나와 있는 완료 한 것으로 가정 [c + + 데스크톱 개발을 위한 Visual Studio IDE를 사용 하 여](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)합니다.  
+-   또한 [Visual Studio IDE를 사용하여 C++ 데스크톱 개발](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)에 나열된 이전 관련 연습을 완료했다고 가정합니다.  
   
 ### <a name="to-fix-compilation-errors"></a>컴파일 오류를 수정하려면  
   
@@ -39,11 +40,11 @@ ms.lasthandoff: 05/04/2018
   
 2.  메뉴 모음에서 **빌드**, **솔루션 빌드**를 선택합니다.  
   
-3.  메시지는 **오류 목록** 창 프로젝트 빌드에 오류가 발생 했음을 나타냅니다. 설명을 다음과 같이 나타납니다.  
+3.  **오류 목록** 창의 메시지에 프로젝트 빌드에 오류가 있는 것으로 표시되어 있습니다. 설명을 다음과 같이 나타납니다.  
   
      `error C2143: syntax error : missing ';' before '}'`  
   
-     이 오류에 대 한 도움말 정보를 보려면 강조 표시에 **오류 목록** 창 F1 키를 선택 합니다.  
+     이 오류에 대한 도움말 정보를 보려면 **오류 목록** 창에서 오류를 강조 표시한 후 F1 키를 선택합니다.  
   
 4.  구문 오류가 발생한 줄의 끝에 세미콜론을 다시 추가합니다.  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 05/04/2018
   
 5.  메뉴 모음에서 **빌드**, **솔루션 빌드**를 선택합니다.  
   
-     메시지는 **출력** 창은 프로젝트 성공적으로 컴파일 되었음을 나타냅니다.  
+     프로젝트가 성공적으로 컴파일되었다는 메시지가 **출력** 창에 표시됩니다.  
   
     ```Output  
     1>------ Build started: Project: Game, Configuration: Debug Win32 ------  
@@ -61,7 +62,7 @@ ms.lasthandoff: 05/04/2018
     ```  
   
 ## <a name="next-steps"></a>다음 단계  
- **이전:** [연습: 프로젝트 및 솔루션 (c + +) 작업](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) &#124; **다음:**[연습: 테스트 프로젝트 (c + +)](../ide/walkthrough-testing-a-project-cpp.md)  
+ **이전:** [연습: 프로젝트 및 솔루션 작업(C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) &#124; **다음:**[연습: 프로젝트 테스트(C++)](../ide/walkthrough-testing-a-project-cpp.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [C++ 언어 참조](../cpp/cpp-language-reference.md)   

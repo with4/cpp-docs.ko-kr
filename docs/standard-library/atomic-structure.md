@@ -14,11 +14,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 298fe2751cf25355e2075a2870c34bf17cedc222
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7308c127bebd2185429509315ebafb3d83a7efea
+ms.sourcegitcommit: b0d5557dbb57128da560a0a4634312ec4a050a90
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="atomic-structure"></a>atomic 구조체
 
@@ -63,7 +63,7 @@ struct atomic;
 
 형식 *Ty* 해야 *일반적으로 복사할 수*합니다. 즉, 사용 하 여 [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) 해당 바이트를 복사 생성 해야 합니다는 유효한 *Ty* 원래 개체와 같은지를 비교 하는 개체입니다. [compare_exchange_weak](#compare_exchange_weak) 및 [compare_exchange_strong](#compare_exchange_strong) 멤버 함수만 사용 [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md) 두 지 여부를 결정 *Ty* 값 와 동일합니다. 이러한 함수는 사용 하지 않습니다는 *Ty*-정의 **연산자 = =** 합니다. 멤버 함수 **원자성** 사용 **memcpy** 형식의 값을 복사할 *Ty*합니다.
 
-부분 특수화 * * 원자성\<Ty * > * *, 모든 포인터 형식에 대해 존재 합니다. 특수화를 사용하면 관리되는 포인터 값에 오프셋을 더하거나 값에서 오프셋을 뺄 수 있습니다. 형식의 인수를 사용 하는 산술 연산을 **ptrdiff_t** 의 크기에 따라 인수에 지정 된 조정 *Ty* 산술 일반 주소와 일치 하도록 합니다.
+부분 특수화 **원자성\<Ty \* >** , 모든 포인터 형식에 대해 존재 합니다. 특수화를 사용하면 관리되는 포인터 값에 오프셋을 더하거나 값에서 오프셋을 뺄 수 있습니다. 형식의 인수를 사용 하는 산술 연산을 **ptrdiff_t** 의 크기에 따라 인수에 지정 된 조정 *Ty* 산술 일반 주소와 일치 하도록 합니다.
 
 특수화를 제외한 모든 정수 계열 형식에 대해 존재 **bool**합니다. 각 특수화에서는 원자 산술 및 논리 연산을 위한 다양한 방법을 제공합니다.
 

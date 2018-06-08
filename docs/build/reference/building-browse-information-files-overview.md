@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a2306c69c219320e11259ba6303b76588db8f7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 463bf72c07c775ef0d4965a2023e5699cf7ec715
+ms.sourcegitcommit: b04de4e90def1d0f4aa265e96d6b73779d010e1f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843077"
 ---
 # <a name="building-browse-information-files-overview"></a>찾아보기 정보 파일 빌드: 개요
 기호 검색에 대 한 찾아보기 정보를 만들려면 컴파일러 BSCMAKE 다음 프로젝트의 각 소스 파일에 대 한.sbr 파일을 만듭니다. EXE 하나의.bsc 파일에.sbr 파일을 연결합니다.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  중 하나는 프로젝트 수준에서.bsc 파일 빌드 하거나.sbr 파일이 잘리지 않도록 방지 하기 위해 /n 스위치를 사용 하지 마십시오.  
   
-2.  모든 프로젝트를 빌드한 후는 입력으로는 모든.sbr 파일이 BSCMAKE를 실행 합니다. 와일드 카드가 허용 됩니다. 예를 들어, 하나의.bsc 파일 모두로 결합할 수 얻게 및.sbr 파일을 사용 하 여 프로젝트 디렉터리 C:\X, C:\Y, 및 C:\Z을 설치한 경우 다음 사용 하 여 BSCMAKE C:\X\\*.sbr C:\Y\\\*.sbr C:\Z\\\*합니다. 결합 된.bsc 파일을 만드는 sbr /o c:\whatever_directory\combined.bsc 합니다.  
+2.  모든 프로젝트를 빌드한 후는 입력으로는 모든.sbr 파일이 BSCMAKE를 실행 합니다. 와일드 카드가 허용 됩니다. 예를 들어, 하나의.bsc 파일 모두로 결합할 수 얻게 및.sbr 파일을 사용 하 여 프로젝트 디렉터리 C:\X, C:\Y, 및 C:\Z을 설치한 경우 다음 사용 하 여 BSCMAKE C:\X\\\*.sbr C:\Y\\\*.sbr C:\Z\\ \*.sbr /o c:\whatever_directory\combined.bsc 결합 된.bsc 파일을 빌드합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [C/c + + 빌드 도구](../../build/reference/c-cpp-build-tools.md)   

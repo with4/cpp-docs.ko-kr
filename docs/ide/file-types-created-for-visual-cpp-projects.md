@@ -1,5 +1,5 @@
 ---
-title: 파일 형식 Visual c + + 프로젝트용으로 만들어지는 | Microsoft Docs
+title: Visual C++ 프로젝트용 파일 형식 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -25,10 +25,11 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a7158e729d80d8b0456862ee6418f039b7f948fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33336019"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Visual C++ 프로젝트용으로 만들어지는 파일 형식
 이 항목에서는 클래식 데스크톱 응용 프로그램용 Visual C++ 프로젝트와 관련된 파일의 모든 형식에 대해 설명합니다. 프로젝트 형식 및 마법사에서 선택한 옵션에 따라 프로젝트에 포함되는 실제 파일이 달라집니다.  
@@ -72,7 +73,7 @@ ms.lasthandoff: 05/04/2018
 |.HxC|프로젝트|도움말 프로젝트 파일|  
 |.ico|리소스|아이콘 비트맵 그래픽 파일|  
 |.idb|컴파일|소스 파일과 클래스 정의 간의 종속성 정보가 포함된 상태 파일. 최소 다시 빌드 및 증분 컴파일 중에 컴파일러에 의해 사용될 수 있습니다. .idb 이름을 지정하려면 [/Fd](../build/reference/fd-program-database-file-name.md) 컴파일러 옵션을 사용합니다. 자세한 내용은 [/Gm(최소 다시 빌드 가능)](../build/reference/gm-enable-minimal-rebuild.md) 을 참조하세요.|  
-|.idl|컴파일|IDL(Interface Definition Language) 파일. 참조 [인터페이스 정의 (IDL) 파일](http://msdn.microsoft.com/library/windows/desktop/aa378712) 자세한 내용은 Windows sdk입니다.|  
+|.idl|컴파일|IDL(Interface Definition Language) 파일. 자세한 내용은 Windows SDK의 [인터페이스 정의(IDL) 파일](http://msdn.microsoft.com/library/windows/desktop/aa378712)을 참조하세요.|  
 |.ilk|연결|증분 링크 파일. 자세한 내용은 [/INCREMENTAL](../build/reference/incremental-link-incrementally.md) 을 참조하세요.|  
 |.map|연결|링커 정보가 포함된 텍스트 파일. 맵 파일 이름을 지정하려면 [/Fm](../build/reference/fm-name-mapfile.md) 컴파일러 옵션을 사용합니다. 자세한 내용은 [/MAP](../build/reference/map-generate-mapfile.md) 을 참조하세요.|  
 |.mfcribbon-ms|리소스|리본의 단추, 컨트롤 및 특성을 정의하는 XML 코드가 포함된 리소스 파일. 자세한 내용은 [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)을 참조하세요.|  
@@ -86,7 +87,7 @@ ms.lasthandoff: 05/04/2018
 |.vap|프로젝트|Visual Studio Analyzer 프로젝트 파일|  
 |.vbg|솔루션|호환 가능한 프로젝트 그룹 파일|  
 |.vbp, .vip, .vbproj|프로젝트|Visual Basic 프로젝트 파일|  
-|.vcxitems|프로젝트|C + +의 여러 프로젝트 간에 코드 파일을 공유 항목 프로젝트를 공유 합니다. 자세한 내용은 [프로젝트 파일 및 메이크파일](../ide/project-and-solution-files.md) 을 참조하세요.|
+|.vcxitems|프로젝트|여러 C++ 프로젝트 간에 코드 파일을 공유하는 공유 항목 프로젝트입니다. 자세한 내용은 [프로젝트 파일 및 메이크파일](../ide/project-and-solution-files.md) 을 참조하세요.|
 |.vcxproj|프로젝트|Visual C++ 프로젝트 파일. 자세한 내용은 [프로젝트 파일 및 메이크파일](../ide/project-and-solution-files.md) 을 참조하세요.|  
 |.vcxproj.filters|프로젝트|솔루션 탐색기를 사용하여 프로젝트에 파일을 추가하는 경우 필터 파일은 솔루션 탐색기 트리 뷰에서 해당 파일 이름 확장명에 따라 파일이 추가되는 위치를 정의합니다.|  
 |.vdproj|프로젝트|Visual Studio 배포 프로젝트 파일|  
@@ -101,5 +102,5 @@ ms.lasthandoff: 05/04/2018
   
 ## <a name="see-also"></a>참고 항목  
  [Visual C++ 프로젝트 만들기 및 관리](../ide/creating-and-managing-visual-cpp-projects.md)   
- [Visual c + + 프로젝트 형식](../ide/visual-cpp-project-types.md)   
+ [Visual C++ 프로젝트 형식](../ide/visual-cpp-project-types.md)   
  [다른 언어에 대한 마법사 지원](../ide/wizard-support-for-other-languages.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;요약&gt; (Visual c + +) | Microsoft Docs'
+title: '&lt;summary&gt;(Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,13 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: c0dff1d6ce31f6b26c0f8a46ef2ff620a4d40f93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33322291"
 ---
-# <a name="ltsummarygt-visual-c"></a>&lt;요약&gt; (Visual c + +)
+# <a name="ltsummarygt-visual-c"></a>&lt;summary&gt;(Visual C++)
 \<summary > 태그를 사용하여 형식 또는 형식 멤버를 설명해야 합니다. [\<remarks>](../ide/remarks-visual-cpp.md)를 사용하여 형식 설명에 보충 정보를 추가할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,11 +39,11 @@ ms.lasthandoff: 05/04/2018
  개체에 대한 요약입니다.  
   
 ## <a name="remarks"></a>설명  
- 에 대 한 텍스트는 \<요약 > 태그가 유일한 소스 intellisense에서 유형에 대 한 정보는이 고에 표시 됩니다는 [개체 브라우저](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) 및 코드 주석 웹 보고서입니다.  
+ \<summary> 태그의 텍스트는 IntelliSense의 형식에 대한 유일한 정보 소스이며 [개체 브라우저](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) 및 코드 주석 웹 보고서에도 표시됩니다.  
   
  [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // xml_summary_tag.cpp  

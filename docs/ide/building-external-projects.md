@@ -19,17 +19,18 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 97b6aa1e5939afe55644df6529bf75ba043f20bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33330348"
 ---
 # <a name="building-external-projects"></a>외부 프로젝트 빌드
-외부 프로젝트 메이크파일을 나 (외래 또는 외부) 외부에 있는 기타 기능을 사용 하는 Visual c + + 프로젝트는 Visual c + + 개발 환경입니다.  
+외부 프로젝트는 Visual C++ 개발 환경 외부(외래 또는 외부)에 있는 메이크파일 또는 기타 기능을 사용하는 Visual C++ 프로젝트입니다.  
   
- Visual c + + 개발 환경에서 빌드 메이크파일 프로젝트를 만들고 프로젝트의 지정 하려는 외부 프로젝트 (예를 들어 메이크파일 프로젝트)의 경우 빌드 명령 및 메이크파일 응용 프로그램 마법사에서 출력 합니다. 자세한 내용은 참조 [메이크파일 프로젝트 만들기](../ide/creating-a-makefile-project.md)합니다.  
+ Visual C++ 개발 환경에서 빌드하려는 외부 프로젝트(예: 메이크파일 프로젝트)가 있는 경우, 메이크파일 프로젝트를 만들고 메이크파일 응용 프로그램 마법사에서 프로젝트의 빌드 명령 및 출력을 지정합니다. 자세한 내용은 [메이크파일 프로젝트 만들기](../ide/creating-a-makefile-project.md)를 참조하세요.  
   
- Note Visual c + +에 더 이상 개발 환경에서 현재 프로젝트에 대 한 메이크파일 내보내는 기능을 지원 합니다. 사용 하 여 [Devenv 명령줄 스위치](/visualstudio/ide/reference/devenv-command-line-switches) 명령줄에서 Visual Studio 프로젝트를 빌드할 수 있습니다.  
+ Visual C++에서는 개발 환경에서 활성 프로젝트용 메이크파일을 내보내는 기능을 더 이상 지원하지 않습니다. [Devenv 명령줄 스위치](/visualstudio/ide/reference/devenv-command-line-switches)를 사용하여 명령줄에서 Visual Studio 프로젝트를 빌드합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Visual Studio에서 C++ 프로젝트 빌드](../ide/building-cpp-projects-in-visual-studio.md)

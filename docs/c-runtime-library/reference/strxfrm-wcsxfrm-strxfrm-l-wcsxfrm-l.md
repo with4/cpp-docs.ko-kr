@@ -45,11 +45,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4be0a1179f5b3195d5fafbaf679311c0dcf9edd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4bc9746d2c98f1799cbdd244e7fc4d465fd705fa
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l
 
@@ -108,7 +108,7 @@ size_t wcsxfrm_l(
 
 **wcsxfrm** 의 와이드 문자 버전이 **strxfrm**;의 문자열 인수 **wcsxfrm** 는 와이드 문자 포인터입니다. 에 대 한 **wcsxfrm**이후에 문자열 변환, 호출 **wcscmp** 두 변환 된 문자열에 대 한 호출의 인수와 동일한 결과가 발생 **wcscoll** 에 적용 된 두 원본 문자열입니다. **wcsxfrm** 및 **strxfrm** 동일 하 게 작동 합니다. **wcsxfrm** ;은 로캘 종속 동작에 현재 로캘을 사용 **_wcsxfrm_l** 은 현재 로캘 대신 전달 된 로캘을 사용 합니다.
 
-이러한 함수는 해당 함수 매개 변수의 유효성을 검사합니다. 경우 *strSource* 가 null 포인터 또는 *strDest* 표시 되지 않으면 NULL 포인터 (횟수가 0), if 또는 *count* 보다 크면 **INT_MAX**, 에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 합니다. 실행을 계속 허용 된, 이러한 함수 설정 **errno** 를 **EINVAL** 다음 다시 돌아와 **INT_MAX**합니다.
+이러한 함수는 해당 함수 매개 변수의 유효성을 검사합니다. 경우 *strSource* 가 null 포인터 또는 *strDest* 는 **NULL** 포인터 (수가 0이 아닌 한), if 또는 *count* 보다크면**INT_MAX**에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md) 합니다. 실행을 계속 허용 된, 이러한 함수 설정 **errno** 를 **EINVAL** 다음 다시 돌아와 **INT_MAX**합니다.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 

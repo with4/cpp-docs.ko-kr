@@ -52,11 +52,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9a97dc0d1e52cb23e26eeb46e86c684b6bee9d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 02c28da8c066f51bb4366c7ed20e04266d37b074
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p, _sprintf_p_l, _swprintf_p, _swprintf_p_l
 
@@ -118,11 +118,11 @@ int _swprintf_p_l(
 
 ## <a name="remarks"></a>설명
 
-**_sprintf_p** 포맷 하 고 일련의 문자 및 값을 저장 하는 함수 *버퍼*합니다. 각 인수에는 *argument_list* (있는 경우)이 변환 되 고 해당 형식 사양에 따라 출력 *형식*합니다. *형식* 인수를 사용 하는 [형식 사양 구문 printf 및 wprintf 함수에 대 한](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)합니다. A **NULL** 문자가 작성 된 마지막 문자 뒤에 추가 됩니다. 중복되는 문자열 간에 복사가 이뤄지면 이 동작은 정의되지 않습니다. 차이 **_sprintf_p** 및 **sprintf_s** 은 **_sprintf_p** 지원 위치 매개 변수를 인수는 순서를 지정할 수 있습니다 형식 문자열에 사용 합니다. 자세한 내용은 [printf_p 위치 매개 변수](../../c-runtime-library/printf-p-positional-parameters.md)를 참조하세요.
+**_sprintf_p** 포맷 하 고 일련의 문자 및 값을 저장 하는 함수 *버퍼*합니다. 각 인수에는 *argument_list* (있는 경우)이 변환 되 고 해당 형식 사양에 따라 출력 *형식*합니다. *형식* 인수를 사용 하는 [형식 사양 구문 printf 및 wprintf 함수에 대 한](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)합니다. 기록된 마지막 문자 뒤에 null 문자가 추가됩니다. 중복되는 문자열 간에 복사가 이뤄지면 이 동작은 정의되지 않습니다. 차이 **_sprintf_p** 및 **sprintf_s** 은 **_sprintf_p** 지원 위치 매개 변수를 인수는 순서를 지정할 수 있습니다 형식 문자열에 사용 합니다. 자세한 내용은 [printf_p 위치 매개 변수](../../c-runtime-library/printf-p-positional-parameters.md)를 참조하세요.
 
 **_swprintf_p** 의 와이드 문자 버전이 **_sprintf_p**;에 대 한 포인터 인수 **_swprintf_p** 는 와이드 문자 문자열입니다. 인코딩 오류를 탐지 **_swprintf_p** 에 다를 수 있습니다 **_sprintf_p**합니다. **_swprintf_p** 및 **fwprintf_p** 점을 제외 하 고 동일 하 게 작동 **_swprintf_p** 유형의 대상 대신 문자열에 출력을 기록 **파일**, 및 **_swprintf_p** 필요는 *count* 매개 변수를 쓸 문자의 최대 수를 지정 합니다. 있는 이러한 함수 버전은 **_l** 은 현재 스레드 로캘 대신 전달 된 로캘 매개 변수를 사용 하는 점을 제외 하 고 접미사는 동일 합니다.
 
-**_sprintf_p** 에 저장 된 바이트 수를 반환 *버퍼*를 제외 하 고 종료 **NULL** 문자입니다. **_swprintf_p** 에 저장 된 와이드 문자 수를 반환 *버퍼*를 제외 하 고 종료 **NULL** 와이드 문자입니다. 경우 *버퍼* 또는 *형식* 가 null 포인터 또는에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 형식 문자열에 잘못 된 서식 문자가 들어 [매개 변수 유효성 검사 ](../../c-runtime-library/parameter-validation.md). 실행을 계속 허용 된, 하는 경우 이러한 함수가-1을 반환 하 고 설정 **errno** 를 **EINVAL**합니다.
+**_sprintf_p** 에 저장 된 바이트 수를 반환 *버퍼*, 종결 null 문자를 제외 합니다. **_swprintf_p** 에 저장 된 와이드 문자 수를 반환 *버퍼*, 종료 null 와이드 문자를 제외 합니다. 경우 *버퍼* 또는 *형식* 가 null 포인터 또는에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 형식 문자열에 잘못 된 서식 문자가 들어 [매개 변수 유효성 검사 ](../../c-runtime-library/parameter-validation.md). 실행을 계속 허용 된, 하는 경우 이러한 함수가-1을 반환 하 고 설정 **errno** 를 **EINVAL**합니다.
 
 ### <a name="generic-text-routine-mappings"></a>제네릭 텍스트 라우팅 매핑
 

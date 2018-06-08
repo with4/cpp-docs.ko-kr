@@ -1,6 +1,6 @@
 ---
 title: 컴파일러 경고 C4400 C4599 통해 | Microsoft Docs
-ms.date: 11/17/2017
+ms.date: 05/30/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -149,11 +149,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa15d1e23178350dc8b19859db77f272492c2758
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71dbf1817c43c5511f8ee711abf3ff3566f314c9
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34704687"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>컴파일러 경고 C4400 C4599 통해
 
@@ -319,7 +320,8 @@ ms.lasthandoff: 05/04/2018
 |컴파일러 경고 (수준 4) C4574|'*식별자*'같이 정의 됩니다. ' 0': '#if 식별자'를 사용 하 시겠습니까?|
 |컴파일러 경고 (수준 1) C4575|와 호환 되지 않는 ' __vectorcall'는 ' / clr' 옵션: '__stdcall'으로 변환|
 |컴파일러 경고 (수준 1, 오류) C4576|괄호로 묶인 이니셜라이저 목록이 옵니다 형식은 비표준 명시적 형식 변환 구문|
-|컴파일러 경고 (수준 1, 오류) C4578|'abs': 변환할 '*type1*'to'*type2*', 데이터 손실을 (= 호출을 '*함수*' 또는 #include <cmath>?)|
+|컴파일러 경고 (수준 1, Off) C4577|' noexcept' 처리 모드를 지정 합니다; 예외가 함께 사용 예외 시 종료가 보장 되지 않습니다. /EHsc를 지정 합니다.|
+|컴파일러 경고 (수준 1, 오류) C4578|'abs': 변환할 '*type1*'to'*type2*', 데이터 손실을 (= 호출을 '*함수*' 또는 #include \<cmath >?)|
 |[컴파일러 경고(수준 3) C4580](../../error-messages/compiler-warnings/compiler-warning-level-3-c4580.md)|[attribute]는 사용되지 않습니다. 대신 System::Attribute or Platform::Metadata를 기본 클래스로 지정합니다.|
 |[컴파일러 경고(수준 1) C4581](../../error-messages/compiler-warnings/compiler-warning-level-1-c4581.md)|사용 되지 않는 동작: ' "*문자열*"' 아래 템플릿으로 바뀝니다 '*문자열*' 프로세스 특성|
 |컴파일러 경고 (수준 4) C4582|'*형식*': 생성자가 암시적으로 호출 되지 않습니다|

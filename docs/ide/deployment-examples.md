@@ -17,13 +17,14 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 436b289c14110dd8f616112a309e757618b6f954
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33327413"
 ---
 # <a name="deployment-examples"></a>배포 예제
-이 섹션에는 Visual c + + 응용 프로그램을 배포 하는 방법을 보여 주는 예제가 포함 되어 있습니다.  
+이 섹션에는 Visual C++ 응용 프로그램을 배포하는 방법을 보여주는 예제가 포함되어 있습니다.  
   
 ## <a name="examples"></a>예제  
  [연습: 설치 프로젝트를 사용하여 Visual C++ 응용 프로그램 배포](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)  

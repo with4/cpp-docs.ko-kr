@@ -1,5 +1,5 @@
 ---
-title: C + +-clr 응용 프로그램 이전 런타임 버전을 실행 | Microsoft Docs
+title: 이전 버전의 런타임에서 C++ -clr 응용 프로그램 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,23 +22,24 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 4f8e76930eb9191d27085d92a9d3a678812715fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33323617"
 ---
 # <a name="running-a-c-clr-application-on-a-previous-runtime-version"></a>이전 버전의 런타임에서 C++ /clr 응용 프로그램 실행
-별도로 지정 하지 않으면 컴파일러를 사용 하 여 응용 프로그램을 빌드할 공용 언어 런타임 (CLR) 버전에서 실행 하는 c + +.NET Framework 응용 프로그램이 만들어집니다. 그러나 특정 버전의 런타임을 필수 기능을 제공 하는 다른 모든 버전에서 실행에 대해 작성 하는.exe 응용 프로그램에 대 한 같습니다.  
+별도로 지정하지 않는 한, C++ .NET Framework 응용 프로그램은 컴파일러가 응용 프로그램을 빌드하는 데 사용하는 CLR(공용 언어 런타임) 버전에서 실행되도록 빌드됩니다. 그러나 특정 버전의 런타임용으로 빌드된 .exe 응용 프로그램은 필요한 기능을 제공하는 다른 버전에서 실행될 수 있습니다.  
   
- 이를 위해 제공에 런타임 버전 정보를 포함 하는 app.config 파일의 `supportedRuntime` 태그입니다.  
+ 이 작업을 수행하려면 `supportedRuntime` 태그에 런타임 버전 정보가 포함된 app.config 파일을 제공하세요.  
   
- 런타임 시 app.config 파일에 이름이 있어야 양식의 *filename.ext*.config, 여기서 *filename.ext* 응용 프로그램을 시작한 실행 파일의 이름이 며와 같은 디렉터리에 있어야 실행 파일입니다. 예를 들어 응용 프로그램 이름이 TestApp.exe, app.config 파일 이름이 TestApp.exe.config 합니다.  
+ 런타임 시 app.config 파일은 *filename.ext*.config 형식의 이름을 가져야 합니다. 여기서 *filename.ext*는 응용 프로그램을 시작한 실행 파일의 이름이고, 실행 파일과 동일한 디렉터리에 있어야 합니다. 예를 들어 응용 프로그램의 이름이 TestApp.exe인 경우 app.config 파일의 이름은 TestApp.exe.config가 됩니다.  
   
- 둘 이상의 런타임 버전을 지정 하 고 응용 프로그램이 설치 된 런타임 버전을 둘 이상 있는 컴퓨터에서 실행을 하는 경우 응용 프로그램 구성 파일에 지정 되 고 설치 하는 첫 번째 버전을 사용 합니다.  
+ 둘 이상의 런타임 버전을 지정한 상태에서 응용 프로그램이 둘 이상의 런타임 버전이 설치된 컴퓨터에서 실행되는 경우, 응용 프로그램은 구성 파일에 지정되어 설치된 첫 번째 버전을 사용합니다.  
   
- 자세한 내용은 참조 [하는 방법:.NET Framework 버전을 대상 응용 프로그램 구성](http://msdn.microsoft.com/en-us/5247b307-89ca-417b-8dd0-e8f9bd2f4717)합니다.  
+ 자세한 내용은 [방법: .NET Framework 버전을 대상으로 하는 앱 구성](http://msdn.microsoft.com/en-us/5247b307-89ca-417b-8dd0-e8f9bd2f4717)을 참조하세요.  
   
- 버전 1.0 또는 Visual c + +로 작성 하는 응용 프로그램 CLR의 버전 1.1에서 실행 하려면 컴파일러를 사용 하 여 컴파일된 있어야 [/clr:initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md)합니다.  
+ CLR 버전 1.0 또는 1.1 버전에서 실행하려면 Visual C++ 컴파일러에서 빌드한 응용 프로그램을 [/clr:initialAppDomain](../build/reference/clr-common-language-runtime-compilation.md)으로 컴파일해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [데스크톱 응용 프로그램 배포](../ide/deploying-native-desktop-applications-visual-cpp.md)

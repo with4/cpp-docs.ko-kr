@@ -9,11 +9,11 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4996ce3e1943c2c76e959f54730042029e0ce518
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f280ed28a65db4aa71ee6dea36521b1b8606b190
+ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]의 Visual C++에 대한 새로운 기능
 
@@ -26,30 +26,29 @@ ms.lasthandoff: 05/08/2018
 ### <a name="c-conformance-improvements"></a>C++ 규칙 향상
 
 이 릴리스에서는 C++ 컴파일러 및 표준 라이브러리를 C++11 및 C++14 기능에 대한 강화된 지원 기능과, C++17 표준에서 선보일 것으로 예상되는 특정 기능에 대한 임시 지원 기능으로 업데이트했습니다. 자세한 내용은 [Visual Studio 2017의 C++ 규칙 향상](cpp-conformance-improvements-2017.md)을 참조하세요.
-
-### <a name="new-compiler-options"></a>새로운 컴파일러 옵션
-
-- **/std:c++14** 및 **/std:c++latest**: 이러한 컴파일러 옵션을 사용하면 프로젝트에서 특정 버전의 ISO C++ 프로그래밍 언어를 옵트인(opt in)할 수 있습니다. 자세한 내용은 [/std(언어 표준 버전 지정)](build/reference/std-specify-language-standard-version.md)를 참조하세요. **/std:c++latest** 옵션은 대부분의 새 초안 표준 기능을 보호합니다.
-
-   **Visual Studio 2017 버전 15.3**:
-
-   **/std:c++17** 옵션을 사용하면 컴파일러에서 구현된 일련의 C++17 기능을 사용할 수 있습니다. 이 옵션에서는 C++17 이후의 C++표준 규격 초안(Working Draft) 및 결함 업데이트의 전에서 변경되거나 새로운 기능에 대한 컴파일러 및 표준 라이브러리 지원을 사용하지 않습니다. 이러한 기능을 사용하려면 **/std:c++latest**를 사용하세요.
-
-   **Visual Studio 2017 버전 15.5**:
+**Visual Studio 2017 버전 15.5**:  
 
    컴파일러는 구조적 바인딩, `constexpr` 람다, `if constexpr`, 인라인 변수, fold 식 및 형식 시스템에 `noexcept` 추가 등 C++17에 새롭게 추가된 기능의 약 75%를 지원합니다. 이는 **/std:c++17** 옵션하에서 사용할 수 있습니다. 자세한 내용은 [Visual Studio 2017의 C++ 규칙 향상](cpp-conformance-improvements-2017.md)을 참조하세요.
 
-- [/permissive-](build/reference/permissive-standards-conformance.md): 모든 엄격한 표준 준수 컴파일러 옵션을 사용하고 대부분의 Microsoft 전용 컴파일러 확장(예: `__declspec(dllimport)` 제외)을 사용하지 않도록 설정합니다. 이 옵션은 기본적으로 꺼져 있지만 이후 특정 시점에는 기본적으로 켜질 예정입니다.
+**Visual Studio 2017 버전 15.7**:  
 
-   **Visual Studio 2017 버전 15.5**:
+Visual Studio 버전 15.7의 MSVC 컴파일러 도구 집합은 이제 C++ 표준을 준수합니다. 자세한 내용은 [알림: MSVC의 C++ 표준 준수](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/) 및 [Visual C++ 언어 규칙](visual-cpp-language-conformance.md)을 참조하세요.
 
-   **/permissive-** conformance 모드에는 2단계 이름 조회에 대한 부분적인 지원이 포함됩니다. 자세한 내용은 [Visual Studio 2017의 C++ 규칙 향상](cpp-conformance-improvements-2017.md)을 참조하세요.
+### <a name="new-compiler-options"></a>새로운 컴파일러 옵션
+
+- [/permissive-](build/reference/permissive-standards-conformance.md): 모든 엄격한 표준 준수 컴파일러 옵션을 사용하고 대부분의 Microsoft 전용 컴파일러 확장(예: `__declspec(dllimport)` 제외)을 사용하지 않도록 설정합니다. 이 옵션은 Visual Studio 2017 버전 15.5에서 기본적으로 켜져 있습니다.  **/permissive-** conformance 모드에는 2단계 이름 조회에 대한 지원이 포함됩니다. 자세한 내용은 [Visual Studio 2017의 C++ 규칙 향상](cpp-conformance-improvements-2017.md)을 참조하세요.
 
 - [/diagnostics](build/reference/diagnostics-compiler-diagnostic-options.md): 줄 번호, 줄 번호 및 열 또는 줄 번호 및 열과 진단 오류 또는 경고가 발견된 코드 줄 아래의 캐럿 표시를 사용합니다.
 
 - [/debug:fastlink](build/reference/debug-generate-debug-info.md): 모든 디버그 정보를 PDB 파일에 복사하지 않음으로써 최대 30%까지 빠른 증분 연결 시간(Visual Studio 2015 대비)을 사용합니다. 대신, PDB 파일은 실행 파일을 만드는 데 사용된 개체 및 라이브러리 파일에 대한 디버그 정보를 가리킵니다. [Faster C++ build cycle in VS "15" with /Debug:fastlink](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/faster-c-build-cycle-in-vs-15-with-debugfastlink/)(/Debug:fastlink를 사용하는 VS "15"의 더 빠른 C++ 빌드 주기) 및 [Recommendations to speed C++ builds in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2016/10/26/recommendations-to-speed-c-builds-in-visual-studio/)(Visual Studio에서 C++ 빌드 속도를 향상하기 위한 권장 사항)를 참조하세요.
 
 - [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]에서는 [/sdl](build/reference/sdl-enable-additional-security-checks.md)과 함께 [/await](build/reference/await-enable-coroutine-support.md)를 사용할 수 있습니다. 코루틴에서 [/RTC](build/reference/rtc-run-time-error-checks.md) 제한이 제거되었습니다.
+
+   **Visual Studio 2017 버전 15.3**:  
+- [/std:c++14 및 /std:c++latest](build/reference/std-specify-language-standard-version.md): 이러한 컴파일러 옵션을 사용하면 프로젝트에서 특정 버전의 ISO C++ 프로그래밍 언어를 옵트인할 수 있습니다. **/std:c++latest** 옵션은 대부분의 새 초안 표준 기능을 보호합니다.
+
+- [/std:c++17](build/reference/std-specify-language-standard-version.md)을 사용하면 컴파일러에서 구현된 일련의 C++17 기능을 사용할 수 있습니다. 이 옵션에서는 C++17 이후의 C++표준 규격 초안(Working Draft) 및 결함 업데이트의 전에서 변경되거나 새로운 기능에 대한 컴파일러 및 표준 라이브러리 지원을 사용하지 않습니다. 이러한 기능을 사용하려면 **/std:c++latest**를 사용하세요.
+
 
 ### <a name="codegen-security-diagnostics-and-versioning"></a>Codegen, 보안, 진단 및 버전 관리
 
@@ -73,6 +72,12 @@ ms.lasthandoff: 05/08/2018
 Visual C++는 AVX-512의 새로운 기능을 128비트 및 256비트 차원의 레지스터에 가져오는 벡터 길이 명령을 포함하는 Intel의 AVX-512를 지원합니다.
 
 전체적으로 C++17 모드를 사용 중일 때 [/Zc:noexceptTypes-](build/reference/zc-noexcepttypes.md) 옵션을 사용하여 `noexcept`의 C++14 버전으로 되돌릴 수 있습니다. 이렇게 하면 모든 `throw()` 코드를 동시에 다시 작성할 필요 없이 C++17에 부합하도록 소스 코드를 업데이트할 수 있습니다. 자세한 내용은 [동적 예외 사양 제거 및 noexcept](cpp-conformance-improvements-2017.md#noexcept_removal)를 참조하세요.
+
+**Visual Studio 2017 버전 15.7**:
+
+- 새로운 컴파일러 스위치 [/Qspectre](build/reference/qspectre.md)는 위험한 실행 부채널 공격을 완화하는 데 도움이 됩니다. 자세한 내용은 [MSVC의 스펙터 완화](https://blogs.msdn.microsoft.com/vcblog/2018/01/15/spectre-mitigations-in-msvc/)를 참조하세요.
+- 스펙터 완화를 위해 새로운 진단 경고입니다. 자세한 내용은 [Visual Studio 2017 버전 15.7 Preview 4의 스펙터 진단](https://blogs.msdn.microsoft.com/vcblog/2018/04/20/spectre-diagnostic-in-visual-studio-2017-version-15-7-preview-4/)을 참조하세요.
+- /Zc, **/Zc:__cplusplus**의 새 값을 사용하면 C++ 표준 지원에 대한 올바른 보고가 가능합니다. 예를 들어, 스위치가 설정되고 컴파일러가 /std:c++17 모드인 경우 값은 **201703L**로 확장됩니다. 자세한 내용은 [MSVC가 이제 __cplusplus를 올바르게 보고](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/msvc-now-correctly-reports-__cplusplus/)를 참조하세요.
 
 ## <a name="c-standard-library-improvements"></a>C++ 표준 라이브러리 향상
 
@@ -220,6 +225,28 @@ C++17 표준에 따라 몇 가지 표준 라이브러리 기능이 추가 또는
 - `basic_string::npos`는 이제 컴파일 시간 상수로 사용할 수 있습니다.
 - C++17 모드에서 `std::allocator`는 이제 alignment가 `max_align_t`보다 큰 over-aligned types - types 할당을 올바르게 처리합니다(**/Zc:alignedNew-** 로 비활성화되지 않은 경우에 한함).  예를 들어 16 또는 32바이트 맞춤이 있는 개체의 벡터는 이제 SSE 및 AVX 명령에 맞게 올바르게 맞춰집니다.
 
+### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017 버전 15.6
+
+- \<memory_resource>
+- 라이브러리 기본 사항 V1
+- polymorphic_allocator 할당 삭제
+- 클래스 템플릿 인수 추론 향상
+
+### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 버전 15.7
+
+- 병렬 알고리즘 지원은 더 이상 실험이 아님
+- \<filesystem>의 새로운 구현
+- 기본 문자열 변환(부분)
+- std::launder()
+- std::byte
+- hypot(x,y,z)
+- 불필요한 decay 방지
+- 수학 특수 함수
+- constexpr char_traits
+- STL에 대한 추론 가이드
+
+자세한 내용은 [Visual C++ 언어 규칙](visual-cpp-language-conformance.md)을 참조하세요.
+
 ## <a name="other-libraries"></a>기타 라이브러리
 
 ### <a name="open-source-library-support"></a>오픈 소스 라이브러리 지원
@@ -269,7 +296,7 @@ C++는 이제 Ctrl+Click **Go To Definition**을 지원하여 정의에 대한 �
 
 ## <a name="intellisense"></a>IntelliSense
 
-이제 새 SQLite 기반 데이터베이스 엔진이 기본적으로 사용됩니다. 이 엔진은 **정의로 이동(Go To Definitions)**, **모든 참조 찾기(Find All References)** 같은 데이터베이스 작업의 속도를 높이고 초기 솔루션 구문 분석 시간을 크게 개선합니다. 해당 설정이 **도구 > 옵션 > 텍스트 편집기 > C/C++ > 고급**(이전에는 ...C/C++ | 실험적에 있었음)으로 이동되었습니다.
+- 이제 새 SQLite 기반 데이터베이스 엔진이 기본적으로 사용됩니다. 이 엔진은 **정의로 이동(Go To Definitions)**, **모든 참조 찾기(Find All References)** 같은 데이터베이스 작업의 속도를 높이고 초기 솔루션 구문 분석 시간을 크게 개선합니다. 해당 설정이 **도구 > 옵션 > 텍스트 편집기 > C/C++ > 고급**(이전에는 ...C/C++ | 실험적에 있었음)으로 이동되었습니다.
 
 - 미리 컴파일된 헤더를 사용하지 않는 프로젝트 및 파일에 대한 IntelliSense 성능이 향상되었습니다. 현재 파일의 헤더에 대해 자동 미리 컴파일된 헤더가 생성됩니다.
 
@@ -284,16 +311,13 @@ C++는 이제 Ctrl+Click **Go To Definition**을 지원하여 정의에 대한 �
   ![멤버 목록 필터링](media/mlfiltering.png "멤버 목록 필터링")
 
 - 멤버 목록에 나타나는 항목의 컨텍스트 인식 필터링을 제공하는 새로운 실험 예측 IntelliSense 기능이 추가되었습니다. [C++ IntelliSense Improvements – Predictive IntelliSense & Filtering](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-intellisense-improvements-predictive-intellisense-filtering/)(C++ IntelliSense 향상 – 예측 IntelliSense 및 필터링)을 참조하세요.
-
 - 이제 **모든 참조 찾기**(Shift+F12)를 사용하여 복잡한 코드베이스에서도 쉽게 탐색할 수 있습니다. 고급 그룹화, 필터링, 정렬, 결과 내 검색 및 (일부 언어의 경우) 색 지정이 제공되므로 참조를 명확하게 이해할 수 있습니다. C++의 경우 새로운 UI에 변수에서 읽고 있는지 아니면 변수에 쓰고 있는지에 대한 정보가 포함되어 있습니다.
-
 - IntelliSense 점-화살표 기능이 실험적에서 고급으로 옮겨졌고 이제 기본적으로 사용됩니다. 편집기 기능인 **범위 확장**과 **우선 순위 확장**도 실험적에서 고급으로 옮겨졌습니다.
-
 - 실험적 리팩터링 기능인 **시그니처 변경**과 **함수 추출**을 기본적으로 사용할 수 있습니다.
-
 - C++ 프로젝트를 위한 '빠른 프로젝트 로드'라는 실험적 기능이 있습니다. 다음에 C++ 프로젝트를 열 때 프로젝트가 더 빠르게 로드되고, 그 다음에 프로젝트를 열 때는 더 빠르게 로드됩니다.
+- 이러한 기능 중 일부는 다른 언어에 공통적으로 적용되고, 일부는 C++에만 해당합니다. 이러한 새로운 기능에 대한 자세한 내용은 [Announcing Visual Studio "15"](https://blogs.msdn.microsoft.com/visualstudio/2016/10/05/announcing-visual-studio-15-preview-5/)(Visual Studio "15" 발표)를 참조하세요.
 
-이러한 기능 중 일부는 다른 언어에 공통적으로 적용되고, 일부는 C++에만 해당합니다. 이러한 새로운 기능에 대한 자세한 내용은 [Announcing Visual Studio "15"](https://blogs.msdn.microsoft.com/visualstudio/2016/10/05/announcing-visual-studio-15-preview-5/)(Visual Studio "15" 발표)를 참조하세요.
+**Visual Studio 1027 버전 15.7**: ClangFormat에 대한 지원이 추가되었습니다. 자세한 내용은 [Visual Studio 2017에서 ClangFormat 지원](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/clangformat-support-in-visual-studio-2017-15-7-preview-1/)을 참조하세요.
 
 ## <a name="non-msbuild-projects-with-open-folder"></a>폴더 열기를 사용한 비 MSBuild 프로젝트에
 
@@ -320,9 +344,11 @@ Visual Studio 2017에서는 MSBuild 프로젝트 파일(.vcxproj)로 변환하�
 
   ![Cmake 폴더 열기](media/cmake_cpp.png "Cmake 폴더 열기")
 
-**Visual Studio 2017 버전 15.3**: CMake 닌자 생성기에 대한 지원이 추가되었습니다. 자세한 내용은 [Visual C++의 CMake 프로젝트](ide/cmake-tools-for-visual-cpp.md)를 참조하세요.
+**Visual Studio 2017 버전 15.3**: CMake 닌자 생성기에 대한 지원이 추가되었습니다. 
 
-**Visual Studio 2017 버전 15.5**: 기존 CMake 캐시 가져오기에 대한 지원이 추가되었습니다. 자세한 내용은 [Visual C++의 CMake 프로젝트](ide/cmake-tools-for-visual-cpp.md)를 참조하세요.
+**Visual Studio 2017 버전 15.5**: 기존 CMake 캐시 가져오기에 대한 지원이 추가되었습니다. 
+
+**Visual Studio 2017 버전 15.7**: CMake 3.11에 대한 지원, CMake 프로젝트의 코드 분석, 솔루션 탐색기에서 대상 보기, 캐시 생성 옵션 및 단일 파일 컴파일 기능이 추가되었습니다. 자세한 내용은 [Visual Studio의 CMake 지원](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) 및 [Visual C++의 CMake 프로젝트](ide/cmake-tools-for-visual-cpp.md)를 참조하세요.
 
 ## <a name="windows-desktop-development-with-c"></a>C++를 사용한 Windows 데스크톱 개발
 
@@ -348,6 +374,12 @@ Visual C++ 빌드 도구(이전에 독립 실행형 제품으로 제공)가 이�
 - ARM 마이크로프로세서를 대상으로 하는 교차 컴파일을 위한 지원이 추가되었습니다. 설치 시 이를 활성화하려면 **C++를 사용한 Linux 개발** 워크로드를 선택하고 **포함 IoT 개발** 옵션을 선택합니다. 그러면 ARM GCC 크로스 컴파일 도구 및 CMake가 설치 대상에 추가됩니다. 자세한 내용은 [Visual Studio의 ARM GCC 크로스 컴파일(영문)](https://blogs.msdn.microsoft.com/vcblog/2017/10/23/arm-gcc-cross-compilation-in-visual-studio/)을 참조하세요.
 - CMake에 대한 지원이 추가되었습니다. 이제 CMake를 Visual Studio 프로젝트로 변환할 필요 없이 기존의 CMake 코드 베이스에서 작업할 수 있습니다. 자세한 내용은 [Linux CMake 프로젝트 구성](linux/cmake-linux-project.md)을 참조하세요.
 - 원격 작업 실행에 대한 지원이 추가되었습니다. 이 기능을 사용하면 Visual Studio의 연결 관리자에 정의된 원격 시스템에 명령을 실행할 수 있습니다. 또한 원격 작업은 원격 시스템에 파일을 복사하는 기능을 제공합니다.
+자세한 내용은 [Linux CMake 프로젝트 구성](linux/cmake-linux-project.md)을 참조하세요.
+
+**Visual Studio 2017 버전 15.7**:
+
+- Linux 워크로드 시나리오에 대한 다양한 개선. 자세한 내용은 [프로젝트 시스템에 대한 Linux C++ 워크로드 개선 사항, Linux 콘솔 창, rsync 및 프로세스에 연결](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/)을 참조하세요.
+- 원격 Linux 연결에서 헤더용 IntelliSense. 자세한 내용은 [원격 Linux 헤더용 IntelliSense](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/intellisense-for-remote-linux-headers/) 및 [Linux CMake 프로젝트 구성](linux/cmake-linux-project.md)을 참조하세요.
 
 ## <a name="game-development-with-c"></a>C++를 사용한 게임 개발
 
@@ -383,21 +415,36 @@ C++는 유니버설 Windows 앱 워크로드에 대한 선택적 구성 요소�
 
 ![CppCoreCheck](media/CppCoreCheck.png "CppCoreCheck 속성 페이지")
 
-**Visual Studio 2017 버전 15.3**:
+**Visual Studio 2017 버전 15.3**: 리소스 관리와 관련된 규칙에 대한 지원이 추가되었습니다.
 
-리소스 관리와 관련된 규칙에 대한 지원이 추가되었습니다.
-
-**Visual Studio 2017 버전 15.5**:
-
-새로운 C++ Core Guidelines 검사 항목에는 스마트 포인터 정확성, 올바른 전역 이니셜라이저 사용, `goto` 및 잘못된 캐스트 같은 구문 사용 플래그 지정이 포함됩니다.
+**Visual Studio 2017 버전 15.5**: 새로운 C++ Core Guidelines 검사 항목에는 스마트 포인터 정확성, 올바른 전역 이니셜라이저 사용, `goto` 및 잘못된 캐스트 같은 구문 사용 플래그 지정이 포함됩니다.
 
 15.3에서 나타나는 일부 경고 번호가 15.5에서는 더 이상 나타나지 않습니다. 이러한 경고는 더 구체적인 검사로 대체되었습니다.
+
+**Visual Studio 2017 버전 15.6**:  
+단일 파일 분석 및 분석 런타임 성능 향상을 위한 지원이 추가되었습니다. 자세한 내용은 [Visual Studio 2017 15.6 Preview 2에 대한 C++ 정적 분석 향상](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/c-static-analysis-improvements-for-visual-studio-2017-15-6-preview-2/)을 참조하세요.
+
+**Visual Studio 2017 버전 15.7**:  
+
+- 실행할 코드 분석 규칙을 지정할 수 있는 [/analyze:ruleset](build/reference/analyze-code-analysis.md)에 대한 지원이 추가되었습니다.
+- 추가 C++ Core Guidelines 규칙에 대한 지원이 추가되었습니다.  자세한 내용은 [C++ 핵심 지침 검사기 사용](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers)을 참조하세요.
 
 ## <a name="unit-testing"></a>유닛 테스트
 
 **Visual Studio 2017 버전 15.5**:
 
 이제 Google Test Adapter와 Boost.Test Adapter가 **C++를 사용한 데스크톱 개발** 워크로드의 구성 요소로 제공되며, **테스트 탐색기**와 통합됩니다. Cmake 프로젝트에 대한 CTest 지원이 추가되었습니다(폴더 열기 사용). 하지만 **테스트 탐색기**와의 완전한 통합은 아직 제공되지 않습니다. 자세한 내용은 [C/C++에 대한 단위 테스트 작성](/visualstudio/test/writing-unit-tests-for-c-cpp)을 참조하세요.
+
+**Visual Studio 2017 버전 15.6**:
+
+- Boost.Test 동적 라이브러리 지원에 대한 지원이 추가되었습니다.
+- 이제 Boost.Test 항목 템플릿을 IDE에서 사용할 수 있습니다.
+
+자세한 내용은 [Boost.Test 단위 테스트: 동적 라이브러리 지원 및 새 항목 템플릿](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/)을 참조하세요. 
+
+**Visual Studio 2017 버전 15.7**:
+
+[CodeLens](https://docs.microsoft.com/en-us/visualstudio/ide/find-code-changes-and-other-history-with-codelens) C++ 단위 테스트 프로젝트에 대한 지원이 추가되었습니다. 자세한 내용은 [C++ 단위 테스트 프로젝트에 대한 CodeLens 알림](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/)을 참조하세요.
 
 ## <a name="visual-studio-graphics-diagnostics"></a>Visual Studio 그래픽 진단
 

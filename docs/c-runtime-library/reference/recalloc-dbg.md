@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8ce4941dcad2a9b02b853640076b71a97f68cbe
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3de6adddc4e7d95f3212c80666816d4855897388
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="recallocdbg"></a>_recalloc_dbg
 
@@ -81,7 +81,7 @@ void *_recalloc_dbg(
 
 ## <a name="return-value"></a>반환 값
 
-성공적으로 완료되면 이 함수는 다시 할당된 메모리 블록의 사용자 부분에 대한 포인터를 반환하거나 새 처리기 함수를 호출하거나 NULL을 반환합니다. 반환 동작에 대한 자세한 설명은 다음 설명 섹션을 참조하세요. 새 처리기 함수를 사용하는 방법에 대한 자세한 내용은 [_recalloc](recalloc.md) 함수를 참조하세요.
+성공적으로 완료 되 면이 함수 중 하나는 다시 할당 된 메모리 블록의 사용자 부분에 대 한 포인터를 반환, 새 처리기 함수를 호출 또는 반환 **NULL**합니다. 반환 동작에 대한 자세한 설명은 다음 설명 섹션을 참조하세요. 새 처리기 함수를 사용하는 방법에 대한 자세한 내용은 [_recalloc](recalloc.md) 함수를 참조하세요.
 
 ## <a name="remarks"></a>설명
 

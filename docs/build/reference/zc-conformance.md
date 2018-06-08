@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8b87774b9c011d6ea5ab92d3c1b44e4af2b6091
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b89744235a5a2302a6550b2ffa7100511ad2e59c
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34704895"
 ---
 # <a name="zc-conformance"></a>/Zc(규칙)
 
@@ -43,6 +44,7 @@ Visual Studio에서 C 또는 c + + 표준과 호환 되지 않는 확장 문제�
 |---|---|
 |[alignedNew\[-\]](zc-alignednew.md)|C + + 17 과잉 맞춤된 동적 할당을 사용 하도록 설정 (에 기본적으로 C + +에서 17).|
 |[auto\[-\]](zc-auto-deduce-variable-type.md)|에 대 한 새 표준 c + + 의미 적용 `auto` (에 기본적으로).|
+|[__cplusplus\[-\]](zc-cplusplus.md)|사용 하도록 설정 된 **__cplusplus** 매크로 지원 되는 표준 보고서를 (기본적으로 해제) 합니다.|
 |[externConstexpr\[-\]](zc-externconstexpr.md)|에 대 한 외부 링크를 사용 하도록 설정 `constexpr` 변수 (기본적으로 해제) 합니다.|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|표준 c + + 적용 `for` 범위 지정 규칙 (에 기본적으로).|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|암시적 사용 `noexcept` 에 필요한 기능 (에 기본적으로).|

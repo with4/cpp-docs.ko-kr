@@ -1,5 +1,5 @@
 ---
-title: 클래스 추가 대화 상자 | Microsoft Docs
+title: 클래스 추가 대화 상자 | Microsoft 문서
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,21 +17,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f6c4f108b30babcc30ffc5f2fc4c63fe764db2e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33339776"
 ---
 # <a name="add-class-dialog-box"></a>클래스 추가 대화 상자
 **클래스 추가** 대화 상자에는 다음을 수행할 수 있는 템플릿이 있습니다.  
   
--   사용 가능한 경우 해당 코드 마법사를 엽니다. 자세한 내용은 참조 [코드 마법사로 기능 추가](../ide/adding-functionality-with-code-wizards-cpp.md)합니다.  
+-   사용 가능한 경우 해당 코드 마법사를 엽니다. 자세한 내용은 [코드 마법사로 기능 추가](../ide/adding-functionality-with-code-wizards-cpp.md)를 참조하세요.  
   
  \- 또는 -  
   
 -   프로젝트에 적절한 파일 및 소스 코드를 추가하여 새 클래스를 자동으로 만듭니다.  
   
- 에 액세스할 수 있습니다는 **클래스 추가** 에서 대화 상자는 **프로젝트** 메뉴 **솔루션 탐색기**, 또는 [클래스 뷰](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)합니다.  
+ **클래스 추가** 대화 상자는 **프로젝트** 메뉴, **솔루션 탐색기**또는 [클래스 뷰](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)에서 액세스할 수 있습니다.  
   
 > [!NOTE]
 >  현재 프로젝트에 적합하지 않은 클래스를 추가하려고 하면 오류 메시지가 표시됩니다. **확인** 을 클릭하여 **클래스 추가** 대화 상자로 돌아갑니다.  
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/04/2018
 |--------------|------------|  
 |MFC 클래스|[MFC 클래스 추가 마법사](../mfc/reference/mfc-add-class-wizard.md)|  
 |ActiveX 컨트롤의 MFC 클래스|[ActiveX 컨트롤의 클래스 추가 마법사](../ide/add-class-from-activex-control-wizard.md)|  
-|TypeLib의 MFC 클래스|[Typelib 마법사에서 클래스를 추가 합니다.](../mfc/reference/add-class-from-typelib-wizard.md)|  
+|TypeLib의 MFC 클래스|[Typelib에서 클래스 추가 마법사](../mfc/reference/add-class-from-typelib-wizard.md)|  
 |MFC ODBC 소비자|[MFC ODBC 소비자 마법사](../mfc/reference/mfc-odbc-consumer-wizard.md)|  
   
 ### <a name="generic-classes"></a>제네릭 클래스  

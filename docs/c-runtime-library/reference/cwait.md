@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a765a6a51a050b96dfd110c21810248b3bb58e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 878c1c08dabe52a31a2bdf377c3e0bb167a9ae5d
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="cwait"></a>_cwait
 
@@ -58,7 +58,7 @@ intptr_t _cwait(
 ### <a name="parameters"></a>매개 변수
 
 *termstat*<br/>
-지정된 프로세스의 결과 코드가 저장되는 버퍼에 대한 포인터이거나 NULL입니다.
+지정된 된 프로세스의 결과 코드가 저장 될 위치를 버퍼에 대 한 포인터 또는 **NULL**합니다.
 
 *procHandle*<br/>
 대기 중인 프로세스에 대 한 핸들 (하기 전에 종료 되어야 하는 프로세스, 즉 **_cwait** 반환할 수 있습니다).
@@ -81,7 +81,7 @@ NULL: Windows 운영 체제 응용 프로그램;에서 무시 다른 응용 프�
 
 **_cwait** 에서 제공 되는 지정된 된 프로세스의 프로세스 ID의 종료 부분이 끝났으면은 *procHandle*합니다. 값 *procHandle* 에 전달 되는 **_cwait** 에 대 한 호출에서 반환 되는 값 이어야 합니다는 [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) 함수는 지정된 된 프로세스를 생성 합니다. 프로세스 ID 하기 전에 종료 하는 경우 **_cwait** 호출 **_cwait** 즉시 반환 합니다. **_cwait** 다른 모든 알려진된 프로세스를 기다리는 프로세스에 의해 사용할 수 유효한 핸들 (*procHandle*) 있습니다.
 
-*termstat* 지정된 된 프로세스의 반환 코드를 저장할 버퍼를 가리킵니다. 값 *termstat* 지정된 된 프로세스는 Windows를 호출 하 여 정상적으로 종료 여부를 나타내는 [ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx) API입니다. **ExitProcess** 지정된 된 프로세스 호출 하는 경우 내부적으로 호출 **종료** 또는 **_exit**에서 반환 **주**의 끝에 도달 하거나 **주** . 통해 다시 전달 되는 값에 대 한 자세한 내용은 *termstat*, 참조 [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx)합니다. 경우 **_cwait** 에 대 한 NULL 값을 사용 하 여 호출 *termstat*, 지정된 된 프로세스의 반환 코드가 저장 되지 않습니다.
+*termstat* 지정된 된 프로세스의 반환 코드를 저장할 버퍼를 가리킵니다. 값 *termstat* 지정된 된 프로세스는 Windows를 호출 하 여 정상적으로 종료 여부를 나타내는 [ExitProcess](http://msdn.microsoft.com/library/windows/desktop/ms682658.aspx) API입니다. **ExitProcess** 지정된 된 프로세스 호출 하는 경우 내부적으로 호출 **종료** 또는 **_exit**에서 반환 **주**의 끝에 도달 하거나 **주** . 통해 다시 전달 되는 값에 대 한 자세한 내용은 *termstat*, 참조 [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx)합니다. 경우 **_cwait** 를 사용 하 여 호출 됩니다는 **NULL** 값 *termstat*, 지정된 된 프로세스의 반환 코드가 저장 되지 않습니다.
 
 *동작* 부모-자식 관계 이러한 환경에서 구현 되지 않기 때문에 Windows 운영 체제에 의해 매개 변수가 무시 됩니다.
 

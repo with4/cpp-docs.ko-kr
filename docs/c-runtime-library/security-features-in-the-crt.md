@@ -34,11 +34,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ce188ea5d28fa99d6133129edbace8e2886f0f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8195e9a7e37ac9fa9186118889d7717698d2b784
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="security-features-in-the-crt"></a>CRT의 보안 기능
 이전 CRT 함수 중 상당수에 더 안전한 최신 버전이 있습니다. 안전한 함수가 있을 경우 보안 수준이 떨어지는 이전 버전이 사용되지 않는 것으로 표시되고 새 버전에 `_s`("안전함") 접미사가 붙습니다.  
@@ -70,7 +70,7 @@ strcpy(szBuf, "test"); // warning: deprecated
   
 -   `Parameter Validation`. 안전한 함수와 많은 기존 버전의 함수에서 모두 CRT 함수에 전달되는 매개 변수의 유효성이 검사됩니다. 이러한 유효성 검사 시에는 다음이 확인됩니다.  
   
-    -   함수에 전달된 `NULL` 값  
+    -   함수에 전달된 **NULL** 값  
   
     -   열거형 값의 유효성  
   

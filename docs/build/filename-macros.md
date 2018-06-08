@@ -16,11 +16,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4e49c65a642dcee3e0f04fb5000a390fccae98ad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e28ba5923d8b62973860c0ba503d13682b3c5e79
+ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="filename-macros"></a>파일 이름 매크로
 파일 이름 매크로 종속성 (디스크에 하지 전체 파일 이름 지정)에 지정 된 파일 이름으로 미리 정의 합니다. 이러한 매크로; 호출 될 때 괄호로 묶이 필요가 없습니다. 표시 된 것 처럼 $만 지정 합니다.  
@@ -29,8 +29,8 @@ ms.lasthandoff: 05/03/2018
 |-----------|-------------|  
 |**$@**|현재 지정 된 현재 대상의 전체 이름 (경로, 기본 이름, 확장명).|  
 |**$$@**|현재 지정 된 현재 대상의 전체 이름 (경로, 기본 이름, 확장명). 종속성의 종속으로만 사용할 수 있습니다.|  
-|**$\***|파일 확장명을 뺀 현재 대상의 경로 및 기본 이름입니다.|  
-|**$\*\***|현재 대상의 모든 종속 항목입니다.|  
+|**$&#42;**|파일 확장명을 뺀 현재 대상의 경로 및 기본 이름입니다.|  
+|**$&#42;&#42;**|현재 대상의 모든 종속 항목입니다.|  
 |**$?**|현재 대상 타임 스탬프가 모든 종속 항목입니다.|  
 |**$<**|현재 대상 타임 스탬프가 종속 파일입니다. 유추 규칙의 명령에만 유효 합니다.|  
   

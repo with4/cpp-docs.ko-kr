@@ -28,11 +28,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68de7c3ab3b823c1e3d08a13a9d7363232e9712e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c0105ccc5a40c4e5fe789814adfabe6c9749650
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="dllonexit"></a>__dllonexit
 종료 시 호출할 루틴을 등록합니다.  
@@ -57,7 +57,7 @@ _onexit_t __dllonexit(   _onexit_t func,
  삭제 시 실행할 함수 목록의 끝 부분을 가리키는 변수에 대한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 성공할 경우 사용자 함수에 대한 포인터입니다. 그렇지 않으면 NULL 포인터입니다.  
+ 성공할 경우 사용자 함수에 대한 포인터입니다. 그렇지 않으면 **NULL** 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
  `__dllonexit` 함수는 [_onexit](../c-runtime-library/reference/onexit-onexit-m.md) 함수에서 사용되는 전역 변수가 이 루틴에 표시되지 않는다는 점을 제외하고 해당 함수와 비슷합니다. 이 함수는 전역 변수 대신 `pbegin` 및 `pend` 매개 변수를 사용합니다.  

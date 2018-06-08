@@ -58,11 +58,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fa673de76632fbb5c4aad08a13ff269a464ff46
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 35885dfb6a7432796688e35032e06d0aec863687
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l
 
@@ -106,7 +106,7 @@ Null 종료 문자열입니다.
 
 ## <a name="return-value"></a>반환 값
 
-이러한 각 함수에 있는 문자의 수를 반환 *str*, 터미널 제외 **NULL**합니다. 반환 값 없음은 제외 하 고 오류를 나타내는 데 예약 되어 **_mbstrlen** 및 **_mbstrlen_l**를 반환 하는 `((size_t)(-1))` 문자열에 잘못 된 멀티 바이트 문자가 포함 되어 있습니다.
+이러한 각 함수에 있는 문자의 수를 반환 *str*, 터미널 null을 제외 합니다. 반환 값 없음은 제외 하 고 오류를 나타내는 데 예약 되어 **_mbstrlen** 및 **_mbstrlen_l**를 반환 하는 `((size_t)(-1))` 문자열에 잘못 된 멀티 바이트 문자가 포함 되어 있습니다.
 
 ## <a name="remarks"></a>설명
 

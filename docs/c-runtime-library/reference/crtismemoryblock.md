@@ -32,11 +32,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee3e30e5bde5a3bed67d975c96b00568306f926
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 45331186cca5aab3c7971ba404d7b6da98139130
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 
@@ -77,7 +77,7 @@ int _CrtIsMemoryBlock(
 
 ## <a name="remarks"></a>설명
 
-**_CrtIsMemoryBlock** 함수 확인 하는 지정 된 메모리 블록은 응용 프로그램의 로컬 힙 내에 올바른 블록 형식 식별자가 있습니다. 또한 이 함수는 메모리 블록 할당이 원래 요청된 경우 개체 할당 순서 번호 및 소스 파일 이름/줄 번호를 가져오는 데도 사용할 수 있습니다. NULL이 아닌 값을 전달는 *requestNumber*, *filename*, 또는 *linenumber* 매개 변수 원인을 **_CrtIsMemoryBlock** 설정 하려면 이러한 매개 변수는 메모리 블록에 있는 값에 로컬 힙에 블록을 찾으면 헤더를 디버깅 합니다. 때 [_DEBUG](../../c-runtime-library/debug.md) 정의 되지 않은에 대 한 호출이 **_CrtIsMemoryBlock** 전처리 중 제거 됩니다.
+**_CrtIsMemoryBlock** 함수 확인 하는 지정 된 메모리 블록은 응용 프로그램의 로컬 힙 내에 올바른 블록 형식 식별자가 있습니다. 또한 이 함수는 메모리 블록 할당이 원래 요청된 경우 개체 할당 순서 번호 및 소스 파일 이름/줄 번호를 가져오는 데도 사용할 수 있습니다. 전달 비-**NULL** 에 대 한 값은 *requestNumber*, *filename*, 또는 *linenumber* 매개 변수 원인을 **_ CrtIsMemoryBlock** 로컬 힙에 블록을 찾으면 메모리 블록의 디버그 헤더의 값에 이러한 매개 변수를 설정 합니다. 때 [_DEBUG](../../c-runtime-library/debug.md) 정의 되지 않은에 대 한 호출이 **_CrtIsMemoryBlock** 전처리 중 제거 됩니다.
 
 경우 **_CrtIsMemoryBlock** 실패 하면 반환 **FALSE** 출력 매개 변수를 기본값으로 초기화 됩니다: *requestNumber* 및 **lineNumber**  0으로 설정 하 고 *filename* 로 설정 되어 **NULL**합니다.
 

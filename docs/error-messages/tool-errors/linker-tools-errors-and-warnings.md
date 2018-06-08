@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c38adaab248127f9810d53304ca1ad9593f78667
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f279c4e59f8eb7f655ae10f8ea99ec6ed31115ec
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569958"
 ---
 # <a name="linker-tools-errors-and-warnings"></a>링커 도구 오류 및 경고
 
@@ -132,6 +133,8 @@ ms.lasthandoff: 05/04/2018
 
 [링커 도구 오류 LNK1314](../../error-messages/tool-errors/linker-tools-error-lnk1314.md)
 
+[링커 도구 오류 LNK1318](../../error-messages/tool-errors/linker-tools-error-lnk1318.md)
+
 [링커 도구 오류 LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)
 
 [링커 도구 오류 LNK1561](../../error-messages/tool-errors/linker-tools-error-lnk1561.md)
@@ -181,6 +184,8 @@ ms.lasthandoff: 05/04/2018
 [링커 도구 경고 LNK4010](../../error-messages/tool-errors/linker-tools-warning-lnk4010.md)
 
 [링커 도구 경고 LNK4014](../../error-messages/tool-errors/linker-tools-warning-lnk4014.md)
+
+[링커 도구 경고 LNK4020](../../error-messages/tool-errors/linker-tools-warning-lnk4020.md)
 
 [링커 도구 경고 LNK4022](../../error-messages/tool-errors/linker-tools-warning-lnk4022.md)
 

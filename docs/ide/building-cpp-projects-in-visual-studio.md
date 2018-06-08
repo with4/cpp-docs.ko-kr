@@ -1,5 +1,5 @@
 ---
-title: Visual Studio에서 c + + 프로젝트 빌드 | Microsoft Docs
+title: Visual Studio에서 C++ 프로젝트 빌드 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,39 +17,40 @@ ms.author: corob
 ms.workload:
 - cplusplus
 ms.openlocfilehash: a7008e7fe670471301968482fbd4c6c758f0ff5e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33340504"
 ---
 # <a name="building-c-projects-in-visual-studio"></a>Visual Studio에서 C++ 프로젝트 빌드
 Visual Studio IDE(통합 개발 환경)에는 전체 솔루션이나 전체 솔루션 중 한 개의 프로젝트만 빌드할 수 있는 여러 가지 방법이 있습니다. 또한 빌드 설정을 수정하고 사용자 지정 빌드 단계를 지정하여 개발 프로세스를 보다 효율적으로 만들 수 있습니다.  
   
- 선택 하 고 Visual Studio에서 열려 있는 솔루션을 빌드하려면 **솔루션 탐색기**를 할 수 있습니다.  
+ Visual Studio에서 열리고 **솔루션 탐색기**에서 선택된 솔루션을 빌드하려면 다음을 수행할 수 있습니다.  
   
 -   메뉴 모음에서 **빌드**, **솔루션 빌드**를 선택합니다.  
   
--   또는 **솔루션 탐색기**를 솔루션에 대 한 바로 가기 메뉴를 열고 다음 선택 **솔루션 빌드**합니다.  
+-   또는 **솔루션 탐색기**에서 솔루션의 바로 가기 메뉴를 열고 **솔루션 빌드**를 선택합니다.  
   
 -   또는 F7 키를 누릅니다. 이 키는 C/C++ 개발 설정의 기본 키보드 단축키입니다.  
   
--   또는 [명령 창](/visualstudio/ide/reference/command-window) (메뉴 모음에서 **보기**, **다른 창**, **명령 창**)을 입력 `Build.BuildSolution`합니다.  
+-   또는 [명령 창](/visualstudio/ide/reference/command-window)(메뉴 모음에서 **보기**, **다른 창**, **명령 창** 선택)에서 `Build.BuildSolution`을 입력합니다.  
   
--   또는 [빠른 실행](/visualstudio/ide/reference/quick-launch-environment-options-dialog-box) 상자에 입력 `build build solution`합니다.  
+-   또는 [빠른 실행](/visualstudio/ide/reference/quick-launch-environment-options-dialog-box) 상자에 `build build solution`을 입력합니다.  
   
- 선택한 프로젝트를 빌드하려면 **솔루션 탐색기**를 할 수 있습니다.  
+ **솔루션 탐색기**에서 선택한 프로젝트를 빌드하기 위해 다음을 수행할 수 있습니다.  
   
--   메뉴 모음에서 **빌드**, **빌드 \<프로젝트 이름 >** 합니다.  
+-   메뉴 모음에서 **빌드**, **\<프로젝트 이름>** 빌드를 선택합니다.  
   
--   또는 **솔루션 탐색기**를 프로젝트에 대 한 바로 가기 메뉴를 열고 다음 선택 **빌드**합니다.  
+-   **솔루션 탐색기**에서 프로젝트의 바로 가기 메뉴를 열고 **빌드**를 선택합니다.  
   
--   또는 명령 창 (메뉴 모음에서 **보기**, **다른 창**, **명령 창**)을 입력 `Build.BuildOnlyProject`합니다.  
+-   또는 명령 창(메뉴 모음에서 **보기**, **다른 창**, **명령 창** 선택)에서 `Build.BuildOnlyProject`을 입력합니다.  
   
--   빠른 실행 상자에 입력 또는 `build project only build only <project name>`합니다.  
+-   또는 빠른 실행 상자에 `build project only build only <project name>`을 입력합니다.  
   
- Visual Studio에서 Visual C++ 응용 프로그램을 빌드하는 경우 프로젝트의 속성 페이지 대화 상자에서 빌드의 여러 설정을 수정할 수 있습니다. 프로젝트 속성을 설정 하는 방법에 대 한 정보를 참조 하십시오. [프로젝트 속성 작업](../ide/working-with-project-properties.md)합니다.  
+ Visual Studio에서 Visual C++ 응용 프로그램을 빌드하는 경우 프로젝트의 속성 페이지 대화 상자에서 빌드의 여러 설정을 수정할 수 있습니다. 프로젝트 속성 설정 방법에 대한 자세한 내용은 [프로젝트 속성 작업](../ide/working-with-project-properties.md)을 참조하세요.  
   
- 빌드 및 c + + 프로젝트를 디버깅 하는 IDE를 사용 하는 방법에 대 한 예제를 보려면 [연습: c + +로 Visual Studio IDE 탐색](/visualstudio/ide/getting-started-with-cpp-in-visual-studio)합니다. C + 만들려는 IDE를 사용 하는 방법에 대 한 예제를 보려면 + CLR 프로젝트 참조 [연습: Visual Studio에서 CLR를 대상으로 하는 c + + 프로그램 컴파일](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)합니다. Windows 런타임 앱을 만드는 IDE를 사용 하는 방법에 대 한 예제를 보려면 [c + +를 사용 하 여 첫 번째 Windows 런타임 앱 만들기](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx)합니다.  
+ IDE를 사용하여 C++ 프로젝트를 만들고 빌드하며 디버그하는 방법에 대한 예는 [연습: C++로 Visual Studio IDE 탐색](/visualstudio/ide/getting-started-with-cpp-in-visual-studio)을 참조하세요. IDE를 사용하여 C++/CLR 프로젝트를 빌드하는 방법에 대한 예제는 [연습: Visual Studio에서 CLR을 대상으로 하는 C++ 프로그램 컴파일](../ide/walkthrough-compiling-a-cpp-program-that-targets-the-clr-in-visual-studio.md)을 참조합니다. IDE를 사용하여 Windows 런타임 앱을 만드는 방법에 대한 예제는 [C++을 사용하여 첫 번째 Windows 런타임 앱 만들기](http://msdn.microsoft.com/library/windows/apps/hh974580.aspx)를 참조하세요.  
   
  빌드 방법, 빌드 설정 수정 방법 및 사용자 지정 빌드 단계를 지정하는 방법에 대해 자세히 읽어보려면 다음 문서를 참조하세요.  
   
@@ -67,8 +68,8 @@ Visual Studio IDE(통합 개발 환경)에는 전체 솔루션이나 전체 솔�
  .vcxproj 파일의 XML 구조를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [VC + + 디렉터리, 프로젝트, 옵션 대화 상자](vcpp-directories-property-page.md)  
- (MSBuild 프로젝트에만 해당) 실행 파일에 대 한 검색 경로 수정, 빌드하는 동안 파일, 라이브러리 파일 및 소스 코드 파일을 포함 하는 방법에 설명 합니다.  
+ [VC++ 디렉터리, 프로젝트, 옵션 대화 상자](vcpp-directories-property-page.md)  
+ (MSBuild 프로젝트만) 실행 파일의 검색 경로를 수정하는 방법과 빌드 중 파일, 라이브러리 파일 및 소스 코드 파일을 포함하는 방법에 대해 설명합니다.  
   
  [컴파일 및 빌드](/visualstudio/ide/compiling-and-building-in-visual-studio)  
  Visual Studio 내에서 빌드에 대한 정보를 제공합니다.  
@@ -80,10 +81,10 @@ Visual Studio IDE(통합 개발 환경)에는 전체 솔루션이나 전체 솔�
  C++, 컴파일러 및 링커 옵션으로 프로그램 빌드 개요와 추가 빌드 도구에 대한 링크를 제공합니다.  
   
  [이전 버전의 Visual C++에서 프로젝트 업그레이드](../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
- 최신 버전의 컴파일러 도구 집합으로 c + + 프로젝트 업그레이드 문제를 다루는 항목에 대 한 링크를 제공 합니다.  
+ C++ 프로젝트를 최신 버전의 컴파일러 도구 집합으로 업그레이드하는 문제를 다루는 항목에 대한 링크를 제공합니다.  
   
 [Visual C++ 포팅 및 업그레이드 가이드](../porting/visual-cpp-porting-and-upgrading-guide.md)  
-  이전 버전의 Visual Studio에서 만들어진 c + + 응용 프로그램을 업그레이드 하는 방법 및 Visual Studio 이외의 다른 도구를 사용 하 여 만든 응용 프로그램을 마이그레이션하는 방법에 대 한 자세한 정보입니다.  
+  이전 버전의 Visual Studio에서 만들어진 C++ 앱을 업그레이드하는 방법 및 Visual Studio 이외의 다른 도구를 사용해서 만들어진 응용 프로그램을 마이그레이션하는 방법에 대한 자세한 설명입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [유니버설 Windows 앱(C++)](../windows/universal-windows-apps-cpp.md)

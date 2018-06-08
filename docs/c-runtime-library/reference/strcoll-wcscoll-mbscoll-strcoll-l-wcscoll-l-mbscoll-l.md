@@ -53,11 +53,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36e7a2c6025ebf5576bc38117575ebe453adb419
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7ea6a480ad5600a69cae31033c4abc28ed78e5e
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll, wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l
 
@@ -116,7 +116,7 @@ int _mbscoll_l(
 |0|*string1* 동일 *문자열 2*|
 |> 0|*string1* 보다 큰 *문자열 2*|
 
-이러한 각 함수 반환 **_NLSCMPERROR** 오류 발생 시. 사용 하도록 **_NLSCMPERROR**, 두 문자열 중 하나를 포함 합니다. H 또는 MBSTRING 합니다. 8. **wcscoll** 경우 중 하나가 실패할 수 있습니다 *string1* 또는 *string2* NULL 이거나 도메인 외부의 데이터 정렬 시퀀스의 와이드 문자 코드를 포함 합니다. 오류가 발생 하면 **wcscoll** 설정할 수 있습니다 **errno** 를 **EINVAL**합니다. 에 대 한 호출에서 오류를 확인 하려면 **wcscoll**설정, **errno** 0으로 확인 후 **errno** 호출한 후 **wcscoll**합니다.
+이러한 각 함수 반환 **_NLSCMPERROR** 오류 발생 시. 사용 하도록 **_NLSCMPERROR**, 두 문자열 중 하나를 포함 합니다. H 또는 MBSTRING 합니다. 8. **wcscoll** 경우 중 하나가 실패할 수 있습니다 *string1* 또는 *string2* 은 **NULL** 또는 정렬 순서 도메인 외부 와이드 문자 코드를 포함 합니다. 오류가 발생 하면 **wcscoll** 설정할 수 있습니다 **errno** 를 **EINVAL**합니다. 에 대 한 호출에서 오류를 확인 하려면 **wcscoll**설정, **errno** 0으로 확인 후 **errno** 호출한 후 **wcscoll**합니다.
 
 ## <a name="remarks"></a>설명
 

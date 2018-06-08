@@ -22,17 +22,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: ccce0633ca9dad6b4754db2fb6b10aa32dcbdaaa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33322876"
 ---
 # <a name="resources-property-pages"></a>리소스 속성 페이지
-리소스 컴파일러를 사용 하 여에 대 한 자세한 내용은 참조 하십시오. [RC (RC 명령줄)를 사용 하 여](http://msdn.microsoft.com/library/windows/desktop/aa381055)합니다.  
+리소스 컴파일러를 사용하는 방법에 대한 자세한 내용은 [RC(RC 명령줄) 사용](http://msdn.microsoft.com/library/windows/desktop/aa381055)을 참조하세요.  
   
- 액세스 하는 방법에 대 한 내용은 **리소스** 속성 페이지 참조 [프로젝트 속성 작업](../ide/working-with-project-properties.md)합니다.  
+ **리소스** 속성 페이지에 액세스하는 방법에 대한 자세한 내용은 [프로젝트 속성 작업](../ide/working-with-project-properties.md)을 참조하세요.  
   
- 프로그래밍 방식으로 이러한 속성에 액세스 하려면 참조 <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>합니다.  
+ 프로그래밍 방식으로 이러한 속성에 액세스하려면 <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [속성 페이지](../ide/property-pages-visual-cpp.md)

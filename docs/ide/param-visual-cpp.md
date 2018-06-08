@@ -1,5 +1,5 @@
 ---
-title: '&lt;param&gt; (Visual c + +) | Microsoft Docs'
+title: '&lt;param&gt;(Visual C++) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,12 +19,13 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 01add77f68ac35b4c669391504461dd516b55d3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33325385"
 ---
-# <a name="ltparamgt-visual-c"></a>&lt;param&gt; (Visual c + +)
+# <a name="ltparamgt-visual-c"></a>&lt;param&gt;(Visual C++)
 \<param> 태그는 메서드의 매개 변수 중 하나를 설명하기 위해 메서드 선언에 대한 주석에 사용해야 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -41,11 +42,11 @@ ms.lasthandoff: 05/04/2018
  매개 변수에 대한 설명입니다.  
   
 ## <a name="remarks"></a>설명  
- 에 대 한 텍스트는 \<param > 태그는 IntelliSense에 표시 됩니다는 [개체 브라우저](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470), 코드 주석 웹 보고서입니다.  
+ \<param> 태그에 대한 텍스트는 IntelliSense, [개체 브라우저](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) 및 코드 주석 웹 보고서에 표시됩니다.  
   
  [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 // xml_param_tag.cpp  

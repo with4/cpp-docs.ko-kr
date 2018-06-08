@@ -39,11 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f04d6bc5ab0864a1dfc27a1de8b09f1740f845d9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d56bcc5ec779b077305d9d80e4a4e6b5e511df5e
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34704661"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -89,22 +90,22 @@ uintptr_t _beginthreadex( // MANAGED CODE
 새 스레드의 스택 크기 또는 0입니다.
 
 *arglist*<br/>
-새 스레드에 전달할 인수 목록 또는 NULL입니다.
+새 스레드에 전달할 인수 목록 또는 **NULL**합니다.
 
 *보안*<br/>
-반환된 핸들이 자식 프로세스에 의해 상속되는지 여부를 결정하는 [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) 구조에 대한 포인터입니다. 경우 *보안* 가 NULL 인 경우 핸들을 상속할 수 없습니다. Windows 95 응용 프로그램에서 NULL이어야 합니다.
+반환된 핸들이 자식 프로세스에 의해 상속되는지 여부를 결정하는 [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) 구조에 대한 포인터입니다. 경우 *보안* 은 **NULL**, 핸들을 상속할 수 없습니다. 해야 **NULL** Windows 95 응용 프로그램에 대 한 합니다.
 
 *initflag*<br/>
 새 스레드의 초기 상태를 제어하는 플래그입니다. 설정 *initflag* 를 즉시 실행 하려면 0 또는 **CREATE_SUSPENDED** 일시 중단 된 상태 이면 스레드를 만들를 사용 하 여 [ResumeThread](http://msdn.microsoft.com/library/windows/desktop/ms685086.aspx) 는 스레드를 실행 하 합니다. 설정 *initflag* 를 **STACK_SIZE_PARAM_IS_A_RESERVATION** 플래그를 사용 하 여 *stack_size* 초기 바이트의 스택 크기 예약 되므로이 플래그는 지정 되지 않았으므로, *stack_size* 커밋 크기를 지정 합니다.
 
 *thrdaddr*<br/>
-스레드 식별자를 수신하는 32비트 변수를 가리킵니다. NULL인 경우는 사용되지 않습니다.
+스레드 식별자를 수신하는 32비트 변수를 가리킵니다. 이 경우 **NULL**, 사용 되지 않습니다.
 
 ## <a name="return-value"></a>반환 값
 
 새로 만든된 스레드에;에 대 한 핸들에 성공 하면 반환 이러한 각 함수 그러나 새로 만든된 스레드가 너무 빨리 종료 되는 경우, **_beginthread** 유효한 핸들을 반환할 수 없습니다. 설명 단원의 설명을 참조하세요. 오류 발생 시 **_beginthread** -1l로 반환 하 고 **errno** 로 설정 된 **EAGAIN** 너무 많은 스레드를에 없는 경우 **EINVAL** 인수가 유효 하지 않음 또는 스택 크기가 올바르지 않습니다. 또는 **EACCES** 경우 (예: 메모리) 리소스가 부족 합니다. 오류 발생 시 **_beginthreadex** 0을 반환 하 고 **errno** 및 **_doserrno** 설정 됩니다.
 
-경우 *start_address* 가 null 인 경우에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 허용 된, 이러한 함수 설정 **errno** 를 **EINVAL** 고-1을 반환 합니다.
+경우 *start_address* 은 **NULL**에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 허용 된, 이러한 함수 설정 **errno** 를 **EINVAL** 고-1을 반환 합니다.
 
 이러한 반환 코드 및 기타 반환 코드에 대한 자세한 내용은 [errno, _doserrno, _sys_errlist 및 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)을 참조하세요.
 
@@ -137,15 +138,15 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 운영 체제가 스택 할당을 처리 때 어느 **_beginthread** 또는 **_beginthreadex** 버전이 호출 됩니다; 스레드 스택의 주소를 이러한 함수 중 하나에 전달할 필요가 없습니다. 또한는 *stack_size* 인수는 경우 운영 체제는 주 스레드에 지정 된 스택과 동일한 값 사용는 0 일 수 있습니다.
 
-*arglist* 새로 만든된 스레드에 전달 될 매개 변수입니다. 일반적으로 문자열과 같은 데이터 항목의 주소입니다. *arglist* 필요 하지 않은 경우 NULL이 될 수 있지만 **_beginthread** 및 **_beginthreadex** 에 새로운 스레드로 전달할 값을 제공 해야 합니다. 임의의 스레드가 호출 하면 모든 스레드가 종료 됩니다 [중단](abort.md), **종료**, **_exit**, 또는 **ExitProcess**합니다.
+*arglist* 새로 만든된 스레드에 전달 될 매개 변수입니다. 일반적으로 문자열과 같은 데이터 항목의 주소입니다. *arglist* 수 **NULL** 필요 하지 않은 경우 하지만 **_beginthread** 및 **_beginthreadex** 에 새로운 스레드로 전달할 값을 제공 해야 합니다. 임의의 스레드가 호출 하면 모든 스레드가 종료 됩니다 [중단](abort.md), **종료**, **_exit**, 또는 **ExitProcess**합니다.
 
 새 스레드 로캘 프로세스별 전역 현재 로캘 정보를 사용 하 여 초기화 됩니다. 스레드별 로캘을 호출 하 여 사용 하도록 설정 하는 경우 [_configthreadlocale](configthreadlocale.md) (전역으로 또는 새 스레드에 대 한만), 스레드 수의 로캘을 독립적으로 다른 스레드에서 호출 하 여 변경할 **setlocale** 또는 **_wsetlocale**합니다. 스레드별 로캘 플래그가 설정 되지 않은 스레드 새로 만든 모든 스레드를 비롯 하 여 모든 스레드는 또한 스레드별 로캘 플래그를 설정 하 고, 필요가 없습니다에 로캘 정보에 영향을 줄 수 있습니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
-혼합형 및 순수형 코드에 대 한 **_beginthread** 및 **_beginthreadex** 각각 두 개의 오버 로드를 갖고 있습니다. 하나는 네이티브 호출 규칙 함수 포인터가 고 다른 오버 로드는 **__clrcall** 함수 포인터입니다. 첫 번째 오버로드는 응용 프로그램 도메인에 안전하지 않고 어떤 방법으로도 안전할 수 없습니다. 혼합형 또는 순수형 코드를 작성하는 경우 새 스레드가 관리되는 리소스에 액세스하기 전에 올바른 응용 프로그램 도메인에 들어가는지 확인해야 합니다. 이 작업은 예를 들어 [call_in_appdomain 함수](../../dotnet/call-in-appdomain-function.md)를 사용하여 수행할 수 있습니다. 두 번째 오버 로드는 응용 프로그램 도메인 안전 합니다. 호출자의 응용 프로그램 도메인에서 새로 만든된 스레드에 항상 끝나는 **_beginthread** 또는 **_beginthreadex**합니다.
+에 대 한 **/clr** 코드 **_beginthread** 및 **_beginthreadex** 각각 두 개의 오버 로드를 갖고 있습니다. 하나는 네이티브 호출 규칙 함수 포인터가 고 다른 오버 로드는 **__clrcall** 함수 포인터입니다. 첫 번째 오버로드는 응용 프로그램 도메인에 안전하지 않고 어떤 방법으로도 안전할 수 없습니다. 작성 하는 경우 **/clr** 새 스레드 도메인에 들어가는지 올바른 응용 프로그램에 액세스 하기 전에 확인 해야 하는 코드 관리 되는 리소스입니다. 이 작업은 예를 들어 [call_in_appdomain 함수](../../dotnet/call-in-appdomain-function.md)를 사용하여 수행할 수 있습니다. 두 번째 오버 로드는 응용 프로그램 도메인 안전 합니다. 호출자의 응용 프로그램 도메인에서 새로 만든된 스레드에 항상 끝나는 **_beginthread** 또는 **_beginthreadex**합니다.
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴|필수 헤더|
+|루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
 |**_beginthread**|\<process.h>|
 |**_beginthreadex**|\<process.h>|
@@ -158,7 +159,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 사용 하도록 **_beginthread** 또는 **_beginthreadex**, 응용 프로그램은 다중 스레드 C 런타임 라이브러리 중 하 나와 연결 해야 합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 **_beginthread** 및 **_endthread**합니다.
 
@@ -278,7 +279,7 @@ void Bounce( void * parg )
 
 아무 키나 눌러 샘플 응용 프로그램을 종료합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 샘플 코드에서 반환 되는 스레드 핸들을 사용 하는 방법을 보여 줍니다 **_beginthreadex** 동기화 API로 [WaitForSingleObject](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx)합니다. 주 스레드는 두 번째 스레드가 종료할 때까지 기다린 다음 계속합니다. 두 번째 스레드가 호출 하는 경우 **_endthreadex**, 하면 스레드 개체가 신호 된 상태로 이동 합니다. 그러면 기본 스레드를 계속 실행할 수 있습니다. 로 수행할 수 없습니다 **_beginthread** 및 **_endthread**때문에, **_endthread** 호출 **CloseHandle**, 스레드를 소멸 하 개체 신호 된 상태로 설정할 수 있습니다.
 
@@ -330,8 +331,8 @@ Counter should be 1000000; it is-> 1000000
 
 ## <a name="see-also"></a>참고자료
 
-[프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_endthread, _endthreadex](endthread-endthreadex.md)<br/>
-[abort](abort.md)<br/>
-[exit, _Exit, _exit](exit-exit-exit.md)<br/>
-[GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)<br/>
+- [프로세스 및 환경 제어](../../c-runtime-library/process-and-environment-control.md)
+- [_endthread, _endthreadex](endthread-endthreadex.md)
+- [abort](abort.md)
+- [exit, _Exit, _exit](exit-exit-exit.md)
+- [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)

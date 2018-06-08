@@ -42,11 +42,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 92becad93e1d0375f3ecf1ec587daa877a4c8485
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b81ace9c9fe5cf21d93f7e7dd4a8b5f2f2c5d726
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="chdir-wchdir"></a>_chdir, _wchdir
 
@@ -70,7 +70,7 @@ int _wchdir(
 
 ## <a name="return-value"></a>반환 값
 
-이러한 함수는 성공할 경우 0 값을 반환합니다. 반환 값이-1은 오류를 나타냅니다. 지정 된 경로 찾을 수 있으면 **errno** 로 설정 된 **ENOENT**합니다. 경우 *dirname* 가 null 인 경우에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 하도록 허용 된 경우 **errno** 로 설정 된 **EINVAL** 함수가-1을 반환 합니다.
+이러한 함수는 성공할 경우 0 값을 반환합니다. 반환 값이-1은 오류를 나타냅니다. 지정 된 경로 찾을 수 있으면 **errno** 로 설정 된 **ENOENT**합니다. 경우 *dirname* 은 **NULL**에 설명 된 대로 잘못 된 매개 변수 처리기가 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)합니다. 실행을 계속 하도록 허용 된 경우 **errno** 로 설정 된 **EINVAL** 함수가-1을 반환 합니다.
 
 ## <a name="remarks"></a>설명
 

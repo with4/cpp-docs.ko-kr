@@ -19,11 +19,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11ea0dd92eda9aad0cb85bbd1385cdec5af349df
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 31f7fe06c46472f9919a642ecc5d6ed5a326792c
+ms.sourcegitcommit: 3bb7c1c0ceeb8012418e2fff9ae5a7db0fff3877
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="systemclock-structure"></a>system_clock 구조체
 
@@ -42,8 +42,6 @@ struct system_clock;
 `now()`에 대한 첫 번째 호출에서 반환되는 값이 항상 `now()`에 대한 순차적 호출에서 반환되는 값보다 작거나 같을 경우 클록은 *단조*입니다.
 
 클록이 *단조*이고 클록 틱 간 시간이 지속적이면 해당 클록은 *지속*입니다.
-
-이 구현에서 `system_clock`은 `high_resolution_clock`와 의미가 같습니다.
 
 ## <a name="members"></a>멤버
 

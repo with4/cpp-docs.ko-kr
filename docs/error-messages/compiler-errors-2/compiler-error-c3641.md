@@ -16,23 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496ff73822dcc1c886fbd2020f8ec6b8a5a9a2f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99aef6bcfd8ac7ea89cb62fda37c7aec012e16de
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34704947"
 ---
 # <a name="compiler-error-c3641"></a>컴파일러 오류 C3641
-'function': 잘못 된 호출 규칙 'calling_convention' /clr을 사용 하 여 컴파일된 함수에 대 한: pure 또는 /clr: safe  
-  
- **/clr:pure** 및 **/clr:safe** 컴파일러 옵션은 Visual Studio 2015에서는 더 이상 사용되지 않습니다.  
-  
- 만 [__clrcall](../../cpp/clrcall.md) 호출 규칙은 사용할 수 [/clr: pure](../../build/reference/clr-common-language-runtime-compilation.md)합니다.  
-  
- 다음 샘플에서는 C3641 오류가 생성 됩니다.  
-  
-```  
-// C3641.cpp  
-// compile with: /clr:pure /c  
-void __cdecl f() {}   // C3641  
+
+> '*함수*': 잘못 된 호출 규칙 'calling_convention' /clr을 사용 하 여 컴파일된 함수에 대 한: pure 또는 /clr: safe
+
+## <a name="remarks"></a>설명
+
+**/clr: pure** 및 **/clr: safe** 컴파일러 옵션은 Visual Studio 2015에서는 사용 되지 않으며 Visual Studio 2017에서 지원 되지 않습니다.
+
+만 [__clrcall](../../cpp/clrcall.md) 호출 규칙은 사용할 수 [/clr: pure](../../build/reference/clr-common-language-runtime-compilation.md)합니다.
+
+## <a name="example"></a>예
+
+다음 샘플에서는 C3641 오류가 생성 됩니다.
+
+```cpp
+// C3641.cpp
+// compile with: /clr:pure /c
+void __cdecl f() {}   // C3641
 ```

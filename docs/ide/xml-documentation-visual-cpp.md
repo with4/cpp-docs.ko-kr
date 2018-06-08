@@ -1,5 +1,5 @@
 ---
-title: XML 문서 (Visual c + +) | Microsoft Docs
+title: XML 문서(Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,36 +19,37 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 9ee19c51c04fa32ab3c2f1810bb963b22ec7e890
 ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331651"
 ---
 # <a name="xml-documentation-visual-c"></a>XML 문서(Visual C++)
-Visual c + +에서 주석.xml 파일에 처리할 수 있는 소스 코드를 추가할 수 있습니다. 이 파일을 코드의 클래스에 대 한 설명서를 만드는 프로세스에 대 한 입력 될 수 있습니다.  
+Visual C++에서 .xml 파일로 처리될 소스 코드에 주석을 추가할 수 있습니다. 그러면 코드의 클래스에 대한 문서를 만드는 프로세스에 이 파일을 입력할 수 있습니다.  
   
- Visual c + + 코드 파일에서 XML 문서 주석 메서드 또는 형식 정의 이전 직접 있어야 합니다. 주석은은 다음과 같은 시나리오에서 Intellisense QuickInfo 데이터 팁을 채우는 데 사용할 수 있습니다.  
+ Visual C++ 코드 파일에서 XML 문서 주석은 메서드 또는 형식 정의 바로 앞에 있어야 합니다. 이 주석은 다음 시나리오에서 Intellisense QuickInfo 데이터 팁을 채우는 데 사용할 수 있습니다.  
   
-1.  해당 하는.winmd 파일에 있는 코드를 Windows 런타임 구성 요소로 컴파일할 때  
+1.  코드가 .winmd 파일과 함께 Windows 런타임 구성 요소로 컴파일되는 경우  
   
-2.  현재 프로젝트에 소스 코드가 포함 된 경우  
+2.  소스 코드가 현재 프로젝트에 포함된 경우  
   
-3.  해당 형식 선언 및 구현이 동일한 헤더 파일에 있는 라이브러리의  
+3.  형식 선언 및 구현이 동일한 헤더 파일에 있는 라이브러리  
   
 > [!NOTE]
->  현재 릴리스에서 템플릿 또는 템플릿 형식 (예를 들어 템플릿으로 매개 변수를 사용 하는 함수) 들어 있는 모든 코드 주석 처리 되지 않습니다. 이러한 메모 추가 정의 되지 않은 동작이 발생 합니다.  
+>  현재 릴리스에서는 코드 주석이 템플릿 또는 템플릿 형식을 포함하는 모든 항목(예: 매개 변수를 템플릿으로 사용하는 함수)에서 처리되지 않습니다. 이러한 주석을 추가하면 정의되지 않은 동작이 발생합니다.  
   
- 문서 주석을 사용 하 여.xml 파일을 만드는 방법에 내용은 다음 항목을 참조 하십시오.  
+ 문서 주석이 있는 .xml 파일을 만드는 방법에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
 |추가 정보|보기|  
 |---------------------------|---------|  
-|사용 하는 컴파일러 옵션|[/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)|  
-|설명서의 기능을 사용 하는 일반적으로 제공 하는 데 태그|[문서 주석에 대한 권장 태그](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)|  
-|코드의 구문을 식별 하기 위해 컴파일러에서 생성 하는 ID 문자열|[.Xml 파일 처리](../ide/dot-xml-file-processing.md)|  
-|문서 태그를 구분 하는 방법|[Visual C++ 문서 태그의 구분 기호](../ide/delimiters-for-visual-cpp-documentation-tags.md)|  
-|하나 이상의.xdc 파일에서.xml 파일을 생성 합니다.|[XDCMake 참조](../ide/xdcmake-reference.md)|  
-|Visual Studio 기능 영역에 그대로 XML에 대 한 정보 링크를 연결 됨|[Visual Studio의 XML](/visualstudio/xml-tools/xml-tools-in-visual-studio)|  
+|사용할 컴파일러 옵션|[/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)|  
+|문서에서 일반적으로 사용되는 기능을 제공하는 데 사용할 수 있는 태그|[문서 주석에 대한 권장 태그](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)|  
+|컴파일러에서 코드의 구문을 식별하기 위해 생성하는 ID 문자열|[ .xml 파일 처리](../ide/dot-xml-file-processing.md)|  
+|문서 태그를 구분하는 방법|[Visual C++ 문서 태그의 구분 기호](../ide/delimiters-for-visual-cpp-documentation-tags.md)|  
+|하나 이상의 .xdc 파일에서.xml 파일을 생성합니다.|[XDCMake 참조](../ide/xdcmake-reference.md)|  
+|Visual Studio 기능 영역과 관련된 XML에 대한 정보 링크|[Visual Studio의 XML](/visualstudio/xml-tools/xml-tools-in-visual-studio)|  
   
- 특수 문자를 XML 문서 주석의 텍스트에 포함 해야 할 경우 XML 엔터티 또는 CDATA 섹션을 사용 해야 합니다.  
+ 문서 주석의 텍스트에 XML 특수 문자를 넣어야 하는 경우 XML 엔터티 또는 CDATA 섹션을 사용해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [런타임 플랫폼용 구성 요소 확장](../windows/component-extensions-for-runtime-platforms.md)

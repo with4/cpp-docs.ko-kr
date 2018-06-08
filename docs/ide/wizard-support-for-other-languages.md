@@ -1,5 +1,5 @@
 ---
-title: 다른 언어에 대 한 마법사 지원 | Microsoft Docs
+title: 다른 언어에 대한 마법사 지원 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,25 +19,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 75aafd7177c3799c17b75419fd5ab9f54af91d35
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33332444"
 ---
 # <a name="wizard-support-for-other-languages"></a>다른 언어에 대한 마법사 지원
-Visual Studio를 설치할 때 설치 프로그램은 시스템에 있는 로캘을 검색 하 고 적절 한 언어 서식 파일 또는 해당 로캘에 대 한 템플릿을 설치 합니다. 예를 들어 서 부 유럽 로캘의 영어, 프랑스어, 이탈리아어, 스페인어 및 독일어가 설치 됩니다. 이 언어에 표시 된 **리소스 언어** 목록에서 [응용 프로그램 종류](../mfc/reference/application-type-mfc-application-wizard.md) MFC 응용 프로그램 마법사의 페이지입니다.  
+Visual Studio를 설치할 때 설치 응용 프로그램은 시스템에 나열된 로캘을 검색하고 해당 로캘에 적합한 언어 템플릿을 설치합니다. 예를 들어 유럽 서부 로캘의 경우 설치 프로그램은 영어, 프랑스어, 이탈리아어, 스페인어 및 독일어를 설치합니다. 이러한 언어는 MFC 응용 프로그램 마법사의 [응용 프로그램 종류](../mfc/reference/application-type-mfc-application-wizard.md) 페이지에 있는 **리소스 언어** 목록에 나타납니다.  
   
-## <a name="language-templates"></a>언어 서식 파일  
- 모든 서식 파일은 서식 파일은 ANSI 인코딩을 기반으로 하 고 모든 시스템에서 모든 리소스를 편집할 수 때문에 모든 시스템에 설치 됩니다. 예를 들어 기본적으로 일본어 프랑스 시스템 리소스를 편집할 수 없습니다.  
+## <a name="language-templates"></a>언어 템플릿  
+ 템플릿은 ANSI 인코딩 기반이며 모든 시스템에서 모든 리소스를 편집할 수 있는 것은 아니므로, 모든 시스템에 모든 템플릿이 설치되어 있는 것은 아닙니다. 예를 들어, 기본적으로 프랑스어 시스템에서는 일본어 리소스를 편집할 수 없습니다.  
   
- Windows 2000 또는 그 이상를 사용 하는 다른 언어에서 MFC 응용 프로그램을 만들려는 경우 다음에서 복사 해야 템플릿 디렉터리의 해당 언어에 대 한 Visual Studio 설치 프로그램 미디어 (디스크 1) 시스템에 있습니다.  
+ Windows 2000 이상을 사용하고 있고 다른 언어로 MFC 응용 프로그램을 만들려는 경우, Visual Studio 설치 프로그램 미디어(디스크 1)에서 해당 언어에 대한 템플릿 디렉터리를 시스템에 복사해야 합니다.  
   
 > [!NOTE]
->  만든된 프로젝트를 편집 하려면 선택한 언어에 대 한 적절 한 로캘로 시스템 로캘을 설정 해야 합니다.  
+>  생성된 프로젝트를 편집하려면 시스템 로캘을 선택한 언어의 적절한 시스템 로캘로 설정해야 합니다.  
   
- 템플릿은 다음 표에 나열 된 각 할당 \Microsoft Visual Studio.NET 2003\Vc7\VCWizards\mfcappwiz\templates\ 디렉터리에 폴더가 생성 됩니다. 원하는 언어 서식 파일에 액세스 하려면 컴퓨터에 \mfcappwiz\templates\ 디렉터리에 적절 한 폴더를 복사 합니다. 폴더를 복사 되 면 언어에 표시 됩니다는 **리소스 언어** 목록에 **응용 프로그램 종류** MFC 응용 프로그램 마법사의 페이지입니다.  
+ 템플릿에는 각각 다음 표에 나열된 대로 \Microsoft Visual Studio.NET 2003\Vc7\VCWizards\mfcappwiz\templates\ 디렉터리의 폴더가 할당됩니다. 원하는 언어 템플릿에 액세스하려면 해당 폴더를 컴퓨터의 \mfcappwiz\templates\ 디렉터리에 복사합니다. 폴더를 복사하면 언어가 MFC 응용 프로그램 마법사의 **응용 프로그램 종류** 페이지에 있는 **리소스 언어** 목록에 나타납니다.  
   
-### <a name="language-templates-provided-in-visual-studio-net"></a>Visual Studio.NET에서에서 제공 하는 언어 템플릿  
+### <a name="language-templates-provided-in-visual-studio-net"></a>Visual Studio .NET에 제공되는 언어 템플릿  
   
 |언어|템플릿|  
 |--------------|--------------|  
@@ -51,10 +52,10 @@ Visual Studio를 설치할 때 설치 프로그램은 시스템에 있는 로캘
 |한국어|1042|  
 |스페인어|3082|  
   
-## <a name="format-of-visual-c-wizard-generated-files"></a>Visual c + + 마법사에서 생성 된 파일의 형식  
- 설치 된 언어 버전의 Visual Studio는 시스템 로캘이 일치 하지 않는 경우 Visual c + + 마법사 유니코드에 프로젝트를 생성 합니다. 예를 들어 일본어 버전의 Visual Studio 국가별 설정이 일본어 이외의 언어로 설정 된 컴퓨터에 설치는 다음 Visual c + + 마법사에서 생성 유니코드 파일의 구성 된 프로젝트 합니다. 이 Windows (MUI) 팩이 여러 가지의 언어를 설정 하는 컴퓨터에서 일반적입니다.  
+## <a name="format-of-visual-c-wizard-generated-files"></a>Visual C++ 마법사에서 생성된 파일 형식  
+ Visual C++ 마법사는 설치된 언어 버전의 Visual Studio가 시스템 로캘과 일치하지 않으면, 유니코드로 프로젝트를 생성합니다. 예를 들어 일본어 버전의 Visual Studio가 국가별 설정이 일본어 이외의 언어로 설정된 컴퓨터에 설치된 경우, Visual C++ 마법사는 유니코드 파일로 구성된 프로젝트를 생성합니다. 이는 Windows 다중 언어(MUI) 팩으로 설정된 컴퓨터에서 일반적입니다.  
   
- 시스템 로캘이 언어 버전의 Visual Studio와 동일 하 게 되도록 설정 하는 시스템에서 다르게이 동작 합니다. 이 경우 프로젝트 파일 시스템 코드 페이지에 ANSI에서 생성 됩니다.  
+ 이 동작은 시스템 로캘이 Visual Studio의 언어 버전과 동일하도록 설정된 시스템과 다릅니다. 이 경우 시스템 코드 페이지에서 ANSI로 프로젝트 파일이 생성됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Visual C++ 프로젝트용 파일 형식](../ide/file-types-created-for-visual-cpp-projects.md)   

@@ -1,7 +1,7 @@
 ---
 title: _get_osfhandle | Microsoft 문서
 ms.custom: ''
-ms.date: 12/12/2017
+ms.date: 05/29/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -35,11 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8b58bbeb7c0b52950509dc8005551ad706577fcf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 15bddcf3d94935f56fa2e23b6ebd0398ed379c54
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569851"
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -60,7 +61,7 @@ intptr_t _get_osfhandle(
 
 ## <a name="return-value"></a>반환 값
 
-경우에 운영 체제 파일 핸들 반환 *fd* 유효 합니다. 그렇지 않으면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속 허용 된 경우이 함수는 반환 **INVALID_HANDLE_VALUE** (-1)을 설정 하 고 **errno** 를 **EBADF**, 잘못 된 파일 핸들을 나타내는입니다.
+경우에 운영 체제 파일 핸들 반환 *fd* 유효 합니다. 그렇지 않으면 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md)에 설명된 대로 잘못된 매개 변수 처리기가 호출됩니다. 실행을 계속 허용 된 경우이 함수는 반환 **INVALID_HANDLE_VALUE** (-1)을 설정 하 고 **errno** 를 **EBADF**, 잘못 된 파일 핸들을 나타내는입니다. 컴파일러 경고를 Win32 파일 핸들을 예상 하는 루틴에서 결과 사용 하는 경우를 방지 하려면 캐스팅 하는 **처리** 유형입니다.
 
 ## <a name="remarks"></a>설명
 
@@ -68,7 +69,7 @@ intptr_t _get_osfhandle(
 
 ## <a name="requirements"></a>요구 사항
 
-|루틴|필수 헤더|
+|루틴에서 반환된 값|필수 헤더|
 |-------------|---------------------|
 |**_get_osfhandle**|\<io.h>|
 

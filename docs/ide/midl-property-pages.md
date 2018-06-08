@@ -17,13 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: f4b32aaa7626bcb5cfabc59e0d3b9554d73379e5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33328076"
 ---
 # <a name="midl-property-pages"></a>MIDL 속성 페이지
-**MIDL** 노드에 여러 속성 페이지가 포함 되어 있습니다. 이러한 페이지에 액세스하려면 .idl 파일을 마우스 오른쪽 단추로 클릭 **솔루션 탐색기**합니다.  
+**MIDL** 노드에는 여러 속성 페이지가 포함되어 있습니다. 이러한 페이지에 액세스하려면 **솔루션 탐색기**에서 .idl 파일을 마우스 오른쪽 단추로 클릭합니다.  
   
 -   [MIDL 속성 페이지: 일반](../ide/midl-property-pages-general.md)  
   

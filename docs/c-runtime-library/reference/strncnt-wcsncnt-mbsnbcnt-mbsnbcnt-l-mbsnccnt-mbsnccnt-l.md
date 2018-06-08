@@ -60,11 +60,11 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf9bebda262bde4dd3bb2484a95b7b57a6960d99
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 066431205ecd7aa2b193350ccda4a83decac0458
+ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 
@@ -118,7 +118,7 @@ size_t _mbsnccnt_l(
 
 ## <a name="return-value"></a>반환 값
 
-**_mbsnbcnt** 및 **_mbsnbcnt_l** 발견 되는 바이트 수를 반환 합니다. 첫 번째 범위에서 *count* 의 멀티 바이트 문자의 *str*합니다. **_mbsnccnt** 및 **_mbsnccnt_l** 문자 수를 반환할 첫 번째 범위에서 *count* 의 바이트 *str*합니다. NULL 문자가 검사 하기 전에 발견 되는 경우 *str* 가 문자를 NULL 문자 앞 또는 바이트 수가 반환 완료 합니다. 경우 *str* 보다 적은 이루어져 *count* 문자 또는 바이트 문자열에 문자 또는 바이트 수가 반환 합니다. 경우 *count* 작으면 0 보다 0을 반환 합니다. 이전 버전에서는 이러한 함수는 형식의 반환 값에 **int** 대신 **size_t**합니다.
+**_mbsnbcnt** 및 **_mbsnbcnt_l** 발견 되는 바이트 수를 반환 합니다. 첫 번째 범위에서 *count* 의 멀티 바이트 문자의 *str*합니다. **_mbsnccnt** 및 **_mbsnccnt_l** 문자 수를 반환할 첫 번째 범위에서 *count* 의 바이트 *str*합니다. Null 문자가 검사 하기 전에 발견 되는 경우 *str* 가 문자를 null 문자 앞 또는 바이트 수가 반환 완료 합니다. 경우 *str* 보다 적은 이루어져 *count* 문자 또는 바이트 문자열에 문자 또는 바이트 수가 반환 합니다. 경우 *count* 작으면 0 보다 0을 반환 합니다. 이전 버전에서는 이러한 함수는 형식의 반환 값에 **int** 대신 **size_t**합니다.
 
 **_strncnt** 첫 번째 범위에서 문자 수를 반환 *count* 단일 바이트 문자열의 바이트 *str*합니다. **_wcsncnt** 첫 번째 범위에서 문자 수를 반환 *count* 와이드 문자 문자열의 와이드 문자 *str*합니다.
 
@@ -126,9 +126,9 @@ size_t _mbsnccnt_l(
 
 **_mbsnbcnt** 및 **_mbsnbcnt_l** 발견 되는 바이트 수를 계산 첫 번째 범위에서 *count* 의 멀티 바이트 문자의 *str*합니다. **_mbsnbcnt** 및 **_mbsnbcnt_l** 대체 **mtob** 대신 사용 해야 하 고 **mtob**합니다.
 
-**_mbsnccnt** 및 **_mbsnccnt_l** 문자 수를 계산 첫 번째 범위에서 *count* 의 바이트 *str*합니다. 경우 **_mbsnccnt** 및 **_mbsnccnt_l** 더블 바이트 문자의 두 번째 바이트에 NULL을 발생 하면 첫 번째 바이트는 또한 NULL 것으로 간주 하 고 반환 되는 개수 값에 포함 되지 않습니다. **_mbsnccnt** 및 **_mbsnccnt_l** 대체 **btom** 대신 사용 해야 하 고 **btom**합니다.
+**_mbsnccnt** 및 **_mbsnccnt_l** 문자 수를 계산 첫 번째 범위에서 *count* 의 바이트 *str*합니다. 경우 **_mbsnccnt** 및 **_mbsnccnt_l** 더블 바이트 문자의 두 번째 바이트의 null 문자가 발생 하면 첫 번째 바이트는 null 이어야 합니다. 또한 간주 하 고 반환 되는 개수 값에 포함 되지 않습니다. **_mbsnccnt** 및 **_mbsnccnt_l** 대체 **btom** 대신 사용 해야 하 고 **btom**합니다.
 
-경우 *str* 아니거나 null 포인터가 *count* 가 0 이면 이러한 함수에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md), **errno** 로 설정 된 **EINVAL**, 함수가 0을 반환 합니다.
+경우 *str* 는 **NULL** 포인터 또는 *count* 가 0 이면 이러한 함수에 설명 된 대로 잘못 된 매개 변수 처리기를 호출 [매개 변수 유효성 검사](../../c-runtime-library/parameter-validation.md), **errno** 로 설정 된 **EINVAL**, 함수가 0을 반환 합니다.
 
 출력 값은 로캘의 **LC_CTYPE** 범주 설정에 따른 영향을 받습니다. 자세한 내용은 [setlocale](setlocale-wsetlocale.md)을 참조하세요. **_l** 접미사가 없는 이러한 함수 버전은 이 로캘 종속 동작에 현재 로캘을 사용하며, **_l** 접미사가 있는 버전은 전달된 로캘 매개 변수를 대신 사용하는 경우를 제외하고는 동일합니다. 자세한 내용은 [Locale](../../c-runtime-library/locale.md)을 참조하세요.
 
