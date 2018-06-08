@@ -12,11 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5eab4199415974c995aa9b71ad53db41b7695827
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 94a9e75770e822c89ea65a745a2fca491f175d95
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569864"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>오류 및 예외 처리(최신 C++)
 대부분의 시나리오에서 최신 c + +에서 보고 하 고 논리 오류 및 런타임 오류를 모두 처리 하는 기본 방법은 예외를 사용 하는입니다. 스택에 오류를 검색 하는 함수와 처리 하는 방법을 알고 컨텍스트를 가진 함수를 여러 개의 함수 호출 포함 될 수 있습니다 때 특히 유용 합니다. 예외 호출 스택에 대 한 정보를 전달 하는 오류를 감지 하는 코드에 대 한 정식는 잘 정의 된 방법을 제공 합니다.  
@@ -46,7 +47,7 @@ class MyClass
 public:  
    void MyFunc(char c)  
    {  
-      if(c < numeric_limits<char>::max())  
+      if(c > numeric_limits<char>::max())  
          throw invalid_argument("MyFunc argument too large.");  
       //...  
    }  
