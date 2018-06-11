@@ -1,7 +1,7 @@
 ---
 title: '연습: 명령줄에서 네이티브 c + + 프로그램 컴파일 | Microsoft Docs'
 ms.custom: conceptual
-ms.date: 11/04/2016
+ms.date: 06/08/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c2ba3d1da27b3300f6299e902c35157cfe421f5c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3fd65dff0a354ebbed4435b8867271091211279d
+ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35253833"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>연습: 명령줄에서 네이티브 C++ 프로그램 컴파일
 Visual c + + 유니버설 Windows 플랫폼 앱에 대 한 기본적인 콘솔 앱, 데스크톱 앱, 장치 드라이버 및.NET 구성 요소에서 모든 항목을 만드는 데 사용할 수 있는 명령줄 c + + 컴파일러가 포함 되어 있습니다.  
@@ -31,13 +32,13 @@ Visual c + + 유니버설 Windows 플랫폼 앱에 대 한 기본적인 콘솔 �
  이 연습에서는 표시되는 내용을 입력하는 대신 Visual C++ 프로그램을 사용하거나 다른 도움말 문서의 Visual C++ 코드 샘플을 사용할 수 있습니다.  
   
 ## <a name="prerequisites"></a>전제 조건  
- 이 연습을 완료 하려면 설치 해야 Visual Studio 및 선택적 Visual c + + 구성 요소 또는 Microsoft Visual c + + 빌드 도구입니다.  
+ 이 연습을 완료 하려면 설치 해야 Visual Studio 및 c + + 작업과 선택적 데스크톱 개발 또는 명령줄 빌드 도구 Visual Studio에 대 한 합니다.  
   
- Visual Studio는 다양 한 언어 및 플랫폼에 대 한 완전 한 기능의 편집기, 리소스 관리자, 디버거, 및 컴파일러를 지 강력한 통합된 개발 환경입니다. 이러한 기능 및 다운로드 하 고 무료 Visual Studio Community 버전을 비롯해 Visual Studio를 설치 하는 방법에 대 한 내용은 [VisualStudio.com](https://www.visualstudio.com/)합니다.  
+ Visual Studio는 다양 한 언어 및 플랫폼에 대 한 완전 한 기능의 편집기, 리소스 관리자, 디버거, 및 컴파일러를 지 원하는 강력한 통합된 개발 환경 (IDE). 참조를 다운로드 하 여 무료 Visual Studio Community 버전을 포함 하 여 Visual Studio를 설치 하 고 C/c + + 개발에 대 한 지원을 포함 하는 방법에 대 한 내용은 [Visual Studio에서 c + + 설치 지원](../build/vscpp-step-0-installation.md)합니다.  
   
- 명령줄 컴파일러, 도구 및 라이브러리 C 및 c + + 프로그램을 빌드하는 데 필요한 Visual Studio 빌드 도구를 설치 합니다. 빌드 랩에 대 한 완벽 한는 또는 강의실을 실행 하 고 상대적으로 신속 하 게 설치 합니다. 명령줄 도구만를 설치 하려면 다운로드 [Visual Studio 빌드 도구](https://go.microsoft.com/fwlink/p/?linkid=840931) 설치 관리자를 실행 하 고 있습니다. 자세한 내용은 참조 [Visual c + + 빌드 도구](http://landinghub.visualstudio.com/visual-cpp-build-tools)합니다.  
+ 명령줄 컴파일러, 도구 및 라이브러리 C 및 c + + 프로그램을 빌드하는 데 필요한 Visual Studio 용 빌드 도구를 설치 합니다. 빌드 랩에 대 한 완벽 한는 또는 강의실을 실행 하 고 상대적으로 신속 하 게 설치 합니다. 명령줄 도구만를 설치 하려면 다운로드 [Visual Studio 2017 용 빌드 도구](https://go.microsoft.com/fwlink/p/?linkid=840931)합니다.  
   
- 명령줄에서 C 또는 c + + 프로그램을 작성할 수 있습니다, 전에 명령줄에서 액세스할 수 있습니다 및는 도구가 설치 되어 있는지를 확인 해야 합니다. Visual c + + 도구, 헤더 및 라이브러리를 사용 하 여을 찾기 위해 명령줄 환경에 대 한 요구 사항이 복잡 한에 있습니다. **일반 명령 프롬프트 창에서 Visual c + +를 사용할 수 없습니다**합니다. 다행히도 Visual c + + 환경을 명령줄 빌드에 대해 설정 된 개발자 명령 프롬프트를 시작할 수 있는 바로 가기 키를 설치 합니다. 그러나 개발자 명령 프롬프트 바로 가기 이름과 위치는 거의 모든 버전의 Visual c + + 및 서로 다른 버전의 Windows에서 서로 다릅니다. 첫 번째 연습 작업에서 사용할 적합 한을 찾고 있습니다.  
+ 명령줄에서 C 또는 c + + 프로그램을 작성할 수 있습니다, 전에 명령줄에서 액세스할 수 있습니다 및는 도구가 설치 되어 있는지를 확인 해야 합니다. Visual c + + 도구, 헤더 및 라이브러리를 사용 하 여을 찾기 위해 명령줄 환경에 대 한 요구 사항이 복잡 한에 있습니다. **일반 명령 프롬프트 창에서 Visual c + +를 사용할 수 없습니다** 몇 가지 준비를 수행 하지 않고 있습니다. 다행히도 Visual c + + 환경을 명령줄 빌드에 대해 설정 된 개발자 명령 프롬프트를 시작할 수 있는 바로 가기 키를 설치 합니다. 그러나 개발자 명령 프롬프트 바로 가기 이름과 위치는 거의 모든 버전의 Visual c + + 및 서로 다른 버전의 Windows에서 서로 다릅니다. 첫 번째 연습 작업에서 사용할 적합 한을 찾고 있습니다.  
   
 > [!NOTE]
 >  개발자 명령 프롬프트 바로 가기를 컴파일러 및 도구에 대 한 모든 필수 헤더 및 라이브러리의 올바른 경로 자동으로 설정합니다. 값을 설정 해야 이러한 환경 직접 일반 명령 프롬프트 창을 사용 하는 경우. 자세한 내용은 참조 [명령줄 빌드에 맞는 경로 및 환경 변수 설정](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)합니다. 직접 작성 하는 대신 개발자 명령 프롬프트 바로 가기를 사용 하는 것이 좋습니다.  
