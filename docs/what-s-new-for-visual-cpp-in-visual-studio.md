@@ -9,11 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f280ed28a65db4aa71ee6dea36521b1b8606b190
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 9fc79d438b61fce90faf1f8548671ec882c5099a
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34569697"
 ---
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]의 Visual C++에 대한 새로운 기능
 
@@ -394,12 +395,10 @@ C++의 모든 기능을 사용하여 DirectX 또는 Cocos2d로 구동하는 전�
 C++는 유니버설 Windows 앱 워크로드에 대한 선택적 구성 요소로 제공됩니다.  현재 C++ 프로젝트를 업그레이드하려면 수동으로 해야 합니다. Visual Studio 2017에서 v140을 대상으로 한 UWP 프로젝트를 열 때 Visual Studio 2015를 설치하지 않은 경우 프로젝트 속성 페이지에서 v141 플랫폼 도구 집합을 선택해야 합니다.
 
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>유니버설 Windows 플랫폼(UWP)의 C++에 대한 새로운 옵션
+이제 유니버설 Windows 플랫폼 및 Windows 스토어용 C++ 응용 프로그램을 작성하고 패키징하기 위한 새로운 옵션이 있습니다. 사이드로드를 통한 기존 채널 또는 Windows 스토어를 통해 배포하기 위해 데스크톱 브리지 인프라를 사용하여 기존 데스크톱 응용 프로그램 또는 COM 개체를 패키징할 수 있습니다. Windows 10의 새로운 기능을 사용하면 다양한 방법으로 데스크톱 응용 프로그램에 UWP 기능을 추가할 수 있습니다. 자세한 내용은 [데스크톱 브리지](/windows/uwp/porting/desktop-to-uwp-root)를 참조하세요.
 
-이제 유니버설 Windows 플랫폼 및 Microsoft Store용 C++ 응용 프로그램 작성 및 패키징에 대한 새 옵션이 제공됩니다. Desktop App Converter를 사용하여 Microsoft Store를 통해 배포할 기존의 데스크톱 응용 프로그램을 패키징할 수 있습니다. 자세한 내용은 [Using Visual C++ Runtime in Centennial project](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project/)(Centennial 프로젝트에서 Visual C++ 런타임 사용) 및 [데스크톱 브리지를 사용하여 데스크톱 앱을 UWP(유니버설 Windows 플랫폼)로 가져오기](/windows/uwp/porting/desktop-to-uwp-root)를 참조하세요.
-
-**Visual Studio 2017 버전 15.5**:
-
-데스크톱 브리지를 사용하여 데스크톱 응용 프로그램 패키징을 지원하는 **Windows 응용 프로그램 패키징 프로젝트** 프로젝트 템플릿이 추가되었습니다. 유니버설 Windows 앱 워크로드가 설치된 경우 **설치됨 > Visual C++ > 유니버설 Windows 플랫폼** 아래의 **파일 > 새로 만들기 > 프로젝트** 아래에 있습니다.
+**Visual Studio 2017 버전 15.5**  
+데스크톱 브리지를 사용하여 데스크톱 응용 프로그램 패키징 작업을 많이 간소화하는 **Windows 응용 프로그램 패키징 프로젝트** 프로젝트 템플릿이 추가되었습니다. **파일 | 새로 만들기 | 프로젝트 | 설치됨 | Visual C++ | 유니버설 Windows 플랫폼**에서 볼 수 있습니다. 자세한 내용은 [Visual Studio(데스크톱 브리지)를 사용하여 앱 패키지](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)를 참조하세요.
 
 이제 새 코드를 작성할 때 헤더 파일에서만 구현되는 Windows 런타임용 표준 C++ 언어 프로젝션인 C++/WinRT를 사용할 수 있습니다. C++/WinRT를 사용하면 모든 표준 규격 C++ 컴파일러를 통해 Windows 런타임 API를 작성하고 사용할 수 있습니다. C++/WinRT는 C++ 개발자에게 최신 Windows API에 대한 최고 수준의 액세스를 제공하도록 설계되었습니다. 자세한 내용은 [C++/WinRT Available on GitHub](https://moderncpp.com/)(GitHub에서 C++/WinRT를 사용할 수 있음)를 참조하세요.
 
