@@ -48,11 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19b9c25659938e049807eb4e4b41dafd51ebe8e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 89e508242e7318e5419656720b6dee20bed55716
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239426"
 ---
 # <a name="cmap-class"></a>CMap 클래스
 고유 키를 값에 매핑하는 사전 컬렉션 클래스입니다.  
@@ -67,13 +68,13 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
  `KEY`  
  맵에 대 한 키로 사용 되는 개체의 클래스입니다.  
   
- `ARG` *_* `KEY`  
+ `ARG_KEY`  
  데이터 형식에 사용 되는 `KEY` 인수에 대 한 참조, 일반적으로 `KEY`합니다.  
   
  `VALUE`  
  Map에 저장 된 개체의 클래스입니다.  
   
- `ARG` *_* `VALUE`  
+ `ARG_VALUE`  
  데이터 형식에 사용 되는 `VALUE` 인수에 대 한 참조, 일반적으로 `VALUE`합니다.  
   
 ## <a name="members"></a>멤버  
@@ -152,7 +153,7 @@ CMap(INT_PTR nBlockSize = 10);
 ### <a name="remarks"></a>설명  
  단위에서 메모리를 할당 지도 확장 되면서 `nBlockSize` 항목입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
   
 ##  <a name="cpair"></a>  CMap::CPair  
@@ -169,7 +170,7 @@ CMap(INT_PTR nBlockSize = 10);
   
  반환 값을 저장 하는 데 사용 됩니다 [CMap::PLookup](#plookup), [CMap::PGetFirstAssoc](#pgetfirstassoc), 및 [CMap::PGetNextAssoc](#pgetnextassoc)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  사용의 예에 대 한 예제를 참조 하십시오. [CMap::PLookup](#plookup)합니다.  
   
 ##  <a name="getcount"></a>  CMap::GetCount  
@@ -182,7 +183,7 @@ INT_PTR GetCount() const;
 ### <a name="return-value"></a>반환 값  
  요소의 수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CMap::Lookup](#lookup)합니다.  
   
 ##  <a name="gethashtablesize"></a>  CMap::GetHashTableSize  
@@ -195,7 +196,7 @@ UINT GetHashTableSize() const;
 ### <a name="return-value"></a>반환 값  
  해시 테이블에 있는 요소의 수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#57](../../mfc/codesnippet/cpp/cmap-class_2.cpp)]  
   
 ##  <a name="getnextassoc"></a>  CMap::GetNextAssoc  
@@ -229,7 +230,7 @@ void GetNextAssoc(
   
  검색된 된 요소는 맵에서 마지막 다음 새 값의 경우 `rNextPosition` 로 설정 된 **NULL**합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CMap::SetAt](#setat)합니다.  
   
 ##  <a name="getsize"></a>  CMap::GetSize  
@@ -245,7 +246,7 @@ INT_PTR GetSize() const;
 ### <a name="remarks"></a>설명  
  Map의 요소 수를 검색 하려면이 메서드를 호출 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
 ##  <a name="getstartposition"></a>  CMap::GetStartPosition  
@@ -261,7 +262,7 @@ POSITION GetStartPosition() const;
 ### <a name="remarks"></a>설명  
  반복 순서는 예측할 수 없으며; 따라서 "맵 내에서 요소 첫 번째" 특별 한 의미가 없습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CMap::SetAt](#setat)합니다.  
   
 ##  <a name="inithashtable"></a>  CMap::InitHashTable  
@@ -281,7 +282,7 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ### <a name="remarks"></a>설명  
  최상의 성능을 얻으려면 해시 테이블 크기 소수 이어야 합니다. 충돌을 최소화 하려면 크기 해야 약 20%는 가장 큰 예상된 데이터 집합 보다 큰 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CMap::Lookup](#lookup)합니다.  
   
 ##  <a name="isempty"></a>  CMap::IsEmpty  
@@ -294,7 +295,7 @@ BOOL IsEmpty() const;
 ### <a name="return-value"></a>반환 값  
  이 지도 요소가 포함 되어 있지 않으면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CMap::RemoveAll](#removeall)합니다.  
   
 ##  <a name="lookup"></a>  CMap::Lookup  
@@ -323,7 +324,7 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 ### <a name="remarks"></a>설명  
  `Lookup` 정확 하 게 지정된 된 키와 일치 하는 키가 있는 지도 요소를 빠르게 찾기 위해 해싱 알고리즘을 사용 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
 ##  <a name="operator_at"></a>  CMap::operator]  
@@ -348,7 +349,7 @@ VALUE& operator[](arg_key key);
   
  없습니다 "오른쪽" (r-value)이이 운영자에 게 해당 되므로은 실패할 가능성이 있는 지도에서 키를 찾을 수 있습니다. 사용 하 여 `Lookup` 요소 검색에 대 한 멤버 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CMap::Lookup](#lookup)합니다.  
   
 ##  <a name="pgetfirstassoc"></a>  CMap::PGetFirstAssoc  
@@ -365,7 +366,7 @@ CPair* PGetFirstAssoc();
 ### <a name="remarks"></a>설명  
  Map 개체에 대 한 포인터는 첫 번째 요소를 반환 하려면이 함수를 호출 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
 ##  <a name="pgetnextassoc"></a>  CMap::PGetNextAssoc  
@@ -387,7 +388,7 @@ CPair *PGetNextAssoc(const CPair* pAssocRet);
 ### <a name="remarks"></a>설명  
  Map의 모든 요소를 반복 하는이 메서드를 호출 합니다. 첫 번째 요소를 호출 하 여 검색 `PGetFirstAssoc` 는 지도에 대 한 연속 호출은을 반복 하 고 `PGetNextAssoc`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CMap::PGetFirstAssoc](#pgetfirstassoc)합니다.  
   
 ##  <a name="plookup"></a>  CMap::PLookup  
@@ -408,7 +409,7 @@ CPair* PLookup(ARG_KEY key);
 ### <a name="remarks"></a>설명  
  지정된 된 키를 정확 하 게 일치 하는 키를 사용 하 여 지도 요소에 대 한 검색 하려면이 메서드를 호출 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#60](../../mfc/codesnippet/cpp/cmap-class_5.cpp)]  
   
 ##  <a name="removeall"></a>  CMap::RemoveAll  
@@ -421,7 +422,7 @@ void RemoveAll();
 ### <a name="remarks"></a>설명  
  함수는 맵이 비어 이미 경우 제대로 작동 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#61](../../mfc/codesnippet/cpp/cmap-class_6.cpp)]  
   
 ##  <a name="removekey"></a>  CMap::RemoveKey  
@@ -444,7 +445,7 @@ BOOL RemoveKey(ARG_KEY key);
 ### <a name="remarks"></a>설명  
  **DestructElements** 도우미 함수를 사용 하는 항목을 제거 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CMap::SetAt](#setat)합니다.  
   
 ##  <a name="setat"></a>  CMap::SetAt  
@@ -470,7 +471,7 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ### <a name="remarks"></a>설명  
  첫째, 키가 찾습니다. 키가 있으면 해당 값이 변경 됩니다; 그런 다음 그렇지 않으면 새 키-값 쌍이 생성 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#62](../../mfc/codesnippet/cpp/cmap-class_7.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

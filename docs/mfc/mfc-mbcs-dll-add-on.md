@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df6ecf03a5b1c92dc7e435fc014615db09422638
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: efcfac98c5ff36f84ec0b7c4d2fbd6ff40cbb0d4
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239452"
 ---
 # <a name="mfc-mbcs-dll-add-on"></a>MFC MBCS DLL 추가 기능
 
@@ -28,7 +29,7 @@ MFC에 대 한 지원 및 멀티 바이트 문자 집합 (MBCS) 라이브러리�
 
 **Visual Studio 2015**: Visual c + + 설치 구성 요소에 포함 되었지만 이러한 MFC는 기본적으로 설치 되지에 대 한 지원을 모두 유니코드 및 MBCS MFC Dll입니다. Visual C++ 및 MFC는 Visual Studio 설치 프로그램에서 선택적 설치 구성입니다. MFC가 설치되었는지 확인하려면 설치 프로그램에서 **사용자 지정** 을 선택하고 **프로그래밍 언어**에서 **Visual C++** 및 **C++용 Microsoft Foundation Classes** 가 선택되어 있는지 확인합니다. Visual Studio를 이미 설치한 경우 MFC 프로젝트를 만들려고 하면 Visual C++ 및/또는 MFC를 설치하라는 메시지가 표시됩니다.
 
-**Visual Studio 2017**: 유니코드 및 MBCS MFC Dll와 함께 설치 되는 **c + + 데스크톱 개발** 선택할 때 작업 **MFC 및 ATL 지원** 에서 **선택 사항 구성 요소** 창. 설치에는 이러한 구성 요소에서 설치 관리자를 시작할 수 있습니다는 **새 프로젝트** 를 사용 하 여 대화 상자는 **Open Visual Studio 설치 관리자** 링크 합니다.
+**Visual Studio 2017**: 유니코드 및 MBCS MFC Dll와 함께 설치 되는 **c + + 데스크톱 개발** 선택할 때 작업 **MFC 및 ATL 지원** 에서 **선택 사항 구성 요소** 창. 설치에 이러한 구성 요소는 포함 되어 있지 않으면로 이동는 **파일 | 새 프로젝트** 클릭 하 고 대화 상자는 **Open Visual Studio 설치 관리자** 링크 합니다.
 
 ## <a name="see-also"></a>참고자료
 

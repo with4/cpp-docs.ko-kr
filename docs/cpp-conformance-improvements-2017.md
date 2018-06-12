@@ -10,11 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1fd640b838c10e010cf2ea028d5f693cd2e5ba14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7c4e58a651129e1f3855ad9e32c5b70fa2527ab5
+ms.sourcegitcommit: 0bc67d40aa283be42f3e1c7190d6a5d9250ecb9b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34762063"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Visual Studio 2017 버전 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156) 및 [15.7](#improvements_157)의 C++ 규칙 향상입니다.
 
@@ -1581,6 +1582,46 @@ D<int> d;
 ```
 
 오류를 수정하려면 B() 식을 B\<T>()로 변경하세요.
+
+### <a name="constexpr-aggregate-initialization"></a>constexpr 집계 초기화
+
+이전 버전의 C++ 컴파일러가 constexpr 집계 초기화를 잘못 처리했습니다. aggregate-init-list에 요소가 너무 많은 잘못된 코드를 허용했으며 잘못된 codegen을 생성했습니다. 다음 코드는 이러한 코드의 예제입니다. 
+
+```cpp
+#include <array>
+struct X {
+    unsigned short a;
+    unsigned char b;
+};
+
+int main() {
+    constexpr std::array<X, 2> xs = {
+        { 1, 2 },
+        { 3, 4 }
+    };
+    return 0;
+}
+
+```
+
+Visual Studio 2017 버전 15.7 업데이트 3 이상에서는 이전 예제에서 현재 ‘C2078 이니셜라이저가 너무 많음’이 발생합니다. 다음 예제는 코드를 수정하는 방법을 보여 줍니다. 중첩된 brace-init-lists를 사용하여 `std::array`를 초기화할 때 내부 배열에 자체 braced-list를 제공합니다.
+
+```cpp
+#include <array>
+struct X {
+    unsigned short a;
+    unsigned char b;
+};
+
+int main() {
+    constexpr std::array<X, 2> xs = {{ // note double braces
+        { 1, 2 },
+        { 3, 4 }
+    }}; // note double braces
+    return 0;
+}
+
+```
 
 ## <a name="see-also"></a>참고 항목
 

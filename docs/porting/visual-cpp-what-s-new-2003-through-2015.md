@@ -13,11 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ae41c373257202cb08b7f8760acac4ad14dff19
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b9778a9d456ebd0fed6bc36c2c631849bcbfe11d
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705607"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 2003 ~ 2015의 새로운 기능
 
@@ -1936,7 +1937,7 @@ __sptr, __uptr
 - 64비트 네이티브 및 크로스 컴파일러
 - /analyze(엔터프라이즈 코드 분석) 컴파일러 옵션이 추가되었습니다.
 - /bigobj 컴파일러 옵션이 추가되었습니다.
-- /clr:pure, /clr:safe 및 /clr:oldSyntax가 추가되었습니다. (나중에 Visual Studio 2015에서는 사용되지 않습니다.)
+- /clr:pure, /clr:safe 및 /clr:oldSyntax가 추가되었습니다. (나중에 Visual Studio 2015에서 사용이 중단되었으며, Visual Studio 2017에서 제거되었습니다.)
 - 사용되지 않는 컴파일러 옵션: 이 릴리스에서는 많은 컴파일러 옵션이 더 이상 사용되지 않습니다. 자세한 내용은 "사용되지 않는 컴파일러 옵션"을 참조하세요.
 - /clr 코드의 이중 썽킹이 줄어듭니다. 자세한 내용은 "이중 썽킹(C++)"을 참조하세요.
 - /EH(예외 처리 모델) 또는 /EHs는 throw 이외의 다른 방식으로 발생하는 예외를 catch하는 데 더 이상 사용할 수 없습니다. 대신 /EHa를 사용합니다.

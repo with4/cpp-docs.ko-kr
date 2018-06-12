@@ -1,5 +1,5 @@
 ---
-title: 재정의 가상 함수 (Visual c + +) | Microsoft Docs
+title: 가상 함수 재정의(Visual C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,32 +19,33 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 ms.openlocfilehash: d8580d27442b0cae7e343a568beaa9aeae500461
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
-ms.translationtype: MT
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "33337745"
 ---
 # <a name="overriding-a-virtual-function-visual-c"></a>가상 함수 재정의(Visual C++)
-Visual Studio에서 기본 클래스에 정의 된 가상 함수를 재정의할 수 [속성 창](/visualstudio/ide/reference/properties-window)합니다.  
+Visual Studio [속성 창](/visualstudio/ide/reference/properties-window)에서 기본 클래스에 정의된 가상 함수를 재정의할 수 있습니다.  
   
-### <a name="to-override-a-virtual-function-in-the-properties-window"></a>속성 창에서 가상 함수 재정의 하려면  
+### <a name="to-override-a-virtual-function-in-the-properties-window"></a>속성 창에서 가상 함수를 재정의하려면  
   
-1.  클래스 뷰에서 클래스를 클릭 합니다.  
+1.  클래스 뷰에서 클래스를 클릭합니다.  
   
-2.  속성 창에서 클릭 된 **재정의** 단추입니다.  
+2.  속성 창에서 **재정의** 단추를 클릭합니다.  
   
     > [!NOTE]
-    >  **재정의** 클래스 뷰 또는 소스 창 내부를 클릭할 때의 클래스 이름 중 하나를 선택 하면 단추는 사용할 수 있습니다.  
+    >  클래스 뷰에서 클래스 이름을 선택하거나 소스 창 내에서 클릭하면 **재정의** 단추를 사용할 수 있습니다.  
   
-     왼쪽된 열에서 가상 함수를 나열 합니다. 가상 함수 이름을 오른쪽 열에 나타나면 다음 재정의 이미 구현 되었습니다.  
+     왼쪽 열은 가상 함수를 나열합니다. 가상 함수의 이름이 오른쪽 열에도 나타나면 재정의가 이미 구현된 것입니다.  
   
-3.  함수는 함수의 제안 이름을 속성 창에서 오른쪽 열에 셀을 클릭 재정의 하지 않은 경우에 우선 \<추가 >*FuncName*합니다.  
+3.  함수에 재정의가 없는 경우, 속성 창에서 오른쪽 열에 있는 셀을 클릭하여 \<add*FuncName*과 같은 함수 재정의의 제안된 이름이 표시됩니다.  
   
-4.  제안 된 이름을 함수에 대 한 스텁 코드를 추가 하려면 클릭 합니다.  
+4.  제안된 이름을 클릭하여 함수의 스텁 코드를 추가합니다.  
   
-5.  재정의 함수를 편집 하려면 클래스 뷰에서 함수 이름을 두 번 클릭 하 고 소스 창에서 코드를 편집 합니다.  
+5.  재정의 함수를 편집하려면 클래스 뷰에서 함수 이름을 두 번 클릭하고 소스 창에서 코드를 편집합니다.  
   
- 재정의 제거 하려면 오른쪽 열에 재정의 함수 이름을 클릭 하 고 선택 \<삭제 >*FuncName*합니다. 함수 코드 주석으로 처리 됩니다.  
+ 재정의를 제거하려면 오른쪽 열의 재정의 함수 이름을 클릭하고 \<delete>*FuncName*을 선택합니다. 함수의 코드는 주석으로 처리됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [코드 마법사로 기능 추가](../ide/adding-functionality-with-code-wizards-cpp.md)   
