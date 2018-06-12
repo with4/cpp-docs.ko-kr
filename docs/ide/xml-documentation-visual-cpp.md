@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ee19c51c04fa32ab3c2f1810bb963b22ec7e890
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9d763a62edc2f21d8a7669e409c164906c440f1d
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331651"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705636"
 ---
 # <a name="xml-documentation-visual-c"></a>XML 문서(Visual C++)
 Visual C++에서 .xml 파일로 처리될 소스 코드에 주석을 추가할 수 있습니다. 그러면 코드의 클래스에 대한 문서를 만드는 프로세스에 이 파일을 입력할 수 있습니다.  
   
- Visual C++ 코드 파일에서 XML 문서 주석은 메서드 또는 형식 정의 바로 앞에 있어야 합니다. 이 주석은 다음 시나리오에서 Intellisense QuickInfo 데이터 팁을 채우는 데 사용할 수 있습니다.  
+ Visual C++ 코드 파일에서 XML 문서 주석은 메서드 또는 형식 정의 바로 앞에 있어야 합니다. 이 주석은 다음 시나리오에서 IntelliSense QuickInfo 데이터 팁을 채우는 데 사용할 수 있습니다.  
   
 1.  코드가 .winmd 파일과 함께 Windows 런타임 구성 요소로 컴파일되는 경우  
   

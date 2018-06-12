@@ -43,11 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0792ddf067f6289d612a9adb0c8ffeaf8e554ed6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b246e9ed09cce2fdecf8a8d6327a912061247cad
+ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239439"
 ---
 # <a name="exception-handling-in-mfc"></a>MFC의 예외 처리
 이 문서에서는 MFC에서 제공 되는 예외 처리 메커니즘에 설명 합니다. 두 가지 메커니즘을 사용할 수 있습니다.  
@@ -63,7 +64,7 @@ ms.lasthandoff: 05/04/2018
  MFC 예외 매크로 사용 하 여 응용 프로그램을 미리 만들어 둔 경우 기존 코드에서 이러한 매크로 사용 하 여 새 코드에서 c + + 예외를 사용 하는 동안 계속 수 있습니다. 문서 [예외: 버전 3.0의 예외 매크로 변경](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) 이렇게 하는 것에 대 한 지침을 제공 합니다.  
   
 > [!NOTE]
->  C + +에서에서 예외 처리 코드를 사용 하려면 프로젝트의 C/c + + 폴더에 코드 생성 페이지에서 c + + 예외 처리 가능 선택 [속성 페이지](../ide/property-pages-visual-cpp.md) 대화 상자나 /GX 컴파일러 옵션을 사용 합니다. 기본값은 /GX-예외 처리를 사용 하지 않도록 설정 합니다.  
+>  C + +에서에서 예외 처리 코드를 사용 하려면 프로젝트의 C/c + + 폴더에 코드 생성 페이지에서 c + + 예외 처리 가능 선택 [속성 페이지](../ide/property-pages-visual-cpp.md) 대화 상자나 사용은 [/EHsc](../build/reference/eh-exception-handling-model.md) 컴파일러 옵션입니다.  
   
  이 문서에서는 다음 항목을 다룹니다.  
   

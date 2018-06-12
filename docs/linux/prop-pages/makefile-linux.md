@@ -12,11 +12,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: c0e0422859bc4053ea1e8fff424ff79c3b22f8b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fb23d2c7275788b05fe4450613770c268ca6c64
+ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34705701"
 ---
 # <a name="makefile-project-properties-linux-c"></a>메이크파일 프로젝트 속성(Linux C++)
 
@@ -92,7 +93,7 @@ Linux 메이크파일 프로젝트에서 사용할 수 있는 속성의 부분 �
 강제 포함 | 강제 포함 파일을 지정합니다.
 전처리기 정의 | 원본 파일에서 사용하는 전처리기 정의를 지정합니다.
 전처리기 정의 해제 | 전처리기 정의 해제를 하나 이상 지정합니다.     (/U[macro])
-추가 옵션 | C++ 파일을 구문 분석할 때 Intellisense에서 사용하는 추가 컴파일러 스위치를 지정합니다.
+추가 옵션 | C++ 파일을 구문 분석할 때 IntelliSense에서 사용하는 추가 컴파일러 스위치를 지정합니다.
 
 ### <a name="build"></a>빌드
 
