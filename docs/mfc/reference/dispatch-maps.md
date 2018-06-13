@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377098"
 ---
 # <a name="dispatch-maps"></a>디스패치 맵
 OLE 자동화 메서드를 호출 하 고 응용 프로그램에서 속성에 액세스 하는 방법을 제공 합니다. 이러한 요청을 디스패치를 위한 Microsoft Foundation Class 라이브러리에서 제공 하는 메커니즘은 "디스패치 맵," 데이터 형식 및 속성 자체의 뿐만 아니라 개체 함수 및 속성의 내부 및 외부 이름을 지정 하는 함수 인수입니다.  
