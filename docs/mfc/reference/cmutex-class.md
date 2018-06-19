@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372462"
 ---
 # <a name="cmutex-class"></a>CMutex 클래스
 "뮤텍스" 나타냅니다-한 스레드가 리소스에 상호 배타적 액세스 허용 하는 동기화 개체입니다.  

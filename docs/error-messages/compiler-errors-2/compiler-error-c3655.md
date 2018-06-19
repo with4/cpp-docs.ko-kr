@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269950"
 ---
 # <a name="compiler-error-c3655"></a>컴파일러 오류 C3655
 'function': 함수가 이미 명시적으로 재정의 되었습니다  

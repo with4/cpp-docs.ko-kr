@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33705291"
 ---
 # <a name="shortvector-structure"></a>short_vector 구조체
 short_vector는 일반적으로 짧은 벡터 프로그래밍에 유용한 메타프로그래밍 정의를 제공합니다.  

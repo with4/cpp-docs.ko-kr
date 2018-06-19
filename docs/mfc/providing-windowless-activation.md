@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351812"
 ---
 # <a name="providing-windowless-activation"></a>창 없는 활성화 제공
 창 생성 코드 (호출할 때 발생 하는, 즉 모든 **CreateWindow**) 실행 하는 데 비용이 많이 듭니다. 화면 상의 창을 유지 관리하는 컨트롤은 창에 대한 메시지를 관리해야 합니다. 따라서 창 없는 컨트롤은 창을 포함하는 컨트롤 보다 더 빠릅니다.  

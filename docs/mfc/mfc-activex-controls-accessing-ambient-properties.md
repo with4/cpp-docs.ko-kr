@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348233"
 ---
 # <a name="mfc-activex-controls-accessing-ambient-properties"></a>MFC ActiveX 컨트롤: 앰비언트 속성 액세스
 이 문서에서는 ActiveX 컨트롤 컨트롤 컨테이너의 앰비언트 속성에 액세스할 수는 방법을 설명 합니다.  

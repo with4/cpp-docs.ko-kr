@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376560"
 ---
 # <a name="property-pages-mfc"></a>속성 페이지(MFC)
 속성 페이지 보기 및 편집 대화 상자 데이터 교환 (DDX)를 기반으로 데이터 매핑 메커니즘을 지원 하 여 사용자 지정할 수 있는,이 그래픽 인터페이스의 특정 OLE 컨트롤 속성의 현재 값을 표시 합니다.  

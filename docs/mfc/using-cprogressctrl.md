@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381571"
 ---
 # <a name="using-cprogressctrl"></a>CProgressCtrl 사용
 긴 작업의 진행률을 표시 하는 진행률 컨트롤을 사용할 수 있습니다. 작업이 진행 됨에 따라 시스템 강조 색으로 점차적으로 채워진 사각형입니다.  

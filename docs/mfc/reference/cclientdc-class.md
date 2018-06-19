@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348909"
 ---
 # <a name="cclientdc-class"></a>CClientDC 클래스
 Windows 함수 호출을 맡고 [GetDC](http://msdn.microsoft.com/library/windows/desktop/dd144871) 생성 시 및 [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) 소멸 시.  

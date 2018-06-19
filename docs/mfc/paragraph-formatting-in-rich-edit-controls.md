@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348119"
 ---
 # <a name="paragraph-formatting-in-rich-edit-controls"></a>Rich Edit 컨트롤의 단락 서식 지정
 Rich edit 컨트롤의 멤버 함수를 사용할 수 있습니다 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 단락 서식을 지정 하 고 서식 지정 정보를 검색 합니다. 단락 형식 지정 특성에는 맞춤, 탭, 들여쓰기 및 번호 매김이 포함됩니다.  

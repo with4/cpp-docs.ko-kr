@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380099"
 ---
 # <a name="spin-button-styles"></a>스핀 단추 스타일
 스핀 단추에 대 한 설정의 많은 ([CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)) 스타일에 의해 제어 됩니다. 사용 하 여 다음 스타일을 설정할 수 있습니다는 **속성** 대화 상자 편집기의 창.  

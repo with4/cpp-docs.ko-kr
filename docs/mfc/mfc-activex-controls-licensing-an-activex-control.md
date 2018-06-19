@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353935"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC ActiveX 컨트롤: ActiveX 컨트롤 라이선스
 ActiveX 컨트롤의 선택적 기능 사용자 수를 사용 또는 컨트롤 배포를 제어 시스템 있습니다 수 라이센스 지원. (라이선스 문제에 대 한 자세한 논의 라이선스 문제에서을 참조 하십시오. [기존 ActiveX 컨트롤 업그레이드](../mfc/upgrading-an-existing-activex-control.md).)  

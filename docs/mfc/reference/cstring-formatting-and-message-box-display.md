@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375042"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>CString 서식 지정 및 메시지 상자 표시
 다양 한 함수가 서식을 지정 하 고 구문 분석을 제공 `CString` 개체입니다. 조작할 수 있는 경우 이러한 함수를 사용할 수 있습니다 `CString` 있지만 개체는 메시지 상자 텍스트에 표시 되는 문자열 형식 지정 하는 데 특히 유용 합니다.  

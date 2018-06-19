@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349176"
 ---
 # <a name="processing-notification-messages-in-date-and-time-picker-controls"></a>날짜 및 시간 선택 컨트롤의 알림 메시지 처리
 사용자가 조작 된 날짜 및 시간 선택 컨트롤, 컨트롤 (`CDateTimeCtrl`)를 해당 부모 창 알림 메시지를 전송 합니다. 일반적으로 뷰 또는 대화 상자 개체입니다. 이에 대한 응답으로 작업을 수행하려는 경우 이러한 메시지를 처리합니다. 예를 들어 사용자가 열 때 포함 된 month calendar 컨트롤을 표시 하 고 날짜 및 시간 선택기는 **DTN_DROPDOWN** 알림이 전송 됩니다.  

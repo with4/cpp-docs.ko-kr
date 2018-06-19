@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375137"
 ---
 # <a name="dhtml-editing-command-maps"></a>DHTML 편집 명령 맵
 다음 매크로 사용 하 여 DHTML 편집 명령에 매핑할 수 있습니다 [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-파생 된 클래스입니다. 이러한 사용 예제를 보려면 [HTMLEdit 샘플](../../visual-cpp-samples.md)합니다.  

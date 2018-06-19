@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374990"
 ---
 # <a name="cstdiofile-class"></a>CStdioFile 클래스
 런타임 함수에서 연 것과 C 런타임 스트림 파일을 나타냅니다 [fopen](../../c-runtime-library/reference/fopen-wfopen.md)합니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349853"
 ---
 # <a name="rebar-controls-and-bands"></a>Rebar 컨트롤 및 밴드
 Rebar 컨트롤의 주 목적은 자식 창, 공용 대화 상자 컨트롤, 메뉴, 도구 모음, 등에 대 한 컨테이너 역할을 하는 것입니다. 이 포함 된 "밴드"의 개념으로 사용할 수 각 rebar 밴드에는 그리퍼 막대, 비트맵, 텍스트 레이블 및 자식 창의 조합을 포함할 수 있습니다.  

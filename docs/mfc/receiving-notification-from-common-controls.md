@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349715"
 ---
 # <a name="receiving-notification-from-common-controls"></a>공용 컨트롤에서 알림 받기
 공용 컨트롤은 컨트롤에는 사용자의 입력 등의 이벤트 발생 하는 경우 부모 창에 알림 메시지를 전송 하는 자식 창입니다.  

@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375605"
 ---
 # <a name="csocket-class"></a>CSocket 클래스
 파생 `CAsyncSocket`, Windows 소켓 API의 해당 캡슐화를 상속 하 고 보다 상위 수준의 추상을 나타내는 `CAsyncSocket` 개체입니다.  

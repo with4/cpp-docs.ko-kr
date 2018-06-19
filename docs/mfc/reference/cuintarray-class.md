@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372407"
 ---
 # <a name="cuintarray-class"></a>CUIntArray 클래스
 부호 없는 정수의 배열을 지원합니다.  

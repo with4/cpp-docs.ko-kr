@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371366"
 ---
 # <a name="colemessagefilter-class"></a>COleMessageFilter 클래스
 OLE 응용 프로그램의 상호 작용으로 요구되는 동시성을 관리합니다.  

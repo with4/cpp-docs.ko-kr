@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691414"
 ---
 # <a name="a20---binding-of-barrier-directives"></a>A.20   barrier 지시문 바인딩
 지시문 바인딩 규칙에 대 한 호출을 **장벽** 지시문을 가장 가까운 바깥쪽 바인딩할 `parallel` 지시문입니다. 지시문 바인딩에 대 한 자세한 내용은 참조 하십시오. [섹션 2.8](../../parallel/openmp/2-8-directive-binding.md) 페이지 32입니다.  

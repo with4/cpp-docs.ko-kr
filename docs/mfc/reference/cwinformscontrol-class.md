@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375281"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl 클래스
 Windows Forms 컨트롤을 호스팅하기 위한 기본 기능을 제공합니다.  

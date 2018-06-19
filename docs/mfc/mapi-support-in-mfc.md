@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349664"
 ---
 # <a name="mapi-support-in-mfc"></a>MFC의 MAPI 지원
 MFC의는 Microsoft 응용 프로그램 프로그램 인터페이스 MAPI (메시징) 클래스에 하위 집합에 대 한 지원을 제공 **CDocument**합니다. 특히, **CDocument** 메일 지원 최종 사용자의 컴퓨터에 있는지 여부를 결정 하는 멤버 함수 있으며이 경우에 표준 명령 ID가 하는 메일 보내기 명령을 사용할 **ID_FILE_SEND_MAIL**. 이 명령에 대 한 MFC 처리기 함수에는 사용자가 전자 메일을 통해 문서를 보낼 수 있도록 합니다.  

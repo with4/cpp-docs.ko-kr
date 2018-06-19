@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368779"
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton 클래스
 `CMFCCaptionButton` 클래스 도킹 창 또는 미니 프레임 창의 캡션 표시줄에 표시 되는 단추를 구현 합니다. 일반적으로 프레임워크는 캡션 단추를 자동으로 만듭니다.  

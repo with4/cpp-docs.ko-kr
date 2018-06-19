@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295186"
 ---
 # <a name="bscmake-warning-bk4504"></a>BSCMAKE 경고 BK4504
 파일에 참조가 너무 많습니다. 이 소스에서 추가 참조를 무시합니다.  

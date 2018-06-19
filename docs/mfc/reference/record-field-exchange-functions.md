@@ -60,6 +60,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378971"
 ---
 # <a name="record-field-exchange-functions"></a>레코드 필드 교환 함수
 이 항목에서는 레코드 필드 교환 (RFX, 대량 RFX와 DFX) 레코드 집합 개체와 해당 데이터 소스 간의 데이터 전송을 자동화 하 고 데이터에 다른 작업을 수행 하는 데 사용 되는 함수입니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375631"
 ---
 # <a name="editing-a-message-handler"></a>메시지 처리기 편집
 메시지 처리기를 정의 하기 위해 추가 코드를 수정 하거나 멤버 함수 정의에 이동할 수 있습니다.  

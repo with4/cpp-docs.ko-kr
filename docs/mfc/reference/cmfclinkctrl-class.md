@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371730"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl 클래스
 `CMFCLinkCtrl` 클래스 하이퍼링크로 단추를 표시 하 고 단추를 클릭할 때 링크 대상을 호출 합니다.  

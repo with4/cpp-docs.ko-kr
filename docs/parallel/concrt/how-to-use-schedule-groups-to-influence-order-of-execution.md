@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691198"
 ---
 # <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>방법: 실행 순서에 영향을 주는 일정 그룹 사용
 동시성 런타임에서 작업 예약 된 순서는 결정적이 지 합니다. 그러나 작업이 실행 되는 순서 영향을 주는 일정 예약 정책을 사용할 수 있습니다. 이 항목에서는 일정 그룹와 함께 사용 하는 [concurrency::SchedulingProtocol](reference/concurrency-namespace-enums.md#policyelementkey) 스케줄러 정책 작업이 실행 되는 순서에 영향을 줍니다.  

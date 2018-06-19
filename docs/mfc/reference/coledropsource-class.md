@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374899"
 ---
 # <a name="coledropsource-class"></a>COleDropSource 클래스
 데이터를를 끌어놓기 대상으로 끌어다 놓을 수 있습니다.  

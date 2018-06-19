@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351747"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX 컨트롤: 속성 페이지
 속성 페이지 보기 및 ActiveX 컨트롤 속성을 변경 하는 ActiveX 컨트롤 사용자를 사용 합니다. 이러한 속성 보기 및 편집 컨트롤 속성에 대 한 사용자 지정,이 그래픽 인터페이스를 제공 하는 하나 이상의 속성 페이지를 포함 하는 컨트롤 속성 대화 상자를 호출 하 여 액세스 됩니다.  

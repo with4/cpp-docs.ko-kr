@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367466"
 ---
 # <a name="cmfcprintpreviewtoolbar-class"></a>CMFCPrintPreviewToolBar 클래스
 인쇄 미리 보기 도구 모음입니다.  

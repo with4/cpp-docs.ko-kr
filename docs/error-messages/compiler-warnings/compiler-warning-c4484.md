@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274757"
 ---
 # <a name="compiler-warning-c4484"></a>컴파일러 경고 C4484
 'override_function': 기본 ref 클래스 메서드 'base_class_function'와 일치 하지만 'virtual', 'new' 또는 'override';로 표시 되지 않습니다 'new' (및 'virtual' 아님) 가정  

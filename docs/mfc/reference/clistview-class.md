@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366345"
 ---
 # <a name="clistview-class"></a>CListView 클래스
 및 목록 컨트롤의 사용을 간소화 [CListCtrl](../../mfc/reference/clistctrl-class.md), MFC의 문서 뷰 아키텍처와 목록 컨트롤 기능을 캡슐화 하는 클래스입니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351955"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Typelib에서 클래스 추가 마법사
 사용 가능한 형식 라이브러리에서 MFC 클래스를 추가 하려면이 마법사를 사용 합니다. 마법사는 선택한 형식 라이브러리에서 추가한 각 인터페이스에 대 한 클래스를 만듭니다.  

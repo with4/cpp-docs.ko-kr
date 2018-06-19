@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366595"
 ---
 # <a name="cdocitem-class"></a>CDocItem 클래스
 문서 데이터의 구성 요소로, 문서 항목에 대한 기본 클래스입니다.  

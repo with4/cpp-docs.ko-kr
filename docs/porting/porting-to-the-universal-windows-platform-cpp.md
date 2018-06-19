@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846105"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>유니버설 Windows 플랫폼으로 포팅(C++)
 이 항목에서는 Windows 10 앱 플랫폼인 유니버설 Windows 플랫폼에 기존 C++ 코드를 이식하는 방법에 대한 정보를 찾을 수 있습니다. *유니버설* 이라는 용어는 코드가 데스크톱, 휴대폰, 태블릿 및 앞으로 제공될 장치(Windows 10 실행)를 비롯하여 Windows 10을 실행하는 모든 장치에서 실행될 수 있음을 의미합니다. Windows 10을 실행하는 모든 장치에서 제대로 작동하는 단일 XAML 기반 사용자 인터페이스 및 단일 프로젝트를 만듭니다. XAML의 동적 레이아웃 기능을 사용하여 앱 UI를 다른 디스플레이 크기에 맞출 수 있습니다.  

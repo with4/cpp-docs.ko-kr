@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354020"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX 컨트롤: 고급 항목
 이 문서에서는 ActiveX 컨트롤을 개발 하는 데 관련 된 고급 항목에 설명 합니다. 여기에는 다음이 포함됩니다.  

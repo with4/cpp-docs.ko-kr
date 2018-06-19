@@ -95,6 +95,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375926"
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd 클래스
 `CMultiPaneFrameWnd` 클래스 확장 [CPaneFrameWnd 클래스](../../mfc/reference/cpaneframewnd-class.md)합니다. 여러 창을 지원합니다. 컨트롤 막대에 포함 된 단일 핸들 대신 `CMultiPaneFrameWnd` 포함 한 [CPaneContainerManager 클래스](../../mfc/reference/cpanecontainermanager-class.md) 하나 도킹할 수 있는 개체 `CMultiPaneFrameWnd` 간에 이동 하 고 동적으로 만들 여러 부동, 탭 창입니다.  

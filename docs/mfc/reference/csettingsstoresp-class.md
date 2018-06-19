@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376053"
 ---
 # <a name="csettingsstoresp-class"></a>CSettingsStoreSP 클래스
 `CSettingsStoreSP` 클래스는 인스턴스를 만드는 데 사용할 수 있는 도우미 클래스는 [CSettingsStore 클래스](../../mfc/reference/csettingsstore-class.md)합니다.  

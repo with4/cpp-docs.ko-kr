@@ -67,6 +67,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357539"
 ---
 # <a name="carchive-class"></a>CArchive 클래스
 개체의 복잡 한 네트워크는 영구 이진 형식 (일반적으로 디스크 저장소)는 해당 개체를 삭제 한 후 계속 되 면에 저장할 수 있습니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375176"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>회색 및 디더링된 비트맵 함수
 **회색 비트맵 함수**  

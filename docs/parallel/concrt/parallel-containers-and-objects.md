@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694751"
 ---
 # <a name="parallel-containers-and-objects"></a>병렬 컨테이너 및 개체
 여러 컨테이너와 해당 요소에 스레드로부터 안전한 액세스를 제공 하는 개체는 라이브러리 PPL (병렬 패턴)에 포함 되어 있습니다.  

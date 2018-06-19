@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265826"
 ---
 # <a name="compiler-error-c3812"></a>컴파일러 오류 C3812
 'property' 속성 선언에서 첫 번째 토큰 이어야 합니다.  

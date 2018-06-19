@@ -89,6 +89,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357691"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket 클래스
 Windows 소켓 나타냅니다 — 네트워크 통신의 끝점입니다.  

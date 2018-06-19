@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689274"
 ---
 # <a name="multithreading-creating-worker-threads"></a>다중 스레딩: 작업자 스레드 만들기
 작업자 스레드는 대개 사용자 응용 프로그램을 사용 하 여 계속 기다려야 없어야 하는 백그라운드 작업을 처리 합니다. 다시 계산 작업 하면서 인쇄 등의 작업은 작업자 스레드 수의 좋은 예입니다. 이 항목에서 작업자 스레드를 만드는 데 필요한 단계를 자세히 설명 합니다. 다음과 같은 내용을 다룹니다.  

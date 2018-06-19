@@ -247,6 +247,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378683"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement 클래스
 `CMFCRibbonBaseElement` 에 추가할 수 있는 모든 요소에 대 한 기본 클래스는 [리본 표시줄](../../mfc/reference/cmfcribbonbar-class.md)합니다. 리본 요소의 예를 들면 리본 단추, 리본 확인란 및 리본 콤보 상자가 있습니다.  

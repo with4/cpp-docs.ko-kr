@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366127"
 ---
 # <a name="classes-and-functions-generated-by-the-mfc-dll-wizard"></a>MFC DLL 마법사가 생성하는 클래스 및 함수
 MFC DLL 마법사가 생성 하는 코드는 만들고 있는 DLL 및 선택한 옵션의 종류에 따라 달라 집니다. MFC DLL 마법사 모두 형태의 기본 MFC Dll에 대 한 동일한 코드를 생성합니다.  

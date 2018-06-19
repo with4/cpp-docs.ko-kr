@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33840738"
 ---
 # <a name="using-directive-cclr"></a>#using 지시문 (C + + /cli CLR)
 메타 데이터를 사용 하 여 컴파일된 프로그램으로 가져오는 [/clr](../build/reference/clr-common-language-runtime-compilation.md)합니다.  
