@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301111"
 ---
 # <a name="linker-tools-error-lnk1314"></a>링커 도구 오류 LNK1314
 손상 되었거나 잘못 된 COFF 기호 테이블 (정의 되지 않은 정적 또는 레이블 기호)  

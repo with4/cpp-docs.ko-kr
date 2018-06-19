@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342832"
 ---
 # <a name="containers-implementing-a-container"></a>컨테이너: 컨테이너 구현
 이 문서는 컨테이너를 구현 하기 위한 절차를 요약 하 고 보다 자세한 컨테이너를 구현 하는 방법에 대 한 설명을 제공 하는 다른 문서를 소개 합니다. 또한 구현 하려면 몇 가지 선택적 OLE 기능 및 이러한 기능을 설명 하는 문서를 나열 합니다.  

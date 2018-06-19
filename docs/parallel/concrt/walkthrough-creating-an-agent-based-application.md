@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692628"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>연습: 에이전트 기반 응용 프로그램 만들기
 이 항목에서는 기본 에이전트 기반 응용 프로그램을 만드는 방법을 설명 합니다. 이 연습에서는 텍스트 파일에서 데이터를 비동기적으로 읽는 에이전트를 만들 수 있습니다. 응용 프로그램 adler-32 체크섬 알고리즘을 사용 하 여 해당 파일의 내용 체크섬을 계산 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298154"
 ---
 # <a name="linker-tools-error-lnk1166"></a>링커 도구 오류 LNK1166
 오프셋에서 코드를 조정할 수 없는 = 오프셋, va = 값  

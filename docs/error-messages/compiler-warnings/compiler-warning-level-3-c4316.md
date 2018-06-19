@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298384"
 ---
 # <a name="compiler-warning-level-3-c4316"></a>컴파일러 경고 (수준 3) C4316
 이 형식에 대 한 힙에 할당 된 개체를 정렬할 수 있습니다.  

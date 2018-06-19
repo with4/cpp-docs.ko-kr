@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299229"
 ---
 # <a name="linker-tools-error-lnk1221"></a>링커 도구 오류 LNK1221
 하위 시스템을 유추할 수 없으므로 정의 해야 합니다.  

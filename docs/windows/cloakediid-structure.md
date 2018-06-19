@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856162"
 ---
 # <a name="cloakediid-structure"></a>CloakedIid 구조체
 IID 목록에서 지정된 인터페이스가 액세스할 수 없는 RuntimeClass, Implements 및 ChainInterfaces 템플릿에 대해 나타냅니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301010"
 ---
 # <a name="linker-tools-warning-lnk4221"></a>링커 도구 경고 LNK4221
 이 개체 파일 하므로이 라이브러리를 사용 하는 모든 링크 작업에서 사용 되지 않습니다.는 이전에 정의 되지 않은 공용 기호를 정의 하지 않습니다.  

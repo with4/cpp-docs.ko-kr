@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318417"
 ---
 # <a name="profile-guided-optimization-error-pg0165"></a>프로필 기반 최적화 오류 PG0165
 읽기 'Filename.pgd': ' PGD 버전이 지원 되지 않습니다 (버전 불일치)'입니다.  

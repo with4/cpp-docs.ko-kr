@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693347"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>연습: join을 사용하여 교착 상태 방지
 이 항목에서는 사용 하는 방법을 보여 주기 위해 철학자 들의 만찬 문제 사용는 [concurrency:: join](../../parallel/concrt/reference/join-class.md) 응용 프로그램에서 교착 상태를 방지 하는 클래스입니다. 소프트웨어 응용 프로그램에서 *교착 상태*는 두 개 이상의 프로세스가 각각 리소스를 보유하고 함께 다른 프로세스가 다른 리소스를 해제할 때까지 대기하는 경우 발생합니다.  

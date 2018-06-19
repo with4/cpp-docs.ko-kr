@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33315570"
 ---
 # <a name="expression-evaluator-error-cxx0008"></a>식 계산기 오류 CXX0008
 **문자열의 끝에 "누락 된**  
