@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248634"
 ---
 # <a name="compiler-error-c3027"></a>컴파일러 오류 C3027
 'clause': 산술 식 또는 포인터 식이 필요합니다.  

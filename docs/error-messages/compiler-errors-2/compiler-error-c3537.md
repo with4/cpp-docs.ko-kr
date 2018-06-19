@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252607"
 ---
 # <a name="compiler-error-c3537"></a>컴파일러 오류 C3537
 'type': 'auto' 포함 하는 형식으로 캐스팅할 수 없습니다  

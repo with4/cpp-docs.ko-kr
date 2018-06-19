@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879050"
 ---
 # <a name="resizing-an-image-image-editor-for-icons"></a>이미지 크기 조정(아이콘에 대한 이미지 편집기)
 이미지 크기를 조정할 때 이미지 편집기 동작은 인지에 따라 [선택한](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md) 전체 이미지 또는의 일부입니다.  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096342"
 ---
 # <a name="crowsetundo"></a>CRowset::Undo
 이후 마지막으로 인출 된 행에 대해 변경 내용을 실행 취소 또는 [업데이트](../../data/oledb/crowset-update.md)합니다.  

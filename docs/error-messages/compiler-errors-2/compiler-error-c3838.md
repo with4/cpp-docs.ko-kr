@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267328"
 ---
 # <a name="compiler-error-c3838"></a>컴파일러 오류 C3838
 명시적으로 'type'에서 상속할 수 없습니다.  

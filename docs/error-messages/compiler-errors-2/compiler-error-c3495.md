@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253664"
 ---
 # <a name="compiler-error-c3495"></a>컴파일러 오류 C3495
 'var': 람다 캡처에는 자동 저장 기간이 있어야 합니다.  

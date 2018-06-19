@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290480"
 ---
 # <a name="compiler-warning-level-2-c4150"></a>컴파일러 경고 (수준 2) C4150
 불완전 한 형식 'type';에 대 한 포인터 삭제 소멸자가 호출 되지  

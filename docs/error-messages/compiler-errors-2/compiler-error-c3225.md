@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250581"
 ---
 # <a name="compiler-error-c3225"></a>컴파일러 오류 C3225
 'arg'에 대 한 제네릭 형식 인수는 'type' 일 수 없습니다, 그리고 값 형식 이어야 하거나 형식을 처리 해야 합니다.  

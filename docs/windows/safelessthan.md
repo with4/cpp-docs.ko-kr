@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888427"
 ---
 # <a name="safelessthan"></a>SafeLessThan
 한 숫자가 다른 노드보다 작은지 여부를 결정 합니다.  

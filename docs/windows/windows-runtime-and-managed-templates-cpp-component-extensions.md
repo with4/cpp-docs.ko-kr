@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891365"
 ---
 # <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows 런타임 및 관리되는 템플릿(C++ 구성 요소 확장명)
 템플릿을 사용하면 공용 언어 런타임 형식 또는 Windows 런타임의 프로토타입을 정의한 다음, 다른 템플릿 형식 매개 변수를 사용하여 해당 형식의 변형을 인스턴스화할 수 있습니다.  

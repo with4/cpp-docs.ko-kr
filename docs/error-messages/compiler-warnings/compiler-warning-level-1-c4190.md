@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277896"
 ---
 # <a name="compiler-warning-level-1-c4190"></a>컴파일러 경고 (수준 1) C4190
 'identifier1'에 C 링크를 지정 하지만 UDT C와 호환 되지 않는 ' identifier2'를 반환 합니다.  

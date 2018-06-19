@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889409"
 ---
 # <a name="setting-a-cursor39s-hot-spot-image-editor-for-icons"></a>커서를 설정&#39;s 핫 스폿 (아이콘에 대 한 이미지 편집기)
 핫 스폿은 [커서](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md) 지점 Windows에서 커서의 위치를 추적 참조에 있습니다. 기본적으로 핫 스폿 커서 (좌표 0, 0)의 왼쪽 위 모퉁이에 설정 됩니다. 핫스폿 속성에는 [속성 창](/visualstudio/ide/reference/properties-window) 핫 스폿 좌표가 표시 합니다.  

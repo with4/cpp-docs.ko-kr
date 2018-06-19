@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33258077"
 ---
 # <a name="compiler-error-c3386"></a>컴파일러 오류 C3386
 'type': __declspec (dllexport) /\__declspec(dllimport) WinRTtype 또는 관리 되는에 적용할 수 없습니다  

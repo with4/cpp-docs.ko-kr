@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252129"
 ---
 # <a name="compiler-error-c3396"></a>컴파일러 오류 C3396
 'attribute': 'namespace'에 사용자 지정 특성이 없습니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872298"
 ---
 # <a name="creating-new-symbols"></a>새 기호 만들기
 새 프로젝트를 시작하는 경우 기호 이름이 할당될 리소스를 만들기 전에 필요한 기호 이름을 매핑하는 것이 편리하다는 것을 알 수 있습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281744"
 ---
 # <a name="compiler-warning-level-1-c4729"></a>컴파일러 경고(수준 1) C4729
 선형 그래프 기반 경고에 사용하기에는 함수가 너무 큽니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128581"
 ---
 # <a name="how-to-display-images-with-the-net-framework"></a>방법: .NET Framework로 이미지 표시
 다음 코드 예제에서는 수정 OnPaint 이벤트 처리기에 대 한 포인터를 검색 하는 <xref:System.Drawing.Graphics> 기본 폼에 대 한 개체입니다. <xref:System.Windows.Forms.Form.OnPaint%2A> 함수는 대부분 Visual Studio 응용 프로그램 마법사를 사용 하 여 만든 Windows Forms 응용 프로그램을 위한 것입니다.  

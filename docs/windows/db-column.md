@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879635"
 ---
 # <a name="dbcolumn"></a>db_column
 행 집합의 변수를 지정된 된 열을 바인딩합니다.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891313"
 ---
 # <a name="toolbar-editor"></a>도구 모음 편집기
 도구 모음 편집기에서는 도구 모음 리소스를 만들고 비트맵을 도구 모음 리소스로 변환할 수 있습니다. 도구 모음 편집기에서는 그래픽 표시를 사용하여 완료된 응용 프로그램에서 보이는 모양과 거의 유사한 도구 모음과 단추를 표시합니다.  

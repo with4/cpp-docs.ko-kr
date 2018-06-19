@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227574"
 ---
 # <a name="compiler-error-c2636"></a>컴파일러 오류 C2636
 'identifier': 참조 멤버에 대 한 포인터가 잘못 되었습니다  

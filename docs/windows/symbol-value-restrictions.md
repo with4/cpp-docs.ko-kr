@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889556"
 ---
 # <a name="symbol-value-restrictions"></a>기호 값 제한
 기호 값은 #define 전처리기 지시문에 대해 일반적인 방식으로 표현된 정수일 수 있습니다. 다음은 기호 값의 몇 가지 예입니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095117"
 ---
 # <a name="work-with-odbc-and-drivers"></a>ODBC 및 드라이버 작업
 ODBC를 사용 하면 데이터베이스 관리 시스템 (DBMS)에 종속 되지 않은 응용 프로그램을 작성할 수 있습니다. 사용자를 올바른 DBMS 관련 ODBC 드라이버에 게 여러 Dbms에서 작동할 수 있는 하나의 응용 프로그램을 작성할 수 있습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232201"
 ---
 # <a name="compiler-error-c2652"></a>컴파일러 오류 C2652
 'identifier': 잘못 된 복사 생성자: 첫 번째 매개 변수에는 'identifier'를 사용 해야 합니다.  

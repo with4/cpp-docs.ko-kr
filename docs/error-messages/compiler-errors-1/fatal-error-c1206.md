@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227384"
 ---
 # <a name="fatal-error-c1206"></a>심각한 오류 C1206
 설치된 런타임 버전에서는 appdomain별 데이터가 지원되지 않습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248244"
 ---
 # <a name="compiler-error-c3276"></a>컴파일러 오류 C3276
 'keyword': 종료 처리 하는 동안 __finally/finally 블록 밖으로 점프 동작이 정의 되지 않았습니다  

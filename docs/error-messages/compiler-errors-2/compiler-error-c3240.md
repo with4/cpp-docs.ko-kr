@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257985"
 ---
 # <a name="compiler-error-c3240"></a>컴파일러 오류 C3240
 'function': 'type'의 오버 로드 되지 않은 추상 멤버 함수 여야 합니다  

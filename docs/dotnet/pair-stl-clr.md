@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33160825"
 ---
 # <a name="pair-stlclr"></a>pair(STL/CLR)
 템플릿 클래스는 값의 쌍을 래핑하는 개체를 설명 합니다.  

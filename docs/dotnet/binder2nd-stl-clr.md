@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107846"
 ---
 # <a name="binder2nd-stlclr"></a>binder2nd(STL/CLR)
 인수가 한 개인 함수를 설명 하는 템플릿 클래스는를 호출할 때는 제공 된 첫 번째 인수 및 해당 저장 된 두 번째 인수를 사용 하 여 호출 하는 저장된 인수가 두 개인 함수를 반환 합니다. 사용 하면 해당 저장된 함수 측면에서 함수 개체를 지정 합니다.  

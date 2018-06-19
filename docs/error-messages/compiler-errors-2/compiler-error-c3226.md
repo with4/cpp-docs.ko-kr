@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250431"
 ---
 # <a name="compiler-error-c3226"></a>컴파일러 오류 C3226
 제네릭 선언 내부에서는 템플릿을 선언할 수 없습니다.  

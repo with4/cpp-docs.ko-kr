@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876009"
 ---
 # <a name="hstringreferencehstringreference-constructor"></a>HStringReference::HStringReference 생성자
 HStringReference 클래스의 새 인스턴스를 초기화합니다.  

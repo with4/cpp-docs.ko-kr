@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098578"
 ---
 # <a name="crowset-class"></a>CRowset 클래스
 OLE DB 행 집합 개체와 관련 된 몇 가지 캡슐화 인터페이스를 만들고 행 집합 데이터 조작 메서드를 제공 합니다.  

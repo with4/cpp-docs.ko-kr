@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269056"
 ---
 # <a name="compiler-error-c3798"></a>컴파일러 오류 C3798
 'specifier': 속성 선언 (속성 get/set 메서드 대신에 배치 해야) 재정의 지정자를 사용할 수 없습니다  

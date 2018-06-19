@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876266"
 ---
 # <a name="immediatebind"></a>immediatebind
 데이터 바인딩된 개체의 속성에 대 한 모든 변경의 데이터베이스를 즉시 된다는 있는지를 나타냅니다.  

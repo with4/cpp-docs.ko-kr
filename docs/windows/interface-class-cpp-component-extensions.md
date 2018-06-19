@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880861"
 ---
 # <a name="interface-class--c-component-extensions"></a>interface 클래스(C++ 구성 요소 확장)
 인터페이스를 선언합니다.  네이티브 인터페이스에 대 한 자세한 내용은 참조 [__interface](../cpp/interface.md)합니다.  

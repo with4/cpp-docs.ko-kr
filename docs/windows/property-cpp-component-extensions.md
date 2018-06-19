@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882708"
 ---
 # <a name="property--c-component-extensions"></a>속성(C++ 구성 요소 확장)
 선언 된 *속성*, 동작 하 고 데이터 멤버 또는 배열 요소 처럼 액세스 되는 멤버 함수는 합니다.  

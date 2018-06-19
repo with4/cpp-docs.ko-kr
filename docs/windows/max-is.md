@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878972"
 ---
 # <a name="maxis"></a>max_is
 유효한 배열 인덱스에 대 한 최대값을 지정합니다.  

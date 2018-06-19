@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275225"
 ---
 # <a name="compiler-error-c3708"></a>컴파일러 오류 C3708
 'interface': 잘못 사용 하면 'keyword'; 호환 되는 이벤트 소스의 멤버 여야 합니다.  

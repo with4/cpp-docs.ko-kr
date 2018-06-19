@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890865"
 ---
 # <a name="sealed--c-component-extensions"></a>sealed(C++ 구성 요소 확장)
 `sealed`는 가상 멤버를 재정의할 수 없거나 형식을 기본 형식으로 사용할 수 없음을 나타내는 ref 클래스에 대한 상황에 맞는 키워드입니다.  

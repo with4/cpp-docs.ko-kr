@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33254110"
 ---
 # <a name="compiler-error-c3244"></a>컴파일러 오류 C3244
 'method': 이 메서드는 'interface'에 의해 정의되었습니다('interface'에 의해 정의되지 않음).  

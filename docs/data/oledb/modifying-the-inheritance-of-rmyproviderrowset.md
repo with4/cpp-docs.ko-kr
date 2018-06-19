@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106234"
 ---
 # <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>RMyProviderRowset의 상속 수정
 추가 하는 `IRowsetLocate` 단순한 읽기 전용 공급자 예제 인터페이스를의 상속 수정 **RMyProviderRowset**합니다. 처음에 **RMyProviderRowset** 에서 상속 `CRowsetImpl`합니다. 상속 하도록 수정 해야 할 **CRowsetBaseImpl**합니다.  

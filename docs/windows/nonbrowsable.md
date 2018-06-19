@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877370"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 인터페이스 멤버를 속성 브라우저에 표시 되지 해야 나타냅니다.  

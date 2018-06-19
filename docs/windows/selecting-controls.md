@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892776"
 ---
 # <a name="selecting-controls"></a>컨트롤 선택
 크기에 컨트롤을 선택, 정렬, 이동, 복사 또는 삭제할 수 및 다음 원하는 작업을 수행 합니다. 대부분의 경우에서 크기 조정 및 맞춤 도구를 사용 하려면 둘 이상의 컨트롤을 선택 해야는 [대화 상자 편집기 도구 모음](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)합니다.  

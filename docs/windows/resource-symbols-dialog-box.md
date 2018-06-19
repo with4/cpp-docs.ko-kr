@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880194"
 ---
 # <a name="resource-symbols-dialog-box"></a>리소스 기호 대화 상자
 **리소스 기호** 대화 상자를 사용 하면 기호를 사용에서 하는 소스 코드의 특정 위치에 건너뛸지 표시 되는 기호를 변경, 새 리소스 기호를 추가할 수 있습니다.  

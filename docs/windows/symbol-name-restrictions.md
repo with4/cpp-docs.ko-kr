@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892337"
 ---
 # <a name="symbol-name-restrictions"></a>기호 이름 제한
 기호 이름에 대한 제한은 다음과 같습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268333"
 ---
 # <a name="compiler-error-c3815"></a>컴파일러 오류 C3815
 'get_accessor' 메서드의 반환 형식은 setter의 마지막 매개 변수 유형의 같아야 합니다.  

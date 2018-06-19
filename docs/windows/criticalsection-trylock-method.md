@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883954"
 ---
 # <a name="criticalsectiontrylock-method"></a>CriticalSection::TryLock 메서드
 임계 영역을 차단 하지 않고 입력 하려고 합니다. 호출이 성공 하면 호출 스레드에서 임계 영역의 소유권을 갖습니다.  

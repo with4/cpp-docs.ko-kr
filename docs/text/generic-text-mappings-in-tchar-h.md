@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33867105"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Tchar.h의 제네릭 텍스트 매핑
 국가별 사용에 대 한 코드의 전송을 단순화 하기 위해는 [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] 런타임 라이브러리는 [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-다양 한 데이터 형식을, 루틴 및 다른 개체에 대 한 특정 일반 텍스트 매핑. 1 바이트의 멀티 바이트에 대해 컴파일할 수 있는 제네릭 코드를 작성 하려면 Tchar.h에 정의 된 이러한 매핑을 사용 하 여 또는 [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] 문자를 사용 하 여 정의 하는 매니페스트 상수에 따라 집합을 `#define` 문. 제네릭 텍스트 매핑은 [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] 없는 확장 [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] 호환 됩니다.  

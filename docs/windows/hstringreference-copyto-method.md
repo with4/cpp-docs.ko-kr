@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874709"
 ---
 # <a name="hstringreferencecopyto-method"></a>HStringReference::CopyTo 메서드
 복사본은 현재 HStringReference 개체 HSTRING 개체입니다.  

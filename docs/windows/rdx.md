@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878959"
 ---
 # <a name="rdx"></a>rdx
 레지스트리 키를 만들거나 기존 레지스트리 키를 수정 합니다.  

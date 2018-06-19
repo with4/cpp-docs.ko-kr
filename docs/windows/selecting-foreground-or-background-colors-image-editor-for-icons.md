@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888648"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>전경색 또는 배경색 선택(아이콘에 대한 이미지 편집기)
 제외 하 고는 **지우개**, 도구에 **이미지 편집기** 각각 마우스 왼쪽 또는 오른쪽 단추를 눌러는 현재 전경 또는 배경 색을 사용 하 여 도구 모음 그립니다.  

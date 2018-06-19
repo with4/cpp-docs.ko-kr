@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267111"
 ---
 # <a name="compiler-error-c3755"></a>컴파일러 오류 C3755
 'delegate': 대리자를 정의할 수 없습니다.  

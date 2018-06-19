@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277581"
 ---
 # <a name="compiler-warning-level-1-c4237"></a>컴파일러 경고(수준 1) C4237
 'keyword' 키워드는 아직 지원 되지 않지만 나중에 사용  

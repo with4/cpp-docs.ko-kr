@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890579"
 ---
 # <a name="specifying-the-location-and-size-of-a-dialog-box"></a>대화 상자의 위치와 크기 지정
 대화 상자 단위와 위치 대화 상자에서으로 위치의 크기와 안에 있는 컨트롤의 크기 측정 됩니다. 개별 컨트롤 및 대화 상자에 대 한 값은 Visual Studio 상태를 선택 하면 표시줄의 오른쪽 아래에 나타납니다.  

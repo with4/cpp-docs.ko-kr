@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879037"
 ---
 # <a name="implementscategory"></a>implements_category
 대상 클래스에서 구현 되는 구성 요소 범주를 지정 합니다.  

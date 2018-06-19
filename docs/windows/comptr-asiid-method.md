@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870092"
 ---
 # <a name="comptrasiid-method"></a>ComPtr::AsIID 메서드
 지정된 인터페이스 ID로 식별된 인터페이스를 나타내는 ComPtr 개체를 반환합니다.  

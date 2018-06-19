@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33229081"
 ---
 # <a name="compiler-error-c2542"></a>컴파일러 오류 C2542
 'identifier': 클래스 개체의 초기화에 대 한 생성자가 없습니다  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257037"
 ---
 # <a name="compiler-error-c3453"></a>컴파일러 오류 C3453
 'attribute': 'assembly' 한정자가 일치하지 않아 특성이 적용되지 않았습니다.  

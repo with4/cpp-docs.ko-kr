@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250126"
 ---
 # <a name="compiler-error-c3251"></a>컴파일러 오류 C3251
 값 형식 인스턴스의 기본 클래스 메서드를 호출할 수 없습니다.  

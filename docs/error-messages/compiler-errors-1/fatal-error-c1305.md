@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227149"
 ---
 # <a name="fatal-error-c1305"></a>심각한 오류 C1305
 'pgd_file' 프로필 데이터베이스는 다른 아키텍처용입니다.  

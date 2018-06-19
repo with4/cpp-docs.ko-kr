@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138997"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>방법: 클래스 및 구조체 정의 및 사용(C++/CLI)
 이 문서에서는 정의 및 사용자 정의 참조 형식 및 C + 값 형식을 사용 하는 방법을 보여 줍니다. + CLI 합니다.  

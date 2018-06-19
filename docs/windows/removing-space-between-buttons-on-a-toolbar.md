@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877965"
 ---
 # <a name="removing-space-between-buttons-on-a-toolbar"></a>도구 모음에서 단추 사이의 공백 제거
 다음 절차는 도구 모음에서 단추 사이의 공백을 제거 하는 방법을 보여 줍니다.  

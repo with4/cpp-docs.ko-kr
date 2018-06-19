@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272268"
 ---
 # <a name="compiler-error-c3852"></a>컴파일러 오류 C3852
 'type' 형식이 있는 ' member': 집합체 초기화에서이 멤버를 초기화할 수 없습니다  

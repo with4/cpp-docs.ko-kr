@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277308"
 ---
 # <a name="compiler-warning-level-1-c4276"></a>컴파일러 경고(수준 1) C4276
 'function': 제공 된; 프로토타입이 없는 매개 변수를 가정합니다.  

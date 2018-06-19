@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268838"
 ---
 # <a name="compiler-error-c3818"></a>컴파일러 오류 C3818
 배열 속성 선언은 'property1' '속성 2' 인덱스 속성 오버 로드 하지 않습니다.  

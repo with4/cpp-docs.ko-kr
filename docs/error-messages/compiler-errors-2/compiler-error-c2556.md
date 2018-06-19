@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33228239"
 ---
 # <a name="compiler-error-c2556"></a>컴파일러 오류 C2556
 'identifier': 오버 로드 된 함수의 반환 형식 그만 다릅니다.  

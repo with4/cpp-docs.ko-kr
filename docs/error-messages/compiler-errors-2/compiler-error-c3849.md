@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270966"
 ---
 # <a name="compiler-error-c3849"></a>컴파일러 오류 C3849
 함수 형식을 호출할 'type' 형식의 식에는 모든 숫자의 사용 가능한 연산자 오버 로드에 대 한 const 및/또는 volatile 한정자가 손실  

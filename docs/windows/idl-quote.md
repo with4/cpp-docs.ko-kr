@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878514"
 ---
 # <a name="idlquote"></a>idl_quote
 Visual c + +의 현재 버전에서 지원 되지 않는 IDL 구문을 사용할 수 있습니다 및 생성된 된.idl 파일을 통과 하도록 합니다.  

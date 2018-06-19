@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879622"
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>새 &lt;장치&gt; 이미지 형식 대화 상자 (아이콘에 대 한 이미지 편집기)
 지정 된 형식의 새 장치 이미지를 만들 수 있습니다. 열려는 **새로 \<장치 > 이미지** 대화 상자에서 클릭 **새 이미지 형식** 에 **이미지** 메뉴.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875736"
 ---
 # <a name="finding-a-string"></a>문자열 찾기
 문자열 테이블에 하나 이상의 문자열을 검색 하 고 사용 하 여 [정규식](/visualstudio/ide/using-regular-expressions-in-visual-studio) 와 **파일에서 찾기** 명령 (**편집** 메뉴) 문자열의 모든 인스턴스를 찾을 수 패턴을 일치 하는 합니다.  

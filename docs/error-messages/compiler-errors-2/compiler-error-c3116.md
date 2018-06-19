@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250345"
 ---
 # <a name="compiler-error-c3116"></a>컴파일러 오류 C3116
 '저장소 지정 자가': 인터페이스 메서드에 대 한 잘못 된 저장소 클래스  

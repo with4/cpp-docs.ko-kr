@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167953"
 ---
 # <a name="compiler-error-c2258"></a>컴파일러 오류 C2258
 순수 구문이 잘못되었습니다. '= 0'이어야 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882764"
 ---
 # <a name="override-specifiers--c-component-extensions"></a>Override 지정자(C++ 구성 요소 확장)
 *Override 지정자* 방법을 수정 하 고 상속 된 형식의 멤버가 파생된 형식에서 작동 합니다.  

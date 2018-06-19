@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251679"
 ---
 # <a name="compiler-error-c3394"></a>컴파일러 오류 C3394
 제약 조건 절의 구문 오류: 형식이 필요한데 'identifier'가 있습니다.  
