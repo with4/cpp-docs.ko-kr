@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418369"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>방법: shared_ptr 인스턴스 만들기 및 사용
 `shared_ptr` 형식은 둘 이상의 소유자가 메모리에 있는 개체의 수명을 관리하는 시나리오를 위해 디자인된 C++ 표준 라이브러리의 스마트 포인터입니다. `shared_ptr`을 초기화한 후 복사, 함수 인수의 값으로 전달 및 다른 `shared_ptr` 인스턴스로 할당할 수 있습니다. 모든 인스턴스는 동일한 개체를 가리키고 새 `shared_ptr`이 추가되거나 범위를 벗어나거나 다시 설정될 때마다 하나의 "제어 블록"에 대한 액세스를 공유합니다. 참조 횟수가 0에 도달하면 메모리 리소스 및 제어 블록이 삭제됩니다.  

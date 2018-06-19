@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364548"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>옵션, ATL Active Server Page 구성 요소 마법사
 ATL Active Server 페이지 구성 요소 마법사의이 페이지를 사용 하 여 효율성과 개체에 대 한 오류 지원에 대 한 디자인 합니다.  

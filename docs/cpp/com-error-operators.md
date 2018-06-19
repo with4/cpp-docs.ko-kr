@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32410355"
 ---
 # <a name="comerror-operators"></a>_com_error 연산자
 에 대 한 내용은 `_com_error` 연산자 참조 [_com_error 클래스](../cpp/com-error-class.md)합니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357684"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>DHTML 컨트롤 프로젝트의 요소를 식별합니다.
 ATL 컨트롤에 대 한 대부분 DHTML 제어 코드와 같습니다 만들어집니다. 제네릭 코드의 한 기본적인 이해에 대 한 작업을 통해는 [ATL 자습서](../atl/active-template-library-atl-tutorial.md), 섹션에서 확인 하 고 [ATL 프로젝트 만들기](../atl/reference/creating-an-atl-project.md) 및 [ATL COM 개체 기본 사항](../atl/fundamentals-of-atl-com-objects.md)합니다.  

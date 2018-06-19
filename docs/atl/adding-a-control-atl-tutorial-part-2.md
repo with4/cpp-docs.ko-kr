@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358578"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>컨트롤 추가(ATL 자습서, 2부)
 이 단계에서는 프로젝트에 컨트롤을 추가를 빌드하고 웹 페이지에서 테스트 합니다.  

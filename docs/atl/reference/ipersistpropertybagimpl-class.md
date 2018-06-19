@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363433"
 ---
 # <a name="ipersistpropertybagimpl-class"></a>IPersistPropertyBagImpl 클래스
 이 클래스는 구현 **IUnknown** 하 고 클라이언트에서 제공한 속성 모음에 해당 속성을 저장 하는 개체를 허용 합니다.  

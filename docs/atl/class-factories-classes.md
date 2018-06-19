@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355347"
 ---
 # <a name="class-factories-classes"></a>클래스 팩터리 클래스
 다음 클래스 구현 하거나 클래스 팩터리를 지원 합니다.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417970"
 ---
 # <a name="how-to-design-for-exception-safety"></a>방법: 예외 안전성을 위한 디자인
 예외에 대한 데이터와 함께 예외 메커니즘의 장점 중 하나는, 예외를 throw하는 문에서 이를 처리하는 첫 번째 catch 문으로 직접 이동할 수 있다는 점입니다. 처리기는 호출 스택에서 아무 상위 수준에나 있을 수 있습니다. try 문과 throw 문 사이에 호출되는 함수는 throw된 예외에 대한 정보를 알아야 할 필요가 없습니다.  하지만 예외가 위쪽으로 전파될 수 있는 어느 지점에서든 "예기치 않게" 범위 밖으로 이동할 수 있고, 부분적으로 생성된 개체, 누출된 메모리 또는 불안정한 상태의 데이터 구조를 벗어나지 않고도 그렇게 할 수 있도록 설계되어야 합니다.  

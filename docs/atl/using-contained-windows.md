@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357923"
 ---
 # <a name="using-contained-windows"></a>포함 된 창 사용
 ATL 구현으로 포함 된 창을 [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md)합니다. 포함 된 창을는 해당 메시지는 자체 클래스에서 처리 하는 대신 컨테이너 개체를 위임 하는 창을 나타냅니다.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364583"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl 클래스
 이 클래스의 기본 구현을 제공는 [ISupportErrorInfo 인터페이스](http://msdn.microsoft.com/en-us/42d33066-36b4-4a5b-aa5d-46682e560f32) 단일 인터페이스만 개체에는 오류를 생성 하는 경우에 사용할 수 있습니다.  

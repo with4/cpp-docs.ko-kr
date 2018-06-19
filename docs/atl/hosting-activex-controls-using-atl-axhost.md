@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356255"
 ---
 # <a name="hosting-activex-controls-using-atl-axhost"></a>ATL 사용할 수 있는 클래스를 사용 하 여 ActiveX 컨트롤 호스팅
 이 항목의 예제를 사용할 수 있는 클래스를 만드는 방법 및 다양 한 ATL 함수를 사용 하 여 ActiveX 컨트롤을 호스트 하는 방법을 보여 줍니다. 제어 및 싱크 이벤트에 액세스 하는 방법도 보여 줍니다 (사용 하 여 [IDispEventImpl](../atl/reference/idispeventimpl-class.md))에서 호스팅되는 컨트롤입니다. 샘플은 Calendar 컨트롤을 나 자식 창 주 창에 호스팅합니다.  

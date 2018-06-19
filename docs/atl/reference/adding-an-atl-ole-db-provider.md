@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357560"
 ---
 # <a name="adding-an-atl-ole-db-provider"></a>ATL OLE DB 공급자를 추가합니다.
 이 마법사를 사용 하 여 프로젝트에 ATL OLE DB 공급자를 추가 합니다. ATL OLE DB 공급자는 데이터 원본, 세션, 명령 및 행 집합 클래스 이루어져 있습니다. 프로젝트는 ATL COM 응용 프로그램으로 생성 합니다.  

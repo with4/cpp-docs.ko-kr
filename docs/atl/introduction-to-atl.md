@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355806"
 ---
 # <a name="introduction-to-atl"></a>ATL 소개
 ATL은 액티브 템플릿 라이브러리, 템플릿 기반 c + +의 집합을 쉽게를 만들 수 있는 클래스 크기가 작거나, 빠른 모델 COM (Component Object) 개체입니다. 포함 하 여 주요 COM 기능에 대 한 특별 한 지원을 포함: 구현의 스톡 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364), [IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720), 및 `IDispatch`이중; 인터페이스입니다. 표준 COM 열거자 인터페이스입니다. 연결 지점입니다. 분리 인터페이스; 및 ActiveX 컨트롤을 추가 합니다.  

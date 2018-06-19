@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356343"
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>CComObject, CComAggObject, 및 CComPolyObject 구현
 템플릿 클래스 [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), 및 [CComPolyObject](../atl/reference/ccompolyobject-class.md) 상속 체인의 가장 많이 파생 된 클래스는 항상 합니다. 책임의 메서드 중 일부를 처리 하는 **IUnknown**: `QueryInterface`, `AddRef`, 및 **릴리스**합니다. 또한 `CComAggObject` 및 `CComPolyObject` (집계 개체에 대해 사용) 하는 경우 특별 한 참조 횟수를 제공 하 고 `QueryInterface` 알 수 없는 내부에 필요한 의미 체계입니다.  

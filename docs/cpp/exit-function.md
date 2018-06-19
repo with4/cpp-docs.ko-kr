@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412532"
 ---
 # <a name="exit-function"></a>exit 함수
 **종료** 표준 포함 파일에 선언 된 함수 \<stdlib.h >, c + + 프로그램을 종료 합니다.  

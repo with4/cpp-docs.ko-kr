@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356398"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>CStringT를 사용 하 여 String 클래스 내보내기
 이전에 MFC 개발자는에서 파생 된 `CString` 를 자신의 문자열 클래스 특수화입니다. Microsoft Visual c + +.net (MFC 8.0)는 [CString](../atl-mfc-shared/using-cstring.md) 클래스 호출 하는 템플릿 클래스에 의해 대체 된 [CStringT](../atl-mfc-shared/reference/cstringt-class.md)합니다. 이 몇 가지 이점을 제공 합니다.  

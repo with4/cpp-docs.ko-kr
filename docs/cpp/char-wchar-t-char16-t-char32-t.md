@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413897"
 ---
 # <a name="char-wchart-char16t-char32t"></a>char, wchar_t, char16_t, char32_t
 형식을 **char**, **wchar_t**, **char16_t** 및 **char32_t** 는 영숫자 문자를 나타내는 기본 제공 형식으로 영숫자가 아닌 문자 모양 및 인쇄할 수 없는 문자가 있습니다.

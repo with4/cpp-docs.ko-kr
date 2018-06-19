@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422425"
 ---
 # <a name="types-of-expressions"></a>식의 형식
 C++ 식은 여러 범주로 나뉩니다.  

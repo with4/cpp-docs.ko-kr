@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420584"
 ---
 # <a name="restrictions-on-termination-handlers"></a>종료 처리기에 대한 제한
 `goto` 문을 사용하여 `__try` 문 블록 또는 `__finally` 문 블록으로 점프할 수 없습니다. 대신, 정상적인 제어 흐름을 통해 문 블록에 들어가야 합니다. 그러나 `__try` 문 블록 밖으로 점프할 수 있습니다. 또한 `__finally` 블록 안에 예외 처리기나 종료 처리기를 중첩시킬 수 없습니다.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360938"
 ---
 # <a name="atl-operators"></a>ATL 연산자
 이 섹션에는 ATL 전역 연산자에 대 한 참조 항목이 포함 되어 있습니다.  

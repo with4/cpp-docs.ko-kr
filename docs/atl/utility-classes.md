@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361188"
 ---
 # <a name="utility-classes"></a>유틸리티 클래스
 다음과 같은 MFC에 독립적인 유틸리티 클래스가 제공 됩니다.  

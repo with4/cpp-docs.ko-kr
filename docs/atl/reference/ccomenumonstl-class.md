@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363300"
 ---
 # <a name="ccomenumonstl-class"></a>CComEnumOnSTL 클래스
 이 클래스는 c + + 표준 라이브러리 컬렉션에 따라 COM 열거자 개체를 정의 합니다.  

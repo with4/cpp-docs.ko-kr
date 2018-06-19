@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361677"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>유니코드 및 MBCS(멀티바이트 문자 집합) 지원
 

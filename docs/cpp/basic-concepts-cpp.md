@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409578"
 ---
 # <a name="basic-concepts--c"></a>기본 개념 (c + +)
 이 섹션에서는 c + + 이해에 필수적인 개념을 설명 합니다. C 프로그래머 이러한 개념에 대해 잘 알고 있지만 예기치 않은 프로그램 결과 일으킬 수 있는 몇 가지 미묘한 차이가 있습니다. 주제는 다음과 같습니다.  

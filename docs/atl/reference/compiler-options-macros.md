@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365855"
 ---
 # <a name="compiler-options-macros"></a>컴파일러 옵션 매크로
 이러한 매크로 특정 컴파일러 기능을 제어 합니다.  

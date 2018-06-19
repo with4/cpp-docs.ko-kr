@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408571"
 ---
 # <a name="comptrt-member-functions"></a>_com_ptr_t Member 함수
 에 대 한 내용은 `_com_ptr_t` 멤버 함수는 참조 [_com_ptr_t 클래스](../cpp/com-ptr-t-class.md)합니다.  

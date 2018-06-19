@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417205"
 ---
 # <a name="c-language-reference"></a>C++ 언어 참조
 이 참조는 Microsoft Visual C++에서 구현되는 것처럼 C++ 프로그래밍 언어를 설명합니다. 조직에 따라 *The Annotated c + + Reference Manual* 구성은 Margaret Ellis와 Bjarne Stroustrup이 만든 및 ANSI/ISO c + + 국제 표준 (FDIS ISO/IEC 14882). C++ 언어 기능의 Microsoft 전용 구현이 포함되어 있습니다.  

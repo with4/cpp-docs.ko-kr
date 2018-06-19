@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355022"
 ---
 # <a name="creating-an-aggregated-object"></a>집계 개체 만들기
 집계 대리자 **IUnknown** 외부 개체에 대 한 포인터를 제공 하는 호출 **IUnknown** 내부 개체입니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419687"
 ---
 # <a name="main-function-restrictions"></a>main 함수 제한
 에 몇 가지 제한이 적용 된 **주** 다른 모든 c + + 함수에 적용 되지 않는 함수입니다. **주** 함수:  

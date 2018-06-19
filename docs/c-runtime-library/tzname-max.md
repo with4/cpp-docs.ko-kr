@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408122"
 ---
 # <a name="tznamemax"></a>TZNAME_MAX
 표준 시간대 이름 변수의 허용 가능한 최대 문자열 길이입니다.  

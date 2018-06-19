@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356455"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 세 번째 매개 변수에 의해 식별 된 함수 이름에서 `NOTIFY_HANDLER` 메시지 맵에서 매크로입니다.  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364664"
 ---
 # <a name="ipersiststorageimpl-class"></a>IPersistStorageImpl 클래스
 이 클래스가 구현 하는 [IPersistStorage](http://msdn.microsoft.com/library/windows/desktop/ms679731) 인터페이스입니다.  

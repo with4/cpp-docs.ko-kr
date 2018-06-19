@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355127"
 ---
 # <a name="catlservicemoduletrun-function"></a>CAtlServiceModuleT::Run 함수
 **실행** 에 대 한 호출을 포함 `PreMessageLoop`, `RunMessageLoop`, 및 `PostMessageLoop`합니다. 호출 된 후 `PreMessageLoop` 먼저 서비스의 스레드 ID를 저장 합니다. 서비스에서이 ID를 전송 하 여 자체를 닫으려면 사용할는 **WM_QUIT** Win32 API 함수를 사용 하 여 메시지 [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946)합니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355183"
 ---
 # <a name="atl-connection-point-example"></a>ATL 연결 지점 예제
 지 원하는 개체를 보여 주는이 예제 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) 보내기 인터페이스로:  

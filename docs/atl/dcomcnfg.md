@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357247"
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG
 **DCOMCNFG** 는 레지스트리에서 다양 한 DCOM 관련 설정을 구성할 수 있도록 하는 Windows NT 4.0 유틸리티입니다. **DCOMCNFG** 창에 있는 3 개의 페이지가: 기본 보안, 기본 속성 및 응용 프로그램입니다. Windows 2000에서 네 번째 페이지에서 기본 프로토콜은 존재 합니다.  

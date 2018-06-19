@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356963"
 ---
 # <a name="queryinterface"></a>QueryInterface
 기본 COM 메커니즘은 사용 하는 개체 정적으로 (인스턴스화하기 전에)를 제공 하는 기능이 표현할 수 있는 메커니즘에는 없지만 **IUnknown** 라는 메서드가 [QueryInterface ](http://msdn.microsoft.com/library/windows/desktop/ms682521).  

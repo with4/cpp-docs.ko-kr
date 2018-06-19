@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355081"
 ---
 # <a name="connection-points-classes"></a>연결 지점 클래스
 다음 클래스에서는 연결 지점에 대 한 지원:  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355241"
 ---
 # <a name="changing-the-default-class-factory-and-aggregation-model"></a>기본 클래스 팩터리와 집계 모델 변경
 ATL 사용 하 여 [CComCoClass](../atl/reference/ccomcoclass-class.md) 개체에 대 한 기본 클래스 팩터리와 집계 모델을 정의할 수 있습니다. `CComCoClass` 다음 두 매크로 지정합니다.  

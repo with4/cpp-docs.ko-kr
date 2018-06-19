@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356734"
 ---
 # <a name="implementing-a-dual-interface"></a>이중 인터페이스를 구현합니다.
 사용 하 여 이중 인터페이스를 구현할 수는 [IDispatchImpl](../atl/reference/idispatchimpl-class.md) 클래스의 기본 구현을 제공 하는 `IDispatch` 이중 인터페이스에서 메서드. 자세한 내용은 [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)을 참조하십시오.  

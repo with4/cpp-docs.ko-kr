@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420887"
 ---
 # <a name="noexcept-c"></a>noexcept(C++)
 **C + + 11:** 함수 예외가 throw 될 가능성이 있는지 여부를 지정 합니다.  

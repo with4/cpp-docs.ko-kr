@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354902"
 ---
 # <a name="atl-registry-component-registrar"></a>ATL 레지스트리 구성 요소(등록자)
 ATL 등록자는 사용자 지정 인터페이스를 통해 시스템 레지스트리로 최적화 된 액세스를 제공합니다. 등록자는 자유 스레드 및 c + + 클라이언트에 대 한 코드의 정적 링크를 허용 합니다.  

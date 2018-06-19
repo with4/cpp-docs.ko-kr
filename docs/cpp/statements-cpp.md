@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422783"
 ---
 # <a name="statements-c"></a>문 (C++)
 C++ 명령문은 개체 조작 방법과 순서를 제어하는 프로그램 요소입니다. 이 단원에는 다음이 포함됩니다.  

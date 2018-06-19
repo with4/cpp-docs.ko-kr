@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359145"
 ---
 # <a name="cprimitiveelementtraits-class"></a>CPrimitiveElementTraits 클래스
 이 클래스는 기본 메서드를 제공 하 고 함수 컬렉션 클래스에 대 한 기본 데이터 형식으로 구성 합니다.  

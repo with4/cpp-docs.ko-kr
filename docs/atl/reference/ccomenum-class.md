@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362865"
 ---
 # <a name="ccomenum-class"></a>CComEnum 클래스
 이 클래스는 배열을 기반으로 하는 COM 열거자 개체를 정의 합니다.  

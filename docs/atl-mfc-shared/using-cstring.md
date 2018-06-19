@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361703"
 ---
 # <a name="using-cstring"></a>CString을 사용 하 여
 이 섹션의 항목에서는 `CString`을 사용한 프로그래밍 방법에 대해 설명합니다. 에 대 한 참조 설명서는 `CString` 클래스에 대 한 설명서를 참조 하십시오. [CStringT](../atl-mfc-shared/reference/cstringt-class.md)합니다.  

@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418395"
 ---
 # <a name="data-type-ranges"></a>데이터 형식 범위
 Visual C++ 32비트 및 64비트 컴파일러는 이 문서의 뒷부분의 표에 나온 형식을 인식합니다.  

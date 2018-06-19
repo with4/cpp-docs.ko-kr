@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357279"
 ---
 # <a name="catlservicemoduletstart-function"></a>CAtlServiceModuleT::Start 함수
 서비스를 실행할 때 **_tWinMain** 호출 **CAtlServiceModuleT::WinMain**를 호출 하 `CAtlServiceModuleT::Start`합니다.  

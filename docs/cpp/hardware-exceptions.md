@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32413962"
 ---
 # <a name="hardware-exceptions"></a>하드웨어 예외
 운영 체제에서 인식하는 대부분의 표준 예외는 하드웨어 정의 예외입니다. Windows는 몇몇 하위 수준의 소프트웨어 예외를 인식하지만 이러한 예외는 보통 운영 체제에서 잘 처리됩니다.  

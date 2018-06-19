@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424272"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 Windows 및 Visual C++에서 SEH(구조적 예외 처리)를 지원하지만 포팅 가능하고 유연한 코드를 만들기 위해 ISO 표준 C++ 예외 처리를 사용하는 것이 좋습니다. 그러나 기존 코드 또는 특정 종류의 프로그램에서는 SEH를 계속 사용할 수 있습니다.  

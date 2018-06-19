@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424354"
 ---
 # <a name="smart-pointers-modern-c"></a>스마트 포인터(최신 C++)
 최신 c + + 프로그래밍에서 표준 라이브러리 포함 *스마트 포인터*, 메모리의 사용할 수 있는 프로그램이 수 있도록 하는 데 사용 되는 및 리소스 누수 예외 로부터 안전한 됩니다.  

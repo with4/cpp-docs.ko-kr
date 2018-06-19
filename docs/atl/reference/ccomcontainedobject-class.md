@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360177"
 ---
 # <a name="ccomcontainedobject-class"></a>CComContainedObject 클래스
 이 클래스는 구현 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 소유자 개체에 위임 하 여 **IUnknown**합니다.  

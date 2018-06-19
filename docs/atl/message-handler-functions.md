@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355609"
 ---
 # <a name="message-handler-functions"></a>메시지 처리기 함수
 ATL 세 가지 유형의 메시지 처리기 함수를 제공합니다.  

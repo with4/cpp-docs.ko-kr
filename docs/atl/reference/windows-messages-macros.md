@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360219"
 ---
 # <a name="windows-messages-macros"></a>Windows 메시지 매크로
 이 매크로 창 메시지를 전달합니다.  

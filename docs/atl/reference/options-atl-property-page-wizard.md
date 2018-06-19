@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358771"
 ---
 # <a name="options-atl-property-page-wizard"></a>옵션, ATL 속성 페이지 마법사
 마법사의이 페이지를 사용 하 여 만들고 속성 페이지의 스레딩 모델 및 집계 수준을 정의 합니다.  

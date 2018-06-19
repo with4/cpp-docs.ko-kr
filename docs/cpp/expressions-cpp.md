@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414596"
 ---
 # <a name="expressions-c"></a>식 (C++)
 이 단원에서는 C++ 식에 대해 설명합니다. 식은 다음과 같은 용도 중 하나 이상으로 사용되는 일련의 연산자와 피연산자입니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408008"
 ---
 # <a name="based-addressing"></a>기반 주소
 이 단원에 포함된 항목은 다음과 같습니다.  

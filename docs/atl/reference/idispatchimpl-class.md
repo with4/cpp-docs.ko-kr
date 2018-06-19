@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364368"
 ---
 # <a name="idispatchimpl-class"></a>IDispatchImpl 클래스
 에 대 한 기본 구현을 제공는 `IDispatch` 이중 인터페이스의 일부가 됩니다.  

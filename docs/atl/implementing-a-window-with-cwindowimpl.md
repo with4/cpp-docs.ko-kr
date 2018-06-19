@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356549"
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>CWindowImpl 포함 된 창을 구현합니다.
 클래스를 파생 창을 구현 하려면 `CWindowImpl`합니다. 파생된 클래스에서 메시지 맵 및 메시지 처리기 함수를 선언 합니다. 세 가지 방법으로 이제 클래스를 사용할 수 있습니다.  

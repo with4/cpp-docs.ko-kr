@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362959"
 ---
 # <a name="csize-class"></a>CSize 클래스
 상대 좌표 또는 위치를 구현하는 Windows [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) 구조체와 유사합니다.  

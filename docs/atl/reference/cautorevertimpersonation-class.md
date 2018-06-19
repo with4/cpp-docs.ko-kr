@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359509"
 ---
 # <a name="cautorevertimpersonation-class"></a>CAutoRevertImpersonation 클래스
 이 클래스 되돌립니다 [CAccessToken](../../atl/reference/caccesstoken-class.md) 범위를 벗어나면 nonimpersonating 상태로 개체입니다.  

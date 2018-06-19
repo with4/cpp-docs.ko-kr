@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418200"
 ---
 # <a name="scanf-width-specification"></a>scanf 너비 사양
 이 정보는 `scanf_s`와 같은 보안 버전을 비롯하여 함수의 `scanf` 패밀리에서 형식 문자열의 해석에 적용됩니다. 다음 함수는 일반적으로 입력 스트림이 일련의 토큰으로 나뉜다고 가정합니다. 토큰은 공백(공백, 탭 또는 줄 바꿈)으로 구분되거나 숫자 형식의 경우 숫자 텍스트로 변환할 수 없는 첫 번째 문자가 나타내는 숫자 데이터 형식의 자연스러운 끝으로 구분됩니다. 입력 구문 분석을 토큰의 자연스러운 끝 이전에 중단하는 데 너비 지정을 사용할 수 있습니다.  

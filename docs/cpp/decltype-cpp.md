@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418041"
 ---
 # <a name="decltype--c"></a>decltype (c + +)
 `decltype` 형식 지정자는 지정된 식의 형식을 생성합니다. `decltype` 형식 지정자와 함께 [auto 키워드](../cpp/auto-cpp.md), 템플릿 라이브러리를 작성 하는 개발자에 게 주로 유용 합니다. 반환 형식이 해당 템플릿 인수의 형식에 종속되는 템플릿 함수를 선언하려면 `auto` 및 `decltype`을 사용하세요. 또는 다른 함수에 대한 호출을 래핑한 다음 래핑된 함수의 반환 형식을 반환하는 템플릿 함수를 선언하려면 `auto` 및 `decltype`을 사용하세요.  

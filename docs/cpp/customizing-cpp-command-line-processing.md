@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32411113"
 ---
 # <a name="customizing-c-command-line-processing"></a>C++ 명령줄 처리 사용자 지정
 ## <a name="microsoft-specific"></a>Microsoft 전용  

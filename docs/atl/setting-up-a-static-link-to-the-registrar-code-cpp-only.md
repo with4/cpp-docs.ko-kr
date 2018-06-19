@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360190"
 ---
 # <a name="setting-up-a-static-link-to-the-registrar-code-c-only"></a>등록 기관 코드 (c + + 전용)에 대 한 정적 링크가 설정
 C + + 클라이언트 등록자의 코드에 정적 링크를 만들 수 있습니다. 릴리스 빌드로 5k 약 추가 등록자의 파서를 정적으로 연결 합니다.  

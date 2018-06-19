@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423524"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>균일 초기화 및 생성자 위임
 최신 c + +에서 사용할 수 있습니다 *중괄호 초기화* 등호 없이 모든 형식에 대 한 합니다. 또한 코드를 단순화 하 여 비슷한 작업을 수행 하는 생성자를 여러 개 있는 경우 위임 생성자를 사용할 수 있습니다.  

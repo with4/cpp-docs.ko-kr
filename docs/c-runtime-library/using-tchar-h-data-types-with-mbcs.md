@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412653"
 ---
 # <a name="using-tcharh-data-types-with-mbcs"></a>_MBCS와 TCHAR.H 데이터 형식 사용
 

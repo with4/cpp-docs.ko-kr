@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357260"
 ---
 # <a name="message-maps-atl"></a>메시지 맵 (ATL)
 메시지 맵 특정 메시지, 명령 또는 알림 처리기 함수를 연결합니다. ATL의를 사용 하 여 [메시지 맵 매크로](../atl/reference/message-map-macros-atl.md), 창에 대 한 메시지 맵을 지정할 수 있습니다. 에 창 프로시저 `CWindowImpl`, `CDialogImpl`, 및 `CContainedWindowT` 창의 메시지를 메시지 맵에 있습니다.  

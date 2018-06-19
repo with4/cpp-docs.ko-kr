@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364952"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB 소비자 마법사
 이 마법사를 설정 하는 OLE DB 소비자 클래스 데이터 바인딩을 사용 하 여 지정 된 OLE DB 공급자를 통해 지정 된 데이터 원본에 액세스 하는 데 필요한 합니다.  

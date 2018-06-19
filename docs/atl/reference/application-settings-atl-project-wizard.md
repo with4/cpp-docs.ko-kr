@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357407"
 ---
 # <a name="application-settings-atl-project-wizard"></a>응용 프로그램 설정, ATL 프로젝트 마법사
 사용 하 여 **응용 프로그램 설정** 디자인 하 고 새 ATL 프로젝트에 기본 기능을 추가 하는 ATL 프로젝트 마법사의 페이지입니다.  

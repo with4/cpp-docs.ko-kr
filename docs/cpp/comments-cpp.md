@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32411756"
 ---
 # <a name="comments-c"></a>주석 (c + +)
 메모는 프로그래머에 게 유용 하지만 컴파일러에서 무시 하는 텍스트입니다. 주석은 나중에 참조할 수는 코드 주석을 추가 하려면 일반적으로 사용 됩니다. 컴파일러는 흰 공간으로 처리 합니다. 어떤 코드 줄을 비활성; 있도록 주석을 테스트를 사용할 수 있습니다. 그러나 `#if` / `#endif` 전처리기 지시문 더 잘 작동이 대 한 설명을 포함 하는 코드를 둘러쌀 수 되었지만 메모를 중첩할 수 없습니다.  

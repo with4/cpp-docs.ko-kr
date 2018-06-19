@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355009"
 ---
 # <a name="properties-and-property-pages-classes"></a>속성 및 속성 페이지 클래스
 다음과 같은 클래스 속성 및 속성 페이지를 지원합니다.  

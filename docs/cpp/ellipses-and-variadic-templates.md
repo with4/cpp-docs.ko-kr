@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32416660"
 ---
 # <a name="ellipses-and-variadic-templates"></a>Ellipses 및 Variadic 템플릿
 이 문서에서는 가변 매개 변수를 사용 하는 방법을 보여 줍니다 (`...`) c + + variadic 템플릿으로 합니다. 줄임표는 C 및 c + +에서 다양 한 용도로 되었습니다. 여기에 함수에 대 한 가변 인수 목록을 포함 합니다. `printf()` C 런타임 라이브러리에서 함수는 잘 알려진 예 중 하나입니다.  

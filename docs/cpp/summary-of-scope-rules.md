@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423872"
 ---
 # <a name="summary-of-scope-rules"></a>범위 규칙의 요약
 이름은 그 범위 내(과부하가 결정되는 지점까지)에서 명확하게 사용해야 합니다. 이름이 함수를 표시할 경우 함수의 매개 변수 형식 및 숫자가 명확해야 합니다. 이름이 모호 하는 경우 [멤버 액세스](../cpp/member-access-control-cpp.md) 규칙이 적용 됩니다.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417277"
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>방법: 예외 코드와 예외가 아닌 코드 간 인터페이스
 이 문서에서는 C++ 모듈에서 일관된 예외 처리를 구현하는 방법 및 예외 경계에서 이러한 예외를 오류 코드에서 및 오류 코드로 변환하는 방법을 설명합니다.  

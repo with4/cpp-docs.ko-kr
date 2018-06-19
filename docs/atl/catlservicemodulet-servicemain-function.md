@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355576"
 ---
 # <a name="catlservicemoduletservicemain-function"></a>CAtlServiceModuleT::ServiceMain 함수
 서비스 제어 관리자 (SCM) 호출 `ServiceMain` 서비스 제어판 응용 프로그램을 열 때 서비스를 선택 하 고 클릭 **시작**합니다.  

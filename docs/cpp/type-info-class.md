@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422438"
 ---
 # <a name="typeinfo-class"></a>type_info 클래스
 **type_info** 클래스 컴파일러가 프로그램 안에 생성 하는 형식 정보를 설명 합니다. 이 클래스의 개체는 형식의 이름에 대한 포인터를 효과적으로 저장합니다. **type_info** 클래스도 두 형식의 비교 또는 정렬 순서에 대 한 적합 한 인코딩된 값을 저장 합니다. 형식의 인코딩 규칙 및 정렬 시퀀스는 지정되지 않으며 프로그램 간에 다를 수 있습니다.  

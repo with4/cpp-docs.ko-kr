@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361641"
 ---
 # <a name="cdefaultcomparetraits-class"></a>CDefaultCompareTraits 클래스
 이 클래스는 기본 요소 비교 기능을 제공합니다.  

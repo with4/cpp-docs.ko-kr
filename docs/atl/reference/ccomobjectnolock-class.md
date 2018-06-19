@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361481"
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock 클래스
 이 클래스는 구현 **IUnknown** 집계 되지 않은 원시 개체 이지만 생성자에서 모듈 잠금 횟수를 증가 하지 않습니다.  

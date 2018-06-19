@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415454"
 ---
 # <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>방법: CComPtr 및 CComQIPtr 인스턴스 만들기 및 사용
 클래식 Windows 프로그래밍에서 라이브러리는 종종 COM 개체(보다 정확하게는 COM 서버)로 구현됩니다. 많은 Windows 운영 체제 구성 요소가 COM 서버로 구현되므로 많은 참가자가 이 형식의 라이브러리를 제공합니다. COM의 기본 사항에 대한 자세한 내용은 [Component Object Model (COM)](http://msdn.microsoft.com/en-us/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4)을 참조하세요.  

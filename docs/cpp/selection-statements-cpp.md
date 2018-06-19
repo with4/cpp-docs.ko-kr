@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421275"
 ---
 # <a name="selection-statements-c"></a>선택문 (C++)
 C + + 선택 문인 [경우](../cpp/if-else-statement-cpp.md) 및 [전환](../cpp/switch-statement-cpp.md), 코드의 섹션을 조건부로 실행할 수 있는 방법을 제공 합니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359638"
 ---
 # <a name="specifying-the-threading-model-for-a-project-atl"></a>프로젝트의 스레딩 모델 지정(ATL)
 다음 매크로 ATL 프로젝트의 스레딩 모델을 지정 하려면 사용할 수 있습니다.  

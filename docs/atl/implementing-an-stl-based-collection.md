@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359677"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>C + + 표준 라이브러리 기반 컬렉션 구현
 ATL은 제공 된 `ICollectionOnSTLImpl` 신속 하 게 개체에 c + + 표준 라이브러리 기반 컬렉션 인터페이스를 구현할 수 있도록 인터페이스입니다. 이 클래스의 작동 방식을 이해 하려면 간단한 예제 (아래 참조)이이 클래스를 사용 하 여 자동화 클라이언트 것을 목표로 하는 읽기 전용 컬렉션을 구현 하는 작업 합니다.  

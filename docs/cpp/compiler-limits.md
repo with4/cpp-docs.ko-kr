@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412139"
 ---
 # <a name="compiler-limits"></a>컴파일러 한계
 C++ 표준에서는 다양한 언어 구문에 대한 한도를 권장합니다. 다음은 Visual C++ 컴파일러에서 권장된 한도를 구현하지 않은 경우의 목록입니다. 첫 번째 수는 ISO C++ 11 표준(INCITS/ISO/IEC 14882-2011[2012], Annex B)으로 설정된 한도이고 두 번째 수는 Visual C++로 구현된 한도입니다.  

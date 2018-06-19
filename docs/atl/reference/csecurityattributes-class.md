@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357508"
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes 클래스
 이 클래스는 보안 특성 구조에 대 한 씬 래퍼입니다.  

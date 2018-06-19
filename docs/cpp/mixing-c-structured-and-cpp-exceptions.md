@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420108"
 ---
 # <a name="mixing-c-structured-and-c-exceptions"></a>C(구조적) 및 C++ 예외 혼합
 이식성이 높은 코드를 작성하려는 경우 C++ 프로그램에서 구조화된 예외 처리를 사용하지 않는 것이 좋습니다. 그러나 경우에 따라 만들려는 경우 사용 하 여 컴파일 **/EHa** 구조적된 예외와 c + + 소스 코드를 혼합 하 고 두 종류의 예외를 처리 하기 위한 일부 기능이 필요 합니다. 구조적된 예외 처리기 개체 또는 형식화 된 예외의의 개념을 사용 하므로 c + + 코드에서 throw 된 예외를 처리할 수 없습니다. 그러나 c + + **catch** 처리기는 구조화 된 예외를 처리할 수 있습니다. 와 같은 c + + 예외 처리 구문을 (**시도**, `throw`, **catch**)는 C 컴파일러는 하지만 구조적된 예외 처리 구문을에서 허용 되지 않습니다 (`__try`, `__except`, `__finally`) c + + 컴파일러에서 지원 됩니다.  

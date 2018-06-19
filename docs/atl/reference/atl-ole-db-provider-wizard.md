@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357482"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>ATL OLE DB 공급자 마법사
 이 마법사에서 OLE DB 공급자를 구성 하는 클래스를 만듭니다.  

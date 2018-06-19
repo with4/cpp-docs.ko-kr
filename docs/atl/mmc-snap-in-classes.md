@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355495"
 ---
 # <a name="mmc-snap-in-classes"></a>MMC 스냅인 클래스
 다음 클래스에서는 관리 MMC (Microsoft Console) 스냅인에서 구성 요소를 개발에 대 한 지원:  

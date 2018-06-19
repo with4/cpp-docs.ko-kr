@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424051"
 ---
 # <a name="lambda-expressions-in-c"></a>C++의 람다 식
 C + + 11 이상 버전에서는 람다 식을-라고도 *람다*-익명 함수 개체를 정의 하는 편리한 방법 (한 *클로저*) 여기서은 호출 되었거나 인수로 서 전달 된 위치에서 바로 에 함수입니다. 일반적으로 람다는 알고리즘이나 비동기 메서드에 전달되는 몇 줄의 코드를 캡슐화하는 데 사용됩니다. 이 문서에서는 람다가 무엇인지 정의하고 다른 프로그래밍 기법과 비교하고 그 장점을 설명하며 기본 예제를 제공합니다.  

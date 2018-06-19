@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357817"
 ---
 # <a name="implementation-of-a-custom-string-manager-advanced-method"></a>사용자 지정 문자열 관리자 구현 (고급 방법)
 경우에는 어떤 힙 메모리를 할당 하는 데 사용 되는 변경 보다 더 않는 사용자 지정 문자열 관리자를 구현 하는 것이 좋습니다. 이 경우 수동으로 구현 해야는 [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) 인터페이스를 사용자 지정 문자열 관리자도 합니다.  

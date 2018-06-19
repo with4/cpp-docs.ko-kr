@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361462"
 ---
 # <a name="cwintraitsor-class"></a>CWinTraitsOR 클래스
 이 클래스는 window 개체를 만들 때 사용 되는 스타일을 표준화 하기 위한 메서드를 제공 합니다.  

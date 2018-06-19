@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415496"
 ---
 # <a name="routine-mappings"></a>루틴 매핑
 제네릭 텍스트 루틴 매핑은 TCHAR.H에 정의되어 있습니다. `_tccpy` 및 `_tclen`은 MBCS 모델의 함수에 매핑됩니다. 이러한 함수는 완전성을 위해 SBCS 및 유니코드 모델의 매크로 또는 인라인 함수에 매핑됩니다. 제네릭 텍스트 루틴에 대한 자세한 내용은 `SBCS`, `_MBCS` 또는 `_UNICODE` 관련 루틴에 대한 도움말 항목을 참조하십시오.  

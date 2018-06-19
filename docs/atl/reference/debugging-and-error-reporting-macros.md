@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365043"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>디버깅 및 오류 보고 매크로
 이러한 매크로 유용한 디버깅 및 추적 기능을 제공 합니다.  

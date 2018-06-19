@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363462"
 ---
 # <a name="umenuorid-class"></a>_U_MENUorID 클래스
 이 클래스에 대 한 래퍼를 제공 **CreateWindow** 및 **CreateWindowEx**합니다.  
