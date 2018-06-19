@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378147"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za, /Ze(언어 확장명 사용 안 함)
 **/Za** 컴파일러 옵션은 ANSI c 89에서 또는 C + + 11 ISO와 호환 되지 않는 언어 구문에 대 한 오류를 내보냅니다. **/Ze** 컴파일러 옵션을 기본적으로 켜져 있는 Microsoft 확장을 사용 합니다.  

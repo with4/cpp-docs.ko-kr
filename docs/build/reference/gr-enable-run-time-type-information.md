@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374985"
 ---
 # <a name="gr-enable-run-time-type-information"></a>/GR(런타임 형식 정보 사용)
 런타임 시 개체 형식을 검사 하는 코드를 추가 합니다.  

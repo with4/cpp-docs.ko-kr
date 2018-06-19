@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33895738"
 ---
 # <a name="runtimeclassflagsvalue-constant"></a>RuntimeClassFlags::value 상수
 포함 하는 필드는 [RuntimeClassType 열거형](../windows/runtimeclasstype-enumeration.md) 값입니다.  

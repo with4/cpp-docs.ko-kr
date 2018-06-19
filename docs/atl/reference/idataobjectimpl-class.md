@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365483"
 ---
 # <a name="idataobjectimpl-class"></a>IDataObjectImpl 클래스
 이 클래스는 단일형 데이터 전송 지원 및 연결 관리에 대 한 메서드를 제공 합니다.  

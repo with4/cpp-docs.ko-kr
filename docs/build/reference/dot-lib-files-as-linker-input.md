@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374546"
 ---
 # <a name="lib-files-as-linker-input"></a>링커 입력 파일로 사용하는 .Lib 파일
 링크 허용 COFF 표준 라이브러리 및 COFF 가져오기 라이브러리는 일반적으로 확장명이. lib 합니다. 표준 라이브러리 개체를 포함 하 고 LIB 도구에 의해 생성 됩니다. 가져오기 라이브러리 다른 프로그램의 내보내기에 대 한 정보가 포함 되어 있으며 내보내기가 포함 된 프로그램을 빌드할 때 링크 하 여 하거나 LIB 도구로 만듭니다. LIB 표준 만들기 또는 가져오기 라이브러리를 사용 하는 방법은 참조 하십시오. [LIB 참조](../../build/reference/lib-reference.md)합니다. 가져오기 라이브러리를 만드는 링크 사용에 대 한 자세한 내용은 참조는 [/DLL](../../build/reference/dll-build-a-dll.md) 옵션입니다.  

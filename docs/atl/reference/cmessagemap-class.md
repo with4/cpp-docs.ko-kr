@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359021"
 ---
 # <a name="cmessagemap-class"></a>CMessageMap 클래스
 이 클래스를 사용 하면 다른 개체에 의해 액세스 되어야 하는 개체의 메시지 맵.  

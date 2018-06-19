@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369944"
 ---
 # <a name="kinds-of-dlls"></a>DLL 종류
 이 항목에서는 작성 하는 DLL의 종류를 결정 하는 데 유용한 정보를 제공 합니다.  

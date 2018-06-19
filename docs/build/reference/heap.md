@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372219"
 ---
 # <a name="heap"></a>/HEAP
 힙 크기를 바이트 단위로 설정합니다. 이 옵션은 실행 파일에만 적용됩니다.  

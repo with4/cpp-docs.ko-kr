@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33114447"
 ---
 # <a name="collectionadapter-stlclr"></a>collection_adapter(STL/CLR)
 STL/CLR 컨테이너로 사용 하기 위해.NET 컬렉션을 래핑합니다. A `collection_adapter` 간단한 STL/CLR 컨테이너 개체를 설명 하는 템플릿 클래스입니다. 클래스 라이브러리 BCL (기본) 인터페이스를 래핑하고 제어 되는 시퀀스를 조작 하는 데 사용 하는 반복기 쌍을 반환 합니다.  

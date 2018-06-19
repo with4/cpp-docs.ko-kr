@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127905"
 ---
 # <a name="how-to-retrieve-text-from-the-clipboard-ccli"></a>방법: 클립보드에서 텍스트 검색(C++/CLI)
 다음 코드 예제에서는 <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> 멤버 함수에 대 한 포인터를 반환 하는 <xref:System.Windows.Forms.IDataObject> 인터페이스입니다. 그런 다음이 인터페이스는 데이터의 형식에 대해 쿼리할 하며, 실제 데이터를 검색 하는 데 사용 수 있습니다.  

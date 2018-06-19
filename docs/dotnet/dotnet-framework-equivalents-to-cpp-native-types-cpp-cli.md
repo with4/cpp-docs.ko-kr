@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110940"
 ---
 # <a name="net-framework-equivalents-to-c-native-types-ccli"></a>C++ 네이티브 형식에 해당하는 .NET Framework(C++/CLI)
 다음 표에서 미리 정의 된 유형에 기본 제공 Visual c + + 형식에 대 한 키워드에는 **시스템** 네임 스페이스입니다.  

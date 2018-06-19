@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359832"
 ---
 # <a name="atl-collection-classes"></a>ATL 컬렉션 클래스
 ATL은 데이터 저장 및 액세스에 대 한 많은 클래스를 제공 합니다. 어떤 클래스를 사용 하려는 등의 여러 가지 요인에 따라 달라 집니다.  

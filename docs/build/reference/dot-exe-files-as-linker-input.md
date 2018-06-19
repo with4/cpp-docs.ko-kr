@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372405"
 ---
 # <a name="exe-files-as-linker-input"></a>링커 입력 파일로 사용하는 .Exe 파일
 [MS-DOS 스텁 파일 이름](../../build/reference/stub-ms-dos-stub-file-name.md) (/ 스텁) 옵션은 MS-DOS와 실행 하는.exe 파일의 이름을 지정 합니다. 링크는 올바른 MS-DOS 프로그램 인지 확인 하려면 지정된 된 파일을 검사 합니다.  

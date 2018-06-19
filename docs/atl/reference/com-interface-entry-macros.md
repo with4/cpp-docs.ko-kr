@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366590"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY 매크로  
  이러한 매크로 입력 개체의 인터페이스가 COM 맵을에서 액세스할 수 있도록 `QueryInterface`합니다. COM 맵에서 항목의 순서는 짝이 되는 순서 인터페이스 확인 **IID** 중 `QueryInterface`합니다.  

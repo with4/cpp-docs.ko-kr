@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367653"
 ---
 # <a name="function-types"></a>함수 형식
 두 형식의 함수는 기본적으로 합니다. 스택 프레임을 필요로 하는 함수에는 프레임 함수를 라고 합니다. 스택 프레임은 필요 하지 않은 함수에는 리프 함수를 호출 됩니다.  

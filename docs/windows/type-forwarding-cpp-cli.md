@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891096"
 ---
 # <a name="type-forwarding-ccli"></a>형식 전달(C++/CLI)
 *형식 전달* A. 어셈블리를 사용 하는 클라이언트를 다시 컴파일할 필요는 없습니다 되도록 다른 어셈블리 (어셈블리 B)에 형식을 어셈블리 (어셈블리 A) 간에 이동할 수 있습니다  

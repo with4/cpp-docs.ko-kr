@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889906"
 ---
 # <a name="troubleshooting-the-dialog-editor"></a>대화 상자 편집기 문제 해결
 대화 상자 편집기에서 작업할 때 알고 있어야 하는 몇 가지 문제는 다음과 같습니다.  

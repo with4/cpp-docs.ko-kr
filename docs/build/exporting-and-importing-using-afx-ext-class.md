@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371062"
 ---
 # <a name="exporting-and-importing-using-afxextclass"></a>AFX_EXT_CLASS를 사용하여 내보내기 및 가져오기  
   

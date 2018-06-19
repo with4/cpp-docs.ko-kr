@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375287"
 ---
 # <a name="link-command-files"></a>LINK 명령 파일
 명령 파일 형식으로의 링크를 명령줄 인수를 전달할 수 있습니다. 링커에 명령 파일을 지정 하려면 다음 구문을 사용 합니다.  

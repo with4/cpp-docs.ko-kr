@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361579"
 ---
 # <a name="registry-support-classes"></a>레지스트리 지원 클래스
 다음 클래스에는 레지스트리 지원을 제공합니다.  

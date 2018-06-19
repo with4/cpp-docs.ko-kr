@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890118"
 ---
 # <a name="weakrefoperatoramp-operator"></a>WeakRef::operator&amp; 연산자
 현재 WeakRef 개체를 나타내는 ComPtrRef 개체를 반환합니다.  

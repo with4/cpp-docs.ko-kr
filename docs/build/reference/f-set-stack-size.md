@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373142"
 ---
 # <a name="f-set-stack-size"></a>/F(스택 크기 설정)
 프로그램의 스택 크기를 바이트 단위로 설정 합니다.  

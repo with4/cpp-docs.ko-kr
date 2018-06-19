@@ -33,6 +33,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34450721"
 ---
 # <a name="dllonexit"></a>__dllonexit
 종료 시 호출할 루틴을 등록합니다.  

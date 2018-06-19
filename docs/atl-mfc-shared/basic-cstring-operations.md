@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359096"
 ---
 # <a name="basic-cstring-operations"></a>기본 CString 작업
 이 항목에서는 다음과 같은 기본 설명 [CString](../atl-mfc-shared/reference/cstringt-class.md) 작업:  

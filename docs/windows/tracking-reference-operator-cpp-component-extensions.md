@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890872"
 ---
 # <a name="tracking-reference-operator-c-component-extensions"></a>추적 참조 연산자(C++ 구성 요소 확장명)
 A *추적 참조* (`%`) 일반 c + + 참조 처럼 동작 (`&`) 개체는 추적 참조에 할당 된 경우를 제외 하 고 개체의 참조 횟수가 증가 합니다.  

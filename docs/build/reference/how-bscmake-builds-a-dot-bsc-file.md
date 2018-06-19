@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373490"
 ---
 # <a name="how-bscmake-builds-a-bsc-file"></a>BSCMAKE에서 .Bsc 파일을 빌드하는 방법
 BSCMAKE 빌드하거나 수 있는 가장 효율적인 방법으로.bsc 파일을 다시 빌드합니다. 잠재적 문제를 방지 하려면 빌드 프로세스를 이해 하는 것이 중요 합니다.  

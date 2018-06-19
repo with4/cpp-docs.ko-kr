@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373402"
 ---
 # <a name="fd-ide-minimal-rebuild"></a>/FD(IDE 최소 재빌드)
 **/FD** 제외 하 고 사용자에 게 노출 되지 않습니다는 [명령줄](../../ide/command-line-property-pages.md) 는 c + + 프로젝트의 속성 페이지 **속성 페이지** 대화 상자의 경우에 [/Gm (최소 다시 빌드 가능)](../../build/reference/gm-enable-minimal-rebuild.md) 도 선택 하지 않습니다. **/FD** 개발 환경 에서만에서 적용 했습니다. **/FD** 의 출력에 표시 되지 않는 **cl /?** 합니다.  

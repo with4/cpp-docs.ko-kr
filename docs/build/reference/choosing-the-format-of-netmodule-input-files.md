@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372723"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>.netmodule 입력 파일 형식 선택
 MSIL.obj 파일 (사용 하 여 컴파일된 [/clr](../../build/reference/clr-common-language-runtime-compilation.md)).netmodule 파일을 사용할 수도 있습니다.  .obj 파일에는 메타 데이터 및 네이티브 기호가 포함 되어 있습니다.  .netmodules에는 메타데이터만 포함됩니다.  

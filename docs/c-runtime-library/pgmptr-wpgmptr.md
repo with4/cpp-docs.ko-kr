@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390000"
 ---
 # <a name="pgmptr-wpgmptr"></a>_pgmptr, _wpgmptr
 실행 파일의 경로입니다. 더 이상 사용되지 않습니다. [_get_pgmptr](../c-runtime-library/reference/get-pgmptr.md) 및 [_get_wpgmptr](../c-runtime-library/reference/get-wpgmptr.md)을 사용하세요.  

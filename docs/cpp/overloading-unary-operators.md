@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421061"
 ---
 # <a name="overloading-unary-operators"></a>단항 연산자 오버로드
 오버로드할 수 있는 단항 연산자는 다음과 같습니다.  

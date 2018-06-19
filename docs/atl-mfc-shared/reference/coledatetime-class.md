@@ -49,6 +49,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366278"
 ---
 # <a name="coledatetime-class"></a>COleDateTime 클래스
 캡슐화 된 `DATE` OLE 자동화에 사용 되는 데이터 형식입니다.  

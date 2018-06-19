@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391739"
 ---
 # <a name="limits-on-floating-point-constants"></a>부동 소수점 상수에 대한 제한
 **Microsoft 전용**  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371166"
 ---
 # <a name="library"></a>LIBRARY
 링크는 DLL을 만드는를 알려 줍니다. 같은 시간에 링크 빌드에서.exp 파일 사용 되지 않은 경우 가져오기 라이브러리를 만듭니다.  

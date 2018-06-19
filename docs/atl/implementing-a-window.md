@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357015"
 ---
 # <a name="implementing-a-window"></a>창 구현
 클래스 [CWindowImpl](../atl/reference/cwindowimpl-class.md) 창을 구현 하 고 해당 메시지를 처리할 수 있습니다. 메시지 ATL에서 처리 한 메시지 맵을 기반으로 합니다. 이 섹션에 설명합니다.  

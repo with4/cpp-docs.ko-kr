@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358340"
 ---
 # <a name="event-handling-global-functions"></a>이벤트 처리 전역 함수
 이 함수는 이벤트 처리기를 제공합니다.  

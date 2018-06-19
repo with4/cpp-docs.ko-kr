@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128269"
 ---
 # <a name="how-to-retrieve-the-windows-version-ccli"></a>방법: Windows 버전 검색(C++/CLI)
 다음 코드 예제에서는 현재 운영 체제의 플랫폼 및 버전 정보를 검색 하는 방법을 보여 줍니다. 이 정보에 저장 되는 <xref:System.Environment.OSVersion%2A?displayProperty=fullName> 속성 넓은 의미에서의 Windows 버전을 설명 하는 열거형의 구성 되어 및 <xref:System.Environment.Version%2A> 운영 체제의 정확한 빌드를 포함 하는 개체입니다.  

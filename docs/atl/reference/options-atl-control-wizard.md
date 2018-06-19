@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364475"
 ---
 # <a name="options-atl-control-wizard"></a>옵션, ATL 컨트롤 마법사
 여기에 요약 "검색 결과"를 삽입 합니다.  

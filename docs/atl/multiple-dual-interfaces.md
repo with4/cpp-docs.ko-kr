@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356721"
 ---
 # <a name="multiple-dual-interfaces"></a>여러 개의 이중 인터페이스
 이중 인터페이스 (즉, vtable 및 런타임에 바인딩, 따라서 클래스를 사용할 수 있도록 두 가지 스크립팅 언어 뿐만 아니라 c + +의 유연성)의 장점을 결합 하려는 경우 다중 상속 기법을 사용 합니다.  

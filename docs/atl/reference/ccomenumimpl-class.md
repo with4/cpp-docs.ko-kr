@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365030"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl 클래스
 이 클래스는 열거 되 고 항목이 배열에 저장 되는 COM 열거자 인터페이스에 대 한 구현을 제공 합니다.  

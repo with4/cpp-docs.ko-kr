@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377146"
 ---
 # <a name="p-preprocess-to-a-file"></a>/P(파일 전처리)
 C 및 c + + 소스 파일을 전처리 하 고 전처리 된 출력 파일을 씁니다.  

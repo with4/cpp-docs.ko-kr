@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365996"
 ---
 # <a name="idispeventsimpleimpl-class"></a>IDispEventSimpleImpl 클래스
 이 클래스의 구현을 제공는 `IDispatch` 형식 라이브러리에서 형식 정보를 가져오지 않고 메서드.  

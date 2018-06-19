@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369762"
 ---
 # <a name="predefined-rules"></a>미리 정의된 규칙
 미리 정의 된 규칙 NMAKE 제공한 명령 및 옵션 매크로 사용합니다.  

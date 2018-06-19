@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378011"
 ---
 # <a name="ignore-ignore-specific-warnings"></a>/IGNORE(특정 경고 무시)
 ```  

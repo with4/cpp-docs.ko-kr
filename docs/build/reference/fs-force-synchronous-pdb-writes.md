@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374793"
 ---
 # <a name="fs-force-synchronous-pdb-writes"></a>/F(동기 PDB 쓰기 적용)
 프로그램 데이터베이스 (PDB) 파일에 강제로 씁니다-에서 만든 [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) 또는 [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)-를 MSPDBSRV를 통해 serialize 할 수 있습니다. EXE 합니다.  

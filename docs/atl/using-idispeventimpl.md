@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361153"
 ---
 # <a name="using-idispeventimpl"></a>IDispEventImpl를 사용 하 여
 사용 하는 경우 `IDispEventImpl` 이벤트를 처리 하려면 해야 합니다.  

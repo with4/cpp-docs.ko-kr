@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112510"
 ---
 # <a name="provider-support-for-bookmarks"></a>공급자의 책갈피 지원
 추가 하는이 항목의 예제는 `IRowsetLocate` 인터페이스는 `CMyProviderRowset` 클래스입니다. 대부분의 경우 기존 COM 개체에는 인터페이스를 추가 하 여 시작 합니다. 소비자 템플릿에서 많은 호출을 추가 하 여 테스트할 수 있습니다. 예제에 나오는 하는 방법:  

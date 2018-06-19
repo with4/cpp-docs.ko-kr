@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380536"
 ---
 # <a name="zg-generate-function-prototypes"></a>/Zg(함수 프로토타입 생성)
 제거됩니다. 소스 파일에 정의된 각 함수에 대한 함수 프로토타입을 만들지만 소스 파일을 컴파일하지 않습니다.  

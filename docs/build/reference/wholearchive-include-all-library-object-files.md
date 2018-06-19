@@ -15,6 +15,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376871"
 ---
 # <a name="wholearchive-include-all-library-object-files"></a>/ WHOLEARCHIVE (모든 라이브러리 개체 파일 포함)
 연결 된 실행 파일에서 정적 라이브러리의 모든 개체 파일을 포함 하도록 링커에 강제로 적용 합니다.  

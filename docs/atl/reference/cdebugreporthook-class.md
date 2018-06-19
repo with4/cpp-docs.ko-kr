@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360252"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook 클래스
 이 클래스를 사용 하 여 명명된 된 파이프에 디버그 보고서를 보내도록 합니다.  

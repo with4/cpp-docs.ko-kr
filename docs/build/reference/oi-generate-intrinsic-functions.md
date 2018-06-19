@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375843"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi(내장 함수 만들기)
 일부 함수 호출을 내장 함수나 특정 형태의 함수 응용 프로그램에 도움이 되는 교체를 더 빠르게 실행 합니다.  

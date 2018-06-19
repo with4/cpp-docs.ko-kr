@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375024"
 ---
 # <a name="version-cc"></a>VERSION(C/C++)
 .Exe 파일의 헤더에 숫자를 저장 하는 링크 또는 DLL에 지시 합니다.  

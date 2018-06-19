@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377234"
 ---
 # <a name="v-version-number"></a>/V(버전 번호)
 더 이상 사용되지 않습니다. .Obj 파일에 텍스트 문자열을 포함 합니다.  

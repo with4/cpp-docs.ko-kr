@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374260"
 ---
 # <a name="ga-optimize-for-windows-application"></a>/GA(Windows 응용 프로그램 최적화)
 스레드 로컬 저장소 (TLS) 변수에 액세스 하기 위한.exe 파일에 대 한 보다 효율적인 코드의 결과입니다.  

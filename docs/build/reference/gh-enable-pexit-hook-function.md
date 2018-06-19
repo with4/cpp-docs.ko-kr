@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374507"
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH(_pexit 후크 함수 사용)
 호출 된 `_pexit` 함수의 모든 메서드 또는 함수의 끝에 있습니다.  

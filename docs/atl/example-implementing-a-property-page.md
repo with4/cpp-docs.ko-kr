@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363715"
 ---
 # <a name="example-implementing-a-property-page"></a>예: 속성 페이지 구현
 속성을 표시 (및 변경할 수 있습니다) 하는 속성 페이지를 빌드하는 방법을 보여 주는이 예제는 [문서 클래스](../mfc/document-classes.md) 인터페이스입니다.  

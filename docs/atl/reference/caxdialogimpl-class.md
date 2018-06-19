@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365079"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl 클래스
 이 클래스는 ActiveX 컨트롤을 호스팅하는 (모달 및 모덜리스) 대화 상자를 구현합니다.  

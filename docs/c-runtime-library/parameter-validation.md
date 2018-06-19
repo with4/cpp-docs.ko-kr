@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34450253"
 ---
 # <a name="parameter-validation"></a>매개 변수 유효성 검사
 대부분의 보안이 강화된 CRT 함수 및 여러 기존 함수는 해당 매개 변수의 유효성을 검사합니다. 여기에는 **NULL**에 대한 포인터 검사, 정수가 올바른 범위에 포함되어 있는지 검사 또는 열거형 값이 올바른지 검사가 포함될 수 있습니다. 잘못된 매개 변수가 검색되면 잘못된 매개 변수 처리기가 실행됩니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376249"
 ---
 # <a name="stacksize"></a>STACKSIZE
 스택 크기를 바이트 단위로 설정합니다.  

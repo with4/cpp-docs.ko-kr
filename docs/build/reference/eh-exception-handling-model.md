@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379109"
 ---
 # <a name="eh-exception-handling-model"></a>/EH(예외 처리 모델)
 컴파일러에서 사용하는 예외 처리의 종류, 예외 검사를 최적화할 시기 및 예외로 인해 범위를 벗어나는 C++ 개체를 삭제할지 여부를 지정합니다. **/EH** 를 지정하지 않으면 컴파일러에서 비동기 구조적 예외와 C++ 예외를 모두 catch하지만 비동기 예외로 인해 범위를 벗어나는 C++ 개체를 삭제하지 않습니다.  

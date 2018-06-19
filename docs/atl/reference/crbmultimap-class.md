@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365193"
 ---
 # <a name="crbmultimap-class"></a>CRBMultiMap 클래스
 이 클래스는 각 키 빨간색 검정 이진 트리를 사용 하 여 둘 이상의 값에 연결할 수 있게 하는 매핑 구조를 나타냅니다.  

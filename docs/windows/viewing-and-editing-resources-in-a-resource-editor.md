@@ -29,6 +29,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891820"
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>리소스 편집기에서 리소스 보기 및 편집
 각 리소스 종류에 해당 리소스 종류에 있는 리소스 편집기 있습니다. 다시 정렬 크기를 조정 하거나 컨트롤 및 기능을 추가 하지 않으면 연결된 된 편집기를 사용 하 여 리소스의 기능을 수정할 수 있습니다. 리소스를 편집할 수도 있습니다 [텍스트 형식](../windows/how-to-open-a-resource-script-file-in-text-format.md) 및 [이진 형식](../windows/opening-a-resource-for-binary-editing.md)합니다.  

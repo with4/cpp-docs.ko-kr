@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111148"
 ---
 # <a name="deque-stlclr"></a>deque(STL/CLR)
 템플릿 클래스는 임의 액세스를 가진 요소의 다양 한 길이의 시퀀스를 제어 하는 개체를 설명 합니다. 컨테이너를 사용 하 여 `deque` 인접 한 블록 저장소의 처럼 보입니다. 하지만 늘리거나 모든 나머지 요소를 복사할 필요 없이 양쪽 끝 줄일 수 있는 요소의 시퀀스를 관리할 수 있습니다. 따라서 구현할 수 있는 효율적으로 한 `double-ended queue`합니다. (따라서 이름입니다.)  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363971"
 ---
 # <a name="atl-simple-object-wizard"></a>ATL 단순 개체 마법사
 이 마법사는 최소한의 COM 개체를 프로젝트에 삽입합니다. 마법사의이 페이지를 사용 하 여 c + + 클래스 및 개체와 해당 COM 기능에 대 한 파일을 식별 하는 이름을 지정할 수 있습니다.  

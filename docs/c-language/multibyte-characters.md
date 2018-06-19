@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382694"
 ---
 # <a name="multibyte-characters"></a>멀티바이트 문자
 **ANSI 2.2.1.2** 멀티바이트 문자의 상태 전환  

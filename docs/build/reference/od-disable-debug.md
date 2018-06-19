@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376262"
 ---
 # <a name="od-disable-debug"></a>/Od(디버그 비활성화)
 프로그램에서 모든 최적화를 해제 하 고 컴파일 속도가 빨라집니다.  

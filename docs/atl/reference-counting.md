@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358250"
 ---
 # <a name="reference-counting"></a>참조 횟수
 자체 COM 개체가 더 이상 사용 되지 것으로 확인 하는 경우 메모리에서 개체를 제거 하려면 자동으로 시도 하지 않습니다. 대신, 개체 프로그래머가 사용 하지 않는 개체를 제거 해야 합니다. 프로그래머가 여부는 개체를 제거할 수 참조 횟수에 따라 결정 합니다.  

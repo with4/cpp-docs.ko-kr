@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379200"
 ---
 # <a name="overview-of-lib"></a>LIB 개요
 LIB에서 만드는 표준 라이브러리, 라이브러리, 가져오기 및 내보내기 파일을 사용할 수 있습니다 [링크](../../build/reference/linker-options.md) 는 프로그램을 빌드할 경우. LIB 명령 프롬프트에서 실행 됩니다.  

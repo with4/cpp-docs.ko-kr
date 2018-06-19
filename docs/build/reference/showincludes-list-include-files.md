@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378342"
 ---
 # <a name="showincludes-list-include-files"></a>/showIncludes(포함 파일 나열)
 컴파일러가 포함 파일의 목록을 출력 합니다. 중첩 된 포함 파일도 표시 됩니다 (포함 하는 파일에서 포함 된).  

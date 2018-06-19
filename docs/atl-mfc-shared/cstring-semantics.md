@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356581"
 ---
 # <a name="cstring-semantics"></a>CString 의미 체계
 경우에 [CString](../atl-mfc-shared/reference/cstringt-class.md) 개체는 증가할 수 있는 동적 개체, 기본 제공 기본 유형 및 간단한 클래스와 마찬가지로 작동 합니다. 각 `CString` 개체는 고유한 값을 나타냅니다. `CString` 문자열에 대 한 포인터가 아니라 실제 문자열로 개체의 생각해 야 합니다.  

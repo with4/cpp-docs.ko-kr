@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420045"
 ---
 # <a name="name-resolution-for-locally-declared-names"></a>로컬로 선언된 이름에 대한 이름 확인
 

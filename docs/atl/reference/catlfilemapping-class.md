@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358843"
 ---
 # <a name="catlfilemapping-class"></a>CAtlFileMapping 클래스
 이 클래스는 캐스트 연산자의 메서드에 추가 메모리 매핑된 파일을 나타냅니다. [CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)합니다.  

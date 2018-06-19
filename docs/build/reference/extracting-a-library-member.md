@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371244"
 ---
 # <a name="extracting-a-library-member"></a>라이브러리 멤버 추출
 LIB를 사용 하 여 기존 라이브러리의 멤버의 복사본이 포함 된 개체 (.obj) 파일을 만들 수 있습니다. 멤버의 복사본을 추출 하려면 다음 구문을 사용 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387962"
 ---
 # <a name="multidimensional-arrays-c"></a>다차원 배열 (C)
 첨자 식에는 다음과 같이 여러 첨자가 있을 수도 있습니다.  

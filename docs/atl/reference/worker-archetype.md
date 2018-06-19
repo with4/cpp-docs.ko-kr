@@ -19,6 +19,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255980"
 ---
 # <a name="worker-archetype"></a>작업자 아키타
 준수 하는 클래스는 *작업자* 아키타 스레드 풀 큐에 대기 프로세스 작업 항목에 코드를 제공 합니다.  

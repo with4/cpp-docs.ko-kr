@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367513"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary 및 AfxFreeLibrary
 DLL 호출에 명시적으로 연결 하는 프로세스는 [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188) DLL 모듈이 더 이상 필요 없는 경우에 작동 합니다. 이 함수는 모듈의 참조 횟수 및 프로세스의 주소 공간에서의 참조 횟수가 0 바이트인 경우 매핑을 해제 합니다.  

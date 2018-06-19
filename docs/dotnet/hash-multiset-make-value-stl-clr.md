@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33126267"
 ---
 # <a name="hashmultisetmakevalue-stlclr"></a>hash_multiset::make_value(STL/CLR)
 값 개체를 만듭니다.  

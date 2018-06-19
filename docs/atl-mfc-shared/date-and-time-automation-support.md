@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357596"
 ---
 # <a name="date-and-time-automation-support"></a>날짜 및 시간: 자동화 지원
 이 문서에서는 날짜 및 시간 관리와 관련 된 클래스 라이브러리 서비스를 활용 하는 방법을 설명 합니다. 설명 된 절차는 다음과 같습니다.  

@@ -64,6 +64,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366197"
 ---
 # <a name="ioleobjectimpl-class"></a>IOleObjectImpl 클래스
 이 클래스는 구현 **IUnknown** 컨트롤과 컨테이너 통신 하는 주 인터페이스입니다.  

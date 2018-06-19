@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111499"
 ---
 # <a name="clr-enum-type"></a>CLR 열거형 형식
 선언 및 열거형의 동작에서에서 변경 되었습니다 Managed Extensions for c + + Visual c + +입니다.  

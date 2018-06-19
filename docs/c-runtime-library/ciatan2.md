@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387147"
 ---
 # <a name="ciatan2"></a>_CIatan2
 *x* 및 *y*가 스택의 맨 위에 있는 값인 경우 *x* / *y*의 아크탄젠트를 계산합니다.  

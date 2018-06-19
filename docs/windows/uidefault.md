@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890153"
 ---
 # <a name="uidefault"></a>uidefault
 형식 정보 멤버의 사용자 인터페이스에 표시 하기 위한 기본 멤버 임을 나타냅니다.  

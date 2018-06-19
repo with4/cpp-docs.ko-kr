@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391196"
 ---
 # <a name="source-files-and-source-programs"></a>원본 파일 및 원본 프로그램
 소스 프로그램은 하나 이상의 "소스 파일" 또는 "변환 단위"로 나뉠 수 있습니다. 컴파일러로 입력된 것은 "변환 단위"라고 합니다.  

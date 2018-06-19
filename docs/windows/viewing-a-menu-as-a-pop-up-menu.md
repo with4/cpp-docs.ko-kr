@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891033"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>메뉴를 팝업 메뉴로 보기
 일반적으로 메뉴 편집기에서 작업하면 메뉴 리소스가 메뉴 모음으로 표시됩니다. 그러나 프로그램이 실행되는 동안 응용 프로그램의 메뉴 모음에 메뉴 리소스가 추가될 수 있습니다.  

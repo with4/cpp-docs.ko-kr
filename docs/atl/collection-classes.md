@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361331"
 ---
 # <a name="collection-classes"></a>컬렉션 클래스
 다음 클래스는 배열, 목록, 맵, 및도 비교 및 요소 액세스를 위한 메서드 특성에 대 한 지원을 제공 합니다.  

@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366512"
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges 클래스
 이 클래스는에 대 한 래퍼는 **TOKEN_PRIVILEGES** 구조입니다.  

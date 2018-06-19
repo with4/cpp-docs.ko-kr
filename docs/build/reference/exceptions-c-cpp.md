@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373389"
 ---
 # <a name="exceptions-cc"></a>예외(C/C++)
 오류가 발생 한 경우 두 개의 예외 코드를 늘릴 수 있습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32414622"
 ---
 # <a name="event-handling"></a>이벤트 처리
 이벤트 처리는 기본적으로 COM 클래스에 대 한 지원 (대개 ATL 클래스를 사용 하 여 COM 개체를 구현 하는 c + + 클래스 또는 [coclass](../windows/coclass.md) 특성).  자세한 내용은 참조 [COM에서 이벤트 처리](../cpp/event-handling-in-com.md)합니다.  

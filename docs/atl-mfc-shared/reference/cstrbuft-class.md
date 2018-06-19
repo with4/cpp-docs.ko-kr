@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361360"
 ---
 # <a name="cstrbuft-class"></a>CStrBufT 클래스
 이 클래스에 대 한 자동 리소스 정리 제공 `GetBuffer` 및 `ReleaseBuffer` 기존 호출 `CStringT` 개체입니다.  

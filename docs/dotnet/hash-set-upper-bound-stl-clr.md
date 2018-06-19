@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131406"
 ---
 # <a name="hashsetupperbound-stlclr"></a>hash_set::upper_bound(STL/CLR)
 지정된 된 키와 일치 하는 범위의 끝을 찾습니다.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373984"
 ---
 # <a name="using-function-name-without--produces-no-code"></a>함수 이름을 () 없이 사용하면 코드가 생성되지 않음
 프로그램에 선언 된 함수 이름, 괄호 없이 사용 하는 경우 컴파일러는 코드를 생성 하지 않습니다. 이 컴파일러; 함수 주소를 계산 하기 때문에 함수 매개 변수를 사용 하는 여부에 관계 없이 오류 발생 그러나 함수 호출 연산자 (")" 없기 때문에 대 한 호출이 이루어집니다. 이 결과 다음과 비슷합니다.  

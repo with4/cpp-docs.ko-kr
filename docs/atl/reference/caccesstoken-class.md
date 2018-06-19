@@ -67,6 +67,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366343"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 클래스
 이 클래스는 액세스 토큰에 대 한 래퍼입니다.  

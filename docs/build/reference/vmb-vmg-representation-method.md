@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377185"
 ---
 # <a name="vmb-vmg-representation-method"></a>/vmb, /vmg(표시 메서드)
 컴파일러는 클래스 멤버에 대 한 포인터를 나타내는 데 사용 하는 방법을 선택 합니다.  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365056"
 ---
 # <a name="security-global-functions"></a>보안 전역 함수
 이러한 함수는 SID 및 ACL 개체를 수정 하기 위한 지원을 제공 합니다.  

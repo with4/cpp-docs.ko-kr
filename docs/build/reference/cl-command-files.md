@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369879"
 ---
 # <a name="cl-command-files"></a>CL 명령 파일
 명령 파일은 옵션과에 입력 하지 않으면 파일 이름이 포함 된 텍스트 파일의 [명령줄](../../build/reference/compiler-command-line-syntax.md) 사용 하 여 지정 하거나는 [CL 환경 변수](../../build/reference/cl-environment-variables.md)합니다. Cl 컴파일러 명령 파일을 CL 환경 변수에서 또는 명령줄에서를 인수로 사용 합니다. 명령줄이나 CL 환경 변수와는 달리 명령 파일을 사용하면 여러 줄로 구성된 옵션과 파일 이름을 사용할 수 있습니다.  

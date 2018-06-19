@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373844"
 ---
 # <a name="nologo-suppress-startup-banner-cc"></a>/nologo(시작 배너 표시 안 함)(C/C++)
 컴파일러 시작 될 때 저작권 배너를 표시 하 고 컴파일하는 동안 정보 메시지의 표시를 표시 하지 않습니다.  

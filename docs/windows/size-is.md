@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889675"
 ---
 # <a name="sizeis"></a>size_is
 메모리의 크기에 대 한 크기의 포인터에 할당 된, 크기의 포인터 및 단일 또는 다차원 배열에 대 한 포인터 크기의 지정 합니다.  

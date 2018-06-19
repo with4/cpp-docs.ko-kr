@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363060"
 ---
 # <a name="registry-data-exchange-macros"></a>레지스트리 데이터 교환 매크로
 이러한 매크로 레지스트리 데이터 교환 작업을 수행 합니다.  

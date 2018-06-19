@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355854"
 ---
 # <a name="implementing-a-dialog-box"></a>대화 상자를 구현
 ATL 프로젝트에는 대화 상자를 추가 하는 방법은 두 가지가: ATL 대화 상자 마법사를 사용 하거나 수동으로 추가 합니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424308"
 ---
 # <a name="initializers"></a>이니셜라이저
 이니셜라이저는 변수의 초기 값을 지정합니다. 변수를 초기화할 수 있는 컨텍스트는 다음과 같습니다.  

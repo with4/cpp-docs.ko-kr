@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376730"
 ---
 # <a name="link-output"></a>LINK 출력
 Link 출력.exe 파일, Dll, 맵 파일, 및 메시지를 포함합니다.  

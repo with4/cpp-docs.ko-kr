@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392161"
 ---
 # <a name="switch-statement-c"></a>switch 문 (C)
 `switch` 및 **case** 문은 복잡한 조건부 및 분기 작업을 제어하는 데 도움이 됩니다. `switch` 문은 해당 본문 내의 문으로 제어를 전달합니다.  

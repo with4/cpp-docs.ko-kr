@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355402"
 ---
 # <a name="date-and-time-systemtime-support"></a>날짜 및 시간: SYSTEMTIME 지원
 [CTime](../atl-mfc-shared/reference/ctime-class.md) 클래스에 Win32에서 시스템 및 파일 시간을 허용 하는 생성자입니다. 이러한 용도로 `CTime` 개체를 사용하는 경우 이 문서에서 설명하는 대로 해당 초기화를 적절하게 수정해야 합니다.  

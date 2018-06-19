@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374923"
 ---
 # <a name="setting-linker-options"></a>링커 옵션 설정
 내부 또는 개발 환경 외부에서 링커 옵션을 설정할 수 있습니다. 각 링커 옵션에 대 한 알아봅니다 방법을 개발 환경에서 설정할 수 있습니다. 참조 [링커 옵션](../../build/reference/linker-options.md) 전체 목록은 합니다.  

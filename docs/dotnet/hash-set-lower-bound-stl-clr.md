@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127242"
 ---
 # <a name="hashsetlowerbound-stlclr"></a>hash_set::lower_bound(STL/CLR)
 지정된 된 키와 일치 하는 범위의 시작 부분을 찾습니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367526"
 ---
 # <a name="dependency-side-effects"></a>종속 줄의 부수적 효과
 서로 다른 위치에 두 개의 종속 줄에는 콜론 (:)으로 지정 된 대상 및 줄 중 하나에 다음 명령에 표시 하는 경우 인접 하거나 결합 된 마치 NMAKE 종속성을 해석 합니다. 명령이 나타나지 대신 종속성 하나의 설명 블록에 속해 있으며 다른 종속성이 있는 지정 된 명령을 실행 한다고 가정 된 종속성에 대 한 유추 규칙을 호출 하지는 않습니다. 예를 들어이 규칙의 설정.  

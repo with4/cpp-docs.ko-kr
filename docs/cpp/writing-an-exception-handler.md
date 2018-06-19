@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421824"
 ---
 # <a name="writing-an-exception-handler"></a>예외 처리기 작성
 예외 처리기는 일반적으로 특정 오류에 응답하는 데 사용됩니다. 예외 처리 구문을 사용하여 처리 방법을 알고 있는 예외를 제외한 모든 예외를 필터링할 수 있습니다. 다른 예외는 특정 예외를 찾도록 작성된 다른 처리기(런타임 라이브러리 또는 운영 체제에 있을 수 있음)에 전달되어야 합니다.  

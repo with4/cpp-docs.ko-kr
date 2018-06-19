@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374595"
 ---
 # <a name="return-value-of-clexe"></a>cl.exe의 반환 값
 성공한 경우(오류가 없는 경우) cl.exe는 0을 반환하고 그렇지 않은 경우 0이 아닌 값을 반환합니다.  

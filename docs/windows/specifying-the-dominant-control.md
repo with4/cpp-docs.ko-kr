@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889655"
 ---
 # <a name="specifying-the-dominant-control"></a>기준 컨트롤 지정
 선택 된 컨트롤에는 먼저 중요 컨트롤이입니다.  

@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366330"
 ---
 # <a name="iaxwinambientdispatch-interface"></a>IAxWinAmbientDispatch 인터페이스
 이 인터페이스는 호스트 된 컨트롤 또는 컨테이너의 특성을 지정 하기 위한 메서드를 제공 합니다.  

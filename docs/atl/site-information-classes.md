@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359797"
 ---
 # <a name="site-information-classes"></a>사이트 정보 클래스
 다음 클래스에는 사이트와 통신 하는 개체 허용:  

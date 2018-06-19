@@ -38,6 +38,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365320"
 ---
 # <a name="ctimespan-class"></a>CTimeSpan 클래스
 시간 범위의 시간 (초)의 수로 내부적으로 저장 된 시간의 양입니다.  

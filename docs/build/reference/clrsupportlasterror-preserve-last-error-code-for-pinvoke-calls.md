@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378638"
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR(PInvoke 호출의 마지막 오류 코드 유지)
 **/CLRSUPPORTLASTERROR**, 기본적으로 켜져 있는, 사용 하 여 컴파일한 DLL에 코드에서 네이티브 함수를 호출할 수 있는 P/Invoke 메커니즘을 통해 호출 함수의 마지막 오류 코드는 전처리 **/clr**합니다.  

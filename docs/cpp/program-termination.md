@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419955"
 ---
 # <a name="program-termination"></a>프로그램 종료
 C++에서는 프로그램을 종료하는 몇 가지 방법이 있습니다.  

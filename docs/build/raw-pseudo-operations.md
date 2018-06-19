@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369931"
 ---
 # <a name="raw-pseudo-operations"></a>원시 의사 작업
 이 항목에서는 의사 작업을 나열 합니다.  

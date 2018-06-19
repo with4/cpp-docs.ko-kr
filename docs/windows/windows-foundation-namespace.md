@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891226"
 ---
 # <a name="windowsfoundation-namespace"></a>Windows::Foundation 네임스페이스
 개체 및 팩터리 생성 등의 기본적인 Windows 런타임 기능을 사용 하도록 설정 합니다.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373870"
 ---
 # <a name="fx-merge-injected-code"></a>/Fx(삽입된 코드 병합)
 삽입된 코드를 소스에 병합하여 각 소스 파일의 복사본을 생성합니다.  

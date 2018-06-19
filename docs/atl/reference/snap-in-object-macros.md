@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363912"
 ---
 # <a name="snap-in-object-macros"></a>스냅인 개체 매크로
 이러한 매크로 확장 스냅인에 대 한 지원을 제공합니다.  

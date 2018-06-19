@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367500"
 ---
 # <a name="creating-inline-file-text"></a>인라인 파일 텍스트 만들기
 인라인 파일은 임시 또는 영구입니다.  

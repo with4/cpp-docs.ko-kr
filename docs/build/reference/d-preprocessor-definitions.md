@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376600"
 ---
 # <a name="d-preprocessor-definitions"></a>/D(전처리기 정의)
 소스 파일에 대한 전처리 기호를 정의합니다.  

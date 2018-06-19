@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375372"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE(디버그 정보 옵션)
 /DEBUGTYPE 옵션은 /DEBUG 옵션으로 생성된 디버깅 정보의 형식을 지정합니다.  
