@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392564"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>연습: MSBuild를 사용하여 Visual C++ 프로젝트 만들기
 이 연습에서는 사용 하는 방법을 보여 줍니다. [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] 명령 프롬프트에서 Visual c + + 프로젝트를 빌드하려고 합니다. C + + 소스 파일 및 Visual c + + 콘솔 응용 프로그램에 대 한 XML 기반 프로젝트 파일을 만드는 방법에 설명 합니다. 프로젝트를 빌드한 후 빌드 프로세스를 사용자 지정 하는 방법에 설명 합니다.  

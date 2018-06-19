@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390370"
 ---
 # <a name="unary-arithmetic-operators"></a>단항 산술 연산자
 C 단항 더하기, 산술 부정, 보수 및 논리 부정 연산자는 다음 목록에서 설명합니다.  

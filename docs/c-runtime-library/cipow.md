@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387000"
 ---
 # <a name="cipow"></a>_CIpow
 전원 스택 상위 값을 기반으로 하여 *x*의 *y*제곱을 계산합니다.  

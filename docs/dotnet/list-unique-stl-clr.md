@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137577"
 ---
 # <a name="listunique-stlclr"></a>list::unique(STL/CLR)
 지정된 테스트를 통과하는 인접 요소를 제거합니다.  

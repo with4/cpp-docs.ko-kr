@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383945"
 ---
 # <a name="registers-availability-of-registers"></a>레지스터: 레지스터의 가용성
 **ANSI 3.5.1** register 저장소 클래스 지정자를 사용하여 개체가 실제로 레지스터에 배치될 수 있는 범위  

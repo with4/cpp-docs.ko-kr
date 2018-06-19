@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137421"
 ---
 # <a name="how-to-marshal-a-safearray-for-adonet-ccli"></a>방법: ADO.NET용 SAFEARRAY 마샬링(C++/CLI)
 네이티브를 추가 하는 방법을 보여 줍니다. `SAFEARRAY` 데이터베이스 및를 네이티브 데이터베이스에서 관리 되는 배열 마샬링하는 방법을에 `SAFEARRAY`합니다.  

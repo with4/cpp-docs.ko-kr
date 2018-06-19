@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387052"
 ---
 # <a name="if-statement-c"></a>if 문 (C)
 **if** 문은 조건부 분기를 제어합니다. **if** 문의 본문은 식의 값이 0이 아닌 경우 실행되지 않습니다. **if** 문의 구문에는 두 가지 형태가 있습니다.  

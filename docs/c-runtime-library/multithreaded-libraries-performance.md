@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390415"
 ---
 # <a name="multithreaded-libraries-performance"></a>다중 스레드 라이브러리 성능
 단일 스레드 CRT는 더 이상 사용할 수 없습니다. 이 항목에서는 다중 스레드 라이브러리에서 최대 성능을 얻는 방법에 대해 설명합니다.  

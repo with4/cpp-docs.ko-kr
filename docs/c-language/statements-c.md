@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387780"
 ---
 # <a name="statements-c"></a>문 (C)
 C 프로그램의 문은 프로그램 실행의 흐름을 제어합니다. 다른 프로그래밍 언어와 마찬가지로 C에서는 몇 가지 종류의 문을 사용하여 루프를 수행하고, 실행할 다른 문을 선택하고, 제어를 전달할 수 있습니다. 간략한 [문 구문 개요](../c-language/overview-of-c-statements.md) 다음에 이 섹션에서는 사전순으로 C 문에 대해 설명합니다.  

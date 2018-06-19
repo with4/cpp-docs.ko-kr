@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386266"
 ---
 # <a name="l-value-and-r-value-expressions"></a>L-Value 및 R-Value 식
 메모리 위치를 참조하는 식을 "l-value" 식이라고 합니다. l-value는 저장소 영역의 "로케이터" 값이나 "왼쪽" 값을 나타내므로 등호(**=**)의 왼쪽에 나타날 수 있습니다. l-value는 대개 식별자입니다.  

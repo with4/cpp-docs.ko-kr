@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391433"
 ---
 # <a name="storage-class"></a>저장소 클래스
 함수 정의의 저장소 클래스 지정자는 함수에 `extern` 또는 **static** 저장소 클래스를 제공합니다.  

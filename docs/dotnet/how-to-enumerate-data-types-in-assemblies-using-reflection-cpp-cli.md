@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135081"
 ---
 # <a name="how-to-enumerate-data-types-in-assemblies-using-reflection-ccli"></a>방법: 리플렉션을 사용하여 어셈블리에 데이터 형식 열거(C++/CLI)
 다음 코드에서는 공용 형식 및 멤버를 사용 하 여 열거 <xref:System.Reflection>합니다.  

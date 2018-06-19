@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135029"
 ---
 # <a name="locklock"></a>lock::lock
 생성 한 `lock` 시간의 되거나 전혀 지정된 된 시간에 대 한 잠금을 영원히 획득 하려고 대기 하는 선택적 개체입니다.  

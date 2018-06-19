@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134067"
 ---
 # <a name="listremove-stlclr"></a>list::remove(STL/CLR)
 지정된 된 값을 가진 요소를 제거합니다.  

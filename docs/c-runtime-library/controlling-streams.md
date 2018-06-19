@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388817"
 ---
 # <a name="controlling-streams"></a>스트림 제어
 [fopen](../c-runtime-library/reference/fopen-wfopen.md)은 형식이 `FILE`인 개체의 주소를 반환합니다. 이 주소를 여러 라이브러리 함수에 대한 `stream` 인수로 사용하여 열려 있는 파일에 대한 다양한 작업을 수행합니다. 바이트 스트림의 경우 [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md)를 호출하여 각 문자를 읽는 것처럼 모든 입력이 수행되고 [fputc](../c-runtime-library/reference/fputc-fputwc.md)를 호출하여 각 문자를 쓰는 것처럼 모든 출력이 수행됩니다. 와이드 스트림의 경우 [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md)를 호출하여 각 문자를 읽는 것처럼 모든 입력이 수행되고 [fputwc](../c-runtime-library/reference/fputc-fputwc.md)를 호출하여 각 문자를 쓰는 것처럼 모든 출력이 수행됩니다.  
