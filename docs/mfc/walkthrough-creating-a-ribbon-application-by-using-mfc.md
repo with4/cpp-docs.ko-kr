@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385231"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>연습: MFC를 사용하여 리본 응용 프로그램 만들기
 이 연습에서는 사용 하는 방법을 보여 줍니다.는 **MFC 응용 프로그램 마법사** 기본적으로 리본 메뉴를 포함 하는 응용 프로그램을 만들려고 합니다. 추가 하 여 리본 메뉴를 확장 한 다음는 **사용자 지정** 있는 리본 범주는 **즐겨찾기** 리본 패널 및 다음 자주 사용 되는 일부 패널에 명령을 추가 합니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384090"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: MFC에서 C++ 다중 상속 사용
 이 노트 Microsoft Foundation Classes와 다중 상속 (MI)를 사용 하는 방법을 설명 합니다. MI 사용 하는 MFC와 함께 필요 하지 않습니다. MI 모든 MFC 클래스에서 사용 되지 않으며 클래스 라이브러리를 작성할 필요가 없습니다.  

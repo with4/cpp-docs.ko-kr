@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380866"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>서버: 내부 프레임 창 구현
 이 문서에서는 서버 응용 프로그램을 만들 때 응용 프로그램 마법사를 사용하지 않는 경우, 시각적인 편집 서버 응용 프로그램에서 내부 프레임 창을 구현하기 위해 수행해야 하는 작업에 대해 설명합니다. 이 문서에 설명 된 절차를 수행 하는 대신 응용 프로그램 마법사에서 생성 된 응용 프로그램 또는 Visual c + +와 함께 제공 되는 샘플에서 기존에 내부 frame-window 클래스를 사용할 수 있습니다.  

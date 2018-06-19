@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687155"
 ---
 # <a name="251-parallel-for-construct"></a>2.5.1 parallel for 구문
 **에 대 한 병렬** 지시문이에 대 한 바로 가기는 **병렬** 하나만 포함 된 영역의 **에 대 한** 지시문입니다. 구문은 **에 대 한 병렬** 지시문은 다음과 같습니다.  

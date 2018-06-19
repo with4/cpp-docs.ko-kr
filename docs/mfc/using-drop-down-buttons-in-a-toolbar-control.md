@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383255"
 ---
 # <a name="using-drop-down-buttons-in-a-toolbar-control"></a>도구 모음 컨트롤에서 드롭다운 단추 사용
 표준 누름 단추 외에도 도구 모음에는 드롭다운 단추 있을 수도 있습니다. 드롭 다운 단추는 연결 된 아래쪽 화살표를 통해 일반적으로 표시 됩니다.  

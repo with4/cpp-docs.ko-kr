@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891911"
 ---
 # <a name="selecting-multiple-menus-or-menu-commands"></a>여러 메뉴 또는 메뉴 명령 선택
 여러 메뉴 이름이나 메뉴 명령을 선택하여 속성 삭제 또는 변경과 같은 일괄 작업을 수행할 수 있습니다.  

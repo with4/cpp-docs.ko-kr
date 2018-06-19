@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381126"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>일반적인 FTP 클라이언트 응용 프로그램의 단계
 일반적인 FTP 클라이언트 응용 프로그램을 만듭니다는 [CInternetSession](../mfc/reference/cinternetsession-class.md) 및 [CFtpConnection](../mfc/reference/cftpconnection-class.md) 개체입니다. MFC WinInet 클래스 이러한 실제로 프록시 유형 설정; 제어 하 고 하지 않으므로 참고 IIS는 다음 작업을 수행 하지 않습니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383434"
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT 구조체
 쓰기에서는 프로그램 [도구 설명 알림 처리기](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)를 사용 해야는 `TOOLTIPTEXT` 구조입니다. 멤버는 `TOOLTIPTEXT` 구조:  

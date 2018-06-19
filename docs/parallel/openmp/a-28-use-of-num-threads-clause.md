@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689118"
 ---
 # <a name="a28---use-of-numthreads-clause"></a>A.28   num_threads 절 사용
 다음 예제는 `num_threads` 절 ([섹션 2.3](../../parallel/openmp/2-3-parallel-construct.md) 8 페이지에). 병렬 영역 최대 10 개 스레드가 실행 됩니다.  

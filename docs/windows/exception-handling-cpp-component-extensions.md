@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877737"
 ---
 # <a name="exception-handling--c-component-extensions"></a>예외 처리(C++ 구성 요소 확장)
 로 컴파일된 응용 프로그램의 **/ZW** 컴파일러 옵션 또는 **/clr** 컴파일러 옵션 둘 다 사용 *예외* 프로그램 실행 중 예기치 않은 오류를 처리 합니다. 다음 항목은 C++/CX 또는 C++/CLI 응용 프로그램 중 하나에서 예외 처리에 대해 설명합니다.  

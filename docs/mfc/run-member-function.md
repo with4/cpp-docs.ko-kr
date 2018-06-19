@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379898"
 ---
 # <a name="run-member-function"></a>Run 멤버 함수
 프레임 워크 응용에서 대부분의 시간에는 [실행](../mfc/reference/cwinapp-class.md#run) 클래스의 멤버 함수 [CWinApp](../mfc/reference/cwinapp-class.md)합니다. 초기화 된 후 `WinMain` 호출 **실행** 메시지 루프를 처리할 수 있습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234956"
 ---
 # <a name="compiler-error-c2774"></a>컴파일러 오류 C2774
 'identifier':이 속성을 통해 연결 된 'put' 메서드가 없습니다  

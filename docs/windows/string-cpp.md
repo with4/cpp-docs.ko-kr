@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889022"
 ---
 # <a name="string-c"></a>string(C++)
 나타냅니다는 1 차원 `char`, `wchar_t`, **바이트** (또는 동일한) 배열 또는 이러한 배열에 대 한 포인터를 문자열로 취급 되어야 합니다.  

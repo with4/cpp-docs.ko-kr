@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870252"
 ---
 # <a name="editable-file-types-for-resources"></a>편집할 수 있는 리소스 파일 형식
 다음 형식의 파일을 열고 포함된 리소스를 편집할 수 있습니다.  

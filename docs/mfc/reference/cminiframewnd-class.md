@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378384"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd 클래스
 일반적으로 부동 도구 모음에 있는 절반 높이의 프레임 창을 나타냅니다.  

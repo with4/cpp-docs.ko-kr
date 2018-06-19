@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381714"
 ---
 # <a name="tree-control-label-editing"></a>트리 컨트롤 레이블 편집
 사용자는 트리 컨트롤에 항목의 레이블을 직접 편집할 수 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 올려진는 **TVS_EDITLABELS** 스타일입니다. 사용자 포커스가 있는 항목의 레이블을 클릭 하 여 편집을 시작 합니다. 응용 프로그램을 사용 하 여 편집 시작는 [EditLabel](../mfc/reference/ctreectrl-class.md#editlabel) 멤버 함수입니다. 트리 컨트롤 알림 편집할 때 시작 되 고 취소 하거나 완료 때 보냅니다. 편집이 완료 되 면 책임이 있습니다 항목의 레이블을 업데이트 해당 되는 경우입니다.  

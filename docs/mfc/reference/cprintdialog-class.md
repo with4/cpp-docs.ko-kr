@@ -55,6 +55,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377229"
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog 클래스
 Windows 공용 대화 상자에서 인쇄용으로 제공하는 서비스를 캡슐화합니다.  

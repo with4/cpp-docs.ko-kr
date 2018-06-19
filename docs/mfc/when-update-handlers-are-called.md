@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384136"
 ---
 # <a name="when-update-handlers-are-called"></a>업데이트 처리기가 호출되는 시점
 에서는 오류가 발생 하는 파일 메뉴에서 마우스를 클릭할 경우를 가정해 볼는 `WM_INITMENUPOPUP` 메시지입니다. 사용자가 볼 수 있도록 메뉴가 드롭다운 전에 프레임 워크의 업데이트 메커니즘 전체적으로 파일 메뉴에 있는 모든 항목을 업데이트 합니다.  

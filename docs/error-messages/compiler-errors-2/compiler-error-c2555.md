@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230588"
 ---
 # <a name="compiler-error-c2555"></a>컴파일러 오류 C2555
 'class1::function1': 재정의 가상 함수의 반환 형식 다르며 'class2::function2' 공변 (covariant)지 않습니다  

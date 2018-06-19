@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382101"
 ---
 # <a name="ribbon-designer-mfc"></a>리본 디자이너(MFC)
 리본 디자이너를 사용하여 MFC 응용 프로그램에서 리본을 만들고 사용자 지정할 수 있습니다. 리본은 명령을 논리 그룹으로 구성하는 UI(사용자 인터페이스) 요소입니다. 이러한 그룹은 창 위쪽을 가로지르는 스트립에 별도의 탭으로 나타납니다. 리본은 메뉴 모음 및 도구 모음을 대체합니다. 리본으로 응용 프로그램 사용 편의성을 크게 향상시킬 수 있습니다. 자세한 내용은 참조 [리본](http://go.microsoft.com/fwlink/p/?linkid=129233)합니다. 다음 그림에서는 리본을 보여 줍니다.  

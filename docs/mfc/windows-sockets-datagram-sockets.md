@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383944"
 ---
 # <a name="windows-sockets-datagram-sockets"></a>Windows 소켓: 데이터그램 소켓
 이 문서에서는 사용할 수 있는 두 개의 Windows 소켓 유형 중 하나는 데이터 그램 소켓을 설명 합니다. (다른 유형이 고 [스트림 소켓](../mfc/windows-sockets-stream-sockets.md).)  

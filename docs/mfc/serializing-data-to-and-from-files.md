@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380434"
 ---
 # <a name="serializing-data-to-and-from-files"></a>파일로/파일에서 데이터 Serialize
 지 속성의 기본 개념은 개체 영구적 저장소로 해당 멤버 변수의 값으로 표시 되는 현재 상태에 쓸 수 있어야 합니다. 나중에, 개체는 읽거나 "," 개체의 상태 역직렬화 영구 저장소에서 다시 만들 수 있습니다. 여기서 중요 한 점은 개체 자체가 읽기 및 쓰기 자체의 상태에 대 한 책임 된다는 점입니다. 따라서 영구 되려면 클래스에 대 한 기본 직렬화 작업 구현 해야 합니다.  

@@ -93,6 +93,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377864"
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery 클래스
 Office 2007 스타일의 리본 갤러리를 구현합니다.  

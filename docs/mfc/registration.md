@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381172"
 ---
 # <a name="registration"></a>등록
 응용 프로그램으로 OLE 항목을 삽입 하려는 OLE에서 선택할 수 있는 개체 유형 목록이 표시 됩니다. OLE 서버 응용 프로그램 모두에서 제공 하는 정보가 포함 된 시스템 등록 데이터베이스에서이 목록을 가져옵니다. 서버는 자신을 등록 하는 경우 시스템 등록 데이터베이스 (레지스트리)에 포함할 항목 제공 하는 개체의 각 유형 설명, 파일 확장명 및 기타 정보 중에서 자체에 대 한 경로입니다.  

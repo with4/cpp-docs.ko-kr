@@ -175,6 +175,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377683"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager 클래스
 주 프레임 창에서 도킹 레이아웃을 제어하는 핵심 기능을 구현합니다.  

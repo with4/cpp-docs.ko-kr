@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882942"
 ---
 # <a name="deleting-unassigned-symbols"></a>할당되지 않은 기호 삭제
 ### <a name="to-delete-an-unassigned-unused-symbol"></a>할당되지 않은(사용되지 않은) 기호를 삭제하려면  

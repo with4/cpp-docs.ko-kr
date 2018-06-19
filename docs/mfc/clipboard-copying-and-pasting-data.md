@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343352"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>클립보드: 데이터 복사 및 붙여넣기
 이 항목에서는에서 OLE 응용 프로그램에 클립보드에 복사 / 붙여넣기를 구현 하는 데 필요한 최소 작업에 설명 합니다. 읽는 것이 좋습니다.는 [데이터 개체 및 데이터 소스 (OLE)](../mfc/data-objects-and-data-sources-ole.md) 계속 진행 하기 전에 항목입니다.  

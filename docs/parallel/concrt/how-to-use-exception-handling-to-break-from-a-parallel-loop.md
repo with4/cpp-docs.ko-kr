@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691848"
 ---
 # <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>방법: 예외 처리를 사용하여 병렬 루프 중단
 이 항목에서는 기본적인 트리 구조에 대 한 검색 알고리즘을 작성 하는 방법을 보여 줍니다.  

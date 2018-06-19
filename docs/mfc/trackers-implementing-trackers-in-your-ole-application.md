@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381552"
 ---
 # <a name="trackers-implementing-trackers-in-your-ole-application"></a>추적기: OLE 응용 프로그램에서 추적기 구현
 추적기는 OLE 클라이언트 항목와 상호 작용할 수 있도록 그래픽 인터페이스를 제공 합니다. 다양 한 추적기 스타일을 사용 하 여 OLE 해치 테두리, 표시할 수 있는 항목이 클라이언트 크기 조정 핸들 또는 다른 시각 효과의 다양 한 합니다. 이 문서에서는 설명합니다.  

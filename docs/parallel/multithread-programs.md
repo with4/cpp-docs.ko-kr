@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686934"
 ---
 # <a name="multithread-programs"></a>다중 스레드 프로그램
 스레드는 기본적으로 프로그램을 통해 실행 경로입니다. Win32 일정을 예약 하는 실행의 최소 단위 이기도 합니다. CPU 레지스터와 시스템 스케줄러의 실행 목록에 있는 항목의 상태는 스택, 스레드 구성 됩니다. 각 스레드는 프로세스의 모든 리소스를 공유합니다.  

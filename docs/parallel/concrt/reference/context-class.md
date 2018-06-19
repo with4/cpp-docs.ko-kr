@@ -35,6 +35,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694182"
 ---
 # <a name="context-class"></a>Context 클래스
 실행 컨텍스트에 대한 추상화를 나타냅니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198107"
 ---
 # <a name="fatal-error-c1026"></a>심각한 오류 C1026
 파서 스택 오버플로입니다. 프로그램이 너무 복잡합니다.  

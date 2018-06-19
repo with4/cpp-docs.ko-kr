@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231033"
 ---
 # <a name="compiler-error-c2661"></a>컴파일러 오류 C2661
 'function': 오버 로드 된 함수가 숫자 매개 변수를 사용 합니다.  

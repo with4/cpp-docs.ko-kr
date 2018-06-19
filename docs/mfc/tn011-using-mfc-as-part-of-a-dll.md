@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384712"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: DLL의 일부로 MFC 사용
 이 노트 Windows 동적 연결 라이브러리 (DLL)의 일부로 MFC 라이브러리를 사용할 수 있도록 기본 MFC Dll에 설명 합니다. Windows Dll 및 이들을 빌드하는 방법에 잘 알고 한다고 가정 합니다. MFC 확장 Dll에 대 한 정보를 만들 수 있는와 MFC 라이브러리에 대 한 확장 참조 [MFC의 DLL 버전](../mfc/tn033-dll-version-of-mfc.md)합니다.  

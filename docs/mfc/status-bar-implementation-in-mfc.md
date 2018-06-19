@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381090"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>MFC의 상태 표시줄 구현
 A [CStatusBar](../mfc/reference/cstatusbar-class.md) 개체 텍스트 출력 창 행이 있는 컨트롤 막대입니다. 출력 창 및 상태 표시기 메시지 선으로 자주 사용 됩니다. 선택 된 메뉴 명령을 간략하게 설명 하는 메뉴 도움말 메시지 줄 및 SCROLL LOCK, NUM LOCK 및 다른 키의 상태를 나타내는 표시기를 예로 들 수 있습니다.  

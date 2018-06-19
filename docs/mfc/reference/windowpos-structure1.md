@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379296"
 ---
 # <a name="windowpos-structure1"></a>WINDOWPOS 구조 1
 `WINDOWPOS` 구조는 창의 위치와 크기에 대 한 정보를 포함 합니다.  

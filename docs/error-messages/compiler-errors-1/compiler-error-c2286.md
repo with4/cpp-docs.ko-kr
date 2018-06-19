@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171928"
 ---
 # <a name="compiler-error-c2286"></a>컴파일러 오류 C2286
 'identifier' 표현의 멤버의 포인터에 이미 '상속-' 선언이 무시 되었습니다.으로 설정 되었습니다.  

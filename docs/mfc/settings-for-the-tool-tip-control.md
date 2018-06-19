@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379953"
 ---
 # <a name="settings-for-the-tool-tip-control"></a>도구 설명 컨트롤에 대한 설정
 도구 설명 컨트롤([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md))을 활성 또는 비활성으로 설정할 수 있습니다. 활성으로 설정하는 경우 커서로 도구를 가리키면 도구 설명 컨트롤이 나타납니다. 비활성으로 설정하는 경우 커서로 도구를 가리켜도 도구 설명 컨트롤이 나타나지 않습니다. 도구 설명 컨트롤을 활성화 또는 비활성화하려면 [활성화](../mfc/reference/ctooltipctrl-class.md#activate) 를 호출합니다.  

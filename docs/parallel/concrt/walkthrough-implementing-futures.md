@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690119"
 ---
 # <a name="walkthrough-implementing-futures"></a>연습: 미래 구현
 이 항목에서는 응용 프로그램에서 미래를 구현 하는 방법을 보여 줍니다. 이 항목에는 기존 기능으로 결합 하는 동시성 런타임에서 무언가 많은 기능을 수행 하는 방법을 보여 줍니다.  

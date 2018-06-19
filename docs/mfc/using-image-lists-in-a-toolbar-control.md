@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382852"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>도구 모음 컨트롤에서 이미지 목록 사용
 기본적으로 도구 모음 컨트롤의 단추를 사용 하는 이미지는 단일 비트맵으로 저장 됩니다. 그러나 일련의 이미지 목록에도 단추 이미지를 저장할 수 있습니다. 도구 모음 컨트롤 개체는 최대 세 개의 별도 이미지 목록을 사용할 수 있습니다.:  

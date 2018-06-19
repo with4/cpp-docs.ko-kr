@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382039"
 ---
 # <a name="tree-control-styles"></a>트리 컨트롤 스타일
 Tree 컨트롤 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 스타일 트리 컨트롤의 모양을 제어 합니다. 트리 컨트롤을 만들 때 초기 스타일을 설정 합니다. 검색 하 고 사용 하 여 트리 컨트롤을 만든 후 스타일을 변경할 수는 [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) 및 [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) 지정 하는 Windows 기능의 **GWL_STYLE** 에 대 한 `nIndex` 매개 변수입니다. 스타일의 전체 목록은 참조 하십시오. [트리 뷰 컨트롤 창 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760013) Windows sdk에서입니다.  

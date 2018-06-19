@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686073"
 ---
 # <a name="314-ompgetthreadnum-function"></a>3.1.4 omp_get_thread_num 함수
 `omp_get_thread_num` 함수는 함수를 실행 하는 스레드의 해당 팀 내에서 스레드 수를 반환 합니다. 스레드 번호 첫 부분이 0 및 **omp_get_num_threads()**-1을 포함 합니다. 팀의 마스터 스레드는 스레드 0입니다.  

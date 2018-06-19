@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385195"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>코드 마법사를 사용하여 컨트롤에 대한 형식이 안전한 액세스 수행
 DDX 기능에 익숙한 경우에 컨트롤 속성을 사용할 수 있습니다는 [멤버 변수 추가 마법사](../ide/add-member-variable-wizard.md) 형식이 안전한 액세스를 만들려고 합니다. 이 방법은 코드 마법사를 사용 하지 않고 컨트롤을 만드는 것 보다 쉽습니다.  

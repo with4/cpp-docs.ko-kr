@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383334"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>CArchive를 사용 하 여 &lt; &lt; 및 &gt; &gt; 연산자
 `CArchive` 제공 <\< 및 >> 작성 및 단순 데이터 형식을 읽기 위한 연산자와 `CObject`하 고 파일에서 s입니다.  

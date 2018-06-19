@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380801"
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>MonthCalendar 컨트롤의 일 상태 설정
 Monthcalendar 컨트롤의 특성 하나 라고 하는 컨트롤의 일 상태 각 날짜의 월에 대 한 정보를 저장 하는 기능입니다. 이 정보는 현재 표시 된 월에 대 한 특정 날짜를 강조 하기 위해 사용 됩니다.  

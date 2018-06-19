@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243661"
 ---
 # <a name="compiler-error-c3050"></a>컴파일러 오류 C3050
 'type1': ref 클래스는 'type1'에서 상속될 수 없습니다.  

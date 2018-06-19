@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890192"
 ---
 # <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>비트맵을 GIF 또는 JPEG로 저장(아이콘에 대한 이미지 편집기)
 비트맵을 만들 때 이미지가 비트맵 (.bmp) 형식으로 만들어집니다. 그러나 GIF 나 JPEG로 또는 다른 그래픽 형식에서 이미지를 저장할 수 있습니다.  

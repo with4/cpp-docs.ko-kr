@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377442"
 ---
 # <a name="dhtml-event-maps"></a>DHTML 이벤트 맵
 DHTML 이벤트를 처리 하는 다음 매크로 사용 하는 수 있습니다.  

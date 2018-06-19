@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382875"
 ---
 # <a name="when-to-initialize-cwnd-objects"></a>CWnd 개체 초기화 시점
 생성자에서 모든 Windows API 함수를 호출 하거나 사용자 고유의 자식 창을 만들 수 없습니다는 `CWnd`-파생 된 개체입니다. 때문에 이것이 `HWND` 에 대 한는 `CWnd` 개체 아직 생성 되지 않은 합니다. 자식 창에 추가 하는 등의 가장 Windows 관련 초기화를 수행 해야 합니다는 [OnCreate](../mfc/reference/cwnd-class.md#oncreate) 메시지 처리기입니다.  

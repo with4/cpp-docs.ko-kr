@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199630"
 ---
 # <a name="compiler-error-c2511"></a>컴파일러 오류 C2511
 'identifier': 오버 로드 된 멤버 함수 'class'에서 찾을 수 없습니다  

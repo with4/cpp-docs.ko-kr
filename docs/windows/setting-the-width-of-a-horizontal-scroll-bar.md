@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892797"
 ---
 # <a name="setting-the-width-of-a-horizontal-scroll-bar"></a>가로 스크롤 막대 너비 설정
 MFC 클래스를 사용 하 여 대화 상자에 가로 스크롤 막대를으로 목록 상자를 추가 하면 응용 프로그램에서 스크롤 막대를 자동으로 나타나지 않습니다.  

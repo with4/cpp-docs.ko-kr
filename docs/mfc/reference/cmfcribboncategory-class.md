@@ -145,6 +145,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377972"
 ---
 # <a name="cmfcribboncategory-class"></a>CMFCRibbonCategory 클래스
 `CMFCRibbonCategory` 클래스 구현 그룹을 포함 하는 리본 탭 [리본 패널](../../mfc/reference/cmfcribbonpanel-class.md)합니다.  

@@ -148,6 +148,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378443"
 ---
 # <a name="cpane-class"></a>CPane Class
 `CPane` 는의 향상 된 클래스는 [CControlBar 클래스](../../mfc/reference/ccontrolbar-class.md)합니다. 기존 MFC 프로젝트를 업그레이드 하는 경우 모든 항목을 바꿉니다 `CControlBar` 와 `CPane`합니다.  

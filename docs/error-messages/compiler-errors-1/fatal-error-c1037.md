@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198094"
 ---
 # <a name="fatal-error-c1037"></a>심각한 오류 C1037
 filename 개체 파일을 열 수 없습니다.  

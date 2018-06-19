@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236016"
 ---
 # <a name="compiler-error-c2688"></a>컴파일러 오류 C2688
 'C2:: fgrv': 공변 (covariant) 반환 여러 대 인 또는 가상 상속 varargs 함수에 대해 지원 되지 않습니다  

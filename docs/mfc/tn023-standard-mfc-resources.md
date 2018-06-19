@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383177"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023: 표준 MFC 리소스
 이 메모와 함께 제공 되 고 MFC 라이브러리에 필요한 표준 리소스를 설명 합니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888710"
 ---
 # <a name="selecting-multiple-controls"></a>여러 개의 컨트롤 선택
 ### <a name="to-select-multiple-controls"></a>여러 컨트롤을 선택 하려면  

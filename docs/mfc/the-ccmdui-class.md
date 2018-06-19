@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379810"
 ---
 # <a name="the-ccmdui-class"></a>CCmdUI 클래스
 프레임 워크를 update 명령 처리기를 라우팅하여 때 처리기에 대 한 포인터를 전달 된 `CCmdUI` 개체 (또는 개체에 `CCmdUI`-파생 클래스). 이 개체는 메뉴 항목이 나 도구 모음 단추 또는 해당 명령을 생성 하는 다른 사용자 인터페이스 개체를 나타냅니다. 업데이트 처리기는 멤버의 함수를 호출는 `CCmdUI` 사용자 인터페이스 개체 업데이트에 대 한 포인터를 통해 구조입니다. 예를 들어 다음은 모두 지우기 메뉴 항목에 대 한 업데이트 처리기가입니다.  

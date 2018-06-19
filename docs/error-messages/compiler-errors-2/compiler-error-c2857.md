@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246349"
 ---
 # <a name="compiler-error-c2857"></a>컴파일러 오류 C2857
 ' #include ' 문이 /Ycfilename 명령줄 옵션에 지정 된 소스 파일에서 찾을 수 없습니다  

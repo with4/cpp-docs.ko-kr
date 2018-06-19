@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890907"
 ---
 # <a name="using-the-256-color-palette-image-editor-for-icons"></a>256 색상표 사용(아이콘에 대한 이미지 편집기)
 256 색상표에서 선택 하 여 그리려면, 하려면 색 색상표에서 색을 선택 해야는 [색상 창](../windows/colors-window-image-editor-for-icons.md)합니다.  

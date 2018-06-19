@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383811"
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>MFC 응용 프로그램을 빌드하는 작업 시퀀스
 다음 표에서 일반적인 순서 MFC 응용 프로그램을 개발할 때 일반적으로 수행 될 수 있습니다.  

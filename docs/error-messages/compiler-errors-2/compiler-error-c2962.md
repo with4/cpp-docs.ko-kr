@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241339"
 ---
 # <a name="compiler-error-c2962"></a>컴파일러 오류 C2962
 구문 오류: 'token': 템플릿-클래스 멤버 함수 정의는 '}'로 끝나야 합니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691172"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>방법: parallel_invoke를 사용하여 병렬 작업 실행
 사용 하는 방법을 보여 주는이 예제는 [concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) 공유 데이터 원본에 여러 작업을 수행 하는 프로그램의 성능을 향상 시키기 위해 알고리즘입니다. 소스를 수정 하는 작업을 하기 때문에 이러한 수 병렬 실행 간단 하 게에서 합니다.  

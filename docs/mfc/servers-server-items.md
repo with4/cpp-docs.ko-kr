@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382504"
 ---
 # <a name="servers-server-items"></a>서버: 서버 항목
 사용자가 포함 또는 연결된 OLE 항목을 편집할 수 있도록 컨테이너가 서버를 시작하면 서버 응용 프로그램은 "서버 항목"을 만듭니다. `COleServerItem`에서 파생된 클래스의 개체인 서버 항목은 서버 문서와 컨테이너 응용 프로그램 사이의 인터페이스를 제공합니다.  

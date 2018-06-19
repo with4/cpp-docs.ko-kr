@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235720"
 ---
 # <a name="compiler-error-c2713"></a>컴파일러 오류 C2713
 한 가지 형태의 함수 당 허용 되는 예외 처리  

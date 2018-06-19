@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385640"
 ---
 # <a name="using-documents"></a>문서 사용
 문서 및 뷰를 함께 작동 합니다.  

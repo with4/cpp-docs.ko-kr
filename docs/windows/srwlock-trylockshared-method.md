@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892285"
 ---
 # <a name="srwlocktrylockshared-method"></a>SRWLock::TryLockShared 메서드
 현재 또는 지정된 SRWLock 개체에 대해 공유 모드의 SRWLock 개체를 가져오기 위한 시도입니다.  

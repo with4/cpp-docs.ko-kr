@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689170"
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>방법: parallel_invoke를 사용하여 병렬 정렬 루틴 작성
 이 문서에 사용 하는 방법에 설명 된 [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) 바 이토 닉 정렬 알고리즘의 성능을 향상 시키기 위해 알고리즘입니다. 바 이토 닉 정렬 알고리즘 재귀적으로 입력된 시퀀스를 정렬 된 파티션을 더 작은 나눕니다. 바 이토 닉 정렬 알고리즘은 각 파티션 작업은 다른 모든 작업과 독립적 이므로 병렬로 실행할 수 있습니다.  

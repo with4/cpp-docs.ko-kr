@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385738"
 ---
 # <a name="tree-control-notification-messages"></a>트리 컨트롤 알림 메시지
 트리 컨트롤 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md))으로 다음 알림 메시지를 전송 **WM_NOTIFY** 메시지:  

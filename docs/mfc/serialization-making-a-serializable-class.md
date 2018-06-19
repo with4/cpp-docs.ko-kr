@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383418"
 ---
 # <a name="serialization-making-a-serializable-class"></a>Serialization: Serialize 가능한 클래스 만들기
 5 가지 주요 단계는 클래스를 직렬화 할 수 있게 해야 합니다. 아래에 나열 된 이며 다음 섹션에서 설명 합니다.  

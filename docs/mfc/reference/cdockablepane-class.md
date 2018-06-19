@@ -147,6 +147,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378802"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 도킹 사이트에 도킹되거나 탭 창에 포함될 수 있는 창을 구현합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233059"
 ---
 # <a name="compiler-error-c2670"></a>컴파일러 오류 C2670
 'identifier': 함수 템플릿을 'type' 형식의 매개 변수 번호를 변환할 수 없습니다  

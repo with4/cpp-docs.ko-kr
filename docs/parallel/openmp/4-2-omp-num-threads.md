@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687649"
 ---
 # <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
 **OMP_NUM_THREADS** 해당 번호를 호출 하 여 명시적으로 변경 하지 않으면 기본 실행 하는 동안 사용할 스레드 수 설정 하는 환경 변수는 **omp_set_num_threads** 라이브러리 루틴 또는 명시적 **num_threads** 절에는 **병렬** 지시문입니다.  

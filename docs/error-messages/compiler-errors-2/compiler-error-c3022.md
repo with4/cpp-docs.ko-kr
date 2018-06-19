@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243563"
 ---
 # <a name="compiler-error-c3022"></a>컴파일러 오류 C3022
 'clause': OpenMP 'directive' 지시문에서 'value'의 예약 종류가 잘못되었습니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380711"
 ---
 # <a name="support-for-activation-contexts-in-the-mfc-module-state"></a>MFC 모듈 상태의 활성화 컨텍스트 지원
 MFC는 사용자 모듈에서 제공되는 매니페스트 리소스를 사용하여 활성화 컨텍스트를 만듭니다. 활성화 컨텍스트를 만드는 방법에 대한 자세한 내용은 다음 항목을 참조하십시오.  

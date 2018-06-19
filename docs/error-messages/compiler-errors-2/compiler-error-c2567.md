@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33229691"
 ---
 # <a name="compiler-error-c2567"></a>컴파일러 오류 C2567
 'file'에서 메타 데이터를 열 수 없습니다 파일 수 삭제 되었거나 이동 되었음을  

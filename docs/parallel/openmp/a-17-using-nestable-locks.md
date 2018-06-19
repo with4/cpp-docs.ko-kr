@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689911"
 ---
 # <a name="a17---using-nestable-locks"></a>A.17   중첩 가능 잠금 사용
 다음 예제에서는 (에 대 한 [섹션 3.2](../../parallel/openmp/3-2-lock-functions.md) 페이지 41) 전체 구조 및 해당 멤버 중 하나에 업데이트를 동기화 하는 중첩 잠금을 사용할 수 있는 방법을 보여 줍니다.  

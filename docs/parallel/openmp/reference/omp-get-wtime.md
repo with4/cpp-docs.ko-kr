@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690665"
 ---
 # <a name="ompgetwtime"></a>omp_get_wtime
 특정 시점에서 경과 된 시간 (초)에서 값을 반환 합니다.  

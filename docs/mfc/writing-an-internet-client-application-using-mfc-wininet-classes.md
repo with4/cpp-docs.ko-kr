@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384438"
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>MFC WinInet 클래스를 사용하여 인터넷 클라이언트 응용 프로그램 작성
 모든 인터넷 클라이언트 응용 프로그램의 기본은 인터넷 세션입니다. 클래스의 개체로 인터넷 세션을 구현 하는 MFC [CInternetSession](../mfc/reference/cinternetsession-class.md)합니다. 이 클래스를 사용 하 여 하나의 인터넷 세션 또는 여러 개의 동시 세션을 만들 수 있습니다.  

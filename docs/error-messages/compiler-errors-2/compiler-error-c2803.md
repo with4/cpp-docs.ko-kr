@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236225"
 ---
 # <a name="compiler-error-c2803"></a>컴파일러 오류 C2803
 'operator 연산자' 클래스 형식의 정식 매개 변수가 하나 이상 있어야 합니다.  

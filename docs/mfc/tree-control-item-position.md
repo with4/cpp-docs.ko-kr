@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382153"
 ---
 # <a name="tree-control-item-position"></a>트리 컨트롤 항목 위치
 항목의 초기 위치는 트리 컨트롤에 항목을 추가할 때 설정 됩니다 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md))를 사용 하 여는 `InsertItem` 멤버 함수입니다. 멤버 함수 호출 이후에 새 항목을 삽입할 수는 항목의 핸들과 부모 항목의 핸들을 지정 합니다. 이러한 값 중 하나 또는 두 번째 핸들로 지정 된 부모의 자식 항목을 식별 해야 합니다: `TVI_FIRST`, `TVI_LAST`, 또는 `TVI_SORT`합니다.  

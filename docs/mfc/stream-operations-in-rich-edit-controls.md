@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379927"
 ---
 # <a name="stream-operations-in-rich-edit-controls"></a>Rich Edit 컨트롤의 스트림 작업
 Rich edit 컨트롤 안팎으로 데이터를 전송 하도록 스트림을 사용할 수 있습니다 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). 스트림을 정의한는 [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) 버퍼 및 응용 프로그램에서 정의 된 콜백 함수를 지정 하는 구조입니다.  

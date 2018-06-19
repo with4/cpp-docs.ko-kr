@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199757"
 ---
 # <a name="compiler-error-c2529"></a>컴파일러 오류 C2529
 'name': 참조에 대 한 참조가 잘못 되었습니다.  

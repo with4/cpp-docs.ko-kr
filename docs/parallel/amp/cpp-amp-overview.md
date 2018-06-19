@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694630"
 ---
 # <a name="c-amp-overview"></a>C++ AMP 개요
 C + + Accelerated Massive Parallelism (c + + AMP)의 개별 그래픽 카드에 데이터 병렬 등의 하드웨어 그래픽 처리 장치 (GPU) 사용 하 여 c + + 코드의 실행 속도 높여 합니다. C + + AMP를 사용 하 여 유형이 다른 하드웨어에서 병렬 처리를 사용 하 여 실행 속도가 빨라질 수 있습니다 수 있도록 다차원 데이터 알고리즘을 코딩할 수 있습니다. C++ AMP 프로그래밍 모델에는 다차원 배열, 인덱싱, 메모리 전송, 바둑판식 배열 및 수학 함수 라이브러리가 포함됩니다. 성능을 향상 시킬 수 있도록 CPU에서 GPU 및 역방향으로 데이터는 이동 하는 방법을 제어 하려면 c + + AMP 언어 확장을 사용할 수 있습니다.  

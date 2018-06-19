@@ -50,6 +50,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379862"
 ---
 # <a name="variant-parameter-type-constants"></a>가변 매개 변수 형식 상수
 이 항목에는 OLE 컨트롤 클래스 Microsoft Foundation Class 라이브러리를 사용 하도록 설계 가변 매개 변수 유형을 나타내는 새 상수 보여 줍니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380421"
 ---
 # <a name="thread-specific-hot-keys"></a>스레드 관련 바로 가기 키
 스레드 관련 바로 가기 키를 설정 하는 응용 프로그램 ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md))는 Windows를 사용 하 여 **RegisterHotKey** 함수입니다. 스레드 관련 바로 가기 키를 누를 때 Windows 게시는 [WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279) 특정 스레드의 메시지 큐의 시작 부분에는 메시지입니다. **WM_HOTKEY** 가상 키 코드, 이동 상태 및 눌린 특정 바로 가기 키의 ID 사용자 정의 메시지를 포함 합니다. 표준 가상 키 코드 목록이 Winuser.h을 참조 하세요. 이 메서드에 대 한 자세한 내용은 참조 하십시오. [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309)합니다.  

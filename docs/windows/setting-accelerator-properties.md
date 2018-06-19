@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888848"
 ---
 # <a name="setting-accelerator-properties"></a>액셀러레이터 키 속성 설정
 액셀러레이터 키 속성을 설정할 수는 [속성 창](/visualstudio/ide/reference/properties-window) 언제 든 지 합니다. 또한 액셀러레이터 키 편집기를 사용하여 액셀러레이터 키 테이블에서 액셀러레이터 키 속성을 수정할 수 있습니다. 속성 창 또는 액셀러레이터 키 편집기를 사용하여 변경한 내용은 결과가 동일합니다. 편집 내용은 액셀러레이터 키 테이블에 바로 반영됩니다.  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689323"
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>작업 Scheduler(동시성 런타임)
 설명서의 이 부분의 항목에서는 동시성 런타임 작업 Scheduler의 중요한 기능에 대해 설명합니다. 작업 Scheduler는 동시성 런타임을 사용하는 기존 코드의 성능을 미세 조정하려는 경우에 유용합니다.  

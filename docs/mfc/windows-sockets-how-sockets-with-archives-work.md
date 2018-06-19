@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385218"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows 소켓: 소켓과 아카이브를 함께 사용하는 방법
 이 문서에서는 설명 어떻게는 [CSocket](../mfc/reference/csocket-class.md) 개체는 [CSocketFile](../mfc/reference/csocketfile-class.md) 개체 및 [CArchive](../mfc/reference/carchive-class.md) 개체는 Windows 통해 데이터 보내기 및 받기 간소화 하기 위해 결합 됩니다 소켓입니다.  

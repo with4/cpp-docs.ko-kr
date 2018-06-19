@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695969"
 ---
 # <a name="adoptd3daccesslockt-structure"></a>adopt_d3d_access_lock_t 구조체
 태그 형식 D3D 액세스 잠금에 적용 되지 않고 됩니다 획득 합니다.  

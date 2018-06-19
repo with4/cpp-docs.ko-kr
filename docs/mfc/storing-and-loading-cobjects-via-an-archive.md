@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380730"
 ---
 # <a name="storing-and-loading-cobjects-via-an-archive"></a>보관을 통해 CObject 저장 및 로드
 저장 및 로드 `CObject`보관 저장소를 통해 추가로 고려해 야 합니다. 특정 한 경우에 호출 해야는 `Serialize` 함수 개체의 위치는 `CArchive` 개체의 매개 변수는는 `Serialize` 사용 하지 않고 호출의 **< \<** 또는 **>>** 의 연산자는 `CArchive`합니다. 중요 한 사실을 염두에 `CArchive` **>>** 연산자 구문은 `CObject` 기반으로 하는 메모리에 `CRuntimeClass` 정보 저장 보관 저장소가가 파일에 이전에 작성 합니다.  

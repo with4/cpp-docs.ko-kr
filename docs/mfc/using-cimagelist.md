@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385793"
 ---
 # <a name="using-cimagelist"></a>CImageList 사용
 클래스가 나타내는 이미지 목록 [CImageList](../mfc/reference/cimagelist-class.md), 컬렉션이 동일한 크기의 이미지를 각각 인덱스로 참조할 수 있습니다. 이미지 목록 큰 집합 아이콘이 나 비트맵을 효율적으로 관리 하는 데 사용 됩니다. 이미지 목록 windows; 아니므로 컨트롤 자체 하지 그러나 여러 다른 유형의 목록 컨트롤을 비롯 하 여 컨트롤을 사용 됩니다 ([CListCtrl](../mfc/reference/clistctrl-class.md)), 트리 컨트롤 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)), 및 탭 컨트롤 ([CTabCtrl](../mfc/reference/ctabctrl-class.md)).  

@@ -61,6 +61,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379998"
 ---
 # <a name="reflected-window-message-ids"></a>리플렉션된 창 메시지 ID
 ActiveX 컨트롤 또는 기타 특수 컨트롤을 만드는 빠른 방법을 창에 하위 클래스입니다. 자세한 내용은 참조 [MFC ActiveX 컨트롤: Windows 컨트롤 서브클래싱](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)합니다.  

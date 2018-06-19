@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382452"
 ---
 # <a name="using-cheaderctrl"></a>CHeaderCtrl 사용
 클래스가 나타내는 헤더 컨트롤을 사용 하 여 [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), 열 목록에 대 한 열 헤더를 표시 합니다. 예를 들어 헤더 컨트롤은 스프레드시트에서 열 컨트롤을 구현 하는 데 유용 합니다.  

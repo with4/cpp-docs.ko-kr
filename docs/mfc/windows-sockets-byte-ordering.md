@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385159"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows 소켓: 바이트 순서 지정
 이 문서 및 두 개의 참조 문서에서는 Windows 소켓 프로그래밍의 몇 가지 문제를 설명합니다. 이 문서에서는 바이트 순서 지정에 대해 설명 합니다. 다른 문제는 문서에서 다루지: [Windows 소켓: 차단](../mfc/windows-sockets-blocking.md) 및 [Windows 소켓: 문자열 변환](../mfc/windows-sockets-converting-strings.md)합니다.  

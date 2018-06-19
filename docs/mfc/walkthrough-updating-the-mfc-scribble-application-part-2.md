@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385393"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>연습: MFC 자유 곡선 응용 프로그램 업데이트(파트 2)
 [1 부](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) 자유 곡선 응용 프로그램이 연습을 기본 Office Fluent 리본 메뉴를 추가 하는 방법에 설명 했습니다. 이 부분에는 리본 패널 및 메뉴 및 명령을 대신 사용자가 사용할 수 있는 컨트롤을 추가 하는 방법을 보여 줍니다.  

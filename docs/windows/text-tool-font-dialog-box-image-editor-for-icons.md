@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890436"
 ---
 # <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>텍스트 도구 글꼴 대화 상자(아이콘에 대한 이미지 편집기)
 글꼴 설정을 사용 하는 경우 지정 된 [텍스트 도구 대화 상자](../windows/text-tool-dialog-box-image-editor-for-icons.md) 의 [이미지 편집기](../windows/image-editor-for-icons.md)합니다.  

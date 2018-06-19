@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341474"
 ---
 # <a name="command-ids"></a>명령 ID
 명령 대 한 자세한 내용은 해당 명령 ID만로 (인코딩된는 **WM_COMMAND** 메시지). 이 ID는 명령을 생성 하는 사용자 인터페이스 개체에 할당 됩니다. 일반적으로 Id에 할당 된 사용자 인터페이스 개체의 기능에 대 한 이름이 지정 됩니다.  

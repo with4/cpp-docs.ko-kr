@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381981"
 ---
 # <a name="slider-notification-messages"></a>슬라이더 알림 메시지
 Slider 컨트롤의 부모를 전송 하 여 사용자 작업의 부모 창에 알립니다. `WM_HSCROLL` 또는 `WM_VSCROLL` 슬라이더 컨트롤의 방향에 따라 메시지입니다. 이러한 메시지를 처리 하려면 추가 대 한 처리기는 `WM_HSCROLL` 및 `WM_VSCROLL` 메시지를 부모 창입니다. [OnHScroll](../mfc/reference/cwnd-class.md#onhscroll) 및 [OnVScroll](../mfc/reference/cwnd-class.md#onvscroll) 알림 코드, 슬라이더, 및에 대 한 포인터의 위치 전달 될 멤버 함수는 [CSliderCtrl](../mfc/reference/csliderctrl-class.md) 개체입니다. 형식의 포인터는 **CScrollBar \***  가리키도록 하는 경우에는 `CSliderCtrl` 개체입니다. 슬라이더 컨트롤을 조작 하는 경우이 포인터 형식을 캐스팅 해야 할 수 있습니다.  

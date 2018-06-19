@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381953"
 ---
 # <a name="using-the-dialog-editor-to-add-controls"></a>대화 상자 편집기를 사용하여 컨트롤 추가
 대화 상자 템플릿 리소스를 만들 때의 [대화 상자 편집기](../windows/dialog-editor.md), 컨트롤 팔레트에서 컨트롤을 끌어서 대화 상자에 놓습니다. 이 대화 상자 템플릿 리소스에 해당 컨트롤 형식에 대 한 사양을 추가합니다. 대화 상자 개체 및 호출을 생성할 때 해당 **만들기** 또는 `DoModal` 멤버 함수를 프레임 워크 Windows 컨트롤을 생성 하 고 화면에 대화 상자 창에 배치 합니다.  

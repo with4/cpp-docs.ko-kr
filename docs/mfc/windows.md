@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384467"
 ---
 # <a name="windows"></a>Windows
 다음이의 문서에서는 MFC 프레임 워크의 창 개체를 설명합니다. 모든 MFC 창 클래스에서 파생 [CWnd](../mfc/reference/cwnd-class.md), 프레임 창, 보기, 대화 상자 및 컨트롤을 포함 합니다.  

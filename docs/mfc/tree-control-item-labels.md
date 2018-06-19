@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381513"
 ---
 # <a name="tree-control-item-labels"></a>트리 컨트롤 항목 레이블
 트리 컨트롤에 항목을 추가할 때 일반적으로 항목의 레이블 텍스트를 지정 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)). `InsertItem` 멤버 함수에 전달할 수는 [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) 레이블의 텍스트를 포함 하는 문자열을 포함 하 여 항목의 속성을 정의 하는 구조입니다. `InsertItem` 매개 변수를 다양 한 조합과 함께 호출 될 수 있는 몇 가지 오버 로드가 있습니다.  

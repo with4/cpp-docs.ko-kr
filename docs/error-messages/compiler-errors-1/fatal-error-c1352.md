@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226821"
 ---
 # <a name="fatal-error-c1352"></a>심각한 오류 C1352
 'file' 모듈의 'function' 함수에 잘못되었거나 손상된 MSIL이 있습니다.  

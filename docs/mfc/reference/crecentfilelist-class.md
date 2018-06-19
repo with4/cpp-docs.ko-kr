@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377255"
 ---
 # <a name="crecentfilelist-class"></a>CRecentFileList 클래스
 MRU(가장 최근에 사용됨) 파일 목록의 컨트롤을 지원합니다.  

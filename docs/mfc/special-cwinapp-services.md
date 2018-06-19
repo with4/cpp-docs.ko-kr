@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382933"
 ---
 # <a name="special-cwinapp-services"></a>특수 CWinApp 서비스
 것 외에도 메시지 루프를 실행 하면 응용 프로그램을 초기화 하 고 그 뒤를 정리할 수 [CWinApp](../mfc/reference/cwinapp-class.md) 몇 가지 다른 서비스를 제공 합니다.  

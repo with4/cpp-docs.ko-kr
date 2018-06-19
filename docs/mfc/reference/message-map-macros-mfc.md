@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378478"
 ---
 # <a name="message-map-macros-mfc"></a>메시지 맵 매크로(MFC)
 MFC는 메시지 맵을 지원 하기 위해 다음 매크로 제공 합니다.  

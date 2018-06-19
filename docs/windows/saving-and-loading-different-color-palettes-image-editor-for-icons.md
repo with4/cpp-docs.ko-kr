@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892321"
 ---
 # <a name="saving-and-loading-different-color-palettes-image-editor-for-icons"></a>다른 색상표 저장 및 로드(아이콘에 대한 이미지 편집기)
 저장 하 고 포함 된 색 색상표 로드 [색을 사용자 지정한](../windows/customizing-or-changing-colors-image-editor-for-icons.md)합니다. (Visual Studio를 시작하면 기본적으로 가장 최근에 사용한 색 색상표가 자동으로 로드됩니다.)  

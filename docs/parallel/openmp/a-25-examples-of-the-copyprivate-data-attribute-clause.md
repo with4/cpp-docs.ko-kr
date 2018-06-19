@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691692"
 ---
 # <a name="a25---examples-of-the-copyprivate-data-attribute-clause"></a>A.25   copyprivate 데이터 특성 절 예제
 **예제 1:** 는 `copyprivate` 절 ([2.7.2.8 섹션](../../parallel/openmp/2-7-2-8-copyprivate.md) 페이지 32) 직접 다른 스레드에서 개인 변수의 모든 인스턴스에 단일 스레드에서 획득 값 브로드캐스트에 사용할 수 있습니다.  

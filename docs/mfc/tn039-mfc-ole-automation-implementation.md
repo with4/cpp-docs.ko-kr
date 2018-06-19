@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385341"
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039: MFC/OLE 자동화 구현
 > [!NOTE]

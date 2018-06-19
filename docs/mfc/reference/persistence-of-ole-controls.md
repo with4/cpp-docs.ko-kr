@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378336"
 ---
 # <a name="persistence-of-ole-controls"></a>OLE 컨트롤의 지속성
 OLE 컨트롤의 한 기능을 속성 지 속성 (또는 serialization)는 OLE 컨트롤을 읽거나 하 고 파일 또는 스트림에서 속성 값을 쓸 수 있습니다. 컨테이너 응용 프로그램 serialization을 사용 응용 프로그램 컨트롤 메뉴가 제거 후에 컨트롤의 속성 값을 저장할 수 있습니다. OLE 컨트롤의 속성 값 파일에서 읽을 수 있습니다 또는 스트림에 컨트롤의 새 인스턴스를 나중에 만들어집니다.  

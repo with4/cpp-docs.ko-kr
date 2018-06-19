@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384699"
 ---
 # <a name="tn006-message-maps"></a>TN006: 메시지 맵
 이 노트에서는 MFC 메시지 맵에 기능을 설명합니다.  

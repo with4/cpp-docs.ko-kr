@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33233671"
 ---
 # <a name="compiler-error-c2616"></a>컴파일러 오류 C2616
 'conversion': lvalue가 아닌 'type1' 'type2'를 암시적으로 변환할 수 하는 const  

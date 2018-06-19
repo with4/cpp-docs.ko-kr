@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382768"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>트리 컨트롤 끌어서 드롭 작업
 트리 컨트롤 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 항목을 끌기 시작할 때 알림을 보냅니다. 컨트롤에서 보냅니다는 [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) 마우스 왼쪽된 단추와 항목을 끌기 시작할 때 알림 메시지 및 [TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) 알림 메시지를 끌기 시작할 때 마우스 오른쪽 단추로 합니다. 트리 컨트롤을 제공 하 여 이러한 알림을 보낼에서 트리 컨트롤을 방지할 수 있습니다는 **TVS_DISABLEDRAGDROP** 스타일입니다.  

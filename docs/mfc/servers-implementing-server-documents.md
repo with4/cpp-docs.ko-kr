@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380278"
 ---
 # <a name="servers-implementing-server-documents"></a>서버: 서버 문서 구현
 이 문서에서는 응용 프로그램 마법사에서 OLE 서버 옵션을 지정 하지 않은 서버 문서를 성공적으로 구현 하는 위해 수행 해야 하는 단계를 설명 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231815"
 ---
 # <a name="compiler-error-c2679"></a>컴파일러 오류 C2679
 이항 'operator': 'type' 형식의 오른쪽 피연산자를 사용 하는 연산자가 없습니다 발견 (또는 허용 가능한 변환이 없습니다)  

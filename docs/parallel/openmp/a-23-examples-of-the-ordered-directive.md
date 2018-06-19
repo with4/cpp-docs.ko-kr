@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692758"
 ---
 # <a name="a23---examples-of-the-ordered-directive"></a>A.23   ordered 지시문 예제
 와 순서가 지정 된 섹션이 여러 개 있을 수는 `for` 으로 지정 된는 `ordered` 절. 첫 번째 예에서는 비규격 이므로 API 다음을 지정 합니다.  
