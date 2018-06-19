@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347235"
 ---
 # <a name="handlers-for-commands-and-control-notifications"></a>명령 및 컨트롤 알림에 대한 처리기
 명령 또는 컨트롤 알림 메시지에 대 한 기본 처리기가 없는 있습니다. 따라서 이러한 메시지의이 범주에 대 한 처리기를 명명 규칙만 바인딩됩니다. 명령 또는 컨트롤 알림 처리기에 매핑할 때는 속성 창에 명령 ID 또는 알림 컨트롤 코드에 따라 이름을 제안 합니다. 제안된 된 이름을 적용,를 변경 하거나 바꿀 수 있습니다.  

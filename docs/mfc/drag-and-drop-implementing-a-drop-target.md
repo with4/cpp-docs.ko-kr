@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344271"
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>끌어서 놓기: 놓기 대상 구현
 이 문서에서는 응용 프로그램 놓기 대상으로 지정 하는 방법에 설명 합니다. 놓기 대상 구현 놓기 소스 구현 보다 약간 더 많은 작업이 걸리지만 것은 여전히 비교적 간단 합니다. 이러한 기술은 비 OLE 응용 프로그램에도 적용 됩니다.  

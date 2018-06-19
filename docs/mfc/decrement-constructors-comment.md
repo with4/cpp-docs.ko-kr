@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344167"
 ---
 # <a name="-constructors-comment"></a>// 생성자 주석
 `// Constructors` MFC 클래스 선언의 섹션으로 생성자 (c + + 의미에서)은 개체 사용 하는 데 필요한 초기화 함수를 선언 합니다. 예를 들어 `CWnd::Create` 는 사용 하기 전에 때문에 생성자 섹션에는 `CWnd` 개체 것 생성 해야 합니다"완전히" c + + 생성자를 호출 하는 먼저 호출한 다음 여는 **만들기** 함수입니다. 일반적으로 이러한 멤버는 public입니다.  

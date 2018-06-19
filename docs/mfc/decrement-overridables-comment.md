@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345390"
 ---
 # <a name="-overridables-comment"></a>// 재정의 가능 주석
 `// Overridables` MFC 클래스 선언의 섹션 가상 함수가 포함 된 기본 클래스의 동작을 수정 해야 하는 경우 파생된 클래스에서 재정의할 수 있습니다. 일반적으로 이름으로 지정 된 "On"로 시작 하지만 꼭 필요 하지 않음. 여기에서 함수는 재정의할 수 종종 구현 하거나 어떤 종류의 "callback" 또는 "후크"를 제공 하도록 설계 되었습니다. 일반적으로 이러한 구성원 보호 됩니다.  

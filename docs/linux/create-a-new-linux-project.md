@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339231"
 ---
 # <a name="create-a-new-linux-project"></a>새 Linux 프로젝트 만들기
 Linux용 코드를 작성할 때 Visual Studio 프로젝트 또는 CMake 프로젝트를 만들도록 선택할 수 있습니다. 이 항목에서는 Visual Studio 프로젝트를 만드는 방법을 설명합니다. CMake 프로젝트에 대한 자세한 내용은 [Linux CMake 프로젝트 구성](cmake-linux-project.md)을 참조하세요.

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341351"
 ---
 # <a name="creating-an-active-document-container-application"></a>액티브 문서 컨테이너 응용 프로그램 만들기
 액티브 문서 컨테이너 응용 프로그램을 만드는 가장 간단하고 가장 권장되는 방법은 MFC 응용 프로그램 마법사를 사용해서 MFC EXE 컨테이너 응용 프로그램을 만들고 액티브 문서 포함을 지원하도록 응용 프로그램을 수정하는 방법입니다.  

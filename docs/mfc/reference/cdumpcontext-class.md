@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367395"
 ---
 # <a name="cdumpcontext-class"></a>CDumpContext 클래스
 사용자가 읽을 수 있는 텍스트 형식으로 스트림 지향 진단 출력을 지원합니다.  

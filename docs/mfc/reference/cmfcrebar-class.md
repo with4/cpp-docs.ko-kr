@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368802"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar 클래스
 A `CMFCReBar` 개체는 레이아웃, 지 속성 및 rebar 컨트롤에 대 한 상태 정보를 제공 하는 컨트롤 막대입니다.  

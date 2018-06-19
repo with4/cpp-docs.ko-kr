@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345504"
 ---
 # <a name="internet-information-by-task"></a>작업별 인터넷 정보
 이 항목에 나열 된 작업을 수행 하려는 작업에 따라 정렬 됩니다.  

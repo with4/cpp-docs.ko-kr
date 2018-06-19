@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347180"
 ---
 # <a name="message-sending-and-receiving"></a>메시지 보내기 및 받기
 프로세스 및 프레임 워크의 응답의 송신 부분을 고려 합니다.  

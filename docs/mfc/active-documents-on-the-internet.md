@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334888"
 ---
 # <a name="active-documents-on-the-internet"></a>인터넷의 액티브 문서
 액티브 문서는 일반적인 포함된 개체에 대 한 확장을 제공합니다. 액티브 문서는 다중 페이지 수 있으며 전체 클라이언트 영역에 표시 됩니다. 기존 메뉴 협상을 수행 하며 현재 위치와 서버 응용 프로그램에서 열려 있는 창에 편집할 수 있습니다. 해치 테두리가 작은 사각형으로 표시를 하는 대신 액티브 문서는 전체 프레임 및 항상 내부 활성입니다.  

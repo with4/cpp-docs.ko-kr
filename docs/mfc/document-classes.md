@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346619"
 ---
 # <a name="document-classes"></a>문서 클래스
 문서 클래스 개체, 문서 템플릿 개체에서 만든 응용 프로그램의 데이터를 관리 합니다. 이러한 클래스 중 하나에서 문서에 대 한 클래스를 파생 합니다.  

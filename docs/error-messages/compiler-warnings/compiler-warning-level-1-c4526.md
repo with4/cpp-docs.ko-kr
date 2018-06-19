@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282901"
 ---
 # <a name="compiler-warning-level-1-c4526"></a>컴파일러 경고(수준 1) C4526
 'function': 정적 멤버 함수는 가상 함수를 재정의할 수 없습니다 ' 무시 되는 가상 function'override 가상 함수는 숨겨집니다.  

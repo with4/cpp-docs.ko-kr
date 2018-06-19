@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345887"
 ---
 # <a name="automation"></a>자동화
 자동화(이전의 OLE 자동화) 기술은 한 응용 프로그램에서 다른 응용 프로그램에 구현된 개체를 조작하거나 개체를 조작할 수 있도록 노출시키는 것을 가능하게 하는 기술입니다.  

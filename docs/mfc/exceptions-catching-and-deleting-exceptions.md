@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345188"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>예외: 예외 Catch 및 삭제
 다음 지침과 예제를 catch 하 고 예외를 삭제 하는 방법을 보여 줍니다. 대 한 자세한 내용은 **시도**, **catch**, 및 `throw` 키워드 참조 [c + + 예외 처리](../cpp/cpp-exception-handling.md)합니다.  

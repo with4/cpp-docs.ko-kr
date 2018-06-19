@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368620"
 ---
 # <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame 클래스
 드롭 다운 도구 모음과 드롭 다운 도구 모음 단추에 드롭다운 프레임 창 기능을 제공합니다.  

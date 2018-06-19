@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382274"
 ---
 # <a name="tn051-using-ctl3d-now-and-in-the-future"></a>TN051: 현재 및 향후의 CTL3D 사용
 CTL3D 및 MFC에 이전에 설명한이 기술 노트는 이제 사용 되지 않습니다. 컨트롤에 3D 효과 MFC에서 자동으로 구현 됩니다.  

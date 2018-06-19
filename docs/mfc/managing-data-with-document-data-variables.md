@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344963"
 ---
 # <a name="managing-data-with-document-data-variables"></a>문서 데이터 변수로 데이터 관리
 문서 클래스의 멤버 변수로 문서의 데이터를 구현 합니다. Scribble 프로그램 형식의 데이터 멤버를 선언 하는 예를 들어 `CObList` -에 대 한 포인터를 저장 하는 연결 된 목록 `CObject` 개체입니다. 이 목록은 자유 선 그리기를 구성 하는 점의 배열을 저장에 사용 됩니다.  

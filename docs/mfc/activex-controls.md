@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340792"
 ---
 # <a name="activex-controls"></a>ActiveX 컨트롤
 Visual c + +에서 MFC 또는 ATL.를 사용 하 여 ActiveX 컨트롤을 만들 수 있습니다.  

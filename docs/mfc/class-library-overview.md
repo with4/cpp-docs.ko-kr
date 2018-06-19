@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346902"
 ---
 # <a name="class-library-overview"></a>클래스 라이브러리 개요
 이 개요 분류 하는 클래스에는 Microsoft Foundation 클래스 라이브러리 (MFC) 버전 9.0에 설명 합니다. 전체적으로, MFC의 클래스를 응용 프로그램 프레임 워크 구성-Windows API에 대 한 작성 된 응용 프로그램의 프레임 워크입니다. 프로그래밍 작업 응용 프로그램에 적용 되는 코드를 입력 하는 것입니다.  

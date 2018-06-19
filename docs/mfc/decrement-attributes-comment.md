@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342922"
 ---
 # <a name="-attributes-comment"></a>// 특성 주석
 `// Attributes` MFC 클래스 선언의 섹션 개체의 공용 특성 (또는 속성)를 포함 합니다. 일반적으로 이러한 멤버 변수 또는 Get/Set 함수로 됩니다. "Get" 및 "Set" 함수 수도 있습니다 가상 되지 않을 수 있습니다. "Get" 함수는 일반적으로 **const**없기 때문에 대부분의 경우에서 이러한 의도 하지 않은, 합니다. 이러한 멤버는 일반적으로 공용; 일반적으로 보호 되 고 개인 특성 구현 섹션에 있습니다.  

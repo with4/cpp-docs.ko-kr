@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339029"
 ---
 # <a name="active-document-containers"></a>액티브 문서 컨테이너
 Microsoft Office Binder 또는 Internet Explorer와 같은 액티브 문서 컨테이너를 사용 하면 여러 문서를 만들고 각각에 대해 여러 응용 프로그램 프레임을 사용 하도록 요구 하는 것 (대신 단일 프레임 내에서 다른 응용 프로그램 종류의 작업을 문서 유형)입니다.  

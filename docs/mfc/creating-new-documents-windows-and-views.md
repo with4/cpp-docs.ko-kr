@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343417"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>새 문서, 창 및 뷰 만들기
 다음 그림에서는 문서, 뷰 및 프레임 창에 대 한 생성 프로세스의 개요를 제공합니다. 프로그램에 참여 하는 개체에 집중 하는 다른 문서는 추가 세부 정보를 제공 합니다.  

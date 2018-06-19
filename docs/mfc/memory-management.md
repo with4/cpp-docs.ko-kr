@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345080"
 ---
 # <a name="memory-management"></a>메모리 관리
 다음이 문서에는의 MFC Microsoft Foundation 클래스 라이브러리 ()에 메모리 관리와 관련 된 일반적인 서비스를 활용 하는 방법을 설명 합니다. 메모리 할당은 두 가지 주요 범주로 나눌 수 있습니다: 프레임 할당과 힙 할당.  

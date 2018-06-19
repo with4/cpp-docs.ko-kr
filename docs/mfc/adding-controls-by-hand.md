@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342477"
 ---
 # <a name="adding-controls-by-hand"></a>수동으로 컨트롤 추가
 다음 중 하나 [대화 상자 편집기와 대화 상자에 컨트롤 추가](../mfc/using-the-dialog-editor-to-add-controls.md) 하거나 코드를 직접 추가 합니다.  

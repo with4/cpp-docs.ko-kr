@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347083"
 ---
 # <a name="files-in-mfc"></a>MFC의 파일
 에 MFC Microsoft Foundation Class 라이브러리 (), 클래스 [CFile](../mfc/reference/cfile-class.md) 일반적인 파일 I/O 작업을 처리 합니다. 이 문서 열기 및 파일을 닫고 뿐만 아니라 데이터 읽기 및 쓰기를 해당 파일에 하는 방법을 설명 합니다. 또한 파일 상태 작업에 설명 합니다. 데이터 읽기 및 쓰기 파일에는 대체 방법으로 MFC의 serialization 개체 기반 기능을 사용 하는 방법에 대 한 문서를 참조 [Serialization](../mfc/serialization-in-mfc.md)합니다.  

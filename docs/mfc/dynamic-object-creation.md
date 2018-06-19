@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346648"
 ---
 # <a name="dynamic-object-creation"></a>동적 개체 만들기
 이 문서를 런타임에 동적으로 개체를 만드는 방법을 설명 합니다. 프로시저는 문서에 설명 된 대로 런타임 클래스 정보를 사용 하 여 [런타임 클래스 정보 액세스](../mfc/accessing-run-time-class-information.md)합니다.  

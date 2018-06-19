@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341400"
 ---
 # <a name="classes-related-to-rich-edit-controls"></a>Rich Edit 컨트롤 관련 클래스
 [CRichEditView](../mfc/reference/cricheditview-class.md), [CRichEditDoc](../mfc/reference/cricheditdoc-class.md), 및 [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md) rich edit 컨트롤의 기능을 제공 하는 클래스 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) MFC의 문서/뷰 아키텍처의 컨텍스트에서 합니다. `CRichEditView` 텍스트 및 텍스트의 서식 특성을 유지 관리합니다. `CRichEditDoc` 보기에 있는 OLE 클라이언트 항목의 목록을 유지 관리 합니다. `CRichEditCntrItem` 컨테이너 쪽 OLE 클라이언트 항목에 대 한 액세스를 제공합니다. 내용을 수정 하는 `CRichEditView`를 사용 하 여 [CRichEditView::GetRichEditCtrl](../mfc/reference/cricheditview-class.md#getricheditctrl) 서식 있는 편집 컨트롤을 합니다.  

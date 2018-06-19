@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345796"
 ---
 # <a name="document-template-creation"></a>문서 템플릿 만들기
 에 대 한 응답에서 새 문서를 만들 때 한 `New` 또는 **열려** 명령을 **파일** 메뉴 문서 서식 파일 문서를 볼 수 있는 새 프레임 창을 만듭니다.  

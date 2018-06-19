@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347044"
 ---
 # <a name="ole-drag-and-drop-and-data-transfer-classes"></a>OLE 끌어서 놓기 및 데이터 전송 클래스
 이러한 클래스는 OLE 데이터 전송에 사용 됩니다. 클립보드를 사용 하 여 또는 끌어서 통해 응용 프로그램 및 drop 간에 전달할 데이터를 허용 합니다.  

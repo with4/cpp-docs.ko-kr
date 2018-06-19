@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347096"
 ---
 # <a name="menus-and-resources-ole"></a>메뉴 및 리소스(OLE)
 다음이 문서 메뉴와 MFC OLE 문서 응용 프로그램의 리소스 사용에 설명 합니다.  

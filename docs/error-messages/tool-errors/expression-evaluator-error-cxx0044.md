@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297897"
 ---
 # <a name="expression-evaluator-error-cxx0044"></a>식 계산기 오류 CXX0044
 _based(void) 포인터를 사용하려면 :> 연산자가 필요합니다.  

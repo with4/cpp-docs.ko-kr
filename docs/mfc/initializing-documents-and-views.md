@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348051"
 ---
 # <a name="initializing-documents-and-views"></a>문서 및 뷰 초기화
 문서 클래스에는 두 가지 방법을 모두 지원 해야 하므로 문서는 두 가지 방법으로 생성 됩니다. 첫째, 새 파일 명령을 사용 하 여 새로 만든 빈 문서를 만들 수는 있습니다. 이 경우의 재정의에서 문서를 초기화는 [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) 클래스의 멤버 함수 [CDocument](../mfc/reference/cdocument-class.md)합니다. 둘째, 사용자 파일에서 읽은 내용을 새 문서를 만드는 데 파일 메뉴에서 열기 명령을 사용할 수 있습니다. 이 경우의 재정의에서 문서를 초기화는 [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) 클래스의 멤버 함수 **CDocument**합니다. 같으면 두 번의 초기화를 모두 재정의에서 공용 멤버 함수를 호출할 수 있습니다 또는 `OnOpenDocument` 호출할 수 `OnNewDocument` 새로 문서를 초기화 및 다음 열기 작업을 완료 합니다.  

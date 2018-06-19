@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347775"
 ---
 # <a name="mfc-com"></a>MFC COM
 액티브 템플릿 라이브러리 (ATL)의 대부분이 설계 된 반면 MFC의 하위 집합 COM 지원 하도록 되어 COM 프로그래밍에 대 한 합니다. 이 항목의이 단원 com MFC의 지원을 설명합니다  

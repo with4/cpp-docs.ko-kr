@@ -115,6 +115,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33284120"
 ---
 # <a name="compiler-errors-c3300-through-c3399"></a>컴파일러 오류 C3300 c 3399 통해
 

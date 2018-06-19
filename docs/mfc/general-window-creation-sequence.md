@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346518"
 ---
 # <a name="general-window-creation-sequence"></a>일반 창 만들기 시퀀스
 프레임 워크 훨씬 동일한 프로세스를 사용 하 여에서 설명 하는 자식 같은 고유한 창의 창을 만들 때 [문서/뷰 만들기](../mfc/document-view-creation.md)합니다.  

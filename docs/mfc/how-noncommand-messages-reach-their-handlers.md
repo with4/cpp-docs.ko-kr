@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343884"
 ---
 # <a name="how-noncommand-messages-reach-their-handlers"></a>명령이 아닌 메시지가 해당 처리기에 도달하는 방법
 명령, 달리 표준 Windows 메시지 체인 of 명령 대상을 통해 라우팅되지 않게 하지만 일반적으로 Windows에서 메시지를 보내는 경우 창으로 처리 됩니다. 창을 주 프레임 창, MDI 자식 창, 표준 컨트롤, 대화 상자, 뷰 또는 일부 다른 자식 창의 종류가 수 있습니다.  

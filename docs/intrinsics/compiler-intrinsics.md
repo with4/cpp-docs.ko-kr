@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339022"
 ---
 # <a name="compiler-intrinsics"></a>컴파일러 내장 함수
 대부분의 함수는 라이브러리에 포함되어 컴파일러에서 기본 제공되는 내장 함수도 있습니다. 이러한 함수를 내장 함수라고 합니다.  

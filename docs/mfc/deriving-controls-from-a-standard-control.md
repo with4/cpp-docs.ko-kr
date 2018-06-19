@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344502"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>표준 컨트롤에서 컨트롤 파생시키기
 마찬가지로 [CWnd](../mfc/reference/cwnd-class.md)-파생 클래스를 기존 컨트롤 클래스에서 새 클래스를 파생 하 여 컨트롤의 동작을 수정할 수 있습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341191"
 ---
 # <a name="containers-user-interface-issues"></a>컨테이너: 사용자 인터페이스 문제
 적절 하 게 연결 및 포함 된 항목을 관리 하는 컨테이너 응용 프로그램의 사용자 인터페이스에 다양 한 기능을 추가 해야 합니다. 이러한 기능 변경 내용을 응용 프로그램에서 처리 하는 이벤트 및 메뉴 구조에 포함 됩니다. 에 대 한 자세한 내용은 다음 문서를 참조 합니다.  

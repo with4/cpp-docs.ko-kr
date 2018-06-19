@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344976"
 ---
 # <a name="crebar-vs-crebarctrl"></a>CReBar vs입니다. CReBarCtrl
 MFC는 두 개의 클래스를 만드는 rebars: [CReBar](../mfc/reference/crebar-class.md) 및 [CReBarCtrl](../mfc/reference/crebarctrl-class.md) (Windows 공용 컨트롤 API 래핑합니다 입니다). **CReBar** rebar 공용 컨트롤의 기능을 모두 제공 하며 대부분의 필수 공용 컨트롤 설정 및 구조를 처리 합니다.  

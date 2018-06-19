@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343810"
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>대화 상자에서 Windows 메시지 처리
 대화 상자는 창, 하므로 적절 한 처리기 함수를 제공 하는 경우 Windows 메시지를 처리할 수 있습니다. 클래스 추가 마법사와 대화 상자 클래스를 만들 때 마법사는 빈 메시지 맵을 클래스에 추가 합니다. Windows 메시지 또는 클래스에서 처리 명령을 매핑할 속성 창을 사용 합니다.  

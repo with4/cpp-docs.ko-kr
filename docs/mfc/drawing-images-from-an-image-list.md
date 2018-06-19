@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345211"
 ---
 # <a name="drawing-images-from-an-image-list"></a>이미지 목록에서 이미지 그리기
 이미지를 그리기 위해 사용 하 여는 [CImageList::Draw](../mfc/reference/cimagelist-class.md#draw) 멤버 함수입니다. 장치 컨텍스트 개체를 그릴 위치를 이미지를 그릴 장치 컨텍스트에서 이미지의 인덱스 및 그리기 스타일을 표시 하기 위해 플래그 집합이에 대 한 포인터를 지정 합니다.  

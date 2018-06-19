@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320797"
 ---
 # <a name="nmake-warning-u4011"></a>NMAKE 경고 U4011
 'target': 사용할 수 있습니다; 일부 종속 항목 대상이 빌드되지 않았습니다.  

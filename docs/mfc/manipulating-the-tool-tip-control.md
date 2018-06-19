@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346440"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>도구 설명 컨트롤 조작
 클래스 `CToolTipCtrl` 멤버 그룹의 다양 한 특성을 제어 하는 함수를 제공는 `CToolTipCtrl` 개체 및 도구 설명 창이 있습니다.  

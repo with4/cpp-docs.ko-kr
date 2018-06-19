@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342763"
 ---
 # <a name="header-control-examples"></a>헤더 컨트롤 예
 헤더 컨트롤의 예 참조는 [헤더 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb775238) Windows sdk에서입니다.  

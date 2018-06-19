@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346063"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>예외: MFC 매크로 및 C++ 예외 사용
 MFC 예외 처리 매크로 c + + 예외 처리 키워드를 사용 하는 코드를 작성 하기 위한 고려 사항에 설명 합니다.  

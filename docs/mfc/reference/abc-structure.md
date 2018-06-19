@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346492"
 ---
 # <a name="abc-structure"></a>ABC 구조체
 **ABC** 구조 트루타입 글꼴이에 문자 너비를 포함 합니다.  

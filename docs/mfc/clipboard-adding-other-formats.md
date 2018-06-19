@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342149"
 ---
 # <a name="clipboard-adding-other-formats"></a>클립보드: 기타 서식 추가
 이 항목에서는 특히 OLE 지원에 대 한 지원 되는 형식 목록을 확장 하는 방법을 설명 합니다. 항목 [클립보드: 데이터 복사 및 붙여 넣으십시오](../mfc/clipboard-copying-and-pasting-data.md) 클립보드에서 복사 / 붙여넣기를 지 원하는 데 필요한 최소 구현에 설명 합니다. 클립보드에 복사 하는 유일한 형식은 이것이 구현할 모든 이면 `CF_METAFILEPICT`, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**, 해야 했으며 `CF_LINKSOURCE`합니다. 대부분의 응용 프로그램에는이 세 가지 보다 클립보드에 많은 서식이 필요 합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341556"
 ---
 # <a name="building-on-the-framework"></a>프레임워크를 기반으로 구축
 MFC 프레임 워크를 사용 하 여 응용 프로그램 구성에서 역할에는 응용 프로그램별 소스 코드를 제공 하 고 메시지와 응답할 수 있는 명령을 정의 하 여 구성 요소를 연결 하는 데입니다. C + + 언어 및 표준 c + + 기술을 사용 하 여 클래스 라이브러리에서 제공 하는 것에서 사용자 고유의 응용 프로그램 관련 클래스를 파생을 재정의 하 고 기본 클래스의 동작을 확장 합니다.  

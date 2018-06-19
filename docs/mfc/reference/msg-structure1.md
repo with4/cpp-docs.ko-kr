@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372259"
 ---
 # <a name="msg-structure1"></a>메시지 구조 1
 `MSG` 구조는 스레드의 메시지 큐에서 메시지 정보를 포함 합니다.  

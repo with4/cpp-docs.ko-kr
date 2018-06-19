@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345142"
 ---
 # <a name="dialog-data-exchange"></a>대화 상자 데이터 교환
 DDX 메커니즘을 사용 하는 경우 대화 상자의 초기 값 개체의 멤버 변수를 설정 하면 일반적으로 프로그램 `OnInitDialog` 처리기 또는 대화 생성자입니다. 프레임 워크의 DDX 메커니즘 표시 되는 위치 대화 상자에서 컨트롤을 멤버 변수의 값을 전송 대화 상자가 표시 되기 전에 즉시 자체 대화 상자가 표시 되 면 대 한 응답으로 `DoModal` 또는 **만들기** . 기본 구현은 `OnInitDialog` 에 `CDialog` 호출은 `UpdateData` 클래스의 멤버 함수 `CWnd` 대화 상자에서 컨트롤을 초기화 합니다.  

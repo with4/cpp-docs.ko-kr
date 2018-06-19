@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344219"
 ---
 # <a name="containers-client-items"></a>컨테이너: 클라이언트 항목
 이 문서에서는 대해 설명 하 고 응용 프로그램의 클라이언트 항목 클래스가에서 파생 되어야 합니다.  

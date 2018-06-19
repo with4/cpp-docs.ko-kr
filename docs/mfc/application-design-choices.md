@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347762"
 ---
 # <a name="application-design-choices"></a>응용 프로그램 디자인 선택
 이 문서에는 인터넷에 대 한 프로그래밍 시 고려해 야 할 디자인 문제 중 일부를 설명 합니다.  

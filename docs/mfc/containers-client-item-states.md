@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342175"
 ---
 # <a name="containers-client-item-states"></a>컨테이너: 클라이언트 항목 상태
 이 문서에서는 다양 한 수명 중에 통과 한 클라이언트 항목 상태에 설명 합니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345614"
 ---
 # <a name="drag-and-drop-implementing-a-drop-source"></a>끌어서 놓기: 놓기 소스 구현
 이 문서에는 응용 프로그램 데이터를 끌어서 놓기 작업을 제공 하도록 하는 방법을 설명 합니다.  

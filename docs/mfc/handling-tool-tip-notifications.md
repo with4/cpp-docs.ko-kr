@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346378"
 ---
 # <a name="handling-tool-tip-notifications"></a>도구 설명 알림 처리
 지정 하는 경우는 `TBSTYLE_TOOLTIPS` 도구 모음 스타일을 만들고 도구 설명 컨트롤을 관리 합니다. 도구 설명에는 도구 모음 단추를 설명 하는 텍스트 줄을 포함 하는 작은 팝업 창인은 합니다. 사용자가 도구 모음 단추에 커서 있고 그대로 있을 약 절반에 대 한 두 번째 경우에 나타나는 도구 설명 숨겨져 있습니다. 커서 주위 도구 설명이 표시 됩니다.  

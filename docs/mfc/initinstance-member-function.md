@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345028"
 ---
 # <a name="initinstance-member-function"></a>InitInstance 멤버 함수
 Windows 운영 체제를 사용 하면 둘 이상의 복사본, 즉 "," 동일한 응용 프로그램 인스턴스를 실행할 수 있습니다. `WinMain` 호출 [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) 될 때마다 응용 프로그램의 새 인스턴스를 시작 합니다.  

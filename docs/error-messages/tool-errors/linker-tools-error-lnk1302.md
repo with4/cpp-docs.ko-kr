@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299421"
 ---
 # <a name="linker-tools-error-lnk1302"></a>링커 도구 오류 LNK1302
 안전한 .netmodules 링크만 지원됩니다. .netmodule 파일을 링크할 수 없습니다.  

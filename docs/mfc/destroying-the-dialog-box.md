@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343930"
 ---
 # <a name="destroying-the-dialog-box"></a>대화 상자 제거
 모달 대화 상자가 일반적으로 스택 프레임에 생성 되 고 이들을 만든는 함수가 종료 되어도 삭제 합니다. 대화 상자 개체의 소멸자가 범위를 벗어날 때 호출 됩니다.  

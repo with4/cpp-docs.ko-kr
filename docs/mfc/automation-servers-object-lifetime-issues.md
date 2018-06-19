@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341802"
 ---
 # <a name="automation-servers-object-lifetime-issues"></a>자동화 서버: 개체 수명 문제
 자동화 클라이언트를 만들거나 OLE 항목을 활성화, 서버 전달 클라이언트 포인터 해당 개체에 합니다. 클라이언트가 OLE 함수에 대 한 호출을 통해 개체에 대 한 참조를 설정 [iunknown:: Addref](http://msdn.microsoft.com/library/windows/desktop/ms691379)합니다. 이 참조는 클라이언트 호출할 때까지 실제로 [iunknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317)합니다. (Microsoft Foundation Class 라이브러리 OLE 클래스로 작성 된 클라이언트 응용 프로그램이 이러한 호출을 허용할 필요가; 프레임 워크가 작업을 수행 합니다.) OLE 시스템 및 서버 자체 개체에 대 한 참조를 설정할 수 있습니다. 서버 외부 참조 개체에 계속 적용으로 개체를 삭제 해서는 안 됩니다.  

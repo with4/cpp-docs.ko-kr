@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338590"
 ---
 # <a name="active-technology-on-the-internet"></a>인터넷의 액티브 기술
 액티브 기술은 개발자가 흥미로운, 동적 콘텐츠 및 글로벌 인터넷 또는 인트라넷으로 회사의 내부 네트워크에 대 한 응용 프로그램을 만들 수 있도록 하는 개방형 플랫폼입니다. 인터넷 프로그래밍에 대 한 Microsoft에서 제공 하는 주요 기술에 대 한 설명은 다음과 같습니다.  

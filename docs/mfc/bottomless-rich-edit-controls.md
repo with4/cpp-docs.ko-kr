@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343313"
 ---
 # <a name="bottomless-rich-edit-controls"></a>바닥 없는 Rich Edit 컨트롤
 응용 프로그램 rich edit 컨트롤 크기를 조정할 수 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))은 항상 해당 콘텐츠와 동일한 크기가 되도록 필요에 따라 합니다. Rich edit 컨트롤의 부모 창에 전송 하 여이 이른바 "바닥 없음" 기능을 지원 한 [EN_REQUESTRESIZE](http://msdn.microsoft.com/library/windows/desktop/bb787983) 해당 콘텐츠의 크기가 변경 될 때마다 알림 메시지입니다.  

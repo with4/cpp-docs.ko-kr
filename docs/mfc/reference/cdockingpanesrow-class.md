@@ -105,6 +105,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370005"
 ---
 # <a name="cdockingpanesrow-class"></a>CDockingPanesRow 클래스
 도크 사이트의 동일한 수평 또는 수직 행(열)에 위치한 창 목록을 관리합니다.  

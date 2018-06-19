@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320222"
 ---
 # <a name="project-build-warning-prj0029"></a>프로젝트 빌드 경고 PRJ0029
 프로젝트 수준의 사용자 지정 빌드 단계에 대 한 '출력' 속성이 설정 되지 않았습니다. 사용자 지정 빌드 단계를 건너뜁니다.  

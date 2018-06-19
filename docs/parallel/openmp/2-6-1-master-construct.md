@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689558"
 ---
 # <a name="261-master-construct"></a>2.6.1 master 구문
 **마스터** 지시문 팀의 마스터 스레드에 의해 실행 되는 구조화 된 블록을 지정 하는 구조를 식별 합니다. 구문은 **마스터** 지시문은 다음과 같습니다.  

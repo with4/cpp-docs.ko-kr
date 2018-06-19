@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276973"
 ---
 # <a name="compiler-warning-level-1-c4440"></a>컴파일러 경고(수준 1) C4440
 재정의 된 호출 규칙이 'calling_convention1'에서 'calling_convention2' 무시 하려면  

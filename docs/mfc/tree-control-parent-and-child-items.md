@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382517"
 ---
 # <a name="tree-control-parent-and-child-items"></a>트리 컨트롤 부모 및 자식 항목
 트리 컨트롤의 모든 항목 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 연결 된 자식 항목 이라고 하는 하위 항목의 목록을 사용할 수 있습니다. 하나 이상의 자식 항목이 포함 된 항목을 부모 항목을 라고 합니다. 자식 항목을 해당 부모 항목 아래에 표시 되 고 부모에 종속 되었음을 나타내기 위해 들여쓰게 됩니다. 부모가 없는 항목은 계층의 최상위에 있으며은 루트 항목 이라고 합니다.  

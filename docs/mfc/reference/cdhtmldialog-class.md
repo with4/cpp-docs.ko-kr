@@ -131,6 +131,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377009"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog 클래스
 HTML을 사용 하는 대화 상자를 만드는 사용 되는 대화 상자 리소스의 사용자 인터페이스를 구현 하는 대신 합니다.  

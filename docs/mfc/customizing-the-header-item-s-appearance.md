@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342896"
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>헤더 항목을 사용자 지정&#39;s 모양
 설정 하 여는 *dwStyle* 헤더 컨트롤을 처음 만들 때 매개 변수 ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create)), 모양을 정의할 수 있습니다 및 머리글의 동작 항목 또는 헤더의 자체를 제어 합니다.  

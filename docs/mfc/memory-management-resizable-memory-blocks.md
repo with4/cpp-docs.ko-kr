@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345683"
 ---
 # <a name="memory-management-resizable-memory-blocks"></a>메모리 관리: 크기 조정 가능한 메모리 블록
 **새** 및 **삭제** 연산자, 문서에 설명 된 [메모리 관리: 예](../mfc/memory-management-examples.md)는 것이 좋지만 할당 및 고정 크기의 메모리 블록을 취소 하 고 개체입니다. 경우에 따라서는 응용 프로그램 크기 조정 가능한 메모리 블록을 할 수 있습니다. 표준 C 런타임 라이브러리 함수를 사용 해야 [malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md), 및 [무료](../c-runtime-library/reference/free.md) 힙의 크기 조정 가능한 메모리 블록을 관리할 수 있습니다.  

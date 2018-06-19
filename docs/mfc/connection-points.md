@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346424"
 ---
 # <a name="connection-points"></a>연결 지점
 이 문서에서는 연결 지점 (이전의 OLE 연결점)를 구현 하는 방법을 설명 하는 MFC 클래스를 사용 하 여 `CCmdTarget` 및 `CConnectionPoint`합니다.  

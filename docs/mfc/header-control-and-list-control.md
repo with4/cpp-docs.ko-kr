@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346102"
 ---
 # <a name="header-control-and-list-control"></a>헤더 컨트롤 및 목록 컨트롤
 대부분의 경우 사용 하 여 헤더 컨트롤에 포함 된 한 [CListCtrl](../mfc/reference/clistctrl-class.md) 또는 [CListView](../mfc/reference/clistview-class.md) 개체입니다. 그러나 별도 헤더 컨트롤 개체에 열 이나 행을 정렬 된 데이터를 조작 하는 등 바람직한 경우가 많습니다.는 [CView](../mfc/reference/cview-class.md)-파생 된 개체입니다. 이러한 경우 모양 및 포함 된 헤더 컨트롤의 기본 동작에 대 한 제어 강화 해야합니다.  

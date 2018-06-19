@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298641"
 ---
 # <a name="command-line-warning-d9041"></a>명령줄 경고 D9041
 에 대 한 값이 잘못 되었습니다 'value' '/option'; ' 값 '; 추가 ' /analyze '에이 경고를 지정 하는 경우 명령줄 옵션  

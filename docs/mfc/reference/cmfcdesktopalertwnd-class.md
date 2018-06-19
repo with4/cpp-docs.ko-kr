@@ -59,6 +59,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370658"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 `CMFCDesktopAlertWnd` 클래스는 이벤트에 대 한 사용자에 게 화면에 나타나는 모덜리스 대화 상자의 기능을 구현 합니다.  

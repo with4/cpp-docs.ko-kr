@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292661"
 ---
 # <a name="compiler-warning-level-4-c4001"></a>컴파일러 경고 (수준 4) C4001
 비표준 확장인 '한 줄으로 된 주석' 사용 했습니다.  

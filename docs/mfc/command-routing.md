@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346284"
 ---
 # <a name="command-routing"></a>명령 라우팅
 명령 작업을 수행하는 경우 사용자의 역할은 메시지 맵을 사용하여 명령과 해당 처리기 함수를 연결하는 것으로 제한됩니다. 이 작업에는 속성 창을 사용합니다. 또한 사용자는 대부분의 명령 처리기를 작성해야 합니다.  

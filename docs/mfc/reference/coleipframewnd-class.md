@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370382"
 ---
 # <a name="coleipframewnd-class"></a>COleIPFrameWnd 클래스
 응용 프로그램의 내부 편집 창의 기준입니다.  

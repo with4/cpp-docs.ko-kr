@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341928"
 ---
 # <a name="clipboard-when-to-use-each-clipboard-mechanism"></a>클립보드: 각 클립보드 메커니즘을 사용하는 경우
 클립보드를 사용 하 여 이러한 지침을 따릅니다.  

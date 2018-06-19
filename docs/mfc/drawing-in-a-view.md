@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346167"
 ---
 # <a name="drawing-in-a-view"></a>뷰에 그리기
 보기의에서 발생 응용 프로그램에서 거의 모든 그리기 `OnDraw` 뷰 클래스에서 재정의 해야 하는 멤버 함수입니다. (예외가, 마우스 그리기에 [정도 보기를 통해 사용자 입력 해석](../mfc/interpreting-user-input-through-a-view.md).) 프로그램 `OnDraw` 재정의:  

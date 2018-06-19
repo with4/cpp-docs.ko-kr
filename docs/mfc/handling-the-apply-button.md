@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345047"
 ---
 # <a name="handling-the-apply-button"></a>적용 단추 처리
 속성 시트에는 기능이 없는 표준 대화 상자: 속성 시트를 닫기 전에 변경한 내용을 적용 하려면 사용자를 허용 합니다. 이 작업은 수행 [적용] 단추를 사용 하 여 합니다. 이 문서에서는이 기능을 제대로 구현 하는 데 사용할 수 하는 방법을 설명 합니다.  

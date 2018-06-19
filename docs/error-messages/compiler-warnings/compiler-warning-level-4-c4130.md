@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292177"
 ---
 # <a name="compiler-warning-level-4-c4130"></a>컴파일러 경고(수준 4) C4130
 'operator': 문자열 상수의 주소에서 논리 연산을 수행했습니다.  

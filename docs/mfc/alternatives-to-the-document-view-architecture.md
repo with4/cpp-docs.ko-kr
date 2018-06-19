@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344206"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>문서/뷰 아키텍처의 대체
 MFC 응용 프로그램은 일반적으로 문서/뷰 아키텍처를 사용하여 정보, 파일 형식 및 사용자 데이터의 시각적 표현을 관리합니다. 대부분의 데스크톱 응용 프로그램에 대해 문서/뷰 아키텍처는 적절하고 효율적인 응용 프로그램 아키텍처입니다. 이 아키텍처는 뷰에서 데이터를 구분하고, 대부분의 경우 응용 프로그램을 단순화하고 코드 중복을 줄입니다.  

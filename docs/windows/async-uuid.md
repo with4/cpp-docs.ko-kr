@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856907"
 ---
 # <a name="asyncuuid"></a>async_uuid
 동기 및 비동기 버전 COM 인터페이스의 정의 MIDL 컴파일러에 지시 하 UUID를 지정 합니다.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347219"
 ---
 # <a name="html-basics"></a>HTML 기초
 대부분의 브라우저는 검색 중인 페이지의 HTML 소스를 검사 하는 기능이 있습니다. HTML (Hypertext markup language) 태그의 수를 표시 하는 소스를 볼 때 텍스트와 섞여 꺾쇠 괄호 (<>)으로 둘러싸여 있습니다.  

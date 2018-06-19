@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341299"
 ---
 # <a name="command-targets"></a>명령 대상
 그림 [프레임 워크의 명령](../mfc/user-interface-objects-and-command-ids.md) 메뉴 항목 및 개체를 클릭할 때 발생 하는 명령을 수행 하는 프레임 워크를 호출 하는 처리기 함수는 사용자 인터페이스 개체 간의 연결을 보여 줍니다.  

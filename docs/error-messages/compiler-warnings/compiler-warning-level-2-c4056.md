@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290568"
 ---
 # <a name="compiler-warning-level-2-c4056"></a>컴파일러 경고 (수준 2) C4056
 부동 소수점 상수 산술 연산에서 오버플로가 발생 했습니다  

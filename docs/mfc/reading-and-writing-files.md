@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347939"
 ---
 # <a name="reading-and-writing-files"></a>파일 읽기 및 쓰기
 C 런타임 라이브러리 파일 처리 함수를 사용한 경우 읽기 및 쓰기 작업이 MFC 쉬울 것입니다. 이 문서에서는 직접 읽기 및 쓰기에 직접 설명는 `CFile` 개체입니다. 있습니다 수 또한 않습니다 버퍼링 파일 I/O에는 [CArchive](../mfc/reference/carchive-class.md) 클래스입니다.  

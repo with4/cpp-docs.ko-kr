@@ -49,6 +49,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283821"
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>컴파일러 오류 C3200 c 3299 통해
 

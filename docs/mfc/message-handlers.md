@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347632"
 ---
 # <a name="message-handlers"></a>메시지 처리기
 Mfc에서 전용 *처리기* 함수는 각 메시지를 처리 합니다. 메시지 처리기 함수는 클래스의 멤버 함수입니다. 이 설명서에서는 용어 *메시지 처리기 멤버 함수*, *메시지-처리기 함수의*, *메시지 처리기*, 및 *처리기*같은 의미로 합니다. 일부 종류의 메시지 처리기에는 "명령 처리기입니다." 라고도 합니다.  

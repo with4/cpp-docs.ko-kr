@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384194"
 ---
 # <a name="virtual-list-controls"></a>가상 목록 컨트롤
 가상 목록 컨트롤은 목록 뷰 컨트롤에는 **LVS_OWNERDATA** 스타일입니다. 이 스타일 최대 항목 수를 지원 하도록 컨트롤을 활성화 한 `DWORD` (기본 항목 수로만 확장 프로그램 `int`). 그러나이 스타일의 가장 큰 장점은 한 번에 메모리에 데이터 항목의 하위 집합을 가질 수 있다는 점입니다. 이렇게 하면 가상 목록 뷰 컨트롤의 정보를 데이터베이스의 크기가 큰 사용 하기 위해 적합을 여기서 데이터에 액세스 하는 특정 메서드가에 이미 준비 되어 있습니다.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345744"
 ---
 # <a name="managing-menus-control-bars-and-accelerators"></a>메뉴, 컨트롤 막대 및 액셀러레이터 관리
 프레임 창 메뉴, 도구 모음 단추, 상태 표시줄 및 액셀러레이터를 포함 하 여 업데이트 사용자 인터페이스 개체를 관리 합니다. 또한 공유 MDI 응용 프로그램의 메뉴 모음을 관리 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294988"
 ---
 # <a name="bscmake-error-bk1507"></a>BSCMAKE 오류 BK1507
 'filename' 임시 파일을 열 수 없습니다 [: 이유]  

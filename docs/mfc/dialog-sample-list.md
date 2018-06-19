@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343614"
 ---
 # <a name="dialog-sample-list"></a>대화 상자 샘플 목록
 대화 상자 및 속성 시트를 설명 하는 다음 샘플 프로그램을 참조 하십시오.  

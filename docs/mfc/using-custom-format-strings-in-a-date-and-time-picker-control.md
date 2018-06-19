@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382004"
 ---
 # <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>날짜 및 시간 선택 컨트롤에서 사용자 지정 서식 문자열 사용
 기본적으로 날짜 및 시간 선택 컨트롤 세 가지의 형식 (각 형식에 해당 하는 고유 스타일) 현재 날짜 또는 시간을 표시 하기 위한 형식을 제공 합니다.  

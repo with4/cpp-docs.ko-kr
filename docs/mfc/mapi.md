@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347535"
 ---
 # <a name="mapi"></a>MAPI
 이 문서에서는 클라이언트 메시지 응용 프로그램 개발자를 위한 Microsoft MAPI(메시징 응용 프로그래밍 인터페이스)에 대해 설명합니다. MFC 클래스에서 MAPI 하위 집합에 대 한 지원을 제공 **CDocument** 하지만 전체 API를 캡슐화 하지 않습니다. 자세한 내용은 참조 [MFC의 MAPI 지원](../mfc/mapi-support-in-mfc.md)합니다.  
