@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090328"
 ---
 # <a name="cdbpropidsetsetguid"></a>CDBPropIDSet::SetGUID
 GUID 필드 설정는 **DBPROPIDSET** 구조입니다.  

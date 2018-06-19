@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089129"
 ---
 # <a name="carrayrowsetoperator"></a>CArrayRowset::operator
 행 집합의 행 액세스에 대 한 배열 유사 구문을 제공 합니다.  

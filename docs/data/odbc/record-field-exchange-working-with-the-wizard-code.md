@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092511"
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>레코드 필드 교환: 마법사 코드 사용
 이 항목에서는 코드를 설명 하는 MFC 응용 프로그램 마법사 및 **클래스 추가** (에 설명 된 대로 [MFC ODBC 소비자 추가](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) RFX와 코드를 수정 하려는 방법을 지원 하기 위해 작성 합니다.  

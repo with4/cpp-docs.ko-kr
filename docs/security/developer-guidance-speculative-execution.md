@@ -23,6 +23,7 @@ ms.sourcegitcommit: 4b2c3b0c720aef42bce7e1e5566723b0fec5ec7f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34428712"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>잘못 된 실행 쪽 채널에 대 한 c + + 개발자 지침
 

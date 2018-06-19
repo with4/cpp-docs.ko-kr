@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366421"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>집계 및 클래스 팩터리 매크로
 이러한 매크로는 클래스 팩터리를 선언 하 고 집계를 제어 하는 방법을 제공 합니다.  

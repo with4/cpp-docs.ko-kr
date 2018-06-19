@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089355"
 ---
 # <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute 클래스
 응용 프로그램에 대한 스레딩 모델이 STA(단일 스레드 아파트)임을 나타냅니다.  

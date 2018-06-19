@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373038"
 ---
 # <a name="nmake-options"></a>NMAKE 옵션
 NMAKE 옵션은 다음 표에 설명 되어 있습니다. 옵션 다음에 오는 슬래시 (/) 또는 대시 (-) 오고 대/소문자 구분 하지 않습니다. 사용 하 여 [! CMDSWITCHES](../build/makefile-preprocessing-directives.md) Tools.ini 또는 메이크파일의 옵션 설정을 변경 합니다.  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362247"
 ---
 # <a name="cautovectorptr-class"></a>CAutoVectorPtr 클래스
 이 클래스는 새 벡터를 사용 하 여 스마트 포인터 개체를 나타내는 및 delete 연산자입니다.  

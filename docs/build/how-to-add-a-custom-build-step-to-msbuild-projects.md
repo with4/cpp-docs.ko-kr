@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367994"
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>방법: MSBuild 프로젝트에 사용자 지정 빌드 단계 추가
 사용자 지정 빌드 단계에는 빌드에 사용자 지정 단계가입니다. 다른 모든 메서드처럼 동작 사용자 지정 빌드 단계 *명령 도구* 표준 컴파일 또는 링크 도구 단계 등의 단계입니다.  

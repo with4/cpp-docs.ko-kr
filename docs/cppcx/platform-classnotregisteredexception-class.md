@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087990"
 ---
 # <a name="platformclassnotregisteredexception-class"></a>Platform::ClassNotRegisteredException 클래스
 COM 클래스가 등록되지 않은 경우 throw됩니다.  

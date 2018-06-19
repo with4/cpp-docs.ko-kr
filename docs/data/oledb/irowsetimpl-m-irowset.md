@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100189"
 ---
 # <a name="irowsetimplmirowset"></a>IRowsetImpl::m_iRowset
 커서를 나타내는 행 집합에는 인덱스입니다.  

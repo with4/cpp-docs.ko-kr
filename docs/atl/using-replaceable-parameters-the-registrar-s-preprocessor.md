@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362286"
 ---
 # <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>대체 가능 매개 변수를 사용 하 여 (등록자&#39;s 전처리기)
 대체 가능 매개 변수 사용 등록자의 클라이언트 실행 시간 데이터를 지정할 수 있습니다. 이렇게 하려면 등록자에 관련 된 스크립트에 대 한 대체 가능 매개 변수 값을 입력 하는 대체 맵을 유지 관리 합니다. 등록자는 런타임 시 이러한 항목을 만듭니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366977"
 ---
 # <a name="cumulative-dependencies"></a>누적되는 종속 줄
 대상이 반복 되는 경우 종속성 설명 블록에 누적 됩니다.  

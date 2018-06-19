@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371514"
 ---
 # <a name="fi-preprocess-output-file-name"></a>/Fi (출력 파일 이름 전처리)
 대상 출력 파일의 이름을 지정는 [/P (파일 전처리)](../../build/reference/p-preprocess-to-a-file.md) 컴파일러 옵션 전처리 된 출력을 씁니다.  

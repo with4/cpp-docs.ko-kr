@@ -42,6 +42,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34450639"
 ---
 # <a name="gets-getws"></a>gets, _getws
 `stdin` 스트림에서 줄을 가져옵니다. 이러한 함수의 더 안전한 버전을 사용할 수 있습니다. [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)를 참조하세요.  

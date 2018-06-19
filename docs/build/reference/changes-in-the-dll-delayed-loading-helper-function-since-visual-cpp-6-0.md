@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371855"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Visual C++ 6.0 이후 DLL 지연 로드 도우미 함수의 변경 내용
 사용자 도우미 함수를 정의한 경우 있습니다 영향을 받을 수 또는 컴퓨터에 여러 버전의 Visual c + +를 있는 경우 변경 내용을 DLL 지연 로드 도우미 함수의 합니다. 예를 들어:  

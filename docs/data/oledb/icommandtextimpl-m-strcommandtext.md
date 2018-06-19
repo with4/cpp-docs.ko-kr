@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101177"
 ---
 # <a name="icommandtextimplmstrcommandtext"></a>ICommandTextImpl::m_strCommandText
 명령 텍스트 문자열을 저장합니다.  

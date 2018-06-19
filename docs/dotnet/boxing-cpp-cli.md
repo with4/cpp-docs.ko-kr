@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105893"
 ---
 # <a name="boxing-ccli"></a>Boxing(C++/CLI)
 Boxing은 값 형식을 형식으로 변환 하는 프로세스 `object` 또는 값 형식에 의해 구현 된 임의의 인터페이스 형식으로. 공용 언어 런타임 (CLR) 값 형식 상자에 값 옵니다는 `System.Object` 하 고 관리 되는 힙에 저장 합니다. unboxing하면 개체에서 값 형식이 추출됩니다. Boxing은 암시적이며 unboxing은 명시적입니다.  

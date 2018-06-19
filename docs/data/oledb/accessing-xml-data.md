@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093404"
 ---
 # <a name="accessing-xml-data"></a>XML 데이터 액세스
 데이터 소스에서 XML 데이터를 검색 하는 두 개의 메서드가: 하나 사용 하 여 [CStreamRowset](../../data/oledb/cstreamrowset-class.md) 다른 사용 [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)합니다.  

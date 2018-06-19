@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093679"
 ---
 # <a name="cbookmarksetbookmark"></a>CBookmark::SetBookmark
 참조 하는 책갈피 값 복사 `pBuffer` 에 `CBookmark` 버퍼링 및 버퍼 크기를 설정 `nSize`합니다.  

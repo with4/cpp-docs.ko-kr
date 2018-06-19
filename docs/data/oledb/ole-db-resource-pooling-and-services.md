@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111187"
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>OLE DB 리소스 풀링 및 서비스
 OLE DB 서비스 또는 OLE DB 풀링을와 잘 작동 하려면 공급자는 모든 개체의 집계를 지원 해야 합니다. 이 작업은 모든 OLE DB 1.5 또는 이상 공급자의 필요 합니다. 것이 서비스를 활용 하기 위해 중요 합니다. 집계를 지원 하지 않는 공급자 풀링 될 수 없으므로 하 고 추가 서비스가 제공 됩니다.  

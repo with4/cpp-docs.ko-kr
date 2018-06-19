@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33086988"
 ---
 # <a name="namespaces-reference-ccx"></a>네임스페이스 참조(C++/CX)
 설명서의이 섹션의 문서 설명 네임 스페이스 컴파일러를 지 원하는 C + + /cli CX 합니다.  

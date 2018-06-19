@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096108"
 ---
 # <a name="cenumerator-class"></a>CEnumerator 클래스
 노출 하는 OLE DB 열거자 개체를 사용 하 여는 [ISourcesRowset](https://msdn.microsoft.com/en-us/library/ms715969.aspx) 모든 데이터 원본 및 열거자를 설명 하는 행 집합을 반환 하는 인터페이스입니다.  

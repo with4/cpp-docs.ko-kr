@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132803"
 ---
 # <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>방법: .NET 컬렉션에서 STL/CLR 컨테이너로 변환
 이 항목에 해당 하는 STL/CLR 컨테이너와 해당.NET 컬렉션으로 변환 하는 방법을 보여 줍니다. 예를 들어.NET 변환 하는 방법을 알아보겠습니다 <xref:System.Collections.Generic.List%601> STL/clr [벡터](../dotnet/vector-stl-clr.md) .NET 변환 하는 방법 및 <xref:System.Collections.Generic.Dictionary%602> STL/clr [맵](../dotnet/map-stl-clr.md), 절차는 모든 컬렉션 및 컨테이너에 대 한 유사 하지만 .  

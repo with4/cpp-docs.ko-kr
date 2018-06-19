@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095982"
 ---
 # <a name="crowsetimplmstrindextext"></a>CRowsetImpl::m_strIndexText
 행 집합의 초기 인덱스를 포함합니다.  

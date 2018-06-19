@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089847"
 ---
 # <a name="beginaccessor"></a>BEGIN_ACCESSOR
 접근자 항목의 시작을 표시 합니다.  

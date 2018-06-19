@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095341"
 ---
 # <a name="cdataconnectionoperator-cdatasource"></a>CDataConnection::operator CDataSource*
 포함된 `CDataSource` 개체에 대한 포인터를 반환합니다.  

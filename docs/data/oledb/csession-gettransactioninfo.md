@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098435"
 ---
 # <a name="csessiongettransactioninfo"></a>CSession::GetTransactionInfo
 트랜잭션에 대 한 정보를 반환 합니다.  

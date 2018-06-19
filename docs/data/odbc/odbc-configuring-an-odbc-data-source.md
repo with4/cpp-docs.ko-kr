@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089154"
 ---
 # <a name="odbc-configuring-an-odbc-data-source"></a>ODBC: ODBC 데이터 소스 구성
 사용 하는 [데이터 원본](../../data/odbc/data-source-odbc.md) 개발한 응용 프로그램을 구성 하려면 ODBC 관리자를 사용 해야 합니다. 사용 가능한 데이터 원본 및 연결 정보는 Windows 레지스트리에 ODBC 관리자는 추적 합니다. ODBC 관리자를 추가, 수정 및 삭제할 데이터 원본에 사용 하 여는 **데이터 소스** 대화 상자를 추가 하 고 삭제할 ODBC 드라이버.  

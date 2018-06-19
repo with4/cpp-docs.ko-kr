@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364266"
 ---
 # <a name="cdynamicchain-class"></a>CDynamicChain 클래스
 이 클래스는 메시지 맵의 동적 체인을 지 원하는 메서드를 제공 합니다.  

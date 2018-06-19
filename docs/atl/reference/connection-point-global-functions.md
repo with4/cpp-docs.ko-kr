@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362793"
 ---
 # <a name="connection-point-global-functions"></a>연결 지점 전역 함수
 이러한 함수는 연결점에 대 한 지원을 제공 하 고 지도 싱크 합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097525"
 ---
 # <a name="columnname"></a>COLUMN_NAME
 행 집합의 특정 열에는 행 집합의 바인딩을 나타냅니다. 비슷한 [COLUMN_ENTRY](../../data/oledb/column-entry.md)제외 하 고이 매크로 열 번호 대신 열 이름을 사용 합니다.  

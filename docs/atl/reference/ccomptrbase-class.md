@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366369"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 클래스
 이 클래스는 메모리 COM 기반 루틴을 사용 하 여 스마트 포인터 클래스에 대 한 기본 사항을 제공 합니다.  

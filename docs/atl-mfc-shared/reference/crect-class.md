@@ -49,6 +49,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366302"
 ---
 # <a name="crect-class"></a>CRect 클래스
 Windows 비슷합니다 [RECT](../../mfc/reference/rect-structure1.md) 구조입니다.  

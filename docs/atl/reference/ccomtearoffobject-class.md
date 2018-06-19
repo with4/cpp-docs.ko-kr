@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364991"
 ---
 # <a name="ccomtearoffobject-class"></a>CComTearOffObject 클래스
 이 클래스는 분리 인터페이스를 구현합니다.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094054"
 ---
 # <a name="cdatasourcegetinitializationstring"></a>CDataSource::GetInitializationString
 현재 열려 있는 데이터 원본 초기화 문자열을 검색 합니다.  

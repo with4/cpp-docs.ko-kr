@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364000"
 ---
 # <a name="cw2aex-class"></a>CW2AEX 클래스
 이 클래스는 문자열 변환 매크로 사용 `CT2AEX`, `CW2TEX`, `CW2CTEX`, 및 `CT2CAEX`, 및 typedef **CW2A**합니다.  

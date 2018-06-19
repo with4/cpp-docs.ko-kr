@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362202"
 ---
 # <a name="string-and-text-classes"></a>문자열 및 텍스트 클래스
 이러한 클래스는 문자열 및 텍스트 문자열 변환에 대 한 지원을 제공합니다.  

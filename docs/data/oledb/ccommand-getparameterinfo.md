@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094285"
 ---
 # <a name="ccommandgetparameterinfo"></a>CCommand::GetParameterInfo
 명령의 매개 변수, 속성 이름 및 해당 종류의 목록을 가져옵니다.  

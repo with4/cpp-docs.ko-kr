@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112016"
 ---
 # <a name="declaration-of-a-clr-reference-class-object"></a>CLR 참조 클래스 개체 선언
 선언 하 고 참조 클래스 형식의 개체를 인스턴스화하는 구문 Visual c + + Managed Extensions for c + + 변경 되었습니다.  

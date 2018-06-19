@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097122"
 ---
 # <a name="crowsetissamerow"></a>CRowset::IsSameRow
 현재 행과 지정된 된 행을 비교합니다.  

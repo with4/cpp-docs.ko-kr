@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091737"
 ---
 # <a name="recordset-working-with-large-data-items-odbc"></a>레코드 집합: 대형 데이터 항목 작업(ODBC)
 이 항목 MFC ODBC 클래스와 MFC DAO 클래스에 적용 됩니다.  

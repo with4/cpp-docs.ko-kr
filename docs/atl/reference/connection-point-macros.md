@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362932"
 ---
 # <a name="connection-point-macros"></a>연결 지점 매크로
 이러한 매크로 연결 지점 맵 및 항목을 정의합니다.  

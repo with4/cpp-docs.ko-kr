@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105753"
 ---
 # <a name="binarydelegatenoreturn-stlclr"></a>binary_delegate_noreturn(STL/CLR)
 반환 하는 두 인수 대리자를 설명 하는 genereic 클래스 `void`합니다. 사용 하면 대리자를 해당 인수를 기준으로 지정 합니다.  

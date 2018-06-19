@@ -32,6 +32,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366080"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL 텍스트 인코딩 함수
 이러한 함수는 텍스트 인코딩 및 디코딩을 지원 합니다.

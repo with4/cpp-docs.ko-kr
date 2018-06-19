@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096014"
 ---
 # <a name="cdynamicaccessoraddbindentry"></a>CDynamicAccessor::AddBindEntry
 출력 열에 바인딩 항목을 추가합니다.  

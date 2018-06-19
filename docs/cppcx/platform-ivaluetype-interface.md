@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089261"
 ---
 # <a name="platformivaluetype-interface"></a>Platform::IValueType 인터페이스
 `Platform::IValueType` 은 값 클래스 및 값 구조체로 구현되는 인프라 인터페이스입니다. 코드에서 명시적으로 사용되지 않아야 합니다.  

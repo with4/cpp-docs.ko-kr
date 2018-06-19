@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102386"
 ---
 # <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>레코드 뷰에서의 탐색 지원  (MFC Data Access)
 이 항목에 레코드를 이동 하는 방법에 설명 프로그램 [CRecordView](../mfc/reference/crecordview-class.md) 에 대 한 정보를 포함 하 여 클래스:  

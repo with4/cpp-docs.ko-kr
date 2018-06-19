@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105675"
 ---
 # <a name="filln-stlclr"></a>fill_n(STL/CLR)
 특정 요소로 시작하는 범위에서 지정된 개수의 요소에 새 값을 할당합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133651"
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>방법: Windows Forms 컨트롤에 명령 라우팅 추가
 [CWinFormsView](../mfc/reference/cwinformsview-class.md) MFC 명령 (예를 들어 프레임 메뉴 항목 및 도구 모음 단추)을 처리할 수 있도록 허용 하는 사용자 정의 컨트롤에 명령 및 명령 업데이트 UI 메시지를 라우팅합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369749"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>DEF 파일을 사용하여 DLL에서 내보내기
 모듈 정의 (.def) 파일은 DLL의 다양 한 특성을 설명 하는 하나 이상의 모듈 문을 포함 하는 텍스트 파일. 사용 하지 않는 경우는 **__declspec (dllexport)** DLL의 함수를 내보내려면 키워드 DLL.def 파일을 필요 합니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102812"
 ---
 # <a name="isessionpropertiesimplgetproperties"></a>ISessionPropertiesImpl::GetProperties
 속성의 목록을 반환 하는 **DBPROPSET_SESSION** 현재 세션에 설정 된 속성 그룹입니다.  

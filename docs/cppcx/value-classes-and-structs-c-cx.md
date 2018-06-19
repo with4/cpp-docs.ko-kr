@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090716"
 ---
 # <a name="value-classes-and-structs-ccx"></a>값 클래스 및 구조체(C++/CX)
 A *값 구조체* 또는 *값 클래스* 는 windows 런타임 호환 POD ("plain old data" 구조체). 크기가 고정되어 있고 필드로만 구성되어 있으며 ref 클래스와는 달리 속성이 없습니다.  

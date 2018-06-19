@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371998"
 ---
 # <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
 /C 옵션을 지정 하지 않으면 CL 컴파일러 링크를 자동으로 호출 합니다. CL에서는 링커 명령줄 옵션 및 인수를 제어할 수 있습니다. 다음 표에서 연결에 영향을 주는 CL 기능을 요약 합니다.  

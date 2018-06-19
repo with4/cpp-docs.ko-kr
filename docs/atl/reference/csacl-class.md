@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363586"
 ---
 # <a name="csacl-class"></a>CSacl 클래스
 이 클래스는 SACL (시스템 액세스 제어 목록) 구조에 대 한 래퍼입니다.  

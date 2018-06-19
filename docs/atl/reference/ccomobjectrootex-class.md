@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365983"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 클래스
 이 클래스는 집계 되지 않은 원시 및 집계 개체에 대 한 개체 참조 개수 관리를 처리 하는 메서드를 제공 합니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096469"
 ---
 # <a name="crowsetimplgetcolumninfo"></a>CRowsetImpl::GetColumnInfo
 특정 클라이언트 요청에 대 한 열 정보를 검색합니다.  

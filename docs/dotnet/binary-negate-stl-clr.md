@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108490"
 ---
 # <a name="binarynegate-stlclr"></a>binary_negate(STL/CLR)
 함수를 설명 하는 템플릿 클래스는 논리를 호출 하는 경우 반환 구조으로 저장된 하는 두 인수 함수의 없습니다. 사용 하면 해당 저장된 함수 측면에서 함수 개체를 지정 합니다.  

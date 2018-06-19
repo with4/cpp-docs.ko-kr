@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103345"
 ---
 # <a name="idbpropertiesimplgetproperties"></a>IDBPropertiesImpl::GetProperties
 데이터 원본 개체 또는에 현재 설정 된 Initialization 속성 그룹에서 속성의 값에 대해 현재 설정 되어 있는 데이터 원본, 데이터 원본 정보 및 초기화 속성 그룹에서 속성의 값을 반환 합니다.는 열거자입니다.  

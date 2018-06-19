@@ -60,6 +60,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095705"
 ---
 # <a name="ccolumnprivileges-ccolumnprivilegeinfo"></a>CColumnPrivileges, CColumnPrivilegeInfo
 Typedef 클래스 호출 **CColumnPrivileges** 해당 매개 변수 클래스를 구현 하려면 **CColumnPrivilegeInfo**합니다.  

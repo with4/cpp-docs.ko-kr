@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366265"
 ---
 # <a name="arm-exception-handling"></a>ARM 예외 처리
 Windows on ARM은 하드웨어에서 생성하는 비동기식 예외 및 소프트웨어에서 생성하는 동기식 예외에 대해 동일한 구조적 예외 처리 메커니즘을 사용합니다. 언어별 예외 처리기가 언어 도우미 함수를 사용하여 Windows의 구조적 예외 처리를 기반으로 작성됩니다. 이 문서에서는 Windows on ARM의 예외 처리 및 MASM과 Visual C++ 컴파일러에 의해 생성되는 코드를 사용하는 언어 도우미에 대해 설명합니다.  

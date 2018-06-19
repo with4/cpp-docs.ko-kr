@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102953"
 ---
 # <a name="traversing-a-simple-rowset"></a>단순 행 집합 검색
 다음 예에서는 명령을 포함 하지 않는 쉽고 빠르게 데이터베이스 액세스를 보여 줍니다. 라는 테이블에서 레코드를 검색 하는 다음 소비자 코드는 ATL 프로젝트에서 *예술가* Microsoft Access에서 Microsoft OLE DB Provider for ODBC 사용 하 여 데이터베이스입니다. 코드는 만듭니다는 [CTable](../../data/oledb/ctable-class.md) table 개체 접근자를 가진 사용자 레코드 클래스에 따라 `CArtists`합니다. 연결을 엽니다, 그리고 연결에서 세션을 열고 세션에 있는 테이블을 엽니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109016"
 ---
 # <a name="hashmultimapkeycomp-stlclr"></a>hash_multimap::key_comp(STL/CLR)
 두 키에 대 한 순서 지정 대리자를 복사합니다.  

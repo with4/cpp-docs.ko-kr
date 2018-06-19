@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096329"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet 클래스
 상속 되는 **DBPROPSET** 구조체를 추가 하는 키 필드를 초기화 하는 생성자와 `AddProperty` 메서드에 액세스 합니다.  

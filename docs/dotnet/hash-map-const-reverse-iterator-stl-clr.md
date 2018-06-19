@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108896"
 ---
 # <a name="hashmapconstreverseiterator-stlclr"></a>hash_map::const_reverse_iterator(STL/CLR)
 제어 되는 시퀀스에 대 한 상수 역방향 반복기의 형식입니다.  

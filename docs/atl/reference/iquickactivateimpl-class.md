@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362806"
 ---
 # <a name="iquickactivateimpl-class"></a>IQuickActivateImpl 클래스
 이 클래스는 컨테이너의 컨트롤 초기화를 단일 호출으로 결합합니다.  

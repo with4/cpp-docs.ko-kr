@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364234"
 ---
 # <a name="window-class-macros"></a>창 클래스 매크로
 이러한 매크로 창 클래스 유틸리티를 정의 합니다.  

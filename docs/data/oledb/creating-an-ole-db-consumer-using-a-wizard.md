@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097002"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>마법사를 사용하여 OLE DB 소비자 만들기
 이 절차는 OLE DB 템플릿 소비자를 생성 하 고 다음 검색 하 고 데이터베이스 테이블에서 데이터를 표시 하는 콘솔 응용 프로그램의 기본 코드를 수정할 ATL 프로젝트 마법사 및 ATL OLE DB 소비자 마법사를 사용 하는 방법을 보여 줍니다.  

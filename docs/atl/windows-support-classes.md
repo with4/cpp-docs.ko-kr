@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362084"
 ---
 # <a name="windows-support-classes"></a>Windows 지원 클래스
 다음 클래스에서는 windows에 대 한 지원:  

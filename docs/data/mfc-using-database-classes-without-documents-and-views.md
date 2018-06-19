@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093898"
 ---
 # <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC: 문서 및 뷰를 이용하지 않는 데이터베이스 클래스 사용
 경우에 따라 데이터베이스 응용 프로그램의 프레임 워크의 문서/뷰 아키텍처를 사용 하지 않을 수 있습니다. 이 항목에 설명 합니다.  

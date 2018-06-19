@@ -41,6 +41,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366395"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan 클래스
 상대 시간을, 시간 범위를 나타냅니다.  

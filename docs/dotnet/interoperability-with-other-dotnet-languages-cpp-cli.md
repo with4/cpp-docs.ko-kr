@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129101"
 ---
 # <a name="interoperability-with-other-net-languages-ccli"></a>다른 .NET 언어와의 상호 운용성(C++/CLI)
 이 섹션의 항목에는 기능을 사용 하거나 C# 또는 Visual Basic에서 작성 된 어셈블리에 기능을 제공 하는 Visual c + + 어셈블리를 만드는 방법을 보여 줍니다.  

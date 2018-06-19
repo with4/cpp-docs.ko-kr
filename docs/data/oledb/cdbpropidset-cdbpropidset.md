@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090701"
 ---
 # <a name="cdbpropidsetcdbpropidset"></a>CDBPropIDSet::CDBPropIDSet
 생성자입니다. 초기화는 **rgProperties**, **cProperties**, 및 (옵션) **guidPropertySet** 의 필드는 [DBPROPIDSET](https://msdn.microsoft.com/en-us/library/ms717981.aspx) 구조입니다.  

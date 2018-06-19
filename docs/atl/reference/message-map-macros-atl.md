@@ -52,6 +52,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366132"
 ---
 # <a name="message-map-macros-atl"></a>메시지 맵 매크로 (ATL)
 이러한 매크로 메시지 맵 및 항목을 정의 합니다.  

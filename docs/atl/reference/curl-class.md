@@ -50,6 +50,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366236"
 ---
 # <a name="curl-class"></a>CUrl 클래스
 이 클래스는 URL을 나타냅니다. 기존 URL을 구문 분석 하는지 여부를 개별적으로 URL의 각 요소를 조작할 수 있습니다 문자열 또는 처음부터 문자열을 작성 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108280"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>OLE DB 소비자 템플릿 작업
 다음 항목에서는 일반적인 시나리오에서 OLE DB 소비자 템플릿 사용 하는 방법의 몇 가지 예를 제공 합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362273"
 ---
 # <a name="invoking-scripts"></a>스크립트 호출
 [대체 가능 매개 변수 (The 등록자 전처리기)를 사용 하 여](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) 대체 지도 설명 하 고 등록 방법에 언급 **AddReplacement**합니다. 등록자 스크립트에 다른 메서드를 8 개 있으며 다음 표에 설명 된 모든.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088367"
 ---
 # <a name="changes-you-might-make-to-the-default-code--mfc-data-access"></a>기본 코드에 수행할 수 있는 변경  (MFC Data Access)
 [MFC 응용 프로그램 마법사](../mfc/reference/database-support-mfc-application-wizard.md) 단일 테이블의 모든 레코드를 선택 하는 레코드 집합 클래스를 작성 합니다. 다음 방식 중 하나 이상을 사용하여 해당 동작을 수정하는 경우가 많습니다.  

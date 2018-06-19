@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098226"
 ---
 # <a name="crowsetfindnextrow"></a>CRowset::FindNextRow
 지정된 된 책갈피 다음 다음 일치 하는 행을 찾습니다.  

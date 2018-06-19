@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091870"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC: 문서 및 뷰를 이용한 데이터베이스 클래스 사용
 문서/뷰 아키텍처 유무는 MFC 데이터베이스 클래스를 사용할 수 있습니다. 이 항목에는 문서 및 뷰 작업을 강조합니다. 설명합니다.  

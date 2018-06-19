@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369567"
 ---
 # <a name="bscmake-command-file-response-file"></a>BSCMAKE 명령 파일(지시 파일)
 명령 파일의 명령줄 입력의 일부 또는 전체를 제공할 수 있습니다. 다음 구문을 사용 하 여 명령 파일을 지정 합니다.  

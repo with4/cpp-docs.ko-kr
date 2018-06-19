@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366938"
 ---
 # <a name="dependents"></a>종속 파일
 종속 줄에서 0 개 이상의 dependents 콜론 (:) 또는 두 개의 콜론 (:), 후 유효한 파일을 사용 하 여 지정 하거나 [의사 대상](../build/pseudotargets.md)합니다. 여러 종속 하나 이상의 공백이 나 탭으로 구분 합니다. 종속 파일은 대/소문자 구분 하지 않습니다. 경로 파일 이름에 허용 됩니다.  

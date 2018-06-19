@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110171"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>OLE DB 공급자로 문자열 읽어들이기
 `RMyProviderRowset::Execute` 함수에서 파일을 열고 문자열 읽습니다. 소비자는 공급자에 파일 이름을 호출 하 여 전달 [icommandtext:: Setcommandtext](https://msdn.microsoft.com/en-us/library/ms709757.aspx)합니다. 공급자 파일의 이름을 받는 멤버 변수에 저장 합니다. `m_szCommandText`합니다. `Execute` 파일 이름을 읽고 `m_szCommandText`합니다. 파일 이름이 잘못 되었거나 파일 언어가 없는 경우 `Execute` 에서 오류를 반환 합니다. 을 열고 파일 및 호출 `fgets` 문자열을 검색 합니다. 각 문자열 집합에, 읽기에 대 한 `Execute` 사용자 레코드의 인스턴스를 만듭니다 (`CAgentMan`) 배열에 넣습니다.  

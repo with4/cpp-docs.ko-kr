@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099461"
 ---
 # <a name="icommandimplmbcancel"></a>ICommandImpl::m_bCancel
 명령이 취소 되었는지를 나타냅니다.  

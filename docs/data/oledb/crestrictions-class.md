@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098487"
 ---
 # <a name="crestrictions-class"></a>CRestrictions 클래스
 스키마 행 집합에 대 한 제한 사항을 지정할 수 있도록 하는 제네릭 클래스입니다.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101554"
 ---
 # <a name="irowsetimplrefrows"></a>IRowsetImpl::RefRows
 에 의해 호출 [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) 및 [ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md) 증가 하거나 기존 행 핸들에 대 한 참조 횟수를 해제 합니다.  

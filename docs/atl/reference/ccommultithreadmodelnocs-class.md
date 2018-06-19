@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364195"
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS 클래스
 `CComMultiThreadModelNoCS` 스레드로부터 안전한은 메서드를 제공 증가 및 감소는 변수 값 없이 임계 영역 잠금 또는 잠금 해제 기능입니다.  

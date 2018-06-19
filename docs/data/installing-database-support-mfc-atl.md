@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092573"
 ---
 # <a name="installing-database-support-mfcatl"></a>데이터베이스 지원 설치 (MFC/ATL)
 Visual c + +는 모든 데이터베이스 제품을 포함 하지 않습니다. 대상  

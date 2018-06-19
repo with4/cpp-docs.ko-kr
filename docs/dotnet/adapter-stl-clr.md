@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104522"
 ---
 # <a name="adapter-stlclr"></a>adapter(STL/CLR)
 STL/CLR 헤더 `<cliext/adapter>` 두 템플릿 클래스 지정 (`collection_adapter` 및 `range_adapter`), 및 템플릿 함수 `make_collection`합니다.  

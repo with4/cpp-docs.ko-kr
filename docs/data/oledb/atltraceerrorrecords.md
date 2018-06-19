@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093349"
 ---
 # <a name="atltraceerrorrecords"></a>AtlTraceErrorRecords
 오류가 반환 되 면 OLE DB 오류 레코드 덤프 장치 정보를 덤프 합니다.  

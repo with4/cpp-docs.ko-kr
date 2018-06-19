@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111252"
 ---
 # <a name="record-views--mfc-data-access"></a>레코드 뷰  (MFC Data Access)
 이 섹션은 MFC ODBC 클래스에만 적용 됩니다. OLE DB 레코드 뷰에 대 한 정보를 참조 하십시오. [COleDBRecordView](../mfc/reference/coledbrecordview-class.md) 및 [를 사용 하 여 OLE DB 레코드 뷰](../data/oledb/using-ole-db-record-views.md)합니다.  

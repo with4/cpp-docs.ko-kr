@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094399"
 ---
 # <a name="cdynamicaccessorgetordinal"></a>CDynamicAccessor::GetOrdinal
 열 이름이 지정 된 열 번호를 검색 합니다.  

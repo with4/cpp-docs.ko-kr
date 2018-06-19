@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098370"
 ---
 # <a name="crowsetgetapproximateposition"></a>CRowset::GetApproximatePosition
 해당 책갈피 하는 행의 대략적인 위치를 반환 합니다.  

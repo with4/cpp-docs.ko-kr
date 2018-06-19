@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092320"
 ---
 # <a name="dynaset"></a>다이너셋
 이 항목에서는 다이너셋 및 설명의 [가용성](#_core_availability_of_dynasets)합니다.  

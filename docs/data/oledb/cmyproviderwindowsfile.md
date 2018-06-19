@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097928"
 ---
 # <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
 마법사는 데이터의 행을 하나씩 포함 하는 클래스를 만듭니다. 이 경우 호출 됩니다 `CMyProviderWindowsFile`합니다. 다음 코드에 대 한 `CMyProviderWindowsFile` 마법사에서 생성 되 고 사용 하 여 디렉터리에 모든 파일을 나열는 **WIN32_FIND_DATA** 구조입니다. `CMyProviderWindowsFile` 상속 되는 **WIN32_FIND_DATA** 구조:  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096667"
 ---
 # <a name="crowsetmovetoratio"></a>CRowset::MoveToRatio
 행 집합의 소수 자릿수 위치에서 시작 하는 행을 인출 합니다.  

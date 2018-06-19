@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097343"
 ---
 # <a name="cmyproviderrowset-myproviderrsh"></a>CMyProviderRowset(MyProviderRS.H)
 행 집합 개체에 대 한 항목이 생성 됩니다. 여기서는 이 행 집합을 `CMyProviderRowset`이라고 합니다. `CMyProviderRowset` 클래스 라고 하는 OLE DB provider 클래스에서 상속 `CRowsetImpl`, 행 집합 개체에 대 한 모든 필요한 인터페이스를 구현 하는 합니다. 다음 코드에 대 한 상속 체인을 보여 줍니다. `CRowsetImpl`:  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364420"
 ---
 # <a name="ccomunkarray-class"></a>CComUnkArray 클래스
 이 클래스는 저장 **IUnknown** 포인터에 대 한 매개 변수로 사용할 수 있도록 설계 되 고는 [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) 템플릿 클래스입니다.  

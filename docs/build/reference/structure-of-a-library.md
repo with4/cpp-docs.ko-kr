@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373103"
 ---
 # <a name="structure-of-a-library"></a>라이브러리 구조
 COFF 개체를 포함 하는 라이브러리입니다. 라이브러리의 개체에에서는 함수 및 프로그램의 다른 개체에서 외부에서 참조 될 수 있는 데이터를 포함 합니다. 라이브러리의 개체 라이브러리 멤버 라고도 합니다.  

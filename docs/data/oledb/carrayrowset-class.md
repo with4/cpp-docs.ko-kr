@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091104"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset 클래스
 배열 구문을 사용 하 여 행 집합의 요소를 액세스 합니다.  

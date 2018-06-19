@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105259"
 ---
 # <a name="irowsetlocateimplgetrowsat"></a>IRowsetLocateImpl::GetRowsAt
 책갈피에서의 오프셋으로 지정 된 행부터 시작 하는 행을 인출 합니다.  

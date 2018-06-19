@@ -44,6 +44,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366447"
 ---
 # <a name="ccombstr-class"></a>CComBSTR 클래스
 이 클래스에 대 한 래퍼는 `BSTR`s입니다.  

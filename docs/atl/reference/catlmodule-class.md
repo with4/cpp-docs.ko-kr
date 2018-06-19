@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365284"
 ---
 # <a name="catlmodule-class"></a>CAtlModule 클래스
 이 클래스는 몇 가지 ATL 모듈 클래스에서 사용 되는 메서드를 제공 합니다.  
