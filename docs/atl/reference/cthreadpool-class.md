@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365691"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool 클래스
 이 클래스는 작업 항목의 큐를 처리 하는 작업자 스레드 풀을 제공 합니다.  

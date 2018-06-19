@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355727"
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>사용자 지정 문자열 관리자 구현 (기본 방법)
 문자열 데이터는 ATL 제공 하기 위해 메모리 할당 체계를 사용자 지정 하는 가장 쉬운 방법은 **CAtlStringMgr** 클래스 있지만 사용자 고유의 메모리 할당 루틴을 제공 합니다. 에 대 한 생성자 **CAtlStringMgr** 단일 매개 변수:에 대 한 포인터는 `IAtlMemMgr` 개체입니다. `IAtlMemMgr` 힙을 제네릭 인터페이스를 제공 하는 추상 기본 클래스가입니다. 사용 하는 `IAtlMemMgr` 인터페이스는 **CAtlStringMgr** 할당을 다시 할당 하 고 문자열 데이터를 저장 하는 데 사용 된 메모리를 해제 합니다. 구현 하거나는 `IAtlMemMgr` 인터페이스를 직접, 또는 5 ATL 제공 하는 메모리 관리자 클래스 중 하나를 사용 합니다. ATL에서 제공 하는 메모리 관리자는 단순히 기존 메모리 할당 기능을 래핑합니다.  

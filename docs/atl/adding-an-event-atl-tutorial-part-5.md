@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361267"
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>이벤트 추가(ATL 자습서, 5부)
 이 단계에서 추가한는 `ClickIn` 및 `ClickOut` ATL 컨트롤에는 이벤트입니다. 발생는 `ClickIn` 다각형 및 화재 내부를 클릭할 경우 이벤트 `ClickOut` 바깥쪽을 클릭할 경우. 이벤트 추가 하려면 작업은 다음과 같습니다.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356832"
 ---
 # <a name="cstring-argument-passing"></a>CString 인수 전달
 이 문서에서는 전달 하는 방법을 설명 [CString](../atl-mfc-shared/reference/cstringt-class.md) 함수 및 반환 하는 방법에 대 한 개체 `CString` 함수에서 개체입니다.  

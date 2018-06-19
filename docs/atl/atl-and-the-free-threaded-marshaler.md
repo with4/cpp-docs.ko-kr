@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355828"
 ---
 # <a name="atl-and-the-free-threaded-marshaler"></a>ATL 및 자유 스레드된 마샬러
 ATL 단순 개체 마법사의 속성 페이지 (FTM) 자유 스레드된 마샬러를 집계 하 여 클래스를 허용 하는 옵션을 제공 합니다.  

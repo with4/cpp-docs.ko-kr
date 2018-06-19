@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365636"
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl 클래스
 이 클래스의 구현을 제공는 `IDispatch` 메서드.  

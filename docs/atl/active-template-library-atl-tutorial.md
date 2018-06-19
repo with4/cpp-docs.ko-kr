@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354870"
 ---
 # <a name="active-template-library-atl-tutorial"></a>ATL(액티브 템플릿 라이브러리) 자습서
 ATL은 효율적이고 유연하면서 간단한 컨트롤을 만드는 과정을 간소화하도록 설계되었습니다. 이 자습서에서는 많은 ATL 및 COM 기초를 보여주는 ActiveX 컨트롤을 만드는 과정을 안내합니다.  

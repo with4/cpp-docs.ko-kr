@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32365102"
 ---
 # <a name="ccomsinglethreadmodel-class"></a>CComSingleThreadModel 클래스
 이 클래스 메서드를 제공 증가 및 감소에 대 한 변수 값입니다.  

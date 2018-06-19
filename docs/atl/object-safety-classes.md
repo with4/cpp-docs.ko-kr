@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355622"
 ---
 # <a name="object-safety-classes"></a>보안 개체 클래스
 다음 클래스 개체 보안에 대 한 지원을 제공합니다.  

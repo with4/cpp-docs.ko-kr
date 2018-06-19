@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359664"
 ---
 # <a name="ustringorid-class"></a>_U_STRINGorID 클래스
 이 인수 어댑터 클래스 리소스 이름 중 하나를 사용 하면 ( `LPCTSTR`s) 또는 리소스 Id ( **UINT**s) 호출자 ID를 사용 하 여 문자열을 변환할 필요 없이 함수에 전달할는 **MAKEINTRESOURCE** 매크로입니다.  

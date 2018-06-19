@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424472"
 ---
 # <a name="using-declaration"></a>선언 사용
 선언을 사용 하는 이름을는 선언적 영역에 새로 추가 선언을 사용 하 여 나타납니다.  

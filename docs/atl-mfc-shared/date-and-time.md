@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355563"
 ---
 # <a name="date-and-time"></a>날짜 및 시간
 MFC는 다양 한 방법의 날짜와 시간 작업을 지원합니다. 여기에는 다음이 포함됩니다.  

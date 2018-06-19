@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098409"
 ---
 # <a name="crowsetgetoriginaldata"></a>CRowset::GetOriginalData
 호출 **IRowsetUpdate::GetOriginalData** 가장 최근에 풀에서 반입 되거나 데이터 원본에 전송 된 데이터를 검색 합니다.  

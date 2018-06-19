@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364552"
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel 클래스
 `CComMultiThreadModel` 변수 값 증가 및 감소에 대 한 스레드 안전 메서드를 제공 합니다.  

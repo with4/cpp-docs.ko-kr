@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424765"
 ---
 # <a name="keywords-c"></a>키워드 (c + +)
 키워드는 특별한 의미가 있는 미리 정의된 예약된 식별자입니다. 따라서 프로그램에서 키워드를 식별자로 사용할 수 없습니다. 다음 키워드는 Microsoft C++에서 예약되었습니다. 밑줄이 앞에 오는 이름은 Microsoft 확장입니다.  

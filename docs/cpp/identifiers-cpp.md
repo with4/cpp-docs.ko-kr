@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415409"
 ---
 # <a name="identifiers-c"></a>식별자 (c + +)
 식별자는 다음 중 하나를 나타내는 데 사용되는 문자 시퀀스입니다.  

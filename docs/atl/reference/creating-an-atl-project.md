@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359005"
 ---
 # <a name="creating-an-atl-project"></a>ATL 프로젝트 만들기
 Win32 프로젝트의 폴더에 있는 ATL 프로젝트 마법사를 사용 하는 ATL 프로젝트를 만드는 가장 쉬운 방법은 **새 프로젝트 대화 상자**합니다.  

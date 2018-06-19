@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367630"
 ---
 # <a name="long-filenames-in-a-makefile"></a>메이크파일의 긴 파일 이름
 다음과 같이 긴 파일 이름을에 큰따옴표를 묶습니다.  

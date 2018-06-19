@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366902"
 ---
 # <a name="configure-visual-c-for-arm-processors"></a>ARM 프로세서에 대 한 Visual c + + 구성
 

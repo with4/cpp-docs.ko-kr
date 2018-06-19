@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361816"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>C 스타일 문자열 관련 CString 작업
 A [CString](../atl-mfc-shared/using-cstring.md) 문자열 데이터를 포함 하는 개체입니다. `CString` 집합이 상속는 [메서드 및 연산자](../atl-mfc-shared/reference/cstringt-class.md) 클래스 서식 파일에 정의 되어 [CStringT](../atl-mfc-shared/reference/cstringt-class.md) 문자열 데이터에 사용할 수 있습니다. (`CString` 는 `typedef` 특수화 하는 `CStringT` 문자 데이터의 종류를 사용 하는 `CString` 지원 합니다.)  

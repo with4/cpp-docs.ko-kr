@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362041"
 ---
 # <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl 클래스
 이 클래스는 해당 사이트와 통신 하는 개체를 허용 하는 메서드를 제공 합니다.  

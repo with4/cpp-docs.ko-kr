@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359819"
 ---
 # <a name="iworkerthreadclient-interface"></a>IWorkerThreadClient 인터페이스
 `IWorkerThreadClient` 클라이언트 컴퓨터에 구현 된 인터페이스는 [CWorkerThread](../../atl/reference/cworkerthread-class.md) 클래스입니다.  

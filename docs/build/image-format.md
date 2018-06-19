@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367942"
 ---
 # <a name="image-format"></a>이미지 형식
 PE32 + 실행 가능 이미지 형식이입니다. 실행 가능 이미지 (Dll과 Exe) 32 비트 변위 된 상대 주소 정적 이미지 데이터를 사용할 수 있도록 최대 크기인 2gb로 제한 됩니다. 이 데이터에 가져오기 주소 테이블, 문자열 상수, 정적 글로벌 데이터 및에 포함 됩니다.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356510"
 ---
 # <a name="memory-management-classes"></a>메모리 관리 클래스
 이러한 클래스는 힙의 포인터, 스마트 포인터 및 다른 메모리 할당 루틴에 대 한 지원을 제공합니다.  

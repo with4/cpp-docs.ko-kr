@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32411246"
 ---
 # <a name="compiler-com-support-classes"></a>컴파일러 COM 지원 클래스
 **Microsoft 전용**  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424778"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>형식 변환 및 형식 안전성(최신 C++)
 이 문서에서는 공용 형식 변환 문제를 식별하고 C++ 코드에서 이 문제를 방지하는 방법에 대해 설명합니다.  

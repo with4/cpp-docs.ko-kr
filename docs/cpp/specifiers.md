@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422328"
 ---
 # <a name="specifiers"></a>지정자
 이 항목에 설명 된 *decl 지정자* 의 (선언 지정자) 구성 요소는 [선언](declarations-and-definitions-cpp.md)합니다.  

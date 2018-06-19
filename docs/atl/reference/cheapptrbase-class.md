@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364570"
 ---
 # <a name="cheapptrbase-class"></a>CHeapPtrBase 클래스
 이 클래스는 여러 힙 스마트 포인터 클래스에 대 한 기본을 형성 합니다.  

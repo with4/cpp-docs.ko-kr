@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360922"
 ---
 # <a name="ccomsimplethreadallocator-class"></a>CComSimpleThreadAllocator 클래스
 이 클래스는 클래스에 대 한 스레드 선택을 관리 `CComAutoThreadModule`합니다.  

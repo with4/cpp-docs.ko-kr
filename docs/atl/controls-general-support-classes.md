@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354857"
 ---
 # <a name="controls-general-support-classes"></a>컨트롤: 일반 지원 클래스
 ATL 컨트롤에 대 한 일반 지원을 제공 하는 다음 클래스:  

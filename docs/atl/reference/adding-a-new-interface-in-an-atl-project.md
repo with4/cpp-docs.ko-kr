@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356747"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>ATL 프로젝트에 새 인터페이스 추가
 개체 또는 컨트롤에는 인터페이스를 추가 하면 해당 인터페이스의 각 메서드에 대 한 스텁 아웃 함수를 만듭니다. 개체 또는 컨트롤에서 현재 기존의 형식 라이브러리에서 찾은 인터페이스만 추가할 수 있습니다. 또한 인터페이스를 추가할 클래스 구현 해야 합니다는 [BEGIN_COM_MAP](com-map-macros.md#begin_com_map) 매크로 프로젝트 특성을 사용 하는 경우에 있어야 하거나는 `coclass` 특성입니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357495"
 ---
 # <a name="implementing-property-pages"></a>속성 페이지 구현
 속성 페이지는 COM 구현 하는 개체는 `IPropertyPage` 또는 **IPropertyPage2** 인터페이스입니다. ATL 속성 페이지를 통해 구현에 대 한 지원을 제공는 [ATL 속성 페이지 마법사](../atl/reference/atl-property-page-wizard.md) 에 [클래스 추가 대화 상자](../ide/add-class-dialog-box.md)합니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367666"
 ---
 # <a name="dot-directives"></a>점 지시문
 점 지시문은 줄의 시작 부분에 설명 블록 외부를 지정 합니다. 점 지시문은 마침표로 시작 (합니다. )에 콜론 (:) 뒤에 야 합니다. 공백 및 탭 허용 됩니다. 점 지시문 이름은 대 소문자를 구분 하며 대문자입니다.  

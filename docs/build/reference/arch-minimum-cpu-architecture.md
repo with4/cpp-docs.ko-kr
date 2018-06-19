@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368992"
 ---
 # <a name="arch-minimum-cpu-architecture"></a>/arch(최소 CPU 아키텍처)
 아키텍처 옵션은 코드 생성을 위한 아키텍처를 지정합니다. 해당 대상 플랫폼에 대해 /arch 옵션을 보려면 사용 중인 기본 하드웨어 아키텍처를 선택합니다.  

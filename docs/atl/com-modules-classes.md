@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354983"
 ---
 # <a name="com-modules-classes"></a>COM 모듈 클래스
 다음 클래스에서는 COM 모듈에 대 한 지원:  

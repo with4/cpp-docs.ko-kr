@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359034"
 ---
 # <a name="ccomobjectroot-class"></a>CComObjectRoot 클래스
 이 형식 정의의 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) 기본 스레딩 모델을 서버에 템플릿 화 됩니다.  

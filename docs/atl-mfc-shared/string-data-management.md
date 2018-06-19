@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361238"
 ---
 # <a name="string-data-management"></a>문자열 데이터 관리
 Visual c + +에서는 문자열 데이터를 관리 하는 여러 방법을 제공 합니다.  

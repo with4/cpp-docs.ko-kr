@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360689"
 ---
 # <a name="cstringrefelementtraits-class"></a>CStringRefElementTraits 클래스
 이 클래스와 관련 된 클래스 개체를 컬렉션에 저장 된 문자열 정적 함수를 제공 합니다. String 개체 참조로 처리 됩니다.  

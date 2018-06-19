@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415147"
 ---
 # <a name="how-to-create-and-use-weakptr-instances"></a>방법: weak_ptr 인스턴스 만들기 및 사용
 개체의 내부 개체를 액세스 하는 방법의 저장 해야 경우에 따라 한 `shared_ptr` 참조 개수가 증가 발생 하지 않고 있습니다. 일반적으로이 상황이 발생 간의 순환 참조가 있는 경우 `shared_ptr` 인스턴스.  

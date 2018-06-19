@@ -95,6 +95,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366629"
 ---
 # <a name="cstringt-class"></a>CStringT 클래스
 이 클래스는 나타냅니다는 `CStringT` 개체입니다.  

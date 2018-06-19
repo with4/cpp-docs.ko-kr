@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358927"
 ---
 # <a name="specifying-property-pages"></a>속성 페이지를 지정합니다.
 ActiveX 컨트롤을 만들 때 컨트롤의 속성을 설정 하는 데 사용할 수 있는 속성 페이지와 연결 하려는 경우가 많습니다. 컨테이너 사용을 제어는 **ISpecifyPropertyPages** 인터페이스를 확인할 사용자 컨트롤의 속성을 설정 하는 속성 페이지를 사용할 수 있습니다. 컨트롤에 대해이 인터페이스를 구현 해야 합니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360079"
 ---
 # <a name="cheapptrelementtraits-class"></a>CHeapPtrElementTraits 클래스
 이 클래스 힙 포인터 컬렉션을 만들 때 메서드, 정적 함수 및 유용한 형식 정의 제공 합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356780"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL 컬렉션 및 열거자
 A `collection` (원시 데이터 또는 기타 개체) 데이터 항목의 그룹에 대 한 액세스를 허용 하는 인터페이스를 제공 하는 COM 개체입니다. 개체의 그룹에 대 한 액세스를 제공 하 라고에 대 한 표준을 따르는 인터페이스는 *컬렉션 인터페이스*합니다.  

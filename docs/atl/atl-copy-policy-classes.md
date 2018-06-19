@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358529"
 ---
 # <a name="atl-copy-policy-classes"></a>ATL 복사 정책 클래스
 복사 정책 클래스는 [유틸리티 클래스가](../atl/utility-classes.md) 초기화 하는 데 사용, 복사 및 데이터를 삭제 합니다. 복사 정책 클래스를 사용 하 여 모든 유형의 데이터에 대 한 복사 의미를 정의 하 고 다른 데이터 형식 간의 변환을 정의할 수 있습니다.  

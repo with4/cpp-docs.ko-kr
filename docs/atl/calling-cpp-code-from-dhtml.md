@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355463"
 ---
 # <a name="calling-c-code-from-dhtml"></a>DHTML에서 c + + 코드 호출
 DHTML 컨트롤 테스트 컨테이너 또는 Internet Explorer 등의 컨테이너에서 호스팅할 수 있습니다. 참조 [속성 및 이벤트 테스트 컨테이너와 테스트](../mfc/testing-properties-and-events-with-test-container.md) 테스트 컨테이너에 액세스 하는 방법에 대 한 합니다.  

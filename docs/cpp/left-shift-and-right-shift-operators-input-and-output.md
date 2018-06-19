@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422399"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>왼쪽된 시프트 및 오른쪽 시프트 연산자 (&gt; &gt; 및 &lt; &lt;)
 비트 시프트 연산자는 오른쪽 시프트 연산자 (>>)의 비트 이동 *shift 식* 오른쪽 및 왼쪽 시프트 연산자 (<<)의 비트를 이동 하 *shift 키를 누른 채 식* 왼쪽에 있습니다. <sup>1</sup>  

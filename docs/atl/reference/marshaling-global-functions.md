@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362829"
 ---
 # <a name="marshaling-global-functions"></a>마샬링 전역 함수
 이러한 함수는 마샬링 및 마샬링 데이터를 다른 인터페이스 포인터 변환에 대 한 지원을 제공 합니다.  

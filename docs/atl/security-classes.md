@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362341"
 ---
 # <a name="security-classes"></a>보안 클래스
 이러한 클래스는 일반 Win32 보안 클래스 및 개체에 대 한 래퍼입니다.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356524"
 ---
 # <a name="atl-event-handling-summary"></a>ATL 이벤트 처리 요약
 일반적으로 COM 이벤트를 처리 작업은 비교적 간단 합니다. 세 가지 주요 단계가 있습니다.  

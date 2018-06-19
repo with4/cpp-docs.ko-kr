@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356675"
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>ATL 마법사와 대화 상자
 액티브 템플릿 라이브러리 (ATL) 마법사는 다양 한 종류의 COM 개체에 대 한 상용구 코드를 생성합니다. 프로젝트의 바로 가기 메뉴를 열고 마법사를 실행할 수 있습니다 **솔루션 탐색기** 선택한 **추가**, **클래스**합니다.  

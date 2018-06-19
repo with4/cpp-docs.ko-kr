@@ -42,6 +42,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366460"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl 클래스
 이 클래스에 스냅인 노드 개체를 구현 하기 위한 메서드를 제공 합니다.  

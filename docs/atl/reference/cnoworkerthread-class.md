@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363086"
 ---
 # <a name="cnoworkerthread-class"></a>CNoWorkerThread 클래스
 이 클래스를 사용 하 여에 대 한 인수로 `MonitorClass` 동적 캐시 유지 관리를 사용 하지 않도록 설정 하려는 경우 캐시 클래스에 템플릿 매개 변수입니다.  

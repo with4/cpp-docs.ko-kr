@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361420"
 ---
 # <a name="catlautothreadmodulet-class"></a>CAtlAutoThreadModuleT 클래스
 이 클래스는 COM 서버를 스레드 풀, 아파트 모델을 구현 하기 위한 메서드를 제공 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358396"
 ---
 # <a name="using-a-window"></a>창을 사용 하 고
 클래스 [CWindow](../atl/reference/cwindow-class.md) 창을 사용할 수 있습니다. 다이어그램에 연결한 후는 `CWindow` 개체를 호출할 수 있습니다 `CWindow` 창을 조작 하는 메서드. `CWindow` 도 포함 되어는 `HWND` 변환 하는 연산자는 `CWindow` 개체는 `HWND`합니다. 따라서 전달할 수 있습니다는 `CWindow` 개체 창에 대 한 핸들을 필요로 하는 기능입니다. 혼합할 수 `CWindow` 메서드 호출 및 임시 개체를 만들지 않고 Win32 함수 호출을 합니다.  

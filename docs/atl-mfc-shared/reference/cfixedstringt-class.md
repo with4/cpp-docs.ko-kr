@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356989"
 ---
 # <a name="cfixedstringt-class"></a>CFixedStringT 클래스
 이 클래스는 문자열 개체가 고정된 문자 버퍼를 나타냅니다.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369294"
 ---
 # <a name="appcontainer-microsoft-store-app"></a>/APPCONTAINER (Microsoft 스토어 앱)
 링커 앱 컨테이너에서 실행 해야 하는 실행 가능 이미지를 만들지 여부를 지정 합니다.  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364273"
 ---
 # <a name="csimplearray-class"></a>CSimpleArray 클래스
 이 클래스는 1 차원 배열의 관리를 위한 메서드를 제공 합니다.  
