@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420225"
 ---
 # <a name="microsoft-specific-modifiers"></a>Microsoft 전용 한정자
 이 단원에서는 다음 영역의 Microsoft 전용 C++ 확장에 대해 설명합니다.  

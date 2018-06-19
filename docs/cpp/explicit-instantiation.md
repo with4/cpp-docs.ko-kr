@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32415189"
 ---
 # <a name="explicit-instantiation"></a>명시적 인스턴스화
 명시적 인스턴스화를 통해 코드에서 실제로 사용하지 않고 템플릿 기반 클래스 또는 함수의 인스턴스를 만들 수 있습니다. 라이브러리 (.lib) 파일 배포에 대 한 템플릿을 사용 하는 만들 때 유용한 것은, 인스턴스화되지 않은 템플릿 정의 개체 (.obj) 파일에 배치 되지 않은 합니다.  

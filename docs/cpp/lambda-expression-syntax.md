@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32421044"
 ---
 # <a name="lambda-expression-syntax"></a>람다 식 구문
 이 문서에서는 람다 식의 구문과 구성 요소에 대해 설명합니다. 람다 식에 대 한 참조 [람다 식](../cpp/lambda-expressions-in-cpp.md)합니다.  

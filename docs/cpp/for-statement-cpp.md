@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32417186"
 ---
 # <a name="for-statement-c"></a>for 문 (C++)
 조건이 false가 될 때까지 문을 반복적으로 실행합니다. 참조 된 범위 기반의 for 문에 대 한 자세한 내용은 [범위 기반에 대 한 문 (c + +)](../cpp/range-based-for-statement-cpp.md)합니다.  

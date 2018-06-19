@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049169"
 ---
 # <a name="alias-masm"></a>ALIAS (MASM)
 **별칭** 지시문 함수에 대해 다른 이름이 만들어집니다.  이 함수에 대 한 이름을 여러 개 만들거나 링커 (LINK.exe) 이전 함수는 새 함수에 매핑할 수 있는 라이브러리를 만들 수 있습니다.  

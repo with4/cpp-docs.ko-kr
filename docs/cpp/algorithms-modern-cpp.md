@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412298"
 ---
 # <a name="algorithms-modern-c"></a>알고리즘(최신 C++)
 최신 c + + 프로그래밍에 대 한 알고리즘에 사용 하는 권장는 [c + + 표준 라이브러리](../standard-library/cpp-standard-library-reference.md)합니다. 다음은 몇 가지 중요 한 예입니다.  

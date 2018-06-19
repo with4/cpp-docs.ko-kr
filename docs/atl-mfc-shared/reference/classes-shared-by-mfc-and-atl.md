@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356976"
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>MFC와 ATL에서 공유 되는 클래스
 다음 표에서 MFC 및 ATL. 간에 공유 하는 클래스를 보여 줍니다.  

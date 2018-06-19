@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055149"
 ---
 # <a name="pushreg"></a>.PUSHREG
 생성 된 `UWOP_PUSH_NONVOL` 현재 프롤로그의 오프셋을 사용 하 여 번호를 지정 된 등록에 대 한 코드 항목을 해제 합니다.  

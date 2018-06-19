@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32055731"
 ---
 # <a name="ml-fatal-error-a1007"></a>ML 심각한 오류 A1007
 **중첩 수준이 너무 많습니다.**  

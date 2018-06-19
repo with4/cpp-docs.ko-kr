@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051932"
 ---
 # <a name="err2"></a>.ERR2
 [. ERR](../../assembler/masm/dot-err.md) 경우 모든 어셈블리 패스에서 계산 블록 **옵션: SETIF2** 은 **TRUE입니다.**  

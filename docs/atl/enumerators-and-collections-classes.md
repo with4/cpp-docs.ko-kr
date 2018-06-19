@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355648"
 ---
 # <a name="enumerators-and-collections-classes"></a>열거자 및 컬렉션 클래스
 다음 클래스에서는 COM 컬렉션 및 열거형에 대 한 지원:  

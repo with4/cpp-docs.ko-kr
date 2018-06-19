@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419668"
 ---
 # <a name="portability-at-abi-boundaries-modern-c"></a>ABI 경계의 이식성(최신 C++)
 이진 인터페이스 경계에서 충분히 이식 가능 형식 및 규칙을 사용 합니다. "노트북" 형식이 C 기본 제공 형식 또는 C만 기본 제공 형식을 포함 하는 구조체입니다. 클래스 형식 호출자와 호출 수신자에 동의 레이아웃 규칙 등을 호출 하는 경우에 사용할 수 있습니다. 이 둘 다 동일한 컴파일러 및 컴파일러 설정을 사용 하 여 컴파일된만 가능 합니다.  

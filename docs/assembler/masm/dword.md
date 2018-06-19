@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052523"
 ---
 # <a name="dword"></a>DWORD
 할당 및 필요에 따라 각각에 대해 저장소의 2 배 워드 (4 바이트)을 초기화 `initializer`합니다.  

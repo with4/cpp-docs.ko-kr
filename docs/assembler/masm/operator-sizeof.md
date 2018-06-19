@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051211"
 ---
 # <a name="operator-sizeof"></a>연산자 SIZEOF
 바이트 수를 반환 *변수* 또는 `type`합니다.  

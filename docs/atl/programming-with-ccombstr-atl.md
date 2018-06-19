@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357859"
 ---
 # <a name="programming-with-ccombstr-atl"></a>CComBSTR을 사용한 프로그래밍(ATL)
 ATL 클래스 [CComBSTR](../atl/reference/ccombstr-class.md) 에 래퍼를 제공는 `BSTR` 데이터 형식입니다. 동안 `CComBSTR` 는 유용한 도구와 같은 경우 유의 해야 합니다.  

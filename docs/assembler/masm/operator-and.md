@@ -23,6 +23,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056862"
 ---
 # <a name="operator-and"></a>연산자 AND
 에 대 한 AND 연산의 결과 반환 *expression1* 및 *expression2*합니다.  

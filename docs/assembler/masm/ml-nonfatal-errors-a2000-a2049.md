@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049940"
 ---
 # <a name="ml-nonfatal-errors-a2000-a2049"></a>ML 심각하지 않은 오류 A2000-A2049
 ML 심각 하지 않은 오류에 대 한 자세한 내용은 참조 [ML 오류 메시지](../../assembler/masm/ml-error-messages.md)합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054473"
 ---
 # <a name="forc"></a>FORC
 각 문자에 대해 한 번씩 반복 되는 블록 표시 `string`, 현재 문자 대체 된 `parameter` 각 반복 시.  

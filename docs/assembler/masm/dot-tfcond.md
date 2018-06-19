@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049992"
 ---
 # <a name="tfcond"></a>.TFCOND
 False 조건부 블록의 목록을 설정/해제 합니다.  

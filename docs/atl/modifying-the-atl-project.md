@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355035"
 ---
 # <a name="modifying-the-atl-project"></a>ATL 프로젝트
 이 시점에서 합성 컨트롤 프로젝트 복합 컨트롤에 대 한 필요한 개체를 구현합니다. 다음 단계는 합성 컨트롤 포함 되며 필요한 이벤트를 처리 하는 컨트롤을 추가할 것입니다.  

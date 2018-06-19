@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32407995"
 ---
 # <a name="bstrt-operators"></a>_bstr_t 연산자
 에 대 한 내용은 `_bstr_t` 연산자 참조 [_bstr_t 클래스](../cpp/bstr-t-class.md)합니다.  

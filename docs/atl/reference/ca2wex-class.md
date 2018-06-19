@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358748"
 ---
 # <a name="ca2wex-class"></a>CA2WEX 클래스
 이 클래스는 문자열 변환 매크로 사용 `CA2TEX`, `CA2CTEX`, `CT2WEX`, 및 `CT2CWEX`, 및 typedef **CA2W**합니다.  

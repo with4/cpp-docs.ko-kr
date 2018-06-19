@@ -30,6 +30,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32411486"
 ---
 # <a name="text-and-binary-mode-file-io"></a>텍스트 및 이진 모드 파일 I/O
 

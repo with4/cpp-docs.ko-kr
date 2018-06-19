@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355450"
 ---
 # <a name="event-handling-principles"></a>이벤트 처리 원리
 모든 이벤트를 처리할 일반적인 세 가지 단계가 있습니다. 해야 합니다.  

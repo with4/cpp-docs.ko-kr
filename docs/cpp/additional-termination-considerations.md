@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32408148"
 ---
 # <a name="additional-termination-considerations"></a>추가 종료 고려 사항
 사용 하 여 c + + 프로그램을 종료할 수 있습니다 **종료**, `return`, 또는 **중단**합니다. `atexit` 함수를 사용하여 종료 처리를 추가할 수 있습니다. 다음 단원에서 이에 대해 설명합니다.  

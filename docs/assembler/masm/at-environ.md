@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32049569"
 ---
 # <a name="environ"></a>@Environ
 환경 변수의 값 *envvar* (매크로 함수 사용).  
