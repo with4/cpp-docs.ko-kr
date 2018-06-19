@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333133"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>ActiveX 컨트롤 컨테이너: ActiveX 컨트롤을 멤버 변수에 연결
 ActiveX 컨트롤의 컨트롤 컨테이너 응용 프로그램 내에서 액세스 하는 가장 쉬운 방법은 컨트롤이 포함 될 대화 상자 클래스의 멤버 변수가 있는 ActiveX 컨트롤을 연결 하는 것입니다.  
