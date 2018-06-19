@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369104"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager 클래스
 주 프레임 창 및 자식 프레임 창에 대한 바로 가기 키 테이블을 관리합니다.  

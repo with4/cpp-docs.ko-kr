@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367505"
 ---
 # <a name="cevent-class"></a>CEvent 클래스
 다른 이벤트가 발생 했음을 알리기 위해 하나의 스레드 수 있도록 하는 동기화 개체인 이벤트를 나타냅니다.  

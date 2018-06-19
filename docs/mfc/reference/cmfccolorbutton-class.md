@@ -59,6 +59,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371115"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton 클래스
 `CMFCColorButton` 및 [CMFCColorBar 클래스](../../mfc/reference/cmfccolorbar-class.md) 클래스는 색 선택 컨트롤을 구현 하는 데 함께 사용 됩니다.  

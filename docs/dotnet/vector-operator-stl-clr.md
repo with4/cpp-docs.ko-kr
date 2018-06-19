@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172029"
 ---
 # <a name="vectoroperatorstlclr"></a>vector::operator(STL/CLR)
 지정된 위치에 있는 요소에 액세스합니다.  

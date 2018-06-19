@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383856"
 ---
 # <a name="tn001-window-class-registration"></a>TN001: 창 클래스 등록
 이 노트는 특수를 등록 하는 MFC 루틴에 설명 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es Microsoft Windows에서 필요 합니다. 특정 `WNDCLASS` MFC 및 Windows에서 사용 하는 특성은 설명 합니다.  

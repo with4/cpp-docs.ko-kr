@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358344"
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>CD2DSolidColorBrush 클래스
 ID2D1SolidColorBrush에 대 한 래퍼입니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168934"
 ---
 # <a name="compiler-error-c2154"></a>컴파일러 오류 C2154
 'type': 컴파일러 내장 형식 특성 '__underlying_type'에 대한 인수로는 열거형 형식만 허용됩니다.  

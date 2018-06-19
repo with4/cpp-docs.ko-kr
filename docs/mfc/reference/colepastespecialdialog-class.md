@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374359"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog 클래스
 OLE 선택하여 붙여넣기 대화 상자에 사용합니다.  

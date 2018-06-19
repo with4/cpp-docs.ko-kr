@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383151"
 ---
 # <a name="tree-control-item-states-overview"></a>트리 컨트롤 항목 상태 개요
 트리 컨트롤의 각 항목 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md))의 현재 상태가 되었습니다. 예를 들어, 사용 안 함, 확장 등에 항목 선택할 수 있습니다. 대부분의 경우 트리 컨트롤 항목의 선택과 같은 사용자 작업을 반영 하는 항목의 상태를 자동으로 설정 합니다. 그러나 설정할 수도 있습니다 항목의 상태를 사용 하 여는 [SetItemState](../mfc/reference/ctreectrl-class.md#setitemstate) 멤버 함수를 사용 하 여 항목의 현재 상태를 검색 하 고는 [GetItemState](../mfc/reference/ctreectrl-class.md#getitemstate) 멤버 함수입니다. 전체 목록은 항목 상태를 참조 하십시오. [트리 뷰 컨트롤 상수](http://msdn.microsoft.com/library/windows/desktop/bb759985) Windows sdk에서입니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298238"
 ---
 # <a name="linker-tools-error-lnk1000"></a>링커 도구 오류 LNK1000
 알 수 없는 오류입니다. 기술 지원 옵션에 대 한 설명서를 참조 하십시오.  

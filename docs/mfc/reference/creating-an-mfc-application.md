@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368815"
 ---
 # <a name="creating-an-mfc-application"></a>MFC 응용 프로그램 만들기
 MFC 응용 프로그램은 MFC(Microsoft Foundation Class) 라이브러리를 기반으로 하는 실행 가능한 Windows용 응용 프로그램입니다. MFC 응용 프로그램을 만드는 가장 쉬운 방법은 MFC 응용 프로그램 마법사를 사용하는 것입니다.  

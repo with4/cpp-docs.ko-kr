@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381149"
 ---
 # <a name="specifying-levels-of-functionality"></a>기능 수준 지정
 이 문서에서는 다음과 같은 수준의 기능을 추가 하는 방법을 설명 프로그램 [CObject](../mfc/reference/cobject-class.md)-파생 클래스:  

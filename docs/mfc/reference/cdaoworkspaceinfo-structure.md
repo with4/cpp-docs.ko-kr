@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366293"
 ---
 # <a name="cdaoworkspaceinfo-structure"></a>CDaoWorkspaceInfo 구조체
 `CDaoWorkspaceInfo` 구조 데이터 액세스 개체 (DAO) 데이터베이스 액세스에 대해 정의 된 작업 영역에 대 한 정보를 포함 합니다.  

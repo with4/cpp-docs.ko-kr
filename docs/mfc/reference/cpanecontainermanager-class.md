@@ -121,6 +121,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377111"
 ---
 # <a name="cpanecontainermanager-class"></a>CPaneContainerManager 클래스
 `CPaneContainerManager` 저장 및 표시 현재 도킹 레이아웃의 클래스를 관리 합니다.  

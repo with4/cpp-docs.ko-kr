@@ -59,6 +59,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105087"
 ---
 # <a name="ctableconstraints-ctableconstraintinfo"></a>CTableConstraints, CTableConstraintInfo
 Typedef 클래스 호출 **CTableConstraints** 해당 매개 변수 클래스를 구현 하려면 **CTableConstraintInfo**합니다.  

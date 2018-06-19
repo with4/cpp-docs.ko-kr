@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131243"
 ---
 # <a name="how-to-write-a-text-file-ccli"></a>방법: 텍스트 파일 쓰기(C++/CLI)
 다음 코드 예제에서는 텍스트 파일을 만들고 사용 하 여 텍스트를 쓰는 데는 <xref:System.IO.StreamWriter> 에 정의 된 클래스는 <xref:System.IO> 네임 스페이스입니다. <xref:System.IO.StreamWriter> 생성자 만들 파일의 이름을 사용 합니다. 파일이 있으면 덮어씁니다 (두 번째 True를 전달 하지 않으면 <xref:System.IO.StringWriter> 생성자 인수).  

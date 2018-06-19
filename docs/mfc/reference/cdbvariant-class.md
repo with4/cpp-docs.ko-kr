@@ -49,6 +49,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369085"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant 클래스
 MFC ODBC 클래스의 variant 데이터 형식을 나타냅니다.  

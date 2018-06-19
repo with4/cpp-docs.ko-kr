@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378271"
 ---
 # <a name="drawitemstruct-structure"></a>DRAWITEMSTRUCT 구조체
 `DRAWITEMSTRUCT` 구조체는 소유자 창에서 소유자가 그린 컨트롤 또는 메뉴 항목을 그리는 방법을 결정하는 데 필요한 정보를 제공합니다.  

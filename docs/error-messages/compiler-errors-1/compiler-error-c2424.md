@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33195960"
 ---
 # <a name="compiler-error-c2424"></a>컴파일러 오류 C2424
 'token': 'context'에 잘못된 식이 있습니다.  

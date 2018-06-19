@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169659"
 ---
 # <a name="compiler-error-c2207"></a>컴파일러 오류 C2207
 'member': 클래스 템플릿의 멤버는 함수 형식을 가져올 수 없습니다.  

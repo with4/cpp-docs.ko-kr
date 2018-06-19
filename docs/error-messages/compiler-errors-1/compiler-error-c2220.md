@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171495"
 ---
 # <a name="compiler-error-c2220"></a>컴파일러 오류 C2220
 개체 파일이 생성 되지 않았습니다 오류로 처리 하는 경고  

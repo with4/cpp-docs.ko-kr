@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380307"
 ---
 # <a name="tn044-mfc-support-for-dbcs"></a>TN044: DBCS에 대한 MFC 지원
 이 기술 노트 "더블 바이트 문자 집합" 또는 DBCS에 대 한 mfc에서 지원을 설명합니다. 유니코드는에서 사용할 수 있는 이제에 대 한 지원이 MFC의에 대 한 정보 뿐만 아니라이 정보는 *클래스 라이브러리 참조*합니다.  

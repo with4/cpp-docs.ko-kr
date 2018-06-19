@@ -133,6 +133,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378641"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx 클래스
 `CWinAppEx` 응용 프로그램 상태를 처리, 레지스트리에 상태를 저장, 레지스트리에서 상태를 로드, 응용 프로그램 관리자를 초기화 및 이러한 동일한 응용 프로그램 관리자에 대 한 링크를 제공 합니다.  

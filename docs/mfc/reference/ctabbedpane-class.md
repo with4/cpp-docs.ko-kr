@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373816"
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane 클래스
 분리 가능한 탭이 포함된 창의 기능을 구현합니다.  

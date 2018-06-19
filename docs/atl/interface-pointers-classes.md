@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355537"
 ---
 # <a name="interface-pointers-classes"></a>인터페이스 포인터 클래스
 지정 된 인터페이스 포인터를 관리 하는 다음 클래스:  

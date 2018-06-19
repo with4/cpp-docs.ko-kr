@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103904"
 ---
 # <a name="irowsetimplsetdbstatus"></a>IRowsetImpl::SetDBStatus
 설정 된 `DBSTATUS` 지정된 된 필드에 대 한 상태 플래그입니다.  

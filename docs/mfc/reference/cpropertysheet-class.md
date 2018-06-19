@@ -67,6 +67,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377464"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet 클래스
 속성 시트(탭 대화 상자라고도 함)를 나타냅니다.  

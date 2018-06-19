@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199734"
 ---
 # <a name="compiler-error-c2551"></a>컴파일러 오류 C2551
 'void *' 형식의 경우 명시적 캐스트가 필요합니다.  

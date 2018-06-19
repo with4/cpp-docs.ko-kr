@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356688"
 ---
 # <a name="introduction-to-atl-window-classes"></a>ATL 창 클래스 소개
 다음의 ATL 클래스는 구현 하 고, 창을 조작 하도록 설계 되었습니다.  

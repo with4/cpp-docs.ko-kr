@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361337"
 ---
 # <a name="mfc-activex-controls"></a>MFC ActiveX 컨트롤
 ActiveX 컨트롤은 다시 사용할 수 있는 소프트웨어 구성 요소를 COM을 기반으로 구성 요소 개체 모델 ()는 다양 한 OLE 기능을 지원 하 고 많은 소프트웨어 요구 사항에 맞게 사용자 지정할 수 있습니다. ActiveX 컨트롤은 일반적인 ActiveX 컨트롤 컨테이너와 인터넷의 World Wide Web 웹 페이지 모두에 사용할 수 있도록 디자인되었습니다. 여기서 또는으로 설명 된 MFC를 사용 하 여 ActiveX 컨트롤을 만들 수 있습니다는 [라이브러리 ATL (액티브 템플릿)](../atl/active-template-library-atl-concepts.md)합니다.  

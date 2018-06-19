@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358201"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox 클래스
 Windows 검사 목록 상자의 기능을 제공합니다.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374259"
 ---
 # <a name="csmoothstoptransition-class"></a>CSmoothStopTransition 클래스
 부드러운 중지 전환을 캡슐화합니다.  

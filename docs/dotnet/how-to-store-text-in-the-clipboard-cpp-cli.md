@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138521"
 ---
 # <a name="how-to-store-text-in-the-clipboard-ccli"></a>방법: 클립보드에 텍스트 저장(C++/CLI)
 다음 코드 예제에서는 <xref:System.Windows.Forms.Clipboard> 에 정의 된 개체는 <xref:System.Windows.Forms> 네임 스페이스 문자열을 저장 합니다. 이 개체는 두 개의 멤버 함수를 제공: <xref:System.Windows.Forms.Clipboard.SetDataObject%2A> 및 <xref:System.Windows.Forms.Clipboard.GetDataObject%2A>합니다. 데이터에서 파생 된 개체를 전송 하 여 클립보드에 저장 됩니다 <xref:System.Object> 를 <xref:System.Windows.Forms.Clipboard.SetDataObject%2A>합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369520"
 ---
 # <a name="minmaxinfo-structure"></a>MINMAXINFO 구조체
 `MINMAXINFO` 구조 창 최대화 크기와 위치 및 최소 및 최대 추적 크기에 대 한 정보를 포함 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355415"
 ---
 # <a name="introduction-to-com-and-atl"></a>COM 및 ATL 소개
 이 섹션에서는 COM 및 ATL에 대해 간략히 소개합니다.  

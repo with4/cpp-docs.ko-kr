@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196168"
 ---
 # <a name="compiler-error-c2352"></a>컴파일러 오류 C2352
 'class::function': 비정적 멤버 함수를 잘못 호출했습니다.  

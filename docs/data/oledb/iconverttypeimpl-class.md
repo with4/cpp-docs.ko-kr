@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100046"
 ---
 # <a name="iconverttypeimpl-class"></a>IConvertTypeImpl 클래스
 구현을 제공는 [IConvertType](https://msdn.microsoft.com/en-us/library/ms715926.aspx) 인터페이스입니다.  

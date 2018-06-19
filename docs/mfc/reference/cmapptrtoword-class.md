@@ -49,6 +49,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368079"
 ---
 # <a name="cmapptrtoword-class"></a>CMapPtrToWord 클래스
 void 포인터로 키가 지정된 16비트 단어 맵을 지원합니다.  

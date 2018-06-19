@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375391"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton 클래스
 사용자가 선택한 메뉴에 팝업 메뉴와 보고서를 표시하는 단추입니다.  

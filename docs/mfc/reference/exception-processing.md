@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376990"
 ---
 # <a name="exception-processing"></a>예외 처리
 프로그램이 실행 될 때 다양 한 비정상적인 상태 및 "예외" 라는 오류가 발생할 수 있습니다. 이러한 메모리, 리소스 할당 오류와 파일을 찾을 수는 실패의 부족 포함 될 수 있습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372840"
 ---
 # <a name="connection-maps"></a>연결 맵
 OLE 컨트롤은 다른 응용 프로그램에 대 한 인터페이스를 노출할 수 있습니다. 이러한 인터페이스는이 컨트롤에는 컨테이너에서의 액세스만을 허용 합니다. OLE 컨트롤을 다른 OLE 개체의 외부 인터페이스에 액세스 하려는 경우 한 연결 지점을 설정 되어야 합니다. 이 연결점에는 나가는 이벤트 맵 또는 알림 함수 등의 외부 디스패치 맵에 대 한 액세스를 제어할 수 있습니다.  

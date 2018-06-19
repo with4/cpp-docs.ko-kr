@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234647"
 ---
 # <a name="compiler-error-c2702"></a>컴파일러 오류 C2702
 __except 나타나지 않을 수 있습니다 종료 블록에  

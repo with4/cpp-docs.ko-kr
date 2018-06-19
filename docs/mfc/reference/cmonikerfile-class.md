@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369231"
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile 클래스
 데이터 스트림을 나타냅니다 ( [IStream](http://msdn.microsoft.com/library/windows/desktop/aa380034))로 명명 한 [IMoniker](http://msdn.microsoft.com/library/windows/desktop/ms679705)합니다.  

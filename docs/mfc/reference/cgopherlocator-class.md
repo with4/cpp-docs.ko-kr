@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366924"
 ---
 # <a name="cgopherlocator-class"></a>CGopherLocator 클래스
 Gopher 서버에서 gopher "로케이터"를 가져오고 로케이터 형식을 확인 하 고 로케이터를 사용할 수 있도록 [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)합니다.  

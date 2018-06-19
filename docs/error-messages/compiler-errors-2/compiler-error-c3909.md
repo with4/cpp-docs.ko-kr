@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270819"
 ---
 # <a name="compiler-error-c3909"></a>컴파일러 오류 C3909
 WinRT 또는 관리 되는 형식 발생 해야 aWinRT 또는 관리 되는 이벤트 선언  

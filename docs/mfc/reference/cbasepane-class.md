@@ -181,6 +181,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357961"
 ---
 # <a name="cbasepane-class"></a>CBasePane 클래스
 MFC의 모든 창에 대 한 기본 클래스입니다.  

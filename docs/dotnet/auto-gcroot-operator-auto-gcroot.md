@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103820"
 ---
 # <a name="autogcrootoperator-autogcroot"></a>auto_gcroot::operator auto_gcroot
 사이 형식 캐스팅 연산자 `auto_gcroot` 와 호환 되는 형식입니다.  

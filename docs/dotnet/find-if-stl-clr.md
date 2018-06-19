@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106273"
 ---
 # <a name="findif-stlclr"></a>find_if(STL/CLR)
 범위에서 지정된 조건을 만족하는 요소가 첫 번째 나타나는 위치를 찾습니다.  

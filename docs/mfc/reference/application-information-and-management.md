@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358484"
 ---
 # <a name="application-information-and-management"></a>응용 프로그램 정보 및 관리
 단일 응용 프로그램을 작성할 때 만들어야 [CWinApp](../../mfc/reference/cwinapp-class.md)-파생 된 개체입니다. 때때로 외부에서이 개체에 대 한 정보를 가져오는 경우가 `CWinApp`-파생 된 개체입니다. 또는 다른 전역 "mananger" 개체에 대 한 액세스를 할 수 있습니다.

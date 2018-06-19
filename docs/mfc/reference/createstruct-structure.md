@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370873"
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT 구조체
 `CREATESTRUCT` 구조 응용 프로그램의 창 프로시저에 전달 된 초기화 매개 변수를 정의 합니다.  

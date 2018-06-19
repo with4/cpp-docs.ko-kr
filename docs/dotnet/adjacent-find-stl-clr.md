@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102542"
 ---
 # <a name="adjacentfind-stlclr"></a>adjacent_find(STL/CLR)
 같지 않거나 지정한 조건을 충족하는 인접 요소 두 개를 검색합니다.  

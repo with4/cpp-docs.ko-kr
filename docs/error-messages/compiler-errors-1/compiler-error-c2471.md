@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197548"
 ---
 # <a name="compiler-error-c2471"></a>컴파일러 오류 C2471
 'file' 프로그램 데이터베이스를 업데이트할 수 없습니다.  

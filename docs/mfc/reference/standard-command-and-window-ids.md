@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371652"
 ---
 # <a name="standard-command-and-window-ids"></a>표준 명령 및 창 ID
 Microsoft Foundation Class 라이브러리는 Afxres.h의 여러 표준 명령 및 창 ID를 정의합니다. 이러한 ID는 메시지를 처리기 함수에 매핑하기 위해 리소스 편집기 및 속성 창 내에서 일반적으로 사용됩니다. 모든 표준 명령는 **ID_** 접두사입니다. 예를 들어 메뉴 편집기를 사용 하면 일반적으로 파일 열기 메뉴 항목에 연결한 표준 `ID_FILE_OPEN` 명령 id입니다.  

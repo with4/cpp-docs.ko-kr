@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170650"
 ---
 # <a name="user-defined-conversions-ccli"></a>사용자 정의 변환(C++/CLI)
 이 섹션에서는 변환에는 유형 중 참조 또는 값 형식 또는 참조 형식 인스턴스의 경우 사용자 정의 변환 (UDC)를 설명 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130200"
 ---
 # <a name="how-to-read-a-text-file-ccli"></a>방법: 텍스트 파일 읽기(C++/CLI)
 다음 코드 예제에서는 열고 사용 하 여 한 번에는 한 줄씩 텍스트 파일을 읽는 방법을 보여 줍니다.는 <xref:System.IO.StreamReader> 에 정의 된 클래스는 <xref:System.IO?displayProperty=fullName> 네임 스페이스입니다. 텍스트 파일을이 클래스의 인스턴스는 다음의 <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> 각 줄을 검색 메서드를 사용 합니다.  

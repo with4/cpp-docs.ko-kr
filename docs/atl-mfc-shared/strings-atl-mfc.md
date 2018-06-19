@@ -36,6 +36,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355482"
 ---
 # <a name="strings-atlmfc"></a>문자열 (ATL/MFC)
 거의 모든 프로그램이 문자열 데이터를 사용 합니다. Visual c + +에는이 문자열 데이터를 관리 하는 여러 방법을 제공 합니다.  

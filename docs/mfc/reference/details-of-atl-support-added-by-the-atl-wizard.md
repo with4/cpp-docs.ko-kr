@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371786"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>ATL 마법사로 추가한 ATL 지원에 대한 세부 정보
 때 있습니다 [기존 MFC 실행 파일 또는 DLL에 ATL 지원 추가](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), Visual c + +에서 기존 MFC 프로젝트에 다음과 같이 수정 하면 (이 예제에서는 프로젝트 라고 `MFCEXE`):  

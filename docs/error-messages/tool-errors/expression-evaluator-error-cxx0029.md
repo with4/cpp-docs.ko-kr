@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297325"
 ---
 # <a name="expression-evaluator-error-cxx0029"></a>식 계산기 오류 CXX0029
 구조체 포인터가 아닙니다  

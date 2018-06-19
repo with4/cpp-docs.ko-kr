@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298732"
 ---
 # <a name="linker-tools-error-lnk1277"></a>링커 도구 오류 LNK1277
 pgd (파일 이름)에서 찾을 수 없는 개체 레코드  

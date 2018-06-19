@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385098"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>연습: 새 MFC 셸 컨트롤 사용
 이 연습에서 파일 탐색기와 비슷한 응용 프로그램을 만듭니다. 두 개의 창이 포함 된 창을 만듭니다. 왼쪽된 창에 있는 한 [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) 계층적 보기에 데스크톱을 표시 하는 개체입니다. 오른쪽 창에 있는 한 [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) 왼쪽된 창에서 선택 된 폴더의 파일을 표시 하는 합니다.  

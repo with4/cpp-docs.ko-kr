@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109289"
 ---
 # <a name="setting-properties-in-your-provider"></a>공급자에 속성 설정
 원하는 속성에 대 한 속성 그룹과 속성 ID를 찾습니다. 자세한 내용은 참조 [OLE DB 속성](https://msdn.microsoft.com/en-us/library/ms722734.aspx) 에 *OLE DB Programmer's Reference*합니다.  

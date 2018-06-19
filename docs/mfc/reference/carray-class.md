@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357186"
 ---
 # <a name="carray-class"></a>CArray 클래스
 C 배열과 유사 하지만 동적으로 줄일 수 필요에 따라 증가 하는 배열을 지원 합니다.  

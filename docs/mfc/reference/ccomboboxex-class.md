@@ -51,6 +51,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358293"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx 클래스
 이미지 목록에 대한 지원을 제공하여 콤보 상자 컨트롤을 확장합니다.  

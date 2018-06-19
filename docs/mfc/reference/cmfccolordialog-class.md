@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367918"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog 클래스
 `CMFCColorDialog` 색 선택 대화 상자 클래스를 나타냅니다.  

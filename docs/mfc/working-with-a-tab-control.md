@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383164"
 ---
 # <a name="working-with-a-tab-control"></a>탭 컨트롤 사용
 탭 컨트롤을 사용 하는 가장 쉬운 방법은 ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) 대화 상자 편집기와 대화 상자 템플릿 리소스를 추가 하는 것입니다. 탭 컨트롤 단독으로 사용할 수도 있습니다. MFC 호출 **InitCommonControls** 드립니다. 주요 작업은 다음과 같습니다.  

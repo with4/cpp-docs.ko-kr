@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383447"
 ---
 # <a name="slider-control-member-functions"></a>슬라이더 컨트롤 멤버 함수
 응용 프로그램에 있는 슬라이더 슬라이더 컨트롤에 대 한 정보를 검색할 컨트롤의 멤버 함수를 호출할 수 있습니다 ([CSliderCtrl](../mfc/reference/csliderctrl-class.md))의 특성을 변경할 수 있습니다.  

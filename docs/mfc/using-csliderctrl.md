@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385819"
 ---
 # <a name="using-csliderctrl"></a>CSliderCtrl 사용
 [CSliderCtrl](../mfc/reference/csliderctrl-class.md) 클래스는 trackbar 라고도 하는 슬라이더 컨트롤을 나타냅니다. "슬라이더 컨트롤"은 슬라이더 및 선택적 눈금에 포함 된 창을 표시 합니다. 사용자가 마우스 또는 화살표 키를 사용 하 여 슬라이더를 이동, 슬라이더 컨트롤 변경 내용을 나타내는 알림 메시지를 보냅니다.  

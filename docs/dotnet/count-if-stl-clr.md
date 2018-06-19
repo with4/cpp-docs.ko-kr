@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105272"
 ---
 # <a name="countif-stlclr"></a>count_if(STL/CLR)
 해당 값이 지정된 조건과 일치하는 요소의 개수를 반환합니다.  

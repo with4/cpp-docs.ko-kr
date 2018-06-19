@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108297"
 ---
 # <a name="data-access-using-adonet-ccli"></a>ADO.NET을 사용하여 데이터 액세스(C++/CLI)
 ADO.NET은 데이터 액세스를 위한.NET Framework API 및 성능과 이전 데이터 액세스 솔루션에서 일치 하지 않는 사용 편의성을 제공 합니다. 이 섹션에 네이티브 형식을 마샬링하 등의 Visual c + + 사용자 고유의 ADO.NET 관련 문제 중 일부를 설명 합니다.  

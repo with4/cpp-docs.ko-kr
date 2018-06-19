@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106046"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl 클래스
 OLE DB 템플릿 구현의 [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) OLE DB 사양에 대 한 인터페이스입니다.  

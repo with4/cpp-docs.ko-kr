@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098643"
 ---
 # <a name="creating-an-updatable-provider"></a>업데이트 가능 공급자 만들기
 Visual c + +에서는 업데이트 가능 공급자 또는 업데이트할 수 있는 공급자에 쓸 데이터 저장소입니다. 이 항목에서는 OLE DB 템플릿을 사용 하 여 업데이트할 수 있는 공급자를 만드는 방법에 설명 합니다.  

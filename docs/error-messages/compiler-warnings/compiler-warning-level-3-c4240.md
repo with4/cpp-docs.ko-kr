@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292703"
 ---
 # <a name="compiler-warning-level-3-c4240"></a>컴파일러 경고(수준 3) C4240
 비표준 확장이 사용 됨: 이제 정의 됩니다. 이전에 ' 액세스 지정자', 'classname'에 대 한 액세스를 '액세스 지정자' 되도록 정의 되어 있습니다.  

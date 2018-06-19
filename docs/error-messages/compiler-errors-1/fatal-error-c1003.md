@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33196638"
 ---
 # <a name="fatal-error-c1003"></a>심각한 오류 C1003
 오류 수가 number개를 초과했습니다. 컴파일을 중지합니다.  

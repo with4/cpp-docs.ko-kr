@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367050"
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem 클래스
 DocObject 서버 전용 OLE 서버 동사를 구현합니다.  

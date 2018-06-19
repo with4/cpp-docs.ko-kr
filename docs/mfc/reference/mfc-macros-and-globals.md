@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375688"
 ---
 # <a name="mfc-macros-and-globals"></a>MFC 매크로 및 전역
 Microsoft Foundation Class 라이브러리는 두 개의 주요 섹션으로 나눌 수 있습니다. (1)는 MFC 클래스 및 (2) 매크로 및 전역 합니다. 함수 또는 변수가 없으면 클래스의 멤버인 경우 전역 함수 또는 변수입니다.  

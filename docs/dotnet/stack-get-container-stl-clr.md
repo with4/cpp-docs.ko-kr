@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33163727"
 ---
 # <a name="stackgetcontainer-stlclr"></a>stack::get_container(STL/CLR)
 기본 컨테이너에 액세스합니다.  

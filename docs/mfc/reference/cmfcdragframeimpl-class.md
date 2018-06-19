@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373832"
 ---
 # <a name="cmfcdragframeimpl-class"></a>CMFCDragFrameImpl 클래스
 `CMFCDragFrameImpl` 클래스는 사용자가 표준 도킹 모드의 창을 끌 때 나타나는 끌기 사각형을 그립니다.  

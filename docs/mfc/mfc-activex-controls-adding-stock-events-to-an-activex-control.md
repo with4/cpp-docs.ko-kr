@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359340"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC ActiveX 컨트롤: ActiveX 컨트롤에 스톡 이벤트 추가
 스톡 이벤트 사용자 지정 이벤트 한다는 점에서 다릅니다 클래스에 의해 자동으로 발생 하는 [COleControl](../mfc/reference/colecontrol-class.md)합니다. `COleControl` 일반 동작으로 인해 발생 하는 이벤트를 발생 하는 미리 정의 된 멤버 함수를 포함 합니다. 구현 되는 일반적인 동작 `COleControl` 포함 단일-및 번 또는 두-clicks 컨트롤과 키보드 이벤트, 변경 내용에 마우스 단추의 상태입니다. 스톡 이벤트에 대 한 이벤트 맵 항목 앞에 항상는 **EVENT_STOCK** 접두사입니다.  

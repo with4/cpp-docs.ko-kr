@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371933"
 ---
 # <a name="document-template-strings-mfc-add-class-wizard"></a>MFC 클래스 추가 마법사, 문서 템플릿 문자열
 마법사의이 페이지는 다음 조건을 만족 하는 클래스에만 사용할 수 있습니다.  

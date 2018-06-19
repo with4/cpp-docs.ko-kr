@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105792"
 ---
 # <a name="find-stlclr"></a>find(STL/CLR)
 범위에서 지정된 값을 가진 요소가 첫 번째로 나타나는 위치를 찾습니다.  

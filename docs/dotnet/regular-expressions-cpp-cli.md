@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162878"
 ---
 # <a name="regular-expressions-ccli"></a>정규식(C++/CLI)
 .NET Framework의 정규식 클래스를 사용 하 여 다양 한 문자열 작업을 보여 줍니다.  

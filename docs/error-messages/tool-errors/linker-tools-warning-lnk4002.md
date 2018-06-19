@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33300074"
 ---
 # <a name="linker-tools-warning-lnk4002"></a>링커 도구 경고 LNK4002
 개체에 정의 된 기호  

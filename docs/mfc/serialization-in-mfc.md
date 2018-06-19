@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381025"
 ---
 # <a name="serialization-in-mfc"></a>MFC의 Serialization
 이 문서에서는 프로그램의 모든 실행에 MFC Microsoft Foundation Class 라이브러리 () 개체 간에 유지를 제공 하는 serialization 메커니즘을 설명 합니다.  

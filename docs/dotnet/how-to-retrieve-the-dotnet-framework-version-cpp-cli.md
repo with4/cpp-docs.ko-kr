@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128773"
 ---
 # <a name="how-to-retrieve-the-net-framework-version-ccli"></a>방법: .NET Framework 버전 검색(C++/CLI)
 다음 코드 예제는 현재 설치 된.NET Framework의 버전을 확인 하는 방법을 보여 줍니다는 <xref:System.Environment.Version%2A> 포인터 속성에는 <xref:System.Version> 버전 정보를 포함 하는 개체입니다.  

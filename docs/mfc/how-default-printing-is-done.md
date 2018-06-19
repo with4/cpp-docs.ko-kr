@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358917"
 ---
 # <a name="how-default-printing-is-done"></a>기본 인쇄가 수행되는 방법
 이 문서에서는 MFC 프레임워크의 관점에서 Windows의 기본 인쇄 프로세스에 대해 설명합니다.  

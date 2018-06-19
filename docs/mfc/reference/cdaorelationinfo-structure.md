@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366264"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo 구조체
 `CDaoRelationInfo` 구조에서 두 테이블의 필드 간에 정의 된 관계에 대 한 정보를 포함 한 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) 개체입니다.  

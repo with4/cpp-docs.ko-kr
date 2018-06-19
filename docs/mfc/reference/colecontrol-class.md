@@ -349,6 +349,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378945"
 ---
 # <a name="colecontrol-class"></a>COleControl 클래스
 OLE 컨트롤을 개발할 수 있는 강력한 기본 클래스입니다.  

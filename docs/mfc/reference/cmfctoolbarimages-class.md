@@ -155,6 +155,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377939"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages 클래스
 도구 모음에 이미지입니다. `CMFCToolBarImages` 클래스 파일에서 응용 프로그램 리소스에서 로드 되는 도구 모음 이미지를 관리 합니다.  

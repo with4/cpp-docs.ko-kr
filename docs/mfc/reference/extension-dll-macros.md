@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376478"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>매크로 및 Dll을 관리 하기 위한 함수
 

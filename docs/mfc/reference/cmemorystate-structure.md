@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367973"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 구조
 프로그램에서 메모리 누수 문제를 감지 하는 편리한 방법을 제공 합니다.  

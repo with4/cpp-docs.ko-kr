@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366716"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar 클래스
 컨트롤 막대에 Windows 모덜리스 대화 상자의 기능을 제공합니다.  

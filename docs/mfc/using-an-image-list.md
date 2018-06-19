@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381607"
 ---
 # <a name="using-an-image-list"></a>이미지 목록 사용
 이미지 목록의 일반적인 사용 패턴을 따릅니다.  

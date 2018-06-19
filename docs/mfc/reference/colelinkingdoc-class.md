@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369849"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc 클래스
 포함된 항목에 대한 연결을 지원하는 OLE 컨테이너 문서의 기본 클래스입니다.  

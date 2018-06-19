@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33161969"
 ---
 # <a name="rangeadapteroperator-stlclr"></a>range_adapter::operator=(STL/CLR)
 저장 된 반복기 쌍을 바꿉니다.  

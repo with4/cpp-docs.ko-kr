@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367232"
 ---
 # <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo 구조체
 `CDaoQueryDefInfo` 구조 데이터 액세스 개체 (DAO)에 대해 정의 된 쿼리 정의 개체에 대 한 정보를 포함 합니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129699"
 ---
 # <a name="lock-class"></a>lock 클래스
 이 클래스는 여러 스레드에서 개체에 대 한 액세스를 동기화 하기 위한 잠금을 가져오는 자동화 합니다.  생성 될 때는 잠금을 가져올 때 릴리스를 제거 하 고 잠금을 합니다.  

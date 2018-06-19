@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368363"
 ---
 # <a name="cmemfile-class"></a>CMemFile 클래스
 [CFile](../../mfc/reference/cfile-class.md)-을 지 원하는 메모리 파일 클래스를 파생 합니다.  

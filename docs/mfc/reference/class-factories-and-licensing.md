@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367076"
 ---
 # <a name="class-factories-and-licensing"></a>클래스 팩터리 및 라이선스
 OLE 컨트롤의 인스턴스를 만들려면 컨테이너 응용 프로그램의 컨트롤의 클래스 팩터리 멤버 함수를 호출 합니다. 컨트롤은 실제 OLE 개체, 클래스 팩터리는 컨트롤의 인스턴스를 만들기 위한 해야 합니다. 모든 OLE 컨트롤 클래스는 클래스 팩터리를 가져야 합니다.  

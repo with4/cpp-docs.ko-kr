@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370124"
 ---
 # <a name="cmfcribbonlabel-class"></a>CMFCRibbonLabel 클래스
 리본에 대해 클릭할 수 없는 텍스트 레이블을 구현합니다.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385273"
 ---
 # <a name="window-objects"></a>창 개체
 MFC 클래스를 제공 [CWnd](../mfc/reference/cwnd-class.md) 캡슐화 하는 `HWND` 는 창의 핸들입니다. `CWnd` 개체는 Windows 창을 나타내는 `HWND`와 다른 C++ 창 개체이지만 이를 포함합니다. `CWnd`를 사용하여 고유한 자식 창 클래스를 파생시키거나 `CWnd`에서 파생된 여러 MFC 클래스 중 하나를 사용합니다. `CWnd` 클래스는 프레임 창, 대화 상자, 자식 창, 컨트롤 및 컨트롤 막대(예: 도구 모음)를 포함하는 모든 창에 대한 기본 클래스입니다. 에 대해 잘 알고 [c + + 창 개체와 HWND 간 관계](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md) MFC 통한 효율적인 프로그래밍에 대 한 매우 중요 합니다.  

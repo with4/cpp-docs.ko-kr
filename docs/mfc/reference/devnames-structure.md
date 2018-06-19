@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371480"
 ---
 # <a name="devnames-structure"></a>DEVNAMES 구조체
 `DEVNAMES` 구조 드라이버, 장치 및 프린터에 대 한 출력 포트 이름을 식별 하는 문자열을 포함 합니다.  

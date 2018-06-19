@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368311"
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>MFC 응용 프로그램 마법사, 복합 문서 지원
 MFC 응용 프로그램 마법사의이 페이지에서 응용 프로그램에서 제공 하는 활성 및 복합 문서 지원 수준을 나타냅니다. 응용 프로그램에 복합 문서 및 문서 서식 파일을 지원 하기 위해 문서/뷰 아키텍처를 지원 해야 합니다.  

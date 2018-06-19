@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373426"
 ---
 # <a name="message-types-associated-with-user-interface-objects"></a>사용자 인터페이스 개체와 관련된 메시지 형식
 다음 표에서는 작업 개체의 형식과 관련 된 메시지를 보여 줍니다.  

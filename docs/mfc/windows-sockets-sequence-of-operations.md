@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385260"
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Windows 소켓: 작업 순서
 이 문서에서는 병행 하 여 서버 소켓과 클라이언트 소켓에 대 한 작업의 시퀀스입니다. 소켓을 사용 하기 때문에 `CArchive` 개체는 반드시 [스트림 소켓](../mfc/windows-sockets-stream-sockets.md)합니다.  

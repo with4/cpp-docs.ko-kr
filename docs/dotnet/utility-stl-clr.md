@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169701"
 ---
 # <a name="utility-stlclr"></a>utility(STL/CLR)
 STL/CLR 헤더를 포함 `<cliext/utility>` 템플릿 클래스를 정의 하려면 `pair` 및 여러 개의 지원 템플릿 함수입니다.  

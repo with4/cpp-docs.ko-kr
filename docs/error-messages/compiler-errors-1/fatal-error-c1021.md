@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198809"
 ---
 # <a name="fatal-error-c1021"></a>심각한 오류 C1021
 'string' 전처리기 명령이 잘못되었습니다.  

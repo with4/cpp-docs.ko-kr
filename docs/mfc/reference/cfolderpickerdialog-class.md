@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366423"
 ---
 # <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog 클래스
 CFolderPickerDialog 클래스 폴더 선택 모드에서 CFileDialog를 구현 합니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172640"
 ---
 # <a name="vector-stlclr"></a>vector(STL/CLR)
 템플릿 클래스는 임의 액세스를 가진 요소의 다양 한 길이의 시퀀스를 제어 하는 개체를 설명 합니다. 컨테이너를 사용 하 여 `vector` 저장소의 연속 블록으로 요소의 시퀀스를 관리할 수 있습니다. 블록 요구에 맞게 증가 하는 배열을로 구현 됩니다.  

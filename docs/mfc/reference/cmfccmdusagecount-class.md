@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369244"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount 클래스
 Windows 메시지를 사용자가 메뉴에서 항목을 선택 하는 경우 등의 사용 횟수를 추적 합니다.  

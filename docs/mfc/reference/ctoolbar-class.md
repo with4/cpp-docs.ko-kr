@@ -59,6 +59,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376368"
 ---
 # <a name="ctoolbar-class"></a>CToolBar 클래스
 비트맵 단추의 행과 구분 기호(선택 사항)가 있는 컨트롤 막대입니다.  

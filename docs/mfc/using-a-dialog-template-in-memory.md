@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381240"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>메모리의 대화 상자 템플릿 사용
 에 제공 된 메서드를 사용 하는 대신는 [대화 상자를 만들지 테이블](../mfc/creating-a-dialog-class-with-code-wizards.md)를 만들 수 있습니다 하지 두 종류의 대화 상자 직접 메모리에서 대화 상자 템플릿에서 합니다. 자세한 내용은 클래스를 참조 하십시오. [CDialog](../mfc/reference/cdialog-class.md) 에 *MFC 참조*합니다.  

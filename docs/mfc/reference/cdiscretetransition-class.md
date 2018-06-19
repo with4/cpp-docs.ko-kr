@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33366937"
 ---
 # <a name="cdiscretetransition-class"></a>CDiscreteTransition 클래스
 불연속 전환을 캡슐화합니다.  

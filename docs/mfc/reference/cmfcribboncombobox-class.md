@@ -55,6 +55,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371516"
 ---
 # <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox 클래스
 `CMFCRibbonComboBox` 클래스 리본 막대, 리본 패널 또는 리본 팝업 메뉴에 추가할 수 있는 콤보 상자 컨트롤을 구현 합니다.  

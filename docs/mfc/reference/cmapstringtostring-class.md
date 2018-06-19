@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368149"
 ---
 # <a name="cmapstringtostring-class"></a>CMapStringToString 클래스
 `CString` 개체로 키가 지정된 `CString` 개체의 맵을 지원합니다.  

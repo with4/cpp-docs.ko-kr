@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367960"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel 클래스
 클릭할 때 표시 되는 리본 패널을 구현 하는 [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)합니다.  

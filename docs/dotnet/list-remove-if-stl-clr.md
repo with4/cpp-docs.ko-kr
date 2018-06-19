@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132325"
 ---
 # <a name="listremoveif-stlclr"></a>list::remove_if(STL/CLR)
 지정 된 테스트를 통과 하는 요소를 제거 합니다.  

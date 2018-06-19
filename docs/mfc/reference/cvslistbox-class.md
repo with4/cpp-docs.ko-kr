@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372997"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox 클래스
 `CVSListBox` 클래스 편집 가능한 목록 컨트롤을 지원 합니다.  

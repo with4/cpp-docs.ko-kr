@@ -75,6 +75,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376879"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray 클래스
 임의의 형식 및 차원 배열 작업용 클래스입니다.  

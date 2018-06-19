@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33110135"
 ---
 # <a name="hashmultimaploadfactor-stlclr"></a>hash_multimap::load_factor(STL/CLR)
 버킷당 평균 요소 수를 계산합니다.  

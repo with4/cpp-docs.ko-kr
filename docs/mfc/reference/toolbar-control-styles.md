@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373197"
 ---
 # <a name="toolbar-control-styles"></a>ToolBar 컨트롤 스타일
 [CMFCToolBarButton 클래스](../../mfc/reference/cmfctoolbarbutton-class.md) 단추의 동작 및 모양을 결정 하는 스타일 플래그 집합입니다. 호출 하 여 이러한 플래그의 조합을 설정할 수 있습니다 [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle)합니다. 이 항목에는 스타일 플래그 값 및 해당 의미가 나열됩니다.  

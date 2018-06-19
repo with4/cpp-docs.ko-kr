@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380548"
 ---
 # <a name="slider-control-styles"></a>슬라이더 컨트롤 스타일
 슬라이더 컨트롤 ([CSliderCtrl](../mfc/reference/csliderctrl-class.md)) 세로 또는 가로 방향을 가질 수 있습니다. 어느 쪽에 눈금 표시를 보유할 수 있는 면, 또는 모두 둘 다 합니다. 연속 값의 범위를 지정 하도 사용할 수 있습니다. 이러한 속성은 슬라이더 컨트롤을 만들 때 지정 하는 슬라이더 컨트롤 스타일을 사용 하 여 제어 됩니다.  
