@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137680"
 ---
 # <a name="managed-types-ccli"></a>관리되는 형식(C++/CLI)
 Visual c + +에는 공용 언어 런타임의 기능에 대 한 지원을 제공 하 고 장점 및 런타임 제한 될 수 있는 관리 되는 형식 기능을 통해.NET 기능에 액세스할 수 있습니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33159667"
 ---
 # <a name="queueassign-stlclr"></a>queue::assign(STL/CLR)
 모든 요소를 바꿉니다.  

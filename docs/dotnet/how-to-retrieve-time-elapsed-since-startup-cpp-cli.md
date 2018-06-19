@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132832"
 ---
 # <a name="how-to-retrieve-time-elapsed-since-startup-ccli"></a>방법: 시작 후 경과한 시간 검색(C++/CLI)
 Windows 이후 경과 된 시간 (밀리초)로 시작한 또는 다음 코드 예제에는 틱 수를 결정 하는 방법을 보여 줍니다. 이 값에 저장 되는 <xref:System.Environment.TickCount%2A?displayProperty=fullName> 멤버는 32 비트 값 이기 때문에 0으로 다시 설정은 및입니다.  

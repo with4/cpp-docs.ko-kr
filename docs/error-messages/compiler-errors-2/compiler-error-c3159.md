@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252762"
 ---
 # <a name="compiler-error-c3159"></a>컴파일러 오류 C3159
 'pointer': 값 형식에 대 한 포인터 배열을 선언할 수 없습니다.  

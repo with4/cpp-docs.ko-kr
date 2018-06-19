@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33140700"
 ---
 # <a name="mapkeycompare-stlclr"></a>map::key_compare(STL/CLR)
 두 키에 대 한 순서 지정 하는 대리자입니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167569"
 ---
 # <a name="vectorcapacity-stlclr"></a>vector::capacity(STL/CLR)
 컨테이너에 할당 된 저장소의 크기를 보고합니다.  

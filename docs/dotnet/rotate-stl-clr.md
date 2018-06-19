@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162181"
 ---
 # <a name="rotate-stlclr"></a>rotate(STL/CLR)
 인접한 두 범위에 있는 요소를 교환합니다.  

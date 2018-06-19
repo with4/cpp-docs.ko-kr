@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248752"
 ---
 # <a name="compiler-error-c3253"></a>컴파일러 오류 C3253
 'function': 명시적 재정의에 오류  

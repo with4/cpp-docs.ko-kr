@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167839"
 ---
 # <a name="unarydelegatenoreturn-stlclr"></a>unary_delegate_noreturn(STL/CLR)
 반환 하는 인수가 한 개인 대리자를 설명 하는 genereic 클래스 `void`합니다. 사용할 대리자의 인수 형식이 측면에서 지정 합니다.  

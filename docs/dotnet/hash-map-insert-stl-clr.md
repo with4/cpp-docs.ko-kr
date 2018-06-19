@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111122"
 ---
 # <a name="hashmapinsert-stlclr"></a>hash_map::insert(STL/CLR)
 요소를 추가합니다.  

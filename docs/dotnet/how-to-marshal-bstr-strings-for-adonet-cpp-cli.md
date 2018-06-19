@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136651"
 ---
 # <a name="how-to-marshal-bstr-strings-for-adonet-ccli"></a>방법: ADO.NET용 BSTR 문자열 마샬링(C++/CLI)
 COM 문자열을 추가 하는 방법을 보여 줍니다 (`BSTR`) 데이터베이스 및 마샬링해야 하는 방법에는 <xref:System.String?displayProperty=fullName> 를 데이터베이스에서 한 `BSTR`합니다.  

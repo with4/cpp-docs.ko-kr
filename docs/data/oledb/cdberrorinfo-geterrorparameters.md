@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094568"
 ---
 # <a name="cdberrorinfogeterrorparameters"></a>CDBErrorInfo::GetErrorParameters
 호출 [IErrorRecords::GetErrorParameters](https://msdn.microsoft.com/en-us/library/ms715793.aspx) 반환할 오류 매개 변수입니다.  

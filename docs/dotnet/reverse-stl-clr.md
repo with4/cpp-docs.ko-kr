@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33161423"
 ---
 # <a name="reverse-stlclr"></a>reverse(STL/CLR)
 범위 내에서 요소의 순서를 반대로 바꿉니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162327"
 ---
 # <a name="rangeadapter-stlclr"></a>range_adapter(STL/CLR)
 여러 클래스 라이브러리 BCL (기본) 인터페이스를 구현 하는 데 사용 되는 반복기의 쌍을 래핑하는 템플릿 클래스입니다. BCL 컬렉션 하는 경우 STL/CLR 범위를 조작 하는 range_adapter를 사용 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232928"
 ---
 # <a name="compiler-error-c2771"></a>컴파일러 오류 C2771
 \#가져오기 에서만 사용할 수 전역 또는 네임 스페이스 범위  

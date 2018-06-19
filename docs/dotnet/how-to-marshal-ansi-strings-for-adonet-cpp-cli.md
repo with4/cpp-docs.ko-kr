@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137473"
 ---
 # <a name="how-to-marshal-ansi-strings-for-adonet-ccli"></a>방법: ADO.NET용 ANSI 문자열 마샬링(C++/CLI)
 네이티브 문자열을 추가 하는 방법을 보여 줍니다 (`char *`) 데이터베이스를 마샬링하는 방법에 대 한 <xref:System.String?displayProperty=fullName> 네이티브 문자열에 데이터베이스에서 합니다.  

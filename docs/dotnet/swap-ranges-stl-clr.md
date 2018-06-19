@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164413"
 ---
 # <a name="swapranges-stlclr"></a>swap_ranges(STL/CLR)
 한 범위의 요소를 크기가 동일한 다른 범위의 요소로 교환합니다.  

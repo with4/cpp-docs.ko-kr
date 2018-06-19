@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33163490"
 ---
 # <a name="replace-stlclr"></a>replace(STL/CLR)
 범위의 각 요소를 검사하고 요소가 지정된 값과 일치하면 대체합니다.  

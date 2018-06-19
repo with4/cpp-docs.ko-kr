@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33163012"
 ---
 # <a name="randomshuffle-stlclr"></a>random_shuffle(STL/CLR)
 시퀀스를 다시 정렬 `N` 중 하나로 범위에 요소 `N`! 가능 배열 중 하나로 재정렬합니다.  

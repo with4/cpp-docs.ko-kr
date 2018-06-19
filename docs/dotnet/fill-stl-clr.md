@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107440"
 ---
 # <a name="fill-stlclr"></a>fill(STL/CLR)
 지정한 범위의 모든 요소에 동일한 새 값을 할당합니다.  

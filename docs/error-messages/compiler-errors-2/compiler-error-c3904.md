@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33271881"
 ---
 # <a name="compiler-error-c3904"></a>컴파일러 오류 C3904
 'property_accessor': 매개 변수 번호를 지정 해야 합니다  

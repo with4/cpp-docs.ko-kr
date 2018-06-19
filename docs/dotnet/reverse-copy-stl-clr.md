@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33161605"
 ---
 # <a name="reversecopy-stlclr"></a>reverse_copy(STL/CLR)
 소스 범위 내의 요소의 순서를 바꾸는 동시에 대상 범위로 복사 합니다.  

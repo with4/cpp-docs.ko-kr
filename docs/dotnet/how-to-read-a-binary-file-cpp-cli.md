@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129371"
 ---
 # <a name="how-to-read-a-binary-file-ccli"></a>방법: 이진 파일 읽기(C++/CLI)
 다음 코드 예제에는 두 개의 클래스에서 사용 하 여 파일에서 이진 데이터를 읽는 방법을 보여 줍니다는 <xref:System.IO?displayProperty=fullName> 네임 스페이스: <xref:System.IO.FileStream> 및 <xref:System.IO.BinaryReader>합니다. <xref:System.IO.FileStream> 실제 파일을 나타냅니다. <xref:System.IO.BinaryReader> 이진 액세스를 허용 하는 스트림에 대 한 인터페이스를 제공 합니다.  

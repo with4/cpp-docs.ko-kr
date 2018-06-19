@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226493"
 ---
 # <a name="fatal-error-c1310"></a>심각한 오류 C1310
 OpenMP에서는 프로필 기반 최적화를 사용할 수 없습니다.  

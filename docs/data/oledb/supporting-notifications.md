@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112097"
 ---
 # <a name="supporting-notifications"></a>알림 지원
 ## <a name="implementing-connection-point-interfaces-on-the-provider-and-consumer"></a>공급자 및 소비자 연결 지점 인터페이스 구현  

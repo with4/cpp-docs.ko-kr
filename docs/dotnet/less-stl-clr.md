@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131597"
 ---
 # <a name="less-stlclr"></a>less(STL/CLR)
 함수를 설명 하는 템플릿 클래스는 호출 되 면 true를 반환 하는 첫 번째 인수 작은 경우에 두 번째 인스턴스보다 합니다. 사용 하면 해당 인수 형식 기준으로 함수 개체를 지정 합니다.  

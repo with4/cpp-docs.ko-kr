@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127307"
 ---
 # <a name="how-to-determine-the-user-interactive-state-ccli"></a>방법: 사용자 대화형 상태 확인(C++/CLI)
 다음 코드 예제에서는 코드는 대화형 사용자 컨텍스트에서 실행 되는지 여부를 확인 하는 방법을 보여 줍니다. 경우 <xref:System.Environment.UserInteractive%2A> 가 false 이면는 코드가 실행 되는 서비스는 프로세스 또는에서 웹 응용 프로그램 내 경우 해서는 사용자와 상호 작용할 수 있습니다.  

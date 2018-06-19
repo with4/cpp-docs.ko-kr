@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127892"
 ---
 # <a name="how-to-enumerate-files-in-a-directory-ccli"></a>방법: 디렉터리의 파일 열거(C++/CLI)
 다음 코드 예제에서는 디렉터리의 파일 목록을 검색 하는 방법을 보여 줍니다. 또한 하위 디렉터리 열거 됩니다. 다음 코드 예제에서는 <xref:System.IO.Directory.GetFiles%2A> <xref:System.IO.Directory.GetFiles%2A> 및 <xref:System.IO.Directory.GetDirectories%2A> C:\Windows 디렉터리의 내용을 표시 하는 메서드.  

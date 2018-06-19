@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092193"
 ---
 # <a name="crowsetupdateall"></a>CRowset::UpdateAll
 보류 중인 마지막 인출 이후 모든 행에 대해 변경 내용을 전송 또는 **업데이트** 호출 합니다.  

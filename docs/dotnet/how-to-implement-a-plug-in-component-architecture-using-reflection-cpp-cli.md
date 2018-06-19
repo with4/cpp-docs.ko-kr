@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135215"
 ---
 # <a name="how-to-implement-a-plug-in-component-architecture-using-reflection-ccli"></a>방법: 리플렉션을 사용하여 플러그 인 구성 요소 아키텍처 구현(C++/CLI)
 다음 코드 예제는 간단한 "플러그 인" 아키텍처를 구현 하는 리플렉션 사용을 보여 줍니다. 첫 번째 부분은 응용 프로그램을이 고 두 번째 플러그 인 합니다. 응용 프로그램에 명령줄 인수로 제공 되는 플러그 인 DLL에는 양식 기반 클래스를 사용 하 여 자신을 채우는 여러 문서 형태입니다.  

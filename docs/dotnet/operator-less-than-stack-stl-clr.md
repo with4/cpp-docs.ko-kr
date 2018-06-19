@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136951"
 ---
 # <a name="operatorlt-stack-stlclr"></a>연산자&lt; (stack) (STL/CLR)
 스택 비교 보다 작습니다.  

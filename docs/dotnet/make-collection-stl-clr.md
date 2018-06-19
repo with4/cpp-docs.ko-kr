@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130635"
 ---
 # <a name="makecollection-stlclr"></a>make_collection(STL/CLR)
 확인 된 `range_adapter` 반복기 쌍에서입니다.  

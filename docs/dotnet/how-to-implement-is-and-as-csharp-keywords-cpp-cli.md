@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128620"
 ---
 # <a name="how-to-implement-is-and-as-c-keywords-ccli"></a>방법: is 및 as C# 키워드 구현(C++/CLI)
 이 항목에서는의 기능을 구현 하는 방법을 보여 줍니다.는 `is` 및 `as` Visual c + +의 C# 키워드입니다.  

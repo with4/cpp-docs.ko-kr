@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130804"
 ---
 # <a name="how-to-write-data-to-the-windows-registry-ccli"></a>방법: Windows 레지스트리에 데이터 쓰기(C++/CLI)
 다음 코드 예제에서는 <xref:Microsoft.Win32.Registry.CurrentUser> 의 쓰기 가능한 인스턴스를 만드는 키는 <xref:Microsoft.Win32.RegistryKey> 클래스에 해당 하는 **소프트웨어** 키입니다. <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A> 메서드는 다음 새 키를 만들고 키/값 쌍을 추가 하는 데 사용 됩니다.  

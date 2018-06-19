@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132023"
 ---
 # <a name="how-to-parse-strings-using-the-split-method-ccli"></a>방법: Split 메서드를 사용하여 문자열 구문 분석(C++/CLI)
 다음 코드 예제는 <xref:System.String.Split%2A?displayProperty=fullName> 메서드는 문자열에서 각 단어를 추출 하 합니다. 여러 유형의 단어 설명자를 포함 하는 문자열은 생성 하 고 호출 하 여 구문 분석 <xref:System.String.Split%2A> 설명자의 목록을 사용 합니다. 그런 다음 문장의 각 단어는 별도로 표시 됩니다.  

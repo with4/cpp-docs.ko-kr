@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135042"
 ---
 # <a name="operator-queue-stlclr"></a>operator!= (queue)(STL/CLR)
 같지 않음 비교 큐에 넣습니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130037"
 ---
 # <a name="how-to-draw-shapes-with-the-net-framework"></a>방법: .NET Framework로 도형 그리기
 다음 코드 예제에서는 <xref:System.Drawing.Graphics> 수정 하는 클래스는 <xref:System.Windows.Forms.Form.OnPaint%2A> 이벤트 처리기에 대 한 포인터를 검색 하는 <xref:System.Drawing.Graphics> 기본 폼에 대 한 개체입니다. 이 포인터는 다음 폼의 배경색을 설정 하 고 선 및 사용 하 여 호를 그릴 하는 데 사용 됩니다는 <xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName> 및 <xref:System.Drawing.Graphics.DrawArc%2A> 메서드.  

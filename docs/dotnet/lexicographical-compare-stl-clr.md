@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128675"
 ---
 # <a name="lexicographicalcompare-stlclr"></a>lexicographical_compare(STL/CLR)
 두 시퀀스를 요소별로 비교하여 둘 중 작은 것을 결정합니다.  

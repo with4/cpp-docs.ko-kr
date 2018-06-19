@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130116"
 ---
 # <a name="how-to-read-windows-performance-counters-ccli"></a>방법: Windows 성능 카운터 읽기(C++/CLI)
 일부 응용 프로그램 및 Windows 하위 시스템에는 Windows 성능 시스템을 통해 성능 데이터를 표시 합니다. 이러한 카운터를 사용 하 여 액세스할 수는 <xref:System.Diagnostics.PerformanceCounterCategory> 및 <xref:System.Diagnostics.PerformanceCounter> 에 상주 하는 클래스는 <xref:System.Diagnostics?displayProperty=fullName> 네임 스페이스입니다.  

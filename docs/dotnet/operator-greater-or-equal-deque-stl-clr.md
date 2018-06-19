@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138872"
 ---
 # <a name="operatorgt-deque-stlclr"></a>연산자&gt;= (deque) (STL/CLR)
 Deque 보다 크거나 같은지 비교 합니다.  

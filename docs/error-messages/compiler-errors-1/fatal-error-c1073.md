@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33224987"
 ---
 # <a name="fatal-error-c1073"></a>심각한 오류 C1073
 (컴파일러 파일 'filename', 줄 번호) 증분 컴파일과 관련 된 내부 오류  

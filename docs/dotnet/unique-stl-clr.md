@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164164"
 ---
 # <a name="unique-stlclr"></a>unique(STL/CLR)
 지정된 범위에서 서로 인접한 중복 요소를 제거합니다.  

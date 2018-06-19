@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281933"
 ---
 # <a name="compiler-warning-level-1-c4733"></a>컴파일러 경고(수준 1) C4733
 인라인 asm 'fs: 0'에 할당: 처리기 안전한 처리기로 등록 되지 않았습니다  

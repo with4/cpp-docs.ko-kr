@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33229391"
 ---
 # <a name="fatal-error-c1084"></a>심각한 오류 C1084
 다음 파일 형식 파일을 읽을 수 없습니다. 'file': message  

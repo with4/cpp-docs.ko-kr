@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33140175"
 ---
 # <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>방법: 어셈블리에서 STL/CLR 컨테이너 노출
 와 같은 STL/CLR 컨테이너 `list` 및 `map` 템플릿 ref 클래스로 구현 됩니다. 컴파일 타임에 c + + 템플릿을 인스턴스화할 수 있습니다, 때문에 동일한 시그니처가 하지만 않는 다른 어셈블리에 두 개의 템플릿 클래스는 실제로 다른 형식입니다. 즉, 다른 어셈블리에서 템플릿 클래스를 사용할 수 없습니다.  

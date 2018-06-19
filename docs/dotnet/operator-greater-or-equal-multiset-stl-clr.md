@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33139475"
 ---
 # <a name="operatorgt-multiset-stlclr"></a>연산자&gt;= (multiset) (STL/CLR)
 보다 큰 목록 또는 같은지 비교 합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131610"
 ---
 # <a name="multimapequalrange-stlclr"></a>multimap::equal_range(STL/CLR)
 지정된 키와 일치하는 범위를 찾습니다.  

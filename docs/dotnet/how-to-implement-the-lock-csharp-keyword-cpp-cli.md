@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127918"
 ---
 # <a name="how-to-implement-the-lock-c-keyword-ccli"></a>방법: lock C# 키워드 구현(C++/CLI)
 이 항목에서는 C# 구현 하는 방법을 보여 줍니다. `lock` Visual c + +의 키워드입니다. 

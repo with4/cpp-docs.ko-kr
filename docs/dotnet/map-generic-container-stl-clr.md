@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132257"
 ---
 # <a name="mapgenericcontainer-stlclr"></a>map::generic_container(STL/CLR)
 컨테이너에 대 한 제네릭 인터페이스의 형식입니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133014"
 ---
 # <a name="multimapconstreference-stlclr"></a>multimap::const_reference(STL/CLR)
 요소에 대한 상수 참조의 형식입니다.  

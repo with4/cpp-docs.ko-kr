@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127408"
 ---
 # <a name="how-to-consume-a-c-indexer-ccli"></a>방법: C# 인덱서 사용(C++/CLI)
 Visual c + + 인덱서가; 포함 되어 있지 않습니다. 인덱싱된 속성에 해당 합니다. C# 인덱서를 사용 하려면 인덱싱된 속성 처럼 인덱서를 액세스 합니다.  

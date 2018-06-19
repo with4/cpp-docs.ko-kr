@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252499"
 ---
 # <a name="compiler-error-c3264"></a>컴파일러 오류 C3264
 'class': 클래스-생성자는 반환 형식을 가질 수 없습니다.  

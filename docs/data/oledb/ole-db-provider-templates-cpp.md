@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112747"
 ---
 # <a name="ole-db-provider-templates-c"></a>OLE DB 공급자 템플릿(C++)
 OLE DB는 Microsoft 범용 데이터 액세스 전략의 중요 한 부분입니다. OLE DB의 디자인은 모든 데이터 소스에서 고성능 데이터 액세스를 허용합니다. 모든 테이블 형식 데이터를 데이터베이스에서 인지에 관계 없이 OLE DB를 통해 볼 수 있습니다. 유연성이 뛰어난 성능 제공합니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131100"
 ---
 # <a name="how-to-parse-strings-using-regular-expressions-ccli"></a>방법: 정규식을 사용하여 문자열 구문 분석(C++/CLI)
 다음 코드 예제에서는 간단한 문자열을 사용 하 여 구문 분석 하는 방법을 보여 줍니다는 <xref:System.Text.RegularExpressions.Regex> 클래스에 <xref:System.Text.RegularExpressions?displayProperty=fullName> 네임 스페이스입니다. 여러 유형의 단어 설명자를 포함 하는 문자열을 생성 합니다. 문자열 구문 분석 사용 하 여 <xref:System.Text.RegularExpressions.Regex> 클래스와 함께 <xref:System.Text.RegularExpressions.Match> 클래스입니다. 그런 다음 문장의 각 단어는 별도로 표시 됩니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132273"
 ---
 # <a name="listpushback-stlclr"></a>list::push_back(STL/CLR)
 새 마지막 요소를 추가 합니다.  

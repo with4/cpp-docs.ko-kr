@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132416"
 ---
 # <a name="how-to-use-regular-expressions-to-search-and-replace-ccli"></a>방법: 정규식을 사용한 찾기 및 바꾸기(C++/CLI)
 다음 코드 예제에서는 어떻게 정규식 클래스 <xref:System.Text.RegularExpressions.Regex> 찾기 및 바꾸기를 수행 데 사용할 수 있습니다. 이러한 용도로 <xref:System.Text.RegularExpressions.Regex.Replace%2A> 메서드. 입력으로 사용 되는 버전은 두 문자열: 문자열을 수정할 수 및 (있는 경우)는 섹션이 대신 삽입할 문자열에 지정 된 패턴과 일치 하는 <xref:System.Text.RegularExpressions.Regex> 개체입니다.  

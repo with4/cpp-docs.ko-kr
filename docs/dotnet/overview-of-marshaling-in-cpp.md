@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137136"
 ---
 # <a name="overview-of-marshaling-in-c"></a>C++ 마샬링 개요
 혼합된 모드의 경우에 따라 마샬링해야 네이티브 및 관리 되는 형식 간의 데이터. [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] 마샬링 라이브러리를 도입 마샬링해야 하 고 간단한 방법으로 데이터를 변환 합니다.  

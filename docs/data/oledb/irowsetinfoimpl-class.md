@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106221"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl 클래스
 에 대 한 구현을 제공는 [IRowsetInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx) 인터페이스입니다.  

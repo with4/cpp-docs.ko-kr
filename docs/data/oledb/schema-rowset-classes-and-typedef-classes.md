@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111447"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>스키마 행 집합 클래스 및 Typedef 클래스
 스키마가 소유 하 고, 있거나 특정 사용자가 만든 데이터베이스 개체의 컬렉션입니다. 카탈로그 하나 이상의 스키마를 포함할 수 있으 라는 INFORMATION_SCHEMA 뷰 및 정보 스키마의 도메인을 포함 하는 스키마를 항상 포함 해야 합니다. OLE DB의 스키마 정보 미리 정의 된 스키마 행 집합을 사용 하 여 검색 됩니다와 유형, 테이블, 열, 인덱스, 뷰, 어설션 및 제약 조건, 통계, 문자 집합, 데이터 정렬 및 도메인을 포함 합니다.  

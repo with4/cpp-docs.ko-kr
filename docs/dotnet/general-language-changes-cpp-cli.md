@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109140"
 ---
 # <a name="general-language-changes-ccli"></a>일반적인 언어 변경 사항(C++/CLI)
 Visual c + + Managed Extensions for c + + 변경 CLR 언어 기능의 수입니다.  

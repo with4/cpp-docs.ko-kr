@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134093"
 ---
 # <a name="native-and-net-interoperability"></a>네이티브 및 .NET 상호 운용성
 Visual c + +는 스레드와 관리 되지 않는 구문이 공존 하 고 동일한 파일 및 동일한 어셈블리 내에서 상호 운용할 수 있도록 하는 상호 운용성 기능을 지원 합니다. 이 기능을 P/Invoke 등의 작은 하위 집합 뿐, 다른.NET 언어에서 사용할 수 있지만 Visual c + +에서 제공 하는 상호 운용성 지원의 대부분은 다른 언어에서 사용할 수 없습니다.  

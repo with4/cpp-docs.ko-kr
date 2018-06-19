@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250083"
 ---
 # <a name="compiler-error-c3322"></a>컴파일러 오류 C3322
 'property': 'attribute' 특성에 대해 올바른 속성이 아닙니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127853"
 ---
 # <a name="how-to-retrieve-file-information-ccli"></a>방법: 파일 정보 검색(C++/CLI)
 다음 코드 예제는 <xref:System.IO.FileInfo> 클래스입니다. 파일의 이름이 있는 경우를 생성 및 마지막으로 수정한 파일 크기, 디렉터리, 전체 이름 및 날짜 및 시간과 같은 파일에 대 한 정보를 검색 합니다.이 클래스를 사용할 수 있습니다.  

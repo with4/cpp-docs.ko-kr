@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133430"
 ---
 # <a name="how-to-diagnose-and-fix-assembly-compatibility-problems-ccli"></a>방법: 어셈블리 호환성 문제 진단 및 해결(C++/CLI)
 이 항목에서는 컴파일 타임에 참조 하는 어셈블리의 버전 런타임 시 참조 된 어셈블리의 버전과 일치 하지 않는 경우 발생할 수 있는 결과 설명 하 고 문제를 방지 하는 방법입니다.  

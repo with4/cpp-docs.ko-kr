@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164647"
 ---
 # <a name="compiler-error-c2112"></a>컴파일러 오류 C2112
 '-': 포인터 빼기에는 정수 계열 또는 포인터 피연산자가 있어야 합니다.  

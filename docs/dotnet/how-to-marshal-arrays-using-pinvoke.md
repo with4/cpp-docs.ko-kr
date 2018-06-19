@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132533"
 ---
 # <a name="how-to-marshal-arrays-using-pinvoke"></a>방법: PInvoke를 사용하여 배열 마샬링
 이 항목에서는 CLR 문자열 형식을 사용 하 여 C 스타일 문자열을 호출할 수를 허용 하는 방법을 네이티브 함수를 설명 <xref:System.String> 지원.NET Framework 플랫폼 호출을 사용 하 여 합니다. Visual c + + 프로그래머는 P/Invoke는 작은 컴파일 타임 오류를 보고, 형식 안전 하지 않은 및는 것을 제공 하므로 (가능한 경우) 대신 c + + Interop 기능을 사용 하는 것이 좋습니다. P/Invoke 유일한 옵션은 관리 되지 않는 API는 DLL로 패키지 하는 경우 소스 코드를 사용할 수 없습니다 (그렇지 않은 경우 참조 [c + + Interop를 사용 하 여 (암시적 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)).  

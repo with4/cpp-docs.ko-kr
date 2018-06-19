@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127983"
 ---
 # <a name="how-to-test-for-equality-ccli"></a>방법: 같음 여부 테스트(C++/CLI)
 다음 샘플에서는 c + +에 대 한 관리 되는 확장을 사용 하 여 같음 테스트를 기반으로를 핸들 참조 합니다.  

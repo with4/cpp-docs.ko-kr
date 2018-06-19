@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33139528"
 ---
 # <a name="numeric-stlclr"></a>numeric(STL/CLR)
 숫자 처리를 위해 제공 하는 알고리즘을 수행 하는 컨테이너 템플릿 함수를 정의 합니다.  

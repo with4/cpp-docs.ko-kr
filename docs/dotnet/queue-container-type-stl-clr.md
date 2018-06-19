@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33159706"
 ---
 # <a name="queuecontainertype-stlclr"></a>queue::container_type(STL/CLR)
 기본 컨테이너의 형식입니다.  

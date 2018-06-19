@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127824"
 ---
 # <a name="how-to-retrieve-the-current-username-ccli"></a>방법: 현재 사용자 이름 검색(C++/CLI)
 다음 코드 예제에서는 현재 사용자 이름 (Windows에 로그인 한 사용자 이름)을 검색 하는 방법을 보여 줍니다. 이름에 저장 됩니다는 <xref:System.Environment.UserName%2A> 문자열에서 정의 되는 <xref:System.Environment> 네임 스페이스입니다.  

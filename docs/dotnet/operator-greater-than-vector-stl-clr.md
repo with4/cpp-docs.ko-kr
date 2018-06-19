@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133365"
 ---
 # <a name="operatorgt-vector-stlclr"></a>연산자&gt; (vector) (STL/CLR)
 비교에 보다 큰 사용 되는 벡터입니다.  

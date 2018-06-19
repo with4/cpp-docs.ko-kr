@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33137512"
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
 지정 된 시간 동안 대기 하 고 반환 하는 개체에 대 한 잠금을 획득 한 `bool` 예외를 throw 하는 대신 취득의 성공 여부를 보고 하기 위해 합니다.  

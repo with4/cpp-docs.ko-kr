@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130129"
 ---
 # <a name="how-to-write-a-binary-file-ccli"></a>방법: 이진 파일 쓰기(C++/CLI)
 다음 코드 예제에서는 이진 데이터 파일에 쓰는 하는 방법을 보여 줍니다. 두 개의 클래스는 <xref:System.IO> 네임 스페이스가 사용 됩니다: <xref:System.IO.FileStream> 및 <xref:System.IO.BinaryWriter>합니다. <xref:System.IO.FileStream> 실제 파일을 나타내는 반면 <xref:System.IO.BinaryWriter> 이진 액세스를 허용 하는 스트림에 인터페이스를 제공 합니다.  

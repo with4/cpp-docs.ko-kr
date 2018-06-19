@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111288"
 ---
 # <a name="callinappdomain-function"></a>call_in_appdomain 함수
 지정 된 응용 프로그램 도메인에서 함수를 실행 합니다.  

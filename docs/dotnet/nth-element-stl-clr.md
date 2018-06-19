@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132897"
 ---
 # <a name="nthelement-stlclr"></a>nth_element(STL/CLR)
 정확 하 게 찾습니다 요소의 범위를 분할 된 `n`th 요소 범위에서 시퀀스의 앞에 있는 모든 요소 보다 작거나 같은 다음 시퀀스의 모든 요소가 하는 것 보다 크거나 합니다.  

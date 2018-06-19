@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276531"
 ---
 # <a name="compiler-warning-level-1-c4369"></a>컴파일러 경고(수준 1) C4369
 '열거자': 열거자 값 'value'는 'type'로 나타낼 수 없습니다, 값은 'new_value'  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129140"
 ---
 # <a name="hashmultisetempty-stlclr"></a>hash_multiset::empty(STL/CLR)
 요소가 있는지 여부를 테스트합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33133404"
 ---
 # <a name="listmerge-stlclr"></a>list::병합(STL/CLR)
 제어 된 시퀀스를 정렬 된 두 개의 병합 합니다.  

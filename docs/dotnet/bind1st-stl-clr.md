@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105378"
 ---
 # <a name="bind1st-stlclr"></a>bind1st(STL/CLR)
 생성 한 `binder1st` 인수 및 함수에 대 한 합니다.  

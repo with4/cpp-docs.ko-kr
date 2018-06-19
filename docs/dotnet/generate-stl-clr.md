@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33105955"
 ---
 # <a name="generate-stlclr"></a>generate(STL/CLR)
 범위에 있는 각 요소에 함수 개체에 의해 생성된 값을 할당합니다.  

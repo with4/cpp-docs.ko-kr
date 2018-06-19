@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172746"
 ---
 # <a name="queue-stlclr"></a>queue(STL/CLR)
 이 템플릿 클래스는 다양 한 길이의 요소 시퀀스를 선입 선출 액세스 권한이 있는 제어 하는 개체를 설명 합니다. 컨테이너 어댑터를 사용 하 여 `queue` 큐로는 기본 컨테이너를 관리할 수 있습니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129641"
 ---
 # <a name="iterswap-stlclr"></a>iter_swap(STL/CLR)
 지정된 반복기의 쌍이 참조하는 두 값을 교환합니다.  

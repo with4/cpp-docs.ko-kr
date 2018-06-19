@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136355"
 ---
 # <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>방법: 대화 상자에 사용자 정의 컨트롤 및 호스트 만들기
 이 문서의 단계를 만들고 있는 대화 상자 기반 가정 ([CDialog 클래스](../mfc/reference/cdialog-class.md)) Microsoft Foundation 클래스 (MFC) 프로젝트에 있지만 추가할 수 있습니다도 Windows Forms 컨트롤에 대 한 지원을 기존 MFC 대화 상자에 있습니다.  

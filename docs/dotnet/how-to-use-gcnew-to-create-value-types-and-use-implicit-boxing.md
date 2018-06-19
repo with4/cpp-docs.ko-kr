@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128799"
 ---
 # <a name="how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing"></a>방법: gcnew를 사용하여 값 형식 만들기 및 암시적 boxing 사용
 사용 하 여 [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) 형식이 boxed 값 형식인 관리 되 고, 가비지 수집 힙에 대 한 다음 배치할 수 있는 값에 만듭니다.  

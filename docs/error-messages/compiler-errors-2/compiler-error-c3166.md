@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247708"
 ---
 # <a name="compiler-error-c3166"></a>컴파일러 오류 C3166
 'pointer': 'type'의 구성원으로 내부 __gc 포인터에 대 한 포인터를 선언할 수 없습니다  

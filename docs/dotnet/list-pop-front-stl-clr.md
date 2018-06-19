@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130609"
 ---
 # <a name="listpopfront-stlclr"></a>list::pop_front(STL/CLR)
 첫 번째 요소를 제거합니다.  

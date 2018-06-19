@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099890"
 ---
 # <a name="iconverttypeimplcanconvert"></a>IConvertTypeImpl::CanConvert
 명령에 또는 행 집합에서 형식 변환의 가용성에 대 한 정보를 제공합니다.  

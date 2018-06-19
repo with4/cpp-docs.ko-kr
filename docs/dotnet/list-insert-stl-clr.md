@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134299"
 ---
 # <a name="listinsert-stlclr"></a>list::insert(STL/CLR)
 지정된 된 위치에 요소를 추가합니다.  

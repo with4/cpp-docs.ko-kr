@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111210"
 ---
 # <a name="double-thunking-c"></a>이중 썽킹(C++)
 이중 썽킹 Visual c + + 관리 되는 함수는 프로그램 실행 하 고 관리 되는 컨텍스트 호출에 함수 호출 함수의 네이티브 진입점을 관리 되는 함수를 호출 하려면 호출할 때 발생할 수 있는 성능 저하를 가리킵니다. 이 항목에서는 이중 썽킹 발생 하는 위치 및 성능을 향상 시키기 위해를 방지 하는 방법을 설명 합니다.  

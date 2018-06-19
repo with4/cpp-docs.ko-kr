@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167985"
 ---
 # <a name="compiler-error-c2147"></a>컴파일러 오류 C2147
 구문 오류: '' 식별자가 새 키워드  
