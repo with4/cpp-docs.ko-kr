@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695368"
 ---
 # <a name="graphics-c-amp"></a>그래픽(C++ AMP)
 C + + AMP에 여러 Api가 포함 된 [concurrency:: graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) gpu의 텍스처 지원에 액세스 하는 데 사용할 수 있는 네임 스페이스입니다. 다음은 몇 가지 일반 시나리오입니다.  

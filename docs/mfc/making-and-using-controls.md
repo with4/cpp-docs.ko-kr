@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347009"
 ---
 # <a name="making-and-using-controls"></a>컨트롤 만들기 및 사용
 Visual c + +에서 대화 상자에 대 한 대부분의 컨트롤을 만들면 [대화 상자 편집기](../windows/dialog-editor.md)합니다. 하지만 모든 대화 상자 또는 창에 컨트롤을 만들 수도 있습니다.  

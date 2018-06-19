@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231524"
 ---
 # <a name="compiler-error-c2690"></a>컴파일러 오류 C2690
 'operator': WinRT 또는 관리되는 배열에서 포인터 산술 연산을 수행할 수 없습니다.  

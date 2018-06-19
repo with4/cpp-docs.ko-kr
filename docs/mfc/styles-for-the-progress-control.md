@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380112"
 ---
 # <a name="styles-for-the-progress-control"></a>진행률 컨트롤 스타일
 진행률 컨트롤을 처음 만들 ([CProgressCtrl::Create](../mfc/reference/cprogressctrl-class.md#create))를 사용 하 여는 `dwStyle` 매개 변수를 진행률 컨트롤에 대 한 원하는 창 스타일을 지정 합니다. 다음 목록에는 적용 가능한 창 스타일을 자세히 설명합니다. 컨트롤은 여기에 나열 되지 않는 창 스타일을 무시 합니다. 일반적으로 대화 상자 부모의 자식 창으로 컨트롤 항상 만들어야 합니다.  

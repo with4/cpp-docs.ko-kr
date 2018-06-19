@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379709"
 ---
 # <a name="settings-for-the-toolbar-control"></a>Toolbar 컨트롤에 대한 설정
 도구 모음의 단추는 비트맵이나 문자열 또는 둘 모두를 표시할 수 있습니다. 기본적으로 이미지 크기는 16 x 15 픽셀의 크기로 설정됩니다. 모든 단추의 너비는 기본적으로 24 x 22 픽셀로 동일합니다. 도구 모음의 높이는 단추의 높이에 따라 결정되고, 도구 모음의 너비는 기본적으로 상위 창의 클라이언트 영역 너비와 동일합니다.  

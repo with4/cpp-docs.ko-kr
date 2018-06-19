@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382908"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>대화 상자 모음과 Rebar 컨트롤 함께 사용
 설명한 것 처럼 [Rebar 컨트롤 및 밴드](../mfc/rebar-controls-and-bands.md), 각 밴드에는 하나의 자식 창 (또는 컨트롤) 포함 될 수 있습니다. 대역 외 당 둘 이상의 자식 창을 포함 하려는이 제한 될 수 있습니다. 문제를 해결은 여러 컨트롤에 대화 상자 모음 리소스를 만들고 다음 rebar 컨트롤에는 rebar 밴드 (대화 상자 막대 포함)를 추가 합니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382088"
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>CFrameWnd에서 파생되지 않은 창의 도구 설명
 이 문서에서는 설명에서 파생 되지 않은 창에 포함 된 컨트롤에 대 한 도구 설명을 사용할 수 있도록 [CFrameWnd](../mfc/reference/cframewnd-class.md)합니다. 문서 [도구 모음 도구 설명](../mfc/toolbar-tool-tips.md) 컨트롤에 대 한 도구 설명에 대 한 정보를 제공는 `CFrameWnd`합니다.  

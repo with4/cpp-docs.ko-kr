@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381848"
 ---
 # <a name="window-dialog-and-control-classes"></a>창, 대화 상자 및 컨트롤 클래스
 클래스 `CWnd` 클래스의 파생된 클래스 캡슐화 및는 `HWND`, Windows 창에 대 한 핸들입니다. `CWnd` 에 사용할 수는 기반으로 또는 새 클래스를 파생 합니다. 클래스 라이브러리에서 제공 파생된 클래스는 다양 한 종류를의 windows 나타냅니다.  

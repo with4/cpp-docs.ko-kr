@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385540"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows 소켓: 소켓과 아카이브 함께 사용
 이 문서에서는 설명는 [CSocket 프로그래밍 모델](#_core_the_csocket_programming_model)합니다. 클래스 [CSocket](../mfc/reference/csocket-class.md) 클래스 보다 더 높은 수준의 추상화에서 소켓 지원을 제공 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)합니다. `CSocket` MFC 통해 소켓 개체 간에 데이터를 전달 하는 버전의 MFC serialization 프로토콜을 사용 하 여 [CArchive](../mfc/reference/carchive-class.md) 개체입니다. `CSocket`은 차단을 제공하며(Windows 메시지의 백그라운드 처리 관리), 원시 API 또는 `CArchive`클래스를 사용할 경우 직접 수행해야 하는 문서의 여러 측면에 대한 관리 작업을 수행하는 `CAsyncSocket`에 액세스할 수 있게 해줍니다.  

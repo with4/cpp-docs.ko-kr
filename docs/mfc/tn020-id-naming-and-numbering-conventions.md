@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384113"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: ID 명명 및 번호 매기기 규칙
 이 노트 ID 명명 및 리소스, 명령, 문자열, 컨트롤 및 자식 창에 대 한 MFC 2.0을 사용 하는 번호 매기기 규칙을 설명 합니다.  

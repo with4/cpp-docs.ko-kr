@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689040"
 ---
 # <a name="completionfuture-class"></a>completion_future 클래스
 나중에 해당 하는 c + + AMP 비동기 작업을 나타냅니다.  

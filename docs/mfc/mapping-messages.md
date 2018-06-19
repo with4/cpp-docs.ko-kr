@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345988"
 ---
 # <a name="mapping-messages"></a>메시지 매핑
 메시지 또는 명령을 받을 수 있는 각 프레임 워크 클래스에 자체 "메시지 맵." 프레임 워크 메시지 맵을 사용 하 여 해당 처리기 함수에 메시지와 명령을 연결. 클래스에서 파생 된 모든 클래스 `CCmdTarget` 메시지 맵이 있을 수 있습니다. 메시지 맵 자세히 설명 하 고 사용 하는 방법에 설명 하는 다른 문서.  

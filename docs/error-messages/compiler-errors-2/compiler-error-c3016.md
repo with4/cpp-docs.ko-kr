@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241819"
 ---
 # <a name="compiler-error-c3016"></a>컴파일러 오류 C3016
 'var': OpenMP 'for' 문의 인덱스 변수는 부호 있는 정수 형식이어야 합니다.  

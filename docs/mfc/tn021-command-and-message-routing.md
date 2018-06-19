@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384958"
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021: 명령 및 메시지 라우팅
 > [!NOTE]
