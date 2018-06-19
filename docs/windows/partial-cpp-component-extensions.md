@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880181"
 ---
 # <a name="partial--c-component-extensions"></a>partial(C++ 구성 요소 확장)
 `partial` 키워드를 사용 하면 서로 다른 동일한 ref 클래스를 독립적으로 및 서로 다른 파일에서 작성할 수 있습니다.  

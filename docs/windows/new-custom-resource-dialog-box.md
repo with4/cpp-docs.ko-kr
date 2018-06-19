@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876126"
 ---
 # <a name="new-custom-resource-dialog-box"></a>새 사용자 지정 리소스 대화 상자
 새 사용자 지정 리소스를 만들 수 있습니다.  

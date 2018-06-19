@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880532"
 ---
 # <a name="image-menu-image-editor-for-icons"></a>이미지 메뉴(아이콘에 대한 이미지 편집기)
 이미지 편집기가 활성화 하는 경우에 나타나는 이미지 메뉴에 대 한 명령이 이미지 편집 하 고, 색상표, 관리, 이미지 편집기 창 옵션을 설정 합니다. 또한, 아이콘 및 커서를 작업할 때 장치 이미지를 사용 하기 위한 명령을 사용할 수 있습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889689"
 ---
 # <a name="sizing-a-control-while-you-add-it"></a>컨트롤을 추가할 때 크기 조정
 ### <a name="to-size-a-control-while-you-add-it"></a>컨트롤을 추가할 때 크기를 조정 하려면  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232224"
 ---
 # <a name="compiler-error-c2659"></a>컴파일러 오류 c 2659
 'operator' : 함수를 왼쪽 피연산자로 사용했습니다.  

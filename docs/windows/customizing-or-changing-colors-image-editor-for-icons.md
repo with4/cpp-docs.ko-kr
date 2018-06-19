@@ -31,6 +31,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871239"
 ---
 # <a name="customizing-or-changing-colors-image-editor-for-icons"></a>색 사용자 지정 또는 변경(아이콘에 대한 이미지 편집기)
 이미지 편집기의 [색상표](../windows/colors-window-image-editor-for-icons.md) 처음 16 개의 표준 색을 표시 합니다. 표시된 색 외에도 사용자 지정 색을 직접 만들 수 있습니다. 그런 다음 [저장 하 고 사용자 지정된 색상표 로드](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)합니다.  

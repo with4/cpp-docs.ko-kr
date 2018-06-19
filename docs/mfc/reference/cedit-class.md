@@ -109,6 +109,7 @@ ms.sourcegitcommit: da7b7533d1a4dc141cc0f09149e4e4196f2fe329
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34463081"
 ---
 # <a name="cedit-class"></a>CEdit Class
 Windows 편집 컨트롤의 기능을 제공합니다.  

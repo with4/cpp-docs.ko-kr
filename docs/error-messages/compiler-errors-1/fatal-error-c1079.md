@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33225331"
 ---
 # <a name="fatal-error-c1079"></a>심각한 오류 C1079
 컴파일러 한계: PCH 파일 크기 제한 초과  

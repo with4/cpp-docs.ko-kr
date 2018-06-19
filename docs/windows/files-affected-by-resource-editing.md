@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874358"
 ---
 # <a name="files-affected-by-resource-editing"></a>리소스 편집의 영향을 받는 파일
 Visual Studio 환경은 리소스 편집 세션 중 다음 표에 표시된 파일에서 작동합니다.  

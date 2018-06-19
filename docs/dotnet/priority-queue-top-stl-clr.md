@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162668"
 ---
 # <a name="priorityqueuetop-stlclr"></a>priority_queue::top(STL/CLR)
 우선 순위가 가장 높은 요소에 액세스 합니다.  

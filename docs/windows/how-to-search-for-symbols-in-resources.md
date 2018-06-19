@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880220"
 ---
 # <a name="how-to-search-for-symbols-in-resources"></a>방법: 리소스에서 기호 검색
 ### <a name="to-find-symbols-in-resources"></a>리소스에서 기호를 찾으려면  

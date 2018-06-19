@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890277"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 해당 함수를 호출할 때 오류가 경우 다음 호출자가 호출할 수 있도록 다음 호출자에 게 지시 `GetLastError` 를 오류 코드를 검색 합니다.  

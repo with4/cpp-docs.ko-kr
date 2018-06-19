@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873874"
 ---
 # <a name="hstringoperator-operator"></a>HString::Operator= 연산자
 현재 HString 개체가 다른 HString 개체의 값을 이동합니다.  

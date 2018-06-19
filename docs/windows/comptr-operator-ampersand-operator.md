@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872408"
 ---
 # <a name="comptroperatoramp-operator"></a>Comptr::&amp; 연산자
 이 연결 된 인터페이스를 해제 `ComPtr` 다음의 주소를 검색 하 고 개체는 `ComPtr` 개체입니다.  

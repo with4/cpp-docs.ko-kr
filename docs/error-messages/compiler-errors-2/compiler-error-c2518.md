@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33228075"
 ---
 # <a name="compiler-error-c2518"></a>컴파일러 오류 C2518
 'keyword' 기본 클래스 목록;에 잘못 된 키워드 무시  

@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879674"
 ---
 # <a name="resource-includes-dialog-box"></a>리소스 내용 대화 상자
 사용할 수는 **리소스 내용** 작업 수정할 수는 환경의 일반 프로젝트의.rc 파일 및 모든 모든 리소스를 저장할 경우의 대화 상자 [기호](../windows/symbols-resource-identifiers.md) Resource.h에 있습니다.  

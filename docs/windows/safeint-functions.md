@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889309"
 ---
 # <a name="safeint-functions"></a>SafeInt 함수
 SafeInt 라이브러리의 인스턴스를 만들지 않고 사용할 수 있는 여러 함수를 제공 된 [SafeInt 클래스](../windows/safeint-class.md)합니다. 정수 오버플로에서 단일 수학 연산을 보호 하려는 경우 이러한 함수를 사용할 수 있습니다. 여러 수학 연산을 보호 하려는 경우 만든 `SafeInt` 개체입니다. 것이 보다 효과적으로 만들 `SafeInt` 를 사용 하 여 이러한 함수가 여러 번 보다는 개체입니다.  

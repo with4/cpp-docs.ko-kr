@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877607"
 ---
 # <a name="mfc-database-programming-symbols"></a>MFC 데이터베이스 프로그래밍 기호
 이 테이블의 기호 데이터베이스 지원이 추가 될 때 MFC 프로젝트에만 나타납니다. MFC 연결 SQL 서버 및 데이터베이스 프로그래밍을 지원 합니다.  

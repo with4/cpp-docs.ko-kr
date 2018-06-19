@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888798"
 ---
 # <a name="runtimeclassrelease-method"></a>RuntimeClass::Release 메서드
 현재 RuntimeClass 개체에서 COM 릴리스 작업을 수행합니다.  

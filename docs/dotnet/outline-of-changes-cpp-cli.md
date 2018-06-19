@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138303"
 ---
 # <a name="outline-of-changes-ccli"></a>변경 사항 개요(C++/CLI)
 이 개요 예를 보여 줍니다 하면 일부 변경 Managed Extensions에서 언어의 Visual c + + c + +에 대 한 합니다. 자세한 내용은 각 항목을 함께 제공 되는 링크를 따라 이동 합니다.  

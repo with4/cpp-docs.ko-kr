@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33159407"
 ---
 # <a name="pushheap-stlclr"></a>push_heap(STL/CLR)
 범위의 마지막에 있는 요소를 범위의 이전 요소로 구성된 기존 힙에 추가합니다.  

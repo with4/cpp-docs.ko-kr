@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168843"
 ---
 # <a name="version-issues-for-value-types-nested-in-native-types-ccli"></a>네이티브 형식에 중첩된 값 형식의 버전 문제(C++/CLI)
 클라이언트 어셈블리를 제조 하는 데 사용 하는 서명된 (강력한 이름) 어셈블리 구성 요소를 고려 합니다. 구성 요소에는 네이티브 공용 구조체, 클래스 또는 배열 멤버에 대 한 형식으로 클라이언트에 사용 되는 값 형식이 포함 되어 있습니다. 이후 버전의 구성 요소 크기 또는 값 형식의 레이아웃을 변경 하는 경우 클라이언트 다시 컴파일해야 합니다.  

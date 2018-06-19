@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33877477"
 ---
 # <a name="importidl"></a>importidl
 생성된 된.idl 파일에 지정 된.idl 파일을 삽입합니다.  

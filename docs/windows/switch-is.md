@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892798"
 ---
 # <a name="switchis"></a>switch_is
 식 또는 공용 구조체 멤버를 선택 하 고 union 판별 역할 식별자를 지정 합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880350"
 ---
 # <a name="noinjectedtext"></a>no_injected_text
 특성 사용 결과로 코드 주입에서 컴파일러를 방지 합니다.  

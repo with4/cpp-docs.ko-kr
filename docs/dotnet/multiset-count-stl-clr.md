@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33141589"
 ---
 # <a name="multisetcount-stlclr"></a>multiset::count(STL/CLR)
 지정한 키와 일치하는 요소의 수를 찾습니다.  

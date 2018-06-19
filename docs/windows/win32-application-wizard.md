@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891427"
 ---
 # <a name="win32-application-wizard"></a>Win32 응용 프로그램 마법사
 Visual C++ Win32 응용 프로그램 마법사에서는 아래 표의 머리글에 나열된 네 가지 형식의 프로젝트를 만들 수 있습니다. 각각의 경우 연 프로젝트 형식에 적합한 추가 옵션을 지정할 수 있습니다. 다음 표에서는 각 응용 프로그램 유형에 사용할 수 있는 옵션을 나타냅니다.  

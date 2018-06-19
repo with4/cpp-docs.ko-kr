@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889864"
 ---
 # <a name="source-c"></a>source(C++)
 클래스를 연결 지점에 대 한 COM 개체의 소스 인터페이스를 지정합니다. 속성 또는 메서드 멤버 개체 또는 이벤트의 원본인 VARIANT를 반환 하는지 나타냅니다.  

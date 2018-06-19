@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33162340"
 ---
 # <a name="private-virtual-functions"></a>전용 가상 함수
 개인 가상 함수가 파생된 클래스에서 처리 되는 방법은 Visual c + + Managed Extensions for c + + 변경 되었습니다.  
