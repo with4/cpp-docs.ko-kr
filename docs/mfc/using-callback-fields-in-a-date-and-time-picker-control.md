@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383788"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>날짜 및 시간 선택 컨트롤에서 콜백 필드 사용
 날짜 및 시간 선택 필드를 정의 하는 표준 형식 문자 외에도 콜백 필드도 사용자 지정 형식 문자열의 특정 부분을 지정 하 여 출력을 사용자 지정할 수 있습니다. 콜백 필드를 선언 하려면 하나 이상의 "X" 문자 (ASCII 코드 88) 형식 문자열의 본문에서 아무 곳 이나 포함 합니다. 예를 들어 다음 문자열 "' 임: 'yy '/' MM '/' dd' (날 'X')'" 뒤에 월, 날짜 및 마지막 날짜의 연도와 현재 값을 표시 하려면 날짜 및 시간 선택 컨트롤 하면 됩니다.  

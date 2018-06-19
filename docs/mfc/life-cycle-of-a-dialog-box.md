@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346183"
 ---
 # <a name="life-cycle-of-a-dialog-box"></a>대화 상자의 수명 주기
 대화 상자의 수명 주기 동안 사용자 대화 상자를 호출 하 고 일반적으로 만들고 대화 상자 개체를 초기화 하는 명령 처리기 내와 상호 작용할 대화 상자에서 다음 대화 상자가 닫힙니다.  

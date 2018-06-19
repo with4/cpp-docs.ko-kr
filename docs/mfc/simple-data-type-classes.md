@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382478"
 ---
 # <a name="simple-data-type-classes"></a>단순 데이터 형식 클래스
 다음 클래스는 그리기 좌표, 문자열, 시간 및 날짜 정보를 캡슐화하여 C++ 구문을 편리하게 사용할 수 있게 해줍니다. 이러한 개체는 클래스 라이브러리에서 Windows 클래스의 멤버 함수에 대한 매개 변수로 광범위하게 사용됩니다. 때문에 `CPoint`, `CSize`, 및 `CRect` 에 해당 하는 **지점**, **크기**, 및 `RECT` 구조가 각각 Windows SDK에서 이러한 개체를 사용할 수 있습니다 C + + 클래스를 이러한 C 언어 구조를 사용할 수 있습니다. 클래스는 해당 멤버 함수를 통해 유용한 인터페이스를 제공합니다. `CStringT`는 매우 유연한 동적 문자열을 제공합니다. `CTime``COleDateTime`, `CTimeSpan`, 및 **COleTimeSpan** 날짜 및 시간 값을 나타냅니다. 이러한 클래스에 대 한 자세한 내용은 문서 참조 [날짜 및 시간](../atl-mfc-shared/date-and-time.md)합니다.  

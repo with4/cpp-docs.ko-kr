@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335514"
 ---
 # <a name="active-documents"></a>액티브 문서
 액티브 문서는 OLE의 복합 문서 기술을 확장합니다. 이러한 확장은 보기를 관리하는 추가 인터페이스의 형태로 제공되므로, 개체가 컨테이너 내에서 작동하면서 해당 표시 및 인쇄 기능에 대한 제어를 계속 유지할 수 있습니다. 이 프로세스는 외부 프레임(예: Microsoft Office Binder 또는 Microsoft Internet Explorer) 및 고유 프레임(예: 제품의 고유 보기 포트)에서 문서를 표시할 수 있게 해줍니다.  

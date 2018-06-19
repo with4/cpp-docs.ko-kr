@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343501"
 ---
 # <a name="exitinstance-member-function"></a>ExitInstance 멤버 함수
 [ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance) 클래스의 멤버 함수 [CWinApp](../mfc/reference/cwinapp-class.md) 응용 프로그램의 복사본 종료 되 면 일반적으로 사용자는 응용 프로그램을 종료로 인해 될 때마다 호출 됩니다.  

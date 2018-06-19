@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385582"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows 소켓: 소켓 알림
 이 문서는 소켓 클래스의 알림 함수를 설명합니다. 이러한 멤버 함수는 프레임 워크는 중요 한 이벤트 소켓 개체에 알리기 위해 호출 하는 콜백 함수입니다. 알림 기능은 다음과 같습니다.  

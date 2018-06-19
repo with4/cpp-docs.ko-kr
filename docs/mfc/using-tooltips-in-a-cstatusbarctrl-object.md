@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385965"
 ---
 # <a name="using-tooltips-in-a-cstatusbarctrl-object"></a>CStatusBarCtrl 개체에서 도구 설명 사용
 상태 표시줄 컨트롤에 도구 설명을 사용 하려면 만듭니다는 `CStatusBarCtrl` 개체는 **SBT_TOOLTIPS** 스타일입니다.  

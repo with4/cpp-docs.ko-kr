@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316545"
 ---
 # <a name="nmake-warning-u4010"></a>NMAKE 경고 U4010
 'target': 빌드하지 못했습니다. /K 지정을 계속 진행 중...  

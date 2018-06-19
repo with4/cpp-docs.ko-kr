@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384305"
 ---
 # <a name="tn017-destroying-window-objects"></a>TN017: 창 개체 제거
 사용을 설명 하는이 노트는 [CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) 메서드. 사용자 지정 자동으로 할당 하려는 경우이 메서드를 사용 하 여 `CWnd`-파생 개체입니다. 이 노트도 사용 하는 이유 설명 [CWnd::DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) 대신 c + + Windows 개체를 제거 하는 `delete` 연산자입니다.  

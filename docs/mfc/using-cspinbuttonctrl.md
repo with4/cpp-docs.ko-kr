@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384402"
 ---
 # <a name="using-cspinbuttonctrl"></a>CSpinButtonCtrl 사용
 *스핀 단추* 컨트롤 (라고도 *위쪽 / 아래쪽* 제어)는 쌍의 화살표는 값을 조정 하기 위해 클릭할 수를 제공 합니다. 이 값 이라고는 *현재 위치*합니다. 위치는 스핀 단추 범위 내에 유지 합니다. 위쪽 화살표를 클릭 위치 최대;으로 이동 고 위치 최소를 향해 이동 사용자가 있는 아래쪽 화살표를 클릭 합니다.  

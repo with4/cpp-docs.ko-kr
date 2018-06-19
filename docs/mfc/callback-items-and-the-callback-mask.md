@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342776"
 ---
 # <a name="callback-items-and-the-callback-mask"></a>콜백 항목 및 콜백 마스크
 각각의 해당 항목에 대 한 목록 뷰 컨트롤 레이블 텍스트를 항목의 아이콘의 이미지 목록 인덱스를 일반적으로 저장 하 고 항목의 상태에 대 한 플래그 비트의 집합입니다. 응용 프로그램에 이미 일부 항목에 대 한 정보를 저장 하는 경우에 유용 하는 콜백 항목이으로 개별 항목을 정의할 수 있습니다.  

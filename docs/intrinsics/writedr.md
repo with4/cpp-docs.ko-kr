@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329185"
 ---
 # <a name="writedr"></a>__writedr
 지정 된 디버그 레지스터에 지정된 된 값을 씁니다.  

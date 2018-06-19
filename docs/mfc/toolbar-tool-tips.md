@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383499"
 ---
 # <a name="toolbar-tool-tips"></a>도구 모음 도구 설명
 도구 설명은 일정 시간 동안에 대 한 단추 위로 마우스를 배치할 때 도구 모음 단추의 용도에 대해 간략히 설명을 제공 하는 작은 팝업 창. 도구 모음에 있는 응용 프로그램 마법사로 응용 프로그램을 만들 때 도구 설명 지원 하기 위해 제공 됩니다. 이 문서는 모두 도구 설명 지원을 응용 프로그램에 도구 설명 지원을 추가 하는 방법 및 응용 프로그램 마법사에서 만든를 설명 합니다.  

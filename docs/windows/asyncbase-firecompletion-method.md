@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33859737"
 ---
 # <a name="asyncbasefirecompletion-method"></a>AsyncBase::FireCompletion 메서드
 완료 이벤트 처리기를 호출 하거나 내부 진행률 대리자를 다시 설정 합니다.  

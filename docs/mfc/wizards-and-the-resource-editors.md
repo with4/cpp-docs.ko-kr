@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383843"
 ---
 # <a name="wizards-and-the-resource-editors"></a>마법사 및 리소스 편집기
 Visual c + + MFC 프로그래밍 많은 통합된 리소스 편집기와 함께 사용 하기 위해 몇 가지 마법사를 포함합니다. ActiveX 컨트롤 프로그래밍에 대해는 [ActiveX 컨트롤 마법사](../mfc/reference/mfc-activex-control-wizard.md) 것과 마찬가지로 MFC 응용 프로그램 마법사의 목적을 갖습니다. 대부분의이 도구는 MFC 응용 프로그램을 작성할 수 있지만, 도구 크게 단순화 하 고 빠르게 작업 합니다.  

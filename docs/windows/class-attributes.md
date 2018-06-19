@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861443"
 ---
 # <a name="class-attributes"></a>클래스 특성
 다음과 같은 특성에 적용 된 [클래스](../cpp/class-cpp.md) c + + 키워드입니다.  

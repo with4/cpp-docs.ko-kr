@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343036"
 ---
 # <a name="-implementation-comment"></a>// 구현 주석
 `// Implementation` 섹션 모든 MFC 클래스 선언의 가장 중요 한 부분입니다.  

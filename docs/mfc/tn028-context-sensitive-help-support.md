@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385146"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028: 상황에 맞는 도움말 지원
 이 노트 도움말 컨텍스트 Id와 MFC에서 기타 도움말 문제를 지정 하는 것에 대 한 규칙을 설명 합니다. 상황에 맞는 도움말 지원에는 Visual c + +에서 사용할 수 있는 도움말 컴파일러가 필요 합니다.  

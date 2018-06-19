@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384337"
 ---
 # <a name="using-the-mfc-source-files"></a>MFC 소스 파일 사용
 Microsoft Foundation 클래스 (MFC) 라이브러리는 전체 소스 코드를 제공합니다. 헤더 파일 (.h) \atlmfc\include 디렉터리;에 구현 파일 (.cpp)가 \atlmfc\src\mfc 디렉터리에 있습니다.  

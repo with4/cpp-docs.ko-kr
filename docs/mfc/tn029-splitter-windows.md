@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384725"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: 분할 창
 이 노트에서는 MFC 설명 [CSplitterWnd 클래스](../mfc/reference/csplitterwnd-class.md), 창 분할 및 다른 창 창 크기를 조정 관리를 제공 합니다.  

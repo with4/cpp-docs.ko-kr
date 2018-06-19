@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345409"
 ---
 # <a name="image-overlays-in-image-lists"></a>이미지 목록의 이미지 오버레이
 모든 이미지 목록 ([CImageList](../mfc/reference/cimagelist-class.md)) 오버레이 마스크도 사용할 이미지의 목록을 포함 합니다. "오버레이 마스크"에 다른 이미지 위에 투명 하 게 그려지는 하는 이미지입니다. 모든 이미지 오버레이 마스크도 사용할 수 있습니다. 이미지 목록 당 최대 4 개의 오버레이 마스크를 지정할 수 있습니다.  

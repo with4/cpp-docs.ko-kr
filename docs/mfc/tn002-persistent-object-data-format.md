@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385419"
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002: 영구 개체 데이터 형식
 이 노트 파일에 저장 될 때 영구 c + + 개체와 개체 데이터의 형식을 지 원하는 MFC 루틴을 설명 합니다. 이 클래스에만 적용 됩니다는 [DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial) 및 [IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial) 매크로입니다.  
