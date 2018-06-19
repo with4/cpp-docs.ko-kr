@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088393"
 ---
 # <a name="connecting-to-a-data-source"></a>데이터 소스에 연결
 ODBC 데이터 소스는 특정 집합의 데이터를 해당 데이터와 데이터 소스 이름을 사용 하 여 표시할 수 있는 데이터 원본의 위치에 액세스 하는 데 필요한 정보입니다. 프로그램의 관점에서 데이터 원본에는 데이터, DBMS, 네트워크 (있는 경우) 및 ODBC 포함 됩니다.  
