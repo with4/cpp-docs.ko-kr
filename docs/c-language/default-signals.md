@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382892"
 ---
 # <a name="default-signals"></a>기본 신호
 **ANSI 4.7.1.1** **signal(***sig***, SIG_DFL)** 에 해당하는 함수가 신호 처리기를 호출하기 전에 실행되지 않는 경우 수행되는 신호의 차단  

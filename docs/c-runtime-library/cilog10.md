@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386393"
 ---
 # <a name="cilog10"></a>_CIlog10
 스택의 상위 값에 대해 `log10` 작업을 수행합니다.  

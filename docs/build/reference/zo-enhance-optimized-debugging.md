@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380277"
 ---
 # <a name="zo-enhance-optimized-debugging"></a>/Zo(최적화된 디버깅 향상)
 디버그되지 않은 빌드에서 최적화된 코드에 대해 향상된 디버깅 정보를 생성합니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354102"
 ---
 # <a name="data-transfer-classes"></a>데이터 전송 클래스
 다음 클래스에는 다양 한 종류의 데이터 전송 지원합니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381189"
 ---
 # <a name="c-language-reference"></a>C 언어 참조
 *C 언어 참조*는 Microsoft C에서 구현되는 C 프로그래밍 언어에 대해 설명합니다. 이 책의 구성은 ANSI C 표준(C89라고도 함)을 기준으로 하며 ANSI 표준에 대한 Microsoft 확장에 관한 추가 자료를 제공합니다.  

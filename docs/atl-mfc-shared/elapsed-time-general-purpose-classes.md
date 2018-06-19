@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354268"
 ---
 # <a name="elapsed-time-general-purpose-classes"></a>경과 된 시간: 범용 클래스
 다음 절차에는 두 개의 간의 차이 계산 하는 방법을 보여 줍니다 `CTime` 개체 및 get는 `CTimeSpan` 결과입니다.  

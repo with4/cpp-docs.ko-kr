@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387013"
 ---
 # <a name="side-effects"></a>파생 작업
 식의 계산 순서는 언어에서 특정 계산 순서를 보장하는 경우([우선 순위 및 계산 순서](../c-language/precedence-and-order-of-evaluation.md) 참조)를 제외하고 특정 구현에서 정의됩니다. 예를 들어 다음 함수 호출에서 의도하지 않은 결과가 발생합니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389782"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>수명 및 표시 유형에 대한 요약
 다음 표에서는 대부분의 식별자에 대한 수명 및 표시 유형 특징을 요약합니다. 처음 세 열에서는 수명과 표시 유형을 정의하는 특성을 제공합니다. 처음 세 열에서 제공하는 특성이 있는 식별자의 수명과 표시 유형은 4번째 열과 5번째 열에 표시되어 있습니다. 가능한 모든 경우가 이 표에 포함되어 있지는 않습니다. 자세한 내용은 [저장소 클래스](../c-language/c-storage-classes.md)를 참조하세요.  

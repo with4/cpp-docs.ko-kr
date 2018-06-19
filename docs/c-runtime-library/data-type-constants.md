@@ -101,6 +101,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392148"
 ---
 # <a name="data-type-constants"></a>데이터 형식 상수
 데이터 형식 상수는 정수 데이터 형식에 대해 허용되는 값의 구현에 따라 다른 값입니다. 아래 나열된 상수는 정수 데이터 형식의 범위를 제공하고 LIMITS.H에 정의됩니다.  

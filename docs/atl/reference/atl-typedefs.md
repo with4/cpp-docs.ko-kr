@@ -38,6 +38,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34283329"
 ---
 # <a name="atl-typedefs"></a>ATL Typedefs
 액티브 템플릿 라이브러리는 다음 형식 정의 포함합니다.  

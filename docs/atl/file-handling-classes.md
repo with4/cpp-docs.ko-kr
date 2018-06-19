@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353952"
 ---
 # <a name="file-handling-classes"></a>파일 클래스를 처리 합니다.
 이러한 클래스는 파일과 임시 파일, 메모리 매핑된 파일을 처리 하기 위한 메서드를 제공 합니다.  

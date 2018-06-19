@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391316"
 ---
 # <a name="printfp-positional-parameters"></a>printf_p 위치 매개 변수
 위치 매개 변수를 사용하면 형식 문자열의 필드로 대체되는 인수의 기준 숫자를 지정할 수 있습니다. 다음 위치 매개 변수 `printf` 함수를 사용할 수 있습니다.  

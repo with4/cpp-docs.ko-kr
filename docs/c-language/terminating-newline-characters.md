@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385112"
 ---
 # <a name="terminating-newline-characters"></a>줄 바꿈 문자 종결
 **ANSI 4.9.2** 텍스트 스트림의 마지막 줄에 종료하는 줄 바꿈 문자가 필요한지 여부  

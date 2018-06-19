@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354219"
 ---
 # <a name="error-information-classes"></a>오류 정보 클래스
 다음 클래스는 오류 정보를 처리 하는 방법을 나타냅니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385922"
 ---
 # <a name="using-the-additive-operators"></a>가감 연산자 사용
 더하기 및 빼기 연산자를 보여 주는 다음 예제는 이러한 선언을 사용합니다.  

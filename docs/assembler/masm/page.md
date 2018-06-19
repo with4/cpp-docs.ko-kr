@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32058005"
 ---
 # <a name="page"></a>PAGE
 줄을 설정 하는 첫 번째 지시문 *길이* 및 문자 *너비* 프로그램 목록입니다. 인수에 제공 하는 경우 페이지 나누기를 생성 합니다. 두 번째 지시문의 섹션 번호를 증가 시키고 페이지 번호 1로 다시 설정 합니다.  

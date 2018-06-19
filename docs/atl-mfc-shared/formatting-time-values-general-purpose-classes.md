@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354657"
 ---
 # <a name="formatting-time-values-general-purpose-classes"></a>시간 값 형식 지정: 범용 클래스
 다음 절차에는 시간 값의 형식을 지정 하는 방법을 보여 줍니다.  

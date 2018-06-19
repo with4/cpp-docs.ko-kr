@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380454"
 ---
 # <a name="wildcards-and-nmake"></a>와일드카드와 NMAKE
 Nmake 파일 이름 와일드 카드 (* 및?) 종속 줄에 있습니다. 명령;에 전달 되는 명령에 지정 된 와일드 카드 NMAKE 확장 하지 않습니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392187"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>우선 순위 및 식 평가 순서
 C 연산자의 우선 순위와 결합성은 식의 피연산자 그룹화 및 계산에 영향을 줍니다. 연산자의 우선 순위는 우선 순위가 더 높거나 낮은 다른 연산자가 있는 경우에만 의미가 있습니다. 우선 순위가 높은 연산자가 있는 식이 먼저 계산됩니다. 우선 순위는 단어 "바인딩"으로도 설명할 수 있습니다. 우선 순위가 높은 연산자는 더욱 엄격한 바인딩을 가져야 합니다.  

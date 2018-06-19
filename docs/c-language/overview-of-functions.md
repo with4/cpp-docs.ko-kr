@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385808"
 ---
 # <a name="overview-of-functions"></a>함수 개요
 함수가 호출되기 전에 선언이 나타나는 경우 정의가 선언으로 사용될 수 있긴 하지만 함수에는 정의와 선언이 반드시 있어야 합니다. 함수 정의에는 함수가 호출될 때 실행되는 코드인 함수 본문이 포함됩니다.  

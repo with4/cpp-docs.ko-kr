@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380047"
 ---
 # <a name="zs-syntax-check-only"></a>/Zs(구문만 검사)
 명령줄에서 소스 파일의 구문만 검사 하도록 컴파일러에 지시 합니다.  

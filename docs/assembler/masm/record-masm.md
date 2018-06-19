@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057266"
 ---
 # <a name="record-masm"></a>RECORD (MASM)
 지정 된 필드로 구성 된 레코드 형식을 선언 합니다. *fieldname* 필드 이름을 *너비* 비트의 수를 지정 하 고 *식* 초기 값을 제공 합니다.  

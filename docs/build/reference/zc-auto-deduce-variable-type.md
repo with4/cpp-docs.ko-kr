@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379577"
 ---
 # <a name="zcauto-deduce-variable-type"></a>/Zc:auto(변수 형식 추론)
 

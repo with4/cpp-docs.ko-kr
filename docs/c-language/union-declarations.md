@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391180"
 ---
 # <a name="union-declarations"></a>공용 구조체 선언
 "공용 구조체 선언"은 변수 값의 집합을 지정하고 공용 구조체 이름을 지정하는 태그를 선택적으로 지정합니다. 변수 값을 공용 구조체의 "멤버"라고 하며 변수 값은 다른 형식이 될 수 있습니다. 공용 구조체는 다른 언어의 "가변 레코드"와 비슷합니다.  

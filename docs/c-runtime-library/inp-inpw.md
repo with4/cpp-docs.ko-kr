@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388924"
 ---
 # <a name="inp-inpw"></a>inp, inpw
 이러한 POSIX 함수는 더 이상 사용되지 않습니다. ISO C++ 규칙에 부합되는 [_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md) 를 대신 사용하세요.  

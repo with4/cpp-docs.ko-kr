@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385434"
 ---
 # <a name="do-while-statement-c"></a>do-while 문 (C)
 `do-while` 문을 사용하면 지정된 식이 false가 될 때까지 문이나 복합 문을 반복할 수 있습니다.  

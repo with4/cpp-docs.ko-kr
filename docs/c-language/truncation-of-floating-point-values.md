@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385792"
 ---
 # <a name="truncation-of-floating-point-values"></a>부동 소수점 값 잘라내기
 **ANSI 3.2.1.4** 부동 소수점 수를 더 유효한 부동 소수점 수로 변환할 때 버리거나 반올림하는 방향  

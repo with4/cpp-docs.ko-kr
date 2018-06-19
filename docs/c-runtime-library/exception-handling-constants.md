@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388229"
 ---
 # <a name="exception-handling-constants"></a>예외 처리 상수
 **try-except** 문의 가드된 섹션을 실행하는 중 예외가 발생하면 `EXCEPTION_CONTINUE_SEARCH`, `EXCEPTION_CONTINUE_EXECUTION` 또는 `EXCEPTION_EXECUTE_HANDLER` 상수가 반환됩니다. 반환 값에 따라 예외 처리 방법이 결정됩니다. 자세한 내용은 *C++ 언어 참조*의 [try-except Statement](../cpp/try-except-statement.md)을 참조하세요.  

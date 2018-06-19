@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383451"
 ---
 # <a name="operands-and-expressions"></a>피연산자 및 식
 "피연산자"는 연산자가 작업을 수행하는 엔터티입니다. "식"은 이 작업을 조합하여 수행하는 연산자와 피연산자의 시퀀스입니다.  

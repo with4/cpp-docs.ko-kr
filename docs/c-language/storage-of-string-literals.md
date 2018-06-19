@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387036"
 ---
 # <a name="storage-of-string-literals"></a>문자열 리터럴 저장소
 리터럴 문자열의 문자는 인접한 메모리 위치에 순서대로 저장됩니다. 문자열 리터럴 내의 이스케이프 시퀀스(예: **\\\\** 또는 **\\"**)는 단일 문자로 계산됩니다. null 문자(**\0** 이스케이프 시퀀스로 표현됨)가 각 문자열 리터럴에 자동으로 추가되어 끝을 표시합니다. (이러한 7번째 [변환 단계](../preprocessor/phases-of-translation.md) 중에 발생합니다.) 컴파일러는 서로 다른 두 주소에 동일한 두 문자열을 저장할 수 없습니다. [/GF](../build/reference/gf-eliminate-duplicate-strings.md)는 컴파일러가 동일한 문자열의 단일 복사본을 실행 파일에 배치하도록 합니다.  

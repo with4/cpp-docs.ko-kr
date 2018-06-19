@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381735"
 ---
 # <a name="domain-errors"></a>도메인 오류
 **ANSI 4.5.1** 도메인 오류 발생 시 수학 함수가 반환하는 값  

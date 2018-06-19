@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388730"
 ---
 # <a name="extern-storage-class-specifier"></a>extern 저장소 클래스 지정자
 `extern` 저장소 클래스 지정자를 사용하여 선언된 변수는 프로그램 소스 파일의 외부 수준에서 정의된 것과 같은 이름이 지정된 변수에 대한 참조입니다. 내부 `extern` 선언은 블록 내에서 외부 수준 변수 정의를 표시하는 데 사용됩니다. 외부 수준에서 다른 방식으로 선언되지 않는 한 `extern` 키워드를 사용하여 선언된 변수는 자신이 선언된 블록에서만 표시됩니다.  

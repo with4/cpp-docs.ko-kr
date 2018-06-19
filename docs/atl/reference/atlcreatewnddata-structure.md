@@ -24,6 +24,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255797"
 ---
 # <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData 구조
 이 구조 ATL에서 창 작업 코드에 클래스 인스턴스 데이터를 포함합니다.  

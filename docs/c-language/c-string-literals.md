@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382785"
 ---
 # <a name="c-string-literals"></a>C 문자열 리터럴
 "문자열 리터럴"은 큰따옴표(**" "**)로 묶은 소스 문자 집합의 문자 시퀀스입니다. 문자열 리터럴은 함께 사용될 경우 null로 끝나는 문자열을 형성하는 문자 시퀀스를 나타냅니다. 항상 와이드 문자열 리터럴의 접두어로 **L** 문자를 사용해야 합니다.  

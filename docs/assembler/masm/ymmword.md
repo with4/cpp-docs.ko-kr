@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057112"
 ---
 # <a name="ymmword"></a>YMMWORD
 Intel 고급 벡터 확장명 (AVX) 지침이 포함 된 256 비트 멀티미디어 피연산자에 사용 합니다.  

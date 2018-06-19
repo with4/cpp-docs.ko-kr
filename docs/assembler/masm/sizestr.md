@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057356"
 ---
 # <a name="sizestr"></a>SIZESTR
 텍스트 항목의 크기를 찾습니다.  

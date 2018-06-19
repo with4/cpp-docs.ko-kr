@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354635"
 ---
 # <a name="class-information-classes"></a>클래스 정보 클래스
 다음 클래스는 클래스 정보를 검색 하기 위한 지원을 제공 합니다.  

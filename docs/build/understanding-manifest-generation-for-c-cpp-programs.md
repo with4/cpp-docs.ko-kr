@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381634"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>C/C++ 프로그램의 매니페스트 생성 이해
 A [매니페스트](http://msdn.microsoft.com/library/aa375365) 외부 XML 파일 또는 리소스가 제공 되는 XML 문서에 포함 된 응용 프로그램 또는 어셈블리. 매니페스트는 [응용 프로그램 격리](http://msdn.microsoft.com/library/aa375190) 이름 및 버전을 응용 프로그램에서 런타임에 바인딩해야 하는 공유 side-by-side-어셈블리의 관리 하는 데 사용 됩니다. Side-by-side-어셈블리의 매니페스트는 이름, 버전, 리소스 및 다른 어셈블리에 종속성을 지정 합니다.  

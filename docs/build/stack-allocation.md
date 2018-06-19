@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380604"
 ---
 # <a name="stack-allocation"></a>스택 할당
 지역 변수에 대 한 스택 공간을 할당 하기 위한 함수의 프롤로그는, 저장 레지스터, 스택 매개 변수 및 매개 변수를 등록 합니다.  

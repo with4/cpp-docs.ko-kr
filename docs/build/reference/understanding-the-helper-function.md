@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379239"
 ---
 # <a name="understanding-the-helper-function"></a>도우미 함수 이해
 지연된 로드 링커 지원에 대 한 도우미 함수는 실제로 실행 시 DLL을 로드 합니다. 사용자 고유의 함수를 작성 Delayimp.lib에 제공 된 도우미 함수를 사용 하는 대신 프로그램에 연결 하 여 동작을 사용자 지정할 도우미 함수를 수정할 수 있습니다. 한 도우미 함수는 모든 지연 로드 된 Dll을 지원합니다.  

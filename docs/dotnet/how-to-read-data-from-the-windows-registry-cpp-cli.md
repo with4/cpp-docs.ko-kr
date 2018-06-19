@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33132556"
 ---
 # <a name="how-to-read-data-from-the-windows-registry-ccli"></a>방법: Windows 레지스트리에서 데이터 읽기(C++/CLI)
 다음 코드 예제에서는 <xref:Microsoft.Win32.Registry.CurrentUser> 데이터를 읽을 때 Windows 레지스트리에서 키입니다. 첫째, 하위 키를 사용 하 여 열거 되는 <xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A> 메서드 및 Identities 하위 키를 사용 하 여을 열릴는 <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> 메서드. 루트 키와 마찬가지로 각 하위 키로 표시 됩니다는 <xref:Microsoft.Win32.RegistryKey> 클래스입니다. 마지막으로, 새 <xref:Microsoft.Win32.RegistryKey> 개체 키/값 쌍을 열거 하는 데 사용 됩니다.  

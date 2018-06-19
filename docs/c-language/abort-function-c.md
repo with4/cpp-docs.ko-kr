@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380367"
 ---
 # <a name="abort-function-c"></a>abort 함수 (C)
 **ANSI 4.10.4.1** 열린 파일 및 임시 파일과 관련된 **abort** 함수의 동작  

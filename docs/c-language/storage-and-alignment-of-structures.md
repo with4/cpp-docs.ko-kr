@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388132"
 ---
 # <a name="storage-and-alignment-of-structures"></a>저장소 및 구조체의 맞춤
 **Microsoft 전용**  
