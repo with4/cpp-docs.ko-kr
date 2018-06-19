@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098357"
 ---
 # <a name="creating-a-project-for-the-provider"></a>공급자용 프로젝트 만들기
 #### <a name="to-create-a-project-in-which-the-ole-db-provider-will-reside"></a>OLE DB 공급자 상주할 프로젝트를 만들려면  

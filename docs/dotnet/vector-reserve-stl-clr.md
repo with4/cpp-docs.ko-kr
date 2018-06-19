@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167270"
 ---
 # <a name="vectorreserve-stlclr"></a>vector::reserve(STL/CLR)
 컨테이너에 대 한 최소 증가 용량을 보장합니다.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361800"
 ---
 # <a name="iolecontrolimpl-class"></a>IOleControlImpl 클래스
 이 클래스의 기본 구현을 제공는 **IOleControl** 인터페이스와 구현 **IUnknown**합니다.  

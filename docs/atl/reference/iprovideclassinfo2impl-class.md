@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361347"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl 클래스
 이 클래스의 기본 구현을 제공는 [IProvideClassInfo](http://msdn.microsoft.com/library/windows/desktop/ms687303) 및 [IProvideClassInfo2](http://msdn.microsoft.com/library/windows/desktop/ms693764) 메서드.  

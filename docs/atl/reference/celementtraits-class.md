@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359747"
 ---
 # <a name="celementtraits-class"></a>CElementTraits 클래스
 이 클래스는 복사, 이동, 비교 및 해싱 작업에 대 한 메서드 및 함수를 제공 하 여 컬렉션 클래스에 의해 사용 됩니다.  

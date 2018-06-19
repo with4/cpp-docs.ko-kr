@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356793"
 ---
 # <a name="control-containment-classes"></a>컨트롤 포함 클래스
 다음 클래스에 컨트롤을 호스팅하기 위한 제약 지원 합니다.  

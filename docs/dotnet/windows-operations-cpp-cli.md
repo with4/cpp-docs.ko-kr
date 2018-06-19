@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169113"
 ---
 # <a name="windows-operations-ccli"></a>Windows 작업(C++/CLI)
 사용 하 여 다양 한 Windows 관련 작업을 보여 줍니다는 [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)]합니다.  

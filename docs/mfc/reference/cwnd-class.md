@@ -833,6 +833,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34256338"
 ---
 # <a name="cwnd-class"></a>CWnd 클래스
 MFC 라이브러리의 모든 Window 클래스의 기본적인 기능을 제공합니다.  

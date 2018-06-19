@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359428"
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>픽셀/HIMETRIC 변환 전역 함수
 이러한 함수는 사이의 픽셀 및 HIMETRIC 단위 변환에 대 한 지원을 제공 합니다.  

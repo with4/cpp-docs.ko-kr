@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097174"
 ---
 # <a name="columnentrytypesize"></a>COLUMN_ENTRY_TYPE_SIZE
 데이터베이스의 특정 열에 대 한 바인딩을 나타냅니다. 지원 `type` 및 `size` 매개 변수입니다.  

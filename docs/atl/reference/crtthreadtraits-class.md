@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358168"
 ---
 # <a name="crtthreadtraits-class"></a>CRTThreadTraits 클래스
 이 클래스는 CRT 스레드에 대 한 만들기 함수를 제공 합니다. 스레드 CRT 함수를 사용 하는 경우에이 클래스를 사용 합니다.  

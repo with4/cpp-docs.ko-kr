@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871424"
 ---
 # <a name="deleting-a-control"></a>컨트롤 삭제
 ### <a name="to-delete-a-control"></a>컨트롤을 삭제 하려면  

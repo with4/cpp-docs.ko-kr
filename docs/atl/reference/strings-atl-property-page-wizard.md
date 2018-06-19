@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361768"
 ---
 # <a name="strings-atl-property-page-wizard"></a>문자열, ATL 속성 페이지 마법사
 속성 페이지와 관련 된 텍스트를 제공 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361527"
 ---
 # <a name="adding-an-atl-dialog-box"></a>ATL 대화 상자 추가
 ATL 대화 상자에 프로젝트를 추가 하려면 프로젝트에 ATL 프로젝트 또는 ATL 지원을 포함 하는 MFC 프로젝트 중 하나 여야 합니다. 사용할 수는 [ATL 프로젝트 마법사](../../atl/reference/atl-project-wizard.md) ATL 응용 프로그램을 만드는 또는 [MFC 응용 프로그램에 ATL 개체를 추가](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) MFC 응용 프로그램에 대 한 ATL 지원을 구현 하 합니다.  

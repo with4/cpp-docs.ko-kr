@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872146"
 ---
 # <a name="creating-a-new-dialog-box"></a>새 대화 상자 만들기
 ### <a name="to-create-a-new-dialog-box"></a>새 대화 상자를 만들려면  

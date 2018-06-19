@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359881"
 ---
 # <a name="com-map-global-functions"></a>Com 전역 함수
 이러한 함수는 COM 맵에 대 한 지원을 제공 **IUnknown** 구현 합니다.  

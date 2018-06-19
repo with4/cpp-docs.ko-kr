@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360876"
 ---
 # <a name="object-status-macros"></a>개체 상태 매크로
 이 매크로 ActiveX 컨트롤에 속한 플래그를 설정 합니다.  

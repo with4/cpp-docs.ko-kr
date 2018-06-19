@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358129"
 ---
 # <a name="date-type"></a>날짜 형식
 **날짜** 형식이 8 바이트 부동 소수점 숫자를 사용 하 여 구현 됩니다. 일은 1899 년 12 월 30 일 자정 0 시로로 시작 하는 정수 증분으로 표시 됩니다. 시간 값은 숫자의 소수 부분의 절대값으로 표시 됩니다. 다음 표에서 여러 가지 날짜와 함께 설명의 **날짜** 형식 숫자 값:  

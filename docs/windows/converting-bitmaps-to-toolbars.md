@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872629"
 ---
 # <a name="converting-bitmaps-to-toolbars"></a>비트맵을 도구 모음으로 변환
 새 도구 모음 비트맵을 변환 하 여 만들 수 있습니다. 비트맵의 그래픽 도구 모음에 대 한 단추 이미지를 변환합니다. 일반적으로 비트맵 각 단추에 대 한 이미지를 사용 하 여 하나의 비트맵에 여러 단추 이미지를 포함합니다. 이미지는 크기에 제한이; 있을 수 있습니다. 기본값이 16 픽셀 너비와 이미지의 높이입니다. 에 단추 이미지의 크기를 지정할 수 있습니다는 [새 도구 모음 리소스 대화 상자](../windows/new-toolbar-resource-dialog-box.md) 에서 도구 모음 편집기를 선택 하는 경우는 **이미지** 이미지 편집기 메뉴.  

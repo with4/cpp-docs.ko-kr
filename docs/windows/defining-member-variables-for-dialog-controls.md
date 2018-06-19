@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873838"
 ---
 # <a name="defining-member-variables-for-dialog-controls"></a>대화 상자 컨트롤의 멤버 변수 정의
 단추를 제외한 대화 상자 컨트롤에 대해 멤버 변수를 정의하려면 다음 메서드를 사용할 수 있습니다.  

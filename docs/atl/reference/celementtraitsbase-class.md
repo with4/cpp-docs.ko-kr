@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359596"
 ---
 # <a name="celementtraitsbase-class"></a>CElementTraitsBase 클래스
 이 클래스는 기본 복사본을 제공 하 고 컬렉션 클래스에 대 한 메서드를 이동 합니다.  

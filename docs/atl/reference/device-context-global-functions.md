@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358591"
 ---
 # <a name="device-context-global-functions"></a>장치 컨텍스트 전역 함수
 이 함수는 지정된 된 장치에 대 한 장치 컨텍스트를 만듭니다.  

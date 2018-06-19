@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32362018"
 ---
 # <a name="win32threadtraits-class"></a>Win32ThreadTraits 클래스
 이 클래스는 Windows 스레드에 대 한 만들기 함수를 제공합니다. 스레드 CRT 함수를 사용 하지 않는 경우에이 클래스를 사용 합니다.  

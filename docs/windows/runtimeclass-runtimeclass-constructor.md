@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888501"
 ---
 # <a name="runtimeclassruntimeclass-constructor"></a>RuntimeClass::RuntimeClass 생성자
 RuntimeClass 클래스의 현재 인스턴스를 초기화합니다.  

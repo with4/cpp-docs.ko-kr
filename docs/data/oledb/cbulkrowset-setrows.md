@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096147"
 ---
 # <a name="cbulkrowsetsetrows"></a>CBulkRowset::SetRows
 각 호출에 의해 검색 되는 행 핸들의 수를 설정 합니다.  

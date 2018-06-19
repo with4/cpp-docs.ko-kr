@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358116"
 ---
 # <a name="active-template-library-atl-concepts"></a>ATL(액티브 템플릿 라이브러리) 개념
 액티브 템플릿 라이브러리 (ATL)는 작고 빠른 구성 요소 개체 모델(COM, Component Object Model)을 만들 수 있도록 해 주는 템플릿 기반의 C++ 클래스의 집합입니다. 스토크 구현, 이중 인터페이스, 표준 COM 열거자 인터페이스, 연결 지점, 분리 인터페이스 및 ActiveX 컨트롤을 포함한 핵심 COM 기능에 대한 특별한 지원을 해 줍니다.  

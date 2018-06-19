@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359047"
 ---
 # <a name="default-atl-project-configurations"></a>기본 ATL 프로젝트 구성
 ATL 프로젝트 마법사는 기본적으로 두 가지 프로젝트 구성을 만듭니다.  

@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098383"
 ---
 # <a name="crowsetcrowset"></a>CRowset::CRowset
 새 `CRowset` (선택 사항)에 연결 하 고 개체는 [IRowset](https://msdn.microsoft.com/en-us/library/ms720986.aspx) 인터페이스 매개 변수로 제공 합니다.  

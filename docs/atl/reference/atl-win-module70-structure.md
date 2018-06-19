@@ -24,6 +24,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34256082"
 ---
 # <a name="atlwinmodule70-structure"></a>_ATL_WIN_MODULE70 구조
 Atl에서 창 작업 코드에서 사용 하는  

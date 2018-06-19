@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357907"
 ---
 # <a name="atl-project-wizard"></a>ATL 프로젝트 마법사
 액티브 템플릿 라이브러리 (ATL)은 작고 빠른 COM 개체를 작성을 단순화 하는 템플릿 기반 c + + 클래스의 집합. ATL 프로젝트 마법사는 COM 개체를 포함 하도록 구조는 프로젝트를 만듭니다.  

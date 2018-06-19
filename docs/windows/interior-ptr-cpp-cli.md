@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879109"
 ---
 # <a name="interiorptr-ccli"></a>interior_ptr(C++/CLI)
 *내부 포인터* 개체 자체가 아니라 참조 형식 내부에 포인터를 선언 합니다. 내부 포인터는 참조 핸들, 값 형식, boxed 형식 핸들, 관리되는 형식의 멤버 또는 관리되는 배열의 요소를 가리킬 수 있습니다.  

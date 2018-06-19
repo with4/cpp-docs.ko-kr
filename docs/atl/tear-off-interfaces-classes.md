@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361064"
 ---
 # <a name="tear-off-interfaces-classes"></a>분리 인터페이스 클래스
 분리 인터페이스에 대 한 지원을 제공 하는 다음 클래스:  

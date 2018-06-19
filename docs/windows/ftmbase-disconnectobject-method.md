@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873003"
 ---
 # <a name="ftmbasedisconnectobject-method"></a>FtmBase::DisconnectObject 메서드
 개체에 대 한 모든 외부 연결을 강제로 해제합니다. 개체의 서버를 종료 하기 전에이 메서드는 개체의 구현을 호출 합니다.  

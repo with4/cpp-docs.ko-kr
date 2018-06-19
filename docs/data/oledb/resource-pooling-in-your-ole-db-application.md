@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107489"
 ---
 # <a name="resource-pooling-in-your-ole-db-application"></a>OLE DB 응용 프로그램의 리소스 풀링
 응용 프로그램의 풀링 활용, OLE DB 서비스를 통해 데이터 소스를 확보 하 여 호출 되 고 있는지 확인 해야 **IDataInitialize** 또는 **IDBPromptInitialize**합니다. 직접 사용 하는 경우 `CoCreateInstance` 공급자의 CLSID에 따라 공급자를 호출 하려면 OLE DB 서비스가 호출 됩니다.  

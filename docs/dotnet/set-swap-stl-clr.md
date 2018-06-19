@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171362"
 ---
 # <a name="setswap-stlclr"></a>set::swap(STL/CLR)
 두 컨테이너의 내용을 바꿉니다.  

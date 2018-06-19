@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097707"
 ---
 # <a name="cenumeratorgetmoniker"></a>CEnumerator::GetMoniker
 모니커로 변환 될 수 있는 문자열의 구성 요소를 추출 하도록 표시 이름을 구문 분석 합니다.  

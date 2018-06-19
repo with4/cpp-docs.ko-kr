@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361514"
 ---
 # <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits 클래스
 이 클래스는 해시 값을 계산 하기 위한 정적 함수를 제공 합니다.  

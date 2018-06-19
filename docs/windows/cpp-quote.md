@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871164"
 ---
 # <a name="cppquote"></a>cpp_quote
 생성 된.idl 파일에 인용 문자 없이 지정된 된 문자열을 내보냅니다.  

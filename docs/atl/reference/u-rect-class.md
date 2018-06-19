@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360889"
 ---
 # <a name="urect-class"></a>_U_RECT 클래스
 이 인수 어댑터 클래스를 사용 하거나 `RECT` 포인터 또는 포인터의 관점에서 구현 되는 함수에 전달할 수에 대 한 참조입니다.  

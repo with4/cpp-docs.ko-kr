@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360964"
 ---
 # <a name="cdefaultelementtraits-class"></a>CDefaultElementTraits 클래스
 이 클래스는 컬렉션 클래스에 대 한 기본 메서드 및 함수를 제공합니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34255755"
 ---
 # <a name="atl-classes-and-structs"></a>ATL 클래스 및 구조체
 다음 클래스와 구조체는 ATL 액티브 템플릿 라이브러리 ()에 포함 되어 있습니다. 특정 클래스를 범주별으로 찾으려면 참조는 [ATL 클래스 개요](../../atl/atl-class-overview.md)합니다.  

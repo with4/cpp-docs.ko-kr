@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098526"
 ---
 # <a name="creating-a-simple-consumer"></a>단순 소비자 만들기
 ATL 프로젝트 마법사 및 ATL OLE DB 소비자 마법사를 사용 하 여 OLE DB 템플릿 소비자를 생성 합니다.  

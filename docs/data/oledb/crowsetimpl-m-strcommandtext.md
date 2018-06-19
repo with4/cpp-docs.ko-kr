@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097395"
 ---
 # <a name="crowsetimplmstrcommandtext"></a>CRowsetImpl::m_strCommandText
 행 집합의 초기 명령이 들어 있습니다.  

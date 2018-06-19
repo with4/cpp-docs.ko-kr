@@ -37,6 +37,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32412334"
 ---
 # <a name="setoutputformat"></a>_set_output_format
 형식이 지정된 I/O 함수에서 사용되는 출력 형식을 사용자 지정합니다.  

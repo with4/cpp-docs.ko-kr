@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874209"
 ---
 # <a name="getmodulebase-function"></a>GetModuleBase 함수
 검색 한 [ModuleBase](../windows/modulebase-class.md) 포인터의 참조 횟수를 증가 및 감소에 대 한 허용 하는 [RuntimeClass](../windows/runtimeclass-class.md) 개체입니다.  
