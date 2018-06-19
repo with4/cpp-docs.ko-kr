@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375212"
 ---
 # <a name="logbrush-structure"></a>LOGBRUSH 구조체
 `LOGBRUSH` 구조 스타일, 색 및 실제 브러시의 패턴을 정의 합니다. Windows에서 사용 되 고 [CreateBrushIndirect](http://msdn.microsoft.com/library/windows/desktop/dd183487) 및 [ExtCreatePen](http://msdn.microsoft.com/library/windows/desktop/dd162705) 함수입니다.  

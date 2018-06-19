@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380210"
 ---
 # <a name="retrieving-data-from-the-dialog-object"></a>대화 상자 개체에서 데이터 검색
 프레임 워크 대화 상자에서 컨트롤의 값을 초기화 하 고 컨트롤에서 값을 검색 하는 쉬운 방법을 제공 합니다. 더 어려운 수동 방법은 같은 함수를 호출 하는 것은 `SetDlgItemText` 및 `GetDlgItemText` 클래스의 멤버 함수 `CWnd`, 제어 창을에 적용 되는 합니다. 이러한 함수를 사용 하면 액세스할 각 컨트롤을 개별적으로 설정 하거나 해당 값을 가져올와 같은 함수를 호출 `SetWindowText` 및 `GetWindowText`합니다. 프레임 워크의 접근 방식을 모두 초기화 및 검색을 자동화합니다.  

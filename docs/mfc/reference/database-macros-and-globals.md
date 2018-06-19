@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370775"
 ---
 # <a name="database-macros-and-globals"></a>데이터베이스 매크로 및 전역
 매크로 및 전역 변수 아래에 나열 된 ODBC 기반 데이터베이스 응용 프로그램에 적용 됩니다. DAO 기반 응용 프로그램과 함께 사용 되지 않습니다.  

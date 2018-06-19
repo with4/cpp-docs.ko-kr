@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294098"
 ---
 # <a name="cvtres-fatal-error-cvt1103"></a>CVTRES 심각한 오류 CVT1103
 파일 이름을 읽을 수 없습니다.  

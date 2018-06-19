@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373705"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 클래스
 `CMFCVisualManagerWindows7` 응용 프로그램의 모양을 제공는 [!INCLUDE[win7](../../build/includes/win7_md.md)] 응용 프로그램입니다.  

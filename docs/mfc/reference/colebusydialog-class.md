@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374372"
 ---
 # <a name="colebusydialog-class"></a>COleBusyDialog 클래스
 OLE 서버가 응답하지 않음 또는 서버가 사용 중임 대화 상자에 사용합니다.  

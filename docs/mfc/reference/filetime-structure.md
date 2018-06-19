@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375884"
 ---
 # <a name="filetime-structure"></a>FILETIME 구조체
 `FILETIME` 구조는 1601 년 1 월 1 일 이후 100 나노초 간격의 수를 나타내는 64 비트 값입니다.  

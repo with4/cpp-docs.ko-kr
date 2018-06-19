@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295378"
 ---
 # <a name="automatic-function-scope-variables"></a>자동(함수 범위) 변수
 함수 내에서 선언 된 변수는 해당 함수의 범위 내 에서만 사용할 수 있습니다.  

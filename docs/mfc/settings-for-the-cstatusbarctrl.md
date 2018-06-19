@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380164"
 ---
 # <a name="settings-for-the-cstatusbarctrl"></a>CStatusBarCtrl에 대한 설정
 기본 위치는 [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) 상태 창은 부모 창의 아래쪽을 따라 이지만 지정할 수는 `CCS_TOP` 부모 창의 클라이언트 영역 위쪽에서 열지를 스타일입니다.  

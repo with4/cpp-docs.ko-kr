@@ -88,6 +88,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374178"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit 클래스
 리본 표시줄에 있는 편집 컨트롤을 구현 합니다.  

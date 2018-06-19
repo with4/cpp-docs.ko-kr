@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373510"
 ---
 # <a name="rgndata-structure"></a>RGNDATA 구조체
 `RGNDATA` 구조에는 헤더 및 영역을 구성 하는 사각형의 배열을 포함 합니다. 이러한 사각형 정렬된를 위에서 아래로 왼쪽에서 오른쪽으로 중첩 되지 않습니다.  

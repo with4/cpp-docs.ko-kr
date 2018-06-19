@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296915"
 ---
 # <a name="command-line-warning-d9024"></a>명령줄 경고 D9024
 인식할 수 없는 소스 형식 'filename' 파일, o b j 파일이 간주  

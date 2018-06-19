@@ -121,6 +121,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377812"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite 클래스
 사용자 지정 클라이언트 측 컨트롤 인터페이스를 지원합니다.  

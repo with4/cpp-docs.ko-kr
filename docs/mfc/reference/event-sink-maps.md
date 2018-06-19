@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373930"
 ---
 # <a name="event-sink-maps"></a>이벤트 싱크 맵
 포함 된 OLE 컨트롤 이벤트를 발생 시킬 때 컨트롤의 컨테이너 라고는 이벤트 싱크 맵"" MFC에서 제공 하는 메커니즘을 사용 하 여 이벤트를 받습니다. 이 이벤트 싱크 맵 이러한 이벤트의 매개 변수 뿐만 아니라 각 특정 이벤트에 대 한 처리기 함수를 지정합니다. 이벤트 싱크 맵에 대 한 자세한 내용은 문서 참조 [ActiveX 컨트롤 컨테이너](../../mfc/activex-control-containers.md)합니다.  

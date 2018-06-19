@@ -40,6 +40,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355274"
 ---
 # <a name="multipage-documents"></a>다중 페이지 문서
 이 문서는 Windows 인쇄 프로토콜을 설명 하 고 여러 페이지를 포함 하는 문서를 인쇄 하는 방법에 설명 합니다. 문서는 다음 항목을 다룹니다.  

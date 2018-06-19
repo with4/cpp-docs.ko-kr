@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373917"
 ---
 # <a name="icommandsource-interface"></a>ICommandSource 인터페이스
 사용자 정의 컨트롤에 명령 원본 개체에서 전송 되는 명령을 관리 합니다.  

@@ -71,6 +71,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376573"
 ---
 # <a name="cfilefind-class"></a>CFileFind 클래스
 로컬 파일 검색을 수행 하 고는 기본 클래스에 대 한 [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) 및 [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md), 인터넷 파일 검색을 수행 합니다.  

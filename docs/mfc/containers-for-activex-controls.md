@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341448"
 ---
 # <a name="containers-for-activex-controls"></a>ActiveX 컨트롤에 대한 컨테이너
 지 원하는 ActiveX 컨트롤 포함으로 다른 응용 프로그램에서 Visual c + +에서 개발 된 ActiveX 컨트롤을 사용할 수 있습니다. 다양 한 Microsoft 응용 프로그램을 나열 하는 버전 부터는 ActiveX 컨트롤 포함을 지원 합니다.  

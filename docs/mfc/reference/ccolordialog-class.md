@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357984"
 ---
 # <a name="ccolordialog-class"></a>CColorDialog 클래스
 색 선택 대화 상자는 응용 프로그램에 통합할 수 있습니다.  

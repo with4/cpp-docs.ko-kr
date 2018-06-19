@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350655"
 ---
 # <a name="menus-and-resources-container-additions"></a>메뉴 및 리소스: 컨테이너 추가
 이 문서에서는 메뉴 및 기타 시각적 편집 컨테이너 응용 프로그램 리소스에 적용 하는 변경 사항을 설명 합니다.  

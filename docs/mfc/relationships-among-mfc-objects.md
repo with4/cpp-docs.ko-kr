@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379521"
 ---
 # <a name="relationships-among-mfc-objects"></a>MFC 개체 간 관계
 문서/뷰 만들기 프로세스를 전체적으로 배치 하려면 실행 중인 프로그램을 검토: 문서, 뷰를 포함 하는 데 사용 되는 프레임 창 및 문서에 연결 된 보기입니다.  

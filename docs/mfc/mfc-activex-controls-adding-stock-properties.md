@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357561"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC ActiveX 컨트롤: 스톡 속성 추가
 스톡 속성 사용자 지정 속성 한다는 점에서 다릅니다 클래스에 의해 이미 구현 되어 `COleControl`합니다. `COleControl` 속성을 지 원하는 공용 컨트롤에 대 한 미리 정의 된 멤버 함수를 포함 합니다. 몇 가지 일반적인 속성 등이 컨트롤의 전경색과 배경색입니다. 다른 스톡 속성에 대 한 자세한 내용은 참조 [속성 추가 마법사가 지 원하는 스톡 속성](#_core_stock_properties_supported_by_classwizard) 이 문서의 뒷부분에 나오는 합니다. 스톡 속성에 대 한 디스패치 맵 항목에는 항상 접두사로 **DISP_STOCKPROP**합니다.  

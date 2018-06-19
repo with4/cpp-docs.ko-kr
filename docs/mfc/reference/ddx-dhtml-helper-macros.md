@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372077"
 ---
 # <a name="ddxdhtml-helper-macros"></a>DDX_DHtml 도우미 매크로
 DDX_DHtml 도우미 매크로 사용 하는 HTML 페이지에 있는 컨트롤의 자주 사용 되는 속성에 쉽게 액세스할 수 있습니다.  

@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371392"
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile 클래스
 데이터 스트림을 나타냅니다 ( `IStream`) OLE 구조적 저장소의 일부로 복합 파일입니다.  

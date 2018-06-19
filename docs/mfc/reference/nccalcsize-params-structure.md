@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369725"
 ---
 # <a name="nccalcsizeparams-structure"></a>NCCALCSIZE_PARAMS 구조체
 `NCCALCSIZE_PARAMS` 처리 하는 동안 응용 프로그램이 사용할 수 있는 정보를 포함 하는 구조는 `WM_NCCALCSIZE` 창의 클라이언트 영역의 유효한 콘텐츠, 위치 및 크기를 계산 하는 메시지입니다.  

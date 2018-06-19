@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378750"
 ---
 # <a name="mfc-classes"></a>MFC 클래스
 다음 목록의 클래스는 MFC(Microsoft Foundation Class) 라이브러리에 포함되어 있습니다.  

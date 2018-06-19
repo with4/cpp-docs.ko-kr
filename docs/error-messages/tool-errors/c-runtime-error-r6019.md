@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314231"
 ---
 # <a name="c-runtime-error-r6019"></a>C 런타임 오류 R6019
 콘솔 장치를 열 수 없습니다.  

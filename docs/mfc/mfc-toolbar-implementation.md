@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360968"
 ---
 # <a name="mfc-toolbar-implementation"></a>MFC 도구 모음 구현
 도구 모음은입니다는 [컨트롤 막대](../mfc/control-bars.md) 컨트롤의 비트맵 이미지를 포함 하 합니다. 이러한 이미지는 누름 단추, 확인란 또는 라디오 단추 처럼 동작할 수 있습니다. MFC 클래스를 제공 [CToolbar](../mfc/reference/ctoolbar-class.md) 도구 모음을 관리할 수 있습니다.  

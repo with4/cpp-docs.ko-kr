@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317351"
 ---
 # <a name="project-build-error-prj0036"></a>프로젝트 빌드 오류 PRJ0036
 웹 배포 도구에 대 한 ' 추가 파일 ' 속성에 잘못 된 항목이 포함 되어 있습니다.  

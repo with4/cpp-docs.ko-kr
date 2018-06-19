@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370522"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind 클래스
 FTP 서버의 인터넷 파일 검색에 유용합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372272"
 ---
 # <a name="measureitemstruct-structure"></a>MEASUREITEMSTRUCT 구조체
 `MEASUREITEMSTRUCT` 구조 창에 소유자가 그린 컨트롤 또는 메뉴 항목의 크기에 알립니다.  

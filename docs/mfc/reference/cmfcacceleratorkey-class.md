@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369533"
 ---
 # <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey 클래스
 가상 키 매핑 및 서식을 구현 하는 도우미 클래스입니다.  

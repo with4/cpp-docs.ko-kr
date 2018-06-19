@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344346"
 ---
 # <a name="initializing-the-parts-of-a-cstatusbarctrl-object"></a>CStatusBarCtrl 개체의 일부 초기화
 기본적으로 상태 표시줄에는 별도 창을 사용 하 여 상태 정보가 표시 됩니다. (부분 라고도 함) 이러한 창의 텍스트 문자열, 아이콘 또는 둘 다 포함할 수 있습니다.  

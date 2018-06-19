@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301205"
 ---
 # <a name="linker-tools-warning-lnk4247"></a>링커 도구 경고 LNK4247
 항목 지점 'decorated_function_name'에 이미 스레드 특성이 있습니다. ' attribute' 무시  

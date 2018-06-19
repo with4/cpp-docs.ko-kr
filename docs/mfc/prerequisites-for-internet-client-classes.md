@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354039"
 ---
 # <a name="prerequisites-for-internet-client-classes"></a>인터넷 클라이언트 클래스의 필수 구성 요소
 (예를 들어 파일을 읽는) 인터넷 클라이언트에서 수행한 일부 작업에 (이 경우 인터넷 연결을 설정) 동작을 수행 해야 합니다. 다음 표에서 일부 클라이언트 작업에 대 한 필수 구성 요소를 보여 줍니다.  

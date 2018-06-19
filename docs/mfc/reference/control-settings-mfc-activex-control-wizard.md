@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371864"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>MFC ActiveX 컨트롤 마법사, 컨트롤 설정
 마법사의이 페이지를 사용 하 여 컨트롤이 동작 하는 방법을 지정 합니다. 예를 들어 제어 표준 Windows 컨트롤 형식에 기반 해당 동작과 모양은, 최적화 하거나 컨트롤이 다른 컨트롤에 대 한 컨테이너로 작용할 수 있는지를 나타낼 수 있습니다.  

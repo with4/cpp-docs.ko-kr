@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375443"
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder 클래스
 사용자 컨트롤에 사진을 표시할 수 있게 하는 사진 속성을 구현 합니다.  

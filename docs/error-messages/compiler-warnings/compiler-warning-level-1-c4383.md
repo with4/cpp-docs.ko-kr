@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33286086"
 ---
 # <a name="compiler-warning-level-1-c4383"></a>컴파일러 경고(수준 1) C4383
 'instance_dereference_operator': 사용자 정의 된 'operator' 연산자가 있으면; 핸들 역참조의 의미가 변경 수 연산자는 피연산자에 대 한 명시적 정적 함수로 작성  

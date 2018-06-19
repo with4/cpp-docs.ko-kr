@@ -51,6 +51,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369052"
 ---
 # <a name="cjumplist-class"></a>CJumpList 클래스
 A `CJumpList` 클릭할 작업 표시줄에서 아이콘에서 마우스 오른쪽 단추로 클릭할 때 표시 되는 바로 가기 목록입니다.  

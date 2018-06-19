@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374755"
 ---
 # <a name="cusertool-class"></a>CUserTool 클래스
 사용자 도구는 외부 응용 프로그램을 실행하는 메뉴 항목입니다. **도구** 탭은 **사용자 지정** 대화 상자 ( [CMFCToolBarsCustomizeDialog 클래스](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) 사용 하면 사용자 도구를 추가 하 고 이름, 명령, 인수를 지정 하 고 각 사용자 도구에 대 한 초기 디렉터리입니다.  

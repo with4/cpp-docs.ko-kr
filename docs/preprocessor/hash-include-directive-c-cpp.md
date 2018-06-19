@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33843550"
 ---
 # <a name="include-directive-cc"></a>#include 지시문 (C/C++)
 소스 프로그램에서 지시문이 표시된 지점에 지정된 파일의 내용이 표시된 것처럼 해당 파일의 내용을 처리하도록 전처리기에 지시합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293756"
 ---
 # <a name="compiler-warning-level-4-c4460"></a>컴파일러 경고(수준 4) C4460
 WinRT 또는 CLR 연산자 'operator'에는 참조에 의해 전달되는 매개 변수가 있습니다. WinRT 또는 CLR 연산자 'operator'의 의미 체계는 C++ 연산자 'operator'의 의미 체계와 다릅니다. 값으로 전달하려고 했나요?  

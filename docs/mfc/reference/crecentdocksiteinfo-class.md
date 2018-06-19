@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374437"
 ---
 # <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo 클래스
 `CRecentDockSiteInfo` 클래스에 대 한 최신 상태 정보를 저장 하는 도우미 클래스는는 [CPane 클래스](../../mfc/reference/cpane-class.md)합니다.  

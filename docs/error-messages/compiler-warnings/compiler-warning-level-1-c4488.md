@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281524"
 ---
 # <a name="compiler-warning-level-1-c4488"></a>컴파일러 경고(수준 1) C4488
 'function': 인터페이스 메서드 'interface_method'를 구현 하는 'keyword' 키워드를 필요 합니다.  

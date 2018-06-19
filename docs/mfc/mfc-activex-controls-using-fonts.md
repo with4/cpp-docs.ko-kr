@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355141"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX 컨트롤: 글꼴 사용
 텍스트를 표시 하는 ActiveX 컨트롤 글꼴 속성을 변경 하 여 텍스트 모양을 변경 하려면 컨트롤 사용자를 허용할 수 있습니다. 글꼴 속성 글꼴 개체로 구현 되 고 두 가지 형식 중 하나일 수 있습니다: 주식 또는 사용자 지정 합니다. 스톡 글꼴 속성은 속성 추가 마법사를 사용 하 여 추가할 수 있는 미리 글꼴 속성입니다. 사용자 지정 글꼴 속성은 하지 미리 및 속성의 동작과 사용 컨트롤 개발자가 결정 합니다.  

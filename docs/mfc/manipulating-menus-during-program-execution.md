@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344284"
 ---
 # <a name="manipulating-menus-during-program-execution"></a>프로그램 실행 중 메뉴 조작
 클래스를 사용 하 여 `CMenu` 메뉴 및 메뉴 항목에서 바로 조작할 수 있습니다. `CMenu` Windows 캡슐화 `HMENU` 처리 하 고 메뉴를 사용 하기 위한 멤버 함수를 제공 합니다.  

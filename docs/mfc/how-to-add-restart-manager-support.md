@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351156"
 ---
 # <a name="how-to-add-restart-manager-support"></a>방법: 다시 시작 관리자 지원 추가
 

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378059"
 ---
 # <a name="registering-ole-controls"></a>OLE 컨트롤 등록
 다른 OLE 서버 개체와 같은 OLE 컨트롤은 다른 OLE 인식 응용 프로그램에서 액세스할 수 있습니다. 이 컨트롤의 형식 라이브러리와 클래스를 등록 하 여 이루어집니다.  

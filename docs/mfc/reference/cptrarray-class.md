@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372355"
 ---
 # <a name="cptrarray-class"></a>사용할 때 클래스
 void 포인터 배열을 지원합니다.  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368952"
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView 클래스
 컨트롤에 데이터베이스 레코드를 표시하는 뷰입니다.  

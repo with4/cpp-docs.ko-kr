@@ -53,6 +53,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375910"
 ---
 # <a name="crecttracker-class"></a>CRectTracker 클래스
 항목을을 표시, 이동, 다른 방식에서 크기를 조정할 수 있습니다.  

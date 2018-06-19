@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374538"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection 클래스
 인터넷 서버에 FTP 연결을 관리 하 고 해당 서버에 파일과 디렉터리의 직접 조작할 수 있습니다.  

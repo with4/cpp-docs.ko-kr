@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352427"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX 컨트롤: 사용자 지정 속성 추가
 스톡 속성에서 사용자 지정 속성 다를 사용자 지정 속성에서 아직 구현 되지 않는 한다는 점에서 `COleControl` 클래스입니다. 사용자 지정 속성은 특정 상태 또는 컨트롤을 사용 하 여 프로그래머에 ActiveX 컨트롤의 모양을을 노출할 사용 됩니다.  

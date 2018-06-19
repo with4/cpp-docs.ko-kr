@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367310"
 ---
 # <a name="cdatapathproperty-class"></a>CDataPathProperty 클래스
 비동기적으로 로드할 수 있는 OLE 컨트롤 속성을 구현합니다.  

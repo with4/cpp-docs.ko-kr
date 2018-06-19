@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374942"
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog 클래스
 `CPaneDialog` 클래스는 도킹 가능한 모덜리스 대화 상자를 지원 합니다.  

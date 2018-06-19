@@ -65,6 +65,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376968"
 ---
 # <a name="cwinthread-class"></a>CWinThread 클래스
 응용 프로그램 내의 실행 스레드를 나타냅니다.  

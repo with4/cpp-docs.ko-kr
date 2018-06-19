@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290428"
 ---
 # <a name="compiler-warning-level-3-c4197"></a>컴파일러 경고 (수준 3) C4197
 'type': 캐스트의 최상위 volatile은 무시 됩니다.  

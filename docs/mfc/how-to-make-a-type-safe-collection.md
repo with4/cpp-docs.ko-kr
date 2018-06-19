@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354441"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>방법: 형식이 안전한 컬렉션 만들기
 이 문서에서는 사용자 지정 데이터 형식에 대 한 형식이 안전한 컬렉션을 확인 하는 방법을 설명 합니다. 다음과 같은 내용을 다룹니다.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374099"
 ---
 # <a name="csyncobject-class"></a>CSyncObject 클래스
 Win32의 동기화 개체에 일반적인 기능을 제공하는 순수 가상 클래스입니다.  

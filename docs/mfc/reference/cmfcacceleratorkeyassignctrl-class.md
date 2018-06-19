@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33367947"
 ---
 # <a name="cmfcacceleratorkeyassignctrl-class"></a>CMFCAcceleratorKeyAssignCtrl 클래스
 `CMFCAcceleratorKeyAssignCtrl` 클래스 확장은 [CEdit 클래스](../../mfc/reference/cedit-class.md) ALT, CONTROL, SHIFT 등의 추가 시스템 단추를 지원 하도록 합니다.  

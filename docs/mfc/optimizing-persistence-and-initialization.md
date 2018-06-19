@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355664"
 ---
 # <a name="optimizing-persistence-and-initialization"></a>지속성 및 초기화 최적화
 지 속성 및 초기화 컨트롤에서 기본적으로 처리는 `DoPropExchange` 멤버 함수입니다. 일반적인 컨트롤에서이 함수를 몇 개의 호출을 포함 **PX_** 함수 (`PX_Color`, `PX_Font`등), 각 속성에 대 한 합니다.  

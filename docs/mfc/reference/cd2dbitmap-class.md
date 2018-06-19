@@ -66,6 +66,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354284"
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap 클래스
 ID2D1Bitmap에 대 한 래퍼입니다.  

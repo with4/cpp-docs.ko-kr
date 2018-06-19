@@ -77,6 +77,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376465"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler 클래스
 `CDataRecoveryHandler` 문서화 하 고 응용 프로그램이 예기치 않게 종료 하는 경우 복원 하는 자동으로 저장 합니다.  

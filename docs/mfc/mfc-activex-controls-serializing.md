@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353500"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC ActiveX 컨트롤: Serialize
 이 문서에서는 ActiveX 컨트롤을 serialize 하는 방법을 설명 합니다. Serialization은 프로세스에서 읽기 또는 쓰기를 영구 저장 매체에 디스크 파일 등입니다. Microsoft Foundation 클래스 (MFC) 라이브러리는 클래스의 serialization에 대 한 기본 제공 지원 `CObject`합니다. `COleControl` ActiveX 컨트롤 속성 교환 메커니즘을 사용 하 여이 지원이 확장 합니다.  

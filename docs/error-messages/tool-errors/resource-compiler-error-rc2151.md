@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323474"
 ---
 # <a name="resource-compiler-error-rc2151"></a>리소스 컴파일러 오류 RC2151
 문자열 상수를 다시 사용할 수 없습니다.  

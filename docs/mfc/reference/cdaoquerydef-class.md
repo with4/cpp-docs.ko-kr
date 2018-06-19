@@ -81,6 +81,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375796"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef 클래스
 일반적으로 데이터베이스에 저장되는 쿼리 정의 또는 "querydef"를 나타냅니다.  

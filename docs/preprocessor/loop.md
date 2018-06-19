@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846534"
 ---
 # <a name="loop"></a>루프
 자동 평행화 도우미에서 루프 코드를 고려하는 방법을 제어하고 자동 벡터화 도우미에서 루프를 고려 대상에서 제외합니다.  
