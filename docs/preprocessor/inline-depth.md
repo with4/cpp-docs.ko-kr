@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849875"
 ---
 # <a name="inlinedepth"></a>inline_depth
 함수가 호출 그래프에서 `n`보다 큰 수준으로 인라인 처리되지 않도록 인라인 추론 검색 수준을 지정합니다.  

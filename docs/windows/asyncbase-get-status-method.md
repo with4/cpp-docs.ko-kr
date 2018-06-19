@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863363"
 ---
 # <a name="asyncbasegetstatus-method"></a>AsyncBase::get_Status 메서드
 비동기 작업의 상태를 나타내는 값을 검색 합니다.  

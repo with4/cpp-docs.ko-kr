@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345715"
 ---
 # <a name="creating-stack-and-queue-collections"></a>스택 및 큐 컬렉션 만들기
 이 문서와 같은 기타 데이터 구조를 만드는 방법에 설명 [스택](#_core_stacks) 및 [큐](#_core_queues), MFC에서 클래스를 나열 합니다. 파생 된 클래스를 사용 하는 예제 `CList`, 하지만 사용할 수 있습니다 `CList` 직접 기능을 추가 하는 제외 합니다.  

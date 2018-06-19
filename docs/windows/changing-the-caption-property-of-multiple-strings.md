@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860283"
 ---
 # <a name="changing-the-caption-property-of-multiple-strings"></a>여러 문자열의 Caption 속성 변경
 다음 절차에서는 여러 문자열의 caption 속성을 변경 하는 방법을 보여 줍니다.  

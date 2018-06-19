@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327829"
 ---
 # <a name="nmake-warning-u4006"></a>NMAKE 경고 U4006
 특별 한 매크로가 정의 되지 않았습니다: '매크로 이름'  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383035"
 ---
 # <a name="working-with-a-header-control"></a>헤더 컨트롤 사용
 헤더 컨트롤을 사용 하는 쉬운 방법은 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) 목록 컨트롤와 함께; 참조 [CListCtrl 사용 하 여](../mfc/using-clistctrl.md) 이 항목 군의 뒷부분에 나오는 합니다. 헤더 컨트롤 단독으로 사용할 수도 있습니다. MFC 호출 **InitCommonControls** 드립니다. 주요 작업은 다음과 같습니다.  

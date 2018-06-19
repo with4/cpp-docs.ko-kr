@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298654"
 ---
 # <a name="linker-tools-error-lnk1223"></a>링커 도구 오류 LNK1223
 파일이 잘못되었거나 손상되었습니다. 파일의 .pdata 정보가 잘못되었습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325918"
 ---
 # <a name="active-document-classes"></a>액티브 문서 클래스
 Internet Explorer 5.5 등의 웹 브라우저의 전체 클라이언트 창에서 또는 활성 문서를 지 원하는 Microsoft Office Binder 같은 활성 컨테이너에 활성 문서를 표시할 수 있습니다.  

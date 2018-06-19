@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318430"
 ---
 # <a name="resource-compiler-error-rc2107"></a>리소스 컴파일러 오류 RC2107
 **숫자 명령 값을 필요 합니다.**  

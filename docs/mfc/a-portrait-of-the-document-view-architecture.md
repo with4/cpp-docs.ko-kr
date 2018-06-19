@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329818"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>문서/뷰 아키텍처에 대한 자세한 설명
 일반 MFC 응용 프로그램에서 문서 및 뷰 페어링 되었습니다. 데이터는 문서에 저장 되어 있지만 보기에 특권 수준의 권한이 데이터에 대 한 액세스. 표시에서 저장소 및 데이터의 유지 관리를 구분 하는 보기에서 문서를 분리 합니다.  

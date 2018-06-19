@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384373"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows 소켓: 아카이브를 사용하는 소켓의 예
 이 문서에서는 클래스를 사용 하는 예제를 제공 [CSocket](../mfc/reference/csocket-class.md)합니다. 이 예제에서는 사용 `CArchive` 소켓을 통해 데이터를 직렬화 하는 개체입니다. 파일 또는 문서 직렬화 아닌지 note 합니다.  

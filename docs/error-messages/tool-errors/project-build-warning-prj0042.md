@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316831"
 ---
 # <a name="project-build-warning-prj0042"></a>프로젝트 빌드 경고 PRJ0042
 **' 파일에 대 한 사용자 지정 빌드 단계에 대 한 출력 속성이 '**   

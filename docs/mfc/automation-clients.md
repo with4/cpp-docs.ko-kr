@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342493"
 ---
 # <a name="automation-clients"></a>자동화 클라이언트
 자동화를 다른 응용 프로그램에서 구현 된 개체를 조작 하거나 조작할 수 있도록 개체를 노출 시키는 응용 프로그램에 대 한 수 있게 합니다. 자동화 클라이언트는 다른 응용 프로그램에 속한 노출 된 개체를 조작할 수 있는 응용 프로그램. 개체를 표시 하는 응용 프로그램 자동화 서버를 라고 합니다. 클라이언트는 해당 개체의 속성 및 함수에 액세스 하 여 서버 응용 프로그램의 개체를 조작 합니다.  

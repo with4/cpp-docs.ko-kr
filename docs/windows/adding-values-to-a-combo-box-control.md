@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858970"
 ---
 # <a name="adding-values-to-a-combo-box-control"></a>콤보 상자 컨트롤에 값 추가
 대화 상자 편집기가 열려 있는 콤보 상자 컨트롤에 값을 추가할 수 있습니다.  

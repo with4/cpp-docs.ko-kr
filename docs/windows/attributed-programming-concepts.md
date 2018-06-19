@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860192"
 ---
 # <a name="attributed-programming-concepts"></a>특성을 사용하는 프로그래밍 개념
 Visual c + +에는 다양 한 프로그램에 특성을 사용할 수 있도록 자료가 포함 되어 있습니다. 특성, Visual c + +의 새로운 기능 및.NET Framework 공용 언어 런타임 개발 COM 프로그래밍을 간소화 하기 위해 설계 되었습니다. 소스 파일에서 특성을 포함 하는 컴파일러는 공급자의 동적 연결 라이브러리 (DLL) 코드를 삽입 하거나 생성 된 개체 파일의 코드를 수정를 사용 하 여 합니다. 가지는.idl 파일, 인터페이스, 형식 라이브러리 및 기타 COM 요소를 만드는 데 도움이 되는 특성이 있습니다. 통합된 개발 환경 (IDE)에서 특성은 속성 창 및 마법사에서 지원 됩니다.  

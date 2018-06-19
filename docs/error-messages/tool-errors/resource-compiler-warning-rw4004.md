@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337108"
 ---
 # <a name="resource-compiler-warning-rw4004"></a>리소스 컴파일러 경고 RW4004
 ASCII 문자가 가상 키 코드와 일치하지 않습니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857557"
 ---
 # <a name="abstract--c-component-extensions"></a>abstract(C++ 구성 요소 확장)
 `abstract` 키워드는 다음의 하나를 선언합니다.  

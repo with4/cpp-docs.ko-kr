@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320589"
 ---
 # <a name="nmake-warning-u4007"></a>NMAKE 경고 U4007
 'filename' 너무 깁니다; 파일 이름 8.3으로 잘립니다.  

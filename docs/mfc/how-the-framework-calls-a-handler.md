@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343621"
 ---
 # <a name="how-the-framework-calls-a-handler"></a>프레임워크가 처리기를 호출하는 방법
 다음 항목 먼저 프레임 워크 명령을 라우팅하고 하는 방법을 검사 한 다음 windows 다른 메시지와 컨트롤 알림 전송 방법 검토:  

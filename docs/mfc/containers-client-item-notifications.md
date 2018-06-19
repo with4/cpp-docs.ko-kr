@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344626"
 ---
 # <a name="containers-client-item-notifications"></a>컨테이너: 클라이언트 항목 알림
 이 문서에서는 MFC 프레임 워크 클라이언트 응용 프로그램의 문서에 항목을 수정 하는 서버 응용 프로그램을 호출 하는 재정의 가능한 함수를 설명 합니다.  

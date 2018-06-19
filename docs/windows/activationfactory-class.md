@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857957"
 ---
 # <a name="activationfactory-class"></a>ActivationFactory 클래스
 Windows 런타임으로 활성화할 클래스를 하나 이상 사용합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863740"
 ---
 # <a name="atl-predefined-symbols"></a>미리 정의된 ATL 기호
 이러한 기호는 ATL 헤더 파일에 정의 되어 있지만 표준 Windows 응용 프로그램 기능 및 동작을 지원 합니다. 이러한 기호 대화 상자에 주로 사용 됩니다. 대화 상자 및 컨트롤을 사용 하 여 작업할 경우에 [대화 상자 편집기](../windows/dialog-editor.md), 이러한 기호는 일반 컨트롤과 연결 된 속성 창에 표시 됩니다. 예를 들어, 대화 상자에 "취소" 단추가, 해당 명령을 연관 될 명령이에 [속성 창](/visualstudio/ide/reference/properties-window)합니다.  

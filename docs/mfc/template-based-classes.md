@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385476"
 ---
 # <a name="template-based-classes"></a>템플릿 기반 클래스
 이 문서에서는 MFC 3.0 이상 버전의에서 형식이 안전한 템플릿 기반 컬렉션 클래스에 설명 합니다. 이러한 서식 파일을 사용 하 여 형식이 안전한 컬렉션을 만드는 것이 더 편리 하 고 사용 하면 형식 안전성을 템플릿 기반 컬렉션 클래스를 사용 하 여 보다 효과적으로 제공 합니다.  

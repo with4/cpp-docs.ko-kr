@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862025"
 ---
 # <a name="attribute-targets-c-component-extensions"></a>특성 대상(C++ 구성 요소 확장명)
 특성 사용 지정자를 사용하여 특성 대상을 지정할 수 있습니다.  각 특성을 정의하여 특정 언어 요소에 적용합니다. 예를 들어, 특성을 정의하여 클래스와 구조체에만 적용할 수도 있습니다.  다음 목록에서는 사용자 지정 특성을 사용할 수 있는 가능한 구문 요소를 보여 줍니다. 이러한 값의 조합(논리적 OR)을 사용할 수 있습니다.  

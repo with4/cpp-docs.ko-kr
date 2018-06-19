@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862724"
 ---
 # <a name="arrays-c-component-extensions"></a>배열(C++ 구성 요소 확장명)
 `Platform::Array<T>` 형식이 C + + /CX에서는 또는 `array` 키워드 C + + /CLI로 지정 된 유형과 초기 값의 배열을 선언 합니다.  

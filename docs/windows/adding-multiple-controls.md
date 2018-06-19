@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855788"
 ---
 # <a name="adding-multiple-controls"></a>여러 개의 컨트롤 추가
 ### <a name="to-add-multiple-controls"></a>여러 컨트롤을 추가 하려면  

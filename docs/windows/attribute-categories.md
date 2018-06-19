@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33859383"
 ---
 # <a name="attribute-categories"></a>특성 범주
 특성 참조는 다양 한 Visual c + +에서 사용할 수 있는 특성 유형에 대해 설명 합니다.  

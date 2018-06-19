@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33857209"
 ---
 # <a name="accelerator-key-property"></a>액셀러레이터 키 속성
 다음은 액셀러레이터 키 테이블의 키 속성에 대해 사용할 수 있는 항목입니다.  

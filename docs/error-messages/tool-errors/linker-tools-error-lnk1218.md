@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298891"
 ---
 # <a name="linker-tools-error-lnk1218"></a>링커 도구 오류 LNK1218
 경고를 오류로 처리 됩니다. 출력 파일이 생성 되지 않았습니다  
