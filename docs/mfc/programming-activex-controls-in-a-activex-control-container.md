@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355043"
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>ActiveX 컨트롤 컨테이너: ActiveX 컨트롤 컨테이너에서 ActiveX 컨트롤 프로그래밍
 이 문서에서는 노출 된에 액세스 하기 위한 프로세스를 설명 [메서드](../mfc/mfc-activex-controls-methods.md) 및 [속성](../mfc/mfc-activex-controls-properties.md) ActiveX 컨트롤을 포함 합니다. 기본적으로, 다음이 단계를 수행 합니다.  

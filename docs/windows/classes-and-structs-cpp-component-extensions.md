@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864917"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>클래스 및 구조체(C++ 구성 요소 확장)
 클래스 또는 구조체 선언 인 *개체 수명* 자동으로 관리 됩니다. 개체가 더 이상 액세스 불가능하게 되거나 범위를 벗어나면 Visual C++가 개체에 할당된 메모리를 자동 삭제합니다.  

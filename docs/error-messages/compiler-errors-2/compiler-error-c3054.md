@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256600"
 ---
 # <a name="compiler-error-c3054"></a>컴파일러 오류 C3054
 현재 제네릭 클래스 또는 함수에서는 '#pragma omp parallel'가 지원되지 않습니다.  

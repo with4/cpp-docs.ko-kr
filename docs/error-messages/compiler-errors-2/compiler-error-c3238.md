@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33249890"
 ---
 # <a name="compiler-error-c3238"></a>컴파일러 오류 C3238
 'type': 이 이름의 형식이 이미 'assembly' 어셈블리에 전달되었습니다.  

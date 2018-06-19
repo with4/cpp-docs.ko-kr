@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265676"
 ---
 # <a name="compiler-error-c3738"></a>컴파일러 오류 C3738
 'calling_convention': 명시적 인스턴스화의 호출 규칙 인스턴스화할 서식 파일의 이름과 일치 해야 합니다  

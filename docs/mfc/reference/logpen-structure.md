@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374152"
 ---
 # <a name="logpen-structure"></a>LOGPEN 구조체
 `LOGPEN` 그리기 개체를 그리는 데 사용 되는 선 및 테두리, 스타일, 두께 및 펜 색 구조를 정의 합니다. [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect) 함수는 `LOGPEN` 구조입니다.  

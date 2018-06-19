@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348991"
 ---
 # <a name="property-sheets-and-property-pages-mfc"></a>속성 시트 및 속성 페이지(MFC)
 MFC [대화 상자](../mfc/dialog-boxes.md) 속성 시트 및 속성 페이지를 통합 하 여 "탭 대화 상자" 모양에 대해 수행할 수 있습니다. 이런이 종류의 대화 상자, Microsoft Word, Excel 및 Visual c + +의 여러 대화 상자와 유사한 "속성 시트" MFC에서 호출 스택을 앞에서 뒤로, 또는 계단식된 창 그룹에서 보이는 파일 폴더는 스택 매우 유사 하 게 탭 시트 포함 나타납니다. 전면 탭 컨트롤은 볼 수 있습니다. 레이블이 지정 된 탭만 후면 탭에 표시 됩니다. 속성 시트는 많은 수의 속성이 나 여러 그룹에 속하는 설정을 관리 하는 데 특히 유용 합니다. 일반적으로 하나의 속성 시트는 여러 개별 대화 상자를 대체 하 여 사용자 인터페이스를 단순화할 수 있습니다.  

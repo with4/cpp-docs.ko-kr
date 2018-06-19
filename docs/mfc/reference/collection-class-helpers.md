@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374840"
 ---
 # <a name="collection-class-helpers"></a>컬렉션 클래스 도우미
 컬렉션 클래스 `CMap`, `CList`, 및 `CArray` 를 비교 하 고, 복사 및 요소를 직렬화 하는 작업에 대 한 전역 템플릿 기반 도우미 함수를 사용 합니다. 구현에 따라 클래스의 일부로 `CMap`, `CList`, 및 `CArray`, 지도, 목록 또는 배열에 저장 된 데이터의 형식에 맞는 버전 필요에 따라 이러한 함수를 재정의 해야 합니다. 와 같은 도우미 함수를 재정의에 대 한 내용은 `SerializeElements`, 문서를 참조 [컬렉션: 형식이 안전한 컬렉션을 만드는 방법](../../mfc/how-to-make-a-type-safe-collection.md)합니다. **ConstructElements** 및 **DestructElements** 사용 되지 않습니다.  

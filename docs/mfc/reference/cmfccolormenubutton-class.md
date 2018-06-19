@@ -59,6 +59,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370707"
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton 클래스
 `CMFCColorMenuButton` 메뉴 명령이 나 색 선택 대화 상자를 시작 하는 도구 모음 단추가 클래스를 지원 합니다.  

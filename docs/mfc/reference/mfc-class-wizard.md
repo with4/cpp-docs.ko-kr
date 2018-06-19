@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370144"
 ---
 # <a name="mfc-class-wizard"></a>MFC 클래스 마법사
 프로젝트의 클래스에 메시지와 메시지 처리기를 추가할 수 있습니다. 또한 다른 마법사를 시작 하거나 프로젝트에 클래스를 추가할 수 있습니다.  

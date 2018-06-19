@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381747"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>이미지 목록과 Rebar 컨트롤 함께 사용
 각 rebar 밴드는 특히 연결된 이미지 목록의 이미지를 포함할 수 있습니다. 다음 절차는 rebar 밴드에서 이미지를 표시하는 데 필요한 단계를 자세히 설명합니다.  

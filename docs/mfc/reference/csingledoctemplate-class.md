@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371623"
 ---
 # <a name="csingledoctemplate-class"></a>CSingleDocTemplate 클래스
 SDI(단일 문서 인터페이스)를 구현하는 문서 템플릿을 정의합니다.  

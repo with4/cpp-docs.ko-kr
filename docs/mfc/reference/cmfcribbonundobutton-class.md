@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370170"
 ---
 # <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton 클래스
 `CMFCRibbonUndoButton` 클래스는 가장 최근 사용자 명령에 포함 된 드롭다운 목록에서 단추를 구현 합니다. 사용자는 다시 실행 하거나 취소할 드롭 다운 목록에서 가장 최근 명령 중 하나 이상을 선택할 수 있습니다.  

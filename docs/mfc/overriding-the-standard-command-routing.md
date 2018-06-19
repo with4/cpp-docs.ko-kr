@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352814"
 ---
 # <a name="overriding-the-standard-command-routing"></a>표준 명령 라우팅 재정의
 드문 경우 이지만 라우팅 표준 프레임 워크의 몇 가지 변형 구현 해야 하는 경우 재정의할 수 있습니다. 재정의 하 여 하나 이상의 클래스 경로 변경 하는 개념은 `OnCmdMsg` 해당 클래스에 있습니다. 다음과 같이  

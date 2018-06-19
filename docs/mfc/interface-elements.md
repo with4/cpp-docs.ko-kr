@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352579"
 ---
 # <a name="interface-elements"></a>인터페이스 요소
 이 문서에서 도입 된 인터페이스 요소에 설명 [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] s p 1에서는 라이브러리의 이전 버전으로 차이 설명 합니다.  

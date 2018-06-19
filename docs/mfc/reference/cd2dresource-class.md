@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350954"
 ---
 # <a name="cd2dresource-class"></a>CD2DResource 클래스
 만들고 브러시, 레이어 및 텍스트 같은 D2D 리소스를 관리 하기 위한 인터페이스를 제공 하는 추상 클래스입니다.  

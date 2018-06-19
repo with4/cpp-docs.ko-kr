@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369036"
 ---
 # <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog 클래스
 `CMFCKeyMapDialog` 클래스 명령을 키보드의 키에 매핑하는 컨트롤을 지원 합니다.  

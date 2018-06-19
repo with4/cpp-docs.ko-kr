@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370044"
 ---
 # <a name="cmfcimageeditorpalettebar-class"></a>CMFCImageEditorPaletteBar 클래스
 이미지 편집기 대화 상자 팔레트 모음 기능을 제공 합니다.  

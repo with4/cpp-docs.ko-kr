@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348155"
 ---
 # <a name="bitmapinfo-structure"></a>BITMAPINFO 구조체
 `BITMAPINFO` 차원 및 Windows 장치 독립적 비트맵 (DIB)에 대 한 색상 정보 구조를 정의 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355914"
 ---
 # <a name="application-control"></a>응용 프로그램 컨트롤
 OLE 응용 프로그램 및 해당 개체에 대 한 상당한 제어가 필요합니다. OLE 시스템 Dll을 시작한 다음 및 응용 프로그램을 자동으로 릴리스, 해당 프로덕션 및 개체의 수정 조정 등 수 있어야 합니다. 이 항목의 함수에는 이러한 요구 사항을 충족 합니다. OLE 시스템 Dll에서 호출 되는 것 외에도 이러한 함수도 응용 프로그램에서 라고도 합니다. 

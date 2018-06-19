@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371907"
 ---
 # <a name="point-structure1"></a>지점 구조 1
 **가리킨** 구조 정의 x*-* 및 한 점의 y-좌표입니다.  

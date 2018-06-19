@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349260"
 ---
 # <a name="afxextensionmodule-structure"></a>AFX_EXTENSION_MODULE 구조체
 `AFX_EXTENSION_MODULE` MFC 확장 Dll의 초기화 동안 MFC 확장 DLL 모듈의 상태를 저장 하는 데 사용 됩니다.  

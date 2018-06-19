@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385244"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033: MFC의 DLL 버전
 이 노트 방법을 MFCxx.DLL를 사용할 수 있습니다 및 MFCxxD.DLL (여기서 x는 MFC 버전 번호) 공유 동적 연결 라이브러리 MFC 응용 프로그램 및 MFC 확장 Dll 설명 합니다. 일반 MFC Dll에 대 한 자세한 내용은 참조 [DLL의 일부로 MFC 사용 하 여](../mfc/tn011-using-mfc-as-part-of-a-dll.md)합니다.  

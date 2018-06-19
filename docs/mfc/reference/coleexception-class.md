@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370473"
 ---
 # <a name="coleexception-class"></a>COleException 클래스
 OLE 작업과 관련된 예외 조건을 나타냅니다.  

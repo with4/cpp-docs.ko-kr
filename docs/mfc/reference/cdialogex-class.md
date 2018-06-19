@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368048"
 ---
 # <a name="cdialogex-class"></a>CDialogEx 클래스
 `CDialogEx` 클래스는 대화 상자의 배경 색과 배경 이미지를 지정합니다.  

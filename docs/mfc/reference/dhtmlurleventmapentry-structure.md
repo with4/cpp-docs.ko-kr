@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370060"
 ---
 # <a name="dhtmlurleventmapentry-structure"></a>DHtmlUrlEventMapEntry 구조체
 `DHtmlUrlEventMapEntry` 다중 URL 이벤트 맵 지원 구조를 제공 합니다.  

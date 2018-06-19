@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355684"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>입력/출력 처리에 대한 권장 사항
 파일 기반 I/O 사용 하는지 여부는 다음 의사 결정 트리의 질문에 대답에 따라 달라 집니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352837"
 ---
 # <a name="programmatic-printing"></a>프로그래밍 방식 인쇄
 OLE 제공 영구 문서를 고유 하 게 식별 하는 방법 (**GetClassFile**) 연결 된 코드에 로드 하 고 (`CoCreateInstance`, **QueryInterface(IID_IPersistFile)**, **QueryInterface(IID_IPersistStorage)**, **IPersistFile::Load**, 및 **IPersistStorage::Load**). 인쇄 문서를 더 이상 사용 하려면 (원래 OLE 2.0 함께 제공 되지 않으며 기존 OLE 디자인 사용) 하는 액티브 문서 포함 소개 자료 표준 인쇄 인터페이스 `IPrint`, 일반적으로 로드할 수 있는 모든 개체를 통해 사용할 수는 문서 종류의 영구 상태입니다. 현재 문서의 각 보기 필요에 따라 지원할 수는 **IPrint** 이러한 기능을 제공 하는 인터페이스입니다.  

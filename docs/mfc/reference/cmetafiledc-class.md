@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368156"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC 클래스
 원하는 이미지 또는 텍스트를 만들기 위해 재생할 수 있는 GDI(그래픽 장치 인터페이스) 명령 시퀀스가 포함된 Windows 메타파일을 구현합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374803"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>인터넷 URL 전역 구문 분석 및 도우미
 클라이언트가 인터넷 서버에는 쿼리 보내면 클라이언트에 대 한 정보를 추출 하는 URL 전역 구문 분석 중 하나를 사용할 수 있습니다. 도우미 함수는 다른 인터넷 기능을 제공합니다.

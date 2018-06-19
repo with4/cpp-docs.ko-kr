@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372771"
 ---
 # <a name="cscrollbar-class"></a>CScrollBar 클래스
 Windows 스크롤 막대 컨트롤의 기능을 제공합니다.  

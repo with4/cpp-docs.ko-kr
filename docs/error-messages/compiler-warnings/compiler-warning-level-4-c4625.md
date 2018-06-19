@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297435"
 ---
 # <a name="compiler-warning-level-4-c4625"></a>컴파일러 경고(수준 4) C4625
 'derived class': 기본 클래스의 복사 생성자에 액세스할 수 없거나 이러한 생성자가 삭제되었으므로 복사 생성자가 암시적으로 삭제된 것으로 정의됩니다.  

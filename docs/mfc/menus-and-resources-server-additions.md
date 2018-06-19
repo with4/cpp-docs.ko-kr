@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351355"
 ---
 # <a name="menus-and-resources-server-additions"></a>메뉴 및 리소스: 서버 추가
 이 문서에서는 메뉴 및 비주얼 편집 서버 (구성 요소) 응용 프로그램의 다른 리소스에 적용 하는 변경 사항을 설명 합니다. 세 가지 모드 중 하나에서 시작 하려면 때문에 서버 응용 프로그램의 메뉴 구조 및 기타 리소스에 많은 추가 필요: 독립 실행형 모드, 포함 또는 위치에 있습니다. 에 설명 된 대로 [메뉴 및 리소스 (OLE)](../mfc/menus-and-resources-ole.md) 문서, 4 개의 집합이 메뉴의 최대는 합니다. 4는 3 개만 모드만 사용 되지만 MDI 풀 서버 응용 프로그램에 사용 됩니다. 응용 프로그램 마법사에서는 원하는 서버 유형에 필요한 메뉴 레이아웃을 만듭니다. 일부 사용자 지정을 할 수 있습니다.  

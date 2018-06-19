@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352315"
 ---
 # <a name="activex-controls-on-the-internet"></a>인터넷의 ActiveX 컨트롤
 ActiveX 컨트롤은 OLE 컨트롤 지정의 업데이트 된 버전입니다. 컨트롤은 다양 한 인터넷에서 COM 인식 웹 브라우저를 비롯 한 다른 컨테이너에에서 사용할 수 있는 프로그래밍 가능한 소프트웨어 구성 요소를 개발 하기 위한 기본 아키텍처입니다. ActiveX 컨트롤은 인터넷 컨트롤이 될 수 있습니다 및 활성 문서에 기능을 추가 하거나 웹 페이지의 일부가 될 수 있습니다. 웹 페이지에 컨트롤은 스크립팅을 사용 하 여 서로 통신할 수 있습니다.  

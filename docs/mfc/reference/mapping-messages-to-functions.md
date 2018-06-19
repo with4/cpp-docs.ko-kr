@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371636"
 ---
 # <a name="mapping-messages-to-functions"></a>함수에 메시지 매핑
 속성 창 응용 프로그램의 리소스에 의해 생성 된 메시지에 메시지 처리기 (MFC 사용자 인터페이스 클래스의 멤버 함수)에 바인딩할 수 있습니다. 사용할 [MFC 메시지 맵에](../../mfc/messages-and-commands-in-the-framework.md) 의 바인딩을 만들 수 있습니다.  

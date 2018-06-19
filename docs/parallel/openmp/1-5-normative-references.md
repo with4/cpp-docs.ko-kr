@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33685595"
 ---
 # <a name="15-normative-references"></a>1.5 표준 참조
 -   ISO/IEC 9899: 1999, *정보 기술-프로그래밍 언어-C*합니다. 이 OpenMP API 사양에서는 ISO/IEC 9899: 1999 C99 라고 합니다.  

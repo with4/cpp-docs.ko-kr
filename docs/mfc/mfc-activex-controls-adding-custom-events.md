@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352533"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC ActiveX 컨트롤: 사용자 지정 이벤트 추가
 사용자 지정 이벤트 스톡 이벤트 한다는 점에서 다릅니다 클래스에 의해 자동으로 발생 되지 않습니다 `COleControl`합니다. 사용자 지정 이벤트는 컨트롤 개발자는 이벤트에 의해 결정 된 특정 작업을 인식 합니다. 사용자 지정 이벤트에 대 한 이벤트 맵 항목으로 표시 됩니다는 `EVENT_CUSTOM` 매크로입니다. 다음 섹션에는 ActiveX 컨트롤 마법사를 사용 하 여 만든 ActiveX 컨트롤 프로젝트에 대 한 사용자 지정 이벤트를 구현 합니다.  

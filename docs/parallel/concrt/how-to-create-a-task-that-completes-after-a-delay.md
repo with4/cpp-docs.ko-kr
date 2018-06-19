@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688413"
 ---
 # <a name="how-to-create-a-task-that-completes-after-a-delay"></a>방법: 지연 후 완료되는 작업 만들기
 사용 하는 방법을 보여 주는이 예제는 [concurrency:: task](../../parallel/concrt/reference/task-class.md), [concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md), [cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md), [ concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md), [concurrency:: timer](../../parallel/concrt/reference/timer-class.md), 및 [concurrency:: call](../../parallel/concrt/reference/call-class.md) 지연 후 완료 되는 작업을 만들기 위한 클래스입니다. 이 메서드는 때때로 데이터를 폴링하는 루프를 빌드하고, 제한 시간을 적용하고, 미리 지정한 시간 동안 사용자의 입력 처리를 지연하는 데 사용할 수 있습니다.  

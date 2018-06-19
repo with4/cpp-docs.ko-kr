@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350035"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>MFC ActiveX 컨트롤: 사용자 지정 메서드 추가
 사용자 지정 메서드 스톡 메서드 한다는 점에서 다릅니다 의해 이미 구현 되지 않은 `COleControl`합니다. 사용자 컨트롤에 추가한 각 사용자 지정 방법에 대 한 구현을 제공 해야 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349160"
 ---
 # <a name="manipulating-image-lists"></a>이미지 목록 조작
 [대체](../mfc/reference/cimagelist-class.md#replace) 이미지 목록의 이미지를 대체 하는 멤버 함수 ([CImageList](../mfc/reference/cimagelist-class.md))를 새 이미지로 합니다. 또한 이 기능은 이미지 목록 개체에서 이미지 수를 동적으로 늘려야 할 경우에 유용합니다. [SetImageCount](../mfc/reference/cimagelist-class.md#setimagecount) 함수는 이미지 목록에 저장 된 이미지의 수를 동적으로 변경 합니다. 이미지 목록의 크기를 늘리면 호출 **대체** 새 이미지 슬롯에 이미지 추가 합니다. 이미지 목록의 크기를 줄이면 새 크기를 넘어서는 이미지가 비워집니다.  

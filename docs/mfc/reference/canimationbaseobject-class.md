@@ -65,6 +65,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355606"
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject 클래스
 모든 애니메이션 개체의 기본 클래스입니다.  

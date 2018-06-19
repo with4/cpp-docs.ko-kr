@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353643"
 ---
 # <a name="cautohidedocksite-class"></a>CAutoHideDockSite 클래스
 `CAutoHideDockSite` 확장는 [CDockSite 클래스](../../mfc/reference/cdocksite-class.md) 자동 숨김 도킹 창을 구현 하 합니다.  

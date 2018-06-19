@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349911"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>데이터 개체 및 데이터 소스: 조작
 데이터 개체 또는 데이터 소스를 만든 후에 다양 한이 다음에 데이터 형식을 열거 데이터 삽입 및 제거 등의 데이터 등에 대 한 일반적인 작업을 수행할 수 있습니다. 이 문서에는 가장 일반적인 작업을 완료 하는 데 필요한 기술을 설명 합니다. 다음과 같은 내용을 다룹니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863454"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry(C++)
 대상 클래스의 COM 맵에 인터페이스 항목을 추가합니다.  

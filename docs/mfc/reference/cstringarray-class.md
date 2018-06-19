@@ -57,6 +57,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375508"
 ---
 # <a name="cstringarray-class"></a>CStringArray 클래스
 배열을 지원 [CString](../../atl-mfc-shared/using-cstring.md) 개체입니다.  

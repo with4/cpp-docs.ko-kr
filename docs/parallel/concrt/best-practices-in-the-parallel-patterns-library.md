@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694565"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>병렬 패턴 라이브러리의 유용한 정보
 이 문서에서는 PPL(병렬 패턴 라이브러리)을 효율적으로 사용하는 방법을 설명합니다. PPL은 세부적인 병렬 처리를 수행하기 위한 범용 컨테이너, 개체 및 알고리즘을 제공합니다.  

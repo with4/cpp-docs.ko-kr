@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370736"
 ---
 # <a name="codbcfieldinfo-structure"></a>CODBCFieldInfo 구조체
 `CODBCFieldInfo` 구조는 ODBC 데이터 원본에 있는 필드에 대 한 정보를 포함 합니다.  

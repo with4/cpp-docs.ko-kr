@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371584"
 ---
 # <a name="cmultidoctemplate-class"></a>CMultiDocTemplate 클래스
 MDI(다중 문서 인터페이스)를 구현하는 문서 템플릿을 정의합니다.  

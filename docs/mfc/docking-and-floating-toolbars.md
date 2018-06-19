@@ -36,6 +36,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352791"
 ---
 # <a name="docking-and-floating-toolbars"></a>도구 모음 고정 및 고정 해제
 Microsoft Foundation Class 라이브러리는 도킹 가능한 도구 모음을 지원합니다. 도킹 가능한 도구 모음 연결 하거나 모든 면 해당 부모 창에 도킹할 수 또는 분리 하거나 자체 미니 프레임 창에서 이동할 수 있습니다. 이 문서에서는 응용 프로그램에서 도킹 가능한 도구 모음을 사용 하는 방법에 설명 합니다.  

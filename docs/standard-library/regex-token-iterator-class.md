@@ -38,6 +38,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862146"
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator 클래스
 

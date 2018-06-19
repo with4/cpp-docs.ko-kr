@@ -32,6 +32,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692784"
 ---
 # <a name="texture-class"></a>texture 클래스
 질감은 데이터에 집계는 `accelerator_view` 익스텐트 도메인에 있습니다. 익스텐트 도메인의 각 요소에 대 한 변수 컬렉션입니다. C + + 기본 형식에 해당 하는 값을 보유 하는 각 변수 ( `unsigned int`, `int`, `float`, `double`), 스칼라 형식 ( `norm`, 또는 `unorm`), 또는 short 벡터 형식입니다.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690509"
 ---
 # <a name="a21---scoping-variables-with-the-private-clause"></a>A.21   private 절을 사용하여 변수에 범위 지정
 값 `i` 및 `j` 다음 예제에서 정의 되어 있지 않습니다 병렬 영역에서 종료 시:  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352608"
 ---
 # <a name="carchiveexception-class"></a>CArchiveException 클래스
 Serialization 예외 상태를 나타냅니다.  

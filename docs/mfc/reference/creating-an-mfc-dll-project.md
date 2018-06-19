@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374057"
 ---
 # <a name="creating-an-mfc-dll-project"></a>MFC DLL 프로젝트 만들기
 MFC DLL은 동시에 여러 응용 프로그램에서 사용할 수 있는 함수의 공유 라이브러리로 사용 되는 이진 파일. MFC DLL 프로젝트를 만드는 가장 쉬운 방법은 MFC DLL 마법사를 사용 하는 것입니다.  

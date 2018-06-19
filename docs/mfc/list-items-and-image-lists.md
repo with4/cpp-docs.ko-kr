@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349115"
 ---
 # <a name="list-items-and-image-lists"></a>목록 항목 및 이미지 목록
 목록 컨트롤에서 "item" ([CListCtrl](../mfc/reference/clistctrl-class.md)) 아이콘, 레이블 및 수 있는 기타 정보 ("하위 항목")를에서 구성 합니다.  

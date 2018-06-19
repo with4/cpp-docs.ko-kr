@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33384077"
 ---
 # <a name="windows-sockets-deriving-from-socket-classes"></a>Windows 소켓: 소켓 클래스에서 파생시키기
 이 문서에서는 설명의 일부 기능은 소켓 클래스 중 하나에서 고유한 클래스를 파생 하 여 얻을 수 있습니다.  

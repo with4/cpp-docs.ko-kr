@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354782"
 ---
 # <a name="how-to-create-a-message-map-for-a-template-class"></a>방법: 템플릿 클래스에 대한 메시지 맵 만들기
 메시지 매핑 MFC의 Windows 메시지를 적절 한 c + + 개체 인스턴스 수 있는 효율적인 방법을 제공 합니다. MFC 메시지 맵에 대상의 예로 응용 프로그램 클래스, 문서 및 뷰 클래스, 컨트롤 클래스 및 등이 있습니다.  

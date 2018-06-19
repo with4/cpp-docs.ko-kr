@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355313"
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC ActiveX 컨트롤: 최적화
 이 문서에서는 기술을 더 나은 성능을 위해 ActiveX 컨트롤을 최적화 하기 위해 사용할 수 있습니다.  

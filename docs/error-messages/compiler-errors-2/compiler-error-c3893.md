@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273425"
 ---
 # <a name="compiler-error-c3893"></a>컴파일러 오류 C3893
 'var': 'type_name' 클래스의 인스턴스 생성자 에서만 initonly 데이터 멤버의 l 값 사용할 수는  

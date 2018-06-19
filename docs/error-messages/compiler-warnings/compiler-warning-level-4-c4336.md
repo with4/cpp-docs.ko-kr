@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295248"
 ---
 # <a name="compiler-warning-level-4-c4336"></a>컴파일러 경고(수준 4) C4336
 상호 참조 된 형식 라이브러리 'type_lib1' 'type_lib2' 가져오기 전에 가져오기  

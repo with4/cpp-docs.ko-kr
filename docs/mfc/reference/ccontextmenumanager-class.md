@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357717"
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager 클래스
 `CContextMenuManager` 개체 관리 바로 가기 메뉴, 상황에 맞는 메뉴 라고도 합니다.  

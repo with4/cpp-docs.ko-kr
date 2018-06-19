@@ -61,6 +61,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355635"
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup 클래스
 애니메이션 스토리 보드, 애니메이션 개체 및 애니메이션을 정의 하는 전환 결합 하는 애니메이션 그룹을 구현 합니다.  

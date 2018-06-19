@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33354304"
 ---
 # <a name="exceptions-database-exceptions"></a>예외: 데이터베이스 예외
 이 문서에서는 데이터베이스 예외를 처리 하는 방법을 설명 합니다. 이 문서에서 대부분 사용 하는 mfc ODBC Open Database Connectivity () 또는 MFC 클래스에 대 한 데이터 액세스 개체 (DAO) 여부를 적용 합니다. 하나 또는 다른 모델에 특정 자료 명시적으로 표시 됩니다. 다음과 같은 내용을 다룹니다.  

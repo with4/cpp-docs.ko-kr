@@ -79,6 +79,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355421"
 ---
 # <a name="afx-messages"></a>AFX 메시지
 이러한 메시지는 MFC에서 사용 됩니다.  

@@ -67,6 +67,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377124"
 ---
 # <a name="coledocument-class"></a>COleDocument 클래스
 비주얼 편집을 지원하는 OLE 문서에 대한 기본 클래스입니다.  

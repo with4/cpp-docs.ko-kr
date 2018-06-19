@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369888"
 ---
 # <a name="hseversioninfo-structure"></a>HSE_VERSION_INFO 구조체
 이 구조에 의해 지정 된 `pVer` 에서 매개 변수는 `CHttpServer::GetExtensionVersion` 멤버 함수입니다. ISA 버전 번호 및는 ISA.에 대 한 텍스트 설명을 제공합니다  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355439"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC ActiveX 컨트롤: Windows 컨트롤 서브클래싱
 이 문서에서는 ActiveX 컨트롤을 만드는 일반적인 Windows 컨트롤 서브클래싱에 대 한 프로세스를 설명 합니다. 컨트롤에 ActiveX 컨트롤을 개발 하는 빠른 방법을 기존 창을 서브클래싱 합니다. 새 컨트롤 그리기 및 마우스 클릭에 응답 같은 서브클래싱된 Windows 컨트롤의 기능을 갖게 됩니다. MFC ActiveX 컨트롤 샘플 [단추](../visual-cpp-samples.md) 은 Windows 컨트롤 서브클래싱의 예입니다.  

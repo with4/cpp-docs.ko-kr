@@ -65,6 +65,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375313"
 ---
 # <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton 클래스
 숨기도록 구성된 [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) 를 표시하거나 숨기는 단추입니다.  

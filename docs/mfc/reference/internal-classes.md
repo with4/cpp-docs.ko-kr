@@ -322,6 +322,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372549"
 ---
 # <a name="internal-classes"></a>내부 클래스
 다음 클래스는 MFC에서 내부적으로 사용 됩니다. 완벽을 기하기 위해 이 단원에서는 이러한 내부 클래스에 대해 설명하지만 이러한 내부 클래스는 코드에서 직접 사용할 수 없습니다.  

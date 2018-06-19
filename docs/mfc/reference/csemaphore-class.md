@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369179"
 ---
 # <a name="csemaphore-class"></a>CSemaphore 클래스
 클래스의 개체 `CSemaphore` "세마포"를 나타내는-현재 지정된 된 리소스에 액세스 하는 스레드 수 유지 관리를 액세스할 수 있는 하나 이상의 프로세스에 제한 된 수의 스레드를 허용 하는 동기화 개체입니다.  

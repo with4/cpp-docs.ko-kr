@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352765"
 ---
 # <a name="opening-files"></a>파일 열기
 MFC, 파일을 열려면 가장 일반적인 방법은 2 단계 프로세스를입니다.  

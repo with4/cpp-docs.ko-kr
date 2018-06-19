@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373213"
 ---
 # <a name="type-library-access"></a>형식 라이브러리 액세스
 형식 라이브러리는 다른 OLE 인식 응용 프로그램에 있는 OLE 컨트롤의 인터페이스를 노출합니다. 하나 이상의 인터페이스를 노출 해야 하는 경우 각 OLE 컨트롤 형식 라이브러리를 가져야 합니다.  

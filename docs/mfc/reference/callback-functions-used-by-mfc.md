@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350887"
 ---
 # <a name="callback-functions-used-by-mfc"></a>MFC에서 사용하는 콜백 함수
 Microsoft Foundation Class 라이브러리에 3 개의 콜백 함수가 나타납니다. 이러한 콜백 함수에 전달 되 [cdc:: enumobjects](../../mfc/reference/cdc-class.md#enumobjects), [cdc:: graystring](../../mfc/reference/cdc-class.md#graystring), 및 [cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)합니다. 모든 콜백 함수 콜백 경계를 넘어 예외를 throw 할 수 없는 이후 창에 반환 하기 전에 MFC 예외를 트래핑 해야 참고 합니다. 예외에 대 한 자세한 내용은 문서 참조 [예외](../../mfc/exception-handling-in-mfc.md)합니다.  

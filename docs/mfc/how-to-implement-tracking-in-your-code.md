@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349738"
 ---
 # <a name="how-to-implement-tracking-in-your-code"></a>방법: 코드에서 추적 구현
 OLE 항목을 추적 하려면 항목 클릭 또는 문서는 뷰를 업데이트 하는 등의 항목에 관련 된 특정 이벤트를 처리 해야 합니다. 모든 경우에는 임시 선언할 수는 [CRectTracker](../mfc/reference/crecttracker-class.md) 개체 및이 개체를 사용 하 여 항목을 조작 합니다.  

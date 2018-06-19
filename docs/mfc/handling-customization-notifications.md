@@ -62,6 +62,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353704"
 ---
 # <a name="handling-customization-notifications"></a>사용자 지정 알림 처리
 Windows 도구 모음 공용 컨트롤에 시스템 정의 사용자 지정 대화 상자를 포함한 기본 제공 사용자 지정 기능이 있으며 이 기능을 통해 사용자는 도구 모음 단추를 삽입, 삭제 또는 재정렬할 수 있습니다. 응용 프로그램에서는 사용자 지정 기능이 사용 가능한지 및 사용자가 도구 모음을 사용자 지정할 수 있는 범위를 제어하는지 여부를 결정합니다.  

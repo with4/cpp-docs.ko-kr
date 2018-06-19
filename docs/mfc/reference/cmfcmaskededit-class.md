@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371799"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit 클래스
 `CMFCMaskedEdit` 클래스 마스크에 대해 사용자 입력의 유효성을 검사 하 고 템플릿에 따라 유효성이 검사 된 결과 표시 하는 마스킹된 편집 컨트롤을 지원 합니다.  

@@ -45,6 +45,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372699"
 ---
 # <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider 클래스
 `CMFCRibbonSlider` 클래스는 리본 표시줄 또는 리본 메뉴 상태 표시줄에 추가할 수 있는 슬라이더 컨트롤을 구현 합니다. 리본 슬라이더 컨트롤은 Office 2007 응용 프로그램의 확대/축소 슬라이더와 유사합니다.  

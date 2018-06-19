@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33368633"
 ---
 # <a name="compareitemstruct-structure"></a>COMPAREITEMSTRUCT 구조체
 `COMPAREITEMSTRUCT` 식별자 및 정렬 된, 소유자가 그린 목록 상자 또는 콤보 상자에 있는 두 항목에 대 한 응용 프로그램 제공 하는 데이터 구조를 제공 합니다.  

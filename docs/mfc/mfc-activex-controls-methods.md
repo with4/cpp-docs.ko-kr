@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348311"
 ---
 # <a name="mfc-activex-controls-methods"></a>MFC ActiveX 컨트롤: 메서드
 ActiveX 컨트롤 자체와 해당 제어 컨테이너 간에 통신 하는 이벤트를 발생 시킵니다. 컨테이너는 메서드 및 속성을 사용 하 여 컨트롤과 통신할 수 있습니다. 메서드는 함수 라고도 합니다.  

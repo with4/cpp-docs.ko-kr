@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266531"
 ---
 # <a name="compiler-error-c3668"></a>컴파일러 오류 C3668
 'method': 재정의 지정자 'override' 메서드는 기본 클래스 메서드를 재정의 하지 않았습니다  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372449"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>폼 기반 MFC 응용 프로그램 만들기
 양식은은 사용자에 액세스 하 고 데이터를 변경할 수 있도록 하는 컨트롤이 있는 대화 상자입니다. 사용자 양식 중에서 선택이 선택 하는 응용 프로그램을 개발할 수도 있습니다. 폼 기반 응용 프로그램을 클릭 하 여 사용자 액세스 폼을 수 있습니다는 일반적으로 **새로** 에서 **파일** 메뉴. 사용자에 대 한 액세스를 제공 하지 않는 대화 상자 기반 응용 프로그램은 **새로** 옵션에 **파일** 메뉴는 폼 기반 응용 프로그램으로 간주 됩니다.  

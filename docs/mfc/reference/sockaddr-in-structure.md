@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373640"
 ---
 # <a name="sockaddrin-structure"></a>SOCKADDR_IN 구조체
 인터넷 주소 패밀리에는 `SOCKADDR_IN` 구조를 사용 하 여 Windows 소켓 소켓을 연결 하는 데 로컬 또는 원격 끝점 주소를 지정 합니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348363"
 ---
 # <a name="processing-tab-control-notification-messages"></a>탭 컨트롤 알림 메시지 처리
 사용자가 탭 또는 단추, 탭 컨트롤을 클릭할 때 ([CTabCtrl](../mfc/reference/ctabctrl-class.md))를 해당 부모 창 알림 메시지를 보냅니다. 이에 대한 응답으로 작업을 수행하려는 경우 이러한 메시지를 처리합니다. 예를 들어 사용자가 탭을 클릭할 때 컨트롤 데이터를 표시 하기에 앞서 사전 설정 하는 것이 좋습니다.  

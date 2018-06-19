@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696229"
 ---
 # <a name="lastprivate"></a>lastprivate
 변수는 바깥쪽 컨텍스트에서 버전 개인 버전 최종 반복 (루프에 대 한 구문) 또는 마지막 섹션 (#pragma 섹션) 스레드가 실행의 같음 설정 되도록 지정 합니다.  

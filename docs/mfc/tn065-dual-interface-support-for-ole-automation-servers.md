@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386075"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: OLE 자동화 서버에 대한 이중 인터페이스 지원
 > [!NOTE]

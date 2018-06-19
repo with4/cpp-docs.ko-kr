@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686047"
 ---
 # <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>방법: Alloc 및 Free를 사용하여 메모리 성능 개선
 

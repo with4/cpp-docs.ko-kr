@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348637"
 ---
 # <a name="methods-of-creating-a-toolbar"></a>도구 모음을 만드는 방법
 MFC 도구 모음을 만드는 두 개의 클래스를 제공: [CToolBar](../mfc/reference/ctoolbar-class.md) 및 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) (Windows 공용 컨트롤 API 래핑합니다 입니다). `CToolBar` 모든 도구 모음 공용 컨트롤의 기능을 제공 하면;에 대 한 대부분의 필수 공용 컨트롤 설정 및 구조를 처리 하 고 그러나 결과 실행 파일이 일반적으로 보다 커집니다 사용 하 여 만든 `CToolBarCtrl`합니다.  

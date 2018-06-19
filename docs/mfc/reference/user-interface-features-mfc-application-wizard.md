@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373800"
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>MFC 응용 프로그램 마법사, 사용자 인터페이스 기능
 이 항목에서는 응용 프로그램의 모양을 지정 하는 데 사용할 수 있는 옵션에 설명 합니다. 프로젝트에 사용할 수 있는 사용자 인터페이스 기능에는 지정 된 응용 프로그램의 유형에 따라 달라는 [MFC 응용 프로그램 마법사, 응용 프로그램 종류](../../mfc/reference/application-type-mfc-application-wizard.md) MFC 응용 프로그램 마법사의 페이지입니다. 예를 들어 단일 문서 인터페이스 응용 프로그램을 만드는 경우 자식 프레임 스타일을 추가할 수 없습니다.  

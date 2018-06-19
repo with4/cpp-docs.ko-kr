@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353907"
 ---
 # <a name="ccriticalsection-class"></a>아니오 클래스
 "임계 섹션" 나타냅니다-코드 섹션 또는 리소스에 액세스 하려면 한 번에 하나의 스레드를 허용 하는 동기화 개체입니다.  

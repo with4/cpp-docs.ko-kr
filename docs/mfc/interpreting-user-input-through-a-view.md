@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349431"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>뷰를 통해 사용자 입력 해석
 보기의 다른 멤버 함수를 처리 하 고 모든 사용자 입력 해석 합니다. 일반적으로 처리할 뷰 클래스에 메시지 처리기 멤버 함수를 정의 합니다.  

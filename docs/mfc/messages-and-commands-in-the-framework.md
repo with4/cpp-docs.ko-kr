@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348881"
 ---
 # <a name="messages-and-commands-in-the-framework"></a>프레임워크의 메시지 및 명령
 Microsoft Windows 용으로 작성 하는 응용 프로그램은 "제어 메시지"입니다. 마우스 클릭, 키 입력, 창 이동 등의 이벤트에 대 한 응답으로 Windows는 적절 한 창에 메시지를 보냅니다. 응용 프로그램 프레임 워크는 Windows에 대 한 다른 응용 프로그램과 마찬가지로 Windows 메시지를 처리 합니다. 하지만 프레임 워크 구성 하는 메시지 처리 쉽고 더 쉽게 유지 관리할 더 나은 캡슐화 된 몇 가지 향상 된 기능을 제공 합니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370196"
 ---
 # <a name="cmfcribboncustomizedialog-class"></a>CMFCRibbonCustomizeDialog 클래스
 리본에 표시 됩니다 **사용자 지정** 페이지.  

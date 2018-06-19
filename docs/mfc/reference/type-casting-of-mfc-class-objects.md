@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33371163"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>MFC 클래스 개체의 형식 캐스팅
 형식 캐스팅 매크로 또는 캐스트가 법적 확인 하지 않고 특정 클래스의 개체를 가리키는 포인터에 대 한 지정 된 포인터를 캐스팅 하는 방법을 제공 합니다.  

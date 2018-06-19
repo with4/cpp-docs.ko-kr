@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687513"
 ---
 # <a name="313-ompgetmaxthreads-function"></a>3.1.3 omp_get_max_threads 함수
 **omp_get_max_threads** 함수 반환 하는 경우 병렬 영역 없이 팀을 구성 하는 데 사용할 스레드의 수 이상이 되도록 보장 하는 정수는 **num_threads** 절 코드에서 해당 지점에서 경험할 수 있었습니다. 형식은 다음과 같습니다.  

@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355891"
 ---
 # <a name="cbrush-class"></a>CBrush 클래스
 Windows GDI(그래픽 장치 인터페이스) 브러시를 캡슐화합니다.  

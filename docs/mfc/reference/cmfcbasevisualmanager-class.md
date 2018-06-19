@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369153"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager 클래스
 파생된 비주얼 관리자 및 Windows 테마 API 사이의 계층입니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351191"
 ---
 # <a name="ccommondialog-class"></a>CCommonDialog 클래스
 Windows 공용 대화 상자의 기능을 캡슐화하는 클래스의 기본 클래스입니다.  

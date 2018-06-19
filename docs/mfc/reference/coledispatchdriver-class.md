@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374554"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 클래스
 OLE 자동화의 클라이언트 쪽을 구현합니다.  

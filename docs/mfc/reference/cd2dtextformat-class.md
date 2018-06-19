@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352892"
 ---
 # <a name="cd2dtextformat-class"></a>CD2DTextFormat 클래스
 IDWriteTextFormat에 대 한 래퍼입니다.  

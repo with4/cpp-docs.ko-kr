@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33370098"
 ---
 # <a name="how-to-use-the-message-map-cross-reference"></a>방법: 메시지 맵 상호 참조 사용
 레이블이 지정 된 항목에 \<memberFxn >, 파생에 대 한 직접 멤버 함수를 작성 [CWnd](../../mfc/reference/cwnd-class.md) 클래스입니다. 함수 이름은 원하는 대로 지정 합니다. 와 같은 다른 함수 `OnActivate`, 클래스의 멤버 함수는 `CWnd`합니다. 에 메시지를 전달 하 고 호출 하는 경우는 `DefWindowProc` Windows 함수입니다. Windows 알림 메시지를 처리 하려면 해당 재정의 `CWnd` 파생된 클래스에는 함수입니다. 함수는 기본 클래스를 사용 하려면 기본 클래스에서 재정의 된 함수를 호출 해야 하 고 Windows 메시지에 응답 합니다.  

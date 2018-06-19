@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385309"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>기존 ActiveX 컨트롤 업그레이드
 기존 ActiveX 컨트롤 (이전의 OLE 컨트롤)를 수정 하지 않고 인터넷에서 사용할 수 있습니다. 그러나 다음 성능 향상을 위해 컨트롤을 수정 하는 것이 좋습니다. 웹 페이지에 컨트롤을 사용할 경우 추가 고려 사항 사항이 있습니다. .Ocx 파일 및 모든 지원 파일이 대상 컴퓨터에 있어야 하거나 인터넷을 통해 다운로드 합니다. 이렇게 하면 코드 크기와 다운로드 시간이 중요 한 고려 합니다. 다운로드 한 서명 된.cab 파일에 패키징할 수 있습니다. 스크립트 및 초기화에 안전으로 컨트롤을 표시할 수 있습니다.  

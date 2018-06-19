@@ -47,6 +47,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33369192"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane 클래스
 `CMFCRibbonStatusBarPane` 리본 메뉴 상태 표시줄에 추가할 수 있는 리본 요소를 구현 하는 클래스입니다.  

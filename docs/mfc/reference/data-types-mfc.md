@@ -39,6 +39,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375355"
 ---
 # <a name="data-types-mfc"></a>데이터 형식(MFC)
 이 항목에서는 Microsoft Foundation Class 라이브러리에서 가장 일반적으로 사용 되는 데이터 형식을 나열 합니다. 대부분의 데이터 형식은 MFC에 고유한에 플랫폼 소프트웨어 개발 키트 (SDK)와 동일 합니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385111"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>연습: MFC 자유 곡선 응용 프로그램 (파트 1) 업데이트
 이 연습에서는 리본 메뉴 사용자 인터페이스를 사용하여 기존 MFC 응용 프로그램을 수정하는 방법을 보여 줍니다. Visual Studio는 Office 2007 리본과 Windows 7 Scenic 리본을 지원합니다. 리본 사용자 인터페이스에 대 한 자세한 내용은 참조 [리본](http://go.microsoft.com/fwlink/p/?linkid=129233) MSDN 웹 사이트에 있습니다.  

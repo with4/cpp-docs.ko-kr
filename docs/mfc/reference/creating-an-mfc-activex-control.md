@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33373291"
 ---
 # <a name="creating-an-mfc-activex-control"></a>MFC ActiveX 컨트롤 만들기
 ActiveX 컨트롤 프로그램은 부모 응용 프로그램에 특정 종류의 기능을 제공 하도록 설계 모듈식 프로그램. 예를 들어 대화 상자에서 또는 웹 페이지에서 사용 하기 위해 도구 모음에서 사용 하기 위해 단추와 같은 컨트롤을 만들 수 있습니다.  

@@ -43,6 +43,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357017"
 ---
 # <a name="ccommandlineinfo-class"></a>CCommandLineInfo 클래스
 응용 프로그램을 시작할 때 명령줄을 구문 분석하는 데 유용합니다.  

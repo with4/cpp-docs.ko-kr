@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382017"
 ---
 # <a name="tn037-multithreaded-mfc-21-applications"></a>TN037: 다중 스레드 MFC 2.1 응용 프로그램
 이 기술 노트에는 원래 Windows NT용 Visual C++ 1.0에 제공된 MFC 2.1에서 멀티스레드 프로그램의 제한 사항에 대한 설명이 포함되었습니다. MFC 3.0에서는 다중 스레드가 직접 지원되며, 이에 대한 설명이 포함됩니다. 자세한 내용은 해당 참조를 참조하십시오.  

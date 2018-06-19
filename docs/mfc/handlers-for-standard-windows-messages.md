@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348217"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>표준 Windows 메시지에 대한 처리기
 표준 Windows 메시지에 대 한 처리기를 기본 (**WM_**) 클래스에는 미리 정의 `CWnd`합니다. 이 클래스 라이브러리는 메시지 이름을 기반으로 이러한 처리기의 이름을 지정합니다. 예를 들어 `WM_PAINT` 메시지에 대한 처리기는 다음과 같이 `CWnd`에 선언됩니다.  
