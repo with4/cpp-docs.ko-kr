@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349270"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC ActiveX 컨트롤: 스톡 메서드 추가
 스톡 메서드가 사용자 지정 메서드 점에서 다릅니다 클래스에 의해 이미 구현 [COleControl](../mfc/reference/colecontrol-class.md)합니다. 예를 들어 `COleControl` 컨트롤에 대 한 새로 고침 메서드를 지원 하는 미리 정의 된 멤버 함수를 포함 합니다. 이 스톡 메서드가 대 한 디스패치 맵 항목이 **DISP_STOCKFUNC_REFRESH**합니다.  

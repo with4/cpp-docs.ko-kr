@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351117"
 ---
 # <a name="property-sheets-mfc"></a>속성 시트(MFC)
 이 문서 모음에서는 MFC 응용 프로그램에서 속성 시트에 대한 지원을 구현하는 방법에 대해 설명합니다. 탭 대화 상자라고도 부르는 속성 시트는 대화 상자에서 대량의 컨트롤을 관리하는 방법을 제공합니다. 속성 시트에는 개별 대화 상자 템플릿 리소스를 기준으로 하는 속성 페이지가 포함됩니다. 대화 상자의 컨트롤을 논리적 그룹으로 나누고, 각 그룹을 고유한 속성 페이지에 넣을 수 있습니다.  

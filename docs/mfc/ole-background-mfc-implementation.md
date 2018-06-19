@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350001"
 ---
 # <a name="ole-background-mfc-implementation"></a>OLE 백그라운드: MFC 구현
 원시 OLE API의 크기와 복잡성으로 인해 OLE 응용 프로그램을 직접 작성하기 위해 호출하는 데 시간이 오래 걸릴 수 있습니다. OLE의 MFC 라이브러리 구현의 목표는 완벽한 기능을 갖춘 OLE 지원 응용 프로그램을 작성하기 위해 해야 할 작업의 양을 줄이는 것입니다.  

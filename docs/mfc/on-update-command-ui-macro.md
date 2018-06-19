@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348487"
 ---
 # <a name="onupdatecommandui-macro"></a>ON_UPDATE_COMMAND_UI 매크로
 사용 하 여는 **속성** 명령 대상 개체에서 명령 업데이트 처리기에는 사용자 인터페이스 개체를 연결 하는 창입니다. 사용자 인터페이스 개체의 ID를 자동으로 연결 된 `ON_UPDATE_COMMAND_UI` 매크로 및 업데이트를 처리 하는 개체에 핸들을 만듭니다. 참조 [함수에 메시지 매핑](../mfc/reference/mapping-messages-to-functions.md) 자세한 정보에 대 한 합니다.  

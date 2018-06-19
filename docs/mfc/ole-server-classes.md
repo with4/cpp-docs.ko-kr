@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350431"
 ---
 # <a name="ole-server-classes"></a>OLE 서버 클래스
 이러한 클래스는 서버 응용 프로그램에서 사용 됩니다. 서버 문서에서 파생 된 `COleServerDoc` 아닌 **CDocument**합니다. 되므로 `COleServerDoc` 에서 파생 된 `COleLinkingDoc`, 서버 문서 연결을 지원 하는 컨테이너를 수도 있습니다.  

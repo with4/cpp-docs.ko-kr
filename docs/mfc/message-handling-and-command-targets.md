@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349469"
 ---
 # <a name="message-handling-and-command-targets"></a>메시지 처리 및 명령 대상
 명령 디스패치 인터페이스 `IOleCommandTarget` 쿼리 명령을 실행 하는 간단 하 고 확장 가능한 메커니즘을 정의 합니다. 이 메커니즘은 자동화의 보다 간단 `IDispatch` ; 명령의 표준 집합에 전적으로 사용 하기 때문에 거의 명령에는 인수를 하며 형식 정보가 없는 관련 된 (형식 안전성도 명령 인수에 대 한 감소 됨).  

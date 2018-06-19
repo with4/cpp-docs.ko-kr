@@ -76,6 +76,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862418"
 ---
 # <a name="compiler-support-for-type-traits-c-component-extensions"></a>형식 특성에 대한 컴파일러 지원(C++ 구성 요소 확장명)
 컴파일러 지원 *특성 입력*, 컴파일 타임에 형식의 다양 한 특성을 나타내는입니다.  

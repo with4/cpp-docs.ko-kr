@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348980"
 ---
 # <a name="handling-reflected-messages"></a>리플렉션된 메시지 처리
 반사를 사용 하면 같은 컨트롤에 대 한 메시지를 처리 하는 메시지 `WM_CTLCOLOR`, **WM_COMMAND**, 및 **WM_NOTIFY**, 컨트롤 자체 내에서. 그러면 컨트롤의 독립성 및 이식성이 향상됩니다. 이 메커니즘은 Windows 공용 컨트롤 및 ActiveX 컨트롤(이전의 OLE 컨트롤)에서 작동합니다.  

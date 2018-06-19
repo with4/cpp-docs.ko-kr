@@ -37,6 +37,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351724"
 ---
 # <a name="handlers-for-message-map-ranges"></a>메시지 맵 범위에 대한 처리기
 이 문서에서는 다양 한 메시지 (메시지 한 개를 하나의 함수에 매핑) 대신 단일 메시지 처리기 함수에 매핑하는 방법을 설명 합니다.  

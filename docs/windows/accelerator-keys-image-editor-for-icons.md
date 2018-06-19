@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861534"
 ---
 # <a name="accelerator-keys-image-editor-for-icons"></a>액셀러레이터 키(아이콘에 대한 이미지 편집기)
 다음은 기본적으로 키에 바인딩된 이미지 편집기 명령에 대 한 액셀러레이터 키입니다. 액셀러레이터 키를 변경 하려면 클릭 **옵션** 에 **도구** 메뉴를 선택한 후 **키보드** 아래는 **환경** 폴더입니다. 자세한 내용은 [바로 가기 키 식별 및 사용자 지정](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)을 참조하세요.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860660"
 ---
 # <a name="compiler-attributes"></a>컴파일러 특성
 컴파일러 특성 다양 한 기능을 제공합니다.  

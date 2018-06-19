@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348347"
 ---
 # <a name="containers-compound-files"></a>컨테이너: 복합 파일
 이 문서에서는 구성 요소와 복합 파일의 구현 및 OLE 응용 프로그램에서 복합 파일을 사용 하는 경우의 단점을 설명 합니다.  

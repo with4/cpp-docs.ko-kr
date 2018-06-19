@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351639"
 ---
 # <a name="bitmap-structure"></a>BITMAP 구조체
 **비트맵** 높이, 너비, 색상 형식 및 논리적 비트맵의 비트 값 구조 정의**합니다.**  

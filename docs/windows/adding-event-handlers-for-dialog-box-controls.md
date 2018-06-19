@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863701"
 ---
 # <a name="adding-event-handlers-for-dialog-box-controls"></a>대화 상자 컨트롤에 사용할 이벤트 처리기 추가
 이미 클래스와 연결 되어 있는 프로젝트 대화 상자, 이벤트 처리기를 만들 때 일부 바로 가기 키 사용을 수행할 수 있습니다. 기본 컨트롤 알림 이벤트에 대 한 또는 적용할 수 있는 모든 Windows 메시지에 대 한 처리기를 신속 하 게 만들 수 있습니다.  

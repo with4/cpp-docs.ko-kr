@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349346"
 ---
 # <a name="providing-drag-and-drop-support-for-header-items"></a>헤더 항목에 대한 끌어서 놓기 지원 제공
 헤더 항목에 대 한 끌어서 놓기 지원 제공 하려면 지정 된 `HDS_DRAGDROP` 스타일입니다. 헤더 항목에 대 한 끌어서 놓기 지원 사용자의 헤더 컨트롤의 헤더 항목의 순서는 기능을 제공 합니다. 기본 동작 헤더 항목을 삭제할 경우 끌고 헤더 항목의 반투명 끌기 이미지 및 새 위치를 나타내는 시각적 표시기를 제공 합니다.  

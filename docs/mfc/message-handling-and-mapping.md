@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348530"
 ---
 # <a name="message-handling-and-mapping"></a>메시지 처리 및 매핑
 이 문서에서는 MFC 프레임 워크에 의해 메시지 및 명령 처리 되는 방법 및 연결을 하는 방법은 해당 처리기 함수를 설명 합니다.  

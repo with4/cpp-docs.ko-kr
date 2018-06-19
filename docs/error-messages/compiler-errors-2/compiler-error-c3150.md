@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247024"
 ---
 # <a name="compiler-error-c3150"></a>컴파일러 오류 C3150
 'element': 클래스, 인터페이스, 배열 또는 포인터에 'attribute'만 적용할 수  

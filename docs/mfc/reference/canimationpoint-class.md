@@ -41,6 +41,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355164"
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint 클래스
 좌표에 애니메이션을 적용할 수 있는 점 기능을 구현합니다.  

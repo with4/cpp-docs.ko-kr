@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246573"
 ---
 # <a name="compiler-error-c3199"></a>컴파일러 오류 C3199
 부동 소수점 pragma 잘못 사용 했습니다.: 예외가 명확 하지 않은 모드에서 지원 되지 않습니다  

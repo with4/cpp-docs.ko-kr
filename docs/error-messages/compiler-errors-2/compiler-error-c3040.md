@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246237"
 ---
 # <a name="compiler-error-c3040"></a>컴파일러 오류 C3040
 'var': 'reduction' 절의 변수 형식이 환산 연산자 'operator'와 호환되지 않습니다.  

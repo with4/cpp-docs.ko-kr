@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251139"
 ---
 # <a name="compiler-error-c3333"></a>컴파일러 오류 C3333
 'type library': #import 문의 손상된 형식 라이브러리를 가져올 수 없습니다.  

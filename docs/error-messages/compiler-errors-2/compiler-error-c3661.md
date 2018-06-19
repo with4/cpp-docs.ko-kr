@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265310"
 ---
 # <a name="compiler-error-c3661"></a>컴파일러 오류 C3661
 명시적인 재정의 목록 재정의할 메서드를 찾을 수 없습니다.  

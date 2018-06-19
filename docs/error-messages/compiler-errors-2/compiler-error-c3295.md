@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253959"
 ---
 # <a name="compiler-error-c3295"></a>컴파일러 오류 C3295
 '#pragma pragma'는 전역 또는 네임스페이스 범위에서만 사용할 수 있습니다.  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349521"
 ---
 # <a name="documents-views-and-the-framework"></a>문서, 뷰 및 프레임워크
 MFC 프레임 워크의 핵심에는 문서 및 보기의 개념입니다. 문서에는 편집 세션에는 사용자가 데이터 개체입니다. 의해 만들어집니다는 `New` 또는 **열려** 명령을 **파일** 메뉴 일반적으로 파일에 저장 됩니다. (클래스에서 파생 되는 표준 MFC 문서 **CDocument**, 액티브 문서 및 OLE의 복합 문서와 다릅니다.) 뷰를 통해 사용자 상호 작용 하는 문서와 window 개체는.  

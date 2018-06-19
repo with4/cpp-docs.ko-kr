@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351652"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>방법: 기존 MFC 리본을 리본 리소스로 변환
 리본 리소스는 시각화를 수정 하 고 수동으로 코딩 된 리본 보다 유지 관리 하기 쉽습니다. 이 항목에서는 MFC 프로젝트에 수동으로 코딩 된 리본을 리본 리소스로 변환 하는 방법을 설명 합니다.  

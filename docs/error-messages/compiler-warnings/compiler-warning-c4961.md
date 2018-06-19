@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269529"
 ---
 # <a name="compiler-warning-c4961"></a>컴파일러 경고 C4961
 프로필 데이터가 '.pgd file'에 병합되지 않았습니다. 프로필 기반 최적화를 사용하지 않습니다.  

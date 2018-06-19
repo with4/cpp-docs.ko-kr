@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355394"
 ---
 # <a name="adding-an-mfc-class"></a>MFC 클래스 추가
 프로젝트에 Microsoft Foundation 클래스 (MFC) 라이브러리 클래스에서 파생 된 클래스를 추가 하려면 사용 된 **클래스 추가** 에서 사용할 수 있는 명령 [클래스 뷰](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)합니다. 새 클래스의 이름을 지정 하 고 기본 클래스를 선택한 다음 ID (있는 경우) 연결 되어 있는 대화 상자를 선택 합니다. 코드 마법사 헤더 파일과 구현 파일 만들고 프로젝트에 추가 합니다.  

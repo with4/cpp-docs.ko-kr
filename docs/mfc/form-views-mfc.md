@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349051"
 ---
 # <a name="form-views-mfc"></a>폼 뷰(MFC)
 Visual c + + 응용 프로그램을 지 원하는 비롯 한 MFC 라이브러리에 폼을 추가할 수 있습니다는 [폼 기반 응용 프로그램](../mfc/reference/creating-a-forms-based-mfc-application.md) (해당 뷰 클래스에서 파생 된 하나 `CFormView`). 폼을 지 원하는 응용 프로그램를 처음 만들지 않은 경우 Visual c + + 새 폼을 삽입 하는 경우이 지원 기능을 추가 합니다. 기본값을 구현 하는 SDI 또는 MDI 응용 프로그램에서 [문서/뷰 아키텍처](../mfc/document-view-architecture.md)선택 하면는 `New` 명령 (기본적으로에 **파일** 메뉴), Visual c + + 사용자에 게 사용 가능한 폼에서 선택 합니다.  

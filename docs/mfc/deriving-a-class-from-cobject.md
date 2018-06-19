@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349359"
 ---
 # <a name="deriving-a-class-from-cobject"></a>CObject에서 클래스 파생시키기
 이 문서에서 클래스를 파생 하는 데 필요한 최소 단계에서는 설명 [CObject](../mfc/reference/cobject-class.md)합니다. 다른 `CObject` 클래스 문서 특정 기능을 활용 하는 데 필요한 단계를 설명 `CObject` serialization 진단 디버깅 지원 등의 기능입니다.  

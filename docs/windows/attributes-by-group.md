@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864563"
 ---
 # <a name="attributes-by-group"></a>그룹별 특성
 C + + 특성은 다음 기능 그룹으로 구성 됩니다.  

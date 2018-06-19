@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862457"
 ---
 # <a name="attributes-alphabetical-reference"></a>특성 사전순 참조
 다음 특성은 Visual c + +에서 사용할 수 있습니다.  

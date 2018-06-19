@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33235365"
 ---
 # <a name="compiler-error-c2753"></a>컴파일러 오류 C2753
 '*템플릿*': 부분 특수화는 기본 서식 파일에 대 한 인수 목록을 일치할 수 없습니다.  

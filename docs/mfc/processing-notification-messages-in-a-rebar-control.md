@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348418"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Rebar 컨트롤에서 알림 메시지 처리
 Rebar 컨트롤의 부모 클래스에서 만듭니다는 `OnChildNotify` 모든 rebar 컨트롤에 대해 switch 문 사용 하는 처리기 함수 (`CReBarCtrl`) 알림 메시지를 처리 합니다. 개체 변경 내용 삭제 rebar 밴드의 레이아웃 및 등 rebar 컨트롤에서 밴드 rebar 컨트롤 위로 끌 때 부모 창에 알림이 전송 됩니다.  

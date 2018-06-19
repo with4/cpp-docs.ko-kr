@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348451"
 ---
 # <a name="message-categories"></a>메시지 범주
 어떤 종류의 메시지 처리기를 작성할 세 가지 주요 범주에 대 한:  

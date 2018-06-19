@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348392"
 ---
 # <a name="mfc-activex-controls-events"></a>MFC ActiveX 컨트롤: 이벤트
 ActiveX 컨트롤에 컨트롤에 발생 하는 컨테이너를 알리기 위해 이벤트를 사용 합니다. 일반적인 이벤트의 예로 컨트롤, 컨트롤의 상태에는 키보드 및 변경 작업을 사용 하 여 입력 데이터에 대 한 클릭 합니다. 이러한 작업이 발생 하는 경우 컨트롤 컨테이너를 경고 하도록 이벤트를 발생 시킵니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248149"
 ---
 # <a name="compiler-error-c3106"></a>컴파일러 오류 C3106
 'attribute': 명명 되지 않은 인수에는 명명 된 인수 앞에 야  

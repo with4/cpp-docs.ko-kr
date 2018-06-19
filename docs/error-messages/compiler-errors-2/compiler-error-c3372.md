@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33257585"
 ---
 # <a name="compiler-error-c3372"></a>컴파일러 오류 C3372
 coclass의 'source' 특성에 대한 인터페이스를 하나 이상 지정해야 합니다.  

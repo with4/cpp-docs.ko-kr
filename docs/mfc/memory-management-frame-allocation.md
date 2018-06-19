@@ -33,6 +33,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349313"
 ---
 # <a name="memory-management-frame-allocation"></a>메모리 관리: 프레임 할당
 프레임 할당 설정 된 "스택 프레임"에서 해당 이름을 가진 때마다 함수를 호출 합니다. 스택 프레임은 일시적으로 인수를 보유 하는 정의 된 모든 변수 뿐만 아니라 함수에 함수에 로컬 메모리 영역입니다. 프레임 변수가 컴파일러에 대 한 공간을 자동으로 할당 하기 때문에 "자동" 변수 라고도 합니다.  

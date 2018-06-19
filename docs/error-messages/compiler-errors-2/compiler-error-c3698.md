@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33263975"
 ---
 # <a name="compiler-error-c3698"></a>컴파일러 오류 C3698
 'type': 'operator'의 인수로이 형식을 사용할 수 없습니다  

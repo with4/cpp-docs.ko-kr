@@ -35,6 +35,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356540"
 ---
 # <a name="canimationvalue-class"></a>CAnimationValue 클래스
 하나의 값을 갖는 애니메이션 개체 기능을 구현합니다.  
