@@ -113,7 +113,7 @@ STDMETHOD(getcount) (장기 * pcount);
  This method returns the specified item from the collection.  
   
 ```
-STDMETHOD(get_Item) (긴 인덱스, ItemType pvar);
+STDMETHOD(get_Item) (긴 인덱스, ItemType\* pvar);
 ```  
   
 ### Parameters  
