@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691390"
 ---
 # <a name="a24---example-of-the-private-clause"></a>A.24   private 절 예제
 `private` 절 ([섹션 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) 페이지 25)의 병렬 영역에만 동적 지역 범위 아닌는 영역의 어휘 범위에 적용 됩니다.  다음에 나오는 예제, 변수의 사용이 모두에 따라서 *는* 내는 `for` 루틴에 루프 *f* 의 전용 복사본을 가리킵니다 *는*에서 사용 하는 동안 루틴 *g* 전역를 참조 *는*합니다.  

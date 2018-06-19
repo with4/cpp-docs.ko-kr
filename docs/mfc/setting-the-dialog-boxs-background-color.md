@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379985"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>대화 상자의 배경색 설정
 대화 상자 창에 대해 `WM_CTLCOLOR` 메시지를 처리하여 대화 상자의 배경 색을 설정할 수 있습니다. 설정한 색은 지정된 대화 상자에만 사용됩니다.  

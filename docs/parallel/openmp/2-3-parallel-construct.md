@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692751"
 ---
 # <a name="23-parallel-construct"></a>2.3 parallel 구문
 다음 지시문을 동시에 여러 개의 스레드에서 실행할 프로그램의 영역인 병렬 영역을 정의 합니다. 이 병렬 실행을 시작 하는 기본 구문입니다.  

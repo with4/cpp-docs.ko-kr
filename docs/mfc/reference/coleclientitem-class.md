@@ -179,6 +179,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378763"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem 클래스
 OLE 항목에 대한 컨테이너 인터페이스를 정의합니다.  

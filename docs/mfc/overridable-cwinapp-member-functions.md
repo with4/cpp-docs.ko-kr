@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347713"
 ---
 # <a name="overridable-cwinapp-member-functions"></a>재정의 가능 CWinApp 멤버 함수
 [CWinApp](../mfc/reference/cwinapp-class.md) 여러 키 재정의 가능한 멤버 함수를 제공 (`CWinApp` 클래스에서 이러한 구성원을 재정의 함 [CWinThread](../mfc/reference/cwinthread-class.md), 올 `CWinApp` 파생):  

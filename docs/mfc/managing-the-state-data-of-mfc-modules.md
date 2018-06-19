@@ -27,6 +27,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347697"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>MFC 모듈의 상태 데이터 관리
 이 문서에서는 MFC 모듈 및 (path 코드는 응용 프로그램을 통해 실행할 때) 실행 흐름을 입력 하 고 하거나 모듈에서 벗어날 때이 상태가 업데이트 되는 방법을 상태 데이터를 설명 합니다. 모듈 상태와 전환의 `AFX_MANAGE_STATE` 및 `METHOD_PROLOGUE` 매크로 대해서도 설명 합니다.  

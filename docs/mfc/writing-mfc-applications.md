@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385991"
 ---
 # <a name="writing-mfc-applications"></a>MFC 응용 프로그램 작성
 이 문서에서는 응용 프로그램을 개발 하는 초기 단계에 설명 합니다. 첫째, 작성 하는 응용 프로그램의 종류를 결정 해야 합니다. 여러 선택 항목에서 논의 했습니다 [응용 프로그램 디자인 선택](../mfc/application-design-choices.md)합니다. 응용 프로그램 설정 됩니다.  

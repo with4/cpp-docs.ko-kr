@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379283"
 ---
 # <a name="rich-edit-control-examples"></a>Rich Edit 컨트롤 예
 MFC OLE 샘플 [워드 패드](../visual-cpp-samples.md) 사용 하 여는 `CRichEditView`, `CRichEditDoc`, 및 `CRichEditCntrItem` 클래스입니다. 확장명으로 사용 하 여는 [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)합니다. 이러한 세 클래스에 대 한 빠른 설명은 참조 하십시오. [Rich Edit 컨트롤 관련 클래스](../mfc/classes-related-to-rich-edit-controls.md)합니다.  

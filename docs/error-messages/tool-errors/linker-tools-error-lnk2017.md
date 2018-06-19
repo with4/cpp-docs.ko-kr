@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313074"
 ---
 # <a name="linker-tools-error-lnk2017"></a>링커 도구 오류 LNK2017
 /largeaddressaware: no 없이 잘못 된 '세그먼트' 'symbol' 재배치  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347901"
 ---
 # <a name="control-bars"></a>컨트롤 막대
 "컨트롤 막대"에 도구 모음, 상태 표시줄 및 대화 상자 모음에 대 한 일반 이름입니다. MFC 클래스 `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, 및 **CReBar** 클래스에서 파생 [CControlBar](../mfc/reference/ccontrolbar-class.md), 공통 기능을 구현 하는입니다.  

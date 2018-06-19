@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299964"
 ---
 # <a name="command-line-error-d8036"></a>명령줄 오류 D8036
 '/option' 여러 소스 파일과 함께 사용할 수 없습니다  

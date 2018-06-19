@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379747"
 ---
 # <a name="registering-window-classes"></a>창 클래스 등록
 창 "클래스" Windows 일반 프로그래밍에서 임의 개수의 windows 만들 수 있는 "클래스" (c + + 클래스)의 특성을 정의 합니다. 이러한 종류의 클래스는 템플릿 또는 창 만들기에 대 한 모델.  

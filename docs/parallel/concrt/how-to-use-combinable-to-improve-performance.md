@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692092"
 ---
 # <a name="how-to-use-combinable-to-improve-performance"></a>방법: combinable을 사용하여 성능 개선
 사용 하는 방법을 보여 주는이 예제는 [concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) 클래스에 있는 숫자의 합계를 계산 하는 [std:: array](../../standard-library/array-class-stl.md) 개체 소수입니다. `combinable` 클래스 공유 상태를 제거 하 여 성능이 향상 됩니다.  

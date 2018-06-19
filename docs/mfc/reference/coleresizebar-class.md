@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375618"
 ---
 # <a name="coleresizebar-class"></a>COleResizeBar 클래스
 내부 OLE 항목의 크기 변경을 지원하는 컨트롤 막대의 한 종류입니다.  

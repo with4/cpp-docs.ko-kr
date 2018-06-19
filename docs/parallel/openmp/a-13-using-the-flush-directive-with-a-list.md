@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690132"
 ---
 # <a name="a13---using-the-flush-directive-with-a-list"></a>A.13   목록이 있는 flush 지시문 사용
 다음 예제에서는 `flush` 스레드 쌍 간에 특정 개체의 지점 간 동기화에 대 한 지시문:  

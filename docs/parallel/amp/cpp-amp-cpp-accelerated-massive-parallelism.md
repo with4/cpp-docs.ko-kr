@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33705369"
 ---
 # <a name="c-amp-c-accelerated-massive-parallelism"></a>C++ AMP(C++ Accelerated Massive Parallelism)
 데이터 병렬 하드웨어는 일반적으로 개별 그래픽 카드에 그래픽 처리 장치 GPU ()를 사용 하 여 c + + 코드의 실행을 가속화 하는 c + + AMP (c + + Accelerated Massive Parallelism). C + + AMP 프로그래밍 모델에서는 다차원 배열 인덱싱 메모리 전송 및 바둑판식으로 배열에 대 한 지원 합니다. 수치 연산 함수 라이브러리를 있습니다. C + + AMP 언어 확장을 사용 하 여 cpu에서를 GPU에 데이터는 이동 하는 방법을 제어할 수 있으며 백업할 수 있습니다.  

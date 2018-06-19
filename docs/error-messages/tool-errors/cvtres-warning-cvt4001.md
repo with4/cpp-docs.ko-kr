@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299866"
 ---
 # <a name="cvtres-warning-cvt4001"></a>CVTRES 경고 CVT4001
 **컴퓨터 종류 지정 되지 않았습니다. 가정**   

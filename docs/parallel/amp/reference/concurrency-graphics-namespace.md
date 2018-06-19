@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688039"
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics 네임스페이스
 그래픽 네임 스페이스에는 형식 및 그래픽 프로그래밍에 대 한 설계 된 함수를 제공 합니다.  

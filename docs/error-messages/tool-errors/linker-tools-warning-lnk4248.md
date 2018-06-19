@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302635"
 ---
 # <a name="linker-tools-warning-lnk4248"></a>링커 도구 경고 LNK4248
 확인 되지 않은 형식 정의 토큰 (토큰) 'type'; 이미지가 실행 되지 않습니다.  

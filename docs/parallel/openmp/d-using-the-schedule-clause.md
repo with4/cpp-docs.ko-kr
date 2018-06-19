@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694942"
 ---
 # <a name="d-using-the-schedule-clause"></a>D. 일정 절 사용
 병렬 영역의 끝에 하나 이상의 장벽 있으며 추가적인 문제 그 안에 있을 수 있습니다. 각 장벽에는 팀의 다른 멤버 도착 하는 마지막 스레드가 기다려야 합니다. 이 대기 시간을 최소화 하려면 공유 작업을 동시에 대 한 장벽에 도착 하는 모든 스레드가 배포 되어야 합니다. 작업에 포함 되어 있으면 공유 중 일부를 **에 대 한** 구문을 `schedule` 절이 용도로 사용할 수 있습니다.  

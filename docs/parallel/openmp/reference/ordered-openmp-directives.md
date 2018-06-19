@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696216"
 ---
 # <a name="ordered-openmp-directives"></a>ordered (OpenMP 지시문)
 순차 루프와 같은 루프를 실행 해야 해당 코드는 병렬화 된에서 지정 합니다.  

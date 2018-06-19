@@ -127,6 +127,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33377625"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 클래스
 `CMDIChildWndEx` 클래스 다중 문서 MDI (인터페이스) 자식 창 Windows의 기능을 제공 합니다. 기능을 확장 [CMDIChildWnd 클래스](../../mfc/reference/cmdichildwnd-class.md)합니다. MDI 응용 프로그램에서 특정 MFC 클래스를 사용하면 프레임워크에 이 클래스가 필요합니다.  

@@ -55,6 +55,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33374817"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl 클래스
 `CMFCColorPickerCtrl` 클래스 색을 선택 하는 데 사용 되는 컨트롤에 대 한 기능을 제공 합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33859802"
 ---
 # <a name="asyncbasegetid-method"></a>AsyncBase::get_Id 메서드
 비동기 작업의 핸들을 검색 합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695644"
 ---
 # <a name="concurrency-runtime-best-practices"></a>동시성 런타임 유용한 정보
 이 섹션에서는 동시성 런타임을 효율적으로 활용하는 데 도움이 되는 모범 사례를 설명합니다. 이러한 모범 사례에 적용 된 [병렬 패턴 라이브러리](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL)는 [비동기 에이전트 라이브러리](../../parallel/concrt/asynchronous-agents-library.md), 및 [작업 스케줄러](../../parallel/concrt/task-scheduler-concurrency-runtime.md)합니다.  

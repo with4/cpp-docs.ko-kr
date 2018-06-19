@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347950"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>데이터 개체 및 데이터 소스: 생성 및 소멸
 문서에 설명 된 대로 [데이터 개체 및 데이터 소스 (OLE)](../mfc/data-objects-and-data-sources-ole.md), 데이터 개체 및 데이터 소스는 데이터 전송의 양쪽을 나타냅니다. 이 문서에서는 다음을 포함하여 데이터 전송을 제대로 수행하기 위해 이들 개체 및 소스를 만들고 제거할 경우에 대해 설명합니다.  

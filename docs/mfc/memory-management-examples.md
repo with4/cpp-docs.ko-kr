@@ -34,6 +34,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347193"
 ---
 # <a name="memory-management-examples"></a>메모리 관리: 예
 이 문서에서는 MFC 프레임 할당과 힙 할당에 대 한 성능을 각 메모리 할당의 세 가지 일반적인 종류를 설명 합니다.  

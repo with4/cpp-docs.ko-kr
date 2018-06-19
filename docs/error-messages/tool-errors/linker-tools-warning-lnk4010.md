@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302674"
 ---
 # <a name="linker-tools-warning-lnk4010"></a>링커 도구 경고 LNK4010
 잘못 된 하위 시스템 버전 번호 번호입니다. 기본 하위 시스템 버전이 선택 됩니다.  

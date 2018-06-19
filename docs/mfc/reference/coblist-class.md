@@ -65,6 +65,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33378420"
 ---
 # <a name="coblist-class"></a>CObList 클래스
 순서가 지정 된 고유 하지 않은의 목록을 fSupports `CObject` 포인터에 액세스할 수 있는 순차적으로 또는 포인터 값입니다.  

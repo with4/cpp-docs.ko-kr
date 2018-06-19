@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688598"
 ---
 # <a name="12-definition-of-terms"></a>1.2 용어 정의
 이 문서에는 다음과 같은 용어가 사용 됩니다.  

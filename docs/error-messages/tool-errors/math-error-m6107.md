@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330790"
 ---
 # <a name="math-error-m6107"></a>수학 오류 M6107
 에뮬레이트되지 않습니다.  

@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380879"
 ---
 # <a name="tn056-installation-of-localized-mfc-components"></a>TN056: 지역화된 MFC 구성 요소 설치
 지역화된 MFC 구성 요소의 설치와 관련된 이 기술 설명은 이제 더 이상 사용되지 않습니다.  

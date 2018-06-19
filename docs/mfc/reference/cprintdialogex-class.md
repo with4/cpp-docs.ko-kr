@@ -53,6 +53,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33376648"
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx 클래스
 Windows의 인쇄 속성 시트에서 제공 하는 서비스를 캡슐화 합니다.  
