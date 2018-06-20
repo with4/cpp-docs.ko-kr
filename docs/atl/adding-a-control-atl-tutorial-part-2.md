@@ -1,7 +1,7 @@
 ---
 title: 컨트롤 (ATL 자습서, 2 부) 추가 | Microsoft Docs
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3b8c7eb59579363ce3580c7319b80be2557a30d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1547d48b5b5914d9b32ff8b476b0c007f972067
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358578"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238710"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>컨트롤 추가(ATL 자습서, 2부)
 이 단계에서는 프로젝트에 컨트롤을 추가를 빌드하고 웹 페이지에서 테스트 합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "32358578"
   
 #### <a name="to-add-an-object-to-an-atl-project"></a>ATL 프로젝트에 개체를 추가 하려면  
   
-1.  클래스 뷰에서 다각형 프로젝트를 마우스 오른쪽 단추로 클릭 합니다.  
+1.  **솔루션 탐색기**, 다각형 프로젝트를 마우스 오른쪽 단추로 클릭 합니다.  
   
 2.  가리킨 **추가** 를 바로 가기 메뉴를 클릭 한 **새 항목** 하위 메뉴에 있습니다.  
   

@@ -1,7 +1,7 @@
 ---
 title: CString을 사용 하 여 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 591a319671ea42236af5ae7e80ea1cb94c3c446c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5759c8a0aaa628d612010cb7d04690a3d3bfa54f
+ms.sourcegitcommit: d06966efce25c0e66286c8047726ffe743ea6be0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361703"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238723"
 ---
 # <a name="using-cstring"></a>CString을 사용 하 여
 이 섹션의 항목에서는 `CString`을 사용한 프로그래밍 방법에 대해 설명합니다. 에 대 한 참조 설명서는 `CString` 클래스에 대 한 설명서를 참조 하십시오. [CStringT](../atl-mfc-shared/reference/cstringt-class.md)합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "32361703"
   
  `CStringW` 개체는 `wchar_t` 형식을 포함하며 유니코드 문자열을 지원합니다. `CStringA` 개체는 `char` 형식을 포함하며 싱글바이트 및 멀티바이트(MBCS) 문자열을 지원합니다. `CString` 개체는 컴파일 시간에 정의되는 기호(`char` 기호 또는 `wchar_t` 기호)에 따라 `MBCS` 형식 또는 `UNICODE` 형식을 지원합니다.  
   
- `CString` 개체는 `CStringData` 개체에 문자 데이터를 보관합니다. `CString`은 `null`로 종료되는 C 스타일 문자열을 허용하지만 저장된 문자 데이터에 `null` 문자를 보존하지는 않습니다. 대신 `CString`은 문자열 길이를 추적합니다. `CString`은 C 스타일 문자열을 내보낼 때 null 종결자를 제공합니다. `null`에 `CString`을 삽입할 수는 있지만 이렇게 하면 예기치 않은 결과가 발생할 수 있습니다.  
+ `CString` 개체는 `CStringData` 개체에 문자 데이터를 보관합니다. `CString` 허용 `null`-C 스타일 문자열을 종료 합니다. `CString` 더 빠른 성능을 제공 하지만 대 한 문자열 길이 유지 하면서도 트랙의 `null` lpcwstr을 사용 하는 변환을 지원 하도록 저장된 문자 데이터의 문자입니다. `CString` C 스타일 문자열을 내보낼 때 null 종결자를 포함 합니다. 삽입할 수는 `null` 의 다른 위치에는 `CString`, 예기치 않은 결과 생성할 수 있습니다.  
   
  `CAtlString`, `CAtlStringA` 및 `CAtlStringW` 문자열 클래스 집합은 MFC 라이브러리에 연결하지 않고 사용할 수 있습니다(CRT 지원 포함/미포함).  
   
