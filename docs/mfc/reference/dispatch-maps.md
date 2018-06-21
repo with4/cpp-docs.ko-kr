@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 313e465698da5799a107bc3bdbeb6d2cbbe47303
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5af6a8644514b18af3397fb22d54d42f649eed09
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377098"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271320"
 ---
 # <a name="dispatch-maps"></a>디스패치 맵
 OLE 자동화 메서드를 호출 하 고 응용 프로그램에서 속성에 액세스 하는 방법을 제공 합니다. 이러한 요청을 디스패치를 위한 Microsoft Foundation Class 라이브러리에서 제공 하는 메커니즘은 "디스패치 맵," 데이터 형식 및 속성 자체의 뿐만 아니라 개체 함수 및 속성의 내부 및 외부 이름을 지정 하는 함수 인수입니다.  
@@ -57,7 +57,7 @@ DECLARE_DISPATCH_MAP()
   
  응용 프로그램 마법사 및 코드 마법사 자동화 클래스를 만드는 및 디스패치 맵 유지 관리에 도움이 됩니다. 디스패치 맵에 대 한 자세한 내용은 참조 하십시오. [자동화 서버](../../mfc/automation-servers.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCAutomation#10](../../mfc/codesnippet/cpp/dispatch-maps_1.h)]  
 
 ### <a name="requirements"></a>요구 사항  
@@ -163,20 +163,20 @@ DISP_FUNCTION(
 |**VTS_DISPATCH**|`LPDISPATCH`|  
 |**VTS_SCODE**|`SCODE`|  
 |**VTS_BOOL**|**BOOL**|  
-|**VTS_VARIANT**|**const VARIANT\***  또는 **VARIANT &**|  
+|**VTS_VARIANT**|**const VARIANT\\ \***  또는 **VARIANT &**|  
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
-|**VTS_PI2**|**short\***|  
-|**VTS_PI4**|**긴\***|  
-|**VTS_PR4**|**float\***|  
-|**VTS_PR8**|**double\***|  
-|**VTS_PCY**|**CY\***|  
-|**VTS_PDATE**|**날짜\***|  
-|**VTS_PBSTR**|**BSTR\***|  
-|**VTS_PDISPATCH**|**LPDISPATCH\***|  
-|**VTS_PSCODE**|**SCODE\***|  
-|**VTS_PBOOL**|**BOOL\***|  
-|**VTS_PVARIANT**|**VARIANT\***|  
-|**VTS_PUNKNOWN**|**LPUNKNOWN\***|  
+|**VTS_PI2**|**짧은\\\***|  
+|**VTS_PI4**|**긴\\\***|  
+|**VTS_PR4**|**Float\\\***|  
+|**VTS_PR8**|**double\\\***|  
+|**VTS_PCY**|**CY\\\***|  
+|**VTS_PDATE**|**날짜\\\***|  
+|**VTS_PBSTR**|**BSTR\\\***|  
+|**VTS_PDISPATCH**|**LPDISPATCH\\\***|  
+|**VTS_PSCODE**|**SCODE\\\***|  
+|**VTS_PBOOL**|**BOOL\\\***|  
+|**VTS_PVARIANT**|**VARIANT\\\***|  
+|**VTS_PUNKNOWN**|**LPUNKNOWN\\\***|  
 |**VTS_NONE**|매개 변수 없이|  
 
 ### <a name="requirements"></a>요구 사항  
@@ -351,7 +351,7 @@ DISP_PROPERTY_PARAM(
 ### <a name="remarks"></a>설명  
  와 달리는 `DISP_PROPERTY_EX` 매크로이 매크로 사용 하면 속성에 대 한 매개 변수 목록을 지정할 수 있습니다. 이 인덱싱된 되거나 매개 변수가 있는 속성을 구현 하는 데 유용 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  Get 다음 선언을 살펴보세요 하 고 사용자 속성에 액세스 하는 경우 특정 행과 열을 요청 하도록 허용 하는 함수 멤버를 설정 합니다.  
   
  [!code-cpp[NVC_MFCActiveXControl#9](../../mfc/codesnippet/cpp/dispatch-maps_3.h)]  

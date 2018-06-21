@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 832ae20ef5bcd1df4741f7e33be2758ab424ea5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c0f885ad5ef8202e7826a8f53dc5df832eecc372
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374567"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271336"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 클래스
 한 개 또는 여러 개의 동시 인터넷 세션을 만들어 초기화하며, 필요한 경우 프록시 서버에 대한 연결을 설명합니다.  
@@ -168,7 +168,7 @@ CInternetSession(
   
  인터넷 연결을 열 수 있는, `CInternetSession` throw 한 [AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)합니다.  
   
 ##  <a name="close"></a>  CInternetSession::Close  
@@ -178,7 +178,7 @@ CInternetSession(
 virtual void Close();
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)합니다.  
   
 ##  <a name="enablestatuscallback"></a>  CInternetSession::EnableStatusCallback  
@@ -322,7 +322,7 @@ CFtpConnection* GetFtpConnection(
 ### <a name="remarks"></a>설명  
  `GetFtpConnection` FTP 서버에 연결 하 고 만들고 반환에 대 한 포인터는 **CFTPConnection** 개체입니다. 서버에 대해 특정 작업을 수행 하지는 않습니다. 파일에 쓰거나 읽을 하려는 별도 단계로 이러한 작업을 수행 해야 예를 들어 있습니다. 클래스를 참조 하십시오. [CFtpConnection](../../mfc/reference/cftpconnection-class.md) 및 [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md) 파일을 검색 하는 방법에 대 한 정보에 대 한 파일을 열을 읽거나 파일에 쓸 수 있습니다. 문서를 참조 [인터넷 WinInet를 사용한 프로그래밍](../../mfc/win32-internet-extensions-wininet.md) 단계에서 일반적인 FTP 연결 작업을 수행 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)합니다.  
   
 ##  <a name="getgopherconnection"></a>  CInternetSession::GetGopherConnection  
@@ -498,10 +498,10 @@ CStdioFile* OpenURL(
   
 |URL 형식|반환 값|  
 |--------------|-------------|  
-|file://|**CStdioFile\***|  
-|http://|**CHttpFile\***|  
-|gopher://|**CGopherFile\***|  
-|ftp: / /|**CInternetFile\***|  
+|file://|**CStdioFile\\\***|  
+|http://|**CHttpFile\\\***|  
+|gopher://|**CGopherFile\\\***|  
+|ftp: / /|**CInternetFile\\\***|  
   
 ### <a name="remarks"></a>설명  
  매개 변수 `dwFlags` 하나를 포함 해야 **INTERNET_FLAG_TRANSFER_ASCII** 또는 **INTERNET_FLAG_TRANSFER_BINARY**, 둘 중 하나입니다. 나머지 플래그 비트와 결합할 수 있습니다 `OR` 연산자 ( **&#124;**).  

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db309833604b4e833dfd22a090a8f258333da360
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e7ab64af82e2f37104f82778d4c6f5eb12bd032
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377890"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271307"
 ---
 # <a name="event-maps"></a>이벤트 맵
 컨트롤 (컨트롤 개발자가 결정) 일부 동작 (예: 키, 마우스 클릭 또는 컨트롤의 상태에 대 한 변경) 발생 하는 해당 컨테이너에 알리기 위해 하지 않고자 한다면 때마다 이벤트 발생 함수를 호출 합니다. 이 함수는 관련 된 이벤트를 발생 시켜 서 몇 가지 중요 한 작업을 수행한 컨트롤 컨테이너를 알립니다.  
@@ -140,17 +140,17 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 |**VTS_COLOR**|**OLE_COLOR**|  
 |**VTS_CY**|**통화**|  
 |**VTS_DATE**|**DATE**|  
-|**VTS_BSTR**|**const char\***|  
+|**VTS_BSTR**|**const char\\\***|  
 |**VTS_DISPATCH**|`LPDISPATCH`|  
-|**VTS_FONT**|**IFontDispatch\***|  
+|**VTS_FONT**|**IFontDispatch\\\***|  
 |**VTS_HANDLE**|`HANDLE`|  
 |**VTS_SCODE**|`SCODE`|  
 |**VTS_BOOL**|**BOOL**|  
-|**VTS_VARIANT**|**const VARIANT\***|  
-|**VTS_PVARIANT**|**VARIANT\***|  
+|**VTS_VARIANT**|**const VARIANT\\\***|  
+|**VTS_PVARIANT**|**VARIANT\\\***|  
 |**VTS_UNKNOWN**|`LPUNKNOWN`|  
 |**VTS_OPTEXCLUSIVE**|**OLE_OPTEXCLUSIVE**|  
-|**VTS_PICTURE**|**IPictureDisp\***|  
+|**VTS_PICTURE**|**IPictureDisp\\\***|  
 |**VTS_TRISTATE**|**OLE_TRISTATE**|  
 |**VTS_XPOS_PIXELS**|**OLE_XPOS_PIXELS**|  
 |**VTS_YPOS_PIXELS**|**OLE_YPOS_PIXELS**|  

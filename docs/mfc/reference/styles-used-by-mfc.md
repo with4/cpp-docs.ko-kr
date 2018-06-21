@@ -206,12 +206,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6643a1c70b6a22126222d523de4426e1aebcf85b
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: ebde910e5573545c6b9b904f6db55e27f10492a3
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34283342"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271372"
 ---
 # <a name="styles-used-by-mfc"></a>MFC에서 사용하는 스타일  
   
@@ -321,7 +321,7 @@ ms.locfileid: "34283342"
 |`ES_NOHIDESEL`|일반적으로 편집 컨트롤 컨트롤이 입력된 포커스를 잃고 컨트롤이 입력된 포커스를 받을 때 선택 항목을 반전 하는 경우 선택 영역을 숨깁니다. 지정 `ES_NOHIDESEL` 이 기본 작업을 삭제 합니다.|  
 |`ES_NUMBER`|항상 숫자만을 편집 컨트롤에 입력할 수 있습니다.|  
 |`ES_OEMCONVERT`|편집 컨트롤에 입력 한 텍스트 ANSI 문자 집합에서 OEM 문자 집합을 다음 다시 ANSI로 변환 됩니다. 응용 프로그램을 호출할 때 문자가 적절히 변환 이렇게는 `AnsiToOem` Windows 편집 컨트롤에는 ANSI 문자열을 OEM 문자로 변환 하 게 작동 합니다. 이 스타일은 파일 이름을 포함 하는 편집 컨트롤에 가장 유용 합니다.|  
-|`ES_PASSWORD`|모든 문자를 단독으로 표시 (**\***) 편집 컨트롤에 입력 한 합니다. 응용 프로그램이 사용할 수는 `SetPasswordChar` 표시 되는 문자를 변경 하려면 멤버 함수입니다.|  
+|`ES_PASSWORD`|모든 문자를 단독으로 표시 (**\\\***) 편집 컨트롤에 입력 한 합니다. 응용 프로그램이 사용할 수는 `SetPasswordChar` 표시 되는 문자를 변경 하려면 멤버 함수입니다.|  
 |`ES_READONLY`|사용자를가 입력 하거나 편집 컨트롤의 텍스트를 편집할 수 없습니다.|  
 |`ES_RIGHT`|한 줄 또는 여러 줄 편집 컨트롤의 오른쪽 맞춤 하는 텍스트입니다.|  
 |`ES_UPPERCASE`|모든 문자를 입력 한 대로 편집 컨트롤에 대문자로 변환 합니다.|  

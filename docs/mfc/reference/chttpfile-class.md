@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a7fbdb3baff7531aa4e391e5d7e936c39e38fc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d920ca54c9e97273e4bda563921a144339eafd0f
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372621"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271349"
 ---
 # <a name="chttpfile-class"></a>CHttpFile 클래스
 HTTP 서버에서 파일을 요청하고 읽는 기능을 제공합니다.  
@@ -116,7 +116,7 @@ BOOL AddRequestHeaders(
  `dwFlags`  
  새 헤더의 의미 체계를 수정합니다. 다음 중 하나일 수 있습니다.  
   
-- `HTTP_ADDREQ_FLAG_COALESCE` 후속 헤더를 발견 한 첫 번째 헤더를 추가 하는 플래그를 사용 하 여 이름이 같은 헤더를 병합 합니다. 예를 들어 "Accept: 텍스트 / *" 다음 "Accept: 오디오 /\*" 단일 헤더의 형성에 "수락: 텍스트 /\*, 오디오 /\*" 합니다. 호출 응용 프로그램을 결합 하거나 별도 헤더와 함께 전송 된 요청에서 받은 데이터에 대해 화합 구성표를 확인 합니다.  
+- `HTTP_ADDREQ_FLAG_COALESCE` 후속 헤더를 발견 한 첫 번째 헤더를 추가 하는 플래그를 사용 하 여 이름이 같은 헤더를 병합 합니다. 예를 들어 "Accept: 텍스트 /\*" 다음 "Accept: 오디오 /\*" 단일 헤더의 형성에 "수락: 텍스트 /\*, 오디오 /\*" 합니다. 호출 응용 프로그램을 결합 하거나 별도 헤더와 함께 전송 된 요청에서 받은 데이터에 대해 화합 구성표를 확인 합니다.  
   
 - `HTTP_ADDREQ_FLAG_REPLACE` 제거를 수행 하 고 대체 현재 헤더에 추가 합니다. 현재 헤더를 제거 하는 헤더 이름이 사용 됩니다 하 고 새 헤더를 추가 하는 전체 값이 사용 됩니다. 헤더 값이 비어 헤더 발견 되는 경우 제거 됩니다. 그렇지 않으면 비어 있는 경우 헤더 값 대체 됩니다.  
   
@@ -484,7 +484,7 @@ BOOL SendRequestEx(
   
  에 대 한 기본값 `dwContext` MFC 인증에서 전송 되는 `CHttpFile` 에서 개체는 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 만든 개체는 `CHttpFile` 개체입니다. 호출 하는 경우 [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl) 또는 [CHttpConnection](../../mfc/reference/chttpconnection-class.md) 생성 하는 `CHttpFile` 개체 컨텍스트 식별자의 값으로 설정 하기 위해 기본값을 재정의할 수 있습니다. 컨텍스트 식별자는 되돌아갑니다 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) 식별 되는 개체의 상태를 제공 하 합니다. 문서 참조 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md) 컨텍스트 식별자에 대 한 자세한 내용은 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  이 코드 조각은 MFCISAPI 이라는 DLL에 문자열의 내용을 보냅니다. 로컬 호스트 서버에 대 한 DLL입니다. 이 예에서는를 한 번만 호출을 사용 하는 동안 `WriteString`, 여러 번 호출을 사용 하 여 블록에서 데이터를 보내도록 허용 됩니다.  
   
  [!code-cpp[NVC_MFCWinInet#9](../../mfc/codesnippet/cpp/chttpfile-class_1.cpp)]  
