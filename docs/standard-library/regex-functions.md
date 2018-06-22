@@ -1,7 +1,7 @@
 ---
 title: '&lt;regex&gt; 함수 | Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/19/2018
 ms.topic: reference
 f1_keywords:
 - regex/std::regex_match
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - std::regex_search [C++]
 - std::swap [C++]
 - std::swap [C++]
-ms.openlocfilehash: 7c89f5509ec37e1ef91e92acb6732d1b4819f930
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0bc0fc88c3bdd370222e80f6ab96f33d5dd7df28
+ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33863163"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36305646"
 ---
 # <a name="ltregexgt-functions"></a>&lt;regex&gt; 함수
 
@@ -35,8 +35,7 @@ ms.locfileid: "33863163"
 
 정규식이 전체 대상 문자열과 일치하는지 여부를 테스트합니다.
 
-```
-
+```cpp
 // (1)
 template <class BidIt, class Alloc, class Elem, class RXtraits, class Alloc2>
 bool regex_match(
@@ -91,43 +90,30 @@ bool regex_match(
 
 ### <a name="parameters"></a>매개 변수
 
-`BidIt` 부분 일치에 대 한 반복기 형식입니다. 대부분의 경우 이 형식은 string::const_iterator, wstring::const_iterator, const char* 또는 const wchar_t\* 중 하나입니다.
-
-`Alloc` 일치 결과 할당자 클래스입니다.
-
-`Elem` 와 일치 하도록 요소의 형식입니다. 대부분의 경우 이 형식은 string, wstring, char* 또는 wchar_t\*입니다.
-
-`RXtraits` 요소에 대 한 특성 클래스입니다.
-
-`Alloc2` 정규식 할당자 클래스입니다.
-
-`IOtraits` 문자열 특성 클래스입니다.
-
-`IOalloc` 문자열 할당자 클래스입니다.
-
-`flags` 일치 하는 항목에 대 한 플래그입니다.
-
-`first` 일치 하는 시퀀스의 시작입니다.
-
-`last` 일치 하는 시퀀스의 끝입니다.
-
-`match` 일치 결과입니다. string의 경우 [smatch](../standard-library/regex-typedefs.md#smatch), wstring의 경우 [wsmatch](../standard-library/regex-typedefs.md#wsmatch), char*의 경우 [cmatch](../standard-library/regex-typedefs.md#cmatch), wchar_t\*의 경우 [wcmatch](../standard-library/regex-typedefs.md#wcmatch) Elem 형식에 해당합니다.
-
-`ptr` 일치 하는 시퀀스의 시작 부분에 대 한 포인터입니다. ptr이 char*이면 cmatch 및 regex를 사용합니다. ptr이 wchar_t\*이면 wcmatch 및 wregex를 사용합니다.
-
-`re` 일치 시킬 정규식입니다. string 및 char*의 경우 `regex` 형식이고 wstring 및 wchar_t\*의 경우 `wregex` 형식입니다.
-
-`str` 일치 하는 문자열입니다. Elem 형식에 해당합니다.
+|||
+|-|-|
+*BidIt*| 부분 일치에 대한 반복기 형식입니다. 공통 케이스 중이 하나에 대해 `string::const_iterator`, `wstring::const_iterator`, `const char*` 또는 `const wchar_t*`합니다.
+*Alloc*| 일치 결과 할당자 클래스입니다.
+*Elem*| 일치 항목을 찾을 요소의 형식입니다. 일반적인 경우이 `string`, `wstring`, `char*` 또는 `wchar_t*`합니다.
+*RXtraits*| 요소에 대한 특성 클래스입니다.
+*Alloc2*| 정규식 할당자 클래스입니다.
+*IOtraits*| 문자열 특성 클래스입니다.
+*IOalloc*| 문자열 할당자 클래스입니다.
+*flags*| 일치 항목에 대한 플래그입니다.
+*first*| 일치하는 시퀀스의 시작입니다.
+*last*| 일치하는 시퀀스의 끝입니다.
+*match*| 일치 결과입니다. Elem 형식에 해당: [smatch](../standard-library/regex-typedefs.md#smatch) 에 대 한 `string`, [wsmatch](../standard-library/regex-typedefs.md#wsmatch) 에 대 한 `wstring`, [cmatch](../standard-library/regex-typedefs.md#cmatch) 에 대 한 `char*` 또는 [wcmatch](../standard-library/regex-typedefs.md#wcmatch) 에 대 한 `wchar_t*`합니다.
+*ptr*| 일치하는 시퀀스의 시작에 대한 포인터입니다. 경우 *ptr* 은 `char*`를 사용 하 여 `cmatch` 및 `regex`합니다. 경우 *ptr* 은 `wchar_t*` 사용 하 여 `wcmatch` 및 `wregex`합니다.
+*Re*| 일치하는 정규식입니다. 형식 `regex` 에 대 한 `string` 및 `char*`, 또는 `wregex` 에 대 한 `wstring` 및 `wchar_t*`합니다.
+*str*| 일치하는 문자열입니다. 형식에 해당 *Elem*합니다.
 
 ### <a name="remarks"></a>설명
 
-각 템플릿 함수는 전체 피연산자 시퀀스 `str`이 정규식 인수 `re`와 정확하게 일치하는 경우에만 true를 반환합니다. 여러 일치 항목을 찾으려면 [regex_search](../standard-library/regex-functions.md#regex_search)를 사용하여 대상 시퀀스 내의 하위 문자열과 regex_iterator를 일치시킵니다. `match_results` 개체를 사용하는 함수는 일치에 성공했는지 여부를 반영하도록 멤버를 설정하고 그런 경우 정규식의 다양한 캡처 그룹이 캡처됩니다.
+각 템플릿 함수는 경우에 true 반환는 전체 피연산자 시퀀스 *str* 정규식 인수를 정확 하 게 일치 *다시*합니다. 사용 하 여 [regex_search](../standard-library/regex-functions.md#regex_search) 대상 시퀀스 내에서 부분 문자열 일치 하도록 및 `regex_iterator` 여러 명의 일치 항목을 찾으려고 합니다. `match_results` 개체를 사용하는 함수는 일치에 성공했는지 여부를 반영하도록 멤버를 설정하고 그런 경우 정규식의 다양한 캡처 그룹이 캡처됩니다.
 
 `match_results` 개체를 사용하는 함수는 일치에 성공했는지 여부를 반영하도록 멤버를 설정하고 그런 경우 정규식의 다양한 캡처 그룹이 캡처됩니다.
 
-**(1):**
-
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 #include "stdafx.h"
@@ -177,7 +163,6 @@ int _tmain(int argc, _TCHAR* argv[])
 
      return 0;
 }
-
 ```
 
 ## <a name="regex_replace"></a>  regex_replace
@@ -204,37 +189,28 @@ basic_string<Elem> regex_replace(
 
 ### <a name="parameters"></a>매개 변수
 
-`OutIt` 교체에 대 한 반복기 형식입니다.
-
-`BidIt` 부분 일치에 대 한 반복기 형식입니다.
-
-`RXtraits` 요소에 대 한 특성 클래스입니다.
-
-`Alloc` 정규식 할당자 클래스입니다.
-
-`Elem` 와 일치 하도록 요소의 형식입니다.
-
-`flags` 일치 하는 항목에 대 한 플래그입니다.
-
-`first` 일치 하는 시퀀스의 시작입니다.
-
-`fmt` 교체에 대 한 형식입니다.
-
-`last` 일치 하는 시퀀스의 끝입니다.
-
-`out` 출력 반복기입니다.
-
-`re` 일치 시킬 정규식입니다.
-
-`str` 일치 하는 문자열입니다.
+|||
+|-|-|
+*OutIt*| 대체에 대한 반복기 형식입니다.
+*BidIt*| 부분 일치에 대한 반복기 형식입니다.
+*RXtraits*| 요소에 대한 특성 클래스입니다.
+*Alloc*| 정규식 할당자 클래스입니다.
+*Elem*| 일치 항목을 찾을 요소의 형식입니다.
+*flags*| 일치 항목에 대한 플래그입니다.
+*first*| 일치하는 시퀀스의 시작입니다.
+*fmt*| 대체에 대한 형식입니다.
+*last*| 일치하는 시퀀스의 끝입니다.
+*out*| 출력 반복기입니다.
+*Re*| 일치하는 정규식입니다.
+*str*| 일치하는 문자열입니다.
 
 ### <a name="remarks"></a>설명
 
-첫 번째 함수는 [regex_iterator 클래스](../standard-library/regex-iterator-class.md) 개체 `iter(first, last, re, flags)`을 생성하며 이 개체를 사용하여 입력 범위 `[first, last)`를 일련의 후속 항목`T0M0T1M1...TN-1MN-1TN`으로 분할합니다. 여기서 `Mn`은 반복기가 검색한 `nth` 일치 항목입니다. 일치하는 항목이 없으면 `T0`은 전체 입력 범위이고 `N`은 0입니다. `(flags & format_first_only) != 0`이면 첫 번째 일치 항목만 사용되고 `T1`은 일치 항목 뒤에 오는 모든 입력 텍스트이며 `N`은 1입니다. 범위 `[0, N)`의 각 `i`에 대해 `(flags & format_no_copy) == 0`이면 범위 `Ti`의 텍스트를 반복기 `out`에 복사합니다. 그런 다음 `m.format(out, fmt, flags)`을 호출합니다. 여기서 `m`은 후속 항목 `Mi`에 대해 반복기 개체 `iter`이 반환한 `match_results` 개체입니다. 마지막으로 `(flags & format_no_copy) == 0`이면 범위 `TN`의 텍스트를 반복기 `out`에 복사합니다. 함수에서 `out`을 반환합니다.
+첫 번째 함수에서 생성 한 [regex_iterator 클래스](../standard-library/regex-iterator-class.md) 개체 `iter(first, last, re, flags)` 사용 하 여 입력된 범위를 분할 하 `[first, last)` 를 일련의 하위 시퀀스 `T0 M0 T1 M1...TN-1 MN-1 TN`여기서 `Mn` 으로 n 번째 일치 하는 검색 되는 반복기입니다. 일치하는 항목이 없으면 `T0`은 전체 입력 범위이고 `N`은 0입니다. `(flags & format_first_only) != 0`이면 첫 번째 일치 항목만 사용되고 `T1`은 일치 항목 뒤에 오는 모든 입력 텍스트이며 `N`은 1입니다. 각 `i` 범위에 `[0, N)`경우 `(flags & format_no_copy) == 0` 범위에 텍스트를 복사 `Ti` 반복기 *아웃*합니다. 그런 다음 `m.format(out, fmt, flags)`을 호출합니다. 여기서 `m`은 후속 항목 `Mi`에 대해 반복기 개체 `iter`이 반환한 `match_results` 개체입니다. 마지막으로, 경우 `(flags & format_no_copy) == 0` 범위에 텍스트를 복사 `TN` 반복기 *아웃*합니다. 함수 반환 *아웃*합니다.
 
 두 번째 함수는 형식 `basic_string<charT>`의 지역 변수 `result`를 생성하고 `regex_replace(back_inserter(result), str.begin(), str.end(), re, fmt, flags)`를 호출합니다. `result`를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__regex_replace.cpp
@@ -243,7 +219,7 @@ basic_string<Elem> regex_replace(
 #include <iostream>
 
 int main()
-    {
+{
     char buf[20];
     const char *first = "axayaz";
     const char *last = first + strlen(first);
@@ -252,10 +228,10 @@ int main()
     std::regex_constants::match_flag_type fonly =
         std::regex_constants::format_first_only;
 
-*std::regex_replace(&buf[0], first, last, rx, fmt) = '\0';
+    *std::regex_replace(&buf[0], first, last, rx, fmt) = '\0';
     std::cout << "replacement == " << &buf[0] << std::endl;
 
-*std::regex_replace(&buf[0], first, last, rx, fmt, fonly) = '\0';
+    *std::regex_replace(&buf[0], first, last, rx, fmt, fonly) = '\0';
     std::cout << "replacement == " << &buf[0] << std::endl;
 
     std::string str("adaeaf");
@@ -266,8 +242,7 @@ int main()
         << std::regex_replace(str, rx, fmt, fonly) << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
@@ -326,39 +301,28 @@ bool regex_search(
 
 ### <a name="parameters"></a>매개 변수
 
-`BidIt` 부분 일치에 대 한 반복기 형식입니다.
-
-`Alloc` 일치 결과 할당자 클래스입니다.
-
-`Elem` 와 일치 하도록 요소의 형식입니다.
-
-`RXtraits` 요소에 대 한 특성 클래스입니다.
-
-`Alloc2` 정규식 할당자 클래스입니다.
-
-`IOtraits` 문자열 특성 클래스입니다.
-
-`IOalloc` 문자열 할당자 클래스입니다.
-
-`flags` 일치 하는 항목에 대 한 플래그입니다.
-
-`first` 일치 하는 시퀀스의 시작입니다.
-
-`last` 일치 하는 시퀀스의 끝입니다.
-
-`match` 일치 결과입니다.
-
-`ptr` 일치 하는 시퀀스의 시작 부분에 대 한 포인터입니다.
-
-`re` 일치 시킬 정규식입니다.
-
-`str` 일치 하는 문자열입니다.
+|||
+|-|-|
+*BidIt*| 부분 일치에 대한 반복기 형식입니다.
+*Alloc*| 일치 결과 할당자 클래스입니다.
+*Elem*| 일치 항목을 찾을 요소의 형식입니다.
+*RXtraits*| 요소에 대한 특성 클래스입니다.
+*Alloc2*| 정규식 할당자 클래스입니다.
+*IOtraits*| 문자열 특성 클래스입니다.
+*IOalloc*| 문자열 할당자 클래스입니다.
+*flags*| 일치 항목에 대한 플래그입니다.
+*first*| 일치하는 시퀀스의 시작입니다.
+*last*| 일치하는 시퀀스의 끝입니다.
+*match*| 일치 결과입니다.
+*ptr*| 일치하는 시퀀스의 시작에 대한 포인터입니다.
+*Re*| 일치하는 정규식입니다.
+*str*| 일치하는 문자열입니다.
 
 ### <a name="remarks"></a>설명
 
-각 템플릿 함수는 피연산자 시퀀스의 해당 정규식 인수 `re`에 대한 검색이 성공하는 경우에만 true를 반환합니다. `match_results` 개체를 사용하는 함수는 검색에 성공했는지를 반영하도록 구성원를 설정하고 그런 경우 정규식의 다양한 캡처 그룹이 캡처됩니다.
+각 템플릿 함수는 해당 정규식 인수에 대 한 검색 경우에 true를 반환 *다시* 시퀀스는 피연산자에 성공 합니다. `match_results` 개체를 사용하는 함수는 검색에 성공했는지를 반영하도록 구성원를 설정하고 그런 경우 정규식의 다양한 캡처 그룹이 캡처됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__regex_search.cpp
@@ -367,7 +331,7 @@ bool regex_search(
 #include <iostream>
 
 int main()
-    {
+{
     const char *first = "abcd";
     const char *last = first + strlen(first);
     std::cmatch mr;
@@ -399,8 +363,7 @@ int main()
     std::cout << "  matched: \"" << mr2.str() << "\"" << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
@@ -417,31 +380,32 @@ search(string, "abc") == true
 
 ## <a name="swap"></a>  swap
 
-두 basic_regex 또는 match_results 개체를 교환합니다.
+두 개의 교체 `basic_regex` 또는 `match_results` 개체입니다.
 
 ```cpp
 template <class Elem, class RXtraits>
 void swap(
     basic_regex<Elem, RXtraits, Alloc>& left,
-    basic_regex<Elem, RXtraits>& right) throw();
+    basic_regex<Elem, RXtraits>& right) noexcept;
 
 template <class Elem, class IOtraits, class BidIt, class Alloc>
 void swap(
     match_results<BidIt, Alloc>& left,
-    match_results<BidIt, Alloc>& right) throw();
+    match_results<BidIt, Alloc>& right) noexcept;
 ```
 
 ### <a name="parameters"></a>매개 변수
 
-`Elem` 와 일치 하도록 요소의 형식입니다.
-
-`RXtraits` 요소에 대 한 특성 클래스입니다.
+|||
+|-|-|
+*Elem*| 일치 항목을 찾을 요소의 형식입니다.
+*RXtraits*| 요소에 대한 특성 클래스입니다.
 
 ### <a name="remarks"></a>설명
 
 템플릿 함수는 일정한 시간에 개별 인수의 내용을 교환하며 예외를 throw하지 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__regex__swap.cpp
@@ -450,7 +414,7 @@ void swap(
 #include <iostream>
 
 int main()
-    {
+{
     std::regex rx0("c(a*)|(b)");
     std::regex rx1;
     std::cmatch mr0;
@@ -467,8 +431,7 @@ int main()
     std::cout << "string == " << sub << std::endl;
 
     return (0);
-    }
-
+}
 ```
 
 ```Output
@@ -479,11 +442,11 @@ string == aaa
 
 ## <a name="see-also"></a>참고자료
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants 클래스](../standard-library/regex-constants-class.md)<br/>
-[regex_error 클래스](../standard-library/regex-error-class.md)<br/>
-[regex_iterator 클래스](../standard-library/regex-iterator-class.md)<br/>
-[\<regex> 연산자](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator 클래스](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits 클래스](../standard-library/regex-traits-class.md)<br/>
-[\<regex> 형식 정의](../standard-library/regex-typedefs.md)<br/>
+- [\<regex>](../standard-library/regex.md)
+- [regex_constants 클래스](../standard-library/regex-constants-class.md)
+- [regex_error 클래스](../standard-library/regex-error-class.md)
+- [regex_iterator 클래스](../standard-library/regex-iterator-class.md)
+- [\<regex> 연산자](../standard-library/regex-operators.md)
+- [regex_token_iterator 클래스](../standard-library/regex-token-iterator-class.md)
+- [regex_traits 클래스](../standard-library/regex-traits-class.md)
+- [\<regex> 형식 정의](../standard-library/regex-typedefs.md)
