@@ -2,7 +2,7 @@
 title: Visual Studio에서 c + + 지원 설치 | Microsoft Docs
 description: Visual c + +에 대 한 Visual Studio 지원 설치
 ms.custom: mvc
-ms.date: 06/08/2018
+ms.date: 06/21/2018
 ms.topic: tutorial
 ms.technology:
 - devlang-C++
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4fd04450b75083152d058aef4a85d83f5635c8d9
-ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
+ms.openlocfilehash: 5807110caf730c72d93de7e1265199b63f1d6bff
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35253758"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322487"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Visual Studio에서 c + + 지원 설치
 
@@ -40,10 +40,10 @@ ms.locfileid: "35253758"
 1. Windows 용 최신 Visual Studio 2017 설치 관리자를 다운로드 합니다.
 
    > [!div class="nextstepaction"]
-   > <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Community 설치</a>
+   > <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Community 설치</a>
 
    >[!Tip]
-   > 커뮤니티 에디션은 개인 개발자, 교실 학습, 학술 연구 및 오픈 소스 개발용입니다. 다른 용도의 경우 <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> 또는 <a target="frameTarget" href="https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a>를 설치합니다.
+   > 커뮤니티 에디션은 개인 개발자, 교실 학습, 학술 연구 및 오픈 소스 개발용입니다. 다른 용도의 경우 <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Professional</a> 또는 <a target="frameTarget" href="https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017">Visual Studio 2017 Enterprise</a>를 설치합니다.
 
 1. 설치 관리자 파일을 다운로드 하 고 실행을 찾습니다. 브라우저에 표시 될 수 있습니다 또는 다운로드 폴더에서 찾을 수 있습니다. 설치 프로그램을 실행 하려면 관리자 권한이 필요 합니다. 표시 될 수 있습니다는 **사용자 계정 컨트롤** 설치 프로그램에서 시스템 변경할 이지만 선택할 수 있는 권한을 부여 하 라는 대화 **예**합니다. 문제가 있는 경우 파일 탐색기에서 다운로드 한 파일을 찾아서 설치 관리자 아이콘을 마우스 오른쪽 단추로 클릭 및 선택 **관리자 권한으로 실행** 상황에 맞는 메뉴입니다.
 

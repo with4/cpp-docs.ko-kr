@@ -1,6 +1,6 @@
 ---
 title: 이상의 사용 권한을 허용-(표준 준수) | Microsoft Docs
-ms.date: 11/11/2016
+ms.date: 06/21/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90cfdcf20cf74244afe026a392759ac59616bbdf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3e1a9c407779b6bf441ea1375026af6ac04bb8c8
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32379317"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322266"
 ---
 # <a name="permissive--standards-conformance"></a>관대 한 /-(표준 규칙)
 
@@ -50,7 +50,7 @@ ms.locfileid: "32379317"
 
 **관대 한 /-** 옵션 사용 하 여 규칙에 따라 지원 현재 컴파일러 버전에서 어떤 언어 구문을 맞지 않는 확인 합니다. 옵션 코드는 c + + 표준의 특정 버전에 맞는 경우를 확인 하지 않습니다. 를 최신 초안 표준에 대 한 모든 구현 된 컴파일러 지원 하도록 설정 하려면 사용 된 [/std:latest](../../build/reference/std-specify-language-standard-version.md) 옵션입니다. 현재 구현 된 C + + 17 표준에 컴파일러 지원 제한 하려면는 [/std:c + + 17](../../build/reference/std-specify-language-standard-version.md) 옵션입니다. C + + 14 표준와 비슷하도록 컴파일러 지원 제한 하려면는 [/std:c + + 14](../../build/reference/std-specify-language-standard-version.md) 옵션을 기본값으로 설정 되어 만들어져야 합니다.
 
-모든 C + + 11, C + + 14, 또는 C + + 17 표준 준수 하지 Visual Studio 2017에 Visual c + + 컴파일러에서 지원 되는 코드입니다. **관대 한 /-** 옵션 2 단계 이름 조회의 일부 측면을 관련 항목, 임시에 대 한 비 const 참조를 바인딩, 직접 초기화로 복사 초기화를 처리 하는 방법에 여러 사용자 정의 변환은 허용 문제를 검색할 수 없습니다 초기화 또는 논리 연산자 및 기타 지원 되지 않는 규칙에 따라 영역에 대 한 대체 토큰입니다. Visual C++의 규칙과 관련된 문제에 대한 자세한 내용은 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)을 참조하세요.
+모든 C + + 11, C + + 14, 또는 C + + 17 표준 준수 하지 Visual Studio 2017에 Visual c + + 컴파일러에서 지원 되는 코드입니다. Visual Studio의 버전에 따라는 **관대 한 /-** 옵션 2 단계 이름 조회의 일부 측면을 관련 항목, 임시에 대 한 비 const 참조를 바인딩, 직접 초기화로 복사 초기화를 처리 하는 방법, 허용 문제를 검색할 수 없습니다 여러 개의 사용자 정의 변환을 초기화 또는 대체 토큰에 논리 연산자에 대 한 및 기타 지원 되지 않는 규칙에 따라 영역입니다. Visual C++의 규칙과 관련된 문제에 대한 자세한 내용은 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)을 참조하세요. 최대한 활용 하려면 **관대 한 /-**, Visual Studio 최신 버전으로 업데이트 합니다.
 
 ### <a name="how-to-fix-your-code"></a>코드를 수정 하는 방법
 
@@ -202,11 +202,11 @@ class CFoo : public ICustom
 
 ```cpp
 // Fix for example 2
-// First, create the *.idl file. The vc140.idl generated file can be 
-// used to automatically obtain a *.idl file for the interfaces with 
-// annotation. Second, add a midl step to your build system to make 
-// sure that the C++ interface definitions are outputted. 
-// Last, adjust your existing code to use ATL directly as shown in 
+// First, create the *.idl file. The vc140.idl generated file can be
+// used to automatically obtain a *.idl file for the interfaces with
+// annotation. Second, add a midl step to your build system to make
+// sure that the C++ interface definitions are outputted.
+// Last, adjust your existing code to use ATL directly as shown in
 // the atl implementation section.
 
 -- IDL  FILE--
@@ -286,7 +286,7 @@ struct MyString
 
 extern bool cond;
 
-MyString s; 
+MyString s;
 // Using /std:c++14, /permissive- or /Zc:ternary behavior
 // is to prefer MyString("A") over (const char*)s
 // but under /std:c++17 this line causes error C2445:
@@ -309,23 +309,23 @@ void myassert(const char* text, const char* file, int line);
 조건부 연산자 결과 형식에서 변경 될 수 있습니다는 여기서 템플릿 메타 프로그래밍에 오류가 나타날 **/Zc:ternary** 및 **관대 한 /-** 합니다. 사용 하는 것이 문제를 해결 하는 한 가지 방법은 [std::remove_reference](../../standard-library/remove-reference-class.md) 결과 형식에 있습니다.
 
 ```cpp
-// Example 4: different result types 
+// Example 4: different result types
 extern bool cond;
 extern int count;
-char  a = 'A'; 
-const char  b = 'B'; 
-decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary 
-const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary 
+char  a = 'A';
+const char  b = 'B';
+decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary
+const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 ```
 
-#### <a name="two-phase-name-look-up-partial"></a>2 단계 이름 조회 (부분)
+#### <a name="two-phase-name-look-up"></a>2 단계 이름 조회
 
-경우는 **관대 한 /-** Visual Studio 2017 15.3 버전에서에서 옵션을 설정, 컴파일러 식별 이름 2 단계에 대 한 필요에 따라 서식 파일에서 사용 되는 종속 및 종속 되지 않은 이름의 함수 및 클래스 템플릿 정의 구문 분석 조회 합니다. 이 릴리스에서 이름 종속성 분석만 수행 됩니다. 특히 템플릿 정의의 컨텍스트에서 선언 되지 않은 종속 되지 않은 이름을 ISO c + + 표준에 의해 필요에 따라 진단 메시지를 발생 합니다. 그러나 정의 컨텍스트에서 인수 종속 조회 작업이 수행 되지 않습니다 요구 하는 종속 되지 않은 이름의 바인딩입니다.
+경우는 **관대 한 /-** 옵션이 설정 되어, 컴파일러 식별 2 단계 이름 조회에서 필요에 따라 서식 파일에에서 사용 되는 종속 및 종속 되지 않은 이름의 함수 및 클래스 템플릿 정의 구문 분석 합니다. Visual Studio 2017 15.3 버전에서에서 이름 종속성 분석이 수행 됩니다. 특히 템플릿 정의의 컨텍스트에서 선언 되지 않은 종속 되지 않은 이름을 ISO c + + 표준에 의해 필요에 따라 진단 메시지를 발생 합니다. Visual Studio 2017 15.7 버전에에서 종속 되지 않은 이름 정의 컨텍스트에서 인수 종속 조회를 필요로 하는 바인딩도 수행 됩니다.
 
 ```cpp
 // dependent base
 struct B {
-    void g();
+    void g() {}
 };
 
 template<typename T>
@@ -346,60 +346,106 @@ int main()
 }
 ```
 
+2 단계 조회에 대 한 레거시 동작을 원하는 경우 있지만 그렇지 않은 경우 원하는 **관대 한 /-** 동작을 추가 **/Zc:twoPhase-** 옵션입니다.
+
 ### <a name="windows-header-issues"></a>Windows 헤더 문제
 
 **관대 한 /-** 옵션은 Windows가 작성자 업데이트 SDK (10.0.16299.0) 하기 전에 Windows 키트의 버전 또는 1709 키트 WDK (Windows 드라이버) 버전에 대 한 굉장히 엄격 합니다. 사용 하도록 최신 버전의 Windows 키트를 업데이트 하는 것이 좋습니다 **관대 한 /-** Windows 또는 장치 드라이버 코드에서.
 
-Windows가 작성자 업데이트 SDK (10.0.16299.0) 또는 Windows 드라이버 키트 (WDK) 1709에서 일부 헤더 파일의 사용과 호환 되지 않을 수 있는 문제에 아직 **관대 한 /-** 합니다. 이러한 문제를 해결 하려면 파일에 대해서만 소스 코드를 요구 하 고 제거 하는 이러한 헤더의 사용을 제한 권장는 **관대 한 /-** 해당 특정 소스 코드 파일을 컴파일할 때 옵션입니다. 다음과 같은 문제는 Windows가 작성자 업데이트 SDK (10.0.16299.0)에 달라 집니다.
+2018 업데이트 SDK (10.0.17134.0), Windows가 작성자 업데이트 SDK (10.0.16299.0) 또는 키트 WDK (Windows 드라이버) 1709 Windows 4 월에 특정 헤더 파일의 사용과 호환 되지 않을 수 있는 문제에 아직 **/permissive-**. 이러한 문제를 해결 하려면 파일에 대해서만 소스 코드를 요구 하 고 제거 하는 이러한 헤더의 사용을 제한 권장는 **관대 한 /-** 해당 특정 소스 코드 파일을 컴파일할 때 옵션입니다.
 
-#### <a name="issue-in-umqueryh"></a>Um\Query.h에서 못한 문제 발생
+이러한 WinRT WRL 헤더 출시 windows에서 2018 년 4 월 업데이트 (10.0.17134.0) SDK는 하지 분명와 **관대 한 /-** 합니다. 이러한 문제를 해결 하려면 사용 하지 **관대 한 /-**, 사용 또는 **관대 한 /-** 와 **/Zc:twoPhase-** 다음이 헤더와 함께 작업 하는 경우:
 
-사용 하는 경우는 **관대 한 /-** 컴파일러 스위치는 `tagRESTRICTION` 구조 case(RTOr) 멤버가 되어 컴파일되지 않습니다. '또는'.
+- Winrt/wrl/async.h의 문제
 
-```cpp
-struct tagRESTRICTION
-    {
-    ULONG rt;
-    ULONG weight;
-    /* [switch_is][switch_type] */ union _URes
-        {
-        /* [case()] */ NODERESTRICTION ar;
-        /* [case()] */ NODERESTRICTION or;  // error C2059: syntax error: '||'
-        /* [case()] */ NODERESTRICTION pxr;
-        /* [case()] */ VECTORRESTRICTION vr;
-        /* [case()] */ NOTRESTRICTION nr;
-        /* [case()] */ CONTENTRESTRICTION cr;
-        /* [case()] */ NATLANGUAGERESTRICTION nlr;
-        /* [case()] */ PROPERTYRESTRICTION pr;
-        /* [default] */  /* Empty union arm */
-        } res;
-    };
-```
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(483): error C3861: 'TraceDelegateAssigned': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(491): error C3861: 'CheckValidStateForDelegateCall': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(509): error C3861: 'TraceProgressNotificationStart': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt\wrl\async.h(513): error C3861: 'TraceProgressNotificationComplete': identifier not found
+   ```
 
-이 문제를 해결 하기 위해 없이 Query.h를 포함 하는 파일을 컴파일하는 **관대 한 /-** 옵션입니다.
+- Winrt/wrl/implements.h에서 못한 문제 발생
 
-#### <a name="issue-in-umcellularapioemh"></a>Um\cellularapi_oem.h에서 못한 문제 발생
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\winrt\wrl\implements.h(2086): error C2039: 'SetStrongReference': is not a member of 'Microsoft::WRL::Details::WeakReferenceImpl'
+   ```
 
-사용 하는 경우는 **관대 한 /-** 컴파일러 스위치의 정방향 선언은 `enum UICCDATASTOREACCESSMODE` 는 경고를 발생 합니다.
+이러한 사용자 모드 헤더 출시 windows에서 2018 년 4 월 업데이트 (10.0.17134.0) SDK는 하지 분명와 **관대 한 /-** 합니다. 이러한 문제를 해결 하려면 사용 하지 마십시오 **관대 한 /-** 다음이 헤더와 함께 작업 하는 경우:
 
-```cpp
-typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
-```
+- Um/Tune.h의 문제
 
-범위가 지정 되지 않은 열거형의 정방향 선언은 Microsoft 확장입니다. 이 문제를 해결 하기 위해 없이 cellularapi_oem.h를 포함 하는 파일을 컴파일하는 **관대 한 /-** 옵션을 사용 하 여 또는 [/wd](../../build/reference/compiler-option-warning-level.md) 경고 C4471 소리가 나 지 않도록 하려면 옵션입니다.
+   ```Output
+   C:\ProgramFiles(x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(139): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(559): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): error C3861: 'Release': identifier not found
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\tune.h(1240): note: 'Release': function declaration must be available as none of the arguments depend on a template parameter
+   ```
 
-#### <a name="issue-in-umomscripth"></a>Um\omscript.h에서 못한 문제 발생
+- Um/spddkhlp.h에서 못한 문제 발생
 
-C + + 03에서는 문자열 리터럴을에서 BSTR로 변환 (typedef를 ' wchar_t *') 더 이상 사용 되지 않으며 사용할 수 있습니다. C + + 11에서는 변환이 더 이상 허용 됩니다.
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\spddkhlp.h(759): error C3861: 'pNode': identifier not found
+   ```
 
-```cpp
-virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
-    /* [in] */ __RPC__in BSTR propname,
-    /* [in] */ __RPC__in BSTR expression,
-    /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
-```
+- Um/refptrco.h의 문제
 
-이 문제를 해결 하기 위해 없이 omscript.h를 포함 하는 파일을 컴파일하는 **관대 한 /-** 옵션을 사용 하 여 또는 **/Zc:strictStrings-** 대신 합니다.
+   ```Output
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(179): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(342): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   C:\Program Files (x86)\Windows Kits\10\include\10.0.17134.0\um\refptrco.h(395): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+   ```
+
+이러한 문제는 사용자 모드는 Windows SDK 헤더에 해당 작성자 업데이트 (10.0.16299.0)에 한정 됩니다.
+
+- Um/Query.h에서 못한 문제 발생
+
+   사용 하는 경우는 **관대 한 /-** 컴파일러 스위치는 `tagRESTRICTION` 구조 case(RTOr) 멤버가 되어 컴파일되지 않습니다. '또는'.
+
+   ```cpp
+   struct tagRESTRICTION
+   {
+       ULONG rt;
+       ULONG weight;
+       /* [switch_is][switch_type] */ union _URes
+       {
+           /* [case()] */ NODERESTRICTION ar;
+           /* [case()] */ NODERESTRICTION or;  // error C2059: syntax error: '||'
+           /* [case()] */ NODERESTRICTION pxr;
+           /* [case()] */ VECTORRESTRICTION vr;
+           /* [case()] */ NOTRESTRICTION nr;
+           /* [case()] */ CONTENTRESTRICTION cr;
+           /* [case()] */ NATLANGUAGERESTRICTION nlr;
+           /* [case()] */ PROPERTYRESTRICTION pr;
+           /* [default] */  /* Empty union arm */
+       } res;
+   };
+   ```
+
+   이 문제를 해결 하기 위해 없이 Query.h를 포함 하는 파일을 컴파일하는 **관대 한 /-** 옵션입니다.
+
+- Um/cellularapi_oem.h에서 못한 문제 발생
+
+   사용 하는 경우는 **관대 한 /-** 컴파일러 스위치의 정방향 선언은 `enum UICCDATASTOREACCESSMODE` 는 경고를 발생 합니다.
+
+   ```cpp
+   typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
+   ```
+
+   범위가 지정 되지 않은 열거형의 정방향 선언은 Microsoft 확장입니다. 이 문제를 해결 하기 위해 없이 cellularapi_oem.h를 포함 하는 파일을 컴파일하는 **관대 한 /-** 옵션을 사용 하 여 또는 [/wd](../../build/reference/compiler-option-warning-level.md) 경고 C4471 소리가 나 지 않도록 하려면 옵션입니다.
+
+- Um/omscript.h에서 못한 문제 발생
+
+   C + + 03에서는 문자열 리터럴을에서 BSTR로 변환 (typedef를 ' wchar_t *') 더 이상 사용 되지 않으며 사용할 수 있습니다. C + + 11에서는 변환이 더 이상 허용 됩니다.
+
+   ```cpp
+   virtual /* [id] */ HRESULT STDMETHODCALLTYPE setExpression(
+       /* [in] */ __RPC__in BSTR propname,
+       /* [in] */ __RPC__in BSTR expression,
+       /* [in][defaultvalue] */ __RPC__in BSTR language = L"") = 0; // C2440
+   ```
+
+   이 문제를 해결 하기 위해 없이 omscript.h를 포함 하는 파일을 컴파일하는 **관대 한 /-** 옵션을 사용 하 여 또는 **/Zc:strictStrings-** 대신 합니다.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면
 
@@ -407,7 +453,7 @@ Visual Studio 2017 버전 15.5 이상 버전에서이 절차를 사용 합니다
 
 1. 프로젝트의를 열고 **속성 페이지** 대화 상자.
 
-1. **구성 속성**, 확장 하 고는 **C/c + +** 폴더를 선택 하 고는 **언어** 속성 페이지.
+1. 선택 된 **구성 속성** > **C/c + +** > **언어** 속성 페이지.
 
 1. 변경 된 **준수 모드** 속성 값을 **예 (허용 /-)** 합니다. 선택 **확인** 또는 **적용** 변경 내용을 저장 합니다.
 
@@ -425,5 +471,5 @@ Visual Studio 2017 15.5 버전 보다 이전 버전을이 절차를 사용 합�
 
 ## <a name="see-also"></a>참고자료
 
-[컴파일러 옵션](../../build/reference/compiler-options.md)   
-[컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)
+- [컴파일러 옵션](../../build/reference/compiler-options.md)
+- [컴파일러 옵션 설정](../../build/reference/setting-compiler-options.md)
