@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda38c7173feeccf878ee7befc3d27c0061ddb1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9379fef6a1d676d6a3bc757ee51d5d27acd5f6f
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345028"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930178"
 ---
 # <a name="initinstance-member-function"></a>InitInstance 멤버 함수
 Windows 운영 체제를 사용 하면 둘 이상의 복사본, 즉 "," 동일한 응용 프로그램 인스턴스를 실행할 수 있습니다. `WinMain` 호출 [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) 될 때마다 응용 프로그램의 새 인스턴스를 시작 합니다.  
@@ -44,7 +44,7 @@ Windows 운영 체제를 사용 하면 둘 이상의 복사본, 즉 "," 동일�
  직접 초기화 코드를 추가 하거나 마법사에서 작성 된 코드를 수정할 수 있습니다.  
   
 > [!NOTE]
->  MFC 응용 프로그램은 단일 스레드 아파트 (STA)으로 초기화 되어야 합니다. 호출 하는 경우 [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) 에 프로그램 `InitInstance` 재정의 지정 `COINIT_APARTMENTTHREADED` (대신 `COINIT_MULTITHREADED`). 자세한 내용은 참조 PRB: MFC 응용 프로그램이 다른 이름으로 다중 스레드 아파트 (828643)에서 응용 프로그램을 초기화 하는 경우 응답 하지 [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)합니다.  
+>  MFC 응용 프로그램은 단일 스레드 아파트 (STA)으로 초기화 되어야 합니다. 호출 하는 경우 [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) 에 프로그램 `InitInstance` 재정의 COINIT_APARTMENTTHREADED (COINIT_MULTITHREADED 아님)를 지정 합니다. 자세한 내용은 참조 PRB: MFC 응용 프로그램이 다른 이름으로 다중 스레드 아파트 (828643)에서 응용 프로그램을 초기화 하는 경우 응답 하지 [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CWinApp: 응용 프로그램 클래스](../mfc/cwinapp-the-application-class.md)

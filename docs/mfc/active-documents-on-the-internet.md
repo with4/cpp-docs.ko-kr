@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bb54f36f57702d43cf065604641124e38ed053
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a18b84b30445060631589e72f6c158ea9b3626f0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334888"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930890"
 ---
 # <a name="active-documents-on-the-internet"></a>인터넷의 액티브 문서
 액티브 문서는 일반적인 포함된 개체에 대 한 확장을 제공합니다. 액티브 문서는 다중 페이지 수 있으며 전체 클라이언트 영역에 표시 됩니다. 기존 메뉴 협상을 수행 하며 현재 위치와 서버 응용 프로그램에서 열려 있는 창에 편집할 수 있습니다. 해치 테두리가 작은 사각형으로 표시를 하는 대신 액티브 문서는 전체 프레임 및 항상 내부 활성입니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "33334888"
 |-------------------------|---------------------------------|  
 |복합 파일을 저장 메커니즘으로 사용 합니다.|`IPersistStorage`.|  
 |파일에서 만들기를 포함 하는 활성 문서의 기본 포함 기능을 지원 합니다.|`IPersistFile`, `IOleObject` 및 `IDataObject`|  
-|에서는 내부 활성화.|`IOleInPlaceObject` 및 `IOleInPlaceActiveObject` (컨테이너의를 사용 하 여 `IOleInPlaceSite` 및 **IOleInPlaceFrame** 인터페이스).|  
+|에서는 내부 활성화.|`IOleInPlaceObject` 및 `IOleInPlaceActiveObject` (컨테이너의를 사용 하 여 `IOleInPlaceSite` 및 `IOleInPlaceFrame` 인터페이스).|  
 |이러한 새 인터페이스를 포함 하는 액티브 문서 확장을 지원 합니다. 일부 인터페이스는 선택적입니다.|`IOleDocument`, `IOleDocumentView`, `IOleCommandTarget` 및 `IPrint`가 있습니다.|  
   
  MFC에서는 활성 문서에 포함 된 서버 지원 기존 확장에 대 한 지원을 제공 합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "33334888"
   
 |클래스 형식|이전에서 파생|파생 되도록 변경|  
 |----------------|---------------------------|---------------------------|  
-|내부 프레임|`COleIPFrameWnd`|**COleDocIPFrameWnd**|  
+|내부 프레임|`COleIPFrameWnd`|`COleDocIPFrameWnd`|  
 |항목|`COleServerItem`|`CDocObjectServerItem`|  
   
  도 레지스트리에서 정보를 입력 하는 방법을 변경 하 고 여러 다른 변경 됩니다. 현재 응용 프로그램에 COM 구성 요소 지원 없는 경우 응용 프로그램 마법사를 실행 하는 COM 구성 요소 관련 코드 기존 응용 프로그램과 통합 하 여 서버 지원을 추가할 수 있습니다.  

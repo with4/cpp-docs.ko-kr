@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02aa70706df65318f2fbfd8103dff04a47ae2155
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d7f52aee6a276410ba6a90fd662a2fad8d258e92
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341413"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929889"
 ---
 # <a name="com-interface-entry-points"></a>COM 인터페이스 진입점
 COM 인터페이스의 멤버 함수를 사용 하 여는 [METHOD_PROLOGUE](com-interface-entry-points.md#method_prologue) 내보낸된 인터페이스의 메서드를 호출할 때 적절 한 글로벌 상태를 유지 하는 매크로입니다.  
@@ -33,7 +33,7 @@ COM 인터페이스의 멤버 함수를 사용 하 여는 [METHOD_PROLOGUE](com-
   
  [!code-cpp[NVC_MFCConnectionPoints#5](../mfc/codesnippet/cpp/com-interface-entry-points_1.cpp)]  
   
- 자세한 내용은 참조 하십시오. [기술 참고 38](../mfc/tn038-mfc-ole-iunknown-implementation.md) MFC/OLE에 **IUnknown** 구현 합니다.  
+ 자세한 내용은 참조 하십시오. [기술 참고 38](../mfc/tn038-mfc-ole-iunknown-implementation.md) MFC/OLE에 `IUnknown` 구현 합니다.  
   
  `METHOD_PROLOGUE` 매크로로 정의 됩니다.  
   

@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50db9d4c99e8ef538ffaa5352f9ec96e5b08217f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d4ae7fb09e1f453b6d7bc82a7fb038567809f872
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344502"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932249"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>표준 컨트롤에서 컨트롤 파생시키기
 마찬가지로 [CWnd](../mfc/reference/cwnd-class.md)-파생 클래스를 기존 컨트롤 클래스에서 새 클래스를 파생 하 여 컨트롤의 동작을 수정할 수 있습니다.  
   
 ### <a name="to-create-a-derived-control-class"></a>파생된 컨트롤 클래스를 만들려면  
   
-1.  기존 컨트롤 클래스에서 클래스를 파생 하 고 필요에 따라 재정의 **만들기** 멤버 함수는 기본 클래스에 필요한 인수 제공 되도록 **만들기** 함수입니다.  
+1.  기존 컨트롤 클래스에서 클래스를 파생 하 고 필요에 따라 재정의 `Create` 멤버 함수는 기본 클래스에 필요한 인수 제공 되도록 `Create` 함수입니다.  
   
 2.  메시지 처리기 멤버 함수 및 특정 Windows 메시지에 대 한 응답으로 컨트롤의 동작을 수정 하는 메시지 맵 항목을 제공 합니다. 참조 [함수에 메시지 매핑](../mfc/reference/mapping-messages-to-functions.md)합니다.  
   

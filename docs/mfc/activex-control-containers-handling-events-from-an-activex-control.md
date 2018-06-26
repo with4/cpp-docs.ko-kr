@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f142fc49d2759c4edd7cdb8701b300d435e67f54
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3a3844788330cfe79366221ee215c437fc4aefc8
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333832"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930663"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX 컨트롤 컨테이너: ActiveX 컨트롤에서 보낸 이벤트 처리
 이 문서에서는 ActiveX 컨트롤 컨테이너에서 ActiveX 컨트롤에 대 한 이벤트 처리기를 설치 하려면 속성 창을 사용 하 여 설명 합니다. 이벤트 처리기는 특정 이벤트 (컨트롤)에서 알림 받기 및 응답에 일부 작업을 수행 하는 데 사용 됩니다. 이 알림은 이벤트를 "발생" 라고 합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "33333832"
   
  이벤트 맵 항목 속성 창을 사용 하 여 이벤트를 추가 하는 대로 (`ON_EVENT`)이 추가 이벤트 싱크 맵 및 이벤트 처리기 함수에 추가 된 컨테이너의 구현 (합니다. Cpp) 합니다.  
   
- 다음 예제에서는 선언 라는 이벤트 처리기, `OnClickInCircCtrl`, Circ 컨트롤에 대 한 **ClickIn** 이벤트:  
+ 다음 예제에서는 선언 라는 이벤트 처리기, `OnClickInCircCtrl`, Circ 컨트롤에 대 한 `ClickIn` 이벤트:  
   
  [!code-cpp[NVC_MFC_AxCont#10](../mfc/codesnippet/cpp/activex-control-containers-handling-events-from-an-activex-control_3.cpp)]  
   

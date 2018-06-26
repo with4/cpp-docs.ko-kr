@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430af2344888696e3cbf053677ef59c7249b50bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 317527d87c12a0c140c4a618ec4500dbe12bb003
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352791"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931891"
 ---
 # <a name="docking-and-floating-toolbars"></a>도구 모음 고정 및 고정 해제
 Microsoft Foundation Class 라이브러리는 도킹 가능한 도구 모음을 지원합니다. 도킹 가능한 도구 모음 연결 하거나 모든 면 해당 부모 창에 도킹할 수 또는 분리 하거나 자체 미니 프레임 창에서 이동할 수 있습니다. 이 문서에서는 응용 프로그램에서 도킹 가능한 도구 모음을 사용 하는 방법에 설명 합니다.  
@@ -62,7 +62,7 @@ Microsoft Foundation Class 라이브러리는 도킹 가능한 도구 모음을 
  MFC 일반 샘플 [DOCKTOOL](../visual-cpp-samples.md) 예입니다.  
   
 ##  <a name="_core_enabling_docking_in_a_frame_window"></a> 프레임 창에서 도킹 활성화  
- 프레임 창에 도구 모음을 고정 하려면 프레임 창 (또는 대상) 도킹을 허용 하도록 활성화 되어야 합니다. 이렇게 사용 하 여는 [CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking) 하나를 사용 하는 함수를 `DWORD` 스타일의 집합이 매개 변수에서는 도킹 프레임 창 중 어느 쪽을 허용할 나타내는 비트입니다. 도구 모음을 도킹할 수 되려고 하 고 여러 측면에 도킹 될 수 있는 인에서 지정 된 측면은 전달 된 매개 변수가 `EnableDocking` 다음과 같은 순서로 사용: 위쪽, 아래쪽, 왼쪽, 오른쪽입니다. 도킹 컨트롤 막대를 모든, 전달할 수 있게 되기를 원하는 경우 `CBRS_ALIGN_ANY` 를 `EnableDocking`합니다.  
+ 프레임 창에 도구 모음을 고정 하려면 프레임 창 (또는 대상) 도킹을 허용 하도록 활성화 되어야 합니다. 이렇게 사용 하 여는 [CFrameWnd::EnableDocking](../mfc/reference/cframewnd-class.md#enabledocking) 하나를 사용 하는 함수를 *DWORD* 스타일의 집합이 매개 변수에서는 도킹 프레임 창 중 어느 쪽을 허용할 나타내는 비트입니다. 도구 모음을 도킹할 수 되려고 하 고 여러 측면에 도킹 될 수 있는 인에서 지정 된 측면은 전달 된 매개 변수가 `EnableDocking` 다음과 같은 순서로 사용: 위쪽, 아래쪽, 왼쪽, 오른쪽입니다. 도킹 컨트롤 막대를 모든, 전달할 수 있게 되기를 원하는 경우 **CBRS_ALIGN_ANY** 를 `EnableDocking`합니다.  
   
 ##  <a name="_core_enabling_docking_for_a_toolbar"></a> 도킹 도구 모음에 대 한 활성화  
  도킹 대상의 준비 하는 다음 유사한 방식으로 도구 모음 (또는 원본)를 준비 해야 합니다. 호출 [CControlBar::EnableDocking](../mfc/reference/ccontrolbar-class.md#enabledocking) 도킹 하려면 각 도구 모음에 대 한 도구 모음 도킹 해야를 면 대상 지정 합니다. 에 대 한 호출에 지정 된 면 없으면 `CControlBar::EnableDocking` 프레임 창에서 도킹 가능한 면 일치 하며, 도구 모음 도킹 수 없습니다-이동 수 있습니다. 된 면 부동 도구 모음, 프레임 창으로 도킹 될 수 없습니다 유지 됩니다.  

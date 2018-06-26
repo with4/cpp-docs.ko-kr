@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fb4f73d1a0360ddad3983179415d0f7fc2d3cda
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 92568f61bb1ea219ab3ddc96f4c4687dec157c9a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358066"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931767"
 ---
 # <a name="mfc-library-versions"></a>MFC 라이브러리 버전
 
@@ -89,7 +89,7 @@ ANSI/MBCS MFC 라이브러리 버전 모두 단일 바이트 문자 집합 ASCII
 
 IDE에서 유니코드 문자열 및 문자 지원 단일 바이트, 멀티 바이트 또는 와이드 문자를 사용 하 여 프로젝트 구성을 설정 하려면는 **프로젝트 속성** 대화 상자. 에 **구성 속성** > **일반** 페이지에서 설정 된 **문자 집합** 속성을 **설정 하지** 사용 하는 단일 바이트 문자 집합입니다. 속성을 설정 **멀티 바이트 문자 집합 사용** 멀티 바이트 문자 집합을 사용 하도록 또는 **유니코드 문자 집합 사용** u t F-16으로 인코딩된 유니코드를 사용 하도록 합니다.
 
-전처리기 기호를 사용 하는 MFC 프로젝트  **\_유니코드** 를 나타내는 u t F-16 와이드 문자 유니코드 지원 및  **\_MBCS** MBCS 지원을 나타냅니다. 이러한 옵션은 프로젝트에서 함께 사용할 수 없습니다.
+전처리기 기호를 사용 하는 MFC 프로젝트 \_유니코드를 나타내는 u t F-16 와이드 문자 유니코드 지원 및 \_MBCS를 나타내기 위해 MBCS 지원 합니다. 이러한 옵션은 프로젝트에서 함께 사용할 수 없습니다.
 
 ## <a name="mfc-static-library-naming-conventions"></a>MFC 정적 라이브러리 명명 규칙
 

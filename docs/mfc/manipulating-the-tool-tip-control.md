@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76976c0907d645ad945700c4d396217880712f11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 91e2e247acb85188c1280713e9e5ad8ef8f19448
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346440"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929830"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>도구 설명 컨트롤 조작
 클래스 `CToolTipCtrl` 멤버 그룹의 다양 한 특성을 제어 하는 함수를 제공는 `CToolTipCtrl` 개체 및 도구 설명 창이 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "33346440"
   
 -   [GetTipTextColor](../mfc/reference/ctooltipctrl-class.md#gettiptextcolor) 및 [SetTipTextColor](../mfc/reference/ctooltipctrl-class.md#settiptextcolor) 텍스트 색의 도구 설명 창을 검색 하 고 설정 합니다.  
   
- 와 같은 중요 한 메시지에 대 한 알림을 도구 설명 컨트롤에 대 한 순서 대로 **WM_LBUTTONXXX** 메시지, 도구 설명 컨트롤에는 메시지를 릴레이 해야 합니다. 이 릴레이 대 한 가장 좋은 방법은 호출을 수행 하는 것 [CToolTipCtrl::RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent)에 `PreTranslateMessage` 소유자 창의 함수입니다. 다음 예제에서는 가능한 방법 중 하나 (도구 설명 컨트롤이 라고 할 `m_ToolTip`):  
+ WM_LBUTTONXXX 메시지와 같은 중요 한 메시지에 대 한 알림을 도구 설명 컨트롤에 도구 설명 컨트롤에 메시지를 릴레이 해야 합니다. 이 릴레이 대 한 가장 좋은 방법은 호출을 수행 하는 것 [CToolTipCtrl::RelayEvent](../mfc/reference/ctooltipctrl-class.md#relayevent)에 `PreTranslateMessage` 소유자 창의 함수입니다. 다음 예제에서는 가능한 방법 중 하나 (도구 설명 컨트롤이 라고 할 `m_ToolTip`):  
   
  [!code-cpp[NVC_MFCControlLadenDialog#41](../mfc/codesnippet/cpp/manipulating-the-tool-tip-control_1.cpp)]  
   

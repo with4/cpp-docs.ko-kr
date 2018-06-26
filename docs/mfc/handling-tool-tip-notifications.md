@@ -17,15 +17,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b9dffa2513c11a5feb3228cb4fdb1f6efbebe7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8df4b584a4e8b0ef940d5934a5968037427c607d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33346378"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931816"
 ---
 # <a name="handling-tool-tip-notifications"></a>도구 설명 알림 처리
-지정 하는 경우는 `TBSTYLE_TOOLTIPS` 도구 모음 스타일을 만들고 도구 설명 컨트롤을 관리 합니다. 도구 설명에는 도구 모음 단추를 설명 하는 텍스트 줄을 포함 하는 작은 팝업 창인은 합니다. 사용자가 도구 모음 단추에 커서 있고 그대로 있을 약 절반에 대 한 두 번째 경우에 나타나는 도구 설명 숨겨져 있습니다. 커서 주위 도구 설명이 표시 됩니다.  
+지정 하는 경우는 **TBSTYLE_TOOLTIPS** 도구 모음 스타일을 만들고 도구 설명 컨트롤을 관리 합니다. 도구 설명에는 도구 모음 단추를 설명 하는 텍스트 줄을 포함 하는 작은 팝업 창인은 합니다. 사용자가 도구 모음 단추에 커서 있고 그대로 있을 약 절반에 대 한 두 번째 경우에 나타나는 도구 설명 숨겨져 있습니다. 커서 주위 도구 설명이 표시 됩니다.  
   
  도구 설명이 표시 되기 전에 **TTN_NEEDTEXT** 단추에 대 한 설명 텍스트를 검색 하 고 도구 모음 소유자 창에 알림 메시지가 보내집니다. 도구 모음의 소유자 창이 하는 경우는 `CFrameWnd` 때문에 설명이 추가 작업 없이 표시 되는 도구 창 `CFrameWnd` 에 대 한 기본 처리기는 **TTN_NEEDTEXT** 알림입니다. 도구 모음의 소유자 창에서 파생 되지 않은 경우 `CFrameWnd`, 대화 상자 또는 폼 보기와 같은 항목 소유자 창의 메시지 맵에 추가 하 고 메시지 맵에 알림 처리기를 제공 해야 합니다. 소유자 창의 메시지 맵에 항목은 다음과 같습니다.  
   

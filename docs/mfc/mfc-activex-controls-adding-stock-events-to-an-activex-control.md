@@ -52,15 +52,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 210749906391ccdba2e488b75be98264bcba39cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41445015f30eb953675f763652fb85ef3eeb857a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359340"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930789"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC ActiveX 컨트롤: ActiveX 컨트롤에 스톡 이벤트 추가
-스톡 이벤트 사용자 지정 이벤트 한다는 점에서 다릅니다 클래스에 의해 자동으로 발생 하는 [COleControl](../mfc/reference/colecontrol-class.md)합니다. `COleControl` 일반 동작으로 인해 발생 하는 이벤트를 발생 하는 미리 정의 된 멤버 함수를 포함 합니다. 구현 되는 일반적인 동작 `COleControl` 포함 단일-및 번 또는 두-clicks 컨트롤과 키보드 이벤트, 변경 내용에 마우스 단추의 상태입니다. 스톡 이벤트에 대 한 이벤트 맵 항목 앞에 항상는 **EVENT_STOCK** 접두사입니다.  
+스톡 이벤트 사용자 지정 이벤트 한다는 점에서 다릅니다 클래스에 의해 자동으로 발생 하는 [COleControl](../mfc/reference/colecontrol-class.md)합니다. `COleControl` 일반 동작으로 인해 발생 하는 이벤트를 발생 하는 미리 정의 된 멤버 함수를 포함 합니다. 구현 되는 일반적인 동작 `COleControl` 포함 단일-및 번 또는 두-clicks 컨트롤과 키보드 이벤트, 변경 내용에 마우스 단추의 상태입니다. 이벤트는 이벤트 앞에 항상 EVENT_STOCK 접두사 재고에 대 한 항목을 매핑합니다.  
   
 ##  <a name="_core_stock_events_supported_by_classwizard"></a> 지 원하는 스톡 이벤트는 이벤트 추가 마법사  
  `COleControl` 클래스는 다음 표에 나열 된 10 개의 스톡 이벤트를 제공 합니다. 사용 하 여 컨트롤에서 원하는 이벤트를 지정할 수는 [이벤트 추가 마법사](../ide/add-event-wizard.md)합니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "33359340"
 |키 누름|**FireKeyPress void (짧은\***`pnChar`**)** |발생 시기는 `WM_CHAR` 메시지를 수신 합니다.<br /><br /> 이벤트 맵 항목: **EVENT_STOCK_KEYPRESS)**|  
 |KeyUp|**FireKeyUp void (짧은** `nChar` **, short**`nShiftState`**)** |발생 시기는 `WM_SYSKEYUP` 또는 `WM_KEYUP` 메시지를 수신 합니다.<br /><br /> 이벤트 맵 항목: **EVENT_STOCK_KEYUP)**|  
 |MouseDown|**FireMouseDown void (짧은** `nButton` **, short** `nShiftState` **, float***x* **, float** *y***)** |있는 경우 발생 합니다. **BUTTONDOWN** (왼쪽, 가운데 또는 오른쪽)를 수신 합니다. 마우스는이 이벤트가 발생 하기 직전에 캡처됩니다.<br /><br /> 이벤트 맵 항목: **EVENT_STOCK_MOUSEDOWN)**|  
-|MouseMove|**FireMouseMove void (짧은** `nButton` **, short** `nShiftState` **, float***x* **, float** *y***)** |발생 시기는 `WM_MOUSEMOVE` 메시지를 수신 합니다.<br /><br /> 이벤트 맵 항목: **EVENT_STOCK_MOUSEMOVE)**|  
+|MouseMove|**FireMouseMove void (짧은** `nButton` **, short** `nShiftState` **, float***x* **, float** *y***)** |WM_MOUSEMOVE 메시지를 받을 때 발생 합니다.<br /><br /> 이벤트 맵 항목: **EVENT_STOCK_MOUSEMOVE)**|  
 |MouseUp|**FireMouseUp void (짧은** `nButton` **, short** `nShiftState` **, float***x* **, float** *y***)** |있는 경우 발생 합니다. **BUTTONUP** (왼쪽, 가운데 또는 오른쪽)를 수신 합니다. 이 이벤트가 발생 하기 전에 마우스 캡처가 해제 됩니다.<br /><br /> 이벤트 맵 항목: **EVENT_STOCK_MOUSEUP)**|  
 |ReadyStateChange|**void FireReadyStateChange)**|한 컨트롤이 받은 데이터의 양으로 인해 다음 준비 상태로 전환 될 때 발생 합니다.<br /><br /> 이벤트 맵 항목: **EVENT_STOCK_READYSTATECHANGE)**|  
   
@@ -102,7 +102,7 @@ ms.locfileid: "33359340"
   
  [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]  
   
- KeyPress 이벤트를 발생 시킵니다이 코드를 추가 때는 `WM_CHAR` 메시지를 받고 컨트롤이 활성화 되어 있습니다. KeyPress 이벤트의 발생 함수를 호출 하 여 다른 시간에 발생할 수 있습니다 (예를 들어 `FireKeyPress`)에서 제어 코드 내에서.  
+ 이 코드를 추가 WM_CHAR 메시지를 받고 컨트롤이 활성화 된 때 KeyPress 이벤트를 발생 시킵니다. KeyPress 이벤트의 발생 함수를 호출 하 여 다른 시간에 발생할 수 있습니다 (예를 들어 `FireKeyPress`)에서 제어 코드 내에서.  
   
  이벤트 추가 마법사를 컨트롤의 다음 코드 줄을 추가합니다. IDL 파일:  
   

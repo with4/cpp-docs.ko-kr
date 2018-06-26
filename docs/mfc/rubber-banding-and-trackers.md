@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2b1b5b0a49fdb59417be04864c9d1ef5341f849
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a4f36a634e4e5e6d4ee6c2618d0d43313c7c8094
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379244"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931738"
 ---
 # <a name="rubber-banding-and-trackers"></a>고무 밴드 및 추적기
 추적기에 제공되는 또 다른 기능은 "고무 밴드" 선택 기능입니다. 이 기능을 통해 사용자는 선택할 항목 주위의 크기 조정 직사각형을 끌어서 여러 OLE 항목을 선택할 수 있습니다. 사용자가 왼쪽 마우스 단추를 놓으면 사용자가 선택한 영역 내에 있는 항목이 선택되고 사용자가 조작할 수 있는 상태가 됩니다. 예를 들어 사용자가 선택한 항목을 다른 컨테이너 응용 프로그램으로 끌어갈 수 있습니다.  
   
- 이 기능을 구현하기 위해서는 응용 프로그램의 `WM_LBUTTONDOWN` 처리기 함수에 일부 추가 코드가 필요합니다.  
+ 이 기능을 구현 응용 프로그램의 WM_LBUTTONDOWN 처리기 함수에 일부 추가 코드가 필요 합니다.  
   
  다음 코드 샘플은 고무 밴드 선택 및 추가 기능을 구현합니다.  
   

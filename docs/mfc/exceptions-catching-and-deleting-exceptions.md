@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3527dabab96fe8f2832430f928a922941178ea97
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29dea08d778ba91c5b8ab3a10aaff998095e7123
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345188"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928771"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>예외: 예외 Catch 및 삭제
-다음 지침과 예제를 catch 하 고 예외를 삭제 하는 방법을 보여 줍니다. 대 한 자세한 내용은 **시도**, **catch**, 및 `throw` 키워드 참조 [c + + 예외 처리](../cpp/cpp-exception-handling.md)합니다.  
+다음 지침과 예제를 catch 하 고 예외를 삭제 하는 방법을 보여 줍니다. 대 한 자세한 내용은 **시도**, **catch**, 및 **throw** 키워드 참조 [c + + 예외 처리](../cpp/cpp-exception-handling.md)합니다.  
   
  예외 처리기는 예외를 삭제 하지 못하면 해당 코드는 예외를 catch 될 때마다 메모리 누수를 발생 시킵니다 때문에, 처리 된 예외 개체를 삭제 해야 합니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "33345188"
 -   내에서 실행 하 여 반환 된 **catch** 블록입니다.  
   
 > [!NOTE]
->  삭제할 때는 `CException`를 사용 하 여는 **삭제** 멤버 함수는 예외를 삭제 합니다. 사용 하지 마십시오는 **삭제** 키워드를 예외 힙에 없으면 실패할 수 있습니다.  
+>  삭제할 때는 `CException`를 사용 하 여는 `Delete` 멤버 함수는 예외를 삭제 합니다. 사용 하지 마십시오는 **삭제** 키워드를 예외 힙에 없으면 실패할 수 있습니다.  
   
 #### <a name="to-catch-and-delete-exceptions"></a>Catch 하 고 예외를 삭제 하려면  
   

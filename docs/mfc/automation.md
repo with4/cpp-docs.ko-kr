@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce325073d8a1585ffa9e520cebdfc372280306d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fdd62c73c099cbae8a21c82cca55cb8430d7fd04
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345887"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930604"
 ---
 # <a name="automation"></a>자동화
 자동화(이전의 OLE 자동화) 기술은 한 응용 프로그램에서 다른 응용 프로그램에 구현된 개체를 조작하거나 개체를 조작할 수 있도록 노출시키는 것을 가능하게 하는 기술입니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "33345887"
  Microsoft Excel이나 Microsoft Visual C++ 같은 대부분의 상업용 응용 프로그램에서는 사용자가 대부분의 응용 프로그램 기능을 자동화할 수 있습니다. 예를 들어, Visual c + +를 자동화 하는 VBScript 매크로 빌드, 코드 편집 또는 디버깅 작업 작성할 수 있습니다.  
   
 ##  <a name="_core_passing_parameters_in_automation"></a> 자동화에서의 매개 변수 전달  
- 자동화 메서드를 만드는 어려움 중 하나는 공통적이고 "안전한" 메커니즘을 통해 자동화 서버와 자동화 클라이언트 간에 데이터를 전달하는 것입니다. 자동화에서는 **VARIANT** 형식을 사용하여 데이터를 전달하며, **VARIANT** 형식은 태그가 지정된 공용 구조체입니다. 이 형식은 해당 값에 대한 데이터 멤버(익명 C++ 공용 구조체)와 공용 구조체에 저장된 정보 형식을 나타내는 데이터 멤버를 가지고 있습니다. **VARIANT** 형식은 2바이트 및 4바이트 정수, 4바이트 및 8바이트 부동 소수점 수, 문자열, 부울 값 등의 여러 가지 표준 데이터 형식을 지원합니다. 또한, `HRESULT` (OLE 오류 코드), **CURRENCY** (고정 소수점 숫자 형식) 및 **DATE** (절대 날짜 및 시간) 형식을 지원하고 **IUnknown** 및 `IDispatch` 인터페이스에 대한 포인터도 지원합니다.  
+ 자동화 메서드를 만드는 어려움 중 하나는 공통적이고 "안전한" 메커니즘을 통해 자동화 서버와 자동화 클라이언트 간에 데이터를 전달하는 것입니다. 자동화에서는 **VARIANT** 형식을 사용하여 데이터를 전달하며, **VARIANT** 형식은 태그가 지정된 공용 구조체입니다. 이 형식은 해당 값에 대한 데이터 멤버(익명 C++ 공용 구조체)와 공용 구조체에 저장된 정보 형식을 나타내는 데이터 멤버를 가지고 있습니다. **VARIANT** 형식은 2바이트 및 4바이트 정수, 4바이트 및 8바이트 부동 소수점 수, 문자열, 부울 값 등의 여러 가지 표준 데이터 형식을 지원합니다. 또한 지원는 **HRESULT** (OLE 오류 코드) **통화** (고정 소수점 숫자 형식) 및 **날짜** (절대 날짜 및 시간) 형식 뿐 아니라 에대한포인터`IUnknown` 및 `IDispatch` 인터페이스입니다.  
   
  **VARIANT** 형식은 [COleVariant](../mfc/reference/colevariant-class.md) 클래스에 캡슐화되어 있습니다. 지원되는 **CURRENCY** 및 **DATE** 클래스는 [COleCurrency](../mfc/reference/colecurrency-class.md) 및 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) 클래스에 캡슐화되어 있습니다.  
   

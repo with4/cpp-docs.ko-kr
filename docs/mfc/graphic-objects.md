@@ -51,12 +51,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52b8c6c5b6d27bdf4ce4c9ad46a75c21b9f47333
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2cf7e2c56094727c6956d0e2e21708dd81be4f10
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349784"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930848"
 ---
 # <a name="graphic-objects"></a>그래픽 개체
 Windows는 디바이스 컨텍스트에서 사용할 수 있는 다양한 그리기 도구를 제공합니다. 선을 그리는 펜, 내부를 채우는 브러시 및 텍스트를 그리는 글꼴을 제공합니다. MFC는 Windows의 그리기 도구에 해당하는 그래픽 개체 클래스를 제공합니다. 아래 표에서는 사용 가능한 클래스와 그에 해당하는 Windows GDI(그래픽 장치 인터페이스) 핸들 형식을 보여 줍니다.  
@@ -82,7 +82,7 @@ Windows는 디바이스 컨텍스트에서 사용할 수 있는 다양한 그리
   
  클래스 라이브러리의 각 그래픽 개체 클래스에는 해당 클래스의 그래픽 개체를 만들 수 있는 생성자가 있으며, `CreatePen`과 같은 적절한 만들기 함수를 사용하여 초기화해야 합니다.  
   
- 클래스 라이브러리의 각 그래픽 개체 클래스에는 MFC 개체를 연결된 Windows 핸들에 캐스트하는 캐스트 연산자가 있습니다. 결과 핸들은 연결된 개체가 분리될 때까지 유효합니다. 개체의를 사용 하 여 **분리** 핸들을 분리 하려면 멤버 함수입니다.  
+ 클래스 라이브러리의 각 그래픽 개체 클래스에는 MFC 개체를 연결된 Windows 핸들에 캐스트하는 캐스트 연산자가 있습니다. 결과 핸들은 연결된 개체가 분리될 때까지 유효합니다. 개체의를 사용 하 여 `Detach` 핸들을 분리 하려면 멤버 함수입니다.  
   
  다음 코드에서는 `CPen` 개체를 Windows 핸들에 캐스트합니다.  
   

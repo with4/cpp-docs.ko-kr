@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be596ea38a8d0a3919ed43d9c5478bb0127032d9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 896977da8ca57cc17a9fa3b7864e1744ee07f35d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351724"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930825"
 ---
 # <a name="handlers-for-message-map-ranges"></a>메시지 맵 범위에 대한 처리기
 이 문서에서는 다양 한 메시지 (메시지 한 개를 하나의 함수에 매핑) 대신 단일 메시지 처리기 함수에 매핑하는 방법을 설명 합니다.  
@@ -96,7 +96,7 @@ ms.locfileid: "33351724"
   
  [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
   
- 단일 명령에 대 한 처리기 함수는 일반적으로 매개 변수를 사용합니다. 업데이트 처리기 함수를 제외 하 고 메시지 맵 범위에 대 한 처리기 함수는 추가 매개 변수를 필요 `nID`, 형식의 **UINT**합니다. 이 매개 변수는 첫 번째 매개 변수입니다. 추가 매개 변수 사용자 실제로 선택 하는 명령을 지정 하는 데 필요한 추가 명령 ID를 수용 합니다.  
+ 단일 명령에 대 한 처리기 함수는 일반적으로 매개 변수를 사용합니다. 업데이트 처리기 함수를 제외 하 고 메시지 맵 범위에 대 한 처리기 함수는 추가 매개 변수를 필요 *nID*, 형식의 **UINT**합니다. 이 매개 변수는 첫 번째 매개 변수입니다. 추가 매개 변수 사용자 실제로 선택 하는 명령을 지정 하는 데 필요한 추가 명령 ID를 수용 합니다.  
   
  처리기 함수를 업데이트 하기 위한 매개 변수 요구 사항에 대 한 자세한 내용은 참조 [예제에 대 한 명령 Id 범위](#_core_example_for_a_range_of_command_ids)합니다.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "33351724"
   
 -   두 개의 명령 Id를 시작 하 고 연속 된 범위를 종료 합니다.  
   
-     다음은 이러한 `ID_VIEW_ZOOM25` 및 `ID_VIEW_ZOOM300`합니다.  
+     다음은 이러한 **ID_VIEW_ZOOM25** 및 **ID_VIEW_ZOOM300**합니다.  
   
 -   명령에 대 한 처리기 함수의 이름입니다.  
   
@@ -119,9 +119,9 @@ ms.locfileid: "33351724"
   
  [!code-cpp[NVC_MFCMessageHandling#9](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_4.h)]  
   
- 업데이트 처리기 함수의 경우에는 이와 유사 하며 보다 유용 하는입니다. 쓰려고 매우 일반적 이기 `ON_UPDATE_COMMAND_UI` 명령 수에 대 한 처리기 작성 하거나 복사, 동일한 코드 반복을 찾습니다. 솔루션은 명령 Id 하나를 처리기 함수를 사용 하 여 업데이트의 범위에 매핑하려면는 `ON_UPDATE_COMMAND_UI_RANGE` 매크로입니다. 명령 Id 연속 된 범위를 구성 해야 합니다. 예를 들어 참조는 **OnUpdateZoom** 처리기와 해당 `ON_UPDATE_COMMAND_UI_RANGE` HIERSVR 샘플의 뷰 클래스의 메시지-맵 항목입니다.  
+ 업데이트 처리기 함수의 경우에는 이와 유사 하며 보다 유용 하는입니다. 쓰려고 매우 일반적 이기 `ON_UPDATE_COMMAND_UI` 명령 수에 대 한 처리기 작성 하거나 복사, 동일한 코드 반복을 찾습니다. 솔루션은 명령 Id 하나를 처리기 함수를 사용 하 여 업데이트의 범위에 매핑하려면는 `ON_UPDATE_COMMAND_UI_RANGE` 매크로입니다. 명령 Id 연속 된 범위를 구성 해야 합니다. 예를 들어 참조는 `OnUpdateZoom` 처리기와 해당 `ON_UPDATE_COMMAND_UI_RANGE` HIERSVR 샘플의 뷰 클래스의 메시지-맵 항목입니다.  
   
- 처리기 함수를 단일 명령에 단일 매개 변수를 정상적으로 수행에 대 한 업데이트 `pCmdUI`, 형식의 **CCmdUI\*** 합니다. 처리기 함수는 달리 메시지 맵 범위에 대 한 업데이트 처리기 함수는 추가 매개 변수가 필요 하지 않습니다 `nID`, 형식의 **UINT**합니다. 사용자가 실제로 선택 되는 명령은 지정 하는 데 필요한 명령 ID에서 발견 되는 `CCmdUI` 개체입니다.  
+ 처리기 함수를 단일 명령에 단일 매개 변수를 정상적으로 수행에 대 한 업데이트 *pCmdUI*, 형식의 `CCmdUI*`합니다. 처리기 함수는 달리 메시지 맵 범위에 대 한 업데이트 처리기 함수는 추가 매개 변수가 필요 하지 않습니다 *nID*, 형식의 **UINT**합니다. 사용자가 실제로 선택 되는 명령은 지정 하는 데 필요한 명령 ID에서 발견 되는 `CCmdUI` 개체입니다.  
   
 ##  <a name="_core_example_for_a_range_of_control_ids"></a> 컨트롤의 범위 Id에 대 한 예제  
  다른 흥미로운 사례 컨트롤 Id의 범위에 대 한 컨트롤 알림 메시지를 단일 처리기에 매핑된다 합니다. 사용자에 10 개의 단추를 클릭할 수 있다고 가정 합니다. 모든 10 단추 처리기에 매핑할 메시지-맵 항목은 다음과 같습니다.  
@@ -136,7 +136,7 @@ ms.locfileid: "33351724"
   
 -   컨트롤의 연속 된 범위와 연결 된 컨트롤 ID 값입니다.  
   
-     다음은 이러한 `IDC_BUTTON1` 및 `IDC_BUTTON10`합니다.  
+     다음은 이러한 **IDC_BUTTON1** 및 **IDC_BUTTON10**합니다.  
   
 -   메시지 처리기 함수의 이름입니다.  
   

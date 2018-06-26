@@ -20,23 +20,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efe510c4376255c24470a799b5dde17021894bf0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c39f2d7803630aaaef6e803e90bf332c74937a71
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342477"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930617"
 ---
 # <a name="adding-controls-by-hand"></a>수동으로 컨트롤 추가
 다음 중 하나 [대화 상자 편집기와 대화 상자에 컨트롤 추가](../mfc/using-the-dialog-editor-to-add-controls.md) 하거나 코드를 직접 추가 합니다.  
   
  컨트롤 개체를 직접 만들려면 일반적으로 c + + 대화 상자에서 c + + 컨트롤 개체 또는 프레임 창 개체를 포함 합니다. 프레임 워크의 여러 다른 개체 처럼 컨트롤 2 단계 생성을 해야합니다. 컨트롤의 호출 해야 **만들기** 부모 대화 상자 또는 프레임 창 만들기의 일부로 멤버 함수입니다. 대화 상자에 대 한 일반적으로 이렇게 [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), 및 프레임 창에서 [OnCreate](../mfc/reference/cwnd-class.md#oncreate)합니다.  
   
- 다음 예제에서는 방법을 선언할 수 있습니다는 `CEdit` 개체에서 파생 된 대화 상자 클래스의 클래스 선언 하 고 호출 하는 **만들기** 멤버 함수에 `OnInitDialog`합니다. 때문에 `CEdit` 개체가 포함 된 개체로 선언 된 대화 상자 개체를 생성 하지만 자체와 여전히 초기화 해야 때 자동으로 구성 됩니다, **만들기** 멤버 함수입니다.  
+ 다음 예제에서는 방법을 선언할 수 있습니다는 `CEdit` 개체에서 파생 된 대화 상자 클래스의 클래스 선언 하 고 호출 하는 `Create` 멤버 함수에 `OnInitDialog`합니다. 때문에 `CEdit` 개체가 포함 된 개체로 선언 된 대화 상자 개체를 생성 하지만 자체와 여전히 초기화 해야 때 자동으로 구성 됩니다, `Create` 멤버 함수입니다.  
   
  [!code-cpp[NVC_MFCControlLadenDialog#1](../mfc/codesnippet/cpp/adding-controls-by-hand_1.h)]  
   
- 다음 `OnInitDialog` 사각형을 설정 하는 함수 호출 **만들기** Windows 편집 컨트롤을 만들고이 연결 하는 초기화 되지 않은 `CEdit` 개체입니다.  
+ 다음 `OnInitDialog` 사각형을 설정 하는 함수 호출 `Create` Windows 편집 컨트롤을 만들고이 연결 하는 초기화 되지 않은 `CEdit` 개체입니다.  
   
  [!code-cpp[NVC_MFCControlLadenDialog#2](../mfc/codesnippet/cpp/adding-controls-by-hand_2.cpp)]  
   

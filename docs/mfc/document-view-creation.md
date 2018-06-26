@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb89180db8e1a6cce2c40bbb4bae0965b972afa2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 894bb5a0b3a4c86d764fc6f4a0e4b9ae18422669
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343527"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931855"
 ---
 # <a name="documentview-creation"></a>문서/뷰 만들기
-프레임 워크의 구현을 제공는 `New` 및 **열려** (등)에 있는 명령을 **파일** 메뉴. 만드는 새 문서와 관련 된 보기 및 프레임 창에는 application 개체, 문서 서식 파일, 새로 만든된 문서 및 새로 만든된 프레임 창 등 않습니다. 다음 표에서 개체를 만드는 기능을 요약 합니다.  
+프레임 워크의 구현을 제공는 **새로** 및 **열려** (등)에 있는 명령을 **파일** 메뉴. 만드는 새 문서와 관련 된 보기 및 프레임 창에는 application 개체, 문서 서식 파일, 새로 만든된 문서 및 새로 만든된 프레임 창 등 않습니다. 다음 표에서 개체를 만드는 기능을 요약 합니다.  
   
 ### <a name="object-creators"></a>개체 작성자  
   

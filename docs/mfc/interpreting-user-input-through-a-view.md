@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e3ade658046ad789a92bce044d12e5a6e76f7ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f62d64ed9479f1d1003536f8c4944b53d04d696f
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349431"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931992"
 ---
 # <a name="interpreting-user-input-through-a-view"></a>뷰를 통해 사용자 입력 해석
 보기의 다른 멤버 함수를 처리 하 고 모든 사용자 입력 해석 합니다. 일반적으로 처리할 뷰 클래스에 메시지 처리기 멤버 함수를 정의 합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "33349431"
   
  [메시지 처리 및 매핑 항목](../mfc/message-handling-and-mapping.md) 명령에 메뉴 항목 및 기타 사용자 인터페이스 개체를 할당 하는 방법 및 명령 처리기 함수에 바인딩하는 방법을 설명 합니다. [메시지 처리 및 매핑 항목](../mfc/message-handling-and-mapping.md) 도 MFC 명령이 라우팅하 하는 방법에 대해 설명 하 고 표준 Windows 메시지에 대 한 처리기를 포함 하는 개체를 보냅니다.  
   
- 예를 들어 응용 프로그램은 직접 마우스 뷰에 그리기를 구현 해야 할 수 있습니다. Scribble 샘플에서는 처리 하는 방법을 보여 줍니다.는 `WM_LBUTTONDOWN`, `WM_MOUSEMOVE`, 및 `WM_LBUTTONUP` 를 시작 하려면 각각 메시지, 계속 하 고 선 세그먼트의 그리기를 종료 합니다. 반면에 선택 항목으로 보기에서 마우스 클릭을 해석 하 경우에 따라 할 수 있습니다. 보기의 `OnLButtonDown` 처리기 함수는 사용자 그리기 또는 선택 되었는지 확인할 것입니다. 을 선택한 경우 처리기 보기에서 일부 개체의 범위 내에서 클릭 했는지 확인 고 게,이 경우 선택 된 것으로 개체를 표시 하도록 디스플레이가 변경 됩니다.  
+ 예를 들어 응용 프로그램은 직접 마우스 뷰에 그리기를 구현 해야 할 수 있습니다. Scribble 샘플에는 시작, 계속 및 선 세그먼트의 그리기를 종료 하려면 각각 WM_LBUTTONDOWN, WM_MOUSEMOVE 및 WM_LBUTTONUP 메시지를 처리 하는 방법을 보여 줍니다. 반면에 선택 항목으로 보기에서 마우스 클릭을 해석 하 경우에 따라 할 수 있습니다. 보기의 `OnLButtonDown` 처리기 함수는 사용자 그리기 또는 선택 되었는지 확인할 것입니다. 을 선택한 경우 처리기 보기에서 일부 개체의 범위 내에서 클릭 했는지 확인 고 게,이 경우 선택 된 것으로 개체를 표시 하도록 디스플레이가 변경 됩니다.  
   
  보기 잘라내기, 복사, 붙여넣기 또는 클립보드를 사용 하 여 선택한 데이터를 삭제 하 고 편집 메뉴에서 같은 특정 메뉴 명령을 처리할 수도 있습니다. 이러한 처리기는 함수를 호출할 클립보드 관련 멤버의 일부 클래스의 `CWnd` 또는 클립보드에 선택한 데이터 항목을 전송할 수 있습니다.  
   

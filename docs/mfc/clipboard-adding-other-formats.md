@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c28fd1d628d0aed79028e43d9cce383f3acbb4ae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 67004ac43193d47720626da241a8030ba396abdf
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342149"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932021"
 ---
 # <a name="clipboard-adding-other-formats"></a>클립보드: 기타 서식 추가
-이 항목에서는 특히 OLE 지원에 대 한 지원 되는 형식 목록을 확장 하는 방법을 설명 합니다. 항목 [클립보드: 데이터 복사 및 붙여 넣으십시오](../mfc/clipboard-copying-and-pasting-data.md) 클립보드에서 복사 / 붙여넣기를 지 원하는 데 필요한 최소 구현에 설명 합니다. 클립보드에 복사 하는 유일한 형식은 이것이 구현할 모든 이면 `CF_METAFILEPICT`, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**, 해야 했으며 `CF_LINKSOURCE`합니다. 대부분의 응용 프로그램에는이 세 가지 보다 클립보드에 많은 서식이 필요 합니다.  
+이 항목에서는 특히 OLE 지원에 대 한 지원 되는 형식 목록을 확장 하는 방법을 설명 합니다. 항목 [클립보드: 데이터 복사 및 붙여 넣으십시오](../mfc/clipboard-copying-and-pasting-data.md) 클립보드에서 복사 / 붙여넣기를 지 원하는 데 필요한 최소 구현에 설명 합니다. 클립보드에 복사 하는 유일한 형식은 이것이 구현할 모든 이면 **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**, 해야 했으며 **CF_LINKSOURCE**합니다. 대부분의 응용 프로그램에는이 세 가지 보다 클립보드에 많은 서식이 필요 합니다.  
   
 ##  <a name="_core_registering_custom_formats"></a> 사용자 지정 형식 등록  
  모든 사용자 지정 클립보드 형식을 등록 하는 경우 사용 동일한 절차에 따라 사용자 지정 서식을 만들려면: 형식 사용 하 여의 이름을 전달 하는 **됩니다** 함수 사용 하 고 해당 반환 값으로 id 형식입니다.  

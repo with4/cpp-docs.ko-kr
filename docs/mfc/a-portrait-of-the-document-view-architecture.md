@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d366cf7c9aee6988d715edbe30e3938c30557e2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d903d183675ae4b79d4610fe4413cfd8bf0e704c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329818"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928946"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>문서/뷰 아키텍처에 대한 자세한 설명
 일반 MFC 응용 프로그램에서 문서 및 뷰 페어링 되었습니다. 데이터는 문서에 저장 되어 있지만 보기에 특권 수준의 권한이 데이터에 대 한 액세스. 표시에서 저장소 및 데이터의 유지 관리를 구분 하는 보기에서 문서를 분리 합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "33329818"
 ## <a name="gaining-access-to-document-data-from-the-view"></a>문서 보기에서 데이터에 액세스  
  뷰 데이터에 액세스의 문서를는 [GetDocument](../mfc/reference/cview-class.md#getdocument) 작동 하거나 뷰 클래스를 c + +에는 문서에 대 한 포인터를 반환 하는 `friend` 문서 클래스의 합니다. 다음 보기는 데이터에 액세스를 사용 하 여 그리기 또는 다른 방법으로 조작할로 준비가 되 면 데이터를 가져오기 위해 합니다.  
   
- 보기의 예를 들어에서 [OnDraw](../mfc/reference/cview-class.md#ondraw) 멤버 함수는 보기에 사용 **GetDocument** 문서 포인터를 가져올 수 있습니다. 해당 포인터를 사용 하 여 액세스 하는 `CString` 문서에서 데이터 멤버입니다. 보기에는 문자열에 전달 된 `TextOut` 함수입니다. 이 예제에 대 한 코드를 보려면 [뷰에 그리기](../mfc/drawing-in-a-view.md)합니다.  
+ 보기의 예를 들어에서 [OnDraw](../mfc/reference/cview-class.md#ondraw) 멤버 함수는 보기에 사용 `GetDocument` 문서 포인터를 가져올 수 있습니다. 해당 포인터를 사용 하 여 액세스 하는 `CString` 문서에서 데이터 멤버입니다. 보기에는 문자열에 전달 된 `TextOut` 함수입니다. 이 예제에 대 한 코드를 보려면 [뷰에 그리기](../mfc/drawing-in-a-view.md)합니다.  
   
 ## <a name="user-input-to-the-view"></a>보기에 대 한 사용자 입력  
  보기 선택 또는 데이터의 편집으로 자체 내에서 마우스 클릭을 해석할 수 있습니다. 마찬가지로 키 입력 데이터 입력 또는 편집으로 해석할 수 있습니다. 텍스트를 관리 하는 뷰에서 사용자가 입력 문자열을 가정 합니다. 보기 문서에 대 한 포인터를 가져오고 일부 데이터 구조에 저장 된 문서에 새 데이터를 전달 하려면 포인터를 사용 합니다.  

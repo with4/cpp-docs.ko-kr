@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 313cbe53189a4a6e9b87b1723a166de83f56df05
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 356d7acd67747f4310ed0e4f564df7d1533e88ed
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354919"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930650"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX 컨트롤: ActiveX 컨트롤에서 그림 사용하기
 이 문서에서는 일반적인 그림 유형 및 ActiveX 컨트롤에서 구현하는 방법을 설명합니다. 다음과 같은 내용을 다룹니다.  
@@ -71,11 +71,11 @@ ms.locfileid: "33354919"
      ActiveX 컨트롤 그리기를 담당하는 여러 함수가 수정됩니다.  
   
 ##  <a name="_core_additions_to_your_control_project"></a> 컨트롤 프로젝트에 대한 추가  
- 표준 그림 속성 페이지의 속성 페이지 ID를 추가하려면 컨트롤 구현 파일(.CPP)에서 `BEGIN_PROPPAGEIDS` 매크로 뒤에 다음 줄을 삽입합니다.  
+ 표준 그림 속성 페이지에 대 한 속성 페이지 ID를 추가 하려면 컨트롤 구현 파일에 BEGIN_PROPPAGEIDS 매크로 뒤에 다음 줄에 삽입 (합니다. CPP):  
   
  [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
   
- 또한 `BEGIN_PROPPAGEIDS` 매크로의 count 매개 변수를 1만큼 증가시켜야 합니다. 다음 줄에서는 이 작업을 보여 줍니다.  
+ 또한 BEGIN_PROPPAGEIDS 매크로의 count 매개 변수 1 씩 증가 시켜야 합니다. 다음 줄에서는 이 작업을 보여 줍니다.  
   
  [!code-cpp[NVC_MFC_AxPic#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_2.cpp)]  
   
@@ -83,7 +83,7 @@ ms.locfileid: "33354919"
   
  [!code-cpp[NVC_MFC_AxPic#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]  
   
- 데이터 멤버 이름을 `m_pic`로 지정할 필요는 없습니다. 아무 이름이나 지정해도 됩니다.  
+ 데이터 멤버 이름을 필요 없는 *m_pic*; 아무 이름이 나 지정 해도 됩니다.  
   
  다음에는 그림 형식을 지원하는 사용자 지정 속성을 추가합니다.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "33354919"
 >  사용자 컨트롤 클래스 및 함수 이름은 위의 예제와 다를 수 있습니다.  
   
 ###  <a name="_core_modifications_to_your_control_project"></a> 컨트롤 프로젝트 수정  
- 컨트롤 프로젝트에 필요한 항목을 추가한 후 ActiveX 컨트롤의 렌더링에 영향을 주는 여러 함수를 수정해야 합니다. 이러한 함수, `OnResetState`, `OnDraw`및 사용자 지정 그림 속성의 Get/Set 함수는 컨트롤 구현 파일에 있습니다. 이 예제에서 컨트롤 클래스는 `CSampleCtrl`, `CPictureHolder` 데이터 멤버는 `m_pic`, 사용자 지정 그림 속성 이름은 `ControlPicture`입니다.  
+ 컨트롤 프로젝트에 필요한 항목을 추가한 후 ActiveX 컨트롤의 렌더링에 영향을 주는 여러 함수를 수정해야 합니다. 이러한 함수, `OnResetState`, `OnDraw`및 사용자 지정 그림 속성의 Get/Set 함수는 컨트롤 구현 파일에 있습니다. (이 예제에서 컨트롤 클래스 호출 됩니다 `CSampleCtrl`, `CPictureHolder` 데이터 멤버 라고 *m_pic*, 사용자 지정 그림 속성 이름은 `ControlPicture`.)  
   
  컨트롤 `OnResetState` 함수에서 `COleControl::OnResetState`호출 뒤에 다음과 같은 선택적 줄을 추가합니다.  
   

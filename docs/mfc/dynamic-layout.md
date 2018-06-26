@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7518e2fdd07254b8b1991fae8a41f26058920858
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e0fcfff6bcca8cb073c337043490d32f8724aad
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350851"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930354"
 ---
 # <a name="dynamic-layout"></a>동적 레이아웃
 Visual Studio 2015의 mfc를 조정할 수 있는 대화 상자를 만들 수 있습니다 및 레이아웃 크기 변경에 따라 조정 하는 방식을 제어할 수 있습니다. 예를 들어 항상 맨 아래에 유지되도록 대화 상자의 맨 아래 단추를 아래쪽 가장자리에 연결할 수 있습니다. 사용자가 대화 상자를 확장할 때 확장되도록 ListBox, EditBox 및 텍스트 필드와 같은 특정 컨트롤을 설정할 수도 있습니다.  
@@ -31,7 +31,7 @@ Visual Studio 2015의 mfc를 조정할 수 있는 대화 상자를 만들 수 �
   
  ![대화 상자 크기를 조정 합니다. ] (../mfc/media/mfcdynamiclayout5.png "mfcdynamiclayout5")  
   
- IDE의 리소스 편집기에서 각 컨트롤에 대한 세부 정보를 지정하여 동적 레이아웃을 제어하거나, 특정 컨트롤에 대한 CMFCDynamicLayout 개체에 액세스하고 속성을 설정하여 프로그래밍 방식으로 제어할 수 있습니다.  
+ 에 액세스 하 여 프로그래밍 방식으로 수 있습니다 또는 IDE의 리소스 편집기에서 각 컨트롤에 대 한 정보를 지정 하 여 동적 레이아웃을 제어할 수 있습니다는 `CMFCDynamicLayout` 개체에 대 한 특정 제어 및 속성을 설정 합니다.  
   
 ### <a name="setting-dynamic-layout-properties-in-the-resource-editor"></a>리소스 편집기에서 동적 레이아웃 속성 설정  
  코드를 작성하지 않고 리소스 편집기를 사용하여 대화 상자에 대한 동적 레이아웃 동작을 설정할 수 있습니다.  
@@ -61,7 +61,7 @@ Visual Studio 2015의 mfc를 조정할 수 있는 대화 상자를 만들 수 �
   
 1.  대화 상자 클래스의 구현 코드에서 대화 상자에 대한 동적 레이아웃을 지정할 위치를 찾거나 만듭니다. 예를 들어 대화 상자에 `AdjustLayout`과 같은 메서드를 추가하고 레이아웃을 변경해야 하는 위치에서 호출할 수 있습니다. 생성자에서 이 메서드를 처음 호출하거나 대화 상자를 변경한 후 호출할 수 있습니다.  
   
-2.  대화 상자에 대 한 호출 [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout), CWnd 클래스의 메서드. GetDynamicLayout은 CMFCDynamicLayout 개체에 대한 포인터를 반환합니다.  
+2.  대화 상자에 대 한 호출 [GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout)의 메서드는 `CWnd` 클래스입니다. `GetDynamicLayout` 에 대 한 포인터를 반환 합니다.는 `CMFCDynamicLayout` 개체입니다.  
   
  ```  
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
@@ -106,7 +106,7 @@ Visual Studio 2015의 mfc를 조정할 수 있는 대화 상자를 만들 수 �
   
 9. 사용자가 크기 조정 대화 상자에서 다음에 [cmfcdynamiclayout:: Adjust](../mfc/reference/cmfcdynamiclayout-class.md#adjust) 설정을 실제로 적용 되는 메서드를 호출 합니다.  
   
-10. 동적 레이아웃을 사용 하지 않도록 설정 하려는 경우 호출 [cwnd:: Enabledynamiclayout](../mfc/reference/cwnd-class.md#enabledynamiclayout) 와 `FALSE` 에 대 한는 `bEnabled` 매개 변수입니다.  
+10. 동적 레이아웃을 사용 하지 않도록 설정 하려는 경우 호출 [cwnd:: Enabledynamiclayout](../mfc/reference/cwnd-class.md#enabledynamiclayout) 와 **FALSE** 에 대 한는 *b 사용* 매개 변수입니다.  
   
  ```  
     pDialog->EnableDynamicLayout(FALSE);
@@ -122,7 +122,7 @@ Visual Studio 2015의 mfc를 조정할 수 있는 대화 상자를 만들 수 �
 
  ```  
   
-     명명된 리소스는 다음 예제와 같이 리소스 파일에서 AFX_DIALOG_LAYOUT 항목의 형식으로 레이아웃 정보를 포함하는 대화 상자를 참조해야 합니다.  
+     명명 된 리소스의 형태로 레이아웃 정보를 포함 하는 대화 상자를 참조 해야 합니다는 **AFX_DIALOG_LAYOUT** 다음 예제와 같이 리소스 파일의 항목:  
   
  ' ' * / / / * / / * / / AFX_DIALOG_LAYOUT * / /  
  

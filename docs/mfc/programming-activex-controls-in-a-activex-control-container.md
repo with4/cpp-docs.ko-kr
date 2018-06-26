@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bae926cfc7e83edeef9ee68c7ce7118c55009a08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1bd8a99faa4cf0444782f402e69da761a8c25e2
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355043"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929957"
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>ActiveX 컨트롤 컨테이너: ActiveX 컨트롤 컨테이너에서 ActiveX 컨트롤 프로그래밍
 이 문서에서는 노출 된에 액세스 하기 위한 프로세스를 설명 [메서드](../mfc/mfc-activex-controls-methods.md) 및 [속성](../mfc/mfc-activex-controls-properties.md) ActiveX 컨트롤을 포함 합니다. 기본적으로, 다음이 단계를 수행 합니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "33355043"
 ##  <a name="_core_member_variable_modifications_to_the_project"></a> 프로젝트에 멤버 변수를 수정  
  ActiveX 컨트롤 프로젝트에 추가 되 고 대화 상자 컨테이너에 포함 된, 되 면 프로젝트의 다른 부분에서 액세스할 수 있습니다. 컨트롤에 액세스 하는 가장 쉬운 방법은 [멤버 변수를 만들고](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) 대화 상자 클래스의 `CContainerDlg` (2 단계), 즉 Visual c + + 프로젝트에 추가 하는 래퍼 클래스와 같은 유형의 합니다. 다음 멤버 변수를 사용 하 여 언제 든 지 포함 된 컨트롤에 액세스 합니다.  
   
- 경우는 **멤버 변수 추가** 추가 하는 대화 상자는 `m_circctl` 멤버 프로젝트에 변수를 다음 줄에 추가 하는 헤더 파일 (합니다. H)는 `CContainerDlg` 클래스:  
+ 경우는 **멤버 변수 추가** 추가 하는 대화 상자는 *m_circctl* 멤버 프로젝트에 변수를 다음 줄에 추가 하는 헤더 파일 (합니다. H)는 `CContainerDlg` 클래스:  
   
  [!code-cpp[NVC_MFC_AxCont#4](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_4.h)]  
 [!code-cpp[NVC_MFC_AxCont#5](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_5.h)]  
@@ -92,7 +92,7 @@ ms.locfileid: "33355043"
   
  에 컨트롤의 속성을 수정할 수 있는 공통 위치는 `OnInitDialog` 주 대화 상자 클래스의 멤버 함수입니다. 이 함수는 하기 바로 전에 호출 대화 상자가 표시 되 고 컨트롤은 컨트롤을 포함 하 여 해당 콘텐츠를 초기화 하는 데 사용 됩니다.  
   
- 다음 코드 예제에서는 `m_circctl` 포함된 Circ 컨트롤의 캡션 및 CircleShape 속성을 수정 하는 멤버 변수:  
+ 다음 코드 예제에서는 *m_circctl* 포함된 Circ 컨트롤의 캡션 및 CircleShape 속성을 수정 하는 멤버 변수:  
   
  [!code-cpp[NVC_MFC_AxCont#7](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_7.cpp)]  
   

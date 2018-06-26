@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce7a4d6dc6edf122b5d9b5301768dea8389e771e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5879082ddc23630e5ee497d8abf6b65873a2b6d4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345919"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931966"
 ---
 # <a name="handling-ttnneedtext-notification-for-tool-tips"></a>도구 설명에 대한 TTN_NEEDTEXT 알림 처리
 일부로 [도구 설명을 사용 하도록 설정](../mfc/enabling-tool-tips.md)를 처리 하는 **TTN_NEEDTEXT** 소유자 창의 메시지 맵에 다음 항목을 추가 하 여 메시지:  
@@ -48,7 +48,7 @@ ms.locfileid: "33345919"
  에 대 한 포인터는 [NMTTDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760258) 구조입니다. 이 구조에 대해서도 설명에서 추가로 [TOOLTIPTEXT 구조](../mfc/tooltiptext-structure.md)합니다.  
   
  `pResult`  
- 결과 코드에 대 한 포인터를 반환 하기 전에 설정할 수 있습니다. **TTN_NEEDTEXT** 처리기를 무시할 수는 `pResult` 매개 변수입니다.  
+ 결과 코드에 대 한 포인터를 반환 하기 전에 설정할 수 있습니다. **TTN_NEEDTEXT** 처리기를 무시할 수는 *pResult* 매개 변수입니다.  
   
  폼 보기 알림 처리기의 예:  
   

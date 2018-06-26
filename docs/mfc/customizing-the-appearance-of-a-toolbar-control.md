@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 96ec459e1c956c805991f2e37d22b8260f0ffdf2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48825a264b7d82152f47e70c5911bea400c313db
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343696"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932119"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>도구 모음 컨트롤의 모양 사용자 지정
 클래스 `CToolBarCtrl` 모양을 (및 경우에 따라서는 동작)의 도구 모음 개체에 영향을 주는 많은 스타일을 제공 합니다. 도구 모음 개체를 설정 하 여 수정는 `dwCtrlStyle` 의 매개 변수는 `CToolBarCtrl::Create` (또는 `CToolBar::CreateEx`) 도구 모음 컨트롤을 처음 만들 때 멤버 함수입니다.  
@@ -47,17 +47,17 @@ ms.locfileid: "33343696"
 -   **TBSTYLE_ALTDRAG** alt 키를 누른 상태로 끌거나 도구 모음 단추의 위치를 변경할 수 있습니다. 이 스타일을 지정 하지 않으면 사용자는 키를 누른 채 단추 끌기를 유효 해야 합니다.  
   
     > [!NOTE]
-    >  `CCS_ADJUSTABLE` 스타일 도구 모음 단추를 끌어다 놓을 수 있도록 지정 해야 합니다.  
+    >  **CCS_ADJUSTABLE** 스타일 도구 모음 단추를 끌어다 놓을 수 있도록 지정 해야 합니다.  
   
 -   **TBSTYLE_REGISTERDROP** 생성 **TBN_GETOBJECT** 알림 메시지를 요청 하려면 도구 모음 단추 위로 마우스 포인터를 이동할 때 대상 개체를 삭제 합니다.  
   
  나머지 스타일 도구 모음 개체의 시각적 및 표시 되지 않는 측면을 영향을 줍니다.  
   
--   `TBSTYLE_WRAPABLE` 여러 줄의 단추를 가질 수 있는 도구 모음을 만듭니다. 도구 모음 단추 "바꿈하여" 다음 줄으로 도구 모음 같은 줄에서 모든 단추를 포함 하는 범위가 너무 좁으면 해지면 합니다. 분리 및 바꿈은 경계에서 발생 합니다.  
+-   **TBSTYLE_WRAPABLE** 단추의 여러 줄을 가질 수 있는 도구 모음을 만듭니다. 도구 모음 단추 "바꿈하여" 다음 줄으로 도구 모음 같은 줄에서 모든 단추를 포함 하는 범위가 너무 좁으면 해지면 합니다. 분리 및 바꿈은 경계에서 발생 합니다.  
   
--   **TBSTYLE_CUSTOMERASE** 생성 **NM_CUSTOMDRAW** 알림 메시지를 처리할 때 `WM_ERASEBKGND` 메시지입니다.  
+-   **TBSTYLE_CUSTOMERASE** 생성 **NM_CUSTOMDRAW** 알림 메시지를 처리할 때 **WM_ERASEBKGND** 메시지입니다.  
   
--   `TBSTYLE_TOOLTIPS` 응용 프로그램 도구 모음에서 단추에 대 한 설명 텍스트를 표시 하는 데 사용할 수 있는 도구 설명 컨트롤을 만듭니다.  
+-   **TBSTYLE_TOOLTIPS** 응용 프로그램 도구 모음에서 단추에 대 한 설명 텍스트를 표시 하는 데 사용할 수 있는 도구 설명 컨트롤을 만듭니다.  
   
  도구 모음 스타일과 확장 된 스타일의 전체 목록을 보려면 [도구 모음 컨트롤과 단추 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760439) 및 [확장 스타일 도구 모음](http://msdn.microsoft.com/library/windows/desktop/bb760430) Windows sdk에서입니다.  
   

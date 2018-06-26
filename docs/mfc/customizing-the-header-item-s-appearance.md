@@ -16,29 +16,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b58af1efc0558fe9195f56c31df11827d57f731
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e09f8bc0b61e22435ee348968f117940b57132e3
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342896"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930877"
 ---
 # <a name="customizing-the-header-item39s-appearance"></a>헤더 항목을 사용자 지정&#39;s 모양
 설정 하 여는 *dwStyle* 헤더 컨트롤을 처음 만들 때 매개 변수 ([CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create)), 모양을 정의할 수 있습니다 및 머리글의 동작 항목 또는 헤더의 자체를 제어 합니다.  
   
  샘플을 설정할 수 있습니다, 스타일 및 각각의 용도 다음과 같습니다.  
   
--   누름 같습니다 헤더 항목으로 사용 된 `HDS_BUTTONS` 스타일입니다.  
+-   누름 같습니다 헤더 항목으로 사용 된 **HDS_BUTTONS** 스타일입니다.  
   
      Microsoft Outlook에서 하는 것 처럼 특정 열에 의해 데이터 정렬 등의 헤더 항목에 대해 마우스 클릭에 대 한 응답으로 작업을 수행 하려는 경우에이 스타일을 사용 합니다.  
   
--   헤더 항목 "핫 트래킹을" 모양 위로 마우스 커서를 가져갈 때, 사용 된 `HDS_HOTTRACK` 스타일입니다.  
+-   헤더 항목 "핫 트래킹을" 모양 위로 마우스 커서를 가져갈 때, 사용 된 **사용 하려면 HDS_HOTTRACK** 스타일입니다.  
   
      그렇지 않으면 플랫의 항목 위에 포인터를 움직이면 3D 개요를 표시 하는 핫 트래킹을 모음입니다.  
   
--   헤더 컨트롤은 숨겨야 나타내려면 사용은 `HDS_HIDDEN` 스타일입니다.  
+-   헤더 컨트롤은 숨겨야 나타내려면 사용는 **HDS_HIDDEN** 스타일입니다.  
   
-     `HDS_HIDDEN` 스타일 헤더 컨트롤은 데이터 컨테이너 및 시각적 컨트롤이 아닌로 사용 하도록 나타냅니다. 이 스타일 컨트롤은 자동으로 숨겨지지 않습니다 되지만 대신의 동작에 영향을 `CHeaderCtrl::Layout`합니다. 에 반환 된 값의 **cy** 의 멤버는 `WINDOWPOS` 구조는 0이 됩니다 나타내는 컨트롤은 사용자에 게 표시할 수 없습니다.  
+     **HDS_HIDDEN** 스타일 헤더 컨트롤은 데이터 컨테이너 및 시각적 컨트롤이 아닌로 사용 하도록 나타냅니다. 이 스타일 컨트롤은 자동으로 숨겨지지 않습니다 되지만 대신의 동작에 영향을 `CHeaderCtrl::Layout`합니다. 에 반환 된 값의 *cy* 의 멤버는 `WINDOWPOS` 구조는 0이 됩니다 나타내는 컨트롤은 사용자에 게 표시할 수 없습니다.  
   
  이러한 속성에 대 한 자세한 내용은 참조 [항목](http://msdn.microsoft.com/library/windows/desktop/bb775238) Windows sdk에서입니다. 헤더 컨트롤에 항목을 추가 하는 방법에 대 한 정보를 참조 하십시오. [헤더 컨트롤에 항목 추가](../mfc/adding-items-to-the-header-control.md)합니다.  
   

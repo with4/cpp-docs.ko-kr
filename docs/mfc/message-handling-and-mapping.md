@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 66171c5df636597a2ff6be0438b558dc418b72af
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 906d84d70b3bf2ae2a9da14ce9e5b06ed92d3730
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348530"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931036"
 ---
 # <a name="message-handling-and-mapping"></a>메시지 처리 및 매핑
 이 문서에서는 MFC 프레임 워크에 의해 메시지 및 명령 처리 되는 방법 및 연결을 하는 방법은 해당 처리기 함수를 설명 합니다.  
   
  Windows에 대 한 기존 프로그램에서 Windows 메시지 창 프로시저에서 큰 switch 문에서 처리 됩니다. MFC 대신 사용 하 여 [메시지 맵](../mfc/message-categories.md) 별도 클래스 멤버 함수에 직접 메시지를 매핑할 수 있습니다. 메시지 맵은이 위해 가상 함수를 보다 효율적이 고 가장 적합 한 c + + 개체에서 처리할 메시지를 허용-응용 프로그램, 문서, 뷰 및 등입니다. 컨트롤 Id 또는 단일 메시지 또는 메시지를 명령 Id의 범위를 매핑할 수 있습니다.  
   
- **WM_COMMAND** 메시지-일반적으로 메뉴, 도구 모음 단추 또는 액셀러레이터 키에 의해 생성-또한 메시지 맵 메커니즘을 사용 합니다. MFC는 표준을 정의 [라우팅](../mfc/command-routing.md) 응용 프로그램 간의 메시지 명령, 창, 뷰 및 프로그램의 액티브 문서를 작성 합니다. 이 라우팅은 해야 할 경우 재정의할 수 있습니다.  
+ WM_COMMAND 메시지-일반적으로 메뉴, 도구 모음 단추 또는 액셀러레이터 키에 의해 생성-또한 메시지 맵 메커니즘을 사용 합니다. MFC는 표준을 정의 [라우팅](../mfc/command-routing.md) 응용 프로그램 간의 메시지 명령, 창, 뷰 및 프로그램의 액티브 문서를 작성 합니다. 이 라우팅은 해야 할 경우 재정의할 수 있습니다.  
   
  메시지 맵 사용자 인터페이스 개체 (예: 메뉴 및 도구 모음 단추)를 업데이트 하는 방법을 지정에 따라 현재 컨텍스트를 사용 하지 않도록 설정 하거나 설정 합니다.  
   

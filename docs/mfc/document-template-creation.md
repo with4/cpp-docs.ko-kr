@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36650e0ae1ce042a887c6a87d1bbe62d8b6d7fe4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3695d2795fa324051b76cf012aae7e1b1f275fa1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345796"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928024"
 ---
 # <a name="document-template-creation"></a>문서 템플릿 만들기
-에 대 한 응답에서 새 문서를 만들 때 한 `New` 또는 **열려** 명령을 **파일** 메뉴 문서 서식 파일 문서를 볼 수 있는 새 프레임 창을 만듭니다.  
+에 대 한 응답에서 새 문서를 만들 때는 **새로** 또는 **열려** 명령을 **파일** 메뉴에서 문서 템플릿을 볼 수 있는 새 프레임 창을 만듭니다는 문서입니다.  
   
  문서 템플릿 생성자는 어떤 종류의 문서, 창 및 뷰 템플릿을 만들 수 수를 지정 합니다. 이 문서 서식 파일 생성자에 전달할 인수에 의해 결정 됩니다. 다음 코드에서는 생성 한 [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) 샘플 응용 프로그램:  
   

@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b53ab98e44a8696795e810b8d6f643720d8f9655
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f5d1475412de736970d0ae36a39540121bfbc01
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355141"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930717"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX 컨트롤: 글꼴 사용
 텍스트를 표시 하는 ActiveX 컨트롤 글꼴 속성을 변경 하 여 텍스트 모양을 변경 하려면 컨트롤 사용자를 허용할 수 있습니다. 글꼴 속성 글꼴 개체로 구현 되 고 두 가지 형식 중 하나일 수 있습니다: 주식 또는 사용자 지정 합니다. 스톡 글꼴 속성은 속성 추가 마법사를 사용 하 여 추가할 수 있는 미리 글꼴 속성입니다. 사용자 지정 글꼴 속성은 하지 미리 및 속성의 동작과 사용 컨트롤 개발자가 결정 합니다.  
@@ -137,11 +137,11 @@ ms.locfileid: "33355141"
   
 8.  **마침**을 클릭합니다.  
   
- 속성 추가 마법사에 추가 하는 코드 만듭니다는 `HeadingFont` 사용자 지정 속성을는 `CSampleCtrl` 클래스 및 샘플. IDL 파일입니다. 때문에 `HeadingFont` Get/Set 속성 형식인 속성 추가 마법사는 `CSampleCtrl` 포함 하도록 클래스의 디스패치 맵에 `DISP_PROPERTY_EX_ID` [DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex) 매크로 항목:  
+ 속성 추가 마법사에 추가 하는 코드 만듭니다는 `HeadingFont` 사용자 지정 속성을는 `CSampleCtrl` 클래스 및 샘플. IDL 파일입니다. 때문에 `HeadingFont` Get/Set 속성 형식인 속성 추가 마법사는 `CSampleCtrl` 는 DISP_PROPERTY_EX_ID 포함 하도록 클래스의 디스패치 맵[DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex) 매크로 항목:  
   
  [!code-cpp[NVC_MFC_AxFont#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_5.cpp)]  
   
- `DISP_PROPERTY_EX` 매크로 연결는 `HeadingFont` 속성 이름을 해당 `CSampleCtrl` 클래스 Get 및 Set 메서드, `GetHeadingFont` 및 `SetHeadingFont`합니다. 속성 값의 형식은 지정 합니다. 이 경우 **VT_FONT**합니다.  
+ DISP_PROPERTY_EX 매크로 연결는 `HeadingFont` 속성 이름을 해당 `CSampleCtrl` 클래스 Get 및 Set 메서드, `GetHeadingFont` 및 `SetHeadingFont`합니다. 속성 값의 형식은 지정 합니다. 이 경우 VT_FONT입니다.  
   
  속성 추가 마법사는 또한 선언이 컨트롤 헤더 파일에 추가 (합니다. H)에 `GetHeadingFont` 및 `SetHeadingFont` 함수 및 해당 함수 템플릿 컨트롤 구현 파일에 추가 (합니다. CPP):  
   
@@ -160,11 +160,11 @@ ms.locfileid: "33355141"
   
  컨트롤 구현 파일에서 (합니다. CPP)에서 다음을 수행 합니다.  
   
--   초기화 `m_fontHeading` 제어 생성자에서 합니다.  
+-   초기화 *m_fontHeading* 제어 생성자에서 합니다.  
   
      [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]  
   
--   정적 선언 **FONTDESC** 글꼴의 기본 특성을 포함 하는 구조입니다.  
+-   글꼴의 기본 특성을 포함 하는 정적 FONTDESC 구조체를 선언 합니다.  
   
      [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]  
   
@@ -192,27 +192,27 @@ ms.locfileid: "33355141"
   
      [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]  
   
- 사용자 지정 글꼴 속성을 구현한 후 컨트롤의 현재 글꼴을 변경 하려면 사용자가 컨트롤을 표준 Font 속성 페이지 구현 되어야 합니다. 표준 Font 속성 페이지에 대 한 속성 페이지 ID를 추가 하려면 삽입 뒤에 다음 줄은 `BEGIN_PROPPAGEIDS` 매크로:  
+ 사용자 지정 글꼴 속성을 구현한 후 컨트롤의 현재 글꼴을 변경 하려면 사용자가 컨트롤을 표준 Font 속성 페이지 구현 되어야 합니다. 표준 Font 속성 페이지에 대 한 속성 페이지 ID를 추가 하려면 BEGIN_PROPPAGEIDS 매크로 뒤에 다음 줄을 삽입 합니다.  
   
  [!code-cpp[NVC_MFC_AxFont#17](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_17.cpp)]  
   
- 또한 `BEGIN_PROPPAGEIDS` 매크로의 count 매개 변수를 1만큼 증가시켜야 합니다. 다음 줄에서는 이 작업을 보여 줍니다.  
+ 또한 BEGIN_PROPPAGEIDS 매크로의 count 매개 변수 1 씩 증가 시켜야 합니다. 다음 줄에서는 이 작업을 보여 줍니다.  
   
  [!code-cpp[NVC_MFC_AxFont#18](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_18.cpp)]  
   
  이러한 변경 내용을 적용 된 후 추가 기능을 포함 하도록 전체 프로젝트를 다시 작성 합니다.  
   
 ###  <a name="_core_processing_font_notifications"></a> 글꼴 알림 처리  
- 대부분의 경우에서 컨트롤 font 개체의 특성 최근에 수정 되었다면 알고 있어야 합니다. 각 font 개체는 수의 멤버 함수를 호출 하 여 변경 될 때 알림을 제공 하는 **IFontNotification** 에서 구현 된 인터페이스 `COleControl`합니다.  
+ 대부분의 경우에서 컨트롤 font 개체의 특성 최근에 수정 되었다면 알고 있어야 합니다. 각 font 개체는 수의 멤버 함수를 호출 하 여 변경 될 때 알림을 제공 하는 `IFontNotification` 에서 구현 된 인터페이스 `COleControl`합니다.  
   
- 해당 알림을 처리 하는 컨트롤 스톡 글꼴 속성을 사용할 경우의 `OnFontChanged` 의 멤버 함수 `COleControl`합니다. 사용자 지정 글꼴 속성을 추가 하면 동일한 구현을 사용 되도록 할 수 있습니다. 이전 섹션의 예제에서는이 작업을 수행 했습니다 전달 하 여 &**m_xFontNotification** 초기화할 때는 **m_fontHeading** 멤버 변수입니다.  
+ 해당 알림을 처리 하는 컨트롤 스톡 글꼴 속성을 사용할 경우의 `OnFontChanged` 의 멤버 함수 `COleControl`합니다. 사용자 지정 글꼴 속성을 추가 하면 동일한 구현을 사용 되도록 할 수 있습니다. 이전 섹션의 예제에서는이 작업을 수행 했습니다 전달 하 여 &*m_xFontNotification* 초기화할 때는 *m_fontHeading* 멤버 변수입니다.  
   
  ![여러 글꼴 개체 인터페이스 구현](../mfc/media/vc373q1.gif "vc373q1")  
 여러 글꼴 개체 인터페이스 구현  
   
- 위 그림에서는 실선 글꼴 두 개체를 모두의 동일한 구현을 사용 하는 표시 **IFontNotification**합니다. 글꼴 변경 구분 하려는 경우이 인해 문제가 발생할 수 있습니다.  
+ 위 그림에서는 실선 글꼴 두 개체를 모두의 동일한 구현을 사용 하는 표시 `IFontNotification`합니다. 글꼴 변경 구분 하려는 경우이 인해 문제가 발생할 수 있습니다.  
   
- 컨트롤의 글꼴 개체 알림 간을 서로 구별 하는 한 가지 방법은 별도의 구현을 만드는 것은 **IFontNotification** 컨트롤에서 각 font 개체에 대 한 인터페이스입니다. 이 기법을 사용 하면 문자열 또는 최근에 수정 된 글꼴을 사용 하는 문자열을 업데이트 하 여 그리기 코드를 최적화할 수 있습니다. 다음 섹션에서는 두 번째 Font 속성에 대 한 별도 알림 인터페이스를 구현 하는 데 필요한 단계를 보여 줍니다. 두 번째 font 속성으로 간주 됩니다는 `HeadingFont` 이전 섹션에 추가 된 속성입니다.  
+ 컨트롤의 글꼴 개체 알림 간을 서로 구별 하는 한 가지 방법은 별도의 구현을 만드는 것은 `IFontNotification` 컨트롤에서 각 font 개체에 대 한 인터페이스입니다. 이 기법을 사용 하면 문자열 또는 최근에 수정 된 글꼴을 사용 하는 문자열을 업데이트 하 여 그리기 코드를 최적화할 수 있습니다. 다음 섹션에서는 두 번째 Font 속성에 대 한 별도 알림 인터페이스를 구현 하는 데 필요한 단계를 보여 줍니다. 두 번째 font 속성으로 간주 됩니다는 `HeadingFont` 이전 섹션에 추가 된 속성입니다.  
   
 ###  <a name="_core_implementing_a_new_font_notification_interface"></a> 새 글꼴 알림 인터페이스 구현  
  여러 글꼴 알림의 구분 하기 위해 컨트롤에서 사용 되는 각 글꼴에 대 한 새 알림 인터페이스를 구현 합니다. 다음 섹션에서는 컨트롤 헤더와 구현 파일을 수정 하 여 새 글꼴 알림 인터페이스를 구현 하는 방법에 설명 합니다.  
@@ -225,11 +225,11 @@ ms.locfileid: "33355141"
  이렇게 하면 구현을 만들어집니다는 `IPropertyNotifySink` 이라는 인터페이스 `HeadingFontNotify`합니다. 라는 메서드를 포함 하는이 새 인터페이스 `OnChanged`합니다.  
   
 ### <a name="additions-to-the-implementation-file"></a>구현 파일에 대 한 추가  
- (제어 생성자)에서 제목 글꼴을 초기화 하는 코드에서 변경 `&m_xFontNotification` 를 `&m_xHeadingFontNotify`합니다. 다음 코드를 추가 합니다.  
+ (제어 생성자)에서 제목 글꼴을 초기화 하는 코드에서 변경 &*m_xFontNotification* 를 &*m_xHeadingFontNotify*합니다. 다음 코드를 추가 합니다.  
   
  [!code-cpp[NVC_MFC_AxFont#20](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_20.cpp)]  
   
- `AddRef` 및 `Release` 의 메서드는 `IPropertyNotifySink` 인터페이스에는 ActiveX 컨트롤 개체에 대 한 참조 횟수를 추적 계속 합니다. 인터페이스 포인터에 대 한 액세스 권한을 갖게 하는 컨트롤, 컨트롤 호출 `AddRef` 참조 수를 증가 합니다. 호출 컨트롤 포인터로 완료 되 면 `Release`, 훨씬 같은 방식으로 **작업** 전역 메모리 블록을 호출할 수 있습니다. 이 인터페이스에 대 한 참조 횟수를 0이 되 면 인터페이스 구현을 해제할 수 있습니다. 이 예제에서는 `QueryInterface` 함수 반환에 대 한 포인터는 `IPropertyNotifySink` 특정 개체에 대 한 인터페이스입니다. 이 함수에는 ActiveX 컨트롤을을 지 원하는 인터페이스를 결정 하는 개체를 쿼리할 수 있습니다.  
+ `AddRef` 및 `Release` 의 메서드는 `IPropertyNotifySink` 인터페이스에는 ActiveX 컨트롤 개체에 대 한 참조 횟수를 추적 계속 합니다. 인터페이스 포인터에 대 한 액세스 권한을 갖게 하는 컨트롤, 컨트롤 호출 `AddRef` 참조 수를 증가 합니다. 호출 컨트롤 포인터로 완료 되 면 `Release`, 훨씬 같은 방식으로 `GlobalFree` 전역 메모리 블록을 호출할 수 있습니다. 이 인터페이스에 대 한 참조 횟수를 0이 되 면 인터페이스 구현을 해제할 수 있습니다. 이 예제에서는 `QueryInterface` 함수 반환에 대 한 포인터는 `IPropertyNotifySink` 특정 개체에 대 한 인터페이스입니다. 이 함수에는 ActiveX 컨트롤을을 지 원하는 인터페이스를 결정 하는 개체를 쿼리할 수 있습니다.  
   
  이러한 변경이 프로젝트에 적용 된 후 프로젝트를 다시 작성 하 고 테스트 컨테이너를 사용 하 여 인터페이스를 테스트 합니다. 테스트 컨테이너에 액세스하는 방법은 [테스트 컨테이너로 속성 및 이벤트 테스트](../mfc/testing-properties-and-events-with-test-container.md) 를 참조하세요.  
   

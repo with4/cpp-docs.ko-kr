@@ -26,15 +26,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2a30f2ccf1963fe2985794a2bf8eca0c49474cb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 13a78c769a3c32f0293598ec6bd3c07788ea07b5
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349521"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929226"
 ---
 # <a name="documents-views-and-the-framework"></a>문서, 뷰 및 프레임워크
-MFC 프레임 워크의 핵심에는 문서 및 보기의 개념입니다. 문서에는 편집 세션에는 사용자가 데이터 개체입니다. 의해 만들어집니다는 `New` 또는 **열려** 명령을 **파일** 메뉴 일반적으로 파일에 저장 됩니다. (클래스에서 파생 되는 표준 MFC 문서 **CDocument**, 액티브 문서 및 OLE의 복합 문서와 다릅니다.) 뷰를 통해 사용자 상호 작용 하는 문서와 window 개체는.  
+MFC 프레임 워크의 핵심에는 문서 및 보기의 개념입니다. 문서에는 편집 세션에는 사용자가 데이터 개체입니다. 의해 만들어집니다는 **새로** 또는 **열려** 명령을 **파일** 메뉴 일반적으로 파일에 저장 됩니다. (클래스에서 파생 되는 표준 MFC 문서 `CDocument`, 액티브 문서 및 OLE의 복합 문서와 다릅니다.) 뷰를 통해 사용자 상호 작용 하는 문서와 window 개체는.  
   
  실행 중인 응용 프로그램은 키 개체입니다.  
   

@@ -22,15 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d87b2a601e6e25d61de6ca6ad639ac6a62861ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e5c2bced4f7f04cf75c72e68db0f99e0f89d2566
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347697"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930518"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>MFC 모듈의 상태 데이터 관리
-이 문서에서는 MFC 모듈 및 (path 코드는 응용 프로그램을 통해 실행할 때) 실행 흐름을 입력 하 고 하거나 모듈에서 벗어날 때이 상태가 업데이트 되는 방법을 상태 데이터를 설명 합니다. 모듈 상태와 전환의 `AFX_MANAGE_STATE` 및 `METHOD_PROLOGUE` 매크로 대해서도 설명 합니다.  
+이 문서에서는 MFC 모듈 및 (path 코드는 응용 프로그램을 통해 실행할 때) 실행 흐름을 입력 하 고 하거나 모듈에서 벗어날 때이 상태가 업데이트 되는 방법을 상태 데이터를 설명 합니다. AFX_MANAGE_STATE 및 METHOD_PROLOGUE 매크로 함께 모듈 상태 전환에 대해서도 설명 합니다.  
   
 > [!NOTE]
 >  용어 "모듈" 여기 실행 프로그램 또는 DLL (또는 집합에 Dll의) 응용 프로그램의 나머지와 독립적으로 작동 하는, 참조 했지만 공유 MFC DLL의 복사본을 사용 합니다. ActiveX 컨트롤은 모듈의 일반적인 예입니다.  

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b71d61175e5446ac33dd0ff6a011d06f601b5a1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a1b9b04647717fc5892421f2b45947ebd079a0c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345390"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928729"
 ---
 # <a name="-overridables-comment"></a>// 재정의 가능 주석
 `// Overridables` MFC 클래스 선언의 섹션 가상 함수가 포함 된 기본 클래스의 동작을 수정 해야 하는 경우 파생된 클래스에서 재정의할 수 있습니다. 일반적으로 이름으로 지정 된 "On"로 시작 하지만 꼭 필요 하지 않음. 여기에서 함수는 재정의할 수 종종 구현 하거나 어떤 종류의 "callback" 또는 "후크"를 제공 하도록 설계 되었습니다. 일반적으로 이러한 구성원 보호 됩니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "33345390"
   
  `virtual void OnDraw( ) = 0;`  
   
- 클래스를 나열 하는 샘플에서 `CStdioFile`에 [주석 예는](../mfc/an-example-of-the-comments.md), / / 재정의 가능 섹션이 없습니다.이 목록에 포함 됩니다. 클래스 **CDocument**, 반면에 약 10 재정의 가능한 멤버 함수를 나열 합니다.  
+ 클래스를 나열 하는 샘플에서 `CStdioFile`에 [주석 예는](../mfc/an-example-of-the-comments.md), / / 재정의 가능 섹션이 없습니다.이 목록에 포함 됩니다. 클래스 `CDocument`, 반면에 약 10 재정의 가능한 멤버 함수를 나열 합니다.  
   
  일부 클래스에도 표시 주석 `// Advanced Overridables`합니다. 이것은 고급만 함수 프로그래머를 재정의 하려고 해야 합니다. 하지 않을 재정의 해야 합니다.  
   

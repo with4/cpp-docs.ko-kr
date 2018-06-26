@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c59004f27e0f3a1c629daae621df831fe82cd7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c4ebbc8e792e36461f7c52c17fa23815239e323
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347219"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929092"
 ---
 # <a name="html-basics"></a>HTML 기초
 대부분의 브라우저는 검색 중인 페이지의 HTML 소스를 검사 하는 기능이 있습니다. HTML (Hypertext markup language) 태그의 수를 표시 하는 소스를 볼 때 텍스트와 섞여 꺾쇠 괄호 (<>)으로 둘러싸여 있습니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "33347219"
   
 1.  메모장 이나 일반 텍스트 편집기를 엽니다.  
   
-2.  **파일** 메뉴 선택 `New`합니다.  
+2.  **파일** 메뉴 선택 **새로**합니다.  
   
 3.  다음 줄을 입력 합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "33347219"
   
 4.  **파일** 메뉴 선택 **저장**, c:\webpages\First.htm로 파일을 저장 하 고 있습니다. 파일을 편집기에서 열어 둡니다.  
   
-5.  브라우저와 스위치는 **파일** 메뉴에서 선택 **열려**, 또는 형식 `file://C:/webpages/first.htm` 브라우저의 URL 편집 상자에 있습니다. "상위 HTML 태그입니다." 창 캡션 사용 하 여 빈 페이지가 표시 됩니다.  
+5.  브라우저와 스위치는 **파일** 메뉴에서 선택 **열려**, 또는 형식 *file://C:/webpages/first.htm* 브라우저의 URL 편집 상자에 있습니다. "상위 HTML 태그입니다." 창 캡션 사용 하 여 빈 페이지가 표시 됩니다.  
   
      태그 쌍을 꺾쇠 괄호에 포함 된 방식을 살펴봅니다. 태그는 대/소문자를 구분 하지 않지만 대/소문자는 대개 태그를 강조 하기.  
   

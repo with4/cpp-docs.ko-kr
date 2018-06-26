@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab5195cc2381e515688182ad73452b07afd06b98
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 267d47b7e061e3bde39b199cd948ba9875dea16b
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353275"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929733"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX 컨트롤: ActiveX 컨트롤에서 데이터 바인딩 사용
 ActiveX 컨트롤의 보다 강력한 용도 중 하나는 데이터베이스의 특정 필드와 바인딩하려면 컨트롤의 속성 수 있는 데이터 바인딩입니다. 바인딩된 속성의 데이터를 수정할 때 컨트롤에는 데이터베이스 및 레코드 필드를 업데이트 해야 하는 요청에 알립니다. 데이터베이스에는 다음 요청이 실패 또는 성공 컨트롤에 알립니다.  
@@ -51,7 +51,7 @@ ActiveX 컨트롤의 보다 강력한 용도 중 하나는 데이터베이스의
  더 많이 사용할 수 있습니다 하지만 데이터 바인딩 스톡 속성을 만들 수는 [바인딩 가능한 get/set 메서드에](#vchowcreatingbindablegetsetmethod)합니다.  
   
 > [!NOTE]
->  스톡 속성에는 **바인딩 가능한** 및 **requestedit** 기본적으로 특성입니다.  
+>  스톡 속성에는 `bindable` 및 `requestedit` 기본적으로 특성입니다.  
   
 #### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>속성 추가 마법사를 사용 하 여 바인딩할 수 있는 스톡 속성을 추가 하려면  
   

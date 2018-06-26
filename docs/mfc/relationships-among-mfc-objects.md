@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a0cdc4ebeab81a0eb69b96b161350f75ebc8b14
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef6a9e605948fac4f31338f87b4d00bbaa8712f4
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379521"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931654"
 ---
 # <a name="relationships-among-mfc-objects"></a>MFC 개체 간 관계
 문서/뷰 만들기 프로세스를 전체적으로 배치 하려면 실행 중인 프로그램을 검토: 문서, 뷰를 포함 하는 데 사용 되는 프레임 창 및 문서에 연결 된 보기입니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "33379521"
  일반적으로 프레임 창에는 하나의 뷰만 이지만 경우에 따라 분할 창에서와 같이 동일한 프레임 창 보기가 포함 되어 있는 여러 합니다. 현재 활성 보기;에 대 한 포인터를 유지 하는 프레임 창 포인터는 다른 뷰가 활성화 될 때마다 업데이트 됩니다.  
   
 > [!NOTE]
->  주 프레임 창에 대 한 포인터에 저장 되는 [m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd) application 개체의 멤버 변수입니다. 에 대 한 호출 `OnFileNew` 의 재정의에서 `InitInstance` 의 멤버 함수 `CWinApp` 설정 `m_pMainWnd` 드립니다. 호출 하지 않으면 `OnFileNew`에서 변수의 값을 설정 해야 `InitInstance` 직접 합니다. (SDI COM 구성 요소 (서버) 응용 프로그램 설정할 없습니다 변수 상관 명령줄에 있으면.) `m_pMainWnd` 클래스의 멤버는 이제 `CWinThread` 대신 `CWinApp`합니다.  
+>  주 프레임 창에 대 한 포인터에 저장 되는 [m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd) application 개체의 멤버 변수입니다. 에 대 한 호출 `OnFileNew` 의 재정의에서 `InitInstance` 의 멤버 함수 `CWinApp` 설정 *m_pMainWnd* 드립니다. 호출 하지 않으면 `OnFileNew`에서 변수의 값을 설정 해야 `InitInstance` 직접 합니다. (SDI COM 구성 요소 (서버) 응용 프로그램 설정할 없습니다 변수 상관 명령줄에 있으면.) *m_pMainWnd* 클래스의 멤버는 이제 `CWinThread` 대신 `CWinApp`합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [문서 템플릿 및 문서/뷰 만들기 프로세스](../mfc/document-templates-and-the-document-view-creation-process.md)   

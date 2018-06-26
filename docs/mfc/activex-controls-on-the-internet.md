@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a42a7bc042301cfbd7d62f82b7c676686146850
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 02a4c2e8d9da553ffe14c8d9d061d11d7357c19c
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352315"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931979"
 ---
 # <a name="activex-controls-on-the-internet"></a>인터넷의 ActiveX 컨트롤
 ActiveX 컨트롤은 OLE 컨트롤 지정의 업데이트 된 버전입니다. 컨트롤은 다양 한 인터넷에서 COM 인식 웹 브라우저를 비롯 한 다른 컨테이너에에서 사용할 수 있는 프로그래밍 가능한 소프트웨어 구성 요소를 개발 하기 위한 기본 아키텍처입니다. ActiveX 컨트롤은 인터넷 컨트롤이 될 수 있습니다 및 활성 문서에 기능을 추가 하거나 웹 페이지의 일부가 될 수 있습니다. 웹 페이지에 컨트롤은 스크립팅을 사용 하 여 서로 통신할 수 있습니다.  
@@ -39,7 +39,7 @@ ActiveX 컨트롤은 OLE 컨트롤 지정의 업데이트 된 버전입니다. �
   
  **ActiveX 컨트롤을 하기 위해 다음과 같은 컨트롤 같아야 합니다.**  
   
--   지원 된 **IUnknown** 인터페이스입니다.  
+-   지원 된 `IUnknown` 인터페이스입니다.  
   
 -   COM 개체 여야 합니다.  
   
@@ -85,7 +85,7 @@ ActiveX 컨트롤은 OLE 컨트롤 지정의 업데이트 된 버전입니다. �
   
 #### <a name="to-create-your-project-using-the-mfc-activex-control-wizard"></a>MFC ActiveX 컨트롤 마법사를 사용 하 여 프로젝트를 만들려면  
   
-1.  클릭 `New` 에 **파일** 메뉴.  
+1.  클릭 **새로** 에 **파일** 메뉴.  
   
 2.  선택 **MFC ActiveX 컨트롤 마법사** Visual c + +에서 프로젝트 및 프로젝트 이름을 지정 합니다.  
   
@@ -129,7 +129,7 @@ ActiveX 컨트롤은 OLE 컨트롤 지정의 업데이트 된 버전입니다. �
   
      [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]  
   
-5.  구현 된 **Get/Set** 메서드. 에 대 한 **가져오기**, 문자열을 반환 합니다. 에 대 한 `Set`, 속성 및 호출 로드 `SetModifiedFlag`합니다.  
+5.  `Get/Set` 메서드를 구현합니다. 에 대 한 `Get`, 문자열을 반환 합니다. 에 대 한 `Set`, 속성 및 호출 로드 `SetModifiedFlag`합니다.  
   
      [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]  
   

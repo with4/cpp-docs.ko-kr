@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb451abc3aabe52d9aeffbc92f80df38f02e0b99
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 99480a8d77aef1822034be100a03f73cfa9d1be0
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354020"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930006"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX 컨트롤: 고급 항목
 이 문서에서는 ActiveX 컨트롤을 개발 하는 데 관련 된 고급 항목에 설명 합니다. 여기에는 다음이 포함됩니다.  
@@ -79,9 +79,9 @@ ms.locfileid: "33354020"
   
 8.  에 **Get 함수가** 및 **함수 설정** 상자, Get 및 Set 함수에 대 한 고유 이름을 입력 하거나 기본 이름을 적용 합니다.  
   
-9. 라는 매개 변수 추가 `row` (형식 `short`)를 사용 하 여는 **매개 변수 이름** 및 **매개 변수 형식** 컨트롤입니다.  
+9. 라는 매개 변수 추가 *행* (형식 *짧은*)를 사용 하 여는 **매개 변수 이름** 및 **매개 변수 형식** 컨트롤입니다.  
   
-10. 두 번째 매개 변수 추가 `column` (형식 `short`).  
+10. 두 번째 매개 변수 추가 *열* (형식 *짧은*).  
   
 11. **마침**을 클릭합니다.  
   
@@ -111,48 +111,48 @@ ms.locfileid: "33354020"
   
 |Error|설명|  
 |-----------|-----------------|  
-|**CTL_E_ILLEGALFUNCTIONCALL**|잘못 된 함수 호출|  
-|**CTL_E_OVERFLOW**|오버플로|  
-|**CTL_E_OUTOFMEMORY**|메모리 부족|  
-|**CTL_E_DIVISIONBYZERO**|0으로 나누기|  
-|**CTL_E_OUTOFSTRINGSPACE**|문자열 공간이 부족 합니다.|  
-|**CTL_E_OUTOFSTACKSPACE**|스택 공간이 부족 합니다.|  
-|**CTL_E_BADFILENAMEORNUMBER**|파일 이름 또는 번호가 잘못되었습니다.|  
-|**CTL_E_FILENOTFOUND**|파일이 없습니다.|  
-|**CTL_E_BADFILEMODE**|파일 모드가 잘못되었습니다.|  
-|**CTL_E_FILEALREADYOPEN**|파일이 이미 열려 있습니다.|  
-|**CTL_E_DEVICEIOERROR**|장치 입/출력(I/O) 오류입니다.|  
-|**CTL_E_FILEALREADYEXISTS**|파일이 이미 있습니다.|  
-|**CTL_E_BADRECORDLENGTH**|레코드 길이가 잘못되었습니다.|  
-|**CTL_E_DISKFULL**|디스크가 꽉 찼습니다.|  
-|**CTL_E_BADRECORDNUMBER**|레코드 개수가 잘못되었습니다.|  
-|**CTL_E_BADFILENAME**|잘못 된 파일 이름|  
-|**CTL_E_TOOMANYFILES**|파일이 너무 많습니다.|  
-|**CTL_E_DEVICEUNAVAILABLE**|장치를 사용할 수 없습니다.|  
-|**CTL_E_PERMISSIONDENIED**|사용 권한이 거부됨|  
-|**CTL_E_DISKNOTREADY**|디스크가 준비되지 않았습니다.|  
-|**CTL_E_PATHFILEACCESSERROR**|경로/파일 액세스 오류입니다.|  
-|**CTL_E_PATHNOTFOUND**|경로를 찾을 수 없습니다.|  
-|**CTL_E_INVALIDPATTERNSTRING**|잘못된 패턴 문자열|  
-|**CTL_E_INVALIDUSEOFNULL**|NULL 잘못 사용 했습니다.|  
-|**CTL_E_INVALIDFILEFORMAT**|잘못 된 파일 형식|  
-|**CTL_E_INVALIDPROPERTYVALUE**|잘못 된 속성 값|  
-|**CTL_E_INVALIDPROPERTYARRAYINDEX**|잘못 된 속성 배열 인덱스|  
-|**CTL_E_SETNOTSUPPORTEDATRUNTIME**|Set은 런타임에 지원되지 않습니다.|  
-|**CTL_E_SETNOTSUPPORTED**|Set은 지원되지 않습니다(읽기 전용 속성).|  
-|**CTL_E_NEEDPROPERTYARRAYINDEX**|속성 배열 인덱스가 필요합니다.|  
-|**CTL_E_SETNOTPERMITTED**|Set은 허용되지 않습니다.|  
-|**CTL_E_GETNOTSUPPORTEDATRUNTIME**|Get은 런타임에 지원되지 않습니다.|  
-|**CTL_E_GETNOTSUPPORTED**|Get은 지원되지 않습니다(쓰기 전용 속성).|  
-|**CTL_E_PROPERTYNOTFOUND**|속성을 찾을 수 없습니다.|  
-|**CTL_E_INVALIDCLIPBOARDFORMAT**|클립보드 형식이 잘못 되었습니다|  
-|**CTL_E_INVALIDPICTURE**|그림이 잘못 되었습니다.|  
-|**CTL_E_PRINTERERROR**|프린터 오류|  
-|**CTL_E_CANTSAVEFILETOTEMP**|파일을 TEMP에 저장할 수 없습니다.|  
-|**CTL_E_SEARCHTEXTNOTFOUND**|검색 텍스트를 찾을 수 없습니다.|  
-|**CTL_E_REPLACEMENTSTOOLONG**|대체 텍스트가 너무 깁니다.|  
+|CTL_E_ILLEGALFUNCTIONCALL|잘못 된 함수 호출|  
+|CTL_E_OVERFLOW|오버플로|  
+|CTL_E_OUTOFMEMORY|메모리 부족|  
+|CTL_E_DIVISIONBYZERO|0으로 나누기|  
+|CTL_E_OUTOFSTRINGSPACE|문자열 공간이 부족 합니다.|  
+|CTL_E_OUTOFSTACKSPACE|스택 공간이 부족 합니다.|  
+|CTL_E_BADFILENAMEORNUMBER|파일 이름 또는 번호가 잘못되었습니다.|  
+|CTL_E_FILENOTFOUND|파일이 없습니다.|  
+|CTL_E_BADFILEMODE|파일 모드가 잘못되었습니다.|  
+|CTL_E_FILEALREADYOPEN|파일이 이미 열려 있습니다.|  
+|CTL_E_DEVICEIOERROR|장치 입/출력(I/O) 오류입니다.|  
+|CTL_E_FILEALREADYEXISTS|파일이 이미 있습니다.|  
+|CTL_E_BADRECORDLENGTH|레코드 길이가 잘못되었습니다.|  
+|CTL_E_DISKFULL|디스크가 꽉 찼습니다.|  
+|CTL_E_BADRECORDNUMBER|레코드 개수가 잘못되었습니다.|  
+|CTL_E_BADFILENAME|잘못 된 파일 이름|  
+|CTL_E_TOOMANYFILES|파일이 너무 많습니다.|  
+|CTL_E_DEVICEUNAVAILABLE|장치를 사용할 수 없습니다.|  
+|CTL_E_PERMISSIONDENIED|사용 권한이 거부됨|  
+|CTL_E_DISKNOTREADY|디스크가 준비되지 않았습니다.|  
+|CTL_E_PATHFILEACCESSERROR|경로/파일 액세스 오류입니다.|  
+|CTL_E_PATHNOTFOUND|경로를 찾을 수 없습니다.|  
+|CTL_E_INVALIDPATTERNSTRING|잘못된 패턴 문자열|  
+|CTL_E_INVALIDUSEOFNULL|NULL 잘못 사용 했습니다.|  
+|CTL_E_INVALIDFILEFORMAT|잘못 된 파일 형식|  
+|CTL_E_INVALIDPROPERTYVALUE|잘못 된 속성 값|  
+|CTL_E_INVALIDPROPERTYARRAYINDEX|잘못 된 속성 배열 인덱스|  
+|CTL_E_SETNOTSUPPORTEDATRUNTIME|Set은 런타임에 지원되지 않습니다.|  
+|CTL_E_SETNOTSUPPORTED|Set은 지원되지 않습니다(읽기 전용 속성).|  
+|CTL_E_NEEDPROPERTYARRAYINDEX|속성 배열 인덱스가 필요합니다.|  
+|CTL_E_SETNOTPERMITTED|Set은 허용되지 않습니다.|  
+|CTL_E_GETNOTSUPPORTEDATRUNTIME|Get은 런타임에 지원되지 않습니다.|  
+|CTL_E_GETNOTSUPPORTED|Get은 지원되지 않습니다(쓰기 전용 속성).|  
+|CTL_E_PROPERTYNOTFOUND|속성을 찾을 수 없습니다.|  
+|CTL_E_INVALIDCLIPBOARDFORMAT|클립보드 형식이 잘못 되었습니다|  
+|CTL_E_INVALIDPICTURE|그림이 잘못 되었습니다.|  
+|CTL_E_PRINTERERROR|프린터 오류|  
+|CTL_E_CANTSAVEFILETOTEMP|파일을 TEMP에 저장할 수 없습니다.|  
+|CTL_E_SEARCHTEXTNOTFOUND|검색 텍스트를 찾을 수 없습니다.|  
+|CTL_E_REPLACEMENTSTOOLONG|대체 텍스트가 너무 깁니다.|  
   
- 필요한 경우 사용 하 여는 **CUSTOM_CTL_SCODE** 표준 코드 중 하나에 의해 적용 되지 않는 조건에 대 한 사용자 지정 오류 코드를 정의 하는 매크로입니다. 이 매크로 대 한 매개 변수는 1000 사이의 정수 여야 합니다에서 32767 까지입니다. 예를 들어:  
+ 필요한 경우에 표준 코드 중 하나에 의해 적용 되지 않는 조건에 대 한 사용자 지정 오류 코드를 정의할 CUSTOM_CTL_SCODE 매크로 사용 합니다. 이 매크로 대 한 매개 변수는 1000 사이의 정수 여야 합니다에서 32767 까지입니다. 예를 들어:  
   
  [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]  
   
@@ -174,9 +174,9 @@ ms.locfileid: "33354020"
   
 -   멤버 변수 추가 마법사를 사용 하 여 선택 **제어 변수** 선택한 후 컨트롤의 id입니다. 멤버 변수 이름을 입력 하 고으로 컨트롤의 래퍼 클래스를 선택는 **컨트롤 형식**합니다.  
   
-     -또는-  
+     또는  
   
--   대화 상자 항목으로 지역 변수 및 하위 클래스를 선언 합니다. 다음과 유사한 코드를 삽입 (`CMyCtrl` 는 래퍼 클래스 `IDC_MYCTRL1` 은 컨트롤의 ID):  
+-   대화 상자 항목으로 지역 변수 및 하위 클래스를 선언 합니다. 다음과 유사한 코드를 삽입 (`CMyCtrl` 는 래퍼 클래스 IDC_MYCTRL1은 컨트롤의 ID):  
   
      [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]  
   

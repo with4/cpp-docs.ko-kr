@@ -29,15 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10d488ff21501eb83ef8f3115bdc2e4d899a68d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2385efcef9949eab60b1542b2039e3ff2ac80e38
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345142"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930861"
 ---
 # <a name="dialog-data-exchange"></a>대화 상자 데이터 교환
-DDX 메커니즘을 사용 하는 경우 대화 상자의 초기 값 개체의 멤버 변수를 설정 하면 일반적으로 프로그램 `OnInitDialog` 처리기 또는 대화 생성자입니다. 프레임 워크의 DDX 메커니즘 표시 되는 위치 대화 상자에서 컨트롤을 멤버 변수의 값을 전송 대화 상자가 표시 되기 전에 즉시 자체 대화 상자가 표시 되 면 대 한 응답으로 `DoModal` 또는 **만들기** . 기본 구현은 `OnInitDialog` 에 `CDialog` 호출은 `UpdateData` 클래스의 멤버 함수 `CWnd` 대화 상자에서 컨트롤을 초기화 합니다.  
+DDX 메커니즘을 사용 하는 경우 대화 상자의 초기 값 개체의 멤버 변수를 설정 하면 일반적으로 프로그램 `OnInitDialog` 처리기 또는 대화 생성자입니다. 프레임 워크의 DDX 메커니즘 표시 되는 위치 대화 상자에서 컨트롤을 멤버 변수의 값을 전송 대화 상자가 표시 되기 전에 즉시 자체 대화 상자가 표시 되 면 대 한 응답으로 `DoModal` 또는 `Create`합니다. 기본 구현은 `OnInitDialog` 에 `CDialog` 호출은 `UpdateData` 클래스의 멤버 함수 `CWnd` 대화 상자에서 컨트롤을 초기화 합니다.  
   
  동일한 메커니즘 값에서에서 전송 컨트롤 멤버 변수 확인 단추를 클릭할 때 (호출할 때마다 또는 `UpdateData` 멤버 함수는 인수를 **TRUE**). 대화 상자 데이터 유효성 검사 메커니즘은 유효성 검사 규칙을 지정한 데이터 항목의 유효성을 검사 합니다.  
   

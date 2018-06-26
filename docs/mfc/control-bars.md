@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd25089594d31de21a3a315d997ee01111aff4fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 179e959ce4d6a516f51576712e50408ef41d5c7e
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347901"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931793"
 ---
 # <a name="control-bars"></a>컨트롤 막대
-"컨트롤 막대"에 도구 모음, 상태 표시줄 및 대화 상자 모음에 대 한 일반 이름입니다. MFC 클래스 `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, 및 **CReBar** 클래스에서 파생 [CControlBar](../mfc/reference/ccontrolbar-class.md), 공통 기능을 구현 하는입니다.  
+"컨트롤 막대"에 도구 모음, 상태 표시줄 및 대화 상자 모음에 대 한 일반 이름입니다. MFC 클래스 `CToolBar`, `CStatusBar`, `CDialogBar`, `COleResizeBar`, 및 `CReBar` 클래스에서 파생 [CControlBar](../mfc/reference/ccontrolbar-class.md), 공통 기능을 구현 하는입니다.  
   
  컨트롤 막대는 된 사용자 수 옵션을 선택, 명령을 실행 또는 프로그램 정보를 가져올 컨트롤의 행을 표시 하는 창입니다. 도구 모음, 대화 상자 모음 및 상태 표시줄 컨트롤 막대의 종류를 포함 합니다.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33347901"
 -   클래스에서 rebars [CReBar](../mfc/reference/crebar-class.md)  
   
 > [!IMPORTANT]
->  MFC 버전 4.0 기준으로 도구 모음, 상태 표시줄 및 도구 설명 구현 됩니다 comctl32.dll MFC에 특정 이전 구현에서에서 구현 되는 시스템 기능을 사용 하 여 합니다. Mfc 버전 6.0 **CReBar**, comctl32.dll 기능을 래핑하는 추가 되었습니다.  
+>  MFC 버전 4.0, 도구 모음, 상태 표시줄 및 도구를 기준으로 팁의 구현에서 구현 되는 시스템 기능을 사용 하 여 *comctl32.dll* MFC에 특정 된 이전 구현 대신 합니다. Mfc 버전 6.0 `CReBar`, comctl32.dll 기능을 래핑하는 추가 되었습니다.  
   
  컨트롤 막대의 종류에 대 한 간략 한 소개를 수행 합니다. 자세한 내용은 아래 링크를 참조 하세요.  
   

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a2916bd96bf36333a81b2e8a88e62cc8f562e9e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f11cc3258d577969807dd63c24c00da39652fff
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351156"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931275"
 ---
 # <a name="how-to-add-restart-manager-support"></a>방법: 다시 시작 관리자 지원 추가
 
@@ -47,7 +47,7 @@ ms.locfileid: "33351156"
     m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;  
  ```  
   
-5.  응용 프로그램의 `InitInstance` 메서드가 부모 `InitInstance` 메서드인 [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) 또는 `CWinAppEx::InitInstance`에 추가된 기능입니다. `InitInstance` 메서드는 `m_dwRestartManagerSupportFlags` 매개 변수를 확인합니다.  
+5.  응용 프로그램의 `InitInstance` 메서드가 부모 `InitInstance` 메서드인 [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) 또는 `CWinAppEx::InitInstance`에 추가된 기능입니다. `InitInstance` 검사에 대 한 메서드는는 *m_dwRestartManagerSupportFlags* 매개 변수입니다.  
   
 6.  응용 프로그램을 컴파일하고 실행합니다.  
   

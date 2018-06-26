@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52eaae8074b984da32e115e779724fa86602b8f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a29b11028df84a7e5e67adb7588386f77adcff06
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342493"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929041"
 ---
 # <a name="automation-clients"></a>자동화 클라이언트
 자동화를 다른 응용 프로그램에서 구현 된 개체를 조작 하거나 조작할 수 있도록 개체를 노출 시키는 응용 프로그램에 대 한 수 있게 합니다. 자동화 클라이언트는 다른 응용 프로그램에 속한 노출 된 개체를 조작할 수 있는 응용 프로그램. 개체를 표시 하는 응용 프로그램 자동화 서버를 라고 합니다. 클라이언트는 해당 개체의 속성 및 함수에 액세스 하 여 서버 응용 프로그램의 개체를 조작 합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "33342493"
   
  정적 바인딩된 클라이언트는 클라이언트 응용 프로그램 정적으로 링크 하는 프록시 클래스를 사용 합니다. 이 클래스는 서버 응용 프로그램의 속성 및 작업의 형식이 안전한 c + + 캡슐화를 제공합니다.  
   
- 클래스 `COleDispatchDriver` 자동화의 클라이언트 쪽에 대 한 기본 지원을 제공 합니다. 사용 하 여 `Add New Item` 에서 파생 된 클래스를 만들면 대화 상자, `COleDispatchDriver`합니다.  
+ 클래스 `COleDispatchDriver` 자동화의 클라이언트 쪽에 대 한 기본 지원을 제공 합니다. 사용 하 여 **새 항목 추가** 에서 파생 된 클래스를 만들면 대화 상자, `COleDispatchDriver`합니다.  
   
  그런 다음 속성 및 서버 응용 프로그램의 개체의 함수를 설명 하는 형식 라이브러리 파일을 지정 합니다. 항목 추가 대화 상자가이 파일을 읽고 만듭니다는 `COleDispatchDriver`-응용 프로그램 개체에 액세스 하려면 서버 응용 프로그램의 c + +의 형식이 안전한 방식으로 호출할 수 있는 멤버 함수를 사용 하 여 클래스를 파생 합니다. 추가 기능에서 상속 되며, `COleDispatchDriver` 적절 한 자동화 서버를 호출 하는 과정이 간단해 집니다.  
   

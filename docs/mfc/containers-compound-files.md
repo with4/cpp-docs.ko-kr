@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8983fd8cb51a9f305ef4b0fad4d546fc8091f5a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8bee847d1121a6d5da1679c29a9107c8a447ab1
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33348347"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930227"
 ---
 # <a name="containers-compound-files"></a>컨테이너: 복합 파일
 이 문서에서는 구성 요소와 복합 파일의 구현 및 OLE 응용 프로그램에서 복합 파일을 사용 하는 경우의 단점을 설명 합니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "33348347"
   
 -   디렉터리의 경우 같은 저장소 개체는 다른 저장소 및 스트림 개체를 포함할 수 있습니다.  
   
--   **LockBytes** 개체는 저장소 개체와 실제 하드웨어 간의 인터페이스를 나타냅니다. 어떤 저장 장치에는 실제 바이트를 쓰는 방법을 결정 하는 **LockBytes** 하드 드라이브 등의 글로벌 메모리 영역, 개체에 액세스 합니다. 에 대 한 자세한 내용은 **LockBytes** 개체 및 `ILockBytes` 인터페이스를 참조는 *OLE Programmer's Reference*합니다.  
+-   `LockBytes` 개체는 저장소 개체와 실제 하드웨어 간의 인터페이스를 나타냅니다. 어떤 저장 장치에는 실제 바이트를 쓰는 방법을 결정 하는 `LockBytes` 하드 드라이브 등의 글로벌 메모리 영역, 개체에 액세스 합니다. 에 대 한 자세한 내용은 `LockBytes` 개체 및 `ILockBytes` 인터페이스를 참조는 *OLE Programmer's Reference*합니다.  
   
 ##  <a name="_core_advantages_and_disadvantages_of_compound_files"></a> 복합 파일의 장점 및 단점  
  복합 파일에는 사용할 수 없는 파일 저장소의 이전 메서드와 함께 합니다. 다음과 같은 변경 내용이 해당됩니다.  

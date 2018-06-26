@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 124bec9bfdbdc4e39bab71a80f77d7a06d8444a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d77d603c198adad2ca2c827c355ff8f6808bff66
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350001"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930328"
 ---
 # <a name="ole-background-mfc-implementation"></a>OLE 백그라운드: MFC 구현
 원시 OLE API의 크기와 복잡성으로 인해 OLE 응용 프로그램을 직접 작성하기 위해 호출하는 데 시간이 오래 걸릴 수 있습니다. OLE의 MFC 라이브러리 구현의 목표는 완벽한 기능을 갖춘 OLE 지원 응용 프로그램을 작성하기 위해 해야 할 작업의 양을 줄이는 것입니다.  
@@ -43,10 +43,10 @@ ms.locfileid: "33350001"
  `IMoniker` 인터페이스는 클래스 라이브러리에서 구현됩니다(예: `COleServerItem` 클래스). 그러나 이전에 프로그래머에게 노출되지 않았습니다. 이 인터페이스에 대 한 자세한 내용은 Windows SDK의 OLE 단원에서 OLE 모니커 구현을 참조 합니다. 그러나 클래스도 참조 [CMonikerFile](../mfc/reference/cmonikerfile-class.md) 및 [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)합니다.  
   
  IUnknown 및 IMarshal 인터페이스  
- **IUnknown** 인터페이스는 클래스 라이브러리에서 구현 되지만 프로그래머에 게 노출 되지 않습니다. **IMarshal** 인터페이스는 클래스 라이브러리에서 구현 되지 않지만 내부적으로 사용 됩니다. 클래스 라이브러리를 사용하여 빌드된 자동화 서버는 이미 마샬링 기능이 내장되어 있습니다.  
+ `IUnknown` 인터페이스는 클래스 라이브러리에서 구현 되지만 프로그래머에 게 노출 되지 않습니다. `IMarshal` 인터페이스는 클래스 라이브러리에서 구현 되지 않지만 내부적으로 사용 됩니다. 클래스 라이브러리를 사용하여 빌드된 자동화 서버는 이미 마샬링 기능이 내장되어 있습니다.  
   
  Docfiles(복합 파일)  
- 복합 파일은 클래스 라이브러리에서 부분적으로 지원됩니다. 만드는 것 이상으로 직접 복합 파일을 조작하는 함수는 지원하지 않습니다. MFC 클래스를 사용 하 여 **COleFileStream** 표준 파일 함수와 스트림 조작을 지원 하도록 합니다. 자세한 내용은 문서 참조 [컨테이너: 복합 파일](../mfc/containers-compound-files.md)합니다.  
+ 복합 파일은 클래스 라이브러리에서 부분적으로 지원됩니다. 만드는 것 이상으로 직접 복합 파일을 조작하는 함수는 지원하지 않습니다. MFC 클래스를 사용 하 여 `COleFileStream` 표준 파일 함수와 스트림 조작을 지원 하도록 합니다. 자세한 내용은 문서 참조 [컨테이너: 복합 파일](../mfc/containers-compound-files.md)합니다.  
   
  In-process 서버와 개체 처리기  
  In-process 서버와 개체 처리기를 통해 시각적 데이터 편집을 구현하거나 DLL(동적 연결 라이브러리)의 모든 COM(구성 요소 개체 모델) 개체를 구현할 수 있습니다. 이렇게 하려면 OLE API를 직접 호출하여 DLL을 구현할 수 있습니다. 그러나 사용자 인터페이스가 없는 자동화 서버를 작성하는 경우에는 AppWizard를 사용하여 해당 서버를 In-process 서버로 만든 다음 DLL에 완전히 포함시킬 수 있습니다. 이러한 항목에 대 한 자세한 내용은 참조 [자동화 서버](../mfc/automation-servers.md)합니다.  
