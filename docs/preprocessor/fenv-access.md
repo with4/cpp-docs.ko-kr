@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f74f20b1dcb20c1449d21e91181f8bfb17075b7e
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2f6f379e61ea84c1142bd94be49b55a50b28753
+ms.sourcegitcommit: 1ac8f983eeaacd09135a249dea00f10e1c94e0e3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912968"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36963325"
 ---
 # <a name="fenvaccess"></a>fenv_access
 
-사용 하지 않도록 설정 (**에**) 선택 하거나 선택을 취소 (**오프*) 부동 소수점 환경을 변경할 수 있는 최적화 플래그 테스트 및 모드 변경 합니다.
+사용 하지 않도록 설정 (**에**) 선택 하거나 선택을 취소 (**오프**) 부동 소수점 환경을 변경할 수 있는 최적화 플래그 테스트 및 모드 변경 합니다.
 
 ## <a name="syntax"></a>구문
 

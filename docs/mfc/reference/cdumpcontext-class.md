@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7acd7e94dbb45439a1812f8572ef442e43f9dab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80795131915da89928afc883fec0985087c4f38f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367395"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955445"
 ---
 # <a name="cdumpcontext-class"></a>CDumpContext 클래스
 사용자가 읽을 수 있는 텍스트 형식으로 스트림 지향 진단 출력을 지원합니다.  
@@ -79,7 +79,7 @@ class CDumpContext
   
  `CDumpContext` 클래스에 오버 로드 된 삽입 ( **<<**)에 대 한 연산자 `CObject` 개체의 데이터를 덤프 하는 포인터입니다. 파생된 된 개체에 대 한 사용자 지정 덤프 형식 해야 하는 경우 재정의 [CObject::Dump](../../mfc/reference/cobject-class.md#dump)합니다. 대부분 Microsoft Foundation 클래스에서 재정의 된 구현 `Dump` 멤버 함수입니다.  
   
- 클래스에서 파생 되지 않은 `CObject`와 같은 `CString`, `CTime`, 및 `CTimeSpan`, 자신의 오버 로드 된가 `CDumpContext` 삽입 연산자와 같은 자주 사용 하는 do 구조체로 **CFileStatus**, `CPoint`, 및 `CRect`합니다.  
+ 클래스에서 파생 되지 않은 `CObject`와 같은 `CString`, `CTime`, 및 `CTimeSpan`, 자신의 오버 로드 된가 `CDumpContext` 삽입 연산자와 같은 자주 사용 하는 do 구조체로 `CFileStatus`, `CPoint`, 및 `CRect`.  
   
  사용 하는 경우는 [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) 또는 [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) 매크로 클래스의 구현에서 `CObject::Dump` 의 이름을 인쇄 프로그램 `CObject`-클래스를 파생 합니다. 그렇지 않은 경우 인쇄 됩니다 `CObject`합니다.  
   
@@ -105,7 +105,7 @@ CDumpContext(CFile* pFile = NULL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pFile`  
+ *pFile*  
  에 대 한 포인터는 `CFile` 덤프 대상인 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -113,7 +113,7 @@ CDumpContext(CFile* pFile = NULL);
   
  내부에 쓰지 않아도 `CFile` 덤프 컨텍스트 활성 상태가 아니면 동안 덤프를 방해할 수 있습니다. Windows 환경에서 출력 하 고 디버거 Windows 함수를 통해 라우팅됩니다 **OutputDebugString**합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_Utilities#12](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]  
   
 ##  <a name="dumpashex"></a>  CDumpContext::DumpAsHex  
@@ -136,7 +136,7 @@ CDumpContext& DumpAsHex(WORD w);
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 16 진수 숫자로 지정 된 형식의 항목을 덤프를 호출 합니다. 배열 덤프 하려면 호출 [CDumpContext::HexDump](#hexdump)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_Utilities#13](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]  
   
 ##  <a name="flush"></a>  CDumpContext::Flush  
@@ -146,7 +146,7 @@ CDumpContext& DumpAsHex(WORD w);
 void Flush();
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_Utilities#14](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]  
   
 ##  <a name="getdepth"></a>  CDumpContext::GetDepth  
@@ -159,7 +159,7 @@ int GetDepth() const;
 ### <a name="return-value"></a>반환 값  
  설정한 대로 덤프의 깊이 `SetDepth`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [SetDepth](#setdepth)합니다.  
   
 ##  <a name="hexdump"></a>  CDumpContext::HexDump  
@@ -180,16 +180,16 @@ void HexDump(
  *pby*  
  바이트 덤프를 포함 하는 버퍼에 대 한 포인터입니다.  
   
- `nBytes`  
+ *nBytes*  
  덤프 하는 바이트 수입니다.  
   
- `nWidth`  
+ *nWidth*  
  최대 바이트 수입니다 (하지 출력 줄 너비) 줄당 덤프.  
   
 ### <a name="remarks"></a>설명  
  16 진수를 나타내는 단일, 특정 항목 형식을 덤프 하려면 호출 [CDumpContext::DumpAsHex](#dumpashex)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_Utilities#15](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]  
   
 ##  <a name="operator_lt_lt"></a>  CDumpContext::operator &lt;&lt;  
@@ -223,11 +223,11 @@ CDumpContext& operator<<(HFONT h);
  A `CDumpContext` 참조 합니다. 반환 값을 사용 하 여 소스 코드의 한 줄에 여러 개의 삽입을 작성할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
- 에 대 한 삽입 연산자는 오버 로드 `CObject` 와 대부분의 기본 형식 뿐만 아니라 포인터입니다. 문자열 내용의; 덤프에 문자 결과에 대 한 포인터 에 대 한 포인터 `void` 만 주소의 16 진수 덤프 합니다. A **LONGLONG** 64 비트 부호 있는 정수; 덤프 A **ULONGLONG** 64 비트 부호 없는 정수의 덤프 합니다.  
+ 에 대 한 삽입 연산자는 오버 로드 `CObject` 와 대부분의 기본 형식 뿐만 아니라 포인터입니다. 문자열 내용의; 덤프에 문자 결과에 대 한 포인터 에 대 한 포인터 **void** 만 주소의 16 진수 덤프 합니다. A **LONGLONG** 64 비트 부호 있는 정수; 덤프 A **ULONGLONG** 64 비트 부호 없는 정수의 덤프 합니다.  
   
  사용 하는 경우는 `IMPLEMENT_DYNAMIC` 또는 `IMPLEMENT_SERIAL` 클래스에 다음 삽입 연산자의 구현에서 매크로 통해 `CObject::Dump`의 이름을 인쇄 프로그램 `CObject`-클래스를 파생 합니다. 그렇지 않은 경우 인쇄 됩니다 `CObject`합니다. 재정의 하는 경우는 `Dump` 함수 클래스에 다음의 16 진수 덤프 하는 대신 개체의 내용의 좀 더 의미 있는 출력을 제공할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_Utilities#17](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]  
   
 ##  <a name="setdepth"></a>  CDumpContext::SetDepth  
@@ -247,7 +247,7 @@ void SetDepth(int nNewDepth);
 > [!NOTE]
 >  순환 참조는 전체 덤프에서 찾을 수 없습니다 및 무한 루프가 발생할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_Utilities#16](../../mfc/codesnippet/cpp/cdumpcontext-class_6.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

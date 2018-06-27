@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68a6d5a0cda8c4d7fd06cf7bb6b9c1b60e50374b
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 87e1c696f3da374d7b71e1b24e3a8bd3ebfe41b9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306010"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954873"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>연습: MFC 프로젝트에 D2D 개체 추가
 
@@ -48,7 +48,7 @@ ms.locfileid: "36306010"
 
 1. 에 **파일** 메뉴에서 **새로** 선택한 후 **프로젝트**합니다.
 
-2. 에 **새 프로젝트** 아래 왼쪽된 창에서 대화 상자에서 **설치 된 템플릿**를 확장 하 고 **Visual c + +** 선택한 후 **MFC**합니다. 가운데 창에서 선택 **MFC 응용 프로그램**합니다. **이름** 상자에 `MFCD2DWalkthrough`을 입력합니다. **확인**을 선택합니다.
+2. 에 **새 프로젝트** 아래 왼쪽된 창에서 대화 상자에서 **설치 된 템플릿**를 확장 하 고 **Visual c + +** 선택한 후 **MFC**합니다. 가운데 창에서 선택 **MFC 응용 프로그램**합니다. 에 **이름** 상자에서 입력 *MFCD2DWalkthrough*합니다. **확인**을 선택합니다.
 
 3. 에 **MFC 응용 프로그램 마법사**, 선택 **마침** 모든 설정을 변경 하지 않고 있습니다.
 
@@ -132,7 +132,7 @@ ms.locfileid: "36306010"
 
 3. 에 **메시지** 탭에서 선택 **사용자 정의 메시지 추가**합니다.
 
-4. 에 **사용자 정의 메시지 추가** 대화 상자는 **사용자 지정 Windows 메시지** 상자에 입력 합니다 `AFX_WM_DRAW2D`합니다. 에 **메시지 처리기 이름은** 상자에서 입력 `OnDraw2D`합니다. 선택 된 **등록 메시지** 옵션 선택한 후 **확인**합니다. 이 작업에 대 한 메시지 처리기 추가 `AFX_WM_DRAW2D` 에 메시지는 `CMFCD2DWalkthroughView` 클래스입니다.
+4. 에 **사용자 정의 메시지 추가** 대화 상자는 **사용자 지정 Windows 메시지** 상자에 입력 합니다 *AFX_WM_DRAW2D*합니다. 에 **메시지 처리기 이름은** 상자에서 입력 *OnDraw2D*합니다. 선택 된 **등록 메시지** 옵션 선택한 후 **확인**합니다. 이 작업을 추가 하려면 AFX_WM_DRAW2D 메시지에 대 한 메시지 처리기는 `CMFCD2DWalkthroughView` 클래스입니다.
 
 5. 에 **기존 처리기** 상자 `OnDraw2D`합니다. 선택 **코드 편집** 표시 하는 `CMFCD2DWalkthroughView::OnDraw2D` 메서드. 에 대 한이 코드를 사용 하 여 `CMFCD2DWalkthroughView::OnDrawD2D` 메서드:
 

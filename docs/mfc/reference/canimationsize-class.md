@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1002ace78cf58c34c5e89bbafd81460ec5dabc1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3da7c168cc547ea32f57a145347d8ab2479482a6
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354137"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954678"
 ---
 # <a name="canimationsize-class"></a>CAnimationSize 클래스
 차원에 애니메이션을 적용할 수 있는 크기 개체 기능을 구현합니다.  
@@ -86,7 +86,7 @@ class CAnimationSize : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CAnimationSize::m_cxValue](#m_cxvalue)|캡슐화 된 애니메이션 변수 애니메이션 크기의 너비를 나타내는입니다.|  
 |[CAnimationSize::m_cyValue](#m_cyvalue)|캡슐화 된 애니메이션 변수 애니메이션 크기의 높이 나타내는입니다.|  
@@ -114,10 +114,10 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pCXTransition`  
+ *pCXTransition*  
  너비에 대 한 전환에 대 한 포인터입니다.  
   
- `pCYTransition`  
+ *pCYTransition*  
  Height에 대 한 전환에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -138,16 +138,16 @@ CAnimationSize(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szDefault`  
+ *szDefault*  
  기본 크기를 지정합니다.  
   
- `nGroupID`  
+ *nGroupID*  
  그룹 ID를 지정 합니다.  
   
- `nObjectID`  
+ *nObjectID*  
  개체 ID를 지정 합니다.  
   
- `dwUserData`  
+ *dwUserData*  
  사용자 정의 데이터를 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -163,7 +163,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lst`  
+ *lst*  
  함수가 반환할 때 너비와 높이 나타내는 두 CAnimationVariable 개체에 대 한 포인터를 포함 합니다.  
   
 ##  <a name="getcx"></a>  CAnimationSize::GetCX  
@@ -213,7 +213,7 @@ BOOL GetValue(CSize& szValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szValue`  
+ *szValue*  
  출력입니다. 이 메서드가 반환 될 때 현재 값을 포함 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -257,7 +257,7 @@ void operator=(const CSize& szSrc);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szSrc`  
+ *szSrc*  
  CSize 또는 크기를 나타냅니다.  
   
 ### <a name="remarks"></a>설명  
@@ -271,7 +271,7 @@ void SetDefaultValue(const CSize& szDefault);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szDefault`  
+ *szDefault*  
  새로운 기본 크기를 지정합니다.  
   
 ### <a name="remarks"></a>설명  

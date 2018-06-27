@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea3a2cb6c3d9a454c33654254fb751bfc8679696
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ce1fc576bb37a76a2dafdee47546fdf0dd49fddb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367294"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951035"
 ---
 # <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter 클래스
 `CWnd`파생 창에 대해 도킹 지원을 제공합니다.  
@@ -90,13 +90,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  프로필 이름입니다.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  프로필 인덱스입니다.  
   
- [in] `uiID`  
+ [in] *uiID*  
  창 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -114,13 +114,13 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  프로필 이름입니다.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  프로필 인덱스 (기본값: 창의 컨트롤 ID)입니다.  
   
- [in] `uiID`  
+ [in] *uiID*  
  창 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -135,7 +135,7 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWnd`  
+ [in] *pWnd*  
  래핑할 창 어댑터에 대 한 창에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
