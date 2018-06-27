@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd7d2c5bbd3445e604620dc1f23f45004b7a3b73
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 74dc76f0e638cb335c8ee762908aed36a41230eb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358293"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952351"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx 클래스
 이미지 목록에 대한 지원을 제공하여 콤보 상자 컨트롤을 확장합니다.  
@@ -146,16 +146,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwStyle`  
+ *dwStyle*  
  콤보 상자에 적용 되는 콤보 상자 스타일의 조합을 지정 합니다. 참조 **주의** 아래 스타일에 대 한 자세한 내용은 합니다.  
   
- `rect`  
+ *rect*  
  에 대 한 참조는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 콤보 상자의 크기와 위치는 구조입니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  에 대 한 포인터는 [CWnd](../../mfc/reference/cwnd-class.md) 콤보 상자의 부모 창 개체 (일반적으로 `CDialog`). 않아야 **NULL**합니다.  
   
- `nID`  
+ *nID*  
  콤보 상자 컨트롤 ID를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -168,7 +168,7 @@ virtual BOOL Create(
   
 2.  Windows 확장 된 콤보 상자를 만들고에 연결 하는이 멤버 함수 호출의 `CComboBoxEx` 개체입니다.  
   
- 호출 하는 경우 **만들기**, MFC 공용 컨트롤을 초기화 합니다.  
+ 호출 하는 경우 `Create`, MFC 공용 컨트롤을 초기화 합니다.  
   
  콤보 상자를 만들 때 다음 콤보 상자 스타일 중 일부 또는 모두를 지정할 수 있습니다.  
   
@@ -184,7 +184,7 @@ virtual BOOL Create(
   
  창을 만들 때 전달 되는 다른 모든 스타일은 무시 됩니다. **ComboBoxEx** 추가 기능을 제공 하는 확장된 스타일도 지원 합니다. 이러한 스타일에 설명 된 [ComboBoxEx 제어 확장된 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775742), Windows sdk에서입니다. 이러한 스타일을 호출 하 여 설정 [SetExtendedStyle](#setextendedstyle)합니다.  
   
- 컨트롤 확장된 창 스타일을 사용 하려면 호출 [CreateEx](#createex) 대신 **만들기**합니다.  
+ 컨트롤 확장된 창 스타일을 사용 하려면 호출 [CreateEx](#createex) 대신 `Create`합니다.  
   
 ##  <a name="createex"></a>  CComboBoxEx::CreateEx  
  확장 된 콤보 상자 컨트롤 (자식 창)을 만들고 사용 하 여 연결 하는이 함수 호출의 `CComboBoxEx` 개체입니다.  
@@ -199,28 +199,28 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwExStyle`  
- 만들 컨트롤의 확장된 스타일을 지정 합니다. 목록이 확장된 창 스타일에 대 한 참조는 `dwExStyle` 에 대 한 매개 변수 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows sdk에서입니다.  
+ *dwExStyle*  
+ 만들 컨트롤의 확장된 스타일을 지정 합니다. 목록이 확장된 창 스타일에 대 한 참조는 *dwExStyle* 에 대 한 매개 변수 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows sdk에서입니다.  
   
- `dwStyle`  
+ *dwStyle*  
  콤보 상자 컨트롤의 스타일입니다. 참조 [만들기](#create) 스타일의 목록에 대 한 합니다.  
   
- `rect`  
- 에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 크기와의 클라이언트 좌표에 만들어질 창 위치를 설명 하는 구조 `pParentWnd`합니다.  
+ *rect*  
+ 에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 크기와의 클라이언트 좌표에 만들어질 창 위치를 설명 하는 구조 *pParentWnd*합니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  컨트롤의 부모 창에 대 한 포인터입니다.  
   
- `nID`  
+ *nID*  
  컨트롤의 자식 창 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 사용 하 여 `CreateEx` 대신 **만들기** Windows 확장된 스타일 접두사에 의해 지정 된 확장된 창 스타일을 적용할 **WS_EX_** 합니다.  
+ 사용 하 여 `CreateEx` 대신 `Create` Windows 확장된 스타일 접두사에 의해 지정 된 확장된 창 스타일을 적용할 **WS_EX_** 합니다.  
   
- `CreateEx` 로 지정 된 확장된 창 스타일와 컨트롤을 만듭니다 `dwExStyle`합니다. 설정 해야 확장된 스타일 특정 사용 하 여 확장 된 콤보 상자 컨트롤 [SetExtendedStyle](#setextendedstyle)합니다. 사용 예를 들어 `CreateEx` 으로 이러한 스타일을 설정 하려면 **WS_EX_CONTEXTHELP**를 사용 하지만 `SetExtendedStyle` 으로 이러한 스타일을 설정 하려면 **CBES_EX_CASESENSITIVE**합니다. 자세한 내용은 항목에서 설명 하는 스타일을 참조 하십시오. [ComboBoxEx 컨트롤 확장 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775742) Windows sdk에서입니다.  
+ `CreateEx` 로 지정 된 확장된 창 스타일와 컨트롤을 만듭니다 *dwExStyle*합니다. 설정 해야 확장된 스타일 특정 사용 하 여 확장 된 콤보 상자 컨트롤 [SetExtendedStyle](#setextendedstyle)합니다. 사용 예를 들어 `CreateEx` 으로 이러한 스타일을 설정 하려면 **WS_EX_CONTEXTHELP**를 사용 하지만 `SetExtendedStyle` 으로 이러한 스타일을 설정 하려면 **CBES_EX_CASESENSITIVE**합니다. 자세한 내용은 항목에서 설명 하는 스타일을 참조 하십시오. [ComboBoxEx 컨트롤 확장 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775742) Windows sdk에서입니다.  
   
 ##  <a name="deleteitem"></a>  CComboBoxEx::DeleteItem  
  항목을 제거는 **ComboBoxEx** 제어 합니다.  
@@ -230,11 +230,11 @@ int DeleteItem(int iIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `iIndex`  
+ *iIndex*  
  제거할 항목의 0부터 시작 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 컨트롤에 남아 있는 항목의 수입니다. 경우 `iIndex` 유효 하지 않을 경우 함수가 반환 **CB_ERR**합니다.  
+ 컨트롤에 남아 있는 항목의 수입니다. 경우 *iIndex* 유효 하지 않을 경우 함수가 반환 **CB_ERR**합니다.  
   
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 메시지의 기능을 구현 [CBEM_DELETEITEM](http://msdn.microsoft.com/library/windows/desktop/bb775768)Windows SDK에 설명 된 대로 합니다. DeleteItem를 호출 하는 경우는 [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) 메시지 **CBEN_DELETEITEM** 부모 창에 알림이 전송 됩니다.  
@@ -303,7 +303,7 @@ BOOL GetItem(COMBOBOXEXITEM* pCBItem);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pCBItem`  
+ *pCBItem*  
  에 대 한 포인터는 [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) 항목 정보를 받을 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -333,7 +333,7 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pCBItem`  
+ *pCBItem*  
  에 대 한 포인터는 [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) 항목 정보를 받을 구조입니다. 이 구조는 항목에 대 한 콜백 플래그 값을 포함 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -352,10 +352,10 @@ DWORD SetExtendedStyle(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwExMask`  
- A `DWORD` 에 스타일을 나타내는 값 `dwExStyles` 영향을 줄 수입니다. 에 확장된 스타일 `dwExMask` 변경 됩니다. 다른 모든 스타일 그대로 유지 됩니다. 이 매개 변수가 0 이면 다음 모든 스타일의 경우 `dwExStyles` 영향을 받게 됩니다.  
+ *dwExMask*  
+ A `DWORD` 에 스타일을 나타내는 값 *dwExStyles* 영향을 줄 수입니다. 에 확장된 스타일 *dwExMask* 변경 됩니다. 다른 모든 스타일 그대로 유지 됩니다. 이 매개 변수는 0 이면 다음 모든 스타일의 경우 *dwExStyles* 영향을 받게 됩니다.  
   
- `dwExStyles`  
+ *dwExStyles*  
  A `DWORD` 값 콤보 상자가 포함 된 확장된 스타일을 컨트롤에 대 한 설정 제어 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -374,7 +374,7 @@ CImageList* SetImageList(CImageList* pImageList);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pImageList`  
+ *pImageList*  
  에 대 한 포인터는 `CImageList` 을 사용 하면 이미지를 포함 하는 개체는 `CComboBoxEx` 제어 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -393,7 +393,7 @@ BOOL SetItem(const COMBOBOXEXITEM* pCBItem);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pCBItem`  
+ *pCBItem*  
  에 대 한 포인터는 [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) 항목 정보를 받을 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -410,7 +410,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pszSubAppName`  
+ *pszSubAppName*  
  설정 하는 확장 된 콤보 상자 비주얼 스타일을 포함 하는 유니코드 문자열에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  

@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 245ffcb66223813c7146c50c964cd97203ed8d53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e0be2e87f77e047e1b29d99e562a67bb9f4f1ee9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383856"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951980"
 ---
 # <a name="tn001-window-class-registration"></a>TN001: 창 클래스 등록
 이 노트는 특수를 등록 하는 MFC 루틴에 설명 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es Microsoft Windows에서 필요 합니다. 특정 `WNDCLASS` MFC 및 Windows에서 사용 하는 특성은 설명 합니다.  
   
 ## <a name="the-problem"></a>문제  
- 특성은 [CWnd](../mfc/reference/cwnd-class.md) 개체와 같이 `HWND` Windows에서 처리할 두 장소에 저장 됩니다: 창 개체 및 `WNDCLASS`합니다. 이름에서 `WNDCLASS` 등 일반 창 만들기 함수에 전달 됩니다 [CWnd::Create](../mfc/reference/cwnd-class.md#create) 및 [CFrameWnd::Create](../mfc/reference/cframewnd-class.md#create) 에 `lpszClassName` 매개 변수입니다.  
+ 특성은 [CWnd](../mfc/reference/cwnd-class.md) 개체와 같이 `HWND` Windows에서 처리할 두 장소에 저장 됩니다: 창 개체 및 `WNDCLASS`합니다. 이름에서 `WNDCLASS` 등 일반 창 만들기 함수에 전달 됩니다 [CWnd::Create](../mfc/reference/cwnd-class.md#create) 및 [CFrameWnd::Create](../mfc/reference/cframewnd-class.md#create) 에 *lpszClassName* 매개 변수입니다.  
   
  이 `WNDCLASS` 네 가지 의미 중 하나를 통해 등록 되어야 합니다.  
   
@@ -46,15 +46,15 @@ ms.locfileid: "33383856"
   
 |필드|설명|  
 |-----------|-----------------|  
-|`lpfnWndProc`|창 프로시저 여야는 `AfxWndProc`|  
-|`cbClsExtra`|사용 되지 않습니다 (0 이어야 함)|  
-|`cbWndExtra`|사용 되지 않습니다 (0 이어야 함)|  
-|`hInstance`|자동으로 채워진 [AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|  
-|`hIcon`|프레임 창에 대 한 아이콘 아래를 참조 하세요|  
-|`hCursor`|아래 창 위에 마우스가 시기에 대 한 커서를 참조 하십시오.|  
-|`hbrBackground`|배경색, 아래 참조|  
-|`lpszMenuName`|사용 되지 않습니다 (NULL 이어야 함)|  
-|`lpszClassName`|클래스 이름, 아래 참조|  
+|*lpfnWndProc*|창 프로시저 여야는 `AfxWndProc`|  
+|*cbClsExtra*|사용 되지 않습니다 (0 이어야 함)|  
+|*cbWndExtra*|사용 되지 않습니다 (0 이어야 함)|  
+|*hInstance*|자동으로 채워진 [AfxGetInstanceHandle](../mfc/reference/application-information-and-management.md#afxgetinstancehandle)|  
+|*hIcon*|프레임 창에 대 한 아이콘 아래를 참조 하세요|  
+|*hCursor*|아래 창 위에 마우스가 시기에 대 한 커서를 참조 하십시오.|  
+|*hbrBackground*|배경색, 아래 참조|  
+|*lpszMenuName*|사용 되지 않습니다 (NULL 이어야 함)|  
+|*lpszClassName*|클래스 이름, 아래 참조|  
   
 ## <a name="provided-wndclasses"></a>WNDCLASSes 제공  
  이전 버전의 MFC (MFC 4.0의 경우) 하기 전에 몇 가지 미리 정의 된 창 클래스를 제공 합니다. 이러한 창 클래스는 더 이상 기본적으로 제공 됩니다. 응용 프로그램 사용 해야 `AfxRegisterWndClass` 적절 한 매개 변수를 사용 합니다.  
@@ -105,7 +105,7 @@ pWnd->Create(strWndClass, ...);
  `AfxRegisterWndClass` throw 합니다는 [CResourceException](../mfc/reference/cresourceexception-class.md) 창 클래스 등록 (인해 잘못 된 매개 변수 또는 Windows 메모리 부족)에 실패 하는지 합니다.  
   
 ## <a name="the-registerclass-and-afxregisterclass-functions"></a>RegisterClass 및 AfxRegisterClass 함수  
- 수행 하려는 경우 아무 것도 더 복잡 한 기능 보다 `AfxRegisterWndClass` 제공, Windows API를 호출할 수 `RegisterClass` 또는 MFC 함수 `AfxRegisterClass`합니다. `CWnd`, [CFrameWnd](../mfc/reference/cframewnd-class.md) 및 [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) `Create` 함수는 `lpszClassName` 첫 번째 매개 변수로 창 클래스에 대 한 문자열 이름입니다. 등록에 사용 되는 방법에 관계 없이 등록 된 창 클래스 이름에 사용할 수 있습니다.  
+ 수행 하려는 경우 아무 것도 더 복잡 한 기능 보다 `AfxRegisterWndClass` 제공, Windows API를 호출할 수 `RegisterClass` 또는 MFC 함수 `AfxRegisterClass`합니다. `CWnd`, [CFrameWnd](../mfc/reference/cframewnd-class.md) 및 [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) `Create` 함수는 *lpszClassName* 첫 번째 매개 변수로 창 클래스에 대 한 문자열 이름입니다. 등록에 사용 되는 방법에 관계 없이 등록 된 창 클래스 이름에 사용할 수 있습니다.  
   
  사용 해야 `AfxRegisterClass` (또는 `AfxRegisterWndClass`)에서 Win32 DLL에 있습니다. Win32 하므로 명시적으로 등록을 취소 해야 클래스 DLL 종료 될 때 DLL을 등록 하는 클래스 자동으로 등록 해제 하지 않습니다. 사용 하 여 `AfxRegisterClass` 대신 `RegisterClass` 이를 자동으로 처리 됩니다. `AfxRegisterClass` 고유 클래스 목록이 DLL에서 등록 하 고는 자동으로 등록을 취소 하는 DLL 종료 될 때 유지 관리 합니다. 사용 하는 경우 `RegisterClass` DLL 종료 될 때 모든 클래스는 등록 된 수 있는지 확인 해야 DLL에서 (에서 프로그램 [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583) 함수). 이렇게 하지 않으면 발생할 수 있습니다 `RegisterClass` 다른 클라이언트 응용 프로그램이 DLL을 사용 하려고 할 때 예기치 않게 실패할 수 있습니다.  
   

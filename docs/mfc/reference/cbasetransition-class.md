@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db69941b0ee0f2267185604318d240d107604177
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7cdd8f527b8df8ae80896bbb17fab1b15684180
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356382"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953572"
 ---
 # <a name="cbasetransition-class"></a>CBaseTransition 클래스
 기본 전환을 나타냅니다.  
@@ -104,7 +104,7 @@ class CBaseTransition : public CObject;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CBaseTransition::m_bAdded](#m_badded)|스토리 보드에 전환이 추가 되었는지 여부를 지정 합니다.|  
 |[CBaseTransition::m_pEndKeyframe](#m_pendkeyframe)|전환의 끝을 지정 하는 키 프레임에 대 한 포인터를 저장 합니다.|  
@@ -139,7 +139,7 @@ BOOL AddToStoryboard(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pStoryboard`  
+ *pStoryboard*  
  관련된 변수에 애니메이션 효과 적용할 스토리 보드에 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -156,7 +156,7 @@ BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pStoryboard`  
+ *pStoryboard*  
  관련된 변수에 애니메이션 효과 적용할 스토리 보드에 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -192,10 +192,10 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pLibrary`  
+ *pLibrary*  
  표준 전환을 만듭니다 전환 라이브러리에 대 한 포인터입니다. 사용자 지정 전환을 NULL 관련 될 수 있습니다.  
   
- `pFactory`  
+ *pFactory*  
  사용자 지정 전환을 만듭니다는 전환 팩터리에 대 한 포인터입니다. 표준 전환에 대 한 NULL 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -255,10 +255,10 @@ IUIAnimationTransition* GetTransition();
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pLibrary`  
+ *pLibrary*  
  표준 전환을 만듭니다 전환 라이브러리에 대 한 포인터입니다. 사용자 지정 전환을 NULL 관련 될 수 있습니다.  
   
- `pFactory`  
+ *pFactory*  
  사용자 지정 전환을 만듭니다는 전환 팩터리에 대 한 포인터입니다. 표준 전환에 대 한 NULL 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -345,10 +345,10 @@ void SetKeyframes(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pStart`  
+ *pStart*  
  전환의 시작을 지정 하는 키 프레임입니다.  
   
- `pEnd`  
+ *보류*  
  전환의 끝을 지정 하는 키 프레임입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -362,7 +362,7 @@ void SetRelatedVariable(CAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pVariable`  
+ *pVariable*  
  관련 된 애니메이션 변수에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  

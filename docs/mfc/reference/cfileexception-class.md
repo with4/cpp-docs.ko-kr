@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f94d6fc19879da1dd1dcaa94ab7a177fb86d5186
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df79b186aa515bba8d54083ad8a379aad36d2576
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369127"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954535"
 ---
 # <a name="cfileexception-class"></a>CFileException 클래스
 파일 관련 예외 상태를 나타냅니다.  
@@ -102,20 +102,20 @@ CFileException(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cause`  
+ *cause*  
  예외에 대 한 이유를 나타내는 열거 형식 변수입니다. 참조 [CFileException::m_cause](#m_cause) 목록이 가능한 값에 대 한 합니다.  
   
- `lOsError`  
- 운영 체제별 이유는 사용 가능한 경우는 예외입니다. `lOsError` 매개 변수 보다 더 많은 정보를 제공 `cause` 않습니다.  
+ *lOsError*  
+ 운영 체제별 이유는 사용 가능한 경우는 예외입니다. *lOsError* 매개 변수 보다 더 많은 정보를 제공 *인해* 않습니다.  
   
- `lpszArchiveName`  
+ *lpszArchiveName*  
  이름을 포함 하는 문자열을 가리키는 `CFile` 예외를 발생 시킨 개체입니다.  
   
 ### <a name="remarks"></a>설명  
  이 생성자를 직접 사용 하지 않고 전역 함수를 호출 하는 대신 [AfxThrowFileException](exception-processing.md#afxthrowfileexception)합니다.  
   
 > [!NOTE]
->  변수 `lOsError` 에 적용 됩니다 `CFile` 및 `CStdioFile` 개체입니다. `CMemFile` 클래스는이 오류 코드를 처리 하지 않습니다.  
+>  변수 *lOsError* 에 적용 됩니다 `CFile` 및 `CStdioFile` 개체입니다. `CMemFile` 클래스는이 오류 코드를 처리 하지 않습니다.  
   
 ##  <a name="errnotoexception"></a>  CFileException::ErrnoToException  
  에 지정 된 런타임 라이브러리 오류 값으로 변환 된 `CFileException` 오류 값을 열거 합니다.  
@@ -125,7 +125,7 @@ static int PASCAL ErrnoToException(int nErrno);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nErrno`  
+ *nErrno*  
  ERRNO 런타임에 포함 파일에 정의 된 대로 정수 오류 코드입니다. 8.  
   
 ### <a name="return-value"></a>반환 값  
@@ -134,7 +134,7 @@ static int PASCAL ErrnoToException(int nErrno);
 ### <a name="remarks"></a>설명  
  참조 [CFileException::m_cause](#m_cause) 가능한 목록에 대 한 열거 값입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#26](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_1.cpp)]  
   
 ##  <a name="geterrormessage"></a>  CFileException::GetErrorMessage  
@@ -148,13 +148,13 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in, out] `lpszError`  
+ [out에서] *lpszError*  
  오류 메시지를 수신 하는 버퍼에 대 한 포인터입니다.  
   
- [in] `nMaxError`  
+ [in] *nMaxError*  
  지정 된 버퍼에 저장할 수 문자의 최대 수입니다. 여기에 null 종결 문자 포함 됩니다.  
   
- [in, out] `pnHelpContext`  
+ [out에서] *pnHelpContext*  
  도움말 컨텍스트 ID를 수신 하는 부호 없는 정수에 대 한 포인터 경우 `NULL`, ID가 없습니다. 반환 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -163,7 +163,7 @@ virtual BOOL GetErrorMessage(
 ### <a name="remarks"></a>설명  
  지정 된 버퍼가 너무 작아서 오류 메시지는 잘립니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 `CFileException::GetErrorMessage`합니다.  
   
  [!code-cpp[NVC_MFCExceptions#22](../../mfc/codesnippet/cpp/cfileexception-class_2.cpp)]  
@@ -176,7 +176,7 @@ int m_cause;
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 데이터 멤버는 `int` 형식의 공용 변수입니다. 아래에 열거자와 해당 의미가 나와 있습니다.  
+ 이 데이터 멤버는 형식의 공용 변수 **int**합니다. 아래에 열거자와 해당 의미가 나와 있습니다.  
   
 - `CFileException::none` 0: 오류가 발생 하지 않았습니다.  
   
@@ -214,7 +214,7 @@ int m_cause;
     > [!NOTE]
     > `CArchiveException::generic`은 사용되지 않습니다. 대신 `genericException`를 사용하십시오. 응용 프로그램에서 `generic`을 사용하며 /clr을 사용하여 빌드한 경우 발생하는 구문 오류는 해독하기가 쉽지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#30](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_3.cpp)]  
   
 ##  <a name="m_loserror"></a>  CFileException::m_lOsError  
@@ -235,54 +235,54 @@ CString m_strFileName;
 ```  
   
 ##  <a name="oserrortoexception"></a>  CFileException::OsErrorToException  
- 에 해당 하는 열거자를 반환 된 주어진 `lOsError` 값입니다. 오류 코드를 알 수 없는 경우 함수 반환 **CFileException::generic**합니다.  
+ 에 해당 하는 열거자를 반환 된 주어진 *lOsError* 값입니다. 오류 코드를 알 수 없는 경우 함수 반환 **CFileException::generic**합니다.  
   
 ```  
 static int PASCAL OsErrorToException(LONG lOsError);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lOsError`  
+ *lOsError*  
  운영 체제별 오류 코드입니다.  
   
 ### <a name="return-value"></a>반환 값  
  지정 된 운영 체제 오류 값에 해당 하는 열거형된 값입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#27](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_4.cpp)]  
   
 ##  <a name="throwerrno"></a>  CFileException::ThrowErrno  
- 생성 한 `CFileException` 개체에 해당 하는 지정 된 `nErrno` 값을 다음 예외를 throw 합니다.  
+ 생성 한 `CFileException` 개체에 해당 하는 지정 된 *nErrno* 값을 다음 예외를 throw 합니다.  
   
 ```  
 static void PASCAL ThrowErrno(int nErrno, LPCTSTR lpszFileName = NULL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nErrno`  
+ *nErrno*  
  ERRNO 런타임에 포함 파일에 정의 된 대로 정수 오류 코드입니다. 8.  
   
- `lpszFileName`  
+ *lpszFileName*  
  파일의 이름을 포함 하는 문자열에 대 한 포인터를 발생 시킨 예외를 사용 가능한 경우.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#28](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_5.cpp)]  
   
 ##  <a name="throwoserror"></a>  CFileException::ThrowOsError  
- Throw 한 `CFileException` 에 해당 하는 특정 `lOsError` 값입니다. 오류 코드를 알 수 없는 경우 다음으로 코딩 된 예외를 throw 하는 함수가 **CFileException::generic**합니다.  
+ Throw 한 `CFileException` 에 해당 하는 지정 된 *lOsError* 값입니다. 오류 코드를 알 수 없는 경우 다음으로 코딩 된 예외를 throw 하는 함수가 **CFileException::generic**합니다.  
   
 ```  
 static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lOsError`  
+ *lOsError*  
  운영 체제별 오류 코드입니다.  
   
- `lpszFileName`  
+ *lpszFileName*  
  파일의 이름을 포함 하는 문자열에 대 한 포인터를 발생 시킨 예외를 사용 가능한 경우.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#29](../../atl-mfc-shared/reference/codesnippet/cpp/cfileexception-class_6.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

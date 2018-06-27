@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39c5167c81d6c44fa62f9bff87c6c04f73f9f6d5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4ffd5e43267ad6a5a462705f410cc1073161ecf0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355891"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954106"
 ---
 # <a name="cbrush-class"></a>CBrush 클래스
 Windows GDI(그래픽 장치 인터페이스) 브러시를 캡슐화합니다.  
@@ -105,10 +105,10 @@ explicit CBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `crColor`  
+ *crColor*  
  RGB 색으로 브러시의 전경색을 지정합니다. 브러시 무늬 되는 경우이 매개 변수는 해칭의 색을 지정 합니다.  
   
- `nIndex`  
+ *nIndex*  
  브러시의 해치 스타일을 지정합니다. 다음 값 중 하나일 수 있습니다.  
   
 - `HS_BDIAGONAL` 45도 회전 하향 해치 (왼쪽에서 오른쪽)  
@@ -123,7 +123,7 @@ explicit CBrush(CBitmap* pBitmap);
   
 - `HS_VERTICAL` 세로 빗살 무늬  
   
- `pBitmap`  
+ *pBitmap*  
  가리키는 `CBitmap` 브러시를 그리는 비트맵을 지정 하는 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -133,11 +133,11 @@ explicit CBrush(CBitmap* pBitmap);
   
  단일 생성자 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 매개 변수를 지정 된 색으로 단색 브러시를 생성 합니다. 색 RGB 값을 지정 하 고 생성 될 수 있습니다는 `RGB` 창에는 매크로입니다. 8.  
   
- 두 개의 매개 변수가 있는 생성자 빗살 무늬 브러시를 생성합니다. `nIndex` 빗살 무늬로의 인덱스를 지정 하는 매개 변수입니다. `crColor` 매개 변수는 색을 지정 합니다.  
+ 두 개의 매개 변수가 있는 생성자 빗살 무늬 브러시를 생성합니다. *nIndex* 빗살 무늬로의 인덱스를 지정 하는 매개 변수입니다. *crColor* 매개 변수는 색을 지정 합니다.  
   
  사용 하 여 생성자는 `CBitmap` 매개 변수는 무늬 브러시를 생성 합니다. 매개 변수는 비트맵을 식별합니다. 비트맵을 사용 하 여 만들어진 것으로 가정 [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [cbitmap:: Createbitmapindirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), 또는 [ CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap)합니다. 비트맵을 채우기 패턴에 사용할 수는 최소 크기는 8 x 8 픽셀입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
 ##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect  
@@ -159,7 +159,7 @@ BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
   
  (1 평면, 1 비트 / 픽셀) 단색 비트맵을 사용 하 여 만든 브러시는 현재 텍스트 색과 배경색을 사용 하 여 그려집니다. 0으로 설정 하는 비트를 나타내는 픽셀 현재 텍스트 색으로 그려집니다. 1로 설정 된 비트를 나타내는 픽셀을 현재 배경색으로 그려집니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#22](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
   
 ##  <a name="createdibpatternbrush"></a>  CBrush::CreateDIBPatternBrush  
@@ -198,9 +198,9 @@ BOOL CreateDIBPatternBrush(
   
  두 가지 버전 DIB를 처리 하는 방법이 다릅니다.  
   
--   첫 번째 버전에는 DIB에 핸들을 얻기 위해 호출 Windows **GlobalAlloc** 함수 글로벌 메모리 블록 할당을 다음 압축된 DIB와 메모리를 채웁니다.  
+-   첫 번째 버전에는 DIB에 핸들을 얻기 위해 호출 Windows `GlobalAlloc` 함수 글로벌 메모리 블록 할당을 다음 압축된 DIB와 메모리를 채웁니다.  
   
--   두 번째 버전에서는 필요 없는 호출할 **GlobalAlloc** 압축된 DIB에 메모리를 할당 합니다.  
+-   두 번째 버전에서 필요 없는 호출할 `GlobalAlloc` 압축된 DIB에 메모리를 할당 합니다.  
   
  압축 된 DIB 이루어져는 `BITMAPINFO` 비트맵의 픽셀을 정의 하는 바이트 배열을 바로 뒤에 데이터 구조입니다. 채우기 패턴으로 사용 하는 비트맵 8 x 8 픽셀 이어야 합니다. 비트맵 큰 경우 Windows는 처음 8 개 행과 비트맵의 왼쪽 위 모서리에 있는 픽셀의 8 열에 해당 하는 비트만을 사용 하 여 채우기 패턴을 만듭니다.  
   
@@ -208,13 +208,13 @@ BOOL CreateDIBPatternBrush(
   
  다음 Windows 함수를 사용 하는 방법에 대 한 내용은 Windows SDK를 참조 하십시오.  
   
-- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (이 함수는 3.0 이전 버전의 Windows 용으로 작성 된 응용 프로그램 호환성을 위해서만 제공 됩니다; 사용 된 **CreateDIBPatternBrushPt** 함수입니다.)  
+- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (이 함수는 3.0 이전 버전의 Windows 용으로 작성 된 응용 프로그램 호환성을 위해서만 제공 됩니다; 사용 된 `CreateDIBPatternBrushPt` 함수입니다.)  
   
 - [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) (Win32 기반 응용 프로그램에 대 한이 기능을 사용할 수 해야.)  
   
 - [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
   
 ##  <a name="createhatchbrush"></a>  CBrush::CreateHatchBrush  
@@ -227,7 +227,7 @@ BOOL CreateHatchBrush(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  브러시의 해치 스타일을 지정합니다. 다음 값 중 하나일 수 있습니다.  
   
 - `HS_BDIAGONAL` 45도 회전 하향 해치 (왼쪽에서 오른쪽)  
@@ -242,7 +242,7 @@ BOOL CreateHatchBrush(
   
 - `HS_VERTICAL` 세로 빗살 무늬  
   
- `crColor`  
+ *crColor*  
  RGB 색 (의 해치 색)으로 브러시의 전경색을 지정합니다. 참조 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 자세한 내용은 Windows sdk입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -251,7 +251,7 @@ BOOL CreateHatchBrush(
 ### <a name="remarks"></a>설명  
  브러시 모든 장치 컨텍스트에 대 한 현재 브러시도 이후에 선택할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#24](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
   
 ##  <a name="createpatternbrush"></a>  CBrush::CreatePatternBrush  
@@ -262,14 +262,14 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pBitmap`  
+ *pBitmap*  
  비트맵을 식별합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 브러시는 래스터 작업을 지 원하는 모든 장치 컨텍스트에 대 한 이후에 선택할 수 있습니다. 로 식별 되는 비트맵 `pBitmap` 일반적으로 사용 하 여 초기화 되는 [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [cbitmap:: Createbitmapindirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), 또는 [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) 함수입니다.  
+ 브러시는 래스터 작업을 지 원하는 모든 장치 컨텍스트에 대 한 이후에 선택할 수 있습니다. 로 식별 되는 비트맵 *pBitmap* 일반적으로 사용 하 여 초기화 되는 [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [cbitmap:: Createbitmapindirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), 또는 [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) 함수입니다.  
   
  채우기 패턴으로 사용 하는 비트맵 8 x 8 픽셀 이어야 합니다. 비트맵 큰 경우 처음 8 개 행 및 열 비트맵의 왼쪽 위 모서리에 있는 픽셀의 해당 비트만 사용 됩니다.  
   
@@ -279,7 +279,7 @@ BOOL CreatePatternBrush(CBitmap* pBitmap);
   
  사용 하 여에 대 한 내용은 [CreatePatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183508), Windows 함수를 Windows SDK를 참조 하십시오.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
   
 ##  <a name="createsolidbrush"></a>  CBrush::CreateSolidBrush  
@@ -290,8 +290,8 @@ BOOL CreateSolidBrush(COLORREF crColor);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `crColor`  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 브러시의 색을 지정 하는 구조입니다. 색 RGB 값을 지정 하 고 생성 될 수 있습니다는 `RGB` 창에는 매크로입니다. 8.  
+ *crColor*  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 브러시의 색을 지정 하는 구조입니다. 색은 RGB 값을 지정 하 고 WINDOWS에서 RGB 매크로 생성 될 수 있습니다. 8.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
@@ -301,7 +301,7 @@ BOOL CreateSolidBrush(COLORREF crColor);
   
  만든 브러시를 사용 하 여 응용 프로그램이 완료할 때 `CreateSolidBrush`, 브러시 장치 컨텍스트를 선택 해야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CBrush::CBrush](#cbrush)합니다.  
   
 ##  <a name="createsyscolorbrush"></a>  CBrush::CreateSysColorBrush  
@@ -312,7 +312,7 @@ BOOL CreateSysColorBrush(int nIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  색 인덱스를 지정합니다. 이 값은 21 창 요소 중 하나를 그리는 데 사용 되는 색에 해당 합니다. 참조 [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) 값 목록에 대 한 Windows sdk입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -323,7 +323,7 @@ BOOL CreateSysColorBrush(int nIndex);
   
  만든 브러시를 사용 하 여 응용 프로그램이 완료할 때 `CreateSysColorBrush`, 브러시 장치 컨텍스트를 선택 해야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#26](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
   
 ##  <a name="fromhandle"></a>  CBrush::FromHandle  
@@ -334,7 +334,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hBrush`  
+ *hBrush*  
  `HANDLE` 에 Windows GDI 브러시입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -345,7 +345,7 @@ static CBrush* PASCAL FromHandle(HBRUSH hBrush);
   
  그래픽 개체를 사용 하는 방법에 대 한 자세한 내용은 참조 [그래픽 개체](http://msdn.microsoft.com/library/windows/desktop/dd144962) Windows sdk에서입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CBrush::CBrush](#cbrush)합니다.  
   
 ##  <a name="getlogbrush"></a>  CBrush::GetLogBrush  
@@ -356,13 +356,13 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pLogBrush`  
+ *pLogBrush*  
  가리키는 [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) 브러시에 대 한 정보가 포함 된 구조체입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 및 `pLogBrush` 한 올바른 포인터가 반환 값은 버퍼에 저장 된 바이트 수입니다.  
+ 함수가 성공 하면 및 *pLogBrush* 한 올바른 포인터가 반환 값은 버퍼에 저장 된 바이트 수입니다.  
   
- 함수가 성공 하면 및 `pLogBrush` 은 **NULL**, 반환 값은 함수에 정보를 저장 하는 데 필요한 바이트 수가 버퍼에 저장 합니다.  
+ 함수가 성공 하면 및 *pLogBrush* 은 **NULL**, 반환 값은 함수에 정보를 저장 하는 데 필요한 바이트 수가 버퍼에 저장 합니다.  
   
  함수가 실패 하면 반환 값은 0입니다.  
   
@@ -371,7 +371,7 @@ int GetLogBrush(LOGBRUSH* pLogBrush);
   
  예를 들어 호출 `GetLogBrush` 특정 색 또는 패턴 비트맵의 일치 하도록 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#27](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
   
 ##  <a name="operator_hbrush"></a>  HBRUSH CBrush::operator  
@@ -389,7 +389,7 @@ operator HBRUSH() const;
   
  그래픽 개체를 사용 하는 방법에 대 한 자세한 내용은 참조 [그래픽 개체](http://msdn.microsoft.com/library/windows/desktop/dd144962) Windows sdk에서입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#28](../../mfc/codesnippet/cpp/cbrush-class_8.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

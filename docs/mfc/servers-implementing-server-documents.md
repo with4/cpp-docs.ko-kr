@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f15dbd16b48aade59470bfbf7e84faf4aeb03c61
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 273fd1e5afefb8a10b3e1ae8e3c2f81ccec05e7f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380278"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950830"
 ---
 # <a name="servers-implementing-server-documents"></a>서버: 서버 문서 구현
 이 문서에서는 응용 프로그램 마법사에서 OLE 서버 옵션을 지정 하지 않은 서버 문서를 성공적으로 구현 하는 위해 수행 해야 하는 단계를 설명 합니다.  
   
 #### <a name="to-define-a-server-document-class"></a>서버 문서 클래스를 정의 하려면  
   
-1.  문서 클래스를 파생 `COleServerDoc` 대신 **CDocument**합니다.  
+1.  문서 클래스를 파생 `COleServerDoc` 대신 `CDocument`합니다.  
   
 2.  파생 된 서버 항목 클래스 만들기 `COleServerItem`합니다.  
   

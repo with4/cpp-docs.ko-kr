@@ -130,12 +130,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 696b0d63a7b81b550e99981f199132713fe8a6ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e0d67012afe34cf3fe2c4633f2d838d1f3bfb49
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377042"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952533"
 ---
 # <a name="cdocument-class"></a>CDocument 클래스
 사용자 정의 문서 클래스에 대한 기본 기능을 제공합니다.  
@@ -228,7 +228,7 @@ class CDocument : public CCmdTarget
 ## <a name="remarks"></a>설명  
  문서는 사용자가 일반적으로 파일 열기 명령을 사용 하 여 열립니다을 파일 저장 명령을 사용 하 여 저장 하는 데이터의 단위를 나타냅니다.  
   
- **CDocument** 문서 만들기, 로드 및 저장 같은 표준 작업을 지원 합니다. 프레임 워크에 정의 된 인터페이스를 사용 하 여 문서를 조작 **CDocument**합니다.  
+ `CDocument` 문서를 만들고, 로드, 저장 등의 표준 작업을 지원 합니다. 프레임 워크에 정의 된 인터페이스를 사용 하 여 문서를 조작 `CDocument`합니다.  
   
  응용 프로그램 문서의; 둘 이상의 유형을 지원할 수 있습니다. 예, 응용 프로그램 스프레드시트 및 텍스트 문서를 모두 지원할 수 있습니다. 각 유형의 문서에 연결 된 문서 템플릿; 문서 서식 파일 해당 형식의 문서에 사용 되는 리소스 (예: 메뉴, 아이콘 또는 액셀러레이터 키 테이블)을 지정 합니다. 각 문서에 연결 된에 대 한 포인터 `CDocTemplate` 개체입니다.  
   
@@ -236,11 +236,11 @@ class CDocument : public CCmdTarget
   
  문서 프레임 워크의 표준의 일부는 라우팅 명령 및 결과적으로 표준 사용자 인터페이스 구성 요소 (예: 파일 저장을 메뉴 항목)에서 명령을 수신 합니다. 문서를 현재 보기에 의해 전달 되는 명령을 받습니다. 문서에서 지정된 된 명령을 처리 하지 않는 경우를 통해 관리 하는 서식 파일에 명령을 전달 합니다.  
   
- 문서 데이터가 수정 될 때 이러한 수정 내용을 반영 해야 각 해당 보기. **CDocument** 제공는 [UpdateAllViews](#updateallviews) 멤버 함수가 보기 수 자동으로 그려지도록 필요에 따라 하므로 이러한 변경 사항을 보기를 알릴 수 있습니다. 프레임 워크에는 수정 된 파일을 닫기 전에 저장 하 라는 메시지 표시 합니다.  
+ 문서 데이터가 수정 될 때 이러한 수정 내용을 반영 해야 각 해당 보기. `CDocument` 제공 된 [UpdateAllViews](#updateallviews) 멤버 함수가 보기 수 자동으로 그려지도록 필요에 따라 하므로 이러한 변경 사항을 보기를 알릴 수 있습니다. 프레임 워크에는 수정 된 파일을 닫기 전에 저장 하 라는 메시지 표시 합니다.  
   
  일반 응용 프로그램에서 문서를 구현 하려면 다음을 수행 해야 합니다.  
   
--   클래스를 파생 **CDocument** 각 문서 유형에 대 한 합니다.  
+-   클래스를 파생 `CDocument` 각 문서 유형에 대 한 합니다.  
   
 -   각 문서의 데이터를 저장 하려면 멤버 변수를 추가 합니다.  
   
@@ -248,9 +248,9 @@ class CDocument : public CCmdTarget
   
 -   재정의 [cobject:: Serialize](../../mfc/reference/cobject-class.md#serialize) 디스크에서 문서의 데이터를 읽고 쓰는 데 문서 클래스에 멤버 함수입니다.  
   
- **CDocument** (MAPI) 전자 메일 서비스를 사용할 수 있는 경우 메일을 통해 문서를 보내는 기능을 지원 합니다. 문서를 참조 [MAPI](../../mfc/mapi.md) 및 [MFC의 MAPI 지원](../../mfc/mapi-support-in-mfc.md)합니다.  
+ `CDocument` 전자 메일 서비스 (MAPI)를 사용할 수 있는 경우 메일을 통해 문서를 전송 하는 지원 합니다. 문서를 참조 [MAPI](../../mfc/mapi.md) 및 [MFC의 MAPI 지원](../../mfc/mapi-support-in-mfc.md)합니다.  
   
- 대 한 자세한 내용은 **CDocument**, 참조 [Serialization](../../mfc/serialization-in-mfc.md), [문서/뷰 아키텍처 항목](../../mfc/document-view-architecture.md), 및 [문서/뷰 만들기](../../mfc/document-view-creation.md)합니다.  
+ 대 한 자세한 내용은 `CDocument`, 참조 [Serialization](../../mfc/serialization-in-mfc.md), [문서/뷰 아키텍처 항목](../../mfc/document-view-architecture.md), 및 [문서/뷰 만들기](../../mfc/document-view-creation.md)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -270,7 +270,7 @@ void AddView(CView* pView);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pView`  
+ *pView*  
  추가 하려는 보기를 가리킵니다.  
   
 ### <a name="remarks"></a>설명  
@@ -278,7 +278,7 @@ void AddView(CView* pView);
   
  수동으로 만들고 뷰를 연결 하는 경우에이 함수를 호출 합니다. 일반적으로 문서 및 뷰를 정의 하 여 연결 프레임 워크 수는 [CDocTemplate](../../mfc/reference/cdoctemplate-class.md) 문서 클래스, 클래스 뷰 및 프레임 창 클래스를 연결 하는 개체입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocViewSDI#12](../../mfc/codesnippet/cpp/cdocument-class_1.cpp)]  
   
 ##  <a name="beginreadchunks"></a>  CDocument::BeginReadChunks  
@@ -298,7 +298,7 @@ virtual BOOL CanCloseFrame(CFrameWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pFrame`  
+ *pFrame*  
  문서에 연결 하는 보기의 프레임 창을 가리킵니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -346,7 +346,7 @@ virtual void DeleteContents();
 ### <a name="remarks"></a>설명  
  문서가 소멸 될 예정 바로 전에 호출 됩니다. 이 재사용 되기 전에 문서 비어 있는지 확인 하는 것이 라고도 합니다. 이 특히 중요 한 문서를 사용 하 여 SDI 응용 프로그램에 대 한 문서에는 사용자가 만들거나 다른 문서를 열 때마다 다시 사용 됩니다. "편집 모두 지우기" 또는 문서의 데이터를 모두 삭제 하 여 비슷한 명령을 구현 하려면이 함수를 호출 합니다. 이 함수의 기본 구현은 아무 작업도 수행하지 않습니다. 문서에서 데이터를 삭제 하려면이 함수를 재정의 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#57](../../mfc/codesnippet/cpp/cdocument-class_2.cpp)]  
   
 ##  <a name="findchunk"></a>  CDocument::FindChunk  
@@ -359,10 +359,10 @@ virtual POSITION FindChunk(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `guid`  
+ *guid*  
  찾을 청크의 GUID를 지정 합니다.  
   
- `pid`  
+ *pid*  
  찾을 청크의 PID를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -392,7 +392,7 @@ CDocTemplate* GetDocTemplate() const;
 ### <a name="return-value"></a>반환 값  
  이 문서 유형에 대 한 문서 서식 파일에 대 한 포인터 또는 **NULL** 문서 문서 서식 파일에서 관리 되지 않는 경우.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#58](../../mfc/codesnippet/cpp/cdocument-class_3.cpp)]  
   
 ##  <a name="getfile"></a>  CDocument::GetFile  
@@ -406,13 +406,13 @@ virtual CFile* GetFile(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszFileName`  
+ *lpszFileName*  
  문자열은 원하는 파일을 경로입니다. 상대 또는 절대 경로일 수 있습니다.  
   
- `pError`  
+ *pError*  
  작업의 완료 상태를 나타내는 기존 파일 예외 개체에 대 한 포인터입니다.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  공유 및 액세스 모드입니다. 파일을 열 때 수행할 동작을 지정 합니다. CFile 생성자에 나열 된 옵션을 결합할 수 [CFile::CFile](../../mfc/reference/cfile-class.md#cfile) 비트 OR를 사용 하 여 (&#124;) 연산자. 에 대 한 액세스 권한 및 하나의 공유 옵션은 필수 사항이 고, **modeCreate** 및 **modeNoInherit** 모드는 선택 사항입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -428,7 +428,7 @@ virtual POSITION GetFirstViewPosition() const;
 ### <a name="return-value"></a>반환 값  
  A **위치** 와 반복에 대해 사용할 수 있는 값의 [GetNextView](#getnextview) 멤버 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#59](../../mfc/codesnippet/cpp/cdocument-class_4.cpp)]  
   
 ##  <a name="getnextview"></a>  CDocument::GetNextView  
@@ -439,16 +439,16 @@ virtual CView* GetNextView(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rPosition`  
+ *rPosition*  
  에 대 한 참조는 **위치** 대 한 이전 호출에서 반환 된 값은 `GetNextView` 또는 [GetFirstViewPosition](#getfirstviewposition) 멤버 함수입니다. 이 값이 아니어야 **NULL**합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 로 식별 되는 보기에 대 한 포인터 `rPosition`합니다.  
+ 로 식별 되는 보기에 대 한 포인터 *rPosition*합니다.  
   
 ### <a name="remarks"></a>설명  
- 로 식별 되는 뷰를 반환 하는 함수 `rPosition` 다음 설정 `rPosition` 에 **위치** 목록에서 다음 보기의 값입니다. 검색된 보기는 목록에서 마지막 `rPosition` 로 설정 된 **NULL**합니다.  
+ 로 식별 되는 뷰를 반환 하는 함수 *rPosition* 다음 설정 *rPosition* 에 **위치** 목록에서 다음 보기의 값입니다. 검색된 보기는 목록에서 마지막 *rPosition* 로 설정 된 **NULL**합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#59](../../mfc/codesnippet/cpp/cdocument-class_4.cpp)]  
   
 ##  <a name="getpathname"></a>  CDocument::GetPathName  
@@ -472,13 +472,13 @@ virtual BOOL GetThumbnail(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cx`  
+ *cx*  
  비트맵의 높이 너비를 지정합니다.  
   
- `phbmp`  
+ *phbmp*  
  함수는 성공적으로 반환 될 때 비트맵에 대 한 핸들을 포함 합니다.  
   
- `pdwAlpha`  
+ *pdwAlpha*  
  함수에서 성공적으로 반환 되는 알파 채널 값을 지정 하는 DWORD를 포함 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -539,10 +539,10 @@ virtual HRESULT LoadDocumentFromStream(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pStream`  
+ *pStream*  
  스트림에 대 한 포인터입니다. 이 스트림에 셸에서 제공 됩니다.  
   
- `dwGrfMode`  
+ *dwGrfMode*  
  스트림에 액세스 모드입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -659,13 +659,13 @@ virtual void OnDocumentEvent(DocumentEvent deEvent);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `deEvent`  
+ [in] *deEvent*  
  이벤트의 형식을 설명 하는 열거형된 데이터 형식입니다.  
   
 ### <a name="remarks"></a>설명  
  문서 이벤트 여러 클래스에 영향을 줄 수 있습니다. 이 메서드는 이외의 다른 클래스에 영향을 주는 문서 이벤트를 처리 하는 일을 담당는 [CDocument 클래스](../../mfc/reference/cdocument-class.md)합니다. 현재 문서 이벤트에 응답 해야 하는 유일한 클래스는는 [CDataRecoveryHandler 클래스](../../mfc/reference/cdatarecoveryhandler-class.md)합니다. `CDocument` 클래스에 미치는 영향에 처리를 담당 다른 재정의 가능한 메서드가 `CDocument`합니다.  
   
- 다음 표에서 가능한 값에 대 한 `deEvent` 와 해당 하는 이벤트입니다.  
+ 다음 표에서 사용할 수 있는 값 *deEvent* 와 해당 하는 이벤트입니다.  
   
 |값|해당 하는 이벤트|  
 |-----------|-------------------------|  
@@ -684,10 +684,10 @@ virtual void OnDrawThumbnail(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dc`  
+ *dc*  
  장치 컨텍스트에 대 한 참조입니다.  
   
- `lprcBounds`  
+ *lprcBounds*  
  미리 보기를 그리도록 영역의 경계 사각형을 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -716,10 +716,10 @@ virtual HRESULT OnLoadDocumentFromStream(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pStream`  
+ *pStream*  
  들어오는 스트림에 대 한 포인터입니다.  
   
- `grfMode`  
+ *grfMode*  
  스트림에 액세스 모드입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -744,7 +744,7 @@ virtual BOOL OnNewDocument();
   
  에서는 인 사례 `OnNewDocument` 두 번 호출 됩니다. 이 문서는 ActiveX 문서 서버로 포함 된 경우에 발생 합니다. 함수를 처음 호출 됩니다는 `CreateInstance` 메서드 (에 의해 노출는 `COleObjectFactory`-파생 클래스) 및에서 두 번째 시간은 `InitNew` 메서드 (의해 노출 되는 `COleServerDoc`-파생 클래스).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제는 문서 개체를 초기화 하는 대체 방법이 설명 합니다.  
   
  [!code-cpp[NVC_MFCDocView#60](../../mfc/codesnippet/cpp/cdocument-class_5.cpp)]  
@@ -761,7 +761,7 @@ virtual BOOL OnOpenDocument(LPCTSTR lpszPathName);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszPathName`  
+ *lpszPathName*  
  문서를 열 수의 경로를 가리킵니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -772,7 +772,7 @@ virtual BOOL OnOpenDocument(LPCTSTR lpszPathName);
   
  이 함수를 사용 하 여 기존 다시 초기화 하도록 프레임 워크 SDI 응용 프로그램에서 파일 열기 명령을 선택한 경우에 **CDocument** 새로 만드는 것 보다 개체입니다. 프레임 워크가 생성 하는 새 사용자가 MDI 응용 프로그램에서 파일 열기 선택, **CDocument** 개체 때마다 다음 초기화 하는 데이 함수를 호출 합니다. 파일 열기 명령 SDI 응용 프로그램에 적용 하려면에 대 한 생성자에서이 함수 대신에 초기화 코드를 배치 해야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제는 문서 개체를 초기화 하는 대체 방법이 설명 합니다.  
   
  [!code-cpp[NVC_MFCDocView#60](../../mfc/codesnippet/cpp/cdocument-class_5.cpp)]  
@@ -791,7 +791,7 @@ virtual HRESULT OnPreviewHandlerQueryFocus(HWND* phwnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `phwnd`  
+ *phwnd*  
  [out] 이 메서드가 반환 될 때 호출에서 반환 된 HWND에 대 한 포인터를 포함 된 `GetFocus` 미리 보기 처리기 포그라운드 스레드에서 함수입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -807,7 +807,7 @@ virtual HRESULT OnPreviewHandlerTranslateAccelerator(MSG* pmsg);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pmsg`  
+ *pmsg*  
  [in] 창 메시지에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -859,7 +859,7 @@ virtual BOOL OnSaveDocument(LPCTSTR lpszPathName);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszPathName`  
+ *lpszPathName*  
  파일 저장 되어야 하는 정규화 된 경로를 가리킵니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -885,7 +885,7 @@ void OnUpdateFileSendMail(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pCmdUI`  
+ *pCmdUI*  
  에 대 한 포인터는 [CCmdUI](../../mfc/reference/ccmdui-class.md) 연관 된 개체는 **ID_FILE_SEND_MAIL** 명령입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -901,13 +901,13 @@ virtual void PreCloseFrame(CFrameWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pFrame`  
- 에 대 한 포인터는 [CFrameWnd](../../mfc/reference/cframewnd-class.md) 보유 하는 연결 된 **CDocument** 개체입니다.  
+ *pFrame*  
+ 에 대 한 포인터는 [CFrameWnd](../../mfc/reference/cframewnd-class.md) 보유 하는 연결 된 `CDocument` 개체입니다.  
   
 ### <a name="remarks"></a>설명  
  사용자 지정 정리를 제공 하 고는 기본 클래스를 호출 해야 재정의할 수 있습니다.  
   
- 기본값은 `PreCloseFrame` 는 아무 작업도 수행 **CDocument**합니다. **CDocument**-파생 된 클래스 [COleDocument](../../mfc/reference/coledocument-class.md) 및 [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) 이 멤버 함수를 사용 합니다.  
+ 기본값은 `PreCloseFrame` 는 아무 작업도 수행 `CDocument`합니다. `CDocument`-파생 된 클래스 [COleDocument](../../mfc/reference/coledocument-class.md) 및 [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) 이 멤버 함수를 사용 합니다.  
   
 ##  <a name="readnextchunkvalue"></a>  CDocument::ReadNextChunkValue  
  다음 청크 값을 읽습니다.  
@@ -917,8 +917,8 @@ virtual BOOL ReadNextChunkValue(IFilterChunkValue** ppValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ppValue`  
- [out] 함수가 반환할 때 `ppValue` 읽은 값을 포함 합니다.  
+ *ppValue*  
+ [out] 함수가 반환할 때 *ppValue* 읽은 값을 포함 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
@@ -935,16 +935,16 @@ virtual void ReleaseFile(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pFile`  
+ *pFile*  
  릴리스될 CFile 개체에 대 한 포인터입니다.  
   
- `bAbort`  
+ *bAbort*  
  파일 중 하나를 사용 하 여 해제 되는지를 지정 `CFile::Close` 또는 `CFile::Abort`합니다. **FALSE** 파일이 사용 하 여 출시 될 경우 [CFile::Close](../../mfc/reference/cfile-class.md#close); **TRUE** 파일이 사용 하 여 출시 될 경우 [cfile:: Abort](../../mfc/reference/cfile-class.md#abort)합니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `bAbort` 은 **TRUE**, `ReleaseFile` 호출 `CFile::Abort`, 파일 해제 됩니다. `CFile::Abort` 예외를 throw 하지 않습니다.  
+ 경우 *bAbort* 은 **TRUE**, `ReleaseFile` 호출 `CFile::Abort`, 파일 해제 됩니다. `CFile::Abort` 예외를 throw 하지 않습니다.  
   
- 경우 `bAbort` 은 **FALSE**, `ReleaseFile` 호출 `CFile::Close` 파일 해제 됩니다.  
+ 경우 *bAbort* 은 **FALSE**, `ReleaseFile` 호출 `CFile::Close` 파일 해제 됩니다.  
   
  이 멤버 함수는 파일을 배포 하기 전에 사용자가 작업을 요구 하도록 재정의 합니다.  
   
@@ -958,10 +958,10 @@ virtual void RemoveChunk(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `Guid`  
+ *Guid*  
  제거할 청크의 GUID를 지정 합니다.  
   
- `Pid`  
+ *pid*  
  제거할 청크의 PID를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -974,7 +974,7 @@ void RemoveView(CView* pView);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pView`  
+ *pView*  
  제거 하 고 보기를 가리킵니다.  
   
 ### <a name="remarks"></a>설명  
@@ -996,7 +996,7 @@ virtual void ReportSaveLoadException(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszPathName`  
+ *lpszPathName*  
  중인 문서의 이름을 가리키는 저장 되거나 로드 합니다.  
   
  *e*  
@@ -1005,11 +1005,11 @@ virtual void ReportSaveLoadException(
  *bSaving*  
  어떤 작업이; 진행 중 이어서 나타내는 플래그입니다. 문서가 저장 된 경우 되 고, 0 문서를 로드 하는 경우에 0이 아닙니다.  
   
- `nIDPDefault`  
+ *nIDPDefault*  
  함수는 보다 구체적인 하나를 지정 하지 않은 경우 표시할 오류 메시지의 식별자입니다.  
   
 ### <a name="remarks"></a>설명  
- 기본 구현은 예외 개체를 검사 하 고 원인이 구체적으로 설명 하는 오류 메시지를 찾습니다. 특정 메시지 없거나 경우 *e* 은 **NULL**로 지정 된 일반 메시지는 `nIDPDefault` 매개 변수를 사용 합니다. 함수는 다음 오류 메시지가 포함 된 메시지 상자를 표시 합니다. 추가, 사용자 지정 된 오류 메시지를 제공 하려는 경우이 함수를 재정의 합니다. 고급 재정의할 수 있습니다.  
+ 기본 구현은 예외 개체를 검사 하 고 원인이 구체적으로 설명 하는 오류 메시지를 찾습니다. 특정 메시지 없거나 경우 *e* 은 **NULL**로 지정 된 일반 메시지는 *nIDPDefault* 매개 변수를 사용 합니다. 함수는 다음 오류 메시지가 포함 된 메시지 상자를 표시 합니다. 추가, 사용자 지정 된 오류 메시지를 제공 하려는 경우이 함수를 재정의 합니다. 고급 재정의할 수 있습니다.  
   
 ##  <a name="savemodified"></a>  CDocument::SaveModified  
  수정 된 문서를 닫을 수 있게 되기 전에 프레임 워크에서 호출 됩니다.  
@@ -1032,7 +1032,7 @@ virtual BOOL SetChunkValue (IFilterChunkValue* pValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pValue`  
+ *pValue*  
  설정할 청크 값을 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1048,11 +1048,11 @@ virtual void SetModifiedFlag(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bModified`  
+ *bModified*  
  문서 수정 되었는지 여부를 나타내는 플래그입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 함수를 일관 되 게 호출 하 여 프레임 워크는 문서를 닫기 전에 변경 내용을 저장 하 라는 있는지 확인 합니다. 기본값을 사용 해야 하는 일반적으로 **TRUE** 에 대 한는 `bModified` 매개 변수입니다. 정리 문서 (수정 되지 않은)를 표시 하려면 값이 함수를 호출 **FALSE**합니다.  
+ 이 함수를 일관 되 게 호출 하 여 프레임 워크는 문서를 닫기 전에 변경 내용을 저장 하 라는 있는지 확인 합니다. 기본값을 사용 해야 하는 일반적으로 **TRUE** 에 대 한는 *bModified* 매개 변수입니다. 정리 문서 (수정 되지 않은)를 표시 하려면 값이 함수를 호출 **FALSE**합니다.  
   
 ##  <a name="setpathname"></a>  CDocument::SetPathName  
  문서 디스크 파일의 정규화 된 경로 지정 하려면이 함수를 호출 합니다.  
@@ -1064,14 +1064,14 @@ virtual void SetPathName(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszPathName`  
+ *lpszPathName*  
  문서에 대 한 경로로 사용할 문자열을 가리킵니다.  
   
- `bAddToMRU`  
+ *bAddToMRU*  
  파일 이름에 추가 하는지 여부를 가장 최근에 사용한 (MRU) 파일 목록 결정 합니다. 경우 **TRUE 이면** 파일 이름이 추가 될 경우 **FALSE**, 추가 되지 않습니다.  
   
 ### <a name="remarks"></a>설명  
- 값에 따라 `bAddToMRU` 경로 추가 또는 응용 프로그램에 의해 관리 되는 MRU 목록에 추가 되지 됩니다. 일부 문서는 디스크 파일에 연결 되지 않은 참고 합니다. 프레임 워크에서 사용 되는 파일 열기 및 저장에 대 한 기본 구현을 재정의 하는 경우에이 함수를 호출 합니다.  
+ 값에 따라 *bAddToMRU* 경로 추가 또는 응용 프로그램에 의해 관리 되는 MRU 목록에 추가 되지 됩니다. 일부 문서는 디스크 파일에 연결 되지 않은 참고 합니다. 프레임 워크에서 사용 되는 파일 열기 및 저장에 대 한 기본 구현을 재정의 하는 경우에이 함수를 호출 합니다.  
   
 ##  <a name="settitle"></a>  CDocument::SetTitle  
  문서의 제목 (프레임 창의 제목 표시줄에 표시 되는 문자열)을 지정 하려면이 함수를 호출 합니다.  
@@ -1081,7 +1081,7 @@ virtual void SetTitle(LPCTSTR lpszTitle);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszTitle`  
+ *lpszTitle*  
  문서의 제목으로 사용할 문자열을 가리킵니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1098,21 +1098,21 @@ void UpdateAllViews(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pSender`  
+ *pSender*  
  문서를 수정 하는 뷰를 가리키는 또는 **NULL** 모든 뷰는 업데이트 해야 하는 경우.  
   
- `lHint`  
+ *lHint*  
  수정에 대 한 정보를 포함합니다.  
   
- `pHint`  
+ *pHint*  
  수정에 대 한 정보를 저장 하는 개체를 가리킵니다.  
   
 ### <a name="remarks"></a>설명  
- 호출한 후에이 함수를 호출 해야는 [SetModifiedFlag](#setmodifiedflag) 멤버 함수입니다. 이 함수에 의해 지정 된 보기를 제외 하 고는 문서에 연결 된 각 보기에 알립니다 `pSender`, 문서를 수정 합니다. 일반적으로 사용자가 뷰를 통해 문서를 변경한 후 뷰 클래스에서이 함수를 호출 합니다.  
+ 호출한 후에이 함수를 호출 해야는 [SetModifiedFlag](#setmodifiedflag) 멤버 함수입니다. 이 함수에 의해 지정 된 보기를 제외 하 고는 문서에 연결 된 각 보기에 알립니다 *pSender*, 문서를 수정 합니다. 일반적으로 사용자가 뷰를 통해 문서를 변경한 후 뷰 클래스에서이 함수를 호출 합니다.  
   
- 이 함수 호출의 [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate) 전달 보내는 제외 하 고 문서 보기의 각 멤버 함수 볼 `pHint` 및 `lHint`합니다. 이러한 매개 변수를 사용 하 여 수정 내용에 문서에 대 한 보기에 정보를 전달 합니다. 사용 하 여 정보를 인코딩할 수 `lHint` 정의할 수 있습니다 및/또는 [CObject](../../mfc/reference/cobject-class.md)-수정 작업에 대 한 정보를 저장 하 고 사용 하 여 해당 클래스의 개체를 전달 하는 클래스를 파생 `pHint`합니다. 재정의 `CView::OnUpdate` 멤버 함수에서 프로그램 [CView](../../mfc/reference/cview-class.md)-업데이트 된 정보에 기반 하는 보기의 표시를 최적화 하는 클래스를 파생 합니다.  
+ 이 함수 호출의 [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate) 전달 보내는 제외 하 고 문서 보기의 각 멤버 함수 볼 *pHint* 및 *lHint*합니다. 이러한 매개 변수를 사용 하 여 수정 내용에 문서에 대 한 보기에 정보를 전달 합니다. 사용 하 여 정보를 인코딩할 수 *lHint* 정의할 수 있습니다 및/또는 [CObject](../../mfc/reference/cobject-class.md)-수정 작업에 대 한 정보를 저장 하 고 사용 하 여 해당 클래스의 개체를 전달 하는 클래스를 파생 *pHint*. 재정의 `CView::OnUpdate` 멤버 함수에서 프로그램 [CView](../../mfc/reference/cview-class.md)-업데이트 된 정보에 기반 하는 보기의 표시를 최적화 하는 클래스를 파생 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#64](../../mfc/codesnippet/cpp/cdocument-class_9.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

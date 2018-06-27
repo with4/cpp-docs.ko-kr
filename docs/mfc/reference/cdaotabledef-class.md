@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff62b77e6bdec6b796750d27357d12667eb16386
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dbc191baf452a4e695eee2eed00a8f679285dee1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378310"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952483"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef 클래스
 기본 테이블 또는 연결된 테이블의 저장된 정의를 나타냅니다.  
@@ -104,7 +104,7 @@ class CDaoTableDef : public CObject
   
 |이름|설명|  
 |----------|-----------------|  
-|[CDaoTableDef::CDaoTableDef](#cdaotabledef)|생성 된 **CDaoTableDef** 개체입니다.|  
+|[CDaoTableDef::CDaoTableDef](#cdaotabledef)|`CDaoTableDef` 개체를 생성합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
@@ -161,7 +161,7 @@ class CDaoTableDef : public CObject
   
 -   Get 또는 set 사용 하 여 유효성 검사 상태는 `GetValidationRule` 및 `SetValidationRule`, 및 `GetValidationText` 및 `SetValidationText` 멤버 함수입니다.  
   
--   사용 하 여는 **열려** 멤버 함수는 테이블 수준, 다이너셋 또는 스냅숏 형식 만들기를 `CDaoRecordset` 개체입니다.  
+-   사용 하 여 `Open` 멤버 함수는 테이블 수준, 다이너셋 또는 스냅숏 형식 만들기를 `CDaoRecordset` 개체입니다.  
   
     > [!NOTE]
     >  DAO 데이터베이스 클래스에 ODBC Open Database Connectivity ()를 기반으로 하는 MFC 데이터베이스 클래스와 다릅니다. 모든 DAO 데이터베이스 클래스 이름이 "CDao" 접두사가 있습니다. 여전히 DAO 클래스; ODBC 데이터 원본에 액세스할 수 있습니다. DAO 클래스 Microsoft Jet 데이터베이스 엔진에 특정 때문에 일반적으로 뛰어난 기능을 제공 합니다.  
@@ -176,7 +176,7 @@ class CDaoTableDef : public CObject
   
     -   새 테이블을 만들려면 테이블 정의 개체의 호출 [만들기](#create) 멤버 함수를 테이블의 이름을 제공 합니다. 호출 [CreateField](#createfield) 및 [CreateIndex](#createindex) 테이블에 필드와 인덱스를 추가 합니다.  
   
-    -   호출 [Append](#append) 데이터베이스의 TableDefs 컬렉션에 추가 하 여 테이블을 저장 합니다. **만들기** 열린 상태에 테이블 정의 저장 하므로 호출한 후 **만들기** 호출 하지 않으면 **열**합니다.  
+    -   호출 [Append](#append) 데이터베이스의 TableDefs 컬렉션에 추가 하 여 테이블을 저장 합니다. `Create` 테이블 정의 열린 상태로 전환 하므로 호출한 후 `Create` 호출 하지 않으면 `Open`합니다.  
   
         > [!TIP]
         >  저장 된 테이블을 만드는 가장 쉬운 방법은 만들고 Microsoft Access를 사용 하 여 데이터베이스에 저장 하는 합니다. 그런 다음 수를 열고 MFC 코드에서 사용 합니다.  
@@ -203,7 +203,7 @@ virtual void Append();
 ```  
   
 ### <a name="remarks"></a>설명  
- 함수는 데이터베이스의 TableDefs 컬렉션에 개체를 추가합니다. 하지 추가 하 여 정의 하는 동안 임시 개체로 테이블 정의 사용할 수 있지만 호출 해야 합니다 저장 하 고 사용 하려는 경우 **Append**합니다.  
+ 함수는 데이터베이스의 TableDefs 컬렉션에 개체를 추가합니다. 하지 추가 하 여 정의 하는 동안 임시 개체로 테이블 정의 사용할 수 있지만 호출 해야 합니다 저장 하 고 사용 하려는 경우 `Append`합니다.  
   
 > [!NOTE]
 >  (Null 또는 빈 문자열로 포함)는 명명 되지 않은 테이블 정의 추가 하려는 경우 MFC는 예외가 throw 됩니다.  
@@ -233,7 +233,7 @@ CDaoTableDef(CDaoDatabase* pDatabase);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDatabase`  
+ *pDatabase*  
  에 대 한 포인터는 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -247,9 +247,9 @@ virtual void Close();
 ```  
   
 ### <a name="remarks"></a>설명  
- 일반적으로 호출한 후 **닫기**, 할당 된 경우 테이블 정의 개체를 삭제 하면 **새**합니다.  
+ 일반적으로 호출한 후 `Close`, 할당 된 경우 테이블 정의 개체를 삭제 하면 **새**합니다.  
   
- 호출할 수 있습니다 [열려](#open) 호출 후에 다시 **닫기**합니다. 이렇게 하면 테이블 정의 개체를 다시 사용할 수 있습니다.  
+ 호출할 수 있습니다 [열려](#open) 호출 후에 다시 `Close`합니다. 이렇게 하면 테이블 정의 개체를 다시 사용할 수 있습니다.  
   
  관련된 정보에 대 한 "Close 메서드" DAO 도움말의 항목을 참조 합니다.  
   
@@ -265,10 +265,10 @@ virtual void Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszName`  
+ *lpszName*  
  테이블의 이름을 포함 하는 문자열에 대 한 포인터입니다.  
   
- `lAttributes`  
+ *lAttributes*  
  에 해당 하는 테이블 정의 개체로 표현 되는 테이블의 특성 값입니다. 다음 상수 중 하나를 결합 하는 비트 OR을 사용할 수 있습니다.  
   
 |상수|설명|  
@@ -281,11 +281,11 @@ virtual void Create(
  *lpszSrcTable*  
  원본 테이블 이름을 포함 하는 문자열에 대 한 포인터입니다. 기본적으로이 값으로 초기화 됩니다 **NULL**합니다.  
   
- `lpszConnect`  
+ *lpszConnect*  
  기본 연결 문자열을 포함 하는 문자열에 대 한 포인터입니다. 기본적으로이 값으로 초기화 됩니다 **NULL**합니다.  
   
 ### <a name="remarks"></a>설명  
- 테이블 정의 지정한 후 호출할 수 있습니다 [Append](#append) 데이터베이스의 TableDefs 컬렉션에 테이블 정의 저장 합니다. 호출한 후 **Append**열린 상태에서 테이블 정의 되며 만드는 데 사용할 수는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 개체입니다.  
+ 테이블 정의 지정한 후 호출할 수 있습니다 [Append](#append) 데이터베이스의 TableDefs 컬렉션에 테이블 정의 저장 합니다. 호출한 후 `Append`열린 상태에서 테이블 정의 되며 만드는 데 사용할 수는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 개체입니다.  
   
  관련된 정보에 대 한 DAO 도움말의 "CreateTableDef Method" 항목을 참조 합니다.  
   
@@ -303,10 +303,10 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszName`  
+ *lpszName*  
  이 필드의 이름을 지정 하는 문자열 식에 대 한 포인터입니다.  
   
- `nType`  
+ *n 유형*  
  필드의 데이터 형식을 나타내는 값입니다. 설정은 다음이 값 중 하나일 수 있습니다.  
   
 |형식|크기(바이트)|설명|  
@@ -323,10 +323,10 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 |**dbLongBinary**|0|긴 이진 (OLE 개체), [CLongBinary](../../mfc/reference/clongbinary-class.md) 또는 [CByteArray](../../mfc/reference/cbytearray-class.md)|  
 |**dbMemo**|0|메모 ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
   
- `lSize`  
- 최대 크기 (바이트)의 텍스트를 포함 하는 필드 또는 텍스트 또는 숫자 값을 포함 하는 필드의 고정된 크기를 나타내는 값입니다. `lSize` 텍스트 필드를 제외한 모든 매개 변수는 무시 됩니다.  
+ *lSize*  
+ 최대 크기 (바이트)의 텍스트를 포함 하는 필드 또는 텍스트 또는 숫자 값을 포함 하는 필드의 고정된 크기를 나타내는 값입니다. *lSize* 텍스트 필드를 제외한 모든 매개 변수가 무시 됩니다.  
   
- `lAttributes`  
+ *lAttributes*  
  비트 OR를 사용 하 여 해당 하는 필드의 특성 값을 결합할 수 있습니다.  
   
 |상수|설명|  
@@ -337,17 +337,17 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 |**dbUpdatableField**|필드 값을 변경할 수 있습니다.|  
 |**dbDescending**|필드는 필드를 내림차순으로 정렬 됩니다 (A-Z 또는 100-0) 순서 (Index 개체의 필드 컬렉션의 필드 개체에만 적용 됨). 이 상수를 생략 하면 필드를 오름차순으로 정렬 됩니다 (A-Z 또는 0-100) 순서 (기본값).|  
   
- `fieldinfo`  
+ *fieldinfo*  
  에 대 한 참조는 [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) 구조입니다.  
   
 ### <a name="remarks"></a>설명  
- A **DAOField** (OLE) 개체가 생성 되 고의 Fields 컬렉션에 추가 된 **DAOTableDef** (OLE) 개체입니다. 개체 속성을 검사 하기 위한 용도 외에도 사용할 수도 있습니다 `CDaoFieldInfo` 테이블 정의에서 새 필드를 만들기 위한 입력된 매개 변수를 생성 합니다. 첫 번째 버전 `CreateField` 를 사용 하는 더 간단 하지만 두 번째 버전의 더욱 세밀 하 게 제어 하려는 경우 사용할 수 있습니다 `CreateField`,이 `CDaoFieldInfo` 매개 변수입니다.  
+ A **DAOField** (OLE) 개체가 생성 되 고의 Fields 컬렉션에 추가 `DAOTableDef` (OLE) 개체입니다. 개체 속성을 검사 하기 위한 용도 외에도 사용할 수도 있습니다 `CDaoFieldInfo` 테이블 정의에서 새 필드를 만들기 위한 입력된 매개 변수를 생성 합니다. 첫 번째 버전 `CreateField` 를 사용 하는 더 간단 하지만 두 번째 버전의 더욱 세밀 하 게 제어 하려는 경우 사용할 수 있습니다 `CreateField`,이 `CDaoFieldInfo` 매개 변수입니다.  
   
  버전을 사용 하는 경우 `CreateField` 를 사용 하는 `CDaoFieldInfo` 매개 변수를 신중 하 게 설정 해야 각각의 다음 멤버는 `CDaoFieldInfo` 구조:  
   
 - **m_strName**  
   
-- `m_nType`  
+- **m_nType**  
   
 - **m_lSize**  
   
@@ -367,7 +367,7 @@ void CreateIndex(CDaoIndexInfo& indexinfo);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `indexinfo`  
+ *indexinfo*  
  에 대 한 참조는 [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) 구조입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -379,9 +379,9 @@ void CreateIndex(CDaoIndexInfo& indexinfo);
   
 - **m_strName** 이름을 제공 해야 합니다.  
   
-- `m_pFieldInfos` 배열을 가리켜야 `CDaoIndexFieldInfo` 구조입니다.  
+- **m_pFieldInfos** 배열을 가리켜야 `CDaoIndexFieldInfo` 구조입니다.  
   
-- `m_nFields` 배열에 있는 필드 수를 지정 해야 `CDaoFieldInfo` 구조입니다.  
+- **m_nFields** 배열의 필드 수를 지정 해야 `CDaoFieldInfo` 구조입니다.  
   
  멤버 남아 있는 경우 무시로 설정 됩니다 **FALSE**합니다. 또한는 **m_lDistinctCount** 멤버의 인덱스를 만드는 동안 무시 됩니다.  
   
@@ -394,10 +394,10 @@ void DeleteField(int nIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszName`  
+ *lpszName*  
  기존 필드의 이름에 해당 하는 문자열 식에 대 한 포인터입니다.  
   
- `nIndex`  
+ *nIndex*  
  테이블의 0부터 시작 필드 컬렉션의 인덱스로 조회에 대 한 필드의 인덱스입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -414,10 +414,10 @@ void DeleteIndex(int nIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszName`  
+ *lpszName*  
  기존 인덱스의 이름에 해당 하는 문자열 식에 대 한 포인터입니다.  
   
- `nIndex`  
+ *nIndex*  
  데이터베이스의 0부터 시작 TableDefs 컬렉션에서 인덱스에 의해 조회에 대 한 인덱스 개체의 배열 인덱스입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -491,14 +491,14 @@ COleDateTime GetDateCreated();
  관련된 내용은 DAO 도움말의 "DateCreated LastUpdated 속성" 항목을 참조 합니다.  
   
 ##  <a name="getdatelastupdated"></a>  CDaoTableDef::GetDateLastUpdated  
- 내부 테이블에 날짜와 시간을 확인 하려면이 함수를 호출는 **CDaoTableDef** 개체가 마지막으로 업데이트 합니다.  
+ 내부 테이블에 날짜와 시간을 확인 하려면이 함수를 호출는 `CDaoTableDef` 개체가 마지막으로 업데이트 합니다.  
   
 ```  
 COleDateTime GetDateLastUpdated();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 기본 테이블의 날짜 및 시간 포함 하는 값은 **CDaoTableDef** 개체가 마지막으로 업데이트 합니다.  
+ 기본 테이블의 날짜 및 시간 포함 하는 값은 `CDaoTableDef` 개체가 마지막으로 업데이트 합니다.  
   
 ### <a name="remarks"></a>설명  
  날짜 및 시간 설정에 기본 테이블을 만들거나 마지막으로 업데이트 하는 컴퓨터에서 파생 됩니다. 다중 사용자 환경에서 사용자가 얻어야 이러한 설정을; 불일치를 방지 하기 위해 파일 서버에서 직접 즉, 모든 클라이언트 "standard" 시간 원본을 사용할지-에서 서버 하나.  
@@ -537,13 +537,13 @@ void GetFieldInfo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  테이블의 0부터 시작 필드 컬렉션의 인덱스로 조회에 대 한 필드 개체의 인덱스입니다.  
   
- `fieldinfo`  
+ *fieldinfo*  
  에 대 한 참조는 [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) 구조입니다.  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  검색할 필드에 대 한 정보를 지정 하는 옵션입니다. 사용 가능한 옵션은 함께 반환 하는 함수를 입히기 무엇 여기 나열 됩니다.  
   
 - `AFX_DAO_PRIMARY_INFO` (기본값) 특성 이름, 유형, 크기입니다. 이 옵션을 사용 하 여 빠른 성능을 합니다.  
@@ -552,13 +552,13 @@ void GetFieldInfo(
   
 - `AFX_DAO_ALL_INFO` 기본 및 보조 정보 플러스: Default Value 유효성 검사 규칙을 유효성 검사 텍스트  
   
- `lpszName`  
+ *lpszName*  
  이름별으로 조회에 대 한 필드 개체의 이름에 대 한 포인터입니다. 이름은 최대 64 자 필드의 이름을 고유 하 게 지정 하는 문자열입니다.  
   
 ### <a name="remarks"></a>설명  
  한 버전의 함수를 사용 하면 인덱스 필드를 찾을 수 있습니다. 다른 버전 필드 이름으로 조회할 수 있습니다.  
   
- 반환 되는 정보에 대 한 참조는 [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) 구조입니다. 이 구조에는 항목의 설명에 위에 나열 된 정보에 해당 하는 멤버가 `dwInfoOptions`합니다. 한 수준에서 정보를 요청할 때 모든 상위 수준의에 대 한 정보를 가져옵니다.  
+ 반환 되는 정보에 대 한 참조는 [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) 구조입니다. 이 구조에는 위에 나열 된에 대 한 설명의 정보 항목에 해당 하는 멤버가 *dwInfoOptions*합니다. 한 수준에서 정보를 요청할 때 모든 상위 수준의에 대 한 정보를 가져옵니다.  
   
  관련된 정보에 대 한 DAO 도움말의 "특성 Property" 항목을 참조 합니다.  
   
@@ -594,13 +594,13 @@ void GetIndexInfo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  테이블의 0부터 시작 인덱스가 컬렉션의 컬렉션에서 해당 위치에 따라 조회에 대 한 인덱스 개체의 숫자 인덱스입니다.  
   
- `indexinfo`  
+ *indexinfo*  
  에 대 한 참조는 [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) 구조입니다.  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  인덱스를 검색 하는 방법에 대 한 정보를 지정 하는 옵션입니다. 사용 가능한 옵션은 함께 반환 하는 함수를 입히기 무엇 여기 나열 됩니다.  
   
 - `AFX_DAO_PRIMARY_INFO` 필드 이름, 필드 정보입니다. 이 옵션을 사용 하 여 빠른 성능을 합니다.  
@@ -609,13 +609,13 @@ void GetIndexInfo(
   
 - `AFX_DAO_ALL_INFO` 기본 및 보조 정보 플러스: 고유 카운트  
   
- `lpszName`  
+ *lpszName*  
  이름별으로 조회에 대 한 인덱스 개체의 이름에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
  한 버전의 함수를 사용 하면 컬렉션에서 해당 위치에 따라 인덱스를 조회할 수 있습니다. 다른 버전 이름으로 인덱스를 조회할 수 있습니다.  
   
- 반환 되는 정보에 대 한 참조는 [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) 구조입니다. 이 구조에는 항목의 설명에 위에 나열 된 정보에 해당 하는 멤버가 `dwInfoOptions`합니다. 한 수준에서 정보를 요청할 때 모든 상위 수준의에 대 한 정보를 가져옵니다.  
+ 반환 되는 정보에 대 한 참조는 [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md) 구조입니다. 이 구조에는 위에 나열 된에 대 한 설명의 정보 항목에 해당 하는 멤버가 *dwInfoOptions*합니다. 한 수준에서 정보를 요청할 때 모든 상위 수준의에 대 한 정보를 가져옵니다.  
   
  관련된 정보에 대 한 DAO 도움말의 "특성 Property" 항목을 참조 합니다.  
   
@@ -672,7 +672,7 @@ CString GetValidationRule();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- A **CString** 가 변경 되거나 테이블에 추가 되는 필드의 데이터 유효성을 검사 하는 개체입니다.  
+ A `CString` 가 변경 되거나 테이블에 추가 되는 필드의 데이터 유효성을 검사 하는 개체입니다.  
   
 ### <a name="remarks"></a>설명  
  업데이트 작업으로 연결 된 유효성 검사 규칙이 사용 됩니다. 유효성 검사 규칙을 포함 하는 테이블 정의 데이터를 변경 하기 전에 해당 테이블 정의에 대 한 업데이트는 미리 결정 된 조건 일치 해야 합니다. 변경 된 조건 값을 포함 하는 예외 일치 하지 않는 경우 [GetValidationText](#getvalidationtext) throw 됩니다. 에 대 한는 `CDaoTableDef` 개체를이 `CString` 연결 된 테이블과 기본 테이블에 대 한 읽기/쓰기에 대 한 읽기 전용입니다.  
@@ -725,7 +725,7 @@ virtual void Open(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszName`  
+ *lpszName*  
  테이블 이름을 지정 하는 문자열에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -752,7 +752,7 @@ void SetAttributes(long lAttributes);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lAttributes`  
+ *lAttributes*  
  로 표시 된 테이블의 특성은 `CDaoTableDef` 개체와 이러한 상수 중 합계만 될 수 있습니다.  
   
 |상수|설명|  
@@ -779,7 +779,7 @@ void SetConnect(LPCTSTR lpszConnect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszConnect`  
+ *lpszConnect*  
  ODBC 또는 설치 가능한 ISAM 드라이버에 전달할 추가 매개 변수를 지정 하는 문자열 식에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -816,7 +816,7 @@ void SetConnect(LPCTSTR lpszConnect);
   
  ODBC 드라이버는 테이블을 액세스 하는 로그인 대화 상자는 첫 번째 시간 표시 필요한 암호가 제공 되지 않은, 다시 연결을 닫고 다시 하는 경우.  
   
- 에 대 한 연결 문자열을 설정할 수 있습니다는 `CDaoTableDef` 개체에 대 한 소스 인수를 제공 하는 **만들기** 멤버 함수입니다. 유형, 경로, 사용자 ID, 암호 또는 ODBC 데이터 원본 데이터베이스의 확인 하려면 설정을 확인할 수 있습니다. 자세한 내용은 특정 드라이버에 대 한 설명서를 참조 하십시오.  
+ 에 대 한 연결 문자열을 설정할 수 있습니다는 `CDaoTableDef` 개체에 대 한 소스 인수를 제공 하는 `Create` 멤버 함수입니다. 유형, 경로, 사용자 ID, 암호 또는 ODBC 데이터 원본 데이터베이스의 확인 하려면 설정을 확인할 수 있습니다. 자세한 내용은 특정 드라이버에 대 한 설명서를 참조 하십시오.  
   
  관련된 정보에 대 한 DAO 도움말의 "연결 Property" 항목을 참조 합니다.  
   
@@ -828,7 +828,7 @@ void SetName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszName`  
+ *lpszName*  
  테이블에 대 한 이름을 지정 하는 문자열 식에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -868,7 +868,7 @@ void SetValidationRule(LPCTSTR lpszValidationRule);
   
  유효성 검사는 Microsoft Jet 데이터베이스 엔진을 사용 하는 데이터베이스에 대해서만 지원 됩니다. 사용자 정의 함수, 도메인 집계 함수, SQL 집계 함수 또는 쿼리 식은 참조할 수 없습니다. 에 대 한 유효성 검사 규칙을 `CDaoTableDef` 개체는 해당 개체의 여러 필드를 참조할 수 있습니다.  
   
- 명명 된 필드에 대 한 예를 들어 `hire_date` 및 `termination_date`, 유효성 검사 규칙을 만들 수 있습니다.  
+ 명명 된 필드에 대 한 예를 들어 *hire_date* 및 *termination_date*, 유효성 검사 규칙을 만들 수 있습니다.  
   
  [!code-cpp[NVC_MFCDatabase#34](../../mfc/codesnippet/cpp/cdaotabledef-class_1.cpp)]  
   

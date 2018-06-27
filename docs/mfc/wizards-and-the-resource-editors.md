@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 33fb1caa496c34111de133a113433a614ff5eb22
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: db1b807856baf4cab3cdef57092cd29fdff3a19d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383843"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951142"
 ---
 # <a name="wizards-and-the-resource-editors"></a>마법사 및 리소스 편집기
 Visual c + + MFC 프로그래밍 많은 통합된 리소스 편집기와 함께 사용 하기 위해 몇 가지 마법사를 포함합니다. ActiveX 컨트롤 프로그래밍에 대해는 [ActiveX 컨트롤 마법사](../mfc/reference/mfc-activex-control-wizard.md) 것과 마찬가지로 MFC 응용 프로그램 마법사의 목적을 갖습니다. 대부분의이 도구는 MFC 응용 프로그램을 작성할 수 있지만, 도구 크게 단순화 하 고 빠르게 작업 합니다.  
@@ -41,7 +41,7 @@ Visual c + + MFC 프로그래밍 많은 통합된 리소스 편집기와 함께 
 > [!NOTE]
 >  클래스 뷰를 사용 하면 MFC 클래스의 가상 함수를 재정의할 수 있습니다. 클래스 및 가상 함수 재정의를 선택 합니다. 프로세스의 나머지 다음 단락에 설명 된 대로 메시지 처리와 비슷합니다.  
   
- Windows에서 실행 되는 응용 프로그램은 [메시지 구동](../mfc/message-handling-and-mapping.md)합니다. 실행 중인 프로그램에서 발생 하는 다른 이벤트 및 사용자 작업 하면 프로그램에서 창에 메시지를 보낼 창 됩니다. 예를 들어 사용자가 창에서 마우스를 클릭 하면 Windows 보냅니다는 `WM_LBUTTONDOWN` 메시지 마우스 왼쪽된 단추를 누르면 및 `WM_LBUTTONUP` 단추를 놓을 때 메시지입니다. Windows도 보냅니다 **WM_COMMAND** 메시지를 사용자가 메뉴 모음에서 명령을 선택 합니다.  
+ Windows에서 실행 되는 응용 프로그램은 [메시지 구동](../mfc/message-handling-and-mapping.md)합니다. 실행 중인 프로그램에서 발생 하는 다른 이벤트 및 사용자 작업 하면 프로그램에서 창에 메시지를 보낼 창 됩니다. 예를 들어 사용자가 창에서 마우스를 클릭 하면 Windows 보내고 마우스 왼쪽된 단추를 누를 때 WM_LBUTTONDOWN 메시지 WM_LBUTTONUP 메시지는 단추를 놓을 때 합니다. 또한 Windows 사용자가 메뉴 모음에서 명령을 선택할 때 WM_COMMAND 메시지를 보냅니다.  
   
  MFC 프레임 워크에서 문서, 뷰, 프레임 창, 문서 템플릿 및 응용 프로그램 개체와 같은 다양 한 개체 수 "메시지를 처리". 이러한 개체는 "처리기 함수" 멤버의 멤버 중 하나로 함수를 제공 하 고 프레임 워크를 해당 처리기 들어오는 메시지를 매핑합니다.  
   

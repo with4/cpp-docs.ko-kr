@@ -17,17 +17,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88ba41b7bb921cc2834b4d45712be768b2d19f8e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 97d8f7a0107f3f6d7aa9e5baa1454142e1426d9e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384467"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950476"
 ---
 # <a name="windows"></a>Windows
 다음이의 문서에서는 MFC 프레임 워크의 창 개체를 설명합니다. 모든 MFC 창 클래스에서 파생 [CWnd](../mfc/reference/cwnd-class.md), 프레임 창, 보기, 대화 상자 및 컨트롤을 포함 합니다.  
   
- 문서의 첫 번째 그룹 설명 [창 개체 소멸 시키기](../mfc/window-objects.md) 일반적입니다. 이 그룹에 대 한 c + + 창 개체 소멸 시키기, HWND 캡슐화 방법 및 자식 창과 같은 사용자 지정 창을 만들 때의 사용 방법에 대 한 일반 정보를 참조 하십시오.  
+ 문서의 첫 번째 그룹 설명 [창 개체 소멸 시키기](../mfc/window-objects.md) 일반적입니다. C + + 창 개체에 대 한 일반 정보에 대 한이 그룹 참조 캡슐화 방법는 `HWND`, 및 자식 창과 같은 사용자 지정 창을 만들 때의 사용 방법입니다.  
   
  문서의 두 번째 그룹 설명 [프레임 창](../mfc/frame-windows.md)-콘텐츠 주위에 프레임을 배치 하는 windows-특히 합니다. 이 그룹에는 MFC 프레임 워크 프레임 창 및 컨트롤 막대, 보기 등 프레임 내용을 관리 하는 방법에 대 한 정보를 참조 하십시오.  
   

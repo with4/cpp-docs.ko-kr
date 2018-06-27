@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe1e79324c4c1f7408e1b801cf2be581b9884717
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cba37344a2d065c84e196330e3b4f9d859975102
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384090"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954861"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016: MFC에서 C++ 다중 상속 사용
 이 노트 Microsoft Foundation Classes와 다중 상속 (MI)를 사용 하는 방법을 설명 합니다. MI 사용 하는 MFC와 함께 필요 하지 않습니다. MI 모든 MFC 클래스에서 사용 되지 않으며 클래스 라이브러리를 작성할 필요가 없습니다.  
@@ -52,7 +52,7 @@ class CListWnd : public CFrameWnd, public CObList
 CListWnd myListWnd;  
 ```  
   
- 이 경우 `CObject` 두 번 포함 됩니다. 즉, 모든 참조를 구분 하는 방법을 할 `CObject` 메서드나 연산자입니다. `operator new` 및 [delete 연산자](../mfc/reference/cobject-class.md#operator_delete) 명확히 구분 하는 연산자는 합니다. 다음 코드는 또 다른 예로, 컴파일 타임에는 오류가 발생합니다.  
+ 이 경우 `CObject` 두 번 포함 됩니다. 즉, 모든 참조를 구분 하는 방법을 할 `CObject` 메서드나 연산자입니다. **new 연산자** 및 [delete 연산자](../mfc/reference/cobject-class.md#operator_delete) 명확히 구분 하는 연산자는 합니다. 다음 코드는 또 다른 예로, 컴파일 타임에는 오류가 발생합니다.  
   
 ```  
 myListWnd.Dump(afxDump);
@@ -60,7 +60,7 @@ myListWnd.Dump(afxDump);
 ```  
   
 ## <a name="reimplementing-cobject-methods"></a>CObject 인해야 메서드  
- 두 개 이상을 포함 하는 새 클래스를 만들 때 `CObject` 기본 클래스를 파생 다시 구현 해야는 `CObject` 다른 사용자가 사용 하는 메서드. 연산자 `new` 및 `delete` 필수 및 [덤프](../mfc/reference/cobject-class.md#dump) 것이 좋습니다. 다음 예제에서는 reimplements는 `new` 및 `delete` 연산자와 `Dump` 메서드:  
+ 두 개 이상을 포함 하는 새 클래스를 만들 때 `CObject` 기본 클래스를 파생 다시 구현 해야는 `CObject` 다른 사용자가 사용 하는 메서드. 연산자 **새** 및 **삭제** 필수 및 [덤프](../mfc/reference/cobject-class.md#dump) 것이 좋습니다. 다음 예제에서는 reimplements는 **새** 및 **삭제** 연산자와 `Dump` 메서드:  
   
 ```  
 class CListWnd : public CFrameWnd, public CObList  
@@ -89,9 +89,9 @@ public:
  해당 가상으로 상속 하는 것 처럼 보일 수 `CObject` 함수 모호성 문제를 해결할 수 있지만 해당 되는 경우. 멤버 데이터가 없는 이므로 `CObject`, 기본 클래스 멤버 데이터의 여러 복사본을 방지 하기 위해 가상 상속 필요가 없습니다. 이전에 표시 된 첫 번째 예제에서는 `Dump` 에서 다르게 구현 되므로 가상 메서드는 여전히 모호한 `CFrameWnd` 및 `CObList`합니다. 모호성을 없애기 위해 이전 섹션에 제공 된 권장 사항을 준수 하는 가장 좋은 방법은 합니다.  
   
 ## <a name="cobjectiskindof-and-run-time-typing"></a>CObject::IsKindOf 및 런타임 입력  
- 에 MFC에서 지원 되는 런타임에 입력 메커니즘 `CObject` 매크로 사용 하 여 `DECLARE_DYNAMIC`, `IMPLEMENT_DYNAMIC`, `DECLARE_DYNCREATE`, `IMPLEMENT_DYNCREATE`, `DECLARE_SERIAL` 및 `IMPLEMENT_SERIAL`합니다. 이러한 매크로 안전 downcast 보장 하기 위해 런타임 형식 검사를 수행할 수 있습니다.  
+ 에 MFC에서 지원 되는 런타임에 입력 메커니즘 `CObject` DECLARE_DYNAMIC, IMPLEMENT_DYNAMIC, DECLARE_DYNCREATE, IMPLEMENT_DYNCREATE, DECLARE_SERIAL 및 IMPLEMENT_SERIAL 매크로 사용 합니다. 이러한 매크로 안전 downcast 보장 하기 위해 런타임 형식 검사를 수행할 수 있습니다.  
   
- 이러한 매크로 하나의 기본 클래스를 지원 하며 여러 번 상속 된 클래스에 대 한 제한 된 방식으로 작동 합니다. 지정 하는 기본 클래스 `IMPLEMENT_DYNAMIC` 또는 `IMPLEMENT_SERIAL` 첫 번째 (또는 맨 왼쪽) 기본 클래스 여야 합니다. 이 배치 형식을 가장 왼쪽 기본 클래스만 검사할 수 있습니다. 런타임 형식 시스템에는 추가 기본 클래스에 대해 전혀 알게 됩니다. 다음 예제에서는 런타임 시스템에서는 작업 형식에 대해 검사 `CFrameWnd`, 아무것도 대 한 알 수 있지만 `CObList`합니다.  
+ 이러한 매크로 하나의 기본 클래스를 지원 하며 여러 번 상속 된 클래스에 대 한 제한 된 방식으로 작동 합니다. IMPLEMENT_DYNAMIC 또는 IMPLEMENT_SERIAL에 지정 하는 기본 클래스에는 첫 번째 (또는 맨 왼쪽) 기본 클래스 여야 합니다. 이 배치 형식을 가장 왼쪽 기본 클래스만 검사할 수 있습니다. 런타임 형식 시스템에는 추가 기본 클래스에 대해 전혀 알게 됩니다. 다음 예제에서는 런타임 시스템에서는 작업 형식에 대해 검사 `CFrameWnd`, 아무것도 대 한 알 수 있지만 `CObList`합니다.  
   
 ```  
 class CListWnd : public CFrameWnd,

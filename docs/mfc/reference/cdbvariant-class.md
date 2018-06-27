@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27970a7d3854dca398943bfe13c67f6a4e1f92f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e88eb810c252e4963a5f189d7f90e5aca531cf7
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369085"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951821"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant 클래스
 MFC ODBC 클래스의 variant 데이터 형식을 나타냅니다.  
@@ -82,10 +82,10 @@ class CDBVariant
   
 ### <a name="public-union-members"></a>공용 공용 구조체 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CDBVariant::m_boolVal](#m_boolval)|형식의 값이 포함 된 **BOOL**합니다.|  
-|[CDBVariant::m_chVal](#m_chval)|형식의 값이 포함 된 `unsigned char`합니다.|  
+|[CDBVariant::m_chVal](#m_chval)|형식의 값이 포함 된 **unsigned char**합니다.|  
 |[CDBVariant::m_dblVal](#m_dblval)|형식의 값이 포함 된 **double**합니다.|  
 |[CDBVariant::m_fltVal](#m_fltval)|형식의 값이 포함 된 **float**합니다.|  
 |[CDBVariant::m_iVal](#m_ival)|형식의 값이 포함 된 **짧은**합니다.|  
@@ -127,9 +127,9 @@ void Clear();
 ```  
   
 ### <a name="remarks"></a>설명  
- 하는 경우의 값은 [m_dwType](#m_dwtype) 데이터 멤버는 **DBVT_DATE**, **DBVT_STRING**, 또는 **DBVT_BINARY**, **지우기**공용 구조체 포인터 멤버와 연결 된 메모리를 해제 합니다. **지우기** 설정 `m_dwType` 를 **DBVT_NULL**합니다.  
+ 하는 경우의 값은 [m_dwType](#m_dwtype) 데이터 멤버는 **DBVT_DATE**, **DBVT_STRING**, 또는 **DBVT_BINARY**, `Clear` 메모리를 해제 공용 구조체 포인터 멤버와 연결 합니다. `Clear` 설정 `m_dwType` 를 **DBVT_NULL**합니다.  
   
- `CDBVariant` 소멸자 호출 **지우기**합니다.  
+ `CDBVariant` 소멸자 호출 `Clear`합니다.  
   
 ##  <a name="m_boolval"></a>  CDBVariant::m_boolVal  
  형식의 값을 저장 **BOOL**합니다.  

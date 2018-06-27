@@ -412,12 +412,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3a677d81343da6185ce37f1f4839f20cef3b943
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3e2f9edf2cdf6a0e462333224f3b8bd6d920fa2a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378854"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954093"
 ---
 # <a name="cdc-class"></a>CDC 클래스
 디바이스 컨텍스트 개체의 클래스를 정의합니다.  
@@ -657,7 +657,7 @@ class CDC : public CObject
  사용 하는 `CDC` 개체,를 생성 하 고, 다음 멤버의 멤버 장치 컨텍스트를 사용 하는 Windows 함수를 병렬화 하는 함수를 호출 합니다.  
   
 > [!NOTE]
->  Windows 95/98 모든 화면 좌표 16 비트로 제한 됩니다. 따라서는 `int` 에 전달 되는 `CDC` 멤버 함수는-32768에서 32767 범위 내에서에 있어야 합니다.  
+>  Windows 95/98 모든 화면 좌표 16 비트로 제한 됩니다. 따라서는 **int** 에 전달 되는 `CDC` 멤버 함수는-32768에서 32767 범위 내에서에 있어야 합니다.  
   
  특정 용도 대 한 Microsoft Foundation Class 라이브러리는 여러 클래스에서 파생 된 제공 `CDC` 합니다. `CPaintDC` 에 대 한 호출을 캡슐화 `BeginPaint` 및 `EndPaint`합니다. `CClientDC` 창의 클라이언트 영역에 연결 된 한 디스플레이 컨텍스트를 관리 합니다. `CWindowDC` 컨트롤과 프레임을 포함 하는 전체 창과와 관련 된 한 디스플레이 컨텍스트를 관리 합니다. `CMetaFileDC` 메타 파일 장치 컨텍스트를 연결합니다.  
   
@@ -707,19 +707,19 @@ int AbortDoc();
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 `ABORTDOC` 프린터 이스케이프 합니다.  
   
- **AbortDoc** 다음을 종료 하는 데 사용 해야 합니다.  
+ `AbortDoc` 사용 하는 다음 종료 되어야 합니다.  
   
 -   인쇄 작업을 사용 하 여 중단 함수를 지정 하지 않으면 [SetAbortProc](#setabortproc)합니다.  
   
 -   인쇄 작업의 첫 번째 아직 도착 하지 않은 **NEWFRAME** 또는 **NEXTBAND** 호출을 이스케이프 합니다.  
   
- 그 중 하나를 사용 하 여 작업을 종료 하 하려고 해서는 안 응용 프로그램 오류를 인쇄 또는 인쇄 작업을 취소를 발생 하는 경우는 [EndDoc](#enddoc) 또는 **AbortDoc** 클래스의멤버함수`CDC`. GDI 오류 값을 반환 하기 전에 작업을 자동으로 종료 합니다.  
+ 그 중 하나를 사용 하 여 작업을 종료 하 하려고 해서는 안 응용 프로그램 오류를 인쇄 또는 인쇄 작업을 취소를 발생 하는 경우는 [EndDoc](#enddoc) 또는 `AbortDoc` 클래스의 멤버 함수 `CDC`합니다. GDI 오류 값을 반환 하기 전에 작업을 자동으로 종료 합니다.  
   
- 사용자가 인쇄 작업을 취소할 수 있도록 대화 상자를 표시 하는 응용 프로그램을 호출 해야 **AbortDoc** 대화 상자 제거 하기 전에 합니다.  
+ 사용자가 인쇄 작업을 취소할 수 있도록 대화 상자를 표시 하는 응용 프로그램을 호출 해야 `AbortDoc` 대화 상자 제거 하기 전에 합니다.  
   
- 인쇄 작업을 시작 하려면 인쇄 관리자를 사용 하는 경우 호출 **AbortDoc** 전체 스풀 작업 지웁니다-nothing 프린터 받습니다. 인쇄 관리자 인쇄 작업을 시작 하는 사용 되지 않은, 경우 데이터 보냈을 수 있습니다 전에 프린터로 **AbortDoc** 호출 되었습니다. 이 경우 프린터 드라이버 (가능한 경우) 프린터를 약 수와 인쇄 작업을 종료 합니다.  
+ 인쇄 작업을 시작 하려면 인쇄 관리자를 사용 하는 경우 호출 `AbortDoc` 전체 스풀 작업 지웁니다-nothing 프린터 받습니다. 인쇄 관리자 인쇄 작업을 시작 하는 사용 되지 않은, 경우 데이터 보냈을 수 있습니다 전에 프린터로 `AbortDoc` 호출 되었습니다. 이 경우 프린터 드라이버 (가능한 경우) 프린터를 약 수와 인쇄 작업을 종료 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CDC::StartDoc](#startdoc)합니다.  
   
 ##  <a name="abortpath"></a>  CDC::AbortPath  
@@ -775,34 +775,34 @@ BOOL AlphaBlend(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `xDest`  
+ *xDest*  
  대상 사각형의 왼쪽 위 모퉁이의 논리 단위로 x 좌표를 지정합니다.  
   
- `yDest`  
+ *yDest*  
  대상 사각형의 왼쪽 위 모퉁이의 논리 단위로 y 좌표를 지정합니다.  
   
- `nDestWidth`  
+ *nDestWidth*  
  대상 사각형의 논리 단위에서는 너비를 지정합니다.  
   
- `nDestHeight`  
+ *nDestHeight*  
  대상 사각형의 논리 단위에서 높이 지정합니다.  
   
- `pSrcDC`  
+ *pSrcDC*  
  소스 장치 컨텍스트에 대 한 포인터입니다.  
   
- `xSrc`  
+ *xSrc*  
  논리 단위로 소스 사각형의 왼쪽 위 모퉁이의 x 좌표를 지정합니다.  
   
- `ySrc`  
+ *ySrc*  
  논리 단위로 소스 사각형의 왼쪽 위 모퉁이의 y 좌표를 지정합니다.  
   
- `nSrcWidth`  
+ *nSrcWidth*  
  소스 사각형의 논리 단위에서는 너비를 지정합니다.  
   
- `nSrcHeight`  
+ *nSrcHeight*  
  소스 사각형의 논리 단위에서 높이 지정합니다.  
   
- *Blend*  
+ *blend*  
  지정 된 [BLENDFUNCTION](http://msdn.microsoft.com/library/windows/desktop/dd183393) 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -871,37 +871,37 @@ BOOL Arc(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `x1`  
+ *x1*  
  (논리 단위)에 경계 사각형의 왼쪽 위 모퉁이의 x 좌표를 지정합니다.  
   
- `y1`  
+ *y1*  
  (논리 단위)에 경계 사각형의 왼쪽 위 모퉁이의 y 좌표를 지정합니다.  
   
- `x2`  
+ *x2*  
  (논리 단위)에 경계 사각형의 오른쪽 아래 모서리의 x 좌표를 지정합니다.  
   
- `y2`  
+ *y2*  
  (논리 단위)에 경계 사각형의 오른쪽 아래 모퉁이의 y 좌표를 지정합니다.  
   
  *x3*  
  호를 정의 하는 점의 x 좌표 (논리 단위)에서 시작을 지정 합니다. 이 지점 호에 정확 하 게 상태로 남아 있이 필요가 없습니다.  
   
- `y3`  
+ *y3*  
  호를 정의 하는 점의 y 좌표 (논리 단위)에서 시작을 지정 합니다. 이 지점 호에 정확 하 게 상태로 남아 있이 필요가 없습니다.  
   
- `x4`  
+ *x4*  
  원호의 끝점 (논리 단위)를 정의 하는 지점의 x 좌표를 지정 합니다. 이 지점 호에 정확 하 게 상태로 남아 있이 필요가 없습니다.  
   
- `y4`  
+ *y4*  
  원호의 끝점 (논리 단위)를 정의 하는 지점의 y 좌표를 지정 합니다. 이 지점 호에 정확 하 게 상태로 남아 있이 필요가 없습니다.  
   
- `lpRect`  
+ *lpRect*  
  논리 단위) (의 경계 사각형을 지정합니다. 전달할 수 있습니다는 `LPRECT` 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 이 매개 변수에 대 한 개체입니다.  
   
- `ptStart`  
+ *ptStart*  
  호를 정의 하는 지점의 x 및 y 좌표 (논리 단위)에서 시작을 지정 합니다. 이 지점 호에 정확 하 게 상태로 남아 있이 필요가 없습니다. 전달할 수 있습니다는 [지점](../../mfc/reference/point-structure1.md) 구조 또는 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 이 매개 변수에 대 한 개체입니다.  
   
- `ptEnd`  
+ *ptEnd*  
  원호의 끝점 (논리 단위)에서 정의 하는 지점의 x 및 y 좌표를 지정 합니다. 이 지점 호에 정확 하 게 상태로 남아 있이 필요가 없습니다. 전달할 수 있습니다는 **지점** 구조 또는 `CPoint` 이 매개 변수에 대 한 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -912,7 +912,7 @@ BOOL Arc(
   
  원호의 시작점 실제는 지정 된 시작점을 통해 경계 사각형의 중앙에서 가져온 광선 타원 교차 하는 지점입니다. 실제 끝점 호의는 지정 된 끝점을 통해 경계 사각형의 중앙에서 가져온 광선 타원 교차 하는 지점입니다. 시계 반대 방향으로 호를 그릴 수 있습니다. 호 닫힌된 그림 아니므로 채워지지 않습니다. 사각형의 높이 너비는 2 단위 및 보다 작은 32, 767 단위 보다 커야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#29](../../mfc/codesnippet/cpp/cdc-class_1.cpp)]  
   
 ##  <a name="arcto"></a>  CDC::ArcTo  
@@ -937,63 +937,63 @@ BOOL ArcTo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `x1`  
+ *x1*  
  (논리 단위)에 경계 사각형의 왼쪽 위 모퉁이의 x 좌표를 지정합니다.  
   
- `y1`  
+ *y1*  
  (논리 단위)에 경계 사각형의 왼쪽 위 모퉁이의 y 좌표를 지정합니다.  
   
- `x2`  
+ *x2*  
  (논리 단위)에 경계 사각형의 오른쪽 아래 모서리의 x 좌표를 지정합니다.  
   
- `y2`  
+ *y2*  
  (논리 단위)에 경계 사각형의 오른쪽 아래 모퉁이의 y 좌표를 지정합니다.  
   
  *x3*  
  호를 정의 하는 점의 x 좌표 (논리 단위)에서 시작을 지정 합니다. 이 지점 호에 정확 하 게 상태로 남아 있이 필요가 없습니다.  
   
- `y3`  
+ *y3*  
  호를 정의 하는 점의 y 좌표 (논리 단위)에서 시작을 지정 합니다. 이 지점 호에 정확 하 게 상태로 남아 있이 필요가 없습니다.  
   
- `x4`  
+ *x4*  
  원호의 끝점 (논리 단위)를 정의 하는 지점의 x 좌표를 지정 합니다. 이 지점 호에 정확 하 게 상태로 남아 있이 필요가 없습니다.  
   
- `y4`  
+ *y4*  
  원호의 끝점 (논리 단위)를 정의 하는 지점의 y 좌표를 지정 합니다. 이 지점 호에 정확 하 게 상태로 남아 있이 필요가 없습니다.  
   
- `lpRect`  
+ *lpRect*  
  논리 단위) (의 경계 사각형을 지정합니다. 에 대 한 포인터를 전달할 수는 [RECT](../../mfc/reference/rect-structure1.md) 데이터 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 이 매개 변수에 대 한 개체입니다.  
   
- `ptStart`  
+ *ptStart*  
  호를 정의 하는 지점의 x 및 y 좌표 (논리 단위)에서 시작을 지정 합니다. 이 지점 호에 정확 하 게 상태로 남아 있이 필요가 없습니다. 전달할 수 있습니다는 [지점](../../mfc/reference/point-structure1.md) 데이터 구조 또는 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 이 매개 변수에 대 한 개체입니다.  
   
- `ptEnd`  
+ *ptEnd*  
  원호의 끝점 (논리 단위)에서 정의 하는 지점의 x 및 y 좌표를 지정 합니다. 이 지점 호에 정확 하 게 상태로 남아 있이 필요가 없습니다. 전달할 수 있습니다는 **지점** 데이터 구조 또는 `CPoint` 이 매개 변수에 대 한 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 함수는 `CDC::Arc`제외 하 고 현재 위치가 업데이트 됩니다. 점 ( `x1`, `y1`) 및 ( `x2`, `y2`) 경계 사각형을 지정 합니다. 지정 된 경계 사각형에 의해 구성 되는 타원의 호 곡선을 정의 합니다. 호 시계 반대 방향으로 (기본 호 방향)에서 확장 하는 경계 사각형의 중앙에서 방사형 선 교차 하는 지점 ( *x3*, `y3`). 에 경계 사각형의 중앙에서 방사형 선 교차 호 끝 ( `x4`, `y4`). 시작 지점 및 끝 지점 같으면 완전 한 타원이 그려집니다.  
+ 이 함수는 `CDC::Arc`제외 하 고 현재 위치가 업데이트 됩니다. 점 ( *x1*, *y1*) 및 ( *x2*, *y2*) 경계 사각형을 지정 합니다. 지정 된 경계 사각형에 의해 구성 되는 타원의 호 곡선을 정의 합니다. 호 시계 반대 방향으로 (기본 호 방향)에서 확장 하는 경계 사각형의 중앙에서 방사형 선 교차 하는 지점 ( *x3*, *y3*). 에 경계 사각형의 중앙에서 방사형 선 교차 호 끝 ( *x4*, *y4*). 시작 지점 및 끝 지점 같으면 완전 한 타원이 그려집니다.  
   
  원호의 시작점에 현재 위치에서 선이 그려집니다. 오류가 발생 하지는 호의 끝점을 현재 위치 설정 됩니다. 현재 펜;를 사용 하 여 호가 그려집니다. 채워지지 않습니다.  
   
 ##  <a name="attach"></a>  CDC::Attach  
- 이 멤버 함수를 사용 하 여 연결할는 `hDC` 에 `CDC` 개체입니다.  
+ 이 멤버 함수를 사용 하 여 연결할는 *hDC* 에 `CDC` 개체입니다.  
   
 ```  
 BOOL Attach(HDC hDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hDC`  
+ *hDC*  
  Windows 장치 컨텍스트입니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- `hDC` 둘 다에 저장 된 `m_hDC`, 출력 장치 컨텍스트 및 `m_hAttribDC`, 특성 디바이스 컨텍스트.  
+ *hDC* 둘 다에 저장 된 `m_hDC`, 출력 장치 컨텍스트 및 `m_hAttribDC`, 특성 디바이스 컨텍스트.  
   
 ##  <a name="beginpath"></a>  CDC::BeginPath  
  장치 컨텍스트에서 경로 대괄호를 엽니다.  
@@ -1010,7 +1010,7 @@ BOOL BeginPath();
   
  참조 [BeginPath](http://msdn.microsoft.com/library/windows/desktop/dd183363) 패스에서 점을 정의 하는 그리기 함수 목록에 대 한 Windows sdk입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#30](../../mfc/codesnippet/cpp/cdc-class_2.cpp)]  
   
 ##  <a name="bitblt"></a>  CDC::BitBlt  
@@ -1035,19 +1035,19 @@ BOOL BitBlt(
  *y*  
  대상 사각형의 왼쪽 위 모퉁이의 논리적 y 좌표를 지정합니다.  
   
- `nWidth`  
+ *nWidth*  
  대상 사각형 및 소스 비트맵의 너비 (논리 단위)에 지정합니다.  
   
- `nHeight`  
+ *nHeight*  
  대상 사각형 및 소스 비트맵의 높이 (논리 단위) 단위로 지정합니다.  
   
- `pSrcDC`  
+ *pSrcDC*  
  에 대 한 포인터는 `CDC` 비트맵을 복사할 장치 컨텍스트를 식별 하는 개체입니다. 있어야 **NULL** 경우 *dwRop* 소스를 포함 하지 않는 래스터 연산을 지정 합니다.  
   
- `xSrc`  
+ *xSrc*  
  원본 비트맵의 왼쪽 위 모퉁이의 논리적 x 좌표를 지정합니다.  
   
- `ySrc`  
+ *ySrc*  
  원본 비트맵의 왼쪽 위 모퉁이의 논리적 y 좌표를 지정합니다.  
   
  *dwRop*  
@@ -1063,7 +1063,7 @@ BOOL BitBlt(
   
  `BitBlt` 바이트 맞춤 사각형에는 작업은 비해 상당히 빠르긴 `BitBlt` 바이트로 정렬 되지 않는 사각형에 대 한 작업입니다. 창 클래스 등록 해야 자신의 장치 컨텍스트에 대 한 바이트 맞춤 같은 클래스 스타일을 지정 하려는 경우을 수행 하는 Microsoft Foundation 클래스에 의존 하지 않고 있습니다. 전역 함수를 사용 하 여 [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass)합니다.  
   
- GDI 변환 `nWidth` 및 `nHeight`, 한 번 대상 장치 컨텍스트를 사용 하 고 한 번 사용 하 여 소스 장치 컨텍스트에 합니다. Windows GDI 사용 하 여 결과 범위 일치 하지 않는 경우 `StretchBlt` 필요에 따라 소스 비트맵을 늘이거나 압축 하는 함수입니다.  
+ GDI 변환 *nWidth* 및 *nHeight*, 한 번 대상 장치 컨텍스트를 사용 하 고 한 번 사용 하 여 소스 장치 컨텍스트에 합니다. Windows GDI 사용 하 여 결과 범위 일치 하지 않는 경우 `StretchBlt` 필요에 따라 소스 비트맵을 늘이거나 압축 하는 함수입니다.  
   
  대상, 소스 및 패턴 비트맵의 색 형식이 다르면 없는 경우는 `BitBlt` 함수 소스와 패턴 비트맵을 대상에 맞게 변환 합니다. 대상 비트맵의 전경색과 배경색 색 변환에 사용 됩니다.  
   
@@ -1071,7 +1071,7 @@ BOOL BitBlt(
   
  지원 되지 않는 장치 컨텍스트는 `BitBlt`합니다. 지정 된 장치 컨텍스트는 지원 하는지 여부를 확인 하려면 `BitBlt`를 사용 하 여는 `GetDeviceCaps` 멤버 함수를 지정는 **RASTERCAPS** 인덱스입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CDC::CreateCompatibleDC](#createcompatibledc)합니다.  
   
 ##  <a name="cdc"></a>  CDC::CDC  
@@ -1103,48 +1103,48 @@ BOOL Chord(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `x1`  
+ *x1*  
  원호가 현의 왼쪽 위 모퉁이의 x 좌표 (논리 단위)에 사각형의 경계를 지정 합니다.  
   
- `y1`  
+ *y1*  
  원호가 현의 왼쪽 위 모퉁이의 y-좌표 (논리 단위)에 사각형의 경계를 지정 합니다.  
   
- `x2`  
+ *x2*  
  원호가 현의 오른쪽 아래 모서리의 x 좌표 (논리 단위)에 사각형의 경계를 지정 합니다.  
   
- `y2`  
+ *y2*  
  원호가 현의 오른쪽 아래 모퉁이의 y-좌표 (논리 단위)에 사각형의 경계를 지정 합니다.  
   
  *x3*  
  원호가 현을 정의 하는 지점의 x 좌표의 시작 지점 (논리 단위)를 지정 합니다.  
   
- `y3`  
+ *y3*  
  원호가 현을 정의 하는 지점의 y 좌표의 시작 지점 (논리 단위)를 지정 합니다.  
   
- `x4`  
+ *x4*  
  원호가 현 끝점 (논리 단위)를 정의 하는 점의 x 좌표를 지정 합니다.  
   
- `y4`  
+ *y4*  
  원호가 현 끝점 (논리 단위)를 정의 하는 점의 y 좌표를 지정 합니다.  
   
- `lpRect`  
+ *lpRect*  
  논리 단위) (의 경계 사각형을 지정합니다. 전달할 수 있습니다는 `LPRECT` 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 이 매개 변수에 대 한 개체입니다.  
   
- `ptStart`  
+ *ptStart*  
  원호가 현을 정의 하는 지점의 x 및 y 좌표 (논리 단위)에서 시작을 지정 합니다. 이 시점에서 원호가 현에 정확 하 게 상태로 남아 있이 필요가 없습니다. 전달할 수 있습니다는 **지점** 구조 또는 `CPoint` 이 매개 변수에 대 한 개체입니다.  
   
- `ptEnd`  
+ *ptEnd*  
  원호가 현 (논리 단위)에 끝점을 정의 하는 지점의 x 및 y 좌표를 지정 합니다. 이 시점에서 원호가 현에 정확 하 게 상태로 남아 있이 필요가 없습니다. 전달할 수 있습니다는 [지점](../../mfc/reference/point-structure1.md) 구조 또는 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 이 매개 변수에 대 한 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- ( `x1`, `y1`) 및 ( `x2`, `y2`) 매개 변수 왼쪽 위 및 오른쪽 아래 모서리를 각각 지정, 타원 현의 일부가 경계 사각형입니다. ( *x3*, `y3`) 및 ( `x4`, `y4`) 매개 변수는 타원 교차 하는 선의 끝점을 지정 합니다. 원호가 현 선택한 펜을 사용 하 여 그린 이며 선택된 된 브러시를 사용 하 여 입력 합니다.  
+ ( *x1*, *y1*) 및 ( *x2*, *y2*) 매개 변수 왼쪽 위 및 오른쪽 아래 모서리를 각각 지정, 사각형 타원 현의 일부가 경계 합니다. ( *x3*, *y3*) 및 ( *x4*, *y4*) 매개 변수는 타원 교차 하는 선의 끝점을 지정 합니다. 원호가 현 선택한 펜을 사용 하 여 그린 이며 선택된 된 브러시를 사용 하 여 입력 합니다.  
   
- 으로 그린 그림은 `Chord` 함수까지 확장 하는 오른쪽 아래 좌표를 포함 하지 않습니다. 따라서 그림의 높이 `y2`  -  `y1` 그림의 너비가 `x2`  -  `x1`합니다.  
+ 으로 그린 그림은 `Chord` 함수까지 확장 하는 오른쪽 아래 좌표를 포함 하지 않습니다. 따라서 그림의 높이 *y2* - *y1* 그림의 너비가 *x2* - *x1*합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#31](../../mfc/codesnippet/cpp/cdc-class_3.cpp)]  
   
 ##  <a name="closefigure"></a>  CDC::CloseFigure  
@@ -1163,15 +1163,15 @@ BOOL CloseFigure();
  이 함수를 사용 하 여 명시적으로 닫지 않는 경로에 그림이 쉽습니다. (그림 열 수 있습니다 경우에 현재 지점 및 그림의 시작 위치 같습니다.) 모든 줄 또는 뒤의 경로에 추가 하는 곡선 `CloseFigure` 새 그림을 시작 합니다.  
   
 ##  <a name="createcompatibledc"></a>  CDC::CreateCompatibleDC  
- 로 지정 된 장치에 호환 되는 메모리 장치 컨텍스트를 만듭니다. `pDC`합니다.  
+ 로 지정 된 장치에 호환 되는 메모리 장치 컨텍스트를 만듭니다. *pDC*합니다.  
   
 ```  
 BOOL CreateCompatibleDC(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
- 장치 컨텍스트에 대한 포인터입니다. 경우 `pDC` 은 **NULL**, 함수는 시스템 디스플레이와 호환 되는 메모리 장치 컨텍스트를 만듭니다.  
+ *pDC*  
+ 장치 컨텍스트에 대한 포인터입니다. 경우 *pDC* 은 **NULL**, 함수는 시스템 디스플레이와 호환 되는 메모리 장치 컨텍스트를 만듭니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
@@ -1183,7 +1183,7 @@ BOOL CreateCompatibleDC(CDC* pDC);
   
  이 함수 에서만 래스터 작업을 지 원하는 장치에 대 한 호환 장치 컨텍스트를 만드는 데 사용할 수 있습니다. 참조는 [cdc:: bitblt](#bitblt) 장치 컨텍스트 간에 비트 블록 전송에 대 한 정보에 대 한 멤버 함수입니다. 장치 컨텍스트에 래스터 작업을 지원 하는지 여부를 알아보려면 참조는 **RC_BITBLT** 멤버 함수에서 래스터 기능 `CDC::GetDeviceCaps`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#32](../../mfc/codesnippet/cpp/cdc-class_4.cpp)]  
   
 ##  <a name="createdc"></a>  CDC::CreateDC  
@@ -1198,17 +1198,17 @@ BOOL CreateDC(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszDriverName`  
+ *lpszDriverName*  
  장치 드라이버 (예: "EPSON")의 확장명을 제외한 파일 이름을 지정 하는 null로 끝나는 문자열을 가리킵니다. 전달할 수도 있습니다는 `CString` 이 매개 변수에 대 한 개체입니다.  
   
- `lpszDeviceName`  
- 지원 되는 데 특정 장치 (예: "EPSON FX-80")의 이름을 지정 하는 null로 끝나는 문자열을 가리킵니다. `lpszDeviceName` 모듈 하나 이상의 장치를 지 원하는 경우 매개 변수를 사용 합니다. 전달할 수도 있습니다는 `CString` 이 매개 변수에 대 한 개체입니다.  
+ *lpszDeviceName*  
+ 지원 되는 데 특정 장치 (예: "EPSON FX-80")의 이름을 지정 하는 null로 끝나는 문자열을 가리킵니다. *lpszDeviceName* 모듈 하나 이상의 장치를 지 원하는 경우 매개 변수를 사용 합니다. 전달할 수도 있습니다는 `CString` 이 매개 변수에 대 한 개체입니다.  
   
- `lpszOutput`  
+ *lpszOutput*  
  실제 출력 미디어 (파일 또는 출력 포트)에 대 한 파일 또는 장치 이름을 지정 하는 null로 끝나는 문자열을 가리킵니다. 전달할 수도 있습니다는 `CString` 이 매개 변수에 대 한 개체입니다.  
   
- `lpInitData`  
- 가리키는 `DEVMODE` 장치 드라이버에 대 한 장치 전용 초기화 데이터를 포함 하는 구조입니다. Windows **DocumentProperties** 함수는 지정된 된 장치에 대 한 입력이 구조를 검색 합니다. `lpInitData` 매개 변수 여야 **NULL** 장치 드라이버 제어판을 통해 사용자가 지정한 기본 초기화 (있는 경우)를 사용 하는 경우.  
+ *lpInitData*  
+ 가리키는 `DEVMODE` 장치 드라이버에 대 한 장치 전용 초기화 데이터를 포함 하는 구조입니다. Windows `DocumentProperties` 함수는 지정된 된 장치에 대 한 입력이 구조를 검색 합니다. *lpInitData* 매개 변수 여야 **NULL** 장치 드라이버 제어판을 통해 사용자가 지정한 기본 초기화 (있는 경우)를 사용 하는 경우.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
@@ -1230,17 +1230,17 @@ BOOL CreateIC(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszDriverName`  
+ *lpszDriverName*  
  장치 드라이버 (예: "EPSON")의 확장명을 제외한 파일 이름을 지정 하는 null로 끝나는 문자열을 가리킵니다. 전달할 수는 `CString` 이 매개 변수에 대 한 개체입니다.  
   
- `lpszDeviceName`  
- 지원 되는 데 특정 장치 (예: "EPSON FX-80")의 이름을 지정 하는 null로 끝나는 문자열을 가리킵니다. `lpszDeviceName` 모듈 하나 이상의 장치를 지 원하는 경우 매개 변수를 사용 합니다. 전달할 수는 `CString` 이 매개 변수에 대 한 개체입니다.  
+ *lpszDeviceName*  
+ 지원 되는 데 특정 장치 (예: "EPSON FX-80")의 이름을 지정 하는 null로 끝나는 문자열을 가리킵니다. *lpszDeviceName* 모듈 하나 이상의 장치를 지 원하는 경우 매개 변수를 사용 합니다. 전달할 수는 `CString` 이 매개 변수에 대 한 개체입니다.  
   
- `lpszOutput`  
+ *lpszOutput*  
  실제 출력 미디어 (예: 파일 또는 포트)에 대 한 파일 또는 장치 이름을 지정 하는 null로 끝나는 문자열을 가리킵니다. 전달할 수는 `CString` 이 매개 변수에 대 한 개체입니다.  
   
- `lpInitData`  
- 장치 드라이버에 대 한 장치 전용 초기화 데이터를 가리킵니다. `lpInitData` 매개 변수 여야 **NULL** 장치 드라이버 제어판을 통해 사용자가 지정한 기본 초기화 (있는 경우)를 사용 하는 경우. 참조 `CreateDC` 장치 관련 초기화를 위한 데이터 형식에 대 한 합니다.  
+ *lpInitData*  
+ 장치 드라이버에 대 한 장치 전용 초기화 데이터를 가리킵니다. *lpInitData* 매개 변수 여야 **NULL** 장치 드라이버 제어판을 통해 사용자가 지정한 기본 초기화 (있는 경우)를 사용 하는 경우. 참조 `CreateDC` 장치 관련 초기화를 위한 데이터 형식에 대 한 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
@@ -1269,7 +1269,7 @@ BOOL DeleteDC();
   
  `DeleteDC` 함수는 일반적으로 사용 하 여 만든 장치 컨텍스트를 삭제 하려면 사용 [CreateDC](#createdc), [CreateIC](#createic), 또는 [CreateCompatibleDC](#createcompatibledc)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CPrintDialog::GetPrinterDC](../../mfc/reference/cprintdialog-class.md#getprinterdc)합니다.  
   
 ##  <a name="deletetempmap"></a>  CDC::DeleteTempMap  
@@ -1297,7 +1297,7 @@ void DPtoHIMETRIC(LPSIZE lpSize) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpSize`  
+ *lpSize*  
  가리키는 [크기](http://msdn.microsoft.com/library/windows/desktop/dd145106) 구조 또는 [CSize](../../atl-mfc-shared/reference/csize-class.md) 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1316,16 +1316,16 @@ void DPtoLP(LPSIZE lpSize) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPoints`  
+ *lpPoints*  
  배열을 가리키는 [지점](../../mfc/reference/point-structure1.md) 구조 또는 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 개체입니다.  
   
- `nCount`  
+ *nCount*  
  배열의 점 개수입니다.  
   
- `lpRect`  
+ *lpRect*  
  가리키는 [RECT](../../mfc/reference/rect-structure1.md) 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체입니다. 이 매개 변수를 논리 점으로 하나의 사각형만 장치 지점에서 변환 하 여 간단한 예에 사용 됩니다.  
   
- `lpSize`  
+ *lpSize*  
  가리키는 [크기](http://msdn.microsoft.com/library/windows/desktop/dd145106) 구조 또는 [CSize](../../atl-mfc-shared/reference/csize-class.md) 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1351,13 +1351,13 @@ void Draw3dRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
+ *lpRect*  
  논리 단위) (의 경계 사각형을 지정합니다. 에 대 한 포인터를 전달할 수는 [RECT](../../mfc/reference/rect-structure1.md) 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 이 매개 변수에 대 한 개체입니다.  
   
  *clrTopLeft*  
  3 차원 사각형의 위쪽 및 왼쪽 면 색을 지정합니다.  
   
- `clrBottomRight`  
+ *clrBottomRight*  
  3 차원 사각형의 오른쪽 왼쪽과 아래쪽의 색을 지정합니다.  
   
  *x*  
@@ -1373,9 +1373,9 @@ void Draw3dRect(
  3 차원 사각형의 높이 지정합니다.  
   
 ### <a name="remarks"></a>설명  
- 사각형에 의해 지정 된 색에서 위쪽과 왼쪽된으로 그려집니다 *clrTopLeft* 아래쪽 및 오른쪽 면에서 지정 된 색에서 `clrBottomRight`합니다.  
+ 사각형에 의해 지정 된 색에서 위쪽과 왼쪽된으로 그려집니다 *clrTopLeft* 아래쪽 및 오른쪽 면에서 지정 된 색에서 *clrBottomRight*합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#33](../../mfc/codesnippet/cpp/cdc-class_5.cpp)]  
   
 ##  <a name="drawdragrect"></a>  CDC::DrawDragRect  
@@ -1392,19 +1392,19 @@ void DrawDragRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
+ *lpRect*  
  가리키는 [RECT](../../mfc/reference/rect-structure1.md) 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 사각형의 논리적 좌표를 지정 하는 개체-여기서는 다시 그려지는 사각형의 끝 위치입니다.  
   
- `size`  
+ *size*  
  사각형의 내부 테두리 (즉, 테두리의 두께)의 왼쪽 위 모퉁이에 외부 테두리의 왼쪽 위 모서리에서 이동을 지정합니다.  
   
- `lpRectLast`  
+ *lpRectLast*  
  가리키는 [RECT](../../mfc/reference/rect-structure1.md) 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 논리적 좌표로 사각형의 위치를 지정 하는 개체-여기서 다시 그려지는 사각형의 원래 위치입니다.  
   
  *sizeLast*  
  원래 다시 그려지는 사각형의 내부 테두리 (즉, 테두리의 두께)의 왼쪽 위 모퉁이의 외부 테두리 왼쪽 위 모서리에서 변위를 지정 합니다.  
   
- `pBrush`  
+ *pBrush*  
  브러시 개체에 대 한 포인터입니다. 로 설정 **NULL** 기본 하프톤 브러시를 사용 합니다.  
   
  *pBrushLast*  
@@ -1413,7 +1413,7 @@ void DrawDragRect(
 ### <a name="remarks"></a>설명  
  시각적 피드백을 제공 하기 위해 마우스 위치를 샘플링 하는 대로 루프에서 호출 합니다. 호출 하는 경우 `DrawDragRect`, 이전 사각형 지워지며 새 그려집니다. 예를 들어 사용자로 화면에서 사각형을 끌면 `DrawDragRect` 원래 사각형이 하면 지워지고 새 위치로에서 새 인증서를 다시 그립니다. 기본적으로 `DrawDragRect` 깜빡임을 제거 하 고 원활 하 게 이동 사각형의 모양을 만들 하프톤 브러시를 사용 하 여 사각형을 그립니다.  
   
- 처음 호출 하면 `DrawDragRect`, `lpRectLast` 매개 변수 여야 **NULL**합니다.  
+ 처음 호출 하면 `DrawDragRect`, *lpRectLast* 매개 변수 여야 **NULL**합니다.  
   
 ##  <a name="drawedge"></a>  CDC::DrawEdge  
  이 멤버 함수는 지정 된 형식 및 스타일의 사각형의 가장자리를 호출 합니다.  
@@ -1426,13 +1426,13 @@ BOOL DrawEdge(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
+ *lpRect*  
  에 대 한 포인터는 **RECT** 사각형의 논리적 좌표가 포함 된 구조입니다.  
   
  *nEdge*  
  그릴 내부 및 외부 가장자리 유형을 지정 합니다. 이 매개 변수는 하나 이상의 내부 테두리 플래그 및 하나 이상의 외부 테두리 플래그의 조합 이어야 합니다. 참조 [DrawEdge](http://msdn.microsoft.com/library/windows/desktop/dd162477) 매개 변수의 형식의 테이블에 대 한 Windows sdk입니다.  
   
- `nFlags`  
+ *nFlags*  
  테두리를 그릴 수의 유형을 지정 하는 플래그입니다. 참조 `DrawEdge` 매개 변수의 값의 테이블에 대 한 Windows sdk입니다. 대각선 줄에 **BF_RECT** 플래그 사각형 매개 변수에 의해 경계가 지정 된 벡터의 끝점을 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1449,20 +1449,20 @@ int DrawEscape(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nEscape`  
+ *nEscape*  
  수행할 이스케이프 함수를 지정 합니다.  
   
- `nInputSize`  
- 가리키는 데이터의 바이트 수를 지정 된 `lpszInputData` 매개 변수입니다.  
+ *nInputSize*  
+ 가리키는 데이터의 바이트 수를 지정 된 *lpszInputData* 매개 변수입니다.  
   
- `lpszInputData`  
+ *lpszInputData*  
  지정 된 이스케이프 하는 데 필요한 입력된 구조를 가리킵니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수의 결과 지정합니다. 제외 하 고 성공 시 0 보다 큰는 **QUERYESCSUPPORT** 그리기 이스케이프 문자인 검사가 구현 되지 않습니다 또는 경우에는 0에 대 한 이스케이프 구현 되지 않았습니다; 또는 0 보다 작은 경우에는 오류가 발생 했습니다.  
   
 ### <a name="remarks"></a>설명  
- 응용 프로그램 호출 하는 경우 `DrawEscape`로 식별 되는 데이터 `nInputSize` 및 `lpszInputData` 지정한 디스플레이 드라이버에 직접 전달 됩니다.  
+ 응용 프로그램 호출 하는 경우 `DrawEscape`로 식별 되는 데이터 *nInputSize* 및 *lpszInputData* 지정한 디스플레이 드라이버에 직접 전달 됩니다.  
   
 ##  <a name="drawfocusrect"></a>  CDC::DrawFocusRect  
  사각형에 포커스가 있는지를 나타내는 데 사용 되는 스타일에 사각형을 그립니다.  
@@ -1472,7 +1472,7 @@ void DrawFocusRect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
+ *lpRect*  
  가리키는 [RECT](../../mfc/reference/rect-structure1.md) 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 그릴 사각형의 논리적 좌표를 지정 하는 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1492,20 +1492,20 @@ BOOL DrawFrameControl(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
+ *lpRect*  
  에 대 한 포인터는 **RECT** 사각형의 논리적 좌표가 포함 된 구조입니다.  
   
- `nType`  
+ *n 유형*  
  프레임 그리기 컨트롤의 형식을 지정 합니다. 참조는 *uType* 매개 변수에서 [DrawFrameControl](http://msdn.microsoft.com/library/windows/desktop/dd162480) 이 매개 변수의 가능한 값의 목록에 대 한 Windows sdk입니다.  
   
- `nState`  
- Frame 컨트롤의 초기 상태를 지정합니다. 에 대 한 설명 하는 값 중 하나 이상이 될 수는 *uState* 매개 변수에서 `DrawFrameControl` Windows SDK에서 합니다. 사용 하 여는 `nState` 값 **DFCS_ADJUSTRECT** 주변 누름 단추 가장자리로 제외 하는 경계 사각형을 조정 해야 합니다.  
+ *nState*  
+ Frame 컨트롤의 초기 상태를 지정합니다. 에 대 한 설명 하는 값 중 하나 이상이 될 수는 *uState* 매개 변수에서 `DrawFrameControl` Windows SDK에서 합니다. 사용 하 여는 *nState* 값 **DFCS_ADJUSTRECT** 주변 누름 단추 가장자리로 제외 하는 경계 사각형을 조정 해야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 여러 사례에서 `nState` 에 따라 달라 집니다는 `nType` 매개 변수입니다. 다음 목록에는 4 개의 관계를 보여 줍니다. `nType` 값 및 `nState`:  
+ 여러 사례에서 *nState* 에 따라 달라 집니다는 *n 유형* 매개 변수입니다. 다음 목록에는 4 개의 관계를 보여 줍니다. *n 유형* 값 및 *nState*:  
   
 - **DFC_BUTTON**  
   
@@ -1555,7 +1555,7 @@ BOOL DrawFrameControl(
   
     - **DFCS_SCROLLUP** 위쪽의 스크롤 막대 화살표  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  이 코드 창의 오른쪽 아래 모서리에 크기 위치 조정 막대를 그립니다. 에 적합 한지는 `OnPaint` 처리기의 대화 상자는 스타일이 포함 하 고 일반적으로 (예: 상태 표시줄) 크기 그리퍼 제공할 수 있는 다른 컨트롤을 포함 하지 않습니다.  
   
  [!code-cpp[NVC_MFCDocView#34](../../mfc/codesnippet/cpp/cdc-class_6.cpp)]  
@@ -1582,10 +1582,10 @@ BOOL DrawIcon(
  *y*  
  아이콘의 왼쪽 위 모퉁이의 논리적 y 좌표를 지정합니다.  
   
- `hIcon`  
+ *hIcon*  
  그릴 아이콘의 핸들을 식별 합니다.  
   
- `point`  
+ *지점*  
  논리적 x 및 y 좌표 아이콘의 왼쪽 위 모퉁이의 지정합니다. 전달할 수는 [지점](../../mfc/reference/point-structure1.md) 구조 또는 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 이 매개 변수에 대 한 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1596,14 +1596,14 @@ BOOL DrawIcon(
   
  아이콘 리소스 해야 이전에 로드 된 함수를 사용 하 여 `CWinApp::LoadIcon`, `CWinApp::LoadStandardIcon`, 또는 `CWinApp::LoadOEMIcon`합니다. `MM_TEXT` 이 함수를 사용 하기 전에 매핑 모드를 선택 해야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::IsIconic](../../mfc/reference/cwnd-class.md#isiconic)합니다.  
   
 ##  <a name="drawstate"></a>  CDC::DrawState  
  이미지 표시와 같은 비활성화 된 상태 또는 기본 상태를 나타내는 시각 효과 적용 하려면이 멤버 함수를 호출 합니다.  
   
 > [!NOTE]
->  모든 `nFlag` 제외 하 고 상태 **DSS_NORMAL**, 시각 효과 적용 하기 전에 이미지 단색으로 변환 됩니다.  
+>  모든 *nFlag* 제외 하 고 상태 **DSS_NORMAL**, 시각 효과 적용 하기 전에 이미지 단색으로 변환 됩니다.  
   
 ```  
 BOOL DrawState(
@@ -1677,43 +1677,43 @@ BOOL DrawState(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pt`  
+ *pt*  
  이미지의 위치를 지정합니다.  
   
- `size`  
+ *size*  
  이미지의 크기를 지정합니다.  
   
- `hBitmap`  
+ *hBitmap*  
  비트맵에 대 한 핸들입니다.  
   
- `nFlags`  
- 이미지 유형 및 상태를 지정 하는 플래그입니다. 참조 [DrawState](http://msdn.microsoft.com/library/windows/desktop/dd162496) 가능한 용 Windows SDK에서 `nFlags` 유형과 상태입니다.  
+ *nFlags*  
+ 이미지 유형 및 상태를 지정 하는 플래그입니다. 참조 [DrawState](http://msdn.microsoft.com/library/windows/desktop/dd162496) 가능한 용 Windows SDK에서 *nFlags* 유형과 상태입니다.  
   
- `hBrush`  
+ *hBrush*  
  브러시에 대 한 핸들입니다.  
   
- `pBitmap`  
+ *pBitmap*  
  CBitmap 개체에 대 한 포인터입니다.  
   
- `pBrush`  
+ *pBrush*  
  CBrush 개체에 대 한 포인터입니다.  
   
- `hIcon`  
+ *hIcon*  
  아이콘에 대 한 핸들입니다.  
   
- `lpszText`  
+ *lpszText*  
  텍스트에 대 한 포인터입니다.  
   
  *bPrefixText*  
- 엑셀 러 레이 터 니모닉을 포함할 수 있는 텍스트입니다. `lData` 매개 변수는 문자열의 주소 지정 및 `nTextLen` 매개 변수 길이 지정 합니다. 경우 `nTextLen` 가 0 이면 문자열이 null로 끝나는 것으로 간주 됩니다.  
+ 엑셀 러 레이 터 니모닉을 포함할 수 있는 텍스트입니다. *lData* 매개 변수는 문자열의 주소 지정 및 *nTextLen* 매개 변수 길이 지정 합니다. 경우 *nTextLen* 가 0 이면 문자열이 null로 끝나는 것으로 간주 됩니다.  
   
- `nTextLen`  
- 텍스트 문자열의 길이에서 가리키는 `lpszText`합니다. 경우 `nTextLen` 가 0 이면 문자열이 null로 끝나는 것으로 간주 됩니다.  
+ *nTextLen*  
+ 텍스트 문자열의 길이에서 가리키는 *lpszText*합니다. 경우 *nTextLen* 가 0 이면 문자열이 null로 끝나는 것으로 간주 됩니다.  
   
  *lpDrawProc*  
- 이미지를 렌더링 하는 데 사용 되는 콜백 함수에 대 한 포인터입니다. 이미지에 입력 하는 경우이 매개 변수는 필수 `nFlags` 은 **DST_COMPLEX**합니다. 선택 사항 이므로 수 **NULL** 이미지 형식이 **DST_TEXT**합니다. 다른 모든 이미지 형식은이 매개 변수가 무시 됩니다. 콜백 함수에 대 한 자세한 내용은 참조는 [DrawStateProc](http://msdn.microsoft.com/library/windows/desktop/dd162497) Windows SDK에는 함수입니다.  
+ 이미지를 렌더링 하는 데 사용 되는 콜백 함수에 대 한 포인터입니다. 이미지에 입력 하는 경우이 매개 변수는 필수 *nFlags* 은 **DST_COMPLEX**합니다. 선택 사항 이므로 수 **NULL** 이미지 형식이 **DST_TEXT**합니다. 다른 모든 이미지 형식은이 매개 변수가 무시 됩니다. 콜백 함수에 대 한 자세한 내용은 참조는 [DrawStateProc](http://msdn.microsoft.com/library/windows/desktop/dd162497) Windows SDK에는 함수입니다.  
   
- `lData`  
+ *lData*  
  이미지에 대 한 정보를 지정합니다. 이 매개 변수의 의미는 이미지 형식에 따라 달라 집니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1737,35 +1737,35 @@ int DrawText(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszString`  
- 그릴 문자열을 가리킵니다. 경우 `nCount` -1 이면 null로 끝나는 문자열 이어야 합니다.  
+ *lpszString*  
+ 그릴 문자열을 가리킵니다. 경우 *nCount* -1 이면 null로 끝나는 문자열 이어야 합니다.  
   
- `nCount`  
- 문자열에서 문자 수를 지정합니다. 경우 `nCount` 은-1, 다음 `lpszString` null로 끝나는 문자열에 대 한 긴 포인터 것으로 간주 됩니다 및 `DrawText` 문자 수를 자동으로 계산 합니다.  
+ *nCount*  
+ 문자열에서 문자 수를 지정합니다. 경우 *nCount* 은-1, 다음 *lpszString* null로 끝나는 문자열에 대 한 긴 포인터 것으로 간주 됩니다 및 `DrawText` 문자 수를 자동으로 계산 합니다.  
   
- `lpRect`  
+ *lpRect*  
  가리키는 [RECT](../../mfc/reference/rect-structure1.md) 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 서식을 지정할 텍스트가입니다 (논리적 좌표로) 사각형을 포함 하는 개체입니다.  
   
- `str`  
+ *str*  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) 을 그릴 수 있도록 지정 된 문자를 포함 하는 개체입니다.  
   
- `nFormat`  
- 텍스트 서식 지정의 메서드를 지정 합니다. 것에 대해 설명 하는 값의 조합이 포함 될 수는 `uFormat` 매개 변수에서 [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498) Windows sdk에서입니다. (비트 OR 연산자를 사용 하 여 결합):  
+ *nFormat*  
+ 텍스트 서식 지정의 메서드를 지정 합니다. 것에 대해 설명 하는 값의 조합이 포함 될 수는 *uFormat* 매개 변수에서 [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498) Windows sdk에서입니다. (비트 OR 연산자를 사용 하 여 결합):  
   
 > [!NOTE]
->  일부 `uFormat` 플래그 조합을 수정할 문자열 전달된 될 수 있습니다. 사용 하 여 **DT_MODIFYSTRING** 하나로 **DT_END_ELLIPSIS** 또는 **DT_PATH_ELLIPSIS** 않을를 수정할 수는 문자열에서 어설션을 발생는 `CString` 재정의 합니다. 값 `DT_CALCRECT`, `DT_EXTERNALLEADING`, **DT_INTERNAL**, `DT_NOCLIP`, 및 `DT_NOPREFIX` 함께 사용할 수 없습니다는 `DT_TABSTOP` 값입니다.  
+>  일부 *uFormat* 플래그 조합을 수정할 문자열 전달된 될 수 있습니다. 사용 하 여 **DT_MODIFYSTRING** 하나로 **DT_END_ELLIPSIS** 또는 **DT_PATH_ELLIPSIS** 않을를 수정할 수는 문자열에서 어설션을 발생는 `CString` 재정의 합니다. 값 `DT_CALCRECT`, `DT_EXTERNALLEADING`, **DT_INTERNAL**, `DT_NOCLIP`, 및 `DT_NOPREFIX` 함께 사용할 수 없습니다는 `DT_TABSTOP` 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공 하는 경우 텍스트의 높이입니다.  
   
 ### <a name="remarks"></a>설명  
- 텍스트를 왼쪽, 오른쪽 맞춤의 적절 한 공백이 나 지정된 된 사각형의 가운데에 탭을 확장 하 고 지정된 된 사각형 내에 포함 되는 줄으로 텍스트를 분리 하 여 텍스트의 서식을 합니다. 변수로 지정 된 형식 지정의 형식 `nFormat`합니다.  
+ 텍스트를 왼쪽, 오른쪽 맞춤의 적절 한 공백이 나 지정된 된 사각형의 가운데에 탭을 확장 하 고 지정된 된 사각형 내에 포함 되는 줄으로 텍스트를 분리 하 여 텍스트의 서식을 합니다. 변수로 지정 된 형식 지정의 형식 *nFormat*합니다.  
   
  이 멤버 함수는 텍스트를 그리는 장치 컨텍스트 선택한 글꼴, 텍스트 색 및 배경 색을 사용 합니다. 하지 않는 한는 `DT_NOCLIP` 형식이 사용 되며 `DrawText` 텍스트는 지정 된 영역 밖에 표시 되지 않도록 텍스트를 자릅니다. 모든 서식 지정 하지 않는 한 여러 줄으로 간주 됩니다는 `DT_SINGLELINE` 형식이 제공 됩니다.  
   
  선택한 글꼴을 지정된 된 사각형에 비해 너무 큰는 `DrawText` 멤버 함수는 더 작은 글꼴 대체를 시도 하지 않습니다.  
   
- 경우는 `DT_CALCRECT` 플래그를 지정 하 여 지정 된 사각형이 `lpRect` 너비와 높이 텍스트를 그리는 데 필요한 반영 하도록 업데이트 됩니다.  
+ 경우는 `DT_CALCRECT` 플래그를 지정 하 여 지정 된 사각형이 *lpRect* 너비와 높이 텍스트를 그리는 데 필요한 반영 하도록 업데이트 됩니다.  
   
  경우는 **TA_UPDATECP** 텍스트 맞춤 플래그가 설정 되었습니다 (참조 [CDC::SetTextAlign](#settextalign)), `DrawText` 아닌 지정된 된 사각형의 왼쪽에 현재 위치에서 시작 하는 텍스트를 표시 합니다. `DrawText` 텍스트가 줄 바꿈되지 것입니다 때는 **TA_UPDATECP** 플래그가 설정 되었습니다 (즉,는 `DT_WORDBREAK` 플래그 아무런 효과가 없습니다).  
   
@@ -1791,29 +1791,29 @@ int DrawTextEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszString`  
- 그릴 문자열을 가리킵니다. 경우 `nCount` -1 이면 문자열 종료 null 이어야 합니다.  
+ *lpszString*  
+ 그릴 문자열을 가리킵니다. 경우 *nCount* -1 이면 문자열 종료 null 이어야 합니다.  
   
- `nCount`  
- 문자열에서 문자 수를 지정합니다. 경우 `nCount` 은-1, 다음 `lpszString` null로 끝나는 문자열에 대 한 긴 포인터 것으로 간주 됩니다 및 `DrawText` 문자 수를 자동으로 계산 합니다.  
+ *nCount*  
+ 문자열에서 문자 수를 지정합니다. 경우 *nCount* 은-1, 다음 *lpszString* null로 끝나는 문자열에 대 한 긴 포인터 것으로 간주 됩니다 및 `DrawText` 문자 수를 자동으로 계산 합니다.  
   
- `lpRect`  
+ *lpRect*  
  가리키는 [RECT](../../mfc/reference/rect-structure1.md) 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 서식을 지정할 텍스트가입니다 (논리적 좌표로) 사각형을 포함 하는 개체입니다.  
   
- `str`  
+ *str*  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) 을 그릴 수 있도록 지정 된 문자를 포함 하는 개체입니다.  
   
- `nFormat`  
- 텍스트 서식 지정의 메서드를 지정 합니다. 것에 대해 설명 하는 값의 조합이 포함 될 수는 `uFormat` 매개 변수에서 [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498) Windows sdk에서입니다. (비트를 사용 하 여 조합할 `OR` 연산자).  
+ *nFormat*  
+ 텍스트 서식 지정의 메서드를 지정 합니다. 것에 대해 설명 하는 값의 조합이 포함 될 수는 *uFormat* 매개 변수에서 [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498) Windows sdk에서입니다. (비트를 사용 하 여 조합할 `OR` 연산자).  
   
 > [!NOTE]
->  일부 `uFormat` 플래그 조합을 수정할 문자열 전달된 될 수 있습니다. 사용 하 여 **DT_MODIFYSTRING** 하나로 **DT_END_ELLIPSIS** 또는 **DT_PATH_ELLIPSIS** 않을를 수정할 수는 문자열에서 어설션을 발생는 `CString` 재정의 합니다. 값 `DT_CALCRECT`, `DT_EXTERNALLEADING`, **DT_INTERNAL**, `DT_NOCLIP`, 및 `DT_NOPREFIX` 함께 사용할 수 없습니다는 `DT_TABSTOP` 값입니다.  
+>  일부 *uFormat* 플래그 조합을 수정할 문자열 전달된 될 수 있습니다. 사용 하 여 **DT_MODIFYSTRING** 하나로 **DT_END_ELLIPSIS** 또는 **DT_PATH_ELLIPSIS** 않을를 수정할 수는 문자열에서 어설션을 발생는 `CString` 재정의 합니다. 값 **DT_CALCRECT**, **DT_EXTERNALLEADING**, **DT_INTERNAL**, **DT_NOCLIP**, 및 **DT_NOPREFIX**함께 사용할 수 없습니다는 **DT_TABSTOP** 값입니다.  
   
- `lpDTParams`  
+ *lpDTParams*  
  에 대 한 포인터는 [DRAWTEXTPARAMS](http://msdn.microsoft.com/library/windows/desktop/dd162500) 구조 추가 서식을 지정 하는 옵션입니다. 이 매개 변수 수 **NULL**합니다.  
   
 ### <a name="remarks"></a>설명  
- 텍스트를 왼쪽, 오른쪽 맞춤의 적절 한 공백이 나 지정된 된 사각형의 가운데에 탭을 확장 하 고 지정된 된 사각형 내에 포함 되는 줄으로 텍스트를 분리 하 여 텍스트의 서식을 합니다. 변수로 지정 된 형식 지정의 형식 `nFormat` 및 `lpDTParams`합니다. 자세한 내용은 참조 [CDC::DrawText](#drawtext) 및 [DrawTextEx](http://msdn.microsoft.com/library/windows/desktop/dd162499) Windows sdk에서입니다.  
+ 텍스트를 왼쪽, 오른쪽 맞춤의 적절 한 공백이 나 지정된 된 사각형의 가운데에 탭을 확장 하 고 지정된 된 사각형 내에 포함 되는 줄으로 텍스트를 분리 하 여 텍스트의 서식을 합니다. 변수로 지정 된 형식 지정의 형식 *nFormat* 및 *lpDTParams*합니다. 자세한 내용은 참조 [CDC::DrawText](#drawtext) 및 [DrawTextEx](http://msdn.microsoft.com/library/windows/desktop/dd162499) Windows sdk에서입니다.  
   
  텍스트 색으로 설정 될 수 있습니다 [CDC::SetTextColor](#settextcolor)합니다.  
   
@@ -1831,28 +1831,28 @@ BOOL Ellipse(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `x1`  
+ *x1*  
  타원의 경계 사각형의 왼쪽 위 모퉁이의 논리적 x 좌표를 지정합니다.  
   
- `y1`  
+ *y1*  
  타원의 경계 사각형의 왼쪽 위 모퉁이의 논리적 y 좌표를 지정합니다.  
   
- `x2`  
+ *x2*  
  타원의 경계 사각형의 오른쪽 아래 모퉁이의 논리적 x 좌표를 지정합니다.  
   
- `y2`  
+ *y2*  
  타원의 경계 사각형의 오른쪽 아래 모퉁이의 논리적 y 좌표를 지정합니다.  
   
- `lpRect`  
+ *lpRect*  
  타원의 경계 사각형을 지정 합니다. 전달할 수도 있습니다는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 이 매개 변수에 대 한 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 타원의 중심은 지정 된 경계 사각형의 중심 `x1`, `y1`, `x2`, 및 `y2`, 또는 `lpRect`합니다. 현재 펜 타원 그리고 해당 내부 현재 브러시도 채워집니다.  
+ 타원의 중심은 지정 된 경계 사각형의 중심 *x1*, *y1*, *x2*, 및 *y2*, 또는  *lpRect*합니다. 현재 펜 타원 그리고 해당 내부 현재 브러시도 채워집니다.  
   
- 이 함수에 의해 그려진 그림까지 확장 되지만 오른쪽 아래 좌표 포함 되지 않습니다. 따라서 그림의 높이 `y2`  -  `y1` 그림의 너비가 `x2`  -  `x1`합니다.  
+ 이 함수에 의해 그려진 그림까지 확장 되지만 오른쪽 아래 좌표 포함 되지 않습니다. 따라서 그림의 높이 *y2* - *y1* 그림의 너비가 *x2* - *x1*합니다.  
   
  경계 사각형의 높이 또는 너비 0 이면 없는 타원이 그려집니다.  
   
@@ -1873,7 +1873,7 @@ int EndDoc();
   
  이 함수는 메타 파일 내 사용 되지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CDC::StartDoc](#startdoc)합니다.  
   
 ##  <a name="endpage"></a>  CDC::EndPage  
@@ -1891,7 +1891,7 @@ int EndPage();
   
  이 멤버 함수는 **NEWFRAME** 프린터 이스케이프 합니다. 와 달리 **NEWFRAME**,이 함수는 항상 페이지를 인쇄 한 후 호출 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CDC::StartDoc](#startdoc)합니다.  
   
 ##  <a name="endpath"></a>  CDC::EndPath  
@@ -1904,7 +1904,7 @@ BOOL EndPath();
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [cdc:: beginpath](#beginpath)합니다.  
   
 ##  <a name="enumobjects"></a>  CDC::EnumObjects  
@@ -1923,10 +1923,10 @@ int EnumObjects(
  *nObjectType*  
  개체 유형을 지정합니다. 값을 가질 수 있습니다 **OBJ_BRUSH** 또는 **OBJ_PEN**합니다.  
   
- `lpfn`  
+ *lpfn*  
  응용 프로그램에서 제공 하는 콜백 함수의 프로시저 인스턴스 주소가입니다. 아래의 "주의" 섹션을 참조 하십시오.  
   
- `lpData`  
+ *lpData*  
  응용 프로그램에서 제공한 데이터를 가리킵니다. 데이터 개체 정보와 함께 콜백 함수에 전달 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1947,7 +1947,7 @@ int EnumObjects(
   
  모든 콜백 함수 콜백 경계를 넘어 예외를 throw 할 수 없는 이후 창에 반환 하기 전에 Microsoft Foundation 예외를 트래핑 해야 참고 항목 예외에 대 한 자세한 내용은 문서 참조 [예외](../../mfc/exception-handling-in-mfc.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#35](../../mfc/codesnippet/cpp/cdc-class_7.cpp)]  
   
 ##  <a name="escape"></a>  CDC::Escape  
@@ -1970,30 +1970,30 @@ int Escape(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nEscape`  
+ *nEscape*  
  수행할 이스케이프 함수를 지정 합니다.  
   
  이스케이프 함수 목록은 전체 참조 [이스케이프](http://msdn.microsoft.com/library/windows/desktop/dd162701) Windows sdk에서입니다.  
   
- `nCount`  
- 가리키는 데이터의 바이트 수를 지정 `lpszInData`합니다.  
+ *nCount*  
+ 가리키는 데이터의 바이트 수를 지정 *lpszInData*합니다.  
   
- `lpszInData`  
+ *lpszInData*  
  이 이스케이프 하는 데 필요한 입력된 데이터 구조체를 가리킵니다.  
   
- `lpOutData`  
- 이 이스케이프에서 출력을 수신 하는 구조를 가리킵니다. `lpOutData` 매개 변수는 **NULL** 데이터가 반환 되지 않을 경우.  
+ *lpOutData*  
+ 이 이스케이프에서 출력을 수신 하는 구조를 가리킵니다. *lpOutData* 매개 변수는 **NULL** 데이터가 반환 되지 않을 경우.  
   
- `nInputSize`  
- 가리키는 데이터의 바이트 수를 지정 된 `lpszInputData` 매개 변수입니다.  
+ *nInputSize*  
+ 가리키는 데이터의 바이트 수를 지정 된 *lpszInputData* 매개 변수입니다.  
   
- `lpszInputData`  
+ *lpszInputData*  
  지정 된 이스케이프 하는 데 필요한 입력된 구조를 가리킵니다.  
   
- `nOutputSize`  
- 가리키는 데이터의 바이트 수를 지정 된 `lpszOutputData` 매개 변수입니다.  
+ *nOutputSize*  
+ 가리키는 데이터의 바이트 수를 지정 된 *lpszOutputData* 매개 변수입니다.  
   
- `lpszOutputData`  
+ *lpszOutputData*  
  이 이스케이프에서 출력을 수신 하는 구조를 가리킵니다. 이 매개 변수 여야 **NULL** 데이터가 반환 되지 않을 경우.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2044,19 +2044,19 @@ int ExcludeClipRect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `x1`  
+ *x1*  
  사각형의 왼쪽 위 모퉁이의 논리적 x 좌표를 지정합니다.  
   
- `y1`  
+ *y1*  
  사각형의 왼쪽 위 모퉁이의 논리적 y 좌표를 지정합니다.  
   
- `x2`  
+ *x2*  
  사각형의 오른쪽 아래 모퉁이의 논리적 x 좌표를 지정합니다.  
   
- `y2`  
+ *y2*  
  사각형의 오른쪽 아래 모퉁이의 논리적 y 좌표를 지정합니다.  
   
- `lpRect`  
+ *lpRect*  
  사각형을 지정합니다. 또한 수는 `CRect` 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2071,7 +2071,7 @@ int ExcludeClipRect(LPCRECT lpRect);
 - **SIMPLEREGION** 지역에 겹치는 테두리가 없습니다.  
   
 ### <a name="remarks"></a>설명  
- 절대 값으로 지정 된 사각형의 너비 `x2`  -  `x1`, 32, 767 단위를 초과 하지 않아야 합니다. 이 한도 사각형의 높이에 적용 됩니다.  
+ 절대 값으로 지정 된 사각형의 너비 *x2* - *x1*, 32, 767 단위를 초과 하지 않아야 합니다. 이 한도 사각형의 높이에 적용 됩니다.  
   
 ##  <a name="excludeupdatergn"></a>  CDC::ExcludeUpdateRgn  
  와 연결 된 클립 영역에서 창에는 업데이트 된 영역을 제외 하 여 잘못 된 창 영역에서 그리기 방지는 `CDC` 개체입니다.  
@@ -2081,7 +2081,7 @@ int ExcludeUpdateRgn(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  해당 창이 업데이트 되 고 window 개체를 가리킵니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2113,25 +2113,25 @@ BOOL ExtFloodFill(
  *y*  
  채우기가 시작 하는 위치 점의 y-좌표 논리를 지정 합니다.  
   
- `crColor`  
- 경계 또는 채울 영역 색을 지정 합니다. 에 대 한 해석은 `crColor` 의 값에 따라 `nFillType`합니다.  
+ *crColor*  
+ 경계 또는 채울 영역 색을 지정 합니다. 에 대 한 해석은 *crColor* 의 값에 따라 *nFillType*합니다.  
   
- `nFillType`  
+ *nFillType*  
  수행할 홍수 채우기의 유형을 지정 합니다. 다음 값 중 하나가 해야 합니다.  
   
-- **FLOODFILLBORDER** 채우기 영역에 지정 된 색으로 제한 된 `crColor`합니다. 이 스타일은 수행한 채우기를 동일 `FloodFill`합니다.  
+- **FLOODFILLBORDER** 채우기 영역에 지정 된 색으로 제한 된 *crColor*합니다. 이 스타일은 수행한 채우기를 동일 `FloodFill`합니다.  
   
-- **FLOODFILLSURFACE** 로 지정 된 색으로 채우기 영역을 정의 `crColor`합니다. 채우기 색 발생으로 모든 방향으로의 바깥쪽으로 계속 합니다. 이 스타일은 다양 한 색상된 경계와 영역을 채우는 데 유용 합니다.  
+- **FLOODFILLSURFACE** 로 지정 된 색으로 채우기 영역을 정의 *crColor*합니다. 채우기 색 발생으로 모든 방향으로의 바깥쪽으로 계속 합니다. 이 스타일은 다양 한 색상된 경계와 영역을 채우는 데 유용 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 0이 아닌 채우기를 완료할 수 없습니다, 지정 된 지점에 있는 경우 경계 경우 그렇지 않은 경우 0으로 지정 된 색 `crColor` (경우 **FLOODFILLBORDER** 요청 되었습니다)로 지정 된 색 지정된 된 지점에 없는 경우, `crColor` (선택 된 경우 **FLOODFILLSURFACE** 요청한), 또는 포인터가 잘림 영역 밖에 있는 경우.  
+ 함수가 성공 하면 0이 아닌 채우기를 완료할 수 없습니다, 지정 된 지점에 있는 경우 경계 경우 그렇지 않은 경우 0으로 지정 된 색 *crColor* (경우 **FLOODFILLBORDER** 요청한) 지정된 된 지점에 지정 된 색이 없는 경우, 여 *crColor* (경우 **FLOODFILLSURFACE** 요청한), 포인터가 잘림 영역 밖에 있는 경우 또는 합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 멤버 함수는 보다 더 높은 유연성을 제공 `FloodFill` 채우기의 형식에 지정할 수 있으므로 `nFillType`합니다.  
+ 이 멤버 함수는 보다 더 높은 유연성을 제공 `FloodFill` 채우기의 형식에 지정할 수 있으므로 *nFillType*합니다.  
   
- 경우 `nFillType` 로 설정 된 **FLOODFILLBORDER**, 영역에서 지정 된 색으로 완전히 제한 되어야로 간주 됩니다 `crColor`합니다. 로 지정 된 지점에서 시작 하는 함수가 *x* 및 *y* 색 경계에 모든 방향으로 채웁니다.  
+ 경우 *nFillType* 로 설정 된 **FLOODFILLBORDER**, 영역에서 지정 된 색으로 완전히 제한 되어야로 간주 됩니다 *crColor*합니다. 로 지정 된 지점에서 시작 하는 함수가 *x* 및 *y* 색 경계에 모든 방향으로 채웁니다.  
   
- 경우 `nFillType` 로 설정 된 **FLOODFILLSURFACE**로 지정 된 지점에서 시작 하는 함수 *x* 및 *y* 모든 인접 한 영역을 채우는 모든 방향으로 계속 됩니다. 로 지정 된 색이 포함 된 `crColor`합니다.  
+ 경우 *nFillType* 로 설정 된 **FLOODFILLSURFACE**로 지정 된 지점에서 시작 하는 함수 *x* 및 *y* 모든 페이지에서 계속 됩니다. 로 지정 된 색이 포함 된 모든 인접 한 영역을 채우는 지침 *crColor*합니다.  
   
  메모리 장치 컨텍스트 및 장치를 지 원하는 래스터 디스플레이 기술 지원만 `ExtFloodFill`합니다. 자세한 내용은 참조는 [GetDeviceCaps](#getdevicecaps) 멤버 함수입니다.  
   
@@ -2165,26 +2165,26 @@ BOOL ExtTextOut(
  *y*  
  지정 된 문자열의 첫 번째 문자에 대 한 문자 셀의 위쪽의 논리적 y 좌표를 지정합니다.  
   
- `nOptions`  
+ *nOptions*  
  사각형 유형을 지정합니다. 이 매개 변수 하나, 둘 다 또는 둘 다 다음 값 중 하나일 수 있습니다.  
   
 - **ETO_CLIPPED** 지정 사각형에 텍스트는 잘립니다.  
   
 - **ETO_OPAQUE** 현재 배경색 사각형을 채우는 지정 합니다. (설정 및 현재 배경색을 쿼리할 수 있습니다는 [SetBkColor](#setbkcolor) 및 [GetBkColor](#getbkcolor) 멤버 함수입니다.)  
   
- `lpRect`  
+ *lpRect*  
  가리키는 [RECT](../../mfc/reference/rect-structure1.md) 사각형의 크기를 결정 하는 구조체입니다. 이 매개 변수 수 **NULL**합니다. 전달할 수도 있습니다는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 이 매개 변수에 대 한 개체입니다.  
   
- `lpszString`  
+ *lpszString*  
  그릴 수 있도록 지정 된 문자열을 가리킵니다. 전달할 수도 있습니다는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 이 매개 변수에 대 한 개체입니다.  
   
- `nCount`  
+ *nCount*  
  문자열에 있는 문자의 수를 지정합니다.  
   
- `lpDxWidths`  
- 인접 한 문자 셀의 출처 사이의 거리를 나타내는 값의 배열 가리킵니다. 예를 들어, `lpDxWidths`[ *i*] 논리 단위 문자 셀의 출처 구분할 *i* 및 문자 셀 *i* + 1입니다. 경우 `lpDxWidths` 은 **NULL**, `ExtTextOut` 문자 사이의 기본 간격을 사용 합니다.  
+ *lpDxWidths*  
+ 인접 한 문자 셀의 출처 사이의 거리를 나타내는 값의 배열 가리킵니다. 예를 들어, *lpDxWidths*[ *i*] 논리 단위 문자 셀의 출처 구분할 *i* 및 문자 셀 *i* + 1입니다. 경우 *lpDxWidths* 은 **NULL**, `ExtTextOut` 문자 사이의 기본 간격을 사용 합니다.  
   
- `str`  
+ *str*  
  A `CString` 을 그릴 수 있도록 지정 된 문자를 포함 하는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2193,7 +2193,7 @@ BOOL ExtTextOut(
 ### <a name="remarks"></a>설명  
  사각형 영역의 수 불투명 (현재 배경색으로 채워진) 있으며 클립 영역을 수 있습니다.  
   
- 경우 `nOptions` 0 및 `lpRect` 은 **NULL**, 함수가 사각형 영역을 사용 하지 않고 장치 컨텍스트를 텍스트를 씁니다. 기본적으로 현재 위치는 함수에 의해 사용 또는 업데이트되지 않습니다. 응용 프로그램을 호출 하는 경우 현재 위치를 업데이트 해야 하는 경우 `ExtTextOut`, 응용 프로그램에서 호출할 수는 `CDC` 멤버 함수 [SetTextAlign](#settextalign) 와 `nFlags` 로 설정 **TA_UPDATECP**. 이 플래그를 설정 하는 경우 Windows에서 무시 *x* 및 *y* 후속 호출에서 `ExtTextOut` 현재 위치를 대신 사용 합니다. 응용 프로그램 사용 하는 경우 **TA_UPDATECP** 현재 위치를 업데이트 하도록 `ExtTextOut` 가가리키는배열의마지막요소에의해지정된위치또는텍스트의이전줄의끝에현재위치설정`lpDxWidths`, 이상인 합니다.  
+ 경우 *nOptions* 0 및 *lpRect* 은 **NULL**, 함수가 사각형 영역을 사용 하지 않고 장치 컨텍스트를 텍스트를 씁니다. 기본적으로 현재 위치는 함수에 의해 사용 또는 업데이트되지 않습니다. 응용 프로그램을 호출 하는 경우 현재 위치를 업데이트 해야 하는 경우 `ExtTextOut`, 응용 프로그램에서 호출할 수는 `CDC` 멤버 함수 [SetTextAlign](#settextalign) 와 *nFlags* 로설정**TA_UPDATECP**합니다. 이 플래그를 설정 하는 경우 Windows에서 무시 *x* 및 *y* 후속 호출에서 `ExtTextOut` 현재 위치를 대신 사용 합니다. 응용 프로그램 사용 하는 경우 **TA_UPDATECP** 현재 위치를 업데이트 하도록 `ExtTextOut` 가가리키는배열의마지막요소에의해지정된위치또는텍스트의이전줄의끝에현재위치설정*lpDxWidths*, 이상인 합니다.  
   
 ##  <a name="fillpath"></a>  CDC::FillPath  
  현재 경로에서 열린 그림이 닫히고 현재 브러시 및 다각형 채우기 모드를 사용 하 여 패스의 내부를 채웁니다.  
@@ -2218,10 +2218,10 @@ void FillRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
+ *lpRect*  
  가리키는 [RECT](../../mfc/reference/rect-structure1.md) 채울 사각형의 논리적 좌표가 포함 된 구조입니다. 전달할 수도 있습니다는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 이 매개 변수에 대 한 개체입니다.  
   
- `pBrush`  
+ *pBrush*  
  사각형을 채우는 데 사용 되는 브러시를 식별 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -2234,7 +2234,7 @@ void FillRect(
  `FillRect` 유사한 [CDC::FillSolidRect](#fillsolidrect)소비량이 적어지지만 `FillRect` 브러시를 사용 하 고 따라서 단색, 디더링된 색, 빗금된 브러시 또는 패턴으로 사각형을 채우는 데 사용 될 수 있습니다. `FillSolidRect` 단색만 사용 하 여 (가리키는 **COLORREF** 매개 변수). `FillRect` 일반적으로 보다 느립니다 `FillSolidRect`합니다.  
   
 ##  <a name="fillrgn"></a>  CDC::FillRgn  
- 로 지정 된 영역 채우는 `pRgn` 로 지정 된 브러시를 사용한 `pBrush`합니다.  
+ 로 지정 된 영역 채우는 *pRgn* 로 지정 된 브러시를 사용한 *pBrush*합니다.  
   
 ```  
 BOOL FillRgn(
@@ -2243,19 +2243,19 @@ BOOL FillRgn(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pRgn`  
+ *pRgn*  
  채울 영역에 대 한 포인터입니다. 지정된 된 영역에 대 한 좌표 논리 단위로 지정 됩니다.  
   
- `pBrush`  
+ *pBrush*  
  브러시는 영역을 채우는 데 사용 될를 식별 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 브러시 하거나 사용 하 여 만들어야는 `CBrush` 멤버 함수 `CreateHatchBrush`, `CreatePatternBrush`, `CreateSolidBrush`, 하 여 검색할 수 또는 **GetStockObject**합니다.  
+ 브러시 하거나 사용 하 여 만들어야는 `CBrush` 멤버 함수 `CreateHatchBrush`, `CreatePatternBrush`, `CreateSolidBrush`, 하 여 검색할 수 또는 `GetStockObject`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CRgn::CreateRoundRectRgn](../../mfc/reference/crgn-class.md#createroundrectrgn)합니다.  
   
 ##  <a name="fillsolidrect"></a>  CDC::FillSolidRect  
@@ -2276,10 +2276,10 @@ void FillSolidRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
+ *lpRect*  
  논리 단위) (의 경계 사각형을 지정합니다. 에 대 한 포인터를 전달할 수는 [RECT](../../mfc/reference/rect-structure1.md) 데이터 구조 또는 `CRect` 이 매개 변수에 대 한 개체입니다.  
   
- `clr` 사각형을 채우는 데 사용할 색을 지정 합니다.  
+ *clr* 사각형을 채우는 데 사용할 색을 지정 합니다.  
   
  *x*  
  사각형의 왼쪽 위 모퉁이의 논리적 x 좌표를 지정합니다.  
@@ -2287,17 +2287,17 @@ void FillSolidRect(
  *y*  
  대상 사각형의 왼쪽 위 모퉁이의 논리적 y 좌표를 지정합니다.  
   
- `cx`  
+ *cx*  
  사각형의 너비를 지정합니다.  
   
- `cy`  
+ *cy*  
  사각형의 높이 지정합니다.  
   
 ### <a name="remarks"></a>설명  
  `FillSolidRect` 매우 비슷합니다 [CDC::FillRect](#fillrect)소비량이 적어지지만 `FillSolidRect` 단색만 사용 하 여 (으로 표시는 **COLORREF** 매개 변수), 동안 `FillRect` 브러시 걸리고 채우는 데 사용 될 수는 단색, 디더링된 색, 빗금된 브러시 또는 패턴 있는 사각형입니다. `FillSolidRect` 보다 일반적으로 빠릅니다 `FillRect`합니다.  
   
 > [!NOTE]
->  호출 하는 경우 `FillSolidRect`, 배경 색을 사용 하 여 이전에 설정 된 [SetBkColor](#setbkcolor),으로 표시 된 색으로 설정 됩니다 `clr`합니다.  
+>  호출 하는 경우 `FillSolidRect`, 배경 색을 사용 하 여 이전에 설정 된 [SetBkColor](#setbkcolor),으로 표시 된 색으로 설정 됩니다 *clr*합니다.  
   
 ##  <a name="flattenpath"></a>  CDC::FlattenPath  
  현재 장치 컨텍스트로 선택 된 경로에 모든 곡선을 변환 하 고 각 곡선 줄 시퀀스 단추로 바뀝니다.  
@@ -2326,21 +2326,21 @@ BOOL FloodFill(
  *y*  
  채우기가 시작 하는 위치 점의 y-좌표 논리를 지정 합니다.  
   
- `crColor`  
+ *crColor*  
  경계의 색을 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 0이 아닌 그렇지 않으면 지정된 된 지점에 경계 적용 된 지정 된 채우기를 완료할 수 0이 반환 `crColor`, 중요 한 점은 잘림 영역 밖에 또는 합니다.  
+ 함수가 성공 하면 0이 아닌 그렇지 않으면 지정된 된 지점에 경계 적용 된 지정 된 채우기를 완료할 수 0이 반환 *crColor*, 중요 한 점은 잘림 영역 밖에 또는 합니다.  
   
 ### <a name="remarks"></a>설명  
- 영역으로 제한 되어야 하 여 지정 된 것으로 간주 됩니다 `crColor`합니다. `FloodFill` 함수 시작 하 여 지정 된 지점에서 *x* 및 *y* 색 경계에 모든 방향으로 계속 됩니다.  
+ 영역으로 제한 되어야 하 여 지정 된 것으로 간주 됩니다 *crColor*합니다. `FloodFill` 함수 시작 하 여 지정 된 지점에서 *x* 및 *y* 색 경계에 모든 방향으로 계속 됩니다.  
   
  유일한 메모리 장치 컨텍스트 및 래스터 디스플레이 기술 지원을 지원 장치는 `FloodFill` 멤버 함수입니다. 에 대 한 내용은 **RC_BITBLT** 기능, 참조는 `GetDeviceCaps` 멤버 함수입니다.  
   
  `ExtFloodFill` 함수는 더 유연 하지만 유사한 기능을 제공 합니다.  
   
 ##  <a name="framerect"></a>  CDC::FrameRect  
- 지정 된 영역 주위에 테두리를 그립니다 `lpRect`합니다.  
+ 지정 된 영역 주위에 테두리를 그립니다 *lpRect*합니다.  
   
 ```  
 void FrameRect(
@@ -2349,10 +2349,10 @@ void FrameRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
+ *lpRect*  
  가리키는 [RECT](../../mfc/reference/rect-structure1.md) 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 사각형의 왼쪽 및 오른쪽 아래 모퉁이의 논리적 좌표가 포함 된 개체입니다. 전달할 수도 있습니다는 `CRect` 이 매개 변수에 대 한 개체입니다.  
   
- `pBrush`  
+ *pBrush*  
  사각형을 프레이밍에 사용할 브러시를 식별 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -2363,7 +2363,7 @@ void FrameRect(
  으로 그린 테두리 `FrameRect` 그려진 테두리와 같은 위치에는 **사각형** 동일한 좌표를 사용 하 여 멤버 함수 (경우 **사각형** 는 펜을 와이드 1 논리 단위를 사용 하 여). 사각형의 내부 입력 하 여 `FrameRect`합니다.  
   
 ##  <a name="framergn"></a>  CDC::FrameRgn  
- 로 지정 된 영역을 둘러싸는 테두리를 그리는 데 `pRgn` 로 지정 된 브러시를 사용 하 여 `pBrush`합니다.  
+ 로 지정 된 영역을 둘러싸는 테두리를 그리는 데 *pRgn* 로 지정 된 브러시를 사용 하 여 *pBrush*합니다.  
   
 ```  
 BOOL FrameRgn(
@@ -2374,22 +2374,22 @@ BOOL FrameRgn(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pRgn`  
+ *pRgn*  
  가리키는 `CRgn` 테두리로 묶지 않아도 영역을 식별 하는 개체입니다. 지정된 된 영역에 대 한 좌표 논리 단위로 지정 됩니다.  
   
- `pBrush`  
+ *pBrush*  
  가리키는 `CBrush` 테두리를 그리는 데 사용할 브러시를 식별 하는 개체입니다.  
   
- `nWidth`  
+ *nWidth*  
  장치 단위로 세로 브러시 스트로크 테두리의 두께 지정합니다.  
   
- `nHeight`  
+ *nHeight*  
  장치 단위로 가로 브러시 스트로크에 테두리의 높이 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CRgn::CombineRgn](../../mfc/reference/crgn-class.md#combinergn)합니다.  
   
 ##  <a name="fromhandle"></a>  CDC::FromHandle  
@@ -2400,7 +2400,7 @@ static CDC* PASCAL FromHandle(HDC hDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hDC`  
+ *hDC*  
  Windows 장치 컨텍스트에 대 한 핸들을 포함합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2409,7 +2409,7 @@ static CDC* PASCAL FromHandle(HDC hDC);
 ### <a name="remarks"></a>설명  
  `CDC` 개체가 핸들에 연결되지 않은 경우 임시 `CDC` 개체를 만들어 연결합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CPrintDialog::GetPrinterDC](../../mfc/reference/cprintdialog-class.md#getprinterdc)합니다.  
   
 ##  <a name="getarcdirection"></a>  CDC::GetArcDirection  
@@ -2480,10 +2480,10 @@ UINT GetBoundsRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRectBounds`  
+ *lpRectBounds*  
  현재 경계 사각형을 받을 버퍼를 가리킵니다. 사각형은 논리적 좌표에 반환 됩니다.  
   
- `flags`  
+ *flags*  
  경계 사각형 반환 된 후 지울 수 있는지 여부를 지정 합니다. 이 매개 변수 0 하거나 다음 값으로 설정 해야 합니다.  
   
 - **DCB_RESET** 반환 된 후 삭제 된 경계 사각형을 강제로 수행 합니다.  
@@ -2533,22 +2533,22 @@ DWORD GetCharacterPlacement(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpString`  
+ *lpString*  
  처리 하는 문자열에 대 한 포인터입니다.  
   
- `nCount`  
+ *nCount*  
  문자열의 길이 지정합니다. ANSI 버전에 대 한 바이트 수는 며 유니코드 함수에 대 한 단어 개수. 자세한 내용은 참조 [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx)합니다.  
   
- `nMaxExtent`  
- 문자열 처리 됩니다 (논리 단위)에 최대 한도 지정 합니다. 문자를 처리 하는 경우이 범위를 초과 합니다는 무시 됩니다. 모든 필요한 순서 지정 또는 문자 배열에 대 한 계산이 포함 된 문자에만 적용 됩니다. GCP_MAXEXTENT 값에 지정 된 경우에이 매개 변수는 사용 된 `dwFlags` 매개 변수입니다. 입력된 문자열을 처리 하는 함수가 각 문자 및 해당 범위에 추가 됩니다 출력, 범위 및 다른 배열 총 익스텐트 아직 최대값을 초과 하지 않은 경우에. 제한에 도달 하면 처리가 중지 됩니다.  
+ *nMaxExtent*  
+ 문자열 처리 됩니다 (논리 단위)에 최대 한도 지정 합니다. 문자를 처리 하는 경우이 범위를 초과 합니다는 무시 됩니다. 모든 필요한 순서 지정 또는 문자 배열에 대 한 계산이 포함 된 문자에만 적용 됩니다. GCP_MAXEXTENT 값에 지정 된 경우에이 매개 변수는 사용 된 *dwFlags* 매개 변수입니다. 입력된 문자열을 처리 하는 함수가 각 문자 및 해당 범위에 추가 됩니다 출력, 범위 및 다른 배열 총 익스텐트 아직 최대값을 초과 하지 않은 경우에. 제한에 도달 하면 처리가 중지 됩니다.  
   
  lpResults  
  에 대 한 포인터는 [GCP_Results](http://msdn.microsoft.com/library/windows/desktop/dd144842\(v=vs.85\).aspx) 함수의 결과 받는 구조입니다.  
   
- `dwFlags`  
- 필요한를 배열에 문자열을 처리 하는 방법을 지정 합니다. 에 나열 된 값 또는이 매개 변수 하나가 될 수 있습니다는 `dwFlags` 의 섹션은 [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx) 항목입니다.  
+ *dwFlags*  
+ 필요한를 배열에 문자열을 처리 하는 방법을 지정 합니다. 에 나열 된 값 또는이 매개 변수 하나가 될 수 있습니다는 *dwFlags* 의 섹션은 [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx) 항목입니다.  
   
- `str`  
+ *str*  
  에 대 한 포인터는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 개체를 처리 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2575,14 +2575,14 @@ BOOL GetCharABCWidths(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nFirstChar`  
+ *nFirstChar*  
  문자 너비 반환될지 현재 글꼴 문자 범위에서 첫 번째 문자를 지정 합니다.  
   
- `nLastChar`  
+ *nLastChar*  
  문자 너비 반환될지 현재 글꼴 문자 범위에서 마지막 문자를 지정 합니다.  
   
- `lpabc`  
- 배열을 가리키는 [ABC](../../mfc/reference/abc-structure.md) 함수가 반환할 때 문자 너비를 수신 하는 구조입니다. 이 배열 만큼 이상을 포함 해야 **ABC** 문자에 지정한 범위에이 구조는 `nFirstChar` 및 `nLastChar` 매개 변수입니다.  
+ *lpabc*  
+ 배열을 가리키는 [ABC](../../mfc/reference/abc-structure.md) 함수가 반환할 때 문자 너비를 수신 하는 구조입니다. 이 배열 만큼 이상을 포함 해야 **ABC** 문자에 지정한 범위에이 구조는 *nFirstChar* 및 *nLastChar* 매개 변수입니다.  
   
  *lpABCF*  
  배열 사용 하 여 응용 프로그램에서 제공한 버퍼를 가리키는 [ABCFLOAT](../../mfc/reference/abcfloat-structure.md) 구조 함수가 반환할 때 문자 너비를 받을 수 있습니다. 이 함수에서 반환 하 고 너비는 IEEE 부동 소수점 형식입니다.  
@@ -2615,17 +2615,17 @@ BOOL GetCharABCWidthsI(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `giFirst`  
- 현재 글꼴의 연속 문자 모양 인덱스의 그룹에서 첫 번째 문자 인덱스를 지정합니다. 이 매개 변수는 경우에 사용 되는 `pgi` 매개 변수는 **NULL**합니다.  
+ *giFirst*  
+ 현재 글꼴의 연속 문자 모양 인덱스의 그룹에서 첫 번째 문자 인덱스를 지정합니다. 이 매개 변수는 경우에 사용 되는 *pgi* 매개 변수는 **NULL**합니다.  
   
- `cgi`  
+ *cgi*  
  Glyph 인덱스가 수를 지정 합니다.  
   
- `pgi`  
- Glyph 인덱스가 포함 된 배열에 대 한 포인터입니다. 값이 **NULL**, `giFirst` 매개 변수 대신 사용 됩니다. `cgi` 이 배열에 문자 모양 인덱스 수를 지정 하는 매개 변수입니다.  
+ *pgi*  
+ Glyph 인덱스가 포함 된 배열에 대 한 포인터입니다. 값이 **NULL**, *giFirst* 매개 변수 대신 사용 됩니다. *cgi* 이 배열에 문자 모양 인덱스 수를 지정 하는 매개 변수입니다.  
   
- `lpabc`  
- 배열에 대 한 포인터 [ABC](http://msdn.microsoft.com/library/windows/desktop/dd162454) 구조 문자 너비를 수신 합니다. 이 배열 만큼 이상을 포함 해야 **ABC** glyph 인덱스가 지정 된 수 만큼 구조는 `cgi` 매개 변수입니다.  
+ *lpabc*  
+ 배열에 대 한 포인터 [ABC](http://msdn.microsoft.com/library/windows/desktop/dd162454) 구조 문자 너비를 수신 합니다. 이 배열 만큼 이상을 포함 해야 **ABC** glyph 인덱스가 지정 된 수 만큼 구조는 *cgi* 매개 변수입니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
@@ -2649,13 +2649,13 @@ BOOL GetCharWidth(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nFirstChar`  
+ *nFirstChar*  
  현재 글꼴에 있는 문자의 연속 된 그룹의 첫 번째 문자를 지정합니다.  
   
- `nLastChar`  
+ *nLastChar*  
  현재 글꼴에 있는 문자의 연속 된 그룹의 마지막 문자를 지정합니다.  
   
- `lpBuffer`  
+ *lpBuffer*  
  현재 글꼴에 연속 된 문자 그룹에 대 한 너비 값을 받을 버퍼를 가리킵니다.  
   
  *lpFloatBuffer*  
@@ -2665,9 +2665,9 @@ BOOL GetCharWidth(
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 예를 들어 경우 `nFirstChar` 식별 문자 'a' 및 `nLastChar` 문자 'z', 함수 검색 모든 소문자의 너비를 식별 합니다.  
+ 예를 들어 경우 *nFirstChar* 식별 문자 'a' 및 *nLastChar* 문자 'z', 함수 검색 모든 소문자의 너비를 식별 합니다.  
   
- 가리키는 버퍼에 있는 값을 저장 하는 함수 `lpBuffer`합니다. 이 버퍼는 너비의 모든 저장할 수 있을 만큼 크기가 커야 합니다. 즉, 있어야 이상 26 항목에 제공 된 예입니다.  
+ 가리키는 버퍼에 있는 값을 저장 하는 함수 *lpBuffer*합니다. 이 버퍼는 너비의 모든 저장할 수 있을 만큼 크기가 커야 합니다. 즉, 있어야 이상 26 항목에 제공 된 예입니다.  
   
  문자의 연속 된 그룹의 문자를 특정 글꼴에 존재 하지 않는, 기본 문자의 너비 값을 할당 됩니다.  
   
@@ -2683,16 +2683,16 @@ BOOL GetCharWidthI(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `giFirst`  
- 현재 글꼴의 연속 문자 모양 인덱스의 그룹에서 첫 번째 문자 인덱스를 지정합니다. 이 매개 변수는 경우에 사용 되는 `pgi` 매개 변수는 **NULL**합니다.  
+ *giFirst*  
+ 현재 글꼴의 연속 문자 모양 인덱스의 그룹에서 첫 번째 문자 인덱스를 지정합니다. 이 매개 변수는 경우에 사용 되는 *pgi* 매개 변수는 **NULL**합니다.  
   
- `cgi`  
+ *cgi*  
  Glyph 인덱스가 수를 지정 합니다.  
   
- `pgi`  
- Glyph 인덱스가 포함 된 배열에 대 한 포인터입니다. 값이 **NULL**, `giFirst` 매개 변수 대신 사용 됩니다. `cgi` 이 배열에 문자 모양 인덱스 수를 지정 하는 매개 변수입니다.  
+ *pgi*  
+ Glyph 인덱스가 포함 된 배열에 대 한 포인터입니다. 값이 **NULL**, *giFirst* 매개 변수 대신 사용 됩니다. *cgi* 이 배열에 문자 모양 인덱스 수를 지정 하는 매개 변수입니다.  
   
- `lpBuffer`  
+ *lpBuffer*  
  너비를 받는 버퍼에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2709,7 +2709,7 @@ virtual int GetClipBox(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
+ *lpRect*  
  가리키는 [RECT](../../mfc/reference/rect-structure1.md) 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 사각형 크기를 수신 하는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2724,7 +2724,7 @@ virtual int GetClipBox(LPRECT lpRect) const;
 - **SIMPLEREGION** 클립 영역에 겹치는 테두리가 없습니다.  
   
 ### <a name="remarks"></a>설명  
- 차원을 가리키는 버퍼에 복사 됩니다 `lpRect`합니다.  
+ 차원을 가리키는 버퍼에 복사 됩니다 *lpRect*합니다.  
   
 ##  <a name="getcoloradjustment"></a>  CDC::GetColorAdjustment  
  장치 컨텍스트에 대 한 색 조정 값을 검색합니다.  
@@ -2734,7 +2734,7 @@ BOOL GetColorAdjustment(LPCOLORADJUSTMENT lpColorAdjust) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpColorAdjust`  
+ *lpColorAdjust*  
  가리키는 [COLORADJUSTMENT](../../mfc/reference/coloradjustment-structure.md) 색 조정 값을 받을 데이터 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2856,13 +2856,13 @@ int GetDeviceCaps(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  반환할 정보의 유형을 지정 합니다. 참조 [GetDeviceCaps](http://msdn.microsoft.com/library/windows/desktop/dd144877) 값 목록에 대 한 Windows sdk입니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공 하는 경우 요청 된 기능의 값입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CPrintDialog::GetDefaults](../../mfc/reference/cprintdialog-class.md#getdefaults)합니다.  
   
 ##  <a name="getfontdata"></a>  CDC::GetFontData  
@@ -2877,25 +2877,25 @@ DWORD GetFontData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwTable`  
+ *dwTable*  
  반환할 메트릭 테이블의 이름을 지정 합니다. 이 매개 변수는 Microsoft Corporation에서 게시 TrueType 글꼴 파일 사양에 설명 된 메트릭 테이블 중 하나일 수 있습니다. 이 매개 변수가 0 인 경우 글꼴 파일의 시작 부분에서 시작 하는 정보가 검색 됩니다.  
   
- `dwOffset`  
- 정보 검색을 시작 하는 테이블의 시작 부분에서 오프셋을 지정 합니다. 으로 지정 된 테이블의 시작 부분에서 시작 하는 정보를 검색할이 매개 변수가 0 인 경우는 `dwTable` 매개 변수입니다. 이 값이 테이블의 크기 보다 크거나 `GetFontData` 0을 반환 합니다.  
+ *dwOffset*  
+ 정보 검색을 시작 하는 테이블의 시작 부분에서 오프셋을 지정 합니다. 으로 지정 된 테이블의 시작 부분에서 시작 하는 정보를 검색할이 매개 변수가 0 인 경우는 *dwTable* 매개 변수입니다. 이 값이 테이블의 크기 보다 크거나 `GetFontData` 0을 반환 합니다.  
   
- `lpData`  
- 글꼴 정보를 수신할 버퍼를 가리킵니다. 이 값이 **NULL**, 함수 반환에 지정 된 글꼴 데이터에 필요한 버퍼의 크기는 `dwTable` 매개 변수입니다.  
+ *lpData*  
+ 글꼴 정보를 수신할 버퍼를 가리킵니다. 이 값이 **NULL**, 함수 반환에 지정 된 글꼴 데이터에 필요한 버퍼의 크기는 *dwTable* 매개 변수입니다.  
   
- `cbData`  
- 정보를 검색할 수의 바이트 길이 지정 합니다. 이 매개 변수는 0 일 경우 `GetFontData` 에 지정 된 데이터의 크기를 반환 하는 `dwTable` 매개 변수입니다.  
+ *cbData*  
+ 정보를 검색할 수의 바이트 길이 지정 합니다. 이 매개 변수는 0 일 경우 `GetFontData` 에 지정 된 데이터의 크기를 반환 하는 *dwTable* 매개 변수입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 가리키는 버퍼에 반환 된 바이트 수를 지정 `lpData` 함수에 성공 하면 그렇지 않으면-1입니다.  
+ 가리키는 버퍼에 반환 된 바이트 수를 지정 *lpData* 함수에 성공 하면 그렇지 않으면-1입니다.  
   
 ### <a name="remarks"></a>설명  
  검색할 정보를 반환할 정보의 길이 및 글꼴 파일에 오프셋을 지정 하 여 식별 됩니다.  
   
- 응용 프로그램이 사용할 수는 `GetFontData` 멤버 함수를 트루타입 글꼴이 문서에 저장 합니다. 이렇게 하려면 응용 프로그램이 있는지 여부를 확인 글꼴 포함 될 수 있습니다 다음에 대 한 0을 지정 하면 전체 글꼴 파일을 검색 된 `dwTable`, `dwOffset`, 및 `cbData` 매개 변수입니다.  
+ 응용 프로그램이 사용할 수는 `GetFontData` 멤버 함수를 트루타입 글꼴이 문서에 저장 합니다. 이렇게 하려면 응용 프로그램이 있는지 여부를 확인 글꼴 포함 될 수 있습니다 다음에 대 한 0을 지정 하면 전체 글꼴 파일을 검색 된 *dwTable*, *dwOffset*, 및 *cbData* 매개 변수입니다.  
   
  응용 프로그램 확인 하 여 글꼴을 포함할 수 있는지 여부를 확인할 수는 **otmfsType** 의 멤버는 [OUTLINETEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd162755) 구조입니다. 경우 비트 1의 **otmfsType** 이 설정에 글꼴 포함을 허용 되지 않습니다. 비트가 1 이면 일반 글꼴을 포함할 수 있습니다. 2 비트를 설정 하는 경우 포함 하는 읽기 전용입니다.  
   
@@ -2928,36 +2928,36 @@ DWORD GetGlyphOutline(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nChar`  
+ *nChar*  
  정보는 반환 될 문자를 지정 합니다.  
   
- `nFormat`  
+ *nFormat*  
  함수 정보를 반환 하는 형식을 지정 합니다. 다음 값 중 하나 또는 0 수 있습니다.  
   
 |값|의미|  
 |-----------|-------------|  
-|**GGO_BITMAP**|문자 모양 비트맵을 반환합니다. 함수가 반환 하는 경우, 가리키는 버퍼 `lpBuffer` 행이 있는 워드 단위 경계에서 시작 하는 픽셀 당 1 비트 비트맵을 포함 합니다.|  
-|**GGO_NATIVE**|래스터 라이저의 네이티브 형식으로 장치 단위를 사용 하 여 곡선 데이터 요소를 반환 합니다. 이 값을 지정 하는 경우에 지정 된 모든 변환을 `lpmat2` 는 무시 됩니다.|  
+|**GGO_BITMAP**|문자 모양 비트맵을 반환합니다. 함수가 반환 하는 경우, 가리키는 버퍼 *lpBuffer* 행이 있는 워드 단위 경계에서 시작 하는 픽셀 당 1 비트 비트맵을 포함 합니다.|  
+|**GGO_NATIVE**|래스터 라이저의 네이티브 형식으로 장치 단위를 사용 하 여 곡선 데이터 요소를 반환 합니다. 이 값을 지정 하는 경우에 지정 된 모든 변환을 *lpmat2* 는 무시 됩니다.|  
   
- 때의 값 `nFormat` 가 0 이면 함수는 채웁니다는 [GLYPHMETRICS](http://msdn.microsoft.com/library/windows/desktop/dd144955) 구조 하지만 문자 모양 윤곽선 데이터를 반환 하지 않습니다.  
+ 때의 값 *nFormat* 가 0 이면 함수는 채웁니다는 [GLYPHMETRICS](http://msdn.microsoft.com/library/windows/desktop/dd144955) 구조 하지만 문자 모양 윤곽선 데이터를 반환 하지 않습니다.  
   
  *lpgm*  
  가리키는 **GLYPHMETRICS** 문자 셀의 문자 모양의 위치를 설명 하는 구조입니다.  
   
- `cbBuffer`  
- 함수 개요 문자에 대 한 정보를 복사 하는 버퍼의 크기를 지정 합니다. 이 값이 0 및 `nFormat` 매개 변수가 **GGO_BITMAP** 또는 **GGO_NATIVE** 함수 값을 필요한 버퍼 크기를 반환 합니다.  
+ *cbBuffer*  
+ 함수 개요 문자에 대 한 정보를 복사 하는 버퍼의 크기를 지정 합니다. 이 값이 0 및 *nFormat* 매개 변수가 **GGO_BITMAP** 또는 **GGO_NATIVE** 함수 값을 필요한 버퍼 크기를 반환 합니다.  
   
- `lpBuffer`  
- 함수 개요 문자에 대 한 정보를 복사 하는 버퍼를 가리킵니다. 경우 `nFormat` 지정는 **GGO_NATIVE** 정보 값 형식으로 복사 됩니다 **TTPOLYGONHEADER** 및 **TTPOLYCURVE** 구조입니다. 이 값이 **NULL** 및 `nFormat` 있거나는 **GGO_BITMAP** 또는 **GGO_NATIVE** 함수 값을 필요한 버퍼 크기를 반환 합니다.  
+ *lpBuffer*  
+ 함수 개요 문자에 대 한 정보를 복사 하는 버퍼를 가리킵니다. 경우 *nFormat* 지정는 **GGO_NATIVE** 정보 값 형식으로 복사 됩니다 **TTPOLYGONHEADER** 및 **TTPOLYCURVE** 구조입니다. 이 값이 **NULL** 및 *nFormat* 있거나는 **GGO_BITMAP** 또는 **GGO_NATIVE** 값, 함수 반환 필요한 크기는 버퍼입니다.  
   
- `lpmat2`  
- 가리키는 [MAT2](http://msdn.microsoft.com/library/windows/desktop/dd145048) 문자에 대 한 변환 매트릭스를 포함 하는 구조입니다. 이 매개 변수 여야 **NULL**경우에,는 **GGO_NATIVE** 에 값이 지정 `nFormat`합니다.  
+ *lpmat2*  
+ 가리키는 [MAT2](http://msdn.microsoft.com/library/windows/desktop/dd145048) 문자에 대 한 변환 매트릭스를 포함 하는 구조입니다. 이 매개 변수 여야 **NULL**경우에,는 **GGO_NATIVE** 에 값이 지정 *nFormat*합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 경우에 검색 된 정보에 필요한 버퍼를 바이트 단위로 크기 `cbBuffer` 은 0 또는 `lpBuffer` 은 **NULL**합니다. 그렇지 않으면 양수 값 함수는 성공 하는 경우 오류가 발생 하는 경우-1입니다.  
+ 경우에 검색 된 정보에 필요한 버퍼를 바이트 단위로 크기 *cbBuffer* 은 0 또는 *lpBuffer* 은 **NULL**합니다. 그렇지 않으면 양수 값 함수는 성공 하는 경우 오류가 발생 하는 경우-1입니다.  
   
 ### <a name="remarks"></a>설명  
- 응용 프로그램에서 가리키는 구조에는 2-2 변형 매트릭스를 지정 하 여 비트맵 형식으로 검색 한 문자를 순환할 수 `lpmat2`합니다.  
+ 응용 프로그램에서 가리키는 구조에는 2-2 변형 매트릭스를 지정 하 여 비트맵 형식으로 검색 한 문자를 순환할 수 *lpmat2*합니다.  
   
  문자 모양 윤곽선 일련 윤곽선의으로 반환 됩니다. 각 윤곽선에 의해 정의 됩니다는 [TTPOLYGONHEADER](http://msdn.microsoft.com/library/windows/desktop/dd145158) 구조 만큼 뒤 **TTPOLYCURVE** 을 설명 하는 데 필요한 서의 구조체입니다. 모든 지점으로 반환 됩니다 [POINTFX](http://msdn.microsoft.com/library/windows/desktop/dd162806) 구조 및 절대 위치를 이동 합니다. 상대적이 지 않고 나타냅니다. 시작 하 여 지정 된 점이 **pfxStart** 의 멤버는 [TTPOLYGONHEADER](http://msdn.microsoft.com/library/windows/desktop/dd145158) 구조 윤곽선에 대 한 개요 시작할 지점입니다. [TTPOLYCURVE](http://msdn.microsoft.com/library/windows/desktop/dd145157) 폴리라인 레코드 또는 스플라인 레코드 중 하나를 수행 하는 구조 일 수 있습니다. 폴리라인 레코드는 일련의 점; 점 사이 그려진 줄 문자의 개요를 설명 합니다. 스플라인 레코드 트루타입 (즉, 정방형 b-스플라인을)에서 사용 하는 정방형 곡선을 나타냅니다.  
   
@@ -3003,11 +3003,11 @@ int GetKerningPairs(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nPairs`  
- 개수를 지정 [KERNINGPAIR](http://msdn.microsoft.com/library/windows/desktop/dd145024) 가리키는 구조 `lpkrnpair`합니다. 함수에 지정한 것 보다 더 많은 커닝 쌍 복사 되지 것입니다 `nPairs`합니다.  
+ *nPairs*  
+ 개수를 지정 [KERNINGPAIR](http://msdn.microsoft.com/library/windows/desktop/dd145024) 가리키는 구조 *lpkrnpair*합니다. 함수에 지정한 것 보다 더 많은 커닝 쌍 복사 되지 것입니다 *nPairs*합니다.  
   
- `lpkrnpair`  
- 배열을 가리키는 **KERNINGPAIR** 커닝을 수신 하는 구조 쌍 함수에서 반환 합니다. 이 배열에 지정 된 대로 이상의 구조에 포함 되어야 `nPairs`합니다. 이 매개 변수가 **NULL**, 함수 커닝 글꼴에 대 한 쌍의 총 수를 반환 합니다.  
+ *lpkrnpair*  
+ 배열을 가리키는 **KERNINGPAIR** 커닝을 수신 하는 구조 쌍 함수에서 반환 합니다. 이 배열에 지정 된 대로 이상의 구조에 포함 되어야 *nPairs*합니다. 이 매개 변수가 **NULL**, 함수 커닝 글꼴에 대 한 쌍의 총 수를 반환 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공 하는 경우 영어만 검색 수 또는 글꼴, 영어만의 총 수를 지정 합니다. 함수가 실패 하면 또는 글꼴에 대 한 커닝 쌍이 경우 0이 반환 됩니다.  
@@ -3039,7 +3039,7 @@ int GetMapMode() const;
  매핑 모드에 대 한 참조는 `SetMapMode` 멤버 함수입니다.  
   
 > [!NOTE]
->  호출 하는 경우 [SetLayout](#setlayout) DC 오른쪽에서 왼쪽 레이아웃을 변경 하려면 **SetLayout** 매핑 모드를 자동으로 변경 `MM_ISOTROPIC`합니다. 따라서 모든 후속 호출에 `GetMapMode` 돌아갑니다 `MM_ISOTROPIC`합니다.  
+>  호출 하는 경우 [SetLayout](#setlayout) DC 오른쪽에서 왼쪽 레이아웃을 변경 하려면 `SetLayout` 매핑 모드를 자동으로 변경 `MM_ISOTROPIC`합니다. 따라서 모든 후속 호출에 `GetMapMode` 돌아갑니다 `MM_ISOTROPIC`합니다.  
   
 ##  <a name="getmiterlimit"></a>  CDC::GetMiterLimit  
  장치 컨텍스트에 대 한 이음이 제한을 반환합니다.  
@@ -3062,11 +3062,11 @@ COLORREF GetNearestColor(COLORREF crColor) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `crColor`  
+ *crColor*  
  일치 여부를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 단색을 정의 하는 RGB (빨강, 녹색, 파랑) 색 값에 가장 가까운 색은 `crColor` 장치를 나타낼 수 있는 값입니다.  
+ 단색을 정의 하는 RGB (빨강, 녹색, 파랑) 색 값에 가장 가까운 색는 *crColor* 장치를 나타낼 수 있는 값입니다.  
   
 ### <a name="remarks"></a>설명  
  지정 된 장치를 나타내는이 색이 있어야 합니다.  
@@ -3081,20 +3081,20 @@ UINT GetOutlineTextMetrics(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpotm`  
+ *lpotm*  
  배열을 가리키는 [OUTLINETEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd162755) 구조입니다. 이 매개 변수가 **NULL**, 검색된 된 메트릭 데이터에 필요한 버퍼의 크기를 반환 하는 함수입니다.  
   
- `cbData`  
+ *cbData*  
  정보를 반환 하는 버퍼를 바이트 단위로 크기를 지정 합니다.  
   
- `lpotm`  
+ *lpotm*  
  가리키는 **OUTLINETEXTMETRIC** 구조입니다. 이 매개 변수가 **NULL**, 함수는 검색 된 메트릭 정보에 필요한 버퍼의 크기를 반환 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- [OUTLINETEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd162755) 트루타입 형식으로 제공 되는 글꼴 메트릭 정보의 대부분을 포함 하는 구조 포함 하는 [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) 구조입니다. 마지막 4 개 멤버는 **OUTLINETEXTMETRIC** 구조는 문자열에 대 한 포인터입니다. 응용 프로그램에 있는 다른 멤버에 필요한 공간 외에도 이러한 문자열에 대 한 공간을 할당 해야 합니다. 지정 하 여 필요한 크기를 검색할를 문자열의 크기에 시스템에서 발생 제한이 없음을 의미 이기 때문에 메모리를 할당 하기 위한 가장 간단한 방법은 **NULL** 에 대 한 `lpotm` 첫 번째 호출에는 `GetOutlineTextMetrics` 함수입니다.  
+ [OUTLINETEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd162755) 트루타입 형식으로 제공 되는 글꼴 메트릭 정보의 대부분을 포함 하는 구조 포함 하는 [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) 구조입니다. 마지막 4 개 멤버는 **OUTLINETEXTMETRIC** 구조는 문자열에 대 한 포인터입니다. 응용 프로그램에 있는 다른 멤버에 필요한 공간 외에도 이러한 문자열에 대 한 공간을 할당 해야 합니다. 지정 하 여 필요한 크기를 검색할를 문자열의 크기에 시스템에서 발생 제한이 없음을 의미 이기 때문에 메모리를 할당 하기 위한 가장 간단한 방법은 **NULL** 에 대 한 *lpotm* 는 첫번째호출에서`GetOutlineTextMetrics` 함수입니다.  
   
 ##  <a name="getoutputcharwidth"></a>  CDC::GetOutputCharWidth  
  출력 장치 컨텍스트를 사용 하 여 `m_hDC`, 현재 글꼴에서의 연속 문자 그룹의 개별 문자 너비를 검색 합니다.  
@@ -3107,22 +3107,22 @@ BOOL GetOutputCharWidth(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nFirstChar`  
+ *nFirstChar*  
  현재 글꼴에 있는 문자의 연속 된 그룹의 첫 번째 문자를 지정합니다.  
   
- `nLastChar`  
+ *nLastChar*  
  현재 글꼴에 있는 문자의 연속 된 그룹의 마지막 문자를 지정합니다.  
   
- `lpBuffer`  
+ *lpBuffer*  
  현재 글꼴에 연속 된 문자 그룹에 대 한 너비 값을 받을 버퍼를 가리킵니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 예를 들어 경우 `nFirstChar` 식별 문자 'a' 및 `nLastChar` 문자 'z', 함수 검색 모든 소문자의 너비를 식별 합니다.  
+ 예를 들어 경우 *nFirstChar* 식별 문자 'a' 및 *nLastChar* 문자 'z', 함수 검색 모든 소문자의 너비를 식별 합니다.  
   
- 가리키는 버퍼에 있는 값을 저장 하는 함수 `lpBuffer`합니다. 이 버퍼는 모든 너비를 저장할 수 있을 만큼 크기가 커야 합니다. 즉, 있어야 이상 26 항목에 제공 된 예입니다.  
+ 가리키는 버퍼에 있는 값을 저장 하는 함수 *lpBuffer*합니다. 이 버퍼는 모든 너비를 저장할 수 있을 만큼 크기가 커야 합니다. 즉, 있어야 이상 26 항목에 제공 된 예입니다.  
   
  문자의 연속 된 그룹의 문자를 특정 글꼴에 존재 하지 않는, 기본 문자의 너비 값을 할당 됩니다.  
   
@@ -3143,32 +3143,32 @@ CSize GetOutputTabbedTextExtent(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszString`  
+ *lpszString*  
  측정할 문자열을 가리킵니다. 전달할 수도 있습니다는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 이 매개 변수에 대 한 개체입니다.  
   
- `nCount`  
- 문자열에 있는 문자의 수를 지정합니다. 경우 `nCount` 은-1, 길이 계산 됩니다.  
+ *nCount*  
+ 문자열에 있는 문자의 수를 지정합니다. 경우 *nCount* 은-1, 길이 계산 됩니다.  
   
- `nTabPositions`  
- 가 가리키는 배열의의 탭 정지 위치 수를 지정 `lpnTabStopPositions`합니다.  
+ *nTabPositions*  
+ 가 가리키는 배열의의 탭 정지 위치 수를 지정 *lpnTabStopPositions*합니다.  
   
- `lpnTabStopPositions`  
+ *lpnTabStopPositions*  
  논리 단위로 탭 정지 위치를 포함 하는 정수 배열 가리킵니다. 탭 정지; 오름차순으로 정렬 되어야 합니다. 가장 작은 x 값 배열의 첫 번째 항목 이어야 합니다. 뒤로 탭 허용 되지 않습니다.  
   
- `str`  
+ *str*  
  A `CString` 측정할 지정 된 문자를 포함 하는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
  (논리 단위)에 문자열의 크기는 [CSize](../../atl-mfc-shared/reference/csize-class.md) 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 문자열의 너비로 지정 된 탭 정지 기반으로 문자열에 탭 문자가 하나 이상 있으면 `lpnTabStopPositions`합니다. 함수는 현재 선택 된 글꼴을 사용 하 여 문자열의 크기를 계산 합니다.  
+ 문자열의 너비로 지정 된 탭 정지 기반으로 문자열에 탭 문자가 하나 이상 있으면 *lpnTabStopPositions*합니다. 함수는 현재 선택 된 글꼴을 사용 하 여 문자열의 크기를 계산 합니다.  
   
  현재 클립 영역 너비와 높이에서 반환 된 오프셋 하지 않습니다는 `GetOutputTabbedTextExtent` 함수입니다.  
   
  이후 일부 장치 일반 셀 배열에 문자를 배치 하지 마십시오 (즉, 문자 커닝은)는 문자열의 문자 범위까지의 합계는 문자열의 범위와 같으면 되지 않을 수 있습니다.  
   
- 경우 `nTabPositions` 0 및 `lpnTabStopPositions` 은 **NULL**, 탭 평균 문자 너비를 8로 확장 됩니다. 경우 `nTabPositions` 1 이면 탭 정지 대상 배열에서 첫 번째 값으로 지정 된 간격으로 구분 됩니다 `lpnTabStopPositions` 포인트입니다. 경우 `lpnTabStopPositions` 단일 값 보다 더 가리키는 탭 정지를 사용 하는 각 값에 지정 된 최대 배열에 대해 설정 되어 `nTabPositions`합니다.  
+ 경우 *nTabPositions* 0 및 *lpnTabStopPositions* 은 **NULL**, 탭 평균 문자 너비를 8로 확장 됩니다. 경우 *nTabPositions* 1 이면 탭 정지 대상 배열에서 첫 번째 값으로 지정 된 간격으로 구분 됩니다 *lpnTabStopPositions* 포인트입니다. 경우 *lpnTabStopPositions* 단일 값 보다 더 가리키는 탭 정지를 사용 하는 각 값에 지정 된 최대 배열에 대해 설정 되어 *nTabPositions*합니다.  
   
 ##  <a name="getoutputtextextent"></a>  CDC::GetOutputTextExtent  
  출력 장치 컨텍스트를 사용 하 여이 함수를 호출 [m_hDC](#m_hdc), 및 현재 글꼴을 사용 하 여 텍스트를 줄의 높이 너비를 계산 합니다.  
@@ -3182,13 +3182,13 @@ CSize GetOutputTextExtent(const CString& str) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszString`  
+ *lpszString*  
  문자의 문자열을 가리킵니다. 전달할 수도 있습니다는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 이 매개 변수에 대 한 개체입니다.  
   
- `nCount`  
- 문자열에 있는 문자의 수를 지정합니다. 경우 `nCount` 은-1, 길이 계산 됩니다.  
+ *nCount*  
+ 문자열에 있는 문자의 수를 지정합니다. 경우 *nCount* 은-1, 길이 계산 됩니다.  
   
- `str`  
+ *str*  
  A `CString` 측정할 지정 된 문자를 포함 하는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -3207,7 +3207,7 @@ BOOL GetOutputTextMetrics(LPTEXTMETRIC lpMetrics) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpMetrics`  
+ *lpMetrics*  
  가리키는 [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) 구조체 메트릭을입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -3224,34 +3224,34 @@ int GetPath(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPoints`  
+ *lpPoints*  
  배열을 가리키는 [지점](../../mfc/reference/point-structure1.md) 데이터 구조 또는 `CPoint` 끝점 및 곡선 제어점 개체 배치 됩니다.  
   
- `lpTypes`  
+ *lpTypes*  
  꼭 짓 점 형식 위치 하는 바이트 배열 가리킵니다. 값은 다음 중 하나:  
   
-- **PT_MOVETO** 지정는 해당 지정 `lpPoints` 비연속 그림을 시작 합니다.  
+- **PT_MOVETO** 지정는 해당 지정 *lpPoints* 비연속 그림을 시작 합니다.  
   
-- **PT_LINETO** 이전 지점 및 해당 지점 지정 `lpPoints` 선의 끝점입니다.  
+- **PT_LINETO** 이전 지점 및 해당 지점 지정 *lpPoints* 선의 끝점입니다.  
   
-- **PT_BEZIERTO** 지정는 해당 지정 `lpPoints` 제어점 또는 Bzier 곡선의 끝점입니다.  
+- **PT_BEZIERTO** 지정는 해당 지정 *lpPoints* 제어점 또는 Bzier 곡선의 끝점입니다.  
   
  **PT_BEZIERTO** 3 집합 모두에 항상 발생 하는 형식입니다. 지점 바로 앞에 경로에 Bzier 곡선의 시작점을 정의 합니다. 처음 두 **PT_BEZIERTO** 요소가 컨트롤 포인트 및 세 번째 **PT_BEZIERTO** 점은 끝점 (경우 하드 코딩 된).  
   
-     A **PT_LINETO** 또는 **PT_BEZIERTO** 형식 플래그와 함께 사용할 수 있습니다 (비트 or 연산자를 사용 하 여 `OR`) 해당 지점에 해당 하며 도형 마지막 지점 임을 나타내기 위해는 그림을 닫아야 합니다.  
+     A **PT_LINETO** 또는 **PT_BEZIERTO** 형식 플래그와 함께 사용할 수 있습니다 (비트 or 연산자를 사용 하 여 **OR**) 해당 하는 점 마지막 지점 임을 나타내기 위해 에 해당 하며 도형 그림 닫아야 합니다.  
   
 - **PT_CLOSEFIGURE** 그림 해당 줄이 자동으로 닫힌 또는 곡선을 그립니다 않도록 지정 합니다. 마지막에 해당 하는 지점으로 선 또는 곡선 끝점에서 선을 그려는 형상이 닫혀 **PT_MOVETO**합니다.  
   
- `nCount`  
- 총 수를 지정 [지점](../../mfc/reference/point-structure1.md) 배치 될 수 있습니다 하는 데이터 구조는 `lpPoints` 배열입니다. 이 값에 추가할 수 있는 바이트 수가 동일 해야는 `lpTypes` 배열입니다.  
+ *nCount*  
+ 총 수를 지정 [지점](../../mfc/reference/point-structure1.md) 배치 될 수 있습니다 하는 데이터 구조는 *lpPoints* 배열입니다. 이 값에 추가할 수 있는 바이트 수가 동일 해야는 *lpTypes* 배열입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 경우는 `nCount` 매개 변수는 0이 아니면 열거 하는 점 개수입니다. 경우 `nCount` 은 0으로, 경로 있는 요소의 총 수 (및 `GetPath` 버퍼에 기록 하는 아무 것도). 경우 `nCount` 0이 아니고 점 개수 보다 작으면 경로 반환 값은-1입니다.  
+ 경우는 *nCount* 매개 변수는 0이 아니면 열거 하는 점 개수입니다. 경우 *nCount* 은 0으로, 경로 있는 요소의 총 수 (및 `GetPath` 버퍼에 기록 하는 아무 것도). 경우 *nCount* 0이 아니고 점 개수 보다 작으면 경로 반환 값은-1입니다.  
   
 ### <a name="remarks"></a>설명  
  장치 컨텍스트에 닫힌된 경로 포함 해야 합니다. 패스의 점은 논리적 좌표에 반환 됩니다. 포인트 하므로 장치 좌표로 경로에 저장 되도록 `GetPath` 현재 변환의 역 수를 사용 하 여 장치 좌표에서에서 논리적 좌표로 점의 변경 합니다. `FlattenPath` 하기 전에 멤버 함수를 호출할 수 있습니다 `GetPath`경로에 모든 곡선을 선 세그먼트로 전환 하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [cdc:: beginpath](#beginpath)합니다.  
   
 ##  <a name="getpixel"></a>  CDC::GetPixel  
@@ -3272,7 +3272,7 @@ COLORREF GetPixel(POINT point) const;
  *y*  
  검사 하는 지점의 논리적 y 좌표를 지정 합니다.  
   
- `point`  
+ *지점*  
  논리적 x 및 y-좌표 지점 검사할 수를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -3356,32 +3356,32 @@ CSize GetTabbedTextExtent(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszString`  
+ *lpszString*  
  문자열을 가리킵니다. 전달할 수도 있습니다는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 이 매개 변수에 대 한 개체입니다.  
   
- `nCount`  
- 문자열에 있는 문자의 수를 지정합니다. 경우 `nCount` 은-1, 길이 계산 됩니다.  
+ *nCount*  
+ 문자열에 있는 문자의 수를 지정합니다. 경우 *nCount* 은-1, 길이 계산 됩니다.  
   
- `nTabPositions`  
- 가 가리키는 배열의의 탭 정지 위치 수를 지정 `lpnTabStopPositions`합니다.  
+ *nTabPositions*  
+ 가 가리키는 배열의의 탭 정지 위치 수를 지정 *lpnTabStopPositions*합니다.  
   
- `lpnTabStopPositions`  
+ *lpnTabStopPositions*  
  논리 단위로 탭 정지 위치를 포함 하는 정수 배열 가리킵니다. 탭 정지; 오름차순으로 정렬 되어야 합니다. 가장 작은 x 값 배열의 첫 번째 항목 이어야 합니다. 뒤로 탭 허용 되지 않습니다.  
   
- `str`  
+ *str*  
  A `CString` 을 그릴 수 있도록 지정 된 문자를 포함 하는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
  (논리 단위)에 문자열의 크기는 [CSize](../../atl-mfc-shared/reference/csize-class.md) 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 문자열의 너비로 지정 된 탭 정지 기반으로 문자열에 탭 문자가 하나 이상 있으면 `lpnTabStopPositions`합니다. 함수는 현재 선택 된 글꼴을 사용 하 여 문자열의 크기를 계산 합니다.  
+ 문자열의 너비로 지정 된 탭 정지 기반으로 문자열에 탭 문자가 하나 이상 있으면 *lpnTabStopPositions*합니다. 함수는 현재 선택 된 글꼴을 사용 하 여 문자열의 크기를 계산 합니다.  
   
  현재 클립 영역 너비와 높이에서 반환 된 오프셋 하지 않습니다는 `GetTabbedTextExtent` 함수입니다.  
   
  이후 일부 장치 일반 셀 배열에 문자를 배치 하지 마십시오 (즉, 문자 커닝은)는 문자열의 문자 범위까지의 합계는 문자열의 범위와 같으면 되지 않을 수 있습니다.  
   
- 경우 `nTabPositions` 0 및 `lpnTabStopPositions` 은 **NULL**, 탭 평균 문자 너비는 8 시간으로 확장 됩니다. 경우 `nTabPositions` 1 이면 탭 정지 대상 배열에서 첫 번째 값으로 지정 된 간격으로 구분 됩니다 `lpnTabStopPositions` 포인트입니다. 경우 `lpnTabStopPositions` 단일 값 보다 더 가리키는 탭 정지를 사용 하는 각 값에 지정 된 최대 배열에 대해 설정 되어 `nTabPositions`합니다.  
+ 경우 *nTabPositions* 0 및 *lpnTabStopPositions* 은 **NULL**, 탭 평균 문자 너비는 8 시간으로 확장 됩니다. 경우 *nTabPositions* 1 이면 탭 정지 대상 배열에서 첫 번째 값으로 지정 된 간격으로 구분 됩니다 *lpnTabStopPositions* 포인트입니다. 경우 *lpnTabStopPositions* 단일 값 보다 더 가리키는 탭 정지를 사용 하는 각 값에 지정 된 최대 배열에 대해 설정 되어 *nTabPositions*합니다.  
   
 ##  <a name="gettextalign"></a>  CDC::GetTextAlign  
  장치 컨텍스트에 대 한 텍스트 맞춤 플래그의 상태를 검색합니다.  
@@ -3464,13 +3464,13 @@ CSize GetTextExtent(const CString& str) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszString`  
+ *lpszString*  
  문자의 문자열을 가리킵니다. 전달할 수도 있습니다는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 이 매개 변수에 대 한 개체입니다.  
   
- `nCount`  
+ *nCount*  
  문자열에 있는 문자의 수를 지정합니다.  
   
- `str`  
+ *str*  
  A `CString` 지정 된 문자를 포함 하는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -3499,22 +3499,22 @@ BOOL GetTextExtentExPointI(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pgiIn`  
+ *pgiIn*  
  익스텐트는 검색할 glyph 인덱스가 배열에 대 한 포인터입니다.  
   
- `cgi`  
- 가 가리키는 배열의 문자의 수를 지정 `pgiIn`합니다.  
+ *cgi*  
+ 가 가리키는 배열의 문자의 수를 지정 *pgiIn*합니다.  
   
- `nMaxExtent`  
+ *nMaxExtent*  
  서식이 지정 된 문자열의 논리 단위로 허용 가능한 최대 너비를 지정합니다.  
   
- `lpnFit`  
- 지정 된 공간 크기에 맞는 문자의 최대 수의 개수를 수신 하는 정수에 대 한 포인터 `nMaxExtent`합니다. 때 `lpnFit` 은 **NULL**, `nMaxExtent` 는 무시 됩니다.  
+ *lpnFit*  
+ 로 지정 된 공간 크기에 맞는 문자의 최대 수의 개수를 수신 하는 정수에 대 한 포인터 *nMaxExtent*합니다. 때 *lpnFit* 은 **NULL**, *nMaxExtent* 는 무시 됩니다.  
   
  *alpDx*  
- 부분 문자 모양 익스텐트를 받는 정수 배열에 대 한 포인터입니다. 배열의 각 요소는 거리 문자 모양 인덱스가 배열의 시작 부분에서 지정 된 공간 내에 포함 된 문자 중 하나가 사이의 논리 단위로 제공 `nMaxExtent`합니다. 이 배열 이상 많은 요소에서 지정한 glyph 인덱스가 있어야 하며 있지만 `cgi`, 함수에서 지정한 대로 만큼 glyph 인덱스가 대해서만 익스텐트 배열을 채웁니다 `lpnFit`합니다. 경우 *lpnDx* 은 **NULL**, 함수는 부분 문자열 너비를 계산 하지 않습니다.  
+ 부분 문자 모양 익스텐트를 받는 정수 배열에 대 한 포인터입니다. 배열의 각 요소에에서는 문자 모양 인덱스가 배열의 시작 사이의 하 여 지정 된 공간 내에 포함 된 문자 모양이 중 하나를 논리 단위로 거리 제공 *nMaxExtent*합니다. 이 배열 이상 많은 요소에서 지정한 glyph 인덱스가 있어야 하며 있지만 *cgi*, 함수에서 지정한 대로 만큼 glyph 인덱스가 대해서만 익스텐트 배열을 채웁니다 *lpnFit*합니다. 경우 *lpnDx* 은 **NULL**, 함수는 부분 문자열 너비를 계산 하지 않습니다.  
   
- `lpSize`  
+ *lpSize*  
  에 대 한 포인터는 [크기](http://msdn.microsoft.com/library/windows/desktop/dd145106) 구조체의 문자 모양 인덱스 배열 크기 논리 단위에서입니다. 이 값 **NULL**합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -3534,13 +3534,13 @@ BOOL GetTextExtentPointI(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pgiIn`  
+ *pgiIn*  
  익스텐트는 검색할 glyph 인덱스가 배열에 대 한 포인터입니다.  
   
- `cgi`  
- 가 가리키는 배열의 문자의 수를 지정 `pgiIn`합니다.  
+ *cgi*  
+ 가 가리키는 배열의 문자의 수를 지정 *pgiIn*합니다.  
   
- `lpSize`  
+ *lpSize*  
  에 대 한 포인터는 [크기](http://msdn.microsoft.com/library/windows/desktop/dd145106) 구조체의 문자 모양 인덱스 배열 크기 논리 단위에서입니다. 이 값 **NULL**합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -3561,13 +3561,13 @@ int GetTextFace(CString& rString) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nCount`  
+ *nCount*  
  바이트 단위로 버퍼의 크기를 지정합니다. 서체 이름이이 매개 변수에서 지정 된 바이트 수를 초과할 경우 이름이 잘립니다.  
   
  *lpszFacename*  
  서체 이름에 대 한 버퍼를 가리킵니다.  
   
- `rString`  
+ *rString*  
  에 대 한 참조는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -3584,7 +3584,7 @@ BOOL GetTextMetrics(LPTEXTMETRIC lpMetrics) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpMetrics`  
+ *lpMetrics*  
  가리키는 [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) 구조체 메트릭을입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -3651,7 +3651,7 @@ BOOL GetWorldTransform(XFORM& rXform) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rXform`  
+ *rXform*  
  에 대 한 참조는 [XFORM](http://msdn.microsoft.com/library/windows/desktop/dd145228) 구조체 페이지 공간 변환 현재 세계 좌표 공간입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -3683,13 +3683,13 @@ BOOL GradientFill(
  *nVertices*  
  꼭 짓 점 수입니다.  
   
- `pMesh`  
+ *pMesh*  
  배열 [GRADIENT_TRIANGLE](http://msdn.microsoft.com/library/windows/desktop/dd144959) 삼각형 모드 또는 배열을 구조 [GRADIENT_RECT](http://msdn.microsoft.com/library/windows/desktop/dd144958) 사각형 모드로 구조입니다.  
   
  *nMeshElements*  
- 요소 (삼각형 또는 사각형) 수가 `pMesh`합니다.  
+ 요소 (삼각형 또는 사각형) 수가 *pMesh*합니다.  
   
- `dwMode`  
+ *dwMode*  
  그라데이션 채우기 모드를 지정합니다. 가능한 값 목록은 참조 [GradientFill](http://msdn.microsoft.com/library/windows/desktop/dd144957) Windows sdk에서입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -3717,17 +3717,17 @@ virtual BOOL GrayString(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pBrush`  
+ *pBrush*  
  흐려지는 (표시)에 사용할 브러시를 식별 합니다.  
   
- `lpfnOutput`  
- 응용 프로그램에서 제공 하는 콜백 함수는 문자열을 그립니다를 프로시저 인스턴스 주소를 지정 합니다. 자세한 내용은 참조는 Windows에 대 한 설명을 **OutputFunc** [콜백 함수](callback-functions-used-by-mfc.md#graystring)합니다. 이 매개 변수가 **NULL**, 시스템이 사용 하는 Windows `TextOut` 문자열 장치 컨텍스트로 그려 넣으려면 및 `lpData` 출력 문자열에 대 한 긴 포인터 것으로 간주 됩니다.  
+ *lpfnOutput*  
+ 응용 프로그램에서 제공 하는 콜백 함수는 문자열을 그립니다를 프로시저 인스턴스 주소를 지정 합니다. 자세한 내용은 참조는 Windows에 대 한 설명을 **OutputFunc** [콜백 함수](callback-functions-used-by-mfc.md#graystring)합니다. 이 매개 변수가 **NULL**, 시스템이 사용 하는 Windows `TextOut` 문자열 장치 컨텍스트로 그려 넣으려면 및 *lpData* 출력 문자열에 대 한 긴 포인터 것으로 간주 됩니다.  
   
- `lpData`  
- 출력 함수에 전달할 데이터에 대 한 far 포인터를 지정 합니다. 경우 `lpfnOutput` 은 **NULL**, `lpData` 출력 문자열에 대 한 긴 포인터 여야 합니다.  
+ *lpData*  
+ 출력 함수에 전달할 데이터에 대 한 far 포인터를 지정 합니다. 경우 *lpfnOutput* 은 **NULL**, *lpData* 출력 문자열에 대 한 긴 포인터 여야 합니다.  
   
- `nCount`  
- 출력 문자의 수를 지정 합니다. 이 매개 변수는 0 일 경우 `GrayString` 문자열의 길이 계산 (있다고 가정할 경우 `lpData` 문자열에 대 한 포인터). 경우 `nCount` -1과에서 가리키는 함수는 `lpfnOutput` 0 이미지 반환은 표시 되지만 흐리게 표시 되지 않습니다.  
+ *nCount*  
+ 출력 문자의 수를 지정 합니다. 이 매개 변수는 0 일 경우 `GrayString` 문자열의 길이 계산 (있다고 가정할 경우 *lpData* 문자열에 대 한 포인터). 경우 *nCount* -1과에서 가리키는 함수는 *lpfnOutput* 0 이미지 반환은 표시 되지만 흐리게 표시 되지 않습니다.  
   
  *x*  
  문자열을 포함 하는 사각형의 시작 위치의 논리적 x 좌표를 지정 합니다.  
@@ -3735,11 +3735,11 @@ virtual BOOL GrayString(
  *y*  
  문자열을 포함 하는 사각형의 시작 위치의 논리적 y 좌표를 지정 합니다.  
   
- `nWidth`  
- 문자열을 포함 하는 사각형의 너비 (논리 단위)에 지정 합니다. 경우 `nWidth` 은 0으로, `GrayString` 영역의 너비를 계산 가정 `lpData` 문자열에 대 한 포인터입니다.  
+ *nWidth*  
+ 문자열을 포함 하는 사각형의 너비 (논리 단위)에 지정 합니다. 경우 *nWidth* 은 0으로, `GrayString` 영역의 너비를 계산 가정 *lpData* 문자열에 대 한 포인터입니다.  
   
- `nHeight`  
- 문자열을 포함 하는 사각형의 높이 (논리 단위) 단위로 지정 합니다. 경우 `nHeight` 은 0으로, `GrayString` 영역의 높이 계산 가정 `lpData` 문자열에 대 한 포인터입니다.  
+ *nHeight*  
+ 문자열을 포함 하는 사각형의 높이 (논리 단위) 단위로 지정 합니다. 경우 *nHeight* 은 0으로, `GrayString` 영역의 높이 계산 가정 *lpData* 문자열에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
  문자열을 그리면 0이 아닌 경우 중 하나가 0는 `TextOut` 함수 또는 출력 응용 프로그램에서 제공한 함수 반환 0, 흐리게 표시에 대 한 메모리 비트맵을 만들 수 있는 메모리가 부족 한 경우.  
@@ -3749,7 +3749,7 @@ virtual BOOL GrayString(
   
  응용 프로그램 호출 하지 않고 회색 단색 지원 장치에서 흐리게 (회색된) 문자열을 그릴 수는 `GrayString` 멤버 함수입니다. 시스템 색 **COLOR_GRAYTEXT** 은 사용할 수 없는 텍스트를 그리는 데 사용 실선 회색 시스템 색상입니다. 응용 프로그램에서 호출할 수는 **GetSysColor** 의 색상 값을 검색 하려면 Windows 함수 **COLOR_GRAYTEXT**합니다. 응용 프로그램을 호출할 수 있습니다 (검정) 0이 아닌 색이 경우는 `SetTextColor` 멤버 함수를 텍스트 색을 색 값으로 설정 하 고 다음 직접 문자열을 그립니다. 검색 된 색이 검정이 면 응용 프로그램 호출 해야 `GrayString` (회색)를 흐리게 하는 텍스트입니다.  
   
- 경우 `lpfnOutput` 은 **NULL**, GDI 창을 사용 하 여 [TextOut](http://msdn.microsoft.com/library/windows/desktop/dd145133) 함수 및 `lpData` 출력 문자에 대 한 far 포인터 것으로 간주 됩니다. 문자에 출력을 처리할 수 없는 경우는 `TextOut` 멤버 함수 (예를 들어 문자열 저장 되는 비트맵으로), 응용 프로그램에서 자체 출력 함수를 제공 해야 합니다.  
+ 경우 `lpfnOutput` 은 **NULL**, GDI 창을 사용 하 여 [TextOut](http://msdn.microsoft.com/library/windows/desktop/dd145133) 함수 및 *lpData* 출력 문자에 대 한 far 포인터 것으로 간주 됩니다. 문자에 출력을 처리할 수 없는 경우는 `TextOut` 멤버 함수 (예를 들어 문자열 저장 되는 비트맵으로), 응용 프로그램에서 자체 출력 함수를 제공 해야 합니다.  
   
  모든 콜백 함수 콜백 경계를 넘어 예외를 throw 할 수 없는 이후 창에 반환 하기 전에 Microsoft Foundation 예외를 트래핑 해야 참고 항목 예외에 대 한 자세한 내용은 문서 참조 [예외](../../mfc/exception-handling-in-mfc.md)합니다.  
   
@@ -3765,7 +3765,7 @@ void HIMETRICtoDP(LPSIZE lpSize) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpSize`  
+ *lpSize*  
  가리키는 [크기](http://msdn.microsoft.com/library/windows/desktop/dd145106) 구조 또는 [CSize](../../atl-mfc-shared/reference/csize-class.md) 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -3779,7 +3779,7 @@ void HIMETRICtoLP(LPSIZE lpSize) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpSize`  
+ *lpSize*  
  가리키는 [크기](http://msdn.microsoft.com/library/windows/desktop/dd145106) 구조 또는 [CSize](../../atl-mfc-shared/reference/csize-class.md) 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -3788,7 +3788,7 @@ void HIMETRICtoLP(LPSIZE lpSize) const;
  첫 번째 변환 하 여 변환이 수행 됩니다는 **HIMETRIC** 픽셀과 다음 이러한 단위가 현재 매핑 단위 장치 컨텍스트를 사용 하 여 논리 단위로 변환에 단위입니다. Note 장치의 창과 뷰포트의 범위는 결과 영향을 줍니다.  
   
 ##  <a name="intersectcliprect"></a>  CDC::IntersectClipRect  
- 현재 지역 및 지정 된 사각형의 교차 부분을 형성 하 여 새 클립 영역을 만드는 데 `x1`, `y1`, `x2`, 및 `y2`합니다.  
+ 현재 지역 및 지정 된 사각형의 교차 부분을 형성 하 여 새 클립 영역을 만드는 데 *x1*, *y1*, *x2*, 및 *y2*.  
   
 ```  
 int IntersectClipRect(
@@ -3801,19 +3801,19 @@ int IntersectClipRect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `x1`  
+ *x1*  
  사각형의 왼쪽 위 모퉁이의 논리적 x 좌표를 지정합니다.  
   
- `y1`  
+ *y1*  
  사각형의 왼쪽 위 모퉁이의 논리적 y 좌표를 지정합니다.  
   
- `x2`  
+ *x2*  
  사각형의 오른쪽 아래 모퉁이의 논리적 x 좌표를 지정합니다.  
   
- `y2`  
+ *y2*  
  사각형의 오른쪽 아래 모퉁이의 논리적 y 좌표를 지정합니다.  
   
- `lpRect`  
+ *lpRect*  
  사각형을 지정합니다. 전달할 수 있습니다는 `CRect` 개체나에 대 한 포인터는 `RECT` 이 매개 변수에 대 한 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -3838,7 +3838,7 @@ void InvertRect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
+ *lpRect*  
  가리키는 `RECT` 반전 사각형의 논리적 좌표가 들어 있는입니다. 전달할 수도 있습니다는 `CRect` 이 매개 변수에 대 한 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -3846,18 +3846,18 @@ void InvertRect(LPCRECT lpRect);
   
  사각형을 선택 하지 않으면 아무 것도 그려지지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#36](../../mfc/codesnippet/cpp/cdc-class_8.cpp)]  
   
 ##  <a name="invertrgn"></a>  CDC::InvertRgn  
- 로 지정 된 지역에 색을 반전 `pRgn`합니다.  
+ 로 지정 된 지역에 색을 반전 *pRgn*합니다.  
   
 ```  
 BOOL InvertRgn(CRgn* pRgn);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pRgn`  
+ *pRgn*  
  반전 영역을 식별 합니다. 영역의 좌표 논리 단위로 지정 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -3877,7 +3877,7 @@ BOOL IsPrinting() const;
  0이 아닌 경우에는 `CDC` 개체는 프린터 DC이 고, 그렇지 않으면 0입니다.  
   
 ##  <a name="lineto"></a>  CDC::LineTo  
- 현재 위치 까지의 등을 제외한로 지정 된 지점에서 선을 그립니다 *x* 및 *y* (또는 `point`).  
+ 현재 위치 까지의 등을 제외한로 지정 된 지점에서 선을 그립니다 *x* 및 *y* (또는 *가리킨*).  
   
 ```  
 BOOL LineTo(
@@ -3894,16 +3894,16 @@ BOOL LineTo(POINT point);
  *y*  
  줄에 대 한 끝점의 논리적 y 좌표를 지정합니다.  
   
- `point`  
+ *지점*  
  줄에 대 한 끝점을 지정합니다. 전달할 수 있습니다는 **지점** 구조 또는 `CPoint` 이 매개 변수에 대 한 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
  줄을 그리면; 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 선택한 펜으로는 선이 그려집니다. 현재 위치 설정 되어 *x*, *y* 또는 `point`합니다.  
+ 선택한 펜으로는 선이 그려집니다. 현재 위치 설정 되어 *x*, *y* 또는 *가리킨*합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CRect::CenterPoint](../../atl-mfc-shared/reference/crect-class.md#centerpoint)합니다.  
   
 ##  <a name="lptodp"></a>  CDC::LPtoDP  
@@ -3919,16 +3919,16 @@ void LPtoDP(LPSIZE lpSize) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPoints`  
+ *lpPoints*  
  점의 배열 가리킵니다. 배열의 각 요소는 한 [가리킨](../../mfc/reference/point-structure1.md) 구조 또는 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 개체입니다.  
   
- `nCount`  
+ *nCount*  
  배열의 점 개수입니다.  
   
- `lpRect`  
+ *lpRect*  
  가리키는 [RECT](../../mfc/reference/rect-structure1.md) 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체입니다. 이 매개 변수는 논리적 좌표에서 사각형 장치 단위로로 매핑하는 일반적인 경우에 사용 됩니다.  
   
- `lpSize`  
+ *lpSize*  
  가리키는 [크기](http://msdn.microsoft.com/library/windows/desktop/dd145106) 구조 또는 [CSize](../../atl-mfc-shared/reference/csize-class.md) 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -3944,7 +3944,7 @@ void LPtoHIMETRIC(LPSIZE lpSize) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpSize`  
+ *lpSize*  
  가리키는 **크기** 구조 또는 `CSize` 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -3997,29 +3997,29 @@ BOOL MaskBlt(
  *y*  
  대상 사각형의 왼쪽 위 모퉁이의 논리적 y 좌표를 지정합니다.  
   
- `nWidth`  
+ *nWidth*  
  대상 사각형 및 소스 비트맵의 논리 단위에서는 너비를 지정합니다.  
   
- `nHeight`  
+ *nHeight*  
  대상 사각형 및 소스 비트맵의 논리 단위에서 높이 지정합니다.  
   
- `pSrcDC`  
+ *pSrcDC*  
  비트맵을 복사 하는 장치 컨텍스트를 식별 합니다. 경우에는 0 이어야 합니다는 *dwRop* 매개 변수는 소스를 포함 하지 않는 래스터 연산을 지정 합니다.  
   
- `xSrc`  
+ *xSrc*  
  원본 비트맵의 왼쪽 위 모퉁이의 논리적 x 좌표를 지정합니다.  
   
- `ySrc`  
+ *ySrc*  
  원본 비트맵의 왼쪽 위 모퉁이의 논리적 y 좌표를 지정합니다.  
   
- `maskBitmap`  
+ *maskBitmap*  
  소스 장치 컨텍스트에 색 비트맵 함께 단색 마스크 비트맵을 식별 합니다.  
   
- `xMask`  
- 로 지정 된 마스크 비트맵에 대 한 가로 픽셀 오프셋을 지정 된 `maskBitmap` 매개 변수입니다.  
+ *xMask*  
+ 로 지정 된 마스크 비트맵에 대 한 가로 픽셀 오프셋을 지정 된 *maskBitmap* 매개 변수입니다.  
   
- `yMask`  
- 로 지정 된 마스크 비트맵에 대 한 세로 픽셀 오프셋을 지정 된 `maskBitmap` 매개 변수입니다.  
+ *yMask*  
+ 로 지정 된 마스크 비트맵에 대 한 세로 픽셀 오프셋을 지정 된 *maskBitmap* 매개 변수입니다.  
   
  *dwRop*  
  전경색과 배경색 모두 삼항 래스터 연산 코드, 함수를 사용 하 여 원본 및 대상 데이터의 조합 제어를 지정 합니다. 배경 래스터 연산 코드는이 값;의 상위 단어의 상위 바이트에 저장 됩니다. 전경 래스터 연산 코드에 낮은 바이트의이 값이;의 상위 단어에 저장 됩니다. 이 값의 낮은 단어는 무시 되 고 0 이어야 합니다. 매크로 **MAKEROP4** 전경색과 배경색의 이러한 조합은 래스터 연산 코드를 만듭니다. 전경색과 배경색이 함수의 컨텍스트에서 대 한 내용은 설명 섹션을 참조 하십시오. 참조는 `BitBlt` 일반적인 래스터 연산 코드의 목록에 대 한 멤버 함수입니다.  
@@ -4028,7 +4028,7 @@ BOOL MaskBlt(
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 값이 1로 지정 된 마스크에 `maskBitmap` 전경 래스터 연산 코드 지정 *dwRop* 해당 위치에 적용 해야 합니다. / / 마스크에 0 값 백그라운드 래스터 연산 코드에 지정 된 *dwRop* 해당 위치에 적용 해야 합니다. 래스터 작업에는 원본이 필요로, 마스크 사각형 소스 사각형을 포함 해야 합니다. 그렇지 않으면 함수가 실패 합니다. 래스터 작업에는 원본 필요 하지 않습니다, 마스크 사각형 대상 사각형을 포함 해야 합니다. 그렇지 않으면 함수가 실패 합니다.  
+ 값이 1로 지정 된 마스크에 *maskBitmap* 전경 래스터 연산 코드 지정 *dwRop* 해당 위치에 적용 해야 합니다. / / 마스크에 0 값 백그라운드 래스터 연산 코드에 지정 된 *dwRop* 해당 위치에 적용 해야 합니다. 래스터 작업에는 원본이 필요로, 마스크 사각형 소스 사각형을 포함 해야 합니다. 그렇지 않으면 함수가 실패 합니다. 래스터 작업에는 원본 필요 하지 않습니다, 마스크 사각형 대상 사각형을 포함 해야 합니다. 그렇지 않으면 함수가 실패 합니다.  
   
  회전 또는 기울이기 변환을 사용 되는 소스 장치 컨텍스트에 대 한이 함수를 호출할 때 오류가 발생 합니다. 그러나 다른 유형의 변환 허용 됩니다.  
   
@@ -4044,10 +4044,10 @@ BOOL ModifyWorldTransform(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rXform`  
+ *rXform*  
  에 대 한 참조는 [XFORM](http://msdn.microsoft.com/library/windows/desktop/dd145228) 월드 변형과 지정 된 장치 컨텍스트에 대 한 수정 하는 데 사용 되는 구조입니다.  
   
- `iMode`  
+ *iMode*  
  변환 데이터 현재 월드 변형을 수정 하는 방법을 지정 합니다. 이 매개 변수를 사용할 수 있는 값의 목록에 대 한 참조 [ModifyWorldTransform](http://msdn.microsoft.com/library/windows/desktop/dd145060)합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -4061,7 +4061,7 @@ BOOL ModifyWorldTransform(
  이 메서드는 Windows GDI 함수를 래핑합니다 [ModifyWorldTransform](http://msdn.microsoft.com/library/windows/desktop/dd145060)합니다.  
   
 ##  <a name="moveto"></a>  CDC::MoveTo  
- 현재 위치 하 여 지정 된 지점 이동 *x* 및 *y* (또는 `point`).  
+ 현재 위치 하 여 지정 된 지점 이동 *x* 및 *y* (또는 *가리킨*).  
   
 ```  
 CPoint MoveTo(
@@ -4078,13 +4078,13 @@ CPoint MoveTo(POINT point);
  *y*  
  새 위치로의 논리적 y 좌표를 지정합니다.  
   
- `point`  
+ *지점*  
  새 위치를 지정합니다. 전달할 수 있습니다는 **지점** 구조 또는 `CPoint` 이 매개 변수에 대 한 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
  로 이전 위치의 x 및 y 좌표는 `CPoint` 개체입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CRect::CenterPoint](../../atl-mfc-shared/reference/crect-class.md#centerpoint)합니다.  
   
 ##  <a name="offsetcliprgn"></a>  CDC::OffsetClipRgn  
@@ -4105,7 +4105,7 @@ int OffsetClipRgn(SIZE size);
  *y*  
  논리 단위를 위 또는 아래로 이동의 수를 지정 합니다.  
   
- `size`  
+ *size*  
  오프셋할 크기를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -4132,10 +4132,10 @@ virtual CPoint OffsetViewportOrg(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nWidth`  
+ *nWidth*  
  현재 원본 x-좌표에 추가할 장치 단위 수를 지정 합니다.  
   
- `nHeight`  
+ *nHeight*  
  현재 원본 y-좌표에 추가할 장치 단위 수를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -4151,10 +4151,10 @@ CPoint OffsetWindowOrg(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nWidth`  
+ *nWidth*  
  현재 원본 x-좌표에 추가할 논리 단위 수를 지정 합니다.  
   
- `nHeight`  
+ *nHeight*  
  현재 원본 y-좌표에 추가할 논리 단위 수를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -4174,14 +4174,14 @@ operator HDC() const;
  Windows Api를 직접 호출 하는 핸들을 사용할 수 있습니다.  
   
 ##  <a name="paintrgn"></a>  CDC::PaintRgn  
- 로 지정 된 영역 채우는 `pRgn` 현재 브러시를 사용 하 여 합니다.  
+ 로 지정 된 영역 채우는 *pRgn* 현재 브러시를 사용 하 여 합니다.  
   
 ```  
 BOOL PaintRgn(CRgn* pRgn);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pRgn`  
+ *pRgn*  
  채울 영역을 식별 합니다. 지정된 된 영역에 대 한 좌표 논리 단위로 지정 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -4206,10 +4206,10 @@ BOOL PatBlt(
  *y*  
  패턴을 수신 하는 사각형의 왼쪽 위 모퉁이의 논리적 y 좌표를 지정 합니다.  
   
- `nWidth`  
+ *nWidth*  
  패턴을 수신 하는 사각형의 너비 (논리 단위)에 지정 합니다.  
   
- `nHeight`  
+ *nHeight*  
  패턴을 수신 하는 사각형의 높이 (논리 단위) 단위로 지정 합니다.  
   
  *dwRop*  
@@ -4255,50 +4255,50 @@ BOOL Pie(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `x1`  
+ *x1*  
  (논리 단위)에 경계 사각형의 왼쪽 위 모퉁이의 x 좌표를 지정합니다.  
   
- `y1`  
+ *y1*  
  (논리 단위)에 경계 사각형의 왼쪽 위 모퉁이의 y 좌표를 지정합니다.  
   
- `x2`  
+ *x2*  
  (논리 단위)에 경계 사각형의 오른쪽 아래 모서리의 x 좌표를 지정합니다.  
   
- `y2`  
+ *y2*  
  (논리 단위)에 경계 사각형의 오른쪽 아래 모퉁이의 y 좌표를 지정합니다.  
   
  *x3*  
  원호의 시작점 (논리 단위)에 대 한 x-좌표를 지정합니다. 이 지점 호에 정확 하 게 상태로 남아 있이 필요가 없습니다.  
   
- `y3`  
+ *y3*  
  원호의 시작점 (논리 단위)에 대 한 y-좌표를 지정합니다. 이 지점 호에 정확 하 게 상태로 남아 있이 필요가 없습니다.  
   
- `x4`  
+ *x4*  
  원호의 끝점 (논리 단위)의 x 좌표를 지정합니다. 이 지점 호에 정확 하 게 상태로 남아 있이 필요가 없습니다.  
   
- `y4`  
+ *y4*  
  원호의 끝점 (논리 단위)의 y 좌표를 지정합니다. 이 지점 호에 정확 하 게 상태로 남아 있이 필요가 없습니다.  
   
- `lpRect`  
+ *lpRect*  
  경계 사각형을 지정합니다. 전달할 수 있습니다는 `CRect` 개체나에 대 한 포인터는 `RECT` 이 매개 변수에 대 한 구조입니다.  
   
- `ptStart`  
+ *ptStart*  
  원호의 시작점을 지정합니다. 이 지점 호에 정확 하 게 상태로 남아 있이 필요가 없습니다. 전달할 수 있습니다는 [지점](../../mfc/reference/point-structure1.md) 구조 또는 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 이 매개 변수에 대 한 개체입니다.  
   
- `ptEnd`  
+ *ptEnd*  
  원호의 끝점을 지정 합니다. 이 지점 호에 정확 하 게 상태로 남아 있이 필요가 없습니다. 전달할 수 있습니다는 **지점** 구조 또는 `CPoint` 이 매개 변수에 대 한 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 호의 중심은 지정 된 경계 사각형의 중심 `x1`, `y1`, `x2`, 및 `y2` (또는 `lpRect`). 시작 및 끝 지점을 호 붙습니다 *x3*, `y3`, `x4`, 및 `y4` (또는 `ptStart` 및 `ptEnd`).  
+ 호의 중심은 지정 된 경계 사각형의 중심 *x1*, *y1*, *x2*, 및 *y2* (또는 *lpRect* ). 시작 및 끝 지점을 호 붙습니다 *x3*, *y3*, *x4*, 및 *y4* (또는 *ptStart*및 *ptEnd*).  
   
- 호 시계 반대 방향으로 이동 하 여 선택한 펜으로 그려집니다. 원호의 센터로 각 끝점에서 두 개의 추가 선이 그려집니다. 원형 영역의 현재 브러시도 채워집니다. 경우 *x3* equals `x4` 및 `y3` equals `y4`, 결과 지점에 타원의 가운데에서 한 줄으로 타원 ( *x3*, `y3`) 또는 ( `x4`, `y4`).  
+ 호 시계 반대 방향으로 이동 하 여 선택한 펜으로 그려집니다. 원호의 센터로 각 끝점에서 두 개의 추가 선이 그려집니다. 원형 영역의 현재 브러시도 채워집니다. 경우 *x3* equals *x4* 및 *y3* equals *y4*, 결과 타원 ( 지점으로는타원의가운데에서한줄을*x3*, *y3*) 또는 ( *x4*, *y4*).  
   
- 이 함수에 의해 그려진 그림 최대 확장 되지만 오른쪽 아래 좌표를 포함 하지 않습니다. 따라서 그림의 높이 `y2`  -  `y1` 그림의 너비가 `x2`  -  `x1`합니다. 경계 사각형의 높이 너비는 2 단위 및 보다 작은 32, 767 단위 보다 커야 합니다.  
+ 이 함수에 의해 그려진 그림 최대 확장 되지만 오른쪽 아래 좌표를 포함 하지 않습니다. 따라서 그림의 높이 *y2* - *y1* 그림의 너비가 *x2* - *x1*합니다. 경계 사각형의 높이 너비는 2 단위 및 보다 작은 32, 767 단위 보다 커야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#37](../../mfc/codesnippet/cpp/cdc-class_9.cpp)]  
   
 ##  <a name="playmetafile"></a>  CDC::PlayMetaFile  
@@ -4320,7 +4320,7 @@ BOOL PlayMetaFile(
  *hEnhMetaFile*  
  확장된 메타 파일을 식별합니다.  
   
- `lpBounds`  
+ *lpBounds*  
  가리키는 `RECT` 구조 또는 `CRect` 그림을 표시 하는 데 사용 하는 경계 사각형의 좌표를 포함 하는 개체입니다. 좌표 논리 단위로 지정 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -4329,7 +4329,7 @@ BOOL PlayMetaFile(
 ### <a name="remarks"></a>설명  
  메타 파일에 여러 번 재생할 수 있습니다.  
   
- 두 번째 버전의 `PlayMetaFile` 지정 된 확장 형식 메타 파일에 저장 된 그림을 표시 합니다. 응용 프로그램의 두 번째 버전을 호출 하는 경우 `PlayMetaFile`, Windows를 사용 하 여 그림 프레임 확장 메타 파일 헤더에에서 가리키는 사각형에 그림을 매핑하는 `lpBounds` 매개 변수입니다. (이 그림 전단 되었거나 전역 변환을 호출 하기 전에 출력 장치에서 설정 하 여 회전 `PlayMetaFile`.) 사각형의 가장자리를 따라 포인트는 그림에 포함 됩니다. 확장 메타 파일 그림 확장된 메타 파일을 재생 하기 전에 출력 장치에서 클립 영역을 정의 하 여 잘릴 수 있습니다.  
+ 두 번째 버전의 `PlayMetaFile` 지정 된 확장 형식 메타 파일에 저장 된 그림을 표시 합니다. 응용 프로그램의 두 번째 버전을 호출 하는 경우 `PlayMetaFile`, Windows를 사용 하 여 그림 프레임 확장 메타 파일 헤더에 가리키는 사각형에 그림을 매핑하는 *lpBounds* 매개 변수입니다. (이 그림 전단 되었거나 전역 변환을 호출 하기 전에 출력 장치에서 설정 하 여 회전 `PlayMetaFile`.) 사각형의 가장자리를 따라 포인트는 그림에 포함 됩니다. 확장 메타 파일 그림 확장된 메타 파일을 재생 하기 전에 출력 장치에서 클립 영역을 정의 하 여 잘릴 수 있습니다.  
   
  응용 프로그램의 두 번째 버전을 호출 하기 전에 출력 장치에 색상표를 설정 하 여 일관 된 색을 얻을 수 확장된 메타 파일에 선택적 색상표 있으면 `PlayMetaFile`합니다. 선택적 팔레트를 검색 하려면 사용 된 **GetEnhMetaFilePaletteEntries** Windows 함수입니다. 확장된 메타 파일의 두 번째 버전을 호출 하 여 새로 만든된 확장된 메타 파일에 포함할 수 있는 `PlayMetaFile` 확장 메타 파일을 새 장치 컨텍스트로 소스 확장 메타 파일을 재생 하 고 있습니다.  
   
@@ -4352,31 +4352,31 @@ BOOL PlgBlt(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPoint`  
+ *lpPoint*  
  대상 평행 사변형의 세 모퉁이 식별 하는 논리에 세 개의 점 배열 가리킵니다. 소스 사각형의 왼쪽 위 모서리가이 배열,이 배열에 있는 두 번째 요소를 오른쪽 위 모서리 및 세 번째 데이터 요소를 왼쪽 아래 모서리에서 첫 번째 요소와 매핑됩니다. 소스 사각형의 오른쪽 아래 모퉁이 평행 사변형에 암시적 네 번째 요소와 매핑됩니다.  
   
- `pSrcDC`  
+ *pSrcDC*  
  소스 장치 컨텍스트에 식별합니다.  
   
- `xSrc`  
+ *xSrc*  
  논리 단위로 소스 사각형의 왼쪽 위 모퉁이의 x 좌표를 지정합니다.  
   
- `ySrc`  
+ *ySrc*  
  논리 단위로 소스 사각형의 왼쪽 위 모퉁이의 y 좌표를 지정합니다.  
   
- `nWidth`  
+ *nWidth*  
  소스 사각형의 논리 단위에서는 너비를 지정합니다.  
   
- `nHeight`  
+ *nHeight*  
  소스 사각형의 논리 단위에서 높이 지정합니다.  
   
- `maskBitmap`  
+ *maskBitmap*  
  소스 사각형의 색을 마스크 하는 데 사용 되는 선택적 단색 비트맵을 식별 합니다.  
   
- `xMask`  
+ *xMask*  
  흑백 비트맵의 왼쪽 위 모서리의 x 좌표를 지정합니다.  
   
- `yMask`  
+ *yMask*  
  흑백 비트맵의 왼쪽 위 모퉁이의 y 좌표를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -4407,17 +4407,17 @@ BOOL PolyBezier(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPoints`  
+ *lpPoints*  
  배열을 가리키는 [지점](../../mfc/reference/point-structure1.md) 는 spline(s) 세그먼트의 및 끝점을 포함 하는 데이터 구조입니다.  
   
- `nCount`  
- 에 있는 점의 개수를 지정 된 `lpPoints` 배열입니다. 이 값에는 두 개의 제어점, 끝점 및 초기 스플라인 각 Bzier 스플라인 필요 하기 때문에 필요한 추가 시작 지점을 하나 네 번 이상 스플라인을 그릴 수 여야 합니다.  
+ *nCount*  
+ 에 있는 점의 개수를 지정 된 *lpPoints* 배열입니다. 이 값에는 두 개의 제어점, 끝점 및 초기 스플라인 각 Bzier 스플라인 필요 하기 때문에 필요한 추가 시작 지점을 하나 네 번 이상 스플라인을 그릴 수 여야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 함수를 사용 하 여 끝점으로 지정 된 제어점 입방 형 Bzier 스플라인을 그립니다는 `lpPoints` 매개 변수입니다. 첫 번째 스플라인을 그립니다 첫 번째 요소에서 네 번째 지점을 제어 지점으로 두 번째 및 세 번째 요소를 사용 하 여 합니다. 시퀀스의 각 후속 스플라인 필요한 정확히 세 개 이상의 점: 이전 스플라인의 끝점의 시작 지점으로 사용 됩니다, 시퀀스에서 다음 두 요소가 제어 지점 및 세 번째는 끝점입니다.  
+ 이 함수를 사용 하 여 끝점으로 지정 된 제어점 입방 형 Bzier 스플라인을 그립니다는 *lpPoints* 매개 변수입니다. 첫 번째 스플라인을 그립니다 첫 번째 요소에서 네 번째 지점을 제어 지점으로 두 번째 및 세 번째 요소를 사용 하 여 합니다. 시퀀스의 각 후속 스플라인 필요한 정확히 세 개 이상의 점: 이전 스플라인의 끝점의 시작 지점으로 사용 됩니다, 시퀀스에서 다음 두 요소가 제어 지점 및 세 번째는 끝점입니다.  
   
  현재 위치 사용 아니고에 의해 업데이트는 `PolyBezier` 함수입니다. 그림 채워지지 않습니다. 이 함수는 현재 펜을 사용 하 여 선을 그립니다.  
   
@@ -4431,19 +4431,19 @@ BOOL PolyBezierTo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPoints`  
+ *lpPoints*  
  배열을 가리키는 [지점](../../mfc/reference/point-structure1.md) 끝점 및 제어를 포함 하는 데이터 구조를 가리킵니다.  
   
- `nCount`  
- 에 있는 점의 개수를 지정 된 `lpPoints` 배열입니다. 이 값 두 개의 제어점과 끝점 각 Bzier 스플라인 필요 하기 때문에 3 번을 그릴 수 있도록 스플라인 수 여야 합니다.  
+ *nCount*  
+ 에 있는 점의 개수를 지정 된 *lpPoints* 배열입니다. 이 값 두 개의 제어점과 끝점 각 Bzier 스플라인 필요 하기 때문에 3 번을 그릴 수 있도록 스플라인 수 여야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 함수로 지정 된 제어점을 사용 하 여 입방 형 Bzier 스플라인을 그립니다는 `lpPoints` 매개 변수입니다. 첫 번째 스플라인을 그립니다 현재 위치에서 세 번째 점과 제어 점으로 처음 두 개의 점을 사용 하 여 합니다. 각 후속 스플라인 함수 정확히 세 개의 지점을 더 이상 필요 하 고 대 한 시작 점으로 이전 스플라인의 끝점을 사용 합니다. `PolyBezierTo` 마지막 Bzier 스플라인의 끝점으로 현재 위치를 이동 합니다. 그림 채워지지 않습니다. 이 함수는 현재 펜을 사용 하 여 선을 그립니다.  
+ 이 함수로 지정 된 제어점을 사용 하 여 입방 형 Bzier 스플라인을 그립니다는 *lpPoints* 매개 변수입니다. 첫 번째 스플라인을 그립니다 현재 위치에서 세 번째 점과 제어 점으로 처음 두 개의 점을 사용 하 여 합니다. 각 후속 스플라인 함수 정확히 세 개의 지점을 더 이상 필요 하 고 대 한 시작 점으로 이전 스플라인의 끝점을 사용 합니다. `PolyBezierTo` 마지막 Bzier 스플라인의 끝점으로 현재 위치를 이동 합니다. 그림 채워지지 않습니다. 이 함수는 현재 펜을 사용 하 여 선을 그립니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [cdc:: beginpath](#beginpath)합니다.  
   
 ##  <a name="polydraw"></a>  CDC::PolyDraw  
@@ -4457,11 +4457,11 @@ BOOL PolyDraw(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPoints`  
+ *lpPoints*  
  배열을 가리키는 [지점](../../mfc/reference/point-structure1.md) 각각에 대 한 끝점을 포함 하는 데이터 구조 선 세그먼트와 끝점 및 각 Bzier 스플라인에 대 한 지점을 제어 합니다.  
   
- `lpTypes`  
- 요소에서 각 방법을 지정 하는 배열을 가리킵니다는 `lpPoints` 배열이 사용 됩니다. 값은 다음 중 하나일 수 있습니다.  
+ *lpTypes*  
+ 요소에서 각 방법을 지정 하는 배열을 가리킵니다는 *lpPoints* 배열이 사용 됩니다. 값은 다음 중 하나일 수 있습니다.  
   
 - **PT_MOVETO** 이 지점에 연결 되지 않은 그림 시작 되도록 지정 합니다. 새 현재 위치를 나타내는 포인터가 됩니다.  
   
@@ -4475,18 +4475,18 @@ BOOL PolyDraw(
   
 - **PT_CLOSEFIGURE** 그림이 자동으로 닫힌 지정은 **PT_LINETO** 또는 **PT_BEZIERTO** 입력이 지점에서 수행 됩니다. 가장 최근이 지점에서 선이 그려집니다 **PT_MOVETO** 또는 `MoveTo` 가리킵니다.  
   
-     이 플래그는 함께 **PT_LINETO** 또는 한 줄에 대 한 형식에서 **PT_BEZIERTO** Bzier 스플라인에 대 한 비트를 사용 하 여 끝점의 형식을 `OR` 연산자. 현재 위치는 닫는 줄의 끝 지점으로 설정 됩니다.  
+     이 플래그는 함께 **PT_LINETO** 또는 한 줄에 대 한 형식에서 **PT_BEZIERTO** Bzier 스플라인에 대 한 비트를 사용 하 여 끝점의 형식을 **OR** 연산자. 현재 위치는 닫는 줄의 끝 지점으로 설정 됩니다.  
   
- `nCount`  
- 요소의 총 수를 지정 된 `lpPoints` 배열의 바이트 수와 동일는 `lpTypes` 배열 합니다.  
+ *nCount*  
+ 요소의 총 수를 지정 된 *lpPoints* 배열에서 바이트 수와 동일는 *lpTypes* 배열 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 함수는 연속 해 서 호출할 대신 비연속 수치를 그리는 데 사용할 수 있습니다 `CDC::MoveTo`, `CDC::LineTo`, 및 `CDC::PolyBezierTo` 멤버 함수입니다. 선 및 곡선 스플라인 현재 펜을 사용 하 여 그려지고 수치를 채우지 않습니다. 호출 하 여 시작 하는 활성 경로 인지는 `CDC::BeginPath` 멤버 함수를 `PolyDraw` 경로에 추가 합니다. 에 포함 된 요소는 `lpPoints` 배열 및 `lpTypes` 각 지점의 일부 인지 여부를 나타내는 `CDC::MoveTo`, `CDC::LineTo`, 또는 **CDC::BezierTo** 작업 합니다. 폐쇄형 도형도 가능 합니다. 이 함수는 현재 위치를 업데이트 합니다.  
+ 이 함수는 연속 해 서 호출할 대신 비연속 수치를 그리는 데 사용할 수 있습니다 `CDC::MoveTo`, `CDC::LineTo`, 및 `CDC::PolyBezierTo` 멤버 함수입니다. 선 및 곡선 스플라인 현재 펜을 사용 하 여 그려지고 수치를 채우지 않습니다. 호출 하 여 시작 하는 활성 경로 인지는 `CDC::BeginPath` 멤버 함수를 `PolyDraw` 경로에 추가 합니다. 에 포함 된 요소는 *lpPoints* 배열 및 *lpTypes* 각 지점의 일부 인지 여부를 나타내는 `CDC::MoveTo`, `CDC::LineTo`, 또는 **CDC::BezierTo** 작업입니다. 폐쇄형 도형도 가능 합니다. 이 함수는 현재 위치를 업데이트 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [cdc:: beginpath](#beginpath)합니다.  
   
 ##  <a name="polygon"></a>  CDC::Polygon  
@@ -4499,10 +4499,10 @@ BOOL Polygon(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPoints`  
+ *lpPoints*  
  다각형의 꼭지점을 지정 하는 요소의 배열 가리킵니다. 배열의 각 요소는 한 **가리킨** 구조 또는 `CPoint` 개체입니다.  
   
- `nCount`  
+ *nCount*  
  배열에 꼭 짓 점의 수를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -4513,11 +4513,11 @@ BOOL Polygon(
   
  현재 다각형 채우기 모드를 검색 하거나 사용 하 여 설정할 수는 `GetPolyFillMode` 및 `SetPolyFillMode` 멤버 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#38](../../mfc/codesnippet/cpp/cdc-class_10.cpp)]  
   
 ##  <a name="polyline"></a>  CDC::Polyline  
- 지정 된 점을 연결 하는 선 세그먼트의 집합을 그리는 `lpPoints`합니다.  
+ 로 지정 된 점을 연결 하는 선 세그먼트의 집합을 그리는 *lpPoints*합니다.  
   
 ```  
 BOOL Polyline(
@@ -4526,10 +4526,10 @@ BOOL Polyline(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPoints`  
+ *lpPoints*  
  배열을 가리키는 **지점** 구조 또는 `CPoint` 개체를 연결 합니다.  
   
- `nCount`  
+ *nCount*  
  배열의 점 개수를 지정합니다. 이 값은 2 개 이상 이어야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -4550,17 +4550,17 @@ BOOL PolylineTo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPoints`  
+ *lpPoints*  
  배열을 가리키는 [지점](../../mfc/reference/point-structure1.md) 줄의 꼭 짓 점을 포함 하는 데이터 구조입니다.  
   
- `nCount`  
+ *nCount*  
  배열의 점 개수를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 지정 된 첫 번째 지점 현재 위치에서 선이 그려집니다는 `lpPoints` 현재 펜을 사용 하 여 매개 변수입니다. 각 추가 행에 대 한 함수에서에서 그립니다 앞 줄의 끝 지점으로 지정 된 다음 점으로 `lpPoints`합니다. `PolylineTo` 현재 위치는 마지막 줄의 끝 지점을 이동합니다. 이 함수에 의해 그려진 선 세그먼트 형식 폐쇄형된 도형으로 그림 채워지지 않습니다.  
+ 지정 된 첫 번째 지점 현재 위치에서 선이 그려집니다는 *lpPoints* 현재 펜을 사용 하 여 매개 변수입니다. 각 추가 행에 대 한 함수에서에서 그립니다 앞 줄의 끝 지점으로 지정 된 다음 점으로 *lpPoints*합니다. `PolylineTo` 현재 위치는 마지막 줄의 끝 지점을 이동합니다. 이 함수에 의해 그려진 선 세그먼트 형식 폐쇄형된 도형으로 그림 채워지지 않습니다.  
   
 ##  <a name="polypolygon"></a>  CDC::PolyPolygon  
  현재 다각형 채우기 모드를 사용 하 여 채워진 두 개 이상의 다각형을 만듭니다.  
@@ -4573,14 +4573,14 @@ BOOL PolyPolygon(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPoints`  
+ *lpPoints*  
  배열을 가리키는 **지점** 구조 또는 `CPoint` 다각형의 꼭 짓 점을 정의 하는 개체입니다.  
   
- `lpPolyCounts`  
- 정수 배열 가리킵니다, 각각의 수를 지정 포인트의 다각형 중 하나는 `lpPoints` 배열입니다.  
+ *lpPolyCounts*  
+ 정수 배열 가리킵니다, 각각의 수를 지정 포인트의 다각형 중 하나는 *lpPoints* 배열입니다.  
   
- `nCount`  
- 항목 수는 `lpPolyCounts` 배열입니다. 이 숫자를 그릴 다각형의 수를 지정 합니다. 이 값은 2 개 이상 이어야 합니다.  
+ *nCount*  
+ 항목 수는 *lpPolyCounts* 배열입니다. 이 숫자를 그릴 다각형의 수를 지정 합니다. 이 값은 2 개 이상 이어야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
@@ -4588,9 +4588,9 @@ BOOL PolyPolygon(
 ### <a name="remarks"></a>설명  
  다각형 비연속 되거나 겹치는 수 있습니다.  
   
- 각 다각형에 대 한 호출에 지정 된는 `PolyPolygon` 함수를 종료 해야 합니다. 만든 다각형 달리는 **다각형** 멤버 함수에서 만든 다각형 `PolyPolygon` 자동으로 닫히지 않습니다.  
+ 각 다각형에 대 한 호출에 지정 된는 `PolyPolygon` 함수를 종료 해야 합니다. 만든 다각형 달리는 `Polygon` 멤버 함수에서 만든 다각형 `PolyPolygon` 자동으로 닫히지 않습니다.  
   
- 이 함수는 두 개 이상의 다각형을 만듭니다. 다각형을 만들려면 응용 프로그램을 사용할지는 **다각형** 멤버 함수입니다.  
+ 이 함수는 두 개 이상의 다각형을 만듭니다. 다각형을 만들려면 응용 프로그램을 사용할지는 `Polygon` 멤버 함수입니다.  
   
  현재 다각형 채우기 모드를 검색 하거나 사용 하 여 설정할 수는 `GetPolyFillMode` 및 `SetPolyFillMode` 멤버 함수입니다.  
   
@@ -4605,14 +4605,14 @@ BOOL PolyPolyline(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPoints`  
+ *lpPoints*  
  다중선의 꼭 짓 점을 포함 하는 구조체의 배열 가리킵니다. 다중선은 연속적으로 지정 됩니다.  
   
- `lpPolyPoints`  
- 배열에 있는 점의 개수를 지정 하는 변수를 가리키는 `lpPoints` 해당 다각형에 대 한 배열입니다. 각 항목은 2 보다 크거나 이어야 합니다.  
+ *lpPolyPoints*  
+ 배열에 있는 점의 개수를 지정 하는 변수를 가리키는 *lpPoints* 해당 다각형에 대 한 배열입니다. 각 항목은 2 보다 크거나 이어야 합니다.  
   
- `nCount`  
- 에 수의 총 수는 `lpPolyPoints` 배열입니다.  
+ *nCount*  
+ 에 수의 총 수를 지정 된 *lpPolyPoints* 배열입니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
@@ -4638,7 +4638,7 @@ BOOL PtVisible(POINT point) const;
  *y*  
  포인트의 논리적 y 좌표를 지정합니다.  
   
- `point`  
+ *지점*  
  체크 인 되는 논리적 좌표를 지정 합니다. 전달할 수 있습니다는 **지점** 구조 또는 `CPoint` 이 매개 변수에 대 한 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -4685,19 +4685,19 @@ BOOL Rectangle(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `x1`  
+ *x1*  
  (논리 단위)에 사각형의 왼쪽 위 모퉁이의 x 좌표를 지정합니다.  
   
- `y1`  
+ *y1*  
  (논리 단위)에 사각형의 왼쪽 위 모퉁이의 y 좌표를 지정합니다.  
   
- `x2`  
+ *x2*  
  (논리 단위)에 사각형의 오른쪽 아래 모서리의 x 좌표를 지정합니다.  
   
- `y2`  
+ *y2*  
  (논리 단위)에 사각형의 오른쪽 아래 모퉁이의 y 좌표를 지정합니다.  
   
- `lpRect`  
+ *lpRect*  
  논리 단위에 사각형을 지정합니다. 전달할 수 있습니다는 `CRect` 개체나에 대 한 포인터는 `RECT` 이 매개 변수에 대 한 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -4706,9 +4706,9 @@ BOOL Rectangle(LPCRECT lpRect);
 ### <a name="remarks"></a>설명  
  사각형의 내부 현재 브러시를 사용 하 여 채워집니다.  
   
- 사각형까지 확장 되지만 오른쪽 아래 좌표 포함 되지 않습니다. 즉, 사각형의 높이 `y2`  -  `y1` 사각형의 너비 이며 `x2`  -  `x1`합니다. 사각형의 높이 너비는 2 단위 및 보다 작은 32, 767 단위 보다 커야 합니다.  
+ 사각형까지 확장 되지만 오른쪽 아래 좌표 포함 되지 않습니다. 즉, 사각형의 높이 *y2* - *y1* 사각형의 너비 이며 *x2* - *x1*. 사각형의 높이 너비는 2 단위 및 보다 작은 32, 767 단위 보다 커야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#39](../../mfc/codesnippet/cpp/cdc-class_11.cpp)]  
   
 ##  <a name="rectvisible"></a>  CDC::RectVisible  
@@ -4719,7 +4719,7 @@ virtual BOOL RectVisible(LPCRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
+ *lpRect*  
  가리키는 `RECT` 구조 또는 `CRect` 지정된 된 사각형의 논리적 좌표가 포함 된 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -4743,7 +4743,7 @@ virtual void ReleaseOutputDC();
 ```  
   
 ### <a name="remarks"></a>설명  
- 출력 장치 컨텍스트가에 연결 된 경우이 멤버 함수를 호출할 수 없습니다는 `CDC` 개체입니다. 사용 하 여는 **분리** 출력 장치 컨텍스트를 분리 하는 멤버 함수입니다.  
+ 출력 장치 컨텍스트가에 연결 된 경우이 멤버 함수를 호출할 수 없습니다는 `CDC` 개체입니다. 사용 된 `Detach` 출력 장치 컨텍스트를 분리 하는 멤버 함수입니다.  
   
 ##  <a name="resetdc"></a>  CDC::ResetDC  
  로 래핑된 장치 컨텍스트를 업데이트 하려면이 멤버 함수 호출의 `CDC` 개체입니다.  
@@ -4769,15 +4769,15 @@ BOOL ResetDC(const DEVMODE* lpDevMode);
  이 멤버 함수를 호출 하기 전에 장치 컨텍스트로 선택 (스톡 개체) 이외의 모든 개체 아웃 선택한 확인 해야 합니다.  
   
 ##  <a name="restoredc"></a>  CDC::RestoreDC  
- 로 식별 되는 이전 상태로 복원 하는 장치 컨텍스트 `nSavedDC`합니다.  
+ 장치 컨텍스트를 식별 하 여 이전 상태로 복원 *nSavedDC*합니다.  
   
 ```  
 virtual BOOL RestoreDC(int nSavedDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nSavedDC`  
- 장치 컨텍스트를 복원할 수를 지정 합니다. 이전에서 반환 된 값이 될 수 `SaveDC` 함수 호출 합니다. 경우 `nSavedDC` 은-1, 가장 최근에 저장 장치 컨텍스트가 복원 됩니다.  
+ *nSavedDC*  
+ 장치 컨텍스트를 복원할 수를 지정 합니다. 이전에서 반환 된 값이 될 수 `SaveDC` 함수 호출 합니다. 경우 *nSavedDC* 은-1, 가장 최근에 저장 장치 컨텍스트가 복원 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  지정된 된 컨텍스트 복원 되었습니다. 0이 아닌 그렇지 않으면 0입니다.  
@@ -4785,7 +4785,7 @@ virtual BOOL RestoreDC(int nSavedDC);
 ### <a name="remarks"></a>설명  
  `RestoreDC` 장치 컨텍스트 상태 정보에 대 한 이전 호출에서 만든 스택에서 팝 하 여 복원 된 `SaveDC` 멤버 함수입니다.  
   
- 스택 여러 장치 컨텍스트에 대 한 상태 정보를 포함할 수 있습니다. 변수로 지정 된 컨텍스트 `nSavedDC` 스택의 맨 위에 있는 않습니다 `RestoreDC` 로 지정 된 디바이스 컨텍스트 간의 모든 상태 정보를 삭제 `nSavedDC` 및 스택 맨 합니다. 삭제 된 정보는 손실 됩니다.  
+ 스택 여러 장치 컨텍스트에 대 한 상태 정보를 포함할 수 있습니다. 변수로 지정 된 컨텍스트 *nSavedDC* 스택의 맨 위에 있는 않습니다 `RestoreDC` 로 지정 된 디바이스 컨텍스트 간의 모든 상태 정보를 삭제 *nSavedDC* 및 스택 맨 합니다. 삭제 된 정보는 손실 됩니다.  
   
 ##  <a name="roundrect"></a>  CDC::RoundRect  
  현재 펜을 사용 하 여 모서리가 둥근 사각형을 그립니다.  
@@ -4806,29 +4806,29 @@ BOOL RoundRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `x1`  
+ *x1*  
  (논리 단위)에 사각형의 왼쪽 위 모퉁이의 x 좌표를 지정합니다.  
   
- `y1`  
+ *y1*  
  (논리 단위)에 사각형의 왼쪽 위 모퉁이의 y 좌표를 지정합니다.  
   
- `x2`  
+ *x2*  
  (논리 단위)에 사각형의 오른쪽 아래 모서리의 x 좌표를 지정합니다.  
   
- `y2`  
+ *y2*  
  (논리 단위)에 사각형의 오른쪽 아래 모퉁이의 y 좌표를 지정합니다.  
   
  *x3*  
  (논리 단위)에서 둥근된 모퉁이 그리는 데 사용 되는 타원의 너비를 지정 합니다.  
   
- `y3`  
+ *y3*  
  (논리 단위)에서 둥근된 모퉁이 그리는 데 사용 되는 타원의 높이 지정 합니다.  
   
- `lpRect`  
+ *lpRect*  
  논리 단위에서 경계 사각형을 지정합니다. 전달할 수 있습니다는 `CRect` 개체나에 대 한 포인터는 `RECT` 이 매개 변수에 대 한 구조입니다.  
   
- `point`  
- x 좌표 `point` (논리 단위)에서 둥근된 모퉁이 그리는 데 타원의 너비를 지정 합니다. y-좌표 `point` (논리 단위)에서 둥근된 모퉁이 그리는 데 타원의 높이 지정 합니다. 전달할 수 있습니다는 **지점** 구조 또는 `CPoint` 이 매개 변수에 대 한 개체입니다.  
+ *지점*  
+ x 좌표 *가리킨* (논리 단위)에서 둥근된 모퉁이 그리는 데 타원의 너비를 지정 합니다. y-좌표 *가리킨* (논리 단위)에서 둥근된 모퉁이 그리는 데 타원의 높이 지정 합니다. 전달할 수 있습니다는 **지점** 구조 또는 `CPoint` 이 매개 변수에 대 한 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
@@ -4836,9 +4836,9 @@ BOOL RoundRect(
 ### <a name="remarks"></a>설명  
  사각형의 내부 현재 브러시를 사용 하 여 채워집니다.  
   
- 이 함수는 그림 최대 확장 되지만 오른쪽 아래 좌표를 포함 하지 않습니다. 따라서 그림의 높이 `y2`  -  `y1` 그림의 너비가 `x2`  -  `x1`합니다. 경계 사각형의 너비와 높이 2 단위 및 보다 작은 32, 767 단위 보다 커야 합니다.  
+ 이 함수는 그림 최대 확장 되지만 오른쪽 아래 좌표를 포함 하지 않습니다. 따라서 그림의 높이 *y2* - *y1* 그림의 너비가 *x2* - *x1*합니다. 경계 사각형의 너비와 높이 2 단위 및 보다 작은 32, 767 단위 보다 커야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#40](../../mfc/codesnippet/cpp/cdc-class_12.cpp)]  
   
 ##  <a name="savedc"></a>  CDC::SaveDC  
@@ -4868,17 +4868,17 @@ virtual CSize ScaleViewportExt(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `xNum`  
+ *xNum*  
  현재 x-익스텐트를 곱하는 지정 합니다.  
   
- `xDenom`  
- 값으로 현재 x-익스텐트를 곱한 결과를 나눌 간격을 지정 된 `xNum` 매개 변수입니다.  
+ *xDenom*  
+ 값으로 현재 x-익스텐트를 곱한 결과를 나눌 간격을 지정 된 *xNum* 매개 변수입니다.  
   
- `yNum`  
+ *yNum*  
  현재 범위를 곱하는 지정 합니다.  
   
- `yDenom`  
- 현재 범위 값을 곱한 결과 나눌 간격을 지정 된 `yNum` 매개 변수입니다.  
+ *yDenom*  
+ 현재 범위 값을 곱한 결과 나눌 간격을 지정 된 *yNum* 매개 변수입니다.  
   
 ### <a name="return-value"></a>반환 값  
  로 장치 단위로 이전 뷰포트 익스텐트는 `CSize` 개체입니다.  
@@ -4904,17 +4904,17 @@ virtual CSize ScaleWindowExt(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `xNum`  
+ *xNum*  
  현재 x-익스텐트를 곱하는 지정 합니다.  
   
- `xDenom`  
- 값으로 현재 x-익스텐트를 곱한 결과를 나눌 간격을 지정 된 `xNum` 매개 변수입니다.  
+ *xDenom*  
+ 값으로 현재 x-익스텐트를 곱한 결과를 나눌 간격을 지정 된 *xNum* 매개 변수입니다.  
   
- `yNum`  
+ *yNum*  
  현재 범위를 곱하는 지정 합니다.  
   
- `yDenom`  
- 현재 범위 값을 곱한 결과 나눌 간격을 지정 된 `yNum` 매개 변수입니다.  
+ *yDenom*  
+ 현재 범위 값을 곱한 결과 나눌 간격을 지정 된 *yNum* 매개 변수입니다.  
   
 ### <a name="return-value"></a>반환 값  
  이전 창 범위 (논리 단위)로 `CSize` 개체입니다.  
@@ -4942,29 +4942,29 @@ BOOL ScrollDC(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dx`  
+ *dx*  
  가로 스크롤 단위 수를 지정합니다.  
   
  *dy*  
  세로 스크롤 단위 수를 지정합니다.  
   
- `lpRectScroll`  
+ *lpRectScroll*  
  가리키는 `RECT` 구조 또는 `CRect` 스크롤 사각형의 좌표를 포함 하는 개체입니다.  
   
- `lpRectClip`  
- 가리키는 `RECT` 구조 또는 `CRect` 클리핑 사각형의 좌표를 포함 하는 개체입니다. 이 사각형은 원본에서 가리키는 하나 보다 작은 경우 `lpRectScroll`, 스크롤 작은 사각형에만 발생 합니다.  
+ *lpRectClip*  
+ 가리키는 `RECT` 구조 또는 `CRect` 클리핑 사각형의 좌표를 포함 하는 개체입니다. 이 사각형은 원본에서 가리키는 하나 보다 작은 경우 *lpRectScroll*, 스크롤 작은 사각형에만 발생 합니다.  
   
- `pRgnUpdate`  
+ *pRgnUpdate*  
  스크롤 하는 프로세스에 의해 처리 되지 않는 영역을 식별 합니다. `ScrollDC` 반드시 사각형은 하지 않으면이 영역을 정의 하는 함수입니다.  
   
- `lpRectUpdate`  
+ *lpRectUpdate*  
  가리키는 `RECT` 구조 또는 `CRect` 스크롤 업데이트 영역을 제한 하는 사각형의 좌표를 받는 개체입니다. 다시 표시 해야 하는 가장 큰 사각형 영역입니다. 구조 또는 함수에서 반환 하는 개체의 값은 지정 된 장치 컨텍스트에 대 한 매핑 모드에 관계 없이 클라이언트 좌표입니다.  
   
 ### <a name="return-value"></a>반환 값  
  스크롤 실행 하면 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `lpRectUpdate` 은 **NULL**, Windows 업데이트 사각형을 계산 하지 않습니다. 두 `pRgnUpdate` 및 `lpRectUpdate` 는 **NULL**, Windows 업데이트 영역을 계산 하지 않습니다. 경우 `pRgnUpdate` 않습니다 **NULL**, Windows 스크롤 프로세스에 의해 처리 되지 않는 지역에 대 한 유효한 포인터 있음을 가정 (정의한는 `ScrollDC` 멤버 함수). 업데이트 영역에 반환 된 `lpRectUpdate` 에 전달할 수 `CWnd::InvalidateRgn` 필요한 경우.  
+ 경우 *lpRectUpdate* 은 **NULL**, Windows 업데이트 사각형을 계산 하지 않습니다. 두 *pRgnUpdate* 및 *lpRectUpdate* 는 **NULL**, Windows 업데이트 영역을 계산 하지 않습니다. 경우 *pRgnUpdate* 않습니다 **NULL**, Windows 스크롤 프로세스에 의해 처리 되지 않는 지역에 대 한 유효한 포인터 있음을 가정 (정의한는 `ScrollDC` 멤버 함수). 업데이트 영역에 반환 된 *lpRectUpdate* 에 전달할 수 `CWnd::InvalidateRgn` 필요한 경우.  
   
  응용 프로그램을 사용할지는 `ScrollWindow` 클래스의 멤버 함수 `CWnd` 창의 전체 클라이언트 영역을 스크롤 하는 데 필요한 경우. 그렇지 않은 경우 사용 해야 `ScrollDC`합니다.  
   
@@ -4976,7 +4976,7 @@ BOOL SelectClipPath(int nMode);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nMode`  
+ *nMode*  
  경로 사용 하는 방법을 지정 합니다. 다음 값이 허용 됩니다.  
   
 - **RGN_AND** 새 클립 영역 교차 (겹치는 영역) 현재 클립 영역과 현재 경로 포함 합니다.  
@@ -5008,25 +5008,25 @@ int SelectClipRgn(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pRgn`  
+ *pRgn*  
  선택 영역을 식별 합니다.  
   
 -   이 값이이 함수의 첫 번째 버전에 대 한 **NULL**, 전체 클라이언트 영역을 선택 하 고 여전히 창에 출력이 잘립니다.  
   
 -   이 함수의 두 번째 버전에 대 한이 핸들 수 **NULL** 경우에만 **RGN_COPY** 모드를 지정 합니다.  
   
- `nMode`  
+ *nMode*  
  수행할 작업을 지정 합니다. 다음 값 중 하나 여야 합니다.  
   
-- **RGN_AND** 새 클립 영역을 현재 클립 영역과로 식별 되는 영역 겹치는 영역을 조합 `pRgn`합니다.  
+- **RGN_AND** 새 클립 영역을 현재 클립 영역과로 식별 되는 영역 겹치는 영역을 조합 *pRgn*합니다.  
   
-- **RGN_COPY** 새 클립 영역에서 확인 된 영역의 복사본이 `pRgn`합니다. 이것은 기능 하려면 첫 버전의 동일한 `SelectClipRgn`합니다. 지역으로 식별 하는 경우 `pRgn` 은 **NULL**, 새 클립 영역에는 기본 클립 영역 (null 지역) 됩니다.  
+- **RGN_COPY** 새 클립 영역으로 확인 된 영역의 복사본이 *pRgn*합니다. 이것은 기능 하려면 첫 버전의 동일한 `SelectClipRgn`합니다. 지역으로 식별 하는 경우 *pRgn* 은 **NULL**, 새 클립 영역에는 기본 클립 영역 (null 지역) 됩니다.  
   
-- **RGN_DIFF** 로 식별 되는 영역에서 제외 영역의와 현재 클립 영역의 영역을 조합 하는 새 클립 영역 `pRgn`합니다.  
+- **RGN_DIFF** 로 식별 되는 영역에서 제외 영역의와 현재 클립 영역의 영역을 조합 하는 새 클립 영역 *pRgn*합니다.  
   
-- **RGN_OR** 새 클립 영역을 현재 클립 영역과로 식별 되는 영역 결합 `pRgn`합니다.  
+- **RGN_OR** 새 클립 영역을 현재 클립 영역과로 식별 되는 영역 결합 *pRgn*합니다.  
   
-- **RGN_XOR** 새 클립 영역을 현재 클립 영역과로 식별 되는 영역 결합 `pRgn` 되지만 겹치는 영역을 제외 합니다.  
+- **RGN_XOR** 새 클립 영역을 현재 클립 영역과로 식별 되는 영역 결합 *pRgn* 되지만 겹치는 영역을 제외 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  영역의 형식입니다. 다음 값 중 하나일 수 있습니다.  
@@ -5062,19 +5062,19 @@ CGdiObject* SelectObject(CGdiObject* pObject);
  *pPen*  
  에 대 한 포인터는 [CPen](../../mfc/reference/cpen-class.md) 개체를 선택 해야 합니다.  
   
- `pBrush`  
+ *pBrush*  
  에 대 한 포인터는 [CBrush](../../mfc/reference/cbrush-class.md) 개체를 선택 해야 합니다.  
   
- `pFont`  
+ *pFont*  
  에 대 한 포인터는 [CFont](../../mfc/reference/cfont-class.md) 개체를 선택 해야 합니다.  
   
- `pBitmap`  
+ *pBitmap*  
  에 대 한 포인터는 [CBitmap](../../mfc/reference/cbitmap-class.md) 개체를 선택 해야 합니다.  
   
- `pRgn`  
+ *pRgn*  
  에 대 한 포인터는 [CRgn](../../mfc/reference/crgn-class.md) 개체를 선택 해야 합니다.  
   
- `pObject`  
+ *pObject*  
  에 대 한 포인터는 [CGdiObject](../../mfc/reference/cgdiobject-class.md) 개체를 선택 해야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -5091,14 +5091,14 @@ CGdiObject* SelectObject(CGdiObject* pObject);
 - **SIMPLEREGION** 새 클립 영역에 겹치는 테두리가 없습니다.  
   
 ### <a name="remarks"></a>설명  
- 클래스 `CDC` 버전 5 개 펜, 브러시, 글꼴, 비트맵 및 영역을 포함 하는 GDI 개체의 특정 종류에 대해 특수화를 제공 합니다. 새로 선택한 개체는 동일한 유형의 이전 개체를 대체합니다. 예를 들어 경우 `pObject` 일반 버전의 `SelectObject` 가리키는 [CPen](../../mfc/reference/cpen-class.md) 개체, 함수에서 지정한 펜 현재 펜 바꿉니다 `pObject`합니다.  
+ 클래스 `CDC` 버전 5 개 펜, 브러시, 글꼴, 비트맵 및 영역을 포함 하는 GDI 개체의 특정 종류에 대해 특수화를 제공 합니다. 새로 선택한 개체는 동일한 유형의 이전 개체를 대체합니다. 예를 들어 경우 *pObject* 일반 버전의 `SelectObject` 가리키는 [CPen](../../mfc/reference/cpen-class.md) 개체, 함수에서 지정한 펜 현재 펜 바꿉니다 *pObject* .  
   
  응용 프로그램 및 선택할 수 비트맵 메모리 장치 컨텍스트에만 하나의 메모리 장치 컨텍스트를 한 번에. 비트맵의 형식은 흑백 또는 디바이스 컨텍스트; 호환 여야 그렇지 않을 경우 `SelectObject` 에서 오류를 반환 합니다.  
   
  및 이후 버전 3.1의 경우 Windows는 `SelectObject` 함수 여부 메타 파일에 사용 되는지 여부를 같은 값을 반환 합니다. 이전 버전의 Windows에서는 아래 `SelectObject` 메타 파일에서 사용 된 경우 성공에 대 한 0이 아닌 값 및 실패에 대 한 0을 반환 합니다.  
   
 ##  <a name="selectpalette"></a>  CDC::SelectPalette  
- 선택 하 여 지정 된 논리 팔레트 `pPalette` 장치 컨텍스트의 선택 된 색상표 개체입니다.  
+ 선택 하 여 지정 된 논리 팔레트 *pPalette* 장치 컨텍스트의 선택 된 색상표 개체입니다.  
   
 ```  
 CPalette* SelectPalette(
@@ -5107,14 +5107,14 @@ CPalette* SelectPalette(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pPalette`  
+ *pPalette*  
  선택 해야 논리 팔레트를 식별 합니다. 이 색상표 이미 만들었다고 가정 된는 `CPalette` 멤버 함수 [CreatePalette](../../mfc/reference/cpalette-class.md#createpalette)합니다.  
   
- `bForceBackground`  
- 논리 팔레트 배경 수 강제로 하는지 여부를 지정 합니다. 경우 `bForceBackground` 가 0이 아닌 경우 선택한 색상표는 항상 창에 입력된 포커스가 있는지 여부에 관계 없이 배경 팔레트입니다. 경우 `bForceBackground` 0 장치 컨텍스트는 창에 연결 하며, 논리 팔레트에 입력된 포커스가 있는 창이 전경 색상표는 합니다.  
+ *bForceBackground*  
+ 논리 팔레트 배경 수 강제로 하는지 여부를 지정 합니다. 경우 *bForceBackground* 가 0이 아닌 경우 선택한 색상표는 항상 창에 입력된 포커스가 있는지 여부에 관계 없이 배경 팔레트입니다. 경우 *bForceBackground* 0 장치 컨텍스트는 창에 연결 하며, 논리 팔레트에 입력된 포커스가 있는 창이 전경 색상표는 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `CPalette` 개체에서 지정한 색상표에 따라 대체 논리 팔레트를 식별 `pPalette`합니다. **NULL** 오류가 발생 하는 경우.  
+ 에 대 한 포인터는 `CPalette` 로 지정 된 색상표에 따라 대체 논리 팔레트를 식별 하는 개체 *pPalette*합니다. **NULL** 오류가 발생 하는 경우.  
   
 ### <a name="remarks"></a>설명  
  새 색상표 색상표 개체가 GDI 장치 컨텍스트에서 표시 되는 제어 색상 하는 데 사용 되 고 이전 색상표를 대체 합니다.  
@@ -5129,7 +5129,7 @@ virtual CGdiObject* SelectStockObject(int nIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  원하는 스톡 개체의 종류를 지정 합니다. 다음 값 중 하나일 수 있습니다.  
   
 - **BLACK_BRUSH** 브러시를 차단 합니다.  
@@ -5177,7 +5177,7 @@ int SetAbortProc(BOOL (CALLBACK* lpfn)(HDC, int));
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpfn`  
+ *lpfn*  
  중단 절차로 설치를 중단 함수에 대 한 포인터입니다. 콜백 함수에 대 한 자세한 내용은 [cdc:: setabortproc에 대 한 콜백 함수](callback-functions-used-by-mfc.md#setabortproc)합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -5229,8 +5229,8 @@ int SetArcDirection(int nArcDirection);
   
 |Arc|원형|  
 |---------|---------|  
-|`ArcTo`|**사각형**|  
-|`Chord`|`RoundRect`|  
+|**ArcTo**|**사각형**|  
+|**현**|**RoundRect**|  
 |**타원**||  
   
 ##  <a name="setattribdc"></a>  CDC::SetAttribDC  
@@ -5241,7 +5241,7 @@ virtual void SetAttribDC(HDC hDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hDC`  
+ *hDC*  
  Windows 장치 컨텍스트입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -5255,7 +5255,7 @@ virtual COLORREF SetBkColor(COLORREF crColor);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `crColor`  
+ *crColor*  
  새 배경 색을 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -5287,7 +5287,7 @@ int SetBkMode(int nBkMode);
 ### <a name="remarks"></a>설명  
  백그라운드 모드 시스템 그리기 화면에서 기존 배경색과 텍스트, 빗금된 브러시 또는 실선 하지 않은 모든 펜 스타일을 그리기 전에 제거 되는지 여부를 정의 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor)합니다.  
   
 ##  <a name="setboundsrect"></a>  CDC::SetBoundsRect  
@@ -5300,20 +5300,20 @@ UINT SetBoundsRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRectBounds`  
+ *lpRectBounds*  
  가리키는 `RECT` 구조 또는 `CRect` 경계 사각형을 설정 하는 데 사용 되는 개체입니다. 사각형 크기는 논리적 좌표에 제공 됩니다. 이 매개 변수 수 **NULL**합니다.  
   
- `flags`  
+ *flags*  
  누적 된 사각형을 새 사각형 들은 결합 하는 방법을 지정 합니다. 이 매개 변수는 다음 값의 조합 될 수 있습니다.  
   
-- **DCB_ACCUMULATE** 추가으로 지정 된 사각형 `lpRectBounds` (사각형 union 작업을 사용 하 여) 경계 사각형에 있습니다.  
+- **DCB_ACCUMULATE** 추가으로 지정 된 사각형 *lpRectBounds* (사각형 union 작업을 사용 하 여) 경계 사각형에 있습니다.  
   
 - **DCB_DISABLE** 범위 누적을 해제 합니다.  
   
 - **DCB_ENABLE** 범위 누적 설정 합니다. (누적 범위에 대 한 기본 설정은 비활성화 됩니다.)  
   
 ### <a name="return-value"></a>반환 값  
- 함수가 성공 하는 경우는 경계 사각형의 현재 상태입니다. 마찬가지로 `flags`, 반환 값의 조합 수 **DCB_** 값:  
+ 함수가 성공 하는 경우는 경계 사각형의 현재 상태입니다. 마찬가지로 *플래그*, 반환 값의 조합 수 **DCB_** 값:  
   
 - **DCB_ACCUMULATE** 경계 사각형 비어 있지 않습니다. 이 값은 항상 설정 됩니다.  
   
@@ -5342,7 +5342,7 @@ CPoint SetBrushOrg(POINT point);
  *y*  
  Y-좌표 (장치 단위)에 새 원본를 지정합니다. 이 값 범위 0-7에에서 있어야 합니다.  
   
- `point`  
+ *지점*  
  새 원점의 x 및 y 좌표를 지정합니다. 각 값의 범위 0-7에에서 있어야 합니다. 전달할 수 있습니다는 **지점** 구조 또는 `CPoint` 이 매개 변수에 대 한 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -5361,7 +5361,7 @@ BOOL SetColorAdjustment(const COLORADJUSTMENT* lpColorAdjust);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpColorAdjust`  
+ *lpColorAdjust*  
  가리키는 [COLORADJUSTMENT](../../mfc/reference/coloradjustment-structure.md) 색 조정 값을 포함 하는 데이터 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -5378,7 +5378,7 @@ COLORREF SetDCBrushColor(COLORREF crColor);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `crColor`  
+ *crColor*  
  새 브러시 색을 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -5397,7 +5397,7 @@ COLORREF SetDCPenColor(COLORREF crColor);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `crColor`  
+ *crColor*  
  새 펜 색을 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -5414,7 +5414,7 @@ int SetGraphicsMode(int iMode);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `iMode`  
+ *iMode*  
  그래픽 모드를 지정합니다. 이 매개 변수를 사용할 수 있는 값의 목록에 대 한 참조 [SetGraphicsMode](http://msdn.microsoft.com/library/windows/desktop/dd162977)합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -5433,7 +5433,7 @@ DWORD SetLayout(DWORD dwLayout);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwLayout`  
+ *dwLayout*  
  장치 컨텍스트 레이아웃 및 비트맵 플래그를 제어합니다. 다음 값의 조합 수 있습니다.  
   
 |값|의미|  
@@ -5452,7 +5452,7 @@ DWORD SetLayout(DWORD dwLayout);
   
  호출 하는 경우 **SetLayout (LAYOUT_RTL** ), **SetLayout** 매핑 모드를 자동으로 변경 `MM_ISOTROPIC`합니다. 결과적으로 한 후속 호출에 [GetMapMode](#getmapmode) 돌아갑니다 **MM_ISOTROPIC** 대신 `MM_TEXT`합니다.  
   
- 경우에 따라와 같은 많은 비트맵 높여야 왼쪽에서 오른쪽 레이아웃을 유지 합니다. 이러한 경우에 호출 하 여 이미지를 렌더링할 `BitBlt` 또는 `StretchBlt`, 다음에 대 한 비트맵 제어 플래그를 설정 `dwLayout` 를 **LAYOUT_BITMAPORIENTATIONPRESERVED**합니다.  
+ 경우에 따라와 같은 많은 비트맵 높여야 왼쪽에서 오른쪽 레이아웃을 유지 합니다. 이러한 경우에 호출 하 여 이미지를 렌더링할 `BitBlt` 또는 `StretchBlt`, 다음에 대 한 비트맵 제어 플래그를 설정 *dwLayout* 를 **LAYOUT_BITMAPORIENTATIONPRESERVED**합니다.  
   
  사용 하 여 레이아웃을 변경 하면는 **LAYOUT_RTL** , 오른쪽을 일반적으로 지정 하는 플래그 설정 또는 해제 왼쪽 반대가 됩니다. 혼동을 피하기 위해 표준 플래그에 대 한 대체 이름을 정의 하는 것이 좋습니다. 제안 된 대체 플래그 이름의 목록을 참조 하십시오. [SetLayout](http://msdn.microsoft.com/library/windows/desktop/dd162979) Windows sdk에서입니다.  
   
@@ -5464,7 +5464,7 @@ virtual int SetMapMode(int nMapMode);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nMapMode`  
+ *nMapMode*  
  새 매핑 모드를 지정합니다. 다음 값 중 하나일 수 있습니다.  
   
 - `MM_ANISOTROPIC` 논리 단위는 임의로 크기 조정 된 축이 있는 임의 단위도 변환 됩니다. 매핑 모드를 설정 `MM_ANISOTROPIC` 현재 창 또는 뷰포트 설정을 변경 하지 않습니다. 단위를 변경 하려면 방향 및 크기 조정이 호출는 [SetWindowExt](#setwindowext) 및 [SetViewportExt](#setviewportext) 멤버 함수입니다.  
@@ -5492,9 +5492,9 @@ virtual int SetMapMode(int nMapMode);
  `MM_HIENGLISH`, `MM_HIMETRIC`, `MM_LOENGLISH`, `MM_LOMETRIC`, 및 `MM_TWIPS` 모드는 물리적으로 의미 있는 단위 (예: 인치, 밀리미터 단위)에서 그리기 해야 하는 응용 프로그램에 유용 합니다. `MM_ISOTROPIC` 모드에서는 1:1 가로 세로 비율, 이미지의 정확한 모양을 유지 해야 하는 경우 유용 합니다. `MM_ANISOTROPIC` 모드에서는 독립적으로 조정 되도록 x 및 y 좌표입니다.  
   
 > [!NOTE]
->  호출 하는 경우 [SetLayout](#setlayout) DC (디바이스 컨텍스트) 오른쪽에서 왼쪽 레이아웃을 변경 하려면 **SetLayout** 매핑 모드를 자동으로 변경 `MM_ISOTROPIC`합니다.  
+>  호출 하는 경우 [SetLayout](#setlayout) DC (디바이스 컨텍스트) 오른쪽에서 왼쪽 레이아웃을 변경 하려면 `SetLayout` 매핑 모드를 자동으로 변경 `MM_ISOTROPIC`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)합니다.  
   
 ##  <a name="setmapperflags"></a>  CDC::SetMapperFlags  
@@ -5505,7 +5505,7 @@ DWORD SetMapperFlags(DWORD dwFlag);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwFlag`  
+ *dwFlag*  
  글꼴의 가로 세로 높이 너비는 장치에 맞게 글꼴 매퍼 시도 하는지 여부를 지정 합니다. 이 값이 **ASPECT_FILTERING**, 맵 편집기 글꼴만 인 x 측면을 선택 하 고 y 측면 조건과 정확히 일치 하도록 지정된 된 장치.  
   
 ### <a name="return-value"></a>반환 값  
@@ -5543,14 +5543,14 @@ virtual void SetOutputDC(HDC hDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hDC`  
+ *hDC*  
  Windows 장치 컨텍스트입니다.  
   
 ### <a name="remarks"></a>설명  
  장치 컨텍스트에 연결 되지 않은 경우에이 멤버 함수를 호출할 수는 `CDC` 개체입니다. 이 멤버 함수는 설정 `m_hDC` 하지만 장치 컨텍스트를 연결 하지 않습니다는 `CDC` 개체입니다.  
   
 ##  <a name="setpixel"></a>  CDC::SetPixel  
- 로 지정 된 색의 가장 가까운 근사치를 지정 된 지점에서 설정 하는 픽셀 `crColor`합니다.  
+ 로 지정 된 색의 가장 가까운 근사치를 지정 된 지점에서 설정 하는 픽셀 *crColor*합니다.  
   
 ```  
 COLORREF SetPixel(
@@ -5571,14 +5571,14 @@ COLORREF SetPixel(
  *y*  
  설정할 요소의 논리 y 좌표를 지정 합니다.  
   
- `crColor`  
+ *crColor*  
  A **COLORREF** 시점을 그리는 데 사용 되는 색을 지정 하는 RGB 값입니다. 참조 [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) Windows sdk에 대 한 설명은이 값입니다.  
   
- `point`  
+ *지점*  
  논리 x 및 y-좌표 설정할 지점을 지정 합니다. 전달할 수 있습니다는 **지점** 구조 또는 `CPoint` 이 매개 변수에 대 한 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
- RGB 값은 실제로 그릴 지점 색에 대 한 합니다. 이 값에서 지정 된 다르게 지정할 수 있습니다 `crColor` 해당 색상의 근사값을 사용 하는 경우. 함수가 (잘림 영역 밖에 중요 한 점은) 하는 경우 실패 한 경우 반환 값은-1입니다.  
+ RGB 값은 실제로 그릴 지점 색에 대 한 합니다. 이 값에서 지정 된 다르게 지정할 수 있습니다 *crColor* 해당 색상의 근사값을 사용 하는 경우. 함수가 (잘림 영역 밖에 중요 한 점은) 하는 경우 실패 한 경우 반환 값은-1입니다.  
   
 ### <a name="remarks"></a>설명  
  지점 클립 영역에 있어야 합니다. 클립 영역에 포인터가 없는 경우 함수는 아무 작업도 수행 하지 않습니다.  
@@ -5607,10 +5607,10 @@ BOOL SetPixelV(
  *y*  
  설정할 요소의 논리 단위로 y 좌표를 지정 합니다.  
   
- `crColor`  
+ *crColor*  
  지점을 그리는 데 사용할 색을 지정 합니다.  
   
- `point`  
+ *지점*  
  논리 x 및 y-좌표 설정할 지점을 지정 합니다. 전달할 수 있습니다는 [지점](../../mfc/reference/point-structure1.md) 데이터 구조 또는 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 이 매개 변수에 대 한 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -5627,7 +5627,7 @@ int SetPolyFillMode(int nPolyFillMode);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nPolyFillMode`  
+ *nPolyFillMode*  
  새로운 채우기 모드를 지정합니다. 이 값 중 하나일 수 있습니다 **대체** 또는 **굴곡**합니다. Windows에 설정 하는 기본 모드는 **대체**합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -5646,7 +5646,7 @@ int SetROP2(int nDrawMode);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nDrawMode`  
+ *nDrawMode*  
  새 그리기 모드를 지정합니다. 다음 값 중 하나일 수 있습니다.  
   
 - **R2_BLACK** 픽셀은 검정색 항상 합니다.  
@@ -5734,8 +5734,8 @@ UINT SetTextAlign(UINT nFlags);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nFlags`  
- 텍스트 맞춤 플래그를 지정합니다. 플래그는 지점과 텍스트를 제한 하는 사각형 간의 관계를 지정 합니다. 현재 위치 또는 텍스트 출력 함수에 의해 지정 된 좌표의 지점 수 있습니다. 텍스트를 제한 하는 사각형 옆에 있는 문자 셀 텍스트 문자열에 의해 정의 됩니다. `nFlags` 매개 변수는 다음 세 가지 범주에서 플래그를 하나 이상 사용할 수 있습니다. 각 범주에서 하나의 플래그를 선택 합니다. 첫 번째 범주는 x 방향의 텍스트 맞춤을 영향을 미칩니다.  
+ *nFlags*  
+ 텍스트 맞춤 플래그를 지정합니다. 플래그는 지점과 텍스트를 제한 하는 사각형 간의 관계를 지정 합니다. 현재 위치 또는 텍스트 출력 함수에 의해 지정 된 좌표의 지점 수 있습니다. 텍스트를 제한 하는 사각형 옆에 있는 문자 셀 텍스트 문자열에 의해 정의 됩니다. *nFlags* 매개 변수는 다음 세 가지 범주에서 플래그를 하나 이상 사용할 수 있습니다. 각 범주에서 하나의 플래그를 선택 합니다. 첫 번째 범주는 x 방향의 텍스트 맞춤을 영향을 미칩니다.  
   
 - **TA_CENTER** 경계 사각형의 가로 중심 포인트를 맞춥니다.  
   
@@ -5771,8 +5771,8 @@ int SetTextCharacterExtra(int nCharExtra);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nCharExtra`  
- 각 문자에 추가할 (논리 단위)에 추가 공백 크기를 지정 합니다. 현재 매핑 모드 없으면 `MM_TEXT`, `nCharExtra` 변형 되어 가장 가까운 픽셀으로 반올림 합니다.  
+ *nCharExtra*  
+ 각 문자에 추가할 (논리 단위)에 추가 공백 크기를 지정 합니다. 현재 매핑 모드 없으면 `MM_TEXT`, *nCharExtra* 변형 되어 가장 가까운 픽셀으로 반올림 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  이전 intercharacter 간격의 양입니다.  
@@ -5788,7 +5788,7 @@ virtual COLORREF SetTextColor(COLORREF crColor);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `crColor`  
+ *crColor*  
  RGB 색 값으로는 텍스트의 색을 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -5799,7 +5799,7 @@ virtual COLORREF SetTextColor(COLORREF crColor);
   
  장치는 지정 된 색을 나타낼 수 없습니다, 텍스트 색이 가장 가까운 실제 색으로 설정 됩니다. 문자에 대 한 배경 색은에서 지정 된 `SetBkColor` 및 `SetBkMode` 멤버 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor)합니다.  
   
 ##  <a name="settextjustification"></a>  CDC::SetTextJustification  
@@ -5812,7 +5812,7 @@ int SetTextJustification(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nBreakExtra`  
+ *nBreakExtra*  
  (논리 단위)에서 텍스트의 줄에 추가할 추가 공간을 지정 합니다. 현재 매핑 모드 없으면 `MM_TEXT`,이 매개 변수에서 제공 하는 값이 현재 매핑 모드도 변환 되 고 가장 가까운 장치 단위로 반올림 됩니다.  
   
  *nBreakCount*  
@@ -5826,13 +5826,13 @@ int SetTextJustification(
   
  후의 `SetTextJustification` 멤버 함수를 호출 하는 텍스트 출력 함수에 대 한 호출 (같은 `TextOut`) 지정한 개수의 나누기 문자 간에 균등 하 게 지정 된 추가 공간이 배분 합니다. 줄바꿈 문자는 공백 문자 (ASCII 32)는 일반적으로 하지만 다른 문자로 글꼴에 의해 정의 됩니다.  
   
- 멤버 함수 `GetTextExtent` 일반적으로 사용 되며 `SetTextJustification`합니다. `GetTextExtent` 맞춤 하기 전에 지정된 된 줄의 너비를 계산합니다. 응용 프로그램에서 지정 하는 공간의 양을 결정할 수는 `nBreakExtra` 매개 변수에서 반환 된 값을 빼서 `GetTextExtent` 맞춤 후 문자열의 너비에서 합니다.  
+ 멤버 함수 `GetTextExtent` 일반적으로 사용 되며 `SetTextJustification`합니다. `GetTextExtent` 맞춤 하기 전에 지정된 된 줄의 너비를 계산합니다. 응용 프로그램에서 지정 하는 공간의 양을 결정할 수는 *nBreakExtra* 매개 변수에서 반환 된 값을 빼서 `GetTextExtent` 맞춤 후 문자열의 너비에서 합니다.  
   
  `SetTextJustification` 함수는 다른 글꼴에 여러 실행이 포함 된 줄에 맞게 사용할 수 있습니다. 이 경우 줄 맞춤 하 고 각 실행을 별도로 작성 하 여 증분 생성 해야 합니다.  
   
  맞춤 중 반올림 오류가 발생할 수 있습니다, 때문에 시스템을 실행 중인 현재 오류를 정의 하는 오류 항목을 유지 합니다. 여러 실행이 포함 된 행을 정렬 하는 경우 `GetTextExtent` 다음 실행의 정도 계산 하는 것이 오류 용어를 자동으로 사용 합니다. 이렇게 하면 오류 새 실행에 맞게 텍스트 출력 함수입니다.  
   
- 각 줄 정렬 된 후 다음 줄에 통합 되지 않도록 하려면이 오류 용어 지워야 합니다. 호출 하 여 용어를 지울 수 `SetTextJustification` 와 `nBreakExtra` 0으로 설정 합니다.  
+ 각 줄 정렬 된 후 다음 줄에 통합 되지 않도록 하려면이 오류 용어 지워야 합니다. 호출 하 여 용어를 지울 수 `SetTextJustification` 와 *nBreakExtra* 0으로 설정 합니다.  
   
 ##  <a name="setviewportext"></a>  CDC::SetViewportExt  
  장치 컨텍스트에 뷰포트의 x 및 y 범위를 설정합니다.  
@@ -5846,13 +5846,13 @@ CSize SetViewportExt(SIZE size);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cx`  
+ *cx*  
  장치 단위로 뷰포트의 x 범위를 지정 합니다.  
   
- `cy`  
+ *cy*  
  장치 단위로 뷰포트의 y 범위를 지정 합니다.  
   
- `size`  
+ *size*  
  장치 단위로 뷰포트의 x 및 y 범위를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -5870,7 +5870,7 @@ CSize SetViewportExt(SIZE size);
   
  때 `MM_ISOTROPIC` 모드가 설정 되어, 호출 하는 응용 프로그램의 `SetWindowExt` 멤버 함수를 호출 하기 전에 `SetViewportExt`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)합니다.  
   
 ##  <a name="setviewportorg"></a>  CDC::SetViewportOrg  
@@ -5891,7 +5891,7 @@ CPoint SetViewportOrg(POINT point);
  *y*  
  Y-좌표 (장치 단위로) 뷰포트의의 시작을 지정합니다. 장치 좌표계의 범위 내 값 이어야 합니다.  
   
- `point`  
+ *지점*  
  뷰포트의의 원본을 지정합니다. 장치 좌표계의 범위 내 값 이어야 합니다. 전달할 수 있습니다는 **지점** 구조 또는 `CPoint` 이 매개 변수에 대 한 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -5902,7 +5902,7 @@ CPoint SetViewportOrg(POINT point);
   
  GDI 창 원점으로 지정 된 논리적 좌표계의 점을 매핑되는 장치 좌표계에 위치를 표시 하는 뷰포트 방향을 **SetWindowOrg** 멤버 함수입니다. GDI 창 원점이 뷰포트 원본에 매핑하는 데 필요한 동일한 프로세스를 수행 하 여 다른 모든 요소를 매핑합니다. 예를 들어 뷰포트 원점에서 점 주변 원에 원 창 원점에서 점 주변에서 모든 요소 됩니다. 마찬가지로, 창 원점이 통해 전달 되는 줄의 모든 지점 뷰포트 방향을 통해 전달 되는 줄에 있게 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)합니다.  
   
 ##  <a name="setwindowext"></a>  CDC::SetWindowExt  
@@ -5917,13 +5917,13 @@ CSize SetWindowExt(SIZE size);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cx`  
+ *cx*  
  X-범위 (논리 단위)에 창 지정합니다.  
   
- `cy`  
+ *cy*  
  Y-범위 (논리 단위)에 창 지정합니다.  
   
- `size`  
+ *size*  
  X-및 y-에 있는 범위 (논리 단위) 창의 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -5948,7 +5948,7 @@ CSize SetWindowExt(SIZE size);
   
  때 `MM_ISOTROPIC` 모드가 설정 되어, 호출 하는 응용 프로그램의 `SetWindowExt` 멤버 함수 호출 하기 전에 `SetViewportExt`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)합니다.  
   
 ##  <a name="setwindoworg"></a>  CDC::SetWindowOrg  
@@ -5969,7 +5969,7 @@ CPoint SetWindowOrg(POINT point);
  *y*  
  창의 새 origin의 논리적 y 좌표를 지정합니다.  
   
- `point`  
+ *지점*  
  창의 새 원본 논리적 좌표를 지정합니다. 전달할 수 있습니다는 **지점** 구조 또는 `CPoint` 이 매개 변수에 대 한 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -5988,7 +5988,7 @@ BOOL SetWorldTransform(const XFORM& rXform);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rXform`  
+ *rXform*  
  에 대 한 참조는 [XFORM](http://msdn.microsoft.com/library/windows/desktop/dd145228) 변환 데이터를 포함 하는 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -6028,7 +6028,7 @@ int StartDoc(LPCTSTR lpszDocName);
   
  `StartDoc` 메타 파일 안에 사용할 수 없습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  이 코드 조각은 기본 프린터, 인쇄 작업을 엽니다 가져오고에서는 "Hello, World!" 인 한 페이지에 스풀링 삭제 됩니다. 이 코드를 통해 인쇄 된 텍스트는 프린터의 논리 단위에 조정 되지 않습니다, 출력 텍스트 결과 읽을 수는 이러한 소문자로 수 있습니다. 와 같은 기능을 확장 하 여 CDC `SetMapMode`, `SetViewportOrg`, 및 `SetWindowExt`는 크기 조정을 수정 하는 데 사용할 수 있습니다.  
   
  [!code-cpp[NVC_MFCDocView#41](../../mfc/codesnippet/cpp/cdc-class_13.cpp)]  
@@ -6050,7 +6050,7 @@ int StartPage();
   
  시스템 해제는 `ResetDC` 멤버 함수에 대 한 호출 간의 `StartPage` 및 `EndPage`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CDC::StartDoc](#startdoc)합니다.  
   
 ##  <a name="stretchblt"></a>  CDC::StretchBlt  
@@ -6077,25 +6077,25 @@ BOOL StretchBlt(
  *y*  
  대상 사각형 왼쪽 위 모퉁이의 Y 좌표(논리 단위)를 지정합니다.  
   
- `nWidth`  
+ *nWidth*  
  대상 사각형의 너비(논리 단위)를 지정합니다.  
   
- `nHeight`  
+ *nHeight*  
  대상 사각형의 높이(논리 단위)를 지정합니다.  
   
- `pSrcDC`  
+ *pSrcDC*  
  소스 장치 컨텍스트를 지정합니다.  
   
- `xSrc`  
+ *xSrc*  
  소스 사각형 왼쪽 위 모퉁이의 X 좌표(논리 단위)를 지정합니다.  
   
- `ySrc`  
+ *ySrc*  
  소스 사각형 왼쪽 위 모퉁이의 Y 좌표(논리 단위)를 지정합니다.  
   
- `nSrcWidth`  
+ *nSrcWidth*  
  소스 사각형의 너비(논리 단위)를 지정합니다.  
   
- `nSrcHeight`  
+ *nSrcHeight*  
  소스 사각형의 높이(논리 단위)를 지정합니다.  
   
  *dwRop*  
@@ -6137,9 +6137,9 @@ BOOL StretchBlt(
 ### <a name="remarks"></a>설명  
  이 함수는 대상 장치 컨텍스트(`SetStretchBltMode`로 설정)의 늘이기 모드를 사용하여 비트맵을 늘이거나 줄이는 방법을 결정합니다.  
   
- `StretchBlt` 함수는 비트맵을 `pSrcDC`로 지정된 소스 장치에서 멤버 함수를 호출하는 장치 컨텍스트 개체로 표현되는 대상 장치로 이동합니다. `xSrc`, `ySrc`, `nSrcWidth` 및 `nSrcHeight` 매개 변수는 왼쪽 위 모퉁이와 소스 사각형의 크기를 정의합니다. *x*, *y*, `nWidth`, 및 `nHeight` 왼쪽 위 모퉁이 대상 사각형의 크기 매개 변수를 제공 합니다. 지정 된 래스터 연산은 *dwRop* 소스 비트맵 및 대상 장치에 이미 있는 비트가 결합 되는 방식을 정의 합니다.  
+ `StretchBlt` 함수는 지정 된 소스 장치에서 비트맵 이동 *pSrcDC* 멤버 함수를 호출 하는 장치 컨텍스트 개체로 표현 되는 대상 장치에 있습니다. *xSrc*, *ySrc*, *nSrcWidth*, 및 *nSrcHeight* 매개 변수는 왼쪽 위 모퉁이 소스 사각형의 크기를 정의 합니다. . *x*, *y*, *nWidth*, 및 *nHeight* 왼쪽 위 모퉁이 대상 사각형의 크기 매개 변수를 제공 합니다. 지정 된 래스터 연산은 *dwRop* 소스 비트맵 및 대상 장치에 이미 있는 비트가 결합 되는 방식을 정의 합니다.  
   
- `StretchBlt` 함수는 `nSrcWidth` 및 `nWidth` 또는 `nSrcHeight` 및 `nHeight` 매개 변수의 부호가 다른 경우 비트맵의 미러 이미지를 만듭니다. `nSrcWidth` 및 `nWidth`의 부호가 다른 경우 함수는 X축 방향으로 비트맵의 미러 이미지를 만듭니다. `nSrcHeight` 및 `nHeight`의 부호가 다른 경우 함수는 Y축 방향으로 비트맵의 미러 이미지를 만듭니다.  
+ `StretchBlt` 함수 경우 비트맵의 미러 이미지를 만듭니다의 기호는 *nSrcWidth* 및 *nWidth* 또는 *nSrcHeight* 및 *nHeight* 매개 변수 다릅니다. 경우 *nSrcWidth* 및 *nWidth* 부호가 다른 함수는 x 축 방향으로 비트맵의 미러 이미지를 만듭니다. 경우 *nSrcHeight* 및 *nHeight* 부호가 다른 함수는 y 축 방향으로 비트맵의 미러 이미지를 만듭니다.  
   
  `StretchBlt` 함수는 메모리에서 소스 비트맵을 늘이거나 줄인 다음 결과를 대상으로 복사합니다. 패턴을 결과와 병합해야 하는 경우 늘어난 소스 비트맵이 대상에 복사될 때까지 병합되지 않습니다. 브러시를 사용하는 경우 대상 장치 컨텍스트의 선택된 브러시입니다. 대상 좌표는 대상 장치 컨텍스트에 따라 변형됩니다. 소스 좌표는 소스 장치 컨텍스트에 따라 변형됩니다.  
   
@@ -6205,33 +6205,33 @@ CSize TabbedTextOut(
  *y*  
  문자열의 시작 지점의 논리적 y 좌표를 지정합니다.  
   
- `lpszString`  
+ *lpszString*  
  그릴 문자열을 가리킵니다. 문자의 배열에 대 한 포인터를 전달할 수 있습니다 또는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 이 매개 변수에 대 한 개체입니다.  
   
- `nCount`  
- 문자열에 있는 문자의 수를 지정합니다. 경우 `nCount` 은-1, 길이 계산 됩니다.  
+ *nCount*  
+ 문자열에 있는 문자의 수를 지정합니다. 경우 *nCount* 은-1, 길이 계산 됩니다.  
   
- `nTabPositions`  
+ *nTabPositions*  
  탭 정지 위치 배열에 있는 값의 수를 지정합니다.  
   
- `lpnTabStopPositions`  
+ *lpnTabStopPositions*  
  (논리 단위)의 탭 정지 위치를 포함 하는 배열 가리킵니다. 탭 정지; 오름차순으로 정렬 되어야 합니다. 가장 작은 x 값 배열의 첫 번째 항목 이어야 합니다.  
   
- `nTabOrigin`  
+ *nTabOrigin*  
  X-좌표 (논리 단위)에 있는 탭 확장 되 시작 위치를 지정 합니다.  
   
- `str`  
+ *str*  
  A `CString` 지정 된 문자를 포함 하는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
  으로 (논리 단위)에서 문자열의 크기는 `CSize` 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 현재 선택 된 글꼴의 텍스트를 씁니다. 경우 `nTabPositions` 0 및 `lpnTabStopPositions` 은 **NULL**, 탭 평균 문자 너비는 8 시간으로 확장 됩니다.  
+ 현재 선택 된 글꼴의 텍스트를 씁니다. 경우 *nTabPositions* 0 및 *lpnTabStopPositions* 은 **NULL**, 탭 평균 문자 너비는 8 시간으로 확장 됩니다.  
   
- 경우 `nTabPositions` 1 이면의 탭 정지의 첫 번째 값으로 지정 된 간격으로 구분 됩니다는 `lpnTabStopPositions` 배열입니다. 경우는 `lpnTabStopPositions` 둘 이상의 값을 포함 하는 배열, 탭 정지를 사용 하는 각 값에 지정 된 최대 배열에 대해 설정 되어 `nTabPositions`합니다. `nTabOrigin` 매개 변수를 통해 호출 하는 응용 프로그램에서 `TabbedTextOut` 한 줄에 여러 번 함수입니다. 응용 프로그램이 해당 함수 호출 두 번 이상으로 `nTabOrigin` 될 때마다 동일한 값으로 설정, 함수 확장으로 지정 된 위치를 기준으로 모든 탭 `nTabOrigin`합니다.  
+ 경우 *nTabPositions* 1 이면의 탭 정지의 첫 번째 값으로 지정 된 간격으로 구분 됩니다는 *lpnTabStopPositions* 배열입니다. 경우는 *lpnTabStopPositions* 둘 이상의 값을 포함 하는 배열, 탭 정지를 사용 하는 각 값에 지정 된 최대 배열에 대해 설정 되어 *nTabPositions*합니다. *nTabOrigin* 매개 변수를 통해 호출 하는 응용 프로그램에서 `TabbedTextOut` 한 줄에 여러 번 함수입니다. 응용 프로그램 함수가 두 번 이상 호출 된 경우는 *nTabOrigin* 될 때마다 동일한 값으로 설정, 함수 확장으로 지정 된 위치를 기준으로 모든 탭 *nTabOrigin*합니다.  
   
- 기본적으로 현재 위치는 함수에 의해 사용 또는 업데이트되지 않습니다. 응용 프로그램을 함수를 호출 하는 경우 현재 위치를 업데이트 하는 경우 응용 프로그램이 호출할 수는 [SetTextAlign](#settextalign) 멤버 함수를 `nFlags` 로 설정 **TA_UPDATECP**합니다. 이 플래그를 설정 하는 경우 Windows에서 무시는 *x* 및 *y* 후속 호출에서 매개 변수 `TabbedTextOut`, 현재 위치를 대신 사용 합니다.  
+ 기본적으로 현재 위치는 함수에 의해 사용 또는 업데이트되지 않습니다. 응용 프로그램을 함수를 호출 하는 경우 현재 위치를 업데이트 하는 경우 응용 프로그램이 호출할 수는 [SetTextAlign](#settextalign) 멤버 함수를 *nFlags* 로 설정 **TA_UPDATECP**. 이 플래그를 설정 하는 경우 Windows에서 무시는 *x* 및 *y* 후속 호출에서 매개 변수 `TabbedTextOut`, 현재 위치를 대신 사용 합니다.  
   
 ##  <a name="textout"></a>  CDC::TextOut  
  현재 선택된 글꼴을 사용하여 지정된 위치에 문자열을 씁니다.  
@@ -6257,13 +6257,13 @@ BOOL TextOut(
  *y*  
  텍스트 시작점의 논리적 Y 좌표를 지정합니다.  
   
- `lpszString`  
+ *lpszString*  
  그릴 문자열을 가리킵니다.  
   
- `nCount`  
+ *nCount*  
  문자열에 있는 문자의 수를 지정합니다.  
   
- `str`  
+ *str*  
  그릴 문자를 포함하는 `CString` 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -6272,9 +6272,9 @@ BOOL TextOut(
 ### <a name="remarks"></a>설명  
  문자 원본은 문자 셀의 왼쪽 위 모퉁이에 있습니다. 기본적으로 현재 위치는 함수에 의해 사용 또는 업데이트되지 않습니다.  
   
- 응용 프로그램을 호출 하는 경우 현재 위치를 업데이트 해야 하는 경우 `TextOut`, 응용 프로그램에서 호출할 수는 `SetTextAlign` 멤버 함수를 `nFlags` 로 설정 **TA_UPDATECP**합니다. 이 플래그를 설정 하는 경우 Windows에서 무시는 *x* 및 *y* 후속 호출에서 매개 변수 `TextOut`, 현재 위치를 대신 사용 합니다.  
+ 응용 프로그램을 호출 하는 경우 현재 위치를 업데이트 해야 하는 경우 `TextOut`, 응용 프로그램에서 호출할 수는 `SetTextAlign` 멤버 함수를 *nFlags* 로 설정 **TA_UPDATECP**합니다. 이 플래그를 설정 하는 경우 Windows에서 무시는 *x* 및 *y* 후속 호출에서 매개 변수 `TextOut`, 현재 위치를 대신 사용 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [cdc:: beginpath](#beginpath)합니다.  
   
 ##  <a name="transparentblt"></a>  CDC::TransparentBlt  
@@ -6295,41 +6295,41 @@ BOOL TransparentBlt(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `xDest`  
+ *xDest*  
  대상 사각형의 왼쪽 위 모퉁이의 논리 단위로 x 좌표를 지정합니다.  
   
- `yDest`  
+ *yDest*  
  대상 사각형의 왼쪽 위 모퉁이의 논리 단위로 y 좌표를 지정합니다.  
   
- `nDestWidth`  
+ *nDestWidth*  
  대상 사각형의 논리 단위에서는 너비를 지정합니다.  
   
- `nDestHeight`  
+ *nDestHeight*  
  대상 사각형의 논리 단위에서 높이 지정합니다.  
   
- `pSrcDC`  
+ *pSrcDC*  
  소스 장치 컨텍스트에 대 한 포인터입니다.  
   
- `xSrc`  
+ *xSrc*  
  소스 사각형의 논리 단위로 x 좌표를 지정합니다.  
   
- `ySrc`  
+ *ySrc*  
  소스 사각형의 논리 단위로 y 좌표를 지정합니다.  
   
- `nSrcWidth`  
+ *nSrcWidth*  
  소스 사각형의 논리 단위에서는 너비를 지정합니다.  
   
- `nSrcHeight`  
+ *nSrcHeight*  
  소스 사각형의 논리 단위에서 높이 지정합니다.  
   
- `clrTransparent`  
+ *clrTransparent*  
  RGB 소스 비트맵을 투명 하 게 처리할 색입니다.  
   
 ### <a name="return-value"></a>반환 값  
  **True 이면** 성공 되지 않으면 **FALSE**합니다.  
   
 ### <a name="remarks"></a>설명  
- `TransparentBlt` 투명도;에 대 한 허용 RGB 색상으로 표시 되는, 즉 `clrTransparent` 전송에 투명 하 게 렌더링 됩니다.  
+ `TransparentBlt` 투명도;에 대 한 허용 RGB 색상으로 표시 되는, 즉 *clrTransparent* 전송에 투명 하 게 렌더링 됩니다.  
   
  자세한 내용은 참조 [지연 해야](http://msdn.microsoft.com/library/windows/desktop/dd145141) Windows sdk에서입니다.  
   

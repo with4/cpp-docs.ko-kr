@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ba2a3f54ff39341c43ee497fcccda43cd3625fa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ef1c1a328b785c189a2d7d4a2eb28ec3995a810
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358357"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952182"
 ---
 # <a name="cbitmapbutton-class"></a>CBitmapButton 클래스
 텍스트가 아닌 비트맵 이미지로 레이블이 표시된 누름 단추 컨트롤을 만듭니다.  
@@ -98,7 +98,7 @@ class CBitmapButton : public CButton
   
 6.  에 `CDialog` 개체의 [OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) 루틴을 호출은 `CBitmapButton` 개체의 [AutoLoad](#autoload) 단추의 컨트롤 ID의 매개 변수로 사용 하 여 작동할 및 `CDialog` 개체의 **이** 포인터입니다.  
   
- 와 같은 Windows 알림 메시지를 처리 하려면 **BN_CLICKED**를 해당 부모 스 비트맵 단추 컨트롤에서 보낸, (클래스에서 파생 되는 일반적으로 **CDialog)** 에 추가 `CDialog`-파생 된 각 메시지에 대 한 메시지 맵 항목 및 메시지 처리기 멤버 함수는 개체입니다. 보낸 알림의 `CBitmapButton` 전송한 것과 동일 하 게 한 [CButton](../../mfc/reference/cbutton-class.md) 개체입니다.  
+ BN_CLICKED, 같은 창 알림 메시지를 처리 하려는 경우 부모에 비트맵 단추 컨트롤에서 보냅니다 (일반적으로 클래스에서 파생 `CDialog`)에 추가 `CDialog`-파생 된 개체는 메시지 맵 항목 및 메시지 처리기 멤버 각 메시지에 대 한 함수입니다. 보낸 알림의 `CBitmapButton` 전송한 것과 동일 하 게 한 [CButton](../../mfc/reference/cbutton-class.md) 개체입니다.  
   
  클래스 [CToolBar](../../mfc/reference/ctoolbar-class.md) 비트맵 단추에는 다른 방식을 사용 합니다.  
   
@@ -128,10 +128,10 @@ BOOL AutoLoad(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nID`  
+ *nID*  
  단추의 컨트롤 id입니다.  
   
- `pParent`  
+ *pParent*  
  단추를 소유 하는 개체에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -140,7 +140,7 @@ BOOL AutoLoad(
 ### <a name="remarks"></a>설명  
  사용 하 여는 `AutoLoad` 소유자 그리기 단추는 비트맵 단추와 대화 상자에서 초기화 하는 함수입니다. 이 함수를 사용 하기 위한 지침은 대 한 설명에는 `CBitmapButton` 클래스입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#75](../../mfc/codesnippet/cpp/cbitmapbutton-class_1.cpp)]  
   
 ##  <a name="cbitmapbutton"></a>  CBitmapButton::CBitmapButton  
@@ -154,7 +154,7 @@ CBitmapButton();
 ### <a name="remarks"></a>설명  
  C + +를 만든 후 `CBitmapButton` 개체, 호출 [CButton::Create](../../mfc/reference/cbutton-class.md#create) Windows 단추 컨트롤을 만들고에 연결 하는 `CBitmapButton` 개체입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#57](../../mfc/codesnippet/cpp/cbitmapbutton-class_2.cpp)]  
   
 ##  <a name="loadbitmaps"></a>  CBitmapButton::LoadBitmaps  
@@ -203,7 +203,7 @@ BOOL LoadBitmaps(
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#58](../../mfc/codesnippet/cpp/cbitmapbutton-class_3.cpp)]  
   
 ##  <a name="sizetocontent"></a>  CBitmapButton::SizeToContent  
@@ -213,7 +213,7 @@ BOOL LoadBitmaps(
 void SizeToContent();
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#59](../../mfc/codesnippet/cpp/cbitmapbutton-class_4.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

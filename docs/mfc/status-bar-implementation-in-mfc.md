@@ -26,17 +26,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13a85ba03089a9536c8c6512bccd09f1eb34c0a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cadb06076ff7a3dd481a1bcedc9cd0afe4989f28
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381090"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950450"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>MFC의 상태 표시줄 구현
 A [CStatusBar](../mfc/reference/cstatusbar-class.md) 개체 텍스트 출력 창 행이 있는 컨트롤 막대입니다. 출력 창 및 상태 표시기 메시지 선으로 자주 사용 됩니다. 선택 된 메뉴 명령을 간략하게 설명 하는 메뉴 도움말 메시지 줄 및 SCROLL LOCK, NUM LOCK 및 다른 키의 상태를 나타내는 표시기를 예로 들 수 있습니다.  
   
- 클래스를 사용 하 여 상태 표시줄은 구현 하는 MFC 버전 4.0부터 [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), 상태 표시줄 공용 컨트롤을 캡슐화 하는 합니다. 이전 버전과 호환성에 대 한 MFC 유지 클래스의 이전 상태 표시줄 구현 **COldStatusBar**합니다. 이전 버전의 MFC에 대 한 설명서에서 설명 **COldStatusBar** 아래 `CStatusBar`합니다.  
+ 클래스를 사용 하 여 상태 표시줄은 구현 하는 MFC 버전 4.0부터 [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md), 상태 표시줄 공용 컨트롤을 캡슐화 하는 합니다. 이전 버전과 호환성에 대 한 MFC 유지 클래스의 이전 상태 표시줄 구현 `COldStatusBar`합니다. 이전 버전의 MFC에 대 한 설명서에서 설명 `COldStatusBar` 아래 `CStatusBar`합니다.  
   
  [CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl), 멤버 함수 새 MFC 4.0 허용 상태 표시줄 사용자 지정 및 추가 기능에 대 한 Windows 공용 컨트롤 지원 기능을 사용할 수 있습니다. `CStatusBar` 멤버 함수는 대부분의 Windows 공용 컨트롤; 기능 제공. 그러나 호출 하는 경우 `GetStatusBarCtrl`, 상태 표시줄의 특징 중 이상용으로 상태 표시줄을 제공할 수 있습니다. 호출 하는 경우 `GetStatusBarCtrl`에 대 한 참조를 반환 합니다는 `CStatusBarCtrl` 개체입니다. 상태 표시줄 컨트롤을 조작 하기 위한 해당 참조를 사용할 수 있습니다.  
   

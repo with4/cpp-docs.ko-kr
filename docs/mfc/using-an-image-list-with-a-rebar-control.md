@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f902cb24d5cd8525a99f58fc5feeac416138148
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1786c89f4ec9cf1c0908dac5d81858d5b2e6b7db
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381747"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950708"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>이미지 목록과 Rebar 컨트롤 함께 사용
 각 rebar 밴드는 특히 연결된 이미지 목록의 이미지를 포함할 수 있습니다. 다음 절차는 rebar 밴드에서 이미지를 표시하는 데 필요한 단계를 자세히 설명합니다.  
@@ -31,9 +31,9 @@ ms.locfileid: "33381747"
   
 2.  수정 된 **REBARBANDINFO** 이미지를 rebar 밴드에 할당 하는 구조:  
   
-    -   설정의 **fMask** 멤버 **RBBIM_IMAGE**, 비트 OR 연산자를 사용 하 여 필요에 따라 추가 플래그를 포함 하도록 합니다.  
+    -   설정의 *fMask* 멤버 `RBBIM_IMAGE`, 비트 OR 연산자를 사용 하 여 필요에 따라 추가 플래그를 포함 하도록 합니다.  
   
-    -   `iImage` 멤버를 표시될 이미지의 이미지 목록 인덱스로 설정합니다.  
+    -   설정의 *iImage* 표시할 이미지의 이미지 목록 인덱스를 멤버입니다.  
   
 3.  필요한 정보를 사용하여 자식 창을 포함하는 핸들과 텍스트, 크기와 같은 나머지 모든 데이터 멤버를 초기화합니다.  
   

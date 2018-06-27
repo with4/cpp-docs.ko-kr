@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a247ffc36b3e0eb3e52c6f04949c693597d73064
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a56692320e35a5f115e0e267654b809ba491549c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385244"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953521"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033: MFC의 DLL 버전
 이 노트 방법을 MFCxx.DLL를 사용할 수 있습니다 및 MFCxxD.DLL (여기서 x는 MFC 버전 번호) 공유 동적 연결 라이브러리 MFC 응용 프로그램 및 MFC 확장 Dll 설명 합니다. 일반 MFC Dll에 대 한 자세한 내용은 참조 [DLL의 일부로 MFC 사용 하 여](../mfc/tn011-using-mfc-as-part-of-a-dll.md)합니다.  
@@ -102,7 +102,7 @@ ms.locfileid: "33385244"
   
 -   MFC 확장 DLL에서 특별 한을 제공 해야 `DllMain`합니다. 응용 프로그램 마법사를 제공는 `DllMain` 함수는 수정할 수 있습니다.  
   
--   MFC 확장명 DLL은 만들려는 초기화 루틴을 제공할 일반적으로 **CDynLinkLibrary** MFC 확장 DLL 하려는 경우 내보내기 `CRuntimeClass`es 또는 응용 프로그램에는 리소스입니다. 파생된 클래스의 **CDynLinkLibrary** MFC 확장 DLL에서 응용 프로그램별 데이터를 유지 해야 하는 경우 사용할 수 있습니다.  
+-   MFC 확장명 DLL은 만들려는 초기화 루틴을 제공할 일반적으로 `CDynLinkLibrary` MFC 확장 DLL 하려는 경우 내보내기 `CRuntimeClass`es 또는 응용 프로그램에는 리소스입니다. 파생된 클래스의 `CDynLinkLibrary` MFC 확장 DLL에서 응용 프로그램별 데이터를 유지 해야 하는 경우 사용할 수 있습니다.  
   
  이러한 고려 사항은 아래에 자세히 설명 합니다. 또한 MFC 고급 개념 샘플을 참조 해야 [DLLHUSK](../visual-cpp-samples.md) 때문에 대해 설명 합니다.  
   
@@ -140,9 +140,9 @@ ms.locfileid: "33385244"
 ### <a name="changing-your-header-files"></a>헤더 파일 변경  
  MFC 확장 DLL의 목표는 일반적으로 해당 기능을 사용할 수 있는 하나 이상의 응용 프로그램에 몇 가지 일반적인 기능을 내보내려면 합니다. 이 클래스와 클라이언트 응용 프로그램에 사용할 수 있는 전역 함수 내보내기에 따라 결정 합니다.  
   
- 이 작업을 수행 하기 위해 가져오거나 적절 하 게 내보낼 처럼 표시 되어 멤버 함수는 각각 되도록 해야 합니다. 이 위해서는 특수 선언: **__declspec (dllexport)** 및 **__declspec (dllimport)** 합니다. 클래스는 클라이언트 응용 프로그램에서 사용 되는 경우 원하는로 선언 해야 **__declspec (dllimport)** 합니다. MFC 확장 DLL 자체를 작성할 때 것으로 선언 해야 **__declspec (dllexport)** 합니다. 또한 함수가 실제로 내보내야 하며, 클라이언트 프로그램을 로드할 때 바인딩하고 되도록 합니다.  
+ 이 작업을 수행 하기 위해 가져오거나 적절 하 게 내보낼 처럼 표시 되어 멤버 함수는 각각 되도록 해야 합니다. 이 위해서는 특수 선언: `__declspec(dllexport)` 및 `__declspec(dllimport)`합니다. 클래스는 클라이언트 응용 프로그램에서 사용 되는 경우 원하는로 선언 해야 `__declspec(dllimport)`합니다. MFC 확장 DLL 자체를 작성할 때 것으로 선언 해야 `__declspec(dllexport)`합니다. 또한 함수가 실제로 내보내야 하며, 클라이언트 프로그램을 로드할 때 바인딩하고 되도록 합니다.  
   
- 전체 클래스를 내보내려면 **AFX_EXT_CLASS** 클래스 정의에 있습니다. 이 매크로로 프레임 워크에 의해 정의 된 **__declspec (dllexport)** 때 **_AFXDLL** 및 `_AFXEXT` 정의 되지만로 정의 **__declspec (dllimport)** 때 `_AFXEXT` 정의 되어 있지 않습니다. `_AFXEXT` MFC 확장 DLL을 빌드하는 경우에 위에서 설명한 대로 정의 됩니다. 예를 들어:  
+ 전체 클래스를 내보내려면 `AFX_EXT_CLASS` 클래스 정의에 있습니다. 이 매크로로 프레임 워크에 의해 정의 된 `__declspec(dllexport)` 때 `_AFXDLL` 및 `_AFXEXT` 정의 되지만로 정의 `__declspec(dllimport)` 때 `_AFXEXT` 정의 되어 있지 않습니다. `_AFXEXT` MFC 확장 DLL을 빌드하는 경우에 위에서 설명한 대로 정의 됩니다. 예를 들어:  
   
 ```  
 class AFX_EXT_CLASS CExampleExport : public CObject  
@@ -150,7 +150,7 @@ class AFX_EXT_CLASS CExampleExport : public CObject
 ```  
   
 ### <a name="not-exporting-the-entire-class"></a>전체 클래스를 내보내지 않는 경우  
- 따라 클래스의 필요한 개별 구성원만 내보낼 할 수도 있습니다. 예를 들어, 내보내는 경우는 `CDialog`-파생 클래스 생성자는 내보낼 하기만 하면 및 `DoModal` 호출 합니다. DLL의를 사용 하 여 이러한 멤버를 내보낼 수 있습니다. DEF 파일 있지만 있습니다 사용할 수도 **AFX_EXT_CLASS** 내보내야 하는 개별 멤버에 거의 동일한 방법으로 합니다.  
+ 따라 클래스의 필요한 개별 구성원만 내보낼 할 수도 있습니다. 예를 들어, 내보내는 경우는 `CDialog`-파생 클래스 생성자는 내보낼 하기만 하면 및 `DoModal` 호출 합니다. DLL의를 사용 하 여 이러한 멤버를 내보낼 수 있습니다. DEF 파일 있지만 있습니다 사용할 수도 `AFX_EXT_CLASS` 내보내야 하는 개별 멤버에 거의 동일한 방법으로 합니다.  
   
  예를 들어:  
   
@@ -169,7 +169,7 @@ AFX_EXT_CLASS int DoModal();
   
  이 작업을 수행 하는 경우 클래스의 모든 멤버를 더 이상 내보내지 않으므로 때문에 한 추가 문제가 발생할 수 없습니다. MFC 매크로 작동 방식에서에 문제가 있습니다. 일부 MFC의 도우미 매크로 실제로 선언 하거나 데이터 멤버를 정의 합니다. 따라서 이러한 데이터 멤버를 DLL에서 내보낼 수 해야 합니다.  
   
- 예를 들어는 `DECLARE_DYNAMIC` 매크로 MFC 확장 DLL을 빌드할 때 다음과 같이 정의 됩니다.  
+ 예를 들어, MFC 확장 DLL을 빌드할 때 DECLARE_DYNAMIC 매크로 다음과 같이 정의 됩니다.  
   
 ```  
 #define DECLARE_DYNAMIC(class_name) \  
@@ -184,9 +184,9 @@ protected: \
 \  
 ```  
   
- 시작 하는 줄 "정적 `AFX_DATA`" 클래스 내부에서 정적 개체를 선언 합니다. 이 클래스를 올바르게 내보내고 클라이언트에서 런타임 정보에 액세스 합니다. EXE를이 정적 개체를 내보낼 필요가 있습니다. 정적 개체는 한정자로 선언 되었으므로 `AFX_DATA`를 정의 해야 `AFX_DATA` 되도록 **__declspec (dllexport)** DLL을 빌드할 때 정의 **__declspec (dllimport)** 클라이언트를 실행 파일을 빌드하는 경우.  
+ 시작 하는 줄 "정적 `AFX_DATA`" 클래스 내부에서 정적 개체를 선언 합니다. 이 클래스를 올바르게 내보내고 클라이언트에서 런타임 정보에 액세스 합니다. EXE를이 정적 개체를 내보낼 필요가 있습니다. 정적 개체는 한정자로 선언 되었으므로 `AFX_DATA`를 정의 해야 `AFX_DATA` 되도록 `__declspec(dllexport)` DLL을 빌드할 때로 정의 하 고 `__declspec(dllimport)` 클라이언트를 실행 파일을 만들 때.  
   
- 위에서 설명 했 듯이 **AFX_EXT_CLASS** 이런 방식이으로에 이미 정의 되었습니다. 다시 정의 해야 `AFX_DATA` 와 동일 하 게 **AFX_EXT_CLASS** 주위 클래스 정의 합니다.  
+ 위에서 설명 했 듯이 `AFX_EXT_CLASS` 이런 방식이으로에 이미 정의 되었습니다. 다시 정의 해야 `AFX_DATA` 와 동일 하 게 `AFX_EXT_CLASS` 주위 클래스 정의 합니다.  
   
  예를 들어:  
   
@@ -201,12 +201,12 @@ class CExampleView : public CView
 #define AFX_DATA  
 ```  
   
- MFC 사용 하 여 항상는 `AFX_DATA` 이러한 모든 시나리오에이 기술을 작동 하도록 해당 매크로 내에서 정의 하는 데이터 항목에는 기호입니다. 에 사용할 수는 예를 들어 `DECLARE_MESSAGE_MAP`합니다.  
+ MFC 사용 하 여 항상는 `AFX_DATA` 이러한 모든 시나리오에이 기술을 작동 하도록 해당 매크로 내에서 정의 하는 데이터 항목에는 기호입니다. 예를 들어 DECLARE_MESSAGE_MAP에 대 한 작동 합니다.  
   
 > [!NOTE]
 >  클래스의 선택한 멤버 보다는 전체 클래스를 내보내는 경우 정적 데이터 멤버가 자동으로 내보내집니다.  
   
- 동일한 기법을 사용 하 여 자동으로 내보내기는 `CArchive` 추출 연산자를 사용 하는 클래스는 `DECLARE_SERIAL` 및 `IMPLEMENT_SERIAL` 매크로입니다. 대괄호 클래스 선언 하 여 보관 연산자를 내보냅니다 (에 합니다. H 파일)를 다음 코드로:  
+ 동일한 기법을 사용 하 여 자동으로 내보내기는 `CArchive` DECLARE_SERIAL 및 IMPLEMENT_SERIAL 매크로 사용 하는 클래스에 대 한 추출 연산자. 대괄호 클래스 선언 하 여 보관 연산자를 내보냅니다 (에 합니다. H 파일)를 다음 코드로:  
   
 ```  
 #undef AFX_API  
@@ -221,9 +221,9 @@ class CExampleView : public CView
 ### <a name="limitations-of-afxext"></a>_AFXEXT의 제한 사항  
  _를 사용할 수 있습니다**AFXEXT** MFC 확장 Dll 오지 않아도 MFC 확장 Dll의 여러 계층에 전처리기 기호입니다. MFC 확장 호출 또는 사용자의 MFC 확장 Dll MFC 클래스에서 다음 파생 되는 클래스에서 파생 되는 Dll이 있는 경우에 모호성을 피하기 위해 사용자 고유의 전처리기 기호를 사용 해야 합니다.  
   
- 이 문제는 해당에 Win32, 모든 데이터를 명시적으로 선언 해야 **__declspec (dllexport)** DLL에서 가져와야 하는 경우 및 **__declspec (dllimport)** DLL에서 가져와야 하는 경우. 정의 하는 경우 `_AFXEXT`, MFC 헤더 되도록 **AFX_EXT_CLASS** 제대로 정의 됩니다.  
+ 이 문제는 해당에 Win32, 모든 데이터를 명시적으로 선언 해야 `__declspec(dllexport)` DLL에서 가져와야 하는 경우 및 `__declspec(dllimport)` DLL에서 가져와야 하는 경우. 정의 하는 경우 `_AFXEXT`, MFC 헤더 되도록 `AFX_EXT_CLASS` 이 올바르게 정의 합니다.  
   
- 있는 경우 여러 개의 레이어, 하나의 기호와 같은 **AFX_EXT_CLASS** MFC 확장 DLL 있습니다 수 새 클래스를 내보낼 뿐만 아니라 다른 MFC 확장 DLL에서에서 다른 클래스를 가져올 이후 충분 하지 않습니다. 이 문제를 해결 하기 위해 작성할 수 있도록 DLL 자체 DLL을 사용 하 여 비교를 나타내는 특수 전처리기 기호를 사용 합니다. 예를 들어 두 개의 MFC 확장 Dll, A.DLL, 및 B.DLL 한다고 가정 합니다. 구성 파일은 각각의 일부 클래스 A.H와 B.H에 각각 내보냅니다. B.DLL은 A.DLL에서 클래스를 사용 합니다. 헤더 파일 모양은 다음과 같습니다.  
+ 있는 경우 여러 개의 레이어, 하나의 기호와 같은 `AFX_EXT_CLASS` MFC 확장 DLL 있습니다 수 새 클래스를 내보낼 뿐만 아니라 다른 MFC 확장 DLL에서에서 다른 클래스를 가져올 이후 충분 하지 않습니다. 이 문제를 해결 하기 위해 작성할 수 있도록 DLL 자체 DLL을 사용 하 여 비교를 나타내는 특수 전처리기 기호를 사용 합니다. 예를 들어 두 개의 MFC 확장 Dll, A.DLL, 및 B.DLL 한다고 가정 합니다. 구성 파일은 각각의 일부 클래스 A.H와 B.H에 각각 내보냅니다. B.DLL은 A.DLL에서 클래스를 사용 합니다. 헤더 파일 모양은 다음과 같습니다.  
   
 ```  
 /* A.H */  
@@ -249,10 +249,10 @@ class CLASS_DECL_B CExampleB : public CExampleA
   
  사용 하 여 빌드 A.DLL를 빌드할 때 **/D A_IMPL** 사용 하 여 빌드 B.DLL를 빌드할 때 및 **/D B_IMPL**합니다. 각 DLL에 대 한 별도 기호를 사용해 CExampleB 내보내집니다이 고 B.DLL를 빌드할 때 CExampleA 가져옵니다. CExampleA는 A.DLL 빌드될 때 이며 B.DLL (또는 다른 클라이언트)가 사용 될 때 가져오게 됩니다.  
   
- 기본 제공을 사용 하는 경우 이러한 유형의 쌓기를 수행할 수 없는 **AFX_EXT_CLASS** 및 `_AFXEXT` 전처리기 기호입니다. 위에서 설명한 기술을 자체 MFC 메커니즘에는 해당 OLE, 데이터베이스 및 네트워크 MFC 확장 Dll을 빌드할 때 사용 하 방식으로이 문제를 해결 합니다.  
+ 기본 제공을 사용 하는 경우 이러한 유형의 쌓기를 수행할 수 없는 `AFX_EXT_CLASS` 및 `_AFXEXT` 전처리기 기호입니다. 위에서 설명한 기술을 자체 MFC 메커니즘에는 해당 OLE, 데이터베이스 및 네트워크 MFC 확장 Dll을 빌드할 때 사용 하 방식으로이 문제를 해결 합니다.  
   
 ### <a name="not-exporting-the-entire-class"></a>전체 클래스를 내보내지 않는 경우  
- 다시, 전체 클래스를 내보내지 않는 경우 각별히 주의 해야 합니다. MFC 매크로로 만들어 필요한 데이터 항목 내보내집니다 확인 해야 합니다. 다시 정의 하 여이 작업을 수행할 수 있습니다 **AFX_DATA** 특정 클래스의 매크로를 합니다. 이렇게 해야 전체 클래스를 내보내지 않는 언제 든 지 합니다.  
+ 다시, 전체 클래스를 내보내지 않는 경우 각별히 주의 해야 합니다. MFC 매크로로 만들어 필요한 데이터 항목 내보내집니다 확인 해야 합니다. 다시 정의 하 여이 작업을 수행할 수 있습니다 `AFX_DATA` 특정 클래스의 매크로를 합니다. 이렇게 해야 전체 클래스를 내보내지 않는 언제 든 지 합니다.  
   
  예를 들어:  
   
@@ -312,22 +312,22 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID)
 }  
 ```  
   
- 에 대 한 호출 `AfxInitExtensionModule` 모듈 런타임 클래스를 캡처합니다 (`CRuntimeClass` 구조)의 개체 팩터리 뿐만 아니라 (`COleObjectFactory` 개체) 사용 하기 위해 뒷부분에 나오는 경우에는 **CDynLinkLibrary** 개체가 만들어집니다. (선택 사항) 호출 `AfxTermExtensionModule` 허용 MFC 정리에 MFC 확장 DLL 각 프로세스를 분리할 경우 (때나의 결과로 DLL이 언로드되어 프로세스가 종료 될 때 발생 하는 **FreeLibrary** 호출) MFC 확장 DLL에서 . 이후 대부분 MFC 확장 Dll을 동적으로 로드 되지 않습니다 (일반적으로 연결 된 해당 가져오기 라이브러리를 통해)에 대 한 호출 `AfxTermExtensionModule` 일반적으로 필요 하지 않습니다.  
+ 에 대 한 호출 `AfxInitExtensionModule` 모듈 런타임 클래스를 캡처합니다 (`CRuntimeClass` 구조)의 개체 팩터리 뿐만 아니라 (`COleObjectFactory` 개체) 사용 하기 위해 뒷부분에 나오는 경우에는 `CDynLinkLibrary` 개체가 만들어집니다. (선택 사항) 호출 `AfxTermExtensionModule` 허용 MFC 정리에 MFC 확장 DLL 각 프로세스를 분리할 경우 (때나의 결과로 DLL이 언로드되어 프로세스가 종료 될 때 발생 하는 `FreeLibrary` 호출) MFC 확장 DLL에서에서 합니다. 이후 대부분 MFC 확장 Dll을 동적으로 로드 되지 않습니다 (일반적으로 연결 된 해당 가져오기 라이브러리를 통해)에 대 한 호출 `AfxTermExtensionModule` 일반적으로 필요 하지 않습니다.  
   
- 응용 프로그램을 로드 하 MFC 확장 Dll을 동적으로 확보 하는 경우 호출 해야 `AfxTermExtensionModule` 위와 같이 합니다. 또한 사용 해야 `AfxLoadLibrary` 및 `AfxFreeLibrary` (Win32 함수 대신 **LoadLibrary** 및 **FreeLibrary**) 또는 MFC를 동적으로 로드 되는 경우 응용 프로그램은 여러 스레드를 사용 하는 경우 확장 DLL입니다. 사용 하 여 `AfxLoadLibrary` 및 `AfxFreeLibrary` MFC 확장 DLL이 로드 되거나 언로드될 때 실행 되는 시작 및 종료 코드 전역 MFC 상태가 손상 되지 않는 시나리오입니다.  
+ 응용 프로그램을 로드 하 MFC 확장 Dll을 동적으로 확보 하는 경우 호출 해야 `AfxTermExtensionModule` 위와 같이 합니다. 또한 사용 해야 `AfxLoadLibrary` 및 `AfxFreeLibrary` (Win32 함수 대신 `LoadLibrary` 및 `FreeLibrary`) 응용 프로그램은 여러 스레드를 사용 하는 경우 또는 동적으로 MFC 확장 DLL을 로드 하는 경우. 사용 하 여 `AfxLoadLibrary` 및 `AfxFreeLibrary` MFC 확장 DLL이 로드 되거나 언로드될 때 실행 되는 시작 및 종료 코드 전역 MFC 상태가 손상 되지 않는 시나리오입니다.  
   
- 헤더 파일 AFXDLLX입니다. 에 대 한 정의와 같은 MFC 확장 Dll에서 사용 되는 구조에 대 한 특별 한 정의 포함 하는 H `AFX_EXTENSION_MODULE` 및 **CDynLinkLibrary**합니다.  
+ 헤더 파일 AFXDLLX입니다. 에 대 한 정의와 같은 MFC 확장 Dll에서 사용 되는 구조에 대 한 특별 한 정의 포함 하는 H `AFX_EXTENSION_MODULE` 및 `CDynLinkLibrary`합니다.  
   
  전역 *extensionDLL* 표시 된 것으로 선언 해야 합니다. 16 비트 버전의 MFC와는 달리 메모리를 할당할를 시간순으로 MFCxx.DLL 완전히 초기화 된 후이 시간 동안 MFC 함수를 호출할 수 있습니다 프로그램 `DllMain` 호출 됩니다.  
   
 ### <a name="sharing-resources-and-classes"></a>공유 리소스 및 클래스  
  간단한 MFC 확장 Dll 클라이언트 응용 프로그램에 아무 것도 더 몇 가지 낮은 대역폭 함수를 내보낼만 필요 합니다. 더 많은 사용자 인터페이스 집약적인 Dll 리소스와 c + + 클래스를 클라이언트 응용 프로그램 내보낼 수도 있습니다.  
   
- 리소스 내보내기 리소스 목록을 통해 수행 됩니다. 각 응용 프로그램에는 단일 연결된 목록이 **CDynLinkLibrary** 개체입니다. 대부분의 리소스를 로드 하는 표준 MFC 구현에서는 현재 리소스 모듈에서 먼저 찾습니다 리소스를 찾을 때는 (`AfxGetResourceHandle`) 및 워크 찾을 수 없습니다. 목록 **CDynLinkLibrary** 로드 하려고 하는 개체는 요청 된 리소스입니다.  
+ 리소스 내보내기 리소스 목록을 통해 수행 됩니다. 각 응용 프로그램에는 단일 연결된 목록이 `CDynLinkLibrary` 개체입니다. 대부분의 리소스를 로드 하는 표준 MFC 구현에서는 현재 리소스 모듈에서 먼저 찾습니다 리소스를 찾을 때는 (`AfxGetResourceHandle`) 및 워크 찾을 수 없습니다. 목록 `CDynLinkLibrary` 요청된 된 리소스를 로드 하려고 하는 개체입니다.  
   
  C + + 클래스 이름이 지정 된 c + + 개체의 동적 생성은 유사 합니다. MFC 개체의 deserialization 메커니즘의 일부 요구 된 `CRuntimeClass` 개체를 등록 하 여 동적으로 저장 된 순서에 따라 필요한 형식의 c + + 개체를 만들거나 다시 구성할 수 있습니다.  
   
- MFC 확장 DLL에에서 클래스를 사용 하도록 클라이언트 응용 프로그램 `DECLARE_SERIAL`, 클라이언트 응용 프로그램에 표시 되도록 클래스를 내보낼 해야 합니다. 검색 하 여도 이렇게는 **CDynLinkLibrary** 목록입니다.  
+ MFC 확장 DLL에에서 클래스를 사용 하도록 클라이언트 응용 프로그램 `DECLARE_SERIAL`, 클라이언트 응용 프로그램에 표시 되도록 클래스를 내보낼 해야 합니다. 검색 하 여도 이렇게는 `CDynLinkLibrary` 목록입니다.  
   
  MFC 고급 개념 샘플의 경우 [DLLHUSK](../visual-cpp-samples.md), 같이 목록을 표시 합니다.  
   
@@ -344,14 +344,14 @@ head ->   DLLHUSK.EXE   - or -   DLLHUSK.EXE
   
  MFCxx.DLL은 대개 마지막 리소스 및 클래스 목록에 있습니다. MFCxx.DLL 모든 모든 표준 명령 Id에 대 한 프롬프트 문자열을 포함 하 여 표준 MFC 리소스를 포함 합니다. Dll과 클라이언트 응용 프로그램 자체에 없는 목록의 끝에 배치 될 수 있습니다는 표준 MFC 리소스에는 공유의 리소스에 의존 MFCxx.DLL 대신 하지만 자체 복사본입니다.  
   
- 클라이언트 응용 프로그램의 네임 스페이스에는 리소스 및 모든 Dll의 클래스 이름을 병합 하는 것에 어떤 Id 않도록 주의 해야 하는 단점이 또는 이름을 선택할 수 있습니다. 물론 여 비활성화할 수 있습니다이 기능 중 하나를 내보내지 않는 경우 리소스 또는 **CDynLinkLibrary** 클라이언트 응용 프로그램에는 개체입니다. [DLLHUSK](../visual-cpp-samples.md) 샘플에서는 여러 헤더 파일을 사용 하 여 공유 리소스 네임 스페이스를 관리 합니다. 참조 [기술 참고 35](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md) 자세한 방법에 대 한 공유 리소스 파일을 사용 합니다.  
+ 클라이언트 응용 프로그램의 네임 스페이스에는 리소스 및 모든 Dll의 클래스 이름을 병합 하는 것에 어떤 Id 않도록 주의 해야 하는 단점이 또는 이름을 선택할 수 있습니다. 물론 여 비활성화할 수 있습니다이 기능 중 하나를 내보내지 않는 경우 리소스 또는 `CDynLinkLibrary` 클라이언트 응용 프로그램에는 개체입니다. [DLLHUSK](../visual-cpp-samples.md) 샘플에서는 여러 헤더 파일을 사용 하 여 공유 리소스 네임 스페이스를 관리 합니다. 참조 [기술 참고 35](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md) 자세한 방법에 대 한 공유 리소스 파일을 사용 합니다.  
   
 ### <a name="initializing-the-dll"></a>DLL 초기화  
- 위에서 설명 했 듯이 일반적으로 만들려는 **CDynLinkLibrary** 클라이언트 응용 프로그램 리소스 및 클래스를 내보내려면 개체입니다. DLL 초기화에 대 한 내보낸된 진입점을 제공 해야 합니다. 최소한,이 인수가 없는 하 고 아무 것도 반환 하는 void 루틴 이지만 필요 하면 수 있습니다.  
+ 위에서 설명 했 듯이 일반적으로 만들려는 `CDynLinkLibrary` 클라이언트 응용 프로그램 리소스 및 클래스를 내보내려면 개체입니다. DLL 초기화에 대 한 내보낸된 진입점을 제공 해야 합니다. 최소한,이 인수가 없는 하 고 아무 것도 반환 하는 void 루틴 이지만 필요 하면 수 있습니다.  
   
- 이 방법을 사용 하면 DLL을 사용 하는 각 클라이언트 응용 프로그램이 초기화 루틴을 호출 해야 합니다. 이 할당할 수도 있습니다 **CDynLinkLibrary** 개체 프로그램 `DllMain` 호출 후 바로 `AfxInitExtensionModule`합니다.  
+ 이 방법을 사용 하면 DLL을 사용 하는 각 클라이언트 응용 프로그램이 초기화 루틴을 호출 해야 합니다. 이 할당할 수도 있습니다 `CDynLinkLibrary` 개체 프로그램 `DllMain` 호출 후 바로 `AfxInitExtensionModule`합니다.  
   
- 초기화 루틴을 만들어야는 **CDynLinkLibrary** MFC 확장 DLL 정보 된 현재 응용 프로그램의 힙에서 개체입니다. 다음 항목과 작업을 수행할 수 있습니다.  
+ 초기화 루틴을 만들어야는 `CDynLinkLibrary` MFC 확장 DLL 정보 된 현재 응용 프로그램의 힙에서 개체입니다. 다음 항목과 작업을 수행할 수 있습니다.  
   
 ```  
 extern "C" extern void WINAPI InitXxxDLL()  
@@ -361,13 +361,13 @@ extern "C" extern void WINAPI InitXxxDLL()
 }  
 ```  
   
- 루틴 이름을 *InitXxxDLL* 이 예제에서는 원하는 대로 될 수 있습니다. 될 필요가 없습니다 `extern "C"`, 그렇게 쉽게 유지 관리 하는 내보내기 목록 하지만 합니다.  
+ 루틴 이름을 *InitXxxDLL* 이 예제에서는 원하는 대로 될 수 있습니다. 될 필요가 없습니다 **extern "C"**, 그렇게 쉽게 유지 관리 하는 내보내기 목록 하지만 합니다.  
   
 > [!NOTE]
 >  일반 MFC DLL에서에서 MFC 확장 DLL을 사용 하는 경우이 초기화 함수를 내보내야 합니다. 이 함수는 MFC 확장 DLL 클래스 또는 리소스를 사용 하기 전에 일반적인 MFC DLL에서 호출 되어야 합니다.  
   
 ### <a name="exporting-entries"></a>항목 내보내기  
- 프로그램 클래스를 내보내면 간단한 방법을 사용 하는 것 **__declspec (dllimport)** 및 **__declspec (dllexport)** 각 클래스 및 전역 함수를 내보내려면 합니다. 이 사용 하면 훨씬 쉽게 하지만 어떤 함수는 내보내집니다 제어할 있고 서 수로 함수를 내보낼 수 없습니다 (아래 설명 참조) 각 진입점 이름이 보다 효율성이 떨어집니다. TESTDLL1 및 TESTDLL2 내보낼 항목의이 메서드를 사용 합니다.  
+ 프로그램 클래스를 내보내면 간단한 방법을 사용 하는 것 `__declspec(dllimport)` 및 `__declspec(dllexport)` 각 클래스 및 전역 함수를 내보내려면 합니다. 이 사용 하면 훨씬 쉽게 하지만 어떤 함수는 내보내집니다 제어할 있고 서 수로 함수를 내보낼 수 없습니다 (아래 설명 참조) 각 진입점 이름이 보다 효율성이 떨어집니다. TESTDLL1 및 TESTDLL2 내보낼 항목의이 메서드를 사용 합니다.  
   
  각 항목의 이름을 지정 하 여 각 항목을 수동으로 내보낼 하는 것 보다 효율적인 메서드 (및 MFCxx.DLL 사용 하는 방법)는입니다. DEF 파일입니다. (즉, 것은 아닙니다) DLL에서 선택적 내보내기의 내보내는 것 때문 내보낼을 특정 인터페이스를 결정 해야 합니다. 에 있는 항목의 형태로 링커에 형식 표시 이름을 지정 해야 하므로 어렵습니다는 합니다. DEF 파일입니다. 것에 대 한 기호화 된 링크를 포함 하는 데 필요한 것 하지 않는 한 모든 c + + 클래스를 내보내지 마십시오.  
   
@@ -376,10 +376,10 @@ extern "C" extern void WINAPI InitXxxDLL()
 ### <a name="cwinapp-vs-cdynlinklibrary"></a>CWinApp vs입니다. CDynLinkLibrary  
  MFC 확장 DLL에 없는 한 `CWinApp`-파생 개체 자체의; 대신 사용 해야는 `CWinApp`-클라이언트 응용 프로그램의 개체를 파생 합니다. 이 클라이언트 응용 프로그램 등 유휴 루프가 기본 메시지 펌프를 소유 함을 의미 합니다.  
   
- 새 클래스를 파생 시켜 MFC 확장 DLL을 각 응용 프로그램에 대 한 추가 데이터를 유지 관리 하는 경우 **CDynLinkLibrary** 위에 설명 된 루틴 InitXxxDLL에 만듭니다. DLL의 현재 응용 프로그램의 목록을 확인할 수를 실행할 때 **CDynLinkLibrary** 해당 특정 MFC 확장 DLL에 대 한 찾을 개체입니다.  
+ 새 클래스를 파생 시켜 MFC 확장 DLL을 각 응용 프로그램에 대 한 추가 데이터를 유지 관리 하는 경우 `CDynLinkLibrary` 위에 설명 된 루틴 InitXxxDLL에 만듭니다. DLL의 현재 응용 프로그램의 목록을 확인할 수를 실행할 때 `CDynLinkLibrary` 해당 특정 MFC 확장 DLL에 대 한 찾을 개체입니다.  
   
 ### <a name="using-resources-in-your-dll-implementation"></a>리소스 DLL 구현에서 사용 하 여  
- 기본 리소스 부하의 목록으로 이동 됩니다 위에서 설명 했 듯이 **CDynLinkLibrary** 첫 번째 EXE 또는 DLL가 요청된 된 리소스를 찾고 개체입니다. MFC는 모든 Api 뿐만 아니라 내부 코드를 사용 하 여 모든 `AfxFindResourceHandle` 에 상주할 수 있습니다에 관계 없이 모든 리소스를 찾을 리소스 목록으로 이동 합니다.  
+ 기본 리소스 부하의 목록으로 이동 됩니다 위에서 설명 했 듯이 `CDynLinkLibrary` 첫 번째 EXE 또는 DLL가 요청된 된 리소스를 찾고 개체입니다. MFC는 모든 Api 뿐만 아니라 내부 코드를 사용 하 여 모든 `AfxFindResourceHandle` 에 상주할 수 있습니다에 관계 없이 모든 리소스를 찾을 리소스 목록으로 이동 합니다.  
   
  Api를 사용 하 여만 특정 위치에서 리소스를 로드 하려는 경우 `AfxGetResourceHandle` 및 `AfxSetResourceHandle` 하 기존 핸들을 저장 하 고 새 핸들을 설정 합니다. 클라이언트 응용 프로그램에 반환 하기 전에 이전 리소스 핸들을 복원 해야 합니다. 샘플 TESTDLL2 메뉴를 명시적으로 로드 하기 위한이 접근 방식을 사용 합니다.  
   
@@ -452,9 +452,9 @@ extern "C" extern void WINAPI InitXxxDLL()
  16 비트 버전의 MFC 다양 한 앱 별 데이터를 포함 한 스택 세그먼트 일부 80x86 어셈블리 코드, 프로세스별 예외 컨텍스트 및 기타 기술에서 만든 특수 한 세그먼트 특수 기술이 필요 합니다. Win32 직접 데이터를 지원 프로세스별 DLL에서가 원하는 대부분의 시간입니다. 대부분의 경우 MFCxx.DLL NAFXCW 뿐입니다. LIB DLL 파일로 패키지 합니다. MFC 소스 코드를 보면 수행 되어야 하는 특수 한 상황이 거의 있으므로 매우 적은 #ifdef _AFXDLL을 찾을 수 있습니다. 없는 특별히 Windows 3.1 (Win32s 라고도 함)에 Win32을 처리 하는 특수 한 경우 Win32s는 MFC DLL 스레드 로컬 저장소 (TLS) 프로세스 로컬 데이터를 가져오기 위해 Win32 Api 사용 해야 하므로 직접 프로세스별 DLL 데이터를 지원 하지 않습니다.  
   
 ### <a name="impact-on-library-sources-additional-files"></a>원본 라이브러리 추가 파일에 대 한 영향  
- 영향은 **_AFXDLL** 일반적인 MFC 클래스 라이브러리 소스 및 헤더에서 버전은 비교적 적습니다. 특수 버전 파일이 (AFXV_DLL 합니다. H) 뿐만 아니라 추가 헤더 파일 (AFXDLL_ 합니다. H) 주 AFXWIN으로 포함 합니다. H 헤더입니다. AFXDLL_ 합니다. H 헤더에 포함 됩니다는 **CDynLinkLibrary** 클래스 및 기타 구현 세부 사항을 모두 **_AFXDLL** 응용 프로그램 및 MFC 확장 Dll입니다. AFXDLLX 합니다. MFC 확장명 Dll (자세한 내용은 위 참조)를 구축 하기 위한 H 헤더 파일에 제공 됩니다.  
+ 영향은 **_AFXDLL** 일반적인 MFC 클래스 라이브러리 소스 및 헤더에서 버전은 비교적 적습니다. 특수 버전 파일이 (AFXV_DLL 합니다. H) 뿐만 아니라 추가 헤더 파일 (AFXDLL_ 합니다. H) 주 AFXWIN으로 포함 합니다. H 헤더입니다. AFXDLL_ 합니다. H 헤더에 포함 됩니다는 `CDynLinkLibrary` 클래스 및 기타 구현 세부 사항을 모두 `_AFXDLL` 응용 프로그램 및 MFC 확장 Dll입니다. AFXDLLX 합니다. MFC 확장명 Dll (자세한 내용은 위 참조)를 구축 하기 위한 H 헤더 파일에 제공 됩니다.  
   
- MFC 라이브러리 MFC SRC에 일반 원본에서 추가 조건부 코드에는 **_AFXDLL** #ifdef 합니다. 추가 원본 파일 (DLLINIT 합니다. 추가 DLL 초기화 코드와 공유 버전의 MFC에 대 한 다른 붙이기 CPP)에 포함 되어 있습니다.  
+ MFC 라이브러리 MFC SRC에 일반 원본에서 추가 조건부 코드에는 `_AFXDLL` #ifdef 합니다. 추가 원본 파일 (DLLINIT 합니다. 추가 DLL 초기화 코드와 공유 버전의 MFC에 대 한 다른 붙이기 CPP)에 포함 되어 있습니다.  
   
  MFC의 공유 버전을 생성 하려면 추가 파일이 제공 됩니다. (아래 참조 DLL을 작성 하는 방법에 대 한 내용은.)  
   
@@ -465,7 +465,7 @@ extern "C" extern void WINAPI InitXxxDLL()
 -   A입니다. CLW 파일 (MFCDLL 합니다. CLW) 클래스 마법사를 사용 하 여 클래스는 MFC 검색을 허용 하도록 제공 됩니다. 참고:이 기능은 MFC의 DLL 버전에 따라 다를 않습니다.  
   
 ### <a name="memory-management"></a>메모리 관리  
- MFCxx.DLL를 사용 하 여 응용 프로그램 MSVCRTxx.DLL, 공유 C 런타임 DLL에서 제공 되는 일반적인 메모리 할당자를 사용 합니다. 응용 프로그램, 모든 MFC 확장명 Dll과 자체는 MFC Dll이 공유 메모리 할당자를 사용합니다. 공유 DLL 메모리 할당에 대 한를 사용 하 여 MFC Dll 응용 프로그램에 의해, 또는 그 반대로 해제 나중에 메모리를 할당할 수 있습니다. 전역 c + +를 재정의 하지 않아야 함 응용 프로그램과 DLL 동일한 할당자를 사용 해야 하므로 `operator new` 또는 `operator delete`합니다. C 런타임 메모리 할당 루틴의 나머지 부분에는 동일한 규칙이 적용 (같은 `malloc`, `realloc`, **무료**, 등).  
+ MFCxx.DLL를 사용 하 여 응용 프로그램 MSVCRTxx.DLL, 공유 C 런타임 DLL에서 제공 되는 일반적인 메모리 할당자를 사용 합니다. 응용 프로그램, 모든 MFC 확장명 Dll과 자체는 MFC Dll이 공유 메모리 할당자를 사용합니다. 공유 DLL 메모리 할당에 대 한를 사용 하 여 MFC Dll 응용 프로그램에 의해, 또는 그 반대로 해제 나중에 메모리를 할당할 수 있습니다. 전역 c + +를 재정의 하지 않아야 함 응용 프로그램과 DLL 동일한 할당자를 사용 해야 하므로 **new 연산자** 또는 **delete 연산자**합니다. C 런타임 메모리 할당 루틴의 나머지 부분에는 동일한 규칙이 적용 (같은 **malloc**, **realloc**, **무료**, 등).  
   
 ### <a name="ordinals-and-class-declspecdllexport-and-dll-naming"></a>서 수 및 클래스 __declspec (dllexport) 및 DLL 이름 지정  
  사용 하지 않습니다는 `class` **__declspec (dllexport)** c + + 컴파일러의 기능입니다. 대신, export 목록 (MFCxx.DEF 및 MFCxxD.DEF) 클래스 라이브러리 소스 포함 되어 있습니다. 진입점 (함수 및 데이터)의 선택이 집합에만 내보내집니다. MFC private 구현 함수 또는 클래스 등의 다른 기호는 내보내지지 않습니다 내보내기를 모두 상주 또는 비 상주 이름 테이블에는 문자열 이름이 없는 서 수로 수행 됩니다.  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98f5a21bd5fa20a40123ce442959125ea62c60d3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7fe5a55afda9e77db6e8baddd68c09f4250071bb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381126"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951203"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>일반적인 FTP 클라이언트 응용 프로그램의 단계
 일반적인 FTP 클라이언트 응용 프로그램을 만듭니다는 [CInternetSession](../mfc/reference/cinternetsession-class.md) 및 [CFtpConnection](../mfc/reference/cftpconnection-class.md) 개체입니다. MFC WinInet 클래스 이러한 실제로 프록시 유형 설정; 제어 하 고 하지 않으므로 참고 IIS는 다음 작업을 수행 하지 않습니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "33381126"
 |서버의 새로운 FTP 디렉터리로 변경합니다.|사용 하 여 [cftpconnection:: Setcurrentdirectory](../mfc/reference/cftpconnection-class.md#setcurrentdirectory)합니다.|서버에서 현재 연결된 디렉터리를 변경합니다.|  
 |FTP 디렉터리에서 첫 번째 파일을 찾습니다.|사용 하 여 [cftpfilefind:: Findfile](../mfc/reference/cftpfilefind-class.md#findfile)합니다.|첫 번째 파일을 찾습니다. 파일이 발견되지 않으면 FALSE를 반환합니다.|  
 |FTP 디렉터리에서 다음 파일을 찾습니다.|사용 하 여 [cftpfilefind:: Findnextfile](../mfc/reference/cftpfilefind-class.md#findnextfile)합니다.|다음 파일을 찾습니다. 파일을 찾을 수 없으면 FALSE를 반환합니다.|  
-|로 찾은 파일을 열고 **FindFile** 또는 `FindNextFile` 읽기 또는 쓰기에 대 한 합니다.|사용 하 여 [CFtpConnection::OpenFile](../mfc/reference/cftpconnection-class.md#openfile), 파일 이름을 사용 하 여 반환한 [FindFile](../mfc/reference/cftpfilefind-class.md#findfile) 또는 [FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile)합니다.|읽기 또는 쓰기에 대 한 서버에서 파일을 엽니다. 반환 된 [CInternetFile](../mfc/reference/cinternetfile-class.md) 개체입니다.|  
+|로 찾은 파일을 열고 `FindFile` 또는 `FindNextFile` 읽기 또는 쓰기에 대 한 합니다.|사용 하 여 [CFtpConnection::OpenFile](../mfc/reference/cftpconnection-class.md#openfile), 파일 이름을 사용 하 여 반환한 [FindFile](../mfc/reference/cftpfilefind-class.md#findfile) 또는 [FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile)합니다.|읽기 또는 쓰기에 대 한 서버에서 파일을 엽니다. 반환 된 [CInternetFile](../mfc/reference/cinternetfile-class.md) 개체입니다.|  
 |읽거나 파일에 씁니다.|사용 하 여 [cinternetfile:: Read](../mfc/reference/cinternetfile-class.md#read) 또는 [CInternetFile::Write](../mfc/reference/cinternetfile-class.md#write)합니다.|읽거나 바이트, 사용자가 제공 하는 버퍼를 사용 하 여 지정 된 수를 씁니다.|  
 |예외 처리|사용 하 여 [CInternetException](../mfc/reference/cinternetexception-class.md) 클래스입니다.|모든 공용 인터넷 예외 형식을 처리합니다.|  
 |FTP 세션을 종료합니다.|삭제 된 [CInternetSession](../mfc/reference/cinternetsession-class.md) 개체입니다.|열린 파일 핸들 및 연결을 자동으로 정리합니다.|  

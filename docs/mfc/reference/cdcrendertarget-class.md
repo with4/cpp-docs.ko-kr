@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4129f57d8985a6e3368a4caf3574669342f06bc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36f8a038cd282ddf233fe2cf15a134c52962ebff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366475"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953703"
 ---
 # <a name="cdcrendertarget-class"></a>CDCRenderTarget 클래스
 ID2D1DCRenderTarget에 대 한 래퍼입니다.  
@@ -72,7 +72,7 @@ class CDCRenderTarget : public CRenderTarget;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|ID2D1DCRenderTarget 개체에 대 한 포인터입니다.|  
   
@@ -94,7 +94,7 @@ void Attach(ID2D1DCRenderTarget* pTarget);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pTarget`  
+ *pTarget*  
  기존 렌더링 대상 인터페이스입니다. NULL 일 수 없습니다.  
   
 ##  <a name="binddc"></a>  CDCRenderTarget::BindDC  
@@ -107,10 +107,10 @@ BOOL BindDC(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dc`  
+ *dc*  
  렌더링 대상의 그리기 명령을 실행 하는 장치 컨텍스트  
   
- `rect`  
+ *rect*  
  렌더링 대상에 연결 된 장치 컨텍스트 (HDC)에 대 한 핸들의 크기  
   
 ### <a name="return-value"></a>반환 값  
@@ -131,7 +131,7 @@ BOOL Create(const D2D1_RENDER_TARGET_PROPERTIES& props);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `props`  
+ *props*  
  렌더링 모드, 픽셀 형식, 원격 옵션, DPI 정보 및 하드웨어 렌더링 하는 데 필요한 최소 DirectX 지원 합니다.  
   
 ### <a name="return-value"></a>반환 값  

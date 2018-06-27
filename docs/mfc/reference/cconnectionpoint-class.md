@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 22793706a67a3d301f88700ca6b43fb9c83e4dc3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d892ea225e3b1c1089447587eb808e56370bbb69
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357392"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952224"
 ---
 # <a name="cconnectionpoint-class"></a>CConnectionPoint 클래스
 "연결점"이라고 하는 다른 OLE 개체와 통신하는 데 사용하는 특별한 형식의 인터페이스를 정의합니다.  
@@ -66,7 +66,7 @@ class CConnectionPoint : public CCmdTarget
 |[CConnectionPoint::GetContainer](#getcontainer)|연결 맵을 소유 하는 컨트롤의 컨테이너를 검색 합니다.|  
 |[CConnectionPoint::GetIID](#getiid)|연결 지점의 인터페이스 ID를 검색합니다.|  
 |[CConnectionPoint::GetMaxConnections](#getmaxconnections)|컨트롤에서 지 원하는 연결 포인트의 최대 수를 검색 합니다.|  
-|[CConnectionPoint::GetNextConnection](#getnextconnection)|에 있는 연결 요소에 대 한 포인터를 검색 `pos`합니다.|  
+|[CConnectionPoint::GetNextConnection](#getnextconnection)|에 있는 연결 요소에 대 한 포인터를 검색 *pos*합니다.|  
 |[CConnectionPoint::GetStartPosition](#getstartposition)|가 반환 하 여 맵 반복을 시작할는 **위치** 에 전달 될 수 있는 값을 `GetNextConnection` 호출 합니다.|  
 |[CConnectionPoint::OnAdvise](#onadvise)|설정 하거나 더 세분화할 연결 때 프레임 워크에서 호출 됩니다.|  
 |[CConnectionPoint::QuerySinkInterface](#querysinkinterface)|요청 된 싱크 인터페이스에 대 한 포인터를 검색합니다.|  
@@ -82,13 +82,13 @@ class CConnectionPoint : public CCmdTarget
   
  [!code-cpp[NVC_MFCConnectionPoints#7](../../mfc/codesnippet/cpp/cconnectionpoint-class_1.h)]  
   
- `BEGIN_CONNECTION_PART` 및 `END_CONNECTION_PART` 매크로 포함 된 클래스를 선언 `XSampleConnPt` (에서 파생 된 `CConnectionPoint`)이 특정 연결 지점을 구현 하는 합니다. 재정의 하려는 경우 `CConnectionPoint` 멤버 함수 또는 자신만의 멤버 함수를 추가, 이러한 두 매크로 사이 선언 합니다. 예를 들어는 `CONNECTION_IID` 매크로 재정의 `CConnectionPoint::GetIID` 이러한 두 매크로 사이 배치 하는 경우 멤버 함수입니다.  
+ BEGIN_CONNECTION_PART 및 END_CONNECTION_PART 매크로 포함 된 클래스를 선언 `XSampleConnPt` (에서 파생 된 `CConnectionPoint`)이 특정 연결 지점을 구현 하는 합니다. 재정의 하려는 경우 `CConnectionPoint` 멤버 함수 또는 자신만의 멤버 함수를 추가, 이러한 두 매크로 사이 선언 합니다. 예를 들어 CONNECTION_IID 매크로 재정의 `CConnectionPoint::GetIID` 이러한 두 매크로 사이 배치 하는 경우 멤버 함수입니다.  
   
  두 번째 코드 조각에서 구현 파일에 삽입 됩니다 (합니다. CPP) control 클래스입니다. 이 코드를 추가 연결 지점을 포함 하 여 연결 맵을 구현 `SampleConnPt`:  
   
  [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/cconnectionpoint-class_2.cpp)]  
   
- 샘플 OLE 컨트롤에 대 한 연결 지점을 노출 면이 코드 조각이 삽입 된 **ISampleSink** 인터페이스입니다.  
+ 샘플 OLE 컨트롤에 대 한 연결 지점을 노출 면이 코드 조각이 삽입 된 `ISampleSink` 인터페이스입니다.  
   
  일반적으로 연결점 "멀티 캐스팅"를 브로드캐스트하는 여러 개의 싱크 같은 인터페이스에 연결 하는 기능을 지원 합니다. 다음 코드 조각에서는 연결 지점에 대해 각 싱크를 반복 하 여 멀티 캐스팅을 수행 하는 방법을 보여 줍니다.  
   
@@ -136,7 +136,7 @@ virtual LPCONNECTIONPOINTCONTAINER GetContainer();
  성공 하면 컨테이너;에 대 한 포인터 그렇지 않으면 **NULL**합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 함수는 일반적으로 구현 하는 `BEGIN_CONNECTION_PART` 매크로입니다.  
+ 이 함수는 일반적으로 BEGIN_CONNECTION_PART 매크로 의해 구현 됩니다.  
   
 ##  <a name="getiid"></a>  CConnectionPoint::GetIID  
  연결 지점의 인터페이스 ID를 검색 하기 위해 프레임 워크에서 호출 됩니다.  
@@ -167,23 +167,23 @@ virtual int GetMaxConnections();
  컨트롤에 연결할 수 있는 싱크의 수를 제한 하려는 경우이 함수를 재정의 합니다.  
   
 ##  <a name="getnextconnection"></a>  CConnectionPoint::GetNextConnection  
- 에 있는 연결 요소에 대 한 포인터를 검색 `pos`합니다.  
+ 에 있는 연결 요소에 대 한 포인터를 검색 *pos*합니다.  
   
 ```  
 LPUNKNOWN GetNextConnection(POSITION& pos) const;  
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pos`  
+ *pos*  
  에 대 한 참조를 지정 된 **위치** 이전에서 반환 된 값 `GetNextConnection` 또는 [GetStartPosition](#getstartposition) 호출 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 지정한 연결 요소에 대 한 포인터 `pos`, 또는 NULL입니다.  
+ 로 지정한 요소를 연결에 대 한 포인터 *pos*, 또는 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수는 연결 맵에 있는 모든 요소를 통해 반복 하는 데 가장 유용 합니다. 계산할 때,이 함수에서 반환 된 Null을 건너뜁니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCConnectionPoints#4](../../mfc/codesnippet/cpp/cconnectionpoint-class_3.cpp)]  
   
 ##  <a name="getstartposition"></a>  CConnectionPoint::GetStartPosition  
@@ -199,7 +199,7 @@ POSITION GetStartPosition() const;
 ### <a name="remarks"></a>설명  
  반복 순서는 예측할 수 없으며; 따라서 "맵 내에서 요소 첫 번째" 특별 한 의미가 없습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CConnectionPoint::GetNextConnection](#getnextconnection)합니다.  
   
 ##  <a name="onadvise"></a>  CConnectionPoint::OnAdvise  
@@ -210,7 +210,7 @@ virtual void OnAdvise(BOOL bAdvise);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bAdvise`  
+ *bAdvise*  
  **True 이면**연결 되 고, 그렇지 않으면 설정 된 경우, **FALSE**합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -228,11 +228,11 @@ virtual HRESULT QuerySinkInterface(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pUnkSink`  
+ *pUnkSink*  
  요청 되 고 싱크 인터페이스의 식별자입니다.  
   
- `ppInterface`  
- 로 식별 되는 인터페이스 포인터에 대 한 포인터 `pUnkSink`합니다. 개체가이 인터페이스를 지원 하지 않는 경우 \* `ppInterface` 로 설정 된 **NULL**합니다.  
+ *ppInterface*  
+ 으로 식별 된 인터페이스 포인터에 대 한 포인터 *pUnkSink*합니다. 개체가이 인터페이스를 지원 하지 않는 경우 \* *ppInterface* 로 설정 된 **NULL**합니다.  
   
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  

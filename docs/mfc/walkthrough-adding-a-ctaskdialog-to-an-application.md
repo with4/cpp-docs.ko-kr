@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b2c10583a4c3fc2b988e50c15b6c1dcf206af65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e8e6c7d5f8144b2aec6c7783680feeff5f6f8a1
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384913"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951626"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>연습: 응용 프로그램에 CTaskDialog 추가
 이 연습에서는 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) 를 소개하고 이를 응용 프로그램에 추가하는 방법을 보여 줍니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "33384913"
   
 #### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>Windows 메시지 상자를 CTaskDialog로 대체하려면  
   
-1.  기본 설정으로 새 MFC 응용 프로그램 프로젝트를 만듭니다. 이를 `MyProject`라고 합니다.  
+1.  기본 설정으로 새 MFC 응용 프로그램 프로젝트를 만듭니다. 호출 *MyProject*합니다.  
   
 2.  **솔루션 탐색기** 를 사용하여 MyProject.cpp 파일을 엽니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "33384913"
  }  
  ```  
   
-6.  5단계의 `if` 문 뒤에 다음 코드를 대괄호로 묶어 삽입합니다. 이 코드는 `CTaskDialog`를 만듭니다.  
+6.  삽입 후 대괄호 사이 다음 코드는 **경우** 5 단계에서 문을 합니다. 이 코드는 `CTaskDialog`를 만듭니다.  
   
  ```  
     CTaskDialog taskDialog(message,
@@ -111,9 +111,9 @@ ms.locfileid: "33384913"
   
 2.  **문자열 테이블** 폴더를 선택할 수 있을 때까지 **리소스 뷰** 를 확장합니다. 폴더를 확장하고 **문자열 테이블** 항목을 두 번 클릭합니다.  
   
-3.  문자열 테이블의 아래쪽으로 스크롤한 다음 새 항목을 추가합니다. ID를 `TEMP_LINE1`로 변경합니다. 캡션을 **Command Line 1**로 설정합니다.  
+3.  문자열 테이블의 아래쪽으로 스크롤한 다음 새 항목을 추가합니다. ID를 변경 *TEMP_LINE1*합니다. 캡션을 설정 *Command Line 1*합니다.  
   
-4.  다른 새 항목을 추가합니다. ID를 `TEMP_LINE2`로 변경합니다. 캡션을 **Command Line 2**로 설정합니다.  
+4.  다른 새 항목을 추가합니다. ID를 변경 *TEMP_LINE2*합니다. 캡션을 설정 *Command Line 2*합니다.  
   
 5.  MyProject.cpp로 다시 이동합니다.  
   
@@ -192,7 +192,7 @@ ms.locfileid: "33384913"
   
 2.  `if (CTaskDialog::IsSupported())` 문에 대한 오른쪽 대괄호로 이동합니다.  
   
-3.  `if` 문의 오른쪽 대괄호 바로 앞( `else` 블록의 앞)에 다음 코드를 삽입합니다.  
+3.  삽입의 닫는 괄호 바로 앞에 다음 코드는 **경우** 문 (전에 **다른** 블록):  
   
  ```  
     HRESULT result2 = CTaskDialog::ShowDialog(L"My error message",

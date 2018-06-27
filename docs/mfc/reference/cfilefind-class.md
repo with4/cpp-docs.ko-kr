@@ -66,12 +66,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf77a5581dd9e8c9181c61287b6032f700d7d64b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de63a53e23f4ea22a6fe8df7ab55bfc57d409779
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376573"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955078"
 ---
 # <a name="cfilefind-class"></a>CFileFind 클래스
 로컬 파일 검색을 수행 하 고는 기본 클래스에 대 한 [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) 및 [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md), 인터넷 파일 검색을 수행 합니다.  
@@ -125,7 +125,7 @@ class CFileFind : public CObject
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CFileFind::m_pTM](#m_ptm)|`CAtlTransactionManager` 개체에 대한 포인터입니다.|  
   
@@ -159,10 +159,10 @@ CFileFind(CAtlTransactionManager* pTM);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pTM`  
+ *pTM*  
  CAtlTransactionManager 개체에 대한 포인터  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileFind::GetFileName](#getfilename)합니다.  
   
 ##  <a name="close"></a>  CFileFind::Close  
@@ -175,7 +175,7 @@ void Close();
 ### <a name="remarks"></a>설명  
  호출한 후 **닫기**, 새 필요가 없습니다 `CFileFind` 호출 하기 전에 인스턴스 [FindFile](#findfile) 새 검색을 시작 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileFind::GetFileName](#getfilename)합니다.  
   
 ##  <a name="closecontext"></a>  CFileFind::CloseContext  
@@ -188,7 +188,7 @@ virtual void CloseContext();
 ### <a name="remarks"></a>설명  
  검색 핸들의 현재 값으로 지정 된 파일을 닫습니다. 기본 동작을 변경 하려면이 함수를 재정의 합니다.  
   
- 호출 해야 합니다는 [FindFile](#findfile) 또는 [FindNextFile](#findnextfile) 함수를 한 번 이상 유효한 검색 핸들을 가져올 수 있습니다. **FindFile** 및 `FindNextFile` 함수 이름이 지정 된 이름과 일치 하는 파일을 찾으려면 검색 핸들을 사용 합니다.  
+ 호출 해야 합니다는 [FindFile](#findfile) 또는 [FindNextFile](#findnextfile) 함수를 한 번 이상 유효한 검색 핸들을 가져올 수 있습니다. `FindFile` 및 `FindNextFile` 함수 이름이 지정 된 이름과 일치 하는 파일을 찾으려면 검색 핸들을 사용 합니다.  
   
 ##  <a name="findfile"></a>  CFileFind::FindFile  
  파일 검색을 열려면이 멤버 함수를 호출 합니다.  
@@ -200,17 +200,17 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pstrName`  
- 찾으려는 파일의 이름을 포함 하는 문자열에 대 한 포인터입니다. 전달 하는 경우 **NULL** 에 대 한 `pstrName`, **FindFile** 는 와일드 카드 (*.\*) 검색 합니다.  
+ *pstrName*  
+ 찾으려는 파일의 이름을 포함 하는 문자열에 대 한 포인터입니다. 전달 하는 경우 **NULL** 에 대 한 *pstrName*, **FindFile** 는 와일드 카드 (*.\*) 검색 합니다.  
   
  *dwUnused*  
- 확인 하기 위해 예약 된 **FindFile** 파생된 클래스와 함께 다형 합니다. 0 이어야 합니다.  
+ 확인 하기 위해 예약 된 `FindFile` 파생된 클래스와 함께 다형 합니다. 0 이어야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다. 가져올 확장 오류 정보를 Win32 함수 호출 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)합니다.  
   
 ### <a name="remarks"></a>설명  
- 호출한 후 **FindFile** 파일 검색을 시작 하려면 [FindNextFile](#findnextfile) 후속 파일을 검색 합니다. 호출 해야 `FindNextFile` 멤버 함수는 다음 특성 중 하나를 호출 하기 전에 한 번 이상:  
+ 호출한 후 `FindFile` 파일 검색을 시작 하려면 [FindNextFile](#findnextfile) 후속 파일을 검색 합니다. 호출 해야 `FindNextFile` 멤버 함수는 다음 특성 중 하나를 호출 하기 전에 한 번 이상:  
   
 - [GetCreationTime](#getcreationtime)  
   
@@ -250,7 +250,7 @@ virtual BOOL FindFile(
   
 - [MatchesMask](#matchesmask)  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileFind::IsDirectory](#isdirectory)합니다.  
   
 ##  <a name="findnextfile"></a>  CFileFind::FindNextFile  
@@ -306,7 +306,7 @@ virtual BOOL FindNextFile();
   
  `FindNextFile` Win32 함수를 래핑합니다 [FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileFind::IsDirectory](#isdirectory)합니다.  
   
 ##  <a name="getcreationtime"></a>  CFileFind::GetCreationTime  
@@ -318,10 +318,10 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pTimeStamp`  
+ *pTimeStamp*  
  에 대 한 포인터는 [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) 파일을 만든 시간을 포함 하는 구조입니다.  
   
- `refTime`  
+ *refTime*  
  에 대 한 참조는 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -333,7 +333,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 > [!NOTE]
 >  일부 파일 시스템이이 함수에서 반환 된 타임 스탬프를 구현 하려면 동일한 의미 체계를 사용 합니다. 이 함수는 기본 파일 시스템 또는 서버에서 시간 특성을 유지 지원 하지 않으면 다른 타임 스탬프 함수에서 반환 되는 동일한 값을 반환할 수 있습니다. 참조는 [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) 시간 형식에 대 한 정보에 대 한 구조입니다. 일부 운영 체제에 반환 된 시간이 영역 로컬 컴퓨터에이 파일은 된 시간입니다. Win32 참조 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API에 대 한 자세한 내용은 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileFind::GetLength](#getlength)합니다.  
   
 ##  <a name="getfilename"></a>  CFileFind::GetFileName  
@@ -357,7 +357,7 @@ virtual CString GetFileName() const;
   
 - [GetFileTitle](#getfiletitle) 파일 확장명 제외 하 고 파일 이름을 반환 합니다. 예를 들어 호출 `GetFileTitle` 파일에 대 한 사용자 메시지를 생성 하 `c:\myhtml\myfile.txt` 파일 제목 반환 `myfile`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#32](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_2.cpp)]  
   
 ##  <a name="getfilepath"></a>  CFileFind::GetFilePath  
@@ -381,7 +381,7 @@ virtual CString GetFilePath() const;
   
 - [GetFileTitle](#getfiletitle) 파일 확장명 제외 하 고 파일 이름을 반환 합니다. 예를 들어 호출 `GetFileTitle` 파일에 대 한 사용자 메시지를 생성 하 `c:\myhtml\myfile.txt` 파일 제목 반환 `myfile`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileFind::GetFileName](#getfilename)합니다.  
   
 ##  <a name="getfiletitle"></a>  CFileFind::GetFileTitle  
@@ -405,7 +405,7 @@ virtual CString GetFileTitle() const;
   
 - `GetFileTitle` 파일 확장명의 파일 이름을 반환 합니다. 예를 들어 호출 `GetFileTitle` 파일에 대 한 사용자 메시지를 생성 하 `c:\myhtml\myfile.txt` 파일 제목 반환 `myfile`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileFind::GetFileName](#getfilename)합니다.  
   
 ##  <a name="getfileurl"></a>  CFileFind::GetFileURL  
@@ -423,7 +423,7 @@ virtual CString GetFileURL() const;
   
  `GetFileURL` 멤버 함수에 유사한 [GetFilePath](#getfilepath)URL 형태로 반환 되는 점을 제외 하 고, `file://path`합니다. 예를 들어 호출 `GetFileURL` 에 대 한 전체 URL을 가져올 `myfile.txt` URL 반환 `file://c:\myhtml\myfile.txt`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileFind::GetFileName](#getfilename)합니다.  
   
 ##  <a name="getlastaccesstime"></a>  CFileFind::GetLastAccessTime  
@@ -435,10 +435,10 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `refTime`  
+ *refTime*  
  에 대 한 참조는 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체입니다.  
   
- `pTimeStamp`  
+ *pTimeStamp*  
  에 대 한 포인터는 [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) 파일에 마지막으로 액세스 한 시간을 포함 하는 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -450,7 +450,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 > [!NOTE]
 >  일부 파일 시스템이이 함수에서 반환 된 타임 스탬프를 구현 하려면 동일한 의미 체계를 사용 합니다. 이 함수는 기본 파일 시스템 또는 서버에서 시간 특성을 유지 지원 하지 않으면 다른 타임 스탬프 함수에서 반환 되는 동일한 값을 반환할 수 있습니다. 참조는 [Win32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) 시간 형식에 대 한 정보에 대 한 구조입니다. 일부 운영 체제에 반환 된 시간이 영역 로컬 컴퓨터에이 파일은 된 시간입니다. Win32 참조 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API에 대 한 자세한 내용은 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileFind::GetLength](#getlength)합니다.  
   
 ##  <a name="getlastwritetime"></a>  CFileFind::GetLastWriteTime  
@@ -462,10 +462,10 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pTimeStamp`  
+ *pTimeStamp*  
  에 대 한 포인터는 [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) 파일에 마지막으로 쓴 시간을 포함 하는 구조입니다.  
   
- `refTime`  
+ *refTime*  
  에 대 한 참조는 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -477,7 +477,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 > [!NOTE]
 >  일부 파일 시스템이이 함수에서 반환 된 타임 스탬프를 구현 하려면 동일한 의미 체계를 사용 합니다. 이 함수는 기본 파일 시스템 또는 서버에서 시간 특성을 유지 지원 하지 않으면 다른 타임 스탬프 함수에서 반환 되는 동일한 값을 반환할 수 있습니다. 참조는 [Win32_Find_Data](http://msdn.microsoft.com/library/windows/desktop/aa365740) 시간 형식에 대 한 정보에 대 한 구조입니다. 일부 운영 체제에 반환 된 시간이 영역 로컬 컴퓨터에이 파일은 된 시간입니다. Win32 참조 [FileTimeToLocalFileTime](http://msdn.microsoft.com/library/windows/desktop/ms724277) API에 대 한 자세한 내용은 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileFind::GetLength](#getlength)합니다.  
   
 ##  <a name="getlength"></a>  CFileFind::GetLength  
@@ -498,7 +498,7 @@ ULONGLONG GetLength() const;
 > [!NOTE]
 >  MFC 7.0부터 `GetLength` 64 비트 정수 형식을 지원 합니다. 이전에이 최신 버전의 라이브러리를 사용 하 여 작성 하는 기존 코드 잘림 경고가 발생할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#33](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_3.cpp)]  
   
 ##  <a name="getroot"></a>  CFileFind::GetRoot  
@@ -516,7 +516,7 @@ virtual CString GetRoot() const;
   
  이 멤버 함수에 드라이브 지정자 및 검색을 시작 하는 데 사용 하는 경로 이름을 반환 합니다. 예를 들어 호출 [FindFile](#findfile) 와 `*.dat` 으로 인해 `GetRoot` 빈 문자열을 반환 합니다. 같은 경로 전달 `c:\windows\system\*.dll`을 **FindFile** 결과 `GetRoot` 반환 `c:\windows\system\`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileFind::GetFileName](#getfilename)합니다.  
   
 ##  <a name="isarchived"></a>  CFileFind::IsArchived  
@@ -536,7 +536,7 @@ BOOL IsArchived() const;
   
  멤버 함수를 참조 하십시오. [MatchesMask](#matchesmask) 파일 특성의 전체 목록은 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileFind::GetLength](#getlength)합니다.  
   
 ##  <a name="iscompressed"></a>  CFileFind::IsCompressed  
@@ -556,7 +556,7 @@ BOOL IsCompressed() const;
   
  멤버 함수를 참조 하십시오. [MatchesMask](#matchesmask) 파일 특성의 전체 목록은 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileFind::GetLength](#getlength)합니다.  
   
 ##  <a name="isdirectory"></a>  CFileFind::IsDirectory  
@@ -576,7 +576,7 @@ BOOL IsDirectory() const;
   
  멤버 함수를 참조 하십시오. [MatchesMask](#matchesmask) 파일 특성의 전체 목록은 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  이 작은 프로그램 재귀 C:\ 드라이브에 모든 디렉터리와 디렉터리의 이름을 출력 합니다.  
   
  [!code-cpp[NVC_MFCFiles#34](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_4.cpp)]  
@@ -594,7 +594,7 @@ virtual BOOL IsDots() const;
 ### <a name="remarks"></a>설명  
  호출 해야 [FindNextFile](#findnextfile) 호출 하기 전에 한 번 이상 `IsDots`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileFind::IsDirectory](#isdirectory)합니다.  
   
 ##  <a name="ishidden"></a>  CFileFind::IsHidden  
@@ -614,7 +614,7 @@ BOOL IsHidden() const;
   
  멤버 함수를 참조 하십시오. [MatchesMask](#matchesmask) 파일 특성의 전체 목록은 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileFind::GetLength](#getlength)합니다.  
   
 ##  <a name="isnormal"></a>  CFileFind::IsNormal  
@@ -634,7 +634,7 @@ BOOL IsNormal() const;
   
  멤버 함수를 참조 하십시오. [MatchesMask](#matchesmask) 파일 특성의 전체 목록은 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileFind::GetLength](#getlength)합니다.  
   
 ##  <a name="isreadonly"></a>  CFileFind::IsReadOnly  
@@ -654,7 +654,7 @@ BOOL IsReadOnly() const;
   
  멤버 함수를 참조 하십시오. [MatchesMask](#matchesmask) 파일 특성의 전체 목록은 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileFind::GetLength](#getlength)합니다.  
   
 ##  <a name="issystem"></a>  CFileFind::IsSystem  
@@ -674,7 +674,7 @@ BOOL IsSystem() const;
   
  멤버 함수를 참조 하십시오. [MatchesMask](#matchesmask) 파일 특성의 전체 목록은 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileFind::GetLength](#getlength)합니다.  
   
 ##  <a name="istemporary"></a>  CFileFind::IsTemporary  
@@ -694,7 +694,7 @@ BOOL IsTemporary() const;
   
  멤버 함수를 참조 하십시오. [MatchesMask](#matchesmask) 파일 특성의 전체 목록은 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFileFind::GetLength](#getlength)합니다.  
   
 ##  <a name="m_ptm"></a>  CFileFind::m_pTM  
@@ -714,7 +714,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwMask`  
+ *dwMask*  
  식별 된 하나 이상의 파일 특성을 지정 된 [WIN32_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa365740) 검색된 된 파일에 대 한 구조입니다. 비트 OR를 사용 하 여 여러 특성을 검색 하려면 (&#124;) 연산자. 다음 특성의 조합이 되어도:  
   
 -   FILE_ATTRIBUTE_ARCHIVE 파일 보관 파일입니다. 응용 프로그램에 백업 또는 제거 하는 파일을 표시 하려면이 특성을 사용 합니다.  
@@ -739,7 +739,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 ### <a name="remarks"></a>설명  
  호출 해야 [FindNextFile](#findnextfile) 호출 하기 전에 한 번 이상 `MatchesMask`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#35](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_5.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

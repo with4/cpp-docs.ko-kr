@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81e7d3b093da8127887878b2ac5f2af652f549c3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3af520de7e92a887f9a49fea7262d7f51b74082
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375796"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954636"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef 클래스
 일반적으로 데이터베이스에 저장되는 쿼리 정의 또는 "querydef"를 나타냅니다.  
@@ -98,7 +98,7 @@ class CDaoQueryDef : public CObject
   
 |이름|설명|  
 |----------|-----------------|  
-|[CDaoQueryDef::CDaoQueryDef](#cdaoquerydef)|생성 된 **CDaoQueryDef** 개체입니다. 다음 호출 **열려** 또는 **만들기**필요에 따라 합니다.|  
+|[CDaoQueryDef::CDaoQueryDef](#cdaoquerydef)|`CDaoQueryDef` 개체를 생성합니다. 다음 호출 `Open` 또는 `Create`필요에 따라 합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
@@ -107,7 +107,7 @@ class CDaoQueryDef : public CObject
 |[CDaoQueryDef::Append](#append)|에 저장 된 쿼리라고 QueryDefs 컬렉션 데이터베이스의 쿼리 정의 추가합니다.|  
 |[CDaoQueryDef::CanUpdate](#canupdate)|쿼리는 데이터베이스를 업데이트할 수 있는 경우 0이 아닌 값을 반환 합니다.|  
 |[CDaoQueryDef::Close](#close)|쿼리 정의 개체를 닫습니다. 완료 하면 c + + 개체를 제거 합니다.|  
-|[CDaoQueryDef::Create](#create)|기본 DAO querydef 개체를 만듭니다. 쿼리 정의 사용 하 여 임시 쿼리 또는 호출 **Append** 데이터베이스에 저장 합니다.|  
+|[CDaoQueryDef::Create](#create)|기본 DAO querydef 개체를 만듭니다. 쿼리 정의 사용 하 여 임시 쿼리 또는 호출 `Append` 데이터베이스에 저장 합니다.|  
 |[CDaoQueryDef::Execute](#execute)|쿼리 정의 개체에 의해 정의 된 쿼리를 실행 합니다.|  
 |[CDaoQueryDef::GetConnect](#getconnect)|쿼리 정의와 관련 된 연결 문자열을 반환 합니다. 연결 문자열에는 데이터 원본을 식별 합니다. (SQL에 대 한 통과 쿼리의 고, 그렇지 않으면 빈 문자열입니다.)|  
 |[CDaoQueryDef::GetDateCreated](#getdatecreated)|저장된 된 쿼리를 만든 날짜를 반환 합니다.|  
@@ -154,9 +154,9 @@ class CDaoQueryDef : public CObject
   
     -   쿼리를 저장 된 기존를 사용 하려면 쿼리 정의 개체의 호출 [열려](#open) 멤버 함수, 저장 된 쿼리의 이름을 제공 합니다.  
   
-    -   저장된 된 새 쿼리를 만들려면 쿼리 정의 개체의 호출 [만들기](#create) 멤버 함수를 쿼리 이름을 제공 합니다. 다음 호출 [추가](#append) 데이터베이스의 QueryDefs 컬렉션에 추가 하 여 쿼리를 저장 합니다. **만들기** 열린 상태에 쿼리 정의 저장 하므로 호출한 후 **만들기** 호출 하지 않으면 **열**합니다.  
+    -   저장된 된 새 쿼리를 만들려면 쿼리 정의 개체의 호출 [만들기](#create) 멤버 함수를 쿼리 이름을 제공 합니다. 다음 호출 [추가](#append) 데이터베이스의 QueryDefs 컬렉션에 추가 하 여 쿼리를 저장 합니다. `Create` 쿼리 정의 열린 상태로 전환 하므로 호출한 후 `Create` 호출 하지 않으면 `Open`합니다.  
   
-    -   임시 쿼리 정의 만들려면 호출 **만들기**합니다. 쿼리 이름에 대 한 빈 문자열을 전달 합니다. 호출 하지 마십시오 **Append**합니다.  
+    -   임시 쿼리 정의 만들려면 호출 `Create`합니다. 쿼리 이름에 대 한 빈 문자열을 전달 합니다. `Append`를 호출하지 마세요.  
   
  호출 하는 쿼리 정의 개체를 사용 하 여 완료 하면 해당 [닫기](#close) 멤버 함수를 쿼리 정의 개체를 삭제 합니다.  
   
@@ -168,14 +168,14 @@ class CDaoQueryDef : public CObject
   
 -   만들려면는 `CDaoRecordset` 개체  
   
--   개체를 호출 하려면 **Execute** 직접 실행 쿼리 또는 SQL 통과 쿼리를 실행 하는 멤버 함수  
+-   개체를 호출 하려면 `Execute` 직접 실행 쿼리 또는 SQL 통과 쿼리를 실행 하는 멤버 함수  
   
- 모든 종류의 쿼리를 선택, 작업, 크로스탭, 삭제, 업데이트를 포함 하 여 쿼리 정의 개체를 사용 하 고, 테이블 만들기, 데이터 정의 SQL 통과, union, 추가 하 고, 한 대량 쿼리 수 있습니다. 쿼리 형식은 SQL 문 제공 하는 내용에 따라 결정 됩니다. 쿼리 형식에 대 한 정보를 참조 하십시오.는 **Execute** 및 [GetType](#gettype) 멤버 함수입니다. 레코드 집합 행을 반환 하는 것에 대 한 일반적으로 사용 되 쿼리, 일반적으로 사용 하 여는 **선택...**  키워드입니다. **실행** 은 대량 작업 중에 가장 많이 사용 합니다. 자세한 내용은 참조 [Execute](#execute) 및 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)합니다.  
+ 모든 종류의 쿼리를 선택, 작업, 크로스탭, 삭제, 업데이트를 포함 하 여 쿼리 정의 개체를 사용 하 고, 테이블 만들기, 데이터 정의 SQL 통과, union, 추가 하 고, 한 대량 쿼리 수 있습니다. 쿼리 형식은 SQL 문 제공 하는 내용에 따라 결정 됩니다. 쿼리 형식에 대 한 정보를 참조 하십시오.는 `Execute` 및 [GetType](#gettype) 멤버 함수입니다. 레코드 집합 행을 반환 하는 것에 대 한 일반적으로 사용 되 쿼리, 일반적으로 사용 하 여는 **선택...**  키워드입니다. `Execute` 대량 작업 중에 가장 많이 사용 됩니다. 자세한 내용은 참조 [Execute](#execute) 및 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)합니다.  
   
 ## <a name="querydefs-and-recordsets"></a>쿼리 정 및 레코드 집합  
  쿼리 정의 개체를 만드는 데는 `CDaoRecordset` 개체를 일반적으로 생성 하거나 위에 설명 된 대로 쿼리 정의 열어야 합니다. 다음 호출 하는 경우 쿼리 정의 개체에 대 한 포인터를 전달 하는 레코드 집합 개체를 작성 [cdaorecordset:: Open](../../mfc/reference/cdaorecordset-class.md#open)합니다. 전달 하면 쿼리 정의 열린 상태에 있어야 합니다. 자세한 내용은 클래스를 참조 하십시오. [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)합니다.  
   
- 열린 상태에 있지 않는 (쿼리 정의 대 한 가장 일반적인 사용) 레코드 집합을 만들려면 쿼리 정의 사용할 수 없습니다. 쿼리 정의 호출 하 여 열린 상태에 배치 **열고** 또는 **만들기**합니다.  
+ 열린 상태에 있지 않는 (쿼리 정의 대 한 가장 일반적인 사용) 레코드 집합을 만들려면 쿼리 정의 사용할 수 없습니다. 쿼리 정의 호출 하 여 열린 상태에 배치 `Open` 또는 `Create`합니다.  
   
 ## <a name="external-databases"></a>외부 데이터베이스  
  쿼리 정의 개체는 외부 데이터베이스 엔진의 네이티브 SQL 언어를 사용 하는 것이 좋습니다. 예를 들어 (Microsoft SQL Server에 사용 됨) 처럼 Transact SQL 쿼리를 만들고 쿼리 정의 개체에 저장할 수 있습니다. Microsoft Jet 데이터베이스 엔진을 기반으로 하지 SQL 쿼리를 사용 해야 할 때 외부 데이터 원본을 가리키는 연결 문자열을 제공 해야 합니다. 유효한 연결 문자열이 포함 된 쿼리는 데이터베이스 엔진을 무시 하 고 처리를 위해 외부 데이터베이스 서버에 직접 쿼리를 전달 합니다.  
@@ -201,7 +201,7 @@ virtual void Append();
 ```  
   
 ### <a name="remarks"></a>설명  
- **추가** 데이터베이스의 QueryDefs 컬렉션에 개체를 추가 하 여 쿼리 정의 데이터베이스에 저장 합니다. 추가 하지 않고 임시 개체로 쿼리 정의 사용할 수 있지만 호출 해야 유지 하도록 하려는 경우 **Append**합니다.  
+ `Append` 데이터베이스의 QueryDefs 컬렉션에 개체를 추가 하 여 데이터베이스의 쿼리 정의 저장 합니다. 추가 하지 않고 임시 개체로 쿼리 정의 사용할 수 있지만 호출 해야 유지 하도록 하려는 경우 `Append`합니다.  
   
  임시 쿼리 정의 개체를 추가 하려는 경우 MFC 형식의 예외를 throw 하는 [CDaoException](../../mfc/reference/cdaoexception-class.md)합니다.  
   
@@ -225,14 +225,14 @@ BOOL CanUpdate();
      이 보안 기능을 구현 하는지 여부에 따라 달라 집니다. MFC 보안;에 대 한 지원을 제공 하지 않습니다. 또는 구현 해야 해당 사용자가 직접 직접 DAO 호출 하 여 Microsoft Access를 사용 하 여 합니다. DAO 도움말의 "사용 권한 Property" 항목을 참조 하십시오.  
   
 ##  <a name="cdaoquerydef"></a>  CDaoQueryDef::CDaoQueryDef  
- 생성 된 **CDaoQueryDef** 개체입니다.  
+ `CDaoQueryDef` 개체를 생성합니다.  
   
 ```  
 CDaoQueryDef(CDaoDatabase* pDatabase);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDatabase`  
+ *pDatabase*  
  열린에 대 한 포인터 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -242,7 +242,7 @@ CDaoQueryDef(CDaoDatabase* pDatabase);
   
 -   개체를 저장할 새 쿼리 정의 나타내는 경우 개체의 호출 [만들기](#create) 멤버 함수입니다. 개체는 데이터베이스 QueryDefs 컬렉션에 추가합니다. 그런 다음 호출 `CDaoQueryDef` 개체의 특성을 설정 하는 멤버 함수입니다. 마지막으로 호출 [Append](#append)합니다.  
   
--   개체가 나타내는 임시 쿼리 정의 (데이터베이스에 저장 하지 않음), 호출 **만들기**, 쿼리 이름에 대 한 빈 문자열을 전달 합니다. 호출한 후 **만들기**, 직접 해당 특성을 설정 하 여 쿼리 정의 초기화 합니다. 호출 하지 마십시오 **Append**합니다.  
+-   개체는 임시 쿼리 정의 (데이터베이스에 저장 하지 않음)를 나타내는 경우 호출 `Create`, 쿼리 이름에 대 한 빈 문자열을 전달 합니다. 호출한 후 `Create`, 직접 해당 특성을 설정 하 여 쿼리 정의 초기화 합니다. `Append`를 호출하지 마세요.  
   
  쿼리 정의의 특성을 설정 하려면 사용할 수 있습니다는 [SetName](#setname), [SetSQL](#setsql), [SetConnect](#setconnect), [SetODBCTimeout](#setodbctimeout), 및 [SetReturnsRecords](#setreturnsrecords) 멤버 함수입니다.  
   
@@ -268,16 +268,16 @@ virtual void Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszName`  
+ *lpszName*  
  데이터베이스에 저장 된 쿼리의 고유 이름입니다. 문자열에 대 한 자세한 DAO 도움말의 "CreateQueryDef 메서드" 항목을 참조 합니다. 빈 문자열이 면 하는 기본값을 그대로 적용 하는 경우에 임시 쿼리 정의 생성 됩니다. 이러한 쿼리 QueryDefs 컬렉션에 저장 되지 않습니다.  
   
- `lpszSQL`  
+ *lpszSQL*  
  쿼리를 정의 하는 SQL 문자열입니다. 기본값에 동의 하면 **NULL**, 나중에 호출 해야 [SetSQL](#setsql) 문자열을 설정 하려면. 그때 까지는 쿼리 정의 되지 않습니다. 그러나 레코드 집합; 정의 되지 않은 쿼리를 사용할 수 있습니다. 자세한 내용은 설명 부분을 참조 하십시오. SQL 문은 쿼리 정의 QueryDefs 컬렉션에 추가 하기 전에 정의 되어야 합니다.  
   
 ### <a name="remarks"></a>설명  
- 에 있는 이름을 전달 하는 경우 `lpszName`를 호출할 수 있습니다 [추가](#append) 데이터베이스의 QueryDefs 컬렉션의 쿼리 정의 저장 하려면. 그렇지 않으면 개체는 임시 쿼리 정의 하 고 저장 되지 않습니다. 두 경우 모두 쿼리 정의가 열린 상태 이므로 하거나 만드는 데 사용할 수는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 개체 또는 쿼리 정의 호출 [Execute](#execute) 멤버 함수입니다.  
+ 에 있는 이름을 전달 하는 경우 *lpszName*를 호출할 수 있습니다 [추가](#append) 데이터베이스의 QueryDefs 컬렉션의 쿼리 정의 저장 하려면. 그렇지 않으면 개체는 임시 쿼리 정의 하 고 저장 되지 않습니다. 두 경우 모두 쿼리 정의가 열린 상태 이므로 하거나 만드는 데 사용할 수는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 개체 또는 쿼리 정의 호출 [Execute](#execute) 멤버 함수입니다.  
   
- SQL 문을 지정 하지 않으면 `lpszSQL`를 사용 하 여 쿼리를 실행할 수 없습니다 **Execute** 하지만 레코드 집합을 만드는 데 사용할 수 있습니다. 이 경우 MFC는 레코드 집합의 기본 SQL 문을 사용합니다.  
+ SQL 문을 지정 하지 않으면 *lpszSQL*를 사용 하 여 쿼리를 실행할 수 없습니다 `Execute` 있지만 레코드 집합을 만드는 데 사용할 수 있습니다. 이 경우 MFC는 레코드 집합의 기본 SQL 문을 사용합니다.  
   
 ##  <a name="execute"></a>  CDaoQueryDef::Execute  
  쿼리 정의 개체에 의해 정의 된 쿼리를 실행 하려면이 함수를 호출 합니다.  
@@ -287,7 +287,7 @@ virtual void Execute(int nOptions = dbFailOnError);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nOptions`  
+ *nOptions*  
  쿼리의 특징을 결정 하는 정수입니다. 관련된 정보에 대 한 DAO 도움말의 "메서드 실행" 항목을 참조 합니다. 비트 OR 연산자를 사용할 수 있습니다 ( **&#124;**)이이 인수에 대 한 다음과 같은 상수를 결합 합니다.  
   
 - **dbDenyWrite** 다른 사용자에 게 쓰기 권한을 거부 합니다.  
@@ -312,16 +312,16 @@ virtual void Execute(int nOptions = dbFailOnError);
   
 -   SQL 통과 쿼리  
   
- **실행** select 쿼리의 같은 레코드를 반환 하는 쿼리에 작동 하지 않습니다. **실행** 은 일반적으로 사용 대량 작업 쿼리를 같은 **업데이트**, **삽입**, 또는 **SELECT INTO**, 또는 데이터 정의 언어 (DDL) 작업에 대 한 합니다.  
+ `Execute` 선택 쿼리 같은 레코드를 반환 하는 쿼리에 작동 하지 않습니다. `Execute` 일반적으로 사용 대량 작업 쿼리를 같은 **업데이트**, **삽입**, 또는 **SELECT INTO**, 또는 데이터 정의 언어 (DDL) 작업에 대 한 합니다.  
   
 > [!TIP]
 >  Microsoft Jet에 테이블을 연결 하는 ODBC 데이터 원본으로 작업 하는 기본 방법은 (합니다. MDB) 데이터베이스입니다. 자세한 내용은 DAO 도움말의 "DAO와 외부 데이터베이스 액세스" 항목을 참조 합니다.  
   
- 호출 된 [GetRecordsAffected](#getrecordsaffected) 가장 최근의 영향을 받는 레코드 수를 확인 하려면 쿼리 정의 개체의 멤버 함수 **Execute** 호출 합니다. 예를 들어 `GetRecordsAffected` 삭제, 업데이트 또는 삽입 작업 쿼리를 실행 하는 경우 레코드의 수에 대 한 정보를 반환 합니다. 반환 된 수는 cascade를 업데이트 하거나 삭제 하는 경우 관련된 테이블의 변경 내용이 적용 반영 되지 않습니다.  
+ 호출 된 [GetRecordsAffected](#getrecordsaffected) 가장 최근의 영향을 받는 레코드 수를 확인 하려면 쿼리 정의 개체의 멤버 함수 `Execute` 호출 합니다. 예를 들어 `GetRecordsAffected` 삭제, 업데이트 또는 삽입 작업 쿼리를 실행 하는 경우 레코드의 수에 대 한 정보를 반환 합니다. 반환 된 수는 cascade를 업데이트 하거나 삭제 하는 경우 관련된 테이블의 변경 내용이 적용 반영 되지 않습니다.  
   
  둘 모두를 포함 하는 경우 **dbInconsistent** 및 **dbConsistent** 결과 기본적으로 둘 다를 포함 하는 경우 또는 **dbInconsistent**합니다.  
   
- **실행** 레코드 집합을 반환 하지 않습니다. 사용 하 여 **Execute** 레코드를 선택 하는 쿼리에 MFC 형식의 예외를 throw 하면 [CDaoException](../../mfc/reference/cdaoexception-class.md)합니다.  
+ `Execute` 레코드 집합을 반환 하지 않습니다. 사용 하 여 `Execute` 레코드를 선택 하는 쿼리에 MFC 형식의 예외를 throw 하면 [CDaoException](../../mfc/reference/cdaoexception-class.md)합니다.  
   
 ##  <a name="getconnect"></a>  CDaoQueryDef::GetConnect  
  쿼리 정의 데이터 원본과 관련 된 연결 문자열을 가져오지이 멤버 함수를 호출 합니다.  
@@ -397,13 +397,13 @@ void GetFieldInfo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  인덱스에 의해 조회에 대 한 쿼리 정의 필드 컬렉션에서 원하는 필드의 0부터 시작 하는 인덱스입니다.  
   
- `fieldinfo`  
+ *fieldinfo*  
  에 대 한 참조는 `CDaoFieldInfo` 요청 된 정보를 반환 하는 개체입니다.  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  검색할 필드에 대 한 정보를 지정 하는 옵션입니다. 사용 가능한 옵션은 함께 반환 하는 함수를 입히기 무엇 여기 나열 됩니다.  
   
 - `AFX_DAO_PRIMARY_INFO` (기본값) 이름, 유형, 크기, 속성  
@@ -412,11 +412,11 @@ void GetFieldInfo(
   
 - `AFX_DAO_ALL_INFO` 기본 및 보조 정보 더하기: Default Value, 유효성 검사 텍스트 유효성 검사 규칙  
   
- `lpszName`  
+ *lpszName*  
  이름별으로 조회에 대 한 원하는 필드의 이름을 포함 하는 문자열입니다. 사용할 수는 [CString](../../atl-mfc-shared/reference/cstringt-class.md)합니다.  
   
 ### <a name="remarks"></a>설명  
- 에 대 한 설명은에서 반환 되는 정보 `fieldinfo`, 참조는 [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) 구조입니다. 이 구조에 아래 설명 된 정보에 해당 하는 멤버가 `dwInfoOptions` 위에 있습니다. 한 수준의 정보를 요청 하는 경우 모든 이전 수준의 정보를 얻습니다.  
+ 에 대 한 설명은에서 반환 되는 정보 *fieldinfo*, 참조는 [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) 구조입니다. 이 구조에 아래 설명 된 정보에 해당 하는 멤버가 *dwInfoOptions* 위에 있습니다. 한 수준의 정보를 요청 하는 경우 모든 이전 수준의 정보를 얻습니다.  
   
 ##  <a name="getname"></a>  CDaoQueryDef::GetName  
  쿼리 정의 나타내는 쿼리의 이름을 검색 하려면이 멤버 함수를 호출 합니다.  
@@ -479,22 +479,22 @@ void GetParameterInfo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  인덱스에 의해 조회에 대 한 쿼리 정의 매개 변수 컬렉션에서 원하는 매개 변수의 0부터 시작 하는 인덱스입니다.  
   
- `paraminfo`  
+ *paraminfo 등 다양 한*  
  에 대 한 참조는 [CDaoParameterInfo](../../mfc/reference/cdaoparameterinfo-structure.md) 요청 된 정보를 반환 하는 개체입니다.  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  매개 변수를 검색 하는 방법에 대 한 정보를 지정 하는 옵션입니다. 사용 가능한 옵션 함수를 반환 하면 어떤 함께 여기에 나열 되어:  
   
 - `AFX_DAO_PRIMARY_INFO` (기본값) 이름, 형식  
   
- `lpszName`  
+ *lpszName*  
  이름별으로 조회에 대 한 원하는 매개 변수의 이름을 포함 하는 문자열입니다. 사용할 수는 [CString](../../atl-mfc-shared/reference/cstringt-class.md)합니다.  
   
 ### <a name="remarks"></a>설명  
- 에 대 한 설명은에서 반환 되는 정보 `paraminfo`, 참조는 [CDaoParameterInfo](../../mfc/reference/cdaoparameterinfo-structure.md) 구조입니다. 이 구조에 아래 설명 된 정보에 해당 하는 멤버가 `dwInfoOptions` 위에 있습니다.  
+ 에 대 한 설명은에서 반환 되는 정보 *paraminfo 등 다양 한*, 참조는 [CDaoParameterInfo](../../mfc/reference/cdaoparameterinfo-structure.md) 구조입니다. 이 구조에 아래 설명 된 정보에 해당 하는 멤버가 *dwInfoOptions* 위에 있습니다.  
   
  관련된 정보에 대 한 "매개 변수 선언 ()"에서 SQL DAO 도움말 항목을 참조 합니다.  
   
@@ -507,10 +507,10 @@ virtual COleVariant GetParamValue(int nIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszName`  
+ *lpszName*  
  매개 변수 이름별으로 조회에 대해 원하는 값의 이름입니다.  
   
- `nIndex`  
+ *nIndex*  
  인덱스에 의해 조회에 대 한 쿼리 정의 매개 변수 컬렉션에서 매개 변수의 0부터 시작 하는 인덱스입니다. 호출 하 여이 값을 가져올 수 [GetParameterCount](#getparametercount) 및 [GetParameterInfo](#getparameterinfo)합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -639,7 +639,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszName`  
+ *lpszName*  
  열에 저장 된 쿼리 정의의 이름을 포함 하는 문자열입니다. 사용할 수는 [CString](../../atl-mfc-shared/reference/cstringt-class.md)합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -653,7 +653,7 @@ void SetConnect(LPCTSTR lpszConnect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszConnect`  
+ *lpszConnect*  
  관련 된 연결 문자열을 포함 하는 문자열 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -674,7 +674,7 @@ void SetName(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszName`  
+ *lpszName*  
  연결 된 실제적 쿼리에 대 한 새 이름을 포함 하는 문자열 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -711,13 +711,13 @@ virtual void SetParamValue(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszName`  
+ *lpszName*  
  매개 변수 값을 설정의 이름입니다.  
   
- `varValue`  
+ *varValue*  
  값을 설정 설명 부분을 참조 하십시오.  
   
- `nIndex`  
+ *nIndex*  
  쿼리 정의 매개 변수 컬렉션에서 매개 변수의 서 수 위치입니다. 호출 하 여이 값을 가져올 수 [GetParameterCount](#getparametercount) 및 [GetParameterInfo](#getparameterinfo)합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -747,7 +747,7 @@ void SetSQL(LPCTSTR lpszSQL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszSQL`  
+ *lpszSQL*  
  실행에 적합 한 전체 SQL 문을 포함 하는 문자열입니다. 이 문자열의 구문은 DBMS에 따라 하는 쿼리 대상입니다. Microsoft Jet 데이터베이스 엔진에서 사용 되는 구문 설명에서는 "건물 SQL 문 코드"를 여러 DAO 도움말 항목을 참조 합니다.  
   
 ### <a name="remarks"></a>설명  

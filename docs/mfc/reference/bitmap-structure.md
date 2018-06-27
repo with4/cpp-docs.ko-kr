@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa8bb4ab914b4e05eb21cfc45a243328d32bb6d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6a60e4af31ba5da23f399f86175ed4fcf1e4ec14
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351639"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950306"
 ---
 # <a name="bitmap-structure"></a>BITMAP 구조체
 **비트맵** 높이, 너비, 색상 형식 및 논리적 비트맵의 비트 값 구조 정의**합니다.**  
@@ -51,7 +51,7 @@ typedef struct tagBITMAP {  /* bm */
  비트맵의 높이(래스터 줄)를 지정합니다. 높이는 0보다 커야 합니다.  
   
  *bmWidthBytes*  
- 각 래스터 줄에서 바이트 수를 지정합니다. GDI(그래픽 장치 인터페이스)에서는 비트맵의 비트 값이 정수(2바이트) 값의 배열을 형성한다고 가정하기 때문에 이 값은 짝수여야 합니다. 즉, **bmWidthBytes** \* 8 때 가져온 값 보다 크거나 16의 배수로 이어야 합니다는 **bmWidth** 멤버는 **bmBitsPixel**  멤버입니다.  
+ 각 래스터 줄에서 바이트 수를 지정합니다. GDI(그래픽 장치 인터페이스)에서는 비트맵의 비트 값이 정수(2바이트) 값의 배열을 형성한다고 가정하기 때문에 이 값은 짝수여야 합니다. 즉, *bmWidthBytes* \* 8 때 가져온 값 보다 크거나 16의 배수로 이어야 합니다는 *bmWidth* 멤버는 *bmBitsPixel*  멤버입니다.  
   
  *bmPlanes*  
  비트맵에서 색 평면의 수를 지정합니다.  
@@ -60,7 +60,7 @@ typedef struct tagBITMAP {  /* bm */
  픽셀을 정의하는 데 필요한 각 평면의 인접 색상 비트 수를 지정합니다.  
   
  *bmBits*  
- 비트맵에 대한 비트 값의 위치를 가리킵니다. **bmBits** 멤버에 1 바이트 값의 배열에 대 한 긴 포인터 여야 합니다.  
+ 비트맵에 대한 비트 값의 위치를 가리킵니다. *bmBits* 멤버에 1 바이트 값의 배열에 대 한 긴 포인터 여야 합니다.  
   
 ## <a name="remarks"></a>설명  
  현재 사용되는 비트맵 형식은 흑백 및 컬러입니다. 흑백 비트맵에는 1비트, 1평면 형식이 사용됩니다. 각 스캔은 16비트의 배수입니다.  

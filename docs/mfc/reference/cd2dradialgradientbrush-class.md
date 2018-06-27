@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1be476c43b0752b95a6514057e240a030325b95d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 002b9fd5d919bb277f9546f038e4b81c45380c81
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354354"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952276"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush 클래스
 ID2D1RadialGradientBrush에 대 한 래퍼입니다.  
@@ -99,7 +99,7 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CD2DRadialGradientBrush::m_pRadialGradientBrush](#m_pradialgradientbrush)|ID2D1RadialGradientBrush에 대 한 포인터입니다.|  
 |[CD2DRadialGradientBrush::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|센터, 그라데이션 원점 오프셋 및 x-반경 및 y 반경을 브러시의 그라데이션의입니다.|  
@@ -133,7 +133,7 @@ void Attach(ID2D1RadialGradientBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pResource`  
+ *pResource*  
  기존 리소스 인터페이스입니다. NULL 일 수 없습니다.  
   
 ##  <a name="cd2dradialgradientbrush"></a>  CD2DRadialGradientBrush::CD2DRadialGradientBrush  
@@ -152,28 +152,28 @@ CD2DRadialGradientBrush(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParentTarget`  
+ *pParentTarget*  
  렌더링 대상에 대 한 포인터입니다.  
   
- `gradientStops`  
+ *gradientStops*  
  D2D1_GRADIENT_STOP 구조의 배열에 대 한 포인터입니다.  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  GradientStops 배열에서 그라데이션 중지점의 수를 지정 하는 1 보다 크거나 같은 값입니다.  
   
- `RadialGradientBrushProperties`  
+ *RadialGradientBrushProperties*  
  센터, 그라데이션 원점 오프셋 및 x-반경 및 y 반경을 브러시의 그라데이션의입니다.  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  어떤 색 그라데이션 중지점 사이의 보간을 수행 되는 공간입니다.  
   
- `extendMode`  
+ *extendMode*  
  [0, 1]의 표준화 된 범위를 벗어난 그라데이션의 동작입니다.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  불투명도 및 브러시의 변환에 대 한 포인터입니다.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  개체를 소유자 (pParentTarget)에 의해 폐기 수를 나타냅니다.  
   
 ##  <a name="create"></a>  CD2DRadialGradientBrush::Create  
@@ -184,7 +184,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pRenderTarget`  
+ *pRenderTarget*  
  렌더링 대상에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -289,7 +289,7 @@ void SetCenter(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `point`  
+ *지점*  
  브러시의 좌표 공간에서 그라데이션 타원의 센터  
   
 ##  <a name="setgradientoriginoffset"></a>  CD2DRadialGradientBrush::SetGradientOriginOffset  
@@ -300,7 +300,7 @@ void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `gradientOriginOffset`  
+ *gradientOriginOffset*  
  그라데이션 타원의 가운데에서 그라데이션 원점의 오프셋  
   
 ##  <a name="setradiusx"></a>  CD2DRadialGradientBrush::SetRadiusX  
@@ -311,7 +311,7 @@ void SetRadiusX(FLOAT radiusX);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `radiusX`  
+ *radiusX*  
  그라데이션 타원의 x 반경을 합니다. 브러시의 좌표 공간에서이 값은  
   
 ##  <a name="setradiusy"></a>  CD2DRadialGradientBrush::SetRadiusY  
@@ -322,7 +322,7 @@ void SetRadiusY(FLOAT radiusY);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `radiusY`  
+ *radiusY*  
  그라데이션 타원의 y 반지름입니다. 브러시의 좌표 공간에서이 값은  
   
 ## <a name="see-also"></a>참고 항목  
