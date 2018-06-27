@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb595dfdc1a73ecd068e251cec5df99d4daaab30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 220d1d38c6be33652a8613c60c4e4baa053a8296
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380567"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951922"
 ---
 # <a name="steps-in-a-typical-ftp-client-application-to-delete-a-file"></a>일반적인 FTP 클라이언트 응용 프로그램에서 파일을 삭제하는 단계
 다음 표에서는 파일을 삭제하는 일반적인 FTP 클라이언트 응용 프로그램에서 수행할 수 있는 단계를 보여 줍니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "33380567"
 |서버의 새로운 FTP 디렉터리로 변경합니다.|사용 하 여 [cftpconnection:: Setcurrentdirectory](../mfc/reference/cftpconnection-class.md#setcurrentdirectory)합니다.|서버에서 현재 연결된 디렉터리를 변경합니다.|  
 |FTP 디렉터리에서 첫 번째 파일을 찾습니다.|사용 하 여 [cftpfilefind:: Findfile](../mfc/reference/cftpfilefind-class.md#findfile)합니다.|첫 번째 파일을 찾습니다. 파일이 발견되지 않으면 FALSE를 반환합니다.|  
 |FTP 디렉터리에서 다음 파일을 찾습니다.|사용 하 여 [cftpfilefind:: Findnextfile](../mfc/reference/cftpfilefind-class.md#findnextfile)합니다.|다음 파일을 찾습니다. 파일을 찾을 수 없으면 FALSE를 반환합니다.|  
-|찾은 파일을 삭제 **FindFile** 또는 `FindNextFile`합니다.|사용 하 여 [CFtpConnection::Remove](../mfc/reference/cftpconnection-class.md#remove), 파일 이름을 사용 하 여 반환한 **FindFile** 또는 `FindNextFile`합니다.|서버에서 읽기 또는 쓰기용 파일을 삭제합니다.|  
+|찾은 파일을 삭제 `FindFile` 또는 `FindNextFile`합니다.|사용 하 여 [CFtpConnection::Remove](../mfc/reference/cftpconnection-class.md#remove), 파일 이름을 사용 하 여 반환한 `FindFile` 또는 `FindNextFile`합니다.|서버에서 읽기 또는 쓰기용 파일을 삭제합니다.|  
 |예외 처리|사용 하 여 [CInternetException](../mfc/reference/cinternetexception-class.md) 클래스입니다.|모든 공용 인터넷 예외 형식을 처리합니다.|  
 |FTP 세션을 종료합니다.|삭제 된 [CInternetSession](../mfc/reference/cinternetsession-class.md) 개체입니다.|열린 파일 핸들 및 연결을 자동으로 정리합니다.|  
   

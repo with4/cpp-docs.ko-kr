@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba88269cf37f41cf8a594745eb2e98a57ccf64ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb8cc37396069dc7e0ea53506436b536100bdbb4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369017"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956131"
 ---
 # <a name="cgdiobject-class"></a>CGdiObject 클래스
 비트맵, 영역, 브러시, 펜, 색상표와 글꼴 등 다양한 Windows GDI(그래픽 장치 인터페이스) 개체에 기본 클래스를 제공합니다.  
@@ -114,7 +114,7 @@ BOOL Attach(HGDIOBJ hObject);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hObject`  
+ *hObject*  
  A `HANDLE` Windows GDI 개체 (예를 들어 `HPEN` 또는 `HBRUSH`).  
   
 ### <a name="return-value"></a>반환 값  
@@ -128,7 +128,7 @@ CGdiObject();
 ```  
   
 ### <a name="remarks"></a>설명  
- 만들지 마십시오는 `CGdiObject` 직접 합니다. 대신, 개체를 만들면 해당 파생된 클래스 중 하나에서 같은 `CPen` 또는 **Cbrush**합니다.  
+ 만들지 마십시오는 `CGdiObject` 직접 합니다. 대신, 개체를 만들면 해당 파생된 클래스 중 하나에서 같은 `CPen` 또는 `Cbrush`합니다.  
   
 ##  <a name="createstockobject"></a>  CGdiObject::CreateStockObject  
  미리 정의 된 스톡 Windows GDI 펜, 브러시, 또는 글꼴 중 하나에 대 한 핸들을 검색 하 고 GDI 개체에 연결 된 `CGdiObject` 개체입니다.  
@@ -138,7 +138,7 @@ BOOL CreateStockObject(int nIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  원하는 스톡 개체의 유형을 지정 하는 상수입니다. 매개 변수 참조 *fnObject* 에 대 한 [GetStockObject](http://msdn.microsoft.com/library/windows/desktop/dd144925) Windows sdk에 대 한 설명은 적절 한 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -172,7 +172,7 @@ static void PASCAL DeleteTempMap();
 ### <a name="remarks"></a>설명  
  `DeleteTempMap` 임시에 연결 하는 Windows GDI 개체를 분리 `CGdiObject` 개체를 삭제 하기 전에 `CGdiObject` 개체입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#175](../../mfc/codesnippet/cpp/cgdiobject-class_1.cpp)]  
   
 ##  <a name="detach"></a>  CGdiObject::Detach  
@@ -193,7 +193,7 @@ static CGdiObject* PASCAL FromHandle(HGDIOBJ hObject);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hObject`  
+ *hObject*  
  A `HANDLE` Windows GDI 개체에 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -214,10 +214,10 @@ int GetObject(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nCount`  
- 에 복사할 바이트 수를 지정 된 `lpObject` 버퍼입니다.  
+ *nCount*  
+ 복사할 바이트 수를 지정 된 *lpObject* 버퍼입니다.  
   
- `lpObject`  
+ *lpObject*  
  정보를 수신 하는 사용자가 제공한 버퍼를 가리킵니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -288,7 +288,7 @@ HGDIOBJ GetSafeHandle() const;
 ### <a name="remarks"></a>설명  
  일반 핸들 인터페이스 패러다임의 일부 이며 때 유용 **NULL** 핸들에 대해 유효한 또는 특수 값입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::IsWindowEnabled](../../mfc/reference/cwnd-class.md#iswindowenabled)합니다.  
   
 ##  <a name="m_hobject"></a>  CGdiObject::m_hObject  
@@ -306,7 +306,7 @@ BOOL operator!=(const CGdiObject& obj) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `obj`  
+ *obj*  
  기존에 대 한 포인터 `CGdiObject`합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -320,7 +320,7 @@ BOOL operator==(const CGdiObject& obj) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `obj`  
+ *obj*  
  기존에 대 한 참조 `CGdiObject`합니다.  
   
 ### <a name="remarks"></a>설명  

@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21499f65ac762dfd08d90decad41eedf3dfc5cdf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 635019011b655f338e499724c788bc433df5d571
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368984"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957080"
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog 클래스
 응용 프로그램에서 표준 문자열 찾기/바꾸기 대화 상자를 구현할 수 있습니다.  
@@ -95,7 +95,7 @@ class CFindReplaceDialog : public CCommonDialog
   
  한 번는 `CFindReplaceDialog` 개체 생성 되었으며, 호출 해야 합니다는 [만들기](#create) 멤버 함수를 만들고 대화 상자를 표시 합니다.  
   
- 사용 하 여는 [m_fr](#m_fr) 호출 하기 전에 대화 상자를 초기화 하는 구조 **만들기**합니다. `m_fr` 형식의 구조는 [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)합니다. 이 구조에 대 한 자세한 내용은 Windows SDK를 참조 하십시오.  
+ 사용 하 여는 [m_fr](#m_fr) 호출 하기 전에 대화 상자를 초기화 하는 구조 `Create`합니다. `m_fr` 형식의 구조는 [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)합니다. 이 구조에 대 한 자세한 내용은 Windows SDK를 참조 하십시오.  
   
  찾기/바꾸기를 수행 요청에 대 한 알림을 부모 창에서 Windows를 사용 해야 [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) 함수를 사용 하 여는 [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) 사용자 프레임에서 메시지 맵 매크로 이 등록 된 메시지를 처리 하는 창입니다.  
   
@@ -133,13 +133,13 @@ CFindReplaceDialog();
 ```  
   
 ### <a name="remarks"></a>설명  
- 때문에 `CFindReplaceDialog` 개체는 모덜리스 대화 상자를 사용 하 여 힙에 구성 해야는 `new` 연산자입니다.  
+ 때문에 `CFindReplaceDialog` 개체는 모덜리스 대화 상자를 사용 하 여 힙에 구성 해야는 **새** 연산자입니다.  
   
- 소멸 하는 동안 프레임 워크를 수행 하려고 한 `delete this` 대화 상자에 대 한 포인터입니다. 스택, 대화 상자를 만든 경우의 `this` 포인터 존재 하지 않는 경우 정의 되지 않은 동작이 발생할 수 있습니다.  
+ 소멸 하는 동안 프레임 워크를 수행 하려고 한 **이 삭제** 대화 상자에 대 한 포인터입니다. 스택, 대화 상자를 만든 경우의 **이** 포인터 존재 하지 않는 경우 정의 되지 않은 동작이 발생할 수 있습니다.  
   
  생성에 대 한 자세한 내용은 `CFindReplaceDialog` 개체 참조는 [CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md) 개요입니다. 사용 하 여는 [CFindReplaceDialog::Create](#create) 멤버 함수 대화 상자를 표시 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#170](../../mfc/codesnippet/cpp/cfindreplacedialog-class_1.cpp)]  
   
 ##  <a name="create"></a>  CFindReplaceDialog::Create  
@@ -155,19 +155,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bFindDialogOnly`  
+ *bFindDialogOnly*  
  이 매개 변수를 설정 `TRUE` 표시 하는 **찾을** 대화 상자. 로 설정 `FALSE` 표시 하는 **찾기/바꾸기** 대화 상자.  
   
- `lpszFindWhat`  
+ *lpszFindWhat*  
  대화 상자가 나타나면 기본 검색 문자열에 대 한 포인터입니다. 경우 `NULL`, 대화 상자에는 기본 검색 문자열입니다.  
   
- `lpszReplaceWith`  
+ *lpszReplaceWith*  
  대화 상자가 나타나면 기본 대체 문자열에 대 한 포인터입니다. 경우 `NULL`, 대화 상자에는 기본 대체 문자열입니다.  
   
- `dwFlags`  
+ *dwFlags*  
  하나 이상의 플래그 비트 OR 연산자를 사용 하 여 결합 대화 상자에서 설정을 사용자 지정 하는 데 사용할 수 있습니다. 기본값은 `FR_DOWN`를 지정 하는 검색 아래쪽 방향으로 진행 하도록 합니다. 참조는 [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835) 이러한 플래그에 대 한 자세한 내용은 Windows SDK에는 구조입니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  대화 상자의 부모 또는 소유자 창에 대 한 포인터입니다. 이 창 찾기/바꾸기 작업을이 요청 됨을 나타내는 특별 한 메시지를 수신할입니다. 경우 `NULL`, 응용 프로그램의 주 창 사용 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -184,7 +184,7 @@ virtual BOOL Create(
   
  내에서 프로그램 `OnFindReplace` 함수를 사용 하 여 사용자의 의도 해석 하는 [CFindReplaceDialog::FindNext](#findnext) 및 [CFindReplaceDialog::IsTerminating](#isterminating) 메서드를 만들면 코드 찾기/바꾸기 작업 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)합니다.  
   
 ##  <a name="findnext"></a>  CFindReplaceDialog::FindNext  
@@ -207,7 +207,7 @@ CString GetFindString() const;
 ### <a name="return-value"></a>반환 값  
  기본 찾을 문자열입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]  
   
 ##  <a name="getnotifier"></a>  CFindReplaceDialog::GetNotifier  
@@ -218,7 +218,7 @@ static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lParam`  
+ *lParam*  
  **lparam** 프레임 창에 전달 된 값 **OnFindReplace** 멤버 함수입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -227,7 +227,7 @@ static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
 ### <a name="remarks"></a>설명  
  현재 대화 상자에 액세스, 함수 및 액세스 해당 멤버를 호출 하 여 콜백 함수 내에서 사용 해야는 `m_fr` 구조입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CFindReplaceDialog::Create](#create) 찾기 바꾸기 대화 상자에서 알림을 받을 OnFindReplace 처리기를 등록 하는 방법의 예입니다.  
   
  [!code-cpp[NVC_MFCDocView#69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]  
@@ -242,7 +242,7 @@ CString GetReplaceString() const;
 ### <a name="return-value"></a>반환 값  
  검색된 문자열을 바꾸는 데 사용할 기본 문자열입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFindReplaceDialog::GetFindString](#getfindstring)합니다.  
   
 ##  <a name="isterminating"></a>  CFindReplaceDialog::IsTerminating  
@@ -258,7 +258,7 @@ BOOL IsTerminating() const;
 ### <a name="remarks"></a>설명  
  이 함수가 0이 아닌 값을 반환 하는 경우 호출 해야는 `DestroyWindow` 현재 대화 상자와 모든 대화 상자에 포인터 변수 집합의 멤버 함수 **NULL**합니다. 필요에 따라 또한 입력 한 마지막 찾기/바꾸기 텍스트를 저장 한 다음 찾기/바꾸기 대화 상자를 초기화할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFindReplaceDialog::GetFindString](#getfindstring)합니다.  
   
 ##  <a name="m_fr"></a>  CFindReplaceDialog::m_fr  
@@ -273,7 +273,7 @@ FINDREPLACE m_fr;
   
  이 구조에 대 한 자세한 내용은 참조는 **FINDREPLACE** Windows SDK에는 구조입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)합니다.  
   
 ##  <a name="matchcase"></a>  CFindReplaceDialog::MatchCase  

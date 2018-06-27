@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c03ae586e346be2ba1e7c71475b69318ded0dd18
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6c4f581acb0af27f44c88d59597e52b057991ee4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385218"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954281"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows 소켓: 소켓과 아카이브를 함께 사용하는 방법
 이 문서에서는 설명 어떻게는 [CSocket](../mfc/reference/csocket-class.md) 개체는 [CSocketFile](../mfc/reference/csocketfile-class.md) 개체 및 [CArchive](../mfc/reference/carchive-class.md) 개체는 Windows 통해 데이터 보내기 및 받기 간소화 하기 위해 결합 됩니다 소켓입니다.  
   
- 문서 [Windows 소켓: 소켓을 사용 하 여 보관 파일 예제](../mfc/windows-sockets-example-of-sockets-using-archives.md) 표시는 **PacketSerialize** 함수입니다. 보관 개체에는 **PacketSerialize** 예제는 MFC에 전달 되는 보관 개체 처럼 작동 [Serialize](../mfc/reference/cobject-class.md#serialize) 함수입니다. 소켓에 대 한 보관 파일에 연결 되어 있는지 하지 표준 필수 차이점은 [CFile](../mfc/reference/cfile-class.md) (일반적으로 연결 된 개체는 디스크 파일) 아닌 한 `CSocketFile` 개체입니다. 디스크 파일에 연결 하는 대신는 `CSocketFile` 개체에 연결 하는 `CSocket` 개체입니다.  
+ 문서 [Windows 소켓: 소켓을 사용 하 여 보관 파일 예제](../mfc/windows-sockets-example-of-sockets-using-archives.md) 표시는 `PacketSerialize` 함수입니다. 보관 개체에는 `PacketSerialize` 예제는 MFC에 전달 되는 보관 개체 처럼 작동 [Serialize](../mfc/reference/cobject-class.md#serialize) 함수입니다. 소켓에 대 한 보관 파일에 연결 되어 있는지 하지 표준 필수 차이점은 [CFile](../mfc/reference/cfile-class.md) (일반적으로 연결 된 개체는 디스크 파일) 아닌 한 `CSocketFile` 개체입니다. 디스크 파일에 연결 하는 대신는 `CSocketFile` 개체에 연결 하는 `CSocket` 개체입니다.  
   
  A `CArchive` 개체 버퍼를 관리 합니다. 저장 (송신) 보관 저장소가 버퍼가 꽉 차면, 연결 된 `CFile` 개체는 버퍼의 내용을 씁니다. 버퍼를 플러시하는 소켓에 연결 하는 보관의 메시지를 보내는 것과 같습니다. 로드 (수신) 보관의 버퍼가 꽉 차면는 `CFile` 버퍼를 다시 사용할 수 있는 될 때까지 개체 읽기를 중지 합니다.  
   
@@ -51,7 +51,7 @@ CArchive, CSocketFile 및 CSocket
  경우 `CSocket` 구현 되지 않았습니다 두 가지 상태 개체로 수도 이전 알림을 처리 된 동안에 같은 종류의 이벤트에 대 한 추가 알림 없이 자동을 받을 수 있습니다. 예를 들어 발생할 수 있습니다는 `OnReceive` 처리 하는 동안 알림은 `OnReceive`합니다. 위의 코드 조각에서 추출 `str` 보관 파일에서 재귀가 발생할 수 있습니다. 상태, 전환 하 여 `CSocket` 추가 알림 없이 자동 수 없도록 하 여 재귀를 방지 합니다. 일반적인 규칙은 알림 내 알림이 표시 되지 않습니다.  
   
 > [!NOTE]
->  A `CSocketFile` 없이 (제한 됨) 파일로 사용할 수도 있습니다는 `CArchive` 개체입니다. 기본적으로는 `CSocketFile` 생성자의 `bArchiveCompatible` 매개 변수는 **TRUE**합니다. 보관 파일에 사용할 파일 개체 임을 지정 합니다. 아카이브 없이 파일 개체를 사용 하려면 전달 **FALSE** 에 `bArchiveCompatible` 매개 변수입니다.  
+>  A `CSocketFile` 없이 (제한 됨) 파일로 사용할 수도 있습니다는 `CArchive` 개체입니다. 기본적으로는 `CSocketFile` 생성자의 *bArchiveCompatible* 매개 변수는 **TRUE**합니다. 보관 파일에 사용할 파일 개체 임을 지정 합니다. 아카이브 없이 파일 개체를 사용 하려면 전달 **FALSE** 에 *bArchiveCompatible* 매개 변수입니다.  
   
  "보관 호환 되는" 모드로 `CSocketFile` 개체 더 나은 성능을 제공 하 고 "deadlock." 위험이 감소 합니다. 보내는 소켓과 받는 소켓, 서로 대기 중 또는 일반 리소스 대기는 교착 상태가 발생 합니다. 경우 이러한 상황이 발생할 수 있습니다는 `CArchive` 와 협력 하는 개체는 `CSocketFile` 늘어나도 방식으로 `CFile` 개체입니다. 와 `CFile`, 아카이브 요청한 것 보다 적은 바이트를 수신 하는 경우 파일의 끝에 도달 했음을 가정할 수 있습니다. 그러나와 `CSocketFile`, 데이터를 기반으로 하는 메시지 버퍼에는 여러 개의 메시지가 포함 될 수 있습니다, 하므로 요청 된 바이트 수보다 적은지를 받는 파일의 끝을 의미 하지 않습니다. 와 같이이 경우 응용 프로그램 차단 하지 않습니다 `CFile`는 버퍼가 비어 있을 때까지 버퍼에서 메시지를 읽는 계속할 수 있습니다. [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty) 함수 `CArchive` 이러한 경우 보관 파일의 버퍼의 상태를 모니터링 하는 데 유용 합니다.  
   

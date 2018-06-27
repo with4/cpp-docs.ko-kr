@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b093ff87d7f2c8c52b6745be4e2a31580fce0fce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f7ab45ad47ad0120fa4e04937e180841bdb5f981
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355801"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955091"
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator 클래스
 기본 보간자를 구현합니다.  
@@ -85,7 +85,7 @@ class CCustomInterpolator;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CCustomInterpolator::m_currentValue](#m_currentvalue)|보간된 값입니다.|  
 |[CCustomInterpolator::m_currentVelocity](#m_currentvelocity)|보간된 속도입니다.|  
@@ -116,10 +116,10 @@ CCustomInterpolator(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `duration`  
+ *duration*  
  전환의 기간입니다.  
   
- `finalValue`  
+ *finalValue*  
   
 ### <a name="remarks"></a>설명  
  CCustomInterpolator::Init를 사용 하 여 기간 및 코드의 뒷부분에 나오는 최종 값을 초기화 합니다.  
@@ -135,13 +135,13 @@ virtual BOOL GetDependencies(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `initialValueDependencies`  
+ *initialValueDependencies*  
  출력입니다. 보간의 초기 값에 종속 된 측면 SetInitialValueAndVelocity에 전달 합니다.  
   
- `initialVelocityDependencies`  
+ *initialVelocityDependencies*  
  출력입니다. 보간의 초기 속도에 종속 된 측면 SetInitialValueAndVelocity에 전달 합니다.  
   
- `durationDependencies`  
+ *durationDependencies*  
  출력입니다. 보간의 기간에 종속 된 측면 SetDuration에 전달 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -155,7 +155,7 @@ virtual BOOL GetDuration(UI_ANIMATION_SECONDS* duration);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `duration`  
+ *duration*  
  출력입니다. 시간 (초)에 있는 전환의 기간입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -169,7 +169,7 @@ virtual BOOL GetFinalValue(DOUBLE* value);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `value`  
+ *값*  
  출력입니다. 전환의 끝에 변수의 최종 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -185,10 +185,10 @@ void Init(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `duration`  
+ *duration*  
  전환의 기간입니다.  
   
- `finalValue`  
+ *finalValue*  
  전환의 끝에 변수의 최종 값입니다.  
   
 ##  <a name="interpolatevalue"></a>  CCustomInterpolator::InterpolateValue  
@@ -201,7 +201,7 @@ virtual BOOL InterpolateValue(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `value`  
+ *값*  
  출력입니다. 보간된 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -217,7 +217,7 @@ virtual BOOL InterpolateVelocity(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `velocity`  
+ *개발 속도*  
  출력입니다. 속도 오프셋에 있는 변수입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -273,7 +273,7 @@ virtual BOOL SetDuration(UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `duration`  
+ *duration*  
  전환의 기간입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -289,10 +289,10 @@ virtual BOOL SetInitialValueAndVelocity(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `initialValue`  
+ *초기 값*  
  전환의 시작 부분에 변수의 값입니다.  
   
- `initialVelocity`  
+ *initialVelocity*  
  전환의 시작에 변수의 속도입니다.  
   
 ### <a name="return-value"></a>반환 값  

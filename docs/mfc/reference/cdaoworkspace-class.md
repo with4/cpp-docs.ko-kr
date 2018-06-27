@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b249f8069ba12772d21d170b67236a5f013290ac
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58c9f347f4585e579ced7a12bba106fa251eed71
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377216"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955198"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace 클래스
 단일 사용자가 로그인부터 로그인까지 암호로 보호되고 명명된 데이터베이스 세션을 관리합니다.  
@@ -94,7 +94,7 @@ class CDaoWorkspace : public CObject
   
 |이름|설명|  
 |----------|-----------------|  
-|[CDaoWorkspace::CDaoWorkspace](#cdaoworkspace)|작업 영역 개체를 만듭니다. 그 후에 호출 **만들기** 또는 **열려**합니다.|  
+|[CDaoWorkspace::CDaoWorkspace](#cdaoworkspace)|작업 영역 개체를 만듭니다. 그 후에 호출 `Create` 또는 `Open`합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
@@ -168,7 +168,7 @@ class CDaoWorkspace : public CObject
   
  명시적으로 기본 작업 영역 열기 또는 작업 영역 컬렉션에서 기존 작업 영역을 열고 아래에 설명 된 [열려](#open) 멤버 함수입니다.  
   
- 작업 영역을 닫으면 작업 영역 세션 종료는 [닫기](#close) 멤버 함수입니다. **닫기** 닫지 않은 이전에 커밋되지 않은 트랜잭션을 롤백하는 모든 데이터베이스를 닫습니다.  
+ 작업 영역을 닫으면 작업 영역 세션 종료는 [닫기](#close) 멤버 함수입니다. `Close` 닫지 않은 이전에 커밋되지 않은 트랜잭션을 롤백하는 모든 데이터베이스를 닫습니다.  
   
 ## <a name="transactions"></a>트랜잭션  
  DAO; 작업 영역 수준에서 트랜잭션을 관리합니다 따라서 트랜잭션을 여러 열려 데이터베이스와 함께 작업 영역에서 모든 데이터베이스에 적용 합니다. 예를 들어 두 개의 데이터베이스는 커밋되지 않은 업데이트 하 고 호출 [CommitTrans](#committrans), 업데이트를 모두 커밋됩니다. 단일 데이터베이스에 대 한 트랜잭션 제한 하려는 경우에 대 한 별도 작업 영역 개체가 필요 합니다.  
@@ -201,7 +201,7 @@ virtual void Append();
 ```  
   
 ### <a name="remarks"></a>설명  
- **추가** 새로 만든된 작업 영역 개체는 데이터베이스 엔진의 작업 영역 컬렉션에 추가 합니다. 작업 영역 데이터베이스 엔진 세션 간에 유지 되지 않습니다. 디스크에 없는 메모리에만 저장 됩니다. 작업 영역을 추가할 필요가 없습니다. 그렇지 않은 경우 계속 사용할 수 있습니다.  
+ `Append` 데이터베이스 엔진의 작업 영역 컬렉션을 새로 만든된 작업 영역 개체를 추가합니다. 작업 영역 데이터베이스 엔진 세션 간에 유지 되지 않습니다. 디스크에 없는 메모리에만 저장 됩니다. 작업 영역을 추가할 필요가 없습니다. 그렇지 않은 경우 계속 사용할 수 있습니다.  
   
  추가 되는 작업 영역에에서 남아 작업 영역 컬렉션에서 활성, 열린 상태를 호출할 때까지 해당 [닫기](#close) 멤버 함수입니다.  
   
@@ -215,7 +215,7 @@ void BeginTrans();
 ```  
   
 ### <a name="remarks"></a>설명  
- 호출한 후 **BeginTrans**, 트랜잭션을 커밋하는 경우 데이터 나 데이터베이스 구조에 수행한 업데이트 내용이 적용 됩니다. 작업 영역에서 단일 트랜잭션을 정의 하므로 트랜잭션 작업 영역에서 열려 있는 모든 데이터베이스에 적용 됩니다. 두 가지 방법을 사용 하 여 트랜잭션을 완료할 수 있습니다.  
+ 호출한 후 `BeginTrans`, 트랜잭션을 커밋하는 경우 데이터 나 데이터베이스 구조에 수행한 업데이트 내용이 적용 됩니다. 작업 영역에서 단일 트랜잭션을 정의 하므로 트랜잭션 작업 영역에서 열려 있는 모든 데이터베이스에 적용 됩니다. 두 가지 방법을 사용 하 여 트랜잭션을 완료할 수 있습니다.  
   
 -   호출 된 [CommitTrans](#committrans) 멤버 함수를 데이터 원본의 변경 내용을 저장 하 고 트랜잭션을 커밋합니다.  
   
@@ -237,7 +237,7 @@ CDaoWorkspace();
   
 -   개체의 [열고](#open) 멤버 함수를 작업 영역 컬렉션에서 기존 개체를 열기 또는 기본 작업 영역을 엽니다.  
   
--   개체의 또는 [만들기](#create) 멤버 함수는 새 DAO 작업 영역 개체를 만듭니다. 통해을 참조할 수 있는 새 작업 영역 세션을 명시적으로 시작 된 `CDaoWorkspace` 개체입니다. 호출한 후 **만들기**를 호출할 수 있습니다 [Append](#append) 작업 영역 데이터베이스 엔진의 작업 영역 컬렉션에 추가 하려는 경우.  
+-   개체의 또는 [만들기](#create) 멤버 함수는 새 DAO 작업 영역 개체를 만듭니다. 통해을 참조할 수 있는 새 작업 영역 세션을 명시적으로 시작 된 `CDaoWorkspace` 개체입니다. 호출한 후 `Create`를 호출할 수 있습니다 [Append](#append) 작업 영역 데이터베이스 엔진의 작업 영역 컬렉션에 추가 하려는 경우.  
   
  클래스 개요를 참조 하십시오. [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) 만들려면 명시적으로 중지 해야 하는 방법에 대 한 정보에 대 한 한 `CDaoWorkspace` 개체입니다. 열 때 암시적으로 생성 하는 작업 영역을 사용 하는 일반적으로 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) 개체를 열 때 또는 작업 영역을 지정 하지 않고는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 데이터베이스 개체를 지정 하지 않고 개체입니다. 이 방법으로 만든 MFC DAO 개체는 한 번 생성 되 고 다시 사용 하는 DAO의 기본 작업 영역을 사용 합니다.  
   
@@ -251,7 +251,7 @@ virtual void Close();
 ```  
   
 ### <a name="remarks"></a>설명  
- 작업 영역 열기 개체를 닫아도 하는 기본 DAO 개체를 해제 되 고 작업 영역을 사용 하면 작업 영역 컬렉션의 멤버인 경우 컬렉션에서 제거 합니다. 호출 **닫기** 이 좋습니다.  
+ 작업 영역 열기 개체를 닫아도 하는 기본 DAO 개체를 해제 되 고 작업 영역을 사용 하면 작업 영역 컬렉션의 멤버인 경우 컬렉션에서 제거 합니다. 호출 `Close` 이 좋습니다.  
   
 > [!CAUTION]
 >  개체를 작업 영역을 닫으면 작업 영역에서 모든 열린 데이터베이스. 이 인해도 종결 되는 데이터베이스의 모든 레코드 집합 열기 및 모든 보류 중인 편집 내용이 또는 업데이트 내용이 롤백됩니다. 관련된 정보에 대 한 참조는 [CDaoDatabase::Close](../../mfc/reference/cdaodatabase-class.md#close), [CDaoRecordset::Close](../../mfc/reference/cdaorecordset-class.md#close), [CDaoTableDef::Close](../../mfc/reference/cdaotabledef-class.md#close), 및 [CDaoQueryDef::Close](../../mfc/reference/cdaoquerydef-class.md#close) 멤버 함수입니다.  
@@ -268,10 +268,10 @@ void CommitTrans();
 ```  
   
 ### <a name="remarks"></a>설명  
- 트랜잭션이 변경 데이터베이스의 데이터 또는 호출 하 여 시작 하 고 해당 구조에 구성 된 [BeginTrans](#begintrans)합니다. 트랜잭션을 완료 하는 경우 하나 커밋하거나 롤백하지 다시 (변경 내용을 취소)와 [롤백](#rollback)합니다. 기본적으로 트랜잭션 없이 레코드의 업데이트를 커밋할 즉시 됩니다. 호출 **BeginTrans** 호출할 때까지 지연 될 업데이트의 기여를 사용 하면 **CommitTrans**합니다.  
+ 트랜잭션이 변경 데이터베이스의 데이터 또는 호출 하 여 시작 하 고 해당 구조에 구성 된 [BeginTrans](#begintrans)합니다. 트랜잭션을 완료 하는 경우 하나 커밋하거나 롤백하지 다시 (변경 내용을 취소)와 [롤백](#rollback)합니다. 기본적으로 트랜잭션 없이 레코드의 업데이트를 커밋할 즉시 됩니다. 호출 `BeginTrans` 호출할 때까지 지연 될 업데이트의 기여를 사용 하면 `CommitTrans`합니다.  
   
 > [!CAUTION]
->  하나의 작업 영역 내에서 트랜잭션은 항상 전체 작업 영역에 이며 하나의 데이터베이스 또는 레코드 집합으로 제한 되지 않습니다. 둘 이상의 데이터베이스 또는 작업 영역 트랜잭션 내에서 레코드 집합에 대 한 작업을 수행 하는 경우 **CommitTrans** 업데이트를 보류 중인 모든 커밋 및 **롤백** 해당 데이터베이스에 대 한 모든 작업을 복원 하 고 레코드 집합입니다.  
+>  하나의 작업 영역 내에서 트랜잭션은 항상 전체 작업 영역에 이며 하나의 데이터베이스 또는 레코드 집합으로 제한 되지 않습니다. 둘 이상의 데이터베이스 또는 작업 영역 트랜잭션 내에서 레코드 집합에 대 한 작업을 수행 하는 경우 `CommitTrans` 업데이트 보류 중인 모든 커밋 및 `Rollback` 이 데이터베이스 및 레코드 집합에 대 한 모든 작업을 복원 합니다.  
   
  데이터베이스 또는 보류 중인 트랜잭션 작업 영역을 닫으면 트랜잭션이 모두 롤백됩니다.  
   
@@ -298,17 +298,17 @@ static void PASCAL CompactDatabase(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszSrcName`  
+ *lpszSrcName*  
  기존 열의 이름에는 데이터베이스를 닫혀 있습니다. 것이 전체 경로 파일 이름, 예: "c:\\\MYDB 합니다. MDB "입니다. 파일 이름 확장명이 지정 해야 합니다. 네트워크 경로 네트워크에 균일 한 명명 규칙 (UNC)를 지 원하는 경우와 같은 지정할 수도 있습니다 "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB 합니다. MDB "입니다. (때문에 경로 문자열에 필요한 이중 백슬래시 "\\" c + + 이스케이프 문자입니다.)  
   
- `lpszDestName`  
- 만들고 있는 압축된 된 데이터베이스의 전체 경로입니다. 으로 네트워크 경로를 지정할 수도 있습니다 `lpszSrcName`합니다. 사용할 수 없습니다는 `lpszDestName` 로 동일한 데이터베이스 파일을 지정 하려면 인수 `lpszSrcName`합니다.  
+ *lpszDestName*  
+ 만들고 있는 압축된 된 데이터베이스의 전체 경로입니다. 으로 네트워크 경로를 지정할 수도 있습니다 *lpszSrcName*합니다. 사용할 수 없습니다는 *lpszDestName* 로 동일한 데이터베이스 파일을 지정 하려면 인수 *lpszSrcName*합니다.  
   
- `lpszPassword`  
- 암호로 보호 된 데이터베이스를 압축할 때 사용 되는 암호입니다. 버전을 사용 하는 경우 `CompactDatabase` 암호를 사용 하는 모든 매개 변수를 제공 해야 합니다. 또한 연결 매개 변수 이기 때문에 필요한 다음과 같은 특수 한 서식,:; PWD = `lpszPassword`합니다. 예를 들어:; PWD = "정상적인"입니다. (선행 세미콜론은 필요 합니다.)  
+ *lpszPassword*  
+ 암호로 보호 된 데이터베이스를 압축할 때 사용 되는 암호입니다. 버전을 사용 하는 경우 `CompactDatabase` 암호를 사용 하는 모든 매개 변수를 제공 해야 합니다. 또한 연결 매개 변수 이기 때문에 필요한 다음과 같은 특수 한 서식,:; PWD = *lpszPassword*합니다. 예를 들어:; PWD = "정상적인"입니다. (선행 세미콜론은 필요 합니다.)  
   
- `lpszLocale`  
- 만들기 위한 데이터 정렬 순서를 지정 하는 데 사용 하는 문자열 식 `lpszDestName`합니다. 기본값을 그대로 사용 하 여이 인수를 생략 하면 **dbLangGeneral** (아래 참조)는 이전 데이터베이스의 새 데이터베이스의 로캘을 같습니다. 가능한 값은 다음과 같습니다.  
+ *lpszLocale*  
+ 만들기 위한 데이터 정렬 순서를 지정 하는 데 사용 하는 문자열 식 *lpszDestName*합니다. 기본값을 그대로 사용 하 여이 인수를 생략 하면 **dbLangGeneral** (아래 참조)는 이전 데이터베이스의 새 데이터베이스의 로캘을 같습니다. 가능한 값은 다음과 같습니다.  
   
 - **dbLangGeneral** 영어, 독일어, 프랑스어, 포르투갈어, 이탈리아어, 및 현대 스페인어  
   
@@ -340,8 +340,8 @@ static void PASCAL CompactDatabase(
   
 - **dbLangTurkish** 터키어  
   
- `nOptions`  
- 대상 데이터베이스에 대 한 하나 이상의 옵션을 나타내는 `lpszDestName`합니다. 기본값을 그대로 사용 하 여이 인수를 생략 하면는 `lpszDestName` 동일한 암호화와 동일한 버전으로 `lpszSrcName`합니다. 결합할 수는 **dbEncrypt** 또는 **dbDecrypt** 비트 OR 연산자를 사용 하 여 버전 옵션 중 하나가 지정 된 옵션입니다. 데이터베이스 엔진 버전이 아닌 데이터베이스 형식 지정 하는 가능한 값은 같습니다.  
+ *nOptions*  
+ 대상 데이터베이스에 대 한 하나 이상의 옵션을 나타내는 *lpszDestName*합니다. 기본값을 그대로 사용 하 여이 인수를 생략 하면는 *lpszDestName* 동일한 암호화와 동일한 버전으로 *lpszSrcName*합니다. 결합할 수는 **dbEncrypt** 또는 **dbDecrypt** 비트 OR 연산자를 사용 하 여 버전 옵션 중 하나가 지정 된 옵션입니다. 데이터베이스 엔진 버전이 아닌 데이터베이스 형식 지정 하는 가능한 값은 같습니다.  
   
 - **dbEncrypt** 압축 하는 동안 데이터베이스를 암호화 합니다.  
   
@@ -355,7 +355,7 @@ static void PASCAL CompactDatabase(
   
 - **dbVersion30** 압축 하는 동안 Microsoft Jet 데이터베이스 엔진 버전 3.0을 사용 하는 데이터베이스를 만듭니다.  
   
- 사용할 수 있습니다 **dbEncrypt** 또는 **dbDecrypt** 옵션 인수의 암호화 하거나 암호를 해독 데이터베이스는 압축 여부를 지정 합니다. 암호화 하는 상수를 생략 하는 경우 또는 둘 모두를 포함 하는 경우 **dbDecrypt** 및 **dbEncrypt**, `lpszDestName` 와 같은 암호화 갖습니다 `lpszSrcName`합니다. Options 인수에 버전 상수 중 하나를 사용 하 여 압축된 된 데이터베이스에 대 한 데이터 형식 버전을 지정할 수 있습니다. 이 상수의 데이터 형식 버전에만 영향을 줍니다 `lpszDestName`합니다. 하나의 버전 상수를 지정할 수 있습니다. 버전 상수를 생략 하면 `lpszDestName` 동일한 버전으로 갖습니다 `lpszSrcName`합니다. 압축할 수 `lpszDestName` 일치 하는 버전에만 또는 이후의 `lpszSrcName`합니다.  
+ 사용할 수 있습니다 **dbEncrypt** 또는 **dbDecrypt** 옵션 인수의 암호화 하거나 암호를 해독 데이터베이스는 압축 여부를 지정 합니다. 암호화 하는 상수를 생략 하는 경우 또는 둘 모두를 포함 하는 경우 **dbDecrypt** 및 **dbEncrypt**, *lpszDestName* 와 같은 암호화 갖습니다 *lpszSrcName* . Options 인수에 버전 상수 중 하나를 사용 하 여 압축된 된 데이터베이스에 대 한 데이터 형식 버전을 지정할 수 있습니다. 이 상수의 데이터 형식 버전에만 영향을 줍니다 *lpszDestName*합니다. 하나의 버전 상수를 지정할 수 있습니다. 버전 상수를 생략 하면 *lpszDestName* 동일한 버전으로 갖습니다 *lpszSrcName*합니다. 압축할 수 *lpszDestName* 일치 하는 버전에만 또는 이후의 *lpszSrcName*합니다.  
   
 > [!CAUTION]
 >  데이터베이스 암호화 되지 않은 경우 가능한 경우 직접 데이터베이스를 구성 하는 이진 디스크 파일을 읽을 수의 사용자/암호 보안을 구현 하는 경우에입니다.  
@@ -382,13 +382,13 @@ virtual void Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszName`  
+ *lpszName*  
  새 작업 영역 개체의 고유 이름을 지정 하는 최대 14 자 문자열입니다. 이름을 제공 해야 합니다. 관련된 정보에 대 한 항목 DAO 도움말의 "Name 속성"을 참조 합니다.  
   
  *lpszUserName*  
- 작업 공간의 소유자의 사용자 이름입니다. 요구 사항에 대 한 참조는 `lpszDefaultUser` 매개 변수를는 [SetDefaultUser](#setdefaultuser) 멤버 함수입니다. 관련된 정보에 대 한 항목 DAO 도움말의 "UserName 속성"을 참조 합니다.  
+ 작업 공간의 소유자의 사용자 이름입니다. 요구 사항에 대 한 참조는 *lpszDefaultUser* 매개 변수를는 [SetDefaultUser](#setdefaultuser) 멤버 함수입니다. 관련된 정보에 대 한 항목 DAO 도움말의 "UserName 속성"을 참조 합니다.  
   
- `lpszPassword`  
+ *lpszPassword*  
  새 작업 영역 개체에 대 한 암호입니다. 암호 최대 14 자까지 가능 하며 ASCII 0 (null)를 제외한 모든 문자를 포함할 수 있습니다. 암호는 대/소문자 구분 합니다. 관련된 정보에 대 한 DAO 도움말의 "암호 Property" 항목을 참조 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -396,11 +396,11 @@ virtual void Create(
   
 1.  생성 된 [CDaoWorkspace](#cdaoworkspace) 개체입니다.  
   
-2.  개체의 **만들기** 멤버 함수를 기본 DAO 작업 영역을 만듭니다. 작업 영역 이름을 지정 해야 합니다.  
+2.  개체의 `Create` 멤버 함수를 기본 DAO 작업 영역을 만듭니다. 작업 영역 이름을 지정 해야 합니다.  
   
 3.  필요에 따라 호출 [Append](#append) 작업 영역 데이터베이스 엔진의 작업 영역 컬렉션에 추가 하려는 경우. 작업 영역에 추가 하지 않고 작업할 수 있습니다.  
   
- 후의 **만들기** 열린 상태를 사용할 준비가 호출이, 영역 개체입니다. 호출 하지 않으면 **열려** 후 **만들기**합니다. 호출 하지 않으면 **만들기** 작업 영역의 작업 영역 컬렉션에 이미 있는 경우. **만들** 이미 응용 프로그램에 대 한 초기화 되지 않은 경우에 데이터베이스 엔진을 초기화 합니다.  
+ 후의 `Create` 열린 상태를 사용할 준비가 호출이, 영역 개체입니다. 호출 하지 않으면 `Open` 후 `Create`합니다. 호출 하지 않으면 `Create` 작업 영역의 작업 영역 컬렉션에 이미 있는 경우. `Create` 이미 응용 프로그램에 대 한 초기화 되지 않은 경우 데이터베이스 엔진을 초기화 합니다.  
   
 ##  <a name="getdatabasecount"></a>  CDaoWorkspace::GetDatabaseCount  
  작업 영역 데이터베이스 컬렉션에서 DAO 데이터베이스 개체의 수를 검색 하려면이 함수를 호출-작업 영역에서 열려 있는 데이터베이스의 수입니다.  
@@ -432,13 +432,13 @@ void GetDatabaseInfo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  인덱스에 의해 조회에는 작업 영역 데이터베이스 컬렉션에서 데이터베이스 개체의 0부터 시작 하는 인덱스입니다.  
   
- `dbinfo`  
+ *dbinfo*  
  에 대 한 참조는 [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) 요청 된 정보를 반환 하는 개체입니다.  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  검색할 데이터베이스에 대 한 정보를 지정 하는 옵션입니다. 사용 가능한 옵션은 함께 반환 하는 함수를 입히기 무엇 여기 나열 됩니다.  
   
 - `AFX_DAO_PRIMARY_INFO` (기본값) 이름, 업데이트 가능한 트랜잭션  
@@ -447,13 +447,13 @@ void GetDatabaseInfo(
   
 - `AFX_DAO_ALL_INFO` 기본 및 보조 정보 더하기: 연결  
   
- `lpszName`  
+ *lpszName*  
  이름별으로 조회에 대 한 데이터베이스 개체의 이름입니다. 이름을 고유 하 게 새 작업 영역 개체의 이름을 지정 하는 최대 14 자 문자열입니다.  
   
 ### <a name="remarks"></a>설명  
  한 버전의 함수를 사용 하면 인덱스는 데이터베이스를 찾을 수 있습니다. 다른 버전에서는 데이터베이스 이름으로 조회할 수 있습니다.  
   
- 에 대 한 설명은에서 반환 되는 정보 `dbinfo`, 참조는 [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) 구조입니다. 이 구조에는 항목의 설명에 위에 나열 된 정보에 해당 하는 멤버가 `dwInfoOptions`합니다. 한 수준에서 정보를 요청할 때 모든 상위 수준의에 대 한 정보를 가져옵니다.  
+ 에 대 한 설명은에서 반환 되는 정보 *dbinfo*, 참조는 [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) 구조입니다. 이 구조에는 위에 나열 된에 대 한 설명의 정보 항목에 해당 하는 멤버가 *dwInfoOptions*합니다. 한 수준에서 정보를 요청할 때 모든 상위 수준의에 대 한 정보를 가져옵니다.  
   
 ##  <a name="getinipath"></a>  CDaoWorkspace::GetIniPath  
  Microsoft Jet 데이터베이스의 위치를 Windows 레지스트리에 엔진의 초기화 설정을 가져오려면이 함수를 호출 합니다.  
@@ -579,13 +579,13 @@ void GetWorkspaceInfo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  인덱스에 의해 조회에 대 한 작업 영역 컬렉션에서 데이터베이스 개체의 0부터 시작 하는 인덱스입니다.  
   
- `wkspcinfo`  
+ *wkspcinfo*  
  에 대 한 참조는 [CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md) 요청 된 정보를 반환 하는 개체입니다.  
   
- `dwInfoOptions`  
+ *dwInfoOptions*  
  작업 영역을 검색 하는 방법에 대 한 정보를 지정 하는 옵션입니다. 사용 가능한 옵션은 함께 반환 하는 함수를 입히기 무엇 여기 나열 됩니다.  
   
 - `AFX_DAO_PRIMARY_INFO` (기본값) 이름  
@@ -594,11 +594,11 @@ void GetWorkspaceInfo(
   
 - `AFX_DAO_ALL_INFO` 기본 및 보조 정보 더하기: ODBCTrans 격리  
   
- `lpszName`  
+ *lpszName*  
  이름별으로 조회에 대 한 작업 영역 개체의 이름입니다. 이름을 고유 하 게 새 작업 영역 개체의 이름을 지정 하는 최대 14 자 문자열입니다.  
   
 ### <a name="remarks"></a>설명  
- 에 대 한 설명은에서 반환 되는 정보 `wkspcinfo`, 참조는 [CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md) 구조입니다. 이 구조에는 항목의 설명에 위에 나열 된 정보에 해당 하는 멤버가 `dwInfoOptions`합니다. 한 수준에서 정보를 요청 하는 경우 상위 수준의에 대 한 정보를 가져옵니다.  
+ 에 대 한 설명은에서 반환 되는 정보 *wkspcinfo*, 참조는 [CDaoWorkspaceInfo](../../mfc/reference/cdaoworkspaceinfo-structure.md) 구조입니다. 이 구조에는 위에 나열 된에 대 한 설명의 정보 항목에 해당 하는 멤버가 *dwInfoOptions*합니다. 한 수준에서 정보를 요청 하는 경우 상위 수준의에 대 한 정보를 가져옵니다.  
   
 ##  <a name="idle"></a>  CDaoWorkspace::Idle  
  호출 **Idle** 에 제공 하기 위해 데이터베이스 엔진 강한 데이터 처리로 인해 최신 상태가 아닐 수 있습니다 하는 백그라운드 작업을 수행할 수 있습니다.  
@@ -608,18 +608,18 @@ static void PASCAL Idle(int nAction = dbFreeLocks);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nAction`  
+ *n 작업*  
  유휴 처리 하는 동안 수행할 동작입니다. 유효한 작업은 현재 **dbFreeLocks**합니다.  
   
 ### <a name="remarks"></a>설명  
  없는 레코드 집합의 모든 레코드를 최신 상태로 유지 하는 데 충분 한 백그라운드 처리 시간이 다중 사용자, 멀티태스킹 환경에서 더욱 그렇습니다.  
   
 > [!NOTE]
->  호출 **Idle** Microsoft Jet 데이터베이스 엔진의 버전 3.0 사용 하 여 만든 데이터베이스와 필요 하지 않습니다. 사용 하 여 **Idle** 이전 버전을 사용 하 여 만든 데이터베이스에 대해서만 합니다.  
+>  호출 `Idle` Microsoft Jet 데이터베이스 엔진의 버전 3.0 사용 하 여 만든 데이터베이스와 필요 하지 않습니다. 사용 하 여 `Idle` 이전 버전을 사용 하 여 만든 데이터베이스에 대해서만 합니다.  
   
- 일반적으로 읽기 잠금이 해제 되 고 로컬 다이너셋 형식 레코드 집합 개체의 데이터 (마우스 움직임 포함) 다른 동작이 발생 하는 경우에 업데이트 됩니다. 주기적으로 호출 하는 경우 **Idle**, 백그라운드 처리를 해제 하 여 작업을 처리 하는 시간으로 데이터베이스 엔진 필요 없는 읽기 잠금을 제공 합니다. 지정 하는 **dbFreeLocks** 상수 인수로 서 모든 읽기 잠금이 해제 될 때까지 처리를 지연 합니다.  
+ 일반적으로 읽기 잠금이 해제 되 고 로컬 다이너셋 형식 레코드 집합 개체의 데이터 (마우스 움직임 포함) 다른 동작이 발생 하는 경우에 업데이트 됩니다. 주기적으로 호출 하는 경우 `Idle`, 백그라운드 처리를 해제 하 여 작업을 처리 하는 시간으로 데이터베이스 엔진 필요 없는 읽기 잠금을 제공 합니다. 지정 하는 **dbFreeLocks** 상수 인수로 서 모든 읽기 잠금이 해제 될 때까지 처리를 지연 합니다.  
   
- 이 멤버 함수는 응용 프로그램의 여러 인스턴스를 실행 하지 않는 단일 사용자 환경에 필요 하지 않습니다. **Idle** 멤버 함수는 데이터베이스 엔진이 데이터를 플러시하지를 디스크에 메모리의 잠금을 해제 하기 때문에 다중 사용자 환경에서 성능을 증가할 수 있습니다. 트랜잭션의 작업 포함 하 여 읽기 잠금을 해제할 수도 있습니다.  
+ 이 멤버 함수는 응용 프로그램의 여러 인스턴스를 실행 하지 않는 단일 사용자 환경에 필요 하지 않습니다. `Idle` 멤버 함수는 데이터베이스 엔진이 데이터를 플러시하지를 디스크에 메모리의 잠금을 해제 하기 때문에 다중 사용자 환경에서 성능을 증가할 수 있습니다. 트랜잭션의 작업 포함 하 여 읽기 잠금을 해제할 수도 있습니다.  
   
  관련된 정보에 대 한 DAO 도움말의 "유휴 Method" 항목을 참조 합니다.  
   
@@ -652,19 +652,19 @@ virtual void Open(LPCTSTR lpszName = NULL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszName`  
- 열려는 DAO 작업 영역 개체의 이름-고유 하 게 작업 영역 이름을 지정 하는 최대 14 문자가 있는 문자열입니다. 기본값을 그대로 **NULL** 를 명시적으로 기본 작업 영역을 열어야 합니다. 명명 요구 사항에 대 한 참조는 `lpszName` 에 대 한 매개 변수 [만들기](#create)합니다. 관련된 정보에 대 한 항목 DAO 도움말의 "Name 속성"을 참조 합니다.  
+ *lpszName*  
+ 열려는 DAO 작업 영역 개체의 이름-고유 하 게 작업 영역 이름을 지정 하는 최대 14 문자가 있는 문자열입니다. 기본값을 그대로 **NULL** 를 명시적으로 기본 작업 영역을 열어야 합니다. 명명 요구 사항에 대 한 참조는 *lpszName* 에 대 한 매개 변수 [만들기](#create)합니다. 관련된 정보에 대 한 항목 DAO 도움말의 "Name 속성"을 참조 합니다.  
   
 ### <a name="remarks"></a>설명  
  생성 한 후 한 `CDaoWorkspace` 개체, 다음 중 하나를 수행 하려면이 함수를 호출 합니다.  
   
--   기본 작업 영역을 명시적으로 열어야 합니다. 전달 **NULL** 에 대 한 `lpszName`합니다.  
+-   기본 작업 영역을 명시적으로 열어야 합니다. 전달 **NULL** 에 대 한 *lpszName*합니다.  
   
 -   기존 `CDaoWorkspace` 개체, 이름 기준으로 작업 영역 컬렉션의 구성원입니다. 기존 작업 영역 개체에 대 한 올바른 이름을 전달 합니다.  
   
- **열고** 열린 상태에 작업 영역 개체를 넣고 이미 응용 프로그램에 대 한 초기화 되지 않은 경우에 데이터베이스 엔진을 초기화 합니다.  
+ `Open` 열린 상태에 작업 영역 개체를 넣고 이미 응용 프로그램에 대 한 초기화 되지 않은 경우에 데이터베이스 엔진을 초기화 합니다.  
   
- 하지만 많은 `CDaoWorkspace` 작업 영역이 열린 후에 함수를 호출할 수는 멤버를 호출 하기 전에 하지만 c + + 개체의 생성 한 후 데이터베이스 엔진에서 작동 하는 다음 멤버 함수를 사용할 수 있는 **열기** :  
+ 하지만 많은 `CDaoWorkspace` 작업 영역이 열린 후에 함수를 호출할 수는 멤버를 호출 하기 전에 하지만 c + + 개체의 생성 한 후 데이터베이스 엔진에서 작동 하는 다음 멤버 함수를 사용할 수 있는 `Open`:  
   
 ||||  
 |-|-|-|  
@@ -680,11 +680,11 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszName`  
+ *lpszName*  
  경로 기존 Microsoft Jet 엔진 데이터베이스 파일에 대 한 파일 이름입니다. 경로 생략 하면 현재 디렉터리만 검색 됩니다. 시스템 일정 한 명명 규칙 (UNC)를 지 원하는 경우와 같은 네트워크 경로도 지정할 수 있습니다: "\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB 합니다. MDB "입니다. (때문에 경로 문자열에 이중 백슬래시는 필요 "\\" c + + 이스케이프 문자입니다.)  
   
 ### <a name="remarks"></a>설명  
- 지정한 데이터베이스를 닫아야 `lpszName` 복구 하기 전에. 다중 사용자 환경에서는 다른 사용자가 사용할 수 없습니다 `lpszName` 복구 하려는 동안 열입니다. 경우 `lpszName` 이 닫혀 있지 않거나 사용할 수 없는 독점적인 사용을 위해 오류가 발생 합니다.  
+ 지정한 데이터베이스를 닫아야 *lpszName* 복구 하기 전에. 다중 사용자 환경에서는 다른 사용자가 사용할 수 없습니다 *lpszName* 복구 하려는 동안 열입니다. 경우 *lpszName* 이 닫혀 있지 않거나 사용할 수 없는 독점적인 사용을 위해 오류가 발생 합니다.  
   
  이 멤버 함수는 불완전 한 쓰기 작업으로 손상 된 표시 된 데이터베이스를 복구 하려고 합니다. Microsoft Jet 데이터베이스 엔진을 사용 하 여 응용 프로그램 전원 가동 중단 또는 컴퓨터 하드웨어 문제 때문에 예기치 않게 종료 발생할 수 있습니다. 작업 및 호출을 완료 하는 경우는 [닫기](../../mfc/reference/cdaodatabase-class.md#close) 데이터베이스가 표시 되지 것입니다으로 손상 된, 또는 멤버 함수는 일반적인 방법으로 응용 프로그램을 종료 합니다.  
   
@@ -703,12 +703,12 @@ void Rollback();
 ### <a name="remarks"></a>설명  
   
 > [!CAUTION]
->  하나의 작업 영역 개체 내에서 트랜잭션은 항상 전체 작업 영역에 이며 하나의 데이터베이스 또는 레코드 집합으로 제한 되지 않습니다. 둘 이상의 데이터베이스 또는 작업 영역 트랜잭션 내에서 레코드 집합에 대 한 작업을 수행 하는 경우 **롤백** 모든 해당 데이터베이스 및 레코드 집합에 대 한 모든 작업을 복원 합니다.  
+>  하나의 작업 영역 개체 내에서 트랜잭션은 항상 전체 작업 영역에 이며 하나의 데이터베이스 또는 레코드 집합으로 제한 되지 않습니다. 둘 이상의 데이터베이스 또는 작업 영역 트랜잭션 내에서 레코드 집합에 대 한 작업을 수행 하는 경우 `Rollback` 모든 해당 데이터베이스 및 레코드 집합에 대 한 모든 작업을 복원 합니다.  
   
- 작업 영역 개체를 저장 하거나 보류 중인 모든 트랜잭션을 롤백하는 하지 않고 닫으면 트랜잭션이 자동으로 롤백됩니다. 호출 하는 경우 [CommitTrans](#committrans) 또는 **롤백** 먼저 호출 하지 않고 [BeginTrans](#begintrans), 오류가 발생 합니다.  
+ 작업 영역 개체를 저장 하거나 보류 중인 모든 트랜잭션을 롤백하는 하지 않고 닫으면 트랜잭션이 자동으로 롤백됩니다. 호출 하는 경우 [CommitTrans](#committrans) 또는 `Rollback` 먼저 호출 하지 않고 [BeginTrans](#begintrans), 오류가 발생 합니다.  
   
 > [!NOTE]
->  트랜잭션을 시작할 때 데이터베이스 엔진 워크스테이션에서 TEMP 환경 변수로 지정 된 디렉터리에 보관 파일에서 해당 작업을 기록 합니다. 트랜잭션 로그 파일 임시 드라이브에 사용 가능한 저장소를 소모를 하는 경우 데이터베이스 엔진 MFC throw 하면는 `CDaoException` (DAO 오류 2004). 이 시점에서 호출 하는 경우 **CommitTrans**, 무제한 작업으로 커밋됩니다. 하지만 나머지 완료 되지 않은 작업이 손실 되 고 작업에 다시 시작 해야 합니다. 호출 **롤백** 트랜잭션 로그를 해제 하 고 트랜잭션의 모든 작업이 롤백됩니다.  
+>  트랜잭션을 시작할 때 데이터베이스 엔진 워크스테이션에서 TEMP 환경 변수로 지정 된 디렉터리에 보관 파일에서 해당 작업을 기록 합니다. 트랜잭션 로그 파일 임시 드라이브에 사용 가능한 저장소를 소모를 하는 경우 데이터베이스 엔진 MFC throw 하면는 `CDaoException` (DAO 오류 2004). 이 시점에서 호출 하는 경우 `CommitTrans`, 무제한 작업으로 커밋됩니다. 하지만 나머지 완료 되지 않은 작업이 손실 되 고 작업에 다시 시작 해야 합니다. 호출 `Rollback` 트랜잭션 로그를 해제 하 고 트랜잭션의 모든 작업이 롤백됩니다.  
   
 ##  <a name="setdefaultpassword"></a>  CDaoWorkspace::SetDefaultPassword  
  특정 암호 없이 workspace 개체를 만들 때 데이터베이스 엔진에 사용 되는 기본 암호를 설정 하려면이 함수를 호출 합니다.  
@@ -718,7 +718,7 @@ static void PASCAL SetDefaultPassword(LPCTSTR lpszPassword);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszPassword`  
+ *lpszPassword*  
  기본 암호입니다. 암호 최대 14 자까지 가능 하며 ASCII 0 (null)를 제외한 모든 문자를 포함할 수 있습니다. 암호는 대/소문자 구분 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -726,11 +726,11 @@ static void PASCAL SetDefaultPassword(LPCTSTR lpszPassword);
   
  사용 하려면이 멤버 함수:  
   
-1.  생성 한 `CDaoWorkspace` 개체 되지만 호출 하지 않으면 **만들기**합니다.  
+1.  생성 한 `CDaoWorkspace` 개체 되지만 호출 하지 않으면 `Create`합니다.  
   
 2.  호출 `SetDefaultPassword` 및 원하는 경우 [SetDefaultUser](#setdefaultuser)합니다.  
   
-3.  호출 **만들기** 이 작업 영역 개체 또는 이후의 조건에 대 한 하지 않고 암호를 지정 합니다.  
+3.  호출 `Create` 이 작업 영역 개체 또는 이후의 조건에 대 한 하지 않고 암호를 지정 합니다.  
   
  기본적으로 DefaultUser 속성 "admin"으로 설정 되 고 해야 속성을 빈 문자열 ("").  
   
@@ -744,7 +744,7 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszDefaultUser`  
+ *lpszDefaultUser*  
  기본 사용자 이름입니다. 사용자 이름 길이 1 ~ 20 자 수 있으며 영문자, 악센트 부호가 있는 문자, 숫자, 공백 및 기호를 제외 하 고 포함: "(인용 부호 제외) / (슬래시), \ (백슬래시) \[ \] (괄호): (콜론) &#124; 드 ( 파이프) \< (덜-기호 보다), > (큰-기호 보다), + (더하기 기호) = (작거나 기호); (세미콜론), (쉼표), (물음표) * (별표)을 앞에 공백, 및 제어 문자 (ASCII 00 ASCII 31). 관련된 정보에 대 한 항목 DAO 도움말의 "UserName 속성"을 참조 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -752,11 +752,11 @@ static void PASCAL SetDefaultUser(LPCTSTR lpszDefaultUser);
   
  사용 하려면이 멤버 함수:  
   
-1.  생성 한 `CDaoWorkspace` 개체 되지만 호출 하지 않으면 **만들기**합니다.  
+1.  생성 한 `CDaoWorkspace` 개체 되지만 호출 하지 않으면 `Create`합니다.  
   
 2.  호출 `SetDefaultUser` 및 원하는 경우 [SetDefaultPassword](#setdefaultpassword)합니다.  
   
-3.  호출 **만들기** 이 작업 영역 개체 또는 이후의 조건에 대 한 관계 없이 사용자 이름을 지정 합니다.  
+3.  호출 `Create` 이 작업 영역 개체 또는 이후의 조건에 대 한 관계 없이 사용자 이름을 지정 합니다.  
   
  기본적으로 DefaultUser 속성 "admin"으로 설정 되 고 해야 속성을 빈 문자열 ("").  
   
@@ -805,7 +805,7 @@ static void PASCAL SetLoginTimeout(short nSeconds);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nSeconds`  
+ *nSeconds*  
  ODBC 데이터베이스에 로그인 하려고 할 때 오류가 발생 하기 전에 시간 (초) 수입니다.  
   
 ### <a name="remarks"></a>설명  

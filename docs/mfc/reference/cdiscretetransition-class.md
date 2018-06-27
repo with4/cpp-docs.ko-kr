@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 858304a41cb015711393ea6cc41e73ddbcc8cd8b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0252cc64a1d14a6d096a5c4ad6dd2e0d6c3c7ff
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366937"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957034"
 ---
 # <a name="cdiscretetransition-class"></a>CDiscreteTransition 클래스
 불연속 전환을 캡슐화합니다.  
@@ -88,13 +88,13 @@ CDiscreteTransition(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `delay`  
+ *지연*  
  최종 값으로 인스턴스화 스위치를 지연 하는 기준인 시간의 양입니다.  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  전환의 끝에서 애니메이션 변수의 값입니다.  
   
- `hold`  
+ *보류*  
  으로 최종 값에서 변수를 유지 하는 시간의 양입니다.  
   
 ##  <a name="create"></a>  CDiscreteTransition::Create  
@@ -106,7 +106,7 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* \*not used*\);
 ```  
   
-`pLibrary`  
+*pLibrary*  
  에 대 한 포인터는 [IUIAnimationTransitionLibrary 인터페이스](https://msdn.microsoft.com/library/windows/desktop/dd371897), 표준 전환의 라이브러리를 정의 하는 합니다.  
 
   

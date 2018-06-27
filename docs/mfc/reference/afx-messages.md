@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc11b3eb79f0d535775f073c772e40c4ed9e822c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76396a402f348181fbcd65a2ccb962207216abda
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355421"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954662"
 ---
 # <a name="afx-messages"></a>AFX 메시지
 이러한 메시지는 MFC에서 사용 됩니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "33355421"
   
 ||||||  
 |-|-|-|-|-|  
-|메시지|설명|[in] `wParam`|`lParam` (모든 매개 변수는 [in] 언급이 없으면.)|반환 값|  
+|메시지|설명|[in] *wParam*|*lParam* (모든 매개 변수는 [in] 언급이 없으면.)|반환 값|  
 |AFX_WM_ACCGETOBJECT|사용되지 않습니다.|사용되지 않습니다.|해당 사항 없음.|해당 사항 없음.|  
 |AFX_WM_ACCGETSTATE|내게 필요한 옵션 지원에 사용 됩니다. 이 메시지를 보내 `CMFCPopupMenu` 또는 `CMFCRibbonPanelMenu` 를 현재 요소의 상태를 검색 합니다.|메뉴 단추 또는 구분 될 수 있는 요소의 인덱스입니다.|사용되지 않습니다.|요소 상태입니다. 인덱스가 유효 하지 않을 경우에-1을은 메뉴 단추에 특수 특성이 없는 경우 0입니다. 그렇지 않으면 다음 플래그의 조합입니다.<br /><br /> TBBS_DISABLED-항목은 사용할 수 없습니다.<br /><br /> 항목이 선택 되었으면 TBBS_CHECKED-<br /><br /> TBBS_BUTTON-해당 항목은 표준 누름<br /><br /> 단추를 누르면 TBBS_PRESSED-<br /><br /> TBBS_INDETERMINATE-정의 되지 않은 상태<br /><br /> TBBS_SEPARATOR-메뉴 단추가 아닌, 다른 메뉴 항목 간의 분리는이 요소 양식|  
 |AFX_WM_CHANGE_ACTIVE_TAB|프레임 워크는 크기 조정 가능한 컨트롤 막대 컨트롤에이 메시지를 보냅니다. 알림을 수신 하려면이 메시지를 처리 `CMFCTabCtrl` 사용자 활성 탭이 변경 될 때 개체입니다.|탭의 인덱스입니다.|사용되지 않습니다.|0이 아닙니다.|  
@@ -131,7 +131,7 @@ ms.locfileid: "33355421"
 |AFX_WM_UPDATETOOLTIPS|전송 모든 도구 설명 소유자에 게 해당 도구 설명 컨트롤 다시 만들어야 합니다.|이 메시지를 처리 해야 하는 컨트롤의 형식입니다. 가능한 값 목록은이 항목의 뒷부분에 나오는 표를 참조 하세요.|사용되지 않습니다.|사용되지 않습니다.|  
 |AFX_WM_WINDOW_HELP|`CMFCWindowsManagerDialog` 사용자가 부모 프레임에이 메시지를 보냅니다는 **도움말** 단추를 클릭 하 여 도움말 모드를 시작 또는 **도움말** 캡션 단추를 클릭 하거나 F1 키입니다.|사용되지 않습니다.|인스턴스에 대 한 포인터 `CMFCWindowsManagerDialog`합니다.|사용되지 않습니다.|  
   
- 다음 표에서의 낮은 단어에 대 한 값을 보여 줍니다.는 `lParam` AFX_WM_HSCROLL 메서드의 매개 변수:  
+ 다음 표에서의 낮은 단어에 대 한 값을 보여 줍니다.는 *lParam* AFX_WM_HSCROLL 메서드의 매개 변수:  
   
 |||  
 |-|-|  
@@ -147,9 +147,9 @@ ms.locfileid: "33355421"
 |SB_THUMBTRACK|사용자가 스크롤 상자를 끌고 있습니다. AFX_WM_ON_HSCROLL 메시지 마우스 단추를 놓을 때까지 반복 해 서이 값으로 전송 됩니다. 상위 단어로 스크롤 상자 끌어 놓은 위치를 나타냅니다.|  
   
 > [!NOTE]
->  상위 단어는 `lParam` 그렇지 않으면이 단어를 사용 하지는; 매개 변수는 하위 단어 SB_THUMBPOSITION 있느냐 SB_THUMBTRACK 스크롤 상자의 현재 위치를 지정 합니다.  
+>  상위 단어는 *lParam* 그렇지 않으면이 단어를 사용 하지는; 매개 변수는 하위 단어 SB_THUMBPOSITION 있느냐 SB_THUMBTRACK 스크롤 상자의 현재 위치를 지정 합니다.  
   
- 에 대 한 플래그 값을 나열 하는 다음 표에 `lParam` AFX_WM_UPDATETOOLTIPS 메시지의 매개 변수:  
+ 에 대 한 플래그 값을 나열 하는 다음 표에 *lParam* AFX_WM_UPDATETOOLTIPS 메시지의 매개 변수:  
   
 |||  
 |-|-|  

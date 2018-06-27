@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6560bf337f6e146bba19e41d56727945df771dd2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e741f172d0dfe528a166fad087460fd9ae18c0f3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349260"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951184"
 ---
 # <a name="afxextensionmodule-structure"></a>AFX_EXTENSION_MODULE 구조체
 `AFX_EXTENSION_MODULE` MFC 확장 Dll의 초기화 동안 MFC 확장 DLL 모듈의 상태를 저장 하는 데 사용 됩니다.  
@@ -43,7 +43,7 @@ struct AFX_EXTENSION_MODULE
  *bInitialized*  
  **True 이면** DLL 모듈으로 초기화 된 경우 `AfxInitExtensionModule`합니다.  
   
- `hModule`  
+ *hModule*  
  DLL 모듈의 핸들을 지정 합니다.  
   
  *hResource*  
@@ -60,13 +60,13 @@ struct AFX_EXTENSION_MODULE
   
 -   호출 [AfxInitExtensionModule](extension-dll-macros.md#afxinitextensionmodule) 반환 값을 확인 합니다.  
   
--   만들기는 **CDynLinkLibrary** DLL를 내보내는 경우 개체 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 자체 사용자 지정 리소스 또는 개체입니다.  
+-   만들기는 `CDynLinkLibrary` DLL를 내보내는 경우 개체 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 자체 사용자 지정 리소스 또는 개체입니다.  
   
  `AFX_EXTENSION_MODULE` 구조는 MFC 확장 DLL 모듈 상태를 실행 하기 전에 일반적인 정적 개체 생성의 일부로 MFC 확장 DLL에서 초기화 된 런타임 클래스 개체의 복사본을 포함 하 여의 복사본을 저장 하는 데 사용 되 `DllMain` 은 입력합니다. 예를 들어:  
   
  [!code-cpp[NVC_MFC_DLL#2](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_1.cpp)]  
   
- 에 저장 된 모듈 정보는 `AFX_EXTENSION_MODULE` 구조를 복사할 수는 **CDynLinkLibrary** 개체입니다. 예를 들어:  
+ 에 저장 된 모듈 정보는 `AFX_EXTENSION_MODULE` 구조를 복사할 수는 `CDynLinkLibrary` 개체입니다. 예를 들어:  
   
  [!code-cpp[NVC_MFC_DLL#5](../../atl-mfc-shared/codesnippet/cpp/afx-extension-module-structure_2.cpp)]  
   

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 824ac88326042eb55ecb9667c39331d1ab5464e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7766b56e75edefda4f40194a5ce18572c8d6d78d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368337"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952250"
 ---
 # <a name="cdbexception-class"></a>잠금을 클래스
 데이터베이스 클래스에서 발생하는 예외 상태를 나타냅니다.  
@@ -92,13 +92,13 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_LOCK_MODE_NOT_SUPPORTED** 잠금 ODBC 드라이버에서 지원 하지 않으므로 잠금 레코드 업데이트에 대 한 요청을 수행할 수 없습니다.  
   
-- **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED** 호출한 경우 `CRecordset::Update` 또는 **삭제** 없는 고유 키가 있는 테이블에 대 한 여러 레코드를 변경 합니다.  
+- **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED** 호출한 경우 `CRecordset::Update` 또는 `Delete` 없는 고유 키가 있는 테이블에 대 한 여러 레코드를 변경 합니다.  
   
 - **AFX_SQL_ERROR_NO_CURRENT_RECORD** 편집 하거나 이전에 삭제 된 레코드를 삭제 했습니다. 삭제 후에 새로운 현재 레코드로으로 스크롤해야 합니다.  
   
 - **AFX_SQL_ERROR_NO_POSITIONED_UPDATES** 요청 다이너셋은 ODBC 드라이버가 지원 하지 않으므로 수행할 수 없습니다에 대 한 위치 지정 업데이트 합니다.  
   
-- **AFX_SQL_ERROR_NO_ROWS_AFFECTED** 호출한 경우 `CRecordset::Update` 또는 **삭제**, 하지만 작업을 시작 하는 경우 레코드 더 이상 찾을 수 없습니다.  
+- **AFX_SQL_ERROR_NO_ROWS_AFFECTED** 호출한 경우 `CRecordset::Update` 또는 `Delete`, 하지만 작업을 시작 하는 경우 레코드 더 이상 찾을 수 없습니다.  
   
 - **AFX_SQL_ERROR_ODBC_LOAD_FAILED** ODBC를 로드 하려고 합니다. DLL에 실패 했습니다. Windows를 찾을 수 없거나이 DLL을 로드할 수 없습니다. 이 오류는 치명적입니다.  
   
@@ -114,7 +114,7 @@ class CDBException : public CException
   
 - **AFX_SQL_ERROR_RECORDSET_READONLY** 데이터 소스는 읽기 전용 또는 읽기 전용 레코드 집합을 업데이트 하려고 했습니다. Update 작업이 이루어지지 레코드 집합을 수행할 수 있습니다 또는 `CDatabase` 연결 된 개체입니다.  
   
-- **SQL_ERROR** 함수가 실패 했습니다. ODBC 함수에서 반환 된 오류 메시지 **SQLError** 에 저장 되는 **m_strError** 데이터 멤버입니다.  
+- **SQL_ERROR** 함수가 실패 했습니다. ODBC 함수에서 반환 된 오류 메시지 `SQLError` 에 저장 되는 **m_strError** 데이터 멤버입니다.  
   
 - **SQL_INVALID_HANDLE** 는 잘못 된 환경 핸들, 연결 핸들 또는 문 핸들 인해 함수가 실패 했습니다. 프로그래밍 오류를 나타냅니다. ODBC 함수는 추가 정보가 **SQLError**합니다.  
   
@@ -132,17 +132,17 @@ class CDBException : public CException
 ### <a name="remarks"></a>설명  
  문자열은 서식 코드를에서 설명 하는 값으로 바뀌는 양식 "상태 %s, 네이티브 %ld, 원본 %s"입니다.:::  
   
--   **SQLSTATE**에 반환 된 5 자의 오류 코드를 포함 하는 null로 끝나는 문자열의 *szSqlState* 매개 변수는 ODBC 함수의 **SQLError**합니다. **SQLSTATE** 값 부록 A에에서 나열 됩니다 [ODBC 오류 코드](https://msdn.microsoft.com/library/ms714687.aspx)에 *ODBC Programmer's Reference*합니다. 예: "S0022"입니다.  
+-   **SQLSTATE**에 반환 된 5 자의 오류 코드를 포함 하는 null로 끝나는 문자열의 *szSqlState* 매개 변수는 ODBC 함수의 `SQLError`합니다. **SQLSTATE** 값 부록 A에에서 나열 됩니다 [ODBC 오류 코드](https://msdn.microsoft.com/library/ms714687.aspx)에 *ODBC Programmer's Reference*합니다. 예: "S0022"입니다.  
   
--   반환 하는 특정 데이터 원본에는 원시 오류 코드는 *pfNativeError* 의 매개 변수는 **SQLError** 함수입니다. 예: 207 합니다.  
+-   반환 하는 특정 데이터 원본에는 원시 오류 코드는 *pfNativeError* 의 매개 변수는 `SQLError` 함수입니다. 예: 207 합니다.  
   
--   반환 된 오류 메시지 텍스트는 *szErrorMsg* 의 매개 변수는 **SQLError** 함수입니다. 이 메시지는 여러 개의 대괄호로 묶인된 이름을 이루어져 있습니다. 오류가 사용자에 게 해당 원본에서 전달 때 각 ODBC 구성 요소 (데이터 원본, 드라이버, 드라이버 관리자)는 고유 이름을 추가 합니다. 이 정보는 오류의 출처를 정확 하 게 찾을 수 있습니다. 예: [Microsoft] [ODBC SQL Server Driver] [SQL Server]  
+-   반환 된 오류 메시지 텍스트는 *szErrorMsg* 의 매개 변수는 `SQLError` 함수입니다. 이 메시지는 여러 개의 대괄호로 묶인된 이름을 이루어져 있습니다. 오류가 사용자에 게 해당 원본에서 전달 때 각 ODBC 구성 요소 (데이터 원본, 드라이버, 드라이버 관리자)는 고유 이름을 추가 합니다. 이 정보는 오류의 출처를 정확 하 게 찾을 수 있습니다. 예: [Microsoft] [ODBC SQL Server Driver] [SQL Server]  
   
  프레임 워크를 오류 문자열을 해석 하 고 해당 구성 요소에 배치 **m_strStateNativeOrigin**경우 **m_strStateNativeOrigin** 정보가 둘 이상의 오류에 대 한 오류 정보에서 서로 다른 줄 바꿈 합니다. 프레임 워크에서 영숫자 오류 텍스트를 배치 **m_strError**합니다.  
   
  이 문자열을 확인 하는 데 사용 하는 코드에 대 한 자세한 내용은 참조는 [SQLError](https://msdn.microsoft.com/library/ms716312.aspx) 함수는 *ODBC Programmer's Reference*합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   ODBC:에서 "상태: S0022, 네이티브: 207, 원본: [Microsoft] [ODBC SQL Server Driver] [SQL Server] 잘못 된 열 이름 'ColName'"  
   
  **m_strStateNativeOrigin**: "상태: S0022, 네이티브: 207, 원본: [Microsoft] [ODBC SQL Server Driver] [SQL Server]"  

@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3888f054baab61bb7422403b0766d7f757914d1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ef863a0eb8cec66e7f640a734088a98b1e8d7b83
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357984"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952114"
 ---
 # <a name="ccolordialog-class"></a>CColorDialog 클래스
 색 선택 대화 상자는 응용 프로그램에 통합할 수 있습니다.  
@@ -80,7 +80,7 @@ class CColorDialog : public CCommonDialog
   
  생성 하는 `CColorDialog` 개체, 제공 된 생성자를 사용 하거나 새 클래스 파생 및 사용자 고유의 사용자 지정 생성자를 사용 합니다.  
   
- 대화 상자를 생성 되 면이 설정 하거나의 모든 값을 수정할 수 있습니다는 [m_cc](#m_cc) 대화 상자의 컨트롤의 값을 초기화 하는 구조입니다. `m_cc` 형식의 구조는 [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830)합니다.  
+ 대화 상자를 생성 되 면이 설정 하거나의 모든 값을 수정할 수 있습니다는 [m_cc](#m_cc) 대화 상자의 컨트롤의 값을 초기화 하는 구조입니다. *m_cc* 형식의 구조는 [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830)합니다.  
   
  대화 상자의 컨트롤을 초기화 한 다음 호출에서 `DoModal` 멤버 함수를 대화 상자를 표시 하 고 색을 선택 하는 데 사용할 수 있습니다. `DoModal` 대화 상자의 확인 하거나 사용자가 선택한 반환 ( **IDOK**) 또는 취소 ( **IDCANCEL**) 단추입니다.  
   
@@ -129,13 +129,13 @@ CColorDialog(
  *clrInit*  
  기본 색 선택 합니다. 지정은 값이 없으면 기본값이 RGB(0,0,0) (검정)입니다.  
   
- `dwFlags`  
+ *dwFlags*  
  집합 함수 및 대화 상자의 모양을 사용자 지정 하는 플래그입니다. 자세한 내용은 참조는 [CHOOSECOLOR](http://msdn.microsoft.com/library/windows/desktop/ms646830) Windows SDK에는 구조입니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  대화 상자의 부모 또는 소유자 창에 대 한 포인터입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#49](../../mfc/codesnippet/cpp/ccolordialog-class_1.cpp)]  
   
 ##  <a name="domodal"></a>  CColorDialog::DoModal  
@@ -155,7 +155,7 @@ virtual INT_PTR DoModal();
   
  호출한 후 `DoModal`, 다른 멤버를 설정 또는 사용자가 정보 입력 대화 상자에 검색 함수를 호출할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CColorDialog::CColorDialog](#ccolordialog)합니다.  
   
 ##  <a name="getcolor"></a>  CColorDialog::GetColor  
@@ -168,7 +168,7 @@ COLORREF GetColor() const;
 ### <a name="return-value"></a>반환 값  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) 색 대화 상자에서 선택한 색의 RGB 정보를 포함 하는 값입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#50](../../mfc/codesnippet/cpp/ccolordialog-class_2.cpp)]  
   
 ##  <a name="getsavedcustomcolors"></a>  CColorDialog::GetSavedCustomColors  
@@ -186,7 +186,7 @@ static COLORREF* PASCAL GetSavedCustomColors();
   
  각 반환된 된 배열에 16 RGB 값 (흰색) RGB(255,255,255) 초기화 됩니다. 사용자가 선택한 사용자 지정 색 응용 프로그램 내에서 대화 상자 호출 사이만 저장 됩니다. 응용 프로그램의 호출 사이의 이러한 색을 저장 하려는 경우 저장 해야 약간 다른 방식에서와 같은 초기화에 (합니다. INI) 파일입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#51](../../mfc/codesnippet/cpp/ccolordialog-class_3.cpp)]  
   
 ##  <a name="m_cc"></a>  CColorDialog::m_cc  
@@ -197,9 +197,9 @@ CHOOSECOLOR m_cc;
 ```  
   
 ### <a name="remarks"></a>설명  
- 생성 한 후 한 `CColorDialog` 개체를 사용할 수 있습니다 `m_cc` 호출 하기 전에 대화 상자의 다양 한 측면을 설정 하는 [DoModal](#domodal) 멤버 함수입니다.  
+ 생성 한 후 한 `CColorDialog` 개체를 사용할 수 있습니다 *m_cc* 호출 하기 전에 대화 상자의 다양 한 측면을 설정 하는 [DoModal](#domodal) 멤버 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#53](../../mfc/codesnippet/cpp/ccolordialog-class_4.cpp)]  
   
 ##  <a name="oncolorok"></a>  CColorDialog::OnColorOK  
@@ -227,24 +227,24 @@ virtual BOOL OnColorOK();
   
  호출할 수 있습니다 [SetCurrentColor](#setcurrentcolor) 내에서 `OnColorOK` 강제로 색을 선택 합니다. 한 번 `OnColorOK` 발생 했음을 (즉, 사용자가 클릭 **확인** 색 변경 내용을 적용 하)를 호출할 수 있습니다 [GetColor](#getcolor) 새 색의 RGB 값을 가져올 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#52](../../mfc/codesnippet/cpp/ccolordialog-class_5.cpp)]  
   
 ##  <a name="setcurrentcolor"></a>  CColorDialog::SetCurrentColor  
- 이 함수를 호출한 후 호출 `DoModal` 에 지정 된 색 값으로 현재 색 선택을 강제로 `clr`합니다.  
+ 이 함수를 호출한 후 호출 `DoModal` 에 지정 된 색 값으로 현재 색 선택을 강제로 *clr*합니다.  
   
 ```  
 void SetCurrentColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `clr`  
+ *clr*  
  RGB 색상 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 메시지 처리기 내에서이 함수를 호출 하거나 `OnColorOK`합니다. 대화 상자는 사용자가 선택한 값에 따라 자동으로 업데이트는 `clr` 매개 변수입니다.  
+ 메시지 처리기 내에서이 함수를 호출 하거나 `OnColorOK`합니다. 대화 상자는 사용자가 선택한 값에 따라 자동으로 업데이트는 *clr* 매개 변수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CColorDialog::OnColorOK](#oncolorok)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

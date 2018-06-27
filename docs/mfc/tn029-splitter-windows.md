@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca18f12c5aa1ae767b8921c28e650f3fb69d9942
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3f0419e8f8aea141c3aaa54e320200160dae877f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384725"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957226"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: 분할 창
 이 노트에서는 MFC 설명 [CSplitterWnd 클래스](../mfc/reference/csplitterwnd-class.md), 창 분할 및 다른 창 창 크기를 조정 관리를 제공 합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "33384725"
  창:  
  응용 프로그램별 창 하는 `CSplitterWnd` 를 관리 합니다. 하나의 창에서 파생 된 개체는 일반적으로 [CView 클래스](../mfc/reference/cview-class.md), 하나일 수 있습니다 하지만 [CWnd](../mfc/reference/cwnd-class.md) 적절 한 자식 창 ID를 가진 개체를  
   
- 사용 하는 `CWnd`-파생 된 개체를 전달는 `RUNTIME_CLASS` 개체의는 `CreateView` 을 사용한 경우와 마찬가지로 함수는 `CView`-파생 클래스입니다. 클래스를 사용 해야 `DECLARE_DYNCREATE` 및 `IMPLEMENT_DYNCREATE` 프레임 워크 런타임 시 동적 생성을 사용 하기 때문에 있습니다. 많은 코드에는 없지만 `CSplitterWnd` 에 고유는 `CView` 클래스 [CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof) 이러한 작업을 수행 하기 전에 항상 사용 됩니다.  
+ 사용 하는 `CWnd`-파생 된 개체, 개체의 RUNTIME_CLASS 전달는 `CreateView` 을 사용한 경우와 마찬가지로 함수는 `CView`-파생 클래스입니다. 클래스는 프레임 워크 런타임 시 동적 생성을 사용 하기 때문에 DECLARE_DYNCREATE 및 IMPLEMENT_DYNCREATE 사용 해야 합니다. 많은 코드에는 없지만 `CSplitterWnd` 에 고유는 `CView` 클래스 [CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof) 이러한 작업을 수행 하기 전에 항상 사용 됩니다.  
   
  분할 막대:  
  컨트롤의 창 행과 열 사이 배치 된입니다. 창의 열 또는 행의 크기 조정에 사용할 수 있습니다.  
@@ -88,14 +88,14 @@ ms.locfileid: "33384725"
 [      ][      ][v]  
 ```  
   
- 스크롤 막대를 이동할 때 `WM_VSCROLL` 두 보기에 메시지가 전송 됩니다. 스크롤 막대 위치를 설정 하는 두 보기 중 하나를 공유 스크롤 막대 설정 됩니다.  
+ 사용자가 스크롤 막대를 움직이면 WM_VSCROLL 메시지 모두 보기에 전송 됩니다. 스크롤 막대 위치를 설정 하는 두 보기 중 하나를 공유 스크롤 막대 설정 됩니다.  
   
  Note 공유 스크롤 막대는 유사한 보기 개체에 가장 유용 합니다. 분할자의 형식이 서로 다른 뷰를 함께 사용할 경우의 스크롤 위치를 조정 하는 특수 한 코드를 작성 해야 수 있습니다. 모든 `CView`-파생 클래스를 사용 하는 `CWnd` 스크롤 막대가 있는 경우 Api 공유 스크롤 막대를 위임 합니다. `CScrollView` 구현은의 한 예는 `CView` 지 원하는 클래스는 스크롤 막대를 공유 합니다. 클래스에서 파생 되지 않은 `CView`, 컨트롤이 아닌 스크롤 막대를 사용 하는 클래스 또는 표준 Windows 구현을 사용 하는 클래스 (예를 들어 `CEditView`)의 공유 스크롤 막대 기능을 통해 작동 하지 것입니다 `CSplitterWnd`합니다.  
   
 ## <a name="minimum-sizes"></a>최소 크기  
  각 행에 대해 최소 행 높이 않으며 각 열에는 최소 열 너비입니다. 이 최소는 창이 너무 작아 전체 정보에 표시 되는지 보장 합니다.  
   
- 정적 분할 창 초기 최소 행 높이 및 열 너비는 0입니다. 동적 분할 창에 대 한 초기 최소 행 높이 및 열 너비 설정 됩니다는 `sizeMin` 의 매개 변수는 `CSplitterWnd::Create` 함수입니다.  
+ 정적 분할 창 초기 최소 행 높이 및 열 너비는 0입니다. 동적 분할 창에 대 한 초기 최소 행 높이 및 열 너비 설정 됩니다는 *sizeMin* 의 매개 변수는 `CSplitterWnd::Create` 함수입니다.  
   
  사용 하 여 이러한 최소 크기를 변경할 수는 [CSplitterWnd::SetRowInfo](../mfc/reference/csplitterwnd-class.md#setrowinfo) 및 [CSplitterWnd::SetColumnInfo](../mfc/reference/csplitterwnd-class.md#setcolumninfo) 함수입니다.  
   

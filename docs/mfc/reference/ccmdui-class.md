@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf80f2ebea8fe27596ce1b240cc414cc0db7a8db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3dd417872ab4009a9e0f6c06fc0958f5780de477
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356690"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954154"
 ---
 # <a name="ccmdui-class"></a>CCmdUI 클래스
 내 에서만 사용 되는 `ON_UPDATE_COMMAND_UI` 의 처리기는 `CCmdTarget`-클래스를 파생 합니다.  
@@ -79,7 +79,7 @@ class CCmdUI
   
  때 응용 프로그램의 사용자 메뉴, 각 메뉴 항목 알아야 것을 표시 해야 하는지를 사용 또는 사용 안 함 아래로 끌어옵니다. 구현 하 여이 정보를 제공 하는 메뉴 명령 대상일은 `ON_UPDATE_COMMAND_UI` 처리기입니다. 각 응용 프로그램의 명령 사용자 인터페이스 개체에 대 한 각 처리기에 대 한 메시지 맵 항목 및 함수 프로토타입을 만드는 속성 창을 사용 합니다.  
   
- 메뉴 끌어온, 하는 경우 프레임 워크에 대 한 검색 하 고 각각 호출 `ON_UPDATE_COMMAND_UI` 처리기, 각 처리기를 호출 `CCmdUI` 멤버와 같은 함수가 **사용** 및 **확인**, 및 다음 프레임 워크 각 메뉴 항목을 적절 하 게 표시합니다.  
+ 메뉴 끌어온, 하는 경우 프레임 워크에 대 한 검색 하 고 각각 호출 `ON_UPDATE_COMMAND_UI` 처리기 각 처리기 호출 `CCmdUI` 멤버와 같은 함수가 `Enable` 및 `Check`, 프레임 워크 다음 적절 하 게 각 메뉴 항목을 표시 합니다.  
   
  메뉴 항목을 바꿀 수 있습니다는 컨트롤 막대 단추 또는 다른 명령 사용자 인터페이스 개체 내의 코드를 변경 하지 않고는 `ON_UPDATE_COMMAND_UI` 처리기입니다.  
   
@@ -119,10 +119,10 @@ virtual void Enable(BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bOn`  
+ *bOn*  
  **True 이면** 해당 항목을 사용할 수 있도록 **FALSE** 사용 하지 않도록 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#46](../../mfc/codesnippet/cpp/ccmdui-class_1.cpp)]  
   
  [!code-cpp[NVC_MFCDocView#47](../../mfc/codesnippet/cpp/ccmdui-class_2.cpp)]  
@@ -159,7 +159,7 @@ CMenu* m_pSubMenu;
 ```  
   
 ### <a name="remarks"></a>설명  
- **NULL** 경우 메뉴 항목이 아닙니다. 하위 메뉴 팝업 경우 `m_nID` 팝업 메뉴의 첫 번째 항목의 ID를 포함 합니다. 자세한 내용은 참조 [기술 참고 21](../../mfc/tn021-command-and-message-routing.md)합니다.  
+ **NULL** 경우 메뉴 항목이 아닙니다. 하위 메뉴 팝업 경우 *m_nID* 팝업 메뉴의 첫 번째 항목의 ID를 포함 합니다. 자세한 내용은 참조 [기술 참고 21](../../mfc/tn021-command-and-message-routing.md)합니다.  
   
 ##  <a name="m_pother"></a>  CCmdUI::m_pOther  
  포인터 (형식의 `CWnd`) 알림을 전송 하는 도구 또는 상태 표시줄 등의 창 개체입니다.  
@@ -179,7 +179,7 @@ virtual void SetCheck(int nCheck = 1);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nCheck`  
+ *nCheck*  
  설정 하려면 선택 상태를 지정 합니다. 0을 선택 하거나 선택 하지 않으면 하는 경우 1, 검사 하는 경우 2 인 경우, 비활성화 상태를 가져오거나 설정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -207,10 +207,10 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszText`  
+ *lpszText*  
  텍스트 문자열에 대 한 포인터입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#48](../../mfc/codesnippet/cpp/ccmdui-class_3.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

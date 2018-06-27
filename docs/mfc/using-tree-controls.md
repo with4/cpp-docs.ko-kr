@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd7210f2f63d55fc4244a6b88456ede1265c8e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9cb5c8892583adac01ca883034b8c0af18595c9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384871"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954597"
 ---
 # <a name="using-tree-controls"></a>트리 컨트롤 사용
 트리 컨트롤의 일반적인 사용 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 아래의 패턴을 따릅니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "33384871"
   
 -   호출 하 여 데이터를 컨트롤에 추가 된 `CTreeCtrl`의 [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) 각 데이터 항목에 대해 한 번씩 함수입니다. `InsertItem` 자식 항목을 추가 하는 경우와 같이 나중 참조 하는 데 사용할 수는 항목에 핸들을 반환 합니다. 데이터를 초기화 하는 데 좋은 시간이 중인 `OnInitDialog` (컨트롤에 대 한 대화 상자에서) 또는 `OnInitialUpdate` 보기.  
   
--   사용자가 컨트롤과 상호 작용하여 다양한 알림 메시지가 전송됩니다. 각 추가 하 여 처리할 메시지를 처리 하는 함수를 지정할 수는 **ON_NOTIFY_REFLECT** 컨트롤 창의 메시지 맵에 추가 하 여 매크로 `ON_NOTIFY` 매크로를 부모 창의 메시지 맵에 있습니다. 참조 [트리 컨트롤 알림 메시지](../mfc/tree-control-notification-messages.md) 이 항목 뒷부분의 가능한 알림 목록에 대 한 합니다.  
+-   사용자가 컨트롤과 상호 작용하여 다양한 알림 메시지가 전송됩니다. 각 컨트롤 창의 메시지 맵에 ON_NOTIFY_REFLECT 매크로 추가 하 여 또는 부모 창의 메시지 맵에 ON_NOTIFY 매크로 추가 하 여 처리할 메시지를 처리 하는 함수를 지정할 수 있습니다. 참조 [트리 컨트롤 알림 메시지](../mfc/tree-control-notification-messages.md) 이 항목 뒷부분의 가능한 알림 목록에 대 한 합니다.  
   
 -   다양한 Set 멤버 함수를 호출하여 컨트롤에 대한 값을 설정합니다. 만들 수 있는 변경 내용 들여쓰기를 설정 하 고 텍스트, 이미지 또는 항목에 연결 된 데이터 변경에 포함 됩니다.  
   

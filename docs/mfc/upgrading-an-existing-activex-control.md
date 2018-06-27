@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40240367d3e8350cee030b2c08dc5a48325e05f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 145546a83bb91d09499049308b8d37e5adafeb92
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385309"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955676"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>기존 ActiveX 컨트롤 업그레이드
 기존 ActiveX 컨트롤 (이전의 OLE 컨트롤)를 수정 하지 않고 인터넷에서 사용할 수 있습니다. 그러나 다음 성능 향상을 위해 컨트롤을 수정 하는 것이 좋습니다. 웹 페이지에 컨트롤을 사용할 경우 추가 고려 사항 사항이 있습니다. .Ocx 파일 및 모든 지원 파일이 대상 컴퓨터에 있어야 하거나 인터넷을 통해 다운로드 합니다. 이렇게 하면 코드 크기와 다운로드 시간이 중요 한 고려 합니다. 다운로드 한 서명 된.cab 파일에 패키징할 수 있습니다. 스크립트 및 초기화에 안전으로 컨트롤을 표시할 수 있습니다.  
@@ -136,9 +136,9 @@ C:\CabDevKit\cabarc.exe -s 6144 N spindial.cab spindial.ocx spindial.inf
  `-s 6144` 매개 변수를 코드 서명에 캐비닛에 공간을 예약 합니다.  
   
 ### <a name="the-version-tag"></a>버전 태그  
- `#Version` 캐비닛 파일에 지정 된 정보로 지정 된 컨트롤에 적용 됩니다.는 `CLASSID` 의 매개 변수는 `<OBJECT>` 태그입니다.  
+ `#Version` 캐비닛 파일에 지정 된 정보로 지정 된 컨트롤에 적용 됩니다.는 *CLASSID* 의 매개 변수는 `<OBJECT>` 태그입니다.  
   
- 지정 된 버전에 따라 컨트롤을 다운로드를 할 수 있습니다. 전체 사양에 대해서는 `OBJECT` 태그를 포함 하 여는 `CODEBASE` 매개 변수, 참조는 W3C 참조 합니다.  
+ 지정 된 버전에 따라 컨트롤을 다운로드를 할 수 있습니다. 전체 사양에 대해서는 `OBJECT` 태그를 포함 하 여는 *코드 베이스* 매개 변수, 참조는 W3C 참조 합니다.  
   
 ##  <a name="_core_marking_a_control_safe_for_scripting_and_initializing"></a> 스크립팅과 초기화에 대 한 안전한 컨트롤 표시  
  웹 페이지에서 사용 하는 ActiveX 컨트롤은 실제로 안전한 경우 초기화에 안전 하 고 스크립팅 작업에 안전으로 표시 되어야 합니다. 안전 컨트롤 디스크 IO를 수행 되거나 메모리 또는 컴퓨터의 레지스터에 직접 액세스 되지 않습니다.  
@@ -236,7 +236,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
   
  OCX 96 지침에서 컨트롤은 백그라운드에서에서 팔레트를 나타내려고 항상 있어야 합니다.  
   
- 앰비언트 palette 속성을 사용 하지 않는 오래 된 컨테이너 송신할 `WM_QUERYNEWPALETTE` 및 `WM_PALETTECHANGED` 메시지입니다. 컨트롤 `OnQueryNewPalette` 및 `OnPaletteChanged` 이러한 메시지를 처리 합니다.  
+ 앰비언트 palette 속성을 사용 하지 않는 오래 된 컨테이너 WM_QUERYNEWPALETTE 및 WM_PALETTECHANGED 메시지가 전송 됩니다. 컨트롤 `OnQueryNewPalette` 및 `OnPaletteChanged` 이러한 메시지를 처리 합니다.  
   
 ##  <a name="_core_internet_explorer_browser_safety_levels_and_control_behavior"></a> Internet Explorer 브라우저 보안 수준 및 동작을 제어  
  브라우저에 사용자가 구성 가능한 보안 수준에 대 한 옵션이 있습니다. 웹 페이지는 사용자의 컴퓨터를 손상 시킬 수 있는 액티브 콘텐츠를 포함할 수 있으므로 브라우저 보안 수준에 대 한 옵션을 선택할 수 있습니다. 에 브라우저 보안 수준을 구현 하는 방식에 따라 컨트롤 전혀 다운로드 되지 또는 인증서 또는 사용자 컨트롤을 다운로드할 지 여부를 런타임에 선택할 수 있도록 경고 메시지가 표시 됩니다. 높음, 보통 및 낮은 보안 수준에서 Internet Explorer에서 ActiveX 컨트롤의 동작과 다음과 같습니다.  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4abdb76523f0b7b1ab87beb6daaf723c4dff5cc8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0792601ae773cf9abc8bb44218eb7395ff68da77
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353643"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952786"
 ---
 # <a name="cautohidedocksite-class"></a>CAutoHideDockSite 클래스
 `CAutoHideDockSite` 확장는 [CDockSite 클래스](../../mfc/reference/cdocksite-class.md) 자동 숨김 도킹 창을 구현 하 합니다.  
@@ -76,7 +76,7 @@ class CAutoHideDockSite : public CDockSite
   
 |||  
 |-|-|  
-|이름|설명|  
+|name|설명|  
 |[CAutoHideDockSite::m_nExtraSpace](#m_nextraspace)|도구 모음 및 도킹 막대의 가장자리 사이의 간격 크기를 정의합니다. 이 공간은 왼쪽된 가장자리 또는 도킹 공간에 대 한 맞춤에 따라 위쪽 가장자리에서 측정 됩니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -95,7 +95,7 @@ class CAutoHideDockSite : public CDockSite
   
  [CDockSite](../../mfc/reference/cdocksite-class.md)  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 검색 하는 방법을 `CAutoHideDockSite` 에서 개체는 `CMFCAutoHideBar` 개체 및 도킹 막대의 왼쪽 및 오른쪽 여백을 설정 하는 방법입니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#29](../../mfc/reference/codesnippet/cpp/cautohidedocksite-class_1.cpp)]  
@@ -115,10 +115,10 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 |||  
 |-|-|  
 |매개 변수|설명|  
-|[in] `pBar`|프레임 워크에서 테스트 하는 기본 창입니다.|  
+|[in] *pBar*|프레임 워크에서 테스트 하는 기본 창입니다.|  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 경우 `pBar` 에서 파생 된 `CMFCAutoHideBar`; `FALSE` 그렇지 않은 경우.  
+ `TRUE` 경우 *pBar* 에서 파생 된 `CMFCAutoHideBar`; `FALSE` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
  기본 창 개체에서 파생 된 경우 `CMFCAutoHideBar`를 포함할 수 있습니다는 `CAutoHideDockSite`합니다.  
@@ -138,14 +138,14 @@ virtual void DockPane(
 |||  
 |-|-|  
 |매개 변수|설명|  
-|[in] `pWnd`|프레임 워크 창을 도킹 된 창입니다.|  
-|[in] `dockMethod`|창에 대 한 옵션을 도킹 합니다.|  
-|[in] `lpRect`|도킹 된 창에 대 한 경계를 지정 하는 사각형입니다.|  
+|[in] *pWnd*|프레임 워크 창을 도킹 된 창입니다.|  
+|[in] *dockMethod*|창에 대 한 옵션을 도킹 합니다.|  
+|[in] *lpRect*|도킹 된 창에 대 한 경계를 지정 하는 사각형입니다.|  
   
 ### <a name="remarks"></a>설명  
- 기본 구현에서는 매개 변수를 사용 하지 않습니다 `dockMethod`를 제공 하는 나중에 사용할 수 있습니다.  
+ 기본 구현에서는 매개 변수를 사용 하지 않습니다 *dockMethod*를 제공 하는 나중에 사용할 수 있습니다.  
   
- 경우 `lpRect` 은 `NULL`, 프레임 워크는 창에서 도킹 사이트에서 기본 위치에 배치 합니다. 도킹 사이트 가로 이면 왼쪽에 도킹 사이트의 기본 위치는입니다. 그렇지 않으면 기본 위치는 도킹 사이트 맨 위에 있는 합니다.  
+ 경우 *lpRect* 은 `NULL`, 프레임 워크는 창에서 도킹 사이트에서 기본 위치에 배치 합니다. 도킹 사이트 가로 이면 왼쪽에 도킹 사이트의 기본 위치는입니다. 그렇지 않으면 기본 위치는 도킹 사이트 맨 위에 있는 합니다.  
   
 ##  <a name="getalignrect"></a>  CAutoHideDockSite::GetAlignRect  
  화면 좌표에서 도킹 사이트의 크기를 검색 합니다.  
@@ -159,7 +159,7 @@ void GetAlignRect(CRect& rect) const;
 |||  
 |-|-|  
 |매개 변수|설명|  
-|[in] `rect`|사각형에 대 한 참조입니다. 메서드는이 사각형에 도킹 사이트의 크기를 저장합니다.|  
+|[in] *rect*|사각형에 대 한 참조입니다. 메서드는이 사각형에 도킹 사이트의 크기를 저장합니다.|  
   
 ### <a name="remarks"></a>설명  
  사각형은 포함 되지 않도록 오프셋된 여백에 대해 조정 됩니다.  
@@ -182,7 +182,7 @@ void SetOffsetLeft(int nOffset);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nOffset`  
+ [in] *nOffset*  
  새 오프셋입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -196,7 +196,7 @@ void SetOffsetRight(int nOffset);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nOffset`  
+ [in] *nOffset*  
  새 오프셋입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -214,10 +214,10 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 |||  
 |-|-|  
 |매개 변수|설명|  
-|[in] `rectNewClientArea`|예약 된 값입니다.|  
+|[in] *rectNewClientArea*|예약 된 값입니다.|  
   
 ### <a name="remarks"></a>설명  
- 기본 구현에서는 사용 하지 않는 `rectNewClientArea`합니다. 일반 도구 모음 여백 및 단추 간격입니다. 창을 다시 그립니다.  
+ 기본 구현에서는 사용 하지 않는 *rectNewClientArea*합니다. 일반 도구 모음 여백 및 단추 간격입니다. 창을 다시 그립니다.  
   
 ##  <a name="unsetautohidemode"></a>  CAutoHideDockSite::UnSetAutoHideMode  
  호출 [CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) 개체는 도킹 사이트에 대 한 합니다.  
@@ -231,10 +231,10 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 |||  
 |-|-|  
 |매개 변수|설명|  
-|[in] `pAutoHideToolbar`|에 대 한 포인터는 [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) 개체 창에 있는 `CAutoHideDockSite`합니다.|  
+|[in] *pAutoHideToolbar*|에 대 한 포인터는 [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) 개체 창에 있는 `CAutoHideDockSite`합니다.|  
   
 ### <a name="remarks"></a>설명  
- 이 메서드를 포함 하는 행에 대 한 검색 `pAutoHideToolbar`합니다. 호출 `CMFCAutoHideBar.UnSetAutoHideMode` 모든는 `CMFCAutoHideBar` 해당 행에 있는 개체입니다. 경우 `pAutoHideToolbar` 찾을 수 없습니다 또는 `NULL`,이 메서드를 호출 `CMFCAutoHideBar.UnSetAutoHideMode` 모든는 `CMFCAutoHideBar` 에 있는 개체는 `CAutoHideDockSite`합니다.  
+ 이 메서드를 포함 하는 행에 대 한 검색 *pAutoHideToolbar*합니다. 호출 `CMFCAutoHideBar.UnSetAutoHideMode` 모든는 `CMFCAutoHideBar` 해당 행에 있는 개체입니다. 경우 *pAutoHideToolbar* 찾을 수 없습니다 또는 `NULL`,이 메서드를 호출 `CMFCAutoHideBar.UnSetAutoHideMode` 모든는 `CMFCAutoHideBar` 에 있는 개체는 `CAutoHideDockSite`합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [계층 구조 차트](../../mfc/hierarchy-chart.md)   

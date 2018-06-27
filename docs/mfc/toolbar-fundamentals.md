@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fcb63ade0d1f2ad179448f448a10d88b71b91037
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5240cf50b35b2e1a300071ccb6cc15a065ac364e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383976"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951639"
 ---
 # <a name="toolbar-fundamentals"></a>도구 모음 기본 사항
 이 문서에서는 응용 프로그램 마법사에서 옵션을 선택 하 여 응용 프로그램에 기본 도구 모음을 추가할 수 있는 기본 MFC 구현을 설명 합니다. 다루는 항목은 다음과 같습니다.  
@@ -56,11 +56,11 @@ ms.locfileid: "33383976"
 -   도킹 또는 고정 해제 하는 기능을 포함 하 여 도구 모음을 관리 합니다.  
   
 ##  <a name="_core_the_toolbar_in_code"></a> 코드에서 도구 모음  
- 도구 모음을 한 [CToolBar](../mfc/reference/ctoolbar-class.md) 개체가 응용 프로그램의 데이터 멤버로 선언 **CMainFrame** 클래스입니다. 즉, 도구 모음 개체 주 프레임 창 개체에 포함 됩니다. 즉, 프레임 창을 만들고 프레임 창을 제거 하는 경우 도구 모음을 삭제 하는 경우 MFC 도구 모음을 만듭니다. 여러 문서 MDI (인터페이스) 응용 프로그램의 경우 다음의 partial 클래스 선언 포함된 된 도구 모음 및 포함 된 상태 표시줄에 대 한 데이터 멤버를 보여 줍니다. 또한 재정의 표시는 `OnCreate` 멤버 함수입니다.  
+ 도구 모음을 한 [CToolBar](../mfc/reference/ctoolbar-class.md) 개체가 응용 프로그램의 데이터 멤버로 선언 `CMainFrame` 클래스입니다. 즉, 도구 모음 개체 주 프레임 창 개체에 포함 됩니다. 즉, 프레임 창을 만들고 프레임 창을 제거 하는 경우 도구 모음을 삭제 하는 경우 MFC 도구 모음을 만듭니다. 여러 문서 MDI (인터페이스) 응용 프로그램의 경우 다음의 partial 클래스 선언 포함된 된 도구 모음 및 포함 된 상태 표시줄에 대 한 데이터 멤버를 보여 줍니다. 또한 재정의 표시는 `OnCreate` 멤버 함수입니다.  
   
  [!code-cpp[NVC_MFCListView#6](../atl/reference/codesnippet/cpp/toolbar-fundamentals_1.h)]  
   
- 도구 모음 만들기가 수행 **받습니다**합니다. MFC 호출 [OnCreate](../mfc/reference/cwnd-class.md#oncreate) 창 프레임에 대 한 하지만 표시 되기 전에 만든 후 합니다. 기본 `OnCreate` 다음 도구 모음 작업을 수행 하는 응용 프로그램 마법사가 생성 하 합니다.  
+ 도구 모음 만들기가 수행 `CMainFrame::OnCreate`합니다. MFC 호출 [OnCreate](../mfc/reference/cwnd-class.md#oncreate) 창 프레임에 대 한 하지만 표시 되기 전에 만든 후 합니다. 기본 `OnCreate` 다음 도구 모음 작업을 수행 하는 응용 프로그램 마법사가 생성 하 합니다.  
   
 1.  호출 된 `CToolBar` 개체의 [만들기](../mfc/reference/ctoolbar-class.md#create) 멤버 함수를 만드는 기본 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) 개체입니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "33383976"
 3.  도킹, 부동 및 도구 설명을 활성화 하는 함수를 호출 합니다. 이 함수를이 호출 하는 방법에 대 한 자세한 문서를 참조 [도킹 및 부동 도구 모음](../mfc/docking-and-floating-toolbars.md)합니다.  
   
 > [!NOTE]
->  MFC 일반 샘플 [DOCKTOOL](../visual-cpp-samples.md) 일러스트레이션와 새 MFC 도구 모음을 포함 합니다. 사용 하는 도구 모음 **COldToolbar** 2 단계에서 호출이 필요 `LoadBitmap` (대신 `LoadToolBar`) 및 `SetButtons`합니다. 새 도구 모음에 대 한 호출을 필요한 `LoadToolBar`합니다.  
+>  MFC 일반 샘플 [DOCKTOOL](../visual-cpp-samples.md) 일러스트레이션와 새 MFC 도구 모음을 포함 합니다. 사용 하는 도구 모음 `COldToolbar` 2 단계에서 호출이 필요 `LoadBitmap` (대신 `LoadToolBar`) 및 `SetButtons`합니다. 새 도구 모음에 대 한 호출을 필요한 `LoadToolBar`합니다.  
   
  도킹, 부동 및 도구 설명 호출은 선택적입니다. 해당 행을 제거할 수 있습니다 `OnCreate` 하려는 경우. 고정 하거나 다시 도킹할 수 없습니다 및 도구 설명을 표시할 수 없습니다 상태를 유지 하는 도구 모음이 만들어집니다.  
   

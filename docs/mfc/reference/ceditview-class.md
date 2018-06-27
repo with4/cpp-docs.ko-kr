@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b15d604670ec1c458c6ca8db5b3b4eab51fb8f65
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5fb6e03e521b52e47b3c8853e2f6aa632614c55
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371545"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953403"
 ---
 # <a name="ceditview-class"></a>CEditView 클래스
 Windows 편집 컨트롤의 기능을 제공하고 간단한 텍스트 편집기 기능을 구현하는 데 사용할 수 있는 뷰 클래스의 유형입니다.  
@@ -103,7 +103,7 @@ class CEditView : public CCtrlView
   
 |이름|설명|  
 |----------|-----------------|  
-|[CEditView::dwStyleDefault](#dwstyledefault)|기본 형식의 개체에 대 한 스타일 **CEditView 합니다.**|  
+|[CEditView::dwStyleDefault](#dwstyledefault)|기본 형식의 개체에 대 한 스타일 `CEditView`합니다.|  
   
 ## <a name="remarks"></a>설명  
  `CEditView` 클래스는 다음과 같은 추가 기능을 제공 합니다.  
@@ -160,7 +160,7 @@ CEditView();
 ```  
   
 ### <a name="remarks"></a>설명  
- 호출 해야 개체를 생성 한 후의 [CWnd::Create](../../mfc/reference/cwnd-class.md#create) 편집 컨트롤을 사용 하기 전에 작동 합니다. 클래스를 파생 하는 경우 `CEditView` 사용 하 여 서식 파일에 추가 하려면 `CWinApp::AddDocTemplate`, 모두이 생성자를 호출 하는 프레임 워크 및 **만들기** 함수입니다.  
+ 호출 해야 개체를 생성 한 후의 [CWnd::Create](../../mfc/reference/cwnd-class.md#create) 편집 컨트롤을 사용 하기 전에 작동 합니다. 클래스를 파생 하는 경우 `CEditView` 사용 하 여 서식 파일에 추가 하려면 `CWinApp::AddDocTemplate`, 모두이 생성자를 호출 하는 프레임 워크 및 `Create` 함수입니다.  
   
 ##  <a name="dwstyledefault"></a>  CEditView::dwStyleDefault  
  기본 스타일 포함는 `CEditView` 개체입니다.  
@@ -170,7 +170,7 @@ static const DWORD dwStyleDefault;
 ```  
   
 ### <a name="remarks"></a>설명  
- 전달로이 정적 멤버는 `dwStyle` 의 매개 변수는 **만들기** 함수에 대 한 기본 스타일입니다.는 `CEditView` 개체입니다.  
+ 전달로이 정적 멤버는 `dwStyle` 의 매개 변수는 `Create` 함수에 대 한 기본 스타일입니다.는 `CEditView` 개체입니다.  
   
 ##  <a name="findtext"></a>  CEditView::FindText  
  호출 된 `FindText` 함수가 검색할는 `CEditView` 개체의 텍스트 버퍼입니다.  
@@ -183,20 +183,20 @@ BOOL FindText(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszFind`  
+ *lpszFind*  
  찾으려는 텍스트입니다.  
   
- `bNext`  
+ *다음*  
  검색의 방향을 지정합니다. 경우 **TRUE**, 검색 방향이 버퍼의 끝이 있습니다. 경우 **FALSE**, 버퍼의 시작 부분을 향해 검색 방향이 됩니다.  
   
- `bCase`  
+ *bCase*  
  검색은 대/소문자 구분 여부를 지정 합니다. 경우 **TRUE**, 검색은 대/소문자 구분 합니다. 경우 **FALSE**, 검색은 대/소문자 구분 하지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  
  검색 텍스트; 없으면 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 함수는 지정 된 텍스트에 대 한 버퍼에서 텍스트를 검색 `lpszFind`에서 지정 된 방향에서 현재 선택 영역에서 시작 하는 `bNext`와로 지정 된 대/소문자 구분 `bCase`합니다. 텍스트가 검색 되는 경우 발견된 된 텍스트에는 선택 항목을 설정 하 고 0이 아닌 값을 반환 합니다. 텍스트 없으면 함수가 0을 반환 합니다.  
+ 이 함수는 지정 된 텍스트에 대 한 버퍼에서 텍스트를 검색 *lpszFind*에서 지정 된 방향에서 현재 선택 영역에서 시작 하는 *다음*와 로지정된대/소문자구분*bCase*합니다. 텍스트가 검색 되는 경우 발견된 된 텍스트에는 선택 항목을 설정 하 고 0이 아닌 값을 반환 합니다. 텍스트 없으면 함수가 0을 반환 합니다.  
   
  일반적으로 않아도 호출 하 여 `FindText` 재정의 하지 않는 한 작동 `OnFindNext`, 되는 호출 `FindText`합니다.  
   
@@ -226,7 +226,7 @@ CEdit& GetEditCtrl() const;
 > [!CAUTION]
 >  사용 하는 `CEdit` 개체의 기본 창 상태를 변경 컨트롤을 편집할 수 있습니다. 사용 하 여 탭 설정을 변경 하면 안 되는 예를 들어는 [CEdit::SetTabStops](../../mfc/reference/cedit-class.md#settabstops) 때문에 작동 `CEditView` 편집 컨트롤 및 인쇄에 사용 하기 위해 이러한 설정을 캐시 합니다. 대신를 사용 하 여 [CEditView::SetTabStops](#settabstops)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#66](../../mfc/codesnippet/cpp/ceditview-class_2.cpp)]  
   
 ##  <a name="getprinterfont"></a>  CEditView::GetPrinterFont  
@@ -252,7 +252,7 @@ void GetSelectedText(CString& strResult) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `strResult`  
+ *strResult*  
  에 대 한 참조는 `CString` 선택한 텍스트를 수신 하는 개체입니다.  
   
 ##  <a name="lockbuffer"></a>  CEditView::LockBuffer  
@@ -266,7 +266,7 @@ LPCTSTR LockBuffer() const;
  편집 컨트롤의 버퍼에 대 한 포인터입니다.  
   
 ##  <a name="onfindnext"></a>  CEditView::OnFindNext  
- 로 지정 된 텍스트에 대 한 버퍼에서 텍스트를 검색 `lpszFind`로 지정 된 방향의 `bNext`, 대/소문자 구분 하 여 지정 된 `bCase`합니다.  
+ 로 지정 된 텍스트에 대 한 버퍼에서 텍스트를 검색 *lpszFind*로 지정 된 방향의 *다음*, 대/소문자 구분 하 여 지정 된 *bCase*합니다.  
   
 ```  
 virtual void OnFindNext(
@@ -276,13 +276,13 @@ virtual void OnFindNext(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszFind`  
+ *lpszFind*  
  찾으려는 텍스트입니다.  
   
- `bNext`  
+ *다음*  
  검색의 방향을 지정합니다. 경우 **TRUE**, 검색 방향이 버퍼의 끝이 있습니다. 경우 **FALSE**, 버퍼의 시작 부분을 향해 검색 방향이 됩니다.  
   
- `bCase`  
+ *bCase*  
  검색은 대/소문자 구분 여부를 지정 합니다. 경우 **TRUE**, 검색은 대/소문자 구분 합니다. 경우 **FALSE**, 검색은 대/소문자 구분 하지 않습니다.  
   
 ### <a name="remarks"></a>설명  
@@ -301,19 +301,19 @@ virtual void OnReplaceAll(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszFind`  
+ *lpszFind*  
  찾으려는 텍스트입니다.  
   
- `lpszReplace`  
+ *lpszReplace*  
  검색 텍스트를 바꿀 텍스트입니다.  
   
- `bCase`  
+ *bCase*  
  검색은 대/소문자 구분 여부를 지정 합니다. 경우 **TRUE**, 검색은 대/소문자 구분 합니다. 경우 **FALSE**, 검색은 대/소문자 구분 하지 않습니다.  
   
 ### <a name="remarks"></a>설명  
- `OnReplaceAll` 로 지정 된 텍스트에 대 한 버퍼에서 텍스트를 검색 `lpszFind`, 대/소문자 구분 하 여 지정 된 `bCase`합니다. 현재 선택의 시작 부분에서 검색이 시작 합니다. 검색 텍스트를 찾을 때마다가이 함수는로 지정 된 텍스트와 텍스트의 해당 항목을 대체 `lpszReplace`합니다. 검색에 대 한 호출을 통해 수행 됩니다 [FindText](#findtext)합니다. 기본 구현에서 [OnTextNotFound](#ontextnotfound) 텍스트를 찾을 수 없는 경우 호출 됩니다.  
+ `OnReplaceAll` 로 지정 된 텍스트에 대 한 버퍼에서 텍스트를 검색 *lpszFind*, 대/소문자 구분 하 여 지정 된 *bCase*합니다. 현재 선택의 시작 부분에서 검색이 시작 합니다. 검색 텍스트를 찾을 수를이 함수는 텍스트의 해당 항목으로 지정 된 텍스트 대체 때마다 *lpszReplace*합니다. 검색에 대 한 호출을 통해 수행 됩니다 [FindText](#findtext)합니다. 기본 구현에서 [OnTextNotFound](#ontextnotfound) 텍스트를 찾을 수 없는 경우 호출 됩니다.  
   
- 현재 선택 영역이 일치 하지 않는 경우 `lpszFind`, 선택 항목으로 지정 된 텍스트의 첫 번째 항목으로 업데이트 됩니다 `lpszFind` 및 대체 수행 되지 않습니다. 이렇게 하면 사용자 선택 바꿀 텍스트를 일치 하지 않을 때 수행 하려는 작업이 무엇 인지 확인 합니다.  
+ 현재 선택 영역이 일치 하지 않는 경우 *lpszFind*, 선택 항목으로 지정 된 텍스트의 첫 번째 항목으로 업데이트 됩니다 *lpszFind* 및 대체 수행 되지 않습니다. 이렇게 하면 사용자 선택 바꿀 텍스트를 일치 하지 않을 때 수행 하려는 작업이 무엇 인지 확인 합니다.  
   
  재정의 `OnReplaceAll` 방식을 변경 하는 한 `CEditView`-파생 된 개체는 텍스트 문자열로 바꿉니다.  
   
@@ -329,20 +329,20 @@ virtual void OnReplaceSel(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszFind`  
+ *lpszFind*  
  찾으려는 텍스트입니다.  
   
- `bNext`  
+ *다음*  
  검색의 방향을 지정합니다. 경우 **TRUE**, 검색 방향이 버퍼의 끝이 있습니다. 경우 **FALSE**, 버퍼의 시작 부분을 향해 검색 방향이 됩니다.  
   
- `bCase`  
+ *bCase*  
  검색은 대/소문자 구분 여부를 지정 합니다. 경우 **TRUE**, 검색은 대/소문자 구분 합니다. 경우 **FALSE**, 검색은 대/소문자 구분 하지 않습니다.  
   
- `lpszReplace`  
+ *lpszReplace*  
  검색된 텍스트를 바꿀 텍스트입니다.  
   
 ### <a name="remarks"></a>설명  
- 선택 영역을 바꾼 후이 함수에 지정한 텍스트의 다음 위치에 대 한 버퍼에서 텍스트를 검색 `lpszFind`로 지정 된 방향의 `bNext`, 대/소문자 구분 하 여 지정 된 `bCase`합니다. 검색에 대 한 호출을 통해 수행 됩니다 [FindText](#findtext)합니다. 텍스트 없으면 [OnTextNotFound](#ontextnotfound) 호출 됩니다.  
+ 선택 영역을 바꾼 후이 함수에 지정한 텍스트의 다음 위치에 대 한 버퍼에서 텍스트를 검색 *lpszFind*, 지정 된 방향의 *다음*, 대/소문자와 에 지정 된 *bCase*합니다. 검색에 대 한 호출을 통해 수행 됩니다 [FindText](#findtext)합니다. 텍스트 없으면 [OnTextNotFound](#ontextnotfound) 호출 됩니다.  
   
  재정의 `OnReplaceSel` 방식을 변경 하는 한 `CEditView`-선택한 텍스트를 대체 하는 파생 된 개체입니다.  
   
@@ -354,7 +354,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszFind`  
+ *lpszFind*  
  찾으려는 텍스트입니다.  
   
 ##  <a name="printinsiderect"></a>  CEditView::PrintInsideRect  
@@ -369,16 +369,16 @@ UINT PrintInsideRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  프린터 장치 컨텍스트에 대 한 포인터입니다.  
   
  *rectLayout*  
  에 대 한 참조는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT 구조체](../../mfc/reference/rect-structure1.md) 텍스트를 렌더링할 인 사각형을 지정 합니다.  
   
- `nIndexStart`  
+ *nIndexStart*  
  첫 번째 문자를 렌더링할 수 버퍼 내의 인덱스입니다.  
   
- `nIndexStop`  
+ *nIndexStop*  
  마지막 문자 다음에 렌더링 되어야 하는 문자 버퍼 내의 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -397,21 +397,21 @@ void SerializeRaw(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ar`  
+ *ar*  
  에 대 한 참조는 `CArchive` 직렬화 된 텍스트를 저장 하는 개체입니다.  
   
 ### <a name="remarks"></a>설명  
  `SerializeRaw` 와 다른 `CEditView`의의 내부 구현 `Serialize` 한다는 점에서 읽고 없이 개체 설명 데이터 앞에 텍스트를 씁니다.  
   
 ##  <a name="setprinterfont"></a>  CEditView::SetPrinterFont  
- 호출 `SetPrinterFont` 프린터 글꼴에 지정 된 글꼴을 설정 하려면 `pFont`합니다.  
+ 호출 `SetPrinterFont` 프린터 글꼴에 지정 된 글꼴을 설정 하려면 *pFont*합니다.  
   
 ```  
 void SetPrinterFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pFont`  
+ *pFont*  
  형식의 개체에 대 한 포인터 `CFont`합니다. 경우 **NULL**, 글꼴에 따라 인쇄에 사용 되는 글꼴입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -425,7 +425,7 @@ void SetTabStops(int nTabStops);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nTabStops`  
+ *nTabStops*  
  대화 상자 단위에서 각 탭 정지의 너비입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -433,7 +433,7 @@ void SetTabStops(int nTabStops);
   
  이 함수를 호출 하는 개체의 탭만 수정 합니다. 탭을 변경 하려면 각각에 대 한 중지 `CEditView` 응용 프로그램에서 개체를 호출 하는 각 개체의 `SetTabStops` 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  이 코드 조각은 컨트롤이 차지 하는 글꼴을 신중 하 게 측정 하 여 모든 4 번째 문자를 컨트롤의 탭 정지를 설정 합니다.  
   
  [!code-cpp[NVC_MFCDocView#67](../../mfc/codesnippet/cpp/ceditview-class_3.cpp)]  

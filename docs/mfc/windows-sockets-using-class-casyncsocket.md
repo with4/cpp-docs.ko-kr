@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a96ccdd4ce5c49f18c12aa85060954fc97a3408b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc461a0a2325f768711f6d7529949ee24a1b4a25
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385183"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954886"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows 소켓: CAsyncSocket 클래스 사용
 이 문서에서는 클래스를 사용 하는 방법을 설명 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)합니다. 이 클래스는 매우 낮은 수준에서 Windows 소켓 API를 캡슐화 알아야 합니다. `CAsyncSocket` 프로그래머에 게 네트워크 통신을 자세히 알고 있지만 네트워크 이벤트에 대 한 알림을 콜백에서 편리 하 게 사용 됩니다. 이러한 가정에 따라이 문서에서는 기본 지침만 제공 합니다. 사용 하 여 아마도 고려해 야 `CAsyncSocket` Windows 소켓 편의성 MFC 응용 프로그램에서 여러 네트워크 프로토콜을 처리 하지만 유연성을 무시 하지 않을 경우. 클래스의 보다 일반적인 대체 모델을 사용 하 수 보다 자신을 직접 프로그래밍 하는 통신 효율성 향상을 얻을 수 있다는 생각 수 `CSocket`합니다.  
@@ -53,13 +53,13 @@ ms.locfileid: "33385183"
   
      [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]  
   
-     -또는-  
+     또는  
   
      [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]  
   
-     위의 첫 번째 생성자는 만듭니다는 `CAsyncSocket` 스택에 개체입니다. 두 번째 생성자는 만듭니다는 `CAsyncSocket` 힙에 합니다. 첫 번째 [만들기](../mfc/reference/casyncsocket-class.md#create) 호출 위의 기본 매개 변수를 사용 하 여 스트림 소켓을 만듭니다. 두 번째 **만들기** 호출이 지정 된 포트와 주소를 사용 하 여 데이터 그램 소켓을 만듭니다. (사용할 수 있습니다 **만들기** 버전 생성 방법입니다.)  
+     위의 첫 번째 생성자는 만듭니다는 `CAsyncSocket` 스택에 개체입니다. 두 번째 생성자는 만듭니다는 `CAsyncSocket` 힙에 합니다. 첫 번째 [만들기](../mfc/reference/casyncsocket-class.md#create) 호출 위의 기본 매개 변수를 사용 하 여 스트림 소켓을 만듭니다. 두 번째 `Create` 호출이 지정 된 포트와 주소를 사용 하 여 데이터 그램 소켓을 만듭니다. (사용할 수 있습니다 `Create` 버전 생성 방법입니다.)  
   
-     매개 변수를 **만들기** 됩니다.  
+     매개 변수를 `Create` 됩니다.  
   
     -   "Port": 정수 (short)입니다.  
   
@@ -75,14 +75,14 @@ ms.locfileid: "33385183"
   
 2.  클라이언트가 소켓을 사용 하는 경우 소켓 개체는 서버에 연결 소켓을 사용 하 여 [CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect)합니다.  
   
-     -또는-  
+     또는  
   
      소켓 서버 이면 소켓 수신을 시작 하도록 설정 (으로 [CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)) 클라이언트에서 연결 시도를 합니다. 연결 요청을 받으면 사용할 수 있는 [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept)합니다.  
   
      연결을 허용한 후 암호 유효성 검사와 같은 작업을 수행할 수 있습니다.  
   
     > [!NOTE]
-    >  **Accept** 멤버 함수는 비어 있는 새에 대 한 참조를 사용 `CSocket` 개체를 매개 변수로 합니다. 호출 하기 전에이 개체를 생성 해야 **Accept**합니다. 이 소켓 개체가 범위를 벗어나면 연결이 닫힙니다. 호출 하지 마십시오 **만들기** 이 새 소켓 개체에 대 한 합니다. 예를 들어 문서를 참조 하십시오. [Windows 소켓: 작업 순서](../mfc/windows-sockets-sequence-of-operations.md)합니다.  
+    >  `Accept` 멤버 함수는 비어 있는 새에 대 한 참조를 사용 `CSocket` 개체를 매개 변수로 합니다. 호출 하기 전에이 개체를 생성 해야 `Accept`합니다. 이 소켓 개체가 범위를 벗어나면 연결이 닫힙니다. 호출 하지 마십시오 `Create` 이 새 소켓 개체에 대 한 합니다. 예를 들어 문서를 참조 하십시오. [Windows 소켓: 작업 순서](../mfc/windows-sockets-sequence-of-operations.md)합니다.  
   
 3.  다른 소켓와의 통신을 호출 하 여 수행 된 `CAsyncSocket` Windows 소켓 API 함수를 캡슐화 하는 개체의 멤버 함수입니다.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "33385183"
   
  이러한 용어와 추가 정보는 정의 참조 하십시오. [Windows 소켓: 차단](../mfc/windows-sockets-blocking.md), [Windows 소켓: 바이트 순서 지정](../mfc/windows-sockets-byte-ordering.md), [Windows 소켓: 문자열 변환](../mfc/windows-sockets-converting-strings.md) .  
   
- 이러한 문제가 발생 하더라도 클래스 **CAsycnSocket** 경우 응용 프로그램에 필요한 모든 유연성 및 제어를 가져올 수 있습니다 있습니다에 대 한 올바른 선택 일 수 있습니다. 클래스를 사용 해야 하는 그렇지 않은 경우 `CSocket` 대신 합니다. `CSocket` 다양 한 사용자의 세부 숨깁니다: it에 대 한 액세스를 제공 하 고 Windows 블로킹 호출에 해당 하는 동안 메시지 펌프 `CArchive`, 바이트 순서 차이 및 문자열 변환에 대 한 관리 합니다.  
+ 이러한 문제가 발생 하더라도 클래스 `CAsycnSocket` 경우 응용 프로그램에 필요한 모든 유연성 및 제어를 가져올 수 있습니다 있습니다에 대 한 올바른 선택 일 수 있습니다. 클래스를 사용 해야 하는 그렇지 않은 경우 `CSocket` 대신 합니다. `CSocket` 다양 한 사용자의 세부 숨깁니다: it에 대 한 액세스를 제공 하 고 Windows 블로킹 호출에 해당 하는 동안 메시지 펌프 `CArchive`, 바이트 순서 차이 및 문자열 변환에 대 한 관리 합니다.  
   
  자세한 내용은 다음을 참조하세요.  
   

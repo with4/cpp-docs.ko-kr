@@ -1,7 +1,7 @@
 ---
 title: CFile 클래스 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/12/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -70,11 +70,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee4086b25fe675aaab1b484f21ec7e22e5603781
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0b1effa59dcbada04d6cb363345a69025fcfdbb
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957492"
 ---
 # <a name="cfile-class"></a>CFile 클래스
 MFC 파일 클래스의 기본 클래스입니다.  
@@ -136,7 +137,7 @@ class CFile : public CObject
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CFile::m_pTM](#m_ptm)|에 대 한 포인터 `CAtlTransactionManager` 개체입니다.|  
   
@@ -169,11 +170,11 @@ virtual void Abort();
 ### <a name="remarks"></a>설명  
  개체를 제거 하기 전에 파일을 닫지 않은 경우 소멸자를 닫습니다.  
   
- 예외를 처리 하는 경우 `CFile::Abort` 에서 다른 `CFile::Close` 같은 두 가지 중요 한 차이점이 있습니다. 첫째, 고 **중단** 함수는 예외를 throw 하지 오류에 실패 하 여 무시 되기 때문에 **중단**합니다. 두 번째, **중단** 되지 것입니다 **ASSERT** 파일이 아직 열려 있지 않거나 이전에 닫혔습니다.  
+ 예외를 처리 하는 경우 `CFile::Abort` 에서 다른 `CFile::Close` 같은 두 가지 중요 한 차이점이 있습니다. 첫째, 고 `Abort` 함수는 예외를 throw 하지 오류에 실패 하 여 무시 되기 때문에 `Abort`합니다. 두 번째, `Abort` 되지 것입니다 **ASSERT** 파일이 아직 열려 있지 않거나 이전에 닫혔습니다.  
   
- 사용 하는 경우 **새** 할당 하는 `CFile` 힙에 개체 파일을 닫은 후에 삭제 해야 합니다. **중단** 설정 `m_hFile` 를 `CFile::hFileNull`합니다.  
+ 사용 하는 경우 **새** 할당 하는 `CFile` 힙에 개체 파일을 닫은 후에 삭제 해야 합니다. `Abort` 설정 `m_hFile` 를 `CFile::hFileNull`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#5](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_1.cpp)]  
   
 ##  <a name="cfile"></a>  CFile::CFile  
@@ -197,20 +198,20 @@ CAtlTransactionManager* pTM);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hFile`  
+ *hFile*  
  `CFile` 개체에 연결할 파일의 핸들입니다.  
   
- `lpszFileName`  
+ *lpszFileName*  
  `CFile` 개체에 연결할 파일의 상대 또는 전체 경로입니다.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  지정한 파일에 대한 파일 액세스 옵션의 비트 조합(OR)입니다. 사용 가능한 옵션은 설명 섹션을 참조하세요.  
   
- `pTM`  
+ *pTM*  
  CAtlTransactionManager 개체에 대한 포인터  
   
 ### <a name="remarks"></a>설명  
- 다음 5개 테이블에는 `nOpenFlags` 매개 변수에 사용 가능한 옵션이 나와 있습니다.  
+ 에 대 한 가능한 옵션을 나열 하는 다음 5 개 테이블은 *nOpenFlags* 매개 변수입니다.  
   
  다음 파일 액세스 모드 옵션 중 하나만 선택해야 합니다. 기본 파일 액세스 모드는 `CFile::modeRead`(읽기 전용)입니다.  
   
@@ -241,7 +242,7 @@ CAtlTransactionManager* pTM);
   
 |값|설명|  
 |-----------|-----------------|  
-|`CFile::modeCreate`|파일이 없으면 새 파일을 만듭니다.; 파일이 이미 있는 경우 [CFileException](../../mfc/reference/cfileexception-class.md) 발생 합니다.|  
+|`CFile::modeCreate`|파일이 없으면 새 파일을 만듭니다. 파일이 이미 덮어쓸 이며 초기 길이 0으로 설정 합니다.|  
 |`CFile::modeNoTruncate`|파일이 없으면 새 파일을 만듭니다. 파일이 이미 있으면 `CFile` 개체에 연결됩니다.|  
   
  설명에 따라 다음 파일 캐싱 옵션을 선택합니다. 기본적으로 시스템은 옵션으로 제공되지 않는 범용 캐싱 구성표를 사용합니다.  
@@ -267,7 +268,7 @@ CAtlTransactionManager* pTM);
   
  `CFile` 개체가 지정한 파일을 정상적으로 열면 `CFile` 개체 제거 시 이 파일이 자동으로 닫힙니다. 그렇지 않으면 `CFile` 개체에서 파일 연결을 끊은 후 파일을 명시적으로 닫아야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드에서는 `CFile` 사용 방법을 보여줍니다.  
   
  [!code-cpp[NVC_MFCFiles#4](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_2.cpp)]  
@@ -282,9 +283,9 @@ virtual void Close();
 ### <a name="remarks"></a>설명  
  개체를 제거 하기 전에 파일을 닫지 않은 경우 소멸자를 닫습니다.  
   
- 사용 하는 경우 **새** 할당 하는 `CFile` 힙에 개체 파일을 닫은 후에 삭제 해야 합니다. **닫기** 설정 `m_hFile` 를 `CFile::hFileNull`합니다.  
+ 사용 하는 경우 **새** 할당 하는 `CFile` 힙에 개체 파일을 닫은 후에 삭제 해야 합니다. `Close` 설정 `m_hFile` 를 `CFile::hFileNull`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CFile::CFile](#cfile)합니다.  
   
 ##  <a name="duplicate"></a>  CFile::Duplicate  
@@ -310,7 +311,7 @@ virtual void Flush();
 ### <a name="remarks"></a>설명  
  사용 `Flush` 플러시해야를 보장 하지는 않습니다 `CArchive` 버퍼입니다. 아카이브를 사용 하는 경우 호출 [CArchive::Flush](../../mfc/reference/carchive-class.md#flush) 첫 번째입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CFile::SetFilePath](#setfilepath)합니다.  
   
 ##  <a name="getfilename"></a>  CFile::GetFileName  
@@ -328,7 +329,7 @@ virtual CString GetFileName() const;
   
  이름을 포함 하는 파일의 전체 경로 반환 하려면 호출 [GetFilePath](#getfilepath)합니다. 반환할 파일의 제목 ( `myfile`), 호출 [GetFileTitle](#getfiletitle)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  이 코드 조각은 시스템을 엽니다. WINDOWS 디렉터리에서 INI 파일입니다. 하는 경우,이 예제에서는 출력 됩니다 이름 및 경로, 제목, 출력에 표시 된 대로:  
   
  [!code-cpp[NVC_MFCFiles#6](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_3.cpp)]  
@@ -348,7 +349,7 @@ virtual CString GetFilePath() const;
   
  파일의 이름만 반환 하려면 ( `myfile.wri`), 호출 [GetFileName](#getfilename)합니다. 반환할 파일의 제목 ( `myfile`), 호출 [GetFileTitle](#getfiletitle)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [GetFileName](#getfilename)합니다.  
   
 ##  <a name="getfiletitle"></a>  CFile::GetFileTitle  
@@ -366,7 +367,7 @@ virtual CString GetFileTitle() const;
   
  이름을 포함 하는 파일의 전체 경로 반환 하려면 호출 [GetFilePath](#getfilepath)합니다. 파일의 이름만 반환 하려면 호출 [GetFileName](#getfilename)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [GetFileName](#getfilename)합니다.  
   
 ##  <a name="getlength"></a>  CFile::GetLength  
@@ -379,7 +380,7 @@ virtual ULONGLONG GetLength() const;
 ### <a name="return-value"></a>반환 값  
  파일의 길이입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#7](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_4.cpp)]  
   
 ##  <a name="getposition"></a>  CFile::GetPosition  
@@ -392,7 +393,7 @@ virtual ULONGLONG GetPosition() const;
 ### <a name="return-value"></a>반환 값  
  파일에 대 한 포인터입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#8](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_5.cpp)]  
   
 ##  <a name="getstatus"></a>  CFile::GetStatus  
@@ -408,7 +409,7 @@ static BOOL PASCAL GetStatus(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rStatus`  
+ *rStatus*  
  사용자가 제공한에 대 한 참조 **CFileStatus** 상태 정보를 받을 구조입니다. **CFileStatus** 구조에는 다음 필드가 있습니다.  
   
 - **CTime m_ctime** 는 파일을 만든 날짜와 시간입니다.  
@@ -423,10 +424,10 @@ static BOOL PASCAL GetStatus(
   
 - **char [_MAX_PATH] m_szFullName** Windows 문자 집합의 절대 파일 이름입니다.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Windows 문자에서 문자열 즉 경로를 설정 하려는 파일. 상대 또는 절대 경로일 수 있습니다 또는 네트워크 경로 이름을 포함할 수 있습니다.  
   
- `pTM`  
+ *pTM*  
  CAtlTransactionManager 개체에 대한 포인터  
   
 ### <a name="return-value"></a>반환 값  
@@ -449,7 +450,7 @@ enum Attribute {
     };
 ```    
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#10](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_6.cpp)]  
   
 ##  <a name="hfilenull"></a>  CFile::hFileNull  
@@ -476,10 +477,10 @@ virtual void LockRange(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwPos`  
+ *dwPos*  
  잠글 바이트 범위 시작의 바이트 오프셋입니다.  
   
- `dwCount`  
+ *dwCount*  
  잠글 범위의의 바이트 수입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -490,7 +491,7 @@ virtual void LockRange(
 > [!NOTE]
 >  이 함수를 사용할 수 없습니다는 `CMemFile`-클래스를 파생 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#12](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_8.cpp)]  
   
 ##  <a name="m_hfile"></a>  CFile::m_hFile  
@@ -515,7 +516,7 @@ CAtlTransactionManager* m_pTM;
 ### <a name="remarks"></a>설명  
   
 ##  <a name="open"></a>  CFile::Open  
- 오버로드됨. **열기** 기본 사용 하도록 설계 `CFile` 생성자입니다.  
+ 오버로드됨. `Open` 기본 사용 하도록 설계 `CFile` 생성자입니다.  
   
 ```  
 virtual BOOL Open(
@@ -532,27 +533,27 @@ virtual BOOL Open(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszFileName`  
+ *lpszFileName*  
  문자열은 원하는 파일을 경로입니다. Relative, absolute, 또는 네트워크 이름 (UNC) 경로일 수 있습니다.  
   
- `nOpenFlags`  
+ *nOpenFlags*  
  A **UINT** 파일의 공유 및 액세스 모드를 정의 하는 합니다. 파일을 열 때 수행할 동작을 지정 합니다. 비트 OR를 사용 하 여 옵션을 결합할 수 있습니다 ( **&#124;** ) 연산자. 에 대 한 액세스 권한 및 하나의 공유 옵션은 필수 사항이 고, **modeCreate** 및 **modeNoInherit** 모드는 선택 사항입니다. 참조는 [CFile](#cfile) 모드 옵션 목록에 대 한 생성자입니다.  
   
- `pError`  
+ *pError*  
  실패 한 작업의 상태를 수신할 기존 파일 예외 개체에 대 한 포인터입니다.  
   
- `pTM`  
+ *pTM*  
  CAtlTransactionManager 개체에 대한 포인터  
   
 ### <a name="return-value"></a>반환 값  
- 열기에 성공 하면 0이 아닌 그렇지 않으면 0입니다. `pError` 매개 변수는 0이 반환 되는 경우에 의미가 있습니다.  
+ 열기에 성공 하면 0이 아닌 그렇지 않으면 0입니다. *pError* 매개 변수는 0이 반환 되는 경우에 의미가 있습니다.  
   
 ### <a name="remarks"></a>설명  
  두 함수는 오류는 일반, 예상 상태 파일 열기에 대 한 "안전한" 메서드를 형성 합니다.  
   
- 동안는 `CFile` 생성자 오류 조건에서 예외가 throw 됩니다 **열려** 돌아갑니다 **FALSE** 오류 조건에 대 한 합니다. **하지만 열기** 여전히 초기화할 수는 [CFileException](../../mfc/reference/cfileexception-class.md) 오류를 설명 하는 개체입니다. 지정 하지 않으면는 `pError` 매개 변수를 전달 하는 경우 또는 **NULL** 에 대 한 `pError`, **열려** 돌아갑니다 **FALSE** 하며 throw 하지는 `CFileException`합니다. 기존에 대 한 포인터를 전달 하는 경우 `CFileException`, 및 **열려** 에서 오류가 발생 함수는 정보로 채운 해당 오류를 설명 하는 합니다. 두 사례 됩니다 **열려** 예외를 throw 합니다.  
+ 동안는 `CFile` 생성자 오류 조건에서 예외가 throw 됩니다 `Open` 돌아갑니다 **FALSE** 오류 조건에 대 한 합니다. `Open` 하지만 여전히 초기화할 수는 [CFileException](../../mfc/reference/cfileexception-class.md) 오류를 설명 하는 개체입니다. 지정 하지 않으면는 *pError* 매개 변수를 전달 하는 경우 또는 **NULL** 에 대 한 *pError*, `Open` 돌아갑니다 **FALSE** 하며 throw 하지는 `CFileException`. 기존에 대 한 포인터를 전달 하는 경우 `CFileException`, 및 `Open` 에서 오류가 발생 함수는 정보로 채운 해당 오류를 설명 하는 합니다. 두 사례 됩니다 `Open` 예외를 throw 합니다.  
   
- 다음 표에서 설명의 가능한 결과 **열려**합니다.  
+ 다음 표에서 설명의 가능한 결과 `Open`합니다.  
   
 |`pError`|오류가 발생 했습니다.|반환 값|CFileException 콘텐츠|  
 |--------------|------------------------|------------------|----------------------------|  
@@ -561,7 +562,7 @@ virtual BOOL Open(
 |**NULL**|예|**FALSE**|N/A|  
 |포인터를 `CFileException`|예|**FALSE**|오류를 설명 하기 위해 초기화|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#13](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_9.cpp)]  
   
  [!code-cpp[NVC_MFCFiles#14](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_10.cpp)]  
@@ -583,16 +584,16 @@ virtual UINT Read(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpBuf`  
+ *lpBuf*  
  파일에서 읽은 데이터를 수신 하는 사용자가 제공한 버퍼에 대 한 포인터입니다.  
   
- `nCount`  
+ *nCount*  
  파일에서 읽을 바이트의 최대 수입니다. 텍스트 모드 파일의 경우 캐리지 리턴-줄 바꿈 쌍을 단일 문자로 계산 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
- 버퍼로 전송된 바이트 수입니다. 모든 사항에 유의 `CFile` 클래스, 반환 값 경우도 미만 `nCount` 경우 파일의 끝에 도달 했습니다.  
+ 버퍼로 전송된 바이트 수입니다. 모든 사항에 유의 `CFile` 클래스, 반환 값 경우도 미만 *nCount* 경우 파일의 끝에 도달 했습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#15](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_11.cpp)]  
   
  또 다른 예에 대 한 참조 [CFile::Open](#open)합니다.  
@@ -607,10 +608,10 @@ static void PASCAL Remove(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszFileName`  
+ *lpszFileName*  
  문자열은 원하는 파일을 경로입니다. 경로 상대 또는 절대 일 수 있습니다 및 네트워크 이름을 지정할 수 있습니다.  
   
- `pTM`  
+ *pTM*  
  CAtlTransactionManager 개체에 대한 포인터  
   
 ### <a name="remarks"></a>설명  
@@ -618,7 +619,7 @@ static void PASCAL Remove(
   
  **제거** 멤버 함수는 파일을 제거할 수 없는 경우 또는 연결 된 파일이 열려 있으면 예외를 throw 합니다. DEL 명령에는 것과 같습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#17](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_12.cpp)]  
   
 ##  <a name="rename"></a>  CFile::Rename  
@@ -632,19 +633,19 @@ static void PASCAL Rename(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszOldName`  
+ *lpszOldName*  
  이전 경로입니다.  
   
- `lpszNewName`  
+ *lpszNewName*  
  새 경로입니다.  
   
- `pTM`  
+ *pTM*  
  CAtlTransactionManager 개체에 대한 포인터  
   
 ### <a name="remarks"></a>설명  
  디렉터리의 이름을 바꿀 수 없습니다. REN 명령에는 것과 같습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#18](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_13.cpp)]  
   
 ##  <a name="seek"></a>  CFile::Seek  
@@ -657,17 +658,17 @@ UINT nFrom);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lOff`  
+ *lOff*  
  파일 포인터를 이동 하는 바이트 수입니다. 파일의 끝까지 파일 포인터를 이동 하는 값은 양수 값 음수 값은 파일의 시작 부분 쪽으로 파일 포인터를 이동 합니다.  
   
- `nFrom`  
+ *nFrom*  
  검색할 위치입니다. 가능한 값에 대 한 설명 섹션을 참조 하십시오.  
   
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 파일 포인터의 위치 그렇지 않으면 반환 값이 정의 되지 및에 대 한 포인터는 `CFileException` 예외가 throw 됩니다.  
   
 ### <a name="remarks"></a>설명  
- 다음 표에서 사용할 수 있는 값의 `nFrom` 매개 변수입니다.  
+ 다음 표에서 사용할 수 있는 값의 *nFrom* 매개 변수입니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -681,7 +682,7 @@ UINT nFrom);
   
  이 메서드에 대 한 예외 처리기는 예외를 처리 한 후 예외 개체를 삭제 해야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#9](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_14.cpp)]  
   
 ##  <a name="seektobegin"></a>  CFile::SeekToBegin  
@@ -694,7 +695,7 @@ void SeekToBegin();
 ### <a name="remarks"></a>설명  
  `SeekToBegin()`는 `Seek( 0L, CFile::begin )`와 같습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#19](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_15.cpp)]  
   
 ##  <a name="seektoend"></a>  CFile::SeekToEnd  
@@ -710,7 +711,7 @@ ULONGLONG SeekToEnd();
 ### <a name="remarks"></a>설명  
  `SeekToEnd()`는 `CFile::Seek( 0L, CFile::end )`와 같습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#19](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_15.cpp)]  
   
 ##  <a name="setfilepath"></a>  CFile::SetFilePath  
@@ -721,7 +722,7 @@ virtual void SetFilePath(LPCTSTR lpszNewName);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszNewName`  
+ *lpszNewName*  
  새 경로 지정 하는 문자열에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -729,7 +730,7 @@ virtual void SetFilePath(LPCTSTR lpszNewName);
 > [!NOTE]
 > `SetFilePath` 파일을 열 하지 않거나; 파일 만들기 단순히 연결는 `CFile` 경로 이름을 사용할 수 있는 개체입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#20](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_16.cpp)]  
   
 ##  <a name="setlength"></a>  CFile::SetLength  
@@ -740,7 +741,7 @@ virtual void SetLength(ULONGLONG dwNewLen);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwNewLen`  
+ *dwNewLen*  
  바이트에 있는 파일의 원하는 길이입니다. 이 값은 파일의 현재 길이 보다 크거나 작을 수 있습니다. 파일 또는 확장 잘린 적절 하 게 됩니다.  
   
 ### <a name="remarks"></a>설명  
@@ -748,7 +749,7 @@ virtual void SetLength(ULONGLONG dwNewLen);
 > [!NOTE]
 >  와 `CMemFile`,이 함수에서 throw 할 수 있습니다는 `CMemoryException` 개체입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#11](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_17.cpp)]  
   
 ##  <a name="setstatus"></a>  CFile::SetStatus  
@@ -762,13 +763,13 @@ static void PASCAL SetStatus(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszFileName`  
+ *lpszFileName*  
  문자열은 원하는 파일을 경로입니다. 경로 상대 또는 절대 일 수 있습니다 및 네트워크 이름을 지정할 수 있습니다.  
   
  *status*  
  새 상태 정보를 포함 하는 버퍼입니다. 호출 된 **GetStatus** prefill 하려면 멤버 함수는 **CFileStatus** 현재 값으로 구성 하 고 필요에 따라 변경 내용을 확인 합니다. 값이 0 이면 해당 상태 항목이 업데이트 되지 않습니다. 참조는 [GetStatus](#getstatus) 멤버 함수에 대 한 설명은 **CFileStatus** 구조입니다.  
   
- `pTM`  
+ *pTM*  
  CAtlTransactionManager 개체에 대한 포인터  
   
 ### <a name="remarks"></a>설명  
@@ -776,7 +777,7 @@ static void PASCAL SetStatus(
   
  유의 사항에 대 한 호출을 할 때 `SetStatus` 파일의 특성에만 변경 하려고 및 **m_mtime** 파일 상태 구조체의 멤버는 0이 아니고, 특성도 달라질 수 있습니다 (타임 스탬프를 변경 합니다. 한 부작용에 특성). 만 파일의 특성을 변경 하려는 경우 먼저 설정 된 **m_mtime** 0 다음에 대 한 호출을 수행 하는 파일 상태 구조체의 멤버 `SetStatus`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#21](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_18.cpp)]  
   
 ##  <a name="unlockrange"></a>  CFile::UnlockRange  
@@ -789,10 +790,10 @@ virtual void UnlockRange(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwPos`  
+ *dwPos*  
  바이트 범위 잠금 해제 하려면 시작의 바이트 오프셋입니다.  
   
- `dwCount`  
+ *dwCount*  
  잠금을 해제할 범위의의 바이트 수입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -801,7 +802,7 @@ virtual void UnlockRange(
 > [!NOTE]
 >  이 함수를 사용할 수 없습니다는 `CMemFile`-클래스를 파생 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#12](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_8.cpp)]  
   
 ##  <a name="write"></a>  CFile::Write  
@@ -814,16 +815,16 @@ virtual void Write(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpBuf`  
+ *lpBuf*  
  파일에 쓸 데이터를 포함 하는 사용자가 제공한 버퍼에 대 한 포인터입니다.  
   
- `nCount`  
+ *nCount*  
  버퍼에서 전송할 바이트 수입니다. 텍스트 모드 파일의 경우 캐리지 리턴-줄 바꿈 쌍을 단일 문자로 계산 됩니다.  
   
 ### <a name="remarks"></a>설명  
  **쓰기** 꽉 차서를 포함 하 여 여러 조건에 대 한 응답에 예외를 throw 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#16](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_19.cpp)]  
   
  또한 예제를 참조 하십시오. [CFile::CFile](#cfile) 및 [CFile::Open](#open)합니다.  

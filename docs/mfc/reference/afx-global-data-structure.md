@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9230a304473c3f29bda2652f8941fb692b14c038
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bf2ffe62760e3879d834409f5b3207588ea06f36
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357230"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956309"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 구조체
 `AFX_GLOBAL_DATA` 구조는 프레임워크를 관리하거나 응용 프로그램의 모양과 동작을 사용자 지정하는 데 사용되는 필드 및 메서드를 포함합니다.  
@@ -86,7 +86,7 @@ struct AFX_GLOBAL_DATA
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[Afx_global_data:: bisosalphablendingsupport](#bisosalphablendingsupport)|현재 운영 체제가 알파 혼합을 지원하는지 여부를 나타냅니다.|  
 |[Afx_global_data:: biswindows7](#biswindows7)|응용 프로그램이 Windows 7 운영 체제 이상에서 실행되고 있는지 여부를 나타냅니다.|  
@@ -148,13 +148,13 @@ HRESULT D2D1MakeRotateMatrix(
 ```  
   
 ### <a name="parameters"></a>매개 변수   
- `angle`  
+ *각도*  
  시계 방향으로 회전 각도도 합니다.  
   
- `center`  
+ *센터*  
  회전할에 대 한 점입니다.  
   
- `matrix`  
+ *매트릭스*  
  이 메서드가 반환 될 때 새 회전 변환을 포함 되어 있습니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -172,13 +172,13 @@ BOOL DrawParentBackground(
 ```  
   
 ### <a name="parameters"></a>매개 변수   
- [in] `pWnd`  
+ [in] *pWnd*  
  컨트롤의 창에 대한 포인터입니다.  
   
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `lpRect`  
+ [in] *lpRect*  
  그리는 영역 경계가 되는 사각형에 대한 포인터입니다. 기본값은 `NULL`입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -202,42 +202,42 @@ BOOL DrawTextOnGlass(
 ```  
   
 ### <a name="parameters"></a>매개 변수   
- [in] `hTheme`  
+ [in] *hTheme*  
  창의 테마 데이터에 대한 핸드 또는 `NULL`입니다. 이 매개 변수가 `NULL` 이 아니고 테마가 지원되는 경우 프레임워크는 지정된 테마를 사용하여 텍스트를 그립니다. 그렇지 않으면 테마를 사용하여 텍스트를 그리지 않습니다.  
   
  [를 만들려면](http://msdn.microsoft.com/library/windows/desktop/bb759821) OpenThemeData `HTHEME`메서드를 사용합니다.  
   
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `iPartId`  
+ [in] *iPartId*  
  원하는 텍스트 모양이 있는 컨트롤 파트입니다. 자세한 내용은 [파트 및 상태](http://msdn.microsoft.com/library/windows/desktop/bb773210)에 설명된 표의 파트 열을 참조하세요. 이 값이 0이면 텍스트가 기본 글꼴로 그려지거나 장치 컨텍스트로 선택된 글꼴로 그려집니다.  
   
- [in] `iStateId`  
+ [in] *iStateId*  
  원하는 텍스트 모양이 있는 컨트롤 상태입니다. 자세한 내용은 [파트 및 상태](http://msdn.microsoft.com/library/windows/desktop/bb773210)에 설명된 표의 상태 열을 참조하세요.  
   
- [in] `strText`  
+ [in] *strText*  
  그릴 텍스트입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  지정된 텍스트가 그려지는 영역의 경계입니다.  
   
- [in] `dwFlags`  
+ [in] *dwFlags*  
  지정된 텍스트가 그려지는 방식을 지정하는 플래그의 비트 조합(OR)입니다.  
   
- 경우는 `hTheme` 매개 변수는 `NULL` 테마 되지 지원 하 여 사용 하는 경우 또는 `nFormat` 의 매개 변수는 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) 메서드 유효한 플래그를 설명 합니다. 테마가 지원되는 경우에는 `dwFlags` DrawThemeTextEx [메서드의](http://msdn.microsoft.com/library/windows/desktop/bb773317) 매개 변수가 유효한 플래그를 설명합니다.  
+ 경우는 *hTheme* 매개 변수는 `NULL` 테마 되지 지원 하 여 사용 하는 경우 또는 *nFormat* 의 매개 변수는 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) 메서드는 유효한 설명 플래그입니다. 테마가 지원 되는의 *dwFlags* 의 매개 변수는 [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) 메서드 유효한 플래그를 설명 합니다.  
   
- [in] `nGlowSize`  
+ [in] *nGlowSize*  
  지정된 텍스트를 그리기 전에 배경에 그려지는 글로우 효과의 크기입니다. 기본값은 0입니다.  
   
- [in] `clrText`  
+ [in] *clrText*  
  지정된 텍스트가 그려지는 색입니다. 기본값은 기본 색입니다.  
   
 ### <a name="return-value"></a>반환 값  
  `TRUE` 테마는 지정 된 텍스트를 그리는 데 사용 되는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
- 테마는 응용 프로그램의 비주얼 스타일을 정의합니다. `hTheme` 매개 변수가 `NULL`인 경우, [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) 메서드가 지원되지 않는 경우 또는 [바탕 화면 창 관리자](http://msdn.microsoft.com/library/windows/desktop/aa969540) (DWM) 컴퍼지션을 사용할 수 없는 경우에는 텍스트를 그리는 데 테마가 사용되지 않습니다.  
+ 테마는 응용 프로그램의 비주얼 스타일을 정의합니다. 경우 텍스트를 그리는 데 테마가 사용 되지 않습니다는 *hTheme* 매개 변수는 `NULL`, 또는 경우에는 [DrawThemeTextEx](http://msdn.microsoft.com/library/windows/desktop/bb773317) 메서드가 지원 되지 않는 경우 [바탕 화면 창 관리자](http://msdn.microsoft.com/library/windows/desktop/aa969540) ( DWM) 컴퍼지션은 사용 되지 않습니다.  
   
 ### <a name="see-also"></a>참고 항목  
  [계층 구조 차트](../../mfc/hierarchy-chart.md)   
@@ -257,7 +257,7 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수   
- [in] `bEnable`  
+ [in] *bEnable*  
  내게 필요한 옵션 지원을 활성화하려면 `TRUE`로 설정하고 비활성화하려면 `FALSE`로 설정합니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -283,25 +283,25 @@ BOOL ExcludeTag(
 ```  
   
 ### <a name="parameters"></a>매개 변수   
- [in] `strBuffer`  
+ [in] *strBuffer*  
  텍스트 버퍼입니다.  
   
- [in] `lpszTag`  
+ [in] *lpszTag*  
  한 쌍의 태그 및 닫는 XML 태그의 이름입니다.  
   
- [out] `strTag`  
- 이 메서드가 반환 될 때는 `strTag` 사이 있는 여는 태그와 닫는 XML 태그에서 명명 된 텍스트를 포함 하는 매개 변수는 `lpszTag` 매개 변수입니다. 결과에서 선행 또는 후행 공백이 잘립니다.  
+ [out] *strTag*  
+ 이 메서드가 반환 될 때는 *strTag* 사이 있는 여는 태그와 닫는 XML 태그에서 명명 된 텍스트를 포함 하는 매개 변수는 *lpszTag* 매개 변수입니다. 결과에서 선행 또는 후행 공백이 잘립니다.  
   
- [in] `bIsCharsList`  
- `TRUE` 이스케이프 문자에 대 한 기호를 변환 하는 `strTag` 실제 이스케이프 문자로; 매개 변수 `FALSE` 는 변환을 수행할 수 없습니다. 기본값은 `FALSE`합니다. 자세한 내용은 설명 부분을 참조하세요.  
+ [in] *bIsCharsList*  
+ `TRUE` 이스케이프 문자에 대 한 기호를 변환 하는 *strTag* 실제 이스케이프 문자로; 매개 변수 `FALSE` 는 변환을 수행할 수 없습니다. 기본값은 `FALSE`합니다. 자세한 내용은 설명 부분을 참조하세요.  
   
 ### <a name="return-value"></a>반환 값  
  이 메서드가 성공적으로 수행되면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다.  
   
 ### <a name="remarks"></a>설명  
- XML 태그 쌍 태그 및 닫는 태그를 시작 및 실행 하는 지정 된 버퍼에서 텍스트의 끝을 나타내는 이름이 구성 됩니다. `strBuffer` 는 버퍼를 지정 하는 매개 변수 및 `lpszTag` 매개 변수 XML 태그의 이름을 지정 합니다.  
+ XML 태그 쌍 태그 및 닫는 태그를 시작 및 실행 하는 지정 된 버퍼에서 텍스트의 끝을 나타내는 이름이 구성 됩니다. *strBuffer* 는 버퍼를 지정 하는 매개 변수 및 *lpszTag* 매개 변수 XML 태그의 이름을 지정 합니다.  
   
- 다음 표에 지정 된 버퍼에서 이스케이프 문자 집합을 인코딩할 기호를 사용 합니다. 지정 `TRUE` 에 대 한는 `bIsCharsList` 의 기호를 변환 하는 매개 변수는 `strTag` 실제 이스케이프 문자에 대 한 매개 변수입니다. 다음 표에서 사용 하 여는 [_T()](../../c-runtime-library/data-type-mappings.md) 기호를 지정 하 고 문자열을 이스케이프 하는 매크로입니다.  
+ 다음 표에 지정 된 버퍼에서 이스케이프 문자 집합을 인코딩할 기호를 사용 합니다. 지정 `TRUE` 에 대 한는 *bIsCharsList* 의 기호를 변환 하는 매개 변수는 *strTag* 실제 이스케이프 문자에 대 한 매개 변수입니다. 다음 표에서 사용 하 여는 [_T()](../../c-runtime-library/data-type-mappings.md) 기호를 지정 하 고 문자열을 이스케이프 하는 매크로입니다.  
   
 |기호|이스케이프 문자|  
 |------------|----------------------|  
@@ -322,14 +322,14 @@ COLORREF GetColor(int nColor);
 ```  
   
 ### <a name="parameters"></a>매개 변수   
- [in] `nColor`  
- 색을 검색 하는 사용자 인터페이스 요소를 지정 하는 값입니다. 유효한 값의 목록에 대 한 참조는 `nIndex` 의 매개 변수는 [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) 메서드.  
+ [in] *nColor*  
+ 색을 검색 하는 사용자 인터페이스 요소를 지정 하는 값입니다. 유효한 값의 목록에 대 한 참조는 *nIndex* 의 매개 변수는 [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) 메서드.  
   
 ### <a name="return-value"></a>반환 값  
  지정 된 사용자 인터페이스 요소의 RGB 색상 값입니다. 자세한 내용은 설명 부분을 참조하세요.  
   
 ### <a name="remarks"></a>설명  
- 경우는 `nColor` 매개 변수가 범위를 벗어나면 반환 값은 0입니다. 0이 유효한 RGB 값 이기도 하기 때문에 시스템 색이 현재 운영 체제에서 지원 되는지 여부를 확인 하려면이 메서드를 사용할 수 없습니다. 대신를 사용 하 여는 [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927) 반환 하는 메서드 `NULL` 색이 지원 되지 않는 경우.  
+ 경우는 *nColor* 매개 변수가 범위를 벗어나면 반환 값은 0입니다. 0이 유효한 RGB 값 이기도 하기 때문에 시스템 색이 현재 운영 체제에서 지원 되는지 여부를 확인 하려면이 메서드를 사용할 수 없습니다. 대신를 사용 하 여는 [GetSysColorBrush](http://msdn.microsoft.com/library/windows/desktop/dd144927) 반환 하는 메서드 `NULL` 색이 지원 되지 않는 경우.  
   
 ### <a name="see-also"></a>참고 항목  
 
@@ -368,7 +368,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ```  
   
 ### <a name="parameters"></a>매개 변수   
- [in, out] `info`  
+ [out에서] *정보*  
  A [NONCLIENTMETRICS](http://msdn.microsoft.com/library/windows/desktop/ff729175) 최소화 되지 않은 창의 비클라이언트 영역와 관련 된 확장 가능한 메트릭을 포함 하는 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -387,7 +387,7 @@ int GetTextHeight(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수   
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` 텍스트를 가로로; 실행 될 때 문자의 높이 검색 하려면 `FALSE` 텍스트 실행을 세로로 하는 경우 문자의 높이 검색 하도록 합니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -426,10 +426,10 @@ BOOL InitD2D(
 ```  
   
 ### <a name="parameters"></a>매개 변수   
- `d2dFactoryType`  
+ *d2dFactoryType*  
  D2d 및 생성 하는 리소스의 스레딩 모델입니다.  
   
- `writeFactoryType`  
+ *writeFactoryType*  
  쓰기 팩터리 개체를 공유 또는 격리 됩니다 있는지 여부를 지정 하는 값  
   
 ### <a name="return-value"></a>반환 값  
@@ -645,14 +645,14 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 ```  
   
 ### <a name="parameters"></a>매개 변수   
- [in] `lpszClassNamePrefix`  
+ [in] *lpszClassNamePrefix*  
  등록 하는 창 클래스의 이름입니다.  
   
 ### <a name="return-value"></a>반환 값  
  이 메서드가 성공 하면 등록 된 클래스의 정규화 된 이름 그렇지 않은 경우는 [리소스 예외](http://msdn.microsoft.com/library/ddd99292-819b-4fa4-8371-b1954ed5856d)합니다.  
   
 ### <a name="remarks"></a>설명  
- 반환 값은 콜론으로 구분 된 목록입니다는 `lpszClassNamePrefix` 매개 변수 문자열 및 현재 핸들의 16 진수 텍스트로 표시 됩니다. 응용 프로그램 인스턴스; 응용 프로그램 커서 식별자가 IDC_ARROW; 화살표 커서를 및 배경 브러시입니다. MFC 창 클래스 등록 하는 방법에 대 한 자세한 내용은 참조 [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)합니다.  
+ 반환 값은 콜론으로 구분 된 목록입니다는 *lpszClassNamePrefix* 매개 변수 문자열 및 현재 응용 프로그램 인스턴스의; 핸들의 16 진수 텍스트로 표시 됩니다. 응용 프로그램 커서 화살표를 식별자가 IDC_ARROW; 커서 및 배경 브러시입니다. MFC 창 클래스 등록 하는 방법에 대 한 자세한 내용은 참조 [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)합니다.  
   
 ### <a name="see-also"></a>참고 항목    
  [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)   
@@ -685,17 +685,17 @@ BOOL SetLayeredAttrib(
 ```  
   
 ### <a name="parameters"></a>매개 변수   
- [in] `hwnd`  
+ [in] *hwnd*  
  계층화된 창을 처리합니다.  
   
- [in] `crKey`  
+ [in] *crKey*  
  투명 색상 키입니다는 [바탕 화면 창 관리자](http://msdn.microsoft.com/library/windows/desktop/aa969540) 계층화 된 창을 구성 하려면 사용 합니다.  
   
- [in] `bAlpha`  
+ [in] *bAlpha*  
  계층화된 창의 불투명도를 기술하는 데 사용되는 알파 값입니다.  
   
- [in] `dwFlags`  
- 사용할 메서드 매개 변수를 지정하는 플래그의 비트 조합(OR)입니다. `crKey` 매개 변수를 투명 색상으로 사용하려면 LWA_COLORKEY를 지정합니다. `bAlpha` 매개 변수를 사용해서 계층화된 창의 불투명도를 결정하려면 LWA_ALPHA를 지정합니다.  
+ [in] *dwFlags*  
+ 사용할 메서드 매개 변수를 지정하는 플래그의 비트 조합(OR)입니다. 사용 하려면 LWA_COLORKEY를 지정 된 *crKey* 투명 색상으로 매개 변수입니다. LWA_ALPHA를 지정 된 *bAlpha* 매개 변수를 계층화 된 창의 불투명도 결정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  `TRUE` 이 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.   
@@ -715,10 +715,10 @@ BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>매개 변수   
- [in] `lpLogFont`  
+ [in] *lpLogFont*  
  글꼴의 특성을 포함 하는 구조에 대 한 포인터입니다.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` 텍스트 가로; 실행 되도록 지정 하려면 `FALSE` 텍스트 세로 방향으로 실행 되도록 지정 하려면.  
   
 ### <a name="return-value"></a>반환 값  
@@ -824,17 +824,17 @@ HRESULT ShellCreateItemFromParsingName(
 ```  
   
 ### <a name="parameters"></a>매개 변수   
- `pszPath`  
+ *pszPath*  
  [in] 표시 이름에 대 한 포인터입니다.  
   
- `pbc`  
+ *pbc*  
  구문 분석 작업을 제어 하는 바인딩 컨텍스트에 대 한 포인터입니다.  
   
- `riid`  
+ *riid*  
  인터페이스 ID에 대 한 참조  
   
- `ppv`  
- [out] 이 함수를 반환 하는 경우에 요청 된 인터페이스 포인터를 포함 `riid`합니다. 일반적으로 `IShellItem` 또는 `IShellItem2`합니다.  
+ *ppv*  
+ [out] 이 함수를 반환 하는 경우에 요청 된 인터페이스 포인터를 포함 *riid*합니다. 일반적으로 `IShellItem` 또는 `IShellItem2`합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공 하면 s_ok이 고 반환 그렇지 않으면 오류 값입니다.  

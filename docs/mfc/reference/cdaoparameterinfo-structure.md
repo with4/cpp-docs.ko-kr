@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e743e7456c185acd100c898cfb946182d63ce63
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ef473912489e9c757574545be2f8a53d7f3f9b9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366241"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951602"
 ---
 # <a name="cdaoparameterinfo-structure"></a>CDaoParameterInfo 구조체
 `CDaoParameterInfo` 구조 데이터 액세스 개체 (DAO)에 대해 정의 된 매개 변수 개체에 대 한 정보를 포함 합니다.  
@@ -39,11 +39,11 @@ struct CDaoParameterInfo
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `m_strName`  
+ *m_strName*  
  고유 하 게 매개 변수 개체의 이름을 지정 합니다. 자세한 내용은 DAO 도움말의 "Name 속성" 항목을 참조 합니다.  
   
- `m_nType`  
- 매개 변수 개체의 데이터 형식을 나타내는 값입니다. 목록이 가능한 값에 대 한 참조는 `m_nType` 의 멤버는 [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) 구조입니다. 자세한 내용은 DAO 도움말의 "Type 속성" 항목을 참조 합니다.  
+ *m_nType*  
+ 매개 변수 개체의 데이터 형식을 나타내는 값입니다. 목록이 가능한 값에 대 한 참조는 *m_nType* 의 멤버는 [CDaoFieldInfo](../../mfc/reference/cdaofieldinfo-structure.md) 구조입니다. 자세한 내용은 DAO 도움말의 "Type 속성" 항목을 참조 합니다.  
   
  *m_varValue*  
  에 저장 된 매개 변수의 값을 [COleVariant](../../mfc/reference/colevariant-class.md) 개체입니다.  

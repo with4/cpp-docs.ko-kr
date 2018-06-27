@@ -23,24 +23,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2acc0d6df4495ed38e7c5a6a34dcfd70108f34b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ed0fc9a18278c4e603b9ddae5197f6b5d03ee21
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385653"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950949"
 ---
 # <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054: MFC DAO 클래스를 사용하면서 직접 DAO 호출
 > [!NOTE]
 >  Visual c + + 환경 및 마법사 (DAO 클래스에 포함 되어 있으며 계속 사용할 수 있습니다) 이지만 DAO을 지원 하지 않습니다. 사용 하는 것이 좋습니다 [OLE DB 템플릿](../data/oledb/ole-db-templates.md) 또는 [ODBC 및 MFC](../data/odbc/odbc-and-mfc.md) 새 프로젝트에 대 한 합니다. DAO는 기존 응용 프로그램 유지 관리만 사용할 수 있습니다.  
   
- MFC DAO 데이터베이스 클래스를 사용 하는 경우 직접 DAO를 사용 하는 데 필요한 한 상황이 있을 수 있습니다. 일반적으로이 이름은 되지 경우 이지만 MFC에서 직접 DAO 호출 MFC 클래스의 사용을 결합 하는 경우 직접 DAO의 함으로써 호출 간단한를 용이 하 게 하려면 일부 도우미 메커니즘을 제공 합니다. 직접 DAO 하는 DAO MFC 관리 되는 개체의 메서드를 호출 단 몇 줄의 코드를 위해서는 합니다. 만들고 있는 DAO 개체를 사용 해야 *하지* 실제로 호출 하 여 좀 더 많은 작업을 수행할 수 있는 MFC에서 관리 하는 **릴리스** 개체에 있습니다. 이 기술 노트는 직접 DAO 호출 하려는 경우, MFC 도우미를 수행할 수 있는 및 DAO OLE 인터페이스를 사용 하는 방법을 설명 합니다. 마지막으로,이 노트는 DAO 보안 기능에 대 한 직접 DAO 호출 하는 방법을 보여 주는 몇 가지 샘플 기능을 제공 합니다.  
+ MFC DAO 데이터베이스 클래스를 사용 하는 경우 직접 DAO를 사용 하는 데 필요한 한 상황이 있을 수 있습니다. 일반적으로이 이름은 되지 경우 이지만 MFC에서 직접 DAO 호출 MFC 클래스의 사용을 결합 하는 경우 직접 DAO의 함으로써 호출 간단한를 용이 하 게 하려면 일부 도우미 메커니즘을 제공 합니다. 직접 DAO 하는 DAO MFC 관리 되는 개체의 메서드를 호출 단 몇 줄의 코드를 위해서는 합니다. 만들고 있는 DAO 개체를 사용 해야 *하지* 실제로 호출 하 여 좀 더 많은 작업을 수행할 수 있는 MFC에서 관리 하는 `Release` 개체에 있습니다. 이 기술 노트는 직접 DAO 호출 하려는 경우, MFC 도우미를 수행할 수 있는 및 DAO OLE 인터페이스를 사용 하는 방법을 설명 합니다. 마지막으로,이 노트는 DAO 보안 기능에 대 한 직접 DAO 호출 하는 방법을 보여 주는 몇 가지 샘플 기능을 제공 합니다.  
   
 ## <a name="when-to-make-direct-dao-calls"></a>직접 DAO 호출을 수행 하는 경우  
  MFC에서 래핑되지 기능을 구현 하는 경우 또는 컬렉션을 새로 고칠 수에 필요 하는 경우 직접 DAO 호출 하기 위한 가장 일반적인 상황에서 발생 합니다. MFC에 의해 노출 되지 않는 가장 중요 한 기능은 보안입니다. 보안 기능을 구현 하려는 경우에 직접 DAO 사용자 및 그룹 개체를 사용 해야 합니다. 보안, 외에도 몇 가지 다른 기능 들을 DAO MFC에서 지원 되지 않습니다. 여기에 레코드 집합 복제 및 데이터베이스 복제 기능 뿐만 아니라 DAO로 몇 가지 추가 기능이 포함 됩니다.  
   
 ## <a name="a-brief-overview-of-dao-and-mfcs-implementation"></a>DAO 및 MFC의 구현에 대 한 간략 한 개요  
- MFC의 래핑 DAO 준다고에 걱정 하지 않아도 되도록 많은 세부 사항을 처리 하 여 보다 쉽게 사용 하는 DAO 하면 수입니다. OLE, 생성 및 DAO 개체 (특히: 컬렉션 개체) 오류 검사 및 제공 되는 강력한 형식의 간단한 인터페이스의 관리를 초기화 하는 여기에 (없음 **VARIANT** 또는 `BSTR` 인수)입니다. 직접 DAO 호출 하 고 여전히 이러한 기능을 이용할 수 있습니다. 코드에서 해야 할 모든 호출이 **릴리스** 직접 DAO에서 생성 된 모든 개체에 대 한 호출 및 *하지* MFC에서 내부적으로 사용할 수 있는 인터페이스 포인터를 수정 합니다. 예를 들어 수정 하지 마십시오는 **m_pDAORecordset** 열린 소속 `CDaoRecordset` 이해 하지 못하면 개체 *모든* 내부 문제를 가져옵니다. 그러나 사용할 수는 **m_pDAORecordset** 가져올 Fields 컬렉션에 직접 DAO 호출 하는 인터페이스입니다. 이 경우에 **m_pDAORecordset** 멤버를 수정할 수는 있습니다. 호출 하기만 하면 **릴리스** 개체와 함께 완료 했으면 필드 컬렉션 개체에 있습니다.  
+ MFC의 래핑 DAO 준다고에 걱정 하지 않아도 되도록 많은 세부 사항을 처리 하 여 보다 쉽게 사용 하는 DAO 하면 수입니다. OLE, 생성 및 DAO 개체 (특히: 컬렉션 개체) 오류 검사 및 제공 되는 강력한 형식의 간단한 인터페이스의 관리를 초기화 하는 여기에 (없음 **VARIANT** 또는 `BSTR` 인수)입니다. 직접 DAO 호출 하 고 여전히 이러한 기능을 이용할 수 있습니다. 코드에서 해야 할 모든 호출이 `Release` 직접 DAO에서 생성 된 모든 개체에 대 한 호출 및 *하지* MFC에서 내부적으로 사용할 수 있는 인터페이스 포인터를 수정 합니다. 예를 들어 수정 하지 마십시오는 *m_pDAORecordset* 열린 소속 `CDaoRecordset` 이해 하지 못하면 개체 *모든* 내부 문제를 가져옵니다. 그러나 사용할 수는 *m_pDAORecordset* 가져올 Fields 컬렉션에 직접 DAO 호출 하는 인터페이스입니다. 이 경우에 *m_pDAORecordset* 멤버를 수정할 수는 있습니다. 호출 하기만 하면 `Release` 개체와 함께 완료 했으면 필드 컬렉션 개체에 있습니다.  
   
 ## <a name="description-of-helpers-to-make-dao-calls-easier"></a>DAO 있도록 도우미의 설명 보다 쉽게 호출  
  DAO를 쉽게 호출할 수 있도록 하는 도우미에는 MFC DAO 데이터베이스 클래스에서 내부적으로 사용 되는 동일한 도우미입니다. 이러한 도우미 로그 디버그 출력을 예상된 오류를 검사 하 고 필요한 경우 적절 한 예외를 throw 하는 직접 DAO 호출을 수행할 때 반환 코드를 확인 하는 데 사용 됩니다. 이러한 두 도우미 중 하나에 매핑되는 4 개의 매크로 및 기본 도우미 함수 두 가지가 있습니다. 가장 하기만 하는 코드를 읽을 수 있습니다. 참조 **DAO_CHECK**, **DAO_CHECK_ERROR**, **DAO_CHECK_MEM**, 및 **DAO_TRACE** AFXDAO에 있습니다. 매크로, 및 참조를 H **AfxDaoCheck** 및 **AfxDaoTrace** DAOCORE에 있습니다. CPP 합니다.  
@@ -48,9 +48,9 @@ ms.locfileid: "33385653"
 ## <a name="using-the-dao-ole-interfaces"></a>DAO OLE 인터페이스를 사용 하 여  
  DAO 개체 계층 구조에 있는 각 개체에 대 한 OLE 인터페이스 DBDAOINT 헤더 파일에 정의 됩니다. H files\microsoft Visual Studio.NET 2003\VC7\include 디렉터리에 있습니다. 이러한 인터페이스에는 전체 DAO 계층을 조작할 수 있도록 하는 방법을 제공 합니다.  
   
- DAO 인터페이스의 메서드 중 많은 경우 조작 해야 합니다는 `BSTR` 개체 (길이 접두사가 문자열에 OLE 자동화 사용). `BSTR` 내 개체에 캡슐화 일반적으로 **VARIANT** 데이터 형식입니다. MFC 클래스 `COleVariant` 자체에서 상속 되는 **VARIANT** 데이터 형식입니다. 여부 ANSI 또는 유니코드에 대 한 프로젝트를 빌드할에 따라 DAO 인터페이스 돌아갑니다 ANSI 또는 유니코드 `BSTR`s입니다. 두 매크로 **V_BSTR** 및 **V_BSTRT**는 가져옵니다 DAO 인터페이스 지 확인 하는 데는 유용는 `BSTR` 예상 되는 형식의 합니다.  
+ DAO 인터페이스의 메서드 중 많은 경우 조작 해야 합니다는 `BSTR` 개체 (길이 접두사가 문자열에 OLE 자동화 사용). `BSTR` 내 개체에 캡슐화 일반적으로 **VARIANT** 데이터 형식입니다. MFC 클래스 `COleVariant` 자체에서 상속 되는 **VARIANT** 데이터 형식입니다. 여부 ANSI 또는 유니코드에 대 한 프로젝트를 빌드할에 따라 DAO 인터페이스 돌아갑니다 ANSI 또는 유니코드 `BSTR`s입니다. V_BSTR 및 V_BSTRT, 두 매크로 가져옵니다 담당 DAO 인터페이스에 대 한 유용는 `BSTR` 예상 되는 형식의 합니다.  
   
- **V_BSTR** 추출 됩니다는 **bstrVal** 의 멤버는 `COleVariant`합니다. 콘텐츠를 전달 해야 하는 경우이 매크로 일반적으로 사용 되는 `COleVariant` DAO 인터페이스의 메서드에 합니다. 다음 코드는 선언 및 사용 하는 DAO DAOUser 인터페이스의 두 가지 방법에 대 한 실제 사용을 모두 표시는 **V_BSTR** 매크로:  
+ V_BSTR 추출할는 *bstrVal* 의 멤버는 `COleVariant`합니다. 콘텐츠를 전달 해야 하는 경우이 매크로 일반적으로 사용 되는 `COleVariant` DAO 인터페이스의 메서드에 합니다. 다음 코드 조각에는 선언 및 V_BSTR 매크로 활용 하는 DAO DAOUser 인터페이스의 두 가지 방법에 대 한 실제 사용을 모두 보여 줍니다.  
   
 ```  
 COleVariant varOldName;  
@@ -71,7 +71,7 @@ DAO_CHECK(pUser->put_Name(V_BSTR (&varNewName)));
   
  `VT_BSTRT` 에 지정 된 인수는 `COleVariant` 위의 생성자 통해 ANSI 있게 되며 `BSTR` 에 `COleVariant` 는 ANSI 버전의 응용 프로그램 및 유니코드 빌드하는 경우 `BSTR` 의 유니코드 버전에 대 한 응용 프로그램입니다. 이 DAO이 기대 합니다.  
   
- 다른 매크로 **V_BSTRT**, ANSI 또는 유니코드 중 하나를 추출 합니다 **bstrVal** 소속 `COleVariant` 빌드 (ANSI 또는 유니코드)의 유형에 따라 합니다. 다음 코드를 추출 하는 방법을 보여 줍니다는 `BSTR` 에서 값을 `COleVariant` 에 `CString`:  
+ ANSI 또는 유니코드 다른 매크로 V_BSTRT을 추출 합니다 *bstrVal* 소속 `COleVariant` 빌드 (ANSI 또는 유니코드)의 유형에 따라 합니다. 다음 코드를 추출 하는 방법을 보여 줍니다는 `BSTR` 에서 값을 `COleVariant` 에 `CString`:  
   
 ```  
 COleVariant varName(_T("MyName"), VT_BSTRT);
@@ -79,10 +79,10 @@ COleVariant varName(_T("MyName"), VT_BSTRT);
 CString str = V_BSTRT(&varName);
 ```  
   
- **V_BSTRT** 매크로에 저장 되어 있는 다른 형식을에 명시 된 기타 기술 함께 `COleVariant`, DAOVIEW 샘플에서와 합니다. 특히,이 변환에서 수행 된 **CCrack::strVARIANT** 메서드. 변환의 값을 가능한 경우,이 메서드는 `COleVariant` 의 인스턴스로 `CString`합니다.  
+ V_BSTRT 매크로에 저장 되어 있는 다른 형식을에 명시 된 기타 기술 함께 `COleVariant`, DAOVIEW 샘플에 나와 있습니다. 특히,이 변환에서 수행 된 `CCrack::strVARIANT` 메서드. 변환의 값을 가능한 경우,이 메서드는 `COleVariant` 의 인스턴스로 `CString`합니다.  
   
 ## <a name="simple-example-of-a-direct-call-to-dao"></a>직접 DAO 호출의 간단한 예  
- 상황에는 기본 DAO 컬렉션 개체를 새로 고치려면 필요한 경우에 발생할 수 있습니다. 일반적으로 필요에 따라 해야 하지만 필요한 경우는 간단한 프로시저를 쉽습니다. 새로 고쳐져 야 컬렉션 수 해야 하는 경우의 예로 여러 사용자가 만드는 새 테이블에 정의 된 다중 사용자 환경에서 작동 하는 경우. 이 경우 tabledefs 컬렉션 부실 해질 수 있습니다. 컬렉션을 새로 고치려면 단순히를 호출 해야는 **새로 고침** 오류에 대 한 특정 컬렉션 개체 및 확인 방법:  
+ 상황에는 기본 DAO 컬렉션 개체를 새로 고치려면 필요한 경우에 발생할 수 있습니다. 일반적으로 필요에 따라 해야 하지만 필요한 경우는 간단한 프로시저를 쉽습니다. 새로 고쳐져 야 컬렉션 수 해야 하는 경우의 예로 여러 사용자가 만드는 새 테이블에 정의 된 다중 사용자 환경에서 작동 하는 경우. 이 경우 tabledefs 컬렉션 부실 해질 수 있습니다. 컬렉션을 새로 고치려면 단순히를 호출 해야는 `Refresh` 오류에 대 한 메서드는 특정 컬렉션 개체 및 확인:  
   
 ```  
 DAO_CHECK(pMyDaoDatabase->  

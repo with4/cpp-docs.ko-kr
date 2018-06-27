@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88e6916056f988a1cee52020c8ce7e9fce11e574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ba8f6d8cf90e7523fe4497cfc3b36c3616a8f10
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370522"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956280"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind 클래스
 FTP 서버의 인터넷 파일 검색에 유용합니다.  
@@ -63,7 +63,7 @@ class CFtpFileFind : public CFileFind
   
  사용 하는 방법에 대 한 자세한 내용은 `CFtpFileFind` 다른 WinInet 클래스 문서를 참조 하 고 [인터넷 WinInet를 사용한 프로그래밍](../../mfc/win32-internet-extensions-wininet.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드에는 FTP 서버의 현재 디렉터리의 모든 파일을 열거 하는 방법을 보여 줍니다.  
   
  [!code-cpp[NVC_MFCWinInet#8](../../mfc/codesnippet/cpp/cftpfilefind-class_1.cpp)]  
@@ -88,16 +88,16 @@ explicit CFtpFileFind(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pConnection`  
+ *pConnection*  
  에 대 한 포인터는 `CFtpConnection` 개체입니다. 호출 하 여 FTP 연결을 가져올 수 있습니다 [cinternetsession:: Getftpconnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)합니다.  
   
- `dwContext`  
+ *dwContext*  
  에 대 한 컨텍스트 식별자는 `CFtpFileFind` 개체입니다. 참조 **주의** 이 매개 변수에 대 한 자세한 내용은 합니다.  
   
 ### <a name="remarks"></a>설명  
- 에 대 한 기본값 `dwContext` MFC 인증에서 전송 되는 `CFtpFileFind` 에서 개체는 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 만든 개체는 `CFtpFileFind` 개체입니다. 컨텍스트 식별자의 값으로 설정 하기 위해 기본값을 재정의할 수 있습니다. 컨텍스트 식별자는 되돌아갑니다 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) 식별 되는 개체의 상태를 제공 하 합니다. 문서 참조 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md) 컨텍스트 식별자에 대 한 자세한 내용은 합니다.  
+ 에 대 한 기본값 *dwContext* MFC 인증에서 전송 되는 `CFtpFileFind` 에서 개체는 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 만든 개체는 `CFtpFileFind` 개체입니다. 컨텍스트 식별자의 값으로 설정 하기 위해 기본값을 재정의할 수 있습니다. 컨텍스트 식별자는 되돌아갑니다 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) 식별 되는 개체의 상태를 제공 하 합니다. 문서 참조 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md) 컨텍스트 식별자에 대 한 자세한 내용은 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   이 항목의 앞부분에 나오는 클래스 개요의 예제를 참조 하십시오.  
   
 ##  <a name="findfile"></a>  Cftpfilefind:: Findfile  
@@ -110,10 +110,10 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pstrName`  
+ *pstrName*  
  찾으려는 파일의 이름을 포함 하는 문자열에 대 한 포인터입니다. 경우 **NULL**, 호출 (*) 와일드 카드 검색을 수행 합니다.  
   
- `dwFlags`  
+ *dwFlags*  
  이 세션을 처리 하는 방법을 설명 하는 플래그입니다. 이러한 플래그는 비트 OR 연산자와 결합할 수 있습니다 (&#124;) 되며 다음과 같습니다.  
   
 -   INTERNET_FLAG_RELOAD 로컬로 캐시 된 경우에 연결에서 데이터를 가져옵니다. 이것이 기본 플래그입니다.  
@@ -132,7 +132,7 @@ virtual BOOL FindFile(
 ### <a name="remarks"></a>설명  
  호출한 후 **FindFile** 호출할 수 있는 첫 번째 FTP 파일을 검색 하려면 [FindNextFile](#findnextfile) 후속 FTP 파일을 검색 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   이 항목의 이전 예제를 참조 하십시오.  
   
 ##  <a name="findnextfile"></a>  Cftpfilefind:: Findnextfile  
@@ -150,7 +150,7 @@ virtual BOOL FindNextFile();
   
  `FindNextFile` Win32 함수를 래핑합니다 [FindNextFile](http://msdn.microsoft.com/library/windows/desktop/aa364428)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   이 항목의 앞부분에 나오는 예제를 참조 하십시오.  
   
 ##  <a name="getfileurl"></a>  CFtpFileFind::GetFileURL  

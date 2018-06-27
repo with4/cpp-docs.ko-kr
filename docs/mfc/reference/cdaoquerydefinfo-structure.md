@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0b3e5834aa8b338448c2024603783cedb6f6cae
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a31928bc98b8b2fd403f1db40c040357c388b104
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367232"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952289"
 ---
 # <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo 구조체
 `CDaoQueryDefInfo` 구조 데이터 액세스 개체 (DAO)에 대해 정의 된 쿼리 정의 개체에 대 한 정보를 포함 합니다.  
@@ -45,10 +45,10 @@ struct CDaoQueryDefInfo
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `m_strName`  
+ *m_strName*  
  쿼리 정의 개체의 고유 이름을 지정 합니다. 자세한 내용은 DAO 도움말의 "Name 속성" 항목을 참조 합니다. 호출 [CDaoQueryDef::GetName](../../mfc/reference/cdaoquerydef-class.md#getname) 를이 속성을 직접 검색 합니다.  
   
- `m_nType`  
+ *m_nType*  
  쿼리 정의 개체의 작업 유형을 나타내는 값입니다. 값은 다음 중 하나일 수 있습니다.  
   
 - **dbQSelect** 선택-쿼리 레코드를 선택 합니다.  
@@ -78,13 +78,13 @@ struct CDaoQueryDefInfo
   
  자세한 내용은 DAO 도움말의 "Type 속성" 항목을 참조 합니다.  
   
- `m_dateCreated`  
+ *m_dateCreated*  
  날짜 및 쿼리 정의 만든 시간입니다. 직접 쿼리 정의 만든 날짜를 검색 하려면 호출는 [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) 의 멤버 함수는 `CDaoTableDef` 테이블에 연결 된 개체입니다. 자세한 내용은 아래 메모를 참조 하십시오. DAO 도움말의 항목 "DateCreated LastUpdated 속성"를 참조 하세요.  
   
- `m_dateLastUpdated`  
+ *m_dateLastUpdated*  
  날짜 및 시간을 가장 최근 쿼리 정의에 적용 한 변경입니다. 테이블을 마지막으로 수정한 날짜를 직접 검색 하려면 호출는 [GetDateLastUpdated](../../mfc/reference/cdaoquerydef-class.md#getdatelastupdated) 쿼리 정의의 멤버 함수입니다. 자세한 내용은 아래 메모를 참조 하십시오. 고 DAO 도움말의 "LastUpdated 속성 DateCreated" 항목을 참조 하십시오.  
   
- `m_bUpdatable`  
+ *m_bUpdatable*  
  변경 내용을 쿼리 정의 개체를 연결할 수 있는지 여부를 나타냅니다. 이 속성이 **TRUE**, 쿼리 정의 업데이트할 수 있는, 그렇지 않으면, 없습니다. 업데이트 가능 쿼리 정의 개체의 쿼리 정의 변경할 수 있습니다를 의미 합니다. 업데이트할 수 있는 쿼리 정의 개체의 속성이 **TRUE** 경우 쿼리 정의 업데이트 결과 레코드 집합을 업데이트할 수 없는 경우에 합니다. 이 속성을 직접 검색 하려면 쿼리 정의 호출 [CanUpdate](../../mfc/reference/cdaoquerydef-class.md#canupdate) 멤버 함수입니다. 자세한 내용은 DAO 도움말의 "업데이트할 수 있는 Property" 항목을 참조 합니다.  
   
  *m_bReturnsRecords*  
@@ -93,7 +93,7 @@ struct CDaoQueryDefInfo
  *m_strSQL*  
  쿼리 정의 개체에 의해 실행 되는 쿼리를 정의 하는 SQL 문입니다. 레코드 선택 방법, 그룹화 및 정렬 쿼리를 실행 하는 경우를 결정 하는 SQL 문을 포함 하는 SQL 속성입니다. 다이너셋 또는 스냅숏 형식 레코드 집합 개체에 포함할 레코드를 선택 하는 쿼리를 사용할 수 있습니다. 대량 레코드를 반환 하지 않고 데이터를 수정 하는 쿼리를 정의할 수 있습니다. 직접 쿼리 정의 호출 하 여이 속성의 값을 검색할 수 있습니다 [GetSQL](../../mfc/reference/cdaoquerydef-class.md#getsql) 멤버 함수입니다.  
   
- `m_strConnect`  
+ *m_strConnect*  
  통과 쿼리에 사용 되는 데이터베이스의 원본에 대 한 정보를 제공 합니다. 이 정보는 연결 문자열의 형식을 사용 합니다. 자세한 정보에 대 한 연결 문자열을 한이 속성의 값을 직접 검색 하는 방법에 대 한 정보를 참조 하십시오.는 [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) 멤버 함수입니다.  
   
  *m_nODBCTimeout*  

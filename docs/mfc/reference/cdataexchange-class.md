@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03d68359d075efd72a1bf1907daa71e74110fa28
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2ed2f918a51c1dca1aa7e1713ac919102a599e38
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368939"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953349"
 ---
 # <a name="cdataexchange-class"></a>CDataExchange 클래스
 Microsoft Foundation 클래스에서 사용되는 DDX(대화 상자 데이터 교환) 및 DDV(대화 상자 데이터 유효성 검사) 루틴을 지원합니다.  
@@ -75,7 +75,7 @@ class CDataExchange
   
  사용자 지정 데이터 형식이 나 컨트롤에 대 한 데이터 교환 루틴을 작성 하는 경우에이 클래스를 사용 하 여 사용자 고유의 데이터 유효성 검사 루틴을 작성 하는 경우 또는 합니다. 사용자 고유의 DDX 및 DDV 루틴을 작성 방법에 대 한 자세한 내용은 참조 하십시오. [기술 참고 26](../../mfc/tn026-ddx-and-ddv-routines.md)합니다. DDX 및 DDV의 개요를 참조 하십시오. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md) 및 [대화 상자](../../mfc/dialog-boxes.md)합니다.  
   
- A `CDataExchange` 개체에 배치 되려면 DDX 및 DDV 필요한 컨텍스트 정보를 제공 합니다. 플래그 `m_bSaveAndValidate` 은 **FALSE** DDX 데이터 멤버에서 대화 상자 컨트롤의 초기 값을 채우는 데 사용 되는 경우. 플래그 `m_bSaveAndValidate` 은 **TRUE** 데이터 멤버 및 DDV 데이터 값의 유효성 검사에 사용 되는 경우에 대화 상자 컨트롤의 현재 값을 설정 하려면 DDX 사용 되는 경우. DDV 유효성 검사에 실패 하는 경우 입력된 오류를 설명 하는 메시지 상자 DDV 절차에 표시 됩니다. 그런 다음 DDV 프로시저가 호출 **실패** 문제가 되는 컨트롤에 포커스를 다시 설정 하 고 유효성 검사 프로세스를 중지 하려면 예외를 throw 합니다.  
+ A `CDataExchange` 개체에 배치 되려면 DDX 및 DDV 필요한 컨텍스트 정보를 제공 합니다. 플래그 *m_bSaveAndValidate* 은 **FALSE** DDX 데이터 멤버에서 대화 상자 컨트롤의 초기 값을 채우는 데 사용 되는 경우. 플래그 *m_bSaveAndValidate* 은 **TRUE** 데이터 멤버 및 DDV 데이터 값의 유효성 검사에 사용 되는 경우에 대화 상자 컨트롤의 현재 값을 설정 하려면 DDX 사용 되는 경우. DDV 유효성 검사에 실패 하는 경우 입력된 오류를 설명 하는 메시지 상자 DDV 절차에 표시 됩니다. 그런 다음 DDV 프로시저가 호출 `Fail` 문제가 되는 컨트롤에 포커스를 다시 설정 하 고 유효성 검사 프로세스를 중지 하려면 예외를 throw 합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `CDataExchange`  
@@ -96,13 +96,13 @@ CDataExchange(
  *pDlgWnd*  
  컨트롤이 포함 된 부모 창에 대 한 포인터입니다. 이 일반적으로 [CDialog](../../mfc/reference/cdialog-class.md)-파생 된 개체입니다.  
   
- `bSaveAndValidate`  
+ *bSaveAndValidate*  
  경우 **TRUE**,이 개체 데이터의 유효성을 검사 한 다음 멤버를 컨트롤에서 데이터를 씁니다. 경우 **FALSE**,이 개체 멤버에서 컨트롤에 데이터를 이동 합니다.  
   
 ### <a name="remarks"></a>설명  
  생성 한 `CDataExchange` 개체 창의에 전달할 데이터 교환 개체에 추가 정보를 저장 하기 위해 직접 [CWnd::DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange) 멤버 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#70](../../mfc/codesnippet/cpp/cdataexchange-class_1.cpp)]  
   
 ##  <a name="fail"></a>  CDataExchange::Fail  
@@ -113,9 +113,9 @@ void Fail();
 ```  
   
 ### <a name="remarks"></a>설명  
- **실패** 포커스 및 선택 (있는 경우 복원 하는 컨트롤)를 유효성 검사에 실패 하는 컨트롤에 복원 합니다. **실패** 형식의 예외를 throw [CUserException](../../mfc/reference/cuserexception-class.md) 유효성 검사 프로세스를 중지 합니다. 예외 하면 표시할 오류를 설명 하는 메시지 상자. DDV 유효성 검사에 실패 한 후 사용자를 문제가 되는 컨트롤의 데이터를 다시 입력할 수 있습니다.  
+ `Fail` 포커스 및 선택 (있는 경우 복원 하는 컨트롤)를 유효성 검사에 실패 하는 컨트롤에 복원 합니다. `Fail` 다음 형식의 예외를 throw [CUserException](../../mfc/reference/cuserexception-class.md) 유효성 검사 프로세스를 중지 합니다. 예외 하면 표시할 오류를 설명 하는 메시지 상자. DDV 유효성 검사에 실패 한 후 사용자를 문제가 되는 컨트롤의 데이터를 다시 입력할 수 있습니다.  
   
- 사용자 지정 DDV 루틴의 구현자를 호출할 수 **실패** 유효성 검사가 실패할 때 자신의 루틴에서 합니다.  
+ 사용자 지정 DDV 루틴의 구현자를 호출할 수 `Fail` 유효성 검사가 실패할 때 자신의 루틴에서 합니다.  
   
  사용자 고유의 DDX 및 DDV 루틴을 작성 방법에 대 한 자세한 내용은 참조 하십시오. [기술 참고 26](../../mfc/tn026-ddx-and-ddv-routines.md)합니다. DDX 및 DDV의 개요를 참조 하십시오. [대화 상자 데이터 교환 및 유효성 검사](../../mfc/dialog-data-exchange-and-validation.md) 및 [대화 상자 항목](../../mfc/dialog-boxes.md)합니다.  
   
@@ -153,7 +153,7 @@ HWND PrepareCtrl(int nIDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDC`  
+ *nIDC*  
  DDX 또는 DDV가 준비 될 컨트롤의 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -176,7 +176,7 @@ HWND PrepareEditCtrl(int nIDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDC`  
+ *nIDC*  
  DDX 또는 DDV가 준비 될 편집 컨트롤의 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -199,7 +199,7 @@ COleControlSite* PrepareOleCtrl(int nIDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDC`  
+ *nIDC*  
  DDX 또는 DDV가 준비 될 OLE 컨트롤의 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  

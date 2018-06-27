@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e93c4e9d8707d3960e768b6929bb2b1c16d60b42
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f6a52846754bdf1293e03a47127ae8886e0f1cd2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385480"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952432"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038: MFC/OLE IUnknown 구현
 > [!NOTE]
@@ -89,7 +89,7 @@ public:
 };  
 ```  
   
- 하나만 있는 경우 IPrintInterface를 가져오려면는 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), 호출 [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) 를 사용 하는 `IID` 의 **IPrintInterface**합니다. `IID`는 인터페이스를 고유하게 식별하는 128비트 숫자입니다. 사용자나 OLE에서 정의하는 각 인터페이스에 대해 `IID`가 있습니다. 경우 `pUnk` 에 대 한 포인터는 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 개체, 여기에서 IPrintInterface를 검색 하는 코드 일 수 있습니다.  
+ 하나만 있는 경우 IPrintInterface를 가져오려면는 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), 호출 [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) 를 사용 하는 `IID` 의 `IPrintInterface`합니다. `IID`는 인터페이스를 고유하게 식별하는 128비트 숫자입니다. 사용자나 OLE에서 정의하는 각 인터페이스에 대해 `IID`가 있습니다. 경우 *펑크* 에 대 한 포인터는 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 개체, 여기에서 IPrintInterface를 검색 하는 코드 일 수 있습니다.  
   
 ```  
 IPrintInterface* pPrint = NULL;  
@@ -116,7 +116,7 @@ virtual void PrintObject();
 };  
 ```  
   
- 구현 [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) 및 [릴리스](http://msdn.microsoft.com/library/windows/desktop/ms682317) 는 정확히 동일할 구현 된 것 위의 합니다. **CPrintObj::QueryInterface** 코드는 다음과 같습니다.  
+ 구현 [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) 및 [릴리스](http://msdn.microsoft.com/library/windows/desktop/ms682317) 는 정확히 동일할 구현 된 것 위의 합니다. `CPrintObj::QueryInterface` 코드는 다음과 같습니다.  
   
 ```  
 HRESULT CPrintObj::QueryInterface(REFIID iid, void FAR* FAR* ppvObj)  
@@ -301,15 +301,15 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
   
 2.  파생 클래스 정의에서 `DECLARE_INTERFACE_MAP` 함수를 사용합니다.  
   
-3.  지원하려는 각 인터페이스에 대해 클래스 정의에서 `BEGIN_INTERFACE_PART` 및 `END_INTERFACE_PART` 매크로를 사용합니다.  
+3.  기능을 지원 하려면 각 인터페이스에 대해 클래스 정의에서 BEGIN_INTERFACE_PART 및 END_INTERFACE_PART 매크로 사용 합니다.  
   
-4.  구현 파일에서 `BEGIN_INTERFACE_MAP` 및 `END_INTERFACE_MAP` 매크로를 사용하여 클래스의 인터페이스 맵을 정의합니다.  
+4.  구현 파일에서 BEGIN_INTERFACE_MAP 및 END_INTERFACE_MAP 매크로 사용 하 여 클래스의 인터페이스 맵을 정의 합니다.  
   
-5.  지원되는 각 IID에 대해 `BEGIN_INTERFACE_MAP`과 `END_INTERFACE_MAP` 매크로 사이에 `INTERFACE_PART` 매크로를 사용하여 해당 IID를 클래스의 특정 "요소"에 매핑합니다.  
+5.  지원 되는 각 IID에 대 한 특정 "부품" 클래스의 해당 IID를 매핑할 BEGIN_INTERFACE_MAP 및 END_INTERFACE_MAP 매크로 사이 INTERFACE_PART 매크로 사용 합니다.  
   
 6.  지원하는 인터페이스를 나타내는 각 중첩 클래스를 구현합니다.  
   
-7.  `METHOD_PROLOGUE` 매크로를 사용하여 부모인 `CCmdTarget` 파생 개체에 액세스합니다.  
+7.  METHOD_PROLOGUE 매크로 사용 하 여 부모 액세스 `CCmdTarget`-파생 된 개체입니다.  
   
 8. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [릴리스](http://msdn.microsoft.com/library/windows/desktop/ms682317), 및 [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) 를 위임할 수는 `CCmdTarget` 이러한 함수의 구현 (`ExternalAddRef`, `ExternalRelease`, 및 `ExternalQueryInterface`).  
   
@@ -338,7 +338,7 @@ END_INTERFACE_PART(PrintObj)
 };  
 ```  
   
- 위의 선언은 `CCmdTarget`에서 파생 클래스를 만듭니다. `DECLARE_INTERFACE_MAP` 매크로는 이 클래스에 사용자 지정 인터페이스 맵이 포함됨을 프레임워크에 알립니다. 또한 `BEGIN_INTERFACE_PART` 및 `END_INTERFACE_PART` 매크로는 중첩 클래스를 정의하며, 이 경우 CEditObj 및 CPrintObj 이름을 사용합니다. X는 "C"로 시작하는 전역 클래스와 "I"로 시작하는 인터페이스 클래스에서 중첩 클래스를 구분하는 데에만 사용됩니다. 이러한 클래스의 두 중첩 멤버, 각각 m_CEditObj와 m_CPrintObj가 만들어집니다. 매크로 자동으로 선언 된 [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [릴리스](http://msdn.microsoft.com/library/windows/desktop/ms682317), 및 [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) 함수; 따라서만 선언 함수는이 인터페이스에 특정: EditObject 및 PrintObject (OLE 매크로 `STDMETHOD` 사용 되도록 `_stdcall` 가상 키워드의 대상 플랫폼에 따라 제공 됩니다).  
+ 위의 선언은 `CCmdTarget`에서 파생 클래스를 만듭니다. DECLARE_INTERFACE_MAP 매크로이 클래스는 사용자 지정 인터페이스 맵이 있는 프레임 워크에 지시 합니다. 또한 BEGIN_INTERFACE_PART 및 END_INTERFACE_PART 매크로 중첩된 클래스를 정의이 경우 CEditObj 및 CPrintObj 이름을 (X는 데만 인터페이스 "C"으로 시작 하는 클래스는 전역 클래스에서 중첩된 클래스를 구분 합니다. 앞의 "I"). 이러한 클래스의 두 중첩 멤버, 각각 m_CEditObj와 m_CPrintObj가 만들어집니다. 매크로 자동으로 선언 된 [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [릴리스](http://msdn.microsoft.com/library/windows/desktop/ms682317), 및 [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) 함수; 따라서만 선언 함수는이 인터페이스에 특정: EditObject 및 PrintObject (STDMETHOD 사용 되는 OLE 매크로 있도록 **_stdcall** 가상 키워드의 대상 플랫폼에 따라 제공 됩니다).  
   
  이 클래스에 대해 인터페이스 맵을 구현하려면  
   
@@ -356,7 +356,7 @@ END_INTERFACE_MAP()
   
  각각 IID_IPrintInterface IID는 m_CPrintObj와 연결하고 IID_IEditInterface는 m_CEditObj와 연결합니다. `CCmdTarget` 구현의 [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) (`CCmdTarget::ExternalQueryInterface`)이이 맵을 사용 하 여 요청 시 m_CPrintObj 및 m_CEditObj에 포인터를 반환 합니다. `IID_IUnknown`에 대한 항목은 포함할 필요가 없습니다. `IID_IUnknown`을 요청하는 경우 프레임워크는 맵의 첫 번째 인터페이스(이 경우 m_CPrintObj)를 사용합니다.  
   
- 경우에는 `BEGIN_INTERFACE_PART` 자동으로 선언 하는 매크로 [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [릴리스](http://msdn.microsoft.com/library/windows/desktop/ms682317) 및 [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) 함수를 계속 해야 구현 하는 데:  
+ BEGIN_INTERFACE_PART 매크로 자동으로 선언 하는 경우에는 [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [릴리스](http://msdn.microsoft.com/library/windows/desktop/ms682317) 및 [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) 함수를 계속 해야 구현 하는 데:  
   
 ```  
 ULONG FAR EXPORT CEditPrintObj::XEditObj::AddRef()  
@@ -404,10 +404,10 @@ void FAR EXPORT CEditPrintObj::XEditObj::EditObject()
   
 -   두 인터페이스 모두에서 이러한 기본 제공 메서드 중 하나 선언  
   
- 또한 프레임워크는 메시지 맵을 내부적으로 사용합니다. 따라서 이미 특정 인터페이스를 지원하고 프레임워크에서 제공하는 인터페이스에 대체 또는 추가 작업을 제공하는 프레임워크 클래스 `COleServerDoc`에서 파생시킬 수 있습니다. 프레임워크는 기본 클래스에서 인터페이스 맵 상속을 완벽하게 지원하기 때문에 가능합니다. 이러한 이유로 `BEGIN_INTERFACE_MAP`은 기본 클래스의 이름을 두 번째 매개 변수로 사용합니다.  
+ 또한 프레임워크는 메시지 맵을 내부적으로 사용합니다. 따라서 이미 특정 인터페이스를 지원하고 프레임워크에서 제공하는 인터페이스에 대체 또는 추가 작업을 제공하는 프레임워크 클래스 `COleServerDoc`에서 파생시킬 수 있습니다. 프레임워크는 기본 클래스에서 인터페이스 맵 상속을 완벽하게 지원하기 때문에 가능합니다. 이유 BEGIN_INTERFACE_MAP의 두 번째 매개 변수로 기본 클래스의 이름을 이유입니다.  
   
 > [!NOTE]
->  일반적으로 MFC 버전에서 해당 인터페이스의 포함된 특수화를 상속하는 것만으로는 MFC의 OLE 인터페이스 기본 제공 구현의 구현을 다시 사용할 수 없습니다. 이것이 가능 하기 때문에 사용은 `METHOD_PROLOGUE` 포함 하는 액세스 하는 매크로 `CCmdTarget`-파생된 개체를 의미는 *고정된 오프셋* 에서 포함된 된 개체의는 `CCmdTarget`-파생 개체입니다. 예를 들어 `COleClientItem::XAdviseSink`의 MFC 구현에서 포함된 XMyAdviseSink를 파생시킬 수 없는데, XAdviseSink는 `COleClientItem` 개체의 맨 위로부터 특정 오프셋에 있기 때문입니다.  
+>  일반적으로 MFC 버전에서 해당 인터페이스의 포함된 특수화를 상속하는 것만으로는 MFC의 OLE 인터페이스 기본 제공 구현의 구현을 다시 사용할 수 없습니다. 이것이 가능 하기 때문에 포함 하는에 대 한 액세스를 얻으려고 METHOD_PROLOGUE 매크로 사용 하는 `CCmdTarget`-파생된 개체를 의미는 *고정된 오프셋* 에서 포함된 된 개체의는 `CCmdTarget`-파생 된 개체입니다. 예를 들어 `COleClientItem::XAdviseSink`의 MFC 구현에서 포함된 XMyAdviseSink를 파생시킬 수 없는데, XAdviseSink는 `COleClientItem` 개체의 맨 위로부터 특정 오프셋에 있기 때문입니다.  
   
 > [!NOTE]
 >  그러나 MFC의 기본 동작을 원하는 모든 함수에 대한 MFC 구현에 위임할 수 있습니다. 이 작업은 `COleFrameHook` 클래스(많은 함수에서 m_xOleInPlaceUIWindow에 위임)에서 `IOleInPlaceFrame`(XOleInPlaceFrame)의 MFC 구현으로 수행합니다. 이 디자인은 여러 인터페이스를 구현하는 개체의 런타임 크기를 줄이기 위해 선택되었으며, 이전 섹션에서 사용된 m_pParent 같은 후방 포인터가 필요하지 않습니다.  
@@ -418,13 +418,13 @@ void FAR EXPORT CEditPrintObj::XEditObj::EditObject()
  집계는 (1) 집계를 지원하는 COM 개체 사용, (2) 다른 개체에서 집계할 수 있는 개체 구현과 같은 두 가지 방법으로 사용할 수 있습니다. 이러한 기능을 "집계 개체 사용" 및 “개체를 집계할 수 있도록 만들기"라고 합니다. MFC는 둘 다를 지원합니다.  
   
 ### <a name="using-an-aggregate-object"></a>집계 개체 사용  
- 집계 개체를 사용하려면 집계를 QueryInterface 메커니즘에 연결할 수 있는 몇 가지 방법이 있어야 합니다. 즉, 집계 개체는 개체의 네이티브 요소인 것처럼 동작해야 합니다. MFC의 인터페이스에이 연결이 메커니즘 외에 매핑되지 어떻게는 `INTERFACE_PART` 매크로 중첩된 개체가 IID에 매핑되는 여기서 선언할 수도 있습니다 집계 개체의 일부로 사용자 `CCmdTarget` 클래스를 파생 합니다. 이렇게 하려면 `INTERFACE_AGGREGATE` 매크로를 사용합니다. 멤버 변수를 지정할 수 있습니다 (에 대 한 포인터 이어야는 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 또는 파생 클래스)을 인터페이스 맵 메커니즘에 통합 되어야 하는 것입니다. 포인터가 NULL이 아닌 경우 때 `CCmdTarget::ExternalQueryInterface` 은 호출 프레임 워크를 자동으로 호출 집계 개체의 [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) 경우 멤버 함수는 `IID` 요청 중 하나가 아닙니다 네이티브 `IID`s 지원 되는 `CCmdTarget` 개체 자체입니다.  
+ 집계 개체를 사용하려면 집계를 QueryInterface 메커니즘에 연결할 수 있는 몇 가지 방법이 있어야 합니다. 즉, 집계 개체는 개체의 네이티브 요소인 것처럼 동작해야 합니다. 어떻게이 동률 INTERFACE_PART 매크로 외에 MFC의 인터페이스 맵 메커니즘에는 여기서는 중첩된 개체가 IID에 매핑되는 선언할 수도 있습니다 집계 개체의 일부로 사용자 `CCmdTarget` 클래스를 파생 합니다. 이렇게 하려면 INTERFACE_AGGREGATE 매크로 사용 됩니다. 멤버 변수를 지정할 수 있습니다 (에 대 한 포인터 이어야는 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 또는 파생 클래스)을 인터페이스 맵 메커니즘에 통합 되어야 하는 것입니다. 포인터가 NULL이 아닌 경우 때 `CCmdTarget::ExternalQueryInterface` 은 호출 프레임 워크를 자동으로 호출 집계 개체의 [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) 경우 멤버 함수는 `IID` 요청 중 하나가 아닙니다 네이티브 `IID`s 지원 되는 `CCmdTarget` 개체 자체입니다.  
   
 ##### <a name="to-use-the-interfaceaggregate-macro"></a>INTERFACE_AGGREGATE 매크로를 사용하려면  
   
 1.  집계 개체에 대한 포인터를 포함할 멤버 변수(`IUnknown*`)를 선언합니다.  
   
-2.  이름으로 멤버 변수를 참조하는 인터페이스 맵에 `INTERFACE_AGGREGATE` 매크로를 포함합니다.  
+2.  이름별으로 멤버 변수를 참조 하는 인터페이스 맵에 INTERFACE_AGGREGATE 매크로 포함 합니다.  
   
 3.  특정 지점(일반적으로 `CCmdTarget::OnCreateAggregates` 중)에서 멤버 변수를 NULL이 아닌 다른 값으로 초기화합니다.  
   
@@ -508,10 +508,10 @@ void EnableAggregation();
 ## <a name="remarks"></a>설명  
   
 #### <a name="parameters"></a>매개 변수  
- `lpIID`  
+ *lpIID*  
  IID(QueryInterface 첫 번째 인수)에 대한 far 포인터  
   
- `ppvObj`  
+ *ppvObj*  
  IUnknown*(QueryInterface의 두 번째 인수)에 대한 포인터  
   
 ## <a name="remarks"></a>설명  
@@ -550,7 +550,7 @@ DECLARE_INTERFACE_MAP
 ```  
   
 ## <a name="remarks"></a>설명  
- 이 매크로는 인터페이스 맵이 포함될 `CCmdTarget`에서 파생 클래스에서 사용합니다. `DECLARE_MESSAGE_MAP`과 거의 동일한 방식으로 사용됩니다. 이 매크로 호출은 일반적으로 헤더(.H) 파일에 있는 클래스 정의에 배치해야 합니다. `DECLARE_INTERFACE_MAP`을 사용하는 클래스는 구현 파일(.CPP)에서 `BEGIN_INTERFACE_MAP` 및 `END_INTERFACE_MAP` 매크로를 사용하여 인터페이스 맵을 정의합니다.  
+ 이 매크로는 인터페이스 맵이 포함될 `CCmdTarget`에서 파생 클래스에서 사용합니다. 거의 동일한 방식으로 DECLARE_MESSAGE_MAP 사용. 이 매크로 호출은 일반적으로 헤더(.H) 파일에 있는 클래스 정의에 배치해야 합니다. DECLARE_INTERFACE_MAP 사용 하 여 클래스 구현 파일의 인터페이스 맵을 정의 해야 합니다 (합니다. CPP) BEGIN_INTERFACE_MAP 및 END_INTERFACE_MAP 매크로 함께 합니다.  
   
 ### <a name="begininterfacepart-and-endinterfacepart--macro-descriptions"></a>BEGIN_INTERFACE_PART 및 END_INTERFACE_PART — 매크로 설명  
   
@@ -567,18 +567,18 @@ END_INTERFACE_PART(
 ## <a name="remarks"></a>설명  
   
 #### <a name="parameters"></a>매개 변수  
- `localClass`  
+ *localClass*  
  인터페이스를 구현하는 클래스의 이름  
   
- `iface`  
+ *iface*  
  이 클래스에서 구현하는 인터페이스의 이름  
   
 ## <a name="remarks"></a>설명  
- 클래스에서 구현할 각 인터페이스에 대해 `BEGIN_INTERFACE_PART` 및 `END_INTERFACE_PART` 쌍이 있어야 합니다. 이러한 매크로는 정의하는 OLE 인터페이스에서 파생된 로컬 클래스뿐만 아니라 해당 클래스의 포함된 멤버 변수를 정의합니다. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [릴리스](http://msdn.microsoft.com/library/windows/desktop/ms682317), 및 [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) 멤버는 자동으로 선언 합니다. 구현할 인터페이스의 일부인 다른 멤버 함수에 대한 선언을 포함해야 합니다. 해당 선언은 `BEGIN_INTERFACE_PART` 및 `END_INTERFACE_PART` 매크로 사이에 배치됩니다.  
+ 클래스에서 구현할 각 인터페이스에 대해 한 BEGIN_INTERFACE_PART 및 END_INTERFACE_PART 쌍이 필요 합니다. 이러한 매크로는 정의하는 OLE 인터페이스에서 파생된 로컬 클래스뿐만 아니라 해당 클래스의 포함된 멤버 변수를 정의합니다. [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379), [릴리스](http://msdn.microsoft.com/library/windows/desktop/ms682317), 및 [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) 멤버는 자동으로 선언 합니다. 구현할 인터페이스의 일부인 다른 멤버 함수에 대 한 선언을 포함 해야 합니다 (이러한 선언을 사이 위치 BEGIN_INTERFACE_PART 및 END_INTERFACE_PART 매크로).  
   
- `iface` 인수는 구현하려는 OLE 인터페이스(`IAdviseSink` 또는 `IPersistStorage`) 또는 고유한 사용자 지정 인터페이스입니다.  
+ *iface* 인수는 구현 하려는 OLE 인터페이스 `IAdviseSink`, 또는 `IPersistStorage` (또는 사용자 고유의 사용자 지정 인터페이스 제외).  
   
- `localClass` 인수는 정의될 로컬 클래스의 이름입니다. 'X'는 이름 앞에 자동으로 추가됩니다. 이 명명 규칙은 이름이 동일한 전역 클래스와의 충돌을 방지하는 데 사용됩니다. 또한 포함된 멤버의 이름은 'm_x' 접두사가 붙는 다는 점을 제외하면 `localClass` 이름과 동일합니다.  
+ *localClass* 인수는 정의 될 로컬 클래스의 이름입니다. 'X'는 이름 앞에 자동으로 추가됩니다. 이 명명 규칙은 이름이 동일한 전역 클래스와의 충돌을 방지하는 데 사용됩니다. 또한 같은 포함된 된 멤버의 이름에서 *localClass* 'm_x' 옵니다 점을 제외 하 고 이름을 지정 합니다.  
   
  예를 들어:  
   
@@ -621,14 +621,14 @@ END_INTERFACE_PART(MyAdviseSink)
 ## <a name="remarks"></a>설명  
   
 #### <a name="parameters"></a>매개 변수  
- `theClass`  
+ *theClass*  
  인터페이스 맵을 정의할 클래스  
   
- `baseClass`  
- `theClass`가 파생되는 클래스  
+ *baseClass*  
+ 클래스를 *theClass* 에서 파생 됩니다.  
   
 ## <a name="remarks"></a>설명  
- `BEGIN_INTERFACE_MAP` 및 `END_INTERFACE_MAP` 매크로는 구현 파일에서 실제로 인터페이스 맵을 정의하는 데 사용됩니다. 구현되는 각 인터페이스에 대해 하나 이상의 `INTERFACE_PART` 매크로 호출이 있습니다. 클래스에서 사용하는 각 집계에 대해 하나의 `INTERFACE_AGGREGATE` 매크로 호출이 있습니다.  
+ BEGIN_INTERFACE_MAP 및 END_INTERFACE_MAP 매크로 구현 파일에서 실제로 인터페이스 맵을 정의 하는 데 사용 됩니다. 구현 되는 각 인터페이스에 대 한 하나 이상의 INTERFACE_PART 매크로 호출이 있습니다. 클래스에서 사용 하는 각 집계에 대해 하나의 INTERFACE_AGGREGATE 매크로 호출이 있습니다.  
   
 ### <a name="interfacepart--macro-description"></a>INTERFACE_PART — 매크로 설명  
   
@@ -643,17 +643,17 @@ END_INTERFACE_PART(MyAdviseSink)
 ## <a name="remarks"></a>설명  
   
 #### <a name="parameters"></a>매개 변수  
- `theClass`  
+ *theClass*  
  인터페이스 맵을 포함하는 클래스의 이름  
   
- `iid`  
+ *iid*  
  포함된 클래스에 매핑될 `IID`  
   
- `localClass`  
+ *localClass*  
  로컬 클래스의 이름('X' 제외)  
   
 ## <a name="remarks"></a>설명  
- 이 매크로는 개체가 지원할 각 인터페이스에 대해 `BEGIN_INTERFACE_MAP` 매크로와 `END_INTERFACE_MAP` 매크로 사이에서 사용됩니다. 따라서 `theClass` 및 `localClass`로 표시되는 클래스의 멤버에 IID를 매핑할 수 있습니다. 'm_x'는 `localClass`에 자동으로 추가됩니다. 단일 멤버에 둘 이상의 `IID`를 연결할 수 있습니다. 이 기능은 "최다 파생" 인터페이스만 구현하고 모든 중간 인터페이스도 제공하려는 경우에 매우 유용합니다. 좋은 예로 `IOleInPlaceFrameWindow` 인터페이스가 있습니다. 해당 계층 구조는 다음과 같습니다.  
+ 이 매크로 개체에서 지원할 각 인터페이스에 대 한 BEGIN_INTERFACE_MAP 매크로 및 END_INTERFACE_MAP 매크로 간에 사용 됩니다. 에 의해 표시 되는 클래스의 멤버에 IID를 매핑할 수 있습니다 *theClass* 및 *localClass*합니다. 'M_x'에 추가 되 고 *localClass* 자동으로 합니다. 단일 멤버에 둘 이상의 `IID`를 연결할 수 있습니다. 이 기능은 "최다 파생" 인터페이스만 구현하고 모든 중간 인터페이스도 제공하려는 경우에 매우 유용합니다. 좋은 예로 `IOleInPlaceFrameWindow` 인터페이스가 있습니다. 해당 계층 구조는 다음과 같습니다.  
   
 ```  
 IUnknown  
@@ -662,7 +662,7 @@ IUnknown
     IOleInPlaceFrameWindow 
 ```  
   
- 개체를 구현 하는 경우 `IOleInPlaceFrameWindow`, 클라이언트 `QueryInterface` 이러한 인터페이스 중 하나: `IOleUIWindow`, `IOleWindow`, 또는 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), "최다 파생된" 인터페이스 외에도 `IOleInPlaceFrameWindow` (한 실제로 구현)입니다. 이를 처리하려면 둘 이상의 `INTERFACE_PART` 매크로를 사용하여 모든 기본 인터페이스를 각각 `IOleInPlaceFrameWindow` 인터페이스에 매핑할 수 있습니다.  
+ 개체를 구현 하는 경우 `IOleInPlaceFrameWindow`, 클라이언트 `QueryInterface` 이러한 인터페이스 중 하나: `IOleUIWindow`, `IOleWindow`, 또는 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509), "최다 파생된" 인터페이스 외에도 `IOleInPlaceFrameWindow` (한 실제로 구현)입니다. 이 처리 하려면 각각의 모든 기본 인터페이스를 매핑할 둘 이상의 INTERFACE_PART 매크로 사용할 수는 `IOleInPlaceFrameWindow` 인터페이스:  
   
  클래스 정의 파일:  
   
@@ -701,14 +701,14 @@ END_INTERFACE_MAP
 ## <a name="remarks"></a>설명  
   
 #### <a name="parameters"></a>매개 변수  
- `theClass`  
+ *theClass*  
  인터페이스 맵을 포함하는 클래스의 이름  
   
- `theAggr`  
+ *theAggr*  
  집계될 멤버 변수의 이름  
   
 ## <a name="remarks"></a>설명  
- 이 매크로는 클래스에서 집계 개체를 사용하고 있음을 프레임워크에 알리는 데 사용됩니다. `BEGIN_INTERFACE_PART`와 `END_INTERFACE_PART` 매크로 사이에 나타나야 합니다. 집계 개체는에서 파생 된 개체로, [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)합니다. 집계 및 `INTERFACE_AGGREGATE` 매크로를 사용하면 집계에서 지원하는 모든 인터페이스를 개체에서 직접 지원하도록 만들 수 있습니다. `theAggr` 인수는 단순히에서 파생 된 클래스의 멤버 변수의 이름 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) (직접 또는 간접적으로). 모든 `INTERFACE_AGGREGATE` 매크로는 인터페이스 맵에 배치될 때 `INTERFACE_PART` 매크로 다음에 와야 합니다.  
+ 이 매크로는 클래스에서 집계 개체를 사용하고 있음을 프레임워크에 알리는 데 사용됩니다. BEGIN_INTERFACE_PART 및 END_INTERFACE_PART 매크로 사이 나타나야 합니다. 집계 개체는에서 파생 된 개체로, [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)합니다. 집계 및 INTERFACE_AGGREGATE 매크로 사용 하 여 개체에 의해 직접 지원에서 집계에서 지 원하는 나타나는 모든 인터페이스를 만들 수 있습니다. *theAggr* 인수는 단순히에서 파생 된 클래스의 멤버 변수의 이름 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) (직접 또는 간접적으로). 모든 INTERFACE_AGGREGATE 매크로 INTERFACE_PART 매크로 인터페이스 맵에 배치 되는 경우 준수 해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [번호별 기술 참고 사항](../mfc/technical-notes-by-number.md)   

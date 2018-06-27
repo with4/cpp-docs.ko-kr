@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a620c2481b29b80f6d30dd6457716a652f51fd85
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 73aa47a2d888c88dd58d114dd4f5ca9a3f086cd3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382768"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956254"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>트리 컨트롤 끌어서 드롭 작업
-트리 컨트롤 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 항목을 끌기 시작할 때 알림을 보냅니다. 컨트롤에서 보냅니다는 [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) 마우스 왼쪽된 단추와 항목을 끌기 시작할 때 알림 메시지 및 [TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) 알림 메시지를 끌기 시작할 때 마우스 오른쪽 단추로 합니다. 트리 컨트롤을 제공 하 여 이러한 알림을 보낼에서 트리 컨트롤을 방지할 수 있습니다는 **TVS_DISABLEDRAGDROP** 스타일입니다.  
+트리 컨트롤 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 항목을 끌기 시작할 때 알림을 보냅니다. 컨트롤에서 보냅니다는 [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) 마우스 왼쪽된 단추와 항목을 끌기 시작할 때 알림 메시지 및 [TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) 알림 메시지를 끌기 시작할 때 마우스 오른쪽 단추로 합니다. 트리 컨트롤 트리 컨트롤 TVS_DISABLEDRAGDROP 스타일을 지정 하 여 이러한 알림을 보내지 못하도록 방지할 수 있습니다.  
   
  호출 하 여 끌기 작업 중에 표시할 이미지를 가져올는 [CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) 멤버 함수입니다. 트리 컨트롤 끌고 항목의 레이블을 기반으로 끌기 비트맵을 만듭니다. 트리 컨트롤 이미지 목록 만들어, 비트맵을 추가 하 고에 대 한 포인터를 반환 합니다. 그런 다음는 [CImageList](../mfc/reference/cimagelist-class.md) 개체입니다.  
   

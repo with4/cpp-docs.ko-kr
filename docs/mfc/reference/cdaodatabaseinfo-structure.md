@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7121915671f6e0ab52ae66c53e5ca31fa1faec1c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b10cd2d5c6174e63ff8aa74b4edc98b20375fae0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352742"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951935"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo 구조체
 `CDaoDatabaseInfo` 구조 데이터 액세스 개체 (DAO)에 대해 정의 된 데이터베이스 개체에 대 한 정보를 포함 합니다.  
@@ -43,10 +43,10 @@ struct CDaoDatabaseInfo
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `m_strName`  
+ *m_strName*  
  고유 하 게 데이터베이스 개체의 이름을 지정 합니다. 이 속성을 직접 검색 하려면 호출 [CDaoDatabase::GetName](../../mfc/reference/cdaodatabase-class.md#getname)합니다. 자세한 내용은 DAO 도움말의 "Name 속성" 항목을 참조 합니다.  
   
- `m_bUpdatable`  
+ *m_bUpdatable*  
  데이터베이스에 변경 내용을 만들 수 있는지 여부를 나타냅니다. 이 속성을 직접 검색 하려면 호출 [CDaoDatabase::CanUpdate](../../mfc/reference/cdaodatabase-class.md#canupdate)합니다. 자세한 내용은 DAO 도움말의 "업데이트할 수 있는 Property" 항목을 참조 합니다.  
   
  *m_bTransactions*  
@@ -55,7 +55,7 @@ struct CDaoDatabaseInfo
  *m_strVersion*  
  Microsoft Jet 데이터베이스 엔진의 버전을 나타냅니다. 이 속성의 값을 직접 검색 하는 데이터베이스 개체를 호출 [GetVersion](../../mfc/reference/cdaodatabase-class.md#getversion) 멤버 함수입니다. 자세한 내용은 DAO 도움말의 "버전 Property" 항목을 참조 합니다.  
   
- `m_lCollatingOrder`  
+ *m_lCollatingOrder*  
  문자열 비교 또는 정렬에 대 한 텍스트 정렬 순서를 지정 합니다. 가능한 값은 다음과 같습니다.  
   
 - **dbSortGeneral** 일반 (영어, 프랑스어, 독일어, 포르투갈어, 이탈리아어, 및 현대 스페인어) 정렬 순서를 사용 합니다.  
@@ -99,7 +99,7 @@ struct CDaoDatabaseInfo
  *m_nQueryTimeout*  
  초를 대기한 후 시간 초과 오류가 Microsoft Jet 데이터베이스 엔진에는 ODBC 데이터베이스에서 쿼리를 실행할 때 발생 합니다. 기본 제한 시간 값은 60 초입니다. 쿼리 제한 시간을 0으로 설정 하는 경우 시간 제한 없이 발생 합니다. 이 인해 프로그램 작동이 중지 될 수 있습니다. 이 속성의 값을 직접 검색 하는 데이터베이스 개체를 호출 [GetQueryTimeout](../../mfc/reference/cdaodatabase-class.md#getquerytimeout) 멤버 함수입니다. 자세한 내용은 DAO 도움말의 "QueryTimeout Property" 항목을 참조 합니다.  
   
- `m_strConnect`  
+ *m_strConnect*  
  열려 있는 데이터베이스의 원본에 대 한 정보를 제공 합니다. 정보에 대 한 연결 문자열을 한이 속성의 값을 직접 검색 하는 방법에 대 한 정보를 참조 하십시오.는 [CDaoDatabase::GetConnect](../../mfc/reference/cdaodatabase-class.md#getconnect) 멤버 함수입니다. 자세한 내용은 DAO 도움말의 "연결 속성" 항목을 참조 하십시오.  
   
 ## <a name="remarks"></a>설명  

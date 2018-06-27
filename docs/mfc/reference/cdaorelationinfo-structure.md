@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 112af640d020dc579c1ec2b1b7eace509daa451e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a49bdfb00c3f2ceba424af7bfdfa652cacec929e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366264"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951294"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo 구조체
 `CDaoRelationInfo` 구조에서 두 테이블의 필드 간에 정의 된 관계에 대 한 정보를 포함 한 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) 개체입니다.  
@@ -44,7 +44,7 @@ struct CDaoRelationInfo
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `m_strName`  
+ *m_strName*  
  Relation 개체를 이름을 고유 하 게 지정 합니다. 자세한 내용은 DAO 도움말의 "Name 속성" 항목을 참조 합니다.  
   
  *m_strTable*  
@@ -53,7 +53,7 @@ struct CDaoRelationInfo
  *m_strForeignTable*  
  관계에서 외래 테이블을 이름을 지정 합니다. 에 있는 외래 테이블은 외래 키를 포함 하는 데 사용 되는 테이블입니다. 일반적으로 설정 하거나 참조 무결성을 유지 하에 있는 외래 테이블을 사용 합니다. 외래 테이블은 일반적으로 일 대 다 관계의 다 쪽에 있습니다. 외래 테이블의 예로 미국 또는 캐나다의 주 또는 고객 주문에 대 한 코드를 포함 하는 테이블입니다.  
   
- `m_lAttributes`  
+ *m_lAttributes*  
  관계 형식에 대 한 정보를 포함합니다. 이 멤버의 값은 다음 중 하나일 수 있습니다.  
   
 - **dbRelationUnique** 한 일 관계입니다.  
@@ -70,11 +70,11 @@ struct CDaoRelationInfo
   
 - **dbRelationDeleteCascade** 삭제 연계 됩니다.  
   
- `m_pFieldInfos`  
- 배열에 대 한 포인터 [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) 구조입니다. 배열에는 관계의 각 필드에 대 한 개체가 포함 됩니다. `m_nFields` 데이터 멤버는 배열 요소의 수를 제공 합니다.  
+ *m_pFieldInfos*  
+ 배열에 대 한 포인터 [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) 구조입니다. 배열에는 관계의 각 필드에 대 한 개체가 포함 됩니다. *m_nFields* 데이터 멤버는 배열 요소의 수를 제공 합니다.  
   
- `m_nFields`  
- 수가 `CDaoRelationFieldInfo` 개체에 `m_pFieldInfos` 데이터 멤버입니다.  
+ *m_nFields*  
+ 수가 `CDaoRelationFieldInfo` 개체에 *m_pFieldInfos* 데이터 멤버입니다.  
   
 ## <a name="remarks"></a>설명  
  기본 및 보조 위의에 대 한 참조 정보에서 반환 되는 방법을 나타내는 [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) 클래스에서 멤버 함수 `CDaoDatabase`합니다.  

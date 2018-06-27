@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c6f990a00fb96195a54ee7ed6906068985b052f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 30daf42d54b66d4e3c4ad47a406748ab023be79d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367050"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956634"
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem 클래스
 DocObject 서버 전용 OLE 서버 동사를 구현합니다.  
@@ -90,10 +90,10 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pServerDoc`  
+ *pServerDoc*  
  새 DocObject 항목이 포함 될 문서에 대 한 포인터입니다.  
   
- `bAutoDelete`  
+ *bAutoDelete*  
  에 대 한 링크가 해제 될 때 개체를 삭제할 수 있는지 여부를 나타냅니다. 인수를 설정 **FALSE** 경우는 `CDocObjectServerItem` 개체 문서의 데이터의 필수적인 부분입니다. 로 설정 **TRUE** 개체는 프레임 워크에서 삭제할 수 있는 문서의 데이터에서 특정 범위를 식별 하는 데 사용 되는 보조 구조 하는 경우.  
   
 ##  <a name="getdocument"></a>  CDocObjectServerItem::GetDocument  

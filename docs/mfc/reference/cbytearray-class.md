@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e729c01d768d7ad74673b140496433ab73cf1f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4fa82ea58cfd5d64f6aa825fe08264cdd17c1985
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352937"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951067"
 ---
 # <a name="cbytearray-class"></a>CByteArray 클래스
 바이트의 동적 배열을 지원합니다.  
@@ -112,7 +112,7 @@ class CByteArray : public CObject
 |[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|지정한 인덱스에 있는 요소를 설정하거나 가져옵니다.|  
   
 ## <a name="remarks"></a>설명  
- `CByteArray`는 serialization 및 요소 덤프를 지원하기 위해 `IMPLEMENT_SERIAL` 매크로를 통합합니다. 바이트 배열을 오버 로드 된 삽입을 사용 하 여 보관 저장소에 저장 되는 경우 ( **<<**) 연산자 또는 `Serialize` 멤버 함수의 경우 각 요소가 이면 차례로 직렬화 합니다.  
+ `CByteArray` serialization 및 요소 덤프를 지원 하기 위해 IMPLEMENT_SERIAL 매크로 통합 합니다. 바이트 배열을 오버 로드 된 삽입을 사용 하 여 보관 저장소에 저장 되는 경우 ( **<<**) 연산자 또는 `Serialize` 멤버 함수의 경우 각 요소가 이면 차례로 직렬화 합니다.  
   
 > [!NOTE]
 >  배열을 사용하기 전에 `SetSize`를 사용하여 배열 크기를 설정하고 배열에 대해 메모리를 할당합니다. `SetSize`를 사용하지 않는 경우 배열에 요소를 추가하면 배열이 자주 다시 할당되고 복사됩니다. 이처럼 다시 할당 및 복사가 자주 수행되면 효율성이 떨어지며 메모리가 조각화될 수 있습니다.  

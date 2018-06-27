@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bad68253525fd728b67f2e256c48a3edbf48d720
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 96c70bc7c6c506d033b39ca55ba2b1a090767b5d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367063"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951689"
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange 클래스
 데이터베이스 클래스에서 사용되는 RFX(레코드 필드 교환) 및 대량 RFX(레코드 필드 교환) 루틴을 지원합니다.  
@@ -53,7 +53,7 @@ class CFieldExchange
 > [!NOTE]
 >  클래스를 사용 하 여 ODBC Open Database Connectivity () 클래스 아닌 개체 DAO (Data Access) 클래스와 함께 작업 하는 경우 [CDaoFieldExchange](../../mfc/reference/cdaofieldexchange-class.md) 대신 합니다. 자세한 내용은 문서 참조 [개요: 데이터베이스 프로그래밍](../../data/data-access-programming-mfc-atl.md)합니다.  
   
- A `CFieldExchange` 개체 컨텍스트 정보가 필요한 레코드 필드 교환 또는 되려면 대량 레코드 필드 교환에 대 한 배치를 제공 합니다. `CFieldExchange` 개체는 현재 레코드의 필드에 다양 한 플래그를 설정 및 매개 변수 및 필드 데이터 멤버를 포함 하 여 작업의 수를 지원 합니다. 에 정의 된 형식의 레코드 집합 클래스 데이터 멤버에서 RFX 및 대량 RFX 작업이 수행 되는 `enum` **FieldType** 에서 `CFieldExchange`합니다. 가능한 **FieldType** 값은:  
+ A `CFieldExchange` 개체 컨텍스트 정보가 필요한 레코드 필드 교환 또는 되려면 대량 레코드 필드 교환에 대 한 배치를 제공 합니다. `CFieldExchange` 개체는 현재 레코드의 필드에 다양 한 플래그를 설정 및 매개 변수 및 필드 데이터 멤버를 포함 하 여 작업의 수를 지원 합니다. RFX 및 대량 RFX 작업에 정의 된 형식의 레코드 집합 클래스 데이터 멤버에 대해 수행 됩니다는 **enum** **FieldType** 에서 `CFieldExchange`합니다. 가능한 **FieldType** 값은:  
   
 - **CFieldExchange::outputColumn** 필드 데이터 멤버에 대 한 합니다.  
   
@@ -96,7 +96,7 @@ void SetFieldType(UINT nFieldType);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nFieldType`  
+ *nFieldType*  
  값이는 **enum FieldType**에 선언 된 `CFieldExchange`, 다음 중 하나일 수 있습니다.  
   
 - **CFieldExchange::outputColumn**  
@@ -121,11 +121,11 @@ void SetFieldType(UINT nFieldType);
 |**CFieldExchange::outputParam**|출력 매개 변수입니다. 레코드 집합의 저장된 프로시저의 반환 값입니다.|  
 |**CFieldExchange::inoutParam**|입/출력 매개 변수입니다. 에 전달 되 고 레코드 집합의 저장된 프로시저에서 반환 하는 값입니다.|  
   
- 일반적으로 필드 데이터 멤버 또는 매개 변수 데이터 멤버와 연결 된 RFX 함수 호출의 각 그룹 뒤에 야를 호출 하 여 `SetFieldType`합니다. `nFieldType` 각 매개 변수 `SetFieldType` 호출 다음에 나오는 RFX 함수 호출에 의해 표시 되는 데이터 멤버의 형식을 식별 하는 `SetFieldType` 호출 합니다.  
+ 일반적으로 필드 데이터 멤버 또는 매개 변수 데이터 멤버와 연결 된 RFX 함수 호출의 각 그룹 뒤에 야를 호출 하 여 `SetFieldType`합니다. *nFieldType* 각 매개 변수 `SetFieldType` 호출 다음에 나오는 RFX 함수 호출에 의해 표시 되는 데이터 멤버의 형식을 식별 하는 `SetFieldType` 호출 합니다.  
   
  출력 및 입/출력 매개 변수를 처리 하는 방법에 대 한 자세한 내용은 참조는 `CRecordset` 멤버 함수 [FlushResultSet](../../mfc/reference/crecordset-class.md#flushresultset)합니다. RFX 및 대량 RFX 함수에 대 한 자세한 내용은 항목을 참조 하십시오. [레코드 필드 교환 함수](../../mfc/reference/record-field-exchange-functions.md)합니다. 대량 행 페치에 대 한 관련된 정보에 대 한 문서를 참조 [레코드 집합: 레코드 페치 대량 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  이 예제에 대 한 호출을 수행할 RFX 함수를 여러 번 호출 `SetFieldType`합니다. `SetFieldType` 통해서만 호출 되는 `pFX` 에 대 한 포인터는 `CFieldExchange` 개체입니다.  
   
  [!code-cpp[NVC_MFCDatabase#33](../../mfc/codesnippet/cpp/cfieldexchange-class_1.cpp)]  

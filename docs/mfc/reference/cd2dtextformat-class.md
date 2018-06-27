@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e55689fa71ed5f0e4ebd4978a004212d5fb82b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 017267a2b633ee8e0a9c23149fe9d3cb7a8be980
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352892"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955471"
 ---
 # <a name="cd2dtextformat-class"></a>CD2DTextFormat 클래스
 IDWriteTextFormat에 대 한 래퍼입니다.  
@@ -79,7 +79,7 @@ class CD2DTextFormat : public CD2DResource;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CD2DTextFormat::m_pTextFormat](#m_ptextformat)|IDWriteTextFormat에 대 한 포인터입니다.|  
   
@@ -117,31 +117,31 @@ CD2DTextFormat(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParentTarget`  
+ *pParentTarget*  
  렌더링 대상에 대 한 포인터입니다.  
   
- `strFontFamilyName`  
+ *strFontFamilyName*  
  글꼴 패밀리의 이름을 포함 하는 CString 개체입니다.  
   
- `fontSize`  
+ *FontSize*  
  DIP ("장치 독립적 픽셀") 단위로 글꼴의 논리적 크기입니다. DIPequals 1/96 인치입니다.  
   
- `fontWeight`  
+ *fontWeight*  
  텍스트 개체의 글꼴 두께 나타내는 값입니다.  
   
- `fontStyle`  
+ *fontStyle*  
  텍스트 개체의 글꼴 스타일을 나타내는 값입니다.  
   
- `fontStretch`  
+ *일반적으로*  
  텍스트 개체에 대 한 글꼴 확대를 나타내는 값입니다.  
   
- `strFontLocale`  
+ *strFontLocale*  
  로캘 이름을 포함 하는 CString 개체입니다.  
   
- `pFontCollection`  
+ *pFontCollection*  
  글꼴 컬렉션 개체에 대 한 포인터입니다. NULL 인 경우 시스템 글꼴 컬렉션을 나타냅니다.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  개체를 소유자 (pParentTarget)에 의해 폐기 수를 나타냅니다.  
   
 ##  <a name="create"></a>  CD2DTextFormat::Create  

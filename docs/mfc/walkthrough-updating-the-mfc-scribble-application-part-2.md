@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eae1dd3c1662aafb6b52d2ecb821e073adc0bfd5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83caf353ca4a45e3ae834a41062de955a91dbb8a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385393"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952439"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>연습: MFC 자유 곡선 응용 프로그램 업데이트(파트 2)
 [1 부](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) 자유 곡선 응용 프로그램이 연습을 기본 Office Fluent 리본 메뉴를 추가 하는 방법에 설명 했습니다. 이 부분에는 리본 패널 및 메뉴 및 명령을 대신 사용자가 사용할 수 있는 컨트롤을 추가 하는 방법을 보여 줍니다.  
@@ -47,31 +47,31 @@ ms.locfileid: "33385393"
   
 #### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>리본 표시줄에 뷰 패널 및 창 패널을 추가 하려면  
   
-1.  명명 된 패널을 만드는 `View`, 상태 표시줄 및 도구 모음을 설정/해제 하는 확인란이 두 개 있는 합니다.  
+1.  명명 된 패널을 만드는 *보기*, 상태 표시줄 및 도구 모음을 설정/해제 하는 두 개의 확인란이 있습니다.  
   
     1.  **도구 상자**를 끌어는 **패널** 에 **홈** 범주입니다. 다음 두 개의 끌어 **확인란** 패널에 있습니다.  
   
-    2.  해당 속성을 수정 하 여 패널을 클릭 합니다. 변경 **캡션** 를 `View`합니다.  
+    2.  해당 속성을 수정 하 여 패널을 클릭 합니다. 변경 **캡션** 를 *보기*합니다.  
   
-    3.  해당 속성을 수정 하려면 첫 번째 확인란을 클릭 합니다. 변경 **ID** 를 `ID_VIEW_TOOLBAR` 및 **캡션** 를 `Toolbar`합니다.  
+    3.  해당 속성을 수정 하려면 첫 번째 확인란을 클릭 합니다. 변경 **ID** 를 *ID_VIEW_TOOLBAR* 및 **캡션** 를 *도구 모음*합니다.  
   
-    4.  해당 속성을 수정 하려면 두 번째 확인란을 클릭 합니다. 변경 **ID** 를 `ID_VIEW_STATUS_BAR` 및 **캡션** 를 `Status Bar`합니다.  
+    4.  해당 속성을 수정 하려면 두 번째 확인란을 클릭 합니다. 변경 **ID** 를 *ID_VIEW_STATUS_BAR* 및 **캡션** 를 *상태 표시줄*합니다.  
   
-2.  명명 된 패널을 만드는 `Window` 있는 분할 단추입니다. 사용자가 분할 단추를 클릭 하면 바로 가기 메뉴에 자유 곡선 응용 프로그램에 이미 정의 된 세 가지 명령이 표시 됩니다.  
+2.  명명 된 패널을 만드는 *창* 있는 분할 단추입니다. 사용자가 분할 단추를 클릭 하면 바로 가기 메뉴에 자유 곡선 응용 프로그램에 이미 정의 된 세 가지 명령이 표시 됩니다.  
   
     1.  **도구 상자**를 끌어는 **패널** 에 **홈** 범주입니다. 다음 끌어는 **단추** 패널에 있습니다.  
   
-    2.  해당 속성을 수정 하 여 패널을 클릭 합니다. 변경 **캡션** 를 `Window`합니다.  
+    2.  해당 속성을 수정 하 여 패널을 클릭 합니다. 변경 **캡션** 를 *창*합니다.  
   
-    3.  단추를 클릭합니다. 변경 **캡션** 를 `Windows`, **키** 를 `w`, **큰 이미지 인덱스** 를 `1`, 및 **분할 모드** `False`합니다. 줄임표를 클릭 한 다음 (**...** ) 옆에 **메뉴 항목** 열려는 **항목 편집기** 대화 상자.  
+    3.  단추를 클릭합니다. 변경 **캡션** 를 *Windows*, **키** 를 *w*, **큰 이미지 인덱스** 를 *1* , 및 **분할 모드** 를 *False*합니다. 줄임표를 클릭 한 다음 (**...** ) 옆에 **메뉴 항목** 열려는 **항목 편집기** 대화 상자.  
   
     4.  클릭 **추가** 세 개의 단추를 추가 하려면 3 번입니다.  
   
-    5.  첫 번째 단추를 클릭 한 후 변경 **캡션** 를 `New Window`, 및 **ID** 를 `ID_WINDOW_NEW`합니다.  
+    5.  첫 번째 단추를 클릭 한 후 변경 **캡션** 를 *새 창*, 및 **ID** 를 *ID_WINDOW_NEW*합니다.  
   
-    6.  두 번째 단추를 클릭 한 후 변경 **캡션** 를 `Cascade`, 및 **ID** 를 `ID_WINDOW_CASCADE`합니다.  
+    6.  두 번째 단추를 클릭 한 후 변경 **캡션** 를 *Cascade*, 및 **ID** 를 *ID_WINDOW_CASCADE*합니다.  
   
-    7.  세 번째 단추를 클릭 한 후 변경 **캡션** 를 `Tile`, 및 **ID** 를 `ID_WINDOW_TILE_HORZ`합니다.  
+    7.  세 번째 단추를 클릭 한 후 변경 **캡션** 를 *타일*, 및 **ID** 를 *ID_WINDOW_TILE_HORZ*합니다.  
   
 3.  변경 사항을 저장한 다음 응용 프로그램을 빌드하고 실행합니다. **보기** 및 **창** 패널을 표시할 수 있습니다. 올바르게 작동 하는지 확인 하려면 단추를 클릭 합니다.  
   
@@ -84,11 +84,11 @@ ms.locfileid: "33385393"
   
 1.  **도구 상자**를 끌어는 **패널** 에 **홈** 범주입니다. 다음 두 개의 끌어 **단추** 패널에 있습니다.  
   
-2.  해당 속성을 수정 하 여 패널을 클릭 합니다. 변경 **캡션** 를 `Help`합니다.  
+2.  해당 속성을 수정 하 여 패널을 클릭 합니다. 변경 **캡션** 를 *도움말*합니다.  
   
-3.  첫 번째 단추를 클릭 합니다. 변경 **캡션** 를 `Help Topics`, 및 **ID** 를 `ID_HELP_FINDER`합니다.  
+3.  첫 번째 단추를 클릭 합니다. 변경 **캡션** 를 *도움말 항목*, 및 **ID** 를 *ID_HELP_FINDER*합니다.  
   
-4.  두 번째 단추를 클릭 합니다. 변경 **캡션** 를 `About Scribble...`, 및 **ID** 를 `ID_APP_ABOUT`합니다.  
+4.  두 번째 단추를 클릭 합니다. 변경 **캡션** 를 *Scribble에 대 한...* , 및 **ID** 를 *ID_APP_ABOUT*합니다.  
   
 5.  변경 사항을 저장한 다음 응용 프로그램을 빌드하고 실행합니다. A **도움말** 두 리본 단추가 포함 된 패널을 표시 합니다.  
   
@@ -106,21 +106,21 @@ ms.locfileid: "33385393"
   
 1.  **도구 상자**를 끌어는 **패널** 에 **홈** 범주입니다. 다음 끌어는 **확인란** 와 두 개의 **콤보 상자** 패널에 있습니다.  
   
-2.  해당 속성을 수정 하 여 패널을 클릭 합니다. 변경 **캡션** 를 `Pen`합니다.  
+2.  해당 속성을 수정 하 여 패널을 클릭 합니다. 변경 **캡션** 를 *펜*합니다.  
   
-3.  이 확인란을 클릭 합니다. 변경 **캡션** 를 `Use Thick`, 및 **ID** 를 `ID_PEN_THICK_OR_THIN`합니다.  
+3.  이 확인란을 클릭 합니다. 변경 **캡션** 를 *굵게를 사용 하 여*, 및 **ID** 를 *ID_PEN_THICK_OR_THIN*합니다.  
   
-4.  첫 번째 콤보 상자를 클릭 합니다. 변경 **캡션** 를 `Thin Pen`, **ID** 를 `ID_PEN_THIN_WIDTH`, **텍스트** 를 `2`, **형식** 를 `Drop List`, 및 **데이터** 를 `1;2;3;4;5;6;7;8;9;`합니다.  
+4.  첫 번째 콤보 상자를 클릭 합니다. 변경 **캡션** 를 *펜 씬*, **ID** 를 *ID_PEN_THIN_WIDTH*, **텍스트** 를 *2* , **형식** 를 *드롭 목록*, 및 **데이터** 를 *1 2 3; 4; 5; 6; 7; 8; 9;* 합니다.  
   
-5.  두 번째 콤보 상자를 클릭 합니다. 변경 **캡션** 를 `Thick Pen`, **ID** 를 `ID_PEN_THICK_WIDTH`, **텍스트** 를 `5`, **형식** 를 `Drop List`, 및 **데이터** 를 `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`합니다.  
+5.  두 번째 콤보 상자를 클릭 합니다. 변경 **캡션** 를 *굵게 펜*, **ID** 를 *ID_PEN_THICK_WIDTH*, **텍스트** 를  *5*, **형식** 를 *드롭 목록*, 및 **데이터** 를 *5, 6, 7; 8; 9; 10; 11; 12; 13; 14; 15; 16; 17; 18, 19, 20;* 합니다.  
   
 6.  기존 메뉴 항목에는 새 콤보 상자 일치 하지 않습니다. 따라서 모든 펜 옵션에 대 한 메뉴 항목을 만들어야 합니다.  
   
     1.  에 **리소스 뷰** 창 IDR_SCRIBBTYPE 메뉴 리소스를 엽니다.  
   
-    2.  클릭 **펜** p 열려는**en** 메뉴. 클릭 **여기에 입력** 유형과 `Thi&n Pen`합니다.  
+    2.  클릭 **펜** p 열려는**en** 메뉴. 클릭 **여기에 입력** 유형과 *여 & n 펜*합니다.  
   
-    3.  열려는 방금 입력 한 텍스트를 마우스 오른쪽 단추로 클릭는 **속성** 창 및 속성을 변경 ID `ID_PEN_THIN_WIDTH`합니다.  
+    3.  열려는 방금 입력 한 텍스트를 마우스 오른쪽 단추로 클릭는 **속성** 창 및 속성을 변경 ID *ID_PEN_THIN_WIDTH*합니다.  
   
     4.  모든 펜 메뉴 항목에 대 한 이벤트 처리기도 만들어야 합니다. 마우스 오른쪽 단추로 클릭는 **여 & n 펜** 방금 만든을 클릭 한 다음 메뉴 항목 **이벤트 처리기 추가**합니다. **이벤트 처리기 마법사** 표시 됩니다.  
   
@@ -142,9 +142,9 @@ m_nThinWidth atoi = (pThinComboBox GetItem(nCurSel));를->.
   
     1.  In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource.  
   
-    2.  Click **Pen** to open the pen menu. Then click **Type Here** and type `Thic&k Pen`.  
+    2.  Click **Pen** to open the pen menu. Then click **Type Here** and type *Thic&k Pen*.  
   
-    3.  Right-click the text that you just typed to display the **Properties** window. Change the ID property to `ID_PEN_THICK_WIDTH`.  
+    3.  Right-click the text that you just typed to display the **Properties** window. Change the ID property to *ID_PEN_THICK_WIDTH*.  
   
     4.  Right-click the **Thick Pen** menu item that you just created and then click **Add Event Handler**. The **Event Handler Wizard** is displayed.  
   
@@ -178,11 +178,11 @@ if (nCurSel>= 0)
   
 #### <a name="to-add-a-color-button-to-the-pen-panel"></a>펜 패널에 색 단추를 추가 하려면  
   
-1.  색 단추를 추가 하기 전에 그에 대 한 메뉴 항목을 만듭니다. 에 **리소스 뷰** 창 IDR_SCRIBBTYPE 메뉴 리소스를 엽니다. 클릭는 **펜** 메뉴 항목 펜 메뉴를 엽니다. 클릭 **여기에 입력** 유형과 `&Color`합니다. 표시 하려면 방금 입력 한 텍스트를 마우스 오른쪽 단추로 클릭는 **속성** 창. ID를 변경 `ID_PEN_COLOR`합니다.  
+1.  색 단추를 추가 하기 전에 그에 대 한 메뉴 항목을 만듭니다. 에 **리소스 뷰** 창 IDR_SCRIBBTYPE 메뉴 리소스를 엽니다. 클릭는 **펜** 메뉴 항목 펜 메뉴를 엽니다. 클릭 **여기에 입력** 유형과 *& 색*합니다. 표시 하려면 방금 입력 한 텍스트를 마우스 오른쪽 단추로 클릭는 **속성** 창. ID를 변경 *ID_PEN_COLOR*합니다.  
   
 2.  이제 색 단추를 추가 합니다. **도구 상자**를 끌어는 **색 단추** 에 **펜** 패널입니다.  
   
-3.  색 단추를 클릭 합니다. 변경 **캡션** 를 `Color`, **ID** 를 `ID_PEN_COLOR`, **SimpleLook** 를 `True`, **큰 이미지 인덱스** 를 `1`, 및 **분할 모드** 를 `False`합니다.  
+3.  색 단추를 클릭 합니다. 변경 **캡션** 를 *색*, **ID** 를 *ID_PEN_COLOR*, **SimpleLook** 를  *True 이면*, **큰 이미지 인덱스** 를 *1*, 및 **분할 모드** 를 *False*합니다.  
   
 4.  변경 사항을 저장한 다음 응용 프로그램을 빌드하고 실행합니다. 에 표시 될 새 색 단추는 **펜** 패널입니다. 그러나 이벤트 처리기 없는 때문에 사용할 수 없습니다. 다음 단계에는 색 단추에 대 한 이벤트 처리기를 추가 하는 방법을 보여 줍니다.  
   

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c374e0d14375450533326be5fd406fe8147e475a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c23e0a978ab8cb3c63566bd8d5ce64ecb2a80d4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385380"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952416"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Visual C++에서 여러 개의 리소스 파일 및 헤더 파일 사용
 > [!NOTE]
@@ -227,7 +227,7 @@ RESOURCE.H     AFXRES.H
 #endif //APSTUDIO_INVOKED  
 ```  
   
- Visual c + + 컴파일 하는 경우는 합니다. RC 파일을 정의 **APSTUDIO_INVOKED** 으로 **RC_INVOKED**합니다. 응용 프로그램 마법사가 만든 파일 구조가 손상되고 Visual C++에서 위의 #error 줄을 읽고 심각한 오류로 보고한 후 .RC 파일의 읽기를 중단합니다.  
+ Visual c + + 컴파일 하는 경우는 합니다. RC 파일을 정의 `APSTUDIO_INVOKED` 으로 `RC_INVOKED`합니다. 응용 프로그램 마법사가 만든 파일 구조가 손상되고 Visual C++에서 위의 #error 줄을 읽고 심각한 오류로 보고한 후 .RC 파일의 읽기를 중단합니다.  
   
  **C + + 편집 하는 여러 시각적 개체에서 공유 하는 기호를 관리 합니다. RC 파일**  
   
@@ -262,19 +262,19 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
 #define _APS_NEXT_SYMED_VALUE     101  
 ```  
   
- **_APS_NEXT_RESOURCE_VALUE** 대화 상자 리소스, 메뉴 리소스 등에 대 한 사용할 다음 기호 값입니다. 리소스 기호 값의 유효 범위는 1 ~ 0x6FFF입니다.  
+ `_APS_NEXT_RESOURCE_VALUE` 대화 상자 리소스, 메뉴 리소스 등에 대 한 사용할 다음 기호 값이입니다. 리소스 기호 값의 유효 범위는 1 ~ 0x6FFF입니다.  
   
- **_APS_NEXT_COMMAND_VALUE** 명령 식별에 사용 될 다음 기호 값입니다. 명령 기호 값의 유효 범위는 0x8000 ~ 0xDFFF입니다.  
+ `_APS_NEXT_COMMAND_VALUE` 명령 식별에 사용 될 다음 기호 값이입니다. 명령 기호 값의 유효 범위는 0x8000 ~ 0xDFFF입니다.  
   
- **_APS_NEXT_CONTROL_VALUE** 대화 상자 컨트롤에 대 한 사용 될 다음 기호 값입니다. 대화 상자 컨트롤 기호 값의 유효 범위는 8 ~ 0xDFFF입니다.  
+ `_APS_NEXT_CONTROL_VALUE` 대화 상자 컨트롤에 대 한 사용 될 다음 기호 값이입니다. 대화 상자 컨트롤 기호 값의 유효 범위는 8 ~ 0xDFFF입니다.  
   
- **_APS_NEXT_SYMED_VALUE** 기호 브라우저에서 새 명령을 사용 하 여 기호 값을 수동으로 할당할 때 발생 하는 다음 기호 값입니다.  
+ `_APS_NEXT_SYMED_VALUE` 기호 값을 수동으로 할당할 때 발생 하는 다음 기호 값은 기호 브라우저에는 새 명령을 사용 합니다.  
   
  Visual C++는 새 .RC 파일을 만들 때 최저 유효 값보다 조금 높은 값부터 시작합니다. 또한 응용 프로그램 마법사는 이러한 값을 MFC 응용 프로그램에 보다 적합한 형태로 초기화합니다. ID 값의 범위에 대 한 자세한 내용은 참조 [Technical Note 20](../mfc/tn020-id-naming-and-numbering-conventions.md)합니다.  
   
- Visual c + + 같은 정의 하는 동일한 프로젝트에도 새 리소스 파일을 만들 때마다 이제 **_APS_NEXT\_**  값입니다. 다시 말해서 두 .RC 파일에 여러 대화 상자를 추가하는 경우 동일한 #define 값이 서로 다른 대화 상자에 할당될 가능성이 높습니다. 예를 들면 첫 번째 .RC 파일의 IDD_MY_DLG1에는 두 번째 .RC 파일의 IDD_MY_DLG2와 동일한 101이라는 번호가 할당될 수 있습니다.  
+ Visual c + + 같은 정의 하는 동일한 프로젝트에도 새 리소스 파일을 만들 때마다 이제 `_APS_NEXT_` 값입니다. 다시 말해서 두 .RC 파일에 여러 대화 상자를 추가하는 경우 동일한 #define 값이 서로 다른 대화 상자에 할당될 가능성이 높습니다. 예를 들면 첫 번째 .RC 파일의 IDD_MY_DLG1에는 두 번째 .RC 파일의 IDD_MY_DLG2와 동일한 101이라는 번호가 할당될 수 있습니다.  
   
- 이를 방지하려면 해당 .RC 파일에서 네 개의 ID 도메인 각각에 대한 별도 수치 영역을 예약해야 합니다. 수동으로 업데이트 하 여이 작업을 수행는 **_APS_NEXT** 의 각각의 값은입니다. RC 파일 `before` 추가 리소스를 시작 합니다. 예를 들어 경우 첫 번째입니다. RC 파일 기본값을 사용 하 여 **_APS_NEXT** 다음 할당 하려는 경우도 값 **_APS_NEXT** 를 두 번째 값입니다. RC 파일:  
+ 이를 방지하려면 해당 .RC 파일에서 네 개의 ID 도메인 각각에 대한 별도 수치 영역을 예약해야 합니다. 수동으로 업데이트 하 여이 작업을 수행는 `_APS_NEXT` 의 각각의 값은입니다. RC 파일 **전에** 추가 리소스를 시작 합니다. 예를 들어 경우 첫 번째입니다. RC 파일 기본값을 사용 하 여 `_APS_NEXT` 다음 할당 하려는 경우도 값 `_APS_NEXT` 를 두 번째 값입니다. RC 파일:  
   
 ```  
 #define _APS_NEXT_RESOURCE_VALUE  2000  

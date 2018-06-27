@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecde11ddb55992032b2a8b052e2897a384293bc0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d6b6b07040fbece5fae24fb2ca6be8985695eb0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382556"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950539"
 ---
 # <a name="using-an-animation-control"></a>애니메이션 컨트롤 사용
 애니메이션 컨트롤의 일반적인 사용 패턴을 따릅니다.  
@@ -30,11 +30,11 @@ ms.locfileid: "33382556"
   
 -   AVI 클립을 호출 하 여 애니메이션 컨트롤에 로드 된 [열려](../mfc/reference/canimatectrl-class.md#open) 멤버 함수입니다. 이 작업을 수행 하려면 먼저 대화 상자 클래스에는 컨트롤이 해당 애니메이션 컨트롤이 대화 상자에 포함 된 경우 [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) 함수입니다.  
   
--   클립을 호출 하 여 재생는 [재생](../mfc/reference/canimatectrl-class.md#play) 멤버 함수입니다. 이 작업을 수행 하려면 먼저 대화 상자 클래스에는 컨트롤이 해당 애니메이션 컨트롤이 대화 상자에 포함 된 경우 **OnInitDialog** 함수입니다. 호출 **재생** 애니메이션 컨트롤에 있는 경우에 필요 하지 않습니다는 `ACS_AUTOPLAY` 스타일을 설정 합니다.  
+-   클립을 호출 하 여 재생는 [재생](../mfc/reference/canimatectrl-class.md#play) 멤버 함수입니다. 이 작업을 수행 하려면 먼저 대화 상자 클래스에는 컨트롤이 해당 애니메이션 컨트롤이 대화 상자에 포함 된 경우 `OnInitDialog` 함수입니다. 호출 `Play` 애니메이션 컨트롤에 설정 된 ACS_AUTOPLAY 스타일 경우 필요 하지 않습니다.  
   
 -   클립의 일부를 표시 하거나 프레임별으로 사용 하 여 재생 하려는 경우는 `Seek` 멤버 함수입니다. 클립의 재생을 중지 하려면 사용 된 `Stop` 멤버 함수입니다.  
   
--   컨트롤을 즉시 삭제 하지 않을 경우 클립 메모리에서 호출 하 여 제거는 **닫기** 멤버 함수입니다.  
+-   컨트롤을 즉시 삭제 하지 않을 경우 클립 메모리에서 호출 하 여 제거는 `Close` 멤버 함수입니다.  
   
 -   애니메이션 컨트롤이 대화 상자에 있으면이 고 `CAnimateCtrl` 개체는 자동으로 제거 됩니다. 그렇지 않은 경우 컨트롤 및 `CAnimateCtrl` 개체가 모두 제대로 소멸되었는지 확인해야 합니다. 컨트롤을 자동으로 제거 AVI 클립을 닫습니다.  
   

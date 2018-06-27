@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e35fc33b26fa6bead73458a46d7c4edee1cf136
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 58646efaaa0087be2bd73e45acd8ade4a16e9767
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350994"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957093"
 ---
 # <a name="canimationvariablechangehandler-class"></a>CAnimationVariableChangeHandler 클래스
 애니메이션 변수 값이 변경될 때 애니메이션 API에서 호출하는 콜백을 구현합니다.  
@@ -77,16 +77,16 @@ IFACEMETHOD(OnValueChanged) (
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `storyboard`  
+ *스토리 보드*  
  변수를 애니메이션 효과 주는 스토리 보드 합니다.  
   
- `variable`  
+ *variable*  
  애니메이션 변수를 업데이트입니다.  
   
- `newValue`  
+ *새 값*  
  새 값입니다.  
   
- `previousValue`  
+ *previousValue*  
  이전 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -100,7 +100,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pAnimationController`  
+ *pAnimationController*  
  이벤트를 수신 하는 애니메이션 컨트롤러에 대 한 포인터입니다.  
   
 ## <a name="see-also"></a>참고 항목  

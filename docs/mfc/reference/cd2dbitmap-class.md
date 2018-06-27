@@ -61,12 +61,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b92587d6cad3004c87ee6aee4716888d09c1270a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e37a8329e0afaa26b114d0ae0da53f0ec552e09e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354284"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954751"
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap 클래스
 ID2D1Bitmap에 대 한 래퍼입니다.  
@@ -124,7 +124,7 @@ class CD2DBitmap : public CD2DResource;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CD2DBitmap::m_bAutoDestroyHBMP](#m_bautodestroyhbmp)|TRUE 이면 m_hBmpSrc 소멸 시켜야 합니다. 그렇지 않으면 FALSE입니다.|  
 |[CD2DBitmap::m_hBmpSrc](#m_hbmpsrc)|원본 비트맵의 핸들입니다.|  
@@ -159,7 +159,7 @@ void Attach(ID2D1Bitmap* pResource);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pResource`  
+ *pResource*  
  기존 리소스 인터페이스입니다. NULL 일 수 없습니다.  
   
 ##  <a name="cd2dbitmap"></a>  CD2DBitmap::CD2DBitmap  
@@ -194,25 +194,25 @@ CD2DBitmap(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParentTarget`  
+ *pParentTarget*  
  렌더링 대상에 대 한 포인터입니다.  
   
- `uiResID`  
+ *uiResID*  
  리소스의 리소스 ID.  
   
- `lpszType`  
+ *lpszType*  
  리소스 종류를 포함 하는 null로 끝나는 문자열에 대 한 포인터입니다.  
   
- `sizeDest`  
+ *sizeDest*  
  비트맵의 대상 크기입니다.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  개체를 소유자 (pParentTarget)에 의해 폐기 수를 나타냅니다.  
   
- `lpszPath`  
+ *lpszPath*  
  파일의 이름을 포함 하는 null로 끝나는 문자열에 대 한 포인터입니다.  
   
- `hbmpSrc`  
+ *hbmpSrc*  
  비트맵에 대 한 핸들입니다.  
   
 ##  <a name="commoninit"></a>  CD2DBitmap::CommonInit  
@@ -233,13 +233,13 @@ HRESULT CopyFromBitmap(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pBitmap`  
+ *pBitmap*  
  복사할 비트맵  
   
- `destPoint`  
+ *destPoint*  
  현재 비트맵을 srcRect에 의해 지정 된 영역이 영역의 왼쪽 위 모서리 복사 됩니다.  
   
- `srcRect`  
+ *srcRect*  
  복사 하는 비트맵의 영역  
   
 ### <a name="return-value"></a>반환 값  
@@ -256,13 +256,13 @@ HRESULT CopyFromMemory(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `srcData`  
+ *srcData*  
  복사할 데이터입니다.  
   
- `pitch`  
+ *피치*  
  SrcData에 저장 된 소스 비트맵의 피치 또는 진행 속도입니다. Stride는 스캐닝선 (메모리에서 픽셀의 한 행)의 바이트 수입니다. Stride는 다음 형식으로 계산할 수 있습니다: 픽셀 너비 * 픽셀 + 메모리 패딩 당 바이트 수  
   
- `destRect`  
+ *destRect*  
  현재 비트맵을 srcRect에 의해 지정 된 영역이 영역의 왼쪽 위 모서리 복사 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -279,13 +279,13 @@ HRESULT CopyFromRenderTarget(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pRenderTarget`  
+ *pRenderTarget*  
  복사할 영역을 포함 하는 렌더링 대상  
   
- `destPoint`  
+ *destPoint*  
  현재 비트맵을 srcRect에 의해 지정 된 영역이 영역의 왼쪽 위 모서리 복사 됩니다.  
   
- `srcRect`  
+ *srcRect*  
  복사할 편의 영역  
   
 ### <a name="return-value"></a>반환 값  
@@ -299,7 +299,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pRenderTarget`  
+ *pRenderTarget*  
  렌더링 대상에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  

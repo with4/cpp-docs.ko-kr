@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b76e4a0c0533ceb0200757f86f332d77c3b39ad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1dfc1c4d5cf753ae102d7656e94d63923004d2cc
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356494"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955663"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 클래스
 Microsoft Foundation Class 라이브러리 메시지 맵 아키텍처에 대 한 기본 클래스입니다.  
@@ -131,13 +131,13 @@ void BeginWaitCursor();
 ```  
   
 ### <a name="remarks"></a>설명  
- 프레임 워크를 호출 하는 경우와 같이 중에 사용자가을 표시 하려면이 함수는 **CDocument** 개체를 로드 또는 자체 파일에 저장 합니다.  
+ 프레임 워크를 호출 하는 경우와 같이 중에 사용자가을 표시 하려면이 함수는 `CDocument` 개체를 로드 또는 자체 파일에 저장 합니다.  
   
  동작 `BeginWaitCursor` 항상 유효한 단일 메시지 처리기 외부에서 다른 작업으로 등 없는 `OnSetCursor` 처리, 커서 변경 될 수 있습니다.  
   
  호출 `EndWaitCursor` 이전 커서를 복원 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]  
   
 ##  <a name="ccmdtarget"></a>  CCmdTarget::CCmdTarget  
@@ -159,16 +159,16 @@ BOOL DoOleVerb(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `iVerb`  
+ *iVerb*  
  동사의 숫자 식별자입니다.  
   
- `lpMsg`  
+ *lpMsg*  
  에 대 한 포인터는 [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) 동사를 호출한 하는 이벤트 (예: 두 번 클릭)을 설명 하는 구조입니다.  
   
- `hWndParent`  
+ *창은*  
  개체가 포함된 문서 창의 핸들입니다.  
   
- `lpRect`  
+ *lpRect*  
  에 대 한 포인터는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 개체를 정의 하는 픽셀 단위의 좌표가 포함 된 구조체의 경계 사각형 *창은*합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -217,7 +217,7 @@ void EndWaitCursor();
 ### <a name="remarks"></a>설명  
  프레임 워크는 또한 모래 시계 커서를 호출한 후이 멤버 함수를 호출 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]  
   
 ##  <a name="enumoleverbs"></a>  CCmdTarget::EnumOleVerbs  
@@ -228,11 +228,11 @@ BOOL EnumOleVerbs(LPENUMOLEVERB* ppenumOleVerb);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ppenumOleVerb`  
+ *ppenumOleVerb*  
  에 대 한 포인터에 대 한 포인터는 [IEnumOLEVERB](http://msdn.microsoft.com/library/windows/desktop/ms695084) 인터페이스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- TRUE 이면 개체가 하나 이상 OLE 동사를 지원 합니다. (이 경우 \* `ppenumOleVerb` 가리키는 **IEnumOLEVERB** 열거자 인터페이스)이 고, 그렇지 않으면 FALSE입니다.  
+ 개체가 하나 이상 OLE 동사를 지원 하면 TRUE (이 경우 \* *ppenumOleVerb* 가리키는 `IEnumOLEVERB` 열거자 인터페이스)이 고, 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 기본적으로 구현의 [IOleObject::EnumVerbs](http://msdn.microsoft.com/library/windows/desktop/ms692781)합니다.  
@@ -245,11 +245,11 @@ static CCmdTarget* PASCAL FromIDispatch(LPDISPATCH lpDispatch);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpDispatch`  
+ *lpDispatch*  
  `IDispatch` 개체에 대한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `CCmdTarget` 개체와 연결 된 `lpDispatch`합니다. 이 함수는 반환 **NULL** 경우는 `IDispatch` 개체 Microsoft Foundation Class로 인식 되지 않습니다 `IDispatch` 개체입니다.  
+ 에 대 한 포인터는 `CCmdTarget` 개체와 연결 된 *lpDispatch*합니다. 이 함수는 반환 **NULL** 경우는 `IDispatch` 개체 Microsoft Foundation Class로 인식 되지 않습니다 `IDispatch` 개체입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수의 결과 멤버 함수에 대 한 호출의 역 `GetIDispatch`합니다.  
@@ -303,7 +303,7 @@ virtual UINT GetTypeInfoCount();
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 기본적으로 구현 [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12)합니다.  
   
- 파생된 클래스에는 (0 또는 1)를 제공 하는 형식 정보 인터페이스의 수를 반환 하려면이 함수를 재정의 해야 합니다. 재정의 되지 않으면 **GetTypeInfoCount** 0을 반환 합니다. 를 무시 하려면는 [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) 도 구현 하는 매크로 `GetTypeLib` 및 `GetTypeLibCache`합니다.  
+ 파생된 클래스에는 (0 또는 1)를 제공 하는 형식 정보 인터페이스의 수를 반환 하려면이 함수를 재정의 해야 합니다. 재정의 되지 않으면 `GetTypeInfoCount` 0을 반환 합니다. 를 무시 하려면는 [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) 도 구현 하는 매크로 `GetTypeLib` 및 `GetTypeLibCache`합니다.  
   
 ##  <a name="gettypeinfoofguid"></a>  CCmdTarget::GetTypeInfoOfGuid  
  지정된 된 GUID에 해당 하는 형식 설명을 검색 합니다.  
@@ -316,17 +316,17 @@ HRESULT GetTypeInfoOfGuid(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lcid`  
+ *lcid*  
  로캘 식별자 ( `LCID`).  
   
- `guid`  
+ *guid*  
  [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931) 형식 설명의 합니다.  
   
- `ppTypeInfo`  
+ *ppTypeInfo*  
  에 대 한 포인터에 대 한 포인터는 `ITypeInfo` 인터페이스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 호출의 성공 여부를 나타내는 HRESULT입니다. 성공 하면 * `ppTypeInfo` 형식 정보 인터페이스를 가리킵니다.  
+ 호출의 성공 여부를 나타내는 HRESULT입니다. 성공 하면 * *ppTypeInfo* 형식 정보 인터페이스를 가리킵니다.  
   
 ##  <a name="gettypelib"></a>  CCmdTarget::GetTypeLib  
  형식 라이브러리에 대 한 포인터를 가져옵니다.  
@@ -338,14 +338,14 @@ virtual HRESULT GetTypeLib(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lcid`  
+ *lcid*  
  로캘 식별자 ( `LCID`).  
   
- `ppTypeLib`  
+ *ppTypeLib*  
  에 대 한 포인터에 대 한 포인터는 `ITypeLib` 인터페이스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 호출의 성공 여부를 나타내는 HRESULT입니다. 성공 하면 * `ppTypeLib` 형식 라이브러리 인터페이스를 가리킵니다.  
+ 호출의 성공 여부를 나타내는 HRESULT입니다. 성공 하면 * *ppTypeLib* 형식 라이브러리 인터페이스를 가리킵니다.  
   
 ### <a name="remarks"></a>설명  
  파생된 클래스에서이 멤버 함수를 재정의 해야 (재정의 되지 않으면 `GetTypeLib` TYPE_E_CANTLOADLIBRARY 반환). 사용 하 여는 [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) 도 구현 하는 매크로 `GetTypeInfoCount` 및 `GetTypeLibCache`합니다.  
@@ -358,27 +358,27 @@ virtual CTypeLibCache* GetTypeLibCache();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 **CTypeLibCache** 개체입니다.  
+ 에 대 한 포인터는 `CTypeLibCache` 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 파생된 클래스에서이 멤버 함수를 재정의 해야 (재정의 되지 않으면 **GetTypeLibCache** NULL을 반환). 사용 하 여는 [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) 도 구현 하는 매크로 `GetTypeInfoCount` 및 `GetTypeLib`합니다.  
+ 파생된 클래스에서이 멤버 함수를 재정의 해야 (재정의 되지 않으면 `GetTypeLibCache` NULL을 반환 합니다). 사용 하 여는 [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) 도 구현 하는 매크로 `GetTypeInfoCount` 및 `GetTypeLib`합니다.  
   
 ##  <a name="isinvokeallowed"></a>  CCmdTarget::IsInvokeAllowed  
- MFC의 구현에 의해 호출 되는이 함수 **idispatch:: Invoke** 경우 지정 된 자동화 메서드를 확인 하려면 (로 식별 `dispid`) 호출할 수 있습니다.  
+ MFC의 구현에 의해 호출 되는이 함수 `IDispatch::Invoke` 경우 지정 된 자동화 메서드를 확인 하려면 (으로 식별 *dispid*) 호출할 수 있습니다.  
   
 ```  
 virtual BOOL IsInvokeAllowed(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dispid`  
+ *dispid*  
  디스패치 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
  TRUE 이면이 고, 그렇지 않으면 FALSE 호출 된 메서드가 될 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `IsInvokeAllowed` TRUE를 반환 **Invoke** ; 메서드를 호출 하 고, 그러지 `Invoke` E_UNEXPECTED를 반환 합니다. 실패 합니다.  
+ 경우 `IsInvokeAllowed` TRUE를 반환 `Invoke` ; 메서드를 호출 하 고, 그러지 `Invoke` E_UNEXPECTED를 반환 합니다. 실패 합니다.  
   
  파생된 클래스에서 적절 한 값을 반환 하려면이 함수를 재정의할 수 (재정의 되지 않으면 `IsInvokeAllowed` TRUE 반환). 특히 참조 [COleControl::IsInvokeAllowed](../../mfc/reference/colecontrol-class.md#isinvokeallowed)합니다.  
   
@@ -411,17 +411,17 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nID`  
+ *nID*  
  명령 ID를 포함  
   
- `nCode`  
- 명령 알림 코드를 식별합니다. 참조 **주의** 에 대 한 값에 대 한 자세한 내용은 `nCode`합니다.  
+ *nCode*  
+ 명령 알림 코드를 식별합니다. 참조 **주의** 에 대 한 값에 대 한 자세한 내용은 *nCode*합니다.  
   
- `pExtra`  
- 값에 따라 사용 `nCode`합니다. 참조 **주의** 에 대 한 자세한 내용은 `pExtra`합니다.  
+ *pExtra*  
+ 값에 따라 사용 *nCode*합니다. 참조 **주의** 에 대 한 자세한 내용은 *pExtra*합니다.  
   
- `pHandlerInfo`  
- 그렇지 않은 경우 **NULL**, `OnCmdMsg` 채웁니다는 **pTarget** 및 **pmf** 의 멤버는 `pHandlerInfo` 명령 디스패치 하는 대신 구조입니다. 일반적으로,이 매개 변수는 높아야 **NULL**합니다.  
+ *pHandlerInfo*  
+ 그렇지 않은 경우 **NULL**, `OnCmdMsg` 채웁니다는 *pTarget* 및 *pmf* 의 멤버는 *pHandlerInfo* 디스패치 하는 대신 구조 명령입니다. 일반적으로,이 매개 변수는 높아야 **NULL**합니다.  
   
 ### <a name="return-value"></a>반환 값  
  메시지가 처리 되는 경우 0이 아닌 그렇지 않으면 0입니다.  
@@ -433,9 +433,9 @@ virtual BOOL OnCmdMsg(
   
  드문 경우 이지만 프레임 워크를 확장 하려면이 멤버 함수를 재정의 하려는 표준 명령 라우팅입니다. 참조 [기술 참고 21](../../mfc/tn021-command-and-message-routing.md) 명령 라우팅 아키텍처의 고급 정보에 대 한 합니다.  
   
- 재정의 하는 경우 `OnCmdMsg`에 대 한 적절 한 값을 제공 해야 `nCode`, 명령 알림 코드 및 `pExtra`, 값에 종속 되 `nCode`합니다. 다음 표에서 해당 하는 값을 보여 줍니다.  
+ 재정의 하는 경우 `OnCmdMsg`에 대 한 적절 한 값을 제공 해야 *nCode*, 명령 알림 코드 및 *pExtra*, 값에 종속 되 *nCode* . 다음 표에서 해당 하는 값을 보여 줍니다.  
   
-|`nCode` 값|`pExtra` 값|  
+|*nCode* 값|*pExtra* 값|  
 |-------------------|--------------------|  
 |CN_COMMAND|[CCmdUI](../../mfc/reference/ccmdui-class.md)*|  
 |CN_EVENT|AFX_EVENT *|  
@@ -443,7 +443,7 @@ virtual BOOL OnCmdMsg(
 |CN_OLECOMMAND|[COleCmdUI](../../mfc/reference/colecmdui-class.md)*|  
 |CN_OLE_UNREGISTER|NULL|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#44](../../mfc/codesnippet/cpp/ccmdtarget-class_2.cpp)]  
   
  [!code-cpp[NVC_MFCDocView#45](../../mfc/codesnippet/cpp/ccmdtarget-class_3.cpp)]  
@@ -465,7 +465,7 @@ virtual void OnFinalRelease();
 void RestoreWaitCursor();
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#43](../../mfc/codesnippet/cpp/ccmdtarget-class_1.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

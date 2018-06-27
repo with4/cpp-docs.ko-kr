@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7ad4e5b94403582f9073e4d3bd3542f8aa75d08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dc21c08dbd1d26e519fe7108018299d3d4e94854
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385540"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954369"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows 소켓: 소켓과 아카이브 함께 사용
 이 문서에서는 설명는 [CSocket 프로그래밍 모델](#_core_the_csocket_programming_model)합니다. 클래스 [CSocket](../mfc/reference/csocket-class.md) 클래스 보다 더 높은 수준의 추상화에서 소켓 지원을 제공 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)합니다. `CSocket` MFC 통해 소켓 개체 간에 데이터를 전달 하는 버전의 MFC serialization 프로토콜을 사용 하 여 [CArchive](../mfc/reference/carchive-class.md) 개체입니다. `CSocket`은 차단을 제공하며(Windows 메시지의 백그라운드 처리 관리), 원시 API 또는 `CArchive`클래스를 사용할 경우 직접 수행해야 하는 문서의 여러 측면에 대한 관리 작업을 수행하는 `CAsyncSocket`에 액세스할 수 있게 해줍니다.  
@@ -47,19 +47,19 @@ ms.locfileid: "33385540"
   
 2.  개체를 사용 하 여 기본 만들 **소켓** 처리 합니다.  
   
-     에 대 한는 `CSocket` 클라이언트 개체를 기본 매개 변수를 일반적으로 사용 해야 [만들기](../mfc/reference/casyncsocket-class.md#create)데이터 그램 소켓 필요 하지 않는 한, 합니다. 에 대 한는 `CSocket` 서버 개체에서 포트를 지정 해야 합니다는 **만들기** 호출 합니다.  
+     에 대 한는 `CSocket` 클라이언트 개체를 기본 매개 변수를 일반적으로 사용 해야 [만들기](../mfc/reference/casyncsocket-class.md#create)데이터 그램 소켓 필요 하지 않는 한, 합니다. 에 대 한는 `CSocket` 서버 개체에서 포트를 지정 해야 합니다는 `Create` 호출 합니다.  
   
     > [!NOTE]
     >  `CArchive`는 데이터그램 소켓에서 작동하지 않습니다. 데이터그램 소켓에 대해 `CSocket`을 사용하려는 경우에는 `CAsyncSocket`을 사용할 때와 마찬가지로, 아카이브 없이 클래스를 사용해야 합니다. 데이터그램은 안정적이지 않기 때문에(수신이 보장되지 않고 반복되거나 순서가 바뀔 수 있음), 아카이브를 통한 serialization과 호환되지 않습니다. serialization 작업은 안정적으로 그리고 순차적으로 완료할 것으로 예상됩니다. 데이터그램에 대해 `CSocket` 개체와 함께 `CArchive`을 사용하려고 시도하면 MFC 어설션이 실패합니다.  
   
 3.  클라이언트 소켓을 사용 하는 경우 호출 [CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect) 서버 소켓의 소켓 개체를 연결할 수 있습니다.  
   
-     -또는-  
+     또는  
   
      서버 소켓을 사용 하는 경우 호출 [CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen) 시작 하려면 클라이언트에서 연결 시도 대 한 수신 대기 합니다. 연결 요청을 받으면 호출 하 여 수락 [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept)합니다.  
   
     > [!NOTE]
-    >  **Accept** 멤버 함수는 비어 있는 새에 대 한 참조를 사용 `CSocket` 개체를 매개 변수로 합니다. 호출 하기 전에이 개체를 생성 해야 **Accept**합니다. 이 소켓 개체가 범위를 벗어나면 연결이 닫힙니다. 호출 하지 마십시오 **만들기** 이 새 소켓 개체에 대 한 합니다.  
+    >  `Accept` 멤버 함수는 비어 있는 새에 대 한 참조를 사용 `CSocket` 개체를 매개 변수로 합니다. 호출 하기 전에이 개체를 생성 해야 `Accept`합니다. 이 소켓 개체가 범위를 벗어나면 연결이 닫힙니다. 호출 하지 마십시오 `Create` 이 새 소켓 개체에 대 한 합니다.  
   
 4.  만들기는 [CSocketFile](../mfc/reference/csocketfile-class.md) 연결 개체는 `CSocket` 개체를 합니다.  
   

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4531d63ff7047881f20368cbeaf8e5de4136bb9f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69d1d85f946ce596dae09779296fceab74113400
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369218"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952400"
 ---
 # <a name="cdaoexception-class"></a>CDaoException 클래스
 DAO(Data Access Objects)를 기반으로 하는 MFC 데이터베이스 클래스에서 발생하는 예외 상태를 나타냅니다.  
@@ -143,7 +143,7 @@ void GetErrorInfo(int nIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  인덱스는 데이터베이스 엔진의 Errors 컬렉션에 있는 인덱스에 의해 조회에 대 한 오류 정보입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -187,11 +187,11 @@ void GetErrorInfo(int nIndex);
   
 |CDaoErrorInfo 멤버|정보|의미|  
 |--------------------------|-----------------|-------------|  
-|**m_lErrorCode**|오류 코드|DAO 오류 코드|  
+|`m_lErrorCode`|오류 코드|DAO 오류 코드|  
 |`m_strSource`|소스|개체 또는 원래 오류를 생성 하는 응용 프로그램의 이름|  
 |`m_strDescription`|설명|오류와 관련 된 설명 문자열|  
 |`m_strHelpFile`|도움말 파일|사용자가 문제에 대 한 정보를 얻을 수 있는 Windows 도움말 파일에 대 한 경로|  
-|**m_lHelpContext**|도움말 컨텍스트|DAO 도움말 파일의 항목에 대 한 컨텍스트 ID|  
+|`m_lHelpContext`|도움말 컨텍스트|DAO 도움말 파일의 항목에 대 한 컨텍스트 ID|  
   
  에 포함 된 정보에 대 한 자세한 내용은 `CDaoErrorInfo` 개체, 참조는 [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) 구조입니다.  
   

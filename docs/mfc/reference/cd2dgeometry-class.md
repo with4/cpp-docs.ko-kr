@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05bfd912d3c4b6ee8b462775f6919c5fe81cc936
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 51e3c24464ff74ab262cd241dcdce68037d530f9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357076"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955104"
 ---
 # <a name="cd2dgeometry-class"></a>CD2DGeometry 클래스
 ID2D1Geometry에 대 한 래퍼입니다.  
@@ -112,7 +112,7 @@ class CD2DGeometry : public CD2DResource;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CD2DGeometry::m_pGeometry](#m_pgeometry)|ID2D1Geometry에 대 한 포인터입니다.|  
   
@@ -141,7 +141,7 @@ void Attach(ID2D1Geometry* pResource);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pResource`  
+ *pResource*  
  기존 리소스 인터페이스입니다. NULL 일 수 없습니다.  
   
 ##  <a name="cd2dgeometry"></a>  CD2DGeometry::CD2DGeometry  
@@ -154,10 +154,10 @@ CD2DGeometry(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParentTarget`  
+ *pParentTarget*  
  렌더링 대상에 대 한 포인터입니다.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  개체를 소유자 (pParentTarget)에 의해 폐기 수를 나타냅니다.  
   
 ##  <a name="combinewithgeometry"></a>  CD2DGeometry::CombineWithGeometry  
@@ -173,19 +173,19 @@ BOOL CombineWithGeometry(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `inputGeometry`  
+ *inputGeometry*  
  이 인스턴스와 함께 결합 하는 geometry 합니다.  
   
- `combineMode`  
+ *combineMode*  
  수행할 결합 작업의 형식입니다.  
   
- `inputGeometryTransform`  
+ *inputGeometryTransform*  
  결합 하기 전에 inputGeometry에 적용할 변환입니다.  
   
- `geometrySink`  
+ *geometrySink*  
  결합 작업의 결과입니다.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  에 다각형 근사값의 기 하 도형이 점 사이의 거리에 최대 범위입니다. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -202,13 +202,13 @@ D2D1_GEOMETRY_RELATION CompareWithGeometry(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `inputGeometry`  
+ *inputGeometry*  
  테스트할 geometry 합니다.  
   
- `inputGeometryTransform`  
+ *inputGeometryTransform*  
  InputGeometry에 적용할 변환입니다.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  에 다각형 근사값의 기 하 도형이 점 사이의 거리에 최대 범위입니다. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -225,13 +225,13 @@ BOOL ComputeArea(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `worldTransform`  
+ *worldTransform*  
  영역을 계산 하기 전에이 기 하이 도형에 적용할 변환입니다.  
   
- `area`  
+ *영역*  
  이 메서드가 반환 될 때이 기 하이 도형은 변환 하 고 결합 된 버전의 영역에 대 한 포인터를 포함 합니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  다각형 근사값 geometry의 점 간 간격에 허용 되는 최대 범위. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -248,13 +248,13 @@ BOOL ComputeLength(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `worldTransform`  
+ *worldTransform*  
  길이 계산 하기 전에 기 하 도형에 적용할 변환입니다.  
   
- `length`  
+ *length*  
  이 메서드가 반환 될 때 기 하 도형의 길이에 대 한 포인터를 포함 합니다. 닫힌된 기 하 도형에 대 한 길이 암시적 닫는 세그먼트를 포함 합니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  다각형 근사값 geometry의 점 간 간격에 허용 되는 최대 범위. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -273,19 +273,19 @@ BOOL ComputePointAtLength(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `length`  
+ *length*  
  지점 및 찾으려고 탄젠트 기 하 도형 따라 거리입니다. 이 간격은 0 미만인 경우이 메서드는 기 하 도형 요소는 첫 번째 요소를 계산 합니다. 이 간격은 기 하 도형의 길이 보다 큰 경우이 메서드는 마지막 기 하 도형 점을 계산 합니다.  
   
- `worldTransform`  
+ *worldTransform*  
  지정 된 지점 및 탄젠트를 계산 하기 전에 기 하 도형에 적용할 변환입니다.  
   
- `point`  
+ *지점*  
  기 하 도형 따라 지정 된 거리에 위치 합니다. 기 하 도형을 비어 있는 경우이 지점 NaN으로 포함 x 및 y 값입니다.  
   
- `unitTangentVector`  
+ *unitTangentVector*  
  이 메서드가 반환 될 때 지정 된 거리 기 하 도형 따라 탄젠트 벡터에 대 한 포인터를 포함 합니다. 이 벡터의 x 및 y로 NaN을 포함 하는 기 하 도형 비어 있으면 값입니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  다각형 근사값 geometry의 점 간 간격에 허용 되는 최대 범위. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -320,16 +320,16 @@ BOOL FillContainsPoint(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `point`  
+ *지점*  
  테스트 지점입니다.  
   
- `worldTransform`  
+ *worldTransform*  
  포함을 테스트 하기 전에 기 하 도형에 적용할 변환입니다.  
   
- `contains`  
+ *포함*  
  이 메서드가 반환 될 때 값이 포함 된 bool TRUE는 기 하 도형으로 채워진 영역에 있습니다. 그렇지 않으면 FALSE입니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  숫자 정확도 기하학적 정확한 경로 및 경로 교차 계산 됩니다. 내부 포인트 채우기 허용 오차 보다 작은가 없는 것으로 간주 합니다. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -354,8 +354,8 @@ CD2DRectF& bounds) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `worldTransform`  
- `bounds`  
+ *worldTransform*  
+ *범위*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -372,19 +372,19 @@ BOOL GetWidenedBounds(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `strokeWidth`  
+ *strokeWidth*  
  기 하 도형 윤곽선을 스트로크 하 여 확장 하는 기준인 양입니다.  
   
- `strokeStyle`  
+ *strokeStyle*  
  기 하 도형을 확장 하는 선의 스타일입니다.  
   
- `worldTransform`  
+ *worldTransform*  
  기 하 도형 변형 되 고 geometry 스트로크 한 후 기 하 도형에 적용할 변환입니다.  
   
- `bounds`  
+ *범위*  
  이 메서드가 반환 될 때 확장 된 기의 범위를 포함 합니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  에 다각형 근사값의 기 하 도형이 점 사이의 거리에 최대 범위입니다. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -428,13 +428,13 @@ BOOL Outline(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `worldTransform`  
+ *worldTransform*  
  기 하 도형 윤곽선에 적용할 변환입니다.  
   
- `geometrySink`  
+ *geometrySink*  
  기 하 도형 변환 개요 ID2D1SimplifiedGeometrySink 추가 됩니다.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  다각형 근사값 geometry의 점 간 간격에 허용 되는 최대 범위. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -452,16 +452,16 @@ BOOL Simplify(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `simplificationOption`  
+ *simplificationOption*  
  간단한 기 하 도형 곡선을 포함 해야 하는지 여부를 지정 하는 값입니다.  
   
- `worldTransform`  
+ *worldTransform*  
  간소화 된 기 하 도형에 적용할 변환입니다.  
   
- `geometrySink`  
+ *geometrySink*  
  간단한 기 하 도형 붙여집니다 ID2D1SimplifiedGeometrySink 합니다.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  다각형 근사값 geometry의 점 간 간격에 허용 되는 최대 범위. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -481,22 +481,22 @@ BOOL StrokeContainsPoint(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `point`  
+ *지점*  
  포함에 대 한 테스트 지점입니다.  
   
- `strokeWidth`  
+ *strokeWidth*  
  적용할 선의 두께입니다.  
   
- `strokeStyle`  
+ *strokeStyle*  
  적용할 선의 스타일입니다.  
   
- `worldTransform`  
+ *worldTransform*  
  스트로크 기 하 도형에 적용할 변환입니다.  
   
- `contains`  
+ *포함*  
  이 메서드가 반환 될 때 기 하 도형의 스트로크에 지정된 된 지점이 포함 되어 있으면 TRUE로 설정 하는 부울 값을 포함 합니다. 그렇지 않으면 FALSE입니다. 이 매개 변수에 대 한 저장소를 할당 해야 합니다.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  숫자 정확도 기하학적 정확한 경로 및 경로 교차 계산 됩니다. 내부 포인트 스트로크가 허용 오차 보다 작은 없는 것으로 간주 합니다. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -513,13 +513,13 @@ BOOL Tessellate(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `worldTransform`  
+ *worldTransform*  
  이 기 하 도형 또는 NULL에 적용할 변환입니다.  
   
- `tessellationSink`  
+ *tessellationSink*  
  에 없을 붙여집니다 ID2D1TessellationSink 합니다.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  다각형 근사값 geometry의 점 간 간격에 허용 되는 최대 범위. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -538,19 +538,19 @@ BOOL Widen(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `strokeWidth`  
+ *strokeWidth*  
  기 하 도형을 넓히는 기준인 양입니다.  
   
- `strokeStyle`  
+ *strokeStyle*  
  기 하 도형 또는 NULL에 적용할 선의 스타일입니다.  
   
- `worldTransform`  
+ *worldTransform*  
  확대 그 후 기 하 도형에 적용할 변환입니다.  
   
- `geometrySink`  
+ *geometrySink*  
  확장 된 기 붙여집니다 ID2D1SimplifiedGeometrySink 합니다.  
   
- `flatteningTolerance`  
+ *flatteningTolerance*  
  다각형 근사값 geometry의 점 간 간격에 허용 되는 최대 범위. 값이 작을수록 더 정확한 결과 생성 하지만 실행 속도 느려집니다.  
   
 ### <a name="return-value"></a>반환 값  

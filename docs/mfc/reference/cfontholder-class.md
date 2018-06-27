@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5cb28b738822b3e35aa840c731eb11bc2c2b83d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba6e85500f87c1ea88c46418d1f6b698a2d10976
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367518"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954119"
 ---
 # <a name="cfontholder-class"></a>CFontHolder 클래스
 스톡 글꼴 속성을 구현하고 Windows 글꼴 개체 및 `IFont` 인터페이스의 기능을 캡슐화합니다.  
@@ -112,7 +112,7 @@ BOOL GetDisplayString(CString& strValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `strValue`  
+ *StrValue*  
  에 대 한 참조는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 문자열 표시를 보유 하는 것입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -126,7 +126,7 @@ LPFONTDISP GetFontDispatch();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `CFontHolder` 개체의 **IFontDisp** 인터페이스입니다. 호출 하는 함수에 유의 `GetFontDispatch` 호출 해야 `IUnknown::Release` 사용을 완료 하는 경우이 인터페이스 포인터에 있습니다.  
+ 에 대 한 포인터는 `CFontHolder` 개체의 `IFontDisp` 인터페이스입니다. 호출 하는 함수에 유의 `GetFontDispatch` 호출 해야 `IUnknown::Release` 사용을 완료 하는 경우이 인터페이스 포인터에 있습니다.  
   
 ### <a name="remarks"></a>설명  
  호출 `InitializeFont` 호출 하기 전에 `GetFontDispatch`합니다.  
@@ -144,19 +144,19 @@ HFONT GetFontHandle(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cyLogical`  
+ *cyLogical*  
  논리 단위로 컨트롤이 그려지는 사각형의 높이입니다.  
   
- `cyHimetric`  
+ *cyHimetric*  
  높이 `MM_HIMETRIC` 컨트롤의 단위입니다.  
   
 ### <a name="return-value"></a>반환 값  
  Font 개체;에 대 한 핸들 그렇지 않으면 **NULL**합니다.  
   
 ### <a name="remarks"></a>설명  
- 비율이 `cyLogical` 및 `cyHimetric` 계산 하는 데 적절 한 표시 크기 논리 단위에서에 표시 되는 글꼴의 포인트 크기에 대 한 `MM_HIMETRIC` 단위:  
+ 비율이 *cyLogical* 및 *cyHimetric* 계산 하는 데 적절 한 표시 크기 논리 단위에서에 표시 되는 글꼴의 포인트 크기에 대 한 `MM_HIMETRIC` 단위:  
   
- 표시 크기 = ( `cyLogical`  /  `cyHimetric`) 글꼴 크기 X  
+ 표시 크기 = ( *cyLogical* / *cyHimetric*) 글꼴 크기 X  
   
  매개 변수 없이 버전 화면에 대 한 올바른 크기가 글꼴에 대 한 핸들을 반환 합니다.  
   
@@ -170,16 +170,16 @@ void InitializeFont(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pFontDesc`  
+ *pFontDesc*  
  글꼴 설명 구조에 대 한 포인터 ( [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782)) 글꼴 특성을 지정 하는 합니다.  
   
- `pFontDispAmbient`  
+ *pFontDispAmbient*  
  컨테이너의 앰비언트 글꼴 속성에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `pFontDispAmbient` 않습니다 **NULL**, `CFontHolder` 개체의 복제본에 연결 되어는 `IFont` 컨테이너의 앰비언트 글꼴 속성에 의해 사용 되는 인터페이스입니다.  
+ 경우 *pFontDispAmbient* 않습니다 **NULL**, `CFontHolder` 개체의 복제본에 연결 되어는 `IFont` 컨테이너의 앰비언트 글꼴 속성에 의해 사용 되는 인터페이스입니다.  
   
- 경우 `pFontDispAmbient` 은 **NULL**, 새 Font 개체를 가리키는 글꼴 설명에서 만들어지거나 `pFontDesc` 하거나, 있는 경우 `pFontDesc` 은 **NULL**, 기본 설명을 합니다.  
+ 경우 *pFontDispAmbient* 은 **NULL**, 새 Font 개체를 가리키는 글꼴 설명에서 만들어지거나 *pFontDesc* 하거나, 있는 경우 *pFontDesc*은 **NULL**, 기본 설명을 합니다.  
   
  이 함수를 생성 한 후 호출 된 `CFontHolder` 개체입니다.  
   
@@ -198,7 +198,7 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lptm`  
+ *lptm*  
  에 대 한 포인터는 [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) 구조 정보를 받을입니다.  
   
 ##  <a name="releasefont"></a>  CFontHolder::ReleaseFont  
@@ -219,20 +219,20 @@ CFont* Select(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  장치 컨텍스트는 글꼴을 선택 합니다.  
   
- `cyLogical`  
+ *cyLogical*  
  논리 단위로 컨트롤이 그려지는 사각형의 높이입니다.  
   
- `cyHimetric`  
+ *cyHimetric*  
  높이 `MM_HIMETRIC` 컨트롤의 단위입니다.  
   
 ### <a name="return-value"></a>반환 값  
  대체 되는 글꼴에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
- 참조 [GetFontHandle](#getfonthandle) 부호는 `cyLogical` 및 `cyHimetric` 매개 변수입니다.  
+ 참조 [GetFontHandle](#getfonthandle) 부호는 *cyLogical* 및 *cyHimetric* 매개 변수입니다.  
   
 ##  <a name="setfont"></a>  CFontHolder::SetFont  
  모든 기존 글꼴을 해제 하 고 연결 하는 `CFontHolder` 개체는 `IFont` 인터페이스입니다.  

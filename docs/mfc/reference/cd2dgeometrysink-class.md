@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b67aa3345f8739714cb6758f8363c3d2054dd4e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b8c96e83d15110cb85e23cd7a8643d615cf7c0d8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355287"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952374"
 ---
 # <a name="cd2dgeometrysink-class"></a>CD2DGeometrySink 클래스
 ID2D1GeometrySink에 대 한 래퍼입니다.  
@@ -100,7 +100,7 @@ class CD2DGeometrySink;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CD2DGeometrySink::m_pSink](#m_psink)|ID2D1GeometrySink에 대 한 포인터입니다.|  
   
@@ -125,7 +125,7 @@ void AddArc(const D2D1_ARC_SEGMENT& arc);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `arc`  
+ *호로 변환*  
  원호 세그먼트는 그림에 추가 하려면  
   
 ##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier  
@@ -136,7 +136,7 @@ void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bezier`  
+ *베 지 어*  
  제어점 및 추가할 베 지 어 곡선의 끝점을 설명 하는 구조입니다.  
   
 ##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers  
@@ -149,7 +149,7 @@ void AddBeziers(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `beziers`  
+ *서피스일*  
  만들려는 베 지 어 곡선을 설명 하는 베 지 어 세그먼트의 배열입니다. 배열의 첫 번째 베 지 어 세그먼트의 끝점에 기 하 도형 싱크 현재 위치 (BeginFigure로 지정 된 위치 또는 그려진 마지막 세그먼트의 끝 지점)에서 곡선이 그려집니다. 배열 하는 추가 베 지 어 세그먼트 들어 있는 경우 각 후속 베 지 어 세그먼트 시작 점으로 위의 베 지 어 세그먼트의 끝점을 사용 합니다.  
   
 ##  <a name="addline"></a>  CD2DGeometrySink::AddLine  
@@ -160,7 +160,7 @@ void AddLine(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `point`  
+ *지점*  
  그릴 선의 끝점입니다.  
   
 ##  <a name="addlines"></a>  CD2DGeometrySink::AddLines  
@@ -173,7 +173,7 @@ void AddLines(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `points`  
+ *포인트*  
  줄을 그릴를 설명 하는 하나 이상의 포인트의 배열입니다. 배열의 첫 번째 지점에 기 하 도형 싱크 현재 위치 (BeginFigure로 지정 된 위치 또는 그려진 마지막 세그먼트의 끝 지점)에서 선이 그려집니다. 배열에 추가 점을 포함 하는 경우 첫 번째 요소에서 줄에는 세 번째 점과 등 두 번째 요소에서 배열에 두 번째 요소에 그려집니다. 배열을 그릴 선의 시작점과 끝점의 시퀀스입니다.  
   
 ##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier  
@@ -184,7 +184,7 @@ void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bezier`  
+ *베 지 어*  
  제어점 및 추가할 정방형 3 차원 곡선의 끝점을 설명 하는 구조입니다.  
   
 ##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers  
@@ -197,7 +197,7 @@ void AddQuadraticBeziers(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `beziers`  
+ *서피스일*  
  배열 정방형 3 차원 세그먼트의 시퀀스입니다.  
   
 ##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure  
@@ -210,10 +210,10 @@ void BeginFigure(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `startPoint`  
+ *startPoint*  
  새 그림을 시작 하는 지점입니다.  
   
- `figureBegin`  
+ *figureBegin*  
  여부 비우거나 채울 새 그림 이어야 합니다.  
   
 ##  <a name="cd2dgeometrysink"></a>  CD2DGeometrySink::CD2DGeometrySink  
@@ -224,7 +224,7 @@ CD2DGeometrySink(CD2DPathGeometry& pathGeometry);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pathGeometry`  
+ *pathGeometry*  
  기존 CD2DPathGeometry 개체입니다.  
   
 ##  <a name="close"></a>  CD2DGeometrySink::Close  
@@ -245,7 +245,7 @@ void EndFigure(D2D1_FIGURE_END figureEnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `figureEnd`  
+ *figureEnd*  
  현재 형상이 닫혀 있는지 여부를 나타내는 값입니다. 그림 닫혀 있는 경우 현재 지점과 BeginFigure로 지정 된 시작점 간에 선이 그려집니다.  
   
 ##  <a name="get"></a>  CD2DGeometrySink::Get  
@@ -293,7 +293,7 @@ void SetFillMode(D2D1_FILL_MODE fillMode);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `fillMode`  
+ *fillMode*  
  지정된 된 지점 기 하 도형의 일부 인지 확인 하는 데 사용 되는 메서드.  
   
 ##  <a name="setsegmentflags"></a>  CD2DGeometrySink::SetSegmentFlags  
@@ -304,7 +304,7 @@ void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `vertexFlags`  
+ *vertexFlags*  
  기 하 도형에 추가 된 새 세그먼트에 적용 될 스트로크 및 조인 옵션 싱크입니다.  
   
 ## <a name="see-also"></a>참고 항목  

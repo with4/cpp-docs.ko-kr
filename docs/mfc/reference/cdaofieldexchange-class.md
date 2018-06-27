@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b4f702f619eb06a11cbbf7ec5be7407d12f7f445
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b9e65b4880c80f8a4b0d9a192f316b16a92a3e69
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368731"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953911"
 ---
 # <a name="cdaofieldexchange-class"></a>CDaoFieldExchange 클래스
 DAO 데이터베이스 클래스에서 사용하는 DAO 레코드 필드 교환(DFX) 루틴을 지원합니다.  
@@ -67,7 +67,7 @@ class CDaoFieldExchange
 > [!NOTE]
 >  DAO 레코드 필드 교환 (DFX)는 ODBC 기반 MFC 데이터베이스 클래스에서 레코드 필드 교환 (RFX)와 매우 비슷합니다 ( `CDatabase`, `CRecordset`). RFX 이해 하면 사용 하기 쉬운 DFX를 찾이 됩니다.  
   
- A `CDaoFieldExchange` 컨텍스트 정보가 필요한 dao 레코드 필드 교환을 수행 하려면 개체를 제공 합니다. `CDaoFieldExchange` 개체는 현재 레코드의 필드에 다양 한 플래그를 설정 및 매개 변수 및 필드 데이터 멤버를 포함 하 여 작업의 수를 지원 합니다. Dfx에 정의 된 형식의 레코드 집합 클래스 데이터 멤버에 대해 수행 되는 `enum` **FieldType** 에서 `CDaoFieldExchange`합니다. 가능한 **FieldType** 값은:  
+ A `CDaoFieldExchange` 컨텍스트 정보가 필요한 dao 레코드 필드 교환을 수행 하려면 개체를 제공 합니다. `CDaoFieldExchange` 개체는 현재 레코드의 필드에 다양 한 플래그를 설정 및 매개 변수 및 필드 데이터 멤버를 포함 하 여 작업의 수를 지원 합니다. Dfx에 정의 된 형식의 레코드 집합 클래스 데이터 멤버에 대해 수행 되는 **열거형** **FieldType** 에 `CDaoFieldExchange`합니다. 가능한 **FieldType** 값은:  
   
 - **CDaoFieldExchange::outputColumn** 필드 데이터 멤버에 대 한 합니다.  
   
@@ -118,7 +118,7 @@ BOOL IsValidOperation();
 |**StoreField**|캐시에 현재 레코드를 저장합니다.|  
 |**LoadField**|레코드 집합의 캐시 된 데이터 멤버 변수를 복원합니다.|  
 |**FreeCache**|레코드 집합의 필드를 "더티"에 대 한 확인 하는 데 사용 되는 캐시를 해제 합니다.|  
-|`SetFieldNull`|필드의 상태 값을 Null로 설정 하는 **PSEUDONULL**합니다.|  
+|**SetFieldNull**|필드의 상태 값을 Null로 설정 하는 **PSEUDONULL**합니다.|  
 |**MarkForAddNew**|그렇지 않은 경우 필드를 "더티" 표시 **PSEUDONULL**합니다.|  
 |**MarkForEdit**|캐시 일치 하지 않는 경우 필드를 "더티" 표시 합니다.|  
 |**SetDirtyField**|설정 "변경 합니다."로 표시 된 값 필드|  
@@ -138,7 +138,7 @@ void SetFieldType(UINT nFieldType);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nFieldType`  
+ *nFieldType*  
  값은 **enum FieldType**에 선언 된 `CDaoFieldExchange`, 다음 중 하나가 될 수 있는:  
   
 - **CDaoFieldExchange::outputColumn**  
@@ -146,9 +146,9 @@ void SetFieldType(UINT nFieldType);
 - **CDaoFieldExchange::param**  
   
 ### <a name="remarks"></a>설명  
- 일반적으로 클래스 마법사는이 호출이를 작성합니다. 사용자 고유의 함수를 작성 하 고 작성 하는 마법사를 사용 하는 경우 프로그램 `DoFieldExchange` 함수, 필드 맵 외부 사용자가 직접 함수 호출을 추가 합니다. 마법사를 사용 하지 않는 경우 되지 않습니다 필드 맵을 합니다. 호출 하거나 클래스의 각 필드 데이터 멤버에 대 한 DFX 함수에 대 한 호출 앞에 오고로 필드 형식을 식별 **CDaoFieldExchange::outputColumn**합니다.  
+ 일반적으로 클래스 마법사는이 호출이를 작성합니다. 사용자 고유의 함수를 작성 하 고 작성 하는 마법사를 사용 하는 경우 프로그램 `DoFieldExchange` 함수, 필드 맵 외부 사용자가 직접 함수 호출을 추가 합니다. 마법사를 사용 하지 않는 경우 되지 않습니다 필드 맵을 합니다. 호출 하거나 클래스의 각 필드 데이터 멤버에 대 한 DFX 함수에 대 한 호출 앞에 오고와 필드 형식이 식별 `CDaoFieldExchange::outputColumn`합니다.  
   
- 레코드 집합 클래스를 매개 변수화 필드 map) (외부 모든 매개 변수 데이터 멤버에 대 한 DFX 호출을 추가 하 고 해야을 호출 하 여 이러한 호출 앞에 야 `SetFieldType`합니다. 값을 전달 **CDaoFieldExchange::param**합니다. (대신 사용할 수 있습니다는 [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) 해당 매개 변수 값을 설정 합니다.)  
+ 레코드 집합 클래스를 매개 변수화 필드 map) (외부 모든 매개 변수 데이터 멤버에 대 한 DFX 호출을 추가 하 고 해야을 호출 하 여 이러한 호출 앞에 야 `SetFieldType`합니다. 값을 전달 `CDaoFieldExchange::param`합니다. (대신 사용할 수 있습니다는 [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) 해당 매개 변수 값을 설정 합니다.)  
   
  일반적으로 필드 데이터 멤버 또는 매개 변수 데이터 멤버와 연결 된 DFX 함수 호출의 각 그룹 뒤에 야를 호출 하 여 `SetFieldType`합니다. `nFieldType` 각 매개 변수 `SetFieldType` 호출 다음에 나오는 DFX 함수 호출에 의해 표시 되는 데이터 멤버의 형식을 식별 하는 `SetFieldType` 호출 합니다.  
   

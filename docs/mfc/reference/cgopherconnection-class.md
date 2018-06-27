@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3dc5dae7758c77d335cf6e1255d8caba28df9f9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 49fe725c700a46e59625289de7ca5edf4b4d25b2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367775"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955689"
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection 클래스
 Gopher 인터넷 서버 연결을 관리합니다.  
@@ -99,32 +99,32 @@ CGopherConnection(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pSession`  
+ *pSession*  
  관련 된 항목에 대 한 포인터 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 개체입니다.  
   
- `hConnected`  
+ *hConnected*  
  현재 인터넷 세션의 Windows 핸들입니다.  
   
- `pstrServer`  
+ *pstrServer*  
  FTP 서버 이름을 포함 하는 문자열에 대 한 포인터입니다.  
   
- `dwContext`  
- 작업에 대 한 컨텍스트 식별자입니다. `dwContext` 반환한 작업의 상태 정보를 식별 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)합니다. 기본값은 1로 설정 그러나 작업에 대 한 특정 컨텍스트 ID를 명시적으로 할당할 수 있습니다. 개체와 수행 하는 작업 컨텍스트 ID와 가진 연결 됩니다.  
+ *dwContext*  
+ 작업에 대 한 컨텍스트 식별자입니다. *dwContext* 에서 반환한 작업의 상태 정보를 식별 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)합니다. 기본값은 1로 설정 그러나 작업에 대 한 특정 컨텍스트 ID를 명시적으로 할당할 수 있습니다. 개체와 수행 하는 작업 컨텍스트 ID와 가진 연결 됩니다.  
   
- `pstrUserName`  
+ *pstrUserName*  
  사용자가 로그인의 이름을 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다. 경우 **NULL**, 기본값은 익명입니다.  
   
- `pstrPassword`  
- 로그인에 사용할 암호를 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다. 두 `pstrPassword` 및 `pstrUserName` 는 **NULL**, 기본 익명 암호는 사용자의 전자 메일 이름입니다. 경우 `pstrPassword` 은 **NULL** (또는 빈 문자열) 하지만 `pstrUserName` 않습니다 **NULL**, 빈 암호가 사용 됩니다. 다음 표에서 설명의 가능한 네 가지 설정에 대 한 동작 `pstrUserName` 및 `pstrPassword`:  
+ *pstrPassword*  
+ 로그인에 사용할 암호를 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다. 두 *pstrPassword* 및 *pstrUserName* 는 **NULL**, 기본 익명 암호는 사용자의 전자 메일 이름입니다. 경우 *pstrPassword* 은 **NULL** (또는 빈 문자열) 하지만 *pstrUserName* 않습니다 **NULL**, 빈 암호가 사용 됩니다. 다음 표에서 설명의 가능한 네 가지 설정에 대 한 동작 *pstrUserName* 및 *pstrPassword*:  
   
-|`pstrUserName`|`pstrPassword`|FTP 서버에 전송 하는 사용자 이름|FTP 서버에 전송 하는 암호|  
+|*pstrUserName*|*pstrPassword*|FTP 서버에 전송 하는 사용자 이름|FTP 서버에 전송 하는 암호|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
 |**NULL** 또는 ""|**NULL** 또는 ""|"anonymous"|사용자의 전자 메일 이름|  
-|비- **NULL** 문자열|**NULL** 또는 ""|`pstrUserName`|" "|  
+|비- **NULL** 문자열|**NULL** 또는 ""|*pstrUserName*|" "|  
 |**NULL** 비- **NULL** 문자열|**오류**|**오류**||  
-|비- **NULL** 문자열|비- **NULL** 문자열|`pstrUserName`|`pstrPassword`|  
+|비- **NULL** 문자열|비- **NULL** 문자열|*pstrUserName*|*pstrPassword*|  
   
- `nPort`  
+ *nPort*  
  서버에서 사용 하는 TCP/IP 포트를 식별 하는 번호입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -151,22 +151,22 @@ static CGopherLocator CreateLocator(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pstrDisplayString`  
- Gopher 문서 또는 검색할 디렉터리의 이름을 포함 하는 문자열에 대 한 포인터입니다. 경우는 `pstrDisplayString` 매개 변수는 **NULL**, gopher 서버에 대 한 기본 디렉터리 반환 됩니다.  
+ *pstrDisplayString*  
+ Gopher 문서 또는 검색할 디렉터리의 이름을 포함 하는 문자열에 대 한 포인터입니다. 경우는 *pstrDisplayString* 매개 변수는 **NULL**, gopher 서버에 대 한 기본 디렉터리 반환 됩니다.  
   
- `pstrSelectorString`  
- Gopher 서버에 전송 될 항목을 검색할 선택기 문자열에 대 한 포인터입니다. `pstrSelectorString` 수 **NULL**합니다.  
+ *pstrSelectorString*  
+ Gopher 서버에 전송 될 항목을 검색할 선택기 문자열에 대 한 포인터입니다. *pstrSelectorString* 수 **NULL**합니다.  
   
  *dwGopherType*  
- 이 지정 하는지 여부를 `pstrSelectorString` 디렉터리 또는 문서에 대 한 참조 및 gopher 또는 gopher + 요청 인지 합니다. 구조에 대 한 특성 참조 [GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) Windows sdk에서입니다.  
+ 이 지정 하는지 여부를 *pstrSelectorString* 디렉터리 또는 문서에 대 한 참조 및 gopher 또는 gopher + 요청 인지 합니다. 구조에 대 한 특성 참조 [GOPHER_FIND_DATA](http://msdn.microsoft.com/library/windows/desktop/aa384215) Windows sdk에서입니다.  
   
- `pstrLocator`  
+ *pstrLocator*  
  열려는 파일을 식별 하는 문자열에 대 한 포인터입니다. 이 문자열에 대 한 호출에서 반환 되는 일반적으로 [CGopherFileFind::GetLocator](../../mfc/reference/cgopherfilefind-class.md#getlocator)합니다.  
   
  *pstrServerName*  
  Gopher 서버 이름을 포함 하는 문자열에 대 한 포인터입니다.  
   
- `nPort`  
+ *nPort*  
  이 연결에 대 한 인터넷 포트를 식별 하는 번호입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -187,13 +187,13 @@ BOOL GetAttribute(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `refLocator`  
+ *refLocator*  
  에 대 한 참조는 [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) 개체입니다.  
   
  *strRequestedAttributes*  
  요청된 된 특성의 이름을 지정 하는 공백으로 구분 된 문자열입니다.  
   
- `strResult`  
+ *strResult*  
  에 대 한 참조는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) locator 유형을 받는입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -211,23 +211,23 @@ CGopherFile* OpenFile(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `refLocator`  
+ *refLocator*  
  에 대 한 참조는 [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) 개체입니다.  
   
- `dwFlags`  
+ *dwFlags*  
  INTERNET_FLAG_ 플래그의 조합입니다. 참조 [CInternetSession::OpenUrl](../../mfc/reference/cinternetsession-class.md#openurl) INTERNET_FLAG_ 대 한 자세한 내용은\* 플래그입니다.  
   
- `pstrView`  
- 파일 뷰 문자열에 대 한 포인터입니다. 파일의 여러 뷰는 서버에 존재 하는 경우이 매개 변수는 파일 보기를 열려면를 지정 합니다. 경우 `pstrView` 은 **NULL**, 기본 파일 보기를 사용 합니다.  
+ *pstrView*  
+ 파일 뷰 문자열에 대 한 포인터입니다. 파일의 여러 뷰는 서버에 존재 하는 경우이 매개 변수는 파일 보기를 열려면를 지정 합니다. 경우 *pstrView* 은 **NULL**, 기본 파일 보기를 사용 합니다.  
   
- `dwContext`  
- 열리는 파일에 대 한 컨텍스트 ID입니다. 참조 **주의** 에 대 한 자세한 내용은 `dwContext`합니다.  
+ *dwContext*  
+ 열리는 파일에 대 한 컨텍스트 ID입니다. 참조 **주의** 에 대 한 자세한 내용은 *dwContext*합니다.  
   
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 [CGopherFile](../../mfc/reference/cgopherfile-class.md) 열 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- `dwContext` 기본값을 재정의하여 컨텍스트 식별자를 설정한 값으로 설정합니다. 특정 작업과 연관 된 컨텍스트 식별자는 `CGopherConnection` 하 여 만든 개체의 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 개체입니다. 값이 반환 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) 식별 되는 작업에 대 한 상태에 있습니다. 문서 참조 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md) 컨텍스트 식별자에 대 한 자세한 내용은 합니다.  
+ 재정의 *dwContext* 기본적으로 선택한 값으로 컨텍스트 식별자를 설정 합니다. 특정 작업과 연관 된 컨텍스트 식별자는 `CGopherConnection` 하 여 만든 개체의 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 개체입니다. 값이 반환 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) 식별 되는 작업에 대 한 상태에 있습니다. 문서 참조 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md) 컨텍스트 식별자에 대 한 자세한 내용은 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CInternetConnection 클래스](../../mfc/reference/cinternetconnection-class.md)   

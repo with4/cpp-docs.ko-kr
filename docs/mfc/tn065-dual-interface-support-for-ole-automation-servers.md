@@ -19,18 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b1c0d30938529d9eb432e6171b546a42f87905a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b066ac483de127e0ce469cf8aaf24991ae5f6ef8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386075"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953040"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: OLE 자동화 서버에 대한 이중 인터페이스 지원
 > [!NOTE]
 >  다음 기술 노트는 온라인 설명서에 먼저 포함되어 있었으므로 업데이트되지 않았습니다. 따라서 일부 절차 및 항목은 만료되거나 올바르지 않을 수 있습니다. 최신 정보를 보려면 온라인 설명서 색인에서 관심 있는 항목을 검색하는 것이 좋습니다.  
   
- 이 노트에서는 MFC 기반 OLE 자동화 서버 응용 프로그램에 이중 인터페이스를 추가 하는 방법을 설명 합니다. [ACDUAL](../visual-cpp-samples.md) 예제에서는 이중 인터페이스 지원 및 ACDUAL에서이 정보에 예제 코드를 가져옵니다. 와 같은이 참고에 설명 된 매크로 `DECLARE_DUAL_ERRORINFO`, `DUAL_ERRORINFO_PART`, 및 `IMPLEMENT_DUAL_ERRORINFO`ACDUAL 샘플의 일부 이며 MFCDUAL에서 확인할 수 있습니다. 8.  
+ 이 노트에서는 MFC 기반 OLE 자동화 서버 응용 프로그램에 이중 인터페이스를 추가 하는 방법을 설명 합니다. [ACDUAL](../visual-cpp-samples.md) 예제에서는 이중 인터페이스 지원 및 ACDUAL에서이 정보에 예제 코드를 가져옵니다. 예: DECLARE_DUAL_ERRORINFO, DUAL_ERRORINFO_PART, 및 IMPLEMENT_DUAL_ERRORINFO,이 정보에 설명 된 매크로 ACDUAL 샘플의 일부 이며 MFCDUAL에서 확인할 수 있습니다. 8.  
   
 ## <a name="dual-interfaces"></a>이중 인터페이스  
  OLE 자동화를 사용 하면 구현할 수 있지만 `IDispatch` 인터페이스, VTBL 인터페이스 또는 이중 인터페이스 (포괄 하는 둘 다), 표시 된 모든 OLE 자동화 개체에 대 한 이중 인터페이스를 구현 하는 적극 권장 합니다. 이중 인터페이스를 통해 중요 한 이점이 `IDispatch`-유일한 또는 VTBL 전용 인터페이스:  
@@ -50,7 +50,7 @@ ms.locfileid: "33386075"
   
  첫째, 개체에 대 한 이중 인터페이스를 정의 하 여 서버에 대 한 ODL 파일을 수정 합니다. 대신에 인터페이스 문을 사용 해야 하는 이중 인터페이스를 정의 하려면는 `DISPINTERFACE` Visual c + + 마법사에서 생성 하는 문입니다. 기존 제거 하는 대신 `DISPINTERFACE` 문, 새 인터페이스 문을 추가 합니다. 유지 하 여는 `DISPINTERFACE` 폼 클래스 마법사를 사용 하 여 사용자 개체에 메서드와 속성을 추가 하려면를 계속할 수 있지만 인터페이스 문에 해당 하는 속성 및 메서드를 추가 해야 합니다.  
   
- 이중 인터페이스에 대 한 인터페이스 문이 있어야는 **OLEAUTOMATION** 및 **이중** 특성과 인터페이스에서 파생 되어야 합니다 `IDispatch`합니다. 사용할 수는 [GUIDGEN](../visual-cpp-samples.md) 를 만들기 위한 샘플은 **IID** 이중 인터페이스에 대 한 합니다.  
+ 이중 인터페이스에 대 한 인터페이스 문이 있어야는 *OLEAUTOMATION* 및 *이중* 특성과 인터페이스에서 파생 되어야 합니다 `IDispatch`합니다. 사용할 수는 [GUIDGEN](../visual-cpp-samples.md) 를 만들기 위한 샘플은 **IID** 이중 인터페이스에 대 한 합니다.  
   
 ```  
 [ uuid(0BDD0E81-0DD7-11cf-BBA8-444553540000), // IID_IDualAClick  
@@ -62,7 +62,7 @@ interface IDualAClick : IDispatch
  };  
 ```  
   
- 인터페이스 문을 위치에 있으면 메서드 및 속성에 대 한 항목을 추가 하기 시작 합니다. 이중 인터페이스에 대 한 메서드 및 이중 인터페이스의 속성 접근자 함수를 반환 하는 매개 변수 목록을 다시 정렬 해야는 `HRESULT` 특성을 가진 매개 변수로 반환 값을 전달 `[retval,out]`합니다. 속성에는 필요 합니다 모두 읽기를 추가 하려면 (`propget`) 및 쓰기 (`propput`) 동일한 id 가진 함수에 액세스 합니다. 예를 들어:  
+ 인터페이스 문을 위치에 있으면 메서드 및 속성에 대 한 항목을 추가 하기 시작 합니다. 이중 인터페이스에 대 한 메서드 및 이중 인터페이스의 속성 접근자 함수를 반환 하는 매개 변수 목록을 다시 정렬 해야는 **HRESULT** 특성을가진매개변수로반환값을전달`[retval,out]`. 속성에는 필요 합니다 모두 읽기를 추가 하려면 (`propget`) 및 쓰기 (`propput`) 동일한 id 가진 함수에 액세스 합니다. 예를 들어:  
   
 ```  
 [propput,
@@ -84,7 +84,7 @@ coclass Document
 };  
 ```  
   
- ODL 파일을 업데이트 후 MFC의 인터페이스 맵 메커니즘을 사용 하 여 개체 클래스에 이중 인터페이스에 대 한 구현 클래스를 정의 하 고 mfc의 해당 항목을 확인 하려면 `QueryInterface` 메커니즘입니다. 에 있는 하나의 항목 필요는 `INTERFACE_PART` ODL의 인터페이스 문에서 각 항목 및 디스패치 인터페이스에 대 한 항목에 대 한 블록입니다. 각 ODL 항목으로는 **propput** 특성 라는 함수가 필요 `put_propertyname`합니다. 각 항목은 **propget** 특성 라는 함수가 필요 `get_propertyname`합니다.  
+ ODL 파일을 업데이트 후 MFC의 인터페이스 맵 메커니즘을 사용 하 여 개체 클래스에 이중 인터페이스에 대 한 구현 클래스를 정의 하 고 mfc의 해당 항목을 확인 하려면 `QueryInterface` 메커니즘입니다. 에 있는 하나의 항목 필요는 `INTERFACE_PART` ODL의 인터페이스 문에서 각 항목 및 디스패치 인터페이스에 대 한 항목에 대 한 블록입니다. 각 ODL 항목으로는 *propput* 특성 라는 함수가 필요 `put_propertyname`합니다. 각 항목은 *propget* 특성 라는 함수가 필요 `get_propertyname`합니다.  
   
  이중 인터페이스에 대 한 구현 클래스를 정의 하려면 추가 `DUAL_INTERFACE_PART` 개체 클래스 정의에 블록입니다. 예를 들어:  
   
@@ -339,9 +339,9 @@ AfxOleRegisterTypeLib(AfxGetInstanceHandle(), LIBID_ACDual, _T("AutoClik.TLB"));
  Note that when the coclass statement is changed, the variable names of **CLSID**s in the MkTypLib-generated header file will change accordingly. You will need to update your code to use the new variable names.  
   
 ## Handling Exceptions and the Automation Error Interfaces  
- Your automation object's methods and property accessor functions may throw exceptions. If so, you should handle them in your dual-interface implementation and pass information about the exception back to the controller through the OLE Automation error-handling interface, **IErrorInfo**. This interface provides for detailed, contextual error information through both `IDispatch` and VTBL interfaces. To indicate that an error handler is available, you should implement the **ISupportErrorInfo** interface.  
+ Your automation object's methods and property accessor functions may throw exceptions. If so, you should handle them in your dual-interface implementation and pass information about the exception back to the controller through the OLE Automation error-handling interface, `IErrorInfo`. This interface provides for detailed, contextual error information through both `IDispatch` and VTBL interfaces. To indicate that an error handler is available, you should implement the `ISupportErrorInfo` interface.  
   
- To illustrate the error-handling mechanism, assume that the ClassWizard-generated functions used to implement the standard dispatch support throw exceptions. MFC's implementation of **IDispatch::Invoke** typically catches these exceptions and converts them into an EXCEPTINFO structure that is returned through the `Invoke` call. However, when VTBL interface is used, you are responsible for catching the exceptions yourself. As an example of protecting your dual-interface methods:  
+ To illustrate the error-handling mechanism, assume that the ClassWizard-generated functions used to implement the standard dispatch support throw exceptions. MFC's implementation of `IDispatch::Invoke` typically catches these exceptions and converts them into an EXCEPTINFO structure that is returned through the `Invoke` call. However, when VTBL interface is used, you are responsible for catching the exceptions yourself. As an example of protecting your dual-interface methods:  
   
 ```  
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)  
@@ -354,7 +354,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
     CATCH_ALL_DUAL }  
 ```  
   
- `CATCH_ALL_DUAL` takes care of returning the correct error code when an exception occurs. `CATCH_ALL_DUAL` converts an MFC exception into OLE Automation error-handling information using the **ICreateErrorInfo** interface. (An example `CATCH_ALL_DUAL` macro is in the file MFCDUAL.H in the [ACDUAL](../visual-cpp-samples.md) sample. The function it calls to handle exceptions, `DualHandleException`, is in the file MFCDUAL.CPP.) `CATCH_ALL_DUAL` determines the error code to return based on the type of exception that occurred:  
+ `CATCH_ALL_DUAL` takes care of returning the correct error code when an exception occurs. `CATCH_ALL_DUAL` converts an MFC exception into OLE Automation error-handling information using the `ICreateErrorInfo` interface. (An example `CATCH_ALL_DUAL` macro is in the file MFCDUAL.H in the [ACDUAL](../visual-cpp-samples.md) sample. The function it calls to handle exceptions, `DualHandleException`, is in the file MFCDUAL.CPP.) `CATCH_ALL_DUAL` determines the error code to return based on the type of exception that occurred:  
   
 - [COleDispatchException](../mfc/reference/coledispatchexception-class.md) - In this case, `HRESULT` is constructed using the following code:  
   
@@ -371,17 +371,17 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
   
 -   Any other exception - In this case, `E_UNEXPECTED` is returned.  
   
- To indicate that the OLE Automation error handler is used, you should also implement the **ISupportErrorInfo** interface.  
+ To indicate that the OLE Automation error handler is used, you should also implement the `ISupportErrorInfo` interface.  
   
- First, add code to your automation class definition to show it supports **ISupportErrorInfo**.  
+ First, add code to your automation class definition to show it supports `ISupportErrorInfo`.  
   
- Second, add code to your automation class's interface map to associate the **ISupportErrorInfo** implementation class with MFC's `QueryInterface` mechanism. The `INTERFACE_PART` statement matches the class defined for **ISupportErrorInfo**.  
+ Second, add code to your automation class's interface map to associate the `ISupportErrorInfo` implementation class with MFC's `QueryInterface` mechanism. The `INTERFACE_PART` statement matches the class defined for `ISupportErrorInfo`.  
   
- Finally, implement the class defined to support **ISupportErrorInfo**.  
+ Finally, implement the class defined to support `ISupportErrorInfo`.  
   
  (The [ACDUAL](../visual-cpp-samples.md) sample contains three macros to help do these three steps, `DECLARE_DUAL_ERRORINFO`, `DUAL_ERRORINFO_PART`, and `IMPLEMENT_DUAL_ERRORINFO`, all contained in MFCDUAL.H.)  
   
- The following example implements a class defined to support **ISupportErrorInfo**. `CAutoClickDoc` is the name of your automation class and `IID_IDualAClick` is the **IID** for the interface that is the source of errors reported through the OLE Automation error object:  
+ The following example implements a class defined to support `ISupportErrorInfo`. `CAutoClickDoc` is the name of your automation class and `IID_IDualAClick` is the **IID** for the interface that is the source of errors reported through the OLE Automation error object:  
   
 ```  
 STDMETHODIMP_(ULONG) CAutoClickDoc::XSupportErrorInfo::AddRef()   

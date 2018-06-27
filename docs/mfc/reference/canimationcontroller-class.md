@@ -113,12 +113,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ec93c2d39206bbc0c3076835f55e624d3eef715
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b91acd3537477e4213ea87dec77a97822b9e3d98
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356926"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955117"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController 클래스
 애니메이션을 만들고 관리하기 위한 중앙 인터페이스를 제공하는 애니메이션 컨트롤러를 구현합니다.  
@@ -190,7 +190,7 @@ class CAnimationController : public CObject;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|스토리 보드의 시작을 나타내는 키 프레임입니다.|  
 |[CAnimationController::m_bIsValid](#m_bisvalid)|애니메이션 컨트롤러 유효한 지 여부를 지정 합니다. 이 멤버는 현재 운영 체제에서 Windows 애니메이션 API를 지원 하지 않으면 FALSE로 설정 됩니다.|  
@@ -227,7 +227,7 @@ CAnimationGroup* AddAnimationObject(CAnimationBaseObject* pObject);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pObject`  
+ *pObject*  
  애니메이션 개체에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -246,10 +246,10 @@ BOOL AddKeyframeToGroup(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nGroupID`  
+ *nGroupID*  
  그룹 ID를 지정 합니다.  
   
- `pKeyframe`  
+ *pKeyframe*  
  키 프레임에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -268,10 +268,10 @@ BOOL AnimateGroup(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nGroupID`  
+ *nGroupID*  
  그룹 Id를 지정합니다.  
   
- `bScheduleNow`  
+ *bScheduleNow*  
  애니메이션 바로 실행할 것인지를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -296,10 +296,10 @@ void CleanUpGroup(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nGroupID`  
+ *nGroupID*  
  그룹 Id를 지정합니다.  
   
- `pGroup`  
+ *pGroup*  
  정리할 애니메이션 그룹에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -321,16 +321,16 @@ CKeyFrame* CreateKeyframe(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nGroupID`  
+ *nGroupID*  
  키 프레임을 만들 그룹 ID를 지정합니다.  
   
- `pTransition`  
+ *pTransition*  
  전환에 대한 포인터입니다. 이 전환 후 스토리보드에 키 프레임이 삽입됩니다.  
   
- `pKeyframe`  
+ *pKeyframe*  
  이 키 프레임의 기본 키 프레임에 대한 포인터입니다.  
   
- `offset`  
+ *offset*  
  pKeyframe에 지정된 기본 키 프레임에서의 오프셋(초)입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -347,7 +347,7 @@ virtual BOOL EnableAnimationManagerEvent(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bEnable`  
+ *bEnable*  
  설정 하거나 해제 한 처리기를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -366,10 +366,10 @@ virtual BOOL EnableAnimationTimerEventHandler(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bEnable`  
+ *bEnable*  
  설정 하거나 해제 처리기 것인지 지정 합니다.  
   
- `idleBehavior`  
+ *idleBehavior*  
  타이머 업데이트 처리기에 대 한 유휴 동작을 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -386,7 +386,7 @@ virtual BOOL EnablePriorityComparisonHandler(DWORD dwHandlerType);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwHandlerType`  
+ *dwHandlerType*  
  UI_ANIMATION_PHT_ 조합의 어떤 처리기를 설정 또는 해제할지를 지정 하는 (설명 참조) 플래그 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -405,10 +405,10 @@ virtual BOOL EnableStoryboardEventHandler(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nGroupID`  
+ *nGroupID*  
  그룹 ID를 지정 합니다.  
   
- `bEnable`  
+ *bEnable*  
  설정 하거나 해제 한 처리기를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -426,10 +426,10 @@ CAnimationGroup* FindAnimationGroup(IUIAnimationStoryboard* pStoryboard);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nGroupID`  
+ *nGroupID*  
  그룹 Id를 지정합니다.  
   
- `pStoryboard`  
+ *pStoryboard*  
  스토리 보드에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -449,13 +449,13 @@ BOOL FindAnimationObject(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pVariable`  
+ *pVariable*  
  애니메이션 변수에 대 한 포인터입니다.  
   
- `ppObject`  
+ *ppObject*  
  출력입니다. 애니메이션 개체 또는 NULL에 대 한 포인터를 포함합니다.  
   
- `ppGroup`  
+ *ppGroup*  
  출력입니다. 애니메이션 개체 또는 NULL을 포함 하는 애니메이션 그룹에 대 한 포인터를 포함 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -619,7 +619,7 @@ virtual void OnAfterSchedule(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pGroup`  
+ *pGroup*  
  예약 된 애니메이션 그룹에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -638,19 +638,19 @@ virtual void OnAnimationIntegerValueChanged(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pGroup`  
+ *pGroup*  
  값을 갖는 애니메이션 개체를 보유 하는 애니메이션 그룹에 대 한 포인터를 변경 했습니다.  
   
- `pObject`  
+ *pObject*  
  값이 변경 된 애니메이션 변수를 포함 하는 애니메이션 개체에 대 한 포인터입니다.  
   
- `variable`  
+ *variable*  
  애니메이션 변수에 대 한 포인터입니다.  
   
- `newValue`  
+ *새 값*  
  새 값을 지정합니다.  
   
- `prevValue`  
+ *prevValue*  
  이전 값을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -666,10 +666,10 @@ virtual void OnAnimationManagerStatusChanged(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `newStatus`  
+ *newStatus*  
  새 애니메이션 관리자 상태입니다.  
   
- `previousStatus`  
+ *previousStatus*  
  이전 애니메이션 관리자 상태입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -703,7 +703,7 @@ virtual void OnAnimationTimerRenderingTooSlow(UINT32 fps);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `fps`  
+ *fps*  
  초당 프레임의 현재 프레임 속도 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -722,19 +722,19 @@ virtual void OnAnimationValueChanged(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pGroup`  
+ *pGroup*  
  값을 갖는 애니메이션 개체를 보유 하는 애니메이션 그룹에 대 한 포인터를 변경 했습니다.  
   
- `pObject`  
+ *pObject*  
  값이 변경 된 애니메이션 변수를 포함 하는 애니메이션 개체에 대 한 포인터입니다.  
   
- `variable`  
+ *variable*  
  애니메이션 변수에 대 한 포인터입니다.  
   
- `newValue`  
+ *새 값*  
  새 값을 지정합니다.  
   
- `prevValue`  
+ *prevValue*  
  이전 값을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -748,7 +748,7 @@ virtual void OnBeforeAnimationStart(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pGroup`  
+ *pGroup*  
  해당 애니메이션이 시작 되려고 애니메이션 그룹에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -765,13 +765,13 @@ virtual BOOL OnHasPriorityCancel(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  현재 예약된 스토리보드를 소유하고 있는 그룹입니다.  
   
- `pGroupNew`  
+ *pGroupNew*  
  pGroupScheduled에서 소유한 예약된 스토리보드와 충돌을 예약하고 있는 새 스토리보드를 소유하는 그룹입니다.  
   
- `priorityEffect`  
+ *priorityEffect*  
  pGroupScheduled에 높은 우선 순위가 있는 경우 pGroupNew에서 발생할 수 있는 효과입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -791,13 +791,13 @@ virtual BOOL OnHasPriorityCompress(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  현재 예약된 스토리보드를 소유하고 있는 그룹입니다.  
   
- `pGroupNew`  
+ *pGroupNew*  
  pGroupScheduled에서 소유한 예약된 스토리보드와 충돌을 예약하고 있는 새 스토리보드를 소유하는 그룹입니다.  
   
- `priorityEffect`  
+ *priorityEffect*  
  pGroupScheduled에 높은 우선 순위가 있는 경우 pGroupNew에서 발생할 수 있는 효과입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -817,13 +817,13 @@ virtual BOOL OnHasPriorityConclude(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  현재 예약된 스토리보드를 소유하고 있는 그룹입니다.  
   
- `pGroupNew`  
+ *pGroupNew*  
  pGroupScheduled에서 소유한 예약된 스토리보드와 충돌을 예약하고 있는 새 스토리보드를 소유하는 그룹입니다.  
   
- `priorityEffect`  
+ *priorityEffect*  
  pGroupScheduled에 높은 우선 순위가 있는 경우 pGroupNew에서 발생할 수 있는 효과입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -843,13 +843,13 @@ virtual BOOL OnHasPriorityTrim(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pGroupScheduled`  
+ *pGroupScheduled*  
  현재 예약된 스토리보드를 소유하고 있는 그룹입니다.  
   
- `pGroupNew`  
+ *pGroupNew*  
  pGroupScheduled에서 소유한 예약된 스토리보드와 충돌을 예약하고 있는 새 스토리보드를 소유하는 그룹입니다.  
   
- `priorityEffect`  
+ *priorityEffect*  
  pGroupScheduled에 높은 우선 순위가 있는 경우 pGroupNew에서 발생할 수 있는 효과입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -869,13 +869,13 @@ virtual void OnStoryboardStatusChanged(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pGroup`  
+ *pGroup*  
  해당 상태가 스토리 보드를 소유 하는 애니메이션 그룹에 대 한 포인터 변경 되었습니다.  
   
- `newStatus`  
+ *newStatus*  
  새 상태를 지정 합니다.  
   
- `previousStatus`  
+ *previousStatus*  
  이전 상태를 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -889,7 +889,7 @@ virtual void OnStoryboardUpdated(CAnimationGroup* pGroup);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pGroup`  
+ *pGroup*  
  스토리 보드를 소유 하는 그룹에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -913,7 +913,7 @@ void RemoveAnimationGroup(UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nGroupID`  
+ *nGroupID*  
  애니메이션 그룹 ID를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -929,10 +929,10 @@ void RemoveAnimationObject(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pObject`  
+ *pObject*  
  애니메이션 개체에 대 한 포인터입니다.  
   
- `bNoDelete`  
+ *bNoDelete*  
  이 매개 변수가 TRUE 이면 개체 제거 시 삭제 되지 않습니다.  
   
 ### <a name="remarks"></a>설명  
@@ -946,7 +946,7 @@ void RemoveTransitions(UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nGroupID`  
+ *nGroupID*  
  그룹 ID를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -962,10 +962,10 @@ BOOL ScheduleGroup(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nGroupID`  
+ *nGroupID*  
  애니메이션을 예약 하려면 그룹 ID를 지정 합니다.  
   
- `time`  
+ *time*  
  예약 시간을 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -982,7 +982,7 @@ void SetRelatedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  설정할 창 개체에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  

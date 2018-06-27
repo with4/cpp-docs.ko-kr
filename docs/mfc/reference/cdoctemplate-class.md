@@ -56,11 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7674e9a25f4794d40a977fce914ab6ac0131de25
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9a1ee27994a83206b576452d30b108f01c794353
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957511"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate 클래스
 문서 템플릿의 기본 기능을 정의하는 추상 기본 클래스입니다.  
@@ -106,7 +107,7 @@ class CDocTemplate : public CCmdTarget
 ## <a name="remarks"></a>설명  
  일반적으로 응용 프로그램의 구현에서 하나 이상의 문서 서식 파일을 만들면 `InitInstance` 함수입니다. 문서 서식 파일을 3 가지 유형의 클래스 간의 관계를 정의합니다.  
   
--   문서 클래스에서 파생 되는 **CDocument**합니다.  
+-   문서 클래스에서 파생 되는 `CDocument`합니다.  
   
 -   위에 나열 된 문서 클래스에서 데이터를 표시 하는 뷰 클래스 이 클래스를 파생 시켜 `CView`, `CScrollView`, `CFormView`, 또는 `CEditView`합니다. (사용할 수 있습니다 `CEditView` 직접.)  
   
@@ -144,7 +145,7 @@ virtual void AddDocument(CDocument* pDoc);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDoc`  
+ *pDoc*  
  추가 될 문서에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -162,7 +163,7 @@ CDocTemplate (
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDResource`  
+ *nIDResource*  
  문서 종류를 사용 하는 리소스의 ID를 지정 합니다. 이 메뉴, 아이콘, 액셀러레이터 키 테이블 및 문자열 리소스 포함 될 수 있습니다.  
   
  '\N' 문자로 구분 되는 최대 7 개의 부분 문자열로 이루어진 문자열 리소스 구성 (부분 문자열에 포함 되지 않은 경우 '\n' 문자 자리 표시자 변수로 필요; 그러나 후행 '\n' 문자가 필요 하지 않은); 이러한 부분 문자열에는 문서 유형에 대해 설명합니다. 부분 문자열 대 한 자세한 내용은 참조 [GetDocString](#getdocstring)합니다. 이 문자열 리소스를 응용 프로그램의 리소스 파일에서 찾을 수 있습니다. 예를 들어:  
@@ -179,13 +180,13 @@ CDocTemplate (
   
  '\N' 문자로 시작 하는 첫 번째 하위 문자열이 MDI 응용 프로그램에 대 한 사용 되지 않으며 있으므로 포함 되지 않은 때문입니다. 문자열 편집기;를 사용 하 여이 문자열을 편집할 수 있습니다. 전체 문자열 7 개 항목을 구분이 아니라 문자열 편집기에서 단일 항목으로 표시 됩니다.  
   
- `pDocClass`  
- 가리키는 `CRuntimeClass` 문서 클래스의 개체입니다. 이 클래스는는 **CDocument**-문서를 나타내기 위해 정의한 클래스를 파생 합니다.  
+ *pDocClass*  
+ 가리키는 `CRuntimeClass` 문서 클래스의 개체입니다. 이 클래스는는 `CDocument`-문서를 나타내기 위해 정의한 클래스를 파생 합니다.  
   
- `pFrameClass`  
+ *pFrameClass*  
  가리키는 `CRuntimeClass` 프레임 창 클래스의 개체입니다. 될 수 있는이 클래스는 `CFrameWnd`-파생 클래스가 될 수 있습니다 또는 `CFrameWnd` 자체 주 프레임 창에 대 한 기본 동작을 수행 합니다.  
   
- `pViewClass`  
+ *pViewClass*  
  가리키는 `CRuntimeClass` 뷰 클래스의 개체입니다. 이 클래스는는 `CView`-문서를 표시 하기 위해 정의 하는 클래스를 파생 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -199,8 +200,8 @@ virtual void CloseAllDocuments(BOOL bEndSession);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bEndSession`  
- 세션을 종료 여부를 지정 합니다. **TRUE** 세션이 고, 그렇지 않으면 종료 되 고 있으면 **FALSE**합니다.  
+ *bEndSession*  
+ 사용되지 않습니다.  
   
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 일반적으로 파일 종료 명령의 일부로 사용 됩니다. 이 함수의 기본 구현에서는 호출 하 여 [CDocument::DeleteContents](../../mfc/reference/cdocument-class.md#deletecontents) 멤버 함수 및 삭제 하는 문서의 데이터 다음 문서에 연결 된 모든 보기에 대 한 프레임 창을 닫습니다.  
@@ -227,19 +228,19 @@ virtual CFrameWnd* CreateNewFrame(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDoc`  
+ *pDoc*  
  새 프레임 창 참조 해야 하는 문서입니다. 수 **NULL**합니다.  
   
- `pOther`  
+ *광폭 한*  
  새 프레임 창을 기반으로는 프레임 창입니다. 수 **NULL**합니다.  
   
 ### <a name="return-value"></a>반환 값  
  새로 만든된 프레임 창에 대 한 포인터 또는 **NULL** 오류가 발생 합니다.  
   
 ### <a name="remarks"></a>설명  
- `CreateNewFrame` 사용 하 여는 `CRuntimeClass` 뷰와 연결 된 문서를 사용 하 여 새 프레임 창 개체를 만들려면 생성자에 전달 된 개체입니다. 경우는 `pDoc` 매개 변수는 **NULL**, 프레임 워크는 추적 메시지를 출력 합니다.  
+ `CreateNewFrame` 사용 하 여는 `CRuntimeClass` 뷰와 연결 된 문서를 사용 하 여 새 프레임 창 개체를 만들려면 생성자에 전달 된 개체입니다. 경우는 *pDoc* 매개 변수는 **NULL**, 프레임 워크는 추적 메시지를 출력 합니다.  
   
- `pOther` 매개 변수를 사용 하는 새 창 명령을 구현 합니다. 프레임 창을 새로운 프레임 창을 모델링을 제공 합니다. 새 프레임 창은 대개 보이지 않는 만들어집니다. 새 파일 및 파일 열기 표준 프레임 워크 구현 외부 프레임 창을 만들려면이 함수를 호출 합니다.  
+ *광폭 한* 매개 변수를 사용 하는 새 창 명령을 구현 합니다. 프레임 창을 새로운 프레임 창을 모델링을 제공 합니다. 새 프레임 창은 대개 보이지 않는 만들어집니다. 새 파일 및 파일 열기 표준 프레임 워크 구현 외부 프레임 창을 만들려면이 함수를 호출 합니다.  
   
 ##  <a name="createoleframe"></a>  CDocTemplate::CreateOleFrame  
  OLE 프레임 창을 만듭니다.  
@@ -252,20 +253,20 @@ CFrameWnd* CreateOleFrame(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParentWnd`  
+ *pParentWnd*  
  프레임의 부모 창에 대 한 포인터입니다.  
   
- `pDoc`  
+ *pDoc*  
  새 OLE 프레임 창이 문서에 대 한 포인터를 참조 해야 합니다.  
   
- `bCreateView`  
+ *bCreateView*  
  보기 프레임 함께 만들 것인지를 결정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공 하면 프레임 창에 대 한 포인터 그렇지 않으면 **NULL**합니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `bCreateView` 가 0 이면 빈 프레임 만들어집니다.  
+ 경우 *bCreateView* 0 이면 빈 프레임 만들어집니다.  
   
 ##  <a name="getdocstring"></a>  CDocTemplate::GetDocString  
  문서 종류와 관련 된 문자열을 검색 합니다.  
@@ -277,7 +278,7 @@ virtual BOOL GetDocString(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rString`  
+ *rString*  
  에 대 한 참조는 `CString` 함수에서 반환 된 문자열을 포함 하는 개체입니다.  
   
  *index*  
@@ -321,7 +322,7 @@ virtual POSITION GetFirstDocPosition() const = 0;
  [CSingleDocTemplate](../../mfc/reference/csingledoctemplate-class.md) 및 [CMultiDocTemplate](../../mfc/reference/cmultidoctemplate-class.md) 둘 다이 순수 가상 함수를 재정의 합니다. 모든 클래스에서 파생 `CDocTemplate` 이 함수를 재정의 해야 합니다.  
   
 ##  <a name="getnextdoc"></a>  CDocTemplate::GetNextDoc  
- 로 식별 되는 목록 요소 검색 `rPos`, 다음 설정 `rPos` 에 **위치** 목록에서 다음 항목의 값입니다.  
+ 로 식별 되는 목록 요소 검색 *Rpo*, 다음 설정 *Rpo* 에 **위치** 목록에서 다음 항목의 값입니다.  
   
 ```  
 virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;  
@@ -331,11 +332,11 @@ virtual CDocument* GetNextDoc(POSITION& rPos) const = 0;
  이 템플릿에 연결 된 문서 목록에서 다음 문서에 대 한 포인터입니다.  
   
 ### <a name="parameters"></a>매개 변수  
- `rPos`  
+ *Rpo*  
  에 대 한 참조는 **위치** 대 한 이전 호출에서 반환 된 값 [GetFirstDocPosition](#getfirstdocposition) 또는 `GetNextDoc`합니다.  
   
 ### <a name="remarks"></a>설명  
- 검색된 된 요소는 목록에서 마지막 다음 새 값의 경우 `rPos` 로 설정 된 **NULL**합니다.  
+ 검색된 된 요소는 목록에서 마지막 다음 새 값의 경우 *Rpo* 로 설정 된 **NULL**합니다.  
   
  사용할 수 있습니다 `GetNextDoc` 정방향으로 반복 루프를 호출 하 여 초기 위치를 설정 하는 경우에 [GetFirstDocPosition](#getfirstdocposition)합니다.  
   
@@ -352,17 +353,17 @@ virtual void InitialUpdateFrame(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pFrame`  
+ *pFrame*  
  프레임 창-초기 업데이트가 필요한입니다.  
   
- `pDoc`  
+ *pDoc*  
  프레임이 연결 되는 문서입니다. 수 **NULL**합니다.  
   
- `bMakeVisible`  
+ *bMakeVisible*  
  표시 되 고 활성 프레임 수 있는지 여부를 나타냅니다.  
   
 ### <a name="remarks"></a>설명  
- 호출 **IntitialUpdateFrame** 새 프레임을 만든 후 `CreateNewFrame`합니다. 수신 하도록 해당 프레임 창에는 뷰에이 함수를 호출 하면 해당 `OnInitialUpdate` 호출 합니다. 또한 발생 한 경우 하지 이전에 활성 뷰, 프레임 창의 기본 보기 활성화 될; 기본 뷰는 자식 id가 **AFX_IDW_PANE_FIRST**합니다. 마지막으로, 프레임 창이 표시 되기 경우 `bMakeVisible` 0이 아닙니다. 경우 `bMakeVisible` 가 0 인 현재 포커스 및 프레임 창의 표시 상태 변경 되지 것입니다.  
+ 호출 **IntitialUpdateFrame** 새 프레임을 만든 후 `CreateNewFrame`합니다. 수신 하도록 해당 프레임 창에는 뷰에이 함수를 호출 하면 해당 `OnInitialUpdate` 호출 합니다. 또한 발생 한 경우 하지 이전에 활성 뷰, 프레임 창의 기본 보기 활성화 될; 기본 뷰는 자식 id가 **AFX_IDW_PANE_FIRST**합니다. 마지막으로, 프레임 창이 표시 되기 경우 `bMakeVisible` 0이 아닙니다. 경우 *bMakeVisible* 가 0 인 현재 포커스 및 프레임 창의 표시 상태 변경 되지 것입니다.  
   
  새 파일 및 파일 열기의 프레임 워크의 구현을 사용 하는 경우이 함수를 호출할 필요는 없습니다.  
   
@@ -386,11 +387,11 @@ virtual Confidence MatchDocType(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszPathName`  
+ *lpszPathName*  
  결정 해야 하는 형식이 파일의 경로 이름입니다.  
   
- `rpDocMatch`  
- 일치 하는 문서에서 지정한 파일이 있으면이 할당 된 문서에 대 한 포인터 `lpszPathName` 가 이미 열려 있습니다.  
+ *rpDocMatch*  
+ 일치 하는 문서에서 지정한 파일이 있으면이 할당 된 문서에 대 한 포인터 *lpszPathName* 가 이미 열려 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
  값은 **신뢰도** 다음과 같이 정의 된 열거:  
@@ -410,9 +411,9 @@ enum Confidence
 ### <a name="remarks"></a>설명  
  이 함수를 사용 하 여 사용할 파일을 열기 위한 문서 서식 파일의 형식을 결정 합니다. 응용 프로그램에서 여러 파일 형식의 지 원하는 경우 예를 들어 하는 데이 함수는 사용할 수 있는 문서 템플릿의 호출 하 여 지정된 된 파일에 적합 한지 결정 `MatchDocType` 차례로에 따라 템플릿을 선택 하 고에서 각 서식 파일 반환 되는 신뢰성 값입니다.  
   
- 으로 지정한 파일이 있으면 `lpszPathName` 가 이미 열려이 함수는 반환 **CDocTemplate::yesAlreadyOpen** 파일의 복사 **CDocument** 개체에 있는 개체에 `rpDocMatch`합니다.  
+ 으로 지정한 파일이 있으면 *lpszPathName* 가 이미 열려이 함수는 반환 **CDocTemplate::yesAlreadyOpen** 파일의 복사 **CDocument** 개체는 개체에 *rpDocMatch*합니다.  
   
- 파일에서 확장 되지만 열려 있지 않으면 `lpszPathName` 로 지정 된 확장명과 일치 **CDocTemplate::filterExt**,이 함수는 반환 **CDocTemplate::yesAttemptNative** 를가져오거나설정합니다.`rpDocMatch` 를 **NULL**합니다. 대 한 자세한 내용은 **CDocTemplate::filterExt**, 참조 [CDocTemplate::GetDocString](#getdocstring)합니다.  
+ 파일에서 확장 되지만 열려 있지 않으면 *lpszPathName* 로 지정 된 확장명과 일치 **CDocTemplate::filterExt**,이 함수는 반환 **CDocTemplate::yesAttemptNative** 설정 *rpDocMatch* 를 **NULL**합니다. 대 한 자세한 내용은 **CDocTemplate::filterExt**, 참조 [CDocTemplate::GetDocString](#getdocstring)합니다.  
   
  함수가 반환 하는 경우에 두 경우 모두이 true 이면 **CDocTemplate::yesAttemptForeign**합니다.  
   
@@ -430,27 +431,27 @@ virtual CDocument* OpenDocumentFile(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszPathName`  
+ [in] *lpszPathName*  
  문서를 열 수를 포함 하는 파일의 경로에 대 한 포인터입니다.  
   
- [in] `bAddToMRU`  
+ [in] *bAddToMRU*  
  `TRUE` 문서가; 가장 최근에 사용한 파일 중 하나를 나타냅니다. `FALSE` 문서가 아닌 가장 최근에 사용한 파일 중 하나를 나타냅니다.  
   
 ### <a name="return-value"></a>반환 값  
- 해당 파일에서 명명 된 문서에 대 한 포인터 `lpszPathName`; `NULL` 실패 합니다.  
+ 해당 파일에서 명명 된 문서에 대 한 포인터 *lpszPathName*; `NULL` 실패 합니다.  
   
 ### <a name="remarks"></a>설명  
- 지정한 경로가 있는 파일을 엽니다 `lpszPathName`합니다. 경우 `lpszPathName` 은 `NULL`,이 템플릿에 연결 된 형식의 문서를 포함 하는 새 파일이 생성 됩니다.  
+ 해당 경로 지정 하 여 파일을 열고 *lpszPathName*합니다. 경우 *lpszPathName* 은 `NULL`,이 템플릿에 연결 된 형식의 문서를 포함 하는 새 파일이 생성 됩니다.  
   
 ##  <a name="removedocument"></a>  CDocTemplate::RemoveDocument  
- 가 가리키는 문서를 제거 `pDoc` 이 템플릿에 연결 된 문서 목록에서 합니다.  
+ 가 가리키는 문서를 제거 *pDoc* 이 템플릿에 연결 된 문서 목록에서 합니다.  
   
 ```  
 virtual void RemoveDocument(CDocument* pDoc);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDoc`  
+ *pDoc*  
  제거할 문서에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -474,13 +475,13 @@ void SetContainerInfo(UINT nIDOleInPlaceContainer);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDOleInPlaceContainer`  
+ *nIDOleInPlaceContainer*  
  포함된 된 개체가 활성화 될 때 사용 하는 리소스의 ID입니다.  
   
 ### <a name="remarks"></a>설명  
  OLE 개체를 활성화 될 때 사용 되는 리소스를 설정 하려면이 함수를 호출 합니다. 이러한 리소스는 메뉴 및 액셀러레이터 키 테이블에 포함 될 수 있습니다. 이 함수는 일반적으로 호출 됩니다는 [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) 응용 프로그램의 기능입니다.  
   
- 연결 된 메뉴 `nIDOleInPlaceContainer` 컨테이너 응용 프로그램의 메뉴를 사용 하 여 병합 활성화 된 전체 항목의 메뉴를 사용할 수 있는 구분 기호를 포함 합니다. 서버 및 컨테이너 메뉴 병합 하는 방법에 대 한 자세한 내용은 문서 참조 [메뉴 및 리소스 (OLE)](../../mfc/menus-and-resources-ole.md)합니다.  
+ 연결 된 메뉴 *nIDOleInPlaceContainer* 컨테이너 응용 프로그램의 메뉴를 사용 하 여 병합 활성화 된 전체 항목의 메뉴를 사용할 수 있는 구분 기호를 포함 합니다. 서버 및 컨테이너 메뉴 병합 하는 방법에 대 한 자세한 내용은 문서 참조 [메뉴 및 리소스 (OLE)](../../mfc/menus-and-resources-ole.md)합니다.  
   
 ##  <a name="setdefaulttitle"></a>  CDocTemplate::SetDefaultTitle  
  문서의 기본 제목을 로드 하 고 문서의 제목 표시줄에 표시 하려면이 함수를 호출 합니다.  
@@ -511,7 +512,7 @@ void SetServerInfo(
  *nIDOleEmbedding*  
  별도 창에서 포함된 된 개체를 열 때 사용 하는 리소스의 ID입니다.  
   
- `nIDOleInPlaceServer`  
+ *nIDOleInPlaceServer*  
  내부 활성화 하는 경우 포함된 된 개체를 사용 하는 리소스의 ID입니다.  
   
  *pOleFrameClass*  
@@ -523,7 +524,7 @@ void SetServerInfo(
 ### <a name="remarks"></a>설명  
  사용자는 포함된 된 개체의 정품 인증을 요청 하면 서버 응용 프로그램에서 사용할 수 있는 리소스를 식별 하려면이 멤버 함수를 호출 합니다. 메뉴 및 액셀러레이터 키 테이블의 다음이 리소스 구성 됩니다. 이 함수는 일반적으로 호출 됩니다는 `InitInstance` 응용 프로그램의 합니다.  
   
- 연결 된 메뉴 `nIDOleInPlaceServer` 컨테이너 메뉴와 병합 하는 서버 메뉴를 사용할 수 있는 구분 기호를 포함 합니다. 서버 및 컨테이너 메뉴 병합 하는 방법에 대 한 자세한 내용은 문서 참조 [메뉴 및 리소스 (OLE)](../../mfc/menus-and-resources-ole.md)합니다.  
+ 연결 된 메뉴 *nIDOleInPlaceServer* 컨테이너 메뉴와 병합 하는 서버 메뉴를 사용할 수 있는 구분 기호를 포함 합니다. 서버 및 컨테이너 메뉴 병합 하는 방법에 대 한 자세한 내용은 문서 참조 [메뉴 및 리소스 (OLE)](../../mfc/menus-and-resources-ole.md)합니다.  
   
 ##  <a name="createpreviewframe"></a>  CDocTemplate::CreatePreviewFrame  
  서식 있는 미리 보기에 사용 되는 자식 프레임을 만듭니다.  
@@ -535,10 +536,10 @@ CFrameWnd* CreatePreviewFrame(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParentWnd`  
+ *pParentWnd*  
  부모 창 (일반적으로 셸에서 제공)에 대 한 포인터입니다.  
   
- `pDoc`  
+ *pDoc*  
  문서 개체에 해당 내용이 미리 보기 됩니다에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -557,13 +558,13 @@ void SetPreviewInfo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDPreviewFrame`  
+ *nIDPreviewFrame*  
  미리 보기 프레임의 리소스 ID를 지정합니다.  
   
- `pPreviewFrameClass`  
+ *pPreviewFrameClass*  
  미리 보기 프레임의 런타임 클래스 정보 구조에 대 한 포인터를 지정합니다.  
   
- `pPreviewViewClass`  
+ *pPreviewViewClass*  
  미리 보기의 런타임 클래스 정보 구조에 대 한 포인터를 지정합니다.  
   
 ### <a name="remarks"></a>설명  

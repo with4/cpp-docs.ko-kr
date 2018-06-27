@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d8c98181a9ec049308d7b85e57c028740927cc2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 85e59173ec330d0a5abb968225ce6b2e12263948
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367037"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954067"
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo 구조체
 `CDaoIndexInfo` 구조 데이터 액세스 개체 (DAO)에 대해 정의 된 인덱스 개체에 대 한 정보를 포함 합니다.  
@@ -48,14 +48,14 @@ struct CDaoIndexInfo {
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `m_strName`  
+ *m_strName*  
  Field 개체를 이름을 고유 하 게 지정 합니다. 자세한 내용은 DAO 도움말의 "Name 속성" 항목을 참조 합니다.  
   
- `m_pFieldInfos`  
+ *m_pFieldInfos*  
  배열에 대 한 포인터 [CDaoIndexFieldInfo](../../mfc/reference/cdaoindexfieldinfo-structure.md) tabledef 또는 레코드 집합 필드는 인덱스의 키 필드를 나타내는 개체입니다. 각 개체는 인덱스의 한 필드를 식별합니다. 기본 인덱스 순서는 오름차순입니다. Index 개체 각 레코드에 대 한 인덱스 키를 나타내는 하나 이상의 필드를 가질 수 있습니다. 이러한 내림차순, 필터 또는 조합을 오름차순 될 수 있습니다.  
   
- `m_nFields`  
- 에 저장 된 필드 수가 `m_pFieldInfos`합니다.  
+ *m_nFields*  
+ 에 저장 된 필드 수가 *m_pFieldInfos*합니다.  
   
  *m_bPrimary*  
  기본 속성이 **TRUE**, index 개체 기본 인덱스를 나타냅니다. 기본 인덱스는 미리 정의 된 순서로 테이블의 모든 레코드를 고유 하 게 식별 하는 하나 이상의 필드로 구성 됩니다. 인덱스 필드는 고유 해야 하기 때문에 Unique Index 개체의도 속성이 **TRUE** dao에서 합니다. 기본 인덱스 둘 이상의 필드로 구성 된 각 필드에 중복 값이 포함 될 수 있습니다 하지만 인덱싱된 모든 필드에서 값 조합은 각각 고유 해야 합니다. 기본 인덱스를 테이블에 대 한 키 구성 되며 일반적으로 기본 키와 같은 필드를 포함 합니다.  
@@ -89,7 +89,7 @@ struct CDaoIndexInfo {
   
  자세한 내용은 DAO 도움말의 "IgnoreNulls Property" 항목을 참조 하십시오.  
   
- `m_bRequired`  
+ *m_bRequired*  
  DAO index 개체는 Null이 아닌 값을 필요한 지 여부를 나타냅니다. 이 속성이 **TRUE**, index 개체는 Null 값을 허용 하지 않습니다. 자세한 내용은 DAO 도움말의 "필수 속성" 항목을 참조 하십시오.  
   
 > [!TIP]
@@ -106,7 +106,7 @@ struct CDaoIndexInfo {
   
  Index 개체는 MFC 클래스에 의해 표시 되지 않습니다. 대신, DAO 개체 클래스의 기본 MFC 개체 [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md) 또는 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) 인덱스 컬렉션 이라고 하는 인덱스 개체의 컬렉션을 포함 합니다. 이러한 클래스는 개별 항목의 인덱스 정보에 액세스 하는 멤버 함수를 제공 하거나 인수를 한 번에 모두를 사용 하 여 액세스할 수 있습니다는 `CDaoIndexInfo` 호출 하 여 개체는 `GetIndexInfo` 포함 하는 개체의 멤버 함수입니다.  
   
- `CDaoIndexInfo` 에 생성자와 소멸자 제대로 할당 하 고 인덱스 필드 정보에 할당을 취소 하기 위해 `m_pFieldInfos`합니다.  
+ `CDaoIndexInfo` 에 생성자와 소멸자 제대로 할당 하 고 인덱스 필드 정보에 할당을 취소 하기 위해 *m_pFieldInfos*합니다.  
   
  검색 한 정보는 `GetIndexInfo` tabledef 개체의 멤버 함수에 저장 되는 `CDaoIndexInfo` 구조입니다. 호출 된 `GetIndexInfo` 인덱스 개체가 보관 되어 있는 인덱스 컬렉션에 포함 하는 테이블 정의 개체의 멤버 함수입니다. `CDaoIndexInfo` 또한 정의 `Dump` 디버그에서 멤버 함수를 작성 합니다. 사용할 수 있습니다 `Dump` 의 내용을 덤프 하는 `CDaoIndexInfo` 개체입니다.  
   

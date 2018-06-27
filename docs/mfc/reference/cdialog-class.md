@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43f36dae3c383aebedf7e8340188e78961066a30
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8ae7748c249cb9c7752b55d07bf10278c9c7f4ce
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374616"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955016"
 ---
 # <a name="cdialog-class"></a>CDialog 클래스
 화면에 대화 상자를 표시에 사용 되는 기본 클래스입니다.  
@@ -97,7 +97,7 @@ class CDialog : public CWnd
   
 |이름|설명|  
 |----------|-----------------|  
-|[CDialog::OnCancel](#oncancel)|취소 단추 또는 ESC 키 동작을 수행 하려면 재정의 합니다. 기본 대화 상자를 닫고 및 **DoModal** 반환 **IDCANCEL**합니다.|  
+|[CDialog::OnCancel](#oncancel)|취소 단추 또는 ESC 키 동작을 수행 하려면 재정의 합니다. 기본 대화 상자를 닫고 및 `DoModal` 반환 **IDCANCEL**합니다.|  
 |[CDialog::OnOK](#onok)|재정의 하는 모달 대화 상자에서 확인 단추 작업을 수행 합니다. 기본 대화 상자를 닫고 및 `DoModal` 반환 **IDOK**합니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -113,7 +113,7 @@ class CDialog : public CWnd
   
  자동으로 멤버 변수와 대화 상자의 컨트롤 간의 데이터 교환을 처리 하는 데이터 맵이 생성 됩니다. 데이터 구조에는 적절 한 값이 포함 된 대화 상자 컨트롤을 초기화 데이터를 검색 하 고 데이터의 유효성을 검사 하는 함수가 제공 합니다.  
   
- 모달 대화 상자를 만들려면 파생된 대화 상자 클래스에 대 한 생성자를 사용 하는 개체를 생성 하 고 다음 호출 `DoModal` 대화 상자 창 및 해당 컨트롤을 만드는 합니다. 모덜리스 대화 상자를 만들려는 경우에 호출 **만들기** 대화 상자 클래스의 생성자에서 합니다.  
+ 모달 대화 상자를 만들려면 파생된 대화 상자 클래스에 대 한 생성자를 사용 하는 개체를 생성 하 고 다음 호출 `DoModal` 대화 상자 창 및 해당 컨트롤을 만드는 합니다. 모덜리스 대화 상자를 만들려는 경우에 호출 `Create` 대화 상자 클래스의 생성자에서 합니다.  
   
  사용 하 여 메모리에서 템플릿을 만들 수도 있습니다는 [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Windows SDK에 설명 된 대로 데이터 구조입니다. 생성 한 후는 `CDialog` 개체, 호출 [CreateIndirect](#createindirect) 만들려면는 모덜리스 대화 상자 또는 호출 [InitModalIndirect](#initmodalindirect) 및 [DoModal](#domodal) 모달을 만들려면 대화 상자입니다.  
   
@@ -166,13 +166,13 @@ CDialog();
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  대화 상자 템플릿 리소스의 이름에 해당 하는 null로 끝나는 문자열을 포함 합니다.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  대화 상자 템플릿 리소스의 ID 번호를 포함합니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  부모 또는 소유자 창 개체를 가리키는 (형식의 [CWnd](../../mfc/reference/cwnd-class.md)) 대화 상자 개체 속해 있는 합니다. 이 경우 **NULL**, 대화 상자 개체의 부모 창은 주 응용 프로그램 창으로 설정 됩니다.  
   
 ### <a name="remarks"></a>설명  
@@ -182,10 +182,10 @@ CDialog();
   
  위의 방법 중 하나로 모달 대화 상자를 생성 한 후 호출 `DoModal`합니다.  
   
- 생성 하려면 모덜리스 대화 상자를 사용 하 여 보호 된 형식으로는 `CDialog` 생성자입니다. 생성자는 모덜리스 대화 상자를 구현 하는 고유한 대화 상자 클래스를 파생 해야 하기 때문에 보호 됩니다. 모덜리스 대화 상자를 생성은 두 단계로 이루어집니다. 먼저; 생성자를 호출 합니다. 다음 호출에서 **만들기** 리소스 기반 대화 상자를 만들고 멤버 함수 호출 또는 `CreateIndirect` 메모리에서 서식 파일에서 만들기 대화 상자를 합니다.  
+ 생성 하려면 모덜리스 대화 상자를 사용 하 여 보호 된 형식으로는 `CDialog` 생성자입니다. 생성자는 모덜리스 대화 상자를 구현 하는 고유한 대화 상자 클래스를 파생 해야 하기 때문에 보호 됩니다. 모덜리스 대화 상자를 생성은 두 단계로 이루어집니다. 먼저; 생성자를 호출 합니다. 다음 호출에서 `Create` 리소스 기반 대화 상자를 만들고 멤버 함수 호출 또는 `CreateIndirect` 메모리에서 서식 파일에서 만들기 대화 상자를 합니다.  
   
 ##  <a name="create"></a>  CDialog::Create  
- 호출 **만들기** 리소스에서 대화 상자 템플릿을 사용 하 여 모덜리스 대화 상자를 만듭니다.  
+ 호출 `Create` 리소스에서 대화 상자 템플릿을 사용 하 여 모덜리스 대화 상자를 만듭니다.  
   
 ```  
 virtual BOOL Create(
@@ -199,32 +199,32 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  대화 상자 템플릿 리소스의 이름에 해당 하는 null로 끝나는 문자열을 포함 합니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  부모 창 개체를 가리키는 (형식의 [CWnd](../../mfc/reference/cwnd-class.md)) 대화 상자 개체 속해 있는 합니다. 이 경우 **NULL**, 대화 상자 개체의 부모 창은 주 응용 프로그램 창으로 설정 됩니다.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  대화 상자 템플릿 리소스의 ID 번호를 포함합니다.  
   
 ### <a name="return-value"></a>반환 값  
  대화 상자를 만들고 초기화 된 성공 하면 0이 아니고 두 형태를 모두 반환 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 에 대 한 호출을 넣을 수 **만들기** 생성자 또는 호출 내부 생성자 후 호출 됩니다.  
+ 에 대 한 호출을 넣을 수 `Create` 생성자 또는 호출 내부 생성자 후 호출 됩니다.  
   
- 두 가지 형태의 **만들기** 멤버 함수 템플릿 이름 또는 템플릿 ID 번호 (예를 들어 IDD_DIALOG1) 대화 상자 템플릿 리소스에 액세스 하기 위해 제공 됩니다.  
+ 두 가지 형태의 `Create` 멤버 함수 템플릿 이름 또는 템플릿 ID 번호 (예를 들어 IDD_DIALOG1) 대화 상자 템플릿 리소스에 액세스 하기 위해 제공 됩니다.  
   
- 유형 중 하나에 대 한 부모 창 개체에 대 한 포인터를 전달 합니다. 경우 `pParentWnd` 은 **NULL**, 주 응용 프로그램 창으로 설정 하는 부모 또는 소유자 창 사용 대화 상자를 만듭니다.  
+ 유형 중 하나에 대 한 부모 창 개체에 대 한 포인터를 전달 합니다. 경우 *pParentWnd* 은 **NULL**, 주 응용 프로그램 창으로 설정 하는 부모 또는 소유자 창 사용 대화 상자를 만듭니다.  
   
- **만들기** 대화 상자를 만든 후에 즉시 멤버 함수를 반환 합니다.  
+ `Create` 대화 상자를 만든 후에 즉시 멤버 함수를 반환 합니다.  
   
  사용 하 여는 **WS_VISIBLE** 부모 창을 만들 때 대화 상자 표시 하도록 하는 경우 대화 상자 템플릿에 스타일입니다. 그렇지 않으면 호출 해야 `ShowWindow`합니다. 추가 대화 상자 스타일 및 응용 프로그램에 대 한 참조는 [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Windows SDK에서 구조 및 [창 스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles) 에 *MFC 참조*합니다.  
   
- 사용 하 여는 `CWnd::DestroyWindow` 함수를 삭제 하 여 만든 대화 상자는 **만들기** 함수입니다.  
+ 사용 하 여는 `CWnd::DestroyWindow` 함수에서 만든 대화 상자를 제거 하는 `Create` 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#62](../../mfc/codesnippet/cpp/cdialog-class_1.cpp)]  
   
 ##  <a name="createindirect"></a>  CDialog::CreateIndirect  
@@ -243,16 +243,16 @@ virtual BOOL CreateIndirect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpDialogTemplate`  
+ *lpDialogTemplate*  
  대화 상자를 만들고 사용 하는 대화 상자 템플릿의 포함 된 메모리를 가리킵니다. 이 서식 파일은 형식으로 [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Windows SDK에 설명 된 대로 구조 및 제어 정보입니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  대화 상자 개체의 부모 창 개체를 가리키는 (형식의 [CWnd](../../mfc/reference/cwnd-class.md)). 이 경우 **NULL**, 대화 상자 개체의 부모 창은 주 응용 프로그램 창으로 설정 됩니다.  
   
- `lpDialogInit`  
+ *lpDialogInit*  
  가리키는 **DLGINIT** 리소스입니다.  
   
- `hDialogTemplate`  
+ *hDialogTemplate*  
  대화 상자 템플릿을 포함 하는 전역 메모리에 대 한 핸들을 포함 합니다. 이 서식 파일은 형식으로 **DLGTEMPLATE** 구조와 대화 상자에서 각 컨트롤에 대 한 데이터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -275,7 +275,7 @@ virtual INT_PTR DoModal();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `int` 의 값을 지정 하는 값은 `nResult` 에 전달 된 매개 변수는 [CDialog::EndDialog](#enddialog) 대화 상자를 닫으려면 사용 되는 멤버 함수입니다. 함수에는 대화 상자를 만들 수 없는 경우 반환 값은-1 또는 **IDABORT** 다른 오류가 발생 한 경우이 경우 출력 창 오류 정보가 포함 됩니다에서 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)합니다.  
+ **int** 의 값을 지정 하는 값은 *n 결과* 에 전달 된 매개 변수는 [CDialog::EndDialog](#enddialog) 대화 상자를 닫으려면 사용 되는 멤버 함수입니다. 함수에는 대화 상자를 만들 수 없는 경우 반환 값은-1 또는 **IDABORT** 다른 오류가 발생 한 경우이 경우 출력 창 오류 정보가 포함 됩니다에서 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)합니다.  
   
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 대화 상자가 활성화 되어 있는 동안 사용자와 모든 상호 작용을 처리 합니다. 이 대화 상자 모달; 사용 즉, 사용자는 대화 상자를 닫을 때까지 다른 창 상호 작용할 수 없습니다.  
@@ -285,7 +285,7 @@ virtual INT_PTR DoModal();
 > [!NOTE]
 > `PreTranslateMessage` 모달 대화 상자 메시지 처리를 위한 이제 라고 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#63](../../mfc/codesnippet/cpp/cdialog-class_2.cpp)]  
   
 ##  <a name="enddialog"></a>  CDialog::EndDialog  
@@ -296,17 +296,17 @@ void EndDialog(int nResult);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nResult`  
+ *n 결과*  
  호출자에 게 대화 상자에서 반환 될 값을 포함 `DoModal`합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 멤버 함수는 반환 `nResult` 의 반환 값으로 `DoModal`합니다. 사용 해야 합니다는 `EndDialog` 모달 대화 상자를 만들 때마다 처리를 완료 하는 함수입니다.  
+ 이 멤버 함수는 반환 *n 결과* 의 반환 값으로 `DoModal`합니다. 사용 해야 합니다는 `EndDialog` 모달 대화 상자를 만들 때마다 처리를 완료 하는 함수입니다.  
   
  호출할 수 있습니다 `EndDialog` 에 언제 든 지 [OnInitDialog](#oninitdialog), 전에 대화 상자가 표시를 먼저 종료 해야 하는 경우 또는 입력된 포커스를 설정 하기 전에.  
   
  `EndDialog` 대화 상자를 즉시 닫습니다 하지 않습니다. 대신, 대화 상자를 닫으려면 현재 메시지 처리기가 반환 되는 즉시에 지시 하는 플래그를 설정 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#64](../../mfc/codesnippet/cpp/cdialog-class_3.cpp)]  
   
  [!code-cpp[NVC_MFCControlLadenDialog#65](../../mfc/codesnippet/cpp/cdialog-class_4.cpp)]  
@@ -332,13 +332,13 @@ void GotoDlgCtrl(CWnd* pWndCtrl);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWndCtrl`  
+ *pWndCtrl*  
  포커스를 받을 수 있는 창 (제어)를 식별 합니다.  
   
 ### <a name="remarks"></a>설명  
- 컨트롤에 전달 하도록 (자식 창)에 대 한 단서를 `pWndCtrl`, 호출의 `CWnd::GetDlgItem` 에 대 한 포인터를 반환 하는 멤버 함수는 [CWnd](../../mfc/reference/cwnd-class.md) 개체입니다.  
+ 컨트롤에 전달 하도록 (자식 창)에 대 한 단서를 *pWndCtrl*, 호출의 `CWnd::GetDlgItem` 에 대 한 포인터를 반환 하는 멤버 함수는 [CWnd](../../mfc/reference/cwnd-class.md) 개체입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [cwnd:: Getdlgitem](../../mfc/reference/cwnd-class.md#getdlgitem)합니다.  
   
 ##  <a name="initmodalindirect"></a>  CDialog::InitModalIndirect  
@@ -357,16 +357,16 @@ BOOL InitModalIndirect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpDialogTemplate`  
+ *lpDialogTemplate*  
  대화 상자를 만들고 사용 하는 대화 상자 템플릿의 포함 된 메모리를 가리킵니다. 이 서식 파일은 형식으로 [DLGTEMPLATE](http://msdn.microsoft.com/library/windows/desktop/ms645394) Windows SDK에 설명 된 대로 구조 및 제어 정보입니다.  
   
- `hDialogTemplate`  
+ *hDialogTemplate*  
  대화 상자 템플릿을 포함 하는 전역 메모리에 대 한 핸들을 포함 합니다. 이 서식 파일은 형식으로 **DLGTEMPLATE** 구조와 대화 상자에서 각 컨트롤에 대 한 데이터입니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  부모 또는 소유자 창 개체를 가리키는 (형식의 [CWnd](../../mfc/reference/cwnd-class.md)) 대화 상자 개체 속해 있는 합니다. 이 경우 **NULL**, 대화 상자 개체의 부모 창은 주 응용 프로그램 창으로 설정 됩니다.  
   
- `lpDialogInit`  
+ *lpDialogInit*  
  가리키는 **DLGINIT** 리소스입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -385,7 +385,7 @@ void MapDialogRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
+ *lpRect*  
  가리키는 [RECT](../../mfc/reference/rect-structure1.md) 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 변환할 대화 상자가 포함 된 개체를 조정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -393,7 +393,7 @@ void MapDialogRect(LPRECT lpRect) const;
   
  **GetDialogBaseUnits** Windows 함수 시스템 글꼴에 대 한 크기 정보를 반환 하지만 사용 하는 경우에 각 대화 상자에 대 한 다른 글꼴을 지정할 수 있습니다는 **DS_SETFONT** 스타일 지정에 리소스 정의 파일입니다. `MapDialogRect` Windows 함수는이 대화 상자에 대 한 적절 한 글꼴을 사용 합니다.  
   
- `MapDialogRect` 멤버 함수는 대화 상자 단위를 대체 `lpRect` 와 대화 상자를 만들거나 상자 내에서 컨트롤을 배치 하는 사각형을 사용할 수 있도록 단위 (픽셀)를 화면입니다.  
+ `MapDialogRect` 멤버 함수는 대화 상자 단위를 대체 *lpRect* 와 대화 상자를 만들거나 상자 내에서 컨트롤을 배치 하는 사각형을 사용할 수 있도록 단위 (픽셀)를 화면입니다.  
   
 ##  <a name="nextdlgctrl"></a>  CDialog::NextDlgCtrl  
  대화 상자에서 다음 컨트롤로 포커스를 이동합니다.  
@@ -420,7 +420,7 @@ virtual void OnCancel();
 > [!NOTE]
 >  사용 하는 경우이 메서드를 재정의할 수 없습니다는 `CFileDialog` Windows XP에서 컴파일된 프로그램에서 개체입니다. 에 대 한 자세한 내용은 `CFileDialog`, 참조 [CFileDialog 클래스](../../mfc/reference/cfiledialog-class.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#66](../../mfc/codesnippet/cpp/cdialog-class_5.cpp)]  
   
 ##  <a name="oninitdialog"></a>  CDialog::OnInitDialog  
@@ -443,7 +443,7 @@ virtual BOOL OnInitDialog();
 > [!NOTE]
 > 사용 하는 경우이 메서드를 재정의할 수 없습니다는 `CFileDialog` 이상의 운영 체제 또는 Windows Vista에서 컴파일된 프로그램에서 개체입니다. 에 대 한 변경에 대 한 자세한 내용은 `CFileDialog` Windows vista 이상 버전에서는 참조 [CFileDialog 클래스](../../mfc/reference/cfiledialog-class.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#67](../../mfc/codesnippet/cpp/cdialog-class_6.cpp)]  
   
 ##  <a name="onok"></a>  CDialog::OnOK  
@@ -461,7 +461,7 @@ virtual void OnOK();
 > [!NOTE]
 >  사용 하는 경우이 메서드를 재정의할 수 없습니다는 `CFileDialog` Windows XP에서 컴파일된 프로그램에서 개체입니다. 에 대 한 자세한 내용은 `CFileDialog`, 참조 [CFileDialog 클래스](../../mfc/reference/cfiledialog-class.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#68](../../mfc/codesnippet/cpp/cdialog-class_7.cpp)]  
   
 ##  <a name="onsetfont"></a>  CDialog::OnSetFont  
@@ -472,7 +472,7 @@ Virtual void OnSetFont(CFont* pFont);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pFont`  
+ [in] *pFont*  
  이 대화 상자에서 모든 컨트롤에 대 한 기본 글꼴로 사용 될 글꼴에 대 한 포인터를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -501,7 +501,7 @@ void SetDefID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nID`  
+ *nID*  
  기본 역할을 할 누름 단추 컨트롤의 ID를 지정 합니다.  
   
 ##  <a name="sethelpid"></a>  CDialog::SetHelpID  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d9951fd087619371e24f06822774cec005787c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f89812fbc0e1b6a3df80cd7c99879d8d630179de
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367408"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956464"
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer 클래스
 일반 `COleDocument` 서버를 전체 DocObject 서버로 만드는 데 필요한 추가 OLE 인터페이스( `IOleDocument`, `IOleDocumentView`, `IOleCommandTarget`, 및 `IPrint`)를 구현합니다.  
@@ -95,7 +95,7 @@ void ActivateDocObject();
 ```  
   
 ### <a name="remarks"></a>설명  
- `ActivateDocObject` 호출 `IOleDocumentSite`의 **ActivateMe** 메서드, 하지만를 설정 하 고에 대 한 호출에 지정 된 보기를 표시 하는 방법에 대 한 지침이 없음을 보기를 표시 하지 않는 [CDocObjectServer::OnActivateView](#onactivateview).  
+ `ActivateDocObject` 호출 `IOleDocumentSite`의 `ActivateMe` 메서드, 하지만를 설정 하 고에 대 한 호출에 지정 된 보기를 표시 하는 방법에 대 한 지침이 없음을 보기를 표시 하지 않는 [CDocObjectServer::OnActivateView](#onactivateview)합니다.  
   
  함께 `ActivateDocObject` 및 `OnActivateView` 활성화 하 고 DocObject 뷰를 표시 합니다. DocObject 활성화 다른 유형의 OLE 내부 활성화에서 다릅니다. DocObject 활성화 내부 해치 테두리 및 개체 장식 (예: 크기 조정 핸들)를 표시 합니다. 무시, 개체 범위 함수는 무시 및 그립니다 (예: 보통 해당 영역 밖에 그리는 것 대신 보기 사각형 내에서 스크롤 막대 내부 활성화)입니다.  
   
@@ -112,7 +112,7 @@ explicit CDocObjectServer(
  *pOwner*  
  DocObject 서버에 대 한 클라이언트에 클라이언트 사이트 문서에 대 한 포인터입니다.  
   
- `pDocSite`  
+ *pDocSite*  
  에 대 한 포인터는 `IOleDocumentSite` 컨테이너에 의해 구현 된 인터페이스입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -139,7 +139,7 @@ virtual void OnApplyViewState(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ar`  
+ *ar*  
  A `CArchive` 뷰 상태를 serialize 하 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -155,7 +155,7 @@ virtual void OnSaveViewState(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ar`  
+ *ar*  
  A `CArchive` 뷰 상태를 직렬화 할 개체입니다.  
   
 ### <a name="remarks"></a>설명  

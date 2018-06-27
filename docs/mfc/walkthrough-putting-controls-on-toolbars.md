@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c134431500ed3e7b2b2229ea5b4b3da7cac6fa48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 45a04f81ee7419bdf45052f0f1f2746dd7866af8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385085"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957174"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>연습: 도구 모음에 컨트롤 배치
 이 항목에서는 Windows 컨트롤을 포함하는 도구 모음 단추를 도구 모음에 추가하는 방법을 설명합니다. MFC 도구 모음 단추 이어야 합니다는 [CMFCToolBarButton 클래스](../mfc/reference/cmfctoolbarbutton-class.md)-예를 들어 파생 클래스를 [CMFCToolBarComboBoxButton 클래스](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [CMFCToolBarEditBoxButton 클래스](../mfc/reference/cmfctoolbareditboxbutton-class.md), [CMFCDropDownToolbarButton 클래스](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), 또는 [CMFCToolBarMenuButton 클래스](../mfc/reference/cmfctoolbarmenubutton-class.md)합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "33385085"
   
 2.  부모 도구 모음에서 모든 비트맵의 단추에 대한 도구 모음 이미지(단추 아이콘)를 예약합니다.  
   
-3.  `AFX_WM_RESETTOOLBAR` 메시지를 처리하는 메시지 처리기에서 다음을 수행합니다.  
+3.  AFX_WM_RESETTOOLBAR 메시지를 처리 하는 메시지 처리기에서 다음을 수행 합니다.  
   
     1.  `CMFCToolbarButton` 파생 클래스를 사용하여 단추 컨트롤을 생성합니다.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "33385085"
  만드는 사용자 지정을 사용 하도록 설정 하면는 **사용자 지정** 대화 상자 사용자 지정 처리기에서 `OnViewCustomize` 를 사용 하 여는 [CMFCToolBarsCustomizeDialog 클래스](../mfc/reference/cmfctoolbarscustomizedialog-class.md) 클래스입니다. 표시 하기 전에 **사용자 지정** 대화 상자를 호출 하 여 [CMFCToolBarsCustomizeDialog::Create](../mfc/reference/cmfctoolbarscustomizedialog-class.md#create), 호출 [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) 바꾸려면 새 컨트롤 표준 단추입니다.  
   
 ## <a name="example-creating-a-find-combo-box"></a>예제: 찾기 콤보 상자 만들기  
- 이 단원에서는 도구 모음에 나타나고 최근에 사용된 검색 문자열을 포함하는 `Find` 콤보 상자 컨트롤을 만드는 방법에 대해 설명합니다. 사용자는 컨트롤에 문자열을 입력한 다음 Enter 키를 눌러 문서를 검색하거나 Esc 키를 눌러 주 프레임에 포커스를 반환합니다. 이 예에서는 가정은 문서에 표시 되는 [CEditView 클래스](../mfc/reference/ceditview-class.md)-보기를 파생 합니다.  
+ 이 섹션을 만드는 방법을 설명는 **찾을** 콤보 상자 컨트롤을 도구 모음에 나타나고 최근에 사용 된 검색 문자열을 포함 합니다. 사용자는 컨트롤에 문자열을 입력한 다음 Enter 키를 눌러 문서를 검색하거나 Esc 키를 눌러 주 프레임에 포커스를 반환합니다. 이 예에서는 가정은 문서에 표시 되는 [CEditView 클래스](../mfc/reference/ceditview-class.md)-보기를 파생 합니다.  
   
 ### <a name="creating-the-find-control"></a>찾기 컨트롤 만들기  
  먼저 `Find` 콤보 상자 컨트롤을 만듭니다.  
@@ -65,9 +65,9 @@ ms.locfileid: "33385085"
   
 2.  새 클래스를 만든 `CFindComboBox`에서 파생 된 [CComboBox 클래스](../mfc/reference/ccombobox-class.md)합니다.  
   
-3.  `CFindComboBox` 클래스에서 `PreTranslateMessage` 가상 메서드를 재정의합니다. 이 메서드를 처리할 콤보 상자가 하면는 [WM_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280) 메시지입니다. 사용자가 Esc 키를 누르면(`VK_ESCAPE`) 주 프레임 창으로 포커스를 반환합니다. 사용자가 Enter 키를 누르면(`VK_ENTER`) `WM_COMMAND` 명령 ID를 포함하는 `ID_EDIT_FIND_COMBO` 메시지를 주 프레임 창에 게시합니다.  
+3.  `CFindComboBox` 클래스에서 `PreTranslateMessage` 가상 메서드를 재정의합니다. 이 메서드를 처리할 콤보 상자가 하면는 [WM_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280) 메시지입니다. 사용자가 Esc 키를 누르면(`VK_ESCAPE`) 주 프레임 창으로 포커스를 반환합니다. 사용자가 Enter 키를 누르면 하는 경우 (`VK_ENTER`), 포함 된 WM_COMMAND 메시지 게시를 주 프레임 창에서 `ID_EDIT_FIND_COMBO` 명령 id입니다.  
   
-4.  에 대 한 클래스를 만들기는 `Find` 에서 파생 되는 콤보 상자 단추 [CMFCToolBarComboBoxButton 클래스](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)합니다. 이 예제에서는 `CFindComboButton`이라는 이름으로 지정됩니다.  
+4.  에 대 한 클래스를 만들기는 **찾을** 에서 파생 되는 콤보 상자 단추 [CMFCToolBarComboBoxButton 클래스](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)합니다. 이 예제에서는 `CFindComboButton`이라는 이름으로 지정됩니다.  
   
 5.  `CMFCToolbarComboBoxButton`의 생성자에는 세 개의 매개 변수(단추의 명령 ID, 단추 이미지 인덱스 및 콤보 상자의 스타일)가 있습니다. 이러한 매개 변수를 다음과 같이 설정합니다.  
   
@@ -81,9 +81,9 @@ ms.locfileid: "33385085"
   
 7.  사용 하 여는 [IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial) 매크로 영구 콤보 단추 수 있도록 합니다. 작업 영역 관리자가 Windows 레지스트리에서 단추의 상태를 자동으로 로드 및 저장합니다.  
   
-8.  문서 뷰에서 `ID_EDIT_FIND_COMBO` 처리기를 구현합니다. 사용 하 여 [CMFCToolBar::GetCommandButtons](../mfc/reference/cmfctoolbar-class.md#getcommandbuttons) 와 `ID_EDIT_FIND_COMBO` 모두 검색 하려면 `Find` 콤보 상자 단추입니다. 사용자 지정으로 인해 명령 ID가 동일한 단추의 복사본이 여러 개 있을 수 있습니다.  
+8.  문서 뷰에서 `ID_EDIT_FIND_COMBO` 처리기를 구현합니다. 사용 하 여 [CMFCToolBar::GetCommandButtons](../mfc/reference/cmfctoolbar-class.md#getcommandbuttons) 와 `ID_EDIT_FIND_COMBO` 모두 검색 하려면 **찾을** 콤보 상자 단추입니다. 사용자 지정으로 인해 명령 ID가 동일한 단추의 복사본이 여러 개 있을 수 있습니다.  
   
-9. ID_EDIT_FIND 메시지 처리기에서 `OnFind`를 사용 하 여 [CMFCToolBar::IsLastCommandFromButton](../mfc/reference/cmfctoolbar-class.md#islastcommandfrombutton) 찾기 명령에서 보냈는지 여부를 결정 하는 `Find` 콤보 상자 단추입니다. 명령을 보낸 경우 텍스트를 찾고 콤보 상자에 검색 문자열을 추가합니다.  
+9. ID_EDIT_FIND 메시지 처리기에서 `OnFind`를 사용 하 여 [CMFCToolBar::IsLastCommandFromButton](../mfc/reference/cmfctoolbar-class.md#islastcommandfrombutton) 찾기 명령에서 보냈는지 여부를 결정 하는 **찾을** 콤보 상자 단추입니다. 명령을 보낸 경우 텍스트를 찾고 콤보 상자에 검색 문자열을 추가합니다.  
   
 ### <a name="adding-the-find-control-to-the-main-toolbar"></a>주 도구 모음에 찾기 컨트롤 추가  
  도구 모음에 콤보 상자 단추를 추가하려면 다음 단계를 따르십시오.  
@@ -91,15 +91,15 @@ ms.locfileid: "33385085"
 1.  주 프레임 창의 `AFX_WM_RESETTOOLBAR` 메시지 처리기 `OnToolbarReset`을 구현합니다.  
   
     > [!NOTE]
-    >  응용 프로그램이 시작하는 동안 도구 모음이 초기화되는 경우 또는 도구 모음이 사용자 지정 동안 다시 설정되는 경우 프레임워크는 이 메시지를 주 프레임 창으로 보냅니다. 두 경우 모두 표준 도구 모음 단추를 사용자 지정 `Find` 콤보 상자 단추로 대체해야 합니다.  
+    >  응용 프로그램이 시작하는 동안 도구 모음이 초기화되는 경우 또는 도구 모음이 사용자 지정 동안 다시 설정되는 경우 프레임워크는 이 메시지를 주 프레임 창으로 보냅니다. 두 경우 모두 바꾸어야 표준 도구 모음 단추를 사용자 지정 **찾을** 콤보 상자 단추입니다.  
   
-2.  `AFX_WM_RESETTOOLBAR` 처리기에서 도구 모음 ID, 즉 `WPARAM` 메시지의 `AFX_WM_RESETTOOLBAR`을 검사합니다. 도구 모음 ID가 포함 된 도구 모음에서와 같은 경우는 `Find` 콤보 상자 단추, 호출 [CMFCToolBar::ReplaceButton](../mfc/reference/cmfctoolbar-class.md#replacebutton) 바꾸려면는 `Find` 단추 (명령 ID 사용 하 여 단추, 즉 `ID_EDIT_FIND)` 으로 `CFindComboButton` 개체입니다.  
+2.  에 `AFX_WM_RESETTOOLBAR` 처리기 즉 하 게 도구 모음 ID를 확인 하는, *WPARAM* AFX_WM_RESETTOOLBAR 메시지의 합니다. 도구 모음 ID가 포함 된 도구 모음에서와 같은 경우는 **찾을** 콤보 상자 단추, 호출 [CMFCToolBar::ReplaceButton](../mfc/reference/cmfctoolbar-class.md#replacebutton) 바꾸려면는 **찾을** 단추 (즉,는 명령 ID로 단추 `ID_EDIT_FIND)` 와 `CFindComboButton` 개체입니다.  
   
     > [!NOTE]
     >  `CFindComboBox`이 단추 개체를 복사하고 복사본을 유지하므로 스택에서 `ReplaceButton`를 생성할 수 있습니다.  
   
 ### <a name="adding-the-find-control-to-the-customize-dialog-box"></a>사용자 지정 대화 상자에 찾기 컨트롤 추가  
- 사용자 지정 처리기에서 `OnViewCustomize`, 호출 [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) 바꾸려면는 `Find` 단추 (명령 ID 사용 하 여 단추, 즉 `ID_EDIT_FIND)` 와 `CFindComboButton` 개체입니다.  
+ 사용자 지정 처리기에서 `OnViewCustomize`, 호출 [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) 바꾸려면는 **찾을** 단추 (명령 ID 사용 하 여 단추, 즉 `ID_EDIT_FIND)` 는 와`CFindComboButton` 개체입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [계층 구조 차트](../mfc/hierarchy-chart.md)   

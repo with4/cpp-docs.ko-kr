@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3503f59096d3879f986b2a8c99bdb9823ef4e24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06b2f8338756b24971fcdf9a89b055272ee261bd
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353168"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955523"
 ---
 # <a name="cctrlview-class"></a>CCtrlView 클래스
 문서 뷰 아키텍처를 Windows 98 및 Windows NT 버전 3.51 이상에서 지원하는 공통의 컨트롤에 맞게 변경합니다.  
@@ -59,7 +59,7 @@ class CCtrlView : public CView
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CCtrlView::m_dwDefaultStyle](#m_dwdefaultstyle)|뷰 클래스에 대 한 기본 스타일을 포함합니다.|  
 |[CCtrlView::m_strClass](#m_strclass)|뷰 클래스에 대 한 Windows 클래스 이름을 포함합니다.|  
@@ -91,10 +91,10 @@ CCtrlView(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszClass`  
+ *lpszClass*  
  Windows 뷰 클래스의 클래스 이름입니다.  
   
- `dwStyle`  
+ *dwStyle*  
  뷰 클래스의 스타일입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -125,11 +125,11 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  그리기 발생 하는 장치 컨텍스트에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
- `OnDraw` 일반적으로 지정 된 화면 장치 컨텍스트를 전달 하는 화면 표시에 대 한 호출 `pDC`합니다.  
+ `OnDraw` 일반적으로 지정 된 화면 장치 컨텍스트를 전달 하는 화면 표시에 대 한 호출 *pDC*합니다.  
   
 ##  <a name="precreatewindow"></a>  CCtrlView::PreCreateWindow  
  이 `CWnd` 개체에 연결된 Windows 창을 만들기 전에 호출됩니다.  

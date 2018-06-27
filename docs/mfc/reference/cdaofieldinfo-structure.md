@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d08dd9d877d8872c5c8a930e84ae0496c745709
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 36e9e78a8137aa28acaa5f43e7549dc74566c7f8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368409"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952204"
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo 구조체
 `CDaoFieldInfo` 구조 데이터 액세스 개체 (DAO)에 대해 정의 된 field 개체에 대 한 정보를 포함 합니다.  
@@ -50,10 +50,10 @@ struct CDaoFieldInfo
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `m_strName`  
+ *m_strName*  
  Field 개체를 이름을 고유 하 게 지정 합니다. 자세한 내용은 DAO 도움말의 "Name 속성" 항목을 참조 합니다.  
   
- `m_nType`  
+ *m_nType*  
  필드의 데이터 형식을 나타내는 값입니다. 자세한 내용은 DAO 도움말의 "Type 속성" 항목을 참조 합니다. 이 속성의 값은 다음 중 하나일 수 있습니다.  
   
 - **dbBoolean** Yes/No 동일 **TRUE**/**FALSE**  
@@ -101,7 +101,7 @@ struct CDaoFieldInfo
 |**dbMemo**|0|메모 ([CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
 |**dbGUID**|16|전역적으로 고유 식별자/범용 고유 식별자 원격 프로시저 호출에 사용 합니다.|  
   
- `m_lAttributes`  
+ *m_lAttributes*  
  테이블 정의 레코드 집합, 쿼리 또는 인덱스 개체에 포함 된 field 개체의 특성을 지정 합니다. 반환 되는 값이이 상수를 비트 OR는 c + +를 사용 하 여 만든 총 수 (**&#124;**) 연산자:  
   
 - **dbFixedField** 필드 크기 (숫자 필드에 대 한 기본값)를 고정 됩니다.  
@@ -119,16 +119,16 @@ struct CDaoFieldInfo
  *m_nOrdinalPosition*  
  다른 필드를 기준으로 표시 되는 DAO 필드 개체를 나타내는 필드 숫자 순서를 지정 하는 값입니다. 이 속성을 설정할 수 [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)합니다. 자세한 내용은 DAO 도움말의 "OrdinalPosition Property" 항목을 참조 합니다.  
   
- `m_bRequired`  
+ *m_bRequired*  
  DAO field 개체는 Null이 아닌 값을 필요한 지 여부를 나타냅니다. 이 속성이 **TRUE**, 필드는 Null 값을 허용 하지 않습니다. 로 설정 되어 필요한 경우 **FALSE**, AllowZeroLength 및 유효성 검사 규칙 속성 설정에 지정 된 조건을 만족 하는 값은 물론 Null 값 필드에 사용할 수 있습니다. 자세한 내용은 DAO 도움말의 "필수 속성" 항목을 참조 하십시오. 와 테이블 정의 대 한이 속성을 설정할 수 있습니다 [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)합니다.  
   
  *m_bAllowZeroLength*  
  나타냅니다 있는지 여부를 빈 문자열 ("")는 DAO 필드 개체를 사용 하는 텍스트 또는 메모 데이터 형식과 유효한 값이 있습니다. 이 속성이 **TRUE**, 빈 문자열은 유효한 값입니다. 이 속성 설정할 수 있습니다 **FALSE** 필드의 값을 설정 하려면 빈 문자열을 사용할 수 없습니다. 자세한 내용은 DAO 도움말의 "AllowZeroLength Property" 항목을 참조 합니다. 와 테이블 정의 대 한이 속성을 설정할 수 있습니다 [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)합니다.  
   
- `m_lCollatingOrder`  
+ *m_lCollatingOrder*  
  문자열 비교 또는 정렬에 대 한 텍스트 정렬 순서를 지정 합니다. 자세한 내용은 "사용자 지정 Windows 레지스트리 설정에 대 한 데이터 액세스" DAO 도움말의 항목을 참조 합니다. 목록이 반환 되는 가능한 값에 대 한 참조는 **m_lCollatingOrder** 의 멤버는 [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md) 구조입니다. 와 테이블 정의 대 한이 속성을 설정할 수 있습니다 [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)합니다.  
   
- `m_strForeignName`  
+ *m_strForeignName*  
  관계, 기본 테이블에 있는 필드에 해당 하는 외래 테이블의 DAO field 개체의 이름을 지정 하는 값입니다. 자세한 내용은 DAO 도움말의 "ForeignName Property" 항목을 참조 합니다.  
   
  *m_strSourceField*  
@@ -137,12 +137,12 @@ struct CDaoFieldInfo
  *m_strSourceTable*  
  Field 개체 DAO tabledef, 레코드 집합 또는 querydef 개체에 포함 된 데이터 테이블의 이름을 나타냅니다. 이 속성은 field 개체와 연결 된 원본 테이블 이름을 나타냅니다. 예를 들어 원본 테이블에 필드의 이름을 관련이 없을 쿼리 필드에 있는 데이터의 원본 소스를 확인 하려면이 속성을 사용할 수 있습니다. 세부 정보를 DAO 도움말의 "원본 필드, SourceTable 속성" 항목을 참조 합니다. 와 테이블 정의 대 한이 속성을 설정할 수 있습니다 [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)합니다.  
   
- `m_strValidationRule`  
+ *m_strValidationRule*  
  이 변경 되거나 테이블에 추가 되는 필드의 데이터 유효성을 검사 하는 값입니다. 자세한 내용은 DAO 도움말의 "ValidationRule Property" 항목을 참조 합니다. 와 테이블 정의 대 한이 속성을 설정할 수 있습니다 [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)합니다.  
   
  테이블 정의 대 한 관련된 정보에 대 한 참조는 **m_strValidationRule** 의 멤버는 [CDaoTableDefInfo](../../mfc/reference/cdaotabledefinfo-structure.md) 구조입니다.  
   
- `m_strValidationText`  
+ *m_strValidationText*  
  DAO 필드 개체의 값은 유효성 검사 규칙 속성 설정으로 지정 된 유효성 검사 규칙을 충족 하지 않으면 응용 프로그램에서 표시 하는 메시지의 텍스트를 지정 하는 값입니다. 자세한 내용은 DAO 도움말의 "유효성 검사 텍스트 Property" 항목을 참조 합니다. 와 테이블 정의 대 한이 속성을 설정할 수 있습니다 [CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)합니다.  
   
  *m_strDefaultValue*  

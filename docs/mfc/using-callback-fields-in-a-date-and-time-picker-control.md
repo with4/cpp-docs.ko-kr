@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b0d59aa8c30e9308448467bb198e898106e61f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4cf132de39eb630f314c1c5a99e629cbfb25394a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383788"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951129"
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>날짜 및 시간 선택 컨트롤에서 콜백 필드 사용
 날짜 및 시간 선택 필드를 정의 하는 표준 형식 문자 외에도 콜백 필드도 사용자 지정 형식 문자열의 특정 부분을 지정 하 여 출력을 사용자 지정할 수 있습니다. 콜백 필드를 선언 하려면 하나 이상의 "X" 문자 (ASCII 코드 88) 형식 문자열의 본문에서 아무 곳 이나 포함 합니다. 예를 들어 다음 문자열 "' 임: 'yy '/' MM '/' dd' (날 'X')'" 뒤에 월, 날짜 및 마지막 날짜의 연도와 현재 값을 표시 하려면 날짜 및 시간 선택 컨트롤 하면 됩니다.  
@@ -39,23 +39,23 @@ ms.locfileid: "33383788"
  "X" 문자를 반복 하 여 사용자 지정 문자열의 여러 콜백 필드를 구분할 수 있습니다. 따라서 형식 문자열 "XXddddMMMdd', ' yyyXXX" "XX" 및 "XXX" 두 개의 고유한 콜백 필드를 포함 합니다.  
   
 > [!NOTE]
->  콜백 필드는 응용 프로그램 처리를 준비 해야 하므로 유효한 필드가으로 처리 됩니다 **되므로 DTN_WMKEYDOWN** 알림 메시지입니다.  
+>  콜백 필드 되므로 DTN_WMKEYDOWN 알림 메시지를 처리 하도록 응용 프로그램을 준비 해야 하므로 유효한 필드가으로 처리 됩니다.  
   
  날짜 및 시간 선택 컨트롤에서 콜백 필드 구현 세 부분으로 구성 됩니다.  
   
 -   사용자 지정 형식 문자열을 초기화  
   
--   처리는 **DTN_FORMATQUERY** 알림  
+-   DTN_FORMATQUERY 알림 처리  
   
--   처리는 **DTN_FORMAT** 알림  
+-   DTN_FORMAT 알림 처리  
   
 ## <a name="initializing-the-custom-format-string"></a>사용자 지정 형식 문자열을 초기화  
  호출 하 여 사용자 지정 문자열을 초기화 `CDateTimeCtrl::SetFormat`합니다. 자세한 내용은 참조 [를 사용 하 여 사용자 지정 형식 문자열에서 날짜 및 시간 선택 컨트롤](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md)합니다. 에 사용자 지정 형식 문자열을 설정 하는 일반적인 곳은 `OnInitDialog` 포함 하 여 대화 상자 클래스의 함수 또는 `OnInitialUpdate` 포함 된 뷰 클래스의 함수입니다.  
   
 ## <a name="handling-the-dtnformatquery-notification"></a>DTN_FORMATQUERY 알림 처리  
- 컨트롤 형식 문자열을 구문 분석 하는 콜백 필드에서 발생 하는 경우 응용 프로그램 보냅니다 **DTN_FORMAT** 및 **DTN_FORMATQUERY** 알림 메시지입니다. 콜백 필드를 쿼리 하는 확인할 수 있도록 콜백 필드 문자열은 알림 메시지 내에 포함 됩니다.  
+ 컨트롤 형식 문자열을 구문 분석 하는 콜백 필드에서 발생 하는 경우 응용 프로그램 DTN_FORMAT 및 DTN_FORMATQUERY 알림 메시지를 보냅니다. 콜백 필드를 쿼리 하는 확인할 수 있도록 콜백 필드 문자열은 알림 메시지 내에 포함 됩니다.  
   
- **DTN_FORMATQUERY** 픽셀 현재 콜백 필드에 표시 되는 문자열의 최대 허용 크기를 검색 하 게 알림이 전송 됩니다.  
+ 현재 콜백 필드에 표시 되는 문자열의 픽셀에 허용 되는 최대 크기를 검색 하는 DTN_FORMATQUERY 알림 전송 됩니다.  
   
  이 값을 계산을 계산 해야 높이 너비는 필드에 대 한 대체 문자열의 컨트롤의 글꼴을 사용 하 여 합니다. 호출 하 여 문자열의 실제 계산 방법은 간단는 [GetTextExtentPoint32](http://msdn.microsoft.com/library/windows/desktop/dd144938) Win32 함수입니다. 크기 결정 되 면 값은 응용 프로그램에 다시 전달 하 고 처리기 함수를 종료 합니다.  
   
@@ -63,10 +63,10 @@ ms.locfileid: "33383788"
   
  [!code-cpp[NVC_MFCControlLadenDialog#8](../mfc/codesnippet/cpp/using-callback-fields-in-a-date-and-time-picker-control_1.cpp)]  
   
- 계산 된 현재 콜백 필드의 크기 면 필드에 대 한 값을 제공 해야 합니다. 이 작업을 수행에 대 한 처리기는 **DTN_FORMAT** 알림입니다.  
+ 계산 된 현재 콜백 필드의 크기 면 필드에 대 한 값을 제공 해야 합니다. 이 DTN_FORMAT 알림 이벤트의 처리기에서 수행 됩니다.  
   
 ## <a name="handling-the-dtnformat-notification"></a>DTN_FORMAT 알림 처리  
- **DTN_FORMAT** 알림 대체 되는 문자열을 요청 하는 응용 프로그램에서 사용 됩니다. 다음 예제에서는 하는 방법을 보여 줍니다.  
+ DTN_FORMAT 알림 대체 되는 문자열을 요청 하는 응용 프로그램에서 사용 됩니다. 다음 예제에서는 하는 방법을 보여 줍니다.  
   
  [!code-cpp[NVC_MFCControlLadenDialog#9](../mfc/codesnippet/cpp/using-callback-fields-in-a-date-and-time-picker-control_2.cpp)]  
   

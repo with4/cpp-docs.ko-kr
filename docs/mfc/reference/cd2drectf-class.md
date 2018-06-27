@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec43e6bb14b9c5629bde60faec80d9e31e2e5188
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7dc518832dd84bf5ca91765211f96934ea0b4f0
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350799"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956450"
 ---
 # <a name="cd2drectf-class"></a>CD2DRectF 클래스
 `D2D1_RECT_F`의 래퍼입니다.  
@@ -48,7 +48,7 @@ class CD2DRectF : public D2D1_RECT_F;
   
 |이름|설명|  
 |----------|-----------------|  
-|[CD2DRectF::IsNull](#isnull)|반환 된 `boolean` 유효 하지 않은 데이터 식에 포함 되어 있는지 여부를 나타내는 값 ( `null`).|  
+|[CD2DRectF::IsNull](#isnull)|반환 된 **부울** 유효 하지 않은 데이터 식에 포함 되어 있는지 여부를 나타내는 값 ( **null**).|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
@@ -81,19 +81,19 @@ CD2DRectF(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rect`  
+ *rect*  
  소스 사각형  
   
- `fLeft`  
+ *fLeft*  
  소스 왼쪽된 좌표  
   
- `fTop`  
+ *fTop*  
  소스 위쪽 좌표  
   
- `fRight`  
+ *fRight*  
  원본 오른쪽 좌표  
   
- `fBottom`  
+ *fBottom*  
  소스 아래쪽 좌표입니다.  
   
 ##  <a name="isnull"></a>  CD2DRectF::IsNull  

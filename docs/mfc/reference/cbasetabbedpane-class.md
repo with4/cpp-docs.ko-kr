@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d628758f19c36112bf896e11c97df3e1f92cbc47
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: edb9fe1942f9fe8b462ce9fc6a56e37538866174
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355962"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954990"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane 클래스
 [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) 의 기능을 확장하여 탭 창 만들기를 지원합니다.  
@@ -173,23 +173,23 @@ virtual BOOL AddTab(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] [out] `pNewBar`  
+ [in] [out] *pNewBar*  
  추가할 창에 대 한 포인터입니다. 이 포인터는이 메서드를 호출한 후 잘못 될 수 있습니다. 자세한 내용은 설명 섹션을 참조하세요.  
   
- [in] `bVisible`  
+ [in] *bVisible*  
  `TRUE` 탭을 표시 합니다. 그렇지 않으면 `FALSE`합니다.  
   
- [in] `bSetActive`  
+ [in] *bSetActive*  
  `TRUE` 활성 탭; 탭을 확인 하려면 그렇지 않으면 `FALSE`합니다.  
   
- [in] `bDetachable`  
+ [in] *bDetachable*  
  `TRUE` 분리 가능한 탭을 확인 하려면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="return-value"></a>반환 값  
  `TRUE` 창에서 탭으로 성공적으로 추가 되었는지와 없습니다 경우 프로세스에서 제거 합니다. `FALSE` 이 형식의 개체가 추가 되 고 창을 `CBaseTabbedPane`합니다. 자세한 내용은 설명 섹션을 참조하세요.  
   
 ### <a name="remarks"></a>설명  
- 창이 탭된 창에 새 테이블로 추가 하려면이 메서드를 호출 합니다. 경우 `pNewBar` 형식의 개체를 가리키는 `CBaseTabbedPane`, 모든 탭은 탭된 창에 복사 됩니다 차례로 `pNewBar` 소멸 됩니다. 따라서 `pNewBar` 잘못 된 포인터를 막대로 바뀌고 사용할 수 없습니다.  
+ 창이 탭된 창에 새 테이블로 추가 하려면이 메서드를 호출 합니다. 경우 *pNewBar* 형식의 개체를 가리키는 `CBaseTabbedPane`, 모든 탭은 탭된 창에 복사 됩니다 차례로 *pNewBar* 소멸 됩니다. 따라서 *pNewBar* 잘못 된 포인터를 막대로 바뀌고 사용할 수 없습니다.  
   
 ##  <a name="allowdestroyemptytabbedpane"></a>  CBaseTabbedPane::AllowDestroyEmptyTabbedPane  
  가 빈 탭된 창을 소멸 될 수 있는지 여부를 지정 합니다.  
@@ -212,7 +212,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bUseTabIndexes`  
+ [in] *bUseTabIndexes*  
  이 매개 변수는 프레임 워크에 의해 내부적으로 사용 됩니다.  
   
 ### <a name="remarks"></a>설명  
@@ -249,7 +249,7 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bActiveTabOnly`  
+ [in] *bActiveTabOnly*  
  탭된 창으로 변환 하면 지정 `TRUE` 활성 탭만 변환 합니다. 지정 `FALSE` 창에서 모든 탭을 변환할 수 있습니다.  
   
 ##  <a name="detachpane"></a>  Cbasetabbedpane:: Detachpane  
@@ -262,14 +262,14 @@ virtual BOOL DetachPane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pBar`  
+ [in] *pBar*  
  분리 하 고 창에 대 한 포인터입니다.  
   
- [in] `bHide`  
+ [in] *bHide*  
  분리 된 후 프레임 워크 창을 숨깁니다 있는지 여부를 지정 하는 부울 매개 변수입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 프레임 워크에는 성공적으로 창을; 분리 하는 경우 `FALSE` 경우 `pBar` 은 `NULL` 하거나 참조 하는 탭된 창에 있는 창입니다.  
+ `TRUE` 프레임 워크에는 성공적으로 창을; 분리 하는 경우 `FALSE` 경우 *pBar* 은 `NULL` 하거나 참조 하는 탭된 창에 있는 창입니다.  
   
 ### <a name="remarks"></a>설명  
  프레임 워크는 가능한 경우 분리 된 창을 부동 합니다. 자세한 내용은 참조 [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat)합니다.  
@@ -282,7 +282,7 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` 활성 탭 캡션을; 사용 하 여 탭된 창 캡션에 동기화 하려면 그렇지 않으면 `FALSE`합니다.  
   
 ##  <a name="filldefaulttabsorderarray"></a>  CBaseTabbedPane::FillDefaultTabsOrderArray  
@@ -303,14 +303,14 @@ virtual CWnd* FindPaneByID(UINT uBarID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uBarID`  
+ [in] *uBarID*  
  찾을 창 ID를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  창; 발견 된 경우에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
   
 ### <a name="remarks"></a>설명  
- 창에서 모든 탭을 비교 하 고로 지정 된 ID 가진 항목을 반환 하는이 메서드는 `uBarID` 매개 변수입니다.  
+ 창에서 모든 탭을 비교 하 고로 지정 된 ID 가진 항목을 반환 하는이 메서드는 *uBarID* 매개 변수입니다.  
   
 ##  <a name="findbarbytabnumber"></a>  CBaseTabbedPane::FindBarByTabNumber  
  탭에 있는 창에 반환 합니다.  
@@ -322,17 +322,17 @@ virtual CWnd* FindBarByTabNumber(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nTabNum`  
+ [in] *nTabNum*  
  검색할 탭의 0부터 시작 하는 인덱스를 지정 합니다.  
   
- [in] `bGetWrappedBar`  
+ [in] *bGetWrappedBar*  
  `TRUE` 대신 창 자체; 창의 기본 (래핑된) 창이 되돌리려면 그렇지 않으면 `FALSE`합니다. 파생 된 창에만 적용 됩니다 [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)합니다.  
   
 ### <a name="return-value"></a>반환 값  
  검색 중인 창에 대 한 올바른 포인터가 반환 되 고; 창에서 발견 되는 경우 그렇지 않으면 `NULL`합니다.  
   
 ### <a name="remarks"></a>설명  
- 에 지정 된 탭에 있는 창을 검색 하려면이 메서드를 호출 하는 `nTabNum` 매개 변수입니다.  
+ 에 지정 된 탭에 있는 창을 검색 하려면이 메서드를 호출 하는 *nTabNum* 매개 변수입니다.  
   
 ##  <a name="floattab"></a>  Cbasetabbedpane:: Floattab  
  창이 현재 분리 가능한 탭에 있는 경우에만 창을 부동합니다.  
@@ -346,16 +346,16 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] [out] `pBar`  
+ [in] [out] *pBar*  
  Float로 창에 대 한 포인터입니다.  
   
- [in] `nTabID`  
+ [in] *nTabID*  
  Float로 탭의 0부터 시작 하는 인덱스를 지정합니다.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  창을 분리 하는 데 사용할 방법을 지정 합니다. 자세한 내용은 설명 섹션을 참조하세요.  
   
- [in] `bHide`  
+ [in] *bHide*  
  `TRUE` 부동; 하기 전에 창을 숨기려면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -364,7 +364,7 @@ virtual BOOL FloatTab(
 ### <a name="remarks"></a>설명  
  분리 가능한 탭에 있는 현재 창에 배치 하려면이 메서드를 호출 합니다.  
   
- 프로그래밍 방식으로 창을 분리 하려는 경우 지정 `DM_SHOW` 에 대 한는 `dockMethod` 매개 변수입니다. 이전에 움직이는 여기서 동일한 위치에 있는 창을 부동 소수점을 지정 하려는 경우 `DM_DBL_CLICK` 로 `dockMethod` 매개 변수입니다.  
+ 프로그래밍 방식으로 창을 분리 하려는 경우 지정 `DM_SHOW` 에 대 한는 *dockMethod* 매개 변수입니다. 이전에 움직이는 여기서 동일한 위치에 있는 창을 부동 소수점을 지정 하려는 경우 `DM_DBL_CLICK` 로 *dockMethod* 매개 변수입니다.  
   
 ##  <a name="getdefaulttabsorder"></a>  CBaseTabbedPane::GetDefaultTabsOrder  
  창에서 탭의 기본 순서를 반환합니다.  
@@ -387,7 +387,7 @@ virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iTabNum`  
+ [in] *iTabNum*  
  정수에 대 한 참조입니다. 이 메서드 첫 번째 표시 탭의 0부터 시작 하는 인덱스를 작성이 매개 변수 또는-1 표시 하지 않는 경우 탭을 찾을 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -401,11 +401,11 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `size`  
+ [out] *크기*  
  A `CSize` 크기가 허용 되는 최소값으로 채워진 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 최소 창 크기를 일관성 있게 실행 중인 경우 ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` 활성 탭에 대 한 크기를 허용 되는 최소값으로 채워집니다. 그렇지 않으면 `size` 의 반환 값으로 채워진 [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize)합니다.  
+ 최소 창 크기를 일관성 있게 실행 중인 경우 ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *크기* 활성 탭에 대 한 크기를 허용 되는 최소값으로 채워집니다. 그렇지 않으면 *크기* 의 반환 값으로 채워진 [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize)합니다.  
   
 ##  <a name="getpaneicon"></a>  CBaseTabbedPane::GetPaneIcon  
  창 크기에 허용 되는 최소값을 검색 합니다.  
@@ -415,11 +415,11 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `size`  
+ [out] *크기*  
  A `CSize` 크기가 허용 되는 최소값으로 채워진 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 최소 창 크기를 일관성 있게 실행 중인 경우 ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` 활성 탭에 대 한 크기를 허용 되는 최소값으로 채워집니다. 그렇지 않으면 `size` 의 반환 값으로 채워진 [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize)합니다.  
+ 최소 창 크기를 일관성 있게 실행 중인 경우 ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *크기* 활성 탭에 대 한 크기를 허용 되는 최소값으로 채워집니다. 그렇지 않으면 *크기* 의 반환 값으로 채워진 [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize)합니다.  
   
 ##  <a name="getpanelist"></a>  CBaseTabbedPane::GetPaneList  
  탭된 창에 포함 된 창 목록을 반환 합니다.  
@@ -431,10 +431,10 @@ virtual void GetPaneList(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `lst`  
+ [out] *lst*  
  A `CObList` 하는 탭된 창에 포함 된 창이 채워집니다.  
   
- [in] `pRTCFilter`  
+ [in] *pRTCFilter*  
  없는 경우 `NULL`, 반환된 된 목록에 지정된 된 런타임 클래스를 가지는 창이 합니다.  
   
 ##  <a name="gettabarea"></a>  CBaseTabbedPane::GetTabArea  
@@ -447,10 +447,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `rectTabAreaTop`  
+ [out] *rectTabAreaTop*  
  위 탭 영역의 화면 좌표를 받습니다.  
   
- [out] `rectTabAreaBottom`  
+ [out] *rectTabAreaBottom*  
  아래 탭 영역의 화면 좌표를 받습니다.  
   
 ### <a name="remarks"></a>설명  
@@ -523,14 +523,14 @@ virtual BOOL RemovePane(CWnd* pBar);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] [out] `pBar`  
+ [in] [out] *pBar*  
  탭된 창에서 제거 하 고 창에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
  `TRUE` 창에서 탭된 창에서 제거 되 고 탭된 창을 계속 유효 합니다. `FALSE` 마지막 창이 탭된 창에서 제거 되었습니다 고 탭된 창이 소멸 될 예정입니다. 반환 값이 `FALSE`, 탭된 창을 더 이상 사용 하지 마십시오.  
   
 ### <a name="remarks"></a>설명  
- 로 지정 된 창 제거 하려면이 메서드를 호출 하는 `pBar` 탭된 창에서 매개 변수입니다.  
+ 로 지정 된 창 제거 하려면이 메서드를 호출 하는 *pBar* 탭된 창에서 매개 변수입니다.  
   
 ##  <a name="setautodestroy"></a>  CBaseTabbedPane::SetAutoDestroy  
  탭된 컨트롤 막대를 자동으로 소멸 됩니다 여부를 결정 합니다.  
@@ -540,7 +540,7 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  `TRUE` 탭된 창을 동적으로 생성 하 고 수명; 하지 제어 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -558,23 +558,23 @@ virtual BOOL ShowTab(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pBar`  
+ [in] *pBar*  
  창 표시 하거나 숨길 수에 대 한 포인터입니다.  
   
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` 창을 표시 하려면 `FALSE` 창을 숨기려면 합니다.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  `TRUE` 탭 레이아웃; 조정 지연 그렇지 않으면 `FALSE`합니다.  
   
- [in] `bActivate`  
+ [in] *bActivate*  
  `TRUE` 활성 탭; 탭을 확인 하려면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="return-value"></a>반환 값  
  `TRUE` 탭 표시 또는 숨김 성공적으로 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드를 호출할 때 창을 표시 되거나 값에 따라 숨겨진는 `bShow` 매개 변수입니다. 탭을 숨길 이며 기본 탭 창에 마지막 표시 탭 탭된 창이 사라집니다. 표시 탭 이전에 경우에 탭을 표시 하는 경우 탭된 창에 표시 됩니다.  
+ 이 메서드를 호출할 때 창을 표시 되거나 값에 따라 숨겨진는 *bShow* 매개 변수입니다. 탭을 숨길 이며 기본 탭 창에 마지막 표시 탭 탭된 창이 사라집니다. 표시 탭 이전에 경우에 탭을 표시 하는 경우 탭된 창에 표시 됩니다.  
   
 ##  <a name="recalclayout"></a>  CBaseTabbedPane::RecalcLayout  
  창에 대 한 레이아웃 정보를 다시 계산합니다.  
@@ -600,16 +600,16 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bMode`  
+ [in] *bMode*  
  `TRUE` 자동 숨기기 모드를 사용 하도록 설정 하려면 `FALSE` 일반 도킹 모드를 사용 하도록 합니다.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  만들어야 하는 자동 숨기기 창의 맞춤을 지정 합니다. 가능한 값 목록은 참조 [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment)합니다.  
   
- [in] [out] `pCurrAutoHideBar`  
+ [in] [out] *pCurrAutoHideBar*  
  현재 자동 숨기기 도구 모음에 대 한 포인터입니다. 수 `NULL`합니다.  
   
- [in] `bUseTimer`  
+ [in] *bUseTimer*  
  창 자동 숨기기 모드로 전환할 때 자동 숨기기 효과 사용 하려면 또는 즉시 창을 숨기려면 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc26e2874921d30ef233509ee46b776ec8e3e9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f0f03d66fac6d58bdb48aa9b7a6d8aafe18a74ea
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380866"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956436"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>서버: 내부 프레임 창 구현
 이 문서에서는 서버 응용 프로그램을 만들 때 응용 프로그램 마법사를 사용하지 않는 경우, 시각적인 편집 서버 응용 프로그램에서 내부 프레임 창을 구현하기 위해 수행해야 하는 작업에 대해 설명합니다. 이 문서에 설명 된 절차를 수행 하는 대신 응용 프로그램 마법사에서 생성 된 응용 프로그램 또는 Visual c + +와 함께 제공 되는 샘플에서 기존에 내부 frame-window 클래스를 사용할 수 있습니다.  
@@ -32,13 +32,13 @@ ms.locfileid: "33380866"
   
 1.  `COleIPFrameWnd`에서 내부 frame-window 클래스를 파생합니다.  
   
-    -   클래스 헤더 파일에서 `DECLARE_DYNCREATE` 매크로를 사용합니다.  
+    -   DECLARE_DYNCREATE 매크로 사용 하 여 클래스 헤더 파일에 있습니다.  
   
-    -   클래스 구현(.cpp) 파일에서 `IMPLEMENT_DYNCREATE` 매크로를 사용합니다. 이렇게 하면 프레임워크가 이 클래스의 개체를 만들 수 있습니다.  
+    -   클래스 구현 (.cpp) 파일에서 IMPLEMENT_DYNCREATE 매크로 사용 합니다. 이렇게 하면 프레임워크가 이 클래스의 개체를 만들 수 있습니다.  
   
 2.  frame-window 클래스에서 `COleResizeBar` 멤버를 선언합니다. 이 멤버는 서버 응용 프로그램의 내부 크기 조정을 지원하려는 경우에 필요합니다.  
   
-     선언는 `OnCreate` 메시지 처리기 (사용 하는 **속성** 창), 호출 **만들기** 에 대 한 프로그램 `COleResizeBar` 멤버를 정의 했습니다.  
+     선언는 `OnCreate` 메시지 처리기 (사용 하는 **속성** 창), 호출 `Create` 에 대 한 프로그램 `COleResizeBar` 멤버를 정의 했습니다.  
   
 3.  도구 모음이 있으면 frame-window 클래스에서 `CToolBar` 멤버를 선언합니다.  
   

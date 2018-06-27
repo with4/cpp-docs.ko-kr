@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f6a46867edc4ea2f314c167da4215b869af3ab17
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc6556cabaa8f1f04a2a53771b495233620e1a14
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384454"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954411"
 ---
 # <a name="tn043-rfx-routines"></a>TN043: RFX 루틴
 > [!NOTE]
@@ -63,7 +63,7 @@ RFX_Custom(pFX, "Col2",
   
  MFC와 함께 제공 하는 모든 레코드 필드 교환 루틴의 목록에 대 한 ' afxdb.h'를 참조 하십시오.  
   
- 레코드 집합 필드 호출은 메모리 위치 (일반적으로 데이터 멤버)를 등록에 대 한 필드 데이터를 저장 하는 방법 한 **CMySet** 클래스입니다.  
+ 레코드 집합 필드 호출은 메모리 위치 (일반적으로 데이터 멤버)를 등록에 대 한 필드 데이터를 저장 하는 방법 한 `CMySet` 클래스입니다.  
   
 ## <a name="notes"></a>노트  
  레코드 집합 필드 함수는에 작동 하도록 설계 되었습니다는 `CRecordset` 클래스입니다. 다른 MFC 클래스에서 일반적으로 사용할 수는 없습니다.  
@@ -77,23 +77,23 @@ RFX_Custom(pFX, "Col2",
 ## <a name="how-does-it-work"></a>어떻게 작동 합니까  
  레코드 필드 교환을 사용 하려면 다음을 이해 하 고 필요가 없습니다. 그러나 이해 데 도움이 됩니다 원리를 자세히 파악할수록이 과정에 exchange 프로시저를 직접 작성 합니다.  
   
- `DoFieldExchange` 멤버 함수는 것과 마찬가지로 `Serialize` 멤버 함수-는 수집 또는/클래스에서 멤버 데이터에서 / (에 ODBC 쿼리 결과에서이 사례 열) 된 외부 형식에서 데이터를 설정 해야 합니다. `pFX` 매개 변수 데이터 교환을 수행 하는 데 컨텍스트 이며는 비슷합니다는 `CArchive` 매개 변수를 `CObject::Serialize`합니다. `pFX` (한 `CFieldExchange` 개체)에 작업 표시기 비슷합니다를 있지만 일반화 한는 `CArchive` 방향 플래그입니다. RFX 함수는 다음 작업을 지원 해야 할 수 있습니다.  
+ `DoFieldExchange` 멤버 함수는 것과 마찬가지로 `Serialize` 멤버 함수-는 수집 또는/클래스에서 멤버 데이터에서 / (에 ODBC 쿼리 결과에서이 사례 열) 된 외부 형식에서 데이터를 설정 해야 합니다. *pFX* 매개 변수 데이터 교환을 수행 하는 데 컨텍스트 이며는 비슷합니다는 *CArchive* 매개 변수를 `CObject::Serialize`합니다. *pFX* (한 `CFieldExchange` 개체)에 작업 표시기 비슷합니다를 있지만 일반화 한는 *CArchive* 방향 플래그입니다. RFX 함수는 다음 작업을 지원 해야 할 수 있습니다.  
   
-- **BindParam** -ODBC 매개 변수 데이터를 검색 해야 하는 표시  
+- `BindParam` -ODBC 매개 변수 데이터를 검색 해야 표시  
   
-- **BindFieldToColumn** -여기서 ODBC 해야 검색/입금 outputColumn 데이터 표시  
+- `BindFieldToColumn` -여기서 ODBC 해야 검색/입금 outputColumn 데이터를 표시 합니다.  
   
-- **픽스업** -설정 **CString/CByteArray** 길이, NULL 상태 비트 설정  
+- `Fixup` -설정 `CString/CByteArray` 길이, NULL 상태 비트 설정  
   
-- **MarkForAddNew** — 표시 값 AddNew를 호출 하는 이후 변경 된 경우 커밋되지 않음  
+- `MarkForAddNew` -표시 값 AddNew를 호출 하는 이후 변경 된 경우 커밋되지 않음  
   
-- **MarkForUpdate** — 표시 값 편집 호출 이후 변경 된 경우 커밋되지 않음  
+- `MarkForUpdate` -표시 값 편집 호출 이후 변경 된 경우 커밋되지 않음  
   
-- **이름** -더티로 표시 된 필드에 대 한 필드 이름을 추가 합니다.  
+- `Name` -더티로 표시 된 필드에 대 한 필드 이름을 추가 합니다.  
   
-- **NameValue** -추가 "\<열 이름 > =" 더티로 표시 된 필드에 대 한  
+- `NameValue` -추가 "\<열 이름 > =" 더티로 표시 된 필드에 대 한  
   
-- **값** -추가 ""와 같은 다음 구분 기호를 ',' 또는 ' '  
+- `Value` -추가 ""와 같은 다음 구분 기호를 ',' 또는 ' '  
   
 - `SetFieldDirty` --상태 비트 더티 (즉, 변경된) 필드를 설정 하는 중  
   
@@ -105,13 +105,13 @@ RFX_Custom(pFX, "Col2",
   
 - `IsFieldNullable` -필드는 NULL 값을 가질 수 있는 경우 TRUE를 반환  
   
-- **StoreField** -보관 필드 값  
+- `StoreField` -보관 필드 값  
   
-- **LoadField** -다시 로드 보관 필드 값  
+- `LoadField` -보관 된 필드 값을 다시 로드  
   
-- **GetFieldInfoValue** -필드에 대 한 일반 정보 반환  
+- `GetFieldInfoValue` -필드에 일반 정보를 반환 합니다.  
   
-- **GetFieldInfoOrdinal** -필드에 대 한 일반 정보 반환  
+- `GetFieldInfoOrdinal` -필드에 일반 정보를 반환 합니다.  
   
 ## <a name="user-extensions"></a>사용자 확장  
  기본 RFX 메커니즘을 확장 하는 방법은 여러 가지가 있습니다. 다음과 같은 작업을 수행할 수 있습니다.  
@@ -149,13 +149,13 @@ RFX_Custom(pFX, "Col2",
 ## <a name="writing-a-custom-rfx"></a>사용자 지정 RFX 작성  
  사용자 고유의 사용자 지정 RFX 함수를 작성 하려면 기존 RFX 함수 복사한 용도 맞게 수정할 것이 좋습니다. 복사할 오른쪽 RFX을 선택 하면 작업 훨씬 쉽게 수 있습니다. 일부 RFX 함수 복사을 결정할 때 고려해 야 하는 일부 고유 속성을 갖고 있습니다.  
   
- **RFX_Long 및 RFX_Int**:  
+ `RFX_Long` 및 `RFX_Int`:  
  이것은 가장 간단한 RFX 함수입니다. 데이터 값에는 특별 한 해석이 필요 하 고 데이터 크기는 고정 됩니다.  
   
- **RFX_Single 및 RFX_Double**:  
+ `RFX_Single` 및 `RFX_Double`:  
  RFX_Long 및 RFX_Int 위의 마찬가지로 이러한 함수는 간단 되며 정확해 기본 구현 광범위 하 게 사용 합니다. 그러나 부동 소수점 라이브러리는 명시적으로 참조 해야 하는 경우에 런타임을 로드를 사용 하도록 설정 하려면 dbrfx.cpp, 대신 dbflt.cpp에 저장 됩니다.  
   
- **RFX_Text 및 RFX_Binary**:  
+ `RFX_Text` 및 `RFX_Binary`:  
  이 두 기능 문자열/이진 정보를 보관 하는 정적 버퍼를 미리 할당 하 고 등록 & 값 대신 ODBC SQLBindCol에 이러한 버퍼를 등록 해야 합니다. 이 때문에 이러한 두 함수를 사용 하면 특별 한 경우 코드의 많을 합니다.  
   
  `RFX_Date`:  
@@ -164,9 +164,9 @@ RFX_Custom(pFX, "Col2",
  `RFX_LongBinary`:  
  RFX 함수를 데이터를 보내고 받는 열 바인딩을 사용 하지 않는 유일한 클래스 라이브러리입니다. 이 함수 BindFieldToColumn 작업을 무시 하 고 수정 작업 중 들어오는 SQL_LONGVARCHAR 또는 SQL_LONGVARBINARY 데이터를 저장 하려면 저장소를 할당 합니다. 다음을 할당 된 저장소에 값을 검색 하는 SQLGetData 호출을 수행 합니다. 데이터 값 (예: NameValue 및 값 작업) 데이터 소스에 다시 보낼 준비를 하는 경우이 함수는 ODBC의 DATA_AT_EXEC 기능을 사용 합니다. 참조 [기술 참고 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md) SQL_LONGVARBINARY 및 SQL_LONGVARCHARs 작업에 대 한 자세한 내용은 합니다.  
   
- 직접 작성 하는 경우 **RFX_** 함수를 종종 수 있습니다 사용할 **CFieldExchange::Default** 지정 된 작업을 구현 하 합니다. 작업에 대 한 기본 구현의 확인 합니다. 작성 해야 할 동작을 수행 하는 경우 프로그램 **RFX_** 함수를 위임할 수 있습니다는 **CFieldExchange::Default 합니다.** 호출의 예를 확인할 수 **CFieldExchange::Default** dbrfx.cpp에  
+ 직접 작성 하는 경우 **RFX_** 함수를 종종 수 있습니다 사용할 `CFieldExchange::Default` 지정 된 작업을 구현 하 합니다. 작업에 대 한 기본 구현의 확인 합니다. 작성 해야 할 동작을 수행 하는 경우 프로그램 **RFX_** 함수를 위임할 수 있습니다는 `CFieldExchange::Default`합니다. 호출의 예를 확인할 수 `CFieldExchange::Default` dbrfx.cpp에  
   
- 호출 해야 `IsFieldType` RFX 함수 및 FALSE를 반환 하는 경우에 즉시 반환의 시작 부분에 있습니다. 이 메커니즘은 매개 변수 작업에 대해 수행 됨을 유지 **outputColumns**, 그 반대의 (호출 처럼 **BindParam** 에 **outputColumn**). 또한 `IsFieldType` 자동으로 한 추적 수가 **outputColumns** (`m_nFields`) 및 매개 변수 (`m_nParams`).  
+ 호출 해야 `IsFieldType` RFX 함수 및 FALSE를 반환 하는 경우에 즉시 반환의 시작 부분에 있습니다. 이 메커니즘은 매개 변수 작업에 대해 수행 됨을 유지 *outputColumns*, 그 반대의 (호출 처럼 `BindParam` 에 *outputColumn*). 또한 `IsFieldType` 자동으로 한 추적 수가 *outputColumns* (*m_nFields*) 및 매개 변수 (*m_nParams*).  
   
 ## <a name="see-also"></a>참고 항목  
  [번호별 기술 참고 사항](../mfc/technical-notes-by-number.md)   

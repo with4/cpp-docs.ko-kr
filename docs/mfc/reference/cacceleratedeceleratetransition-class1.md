@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1dac40e91dd7b0a91c5d76b0d665d075e562267
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4342ed03991317bd030d308dbac9945734dcbd9e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357847"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954710"
 ---
 # <a name="cacceleratedeceleratetransition-class"></a>CAccelerateDecelerateTransition 클래스
 가속-감속 전환을 구현합니다.  
@@ -81,16 +81,16 @@ CAccelerateDecelerateTransition(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `duration`  
+ *duration*  
  전환의 기간입니다.  
   
- `finalValue`  
+ *finalValue*  
  전환의 끝에서 애니메이션 변수의 값입니다.  
   
- `accelerationRatio`  
+ *accelerationRatio*  
  기간을 가속화 하는 데 소요 된 시간의 비율입니다.  
   
- `decelerationRatio`  
+ *decelerationratio가*  
  기간으로 감속 하는 데 걸린 시간의 비율입니다.  
   
 ##  <a name="create"></a>  CAccelerateDecelerateTransition::Create  
@@ -103,7 +103,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
-`pLibrary`  
+*pLibrary*  
  에 대 한 포인터는 [IUIAnimationTransitionLibrary 인터페이스](https://msdn.microsoft.com/library/windows/desktop/dd371897), 표준 전환의 라이브러리를 정의 하는 합니다.  
   
 ### <a name="return-value"></a>반환 값  

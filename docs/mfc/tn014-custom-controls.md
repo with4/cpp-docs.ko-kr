@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a7ef7f6fd9a9da92c208366ee401d55d07fd5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9625b3eafa75bdafff7d17ea63db8904d9b49529
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384584"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956849"
 ---
 # <a name="tn014-custom-controls"></a>TN014: 사용자 지정 컨트롤
 이 노트는 사용자 지정과 자체 그리기 컨트롤에 대한 MFC 지원을 설명합니다. 또한 동적 서브클래싱을 설명 하 고 간의 관계를 설명 [CWnd](../mfc/reference/cwnd-class.md) 개체 및 `HWND`s입니다.  
@@ -100,11 +100,11 @@ ms.locfileid: "33384584"
 ## <a name="using-self-draw-controls-and-menus"></a>자체 그리기 컨트롤 및 메뉴 사용  
  자체 그리기 메뉴에 대해서는 `OnMeasureItem` 및 `OnDrawItem` 메서드를 모두 재정의해야 합니다.  
   
- 자체 그리기 목록 상자 및 콤보 상자에 대해서는 `OnMeasureItem` 및 `OnDrawItem`을 재정의해야 합니다. 목록 상자에 대해 `LBS_OWNERDRAWVARIABLE` 스타일을 지정하거나 대화 상자 템플릿의 콤보 상자에 대해 `CBS_OWNERDRAWVARIABLE` 스타일을 지정해야 합니다. 자체 그리기 컨트롤이 목록 상자에 연결되기 전에 고정된 항목 높이가 결정되기 때문에 `OWNERDRAWFIXED` 스타일은 자체 그리기 항목에서 작동하지 않습니다. (메서드를 사용할 수 [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) 및 [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) 이 제한을 극복할.)  
+ 자체 그리기 목록 상자 및 콤보 상자에 대해서는 `OnMeasureItem` 및 `OnDrawItem`을 재정의해야 합니다. 대화 상자 템플릿을에서 목록 상자에 대 한 LBS_OWNERDRAWVARIABLE 스타일 또는 CBS_OWNERDRAWVARIABLE 스타일 콤보 상자에를 지정 해야 합니다. 자체 그리기 컨트롤이 목록 상자에 연결 하기 전에 고정된 항목 높이가 결정 되기 때문에 OWNERDRAWFIXED 스타일 자체 그리기 항목에서 작동 하지 않습니다. (메서드를 사용할 수 [CListBox::SetItemHeight](../mfc/reference/clistbox-class.md#setitemheight) 및 [CComboBox::SetItemHeight](../mfc/reference/ccombobox-class.md#setitemheight) 이 제한을 극복할.)  
   
- `OWNERDRAWVARIABLE` 스타일로 전환하면 시스템에서 `NOINTEGRALHEIGHT` 스타일이 컨트롤에 강제로 적용됩니다. 컨트롤이 변수 크기의 항목에서 정수 높이를 계산할 수 없기 때문에 `INTEGRALHEIGHT`의 기본 스타일이 무시되고 컨트롤이 항상 `NOINTEGRALHEIGHT`입니다. 항목이 고정된 높이인 경우 컨트롤 크기를 항목 크기의 정수 배율로 지정하여 항목이 일부만 그려지지 않도록 방지할 수 있습니다.  
+ OWNERDRAWVARIABLE 스타일으로 전환 NOINTEGRALHEIGHT 스타일 컨트롤을 적용 하려면 시스템을 강제 적용 됩니다. 컨트롤이 변수 크기의 항목에서 정수 높이 계산할 수 없습니다, 되므로 INTEGRALHEIGHT의 기본 스타일 무시 하 고 컨트롤은 항상 NOINTEGRALHEIGHT 합니다. 항목이 고정된 높이인 경우 컨트롤 크기를 항목 크기의 정수 배율로 지정하여 항목이 일부만 그려지지 않도록 방지할 수 있습니다.  
   
- `LBS_SORT` 또는 `CBS_SORT` 스타일의 자체 그리기 목록 상자 및 콤보 상자의 경우 `OnCompareItem` 메서드를 재정의해야 합니다.  
+ 자체 그리기 목록 상자 및 콤보 상자의 LBS_SORT 또는 CBS_SORT 스타일을 재정의 해야 합니다는 `OnCompareItem` 메서드.  
   
  자체 그리기 목록 상자 및 콤보 상자의 경우 `OnDeleteItem`은 일반적으로 재정의되지 않습니다. 특수 처리를 수행하려는 경우에는 `OnDeleteItem`을 재정의할 수 있습니다. 이러한 경우를 적용할 수 있는 한 가지 사례는 추가 메모리 또는 기타 리소스가 각 목록 상자 또는 콤보 상자 항목에 저장되어 있는 경우입니다.  
   

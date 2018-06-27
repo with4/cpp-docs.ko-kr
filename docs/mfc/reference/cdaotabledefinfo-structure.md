@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53e20ca3f483bd9c00b298c69a526d8f5dd31cdb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 80c1422c4d0e45599ca8bc2e9c86a4263b8ac9b6
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367736"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955611"
 ---
 # <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo 구조체
 `CDaoTableDefInfo` 구조 데이터 액세스 개체 (DAO)에 대해 정의 된 테이블 정의 개체에 대 한 정보를 포함 합니다.  
@@ -46,13 +46,13 @@ struct CDaoTableDefInfo
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `m_strName`  
+ *m_strName*  
  고유 하 게 테이블 정의 개체의 이름을 지정 합니다. 이 속성의 값을 직접 검색 하 여 테이블 정의 개체를 호출 [GetName](../../mfc/reference/cdaotabledef-class.md#getname) 멤버 함수입니다. 자세한 내용은 DAO 도움말의 "Name 속성" 항목을 참조 합니다.  
   
- `m_bUpdatable`  
+ *m_bUpdatable*  
  테이블에 변경 내용을 만들 수 있는지 여부를 나타냅니다. 열려는 테이블을 업데이트할 수 있는지 여부를 확인 하는 빠른 방법은는 `CDaoTableDef` 테이블에 대 한 개체와 개체의 호출 [CanUpdate](../../mfc/reference/cdaotabledef-class.md#canupdate) 멤버 함수입니다. `CanUpdate` 항상 0이 아닌 값을 반환 합니다 (**TRUE**) tabledef 새로 만든된 개체 및 0에 대 한 (**FALSE**) 연결 된 테이블 정의 개체에 대 한 합니다. 새 테이블 정의 개체는 현재 사용자에 대 한 쓰기 권한이 있는 데이터베이스에만 추가할 수 있습니다. 테이블에만 업데이트할 수 없는 필드가 포함 하는 경우 `CanUpdate` 0을 반환 합니다. 하나 이상의 필드를 업데이트할 수, `CanUpdate` 0이 아닌 값을 반환 합니다. 업데이트할 수 있는 필드에만 편집할 수 있습니다. 자세한 내용은 DAO 도움말의 "업데이트할 수 있는 Property" 항목을 참조 합니다.  
   
- `m_lAttributes`  
+ *m_lAttributes*  
  테이블 정의 개체로 표시 된 테이블의 특성을 지정 합니다. 테이블 정의의 현재 속성을 검색 하려면 해당 [GetAttributes](../../mfc/reference/cdaotabledef-class.md#getattributes) 멤버 함수입니다. 반환 되는 값이 긴 상수의 조합 수 (비트 OR를 사용 하 여 (**&#124;**) 연산자).  
   
 - **dbAttachExclusive** Microsoft Jet 데이터베이스 엔진을 사용 하는 데이터베이스, 테이블은 배타적으로 사용에 대 한 열린 연결된 된 테이블을 나타냅니다.  
@@ -67,22 +67,22 @@ struct CDaoTableDefInfo
   
 - **dbAttachedODBC** 에서 Microsoft SQL Server와 같은 ODBC 데이터베이스 연결된 된 테이블은 해당 테이블이 나타냅니다.  
   
- `m_dateCreated`  
+ *m_dateCreated*  
  날짜 및 테이블을 만든 시간입니다. 테이블을 만든 날짜를 직접 검색 하려면 호출는 [GetDateCreated](../../mfc/reference/cdaotabledef-class.md#getdatecreated) 의 멤버 함수는 `CDaoTableDef` 테이블에 연결 된 개체입니다. 자세한 내용은 아래 메모를 참조 하십시오. 관련된 내용은 DAO 도움말의 "DateCreated LastUpdated 속성" 항목을 참조 합니다.  
   
- `m_dateLastUpdated`  
+ *m_dateLastUpdated*  
  날짜 및 시간을 테이블의 디자인에 대 한 가장 최근의 변경입니다. 테이블을 마지막으로 수정한 날짜를 직접 검색 하려면 호출는 [GetDateLastUpdated](../../mfc/reference/cdaotabledef-class.md#getdatelastupdated) 의 멤버 함수는 `CDaoTableDef` 테이블에 연결 된 개체입니다. 자세한 내용은 아래 메모를 참조 하십시오. 관련된 내용은 DAO 도움말의 "DateCreated LastUpdated 속성" 항목을 참조 합니다.  
   
  *m_strSrcTableName*  
  있는 경우 연결된 된 테이블의 이름을 지정 합니다. 원본 테이블 이름을 직접 검색 하려면 호출는 [GetSourceTableName](../../mfc/reference/cdaotabledef-class.md#getsourcetablename) 의 멤버 함수는 `CDaoTableDef` 테이블에 연결 된 개체입니다.  
   
- `m_strConnect`  
+ *m_strConnect*  
  열려 있는 데이터베이스의 원본에 대 한 정보를 제공 합니다. 호출 하 여이 속성을 확인할 수 있습니다는 [GetConnect](../../mfc/reference/cdaotabledef-class.md#getconnect) 의 멤버 함수에 `CDaoTableDef` 개체입니다. 에 대 한 자세한 정보에 대 한 연결 문자열, 참조 `GetConnect`합니다.  
   
- `m_strValidationRule`  
+ *m_strValidationRule*  
  변경 되거나 테이블에 추가 될 때 테이블 정의 필드의 데이터 유효성을 검사 하는 값입니다. 유효성 검사는 Microsoft Jet 데이터베이스 엔진을 사용 하는 데이터베이스에 대해서만 지원 됩니다. 유효성 검사 규칙을 직접 검색 하려면 호출는 [GetValidationRule](../../mfc/reference/cdaotabledef-class.md#getvalidationrule) 의 멤버 함수는 `CDaoTableDef` 테이블에 연결 된 개체입니다. 관련된 정보에 대 한 DAO 도움말의 "ValidationRule Property" 항목을 참조 합니다.  
   
- `m_strValidationText`  
+ *m_strValidationText*  
  유효성 검사 규칙 속성에 지정 된 유효성 검사 규칙을 충족 되지 않는 경우 응용 프로그램을 표시 하는 메시지의 텍스트를 지정 하는 값입니다. 관련된 정보에 대 한 DAO 도움말의 "유효성 검사 텍스트 Property" 항목을 참조 합니다.  
   
  *m_lRecordCount*  

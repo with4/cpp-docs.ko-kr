@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 515103fc66ad221a3806fc101dcbc01f507ef535
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a706c927a7aacaf69091d6b448e00bd7938c265f
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383190"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950437"
 ---
 # <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064: ActiveX 컨트롤의 아파트 모델 스레딩
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "33383190"
  아파트 모델을 사용 하는 것은 거의 또는 전혀 공유 데이터를가지고 있는 경우에 특히 대부분의 컨트롤에 대 한 쉬운 합니다.  
   
 ## <a name="protecting-shared-data"></a>공유 데이터 보호  
- 컨트롤에는 공유 데이터를 사용 하는 경우 예: 정적 멤버 변수에 대 한 액세스 둘 이상의 스레드에서 같은 시간에 데이터를 수정 하지 못하도록 임계 섹션으로 데이터를 보호 해야 합니다. 이 용도로 임계를 설정 하려면 클래스의 정적 멤버 변수를 선언 `CCriticalSection` 컨트롤의 클래스에 있습니다. 사용 하 여는 `Lock` 및 **잠금 해제** 코드 공유 데이터에 액세스 하는 경우 중요 한이 섹션의 멤버 함수 개체입니다.  
+ 컨트롤에는 공유 데이터를 사용 하는 경우 예: 정적 멤버 변수에 대 한 액세스 둘 이상의 스레드에서 같은 시간에 데이터를 수정 하지 못하도록 임계 섹션으로 데이터를 보호 해야 합니다. 이 용도로 임계를 설정 하려면 클래스의 정적 멤버 변수를 선언 `CCriticalSection` 컨트롤의 클래스에 있습니다. 사용 하 여는 `Lock` 및 `Unlock` 코드 공유 데이터에 액세스 하는 경우 중요 한이 섹션의 멤버 함수 개체입니다.  
   
  예를 들어 모든 인스턴스에서 공유 하는 문자열을 유지 해야 하는 컨트롤 클래스를 고려 합니다. 이 문자열 정적 멤버 변수에서 유지 관리 하 고 임계 영역 보호 될 수 있습니다. 컨트롤의 클래스 선언을 다음이 포함 됩니다.  
   
@@ -81,7 +81,7 @@ if (_strShared.Empty())
 ```  
   
 ## <a name="registering-an-apartment-model-aware-control"></a>아파트 모델 인식 컨트롤 등록  
- 아파트 모델 스레딩 지 원하는 컨트롤을 나타내야 레지스트리에서이 기능은 "ThreadingModel" 명명된 된 값을 추가 하 여 아래에 해당 클래스 ID 레지스트리 항목의 "Apartment"의 값이 있는 *클래스 id* \\ **InprocServer32** 키입니다. 이 컨트롤에 대해 자동으로 등록 될이 키를 전달 된 `afxRegApartmentThreading` 여섯 번째 매개 변수에서 플래그 `AfxOleRegisterControlClass`:  
+ 아파트 모델 스레딩 지 원하는 컨트롤을 나타내야 레지스트리에서이 기능은 "ThreadingModel" 명명된 된 값을 추가 하 여 아래에 해당 클래스 ID 레지스트리 항목의 "Apartment"의 값이 있는 *클래스 id* \\ **InprocServer32** 키입니다. 이 컨트롤에 대해 자동으로 등록 될이 키를 전달 된 *afxRegApartmentThreading* 여섯 번째 매개 변수에서 플래그 `AfxOleRegisterControlClass`:  
   
 ```  
 BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)  
@@ -108,9 +108,9 @@ BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)
   
  컨트롤 프로젝트는 Visual c + + 버전 4.1 이상 컨트롤에서 생성 되었으면,이 플래그가 이미 코드에 표시 됩니다. 변경 하지 스레딩 모델을 등록 하는 데 필요한 됩니다.  
   
- 프로젝트의 컨트롤은 이전 버전에서 생성 된 경우 기존 코드 여섯 번째 매개 변수로 부울 값을 갖습니다. 기존 매개 변수가 TRUE 인 경우 변경 `afxRegInsertable | afxRegApartmentThreading`합니다. 기존 매개 변수가 FALSE 인 경우 변경 `afxRegApartmentThreading`합니다.  
+ 프로젝트의 컨트롤은 이전 버전에서 생성 된 경우 기존 코드 여섯 번째 매개 변수로 부울 값을 갖습니다. 기존 매개 변수가 TRUE 인 경우 변경 *afxRegInsertable | afxRegApartmentThreading*합니다. 기존 매개 변수가 FALSE 인 경우 변경 *afxRegApartmentThreading*합니다.  
   
- 컨트롤이 아파트 모델 스레딩에 대 한 규칙을 따르지 않으면 전달 하면 안 `afxRegApartmentThreading` 에이 매개 변수입니다.  
+ 컨트롤이 아파트 모델 스레딩에 대 한 규칙을 따르지 않으면 전달 하면 안 *afxRegApartmentThreading* 에이 매개 변수입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [번호별 기술 참고 사항](../mfc/technical-notes-by-number.md)   

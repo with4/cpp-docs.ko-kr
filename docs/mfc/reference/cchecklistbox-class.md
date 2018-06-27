@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4129da35eca5aecfb1e976361d1716d1cd78e906
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 998a2124d80a03946df1cfeeb4a0223ccbf55b24
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358201"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956569"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox 클래스
 Windows 검사 목록 상자의 기능을 제공합니다.  
@@ -82,7 +82,7 @@ class CCheckListBox : public CListBox
   
  `CCheckListBox` 소유자가 그린 컨트롤에 대해서만 되므로 둘 이상의 텍스트 문자열 목록에 포함 합니다. 가장 간단한 텍스트 문자열 및 확인란 검사 목록 상자를 포함 하지만 텍스트를 전혀 없이 필요는 없습니다. 예를 들어, 각 항목 옆에 확인란을 사용 하는 작은 비트맵 목록이 있을 수 있습니다.  
   
- 고유한 클래스를 파생 해야 사용자가 직접 검사 목록 상자를 만들려면 `CCheckListBox`합니다. 사용자 고유의 클래스를 파생 파생된 클래스에 대 한 생성자를 작성 하려면 호출 **만들기**합니다.  
+ 고유한 클래스를 파생 해야 사용자가 직접 검사 목록 상자를 만들려면 `CCheckListBox`합니다. 사용자 고유의 클래스를 파생 파생된 클래스에 대 한 생성자를 작성 하려면 호출 `Create`합니다.  
   
  목록 상자에서 해당 부모에 보냅니다 Windows 알림 메시지를 처리 하려는 경우 (일반적으로 클래스에서 파생 [CDialog](../../mfc/reference/cdialog-class.md)), 각 메시지에 대 한 부모 클래스에는 메시지 맵 항목 및 메시지 처리기 멤버 함수를 추가 합니다.  
   
@@ -96,7 +96,7 @@ class CCheckListBox : public CListBox
   
  **afx_msg** `void` `memberFxn` **();**  
   
- 특히 관련 된 메시지 맵 항목이 하나만 **CCheckListBox** (에 대 한 메시지 맵 항목을 참조 하십시오. 하지만 [CListBox](../../mfc/reference/clistbox-class.md)):  
+ 특히 관련 된 메시지 맵 항목이 하나만 `CCheckListBox` (에 대 한 메시지 맵 항목을 참조 하십시오. 하지만 [CListBox](../../mfc/reference/clistbox-class.md)):  
   
 - **ON_CLBN_CHKCHANGE** 사용자가 항목의 확인란의 상태를 변경 합니다.  
   
@@ -126,9 +126,9 @@ CCheckListBox();
 ```  
   
 ### <a name="remarks"></a>설명  
- 생성할는 `CCheckListBox` 두 단계를 수행에서 하는 개체입니다. 파생 된 클래스를 먼저 정의 `CCheckListBox`, 호출 **만들기**, Windows 검사 목록 상자를 초기화 하 고에 연결 하는 `CCheckListBox` 개체입니다.  
+ 생성할는 `CCheckListBox` 두 단계를 수행에서 하는 개체입니다. 파생 된 클래스를 먼저 정의 `CCheckListBox`, 호출 `Create`, Windows 검사 목록 상자를 초기화 하 고에 연결 하는 `CCheckListBox` 개체입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#60](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
   
 ##  <a name="create"></a>  CCheckListBox::Create  
@@ -143,25 +143,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwStyle`  
+ *dwStyle*  
  검사 목록 상자의 스타일을 지정합니다. 스타일은 이어야 합니다 **LBS_HASSTRINGS** 고 **LBS_OWNERDRAWFIXED** (목록의 모든 항목 높이 같게 만들기는 하는 데 사용) 또는 **LBS_OWNERDRAWVARIABLE** (목록 항목은의 다양 한 높이)입니다. 이 스타일 함께 사용할 수 있습니다 다른 [목록 상자 스타일](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) 제외 하 고 **LBS_USETABSTOPS**합니다.  
   
- `rect`  
+ *rect*  
  검사 목록 상자의 크기와 위치를 지정합니다. 일 수 있습니다는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](../../mfc/reference/rect-structure1.md) 구조입니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  검사 목록 상자의 부모 창 (일반적으로 `CDialog` 개체). 않아야 **NULL**합니다.  
   
- `nID`  
+ *nID*  
  검사 목록 상자 컨트롤 ID를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 생성할는 `CCheckListBox` 두 단계를 수행에서 하는 개체입니다. 파생 된 클래스를 먼저 정의 **CcheckListBox** 호출 **만들기**, Windows 검사 목록 상자를 초기화 하 고에 연결 하는 `CCheckListBox`합니다. 참조 [CCheckListBox::CCheckListBox](#cchecklistbox) 샘플입니다.  
+ 생성할는 `CCheckListBox` 두 단계를 수행에서 하는 개체입니다. 파생 된 클래스를 먼저 정의 `CcheckListBox` 호출 `Create`, Windows 검사 목록 상자를 초기화 하 고에 연결 하는 `CCheckListBox`합니다. 참조 [CCheckListBox::CCheckListBox](#cchecklistbox) 샘플입니다.  
   
- 때 **만들기** 실행 되 면 Windows 보냅니다는 [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), 및 [WM_ GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) 검사 목록 상자 컨트롤에는 메시지입니다.  
+ 때 `Create` 실행 되 면 Windows 보냅니다는 [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), 및 [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) 검사 목록 상자 컨트롤에 대 한 메시지입니다.  
   
  기본적으로 이러한 메시지의 처리는 [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), 및 [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) 멤버 함수 에 `CWnd` 기본 클래스입니다. 기본 메시지 처리를 확장 하려면에 메시지 맵을 추가 파생된 클래스와 재정의 위의 메시지 처리기 멤버 함수입니다. 재정의 `OnCreate`, 예를 들어 새 클래스에 대 한 필요한 초기화를 수행 하도록 합니다.  
   
@@ -189,7 +189,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  에 대 한 긴 포인터는 [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) 드로잉 필요한의 종류에 대 한 정보가 포함 된 구조체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -197,9 +197,9 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
   
  기본적으로이 함수는 각 문자열에서 왼쪽으로 기본 크기의 확인란 목록이 구성 된 기본 확인란 목록을, 그립니다. 확인란 목록 크기는 하나에 지정 된 [만들기](#create)합니다.  
   
- 문자열 되지 않은 목록, 가변 길이 항목 또는 왼쪽에 없는 확인란이 있는 검사 목록 상자와 같은 기본 되지 않는 소유자 그리기 검사 목록 상자 그리기를 구현 하려면이 멤버 함수를 재정의 합니다. 응용 프로그램에 제공 된 디스플레이 컨텍스트에 대해 선택한 모든 그래픽 장치 GDI (인터페이스) 개체를 복원 해야 `lpDrawItemStruct` 이 멤버 함수 종료 전에 합니다.  
+ 문자열 되지 않은 목록, 가변 길이 항목 또는 왼쪽에 없는 확인란이 있는 검사 목록 상자와 같은 기본 되지 않는 소유자 그리기 검사 목록 상자 그리기를 구현 하려면이 멤버 함수를 재정의 합니다. 응용 프로그램에 제공 된 디스플레이 컨텍스트에 대해 선택한 모든 그래픽 장치 GDI (인터페이스) 개체를 복원 해야 *lpDrawItemStruct* 이 멤버 함수 종료 전에 합니다.  
   
- 검사 목록 상자 스타일 검사 목록 상자 항목 높이가 모두 없는 경우 (에 지정 된 **만들기**) 이어야 합니다 **LBS_OWNERVARIABLE**를 재정의 해야 하 고는 [MeasureItem](#measureitem) 함수입니다.  
+ 검사 목록 상자 스타일 검사 목록 상자 항목 높이가 모두 없는 경우 (에 지정 된 `Create`) 이어야 합니다 **LBS_OWNERVARIABLE**를 재정의 해야 하 고는 [MeasureItem](#measureitem) 함수입니다.  
   
 ##  <a name="enable"></a>  CCheckListBox::Enable  
  검사 목록 상자 항목을 사용 하지 않도록 설정 하거나 설정 하려면이 함수를 호출 합니다.  
@@ -211,10 +211,10 @@ void Enable(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  사용 하도록 설정 하는 검사 목록 상자 항목의 인덱스입니다.  
   
- `bEnabled`  
+ *b 사용*  
  항목이 사용 되는지 여부를 지정 합니다.  
   
 ##  <a name="getcheck"></a>  CCheckListBox::GetCheck  
@@ -225,7 +225,7 @@ int GetCheck(int nIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  목록 상자에 있는 확인란의 0부터 시작 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -258,7 +258,7 @@ BOOL IsEnabled(int nIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  항목의 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -272,7 +272,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpMeasureItemStruct`  
+ *lpMeasureItemStruct*  
  에 대 한 긴 포인터는 [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) 구조입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -291,7 +291,7 @@ virtual CRect OnGetCheckPosition(
  *rectItem*  
  목록 항목의 크기와 위치 합니다.  
   
- `rectCheckBox`  
+ *rectCheckBox*  
  기본 위치와 크기 항목의 상자를 선택합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -310,14 +310,14 @@ void SetCheck(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  목록 상자에 있는 확인란의 0부터 시작 인덱스입니다.  
   
- `nCheck`  
+ *nCheck*  
  지정한 확인란에 대 한 단추 상태입니다. 가능한 값에 대 한 설명 섹션을 참조 하십시오.  
   
 ### <a name="remarks"></a>설명  
- 다음 표에서 사용할 수 있는 값의 `nCheck` 매개 변수입니다.  
+ 다음 표에서 사용할 수 있는 값의 *nCheck* 매개 변수입니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -333,7 +333,7 @@ void SetCheckStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nStyle`  
+ *nStyle*  
  검사 목록 상자에서 확인란의 스타일을 결정 합니다.  
   
 ### <a name="remarks"></a>설명  

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 42da6afd054f05bb37ac0b4ea8bf497a31e433b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ff365134a9b952b92211418c03d147a65077c66e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368048"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951854"
 ---
 # <a name="cdialogex-class"></a>CDialogEx 클래스
 `CDialogEx` 클래스는 대화 상자의 배경 색과 배경 이미지를 지정합니다.  
@@ -90,16 +90,16 @@ CDialogEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIDTemplate`  
+ [in] *nIDTemplate*  
  대화 상자 템플릿의 리소스 ID입니다.  
   
- [in] `lpszTemplateName`  
+ [in] *lpszTemplateName*  
  대화 상자 템플릿의 리소스 이름입니다.  
   
- [in] `pParent`  
+ [in] *pParent*  
  부모 창에 대 한 포인터입니다. 기본값은 `NULL`입니다.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  부모 창에 대 한 포인터입니다. 기본값은 `NULL`입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -116,10 +116,10 @@ void SetBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `color`  
+ [in] *색*  
  RGB 색상 값입니다.  
   
- [in] `bRepaint`  
+ [in] *bRepaint*  
  `TRUE` 즉시; 화면을 업데이트 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -142,19 +142,19 @@ BOOL SetBackgroundImage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `hBitmap`  
+ [in] *hBitmap*  
  배경 이미지에 대 한 핸들입니다.  
   
- [in] `uiBmpResId`  
+ [in] *uiBmpResId*  
  배경 이미지의 리소스 ID입니다.  
   
- [in] `location`  
+ [in] *위치*  
  중 하나는 `CDialogEx::BackgroundLocation` 이미지의 위치를 지정 하는 값입니다. 유효한 값 BACKGR_TILE, BACKGR_TOPLEFT, BACKGR_TOPRIGHT, BACKGR_BOTTOMLEFT, 및 BACKGR_BOTTOMRIGHT 포함 됩니다. 기본값은 BACKGR_TILE 합니다.  
   
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  `TRUE` 배경 이미지를 자동으로 제거 하려면 그렇지 않으면 `FALSE`합니다.  
   
- [in] `bRepaint`  
+ [in] *bRepaint*  
  `TRUE` 대화 상자;을 즉시 다시 그리게 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="return-value"></a>반환 값  

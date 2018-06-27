@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 923b1b74a50fd13a57c1d9c7696f81acb28453e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b762c3abb5f57574dc2a60d6b2145af2e0c0484b
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356540"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952102"
 ---
 # <a name="canimationvalue-class"></a>CAnimationValue 클래스
 하나의 값을 갖는 애니메이션 개체 기능을 구현합니다.  
@@ -79,7 +79,7 @@ class CAnimationValue : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CAnimationValue::m_value](#m_value)|캡슐화 된 애니메이션 변수 애니메이션 값을 나타냅니다.|  
   
@@ -104,7 +104,7 @@ void AddTransition(CBaseTransition* pTransition);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pTransition`  
+ *pTransition*  
  전환 개체에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -125,16 +125,16 @@ CAnimationValue(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  기본값을 지정합니다.  
   
- `nGroupID`  
+ *nGroupID*  
  그룹 ID를 지정 합니다.  
   
- `nObjectID`  
+ *nObjectID*  
  개체 ID를 지정 합니다.  
   
- `dwUserData`  
+ *dwUserData*  
  사용자 정의 데이터를 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -150,7 +150,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lst`  
+ *lst*  
  함수가 반환 될 때 애니메이션된 값을 나타내는 CAnimationVariable에 대 한 포인터를 포함 합니다.  
   
 ##  <a name="getvalue"></a>  CAnimationValue::GetValue  
@@ -162,10 +162,10 @@ BOOL GetValue(INT32& nValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dblValue`  
+ *dblValue*  
  출력입니다. 함수는 반환 될 때 애니메이션 변수의 현재 값을 포함 합니다.  
   
- `nValue`  
+ *n 값*  
  출력입니다. 함수는 반환 될 때 애니메이션 변수의 현재 값을 포함 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -229,10 +229,10 @@ void operator=(INT32 nVal);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dblVal`  
+ *dblVal*  
  애니메이션 값에 할당할 값을 지정 합니다.  
   
- `nVal`  
+ *nVal*  
  애니메이션 값에 할당할 값을 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -246,7 +246,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  기본값을 지정합니다.  
   
 ### <a name="remarks"></a>설명  

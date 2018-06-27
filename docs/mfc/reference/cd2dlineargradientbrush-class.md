@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94609d9ee589d42c440324cb8782c35720b23214
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61dc2134a2da6570c748cebbfc770b213863de04
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353697"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957249"
 ---
 # <a name="cd2dlineargradientbrush-class"></a>CD2DLinearGradientBrush 클래스
 ID2D1LinearGradientBrush에 대 한 래퍼입니다.  
@@ -87,7 +87,7 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CD2DLinearGradientBrush::m_LinearGradientBrushProperties](#m_lineargradientbrushproperties)|시작 및 그라데이션의 끝점입니다.|  
 |[CD2DLinearGradientBrush::m_pLinearGradientBrush](#m_plineargradientbrush)|ID2D1LinearGradientBrush에 대 한 포인터입니다.|  
@@ -121,7 +121,7 @@ void Attach(ID2D1LinearGradientBrush* pResource);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pResource`  
+ *pResource*  
  기존 리소스 인터페이스입니다. NULL 일 수 없습니다.  
   
 ##  <a name="cd2dlineargradientbrush"></a>  CD2DLinearGradientBrush::CD2DLinearGradientBrush  
@@ -140,28 +140,28 @@ CD2DLinearGradientBrush(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParentTarget`  
+ *pParentTarget*  
  렌더링 대상에 대 한 포인터입니다.  
   
- `gradientStops`  
+ *gradientStops*  
  D2D1_GRADIENT_STOP 구조의 배열에 대 한 포인터입니다.  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  GradientStops 배열에서 그라데이션 중지점의 수를 지정 하는 1 보다 크거나 같은 값입니다.  
   
- `LinearGradientBrushProperties`  
+ *LinearGradientBrushProperties*  
  시작 및 그라데이션의 끝점입니다.  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  어떤 색 그라데이션 중지점 사이의 보간을 수행 되는 공간입니다.  
   
- `extendMode`  
+ *extendMode*  
  [0, 1]의 표준화 된 범위를 벗어난 그라데이션의 동작입니다.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  불투명도 및 브러시의 변환에 대 한 포인터입니다.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  개체를 소유자 (pParentTarget)에 의해 폐기 수를 나타냅니다.  
   
 ##  <a name="create"></a>  CD2DLinearGradientBrush::Create  
@@ -172,7 +172,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pRenderTarget`  
+ *pRenderTarget*  
  렌더링 대상에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -257,7 +257,7 @@ void SetEndPoint(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `point`  
+ *지점*  
  브러시의 좌표 공간에서 선형 그라데이션의 끝 2 차원 좌표  
   
 ##  <a name="setstartpoint"></a>  CD2DLinearGradientBrush::SetStartPoint  
@@ -268,7 +268,7 @@ void SetStartPoint(CD2DPointF point);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `point`  
+ *지점*  
  브러시의 좌표 공간에서 선형 그라데이션의 시작 2 차원 좌표  
   
 ## <a name="see-also"></a>참고 항목  

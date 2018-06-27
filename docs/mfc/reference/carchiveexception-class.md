@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac864831e9d3a0cf0cd5e67501f1ac8396f99473
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2763335a9165c1667160864a40200dcfd44b7f34
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352608"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953102"
 ---
 # <a name="carchiveexception-class"></a>CArchiveException 클래스
 Serialization 예외 상태를 나타냅니다.  
@@ -69,7 +69,7 @@ class CArchiveException : public CException
  **헤더:** afx.h  
   
 ##  <a name="carchiveexception"></a>  CArchiveException::CArchiveException  
- 생성 한 `CArchiveException` 의 값을 저장 하는 개체, `cause` 개체에 있습니다.  
+ 생성 한 `CArchiveException` 의 값을 저장 하는 개체를 *인해* 개체에 있습니다.  
   
 ```  
 CArchiveException(
@@ -78,10 +78,10 @@ CArchiveException(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cause`  
+ *cause*  
  예외에 대 한 이유를 나타내는 열거 형식 변수입니다. 열거자의 목록에 대 한 참조는 [m_cause](#m_cause) 데이터 멤버입니다.  
   
- `lpszArchiveName`  
+ *lpszArchiveName*  
  이름을 포함 하는 문자열을 가리키는 `CArchive` 예외를 발생 시킨 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -97,7 +97,7 @@ int m_cause;
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 데이터 멤버는 `int` 형식의 공용 변수입니다. 해당 값으로 정의 된 한 `CArchiveException` 열거 형식입니다. 아래에 열거자와 해당 의미가 나와 있습니다.  
+ 이 데이터 멤버는 형식의 공용 변수 **int**합니다. 해당 값으로 정의 된 한 `CArchiveException` 열거 형식입니다. 아래에 열거자와 해당 의미가 나와 있습니다.  
   
 - **CArchiveException::none** 오류가 발생 하지 않았습니다.  
   

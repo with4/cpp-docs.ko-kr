@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02cd74a20f0ccc54a366c1a62d913ee30e72471a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 942c3e8aa2aeccefc9c92cd9fd32d453dc5353cf
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384373"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956428"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows 소켓: 아카이브를 사용하는 소켓의 예
 이 문서에서는 클래스를 사용 하는 예제를 제공 [CSocket](../mfc/reference/csocket-class.md)합니다. 이 예제에서는 사용 `CArchive` 소켓을 통해 데이터를 직렬화 하는 개체입니다. 파일 또는 문서 직렬화 아닌지 note 합니다.  
@@ -30,26 +30,26 @@ ms.locfileid: "33384373"
   
  [!code-cpp[NVC_MFCSimpleSocket#1](../mfc/codesnippet/cpp/windows-sockets-example-of-sockets-using-archives_1.cpp)]  
   
- 이 예제에 대 한 가장 중요 한 작업은 해당 구조는 MFC의 철자와 유사 `Serialize` 함수입니다. **PacketSerialize** 이루어져 있습니다 멤버 함수는 **경우** 문을 **다른** 절. 함수는 두 개의 받는다는 [CArchive](../mfc/reference/carchive-class.md) 매개 변수로 참조: `arData` 및 `arAck`합니다. 경우는 `arData` 보관 개체가 저장 (송신)에 대 한 설정의 **경우** 분기가 실행 됩니다; 그렇지 않은 경우, `arData` 설정 되어 함수 사용 (수신)를 로드 하기 위한는 **다른** 분기 합니다. MFC의 serialization에 대 한 자세한 내용은 참조 [Serialization](../mfc/how-to-make-a-type-safe-collection.md)합니다.  
+ 이 예제에 대 한 가장 중요 한 작업은 해당 구조는 MFC의 철자와 유사 `Serialize` 함수입니다. `PacketSerialize` 이루어져 있습니다 멤버 함수는 **경우** 문을 **다른** 절. 함수는 두 개의 받는다는 [CArchive](../mfc/reference/carchive-class.md) 매개 변수로 참조: *arData* 및 *arAck*합니다. 경우는 *arData* 보관 개체가 저장 (송신)에 대 한 설정의 **경우** 분기가 실행 됩니다; 그렇지 않은 경우, *arData* 설정 됩니다 (수신)를 로드 하기 위한 함수는 에서사용**다른** 분기 합니다. MFC의 serialization에 대 한 자세한 내용은 참조 [Serialization](../mfc/how-to-make-a-type-safe-collection.md)합니다.  
   
 > [!NOTE]
->  `arAck` 보관 개체의 반대 간주 `arData`합니다. 경우 `arData` , 전송을 위한 `arAck` 를 수신 하면 하며, 반대 적용 됩니다.  
+>  *arAck* 보관 개체의 반대 간주 *arData*합니다. 경우 *arData* , 전송을 위한 *arAck* 를 수신 하면 하며, 반대 적용 됩니다.  
   
- 송신용, 예제 함수는 데모용으로 난수 데이터가 생성 될 때마다 횟수 지정 된 수에 대 한 루프입니다. 응용 프로그램은 파일 등의 일부 소스에서 실제 데이터를 가져옵니다. `arData` 보관 파일의 삽입 연산자 (**<<**) 스트림을 연속 된 3 개의 데이터 청크를 보내는 데 사용 됩니다.  
+ 송신용, 예제 함수는 데모용으로 난수 데이터가 생성 될 때마다 횟수 지정 된 수에 대 한 루프입니다. 응용 프로그램은 파일 등의 일부 소스에서 실제 데이터를 가져옵니다. *arData* 보관 파일의 삽입 연산자 (**<<**) 스트림을 연속 된 3 개의 데이터 청크를 보내는 데 사용 됩니다.  
   
--   "헤더" 데이터의 특성을 지정 하는 (이 경우의 값은 `bValue` 변수와 복사본 수 전송 됩니다).  
+-   "헤더" 데이터의 특성을 지정 하는 (이 경우의 값은 *bValue* 변수와 복사본 수 전송 됩니다).  
   
      이 예제에서는 두 항목 모두 임의로 생성 됩니다.  
   
 -   지정 된 데이터의 복사본 수입니다.  
   
-     내부 **에 대 한** 보냅니다 루프 `bValue` 지정한 횟수 만큼 합니다.  
+     내부 **에 대 한** 보냅니다 루프 *bValue* 지정한 횟수 만큼 합니다.  
   
--   라는 문자열이 `strText` 수신기는 해당 사용자에 게 표시 하는 합니다.  
+-   라는 문자열이 *strText* 수신기는 해당 사용자에 게 표시 하는 합니다.  
   
  수신에 함수가 작동 마찬가지로, 보관 파일의 추출 연산자를 사용 하 여 (**>>**) 보관 파일에서 데이터를 가져옵니다. 수신 응용 프로그램이 표시 하는 보내는 응용 프로그램에 대 한 데이터를 주고 받을 수, 최종 "Received" 메시지를 표시 한 다음 다시 보냈습니다."라는 메시지를 확인 합니다.  
   
- 이 통신 모델에서 "Received" 라는 단어에서 메시지가 전송 된 `strText` , 변수가, 통신의 다른 쪽에 표시 하기 위해 특정 수의 데이터 패킷 수신한 받는 사용자를 지정 합니다. 수신기 "sent"를 표시 하기 위해 원래 보낸 사람의 화면에는 비슷한 문자열을 사용 하 여 회신 합니다. 두 문자열의 수신 통신이 성공이 발생 했음을 나타냅니다.  
+ 이 통신 모델에서 "Received" 라는 단어에서 메시지가 전송 된 *strText* , 변수가, 통신의 다른 쪽에 표시 하기 위해 특정 수의 데이터 패킷 된 것을 받는 사용자 지정 수신 합니다. 수신기 "sent"를 표시 하기 위해 원래 보낸 사람의 화면에는 비슷한 문자열을 사용 하 여 회신 합니다. 두 문자열의 수신 통신이 성공이 발생 했음을 나타냅니다.  
   
 > [!CAUTION]
 >  설정된(MFC 이외) 서버와 통신하도록 MFC 클라이언트 프로그램을 작성하는 경우 아카이브를 통해 C++ 개체를 전송하지 마십시오. 서버가 전송 하려는 개체의 종류를 이해 하는 MFC 응용 프로그램, 있지 않으면을 받은 개체를 역직렬화 할 수 없습니다. 문서의 예제 [Windows 소켓: 바이트 순서 지정](../mfc/windows-sockets-byte-ordering.md) 이러한 종류의 통신을 보여 줍니다.  

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07dc58332bc99cb01e9b6567eafe2cb5b96f1b9c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a228a545061c4807688014b62907c4c41a82151e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368952"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952306"
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView 클래스
 컨트롤에 데이터베이스 레코드를 표시하는 뷰입니다.  
@@ -104,10 +104,10 @@ explicit CDaoRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  대화 상자 템플릿 리소스의 이름에 해당 하는 null로 끝나는 문자열을 포함 합니다.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  대화 상자 템플릿 리소스의 ID 번호를 포함합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -116,10 +116,10 @@ explicit CDaoRecordView(UINT nIDTemplate);
 > [!NOTE]
 >  파생된 클래스의 자체 생성자를 제공 해야 합니다. 파생된 클래스의 생성자에서 생성자를 호출 `CDaoRecordView::CDaoRecordView` 리소스 이름 또는 ID를 인수로 사용 합니다.  
   
- **CDaoRecordView::OnInitialUpdate** 호출 `CWnd::UpdateData`, 되는 호출 `CWnd::DoDataExchange`합니다. 이 초기 호출으로 `DoDataExchange` 연결 `CDaoRecordView` (간접적으로) 제어 `CDaoRecordset` 필드 classwizard 함께 사용 하 여 만든 데이터 멤버입니다. 기본 클래스를 호출 하 고 나면 될 때까지 이러한 데이터 멤버를 사용할 수 없습니다 **CFormView::OnInitialUpdate** 멤버 함수입니다.  
+ `CDaoRecordView::OnInitialUpdate` 호출 `CWnd::UpdateData`, 되는 호출 `CWnd::DoDataExchange`합니다. 이 초기 호출으로 `DoDataExchange` 연결 `CDaoRecordView` (간접적으로) 제어 `CDaoRecordset` 필드 classwizard 함께 사용 하 여 만든 데이터 멤버입니다. 기본 클래스를 호출 하 고 나면 될 때까지 이러한 데이터 멤버를 사용할 수 없습니다 `CFormView::OnInitialUpdate` 멤버 함수입니다.  
   
 > [!NOTE]
->  마법사를 정의 하는 클래스 마법사를 사용 하는 경우는 `enum` 값 `CDaoRecordView::IDD` 클래스 선언 및 사용 하 여 목록에서 멤버 초기화는 생성자에 대 한 합니다.  
+>  마법사를 정의 하는 클래스 마법사를 사용 하는 경우는 **enum** 값 `CDaoRecordView::IDD` 클래스 선언 및 사용 하 여 목록에서 멤버 초기화는 생성자에 대 한 합니다.  
   
  [!code-cpp[NVC_MFCDatabase#35](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
   
@@ -165,7 +165,7 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
  에 대 한 포인터는 `CDaoRecordset`-파생 개체 했으면 성공적으로 생성 된 개체는 **NULL** 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
- 생성 또는 레코드 집합 개체를 가져올 하 고에 대 한 포인터를 반환 하려면이 멤버 함수를 재정의 해야 합니다. 클래스 마법사로 레코드 뷰 클래스를 선언 하는 경우 마법사는 기본 재정의를 작성 합니다. 클래스 마법사의 기본 구현은 있을 경우 레코드 뷰에 저장 된 레코드 포인터를 반환 합니다. 클래스 마법사 및 호출을 사용 하 여 지정한 형식의 레코드 집합 개체를 생성 그렇지 않은 경우 해당 **열고** 멤버 함수를 테이블 열 또는 쿼리를 실행 한 다음 개체에 대 한 포인터를 반환 합니다.  
+ 생성 또는 레코드 집합 개체를 가져올 하 고에 대 한 포인터를 반환 하려면이 멤버 함수를 재정의 해야 합니다. 클래스 마법사로 레코드 뷰 클래스를 선언 하는 경우 마법사는 기본 재정의를 작성 합니다. 클래스 마법사의 기본 구현은 있을 경우 레코드 뷰에 저장 된 레코드 포인터를 반환 합니다. 클래스 마법사 및 호출을 사용 하 여 지정한 형식의 레코드 집합 개체를 생성 그렇지 않은 경우 해당 `Open` 멤버 함수를 테이블 열 또는 쿼리를 실행 한 다음 개체에 대 한 포인터를 반환 합니다.  
   
  자세한 내용 및 예제에 대 한 문서를 참조 [레코드 뷰: 레코드 뷰를 사용 하 여](../../data/using-a-record-view-mfc-data-access.md)합니다.  
   
@@ -177,7 +177,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDMoveCommand`  
+ *nIDMoveCommand*  
  표준 명령 ID 값이 다음 중 하나입니다.  
   
 - `ID_RECORD_FIRST` 레코드 집합의 첫 번째 레코드로 이동 합니다.  
@@ -201,7 +201,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  레코드 집합의 마지막 레코드를 지 나 이동 하는 경우 레코드 뷰 계속 마지막 레코드를 표시 됩니다. 첫 번째 레코드를 지 나 뒤로 이동 하는 경우 첫 번째 레코드를 표시 하는 레코드 뷰 계속 합니다.  
   
 > [!CAUTION]
->  호출 `OnMove` 레코드 집합에 레코드가 없는 경우 예외를 throw 합니다. 적절 한 사용자 인터페이스 업데이트 처리기 함수를 호출- **OnUpdateRecordFirst**, **OnUpdateRecordLast**, **OnUpdateRecordNext**, 또는  **OnUpdateRecordPrev** -전에 해당 레코드 집합에 레코드가 있는지 확인 하는 작업으로 이동 합니다.  
+>  호출 `OnMove` 레코드 집합에 레코드가 없는 경우 예외를 throw 합니다. 적절 한 사용자 인터페이스 업데이트 처리기 함수를 호출- `OnUpdateRecordFirst`, `OnUpdateRecordLast`, `OnUpdateRecordNext`, 또는 `OnUpdateRecordPrev` -전에 해당 레코드 집합에 레코드가 있는지 확인 하는 작업으로 이동 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CFormView 클래스](../../mfc/reference/cformview-class.md)   

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bd8f7b12eee847fd6b8784d21f4b565c7fc6a5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d292c3f48f0a375fbd914cf287f1e8d2cef5c6c3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357017"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952387"
 ---
 # <a name="ccommandlineinfo-class"></a>CCommandLineInfo 클래스
 응용 프로그램을 시작할 때 명령줄을 구문 분석하는 데 유용합니다.  
@@ -121,7 +121,7 @@ CCommandLineInfo();
   
  응용 프로그램 프레임 워크 호출 [ParseParam](#parseparam) 을이 개체의 데이터 멤버를 채웁니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#54](../../mfc/codesnippet/cpp/ccommandlineinfo-class_1.cpp)]  
   
 ##  <a name="m_brunautomated"></a>  CCommandLineInfo::m_bRunAutomated  
@@ -198,7 +198,7 @@ enum {
   
 - `CCommandLineInfo::FileNothing` 시작할 때 새 MDI 자식 창이 표시 되지 않습니다. 기본적으로 응용 프로그램 마법사에서 생성 된 MDI 응용 프로그램 시작 시 새 자식 창을 표시. 이 기능을 해제 하려면 응용 프로그램 사용 `CCommandLineInfo::FileNothing` 셸 명령을 호출할 때 [ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)합니다. `ProcessShellCommand` 에 의해 호출 됩니다는 `InitInstance( )` 모든 `CWinApp` 파생 클래스입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#55](../../mfc/codesnippet/cpp/ccommandlineinfo-class_2.cpp)]  
   
 ##  <a name="m_strdrivername"></a>  CCommandLineInfo::m_strDriverName  
@@ -270,17 +270,17 @@ virtual void ParseParam(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pszParam`  
+ *pszParam*  
  매개 변수 또는 플래그입니다.  
   
  *bFlag*  
- 나타냅니다 여부 `pszParam` 는 매개 변수 인지 또는 플래그입니다.  
+ 나타냅니다 여부 *pszParam* 는 매개 변수 인지 또는 플래그입니다.  
   
- `bLast`  
+ *폭발*  
  이 마지막 매개 변수 또는 명령줄에서 플래그는 경우를 나타냅니다.  
   
 ### <a name="remarks"></a>설명  
- [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) 호출 `ParseParam` 한 번 각 매개 변수 또는 명령줄에서 플래그에 대 한 인수를 전달 `pszParam`합니다. 매개 변수의 첫 번째 문자는 경우는 ' **-**'또는' **/**', 없어지기 다음 및 *bFlag* 로 설정 된 `TRUE`합니다. 마지막 매개 변수를 구문 분석할 때 `bLast` 로 설정 된 `TRUE`합니다.  
+ [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) 호출 `ParseParam` 한 번 각 매개 변수 또는 명령줄에서 플래그에 대 한 인수를 전달 *pszParam*합니다. 매개 변수의 첫 번째 문자는 경우는 ' **-**'또는' **/**', 없어지기 다음 및 *bFlag* 로 설정 된 `TRUE`합니다. 마지막 매개 변수를 구문 분석할 때 *폭발* 로 설정 된 `TRUE`합니다.  
   
  이 함수의 기본 구현은 다음과 같은 플래그 인식: `/p`, `/pt`, `/dde`, `/Automation`, 및 `/Embedding`다음 표에 표시 된 것 처럼:  
   

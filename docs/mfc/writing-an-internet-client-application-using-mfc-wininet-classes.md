@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 822b75ec71d79b6e40ec6b61a77239707c32ce39
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00ace36eef483d8385d718e14e1fc4c5f4e9ea1e
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33384438"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956475"
 ---
 # <a name="writing-an-internet-client-application-using-mfc-wininet-classes"></a>MFC WinInet 클래스를 사용하여 인터넷 클라이언트 응용 프로그램 작성
 모든 인터넷 클라이언트 응용 프로그램의 기본은 인터넷 세션입니다. 클래스의 개체로 인터넷 세션을 구현 하는 MFC [CInternetSession](../mfc/reference/cinternetsession-class.md)합니다. 이 클래스를 사용 하 여 하나의 인터넷 세션 또는 여러 개의 동시 세션을 만들 수 있습니다.  
@@ -43,9 +43,9 @@ ms.locfileid: "33384438"
   
 -   사용 하는 경우 `CInternetSession::OpenURL` 서버 연결에 대 한 호출을 설정 하려면 `OpenURL` 반환는 `CStdioFile`합니다.  
   
--   하는 경우 사용 하 여 **cinternetsession:: Getftpconnection**, `GetGopherConnection`, 또는 `GetHttpConnection` 서버 연결을 설정 하려면 `CFtpConnection::OpenFile`, `CGopherConnection::OpenFile`, 또는 **CHttpConnection::OpenRequest,**  각각 반환 하는 `CInternetFile`, `CGopherFile`, 또는 `CHttpFile`각각.  
+-   하는 경우 사용 하 여 `CInternetSession::GetFtpConnection`, `GetGopherConnection`, 또는 `GetHttpConnection` 서버 연결을 설정 하려면 `CFtpConnection::OpenFile`, `CGopherConnection::OpenFile`, 또는 `CHttpConnection::OpenRequest`각각 반환 하는 `CInternetFile`, `CGopherFile`, 또는 `CHttpFile`, 각각.  
   
- 인터넷 클라이언트 응용 프로그램을 구현할의 단계에 따라 일반 인터넷 클라이언트를 만드는 지에 따라 다를 **OpenURL** 중 하나를 사용 하는 프로토콜 관련 클라이언트는 **GetConnection** 함수입니다.  
+ 인터넷 클라이언트 응용 프로그램을 구현할의 단계에 따라 일반 인터넷 클라이언트를 만드는 지에 따라 다를 `OpenURL` 중 하나를 사용 하는 프로토콜 관련 클라이언트는 `GetConnection` 함수입니다.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   

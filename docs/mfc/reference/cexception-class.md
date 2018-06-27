@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a152c55944fca5fa858c148c009ef6301ff0f762
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d145129d8f9e640da9040c8c70a92cedcf3565d9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368035"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951711"
 ---
 # <a name="cexception-class"></a>CException 클래스
 MFC 라이브러리의 모든 예외에 대한 기본 클래스입니다.  
@@ -99,26 +99,26 @@ explicit CException(BOOL bAutoDelete);
   
 ### <a name="parameters"></a>매개 변수  
  *b_AutoDelete*  
- 지정 **TRUE** 하는 경우에 대 한 메모리는 `CException` 힙에 할당 된 개체입니다. 이렇게 하면는 `CException` 삭제할 때 개체는 **삭제** 멤버 함수를 호출 하는 예외를 삭제 합니다. 지정 **FALSE** 경우는 `CException` 개체가 스택에 이거나 전역 개체입니다. 이 경우에 `CException` 됩니다 때는 **삭제** 멤버 함수를 호출 합니다.  
+ 지정 **TRUE** 하는 경우에 대 한 메모리는 `CException` 힙에 할당 된 개체입니다. 이렇게 하면는 `CException` 삭제할 때 개체는 `Delete` 멤버 함수를 호출 하는 예외를 삭제 합니다. 지정 **FALSE** 경우는 `CException` 개체가 스택에 이거나 전역 개체입니다. 이 경우에 `CException` 됩니다 때는 `Delete` 멤버 함수를 호출 합니다.  
   
 ### <a name="remarks"></a>설명  
  이 생성자를 직접 호출 필요가 하는 것은 일반적으로 없습니다. 인스턴스를 만들도록 예외를 throw 하는 함수는 `CException`-파생 클래스와 MFC 중 하나를 사용 해야 함수 같은 throw 되거나 해당 생성자를 호출 [AfxThrowFileException](exception-processing.md#afxthrowfileexception), 미리 정의 된 형식이 throw 합니다. 이 설명서는 완전성을 위해서만 제공 됩니다.  
   
 ##  <a name="delete"></a>  CException::Delete  
- 이 함수를 확인 하는 **CException** 힙에서 개체가 만들어지고이 경우 호출는 **삭제** 개체에 연산자입니다.  
+ 이 함수를 확인 하는 `CException` 힙에서 개체가 만들어지고이 경우 호출는 **삭제** 개체에 연산자입니다.  
   
 ```  
 void Delete();
 ```  
   
 ### <a name="remarks"></a>설명  
- 삭제할 때는 **CException** 개체를 가져오려면는 **삭제** 멤버 함수는 예외를 삭제 합니다. 사용 하지 않는 **삭제** 연산자를 직접 때문에 `CException` 개체는 전역 개체 이거나 스택의 만든 합니다.  
+ 삭제할 때는 `CException` 개체를 가져오려면는 `Delete` 멤버 함수는 예외를 삭제 합니다. 사용 하지 않는 **삭제** 연산자를 직접 때문에 `CException` 개체는 전역 개체 이거나 스택의 만든 합니다.  
   
  개체가 생성 될 때 개체를 삭제할지 여부를 지정할 수 있습니다. 자세한 내용은 참조 [CException::CException](#cexception)합니다.  
   
- 호출 하기만 하면 **삭제** 는 c + +를 사용 하는 경우 **시도**- **catch** 메커니즘입니다. MFC 매크로 사용 하는 경우 **시도** 및 **CATCH**, 이들이 매크로 자동으로이 함수를 호출 합니다.  
+ 호출 하기만 하면 `Delete` 는 c + +를 사용 하는 경우 **시도**- **catch** 메커니즘입니다. MFC 매크로 사용 하는 경우 **시도** 및 **CATCH**, 이들이 매크로 자동으로이 함수를 호출 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  ```cpp  
  CFile* pFile = NULL;
 // Constructing a CFile object with this override may throw
@@ -178,7 +178,7 @@ virtual int ReportError(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nType`  
+ *n 유형*  
  메시지 상자 스타일을 지정합니다. 어떠한 조합의 적용 된 [메시지 상자 스타일](styles-used-by-mfc.md#message-box-styles) 상자로 합니다. 이 매개 변수를 지정 하지 않으면 기본값은 **MB_OK**합니다.  
   
  *nMessageID*  
@@ -187,7 +187,7 @@ virtual int ReportError(
 ### <a name="return-value"></a>반환 값  
  `AfxMessageBox` 값, 그렇지 않으면 0 없는 경우 메모리가 부족 하 여 메시지 상자를 표시 합니다. 참조 [AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox) 가능한 반환 값에 대 한 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  사용의 예로 `CException::ReportError`합니다. 또 다른 예에 대 한 예제를 참조 하세요. [CATCH](exception-processing.md#catch)합니다.  
   
 ```cpp  

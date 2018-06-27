@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dd403693dd860966cfcca42eacc909b01eb513b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a21ae615a3f4c644f6f0aa7c8f1306378a00ae5c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385614"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957187"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: MFC에서 정의한 메시지 및 리소스
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "33385614"
   
  이러한 개인 Windows 메시지 및 관련된 매개 변수 구조는 MFC 개인 헤더에 선언 된 ' AFXPRIV 합니다. H'입니다. 이 헤더를 포함 하는 코드가 수 있습니다 수와에 의존 문서화 되지 않은 동작이 중단 될 이후 버전의 MFC 경고 합니다.  
   
- 이러한 메시지 중 하나를 처리 하는 드문 경우를 사용할지는 `ON_MESSAGE` 메시지 맵 매크로 및 제네릭 LRESULT/WPARAM/LPARAM 형식으로 메시지를 처리 합니다.  
+ 이러한 메시지 중 하나를 처리 하는 드문 경우를 ON_MESSAGE 메시지 맵 매크로 사용 하 고 제네릭 LRESULT/WPARAM/LPARAM 형식으로 메시지를 처리 해야 합니다.  
   
  **WM_QUERYAFXWNDPROC**  
   
@@ -60,12 +60,12 @@ ms.locfileid: "33385614"
   
  **WM_SIZEPARENT**  
   
- 이 메시지 크기를 조정 하는 동안를 즉시 자식 프레임 창으로 전송 됩니다 (**CFrameWnd::OnSize** 호출 `CFrameWnd::RecalcLayout` 되는 호출 `CWnd::RepositionBars`) 주위 프레임의 면 컨트롤 막대의 위치를 변경 합니다. **AFX_SIZEPARENTPARAMS** 를 호출할 사용 하는 부모 / (NULL 일 수)는 HDWP 현재 사용 가능한 클라이언트 사각형을 포함 하는 구조 `DeferWindowPos` 다시 그리기를 최소화 하기 위해 합니다.  
+ 이 메시지 크기를 조정 하는 동안를 즉시 자식 프레임 창으로 전송 됩니다 (`CFrameWnd::OnSize` 호출 `CFrameWnd::RecalcLayout` 되는 호출 `CWnd::RepositionBars`) 주위 프레임의 면 컨트롤 막대의 위치를 변경 합니다. 호출할 사용 하는 부모 / (NULL 일 수)는 HDWP 현재 사용 가능한 클라이언트 사각형을 포함 하는 AFX_SIZEPARENTPARAMS 구조 `DeferWindowPos` 다시 그리기를 최소화 하기 위해 합니다.  
   
 |||  
 |-|-|  
 |wParam|사용되지 않음|  
-|lParam|주소는 **AFX_SIZEPARENTPARAMS** 구조|  
+|lParam|AFX_SIZEPARENTPARAMS 구조의 주소|  
 |returns|사용 되지 않습니다 (0)|  
   
  메시지는 무시 나타냅니다 창 레이아웃에서 파트를 사용 하지 않습니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "33385614"
   
  **WM_IDLEUPDATECMDUI**  
   
- 이 메시지는 유휴 시간에 명령 업데이트 UI 처리기의 유휴 시간 업데이트를 구현 하 전송 됩니다. 만듭니다 (일반적으로 컨트롤 막대) 창에서 메시지를 처리 하는 경우는 `CCmdUI` 개체 (또는 파생된 클래스의 개체)를 호출 하 고 **CCmdUI::DoUpdate** 각 창에 "항목"에 대 한 합니다. 이 다시 확인에 대 한 프로그램 `ON_UPDATE_COMMAND_UI` 명령 처리기 체인에 있는 개체에 대 한 처리기입니다.  
+ 이 메시지는 유휴 시간에 명령 업데이트 UI 처리기의 유휴 시간 업데이트를 구현 하 전송 됩니다. 만듭니다 (일반적으로 컨트롤 막대) 창에서 메시지를 처리 하는 경우는 `CCmdUI` 개체 (또는 파생된 클래스의 개체)를 호출 하 고 `CCmdUI::DoUpdate` 각 창에 "항목"에 대 한 합니다. 이 명령 처리기 체인에 있는 개체에 대 한 ON_UPDATE_COMMAND_UI 처리기에 대 한 다시 확인 합니다.  
   
 |||  
 |-|-|  
@@ -90,11 +90,11 @@ ms.locfileid: "33385614"
 |lParam|사용 되지 않습니다 (0)|  
 |returns|사용 되지 않습니다 (0)|  
   
- *bDisableIfNoHandler* 0이 아니면 둘 다 UI 개체를 사용 하지 않도록 설정 하는 `ON_UPDATE_COMMAND_UI` 또는 `ON_COMMAND` 처리기입니다.  
+ *bDisableIfNoHandler* 는 ON_UPDATE_COMMAND_UI 아니고 ON_COMMAND 처리기 경우 UI 개체가 사용 하지 않으려면 0입니다.  
   
  **WM_EXITHELPMODE**  
   
- 이 메시지에 게시 되는 `CFrameWnd` 상황에 맞는 종료 하는 도움말 모드입니다. 이 메시지 수신에 의해 시작 모달 루프를 종료 **CFrameWnd::OnContextHelp 합니다.**  
+ 이 메시지에 게시 되는 `CFrameWnd` 상황에 맞는 종료 하는 도움말 모드입니다. 이 메시지 수신에 의해 시작 모달 루프를 종료 `CFrameWnd::OnContextHelp`합니다.  
   
 |||  
 |-|-|  
@@ -150,35 +150,35 @@ ms.locfileid: "33385614"
   
  **WM_FLOATSTATUS**  
   
- 프레임 창 프레임 활성화 또는 비활성화 다른 최상위 프레임 창이 소유한 모든 팝업 창으로 전송 됩니다. 이 구현에 의해 사용 됩니다 **MFS_SYNCACTIVE** 에 `CMiniFrameWnd`를 팝업 창 활성화의 최상위 수준 프레임 창이 활성화 동기화 상태를 유지 합니다.  
+ 프레임 창 프레임 활성화 또는 비활성화 다른 최상위 프레임 창이 소유한 모든 팝업 창으로 전송 됩니다. 에 MFS_SYNCACTIVE 구현에 의해 사용 됩니다 `CMiniFrameWnd`를 팝업 창 활성화의 최상위 수준 프레임 창이 활성화 동기화 상태를 유지 합니다.  
   
 |||  
 |-|-|  
-|wParam|다음 값 중 하나입니다.<br /><br /> **FS_SHOW**<br /><br /> **FS_HIDE**<br /><br /> **FS_ACTIVATE**<br /><br /> **FS_DEACTIVATE**<br /><br /> **FS_ENABLEFS_DISABLE**<br /><br /> **FS_SYNCACTIVE**|  
+|wParam|다음 값 중 하나입니다.<br /><br /> FS_SHOW<br /><br /> FS_HIDE<br /><br /> FS_ACTIVATE<br /><br /> FS_DEACTIVATE<br /><br /> FS_ENABLEFS_DISABLE<br /><br /> FS_SYNCACTIVE|  
 |lParam|사용 되지 않습니다 (0)|  
   
- 반환 값 0이 아닌 값 이어야 합니다. 경우 **FS_SYNCACTIVE** 설정 되 고 창 동기화 부모 프레임을 사용 하 여 해당 활성화 합니다. `CMiniFrameWnd` 스타일으로 설정 된 경우 0이 아닌 반환 **MFS_SYNCACTIVE 합니다.**  
+ 반환 값 FS_SYNCACTIVE 설정 되 고 창 동기화 된 정품 인증 하는 경우 0이 아닌 이어야 합니다. 부모 프레임입니다. `CMiniFrameWnd` 스타일 MFS_SYNCACTIVE로 설정 된 경우 0이 아닌 값을 반환 합니다.  
   
  자세한 내용은 참조 구현의 `CMiniFrameWnd`합니다.  
   
 ## <a name="wmactivatetoplevel"></a>WM_ACTIVATETOPLEVEL  
- 이 메시지는 "최상위 그룹"에서 창을 활성화 또는 비활성화 하는 경우 최상위 창에 전송 됩니다. (없음 부모 또는 소유자)을 최상위 창 이거나 이러한 창을에서 소유 하 고 최상위 그룹의 일부는. 이 메시지를 사용 하 여에서 비슷합니다. **WM_ACTIVATEAPP,** 되지만 단일 창 계층 (OLE 응용 프로그램에서 일반적으로)에 서로 다른 프로세스에 속한 windows 혼합 되어 있는 경우에 작동 합니다.  
+ 이 메시지는 "최상위 그룹"에서 창을 활성화 또는 비활성화 하는 경우 최상위 창에 전송 됩니다. (없음 부모 또는 소유자)을 최상위 창 이거나 이러한 창을에서 소유 하 고 최상위 그룹의 일부는. 이 메시지 WM_ACTIVATEAPP, 사용 중인 유사 하지만 서로 다른 프로세스에 속한 windows 모두 경우에 작동 혼합 하 여 단일 창 계층 (OLE 응용 프로그램에서 일반적으로)에 있습니다.  
   
 ## <a name="wmcommandhelp-wmhelphittest-wmexithelpmode"></a>WM_COMMANDHELP, WM_HELPHITTEST, WM_EXITHELPMODE  
  이러한 메시지는 상황에 맞는 도움말의 구현에서 사용 됩니다. 참조 하십시오 [기술 참고 28](../mfc/tn028-context-sensitive-help-support.md) 자세한 정보에 대 한 합니다.  
   
 ## <a name="mfc-private-resource-formats"></a>MFC 개인 리소스 형식  
- MFC 두 개인 리소스 형식을 정의 하는 현재: **RT_TOOLBAR** 및 **RT_DLGINIT**합니다.  
+ MFC 두 개인 리소스 형식을 정의 하는 현재: RT_TOOLBAR 및 RT_DLGINIT 합니다.  
   
 ## <a name="rttoolbar-resource-format"></a>RT_TOOLBAR 리소스 형식  
- 응용 프로그램 마법사에서 제공 하는 기본 도구 모음 기반으로 한 **RT_TOOLBAR** MFC 4.0에서 도입 된 사용자 지정 리소스입니다. 도구 모음 편집기를 사용 하 여이 리소스를 편집할 수 있습니다.  
+ 응용 프로그램 마법사에서 제공 하는 기본 도구 모음 MFC 4.0에서 도입 된는 RT_TOOLBAR 사용자 지정 리소스를 기반으로 합니다. 도구 모음 편집기를 사용 하 여이 리소스를 편집할 수 있습니다.  
   
 ## <a name="rtdlginit-resource-format"></a>RT_DLGINIT 리소스 형식  
  추가 대화 상자 초기화 정보를 저장 한 MFC 개인 리소스 형식이 사용 됩니다. 콤보 상자에 저장 된 초기 문자열 포함 됩니다. 이 리소스의 형식은 수동으로 편집한 되도록 디자인 되지 않았지만 Visual c + +로 처리 합니다.  
   
- Visual c + + 및이 **RT_DLGINIT** 리소스 API 리소스의 정보를 사용 하지 않아도 되므로 MFC의 관련된 기능을 사용 하지 않아도 됩니다. Visual c + +를 사용 하면 훨씬 쉽게 작성, 관리 및 응용 프로그램을 장기적으로 변환할 수 있습니다.  
+ API 리소스의 정보를 사용 하지 않아도 되므로 MFC의 관련된 기능을 사용 하는 visual c + + 및이 RT_DLGINIT 리소스 필요 하지 않습니다. Visual c + +를 사용 하면 훨씬 쉽게 작성, 관리 및 응용 프로그램을 장기적으로 변환할 수 있습니다.  
   
- 기본 구조는 **RT_DLGINIT** 리소스는 다음과 같습니다.  
+ RT_DLGINIT 리소스의 기본 구조는 다음과 같습니다.  
   
 ```  
 +---------------+    \  

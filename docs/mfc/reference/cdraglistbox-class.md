@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34655c244f13cb721693208fa93353582de452e9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 78f2c1843602c1c1db6b05a16bbea0aceec70df2
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367213"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955991"
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox 클래스
 Windows 목록 상자의 기능을 제공 하는 것 외에도 `CDragListBox` 클래스 목록 상자 내에서 파일 이름과 같은 목록 상자 항목을 이동할 수 있습니다.  
@@ -96,7 +96,7 @@ virtual BOOL BeginDrag(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pt`  
+ *pt*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 끌고 항목의 좌표를 포함 하는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -113,7 +113,7 @@ virtual void CancelDrag(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pt`  
+ *pt*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 끌고 항목의 좌표를 포함 하는 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -134,7 +134,7 @@ virtual UINT Dragging(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pt`  
+ *pt*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) x 및 y를 포함 하는 개체는 커서의 좌표가 화면입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -157,7 +157,7 @@ virtual void DrawInsert(int nItem);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nItem`  
+ *nItem*  
  삽입 지점의 0부터 시작 인덱스입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -176,14 +176,14 @@ virtual void Dropped(
  *nSrcIndex*  
  삭제 된 문자열의 0부터 시작 인덱스를 지정합니다.  
   
- `pt`  
+ *pt*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 저장 사이트의 좌표를 포함 하는 개체입니다.  
   
 ### <a name="remarks"></a>설명  
  기본 동작 목록 상자 항목 및 해당 데이터를 새 위치로 복사한 다음 원래 항목을 삭제 합니다. 목록 내의 다른 위치로 끌 수를 목록 상자 항목의 복사본을 사용할 수 있는 등의 기본 동작을 사용자 지정 하려면이 함수를 재정의 합니다.  
   
 ##  <a name="itemfrompt"></a>  CDragListBox::ItemFromPt  
- 에 있는 목록 상자 항목의 0부터 시작 하는 인덱스를 검색 하려면이 함수 호출 `pt`합니다.  
+ 에 있는 목록 상자 항목의 0부터 시작 하는 인덱스를 검색 하려면이 함수 호출 *pt*합니다.  
   
 ```  
 int ItemFromPt(
@@ -192,7 +192,7 @@ int ItemFromPt(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pt`  
+ *pt*  
  A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 목록 상자 내에서 한 점의 좌표를 포함 하는 개체입니다.  
   
  *bAutoScroll*  

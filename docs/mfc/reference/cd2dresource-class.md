@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eed5b60954d05094db610a233968c9c7dd83c704
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1848e0fe6d3e09ea4707279e83293ae2dc0feb64
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350954"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950679"
 ---
 # <a name="cd2dresource-class"></a>CD2DResource 클래스
 만들고 브러시, 레이어 및 텍스트 같은 D2D 리소스를 관리 하기 위한 인터페이스를 제공 하는 추상 클래스입니다.  
@@ -74,7 +74,7 @@ class CD2DResource : public CObject;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|리소스를 파괴 소유자 (CRenderTarget) 수 있습니다.|  
 |[CD2DResource::m_pParentTarget](#m_pparenttarget)|CRenderTarget 부모에 대 한 포인터)|  
@@ -104,10 +104,10 @@ CD2DResource(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParentTarget`  
+ *pParentTarget*  
  렌더링 대상에 대 한 포인터입니다.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  개체를 소유자 (pParentTarget)에 의해 폐기 수를 나타냅니다.  
   
 ##  <a name="create"></a>  CD2DResource::Create  
@@ -118,7 +118,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget) = 0;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pRenderTarget`  
+ *pRenderTarget*  
  렌더링 대상에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -173,7 +173,7 @@ virtual HRESULT ReCreate(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pRenderTarget`  
+ *pRenderTarget*  
  렌더링 대상에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  

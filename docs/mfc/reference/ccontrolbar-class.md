@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 443e55ab69bc9585a780374a82d5d99b0fd9eef9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5d6eb567babdea0d747e6b684f6373403cb685c6
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356034"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956670"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 컨트롤 막대 클래스에 대 한 기본 클래스 [CStatusBar](../../mfc/reference/cstatusbar-class.md), [CToolBar](../../mfc/reference/ctoolbar-class.md), [CDialogBar](../../mfc/reference/cdialogbar-class.md), [CReBar](../../mfc/reference/crebar-class.md), 및 [ COleResizeBar](../../mfc/reference/coleresizebar-class.md)합니다.  
@@ -141,21 +141,21 @@ virtual CSize CalcDynamicLayout(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nLength`  
- 가로 또는 세로에 따라 컨트롤 막대의 요청 된 차원 `dwMode`합니다.  
+ *nLength*  
+ 가로 또는 세로에 따라 컨트롤 막대의 요청 된 차원 *dwMode*합니다.  
   
- `nMode`  
+ *nMode*  
  다음과 같은 미리 정의 된 플래그는 동적 컨트롤 막대의 너비와 높이 결정 하는 데 사용 됩니다. 비트 OR를 사용 하 여 (&#124;) 플래그를 조합 하는 연산자입니다.  
   
 |레이아웃 모드 플래그|그 의미|  
 |-----------------------|-------------------|  
-|`LM_STRETCH`|컨트롤 막대를 프레임의 크기를 확장할 수 있는지 여부를 나타냅니다. 표시줄이 (도킹의 사용할 수 없음)는 도킹 모음 경우 설정 합니다. 설정 하지는 막대는 도킹 또는 부동 하는 경우 (도킹 가능). 경우 설정, `LM_STRETCH` 무시 `nLength` 에 따라 크기를 반환 하 고는 `LM_HORZ` 상태입니다. `LM_STRETCH` 와 비슷하게 작동 하는 `bStretch` 에 사용 된 매개 변수 [CalcFixedLayout](#calcfixedlayout); 늘이기 방향 사이의 관계에 대 한 자세한 내용은 해당 멤버 함수를 참조 하십시오.|  
-|`LM_HORZ`|막대를 가로 또는 세로 방향인 임을 나타냅니다. 경우에 표시줄은 가로 방향 설정 되지 않은 세로 방향 이면 설정 합니다. `LM_HORZ` 와 비슷하게 작동 하는 `bHorz` 에 사용 된 매개 변수 [CalcFixedLayout](#calcfixedlayout); 늘이기 방향 사이의 관계에 대 한 자세한 내용은 해당 멤버 함수를 참조 하십시오.|  
-|**LM_MRUWIDTH**|가장 최근에 동적 너비를 사용한 합니다. 무시 `nLength` 너비 가장 최근에 사용한 매개 변수 및 사용 하 고 기억된 합니다.|  
-|`LM_HORZDOCK`|가로 크기를 도킹 합니다. 무시 `nLength` 매개 변수 및 가장 너비가 동적 크기를 반환 합니다.|  
-|`LM_VERTDOCK`|세로 크기를 도킹 합니다. 무시 `nLength` 매개 변수 및 높이 가장 큰 동적 크기를 반환 합니다.|  
-|`LM_LENGTHY`|경우에 설정 `nLength` 너비 대신 높이 (Y 방향)을 나타냅니다.|  
-|`LM_COMMIT`|다시 설정 **LM_MRUWIDTH** 부동 컨트롤 막대의 현재 너비입니다.|  
+|`LM_STRETCH`|컨트롤 막대를 프레임의 크기를 확장할 수 있는지 여부를 나타냅니다. 표시줄이 (도킹의 사용할 수 없음)는 도킹 모음 경우 설정 합니다. 설정 하지는 막대는 도킹 또는 부동 하는 경우 (도킹 가능). 경우 설정, `LM_STRETCH` 무시 *nLength* 에 따라 크기를 반환 하 고는 `LM_HORZ` 상태입니다. `LM_STRETCH` 와 비슷하게 작동 하는 *bStretch* 에 사용 된 매개 변수 [CalcFixedLayout](#calcfixedlayout); 늘이기 방향 사이의 관계에 대 한 자세한 내용은 해당 멤버 함수를 참조 하십시오.|  
+|`LM_HORZ`|막대를 가로 또는 세로 방향인 임을 나타냅니다. 경우에 표시줄은 가로 방향 설정 되지 않은 세로 방향 이면 설정 합니다. `LM_HORZ` 와 비슷하게 작동 하는 *bHorz* 에 사용 된 매개 변수 [CalcFixedLayout](#calcfixedlayout); 늘이기 방향 사이의 관계에 대 한 자세한 내용은 해당 멤버 함수를 참조 하십시오.|  
+|`LM_MRUWIDTH`|가장 최근에 동적 너비를 사용한 합니다. 무시 *nLength* 너비 가장 최근에 사용한 매개 변수 및 사용 하 고 기억된 합니다.|  
+|`LM_HORZDOCK`|가로 크기를 도킹 합니다. 무시 *nLength* 매개 변수 및 가장 너비가 동적 크기를 반환 합니다.|  
+|`LM_VERTDOCK`|세로 크기를 도킹 합니다. 무시 *nLength* 매개 변수 및 높이 가장 큰 동적 크기를 반환 합니다.|  
+|`LM_LENGTHY`|경우에 설정 *nLength* 너비 대신 높이 (Y 방향)을 나타냅니다.|  
+|`LM_COMMIT`|다시 설정 `LM_MRUWIDTH` 부동 컨트롤 막대의 현재 너비입니다.|  
   
 ### <a name="return-value"></a>반환 값  
  컨트롤 막대 (픽셀)의 크기는 [CSize](../../atl-mfc-shared/reference/csize-class.md) 개체입니다.  
@@ -173,11 +173,11 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bStretch`  
- 프레임의 크기에 막대를 늘이는 있는지 여부를 나타냅니다. `bStretch` 매개 변수는 0이 아닌 막대 (도킹의 사용할 수 없음)는 도킹 모음 아니며는 0 도킹 또는 부동 하는 경우 (도킹 가능) 하는 경우.  
+ *bStretch*  
+ 프레임의 크기에 막대를 늘이는 있는지 여부를 나타냅니다. *bStretch* 매개 변수는 0이 아닌 막대 (도킹의 사용할 수 없음)는 도킹 모음 아니며는 0 도킹 또는 부동 하는 경우 (도킹 가능) 하는 경우.  
   
- `bHorz`  
- 막대를 가로 또는 세로 방향인 임을 나타냅니다. `bHorz` 매개 변수는 0이 아닌 막대 가로 방향의 고 0 이면 세로 방향의 경우.  
+ *bHorz*  
+ 막대를 가로 또는 세로 방향인 임을 나타냅니다. *bHorz* 매개 변수는 0이 아닌 막대 가로 방향의 고 0 이면 세로 방향의 경우.  
   
 ### <a name="return-value"></a>반환 값  
  컨트롤 막대 (픽셀)의 크기는 `CSize` 개체입니다.  
@@ -185,7 +185,7 @@ virtual CSize CalcFixedLayout(
 ### <a name="remarks"></a>설명  
  예: 도구 모음 컨트롤 막대 가로 방향으로 늘릴 수 있는 또는 세로로 단추에 맞게 컨트롤 막대에 포함 합니다.  
   
- 경우 `bStretch` 은 **TRUE**, 차원에서 제공 하는 방향 따라 스트레치 `bHorz`합니다. 즉, 경우 `bHorz` 은 **FALSE**, 컨트롤 막대를 세로 방향으로 늘립니다. 경우 `bStretch` 은 **FALSE**, 늘이기 발생 합니다. 다음 표에서 가능한 조합 및 결과 컨트롤 막대 스타일의 `bStretch` 및 `bHorz`합니다.  
+ 경우 *bStretch* 은 **TRUE**, 제공한 방향에 따라 차원 스트레치 *bHorz*합니다. 즉, 경우 *bHorz* 은 **FALSE**, 컨트롤 막대를 세로 방향으로 늘립니다. 경우 *bStretch* 은 **FALSE**, 늘이기 발생 합니다. 다음 표에서 가능한 조합 및 결과 컨트롤 막대 스타일의 *bStretch* 및 *bHorz*합니다.  
   
 |bStretch|bHorz|늘이기|방향|도킹/Not 도킹|  
 |--------------|-----------|----------------|-----------------|--------------------------|  
@@ -204,11 +204,11 @@ virtual void CalcInsideRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rect`  
+ *rect*  
  컨트롤 막대;의 현재 크기를 포함합니다. 테두리를 포함 합니다.  
   
- `bHorz`  
- 막대를 가로 또는 세로 방향인 임을 나타냅니다. `bHorz` 매개 변수는 0이 아닌 막대 가로 방향의 고 0 이면 세로 방향의 경우.  
+ *bHorz*  
+ 막대를 가로 또는 세로 방향인 임을 나타냅니다. *bHorz* 매개 변수는 0이 아닌 막대 가로 방향의 고 0 이면 세로 방향의 경우.  
   
 ### <a name="remarks"></a>설명  
  이 함수는 컨트롤 막대 그려집니다 전에 호출 됩니다.  
@@ -230,7 +230,7 @@ virtual void DoPaint(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  테두리 및 컨트롤 막대의 위치 조정 막대 렌더링에 사용할 장치 컨텍스트를 가리킵니다.  
   
 ### <a name="remarks"></a>설명  
@@ -248,10 +248,10 @@ virtual void DrawBorders(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  컨트롤 막대의 테두리를 렌더링에 사용할 장치 컨텍스트를 가리킵니다.  
   
- `rect`  
+ *rect*  
  A `CRect` 컨트롤 막대의 크기를 포함 하는 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -267,10 +267,10 @@ virtual void DrawGripper(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  컨트롤 막대 위치 조정 막대 렌더링에 사용할 장치 컨텍스트를 가리킵니다.  
   
- `rect`  
+ *rect*  
  A `CRect` 컨트롤 막대 위치 조정 막대의 크기를 포함 하는 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -284,7 +284,7 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwDockStyle`  
+ *dwDockStyle*  
  지원 되는 경우 컨트롤 막대 도킹을 지원 하는지 여부와 해당 부모 창에 컨트롤 모음을 도킹할 수 있는의 양쪽 측면을 지정 합니다. 다음 중 하나 이상을 하나일 수 있습니다.  
   
 - `CBRS_ALIGN_TOP` 클라이언트 영역의 위쪽에 도킹 수 있습니다.  
@@ -325,7 +325,7 @@ CRect GetBorders() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- A `CRect` 컨트롤 막대 개체의 각 면의 현재 너비 (픽셀 단위)에 포함 된 개체입니다. 예를 들어 값은 `left` 멤버의 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체, 왼쪽 테두리의 너비입니다.  
+ A `CRect` 컨트롤 막대 개체의 각 면의 현재 너비 (픽셀 단위)에 포함 된 개체입니다. 예를 들어 값은 *왼쪽* 멤버의 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체, 왼쪽 테두리의 너비입니다.  
   
 ##  <a name="getcount"></a>  CControlBar::GetCount  
  비-의 수를 반환 `HWND` 에 있는 항목은 `CControlBar` 개체입니다.  
@@ -376,9 +376,9 @@ BOOL m_bAutoDelete;
 ```  
   
 ### <a name="remarks"></a>설명  
- `m_bAutoDelete` 형식의 공용 변수 **BOOL**합니다.  
+ *m_bAutoDelete* 형식의 공용 변수는 **BOOL**합니다.  
   
- 컨트롤 막대 개체는 일반적으로 프레임 창 개체에 포함 됩니다. 이 경우 `m_bAutoDelete` 포함 된 컨트롤 막대 개체는 프레임 창 소멸 될 때 소멸 되기 때문에 0입니다.  
+ 컨트롤 막대 개체는 일반적으로 프레임 창 개체에 포함 됩니다. 이 경우 *m_bAutoDelete* 포함 된 컨트롤 막대 개체는 프레임 창 소멸 될 때 소멸 되기 때문에 0입니다.  
   
  할당 하는 경우이 변수를 0이 아닌 값으로 설정 된 `CControlBar` 힙에에 개체를 호출 하지 않으려는 **삭제**합니다.  
   
@@ -399,10 +399,10 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pTarget`  
+ *pTarget*  
  응용 프로그램의 주 프레임 창을 가리킵니다. 이 포인터 업데이트 메시지 라우팅에 사용 됩니다.  
   
- `bDisableIfNoHndler`  
+ *bDisableIfNoHndler*  
  업데이트 처리기가 있는 컨트롤 사용 안 함으로 자동으로 표시할지 여부를 나타내는 플래그입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -418,7 +418,7 @@ void SetBarStyle(DWORD dwStyle);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwStyle`  
+ *dwStyle*  
  컨트롤 막대에 대 한 원하는 스타일입니다. 다음 중 하나 이상을 하나일 수 있습니다.  
   
 - `CBRS_ALIGN_TOP` 프레임 창의 클라이언트 영역의 위쪽에 도킹 컨트롤 막대를 허용 합니다.  
@@ -445,7 +445,7 @@ void SetBarStyle(DWORD dwStyle);
   
 - `CBRS_FLYBY` 도구 설명으로 동시에 업데이트할 메시지 텍스트를입니다.  
   
-- **CBRS_GRIPPER** 의 밴드에 사용한 것과 비슷한 그리퍼 하면는 **CReBar** 개체에 대해 그릴 `CControlBar`-클래스를 파생 합니다.  
+- `CBRS_GRIPPER` 밴드에 사용한 것과 비슷한 그리퍼 하면는 `CReBar` 개체에 대해 그릴 `CControlBar`-클래스를 파생 합니다.  
   
 ### <a name="remarks"></a>설명  
  영향을 주지 않습니다는 **WS_** (창 스타일) 설정 합니다.  
@@ -476,10 +476,10 @@ void SetBorders(LPCRECT lpRect);
  *cyBottom*  
  픽셀 단위로 컨트롤 막대의 아래쪽 테두리의 높이입니다.  
   
- `lpRect`  
+ *lpRect*  
  에 대 한 포인터는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 컨트롤 막대 개체의 각 테두리의 현재 너비 (픽셀 단위)에 포함 된 개체입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 5 픽셀 컨트롤 막대의 위쪽 및 아래쪽 테두리와 왼쪽 및 오른쪽 테두리를 2 픽셀로 설정합니다.  
   
  [!code-cpp[NVC_MFCControlLadenDialog#61](../../mfc/codesnippet/cpp/ccontrolbar-class_1.cpp)]  
@@ -492,7 +492,7 @@ void SetInPlaceOwner(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  에 대 한 포인터는 `CWnd` 개체입니다.  
   
 ### <a name="remarks"></a>설명  

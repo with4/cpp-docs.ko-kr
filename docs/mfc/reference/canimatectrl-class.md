@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1032ffac46af6370c45f4bcb2c251ddae73ce69
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 48c431ecbcc415776ff9accfb68004c7c8e46d34
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356398"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952328"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl 클래스
 Windows 공용 애니메이션 컨트롤의 기능을 제공합니다.  
@@ -118,7 +118,7 @@ CAnimateCtrl();
 ### <a name="remarks"></a>설명  
  호출 해야 합니다는 [만들기](#create) 만들면 개체에 다른 작업을 수행 하기 전에 멤버 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#56](../../mfc/codesnippet/cpp/canimatectrl-class_1.cpp)]  
   
 ##  <a name="close"></a>  CAnimateCtrl::Close  
@@ -131,7 +131,7 @@ BOOL Close();
 ### <a name="return-value"></a>반환 값  
  성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CAnimateCtrl::CAnimateCtrl](#canimatectrl)합니다.  
   
 ##  <a name="create"></a>  CAnimateCtrl::Create  
@@ -146,23 +146,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwStyle`  
+ *dwStyle*  
  애니메이션 컨트롤의 스타일을 지정합니다. 애니메이션 컨트롤 스타일 및 아래 설명 섹션에 설명 된 스타일에 설명 된 windows의 조합을 적용 [애니메이션 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb761886) Windows sdk에서입니다.  
   
- `rect`  
+ *rect*  
  애니메이션 컨트롤의 위치와 크기를 지정합니다. 있습니다는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](../../mfc/reference/rect-structure1.md) 구조입니다.  
   
- `pParentWnd`  
- 애니메이션 컨트롤의 부모 창에 일반적으로 지정 된 `CDialog`합니다. 않아야 **NULL입니다.**  
+ *pParentWnd*  
+ 애니메이션 컨트롤의 부모 창에 일반적으로 지정 된 `CDialog`합니다. 않아야 **NULL**합니다.  
   
- `nID`  
+ *nID*  
  애니메이션 컨트롤의 ID를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 생성 한 `CAnimateCtrl` 두 단계를 수행에서 합니다. 먼저 생성자를 호출 하 고 호출 **만들기**, 애니메이션 컨트롤을 만들고에 연결 하는 `CAnimateCtrl` 개체입니다.  
+ 생성 한 `CAnimateCtrl` 두 단계를 수행에서 합니다. 먼저 생성자를 호출 하 고 호출 `Create`, 애니메이션 컨트롤을 만들고에 연결 하는 `CAnimateCtrl` 개체입니다.  
   
  다음 적용 [창 스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles) 애니메이션 컨트롤을 합니다.  
   
@@ -172,11 +172,11 @@ virtual BOOL Create(
   
 - **WS_DISABLED** 거의  
   
- 애니메이션 컨트롤 확장된 창 스타일을 사용 하려면 호출 [CreateEx](#createex) 대신 **만들기**합니다.  
+ 애니메이션 컨트롤 확장된 창 스타일을 사용 하려면 호출 [CreateEx](#createex) 대신 `Create`합니다.  
   
  위에 나열 된 창 스타일, 외에도 애니메이션 컨트롤 스타일 중 하나 이상을 애니메이션 컨트롤에 적용 하는 것이 좋습니다. 자세한 내용은 Windows SDK에서 참조 [애니메이션 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb761886)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CAnimateCtrl::CAnimateCtrl](#canimatectrl)합니다.  
   
 ##  <a name="createex"></a>  CAnimateCtrl::CreateEx  
@@ -192,19 +192,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwExStyle`  
- 만들 컨트롤의 확장된 스타일을 지정 합니다. 목록이 확장된 창 스타일에 대 한 참조는 `dwExStyle` 에 대 한 매개 변수 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows sdk에서입니다.  
+ *dwExStyle*  
+ 만들 컨트롤의 확장된 스타일을 지정 합니다. 목록이 확장된 창 스타일에 대 한 참조는 *dwExStyle* 에 대 한 매개 변수 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows sdk에서입니다.  
   
- `dwStyle`  
+ *dwStyle*  
  애니메이션 컨트롤의 스타일을 지정합니다. 에 설명 된 애니메이션 컨트롤 스타일 및 창의 조합을 적용 [애니메이션 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb761886) Windows sdk에서입니다.  
   
- `rect`  
- 에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 크기와의 클라이언트 좌표에 만들어질 창 위치를 설명 하는 구조 `pParentWnd`합니다.  
+ *rect*  
+ 에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 크기와의 클라이언트 좌표에 만들어질 창 위치를 설명 하는 구조 *pParentWnd*합니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  컨트롤의 부모 창에 대 한 포인터입니다.  
   
- `nID`  
+ *nID*  
  컨트롤의 자식 창 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -235,10 +235,10 @@ BOOL Open(UINT nID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszFileName`  
+ *lpszFileName*  
  A `CString` 개체나 AVI 파일의 이름이 나 AVI 리소스의 이름을 포함 하는 null로 끝나는 문자열에 대 한 포인터입니다. 이 매개 변수가 **NULL**, 시스템이 있는 경우 애니메이션 컨트롤에 대 한 이전에 연 AVI 클립을 닫습니다.  
   
- `nID`  
+ *nID*  
  AVI 리소스 식별자입니다. 이 매개 변수가 **NULL**, 시스템이 있는 경우 애니메이션 컨트롤에 대 한 이전에 연 AVI 클립을 닫습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -255,7 +255,7 @@ BOOL Open(UINT nID);
   
  애니메이션 컨트롤에 있는 경우는 `ACS_TRANSPARENT` 스타일을 첫 번째 프레임에 투명 한 배경을 사용 하 여 그려집니다에 지정 된 배경색 보다는 애니메이션 클립 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CAnimateCtrl::CAnimateCtrl](#canimatectrl)합니다.  
   
 ##  <a name="play"></a>  CAnimateCtrl::Play  
@@ -269,10 +269,10 @@ BOOL Play(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nFrom`  
+ *nFrom*  
  재생이 시작 되는 프레임의 0부터 시작 인덱스입니다. 값을 65536 보다 작거나 같아야 합니다. 0 이면 AVI 클립의 첫 번째 프레임으로 시작 하는 값입니다.  
   
- `nTo`  
+ *필수적*  
  프레임의 0부터 시작 인덱스 위치 끝을 재생 합니다. 값을 65536 보다 작거나 같아야 합니다. 값은-1 = 마지막 프레임 AVI 클립에서 끝나야 합니다.  
   
  *nRep*  
@@ -284,7 +284,7 @@ BOOL Play(
 ### <a name="remarks"></a>설명  
  애니메이션 컨트롤 스레드가 계속 실행 하는 동안 백그라운드에서 클립을 재생 됩니다. 애니메이션 컨트롤에 있는 경우 `ACS_TRANSPARENT` 스타일 AVI 클립 재생 될 애니메이션 클립에 지정 된 배경색 보다는 투명 한 배경을 사용 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CAnimateCtrl::CAnimateCtrl](#canimatectrl)합니다.  
   
 ##  <a name="seek"></a>  CAnimateCtrl::Seek  
@@ -295,7 +295,7 @@ BOOL Seek(UINT nTo);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nTo`  
+ *필수적*  
  표시할 프레임의 0부터 시작 인덱스입니다. 값을 65536 보다 작거나 같아야 합니다. 값이 0 AVI 클립의 첫 번째 프레임을 표시 하는 의미 합니다. 값이-1 AVI 클립의 마지막 프레임을 표시 하는 의미 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -304,7 +304,7 @@ BOOL Seek(UINT nTo);
 ### <a name="remarks"></a>설명  
  애니메이션 컨트롤에 있는 경우 `ACS_TRANSPARENT` 스타일, 투명 한 배경을 사용 하 여 AVI 클립을 그려집니다에 지정 된 배경색 보다는 애니메이션 클립 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CAnimateCtrl::CAnimateCtrl](#canimatectrl)합니다.  
   
 ##  <a name="stop"></a>  CAnimateCtrl::Stop  
@@ -317,7 +317,7 @@ BOOL Stop();
 ### <a name="return-value"></a>반환 값  
  성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CAnimateCtrl::CAnimateCtrl](#canimatectrl)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

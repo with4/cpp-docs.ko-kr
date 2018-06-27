@@ -19,17 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce96d90506176812ffb70b580c9d95a38c65fa19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 114411d0f8c7084e26f36f0ffc05e60a32407c44
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350887"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956836"
 ---
 # <a name="callback-functions-used-by-mfc"></a>MFC에서 사용하는 콜백 함수
 Microsoft Foundation Class 라이브러리에 3 개의 콜백 함수가 나타납니다. 이러한 콜백 함수에 전달 되 [cdc:: enumobjects](../../mfc/reference/cdc-class.md#enumobjects), [cdc:: graystring](../../mfc/reference/cdc-class.md#graystring), 및 [cdc:: setabortproc](../../mfc/reference/cdc-class.md#setabortproc)합니다. 모든 콜백 함수 콜백 경계를 넘어 예외를 throw 할 수 없는 이후 창에 반환 하기 전에 MFC 예외를 트래핑 해야 참고 합니다. 예외에 대 한 자세한 내용은 문서 참조 [예외](../../mfc/exception-handling-in-mfc.md)합니다.  
 
-|이름||  
+|name||  
 |----------|-----------------|  
 |[CDC::EnumObjects에 대한 콜백 함수](#enum_objects)||  
 |[CDC::GrayString에 대한 콜백 함수](#graystring)||
@@ -53,11 +53,11 @@ int CALLBACK EXPORT ObjectFunc(
  *lpszLogObject*  
  가리키는 [LOGPEN](../../mfc/reference/logpen-structure.md) 또는 [LOGBRUSH](../../mfc/reference/logbrush-structure.md) 개체의 논리적 특성에 대 한 정보를 포함 하는 데이터 구조입니다.  
   
- `lpData`  
+ *lpData*  
  에 전달 되는 응용 프로그램에서 제공 하는 데이터를 가리키는 `EnumObjects` 함수입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 콜백 함수는 반환 된 `int`합니다. 이 반환 값은 사용자 정의입니다. 콜백 함수가 0을 반환 하는 경우 `EnumObjects` 열거형 일찍 중지 합니다.  
+ 콜백 함수는 반환 된 **int**합니다. 이 반환 값은 사용자 정의입니다. 콜백 함수가 0을 반환 하는 경우 `EnumObjects` 열거형 일찍 중지 합니다.  
   
 ### <a name="remarks"></a>설명  
  실제 이름을 내보내야 합니다.  
@@ -75,13 +75,13 @@ BOOL CALLBACK EXPORT OutputFunc(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hDC`  
- 최소한의 비트맵으로 메모리 장치 컨텍스트를 식별 너비와 높이에서 지정한 `nWidth` 및 `nHeight` 를 `GrayString`합니다.  
+ *hDC*  
+ 최소한의 비트맵으로 메모리 장치 컨텍스트를 식별 너비와 높이에서 지정한 *nWidth* 및 *nHeight* 를 `GrayString`합니다.  
   
- `lpData`  
+ *lpData*  
  그릴 문자열을 가리킵니다.  
   
- `nCount`  
+ *nCount*  
  출력에 문자 수를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -105,8 +105,8 @@ BOOL CALLBACK EXPORT AbortFunc(
  *hPr*  
  장치 컨텍스트를 식별합니다.  
   
- `code`  
- 오류가 발생 했는지를 지정 합니다. 오류가 발생 하지 않은 경우 0입니다. **SP_OUTOFDISK** 인쇄 관리자가 현재 디스크 공간이 부족 하 고 더 많은 디스크 공간이 응용 프로그램이 대기 하는 경우에 사용할 수 있게 됩니다. 경우 `code` 은 **SP_OUTOFDISK**, 응용 프로그램에서 인쇄 작업을 중단할 필요가 없습니다. 호출 하 여 인쇄 관리자를 생성 해야 표시 되지 않는 경우는 **PeekMessage** 또는 **GetMessage** Windows 함수입니다.  
+ *코드*  
+ 오류가 발생 했는지를 지정 합니다. 오류가 발생 하지 않은 경우 0입니다. **SP_OUTOFDISK** 인쇄 관리자가 현재 디스크 공간이 부족 하 고 더 많은 디스크 공간이 응용 프로그램이 대기 하는 경우에 사용할 수 있게 됩니다. 경우 *코드* 은 **SP_OUTOFDISK**, 응용 프로그램에서 인쇄 작업을 중단할 필요가 없습니다. 호출 하 여 인쇄 관리자를 생성 해야 표시 되지 않는 경우는 `PeekMessage` 또는 `GetMessage` Windows 함수입니다.  
   
 ### <a name="return-value"></a>반환 값  
  중단-처리기 함수의 반환 값은 인쇄 작업을 계속 하려면는 0이 아닌 하 고 0 취소 된 경우.  

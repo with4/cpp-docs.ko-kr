@@ -126,12 +126,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6259ee783f6964f3a4f7bd6db31688fc77c2aa26
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6390c1dc25d1470cb6d0827b2b6d6e3521bee493
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377009"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957359"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog 클래스
 HTML을 사용 하는 대화 상자를 만드는 사용 되는 대화 상자 리소스의 사용자 인터페이스를 구현 하는 대신 합니다.  
@@ -189,7 +189,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |[CDHtmlDialog::OnDocumentComplete](#ondocumentcomplete)|문서에 도달 하면 응용 프로그램에 알리기 위해 프레임 워크에서 호출 된 `READYSTATE_COMPLETE` 상태입니다.|  
 |[CDHtmlDialog::OnDocWindowActivate](#ondocwindowactivate)|문서 창이 활성화 또는 비활성화 될 때 프레임 워크에서 호출 됩니다.|  
 |[CDHtmlDialog::OnFrameWindowActivate](#onframewindowactivate)|프레임 창이 활성화 또는 비활성화 하는 경우 프레임 워크에서 호출 됩니다.|  
-|[CDHtmlDialog::OnInitDialog](#oninitdialog)|응답으로 호출 된 **WM_INITDIALOG** 메시지입니다.|  
+|[CDHtmlDialog::OnInitDialog](#oninitdialog)|WM_INITDIALOG 메시지에 대 한 응답으로 호출 됩니다.|  
 |[CDHtmlDialog::OnNavigateComplete](#onnavigatecomplete)|탐색 이벤트가 완료 된 후에 프레임 워크에서 호출 합니다.|  
 |[CDHtmlDialog::ResizeBorder](#resizeborder)|해당 테두리 공간 크기를 조정 하는 데 필요한 개체에 경고 합니다.|  
 |[CDHtmlDialog::SetControlProperty](#setcontrolproperty)|ActiveX 컨트롤의 속성을 새 값으로 설정합니다.|  
@@ -216,7 +216,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |[CDHtmlDialog::m_szHtmlResID](#m_szhtmlresid)|HTML 리소스 ID의 문자열 버전|  
   
 ## <a name="remarks"></a>설명  
- **CDHtmlDialog** HTML 리소스 중 하나에서 표시할 HTML 또는 URL을 로드할 수 있습니다.  
+ `CDHtmlDialog` 프로그램의 HTML 리소스에서 표시 되는 HTML 또는 URL을 로드할 수 있습니다.  
   
  `CDHtmlDialog` 또한 않습니다 데이터 HTML 컨트롤와 교환 및 단추 클릭과 같은 HTML 컨트롤의 이벤트를 처리.  
   
@@ -288,19 +288,19 @@ CDHtmlDialog(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  대화 상자 템플릿 리소스의 이름을 나타내는 null로 끝나는 문자열.  
   
- `szHtmlResID`  
+ *szHtmlResID*  
  HTML 리소스의 이름을 나타내는 null로 끝나는 문자열.  
   
- `pParentWnd`  
+ *pParentWnd*  
  부모 또는 소유자 창 개체에 대 한 포인터 (형식의 [CWnd](../../mfc/reference/cwnd-class.md)) 대화 상자 개체 속해 있는 합니다. 이 경우 **NULL**, 대화 상자 개체의 부모 창은 주 응용 프로그램 창으로 설정 됩니다.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  대화 상자 템플릿 리소스의 ID 번호를 포함합니다.  
   
- `nHtmlResID`  
+ *nHtmlResID*  
  HTML 리소스의 ID 번호를 포함합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -328,10 +328,10 @@ virtual BOOL CreateControlSite(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pContainer`  
+ *pContainer*  
  에 대 한 포인터는 [COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md) 개체  
   
- `ppSite`  
+ *ppSite*  
  에 대 한 포인터에 대 한 포인터는 [COleControlSite](../../mfc/reference/colecontrolsite-class.md)합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -359,22 +359,22 @@ void DDX_DHtml_AxControl(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
   
- `szId`  
+ *szId*  
  ActiveX 컨트롤의 HTML 소스에 object 태그 ID 매개 변수의 값입니다.  
   
- `dispid`  
+ *dispid*  
  데이터를 교환 하려는 속성의 디스패치 ID입니다.  
   
- `szPropName`  
+ *szPropName*  
  속성의 이름입니다.  
   
- `var`  
+ *var*  
  형식의 데이터 멤버 `VARIANT`, [COleVariant](../../mfc/reference/colevariant-class.md), 또는 [CComVariant](../../atl/reference/ccomvariant-class.md), ActiveX 컨트롤 속성에서 교환 되는 값을 보유 하 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCHtmlHttp#1](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_1.cpp)]  
   
 ##  <a name="ddx_dhtml_checkbox"></a>  CDHtmlDialog::DDX_DHtml_CheckBox  
@@ -388,16 +388,16 @@ void DDX_DHtml_CheckBox(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
   
- `szId`  
+ *szId*  
  HTML 컨트롤의 ID 매개 변수에 지정한 값입니다.  
   
  *값*  
  교환 되는 값입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCHtmlHttp#2](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_2.cpp)]  
   
 ##  <a name="ddx_dhtml_elementtext"></a>  CDHtmlDialog::DDX_DHtml_ElementText  
@@ -454,10 +454,10 @@ void DDX_DHtml_ElementText(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
   
- `szId`  
+ *szId*  
  HTML 컨트롤의 ID 매개 변수에 지정한 값입니다.  
   
  *dispid*  
@@ -477,10 +477,10 @@ void DDX_DHtml_Radio(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
   
- `szId`  
+ *szId*  
  HTML 컨트롤의 ID 매개 변수에 지정한 값입니다.  
   
  *값*  
@@ -497,10 +497,10 @@ void DDX_DHtml_SelectIndex(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
   
- `szId`  
+ *szId*  
  HTML 컨트롤의 id 매개 변수에 지정한 값입니다.  
   
  *값*  
@@ -517,10 +517,10 @@ void DDX_DHtml_SelectString(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
   
- `szId`  
+ *szId*  
  HTML 컨트롤의 ID 매개 변수에 지정한 값입니다.  
   
  *값*  
@@ -537,16 +537,16 @@ void DDX_DHtml_SelectValue(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
   
- `szId`  
+ *szId*  
  HTML 컨트롤의 ID 매개 변수에 지정한 값입니다.  
   
  *값*  
  교환 되는 값입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCHtmlHttp#3](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_3.cpp)]  
   
 ##  <a name="destroymodeless"></a>  CDHtmlDialog::DestroyModeless  
@@ -564,8 +564,8 @@ STDMETHOD(EnableModeless)(BOOL fEnable);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `fEnable`  
- 참조 `fEnable` 에 [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx) in the Windows SDK입니다.  
+ *fEnable*  
+ 참조 *fEnable* 에 [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx) Windows sdk에서입니다.  
   
 ### <a name="return-value"></a>반환 값  
  반환 **E_NOTIMPL**합니다.  
@@ -583,11 +583,11 @@ STDMETHOD(FilterDataObject)(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDO`  
- 참조 `pDO` 에 [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx) in the Windows SDK입니다.  
+ *pDO*  
+ 참조 *pDO* 에 [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx) Windows sdk에서입니다.  
   
- `ppDORet`  
- 참조 `ppDORet` 에 **IDocHostUIHandler::FilterDataObject** in the Windows SDK입니다.  
+ *ppDORet*  
+ 참조 *ppDORet* 에 **IDocHostUIHandler::FilterDataObject** Windows sdk에서입니다.  
   
 ### <a name="return-value"></a>반환 값  
  반환 **S_FALSE**합니다.  
@@ -605,7 +605,7 @@ HRESULT GetControlDispatch(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szId`  
+ *szId*  
  ActiveX 컨트롤의 HTML ID입니다.  
   
  *ppdisp*  
@@ -634,16 +634,16 @@ VARIANT GetControlProperty(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szId`  
+ *szId*  
  ActiveX 컨트롤의 HTML ID입니다.  
   
- `szPropName`  
+ *szPropName*  
  현재 사용자의 기본 로캘로 속성의 이름입니다.  
   
- `pdispControl`  
+ *pdispControl*  
  `IDispatch` ActiveX 컨트롤의 포인터입니다.  
   
- `dispid`  
+ *dispid*  
  속성의 디스패치 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -660,7 +660,7 @@ void GetCurrentUrl(CString& szUrl);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szUrl`  
+ *szUrl*  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) 검색 URL이 포함 된 개체입니다.  
   
 ##  <a name="getdhtmldocument"></a>  CDHtmlDialog::GetDHtmlDocument  
@@ -687,11 +687,11 @@ STDMETHOD(GetDropTarget)(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDropTarget`  
- 참조 `pDropTarget` 에 [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) in the Windows SDK입니다.  
+ *pDropTarget*  
+ 참조 *pDropTarget* 에 [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) Windows sdk에서입니다.  
   
- `ppDropTarget`  
- 참조 `ppDropTarget` 에 **IDocHostUIHandler::GetDropTarget** in the Windows SDK입니다.  
+ *ppDropTarget*  
+ 참조 *ppDropTarget* 에 **IDocHostUIHandler::GetDropTarget** Windows sdk에서입니다.  
   
 ### <a name="return-value"></a>반환 값  
  반환 **E_NOTIMPL**합니다.  
@@ -700,7 +700,7 @@ STDMETHOD(GetDropTarget)(
  이 멤버 함수는 CDHtmlDialog의 구현의 [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)Windows SDK에 설명 된 대로 합니다.  
   
 ##  <a name="getelement"></a>  CDHtmlDialog::GetElement  
- 지정한 HTML 요소에 대 한 인터페이스를 반환 `szElementId`합니다.  
+ 지정한 HTML 요소에 대 한 인터페이스를 반환 *szElementId*합니다.  
   
 ```  
 HRESULT GetElement(
@@ -715,7 +715,7 @@ HRESULT GetElement(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szElementId`  
+ *szElementId*  
  HTML 요소의 ID입니다.  
   
  *ppdisp*  
@@ -743,14 +743,14 @@ BSTR GetElementHtml(LPCTSTR szElementId);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szElementId`  
+ *szElementId*  
  HTML 요소의 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
- **innerHTML** 속성으로 식별 되는 HTML 요소의 `szElementId` 또는 **NULL** 요소를 찾을 수 없는 경우.  
+ **innerHTML** 속성으로 식별 되는 HTML 요소의 *szElementId* 또는 **NULL** 요소를 찾을 수 없는 경우.  
   
 ##  <a name="getelementinterface"></a>  CDHtmlDialog::GetElementInterface  
- 로 식별 되는 HTML 요소에서 요청 된 인터페이스 포인터를 검색 `szElementId`합니다.  
+ 로 식별 되는 HTML 요소에서 요청 된 인터페이스 포인터를 검색 *szElementId*합니다.  
   
 ```  
 template <class Q> HRESULT GetElementInterface(
@@ -765,23 +765,23 @@ HRESULT GetElementInterface(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szElementId`  
+ *szElementId*  
  HTML 요소의 ID입니다.  
   
- `ppvObj`  
+ *ppvObj*  
  요소를 찾을 경우 요청 된 인터페이스 포인터를 채울 수는 포인터가 되 고 쿼리가 주소 성공 합니다.  
   
- `riid`  
+ *riid*  
  ID (IID) 요청된 된 인터페이스의 인터페이스입니다.  
   
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCHtmlHttp#4](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_4.cpp)]  
   
 ##  <a name="getelementproperty"></a>  CDHtmlDialog::GetElementProperty  
- 로 식별 된 속성의 값을 검색 `dispid` 로 식별 되는 HTML 요소에서 `szElementId`합니다.  
+ 로 식별 된 속성의 값을 검색 *dispid* 으로 식별 되는 HTML 요소에서 *szElementId*합니다.  
   
 ```  
 VARIANT GetElementProperty(
@@ -790,28 +790,28 @@ VARIANT GetElementProperty(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szElementId`  
+ *szElementId*  
  HTML 요소의 ID입니다.  
   
- `dispid`  
+ *dispid*  
  속성의 디스패치 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
  속성이 나 요소를 찾을 수 없는 경우 비어 있는 변수 또는 속성의 값입니다.  
   
 ##  <a name="getelementtext"></a>  CDHtmlDialog::GetElementText  
- 검색 된 **innerText** 속성으로 식별 되는 HTML 요소의 `szElementId`합니다.  
+ 검색 된 **innerText** 속성으로 식별 되는 HTML 요소의 *szElementId*합니다.  
   
 ```  
 BSTR GetElementText(LPCTSTR szElementId);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szElementId`  
+ *szElementId*  
  HTML 요소의 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
- **innerText** 속성으로 식별 되는 HTML 요소의 `szElementId` 또는 **NULL** 속성이 나 요소를 찾을 수 없는 경우.  
+ **innerText** 속성으로 식별 되는 HTML 요소의 *szElementId* 또는 **NULL** 속성이 나 요소를 찾을 수 없는 경우.  
   
 ##  <a name="getevent"></a>  CDHtmlDialog::GetEvent  
  반환 된 **IHTMLEventObj** 현재 이벤트 개체에 대 한 포인터입니다.  
@@ -821,7 +821,7 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ppEventObj`  
+ *ppEventObj*  
  으로 채워질 포인터의 주소는 **IHTMLEventObj** 인터페이스 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -855,8 +855,8 @@ STDMETHOD(GetHostInfo)(DOCHOSTUIINFO* pInfo);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pInfo`  
- 참조 `pInfo` 에 [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx) in the Windows SDK입니다.  
+ *pInfo*  
+ 참조 *pInfo* 에 [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx) Windows sdk에서입니다.  
   
 ### <a name="return-value"></a>반환 값  
  `S_OK`를 반환합니다.  
@@ -874,11 +874,11 @@ STDMETHOD(GetOptionKeyPath)(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pchKey`  
- 참조 `pchKey` 에 [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) in the Windows SDK입니다.  
+ *pchKey*  
+ 참조 *pchKey* 에 [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) Windows sdk에서입니다.  
   
- `dw`  
- 참조 `dw` 에 **IDocHostUIHandler::GetOptionKeyPath** in the Windows SDK입니다.  
+ *dw*  
+ 참조 *dw* 에 **IDocHostUIHandler::GetOptionKeyPath** in the Windows SDK입니다.  
   
 ### <a name="return-value"></a>반환 값  
  반환 **E_NOTIMPL**합니다.  
@@ -918,10 +918,10 @@ BOOL LoadFromResource(UINT nRes);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszResource`  
+ *lpszResource*  
  로드할 리소스의 이름을 포함 하는 문자열에 대 한 포인터입니다.  
   
- `nRes`  
+ *nRes*  
  로드할 리소스의 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -944,7 +944,7 @@ BOOL m_bUseHtmlTitle;
 UINT m_nHtmlResID;  
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCHtmlHttp#5](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_5.cpp)]  
   
 ##  <a name="m_pbrowserapp"></a>  CDHtmlDialog::m_pBrowserApp  
@@ -975,11 +975,11 @@ CString m_strCurrentUrl;
 LPTSTR m_szHtmlResID;  
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCHtmlHttp#6](../../mfc/reference/codesnippet/cpp/cdhtmldialog-class_6.cpp)]  
   
 ##  <a name="navigate"></a>  CDHtmlDialog::Navigate  
- 지정 된 URL로 식별 되는 리소스를 탐색 `lpszURL`합니다.  
+ 지정 된 URL로 식별 되는 리소스를 탐색 *lpszURL*합니다.  
   
 ```  
 void Navigate(
@@ -992,22 +992,22 @@ void Navigate(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszURL`  
+ *lpszURL*  
  대상 URL이 포함 된 문자열에 대 한 포인터입니다.  
   
- `dwFlags`  
+ *dwFlags*  
  기록 목록에 리소스를 추가할 것인지를 캐시에 대 한 읽기 또는 쓰기 캐시를 사용할지 여부 및 리소스를 새 창에 표시할지 여부를 지정 하는 변수의 플래그입니다. 변수에서 정의 된 값의 조합 수 있습니다는 [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) 열거 합니다.  
   
- `lpszTargetFrameName`  
+ *lpszTargetFrameName*  
  리소스를 표시 하는 프레임의 이름을 포함 하는 문자열에 대 한 포인터입니다.  
   
- `lpszHeaders`  
+ *lpszHeaders*  
  서버에 보낼 HTTP 헤더를 지정 하는 값에 대 한 포인터입니다. 이러한 헤더는 기본 Internet Explorer 헤더에 추가 됩니다. 헤더 서버는 서버 또는 상태 코드에 전달 되는 데이터 형식에 필요한 작업으로 이러한 정보를 지정할 수 있습니다. 이 매개 변수는 URL이 HTTP URL 경우 무시 됩니다.  
   
- `lpvPostData`  
+ *lpvPostData*  
  보낼 HTTP POST 트랜잭션을 사용 하 여 데이터에 대 한 포인터입니다. 예를 들어 POST 트랜잭션이 HTML 폼에 의해 수집 된 데이터 전송에 사용 됩니다. 이 매개 변수는 모든 게시 데이터를 지정 하지 않는 경우 **탐색** HTTP GET 트랜잭션을 발급 합니다. 이 매개 변수는 URL이 HTTP URL 경우 무시 됩니다.  
   
- `dwPostDataLen`  
+ *dwPostDataLen*  
  HTTP POST 트랜잭션을 사용 하 여 보낼 데이터입니다. 예를 들어 POST 트랜잭션이 HTML 폼에 의해 수집 된 데이터 전송에 사용 됩니다. 이 매개 변수는 모든 게시 데이터를 지정 하지 않는 경우 **탐색** HTTP GET 트랜잭션을 발급 합니다. 이 매개 변수는 URL HTTP URL이 아닙니다.  
   
 ##  <a name="onbeforenavigate"></a>  CDHtmlDialog::OnBeforeNavigate  
@@ -1020,10 +1020,10 @@ virtual void OnBeforeNavigate(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDisp`  
+ *pDisp*  
  `IDispatch` 개체에 대한 포인터입니다.  
   
- `szUrl`  
+ *szUrl*  
  탐색할 URL을 포함 하는 문자열에 대 한 포인터입니다.  
   
 ##  <a name="ondocumentcomplete"></a>  CDHtmlDialog::OnDocumentComplete  
@@ -1036,10 +1036,10 @@ virtual void OnDocumentComplete(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDisp`  
+ *pDisp*  
  `IDispatch` 개체에 대한 포인터입니다.  
   
- `szUrl`  
+ *szUrl*  
  탐색 하는 URL을 포함 하는 문자열에 대 한 포인터입니다.  
   
 ##  <a name="ondocwindowactivate"></a>  CDHtmlDialog::OnDocWindowActivate  
@@ -1050,8 +1050,8 @@ STDMETHOD(OnDocWindowActivate)(BOOL fActivate);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `fActivate`  
- 참조 `fActivate` 에 [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx) in the Windows SDK입니다.  
+ *fActivate*  
+ 참조 *fActivate* 에 [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx) Windows sdk에서입니다.  
   
 ### <a name="return-value"></a>반환 값  
  반환 **E_NOTIMPL**합니다.  
@@ -1067,8 +1067,8 @@ STDMETHOD(OnFrameWindowActivate)(BOOL fActivate);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `fActivate`  
- 참조 `fActivate` 에 [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx) in the Windows SDK입니다.  
+ *fActivate*  
+ 참조 *fActivate* 에 [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx) Windows sdk에서입니다.  
   
 ### <a name="return-value"></a>반환 값  
  반환 **E_NOTIMPL**합니다.  
@@ -1087,7 +1087,7 @@ virtual BOOL OnInitDialog();
  기본 구현은 반환 **TRUE**합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메시지가 대화 상자 중에 전송 된는 **만들기**, `CreateIndirect`, 또는 `DoModal` 대화 상자가 표시 되기 전에 즉시 발생 하는 호출 합니다.  
+ 이 메시지가 대화 상자 중에 전송 된는 `Create`, `CreateIndirect`, 또는 `DoModal` 대화 상자가 표시 되기 전에 즉시 발생 하는 호출 합니다.  
   
  대화 상자 초기화 될 때 특수 한 처리를 수행 해야 할 경우이 멤버 함수를 재정의 합니다. 기본 클래스에서 재정의 된 버전을 먼저 호출 하 `OnInitDialog` 있지만 반환 값을 무시 합니다. 일반적으로 돌아가게 됩니다 **TRUE** 재정의 멤버 함수에서.  
   
@@ -1103,10 +1103,10 @@ virtual void OnNavigateComplete(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDisp`  
+ *pDisp*  
  `IDispatch` 개체에 대한 포인터입니다.  
   
- `szUrl`  
+ *szUrl*  
  탐색 하는 URL을 포함 하는 문자열에 대 한 포인터입니다.  
   
 ##  <a name="resizeborder"></a>  CDHtmlDialog::ResizeBorder  
@@ -1120,13 +1120,13 @@ STDMETHOD(ResizeBorder)(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `prcBorder`  
- 참조 `prcBorder` 에 [IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx) in the Windows SDK입니다.  
+ *prcBorder*  
+ 참조 *prcBorder* 에 [IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx) Windows sdk에서입니다.  
   
- `pUIWindow`  
- 참조 `pUIWindow` 에 **IDocHostUIHandler::ResizeBorder** in the Windows SDK입니다.  
+ *pUIWindow*  
+ 참조 *pUIWindow* 에 **IDocHostUIHandler::ResizeBorder** Windows sdk에서입니다.  
   
- `fFrameWindow`  
+ *fFrameWindow*  
  참조 *fFrameWindow* 에 **IDocHostUIHandler::ResizeBorder** Windows sdk에서입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1155,19 +1155,19 @@ void SetControlProperty(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szElementId`  
+ *szElementId*  
  ActiveX 컨트롤의 HTML ID입니다.  
   
- `dispid`  
+ *dispid*  
  설정할 속성의 디스패치 ID입니다.  
   
  *pVar*  
  에 대 한 포인터는 **VARIANT** 새 속성 값을 포함 합니다.  
   
- `pdispControl`  
+ *pdispControl*  
  ActiveX 컨트롤에 대 한 포인터 `IDispatch` 인터페이스입니다.  
   
- `szPropName`  
+ *szPropName*  
  설정할 속성의 이름을 포함 하는 문자열입니다.  
   
 ##  <a name="setelementhtml"></a>  CDHtmlDialog::SetElementHtml  
@@ -1185,13 +1185,13 @@ void SetElementHtml(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szElementId`  
+ *szElementId*  
  HTML 요소의 ID입니다.  
   
- `bstrText`  
+ *bstrText*  
  새 값은 **innerHTML** 속성입니다.  
   
- `punkElem`  
+ *punkElem*  
  **IUnknown** HTML 요소의 포인터입니다.  
   
 ##  <a name="setelementproperty"></a>  CDHtmlDialog::SetElementProperty  
@@ -1205,10 +1205,10 @@ void SetElementProperty(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szElementId`  
+ *szElementId*  
  HTML 요소의 ID입니다.  
   
- `dispid`  
+ *dispid*  
  설정할 속성의 디스패치 ID입니다.  
   
  *pVar*  
@@ -1229,13 +1229,13 @@ void SetElementText(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szElementId`  
+ *szElementId*  
  HTML 요소의 ID입니다.  
   
- `bstrText`  
+ *bstrText*  
  새 값은 **innerText** 속성입니다.  
   
- `punkElem`  
+ *punkElem*  
  **IUnknown** HTML 요소의 포인터입니다.  
   
 ##  <a name="setexternaldispatch"></a>  CDHtmlDialog::SetExternalDispatch  
@@ -1257,7 +1257,7 @@ void SetHostFlags(DWORD dwFlags);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwFlags`  
+ *dwFlags*  
  가능한 값에 대 한 참조 [DOCHOSTUIFLAG](https://msdn.microsoft.com/library/aa753277.aspx) Windows sdk에서입니다.  
   
 ##  <a name="showcontextmenu"></a>  CDHtmlDialog::ShowContextMenu  
@@ -1272,17 +1272,17 @@ STDMETHOD(ShowContextMenu)(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwID`  
- 참조 `dwID` 에 [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) in the Windows SDK입니다.  
+ *dwID*  
+ 참조 *dwID* 에 [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) Windows sdk에서입니다.  
   
- `ppt`  
- 참조 `ppt` 에 **IDocHostUIHandler::ShowContextMenu** in the Windows SDK입니다.  
+ *ppt*  
+ 참조 *ppt* 에 **IDocHostUIHandler::ShowContextMenu** in the Windows SDK입니다.  
   
- `pcmdtReserved`  
- 참조 `pcmdtReserved` 에 **IDocHostUIHandler::ShowContextMenu** in the Windows SDK입니다.  
+ *pcmdtReserved*  
+ 참조 *pcmdtReserved* 에 **IDocHostUIHandler::ShowContextMenu** Windows sdk에서입니다.  
   
- `pdispReserved`  
- 참조 `pdispReserved` 에 **IDocHostUIHandler::ShowContextMenu** in the Windows SDK입니다.  
+ *pdispReserved*  
+ 참조 *pdispReserved* 에 **IDocHostUIHandler::ShowContextMenu** Windows sdk에서입니다.  
   
 ### <a name="return-value"></a>반환 값  
  반환 **S_FALSE**합니다.  
@@ -1303,20 +1303,20 @@ STDMETHOD(ShowUI)(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwID`  
- 참조 `dwID` 에 [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) in the Windows SDK입니다.  
+ *dwID*  
+ 참조 *dwID* 에 [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) Windows sdk에서입니다.  
   
- `pActiveObject`  
+ *pActiveObject*  
  참조 *d pActiveObject* 에 **IDocHostUIHandler::ShowUI** Windows sdk에서입니다.  
   
- `pCommandTarget`  
- 참조 `pCommandTarget` 에 **IDocHostUIHandler::ShowUI** in the Windows SDK입니다.  
+ *pCommandTarget*  
+ 참조 *pCommandTarget* 에 **IDocHostUIHandler::ShowUI** Windows sdk에서입니다.  
   
- `pFrame`  
- 참조 `pFrame` 에 **IDocHostUIHandler::ShowUI** in the Windows SDK입니다.  
+ *pFrame*  
+ 참조 *pFrame* 에 **IDocHostUIHandler::ShowUI** Windows sdk에서입니다.  
   
- `pDoc`  
- 참조 `pDoc` 에 **IDocHostUIHandler::ShowUI** in the Windows SDK입니다.  
+ *pDoc*  
+ 참조 *pDoc* 에 **IDocHostUIHandler::ShowUI** Windows sdk에서입니다.  
   
 ### <a name="return-value"></a>반환 값  
  반환 **S_FALSE**합니다.  
@@ -1335,14 +1335,14 @@ STDMETHOD(TranslateAccelerator)(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpMsg`  
- 참조 `lpMsg` 에 [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx) in the Windows SDK입니다.  
+ *lpMsg*  
+ 참조 *lpMsg* 에 [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx) Windows sdk에서입니다.  
   
- `pguidCmdGroup`  
- 참조 `pguidCmdGroup` 에 **IDocHostUIHandler::TranslateAccelerator** in the Windows SDK입니다.  
+ *pguidCmdGroup*  
+ 참조 *pguidCmdGroup* 에 **IDocHostUIHandler::TranslateAccelerator** Windows sdk에서입니다.  
   
- `nCmdID`  
- 참조 `nCmdID` 에 **IDocHostUIHandler::TranslateAccelerator** in the Windows SDK입니다.  
+ *nCmdID*  
+ 참조 *nCmdID* 에 **IDocHostUIHandler::TranslateAccelerator** Windows sdk에서입니다.  
   
 ### <a name="return-value"></a>반환 값  
  반환 **S_FALSE**합니다.  
@@ -1361,14 +1361,14 @@ STDMETHOD(TranslateUrl)(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwTranslate`  
- 참조 `dwTranslate` 에 [IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx) in the Windows SDK입니다.  
+ *dwTranslate*  
+ 참조 *dwTranslate* 에 [IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx) Windows sdk에서입니다.  
   
- `pchURLIn`  
- 참조 `pchURLIn` 에 **IDocHostUIHandler::TranslateUrl** in the Windows SDK입니다.  
+ *pchURLIn*  
+ 참조 *pchURLIn* 에 **IDocHostUIHandler::TranslateUrl** Windows sdk에서입니다.  
   
- `ppchURLOut`  
- 참조 `ppchURLOut` 에 **IDocHostUIHandler::TranslateUrl** in the Windows SDK입니다.  
+ *ppchURLOut*  
+ 참조 *ppchURLOut* 에 **IDocHostUIHandler::TranslateUrl** Windows sdk에서입니다.  
   
 ### <a name="return-value"></a>반환 값  
  반환 **S_FALSE**합니다.  

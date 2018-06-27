@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 114a1b53e55d6e341c09d2437caa8d26b9c1b0fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 29870af50c549f432e87b6cc39be50d41fa40240
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379985"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951219"
 ---
 # <a name="setting-the-dialog-boxs-background-color"></a>대화 상자의 배경색 설정
-대화 상자 창에 대해 `WM_CTLCOLOR` 메시지를 처리하여 대화 상자의 배경 색을 설정할 수 있습니다. 설정한 색은 지정된 대화 상자에만 사용됩니다.  
+대화 상자 창에 대 한 WM_CTLCOLOR 메시지를 처리 하 여 대화 상자의 배경 색을 설정할 수 있습니다. 설정한 색은 지정된 대화 상자에만 사용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [대화 상자의 수명 주기](../mfc/life-cycle-of-a-dialog-box.md)   

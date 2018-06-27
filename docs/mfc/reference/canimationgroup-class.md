@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11b78cf273fd510b8ce224004c759dcc5bbe3bec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a6a2a65172115d42f984b8f59156d3849692bf8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355635"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955737"
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup 클래스
 애니메이션 스토리 보드, 애니메이션 개체 및 애니메이션을 정의 하는 전환 결합 하는 애니메이션 그룹을 구현 합니다.  
@@ -115,7 +115,7 @@ class CAnimationGroup;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CAnimationGroup::m_nGroupID](#m_ngroupid)|애니메이션 그룹의 고유 식별자입니다.|  
 |[CAnimationGroup::m_pParentController](#m_pparentcontroller)|이 그룹이 속한는 애니메이션 컨트롤러에 대 한 포인터입니다.|  
@@ -144,10 +144,10 @@ void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pStoryboard`  
+ *pStoryboard*  
  스토리 보드 COM 개체에 대 한 포인터입니다.  
   
- `bAddDeep`  
+ *bAddDeep*  
  이 메서드는 다른 키 프레임에 종속 된 스토리 보드 키 프레임에 추가 해야 하는지 여부를 지정 합니다.  
   
 ##  <a name="addtransitions"></a>  CAnimationGroup::AddTransitions  
@@ -160,10 +160,10 @@ void AddTransitions(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pStoryboard`  
+ *pStoryboard*  
  스토리 보드 COM 개체에 대 한 포인터입니다.  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
   
 ##  <a name="animate"></a>  CAnimationGroup::Animate  
  그룹 애니메이션 효과 적용 합니다.  
@@ -176,9 +176,9 @@ BOOL Animate(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pManager`  
- `pTimer`  
- `bScheduleNow`  
+ *pManager*  
+ *pTimer*  
+ *bScheduleNow*  
   
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 그렇지 않으면 FALSE입니다.  
@@ -204,10 +204,10 @@ CAnimationGroup(CAnimationController* pParentController, UINT32 nGroupID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParentController`  
+ *pParentController*  
  그룹을 만듭니다는 애니메이션 컨트롤러에 대 한 포인터입니다.  
   
- `nGroupID`  
+ *nGroupID*  
  그룹 Id를 지정합니다.  
   
 ##  <a name="createtransitions"></a>  CAnimationGroup::CreateTransitions  
@@ -228,7 +228,7 @@ CAnimationBaseObject* FindAnimationObject(IUIAnimationVariable* pVariable);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pVariable`  
+ *pVariable*  
  애니메이션 변수에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -328,10 +328,10 @@ BOOL Schedule(IUIAnimationTimer* pTimer, UI_ANIMATION_SECONDS time);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pTimer`  
+ *pTimer*  
  애니메이션 타이머에 대 한 포인터입니다.  
   
- `time`  
+ *time*  
  애니메이션을 예약 하는 시간을 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -348,7 +348,7 @@ void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bAutoDestroy`  
+ *bAutoDestroy*  
  전환을 제거 하는 방법을 지정 합니다.  
   
 ### <a name="remarks"></a>설명  

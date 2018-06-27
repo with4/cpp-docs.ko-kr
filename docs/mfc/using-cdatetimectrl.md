@@ -16,18 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60b41c31c2fa8985953515700cc2e3c802aced31
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4c087bb7782b7b140b07683b40cad358049f682c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381584"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953027"
 ---
 # <a name="using-cdatetimectrl"></a>CDateTimeCtrl 사용
 날짜 및 시간 선택 컨트롤 ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md))를 입력 하거나 특정 날짜를 선택 하는 직관적인 인식 방법을 구현 합니다. 컨트롤의 기본 인터페이스는은 콤보 상자에 기능과 비슷합니다. 그러나 사용자가 컨트롤을 확장 month calendar 컨트롤 (기본적으로 표시) 하는 경우 사용자는 특정 날짜를 지정할 수 있습니다. 날짜를 선택 하면 month calendar 컨트롤 자동으로 사라집니다.  
   
 > [!NOTE]
->  모두를 사용 하 여 **CDateTimePicker** 및 `CMonthCalCtrl` 클래스 AFXDTCTL 프로젝트에 포함 해야 합니다. H, 일반적으로 프로젝트의 STDAFX에 있습니다. H 파일입니다.  
+>  모두를 사용 하 여 `CDateTimePicker` 및 `CMonthCalCtrl` 클래스 AFXDTCTL 프로젝트에 포함 해야 합니다. H, 일반적으로 프로젝트의 STDAFX에 있습니다. H 파일입니다.  
   
 ## <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   

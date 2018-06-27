@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd5cf36722dd1ed6ea96dd839bd0935d78df0b32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b46dc8500543ce94b7d8d6a3415b22d019619d83
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381025"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952595"
 ---
 # <a name="serialization-in-mfc"></a>MFC의 Serialization
 이 문서에서는 프로그램의 모든 실행에 MFC Microsoft Foundation Class 라이브러리 () 개체 간에 유지를 제공 하는 serialization 메커니즘을 설명 합니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "33381025"
 > [!NOTE]
 >  혼동 하지 마십시오는 `CArchive` 서식 있는 텍스트를만 범용 iostream 클래스에는 클래스입니다. `CArchive` 클래스는 이진 형식의 serialize 된 개체에 대 한 합니다.  
   
- 원할 경우에 영구 데이터 저장소에 대 한 메커니즘을 직접 만들려고 MFC serialization을 무시할 수 있습니다. 사용자의 명령에 대 한 직렬화를 시작 하는 클래스 멤버 함수를 재정의 해야 합니다. 참조 [Technical Note 22](../mfc/tn022-standard-commands-implementation.md) 의 `ID_FILE_OPEN`, **ID_FILE_SAVE**, 및 **ID_FILE_SAVE_AS** 표준 명령입니다.  
+ 원할 경우에 영구 데이터 저장소에 대 한 메커니즘을 직접 만들려고 MFC serialization을 무시할 수 있습니다. 사용자의 명령에 대 한 직렬화를 시작 하는 클래스 멤버 함수를 재정의 해야 합니다. 참조 [Technical Note 22](../mfc/tn022-standard-commands-implementation.md) ID_FILE_OPEN, ID_FILE_SAVE, 및 ID_FILE_SAVE_AS 표준 명령입니다.  
   
  다음 문서는 직렬화에 필요한 두 가지 기본 작업을 설명 합니다.  
   

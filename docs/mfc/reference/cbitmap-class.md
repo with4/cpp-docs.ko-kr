@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5b931c7ad4b560ce247f78dcb126f9669bceb67
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 476e9b0bc5e9f4c3eec64e5d0d36d3f900988f48
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355865"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954220"
 ---
 # <a name="cbitmap-class"></a>CBitmap 클래스
 Windows GDI(그래픽 장치 인터페이스) 비트맵을 캡슐화하고 비트맵을 조작하는 멤버 함수를 제공합니다.  
@@ -130,26 +130,26 @@ BOOL CreateBitmap(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nWidth`  
+ *nWidth*  
  비트맵의 너비(픽셀)를 지정합니다.  
   
- `nHeight`  
+ *nHeight*  
  비트맵의 높이(픽셀)를 지정합니다.  
   
- `nPlanes`  
+ *nPlanes*  
  비트맵에서 색 평면의 수를 지정합니다.  
   
- `nBitcount`  
+ *nBitcount*  
  표시 픽셀당 색 비트의 수를 지정합니다.  
   
- `lpBits`  
+ *lpBits*  
  초기 비트맵 비트 값이 포함된 바이트 배열을 가리킵니다. **NULL**이면 새 비트맵이 초기화되어 있지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 색 비트맵에 대한 `nPlanes` 또는 `nBitcount` 매개 변수가 1로 설정되어야 합니다. 이러한 매개 변수가 둘 다 1로 설정되면 `CreateBitmap` 은 단색 비트맵을 만듭니다.  
+ 색 비트맵에 대 한 중 하나는 *nPlanes* 또는 *nBitcount* 매개 변수 1로 설정 해야 합니다. 이러한 매개 변수가 둘 다 1로 설정되면 `CreateBitmap` 은 단색 비트맵을 만듭니다.  
   
  디스플레이 장치에 대 한 비트맵을 직접 선택할 수 없습니다, 있지만 선택할 수는 "메모리 장치 컨텍스트"에 대 한 현재 비트맵으로 사용 하 여 [cdc:: selectobject](../../mfc/reference/cdc-class.md#selectobject) 는 를사용하여모든호환되는장치컨텍스트에복사할[Cdc:: bitblt](../../mfc/reference/cdc-class.md#bitblt) 함수입니다.  
   
@@ -158,14 +158,14 @@ BOOL CreateBitmap(
  자세한 내용은 **BITMAP** 구조체에서 **bmBits** 필드에 대한 설명을 참조하세요. [비트맵](../../mfc/reference/bitmap-structure.md) 구조 아래에 설명 된 [cbitmap:: Createbitmapindirect](#createbitmapindirect) 멤버 함수입니다.  
   
 ##  <a name="createbitmapindirect"></a>  Cbitmap:: Createbitmapindirect  
- 너비, 높이 및 비트 패턴 (하나는 지정 된 경우)에서 가리키는 구조에 있는 비트맵을 초기화 합니다 `lpBitmap`합니다.  
+ 너비, 높이 및 비트 패턴 (하나는 지정 된 경우)에서 가리키는 구조에 있는 비트맵을 초기화 합니다 *lpBitmap*합니다.  
   
 ```  
 BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpBitmap`  
+ *lpBitmap*  
  가리키는 [비트맵](../../mfc/reference/bitmap-structure.md) 비트맵에 대 한 정보가 포함 된 구조체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -174,12 +174,12 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="remarks"></a>설명  
  디스플레이 장치에 대 한 비트맵을 직접 선택할 수 없습니다, 있지만 선택할 수 있습니다 메모리 장치 컨텍스트에 대 한 현재 비트맵으로 사용 하 여 [cdc:: selectobject](../../mfc/reference/cdc-class.md#selectobject) 는 를사용하여모든호환되는장치컨텍스트에복사할[Cdc:: bitblt](../../mfc/reference/cdc-class.md#bitblt) 또는 [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) 함수입니다. (의 [CDC::PatBlt](../../mfc/reference/cdc-class.md#patblt) 함수 디스플레이 장치 컨텍스트를 직접 현재 브러시에 대 한 비트맵을 복사할 수 있습니다.)  
   
- 경우는 **비트맵** 에서 가리키는 구조는 `lpBitmap` 매개 변수를 사용 하 여 입력에 `GetObject` 함수는 비트맵의 비트를 지정 하지 않으면 및 비트맵 초기화 되지 않았습니다. 비트맵을 초기화 하려면 응용 프로그램 함수를 사용할 수와 같은 [cdc:: bitblt](../../mfc/reference/cdc-class.md#bitblt) 또는 [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) 비트의 첫 번째 매개 변수로 식별 된 비트맵에서 복사할 `CGdiObject::GetObject` 에서 만든 비트맵에 `CreateBitmapIndirect`.  
+ 경우는 **비트맵** 에서 가리키는 구조는 *lpBitmap* 매개 변수를 사용 하 여 입력에 `GetObject` 함수는 비트맵의 비트를 지정 하지 않으면 및 비트맵 초기화 되지 않았습니다. 비트맵을 초기화 하려면 응용 프로그램 함수를 사용할 수와 같은 [cdc:: bitblt](../../mfc/reference/cdc-class.md#bitblt) 또는 [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) 비트의 첫 번째 매개 변수로 식별 된 비트맵에서 복사할 `CGdiObject::GetObject` 에서 만든 비트맵에 `CreateBitmapIndirect`.  
   
  사용을 완료 하면는 `CBitmap` 개체를 사용 하 여 만든 `CreateBitmapIndirect` 함수, 먼저 비트맵 장치 컨텍스트를 선택한 다음 삭제는 `CBitmap` 개체입니다.  
   
 ##  <a name="createcompatiblebitmap"></a>  CBitmap::CreateCompatibleBitmap  
- 로 지정 된 장치에 호환 되는 비트맵을 초기화 합니다 `pDC`합니다.  
+ 로 지정 된 장치에 호환 되는 비트맵을 초기화 합니다 *pDC*합니다.  
   
 ```  
 BOOL CreateCompatibleBitmap(
@@ -189,22 +189,22 @@ BOOL CreateCompatibleBitmap(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  장치 컨텍스트를 지정합니다.  
   
- `nWidth`  
+ *nWidth*  
  비트맵의 너비(픽셀)를 지정합니다.  
   
- `nHeight`  
+ *nHeight*  
  비트맵의 높이(픽셀)를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 비트맵에 동일한 색상 평면 수 또는 같은 픽셀 당 비트 형식으로 지정된 된 장치 컨텍스트에 있습니다. 에 의해 지정 된 호환 되는 모든 메모리 장치에 대 한 현재 비트맵으로 선택할 수 있습니다 `pDC`합니다.  
+ 비트맵에 동일한 색상 평면 수 또는 같은 픽셀 당 비트 형식으로 지정된 된 장치 컨텍스트에 있습니다. 에 의해 지정 된 호환 되는 모든 메모리 장치에 대 한 현재 비트맵으로 선택할 수 있습니다 *pDC*합니다.  
   
- 경우 `pDC` 메모리 장치 컨텍스트는 장치 컨텍스트를 반환 하는 비트맵에 같은 형식으로 현재 선택 된 비트맵입니다. "메모리 장치 컨텍스트"에 디스플레이 화면 표시 하는 메모리의 블록. 호환 장치의 실제 화면에 복사 하기 전에 메모리에 이미지를 준비 하는 사용할 수 있습니다.  
+ 경우 *pDC* 메모리 장치 컨텍스트는 장치 컨텍스트를 반환 하는 비트맵에 같은 형식으로 현재 선택 된 비트맵입니다. "메모리 장치 컨텍스트"에 디스플레이 화면 표시 하는 메모리의 블록. 호환 장치의 실제 화면에 복사 하기 전에 메모리에 이미지를 준비 하는 사용할 수 있습니다.  
   
  자동 메모리 장치 컨텍스트를 만든 GDI에 대 한 스톡 단색 비트맵을 선택 합니다.  
   
@@ -213,7 +213,7 @@ BOOL CreateCompatibleBitmap(
  사용을 완료 하면는 `CBitmap` 사용 하 여 만든 개체는 `CreateCompatibleBitmap` 함수, 먼저 비트맵 장치 컨텍스트를 선택한 다음 삭제는 `CBitmap` 개체입니다.  
   
 ##  <a name="creatediscardablebitmap"></a>  CBitmap::CreateDiscardableBitmap  
- 지정 된 디바이스 컨텍스트 호환 되는 무시할 수 비트맵을 초기화 합니다 `pDC`합니다.  
+ 지정 된 디바이스 컨텍스트 호환 되는 무시할 수 비트맵을 초기화 합니다 *pDC*합니다.  
   
 ```  
 BOOL CreateDiscardableBitmap(
@@ -223,20 +223,20 @@ BOOL CreateDiscardableBitmap(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  장치 컨텍스트를 지정합니다.  
   
- `nWidth`  
+ *nWidth*  
  비트맵의 너비 (비트) 단위로 지정합니다.  
   
- `nHeight`  
+ *nHeight*  
  비트맵의 높이 (bits) 단위로 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 비트맵에 동일한 색상 평면 수 또는 같은 픽셀 당 비트 형식으로 지정된 된 장치 컨텍스트에 있습니다. 응용 프로그램에 의해 지정 된 호환 되는 메모리 장치에 대 한 현재 비트맵으로이 비트맵을 선택할 수 `pDC`합니다.  
+ 비트맵에 동일한 색상 평면 수 또는 같은 픽셀 당 비트 형식으로 지정된 된 장치 컨텍스트에 있습니다. 응용 프로그램에 의해 지정 된 호환 되는 메모리 장치에 대 한 현재 비트맵으로이 비트맵을 선택할 수 *pDC*합니다.  
   
  Windows는 하드웨어에이 응용 프로그램에서 선택 하지 않은 경우에이 함수에 의해 만들어진 비트맵을 취소할 수 있습니다. 선택 하지 않으면 나중에 응용 프로그램을 선택 하려고 시도 하는 경우 Windows 비트맵을 삭제 하는 경우는 [cdc:: selectobject](../../mfc/reference/cdc-class.md#selectobject) 함수는 반환 **NULL**합니다.  
   
@@ -250,7 +250,7 @@ static CBitmap* PASCAL FromHandle(HBITMAP hBitmap);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hBitmap`  
+ *hBitmap*  
  Windows GDI 비트맵을 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -267,7 +267,7 @@ int GetBitmap(BITMAP* pBitMap);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pBitMap`  
+ *pBitMap*  
  에 대 한 포인터는 [비트맵 구조](../../mfc/reference/bitmap-structure.md) 구조를 이미지 속성이 표시 됩니다. 이 매개 변수는 `NULL`이 아니어야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -285,10 +285,10 @@ DWORD GetBitmapBits(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwCount`  
+ *dwCount*  
  버퍼에 복사할 바이트 수입니다.  
   
- `lpBits`  
+ *lpBits*  
  비트맵 받을 버퍼에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -311,7 +311,7 @@ CSize GetBitmapDimension() const;
  높이 너비를 사용 하 여 이전에 설정한로 가정 됩니다는 [SetBitmapDimension](#setbitmapdimension) 멤버 함수입니다.  
   
 ##  <a name="loadbitmap"></a>  CBitmap::LoadBitmap  
- 로 명명 된 비트맵 리소스 로드 `lpszResourceName` 의 ID 번호로 식별 하거나 `nIDResource` 에서 응용 프로그램의 실행 파일입니다.  
+ 로 명명 된 비트맵 리소스 로드 *lpszResourceName* 에 ID 번호로 식별 하거나 *nIDResource* 에서 응용 프로그램의 실행 파일입니다.  
   
 ```  
 BOOL LoadBitmap(LPCTSTR lpszResourceName);  
@@ -319,10 +319,10 @@ BOOL LoadBitmap(UINT nIDResource);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszResourceName`  
+ *lpszResourceName*  
  비트맵 리소스의 이름을 포함 하는 null로 끝나는 문자열을 가리킵니다.  
   
- `nIDResource`  
+ *nIDResource*  
  비트맵 리소스의 리소스 ID 번호를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -331,7 +331,7 @@ BOOL LoadBitmap(UINT nIDResource);
 ### <a name="remarks"></a>설명  
  로드 된 비트맵에 연결 되어는 `CBitmap` 개체입니다.  
   
- 비트맵으로 식별 하는 경우 `lpszResourceName` 존재 하지 않는 또는 메모리가 부족 하 여 비트맵을 로드할 수 없으면 함수가 0을 반환 합니다.  
+ 비트맵으로 식별 하는 경우 *lpszResourceName* 존재 하지 않는 또는 메모리가 부족 하 여 비트맵을 로드할 수 없으면 함수가 0을 반환 합니다.  
   
  사용할 수 있습니다는 [CGdiObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) 비트맵을 삭제 하는 함수에 의해 로드는 `LoadBitmap` 함수 또는 `CBitmap` 소멸자를 개체를 삭제 합니다.  
   
@@ -356,17 +356,17 @@ BOOL LoadMappedBitmap(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDBitmap`  
+ *nIDBitmap*  
  비트맵 리소스의 ID입니다.  
   
- `nFlags`  
+ *nFlags*  
  비트맵에 대 한 플래그입니다. 0이 될 수 또는 **CMB_MASKED**합니다.  
   
- `lpColorMap`  
+ *lpColorMap*  
  에 대 한 포인터는 **COLORMAP** 비트맵을 매핑하는 데 필요한 색 정보가 포함 된 구조체입니다. 이 매개 변수가 **NULL**,이 함수는 기본 색상표를 사용 합니다.  
   
  *nMapSize*  
- 가 가리키는 색 지도 수가 `lpColorMap`합니다.  
+ 가 가리키는 색 지도 수가 *lpColorMap*합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
@@ -384,7 +384,7 @@ BOOL LoadOEMBitmap(UINT nIDBitmap);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDBitmap`  
+ *nIDBitmap*  
  미리 정의 된 Windows 비트맵의 ID. 가능한 값은 WINDOWS에서 아래 나열 됩니다. H:  
   
 |||  
@@ -431,7 +431,7 @@ operator HBITMAP() const;
  그래픽 개체를 사용 하는 방법에 대 한 자세한 내용은 참조 [그래픽 개체](http://msdn.microsoft.com/library/windows/desktop/dd144962) Windows sdk에서입니다.  
   
 ##  <a name="setbitmapbits"></a>  CBitmap::SetBitmapBits  
- 제공한 비트 값으로 설정 하는 비트맵의 비트 `lpBits`합니다.  
+ 제공한 비트 값으로 설정 하는 비트맵의 비트 *lpBits*합니다.  
   
 ```  
 DWORD SetBitmapBits(
@@ -440,10 +440,10 @@ DWORD SetBitmapBits(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwCount`  
- 가 가리키는 바이트 수가 지정 `lpBits`합니다.  
+ *dwCount*  
+ 가 가리키는 바이트 수가 지정 *lpBits*합니다.  
   
- `lpBits`  
+ *lpBits*  
  가리키는 **바이트** 배열에 복사 되도록 픽셀 값을 포함 하는 `CBitmap` 개체입니다. 비트맵 이미지를 올바르게 렌더링 수에 대 한 값을 CBitmap 인스턴스가 만들어질 때 지정 된 높이, 너비 및 색 농도 값에 맞게 포맷 해야 합니다. 자세한 내용은 참조 [CBitmap::CreateBitmap](#createbitmap)합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -459,10 +459,10 @@ CSize SetBitmapDimension(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nWidth`  
+ *nWidth*  
  (0.1 밀리미터 단위)에 비트맵의 너비를 지정합니다.  
   
- `nHeight`  
+ *nHeight*  
  (0.1 밀리미터 단위)에 비트맵의 높이 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  

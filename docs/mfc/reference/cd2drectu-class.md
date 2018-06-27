@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36d960cfc0ce3d9d5632edd3a1b42903f3cdd0f6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5faf4bb8f2ff416d90311d678543c48d212acdd
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352020"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953885"
 ---
 # <a name="cd2drectu-class"></a>CD2DRectU 클래스
 `D2D1_RECT_U`의 래퍼입니다.  
@@ -48,7 +48,7 @@ class CD2DRectU : public D2D1_RECT_U;
   
 |이름|설명|  
 |----------|-----------------|  
-|[CD2DRectU::IsNull](#isnull)|반환 된 `boolean` 유효 하지 않은 데이터 식에 포함 되어 있는지 여부를 나타내는 값 ( `null`).|  
+|[CD2DRectU::IsNull](#isnull)|반환 된 **부울** 유효 하지 않은 데이터 식에 포함 되어 있는지 여부를 나타내는 값 ( **null**).|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
@@ -81,19 +81,19 @@ CD2DRectU(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rect`  
+ *rect*  
  소스 사각형  
   
- `uLeft`  
+ *uLeft*  
  소스 왼쪽된 좌표  
   
- `uTop`  
+ *uTop*  
  소스 위쪽 좌표  
   
- `uRight`  
+ *uRight*  
  원본 오른쪽 좌표  
   
- `uBottom`  
+ *uBottom*  
  소스 아래쪽 좌표입니다.  
   
 ##  <a name="isnull"></a>  CD2DRectU::IsNull  

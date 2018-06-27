@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7024284a1be22aed211e8cf58f8366df88aa917
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90f325df3825b3546616ce145d4477322a1b4eed
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33383499"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956296"
 ---
 # <a name="toolbar-tool-tips"></a>도구 모음 도구 설명
 도구 설명은 일정 시간 동안에 대 한 단추 위로 마우스를 배치할 때 도구 모음 단추의 용도에 대해 간략히 설명을 제공 하는 작은 팝업 창. 도구 모음에 있는 응용 프로그램 마법사로 응용 프로그램을 만들 때 도구 설명 지원 하기 위해 제공 됩니다. 이 문서는 모두 도구 설명 지원을 응용 프로그램에 도구 설명 지원을 추가 하는 방법 및 응용 프로그램 마법사에서 만든를 설명 합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "33383499"
 ##  <a name="_core_activating_tool_tips"></a> 도구 설명 활성화  
  응용 프로그램에서 도구 설명을 활성화 하려면 다음 두 가지를 수행 해야 합니다.  
   
--   추가 `CBRS_TOOLTIPS` 다른 스타일을 스타일 (같은 **WS_CHILD**, **WS_VISIBLE**, 및 기타 **CBRS_** 스타일) 변수로 전달 되는 `dwStyle` 매개 변수는 를[ CToolBar::Create](../mfc/reference/ctoolbar-class.md#create) 함수 또는 [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle)합니다.  
+-   CBRS_TOOLTIPS 스타일 다른 스타일을 추가 (WS_CHILD, WS_VISIBLE, 및 기타 같은 **CBRS_** 스타일)으로 전달 되는 *dwStyle* 매개 변수를는 [CToolBar::Create](../mfc/reference/ctoolbar-class.md#create) 함수 또는 [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle)합니다.  
   
 -   아래 절차에 따라, 도구 모음 명령에 대 한 명령줄 프롬프트를 포함 하는 문자열 리소스를 줄 바꿈 문자 ('\n') 구분 된 도구 설명 텍스트를 추가 합니다. 도구 모음 단추의 ID를 공유 하는 문자열 리소스.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "33383499"
 -   리소스 파일의 자식 컨트롤로 동일한 ID 가진 문자열 테이블 항목에 도구 설명 문자열이 있습니다.  
   
 ##  <a name="_core_fly_by_status_bar_updates"></a> Flyby 상태 표시줄 업데이트  
- 도구 설명에 관련 된 기능은 "flyby" 상태 표시줄 업데이트입니다. 기본적으로 상태 표시줄에 메시지가 단추가 활성화 될 때만 특정 도구 모음 단추를 설명 합니다. 포함 하 여 `CBRS_FLYBY` 스타일에 전달 된 프로그램 목록에서 `CToolBar::Create`, 업데이트 실제로 단추를 활성화 하지 않고 도구 모음 위로 마우스 커서를 이동할 때 이러한 메시지를 포함할 수 있습니다.  
+ 도구 설명에 관련 된 기능은 "flyby" 상태 표시줄 업데이트입니다. 기본적으로 상태 표시줄에 메시지가 단추가 활성화 될 때만 특정 도구 모음 단추를 설명 합니다. CBRS_FLYBY에 전달 된 스타일의 목록에 포함 하 여 `CToolBar::Create`, 업데이트 실제로 단추를 활성화 하지 않고 도구 모음 위로 마우스 커서를 이동할 때 이러한 메시지를 포함할 수 있습니다.  
   
 ### <a name="what-do-you-want-to-know-more-about"></a>자세히 알아보려는 항목  
   

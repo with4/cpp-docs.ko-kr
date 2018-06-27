@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da3dc6df825988794481795ca7e47e72b5736bb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8450f4b4105f5302750ea0f369d0e6c1dc2925ab
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367505"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950887"
 ---
 # <a name="cevent-class"></a>CEvent 클래스
 다른 이벤트가 발생 했음을 알리기 위해 하나의 스레드 수 있도록 하는 동기화 개체인 이벤트를 나타냅니다.  
@@ -64,7 +64,7 @@ class CEvent : public CSyncObject
   
  `CEvent` 개체에는 두 가지 유형을 갖는: 수동 및 자동입니다.  
   
- 자동 `CEvent` 개체 신호 (사용할 수 없음) 상태에 하나 이상의 스레드가 해제 된 후 자동으로 반환 합니다. 기본적으로는 `CEvent` 개체는 전달 하지 않으면 자동 `TRUE` 에 대 한는 `bManualReset` 생성 하는 동안 매개 변수입니다.  
+ 자동 `CEvent` 개체 신호 (사용할 수 없음) 상태에 하나 이상의 스레드가 해제 된 후 자동으로 반환 합니다. 기본적으로는 `CEvent` 개체는 전달 하지 않으면 자동 `TRUE` 에 대 한는 *bManualReset* 생성 하는 동안 매개 변수입니다.  
   
  수동 `CEvent` 으로 설정 된 상태에서 개체가 남아 [SetEvent](#setevent) 또는 [ResetEvent](#resetevent) 다른 함수를 호출할 때까지 합니다. 수동 만들려면 `CEvent` 개체, 전달 `TRUE` 에 대 한는 `bManualReset` 생성 하는 동안 매개 변수입니다.  
   
@@ -76,7 +76,7 @@ class CEvent : public CSyncObject
   
  사용 하는 방법에 대 한 자세한 내용은 `CEvent` 개체 참조 [다중 스레딩: 동기화 클래스 사용 방법](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-cpp[NVC_MFC_Utilities#45](../../mfc/codesnippet/cpp/cevent-class_1.cpp)]  
   
  [!code-cpp[NVC_MFC_Utilities#46](../../mfc/codesnippet/cpp/cevent-class_2.cpp)]  
@@ -103,16 +103,16 @@ CEvent(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bInitiallyOwn`  
- 경우 **TRUE**에 대 한 스레드는 **CMultilock** 또는 `CSingleLock` 개체를 사용할 수 있습니다. 그렇지 않은 경우 리소스에 액세스 하려는 모든 스레드가 대기 해야 합니다.  
+ *bInitiallyOwn*  
+ 경우 **TRUE**에 대 한 스레드는 `CMultilock` 또는 `CSingleLock` 개체를 사용할 수 있습니다. 그렇지 않은 경우 리소스에 액세스 하려는 모든 스레드가 대기 해야 합니다.  
   
  *bManualReset*  
  경우 **TRUE**, 이벤트 개체는 수동 이벤트, 그렇지 않으면 이벤트 개체는 자동 이벤트를 지정 합니다.  
   
- `lpszName`  
+ *lpszName*  
  `CEvent` 개체의 이름입니다. 프로세스 경계를 넘어 개체를 사용할 경우에 제공 되어야 합니다. 생성자는 새 빌드 이름에서 일치 하는 기존 이벤트 경우 `CEvent` 해당 이름의 이벤트를 참조 하는 개체입니다. 기존 동기화 개체 이벤트를 일치 하는 이름을 생성이 실패 합니다. 경우 **NULL**, 이름이 null이 됩니다.  
   
- `lpsaAttribute`  
+ *lpsaAttribute*  
  이벤트 개체에 대 한 보안 특성입니다. 에 대 한 전체 설명은이 구조를 참조 하세요. [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) Windows sdk에서입니다.  
   
 ### <a name="remarks"></a>설명  

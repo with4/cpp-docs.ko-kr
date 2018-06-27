@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0093c92604013e4c1aef4046f244d7bcd3f71958
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e939d189d991ef234e940b272291c2da6c931684
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353327"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954480"
 ---
 # <a name="cd2dsizef-class"></a>CD2DSizeF 클래스
 D2D1_SIZE_F에 대 한 래퍼입니다.  
@@ -48,7 +48,7 @@ class CD2DSizeF : public D2D1_SIZE_F;
   
 |이름|설명|  
 |----------|-----------------|  
-|[CD2DSizeF::IsNull](#isnull)|반환 된 `boolean` 유효 하지 않은 데이터 식에 포함 되어 있는지 여부를 나타내는 값 ( `null`).|  
+|[CD2DSizeF::IsNull](#isnull)|반환 된 **부울** 유효 하지 않은 데이터 식에 포함 되어 있는지 여부를 나타내는 값 ( **null**).|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
@@ -79,13 +79,13 @@ CD2DSizeF(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `size`  
+ *size*  
  소스 크기  
   
- `cx`  
+ *cx*  
  소스 너비  
   
- `cy`  
+ *cy*  
  원본 높이  
   
 ##  <a name="isnull"></a>  CD2DSizeF::IsNull  

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a3afe8efa5730c3ef0f4448b1c548724b56b7cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b6d090d6ac85ecc6af36052c0c61fe74a1283c8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33353418"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953745"
 ---
 # <a name="cd2dpathgeometry-class"></a>CD2DPathGeometry 클래스
 ID2D1PathGeometry에 대 한 래퍼입니다.  
@@ -75,7 +75,7 @@ class CD2DPathGeometry : public CD2DGeometry;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CD2DPathGeometry::m_pPathGeometry](#m_ppathgeometry)|ID2D1PathGeometry에 대 한 포인터입니다.|  
   
@@ -99,7 +99,7 @@ void Attach(ID2D1PathGeometry* pResource);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pResource`  
+ *pResource*  
  기존 리소스 인터페이스입니다. NULL 일 수 없습니다.  
   
 ##  <a name="cd2dpathgeometry"></a>  CD2DPathGeometry::CD2DPathGeometry  
@@ -112,10 +112,10 @@ CD2DPathGeometry(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParentTarget`  
+ *pParentTarget*  
  렌더링 대상에 대 한 포인터입니다.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  개체를 소유자 (pParentTarget)에 의해 폐기 수를 나타냅니다.  
   
 ##  <a name="create"></a>  CD2DPathGeometry::Create  
@@ -126,7 +126,7 @@ virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pRenderTarget`  
+ *pRenderTarget*  
  렌더링 대상에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -194,7 +194,7 @@ BOOL Stream(ID2D1GeometrySink* geometrySink);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `geometrySink`  
+ *geometrySink*  
  싱크 pathgeometry의 내용이 복사 됩니다. 이 싱크를 수정 하는 경우에이 경로 geometry의 내용을 변경 하지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  

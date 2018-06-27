@@ -96,12 +96,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a374496c731e33d13de3ece893fe2ff046d38e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb5745d5c4ccc495cd508df10f0d36e3729ecf13
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371379"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952560"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -166,7 +166,7 @@ class CDockSite: public CBasePane
   
  일반적으로 않아도 때문에 도킹 사이트에서 제공 하는 서비스를 호출 하려면 [CFrameWndEx 클래스](../../mfc/reference/cframewndex-class.md) 이러한 서비스를 처리 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CDockSite` 클래스의 개체를 만드는 방법을 보여 줍니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#27](../../mfc/reference/codesnippet/cpp/cdocksite-class_1.cpp)]  
@@ -189,8 +189,8 @@ CDockingPanesRow* AddRow(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pos`  
- [in] `nHeight`  
+ [in] *pos*  
+ [in] *nHeight*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -225,9 +225,9 @@ void AlignDockSite(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `rectToAlignBy`  
- [in] `rectResult`  
- [in] `bMoveImmediately`  
+ [in] *rectToAlignBy*  
+ [in] *rectResult*  
+ [in] *bMoveImmediately*  
   
 ### <a name="remarks"></a>설명  
   
@@ -241,8 +241,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -256,7 +256,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -276,12 +276,12 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `dwStyleEx`  
- [in] `dwStyle`  
- [in] `rect`  
- [in] `pParentWnd`  
- [in] `dwControlBarStyle`  
- [in] `pContext`  
+ [in] *dwStyleEx*  
+ [in] *dwStyle*  
+ [in] *rect*  
+ [in] *pParentWnd*  
+ [in] *dwControlBarStyle*  
+ [in] *pContext*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -298,9 +298,9 @@ virtual CDockingPanesRow* CreateRow(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pParentDockBar`  
- [in] `nOffset`  
- [in] `nRowHeight`  
+ [in] *pParentDockBar*  
+ [in] *nOffset*  
+ [in] *nRowHeight*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -317,9 +317,9 @@ virtual void DockPane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWnd`  
- [in] `dockMethod`  
- [in] `lpRect`  
+ [in] *pWnd*  
+ [in] *dockMethod*  
+ [in] *lpRect*  
   
 ### <a name="remarks"></a>설명  
   
@@ -333,10 +333,10 @@ virtual BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] [out] `pBarToDock`  
- 왼쪽에 도킹 창에 대 한 포인터 `pTargetBar`합니다.  
+ [in] [out] *pBarToDock*  
+ 왼쪽에 도킹 창에 대 한 포인터 *pTargetBar*합니다.  
   
- [in] [out] `pTargetBar`  
+ [in] [out] *pTargetBar*  
  대상 창에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -363,7 +363,7 @@ CPane* FindPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nID`  
+ [in] *nID*  
  찾을 창의 명령 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -379,7 +379,7 @@ int FindRowIndex(CDockingPanesRow* pRow);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pRow`  
+ [in] *pRow*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -456,7 +456,7 @@ bool IsLastRow(CDockingPanesRow* pRow) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pRow`  
+ [in] *pRow*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -472,8 +472,8 @@ BOOL IsRectWithinDockSite(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `rect`  
- [in] `ptDelta`  
+ [in] *rect*  
+ [in] *ptDelta*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -501,9 +501,9 @@ virtual BOOL MovePane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWnd`  
- [in] `nFlags`  
- [in] `ptOffset`  
+ [in] *pWnd*  
+ [in] *nFlags*  
+ [in] *ptOffset*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -517,7 +517,7 @@ virtual void OnInsertRow(POSITION pos);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pos`  
+ [in] *pos*  
   
 ### <a name="remarks"></a>설명  
   
@@ -531,8 +531,8 @@ virtual void OnRemoveRow(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pos`  
- [in] `bByShow`  
+ [in] *pos*  
+ [in] *bByShow*  
   
 ### <a name="remarks"></a>설명  
   
@@ -546,8 +546,8 @@ virtual int OnResizeRow(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pRowToResize`  
- [in] `nOffset`  
+ [in] *pRowToResize*  
+ [in] *nOffset*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -565,10 +565,10 @@ virtual void OnSizeParent(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `rectAvailable`  
- [in] `nSide`  
- [in] `bExpand`  
- [in] `nOffset`  
+ [in] *rectAvailable*  
+ [in] *nSide*  
+ [in] *bExpand*  
+ [in] *nOffset*  
   
 ### <a name="remarks"></a>설명  
   
@@ -583,9 +583,9 @@ virtual BOOL OnSetWindowPos(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWndInsertAfter`  
- [in] `rectWnd`  
- [in] `nFlags`  
+ [in] *pWndInsertAfter*  
+ [in] *rectWnd*  
+ [in] *nFlags*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -601,8 +601,8 @@ virtual void OnShowRow(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pos`  
- [in] `bShow`  
+ [in] *pos*  
+ [in] *bShow*  
   
 ### <a name="remarks"></a>설명  
   
@@ -614,7 +614,7 @@ virtual CPane* PaneFromPoint(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pt`  
+ [in] *pt*  
  한 요소를 화면 좌표를 검색 창에 대 한 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -632,8 +632,8 @@ static int __stdcall RectSideFromPoint(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `rect`  
- [in] `point`  
+ [in] *rect*  
+ [in] *지점*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -649,8 +649,8 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWnd`  
- [in] `dockMethod`  
+ [in] *pWnd*  
+ [in] *dockMethod*  
   
 ### <a name="remarks"></a>설명  
   
@@ -662,7 +662,7 @@ void RemoveRow(CDockingPanesRow* pRow);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pRow`  
+ [in] *pRow*  
   
 ### <a name="remarks"></a>설명  
   
@@ -676,8 +676,8 @@ BOOL ReplacePane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pOldBar`  
- [in] `pNewBar`  
+ [in] *pOldBar*  
+ [in] *pNewBar*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -691,7 +691,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `rectNewClientArea`  
+ [in] *rectNewClientArea*  
   
 ### <a name="remarks"></a>설명  
   
@@ -705,8 +705,8 @@ void ResizeDockSite(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nNewWidth`  
- [in] `nNewHeight`  
+ [in] *nNewWidth*  
+ [in] *nNewHeight*  
   
 ### <a name="remarks"></a>설명  
   
@@ -721,9 +721,9 @@ int ResizeRow(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pRow`  
- [in] `nNewSize`  
- [in] `bAdjustLayout`  
+ [in] *pRow*  
+ [in] *nNewSize*  
+ [in] *bAdjustLayout*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -741,16 +741,16 @@ virtual BOOL ShowPane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] [out] `pBar`  
+ [in] [out] *pBar*  
  에 표시 하거나 숨길 수 있는 창에 대 한 포인터입니다.  
   
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` 창에서 표시할; 임을 지정 하려면 `FALSE` 창이 숨겨져야 되는지 지정 하려면.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  `TRUE` 창 레이아웃 창이 표시 되 고; 후까지 지연 될 해야 지정 하려면 그렇지 않으면 `FALSE`합니다.  
   
- [in] `bActivate`  
+ [in] *bActivate*  
  이 매개 변수는 사용되지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -770,9 +770,9 @@ void ShowRow(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pRow`  
- [in] `bShow`  
- [in] `bAdjustLayout`  
+ [in] *pRow*  
+ [in] *bShow*  
+ [in] *bAdjustLayout*  
   
 ### <a name="remarks"></a>설명  
   
@@ -786,8 +786,8 @@ void SwapRows(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pFirstRow`  
- [in] `pSecondRow`  
+ [in] *pFirstRow*  
+ [in] *pSecondRow*  
   
 ### <a name="remarks"></a>설명  
   

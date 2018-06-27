@@ -29,15 +29,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c0158bfc24eb86f88695b58943989fbb7cac435
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f44f0de4527d6d9f14a06795a297617f46c0010a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382039"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953147"
 ---
 # <a name="tree-control-styles"></a>트리 컨트롤 스타일
-Tree 컨트롤 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 스타일 트리 컨트롤의 모양을 제어 합니다. 트리 컨트롤을 만들 때 초기 스타일을 설정 합니다. 검색 하 고 사용 하 여 트리 컨트롤을 만든 후 스타일을 변경할 수는 [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) 및 [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) 지정 하는 Windows 기능의 **GWL_STYLE** 에 대 한 `nIndex` 매개 변수입니다. 스타일의 전체 목록은 참조 하십시오. [트리 뷰 컨트롤 창 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760013) Windows sdk에서입니다.  
+Tree 컨트롤 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 스타일 트리 컨트롤의 모양을 제어 합니다. 트리 컨트롤을 만들 때 초기 스타일을 설정 합니다. 검색 하 고 사용 하 여 트리 컨트롤을 만든 후 스타일을 변경할 수는 [GetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633584) 및 [SetWindowLong](http://msdn.microsoft.com/library/windows/desktop/ms633591) 지정 하는 Windows 기능의 **GWL_STYLE** 에 대 한 *nIndex* 매개 변수입니다. 스타일의 전체 목록은 참조 하십시오. [트리 뷰 컨트롤 창 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760013) Windows sdk에서입니다.  
   
  **TVS_HASLINES** 스타일 자식 항목을 해당 부모 항목에 연결 하는 선을 그려 트리 컨트롤의 계층 구조를 그래픽으로 나타낸을 향상 시킵니다. 이 스타일 계층의 루트에 있는 항목을 연결 하지 않습니다. 이렇게 하려면 결합 해야는 **TVS_HASLINES** 및 **TVS_LINESATROOT** 스타일입니다.  
   

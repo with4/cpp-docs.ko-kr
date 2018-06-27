@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44a946b21908f45b595056a956c75b234fdbb886
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0c22db5aa9369d895b5a8d725148c841e3ffbfc8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386056"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36955894"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026: DDX 및 DDV 루틴
 > [!NOTE]
@@ -67,7 +67,7 @@ DDV_Custom(pDX,
   
  모든 대화 상자 데이터 교환 루틴 및 MFC와 함께 제공 되는 대화 상자 데이터 유효성 검사 루틴의 목록에 대 한 'afxdd_.h'를 참조 하십시오.  
   
- 대화 상자 데이터는 해당:에 멤버 데이터는 **CMyDialog** 클래스입니다. 구조체 또는 유사 항목에 저장 되지 않습니다.  
+ 대화 상자 데이터는 해당:에 멤버 데이터는 `CMyDialog` 클래스입니다. 구조체 또는 유사 항목에 저장 되지 않습니다.  
   
 ## <a name="notes"></a>노트  
  파생 된 클래스에서 사용할 수 있는 모든 기능 "대화 상자 데이터" 라고 하지만 `CWnd` 및 정당한 대화 상자에 제한 되지 않습니다.  
@@ -83,17 +83,17 @@ DDV_Custom(pDX,
 ## <a name="how-does-it-work"></a>어떻게 작동 합니까  
  대화 상자 데이터를 사용 하려면 다음을 이해 하 고 필요가 없습니다. 그러나이 원리를 자세히 파악할수록 작동 방식을 이해 교환 또는 유효성 검사 프로시저를 직접 작성 하는 데 도움이 됩니다.  
   
- `DoDataExchange` 멤버 함수는 것과 마찬가지로 `Serialize` -멤버 함수는를 가져오거나 설정할 데이터/외부 양식에서 (이 경우 대화 상자에서 제어) / 클래스에서 멤버 데이터에서 합니다. `pDX` 매개 변수 데이터 교환을 수행 하는 데 컨텍스트 이며는 비슷합니다는 `CArchive` 매개 변수를 `CObject::Serialize`합니다. `pDX` (한 `CDataExchange` 개체)의 비슷하게 플래그 방향이 `CArchive` 방향 플래그가:  
+ `DoDataExchange` 멤버 함수는 것과 마찬가지로 `Serialize` -멤버 함수는를 가져오거나 설정할 데이터/외부 양식에서 (이 경우 대화 상자에서 제어) / 클래스에서 멤버 데이터에서 합니다. *pDX* 매개 변수 데이터 교환을 수행 하는 데 컨텍스트 이며는 비슷합니다는 `CArchive` 매개 변수를 `CObject::Serialize`합니다. *pDX* (한 `CDataExchange` 개체)의 비슷하게 플래그 방향이 `CArchive` 방향 플래그가:  
   
--   경우 **! m_bSaveAndValidate**, 다음 컨트롤에 데이터 상태를 로드 합니다.  
+-   If! *m_bSaveAndValidate*, 다음 컨트롤에 데이터 상태를 로드 합니다.  
   
--   경우 `m_bSaveAndValidate`, 다음 컨트롤에서 데이터 상태를 설정 합니다.  
+-   경우 *m_bSaveAndValidate*, 다음 컨트롤에서 데이터 상태를 설정 합니다.  
   
- 유효성 검사에만 발생 때 `m_bSaveAndValidate` 설정 됩니다. 값 `m_bSaveAndValidate` BOOL 매개 변수를 따라 사용자가 `CWnd::UpdateData`합니다.  
+ 유효성 검사에만 발생 때 *m_bSaveAndValidate* 설정 됩니다. 값 *m_bSaveAndValidate* BOOL 매개 변수를 따라 사용자가 `CWnd::UpdateData`합니다.  
   
  세 개의 다른 흥미로운 `CDataExchange` 구성원:  
   
-- `m_pDlgWnd`: 창 (일반적으로 대화 상자) 컨트롤이 들어 있는입니다. 모든 DDX/DDV 루틴을를 't h i s'를 전달 하는 것과 DDX_ DDV_ 전역 함수 및 호출자가입니다.  
+- *m_pDlgWnd*: 컨트롤을 포함 하 여 창 (일반적으로 대화 상자). 모든 DDX/DDV 루틴을를 't h i s'를 전달 하는 것과 DDX_ DDV_ 전역 함수 및 호출자가입니다.  
   
 - `PrepareCtrl`및 `PrepareEditCtrl`: 데이터 교환에 대 한 대화 상자 컨트롤을 준비 합니다. 유효성 검사에 실패할 경우 포커스를 설정 하는 것에 대 한 해당 컨트롤의 핸들을 저장 합니다. `PrepareCtrl` nonedit 컨트롤에 사용 되 고 `PrepareEditCtrl` 편집 컨트롤에 사용 됩니다.  
   
@@ -139,7 +139,7 @@ DDV_Custom(pDX,
     > [!NOTE]
     >  이러한 임의의 식 classwizard 함께 사용 하 여 편집할 수 없습니다 및 특수 형식 주석 외부로 이동할 수 해야 (/ / {{AFX_DATA_MAP(CMyClass)) 합니다.  
   
- 있어야는 **DoDialogExchange** 조건부 또는 intermixed 교환 및 유효성 검사 함수 호출에 다른 유효한 c + + 문 멤버 함수를 포함 합니다.  
+ 있어야는 `DoDialogExchange` 조건부 또는 intermixed 교환 및 유효성 검사 함수 호출에 다른 유효한 c + + 문 멤버 함수를 포함 합니다.  
   
 ```  
 //{{AFX_DATA_MAP(CMyClass)  

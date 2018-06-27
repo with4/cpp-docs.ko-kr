@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b08f8d5ad1fa7c925e3a6dc2243079aba21452b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3959ae03d40bac93ca6453c254e894b8782f5333
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357089"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957200"
 ---
 # <a name="canimationrect-class"></a>CAnimationRect 클래스
 면에 애니메이션을 적용할 수 있는 사각형 기능을 구현합니다.  
@@ -106,7 +106,7 @@ class CAnimationRect : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CAnimationRect::m_bottomValue](#m_bottomvalue)|아래쪽을 나타내는 캡슐화 된 애니메이션 변수 애니메이션 사각형의 경계입니다.|  
 |[CAnimationRect::m_leftValue](#m_leftvalue)|왼쪽을 나타내는 캡슐화 된 애니메이션 변수 애니메이션 사각형의 경계입니다.|  
@@ -139,16 +139,16 @@ void AddTransition(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pLeftTransition`  
+ *pLeftTransition*  
  왼쪽에 대 한 전환을 지정합니다.  
   
- `pTopTransition`  
+ *pTopTransition*  
  위쪽에 대 한 전환을 지정합니다.  
   
- `pRightTransition`  
+ *pRightTransition*  
  오른쪽에 대 한 전환을 지정합니다.  
   
- `pBottomTransition`  
+ *pBottomTransition*  
  아래쪽에 대 한 전환을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -187,34 +187,34 @@ CAnimationRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rect`  
+ *rect*  
  기본 사각형을 지정합니다.  
   
- `nGroupID`  
+ *nGroupID*  
  그룹 ID를 지정 합니다.  
   
- `nObjectID`  
+ *nObjectID*  
  개체 ID를 지정 합니다.  
   
- `dwUserData`  
+ *dwUserData*  
  사용자 정의 데이터를 지정합니다.  
   
- `pt`  
+ *pt*  
  왼쪽 위 모퉁이의 좌표입니다.  
   
- `sz`  
+ *sz*  
  사각형의 크기입니다.  
   
- `nLeft`  
+ *nLeft*  
  왼쪽된 경계의 좌표를 지정 합니다.  
   
- `nTop`  
+ *nTop*  
  위쪽 경계의 좌표를 지정 합니다.  
   
- `nRight`  
+ *nRight*  
  오른쪽 경계의 좌표를 지정 합니다.  
   
- `nBottom`  
+ *nBottom*  
  아래쪽 경계의 좌표를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -230,7 +230,7 @@ virtual void GetAnimationVariableList(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lst`  
+ *lst*  
  함수가 반환할 때 사각형의 좌표를 나타내는 4 개의 CAnimationVariable 개체에 대 한 포인터를 포함 합니다.  
   
 ##  <a name="getbottom"></a>  CAnimationRect::GetBottom  
@@ -306,7 +306,7 @@ BOOL GetValue(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rect`  
+ *rect*  
  출력입니다. 이 메서드가 반환 될 때 현재 값을 포함 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -381,7 +381,7 @@ void operator=(const RECT& rect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rect`  
+ *rect*  
  애니메이션 사각형의 새 값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -395,7 +395,7 @@ void SetDefaultValue(const CRect& rect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rect`  
+ *rect*  
  왼쪽, 위쪽, 오른쪽 및 아래쪽에 대 한 새 기본값을 지정합니다.  
   
 ### <a name="remarks"></a>설명  

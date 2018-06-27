@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78faa19263ff0ea03aac891c9be3a6114f7f9a48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 486fd48a0d77c8c42a958dcb205854928fe00dc8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385406"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952452"
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041: MFC/OLE 2로 MFC/OLE1 마이그레이션
 > [!NOTE]
@@ -85,9 +85,9 @@ ms.locfileid: "33385406"
 \oclient\mainview.cpp(288) : error C2664: 'CreateStaticFromClipboard' : cannot convert parameter 1 from 'char [1]' to 'enum ::tagOLERENDER '  
 ```  
   
- 결과 사실에서 위의 오류 하의 모든는 **COleClientItem::CreateXXXX** MFC/OLE1의 함수는 항목을 나타내는 고유한 이름을 전달 한다고 필요 합니다. 이 기본 OLE API의 요구 사항 이었습니다. 이 OLE 2 DDE (이름이 DDE 대화에 사용 된)의 기본 통신 메커니즘으로 사용 하지 않는 때문 MFC/OLE 2에 필요 하지 않습니다. 이 문제를 해결 하려면 제거할 수 있습니다는 **CreateNewName** 에 대 한 모든 참조도 작동 합니다. 무엇 각 MFC/OLE 함수 예상이 버전에 대 한 호출에 커서를 놓고 F1 키를 누르면 하기만 확인 하는 것이 쉽습니다.  
+ 결과 사실에서 위의 오류 하의 모든는 `COleClientItem::CreateXXXX` MFC/OLE1의 함수는 항목을 나타내는 고유한 이름을 전달 한다고 필요 합니다. 이 기본 OLE API의 요구 사항 이었습니다. 이 OLE 2 DDE (이름이 DDE 대화에 사용 된)의 기본 통신 메커니즘으로 사용 하지 않는 때문 MFC/OLE 2에 필요 하지 않습니다. 이 문제를 해결 하려면 제거할 수 있습니다는 `CreateNewName` 에 대 한 모든 참조도 작동 합니다. 무엇 각 MFC/OLE 함수 예상이 버전에 대 한 호출에 커서를 놓고 F1 키를 누르면 하기만 확인 하는 것이 쉽습니다.  
   
- 와 비슷한 다른 영역에는 OLE 2 클립보드 처리할입니다. OLE1, 클립보드와 Windows 클립보드 Api 상호 작용 사용 있습니다. OLE 2를 다른 메커니즘으로 수행 됩니다. MFC/OLE1 Api 클립보드를 복사 하기 전에 열려 있었던 것으로 간주 한 `COleClientItem` 클립보드로 개체입니다. 이 더 이상 필요 하며 모든 MFC/OLE 클립보드 작업이 실패 하면 합니다. 종속성을 제거 하는 코드를 편집 하는 동안 **CreateNewName**을 열고 닫는 Windows 클립보드 코드도 제거 해야 합니다.  
+ 와 비슷한 다른 영역에는 OLE 2 클립보드 처리할입니다. OLE1, 클립보드와 Windows 클립보드 Api 상호 작용 사용 있습니다. OLE 2를 다른 메커니즘으로 수행 됩니다. MFC/OLE1 Api 클립보드를 복사 하기 전에 열려 있었던 것으로 간주 한 `COleClientItem` 클립보드로 개체입니다. 이 더 이상 필요 하며 모든 MFC/OLE 클립보드 작업이 실패 하면 합니다. 종속성을 제거 하는 코드를 편집 하는 동안 `CreateNewName`을 열고 닫는 Windows 클립보드 코드도 제거 해야 합니다.  
   
 ```  
 \oclient\mainview.cpp(332) : error C2065: 'AfxOleInsertDialog' : undeclared identifier  
@@ -96,7 +96,7 @@ ms.locfileid: "33385406"
 \oclient\mainview.cpp(347) : error C2039: 'CreateNewObject' : is not a member of 'CRectItem'  
 ```  
   
- 이러한 오류가 발생할는 **CMainView::OnInsertObject** 처리기입니다. "새 개체 삽입" 명령을 처리 하는 또 다른 영역은 몇 가지가 다소 변경 되었습니다. 이 경우 단순히 새 OLE 컨테이너 응용 프로그램에 대 한 응용 프로그램 마법사에서 제공 되는 원본 구현을 병합 하는 가장 쉬운 방법입니다. 사실, 이것이 다른 응용 프로그램 이식에 적용할 수 있는 방법입니다. MFC/OLE1 호출 하 여 "개체 삽입" 대화 상자 표시 **AfxOleInsertDialog** 함수입니다. 이 버전에서 작성 한 **COleInsertObject** 대화 상자 개체와 호출 `DoModal`합니다. 와 새로운 OLE 항목이 생성 됩니다는 또한는 **CLSID** classname 문자열 대신 합니다. 최종 결과 다음과 같이 표시 됩니다.  
+ 이러한 오류가 발생할는 `CMainView::OnInsertObject` 처리기입니다. "새 개체 삽입" 명령을 처리 하는 또 다른 영역은 몇 가지가 다소 변경 되었습니다. 이 경우 단순히 새 OLE 컨테이너 응용 프로그램에 대 한 응용 프로그램 마법사에서 제공 되는 원본 구현을 병합 하는 가장 쉬운 방법입니다. 사실, 이것이 다른 응용 프로그램 이식에 적용할 수 있는 방법입니다. MFC/OLE1 호출 하 여 "개체 삽입" 대화 상자 표시 `AfxOleInsertDialog` 함수입니다. 이 버전에서 작성 한 `COleInsertObject` 대화 상자 개체와 호출 `DoModal`합니다. 와 새로운 OLE 항목이 생성 됩니다는 또한는 **CLSID** classname 문자열 대신 합니다. 최종 결과 다음과 같이 표시 됩니다.  
   
 ```  
 COleInsertDialog dlg;  
@@ -152,14 +152,14 @@ EndWaitCursor();
 > [!NOTE]
 >  새 개체 삽입 다를 수 있습니다 응용 프로그램에 대 한):  
   
- 포함 하는 데 필요한 이기도 \<afxodlgs.h >에 대 한 선언을 포함 하는 **COleInsertObject** 으로 대화 상자 클래스는 다른 표준 대화 상자에서 MFC 제공 합니다.  
+ 포함 하는 데 필요한 이기도 \<afxodlgs.h >에 대 한 선언을 포함 하는 `COleInsertObject` 으로 대화 상자 클래스는 다른 표준 대화 상자에서 MFC 제공 합니다.  
   
 ```  
 \oclient\mainview.cpp(367) : error C2065: 'OLEVERB_PRIMARY' : undeclared identifier  
 \oclient\mainview.cpp(367) : error C2660: 'DoVerb' : function does not take 1 parameters  
 ```  
   
- 이러한 오류는 않기 때문에 일부 OLE1 상수 OLE 2에서 변경 된 개념에서 발생 하는 동일 합니다. 이 경우 **OLEVERB_PRIMARY** 로 변경 되었습니다 `OLEIVERB_PRIMARY`합니다. 기본 동사 OLE1 및 OLE 2에서는 일반적으로 사용자가 항목에는 컨테이너에 의해 실행 됩니다.  
+ 이러한 오류는 않기 때문에 일부 OLE1 상수 OLE 2에서 변경 된 개념에서 발생 하는 동일 합니다. 이 경우 `OLEVERB_PRIMARY` 로 변경 되었습니다 `OLEIVERB_PRIMARY`합니다. 기본 동사 OLE1 및 OLE 2에서는 일반적으로 사용자가 항목에는 컨테이너에 의해 실행 됩니다.  
   
  또한 `DoVerb` 추가 매개 변수가 더 길어진-보기에 대 한 포인터 (`CView`*). 이 매개 변수는 "비주얼 편집" (또는 내부 활성화) 구현에 사용 됩니다. 이제이 이번에이 기능을 구현 하지 않는 때문에 NULL로 매개 변수를 설정 합니다.  
   
@@ -177,7 +177,7 @@ BOOL CRectItem::CanActivate()
 \oclient\rectitem.cpp(84) : error C2064: term does not evaluate to a function  
 ```  
   
- MFC/OLE1에서 **COleClientItem::GetBounds** 및 **SetBounds** 쿼리하고 항목의 범위를 조작 하는 데 사용 된 (의 **왼쪽** 및 **top**설정 된 멤버 0). MFC/OLE 2에서가 더 직접적 지원할 `COleClientItem::GetExtent` 및 `SetExtent`를 처리 하는 **크기** 또는 `CSize` 대신 합니다.  
+ MFC/OLE1에서 `COleClientItem::GetBounds` 및 `SetBounds` 쿼리하고 항목의 범위를 조작 하는 데 사용 된 (의 **왼쪽** 및 **top** 설정 된 멤버가 0). MFC/OLE 2에서가 더 직접적 지원할 `COleClientItem::GetExtent` 및 `SetExtent`를 처리 하는 **크기** 또는 `CSize` 대신 합니다.  
   
  새 SetItemRectToServer 프로그램에 대 한 코드와 UpdateItemRectFromServer 호출은 다음과 유사 합니다.  
   
@@ -239,14 +239,14 @@ BOOL CRectItem::SetItemRectToServer()
 \oclient\frame.cpp(50) : error C2064: term does not evaluate to a function  
 ```  
   
- MFC/OLE1 동기 API에는 서버에 대 한 컨테이너에서 호출 된 *시뮬레이션*OLE1 대부분의 경우에서 기본적으로 비동기 때문에, 합니다. 진행 중인 비동기 호출이 해결 되지 않은 사용자 로부터 명령을 처리 하기 전에 확인 해야 했습니다. MFC/OLE1 제공 되는 **COleClientItem::InWaitForRelease** 이렇게 하는 것에 대 한 함수입니다. MFC/OLE 2에서이 아니므로 필요한 OnCommand 재정의 CMainFrame 모두 함께 제거를 할 수 있습니다.  
+ MFC/OLE1 동기 API에는 서버에 대 한 컨테이너에서 호출 된 *시뮬레이션*OLE1 대부분의 경우에서 기본적으로 비동기 때문에, 합니다. 진행 중인 비동기 호출이 해결 되지 않은 사용자 로부터 명령을 처리 하기 전에 확인 해야 했습니다. MFC/OLE1 제공 되는 `COleClientItem::InWaitForRelease` 이렇게 하는 것에 대 한 함수입니다. MFC/OLE 2에서이 아니므로 필요한 OnCommand 재정의 CMainFrame 모두 함께 제거를 할 수 있습니다.  
   
  이 시점에서 OCLIENT 컴파일하고 연결 합니다.  
   
 ## <a name="other-necessary-changes"></a>필요한 다른 변경  
  그러나 수행 되지 않는 실행에서 OCLIENT 유지 합니다는 몇 가지 있습니다. 않고 나중에 이러한 문제를 해결 하는 것이 좋습니다.  
   
- 첫째, OLE 라이브러리를 초기화 하는 데 필요한 되었습니다. 호출 하 여 이렇게 **AfxOleInit** 에서 `InitInstance`:  
+ 첫째, OLE 라이브러리를 초기화 하는 데 필요한 되었습니다. 호출 하 여 이렇게 `AfxOleInit` 에서 `InitInstance`:  
   
 ```  
 if (!AfxOleInit())  
@@ -282,7 +282,7 @@ Invalidate();
 }  
 ```  
   
- MFC/OLE1 컨테이너 응용 프로그램에서 문서 클래스 파생 **COleClientDoc**합니다. MFC/OLE 2에서이 클래스는 제거 되 고 바뀝니다 `COleDocument` (이 새 조직을 쉽게 컨테이너/서버 응용 프로그램을 빌드할). 한 `#define` 매핑하는 **COleClientDoc** 를 `COleDocument` OCLIENT 같은 MFC/OLE 2로 MFC/OLE1 응용 프로그램 이식 간소화 하기 위해. 기능 중 하나에서 제공 하지 `COleDocument` 에서 제공한 **COleClientDoc** 표준 명령 메시지 맵 항목입니다. 이 작업을 수행 하므로 또한 사용 하 여 해당 서버 응용 프로그램 `COleDocument` (간접적으로)을 포함 하지 않는 사람과 이러한 명령 처리기의 오버 헤드는 컨테이너/서버 응용 프로그램 있지 않은 경우. CMainDoc 메시지 맵에 다음 항목을 추가 해야 합니다.  
+ MFC/OLE1 컨테이너 응용 프로그램에서 문서 클래스 파생 `COleClientDoc`합니다. MFC/OLE 2에서이 클래스는 제거 되 고 바뀝니다 `COleDocument` (이 새 조직을 쉽게 컨테이너/서버 응용 프로그램을 빌드할). 한 **#define** 매핑하는 `COleClientDoc` 를 `COleDocument` OCLIENT 같은 MFC/OLE 2로 MFC/OLE1 응용 프로그램 이식 간소화 하기 위해. 기능 중 하나에서 제공 하지 `COleDocument` 에서 제공한 `COleClientDoc` 표준 명령 메시지 맵 항목입니다. 이 작업을 수행 하므로 또한 사용 하 여 해당 서버 응용 프로그램 `COleDocument` (간접적으로)을 포함 하지 않는 사람과 이러한 명령 처리기의 오버 헤드는 컨테이너/서버 응용 프로그램 있지 않은 경우. CMainDoc 메시지 맵에 다음 항목을 추가 해야 합니다.  
   
 ```  
 ON_UPDATE_COMMAND_UI(ID_EDIT_PASTE,
@@ -328,13 +328,13 @@ AddDocTemplate(pTemplate);
   
  내부 활성화를 사용 하려면 몇 가지 모두에서 변경 해야 하는 `CView` (CMainView) 파생 클래스와 `COleClientItem` 파생 클래스 (CRectItem). 이러한 재정의의 모든 응용 프로그램 마법사에서 제공 하 고 대부분의 구현은 기본 응용 프로그램 마법사 응용 프로그램에서 직접 제공 됩니다.  
   
- 이 포트의 첫 번째 단계에서 내부 활성화를 재정의 하 여 완전히 비활성화 되었습니다 `COleClientItem::CanActivate`합니다. 내부 활성화를 허용 하도록이 재정의 제거 해야 합니다. NULL에 대 한 모든 호출에 전달 된 또한 `DoVerb` (는 그 중 두) 뷰를 제공 하는 내부 활성화에 필요한 때문에 있습니다. 내부 활성화를 완벽 하 게 구현 하려면 올바른 보기에 전달 하는 데 필요한는 `DoVerb` 호출 합니다. 이러한 호출 중 하나는 **CMainView::OnInsertObject**:  
+ 이 포트의 첫 번째 단계에서 내부 활성화를 재정의 하 여 완전히 비활성화 되었습니다 `COleClientItem::CanActivate`합니다. 내부 활성화를 허용 하도록이 재정의 제거 해야 합니다. NULL에 대 한 모든 호출에 전달 된 또한 `DoVerb` (는 그 중 두) 뷰를 제공 하는 내부 활성화에 필요한 때문에 있습니다. 내부 활성화를 완벽 하 게 구현 하려면 올바른 보기에 전달 하는 데 필요한는 `DoVerb` 호출 합니다. 이러한 호출 중 하나는 `CMainView::OnInsertObject`:  
   
 ```  
 pItem->DoVerb(OLEIVERB_SHOW, this);
 ```  
   
- 에 다른 **CMainView::OnLButtonDblClk**:  
+ 에 다른 `CMainView::OnLButtonDblClk`:  
   
 ```  
 m_pSelection->DoVerb(OLEIVERB_PRIMARY, this);
@@ -389,7 +389,7 @@ ASSERT(GetDocument()->GetInPlaceActiveItem(this) == NULL);
 }  
 ```  
   
- 다음 코드의 시작 부분에 추가 하면 사용자 항목 외부 클릭할 수 있는 경우를 처리 하려면 **CMainView::SetSelection**:  
+ 다음 코드의 시작 부분에 추가 하면 사용자 항목 외부 클릭할 수 있는 경우를 처리 하려면 `CMainView::SetSelection`:  
   
 ```  
 if (pNewSel != m_pSelection || pNewSel == NULL)  
@@ -468,7 +468,7 @@ void CMainView::OnSize(UINT nType,
   
  이 첫 번째 오류에 훨씬 더 큰 문제가 지적는 `InitInstance` 서버에 대 한 함수입니다. OLE 서버에 필요한 초기화 하는 가장 중요 한 MFC/OLE1 응용 프로그램을 실행할 수 있도록 해야 합니다. 변경 중 하나입니다. 작업을 수행 하는 것이 가장 좋습니다 OLE 서버에 대 한 마법사에서는 확인 되며 적절 하 게 코드를 수정 합니다. 다음은 몇 가지 사항을 염두에서에 둬야입니다.  
   
- OLE 라이브러리를 호출 하 여 초기화 해야 하는 **AfxOleInit**  
+ OLE 라이브러리를 호출 하 여 초기화 해야 하는 `AfxOleInit`  
   
  서버 리소스 핸들 및으로 설정할 수 없는 런타임 클래스 정보를 설정 하려면 문서 템플릿 개체에 SetServerInfo 호출는 `CDocTemplate` 생성자입니다.  
   
@@ -573,7 +573,7 @@ RegisterShellFileTypes();
   
  위의 코드는 새 리소스 ID IDR_HIERSVRTYPE_SRVR_EMB 참조 하는지 확인할 수 있습니다. 다른 컨테이너에 포함 된 문서를 편집할 때 사용 되는 메뉴 리소스입니다. MFC/OLE1 포함된 된 항목을 편집 관련 메뉴 항목은 즉석에서 수정 되었습니다. 파일 기반 문서를 편집 하는 대신 포함된 된 항목을 편집할 때 완전히 다른 메뉴 구조를 사용 하면 훨씬 쉽게이 두 가지 별도 모드에 대 한 다른 사용자 인터페이스를 제공할 수 있습니다. 나중에 볼 수 있듯이 완전히 별도 메뉴 리소스는 포함 된 개체 전체를 편집할 때 사용 됩니다.  
   
- 이 리소스를 만들려면 리소스 스크립트는 Visual c + +에 로드 되 고 기존 IDR_HIERSVRTYPE 메뉴 리소스를 복사 합니다. (이 응용 프로그램 마법사를 사용 하는 동일한 명명 규칙) IDR_HIERSVRTYPE_SRVR_EMB 새 리소스를 이름을 바꿉니다. 다음에 "파일 업데이트"; "파일 저장"를 변경 명령 ID를 지정한 **ID_FILE_UPDATE**합니다. "파일 복사본으로 저장"; "다른 이름으로 저장"을 변경할 수도 명령 ID를 지정한 **ID_FILE_SAVE_COPY_AS**합니다. 프레임 워크에는 두이 명령은 모두의 구현을 제공합니다.  
+ 이 리소스를 만들려면 리소스 스크립트는 Visual c + +에 로드 되 고 기존 IDR_HIERSVRTYPE 메뉴 리소스를 복사 합니다. (이 응용 프로그램 마법사를 사용 하는 동일한 명명 규칙) IDR_HIERSVRTYPE_SRVR_EMB 새 리소스를 이름을 바꿉니다. 다음에 "파일 업데이트"; "파일 저장"를 변경 명령 ID ID_FILE_UPDATE를 제시 합니다. "파일 복사본으로 저장"; "다른 이름으로 저장"을 변경할 수도 명령 ID ID_FILE_SAVE_COPY_AS를 제시 합니다. 프레임 워크에는 두이 명령은 모두의 구현을 제공합니다.  
   
 ```  
 \hiersvr\svritem.h(60) : error C2433: 'OLESTATUS' : 'virtual' not permitted on data declarations  
@@ -583,20 +583,20 @@ RegisterShellFileTypes();
 \hiersvr\svritem.h(60) : error C2501: 'OnSetData' : missing decl-specifiers  
 ```  
   
- 재정의에서 발생 한 오류가의 여러 가지 `OnSetData`이므로 참조 하는 **OLESTATUS** 유형입니다. **OLESTATUS** OLE1 반환 된 오류 방법 이었습니다. 이러한 사항이 변경 `HRESULT` OLE 2에서는 MFC 일반적으로 변환 합니다. 하지만 `HRESULT` 에 `COleException` 오류가 포함 된 합니다. 이 특정 경우의 재정의 `OnSetData` 이므로 더 이상 필요에 따라는 가장 쉬운 방법은 제거 합니다.  
+ 재정의에서 발생 한 오류가의 여러 가지 `OnSetData`이므로 참조 하는 **OLESTATUS** 유형입니다. **OLESTATUS** OLE1 반환 된 오류 방법 이었습니다. 이러한 사항이 변경 **HRESULT** OLE 2에서는 MFC 일반적으로 변환 합니다. 하지만 **HRESULT** 에 `COleException` 오류가 포함 된 합니다. 이 특정 경우의 재정의 `OnSetData` 이므로 더 이상 필요에 따라는 가장 쉬운 방법은 제거 합니다.  
   
 ```  
 \hiersvr\svritem.cpp(30) : error C2660: 'COleServerItem::COleServerItem' : function does not take 1 parameters  
 ```  
   
- `COleServerItem` 생성자는 추가 'BOOL' 매개 변수를 사용 합니다. 이 플래그는 메모리 관리에서 수행 되는 방법 결정는 `COleServerItem` 개체입니다. 프레임 워크를 TRUE로 설정 하 여 이러한 개체의 메모리 관리 처리-더 이상 필요 없는 경우 삭제 합니다. 사용 하 여 HIERSVR **CServerItem** (에서 파생 된 `COleServerItem`)이이 플래그 값을 FALSE로 설정 합니다 원시 데이터의 일부로 개체입니다. 따라서 HIERSVR을 각 서버 항목을 삭제 하는 경우 확인할 수 있습니다.  
+ `COleServerItem` 생성자는 추가 'BOOL' 매개 변수를 사용 합니다. 이 플래그는 메모리 관리에서 수행 되는 방법 결정는 `COleServerItem` 개체입니다. 프레임 워크를 TRUE로 설정 하 여 이러한 개체의 메모리 관리 처리-더 이상 필요 없는 경우 삭제 합니다. 사용 하 여 HIERSVR `CServerItem` (에서 파생 된 `COleServerItem`)이이 플래그 값을 FALSE로 설정 합니다 원시 데이터의 일부로 개체입니다. 따라서 HIERSVR을 각 서버 항목을 삭제 하는 경우 확인할 수 있습니다.  
   
 ```  
 \hiersvr\svritem.cpp(44) : error C2259: 'CServerItem' : illegal attempt to instantiate abstract class  
 \hiersvr\svritem.cpp(44) : error C2259: 'CServerItem' : illegal attempt to instantiate abstract class  
 ```  
   
- 이러한 오류에서 알 수 있듯이는 다음과 같은 몇 가지 ' 순수 가상 ' 함수에서 CServerItem 재정의 하지 않은입니다. 대개 OnDraw의 매개 변수 목록입니다.이 변경 되었다는 사실만 여 원인입니다. 이 오류를 해결 하려면 변경 **cserveritem:: Ondraw** 다음과 같습니다 (뿐만 아니라 svritem.h에서 선언):  
+ 이러한 오류에서 알 수 있듯이는 다음과 같은 몇 가지 ' 순수 가상 ' 함수에서 CServerItem 재정의 하지 않은입니다. 대개 OnDraw의 매개 변수 목록입니다.이 변경 되었다는 사실만 여 원인입니다. 이 오류를 해결 하려면 변경 `CServerItem::OnDraw` 다음과 같습니다 (뿐만 아니라 svritem.h에서 선언):  
   
 ```  
 BOOL CServerItem::OnDraw(CDC* pDC,
@@ -634,7 +634,7 @@ return TRUE;
     int)__far const ' : cannot convert parameter 1 from 'int __far *' to 'struct ::tagPOINT __far *'  
 ```  
   
- 항목 크기 변환할 CServerItem::CalcNodeSize 함수에서 **HIMETRIC** 에 저장 하 고 **m_rectBounds**합니다. 문서화 되지 않은 '**m_rectBounds**' 소속 `COleServerItem` 존재 하지 않는 (부분적으로 대체 되었습니다 `m_sizeExtent`, OLE 2에서이 멤버에 보다 약간 다른 사용 하지만 **m_rectBounds**OLE1에서). 설정 하는 대신는 **HIMETRIC** 크기가 멤버 변수로 것 반환할 수 있습니다. 반환이 값은 사용 `OnGetExtent`이전에 구현 합니다.  
+ 항목 크기 변환할 CServerItem::CalcNodeSize 함수에서 **HIMETRIC** 에 저장 하 고 *m_rectBounds*합니다. 문서화 되지 않은 '*m_rectBounds*' 소속 `COleServerItem` 존재 하지 않는 (부분적으로 대체 되었습니다 *m_sizeExtent*, OLE 2에서이 멤버에 보다약간다른사용하지만*m_rectBounds* OLE1에서). 설정 하는 대신는 **HIMETRIC** 크기가 멤버 변수로 것 반환할 수 있습니다. 반환이 값은 사용 `OnGetExtent`이전에 구현 합니다.  
   
 ```  
 CSize CServerItem::CalcNodeSize()  
@@ -660,7 +660,7 @@ CSize CServerItem::CalcNodeSize()
 }  
 ```  
   
- CServerItem 재정의 **COleServerItem::OnGetTextData**합니다. 이 함수는 MFC/OLE에서 사용 되지 않는 하 고 다른 메커니즘으로 대체 됩니다. MFC 3.0 버전의 MFC OLE 샘플 [HIERSVR](../visual-cpp-samples.md) 재정의 하 여이 기능을 구현 `COleServerItem::OnRenderFileData`합니다. 이 기능은 OnGetTextData 재정의 제거할 수 있는이 기본 포트에 대 한 중요 하지 않습니다.  
+ CServerItem 재정의 `COleServerItem::OnGetTextData`합니다. 이 함수는 MFC/OLE에서 사용 되지 않는 하 고 다른 메커니즘으로 대체 됩니다. MFC 3.0 버전의 MFC OLE 샘플 [HIERSVR](../visual-cpp-samples.md) 재정의 하 여이 기능을 구현 `COleServerItem::OnRenderFileData`합니다. 이 기능은 OnGetTextData 재정의 제거할 수 있는이 기본 포트에 대 한 중요 하지 않습니다.  
   
  해결 되지 svritem.cpp에 더 많은 오류가 있습니다. "실제" 오류가 없는 — 이전 오류로 인해 발생 한 오류만 합니다.  
   
@@ -729,7 +729,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
     AfxGetApp()->m_pMainWnd);
 ```  
   
- 에 대 한 참조를 확인할 **AfxGetApp() m_pMainWnd->** 합니다. 서버가 활성화 될 때 주 창 및 m_pMainWnd 설정 되어 있으며 일반적으로 표시 되지 않습니다. 또한이 창 참조 하는 *주* 응용 프로그램 창, 서버를 완벽 하 게 표시 되는 MDI 프레임 창 열기 또는 독립 실행형 실행 합니다. 활성 프레임이 창을 참조 하지 않는-때 내부 활성화 되는 프레임에서 파생 된 창 `COleIPFrameWnd`합니다. 내부 편집,이 버전의 MFC는 새 함수를 추가 하는 경우에 올바른 활성 창 하기 위해 `AfxGetMainWnd`합니다. 대신이 함수를 사용 해야 하는 일반적으로 **AfxGetApp() m_pMainWnd->** 합니다. 이 코드는 다음과 같이 변경 해야 합니다.  
+ 에 대 한 참조를 확인할 수 *`AfxGetApp()->m_pMainWnd*`합니다. 서버가 활성화 될 때 주 창 및 m_pMainWnd 설정 되어 있으며 일반적으로 표시 되지 않습니다. 또한이 창 참조 하는 *주* 응용 프로그램 창, 서버를 완벽 하 게 표시 되는 MDI 프레임 창 열기 또는 독립 실행형 실행 합니다. 활성 프레임이 창을 참조 하지 않는-때 내부 활성화 되는 프레임에서 파생 된 창 `COleIPFrameWnd`합니다. 내부 편집,이 버전의 MFC는 새 함수를 추가 하는 경우에 올바른 활성 창 하기 위해 `AfxGetMainWnd`합니다. 대신이 함수를 사용 해야 하는 일반적으로 *`AfxGetApp()->m_pMainWnd*`합니다. 이 코드는 다음과 같이 변경 해야 합니다.  
   
 ```  
 pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,  
@@ -746,7 +746,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
   
 -   선택 항목으로 컨테이너 창을 스크롤하여 변경 됩니다.  
   
- MFC 3.0에서 HIERSVR 샘플 약간 다른 디자인을 사용 하 여 해당 서버 항목에 대 한 합니다. 메모리를 절약 고 링크를 더 융통성이 있습니다. HIERSVR의 2.0 버전으로는 트리의 각 노드에 *동등* `COleServerItem`합니다. `COleServerItem` 이러한 각 노드를 반드시 필요한 것 보다 좀 더 오버 헤드를 전달 하지만 `COleServerItem` 활성 각 링크에 대해 필요 합니다. 그러나 대부분의 경우 사항이 매우 적은 활성 링크 지정된 된 시간에 있습니다. 보다 효율적인이 수행 하려면이 버전의 MFC에서 HIERSVR 구분에서 노드는 `COleServerItem`합니다. 두 CServerNode 있기 및 **CServerItem** 클래스입니다. **CServerItem** (에서 파생 된 `COleServerItem`) 필요에 따라 생성 됩니다. 컨테이너 (또는 컨테이너)에 해당 특정 노드의 해당 특정 링크를 사용 하 여 중지 된 CServerNode와 연결 된 CServerItem 개체 삭제 됩니다. 이 디자인 더 효율적이 고 보다 유연한입니다. 유동성이 처리할 여러 개의 링크를 선택 하는 경우 제공 됩니다. HIERSVR의 이러한 두 버전 모두에서 다중 선택을 지원 하지만 것이 훨씬 쉽게 추가할 (및 이러한 선택 항목에 대 한 링크를 지원 하기 위해) HIERSVR의 MFC 3.0 버전과 이후는 `COleServerItem` 원시 데이터에서 구분 됩니다.  
+ MFC 3.0에서 HIERSVR 샘플 약간 다른 디자인을 사용 하 여 해당 서버 항목에 대 한 합니다. 메모리를 절약 고 링크를 더 융통성이 있습니다. HIERSVR의 2.0 버전으로는 트리의 각 노드에 *동등* `COleServerItem`합니다. `COleServerItem` 이러한 각 노드를 반드시 필요한 것 보다 좀 더 오버 헤드를 전달 하지만 `COleServerItem` 활성 각 링크에 대해 필요 합니다. 그러나 대부분의 경우 사항이 매우 적은 활성 링크 지정된 된 시간에 있습니다. 보다 효율적인이 수행 하려면이 버전의 MFC에서 HIERSVR 구분에서 노드는 `COleServerItem`합니다. 두 CServerNode 있기 및 `CServerItem` 클래스입니다. `CServerItem` (에서 파생 된 `COleServerItem`) 필요에 따라 생성 됩니다. 컨테이너 (또는 컨테이너)에 해당 특정 노드의 해당 특정 링크를 사용 하 여 중지 된 CServerNode와 연결 된 CServerItem 개체 삭제 됩니다. 이 디자인 더 효율적이 고 보다 유연한입니다. 유동성이 처리할 여러 개의 링크를 선택 하는 경우 제공 됩니다. HIERSVR의 이러한 두 버전 모두에서 다중 선택을 지원 하지만 것이 훨씬 쉽게 추가할 (및 이러한 선택 항목에 대 한 링크를 지원 하기 위해) HIERSVR의 MFC 3.0 버전과 이후는 `COleServerItem` 원시 데이터에서 구분 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [번호별 기술 참고 사항](../mfc/technical-notes-by-number.md)   
