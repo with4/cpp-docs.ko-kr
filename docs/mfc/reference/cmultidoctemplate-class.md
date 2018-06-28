@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b53228b6983c0293eb288cd0f38669d1b5db928
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c09234cbf41201df14aec4993174e6313c6a7d1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371584"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040836"
 ---
 # <a name="cmultidoctemplate-class"></a>CMultiDocTemplate 클래스
 MDI(다중 문서 인터페이스)를 구현하는 문서 템플릿을 정의합니다.  
@@ -85,7 +85,7 @@ CMultiDocTemplate(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDResource`  
+ *nIDResource*  
  문서 종류를 사용 하는 리소스의 ID를 지정 합니다. 이 메뉴, 아이콘, 액셀러레이터 키 테이블 및 문자열 리소스 포함 될 수 있습니다.  
   
  '\N' 문자로 구분 되는 최대 7 개의 부분 문자열로 이루어진 문자열 리소스 구성 (부분 문자열에 포함 되지 않은 경우 '\n' 문자 자리 표시자 변수로 필요; 그러나 후행 '\n' 문자가 필요 하지 않은); 이러한 부분 문자열에는 문서 유형에 대해 설명합니다. 부분 문자열 대 한 자세한 내용은 참조 [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)합니다. 이 문자열 리소스를 응용 프로그램의 리소스 파일에서 찾을 수 있습니다. 예를 들어:  
@@ -104,19 +104,19 @@ CMultiDocTemplate(
   
  이러한 리소스 종류에 대 한 자세한 내용은 참조 [리소스 편집기](../../windows/resource-editors.md)합니다.  
   
- `pDocClass`  
- 가리키는 `CRuntimeClass` 문서 클래스의 개체입니다. 이 클래스는는 **CDocument**-문서를 나타내기 위해 정의한 클래스를 파생 합니다.  
+ *pDocClass*  
+ 가리키는 `CRuntimeClass` 문서 클래스의 개체입니다. 이 클래스는는 `CDocument`-문서를 나타내기 위해 정의한 클래스를 파생 합니다.  
   
- `pFrameClass`  
+ *pFrameClass*  
  가리키는 `CRuntimeClass` 프레임 창 클래스의 개체입니다. 될 수 있는이 클래스는 `CMDIChildWnd`-파생 클래스가 될 수 있습니다 또는 `CMDIChildWnd` 자체 문서 프레임 창에 대 한 기본 동작을 수행 합니다.  
   
- `pViewClass`  
+ *pViewClass*  
  가리키는 `CRuntimeClass` 뷰 클래스의 개체입니다. 이 클래스는는 `CView`-문서를 표시 하기 위해 정의 하는 클래스를 파생 합니다.  
   
 ### <a name="remarks"></a>설명  
  동적으로 하나를 할당 `CMultiDocTemplate` 응용 프로그램을 지원 하 고 각 전달 각 문서 유형에 대 한 개체 `CWinApp::AddDocTemplate` 에서 `InitInstance` 응용 프로그램 클래스의 멤버 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#92](../../mfc/codesnippet/cpp/cmultidoctemplate-class_1.cpp)]  
   
  두 번째 예제는 다음과 같습니다.  

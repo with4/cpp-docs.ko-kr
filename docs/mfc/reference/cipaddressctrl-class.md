@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86d6c4cdff533538c2f0ea7f0be1fa44bfd27359
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3e5f88dc011e358c0438209f0a4b3e277419be9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368916"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042159"
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl 클래스
 Windows의 공용 IP 주소 컨트롤의 기능을 제공합니다.  
@@ -120,16 +120,16 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwStyle`  
+ *dwStyle*  
  IP 주소 컨트롤의 스타일입니다. 창 스타일의 조합을 적용 됩니다. 포함 해야 합니다는 **WS_CHILD** 컨트롤을 자식 창 이어야 하므로 스타일입니다. 참조 [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) 창 스타일의 목록을 Windows sdk입니다.  
   
- `rect`  
+ *rect*  
  IP 주소 컨트롤의 크기와 위치에 대 한 참조입니다. 있습니다는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 구조입니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  IP 주소 컨트롤의 부모 창에 대 한 포인터입니다. 않아야 **NULL입니다.**  
   
- `nID`  
+ *nID*  
  IP 주소 컨트롤의 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -140,9 +140,9 @@ virtual BOOL Create(
   
 1.  만드는 생성자를 호출 하는 `CIPAddressCtrl` 개체입니다.  
   
-2.  호출 **만들기**, IP 주소 컨트롤 만듭니다.  
+2.  호출 `Create`, IP 주소 컨트롤 만듭니다.  
   
- 컨트롤 확장된 창 스타일을 사용 하려면 호출 [CreateEx](#createex) 대신 **만들기**합니다.  
+ 컨트롤 확장된 창 스타일을 사용 하려면 호출 [CreateEx](#createex) 대신 `Create`합니다.  
   
 ##  <a name="createex"></a>  CIPAddressCtrl::CreateEx  
  컨트롤 (자식 창)을 만들고 사용 하 여 연결 하려면이 함수를 호출 하 여 `CIPAddressCtrl` 개체입니다.  
@@ -157,19 +157,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwExStyle`  
- 만들 컨트롤의 확장된 스타일을 지정 합니다. 목록이 확장된 창 스타일에 대 한 참조는 `dwExStyle` 에 대 한 매개 변수 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows sdk에서입니다.  
+ *dwExStyle*  
+ 만들 컨트롤의 확장된 스타일을 지정 합니다. 목록이 확장된 창 스타일에 대 한 참조는 *dwExStyle* 에 대 한 매개 변수 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows sdk에서입니다.  
   
- `dwStyle`  
+ *dwStyle*  
  IP 주소 컨트롤의 스타일입니다. 창 스타일의 조합을 적용 됩니다. 포함 해야 합니다는 **WS_CHILD** 컨트롤을 자식 창 이어야 하므로 스타일입니다. 참조 [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) 창 스타일의 목록을 Windows sdk입니다.  
   
- `rect`  
- 에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 크기와의 클라이언트 좌표에 만들어질 창 위치를 설명 하는 구조 `pParentWnd`합니다.  
+ *rect*  
+ 에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 크기와의 클라이언트 좌표에 만들어질 창 위치를 설명 하는 구조 *pParentWnd*합니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  컨트롤의 부모 창에 대 한 포인터입니다.  
   
- `nID`  
+ *nID*  
  컨트롤의 자식 창 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -192,26 +192,26 @@ int GetAddress(DWORD& dwAddress);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nField0`  
+ *nField0*  
  압축 된 IP 주소에서 0 필드 값에 대 한 참조입니다.  
   
- `nField1`  
+ *nField1*  
  압축 된 IP 주소에서 1 필드 값에 대 한 참조입니다.  
   
- `nField2`  
+ *nField2*  
  압축 된 IP 주소에서 2 필드 값에 대 한 참조입니다.  
   
- `nField3`  
+ *nField3*  
  압축 된 IP 주소에서 3 필드 값에 대 한 참조입니다.  
   
- `dwAddress`  
- 주소에 대 한 참조는 `DWORD` IP 주소를 수신 하는 값입니다. 참조 **주의** 표시 하는 테이블에 대 한 방법을 `dwAddress` 채워집니다.  
+ *dwAddress*  
+ 주소에 대 한 참조는 `DWORD` IP 주소를 수신 하는 값입니다. 참조 **주의** 표시 하는 테이블에 대 한 방법을 *dwAddress* 채워집니다.  
   
 ### <a name="return-value"></a>반환 값  
  IP 주소 컨트롤의 비어 있지 않은 필드의 수입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 멤버 함수는 Win32 메시지의 동작을 구현 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378)Windows SDK에 설명 된 대로 합니다. 위의 첫 번째 프로토타입의 읽을 숫자 0-3 컨트롤의 필드를 왼쪽에서 오른쪽 각각, 4 개의 매개 변수를 채웁니다. 위의 두 번째 프로토타입의 `dwAddress` 는 다음과 같이 채워집니다.  
+ 이 멤버 함수는 Win32 메시지의 동작을 구현 [IPM_GETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761378)Windows SDK에 설명 된 대로 합니다. 위의 첫 번째 프로토타입의 읽을 숫자 0-3 컨트롤의 필드를 왼쪽에서 오른쪽 각각, 4 개의 매개 변수를 채웁니다. 위의 두 번째 프로토타입의 *dwAddress* 는 다음과 같이 채워집니다.  
   
 |필드|필드 값을 포함 하는 비트|  
 |-----------|-------------------------------------|  
@@ -247,23 +247,23 @@ void SetAddress(DWORD dwAddress);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nField0`  
+ *nField0*  
  압축 된 IP 주소에서 0 필드 값입니다.  
   
- `nField1`  
+ *nField1*  
  압축 된 IP 주소에서 1 필드 값입니다.  
   
- `nField2`  
+ *nField2*  
  압축 된 IP 주소에서 2 필드 값입니다.  
   
- `nField3`  
+ *nField3*  
  압축 된 IP 주소에서 3 필드 값입니다.  
   
- `dwAddress`  
+ *dwAddress*  
  A `DWORD` 새 IP 주소를 포함 하는 값입니다. 참조 **주의** 표시 하는 테이블에 대 한 방법을 `DWORD` 값은 채워집니다.  
   
 ### <a name="remarks"></a>설명  
- 이 멤버 함수는 Win32 메시지의 동작을 구현 [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380)Windows SDK에 설명 된 대로 합니다. 위의 첫 번째 프로토타입의 읽을 숫자 0-3 컨트롤의 필드를 왼쪽에서 오른쪽 각각, 4 개의 매개 변수를 채웁니다. 위의 두 번째 프로토타입의 `dwAddress` 는 다음과 같이 채워집니다.  
+ 이 멤버 함수는 Win32 메시지의 동작을 구현 [IPM_SETADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb761380)Windows SDK에 설명 된 대로 합니다. 위의 첫 번째 프로토타입의 읽을 숫자 0-3 컨트롤의 필드를 왼쪽에서 오른쪽 각각, 4 개의 매개 변수를 채웁니다. 위의 두 번째 프로토타입의 *dwAddress* 는 다음과 같이 채워집니다.  
   
 |필드|필드 값을 포함 하는 비트|  
 |-----------|-------------------------------------|  
@@ -280,7 +280,7 @@ void SetFieldFocus(WORD nField);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nField`  
+ *nField*  
  포커스를 설정할 수는 0부터 시작 필드 인덱스입니다. 이 값 필드의 수보다 큰 경우 첫 번째 빈 필드에 포커스가 설정 됩니다. 모든 필드가 비어 있지 않은 경우 첫 번째 필드에 포커스가 설정 됩니다.  
   
 ### <a name="remarks"></a>설명  
@@ -297,17 +297,17 @@ void SetFieldRange(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nField`  
+ *nField*  
  범위 적용 될 0부터 시작 필드 인덱스입니다.  
   
- `nLower`  
+ *nLower*  
  이 IP 주소 컨트롤의 지정된 된 필드의 하 한을 수신 하는 정수에 대 한 참조입니다.  
   
- `nUpper`  
+ *nUpper*  
  이 IP 주소 컨트롤의 지정된 된 필드의 상한값을 수신 하는 정수에 대 한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 멤버 함수는 Win32 메시지의 동작을 구현 [IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382)Windows SDK에 설명 된 대로 합니다. 두 개의 매개 변수를 사용 하 여 `nLower` 및 `nUpper`대신 필드의 아래쪽과 위쪽 한계를 나타내기 위해는 *wRange* Win32 메시지와 함께 사용 되는 매개 변수입니다.  
+ 이 멤버 함수는 Win32 메시지의 동작을 구현 [IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382)Windows SDK에 설명 된 대로 합니다. 두 개의 매개 변수를 사용 하 여 *nLower* 및 *nUpper*대신 필드의 아래쪽과 위쪽 한계를 나타내기 위해는 *wRange* Win32 메시지와 함께 사용 되는 매개 변수입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CWnd 클래스](../../mfc/reference/cwnd-class.md)   

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b311d81e5e9becab2bf0ab88d30321019e5da95d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8f411aeb88a2d76265c6e8c277b367cb1ebce57
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367076"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038238"
 ---
 # <a name="class-factories-and-licensing"></a>클래스 팩터리 및 라이선스
 OLE 컨트롤의 인스턴스를 만들려면 컨테이너 응용 프로그램의 컨트롤의 클래스 팩터리 멤버 함수를 호출 합니다. 컨트롤은 실제 OLE 개체, 클래스 팩터리는 컨트롤의 인스턴스를 만들기 위한 해야 합니다. 모든 OLE 컨트롤 클래스는 클래스 팩터리를 가져야 합니다.  
@@ -140,23 +140,23 @@ BOOL AFXAPI AfxVerifyLicFile(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hInstance`  
+ *hInstance*  
  사용이 허가 된 컨트롤과 연결 된 DLL의 인스턴스 핸들입니다.  
   
- `pszLicFileName`  
+ *pszLicFileName*  
  라이선스 파일 이름을 포함 하는 문자를 null로 끝나는 문자열을 가리킵니다.  
   
- `pszLicFileContents`  
+ *pszLicFileContents*  
  라이선스 파일의 시작 부분에 있는 시퀀스와 일치 해야 하는 바이트 시퀀스를 가리킵니다.  
   
- `cch`  
- 에 있는 문자의 수 `pszLicFileContents`합니다.  
+ *cch*  
+ 에 있는 문자의 수 *pszLicFileContents*합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 라이선스 파일이 있고에서 문자 시퀀스를 시작 하는 경우 0이 아닌 `pszLicFileContents`그렇지 않으면 0입니다.  
+ 라이선스 파일이 있고에서 문자 시퀀스를 시작 하는 경우 0이 아닌 *pszLicFileContents*그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `cch` -1 이면이 함수를 사용 합니다.  
+ 경우 *cch* -1 이면이 함수를 사용 합니다.  
   
  [!code-cpp[NVC_MFC_Utilities#36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]  
 

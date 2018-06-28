@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b6c5501159cfdb46107b4fef34637195d52f465
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 542c34fc02eca1f090072f49b9688d3edd4d78e6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368009"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040677"
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>CMFCRibbonCustomizePropertyPage 클래스
 에 대 한 사용자 지정 페이지를 구현 하는 **사용자 지정** 리본 기반 응용 프로그램에서 대화 상자.  
@@ -61,7 +61,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
 ## <a name="remarks"></a>설명  
  사용자 지정 명령을 추가 하려는 경우는 **사용자 지정** 대화 상자, AFX_WM_ON_RIBBON_CUSTOMIZE 메시지를 처리 해야 합니다. 메시지 처리기에서 인스턴스화하는 `CMFCRibbonCustomizePropertyPage` 스택에 개체입니다. 사용자 지정 명령 목록을 만들고 호출 `AddCustomCategory` 새 페이지를 추가 하는 **사용자 지정** 대화 상자.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 생성 하는 방법을 `CMFCRibbonCustomizePropertyPage` 개체를 사용자 지정 범주를 추가 합니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#22](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizepropertypage-class_1.cpp)]  
@@ -98,11 +98,11 @@ void AddCustomCategory(
 |||  
 |-|-|  
 |매개 변수|설명|  
-|[in] `lpszName`|사용자 지정 범주 이름을 지정합니다.|  
-|[in] `lstIDS`|사용자 지정 범주에 표시 되는 리본 메뉴 명령 Id를 포함 합니다.|  
+|[in] *lpszName*|사용자 지정 범주 이름을 지정합니다.|  
+|[in] *lstIDS*|사용자 지정 범주에 표시 되는 리본 메뉴 명령 Id를 포함 합니다.|  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 명명 된 범주 추가 `lpszName` 에 **명령을** 콤보 상자입니다. 사용자가 범주를 선택 하는 경우 명령에 지정 된 `lstIDS` 명령 목록에 표시 합니다.  
+ 이 메서드는 명명 된 범주 추가 *lpszName* 에 **명령을** 콤보 상자입니다. 사용자가 범주를 선택 하는 경우 명령에 지정 된 *lstIDS* 명령 목록에 표시 합니다.  
   
 ##  <a name="cmfcribboncustomizepropertypage"></a>  CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage  
  `CMFCRibbonCustomizePropertyPage` 개체를 생성합니다.  
@@ -112,7 +112,7 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pRibbonBar`  
+ [in] *pRibbonBar*  
  리본 컨트롤에 대 한 포인터를 사용자 지정 하는 옵션입니다.  
   
 ##  <a name="onok"></a>  CMFCRibbonCustomizePropertyPage::OnOK  

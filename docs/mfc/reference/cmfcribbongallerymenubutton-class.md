@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27d2d4e95bffa3bd074ca1c6d4bf6d9c7e095a56
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b2dd3d47b2175a64be605ac8db9fdb1502ce2755
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370909"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041262"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>CMFCRibbonGalleryMenuButton 클래스
 리본 갤러리가 포함된 리본 메뉴 단추를 구현합니다.  
@@ -66,7 +66,7 @@ class CMFCRibbonGalleryMenuButton : public CMFCToolBarMenuButton
 ### <a name="remarks"></a>설명  
  갤러리 메뉴 단추가 팝업 메뉴로 화살표와 함께 표시됩니다. 사용자가 이 단추를 클릭하면 이미지 갤러리가 표시됩니다. 갤러리 메뉴 단추를 생성하는 경우 이러한 이미지를 포함하는 이미지 목록을 지정해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 메뉴 단추에 글머리 기호 갤러리를 표시하는 방법을 보여 줍니다.  
   
 ```  
@@ -108,7 +108,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `src`  
+ [in] *src*  
   
 ### <a name="remarks"></a>설명  
   
@@ -132,28 +132,28 @@ CMFCRibbonGalleryMenuButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `uiID`  
- 단추의 명령 ID입니다. 전송 하는 값은 **WM_COMMAND** 이 단추를 클릭할 때 메시지입니다.  
+ *uiID*  
+ 단추의 명령 ID입니다. 이 단추를 클릭할 때 WM_COMMAND 메시지에 전송 하는 값입니다.  
   
- `iImage`  
- 갤러리 메뉴 단추와 함께 표시할 이미지의 인덱스입니다. 에 저장 된 이미지는 `imagesPalette` 매개 변수입니다.  
+ *iImage*  
+ 갤러리 메뉴 단추와 함께 표시할 이미지의 인덱스입니다. 에 저장 된 이미지는 *imagesPalette* 매개 변수입니다.  
   
- `lpszText`  
+ *lpszText*  
  메뉴 단추에 표시할 텍스트입니다.  
   
- `imagesPalette`  
+ *imagesPalette*  
  갤러리에 표시할 이미지의 목록을 포함 합니다.  
   
- `uiImagesPaletteResID`  
+ *uiImagesPaletteResID*  
  갤러리에 표시할 이미지 목록의 이미지에 대 한 리소스 ID입니다.  
   
- `cxPaletteImage`  
+ *cxPaletteImage*  
  갤러리에 표시할 이미지의 픽셀에서 너비를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
  갤러리 메뉴 단추가 팝업 메뉴로 화살표가 있는 표시 됩니다. 사용자가 이 단추를 클릭하면 이미지 갤러리가 표시됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는의 생성자를 사용 하 여 `CMFCRibbonGalleryMenuButton` 클래스입니다. 이 코드 조각은의 일부인는 [MS Office 2007 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#8](../../mfc/reference/codesnippet/cpp/cmfcribbongallerymenubutton-class_1.cpp)]  

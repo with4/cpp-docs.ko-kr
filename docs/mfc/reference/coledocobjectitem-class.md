@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af2b13b8da5f70cf55b47ddf3b7864f9f9151a40
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0842904ddb6e534cabc9fff8b5d2b2b4855f410
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373581"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042211"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem 클래스
 액티브 문서 포함을 구현합니다.  
@@ -108,7 +108,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pContainerDoc`  
+ *pContainerDoc*  
  에 대 한 포인터는 `COleDocument` 액티브 문서 컨테이너 역할 개체입니다. 이 매개 변수 해야 **NULL** 사용할 수 있도록 **만들 수 있습니다**합니다. 비-를 사용 하 여 OLE 항목은 생성 하는 일반적으로 **NULL** 문서 포인터입니다.  
   
 ##  <a name="dodefaultprinting"></a>  COleDocObjectItem::DoDefaultPrinting  
@@ -121,10 +121,10 @@ static HRESULT DoDefaultPrinting(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pCaller`  
+ *pCaller*  
  에 대 한 포인터는 [CView](../../mfc/reference/cview-class.md) 인쇄 명령을 전송 하는 개체입니다.  
   
- `pInfo`  
+ *pInfo*  
  에 대 한 포인터는 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 인쇄 작업을 설명 하는 개체입니다.  
   
 ##  <a name="execcommand"></a>  COleDocObjectItem::ExecCommand  
@@ -138,14 +138,14 @@ HRESULT ExecCommand(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nCmdID`  
- 실행할 명령의 식별자입니다. 로 식별 되는 그룹에 있어야 `pguidCmdGroup`합니다.  
+ *nCmdID*  
+ 실행할 명령의 식별자입니다. 로 식별 되는 그룹에 있어야 *pguidCmdGroup*합니다.  
   
- `nCmdExecOpt`  
+ *nCmdExecOpt*  
  명령 실행 옵션을 지정합니다. 사용자에 게 확인 하지 않고 명령을 실행 하는 기본적으로 설정 합니다. 참조 [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) 값 목록에 대 한 합니다.  
   
- `pguidCmdGroup`  
- 명령 그룹의 고유 식별자입니다. 기본적으로 **NULL**, 표준 그룹을 지정 하는 합니다. 전달 된 명령을 `nCmdID` 그룹에 속해야 합니다.  
+ *pguidCmdGroup*  
+ 명령 그룹의 고유 식별자입니다. 기본적으로 **NULL**, 표준 그룹을 지정 하는 합니다. 전달 된 명령을 *nCmdID* 그룹에 속해야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  반환 `S_OK` 성공; 그렇지 않으면 반환 다음 오류 코드 중 하나입니다.  
@@ -155,14 +155,14 @@ HRESULT ExecCommand(
 |**E_UNEXPECTED**|예기치 않은 오류가 발생 했습니다.|  
 |**E_FAIL**|오류가 발생 했습니다.|  
 |**E_NOTIMPL**|MFC 나타냅니다 자체를 변환 하 고 명령 디스패치 시도해 야 합니다.|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` 이 아닌 **NULL** 하지만 인식 된 명령 그룹을 지정 하지 않습니다.|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` 그룹 pGroup에서 유효한 명령으로 인식 되지 않습니다.|  
-|**OLECMDERR_DISABLED**|로 식별 되는 명령을 `nCmdID` 비활성화 되 고 실행할 수 없습니다.|  
-|**OLECMDERR_NOHELP**|호출자로 식별 되는 명령에 도움을 요청 `nCmdID` 있지만 도움말이 없습니다.|  
+|**OLECMDERR_E_UNKNOWNGROUP**|*pguidCmdGroup* 이 아닌 **NULL** 하지만 인식 된 명령 그룹을 지정 하지 않습니다.|  
+|**OLECMDERR_E_NOTSUPPORTED**|*nCmdID* 그룹 pGroup에서 유효한 명령으로 인식 되지 않습니다.|  
+|**OLECMDERR_DISABLED**|로 식별 되는 명령을 *nCmdID* 비활성화 되 고 실행할 수 없습니다.|  
+|**OLECMDERR_NOHELP**|호출자로 식별 되는 명령에 도움을 요청 *nCmdID* 있지만 도움말이 없습니다.|  
 |**OLECMDERR_CANCELLED**|사용자는 실행을 취소 합니다.|  
   
 ### <a name="remarks"></a>설명  
- `pguidCmdGroup` 및 `nCmdID` 매개 변수를 함께 호출할 명령을 고유 하 게 식별 합니다. `nCmdExecOpt` 매개 변수는 정확한 수행할 동작을 지정 합니다.  
+ *pguidCmdGroup* 및 *nCmdID* 매개 변수를 함께 호출할 명령을 고유 하 게 식별 합니다. *nCmdExecOpt* 매개 변수는 정확한 수행할 동작을 지정 합니다.  
   
 ##  <a name="getactiveview"></a>  COleDocObjectItem::GetActiveView  
  이 멤버 함수에 포인터를 얻으려면 호출는 `IOleDocumentView` 현재 활성 뷰의 인터페이스입니다.  
@@ -207,13 +207,13 @@ static BOOL OnPreparePrinting(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pCaller`  
+ *pCaller*  
  에 대 한 포인터는 [CView](../../mfc/reference/cview-class.md) 인쇄 명령을 전송 하는 개체입니다.  
   
- `pInfo`  
+ *pInfo*  
  에 대 한 포인터는 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 인쇄 작업을 설명 하는 개체입니다.  
   
- `bPrintAll`  
+ *bPrintAll*  
  전체 문서 인쇄할 수 있는지 여부를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -230,13 +230,13 @@ static void OnPrint(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pCaller`  
+ *pCaller*  
  인쇄 명령을 보내는 CView 개체에 대 한 포인터입니다.  
   
- `pInfo`  
+ *pInfo*  
  에 대 한 포인터는 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 인쇄 작업을 설명 하는 개체입니다.  
   
- `bPrintAll`  
+ *bPrintAll*  
  전체 문서 인쇄할 수 있는지 여부를 지정 합니다.  
   
 ##  <a name="querycommand"></a>  COleDocObjectItem::QueryCommand  
@@ -251,16 +251,16 @@ HRESULT QueryCommand(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nCmdID`  
+ *nCmdID*  
  식별자에 대 한 쿼리 중인 명령입니다.  
   
- `pdwStatus`  
+ *pdwStatus*  
  이 쿼리의 결과로 반환 하는 플래그에 대 한 포인터입니다. 가능한 값 목록은 참조 [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237)합니다.  
   
- `pCmdText`  
+ *pCmdText*  
  에 대 한 포인터는 [OLECMDTEXT](http://msdn.microsoft.com/library/windows/desktop/ms693314) 단일 명령에 대 한 이름 및 상태 정보를 반환 하는 구조입니다. 수 **NULL** 를 나타내는 호출자에 게가이 정보가 필요 하지 않습니다.  
   
- `pguidCmdGroup`  
+ *pguidCmdGroup*  
  명령 그룹의 고유 식별자 수 **NULL** 표준 그룹을 지정할 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -277,7 +277,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwCloseOption`  
+ *dwCloseOption*  
  OLE 항목 로드 된 상태로 돌아오면 어떤 상황에서 저장을 지정 하는 플래그입니다. 가능한 값 목록은 참조 [COleClientItem::Close](../../mfc/reference/coleclientitem-class.md#close)합니다.  
   
 ### <a name="remarks"></a>설명  

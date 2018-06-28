@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 795e5548e93323af389c3faeaefa7dda0bf7d80c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: af19a9dcb207afa482f54e26540a6b706d607ce0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376251"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040771"
 ---
 # <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog 클래스
 `CMFCImageEditorDialog` 클래스 이미지 편집기 대화 상자를 지원 합니다.  
@@ -86,21 +86,21 @@ CMFCImageEditorDialog(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pBitmap`  
+ *pBitmap*  
  이미지에 대 한 포인터입니다.  
   
- `pParent`  
+ *pParent*  
  현재 이미지 편집기 대화 상자의 부모 창에 대 한 포인터입니다.  
   
- `nBitsPixel`  
- 색 농도 라고도 하는 단일 픽셀의 색을 나타내는 데 사용 되는 비트 수입니다.  경우는 `nBitsPixel` 매개 변수가-1 이면 색 농도으로 지정 된 이미지에서 파생 되는 `pBitmap` 매개 변수입니다. 기본값은 -1입니다.  
+ *nBitsPixel*  
+ 색 농도 라고도 하는 단일 픽셀의 색을 나타내는 데 사용 되는 비트 수입니다.  경우는 *nBitsPixel* 매개 변수가-1 이면 색 농도으로 지정 된 이미지에서 파생 되는 *pBitmap* 매개 변수입니다. 기본값은 -1입니다.  
   
 ### <a name="return-value"></a>반환 값  
  이미지를 수정 하려면 전달에 대 한 이미지 포인터는 `CMFCImageEditorDialog` 생성자입니다. 그런 다음 호출에서 `DoModal` 메서드 모달 대화 상자를 엽니다. 경우는 `DoModal` 새 이미지를 포함 하는 비트맵 메서드가 반환 합니다.  
   
 ### <a name="remarks"></a>설명  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는의 개체를 생성 하는 `CMFCImageEditorDialog` 클래스입니다. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#8](../../mfc/reference/codesnippet/cpp/cmfcimageeditordialog-class_1.cpp)]  

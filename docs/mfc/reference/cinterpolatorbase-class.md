@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0ca520fe89e04d984e6490c495f2622a6037c79
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 81ad51fe00a0b205000b15a05ede9497850f488e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367762"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041275"
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase 클래스
 애니메이션 API에서 애니메이션 변수의 새 값을 계산해야 할 때 호출하는 콜백을 구현합니다.  
@@ -104,10 +104,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pInterpolator`  
+ *pInterpolator*  
  사용자 지정 보간에 대 한 포인터입니다.  
   
- `ppHandler`  
+ *ppHandler*  
  출력입니다. 함수가 반환할 때 CInterpolatorBase의 인스턴스에 대 한 포인터를 포함 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -123,13 +123,13 @@ IFACEMETHOD(GetDependencies)(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `initialValueDependencies`  
+ *initialValueDependencies*  
  출력입니다. 보간의 초기 값에 종속 된 측면 SetInitialValueAndVelocity에 전달 합니다.  
   
- `initialVelocityDependencies`  
+ *initialVelocityDependencies*  
  출력입니다. 보간의 초기 속도에 종속 된 측면 SetInitialValueAndVelocity에 전달 합니다.  
   
- `durationDependencies`  
+ *durationDependencies*  
  출력입니다. 보간의 기간에 종속 된 측면 SetDuration에 전달 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -143,7 +143,7 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `duration`  
+ *duration*  
  출력입니다. 시간 (초)에 있는 전환의 기간입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -157,7 +157,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `value`  
+ *값*  
  출력입니다. 전환의 끝에 변수의 최종 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -173,10 +173,10 @@ IFACEMETHOD(InterpolateValue)(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `offset`  
+ *offset*  
  전환의 시작 오프셋입니다. 오프셋은 항상 보다 큰 또는 0과 같은 하며 전환의 기간 보다 작아야 합니다. 전환의 기간은 0 경우에이 메서드가 호출 되지 않습니다.  
   
- `value`  
+ *값*  
  출력입니다. 보간된 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -192,10 +192,10 @@ IFACEMETHOD(InterpolateVelocity)(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `offset`  
+ *offset*  
  전환의 시작 오프셋입니다. 오프셋은 항상 0 보다 크거나 및 전환의 기간입니다. 전환의 기간은 0 경우에이 메서드가 호출 되지 않습니다.  
   
- `velocity`  
+ *개발 속도*  
  출력입니다. 속도 오프셋에 있는 변수입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -209,7 +209,7 @@ void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pInterpolator`  
+ *pInterpolator*  
  사용자 지정 보간에 대 한 포인터입니다.  
   
 ##  <a name="setduration"></a>  CInterpolatorBase::SetDuration  
@@ -220,7 +220,7 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `duration`  
+ *duration*  
  전환의 기간입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -236,10 +236,10 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `initialValue`  
+ *초기 값*  
  전환의 시작 부분에 변수의 값입니다.  
   
- `initialVelocity`  
+ *initialVelocity*  
  전환의 시작에 변수의 속도입니다.  
   
 ### <a name="return-value"></a>반환 값  

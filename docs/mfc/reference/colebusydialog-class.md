@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b061d2cc31a67c2e6059abeaadb6062b77cacb88
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4af90e9354e7d443cb50acbafaa1468c99c12c85
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374372"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040914"
 ---
 # <a name="colebusydialog-class"></a>COleBusyDialog 클래스
 OLE 서버가 응답하지 않음 또는 서버가 사용 중임 대화 상자에 사용합니다.  
@@ -107,7 +107,7 @@ explicit COleBusyDialog(
  *bNotResponding*  
  경우 **TRUE**, 서버 작업 중 대화 상자 대신 응답 하지 않는 대화 상자를 호출 합니다. 서버 작업 중 대화 상자에서 표현을 보다 약간 다른 응답 하지 않는 대화 상자에서 표현을 이며 취소 단추가 비활성화 됩니다.  
   
- `dwFlags`  
+ *dwFlags*  
  생성 플래그입니다. 0 개 이상의 비트 OR 연산자와 함께 다음 값을 포함할 수 있습니다.  
   
 - **BZ_DISABLECANCELBUTTON** 대화 상자를 호출할 때 "취소" 단추가 사용 하지 않도록 설정 합니다.  
@@ -116,7 +116,7 @@ explicit COleBusyDialog(
   
 - **BZ_DISABLERETRYBUTTON** 대화 상자를 호출할 때 재시도 단추를 사용 하지 않도록 설정 합니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  부모 또는 소유자 창 개체를 가리키는 (형식의 `CWnd`) 대화 상자 개체 속해 있는 합니다. 이 경우 **NULL**, 대화 상자 개체의 부모 창은 주 응용 프로그램 창으로 설정 됩니다.  
   
 ### <a name="remarks"></a>설명  

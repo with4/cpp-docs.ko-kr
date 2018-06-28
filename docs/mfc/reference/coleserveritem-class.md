@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d3165a11aace54ce2062a6321acc7f911fbdc39
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a05553843c4478109c0fe63dd79f08b2116f58c7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378776"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039247"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem 클래스
 OLE 항목에 대한 서버 인터페이스를 제공합니다.  
@@ -119,7 +119,7 @@ class COleServerItem : public CDocItem
 |[COleServerItem::GetDocument](#getdocument)|항목이 포함 된 서버 문서를 반환 합니다.|  
 |[COleServerItem::GetEmbedSourceData](#getembedsourcedata)|가져옵니다는 **CF_EMBEDSOURCE** OLE 항목에 대 한 데이터입니다.|  
 |[COleServerItem::GetItemName](#getitemname)|항목의 이름을 반환합니다. 연결 된 항목에 사용 합니다.|  
-|[COleServerItem::GetLinkSourceData](#getlinksourcedata)|가져옵니다는 `CF_LINKSOURCE` OLE 항목에 대 한 데이터입니다.|  
+|[COleServerItem::GetLinkSourceData](#getlinksourcedata)|가져옵니다는 **CF_LINKSOURCE** OLE 항목에 대 한 데이터입니다.|  
 |[COleServerItem::GetObjectDescriptorData](#getobjectdescriptordata)|가져옵니다는 **CF_OBJECTDESCRIPTOR** OLE 항목에 대 한 데이터입니다.|  
 |[COleServerItem::IsConnected](#isconnected)|항목이 현재 활성 컨테이너에 연결 되어 있는지 여부를 나타냅니다.|  
 |[COleServerItem::IsLinkedItem](#islinkeditem)|항목에 연결 된 OLE 항목을 나타내는지 여부를 나타냅니다.|  
@@ -185,7 +185,7 @@ void AddOtherClipboardData(COleDataSource* pDataSource);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDataSource`  
+ *pDataSource*  
  에 대 한 포인터는 `COleDataSource` 개체에서 데이터를 배치 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -201,10 +201,10 @@ COleServerItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pServerDoc`  
+ *pServerDoc*  
  새 항목을 포함 하는 문서에 대 한 포인터입니다.  
   
- `bAutoDelete`  
+ *bAutoDelete*  
  에 대 한 링크가 해제 될 때 개체를 삭제할 수 있는지 여부를 나타내는 플래그입니다. 이 속성을 설정 **FALSE** 경우는 `COleServerItem` 개체를 삭제 해야 하는 문서의 데이터의 필수적인 부분입니다. 이 속성을 설정 **TRUE** 개체는 프레임 워크에서 삭제할 수 있는 문서의 데이터에서 특정 범위를 식별 하는 데 사용 되는 보조 구조 하는 경우.  
   
 ##  <a name="copytoclipboard"></a>  COleServerItem::CopyToClipboard  
@@ -215,7 +215,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bIncludeLink`  
+ *bIncludeLink*  
  이 속성을 설정 **TRUE** 링크 데이터를 클립보드에 복사할 경우. 이 속성을 설정 **FALSE** 서버 응용 프로그램이 링크를 지원 하지 않는 경우.  
   
 ### <a name="remarks"></a>설명  
@@ -237,23 +237,23 @@ DROPEFFECT DoDragDrop(
  *lpRectItem*  
  클라이언트 영역 상대적인 화면에서 항목의 사각형입니다.  
   
- `ptOffset`  
- 오프셋 `lpItemRect` 끌기 당시에 있던 마우스 위치입니다.  
+ *ptOffset*  
+ 오프셋 *lpItemRect* 끌기 당시에 있던 마우스 위치입니다.  
   
- `bIncludeLink`  
+ *bIncludeLink*  
  이 속성을 설정 **TRUE** 링크 데이터를 클립보드에 복사할 경우. 로 설정 **FALSE** 응용 프로그램 링크를 지원 하지 않는 경우.  
   
- `dwEffects`  
+ *dwEffects*  
  끌기 작업 (복사, 이동 및 링크의 조합)에 끌기 소스를 사용할 수 있는 효과 결정 합니다.  
   
- `lpRectStartDrag`  
+ *lpRectStartDrag*  
  끌기 실제로 시작 위치를 정의 하는 사각형에 대 한 포인터입니다. 자세한 내용은 아래 설명 부분을 참조하십시오.  
   
 ### <a name="return-value"></a>반환 값  
  `DROPEFFECT` 열거형의 값입니다. 이 경우 `DROPEFFECT_MOVE`, 원래 데이터를 제거 해야 합니다.  
   
 ### <a name="remarks"></a>설명  
- 끌어서 놓기 작업이 즉시 시작 되지 않습니다. 마우스 커서가으로 지정 된 사각형을 벗어날 때까지 기다렸다가 `lpRectStartDrag` 지정 된 기간 (밀리초) 조건이 충족 될 때까지 또는 합니다. 경우 `lpRectStartDrag` 은 **NULL**, 하나의 픽셀 마우스 커서를 이동 하는 경우 끌기 시작 되도록 기본 사각형 사용 됩니다.  
+ 끌어서 놓기 작업이 즉시 시작 되지 않습니다. 마우스 커서가으로 지정 된 사각형을 벗어날 때까지 기다렸다가 *lpRectStartDrag* 지정 된 기간 (밀리초) 조건이 충족 될 때까지 또는 합니다. 경우 *lpRectStartDrag* 은 **NULL**, 하나의 픽셀 마우스 커서를 이동 하는 경우 끌기 시작 되도록 기본 사각형 사용 됩니다.  
   
  레지스트리 키 설정 지연 시간 지정 됩니다. 호출 하 여 지연 시간을 변경할 수 있습니다 [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) 또는 [cwinapp:: Writeprofileint](../../mfc/reference/cwinapp-class.md#writeprofileint)합니다. 지연 시간을 지정 하지 않으면 기본값은 200 밀리초 사용 됩니다. 끌어서 지연 시간을 다음과 같이 저장 됩니다.  
   
@@ -277,20 +277,20 @@ void GetClipboardData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDataSource`  
+ *pDataSource*  
  에 대 한 포인터는 `COleDataSource` 지원 되는 모든 형식에서 OLE 항목의 데이터를 받게 될 개체입니다.  
   
- `bIncludeLink`  
+ *bIncludeLink*  
  **True 이면** 링크 데이터를 클립보드에 복사할 경우. **FALSE** 서버 응용 프로그램이 링크를 지원 하지 않는 경우.  
   
- `lpOffset`  
+ *lpOffset*  
  개체의 원점부터 마우스 커서를 픽셀 단위로 오프셋입니다.  
   
- `lpSize`  
+ *lpSize*  
  픽셀 단위로 개체의 크기입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 함수 호출의 [GetEmbedSourceData](#getembedsourcedata) OLE 항목 및 호출에 대 한 원시 데이터를 가져오려는 멤버 함수는 [AddOtherClipboardData](#addotherclipboarddata) 표시 형식 및 모든 멤버 함수 지원 되는 변환 형식입니다. 경우 `bIncludeLink` 은 **TRUE**,이 함수는 호출 또한 [GetLinkSourceData](#getlinksourcedata) 항목에 대 한 연결 데이터를 가져오려는 합니다.  
+ 이 함수 호출의 [GetEmbedSourceData](#getembedsourcedata) OLE 항목 및 호출에 대 한 원시 데이터를 가져오려는 멤버 함수는 [AddOtherClipboardData](#addotherclipboarddata) 표시 형식 및 모든 멤버 함수 지원 되는 변환 형식입니다. 경우 *bIncludeLink* 은 **TRUE**,이 함수는 호출 또한 [GetLinkSourceData](#getlinksourcedata) 항목에 대 한 연결 데이터를 가져오려는 합니다.  
   
  형식에 배치 하려는 경우이 함수를 재정의 한 `COleDataSource` 앞 이나 뒤에서 제공 하는 해당 형식의 개체 `CopyToClipboard`합니다.  
   
@@ -328,7 +328,7 @@ void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpStgMedium`  
+ *lpStgMedium*  
  에 대 한 포인터는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 를 받을 구조는 **CF_EMBEDSOURCE** OLE 항목에 대 한 데이터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -359,7 +359,7 @@ BOOL GetLinkSourceData(LPSTGMEDIUM lpStgMedium);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpStgMedium`  
+ *lpStgMedium*  
  에 대 한 포인터는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 를 받을 구조는 `CF_LINKSOURCE` OLE 항목에 대 한 데이터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -383,17 +383,17 @@ void GetObjectDescriptorData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpOffset`  
+ *lpOffset*  
  OLE 항목의 왼쪽 위 모서리에서 마우스 클릭의 오프셋입니다. 수 **NULL**합니다.  
   
- `lpSize`  
+ *lpSize*  
  OLE 항목의 크기입니다. 수 **NULL**합니다.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  에 대 한 포인터는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 를 받을 구조는 **CF_OBJECTDESCRIPTOR** OLE 항목에 대 한 데이터입니다.  
   
 ### <a name="remarks"></a>설명  
- 정보에 복사 되는 **STGMEDIUM** 가리키는 구조 `lpStgMedium`합니다. 이 형식 붙여넣기 대화 상자에 필요한 정보를 포함 합니다.  
+ 정보에 복사 되는 **STGMEDIUM** 가리키는 구조 *lpStgMedium*합니다. 이 형식 붙여넣기 대화 상자에 필요한 정보를 포함 합니다.  
   
  자세한 내용은 참조 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) Windows sdk에서입니다.  
   
@@ -443,7 +443,7 @@ void NotifyChanged(DVASPECT nDrawAspect = DVASPECT_CONTENT);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nDrawAspect`  
+ *nDrawAspect*  
  값은 `DVASPECT` 변경 된 OLE 항목의 어떤 부분을 나타내는 열거형입니다. 이 매개 변수는 다음 값 중 하나를 가질 수 있습니다.  
   
 - `DVASPECT_CONTENT` 항목은 해당 컨테이너 내에 포함 된 개체로 표시 될 수 하는 방식으로 표시 됩니다.  
@@ -465,7 +465,7 @@ virtual void OnDoVerb(LONG iVerb);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `iVerb`  
+ *iVerb*  
  실행 하는 동사를 지정 합니다. 다음 중 하나가 수 있습니다.  
   
 |값|의미|기호|  
@@ -495,10 +495,10 @@ virtual BOOL OnDraw(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  에 대 한 포인터는 [CDC](../../mfc/reference/cdc-class.md) 개체 항목을 그리는입니다. 디스플레이 컨텍스트는 자동으로 연결 특성 디스플레이 컨텍스트 되므로 특성 함수를 호출할 수 있지만 이렇게 하면 지금 하 게 만드는 메타 파일 장치 전용입니다.  
   
- `rSize`  
+ *rSize*  
  크기에 **HIMETRIC** 를 그릴 메타 파일의 단위입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -518,10 +518,10 @@ virtual BOOL OnDrawEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  에 대 한 포인터는 [CDC](../../mfc/reference/cdc-class.md) 개체 항목을 그리는입니다. DC는 자동으로 연결 특성 DC에 되므로 특성 함수를 호출할 수 있지만 이렇게 하면 지금 하 게 만드는 메타 파일 장치 전용입니다.  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  `DVASPECT` 열거형의 값입니다. 이 매개 변수는 다음 값 중 하나를 가질 수 있습니다.  
   
 - `DVASPECT_CONTENT` 항목은 해당 컨테이너 내에 포함 된 개체로 표시 될 수 하는 방식으로 표시 됩니다.  
@@ -554,13 +554,13 @@ virtual COleDataSource* OnGetClipboardData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bIncludeLink`  
+ *bIncludeLink*  
  이 속성을 설정 **TRUE** 링크 데이터를 클립보드에 복사할 경우. 이 속성을 설정 **FALSE** 서버 응용 프로그램이 링크를 지원 하지 않는 경우.  
   
- `lpOffset`  
+ *lpOffset*  
  픽셀 단위로 개체의 원점부터 마우스 커서의 오프셋입니다.  
   
- `lpSize`  
+ *lpSize*  
  픽셀 단위로 개체의 크기입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -579,7 +579,7 @@ virtual BOOL OnGetExtent(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nDrawAspect`  
+ *nDrawAspect*  
  검색할 수 있는 경계는 해당 OLE 항목의 모양을 지정 합니다. 이 매개 변수는 다음 값 중 하나를 가질 수 있습니다.  
   
 - `DVASPECT_CONTENT` 항목은 해당 컨테이너 내에 포함 된 개체로 표시 될 수 하는 방식으로 표시 됩니다.  
@@ -590,7 +590,7 @@ virtual BOOL OnGetExtent(
   
 - `DVASPECT_DOCPRINT` 항목 파일 메뉴에서 인쇄 명령을 사용 하 여 인쇄할 때 처럼 표시 됩니다.  
   
- `rSize`  
+ *rSize*  
  에 대 한 참조는 `CSize` OLE 항목의 크기를 받게 될 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -610,7 +610,7 @@ virtual void OnHide();
  기본 호출 **COleServerDoc::OnShowDocument (FALSE)** 합니다. 또한 함수 OLE 항목은 숨겨진 컨테이너 알립니다. OLE 항목을 숨길 때 특수 한 처리를 수행 하려는 경우이 함수를 재정의 합니다.  
   
 ##  <a name="oninitfromdata"></a>  COleServerItem::OnInitFromData  
- 내용을 사용 하 여 OLE 항목을 초기화 하기 위해 프레임 워크에서 호출 `pDataObject`합니다.  
+ 내용을 사용 하 여 OLE 항목을 초기화 하기 위해 프레임 워크에서 호출 *pDataObject*합니다.  
   
 ```  
 virtual BOOL OnInitFromData(
@@ -619,17 +619,17 @@ virtual BOOL OnInitFromData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDataObject`  
+ *pDataObject*  
  OLE 항목을 초기화 하기 위한 다양 한 형식의 데이터를 포함 하는 OLE 데이터 개체에 대 한 포인터입니다.  
   
- `bCreation`  
+ *bCreation*  
  **True 이면** 컨테이너 응용 프로그램에서 새롭게 작성 되 고 OLE 항목을 초기화 하는 함수가 호출 됩니다. **FALSE** 이미 기존 OLE 항목의 내용을 대체 하는 함수가 호출 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `bCreation` 은 **TRUE**, 컨테이너 현재 선택을 기반으로 새 개체 삽입을 구현 하는 경우이 함수를 호출 합니다. 선택한 데이터는 새 OLE 항목을 만들 때 사용 됩니다. 예를 들어 때 스프레드시트 프로그램에서 셀 범위를 선택 하 고 다음 삽입할 새 개체를 사용 하 여 차트를 만드는 값에 따라 선택한 범위에 있습니다. 기본 구현은 아무 작업도 수행하지 않습니다. 제공 하는 것에서 허용 되는 형식이 선택 하려면이 함수를 재정의 `pDataObject` 제공 되는 데이터에 따라 OLE 항목을 초기화 합니다. 고급 재정의할 수 있습니다.  
+ 경우 *bCreation* 은 **TRUE**, 컨테이너 현재 선택을 기반으로 새 개체 삽입을 구현 하는 경우이 함수를 호출 합니다. 선택한 데이터는 새 OLE 항목을 만들 때 사용 됩니다. 예를 들어 때 스프레드시트 프로그램에서 셀 범위를 선택 하 고 다음 삽입할 새 개체를 사용 하 여 차트를 만드는 값에 따라 선택한 범위에 있습니다. 기본 구현은 아무 작업도 수행하지 않습니다. 제공 하는 것에서 허용 되는 형식이 선택 하려면이 함수를 재정의 *pDataObject* 제공 되는 데이터에 따라 OLE 항목을 초기화 합니다. 고급 재정의할 수 있습니다.  
   
  자세한 내용은 참조 [IOleObject::InitFromData](http://msdn.microsoft.com/library/windows/desktop/ms688510) Windows sdk에서입니다.  
   
@@ -670,10 +670,10 @@ virtual BOOL OnRenderData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 정보가 요청 된 형식을 지정 하는 구조입니다.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  가리키는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 반환 될 데이터는 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -682,7 +682,7 @@ virtual BOOL OnRenderData(
 ### <a name="remarks"></a>설명  
  지정 된 형식에 이전에 배치 이란는 `COleDataSource` 를 사용 하 여 개체는 [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) 또는 [DelayRenderFileData](../../mfc/reference/coledatasource-class.md#delayrenderfiledata) 지연 된 렌더링 하기 위한 멤버 함수입니다. 이 함수의 기본 구현을 호출 [OnRenderFileData](#onrenderfiledata) 또는 [OnRenderGlobalData](#onrenderglobaldata)각각 제공 되는 저장소 미디어로 파일 또는 메모리 경우. 이러한 형식 중 아무것도 지정 하지 기본 구현에서는 0을 반환 하 고 아무 작업도 수행 합니다.  
   
- 경우 `lpStgMedium` ->  *tymed* 은 **TYMED_NULL**, **STGMEDIUM** 할당는 및에 지정 된 대로 채워진 *lpFormatEtc-> tymed*합니다. 그렇지 않은 경우 **TYMED_NULL**, **STGMEDIUM** 데이터와 함께에서 채워야 합니다.  
+ 경우 *lpStgMedium*-> *tymed* 은 **TYMED_NULL**, **STGMEDIUM** 해야 할당 되 고 에지정된대로채워져야합니다.*lpFormatEtc tymed->* 합니다. 그렇지 않은 경우 **TYMED_NULL**, **STGMEDIUM** 데이터와 함께에서 채워야 합니다.  
   
  고급 재정의할 수 있습니다. 요청 된 형식 및 중간 규모의 데이터를 제공 하려면이 함수를 재정의 합니다. 데이터에 따라 대신이 함수의 다른 버전 중 하나를 재정의 하는 것이 좋습니다. 데이터가 작고 크기가 고정 되어 있으면 재정의 `OnRenderGlobalData`합니다. 데이터 파일에는 가변 크기의 경우 재정의 `OnRenderFileData`합니다.  
   
@@ -698,10 +698,10 @@ virtual BOOL OnRenderFileData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 정보가 요청 된 형식을 지정 하는 구조입니다.  
   
- `pFile`  
+ *pFile*  
  가리키는 `CFile` 데이터 렌더링 해야 하는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -724,10 +724,10 @@ virtual BOOL OnRenderGlobalData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 정보가 요청 된 형식을 지정 하는 구조입니다.  
   
- `phGlobal`  
+ *phGlobal*  
  반환 될 데이터는 전역 메모리에 대 한 핸들을 가리킵니다. 이 매개 변수 수 없는 메모리를 할당할 **NULL**합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -736,7 +736,7 @@ virtual BOOL OnRenderGlobalData(
 ### <a name="remarks"></a>설명  
  지정 된 형식에 이전에 배치 이란는 `COleDataSource` 를 사용 하 여 개체는 [DelayRenderData](../../mfc/reference/coledatasource-class.md#delayrenderdata) 지연 된 렌더링 하기 위한 멤버 함수입니다. 이 함수의 기본 구현은 단순히 반환 **FALSE**합니다.  
   
- 경우 `phGlobal` 은 **NULL**, 다음 새 `HGLOBAL` 할당 되 고 반환 해야 `phGlobal`합니다. 그렇지 않은 경우는 `HGLOBAL` 에 지정 된 `phGlobal` 데이터로 채워야 합니다. 데이터의 양을에 배치 된 `HGLOBAL` 메모리 블록의 현재 크기를 넘지 않아야 합니다. 또한, 더 큰 크기로 블록 다시 할당할 수 없습니다.  
+ 경우 *phGlobal* 은 **NULL**, 다음 새 `HGLOBAL` 할당 되 고 반환 해야 *phGlobal*합니다. 그렇지 않은 경우는 `HGLOBAL` 에 지정 된 *phGlobal* 데이터로 채워야 합니다. 데이터의 양을에 배치 된 `HGLOBAL` 메모리 블록의 현재 크기를 넘지 않아야 합니다. 또한, 더 큰 크기로 블록 다시 할당할 수 없습니다.  
   
  고급 재정의할 수 있습니다. 요청 된 형식 및 중간 규모의 데이터를 제공 하려면이 함수를 재정의 합니다. 데이터에 따라 대신이 함수의 다른 버전 중 하나를 재정의 하는 것이 좋습니다. 여러 저장소 미디어를 처리 하려는 경우 재정의 [OnRenderData](#onrenderdata)합니다. 데이터 파일에는 가변 크기의 경우 재정의 [OnRenderFileData](#onrenderfiledata)합니다.  
   
@@ -750,7 +750,7 @@ virtual BOOL OnSetColorScheme(const LOGPALETTE* lpLogPalette);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpLogPalette`  
+ *lpLogPalette*  
  Windows에 대 한 포인터 [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -772,14 +772,14 @@ virtual BOOL OnSetData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  에 대 한 포인터는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 구조 데이터의 형식을 지정 합니다.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  에 대 한 포인터는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 구조에서 멤버의 데이터입니다.  
   
- `bRelease`  
- 함수 호출을 완료 한 후 저장 미디어의 소유권을 가진 사용자를 나타냅니다. 호출자에 게 저장 매체를 대신 하 여 할당 된 리소스를 해제 하는 데 담당자 결정 합니다. 호출자에 게가 작업을 설정 하 여 수행 `bRelease`합니다. 경우 `bRelease` 가 0이 아닌 경우 서버 항목 사용을 마칠 때 미디어 해제 소유권을 갖습니다. 때 `bRelease` 은 0, 호출자에 게 소유권을 보유 하 고 서버 항목은 호출 기간 동안에만 저장 매체를 사용할 수 있습니다.  
+ *bRelease*  
+ 함수 호출을 완료 한 후 저장 미디어의 소유권을 가진 사용자를 나타냅니다. 호출자에 게 저장 매체를 대신 하 여 할당 된 리소스를 해제 하는 데 담당자 결정 합니다. 호출자에 게가 작업을 설정 하 여 수행 *bRelease*합니다. 경우 *bRelease* 가 0이 아닌 경우 서버 항목 사용을 마칠 때 미디어 해제 소유권을 갖습니다. 때 *bRelease* 은 0, 호출자에 게 소유권을 보유 하 고 서버 항목은 호출 기간 동안에만 저장 매체를 사용할 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
@@ -801,7 +801,7 @@ virtual BOOL OnSetExtent(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nDrawAspect`  
+ *nDrawAspect*  
  해당 범위가 지정 된 OLE 항목의 모양을 지정 합니다. 이 매개 변수는 다음 값 중 하나를 가질 수 있습니다.  
   
 - `DVASPECT_CONTENT` 항목은 해당 컨테이너 내에 포함 된 개체로 표시 될 수 하는 방식으로 표시 됩니다.  
@@ -812,14 +812,14 @@ virtual BOOL OnSetExtent(
   
 - `DVASPECT_DOCPRINT` 항목 파일 메뉴에서 인쇄 명령을 사용 하 여 인쇄할 때 처럼 표시 됩니다.  
   
- `size`  
+ *size*  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) OLE 항목의 새 크기를 지정 하는 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- Microsoft Foundation Class 라이브러리 사용 하는 컨테이너 응용 프로그램을 작성 하는 경우이 함수는 호출 될 때는 [SetExtent](../../mfc/reference/coleclientitem-class.md#setextent) 멤버 함수는 해당 `COleClientItem` 개체를 호출 합니다. 기본 구현에서는 설정 된 [m_sizeExtent](#m_sizeextent) 멤버 지정된 된 크기를 경우 `nDrawAspect` 은 `DVASPECT_CONTENT`; 그렇지 않으면 0을 반환 합니다. 항목의 크기를 변경 하면 특수 한 처리를 수행 하려면이 함수를 재정의 합니다.  
+ Microsoft Foundation Class 라이브러리 사용 하는 컨테이너 응용 프로그램을 작성 하는 경우이 함수는 호출 될 때는 [SetExtent](../../mfc/reference/coleclientitem-class.md#setextent) 멤버 함수는 해당 `COleClientItem` 개체를 호출 합니다. 기본 구현에서는 설정 된 [m_sizeExtent](#m_sizeextent) 멤버 지정된 된 크기를 경우 *nDrawAspect* 은 `DVASPECT_CONTENT`; 그렇지 않으면 0을 반환 합니다. 항목의 크기를 변경 하면 특수 한 처리를 수행 하려면이 함수를 재정의 합니다.  
   
 ##  <a name="onshow"></a>  COleServerItem::OnShow  
  원위치에서 OLE 항목을 표시 하는 서버 응용 프로그램에 지시 하기 위해 프레임 워크에서 호출 됩니다.  
@@ -845,16 +845,16 @@ virtual void OnUpdate(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pSender`  
+ *pSender*  
  문서를 수정 하는 항목에 대 한 포인터입니다. 수 **NULL**합니다.  
   
- `lHint`  
+ *lHint*  
  수정에 대 한 정보를 포함합니다.  
   
- `pHint`  
+ *pHint*  
  수정에 대 한 정보를 저장 하는 개체에 대 한 포인터입니다.  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  `DVASPECT` 열거형의 값입니다. 이 매개 변수는 다음 값 중 하나를 가질 수 있습니다.  
   
 - `DVASPECT_CONTENT` 항목은 해당 컨테이너 내에 포함 된 개체로 표시 될 수 하는 방식으로 표시 됩니다.  
@@ -886,7 +886,7 @@ void SetItemName(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszItemName`  
+ *lpszItemName*  
  항목의 새 이름에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  

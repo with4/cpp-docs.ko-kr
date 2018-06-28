@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53988248ac183fd551d100ede29648bcecd067f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 68d78e221b9bcdbffbfc80ba26c6106498c4fa41
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372916"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040989"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget 클래스
 탭 컨트롤 및 OLE 라이브러리 사이의 통신 메커니즘을 제공합니다.  
@@ -67,7 +67,7 @@ class CMFCTabDropTarget : public COleDropTarget
   
  `CMFCTabDropTarget` 클래스 활성 끌기 작업이 발생할 때 커서 아래에 있는 탭 하 여 기본 클래스를 확장 합니다. 끌어서 놓기 작업에 대 한 자세한 내용은 참조 [끌어서 놓기 (OLE)](../../mfc/drag-and-drop-ole.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCTabDropTarget` 개체를 생성하고 해당 `Register` 메서드를 사용하는 방법을 보여 줍니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#39](../../mfc/reference/codesnippet/cpp/cmfctabdroptarget-class_1.cpp)]  
@@ -100,13 +100,13 @@ virtual DROPEFFECT OnDragEnter(
 |||  
 |-|-|  
 |매개 변수|설명|  
-|[in] `pWnd`|사용되지 않습니다.|  
-|[in] `pDataObject`|사용자가을 끌 하는 개체에 대 한 포인터입니다.|  
-|[in] `dwKeyState`|보조 키의 상태가 포함 됩니다. 이 개수에 관계 없이 다음의 조합을: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, 및 `MK_RBUTTON`합니다.|  
-|[in] `point`|클라이언트 좌표에서 커서의 위치입니다.|  
+|[in] *pWnd*|사용되지 않습니다.|  
+|[in] *pDataObject*|사용자가을 끌 하는 개체에 대 한 포인터입니다.|  
+|[in] *dwKeyState*|보조 키의 상태가 포함 됩니다. 이 개수에 관계 없이 다음의 조합을: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, 및 `MK_RBUTTON`합니다.|  
+|[in] *지점*|클라이언트 좌표에서 커서의 위치입니다.|  
   
 ### <a name="return-value"></a>반환 값  
- 효과 삭제 하 여 지정 된 위치에서 발생 한 경우 결과 `point`합니다. 다음 중 하나 이상을 수 있습니다.  
+ 효과 삭제 하 여 지정 된 위치에서 발생 한 경우 결과 *가리킨*합니다. 다음 중 하나 이상을 수 있습니다.  
   
 - `DROPEFFECT_NONE`  
   
@@ -135,7 +135,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 |||  
 |-|-|  
 |매개 변수|설명|  
-|[in] `pWnd`|사용되지 않습니다.|  
+|[in] *pWnd*|사용되지 않습니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드를 호출는 `CMFCBaseTabCtrl::OnDragLeave` 메서드 끌기 작업을 수행 하도록 합니다.  
@@ -156,13 +156,13 @@ virtual DROPEFFECT OnDragOver(
 |||  
 |-|-|  
 |매개 변수|설명|  
-|[in] `pWnd`|사용되지 않습니다.|  
-|[in] `pDataObject`|사용자가을 끌 하는 개체에 대 한 포인터입니다.|  
-|[in] `dwKeyState`|보조 키의 상태가 포함 됩니다. 이 개수에 관계 없이 다음의 조합을: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, 및 `MK_RBUTTON`합니다.|  
-|[in] `point`|클라이언트 좌표에서 마우스 포인터의 위치입니다.|  
+|[in] *pWnd*|사용되지 않습니다.|  
+|[in] *pDataObject*|사용자가을 끌 하는 개체에 대 한 포인터입니다.|  
+|[in] *dwKeyState*|보조 키의 상태가 포함 됩니다. 이 개수에 관계 없이 다음의 조합을: `MK_CONTROL`, `MK_SHIFT`, `MK_ALT`, `MK_LBUTTON`, `MK_MBUTTON`, 및 `MK_RBUTTON`합니다.|  
+|[in] *지점*|클라이언트 좌표에서 마우스 포인터의 위치입니다.|  
   
 ### <a name="return-value"></a>반환 값  
- 효과 삭제 하 여 지정 된 위치에서 발생 한 경우 결과 `point`합니다. 다음 중 하나 이상을 수 있습니다.  
+ 효과 삭제 하 여 지정 된 위치에서 발생 한 경우 결과 *가리킨*합니다. 다음 중 하나 이상을 수 있습니다.  
   
 - `DROPEFFECT_NONE`  
   
@@ -196,11 +196,11 @@ virtual DROPEFFECT OnDropEx(
 |||  
 |-|-|  
 |매개 변수|설명|  
-|[in] `pWnd`|사용되지 않습니다.|  
-|[in] `pDataObject`|사용자가을 끌 하는 개체에 대 한 포인터입니다.|  
-|[in] `dropEffect`|기본 놓기 작업 합니다.|  
-|[in] `dropList`|사용되지 않습니다.|  
-|[in] `point`|클라이언트 좌표에서 마우스 포인터의 위치입니다.|  
+|[in] *pWnd*|사용되지 않습니다.|  
+|[in] *pDataObject*|사용자가을 끌 하는 개체에 대 한 포인터입니다.|  
+|[in] *dropEffect*|기본 놓기 작업 합니다.|  
+|[in] *드롭다운 목록*|사용되지 않습니다.|  
+|[in] *지점*|클라이언트 좌표에서 마우스 포인터의 위치입니다.|  
   
 ### <a name="return-value"></a>반환 값  
  결과 놓기 효과입니다. 다음 중 하나 이상을 수 있습니다.  
@@ -216,7 +216,7 @@ virtual DROPEFFECT OnDropEx(
 - `DROPEFFECT_SCROLL`  
   
 ### <a name="remarks"></a>설명  
- 이 메서드를 호출 `CMFCBaseTabCtrl::OnDrop` 사용자 지정 모드의 도구 모음 프레임 워크는 클립보드 데이터 형식을 사용할 수 있는 경우. 경우에 대 한 호출 `CMFCBaseTabCtrl::OnDrop` 반환이이 메서드는 0이 아닌 값을 반환 하 여 지정 된 기본 놓기 효과 `dropEffect`합니다. 그렇지 않으면이 메서드가 반환 `DROPEFFECT_NONE`합니다. 끌어서 놓기 작업 결과 대 한 자세한 내용은 참조 [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex)합니다.  
+ 이 메서드를 호출 `CMFCBaseTabCtrl::OnDrop` 사용자 지정 모드의 도구 모음 프레임 워크는 클립보드 데이터 형식을 사용할 수 있는 경우. 경우에 대 한 호출 `CMFCBaseTabCtrl::OnDrop` 반환이이 메서드는 0이 아닌 값을 반환 하 여 지정 된 기본 놓기 효과 *dropEffect*합니다. 그렇지 않으면이 메서드가 반환 `DROPEFFECT_NONE`합니다. 끌어서 놓기 작업 결과 대 한 자세한 내용은 참조 [COleDropTarget::OnDropEx](../../mfc/reference/coledroptarget-class.md#ondropex)합니다.  
   
  사용자 지정 모드에 대 한 자세한 내용은 참조 [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode)합니다. 클립보드 데이터 형식에 대 한 자세한 내용은 참조 [COleDataObject::IsDataAvailable](../../mfc/reference/coledataobject-class.md#isdataavailable)합니다.  
   
@@ -232,7 +232,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 |||  
 |-|-|  
 |매개 변수|설명|  
-|[in] `pOwner`|놓기 대상으로 등록 하는 탭 컨트롤입니다.|  
+|[in] *pOwner*|놓기 대상으로 등록 하는 탭 컨트롤입니다.|  
   
 ### <a name="return-value"></a>반환 값  
  등록에 성공 하면 0이 아닌 그렇지 않으면 0입니다.  

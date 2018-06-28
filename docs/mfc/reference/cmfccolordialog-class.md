@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21114a3c04f96f2867f5440d47e856958060233e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6b2b3c2ff247014a692a78084f42c208b4497023
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367918"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040235"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog 클래스
 `CMFCColorDialog` 색 선택 대화 상자 클래스를 나타냅니다.  
@@ -72,7 +72,7 @@ class CMFCColorDialog : public CDialogEx
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |`m_bIsMyPalette`|`TRUE` 색 선택 대화 상자는 자체 색상표를 사용 하는 경우 또는 `FALSE` 대화 상자에 지정 된 색상표를 사용 하는 경우는 `CMFCColorDialog` 생성자입니다.|  
 |`m_bPickerMode`|`TRUE` 사용자 선택 대화 상자;에서 색을 선택 하는 동안 그렇지 않으면 `FALSE`합니다.|  
@@ -105,7 +105,7 @@ class CMFCColorDialog : public CDialogEx
   
  [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 색 대화 상자에서 다양 한 메서드를 사용 하 여 구성 하는 방법의 `CMFCColorDialog` 클래스입니다. 이 예제에서는 현재 개체와의 대화 상자에서 새 색을 설정 하는 방법과 색 대화의 두 속성 페이지에서 선택한 색의 빨강, 녹색 및 파랑 구성 요소를 설정 하는 방법을 보여 줍니다. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]  
@@ -125,16 +125,16 @@ CMFCColorDialog(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `clrInit`  
+ [in] *clrInit*  
  기본 색 선택 합니다. 지정은 값이 없으면 기본값이 RGB(0,0,0) (검정)입니다.  
   
- [in] `dwFlags`  
+ [in] *dwFlags*  
  (예약 됨.)  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  대화 상자의 부모 또는 소유자 창에 대 한 포인터입니다.  
   
- [in] `hPal`  
+ [in] *hPal*  
  색상표에 대 한 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -182,7 +182,7 @@ void SetCurrentColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `rgb`  
+ [in] *rgb*  
  RGB 색상 값  
   
 ### <a name="remarks"></a>설명  
@@ -195,7 +195,7 @@ void SetNewColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `rgb`  
+ [in] *rgb*  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) RGB 색을 지정 하는 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -211,13 +211,13 @@ void SetPageOne(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `R`  
+ [in] *R*  
  RGB 값의 빨간색 구성 요소를 지정합니다.  
   
- [in] `G`  
+ [in] *G*  
  RGB 값의 녹색 구성 요소를 지정합니다.  
   
- [in] `B`  
+ [in] *B*  
  RGB 값의 파란색 구성 요소를 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -233,13 +233,13 @@ void SetPageTwo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `R`  
+ [in] *R*  
  RGB 값의 빨간색 구성 요소를 지정합니다.  
   
- [in] `G`  
+ [in] *G*  
  RGB 값의 녹색 구성 요소를 지정합니다.  
   
- [in] `B`  
+ [in] *B*  
  RGB 값의 파란색 구성 요소를 지정합니다.  
   
 ### <a name="remarks"></a>설명  

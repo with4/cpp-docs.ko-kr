@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71738511079427a60c9296bc75f9c1e79416d667
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e1226f99d01d933e1754d301756aee6a12620e6a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367158"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040144"
 ---
 # <a name="chtmleditctrl-class"></a>CHtmlEditCtrl 클래스
 MFC 창에서 WebBrowser ActiveX 컨트롤의 기능을 제공합니다.  
@@ -95,22 +95,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszWindowName`  
+ *lpszWindowName*  
  이 매개 변수는 사용되지 않습니다.  
   
- `dwStyle`  
+ *dwStyle*  
  이 매개 변수는 사용되지 않습니다.  
   
- `rect`  
+ *rect*  
  컨트롤의 크기와 위치를 지정합니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  컨트롤의 부모 창을 지정합니다. 않아야 **NULL**합니다.  
   
- `nID`  
+ *nID*  
  컨트롤의 ID를 지정 합니다.  
   
- `pContext`  
+ *pContext*  
  이 매개 변수는 사용되지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -124,7 +124,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ppDocument`  
+ *ppDocument*  
  문서 인터페이스입니다.  
   
 ##  <a name="getstartdocument"></a>  CHtmlEditCtrl::GetStartDocument  

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3995734918f50ed01fe6df7fb034c3ea37b630cd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 41165f177671379eecbc700df016cd19aea69962
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377916"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040209"
 ---
 # <a name="cobarray-class"></a>CObArray 클래스
 `CObject` 포인터 배열을 지원합니다.  
@@ -113,7 +113,7 @@ class CObArray : public CObject
   
  C 배열에 대 한 액세스 시간과 마찬가지로 `CObArray` 인덱싱된 요소는 상수와 배열 크기와 무관 합니다.  
   
- `CObArray`는 serialization 및 요소 덤프를 지원하기 위해 `IMPLEMENT_SERIAL` 매크로를 통합합니다. 배열 하는 경우 `CObject` 포인터 오버 로드 된 삽입 연산자 또는으로 보관 파일로 저장 됩니다는 `Serialize` 멤버 함수를 각각 `CObject` 요소 배열 인덱스와 함께 직렬화 차례로, 합니다.  
+ `CObArray` serialization 및 요소 덤프를 지원 하기 위해 IMPLEMENT_SERIAL 매크로 통합 합니다. 배열 하는 경우 `CObject` 포인터 오버 로드 된 삽입 연산자 또는으로 보관 파일로 저장 됩니다는 `Serialize` 멤버 함수를 각각 `CObject` 요소 배열 인덱스와 함께 직렬화 차례로, 합니다.  
   
  개인의 덤프 해야 할 경우 `CObject` 배열의 요소 깊이를 설정 해야 합니다는 `CDumpContext` 개체 1 이상입니다.  
   
@@ -125,7 +125,7 @@ class CObArray : public CObject
  배열 클래스를 파생 목록 파생 하는 것과 비슷합니다. 에 특수 한 용도의 목록 클래스의 파생에 대 한 내용은 문서 참조 [컬렉션](../../mfc/collections.md)합니다.  
   
 > [!NOTE]
->  사용 해야 합니다는 `IMPLEMENT_SERIAL` 배열을 serialize 하려는 경우 파생 된 클래스의 구현에는 매크로입니다.  
+>  배열을 serialize 하려는 경우 파생 된 클래스의 구현에서 IMPLEMENT_SERIAL 매크로 사용 해야 합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -143,14 +143,14 @@ INT_PTR Add(CObject* newElement);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `newElement`  
+ *newElement*  
  `CObject` 이 배열에 추가할 수에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
  추가 된 요소의 인덱스입니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 [SetSize](#setsize) 함께 사용 된는 `nGrowBy` 추가 메모리를 1 보다 큰 값을 할당할 수 있습니다. 그러나 상한만 1 씩 증가 합니다.  
+ 경우 [SetSize](#setsize) 함께 사용 된는 *nGrowBy* 추가 메모리를 1 보다 큰 값을 할당할 수 있습니다. 그러나 상한만 1 씩 증가 합니다.  
   
  다음 표에서 함수를 보여 줍니다 다른 멤버와 유사한 `CObArray::Add`합니다.  
   
@@ -163,7 +163,7 @@ INT_PTR Add(CObject* newElement);
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR 추가 (UINT** `newElement` **);**<br /><br /> **throw (CMemoryException\* );**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR 추가 (WORD** `newElement` **);**<br /><br /> **throw (CMemoryException\* );**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#75](../../mfc/codesnippet/cpp/cobarray-class_1.cpp)]  
@@ -193,7 +193,7 @@ INT_PTR Append(const CObArray& src);
 ### <a name="remarks"></a>설명  
  배열이 동일한 형식 이어야 합니다.  
   
- 필요한 경우 **Append** 배열에 추가 된 요소를 수용 하기 위해 추가 메모리를 할당할 수 있습니다.  
+ 필요한 경우 `Append` 배열에 추가 된 요소를 수용 하기 위해 추가 메모리를 할당할 수 있습니다.  
   
  다음 표에서 함수를 보여 줍니다 다른 멤버와 유사한 `CObArray::Append`합니다.  
   
@@ -206,7 +206,7 @@ INT_PTR Append(const CObArray& src);
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR 추가 (const CUIntArray &** *src* **);**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR 추가 (const CWordArray &** *src* **);**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#76](../../mfc/codesnippet/cpp/cobarray-class_2.cpp)]  
@@ -223,7 +223,7 @@ void Copy(const CObArray& src);
  요소를 배열에 복사의 원본입니다.  
   
 ### <a name="remarks"></a>설명  
- **복사** 메모리를 해제 하지는 않습니다; 하지만 필요한 경우 **복사** 배열에 복사 된 요소를 수용 하기 위해 추가 메모리를 할당할 수 있습니다.  
+ `Copy` 메모리를 해제 하지는 않습니다. 그러나 필요한 경우, `Copy` 배열에 복사 된 요소를 수용 하기 위해 추가 메모리를 할당할 수 있습니다.  
   
  다음 표에서 함수를 보여 줍니다 다른 멤버와 유사한 `CObArray::Copy`합니다.  
   
@@ -236,7 +236,7 @@ void Copy(const CObArray& src);
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**복사 void (const CUIntArray &** *src* **);**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**복사 void (const CWordArray &** *src* **);**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#77](../../mfc/codesnippet/cpp/cobarray-class_3.cpp)]  
@@ -262,7 +262,7 @@ CObArray();
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**CUIntArray ();**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**CWordArray ();**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#78](../../mfc/codesnippet/cpp/cobarray-class_4.cpp)]  
   
 ##  <a name="elementat"></a>  CObArray::ElementAt  
@@ -273,7 +273,7 @@ CObject*& ElementAt(INT_PTR nIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  보다 크거나 0에 있는 정수 인덱스 및에서 반환 된 값 보다 작거나 같은 `GetUpperBound`합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -293,7 +293,7 @@ CObject*& ElementAt(INT_PTR nIndex);
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT & ElementAt (INT_PTR** `nIndex` **);**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD 및 ElementAt (INT_PTR** `nIndex` **);**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CObArray::GetSize](#getsize)합니다.  
   
 ##  <a name="freeextra"></a>  CObArray::FreeExtra  
@@ -317,7 +317,7 @@ void FreeExtra();
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void FreeExtra ();**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**void FreeExtra ();**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CObArray::GetData](#getdata)합니다.  
   
 ##  <a name="getat"></a>  CObArray::GetAt  
@@ -328,7 +328,7 @@ CObject* GetAt(INT_PTR nIndex) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  보다 크거나 0에 있는 정수 인덱스 및에서 반환 된 값 보다 작거나 같은 `GetUpperBound`합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -350,7 +350,7 @@ CObject* GetAt(INT_PTR nIndex) const;
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT GetAt (INT_PTR** `nIndex` **) const;**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD GetAt (INT_PTR** `nIndex` **) const;**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#79](../../mfc/codesnippet/cpp/cobarray-class_5.cpp)]  
@@ -379,7 +379,7 @@ INT_PTR GetCount() const;
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR GetCount( ) const;**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR GetCount( ) const;**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#80](../../mfc/codesnippet/cpp/cobarray-class_6.cpp)]  
@@ -412,7 +412,7 @@ CObject** GetData();
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**const UINT\* const; GetData) UINT\* GetData ();**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**const 단어\* const; GetData) WORD\* GetData ();**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#81](../../mfc/codesnippet/cpp/cobarray-class_7.cpp)]  
@@ -438,7 +438,7 @@ INT_PTR GetSize() const;
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**INT_PTR GetSize( ) const;**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**INT_PTR GetSize( ) const;**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#82](../../mfc/codesnippet/cpp/cobarray-class_8.cpp)]  
@@ -469,7 +469,7 @@ INT_PTR GetUpperBound() const;
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**Const; INT_PTR GetUpperBound)**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**Const; INT_PTR GetUpperBound)**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#83](../../mfc/codesnippet/cpp/cobarray-class_9.cpp)]  
@@ -490,25 +490,25 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  반환 된 값 보다 클 수는 정수 인덱스 `GetUpperBound`합니다.  
   
- `newElement`  
- `CObject` 이 배열에 배치할 수에 대 한 포인터입니다. A `newElement` 값의 **NULL** ï ´ ù.  
+ *newElement*  
+ `CObject` 이 배열에 배치할 수에 대 한 포인터입니다. A *newElement* 값의 **NULL** ï ´ ù.  
   
- `nCount`  
+ *nCount*  
  이 요소가 해야 하는 횟수 (기본값: 1)를 삽입 합니다.  
   
- `nStartIndex`  
+ *nStartIndex*  
  반환 된 값 보다 클 수는 정수 인덱스 `GetUpperBound`합니다.  
   
- `pNewArray`  
+ *pNewArray*  
  이 배열에 추가 하는 요소가 포함 된 다른 배열입니다.  
   
 ### <a name="remarks"></a>설명  
  첫 번째 버전 `InsertAt` 배열에서 지정된 된 인덱스에 요소 하나 (또는 요소가 여러 개)를 삽입 합니다. 프로세스에서 이동 (인덱스 증가) 하 여이 인덱스에서 기존 요소 위에 있는 모든 요소를 이동 합니다.  
   
- 두 번째 버전에서 다른 모든 요소를 삽입 한 `CObArray` 에서 시작 하는 컬렉션의 `nStartIndex` 위치입니다.  
+ 두 번째 버전에서 다른 모든 요소를 삽입 한 `CObArray` 에서 시작 하는 컬렉션의 *nStartIndex* 위치입니다.  
   
  `SetAt` 반면, 함수 한 지정 된 배열 요소를 대체 하 고 모든 요소를 이동 하지 않습니다.  
   
@@ -523,7 +523,7 @@ void InsertAt(
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**InsertAt void (INT_PTR** `nIndex` **, UINT** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (CMemoryException\* );**<br /><br /> **InsertAt void (INT_PTR** `nStartIndex` **, CUIntArray\***  `pNewArray` **);**<br /><br /> **throw (CMemoryException\* );**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**InsertAt void (INT_PTR** `nIndex` **, WORD** `newElement` **, int** `nCount` **= 1);**<br /><br /> **throw (CMemoryException\* );**<br /><br /> **InsertAt void (INT_PTR** `nStartIndex` **, CWordArray\***  `pNewArray` **);**<br /><br /> **throw (CMemoryException\* );**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#84](../../mfc/codesnippet/cpp/cobarray-class_10.cpp)]  
@@ -572,7 +572,7 @@ CObject* operator[](int_ptr nindex) const;
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**UINT & 연산자 (int_ptr** `nindex`  **\);**<br /><br /> **UINT 연산자 (int_ptr** `nindex`  **\) const;**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**WORD & 연산자 (int_ptr** `nindex`  **\);**<br /><br /> **WORD 연산자 (int_ptr** `nindex`  **\) const;**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#88](../../mfc/codesnippet/cpp/cobarray-class_11.cpp)]  
@@ -600,7 +600,7 @@ void RemoveAll();
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void RemoveAll( );**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**void RemoveAll( );**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#85](../../mfc/codesnippet/cpp/cobarray-class_12.cpp)]  
@@ -615,10 +615,10 @@ void RemoveAt(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  보다 크거나 0에 있는 정수 인덱스 및에서 반환 된 값 보다 작거나 같은 `GetUpperBound`합니다.  
   
- `nCount`  
+ *nCount*  
  제거할 요소의 수입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -639,7 +639,7 @@ void RemoveAt(
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**RemoveAt void (INT_PTR** `nIndex` **, INT_PTR** `nCount` **= 1);**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**RemoveAt void (INT_PTR** `nIndex` **, INT_PTR** *nCount* **= 1);**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#112](../../mfc/codesnippet/cpp/cobarray-class_13.cpp)]  
@@ -660,10 +660,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  보다 크거나 0에 있는 정수 인덱스 및에서 반환 된 값 보다 작거나 같은 `GetUpperBound`합니다.  
   
- `newElement`  
+ *newElement*  
  이 배열에 삽입할 개체 포인터입니다. A **NULL** 값은 사용할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
@@ -682,7 +682,7 @@ void SetAt(
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**SetAt void (INT_PTR** `nIndex` **, UINT** `newElement` **);**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**SetAt void (INT_PTR** `nIndex` **, WORD** `newElement` **);**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#86](../../mfc/codesnippet/cpp/cobarray-class_14.cpp)]  
@@ -705,10 +705,10 @@ void SetAtGrow(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  정수 인덱스는 0 보다 크거나 같은 경우입니다.  
   
- `newElement`  
+ *newElement*  
  이 배열에 추가할 개체 포인터입니다. A **NULL** 값은 사용할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
@@ -725,7 +725,7 @@ void SetAtGrow(
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**SetAtGrow void (INT_PTR** `nIndex` **, UINT** `newElement` **);**<br /><br /> **throw (CMemoryException\* );**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**SetAtGrow void (INT_PTR** `nIndex` **, WORD** `newElement` **);**<br /><br /> **throw (CMemoryException\* );**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#87](../../mfc/codesnippet/cpp/cobarray-class_15.cpp)]  
@@ -752,16 +752,16 @@ void SetSize(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nNewSize`  
+ *nNewSize*  
  새 배열 크기 (요소 수)입니다. 보다 크거나 0 이어야 합니다.  
   
- `nGrowBy`  
+ *nGrowBy*  
  최소 크기 증가 사용 하는 필요한 경우 할당할 슬롯 요소 수입니다.  
   
 ### <a name="remarks"></a>설명  
  새 크기가 원래 크기 보다 작은 경우 배열이 잘리고 하 고 사용 하지 않는 모든 메모리 해제 됩니다. 효율성을 높이기 위해 호출 `SetSize` 사용 하기 전에 배열의 크기를 설정할 수 있습니다. 이렇게 하면 다시 할당 하 고 항목이 추가 될 때마다 배열을 복사 필요 합니다.  
   
- `nGrowBy` 매개 변수 배열의 증가 하는 동안 내부 메모리 할당에 영향을 줍니다. 사용에 영향을 주지 배열 크기에서 보고 `GetSize` 및 `GetUpperBound`합니다.  
+ *nGrowBy* 매개 변수 배열의 증가 하는 동안 내부 메모리 할당에 영향을 줍니다. 사용에 영향을 주지 배열 크기에서 보고 `GetSize` 및 `GetUpperBound`합니다.  
   
  배열의 크기 증가 하는 경우 새로 할당 된 **CObject \***  포인터를 NULL로 설정 됩니다.  
   
@@ -776,7 +776,7 @@ void SetSize(
 |[CUIntArray](../../mfc/reference/cuintarray-class.md)|**void SetSize (INT_PTR** `nNewSize` **, int** `nGrowBy` **=-1);**<br /><br /> **throw (CMemoryException\* );**|  
 |[CWordArray](../../mfc/reference/cwordarray-class.md)|**void SetSize (INT_PTR** `nNewSize` **, int** `nGrowBy` **=-1);**<br /><br /> **throw (CMemoryException\* );**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CObArray::GetData](#getdata)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

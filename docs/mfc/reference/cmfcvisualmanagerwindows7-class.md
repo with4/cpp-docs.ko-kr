@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6599ddf3663f56c651907fe3823849787a05b50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c4bcc39645c079ef9a0b61a4e12782223dd19a92
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373705"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042224"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 클래스
 `CMFCVisualManagerWindows7` 응용 프로그램의 모양을 제공는 [!INCLUDE[win7](../../build/includes/win7_md.md)] 응용 프로그램입니다.  
@@ -149,20 +149,20 @@ virtual COLORREF GetRibbonEditBackgroundColor (
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pEdit`  
+ [in] *pEdit*  
  편집 컨트롤에 대 한 포인터입니다. 이 값은 `NULL`일 수 없습니다.  
   
- [out] `bIsHighlighted`  
+ [out] *bIsHighlighted*  
  리본 메뉴 상자 강조 표시 되어 있는지 여부를 반환 합니다.  
   
- [out] `bIsPaneHighlighted`  
- 반환 `TRUE` 리본 패널 포함 `pEdit` 강조 표시 됩니다.  
+ [out] *bIsPaneHighlighted*  
+ 반환 `TRUE` 리본 패널 포함 *pEdit* 강조 표시 됩니다.  
   
- [out] `bIsDisabled`  
- 반환 여부 `pEdit` 을 사용할 수 없습니다.  
+ [out] *bIsDisabled*  
+ 반환 여부 *pEdit* 을 사용할 수 없습니다.  
   
 ### <a name="return-value"></a>반환 값  
- 입력란의 배경색 `pEdit`합니다.  
+ 입력란의 배경색 *pEdit*합니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -178,16 +178,16 @@ virtual void OnFillMenuImageRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트 메뉴 단추에 대 한 포인터입니다.  
   
- [in] `pButton`  
+ [in] *pButton*  
  에 대 한 포인터는 `CMFCToolBarButton`합니다. 프레임 워크에는이 단추의 배경을 채웁니다.  
   
- [in] `rect`  
+ [in] *rect*  
  메뉴 단추 이미지 영역 경계를 지정 하는 사각형입니다.  
   
- [in] `state`  
+ [in] *상태*  
  단추 상태입니다.  
   
 ### <a name="remarks"></a>설명  

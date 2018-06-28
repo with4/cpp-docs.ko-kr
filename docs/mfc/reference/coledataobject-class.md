@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9cd159597440dfb55bbe8abe147623096cdf449
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0e5beccea254db8c7db6b6f52fee6c5d3021da71
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374512"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038337"
 ---
 # <a name="coledataobject-class"></a>COleDataObject 클래스
 끌어 놓기를 통해 클립보드에서 또는 포함된 OLE 항목에서 다양한 형식의 데이터를 검색하기 위해 데이터를 전송하는 데 사용됩니다.  
@@ -107,7 +107,7 @@ void Attach(
  *lpDataObject*  
  OLE 데이터 개체를 가리킵니다.  
   
- `bAutoRelease`  
+ *bAutoRelease*  
  **TRUE** OLE 데이터 개체 해야 하면 출시 시기는 `COleDataObject` 개체 소멸 되지 않았으면 **FALSE**합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -178,14 +178,14 @@ BOOL GetData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cfFormat`  
+ *cfFormat*  
  데이터를 반환할 인 형식입니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows에서 반환 된 값 중 하나일 수 있습니다 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 함수입니다.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  가리키는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 데이터를 받을 구조입니다.  
   
- `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터 반환 형식을 설명 하는 구조입니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우이 매개 변수에 대 한 값을 제공 `cfFormat`합니다. 경우 **NULL**, 기본 값이 다른 필드에서 사용 되는 **FORMATETC** 구조입니다.  
+ *lpFormatEtc*  
+ 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터 반환 형식을 설명 하는 구조입니다. 로 지정 된 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우이 매개 변수에 대 한 값을 제공 *cfFormat*합니다. 경우 **NULL**, 기본 값이 다른 필드에서 사용 되는 **FORMATETC** 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
@@ -205,11 +205,11 @@ CFile* GetFileData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cfFormat`  
+ *cfFormat*  
  데이터를 반환할 인 형식입니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows에서 반환 된 값 중 하나일 수 있습니다 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 함수입니다.  
   
- `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터 반환 형식을 설명 하는 구조입니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우이 매개 변수에 대 한 값을 제공 `cfFormat`합니다. 경우 **NULL**, 기본 값이 다른 필드에서 사용 되는 **FORMATETC** 구조입니다.  
+ *lpFormatEtc*  
+ 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터 반환 형식을 설명 하는 구조입니다. 로 지정 된 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우이 매개 변수에 대 한 값을 제공 *cfFormat*합니다. 경우 **NULL**, 기본 값이 다른 필드에서 사용 되는 **FORMATETC** 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
  새 포인터 `CFile` 또는 `CFile`-파생 된 개체 데이터를 포함 하 고, 그렇지 않으면 성공 **NULL**합니다.  
@@ -234,11 +234,11 @@ HGLOBAL GetGlobalData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cfFormat`  
+ *cfFormat*  
  데이터를 반환할 인 형식입니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows에서 반환 된 값 중 하나일 수 있습니다 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 함수입니다.  
   
- `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터 반환 형식을 설명 하는 구조입니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우이 매개 변수에 대 한 값을 제공 `cfFormat`합니다. 경우 **NULL**, 기본 값이 다른 필드에서 사용 되는 **FORMATETC** 구조입니다.  
+ *lpFormatEtc*  
+ 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터 반환 형식을 설명 하는 구조입니다. 로 지정 된 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우이 매개 변수에 대 한 값을 제공 *cfFormat*합니다. 경우 **NULL**, 기본 값이 다른 필드에서 사용 되는 **FORMATETC** 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공 하면 데이터를 포함 하는 전역 메모리 블록의 핸들 그렇지 않으면 **NULL**합니다.  
@@ -256,7 +256,7 @@ BOOL GetNextFormat(LPFORMATETC lpFormatEtc);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 구조체 함수 호출에서 반환 된 형식 정보입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -279,11 +279,11 @@ BOOL IsDataAvailable(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cfFormat`  
- 구조에 사용 되는 클립보드 데이터 형식에서 가리키는 `lpFormatEtc`합니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows에서 반환 된 값 중 하나일 수 있습니다 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 함수입니다.  
+ *cfFormat*  
+ 구조에 사용 되는 클립보드 데이터 형식에서 가리키는 *lpFormatEtc*합니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows에서 반환 된 값 중 하나일 수 있습니다 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 함수입니다.  
   
- `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 원하는 형식을 설명 하는 구조입니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우에이 매개 변수의 값을 제공 `cfFormat`합니다. 경우 **NULL**, 기본 값이 다른 필드에서 사용 되는 **FORMATETC** 구조입니다.  
+ *lpFormatEtc*  
+ 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 원하는 형식을 설명 하는 구조입니다. 로 지정 된 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우에이 매개 변수의 값을 제공 *cfFormat*합니다. 경우 **NULL**, 기본 값이 다른 필드에서 사용 되는 **FORMATETC** 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
  데이터는 지정된 된 형식에서 사용할 수 있는 0이 아닌 그렇지 않으면 0입니다.  
@@ -295,7 +295,7 @@ BOOL IsDataAvailable(
   
  자세한 내용은 참조 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) Windows sdk에서입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CRichEditView::QueryAcceptData](../../mfc/reference/cricheditview-class.md#queryacceptdata)합니다.  
   
 ##  <a name="release"></a>  COleDataObject::Release  
@@ -306,7 +306,7 @@ void Release();
 ```  
   
 ### <a name="remarks"></a>설명  
- `IDataObject` 연결 된는 `COleDataObject` 호출 하 여 **연결** 또는 `AttachClipboard` 명시적으로 또는 프레임 워크에서. 경우는 `bAutoRelease` 의 매개 변수 **연결** 은 **FALSE**, `IDataObject` 개체 해제 되지 것입니다. 이 경우 호출자는 해제를 위한 처리는 `IDataObject` 호출 하 여 [iunknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317)합니다.  
+ `IDataObject` 연결 된는 `COleDataObject` 호출 하 여 `Attach` 또는 `AttachClipboard` 명시적으로 또는 프레임 워크에서. 경우는 `bAutoRelease` 의 매개 변수 `Attach` 은 **FALSE**, `IDataObject` 개체 해제 되지 것입니다. 이 경우 호출자는 해제를 위한 처리는 `IDataObject` 호출 하 여 [iunknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [MFC 샘플 HIERSVR](../../visual-cpp-samples.md)   

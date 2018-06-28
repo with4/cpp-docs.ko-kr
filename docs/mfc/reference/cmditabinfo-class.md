@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b95706603c8fe8a8f53be8cd0db405cd649271f2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b3676db7cedbca1fe831e44c9ff7cf018360adc
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368097"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040055"
 ---
 # <a name="cmditabinfo-class"></a>CMDITabInfo 클래스
 `CMDITabInfo` 클래스는 매개 변수를 전달 하는 데 사용 [cmdiframewndex:: Enablemditabbedgroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) 메서드. MDI 탭 그룹의 동작을 제어하려면 이 클래스의 멤버를 설정합니다.  
@@ -70,7 +70,7 @@ class CMDITabInfo
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMDITabInfo::m_bActiveTabCloseButton;](#m_bactivetabclosebutton_)|지정 여부는 **닫기** 단추가 활성 탭의 레이블에 표시 됩니다.|  
 |[CMDITabInfo::m_bAutoColor](#m_bautocolor)|MDI 탭 색을 지정 합니다.|  
@@ -87,7 +87,7 @@ class CMDITabInfo
 ## <a name="remarks"></a>설명  
  이 클래스는 프레임 워크에서 만드는 MDI 탭 그룹의 매개 변수를 지정 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서 다양 한 멤버 변수의 값을 설정 하는 방법을 보여 줍니다 `CMDITabInfo` 클래스입니다.  
   
  [!code-cpp[NVC_MFC_MDITab#1](../../mfc/reference/codesnippet/cpp/cmditabinfo-class_1.cpp)]  
@@ -235,7 +235,7 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `ar`  
+ [in] *ar*  
  A [CArchive 클래스](../../mfc/reference/carchive-class.md) serialize 할 개체입니다.  
   
 ## <a name="see-also"></a>참고 항목  

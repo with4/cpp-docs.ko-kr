@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 233f37fc0ab31afcd8ba112677af8cd144d01c2a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcddf0f1848bdd75714bd5b931dcf8520e68cf8c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370170"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041250"
 ---
 # <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton 클래스
 `CMFCRibbonUndoButton` 클래스는 가장 최근 사용자 명령에 포함 된 드롭다운 목록에서 단추를 구현 합니다. 사용자는 다시 실행 하거나 취소할 드롭 다운 목록에서 가장 최근 명령 중 하나 이상을 선택할 수 있습니다.  
@@ -62,7 +62,7 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
 ## <a name="remarks"></a>설명  
  `CMFCRibbonUndoButton` 클래스는 스택을 드롭 다운 목록을 나타내는 데 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는의 개체를 생성 하는 `CMFCRibbonUndoButton` 클래스 및 동작의 목록에 새 동작을 추가 합니다. 이 코드 조각은의 일부인는 [리본 가젯 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_RibbonGadgets#2](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]  
@@ -89,7 +89,7 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  드롭다운 목록에 표시 되는 동작 레이블이 있습니다.  
   
 ##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
@@ -117,19 +117,19 @@ CMFCRibbonUndoButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nID`  
+ [in] *nID*  
  명령 식별자를 지정합니다.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  단추의 텍스트 레이블을 지정합니다.  
   
- [in] `nSmallImageIndex`  
+ [in] *nSmallImageIndex*  
  단추의 작은 이미지에 대 한 부모 개체의 이미지 목록 인덱스 0부터 시작 합니다.  
   
- [in] `nLargeImageIndex`  
+ [in] *nLargeImageIndex*  
  에 대 한 부모 개체의 이미지 목록 인덱스 0부터 시작 된 단추의 큰 이미지의 합니다.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  단추의 이미지 형식으로 사용할 수 있는 아이콘에 대 한 핸들입니다.  
   
 ##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
