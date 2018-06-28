@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76faab221b5e36f9795595d07cd13d0bbf1df200
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d89f82f03a4c6a9faf2ddf3e8c3f2a0b7b3fd1d2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370723"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042367"
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout 클래스
 사용자가 창의 크기를 조정할 때 창에서 컨트롤이 이동하고 컨트롤의 크기가 조정되는 방식을 지정합니다.  
@@ -75,7 +75,7 @@ class CMFCDynamicLayout : public CObject
   
 ## <a name="nested-types"></a>중첩 형식  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[Cmfcdynamiclayout:: Movesettings 구조체](#movesettings_structure)|동적 레이아웃의 컨트롤에 대한 이동 데이터를 캡슐화합니다.|  
 |[Cmfcdynamiclayout:: Sizesettings 구조체](#sizesettings_structure)|동적 레이아웃의 컨트롤에 대한 크기 변경 데이터를 캡슐화합니다.|  
@@ -105,16 +105,16 @@ BOOL AddItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hwnd`  
+ *hwnd*  
  추가할 창에 대한 핸들입니다.  
   
- `nID`  
+ *nID*  
  추가할 자식 컨트롤의 ID입니다.  
   
- `moveSettings`  
+ *moveSettings*  
  창 크기가 변경될 때 컨트롤을 이동하는 방법을 설명하는 구조체입니다.  
   
- `sizeSettings`  
+ *sizeSettings*  
  창 크기가 변경될 때 컨트롤의 크기를 조정하는 방법을 설명하는 구조체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -141,7 +141,7 @@ BOOL Create(CWnd* pHostWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- pHostWnd  
+ *pHostWnd*  
  호스트 창에 대한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -183,7 +183,7 @@ void GetHostWndRect(CRect& rect,);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rect`  
+ *rect*  
  함수에서 반환된 이 매개 변수에는 레이아웃 영역의 경계 사각형이 포함됩니다. 이는 출력 매개 변수이며, 입력 값은 덮어써집니다.  
   
 ### <a name="remarks"></a>설명  
@@ -196,7 +196,7 @@ BOOL HasItem(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hwnd`  
+ *hwnd*  
  컨트롤의 창 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -226,13 +226,13 @@ static BOOL LoadResource(CWnd* pHostWnd,
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pHostWnd`  
+ *pHostWnd*  
  호스트 창에 대한 포인터입니다.  
   
- `lpResource`  
+ *lpResource*  
  AFX_DIALOG_LAYOUT 리소스를 포함하는 버퍼에 대한 포인터입니다.  
   
- `dwSize`  
+ *dwSize*  
  버퍼 크기(바이트)입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -248,7 +248,7 @@ static MoveSettings MoveHorizontal(int nRatio);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nRatio`  
+ *nRatio*  
  사용자가 호스트 창의 크기를 조정할 때 자식 컨트롤이 가로로 얼마나 이동하는지를 백분율로 정의합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -264,10 +264,10 @@ static MoveSettings MoveHorizontalAndVertical(int nXRatio int nYRatio);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nXRatio`  
+ *nXRatio*  
  사용자가 호스트 창의 크기를 조정할 때 자식 컨트롤이 가로로 얼마나 이동하는지를 백분율로 정의합니다.  
   
- `nYRatio`  
+ *nYRatio*  
  사용자가 호스트 창의 크기를 조정할 때 자식 컨트롤이 세로로 얼마나 이동하는지를 백분율로 정의합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -336,7 +336,7 @@ static MoveSettings MoveVertical(int nRatio);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nRatio`  
+ *nRatio*  
  사용자가 호스트 창의 크기를 조정할 때 자식 컨트롤이 세로로 얼마나 이동하는지를 백분율로 정의합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -352,7 +352,7 @@ void SetMinSize(const CSize& size);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `size`  
+ *size*  
  레이아웃이 그 이하로 조정되지 않는 원하는 크기입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -366,7 +366,7 @@ static SizeSettings SizeHorizontal(int nRatio);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nRatio`  
+ *nRatio*  
  사용자가 호스트 창 크기를 조정할 때 자식 컨트롤의 크기가 가로로 얼마나 조정되는지를 백분율로 정의합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -382,10 +382,10 @@ static SizeSettings SizeHorizontalAndVertical(int nXRatio int nYRatio);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nXRatio`  
+ *nXRatio*  
  사용자가 호스트 창 크기를 조정할 때 자식 컨트롤의 크기가 가로로 얼마나 조정되는지를 백분율로 정의합니다.  
   
- `nYRatio`  
+ *nYRatio*  
  사용자가 호스트 창 크기를 조정할 때 자식 컨트롤의 크기가 세로로 얼마나 조정되는지를 백분율로 정의합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -453,7 +453,7 @@ static SizeSettings SizeVertical(int nRatio);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nRatio`  
+ *nRatio*  
  사용자가 호스트 창 크기를 조정할 때 자식 컨트롤의 크기가 세로로 얼마나 조정되는지를 백분율로 정의합니다.  
   
 ### <a name="return-value"></a>반환 값  

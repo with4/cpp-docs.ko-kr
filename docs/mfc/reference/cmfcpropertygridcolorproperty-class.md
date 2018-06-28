@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de336692a821ba374996fac9ee7d282d2990bd08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9b1728958d8560362f9b330c3ba570e933d824d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367996"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040810"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty 클래스
 `CMFCPropertyGridColorProperty` 클래스는 색 선택 항목 대화 상자를 여는 속성 목록 컨트롤 항목을 지원합니다.  
@@ -75,7 +75,7 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 ## <a name="remarks"></a>설명  
  `CMFCPropertyGridColorProperty` 클래스는 속성 목록 컨트롤에 추가할 수 있는 색 속성을 지원합니다. 자세한 내용은 참조는 [CMFCPropertyGridCtrl 클래스](../../mfc/reference/cmfcpropertygridctrl-class.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCPropertyGridColorProperty` 클래스의 개체를 생성하고 `CMFCPropertyGridColorProperty` 클래스의 다양한 메서드를 사용하여 이 개체를 구성하는 방법을 보여 줍니다. 코드에서는 자동 및 기타 단추를 사용하도록 설정하는 방법과 색 및 열 번호를 설정하는 방법을 설명합니다. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#13](../../mfc/reference/codesnippet/cpp/cmfcpropertygridcolorproperty-class_1.cpp)]  
@@ -103,19 +103,19 @@ CMFCPropertyGridColorProperty(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `strName`  
+ [in] *strName*  
  속성의 이름입니다.  
   
- [in] `color`  
+ [in] *색*  
  속성의 색상 값입니다.  
   
- [in] `pPalette`  
+ [in] *pPalette*  
  색의 팔레트에 대 한 포인터입니다. 기본값은 `NULL`입니다.  
   
- [in] `lpszDescr`  
+ [in] *lpszDescr*  
  속성 설명입니다. 기본값은 `NULL`입니다.  
   
- [in] `dwData`  
+ [in] *dwData*  
  정수 또는 속성에 연관 된 다른 데이터에 대 한 포인터 등 응용 프로그램별 데이터입니다. 기본값은 0입니다.  
   
 ##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton  
@@ -129,13 +129,13 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  자동 단추 레이블 텍스트입니다.  
   
- [in] `colorAutomatic`  
+ [in] *colorAutomatic*  
  자동 (기본) 색의 RGB 색상 값입니다.  
   
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` 자동 단추를 사용 하도록 설정 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -151,13 +151,13 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  다른 단추 레이블 텍스트입니다.  
   
- [in] `bAltColorDlg`  
+ [in] *bAltColorDlg*  
  `TRUE` 표시 하는 `CMFCColorDialog` 대화 상자 `FALSE` 표준 색 선택 대화 상자를 표시 합니다. 기본값은 `TRUE`입니다.  
   
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` 다른 단추를 표시 하려면 그렇지 않으면 `FALSE`합니다.  기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -182,7 +182,7 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `color`  
+ [in] *색*  
  RGB 색상 값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -195,7 +195,7 @@ void SetColumnsNumber(int nColumnsNumber);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nColumnsNumber`  
+ [in] *nColumnsNumber*  
  기본 색 속성 표의 열 수입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -209,7 +209,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `varValue`  
+ [in] *varValue*  
  값입니다.  
   
 ### <a name="remarks"></a>설명  

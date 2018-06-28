@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e8328fb4987044c5a28b1a6a6ce19c674039dea9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a1b98cd7bfb6983a4133e0bb48e3c75b8a973ddf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376212"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042549"
 ---
 # <a name="colepropertypage-class"></a>에서는 COlePropertyPage 클래스
 대화 상자와 유사한 그래픽 인터페이스의 사용자 지정 컨트롤의 속성을 표시하는 데 사용됩니다.  
@@ -140,7 +140,7 @@ BOOL GetControlStatus(UINT nID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nID`  
+ *nID*  
  속성 페이지 컨트롤의 리소스 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -154,14 +154,14 @@ LPDISPATCH* GetObjectArray(ULONG* pnObjects);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pnObjects`  
+ *pnObjects*  
  페이지에서 편집 중인 개체의 수를 수신할 부호 없는 long 정수에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
  배열에 대 한 포인터 `IDispatch` 속성 페이지에 있는 각 컨트롤의 속성에 액세스 하는 데 사용 되는 포인터입니다. 호출자에 게 이러한 인터페이스 포인터를 해제 해야 합니다.  
   
 ### <a name="remarks"></a>설명  
- 각 속성 페이지 개체를 유지 관리에 대 한 포인터의 배열에서 `IDispatch` 페이지에서 편집 중인 개체의 인터페이스입니다. 이 함수는 설정의 `pnObjects` 인수 해당 배열에 있는 요소의 수를 배열의 첫 번째 요소에 대 한 포인터를 반환 합니다.  
+ 각 속성 페이지 개체를 유지 관리에 대 한 포인터의 배열에서 `IDispatch` 페이지에서 편집 중인 개체의 인터페이스입니다. 이 함수는 설정의 *pnObjects* 인수 해당 배열에 있는 요소의 수를 배열의 첫 번째 요소에 대 한 포인터를 반환 합니다.  
   
 ##  <a name="getpagesite"></a>  COlePropertyPage::GetPageSite  
  속성 페이지에 대 한 포인터를 가져옵니다 `IPropertyPageSite` 인터페이스입니다.  
@@ -184,7 +184,7 @@ void IgnoreApply(UINT nID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nID`  
+ *nID*  
  무시 되는 컨트롤의 ID입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -208,7 +208,7 @@ virtual BOOL OnEditProperty(DISPID dispid);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dispid`  
+ *dispid*  
  편집 중인 속성의 디스패치 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -279,10 +279,10 @@ BOOL SetControlStatus(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nID`  
+ *nID*  
  속성 페이지 컨트롤의 ID를 포함 합니다.  
   
- `bDirty`  
+ *bDirty*  
  수정 된 속성 페이지의 필드를 지정 합니다. 로 설정 **TRUE** 필드 수정 된 경우 **FALSE** 수정 되지 않은 경우.  
   
 ### <a name="return-value"></a>반환 값  
@@ -316,7 +316,7 @@ void SetHelpInfo(
  *lpszDocString*  
  상태 표시줄 또는 다른 위치에 표시 하기 위한 간단한 도움말 정보를 포함 하는 문자열입니다.  
   
- `lpszHelpFile`  
+ *lpszHelpFile*  
  속성 페이지의 도움말 파일의 이름입니다.  
   
  *dwHelpContext*  
@@ -330,7 +330,7 @@ void SetModifiedFlag(BOOL bModified = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bModified`  
+ *bModified*  
  속성 페이지의 수정 된 플래그에 대 한 새 값을 지정합니다.  
   
 ##  <a name="setpagename"></a>  COlePropertyPage::SetPageName  

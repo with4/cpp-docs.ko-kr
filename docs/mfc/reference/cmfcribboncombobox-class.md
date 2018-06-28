@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ebe013e8ce674efb0782112cc8cbc8b1462ef24
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f5894f1fc9bd901bef6e830250f4e1f8e9bdd335
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371516"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040756"
 ---
 # <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox 클래스
 `CMFCRibbonComboBox` 클래스 리본 막대, 리본 패널 또는 리본 팝업 메뉴에 추가할 수 있는 콤보 상자 컨트롤을 구현 합니다.  
@@ -70,7 +70,7 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
   
 ### <a name="constructors"></a>생성자  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|CMFCRibbonComboBox 개체를 만듭니다.|  
   
@@ -98,7 +98,7 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
 ## <a name="remarks"></a>설명  
  정적 레이블 또는 사용자가 편집할 수 있는 레이블을 사용 하 여 결합 된 목록 상자의 글꼴로 리본 콤보 상자 구성 됩니다. 리본 콤보 상자를 만들 때 원하는 형식을 지정 해야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는의 개체를 생성 하는 `CMFCRibbonComboBox` 클래스, 콤보 상자에 항목을 추가, 콤보 상자에서 항목을 선택 및 콤보 상자 패널에 추가 합니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#11](../../mfc/reference/codesnippet/cpp/cmfcribboncombobox-class_1.cpp)]  
@@ -127,10 +127,10 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszItem`  
+ [in] *lpszItem*  
  추가할 항목의 문자열입니다.  
   
- [in] `dwData`  
+ [in] *dwData*  
  추가할 항목에 연결 된 데이터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -153,19 +153,19 @@ CMFCRibbonComboBox();
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nID`  
+ [in] *nID*  
  콤보 상자의 ID입니다.  
   
- [in] `bHasEditBox`  
+ [in] *bHasEditBox*  
  `TRUE` 컨트롤에서 입력란을 원하는 경우 `FALSE` 그렇지 않은 경우.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  너비의 픽셀;에 있는 콤보 상자 또는 기본 너비에 대 한-1을 추가 합니다.  
   
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  콤보 상자의 레이블 표시 합니다.  
   
- [in] `nImage`  
+ [in] *nImage*  
  콤보 상자의 작은 이미지 인덱스입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -182,13 +182,13 @@ BOOL DeleteItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iIndex`  
+ [in] *iIndex*  
  삭제할 항목의 0부터 시작 하는 인덱스입니다.  
   
- [in] `dwData`  
+ [in] *dwData*  
  삭제할 항목에 연결 된 데이터입니다.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  삭제할 항목의 문자열입니다. 동일한 문자열로 여러 항목이 있으면 첫 번째 항목이 삭제 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -204,7 +204,7 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` 크기 조정; 사용 하도록 설정 하려면 `FALSE` 크기를 조정 하지 않으려면입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -218,7 +218,7 @@ int FindItem(LPCTSTR lpszText) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszText`  
+ [in] *lpszText*  
  목록 상자에 있는 항목의 문자열입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -268,7 +268,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  콤보 상자에 대 한 장치 컨텍스트에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -285,7 +285,7 @@ LPCTSTR GetItem(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iIndex`  
+ [in] *iIndex*  
  목록 상자에 있는 항목의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -301,7 +301,7 @@ DWORD_PTR GetItemData(int iIndex) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iIndex`  
+ [in] *iIndex*  
  목록 상자에 있는 항목의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -340,7 +340,7 @@ virtual void OnSelectItem(int nItem);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nItem`  
+ [in] *nItem*  
  선택한 항목의 인덱스입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -366,13 +366,13 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iIndex`  
+ [in] *iIndex*  
  목록 상자에 있는 항목의 0부터 시작 하는 인덱스입니다.  
   
- [in] `dwData`  
+ [in] *dwData*  
  목록 상자에서 항목에 연결 된 데이터입니다.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  목록 상자에 있는 항목의 문자열입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -388,7 +388,7 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nHeight`  
+ [in] *nHeight*  
  목록 상자의 픽셀 단위 높이입니다.  
   
 ### <a name="remarks"></a>설명  

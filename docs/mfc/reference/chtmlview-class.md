@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdbc5972d244d9dfd969221d88299e868f617a5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b44b4b6cb834590c795084fc4ac84337c0fe8a6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378284"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039351"
 ---
 # <a name="chtmlview-class"></a>CHtmlView 클래스
 MFC의 문서/뷰 아키텍처 컨텍스트 내에서 WebBrowser 컨트롤의 기능을 제공합니다.  
@@ -332,7 +332,7 @@ class CHtmlView : public CFormView
 > [!NOTE]
 >  WebBrowser ActiveX 컨트롤(및 따라서 `CHtmlView`)은 Internet Explorer 4.0 이상이 설치된 Windows NT 버전 4.0 이상에서 실행되는 프로그램에서만 사용할 수 있습니다.  
   
- `CHtmlView`는 웹(및/또는 HTML 문서)에 액세스하는 응용 프로그램용으로 작성되었습니다. 다음 `CHtmlView` 멤버 함수는 Internet Explorer 응용 프로그램에만 적용됩니다. 해당 함수는 WebBrowser 컨트롤에서 성공하지만 아무런 가시적 효과가 없습니다.  
+ `CHtmlView` 는 웹(및/또는 HTML 문서)에 액세스하는 응용 프로그램용으로 작성되었습니다. 다음 `CHtmlView` 멤버 함수는 Internet Explorer 응용 프로그램에만 적용됩니다. 해당 함수는 WebBrowser 컨트롤에서 성공하지만 아무런 가시적 효과가 없습니다.  
   
 - [GetAddressBar](#getaddressbar)  
   
@@ -383,25 +383,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszClassName`  
+ *lpszClassName*  
  Windows 클래스의 이름을 지정 하는 null로 끝나는 문자열을 가리킵니다. 클래스 이름에 등록 된 모든 이름일 수 있습니다는 [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) 전역 함수 또는 **RegisterClass** Windows 함수입니다. 경우 **NULL**, 미리 정의 된 기본값을 사용 하 여 [CFrameWnd](../../mfc/reference/cframewnd-class.md) 특성입니다.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  창 이름을 나타내는 null로 끝나는 문자열을 가리킵니다.  
   
- `dwStyle`  
+ *dwStyle*  
  창 스타일 특성을 지정합니다. 기본적으로는 **WS_VISIBLE** 및 **WS_CHILD** 창 스타일 설정 됩니다.  
   
- `rect`  
- 에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 크기와 창의 위치를 지정 하는 구조입니다. `rectDefault` 크기와 새 창의 위치를 지정 하려면 Windows를 허용 하는 값입니다.  
+ *rect*  
+ 에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 크기와 창의 위치를 지정 하는 구조입니다. *rectDefault* 크기와 새 창의 위치를 지정 하려면 Windows를 허용 하는 값입니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  컨트롤의 부모 창에 대 한 포인터입니다.  
   
- `nID`  
+ *nID*  
  보기의 ID. 기본적으로로 설정 **AFX_IDW_PANE_FIRST**합니다.  
   
- `pContext`  
+ *pContext*  
  에 대 한 포인터는 [CCreateContext](../../mfc/reference/ccreatecontext-structure.md)합니다. **NULL** 기본적으로 합니다.  
   
 ##  <a name="createcontrolsite"></a>  CHtmlView::CreateControlSite  
@@ -416,16 +416,16 @@ virtual BOOL CreateControlSite(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pContainer`  
+ *pContainer*  
  에 대 한 포인터는 [COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md) 컨트롤을 포함 하는 개체입니다.  
   
- `ppSite`  
+ *ppSite*  
  에 대 한 포인터에 대 한 포인터는 [COleControlSite](../../mfc/reference/colecontrolsite-class.md) 개체를 컨트롤에 대 한 사이트를 제공 합니다.  
   
- `nID`  
+ *nID*  
  호스트 컨트롤의 식별자입니다.  
   
- `clsid`  
+ *clsid*  
  호스트 되는 컨트롤의 CLSID  
   
 ### <a name="return-value"></a>반환 값  
@@ -445,7 +445,7 @@ HRESULT ExecFormsCommand(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwCommandID`  
+ *dwCommandID*  
  실행할 명령입니다. 이 명령은에 속해야 합니다는 **CMDSETID3_Forms3** 그룹입니다.  
   
  *pVarIn*  
@@ -472,13 +472,13 @@ void ExecWB(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cmdID`  
+ *cmdID*  
  실행할 명령입니다.  
   
  *cmdexecopt*  
  명령을 실행 하는 것에 대 한 집합 옵션입니다.  
   
- `pvaIn`  
+ *pvaIn*  
  명령 입력된 인수를 지정 하는 데 사용 되는 variant입니다.  
   
  *pvaOut*  
@@ -684,10 +684,10 @@ COleVariant GetProperty(LPCTSTR lpszProperty);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszProperty`  
+ *lpszProperty*  
  검색할 속성을 포함 하는 문자열에 대 한 포인터입니다.  
   
- `strValue`  
+ *StrValue*  
  에 대 한 참조는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 속성의 현재 값을 받는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -759,7 +759,7 @@ BOOL GetSource(CString& strRef);
  성공하는 경우 0이 아니고, 그렇지 않으면 0입니다.  
   
 ### <a name="parameters"></a>매개 변수  
- `refString`  
+ *refString*  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) 소스 코드를 보유 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -911,10 +911,10 @@ BOOL LoadFromResource(UINT nRes);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszResource`  
+ *lpszResource*  
  로드할 리소스의 이름을 포함 하는 문자열에 대 한 포인터입니다.  
   
- `nRes`  
+ *nRes*  
  로드할 리소스의 이름을 포함 하는 버퍼의 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -940,19 +940,19 @@ void Navigate(
  *URL*  
  찾을 URL을 포함 하는 호출자가 할당 문자열 또는 표시할 파일의 전체 경로입니다.  
   
- `dwFlags`  
+ *dwFlags*  
  기록 목록에 리소스를 추가할 것인지를에 대 한 읽기 또는 쓰기 캐시를 사용할지 여부 및 리소스를 새 창에 표시할지 여부를 지정 하는 변수의 플래그입니다. 변수에서 정의 된 값의 조합 수 있습니다는 [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) 열거 합니다.  
   
- `lpszTargetFrameName`  
+ *lpszTargetFrameName*  
  리소스를 표시 하는 프레임의 이름을 포함 하는 문자열에 대 한 포인터입니다.  
   
- `lpszHeaders`  
+ *lpszHeaders*  
  서버에 보낼 HTTP 헤더를 지정 하는 값에 대 한 포인터입니다. 이러한 헤더는 기본 Internet Explorer 헤더에 추가 됩니다. 헤더는 서버는 서버 또는 상태 코드에 전달 되는 데이터 형식에 필요한 작업으로 등의 작업을 지정할 수 있습니다. 이 매개 변수는 *URL* HTTP URL이 아닙니다.  
   
- `lpvPostData`  
+ *lpvPostData*  
  보낼 HTTP POST 트랜잭션을 사용 하 여 데이터에 대 한 포인터입니다. 예를 들어 POST 트랜잭션이 HTML 폼에 의해 수집 된 데이터 전송에 사용 됩니다. 이 매개 변수는 모든 게시 데이터를 지정 하지 않는 경우 **탐색** HTTP GET 트랜잭션을 발급 합니다. 이 매개 변수는 *URL* HTTP URL이 아닙니다.  
   
- `dwPostDataLen`  
+ *dwPostDataLen*  
  HTTP POST 트랜잭션을 사용 하 여 보낼 데이터입니다. 예를 들어 POST 트랜잭션이 HTML 폼에 의해 수집 된 데이터 전송에 사용 됩니다. 이 매개 변수는 모든 게시 데이터를 지정 하지 않는 경우 **탐색** HTTP GET 트랜잭션을 발급 합니다. 이 매개 변수는 *URL* HTTP URL이 아닙니다.  
   
 ### <a name="remarks"></a>설명  
@@ -989,25 +989,25 @@ void Navigate2(
  *pIDL*  
  에 대 한 포인터는 [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) 구조입니다.  
   
- `dwFlags`  
+ *dwFlags*  
  기록 목록에 리소스를 추가할 것인지를에 대 한 읽기 또는 쓰기 캐시를 사용할지 여부 및 리소스를 새 창에 표시할지 여부를 지정 하는 변수의 플래그입니다. 변수에서 정의 된 값의 조합 수 있습니다는 [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) 열거 합니다.  
   
- `lpszTargetFrameName`  
+ *lpszTargetFrameName*  
  리소스를 표시 하는 프레임의 이름을 포함 하는 문자열에 대 한 포인터입니다.  
   
- `lpszURL`  
+ *lpszURL*  
  URL을 포함 하는 문자열에 대 한 포인터입니다.  
   
- `lpvPostData`  
+ *lpvPostData*  
  HTTP POST 트랜잭션을 사용 하 여 보낼 데이터입니다. 예를 들어 POST 트랜잭션이 HTML 폼에 의해 수집 된 데이터 전송에 사용 됩니다. 이 매개 변수는 모든 게시 데이터를 지정 하지 않는 경우 `Navigate2` HTTP GET 트랜잭션을 발급 합니다. 이 매개 변수는 *URL* HTTP 또는 HTTPS URL이 아닙니다.  
   
- `dwPostDataLen`  
- 가리키는 데이터의 길이 (바이트)는 `lpvPostData` 매개 변수입니다.  
+ *dwPostDataLen*  
+ 가리키는 데이터의 길이 (바이트)는 *lpvPostData* 매개 변수입니다.  
   
- `lpszHeaders`  
+ *lpszHeaders*  
  서버에 보낼 HTTP 또는 HTTPS 헤더를 지정 하는 값에 대 한 포인터입니다. 이러한 헤더는 기본 Internet Explorer 헤더에 추가 됩니다. 헤더는 서버는 서버 또는 상태 코드에 전달 되는 데이터 형식에 필요한 작업으로 등의 작업을 지정할 수 있습니다. 이 매개 변수는 *URL* HTTP 또는 HTTPS URL이 아닙니다.  
   
- `baPostedData`  
+ *baPostedData*  
  에 대 한 참조는 [CByteArray](../../mfc/reference/cbytearray-class.md) 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1015,7 +1015,7 @@ void Navigate2(
   
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCHtmlHttp#7](../../mfc/reference/codesnippet/cpp/chtmlview-class_1.cpp)]  
   
 ##  <a name="onbeforenavigate2"></a>  CHtmlView::OnBeforeNavigate2  
@@ -1032,22 +1032,22 @@ virtual void OnBeforeNavigate2(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszURL`  
+ *lpszURL*  
  탐색할 URL을 포함 하는 문자열에 대 한 포인터입니다.  
   
- `nFlags`  
+ *nFlags*  
  나중에 사용하기 위해 예약되어 있습니다.  
   
- `lpszTargetFrameName`  
+ *lpszTargetFrameName*  
  리소스를 표시 하는 프레임의 이름을 포함 하는 문자열 또는 **NULL** 리소스 대상이 명명 된 프레임이 없습니다.  
   
- `baPostedData`  
+ *baPostedData*  
  에 대 한 참조는 `CByteArray` HTTP POST 트랜잭션이 사용 되는 경우 서버에 보낼 데이터를 포함 하는 개체입니다.  
   
- `lpszHeaders`  
+ *lpszHeaders*  
  (HTTP Url에만 해당) 서버로 보낼 추가 HTTP 헤더를 포함 하는 문자열에 대 한 포인터입니다. 헤더는 서버는 서버 또는 상태 코드에 전달 되는 데이터 형식에 필요한 작업으로 등의 작업을 지정할 수 있습니다.  
   
- `pbCancel`  
+ *pbCancel*  
  취소 플래그에 대 한 포인터입니다. 응용 프로그램 탐색 작업을 취소 하거나 계속할 수 있도록 허용 하 0 0이 아닌 값을이 매개 변수를 설정할 수 있습니다.  
   
 ##  <a name="oncommandstatechange"></a>  CHtmlView::OnCommandStateChange  
@@ -1063,7 +1063,7 @@ virtual void OnCommandStateChange(
  *된 명령*  
  활성화 상태가 변경 된 명령 식별자입니다.  
   
- `bEnable`  
+ *bEnable*  
  활성화 된 상태입니다. 이 매개 변수는 명령이 활성화 되거나 비활성화 된 경우 0 경우 0이 아닌 값입니다.  
   
 ##  <a name="ondocumentcomplete"></a>  CHtmlView::OnDocumentComplete  
@@ -1074,13 +1074,13 @@ virtual void OnDocumentComplete(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszURL`  
+ *lpszURL*  
  UNC URL로 계산 되는 문자열에 대 한 포인터는 이름 또는 탐색 된 PIDL (식별자 목록 항목에 포인터) 파일입니다.  
   
 ### <a name="remarks"></a>설명  
  모든 프레임 발생 하는 각 프레임 하지만이 이벤트는 발생 한 [OnDownloadBegin](#ondownloadbegin) 해당 이벤트는 발생 하는 `OnDocumentComplete` 이벤트.  
   
- URL을 가리키는 `lpszURL` 이 URL은 정규화 된와 정규화 된 URL 때문에 브라우저로 이동 하도록 지시 받고 된 URL에서 다를 수 있습니다. 예를 들어, "www.microsoft.com"에 대 한 호출을의 URL을 지정 하는 응용 프로그램 [탐색](#navigate) 또는 [Navigate2](#navigate2), 전달한 URL `OnNavigateComplete2` 됩니다 "http://www.microsoft.com/"입니다. 또한 서버가 다른 URL로 브라우저를 리디렉션 리디렉션된 URL 여기에 반영 됩니다.  
+ URL을 가리키는 *lpszURL* 이 URL은 정규화 된와 정규화 된 URL 때문에 브라우저로 이동 하도록 지시 받고 된 URL에서 다를 수 있습니다. 예를 들어, "www.microsoft.com"에 대 한 호출을의 URL을 지정 하는 응용 프로그램 [탐색](#navigate) 또는 [Navigate2](#navigate2), 전달한 URL `OnNavigateComplete2` 됩니다 "http://www.microsoft.com/"입니다. 또한 서버가 다른 URL로 브라우저를 리디렉션 리디렉션된 URL 여기에 반영 됩니다.  
   
 ##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate  
  **IOleInPlaceActiveObject::OnDocWindowActivate**의 Internet Explorer 또는 MSHTML 구현에서 호출되며, 컨테이너의 문서 창이 활성화 또는 비활성화될 경우 활성 현재 위치 개체에 알립니다.  
@@ -1090,7 +1090,7 @@ virtual HRESULT OnDocWindowActivate(BOOL fActivate);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `fActivate`  
+ *fActivate*  
  문서 창의 상태를 나타냅니다. 이 값이 0이 아니고, 창이 활성화 되 고 있습니다. 이 값이 0 이면 창이 비활성화 하는 중입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1124,7 +1124,7 @@ virtual HRESULT OnEnableModeless(BOOL fEnable);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `fEnable`  
+ *fEnable*  
  호스트의 모덜리스 대화 상자 설정 또는 해제 하는 경우를 나타냅니다. 이 값은 0이 아니고, 모덜리스 대화 상자는 사용할 수 있습니다. 이 값이 0 이면 모덜리스 대화 상자는 사용할 수 없습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1143,7 +1143,7 @@ virtual HRESULT OnFilterDataObject(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDataObject`  
+ *pDataObject*  
  주소는 [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) Internet Explorer 또는 MSHTML에 의해 제공 된 인터페이스입니다.  
   
  *ppDataObject*  
@@ -1163,7 +1163,7 @@ virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `fActivate`  
+ *fActivate*  
  컨테이너의 최상위 프레임 창의 상태를 나타냅니다. 이 값이 0이 아니고, 창이 활성화 되 고 있습니다. 이 값이 0 이면 창이 비활성화 하는 중입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1193,10 +1193,10 @@ virtual HRESULT OnGetDropTarget(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDropTarget`  
+ *pDropTarget*  
  [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) Internet Explorer 또는 MSHTML이 사용 하도록 제안 합니다.  
   
- `ppDropTarget`  
+ *ppDropTarget*  
  주소는 `IDropTarget` 받는 `IDropTarget` 인터페이스 포인터를 호스트가 제공 하려고 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1230,7 +1230,7 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pInfo`  
+ *pInfo*  
  주소는 [DOCHOSTUIINFO](https://msdn.microsoft.com/library/aa770044.aspx) 구조체 호스트의 UI 기능입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1249,10 +1249,10 @@ virtual HRESULT OnGetOptionKeyPath(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pchKey`  
+ *pchKey*  
  주소는 `LPOLESTR` 받는 호스트의 기본 옵션을 저장 하는 레지스트리 하위 키 문자열입니다. 이 하위 키는 HKEY_CURRENT_USER 키 아래에 있게 됩니다. 사용 하 여이 메모리를 할당할 [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)합니다. 호출 응용 프로그램은 사용 하 여이 메모리를 확보 해야 [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)합니다. 이 매개 변수를 항상 초기화 **NULL**메서드가 실패 하는 경우에 합니다.  
   
- `dwReserved`  
+ *dwReserved*  
  나중에 사용하기 위해 예약되어 있습니다. 현재 사용 되지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1313,16 +1313,16 @@ virtual void OnNavigateError(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszURL`  
+ *lpszURL*  
  URL 탐색 하지 못했습니다.  
   
  *lpszFrame*  
  리소스를 표시 또는 명명 된 프레임이 없는 리소스에 대 한 대상 지정 된 경우 NULL 인 프레임의 이름입니다.  
   
- `dwError`  
+ *dwError*  
  오류 상태 코드를 사용할 수 있는 경우입니다. 목록이 가능한 HRESULT 및 HTTP 상태 코드에 대 한 참조 [NavigateError 이벤트 상태 코드입니다.](https://msdn.microsoft.com/library/aa768365.aspx)  
   
- `pbCancel`  
+ *pbCancel*  
  오류 페이지에는 더 이상 자동 검색 탐색을 취소할 것인지 지정 합니다. 경우 **TRUE** (기본값) 이면 오류 페이지 또는 자동 검색; 탐색을 하는 경우 계속 **FALSE**, 오류 페이지 또는 자동 검색 탐색을 취소 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1340,10 +1340,10 @@ virtual void OnNewWindow2(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ppDisp`  
+ *ppDisp*  
  필요에 따라 수신 하는 인터페이스 포인터에 대 한 포인터는 `IDispatch` 새 WebBrowser 또는 Internet Explorer 개체의 인터페이스 포인터입니다.  
   
- `Cancel`  
+ *취소*  
  취소 플래그에 대 한 포인터입니다. 응용 프로그램 탐색 작업을 취소 하거나 계속할 수 있도록 허용 하 0 0이 아닌 값을이 매개 변수를 설정할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1376,7 +1376,7 @@ virtual void OnPropertyChange(LPCTSTR lpszProperty);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszProperty`  
+ *lpszProperty*  
  속성의 이름을 포함 하는 문자열에 대 한 포인터입니다.  
   
 ##  <a name="onquit"></a>  CHtmlView::OnQuit  
@@ -1397,13 +1397,13 @@ virtual HRESULT OnResizeBorder(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `prcBorder`  
+ *prcBorder*  
  테두리 공간에 대 한 새 외부 사각형입니다.  
   
- `pUIWindow`  
+ *pUIWindow*  
  변경 된 테두리 프레임 또는 문서 창 개체에 대 한 인터페이스에 대 한 포인터입니다.  
   
- `fFrameWindow`  
+ *fFrameWindow*  
  **True 이면** 프레임 창을 호출 하는 경우 [IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053), 그렇지 않으면 **FALSE**합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1424,16 +1424,16 @@ virtual HRESULT OnShowContextMenu(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwID`  
+ *dwID*  
  표시 되는 상황에 맞는 메뉴의 식별자입니다. 참조 **IDocHostUIHandler::ShowContextMenu** 값 목록에 대 한 Windows sdk입니다.  
   
- `ppt`  
+ *ppt*  
  메뉴에 대 한 화면 좌표입니다.  
   
- `pcmdtReserved`  
+ *pcmdtReserved*  
  [IOleCommandTarget](http://msdn.microsoft.com/library/windows/desktop/ms683797) 명령 상태를 쿼리하고이 개체에서 명령을 실행 하는 데 사용 되는 인터페이스입니다.  
   
- `pdispReserved`  
+ *pdispReserved*  
  화면 좌표에 있는 개체의 IDispatch 인터페이스입니다. 따라서 보다 구체적인 컨텍스트를 제공 하는 특정 개체를 구별 하는 호스트 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1455,19 +1455,19 @@ virtual HRESULT OnShowUI(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwID`  
+ *dwID*  
  나중에 사용하기 위해 예약되어 있습니다.  
   
- `pActiveObject`  
+ *pActiveObject*  
  [IOleInPlaceActiveObject](http://msdn.microsoft.com/library/windows/desktop/ms691299) 현재 활성화 된 개체의 인터페이스입니다.  
   
- `pCommandTarget`  
+ *pCommandTarget*  
  [IOleCommandTarget](http://msdn.microsoft.com/library/windows/desktop/ms683797) 개체의 인터페이스입니다.  
   
- `pFrame`  
+ *pFrame*  
  [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770) 개체의 인터페이스입니다. 이 메뉴 및 도구 모음에 필요 합니다.  
   
- `pDoc`  
+ *pDoc*  
  [IOleInPlaceUIWindow](http://msdn.microsoft.com/library/windows/desktop/ms680716) 개체에 대 한 인터페이스입니다. 이 도구 모음에 필요 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1495,7 +1495,7 @@ virtual void OnStatusTextChange(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszText`  
+ *lpszText*  
  새 상태 표시줄 텍스트를 포함 하는 문자열입니다.  
   
 ##  <a name="ontheatermode"></a>  CHtmlView::OnTheaterMode  
@@ -1517,7 +1517,7 @@ virtual void OnTitleChange(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszText`  
+ *lpszText*  
  새 문서 제목입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1545,13 +1545,13 @@ virtual HRESULT OnTranslateAccelerator(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpMsg`  
+ *lpMsg*  
  변환 해야 할 수 있는 메시지를 가리킵니다.  
   
- `pguidCmdGroup`  
+ *pguidCmdGroup*  
  명령 그룹 식별자입니다.  
   
- `nCmdID`  
+ *nCmdID*  
  명령 식별자입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1571,13 +1571,13 @@ virtual HRESULT OnTranslateUrl(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwTranslate`  
+ *dwTranslate*  
  나중에 사용하기 위해 예약되어 있습니다.  
   
- `pchURLIn`  
+ *pchURLIn*  
  Internet Explorer 또는 MSHTML 변환 해야 하는 URL을 나타내는 의해 제공 된 문자열의 주소입니다.  
   
- `ppchURLOut`  
+ *ppchURLOut*  
  번역 된 URL 주소를 수신 하는 문자열 포인터의 주소입니다. 호스트는 작업 메모리 할당자를 사용 하 여 버퍼를 할당 합니다. 이 매개 변수의 콘텐츠를 항상 초기화 **NULL**URL 변환 되지 않는 또는 메서드가 실패 하는 경우에 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1607,7 +1607,7 @@ virtual void OnVisible(BOOL bVisible);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bVisible`  
+ *bVisible*  
  개체를 표시 하는 경우 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1643,11 +1643,11 @@ void PutProperty(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszProperty`  
+ *lpszProperty*  
  설정할 속성을 포함 하는 문자열입니다.  
   
  *vtValue*  
- 속성의 새 값으로 표시 `lpszProperty`합니다.  
+ 속성의 새 값으로 표시 *lpszProperty*합니다.  
   
  *lpszPropertyName*  
  설정할 속성의 이름을 포함 하는 문자열에 대 한 포인터입니다.  
@@ -1655,13 +1655,13 @@ void PutProperty(
  *dValue*  
  속성의 새 값입니다.  
   
- `lValue`  
+ *lValue*  
  속성의 새 값입니다.  
   
- `lpszValue`  
+ *lpszValue*  
  속성의 새 값을 포함 하는 문자열에 대 한 포인터입니다.  
   
- `nValue`  
+ *n 값*  
  속성의 새 값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1679,17 +1679,17 @@ HRESULT QueryFormsCommand(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwCommandID`  
+ *dwCommandID*  
  식별자에 대 한 쿼리 중인 명령입니다.  
   
  *pbSupported*  
- 에 대 한 포인터는 **BOOL** 지정 if 명령 (으로 식별 `dwCommandID`) 지원 됩니다. True 이면 명령이 지원 됩니다. 그렇지 않으면 FALSE입니다.  
+ 에 대 한 포인터는 **BOOL** 지정 if 명령 (으로 식별 *dwCommandID*) 지원 됩니다. True 이면 명령이 지원 됩니다. 그렇지 않으면 FALSE입니다.  
   
- `pbEnabled`  
- 에 대 한 포인터는 **BOOL** 지정 if 명령 (로 식별 되 `dwCommandID`)를 사용할 수 있습니다. True 이면 명령이 지원 됩니다. 그렇지 않으면 FALSE입니다.  
+ *pbEnabled*  
+ 에 대 한 포인터는 **BOOL** 지정 하는 경우 명령 (으로 식별 *dwCommandID*)를 사용할 수 있습니다. True 이면 명령이 지원 됩니다. 그렇지 않으면 FALSE입니다.  
   
  *pbChecked*  
- 에 대 한 포인터는 **BOOL** 지정 if 명령 (로 식별 되 `dwCommandID`)을 선택 합니다. True 이면 명령이 지원 됩니다. 그렇지 않으면 FALSE입니다.  
+ 에 대 한 포인터는 **BOOL** 지정 하는 경우 명령 (으로 식별 *dwCommandID*)을 선택 합니다. True 이면 명령이 지원 됩니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="return-value"></a>반환 값  
  표준 `HRESULT` 값입니다. 가능한 값의 전체 목록을 보려면 [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) Windows sdk에서입니다.  
@@ -1705,7 +1705,7 @@ OLECMDF QueryStatusWB(OLECMDID cmdID) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cmdID`  
+ *cmdID*  
  [OLECMDID](http://msdn.microsoft.com/library/windows/desktop/ms691264) 호출자에 게 상태 정보를 필요로 하는 명령 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1736,7 +1736,7 @@ void Refresh2(int nLevel);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nLevel`  
+ *nLevel*  
  새로 고침 수준을 지정 하는 변수의 주소입니다. 가능한 변수가에 정의 된 [RefreshConstants](https://msdn.microsoft.com/library/aa768363.aspx), Windows sdk에서입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1752,7 +1752,7 @@ void SetAddressBar(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  주소 표시줄을 표시 하려면 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1766,7 +1766,7 @@ void SetFullScreen(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  전체 화면 모드에서 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1782,7 +1782,7 @@ void SetHeight(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nNewValue`  
+ *nNewValue*  
  픽셀 주 창의 높이입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1796,7 +1796,7 @@ void SetLeft(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nNewValue`  
+ *nNewValue*  
  주 창의 왼쪽된 가장자리의 화면 좌표입니다.  
   
 ##  <a name="setmenubar"></a>  CHtmlView::SetMenuBar  
@@ -1807,7 +1807,7 @@ void SetMenuBar(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  메뉴 모음; 표시에 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1821,7 +1821,7 @@ void SetOffline(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  로컬 캐시;에서 읽을 수는 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1837,7 +1837,7 @@ void SetRegisterAsBrowser(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  Internet Explorer 최상위 브라우저로 등록 되었는지 여부를 결정 합니다. 웹 브라우저; 최상위 브라우저로 등록 되었는지, 0이 아닌 경우 0 이면 최상위 브라우저 않습니다. 기본값은 0입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1853,7 +1853,7 @@ void SetRegisterAsDropTarget(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  WebBrowser 컨트롤이 탐색을 위한 놓기 대상으로 등록 되어 있는지 확인 합니다. 개체가; 놓기 대상으로 등록은 0이 아니면 0 이면 놓기 대상 않습니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1867,7 +1867,7 @@ void SetSilent(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  0이 아니면 대화 상자가 표시 되지 않습니다. 0 이면 대화 상자가 표시 됩니다. 기본값은 0입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1881,7 +1881,7 @@ void SetStatusBar(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  상태 표시줄 표시 되 면 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1895,7 +1895,7 @@ void SetTheaterMode(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  WebBrowser 컨트롤이 극장 모드;를 설정 하려면 0이 아닌 그렇지 않으면 0입니다. 기본값은 0입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1911,7 +1911,7 @@ void SetToolBar(int nNewValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nNewValue`  
+ *nNewValue*  
  도구 모음을 표시할지 여부를 나타냅니다. 도구 모음이 표시 됩니다. 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1925,7 +1925,7 @@ void SetTop(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nNewValue`  
+ *nNewValue*  
  주 창의 위쪽 가장자리의 화면 좌표입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1939,7 +1939,7 @@ void SetVisible(BOOL bNewValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  컨트롤에 표시 되 면 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1953,7 +1953,7 @@ void SetWidth(long nNewValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nNewValue`  
+ *nNewValue*  
  Internet Explorer 주 창의 픽셀 너비입니다.  
   
 ##  <a name="stop"></a>  CHtmlView::Stop  

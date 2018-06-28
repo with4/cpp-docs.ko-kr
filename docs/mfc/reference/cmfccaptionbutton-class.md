@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ec36bfc82064272e165ea274cd127cc626731643
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df36f8a6af5d8ad7e2a96780e02f236e3225333d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368779"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040631"
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton 클래스
 `CMFCCaptionButton` 클래스 도킹 창 또는 미니 프레임 창의 캡션 표시줄에 표시 되는 단추를 구현 합니다. 일반적으로 프레임워크는 캡션 단추를 자동으로 만듭니다.  
@@ -54,7 +54,7 @@ class CMFCCaptionButton : public CObject
   
 ### <a name="constructors"></a>생성자  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCCaptionButton::CMFCCaptionButton](#cmfccaptionbutton)|CMFCCaptionButton 개체를 만듭니다.|  
   
@@ -80,7 +80,7 @@ class CMFCCaptionButton : public CObject
   
 - `AFX_CAPTION_BTN_CLOSE`를 표시 하는 **닫기** 의 창 수를 닫거나 때 단추입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 생성 하는 방법을 `CMFCCaptionButton` 개체 및 제목 표시줄의 최소 크기를 설정 합니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#43](../../mfc/reference/codesnippet/cpp/cmfccaptionbutton-class_1.cpp)]  
@@ -106,13 +106,13 @@ CMFCCaptionButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nHit`  
+ [in] *nHit*  
  단추와 연결 된 명령입니다.  
   
- [in] `bLeftAlign`  
+ [in] *bLeftAlign*  
  단추 왼쪽에 정렬 되는지 여부를 지정 합니다.  
   
- 다음 표에서 사용할 수 있는 값의 `nHit` 매개 변수입니다.  
+ 다음 표에서 사용할 수 있는 값의 *nHit* 매개 변수입니다.  
   
 |값|명령|  
 |-----------|-------------|  
@@ -161,10 +161,10 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` 왼쪽 또는 오른쪽 화살표 이미지 Id;에 대 한 `FALSE` 위쪽 또는 아래쪽 화살표 이미지 Id에 대 한 합니다.  
   
- [in] `bMaximized`  
+ [in] *bMaximized*  
  `TRUE` 최대화 이미지 ID;에 대 한 `FALSE` 는 최소화 이미지 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -221,10 +221,10 @@ void Move(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `ptTo`  
+ [in] *ptTo*  
  새 위치입니다.  
   
- [in] `bHide`  
+ [in] *bHide*  
  단추 표시 여부를 나타냅니다.  
   
 ##  <a name="ondraw"></a>  CMFCCaptionButton::OnDraw  
@@ -240,23 +240,23 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  단추에 대 한 장치 컨텍스트에 대 한 포인터입니다.  
   
- [in] `bActive`  
+ [in] *bActive*  
  활성 단추 이미지를 그릴 것인지 지정 합니다.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  파생된 클래스에서 사용 하기 위해 예약 되어 있습니다.  
   
- [in] `bMaximized`  
+ [in] *bMaximized*  
  최대화 단추 이미지를 그릴 것인지 지정 합니다.  
   
- [in] `bDisabled`  
+ [in] *사용 안 함*  
  활성화 된 단추 이미지를 그릴 것인지 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
- `bMaximized` 매개 변수 단추는 최대화 될 때 사용 되 또는 최소화 단추입니다.  
+ *bMaximized* 매개 변수 단추는 최대화 될 때 사용 되 또는 최소화 단추입니다.  
   
 ##  <a name="setminiframebutton"></a>  CMFCCaptionButton::SetMiniFrameButton  
  제목 표시줄의 최소 크기를 설정합니다.  
@@ -266,7 +266,7 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` 미니 제목 표시줄 height;에 대 한 `FALSE` 기본 제목 표시줄 높이 대 한 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

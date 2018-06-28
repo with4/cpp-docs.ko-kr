@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60ee6e3d23dc197f7d8114f571bd121f864701d7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c60027195024a9abb1af5ce5ec47dc6f6a6bfbf8
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372420"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038987"
 ---
 # <a name="cinternetfile-class"></a>CInternetFile 클래스
 인터넷 프로토콜을 사용 하는 원격 시스템에서 파일에 액세스할 수 있습니다.  
@@ -90,14 +90,14 @@ class CInternetFile : public CStdioFile
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CInternetFile::m_hFile](#m_hfile)|파일에 대 한 핸들입니다.|  
   
 ## <a name="remarks"></a>설명  
  에 대 한 기본 클래스를 제공는 [CHttpFile](../../mfc/reference/chttpfile-class.md) 및 [CGopherFile](../../mfc/reference/cgopherfile-class.md) 파일 클래스입니다. 만들지 마십시오는 `CInternetFile` 개체를 직접 합니다. 대신, 호출 하 여 클래스의 파생된 클래스 중 하나의 개체를 만들 [CGopherConnection::OpenFile](../../mfc/reference/cgopherconnection-class.md#openfile) 또는 [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest)합니다. 만들 수도 있습니다는 `CInternetFile` 호출 하 여 개체 [CFtpConnection::OpenFile](../../mfc/reference/cftpconnection-class.md#openfile)합니다.  
   
- `CInternetFile` 멤버 함수 **열려**, `LockRange`, `UnlockRange`, 및 `Duplicate` 에 대 한 구현 되지 않은 `CInternetFile`합니다. 이러한 함수를 호출 하는 경우는 `CInternetFile` 개체를 얻게 됩니다는 [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)합니다.  
+ `CInternetFile` 멤버 함수 `Open`, `LockRange`, `UnlockRange`, 및 `Duplicate` 에 대 한 구현 되지 않은 `CInternetFile`합니다. 이러한 함수를 호출 하는 경우는 `CInternetFile` 개체를 얻게 됩니다는 [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)합니다.  
   
  방법에 대 한 자세한 내용을 보려면 `CInternetFile` 작동 하는 다른 MFC 인터넷 클래스 문서를 참조 하십시오. [인터넷 WinInet를 사용한 프로그래밍](../../mfc/win32-internet-extensions-wininet.md)합니다.  
   
@@ -123,7 +123,7 @@ virtual void Abort();
 ### <a name="remarks"></a>설명  
  개체를 제거 하기 전에 파일을 닫지 않은 경우 소멸자를 닫습니다.  
   
- 예외를 처리 하는 경우 **중단** 에서 다른 [닫기](#close) 같은 두 가지 중요 한 차이점이 있습니다. 첫째, 고 **중단** 함수는 예외를 throw 하지 오류에 오류를 무시 하기 때문에 있습니다. 두 번째, **중단** 없는 **ASSERT** 파일이 열려 있지 않은 되거나 이전에 종결 된 경우.  
+ 예외를 처리 하는 경우 `Abort` 에서 다른 [닫기](#close) 같은 두 가지 중요 한 차이점이 있습니다. 첫째, 고 `Abort` 함수는 예외를 throw 하지 오류에 오류를 무시 하기 때문에 있습니다. 두 번째, `Abort` 없는 **ASSERT** 파일이 열려 있지 않은 되거나 이전에 종결 된 경우.  
   
 ##  <a name="cinternetfile"></a>  CInternetFile::CInternetFile  
  이 멤버 함수를 호출 하는 경우는 `CInternetFile` 개체가 만들어집니다.  
@@ -146,25 +146,25 @@ CInternetFile(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hFile`  
+ *hFile*  
  인터넷 파일에 대 한 핸들입니다.  
   
- `pstrFileName`  
+ *pstrFileName*  
  파일 이름을 포함 하는 문자열에 대 한 포인터입니다.  
   
- `pConnection`  
+ *pConnection*  
  에 대 한 포인터는 [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) 개체입니다.  
   
  *bReadMode*  
  파일이 읽기 전용인 지 여부를 나타냅니다.  
   
- `hSession`  
+ *hSession*  
  인터넷 세션에 대 한 핸들입니다.  
   
- `pstrServer`  
+ *pstrServer*  
  서버 이름을 포함 하는 문자열에 대 한 포인터입니다.  
   
- `dwContext`  
+ *dwContext*  
  에 대 한 컨텍스트 식별자는 `CInternetFile` 개체입니다. 참조 [WinInet 기본 사항](../../mfc/wininet-basics.md) 컨텍스트 식별자에 대 한 자세한 내용은 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -212,7 +212,7 @@ operator HINTERNET() const;
 ```  
   
 ##  <a name="read"></a>  Cinternetfile:: Read  
- `lpvBuf`부터 시작하여 지정된 바이트 수 `nCount`를 지정된 메모리로 읽으려면 이 멤버 함수를 호출합니다.  
+ 부터 지정 된 메모리로 읽어이 함수를 호출 *lpvBuf*, 바이트 수를 지정 된 *nCount*합니다.  
   
 ```  
 virtual UINT Read(
@@ -221,17 +221,17 @@ virtual UINT Read(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpBuf`  
+ *lpBuf*  
  파일 데이터를 읽을 메모리 주소에 대한 포인터입니다.  
   
- `nCount`  
+ *nCount*  
  쓸 바이트 수 입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 버퍼로 전송된 바이트 수입니다. 파일의 끝에 도달한 경우 반환 값은 `nCount`보다 작을 수 있습니다.  
+ 버퍼로 전송된 바이트 수입니다. 반환 값 경우도 미만 *nCount* 경우 파일의 끝에 도달 했습니다.  
   
 ### <a name="remarks"></a>설명  
- 이 함수는 실제로 읽는 바이트 수를 반환합니다(파일의 끝에 도달한 경우 `nCount`보다 작을 수 있음). 이 함수가 throw 하는 파일을 읽는 동안 오류가 발생 하는 경우는 [CInternetException](../../mfc/reference/cinternetexception-class.md) 오류를 설명 하는 개체입니다. 파일의 끝을 지나서 읽는 것은 오류로 간주되지 않으며 예외가 throw되지 않습니다.  
+ 실제로 읽는 바이트 수를 반환 하는 함수-수 있는 숫자 보다 작거나 *nCount* 파일이 종료 되는 경우. 이 함수가 throw 하는 파일을 읽는 동안 오류가 발생 하는 경우는 [CInternetException](../../mfc/reference/cinternetexception-class.md) 오류를 설명 하는 개체입니다. 파일의 끝을 지나서 읽는 것은 오류로 간주되지 않으며 예외가 throw되지 않습니다.  
   
  데이터를 모두 검색 하려면 응용 프로그램 계속 호출 해야는 **cinternetfile:: Read** 메서드에서 0을 반환할 때까지 메서드.  
   
@@ -248,13 +248,13 @@ virtual LPTSTR ReadString(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pstr`  
+ *pstr*  
  읽는 중인 줄을 수신할 문자열에 대 한 포인터입니다.  
   
- `nMax`  
+ *최대*  
  문자를 읽을 수는 최대 수입니다.  
   
- `rString`  
+ *rString*  
  에 대 한 참조는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 읽기 줄을 받는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -263,7 +263,7 @@ virtual LPTSTR ReadString(
  **NULL** ; 모든 데이터를 읽지 않고 파일의 끝에 도달 했습니다 경우 나 경우 부울, **FALSE** 경우 모든 데이터를 읽지 않고 파일의 끝에 도달 했습니다.  
   
 ### <a name="remarks"></a>설명  
- 함수에서 참조 되는 메모리에 결과 선을 배치는 `pstr` 매개 변수입니다. 문자 읽기 중지 지정 된 문자의 최대 수에 도달한 경우 `nMax`합니다. 버퍼는 항상 종료 null 문자를 받습니다.  
+ 함수에서 참조 되는 메모리에 결과 선을 배치는 *pstr* 매개 변수입니다. 문자 읽기 중지 지정 된 문자의 최대 수에 도달한 경우 *최대*합니다. 버퍼는 항상 종료 null 문자를 받습니다.  
   
  호출 하는 경우 `ReadString` 먼저 호출 하지 않고 [SetReadBufferSize](#setreadbuffersize), 4, 096 바이트의 버퍼를 받게 됩니다.  
   
@@ -277,17 +277,17 @@ virtual ULONGLONG Seek(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lOffset`  
+ *lOffset*  
  파일에서 읽기/쓰기 포인터를 이동 하는 바이트에서 오프셋입니다.  
   
- `nFrom`  
+ *nFrom*  
  오프셋에 대 한 상대 참조 합니다. 다음 값 중 하나 여야 합니다.  
   
-- **CFile::begin** 파일 포인터를 이동 `lOff` 파일의 시작 부분에서 바이트를 전달 합니다.  
+- **CFile::begin** 파일 포인터를 이동 *lOff* 파일의 시작 부분에서 바이트를 전달 합니다.  
   
-- **CFile::current** 파일 포인터를 이동 `lOff` 파일의 현재 위치에서 바이트입니다.  
+- **CFile::current** 파일 포인터를 이동 *lOff* 파일의 현재 위치에서 바이트입니다.  
   
-- **CFile::end** 파일 포인터를 이동 `lOff` 파일의 끝에서 바이트입니다. `lOff` 기존 파일을 음수 여야 합니다. 파일의 끝을 지나서 양수 값 검색 됩니다.  
+- **CFile::end** 파일 포인터를 이동 *lOff* 파일의 끝에서 바이트입니다. *lOff* 파일 되어 있어야 합니다 기존 검색 음수가; 양수 값은 파일의 끝을 지나서 검색 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  요청 된 위치가 법적; 파일의 시작 부분에서 5 만큼 오프셋 새 바이트 그렇지 않으면 값은 정의 되지 및 [CInternetException](../../mfc/reference/cinternetexception-class.md) 개체가 throw 됩니다.  
@@ -302,7 +302,7 @@ virtual ULONGLONG Seek(
 > [!NOTE]
 >  사용 하 여 `Seek` 암시적으로 호출 않을 [플러시](#flush)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   기본 클래스 구현에 대 한 예제를 참조 하십시오 ( [CFile::Seek](../../mfc/reference/cfile-class.md#seek)).  
   
 ##  <a name="setreadbuffersize"></a>  CInternetFile::SetReadBufferSize  
@@ -320,7 +320,7 @@ BOOL SetReadBufferSize(UINT nReadSize);
  성공하면 0이 아니고, 그렇지 않으면 0입니다. Win32 함수 호출이 실패 한 경우 [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) 오류의 원인을 확인 하기 위해 호출할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
- 기본 WinInet Api 아무 버퍼링을 수행 하지, 따라서 응용 프로그램을 효율적으로 데이터를 읽을 수와 관계 없이 데이터를 읽을 수 있는 버퍼 크기를 선택 합니다. 호출할 때마다 경우 [읽기](#read) 일반적으로 큰 aount 포함 됩니다 (예: 4 개 이상의 킬로바이트) 데이터의 필요 하면 버퍼입니다. 그러나 호출 하는 경우 **읽기** 적은 양의 데이터를 가져오려는 사용 하는 경우 또는 [ReadString](#readstring) 읽기 버퍼 응용 프로그램 성능을 개선 한 후 한 번에 개별 줄을 읽을 수 있습니다.  
+ 기본 WinInet Api 아무 버퍼링을 수행 하지, 따라서 응용 프로그램을 효율적으로 데이터를 읽을 수와 관계 없이 데이터를 읽을 수 있는 버퍼 크기를 선택 합니다. 호출할 때마다 경우 [읽기](#read) 일반적으로 큰 aount 포함 됩니다 (예: 4 개 이상의 킬로바이트) 데이터의 필요 하면 버퍼입니다. 그러나 호출 하는 경우 `Read` 적은 양의 데이터를 가져오려는 사용 하는 경우 또는 [ReadString](#readstring) 읽기 버퍼 응용 프로그램 성능을 개선 한 후 한 번에 개별 줄을 읽을 수 있습니다.  
   
  기본적으로는 `CInternetFile` 개체 읽기에 대 한 버퍼링을 제공 하지 않습니다. 이 함수를 호출 하는 경우에 파일 읽기 액세스를 위해 열린 있는지 확인 해야 합니다.  
   
@@ -346,7 +346,7 @@ BOOL SetWriteBufferSize(UINT nWriteSize);
  기본적으로는 `CInternetFile` 개체 쓰기에 대 한 버퍼링을 제공 하지 않습니다. 이 함수를 호출 하는 경우에 쓰기 액세스를 위해는 파일이 열려 있는지 확인 해야 합니다. 언제 든 지 쓰기 버퍼의 크기를 변경할 수 있지만, 이렇게 할 암시적으로 호출 [플러시](#flush)합니다.  
   
 ##  <a name="write"></a>  CInternetFile::Write  
- 이 멤버 함수는 지정 된 메모리에 쓸 호출 `lpvBuf`, 바이트 수를 지정 된 `nCount`합니다.  
+ 이 멤버 함수는 지정 된 메모리에 쓸 호출 *lpvBuf*, 바이트 수를 지정 된 *nCount*합니다.  
   
 ```  
 virtual void Write(
@@ -355,10 +355,10 @@ virtual void Write(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpBuf`  
+ *lpBuf*  
  쓸 첫 번째 바이트에 대 한 포인터입니다.  
   
- `nCount`  
+ *nCount*  
  쓸 바이트 수를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -372,7 +372,7 @@ virtual void WriteString(LPCTSTR pstr);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pstr`  
+ *pstr*  
  쓸 콘텐츠를 포함 하는 문자열에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  

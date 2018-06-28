@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e2e668a2ad15ec9ec2fb779be32d35c17eb57cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1be5cdc05ab387000828ce6424aed1fcc253d6c2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374359"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039169"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog 클래스
 OLE 선택하여 붙여넣기 대화 상자에 사용합니다.  
@@ -68,7 +68,7 @@ class COlePasteSpecialDialog : public COleDialog
 |----------|-----------------|  
 |[COlePasteSpecialDialog::AddFormat](#addformat)|사용자 지정 형식을 응용 프로그램에 붙여 넣을 수 있는 형식의 목록에 추가 합니다.|  
 |[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|지원 되는 클립보드 형식의 목록에 새 항목을 추가합니다.|  
-|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|추가 **CF_BITMAP**, **CF_DIB**, `CF_METAFILEPICT`, 고 필요에 따라 `CF_LINKSOURCE` 응용 프로그램 형식 목록에 붙여넣을 수 있습니다.|  
+|[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|추가 **CF_BITMAP**, **CF_DIB**, **CF_METAFILEPICT**, 선택적으로 **CF_LINKSOURCE** 응용 프로그램 형식 목록에 붙여넣을 수 .|  
 |[COlePasteSpecialDialog::CreateItem](#createitem)|지정 된 형식을 사용 하 여 컨테이너 문서에 항목을 만듭니다.|  
 |[COlePasteSpecialDialog::DoModal](#domodal)|OLE 하 여 붙여넣기 대화 상자를 표시합니다.|  
 |[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|여부 항목 아이콘으로 그릴 것인지를 알려 줍니다.|  
@@ -130,22 +130,22 @@ void AddFormat(
  *fmt*  
  추가할 데이터 형식에 대 한 참조입니다.  
   
- `lpszFormat`  
+ *lpszFormat*  
  사용자에 게 형식을 설명 하는 문자열입니다.  
   
  *lpszResult*  
  대화 상자에서이 형식을 선택 하면 결과 설명 하는 문자열입니다.  
   
- `flags`  
+ *flags*  
  다른 연결 및이 형식에 사용할 수 있는 옵션을 포함 합니다. 이 플래그는 하나 이상의에 서로 다른 값의 비트 조합은 **OLEUIPASTEFLAG** 열거 형식입니다.  
   
- `cf`  
+ *cf*  
  추가할 클립보드 형식입니다.  
   
  *미디어 유형입니다.*  
  이 형식에서 사용할 수 있는 미디어의 형식입니다. 에 있는 값의 하나 이상의 비트 조합입니다.는 **TYMED** 열거 형식입니다.  
   
- `nFormatID`  
+ *nFormatID*  
  이 형식을 식별 하는 문자열의 ID입니다. 이 문자열의 형식은 '\n'으로 구분 된 두 개의 별도 문자열입니다. 첫 번째 문자열은에 전달 되는 동일한는 *lpstrFormat* 매개 변수 및 두 번째 같습니다는 *lpstrResult* 매개 변수입니다.  
   
  *bEnableIcon*  
@@ -169,7 +169,7 @@ OLEUIPASTEFLAG AddLinkEntry(UINT cf);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cf`  
+ *cf*  
  추가할 클립보드 형식입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -192,7 +192,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
   
 - **CF_DIB**  
   
-- `CF_METAFILEPICT`  
+- **CF_METAFILEPICT**  
   
 - **"포함 된 개체"**  
   
@@ -211,7 +211,7 @@ COlePasteSpecialDialog(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwFlags`  
+ *dwFlags*  
  생성 플래그 비트 OR 연산자를 사용 하 여 결합 하는 다음 플래그를 개수를 관계 없이 포함 되어 있습니다.  
   
 - `PSF_SELECTPASTE` 대화 상자를 호출할 때 붙여넣기 라디오 단추는 처음 확인 있는지 지정 합니다. 와 함께에서 사용할 수 없습니다 `PSF_SELECTPASTELINK`합니다. 이 값이 기본값입니다.  
@@ -222,10 +222,10 @@ COlePasteSpecialDialog(
   
 - `PSF_SHOWHELP` 도움말 단추 대화 상자를 호출할 때 표시 되도록 지정 합니다.  
   
- `pDataObject`  
+ *pDataObject*  
  가리키는 [COleDataObject](../../mfc/reference/coledataobject-class.md) 붙여 넣기 위해. 이 값이 **NULL**, 가져옵니다는 `COleDataObject` 클립보드에 저장에서 합니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  부모 또는 소유자 창 개체를 가리키는 (형식의 `CWnd`) 대화 상자 개체 속해 있는 합니다. 이 경우 **NULL**, 대화 상자의 부모 창은 주 응용 프로그램 창으로 설정 됩니다.  
   
 ### <a name="remarks"></a>설명  

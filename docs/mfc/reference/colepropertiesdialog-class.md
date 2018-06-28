@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d61d773e2c35bb67f34ae2b4a989a388d8b4015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 358798e3945378d0fa43fa6e2fa91d686212efab
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371688"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040183"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog 클래스
 Windows 공용 OLE 개체 속성 대화 상자를 캡슐화합니다.  
@@ -113,7 +113,7 @@ COlePropertiesDialog(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pItem`  
+ *pItem*  
  액세스 되는 속성을 가진 문서 항목에 대 한 포인터입니다.  
   
  *nScaleMin*  
@@ -122,7 +122,7 @@ COlePropertiesDialog(
  *nScaleMax*  
  최대 조정 문서 항목 이미지에 대 한 백분율입니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  이 대화 상자의 부모 또는 소유자에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -229,10 +229,10 @@ virtual BOOL OnApplyScale(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pItem`  
+ *pItem*  
  액세스 되는 속성을 가진 문서 항목에 대 한 포인터입니다.  
   
- `nCurrentScale`  
+ *nCurrentScale*  
  대화 눈금의 숫자 값입니다.  
   
  *bRelativeToOrig*  
@@ -245,7 +245,7 @@ virtual BOOL OnApplyScale(
  기본 구현은 아무 작업도 수행하지 않습니다. 크기 조정 컨트롤을 사용 하려면이 함수를 재정의 해야 합니다.  
   
 > [!NOTE]
->  프레임 워크에서이 함수를 호출 공용 OLE 개체 속성 대화 상자 표시 되기 전에 **NULL** 에 대 한 `pItem` 에-1 `nCurrentScale`합니다. 이 크기 조정 컨트롤을 사용 해야 하는지 확인 하려면 수행 됩니다.  
+>  프레임 워크에서이 함수를 호출 공용 OLE 개체 속성 대화 상자 표시 되기 전에 **NULL** 에 대 한 *pItem* 에-1 *nCurrentScale*합니다. 이 크기 조정 컨트롤을 사용 해야 하는지 확인 하려면 수행 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [MFC 샘플 CIRC](../../visual-cpp-samples.md)   

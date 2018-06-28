@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b622ca84ca73090d609cbb557096fb75802a023
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c82a73c95c0869f7f5245ef3ddc15c0216b07579
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376163"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041733"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar 클래스
 `CMFCStatusBar` 비슷한 상태 표시줄을 구현 하는 클래스는 `CStatusBar` 클래스입니다. 그러나 `CMFCStatusBar` 클래스에는 `CStatusBar` 클래스에 의해 제공되지 않는 기능(예: 이미지, 애니메이션 및 진행률 표시줄을 표시하는 기능 및 마우스 두 번 클릭에 응답하는 기능)이 포함되어 있습니다. 
@@ -150,18 +150,18 @@ class CMFCStatusBar : public CPane
   
  ![CMFCStatusBar의 예제](../../mfc/reference/media/cmfcstatusbar.png "cmfcstatusbar")  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 다양 한 메서드를 호출 하는 응용 프로그램이 사용 하는 지역 변수는 `CMFCStatusBar` 클래스입니다. 이러한 변수는 StatusBarDemoView.h에서 선언 됩니다. 주 프레임 MainFrm.h에 선언 된, 문서 StatusBarDemoDoc.h에 선언 된 및 보기 StatusBarDemoView.h에서 선언 됩니다. 이 코드 조각은의 일부인는 [상태 표시줄 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_StatusBarDemo#9](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_1.h)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에 대 한 참조를 가져오는 방법을 `CMFCStatusBar` 도입 하 여 개체는 `GetStatusBar` MainFrm.h에서이 메서드를 호출한 다음의 방법으로는 `GetStatusBar` StatusBarDemoView.h에서 메서드. 이 코드 조각은의 일부인는 [상태 표시줄 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_StatusBarDemo#7](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_2.h)]  
 [!code-cpp[NVC_MFC_StatusBarDemo#8](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_3.h)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 다양 한 메서드를 호출 하는 `CMFCStatusBar` StatusBarDemoView.cpp의 클래스. 상수는 MainFrm.h에도 선언 됩니다. 이 예제에서는 설정 아이콘, 상태 표시줄 창의 도구 설명 텍스트를 설정, 지정 된 창에서 진행률 표시줄을 표시, 지정 된 창에 애니메이션을 할당, 텍스트 및 상태 표시줄 창의 너비 설정 및는 progr의 현재 진행률 표시기를 설정 하는 방법을 보여 줍니다. 상태 표시줄 창에 대 한 ess 막대입니다. 이 코드 조각은의 일부인는 [상태 표시줄 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_StatusBarDemo#6](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_4.h)]  
@@ -197,8 +197,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -212,7 +212,7 @@ int CommandToIndex(UINT nIDFind) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIDFind`  
+ [in] *nIDFind*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -229,9 +229,9 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pParentWnd`  
- [in] `dwStyle`  
- [in] `nID`  
+ [in] *pParentWnd*  
+ [in] *dwStyle*  
+ [in] *nID*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -249,10 +249,10 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pParentWnd`  
- [in] `dwCtrlStyle`  
- [in] `dwStyle`  
- [in] `nID`  
+ [in] *pParentWnd*  
+ [in] *dwCtrlStyle*  
+ [in] *dwStyle*  
+ [in] *nID*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -277,11 +277,11 @@ void EnablePaneDoubleClick(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
  경우 `TRUE`, 사용 하도록 설정 하는 마우스의 처리를 두 번 클릭 합니다. 그렇지 않으면 마우스 두 번 클릭 처리 되지 않도록 합니다.  
   
 ### <a name="remarks"></a>설명  
- 두 번 클릭을 처리 하는 상태 표시줄을 사용 하는 경우 Windows 보냅니다는 `WM_COMMAND` 소유자에 게 리소스 ID와 함께 상태에서 사용자 상태 표시줄 창 두 번 클릭할 때마다 표시줄의 알림입니다.  
+ 두 번 클릭을 처리 하는 상태 표시줄 설정 된 경우 Windows에서 상태 표시줄 상태 표시줄 창에 사용자가 두 번 클릭할 때마다의 소유자에 게 리소스 ID와 함께 WM_COMMAND 알림을 보냅니다.  
   
 ##  <a name="enablepaneprogressbar"></a>  CMFCStatusBar::EnablePaneProgressBar  
  지정한 창에 진행률 표시줄을 표시 합니다.  
@@ -297,28 +297,28 @@ void EnablePaneProgressBar(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  사용할 수 있도록 해당 진행률 표시줄 창 인덱스를 지정 합니다.  
   
- [in] `nTotal`  
+ [in] *nTotal*  
  진행률 표시줄에 대 한 최대값을 지정 합니다.  
   
- [in] `bDisplayText`  
+ [in] *bDisplayText*  
  진행률 표시줄 현재 진행률 값을 표시할지 여부를 지정 합니다.  
   
- [in] `clrBar`  
+ [in] *clrBar*  
  진행률 표시줄의 배경색을 지정 합니다.  
   
- [in] `clrBarDest`  
- 진행률 표시줄 배경 보조 색을 지정합니다. 다른 값을 사용 하 여 `clrBar` 을 그라데이션에 혼합 색으로 채웁니다.  
+ [in] *clrBarDest*  
+ 진행률 표시줄 배경 보조 색을 지정합니다. 다른 값을 사용 하 여 *clrBar* 을 그라데이션에 혼합 색으로 채웁니다.  
   
- [in] `clrProgressText`  
+ [in] *clrProgressText*  
  진행률 표시줄의 텍스트 색을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
- 진행률 표시줄 호출을 사용 하지 않도록 설정 하려는 경우 `EnablePaneProgressBar` 와 `nTotal` -1로 설정 합니다. 기본적으로 `nTotal` 100으로 설정 됩니다. 따라서 백분율로 진행률을 표시 하려면 모든 추가 계산 필요 하지 않습니다.  
+ 진행률 표시줄 호출을 사용 하지 않도록 설정 하려는 경우 `EnablePaneProgressBar` 와 *nTotal* -1로 설정 합니다. 기본적으로 *nTotal* 100으로 설정 됩니다. 따라서 백분율로 진행률을 표시 하려면 모든 추가 계산 필요 하지 않습니다.  
   
- 에 대 한 다른 값을 전달 해야 `clrBar` 및 `clrBarDest` 진행률 표시줄의 배경색에 색 그라데이션을에 혼합 표시 되도록 합니다. 이어야 합니다.  
+ 에 대 한 다른 값을 전달 해야 *clrBar* 및 *clrBarDest* 진행률 표시줄의 배경색에 색 그라데이션을에 혼합 표시 되도록 합니다. .  
   
  현재 진행 상태를 설정 하려면 호출는 [CMFCStatusBar::SetPaneProgress](#setpaneprogress) 메서드.  
   
@@ -351,7 +351,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -365,7 +365,7 @@ UINT GetItemID(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -381,8 +381,8 @@ void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
- [in] `lpRect`  
+ [in] *nIndex*  
+ [in] *lpRect*  
   
 ### <a name="remarks"></a>설명  
   
@@ -398,10 +398,10 @@ void GetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
- [in] `nID`  
- [in] `nStyle`  
- [in] `cxWidth`  
+ [in] *nIndex*  
+ [in] *nID*  
+ [in] *nStyle*  
+ [in] *cxWidth*  
   
 ### <a name="remarks"></a>설명  
   
@@ -413,7 +413,7 @@ long GetPaneProgress(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -427,7 +427,7 @@ UINT GetPaneStyle(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -445,8 +445,8 @@ CString GetPaneText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
- [in] `s`  
+ [in] *nIndex*  
+ [in] *s*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -460,11 +460,11 @@ int GetPaneWidth(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  상태 표시줄 창의 인덱스를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 상태 표시줄 창의 너비를 `nIndex` 를 지정 합니다. 그렇지 않은 경우 상태 표시줄 창 존재 하지 않는 경우 0입니다.  
+ 상태 표시줄 창의 너비를 *nIndex* 지정 5d; 상태 표시줄 창 존재 하지 않는 경우 그렇지 않으면 0입니다.  
   
 ##  <a name="gettiptext"></a>  CMFCStatusBar::GetTipText  
  상태 표시줄 창의 도구 설명 텍스트를 검색 합니다.  
@@ -474,11 +474,11 @@ CString GetTipText(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  창에 도구 설명 텍스트를 검색 하려는 인덱스를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 상태 표시줄 창의 도구 설명 텍스트는 `nIndex` 지정 합니다. 지정 된 상태 표시줄 창이 없는 경우 빈 문자열 하는 그렇지 않은 경우 `nIndex` 이거나 도구 설명 텍스트는 비어 있습니다.  
+ 상태 표시줄 창의 도구 설명 텍스트는 *nIndex* 지정 합니다. 지정 된 상태 표시줄 창이 없는 경우 빈 문자열 하는 그렇지 않은 경우 *nIndex* 이거나 도구 설명 텍스트는 비어 있습니다.  
   
 ##  <a name="invalidatepanecontent"></a>  CMFCStatusBar::InvalidatePaneContent  
  상태 표시줄 창을 무효화 하 고 해당 콘텐츠를 다시 그립니다.  
@@ -488,11 +488,11 @@ void InvalidatePaneContent(int nIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  해당 콘텐츠를 무효화 하 고 다시 그릴를 창의 인덱스를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
- 상태 표시줄 무효화 될 때 다시 그리기 위한 표시 됩니다. Windows 다시 그려서 때는 `UpdateWindow` 메서드 보냅니다는 `WM_PAINT` 에 메시지는 `OnPaint` 메서드.  
+ 상태 표시줄 무효화 될 때 다시 그리기 위한 표시 됩니다. Windows 다시 그려서 때는 `UpdateWindow` 메서드 WM_PAINT 메시지를 보내는 `OnPaint` 메서드.  
   
 ##  <a name="ondrawpane"></a>  CMFCStatusBar::OnDrawPane  
  상태 표시줄 창 다시 그립니다.  
@@ -504,14 +504,14 @@ virtual void OnDrawPane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  그리기에 대 한 장치 컨텍스트 포인터입니다.  
   
- [in] `pPane`  
+ [in] *pPane*  
  에 대 한 포인터는 `CMFCStatusBarPaneInfo` 그려야 하는 창에 대 한 정보가 포함 된 구조체입니다.  
   
 ### <a name="remarks"></a>설명  
- 기본적으로 `OnDrawPane` 장치 컨텍스트를 사용 하 여 창에서을 다시 그리면 `pDC` 의 창 스타일 및 내용에 따라 합니다.  
+ 기본적으로 `OnDrawPane` 창 디바이스 컨텍스트를 사용 하 여 다시 그립니다 *pDC* 의 창 스타일 및 내용에 따라 합니다.  
   
  이 메서드를 재정의 한 `CMFCStatusBar`-창의 모양을 사용자 지정 하는 클래스를 파생 합니다.  
   
@@ -523,7 +523,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `cs`  
+ [in] *cs*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -537,7 +537,7 @@ void SetDrawExtendedArea(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bSet`  
+ [in] *bSet*  
   
 ### <a name="remarks"></a>설명  
   
@@ -551,8 +551,8 @@ BOOL SetIndicators(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpIDArray`  
- [in] `nIDCount`  
+ [in] *lpIDArray*  
+ [in] *nIDCount*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -570,16 +570,16 @@ void SetPaneAnimation(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  애니메이션을 할당 하려는 창의 인덱스를 지정 합니다.  
   
- [in] `hImageList`  
+ [in] *hImageList*  
  애니메이션 프레임을 보유 하는 이미지 목록에 대 한 핸들을 지정 합니다.  
   
- [in] `nFrameRate`  
+ [in] *nFrameRate*  
  애니메이션에 대 한 밀리초 프레임 속도 지정합니다.  
   
- [in] `bUpdate`  
+ [in] *b 업데이트*  
  경우 `TRUE`, 창 콘텐츠를 즉시 업데이트 합니다. 그렇지 않으면 창 콘텐츠 무효화 될 때 업데이트 됩니다.  
   
 ### <a name="remarks"></a>설명  
@@ -596,13 +596,13 @@ void SetPaneBackgroundColor(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  창에 새 배경 색을 설정 하는 인덱스를 지정 합니다.  
   
- [in] `clrBackground`  
+ [in] *clrBackground*  
  새 배경 색을 지정합니다.  
   
- [in] `bUpdate`  
+ [in] *b 업데이트*  
  경우 `TRUE`, 창 콘텐츠를 즉시 업데이트 합니다. 그렇지 않은 경우 다른 방법으로 창에서 무효화 될 때까지 창 콘텐츠를 업데이트 하지 마십시오.  
   
 ##  <a name="setpaneicon"></a>  CMFCStatusBar::SetPaneIcon  
@@ -623,20 +623,20 @@ void SetPaneIcon(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  창에 이미지를 설정 하는 인덱스를 지정 합니다.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  창 이미지도 설정할 수 있는 아이콘에 대 한 핸들을 지정 합니다.  
   
- [in] `bUpdate`  
+ [in] *b 업데이트*  
  창 콘텐츠를 즉시 업데이트할 것인지 지정 합니다.  
   
- [in] `hBmp`  
+ [in] *hBmp*  
  창 이미지도 설정 하도록 비트맵에 대 한 핸들을 지정 합니다.  
   
- [in] `clrTransparent`  
- 투명 한 비트맵의 색을 지정 하는 `hBmp` 나타냅니다.  
+ [in] *clrTransparent*  
+ 투명 한 비트맵의 색을 지정 하는 *hBmp* 나타냅니다.  
   
 ### <a name="remarks"></a>설명  
  전달할 수 있습니다 `HICON` 또는 `HBITMAP` 창의 이미지를 설정 하는 투명 한 색과 함께 합니다. 이미지를 더 이상 표시 하지 않을 경우 전달 된 `NULL` 이미지 핸들로 값입니다.  
@@ -655,10 +655,10 @@ void SetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
- [in] `nID`  
- [in] `nStyle`  
- [in] `cxWidth`  
+ [in] *nIndex*  
+ [in] *nID*  
+ [in] *nStyle*  
+ [in] *cxWidth*  
   
 ### <a name="remarks"></a>설명  
   
@@ -673,13 +673,13 @@ void SetPaneProgress(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  창에 진행률 표시기를 업데이트 하려는 인덱스를 지정 합니다.  
   
- [in] `nCurr`  
+ [in] *nCurr*  
  진행률 표시기의 현재 값을 지정합니다.  
   
- [in] `bUpdate`  
+ [in] *b 업데이트*  
  창에서 즉시 업데이트할 수 있는지 여부를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -697,8 +697,8 @@ void SetPaneStyle(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
- [in] `nStyle`  
+ [in] *nIndex*  
+ [in] *nStyle*  
   
 ### <a name="remarks"></a>설명  
   
@@ -713,9 +713,9 @@ virtual BOOL SetPaneText(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
- [in] `lpszNewText`  
- [in] `bUpdate`  
+ [in] *nIndex*  
+ [in] *lpszNewText*  
+ [in] *b 업데이트*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -732,13 +732,13 @@ void SetPaneTextColor(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  새 텍스트 색을 할당 하려면 창의 인덱스를 지정 합니다.  
   
- [in] `clrText`  
+ [in] *clrText*  
  텍스트 색을 지정 합니다.  
   
- [in] `bUpdate`  
+ [in] *b 업데이트*  
  경우 `TRUE`, 창 콘텐츠를 즉시 업데이트 합니다. 그렇지 않은 경우 다른 방법으로 창에서 무효화 될 때까지 창 콘텐츠를 업데이트 하지 마십시오.  
   
 ##  <a name="setpanewidth"></a>  CMFCStatusBar::SetPaneWidth  
@@ -751,10 +751,10 @@ void SetPaneWidth(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  상태 표시줄 창의 새 너비를 설정할 인덱스입니다.  
   
- [in] `cx`  
+ [in] *cx*  
  픽셀 단위로 상태 표시줄 창의 새 너비입니다.  
   
 ##  <a name="settiptext"></a>  CMFCStatusBar::SetTipText  
@@ -767,10 +767,10 @@ void SetTipText(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  도구 설명 텍스트를 할당 하려면 창의 인덱스입니다.  
   
- [in] `pszTipText`  
+ [in] *pszTipText*  
  새 도구 설명 텍스트입니다.  
   
 ## <a name="see-also"></a>참고 항목  

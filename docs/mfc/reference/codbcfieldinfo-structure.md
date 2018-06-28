@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88bcac3c7ce4658ec7dafeaa1cac45b5f2450298
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ede515f0b8bc95d454fec48c6c6bd2109c43ce74
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370736"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040196"
 ---
 # <a name="codbcfieldinfo-structure"></a>CODBCFieldInfo 구조체
 `CODBCFieldInfo` 구조는 ODBC 데이터 원본에 있는 필드에 대 한 정보를 포함 합니다.  
@@ -41,7 +41,7 @@ struct CODBCFieldInfo
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `m_strName`  
+ *m_strName*  
  @FSHO2@필드의 이름입니다.  
   
  *m_nSQLType*  

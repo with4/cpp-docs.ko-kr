@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9267dd6ab89871bcf8058529f32eb3686be937df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d078900c3436c2205905b92d651bab86e94db246
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368438"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039013"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl 클래스
 리본에 배치되는 하이퍼링크를 구현합니다. 하이퍼링크를 클릭하면 웹 페이지가 열립니다.  
@@ -106,16 +106,16 @@ CMFCRibbonLinkCtrl(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nID`  
+ [in] *nID*  
  링크 컨트롤을 클릭할 때 실행 되는 명령의 명령 ID를 지정 합니다.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  링크 컨트롤에 표시할 레이블을 지정 합니다.  
   
- [in] `lpszLink`  
+ [in] *lpszLink*  
  링크 컨트롤에 연결 된 하이퍼링크를 지정 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는의 생성자를 사용 하 여 `CMFCRibbonLinkCtrl` 클래스입니다. 이 코드 조각은의 일부인는 [리본 가젯 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]  
@@ -128,7 +128,7 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `src`  
+ [in] *src*  
   
 ### <a name="remarks"></a>설명  
   
@@ -140,7 +140,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -166,7 +166,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -191,8 +191,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `CDC*`  
- [in] `CRect`  
+ [in] *CDC**  
+ [in] *CRect*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -217,7 +217,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>설명  
   
@@ -229,7 +229,7 @@ virtual void OnMouseMove(CPoint point);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `point`  
+ [in] *지점*  
   
 ### <a name="remarks"></a>설명  
   
@@ -263,7 +263,7 @@ void SetLink(LPCTSTR lpszLink);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszLink`  
+ [in] *lpszLink*  
  하이퍼링크 텍스트를 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85161e7f3dd752c6df27afedf6276f8823e7ec6e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f758a3cc82d4f6cfcc28f89ae206a82b899c0042
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371366"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037617"
 ---
 # <a name="colemessagefilter-class"></a>COleMessageFilter 클래스
 OLE 응용 프로그램의 상호 작용으로 요구되는 동시성을 관리합니다.  
@@ -110,7 +110,7 @@ virtual void BeginBusyState();
   
  `BeginBusyState` 및 `EndBusyState` 호출 증가 및 감소, 각각: 응용 프로그램 사용 중인지 여부를 결정 하는 카운터입니다. 예를 들어 두 호출 `BeginBusyState` 를 한 번 호출 하 고 `EndBusyState` 여전히 사용 중인 상태의 결과입니다. 호출할 필요는 없음 상태를 취소 하려면 `EndBusyState` 동일한 횟수 만큼 `BeginBusyState` 가 호출 되었습니다.  
   
- 기본적으로 프레임 워크는 상태가 사용 중 수행 하는 유휴 처리 하는 동안 [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)합니다. 응용 프로그램을 처리 하는 동안 **ON_COMMANDUPDATEUI** 유휴 상태 처리가 완료 된 후 알림, 들어오는 호출 나중 처리 됩니다.  
+ 기본적으로 프레임 워크는 상태가 사용 중 수행 하는 유휴 처리 하는 동안 [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)합니다. 응용 프로그램 ON_COMMANDUPDATEUI 알림을 처리 하는 동안 유휴 상태 처리가 완료 된 후 들어오는 호출 나중 처리 됩니다.  
   
 ##  <a name="colemessagefilter"></a>  COleMessageFilter::COleMessageFilter  
  
@@ -154,7 +154,7 @@ virtual void EndBusyState();
   
  `BeginBusyState` 및 `EndBusyState` 호출 증가 및 감소, 각각: 응용 프로그램 사용 중인지 여부를 결정 하는 카운터입니다. 예를 들어 두 호출 `BeginBusyState` 를 한 번 호출 하 고 `EndBusyState` 여전히 사용 중인 상태의 결과입니다. 호출할 필요는 없음 상태를 취소 하려면 `EndBusyState` 동일한 횟수 만큼 `BeginBusyState` 가 호출 되었습니다.  
   
- 기본적으로 프레임 워크는 상태가 사용 중 수행 하는 유휴 처리 하는 동안 [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)합니다. 응용 프로그램을 처리 하는 동안 `ON_UPDATE_COMMAND_UI` 유휴 상태 처리가 완료 된 후 알림, 들어오는 호출 처리 됩니다.  
+ 기본적으로 프레임 워크는 상태가 사용 중 수행 하는 유휴 처리 하는 동안 [CWinApp::OnIdle](../../mfc/reference/cwinapp-class.md#onidle)합니다. 응용 프로그램 ON_UPDATE_COMMAND_UI 알림을 처리 하는 동안 유휴 상태 처리가 완료 된 후 들어오는 호출을 처리 합니다.  
   
 ##  <a name="onmessagepending"></a>  COleMessageFilter::OnMessagePending  
  OLE 호출이 진행 중인 동안에 메시지를 처리 하기 위해 프레임 워크에서 호출 됩니다.  
@@ -164,14 +164,14 @@ virtual BOOL OnMessagePending(const MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pMsg`  
+ *pMsg*  
  보류 중인 메시지에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아닌 값이고, 실패하면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 프레임 워크에서 호출을 완료할 수에 대 한 호출에 대 한 호출 응용 프로그램은 대기 하는 경우 `OnMessagePending` 보류 중인 메시지에 대 한 포인터입니다. 기본적으로 프레임 워크 디스패치 `WM_PAINT` 메시지 창이 업데이트 되는 시간이 오래 걸리는 호출 하는 동안 발생할 수 있도록 합니다.  
+ 프레임 워크에서 호출을 완료할 수에 대 한 호출에 대 한 호출 응용 프로그램은 대기 하는 경우 `OnMessagePending` 보류 중인 메시지에 대 한 포인터입니다. 기본적으로 창이 업데이트 되는 시간이 오래 걸리는 호출 하는 동안 발생할 수 있도록 프레임 워크 WM_PAINT 메시지를 디스패치합니다.  
   
  호출 하 여 메시지 필터를 등록 해야 [등록](#register) 활성화 될 수 있습니다.  
   
@@ -234,7 +234,7 @@ void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nTimeout`  
+ *nTimeout*  
  메시지 보류 중인 지연에 대 한 밀리초 수입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -248,7 +248,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nRetryReply`  
+ *nRetryReply*  
  재시도 사이의 밀리초 수입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -256,7 +256,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
   
  함수에 의해 제어 되는 호출자의 응답 `SetRetryReply` 및 [SetMessagePendingDelay](#setmessagependingdelay)합니다. `SetRetryReply` 호출 응용 프로그램이 지정된 된 호출에 대 한 다시 시도 간에 대기 해야 기간을 결정 합니다. `SetMessagePendingDelay` 호출 응용 프로그램 서버에서 응답에 대 한 추가 작업을 수행 하기 전에 대기 하는 기간을 결정 합니다.  
   
- 일반적으로 기본값은 허용 되 고 변경 될 필요가 없습니다. 프레임 워크에서 호출을 다시 시도 마다 `nRetryReply` 호출이 진행 되거나 만료 된 메시지 보류 중인 지연 될 때까지 시간 (밀리초)입니다. 값이 0에 대 한 `nRetryReply` 지정는 즉시 재시도 및-1 호출의 취소를 지정 합니다.  
+ 일반적으로 기본값은 허용 되 고 변경 될 필요가 없습니다. 프레임 워크에서 호출을 다시 시도 마다 *nRetryReply* 호출이 진행 되거나 만료 된 메시지 보류 중인 지연 될 때까지 시간 (밀리초)입니다. 값이 0에 대 한 *nRetryReply* 지정는 즉시 재시도 및-1 호출의 취소를 지정 합니다.  
   
  "사용 중 대화 상자" OLE, 메시지 보류 중인 지연 만료 된 시점 (참조 [COleBusyDialog](../../mfc/reference/colebusydialog-class.md)) 사용자 취소 하거나 다시 호출 하도록 선택할 수 있도록 표시 됩니다. 호출 [EnableBusyDialog](#enablebusydialog) 사용 하도록 설정 하거나이 대화 상자를 사용 하지 않도록 설정 합니다.  
   

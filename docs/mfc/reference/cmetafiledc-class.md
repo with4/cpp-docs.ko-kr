@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a588a848e7964a70f47d4cf29a5f5ef2741881d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eaec2b7951b0655a8a47106374c7527dad27bd20
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368156"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039539"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC 클래스
 원하는 이미지 또는 텍스트를 만들기 위해 재생할 수 있는 GDI(그래픽 장치 인터페이스) 명령 시퀀스가 포함된 Windows 메타파일을 구현합니다.  
@@ -64,7 +64,7 @@ class CMetaFileDC : public CDC
   
  그러면 보냅니다는 `CMetaFileDC` 일련의 개체 `CDC` 재생 되 게 하려는 GDI 명령입니다. 와 같은 출력을 만들 수 있는 GDI 명령만 `MoveTo` 및 `LineTo`를 사용할 수 있습니다.  
   
- 메타 파일에 원하는 명령을 보낸 후 호출 하는 **닫기** 메타 파일 장치 컨텍스트를 닫고 메타 파일 핸들을 반환 하는 멤버 함수입니다. 삭제는 `CMetaFileDC` 개체입니다.  
+ 메타 파일에 원하는 명령을 보낸 후 호출 하는 `Close` 메타 파일 장치 컨텍스트를 닫고 메타 파일 핸들을 반환 하는 멤버 함수입니다. 삭제는 `CMetaFileDC` 개체입니다.  
   
  [CDC::PlayMetaFile](../../mfc/reference/cdc-class.md#playmetafile) 메타 파일을 반복 해 서 재생 메타 파일 핸들을 유도할 수 있습니다. 메타 파일 조작할 수도 있습니다 Windows 함수에서와 같은 [CopyMetaFile](http://msdn.microsoft.com/library/windows/desktop/dd183480), 디스크에 메타 파일을 복사 하 합니다.  
   
@@ -171,16 +171,16 @@ BOOL CreateEnhanced(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDCRef`  
+ *pDCRef*  
  확장된 메타 파일에 대 한 참조 장치를 식별합니다.  
   
- `lpszFileName`  
+ *lpszFileName*  
  Null로 끝나는 문자열을 가리킵니다. 만들 확장된 메타 파일의 파일 이름을 지정 합니다. 이 매개 변수가 **NULL**, 확장된 메타 파일은 메모리 기반 및 때나는 개체가 소멸 될 때 손실 내용이 Win32 **DeleteEnhMetaFile** 함수를 호출 합니다.  
   
- `lpBounds`  
+ *lpBounds*  
  가리키는 [RECT](../../mfc/reference/rect-structure1.md) 데이터 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체의 크기를 지정 하는 **HIMETRIC** 에 저장 될 그림의 (.01 밀리미터 단위로) 단위는 확장된 메타 파일입니다.  
   
- `lpszDescription`  
+ *lpszDescription*  
  그림의 제목 뿐만 아니라 그림을 생성 한 응용 프로그램의 이름을 지정 하는 0으로 끝나는 문자열을 가리킵니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -189,15 +189,15 @@ BOOL CreateEnhanced(
 ### <a name="remarks"></a>설명  
  장치 독립적 사진을 저장 하에이 DC는 사용할 수 있습니다.  
   
- Windows에서 인식 된 참조 장치를 사용 하 여는 `pDCRef` 해상도 및 장치에 그림 원래 표시 단위 기록 하기 위해 매개 변수입니다. 경우는 `pDCRef` 매개 변수는 **NULL**, 참조에 대 한 현재 디스플레이 장치를 사용 합니다.  
+ Windows에서로 식별 되는 참조 장치를 사용 하는 *pDCRef* 해상도 및 장치에 그림 원래 표시 단위 기록 하기 위해 매개 변수입니다. 경우는 *pDCRef* 매개 변수는 **NULL**, 참조에 대 한 현재 디스플레이 장치를 사용 합니다.  
   
- 왼쪽 및 위쪽 멤버는 `RECT` 에서 가리키는 데이터 구조는 `lpBounds` 매개 변수 각각 오른쪽 아래 멤버 미만 이어야 합니다. 사각형의 가장자리를 따라 포인트는 그림에 포함 됩니다. 경우 `lpBounds` 은 **NULL**, 그래픽 장치 인터페이스 GDI ()는 응용 프로그램에 의해 그려진 그림 묶을 수 있는 가장 작은 사각형의 크기를 계산 합니다. `lpBounds` 가능한 매개 변수를 제공 해야 합니다.  
+ 왼쪽 및 위쪽 멤버는 `RECT` 가리키는 데이터 구조는 *lpBounds* 매개 변수 각각 오른쪽 아래 멤버 미만 이어야 합니다. 사각형의 가장자리를 따라 포인트는 그림에 포함 됩니다. 경우 *lpBounds* 은 **NULL**, 그래픽 장치 인터페이스 GDI ()는 응용 프로그램에 의해 그려진 그림 묶을 수 있는 가장 작은 사각형의 크기를 계산 합니다. *lpBounds* 가능한 매개 변수를 제공 해야 합니다.  
   
- 가 가리키는 문자열은 `lpszDescription` 매개 변수는 응용 프로그램 이름 및 사진 이름 사이는 null 문자를 포함 해야 하 고 두 null 문자로 종료 해야-예를 들어 "XYZ 그래픽 Editor\0Bald Eagle\0\0," \0은 null을 나타냅니다 문자입니다. 경우 `lpszDescription` 은 **NULL**, 확장 메타 파일 헤더에 해당 항목이 있습니다.  
+ 가 가리키는 문자열은 *lpszDescription* 매개 변수는 응용 프로그램 이름 및 사진 이름 사이는 null 문자를 포함 해야 하 고 두 null 문자로 종료 해야-예를 들어 "XYZ 그래픽 Editor\0Bald Eagle\0\0, "\0 나타냅니다 null 문자. 경우 *lpszDescription* 은 **NULL**, 확장 메타 파일 헤더에 해당 항목이 있습니다.  
   
  그래픽 그림 확장된 메타 파일에 저장 하려면이 함수에서 만든 DC를 사용 하는 응용 프로그램. 이 DC를 식별 하는 핸들 모든 GDI 함수에 전달할 수 있습니다.  
   
- 그림 확장된 메타 파일에 저장 하는 응용 프로그램, 후 것에 표시할 수 그림 모든 출력 장치를 호출 하 여는 `CDC::PlayMetaFile` 함수입니다. Windows에서 가리키는 사각형 사용 하 여 그림을 표시할 때의 `lpBounds` 매개 변수 및 위치를 지정 하 고 그림의 크기를 조정 하는 참조 장치에서 확인 데이터입니다. 이 함수에서 반환 하는 장치 컨텍스트는 모든 새 DC와 관련 된 동일한 기본 특성을 포함 합니다.  
+ 그림 확장된 메타 파일에 저장 하는 응용 프로그램, 후 것에 표시할 수 그림 모든 출력 장치를 호출 하 여는 `CDC::PlayMetaFile` 함수입니다. Windows에서 가리키는 사각형 사용 하 여 그림을 표시할 때는 *lpBounds* 매개 변수 및 위치를 지정 하 고 그림의 크기를 조정 하는 참조 장치에서 확인 데이터입니다. 이 함수에서 반환 하는 장치 컨텍스트는 모든 새 DC와 관련 된 동일한 기본 특성을 포함 합니다.  
   
  응용 프로그램에는 Win32 사용 해야 **GetWinMetaFileBits** 확장된 메타 파일에서 이전 Windows 메타 파일 형식으로 변환 하는 함수입니다.  
   

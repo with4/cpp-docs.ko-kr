@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c19386aeac0d85565ae7834a881d710d9226ef9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ea9fddef1b032d1e17ea46229a992c23ca960822
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370707"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039026"
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton 클래스
 `CMFCColorMenuButton` 메뉴 명령이 나 색 선택 대화 상자를 시작 하는 도구 모음 단추가 클래스를 지원 합니다.  
@@ -111,7 +111,7 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
   
  색 선택 대화 상자를 처리 하는 동안 만들어집니다는 [CMFCColorMenuButton::CreatePopupMenu](#createpopupmenu) 이벤트 처리기입니다. 이벤트 처리기에 사용 하 여 부모 프레임 알립니다는 `WM_COMMAND` 메시지입니다. `CMFCColorMenuButton` 개체 원래 메뉴 명령이 나 도구 모음 단추에 할당 된 컨트롤 ID를 보냅니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 만들고 색 메뉴 단추에서 다양 한 메서드를 사용 하 여 구성 하는 `CMFCColorMenuButton` 클래스입니다. 예제에서는 한 `CPalette` 개체가 처음 생성 되 고 다음의 개체를 생성 하는 데는 `CMFCColorMenuButton` 클래스입니다. `CMFCColorMenuButton` 개체의 자동 및 기타 단추를 사용 하도록 설정 하 고 색 및 열 수를 설정 하 여 구성 됩니다. 이 코드는의 일부는 [워드 패드 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_WordPad#5](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_1.h)]  
@@ -143,13 +143,13 @@ CMFCColorMenuButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  단추 명령 id입니다.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  단추 텍스트입니다.  
   
- [in] `pPalette`  
+ [in] *pPalette*  
  단추의 색 팔레트에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -167,7 +167,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `src`  
+ [in] *src*  
  복사할 소스 단추입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -197,13 +197,13 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  버튼 자동 때 표시 되는 단추 텍스트를 지정 합니다.  
   
- [in] `colorAutomatic`  
+ [in] *colorAutomatic*  
  새 자동 색을 지정합니다.  
   
- [in] `bEnable`  
+ [in] *bEnable*  
  단추 자동 인지 여부를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -219,10 +219,10 @@ void EnableDocumentColors(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  단추 텍스트를 지정합니다.  
   
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` 문서에 고유한 색을 표시 하려면 또는 `FALSE` 시스템 색을 표시 하도록 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -239,13 +239,13 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  단추 텍스트를 지정합니다.  
   
- [in] `bAltColorDlg`  
+ [in] *bAltColorDlg*  
  지정 `TRUE` 표시 하는 `CMFCColorDialog` 대화 상자 또는 `FALSE` 표준 시스템 색 대화 상자를 표시 합니다.  
   
- [in] `bEnable`  
+ [in] *bEnable*  
  지정 `TRUE` "기타" 단추를 표시 하 고, 그러지 `FALSE`합니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -261,13 +261,13 @@ void EnableTearOff(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiID`  
+ [in] *uiID*  
  분리 창에 대 한 ID를 지정합니다.  
   
- [in] `nVertDockColumns`  
+ [in] *nVertDockColumns*  
  분리 상태에 있는 동안 색 세로로 도킹 된 창에서 열 수를 지정 합니다.  
   
- [in] `nHorzDockRows`  
+ [in] *nHorzDockRows*  
  분리 된 상태에서 가로로 정렬 된 색 창에 대 한 행 수를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -306,14 +306,14 @@ static COLORREF GetColorByCmdID(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  명령 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
  지정한 명령 ID에 해당 하는 색  
   
 ### <a name="remarks"></a>설명  
- 응용 프로그램에서 여러 색 단추가 있는 경우이 방법을 사용 합니다. 단추 색 단추를 클릭할 때의 명령 ID를 전달는 `WM_COMMAND` 부모에 대 한 메시지입니다. `GetColorByCmdID` 메서드 명령 ID를 사용 하 여 해당 색을 검색 합니다.  
+ 응용 프로그램에서 여러 색 단추가 있는 경우이 방법을 사용 합니다. 색 단추를 클릭할 단추 WM_COMMAND 메시지에 명령 ID를 해당 부모에 보냅니다. `GetColorByCmdID` 메서드 명령 ID를 사용 하 여 해당 색을 검색 합니다.  
   
 ##  <a name="isemptymenuallowed"></a>  CMFCColorMenuButton::IsEmptyMenuAllowed  
  빈 메뉴 지원 되는지 여부를 나타냅니다.  
@@ -336,7 +336,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  새 부모 창에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -357,28 +357,28 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  그릴 영역 경계가 되는 사각형입니다.  
   
- [in] `pImages`  
+ [in] *pImages*  
  도구 모음 이미지의 목록을를 가리킵니다.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  `TRUE` 도구 모음 가로 도킹 된 상태 이면 임을 지정 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
   
- [in] `bCustomizeMode`  
+ [in] *bCustomizeMode*  
  `TRUE` 응용 프로그램에 사용자 지정 모드; 임을 지정 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `FALSE`입니다.  
   
- [in] `bHighlight`  
+ [in] *bHighlight*  
  `TRUE` 지정 하는 단추가 강조 표시 됩니다. 그렇지 않으면 `FALSE`합니다. 기본값은 `FALSE`입니다.  
   
- [in] `bDrawBorder`  
+ [in] *bDrawBorder*  
  `TRUE` 단추의 테두리; 표시 되도록 지정 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
   
- [in] `bGrayDisabledButtons`  
+ [in] *bGrayDisabledButtons*  
  `TRUE` 사용 하지 않도록 지정 하려면 단추는 회색으로 표시 (회색)으로; 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -394,13 +394,13 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  사각형을 그릴 수 있도록 단추 제한입니다.  
   
- [in] `bSelected`  
+ [in] *bSelected*  
  `TRUE` 단추가 선택 된 상태 이면 임을 지정합니다 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -419,17 +419,17 @@ virtual BOOL OpenColorDialog(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `colorDefault`  
+ [in] *colorDefault*  
  색 대화 상자에서 선택한 기본 색입니다.  
   
- [out] `colorRes`  
+ [out] *colorRes*  
  색 대화 상자에서 사용자가 선택한 색을 반환 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  사용자가 새 색;를 선택 하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 메뉴 단추를 클릭할 때 색 대화 상자를 열려면이 메서드를 호출 합니다. 반환 값은 0이 아닌, 사용자가 선택한 색에 저장 됩니다는 `colorRes` 매개 변수입니다. 사용 하 여는 [CMFCColorMenuButton::EnableOtherButton](#enableotherbutton) 표준 색 대화 상자 간을 전환 하는 메서드 및 [CMFCColorDialog 클래스](../../mfc/reference/cmfccolordialog-class.md) 대화 상자.  
+ 메뉴 단추를 클릭할 때 색 대화 상자를 열려면이 메서드를 호출 합니다. 반환 값은 0이 아닌, 사용자가 선택한 색에 저장 됩니다는 *colorRes* 매개 변수입니다. 사용 하 여는 [CMFCColorMenuButton::EnableOtherButton](#enableotherbutton) 표준 색 대화 상자 간을 전환 하는 메서드 및 [CMFCColorDialog 클래스](../../mfc/reference/cmfccolordialog-class.md) 대화 상자.  
   
 ##  <a name="setcolor"></a>  CMFCColorMenuButton::SetColor  
  현재 색 단추가 색을 설정합니다.  
@@ -441,14 +441,14 @@ virtual void SetColor(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `clr`  
+ [in] *clr*  
  RGB 색상 값입니다.  
   
- [in] `bNotify`  
- `TRUE` 적용 하는 `clr` 모든 연결 된 메뉴 단추 또는 도구 모음 단추; 매개 변수 색, `FALSE`합니다.  
+ [in] *bNotify*  
+ `TRUE` 적용 하는 *clr* 모든 연결 된 메뉴 단추 또는 도구 모음 단추; 매개 변수 색, `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
- 현재 색 단추가 색을 변경 하려면이 메서드를 호출 합니다. 경우는 `bNotify` 매개 변수는 0이 아니고, 연결 된 팝업 메뉴 또는 도구 모음에는 해당 단추의 색으로 지정 된 색으로 변경 되는 `clr` 매개 변수입니다.  
+ 현재 색 단추가 색을 변경 하려면이 메서드를 호출 합니다. 경우는 *bNotify* 매개 변수는 0이 아니고, 연결 된 팝업 메뉴 또는 도구 모음에는 해당 단추의 색으로 지정 된 색으로 변경 되는 *clr* 매개 변수입니다.  
   
 ##  <a name="setcolorbycmdid"></a>  CMFCColorMenuButton::SetColorByCmdID  
  지정 된 색 메뉴 단추의 색을 설정합니다.  
@@ -460,10 +460,10 @@ static void SetColorByCmdID(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  색 메뉴 단추의 리소스 ID입니다.  
   
- [in] `color`  
+ [in] *색*  
  RGB 색상 값입니다.  
   
 ##  <a name="setcolorname"></a>  CMFCColorMenuButton::SetColorName  
@@ -476,10 +476,10 @@ static void SetColorName(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `color`  
+ [in] *색*  
  해당 이름이 변경 되는 색의 RGB 값입니다.  
   
- [in] `strName`  
+ [in] *strName*  
  색의 새 이름입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -492,7 +492,7 @@ void SetColumnsNumber(int nColumns);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nColumns`  
+ [in] *nColumns*  
  표시할 열의 수입니다.  
   
 ### <a name="remarks"></a>설명  

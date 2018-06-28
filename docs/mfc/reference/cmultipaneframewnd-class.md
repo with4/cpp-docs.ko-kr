@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 738c8c3fa25fcfe0a657685b370f8e973d483861
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c95fbe88f91f3eaf0787fa9762d507a49f231c4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375926"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039208"
 ---
 # <a name="cmultipaneframewnd-class"></a>CMultiPaneFrameWnd 클래스
 `CMultiPaneFrameWnd` 클래스 확장 [CPaneFrameWnd 클래스](../../mfc/reference/cpaneframewnd-class.md)합니다. 여러 창을 지원합니다. 컨트롤 막대에 포함 된 단일 핸들 대신 `CMultiPaneFrameWnd` 포함 한 [CPaneContainerManager 클래스](../../mfc/reference/cpanecontainermanager-class.md) 하나 도킹할 수 있는 개체 `CMultiPaneFrameWnd` 간에 이동 하 고 동적으로 만들 여러 부동, 탭 창입니다.  
@@ -161,7 +161,7 @@ class CMultiPaneFrameWnd : public CPaneFrameWnd
   
  클래스를 파생 하는 방법에 대 한 내용은 `CPaneFrameWnd` 클래스 및 동적으로 만들기, 참조 [CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에 대 한 포인터를 검색 하는 방법을 보여 줍니다는 `CMultiPaneFrameWnd` 개체입니다. 이 코드 조각은의 일부인는 [창 크기 설정 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_SetPaneSize#4](../../mfc/reference/codesnippet/cpp/cmultipaneframewnd-class_1.cpp)]  
@@ -188,7 +188,7 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWnd`  
+ [in] *pWnd*  
   
 ### <a name="remarks"></a>설명  
   
@@ -200,7 +200,7 @@ virtual BOOL AddRecentPane(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -237,11 +237,11 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWndToDock`  
- [in] `ptMouse`  
- [in] `rectResult`  
- [in] `bDrawTab`  
- [in] `ppTargetBar`  
+ [in] *pWndToDock*  
+ [in] *ptMouse*  
+ [in] *rectResult*  
+ [in] *bDrawTab*  
+ [in] *ppTargetBar*  
   
 ### <a name="remarks"></a>설명  
   
@@ -264,7 +264,7 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDockingBar`  
+ [in] *pDockingBar*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -307,8 +307,8 @@ virtual BOOL DockFrame(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDockedFrame`  
- [in] `dockMethod`  
+ [in] *pDockedFrame*  
+ [in] *dockMethod*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -322,7 +322,7 @@ virtual BOOL DockPane(CDockablePane* pDockedBar);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDockedBar`  
+ [in] *pDockedBar*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -336,7 +336,7 @@ virtual void DockRecentPaneToMainFrame(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>설명  
   
@@ -419,9 +419,9 @@ virtual BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pControlBar`  
- [in] `pTarget`  
- [in] `bAfter`  
+ [in] *pControlBar*  
+ [in] *pTarget*  
+ [in] *후에는*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -437,8 +437,8 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszProfileName`  
- [in] `uiID`  
+ [in] *lpszProfileName*  
+ [in] *uiID*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -490,8 +490,8 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pBar`  
- [in] `bShow`  
+ [in] *pBar*  
+ [in] *bShow*  
   
 ### <a name="remarks"></a>설명  
   
@@ -506,9 +506,9 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `point`  
- [in] `nSensitivity`  
- [in] `bCheckVisibility`  
+ [in] *지점*  
+ [in] *nSensitivity*  
+ [in] *bCheckVisibility*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -534,9 +534,9 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pBar`  
- [in] `bDestroy`  
- [in] `bNoDelayedDestroy`  
+ [in] *pBar*  
+ [in] *bDestroy*  
+ [in] *bNoDelayedDestroy*  
   
 ### <a name="remarks"></a>설명  
   
@@ -550,8 +550,8 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pBarOrg`  
- [in] `pBarReplaceWith`  
+ [in] *pBarOrg*  
+ [in] *pBarReplaceWith*  
   
 ### <a name="remarks"></a>설명  
   
@@ -565,8 +565,8 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszProfileName`  
- [in] `uiID`  
+ [in] *lpszProfileName*  
+ [in] *uiID*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -580,7 +580,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `ar`  
+ [in] *ar*  
   
 ### <a name="remarks"></a>설명  
   
@@ -592,7 +592,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDockManager`  
+ [in] *pDockManager*  
   
 ### <a name="remarks"></a>설명  
   
@@ -604,7 +604,7 @@ void SetLastFocusedPane(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `hwnd`  
+ [in] *hwnd*  
   
 ### <a name="remarks"></a>설명  
   
@@ -619,9 +619,9 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `preDockState`  
- [in] `pBarToDock`  
- [in] `dockMethod`  
+ [in] *preDockState*  
+ [in] *pBarToDock*  
+ [in] *dockMethod*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -635,7 +635,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>설명  
   
@@ -649,8 +649,8 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDockingBar`  
- [in] `pTabbedBar`  
+ [in] *pDockingBar*  
+ [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>설명  
   

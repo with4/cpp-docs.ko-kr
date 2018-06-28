@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 63c123e135458ff627bc6004e3299c667354ed41
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d358e256e28ea61c9b9c287429dfdfcb7b1435c6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367145"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041833"
 ---
 # <a name="cmapwordtoob-class"></a>CMapWordToOb 클래스
 16비트 단어로 키가 지정된 `CObject` 포인터 맵을 지원합니다.  
@@ -61,7 +61,7 @@ class CMapWordToOb : public CObject
 ```  
   
 ## <a name="members"></a>멤버  
- 멤버 함수 `CMapWordToOb` 클래스의 멤버 함수와 비슷한 [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)합니다. 이처럼 두 함수가 비슷하므로 `CMapStringToOb` 참조 설명서에서 멤버 함수 관련 사항을 확인할 수 있습니다. 볼 때마다는 `CString` 또는 **const** 에 대 한 포인터 `char` 를 함수 매개 변수 또는 반환 값으로 대체 **단어**합니다.  
+ 멤버 함수 `CMapWordToOb` 클래스의 멤버 함수와 비슷한 [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)합니다. 이처럼 두 함수가 비슷하므로 `CMapStringToOb` 참조 설명서에서 멤버 함수 관련 사항을 확인할 수 있습니다. 볼 때마다는 `CString` 또는 **const** 에 대 한 포인터 **char** 를 함수 매개 변수 또는 반환 값으로 대체 **단어**합니다.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
   

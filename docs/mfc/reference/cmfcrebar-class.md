@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abb880c1add83ec03d787c28b816f2e82caeddd6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcef7bab4fd2b0cd913c0da929534d6964730215
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368802"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037963"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar 클래스
 A `CMFCReBar` 개체는 레이아웃, 지 속성 및 rebar 컨트롤에 대 한 상태 정보를 제공 하는 컨트롤 막대입니다.  
@@ -77,7 +77,7 @@ class CMFCReBar : public CPane
   
  Rebar 개체 도구 모음 개체 비슷하게 동작 합니다. Rebar 컨트롤에는 하나 이상의 밴드를 포함할 수 및 각 밴드에는 그리퍼 막대, 비트맵, 텍스트 레이블 및 자식 창을 포함 될 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCReBar` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. Rebar 컨트롤을 만들고 밴드에 추가 하는 방법을 보여 줍니다. 밴드는 내부 도구 모음으로 작동합니다. 이 코드 조각은의 일부인는 [Rebar 테스트 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_RebarTest#1](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_1.h)]  
@@ -110,22 +110,22 @@ BOOL AddBar(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] [out] `pBar`  
+ [in] [out] *pBar*  
  Rebar에 삽입할 수 있는 자식 창에 대 한 포인터입니다. 참조 된 개체가 있어야는 **WS_CHILD** 창 스타일입니다.  
   
- [in] `pszText`  
+ [in] *pszText*  
  Rebar에 표시할 텍스트를 지정 합니다. 텍스트 자식 창의 일부가 아닙니다. 대신, rebar 자체에 표시 됩니다.  
   
- [in] [out] `pbmp`  
+ [in] [out] *pbmp*  
  Rebar 배경에 표시할 비트맵을 지정 합니다.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  밴드에 적용할 스타일을 포함 합니다. 대역 외 스타일 목록은 전체에 대 한 설명을 참조 `fStyle` 에 [REBARBANDINFO](http://msdn.microsoft.com/library/windows/desktop/bb774393) Windows SDK 설명서에는 구조입니다.  
   
- [in] `clrFore`  
+ [in] *clrFore*  
  Rebar의 전경색을 나타냅니다.  
   
- [in] `clrBack`  
+ [in] *clrBack*  
  Rebar의 배경색을 나타냅니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -143,16 +143,16 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  이 rebar 컨트롤의 부모 창에 대 한 포인터입니다.  
   
- [in] `dwCtrlStyle`  
+ [in] *dwCtrlStyle*  
  Rebar 컨트롤의 스타일을 지정합니다. 기본 스타일 값은 **RBS_BANDBORDERS**, 어떤 표시 좁힐 선으로 인접 한 rebar 컨트롤 밴드를 구분 합니다. 목록이 유효한 스타일에 대 한 참조 [Rebar 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb774377) Windows SDK 설명서에서입니다.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  Rebar 컨트롤의 창 스타일입니다. 목록이 유효한 스타일에 대 한 참조 [창 스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles)합니다.  
   
- [in] `nID`  
+ [in] *nID*  
  Rebar의 자식 창 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -183,8 +183,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -209,7 +209,7 @@ void EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
   
 ### <a name="remarks"></a>설명  
   
@@ -232,7 +232,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `CPoint`  
+ [in] *CPoint*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -248,8 +248,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `point`  
- [in] `pTI`  
+ [in] *지점*  
+ [in] *pTI*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -265,8 +265,8 @@ virtual void OnUpdateCmdUI(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pTarget`  
- [in] `bDisableIfNoHndler`  
+ [in] *pTarget*  
+ [in] *bDisableIfNoHndler*  
   
 ### <a name="remarks"></a>설명  
   
@@ -278,7 +278,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
   
 ### <a name="remarks"></a>설명  
   

@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb1ef84aabed69554ded868bbe9092c3e8b7082f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a94ad813ff72eaed2642e9c78a098b999bf128fa
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370414"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040079"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>CMFCPreviewCtrlImpl 클래스
 이 클래스는 for Rich Preview 셸에서 제공 하는 호스 창에 배치 하는 창을 구현 합니다.  
@@ -93,7 +93,7 @@ class CMFCPreviewCtrlImpl : public CWnd;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCPreviewCtrlImpl::m_clrBackColor](#m_clrbackcolor)|미리 보기 창의 배경색입니다.|  
 |[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|미리 보기 창의 텍스트 색입니다.|  
@@ -136,13 +136,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hWndParent`  
+ *창은*  
  서식 있는 미리 보기에 대 한 셸에서 제공 호스트 창에 대 한 핸들입니다.  
   
- `prc`  
+ *중국*  
  초기 크기와 창의 위치를 지정합니다.  
   
- `pContext`  
+ *pContext*  
  컨텍스트를 만들지에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -169,7 +169,7 @@ virtual void DoPaint(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  그리기 장치 컨텍스트 포인터입니다.  
 
 
@@ -246,7 +246,7 @@ void SetDocument(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDocument`  
+ *pDocument*  
  문서 구현에 대 한 포인터입니다.  
 
 ## <a name="sethost"></a> CMFCPreviewCtrlImpl::SetHost  
@@ -261,7 +261,7 @@ virtual void SetHost(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hWndParent`  
+ *창은*  
  새 부모 창에 대 한 핸들입니다.  
 
 ## <a name="setpreviewvisuals"></a> CMFCPreviewCtrlImpl::SetPreviewVisuals  
@@ -278,13 +278,13 @@ virtual void SetPreviewVisuals(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `clrBack`  
+ *clrBack*  
  미리 보기 창의 배경색입니다.  
   
- `clrText`  
+ *clrText*  
  미리 보기 창의 텍스트 색입니다.  
   
- `plf`  
+ *plf*  
  미리 보기 창에 텍스트를 표시 하는 데 사용 하는 글꼴입니다. 
 
 ##  <a name="setrect"></a> CMFCPreviewCtrlImpl::SetRect  
@@ -300,10 +300,10 @@ virtual void SetRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `prc`  
+ *중국*  
  새 크기와 미리 보기 컨트롤의 위치를 지정합니다.  
   
- `bRedraw`  
+ *bRedraw*  
  컨트롤 그려야 하는지 여부를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  

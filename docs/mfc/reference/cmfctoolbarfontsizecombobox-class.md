@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b2c5734618bf1bedc72fe78dbeaada8c437391f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 53f87dd55373599f8ab8394284a6271930b9fcd6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372784"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037511"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>CMFCToolBarFontSizeComboBox 클래스
 글꼴 크기를 선택할 수 있도록 해 주는 콤보 상자 컨트롤을 포함 하는 도구 모음 단추입니다.  
@@ -63,7 +63,7 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
   
  사용자가 새 글꼴을 선택 하는 경우는 `CMFCToolBarFontComboBox` 개체를 사용 하 여 지원 되는 크기를 글꼴에 대 한 글꼴 크기 콤보 상자를 채울 수 있습니다는 [CMFCToolBarFontSizeComboBox::RebuildFontSizes](#rebuildfontsizes) 메서드.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서 다양 한 메서드를 사용 하는 방법을 보여 줍니다는 `CMFCToolBarFontSizeComboBox` 구성 하는 클래스는 `CMFCToolBarFontSizeComboBox` 개체입니다. 이 예제에서는 트윕의 글꼴 크기, 텍스트 상자에서 검색 하 고 모든 유효한 크기가 지정 된 글꼴의 글꼴 크기 콤보 상자 채우기 트윕에서 글꼴 크기를 지정 하는 방법을 보여 줍니다. 이 코드 조각은 [워드 패드 샘플](../../visual-cpp-samples.md)의 일부입니다.  
   
  [!code-cpp[NVC_MFC_WordPad#8](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontsizecombobox-class_1.cpp)]  
@@ -105,7 +105,7 @@ void RebuildFontSizes(const CString& strFontName);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `[in] strFontName`  
+ [in] *strFontName*  
  글꼴 이름을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -119,7 +119,7 @@ void SetTwipSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nSize`  
+ [in] *nSize*  
  설정 하려면 (트윕)에서 글꼴 크기를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  

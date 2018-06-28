@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25d86a4797479fe3ee95dde162e22cde63aaa71e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 46210f5a8c785a60a95b3cbfacf03b4f84ed2dda
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369036"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037290"
 ---
 # <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog 클래스
 `CMFCKeyMapDialog` 클래스 명령을 키보드의 키에 매핑하는 컨트롤을 지원 합니다.  
@@ -110,15 +110,15 @@ CMFCKeyMapDialog(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWndParentFrame`  
+ [in] *pWndParentFrame*  
  부모 창에 대 한 포인터는 `CMFCKeyMapDialog` 개체입니다.  
   
- [in] `bEnablePrint`  
+ [in] *bEnablePrint*  
  `TRUE` 액셀러레이터 키의 목록을; 인쇄도 가능 하는 경우 그렇지 않으면 `FALSE`합니다. 기본값은 `FALSE`입니다.  
   
 ### <a name="remarks"></a>설명  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는의 개체를 생성 하는 `CMFCKeyMapDialog` 클래스입니다. 이 예제는의 일부는 [Visual Studio 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#21](../../mfc/codesnippet/cpp/cmfckeymapdialog-class_1.cpp)]  
@@ -144,7 +144,7 @@ virtual CString FormatItem(int nItem) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nItem`  
+ [in] *nItem*  
  키 매핑 내부 목록에 있는 항목의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -160,7 +160,7 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  명령 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -178,10 +178,10 @@ virtual void OnInsertItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pButton`  
+ [in] *pButton*  
  키보드 키 조합을 명령 이름 및 설명으로 매핑하는 데 사용 되는 도구 모음 단추에 대 한 포인터입니다. 키 맵에서 항목이 내부 목록 컨트롤에 저장 됩니다.  
   
- [in] `nItem`  
+ [in] *nItem*  
  내부 목록 컨트롤에서 새 키 맵에서 항목을 삽입 하는 위치를 지정 하는 0부터 시작 인덱스입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -197,13 +197,13 @@ virtual int OnPrintHeader(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `dc`  
+ [in] *dc*  
  프린터에 대 한 디바이스 컨텍스트입니다.  
   
- [in] `nPage`  
+ [in] *nPage*  
  인쇄할 페이지 번호입니다.  
   
- [in] `cx`  
+ [in] *cx*  
  픽셀 단위로 헤더의 가로 오프셋입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -225,19 +225,19 @@ virtual int OnPrintItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `dc`  
+ [in] *dc*  
  프린터의 장치 컨텍스트입니다.  
   
- [in] `nItem`  
+ [in] *nItem*  
  인쇄 항목의 0부터 시작 하는 인덱스입니다.  
   
- [in] `y`  
+ [in] *y*  
  페이지의 위쪽과 항목의 위치 사이의 세로 오프셋입니다.  
   
- [in] `cx`  
+ [in] *cx*  
  페이지의 왼쪽에서 항목의 위치 사이의 가로 오프셋입니다.  
   
- [in] `bCalcHeight`  
+ [in] *bCalcHeight*  
  `TRUE` 인쇄 항목;에 대 한 최상의 높이 계산 하려면 `FALSE` 을 기본 공간에 맞도록 인쇄 항목을 잘라내야 합니다.  
   
 ### <a name="return-value"></a>반환 값  

@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fa89f17a546c0b1aec6e1ed53a320f57660687
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: 648d295af6ca767eb0291f1eb8f0cd172d0717cc
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322409"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041112"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 클래스
 
@@ -422,7 +422,7 @@ HTTP 서버 이름을 포함 하는 문자열에 대 한 포인터입니다.
 액세스 암호를 포함 하는 문자열에 대 한 포인터입니다.
 
 *dwflags*  
-어떠한 조합의 `INTERNET_FLAG_*` 플래그입니다. 표를 참조는 **주의** 섹션 [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) 에 대 한 설명은 `dwFlags` 값입니다.
+어떠한 조합의 `INTERNET_FLAG_*` 플래그입니다. 표를 참조는 **주의** 섹션 [CHttpConnection::OpenRequest](../../mfc/reference/chttpconnection-class.md#openrequest) 에 대 한 설명은 *dwFlags* 값입니다.
 
 ### <a name="return-value"></a>반환 값
 

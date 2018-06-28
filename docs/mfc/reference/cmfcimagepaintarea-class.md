@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd5dd96c51c6b4ff5d3376581ddd760a2741968a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dea815ef86b16ad472303fd53da5c51e333b13a3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368324"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037384"
 ---
 # <a name="cmfcimagepaintarea-class"></a>CMFCImagePaintArea 클래스
 이미지 편집기 대화 상자에서 이미지를 수정 하는 사용 하는 그림 영역을 제공 합니다.  
@@ -67,7 +67,7 @@ class CMFCImagePaintArea : public CButton
   
  이 클래스를 사용 하 여 이미지 편집기 대화 상자에서 그림 영역을 표시 하는 프레임 워크입니다. 이미지 편집기 대화 상자에 대 한 자세한 내용은 참조 [CMFCImageEditorDialog 클래스](../../mfc/reference/cmfcimageeditordialog-class.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는의 개체를 생성 하는 `CMFCImagePaintArea` 클래스, 현재 현재 그리기 모드를 설정 하 고 그림 영역에 대 한 비트맵 이미지를 설정 그리기 색을 설정 합니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#37](../../mfc/reference/codesnippet/cpp/cmfcimagepaintarea-class_1.cpp)]  
@@ -98,7 +98,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 |||  
 |-|-|  
 |매개 변수|설명|  
-|[in] `pParentDlg`|이미지 편집기의 부모가 되는 대화 상자에 대 한 포인터입니다.|  
+|[in] *pParentDlg*|이미지 편집기의 부모가 되는 대화 상자에 대 한 포인터입니다.|  
   
 ##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode  
  현재 그리기 모드를 검색합니다.  
@@ -122,10 +122,10 @@ void SetBitmap(CBitmap* pBitmap);
 |||  
 |-|-|  
 |매개 변수|설명|  
-|[in] `pBitmap`|표시할 새 비트맵 이미지를 지정 합니다.|  
+|[in] *pBitmap*|표시할 새 비트맵 이미지를 지정 합니다.|  
   
 ### <a name="remarks"></a>설명  
- 경우 `pBitmap` 은 `NULL`,이 메서드는 수정할 수 있는 그리기 영역의 크기를 0으로 설정 합니다. 그렇지 않은 경우 제공 된 비트맵 이미지의 크기를 수정할 수 있는 그리기 영역의 크기를 설정합니다.  
+ 경우 *pBitmap* 은 `NULL`,이 메서드는 수정할 수 있는 그리기 영역의 크기를 0으로 설정 합니다. 그렇지 않은 경우 제공 된 비트맵 이미지의 크기를 수정할 수 있는 그리기 영역의 크기를 설정합니다.  
   
 ##  <a name="setcolor"></a>  CMFCImagePaintArea::SetColor  
  현재 그리기 색을 설정합니다.  
@@ -139,7 +139,7 @@ void SetColor(COLORREF color);
 |||  
 |-|-|  
 |매개 변수|설명|  
-|[in] `color`|새 그리기 색입니다.|  
+|[in] *색*|새 그리기 색입니다.|  
   
 ### <a name="remarks"></a>설명  
  이미지 편집기 팔레트 막대에서 색을 선택 하거나 때 색상 선택기, 프레임 워크는 현재 그리기 색을 업데이트 하려면이 메서드를 호출 합니다. 초기 그리기 색은 검정 (한 `COLORREF` 값 0).  
@@ -158,7 +158,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 |||  
 |-|-|  
 |매개 변수|설명|  
-|[in] `mode`|[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) 현재 그리기 모드를 지정 하는 값입니다.|  
+|[in] *모드*|[IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) 현재 그리기 모드를 지정 하는 값입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [계층 구조 차트](../../mfc/hierarchy-chart.md)   

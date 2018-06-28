@@ -150,12 +150,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5d837ec17623887eb63b49810066937fcd4bf5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34c364357ad14db2cd0ebc53e2a9cdcd5455f5ac
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377939"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042133"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages 클래스
 도구 모음에 이미지입니다. `CMFCToolBarImages` 클래스 파일에서 응용 프로그램 리소스에서 로드 되는 도구 모음 이미지를 관리 합니다.  
@@ -251,14 +251,14 @@ class CMFCToolBarImages : public CObject
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCToolBarImages::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|`TRUE` truecolor 알파 혼합 (32 비트 색상)은 사용할 수 없습니다.|  
   
 ## <a name="remarks"></a>설명  
  관리 하는 도구 모음 이미지의 전체 비트맵 `CMFCToolbarImages` 하나 이상의 작은 도구 모음 이미지 (단추)의 크기가 고정 되어 구성 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 구성 하는 `CMFCToolBarImages` 에서 다양 한 메서드를 사용 하 여 개체는 `CMFCToolBarImages` 클래스입니다. 도구 모음 이미지의 크기를 설정, 이미지, 로드 및 이미지의 투명 한 색을 설정 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [Visual Studio 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#32](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_1.h)]  
@@ -282,8 +282,8 @@ void AdaptColors(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `clrBase`  
- [in] `clrTone`  
+ [in] *clrBase*  
+ [in] *clrTone*  
   
 ### <a name="remarks"></a>설명  
   
@@ -297,10 +297,10 @@ int AddIcon(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `hIcon`  
+ [in] *hIcon*  
  추가 될 아이콘에 대 한 핸들입니다.  
   
- [in] `bAlphaBlend`  
+ [in] *bAlphaBlend*  
  `TRUE` 알파 혼합; 사용 되는이 아이콘은 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -320,16 +320,16 @@ int AddImage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `hbmp`  
+ [in] *hbmp*  
  추가할 비트맵에 대 한 핸들입니다.  
   
- [in] `bSetBitPerPixel`  
+ [in] *bSetBitPerPixel*  
  `TRUE` 경우는 `CMFCToolBarImages` 개체가 새 이미지의 색 농도 (픽셀 당 비트)를 사용 합니다. `FALSE` 경우는 `CMFCToolbarImages` 개체는 현재 색 농도 보관 합니다.  
   
- [in] `imageList`  
+ [in] *imageList*  
  에 대 한 참조는 `CMFCToolbarImages` 추가할 이미지를 포함 하는 개체입니다.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  소스에서 인덱스 `CMFCToolbarImages` 추가할 이미지의 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -369,7 +369,7 @@ BOOL CopyImageToClipboard(int iImage);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iImage`  
+ [in] *iImage*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -383,7 +383,7 @@ BOOL CopyTo(CMFCToolBarImages& imageList);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `imageList`  
+ [in] *imageList*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -397,7 +397,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `imageList`  
+ [in] *imageList*  
  도구 모음 이미지에 대 한 원본으로 사용할 이미지 목록입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -416,8 +416,8 @@ static HRGN __stdcall CreateRegionFromImage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bmp`  
- [in] `clrTransparent`  
+ [in] *bmp*  
+ [in] *clrTransparent*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -431,7 +431,7 @@ BOOL DeleteImage(int iImage);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iImage`  
+ [in] *iImage*  
  삭제할 이미지로 0 기반 인덱스를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -455,34 +455,34 @@ BOOL Draw(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `x`  
+ [in] *x*  
  이미지를 그릴 사각형의 왼쪽의 X 좌표입니다.  
   
- [in] `y`  
+ [in] *y*  
  이미지를 그릴 사각형의 위쪽의 Y 좌표입니다.  
   
- [in] `iImageIndex`  
+ [in] *iImageIndex*  
  표시할 이미지의 0부터 시작 하는 인덱스입니다.  
   
- [in] `bHilite`  
+ [in] *bHilite*  
  `TRUE` 이미지가; 강조 표시할 경우 그렇지 않으면 `FALSE`합니다.  
   
- [in] `bDisabled`  
+ [in] *사용 안 함*  
  `TRUE` 이미지가는 사용할 수 없는 스타일;에 그릴 경우 그렇지 않으면 `FALSE`합니다.  
   
- [in] `bIndeterminate`  
+ [in] *bIndeterminate*  
  `TRUE` 이미지가는 상태임 스타일;에 그릴 경우 그렇지 않으면 `FALSE`합니다.  
   
- [in] `bShadow`  
+ [in] *bShadow*  
  `TRUE` 이미지가는 그림자를 그릴 경우 그렇지 않으면 `FALSE`합니다.  
   
- [in] `bInactive`  
+ [in] *bInactive*  
  `TRUE` 이미지의 크기는 비활성 상태 스타일;에 그릴 경우 그렇지 않으면 `FALSE`합니다.  
   
- [in] `alphaSrc`  
+ [in] *alphaSrc*  
  알파 채널 (불투명도) 값입니다. 값이 255 의미 이미지가 그려지는 불투명 하 게 됩니다. 값이 0 이면 이미지 투명 그려집니다. 이 값은 32 비트 컬러 이미지 및 Windows Vista 유리 스타일을 표시 하는 이미지를 사용 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -506,15 +506,15 @@ BOOL DrawEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rect`  
- [in] `iImageIndex`  
- [in] `horzAlign`  
- [in] `vertAlign`  
- [in] `rectSrc`  
- [in] `0`  
- [in] `0)`  
- [in] `alphaSrc`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *iImageIndex*  
+ [in] *horzAlign*  
+ [in] *vertAlign*  
+ [in] *rectSrc*  
+ [in] *0*  
+ [in] *0)*  
+ [in] *alphaSrc*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -528,7 +528,7 @@ static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
   
 ### <a name="remarks"></a>설명  
   
@@ -540,7 +540,7 @@ void EndDrawImage(CAfxDrawState& ds);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `ds`  
+ [in] *ds*  
  에 대 한 참조는 `CAfxDrawState` 에 전달 된 개체는 `PrepareDrawImage` 메서드.  
   
 ##  <a name="extracticon"></a>  CMFCToolBarImages::ExtractIcon  
@@ -551,11 +551,11 @@ HICON ExtractIcon(int nIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  이미지를 아이콘으로 추출할 위치한 이미지 목록에서 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 추출 된 아이콘에 대 한 핸들 또는 `NULL` 경우 `nIndex` 범위를 벗어났습니다.  
+ 추출 된 아이콘에 대 한 핸들 또는 `NULL` 경우 *nIndex* 범위를 벗어났습니다.  
   
 ##  <a name="fillditheredrect"></a>  CMFCToolBarImages::FillDitheredRect  
  사각형을 도구 모음 배경색으로 채웁니다.  
@@ -567,10 +567,10 @@ static void FillDitheredRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  채울 사각형의 좌표입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -629,7 +629,7 @@ SIZE GetImageSize(BOOL bDest=FALSE) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bDest`  
+ [in] *bDest*  
  `TRUE` 대상 크기를 검색 하려면 `FALSE` 를 원본 이미지 크기를 검색 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -705,7 +705,7 @@ HBITMAP GetMask(int iImage);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iImage`  
+ [in] *iImage*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -719,7 +719,7 @@ int GetResourceOffset(UINT uiResId) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiResId`  
+ [in] *uiResId*  
  이미지 리소스 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -744,14 +744,14 @@ BOOL GrayImages(int nGrayImageLuminancePercentage);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nGrayImageLuminancePercentage`  
+ [in] *nGrayImageLuminancePercentage*  
  광도 비율입니다.  
   
 ### <a name="return-value"></a>반환 값  
  `TRUE` 이미지 컬렉션에서 성공적으로; 회색으로 표시 된 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 각 픽셀의 빨간색, 녹색 및 파랑 구성 요소 처리 하며 평균를 기준으로 결과 곱한 여 도구 모음 이미지를 수정 합니다. `nGrayImageLuminancePercentage` 100로 나눈 값입니다. 경우 `nGrayImageLuminancePercentage` 은 0 또는 음수 이면 130의 기본값 대신 사용 됩니다.  
+ 이 메서드는 각 픽셀의 빨간색, 녹색 및 파랑 구성 요소 처리 하며 평균를 기준으로 결과 곱한 여 도구 모음 이미지를 수정 합니다. *nGrayImageLuminancePercentage* 100로 나눈 값입니다. 경우 *nGrayImageLuminancePercentage* 은 0 또는 음수 이면 130의 기본값 대신 사용 됩니다.  
   
 > [!NOTE]
 >  변경 내용을 취소 하려면 소스에서 이미지를 다시 로드 해야 합니다. 호출 하 여 이렇게 하려면 [CMFCToolBarImages::Load](#load) 또는 [CMFCToolBarImages::UpdateImage](#updateimage) (만 이미지에 대 한 사용자 정의)를 호출 하 여 [CMFCToolBarImages::Clear](#clear)호출 하 여 이미지를 다시 추가 [CMFCToolBarImages::AddIcon](#addicon) 또는 [CMFCToolBarImages::AddImage](#addimage)합니다.  
@@ -844,19 +844,19 @@ BOOL Load(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiResID`  
+ [in] *uiResID*  
  비트맵 리소스의 ID입니다.  
   
- [in] `hinstRes`  
+ [in] *hinstRes*  
  리소스 DLL의 인스턴스입니다.  
   
- [in] `bAdd`  
+ [in] *추가*  
  `TRUE` 기존 비트맵에 로드 된 비트맵을 추가 하려면 또는 `FALSE` 기존 비트맵을 교체할 수 있습니다.  
   
- [in] `lpszBmpFileName`  
+ [in] *lpszBmpFileName*  
  로드할 비트맵을 디스크 파일 경로입니다.  
   
- [in] `nMaxFileSize`  
+ [in] *nMaxFileSize*  
  비트맵 파일에 바이트의 최대 수 또는 파일 크기에 관계 없이 비트맵을 로드 하는 0을 지정 합니다. 메서드가 반환 하는 경우 파일의 크기가이 최대 크기를 초과 하면 `FALSE` 비트맵을 로드 하지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -876,9 +876,9 @@ BOOL LoadStr(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszResourceName`  
- [in] `hinstRes`  
- [in] `bAdd`  
+ [in] *lpszResourceName*  
+ [in] *hinstRes*  
+ [in] *추가*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -894,8 +894,8 @@ static COLORREF __stdcall MapFromSysColor(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `color`  
- [in] `bUseRGBQUAD`  
+ [in] *색*  
+ [in] *bUseRGBQUAD*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -912,9 +912,9 @@ BOOL MapTo3dColors(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bUseRGBQUAD`  
- [in] `clrSrc`  
- [in] `clrDest`  
+ [in] *bUseRGBQUAD*  
+ [in] *clrSrc*  
+ [in] *clrDest*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -930,8 +930,8 @@ static COLORREF __stdcall MapToSysColor(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `color`  
- [in] `bUseRGBQUAD`  
+ [in] *색*  
+ [in] *bUseRGBQUAD*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -945,7 +945,7 @@ static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `color`  
+ [in] *색*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -974,10 +974,10 @@ static BOOL MirrorBitmap(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in, out] `hbmp`  
+ [out에서] *hbmp*  
  미러링 하는 비트맵에 대 한 핸들입니다.  
   
- [in] `cxImage`  
+ [in] *cxImage*  
  픽셀 단위로 이미지의 너비입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -996,8 +996,8 @@ static BOOL __stdcall MirrorBitmapVert(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `hbmp`  
- [in] `cyImage`  
+ [in] *hbmp*  
+ [in] *cyImage*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -1035,8 +1035,8 @@ BOOL PreMultiplyAlpha(HBITMAP hbmp);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `hbmp`  
- [in] `bAutoCheckPremlt`  
+ [in] *hbmp*  
+ [in] *bAutoCheckPremlt*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -1066,13 +1066,13 @@ BOOL PrepareDrawImage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `ds`  
+ [in] *ds*  
  에 대 한 참조 `CAfxDrawState` 이미지 렌더링 단계 사이의 할당 된 리소스를 저장 하는 구조입니다.  
   
- [in] `sizeImageDest`  
+ [in] *sizeImageDest*  
  대상 이미지의 크기를 지정합니다.  
   
- [in] `bFadeInactive`  
+ [in] *bFadeInactive*  
  `TRUE` 비활성 하려는 경우 이미지를 그릴 수 실패 한 것입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1089,14 +1089,14 @@ BOOL Save(LPCTSTR lpszBmpFileName=NULL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszBmpFileName`  
+ *lpszBmpFileName*  
  디스크 파일 경로입니다.  
   
 ### <a name="return-value"></a>반환 값  
  `TRUE` 도구 모음 이미지를 성공적으로 저장 된 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
- 디스크 파일에 사용자 지정 이미지를 저장 하려면이 메서드를 호출 합니다. 경우 `lpszBmpFileName` 은 `NULL`에서 비트맵 로드 된 파일에 비트맵을 저장 하는 메서드는 [CMFCToolBarImages::Load](#load) 메서드.  
+ 디스크 파일에 사용자 지정 이미지를 저장 하려면이 메서드를 호출 합니다. 경우 *lpszBmpFileName* 은 `NULL`에서 비트맵 로드 된 파일에 비트맵을 저장 하는 메서드는 [CMFCToolBarImages::Load](#load) 메서드.  
   
 ##  <a name="setalwayslight"></a>  CMFCToolBarImages::SetAlwaysLight  
 
@@ -1106,7 +1106,7 @@ void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bAlwaysLight`  
+ [in] *bAlwaysLight*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1118,7 +1118,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nValue`  
+ [in] *n 값*  
  알파 채널의 새 값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1132,7 +1132,7 @@ static void __stdcall SetFadedImageAlpha(BYTE nValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nValue`  
+ [in] *n 값*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1146,7 +1146,7 @@ void SetImageSize(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `sizeImage`  
+ [in] *sizeImage*  
  도구 모음 이미지의 새 크기입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1160,7 +1160,7 @@ void SetLightPercentage(int nValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nValue`  
+ [in] *n 값*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1172,7 +1172,7 @@ void SetMapTo3DColors(BOOL bMapTo3DColors);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bMapTo3DColors`  
+ [in] *bMapTo3DColors*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1184,7 +1184,7 @@ void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bAuto`  
+ [in] *한*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1205,14 +1205,14 @@ COLORREF SetTransparentColor(COLORREF clrTransparent);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `clrTransparent`  
+ [in] *clrTransparent*  
  RGB 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
  이전 투명색입니다.  
   
 ### <a name="remarks"></a>설명  
- 또는 프레임 워크에서 호출 하는 경우 [CMFCToolBarImages::Draw](#draw), 메서드에 의해 지정 된 색과 일치 하는 픽셀 그리지 않습니다 `clrTransparent`합니다.  
+ 또는 프레임 워크에서 호출 하는 경우 [CMFCToolBarImages::Draw](#draw), 메서드에 의해 지정 된 색과 일치 하는 픽셀 그리지 않습니다 *clrTransparent*합니다.  
   
 ##  <a name="updateimage"></a>  CMFCToolBarImages::UpdateImage  
  비트맵에서 사용자 정의 도구 모음 이미지를 업데이트합니다.  
@@ -1224,10 +1224,10 @@ BOOL UpdateImage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iImage`  
+ [in] *iImage*  
  업데이트할 이미지의 0부터 시작 하는 인덱스입니다.  
   
- [in] `hbmp`  
+ [in] *hbmp*  
  이미지를 업데이트 하려는 비트맵에 대 한 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1241,7 +1241,7 @@ BOOL ConvertTo32Bits(COLORREF clrTransparent = (COLORREF)-1);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `clrTransparent`  
+ *clrTransparent*  
  밑줄이 그어진된 비트맵의 투명 한 색을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1290,7 +1290,7 @@ BOOL SmoothResize(double dblImageScale);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dblImageScale`  
+ *dblImageScale*  
  눈금 비율입니다.  
   
 ### <a name="return-value"></a>반환 값  

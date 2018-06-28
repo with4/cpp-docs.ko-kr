@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90453d4e8550038493545b691c978b59bda90fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dce62b489cce44070111586959796aadd04079b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370291"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042523"
 ---
 # <a name="coleconvertdialog-class"></a>COleConvertDialog 클래스
 자세한 내용은 참조는 [OLEUICONVERT](http://msdn.microsoft.com/library/windows/desktop/ms686657) Windows SDK에는 구조입니다.  
@@ -110,10 +110,10 @@ explicit COleConvertDialog (
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pItem`  
+ *pItem*  
  활성화 또는 변환에 항목을 가리킵니다.  
   
- `dwFlags`  
+ *dwFlags*  
  원하는 수의 다음 값을 포함 하는 생성 플래그 비트를 사용 하 여 결합-or 연산자:  
   
 - **CF_SELECTCONVERTTO** 대화 상자가 호출 될 때 변환 라디오 단추는 처음 선택 되도록 지정 합니다. 이 값이 기본값입니다.  
@@ -126,10 +126,10 @@ explicit COleConvertDialog (
   
 - **CF_SHOWHELPBUTTON** 대화 상자를 호출할 때 도움말 단추가 표시 되도록 지정 합니다.  
   
- `pClassID`  
- 항목을 활성화 또는 변환의 CLSID 가리킵니다. 경우 **NULL**, **CLSID** 연관 `pItem` 사용 됩니다.  
+ *pClassID*  
+ 항목을 활성화 또는 변환의 CLSID 가리킵니다. 경우 **NULL**, **CLSID** 연관 *pItem* 사용 됩니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  부모 또는 소유자 창 개체를 가리키는 (형식의 `CWnd`) 대화 상자 개체 속해 있는 합니다. 이 경우 **NULL**, 대화 상자의 부모 창은 주 응용 프로그램 창으로 설정 됩니다.  
   
 ### <a name="remarks"></a>설명  
@@ -145,7 +145,7 @@ BOOL DoConvert(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pItem`  
+ *pItem*  
  활성화 또는 변환에 항목을 가리킵니다. 일 수 없습니다 **NULL**합니다.  
   
 ### <a name="return-value"></a>반환 값  

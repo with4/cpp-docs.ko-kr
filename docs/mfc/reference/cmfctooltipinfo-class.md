@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 325650f35d097b54eda160bbdbbd5c877dbd0242
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb5cb4020b851f3522842951030c8155ee68516f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368376"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037547"
 ---
 # <a name="cmfctooltipinfo-class"></a>CMFCToolTipInfo 클래스
 도구 설명의 시각적 모양에 대한 정보를 저장합니다.  
@@ -68,7 +68,7 @@ class CMFCToolTipInfo
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCToolTipInfo::m_bBalloonTooltip](#m_bballoontooltip)|도구 설명이 풍선 모양인지 여부를 나타내는 부울 변수입니다.|  
 |[CMFCToolTipInfo::m_bBoldLabel](#m_bboldlabel)|도구 설명 레이블이 굵은 글꼴로 표시되는지 여부를 나타내는 부울 변수입니다.|  
@@ -87,7 +87,7 @@ class CMFCToolTipInfo
 ## <a name="remarks"></a>설명  
  사용 하 여 [CMFCToolTipCtrl 클래스](../../mfc/reference/cmfctooltipctrl-class.md), `CMFCToolTipInfo`, 및 [CTooltipManager 클래스](../../mfc/reference/ctooltipmanager-class.md) 응용 프로그램에서 사용자 지정된 도구 설명을 구현에 함께 합니다. 이러한 도구 설명 클래스를 사용 하는 방법의 예제를 보려면는 [CMFCToolTipCtrl 클래스](../../mfc/reference/cmfctooltipctrl-class.md) 항목입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCToolTipInfo` 클래스에서 다양한 멤버 변수의 값을 설정하는 방법을 보여 줍니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#42](../../mfc/reference/codesnippet/cpp/cmfctooltipinfo-class_1.cpp)]  
@@ -229,7 +229,7 @@ CMFCToolTipInfo& operator=(CMFCToolTipInfo& src);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `src`  
+ [in] *src*  
   
 ### <a name="return-value"></a>반환 값  
   

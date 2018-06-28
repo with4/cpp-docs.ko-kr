@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9dbcaa3f8e02a87713363f1ea38c5d2260171df
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ba1d156d9453cd6a74a3543295d9d90d761e77f9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367973"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040748"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 구조
 프로그램에서 메모리 누수 문제를 감지 하는 편리한 방법을 제공 합니다.  
@@ -66,7 +66,7 @@ struct CMemoryState
   
  다른 진단와 마찬가지로 `CMemoryState` 진단이 프로그램의 디버그 버전에서 사용할 수만 있습니다. 디버그 버전 있어야는 **_DEBUG** 정의 되는 상수입니다.  
   
- 사용할 수 있습니다 프로그램에 메모리 누수가 의심 되는 경우는 `Checkpoint`, **차이**, 및 `DumpStatistics` 프로그램에서 두 개의 서로 다른 시점에서 메모리 상태 (할당 된 개체) 간의 차이 검색 하는 함수 실행 합니다. 이 정보는 함수를 할당 한 모든 개체 정리 있는지 여부를 결정 하는 데 유용할 수 있습니다.  
+ 사용할 수 있습니다 프로그램에 메모리 누수가 의심 되는 경우는 `Checkpoint`, `Difference`, 및 `DumpStatistics` 프로그램 실행의 두 개의 서로 다른 지점에서 메모리 상태 (할당 된 개체) 간의 차이 검색 하는 함수입니다. 이 정보는 함수를 할당 한 모든 개체 정리 있는지 여부를 결정 하는 데 유용할 수 있습니다.  
   
  단순히 할당 및 할당 취소에 않으므로 이러한 불균형은 발생 한 위치를 알고 있으면 충분 한 정보 제공 하지 않는 경우 사용할 수 있습니다는 `DumpAllObjectsSince` 함수에 대 한 이전 호출 이후에 할당 된 모든 개체를 덤프를 `Checkpoint`합니다. 이 덤프의 할당, 소스 파일 및 줄 개체가 할당 된 순서를 보여 줍니다. (사용 중인 경우 `DEBUG_NEW` 할당에 대 한), 개체, 해당 주소 및 해당 크기의 파생 하 고 있습니다. `DumpAllObjectsSince` 각 개체의 호출 `Dump` 함수를 현재 상태에 대 한 정보를 제공 합니다.  
   
@@ -91,7 +91,7 @@ void Checkpoint();
 ### <a name="remarks"></a>설명  
  `CMemoryState` 멤버 함수 [차이](#difference) 및 [DumpAllObjectsSince](#dumpallobjectssince) 이 스냅숏 데이터를 사용 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조는 [CMemoryState](#cmemorystate) 생성자입니다.  
   
 ##  <a name="cmemorystate"></a>  CMemoryState::CMemoryState  
@@ -101,7 +101,7 @@ void Checkpoint();
 CMemoryState();
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_Utilities#18](../../mfc/codesnippet/cpp/cmemorystate-structure_1.cpp)]  
   
 ##  <a name="difference"></a>  CMemoryState::Difference  
@@ -126,7 +126,7 @@ BOOL Difference(
 ### <a name="remarks"></a>설명  
  [검사점](#checkpoint) 두 메모리 상태 매개 변수 마다 호출 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조는 [CMemoryState](#cmemorystate) 생성자입니다.  
   
 ##  <a name="dumpallobjectssince"></a>  Cmemorystate:: Dumpallobjectssince  
@@ -141,7 +141,7 @@ void DumpAllObjectsSince() const;
 ### <a name="remarks"></a>설명  
  호출 `DumpAllObjectsSince` 초기화 되지 않은와 `CMemoryState` 모든 개체의 현재 메모리에에서 개체를 덤프 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조는 [CMemoryState](#cmemorystate) 생성자입니다.  
   
 ##  <a name="dumpstatistics"></a>  CMemoryState::DumpStatistics  
@@ -174,7 +174,7 @@ void DumpStatistics() const;
   
  Free 블록은 면 해당 할당 취소가 연기 된 블록 수가 `afxMemDF` 로 설정 된 **delayFreeMemDF**합니다. 자세한 내용은 참조 [afxMemDF](diagnostic-services.md#afxmemdf), "MFC 매크로 및 전역 변수" 섹션에 있습니다. 참조 [디버그 힙의 블록의 형식](http://msdn.microsoft.com/en-us/db2e7f62-0679-4b39-a23f-26f2c2f407c5) 블록 형식의 이러한 이벤트에 대해 자세한 정보에 대 한 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   다음 코드에 배치 해야 *projname*App.cpp 합니다. 다음 전역 변수를 정의 합니다.  
   
  [!code-cpp[NVC_MFC_Utilities#40](../../mfc/codesnippet/cpp/cmemorystate-structure_2.cpp)]  

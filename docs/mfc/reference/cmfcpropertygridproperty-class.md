@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ad6630f2a0debd5ab3fee30374b84f5bbe9b2b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c218f38b76d70ef20fed46a502a7cc15041aa8c5
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378867"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039183"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty 클래스
 A `CMFCPropertyGridProperty` 개체 속성 목록 컨트롤에 목록 항목을 나타냅니다.  
@@ -291,7 +291,7 @@ class CMFCPropertyGridProperty : public CObject
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|Double 형식의 값에 대 한 서식 문자열입니다.|  
 |[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|부동 소수점 형식의 값에 대 한 서식 문자열입니다.|  
@@ -303,7 +303,7 @@ class CMFCPropertyGridProperty : public CObject
   
  속성 개체는 데이터 형식을 문자열, 날짜, 부울 또는 정수 값 등을 나타낼 수 있습니다. 자식 속성을 포함할 수 있습니다 또는 콤보 상자 같은 컨트롤 또는 단추 컨트롤을 포함할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 생성 하는 방법을 `CMFCPropertyGridProperty` 개체입니다. 다양 한 메서드를 사용 하는 방법을 보여 줍니다는 `CMFCPropertyGridProperty` 클래스 옵션을 추가, 하위 항목을 추가, 속성을 설정 및 속성을 표시 합니다. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#27](../../mfc/reference/codesnippet/cpp/cmfcpropertygridproperty-class_1.cpp)]  
@@ -326,14 +326,14 @@ BOOL AddOption(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszOption`  
+ [in] *lpszOption*  
  목록 항목을 추가 하려면 (옵션)입니다.  
   
- [in] `bInsertUnique`  
+ [in] *bInsertUnique*  
  `TRUE` 목록에 추가 하려면 이미; 존재 하지 않는 경우에 항목 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`즉, 목록 항목이 추가 됩니다. 그렇지 않으면 `FALSE`, 때문에 목록 항목이 않습니다을 의미 하는 추가 `bInsertUnique` 매개 변수는 `TRUE` 및 항목으로 지정 된 목록에서 `lpszOption` 매개 변수가 이미 있습니다.  
+ `TRUE`즉, 목록 항목이 추가 됩니다. 그렇지 않으면 `FALSE`, 때문에 목록 항목이 않습니다을 의미 하는 추가 *bInsertUnique* 매개 변수는 `TRUE` 및 항목으로 지정 된 목록에서 *lpszOption* 이미 매개 변수 있습니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -345,7 +345,7 @@ BOOL AddSubItem(CMFCPropertyGridProperty* pProp);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pProp`  
+ [in] *pProp*  
  추가할 속성에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -380,10 +380,10 @@ virtual void AdjustInPlaceEditRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `rectEdit`  
+ [out] *rectEdit*  
  이 메서드가 반환 될 때 속성 값에 대 한 입력란의 경계를 지정 하는 사각형입니다.  
   
- [out] `rectSpin`  
+ [out] *rectSpin*  
  이 메서드가 반환 될 때 속성 값에 대 한 스핀 단추 컨트롤의 경계를 지정 하는 사각형입니다. 또는 속성 스핀 단추와 빈 사각형을 지원 하지 않는 경우.  
   
 ### <a name="remarks"></a>설명  
@@ -397,7 +397,7 @@ void AllowEdit(BOOL bAllow=TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bAllow`  
+ [in] *전파할*  
  `TRUE` 속성을 편집할 수 있습니다; 확인 하려면 `FALSE` 를 읽기 전용 속성을 설정 합니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -423,31 +423,31 @@ CMFCPropertyGridProperty(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `strGroupName`  
+ [in] *strGroupName*  
  그룹 이름입니다. A *그룹* 은 속성 표 컨트롤에서 관련된 속성의 컬렉션입니다. 컨트롤을 계층적으로 표시 하는 경우는 *그룹 이름* 그룹 위에 있는 행의 범주 제목으로 표시 됩니다.  
   
- [in] `dwData`  
+ [in] *dwData*  
  정수 또는 속성에 연관 된 다른 데이터에 대 한 포인터 등 응용 프로그램별 데이터입니다. 기본값은 0입니다.  
   
- [in] `strName`  
+ [in] *strName*  
  속성의 이름입니다.  
   
- [in] `varValue`  
+ [in] *varValue*  
  속성 값입니다.  
   
- [in] `lpszDescr`  
+ [in] *lpszDescr*  
  속성 설명입니다. 기본값은 `NULL`입니다.  
   
- [in] `lpszEditMask`  
+ [in] *lpszEditMask*  
  마스킹된 편집 컨트롤 속성이 경우 편집 마스크입니다. 기본값은 `NULL`입니다.  
   
- [in] `lpszEditTemplate`  
+ [in] *lpszEditTemplate*  
  마스킹된 편집 컨트롤 속성이 경우 편집 템플릿. 기본값은 `NULL`입니다.  
   
- [in] `lpszValidChars`  
+ [in] *lpszValidChars*  
  목록 속성 마스킹된 편집 컨트롤은 유효한 문자입니다. 기본값은 `NULL`입니다.  
   
- [in] `bIsValueList`  
+ [in] *bIsValueList*  
  `TRUE` 속성 값이 있습니다; 목록을 나타내는 경우 `FALSE` 경우 속성은 단일 값을 나타냅니다. 기본값은 `FALSE`입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -462,10 +462,10 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  콤보 상자의 부모 창에 대 한 포인터입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  콤보 상자의 경계 사각형입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -483,19 +483,19 @@ virtual CWnd* CreateInPlaceEdit(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `rectEdit`  
+ [in] *rectEdit*  
  편집 가능한 컨트롤의 경계 사각형입니다.  
   
- [in] `bDefaultFormat`  
+ [in] *bDefaultFormat*  
  `TRUE` 형식을 사용 하 여 기본 속성은 편집 가능한 컨트롤의 텍스트를 설정 하려면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="return-value"></a>반환 값  
  이 메서드가 성공 하면; 편집 가능한 컨트롤에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
   
 ### <a name="remarks"></a>설명  
- 값을 사용 하는이 메서드는 `varValue`, `lpszEditMask`, `lpszEditTemplate`, 및 `lpszValidChars` 에 지정 된 매개 변수는 [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) 클래스 생성자입니다. 기본적으로이 메서드는 다음과 같이 지원 됩니다.는 `varValue` variant 형식입니다. 여기에 `VT_BSTR`, `VT_R4`, `VT_R8`, `VT_UI1`, `VT_I2`, `VT_INT`, `VT_UINT`, `VT_I4`, `VT_UI2`, `VT_UI4`, 및 `VT_BOOL`합니다.  
+ 값을 사용 하는이 메서드는 *varValue*, *lpszEditMask*, *lpszEditTemplate*, 및 *lpszValidChars* 되는 매개 변수 에 지정 된 된 [CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md) 클래스 생성자입니다. 기본적으로이 메서드는 다음과 같이 지원 됩니다.는 *varValue* variant 형식입니다. 여기에 `VT_BSTR`, `VT_R4`, `VT_R8`, `VT_UI1`, `VT_I2`, `VT_INT`, `VT_UINT`, `VT_I4`, `VT_UI2`, `VT_UI4`, 및 `VT_BOOL`합니다.  
   
- 이 메서드를 만듭니다는 [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md) 하나 이상이 제어는 `lpszEditMask`, `lpszEditTemplate`, 또는 `lpszValidChars` 매개 변수가 지정 않으며 만듭니다 그렇지 않은 경우는 [CEdit](../../mfc/reference/cedit-class.md) 제어 합니다.  
+ 이 메서드가 만드는 [CMFCMaskedEdit](../../mfc/reference/cmfcmaskededit-class.md) 하나 이상이 제어는 *lpszEditMask*, *lpszEditTemplate*, 또는 *lpszValidChars* 매개 변수를 지정 합니다. 그렇지 않으면, 만듭니다는 [CEdit](../../mfc/reference/cedit-class.md) 제어 합니다.  
   
 ##  <a name="createspincontrol"></a>  CMFCPropertyGridProperty::CreateSpinControl  
  편집 가능한 스핀 단추 컨트롤을 만드는 프레임 워크에서 호출 됩니다.  
@@ -505,7 +505,7 @@ virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `rectSpin`  
+ [in] *rectSpin*  
  편집 가능한 스핀 단추 컨트롤을 만들 위치를 정의 하는 사각형입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -522,7 +522,7 @@ void Enable(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` 속성을 사용 하도록 설정 하려면 `FALSE` 에 속성을 사용 하지 않도록 설정 합니다. 사용할 수 없는 속성 마우스 또는 키보드 입력에 응답 하지 않습니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -538,19 +538,19 @@ void EnableSpinControl(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` 스핀 단추 컨트롤을 사용 하도록 설정 하려면 `FALSE` 스핀 단추 컨트롤을 사용 하지 않도록 설정 하려면. 기본값은 `TRUE`입니다.  
   
- [in] `nMin`  
+ [in] *nMin*  
  스핀 단추 컨트롤의 최소값입니다. 기본값은 0입니다.  
   
- [in] `nMax`  
+ [in] *최대*  
  스핀 단추 컨트롤의 최대값입니다. 기본값은 0입니다.  
   
 ### <a name="remarks"></a>설명  
  프레임 워크는 속성을 편집할 수 되려고 할 때 스핀 단추 컨트롤을 자동으로 만듭니다.  
   
- 속성 형식으로 지정 되는 `varValue` 의 매개 변수는 [CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty) 생성자를 지원 되는 variant 형식 이어야 합니다. 그렇지 않으면이 메서드는 디버그 모드에서 어설션합니다. 지원 되는 형식에는 `VT_INT`, `VT_UINT`, `VT_I2`, `VT_I4`, `VT_UI2`, 및 `VT_UI4`합니다.  
+ 속성 형식으로 지정 되는 *varValue* 의 매개 변수는 [CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty) 생성자를 지원 되는 variant 형식 이어야 합니다. 그렇지 않으면이 메서드는 디버그 모드에서 어설션합니다. 지원 되는 형식에는 `VT_INT`, `VT_UINT`, `VT_I2`, `VT_I4`, `VT_UI2`, 및 `VT_UI4`합니다.  
   
 ##  <a name="expand"></a>  CMFCPropertyGridProperty::Expand  
  활동이 확장 되거나 축소 하위 속성을 포함 하는 속성입니다.  
@@ -560,7 +560,7 @@ void Expand(BOOL bExpand=TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bExpand`  
+ [in] *bExpand*  
  `TRUE` 속성을 확장 False 이면 속성을 축소 합니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -615,7 +615,7 @@ int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `bIncludeHidden`|`TRUE` 숨겨진된 하위 항목 개수에 포함 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.|  
+|[in] *bIncludeHidden*|`TRUE` 숨겨진된 하위 항목 개수에 포함 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.|  
   
 ### <a name="return-value"></a>반환 값  
  확장 된 하위 항목의 수입니다.  
@@ -666,7 +666,7 @@ LPCTSTR GetOption(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  (옵션)를 검색 속성 목록 항목의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -734,15 +734,15 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  검색할 속성의 0부터 시작 하는 인덱스입니다. 이 매개 변수가 잘못 되었거나 것은 0 보다 작은 경우 또는 보다 큰 하위 속성의 수와 같습니다.  
   
 ### <a name="return-value"></a>반환 값  
  이 속성의 자식 항목은 속성 개체에 대 한 포인터입니다.  
   
- -또는-  
+ 또는  
   
- 소매 모드로 `NULL` 경우는 `nIndex` 매개 변수가 올바르지 않습니다. 디버그 모드에서이 메서드 어설션합니다.  
+ 소매 모드로 `NULL` 경우는 *nIndex* 매개 변수가 올바르지 않습니다. 디버그 모드에서이 메서드 어설션합니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -810,16 +810,16 @@ CMFCPropertyGridProperty* HitTest(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `point`  
+ [in] *지점*  
  클라이언트 좌표에서 테스트 하는 점입니다. 이 매개 변수는 일반적으로 현재 마우스 포인터 위치 합니다.  
   
- [in] `pt`  
+ [in] *pt*  
  클라이언트 좌표에서 테스트 하는 점입니다.  
   
- [out] `pnArea`  
+ [out] *pnArea*  
  이 메서드가 반환 될 때 지정 된 지점이 포함 된 영역을 보여 줍니다. 자세한 내용은 설명 부분을 참조하세요. 기본값은 `NULL`입니다.  
   
- [in] `bPropsOnly`  
+ [in] *bPropsOnly*  
  `TRUE` 속성 컨트롤;에서 모든 영역을 테스트 하려면 `FALSE` 설명 영역만 테스트할 수 있습니다. 기본값은 `FALSE`입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -828,7 +828,7 @@ CMFCPropertyGridProperty* HitTest(
 ### <a name="remarks"></a>설명  
  기본적으로이 메서드 속성 항목 내에서 지정된 된 점이 없는 경우 하위 항목 속성을 테스트 합니다.  
   
- 다음 표에서에 반환 될 수 있는 값을 나열는 `pnArea` 매개 변수입니다.  
+ 다음 표에서에 반환 될 수 있는 값을 나열는 *pnArea* 매개 변수입니다.  
   
 |영역|설명|  
 |----------|-----------------|  
@@ -951,7 +951,7 @@ BOOL IsSubItem(CMFCPropertyGridProperty* pProp) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pProp`  
+ [in] *pProp*  
  속성에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1025,7 +1025,7 @@ virtual void OnClickButton(CPoint point);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `point`  
+ [in] *지점*  
  한 시점을 클라이언트 좌표입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1042,7 +1042,7 @@ virtual void OnClickName(CPoint C);
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `C`|한 시점을 클라이언트 좌표입니다.|  
+|[in] *C*|한 시점을 클라이언트 좌표입니다.|  
   
 ### <a name="remarks"></a>설명  
  기본적으로이 메서드는 아무 작업도 수행 하지 않습니다.  
@@ -1057,10 +1057,10 @@ virtual BOOL OnClickValue(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiMsg`  
+ [in] *uiMsg*  
  마우스 메시지입니다.  
   
- [in] `point`  
+ [in] *지점*  
  한 시점을 클라이언트 좌표입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1088,10 +1088,10 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `nCtlColor`  
+ [in] *nCtlColor*  
  (이 매개 변수 사용 되지 않습니다.)  
   
 ### <a name="return-value"></a>반환 값  
@@ -1107,7 +1107,7 @@ virtual BOOL OnDblClk(CPoint point);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `point`  
+ [in] *지점*  
  한 시점을 클라이언트 좌표입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1135,10 +1135,10 @@ virtual void OnDrawButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `rectButton`  
+ [in] *rectButton*  
  단추를 그릴 위치를 지정 하는 경계 사각형입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1153,10 +1153,10 @@ virtual void OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  속성 설명을 그릴 위치를 지정 하는 경계 사각형입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1172,10 +1172,10 @@ virtual void OnDrawExpandBox(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `rectExpand`  
+ [in] *rectExpand*  
  확장 상자 컨트롤을 그릴 위치를 지정 하는 경계 사각형입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1191,10 +1191,10 @@ virtual void OnDrawName(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  속성 이름을 그릴 위치를 지정 하는 경계 사각형입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1209,10 +1209,10 @@ virtual void OnDrawValue(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  속성 값을 가져올 위치를 지정 하는 경계 사각형입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1225,7 +1225,7 @@ virtual BOOL OnEdit(LPPOINT lptClick);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lptClick`  
+ [in] *lptClick*  
  (이 매개 변수 사용 되지 않습니다.) 클라이언트 좌표에서 지점에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1258,7 +1258,7 @@ virtual BOOL OnKillFocus(CWnd*);
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `CWnd`|(사용되지 않습니다.) 창에 대 한 포인터입니다.|  
+|[in] *CWnd*|(사용되지 않습니다.) 창에 대 한 포인터입니다.|  
   
 ### <a name="return-value"></a>반환 값  
  이 메서드는 항상 `TRUE`을 반환합니다.  
@@ -1274,7 +1274,7 @@ virtual void OnKillSelection(CMFCPropertyGridProperty*);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `CMFCPropertyGridProperty*`  
+ [in] *CMFCPropertyGridProperty**  
   
 ### <a name="remarks"></a>설명  
  기본적으로이 메서드는 아무 작업도 수행 하지 않습니다.  
@@ -1287,7 +1287,7 @@ virtual void OnPosSizeChanged(CRect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `CRect`  
+ [in] *CRect*  
   
 ### <a name="remarks"></a>설명  
  기본적으로이 메서드는 아무 작업도 수행 하지 않습니다.  
@@ -1303,7 +1303,7 @@ virtual void OnRClickName(CPoint C);
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `C`|한 시점을 클라이언트 좌표입니다.|  
+|[in] *C*|한 시점을 클라이언트 좌표입니다.|  
   
 ### <a name="remarks"></a>설명  
  기본적으로이 메서드는 아무 작업도 수행 하지 않습니다.  
@@ -1321,11 +1321,11 @@ virtual void OnRClickValue(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `C`|한 시점을 클라이언트 좌표입니다.|  
-|[in] `B`|부울입니다.|  
+|[in] *C*|한 시점을 클라이언트 좌표입니다.|  
+|[in] *B*|부울입니다.|  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 아무 것도 기본적으로 및 `B` 매개 변수의 미리 정의 된 의미가 없습니다.  
+ 이 메서드는 아무 것도 기본적으로 및 *B* 매개 변수의 미리 정의 된 의미가 없습니다.  
   
 ##  <a name="onselectcombo"></a>  CMFCPropertyGridProperty::OnSelectCombo  
  사용자가 편집 가능한 콤보 상자에서 항목을 선택할 때 프레임 워크에서 호출 됩니다.  
@@ -1358,7 +1358,7 @@ virtual void OnSetSelection(CMFCPropertyGridProperty*);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `CMFCPropertyGridProperty*`  
+ [in] *CMFCPropertyGridProperty**  
   
 ### <a name="remarks"></a>설명  
  기본적으로이 메서드는 아무 작업도 수행 하지 않습니다.  
@@ -1383,7 +1383,7 @@ virtual BOOL PushChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nChar`  
+ [in] *nChar*  
  단일 문자입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1421,16 +1421,16 @@ BOOL RemoveSubItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pProp`  
+ [in] *pProp*  
  속성의 하위 항목에 대 한 포인터입니다.  
   
- [in] `bDelete`  
- `TRUE` 지정 된 속성 개체를 삭제 하는 `pProp` 매개 변수, 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
+ [in] *b 삭제*  
+ `TRUE` 지정 된 속성 개체를 삭제 하는 *pProp* 매개 변수, 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="return-value"></a>반환 값  
   
 ### <a name="remarks"></a>설명  
- 지정 `FALSE` 에 대 한는 `bDelete` 매개 변수에 지정된 된 하위 항목 이동; 즉, 하위 항목을 제거 하 고 다음 다른 곳에서 추가 하려는 경우.  
+ 지정 `FALSE` 에 대 한는 *b 삭제* 매개 변수에 지정된 된 하위 항목 이동; 즉, 하위 항목을 제거 하 고 다음 다른 곳에서 추가 하려는 경우.  
   
 ##  <a name="resetoriginalvalue"></a>  Cmfcpropertygridproperty:: Resetoriginalvalue  
  편집된 된 속성의 원래 값을 복원합니다.  
@@ -1449,7 +1449,7 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `dwData`  
+ [in] *dwData*  
  정수 또는 다른 데이터에 대 한 포인터와 같은 표시 되는 응용 프로그램별 32 비트 값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1463,7 +1463,7 @@ void SetDescription(const CString& strDescr);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `strDescr`  
+ [in] *strDescr*  
  현재 속성 설명 텍스트입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1478,10 +1478,10 @@ void SetName(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszName`  
+ [in] *lpszName*  
  속성 이름입니다.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` 속성을 즉시 다시 그리게 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1494,7 +1494,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `varValue`  
+ [in] *varValue*  
  값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1508,7 +1508,7 @@ virtual void SetValue(const _variant_t& varValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `varValue`  
+ [in] *varValue*  
  값에 대 한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1523,7 +1523,7 @@ void Show(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` current 속성 및 해당 하위 항목을 표시 하려면 `FALSE` current 속성 및 해당 하위 항목을 숨기려면 합니다. 기본값은 `TRUE`입니다.  
   
  [in] `bAdjustLayout`  

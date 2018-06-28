@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a1c10cd6242f2845d64965d914093455da21c8a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6af0859811ad4064c12f6e4ef8d470437fe3ded9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370031"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037663"
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
 `CMFCHeaderCtrl` 클래스 헤더 컨트롤에서 여러 열의 정렬을 지원 합니다.  
@@ -87,7 +87,7 @@ class CMFCHeaderCtrl : public CHeaderCtrl
 |[CMFCHeaderCtrl::OnDrawSortArrow](#ondrawsortarrow)|정렬 화살표를 그리기 위해 프레임 워크에서 호출 됩니다.|  
 |[CMFCHeaderCtrl::OnFillBackground](#onfillbackground)|헤더 컨트롤 열의의 배경을 채울 하기 위해 프레임 워크에서 호출 됩니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는의 개체를 생성 하는 `CMFCHeaderCtrl` 클래스 및 활성화 하는 방법 *여러 열을 정렬* 현재 헤더 컨트롤에 대 한 모드입니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#24](../../mfc/reference/codesnippet/cpp/cmfcheaderctrl-class_1.cpp)]  
@@ -137,7 +137,7 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` 여러 열 정렬 모드를 사용 하도록 설정 하려면 `FALSE` 여러 열 정렬 모드를 사용 하지 않도록 설정 하 고 정렬 된 열 목록에서 열을 제거 하려면. 기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -151,7 +151,7 @@ int GetColumnState(int iColumn) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iColumn`  
+ [in] *iColumn*  
  열의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -227,19 +227,19 @@ virtual void OnDrawItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `iItem`  
+ [in] *iItem*  
  그릴 항목의 0부터 시작 하는 인덱스입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  그릴 항목의 경계 사각형입니다.  
   
- [in] `bIsPressed`  
+ [in] *bIsPressed*  
  `TRUE` pressed 상태의; 항목을 그릴 그렇지 않으면 `FALSE`합니다.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  `TRUE` 항목을 그리는 강조 표시 된 상태 이면 그렇지 않으면 `FALSE`합니다.  
   
 ##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow  
@@ -252,10 +252,10 @@ virtual void OnDrawSortArrow(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `rectArrow`  
+ [in] *rectArrow*  
  정렬 화살표의 경계 사각형입니다.  
   
 ##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground  
@@ -266,7 +266,7 @@ virtual void OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -279,7 +279,7 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iColumn`  
+ [in] *iColumn*  
  제거할 열의 0부터 시작 하는 인덱스입니다.  
   
 ##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn  
@@ -293,14 +293,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iColumn`  
+ [in] *iColumn*  
  헤더 컨트롤 열의 0부터 시작 하는 인덱스입니다. 이 매개 변수 0 보다 작은 경우이 메서드는 정렬 열 목록에서 모든 열을 제거 합니다.  
   
- [in] `bAscending`  
- 열의 정렬 순서를 지정 하는 `iColumn` 매개 변수를 지정 합니다. `TRUE` 오름차순; 설정 하려면 `FALSE` 내림차순을 설정할 수 있습니다. 기본값은 `TRUE`입니다.  
+ [in] *bAscending*  
+ 열의 정렬 순서를 지정 하는 *iColumn* 매개 변수를 지정 합니다. `TRUE` 오름차순; 설정 하려면 `FALSE` 내림차순을 설정할 수 있습니다. 기본값은 `TRUE`입니다.  
   
- [in] `bAdd`  
- `TRUE` 에 열의 정렬 순서를 설정의 `iColumn` 매개 변수를 지정 합니다.  
+ [in] *추가*  
+ `TRUE` 에 열의 정렬 순서를 설정의 *iColumn* 매개 변수를 지정 합니다.  
   
  현재 헤더 컨트롤에 있으면 *여러 열을 정렬* 모드에서는이 메서드 정렬 열 목록에 지정된 된 열을 추가 합니다. 사용 하 여 [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) 여러 열 정렬 모드를 설정 합니다.  
   

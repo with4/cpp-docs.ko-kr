@@ -88,12 +88,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da6727c54fd3c1f4ae25f401294861a6c8909e50
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 61ab69daadcb7e030511362932be41a3919dd087
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377864"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039325"
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery 클래스
 Office 2007 스타일의 리본 갤러리를 구현합니다.  
@@ -150,18 +150,18 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 |[CMFCRibbonGallery::SetIconsInRow](#seticonsinrow)|갤러리에서 각 행의 항목 수를 정의합니다.|  
 |[CMFCRibbonGallery::SetItemToolTip](#setitemtooltip)|갤러리에서 항목에 대 한 도구 설명 텍스트를 설정합니다.|  
 |[CMFCRibbonGallery::SetPalette](#setpalette)|리본 갤러리를 색상표를 연결합니다.|  
-|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|전송 된 명령 ID를 정의 고 `WM_COMMAND` 갤러리 항목을 선택 하는 경우 메시지입니다.|  
+|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|WM_COMMAND 메시지 갤러리 항목을 선택한 경우에 전송 된 명령 ID를 정의 합니다.|  
   
-### <a name="protected-methods"></a>Protected 메서드  
+### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
 |[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|갤러리 아이콘을 그릴 때 프레임 워크에서 호출 됩니다.|  
   
 ## <a name="remarks"></a>설명  
- 갤러리 단추는 사용자가 열 때 갤러리를 표시 한다는 일반 메뉴 단추 처럼 동작 합니다. 갤러리에서 항목을 선택할 때 프레임 워크 보냅니다는 `WM_COMMAND` 단추의 명령 ID와 함께 메시지입니다. 메시지를 처리 하는 경우 호출 해야 [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) 갤러리에서 선택 된 항목을 찾으려고 합니다.  
+ 갤러리 단추는 사용자가 열 때 갤러리를 표시 한다는 일반 메뉴 단추 처럼 동작 합니다. 갤러리에서 항목을 선택할 때 프레임 워크 단추의 명령 ID와 함께 WM_COMMAND 메시지를 보냅니다. 메시지를 처리 하는 경우 호출 해야 [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) 갤러리에서 선택 된 항목을 찾으려고 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서 다양 한 메서드를 사용 하는 방법을 보여 줍니다는 `CMFCRibbonGallery` 구성 하는 클래스는 `CMFCRibbonGallery` 개체입니다. 이 예제에서는 갤러리의 행 마다 항목의 수를 지정, 메뉴 패널의 크기 조정 가능 하 고, 팝업 메뉴의 왼쪽에 세로 막대를 활성화 하 고 리본 메뉴 모음에 직접 색상표로 리본 갤러리를 표시 하는 방법을 보여 줍니다. 이 코드 조각은 [클라이언트 그리기 샘플](../../visual-cpp-samples.md)의 일부입니다.  
   
  [!code-cpp[NVC_MFC_DrawClient#6](../../mfc/reference/codesnippet/cpp/cmfcribbongallery-class_1.cpp)]  
@@ -195,19 +195,19 @@ void AddGroup(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszGroupName`  
+ [in] *lpszGroupName*  
  그룹의 이름을 지정합니다.  
   
- [in] `uiImagesPaletteResID`  
+ [in] *uiImagesPaletteResID*  
  그룹에 대 한 이미지가 포함 된 이미지 목록의 리소스 ID를 지정 합니다.  
   
- [in] `cxPaletteImage`  
+ [in] *cxPaletteImage*  
  픽셀 이미지의 너비를 지정합니다.  
   
- [in] `imagesGroup`  
+ [in] *imagesGroup*  
  그룹 이미지를 포함 하는 이미지 목록에 대 한 참조입니다.  
   
- [in] `nIconsNum`  
+ [in] *nIconsNum*  
  그룹의 아이콘 수를 지정합니다. 사용자 지정 (소유자 그리기)에 대해서만이 매개 변수를 지정 해야 그룹입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -224,22 +224,22 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pSubItem`  
+ [in] *pSubItem*  
  메뉴에 추가할 항목에 대 한 포인터입니다.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  위치의 0부터 시작 하는 인덱스 항목을 삽입할 위치를 지정 합니다.  
   
- [in] `bOnTop`  
+ [in] *bOnTop*  
  `TRUE` 리본 갤러리; 하기 전에 항목을 삽입할 지정 하려면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드를 호출 하 여 팝업 갤러리 팝업 메뉴 항목과 함께 결합할 수 있습니다. 앞 이나 뒤 갤러리 메뉴 항목을 배치할 수 있습니다.  
   
- 앞에서 갤러리 항목을 삽입 하려면 설정 `bOnTop` 를 `TRUE`합니다. 설정 `bOnTop` 를 `FALSE` 갤러리 아래 항목을 삽입 합니다.  
+ 앞에서 갤러리 항목을 삽입 하려면 설정 *bOnTop* 를 `TRUE`합니다. 설정 *bOnTop* 를 `FALSE` 갤러리 아래 항목을 삽입 합니다.  
   
 > [!NOTE]
->  매개 변수 `nIndex` 갤러리의 위쪽 및 아래쪽 갤러리에 삽입 하는 인덱스를 지정 합니다. 예를 들어 앞에서 갤러리 항목 한 위치는 삽입 해야 설정 `nIndex` 1로 및 `bOnTop` 를 `TRUE`합니다. 마찬가지로, 갤러리 아래에 항목 한 위치를 삽입 해야 하는 경우 설정할 `nIndex` 1 및 `bOnTop` 를 `FALSE`합니다.  
+>  매개 변수 *nIndex* 갤러리의 위쪽 및 아래쪽 갤러리에 삽입 하는 인덱스를 지정 합니다. 예를 들어 앞에서 갤러리 항목 한 위치는 삽입 해야 설정 *nIndex* 1로 및 *bOnTop* 를 `TRUE`합니다. 마찬가지로, 갤러리 아래에 항목 한 위치를 삽입 해야 하는 경우 설정할 *nIndex* 1 및 *bOnTop* 를 `FALSE`합니다.  
   
 ##  <a name="clear"></a>  CMFCRibbonGallery::Clear  
  갤러리의 내용을 지웁니다.  
@@ -283,34 +283,34 @@ CMFCRibbonGallery (
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nID`  
+ *nID*  
  단추를 클릭할 때 실행할 명령의 명령 ID를 지정 합니다.  
   
- `lpszText`  
+ *lpszText*  
  단추에 표시할 텍스트를 지정 합니다.  
   
- `nSmallImageIndex`  
+ *nSmallImageIndex*  
  단추에 표시할 작은 이미지의 0부터 시작 하는 인덱스입니다.  
   
- `nLargeImageIndex`  
+ *nLargeImageIndex*  
  큰 단추에 표시할 이미지의 0부터 시작 하는 인덱스입니다.  
   
- `imagesPalette`  
+ *imagesPalette*  
  에 대 한 참조는 [CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) 갤러리에 표시할 이미지를 포함 하는 개체입니다.  
   
- `uiImagesPaletteResID`  
+ *uiImagesPaletteResID*  
  갤러리에 표시할 이미지 목록은의 리소스 ID입니다.  
   
- `cxPaletteImage`  
+ *cxPaletteImage*  
  갤러리에서 이미지를 픽셀 단위로 너비를 지정 합니다.  
   
- `sizeIcon`  
+ *sizeIcon*  
  갤러리 이미지를 픽셀 단위로 크기를 지정 합니다.  
   
- `nIconsNum`  
+ *nIconsNum*  
  갤러리의 아이콘 수를 지정합니다.  
   
- `bDefaultButtonStyle`  
+ *bDefaultButtonStyle*  
  기본값 또는 소유자가 그린 단추를 사용할 것인지 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -325,10 +325,10 @@ void EnableMenuResize(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` 메뉴; 크기를 조정 하는 사용 하도록 설정 하려면 그렇지 않으면 `FALSE`합니다.  
   
- [in] `bVertcalOnly`  
+ [in] *bVertcalOnly*  
  `TRUE` 갤러리만; 세로로 조정할 수 있는 지정 하려면 `FALSE` 갤러리 수 있도록 지정 하려면 조정할 세로 및 가로로 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -342,7 +342,7 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` 세로 막대, 로깅을 지정 하려면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -356,7 +356,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -381,7 +381,7 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nGroupIndex`  
+ [in] *nGroupIndex*  
  그룹을 검색 하려면 해당 이름에 대 한 0부터 시작 인덱스를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -420,7 +420,7 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nItemIndex`  
+ [in] *nItemIndex*  
  도구 설명 텍스트를 검색할 항목의 0부터 시작 인덱스를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -436,11 +436,11 @@ static int GetLastSelectedItem(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  리본 갤러리 열리는 메뉴 항목의 명령 ID를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 사용자가 리본 갤러리에서 모든 항목을 선택 하면 라이브러리에서 보냅니다는 `WM_COMMAND` 리본 갤러리 열리는 메뉴 단추의 명령 ID와 함께 메시지입니다.  
+ 리본 갤러리에서 모든 항목을 선택 하면 라이브러리 리본 갤러리 열리는 메뉴 단추의 명령 ID와 함께 WM_COMMAND 메시지를 보냅니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -464,7 +464,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -547,7 +547,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>설명  
   
@@ -559,7 +559,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>설명  
   
@@ -576,19 +576,19 @@ virtual void OnDrawPaletteIcon(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  그리기에 사용 되는 장치 컨텍스트에 대 한 포인터입니다.  
   
- [in] `rectIcon`  
+ [in] *rectIcon*  
  그릴 아이콘의 경계 사각형을 지정 합니다.  
   
- [in] `nIconIndex`  
+ [in] *nIconIndex*  
  그릴 아이콘의 갤러리 아이콘의 이미지 목록에서 0부터 시작 하는 인덱스를 지정 합니다.  
   
- [in] `pIcon`  
+ [in] *pIcon*  
  그리고 있는 아이콘에 대 한 포인터입니다.  
   
- [in] `clrText`  
+ [in] *clrText*  
  그릴 항목 텍스트의 색을 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -602,7 +602,7 @@ virtual void OnEnable(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
   
 ### <a name="remarks"></a>설명  
   
@@ -614,7 +614,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
   
 ### <a name="remarks"></a>설명  
   
@@ -645,7 +645,7 @@ void SelectItem(int nItemIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nItemIndex`  
+ [in] *nItemIndex*  
   
 ### <a name="remarks"></a>설명  
   
@@ -659,10 +659,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pParent`  
+ [in] *pParent*  
  리본 갤러리 창의 부모 창입니다.  
   
- [out] `data`  
+ [out] *데이터*  
  리본 갤러리에서 내게 필요한 옵션 데이터를 받는 `CAccessibilityData` 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -678,7 +678,7 @@ void SetButtonMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` 리본 갤러리 드롭 다운 메뉴 단추;으로 표시 하려면 `FALSE` 리본에서 직접 리본 갤러리의 내용을 표시 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -693,10 +693,10 @@ void SetGroupName(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nGroupIndex`  
+ [in] *nGroupIndex*  
  이름이 변경 되 고 있는 그룹에 대 한 0부터 시작 하는 인덱스를 지정 합니다.  
   
- [in] `lpszGroupName`  
+ [in] *lpszGroupName*  
  그룹에 대 한 새 이름을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -710,7 +710,7 @@ void SetIconsInRow(int nIconsInRow);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIconsInRow`  
+ [in] *nIconsInRow*  
  갤러리의 각 행에 표시할 항목 수를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -726,10 +726,10 @@ void SetItemToolTip(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nItemIndex`  
+ [in] *nItemIndex*  
  도구 설명에 연결 하는 색상표 항목의 0부터 시작 하는 인덱스입니다.  
   
- [in] `lpszToolTip`  
+ [in] *lpszToolTip*  
  도구 설명에 표시할 텍스트입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -747,27 +747,27 @@ void SetPalette(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `imagesPalette`  
+ [in] *imagesPalette*  
  갤러리에 표시할 아이콘이 포함 된 이미지 목록을 지정 합니다.  
   
- [in] `uiImagesPaletteResID`  
+ [in] *uiImagesPaletteResID*  
  갤러리에 표시할 아이콘을 포함 하는 이미지 목록의 리소스 ID를 지정 합니다.  
   
- [in] `cxPaletteImage`  
+ [in] *cxPaletteImage*  
  갤러리에서 이미지를 픽셀 단위로 너비를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
   
 ##  <a name="setpaletteid"></a>  CMFCRibbonGallery::SetPaletteID  
- 전송 된 명령 ID 정의 **WM_COMMAND** 메시지는 사용자가 갤러리 항목을 선택 합니다.  
+ WM_COMMAND 메시지 갤러리 항목을 선택할 때 전송 된 명령 ID를 정의 합니다.  
   
 ```  
 void SetPaletteID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nID`  
- 전송 된 명령 ID를 지정는 **WM_COMMAND** 메시지는 사용자가 갤러리 항목을 선택 합니다.  
+ [in] *nID*  
+ WM_COMMAND 메시지 갤러리 항목을 선택할 때 전송 된 명령 ID를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
  사용자가 선택한 갤러리에서 특정 항목을 확인 하려면 호출는 [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) 정적 메서드입니다.  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6195735c25bb188449638750f6100869a44f082
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c80c3b81b804a66e70efe9269b12d4e18d31c676
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370759"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040716"
 ---
 # <a name="colecmdui-class"></a>COleCmdUI 클래스
 응용 프로그램의 `IOleCommandTarget`기반 기능과 관련된 사용자 인터페이스 개체의 상태를 업데이트하기 위한 MFC용 메서드를 구현합니다.  
@@ -82,13 +82,13 @@ COleCmdUI(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rgCmds`  
+ *rgCmds*  
  지정한 GUID와 관련 된 지원 되는 목록입니다. **OLECMD** 구조 명령 플래그 명령에 연결 합니다.  
   
  *cCmds*  
- 명령 수 `rgCmds`합니다.  
+ 명령 수 *rgCmds*합니다.  
   
- `pGroup`  
+ *pGroup*  
  명령 집합을 식별 하는 GUID에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -102,7 +102,7 @@ virtual void Enable(BOOL bOn);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bOn`  
+ *bOn*  
  와 연결 된 명령이 있는지 여부를 나타냅니다는 `COleCmdUI` 개체를 사용 하도록 설정 하거나 사용 하지 않도록 설정 해야 합니다. 0이 아니면 명령을; 활성화 0에서 명령을 비활성화 합니다.  
   
 ##  <a name="setcheck"></a>  COleCmdUI::SetCheck  
@@ -113,7 +113,7 @@ virtual void SetCheck(int nCheck);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nCheck`  
+ *nCheck*  
  켜기/끄기 전환 상태를 결정 하는 값 명령입니다. 값:  
   
 |값|설명|  
@@ -130,7 +130,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszText`  
+ *lpszText*  
  명령에서 사용 되는 텍스트에 대 한 포인터입니다.  
   
 ## <a name="see-also"></a>참고 항목  

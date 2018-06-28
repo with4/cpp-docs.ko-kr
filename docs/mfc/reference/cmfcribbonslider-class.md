@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a4264f26028db4c581fe1dc143905ac0ffc8f66
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06575c4d014f72ddbae63ea5f02c3081b4228e1d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372699"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037731"
 ---
 # <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider 클래스
 `CMFCRibbonSlider` 클래스는 리본 표시줄 또는 리본 메뉴 상태 표시줄에 추가할 수 있는 슬라이더 컨트롤을 구현 합니다. 리본 슬라이더 컨트롤은 Office 2007 응용 프로그램의 확대/축소 슬라이더와 유사합니다.  
@@ -87,7 +87,7 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
   
  `SetZoomIncrement` 메서드 정의를 추가 하거나 확대/축소 단추를 클릭 하면 현재 위치에서 뺄 증가 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는에서 다양 한 메서드를 사용 하는 `CMFCRibbonSlider` 슬라이더의 속성을 설정 하는 클래스입니다. 이 예제에서는 작성 방법을 보여 주는 `CMFCRibbonSlider` 개체, 확대/축소 단추를 표시 하 고 슬라이더 컨트롤의 현재 위치를 설정 및 슬라이더 컨트롤에 대 한 값의 범위를 설정 합니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#12](../../mfc/reference/codesnippet/cpp/cmfcribbonslider-class_1.cpp)]  
@@ -112,14 +112,14 @@ CMFCRibbonSlider(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nID`  
+ [in] *nID*  
  슬라이더의 id입니다.  
   
- [in]. `nWidth`  
+ [in]. *nWidth*  
  슬라이더 너비 (픽셀)에서입니다.  
   
 ### <a name="remarks"></a>설명  
- 생성 되는 리본 슬라이더 `nWidth` 픽셀로 패널 범주 슬라이더 추가 됩니다. 기본적으로 슬라이더는 가로입니다.  
+ 생성 되는 리본 슬라이더 *nWidth* 픽셀로 패널 범주 슬라이더 추가 됩니다. 기본적으로 슬라이더는 가로입니다.  
   
 ##  <a name="getpos"></a>  CMFCRibbonSlider::GetPos  
  슬라이더 컨트롤의 현재 위치를 반환합니다.  
@@ -159,7 +159,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -193,7 +193,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>설명  
   
@@ -207,10 +207,10 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nPos`  
+ [in] *nPos*  
  슬라이더에 대해 설정할 위치를 지정 합니다. 슬라이더의 시작 부분에 상대적인 위치가입니다.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  경우 `TRUE`, 슬라이더 다시 그려집니다.  
   
 ##  <a name="setrange"></a>  CMFCRibbonSlider::SetRange  
@@ -223,10 +223,10 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nMin`  
+ [in] *nMin*  
  슬라이더 컨트롤의 최소값을 지정합니다.  
   
- [in] `nMax`  
+ [in] *최대*  
  슬라이더 컨트롤의 최대값을 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -240,7 +240,7 @@ void SetZoomButtons(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in]. `bSet`  
+ [in]. *bSet*  
  `TRUE` 확대/축소 단추를 표시 하려면 `FALSE` 을 숨기기 위해.  
   
 ##  <a name="setzoomincrement"></a>  CMFCRibbonSlider::SetZoomIncrement  
@@ -251,7 +251,7 @@ void SetZoomIncrement(int nZoomIncrement);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nZoomIncrement`  
+ [in] *nZoomIncrement*  
  슬라이더 컨트롤의 확대/축소 증분 값을 지정 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

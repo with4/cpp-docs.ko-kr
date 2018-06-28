@@ -92,12 +92,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a636b07b73da6ded6fb1646b7efa30b4685e55ee
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c7df4ea13313758c517188e1c4ce0441618a99b4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377670"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039069"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc 클래스
 OLE 서버 문서의 기본 클래스입니다.  
@@ -237,7 +237,7 @@ virtual COleIPFrameWnd* CreateInPlaceFrame(CWnd* pParentWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParentWnd`  
+ *pParentWnd*  
  컨테이너 응용 프로그램의 부모 창에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -269,7 +269,7 @@ virtual void DestroyInPlaceFrame(COleIPFrameWnd* pFrameWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pFrameWnd`  
+ *pFrameWnd*  
  내부 프레임 창 소멸 될 예정에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -306,7 +306,7 @@ virtual CDocObjectServer* GetDocObjectServer(LPOLEDOCUMENTSITE pDocSite);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDocSite`  
+ *pDocSite*  
  에 대 한 포인터는 `IOleDocumentSite` 이 문서는 서버에 연결 하는 인터페이스입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -340,7 +340,7 @@ void GetItemClipRect(LPRECT lpClipRect) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpClipRect`  
+ *lpClipRect*  
  에 대 한 포인터는 `RECT` 구조 또는 `CRect` 항목의 클리핑 사각형 좌표로 받을 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -356,7 +356,7 @@ void GetItemPosition(LPRECT lpPosRect) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPosRect`  
+ *lpPosRect*  
  에 대 한 포인터는 `RECT` 구조 또는 `CRect` 있는 항목의 좌표를 받을 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -381,7 +381,7 @@ BOOL GetZoomFactor(
  *lpSizeDenom*  
  클래스의 개체에 대 한 포인터 `CSize` 확대/축소 비율의 분모를 보유 합니다. 수 **NULL**합니다.  
   
- `lpPosRect`  
+ *lpPosRect*  
  클래스의 개체에 대 한 포인터 `CRect` 항목의 새 위치를 설명 하는 합니다. 이 인수가 **NULL**, 함수에서 해당 항목의 현재 위치를 사용 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -456,7 +456,7 @@ void NotifyRename(LPCTSTR lpszNewName);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszNewName`  
+ *lpszNewName*  
  서버 문서;의 새 이름을 지정 하는 문자열에 대 한 포인터 이것이 일반적으로 정규화 된 경로입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -480,7 +480,7 @@ virtual void OnClose(OLECLOSE dwCloseOption);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwCloseOption`  
+ *dwCloseOption*  
  열거형의 값 `OLECLOSE`합니다. 이 매개 변수는 다음 값 중 하나를 가질 수 있습니다.  
   
 - `OLECLOSE_SAVEIFDIRTY` 수정 된 경우에 파일이 저장 됩니다.  
@@ -516,13 +516,13 @@ virtual void OnDeactivateUI(BOOL bUndoable);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bUndoable`  
+ *bUndoable*  
  변경 내용 편집을 취소할 수 있는지 여부를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수를 모든 메뉴 및 내부 활성화에 대해 생성 된 다른 컨트롤 숨기기, 원래 상태로 컨테이너 응용 프로그램의 사용자 인터페이스를 복원 합니다.  
   
- 프레임 워크는 항상 설정 `bUndoable` 를 **FALSE**합니다. 서버 지원 실행 취소 하는 경우 실행 취소할 수 있는 작업이입니다와 기본 클래스 구현을 호출 `bUndoable` 로 설정 **TRUE**합니다.  
+ 프레임 워크는 항상 설정 *bUndoable* 를 **FALSE**합니다. 서버 지원 실행 취소 하는 경우 실행 취소할 수 있는 작업이입니다와 기본 클래스 구현을 호출 *bUndoable* 로 설정 **TRUE**합니다.  
   
 ##  <a name="ondocwindowactivate"></a>  COleServerDoc::OnDocWindowActivate  
  프레임 워크를 활성화 하거나 비활성화 내부 편집에 대 한 문서 창을이 함수를 호출 합니다.  
@@ -532,7 +532,7 @@ virtual void OnDocWindowActivate(BOOL bActivate);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bActivate`  
+ *bActivate*  
  문서 창이 활성화 되거나 비활성화 되려고를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -553,11 +553,11 @@ virtual HRESULT OnExecOleCmd(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pguidCmdGroup`  
+ *pguidCmdGroup*  
  명령 집합을 식별 하는 GUID에 대 한 포인터입니다. 수 **NULL** 기본 명령 그룹을 나타냅니다.  
   
- `nCmdID`  
- 실행할 명령입니다. 로 식별 되는 그룹에 있어야 `pguidCmdGroup`합니다.  
+ *nCmdID*  
+ 실행할 명령입니다. 로 식별 되는 그룹에 있어야 *pguidCmdGroup*합니다.  
   
  *nCmdExecOut*  
  방법은 명령, 하나 이상에서 다음 값 중 개체가 실행 해야는 **OLECMDEXECOPT** 열거:  
@@ -570,10 +570,10 @@ virtual HRESULT OnExecOleCmd(
   
  **OLECMDEXECOPT_SHOWHELP**  
   
- `pvarargIn`  
+ *pvarargIn*  
  에 대 한 포인터는 **VARIANTARG** 명령에 대 한 입력된 인수를 포함 합니다. 수 **NULL**합니다.  
   
- `pvarargOut`  
+ *pvarargOut*  
  에 대 한 포인터는 **VARIANTARG** 명령에서 출력이 반환 값을 받을 수 있습니다. 수 **NULL**합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -584,10 +584,10 @@ virtual HRESULT OnExecOleCmd(
 |**E_UNEXPECTED**|예기치 않은 오류가 발생 했습니다.|  
 |**E_FAIL**|오류가 발생 했습니다.|  
 |**E_NOTIMPL**|MFC 나타냅니다을 변환 하 고 명령 디스패치 하려고 해야 자체|  
-|**OLECMDERR_E_UNKNOWNGROUP**|`pguidCmdGroup` 이 아닌 **NULL** 하지만 인식 된 명령 그룹을 지정 하지 않습니다|  
-|**OLECMDERR_E_NOTSUPPORTED**|`nCmdID` 그룹에 올바른 명령으로 인식 되지 않습니다. `pguidCmdGroup`|  
-|**OLECMDERR_DISABLED**|로 식별 되는 명령을 `nCmdID` 비활성화 되 고 실행할 수 없습니다|  
-|**OLECMDERR_NOHELP**|호출자로 식별 되는 명령에 도움을 요청 `nCmdID` 도움말을 사용할 수 있지만|  
+|**OLECMDERR_E_UNKNOWNGROUP**|*pguidCmdGroup* 이 아닌 **NULL** 하지만 인식 된 명령 그룹을 지정 하지 않습니다|  
+|**OLECMDERR_E_NOTSUPPORTED**|*nCmdID* 그룹에 올바른 명령으로 인식 되지 않습니다 *pguidCmdGroup*|  
+|**OLECMDERR_DISABLED**|로 식별 되는 명령을 *nCmdID* 비활성화 되 고 실행할 수 없습니다|  
+|**OLECMDERR_NOHELP**|호출자로 식별 되는 명령에 도움을 요청 *nCmdID* 도움말을 사용할 수 있지만|  
 |**OLECMDERR_CANCELED**|사용자는 실행을 취소 했습니다.|  
   
 ### <a name="remarks"></a>설명  
@@ -595,11 +595,11 @@ virtual HRESULT OnExecOleCmd(
   
  프레임 워크를 변환 및 OLE 문서 명령을 발송 하기 전에 함수를 호출 합니다. 표준 OLE 문서 명령을 처리 하려면이 함수를 재정의 하지 않아도 됩니다. 하지만 사용자 지정 명령을 처리 하거나 매개 변수를 허용 또는 결과 반환 하는 명령을 처리 하려는 경우이 함수에 대 한 재정의 제공 해야 합니다.  
   
- 대부분의 명령 인수를 사용 하지 않거나 값을 반환 합니다. 대부분의 명령에 대 한 호출자에 게 전달할 수 **NULL**에 대 한 s `pvarargIn` 및 `pvarargOut`합니다. 입력된 값을 예상 하는 명령에 대 한 호출자가 선언 하 고 초기화할 수는 **VARIANTARG** 변수에서 변수에 대 한 포인터를 전달 하 고 `pvarargIn`합니다. 단일 값을 필요로 하는 명령에 대 한 인수 수에 저장 될 직접는 **VARIANTARG** 함수에 전달 합니다. 내에 여러 인수를 패키지 해야 합니다는 **VARIANTARG** 지원 되는 유형 중 하나를 사용 하 여 (예: `IDispatch` 및 **SAFEARRAY** ).  
+ 대부분의 명령 인수를 사용 하지 않거나 값을 반환 합니다. 대부분의 명령에 대 한 호출자에 게 전달할 수 **NULL**에 대 한 s *pvarargIn* 및 *pvarargOut*합니다. 입력된 값을 예상 하는 명령에 대 한 호출자가 선언 하 고 초기화할 수는 **VARIANTARG** 변수에서 변수에 대 한 포인터를 전달 하 고 *pvarargIn*합니다. 단일 값을 필요로 하는 명령에 대 한 인수 수에 저장 될 직접는 **VARIANTARG** 함수에 전달 합니다. 내에 여러 인수를 패키지 해야 합니다는 **VARIANTARG** 지원 되는 유형 중 하나를 사용 하 여 (예: `IDispatch` 및 **SAFEARRAY** ).  
   
- 마찬가지로, 명령 인수를 호출자에 게 반환 하는 경우 사용할 수를 선언 하는 **VARIANTARG**, 되도록 초기화 `VT_EMPTY`, 주소를 전달 하 고 `pvarargOut`합니다. 개체에서 직접 해당 값을 저장할 수 명령에서 단일 값을 반환 하는 경우 `pvarargOut`합니다. 여러 출력 값에 대 한 적절 한 어떤 방식으로든 패키지 해야는 **VARIANTARG**합니다.  
+ 마찬가지로, 명령 인수를 호출자에 게 반환 하는 경우 사용할 수를 선언 하는 **VARIANTARG**, 되도록 초기화 `VT_EMPTY`, 주소를 전달 하 고 *pvarargOut*합니다. 개체에서 직접 해당 값을 저장할 수 명령에서 단일 값을 반환 하는 경우 *pvarargOut*합니다. 여러 출력 값에 대 한 적절 한 어떤 방식으로든 패키지 해야는 **VARIANTARG**합니다.  
   
- 이 함수의 기본 클래스 구현을 안내는 **OLE_COMMAND_MAP** 명령 대상 및 적절 한 처리기를 명령 디스패치 시도와 관련 된 구조입니다. 기본 클래스 구현을 반환 값 또는 인수를 허용 하지 않는 명령 에서만 작동 합니다. 이 함수를 재정의 하 고 작업을 해야 않는 인수를 허용 하거나 값을 반환 하는 명령을 처리 해야 할 경우는 `pvarargIn` 및 `pvarargOut` 매개 변수 직접 합니다.  
+ 이 함수의 기본 클래스 구현을 안내는 **OLE_COMMAND_MAP** 명령 대상 및 적절 한 처리기를 명령 디스패치 시도와 관련 된 구조입니다. 기본 클래스 구현을 반환 값 또는 인수를 허용 하지 않는 명령 에서만 작동 합니다. 이 함수를 재정의 하 고 작업을 해야 않는 인수를 허용 하거나 값을 반환 하는 명령을 처리 해야 할 경우는 *pvarargIn* 및 *pvarargOut* 매개 변수 직접 합니다.  
   
 ##  <a name="onframewindowactivate"></a>  COleServerDoc::OnFrameWindowActivate  
  컨테이너 응용 프로그램의 프레임 창이 활성화 또는 비활성화 하는 경우 프레임 워크에서이 함수를 호출 합니다.  
@@ -609,7 +609,7 @@ virtual void OnFrameWindowActivate(BOOL bActivate);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bActivate`  
+ *bActivate*  
  프레임 창이 활성화 되거나 비활성화 되려고를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -656,14 +656,14 @@ virtual void OnResizeBorder(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRectBorder`  
+ *lpRectBorder*  
  에 대 한 포인터는 `RECT` 구조 또는 `CRect` 테두리의 좌표를 지정 하는 개체입니다.  
   
- `lpUIWindow`  
+ *lpUIWindow*  
  클래스의 개체에 대 한 포인터 **IOleInPlaceUIWindow** 현재 내부 편집 세션을 소유 하는입니다.  
   
  *bFrame*  
- **TRUE** 경우 `lpUIWindow` 컨테이너 응용 프로그램의 최상위 프레임 창이 가리키는 또는 **FALSE** 경우 `lpUIWindow` 컨테이너 응용 프로그램의 문서 수준 프레임 창을 가리킵니다.  
+ **True 이면** 경우 *lpUIWindow* 컨테이너 응용 프로그램의 최상위 프레임 창이 가리키는 또는 **FALSE** 경우 *lpUIWindow* 컨테이너를 가리키는 응용 프로그램의 문서 수준 프레임 창입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수는 크기를 조정 하 고 도구 모음과 기타 사용자 인터페이스 요소를 새 창 크기에 맞게 조정 합니다.  
@@ -682,10 +682,10 @@ virtual void OnSetHostNames(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszHost`  
+ *lpszHost*  
  컨테이너 응용 프로그램의 이름을 지정 하는 문자열에 대 한 포인터입니다.  
   
- `lpszHostObj`  
+ *lpszHostObj*  
  문서에 대 한 컨테이너의 이름을 지정 하는 문자열에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -703,10 +703,10 @@ virtual void OnSetItemRects(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPosRect`  
+ *lpPosRect*  
  에 대 한 포인터는 `RECT` 구조 또는 `CRect` 컨테이너 응용 프로그램의 클라이언트 영역을 기준으로 내부 프레임 창 위치를 지정 하는 개체입니다.  
   
- `lpClipRect`  
+ *lpClipRect*  
  에 대 한 포인터는 `RECT` 구조 또는 `CRect` 내부 프레임 창을 클리핑 사각형 컨테이너 응용 프로그램의 클라이언트 영역을 기준으로 지정 하는 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -715,7 +715,7 @@ virtual void OnSetItemRects(
  이 함수는 일반적으로 대 한 응답으로 호출 됩니다는 `RequestPositionChange` 컨테이너 내부 항목에 대 한 위치 변경 요청에 의해 언제 든 지 호출할 수 있지만 호출 합니다.  
   
 ##  <a name="onshowcontrolbars"></a>  COleServerDoc::OnShowControlBars  
- 이 함수를 식별 하 여 프레임 창과 연결 된 서버 응용 프로그램의 컨트롤 막대를 표시할지를 호출 하는 프레임 워크 `pFrameWnd`합니다.  
+ 이 함수를 식별 하 여 프레임 창과 연결 된 서버 응용 프로그램의 컨트롤 막대를 표시할지를 호출 하는 프레임 워크 *pFrameWnd*합니다.  
   
 ```  
 virtual void OnShowControlBars(
@@ -724,10 +724,10 @@ virtual void OnShowControlBars(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pFrameWnd`  
+ *pFrameWnd*  
  컨트롤 막대를 숨기 거 나 표시 해야 하는 프레임 창에 대 한 포인터입니다.  
   
- `bShow`  
+ *bShow*  
  컨트롤 막대는 표시 하거나 숨길 있는지 여부를 결정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -741,11 +741,11 @@ virtual void OnShowDocument(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bShow`  
+ *bShow*  
  문서에 사용자 인터페이스를 표시 하거나 숨길 수 있는지 여부를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `bShow` 은 **TRUE**, 기본 구현에서는 필요한 경우 서버 응용 프로그램을 활성화 하 고 컨테이너 응용 프로그램 항목을 볼 수 있도록 해당 창을 스크롤하여 하 합니다. 경우 `bShow` 은 **FALSE**, 호출을 통해 항목을 비활성화 하는 기본 구현은 `OnDeactivate`, 다음를 제거 하거나 첫 번째 문서에 대해 생성 된 모든 프레임 창을 숨깁니다. 문서가 없으면 표시 유지 하는 경우 기본 구현에서는 서버 응용 프로그램을 숨깁니다.  
+ 경우 *bShow* 은 **TRUE**, 기본 구현에서는 필요한 경우 서버 응용 프로그램을 활성화 하 고 컨테이너 응용 프로그램 항목을 볼 수 있도록 해당 창을 스크롤하여 하 합니다. 경우 *bShow* 은 **FALSE**, 호출을 통해 항목을 비활성화 하는 기본 구현은 `OnDeactivate`, 다음를 제거 하거나 첫 번째 제외 하 고 문서에 대해 생성 된 모든 프레임 창을 숨깁니다. 하나입니다. 문서가 없으면 표시 유지 하는 경우 기본 구현에서는 서버 응용 프로그램을 숨깁니다.  
   
 ##  <a name="onupdatedocument"></a>  COleServerDoc::OnUpdateDocument  
  복합 문서에 포함된 된 항목은 문서를 저장 하는 경우 프레임 워크에서 호출 됩니다.  
@@ -768,7 +768,7 @@ void RequestPositionChange(LPCRECT lpPosRect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPosRect`  
+ *lpPosRect*  
  에 대 한 포인터는 `RECT` 구조 또는 `CRect` 항목의 새 위치를 포함 하는 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -792,7 +792,7 @@ BOOL ScrollContainerBy(CSize sizeScroll);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `sizeScroll`  
+ *sizeScroll*  
  컨테이너 문서 스크롤해야 나타냅니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -813,16 +813,16 @@ void UpdateAllItems(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pSender`  
+ *pSender*  
  문서를 수정 하는 항목에 대 한 포인터 또는 **NULL** 모든 항목은 업데이트 해야 하는 경우.  
   
- `lHint`  
+ *lHint*  
  수정에 대 한 정보를 포함합니다.  
   
- `pHint`  
+ *pHint*  
  수정에 대 한 정보를 저장 하는 개체에 대 한 포인터입니다.  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  항목을 그릴 수 있도록 방법을 결정 합니다. 이 값은에서 값의 `DVASPECT` 열거형입니다. 이 매개 변수는 다음 값 중 하나를 가질 수 있습니다.  
   
 - `DVASPECT_CONTENT` 항목은 해당 컨테이너 내에 포함 된 개체로 표시 될 수 하는 방식으로 표시 됩니다.  
@@ -836,7 +836,7 @@ void UpdateAllItems(
 ### <a name="remarks"></a>설명  
  일반적으로 사용자는 서버 문서를 변경한 후이 함수를 호출 합니다. OLE 항목 들어 자동 링크가 포함 된 문서에 연결 된 경우 해당 항목 변경 내용을 반영 하도록 업데이트 됩니다. Microsoft Foundation Class 라이브러리로 작성 된 컨테이너 응용 프로그램에는 [OnChange](../../mfc/reference/coleclientitem-class.md#onchange) 의 멤버 함수 `COleClientItem` 호출 됩니다.  
   
- 이 함수 호출의 `OnUpdate` 각 보내는 항목을 전달 하는 제외 하 고 문서 항목에 대 한 멤버 함수 `pHint`, `lHint`, 및 `nDrawAspect`합니다. 이러한 매개 변수를 사용 하 여 수정 내용에 문서에 대 한 항목에 정보를 전달 합니다. 사용 하 여 정보를 인코딩할 수 `lHint` 하거나 정의할 수 있습니다는 `CObject`-수정 작업에 대 한 정보를 저장 하 고 사용 하 여 해당 클래스의 개체를 전달 하는 클래스를 파생 `pHint`합니다. 재정의 `OnUpdate` 멤버 함수에서 프로그램 `COleServerItem`-표시 변경 되었는지 여부에 따라 각 항목의 업데이트를 최적화 하는 클래스를 파생 합니다.  
+ 이 함수 호출의 `OnUpdate` 각 보내는 항목을 전달 하는 제외 하 고 문서 항목에 대 한 멤버 함수 *pHint*, *lHint*, 및 *nDrawAspect*합니다. 이러한 매개 변수를 사용 하 여 수정 내용에 문서에 대 한 항목에 정보를 전달 합니다. 사용 하 여 정보를 인코딩할 수 *lHint* 하거나 정의할 수 있습니다는 `CObject`-수정 작업에 대 한 정보를 저장 하 고 사용 하 여 해당 클래스의 개체를 전달 하는 클래스를 파생 *pHint*합니다. 재정의 `OnUpdate` 멤버 함수에서 프로그램 `COleServerItem`-표시 변경 되었는지 여부에 따라 각 항목의 업데이트를 최적화 하는 클래스를 파생 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [MFC 샘플 HIERSVR](../../visual-cpp-samples.md)   

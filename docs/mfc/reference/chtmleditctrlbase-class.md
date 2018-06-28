@@ -230,12 +230,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40d8c55f212949400bc7948be291d037a34281ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 62be8c2061dc27b847e2bf0bfe7ca3c4c8195f5f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378494"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039312"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase 클래스
 HTML 편집 구성 요소를 나타냅니다.  
@@ -391,7 +391,7 @@ HRESULT AddToGlyphTable(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szTag`  
+ *szTag*  
  태그 이름 (예: "P" 또는 "table")입니다.  
   
  *szImgUrl*  
@@ -444,7 +444,7 @@ HRESULT Button(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szId`  
+ *szId*  
  단추 컨트롤의 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -461,7 +461,7 @@ HRESULT CheckBox(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szId`  
+ *szId*  
  확인란 컨트롤의 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -530,7 +530,7 @@ HRESULT DropDownBox(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szId`  
+ *szId*  
  드롭다운 목록 선택 컨트롤의 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -571,10 +571,10 @@ HRESULT ExecCommand(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cmdID`  
+ *cmdID*  
  실행할 명령 ID입니다. 목록에 대 한 참조 [MSHTML 명령 식별자](https://msdn.microsoft.com/library/aa741315.aspx)합니다.  
   
- `cmdExecOpt`  
+ *cmdExecOpt*  
  가져온 값의 [OLECMDEXECOPT](http://msdn.microsoft.com/library/windows/desktop/ms683930) 개체 해야 명령이 실행 되는 방법을 설명 하는 열거형입니다.  
   
  *pInVar*  
@@ -613,7 +613,7 @@ HRESULT GetAbsolutePosition(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bCurValue`  
+ *bCurValue*  
  요소의 위치 속성에 "절대." 설정 되 면 true  
   
 ### <a name="return-value"></a>반환 값  
@@ -630,7 +630,7 @@ HRESULT GetBackColor(int& nColor) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nColor`  
+ *nColor*  
  배경색입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -698,7 +698,7 @@ HRESULT GetDocument(IHTMLDocument2** ppDoc) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ppDoc`  
+ *ppDoc*  
  Document 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -712,7 +712,7 @@ HRESULT GetDocumentHTML(CString& szHTML) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szHTML`  
+ *szHTML*  
  HTML입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -740,7 +740,7 @@ HRESULT GetEvent(IHTMLEventObj** ppEventObj) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ppEventObj`  
+ *ppEventObj*  
  이벤트 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -768,14 +768,14 @@ HRESULT GetFontFace(CString& strFace) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `strFace`  
+ *strFace*  
  글꼴 이름입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 현재 선택 영역에 둘 이상의 글꼴을 사용 하는 경우 `strFace` 빈 문자열입니다.  
+ 현재 선택 영역에 둘 이상의 글꼴을 사용 하는 경우 *strFace* 빈 문자열이 됩니다.  
   
  이 메서드는 전송 된 [IDM_FONTNAME 명령 ID](https://msdn.microsoft.com/library/aa769880.aspx) WebBrowser 컨트롤에 있습니다.  
   
@@ -787,7 +787,7 @@ HRESULT GetFontSize(short& nSize) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nSize`  
+ *nSize*  
  글꼴 크기입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -804,7 +804,7 @@ HRESULT GetForeColor(int& nColor);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nColor`  
+ *nColor*  
  전경색입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -848,7 +848,7 @@ HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bCurValue`  
+ *bCurValue*  
  기호가 있는 모든 요소에 대해 표시 되 면 true는 **styleFloat** 속성, false 이면 문자 모양은 표시 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -865,7 +865,7 @@ HRESULT GetShowAllTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bCurValue`  
+ *bCurValue*  
  WebBrowser; 문서에서 모든 태그의 위치를 표시 하려면 문자 모양으로 표시 하는 경우 true입니다. 그렇지 않은 경우 false입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -882,7 +882,7 @@ HRESULT GetShowAreaTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bCurValue`  
+ *bCurValue*  
  True 이면 WebBrowser는 그렇지 않은 경우 false 영역 태그에 대 한 문자가 표시 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -899,7 +899,7 @@ HRESULT GetShowBRTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bCurValue`  
+ *bCurValue*  
  WebBrowser 문자 모양을 표시 br 태그에 대 한 false를 반환 하지 않으면 면 true입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -916,7 +916,7 @@ HRESULT GetShowCommentTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bCurValue`  
+ *bCurValue*  
  True 이면 WebBrowser 표시 주석 태그 문자 모양을 false를 반환 하지 않으면.  
   
 ### <a name="return-value"></a>반환 값  
@@ -933,7 +933,7 @@ HRESULT GetShowMiscTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bCurValue`  
+ *bCurValue*  
  WebBrowser Internet Explorer 4.0, 그렇지 않은 경우 false에에서 표시 된 모든 태그를 표시 하는 경우 true입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -950,7 +950,7 @@ HRESULT GetShowScriptTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bCurValue`  
+ *bCurValue*  
  True 이면 WebBrowser 표시는 모든 스크립트 태그 문자 모양을 false 그렇지 않은 경우.  
   
 ### <a name="return-value"></a>반환 값  
@@ -967,7 +967,7 @@ HRESULT GetShowStyleTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bCurValue`  
+ *bCurValue*  
  True 이면 WebBrowser 표시 스타일 태그 문자 모양을 false 그렇지 않은 경우  
   
 ### <a name="return-value"></a>반환 값  
@@ -984,7 +984,7 @@ HRESULT GetShowUnknownTags(bool& bCurValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bCurValue`  
+ *bCurValue*  
  True 이면 WebBrowser 표시 모든 알 수 없는 태그 문자 모양을 false 그렇지 않은 경우.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1018,7 +1018,7 @@ HRESULT HyperLink(LPCTSTR szUrl = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szUrl`  
+ *szUrl*  
  하이퍼링크 URL입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1035,7 +1035,7 @@ HRESULT IE50Paste(LPCTSTR szData) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szData`  
+ *szData*  
  문자열을 붙여 넣을 것입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1052,7 +1052,7 @@ HRESULT Iframe(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szId`  
+ *szId*  
  인라인 프레임에 대 한 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1069,7 +1069,7 @@ HRESULT Image(LPCTSTR szUrl = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szUrl`  
+ *szUrl*  
  삽입할 이미지의 경로 파일 이름입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1099,7 +1099,7 @@ HRESULT InsFieldSet(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szId`  
+ *szId*  
  상자에 대 한 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1116,7 +1116,7 @@ HRESULT InsInputButton(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szId`  
+ *szId*  
  단추 컨트롤에 대 한 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1133,7 +1133,7 @@ HRESULT InsInputHidden(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szId`  
+ *szId*  
  숨겨진된 컨트롤에 대 한 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1150,7 +1150,7 @@ HRESULT InsInputImage(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szId`  
+ *szId*  
  이미지 컨트롤에 대 한 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1167,7 +1167,7 @@ HRESULT InsInputPassword(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szId`  
+ *szId*  
  암호 컨트롤에 대 한 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1184,7 +1184,7 @@ HRESULT InsInputReset(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szId`  
+ *szId*  
  원래 대로 컨트롤에 대 한 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1201,7 +1201,7 @@ HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szId`  
+ *szId*  
  전송 컨트롤에 대 한 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1218,7 +1218,7 @@ HRESULT InsInputUpload(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szId`  
+ *szId*  
  파일 업로드 컨트롤에 대 한 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1235,7 +1235,7 @@ HRESULT Is1DElement(bool& bValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bValue`  
+ *bValue*  
  그렇지 않으면 요소는 정적 위치 지정이 고, false 면 true입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1252,7 +1252,7 @@ HRESULT Is2DElement(bool& bValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bValue`  
+ *bValue*  
  그렇지 않으면 요소는이 고, false 절대 위치로 지정 된 경우 true입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1321,7 +1321,7 @@ HRESULT ListBox(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szId`  
+ *szId*  
  목록 상자 컨트롤에 대 한 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1338,7 +1338,7 @@ HRESULT Marquee(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szId`  
+ *szId*  
  움직이는 텍스트에 대 한 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1365,7 +1365,7 @@ HRESULT OrderList(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szId`  
+ *szId*  
  정렬된 된 목록에 대 한 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1395,7 +1395,7 @@ HRESULT Paragraph(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szId`  
+ *szId*  
  단락에 대 한 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1427,7 +1427,7 @@ HRESULT PrintDocument(bool bShowPrintDialog) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szPrintTemplate`  
+ *szPrintTemplate*  
  인쇄 템플릿;에 대 한 경로 지정 하지 않으면 기본 인쇄 템플릿이 사용 됩니다.  
   
  *bShowPrintDialog*  
@@ -1448,7 +1448,7 @@ HRESULT PrintPreview(LPCTSTR szPrintTemplate) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szPrintTemplate`  
+ *szPrintTemplate*  
  경로 인쇄 템플릿입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1465,11 +1465,11 @@ long QueryStatus(long cmdID) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cmdID`  
+ *cmdID*  
  명령 ID입니다. 가져온 명령 식별자는 `CGID_MSHTML` 명령 그룹입니다. 이 명령은 Mshtmcid.h에 정의 됩니다. 온라인 목록을 찾을 수 있습니다 [MSHTML 명령 식별자](http://go.microsoft.com/fwlink/p/?linkid=149220)합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 반환 된 [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) 에 대 한 상태를 나타내는 `cmdID`, 또는 실패 한 경우 0입니다.  
+ 반환 된 [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) 에 대 한 상태를 나타내는 *cmdID*, 또는 실패 한 경우 0입니다.  
   
 ##  <a name="radiobutton"></a>  CHtmlEditCtrlBase::RadioButton  
  현재 선택 영역에 있는 라디오 컨트롤이 덮어씁니다.  
@@ -1479,7 +1479,7 @@ HRESULT RadioButton(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szId`  
+ *szId*  
  라디오 단추의 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1522,7 +1522,7 @@ HRESULT SaveAs(LPCTSTR szPath = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szPath`  
+ *szPath*  
  웹 페이지를 저장할 경로 파일 이름입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1552,7 +1552,7 @@ HRESULT Set2DPosition(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  True 인 경우, 절대 위치로 지정 된 요소를 끌어 이동할 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1569,7 +1569,7 @@ HRESULT SetAbsolutePosition(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  요소의 위치 속성은 "absolute"; true 인 경우 false 인 경우 "정적"입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1586,7 +1586,7 @@ HRESULT SetAtomicSelection(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  True 이면 ATOMICSELECTION 특성이 TRUE로 설정 된 모든 요소를 하나의 단위로 선택할 수 있는 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1603,7 +1603,7 @@ HRESULT SetAutoURLDetectMode(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  True 이면 자동 URL 검색이 사용 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1621,11 +1621,11 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nColor`  
- 색입니다. 참조 `pvaIn` 에 [IDM_BACKCOLOR 명령 ID](https://msdn.microsoft.com/library/aa769858.aspx)합니다.  
+ *nColor*  
+ 색입니다. 참조 *pvaIn* 에 [IDM_BACKCOLOR 명령 ID](https://msdn.microsoft.com/library/aa769858.aspx)합니다.  
   
- `szColor`  
- 색입니다. 참조 `pvaIn` 에 [IDM_BACKCOLOR 명령 ID](https://msdn.microsoft.com/library/aa769858.aspx)합니다.  
+ *szColor*  
+ 색입니다. 참조 *pvaIn* 에 [IDM_BACKCOLOR 명령 ID](https://msdn.microsoft.com/library/aa769858.aspx)합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
@@ -1641,7 +1641,7 @@ HRESULT SetBlockFormat(LPCTSTR szFormat) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szFormat`  
+ *szFormat*  
  형식 태그입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1675,7 +1675,7 @@ HRESULT SetCSSEditingLevel(short nLevel) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nLevel`  
+ *nLevel*  
  CSS 수준입니다. CSS 지원 하지 않을 경우 0을 전달 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1714,10 +1714,10 @@ HRESULT SetDefaultComposeSettings(
  *bBold*  
  굵은 텍스트에 대 한 true를 전달 합니다.  
   
- `bItalic`  
+ *bItalic*  
  기울임꼴 텍스트에 대 한 true를 전달 합니다.  
   
- `bUnderline`  
+ *bUnderline*  
  밑줄이 그어진된 텍스트에 대 한 true를 전달 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1734,7 +1734,7 @@ BOOL SetDesignMode(BOOL bMode) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bMode`  
+ *bMode*  
  True 이면 디자인 모드를 설정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1748,7 +1748,7 @@ HRESULT SetDisableEditFocusUI(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  True 이면 비활성화 해치 테두리와 사이트 선택 가능한 요소 주위에 핸들이 요소에 있는 "편집 포커스" 디자인 모드에서 즉 때 텍스트 또는 요소 내용을 편집할 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1765,7 +1765,7 @@ HRESULT SetDocumentHTML(LPCTSTR szHTML) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szHTML`  
+ *szHTML*  
  HTML입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1779,7 +1779,7 @@ HRESULT SetFontFace(LPCTSTR szFace) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szFace`  
+ *szFace*  
  글꼴 이름입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1796,7 +1796,7 @@ HRESULT SetFontSize(unsigned short size) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `size`  
+ *size*  
  HTML 글꼴 크기 (1-7)입니다. 글꼴 크기를 1로 설정 하는 값이 0입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1814,10 +1814,10 @@ HRESULT SetForeColor(int nColor) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szColor`  
+ *szColor*  
  색입니다.  
   
- `nColor`  
+ *nColor*  
  색입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1834,7 +1834,7 @@ HRESULT SetIE5PasteMode(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  True 인 경우 붙여넣기 작업이 모든 Internet Explorer 5; 호환 되는 false 인 경우, 붙여넣기 작업 Internet Explorer 5.5와 호환 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1851,7 +1851,7 @@ HRESULT SetLiveResize(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  True 이면 WebBrowser 요소의 모양을/이동 하거나 크기 조정 작업; 동안 지속적으로 업데이트를 사용 하면 false 인 경우, 이동 또는 크기 조정으로 완료 될 때만 업데이트 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1868,7 +1868,7 @@ HRESULT SetMultiSelect(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  True 인 경우, SHIFT 또는 CTRL 키를 누르고 있는 경우 한 번에 둘 이상의 사이트를 선택할 수 있는 요소를 선택할 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1885,7 +1885,7 @@ HRESULT SetOverrideCursor(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  True 이면 WebBrowser에 마우스 포인터를 변경 되지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1902,7 +1902,7 @@ HRESULT SetOverwriteMode(bool bMode) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bMode`  
+ *bMode*  
  True 이면 텍스트 입력 모드가 덮어쓰기; false 인 경우, 텍스트 입력 모드는 삽입 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1919,7 +1919,7 @@ HRESULT SetRespectVisInDesign(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  디자인 모드와 찾아보기 모드; 모두에서 "hidden"으로 설정 또는 "none"으로 속성 집합을 표시할 표시 하는 요소가 표시 되지 않습니다 true 인 경우 false 인 경우, 해당 요소가 찾아보기 모드에만 표시 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1936,7 +1936,7 @@ HRESULT SetShowAlignedSiteTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  True 이면에 있는 모든 요소에 대 한 문자 모양을 표시는 **styleFloat** 속성입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1953,7 +1953,7 @@ HRESULT SetShowAllTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  True 인 경우, 문서에서 모든 태그의 위치를 표시 하려면 문자 모양이 표시 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1970,7 +1970,7 @@ HRESULT SetShowAreaTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  True 이면 모든 영역 태그 문자 모양을 표시 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1987,7 +1987,7 @@ HRESULT SetShowBRTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  True 이면 모든 br 태그 문자 모양을 표시 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2004,7 +2004,7 @@ HRESULT SetShowCommentTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  True 이면 모든 주석 태그 문자 모양을 표시 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2021,7 +2021,7 @@ HRESULT SetShowMiscTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  True 인 경우, Microsoft Internet Explorer 4.0에 표시 된 모든 태그를 표시 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2038,7 +2038,7 @@ HRESULT SetShowScriptTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  True 이면 모든 스크립트 태그 문자 모양을 표시 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2055,7 +2055,7 @@ HRESULT SetShowStyleTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  True 이면 모든 스타일 태그 문자 모양을 표시 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2072,7 +2072,7 @@ HRESULT SetShowUnknownTags(bool bNewValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bNewValue`  
+ *bNewValue*  
  True 인 경우, 모든 알 수 없는 태그 문자 모양을 표시 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2089,7 +2089,7 @@ HRESULT TextArea(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szId`  
+ *szId*  
  여러 줄 텍스트 입력된 컨트롤의 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2106,7 +2106,7 @@ HRESULT TextBox(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szId`  
+ *szId*  
  텍스트 컨트롤의 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2162,7 +2162,7 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `szId`  
+ *szId*  
  순서가 지정 되지 않은 목록의 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  

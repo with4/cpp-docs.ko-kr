@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b292196eb6ac8178ba43f0e66bd4814368c916fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4b19b52135678ebd798f61143b5bad953b8629a5
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376114"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038151"
 ---
 # <a name="coccmanager-class"></a>COccManager 클래스
 `COleControlContainer` 및 `COleControlSite` 개체로 구현된 다양한 사용자 지정 컨트롤 사이트를 관리합니다.  
@@ -62,7 +62,8 @@ class COccManager : public CNoTrackObject
   
 |이름|설명|  
 |----------|-----------------|  
-|[COccManager::CreateContainer](#createcontainer)|만듭니다는 **COleContainer** 개체입니다.|  
+|[COccManager::CreateContainer](#createcontainer)|
+          `COleContainer` 개체를 만듭니다.|  
 |[COccManager::CreateDlgControls](#createdlgcontrols)|ActiveX 컨트롤을 호스트 하는 연결 된 만듭니다 `COleContainer` 개체입니다.|  
 |[COccManager::CreateSite](#createsite)|
           `COleClientSite` 개체를 만듭니다.|  
@@ -77,7 +78,7 @@ class COccManager : public CNoTrackObject
 |[COccManager::SplitDialogTemplate](#splitdialogtemplate)|지정 된 대화 상자 템플릿에서 공용 컨트롤에서 기존 ActiveX 컨트롤을 구분합니다.|  
   
 ## <a name="remarks"></a>설명  
- 기본 클래스 **CNoTrackObject**는 문서화 되지 않은 기본 클래스 (AFXTLS에 위치 합니다. H)입니다. MFC 프레임 워크에서 사용 하기 위한에서 파생 된 클래스는 **CNoTrackObject** 클래스는 메모리 누수 검색에서 제외 됩니다. 직접 파생 되는 권장 되지 않습니다 **CNoTrackObject**합니다.  
+ 기본 클래스 `CNoTrackObject`는 문서화 되지 않은 기본 클래스 (AFXTLS에 위치 합니다. H)입니다. MFC 프레임 워크에서 사용 하기 위한에서 파생 된 클래스는 `CNoTrackObject` 클래스는 메모리 누수 검색에서 제외 됩니다. 직접 파생 되는 권장 되지 않습니다 `CNoTrackObject`합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `CNoTrackObject`  
@@ -95,7 +96,7 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  사용자 지정 사이트 컨테이너와 연결 된 창 개체에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -105,7 +106,7 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
  사용자 지정 사이트를 만드는 방법에 대 한 자세한 내용은 참조 하십시오. [COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite)합니다.  
   
 ##  <a name="createdlgcontrols"></a>  COccManager::CreateDlgControls  
- 로 지정 된 ActiveX 컨트롤을 만들려면이 함수 호출의 `pOccDialogInfo` 매개 변수입니다.  
+ 로 지정 된 ActiveX 컨트롤을 만들려면이 함수 호출의 *pOccDialogInfo* 매개 변수입니다.  
   
 ```  
 virtual BOOL CreateDlgControls(
@@ -124,27 +125,27 @@ virtual BOOL CreateDlgControls(
  *pWndParent*  
  대화 상자 개체의 부모에 대 한 포인터입니다.  
   
- `lpszResourceName`  
+ *lpszResourceName*  
  만들려는 리소스의 이름입니다.  
   
- `pOccDialogInfo`  
+ *pOccDialogInfo*  
  대화 상자 개체를 만드는 데 대화 상자 템플릿에 대 한 포인터입니다.  
   
- `lpResource`  
+ *lpResource*  
  리소스에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
  컨트롤을 성공적으로 만들어진 경우 0이 아닌 그렇지 않으면 0입니다.  
   
 ##  <a name="createsite"></a>  COccManager::CreateSite  
- 가 가리키는 컨테이너에서 호스트 컨트롤 사이트를 만들 프레임 워크에서 호출 `pCtrlCont`합니다.  
+ 가 가리키는 컨테이너에서 호스트 컨트롤 사이트를 만들 프레임 워크에서 호출 *pCtrlCont*합니다.  
   
 ```  
 virtual COleControlSite* CreateSite(COleControlContainer* pCtrlCont);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pCtrlCont`  
+ *pCtrlCont*  
  새 컨트롤 사이트를 호스트 하는 컨트롤 컨테이너에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -163,7 +164,7 @@ static DWORD AFX_CDECL GetDefBtnCode(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  단추 컨트롤을 포함 하는 창 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -188,7 +189,7 @@ virtual BOOL IsDialogMessage(
  *pWndDlg*  
  메시지의 의도 한 대상 대화 상자에 대 한 포인터입니다.  
   
- `lpMsg`  
+ *lpMsg*  
  에 대 한 포인터는 `MSG` 검사할 메시지를 포함 하는 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -208,7 +209,7 @@ static BOOL AFX_CDECL IsLabelControl(COleControlSiteOrWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  컨트롤을 포함 하 여 창에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -232,10 +233,10 @@ static BOOL AFX_CDECL IsMatchingMnemonic(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  컨트롤을 포함 하 여 창에 대 한 포인터입니다.  
   
- `lpMsg`  
+ *lpMsg*  
  일치 하는 니모닉을 포함 하는 메시지에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -258,13 +259,13 @@ virtual BOOL OnEvent(
  *pCmdTarget*  
  에 대 한 포인터는 `CCmdTarget` 이벤트를 처리 하는 개체  
   
- `idCtrl`  
+ *idCtrl*  
  컨트롤의 리소스 ID입니다.  
   
- `pEvent`  
+ *pEvent*  
  처리 되는 이벤트입니다.  
   
- `pHandlerInfo`  
+ *pHandlerInfo*  
  그렇지 않은 경우 **NULL**, `OnEvent` 채웁니다는 **pTarget** 및 **pmf** 의 멤버는 **AFX_CMDHANDLERINFO** 대신 구조체 명령을 발송 합니다. 일반적으로,이 매개 변수는 높아야 **NULL**합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -283,7 +284,7 @@ virtual const DLGTEMPLATE* PreCreateDialog(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pOccDialogInfo`  
+ *pOccDialogInfo*  
  **_AFX_OCC_DIALOG_INFO** 대화 상자 템플릿 및 대화 상자에서 호스트 되는 모든 ActiveX 컨트롤에 대 한 정보가 포함 된 구조입니다.  
   
  *pOrigTemplate*  
@@ -305,7 +306,7 @@ virtual void PostCreateDialog(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pOccDialogInfo`  
+ *pOccDialogInfo*  
  **_AFX_OCC_DIALOG_INFO** 대화 상자 템플릿 및 대화 상자에서 호스트 되는 모든 ActiveX 컨트롤에 대 한 정보가 포함 된 구조입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -323,10 +324,10 @@ static void AFX_CDECL SetDefaultButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  컨트롤을 포함 하 여 창에 대 한 포인터입니다.  
   
- `bDefault`  
+ *슬라이더가*  
  컨트롤에 기본 단추가; 되어야 하는 경우 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -347,17 +348,17 @@ virtual DLGTEMPLATE* SplitDialogTemplate(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pTemplate`  
+ *pTemplate*  
  대화 상자 템플릿 검사에 대 한 포인터입니다.  
   
- `ppOleDlgItems`  
+ *ppOleDlgItems*  
  ActiveX 컨트롤을 대화 상자 항목에 대 한 포인터 목록입니다.  
   
 ### <a name="return-value"></a>반환 값  
  아닌 ActiveX 컨트롤에만 포함 하는 대화 상자 템플릿 구조에 대 한 포인터입니다. ActiveX 컨트롤이 있는 경우 **NULL** 반환 됩니다.  
   
 ### <a name="remarks"></a>설명  
- ActiveX 컨트롤 발견 되 면 서식 파일을 분석 하 고만 비 ActiveX 컨트롤을 포함 하는 새 서식 파일 생성 됩니다. 이 프로세스 중에 발견 된 ActiveX 컨트롤에 추가 됩니다 `ppOleDlgItems`합니다.  
+ ActiveX 컨트롤 발견 되 면 서식 파일을 분석 하 고만 비 ActiveX 컨트롤을 포함 하는 새 서식 파일 생성 됩니다. 이 프로세스 중에 발견 된 ActiveX 컨트롤에 추가 됩니다 *ppOleDlgItems*합니다.  
   
  템플릿에서 ActiveX 컨트롤이 없는 경우 **NULL** 반환 *합니다.*  
   

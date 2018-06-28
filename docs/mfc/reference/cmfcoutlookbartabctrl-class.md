@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e677879079eaab3dd36481fec76ca53da92ef87d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d30ad25a21bf380dd7687ccd0da0fb261aeeb023
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373305"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042315"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 Microsoft Outlook의 **탐색 창** 과 시각적으로 유사한 탭 컨트롤입니다.  
@@ -115,7 +115,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 ## <a name="remarks"></a>설명  
  도킹 지원을 Outlook 표시줄을 만들려면 사용는 `CMFCOutlookBar` Outlook 표시줄 탭 컨트롤을 호스트 하는 개체입니다. 자세한 내용은 참조 [CMFCOutlookBar 클래스](../../mfc/reference/cmfcoutlookbar-class.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 초기화 하는 방법을 `CMFCOutlookBarTabCtrl` 개체에서 다양 한 메서드를 사용 하는 `CMFCOutlookBarTabCtrl` 클래스입니다. 예제에서는 Outlook 표시줄의 탭 페이지 단추에 대 한 텍스트 레이블의 내부 편집을 사용 하도록 설정, 애니메이션을 사용 하도록 설정, 사용자가 Outlook 표시줄 창에서 단추를 통해 스크롤, Outlook 탭 계속 테두리 크기를 설정 하는 스크롤 핸들을 사용 하도록 설정 하는 방법을 보여 줍니다. 역할을 하 고 Outlook 표시줄의 탭 단추에 대 한 텍스트 레이블의 맞춤을 설정 합니다. 이 코드 조각은의 일부인는 [Outlook 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_OutlookDemo#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_1.cpp)]  
@@ -148,19 +148,19 @@ void AddControl(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWndCtrl`  
+ [in] *pWndCtrl*  
  추가할 컨트롤에 대 한 포인터입니다.  
   
- [in] `lpszName`  
+ [in] *lpszName*  
  탭의 이름을 지정합니다.  
   
- [in] `bDetachable`  
+ [in] *bDetachable*  
  경우 `TRUE`, 페이지 탈부착식으로 생성 됩니다.  
   
- [in] `nImageID`  
+ [in] *nImageID*  
  새 탭에 표시할 이미지에 대 한 내부 이미지 목록의 이미지 인덱스입니다.  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  지정 된 AFX_ `CBRS_`* 래핑된 도킹 창에 대 한 스타일입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -168,9 +168,9 @@ void AddControl(
   
  이 함수에서 내부적으로 호출 [cmfcbasetabctrl:: Addtab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab)합니다.  
   
- 설정한 경우 `bDetachable` 를 `TRUE`, `AddControl` 내부적으로 만들며는 `CDockablePaneAdapter` 개체를 추가 된 컨트롤을 래핑합니다. 탭된 창의 런타임 클래스의 런타임 클래스를 자동으로 설정 `CMFCOutlookBar` 부동 프레임의 런타임 클래스 및 `CMultiPaneFrameWnd`합니다.  
+ 설정한 경우 *bDetachable* 를 `TRUE`, `AddControl` 내부적으로 만들며는 `CDockablePaneAdapter` 개체를 추가 된 컨트롤을 래핑합니다. 탭된 창의 런타임 클래스의 런타임 클래스를 자동으로 설정 `CMFCOutlookBar` 부동 프레임의 런타임 클래스 및 `CMultiPaneFrameWnd`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 사용 하는 `AddControl` 에서 메서드는 `CMFCOutlookBarTabCtrl` 클래스. 이 코드 조각은의 일부인는 [Outlook 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_OutlookDemo#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_3.cpp)]  
@@ -212,20 +212,20 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `rect`  
+ [in] *rect*  
  초기 크기와 위치 (픽셀) 지정합니다.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  부모 창을 가리킵니다. `NULL`이 아니어야 합니다.  
   
- [in] `nID`  
+ [in] *nID*  
  컨트롤 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
  컨트롤을 성공적으로 만든 경우 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 일반적으로 outlook 표시줄 탭 컨트롤 만들어지는 경우 [CMFCOutlookBar 클래스](../../mfc/reference/cmfcoutlookbar-class.md) 컨트롤은 `WM_CREATE` 프로세스의 메시지입니다.  
+ 일반적으로 outlook 표시줄 탭 컨트롤 만들어지는 경우 [CMFCOutlookBar 클래스](../../mfc/reference/cmfcoutlookbar-class.md) 프로세스의 WM_CREATE 메시지를 제어 합니다.  
   
 ##  <a name="enableanimation"></a>  CMFCOutlookBarTabCtrl::EnableAnimation  
  활성 탭 간에 전환 하는 동안 발생 하는 애니메이션 사용 되는지 여부를 지정 합니다.  
@@ -235,7 +235,7 @@ static void EnableAnimation(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
  애니메이션을 사용 하거나 사용 하지 않도록 설정 하는지 여부를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -251,7 +251,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bEnable`  
+ *bEnable*  
  경우 `TRUE`, 텍스트 레이블 내부 편집을 사용 하도록 설정 합니다. 경우 `FALSE`, 내부 편집을 사용 하지 않도록 설정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -268,13 +268,13 @@ void EnableScrollButtons(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
  스크롤 단추를 표시할지를 결정 합니다.  
   
- [in] `bIsUp`  
+ [in] *bIsUp*  
  상위 스크롤 막대가 표시 되는지 여부를 결정 합니다.  
   
- [in] `bIsDown`  
+ [in] *bIsDown*  
  아래 스크롤 막대 표시 여부를 결정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -367,7 +367,7 @@ virtual BOOL SetActiveTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iTab`  
+ [in] *iTab*  
  열 탭의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -384,7 +384,7 @@ void SetBorderSize(int nBorderSize);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nBorderSize`  
+ [in] *nBorderSize*  
  새 테두리 크기를 픽셀 단위로 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -400,16 +400,16 @@ void SetPageButtonTextAlign(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiAlign`  
+ [in] *uiAlign*  
  텍스트 맞춤을 지정합니다.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  경우 `TRUE`, outlook 창 다시 그려집니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수를 사용 하 여 페이지 단추에 대 한 텍스트 맞춤을 변경 합니다.  
   
- `uiAlign` 다음 값 중 하나일 수 있습니다.  
+ *uiAlign* 다음 값 중 하나일 수 있습니다.  
   
 |상수|의미|  
 |--------------|-------------|  
@@ -430,13 +430,13 @@ BOOL SetToolbarImageList(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiID`  
+ [in] *uiID*  
  로드할 이미지의 리소스 ID를 지정 합니다.  
   
- [in] `cx`  
+ [in] *cx*  
  픽셀 단위로 이미지 목록의 이미지의 너비를 지정합니다.  
   
- [in] `clrTransp`  
+ [in] *clrTransp*  
  투명 한 색을 지정 하는 RGB 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -455,7 +455,7 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nVisiblePageButtons`  
+ [in] *nVisiblePageButtons*  
   
 ### <a name="remarks"></a>설명  
   

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a2906071ce1e8c8f65f21554915feed0d134276
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7728df79bf2ab842910b580b1404f109034e55b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367947"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037248"
 ---
 # <a name="cmfcacceleratorkeyassignctrl-class"></a>CMFCAcceleratorKeyAssignCtrl 클래스
 `CMFCAcceleratorKeyAssignCtrl` 클래스 확장은 [CEdit 클래스](../../mfc/reference/cedit-class.md) ALT, CONTROL, SHIFT 등의 추가 시스템 단추를 지원 하도록 합니다.  
@@ -67,7 +67,7 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
   
  이 클래스는 실제 바로 가기 키 조합을 문자열 값에 매핑합니다. 예를 들어 키 조합 ALT + B가 문자열 "Alt + B"에 매핑된다고 가정하겠습니다. 사용자가 `CMFCAcceleratorKeyAssignCtrl` 개체에서 이 키를 조합을 누르면 "Alt + B"가 사용자에게 표시됩니다. 바로 가기 키와 문자열 형식 간 매핑에 대 한 자세한 내용은 참조 [CMFCAcceleratorKey 클래스](../../mfc/reference/cmfcacceleratorkey-class.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCAcceleratorKeyAssignCtrl` 개체를 생성하고 해당 `ResetKey` 메서드를 사용하여 바로 가기 키를 다시 설정하는 방법을 보여 줍니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#31](../../mfc/reference/codesnippet/cpp/cmfcacceleratorkeyassignctrl-class_1.cpp)]  
@@ -138,7 +138,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pMsg`  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>반환 값  
   

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 466948653a5464a940a027e473e79c00dbf9a6ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9136f3c57358a71186b196a4223b401e6abad2a9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370382"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040027"
 ---
 # <a name="coleipframewnd-class"></a>COleIPFrameWnd 클래스
 응용 프로그램의 내부 편집 창의 기준입니다.  
@@ -119,10 +119,10 @@ virtual void RepositionFrame(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPosRect`  
+ *lpPosRect*  
  에 대 한 포인터는 `RECT` 구조 또는 `CRect` 개체 내부에서 포함 된 프레임 창의 현재 위치 좌표 (픽셀) 클라이언트 영역을 기준으로 합니다.  
   
- `lpClipRect`  
+ *lpClipRect*  
  에 대 한 포인터는 `RECT` 구조 또는 `CRect` 개체 내부에서 포함 된 프레임 창의 현재 클리핑 사각형 좌표 (픽셀) 클라이언트 영역을 기준으로 합니다.  
   
 ### <a name="remarks"></a>설명  

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 584644963a647c5b458407b2d777f91014b40fad
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eae84c647f068e49136968e60bfd8bd51a528112
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369416"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038531"
 ---
 # <a name="cgopherfilefind-class"></a>CGopherFileFind 클래스
 Gopher 서버의 인터넷 파일 검색에 유용합니다.  
@@ -119,14 +119,14 @@ explicit CGopherFileFind(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pConnection`  
+ *pConnection*  
  에 대 한 포인터는 [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) 개체입니다.  
   
- `dwContext`  
- 작업에 대 한 컨텍스트 식별자입니다. 참조 **주의** 에 대 한 자세한 내용은 `dwContext`합니다.  
+ *dwContext*  
+ 작업에 대 한 컨텍스트 식별자입니다. 참조 **주의** 에 대 한 자세한 내용은 *dwContext*합니다.  
   
 ### <a name="remarks"></a>설명  
- 에 대 한 기본값 `dwContext` MFC 인증에서 전송 되는 `CGopherFileFind` 에서 개체는 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 만든 개체는 `CGopherFileFind` 개체입니다. 생성할 때는 `CGopherFileFind` 개체 컨텍스트 식별자의 값으로 설정 하기 위해 기본값을 재정의할 수 있습니다. 컨텍스트 식별자는 되돌아갑니다 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) 식별 되는 개체의 상태를 제공 하 합니다. 문서 참조 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md) 컨텍스트 식별자에 대 한 자세한 내용은 합니다.  
+ 에 대 한 기본값 *dwContext* MFC 인증에서 전송 되는 `CGopherFileFind` 에서 개체는 [CInternetSession](../../mfc/reference/cinternetsession-class.md) 만든 개체는 `CGopherFileFind` 개체입니다. 생성할 때는 `CGopherFileFind` 개체 컨텍스트 식별자의 값으로 설정 하기 위해 기본값을 재정의할 수 있습니다. 컨텍스트 식별자는 되돌아갑니다 [cinternetsession:: Onstatuscallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) 식별 되는 개체의 상태를 제공 하 합니다. 문서 참조 [인터넷 첫 번째 단계: WinInet](../../mfc/wininet-basics.md) 컨텍스트 식별자에 대 한 자세한 내용은 합니다.  
   
 ##  <a name="findfile"></a>  CGopherFileFind::FindFile  
  Gopher 파일을 찾기 위해이 함수를 호출 합니다.  
@@ -144,13 +144,13 @@ virtual BOOL FindFile(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `refLocator`  
+ *refLocator*  
  에 대 한 참조는 [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) 개체입니다.  
   
  *pstrString*  
  파일 이름을 포함 하는 문자열에 대 한 포인터입니다.  
   
- `dwFlags`  
+ *dwFlags*  
  이 세션을 처리 하는 방법을 설명 하는 플래그입니다. 유효한 플래그는:  
   
 -   INTERNET_FLAG_RELOAD 로컬로 캐시 된 경우에 원격 서버에서 데이터를 가져옵니다.  
@@ -186,10 +186,10 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pTimeStamp`  
+ *pTimeStamp*  
  에 대 한 포인터는 [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) 파일을 만든 시간을 포함 하는 구조입니다.  
   
- `refTime`  
+ *refTime*  
  에 대 한 참조는 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -210,10 +210,10 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `refTime`  
+ *refTime*  
  에 대 한 참조는 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체입니다.  
   
- `pTimeStamp`  
+ *pTimeStamp*  
  에 대 한 포인터는 [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) 파일에 마지막으로 액세스 한 시간을 포함 하는 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -234,10 +234,10 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pTimeStamp`  
+ *pTimeStamp*  
  에 대 한 포인터는 [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284) 파일에 마지막으로 쓴 시간을 포함 하는 구조입니다.  
   
- `refTime`  
+ *refTime*  
  에 대 한 참조는 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -265,7 +265,7 @@ virtual ULONGLONG GetLength() const;
 > [!NOTE]
 >  MFC 7.0부터 `GetLength` 64 비트 정수 형식을 지원 합니다. 라이브러리의이 최신 버전으로 작성 된 기존 코드 잘림 경고가 발생할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) (기본 클래스 구현)입니다.  
   
 ##  <a name="getlocator"></a>  CGopherFileFind::GetLocator  

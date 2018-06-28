@@ -150,12 +150,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9669856016281a0830f610a907ae238b91cc8cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5582c634428290086393791ae23d551726bff7ab
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378371"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040664"
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>CMFCVisualManagerWindows 클래스
 `CMFCVisualManagerWindows` 사용자가 Windows XP 또는 Vista 테마를 선택할 때 Microsoft Windows XP 또는 Microsoft Vista의 형태를 그대로 모방 합니다.  
@@ -249,7 +249,7 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCVisualManagerWindows::m_b3DTabsXPTheme](#m_b3dtabsxptheme)|Windows XP 테마 3D 탭에 표시 되는지 여부를 지정 합니다.|  
   
@@ -258,7 +258,7 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
   
  그러나 Windows 테마를 사용할 수 없습니다 응용 프로그램은 Windows XP 이전 버전의 Windows에서 실행 중인 경우 또는 사용자가 사용 하기 때문에 테마를 사용할 수 있는 경우는 **클래식** 보기. 응용 프로그램에 정의 된 기본 비주얼 관리자를 사용 하 여 테마 없음 표시 되 면 [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 사용 하는 방법을 `CMFCVisualManagerWindows`합니다. 이 코드 조각은의 일부인는 [바탕 화면 경고 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#10](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagerwindows-class_1.cpp)]  
@@ -296,7 +296,7 @@ CMFCVisualManagerWindows(BOOL bIsTemporary = FALSE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bIsTemporary`  
+ [in] *bIsTemporary*  
   
 ### <a name="remarks"></a>설명  
   
@@ -313,11 +313,11 @@ virtual BOOL DrawComboBorderWinXP(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rect`  
- [in] `bDisabled`  
- [in] `bIsDropped`  
- [in] `bIsHighlighted`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *사용 안 함*  
+ [in] *bIsDropped*  
+ [in] *bIsHighlighted*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -336,11 +336,11 @@ virtual BOOL DrawComboDropButtonWinXP(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rect`  
- [in] `bDisabled`  
- [in] `bIsDropped`  
- [in] `bIsHighlighted`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *사용 안 함*  
+ [in] *bIsDropped*  
+ [in] *bIsHighlighted*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -358,10 +358,10 @@ virtual BOOL DrawPushButtonWinXP(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rect`  
- [in] `pButton`  
- [in] `uiState`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *pButton*  
+ [in] *uiState*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -408,7 +408,7 @@ virtual COLORREF GetHighlightedMenuItemTextColor(CMFCToolBarMenuButton* pButton)
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pButton`  
+ [in] *pButton*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -435,8 +435,8 @@ virtual COLORREF GetToolbarButtonTextColor(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pButton`  
- [in] `state`  
+ [in] *pButton*  
+ [in] *상태*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -450,7 +450,7 @@ virtual BOOL IsDefaultWinXPPopupButton(CMFCDesktopAlertWndButton* pButton) const
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pButton`  
+ [in] *pButton*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -536,10 +536,10 @@ virtual void OnDrawBarGripper(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rectGripper`  
- [in] `bHorz`  
- [in] `pBar`  
+ [in] *pDC*  
+ [in] *rectGripper*  
+ [in] *bHorz*  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>설명  
   
@@ -556,11 +556,11 @@ virtual BOOL OnDrawBrowseButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rect`  
- [in] `pEdit`  
- [in] `state`  
- [in] `clrText`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *pEdit*  
+ [in] *상태*  
+ [in] *clrText*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -578,10 +578,10 @@ virtual void OnDrawButtonBorder(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `pButton`  
- [in] `rect`  
- [in] `state`  
+ [in] *pDC*  
+ [in] *pButton*  
+ [in] *rect*  
+ [in] *상태*  
   
 ### <a name="remarks"></a>설명  
   
@@ -598,11 +598,11 @@ virtual void OnDrawButtonSeparator(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `pButton`  
- [in] `rect`  
- [in] `state`  
- [in] `bHorz`  
+ [in] *pDC*  
+ [in] *pButton*  
+ [in] *rect*  
+ [in] *상태*  
+ [in] *bHorz*  
   
 ### <a name="remarks"></a>설명  
   
@@ -621,13 +621,13 @@ virtual void OnDrawCaptionButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `pButton`  
- [in] `bActive`  
- [in] `bHorz`  
- [in] `bMaximized`  
- [in] `bDisabled`  
- [in] `nImageID`  
+ [in] *pDC*  
+ [in] *pButton*  
+ [in] *bActive*  
+ [in] *bHorz*  
+ [in] *bMaximized*  
+ [in] *사용 안 함*  
+ [in] *nImageID*  
   
 ### <a name="remarks"></a>설명  
   
@@ -645,12 +645,12 @@ virtual void OnDrawCaptionButtonIcon(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `pButton`  
- [in] `id`  
- [in] `bActive`  
- [in] `bDisabled`  
- [in] `ptImage`  
+ [in] *pDC*  
+ [in] *pButton*  
+ [in] *id*  
+ [in] *bActive*  
+ [in] *사용 안 함*  
+ [in] *ptImage*  
   
 ### <a name="remarks"></a>설명  
   
@@ -668,12 +668,12 @@ virtual void OnDrawCheckBoxEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rect`  
- [in] `nState`  
- [in] `bHighlighted`  
- [in] `bPressed`  
- [in] `bEnabled`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *nState*  
+ [in] *bHighlighted*  
+ [in] *bPressed*  
+ [in] *b 사용*  
   
 ### <a name="remarks"></a>설명  
   
@@ -691,12 +691,12 @@ virtual void OnDrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rect`  
- [in] `bDisabled`  
- [in] `bIsDropped`  
- [in] `bIsHighlighted`  
- [in] `pButton`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *사용 안 함*  
+ [in] *bIsDropped*  
+ [in] *bIsHighlighted*  
+ [in] *pButton*  
   
 ### <a name="remarks"></a>설명  
   
@@ -714,12 +714,12 @@ virtual void OnDrawComboDropButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rect`  
- [in] `bDisabled`  
- [in] `bIsDropped`  
- [in] `bIsHighlighted`  
- [in] `pButton`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *사용 안 함*  
+ [in] *bIsDropped*  
+ [in] *bIsHighlighted*  
+ [in] *pButton*  
   
 ### <a name="remarks"></a>설명  
   
@@ -731,7 +731,7 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWndCtrl`  
+ [in] *pWndCtrl*  
   
 ### <a name="remarks"></a>설명  
   
@@ -748,11 +748,11 @@ virtual void OnDrawEditBorder(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rect`  
- [in] `bDisabled`  
- [in] `bIsHighlighted`  
- [in] `pButton`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *사용 안 함*  
+ [in] *bIsHighlighted*  
+ [in] *pButton*  
   
 ### <a name="remarks"></a>설명  
   
@@ -768,10 +768,10 @@ virtual void OnDrawExpandingBox(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rect`  
- [in] `bIsOpened`  
- [in] `colorBox`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *bIsOpened*  
+ [in] *colorBox*  
   
 ### <a name="remarks"></a>설명  
   
@@ -787,10 +787,10 @@ virtual void OnDrawFloatingToolbarBorder(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `pToolBar`  
- [in] `rectBorder`  
- [in] `rectBorderSize`  
+ [in] *pDC*  
+ [in] *pToolBar*  
+ [in] *rectBorder*  
+ [in] *rectBorderSize*  
   
 ### <a name="remarks"></a>설명  
   
@@ -807,11 +807,11 @@ virtual void OnDrawHeaderCtrlBorder(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pCtrl`  
- [in] `pDC`  
- [in] `rect`  
- [in] `bIsPressed`  
- [in] `bIsHighlighted`  
+ [in] *pCtrl*  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *bIsPressed*  
+ [in] *bIsHighlighted*  
   
 ### <a name="remarks"></a>설명  
   
@@ -827,10 +827,10 @@ virtual void OnDrawHeaderCtrlSortArrow(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pCtrl`  
- [in] `pDC`  
- [in] `rect`  
- [in] `bIsUp`  
+ [in] *pCtrl*  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *bIsUp*  
   
 ### <a name="remarks"></a>설명  
   
@@ -845,9 +845,9 @@ virtual void OnDrawMenuBorder(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `pMenu`  
- [in] `rect`  
+ [in] *pDC*  
+ [in] *pMenu*  
+ [in] *rect*  
   
 ### <a name="remarks"></a>설명  
   
@@ -864,11 +864,11 @@ virtual void OnDrawMenuSystemButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rect`  
- [in] `uiSystemCommand`  
- [in] `nStyle`  
- [in] `bHighlight`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *uiSystemCommand*  
+ [in] *nStyle*  
+ [in] *bHighlight*  
   
 ### <a name="remarks"></a>설명  
   
@@ -884,10 +884,10 @@ virtual void OnDrawMiniFrameBorder(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `pFrameWnd`  
- [in] `rectBorder`  
- [in] `rectBorderSize`  
+ [in] *pDC*  
+ [in] *pFrameWnd*  
+ [in] *rectBorder*  
+ [in] *rectBorderSize*  
   
 ### <a name="remarks"></a>설명  
   
@@ -903,10 +903,10 @@ virtual void OnDrawOutlookPageButtonBorder(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rectBtn`  
- [in] `bIsHighlighted`  
- [in] `bIsPressed`  
+ [in] *pDC*  
+ [in] *rectBtn*  
+ [in] *bIsHighlighted*  
+ [in] *bIsPressed*  
   
 ### <a name="remarks"></a>설명  
   
@@ -921,9 +921,9 @@ virtual void OnDrawPaneBorder(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `pBar`  
- [in] `rect`  
+ [in] *pDC*  
+ [in] *pBar*  
+ [in] *rect*  
   
 ### <a name="remarks"></a>설명  
   
@@ -940,11 +940,11 @@ virtual COLORREF OnDrawPaneCaption(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `pBar`  
- [in] `bActive`  
- [in] `rectCaption`  
- [in] `rectButtons`  
+ [in] *pDC*  
+ [in] *pBar*  
+ [in] *bActive*  
+ [in] *rectCaption*  
+ [in] *rectButtons*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -961,9 +961,9 @@ virtual void OnDrawPopupWindowButtonBorder(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rectClient`  
- [in] `pButton`  
+ [in] *pDC*  
+ [in] *rectClient*  
+ [in] *pButton*  
   
 ### <a name="remarks"></a>설명  
   
@@ -980,11 +980,11 @@ virtual void OnDrawScrollButtons(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rect`  
- [in] `nBorderSize`  
- [in] `iImage`  
- [in] `bHilited`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *nBorderSize*  
+ [in] *iImage*  
+ [in] *bHilited*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1000,10 +1000,10 @@ virtual void OnDrawSeparator(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `pBar`  
- [in] `rect`  
- [in] `bIsHoriz`  
+ [in] *pDC*  
+ [in] *pBar*  
+ [in] *rect*  
+ [in] *bIsHoriz*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1020,11 +1020,11 @@ virtual void OnDrawSpinButtons(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rectSpin`  
- [in] `nState`  
- [in] `bOrientation`  
- [in] `pSpinCtrl`  
+ [in] *pDC*  
+ [in] *rectSpin*  
+ [in] *nState*  
+ [in] *bOrientation*  
+ [in] *pSpinCtrl*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1041,11 +1041,11 @@ virtual void OnDrawStatusBarPaneBorder(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `pBar`  
- [in] `rectPane`  
- [in] `uiID`  
- [in] `nStyle`  
+ [in] *pDC*  
+ [in] *pBar*  
+ [in] *rectPane*  
+ [in] *uiID*  
+ [in] *nStyle*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1066,15 +1066,15 @@ virtual void OnDrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `pStatusBar`  
- [in] `rectProgress`  
- [in] `nProgressTotal`  
- [in] `nProgressCurr`  
- [in] `clrBar`  
- [in] `clrProgressBarDest`  
- [in] `clrProgressText`  
- [in] `bProgressText`  
+ [in] *pDC*  
+ [in] *pStatusBar*  
+ [in] *rectProgress*  
+ [in] *nProgressTotal*  
+ [in] *nProgressCurr*  
+ [in] *clrBar*  
+ [in] *clrProgressBarDest*  
+ [in] *clrProgressText*  
+ [in] *bProgressText*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1089,9 +1089,9 @@ virtual void OnDrawStatusBarSizeBox(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `pStatBar`  
- [in] `rectSizeBox`  
+ [in] *pDC*  
+ [in] *pStatBar*  
+ [in] *rectSizeBox*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1108,11 +1108,11 @@ virtual void OnDrawTab(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rectTab`  
- [in] `iTab`  
- [in] `bIsActive`  
- [in] `pTabWnd`  
+ [in] *pDC*  
+ [in] *rectTab*  
+ [in] *iTab*  
+ [in] *bIsActive*  
+ [in] *pTabWnd*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1130,12 +1130,12 @@ virtual void OnDrawTabCloseButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rect`  
- [in] `pTabWnd`  
- [in] `bIsHighlighted`  
- [in] `bIsPressed`  
- [in] `bIsDisabled`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *pTabWnd*  
+ [in] *bIsHighlighted*  
+ [in] *bIsPressed*  
+ [in] *bIsDisabled*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1152,11 +1152,11 @@ virtual void OnDrawTabsButtonBorder(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rect`  
- [in] `pButton`  
- [in] `uiState`  
- [in] `pWndTab`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *pButton*  
+ [in] *uiState*  
+ [in] *pWndTab*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1173,11 +1173,11 @@ virtual void OnDrawTask(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `pTask`  
- [in] `pIcons`  
- [in] `bIsHighlighted`  
- [in] `bIsSelected`  
+ [in] *pDC*  
+ [in] *pTask*  
+ [in] *pIcons*  
+ [in] *bIsHighlighted*  
+ [in] *bIsSelected*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1193,10 +1193,10 @@ virtual void OnDrawTasksGroupAreaBorder(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rect`  
- [in] `bSpecial`  
- [in] `bNoTitle`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *bSpecial*  
+ [in] *bNoTitle*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1213,11 +1213,11 @@ virtual void OnDrawTasksGroupCaption(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `pGroup`  
- [in] `bIsHighlighted`  
- [in] `bIsSelected`  
- [in] `bCanCollapse`  
+ [in] *pDC*  
+ [in] *pGroup*  
+ [in] *bIsHighlighted*  
+ [in] *bIsSelected*  
+ [in] *bCanCollapse*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1232,9 +1232,9 @@ virtual void OnDrawTearOffCaption(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rect`  
- [in] `bIsActive`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *bIsActive*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1249,9 +1249,9 @@ virtual void OnErasePopupWindowButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rectClient`  
- [in] `pButton`  
+ [in] *pDC*  
+ [in] *rectClient*  
+ [in] *pButton*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1266,9 +1266,9 @@ virtual void OnEraseTabsArea(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rect`  
- [in] `pTabWnd`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *pTabWnd*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1284,10 +1284,10 @@ virtual void OnEraseTabsButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rect`  
- [in] `pButton`  
- [in] `pWndTab`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *pButton*  
+ [in] *pWndTab*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1302,9 +1302,9 @@ virtual BOOL OnEraseTabsFrame(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rect`  
- [in] `pTabWnd`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *pTabWnd*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -1323,11 +1323,11 @@ virtual void OnFillBarBackground(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `pBar`  
- [in] `rectClient`  
- [in] `rectClip`  
- [in] `bNCArea`  
+ [in] *pDC*  
+ [in] *pBar*  
+ [in] *rectClient*  
+ [in] *rectClip*  
+ [in] *bNCArea*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1343,10 +1343,10 @@ virtual void OnFillButtonInterior(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `pButton`  
- [in] `rect`  
- [in] `state`  
+ [in] *pDC*  
+ [in] *pButton*  
+ [in] *rect*  
+ [in] *상태*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1361,9 +1361,9 @@ virtual COLORREF OnFillCommandsListBackground(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rect`  
- [in] `bIsSelected`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *bIsSelected*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -1381,10 +1381,10 @@ virtual COLORREF OnFillMiniFrameCaption(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rectCaption`  
- [in] `pFrameWnd`  
- [in] `bActive`  
+ [in] *pDC*  
+ [in] *rectCaption*  
+ [in] *pFrameWnd*  
+ [in] *bActive*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -1403,11 +1403,11 @@ virtual void OnFillOutlookPageButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rect`  
- [in] `bIsHighlighted`  
- [in] `bIsPressed`  
- [in] `clrText`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *bIsHighlighted*  
+ [in] *bIsPressed*  
+ [in] *clrText*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1422,9 +1422,9 @@ virtual void OnFillTasksGroupInterior(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rect`  
- [in] `bSpecial`  
+ [in] *pDC*  
+ [in] *rect*  
+ [in] *bSpecial*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1438,8 +1438,8 @@ virtual void OnFillTasksPaneBackground(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rectWorkArea`  
+ [in] *pDC*  
+ [in] *rectWorkArea*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1455,10 +1455,10 @@ virtual void OnHighlightMenuItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `pButton`  
- [in] `rect`  
- [in] `clrText`  
+ [in] *pDC*  
+ [in] *pButton*  
+ [in] *rect*  
+ [in] *clrText*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1472,8 +1472,8 @@ virtual void OnHighlightRarelyUsedMenuItems(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `rectRarelyUsed`  
+ [in] *pDC*  
+ [in] *rectRarelyUsed*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1494,7 +1494,7 @@ void SetOfficeStyleMenus(BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bOn`  
+ [in] *bOn*  
   
 ### <a name="remarks"></a>설명  
   

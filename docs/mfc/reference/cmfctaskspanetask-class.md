@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4008389121a1a78ca746798af7f3fc18c9663b93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c16644a90bb349a78cac43867fdc648e9c01223d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371334"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040703"
 ---
 # <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask 클래스
 `CMFCTasksPaneTask` 클래스는 작업 창 컨트롤에 대 한 작업을 나타내는 도우미 클래스 ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)). 작업 개체의 작업 그룹에서 항목을 나타냅니다 ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). 각 작업은 사용자가 작업을 클릭할 때 프레임워크가 실행하는 명령과 작업 이름의 왼쪽에 나타내는 아이콘을 포함할 수 있습니다.  
@@ -73,7 +73,7 @@ class CMFCTasksPaneTask : public CObject
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|작업 창이 자동으로 제거 여부를 결정 합니다.|  
 |[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|프레임 워크 굵은 텍스트로 작업 레이블은 그릴지 여부를 결정 합니다.|  
@@ -118,28 +118,28 @@ CMFCTasksPaneTask(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pGroup`  
+ *pGroup*  
  지정 된 [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md) 작업 속해 있는 합니다.  
   
- `lpszName`  
+ *lpszName*  
  작업의 이름을 지정합니다.  
   
- `nIcon`  
+ *nIcon*  
  이미지 목록에는 작업의 이미지의 인덱스를 지정합니다.  
   
- `uiCommandID`  
+ *uiCommandID*  
  작업을 클릭할 때 실행 되는 명령의 명령 ID를 지정 합니다.  
   
- `dwUserData`  
+ *dwUserData*  
  사용자 정의 데이터입니다.  
   
- `hwndTask`  
+ *hwndTask*  
  작업 창에 대 한 핸들을 지정합니다.  
   
- `bAutoDestroyWindow`  
+ *bAutoDestroyWindow*  
  경우 `TRUE`, 작업 창이 자동으로 제거 됩니다.  
   
- `nWindowHeight`  
+ *nWindowHeight*  
  작업 창의 높이 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -252,14 +252,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pParent`  
+ [in] *pParent*  
  현재 태스크의 부모 창을 나타냅니다.  
   
- [out] `data`  
+ [out] *데이터*  
  형식의 개체 `CAccessibilityData` 현재 태스크의 내게 필요한 옵션 데이터는 채워집니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 경우는 `data` 매개 변수가 고, 현재 작업의 내게 필요한 옵션 데이터와 함께 채워진 않으면 그렇지 `FALSE`합니다.  
+ `TRUE` 경우는 *데이터* 매개 변수가 고, 현재 작업의 내게 필요한 옵션 데이터와 함께 채워진 않으면 그렇지 `FALSE`합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [계층 구조 차트](../../mfc/hierarchy-chart.md)   

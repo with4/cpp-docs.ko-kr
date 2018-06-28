@@ -122,12 +122,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eecc1a08a3e0dcf8d8b3f1c31594488901a848f0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 906e956bae9bce14c83d938218f51dfea9288b96
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377625"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041892"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 클래스
 `CMDIChildWndEx` 클래스 다중 문서 MDI (인터페이스) 자식 창 Windows의 기능을 제공 합니다. 기능을 확장 [CMDIChildWnd 클래스](../../mfc/reference/cmdichildwnd-class.md)합니다. MDI 응용 프로그램에서 특정 MFC 클래스를 사용하면 프레임워크에 이 클래스가 필요합니다.  
@@ -208,7 +208,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 ## <a name="remarks"></a>설명  
  를 사용 하려면 확장 된 도킹 기능의 MDI 응용 프로그램의에서 응용 프로그램의 MDI 자식 창 클래스를 파생 `CMDIChildWndEx` 대신 [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서 클래스를 파생 `CMDIChildWndEx`합니다. 이 코드 조각에서 제공 되는 [VisualStudioDemo 샘플: MFC Visual Studio 응용 프로그램](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]  
@@ -239,10 +239,10 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  창에 대 한 포인터입니다.  
   
- [in] `bTail`  
+ [in] *bTail*  
  `TRUE` 고 도킹 관리자;에 대 한 창에서 창의 목록 끝에 추가 하려면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -256,7 +256,7 @@ void AddTabbedPane(CDockablePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  창에 대 한 포인터입니다.  
   
 ##  <a name="adjustdockinglayout"></a>  CMDIChildWndEx::AdjustDockingLayout  
@@ -267,7 +267,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `hdwp`  
+ [in] *hdwp*  
  지연 된 창 위치 구조에 대 한 핸들입니다.  
   
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs  
@@ -305,17 +305,17 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pBar`  
+ [in] *pBar*  
  창에 대 한 포인터입니다.  
   
- [in] `nDockBarID`  
+ [in] *nDockBarID*  
  ID는 창입니다.  
   
- [in] `lpRect`  
+ [in] *lpRect*  
  사각형에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
- `lpRect` 매개 변수는 사용 되지 않습니다.  
+ *lpRect* 매개 변수는 사용 되지 않습니다.  
   
 ##  <a name="dockpaneleftof"></a>  CMDIChildWndEx::DockPaneLeftOf  
  창을 다른 창의 왼쪽에 도킹합니다.  
@@ -327,17 +327,17 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pBar`  
+ *pBar*  
  도킹 될 수 있는 창에 대 한 포인터입니다.  
   
- `pLeftOf`  
+ *pLeftOf*  
  참조 지점으로 사용 되는 창에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
  `TRUE` 성공할 경우 `FALSE` 실패 합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드를 사용 하 여 지정 된 창 `pBar` 로 지정 된 창 왼쪽에 도킹 `pLeftOf`합니다.  
+ 이 메서드를 사용 하 여 지정 된 창 *pBar* 로 지정 된 창 왼쪽에 도킹 *pLeftOf*합니다.  
   
  미리 정의 된 순서로 여러 창을 도킹 하려면이 메서드를 호출 합니다.  
   
@@ -349,7 +349,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
  사용 하도록 설정 된 주 프레임 창의 측면을 지정 합니다. 플래그 중 하나 이상을 사용 합니다.  
   
 - `CBRS_ALIGN_LEFT`  
@@ -371,7 +371,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
  사용할 수 있도록 도킹 맞춤을 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -410,7 +410,7 @@ virtual LPCTSTR GetDocumentName(CObject** pObj);
   
  문서 이름은 레지스트리에서 읽을 이며에 전달 되는 프레임 워크는 상태를 복원할 때 나중에 [CMDIFrameWndEx::CreateDocumentWindow](../../mfc/reference/cmdiframewndex-class.md#createdocumentwindow)합니다. 이 메서드를 재정의 한 [CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)-파생 클래스 또는이 이름을 가진 문서를 열 만들고이 이름을 가진 파일을 읽어올 합니다. 문서 파일을 기반으로 하지 않는 경우에 자체 문서 식별자에 따라 문서를 만듭니다. 저장 하 고 문서를 복원 하려는 경우에 위에 제시한 작업을 수행 해야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 `GetDocumentName` 메서드를 사용하는 방법을 보여 줍니다. 이 코드 조각에서 제공 되는 [VisualStudioDemo 샘플: MFC Visual Studio 응용 프로그램](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]  
@@ -453,7 +453,7 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nID`  
+ [in] *nID*  
  찾을 창의 컨트롤 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -506,14 +506,14 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  삽입할 창에 대 한 포인터입니다.  
   
- [in] `pTarget`  
+ [in] *pTarget*  
  인접 한 창에 대 한 포인터입니다.  
   
- [in] `bAfter`  
- 경우 `TRUE`, `pControlBar` 뒤에 삽입 되어 `pTarget`합니다. 경우 `FALSE`, `pControlBar` 앞에 삽입 된 `pTarget`합니다.  
+ [in] *후에는*  
+ 경우 `TRUE`, *pControlBar* 뒤에 삽입 되어 *pTarget*합니다. 경우 `FALSE`, *pControlBar* 앞에 삽입 된 *pTarget*합니다.  
   
 ### <a name="return-value"></a>반환 값  
  `TRUE` 메서드가 성공 하면 `FALSE` 그렇지 않은 경우.  
@@ -529,13 +529,13 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `point`  
+ [in] *지점*  
  지정 된 지점입니다.  
   
- [in] `dwBarAlignment`  
+ [in] *dwBarAlignment*  
  중요 한 점은 가까운 가장자리를 지정 합니다. 가능한 값은 `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, 및 `CBRS_ALIGN_BOTTOM`  
   
- [in] `bOuterEdge`  
+ [in] *bOuterEdge*  
  `TRUE` 도킹 사이트;의 외부 테두리 주변 포인터가 있는 경우 `FALSE` 그렇지 않은 경우.  
   
 ### <a name="return-value"></a>반환 값  
@@ -557,7 +557,7 @@ virtual BOOL IsReadOnly();
 ### <a name="remarks"></a>설명  
  이 함수는 사용 되지 않도록 읽기 전용으로 문서를 저장 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 재정의 `IsReadOnly` 메서드. 이 코드 조각에서 제공 되는 [VisualStudioDemo 샘플: MFC Visual Studio 응용 프로그램](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]  
@@ -580,7 +580,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pFrame`  
+ [in] *pFrame*  
  미니 프레임 창에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -596,10 +596,10 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bPreview`  
+ [in] *bPreview*  
  경우 `TRUE`, 인쇄 미리 보기 모드로 전환 합니다. 경우 `FALSE`, 인쇄 미리 보기 모드를 종료 합니다.  
   
- [in] `pState`  
+ [in] *pState*  
  인쇄 미리 보기 상태 구조체에 대 한 포인터입니다.  
   
 ##  <a name="onupdateframetitle"></a>  CMDIChildWndEx::OnUpdateFrameTitle  
@@ -610,7 +610,7 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bAddToTitle`  
+ [in] *bAddToTitle*  
  경우 `TRUE`, 제목에 문서 이름을 추가 합니다.  
   
 ##  <a name="panefrompoint"></a>  CMDIChildWndEx::PaneFromPoint  
@@ -631,19 +631,19 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `point`  
+ [in] *지점*  
  화면 좌표를 확인 하는 지점을 지정 합니다.  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  검색 영역이 양만큼 늘립니다. 창이 지정된 된 점을 증가 된 영역에 해당 하는 경우 검색 조건을 충족 합니다.  
   
- [in] `bExactBar`  
- `TRUE` 무시 하려면는 `nSensitivity` 매개 변수, 그렇지 않으면 `FALSE`합니다.  
+ [in] *bExactBar*  
+ `TRUE` 무시 하려면는 *nSensitivity* 매개 변수, 그렇지 않으면 `FALSE`합니다.  
   
- [in] `pRTCBarType`  
+ [in] *pRTCBarType*  
  그렇지 않으면 `NULL`, 메서드가 지정 된 형식의 창만 검색 합니다.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  창이 지정된 된 지점에서 발견 되 면이 매개 변수에 지정된 된 지점에 가장 가까운 했던 창 옆쪽에 포함 합니다. 자세한 내용은 설명 섹션을 참조하세요.  
   
 ### <a name="return-value"></a>반환 값  
@@ -652,7 +652,7 @@ CBasePane* PaneFromPoint(
 ### <a name="remarks"></a>설명  
  런타임 클래스 및 표시 여부와 같은 지정 된 조건에 따라 지정된 된 점이 있는 창에 포함 되는지 여부를 확인 하려면이 메서드를 호출 합니다.  
   
- 함수 반환 하 고 창을 발견 하는 경우 `dwAlignment` 맞춤을 지정 된 위치를 포함 합니다. 예를 들어, 지점 창의 위쪽에 가장 가까운 되었으면 `dwAlignment` 로 설정 된 `CBRS_ALIGN_TOP`합니다.  
+ 함수 반환 하 고 창을 발견 하는 경우 *dwAlignment* 맞춤을 지정 된 위치를 포함 합니다. 예를 들어, 지점 창의 위쪽에 가장 가까운 되었으면 *dwAlignment* 로 설정 된 `CBRS_ALIGN_TOP`합니다.  
   
 ##  <a name="recalclayout"></a>  CMDIChildWndEx::RecalcLayout  
  창 레이아웃을 다시 계산 합니다.  
@@ -662,7 +662,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bNotify`  
+ [in] *bNotify*  
  경우 `TRUE`, 창에 대 한 활성 내부 항목 레이아웃 변경 알림을 수신 합니다.  
   
 ##  <a name="removepanefromdockmanager"></a>  CMDIChildWndEx::RemovePaneFromDockManager  
@@ -678,19 +678,19 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pControlBar`  
+ [in] *pControlBar*  
  제거 하 고 창에 대 한 포인터입니다.  
   
- [in] `bDestroy`  
+ [in] *bDestroy*  
  경우 `TRUE`, 제거 창 소멸 됩니다.  
   
- [in] `bAdjustLayout`  
+ [in] *bAdjustLayout*  
  경우 `TRUE`를 즉시 도킹 레이아웃을 조정 합니다.  
   
- [in] `bAutoHide`  
+ [in] *bAutoHide*  
  경우 `TRUE`, 도킹 레이아웃에는 자동 숨기기 막대의 목록 관련이 있습니다. 경우 `FALSE`, 도킹 레이아웃에는 일반 창의 목록 관련이 있습니다.  
   
- [in] `pBarReplacement`  
+ [in] *pBarReplacement*  
  제거 창을 대체 하는 창에 대 한 포인터입니다.  
   
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup  
@@ -701,7 +701,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `p`  
+ [in] *p*  
   
 ### <a name="remarks"></a>설명  
   
@@ -717,10 +717,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pBar`  
- [in] `bShow`  
- [in] `bDelay`  
- [in] `bActivate`  
+ [in] *pBar*  
+ [in] *bShow*  
+ [in] *bDelay*  
+ [in] *bActivate*  
   
 ### <a name="remarks"></a>설명  
   
@@ -732,7 +732,7 @@ virtual void UpdateTaskbarTabIcon(HICON hIcon);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hIcon`  
+ *hIcon*  
  Windows 7 작업 표시줄 탭에 표시할 아이콘에 대 한 핸들입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -745,7 +745,7 @@ void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bCheckRegisteredMDIChildCount`  
+ *bCheckRegisteredMDIChildCount*  
  이 함수를 MDI 자식 폼 MDI 탭이 포함 된 등록의 수를 확인 해야 하는지 여부를 지정 합니다. 이 숫자가 0 이면이 함수는 응용 프로그램의 작업 표시줄의 미리 보기에서 클리핑 사각형을 제거 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -758,7 +758,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rect`  
+ *rect*  
  새 클리핑 사각형을 지정합니다. 사각형이 비어 있거나 null 인 경우 클리핑 제거 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -774,7 +774,7 @@ void SetTaskbarTabProperties(DWORD dwFlags);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwFlags`  
+ *dwFlags*  
  STPFLAG 값의 조합입니다. 자세한 내용은 참조 [ITaskbarList4::SetTabProperties](http://msdn.microsoft.com/library/dd562049\(vs.85\).aspx)합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -787,7 +787,7 @@ void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWndBefore`  
+ *pWndBefore*  
  MDI 자식 창에 있는 축소판 그림이 왼쪽에 삽입 되는 포인터입니다. 이 창을 통해 이미 등록 되어 있어야 `RegisterTaskbarTab`합니다. 이 값이 `NULL`, 새 미리 보기는 목록 끝에 추가 됩니다.  
   
 ### <a name="remarks"></a>설명  
@@ -809,7 +809,7 @@ virtual void RegisterTaskbarTab(CMDIChildWndEx* pWndBefore = NULL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWndBefore`  
+ *pWndBefore*  
  MDI 자식 창에 있는 축소판 그림이 왼쪽에 삽입 되는 포인터입니다. 이 창을 통해 이미 등록 되어 있어야 `RegisterTaskbarTab`합니다. 이 값이 `NULL`, 새 미리 보기는 목록 끝에 추가 됩니다.  
   
 ### <a name="remarks"></a>설명  
@@ -826,16 +826,16 @@ virtual BOOL OnTaskbarTabThumbnailStretch(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hBmpDst`  
+ *hBmpDst*  
  대상 비트맵에 대 한 핸들입니다.  
   
- `rectDst`  
+ *rectDst*  
  대상 사각형을 지정합니다.  
   
- `hBmpSrc`  
+ *hBmpSrc*  
  소스 비트맵에 대 한 핸들입니다.  
   
- `rectSrc`  
+ *rectSrc*  
  소스 사각형을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -852,13 +852,13 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDesktopWnd`  
+ *pDesktopWnd*  
  활성화 되 고 창의 최상위 부모 창에 대 한 포인터를 지정 합니다. 포인터는 임시적 이며 저장 되어야 합니다.  
   
- `nHitTest`  
+ *nHitTest*  
  적중 테스트 지역 번호를 지정합니다. 적중 횟수 테스트에는 커서의 위치를 결정 하는 테스트가입니다.  
   
- `message`  
+ *message*  
  마우스 메시지 번호를 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -875,13 +875,13 @@ virtual void OnTaskbarTabThumbnailActivate(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nState`  
+ *nState*  
  지정 여부는 `CWnd` 활성화 또는 비활성화 되는 합니다.  
   
- `pWndOther`  
+ *pWndOther*  
  에 대 한 포인터는 `CWnd` 활성화 되거나 비활성화 되 고 있습니다. 포인터 수 `NULL`, 임시 수도 있습니다.  
   
- `bMinimized`  
+ *bMinimized*  
  최소화 된 상태를 지정 된 `CWnd` 활성화 되거나 비활성화 되 고 있습니다. 값이 `TRUE` 창을 최소화 됨을 나타냅니다.  
   
 ### <a name="remarks"></a>설명  
@@ -906,10 +906,10 @@ virtual HBITMAP OnGetIconicThumbnail(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nWidth`  
+ *nWidth*  
  필요한 비트맵의 너비를 지정합니다.  
   
- `nHeight`  
+ *nHeight*  
  필요한 비트맵의 높이 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -924,10 +924,10 @@ virtual HBITMAP OnGetIconicLivePreviewBitmap(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bIsMDIChildActive`  
+ *bIsMDIChildActive*  
  이 매개 변수는 `TRUE` 비트맵 MDI 자식에 대 한 요청 되는 현재 활성화 되어 있고 주 창 하지 최소화 됩니다. 기본이 경우 처리는 주 창의 스냅숏을 만듭니다.  
   
- `ptLocation`  
+ *ptLocation*  
  Main (최상위 수준)에서 비트맵의 위치를 지정 합니다. 창 클라이언트 좌표입니다. 이 지점 호출 수신자에 의해 제공 되어야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1039,7 +1039,7 @@ void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bEnable`  
+ *bEnable*  
  사용 여부를 지정 ( `TRUE`)를 사용 하지 않도록 설정 하거나 ( `FALSE`) 표시 하려면 창의 클라이언트 영역의 일부를 자동으로 선택 합니다.  
   
 ### <a name="remarks"></a>설명  

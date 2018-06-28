@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e510811fcaac81aa54699250ef37f48ffe1f40e2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3f601c2b15f5f117f77b1f916027107708e8f19
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374899"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038228"
 ---
 # <a name="coledropsource-class"></a>COleDropSource 클래스
 데이터를를 끌어놓기 대상으로 끌어다 놓을 수 있습니다.  
@@ -90,7 +90,7 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dropEffect`  
+ *dropEffect*  
  사용자에 게 표시 하려면 원하는 효과 일반적으로 대상을 나타내는 했을 때를 삭제 하는 선택한 데이터에 지정 된이 위치에 발생 한 경우. 에 대 한 가장 최근의 호출에서 반환 되는 값이는 일반적으로 [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) 또는 [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover)합니다. 다음 중 하나 이상을 수 있습니다.  
   
 - `DROPEFFECT_NONE` 드롭 것은 허용 되지 않습니다.  
@@ -119,7 +119,7 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  선택한 데이터를 포함 하는 창을를 가리킵니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -141,7 +141,7 @@ virtual SCODE QueryContinueDrag(
  *bEscapePressed*  
  에 대 한 마지막 호출 후 ESC 키를 눌렀는지 여부를 나타내는 `COleDropSource::QueryContinueDrag`합니다.  
   
- `dwKeyState`  
+ *dwKeyState*  
  키보드의 한정자 키의 상태를 포함합니다. 이 개수에 관계 없이 다음의 조합을: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, 및 **MK_RBUTTON**합니다.  
   
 ### <a name="return-value"></a>반환 값  

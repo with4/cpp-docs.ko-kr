@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb52739977b641cd5d52f018efcd30a51ecf1e32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fec20d8bb960d48392f2d174dab9ee6497738c80
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373135"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039604"
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget 클래스
 창과 OLE 라이브러리 사이의 통신 메커니즘을 제공합니다.  
@@ -110,20 +110,20 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  커서를 시작 하는 창을 가리킵니다.  
   
- `pDataObject`  
+ *pDataObject*  
  삭제할 수 있는 데이터를 포함 하는 데이터 개체를 가리킵니다.  
   
- `dwKeyState`  
+ *dwKeyState*  
  보조 키의 상태가 포함 됩니다. 이 개수에 관계 없이 다음의 조합을: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, 및 **MK_RBUTTON**합니다.  
   
- `point`  
+ *지점*  
  클라이언트 좌표에서 커서의 현재 위치를 포함합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 삭제 하 여 지정 된 위치의 시도한 경우 발생 하는 효과 `point`합니다. 다음 중 하나 이상을 수 있습니다.  
+ 삭제 하 여 지정 된 위치의 시도한 경우 발생 하는 효과 *가리킨*합니다. 다음 중 하나 이상을 수 있습니다.  
   
 - `DROPEFFECT_NONE` 드롭 것은 허용 되지 않습니다.  
   
@@ -148,7 +148,7 @@ virtual void OnDragLeave(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  커서 나온다는 것 창을 가리킵니다.  
   
 ### <a name="remarks"></a>설명  
@@ -168,20 +168,20 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  커서를 이동 하는 창을를 가리킵니다.  
   
- `pDataObject`  
+ *pDataObject*  
  삭제할 데이터를 포함 하는 데이터 개체를 가리킵니다.  
   
- `dwKeyState`  
+ *dwKeyState*  
  보조 키의 상태가 포함 됩니다. 이 개수에 관계 없이 다음의 조합을: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, 및 **MK_RBUTTON**합니다.  
   
- `point`  
+ *지점*  
  클라이언트 좌표에서 커서의 현재 위치를 포함합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 삭제 하 여 지정 된 위치의 시도한 경우 발생 하는 효과 `point`합니다. 다음 중 하나 이상을 수 있습니다.  
+ 삭제 하 여 지정 된 위치의 시도한 경우 발생 하는 효과 *가리킨*합니다. 다음 중 하나 이상을 수 있습니다.  
   
 - `DROPEFFECT_NONE` 드롭 것은 허용 되지 않습니다.  
   
@@ -198,11 +198,11 @@ virtual DROPEFFECT OnDragOver(
   
  자세한 내용은 참조 [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129) Windows sdk에서입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
   
 ##  <a name="ondragscroll"></a>  COleDropTarget::OnDragScroll  
- 호출 하기 전에 프레임 워크에서 호출 [OnDragEnter](#ondragenter) 또는 [OnDragOver](#ondragover) 확인 하려면 여부 `point` 스크롤 영역에 있습니다.  
+ 호출 하기 전에 프레임 워크에서 호출 [OnDragEnter](#ondragenter) 또는 [OnDragOver](#ondragover) 확인 하려면 있는지 여부를 *가리킨* 스크롤 영역에 있습니다.  
   
 ```  
 virtual DROPEFFECT OnDragScroll(
@@ -212,17 +212,17 @@ virtual DROPEFFECT OnDragScroll(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  커서를 현재 창을 가리킵니다.  
   
- `dwKeyState`  
+ *dwKeyState*  
  보조 키의 상태가 포함 됩니다. 이 개수에 관계 없이 다음의 조합을: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_ MBUTTON**, 및 **MK_RBUTTON**합니다.  
   
- `point`  
+ *지점*  
  화면에 대해를 픽셀 단위로 커서의 위치를 포함합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 삭제 하 여 지정 된 위치의 시도한 경우 발생 하는 효과 `point`합니다. 다음 중 하나 이상을 수 있습니다.  
+ 삭제 하 여 지정 된 위치의 시도한 경우 발생 하는 효과 *가리킨*합니다. 다음 중 하나 이상을 수 있습니다.  
   
 - `DROPEFFECT_NONE` 드롭 것은 허용 되지 않습니다.  
   
@@ -249,13 +249,13 @@ virtual BOOL OnDrop(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  커서를 현재 창을 가리킵니다.  
   
- `pDataObject`  
+ *pDataObject*  
  삭제할 데이터를 포함 하는 데이터 개체를 가리킵니다.  
   
- `dropEffect`  
+ *dropEffect*  
  Drop 작업에 대 한 사용자를 선택 하는 효과입니다. 다음 중 하나 이상을 수 있습니다.  
   
 - `DROPEFFECT_COPY` 복사 작업을 수행 합니다.  
@@ -264,7 +264,7 @@ virtual BOOL OnDrop(
   
 - `DROPEFFECT_LINK` 원래 데이터를 전송 된 데이터에서 링크를 설정할 수는 있습니다.  
   
- `point`  
+ *지점*  
  화면에 대해를 픽셀 단위로 커서의 위치를 포함합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -290,23 +290,23 @@ virtual DROPEFFECT OnDropEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  커서를 현재 창을 가리킵니다.  
   
- `pDataObject`  
+ *pDataObject*  
  삭제할 데이터를 포함 하는 데이터 개체를 가리킵니다.  
   
- `dropDefault`  
+ *dropDefault*  
  현재 키 상태에 따라 기본 놓기 작업에 대 한 사용자를 선택 하는 효과입니다. 것이 `DROPEFFECT_NONE`합니다. 끌어서 놓기 작업 결과 주의 섹션에 설명 되어 있습니다.  
   
- `dropList`  
+ *드롭다운 목록*  
  목록에서 지 원하는 놓기 소스 끌어서 놓기 작업 결과입니다. 비트 OR를 사용 하 여 놓기 효과 값을 결합할 수 있습니다 ( **&#124;**) 작업입니다. 끌어서 놓기 작업 결과 주의 섹션에 설명 되어 있습니다.  
   
- `point`  
+ *지점*  
  화면에 대해를 픽셀 단위로 커서의 위치를 포함합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 지정 된 위치에서 삭제 시도에서 발생 하는 놓기 효과 `point`합니다. 끌어서 놓기 작업 결과 주의 섹션에 설명 되어 있습니다.  
+ 지정 된 위치에서 삭제 시도에서 발생 하는 놓기 효과 *가리킨*합니다. 끌어서 놓기 작업 결과 주의 섹션에 설명 되어 있습니다.  
   
 ### <a name="remarks"></a>설명  
  프레임 워크는 먼저이 함수를 호출합니다. 프레임 워크는 다음 호출의 삭제를 처리 하지 않는 [OnDrop](#ondrop)합니다. 재정의 하는 일반적으로 [OnDropEx](../../mfc/reference/cview-class.md#ondropex) 오른쪽 마우스 단추를 지원 하기 위해 뷰 클래스에 끌어 놓습니다. 일반적으로 뷰 클래스 [OnDrop](../../mfc/reference/cview-class.md#ondrop) 간단한 끌어서 놓기에 대 한 지원의 경우를 처리 하는 데 사용 됩니다.  
@@ -335,7 +335,7 @@ BOOL Register(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  놓기 대상으로 등록할 수 있는 창을 가리킵니다.  
   
 ### <a name="return-value"></a>반환 값  

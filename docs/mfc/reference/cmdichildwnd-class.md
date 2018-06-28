@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e27551c04be5d6e985c6e7829f11f94d0aafeba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 037a6091f11ad12a8f4e46ccb837c48f1f9a685b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369351"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040849"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd 클래스
 창 관리 멤버와 함께 Windows MDI(다중 문서 인터페이스) 자식 창 기능을 제공합니다.  
@@ -75,17 +75,17 @@ class CMDIChildWnd : public CFrameWnd
   
  MDI 자식 창에 생성 하는 방법은 세 가지가 있습니다.  
   
--   사용 하 여이 직접 생성할 **만들기**합니다.  
+-   사용 하 여이 직접 생성할 `Create`합니다.  
   
 -   사용 하 여이 직접 생성할 `LoadFrame`합니다.  
   
 -   직접 생성 하지는 문서 템플릿을 통해 합니다.  
   
- 호출 하기 전에 **만들기** 또는 `LoadFrame`, c + +를 사용 하 여 힙에 프레임 창 개체를 생성 해야 **새** 연산자입니다. 호출 하기 전에 **만들기** 사용 하는 창 클래스를 등록할 수도 있습니다는 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) 프레임에 대 한 아이콘 및 클래스 스타일을 설정 하려면 전역 함수입니다.  
+ 호출 하기 전에 `Create` 또는 `LoadFrame`, c + +를 사용 하 여 힙에 프레임 창 개체를 생성 해야 **새** 연산자입니다. 호출 하기 전에 `Create` 사용 하는 창 클래스를 등록할 수도 있습니다는 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) 전역 함수를 프레임에 대 한 아이콘 및 클래스 스타일을 설정 합니다.  
   
- 사용 하 여는 **만들기** 같이 즉시 인수 프레임의 생성 매개 변수를 전달 하는 멤버 함수입니다.  
+ 사용 하 여는 `Create` 같이 즉시 인수 프레임의 생성 매개 변수를 전달 하는 멤버 함수입니다.  
   
- `LoadFrame` 보다 적은 인수를 사용 해야 **만들기**, 대신 프레임의 캡션, 아이콘, 액셀러레이터 키 테이블 및 메뉴를 포함 하 여 리소스에서 대부분의 해당 기본 값을 검색 합니다. 액세스할 수 있도록 `LoadFrame`, 이러한 모든 리소스에는 동일한 리소스 ID를 사용 해야 합니다. (예를 들어 **IDR_MAINFRAME**).  
+ `LoadFrame` 보다 적은 인수를 사용 해야 `Create`, 대신 프레임의 캡션, 아이콘, 액셀러레이터 키 테이블 및 메뉴를 포함 하 여 리소스에서 대부분의 해당 기본 값을 검색 합니다. 액세스할 수 있도록 `LoadFrame`, 이러한 모든 리소스에는 동일한 리소스 ID를 사용 해야 합니다. (예를 들어 **IDR_MAINFRAME**).  
   
  경우는 `CMDIChildWnd` 만들어질 하지 직접은 프로그래머가 직접 대신 프레임 워크에서 보기 및 문서 개체에 포함 되어 있습니다. `CDocTemplate` 프레임의 만들기, 포함 하는 뷰를 만들고 적절 한 문서에 뷰 연결 개체를 조정 합니다. 매개 변수는 `CDocTemplate` 생성자 지정는 `CRuntimeClass` 세 개의 클래스 (문서, 프레임 및 보기)를 포함 합니다. A `CRuntimeClass` 개체를 동적으로 만드는 새 프레임 (예를 들어 새 파일 명령 또는 MDI 창의 새 명령 사용)에서 사용자가 지정 하는 경우 프레임 워크에서 사용 됩니다.  
   
@@ -125,7 +125,7 @@ CMDIChildWnd();
 ### <a name="remarks"></a>설명  
  호출 **만들기** 표시 창을 만들 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CMDIChildWnd::Create](#create)합니다.  
   
 ##  <a name="create"></a>  CMDIChildWnd::Create  
@@ -142,22 +142,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszClassName`  
+ *lpszClassName*  
  Windows 클래스의 이름을 지정 하는 null로 끝나는 문자열을 가리키는 (한 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) 구조). 클래스 이름에 등록 된 모든 이름일 수 있습니다는 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) 전역 함수입니다. 해야 **NULL** 표준 `CMDIChildWnd`합니다.  
   
- `lpszWindowName`  
+ *lpszWindowName*  
  창 이름을 나타내는 null로 끝나는 문자열을 가리킵니다. 제목 표시줄에 대 한 텍스트로 사용합니다.  
   
- `dwStyle`  
+ *dwStyle*  
  창을 지정 [스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles) 특성입니다. **WS_CHILD** 스타일을 사용 해야 합니다.  
   
- `rect`  
+ *rect*  
  크기와 창의 위치를 포함합니다. `rectDefault` 값 허용 되는 크기와 새 위치를 지정 하는 Windows `CMDIChildWnd`합니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  창의 부모를 지정합니다. 경우 **NULL**, 주 응용 프로그램 창을 사용 합니다.  
   
- `pContext`  
+ *pContext*  
  지정 된 [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) 구조입니다. 이 매개 변수 수 **NULL**합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -166,14 +166,14 @@ virtual BOOL Create(
 ### <a name="remarks"></a>설명  
  현재 활성 MDI 자식 프레임 창에는 부모 프레임 창의 캡션을 결정할 수 있습니다. 이 기능을 해제 하면 비활성화는 **FWS_ADDTOTITLE** 자식 프레임 창의 스타일 비트입니다.  
   
- 프레임 워크 자식 창을 만들 수는 사용자 명령에 대 한 응답에서이 멤버 함수를 호출 하 고 사용 하 여 프레임 워크는 `pContext` 자식 창 응용 프로그램에 연결 하도록 매개 변수입니다. 호출 하는 경우 **만들기**, `pContext` 수 **NULL**합니다.  
+ 프레임 워크 자식 창을 만들 수는 사용자 명령에 대 한 응답에서이 멤버 함수를 호출 하 고 사용 하 여 프레임 워크는 *pContext* 자식 창 응용 프로그램에 연결 하도록 매개 변수입니다. 호출 하는 경우 `Create`, *pContext* 수 **NULL**합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예제 1:  
   
  [!code-cpp[NVC_MFCWindowing#7](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_1.cpp)]  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예제 2:  
   
  [!code-cpp[NVC_MFCWindowing#8](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_2.cpp)]  
@@ -193,7 +193,7 @@ CMDIFrameWnd* GetMDIFrame();
 ### <a name="remarks"></a>설명  
  반환 하는 프레임은 두 명의 부모에서 제거 된 `CMDIChildWnd` 이 유형의 창의 부모인 **MDICLIENT** 을 관리 하는 `CMDIChildWnd` 개체입니다. 호출의 [GetParent](../../mfc/reference/cwnd-class.md#getparent) 반환할 멤버 함수는 `CMDIChildWnd` 개체의 직계 **MDICLIENT** 임시 파일로 부모 `CWnd` 포인터입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CMDIFrameWnd::MDISetMenu](../../mfc/reference/cmdiframewnd-class.md#mdisetmenu)합니다.  
   
 ##  <a name="mdiactivate"></a>  CMDIChildWnd::MDIActivate  
@@ -206,7 +206,7 @@ void MDIActivate();
 ### <a name="remarks"></a>설명  
  활성화 되는 프레임을 마지막으로 활성화 된 자식 창도 활성화 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CMDIFrameWnd::GetWindowMenuPopup](../../mfc/reference/cmdiframewnd-class.md#getwindowmenupopup)합니다.  
   
 ##  <a name="mdidestroy"></a>  CMDIChildWnd::MDIDestroy  
@@ -219,7 +219,7 @@ void MDIDestroy();
 ### <a name="remarks"></a>설명  
  멤버 함수 프레임 창에서 자식 창의 제목을 제거 및 자식 창을 비활성화 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#10](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_4.cpp)]  
   
 ##  <a name="mdimaximize"></a>  CMDIChildWnd::MDIMaximize  
@@ -232,7 +232,7 @@ void MDIMaximize();
 ### <a name="remarks"></a>설명  
  자식 창이 최대화 되었을 때 Windows 프레임 창의 클라이언트 영역 채우기의 클라이언트 영역을 찾을 수 있도록 크기가 조정 됩니다. 복원 하거나 자식 창을 닫을 수 있도록 Windows 프레임의 메뉴 모음에서 자식 창 컨트롤 메뉴를 배치 하 고 프레임 창 제목에 자식 창의 제목을 추가 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#11](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_5.cpp)]  
   
 ##  <a name="mdirestore"></a>  CMDIChildWnd::MDIRestore  
@@ -242,7 +242,7 @@ void MDIMaximize();
 void MDIRestore();
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#12](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_6.cpp)]  
   
 ##  <a name="sethandles"></a>  CMDIChildWnd::SetHandles  
@@ -255,10 +255,10 @@ void SetHandles(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hMenu`  
+ *hMenu*  
  메뉴 리소스의 핸들입니다.  
   
- `hAccel`  
+ *hAccel*  
  액셀러레이터 키 리소스의 핸들입니다.  
   
 ### <a name="remarks"></a>설명  

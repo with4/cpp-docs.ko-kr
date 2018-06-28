@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b8c602882036d77105bb619069a6e43d73ceeb6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3531fd45bbccd351bd8f95ce0d4bb26de846b01
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366800"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039468"
 ---
 # <a name="cmfcspinbuttonctrl-class"></a>CMFCSpinButtonCtrl 클래스
 `CMFCSpinButtonCtrl` 클래스 스핀 단추 컨트롤을 그리는 비주얼 관리자를 지원 합니다.  
@@ -52,7 +52,7 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
 ## <a name="remarks"></a>설명  
  응용 프로그램에서 스핀 단추 컨트롤을 그리는 비주얼 관리자를 사용 하려면 모든 인스턴스를 대체는 `CSpinButtonCtrl` 클래스와 `CMFCSpinButtonCtrl` 클래스입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는의 개체를 만드는 방법을 `CMFCSpinButtonCtrl` 클래스 및 사용 하 여 해당 `Create` 메서드.  
   
  [!code-cpp[NVC_MFC_RibbonApp#25](../../mfc/reference/codesnippet/cpp/cmfcspinbuttonctrl-class_1.cpp)]  
@@ -79,7 +79,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  

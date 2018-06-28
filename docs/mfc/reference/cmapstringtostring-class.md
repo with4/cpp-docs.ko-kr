@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a196e2f3f4641d94bbbbda57dd1471066fb1dfa2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 43c9fdc667f5bd40b6c683f6e48753a084266847
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368149"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037650"
 ---
 # <a name="cmapstringtostring-class"></a>CMapStringToString 클래스
 `CString` 개체로 키가 지정된 `CString` 개체의 맵을 지원합니다.  
@@ -69,7 +69,7 @@ class CMapStringToString : public CObject
 ```  
   
 ## <a name="members"></a>멤버  
- 멤버 함수 `CMapStringToString` 클래스의 멤버 함수와 비슷한 [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)합니다. 이처럼 두 함수가 비슷하므로 `CMapStringToOb` 참조 설명서에서 멤버 함수 관련 사항을 확인할 수 있습니다. 볼 때마다는 `CObject` 포인터를 반환 값 또는 "출력" 작동 매개 변수를 대체에 대 한 포인터 `char`합니다. 볼 때마다는 `CObject` "입력된" 함수 매개 변수로 사용 하는 포인터에 대 한 포인터를 대체 `char`합니다.  
+ 멤버 함수 `CMapStringToString` 클래스의 멤버 함수와 비슷한 [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md)합니다. 이처럼 두 함수가 비슷하므로 `CMapStringToOb` 참조 설명서에서 멤버 함수 관련 사항을 확인할 수 있습니다. 볼 때마다는 `CObject` 포인터를 반환 값 또는 "출력" 작동 매개 변수를 대체에 대 한 포인터 **char**합니다. 볼 때마다는 `CObject` "입력된" 함수 매개 변수로 사용 하는 포인터에 대 한 포인터를 대체 **char**합니다.  
   
  `BOOL CMapStringToOb::Lookup(const char*<key>, CObject*&<rValue>) const;`  
   
@@ -147,7 +147,7 @@ class CMapStringToString : public CObject
   
  반환 값을 저장 하는 데 사용 됩니다 [CMapStringToString::PLookup](#plookup), [CMapStringToString::PGetFirstAssoc](#pgetfirstassoc), 및 [CMapStringToString::PGetNextAssoc](#pgetnextassoc)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   사용의 예에 대 한 예제를 참조 하십시오. [CMapStringToString::PLookup](#plookup)합니다.  
   
 ##  <a name="pgetfirstassoc"></a>  CMapStringToString::PGetFirstAssoc  
@@ -165,11 +165,11 @@ CPair* PGetFirstAssoc();
 ### <a name="remarks"></a>설명  
  Map 개체에 대 한 포인터는 첫 번째 요소를 반환 하려면이 함수를 호출 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#73](../../mfc/codesnippet/cpp/cmapstringtostring-class_1.cpp)]  
   
 ##  <a name="pgetnextassoc"></a>  CMapStringToString::PGetNextAssoc  
- 가 가리키는 지도 요소를 검색 `pAssocRec`합니다.  
+ 가 가리키는 지도 요소를 검색 *pAssocRec*합니다.  
   
 ```  
 const CPair *PGetNextAssoc(const CPair* pAssoc) const;  
@@ -187,7 +187,7 @@ CPair *PGetNextAssoc(const CPair* pAssoc);
 ### <a name="remarks"></a>설명  
  Map의 모든 요소를 반복 하는이 메서드를 호출 합니다. 첫 번째 요소를 호출 하 여 검색 `PGetFirstAssoc` 는 지도에 대 한 연속 호출은을 반복 하 고 `PGetNextAssoc`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CMapStringToString::PGetFirstAssoc](#pgetfirstassoc)합니다.  
   
 ##  <a name="plookup"></a>  CMapStringToString::PLookup  
@@ -200,7 +200,7 @@ CPair* PLookup(LPCTSTR key);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `key`  
+ *key*  
  검색 한 요소에 대 한 키에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -209,7 +209,7 @@ CPair* PLookup(LPCTSTR key);
 ### <a name="remarks"></a>설명  
  지정된 된 키를 정확 하 게 일치 하는 키를 사용 하 여 지도 요소에 대 한 검색 하려면이 메서드를 호출 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#74](../../mfc/codesnippet/cpp/cmapstringtostring-class_2.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

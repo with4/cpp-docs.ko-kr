@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2b9d0d1ab9722b14caddc3935d820301ae229f5a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 24981d2544c2b3e2c8be6a3307829f8a1e1c29ad
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369338"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040222"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar 클래스
 긴 작업의 진행률을 시각적으로 나타내는 컨트롤을 구현합니다.  
@@ -77,7 +77,7 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 ## <a name="remarks"></a>설명  
  A `CMFCRibbonProgressBar` 두 가지 모드로 작동할 수 있습니다: 일반 및 무한 합니다. 일반 모드에서 진행률 표시줄이 왼쪽에서 오른쪽으로 채워지는 하 고 최대값에 도달 하면 중지 합니다. 무한 모드에서 진행률 표시줄은 반복적으로 최 댓 값의 최소값에서 채워집니다. 작업이 진행 중인지 완료 시간 알려져 있지만 무한 모드를 사용할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCRibbonProgressBar` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 진행률 표시줄에 대 한 최소 및 최대 값을 설정 하 고 진행률 표시줄의 현재 위치를 설정 합니다 (여기서는 작업의 완료 시간 알 수는 없습니다) 무한 모드에서 작동 하도록 진행률 표시줄을 설정 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [MS Office 2007 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]  
@@ -106,13 +106,13 @@ CMFCRibbonProgressBar(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nID`  
+ [in] *nID*  
  리본 진행률 표시줄에 대 한 명령 ID를 지정합니다.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  리본 진행률 표시줄의 픽셀 너비를 지정 합니다.  
   
- [in] `nHeight`  
+ [in] *nHeight*  
  리본 진행률 표시줄의 픽셀 단위에서 높이 지정합니다.  
   
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos  
@@ -158,7 +158,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -185,7 +185,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>설명  
   
@@ -197,7 +197,7 @@ void SetInfiniteMode(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` 진행률 표시줄 무한 모드 임을 지정 하려면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -213,10 +213,10 @@ void SetPos(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nPos`  
+ [in] *nPos*  
  진행률 표시줄에 설정 된 위치를 지정 합니다.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  진행률 표시줄 그려야 하는지 여부를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -232,10 +232,10 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nMin`  
+ [in] *nMin*  
  범위의 최소값을 지정합니다.  
   
- [in] `nMax`  
+ [in] *최대*  
  범위의 최대값을 지정 합니다.  
   
 ### <a name="remarks"></a>설명  

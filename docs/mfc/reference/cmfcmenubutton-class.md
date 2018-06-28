@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d611acb34d4159abb41ffa333b4b2cfb6d94442
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 09d68cd7c0e4796b3368e1167888d703d37a8cf8
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375391"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040170"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton 클래스
 사용자가 선택한 메뉴에 팝업 메뉴와 보고서를 표시하는 단추입니다.  
@@ -65,7 +65,7 @@ class CMFCMenuButton : public CMFCButton
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|기본 시스템 팝업 메뉴를 표시 하거나 사용 하려면 여부 지정 [CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu)합니다.|  
 |[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|팝업 메뉴 아래쪽 또는 오른쪽 단추에 나타날지 여부를 지정 합니다.|  
@@ -78,7 +78,7 @@ class CMFCMenuButton : public CMFCButton
   
  만들 때 한 `CMFCMenuButton`, 연결 된 팝업 메뉴에 대 한 핸들을 전달 해야 합니다. 그런 다음 함수가 호출 `CMFCMenuButton::SizeToContent`합니다. `CMFCMenuButton::SizeToContent` 단추 크기가 있는 팝업 창이 표시 됩니다-즉, 아래쪽 또는 오른쪽 단추의 위치를 가리키는 화살표를 포함 하는 데 충분 한지 확인 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에는 단추에 연결 된 메뉴의 핸들을 설정 하 고, 해당 텍스트와 이미지 크기에 따라 단추 크기를 조정 하 고, 프레임 워크에 의해 표시 되는 팝업 메뉴를 설정 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#38](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_1.h)]  
@@ -167,7 +167,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pMsg`  
+ [in] *pMsg*  
  가리키는 [MSG](../../mfc/reference/msg-structure1.md) 처리할 메시지를 포함 하는 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -183,14 +183,14 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bCalcOnly`  
+ [in] *bCalcOnly*  
  이 메서드는 단추 크기가 조정 되는지를 나타내는 부울 매개 변수입니다.  
   
 ### <a name="return-value"></a>반환 값  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) 단추에 대 한 새 크기를 지정 하는 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 함수를 호출 하는 경우 및 `bCalcOnly` 은 `TRUE`, `SizeToContent` 단추의 새 크기를 계산 합니다.  
+ 이 함수를 호출 하는 경우 및 *bCalcOnly* 은 `TRUE`, `SizeToContent` 단추의 새 크기를 계산 합니다.  
   
  단추의 새 크기에 맞게 단추 텍스트, 이미지 및 화살표 계산 됩니다. 프레임 워크는 또한 가로 가장자리에 대 한 10 픽셀 및 세로 가장자리에 대 한 5 픽셀의 미리 정의 된 여백에 추가 합니다.  
   

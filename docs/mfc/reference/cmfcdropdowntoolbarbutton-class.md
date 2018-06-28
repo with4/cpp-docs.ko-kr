@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c65cf3070f199b013a0e85c1ae56764174fdc33
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5c894ff57bbbee59842f56dbfef0ec06a6c7899f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372536"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041697"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton 클래스
 클릭할 때 일반 단추처럼 동작하는 도구 모음 단추의 한 종류입니다. 그러나 드롭다운 도구 모음이 열립니다 ( [CMFCDropDownToolBar 클래스](../../mfc/reference/cmfcdropdowntoolbar-class.md) 경우 사용자 번 클릭 하 고 도구 모음 단추를 누르고 있습니다.  
@@ -103,7 +103,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCDropDownToolbarButton::m_uiShowBarDelay](#m_uishowbardelay)|드롭다운 도구 모음이 표시 될 때까지 사용자를 마우스 단추를 누른 해야 하는 시간의 길이 지정 합니다.|  
   
@@ -132,11 +132,11 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `src`  
+ [in] *src*  
  복사할 소스 단추에 대 한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 도구 모음 단추를 도구 모음 단추 복사 하려면이 메서드를 호출 합니다. `src` 형식 이어야 합니다 `CMFCDropDownToolbarButton`합니다.  
+ 이 도구 모음 단추를 도구 모음 단추 복사 하려면이 메서드를 호출 합니다. *src* 형식 이어야 합니다 `CMFCDropDownToolbarButton`합니다.  
   
 ##  <a name="cmfcdropdowntoolbarbutton"></a>  CMFCDropDownToolbarButton::CMFCDropDownToolbarButton  
  `CMFCDropDownToolbarButton` 개체를 생성합니다.  
@@ -151,18 +151,18 @@ CMFCDropDownToolbarButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszName`  
+ [in] *lpszName*  
  단추의 기본 텍스트입니다.  
   
- [in] `pToolBar`  
+ [in] *pToolBar*  
  에 대 한 포인터는 `CMFCDropDownToolBar` 단추를 누를 때 표시 되는 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 도구 모음에서 첫 번째 단추에서 드롭다운 단추에 복사 생성자의 두 번째 오버 로드는 `pToolBar` 지정 합니다.  
+ 도구 모음에서 첫 번째 단추에서 드롭다운 단추에 복사 생성자의 두 번째 오버 로드는 *pToolBar* 지정 합니다.  
   
- 일반적으로 드롭 다운 도구 모음 단추를 도구 모음에서 가장 최근에 사용한 단추에서 텍스트를 사용 하는 `pToolBar` 지정 합니다. 로 지정 된 텍스트를 사용 하 여 `lpszName` 때 단추는 메뉴 단추 또는 변환에 표시 되는 **명령을** 탭은 **사용자 지정** 대화 상자. 에 대 한 자세한 내용은 **사용자 지정** 대화 상자, 참조 [CMFCToolBarsCustomizeDialog 클래스](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)합니다.  
+ 일반적으로 드롭 다운 도구 모음 단추를 도구 모음에서 가장 최근에 사용한 단추에서 텍스트를 사용 하는 *pToolBar* 지정 합니다. 로 지정 된 텍스트를 사용 하 여 *lpszName* 때 단추는 메뉴 단추 또는 변환에 표시 되는 **명령을** 탭은 **사용자 지정** 대화 상자. 에 대 한 자세한 내용은 **사용자 지정** 대화 상자, 참조 [CMFCToolBarsCustomizeDialog 클래스](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는의 개체를 생성 하는 `CMFCDropDownToolbarButton` 클래스입니다. 이 코드 조각은의 일부인는 [Visual Studio 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#31](../../mfc/codesnippet/cpp/cmfcdropdowntoolbarbutton-class_1.cpp)]  
@@ -175,7 +175,7 @@ BOOL DropDownToolbar(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWnd`  
+ [in] *pWnd*  
  드롭 다운 프레임의 부모 창 또는 `NULL` 드롭 다운 도구 모음 단추의 부모 창을 사용 하 여 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -186,7 +186,7 @@ BOOL DropDownToolbar(CWnd* pWnd);
   
  이 메서드를 사용 하 여 드롭다운 목록 도구 모음을 만듭니다는 [CMFCDropDownFrame::Create](../../mfc/reference/cmfcdropdownframe-class.md#create) 메서드. 부모 도구 모음에서 세로로 도킹 되는 경우이 메서드는 배치 드롭 다운 도구 모음 왼쪽 또는 오른쪽 맞춤에 따라 부모 도구 모음 옆에 있습니다. 그렇지 않으면이 메서드는 부모 도구 모음 아래 드롭다운 목록 도구 모음을 배치 합니다.  
   
- 이 메서드는 실패 하는 경우 `pWnd` 은 `NULL` 드롭 다운 도구 모음 단추에 부모 창 없는 합니다.  
+ 이 메서드는 실패 하는 경우 *pWnd* 은 `NULL` 드롭 다운 도구 모음 단추에 부모 창 없는 합니다.  
   
 ##  <a name="exporttomenubutton"></a>  CMFCDropDownToolbarButton::ExportToMenuButton  
  도구 모음 단추에서 메뉴에 텍스트를 복사 합니다.  
@@ -196,7 +196,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `menuButton`  
+ [in] *menuButton*  
  대상 메뉴 단추에 대 한 참조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -267,13 +267,13 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  단추를 표시 하는 장치 컨텍스트.  
   
- [in] `sizeDefault`  
+ [in] *sizeDefault*  
  단추의 기본 크기입니다.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  부모 도구 모음 도킹 상태입니다. 이 매개 변수는 `TRUE` 경우 도구 모음에서 가로로 도킹 되어 있거나 부동 창인 경우 또는 `FALSE` 도구 모음 세로로 도킹 되는 경우.  
   
 ### <a name="return-value"></a>반환 값  
@@ -290,7 +290,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  새 부모 창입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -306,10 +306,10 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWnd`  
+ [in] *pWnd*  
  도구 모음 단추의 부모 창입니다.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  `TRUE` 경우 메시지는 지연으로 처리 되어야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -345,14 +345,14 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWnd`  
+ [in] *pWnd*  
  도구 모음 단추의 부모 창입니다.  
   
 ### <a name="return-value"></a>반환 값  
  단추 도움말 메시지를 처리 하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 기본 클래스 구현을 확장 ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp))를 호출 하 여는 [CMFCDropDownToolbarButton::OnClick](#onclick) 메서드 `bDelay` 로 설정 `FALSE` . 이 메서드가 반환 하 여 반환 되는 값 [CMFCDropDownToolbarButton::OnClick](#onclick)합니다.  
+ 이 메서드는 기본 클래스 구현을 확장 ( [CMFCToolBarButton::OnContextHelp](../../mfc/reference/cmfctoolbarbutton-class.md#oncontexthelp))를 호출 하 여는 [CMFCDropDownToolbarButton::OnClick](#onclick) 메서드 *bDelay*로 설정 `FALSE`합니다. 이 메서드가 반환 하 여 반환 되는 값 [CMFCDropDownToolbarButton::OnClick](#onclick)합니다.  
   
  에 대 한 자세한 내용은 `WM_HELPHITTEST message, see` [TN028: 상황에 맞는 도움말 지원](../../mfc/tn028-context-sensitive-help-support.md)합니다.  
   
@@ -364,7 +364,7 @@ virtual BOOL OnCustomizeMenu(CMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pMenu`  
+ [in] *pMenu*  
  사용자 지정 하는 메뉴.  
   
 ### <a name="return-value"></a>반환 값  
@@ -401,28 +401,28 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  단추를 표시 하는 장치 컨텍스트.  
   
- [in] `rect`  
+ [in] *rect*  
  단추의 경계 사각형입니다.  
   
- [in] `pImages`  
+ [in] *pImages*  
  단추와 연결 된 도구 모음 이미지의 컬렉션입니다.  
   
- [in] `bHorz`  
+ [in] *bHorz*  
  부모 도구 모음 도킹 상태입니다. 이 매개 변수는 `TRUE` 단추를 가로로 도킹 되어 및 `FALSE` 단추 세로로 도킹 된 경우.  
   
- [in] `bCustomizeMode`  
+ [in] *bCustomizeMode*  
  도구 모음 사용자 지정 모드에 있는지 여부를 지정 합니다. 이 매개 변수는 `TRUE` 도구 모음 사용자 지정 모드 중인 하는 경우 및 `FALSE` 는 도구 모음이 사용자 지정 모드 없는 합니다.  
   
- [in] `bHighlight`  
+ [in] *bHighlight*  
  단추가 강조 표시 하는지 여부를 지정 합니다. 이 매개 변수는 `TRUE` 단추가 강조 표시 된 및 `FALSE` 때 단추가 강조 표시 되지 않습니다.  
   
- [in] `bDrawBorder`  
+ [in] *bDrawBorder*  
  단추 테두리를 표시할지 여부를 지정 합니다. 이 매개 변수는 `TRUE` 때 단추 테두리를 표시할지 및 `FALSE` 단추 테두리를 표시 하지 않아야 합니다.  
   
- [in] `bGrayDisabledButtons`  
+ [in] *bGrayDisabledButtons*  
  비활성화 된 단추 지정 하거나 비활성화 된 이미지 컬렉션을 사용할 것인지 지정 합니다. 이 매개 변수는 `TRUE` 때 비활성화 된 단추가 회색으로 표시 됩니다 및 `FALSE` 이 메서드는 비활성화 된 이미지 컬렉션을 사용 해야 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -439,13 +439,13 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  단추를 표시 하는 장치 컨텍스트.  
   
- [in] `rect`  
+ [in] *rect*  
  단추의 경계 사각형입니다.  
   
- [in] `bSelected`  
+ [in] *bSelected*  
  단추가 선택 되었는지 여부를 나타냅니다. 이 매개 변수가 `TRUE`, 단추가 선택 되어 있습니다. 이 매개 변수가 `FALSE`, 단추를 선택 하지 않으면 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -464,7 +464,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `ar`  
+ [in] *ar*  
  `CArchive` 개체를 serialize 또는입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -478,11 +478,11 @@ void SetDefaultCommand(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  기본 명령의 ID입니다.  
   
 ### <a name="remarks"></a>설명  
- 사용자가 단추를 클릭할 때 프레임 워크가 실행 하는 기본 명령을 지정 하려면이 메서드를 호출 합니다. 지정한 명령 ID 가진 항목이 `uiCmd` 부모 드롭 다운 도구 모음에 있어야 합니다.  
+ 사용자가 단추를 클릭할 때 프레임 워크가 실행 하는 기본 명령을 지정 하려면이 메서드를 호출 합니다. 지정한 명령 ID 가진 항목이 *uiCmd* 부모 드롭 다운 도구 모음에 있어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [계층 구조 차트](../../mfc/hierarchy-chart.md)   

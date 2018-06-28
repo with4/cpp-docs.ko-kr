@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4df2584bd9b74640266d8ddf87087e2820deaac8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3b5060c850a1fcdba089b732d019f958f2e7410
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376709"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038557"
 ---
 # <a name="coledatasource-class"></a>COleDataSource 클래스
 응용 프로그램이 데이터를 넣어 두었다 클립보드 또는 끌어 놓기 작업과 같은 데이터 전송 작업에서 해당 데이터를 제공하는 캐시의 역할을 합니다.  
@@ -117,14 +117,14 @@ void CacheData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cfFormat`  
+ *cfFormat*  
  데이터가 제공 될 수 있으며 클립보드 형식입니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows에서 반환 된 값 중 하나일 수 있습니다 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 함수입니다.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  가리키는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 지정 된 형식의 데이터를 포함 하는 구조입니다.  
   
- `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터가 제공 될 수 있으며 형식을 설명 하는 구조입니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우이 매개 변수에 대 한 값을 제공 `cfFormat`합니다. 이 경우 **NULL**, 다른 필드에 대해 기본값이 사용 됩니다는 **FORMATETC** 구조입니다.  
+ *lpFormatEtc*  
+ 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터가 제공 될 수 있으며 형식을 설명 하는 구조입니다. 로 지정 된 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우이 매개 변수에 대 한 값을 제공 *cfFormat*합니다. 이 경우 **NULL**, 다른 필드에 대해 기본값이 사용 됩니다는 **FORMATETC** 구조입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수 즉시 렌더링을 사용 하 여 제공 하기 때문에 데이터를 제공 해야 합니다. 데이터는 필요할 때까지 캐시 됩니다.  
@@ -150,14 +150,14 @@ void CacheGlobalData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cfFormat`  
+ *cfFormat*  
  데이터가 제공 될 수 있으며 클립보드 형식입니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows에서 반환 된 값 중 하나일 수 있습니다 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 함수입니다.  
   
  *hGlobal*  
  지정 된 형식의 데이터를 포함 하는 전역 메모리 블록에 대 한 핸들입니다.  
   
- `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터가 제공 될 수 있으며 형식을 설명 하는 구조입니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우이 매개 변수에 대 한 값을 제공 `cfFormat`합니다. 이 경우 **NULL**, 다른 필드에 대해 기본값이 사용 됩니다는 **FORMATETC** 구조입니다.  
+ *lpFormatEtc*  
+ 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터가 제공 될 수 있으며 형식을 설명 하는 구조입니다. 로 지정 된 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우이 매개 변수에 대 한 값을 제공 *cfFormat*합니다. 이 경우 **NULL**, 다른 필드에 대해 기본값이 사용 됩니다는 **FORMATETC** 구조입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수를 사용 하 여 즉시 렌더링; 함수를 호출할 때 데이터를 제공 해야 하므로 데이터를 제공 합니다. 데이터는 필요할 때까지 캐시 됩니다. 사용 하 여는 `CacheData` 많은 양의 데이터 또는 구조적된 저장소 매체 필요한 경우 제공 하는 경우 멤버 함수입니다.  
@@ -185,11 +185,11 @@ void DelayRenderData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cfFormat`  
+ *cfFormat*  
  데이터가 제공 될 수 있으며 클립보드 형식입니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows에서 반환 된 값 중 하나일 수 있습니다 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 함수입니다.  
   
- `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터가 제공 될 수 있으며 형식을 설명 하는 구조입니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우이 매개 변수에 대 한 값을 제공 `cfFormat`합니다. 이 경우 **NULL**, 다른 필드에 대해 기본값이 사용 됩니다는 **FORMATETC** 구조입니다.  
+ *lpFormatEtc*  
+ 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터가 제공 될 수 있으며 형식을 설명 하는 구조입니다. 로 지정 된 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우이 매개 변수에 대 한 값을 제공 *cfFormat*합니다. 이 경우 **NULL**, 다른 필드에 대해 기본값이 사용 됩니다는 **FORMATETC** 구조입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수를 사용 하 여 지연 된 렌더링 데이터 즉시 제공 되지 않은 데이터를 제공 합니다. [OnRenderData](#onrenderdata) 또는 [OnRenderGlobalData](#onrenderglobaldata) 데이터를 요청 하려면 멤버 함수를 호출 합니다.  
@@ -212,11 +212,11 @@ void DelayRenderFileData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cfFormat`  
+ *cfFormat*  
  데이터가 제공 될 수 있으며 클립보드 형식입니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows에서 반환 된 값 중 하나일 수 있습니다 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 함수입니다.  
   
- `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터가 제공 될 수 있으며 형식을 설명 하는 구조입니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우이 매개 변수에 대 한 값을 제공 `cfFormat`합니다. 이 경우 **NULL**, 다른 필드에 대해 기본값이 사용 됩니다는 **FORMATETC** 구조입니다.  
+ *lpFormatEtc*  
+ 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터가 제공 될 수 있으며 형식을 설명 하는 구조입니다. 로 지정 된 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우이 매개 변수에 대 한 값을 제공 *cfFormat*합니다. 이 경우 **NULL**, 다른 필드에 대해 기본값이 사용 됩니다는 **FORMATETC** 구조입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수를 사용 하 여 지연 된 렌더링 데이터 즉시 제공 되지 않은 데이터를 제공 합니다. [OnRenderFileData](#onrenderfiledata) 데이터를 요청 하려면 멤버 함수를 호출 합니다.  
@@ -239,11 +239,11 @@ void DelaySetData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cfFormat`  
+ *cfFormat*  
  데이터를 배치할 수 인 클립보드 형식입니다. 이 매개 변수는 미리 정의 된 클립보드 형식 또는 네이티브 Windows에서 반환 된 값 중 하나일 수 있습니다 [됩니다](http://msdn.microsoft.com/library/windows/desktop/ms649049) 함수입니다.  
   
- `lpFormatEtc`  
- 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터를 교체의 형식을 설명 하는 구조입니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우이 매개 변수에 대 한 값을 제공 `cfFormat`합니다. 이 경우 **NULL**, 다른 필드에 대해 기본값이 사용 됩니다는 **FORMATETC** 구조입니다.  
+ *lpFormatEtc*  
+ 가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터를 교체의 형식을 설명 하는 구조입니다. 로 지정 된 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우이 매개 변수에 대 한 값을 제공 *cfFormat*합니다. 이 경우 **NULL**, 다른 필드에 대해 기본값이 사용 됩니다는 **FORMATETC** 구조입니다.  
   
 ### <a name="remarks"></a>설명  
  [OnSetData](#onsetdata) 이 프레임 워크에서 호출 됩니다. 프레임 워크에서 데이터 원본을 반환 될 때만 사용 됩니다 [COleServerItem::GetDataSource](../../mfc/reference/coleserveritem-class.md#getdatasource)합니다. 경우 `DelaySetData` 를 호출 하지 않으면 프로그램 `OnSetData` 함수 호출 되지 것입니다. `DelaySetData` 각 클립보드를 호출 해야 합니다 또는 **FORMATETC** 지 원하는 형식.  
@@ -263,7 +263,7 @@ DROPEFFECT DoDragDrop(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwEffects`  
+ *dwEffects*  
  끌어서 놓기 작업 허용 되는이 데이터 원본에서입니다. 다음 중 하나 이상을 하나일 수 있습니다.  
   
 - `DROPEFFECT_COPY` 복사 작업을 수행할 수 있습니다.  
@@ -274,7 +274,7 @@ DROPEFFECT DoDragDrop(
   
 - `DROPEFFECT_SCROLL` 끌기 스크롤 작업이 발생할 수를 나타냅니다.  
   
- `lpRectStartDrag`  
+ *lpRectStartDrag*  
  끌기 실제로 시작 위치를 정의 하는 사각형에 대 한 포인터입니다. 자세한 내용은 아래 설명 부분을 참조하십시오.  
   
  *pDropSource*  
@@ -284,7 +284,7 @@ DROPEFFECT DoDragDrop(
  끌어서 놓기 작업;에 의해 생성 된 효과 그렇지 않으면 `DROPEFFECT_NONE` 제공 된 사각형을 벗어나기 전에 마우스 단추를 놓은 때문에 에서만 작업을 시작 하는 경우.  
   
 ### <a name="remarks"></a>설명  
- 끌어서 놓기 작업이 즉시 시작 되지 않습니다. 마우스 커서가으로 지정 된 사각형을 벗어날 때까지 기다렸다가 `lpRectStartDrag` 지정 된 기간 (밀리초) 조건이 충족 될 때까지 또는 합니다. 경우 `lpRectStartDrag` 은 **NULL**, 사각형의 크기는 1 픽셀입니다.  
+ 끌어서 놓기 작업이 즉시 시작 되지 않습니다. 마우스 커서가으로 지정 된 사각형을 벗어날 때까지 기다렸다가 *lpRectStartDrag* 지정 된 기간 (밀리초) 조건이 충족 될 때까지 또는 합니다. 경우 *lpRectStartDrag* 은 **NULL**, 사각형의 크기는 1 픽셀입니다.  
   
  레지스트리 키 설정 지연 시간 지정 됩니다. 호출 하 여 지연 시간을 변경할 수 있습니다 [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) 또는 [cwinapp:: Writeprofileint](../../mfc/reference/cwinapp-class.md#writeprofileint)합니다. 지연 시간을 지정 하지 않으면 기본값은 200 밀리초 사용 됩니다. 끌어서 지연 시간을 다음과 같이 저장 됩니다.  
   
@@ -340,10 +340,10 @@ virtual BOOL OnRenderData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 정보가 요청 된 형식을 지정 하는 구조입니다.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  가리키는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 반환 될 데이터는 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -352,7 +352,7 @@ virtual BOOL OnRenderData(
 ### <a name="remarks"></a>설명  
  지정 된 형식에 이전에 배치 이란는 `COleDataSource` 를 사용 하 여 개체는 [DelayRenderData](#delayrenderdata) 또는 [DelayRenderFileData](#delayrenderfiledata) 지연 된 렌더링 하기 위한 멤버 함수입니다. 이 함수의 기본 구현을 호출 합니다 [OnRenderFileData](#onrenderfiledata) 또는 [OnRenderGlobalData](#onrenderglobaldata) 각각 제공 된 저장소 미디어는 파일 또는 메모리를 하는 경우. 이러한 형식은 모두를 제공 하는 그런 다음 기본 구현은 0을 반환 하 고 아무 작업도 수행 하지 않습니다. 자세한 내용은 지연 된 렌더링에 MFC에서 처리 된 것으로 문서를 참조 [데이터 개체 및 데이터 소스: 조작](../../mfc/data-objects-and-data-sources-manipulation.md)합니다.  
   
- 경우 `lpStgMedium` ->  *tymed* 은 **TYMED_NULL**, **STGMEDIUM** 할당 되 고에 지정 된 대로 입력 해야 *lpFormatEtc-> tymed*합니다. 없으면 **TYMED_NULL**, **STGMEDIUM** 데이터와 함께에서 채워야 합니다.  
+ 경우 *lpStgMedium*-> *tymed* 은 **TYMED_NULL**, **STGMEDIUM** 할당 되 고 에지정된대로입력해야*lpFormatEtc tymed->* 합니다. 없으면 **TYMED_NULL**, **STGMEDIUM** 데이터와 함께에서 채워야 합니다.  
   
  고급 재정의할 수 있습니다. 요청 된 형식 및 중간 규모의 데이터를 제공 하려면이 함수를 재정의 합니다. 데이터에 따라 대신이 함수의 다른 버전 중 하나를 재정의 하는 것이 좋습니다. 데이터가 작고 크기가 고정 되어 있으면 재정의 `OnRenderGlobalData`합니다. 데이터 파일에는 가변 크기의 경우 재정의 `OnRenderFileData`합니다.  
   
@@ -368,10 +368,10 @@ virtual BOOL OnRenderFileData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 정보가 요청 된 형식을 지정 하는 구조입니다.  
   
- `pFile`  
+ *pFile*  
  가리키는 [CFile](../../mfc/reference/cfile-class.md) 데이터 렌더링 해야 하는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -394,10 +394,10 @@ virtual BOOL OnRenderGlobalData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 정보가 요청 된 형식을 지정 하는 구조입니다.  
   
- `phGlobal`  
+ *phGlobal*  
  반환 될 데이터는 전역 메모리에 대 한 핸들을 가리킵니다. 이 매개 변수 수 하나에 아직 할당 되지 경우 **NULL**합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -406,7 +406,7 @@ virtual BOOL OnRenderGlobalData(
 ### <a name="remarks"></a>설명  
  지정 된 형식에 이전에 배치 이란는 `COleDataSource` 를 사용 하 여 개체는 [DelayRenderData](#delayrenderdata) 지연 된 렌더링 하기 위한 멤버 함수입니다. 이 함수의 기본 구현은 단순히 반환 **FALSE**합니다.  
   
- 경우 `phGlobal` 은 **NULL**, 다음 새 `HGLOBAL` 할당 되 고 반환 해야 `phGlobal`합니다. 그렇지 않은 경우는 `HGLOBAL` 에 지정 된 `phGlobal` 데이터로 채워야 합니다. 데이터의 양을에 배치 된 `HGLOBAL` 메모리 블록의 현재 크기를 넘지 않아야 합니다. 또한, 더 큰 크기로 블록 다시 할당할 수 없습니다.  
+ 경우 *phGlobal* 은 **NULL**, 다음 새 `HGLOBAL` 할당 되 고 반환 해야 *phGlobal*합니다. 그렇지 않은 경우는 `HGLOBAL` 에 지정 된 *phGlobal* 데이터로 채워야 합니다. 데이터의 양을에 배치 된 `HGLOBAL` 메모리 블록의 현재 크기를 넘지 않아야 합니다. 또한, 더 큰 크기로 블록 다시 할당할 수 없습니다.  
   
  고급 재정의할 수 있습니다. 요청 된 형식 및 중간 규모의 데이터를 제공 하려면이 함수를 재정의 합니다. 데이터에 따라 대신이 함수의 다른 버전 중 하나를 재정의 하는 것이 좋습니다. 여러 저장소 미디어 처리 하려는 경우 재정의 [OnRenderData](#onrenderdata)합니다. 데이터 파일에는 가변 크기의 경우 재정의 [OnRenderFileData](#onrenderfiledata)합니다. 자세한 내용은 지연 된 렌더링에 MFC에서 처리 된 것으로 문서를 참조 [데이터 개체 및 데이터 소스: 조작](../../mfc/data-objects-and-data-sources-manipulation.md)합니다.  
   
@@ -423,14 +423,14 @@ virtual BOOL OnSetData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpFormatEtc`  
+ *lpFormatEtc*  
  가리키는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 데이터를 대체 형식을 지정 하는 구조입니다.  
   
- `lpStgMedium`  
+ *lpStgMedium*  
  가리키는 [STGMEDIUM](http://msdn.microsoft.com/library/windows/desktop/ms683812) 의 현재 내용을 대체 하는 데이터를 포함 하는 구조는 `COleDataSource` 개체입니다.  
   
- `bRelease`  
- 함수 호출을 완료 한 후 저장 미디어의 소유권을 가진 사용자를 나타냅니다. 호출자에 게 저장 매체를 대신 하 여 할당 된 리소스를 해제 하는 데 담당자 결정 합니다. 호출자에 게가 작업을 설정 하 여 수행 `bRelease`합니다. 경우 `bRelease` 가 0이 아닌 경우 데이터 원본 사용을 마칠 때 미디어 해제 소유권을 갖습니다. 때 `bRelease` 는 0이 고, 호출자에 게 소유권을 갖고 데이터 원본은 호출의 지속 기간 동안만 저장 매체를 사용할 수 있습니다.  
+ *bRelease*  
+ 함수 호출을 완료 한 후 저장 미디어의 소유권을 가진 사용자를 나타냅니다. 호출자에 게 저장 매체를 대신 하 여 할당 된 리소스를 해제 하는 데 담당자 결정 합니다. 호출자에 게가 작업을 설정 하 여 수행 *bRelease*합니다. 경우 *bRelease* 가 0이 아닌 경우 데이터 원본 사용을 마칠 때 미디어 해제 소유권을 갖습니다. 때 *bRelease* 는 0이 고, 호출자에 게 소유권을 갖고 데이터 원본은 호출의 지속 기간 동안만 저장 매체를 사용할 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  

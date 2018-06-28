@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6317d7c14f76355df908c9809df633533df3fb61
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7f492e7fc3e29c74caba7303179b72c5dacad72e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377124"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040690"
 ---
 # <a name="coledocument-class"></a>COleDocument 클래스
 비주얼 편집을 지원하는 OLE 문서에 대한 기본 클래스입니다.  
@@ -119,15 +119,15 @@ class COleDocument : public CDocument
 |[COleDocument::OnUpdatePasteMenu](#onupdatepastemenu)|붙여넣기 메뉴 옵션에 대 한 명령 UI를 업데이트 하기 위해 프레임 워크에서 호출 됩니다.|  
   
 ## <a name="remarks"></a>설명  
- `COleDocument` 파생 된 **CDocument**, Microsoft Foundation 클래스 라이브러리에서 제공 하는 문서/뷰 아키텍처를 사용 하도록 OLE 응용 프로그램을 허용 하는 합니다.  
+ `COleDocument` 파생 된 `CDocument`, Microsoft Foundation 클래스 라이브러리에서 제공 하는 문서/뷰 아키텍처를 사용 하도록 OLE 응용 프로그램을 허용 하는 합니다.  
   
  `COleDocument` 컬렉션으로 문서를 처리 [CDocItem](../../mfc/reference/cdocitem-class.md) OLE 항목을 처리 하는 개체입니다. 컨테이너와 서버 응용 프로그램 문서 OLE 항목을 포함할 수 있어야 하므로 처럼 아키텍처에 필요 합니다. [COleServerItem](../../mfc/reference/coleserveritem-class.md) 및 [COleClientItem](../../mfc/reference/coleclientitem-class.md) 클래스에서 파생 된 둘 다 `CDocItem`, 응용 프로그램 및 OLE 항목 간의 상호 작용을 관리 합니다.  
   
- 간단한 컨테이너 응용 프로그램을 작성 하는 경우 문서에서 파생 `COleDocument`합니다. 해당 문서에 포함 된 포함 된 항목에 연결을 지 원하는 컨테이너 응용 프로그램을 작성 하는 경우 문서에서 파생 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)합니다. 를 작성 하는 서버 응용 프로그램 또는 조합 컨테이너/서버에서 문서 클래스 파생 [COleServerDoc](../../mfc/reference/coleserverdoc-class.md)합니다. `COleLinkingDoc` 및 `COleServerDoc` 에서 파생 된 `COleDocument`이러한 클래스에서 사용할 수 있는 모든 서비스를 상속 하므로 `COleDocument` 및 **CDocument**합니다.  
+ 간단한 컨테이너 응용 프로그램을 작성 하는 경우 문서에서 파생 `COleDocument`합니다. 해당 문서에 포함 된 포함 된 항목에 연결을 지 원하는 컨테이너 응용 프로그램을 작성 하는 경우 문서에서 파생 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)합니다. 를 작성 하는 서버 응용 프로그램 또는 조합 컨테이너/서버에서 문서 클래스 파생 [COleServerDoc](../../mfc/reference/coleserverdoc-class.md)합니다. `COleLinkingDoc` 및 `COleServerDoc` 에서 파생 된 `COleDocument`이러한 클래스에서 사용할 수 있는 모든 서비스를 상속 하므로 `COleDocument` 및 `CDocument`합니다.  
   
  사용 하도록 `COleDocument`에서 클래스를 파생 하 고 응용 프로그램의 비 OLE 데이터 뿐만 아니라 포함 또는 연결 된 항목을 관리 하는 기능을 추가 합니다. 정의 하는 경우 `CDocItem`-응용 프로그램의 네이티브 데이터를 저장 하기 위해 파생 클래스에 정의 된 기본 구현을 사용 하 여 `COleDocument` OLE 및 비 OLE 데이터 모두 저장할 수 있습니다. OLE 항목에서 개별적으로 비 OLE 데이터를 저장 하기 위한 사용자 고유의 데이터 구조를 디자인할 수 있습니다. 자세한 내용은 문서 참조 [컨테이너: 복합 파일](../../mfc/containers-compound-files.md)...  
   
- **CDocument** (MAPI) 전자 메일 서비스를 사용할 수 있는 경우 메일을 통해 문서를 보내는 기능을 지원 합니다. `COleDocument` 이 업데이트 [OnFileSendMail](#onfilesendmail) 복합 문서를 올바르게 처리 하도록 합니다. 자세한 내용은 문서를 참조 [MAPI](../../mfc/mapi.md) 및 [MFC의 MAPI 지원](../../mfc/mapi-support-in-mfc.md)...  
+ `CDocument` 전자 메일 서비스 (MAPI)를 사용할 수 있는 경우 메일을 통해 문서를 전송 하는 지원 합니다. `COleDocument` 이 업데이트 [OnFileSendMail](#onfilesendmail) 복합 문서를 올바르게 처리 하도록 합니다. 자세한 내용은 문서를 참조 [MAPI](../../mfc/mapi.md) 및 [MFC의 MAPI 지원](../../mfc/mapi-support-in-mfc.md)...  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -149,7 +149,7 @@ virtual void AddItem(CDocItem* pItem);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pItem`  
+ *pItem*  
  추가 되는 문서 항목에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -164,10 +164,10 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ptd`  
+ *ptd*  
  에 대 한 포인터는 **DVTARGETDEVICE** 새 대상 인쇄 장치에 대 한 정보가 포함 된 데이터 구조입니다. 수 **NULL**합니다.  
   
- `ppd`  
+ *ppd*  
  에 대 한 포인터는 **PRINTDLG** 새 대상 인쇄 장치에 대 한 정보가 포함 된 데이터 구조입니다. 수 **NULL**합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -197,7 +197,7 @@ void EnableCompoundFile(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bEnable`  
+ *bEnable*  
  복합 파일 지원 사용 되는지 여부를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -208,14 +208,14 @@ void EnableCompoundFile(BOOL bEnable = TRUE);
  복합 파일 지원을 사용 하도록 설정 하거나 문서에 대 한 비활성화 한 후 설정은 문서의 수명 동안 변경할 수 없습니다.  
   
 ##  <a name="getinplaceactiveitem"></a>  COleDocument::GetInPlaceActiveItem  
- OLE를 가져오려면이 함수를 항목을 호출으로 식별 되는 뷰를 포함 하는 프레임 창에서 현재 위치에서 현재 활성화 된 `pWnd`합니다.  
+ OLE를 가져오려면이 함수를 항목을 호출으로 식별 되는 뷰를 포함 하는 프레임 창에서 현재 위치에서 현재 활성화 된 *pWnd*합니다.  
   
 ```  
 virtual COleClientItem* GetInPlaceActiveItem(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  컨테이너 문서를 표시 하는 창에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -229,16 +229,16 @@ COleClientItem* GetNextClientItem(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pos`  
+ *pos*  
  에 대 한 참조는 **위치** 값이 설정에 대 한 이전 호출에서 `GetNextClientItem`; 초기 값으로 반환 됩니다는 `GetStartPosition` 멤버 함수입니다.  
   
 ### <a name="return-value"></a>반환 값  
  문서에서 다음 클라이언트 항목에 대 한 포인터 또는 **NULL** 클라이언트 항목이 더 이상 없으면입니다.  
   
 ### <a name="remarks"></a>설명  
- 값을 각 호출 후 `pos` 수 있거나 클라이언트 항목을 사용할 수 없는 하는 문서에서 다음 항목에 대해 설정 됩니다.  
+ 값을 각 호출 후 *pos* 수 있거나 클라이언트 항목을 사용할 수 없는 하는 문서에서 다음 항목에 대해 설정 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCOleContainer#1](../../mfc/codesnippet/cpp/coledocument-class_1.cpp)]  
   
 ##  <a name="getnextitem"></a>  COleDocument::GetNextItem  
@@ -249,16 +249,16 @@ virtual CDocItem* GetNextItem(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pos`  
+ *pos*  
  에 대 한 참조는 **위치** 값이 설정에 대 한 이전 호출에서 `GetNextItem`; 초기 값으로 반환 됩니다는 `GetStartPosition` 멤버 함수입니다.  
   
 ### <a name="return-value"></a>반환 값  
  지정된 된 위치에 문서 항목에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
- 값을 각 호출 후 `pos` 로 설정 되는 **위치** 문서에서 다음 항목의 값입니다. 검색된 된 요소는 문서를 새 값의 마지막 요소 이면 `pos` 은 **NULL**합니다.  
+ 값을 각 호출 후 *pos* 로 설정 되는 **위치** 문서에서 다음 항목의 값입니다. 검색된 된 요소는 문서를 새 값의 마지막 요소 이면 *pos* 은 **NULL**합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCOleContainer#2](../../mfc/codesnippet/cpp/coledocument-class_2.cpp)]  
   
 ##  <a name="getnextserveritem"></a>  COleDocument::GetNextServerItem  
@@ -269,16 +269,16 @@ COleServerItem* GetNextServerItem(POSITION& pos) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pos`  
+ *pos*  
  에 대 한 참조는 **위치** 값이 설정에 대 한 이전 호출에서 `GetNextServerItem`; 초기 값으로 반환 됩니다는 `GetStartPosition` 멤버 함수입니다.  
   
 ### <a name="return-value"></a>반환 값  
  문서에서 다음 서버 항목에 대 한 포인터 또는 **NULL** 서버 항목이 더 이상 없으면입니다.  
   
 ### <a name="remarks"></a>설명  
- 값을 각 호출 후 `pos` 수 있거나 서버 항목을 사용할 수 없는 하는 문서에서 다음 항목에 대해 설정 됩니다.  
+ 값을 각 호출 후 *pos* 수 있거나 서버 항목을 사용할 수 없는 하는 문서에서 다음 항목에 대해 설정 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCOleServer#2](../../mfc/codesnippet/cpp/coledocument-class_3.cpp)]  
   
 ##  <a name="getprimaryselecteditem"></a>  COleDocument::GetPrimarySelectedItem  
@@ -289,7 +289,7 @@ virtual COleClientItem* GetPrimarySelectedItem(CView* pView);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pView`  
+ *pView*  
  문서를 표시 하는 활성 뷰 개체에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -366,7 +366,7 @@ afx_msg void OnFileSendMail();
 ### <a name="remarks"></a>설명  
  `OnFileSendMail` 호출 `OnSaveDocument` (저장) 한 다음 전자 메일을 통해 전송 된 임시 파일에 제목이 없는 및 수정 된 문서를 serialize 하 합니다. 문서 수정 되지 않은 경우 임시 파일은 필요 하지; 원래 전송 됩니다. `OnFileSendMail` MAPI32를 로드합니다. 로드 되지 않았으면 DLL입니다.  
   
- 구현 달리 `OnFileSendMail` 에 대 한 **CDocument**,이 함수는 복합 파일을 올바르게 처리 합니다.  
+ 구현 달리 `OnFileSendMail` 에 대 한 `CDocument`,이 함수는 복합 파일을 올바르게 처리 합니다.  
   
  자세한 내용은 참조는 [MAPI 항목](../../mfc/mapi.md) 및 [MFC의 MAPI 지원](../../mfc/mapi-support-in-mfc.md) 문서...  
   
@@ -378,7 +378,7 @@ virtual void OnShowViews(BOOL bVisible);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bVisible`  
+ *bVisible*  
  문서를 표시 하거나 숨길 수 있는지 여부를 나타냅니다.  
   
 ### <a name="remarks"></a>설명  
@@ -392,8 +392,8 @@ afx_msg void OnUpdateEditChangeIcon(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pCmdUI`  
- 에 대 한 포인터는 `CCmdUI` update 명령을 생성 되는 메뉴를 나타내는 구조입니다. 업데이트 처리기 호출의 **사용** 의 멤버 함수는 `CCmdUI` 통해 구조체 `pCmdUI` 사용자 인터페이스를 업데이트 하 합니다.  
+ *pCmdUI*  
+ 에 대 한 포인터는 `CCmdUI` update 명령을 생성 되는 메뉴를 나타내는 구조입니다. 업데이트 처리기 호출의 `Enable` 의 멤버 함수는 `CCmdUI` 통해 구조체 *pCmdUI* 사용자 인터페이스를 업데이트 하 합니다.  
   
 ### <a name="remarks"></a>설명  
  `OnUpdateEditChangeIcon` 문서에 올바른 아이콘이 있는지 여부에 따라 명령의 사용자 인터페이스를 업데이트 합니다. 동작을 변경 하려면이 함수를 재정의 합니다.  
@@ -406,8 +406,8 @@ afx_msg void OnUpdateEditLinksMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pCmdUI`  
- 에 대 한 포인터는 `CCmdUI` update 명령을 생성 되는 메뉴를 나타내는 구조입니다. 업데이트 처리기 호출의 **사용** 의 멤버 함수는 `CCmdUI` 통해 구조체 `pCmdUI` 사용자 인터페이스를 업데이트 하 합니다.  
+ *pCmdUI*  
+ 에 대 한 포인터는 `CCmdUI` update 명령을 생성 되는 메뉴를 나타내는 구조입니다. 업데이트 처리기 호출의 `Enable` 의 멤버 함수는 `CCmdUI` 통해 구조체 *pCmdUI* 사용자 인터페이스를 업데이트 하 합니다.  
   
 ### <a name="remarks"></a>설명  
  문서에서 첫 번째 OLE 항목부터 `OnUpdateEditLinksMenu` 여부를 테스트 하는 항목은 한 링크, 링크가 있으면 연결 명령을 사용 하면, 각 항목에 액세스 합니다. 동작을 변경 하려면이 함수를 재정의 합니다.  
@@ -420,8 +420,8 @@ afx_msg void OnUpdateObjectVerbMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pCmdUI`  
- 에 대 한 포인터는 `CCmdUI` update 명령을 생성 되는 메뉴를 나타내는 구조입니다. 업데이트 처리기 호출의 **사용** 의 멤버 함수는 `CCmdUI` 통해 구조체 `pCmdUI` 사용자 인터페이스를 업데이트 하 합니다.  
+ *pCmdUI*  
+ 에 대 한 포인터는 `CCmdUI` update 명령을 생성 되는 메뉴를 나타내는 구조입니다. 업데이트 처리기 호출의 `Enable` 의 멤버 함수는 `CCmdUI` 통해 구조체 *pCmdUI* 사용자 인터페이스를 업데이트 하 합니다.  
   
 ### <a name="remarks"></a>설명  
  `OnUpdateObjectVerbMenu` 업데이트는 *ObjectName* 문서에 적합 한 개체가 있는지 여부에 따라 명령의 사용자 인터페이스입니다. 개체가 있는 경우는 *ObjectName* 편집 메뉴 명령이 활성화 됩니다. 이 메뉴 명령이 옵션을 선택 하면 동사 하위 메뉴가 표시 됩니다. 동사 하위 메뉴에는 편집, 속성, 등과 같은 개체에 사용할 수 있는 모든 동사 명령이 포함 되어 있습니다. 동작을 변경 하려면이 함수를 재정의 합니다.  
@@ -434,8 +434,8 @@ afx_msg void OnUpdatePasteLinkMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pCmdUI`  
- 에 대 한 포인터는 `CCmdUI` update 명령을 생성 되는 메뉴를 나타내는 구조입니다. 업데이트 처리기 호출의 **사용** 의 멤버 함수는 `CCmdUI` 통해 구조체 `pCmdUI` 사용자 인터페이스를 업데이트 하 합니다.  
+ *pCmdUI*  
+ 에 대 한 포인터는 `CCmdUI` update 명령을 생성 되는 메뉴를 나타내는 구조입니다. 업데이트 처리기 호출의 `Enable` 의 멤버 함수는 `CCmdUI` 통해 구조체 *pCmdUI* 사용자 인터페이스를 업데이트 하 합니다.  
   
 ### <a name="remarks"></a>설명  
  붙여넣기 메뉴 명령은 사용할지 여부는 항목에 붙여 넣을 수 문서 여부에 따라 합니다.  
@@ -448,8 +448,8 @@ afx_msg void OnUpdatePasteMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pCmdUI`  
- 에 대 한 포인터는 `CCmdUI` update 명령을 생성 되는 메뉴를 나타내는 구조입니다. 업데이트 처리기 호출의 **사용** 의 멤버 함수는 `CCmdUI` 통해 구조체 `pCmdUI` 사용자 인터페이스를 업데이트 하 합니다.  
+ *pCmdUI*  
+ 에 대 한 포인터는 `CCmdUI` update 명령을 생성 되는 메뉴를 나타내는 구조입니다. 업데이트 처리기 호출의 `Enable` 의 멤버 함수는 `CCmdUI` 통해 구조체 *pCmdUI* 사용자 인터페이스를 업데이트 하 합니다.  
   
 ### <a name="remarks"></a>설명  
  붙여넣기 메뉴 명령 및 단추를 사용 하는지 여부는 항목에 붙여 넣을 수 문서 여부에 따라 합니다.  
@@ -462,7 +462,7 @@ virtual void RemoveItem(CDocItem* pItem);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pItem`  
+ *pItem*  
  문서 항목을 제거할 수에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  

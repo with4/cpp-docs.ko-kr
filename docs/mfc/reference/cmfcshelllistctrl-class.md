@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9073c3443b1c74a27c9de9be142c67fab7f40ba8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a6862803540a87aed129ace3a05d4e41e9e1ba90
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374965"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040823"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl 클래스
 `CMFCShellListCtrl` 클래스 Windows 목록 컨트롤 기능을 제공 하 고 셸 항목 목록을 표시 하는 기능을 포함 하도록 확장 합니다.  
@@ -98,7 +98,7 @@ class CMFCShellListCtrl : public CMFCListCtrl
   
  A [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md) 개체와 연결 될 수는 `CMFCShellListCtrl` 개체 전체 탐색기 창을 만들 수 있습니다. 그런 다음에 항목을 선택 하는 `CMFCShellTreeCtrl` 하면는 `CMFCShellListCtrl` 개체 선택된 된 항목의 내용을 표시 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는의 개체를 만드는 방법을 `CMFCShellListCtrl` 클래스 및 현재 표시 된 폴더의 상위 폴더를 표시 하는 방법입니다. 이 코드 조각은의 일부인는 [탐색기 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_Explorer#1](../../mfc/reference/codesnippet/cpp/cmfcshelllistctrl-class_1.h)]  
@@ -130,10 +130,10 @@ virtual HRESULT DisplayFolder(LPAFX_SHELLITEMINFO lpItemInfo);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszPath`  
+ [in] *lpszPath*  
  폴더의 경로 포함 하는 문자열입니다.  
   
- [in] `lpItemInfo`  
+ [in] *lpItemInfo*  
  에 대 한 포인터는 `LPAFX_SHELLITEMINFO` 표시할 폴더를 설명 하는 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -157,7 +157,7 @@ void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
  프레임 워크의 바로 가기 메뉴를 활성화 하는지 여부를 지정 하는 부울입니다.  
   
 ##  <a name="getcurrentfolder"></a>  CMFCShellListCtrl::GetCurrentFolder  
@@ -168,7 +168,7 @@ BOOL GetCurrentFolder(CString& strPath) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `strPath`  
+ [out] *strPath*  
  문자열 매개 변수는 메서드는 경로 기록 하는 위치에 대 한 참조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -185,7 +185,7 @@ BOOL GetCurrentFolderName(CString& strName) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `strName`  
+ [out] *strName*  
  문자열 매개 변수는 메서드 이름을 기록 하는 위치에 대 한 참조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -227,17 +227,17 @@ BOOL GetItemPath(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `strPath`  
+ [out] *strPath*  
  경로 수신 하는 문자열에 대 한 참조입니다.  
   
- [in] `iItem`  
+ [in] *iItem*  
  목록 항목의 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
  `TRUE` 성공 하면 `FALSE` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
- 제공 하는 인덱스 `iItem` 기반 하 여 현재 표시 된 항목으로는 [CMFCShellListCtrl 클래스](../../mfc/reference/cmfcshelllistctrl-class.md) 개체입니다.  
+ 제공 하는 인덱스 *iItem* 기반 하 여 현재 표시 된 항목으로는 [CMFCShellListCtrl 클래스](../../mfc/reference/cmfcshelllistctrl-class.md) 개체입니다.  
   
 ##  <a name="getitemtypes"></a>  CMFCShellListCtrl::GetItemTypes  
  으로 표시 되는 항목의 유형을 반환는 [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) 개체입니다.  
@@ -273,9 +273,9 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lParam1`  
- [in] `lParam2`  
- [in] `iColumn`  
+ [in] *lParam1*  
+ [in] *lParam2*  
+ [in] *iColumn*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -291,10 +291,10 @@ virtual void OnFormatFileDate(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `tmFile`  
+ [in] *tmFile*  
  파일과 관련 된 날짜입니다.  
   
- [out] `str`  
+ [out] *str*  
  파일 형식이 지정 된 날짜를 포함 하는 문자열입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -310,10 +310,10 @@ virtual void OnFormatFileSize(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lFileSize`  
+ [in] *lFileSize*  
  프레임 워크가 표시 하는 파일의 크기입니다.  
   
- [out] `str`  
+ [out] *str*  
  서식이 지정 된 파일 크기를 포함 하는 문자열입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -329,10 +329,10 @@ virtual int OnGetItemIcon(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iItem`  
+ [in] *iItem*  
  항목 인덱스입니다.  
   
- [in] `pItem`  
+ [in] *pItem*  
  A `LPAFX_SHELLITEMINFO` 항목을 설명 하는 매개 변수입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -341,7 +341,7 @@ virtual int OnGetItemIcon(
 ### <a name="remarks"></a>설명  
  아이콘 이미지 인덱스 시스템 이미지 목록을 기반으로 합니다.  
   
- 기본적으로이 방법은에 의존는 `pItem` 매개 변수입니다. 값 `iItem` 기본 구현에서 사용 되지 않습니다. 사용할 수 있습니다 `iItem` 사용자 지정 동작을 구현 합니다.  
+ 기본적으로이 방법은에 의존는 *pItem* 매개 변수입니다. 값 *iItem* 기본 구현에서 사용 되지 않습니다. 사용할 수 있습니다 *iItem* 사용자 지정 동작을 구현 합니다.  
   
 ##  <a name="ongetitemtext"></a>  CMFCShellListCtrl::OnGetItemText  
  프레임 워크 셸 항목의 텍스트를 검색 해야 하는 경우이 메서드를 호출 합니다.  
@@ -354,13 +354,13 @@ virtual CString OnGetItemText(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iItem`  
+ [in] *iItem*  
  항목 인덱스입니다.  
   
- [in] `iColumn`  
+ [in] *iColumn*  
  관심 있는 열입니다.  
   
- [in] `pItem`  
+ [in] *pItem*  
  A `LPAFX_SHELLITEMINFO` 항목을 설명 하는 매개 변수입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -369,7 +369,7 @@ virtual CString OnGetItemText(
 ### <a name="remarks"></a>설명  
  각 항목에는 `CMFCShellListCtrl` 개체 하나 이상의 열에 텍스트를 있을 수 있습니다. 이 메서드를 호출 하는 프레임 워크에 관심 있는 열을 지정 합니다. 이 함수를 직접 호출 하는 경우 또한에 관심 있는 열을 지정 해야 합니다.  
   
- 기본적으로이 방법은에 의존는 `pItem` 매개 변수를 프로세스에 있는 항목을 확인 합니다. 값 `iItem` 기본 구현에서 사용 되지 않습니다.  
+ 기본적으로이 방법은에 의존는 *pItem* 매개 변수를 프로세스에 있는 항목을 확인 합니다. 값 *iItem* 기본 구현에서 사용 되지 않습니다.  
   
 ##  <a name="onsetcolumns"></a>  CMFCShellListCtrl::OnSetColumns  
  프레임 워크는 열의 이름을 설정 하는 경우이 메서드를 호출 합니다.  
@@ -402,7 +402,7 @@ void SetItemTypes(SHCONTF nTypes);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nTypes`  
+ [in] *nTypes*  
  항목의 목록 유형으로 `CMFCShellListCtrl` 개체를 지원 합니다.  
   
 ### <a name="remarks"></a>설명  

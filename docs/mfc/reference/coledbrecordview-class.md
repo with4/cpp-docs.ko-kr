@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b69aafa7f8b07d96d754d080e7fb5abd170e167
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 122ceb1715323e1482b2a8a8544cbe3f6270c713
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372208"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037859"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView 클래스
 컨트롤에 데이터베이스 레코드를 표시하는 뷰입니다.  
@@ -92,10 +92,10 @@ COleDBRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  대화 상자 템플릿 리소스의 이름에 해당 하는 null로 끝나는 문자열을 포함 합니다.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  대화 상자 템플릿 리소스의 ID 번호를 포함합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -116,12 +116,12 @@ virtual CRowset<>* OnGetRowset() = 0;
  표준 `HRESULT` 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 생성 또는 행 집합 개체를 가져오고,에 대 한 핸들을 반환 하려면이 멤버 함수를 재정의 해야 합니다. 클래스 마법사로 레코드 뷰 클래스를 선언 하는 경우 마법사는 기본 재정의를 작성 합니다. 클래스 마법사의 기본 구현은 있을 경우 레코드 뷰에 저장 된 행 집합 핸들을 반환 합니다. 클래스 마법사 및 호출을 사용 하 여 지정한 형식의 행 집합 개체를 생성 하지 하는 경우 해당 **열고** 멤버 함수를 테이블 열 또는 쿼리를 실행 한 다음 개체에 대 한 핸들을 반환 합니다.  
+ 생성 또는 행 집합 개체를 가져오고,에 대 한 핸들을 반환 하려면이 멤버 함수를 재정의 해야 합니다. 클래스 마법사로 레코드 뷰 클래스를 선언 하는 경우 마법사는 기본 재정의를 작성 합니다. 클래스 마법사의 기본 구현은 있을 경우 레코드 뷰에 저장 된 행 집합 핸들을 반환 합니다. 클래스 마법사 및 호출을 사용 하 여 지정한 형식의 행 집합 개체를 생성 하지 하는 경우 해당 `Open` 멤버 함수를 테이블 열 또는 쿼리를 실행 한 다음 개체에 대 한 핸들을 반환 합니다.  
   
 > [!NOTE]
 >  MFC 7.0 이전의 `OnGetRowset` 에 대 한 포인터를 반환 `CRowset`합니다. 호출 하는 코드가 있는 경우 `OnGetRowset`, 템플릿 화 클래스에 반환 형식을 변경 해야 할 **CRowset <>** 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDatabase#38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]  
   
  자세한 내용 및 예제에 대 한 문서를 참조 [레코드 뷰: 레코드 뷰를 사용 하 여](../../data/using-a-record-view-mfc-data-access.md)합니다.  
@@ -134,7 +134,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDMoveCommand`  
+ *nIDMoveCommand*  
  표준 명령 ID 값이 다음 중 하나입니다.  
   
 - `ID_RECORD_FIRST` -레코드 집합의 첫 번째 레코드로 이동 합니다.  
@@ -149,7 +149,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  이동에 성공 하면 0이 아닌 그렇지 않은 경우 0 이동 요청이 거부 되었습니다.  
   
 ### <a name="remarks"></a>설명  
- 기본 구현은 적절 한 호출 **이동** 의 멤버 함수는 `CRowset` 레코드 보기와 연결 된 개체입니다.  
+ 기본 구현은 적절 한 호출 `Move` 의 멤버 함수는 `CRowset` 레코드 보기와 연결 된 개체입니다.  
   
  기본적으로 `OnMove` 사용자 레코드 보기에서 변경 된 경우 데이터 소스에서 현재 레코드를 업데이트 합니다.  
   

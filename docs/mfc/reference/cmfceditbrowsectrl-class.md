@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c7214e4da0bce1a01834df556289b61e0ed8574
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 495f6360601fc41493f68bd4fdd7ac769b9a634c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369325"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037976"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl 클래스
 `CMFCEditBrowseCtrl` 클래스는 필요에 따라 찾아보기 단추를 포함 하는 편집 가능한 텍스트 상자 인 편집 찾아보기 컨트롤을 지원 합니다. 사용자가 찾아보기 단추를 클릭하면 컨트롤은 사용자 지정 작업을 수행하거나 파일 브라우저 또는 폴더 브라우저가 포함된 표준 대화 상자를 표시합니다.  
@@ -108,7 +108,7 @@ class CMFCEditBrowseCtrl : public CEdit
   
 6.  찾아보기 단추를 사용자 지정 이미지를 제공 하려면 호출는 [SetBrowseButtonImage](#setbrowsebuttonimage) 메서드나 재정의 [OnDrawBrowseButton](#ondrawbrowsebutton) 메서드.  
   
-7.  에서 제거 하려면 찾아보기 단추 편집 찾아보기 컨트롤을 호출 하는 [EnableBrowseButton](#enablebrowsebutton) 메서드는 `bEnable` 매개 변수 설정 `FALSE`합니다.  
+7.  에서 제거 하려면 찾아보기 단추 편집 찾아보기 컨트롤을 호출 하는 [EnableBrowseButton](#enablebrowsebutton) 메서드는 *bEnable* 매개 변수 설정 `FALSE`합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -121,7 +121,7 @@ class CMFCEditBrowseCtrl : public CEdit
   
  [CMFCEditBrowseCtrl](../../mfc/reference/cmfceditbrowsectrl-class.md)  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서 두 개의 메서드를 사용 하는 방법을 보여 줍니다는 `CMFCEditBrowseCtrl` 클래스: `EnableFolderBrowseButton` 및 `EnableFileBrowseButton`합니다. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#6](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]  
@@ -140,14 +140,14 @@ void EnableBrowseButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bEnable`  
+ *bEnable*  
  `TRUE` 찾아보기 단추를 표시 하려면 `FALSE` 를 찾아보기 단추를 표시 하지 않습니다. 기본값은 `TRUE`입니다.  
   
- `szLabel`  
+ *szLabel*  
  찾아보기 단추에 표시 되는 레이블. 기본값은 " **...** ".  
   
 ### <a name="remarks"></a>설명  
- 경우는 `bEnable` 매개 변수는 `TRUE`, 찾아보기 단추를 클릭할 때 수행할 사용자 지정 작업을 구현 합니다. 클래스를 파생 한 사용자 지정 동작을 구현 하려면는 `CMFCEditBrowseCtrl` 클래스를 재정의 한 다음 해당 [OnBrowse](#onbrowse) 메서드.  
+ 경우는 *bEnable* 매개 변수는 `TRUE`, 찾아보기 단추를 클릭할 때 수행할 사용자 지정 작업을 구현 합니다. 클래스를 파생 한 사용자 지정 동작을 구현 하려면는 `CMFCEditBrowseCtrl` 클래스를 재정의 한 다음 해당 [OnBrowse](#onbrowse) 메서드.  
   
  경우는 `bEnable` 매개 변수는 `TRUE`, 컨트롤의 찾아보기 모드 `BrowseMode_Default`, 그렇지 않으면 찾아보기 모드 `BrowseMode_None`합니다. 찾아보기 모드에 대 한 자세한 내용은 참조는 [GetMode](#getmode) 메서드.  
   
@@ -162,13 +162,13 @@ void EnableFileBrowseButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszDefExt`  
+ *lpszDefExt*  
  파일 선택 대화 상자에서 사용되는 기본 파일 이름 확장명을 지정합니다. 기본값은 `NULL`입니다.  
   
- `lpszFilter`  
+ *lpszFilter*  
  파일 선택 대화 상자에서 사용되는 기본 필터 문자열을 지정합니다. 기본값은 `NULL`입니다.  
   
- `dwFlags`  
+ *dwFlags*  
  대화 상자 플래그입니다. 기본값은 OFN_HIDEREADONLY와 OFN_OVERWRITEPROMPT의 비트 조합(OR)입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -250,16 +250,16 @@ virtual void OnDrawBrowseButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- `Rect`  
+ *rect*  
  찾아보기 단추의 경계 사각형입니다.  
   
- `bIsButtonPressed`  
+ *bIsButtonPressed*  
  `TRUE` 단추를 누르면; 그렇지 않으면 `FALSE`합니다.  
   
- `bIsButtonHot`  
+ *bIsButtonHot*  
  `TRUE` 단추가; 강조 표시 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -282,16 +282,16 @@ void SetBrowseButtonImage(UINT uiBmpResId);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hIcon`  
+ *hIcon*  
  아이콘의 핸들입니다.  
   
- `hBitmap`  
+ *hBitmap*  
  비트맵의 핸들입니다.  
   
- `uiBmpResId`  
+ *uiBmpResId*  
  비트맵의 리소스 ID입니다.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  `TRUE` 이 메서드 종료; 때 지정 된 아이콘 또는 비트맵을 삭제 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -305,7 +305,7 @@ virtual BOOL OnIllegalFileName(CString& strFileName);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `strFileName`  
+ *strFileName*  
  잘못 된 파일 이름을 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  

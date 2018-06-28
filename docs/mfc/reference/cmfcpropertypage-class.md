@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3352841b1b495d1718ffa6be034239ecd7e50c6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c58e279a2e99201656e8af02d8c1c5d4d944f88d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366644"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042084"
 ---
 # <a name="cmfcpropertypage-class"></a>CMFCPropertyPage 클래스
 `CMFCPropertyPage` 클래스 속성 페이지에서 팝업 메뉴의 표시를 지원 합니다.  
@@ -88,13 +88,13 @@ CMFCPropertyPage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDTemplate`  
+ *nIDTemplate*  
  이 페이지에 대 한 서식 파일의 리소스 ID입니다.  
   
- `nIDCaption`  
+ *nIDCaption*  
  이 페이지에 대 한 탭에 레이블 리소스 ID입니다. 0 인 경우,이 페이지에 대 한 대화 상자 템플릿에에서 이름을 가져옵니다. 기본값은 0입니다.  
   
- `lpszTemplateName`  
+ *lpszTemplateName*  
  이 페이지에 대 한 서식 파일의 이름 가리킵니다. 일 수 없습니다 `NULL`합니다.  
   
 ### <a name="return-value"></a>반환 값  

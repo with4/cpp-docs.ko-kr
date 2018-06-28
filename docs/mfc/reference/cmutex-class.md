@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50d2d68aedaf1d5560c39971e9dd5f74b4492ac6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f3bde85e64fe8593ec2637e767e8c3c70d3b8200
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372462"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038079"
 ---
 # <a name="cmutex-class"></a>CMutex 클래스
 "뮤텍스" 나타냅니다-한 스레드가 리소스에 상호 배타적 액세스 허용 하는 동기화 개체입니다.  
@@ -74,13 +74,13 @@ CMutex(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bInitiallyOwn`  
+ *bInitiallyOwn*  
  지정 하는 경우 스레드 만들기는 `CMutex` 개체 뮤텍스에 의해 제어 되는 리소스에 대 한 액세스를 처음에 있습니다.  
   
- `lpszName`  
- `CMutex` 개체의 이름입니다. 이름이 같은 다른 뮤텍스 있으면 `lpszName` 프로세스 경계를 넘어 개체를 사용할 경우 제공 해야 합니다. 경우 **NULL**, 뮤텍스 명명 됩니다. 생성자는 새 빌드 이름에서 일치 하는 기존 뮤텍스 경우 `CMutex` 해당 이름의 뮤텍스를 참조 하는 개체입니다. 이름에서 일치 하는 뮤텍스 되지 않은 기존 동기화 개체 생성이 실패 합니다.  
+ *lpszName*  
+ `CMutex` 개체의 이름입니다. 이름이 같은 다른 뮤텍스 있으면 *lpszName* 프로세스 경계를 넘어 개체를 사용할 경우 제공 해야 합니다. 경우 **NULL**, 뮤텍스 명명 됩니다. 생성자는 새 빌드 이름에서 일치 하는 기존 뮤텍스 경우 `CMutex` 해당 이름의 뮤텍스를 참조 하는 개체입니다. 이름에서 일치 하는 뮤텍스 되지 않은 기존 동기화 개체 생성이 실패 합니다.  
   
- `lpsaAttribute`  
+ *lpsaAttribute*  
  뮤텍스 개체에 대 한 보안 특성입니다. 에 대 한 전체 설명은이 구조를 참조 하세요. [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) Windows sdk에서입니다.  
   
 ### <a name="remarks"></a>설명  

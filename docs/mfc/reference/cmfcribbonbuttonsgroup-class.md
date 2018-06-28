@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7a38e9ba4c01e5f3d92640f5ec55c63a45d70fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 23f3672a3b78b1bf86c481b6991c003267e6b0bf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368861"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037436"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup 클래스
 `CMFCRibbonButtonsGroup` 클래스 리본 단추 집합을 그룹으로 구성할 수 있습니다. 그룹의 모든 단추는 가로로 서로 직접 인접해 있으며 테두리로 둘러싸여 있습니다.  
@@ -83,7 +83,7 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
 ## <a name="remarks"></a>설명  
  파생 되는 그룹 [CMFCBaseRibbonElement](../../mfc/reference/cmfcribbonbaseelement-class.md) 있으며 단일 엔터티로 조작할 수 있습니다. 패널 또는 팝업 메뉴에는 그룹을 배치할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCRibbonButtonsGroup` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 이 예제에서는 생성 하는 방법을 보여 줍니다는 `CMFCRibbonButtonsGroup` 개체 하 고, 리본 단추를 그룹에 이미지를 할당 한 다음 리본 메뉴 단추 그룹에 단추를 추가 합니다. 이 코드 조각은 [클라이언트 그리기 샘플](../../visual-cpp-samples.md)의 일부입니다.  
   
  [!code-cpp[NVC_MFC_DrawClient#2](../../mfc/reference/codesnippet/cpp/cmfcribbonbuttonsgroup-class_1.cpp)]  
@@ -106,7 +106,7 @@ void AddButton(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pButton`  
+ [in] *pButton*  
  추가 하는 단추에 대 한 포인터입니다.  
   
 ##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons  
@@ -118,7 +118,7 @@ void AddButtons(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lstButtons`  
+ [in] *lstButtons*  
  목록 추가 하려는 하는 단추에 대 한 포인터입니다.  
   
 ##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup  
@@ -130,7 +130,7 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pButton`  
+ [in] *pButton*  
  새로 만든에 추가 하려면 단추를 지정 `CMFCRibbonButtonsGroup` 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -145,7 +145,7 @@ CMFCRibbonBaseElement* GetButton(int i) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `i`  
+ [in] *i*  
  반환할 단추는 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -183,7 +183,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  리본 그룹의 장치 컨텍스트에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -214,16 +214,16 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대 한 포인터는 `CMFCRibbonButtonsGroup` 개체입니다.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  이미지를 그릴 사각형입니다.  
   
- [in] `pButton`  
+ [in] *pButton*  
  단추를 그릴 이미지입니다.  
   
- [in] `nImageIndex`  
+ [in] *nImageIndex*  
  보통, 강조 표시 된 또는 사용 안 함 단추에 대 한 3 개의 이미지 배열 중 하나) (의 단추에 그릴 이미지의 인덱스입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -248,13 +248,13 @@ void SetImages(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pImages`  
+ [in] *pImages*  
  일반 이미지입니다.  
   
- [in] `pHotImages`  
+ [in] *pHotImages*  
  핫 이미지입니다.  
   
- [in] `pDisabledImages`  
+ [in] *pDisabledImages*  
  비활성화 된 이미지입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -271,7 +271,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pCategory`  
+ [in] *pCategory*  
  부모 범주 설정에 대 한 포인터 (리본 컨트롤에 탭된 그룹의 범주 이라고 함).  
   
 ### <a name="remarks"></a>설명  

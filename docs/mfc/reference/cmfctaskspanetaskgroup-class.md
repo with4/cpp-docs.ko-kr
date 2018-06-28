@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d51b29f9ea2719f98f263565680ded2360197572
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1e6c56116c94abeaf4dd266ca823e66c68d099fd
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370847"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037498"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup 클래스
 `CMFCTasksPaneTaskGroup` 클래스는 사용 되는 도우미 클래스는 [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) 제어 합니다. `CMFCTasksPaneTaskGroup` 형식의 개체는 *작업 그룹*을 나타냅니다. 작업 그룹은 축소 단추가 포함된 별도 상자에 프레임워크가 표시하는 항목 목록입니다. 상자는 선택적 캡션(그룹 이름)을 가질 수 있습니다. 그룹을 축소하면 작업 목록이 표시되지 않습니다.  
@@ -67,7 +67,7 @@ class CMFCTasksPaneTaskGroup : public CObject
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|작업 그룹 작업 창 컨트롤의 아래쪽으로 정렬 되는지 여부를 결정 합니다.|  
 |[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|작업 그룹 축소 되는지 여부를 결정 합니다.|  
@@ -116,22 +116,22 @@ CMFCTasksPaneTaskGroup(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszName`  
+ *lpszName*  
  그룹 캡션의 그룹의 이름을 지정합니다.  
   
- `bIsBottom`  
+ *bIsBottom*  
  그룹 작업 창 컨트롤의 아래쪽으로 정렬 되는지 여부를 지정 합니다.  
   
- `bIsSpecial`  
+ *bIsSpecial*  
  그룹으로 지정 된 있는지 여부를 지정 *특수* 그룹 캡션에 다른 색으로 채워 여부에 따라서 합니다.  
   
- `bIsCollapsed`  
+ *bIsCollapsed*  
  그룹 축소 되는지 여부를 지정 합니다.  
   
- `pPage`  
+ *물리 페이지*  
  이 작업 그룹에 속하는 속성 페이지를 지정 합니다.  
   
- `hIcon`  
+ *hIcon*  
  그룹 캡션에 표시 되는 아이콘을 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -216,14 +216,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pParent`  
+ [in] *pParent*  
  현재 작업 그룹의 부모 창을 나타냅니다.  
   
- [out] `data`  
+ [out] *데이터*  
  형식의 개체 `CAccessibilityData` 현재 작업 그룹의 내게 필요한 옵션 데이터는 채워집니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 경우는 `data` 매개 변수가 고, 현재 작업 그룹의 내게 필요한 옵션 데이터와 함께 채워진 않으면 그렇지 `FALSE`합니다.  
+ `TRUE` 경우는 *데이터* 매개 변수가 고, 현재 작업 그룹의 내게 필요한 옵션 데이터와 함께 채워진 않으면 그렇지 `FALSE`합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [계층 구조 차트](../../mfc/hierarchy-chart.md)   

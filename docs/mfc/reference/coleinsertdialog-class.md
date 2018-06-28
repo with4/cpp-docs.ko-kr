@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 041b707bec58abeb19617fbfd275428ca2cf67e7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9aaf60141747f1ff1db2256815f24e6708307ab7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374883"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042172"
 ---
 # <a name="coleinsertdialog-class"></a>COleInsertDialog 클래스
 OLE 개체 삽입 대화 상자에 사용합니다.  
@@ -114,7 +114,7 @@ COleInsertDialog (
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwFlags`  
+ *dwFlags*  
  원하는 수의 비트 OR 연산자로 결합 되는 다음 값을 포함 하는 생성 플래그:  
   
 - **IOF_SHOWHELP** 대화 상자를 호출할 때 도움말 단추가 표시 되도록 지정 합니다.  
@@ -131,7 +131,7 @@ COleInsertDialog (
   
 - **IOF_VERIFYSERVERSEXIST** 지정 대화 상자 대화 상자가 표시 되기 전에 등록 데이터베이스에 지정 된 서버가 존재 하는지 확인 하 여 목록 상자에 추가 하는 클래스의 유효성을 검사 해야 합니다. 이 플래그를 설정할 성능이 크게 저하 될 수 있습니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  부모 또는 소유자 창 개체를 가리키는 (형식의 `CWnd`) 대화 상자 개체 속해 있는 합니다. 이 경우 **NULL**, 대화 상자 개체의 부모 창은 주 응용 프로그램 창으로 설정 됩니다.  
   
 ### <a name="remarks"></a>설명  
@@ -145,7 +145,7 @@ BOOL CreateItem(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pItem`  
+ *pItem*  
  만들 항목을 가리킵니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -167,7 +167,7 @@ INT_PTR
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwFlags`  
+ *dwFlags*  
  다음 값 중 하나입니다.  
   
  `COleInsertDialog::DocObjectsOnly` 만 DocObjects를 삽입합니다.  

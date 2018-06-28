@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 81421c99623fd3ab0abde20b479ec1ba91c3f936
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e13c3b609a53e8c885e04530995a11218bf2704d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368363"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040066"
 ---
 # <a name="cmemfile-class"></a>CMemFile 클래스
 [CFile](../../mfc/reference/cfile-class.md)-을 지 원하는 메모리 파일 클래스를 파생 합니다.  
@@ -108,7 +108,7 @@ virtual BYTE* Alloc(SIZE_T nBytes);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nBytes`  
+ *nBytes*  
  에 할당할 메모리의 바이트 수입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -130,23 +130,23 @@ void Attach(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpBuffer`  
+ *lpBuffer*  
  에 연결 될 버퍼에 대 한 포인터 `CMemFile`합니다.  
   
- `nBufferSize`  
+ *nBufferSize*  
  버퍼의 크기를 바이트 단위로 지정 하는 정수입니다.  
   
- `nGrowBytes`  
+ *nGrowBytes*  
  바이트의 메모리 할당 증가 합니다.  
   
 ### <a name="remarks"></a>설명  
  이 인해 `CMemFile` 메모리 파일로 메모리 블록을 사용 하도록 합니다.  
   
- 경우 `nGrowBytes` 은 0으로, `CMemFile` 파일 길이를 설정 하는 `nBufferSize`합니다. 즉, 메모리 블록의 데이터에 연결 되었던 전에 `CMemFile` 파일로 사용 됩니다. 이러한 방법으로 만든 메모리 파일을 확장 시킬 수 없습니다.  
+ 경우 *nGrowBytes* 은 0으로, `CMemFile` 파일 길이를 설정 하는 *nBufferSize*합니다. 즉, 메모리 블록의 데이터에 연결 되었던 전에 `CMemFile` 파일로 사용 됩니다. 이러한 방법으로 만든 메모리 파일을 확장 시킬 수 없습니다.  
   
- 파일 증가 수 없으므로, 발생 하지 않도록 주의 해야 `CMemFile` 파일 증가 하려고 합니다. 예를 들어 호출 하지 마세요는 `CMemFile` 의 재정의 [CFile:Write](../../mfc/reference/cfile-class.md#write) 에 끝을 지나서 쓰거나 호출 하지 마세요 [CFile:SetLength](../../mfc/reference/cfile-class.md#setlength) 보다 긴 길이가 `nBufferSize`합니다.  
+ 파일 증가 수 없으므로, 발생 하지 않도록 주의 해야 `CMemFile` 파일 증가 하려고 합니다. 예를 들어 호출 하지 마세요는 `CMemFile` 의 재정의 [CFile:Write](../../mfc/reference/cfile-class.md#write) 에 끝을 지나서 쓰거나 호출 하지 마세요 [CFile:SetLength](../../mfc/reference/cfile-class.md#setlength) 보다 긴 길이가 *nBufferSize*합니다.  
   
- 경우 `nGrowBytes` 0 보다 크면 `CMemFile` 부착 된 메모리 블록의 내용을 무시 합니다. 메모리 파일의 내용을 사용 하 여 처음부터 작성 해야 합니다.는 `CMemFile` 의 재정의 `CFile::Write`합니다. 호출 하 여 증가 된 파일 또는 파일의 끝을 지나서 쓰기 시도 `CMemFile` 의 재정의 `CFile::SetLength`, `CMemFile` 씩에서 메모리 할당 크기가 계속 커집니다 `nGrowBytes`합니다. 메모리 블록에 전달 하는 경우 증가 하는 메모리 할당에 실패 합니다 **연결** 와 호환 되는 메서드를 사용 하 여 할당 되지 않은 [Alloc](#alloc)합니다. 기본 구현은와 호환 되도록 `Alloc`, 런타임 라이브러리 함수가 메모리를 할당 해야 [malloc](../../c-runtime-library/reference/malloc.md) 또는 [calloc](../../c-runtime-library/reference/calloc.md)합니다.  
+ 경우 *nGrowBytes* 0 보다 크면 `CMemFile` 부착 된 메모리 블록의 내용을 무시 합니다. 메모리 파일의 내용을 사용 하 여 처음부터 작성 해야 합니다.는 `CMemFile` 의 재정의 `CFile::Write`합니다. 호출 하 여 증가 된 파일 또는 파일의 끝을 지나서 쓰기 시도 `CMemFile` 의 재정의 `CFile::SetLength`, `CMemFile` 단위로 메모리 할당 크기가 계속 커집니다 *nGrowBytes*합니다. 메모리 블록에 전달 하는 경우 증가 하는 메모리 할당에 실패 합니다 `Attach` 와 호환 되는 메서드를 사용 하 여 할당 되지 않은 [Alloc](#alloc)합니다. 기본 구현은와 호환 되도록 `Alloc`, 런타임 라이브러리 함수가 메모리를 할당 해야 [malloc](../../c-runtime-library/reference/malloc.md) 또는 [calloc](../../c-runtime-library/reference/calloc.md)합니다.  
   
 ##  <a name="cmemfile"></a>  CMemFile::CMemFile  
  첫 번째 오버 로드는 빈 메모리 파일을 엽니다.  
@@ -162,21 +162,21 @@ CMemFile(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nGrowBytes`  
+ *nGrowBytes*  
  바이트의 메모리 할당 증가 합니다.  
   
  *lpBuffe*r  
- 크기의 정보를 수신 하는 버퍼에 대 한 포인터 `nBufferSize`합니다.  
+ 크기의 정보를 수신 하는 버퍼에 대 한 포인터 *nBufferSize*합니다.  
   
- `nBufferSize`  
+ *nBufferSize*  
  파일 버퍼의 크기를 바이트 단위로 지정 하는 정수입니다.  
   
 ### <a name="remarks"></a>설명  
  생성자가 파일을 열 표시 되 고 호출 하지 않아야 [CFile::Open](../../mfc/reference/cfile-class.md#open)합니다.  
   
- 첫 번째 생성자를 사용 하 고 즉시 호출 하는 경우에 따라 동일 하 게 두 번째 오버 로드 동작 [연결](#attach) 동일한 매개 변수를 사용 합니다. 참조 **연결** 대 한 자세한 내용은 합니다.  
+ 첫 번째 생성자를 사용 하 고 즉시 호출 하는 경우에 따라 동일 하 게 두 번째 오버 로드 동작 [연결](#attach) 동일한 매개 변수를 사용 합니다. 자세한 내용은 `Attach`를 참조하세요.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCFiles#36](../../atl-mfc-shared/reference/codesnippet/cpp/cmemfile-class_1.cpp)]  
   
 ##  <a name="detach"></a>  CMemFile::Detach  
@@ -190,7 +190,7 @@ BYTE* Detach();
  메모리 파일의 내용을 포함 하는 메모리 블록에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 함수를 닫습니다. 또한 호출는 `CMemFile`합니다. 메모리 블록 다시 연결할 수 있습니다 `CMemFile` 호출 하 여 [연결](#attach)합니다. 호출 해야 파일을 다시 연결 하 고 그 안에 데이터를 사용 하려는 경우 [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) 호출 하기 전에 파일의 길이를 가져오는 **분리**합니다. 메모리 블록을 연결 하는 경우 유의 `CMemFile` 해당 데이터를 사용할 수 있도록 ( `nGrowBytes` = = 0), 메모리 파일을 확장할 수 없습니다.  
+ 이 함수를 닫습니다. 또한 호출는 `CMemFile`합니다. 메모리 블록 다시 연결할 수 있습니다 `CMemFile` 호출 하 여 [연결](#attach)합니다. 호출 해야 파일을 다시 연결 하 고 그 안에 데이터를 사용 하려는 경우 [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) 호출 하기 전에 파일의 길이를 가져오는 `Detach`합니다. 메모리 블록을 연결 하는 경우 유의 `CMemFile` 해당 데이터를 사용할 수 있도록 ( `nGrowBytes` = = 0), 메모리 파일을 확장할 수 없습니다.  
   
 ##  <a name="free"></a>  CMemFile::Free  
  이 함수를 호출 하 `CMemFile` 멤버 함수입니다.  
@@ -200,7 +200,7 @@ virtual void Free(BYTE* lpMem);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpMem`  
+ *lpMem*  
  메모리 할당을 취소할 수에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -214,7 +214,7 @@ virtual void GrowFile(SIZE_T dwNewLen);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwNewLen`  
+ *dwNewLen*  
  메모리 파일의 새 크기입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -231,17 +231,17 @@ virtual BYTE* Memcpy(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpMemTarget`  
+ *lpMemTarget*  
  소스 메모리를 복사할 메모리 블록에 대 한 포인터입니다.  
   
- `lpMemSource`  
+ *lpMemSource*  
  소스 메모리 블록에 대 한 포인터입니다.  
   
- `nBytes`  
+ *nBytes*  
  복사할 바이트 수입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `lpMemTarget`의 복사본입니다.  
+ 복사본 *lpMemTarget*합니다.  
   
 ### <a name="remarks"></a>설명  
  방식을 변경 하려는 경우이 함수를 재정의 하는 `CMemFile` 이러한 메모리 복사본 않습니다.  
@@ -256,10 +256,10 @@ virtual BYTE* Realloc(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpMem`  
+ *lpMem*  
  메모리 블록 다시 할당 될 수에 대 한 포인터입니다.  
   
- `nBytes`  
+ *nBytes*  
  메모리 블록에 대 한 새 크기입니다.  
   
 ### <a name="return-value"></a>반환 값  

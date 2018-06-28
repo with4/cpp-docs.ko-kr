@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b775b06f605edc68c6f1dbe47035d9ecf214b396
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb682236f41294b7d14f5950ed7906832dd7d8a2
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367453"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038092"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>CMFCDesktopAlertWndInfo 클래스
 `CMFCDesktopAlertWndInfo` 클래스와 함께 사용 되는 [CMFCDesktopAlertWnd 클래스](../../mfc/reference/cmfcdesktopalertwnd-class.md)합니다. 바탕 화면 경고 창이 표시될 경우 표시되는 컨트롤을 지정합니다.  
@@ -56,7 +56,7 @@ class CMFCDesktopAlertWndInfo
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|표시 되는 아이콘에 대 한 핸들입니다.|  
 |[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|바탕 화면 경고 창이에서 링크와 관련 된 명령 ID입니다.|  
@@ -74,7 +74,7 @@ class CMFCDesktopAlertWndInfo
   
  기본 대화 상자 충분 하지 않은 경우 사용자 지정 대화 상자를 만들 있고에 전달 된 [cmfcdesktopalertwnd:: Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) 이 클래스를 사용 하는 대신 메서드. 자세한 내용은 참조 [CMFCDesktopAlertDialog 클래스](../../mfc/reference/cmfcdesktopalertdialog-class.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는에서 다양 한 멤버를 사용 하 여 `CMFCDesktopAlertWndInfo` 클래스입니다. 바탕 화면 경고 창이, 바탕 화면 경고 창이에 표시 되는 링크 및 바탕 화면 경고 창이에서 링크와 연결 된 명령 ID에 표시 되는 텍스트 아이콘 표시 되는 핸들을 설정 하는 방법을 보여가 줍니다. 이 예제는의 일부는 [바탕 화면 경고 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#3](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndinfo-class_1.cpp)]  
@@ -93,7 +93,7 @@ CMFCDesktopAlertWndInfo& operator=(CMFCDesktopAlertWndInfo& src);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `src`  
+ [in] *src*  
   
 ### <a name="return-value"></a>반환 값  
   

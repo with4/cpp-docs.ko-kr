@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ef3d04291c874bf91ac6ae25fb15929a5c7317f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: aede6e3224149bd237ca2bb830370718105e1f83
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374476"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037760"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar 클래스
 팝업 메뉴에 포함된 메뉴 모음입니다.  
@@ -100,14 +100,14 @@ class CMFCPopupMenuBar : public CMFCToolBar
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|응용 프로그램은 Windows XP 모양을 때 회색 세로 막대를 표시할지 여부를 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
  `CMFCPopupMenuBar` 와 동시에 생성 됩니다는 [CMFCPopupMenu 클래스](../../mfc/reference/cmfcpopupmenu-class.md) 및 그 안에 포함 합니다. `CMFCPopupMenuBar` 의 전체 클라이언트 영역에서 `CMFCPopupMenu` 개체입니다. 키보드 및 마우스 입력을 지원 합니다. 또한 입력이 있는 통신는 `CMFCPopupMenu` 및 최상위 프레임 창에 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 초기화 하는 방법을 `CMFCPopupMenuBar` 에서 개체는 `CMFCPopupMenu` 개체입니다. 이 코드 조각은 [클라이언트 그리기 샘플](../../visual-cpp-samples.md)의 일부입니다.  
   
  [!code-cpp[NVC_MFC_DrawClient#7](../../mfc/reference/codesnippet/cpp/cmfcpopupmenubar-class_1.cpp)]  
@@ -140,7 +140,7 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bRecalcLayout`  
+ [in] *bRecalcLayout*  
  `TRUE` 팝업 메뉴 표시줄 창;의 레이아웃을 자동으로 다시 계산 하려면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -153,7 +153,7 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  로드할 메뉴 리소스의 메뉴 ID를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -190,7 +190,7 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `point`  
+ [in] *지점*  
  화면에는 지점입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -257,10 +257,10 @@ virtual BOOL ImportFromMenu(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `hMenu`  
+ [in] *hMenu*  
  팝업 메뉴 단추를 가져올 메뉴입니다.  
   
- [in] `bShowAllCommands`  
+ [in] *bShowAllCommands*  
  `TRUE` 메뉴에 있는 모든 명령을 가져올 하려는 경우 또는 `FALSE` 경우 거의 사용된 되지 않는 것이 숨겨져 있을 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -325,7 +325,7 @@ BOOL LoadFromHash(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `hMenu`  
+ [in] *hMenu*  
  보관 된 메뉴를 로드에 대 한 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -364,10 +364,10 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  도구 모음 단추 스타일 설정 되어야 하는 것의 0부터 시작 하는 인덱스입니다.  
   
- [in] `nStyle`  
+ [in] *nStyle*  
  단추의 스타일입니다. 참조 [ToolBar 컨트롤 스타일](../../mfc/reference/toolbar-control-styles.md) 사용 가능한 도구 모음 단추 스타일 목록에 대 한 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -380,7 +380,7 @@ void SetOffset(int iOffset);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iOffset`  
+ [in] *iOffset*  
  팝업 메뉴 모음 오프셋할지 행 개수입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -395,10 +395,10 @@ void StartPopupMenuTimer(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pMenuButton`  
+ [in] *pMenuButton*  
  지연 타이머를 설정할 메뉴 단추에 대 한 포인터입니다.  
   
- [in] `nDelayFactor`  
+ [in] *nDelayFactor*  
  지연 인수를 하나 이상을 표준 메뉴 지연 시간 (일반적으로 1/2 초 사이 및 5 초)를 곱하여 같음.  
   
 ### <a name="remarks"></a>설명  

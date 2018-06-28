@@ -198,12 +198,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f10113af9e20bb9ea91d0b020cb24a9ff4f1a031
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5e5d2a65e1f75fb084c2878dc1231f0dffc12102
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378242"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042393"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar 클래스
 `CMFCRibbonBar` 클래스는 Office 2007에서 사용한 것과 비슷한 리본 표시줄을 구현합니다.  
@@ -353,11 +353,11 @@ BOOL ActivateContextCategory(UINT uiContextID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiContextID`  
+ [in] *uiContextID*  
  컨텍스트 범주 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 하는 경우 사용 하 여 컨텍스트 범주 `uiContextID` 검색 및 활성화 되지 않으면은 `FALSE`합니다.  
+ `TRUE` 하는 경우 사용 하 여 컨텍스트 범주 *uiContextID* 검색 및 활성화 되지 않으면은 `FALSE`합니다.  
   
 ##  <a name="addcategory"></a>  CMFCRibbonBar::AddCategory  
  만들고 리본 표시줄에 대 한 새 리본 범주를 초기화 합니다.  
@@ -376,34 +376,34 @@ CMFCRibbonCategory* AddCategory(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszName`  
+ [in] *lpszName*  
  리본 범주의 이름입니다.  
   
- [in] `uiSmallImagesResID`  
+ [in] *uiSmallImagesResID*  
  리본 범주에 대 한 작은 이미지 목록의 리소스 ID입니다.  
   
- [in] `uiLargeImagesResID`  
+ [in] *uiLargeImagesResID*  
  리본 범주에 대 한 큰 이미지 목록의 리소스 ID입니다.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  리본 범주에 대 한 작은 이미지의 크기를 지정합니다.  
   
- [in] `sizeLargeImage`  
+ [in] *sizeLargeImage*  
  리본 범주에 대 한 큰 이미지의 크기를 지정합니다.  
   
- [in] `nInsertAt`  
+ [in] *nInsertAt*  
  범주 위치 0 기반된 인덱스입니다.  
   
- [in] `pRTI`  
+ [in] *pRTI*  
  에 대 한 포인터는 [CMFCRibbonCategory 클래스](../../mfc/reference/cmfcribboncategory-class.md) 실행 시 리본 범주를 동적으로 만들려는 런타임 클래스입니다.  
   
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 새 리본 범주에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
   
 ### <a name="remarks"></a>설명  
- 경우는 `pRTI` 매개 변수가 않습니다 `NULL`, 새 리본 범주는 런타임 클래스를 사용 하 여 동적으로 생성 됩니다.  
+ 경우는 *pRTI* 매개 변수가 않습니다 `NULL`, 새 리본 범주는 런타임 클래스를 사용 하 여 동적으로 생성 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 사용 하는 `AddCategory` 에서 메서드는 `CMFCRibbonBar` 클래스.  
   
  [!code-cpp[NVC_MFC_RibbonApp#5](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_1.cpp)]  
@@ -427,35 +427,35 @@ CMFCRibbonCategory* AddContextCategory(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszName`  
+ [in] *lpszName*  
  범주의 이름입니다.  
   
- [in] `lpszContextName`  
+ [in] *lpszContextName*  
  컨텍스트 범주 캡션의 이름입니다.  
   
- [in] `uiContextID`  
+ [in] *uiContextID*  
  컨텍스트 id입니다.  
   
- [in] `clrContext`  
+ [in] *clrContext*  
  색 컨텍스트 범주 캡션입니다.  
   
- [in] `uiSmallImagesResID`  
+ [in] *uiSmallImagesResID*  
  컨텍스트 범주의 작은 이미지 리소스 ID입니다.  
   
- [in] `uiLargeImagesResID`  
+ [in] *uiLargeImagesResID*  
  컨텍스트 범주의 큰 이미지의 리소스 ID입니다.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  작은 이미지의 크기입니다.  
   
- [in] `sizeLargeImage`  
+ [in] *sizeLargeImage*  
  큰 이미지의 크기입니다.  
   
- [in] `pRTI`  
+ [in] *pRTI*  
  런타임 클래스에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 새로 만든된 범주에 대 한 포인터 또는 `NULL` 경우는 `CreateObject` 방식의 `pRTI` 지정된 된 범주를 만들 수 없습니다.  
+ 새로 만든된 범주에 대 한 포인터 또는 `NULL` 경우는 `CreateObject` 방식의 *pRTI* 지정된 된 범주를 만들 수 없습니다.  
   
 ### <a name="remarks"></a>설명  
  컨텍스트 범주를 추가 하려면이 함수를 사용 합니다. 컨텍스트 범주는 특수 한 유형의 범주를 표시 하거나 현재 응용 프로그램 컨텍스트에 따라 런타임에 숨길 수 있습니다. 예를 들어 사용자가 개체를 선택 선택한 특정 개체를 변경 하는 데 사용할 수 있는 컨텍스트 범주와 특별 한 탭을 표시할 수 있습니다.  
@@ -493,19 +493,19 @@ CMFCRibbonMainPanel* AddMainCategory(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszName`  
+ [in] *lpszName*  
  기본 리본 범주의 이름입니다.  
   
- [in] `uiSmallImagesResID`  
+ [in] *uiSmallImagesResID*  
  작은 이미지의 리소스 ID입니다.  
   
- [in] `uiLargeImagesResID`  
+ [in] *uiLargeImagesResID*  
  큰 이미지의 리소스 ID입니다.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  작은 이미지의 크기입니다.  
   
- [in] `sizeLargeImage`  
+ [in] *sizeLargeImage*  
  큰 이미지의 크기입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -514,7 +514,7 @@ CMFCRibbonMainPanel* AddMainCategory(
 ### <a name="remarks"></a>설명  
  기본 리본 범주에 이미 있으면 삭제 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 사용 하는 `AddMainCategory` 에서 메서드는 `CMFCRibbonBar` 클래스.  
   
  [!code-cpp[NVC_MFC_RibbonApp#4](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_2.cpp)]  
@@ -544,13 +544,13 @@ CMFCRibbonCategory* AddQATOnlyCategory(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszName`  
+ [in] *lpszName*  
  범주의 이름입니다.  
   
- [in] `uiSmallImagesResID`  
+ [in] *uiSmallImagesResID*  
  범주에 대 한 이미지 목록의 리소스 ID입니다.  
   
- [in] `sizeSmallImage`  
+ [in] *sizeSmallImage*  
  범주에 있는 리본 요소에 대 한 이미지의 크기입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -567,7 +567,7 @@ void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pElement`  
+ [in] *pElement*  
  리본 요소에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -581,7 +581,7 @@ CMFCRibbonBar(BOOL bReplaceFrameCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bReplaceFrameCaption`  
+ [in] *bReplaceFrameCaption*  
  `TRUE` 주 프레임 창의 캡션을 바꾸려면 리본 표시줄에 대 한 `FALSE` 리본 표시줄이 주 프레임 창의 캡션 이름을 찾으려고 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -597,13 +597,13 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  리본 표시줄에 대 한 부모 창에 대 한 포인터입니다.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  새 창에 대 한 스타일의 논리적 조합입니다.  
   
- [in] `nID`  
+ [in] *nID*  
  새 창의 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -611,7 +611,7 @@ BOOL Create(
   
 ### <a name="remarks"></a>설명  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 사용 하는 `Create` 의 메서드는 `CMFCRibbonBar` 클래스.  
   
  [!code-cpp[NVC_MFC_RibbonApp#1](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_3.cpp)]  
@@ -628,16 +628,16 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  리본 표시줄에 대 한 부모 창에 대 한 포인터입니다.  
   
- [in] `dwCtrlStyle`  
+ [in] *dwCtrlStyle*  
  이 매개 변수는 사용되지 않습니다.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  새 창에 대 한 스타일의 논리적 조합입니다.  
   
- [in] `nID`  
+ [in] *nID*  
  새 창의 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -653,7 +653,7 @@ void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bSetFocus`  
+ [in] *bSetFocus*  
  `TRUE` 리본 표시줄의 부모 창에 포커스를 설정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -669,13 +669,13 @@ BOOL DrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  메뉴 단추에 대 한 장치 컨텍스트에 대 한 포인터입니다.  
   
- [in] `pMenuItem`  
+ [in] *pMenuItem*  
  도구 모음 메뉴 단추에 대 한 포인터입니다.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  메뉴 단추에 대 한 표시 사각형을 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -700,7 +700,7 @@ void EnableKeyTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` 키 팁 기능이 없으므로 사용 하도록 설정 하려면 `FALSE` 키 팁 기능을 해제할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
@@ -714,11 +714,11 @@ void EnablePrintPreview(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` 사용할 수 있도록는 **인쇄 미리 보기** ; 기능 `FALSE` 사용 하지 않도록 설정 하는 **인쇄 미리 보기** 기능입니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `bEnable` 은 `FALSE` 및 존재 하는 인쇄 미리 보기 범주, 삭제 됩니다.  
+ 경우 *bEnable* 은 `FALSE` 및 존재 하는 인쇄 미리 보기 범주, 삭제 됩니다.  
   
  기본적으로는 **인쇄 미리 보기** 기능을 사용할 수 있습니다.  
   
@@ -732,14 +732,14 @@ void EnableToolTips(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` 리본 표시줄;에서 도구 설명을 사용 하도록 설정 하려면 `FALSE` 리본 표시줄에서 도구 설명을 사용 하지 않으려면입니다.  
   
- [in] `bEnableDescr`  
+ [in] *bEnableDescr*  
  `TRUE` 도구 설명이 설명을 도구 설명에 사용 하도록 설정 하려면 `FALSE` 도구 설명이 설명을 도구 설명에 사용 하지 않으려면입니다.  
   
 ### <a name="remarks"></a>설명  
- `bEnable` 매개 변수는 리본 요소를 마우스로 가리킬 때 도구 설명을 표시할지 여부를 결정 합니다. `bEnableDescr` 매개 변수 추가 설명이 도구 설명 텍스트와 함께 표시 되는지 여부를 결정 합니다.  
+ *bEnable* 매개 변수는 리본 요소를 마우스로 가리킬 때 도구 설명을 표시할지 여부를 결정 합니다. *bEnableDescr* 매개 변수 추가 설명이 도구 설명 텍스트와 함께 표시 되는지 여부를 결정 합니다.  
   
 ##  <a name="findbydata"></a>  CMFCRibbonBar::FindByData  
  지정 된 데이터 및 표시 유형을 포함 하는 경우에 리본 요소에 대 한 포인터를 검색 합니다.  
@@ -751,10 +751,10 @@ CMFCRibbonBaseElement* FindByData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `dwData`  
+ [in] *dwData*  
  리본 요소에 연결 된 데이터입니다.  
   
- [in] `bVisibleOnly`  
+ [in] *bVisibleOnly*  
  `TRUE` 검색할 표시 리본 요소에만 사용 합니다. `FALSE` 모든 리본 요소를 검색 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -774,13 +774,13 @@ CMFCRibbonBaseElement* FindByID(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  리본 요소에 대 한 명령 ID입니다.  
   
- [in] `bVisibleOnly`  
+ [in] *bVisibleOnly*  
  `TRUE` 검색할 표시 리본 요소에만 사용 합니다. `FALSE` 모든 리본 요소를 검색 합니다.  
   
- [in] `bExcludeQAT`  
+ [in] *bExcludeQAT*  
  `TRUE` 빠른 실행 도구 모음 요소 검색에서 제외 하려면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -799,7 +799,7 @@ int FindCategoryIndexByData(DWORD dwData) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `dwData`  
+ [in] *dwData*  
  리본 범주와 관련 된 데이터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -859,11 +859,11 @@ CMFCRibbonCategory* GetCategory(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  리본 표시줄에 포함 된 리본 범주 목록에서 리본 범주의 인덱스 0부터 시작 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 지정된 된 인덱스;에서 리본 범주에 대 한 포인터 그렇지 않으면 `NULL` 경우 `nIndex` 범위를 벗어났습니다.  
+ 지정된 된 인덱스;에서 리본 범주에 대 한 포인터 그렇지 않으면 `NULL` 경우 *nIndex* 범위를 벗어났습니다.  
   
 ##  <a name="getcategorycount"></a>  CMFCRibbonBar::GetCategoryCount  
  리본 표시줄에서 리본 범주 수를 검색합니다.  
@@ -896,11 +896,11 @@ int GetCategoryIndex(CMFCRibbonCategory* pCategory) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pCategory`  
+ [in] *pCategory*  
  리본 범주에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 로 지정 된 리본 범주를 0 기반 인덱스 `pCategory`; 리본 범주를 찾을 수 없는 경우-1입니다.  
+ 로 지정 된 리본 범주를 0 기반 인덱스 *pCategory*; 리본 범주를 찾을 수 없는 경우-1입니다.  
   
 ##  <a name="getcontextname"></a>  CMFCRibbonBar::GetContextName  
  컨텍스트 ID가 지정한 컨텍스트 범주 캡션 이름을 검색합니다  
@@ -912,14 +912,14 @@ BOOL GetContextName(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiContextID`  
+ [in] *uiContextID*  
  리본 범주 컨텍스트 id입니다.  
   
- [out] `strName`  
+ [out] *strName*  
  컨텍스트 범주 캡션의 이름입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 메서드가 성공 하면 그렇지 않으면 `FALSE` 경우 `uiContextID` 0 또는 컨텍스트 범주 캡션 찾을 수 없습니다.  
+ `TRUE` 메서드가 성공 하면 그렇지 않으면 `FALSE` 경우 *uiContextID* 0 또는 컨텍스트 범주 캡션 찾을 수 없습니다.  
   
 ##  <a name="getdroppeddown"></a>  CMFCRibbonBar::GetDroppedDown  
  현재 드롭다운 리본 요소를 검색 합니다.  
@@ -943,10 +943,10 @@ void GetElementsByID(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  리본 요소의 명령 ID입니다.  
   
- [out] `arButtons`  
+ [out] *arButtons*  
  리본 요소에 대 한 포인터 배열입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -980,10 +980,10 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems,
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `lstItems`  
+ [out] *lstItems*  
  리본 표시줄에 포함 된 리본 요소에 대 한 명령 Id의 목록.  
   
- [in] `bHiddenOnly`  
+ [in] *bHiddenOnly*  
  `TRUE` 표시 되는; 리본 요소를 제외 하려면 `FALSE` 리본 표시줄에서 모든 리본 요소를 포함 하도록 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1081,7 +1081,7 @@ void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `lstCommands`  
+ [out] *lstCommands*  
  빠른 실행 도구 모음에서 리본 요소에 대 한 명령 Id의 목록.  
   
 ### <a name="remarks"></a>설명  
@@ -1183,20 +1183,20 @@ virtual CMFCRibbonBaseElement* HitTest(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `point`  
+ [in] *지점*  
  리본 표시줄에 있는 요소의 위치를 조정합니다.  
   
- [in] `bCheckActiveCategory`  
+ [in] *bCheckActiveCategory*  
  `TRUE` 활성 범주; 검색 하려면 `FALSE` 를 활성 범주를 검색 하지 않도록 합니다.  
   
- [in] `bCheckPanelCaption`  
+ [in] *bCheckPanelCaption*  
  `TRUE` 리본 패널의 캡션을; 그 안에 지점과 테스트 하려면 `FALSE` 리본 패널의 캡션을 그 안에 지점 테스트할 수 없습니다. 자세한 내용은 설명 부분을 참조하세요.  
   
 ### <a name="return-value"></a>반환 값  
  지정 된 지점;에 있는 리본 요소에 대 한 포인터 그렇지 않으면 `NULL` 지점 리본 요소에 없는 경우.  
   
 ### <a name="remarks"></a>설명  
- 하지 않는 한 그 안에 지점과 리본 패널의 캡션을 테스트 되지 않았으므로 `bCheckActiveCategory` 매개 변수는 `TRUE`합니다.  
+ 하지 않는 한 그 안에 지점과 리본 패널의 캡션을 테스트 되지 않았으므로 *bCheckActiveCategory* 매개 변수는 `TRUE`합니다.  
   
 ##  <a name="iskeytipenabled"></a>  CMFCRibbonBar::IsKeyTipEnabled  
  키 팁 기능이 활성화 되어 있는지를 나타냅니다.  
@@ -1325,10 +1325,10 @@ virtual void OnClickButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pButton`  
+ [in] *pButton*  
  클릭 된 단추의에 대 한 포인터입니다.  
   
- [in] `point`  
+ [in] *지점*  
  이 매개 변수는 사용되지 않습니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1343,8 +1343,8 @@ virtual void OnEditContextMenu(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pEdit`  
- [in] `point`  
+ [in] *pEdit*  
+ [in] *지점*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1356,7 +1356,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
  `TRUE` 레이아웃은 오른쪽에서 왼쪽; 경우 `FALSE` 경우 레이아웃은 왼쪽에서 오른쪽입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1370,7 +1370,7 @@ BOOL OnSetAccData(long lVal);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- 긴 `lVal`  
+ 긴 *lVal*  
  액세스 가능한 개체의 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1390,10 +1390,10 @@ virtual BOOL OnShowRibbonContextMenu(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWnd`  
- [in] `x`  
- [in] `y`  
- [in] `pHit`  
+ [in] *pWnd*  
+ [in] *x*  
+ [in] *y*  
+ [in] *pHit*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -1411,10 +1411,10 @@ virtual BOOL OnShowRibbonQATMenu(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWnd`  
- [in] `x`  
- [in] `y`  
- [in] `pHit`  
+ [in] *pWnd*  
+ [in] *x*  
+ [in] *y*  
+ [in] *pHit*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -1431,13 +1431,13 @@ BOOL OnSysKeyDown(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pFrameWnd`  
+ [in] *pFrameWnd*  
  리본 표시줄의 부모 주 프레임 창에 대 한 포인터입니다.  
   
- [in] `wParam`  
+ [in] *wParam*  
  키를 누르는의 가상 키 코드입니다.  
   
- [in] `lParam`  
+ [in] *lParam*  
  키보드 키를 누를 때 상태 플래그입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1456,13 +1456,13 @@ BOOL OnSysKeyUp(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pFrameWnd`  
+ [in] *pFrameWnd*  
  리본 표시줄의 부모 주 프레임 창에 대 한 포인터입니다.  
   
- [in] `wParam`  
+ [in] *wParam*  
  해제 되는 키의 가상 키 코드입니다.  
   
- [in] `lParam`  
+ [in] *lParam*  
  이 매개 변수는 사용되지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1487,7 +1487,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pMsg`  
+ [in] *pMsg*  
  메시지에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1533,7 +1533,7 @@ BOOL RemoveCategory(int nIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  리본 표시줄에 포함 된 리본 범주 목록에서 범주의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1552,10 +1552,10 @@ BOOL SetActiveCategory(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pCategory`  
+ [in] *pCategory*  
  리본 표시줄에 포함 된 리본 범주입니다.  
   
- [in] `bForceRestore`  
+ [in] *bForceRestore*  
  `TRUE` 최소화 하면 리본 표시줄을 최대화 하기 위해 `FALSE` 리본 표시줄을 최소화 하는 경우 활성 범주 팝업 창에 표시 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1564,7 +1564,7 @@ BOOL SetActiveCategory(
 ### <a name="remarks"></a>설명  
  기본 리본 범주에는 활성 범주 수 없습니다.  
   
- 범주에서 지정한 경우 `pCategory` 은 표시 되지 것으로 설정할 수 없습니다 활성 범주입니다.  
+ 변수로 지정 된 범주 *pCategory* 은 표시 되지 것으로 설정할 수 없습니다 활성 범주입니다.  
   
 ##  <a name="setactivemdichild"></a>  CMFCRibbonBar::SetActiveMDIChild  
  리본 표시줄의 지정 된 MDI 자식 창으로 다중 문서 MDI (인터페이스) 자식 창에 속하는 시스템 단추에 연결 합니다.  
@@ -1574,7 +1574,7 @@ void SetActiveMDIChild(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWnd`  
+ [in] *pWnd*  
  MDI 자식 창에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1589,16 +1589,16 @@ void SetApplicationButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pButton`  
+ [in] *pButton*  
  응용 프로그램 리본 단추에 대 한 포인터입니다.  
   
- [in] `sizeButton`  
+ [in] *sizeButton*  
  응용 프로그램 리본 버튼의 크기입니다.  
   
 ### <a name="remarks"></a>설명  
  응용 프로그램 리본 단추에는 리본 컨트롤의 왼쪽 위 모퉁이에 있는 큰 둥근된 단추가입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 사용 하는 `SetApplicationButton` 에서 메서드는 `CMFCRibbonBar` 클래스.  
   
  [!code-cpp[NVC_MFC_RibbonApp#3](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_4.cpp)]  
@@ -1614,13 +1614,13 @@ BOOL SetElementKeys(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  리본 요소의 명령 ID입니다.  
   
- [in] `lpszKeys`  
+ [in] *lpszKeys*  
  Keytip 합니다.  
   
- [in] `lpszMenuKeys`  
+ [in] *lpszMenuKeys*  
  메뉴 keytip 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1639,10 +1639,10 @@ void SetKeyboardNavigationLevel(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pLevel`  
+ [in] *pLevel*  
  현재 키보드 탐색 개체에 대 한 포인터입니다.  
   
- [in] `bSetFocus`  
+ [in] *bSetFocus*  
  `TRUE` 리본 표시줄에 키보드 포커스를 설정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1658,10 +1658,10 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bMax`  
+ [in] *bMax*  
  `TRUE` 리본 표시줄의; MDI 자식 창에 대 한 시스템 단추를 표시 하려면 `FALSE` MDI 자식 창에 대 한 시스템 단추를 리본 표시줄에서 제거 하려면.  
   
- [in] `pWnd`  
+ [in] *pWnd*  
  리본 표시줄에 대 한 주 프레임 창에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1677,13 +1677,13 @@ void SetQuickAccessCommands(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lstCommands`  
+ [in] *lstCommands*  
  빠른 실행 도구 모음에 배치할 수 있도록 명령 목록입니다.  
   
- [in] `bRecalcLayout`  
+ [in] *bRecalcLayout*  
  `TRUE` 경우; 리본 요소를 추가한 후 리본 메뉴를 다시 그리기를 `FALSE` 그렇지 않은 경우.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 사용 하는 `SetQuickAccessCommands` 에서 메서드는 `CMFCRibbonBar` 클래스.  
   
  [!code-cpp[NVC_MFC_RibbonApp#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_5.cpp)]  
@@ -1696,13 +1696,13 @@ void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& 
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `state`  
+ [in] *상태*  
  빠른 실행 도구 모음 기본 상태입니다.  
   
 ### <a name="remarks"></a>설명  
  빠른 실행 도구 모음 상태에 명령 및 표시 여부 목록이 포함 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 사용 하는 `SetQuickAccessDefaultState` 에서 메서드는 `CMFCRibbonBar` 클래스.  
   
  [!code-cpp[NVC_MFC_RibbonApp#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_6.cpp)]  
@@ -1715,7 +1715,7 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bOnTop`  
+ [in] *bOnTop*  
  `TRUE` 리본 표시줄; 위에 빠른 실행 도구 모음을 배치 하려면 `FALSE` 빠른 실행 도구 모음 리본 표시줄 아래 위치 합니다.  
   
 ##  <a name="settooltipfixedwidth"></a>  CMFCRibbonBar::SetTooltipFixedWidth  
@@ -1728,10 +1728,10 @@ void SetTooltipFixedWidth(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nWidthRegular`  
+ [in] *nWidthRegular*  
  일반 고정된 크기의 도구 설명의 픽셀 너비입니다.  
   
- [in] `nWidthLargeImage`  
+ [in] *nWidthLargeImage*  
  도구 설명의 너비를 픽셀 단위로 고정 큰 경우.  
   
 ### <a name="remarks"></a>설명  
@@ -1747,10 +1747,10 @@ void ShowCategory(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  리본 범주의 인덱스입니다.  
   
- [in] `bShow`  
+ [in] *bShow*  
  경우 `TRUE`, 리본 범주 표시; 그렇지 않으면 리본 범주를 숨깁니다.  
   
 ##  <a name="showcontextcategories"></a>  CMFCRibbonBar::ShowContextCategories  
@@ -1763,10 +1763,10 @@ void ShowContextCategories(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiContextID`  
+ [in] *uiContextID*  
  컨텍스트 범주 id입니다.  
   
- [in] `bShow`  
+ [in] *bShow*  
  경우 `TRUE`, 지정 된 ID가 있는 범주 표시; 그렇지 않으면 지정 된 ID가 지정 하는 범주를 숨기려면  
   
 ##  <a name="showkeytips"></a>  CMFCRibbonBar::ShowKeyTips  
@@ -1798,7 +1798,7 @@ virtual BOOL TranslateChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nChar`  
+ [in] *nChar*  
  사용자 키 입력 문자 코드입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1848,16 +1848,16 @@ virtual BOOL LoadFromResource(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `uiXMLResID`  
+ *uiXMLResID*  
  리본 표시줄 정보를 리소스 ID의 XML 문자열을 지정합니다.  
   
- `lpszResType`  
- 에 있는 리소스의 유형을 지정 `uiXMLResID`합니다.  
+ *lpszResType*  
+ 에 있는 리소스의 유형을 지정 *uiXMLResID*합니다.  
   
- `hInstance`  
- 인 실행 파일 리소스를 포함 하는 모듈에 대 한 핸들입니다. 경우 `hInstance` 은 `NULL`, 시스템 현재 프로세스를 만드는 데 사용 하는 모듈에서 리소스를 로드 합니다.  
+ *hInstance*  
+ 인 실행 파일 리소스를 포함 하는 모듈에 대 한 핸들입니다. 경우 *hInstance* 은 `NULL`, 시스템 현재 프로세스를 만드는 데 사용 하는 모듈에서 리소스를 로드 합니다.  
   
- `lpszXMLResID`  
+ *lpszXMLResID*  
  리본 표시줄 정보를 리소스 ID (문자열 형식)를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1873,8 +1873,8 @@ UINT SaveToXMLBuffer(LPBYTE* ppBuffer) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ppBuffer`  
- 이 함수가 반환 될 때 `ppBuffer` 이 메서드에 의해 할당 된 버퍼를 XML 형식으로 리본 표시줄 정보를 포함 합니다.  
+ *ppBuffer*  
+ 이 함수가 반환 될 때 *ppBuffer* 이 메서드에 의해 할당 된 버퍼를 XML 형식으로 리본 표시줄 정보를 포함 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다.  
@@ -1889,7 +1889,7 @@ BOOL SaveToXMLFile(LPCTSTR lpszFilePath) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszFilePath`  
+ *lpszFilePath*  
  출력 파일을 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1907,10 +1907,10 @@ void SetWindows7Look(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bWindows7Look`  
+ *bWindows7Look*  
  `TRUE` Windows 7 모양을; 설정 `FALSE` 그렇지 않은 경우.  
   
- `bRecalc`  
+ *bRecalc*  
  `TRUE` 리본 레이아웃; 다시 계산 `FALSE` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  

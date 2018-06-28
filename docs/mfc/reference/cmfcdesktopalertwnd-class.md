@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf09b2f598391a599df5106fcf8933c580dd30e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1947f93e65126df403feee658ade15648b081076
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370658"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039990"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 `CMFCDesktopAlertWnd` 클래스는 이벤트에 대 한 사용자에 게 화면에 나타나는 모덜리스 대화 상자의 기능을 구현 합니다.  
@@ -126,7 +126,7 @@ class CMFCDesktopAlertWnd : public CWnd
   
 -   호출 하 여 캡션 크기를 작음으로 변경 [CMFCDesktopAlertWnd::SetSmallCaption](#setsmallcaption)합니다. 작은 캡션은 높은 7 픽셀입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다양 한 메서드를 사용 하는 방법을 보여 주는 다음 예제는 `CMFCDesktopAlertWnd` 구성 하는 클래스는 `CMFCDesktopAlertWnd` 개체입니다. 애니메이션 유형을 설정, 팝업 창의 투명도 설정 하 고, 작은 캡션 경고 창에 표시 되는지 지정 하 고 경고 창이 자동으로 닫힙니다. 되기 전 까지의 경과 시간을 설정 하는 방법을 보여 줍니다. 만들고 바탕 화면 경고 창이 초기화 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [바탕 화면 경고 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_DesktopAlertDemo#1](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwnd-class_1.cpp)]  
@@ -163,22 +163,22 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] [out] `pWndOwner`  
+ [in] [out] *pWndOwner*  
  경고 창의 소유자를 지정합니다. 해당 소유자는 바탕 화면 경고 창이 대 한 모든 알림을 받을 것입니다. 이 값은 `NULL`일 수 없습니다.  
   
- [in] `uiDlgResID`  
+ [in] *uiDlgResID*  
  경고 창의 리소스 ID를 지정합니다.  
   
- [in] `hMenu`  
+ [in] *hMenu*  
  메뉴 단추를 클릭할 때 표시 되는 메뉴를 지정 합니다. 경우 `NULL`, 메뉴 단추가 표시 되지 않습니다.  
   
- [in] `ptPos`  
+ [in] *ptPos*  
  화면 좌표를 사용 하 여, 경고 창이 표시 되는 초기 위치를 지정 합니다. 이 매개 변수 (-1,-1) 인 경우 화면의 오른쪽 아래 모서리에 경고 창이 표시 됩니다.  
   
- [in] `pRTIDlgBar`  
+ [in] *pRTIDlgBar*  
  경고 창의 클라이언트 영역에 설명 하는 사용자 지정 대화 상자 클래스에 대 한 런타임 클래스 정보입니다.  
   
- [in] `params`  
+ [in] *params*  
  경고 창을 만드는 데 사용 되는 매개 변수를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -297,7 +297,7 @@ virtual BOOL OnBeforeShow(CPoint&);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `CPoint&`  
+ [in] *CPoint &*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -311,7 +311,7 @@ virtual BOOL OnClickLinkButton(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  이 매개 변수는 사용되지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -330,8 +330,8 @@ virtual BOOL OnCommand(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `wParam`  
- [in] `lParam`  
+ [in] *wParam*  
+ [in] *lParam*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -345,7 +345,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>설명  
   
@@ -357,7 +357,7 @@ BOOL ProcessCommand(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `hwnd`  
+ [in] *hwnd*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -371,7 +371,7 @@ void SetAnimationSpeed(UINT nSpeed);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nSpeed`  
+ [in] *nSpeed*  
  새 애니메이션 속도 밀리초 단위로 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -385,7 +385,7 @@ void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `type`  
+ [in] *유형*  
  애니메이션 유형을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -409,7 +409,7 @@ void SetAutoCloseTime(int nTime);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nTime`  
+ [in] *nTime*  
  시간을 밀리초 단위로 하 경과할 때까지 경고 창이 자동으로 닫힙니다.  
   
 ### <a name="remarks"></a>설명  
@@ -423,7 +423,7 @@ void SetSmallCaption(BOOL bSmallCaption = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bSmallCaption`  
+ [in] *bSmallCaption*  
  `TRUE` 작은 캡션; 알림 창에 표시 되는지 지정 하려면 그렇지 않으면 `FALSE` 경고 창이 보통 크기로 캡션이 표시 되는지 지정 하려면.  
   
 ### <a name="remarks"></a>설명  
@@ -437,7 +437,7 @@ void SetTransparency(BYTE nTransparency);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nTransparency`  
+ [in] *nTransparency*  
  투명도 수준을 지정합니다. 이 값은 0에서 255 사이 여야 합니다. 값이 클수록, 불투명 창.  
   
 ### <a name="remarks"></a>설명  

@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2a84e73c165efd8f2f17e66af149e33d90395e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 25337104da2f1ff397d3c61170ab6ad5a8817130
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372523"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039143"
 ---
 # <a name="clist-class"></a>CList 클래스
 순차적으로 또는 값별로 액세스할 수 있고 고유하지 않은 개체의 순서가 지정된 목록을 지원합니다.  
@@ -131,7 +131,7 @@ class CList : public CObject
   
  사용 하 여 대 한 자세한 내용은 `CList`, 문서를 참조 [컬렉션](../../mfc/collections.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#35](../../mfc/codesnippet/cpp/clist-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
@@ -151,14 +151,14 @@ void AddHead(CList* pNewList);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  목록 요소의 형식을 지정하는 템플릿 매개 변수입니다(참조일 수 있음).  
   
- `newElement`  
+ *newElement*  
  새 요소입니다.  
   
- `pNewList`  
- 에 대 한 포인터를 다른 `CList` 목록입니다. 요소 `pNewList` 이 목록에 추가 됩니다.  
+ *pNewList*  
+ 에 대 한 포인터를 다른 `CList` 목록입니다. 요소 *pNewList* 이 목록에 추가 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  첫 번째 버전은 반환 된 **위치** 새로 삽입된 된 요소의 값입니다.  
@@ -166,7 +166,7 @@ void AddHead(CList* pNewList);
 ### <a name="remarks"></a>설명  
  목록 작업 전에 비어 있을 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#36](../../mfc/codesnippet/cpp/clist-class_2.cpp)]  
   
 ##  <a name="addtail"></a>  CList::AddTail  
@@ -178,14 +178,14 @@ void AddTail(CList* pNewList);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  목록 요소의 형식을 지정하는 템플릿 매개 변수입니다(참조일 수 있음).  
   
- `newElement`  
+ *newElement*  
  이 목록에 추가할 요소입니다.  
   
- `pNewList`  
- 에 대 한 포인터를 다른 `CList` 목록입니다. 요소 `pNewList` 이 목록에 추가 됩니다.  
+ *pNewList*  
+ 에 대 한 포인터를 다른 `CList` 목록입니다. 요소 *pNewList* 이 목록에 추가 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  첫 번째 버전은 반환 된 **위치** 새로 삽입된 된 요소의 값입니다.  
@@ -193,7 +193,7 @@ void AddTail(CList* pNewList);
 ### <a name="remarks"></a>설명  
  목록 작업 전에 비어 있을 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#37](../../mfc/codesnippet/cpp/clist-class_3.cpp)]  
   
 ##  <a name="clist"></a>  CList::CList  
@@ -204,17 +204,17 @@ CList(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nBlockSize`  
+ *nBlockSize*  
  목록 확장에 대 한 메모리 할당 세분성을 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
- 단위에서 메모리를 할당 목록까지 확장 되면서 `nBlockSize` 항목입니다.  
+ 단위에서 메모리를 할당 목록까지 확장 되면서 *nBlockSize* 항목입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#38](../../mfc/codesnippet/cpp/clist-class_4.cpp)]  
   
 ##  <a name="find"></a>  CList::Find  
- 지정 된 일치 하는 첫 번째 요소를 찾을 수 순차적 목록을 검색 하는 `searchValue`합니다.  
+ 지정 된 일치 하는 첫 번째 요소를 찾을 수 순차적 목록을 검색 하는 *searchValue*합니다.  
   
 ```  
 POSITION Find(
@@ -223,39 +223,39 @@ POSITION Find(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ARG_TYPE`  
+ *ARG_TYPE*  
  목록 요소의 형식을 지정하는 템플릿 매개 변수입니다(참조일 수 있음).  
   
- `searchValue`  
+ *searchValue*  
  목록에서 찾으려는 값입니다.  
   
- `startAfter`  
+ *startAfter*  
  검색 시작 위치입니다. 지정은 값이 없으면 head 요소와 검색을 시작 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  A **위치** 반복 또는 개체 포인터 검색;에 사용할 수 있는 값 **NULL** 개체가 없는 경우.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#39](../../mfc/codesnippet/cpp/clist-class_5.cpp)]  
   
 ##  <a name="findindex"></a>  CList::FindIndex  
- 값을 사용 하 여 `nIndex` 목록의 인덱스입니다.  
+ 값을 사용 하 여 *nIndex* 목록의 인덱스입니다.  
   
 ```  
 POSITION FindIndex(INT_PTR nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  찾을 목록 요소의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- A **위치** 반복 또는 개체 포인터 검색;에 사용할 수 있는 값 **NULL** 경우 `nIndex` 가 음수 이거나 너무 큽니다.  
+ A **위치** 반복 또는 개체 포인터 검색;에 사용할 수 있는 값 **NULL** 경우 *nIndex* 가 음수 이거나 너무 큽니다.  
   
 ### <a name="remarks"></a>설명  
  중지 목록의 헤드에서 순차적 검색을 시작 하기는 *n*번째 요소입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#40](../../mfc/codesnippet/cpp/clist-class_6.cpp)]  
   
 ##  <a name="getat"></a>  CList::GetAt  
@@ -281,7 +281,7 @@ const TYPE& GetAt(POSITION position) const;
   
  확인 해야 하면 **위치** 값 목록에서 올바른 위치를 나타냅니다. 유효 하지 않으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CList::GetHeadPosition](#getheadposition)합니다.  
   
 ##  <a name="getcount"></a>  CList::GetCount  
@@ -297,7 +297,7 @@ INT_PTR GetCount() const;
 ### <a name="remarks"></a>설명  
  이 메서드를 호출 하면 동일한 결과를 생성 합니다는 [CList::GetSize](#getsize) 메서드.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CList::RemoveHead](#removehead)합니다.  
   
 ##  <a name="gethead"></a>  CList::GetHead  
@@ -321,7 +321,7 @@ TYPE& GetHead();
 ### <a name="remarks"></a>설명  
  목록을 호출 하기 전에 비어 있지 않은지 확인 해야 `GetHead`합니다. 목록이 비어 있으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다. 사용 하 여 [IsEmpty](#isempty) 목록 요소에 포함 되었는지 확인 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#41](../../mfc/codesnippet/cpp/clist-class_7.cpp)]  
   
 ##  <a name="getheadposition"></a>  CList::GetHeadPosition  
@@ -334,11 +334,11 @@ POSITION GetHeadPosition() const;
 ### <a name="return-value"></a>반환 값  
  A **위치** 반복 또는 개체 포인터 검색;에 사용할 수 있는 값 **NULL** 목록이 비어 있는 경우.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#42](../../mfc/codesnippet/cpp/clist-class_8.cpp)]  
   
 ##  <a name="getnext"></a>  CList::GetNext  
- 로 식별 되는 목록 요소를 가져옵니다 `rPosition`, 다음 설정 `rPosition` 에 **위치** 목록에서 다음 항목의 값입니다.  
+ 로 식별 되는 목록 요소를 가져옵니다 *rPosition*, 다음 설정 *rPosition* 에 **위치** 목록에서 다음 항목의 값입니다.  
   
 ```  
 TYPE& GetNext(POSITION& rPosition);  
@@ -349,7 +349,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
  *형식*  
  템플릿 매개 변수를 목록에서 요소의 형식을 지정 합니다.  
   
- `rPosition`  
+ *rPosition*  
  에 대 한 참조는 **위치** 이전에서 반환 된 값 `GetNext`, [GetHeadPosition](#getheadposition), 또는 기타 멤버 함수 호출 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -358,13 +358,13 @@ const TYPE& GetNext(POSITION& rPosition) const;
  목록 없으면 **const**, `GetNext` 목록의 요소에 대 한 참조를 반환 합니다. 이 대입 문의 양쪽에 사용 될 함수를 통해 목록 항목을 수정할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
- 사용할 수 있습니다 `GetNext` 정방향으로 반복 루프를 호출 하 여 초기 위치를 설정 하는 경우에 `GetHeadPosition` 또는 **찾을**합니다.  
+ 사용할 수 있습니다 `GetNext` 정방향으로 반복 루프를 호출 하 여 초기 위치를 설정 하는 경우에 `GetHeadPosition` 또는 `Find`합니다.  
   
  확인 해야 하면 **위치** 값 목록에서 올바른 위치를 나타냅니다. 유효 하지 않으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다.  
   
  검색된 된 요소는 목록에서 마지막 다음 새 값의 경우 `rPosition` 로 설정 된 **NULL**합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#43](../../mfc/codesnippet/cpp/clist-class_9.cpp)]  
   
 ##  <a name="getprev"></a>  CList::GetPrev  
@@ -379,7 +379,7 @@ const TYPE& GetPrev(POSITION& rPosition) const;
  *형식*  
  템플릿 매개 변수를 목록에서 요소의 형식을 지정 합니다.  
   
- `rPosition`  
+ *rPosition*  
  에 대 한 참조는 **위치** 이전에서 반환 된 값 `GetPrev` 또는 다른 멤버 함수 호출 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -388,13 +388,13 @@ const TYPE& GetPrev(POSITION& rPosition) const;
  목록 없으면 **const**, `GetPrev` 목록의 요소에 대 한 참조를 반환 합니다. 이 대입 문의 양쪽에 사용 될 함수를 통해 목록 항목을 수정할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
- 사용할 수 있습니다 `GetPrev` 을 호출 하 여 초기 위치를 설정 하는 경우 역방향 반복 루프에서 `GetTailPosition` 또는 **찾을**합니다.  
+ 사용할 수 있습니다 `GetPrev` 을 호출 하 여 초기 위치를 설정 하는 경우 역방향 반복 루프에서 `GetTailPosition` 또는 `Find`합니다.  
   
  확인 해야 하면 **위치** 값 목록에서 올바른 위치를 나타냅니다. 유효 하지 않으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다.  
   
- 검색된 된 요소 목록에서 첫 번째 다음의 새 값 이면의 `rPosition` 로 설정 된 **NULL**합니다.  
+ 검색된 된 요소 목록에서 첫 번째 다음의 새 값 이면의 *rPosition* 로 설정 된 **NULL**합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#44](../../mfc/codesnippet/cpp/clist-class_10.cpp)]  
   
 ##  <a name="getsize"></a>  CList::GetSize  
@@ -410,7 +410,7 @@ INT_PTR GetSize() const;
 ### <a name="remarks"></a>설명  
  목록에 있는 요소의 수를 검색 하려면이 메서드를 호출 합니다.  이 메서드를 호출 하면 동일한 결과를 생성 합니다는 [CList::GetCount](#getcount) 메서드.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#45](../../mfc/codesnippet/cpp/clist-class_11.cpp)]  
   
 ##  <a name="gettail"></a>  CList::GetTail  
@@ -431,7 +431,7 @@ const TYPE& GetTail() const;
 ### <a name="remarks"></a>설명  
  목록을 호출 하기 전에 비어 있지 않은지 확인 해야 `GetTail`합니다. 목록이 비어 있으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다. 사용 하 여 [IsEmpty](../../mfc/reference/coblist-class.md#isempty) 목록 요소에 포함 되었는지 확인 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#46](../../mfc/codesnippet/cpp/clist-class_12.cpp)]  
   
 ##  <a name="gettailposition"></a>  CList::GetTailPosition  
@@ -444,7 +444,7 @@ POSITION GetTailPosition() const;
 ### <a name="return-value"></a>반환 값  
  A **위치** 반복 또는 개체 포인터 검색;에 사용할 수 있는 값 **NULL** 목록이 비어 있는 경우.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#47](../../mfc/codesnippet/cpp/clist-class_13.cpp)]  
   
 ##  <a name="insertafter"></a>  CList::InsertAfter  
@@ -456,18 +456,18 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
   
 ### <a name="parameters"></a>매개 변수  
  *위치*  
- 이전 **,** 또는 `GetNext`Find `GetPrev`멤버 함수 호출에서 반환된 **POSITION** 값입니다.  
+ A **위치** 이전에서 반환 된 값 `GetNext`, `GetPrev`, 또는 `Find` 멤버 함수 호출 합니다.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  목록 요소의 형식을 지정 하는 템플릿 매개 변수  
   
- `newElement`  
+ *newElement*  
  이 목록에 추가할 요소입니다.  
   
 ### <a name="return-value"></a>반환 값  
  반복 또는 목록 요소 검색에 사용할 수 있는 **POSITION** 값입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#48](../../mfc/codesnippet/cpp/clist-class_14.cpp)]  
   
 ##  <a name="insertbefore"></a>  CList::InsertBefore  
@@ -479,12 +479,12 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
   
 ### <a name="parameters"></a>매개 변수  
  *위치*  
- 이전 **,** 또는 `GetNext`Find `GetPrev`멤버 함수 호출에서 반환된 **POSITION** 값입니다.  
+ A **위치** 이전에서 반환 된 값 `GetNext`, `GetPrev`, 또는 `Find` 멤버 함수 호출 합니다.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  목록 요소의 형식을 지정하는 템플릿 매개 변수입니다(참조일 수 있음).  
   
- `newElement`  
+ *newElement*  
  이 목록에 추가할 요소입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -493,7 +493,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 ### <a name="remarks"></a>설명  
  *position* 이 **NULL**이면 요소가 목록의 처음 부분에 삽입됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#49](../../mfc/codesnippet/cpp/clist-class_15.cpp)]  
   
 ##  <a name="isempty"></a>  CList::IsEmpty  
@@ -506,7 +506,7 @@ BOOL IsEmpty() const;
 ### <a name="return-value"></a>반환 값  
  이 목록은 비어 있으면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#50](../../mfc/codesnippet/cpp/clist-class_16.cpp)]  
   
 ##  <a name="removeall"></a>  CList::RemoveAll  
@@ -519,7 +519,7 @@ void RemoveAll();
 ### <a name="remarks"></a>설명  
  목록이 비어 이미 하는 경우 오류가 생성 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#51](../../mfc/codesnippet/cpp/clist-class_17.cpp)]  
   
 ##  <a name="removeat"></a>  CList::RemoveAt  
@@ -536,7 +536,7 @@ void RemoveAt(POSITION position);
 ### <a name="remarks"></a>설명  
  확인 해야 하면 **위치** 값 목록에서 올바른 위치를 나타냅니다. 유효 하지 않으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#52](../../mfc/codesnippet/cpp/clist-class_18.cpp)]  
   
 ##  <a name="removehead"></a>  CList::RemoveHead  
@@ -556,7 +556,7 @@ TYPE RemoveHead();
 ### <a name="remarks"></a>설명  
  목록을 호출 하기 전에 비어 있지 않은지 확인 해야 `RemoveHead`합니다. 목록이 비어 있으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다. 사용 하 여 [IsEmpty](#isempty) 목록 요소에 포함 되었는지 확인 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#53](../../mfc/codesnippet/cpp/clist-class_19.cpp)]  
   
 ##  <a name="removetail"></a>  CList::RemoveTail  
@@ -576,7 +576,7 @@ TYPE RemoveTail();
 ### <a name="remarks"></a>설명  
  목록을 호출 하기 전에 비어 있지 않은지 확인 해야 `RemoveTail`합니다. 목록이 비어 있으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다. 사용 하 여 [IsEmpty](#isempty) 목록 요소에 포함 되었는지 확인 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#54](../../mfc/codesnippet/cpp/clist-class_20.cpp)]  
   
 ##  <a name="setat"></a>  CList::SetAt  
@@ -587,13 +587,13 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pos`  
+ *pos*  
  **위치** 설정할 요소입니다.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  목록 요소의 형식을 지정하는 템플릿 매개 변수입니다(참조일 수 있음).  
   
- `newElement`  
+ *newElement*  
  목록에 추가할 요소입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -601,7 +601,7 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
   
  확인 해야 하면 **위치** 값 목록에서 올바른 위치를 나타냅니다. 유효 하지 않으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#55](../../mfc/codesnippet/cpp/clist-class_21.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

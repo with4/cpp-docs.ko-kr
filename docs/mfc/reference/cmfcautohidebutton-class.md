@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48dc35a5b3e7f6b12376a47d68a95602bed48c49
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a62dcb52c6e50897c3ae4a518b1cd8f2b704c7a1
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375313"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038301"
 ---
 # <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton 클래스
 숨기도록 구성된 [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) 를 표시하거나 숨기는 단추입니다.  
@@ -111,7 +111,7 @@ class CMFCAutoHideButton : public CObject
   
  기본적으로 프레임워크에서는 사용자가 자동 숨기기를 설정할 때 자동으로 `CMFCAutoHideButton`을 만듭니다. 프레임워크에서는 `CMFCAutoHideButton` 클래스 대신 사용자 지정 UI 클래스의 요소를 만들 수 있습니다. 프레임워크에서 사용해야 하는 사용자 지정 UI 클래스를 지정하려면 사용자 지정 UI 클래스와 같은 정적 멤버 변수 `CMFCAutoHideBar::m_pAutoHideButtonRTS`를 설정합니다. 기본적으로 이 변수는 `CMFCAutoHideButton`으로 설정됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCAutoHideButton` 개체를 생성하고 `CMFCAutoHideButton` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 예제에서는 `Create` 메서드를 사용하여 `CMFCAutoHideButton` 개체를 초기화하고, 연결된 `CDockablePane` 클래스를 표시하고, 자동 숨기기 단추를 표시하는 방법을 보여 줍니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#32](../../mfc/reference/codesnippet/cpp/cmfcautohidebutton-class_1.cpp)]  
@@ -144,13 +144,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pParentBar`  
+ [in] *pParentBar*  
  부모 도구 모음에 대 한 포인터입니다.  
   
- [in] `pAutoHideWnd`  
+ [in] *pAutoHideWnd*  
  에 대 한 포인터는 [CDockablePane](../../mfc/reference/cdockablepane-class.md) 개체입니다. 이 자동 숨기기 단추를 숨기 거 나는 표시 `CDockablePane`합니다.  
   
- [in] `dwAlignment`  
+ [in] *dwAlignment*  
  주 프레임 창 단추의 맞춤을 지정 하는 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -159,7 +159,7 @@ virtual BOOL Create(
 ### <a name="remarks"></a>설명  
  만들 때 한 `CMFCAutoHideButton` 개체를 특정 자동 숨기기 단추에 연결 해야 `CDockablePane`합니다. 사용자는 연결 된 표시 / 숨기기를 자동 숨기기 단추를 사용할 수 `CDockablePane`합니다.  
   
- `dwAlignment` 매개 변수는 자동 숨기기 단추가 응용 프로그램에 있음을 나타냅니다. 이 매개 변수는 다음 값 중 하나가 될 수 있습니다.  
+ *dwAlignment* 자동 숨기기 단추가 응용 프로그램에 있는 매개 변수를 나타냅니다. 이 매개 변수는 다음 값 중 하나가 될 수 있습니다.  
   
 - `CBRS_ALIGN_LEFT`  
   
@@ -303,7 +303,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -320,13 +320,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `rectBounds`  
+ [in] *rectBounds*  
  자동 숨기기 단추의 경계 사각형입니다.  
   
- [in] `rectBorderSize`  
+ [in] *rectBorderSize*  
  자동 숨기기 단추의 각 측에 대 한 테두리 두께입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -342,10 +342,10 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  자동 숨기기 단추의 경계 사각형입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -359,7 +359,7 @@ void ShowAttachedWindow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bShow`  
+ [in] *bShow*  
  이 메서드는 연결 된 표시 되는지 여부를 지정 하는 부울 `CDockablePane`합니다.  
   
 ##  <a name="showbutton"></a>  CMFCAutoHideButton::ShowButton  
@@ -370,7 +370,7 @@ virtual void ShowButton(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bShow`  
+ [in] *bShow*  
  자동 숨기기 단추를 표시할지 여부를 지정 하는 부울입니다.  
   
 ##  <a name="move"></a>  CMFCAutoHideButton::Move  
@@ -381,7 +381,7 @@ void Move(int nOffset);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nOffset`  
+ [in] *nOffset*  
   
 ### <a name="remarks"></a>설명  
   
@@ -393,7 +393,7 @@ void ReplacePane(CDockablePane* pNewBar);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pNewBar`  
+ [in] *pNewBar*  
   
 ### <a name="remarks"></a>설명  
   
@@ -405,7 +405,7 @@ virtual void UnSetAutoHideMode(CDockablePane* pFirstBarInGroup);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pFirstBarInGroup`  
+ [in] *pFirstBarInGroup*  
  그룹의 첫 번째 막대에 대한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -418,7 +418,7 @@ virtual void HighlightButton(BOOL bHighlight);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bHighlight`  
+ *bHighlight*  
  새 자동 숨기기 단추 상태를 지정 합니다. `TRUE` 단추를 강조 표시 하 나타냅니다 `FALSE` 단추가 강조 표시 되지 않습니다 나타냅니다.  
   
 ### <a name="remarks"></a>설명  

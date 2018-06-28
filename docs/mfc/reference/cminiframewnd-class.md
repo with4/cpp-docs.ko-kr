@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fa0fc4f58a7b83267863918d3e1b46baa38e59
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 766faaa50e4efead96ff72c67aee71fec2386b18
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378384"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038588"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd 클래스
 일반적으로 부동 도구 모음에 있는 절반 높이의 프레임 창을 나타냅니다.  
@@ -98,7 +98,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpClassName`  
+ *lpClassName*  
  Windows 클래스의 이름을 지정 하는 null로 끝나는 문자열을 가리킵니다. 클래스 이름은 전역에 등록 되는 이름 수 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) 함수입니다. 경우 **NULL**, 창 클래스를 프레임 워크에 의해 등록 됩니다. MFC는 다음과 같은 스타일과 특성 클래스는 기본 클래스를 제공합니다.  
   
 -   집합에 비트 스타일 **CS_DBLCLKS**, 어떤 보냅니다 마우스를 두 번 클릭할 때 메시지 창 프로시저를 두 번 클릭 합니다.  
@@ -113,10 +113,10 @@ virtual BOOL Create(
   
 -   Windows에서 표시 된 대로 창의 기본 크기 및 위치를 설정 합니다.  
   
- `lpWindowName`  
+ *lpWindowName*  
  창 이름이 포함 된 null로 끝나는 문자열을 가리킵니다.  
   
- `dwStyle`  
+ *dwStyle*  
  창 스타일 특성을 지정합니다. 이러한 특수 스타일의 표준 창 스타일 및 하나 이상의 포함할 수 있습니다.  
   
 - **MFS_MOVEFRAME** 미니 프레임 창을 창의 캡션 뿐 아니라 모든 가장자리를 클릭 하 여 이동할 수 있습니다.  
@@ -131,13 +131,13 @@ virtual BOOL Create(
   
  참조 [CWnd::Create](../../mfc/reference/cwnd-class.md#create) 에 대 한 설명은 가능한 창 스타일 값입니다. 미니 프레임 창에 사용 되는 일반적인 조합이 **WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU**합니다.  
   
- `rect`  
+ *rect*  
  A `RECT` 창의 원하는 크기를 지정 하는 구조입니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  부모 창을 가리킵니다. 사용 하 여 **NULL** 최상위 창에 대 한 합니다.  
   
- `nID`  
+ *nID*  
  이 자식 컨트롤의 식별자는 미니 프레임 창의 자식 창으로를 만든 경우 그렇지 않으면 0입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -162,25 +162,25 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwExStyle`  
+ *dwExStyle*  
  확장된 스타일을 지정 된 `CMiniFrameWnd` 만들려는 합니다. 적용 하는 [확장 창 스타일](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) 창에 있습니다.  
   
- `lpClassName`  
+ *lpClassName*  
  Windows 클래스의 이름을 지정 하는 null로 끝나는 문자열을 가리키는 (한 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) 구조). 클래스 이름은 전역에 등록 되는 이름 수 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) 함수 또는 미리 정의 된 컨트롤 클래스 이름 중입니다. 않아야 **NULL**합니다.  
   
- `lpWindowName`  
+ *lpWindowName*  
  창 이름이 포함 된 null로 끝나는 문자열을 가리킵니다.  
   
- `dwStyle`  
+ *dwStyle*  
  창 스타일 특성을 지정합니다. 참조 [창 스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles) 및 [CWnd::Create](../../mfc/reference/cwnd-class.md#create) 에 대 한 설명은 사용할 수 있는 값입니다.  
   
- `rect`  
- 크기와의 클라이언트 좌표에서 창의 위치 `pParentWnd`합니다.  
+ *rect*  
+ 크기와의 클라이언트 좌표에서 창의 위치 *pParentWnd*합니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  부모 창 개체를 가리킵니다.  
   
- `nID`  
+ *nID*  
  자식 창의 식별자입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -195,9 +195,9 @@ virtual BOOL CreateEx(
   
  더 이상 재정의 **에서 * * * 메시지* 메시지 파생된 클래스에 추가 기능을 추가 하는 처리기.  
   
- 경우는 **WS_VISIBLE** 스타일은 지정, Windows 창을 활성화 하 고 창을 표시 하는 데 필요한 모든 메시지를 보냅니다. 창 스타일 제목 표시줄을 지정 하는 경우 창 제목은 가리키는 `lpszWindowName` 매개 변수는 제목 표시줄에 표시 됩니다.  
+ 경우는 **WS_VISIBLE** 스타일은 지정, Windows 창을 활성화 하 고 창을 표시 하는 데 필요한 모든 메시지를 보냅니다. 창 스타일 제목 표시줄을 지정 하는 경우 창 제목은 가리키는 *lpszWindowName* 매개 변수는 제목 표시줄에 표시 됩니다.  
   
- `dwStyle` 매개 변수의 조합이 포함 될 수 [창 스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles)합니다.  
+ *dwStyle* 매개 변수의 조합이 포함 될 수 [창 스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles)합니다.  
   
  이전 스타일 팔레트 도구 상자 창은 이상 지원 되지 않습니다. "X" 닫기 단추 없는 하는 이전 스타일 MFC 응용 프로그램에서 이전 버전의 Windows 실행 하는 경우 지원 되었습니다 있지만 더 이상 Visual c + +.NET에서 지원 됩니다. 만 새 `WS_EX_TOOLWINDOW` 스타일은 지원 되지 않으면이 스타일에 대 한 참조 [확장 창 스타일](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)합니다.  
   

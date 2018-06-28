@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b91bc8fec3eebba5f3037633b5840d9b1abca731
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c8b0a512d0969f88d270ab7373be4807b1c55914
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371730"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038356"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl 클래스
 `CMFCLinkCtrl` 클래스 하이퍼링크로 단추를 표시 하 고 단추를 클릭할 때 링크 대상을 호출 합니다.  
@@ -59,7 +59,7 @@ class CMFCLinkCtrl : public CMFCButton
 ## <a name="remarks"></a>설명  
  파생 되는 단추를 클릭할 때는 `CMFCLinkCtrl` 클래스, 프레임 워크 단추의 URL에 대 한 매개 변수로 전달 된 `ShellExecute` 메서드. 그런 다음 `ShellExecute` 메서드 URL 대상을 엽니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는의 크기를 설정 하는 `CMFCLinkCtrl` 개체 및에 도구 설명 및 url을 설정 하는 `CMFCLinkCtrl` 개체입니다. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#9](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_1.h)]  
@@ -91,10 +91,10 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  링크 컨트롤의 경계를 지정 하는 사각형입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -108,7 +108,7 @@ void SetURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszURL`  
+ [in] *lpszURL*  
  단추 텍스트 표시를 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -121,7 +121,7 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszPrefix`  
+ [in] *lpszPrefix*  
  URL 프로토콜 접두사를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -137,10 +137,10 @@ virtual CSize SizeToContent(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bVCenter`  
+ [in] *bVCenter*  
  `TRUE` 단추 텍스트 및 비트맵 링크 컨트롤;의 위아래 간에 세로로 가운데 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `FALSE`입니다.  
   
- [in] `bHCenter`  
+ [in] *bHCenter*  
  `TRUE` 단추 텍스트 및 링크 컨트롤의 왼쪽과 오른쪽 간 가로 방향으로 비트맵 가운데 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `FALSE`입니다.  
   
 ### <a name="return-value"></a>반환 값  

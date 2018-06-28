@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b675cfd635fd4dea962c30605072beec1545dda1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a67b1e405f1e3be472f9b9b3b5ebe00be3fb8a5d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375101"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041047"
 ---
 # <a name="colechangeicondialog-class"></a>COleChangeIconDialog 클래스
 OLE 아이콘 변경 대화 상자에 사용합니다.  
@@ -100,10 +100,10 @@ explicit COleChangeIconDialog(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pItem`  
+ *pItem*  
  변환할 항목을 가리킵니다.  
   
- `dwFlags`  
+ *dwFlags*  
  원하는 수의 다음 값을 포함 하는 생성 플래그 비트를 사용 하 여 결합-or 연산자:  
   
 - **CIF_SELECTCURRENT** 대화 상자가 호출 될 때 현재 라디오 단추가 처음 선택 되도록 지정 합니다. 이 값이 기본값입니다.  
@@ -116,7 +116,7 @@ explicit COleChangeIconDialog(
   
 - **CIF_USEICONEXE** 지정 아이콘에 지정 된 실행 파일에서 추출 되어야 하는 **szIconExe** 필드 [m_ci](#m_ci) 는 형식에서 검색 된 대신 합니다. 이것은 포함 하거나 비 OLE 파일에 연결 하는 데 적합 합니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  부모 또는 소유자 창 개체를 가리키는 (형식의 `CWnd`) 대화 상자 개체 속해 있는 합니다. 이 경우 **NULL**, 대화 상자의 부모 창 주 응용 프로그램 창으로 설정 됩니다.  
   
 ### <a name="remarks"></a>설명  
@@ -132,7 +132,7 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pItem`  
+ *pItem*  
  해당 아이콘을 변경 하는 항목을 가리킵니다.  
   
 ### <a name="return-value"></a>반환 값  

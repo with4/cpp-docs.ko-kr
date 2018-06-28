@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1d8aebd796e0edb587e18db910df808fa349ca37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 07b20d43c53fc0f485d33f71805e73f885c1200a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371675"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041752"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar 클래스
 상황별 팝업 도구 모음을 구현합니다.  
@@ -98,16 +98,16 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pRibbonBar`  
+ [in] *pRibbonBar*  
  미니 도구 모음을 표시할 단추를 검색 하는 리본 표시줄입니다.  
   
- [in] `lstCommands`  
+ [in] *lstCommands*  
  미니 도구 모음에 대해 표시할 명령 목록입니다. 모든 리본 범주 관련된 된 단추를 찾을 수 검색 됩니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수를 사용 하 여 미니 도구 모음에 표시 되는 명령의 목록을 설정 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 사용 하는 `SetCommands` 의 메서드는 `CMFCRibbonMiniToolBar` 클래스. 이 코드 조각은의 일부인는 [MS Office 2007 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]  
@@ -122,10 +122,10 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `x`  
+ [in] *x*  
  화면 좌표에 미니 도구 모음은의 가로 위치를 지정합니다.  
   
- [in] `y`  
+ [in] *y*  
  화면 좌표에 미니 도구 모음은의 세로 위치를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -143,16 +143,16 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `x`  
+ [in] *x*  
  화면 좌표에서 상황에 맞는 메뉴의 가로 위치를 지정합니다.  
   
- [in] `y`  
+ [in] *y*  
  화면 좌표에서 상황에 맞는 메뉴의 세로 위치를 지정합니다.  
   
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  표시 하려면 상황에 맞는 메뉴의 리소스 ID를 지정 합니다.  
   
- [in] `pWndOwner`  
+ [in] *pWndOwner*  
  상황에 맞는 메뉴에서 메시지를 수신 하는 창을 식별 합니다.  
   
 ### <a name="return-value"></a>반환 값  

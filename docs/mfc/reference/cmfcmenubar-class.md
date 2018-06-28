@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02637017ccd589e093caf29cbfe0c345dfa80316
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 63e7fd651cf8a5524f3dc6c521de742ced7741ac
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377796"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039273"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar 클래스
 도킹을 구현하는 메뉴 모음입니다.  
@@ -197,7 +197,7 @@ class CMFCMenuBar : public CMFCToolbar
   
  사용 하는 `CMFCMenuBar` 개체, 주 창 프레임 개체에 포함 합니다. 처리 하는 경우는 `WM_CREATE` 메시지, 호출 `CMFCMenuBar::Create` 또는 `CMFCMenuBar::CreateEx`합니다. 함수를 만들 있는 관계 없이 사용 하 여, 주 프레임 창에 대 한 포인터를 전달 합니다. 다음 호출 하 여 도킹을 사용 하도록 설정 [CFrameWndEx::EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking)합니다. 이 메뉴를 호출 하 여 도킹 [CFrameWndEx::DockPane](../../mfc/reference/cframewndex-class.md#dockpane)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCMenuBar` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 창 스타일을 설정, 사용자 지정 단추를 사용 하도록 설정, 도움말 상자를 사용 하도록 설정, 팝업 메뉴에 대 한 그림자를 사용 하도록 설정 및 메뉴 모음을 업데이트 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [IE 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]  
@@ -265,8 +265,8 @@ virtual CSize CalcFixedLayout(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bStretch`  
- [in] `bHorz`  
+ [in] *bStretch*  
+ [in] *bHorz*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -282,8 +282,8 @@ virtual CSize CalcLayout(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `dwMode`  
- [in] `nLength`  
+ [in] *dwMode*  
+ [in] *nLength*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -333,13 +333,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  새 부모 창에 대 한 포인터 `CMFCMenuBar` 개체입니다.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  새 메뉴 표시줄의 스타일입니다.  
   
- [in] `nID`  
+ [in] *nID*  
  메뉴 표시줄의 자식 창에 대 한 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -366,19 +366,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  새 부모 창에 대 한 포인터 `CMFCMenuBar` 개체입니다.  
   
- [in] `dwCtrlStyle`  
+ [in] *dwCtrlStyle*  
  새 메뉴 모음에 대 한 추가 스타일입니다.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  새 메뉴 표시줄의 기본 스타일입니다.  
   
- [in] `rcBorders`  
+ [in] *rcBorders*  
  A `CRect` 의 테두리에 대 한 크기를 지정 하는 매개 변수는 `CMFCMenuBar` 개체입니다.  
   
- [in] `nID`  
+ [in] *nID*  
  메뉴 표시줄의 자식 창에 대 한 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -389,7 +389,7 @@ virtual BOOL CreateEx(
   
  추가 스타일의 목록에 대 한 참조 [도구 모음 컨트롤과 단추 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760439), [공통 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775498), 및 [일반적인 창 스타일](http://msdn.microsoft.com/library/windows/desktop/ms632600)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 사용 하는 `CreateEx` 의 메서드는 `CMFCMenuBar` 클래스. 이 코드 조각은의 일부인는 [IE 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]  
@@ -406,13 +406,13 @@ virtual void CreateFromMenu(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `hMenu`  
+ [in] *hMenu*  
  메뉴 리소스에 대 한 핸들입니다. `CreateFromMenu` 이 리소스에 대 한 템플릿으로 사용 하 여는 `CMFCMenuBar`합니다.  
   
- [in] `bDefaultMenu`  
+ [in] *bDefaultMenu*  
  새 메뉴의 기본 메뉴 인지 여부를 나타내는 부울입니다.  
   
- [in] `bForceUpdate`  
+ [in] *bForceUpdate*  
  이 메서드는 메뉴 업데이트를 강제 있는지 여부를 나타내는 부울 값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -429,19 +429,19 @@ void EnableHelpCombobox(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiID`  
+ [in] *uiID*  
  단추의 명령 ID는 **도움말** 콤보 상자입니다.  
   
- [in] `lpszPrompt`  
+ [in] *lpszPrompt*  
  텍스트 비어 있고 활성이 아닌 경우 콤보 상자에 표시 되는 프레임 워크를 포함 하는 문자열입니다. 예를 들어, "Enter 여기에 텍스트"입니다.  
   
- [in] `nComboBoxWidth`  
+ [in] *nComboBoxWidth*  
  너비 (픽셀)는 콤보 상자의 단추입니다.  
   
 ### <a name="remarks"></a>설명  
  **도움말** 콤보 상자가 유사 하 게는 **도움말** 의 메뉴 모음에 콤보 상자 [!INCLUDE[ofprword](../../mfc/reference/includes/ofprword_md.md)]합니다.  
   
- 이 메서드를 호출 하면 `uiID` 0으로 설정 된이 메서드는 콤보 상자를 숨깁니다. 그렇지 않으면이 메서드는 콤보 상자가 표시 자동으로 메뉴 표시줄의 오른쪽에 합니다. 이 메서드를 호출한 후 호출 [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) 삽입 된에 대 한 포인터를 얻으려고 [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) 개체입니다.  
+ 이 메서드를 호출 하면 *uiID* 0으로 설정 된이 메서드는 콤보 상자를 숨깁니다. 그렇지 않으면이 메서드는 콤보 상자가 표시 자동으로 메뉴 표시줄의 오른쪽에 합니다. 이 메서드를 호출한 후 호출 [CMFCMenuBar::GetHelpCombobox](#gethelpcombobox) 삽입 된에 대 한 포인터를 얻으려고 [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) 개체입니다.  
   
 ##  <a name="enablemenushadows"></a>  CMFCMenuBar::EnableMenuShadows  
  팝업 메뉴에 대 한 그림자 수 있습니다.  
@@ -451,7 +451,7 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
  팝업 메뉴에 그림자 사용 되는지 여부를 나타내는 부울 매개 변수입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -513,7 +513,7 @@ int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pButton`  
+ [in] *pButton*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -558,7 +558,7 @@ static const CFont& GetMenuFont(BOOL bHorz = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bHorz`  
+ [in] *bHorz*  
  가로 또는 세로 글꼴을 반환할 것인지를 지정 하는 부울 매개 변수입니다. `TRUE` 가로 글꼴을 나타냅니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -575,11 +575,11 @@ CMFCToolBarButton* GetMenuItem(int iItem) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iItem`  
+ [in] *iItem*  
  반환할 메뉴 항목의 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `CMFCToolBarButton` 에 지정 된 인덱스와 일치 하는 개체 `iItem`합니다. `NULL` 인덱스가 잘못 되었습니다 하는 경우.  
+ 에 대 한 포인터는 `CMFCToolBarButton` 에 지정 된 인덱스와 일치 하는 개체 *iItem*합니다. `NULL` 인덱스가 잘못 되었습니다 하는 경우.  
   
 ##  <a name="getrowheight"></a>  CMFCMenuBar::GetRowHeight  
 
@@ -602,8 +602,8 @@ CMFCToolBarMenuButtonsButton* GetSystemButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiBtn`  
- [in] `bByCommand`  
+ [in] *uiBtn*  
+ [in] *bByCommand*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -639,7 +639,7 @@ static void HighlightDisabledItems(BOOL bHighlight = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bHighlight`  
+ [in] *bHighlight*  
  프레임 워크를 사용할 수 없는 메뉴 항목 강조 표시 하는지 여부를 나타내는 부울 매개 변수입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -740,13 +740,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Windows 레지스트리 키의 경로 포함 하는 문자열입니다.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  메뉴 모음에 대 한 컨트롤 ID입니다.  
   
- [in] `uiID`  
+ [in] *uiID*  
  예약 된 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -765,7 +765,7 @@ virtual void OnChangeHot(int iHot);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iHot`  
+ [in] *iHot*  
   
 ### <a name="remarks"></a>설명  
   
@@ -777,7 +777,7 @@ virtual void OnDefaultMenuLoaded(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `hMenu`  
+ [in] *hMenu*  
  에 연결 된 메뉴에 대 한 핸들은 `CMFCMenuBar` 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -791,7 +791,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pButton`  
+ [in] *pButton*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -805,7 +805,7 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pButton`  
+ [in] *pButton*  
  에 대 한 포인터는 [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) 사용자가을 사용자 지정 하는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -824,8 +824,8 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `point`  
- [in] `pTI`  
+ [in] *지점*  
+ [in] *pTI*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -839,7 +839,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pMsg`  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -871,13 +871,13 @@ virtual BOOL SaveState (
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  Windows 레지스트리 키의 경로 포함 하는 문자열입니다.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  메뉴 모음에 대 한 컨트롤 ID입니다.  
   
- [in] `uiID`  
+ [in] *uiID*  
  예약 된 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -896,7 +896,7 @@ void SetDefaultMenuResId(UINT uiResId);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiResId`  
+ [in] *uiResId*  
  새 기본 메뉴에 대 한 리소스 ID입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -912,7 +912,7 @@ void SetForceDownArrows(BOOL bValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bValue`  
+ [in] *bValue*  
   
 ### <a name="remarks"></a>설명  
   
@@ -927,17 +927,17 @@ void SetMaximizeMode(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bMax`  
+ [in] *bMax*  
  모드를 지정 하는 부울입니다. 자세한 내용은 설명 부분을 참조하세요.  
   
- [in] `pWnd`  
+ [in] *pWnd*  
  변경 되 고 있는 MDI 자식 창에 대 한 포인터입니다.  
   
- [in] `bRecalcLayout`  
+ [in] *bRecalcLayout*  
  메뉴 모음 레이아웃 즉시 계산 수 있는지 여부를 지정 하는 부울입니다.  
   
 ### <a name="remarks"></a>설명  
- MDI 주 프레임 창에 연결 된 메뉴 모음을 시스템 메뉴를 표시 MDI 자식 창이 최대화 되었을 때와 **최소화**, **최대화** 및 **닫기** 단추입니다. 경우 `bMax` 은 `TRUE` 및 `pWnd` 않습니다 `NULL`MDI 자식 창을 최대화 하 고 메뉴 모음에는 여러 추가 컨트롤 통합 되어 있어야 합니다. 그렇지 않은 경우 메뉴 모음 일반 상태로 돌아갑니다.  
+ MDI 주 프레임 창에 연결 된 메뉴 모음을 시스템 메뉴를 표시 MDI 자식 창이 최대화 되었을 때와 **최소화**, **최대화** 및 **닫기** 단추입니다. 경우 *bMax* 은 `TRUE` 및 *pWnd* 않습니다 `NULL`MDI 자식 창을 최대화 하 고 메뉴 모음에는 여러 추가 컨트롤 통합 되어 있어야 합니다. 그렇지 않은 경우 메뉴 모음 일반 상태로 돌아갑니다.  
   
 ##  <a name="setmenubuttonrtc"></a>  CMFCMenuBar::SetMenuButtonRTC  
  프레임 워크에는 사용자가 메뉴 단추를 만들 때 사용 하는 런타임 클래스 정보를 설정 합니다.  
@@ -947,7 +947,7 @@ void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pMenuButtonRTC`  
+ [in] *pMenuButtonRTC*  
  [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 에서 파생 된 클래스에 대 한 정보는 [CMFCMenuButton 클래스](../../mfc/reference/cmfcmenubutton-class.md)합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -963,11 +963,11 @@ static BOOL SetMenuFont(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpLogFont`  
+ [in] *lpLogFont*  
  에 대 한 포인터는 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/bb773327) 설정 하는 글꼴을 정의 하는 구조입니다.  
   
- [in] `bHorz`  
- TRUE 이면는 `lpLogFont` 가로 글꼴에 대 한 사용 하려는 경우 세로 방향 글꼴, FALSE에 사용할 매개 변수입니다.  
+ [in] *bHorz*  
+ 원하는 경우 TRUE이 고 *lpLogFont* 가로 글꼴에 대 한 사용 하려는 경우 세로 방향 글꼴, FALSE에 사용할 매개 변수입니다.  
   
 ### <a name="return-value"></a>반환 값  
  `TRUE` 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
@@ -985,7 +985,7 @@ static void SetRecentlyUsedMenus (BOOL bOn = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bOn`  
+ [in] *bOn*  
  최근에 사용한 메뉴 명령을 표시 되는지 여부를 제어 하는 부울입니다.  
   
 ##  <a name="setshowallcommands"></a>  CMFCMenuBar::SetShowAllCommands  
@@ -996,7 +996,7 @@ static void SetShowAllCommands(BOOL bShowAllCommands = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bShowAllCommands`  
+ [in] *bShowAllCommands*  
  모든 메뉴 명령이 팝업 메뉴에 표시 되는지 여부를 지정 하는 부울 매개 변수입니다.  
   
 ### <a name="remarks"></a>설명  

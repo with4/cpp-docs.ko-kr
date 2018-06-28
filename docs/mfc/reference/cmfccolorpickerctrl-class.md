@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad7e67cc32621fc30108767493c3a7bffd481b68
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a3d4c8af6373f2b526c07ee570f4be878bd073d4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374817"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042045"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl 클래스
 `CMFCColorPickerCtrl` 클래스 색을 선택 하는 데 사용 되는 컨트롤에 대 한 기능을 제공 합니다.  
@@ -117,7 +117,7 @@ class CMFCColorPickerCtrl : public CButton
   
 3.  삽입 된 `WM_INITDIALOG` 대화 상자 클래스에 대 한 메시지 처리기입니다. 처리기에서 유형, 색상표 및 초기 선택한 색의 설정에서 `CMFCColorPickerCtrl` 제어 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 구성 하는 `CMFCColorPickerCtrl` 에서 다양 한 메서드를 사용 하 여 개체는 `CMFCColorPickerCtrl` 클래스입니다. 이 예제에서는 선택 컨트롤의 유형을 설정 하는 방법과 색, 색상, 광도 및 채도 설정 하는 방법을 보여 줍니다. 이 예제에서는의 일부인는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#4](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_1.h)]  
@@ -158,10 +158,10 @@ virtual void DrawCursor(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  선택한 색 주위의 사각형 영역을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -190,13 +190,13 @@ void GetHLS(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `hue`  
+ [out] *색상*  
  색상을 나타내는 정보를 수신 하는 double 형식의 변수에 대 한 포인터입니다.  
   
- [out] `luminance`  
+ [out] *광도*  
  광도 정보를 수신 하는 double 형식의 변수에 대 한 포인터입니다.  
   
- [out] `saturation`  
+ [out] *채도*  
  채도 정보를 수신 하는 double 형식의 변수에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -253,19 +253,19 @@ BOOL SelectCellHexagon(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `R`  
+ [in] *R*  
  빨간색 구성 요소입니다.  
   
- [in] `G`  
+ [in] *G*  
  녹색 구성 요소입니다.  
   
- [in] `B`  
+ [in] *B*  
  파란색 구성 요소입니다.  
   
- [in] `x`  
+ [in] *x*  
  셀 양쪽 대괄호를 가리키는 커서의 x 좌표입니다.  
   
- [in] `y`  
+ [in] *y*  
  셀 양쪽 대괄호를 가리키는 커서의 y 좌표입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -284,7 +284,7 @@ void SetColor(COLORREF Color);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `Color`  
+ [in] *색*  
  RGB 색상 값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -301,16 +301,16 @@ void SetHLS(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `hue`  
+ [in] *색상*  
  색상을 나타내는 값입니다.  
   
- [in] `luminance`  
+ [in] *광도*  
  광도 값입니다.  
   
- [in] `saturation`  
+ [in] *채도*  
  채도 값입니다.  
   
- [in] `bInvalidate`  
+ [in] *bInvalidate*  
  `TRUE` 강제로 창에 새 색; 즉시 업데이트 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -323,7 +323,7 @@ void SetHue(double Hue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `Hue`  
+ [in] *색상*  
  색상을 나타내는 값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -336,7 +336,7 @@ void SetLuminance(double Luminance);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `Luminance`  
+ [in] *광도*  
  광도 값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -349,11 +349,11 @@ void SetLuminanceBarWidth(int w);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `w`  
+ [in] *w*  
  광도 막대의 너비 (픽셀)에서입니다.  
   
 ### <a name="remarks"></a>설명  
- 에 있는 광도 막대의 크기를 조정 하려면이 메서드를 사용 하 여는 **사용자 지정** 색 선택 컨트롤의 탭 합니다. `w` 매개 변수 광도 막대의 새로운 너비를 지정 합니다. 3-4의 클라이언트 영역 너비를 초과 하는 경우 너비 값이 무시 됩니다.  
+ 에 있는 광도 막대의 크기를 조정 하려면이 메서드를 사용 하 여는 **사용자 지정** 색 선택 컨트롤의 탭 합니다. *w* 매개 변수 광도 막대의 새로운 너비를 지정 합니다. 3-4의 클라이언트 영역 너비를 초과 하는 경우 너비 값이 무시 됩니다.  
   
 ##  <a name="setoriginalcolor"></a>  CMFCColorPickerCtrl::SetOriginalColor  
  초기 선택한 색을 설정합니다.  
@@ -363,7 +363,7 @@ void SetOriginalColor(COLORREF ref);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `ref`  
+ [in] *ref*  
  RGB 색상 값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -377,7 +377,7 @@ void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pPalette`  
+ [in] *pPalette*  
  색상표에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -391,7 +391,7 @@ void SetSaturation(double Saturation);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `Saturation`  
+ [in] *채도*  
  채도 값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -404,7 +404,7 @@ void SetType(COLORTYPE colorType);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `colorType`  
+ [in] *colorType*  
  색 선택 컨트롤 형식입니다.  
   
  형식에 의해 정의 됩니다는 `CMFCColorPickerCtrl::COLORTYPE` 열거형입니다. 가능한 유형은 `LUMINANCE`, `PICKER`, `HEX` 및 `HEX_GREYSCALE`합니다. 기본 형식은 `PICKER`입니다.  

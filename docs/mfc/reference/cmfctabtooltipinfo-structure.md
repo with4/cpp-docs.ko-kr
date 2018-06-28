@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb2d1a139a5bc61d665a28f21ab10979802045b3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9e27dfd3570226aeab20d10f204d147f9f2b456d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373731"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037485"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>CMFCTabToolTipInfo 구조
 이 구조는 사용자가 마우스로 가리키고 있는 MDI 탭에 대 한 정보를 제공 합니다.  
@@ -36,16 +36,16 @@ struct CMFCTabToolTipInfo
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCTabToolTipInfo::m_nTabIndex](#m_ntabindex)|탭 컨트롤의 인덱스를 지정합니다.|  
 |[CMFCTabToolTipInfo::m_pTabWnd](#m_ptabwnd)|탭 컨트롤에 대 한 포인터입니다.|  
 |[CMFCTabToolTipInfo::m_strText](#m_strtext)|도구 설명 텍스트입니다.|  
   
 ## <a name="remarks"></a>설명  
- 에 대 한 포인터는 `CMFCTabToolTipInfo` 구조의 매개 변수로 전달 되는 `AFX_WM_ON_GET_TAB_TOOLTIP` 메시지입니다. 이 메시지는 MDI 탭을 사용할 수 있고 탭 컨트롤을 가리킬 때 생성 됩니다.  
+ 에 대 한 포인터는 `CMFCTabToolTipInfo` 구조 AFX_WM_ON_GET_TAB_TOOLTIP 메시지의 매개 변수로 전달 됩니다. 이 메시지는 MDI 탭을 사용할 수 있고 탭 컨트롤을 가리킬 때 생성 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 어떻게 `CMFCTabToolTipInfo` 에 사용 되는 [MDITabsDemo 샘플: MFC 탭 MDI 응용 프로그램](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]  
@@ -66,7 +66,7 @@ int m_nTabIndex;
 ### <a name="remarks"></a>설명  
  사용자는 가리키고 탭의 인덱스입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 어떻게 `m_nTabIndex` 에 사용 되는 [MDITabsDemo 샘플: MFC 탭 MDI 응용 프로그램](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]  
@@ -78,7 +78,7 @@ int m_nTabIndex;
 CMFCBaseTabCtrl* m_pTabWnd;  
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 어떻게 `m_pTabWnd` 에 사용 되는 [MDITabsDemo 샘플: MFC 탭 MDI 응용 프로그램](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]  
@@ -93,7 +93,7 @@ CString m_strText;
 ### <a name="remarks"></a>설명  
  문자열이 비어 있으면 도구 설명이 표시 되지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 어떻게 `m_strText` 에 사용 되는 [MDITabsDemo 샘플: MFC 탭 MDI 응용 프로그램](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]  

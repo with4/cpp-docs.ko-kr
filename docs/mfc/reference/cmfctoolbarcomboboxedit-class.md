@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d541702d73befedab72ad7b130b56a125a5817aa
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5c287d30a2a54b6e300f34ca83703baf154b36bf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376310"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042510"
 ---
 # <a name="cmfctoolbarcomboboxedit-class"></a>CMFCToolBarComboBoxEdit 클래스
 프레임 워크를 사용 하 여는 `CMFCToolBarComboBoxEdit` 클래스는 편집 가능한 콤보 상자 컨트롤 처럼 동작 하는 도구 모음 단추를 만듭니다.  
@@ -74,10 +74,10 @@ CMFCToolBarComboBoxEdit(CMFCToolBarComboBoxButton& combo);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `combo`  
+ [in] *콤보*  
  에 대 한 참조는 [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) 개체 콤보 상자 컨트롤을 포함 하는 도구 모음 단추입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는의 개체를 생성 하는 `CMFCToolBarComboBoxEdit` 클래스입니다. 이 코드 조각은의 일부인는 [IE 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_IEDemo#5](../../mfc/reference/codesnippet/cpp/cmfctoolbarcomboboxedit-class_1.cpp)]  

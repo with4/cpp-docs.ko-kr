@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e7acda3bf3734a325c7d603489c1305cb63bc3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f224def5d91d47cad0cb61938f1ce9a538109014
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33367616"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039045"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty 클래스
 `CMFCPropertyGridFileProperty` 클래스 글꼴 선택 대화 상자를 여는 속성 목록 컨트롤 항목을 지원 합니다.  
@@ -83,28 +83,28 @@ CMFCPropertyGridFontProperty(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `strName`  
+ [in] *strName*  
  속성의 이름입니다.  
   
- [in] `lf`  
+ [in] *lf*  
  글꼴의 특성을 지정 하는 논리 글꼴 구조입니다.  
   
- [in] `dwFontDialogFlags`  
- 속성 값 드롭다운 단추를 클릭할 때 표시 되는 글꼴 대화 상자에 적용 되는 스타일입니다. 기본값은 CF_EFFECTS 및 CF_SCREENFONTS의 비트 조합 (OR)입니다. 자세한 내용은 참조는 `Flags` 의 매개 변수는 [CHOOSEFONT 구조](http://msdn.microsoft.com/library/windows/desktop/ms646832)합니다.  
+ [in] *dwFontDialogFlags*  
+ 속성 값 드롭다운 단추를 클릭할 때 표시 되는 글꼴 대화 상자에 적용 되는 스타일입니다. 기본값은 CF_EFFECTS 및 CF_SCREENFONTS의 비트 조합 (OR)입니다. 자세한 내용은 참조는 *플래그* 의 매개 변수는 [CHOOSEFONT 구조](http://msdn.microsoft.com/library/windows/desktop/ms646832)합니다.  
   
- [in] `lpszDescr`  
+ [in] *lpszDescr*  
  Font 속성의 설명입니다. 기본값은 `NULL`입니다.  
   
- [in] `dwData`  
+ [in] *dwData*  
  정수 또는 속성에 연관 된 다른 데이터에 대 한 포인터 등 응용 프로그램별 데이터입니다. 기본값은 0입니다.  
   
- [in] `color`  
+ [in] *색*  
  글꼴의 색입니다. 기본값은 기본 색입니다.  
   
 ### <a name="remarks"></a>설명  
  A `CMFCPropertyGridFontProperty` 개체 속성 표 글꼴 컨트롤의 글꼴 속성을 나타냅니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는의 개체를 구성 하는 방법을 `CMFCPropertyGridFontProperty` 클래스입니다. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#26](../../mfc/reference/codesnippet/cpp/cmfcpropertygridfontproperty-class_1.cpp)]  

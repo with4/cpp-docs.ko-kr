@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d22fa264f48d3c5b1b6b88db338bc3be45c3f398
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc609fac36ccdbb9f84ce8f2b9b7c0ccfc5ccd3f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369052"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038505"
 ---
 # <a name="cjumplist-class"></a>CJumpList 클래스
 A `CJumpList` 클릭할 작업 표시줄에서 아이콘에서 마우스 오른쪽 단추로 클릭할 때 표시 되는 바로 가기 목록입니다.  
@@ -71,7 +71,7 @@ class CJumpList;
 |[CJumpList::CJumpList](#cjumplist)|`CJumpList` 개체를 생성합니다.|  
 |[CJumpList:: ~ CJumpList](#cjumplist__~cjumplist)|`CJumpList` 개체를 제거합니다.|  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CJumpList::AbortList](#abortlist)|목록 작성 트랜잭션을 커밋하지 않고 중단 합니다.|  
 |[CJumpList::AddDestination](#adddestination)|오버로드됨. 대상 목록에 추가합니다.|  
@@ -131,19 +131,19 @@ BOOL AddDestination(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpcszCategoryName`  
+ *lpcszCategoryName*  
  범주 이름을 지정합니다. 지정된 된 범주가 없는 경우 생성 됩니다.  
   
- `strDestinationPath`  
+ *strDestinationPath*  
  대상 파일의 경로를 지정합니다.  
   
- `strCategoryName`  
+ *strCategoryName*  
  범주 이름을 지정합니다. 지정된 된 범주가 없는 경우 생성 됩니다.  
   
- `pShellItem`  
+ *pShellItem*  
  추가 중인 대상 나타내는 셸 항목을 지정 합니다.  
   
- `pShellLink`  
+ *pShellLink*  
  추가 중인 대상 나타내는 셸 링크를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -159,7 +159,7 @@ BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `category`  
+ *category*  
  알려진된 범주 유형을 지정합니다. 일 수 있습니다 `KDC_RECENT`, 또는 `KDC_KNOWN`합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -182,22 +182,22 @@ BOOL AddTask(IShellLink* pShellLink);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `strTargetExecutablePath`  
+ *strTargetExecutablePath*  
  대상 작업 경로 지정합니다.  
   
- `strCommandLineArgs`  
+ *strCommandLineArgs*  
  StrTargetExecutablePath로 지정 된 실행 파일의 명령줄 인수를 지정 합니다.  
   
- `strTitle`  
+ *strTitle*  
  대상 목록에 표시 되는 작업 이름입니다.  
   
- `strIconLocation`  
+ *strIconLocation*  
  제목과 함께 대상 목록에 표시 되는 아이콘의 위치입니다.  
   
- `iIconIndex`  
+ *iIconIndex*  
  아이콘 인덱스입니다.  
   
- `pShellLink`  
+ *pShellLink*  
  추가할 작업을 나타내는 셸 링크입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -213,7 +213,7 @@ BOOL AddTasks(IObjectArray* pObjectCollection);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pObjectCollection`  
+ *pObjectCollection*  
  추가할 작업의 컬렉션입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -239,7 +239,7 @@ CJumpList(BOOL bAutoCommit = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bAutoCommit`  
+ *bAutoCommit*  
  이 매개 변수가 FALSE 인 경우 소멸자의 목록은 자동으로 커밋되지 않은 합니다.  
   
 ##  <a name="clearall"></a>  CJumpList::ClearAll  
@@ -330,7 +330,7 @@ void SetAppID(LPCTSTR strAppID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `strAppID`  
+ *strAppID*  
  응용 프로그램 사용자 모델 ID를 지정 하는 문자열  
   
 ## <a name="see-also"></a>참고 항목  

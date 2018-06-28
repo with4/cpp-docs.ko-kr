@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd68493c9be5eb0bff63504cf49b38b9a2f216d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 706cc03e3f0a074e68d0e92acdce5a747552819b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375939"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038210"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory 클래스
 서버, 자동화 개체, 문서와 같은 OLE 개체를 만드는 OLE 클래스 팩터리를 구현합니다.  
@@ -137,29 +137,29 @@ COleObjectFactory(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `clsid`  
+ *clsid*  
  이 개체 팩터리를 나타내는 OLE 클래스 ID에 대 한 참조입니다.  
   
- `pRuntimeClass`  
+ *pRuntimeClass*  
  이 팩터리를 만들 수 있는 c + + 개체의 런타임 클래스에 대 한 포인터입니다.  
   
- `bMultiInstance`  
+ *bMultiInstance*  
  단일 인스턴스 응용 프로그램의 여러 인스턴스를 지원할 수 있는지 여부를 나타냅니다. 경우 **TRUE**, 개체를 만드는 각 요청에 대 한 응용 프로그램의 여러 인스턴스를 시작 합니다.  
   
- `nFlags`  
+ *nFlags*  
  다음과 같은 플래그 중 하나 이상을 포함 되어 있습니다.  
   
 - **afxRegDefault** ThreadingModel을 설정 하는 스레딩 모델이 아파트 = 합니다.  
   
 - **afxRegInsertable** 에 표시를 제어할 수 있습니다는 **개체 삽입** OLE 개체에 대 한 대화 상자.  
   
-- `afxRegApartmentThreading` ThreadingModel 레지스트리에서 설정 하는 스레딩 모델이 아파트 = 합니다.  
+- **afxRegApartmentThreading** ThreadingModel 레지스트리에서 설정 하는 스레딩 모델이 아파트 = 합니다.  
   
 - **afxRegFreeThreading** ThreadingModel 레지스트리에서 스레딩 모델을 설정 합니다. 무료 = 합니다.  
   
      두 플래그를 결합할 수 있습니다 `afxRegApartmentThreading` 및 `afxRegFreeThreading` ThreadingModel 설정할 = Both입니다. 참조 [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) 스레딩 모델 등록에 대 한 자세한 내용은 Windows sdk입니다.  
   
- `lpszProgID`  
+ *lpszProgID*  
  "Microsoft Excel입니다."와 같은 구두 프로그램 식별자를 포함 하는 문자열에 대 한 포인터  
   
 ### <a name="remarks"></a>설명  
@@ -181,7 +181,7 @@ REFCLSID GetClassID() const;
  자세한 내용은 참조 [CLSID 키](http://msdn.microsoft.com/library/windows/desktop/ms691424) Windows sdk에서입니다.  
   
 ##  <a name="getlicensekey"></a>  COleObjectFactory::GetLicenseKey  
- 컨트롤의 DLL에서 고유한 라이선스 키를 요청 하 고에 저장 된 `BSTR` 가리키는 `pbstrKey`합니다.  
+ 컨트롤의 DLL에서 고유한 라이선스 키를 요청 하 고에 저장 된 `BSTR` 가리키는 *pbstrKey*합니다.  
   
 ```  
 virtual BOOL GetLicenseKey(
@@ -190,10 +190,10 @@ virtual BOOL GetLicenseKey(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwReserved`  
+ *dwReserved*  
  나중에 사용하기 위해 예약되어 있습니다.  
   
- `pbstrKey`  
+ *pbstrKey*  
  에 대 한 포인터는 `BSTR` 하는 라이선스 키를 저장 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -300,10 +300,10 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszProgID`  
+ *lpszProgID*  
  "Excel.Document.5" 등의 사용자를 읽을 수 있는 프로그램 식별자를 포함 하는 문자열에 대 한 포인터  
   
- `bRegister`  
+ *b 등록 하십시오*  
  컨트롤 클래스의 개체 팩터리를 등록 해야 하는지를 결정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -311,7 +311,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
   
 - **UpdateRegistry (** `lpszProgID` **)** OLE 시스템 레지스트리에이 개체 팩터리를 등록 합니다. 이 함수는 일반적으로 하 여 호출 [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) 응용 프로그램이 시작 될 때입니다.  
   
-- **UpdateRegistry (** `bRegister` **)** 는이 함수의 재정의 될 수 있습니다. 경우 `bRegister` 은 **TRUE**,이 함수는 시스템 레지스트리의 control 클래스에 등록 합니다. 그렇지 않으면 클래스 등록 취소합니다.  
+- **UpdateRegistry (** `bRegister` **)** 는이 함수의 재정의 될 수 있습니다. 경우 *b 등록 하십시오* 은 **TRUE**,이 함수는 시스템 레지스트리의 control 클래스에 등록 합니다. 그렇지 않으면 클래스 등록 취소합니다.  
   
      MFC ActiveX 컨트롤을 사용 하 여 프로젝트를 만드는 경우 컨트롤이 순수 가상 함수 재정의 제공 합니다.  
   
@@ -323,7 +323,7 @@ static BOOL PASCAL UpdateRegistryAll(BOOL bRegister = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bRegister`  
+ *b 등록 하십시오*  
  컨트롤 클래스의 개체 팩터리를 등록 해야 하는지를 결정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -340,14 +340,14 @@ virtual BOOL VerifyLicenseKey(BSTR bstrKey);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bstrKey`  
+ *bstrKey*  
  A `BSTR` 라이선스 문자열의 컨테이너의 버전을 저장 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  런타임 라이선스 유효 하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 기본 버전을 호출 하 여 [GetLicenseKey](#getlicensekey) 컨트롤의 복사본을 가져오려면 라이선스 문자열의 해시와 비교의 문자열로 `bstrKey`합니다. 두 문자열이 일치 하는 경우 함수가 0이 아닌 값을 반환 그렇지 않으면 0을 반환 합니다.  
+ 기본 버전을 호출 하 여 [GetLicenseKey](#getlicensekey) 컨트롤의 복사본을 가져오려면과 문자열을 비교 하 고 라이선스 문자열의 *bstrKey*합니다. 두 문자열이 일치 하는 경우 함수가 0이 아닌 값을 반환 그렇지 않으면 0을 반환 합니다.  
   
  라이선스의 사용자 지정된 확인 기능을 제공 하려면이 함수를 재정의할 수 있습니다.  
   

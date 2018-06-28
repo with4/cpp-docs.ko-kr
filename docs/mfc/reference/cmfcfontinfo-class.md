@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c9e4c1031ba06eaabe67418a018f95d689f71d1e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27858b6dad2744965e85bcd8287ba62cbf5b60c0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368295"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038603"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo 클래스
 `CMFCFontInfo` 클래스 이름 및 글꼴의 다른 특성을 설명 합니다.  
@@ -60,7 +60,7 @@ class CMFCFontInfo : public CObject
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCFontInfo::m_nCharSet](#m_ncharset)|글꼴와 연결 된 문자 집합 (스크립트)을 지정 하는 값입니다.|  
 |[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|피치 및 글꼴 패밀리를 지정 하는 값입니다.|  
@@ -71,7 +71,7 @@ class CMFCFontInfo : public CObject
 ## <a name="remarks"></a>설명  
  연결할 수는 `CMFCFontInfo` 개체의 항목에는 [CMFCToolBarFontComboBox 클래스](../../mfc/reference/cmfctoolbarfontcombobox-class.md) 클래스입니다. 호출 된 [CMFCToolBarFontComboBox::GetFontDesc](../../mfc/reference/cmfctoolbarfontcombobox-class.md#getfontdesc) 에 대 한 포인터를 검색 하는 메서드는 `CMFCFontInfo` 개체입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는의 다양 한 멤버를 사용 하 여 `CMFCFontInfo` 클래스입니다. 가져오는 방법을 보여 줍니다는 `CMFCFontInfo` 에서 개체는 `CMFCRibbonFontComboBox`, 및 지역 변수를 액세스 하는 방법입니다. 이 예제는의 일부는 [MSOffice 2007 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#6](../../mfc/reference/codesnippet/cpp/cmfcfontinfo-class_1.cpp)]  
@@ -94,22 +94,22 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszName`  
+ [in] *lpszName*  
  글꼴의 이름입니다. 자세한 내용은 참조는 `lfFaceName` 의 멤버는 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) 구조입니다.  
   
- [in] `lpszScript`  
+ [in] *lpszScript*  
  글꼴의 스크립트 (문자 집합)의 이름입니다.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  글꼴의 문자 집합 (스크립트)을 지정 하는 값입니다. 자세한 내용은 참조는 `lfCharSet` 의 멤버는 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) 구조입니다.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  피치 및 글꼴 패밀리를 지정 하는 값입니다. 자세한 내용은 참조는 `lfPitchAndFamily` 의 멤버는 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) 구조입니다.  
   
- [in] `nType`  
+ [in] *n 유형*  
  글꼴 종류를 지정 하는 값입니다. 이 매개 변수는 DEVICE_FONTTYPE, RASTER_FONTTYPE, 및 또는 이러한 옵션의 비트 조합 (OR) 일 수 있습니다.  
   
- [in] `src`  
+ [in] *src*  
  기존 `CMFCFontInfo` 멤버가이 생성에 사용 되는 개체 `CMFCFontInfo` 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -138,7 +138,7 @@ const BYTE m_nCharSet;
 ```  
   
 ### <a name="remarks"></a>설명  
- 자세한 내용은 참조는 `nCharSet` 의 매개 변수는 [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) 생성자입니다.  
+ 자세한 내용은 참조는 *nCharSet* 의 매개 변수는 [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) 생성자입니다.  
   
 ##  <a name="m_npitchandfamily"></a>  CMFCFontInfo::m_nPitchAndFamily  
  (포인트 크기) 피치 및 패밀리 (예를 들어 serif, sans serif 및 고정 폭) 글꼴을 지정 하는 값입니다.  
@@ -148,7 +148,7 @@ const BYTE m_nPitchAndFamily;
 ```  
   
 ### <a name="remarks"></a>설명  
- 자세한 내용은 참조는 `nPitchAndFamily` 의 매개 변수는 [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) 생성자입니다.  
+ 자세한 내용은 참조는 *nPitchAndFamily* 의 매개 변수는 [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) 생성자입니다.  
   
 ##  <a name="m_ntype"></a>  CMFCFontInfo::m_nType  
  글꼴의 유형을 지정 하는 값입니다.  
@@ -158,7 +158,7 @@ const int m_nType;
 ```  
   
 ### <a name="remarks"></a>설명  
- 자세한 내용은 참조는 `nType` 의 매개 변수는 [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) 생성자입니다.  
+ 자세한 내용은 참조는 *n 유형* 의 매개 변수는 [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) 생성자입니다.  
   
 ##  <a name="m_strname"></a>  CMFCFontInfo::m_strName  
  글꼴의 이름: 예를 들어 **Arial**합니다.  
@@ -168,7 +168,7 @@ const CString m_strName;
 ```  
   
 ### <a name="remarks"></a>설명  
- 자세한 내용은 참조는 `lpszName` 의 매개 변수는 [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) 생성자입니다.  
+ 자세한 내용은 참조는 *lpszName* 의 매개 변수는 [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) 생성자입니다.  
   
 ##  <a name="m_strscript"></a>  CMFCFontInfo::m_strScript  
  글꼴와 연결 된 문자 집합 (스크립트)의 이름입니다.  
@@ -178,7 +178,7 @@ const CString m_strScript;
 ```  
   
 ### <a name="remarks"></a>설명  
- 자세한 내용은 참조는 `lpszScript` 의 매개 변수는 [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) 생성자입니다.  
+ 자세한 내용은 참조는 *lpszScript* 의 매개 변수는 [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) 생성자입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [계층 구조 차트](../../mfc/hierarchy-chart.md)   

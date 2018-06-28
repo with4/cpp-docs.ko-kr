@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9baeb204234a6df50be062c5944e9b257cb2d2c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a9fd8c983e0133644b6531e87f5fc1dec0fdc7b7
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370922"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041807"
 ---
 # <a name="cmfcribbonquickaccesstoolbardefaultstate-class"></a>CMFCRibbonQuickAccessToolBarDefaultState 클래스
 리본 표시줄에 배치 되는 빠른 실행 도구 모음에 대 한 기본 상태를 관리 하는 도우미 클래스 ( [CMFCRibbonBar 클래스](../../mfc/reference/cmfcribbonbar-class.md)).  
@@ -62,7 +62,7 @@ class CMFCRibbonQuickAccessToolBarDefaultState
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CMFCRibbonQuickAccessToolBarDefaultState](../../mfc/reference/cmfcribbonquickaccesstoolbardefaultstate-class.md)  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는의 개체를 생성 하는 `CMFCRibbonQuickAccessToolbarDefaultState` 클래스 및 빠른 실행 도구 모음에 대 한 기본 상태에 명령을 추가 하는 방법입니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#21](../../mfc/reference/codesnippet/cpp/cmfcribbonquickaccesstoolbardefaultstate-class_1.cpp)]  
@@ -80,10 +80,10 @@ void AddCommand(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `[in] uiCmd`  
+ *[in] uiCmd*  
  명령 ID를 지정 합니다.  
   
- `[in] bIsVisible`  
+ *[in] bIsVisible*  
  빠른 실행 도구 모음 기본 상태인 경우 명령의 표시 유형을 설정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -97,7 +97,7 @@ void CopyFrom(const CMFCRibbonQuickAccessToolBarDefaultState& src);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `src`  
+ [in] *src*  
  원본에 대 한 참조를 `CMFCRibbonQuickAccessToolBarDefaultState` 복사할 개체입니다.  
   
 ### <a name="remarks"></a>설명  

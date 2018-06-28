@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98fa4b2a489b8abb3951719dc74e618a054a4025
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 275c35c7654f9a10a83f13482ca6d81b974c0dd6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366885"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040976"
 ---
 # <a name="cgopherfile-class"></a>CGopherFile 클래스
 Gopher 서버에서 파일을 찾고 읽는 기능을 제공합니다.  
@@ -46,7 +46,7 @@ class CGopherFile : public CInternetFile
 |[CGopherFile::CGopherFile](#cgopherfile)|`CGopherFile` 개체를 생성합니다.|  
   
 ## <a name="remarks"></a>설명  
- Gopher 서비스에서는 사용자가이 서비스는 주로 인터페이스로 메뉴 기반 정보를 찾기 위한 작동 하기 때문에 gopher 파일에 데이터를 쓸 수 있습니다. `CGopherFile` 멤버 함수 **쓰기**, `WriteString`, 및 `Flush` 에 대 한 구현 되지 않은 `CGopherFile`합니다. 이러한 함수를 호출는 `CGopherFile` 개체를 반환 된 [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)합니다.  
+ Gopher 서비스에서는 사용자가이 서비스는 주로 인터페이스로 메뉴 기반 정보를 찾기 위한 작동 하기 때문에 gopher 파일에 데이터를 쓸 수 있습니다. `CGopherFile` 멤버 함수 `Write`, `WriteString`, 및 `Flush` 에 대 한 구현 되지 않은 `CGopherFile`합니다. 이러한 함수를 호출는 `CGopherFile` 개체를 반환 된 [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)합니다.  
   
  방법에 대 한 자세한 내용을 보려면 `CGopherFile` 작동 하는 다른 MFC 인터넷 클래스 문서를 참조 하십시오. [인터넷 WinInet를 사용한 프로그래밍](../../mfc/win32-internet-extensions-wininet.md)합니다.  
   
@@ -83,25 +83,25 @@ CGopherFile(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hFile`  
+ *hFile*  
  에 대 한 핸들은 `HINTERNET` 파일입니다.  
   
- `refLocator`  
+ *refLocator*  
  에 대 한 참조는 [CGopherLocator](../../mfc/reference/cgopherlocator-class.md) 개체입니다.  
   
- `pConnection`  
+ *pConnection*  
  에 대 한 포인터는 [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) 개체입니다.  
   
- `hSession`  
+ *hSession*  
  현재 인터넷 세션에 대 한 핸들입니다.  
   
- `pstrLocator`  
+ *pstrLocator*  
  Gopher 서버를 찾는 데 사용 하는 문자열에 대 한 포인터입니다. 참조 [Gopher 세션](cgopherlocator-class.md) gopher 로케이터에 대 한 자세한 내용은 합니다.  
   
  *dwLocLen*  
- 바이트 수를 포함 하는 DWORD `pstrLocator`합니다.  
+ 바이트 수를 포함 하는 DWORD *pstrLocator*합니다.  
   
- `dwContext`  
+ *dwContext*  
  열리는 파일의 컨텍스트 식별자에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  

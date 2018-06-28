@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35217ee967554332002d8597a00dc21df928306d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d66c26fb94fa0f4e1863a6a6a9663de4239611db
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378420"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039133"
 ---
 # <a name="coblist-class"></a>CObList 클래스
 순서가 지정 된 고유 하지 않은의 목록을 fSupports `CObject` 포인터에 액세스할 수 있는 순차적으로 또는 포인터 값입니다.  
@@ -117,7 +117,7 @@ class CObList : public CObject
   
  요소를 삽입은 아주 목록 헤드에 빠른, 꼬리, 및 알려진 **위치**합니다. 순차 검색이 값 또는 인덱스 별로 요소를 조회 해야 합니다. 이 검색 목록이 긴 경우에 느려질 수 있습니다.  
   
- `CObList`는 serialization 및 요소 덤프를 지원하기 위해 `IMPLEMENT_SERIAL` 매크로를 통합합니다. 목록을 `CObject` 포인터 오버 로드 된 삽입 연산자 또는으로 보관 파일로 저장 됩니다는 `Serialize` 멤버 함수를 각각 `CObject` 요소가 차례로 serialize 됩니다.  
+ `CObList` serialization 및 요소 덤프를 지원 하기 위해 IMPLEMENT_SERIAL 매크로 통합 합니다. 목록을 `CObject` 포인터 오버 로드 된 삽입 연산자 또는으로 보관 파일로 저장 됩니다는 `Serialize` 멤버 함수를 각각 `CObject` 요소가 차례로 serialize 됩니다.  
   
  개인의 덤프 해야 할 경우 `CObject` 목록에서 요소를 1 이상으로 덤프 컨텍스트 깊이 설정 해야 합니다.  
   
@@ -147,11 +147,11 @@ void AddHead(CObList* pNewList);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `newElement`  
+ *newElement*  
  `CObject` 이 목록에 추가할 수에 대 한 포인터입니다.  
   
- `pNewList`  
- 에 대 한 포인터를 다른 `CObList` 목록입니다. 요소 `pNewList` 이 목록에 추가 됩니다.  
+ *pNewList*  
+ 에 대 한 포인터를 다른 `CObList` 목록입니다. 요소 *pNewList* 이 목록에 추가 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  첫 번째 버전은 반환 된 **위치** 새로 삽입된 된 요소의 값입니다.  
@@ -166,7 +166,7 @@ void AddHead(CObList* pNewList);
 ### <a name="remarks"></a>설명  
  목록 작업 전에 비어 있을 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   참조 [CObList::CObList](#coblist) 목록은 `CAge` 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#89](../../mfc/codesnippet/cpp/coblist-class_1.cpp)]  
@@ -188,11 +188,11 @@ void AddTail(CObList* pNewList);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `newElement`  
+ *newElement*  
  `CObject` 이 목록에 추가할 수에 대 한 포인터입니다.  
   
- `pNewList`  
- 에 대 한 포인터를 다른 `CObList` 목록입니다. 요소 `pNewList` 이 목록에 추가 됩니다.  
+ *pNewList*  
+ 에 대 한 포인터를 다른 `CObList` 목록입니다. 요소 *pNewList* 이 목록에 추가 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  첫 번째 버전은 반환 된 **위치** 새로 삽입된 된 요소의 값입니다.  
@@ -207,7 +207,7 @@ void AddTail(CObList* pNewList);
 |[해당 클래스가](../../mfc/reference/cptrlist-class.md)|**위치 AddTail (void\***  `newElement` **);**<br /><br /> **AddTail void (해당 클래스가\***  `pNewList` **);**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**위치 AddTail (const CString &** `newElement` **);**<br /><br /> **위치 AddTail (LPCTSTR** `newElement` **);**<br /><br /> **AddTail void (CStringList\***  `pNewList` **);**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   참조 [CObList::CObList](#coblist) 목록은 `CAge` 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#90](../../mfc/codesnippet/cpp/coblist-class_2.cpp)]  
@@ -228,11 +228,11 @@ CObList(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nBlockSize`  
+ *nBlockSize*  
  목록 확장에 대 한 메모리 할당 세분성을 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
- 단위에서 메모리를 할당 목록까지 확장 되면서 `nBlockSize` 항목입니다. 메모리 할당에 실패 하면는 `CMemoryException` throw 됩니다.  
+ 단위에서 메모리를 할당 목록까지 확장 되면서 *nBlockSize* 항목입니다. 메모리 할당에 실패 하면는 `CMemoryException` throw 됩니다.  
   
  다음 표에서 함수를 보여 줍니다 다른 멤버와 유사한 `CObList::CObList`합니다.  
   
@@ -241,7 +241,7 @@ CObList(INT_PTR nBlockSize = 10);
 |[해당 클래스가](../../mfc/reference/cptrlist-class.md)|**해당 클래스가 (INT_PTR** `nBlockSize` **= 10);**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**CStringList (INT_PTR** `nBlockSize` **= 10);**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   다음의 목록을 `CObject`-파생 클래스 `CAge` 모든 컬렉션 예제에서 사용 됩니다.  
   
  [!code-cpp[NVC_MFCCollections#91](../../mfc/codesnippet/cpp/coblist-class_3.h)]  
@@ -260,10 +260,10 @@ POSITION Find(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `searchValue`  
+ *searchValue*  
  이 목록에 항목이 개체 포인터입니다.  
   
- `startAfter`  
+ *startAfter*  
  검색 시작 위치입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -279,24 +279,24 @@ POSITION Find(
 |[해당 클래스가](../../mfc/reference/cptrlist-class.md)|**위치 찾기 (void\***  `searchValue` **, 위치** `startAfter` **= NULL) const;**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**위치 찾기 (LPCTSTR** `searchValue` **, 위치** `startAfter` **= NULL) const;**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](#coblist) 목록은 `CAge` 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#93](../../mfc/codesnippet/cpp/coblist-class_5.cpp)]  
   
 ##  <a name="findindex"></a>  CObList::FindIndex  
- 값을 사용 하 여 `nIndex` 목록의 인덱스입니다.  
+ 값을 사용 하 여 *nIndex* 목록의 인덱스입니다.  
   
 ```  
 POSITION FindIndex(INT_PTR nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  찾을 목록 요소의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- A **위치** 반복 또는 개체 포인터 검색;에 사용할 수 있는 값 **NULL** 경우 `nIndex` 너무 큽니다. (프레임 워크 경우 어설션을 생성 `nIndex` 가 음수입니다.)  
+ A **위치** 반복 또는 개체 포인터 검색;에 사용할 수 있는 값 **NULL** 경우 *nIndex* 너무 큽니다. (프레임 워크를 생성 한 어설션 *nIndex* 음수입니다.)  
   
 ### <a name="remarks"></a>설명  
  중지 목록의 헤드에서 순차적 검색을 시작 하기는 *n*번째 요소입니다.  
@@ -308,7 +308,7 @@ POSITION FindIndex(INT_PTR nIndex) const;
 |[해당 클래스가](../../mfc/reference/cptrlist-class.md)|**FindIndex 위치 (INT_PTR** `nIndex` **) const;**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**FindIndex 위치 (INT_PTR** `nIndex` **) const;**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](#coblist) 목록은 `CAge` 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#94](../../mfc/codesnippet/cpp/coblist-class_6.cpp)]  
@@ -323,7 +323,7 @@ const CObject*& GetAt(POSITION position) const;
   
 ### <a name="parameters"></a>매개 변수  
  *위치*  
- A **위치** 이전에서 반환 된 값 `GetHeadPosition` 또는 **찾을** 멤버 함수 호출 합니다.  
+ A **위치** 이전에서 반환 된 값 `GetHeadPosition` 또는 `Find` 멤버 함수 호출 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  에 대 한 반환 값 설명을 참조 [GetHead](#gethead)합니다.  
@@ -340,7 +340,7 @@ const CObject*& GetAt(POSITION position) const;
 |[해당 클래스가](../../mfc/reference/cptrlist-class.md)|**const void\*& GetAt (위치** *위치* **) const;**<br /><br /> **void\*& GetAt (위치** *위치* **);**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetAt (위치** *위치* **) const;**<br /><br /> **CString & GetAt (위치** *위치* **);**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [FindIndex](#findindex)합니다.  
   
 ##  <a name="getcount"></a>  CObList::GetCount  
@@ -360,7 +360,7 @@ INT_PTR GetCount() const;
 |[해당 클래스가](../../mfc/reference/cptrlist-class.md)|**INT_PTR GetCount( ) const;**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**INT_PTR GetCount( ) const;**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](#coblist) 목록은 `CAge` 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#95](../../mfc/codesnippet/cpp/coblist-class_7.cpp)]  
@@ -388,7 +388,7 @@ const CObject*& GetHead() const;
 |[해당 클래스가](../../mfc/reference/cptrlist-class.md)|**const void\*& GetHead () const; void\*& GetHead ();**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetHead () const; CString & GetHead ();**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](#coblist) 목록은 `CAge` 클래스입니다.  
   
  다음 예제에서는 `GetHead` 대입문의 왼쪽에 있습니다.  
@@ -412,13 +412,13 @@ POSITION GetHeadPosition() const;
 |[해당 클래스가](../../mfc/reference/cptrlist-class.md)|**Const; GetHeadPosition ()를 배치 합니다.**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**Const; GetHeadPosition ()를 배치 합니다.**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](#coblist) 목록은 `CAge` 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#97](../../mfc/codesnippet/cpp/coblist-class_9.cpp)]  
   
 ##  <a name="getnext"></a>  CObList::GetNext  
- 로 식별 되는 목록 요소를 가져옵니다 `rPosition`, 다음 설정 `rPosition` 에 `POSITION` 목록에서 다음 항목의 값입니다.  
+ 로 식별 되는 목록 요소를 가져옵니다 *rPosition*, 다음 설정 *rPosition* 에 `POSITION` 목록에서 다음 항목의 값입니다.  
   
 ```  
 CObject*& GetNext(POSITION& rPosition);  
@@ -426,7 +426,7 @@ const CObject* GetNext(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rPosition`  
+ *rPosition*  
  에 대 한 참조는 `POSITION` 이전에서 반환 된 값 `GetNext`, `GetHeadPosition`, 또는 기타 멤버 함수 호출 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -437,7 +437,7 @@ const CObject* GetNext(POSITION& rPosition) const;
   
  확인 해야 하면 `POSITION` 값 목록에서 올바른 위치를 나타냅니다. 유효 하지 않으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다.  
   
- 검색된 된 요소는 목록에서 마지막 다음 새 값의 경우 `rPosition` 로 설정 된 `NULL`합니다.  
+ 검색된 된 요소는 목록에서 마지막 다음 새 값의 경우 *rPosition* 로 설정 된 `NULL`합니다.  
   
  반복 하는 동안 요소를 제거 하는 것이 불가능 합니다. 예를 참조 [RemoveAt](#removeat)합니다.  
   
@@ -451,7 +451,7 @@ const CObject* GetNext(POSITION& rPosition) const;
 |[해당 클래스가](../../mfc/reference/cptrlist-class.md)|`void*& GetNext( POSITION&` `rPosition` `);`<br /><br /> `const void* GetNext( POSITION&` `rPosition` `) const;`|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|`CString& GetNext( POSITION&` `rPosition` `);`<br /><br /> `const CString& GetNext( POSITION&` `rPosition` `) const;`|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   참조 [CObList::CObList](#coblist) 목록은 `CAge` 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#98](../../mfc/codesnippet/cpp/coblist-class_10.cpp)]  
@@ -463,7 +463,7 @@ const CObject* GetNext(POSITION& rPosition) const;
  `a CAge at $46C0 21`  
   
 ##  <a name="getprev"></a>  CObList::GetPrev  
- 로 식별 되는 목록 요소를 가져옵니다 `rPosition`, 다음 설정 `rPosition` 에 `POSITION` 목록에서 이전 항목의 값입니다.  
+ 로 식별 되는 목록 요소를 가져옵니다 *rPosition*, 다음 설정 *rPosition* 에 `POSITION` 목록에서 이전 항목의 값입니다.  
   
 ```  
 CObject*& GetPrev(POSITION& rPosition);  
@@ -471,7 +471,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rPosition`  
+ *rPosition*  
  에 대 한 참조는 `POSITION` 이전에서 반환 된 값 `GetPrev` 또는 다른 멤버 함수 호출 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -494,7 +494,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
 |[해당 클래스가](../../mfc/reference/cptrlist-class.md)|`void*& GetPrev( POSITION&` `rPosition` `);`<br /><br /> `const void* GetPrev( POSITION&` `rPosition` `) const;`|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|`CString& GetPrev( POSITION&` `rPosition` `);`<br /><br /> `const CString& GetPrev( POSITION&` `rPosition` `) const;`|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   참조 [CObList::CObList](#coblist) 목록은 `CAge` 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#99](../../mfc/codesnippet/cpp/coblist-class_11.cpp)]  
@@ -525,7 +525,7 @@ INT_PTR GetSize() const;
 |[해당 클래스가](../../mfc/reference/cptrlist-class.md)|**INT_PTR GetSize( ) const;**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**INT_PTR GetSize( ) const;**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](#coblist) 목록은 `CAge` 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#100](../../mfc/codesnippet/cpp/coblist-class_12.cpp)]  
@@ -551,7 +551,7 @@ const CObject*& GetTail() const;
 |[해당 클래스가](../../mfc/reference/cptrlist-class.md)|**const void\*& GetTail () const; void\*& GetTail ();**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetTail () const; CString & GetTail ();**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](#coblist) 목록은 `CAge` 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#101](../../mfc/codesnippet/cpp/coblist-class_13.cpp)]  
@@ -573,7 +573,7 @@ POSITION GetTailPosition() const;
 |[해당 클래스가](../../mfc/reference/cptrlist-class.md)|**Const; GetTailPosition ()를 배치 합니다.**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**Const; GetTailPosition ()를 배치 합니다.**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](#coblist) 목록은 `CAge` 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#102](../../mfc/codesnippet/cpp/coblist-class_14.cpp)]  
@@ -589,7 +589,7 @@ POSITION InsertAfter(
   
 ### <a name="parameters"></a>매개 변수  
  *위치*  
- 이전 **,** 또는 `GetNext`Find `GetPrev`멤버 함수 호출에서 반환된 **POSITION** 값입니다.  
+ A **위치** 이전에서 반환 된 값 `GetNext`, `GetPrev`, 또는 `Find` 멤버 함수 호출 합니다.  
   
  `newElement`  
  이 목록에 추가할 개체 포인터입니다.  
@@ -604,7 +604,7 @@ POSITION InsertAfter(
 ### <a name="return-value"></a>반환 값  
  A **위치** 동일한 값으로는 *위치* 매개 변수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   참조 [CObList::CObList](#coblist) 목록은 `CAge` 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#103](../../mfc/codesnippet/cpp/coblist-class_15.cpp)]  
@@ -630,9 +630,9 @@ POSITION InsertBefore(
   
 ### <a name="parameters"></a>매개 변수  
  *위치*  
- 이전 **,** 또는 `GetNext`Find `GetPrev`멤버 함수 호출에서 반환된 **POSITION** 값입니다.  
+ A **위치** 이전에서 반환 된 값 `GetNext`, `GetPrev`, 또는 `Find` 멤버 함수 호출 합니다.  
   
- `newElement`  
+ *newElement*  
  이 목록에 추가할 개체 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -645,7 +645,7 @@ POSITION InsertBefore(
 |[해당 클래스가](../../mfc/reference/cptrlist-class.md)|**위치 InsertBefore (위치** *위치* **, void\***  `newElement` **);**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**위치 InsertBefore (위치** *위치* **, const CString &** `newElement` **);**<br /><br /> **위치 InsertBefore (위치** *위치* **, LPCTSTR** `newElement` **);**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   참조 [CObList::CObList](#coblist) 목록은 `CAge` 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#104](../../mfc/codesnippet/cpp/coblist-class_16.cpp)]  
@@ -677,7 +677,7 @@ BOOL IsEmpty() const;
 |[해당 클래스가](../../mfc/reference/cptrlist-class.md)|**BOOL IsEmpty( ) const;**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**BOOL IsEmpty( ) const;**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [RemoveAll](#removeall)합니다.  
   
 ##  <a name="removeall"></a>  CObList::RemoveAll  
@@ -699,7 +699,7 @@ void RemoveAll();
 |[해당 클래스가](../../mfc/reference/cptrlist-class.md)|**void RemoveAll( );**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**void RemoveAll( );**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](#coblist) 목록은 `CAge` 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#105](../../mfc/codesnippet/cpp/coblist-class_17.cpp)]  
@@ -727,7 +727,7 @@ void RemoveAt(POSITION position);
 |[해당 클래스가](../../mfc/reference/cptrlist-class.md)|**RemoveAt void (위치** *위치* **);**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**RemoveAt void (위치** *위치* **);**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   목록 반복 하는 동안 요소를 제거할 때는 주의 해야 합니다. 다음 예에서는 유효한을 보장 하는 제거 기술 **위치** 값 [GetNext](#getnext)합니다.  
   
  참조 [CObList::CObList](#coblist) 목록은 `CAge` 클래스입니다.  
@@ -762,7 +762,7 @@ CObject* RemoveHead();
 |[해당 클래스가](../../mfc/reference/cptrlist-class.md)|**void\* RemoveHead ();**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveHead ();**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](#coblist) 목록은 `CAge` 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#107](../../mfc/codesnippet/cpp/coblist-class_19.cpp)]  
@@ -787,7 +787,7 @@ CObject* RemoveTail();
 |[해당 클래스가](../../mfc/reference/cptrlist-class.md)|**void\* RemoveTail ();**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveTail ();**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](#coblist) 목록은 `CAge` 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#108](../../mfc/codesnippet/cpp/coblist-class_20.cpp)]  
@@ -802,10 +802,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pos`  
+ *pos*  
  **위치** 설정할 요소입니다.  
   
- `newElement`  
+ *newElement*  
  `CObject` 목록에 쓸 수에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -820,7 +820,7 @@ void SetAt(
 |[해당 클래스가](../../mfc/reference/cptrlist-class.md)|**SetAt void (위치** `pos` **, const CString &** `newElement` **);**|  
 |[CStringList](../../mfc/reference/cstringlist-class.md)|**SetAt void (위치** `pos` **, LPCTSTR** `newElement` **);**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   참조 [CObList::CObList](#coblist) 목록은 `CAge` 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#109](../../mfc/codesnippet/cpp/coblist-class_21.cpp)]  

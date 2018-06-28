@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 73a3bb877bec385a9f7e56191286c9b560da8610
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: afd30c9f27d83e7d4cfaf9b993b258b069f73dc4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378828"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039234"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton 클래스
 `CMFCButton` 클래스에 새로운 기능이 추가 된 [CButton](../../mfc/reference/cbutton-class.md) 단추 텍스트 정렬, 단추 텍스트 및 이미지 결합, 커서 선택, 도구 설명 지정 등 클래스입니다.  
@@ -163,7 +163,7 @@ class CMFCButton : public CButton
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCButton::m_bDrawFocus](#m_bdrawfocus)|단추 주위에 포커스 영역을 그릴 것인지를 나타냅니다.|  
 |[CMFCButton::m_bHighlightChecked](#m_bhighlightchecked)|커서를 위로 이동할 때 BS_CHECKBOX 스타일의 단추를 강조 표시 여부를 나타냅니다.|  
@@ -181,7 +181,7 @@ class CMFCButton : public CButton
   
  대화 상자 응용 프로그램에서 알림 메시지를 처리 하려면 메시지 맵 항목 및 각 알림에 대 한 이벤트 처리기를 추가 합니다. 보낸 알림의 `CMFCButton` 개체에서 보낸 것과 동일 하 게 되는 `CButton` 개체입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는에서 다양 한 메서드를 사용 하 여 단추의 속성을 구성 하는 `CMFCButton` 클래스입니다. 이 예제에서는의 일부인는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
@@ -218,7 +218,7 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bOn`  
+ [in] *bOn*  
  `TRUE` 모든 텍스트에 표시 하려면 `FALSE` 텍스트 표시할 잘립니다.  
   
 ### <a name="remarks"></a>설명  
@@ -233,10 +233,10 @@ void EnableMenuFont(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bOn`  
+ [in] *bOn*  
  `TRUE` 단추 텍스트 글꼴;으로 응용 프로그램 메뉴 글꼴을 사용 하려면 `FALSE` 시스템 글꼴 크기를 사용 합니다. 기본값은 `TRUE`입니다.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` 화면을 즉시 다시 그리게 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -250,7 +250,7 @@ static void EnableWindowsTheming(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` 단추 테두리를 그리는 데 현재 Windows 테마를 사용 하려면 `FALSE` Windows 테마를 사용 하지 않도록 합니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -456,7 +456,7 @@ FlatStyle  m_nFlatStyle;
   
  `CMFCButton` 생성자에는이 멤버를 초기화 합니다. `BUTTONSTYLE_3D`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는의 값을 설정 하는 `m_nFlatStyle` 에서 멤버 변수는 `CMFCButton` 클래스. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
@@ -473,13 +473,13 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  단추를 제한 하는 사각형에 대 한 참조입니다.  
   
- [in] `uiState`  
+ [in] *uiState*  
  현재 단추 상태입니다. 자세한 내용은 참조는 `itemState` 의 멤버는 [DRAWITEMSTRUCT 구조체](../../mfc/reference/drawitemstruct-structure.md) 항목입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -496,13 +496,13 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  단추를 제한 하는 사각형에 대 한 참조입니다.  
   
- [in] `uiState`  
+ [in] *uiState*  
  현재 단추 상태입니다. 자세한 내용은 참조는 `itemState` 의 멤버는 [DRAWITEMSTRUCT 구조체](../../mfc/reference/drawitemstruct-structure.md) 항목입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -518,10 +518,10 @@ virtual void OnDrawFocusRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  단추를 제한 하는 사각형에 대 한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -540,19 +540,19 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  단추를 제한 하는 사각형에 대 한 참조입니다.  
   
- [in] `strText`  
+ [in] *strText*  
  그릴 텍스트입니다.  
   
- [in] `uiDTFlags`  
- 텍스트의 서식을 지정 하는 방법을 지정 하는 플래그입니다. 자세한 내용은 참조는 `nFormat` 의 매개 변수는 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) 메서드.  
+ [in] *uiDTFlags*  
+ 텍스트의 서식을 지정 하는 방법을 지정 하는 플래그입니다. 자세한 내용은 참조는 *nFormat* 의 매개 변수는 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext) 메서드.  
   
- [in] `uiState`  
+ [in] *uiState*  
  (예약 됨.)  
   
 ### <a name="remarks"></a>설명  
@@ -568,10 +568,10 @@ virtual void OnFillBackground(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  단추를 제한 하는 사각형에 대 한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -585,7 +585,7 @@ virtual CFont* SelectFont(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -601,11 +601,11 @@ void SetAutorepeatMode(int nTimeDelay=500);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nTimeDelay`  
+ [in] *nTimeDelay*  
  부모 창에 전송 된 메시지 간의 간격을 지정 하는 음수가 아닌 숫자 기본값은 500 밀리초 하는 간격 밀리초 단위로 측정 됩니다. 자동 반복 메시지 모드를 사용 하지 않도록 설정 하려면 0을 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드를 사용 하면 지속적으로 메시지를 보내는 WM_COMMAND 부모 창에는 단추를 놓을 때까지 단추 또는 `nTimeDelay` 매개 변수를 0으로 설정 합니다.  
+ 이 메서드를 사용 하면 지속적으로 메시지를 보내는 WM_COMMAND 부모 창에는 단추를 놓을 때까지 단추 또는 *nTimeDelay* 매개 변수를 0으로 설정 합니다.  
   
 ##  <a name="setcheckedimage"></a>  CMFCButton::SetCheckedImage  
  이미지 선택된 단추를 설정합니다.  
@@ -634,40 +634,40 @@ void SetCheckedImage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `hIcon`  
+ [in] *hIcon*  
  비트맵 및 새 이미지에 대 한 마스크를 포함 하는 아이콘에 대 한 핸들입니다.  
   
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  `TRUE` 비트맵 리소스가 자동으로; 소멸 되도록 지정 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
   
- [in] `hIconHot`  
+ [in] *hIconHot*  
  선택 된 상태에 대 한 이미지를 포함 하는 아이콘에 대 한 핸들입니다.  
   
- [in] `hBitmap`  
+ [in] *hBitmap*  
  선택 되지 않은 상태에 대 한 이미지를 포함 하는 비트맵에 대 한 핸들입니다.  
   
- [in] `hBitmapHot`  
+ [in] *hBitmapHot*  
  선택 된 상태에 대 한 이미지를 포함 하는 비트맵에 대 한 핸들입니다.  
   
- [in] `bMap3dColors`  
+ [in] *bMap3dColors*  
  단추 배경;에 대 한 투명 한 색을 지정합니다. 즉, 단추 모양을 합니다. `TRUE` (192, 192, 192); RGB 색 값을 사용 하려면 `FALSE` 에 정의 된 색 값을 사용 하도록 `AFX_GLOBAL_DATA::clrBtnFace`합니다.  
   
- [in] `uiBmpResId`  
+ [in] *uiBmpResId*  
  선택 되지 않은 이미지에 대 한 리소스 ID입니다.  
   
- [in] `uiBmpHotResId`  
+ [in] *uiBmpHotResId*  
  선택한 이미지에 대 한 리소스 ID입니다.  
   
- [in] `hIconDisabled`  
+ [in] *hIconDisabled*  
  사용 하지 않는 이미지에 대 한 아이콘에 대 한 핸들입니다.  
   
- [in] `hBitmapDisabled`  
+ [in] *hBitmapDisabled*  
  사용할 수 없는 이미지를 포함 하는 비트맵에 대 한 핸들입니다.  
   
- [in] `uiBmpDsblResID`  
+ [in] *uiBmpDsblResID*  
  비활성화 된 비트맵의 리소스 ID입니다.  
   
- [in] `bAlphaBlend`  
+ [in] *bAlphaBlend*  
  `TRUE` 알파 채널;를 사용 하는 유일한 32 비트 이미지를 사용 하려면 `FALSE`, 알파 채널 이미지만 사용 하지 않도록 합니다. 기본값은 `FALSE`입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -682,10 +682,10 @@ void SetFaceColor(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `crFace`  
+ [in] *crFace*  
  RGB 색상 값입니다.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  `TRUE` 화면을 즉시 다시 그리게 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -718,45 +718,45 @@ void SetImage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `hIcon`  
+ [in] *hIcon*  
  비트맵 및 새 이미지에 대 한 마스크를 포함 하는 아이콘에 대 한 핸들입니다.  
   
- [in] `bAutoDestroy`  
+ [in] *bAutoDestroy*  
  `TRUE` 비트맵 리소스가 자동으로; 소멸 되도록 지정 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `TRUE`입니다.  
   
- [in] `hIconHot`  
+ [in] *hIconHot*  
  선택 된 상태에 대 한 이미지를 포함 하는 아이콘에 대 한 핸들입니다.  
   
- [in] `hBitmap`  
+ [in] *hBitmap*  
  선택 되지 않은 상태에 대 한 이미지를 포함 하는 비트맵에 대 한 핸들입니다.  
   
- [in] `hBitmapHot`  
+ [in] *hBitmapHot*  
  선택 된 상태에 대 한 이미지를 포함 하는 비트맵에 대 한 핸들입니다.  
   
- [in] `uiBmpResId`  
+ [in] *uiBmpResId*  
  선택 되지 않은 이미지에 대 한 리소스 ID입니다.  
   
- [in] `uiBmpHotResId`  
+ [in] *uiBmpHotResId*  
  선택한 이미지에 대 한 리소스 ID입니다.  
   
- [in] `bMap3dColors`  
+ [in] *bMap3dColors*  
  단추 배경;에 대 한 투명 한 색을 지정합니다. 즉, 단추 모양을 합니다. `TRUE` (192, 192, 192); RGB 색 값을 사용 하려면 `FALSE` 에 정의 된 색 값을 사용 하도록 `AFX_GLOBAL_DATA::clrBtnFace`합니다.  
   
- [in] `hIconDisabled`  
+ [in] *hIconDisabled*  
  사용 하지 않는 이미지에 대 한 아이콘에 대 한 핸들입니다.  
   
- [in] `hBitmapDisabled`  
+ [in] *hBitmapDisabled*  
  사용할 수 없는 이미지를 포함 하는 비트맵에 대 한 핸들입니다.  
   
- [in] `uiBmpDsblResID`  
+ [in] *uiBmpDsblResID*  
  비활성화 된 비트맵의 리소스 ID입니다.  
   
- [in] `bAlphaBlend`  
+ [in] *bAlphaBlend*  
  `TRUE` 알파 채널;를 사용 하는 유일한 32 비트 이미지를 사용 하려면 `FALSE`, 알파 채널 이미지만 사용 하지 않도록 합니다. 기본값은 `FALSE`입니다.  
   
 ### <a name="remarks"></a>설명  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 다양 한 버전을 사용 하는 `SetImage` 에서 메서드는 `CMFCButton` 클래스입니다. 이 예제에서는의 일부인는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
@@ -770,13 +770,13 @@ void SetMouseCursor(HCURSOR hcursor);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `hcursor`  
+ [in] *hcursor*  
  커서의 핸들입니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드를 사용 하 여 단추와 같은 손 모양 커서는 커서 이미지를 연결 합니다. 커서는 응용 프로그램 리소스에서 로드 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 사용 하는 `SetMouseCursor` 에서 메서드는 `CMFCButton` 클래스. 이 예제에 있는 코드의 일부인는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]  
@@ -803,13 +803,13 @@ void SetStdImage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `id`  
+ [in] *id*  
  에 정의 되어 있는 단추 이미지 식별자 중 하나는 `CMenuImage::IMAGES_IDS` 열거형입니다. 이미지 값 화살표, pin, 및 라디오 단추와 같은 이미지를 지정합니다.  
   
- [in] `state`  
+ [in] *상태*  
  에 정의 되어 있는 단추 이미지 상태 식별자 중 하나는 `CMenuImages::IMAGE_STATE` 열거형입니다. 이미지 상태로 black, 회색, 밝은 회색 흰색 및 어두운 회색 등 단추 색을 지정합니다. 기본값은 `CMenuImages::ImageBlack`입니다.  
   
- [in] `idDisabled`  
+ [in] *idDisabled*  
  에 정의 되어 있는 단추 이미지 식별자 중 하나는 `CMenuImage::IMAGES_IDS` 열거형입니다. 이미지는 단추가 비활성화 되 나타냅니다. 기본값은 첫 번째 단추 이미지 ( `CMenuImages::IdArrowDown`).  
   
 ### <a name="remarks"></a>설명  
@@ -822,7 +822,7 @@ void SetTextColor(COLORREF clrText);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `clrText`  
+ [in] *clrText*  
  RGB 색상 값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -835,7 +835,7 @@ void SetTextHotColor(COLORREF clrTextHot);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `clrTextHot`  
+ [in] *clrTextHot*  
  RGB 색상 값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -848,7 +848,7 @@ void SetTooltip(LPCTSTR lpszToolTipText);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszToolTipText`  
+ [in] *lpszToolTipText*  
  도구 설명 텍스트에 대 한 포인터입니다. 도구 설명을 사용 하지 않도록 설정 하려면 NULL을 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -861,7 +861,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly=FALSE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bCalcOnly`  
+ [in] *bCalcOnly*  
  `TRUE` 계산을 변경 하지 단추의 새 크기 않고 `FALSE` 단추의 크기를 변경 합니다. 기본값은 `FALSE`입니다.  
   
 ### <a name="return-value"></a>반환 값  

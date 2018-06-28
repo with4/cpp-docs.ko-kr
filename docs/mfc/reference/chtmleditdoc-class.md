@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de452365a02b69798c62e2eecfd8051afcf08bb8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86d8cf9b3011865fac58515fb3429a363dd5946f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366973"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038961"
 ---
 # <a name="chtmleditdoc-class"></a>CHtmlEditDoc 클래스
 와 [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), MFC 문서 뷰 아키텍처 컨텍스트 내에서 WebBrowser 편집 플랫폼의 기능을 제공 합니다.  
@@ -100,7 +100,7 @@ virtual BOOL OpenURL(LPCTSTR lpszURL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszURL`  
+ *lpszURL*  
  열려는 URL입니다.  
   
 ### <a name="return-value"></a>반환 값  

@@ -174,12 +174,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89a277293cd4b192af0a8a069b82b1b1614490a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 69836eb254b23c05f2405c8f11b55a6d6293a9cb
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378763"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039338"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem 클래스
 OLE 항목에 대한 컨테이너 인터페이스를 정의합니다.  
@@ -323,7 +323,7 @@ void Activate(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nVerb`  
+ *nVerb*  
  실행 하는 동사를 지정 합니다. 다음 중 하나일 수 있습니다.  
   
 |값|의미|기호|  
@@ -336,21 +336,21 @@ void Activate(
   
  일반적으로-1 값은 다른 동사에 대 한 별칭입니다. 편집 열고 지원 되지 않는 경우-2가-1과 같습니다. 추가 값에 대 한 참조 [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows sdk에서입니다.  
   
- `pView`  
+ *pView*  
  OLE 항목; 포함 하는 컨테이너 보기 창에 대 한 포인터 내부 활성화에 대 한 서버 응용 프로그램에서 사용 됩니다. 이 매개 변수 여야 **NULL** 컨테이너에는 내부 활성화를 지원 하지 않는 경우.  
   
- `lpMsg`  
+ *lpMsg*  
  항목을 활성화할 수를 발생 시킨 메시지에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수 때문에 서버 응용 프로그램이 Microsoft Foundation Class 라이브러리를 사용 하 여 작성 된 경우는 [OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb) 멤버 함수는 해당 `COleServerItem` 실행할 개체입니다.  
   
- 기본 동사는 편집 및 0에 지정 된 경우는 `nVerb` OLE 항목을 편집할 수 있도록 매개 변수를 서버 응용 프로그램이 시작 됩니다. 컨테이너 응용 프로그램에는 내부 활성화를 지 원하는 경우 편집 가능 위치에 합니다. 컨테이너에는 내부 활성화 (또는 Open 동사를 지정 하는 경우)를 지원 하지 않습니다 서버가 별도 창에서 시작 되 고 편집 할 수 있습니다. 컨테이너 응용 프로그램의 사용자 OLE 항목에 기본 동사에 대 한 값을가 하는 경우 일반적으로 `nVerb` 매개 변수는 사용자가 수행할 수 있는 작업을 결정 합니다. 그러나 서버에서 하나의 작업을 지 원하는 경우 걸리는 상관 없이 값에 지정 된 해당 작업은 `nVerb` 매개 변수입니다.  
+ 기본 동사는 편집 및 0에 지정 된 경우는 *nVerb* OLE 항목을 편집할 수 있도록 매개 변수를 서버 응용 프로그램이 시작 됩니다. 컨테이너 응용 프로그램에는 내부 활성화를 지 원하는 경우 편집 가능 위치에 합니다. 컨테이너에는 내부 활성화 (또는 Open 동사를 지정 하는 경우)를 지원 하지 않습니다 서버가 별도 창에서 시작 되 고 편집 할 수 있습니다. 컨테이너 응용 프로그램의 사용자 OLE 항목에 기본 동사에 대 한 값을가 하는 경우 일반적으로 *nVerb* 매개 변수는 사용자가 수행할 수 있는 작업을 결정 합니다. 그러나 서버에서 하나의 작업을 지 원하는 경우 걸리는 상관 없이 값에 지정 된 해당 작업의 *nVerb* 매개 변수입니다.  
   
  자세한 내용은 참조 [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows sdk에서입니다.  
   
 ##  <a name="activateas"></a>  COleClientItem::ActivateAs  
- OLE의 개체 변환 기능을 사용 하 여 지정 된 형식의 항목 것 처럼는 항목을 활성화 하 `clsidNew`합니다.  
+ OLE의 개체 변환 기능을 사용 하 여 지정 된 형식의 항목 것 처럼는 항목을 활성화 하 *clsidNew*합니다.  
   
 ```  
 virtual BOOL ActivateAs(
@@ -366,7 +366,7 @@ virtual BOOL ActivateAs(
  *clsidOld*  
  항목의 현재 클래스에 대 한 id입니다. 클래스 ID를 나타내야 실제 개체의 유형을 저장 시, 하지 않은 경우 링크 합니다. 이 경우 링크를 참조 하는 항목의 CLSID 이어야 합니다. [COleConvertDialog](../../mfc/reference/coleconvertdialog-class.md) 항목에 대해 올바른 클래스 ID가 자동으로 제공 합니다.  
   
- `clsidNew`  
+ *clsidNew*  
  대상 클래스 ID에 대 한 참조  
   
 ### <a name="return-value"></a>반환 값  
@@ -409,7 +409,7 @@ static BOOL PASCAL CanCreateFromData(const COleDataObject* pDataObject);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDataObject`  
+ *pDataObject*  
  에 대 한 포인터는 [COleDataObject](../../mfc/reference/coledataobject-class.md) 개체를 OLE 항목을 만들어야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -430,7 +430,7 @@ static BOOL PASCAL CanCreateLinkFromData(const COleDataObject* pDataObject);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDataObject`  
+ *pDataObject*  
  에 대 한 포인터는 [COleDataObject](../../mfc/reference/coledataobject-class.md) 개체를 OLE 항목을 만들어야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -477,7 +477,7 @@ void Close(OLECLOSE dwCloseOption = OLECLOSE_SAVEIFDIRTY);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwCloseOption`  
+ *dwCloseOption*  
  OLE 항목 로드 된 상태로 돌아오면 어떤 상황에서 저장을 지정 하는 플래그입니다. 다음 값 중 하나일 수 있습니다.  
   
 - `OLECLOSE_SAVEIFDIRTY` OLE 항목을 저장 합니다.  
@@ -499,7 +499,7 @@ COleClientItem(COleDocument* pContainerDoc = NULL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pContainerDoc`  
+ *pContainerDoc*  
  이 항목에 포함 될 컨테이너 문서에 대 한 포인터입니다. 하나일 수 있습니다이 [COleDocument](../../mfc/reference/coledocument-class.md) 파생 클래스입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -528,14 +528,14 @@ COleClientItem(COleDocument* pContainerDoc = NULL);
 - [CreateCloneFrom](#createclonefrom)  
   
 ##  <a name="convertto"></a>  COleClientItem::ConvertTo  
- 이 멤버 함수를 호출 하 여 지정 된 형식과 항목 변환 `clsidNew`합니다.  
+ 이 멤버 함수를 호출 하 여 지정 된 형식과 항목 변환 *clsidNew*합니다.  
   
 ```  
 virtual BOOL ConvertTo(REFCLSID clsidNew);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `clsidNew`  
+ *clsidNew*  
  대상 종류의 클래스 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -552,7 +552,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bIncludeLink`  
+ *bIncludeLink*  
  **True 이면** 링크 정보를 클립보드로 복사할지, 링크 된 항목을 붙여 넣은 바꿀 필요가 없으면 허용 **FALSE**합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -591,11 +591,11 @@ BOOL CreateFromClipboard(
  *렌더링*  
  서버에서 OLE 항목을 렌더링 되는 방식을 지정 하는 플래그입니다. 가능한 값에 대 한 참조 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows sdk에서입니다.  
   
- `cfFormat`  
+ *cfFormat*  
  OLE 항목을 만드는 경우 캐시 되도록 클립보드 데이터 형식을 지정 합니다.  
   
- `lpFormatEtc`  
- 에 대 한 포인터는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 경우 사용 되는 구조 *렌더링* 은 **OLERENDER_FORMAT** 또는 **OLERENDER_DRAW**합니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우에이 매개 변수의 값을 제공 `cfFormat`합니다. 이 매개 변수를 생략 하면 기본 값의 다른 필드에 사용 됩니다는 **FORMATETC** 구조입니다.  
+ *lpFormatEtc*  
+ 에 대 한 포인터는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 경우 사용 되는 구조 *렌더링* 은 **OLERENDER_FORMAT** 또는 **OLERENDER_DRAW**합니다. 로 지정 된 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우에이 매개 변수의 값을 제공 *cfFormat*합니다. 이 매개 변수를 생략 하면 기본 값의 다른 필드에 사용 됩니다는 **FORMATETC** 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
@@ -617,17 +617,17 @@ BOOL CreateFromData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDataObject`  
+ *pDataObject*  
  에 대 한 포인터는 [COleDataObject](../../mfc/reference/coledataobject-class.md) 개체를 OLE 항목을 만들어야 합니다.  
   
  *렌더링*  
  서버에서 OLE 항목을 렌더링 되는 방식을 지정 하는 플래그입니다. 가능한 값에 대 한 참조 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows sdk에서입니다.  
   
- `cfFormat`  
+ *cfFormat*  
  OLE 항목을 만드는 경우 캐시 되도록 클립보드 데이터 형식을 지정 합니다.  
   
- `lpFormatEtc`  
- 에 대 한 포인터는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 경우 사용 되는 구조 *렌더링* 은 **OLERENDER_FORMAT** 또는 **OLERENDER_DRAW**합니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우에이 매개 변수의 값을 제공 `cfFormat`합니다. 이 매개 변수를 생략 하면 기본 값의 다른 필드에 사용 됩니다는 **FORMATETC** 구조입니다.  
+ *lpFormatEtc*  
+ 에 대 한 포인터는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 경우 사용 되는 구조 *렌더링* 은 **OLERENDER_FORMAT** 또는 **OLERENDER_DRAW**합니다. 로 지정 된 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우에이 매개 변수의 값을 제공 *cfFormat*합니다. 이 매개 변수를 생략 하면 기본 값의 다른 필드에 사용 됩니다는 **FORMATETC** 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
@@ -650,20 +650,20 @@ BOOL CreateFromFile(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszFileName`  
+ *lpszFileName*  
  OLE 항목 만들 파일의 이름에 대 한 포인터입니다.  
   
- `clsid`  
+ *clsid*  
  나중에 사용하기 위해 예약되어 있습니다.  
   
  *렌더링*  
  서버에서 OLE 항목을 렌더링 되는 방식을 지정 하는 플래그입니다. 가능한 값에 대 한 참조 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows sdk에서입니다.  
   
- `cfFormat`  
+ *cfFormat*  
  OLE 항목을 만드는 경우 캐시 되도록 클립보드 데이터 형식을 지정 합니다.  
   
- `lpFormatEtc`  
- 에 대 한 포인터는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 경우 사용 되는 구조 *렌더링* 은 **OLERENDER_FORMAT** 또는 **OLERENDER_DRAW**합니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우에이 매개 변수의 값을 제공 `cfFormat`합니다. 이 매개 변수를 생략 하면 기본 값의 다른 필드에 사용 됩니다는 **FORMATETC** 구조입니다.  
+ *lpFormatEtc*  
+ 에 대 한 포인터는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 경우 사용 되는 구조 *렌더링* 은 **OLERENDER_FORMAT** 또는 **OLERENDER_DRAW**합니다. 로 지정 된 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우에이 매개 변수의 값을 제공 *cfFormat*합니다. 이 매개 변수를 생략 하면 기본 값의 다른 필드에 사용 됩니다는 **FORMATETC** 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
@@ -687,11 +687,11 @@ BOOL CreateLinkFromClipboard(
  *렌더링*  
  서버에서 OLE 항목을 렌더링 되는 방식을 지정 하는 플래그입니다. 가능한 값에 대 한 참조 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows sdk에서입니다.  
   
- `cfFormat`  
+ *cfFormat*  
  OLE 항목을 만드는 경우 캐시 되도록 클립보드 데이터 형식을 지정 합니다.  
   
- `lpFormatEtc`  
- 에 대 한 포인터는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 경우 사용 되는 구조 *렌더링* 은 **OLERENDER_FORMAT** 또는 **OLERENDER_DRAW**합니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우에이 매개 변수의 값을 제공 `cfFormat`합니다. 이 매개 변수를 생략 하면 기본 값의 다른 필드에 사용 됩니다는 **FORMATETC** 구조입니다.  
+ *lpFormatEtc*  
+ 에 대 한 포인터는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 경우 사용 되는 구조 *렌더링* 은 **OLERENDER_FORMAT** 또는 **OLERENDER_DRAW**합니다. 로 지정 된 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우에이 매개 변수의 값을 제공 *cfFormat*합니다. 이 매개 변수를 생략 하면 기본 값의 다른 필드에 사용 됩니다는 **FORMATETC** 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
@@ -713,17 +713,17 @@ BOOL CreateLinkFromData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDataObject`  
+ *pDataObject*  
  에 대 한 포인터는 [COleDataObject](../../mfc/reference/coledataobject-class.md) 개체를 OLE 항목을 만들어야 합니다.  
   
  *렌더링*  
  서버에서 OLE 항목을 렌더링 되는 방식을 지정 하는 플래그입니다. 가능한 값에 대 한 참조 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows sdk에서입니다.  
   
- `cfFormat`  
+ *cfFormat*  
  OLE 항목을 만드는 경우 캐시 되도록 클립보드 데이터 형식을 지정 합니다.  
   
- `lpFormatEtc`  
- 에 대 한 포인터는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 경우 사용 되는 구조 *렌더링* 은 **OLERENDER_FORMAT** 또는 **OLERENDER_DRAW**합니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우에이 매개 변수의 값을 제공 `cfFormat`합니다. 이 매개 변수를 생략 하면 기본 값의 다른 필드에 사용 됩니다는 **FORMATETC** 구조입니다.  
+ *lpFormatEtc*  
+ 에 대 한 포인터는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 경우 사용 되는 구조 *렌더링* 은 **OLERENDER_FORMAT** 또는 **OLERENDER_DRAW**합니다. 로 지정 된 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우에이 매개 변수의 값을 제공 *cfFormat*합니다. 이 매개 변수를 생략 하면 기본 값의 다른 필드에 사용 됩니다는 **FORMATETC** 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
@@ -745,17 +745,17 @@ BOOL CreateLinkFromFile(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszFileName`  
+ *lpszFileName*  
  OLE 항목 만들 파일의 이름에 대 한 포인터입니다.  
   
  *렌더링*  
  서버에서 OLE 항목을 렌더링 되는 방식을 지정 하는 플래그입니다. 가능한 값에 대 한 참조 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows sdk에서입니다.  
   
- `cfFormat`  
+ *cfFormat*  
  OLE 항목을 만드는 경우 캐시 되도록 클립보드 데이터 형식을 지정 합니다.  
   
- `lpFormatEtc`  
- 에 대 한 포인터는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 경우 사용 되는 구조 *렌더링* 은 **OLERENDER_FORMAT** 또는 **OLERENDER_DRAW**합니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우에이 매개 변수의 값을 제공 `cfFormat`합니다. 이 매개 변수를 생략 하면 기본 값의 다른 필드에 사용 됩니다는 **FORMATETC** 구조입니다.  
+ *lpFormatEtc*  
+ 에 대 한 포인터는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 경우 사용 되는 구조 *렌더링* 은 **OLERENDER_FORMAT** 또는 **OLERENDER_DRAW**합니다. 로 지정 된 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우에이 매개 변수의 값을 제공 *cfFormat*합니다. 이 매개 변수를 생략 하면 기본 값의 다른 필드에 사용 됩니다는 **FORMATETC** 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
@@ -777,17 +777,17 @@ BOOL CreateNewItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `clsid`  
+ *clsid*  
  고유 하 게 만들 OLE 항목의 형식을 식별 하는 ID입니다.  
   
  *렌더링*  
  서버에서 OLE 항목을 렌더링 되는 방식을 지정 하는 플래그입니다. 가능한 값에 대 한 참조 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows sdk에서입니다.  
   
- `cfFormat`  
+ *cfFormat*  
  OLE 항목을 만드는 경우 캐시 되도록 클립보드 데이터 형식을 지정 합니다.  
   
- `lpFormatEtc`  
- 에 대 한 포인터는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 경우 사용 되는 구조 *렌더링* 은 **OLERENDER_FORMAT** 또는 **OLERENDER_DRAW**합니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우에이 매개 변수의 값을 제공 `cfFormat`합니다. 이 매개 변수를 생략 하면 기본 값의 다른 필드에 사용 됩니다는 **FORMATETC** 구조입니다.  
+ *lpFormatEtc*  
+ 에 대 한 포인터는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 경우 사용 되는 구조 *렌더링* 은 **OLERENDER_FORMAT** 또는 **OLERENDER_DRAW**합니다. 로 지정 된 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우에이 매개 변수의 값을 제공 *cfFormat*합니다. 이 매개 변수를 생략 하면 기본 값의 다른 필드에 사용 됩니다는 **FORMATETC** 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
@@ -811,11 +811,11 @@ BOOL CreateStaticFromClipboard(
  *렌더링*  
  서버에서 OLE 항목을 렌더링 되는 방식을 지정 하는 플래그입니다. 가능한 값에 대 한 참조 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows sdk에서입니다.  
   
- `cfFormat`  
+ *cfFormat*  
  OLE 항목을 만드는 경우 캐시 되도록 클립보드 데이터 형식을 지정 합니다.  
   
- `lpFormatEtc`  
- 에 대 한 포인터는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 경우 사용 되는 구조 *렌더링* 은 **OLERENDER_FORMAT** 또는 **OLERENDER_DRAW**합니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우에이 매개 변수의 값을 제공 `cfFormat`합니다. 이 매개 변수를 생략 하면 기본 값의 다른 필드에 사용 됩니다는 **FORMATETC** 구조입니다.  
+ *lpFormatEtc*  
+ 에 대 한 포인터는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 경우 사용 되는 구조 *렌더링* 은 **OLERENDER_FORMAT** 또는 **OLERENDER_DRAW**합니다. 로 지정 된 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우에이 매개 변수의 값을 제공 *cfFormat*합니다. 이 매개 변수를 생략 하면 기본 값의 다른 필드에 사용 됩니다는 **FORMATETC** 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
@@ -837,17 +837,17 @@ BOOL CreateStaticFromData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDataObject`  
+ *pDataObject*  
  에 대 한 포인터는 [COleDataObject](../../mfc/reference/coledataobject-class.md) 개체를 OLE 항목을 만들어야 합니다.  
   
  *렌더링*  
  서버에서 OLE 항목을 렌더링 되는 방식을 지정 하는 플래그입니다. 가능한 값에 대 한 참조 [OLERENDER](http://msdn.microsoft.com/library/windows/desktop/ms691507) Windows sdk에서입니다.  
   
- `cfFormat`  
+ *cfFormat*  
  OLE 항목을 만드는 경우 캐시 되도록 클립보드 데이터 형식을 지정 합니다.  
   
- `lpFormatEtc`  
- 에 대 한 포인터는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 경우 사용 되는 구조 *렌더링* 은 **OLERENDER_FORMAT** 또는 **OLERENDER_DRAW**합니다. 지정한 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우에이 매개 변수의 값을 제공 `cfFormat`합니다. 이 매개 변수를 생략 하면 기본 값의 다른 필드에 사용 됩니다는 **FORMATETC** 구조입니다.  
+ *lpFormatEtc*  
+ 에 대 한 포인터는 [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) 경우 사용 되는 구조 *렌더링* 은 **OLERENDER_FORMAT** 또는 **OLERENDER_DRAW**합니다. 로 지정 된 클립보드 형식 이상의 추가 형식 정보를 지정 하려는 경우에이 매개 변수의 값을 제공 *cfFormat*합니다. 이 매개 변수를 생략 하면 기본 값의 다른 필드에 사용 됩니다는 **FORMATETC** 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
@@ -895,7 +895,7 @@ void Delete(BOOL bAutoDelete = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bAutoDelete`  
+ *bAutoDelete*  
  문서에서 제거할 항목을 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -914,26 +914,26 @@ DROPEFFECT DoDragDrop(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpItemRect`  
+ *lpItemRect*  
  클라이언트 좌표 (픽셀)의 화면에서 항목의 사각형입니다.  
   
- `ptOffset`  
- 오프셋 `lpItemRect` 끌기 당시에 있던 마우스 위치입니다.  
+ *ptOffset*  
+ 오프셋 *lpItemRect* 끌기 당시에 있던 마우스 위치입니다.  
   
- `bIncludeLink`  
+ *bIncludeLink*  
  이 속성을 설정 **TRUE** 클립보드에 데이터 연결을 복사 해야 하는 경우. 로 설정 **FALSE** 서버 응용 프로그램이 링크를 지원 하지 않는 경우.  
   
- `dwEffects`  
+ *dwEffects*  
  끌기 소스에서 끌기 작업의 허용 되는 효과 결정 합니다.  
   
- `lpRectStartDrag`  
+ *lpRectStartDrag*  
  끌기 실제로 시작 위치를 정의 하는 사각형에 대 한 포인터입니다. 자세한 내용은 아래 설명 부분을 참조하십시오.  
   
 ### <a name="return-value"></a>반환 값  
  `DROPEFFECT` 값입니다. 이 경우 `DROPEFFECT_MOVE`, 원래 데이터를 제거 해야 합니다.  
   
 ### <a name="remarks"></a>설명  
- 끌어서 놓기 작업이 즉시 시작 되지 않습니다. 마우스 커서가으로 지정 된 사각형을 벗어날 때까지 기다렸다가 `lpRectStartDrag` 지정 된 기간 (밀리초) 조건이 충족 될 때까지 또는 합니다. 경우 `lpRectStartDrag` 은 **NULL**, 사각형의 크기는 1 픽셀입니다.  
+ 끌어서 놓기 작업이 즉시 시작 되지 않습니다. 마우스 커서가으로 지정 된 사각형을 벗어날 때까지 기다렸다가 *lpRectStartDrag* 지정 된 기간 (밀리초) 조건이 충족 될 때까지 또는 합니다. 경우 *lpRectStartDrag* 은 **NULL**, 사각형의 크기는 1 픽셀입니다.  
   
  레지스트리 키 설정 지연 시간 지정 됩니다. 호출 하 여 지연 시간을 변경할 수 있습니다 [CWinApp::WriteProfileString](../../mfc/reference/cwinapp-class.md#writeprofilestring) 또는 [cwinapp:: Writeprofileint](../../mfc/reference/cwinapp-class.md#writeprofileint)합니다. 지연 시간을 지정 하지 않으면 기본값은 200 밀리초 사용 됩니다. 끌어서 지연 시간을 다음과 같이 저장 됩니다.  
   
@@ -956,7 +956,7 @@ virtual BOOL DoVerb(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nVerb`  
+ *nVerb*  
  실행 하는 동사를 지정 합니다. 다음 중 하나를 포함할 수 있습니다.  
   
 |값|의미|기호|  
@@ -969,10 +969,10 @@ virtual BOOL DoVerb(
   
  일반적으로-1 값은 다른 동사에 대 한 별칭입니다. 편집 열고 지원 되지 않는 경우-2가-1과 같습니다. 추가 값에 대 한 참조 [IOleObject::DoVerb](http://msdn.microsoft.com/library/windows/desktop/ms694508) Windows sdk에서입니다.  
   
- `pView`  
+ *pView*  
  보기 창에 대 한 포인터 내부 활성화에 대 한 서버에서 사용 됩니다. 이 매개 변수 여야 **NULL** 컨테이너 응용 프로그램에는 내부 활성화를 허용 하지 않는 경우.  
   
- `lpMsg`  
+ *lpMsg*  
  항목을 활성화할 수를 발생 시킨 메시지에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -981,7 +981,7 @@ virtual BOOL DoVerb(
 ### <a name="remarks"></a>설명  
  이 함수 호출의 [Activate](#activate) 멤버 함수를 실행 하는 동사입니다. 또한 예외를 catch 하 고 throw 되는 경우 사용자에 게 메시지 상자를 표시 합니다.  
   
- 기본 동사는 편집 및 0에 지정 된 경우는 `nVerb` OLE 항목을 편집할 수 있도록 매개 변수를 서버 응용 프로그램이 시작 됩니다. 컨테이너 응용 프로그램에는 내부 활성화를 지 원하는 경우 편집 가능 위치에 합니다. 컨테이너에는 내부 활성화 (또는 Open 동사를 지정 하는 경우)를 지원 하지 않습니다 서버가 별도 창에서 시작 되 고 편집 할 수 있습니다. 컨테이너 응용 프로그램의 사용자 OLE 항목에 기본 동사에 대 한 값을가 하는 경우 일반적으로 `nVerb` 매개 변수는 사용자가 수행할 수 있는 작업을 결정 합니다. 그러나 서버에서 하나의 작업을 지 원하는 경우 걸리는 상관 없이 값에 지정 된 해당 작업은 `nVerb` 매개 변수입니다.  
+ 기본 동사는 편집 및 0에 지정 된 경우는 *nVerb* OLE 항목을 편집할 수 있도록 매개 변수를 서버 응용 프로그램이 시작 됩니다. 컨테이너 응용 프로그램에는 내부 활성화를 지 원하는 경우 편집 가능 위치에 합니다. 컨테이너에는 내부 활성화 (또는 Open 동사를 지정 하는 경우)를 지원 하지 않습니다 서버가 별도 창에서 시작 되 고 편집 할 수 있습니다. 컨테이너 응용 프로그램의 사용자 OLE 항목에 기본 동사에 대 한 값을가 하는 경우 일반적으로 *nVerb* 매개 변수는 사용자가 수행할 수 있는 작업을 결정 합니다. 그러나 서버에서 하나의 작업을 지 원하는 경우 걸리는 상관 없이 값에 지정 된 해당 작업의 *nVerb* 매개 변수입니다.  
   
 ##  <a name="draw"></a>  COleClientItem::Draw  
  지정된 된 디바이스 컨텍스트를 사용 하 여 지정된 된 경계 사각형에 OLE 항목을 그리는 데이 함수를 호출 합니다.  
@@ -994,14 +994,14 @@ BOOL Draw(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  에 대 한 포인터는 [CDC](../../mfc/reference/cdc-class.md) OLE 항목을 그리는 데 사용 되는 개체입니다.  
   
- `lpBounds`  
+ *lpBounds*  
  에 대 한 포인터는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 `RECT` 를 OLE 항목 (장치 컨텍스트에서 확인 된 논리 단위)에 그릴 경계 사각형을 정의 하는 구조입니다.  
   
- `nDrawAspect`  
- OLE의 측면 항목, 즉, 표시 방법을 지정 합니다. 경우 `nDrawAspect` 은-1을 사용 하 여 설정에 대해 마지막 모양을 [SetDrawAspect](#setdrawaspect) 사용 됩니다. 이 플래그에 대 한 가능한 값에 대 한 자세한 내용은 참조 [SetDrawAspect](#setdrawaspect)합니다.  
+ *nDrawAspect*  
+ OLE의 측면 항목, 즉, 표시 방법을 지정 합니다. 경우 *nDrawAspect* 은-1을 사용 하 여 설정에 대해 마지막 모양을 [SetDrawAspect](#setdrawaspect) 사용 됩니다. 이 플래그에 대 한 가능한 값에 대 한 자세한 내용은 참조 [SetDrawAspect](#setdrawaspect)합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
@@ -1009,9 +1009,9 @@ BOOL Draw(
 ### <a name="remarks"></a>설명  
  함수에 의해 만들어진 OLE 항목의 메타 파일 표시를 사용할 수는 [OnDraw](../../mfc/reference/coleserveritem-class.md#ondraw) 의 멤버 함수 `COleServerItem`합니다.  
   
- 일반적으로 사용 **그리기** 화면 표시 용으로 화면 장치 컨텍스트를 전달 `pDC`합니다. 이 경우 처음 두 매개 변수를 지정 해야 합니다.  
+ 일반적으로 사용 **그리기** 화면 표시 용으로 화면 장치 컨텍스트를 전달 *pDC*합니다. 이 경우 처음 두 매개 변수를 지정 해야 합니다.  
   
- `lpBounds` 매개 변수 (현재 매핑 모드)에 상대적인 대상 장치 컨텍스트의 사각형을 식별 합니다. 렌더링 그림 크기 조정을 포함 될 수 있습니다 및 표시 된 뷰 사이의 인쇄 되는 최종 이미지 크기를 조정 하는 보기를 적용 하려면 컨테이너 응용 프로그램에서 사용할 수 있습니다.  
+ *lpBounds* 매개 변수 (현재 매핑 모드)에 상대적인 대상 장치 컨텍스트의 사각형을 식별 합니다. 렌더링 그림 크기 조정을 포함 될 수 있습니다 및 표시 된 뷰 사이의 인쇄 되는 최종 이미지 크기를 조정 하는 보기를 적용 하려면 컨테이너 응용 프로그램에서 사용할 수 있습니다.  
   
  자세한 내용은 참조 [IViewObject::Draw](http://msdn.microsoft.com/library/windows/desktop/ms688655) Windows sdk에서입니다.  
   
@@ -1035,10 +1035,10 @@ BOOL GetCachedExtent(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpSize`  
+ *lpSize*  
  에 대 한 포인터는 **크기** 구조 또는 [CSize](../../atl-mfc-shared/reference/csize-class.md) 크기 정보를 받게 될 개체입니다.  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  검색할 수 있는 경계는 해당 OLE 항목의 모양을 지정 합니다. 가능한 값에 대 한 참조 [SetDrawAspect](#setdrawaspect)합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1052,14 +1052,14 @@ BOOL GetCachedExtent(
  자세한 내용은 참조 [IViewObject2::GetExtent](http://msdn.microsoft.com/library/windows/desktop/ms684032) Windows sdk에서입니다.  
   
 ##  <a name="getclassid"></a>  COleClientItem::GetClassID  
- 가 가리키는 메모리에 있는 항목의 클래스 ID를 반환 합니다. `pClassID`합니다.  
+ 가 가리키는 메모리에 있는 항목의 클래스 ID를 반환 합니다. *pClassID*합니다.  
   
 ```  
 void GetClassID(CLSID* pClassID) const;  
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pClassID`  
+ *pClassID*  
  형식의 식별자에 대 한 포인터 [CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) 클래스 ID를 검색 에 대 한 내용은 **CLSID**, Windows SDK를 참조 하십시오.  
   
 ### <a name="remarks"></a>설명  
@@ -1079,16 +1079,16 @@ void GetClipboardData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDataSource`  
+ *pDataSource*  
  에 대 한 포인터는 [COleDataSource](../../mfc/reference/coledatasource-class.md) OLE 항목에 포함 된 데이터를 받게 될 개체입니다.  
   
- `bIncludeLink`  
+ *bIncludeLink*  
  **True 이면** 포함으로 나타나는 데이터 연결 해야 하는 경우 **FALSE**합니다.  
   
- `lpOffset`  
+ *lpOffset*  
  픽셀 단위로 개체의 원점부터 마우스 커서의 오프셋입니다.  
   
- `lpSize`  
+ *lpSize*  
  픽셀 단위로 개체의 크기입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1130,10 +1130,10 @@ BOOL GetExtent(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpSize`  
+ *lpSize*  
  에 대 한 포인터는 **크기** 구조 또는 `CSize` 크기 정보를 받게 될 개체입니다.  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  검색할 수 있는 경계는 해당 OLE 항목의 모양을 지정 합니다. 가능한 값에 대 한 참조 [SetDrawAspect](#setdrawaspect)합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1157,7 +1157,7 @@ static HICON GetIconFromRegistry(CLSID& clsid);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `clsid`  
+ *clsid*  
  아이콘과 연결 된 서버에 대 한 CLSID에 대 한 참조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1202,7 +1202,7 @@ UINT GetItemState() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- A **COleClientItem::ItemState** 열거형 값은 다음 중 하나일 수 있습니다: `emptyState`, **loadedState**, `openState`, `activeState`, `activeUIState`합니다. 이러한 상태에 대 한 내용은 문서 참조 [컨테이너: 클라이언트 항목 상태](../../mfc/containers-client-item-states.md)합니다.  
+ A **COleClientItem::ItemState** 열거형 값은 다음 중 하나일 수 있습니다: `emptyState`, `loadedState`, `openState`, `activeState`, `activeUIState`합니다. 이러한 상태에 대 한 내용은 문서 참조 [컨테이너: 클라이언트 항목 상태](../../mfc/containers-client-item-states.md)합니다.  
   
 ### <a name="remarks"></a>설명  
  OLE 항목의 상태가 변경 될 때 알림을 받을 수를 사용 하 여는 [OnChange](#onchange) 멤버 함수입니다.  
@@ -1280,7 +1280,7 @@ void GetUserType(
   
 - `USERCLASSTYPE_APPNAME` 서비스 클래스를 제공 하는 응용 프로그램의 이름입니다.  
   
- `rString`  
+ *rString*  
  에 대 한 참조는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) OLE 항목의 형식을 설명 하는 문자열 반환 되는 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1393,7 +1393,7 @@ virtual void OnChange(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nCode`  
+ *nCode*  
  서버 이유가이 항목을 변경 합니다. 다음 값 중 하나일 수 있습니다.  
   
 - `OLE_CHANGED` OLE 항목의 모양 변경 되었습니다.  
@@ -1404,11 +1404,11 @@ virtual void OnChange(
   
 - `OLE_CHANGED_STATE` OLE 항목은 다른 한 상태에서 변경 되었습니다.  
   
- `dwParam`  
- 경우 `nCode` 은 `OLE_SAVED` 또는 `OLE_CLOSED`,이 매개 변수는 사용 되지 않습니다. 경우 `nCode` 은 `OLE_CHANGED`,이 매개 변수 변경 된 OLE 항목의 모양을 지정 합니다. 가능한 값에 대 한 참조는 `dwParam` 의 매개 변수 [COleClientItem::Draw](#draw)합니다. 경우 `nCode` 은 `OLE_CHANGED_STATE`,이 매개 변수는 한 **COleClientItem::ItemState** 값을 열거 하 고 입력 되 고 상태에 설명 합니다. 다음 값 중 하나일 수 있습니다: `emptyState`, **loadedState**, `openState`, `activeState`, 또는 `activeUIState`합니다.  
+ *dwParam*  
+ 경우 *nCode* 은 `OLE_SAVED` 또는 `OLE_CLOSED`,이 매개 변수는 사용 되지 않습니다. 경우 *nCode* 은 `OLE_CHANGED`,이 매개 변수 변경 된 OLE 항목의 모양을 지정 합니다. 가능한 값에 대 한 참조는 *dwParam* 의 매개 변수 [COleClientItem::Draw](#draw)합니다. 경우 *nCode* 은 `OLE_CHANGED_STATE`,이 매개 변수는 한 **COleClientItem::ItemState** 값을 열거 하 고 입력 되 고 상태에 설명 합니다. 다음 값 중 하나일 수 있습니다: `emptyState`, `loadedState`, `openState`, `activeState`, 또는 `activeUIState`합니다.  
   
 ### <a name="remarks"></a>설명  
- (Microsoft Foundation Class 라이브러리를 사용 하 여 서버 응용 프로그램 작성에 대 한 응답에서이 함수가 호출 됩니다는 `Notify` 의 멤버 함수 `COleServerDoc` 또는 `COleServerItem`.) 기본 구현 하는 경우 수정 된 대로 컨테이너 문서 표시 `nCode` 은 `OLE_CHANGED` 또는 `OLE_SAVED`합니다.  
+ (Microsoft Foundation Class 라이브러리를 사용 하 여 서버 응용 프로그램 작성에 대 한 응답에서이 함수가 호출 됩니다는 `Notify` 의 멤버 함수 `COleServerDoc` 또는 `COleServerItem`.) 기본 구현 하는 경우 수정 된 대로 컨테이너 문서 표시 *nCode* 은 `OLE_CHANGED` 또는 `OLE_SAVED`합니다.  
   
  에 대 한 `OLE_CHANGED_STATE`, 현재 상태에서 반환 된 [GetItemState](#getitemstate) 이 상태 변경 하기 전에 현재 상태를 의미 하는 이전 상태를 계속 됩니다.  
   
@@ -1465,13 +1465,13 @@ virtual void OnDeactivateUI(BOOL bUndoable);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bUndoable`  
+ *bUndoable*  
  편집 변경 사항은 되는지 여부를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수를 모든 메뉴 및 내부 활성화에 대해 생성 된 다른 컨트롤 숨기기, 원래 상태로 컨테이너 응용 프로그램의 사용자 인터페이스를 복원 합니다.  
   
- 경우 `bUndoable` 은 **FALSE**, 컨테이너는 실행 취소 명령을 사용 하지 않도록 설정 해야, 적용 된 컨테이너의 실행 취소 상태를 삭제 하 고 서버에서 수행 된 마지막 작업을 나타내기 때문에 취소할 수 없습니다.  
+ 경우 *bUndoable* 은 **FALSE**, 컨테이너는 실행 취소 명령을 사용 하지 않도록 설정 해야가 적용 된 컨테이너의 실행 취소 상태를 삭제 하 고 서버에서 수행 된 마지막 작업을 나타내기 때문에 실행을 취소할 수 있습니다.  
   
 ##  <a name="ondiscardundostate"></a>  COleClientItem::OnDiscardUndoState  
  OLE 항목을 편집 하는 동안 실행 취소 상태를 무시 하는 작업을 수행 하는 경우에 프레임 워크에서 호출 합니다.  
@@ -1498,13 +1498,13 @@ virtual COleDataSource* OnGetClipboardData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bIncludeLink`  
+ *bIncludeLink*  
  이 속성을 설정 **TRUE** 링크 데이터를 클립보드에 복사할 경우. 이 속성을 설정 **FALSE** 서버 응용 프로그램이 링크를 지원 하지 않는 경우.  
   
- `lpOffset`  
+ *lpOffset*  
  마우스 커서의 오프셋 (픽셀)에서 개체의 원점부터 포인터입니다.  
   
- `lpSize`  
+ *lpSize*  
  픽셀 단위로 개체의 크기에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1537,7 +1537,7 @@ virtual void OnGetItemPosition(CRect& rPosition);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rPosition`  
+ *rPosition*  
  에 대 한 참조는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 항목의 위치 좌표를 포함 하는 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1556,13 +1556,13 @@ virtual BOOL OnGetWindowContext(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ppMainFrame`  
+ *ppMainFrame*  
  주 프레임 창에 대 한 포인터에 대 한 포인터입니다.  
   
- `ppDocFrame`  
+ *ppDocFrame*  
  문서 프레임 창에 대 한 포인터에 대 한 포인터입니다.  
   
- `lpFrameInfo`  
+ *lpFrameInfo*  
  에 대 한 포인터는 [OLEINPLACEFRAMEINFO](http://msdn.microsoft.com/library/windows/desktop/ms693737) 프레임 창 정보를 받을 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1571,7 +1571,7 @@ virtual BOOL OnGetWindowContext(
 ### <a name="remarks"></a>설명  
  이 함수는 OLE 항목의 부모 창에 대 한 정보를 검색에 사용 됩니다.  
   
- 컨테이너는 MDI 응용 프로그램 경우 기본 구현에 대 한 포인터를 반환 하는 [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md) 개체 `ppMainFrame` 및 활성에 대 한 포인터 [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md) 개체`ppDocFrame`. 컨테이너가 SDI 응용 프로그램 이면 기본 구현은 반환에 대 한 포인터는 [CFrameWnd](../../mfc/reference/cframewnd-class.md) 개체에 `ppMainFrame` 반환 **NULL** 에서 `ppDocFrame`합니다. 기본 구현은의 구성원도 채웁니다 `lpFrameInfo`합니다.  
+ 기본 구현에 대 한 포인터를 반환 컨테이너 MDI 응용 프로그램 이면는 [CMDIFrameWnd](../../mfc/reference/cmdiframewnd-class.md) 개체 *ppMainFrame* 및 활성에 대 한 포인터 [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)개체 *ppDocFrame*합니다. 컨테이너가 SDI 응용 프로그램 이면 기본 구현은 반환에 대 한 포인터는 [CFrameWnd](../../mfc/reference/cframewnd-class.md) 개체 *ppMainFrame* 반환 **NULL** 에  *ppDocFrame*합니다. 기본 구현은의 구성원도 채웁니다 *lpFrameInfo*합니다.  
   
  기본 구현은; 응용 프로그램에 적합 하지 않는 경우에이 함수를 재정의 합니다. 예를 들어, 응용 프로그램에 다른 SDI 또는 MDI 사용자 인터페이스 패러다임입니다. 고급 재정의할 수 있습니다.  
   
@@ -1587,16 +1587,16 @@ virtual void OnInsertMenus(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pMenuShared`  
+ *pMenuShared*  
  빈 메뉴를 가리킵니다.  
   
- `lpMenuWidths`  
+ *lpMenuWidths*  
  6의 배열을 가리킵니다 **긴** 메뉴 그룹의 각 메뉴의 수를 나타내는 값: 파일, 편집, 컨테이너, 개체, 창 도움말입니다. 컨테이너 응용 프로그램은 0, 2 및 4이 배열의 요소에 해당 하 파일, 컨테이너 및 창 메뉴 그룹을 담당 합니다.  
   
 ### <a name="remarks"></a>설명  
  그러면이 메뉴 자체 메뉴, 합성 메뉴 만들기를 삽입 하는 서버에 전달 됩니다. 이 함수는 여러 합성 메뉴를 만들려는 반복적으로 호출할 수 있습니다.  
   
- 기본 구현은 삽입 `pMenuShared` 내부 컨테이너 메뉴; 즉, 파일, 컨테이너 및 창 메뉴 그룹입니다. [CDocTemplate::SetContainerInfo](../../mfc/reference/cdoctemplate-class.md#setcontainerinfo) 이 메뉴 리소스를 설정 하는 데 사용 됩니다. 또한 기본 구현에서는 0, 2 및 4에서 요소에 적절 한 값을 지정 `lpMenuWidths`메뉴 리소스에 따라 합니다. 기본 구현은; 응용 프로그램에 적합 하지 않은 경우이 함수를 재정의 합니다. 예를 들어, 응용 프로그램 문서 형식을와 리소스를 연결 하기 위한 문서 서식 파일을 사용 하지 않는 경우. 이 함수를 재정의 하면 재정의 해야 [OnSetMenu](#onsetmenu) 및 [OnRemoveMenus](#onremovemenus)합니다. 고급 재정의할 수 있습니다.  
+ 기본 구현은 삽입 *pMenuShared* 내부 컨테이너 메뉴; 즉, 파일, 컨테이너 및 창 메뉴 그룹입니다. [CDocTemplate::SetContainerInfo](../../mfc/reference/cdoctemplate-class.md#setcontainerinfo) 이 메뉴 리소스를 설정 하는 데 사용 됩니다. 또한 기본 구현에서는 0, 2 및 4에서 요소에 적절 한 값을 지정 *lpMenuWidths*메뉴 리소스에 따라 합니다. 기본 구현은; 응용 프로그램에 적합 하지 않은 경우이 함수를 재정의 합니다. 예를 들어, 응용 프로그램 문서 형식을와 리소스를 연결 하기 위한 문서 서식 파일을 사용 하지 않는 경우. 이 함수를 재정의 하면 재정의 해야 [OnSetMenu](#onsetmenu) 및 [OnRemoveMenus](#onremovemenus)합니다. 고급 재정의할 수 있습니다.  
   
  자세한 내용은 참조 [IOleInPlaceFrame::InsertMenus](http://msdn.microsoft.com/library/windows/desktop/ms683987) Windows sdk에서입니다.  
   
@@ -1608,13 +1608,13 @@ virtual void OnRemoveMenus(CMenu* pMenuShared);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pMenuShared`  
+ *pMenuShared*  
  호출 하 여 생성 된 합성 메뉴 가리키는 [OnInsertMenus](#oninsertmenus) 멤버 함수입니다.  
   
 ### <a name="remarks"></a>설명  
- 기본 구현에서 제거 `pMenuShared` 있는 원위치 컨테이너 메뉴, 파일, 컨테이너 및 창 메뉴 그룹입니다. 기본 구현은; 응용 프로그램에 적합 하지 않은 경우이 함수를 재정의 합니다. 예를 들어, 응용 프로그램 문서 형식을와 리소스를 연결 하기 위한 문서 서식 파일을 사용 하지 않는 경우. 이 함수를 재정의 하는 경우 아마도 재정의 해야 [OnInsertMenus](#oninsertmenus) 및 [OnSetMenu](#onsetmenu) 도 합니다. 고급 재정의할 수 있습니다.  
+ 기본 구현에서 제거 *pMenuShared* 있는 원위치 컨테이너 메뉴, 파일, 컨테이너 및 창 메뉴 그룹입니다. 기본 구현은; 응용 프로그램에 적합 하지 않은 경우이 함수를 재정의 합니다. 예를 들어, 응용 프로그램 문서 형식을와 리소스를 연결 하기 위한 문서 서식 파일을 사용 하지 않는 경우. 이 함수를 재정의 하는 경우 아마도 재정의 해야 [OnInsertMenus](#oninsertmenus) 및 [OnSetMenu](#onsetmenu) 도 합니다. 고급 재정의할 수 있습니다.  
   
- 하위 `pMenuShared` 서버가 반복적으로 호출 하는 경우 둘 이상의 합성 메뉴 공유할 수 있습니다 `OnInsertMenus`합니다. 재정의에서 모든 하위 메뉴를 삭제 하면 안 되는 따라서 `OnRemoveMenus`;만 분리 해야 합니다.  
+ 하위 *pMenuShared* 서버가 반복적으로 호출 하는 경우 둘 이상의 합성 메뉴 공유할 수 있습니다 `OnInsertMenus`합니다. 재정의에서 모든 하위 메뉴를 삭제 하면 안 되는 따라서 `OnRemoveMenus`;만 분리 해야 합니다.  
   
  자세한 내용은 참조 [IOleInPlaceFrame::RemoveMenus](http://msdn.microsoft.com/library/windows/desktop/ms688685) Windows sdk에서입니다.  
   
@@ -1638,7 +1638,7 @@ virtual BOOL OnScrollBy(CSize sizeExtent);
  자세한 내용은 참조 [IOleInPlaceSite::Scroll](http://msdn.microsoft.com/library/windows/desktop/ms690291) Windows sdk에서입니다.  
   
 ##  <a name="onsetmenu"></a>  COleClientItem::OnSetMenu  
- 프레임 워크에서 두 번 호출 된 경우에 내부 활성화 시작 되 고 끝나는; 합성 메뉴와 두 번째 설치를 처음으로 (으로 `holemenu` 같음 **NULL**) 제거 합니다.  
+ 프레임 워크에서 두 번 호출 된 경우에 내부 활성화 시작 되 고 끝나는; 합성 메뉴와 두 번째 설치를 처음으로 (으로 *holemenu* 같음 **NULL**) 제거 합니다.  
   
 ```  
 virtual void OnSetMenu(
@@ -1648,10 +1648,10 @@ virtual void OnSetMenu(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pMenuShared`  
+ *pMenuShared*  
  호출 하 여 생성 된 합성 메뉴에 대 한 포인터는 [OnInsertMenus](#oninsertmenus) 멤버 함수 및 `InsertMenu` 함수입니다.  
   
- `holemenu`  
+ *holemenu*  
  반환 된 메뉴 설명자에 대 한 핸들의 **OleCreateMenuDescriptor** 함수 또는 **NULL** 디스패치 코드가 제거 될 경우.  
   
  *hwndActiveObject*  
@@ -1672,17 +1672,17 @@ virtual BOOL OnShowControlBars(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pFrameWnd`  
+ *pFrameWnd*  
  컨테이너 응용 프로그램의 프레임 창에 대 한 포인터입니다. 이 주 프레임 창 또는 MDI 자식 창 수 있습니다.  
   
- `bShow`  
+ *bShow*  
  컨트롤 막대를 표시 하거나 숨길 수 있는지 여부를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 함수 호출 컨트롤 막대의 상태 이면 변경으로 인해 경우 0이 아닌 0 호출은 변경 없음, 아니면 `pFrameWnd` 컨테이너의 프레임 창을 가리키지 않습니다.  
+ 함수 호출 컨트롤 막대의 상태 이면 변경으로 인해 경우 0이 아닌 0 호출은 변경 없음, 아니면 *pFrameWnd* 컨테이너의 프레임 창을 가리키지 않습니다.  
   
 ### <a name="remarks"></a>설명  
- 컨트롤 막대에서 지정한 상태에 이미 있는 경우이 함수는 0을 반환 *bShow 합니다.* 이 발생 하는 예를 들어, 컨트롤 막대 숨겨져 있는 경우 및 `bShow` 은 **FALSE**합니다.  
+ 컨트롤 막대에서 지정한 상태에 이미 있는 경우이 함수는 0을 반환 *bShow 합니다.* 이 발생 하는 예를 들어, 컨트롤 막대 숨겨져 있는 경우 및 *bShow* 은 **FALSE**합니다.  
   
  기본 구현은 최상위 프레임 창에서 도구 모음을 제거합니다.  
   
@@ -1734,11 +1734,11 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwCloseOption`  
+ *dwCloseOption*  
  OLE 항목 로드 된 상태로 돌아오면 어떤 상황에서 저장을 지정 하는 플래그입니다. 가능한 값 목록은 참조 [COleClientItem::Close](#close)합니다.  
   
 ### <a name="remarks"></a>설명  
- **릴리스** 에 의해 호출 됩니다는 `COleClientItem` 소멸자입니다.  
+ `Release` 에 의해 호출 됩니다는 `COleClientItem` 소멸자입니다.  
   
  자세한 내용은 참조 [iunknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) Windows sdk에서입니다.  
   
@@ -1763,7 +1763,7 @@ void Run();
 ```  
   
 ### <a name="remarks"></a>설명  
- 호출 된 **실행** 멤버 함수는 항목을 활성화 하기 전에 서버 응용 프로그램을 시작 합니다. 자동으로 이렇게 [Activate](#activate) 및 [DoVerb](#doverb)이므로 일반적으로 필요한 경우가 아니라면이 함수를 호출 합니다. 와 같은 항목 특성을 설정 하기 위해 서버를 실행 해야 하는 경우이 함수를 호출할 [SetExtent](#setextent)를 실행 하기 전에 [DoVerb](#doverb)합니다.  
+ 호출 된 `Run` 멤버 함수는 항목을 활성화 하기 전에 서버 응용 프로그램을 시작 합니다. 자동으로 이렇게 [Activate](#activate) 및 [DoVerb](#doverb)이므로 일반적으로 필요한 경우가 아니라면이 함수를 호출 합니다. 와 같은 항목 특성을 설정 하기 위해 서버를 실행 해야 하는 경우이 함수를 호출할 [SetExtent](#setextent)를 실행 하기 전에 [DoVerb](#doverb)합니다.  
   
 ##  <a name="setdrawaspect"></a>  COleClientItem::SetDrawAspect  
  호출 된 `SetDrawAspect` 멤버 함수를 "모양" 또는 항목의 보기를 설정 합니다.  
@@ -1773,7 +1773,7 @@ virtual void SetDrawAspect(DVASPECT nDrawAspect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nDrawAspect`  
+ *nDrawAspect*  
  `DVASPECT` 열거형의 값입니다. 이 매개 변수는 다음 값 중 하나를 가질 수 있습니다.  
   
 - `DVASPECT_CONTENT` 항목은 해당 컨테이너 내에 포함 된 개체로 표시 될 수 하는 방식으로 표시 됩니다.  
@@ -1799,10 +1799,10 @@ void SetExtent(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `size`  
+ *size*  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) 크기 정보를 포함 하는 개체입니다.  
   
- `nDrawAspect`  
+ *nDrawAspect*  
  설정할 경계가 OLE 항목의 모양을 지정 합니다. 가능한 값에 대 한 참조 [SetDrawAspect](#setdrawaspect)합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1820,10 +1820,10 @@ void SetHostNames(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszHost`  
+ *lpszHost*  
  컨테이너 응용 프로그램의 사용자가 볼 수 이름에 대 한 포인터입니다.  
   
- `lpszHostObj`  
+ *lpszHostObj*  
  OLE 항목을 포함 하는 컨테이너의 식별 문자열에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1841,7 +1841,7 @@ BOOL SetIconicMetafile(HGLOBAL hMetaPict);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hMetaPict`  
+ *hMetaPict*  
  항목의 아이콘을 그리기에 사용 되는 메타 파일에 대 한 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1850,7 +1850,7 @@ BOOL SetIconicMetafile(HGLOBAL hMetaPict);
 ### <a name="remarks"></a>설명  
  사용 하 여 [GetIconicMetafile](#geticonicmetafile) 메타 파일을 검색할 수 있습니다.  
   
- `hMetaPict` 매개 변수는; 항목에 복사 따라서 `hMetaPict` 호출자가 해제 해야 합니다.  
+ *hMetaPict* 매개 변수는; 항목에 복사 따라서 *hMetaPict* 호출자가 해제 해야 합니다.  
   
 ##  <a name="setitemrects"></a>  COleClientItem::SetItemRects  
  경계 사각형 또는 OLE 항목의 표시 사각형을 설정 하려면이 함수를 호출 합니다.  
@@ -1905,10 +1905,10 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ptd`  
+ *ptd*  
  에 대 한 포인터는 [DVTARGETDEVICE](http://msdn.microsoft.com/library/windows/desktop/ms686613) 새 대상 인쇄 장치에 대 한 정보가 포함 된 데이터 구조입니다. 수 **NULL**합니다.  
   
- `ppd`  
+ *ppd*  
  에 대 한 포인터는 [PRINTDLG](http://msdn.microsoft.com/library/windows/desktop/ms646940) 새 대상 인쇄 장치에 대 한 정보가 포함 된 데이터 구조입니다. 수 **NULL**합니다.  
   
 ### <a name="return-value"></a>반환 값  

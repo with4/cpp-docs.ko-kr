@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38c27d2fa0e04770bae69901e1164da84c2186ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 34babea47abaab9fcfb45f57aedd5cec94e82963
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377242"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041713"
 ---
 # <a name="cobject-class"></a>CObject 클래스
 MFC 라이브러리의 주체 기본 클래스입니다.  
@@ -115,7 +115,7 @@ virtual void AssertValid() const;
   
  "Validity"의 정의 개체의 클래스에 따라 달라 집니다. 일반적으로 함수 확인을 수행 해야 "단순 합니다." 즉, 한 개체가 다른 개체에 대 한 포인터를 포함 하는 경우에서 포인터가 null이 아닌 하지만 유효 포인터에서 참조 하는 개체에 대 한 테스트를 수행 하지 않아야 하는지 여부를 확인 하려면 확인 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 모든 페이지에서 사용 되는 클래스 `CObject` 예제입니다.  
   
  [!code-cpp[NVC_MFCCObjectSample#7](../../mfc/codesnippet/cpp/cobject-class_1.cpp)]  
@@ -137,11 +137,11 @@ CObject(const CObject& objectSrc);
 ### <a name="remarks"></a>설명  
  기본 버전은 자동으로 파생 된 클래스의 생성자에 의해 호출 됩니다.  
   
- 사용자 클래스를 직렬화 하는 경우 (통합 하는 `IMPLEMENT_SERIAL` 매크로), 클래스 선언에서 기본 생성자 (인수 없는 생성자)를 갖고 있어야 합니다. 기본 생성자, 필요 하지 않은 경우에 private 선언 또는 "empty" 생성자를 보호 합니다. 자세한 내용은 참조 [CObject 사용 하 여](../../mfc/using-cobject.md)합니다.  
+ 사용자 클래스를 직렬화 하는 경우 (IMPLEMENT_SERIAL 매크로 통합), 클래스 선언에서 기본 생성자 (인수 없는 생성자)를 갖고 있어야 합니다. 기본 생성자, 필요 하지 않은 경우에 private 선언 또는 "empty" 생성자를 보호 합니다. 자세한 내용은 참조 [CObject 사용 하 여](../../mfc/using-cobject.md)합니다.  
   
  표준 c + + 기본 클래스 복사 생성자는 멤버 별로 복사를 수행합니다. 개인의 존재 여부 `CObject` 복사 생성자는 클래스의 복사 생성자가 필요 하지만 사용할 수 없는 경우 컴파일러 오류 메시지를 보장 합니다. 따라서 클래스에이 기능을 요구 하는 경우 복사 생성자를 제공 해야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 에 사용 되는 클래스는 `CObject` 예제입니다.  
   
  [!code-cpp[NVC_MFCCObjectSample#8](../../mfc/codesnippet/cpp/cobject-class_2.cpp)]  
@@ -154,11 +154,11 @@ virtual void Dump(CDumpContext& dc) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dc`  
+ *dc*  
  일반적으로 덤프 하는 동안 진단 덤프 컨텍스트 `afxDump`합니다.  
   
 ### <a name="remarks"></a>설명  
- 재정의 해야 클래스를 직접 작성 하는 경우는 `Dump` 자신 및 다른 사용자가 클래스에 대 한 진단 서비스를 제공 하는 함수입니다. 재정의 된 `Dump` 일반적으로 `Dump` 파생된 클래스에 고유한 데이터 멤버를 인쇄 하기 전에 기본 클래스의 함수입니다. `CObject::Dump` 클래스를 사용 하는 경우 클래스 이름을 인쇄는 `IMPLEMENT_DYNAMIC` 또는 `IMPLEMENT_SERIAL` 매크로입니다.  
+ 재정의 해야 클래스를 직접 작성 하는 경우는 `Dump` 자신 및 다른 사용자가 클래스에 대 한 진단 서비스를 제공 하는 함수입니다. 재정의 된 `Dump` 일반적으로 `Dump` 파생된 클래스에 고유한 데이터 멤버를 인쇄 하기 전에 기본 클래스의 함수입니다. `CObject::Dump` 클래스를 사용 하는 경우 클래스 이름을 인쇄는 `IMPLEMENT_DYNAMIC` 또는 IMPLEMENT_SERIAL 매크로입니다.  
   
 > [!NOTE]
 >  프로그램 `Dump` 함수 출력의 끝에 줄 바꿈 문자를 인쇄 하지 해야 합니다.  
@@ -171,7 +171,7 @@ virtual void Dump(CDumpContext& dc) const;
   
  `Dump` 개체의 "비순환"만 덤프를 허용 합니다. 예를 들어 개체 목록을 덤프 수 있지만 목록 자체 개체 중 하나 이면 결국 스택을 오버플로 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 모든 페이지에서 사용 되는 클래스 `CObject` 예제입니다.  
   
  [!code-cpp[NVC_MFCCObjectSample#9](../../mfc/codesnippet/cpp/cobject-class_3.cpp)]  
@@ -203,7 +203,7 @@ virtual CRuntimeClass* GetRuntimeClass() const;
   
  이 함수를 사용 해야는 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic), [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate), 또는 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) 클래스 구현에는 매크로입니다. 그렇지 않으면 잘못 된 결과 얻을 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 모든 페이지에서 사용 되는 클래스 `CObject` 예제입니다.  
   
  [!code-cpp[NVC_MFCCObjectSample#10](../../mfc/codesnippet/cpp/cobject-class_4.cpp)]  
@@ -216,18 +216,18 @@ BOOL IsKindOf(const CRuntimeClass* pClass) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pClass`  
+ *pClass*  
  에 대 한 포인터는 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) 구조와 연결 된 프로그램 `CObject`-클래스를 파생 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  개체 클래스에 해당 하는 경우 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 함수를 테스트 `pClass` (1)은 지정된 된 클래스의 개체 또는 (2)은 지정된 된 클래스에서 파생 된 클래스의 개체입니다. 으로 선언 된 클래스에 대해서만 작동 하는이 함수는 [DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic), [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate), 또는 [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) 매크로입니다.  
+ 이 함수를 테스트 *pClass* 지정된 된 클래스의 개체는 (1) 또는 (2)은 지정된 된 클래스에서 파생 된 클래스의 개체입니다. 으로 선언 된 클래스에 대해서만 작동 하는이 함수는 [DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic), [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate), 또는 [DECLARE_SERIAL](run-time-object-model-services.md#declare_serial) 매크로입니다.  
   
  사용 하지 마십시오이 함수 광범위 하 게 하므로 c + + 다형성 기능 무효로 만듭니다. 가상 함수를 대신 사용 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 모든 페이지에서 사용 되는 클래스 `CObject` 예제입니다.  
   
  [!code-cpp[NVC_MFCCObjectSample#11](../../mfc/codesnippet/cpp/cobject-class_5.cpp)]  
@@ -248,7 +248,7 @@ BOOL IsSerializable() const;
 > [!NOTE]
 >  이 함수를 재정의 하지 마십시오.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 모든 페이지에서 사용 되는 클래스 `CObject` 예제입니다.  
   
  [!code-cpp[NVC_MFCCObjectSample#12](../../mfc/codesnippet/cpp/cobject-class_6.cpp)]  
@@ -284,7 +284,7 @@ void PASCAL operator delete(
   
  연산자를 재정의 하는 경우 **새** 및 **삭제**, 진단이 기능을 상실 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 에 사용 되는 클래스는 `CObject` 예제입니다.  
   
  [!code-cpp[NVC_MFCCObjectSample#15](../../mfc/codesnippet/cpp/cobject-class_8.cpp)]  
@@ -317,7 +317,7 @@ void* PASCAL operator new(
 > [!NOTE]
 >  이 연산자를 재정의 하는 경우 재정의 해야 **삭제**합니다. 표준 라이브러리를 사용 하지 마십시오 **_new_handler** 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 에 사용 되는 클래스는 `CObject` 예제입니다.  
   
  [!code-cpp[NVC_MFCCObjectSample#16](../../mfc/codesnippet/cpp/cobject-class_9.h)]  
@@ -330,7 +330,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ar`  
+ *ar*  
  A `CArchive` 를 serialize 할 개체입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -344,7 +344,7 @@ virtual void Serialize(CArchive& ar);
   
  Serialization 예제를 보려면 문서 [Serialization: 개체를 직렬화](../../mfc/serialization-serializing-an-object.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 모든 페이지에서 사용 되는 클래스 `CObject` 예제입니다.  
   
  [!code-cpp[NVC_MFCCObjectSample#13](../../mfc/codesnippet/cpp/cobject-class_10.cpp)]  

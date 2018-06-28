@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89e508242e7318e5419656720b6dee20bed55716
-ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
+ms.openlocfilehash: c477ee69b8bc8e824aae6df1f74ba97d2825524f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239426"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039160"
 ---
 # <a name="cmap-class"></a>CMap 클래스
 고유 키를 값에 매핑하는 사전 컬렉션 클래스입니다.  
@@ -65,17 +65,17 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `KEY`  
+ *KEY*  
  맵에 대 한 키로 사용 되는 개체의 클래스입니다.  
   
- `ARG_KEY`  
- 데이터 형식에 사용 되는 `KEY` 인수에 대 한 참조, 일반적으로 `KEY`합니다.  
+ *ARG_KEY*  
+ 데이터 형식에 사용 되는 *키* 인수에 대 한 참조, 일반적으로 *키*합니다.  
   
- `VALUE`  
+ *값*  
  Map에 저장 된 개체의 클래스입니다.  
   
- `ARG_VALUE`  
- 데이터 형식에 사용 되는 `VALUE` 인수에 대 한 참조, 일반적으로 `VALUE`합니다.  
+ *ARG_VALUE*  
+ 데이터 형식에 사용 되는 *값* 인수에 대 한 참조, 일반적으로 *값*합니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -147,11 +147,11 @@ CMap(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nBlockSize`  
+ *nBlockSize*  
  지도 확장 하기 위한 메모리 할당 세분성을 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
- 단위에서 메모리를 할당 지도 확장 되면서 `nBlockSize` 항목입니다.  
+ 단위에서 메모리를 할당 지도 확장 되면서 *nBlockSize* 항목입니다.  
   
 ### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
@@ -210,25 +210,25 @@ void GetNextAssoc(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rNextPosition`  
+ *rNextPosition*  
  에 대 한 참조를 지정 된 **위치** 이전에서 반환 된 값 `GetNextAssoc` 또는 `GetStartPosition` 호출 합니다.  
   
  *KEY*  
  Map의 키 유형을 지정 하는 템플릿 매개 변수  
   
- `rKey`  
+ *rKey*  
  검색 된 요소의 반환 된 키를 지정합니다.  
   
  *값*  
  Map의 값의 형식을 지정 하는 템플릿 매개 변수  
   
- `rValue`  
+ *rValue*  
  검색 된 요소의 반환 된 값을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수는 map의 모든 요소를 통해 반복 하는 데 가장 유용 합니다. 참고 위치 시퀀스 아닌지 반드시 키 값 시퀀스와 동일 합니다.  
   
- 검색된 된 요소는 맵에서 마지막 다음 새 값의 경우 `rNextPosition` 로 설정 된 **NULL**합니다.  
+ 검색된 된 요소는 맵에서 마지막 다음 새 값의 경우 *rNextPosition* 로 설정 된 **NULL**합니다.  
   
 ### <a name="example"></a>예  
  예를 참조 [CMap::SetAt](#setat)합니다.  
@@ -273,10 +273,10 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hashSize`  
+ *hashSize*  
  해시 테이블에 있는 항목의 수입니다.  
   
- `bAllocNow`  
+ *bAllocNow*  
  경우 **TRUE**, 초기화; 시 해시 테이블을 할당 필요할 때 테이블 할당 되는 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
@@ -306,16 +306,16 @@ BOOL Lookup(ARG_KEY key, VALUE& rValue) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ARG_KEY`  
- 템플릿 매개 변수 유형을 지정 하는 `key` 값입니다.  
+ *ARG_KEY*  
+ 템플릿 매개 변수 유형을 지정 하는 *키* 값입니다.  
   
- `key`  
+ *key*  
  조회 되는 요소를 식별 하는 키를 지정 합니다.  
   
  *값*  
  조회 되는 값의 형식을 지정 합니다.  
   
- `rValue`  
+ *rValue*  
  조회 값을 받습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -338,10 +338,10 @@ VALUE& operator[](arg_key key);
  *값*  
  지도 값의 형식을 지정 하는 템플릿 매개 변수  
   
- `ARG_KEY`  
+ *ARG_KEY*  
  템플릿 매개 변수는 키 값의 형식을 지정 합니다.  
   
- `key`  
+ *key*  
  지도에서 값을 검색 하는 데 사용 하는 키입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -370,7 +370,7 @@ CPair* PGetFirstAssoc();
  [!code-cpp[NVC_MFCCollections#59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
 ##  <a name="pgetnextassoc"></a>  CMap::PGetNextAssoc  
- 가 가리키는 지도 요소를 검색 `pAssocRec`합니다.  
+ 가 가리키는 지도 요소를 검색 *pAssocRec*합니다.  
   
 ```  
 const CPair *PGetNextAssoc(const CPair* pAssocRet) const;  
@@ -400,7 +400,7 @@ CPair* PLookup(ARG_KEY key);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `key`  
+ *key*  
  검색할 요소의 키입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -433,10 +433,10 @@ BOOL RemoveKey(ARG_KEY key);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ARG_KEY`  
+ *ARG_KEY*  
  키의 형식을 지정 하는 템플릿 매개 변수  
   
- `key`  
+ *key*  
  제거할 요소의 키입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -456,16 +456,16 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ARG_KEY`  
- 템플릿 매개 변수 유형을 지정 하는 `key` 매개 변수입니다.  
+ *ARG_KEY*  
+ 템플릿 매개 변수 유형을 지정 하는 *키* 매개 변수입니다.  
   
- `key`  
+ *key*  
  새 요소의 키를 지정합니다.  
   
- `ARG_VALUE`  
- 템플릿 매개 변수 유형을 지정 하는 `newValue` 매개 변수입니다.  
+ *ARG_VALUE*  
+ 템플릿 매개 변수 유형을 지정 하는 *newValue* 매개 변수입니다.  
   
- `newValue`  
+ *새 값*  
  새 요소의 값을 지정합니다.  
   
 ### <a name="remarks"></a>설명  

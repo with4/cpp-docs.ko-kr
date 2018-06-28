@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b4824632d7ce38e50859172a24a47bdeb49f1d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0089647fcdd1da5ddbab6194f4c3e9dae291ad3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369244"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037346"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount 클래스
 Windows 메시지를 사용자가 메뉴에서 항목을 선택 하는 경우 등의 사용 횟수를 추적 합니다.  
@@ -73,7 +73,7 @@ class CMFCCmdUsageCount : public CObject
   
 |||  
 |-|-|  
-|이름|설명|  
+|name|설명|  
 |`m_CmdUsage`|A `CMap` 명령을 해당 사용 횟수에 매핑되는 개체입니다.|  
 |`m_nMinUsagePercentage`|자주 사용 하는 명령에 대 한 최소 사용량 비율입니다.|  
 |`m_nStartCount`|이 개체에 최소한의 추적 데이터를 수집 하는지 여부를 결정 하는 데 사용 되는 시작 카운터입니다.|  
@@ -104,7 +104,7 @@ void AddCmd(UINT uiCmd);
 |||  
 |-|-|  
 |매개 변수|설명|  
-|[in] `uiCmd`|명령 카운터를 증가를 지정 합니다.|  
+|[in] *uiCmd*|명령 카운터를 증가를 지정 합니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드는 명령 수의 맵 구조에 새 항목을 추가 `m_CmdUsage`항목이 이미 존재 하지 않는 경우.  
@@ -113,9 +113,9 @@ void AddCmd(UINT uiCmd);
   
 -   사용자 지정 모드에 있는 도구 모음 프레임 워크입니다 (의 [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode) 0이 아닌 값을 반환 하는 메서드).  
   
--   명령 참조는 하위 메뉴 또는 메뉴 구분 기호 ( `uiCmd` equals 0 또는-1).  
+-   명령 참조는 하위 메뉴 또는 메뉴 구분 기호 ( *uiCmd* equals 0 또는-1).  
   
-- `uiCmd` 표준 명령 참조 (전역 `IsStandardCommand` 함수가 0이 아닌 값을 반환).  
+- *uiCmd* 표준 명령 참조 (전역 `IsStandardCommand` 함수가 0이 아닌 값을 반환).  
   
 ##  <a name="getcount"></a>  CMFCCmdUsageCount::GetCount  
  지정한 명령 ID와 연결 된 사용 횟수를 검색 합니다.  
@@ -129,7 +129,7 @@ UINT GetCount(UINT uiCmd) const;
 |||  
 |-|-|  
 |매개 변수|설명|  
-|[in] `uiCmd`|검색할 명령 카운터의 ID입니다.|  
+|[in] *uiCmd*|검색할 명령 카운터의 ID입니다.|  
   
 ### <a name="return-value"></a>반환 값  
  지정한 명령 ID와 연결 된 사용 횟수  
@@ -161,7 +161,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 |||  
 |-|-|  
 |매개 변수|설명|  
-|[in] `uiCmd`|확인 하려면 명령을 지정 합니다.|  
+|[in] *uiCmd*|확인 하려면 명령을 지정 합니다.|  
   
 ### <a name="return-value"></a>반환 값  
  이 명령은 자주 사용 되는; 경우 0이 아닌 그렇지 않으면 0입니다.  
@@ -193,7 +193,7 @@ virtual void Serialize(CArchive& ar);
 |||  
 |-|-|  
 |매개 변수|설명|  
-|[in] `ar`|A `CArchive` 를 원본 또는 대상 serialize 할 개체입니다.|  
+|[in] *ar*|A `CArchive` 를 원본 또는 대상 serialize 할 개체입니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드는 직렬화 명령 수의 맵 구조 `m_CmdUsage`, 및 총 명령 사용법 `m_nTotalUsage`, 카운터에 있는 지정 된 보관 합니다.  
@@ -214,14 +214,14 @@ static BOOL __stdcall SetOptions(
 |||  
 |-|-|  
 |매개 변수|설명|  
-|[in] `nStartCount`|새 초기 추적 된 모든 명령 수입니다.|  
-|[in] `nMinUsagePercentage`|새 최소 사용량 백분율입니다.|  
+|[in] *nStartCount*|새 초기 추적 된 모든 명령 수입니다.|  
+|[in] *nMinUsagePercentage*|새 최소 사용량 백분율입니다.|  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 메서드가 성공 하면 `FALSE` 경우는 `nMinUsagePercentage` 매개 변수는 100 보다 크거나 같은 경우입니다.  
+ `TRUE` 메서드가 성공 하면 `FALSE` 경우는 *nMinUsagePercentage* 매개 변수는 100 보다 크거나 같은 경우입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 공유 설정 `CMFCCmdUsageCount` 클래스 데이터 멤버 `m_nStartCount` 및 `m_nMinUsagePercentage` 를 `nStartCount` 및 `nMinUsagePercentage`각각. `m_nStartCount` 사용 되는 [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation) 이 개체가 최소한의 추적 데이터 수집 여부를 결정 하는 메서드. `m_nMinUsagePercentage` 사용 되는 [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) 메서드를 지정된 된 명령 자주 사용 되 고 있는지 확인 합니다.  
+ 이 메서드는 공유 설정 `CMFCCmdUsageCount` 클래스 데이터 멤버 `m_nStartCount` 및 `m_nMinUsagePercentage` 를 *nStartCount* 및 *nMinUsagePercentage*각각. `m_nStartCount` 사용 되는 [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation) 이 개체가 최소한의 추적 데이터 수집 여부를 결정 하는 메서드. `m_nMinUsagePercentage` 사용 되는 [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) 메서드를 지정된 된 명령 자주 사용 되 고 있는지 확인 합니다.  
   
  디버그 빌드에서이 메서드는 어설션 오류 경우 생성 된 `nMinUsagePercentage` 매개 변수는 100 보다 크거나 같은 경우입니다.  
   

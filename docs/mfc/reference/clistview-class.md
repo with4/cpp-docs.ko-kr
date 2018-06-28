@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3930ad915ff908b8931733a9f0362320e24dc2cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9087642a529911c0c0a885c4613a3dbf2e92311f
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366345"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037624"
 ---
 # <a name="clistview-class"></a>CListView 클래스
 및 목록 컨트롤의 사용을 간소화 [CListCtrl](../../mfc/reference/clistctrl-class.md), MFC의 문서 뷰 아키텍처와 목록 컨트롤 기능을 캡슐화 하는 클래스입니다.  
@@ -94,7 +94,7 @@ CListCtrl& GetListCtrl() const;
 ### <a name="return-value"></a>반환 값  
  뷰와 연결 된 목록 컨트롤에 대 한 참조입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCListView#7](../../atl/reference/codesnippet/cpp/clistview-class_1.cpp)]  
   
 ##  <a name="removeimagelist"></a>  CListView::RemoveImageList  
@@ -105,7 +105,7 @@ void RemoveImageList(int nImageList);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nImageList`  
+ *nImageList*  
  제거할 이미지의 0부터 시작 하는 인덱스입니다.  
   
 ## <a name="see-also"></a>참고 항목  

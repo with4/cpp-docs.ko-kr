@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe37e1a159fa0138c237b58ffbd622292dcba714
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 843c79d9b3c7ffeb0ceef7338132048ac51d52ef
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369849"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039975"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc 클래스
 포함된 항목에 대한 연결을 지원하는 OLE 컨테이너 문서의 기본 클래스입니다.  
@@ -79,7 +79,7 @@ class COleLinkingDoc : public COleDocument
   
  [!code-cpp[NVC_MFCOleContainer#24](../../mfc/codesnippet/cpp/colelinkingdoc-class_2.cpp)]  
   
- 연결 프로그램 `COleTemplateServer` 개체는 개체를 호출 하 여 문서 서식 파일을 `ConnectTemplate` 멤버 함수와 호출 하 여 모든 클래스 개체를 OLE 시스템와 레지스터 **COleTemplateServer::RegisterAll**:  
+ 연결 프로그램 `COleTemplateServer` 개체는 개체를 호출 하 여 문서 서식 파일을 `ConnectTemplate` 멤버 함수와 호출 하 여 모든 클래스 개체를 OLE 시스템와 레지스터 `COleTemplateServer::RegisterAll`:  
   
  [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]  
   
@@ -119,7 +119,7 @@ virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszItemName`  
+ *lpszItemName*  
  요청 된 항목이 포함 된 OLE의 이름에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -136,7 +136,7 @@ virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszItemName`  
+ *lpszItemName*  
  연결 된 OLE 요청 된 항목의 이름에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -158,7 +158,7 @@ BOOL Register(
  *pFactory*  
  OLE 팩터리 개체에 대 한 포인터 (수 **NULL**).  
   
- `lpszPathName`  
+ *lpszPathName*  
  컨테이너 문서의 정규화 된 경로에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  

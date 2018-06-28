@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2be83e3791121bdea4d7f650f7d6801517df31ce
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8a1a4ca77e4b7a2cda10d87bd657e73931a50612
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373894"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038008"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog 클래스
 여러 페이지로 구성된 대화 상자는 여러 HTML 페이지를 순차적으로 표시하고 각 페이지의 이벤트를 처리합니다.  
@@ -46,7 +46,7 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
 ## <a name="remarks"></a>설명  
  이 작업을 수행 하기 위한 메커니즘은는 [DHTML 및 URL 이벤트 맵](dhtml-event-maps.md), 포함 된 각 페이지에 대 한 이벤트 맵을 포함 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 다중 페이지 대화 상자에서는 간단한 마법사와 비슷한 기능을 정의 하는 세 가지 HTML 리소스를 가정 합니다. 첫 번째 페이지에는 `Next` 단추, 두 번째는 **Prev** 및 `Next` 단추 및 세 번째는 **Prev** 단추입니다. 처리기 함수를 호출 하는 단추 중 하나를 누르면 [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) 적절 한 새 페이지를 로드 합니다.  
   
  (CMyMultiPageDlg.h)에서 클래스 선언의 관련 부분인:  
@@ -100,19 +100,19 @@ CMultiPageDHtmlDialog();
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  대화 상자 템플릿 리소스의 이름을 나타내는 null로 끝나는 문자열.  
   
- `szHtmlResID`  
+ *szHtmlResID*  
  HTML 리소스의 이름을 나타내는 null로 끝나는 문자열.  
   
- `pParentWnd`  
+ *pParentWnd*  
  부모 또는 소유자 창 개체에 대 한 포인터 (형식의 [CWnd](../../mfc/reference/cwnd-class.md)) 대화 상자 개체 속해 있는 합니다. 이 경우 **NULL**, 대화 상자 개체의 부모 창은 주 응용 프로그램 창으로 설정 됩니다.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  대화 상자 템플릿 리소스의 ID 번호를 포함합니다.  
   
- `nHtmlResID`  
+ *nHtmlResID*  
  HTML 리소스의 ID 번호를 포함합니다.  
   
 ##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  

@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c40f4d836d662bde1f49b9a0639b771d10db667
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5f655d8bd6fbfd19182bbaeed21eaa95739ff33d
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375835"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038974"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar 클래스
 A `CMFCCaptionBar` 개체는 세 가지 요소를 표시할 수 있는 컨트롤 막대: 단추, 텍스트 레이블 및 비트맵입니다. 각 형식의 요소를 한 번에 하나만 표시할 수 있습니다. 각 요소를 컨트롤의 왼쪽 또는 오른쪽 가장자리나 가운데에 맞출 수 있습니다. 평면 또는 3D 스타일을 캡션 표시줄의 위쪽 및 아래쪽 테두리에 적용할 수도 있습니다.  
@@ -133,7 +133,7 @@ class CMFCCaptionBar : public CPane
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)|캡션 표시줄의 배경색입니다.|  
 |[CMFCCaptionBar::m_clrBarBorder](#m_clrbarborder)|캡션 표시줄의 테두리 색입니다.|  
@@ -154,7 +154,7 @@ class CMFCCaptionBar : public CPane
   
  메시지 표시줄 모드를 사용 하려면 호출 [CMFCCaptionBar::Create](#create) 네 번째 매개 변수 (bIsMessageBarMode)를 설정 하 고 `TRUE`합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCCaptionBar` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 이 예제에서는 캡션 표시줄 컨트롤을 만들, 캡션 표시줄의 3D 테두리를 설정, 픽셀의 캡션 표시줄 컨트롤의 가장자리와 요소 막대 캡션 가장자리 사이의 거리를 설정, 캡션 표시줄에 대 한 단추를 설정 합니다. 단추의 도구 설명 설정, 캡션 표시줄의 텍스트 레이블을 설정, 비트맵 이미지의 캡션 표시줄에 대 한 설정 및 캡션 표시줄에는 이미지에 대 한 도구 설명을 설정 합니다. 이 코드 조각은의 일부인는 [MS Office 2007 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]  
@@ -189,19 +189,19 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwStyle`  
+ *dwStyle*  
  캡션 표시줄 스타일의 논리 OR 조합입니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  캡션 표시줄 컨트롤의 부모 창입니다.  
   
- `uID`  
+ *UID*  
  캡션 표시줄 컨트롤의 ID입니다.  
   
- `nHeight`  
+ *nHeight*  
  픽셀의 캡션 표시줄 컨트롤의 높이입니다. -1 이면 높이 아이콘, 텍스트 및 캡션 표시줄 컨트롤이 표시 하는 단추 높이 따라 계산 됩니다.  
   
- `bIsMessageBarMode`  
+ *bIsMessageBarMode*  
  `TRUE` 캡션 표시줄 메시지 막대 모드; 중인 경우 `FALSE` 그렇지 않은 경우.  
   
 ### <a name="return-value"></a>반환 값  
@@ -230,7 +230,7 @@ void EnableButton(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` 단추를 사용할 수 있도록 `FALSE` 에 단추를 사용 하지 않도록 설정 합니다.  
   
 ##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment  
@@ -241,7 +241,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `elem`  
+ [in] *elem*  
  캡션 표시줄을 맞춤 검색할 요소입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -332,10 +332,10 @@ virtual void OnDrawBackground(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  캡션 표시줄의 장치 컨텍스트에 대 한 포인터입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  경계 사각형을 채웁니다.  
   
 ### <a name="remarks"></a>설명  
@@ -353,10 +353,10 @@ virtual void OnDrawBorder(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  사용 하 여 테두리를 표시 하는 장치 컨텍스트.  
   
- [in] `rect`  
+ [in] *rect*  
  경계 사각형입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -376,16 +376,16 @@ virtual void OnDrawButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  단추를 표시 하는 데 사용 되는 장치 컨텍스트에 대 한 포인터입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  단추의 경계 사각형입니다.  
   
- [in] `strButton`  
+ [in] *strButton*  
  단추의 텍스트 레이블입니다.  
   
- [in] `bEnabled`  
+ [in] *b 사용*  
  `TRUE` 단추를 사용 하면 `FALSE` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
@@ -401,10 +401,10 @@ virtual void OnDrawImage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  이미지를 표시 하는 데 사용 되는 장치 컨텍스트에 대 한 포인터입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  이미지의 경계 사각형을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -421,13 +421,13 @@ virtual void OnDrawText(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  단추를 표시 하는 데 사용 되는 장치 컨텍스트에 대 한 포인터입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  텍스트의 경계 사각형입니다.  
   
- [in] `strText`  
+ [in] *strText*  
  표시할 텍스트 문자열입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -485,16 +485,16 @@ void SetBitmap(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `hBitmap`  
+ [in] *hBitmap*  
  설정 하는 비트맵에 대 한 핸들입니다.  
   
- [in] `clrTransparent`  
+ [in] *clrTransparent*  
  투명 한 비트맵의 색을 지정 하는 RGB 값입니다.  
   
- [in] `bStretch`  
+ [in] *bStretch*  
  경우 `TRUE`, 이미지 경계 사각형에 맞지 않는 경우 확장 된 비트맵입니다. 그렇지 않으면 비트맵 늘어나지 않습니다.  
   
- [in] `bmpAlignment`  
+ [in] *bmpAlignment*  
  비트맵의 맞춤입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -502,7 +502,7 @@ void SetBitmap(
   
  이전 비트맵은 자동으로 소멸 됩니다. 호출 했기 때문 캡션 표시줄 아이콘을 표시 하는 경우는 [CMFCCaptionBar::SetIcon](#seticon) 메서드를 호출 하 여 아이콘을 제거 하지 않으면 비트맵 표시 되지 것입니다 [CMFCCaptionBar::RemoveIcon](#removeicon)합니다.  
   
- 비트맵은 정렬에 지정 된 대로 `bmpAlignment` 매개 변수입니다.  이 매개 변수는 다음 `BarElementAlignment` 값 중 하나일 수 있습니다.  
+ 비트맵은 정렬에 지정 된 대로 *bmpAlignment* 매개 변수입니다.  이 매개 변수는 다음 `BarElementAlignment` 값 중 하나일 수 있습니다.  
   
 -   ALIGN_INVALID  
   
@@ -520,7 +520,7 @@ void SetBorderSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nSize`  
+ [in] *nSize*  
  캡션 표시줄 테두리의 픽셀 단위로 새 크기입니다.  
   
 ##  <a name="setbutton"></a>  CMFCCaptionBar::SetButton  
@@ -535,16 +535,16 @@ void SetButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszLabel`  
+ *lpszLabel*  
  단추의 명령 레이블입니다.  
   
- `uiCmdUI`  
+ *uiCmdUI*  
  단추의 명령 id입니다.  
   
- `btnAlignmnet`  
+ *btnAlignmnet*  
  단추의 맞춤입니다.  
   
- `bHasDropDownArrow`  
+ *bHasDropDownArrow*  
  `TRUE` 단추에 드롭다운 화살표를 표시 하는 경우 `FALSE` 그렇지 않은 경우.  
   
 ##  <a name="setbuttonpressed"></a>  CMFCCaptionBar::SetButtonPressed  
@@ -555,7 +555,7 @@ void SetButtonPressed(BOOL bPresed=TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bPresed`  
+ *bPresed*  
  `TRUE` 단추를 누른된 상태로 유지 하는 경우 `FALSE` 그렇지 않은 경우.  
   
 ##  <a name="setbuttontooltip"></a>  CMFCCaptionBar::SetButtonToolTip  
@@ -568,10 +568,10 @@ void SetButtonToolTip(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszToolTip`  
+ [in] *lpszToolTip*  
  도구 설명 캡션입니다.  
   
- [in] `lpszDescription`  
+ [in] *lpszDescription*  
  도구 설명에 대 한 설명입니다.  
   
 ##  <a name="setflatborder"></a>  CMFCCaptionBar::SetFlatBorder  
@@ -582,7 +582,7 @@ void SetFlatBorder(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bFlat`  
+ [in] *bFlat*  
  `TRUE` 캡션 표시줄 테두리 플랫 경우 사용 됩니다. `FALSE` 3D 테두리 경우.  
   
 ##  <a name="seticon"></a>  CMFCCaptionBar::SetIcon  
@@ -595,16 +595,16 @@ void SetIcon(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `hIcon`  
+ [in] *hIcon*  
  설정 아이콘에 대 한 핸들입니다.  
   
- [in] `iconAlignment`  
+ [in] *iconAlignment*  
  아이콘의 맞춤입니다.  
   
 ### <a name="remarks"></a>설명  
  캡션 표시줄 아이콘 또는 비트맵을 표시할 수 있습니다. 참조 [CMFCCaptionBar::SetBitmap](#setbitmap) 비트맵을 표시 하는 방법을 알아보려면 합니다. 아이콘과 비트맵을 모두 설정 하면 아이콘이 표시 됩니다. 호출 [CMFCCaptionBar::RemoveIcon](#removeicon) 캡션 표시줄에서 아이콘을 제거 하려면.  
   
- 아이콘에 따라 정렬 되는 `iconAlignment` 매개 변수입니다. 다음 중 하나일 수 있습니다 `BarElementAlignment` 값:  
+ 아이콘에 따라 정렬 되는 *iconAlignment* 매개 변수입니다. 다음 중 하나일 수 있습니다 `BarElementAlignment` 값:  
   
 -   ALIGN_INVALID  
   
@@ -624,10 +624,10 @@ void SetImageToolTip(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszToolTip`  
+ [in] *lpszToolTip*  
  도구 설명의 텍스트입니다.  
   
- [in] `lpszDescription`  
+ [in] *lpszDescription*  
  도구 설명에 대 한 설명입니다.  
   
 ##  <a name="setmargin"></a>  CMFCCaptionBar::SetMargin  
@@ -638,7 +638,7 @@ void SetMargin(int nMargin);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nMargin`  
+ [in] *nMargin*  
  픽셀의 캡션 표시줄 컨트롤의 가장자리와 캡션 표시줄 요소의 가장자리 사이의 거리입니다.  
   
 ##  <a name="settext"></a>  CMFCCaptionBar::SetText  
@@ -651,14 +651,14 @@ void SetText(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `strText`  
+ [in] *strText*  
  설정 하려면 텍스트 문자열입니다.  
   
- [in] `textAlignment`  
+ [in] *들여쓰기 내어쓰기*  
  텍스트 맞춤입니다.  
   
 ### <a name="remarks"></a>설명  
- 텍스트 레이블을 맞춥니다에 지정 된 대로 `textAlignment` 매개 변수입니다. 다음 중 하나일 수 있습니다 `BarElementAlignment` 값:  
+ 텍스트 레이블을 맞춥니다에 지정 된 대로 *들여쓰기 내어쓰기* 매개 변수입니다. 다음 중 하나일 수 있습니다 `BarElementAlignment` 값:  
   
 -   ALIGN_INVALID  
   

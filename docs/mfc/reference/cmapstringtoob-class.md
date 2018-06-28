@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52adc7ce08644fb002b2a0a2cd91d20d15d4f24a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7e4ea4ea24dfae26b1b43fe6480cac7f7a480fa4
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375773"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042250"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb 클래스
 고유한 `CString` 개체를 `CObject` 포인터에 매핑하는 사전 컬렉션 클래스입니다.  
@@ -121,11 +121,11 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nBlockSize`  
+ *nBlockSize*  
  지도 확장 하기 위한 메모리 할당 세분성을 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
- 단위에서 메모리를 할당 지도 확장 되면서 `nBlockSize` 항목입니다.  
+ 단위에서 메모리를 할당 지도 확장 되면서 *nBlockSize* 항목입니다.  
   
  다음 표에서 함수를 보여 줍니다 다른 멤버와 유사한 **CMapStringToOb:: CMapStringToOb**합니다.  
   
@@ -138,7 +138,7 @@ CMapStringToOb(INT_PTR nBlockSize = 10);
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**CMapWordToOb( INT_PTR** `nBlockSize` **= 10 );**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**MapWordToPtr( INT_PTR** `nBlockSize` **= 10 );**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#63](../../mfc/codesnippet/cpp/cmapstringtoob-class_1.cpp)]  
   
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
@@ -165,7 +165,7 @@ INT_PTR GetCount() const;
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**INT_PTR GetCount( ) const;**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**INT_PTR GetCount( ) const;**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#64](../../mfc/codesnippet/cpp/cmapstringtoob-class_2.cpp)]  
@@ -234,7 +234,7 @@ void GetNextAssoc(
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**GetNextAssoc void (위치 &** *rNextPosition* **, WORD &** *rKey* **, CObject\* &**  *rValue* **) const;**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**GetNextAssoc void (위치 &** *rNextPosition* **, WORD &** *rKey* **, void\* &**  *rValue* **) const;**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#66](../../mfc/codesnippet/cpp/cmapstringtoob-class_4.cpp)]  
@@ -273,7 +273,7 @@ INT_PTR GetSize() const;
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**INT_PTR GetSize( ) const;**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**INT_PTR GetSize( ) const;**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#67](../../mfc/codesnippet/cpp/cmapstringtoob-class_5.cpp)]  
   
 ##  <a name="getstartposition"></a>  CMapStringToOb::GetStartPosition  
@@ -300,7 +300,7 @@ POSITION GetStartPosition() const;
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**Const; GetStartPosition ()를 배치 합니다.**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**Const; GetStartPosition ()를 배치 합니다.**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [CMapStringToOb::GetNextAssoc](#getnextassoc)합니다.  
   
 ##  <a name="hashkey"></a>  CMapStringToOb::HashKey  
@@ -311,7 +311,7 @@ UINT HashKey(LPCTSTR key) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `key`  
+ *key*  
  해시 값을 계산 하는 키입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -339,10 +339,10 @@ void InitHashTable(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hashSize`  
+ *hashSize*  
  해시 테이블에 있는 항목의 수입니다.  
   
- `bAllocNow`  
+ *bAllocNow*  
  경우 **TRUE**, 초기화; 시 해시 테이블을 할당 필요할 때 테이블 할당 되는 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
@@ -369,7 +369,7 @@ BOOL IsEmpty() const;
 ### <a name="return-value"></a>반환 값  
  이 지도 요소가 포함 되어 있지 않으면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예를 참조 [RemoveAll](#removeall)합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -394,10 +394,10 @@ BOOL Lookup(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `key`  
+ *key*  
  조회 되는 요소를 식별 하는 문자열 키를 지정 합니다.  
   
- `rValue`  
+ *rValue*  
  조회 요소에서 반환 된 값을 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -417,7 +417,7 @@ BOOL Lookup(
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**BOOL 조회 (WORD** `key` **, CObject\* &**  `rValue` **) const;**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**BOOL 조회 (WORD** `key` **, void\* &**  `rValue` **) const;**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#68](../../mfc/codesnippet/cpp/cmapstringtoob-class_6.cpp)]  
@@ -432,10 +432,10 @@ BOOL LookupKey(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `key`  
+ *key*  
  조회 되는 요소를 식별 하는 문자열 키를 지정 합니다.  
   
- `rKey`  
+ *rKey*  
  연결 된 키에 대 한 참조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -459,7 +459,7 @@ CObject*& operator[ ](lpctstr key);
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 포인터에 대 한 참조는 `CObject` ; 개체 또는 **NULL** 맵이 비어 있는 경우 또는 `key` 범위를 벗어났습니다.  
+ 에 대 한 포인터에 대 한 참조는 `CObject` ; 개체 또는 **NULL** 맵이 비어 있는 경우 또는 *키* 범위를 벗어났습니다.  
   
 ### <a name="remarks"></a>설명  
  따라서 대입문 (l-value)의 왼쪽에만 사용할 수 있습니다. 지정된 된 키와 지도 요소가 경우 새 요소는 생성 됩니다.  
@@ -477,7 +477,7 @@ CObject*& operator[ ](lpctstr key);
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**CObject\*& 연산자 (word** `key`  **\);**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void\*& 연산자 (word** `key`  **\);**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#72](../../mfc/codesnippet/cpp/cmapstringtoob-class_7.cpp)]  
@@ -513,7 +513,7 @@ void RemoveAll();
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**void RemoveAll( );**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**void RemoveAll( );**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#69](../../mfc/codesnippet/cpp/cmapstringtoob-class_8.cpp)]  
@@ -526,7 +526,7 @@ BOOL RemoveKey(LPCTSTR key);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `key`  
+ *key*  
  지도 조회에 사용 되는 문자열을 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -546,7 +546,7 @@ BOOL RemoveKey(LPCTSTR key);
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**BOOL RemoveKey (WORD** `key` **);**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**BOOL RemoveKey (WORD** `key` **);**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#70](../../mfc/codesnippet/cpp/cmapstringtoob-class_9.cpp)]  
@@ -571,10 +571,10 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `key`  
+ *key*  
  새 요소의 키가 문자열을 지정 합니다.  
   
- `newValue`  
+ *새 값*  
  지정 된 `CObject` 포인터는 새 요소의 값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -591,7 +591,7 @@ void SetAt(
 |[CMapWordToOb](../../mfc/reference/cmapwordtoob-class.md)|**SetAt void (WORD** `key` **, CObject\***  `newValue` **);**|  
 |[CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)|**SetAt void (WORD** `key` **, void\***  `newValue` **);**|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  참조 [CObList::CObList](../../mfc/reference/coblist-class.md#coblist) 목록은 `CAge` 컬렉션의 모든 예제에서 사용 되는 클래스입니다.  
   
  [!code-cpp[NVC_MFCCollections#71](../../mfc/codesnippet/cpp/cmapstringtoob-class_10.cpp)]  

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 376b61dbbbfe734ecc49263718902dd387c7fce8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 08b4095b535724f7132a2b286ce52cb46286932b
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376452"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037598"
 ---
 # <a name="colechangesourcedialog-class"></a>COleChangeSourceDialog 클래스
 OLE 소스 변경 대화 상자에 사용합니다.  
@@ -111,10 +111,10 @@ explicit COleChangeSourceDialog(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pItem`  
+ *pItem*  
  연결에 대 한 포인터 [COleClientItem](../../mfc/reference/coleclientitem-class.md) 원본이 업데이트 해야 합니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  부모 또는 소유자 창 개체를 가리키는 (형식의 `CWnd`) 대화 상자 개체 속해 있는 합니다. 이 경우 **NULL**, 대화 상자의 부모 창 주 응용 프로그램 창으로 설정 됩니다.  
   
 ### <a name="remarks"></a>설명  

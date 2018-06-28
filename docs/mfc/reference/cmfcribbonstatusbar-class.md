@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0257370e69c5304c4d945087f2a8c5694da4aa03
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 256dbd6978b2d25cebb8496b6aa71763356f3637
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374667"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038105"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar 클래스
 `CMFCRibbonStatusBar` 클래스는 리본 요소를 표시할 수 있는 상태 표시줄 컨트롤을 구현 합니다.  
@@ -117,7 +117,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
   
  일반적으로 기본 영역은 상태 표시줄의 상태 알림 표시 하 고 확장 된 영역의 뷰 컨트롤을 표시 합니다. 사용자가 크기 조정 리본 메뉴 상태 표시줄에서 확장 된 영역의 가능한 한 오랫동안 표시 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCRibbonStatusBar` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 구분 기호를 추가 리본 메뉴 상태 표시줄에 새 리본 요소를 추가, 리본 메뉴 상태 표시줄의 확장된 된 영역에 리본 요소를 추가 하는 방법을 설명 하 고 리본 메뉴 상태 표시줄에 대 한 일반 모드를 설정 합니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#15](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_1.cpp)]  
@@ -149,7 +149,7 @@ void AddDynamicElement(CMFCRibbonBaseElement* pElement);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pElement`  
+ [in] *pElement*  
  동적 요소에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -166,13 +166,13 @@ void AddElement(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pElement`  
+ [in] *pElement*  
  추가 된 요소에 대 한 포인터입니다.  
   
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  요소의 텍스트 레이블입니다.  
   
- [in] `bIsVisible`  
+ [in] *bIsVisible*  
  `TRUE` 로 표시 된 요소를 추가 하려는 경우 `FALSE` 으로 요소를 추가 하려는 경우 숨겨집니다.  
   
 ##  <a name="addextendedelement"></a>  CMFCRibbonStatusBar::AddExtendedElement  
@@ -186,13 +186,13 @@ void AddExtendedElement(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pElement`  
+ [in] *pElement*  
  추가 된 요소에 대 한 포인터입니다.  
   
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  요소의 텍스트 레이블입니다.  
   
- [in] `bIsVisible`  
+ [in] *bIsVisible*  
  `TRUE` 로 표시 된 요소를 추가 하려는 경우 `FALSE` 으로 요소를 추가 하려는 경우 숨겨집니다.  
   
 ### <a name="remarks"></a>설명  
@@ -219,13 +219,13 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  부모 창에 대 한 포인터입니다.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  컨트롤 스타일의 논리 OR 조합입니다.  
   
- [in] `nID`  
+ [in] *nID*  
  상태 표시줄의 컨트롤 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -243,16 +243,16 @@ BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParentWnd`  
+ *pParentWnd*  
  부모 창에 대 한 포인터입니다.  
   
- `dwCtrlStyle`  
+ *dwCtrlStyle*  
  상태 표시줄 개체를 만들기 위한 추가 스타일의 논리 OR 조합입니다.  
   
- `dwStyle`  
+ *dwStyle*  
  상태 표시줄 컨트롤 스타일입니다.  
   
- `nID`  
+ *nID*  
  상태 표시줄의 컨트롤 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -266,8 +266,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmdID`  
- [in] `BOOL`  
+ [in] *uiCmdID*  
+ [in] *BOOL*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -281,7 +281,7 @@ CMFCRibbonBaseElement* FindElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiID`  
+ [in] *uiID*  
  요소의 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -305,7 +305,7 @@ CMFCRibbonBaseElement* GetElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  상태 표시줄 컨트롤의 주 영역에 있는 요소의 0부터 시작 인덱스를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -331,11 +331,11 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  상태 표시줄 컨트롤의 확장된 영역에 있는 요소의 0부터 시작하는 인덱스를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 리본 메뉴 상태 표시줄에서 확장된 영역의 지정한 인덱스에 있는 요소에 대한 포인터입니다. `NULL`가 음수이거나 리본 메뉴 상태 표시줄의 확장된 영역에 있는 요소 수를 초과하는 경우 `nIndex`입니다.  
+ 리본 메뉴 상태 표시줄에서 확장된 영역의 지정한 인덱스에 있는 요소에 대한 포인터입니다. `NULL` 경우 *nIndex* 가 음수 이거나 리본 메뉴 상태 표시줄의 확장된 된 영역에 있는 요소의 수를 초과 합니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -347,7 +347,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `rect`  
+ [in] *rect*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -383,7 +383,7 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pElement`  
+ [in] *pElement*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -413,17 +413,17 @@ virtual void OnDrawInformation(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `strInfo`  
+ [in] *strInfo*  
  정보 문자열입니다.  
   
- [in] `rectInfo`  
+ [in] *rectInfo*  
  경계 사각형입니다.  
   
 ### <a name="remarks"></a>설명  
- 상태 표시줄에 정보 문자열의 모양을 사용자 지정 하려는 경우에 파생된 클래스에서이 메서드를 재정의 합니다. 사용 하 여는 [CMFCRibbonStatusBar::SetInformation](#setinformation) 상태 표시줄 정보 모드를 전환 하는 메서드. 이 모드에서는 상태 표시줄 모든 창 숨겨지고로 지정 된 정보 문자열을 표시 `strInfo`합니다.  
+ 상태 표시줄에 정보 문자열의 모양을 사용자 지정 하려는 경우에 파생된 클래스에서이 메서드를 재정의 합니다. 사용 하 여는 [CMFCRibbonStatusBar::SetInformation](#setinformation) 상태 표시줄 정보 모드를 전환 하는 메서드. 이 모드에서는 상태 표시줄 모든 창 숨겨지고로 지정 된 정보 문자열을 표시 *strInfo*합니다.  
   
 ##  <a name="recalclayout"></a>  CMFCRibbonStatusBar::RecalcLayout  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -449,11 +449,11 @@ BOOL RemoveElement(UINT uiID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiID`  
+ [in] *uiID*  
  상태 표시줄에서 제거 된 요소의 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 지정 된 요소가 `uiID` 제거 됩니다. 그렇지 않으면 `FALSE`입니다.  
+ `TRUE` 지정 된 요소가 *uiID* 제거 됩니다. 그렇지 않으면 `FALSE`입니다.  
   
 ##  <a name="setinformation"></a>  CMFCRibbonStatusBar::SetInformation  
  리본 메뉴 상태 표시줄에 대 한 정보 모드를 사용할지 설정 합니다.  
@@ -463,11 +463,11 @@ void SetInformation(LPCTSTR lpszInfo);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszInfo`  
+ [in] *lpszInfo*  
  정보 문자열입니다.  
   
 ### <a name="remarks"></a>설명  
- 상태 표시줄 정보 모드에 배치할이 방법을 사용 합니다. 이 모드에서는 상태 표시줄 모든 창 숨겨지고로 지정 된 정보 문자열을 표시 `lpszInfo`합니다.  
+ 상태 표시줄 정보 모드에 배치할이 방법을 사용 합니다. 이 모드에서는 상태 표시줄 모든 창 숨겨지고로 지정 된 정보 문자열을 표시 *lpszInfo*합니다.  
   
  LpszInfo 다음과 같은 경우 `NULL`, 상태 표시줄 일반 모드로 되돌립니다.  
   

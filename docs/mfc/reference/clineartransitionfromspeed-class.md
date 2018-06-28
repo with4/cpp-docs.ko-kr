@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64c8829336378e24759bc26e306fb7b43ab226bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0d6b3ba22fbe9feffc52d0f6ebfd970247929caa
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366911"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039484"
 ---
 # <a name="clineartransitionfromspeed-class"></a>CLinearTransitionFromSpeed 클래스
 선형 속도 전환을 캡슐화합니다.  
@@ -84,10 +84,10 @@ CLinearTransitionFromSpeed(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dblSpeed`  
+ *dblSpeed*  
  변수 속도의 절대 값입니다.  
   
- `dblFinalValue`  
+ *dblFinalValue*  
  전환의 끝에서 애니메이션 변수의 값입니다.  
   
 ##  <a name="create"></a>  CLinearTransitionFromSpeed::Create  
@@ -100,7 +100,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
-`pLibrary`  
+*pLibrary*  
  에 대 한 포인터는 [IUIAnimationTransitionLibrary 인터페이스](https://msdn.microsoft.com/library/windows/desktop/dd371897), 표준 전환의 라이브러리를 정의 하는 합니다.  
   
 ### <a name="return-value"></a>반환 값  

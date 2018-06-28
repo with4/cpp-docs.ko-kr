@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86a46614cdb61e39af1016e496b12518b87f59ed
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 857eb87caf42e39366e261ac92c3b2f289fb41d9
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370509"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37039377"
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox 클래스
 글꼴 목록이 포함된 콤보 상자를 구현합니다. 콤보 상자를 리본 패널에 배치합니다.  
@@ -106,13 +106,13 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nFontType`  
+ [in] *nFontType*  
  추가할 글꼴의 글꼴 종류를 지정 합니다.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  추가할 글꼴의 문자 집합을 지정 합니다.  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  피치 및 패밀리를 추가 하려면 글꼴을 지정 합니다.  
   
 ##  <a name="cmfcribbonfontcombobox"></a>  CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
@@ -128,25 +128,25 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nID`  
+ [in] *nID*  
  사용자가 콤보 상자에서 항목을 선택할 때 실행 되는 명령의 명령 ID입니다.  
   
- [in] `nFontType`  
+ [in] *nFontType*  
  글꼴 콤보 상자에 표시할 유형을 지정 합니다. 유효한 옵션은 **DEVICE_FONTTYPE**, **RASTER_FONTTYPE**, 및 **또는 이러한 옵션의**, 또는 둘의 비트 조합을 합니다.  
   
- [in] `nCharSet`  
+ [in] *nCharSet*  
  지정된 된 문자 집합에 속하는 것 콤보 상자에 있는 글꼴 필터링...  
   
- [in] `nPitchAndFamily`  
+ [in] *nPitchAndFamily*  
  피치 및 콤보 상자에 표시 되는 글꼴 패밀리를 지정 합니다.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  콤보 상자의 픽셀 너비를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
- 가능한에 대 한 자세한 내용은 `nFontType` 매개 변수 값을 참조 하세요. [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) Windows SDK 설명서에서입니다.  
+ 가능한에 대 한 자세한 내용은 *nFontType* 매개 변수 값을 참조 하세요. [EnumFontFamProc](http://msdn.microsoft.com/library/windows/desktop/dd162621) Windows SDK 설명서에서입니다.  
   
- 에 할당 될 수 있는 유효한 문자 집합에 대 한 자세한 내용은 `nCharSet`, 및 유효한 값을 지정할 수 있는 `nPitchAndFamily`, 참조 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) Windows SDK 설명서에서입니다.  
+ 에 할당 될 수 있는 유효한 문자 집합에 대 한 자세한 내용은 *nCharSet*, 및를 지정할 수 있는 유효한 값 *nPitchAndFamily*, 참조 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) 에 Windows SDK 설명서입니다.  
   
 ##  <a name="getfontdesc"></a>  CMFCRibbonFontComboBox::GetFontDesc  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -156,7 +156,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iIndex`  
+ [in] *iIndex*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -183,13 +183,13 @@ BOOL SetFont(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszName`  
+ ' lpszName *  
  선택 하는 글꼴의 이름을 지정 합니다.  
   
- `nCharSet`  
+ *nCharSet*  
  문자 집합 선택한 글꼴을 지정 합니다.  
   
- `bExact`  
+ *bExact*  
  `TRUE` 문자 집합; 글꼴을 선택할 때와 일치 해야 함을 지정 하려면 `FALSE` 지정할 글꼴을 선택 하는 경우에 문자 집합을 무시할 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  

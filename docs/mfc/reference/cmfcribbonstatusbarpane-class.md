@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df9109ef4613a2fb905fc5bef525f3553155417b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0f59822504e317ee43ad7fb84345fa616fe72fae
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369192"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038434"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>CMFCRibbonStatusBarPane 클래스
 `CMFCRibbonStatusBarPane` 리본 메뉴 상태 표시줄에 추가할 수 있는 리본 요소를 구현 하는 클래스입니다.  
@@ -80,7 +80,7 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
 |[CMFCRibbonStatusBarPane::SetAnimationList](#setanimationlist)|애니메이션에 사용할 수 있는 이미지 목록 창에 할당 합니다.|  
 |[CMFCRibbonStatusBarPane::SetTextAlign](#settextalign)|텍스트 맞춤을 설정합니다.|  
 |[CMFCRibbonStatusBarPane::StartAnimation](#startanimation)|창에 할당 하는 애니메이션을 시작 합니다.|  
-|[CMFCRibbonStatusBarPane::StopAnimation](#stopanimation)|창에 할당 하는 애니메이션을 중지 합니다. 이어야 합니다.|  
+|[CMFCRibbonStatusBarPane::StopAnimation](#stopanimation)|창에 할당 하는 애니메이션을 중지 합니다. .|  
   
 ### <a name="protected-methods"></a>보호된 메서드  
   
@@ -88,7 +88,7 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
 |----------|-----------------|  
 |[CMFCRibbonStatusBarPane::OnFinishAnimation](#onfinishanimation)|창에 할당 하는 애니메이션 중지 될 때 프레임 워크에서 호출 됩니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCRibbonStatusBarPane` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 이 예제에서는 작성 방법을 보여 주는 `CMFCRibbonStatusBarPane` 개체, 상태 표시줄 창의 레이블의 텍스트 맞춤을 설정, 잘림 없이 상태 표시줄 창에 표시할 수 있습니다, 이미지 목록에 사용할 수 있는 상태 표시줄 창에 연결 하는 가장 긴 텍스트를 정의 nimation, 및 애니메이션 시작 합니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#2](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbarpane-class_1.cpp)]  
@@ -136,31 +136,31 @@ CMFCRibbonStatusBarPane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nCmdID`  
+ [in] *nCmdID*  
  창의 명령 ID를 지정합니다.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  창에 표시할 텍스트 문자열을 지정 합니다.  
   
- [in] `bIsStatic`  
+ [in] *bIsStatic*  
  경우 `TRUE`, 상태 창 강조 표시 하거나 클릭 하 여 선택한 수 없습니다.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  창에 표시할 아이콘에 대 한 핸들을 지정 합니다.  
   
- [in] `lpszAlmostLargeText`  
+ [in] *lpszAlmostLargeText*  
  창에 표시 될 수 있는 가장 긴 텍스트 문자열을 지정 합니다.  
   
- [in] `hBmpAnimationList`  
+ [in] *hBmpAnimationList*  
  애니메이션에 사용 되는 이미지 목록에 대 한 핸들을 지정 합니다.  
   
- [in] `cxAnimation`  
+ [in] *cxAnimation*  
  애니메이션에 사용 되는 이미지 목록에 있는 아이콘의 픽셀 너비를 지정 합니다.  
   
- [in] `clrTrnsp`  
+ [in] *clrTrnsp*  
  애니메이션에 사용 되는 이미지 목록에 이미지의 투명색을 지정 합니다.  
   
- [in] `uiAnimationListResID`  
+ [in] *uiAnimationListResID*  
  애니메이션에 사용 되는 이미지 목록의 리소스 ID를 지정 합니다.  
   
 ##  <a name="getalmostlargetext"></a>  CMFCRibbonStatusBarPane::GetAlmostLargeText  
@@ -217,7 +217,7 @@ virtual void OnDrawBorder(CDC*);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `CDC*`  
+ [in] *CDC**  
   
 ### <a name="remarks"></a>설명  
   
@@ -229,7 +229,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -253,11 +253,11 @@ void SetAlmostLargeText(LPCTSTR lpszAlmostLargeText);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszAlmostLargeText`  
+ [in] *lpszAlmostLargeText*  
  잘림 없이 상태 표시줄 창에 표시 될 수 있는 가장 긴 문자열을 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
- 텍스트의 크기를 계산 하는 라이브러리를 `lpszAlmostLargeText` 지정 하 고 그에 따라 창 크기를 조정 합니다. 텍스트는 여전히에 맞지 않는 창의 경우 잘립니다.  
+ 텍스트의 크기를 계산 하는 라이브러리를 *lpszAlmostLargeText* 지정 하 고 그에 따라 창 크기를 조정 합니다. 텍스트는 여전히에 맞지 않는 창의 경우 잘립니다.  
   
 ##  <a name="setanimationlist"></a>  CMFCRibbonStatusBarPane::SetAnimationList  
  상태 표시줄 창 애니메이션에 사용할 수 있는 이미지 목록을 연결 합니다.  
@@ -275,16 +275,16 @@ BOOL SetAnimationList(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `hBmpAnimationList`  
+ [in] *hBmpAnimationList*  
  이미지 목록에 대 한 핸들을 지정합니다.  
   
- [in] `cxAnimation`  
+ [in] *cxAnimation*  
  이미지 목록에서 프레임의 픽셀에서 너비를 지정 합니다.  
   
- [in] `clrTransp`  
+ [in] *clrTransp*  
  이미지 목록의 투명 한 색을 지정합니다.  
   
- [in] `uiAnimationListResID`  
+ [in] *uiAnimationListResID*  
  이미지 목록의 리소스 ID를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -298,11 +298,11 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nAlign`  
+ [in] *nAlign*  
  텍스트 맞춤을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
- `nAlign` 다음 값 중 하나일 수 있습니다.  
+ *nAlign* 다음 값 중 하나일 수 있습니다.  
   
 - `TA_LEFT`: 왼쪽 맞춤  
   
@@ -320,10 +320,10 @@ void StartAnimation(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nFrameDelay`  
+ [in] *nFrameDelay*  
  애니메이션 프레임 속도 밀리초 단위로 지정합니다.  
   
- [in] `nDuration`  
+ [in] *nDuration*  
  시간 (밀리초)는 애니메이션을 재생 하는 데 시간을 지정 합니다. 무한 루프에 대 한-1을 사용 합니다.  
   
 ### <a name="remarks"></a>설명  

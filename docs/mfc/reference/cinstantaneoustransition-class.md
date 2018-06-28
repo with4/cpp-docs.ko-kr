@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894d782f0f896837474c24255703a60e228737ba
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76980dab9246527162e124b9ce599791b49c8a26
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366738"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37038408"
 ---
 # <a name="cinstantaneoustransition-class"></a>CInstantaneousTransition 클래스
 순간 전환을 캡슐화합니다.  
@@ -79,7 +79,7 @@ CInstantaneousTransition(DOUBLE dblFinalValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dblFinalValue`  
+ *dblFinalValue*  
  전환의 끝에서 애니메이션 변수의 값입니다.  
   
 ##  <a name="create"></a>  CInstantaneousTransition::Create  
@@ -92,7 +92,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
-`pLibrary`  
+*pLibrary*  
  에 대 한 포인터는 [IUIAnimationTransitionLibrary 인터페이스](https://msdn.microsoft.com/library/windows/desktop/dd371897), 표준 전환의 라이브러리를 정의 하는 합니다.  
 
   

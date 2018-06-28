@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf000b45e2bd24ec40e1ae15001c3df46d1b12c9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e3046fa4c9446afeba45fd41a6b571ccf58f2cfb
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375618"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040118"
 ---
 # <a name="coleresizebar-class"></a>COleResizeBar 클래스
 내부 OLE 항목의 크기 변경을 지원하는 컨트롤 막대의 한 종류입니다.  
@@ -92,13 +92,13 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParentWnd`  
+ *pParentWnd*  
  크기 조정 막대의 부모 창에 대 한 포인터입니다.  
   
- `dwStyle`  
+ *dwStyle*  
  지정 된 [창 스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles) 특성입니다.  
   
- `nID`  
+ *nID*  
  크기 조정 막대의 자식 창 id입니다.  
   
 ### <a name="return-value"></a>반환 값  

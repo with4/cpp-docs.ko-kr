@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 495bf2a3eab9ceee4ca0bab337d590c1820905e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00933a392486064fac7c9a526d8b0c096703460c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369624"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037738"
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl 클래스
 `CMFCListCtrl` 클래스의 기능을 확장 [CListCtrl 클래스](../../mfc/reference/clistctrl-class.md) 의 고급 헤더 컨트롤 기능을 지원 하 여 클래스는 [CMFCHeaderCtrl 클래스](../../mfc/reference/cmfcheaderctrl-class.md)합니다.  
@@ -75,7 +75,7 @@ class CMFCListCtrl : public CListCtrl
 ## <a name="remarks"></a>설명  
  `CMFCListCtrl` 두 가지 기능이 향상 제공 [CListCtrl 클래스](../../mfc/reference/clistctrl-class.md) 클래스입니다. 첫째, 열 정렬을 머리글에 정렬 화살표를 자동으로 그려서 사용 가능한 옵션은 나타냅니다. 둘째, 동시에 여러 열에서 정렬 하는 데이터를 지원 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCListCtrl` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 이 예제에는 목록 컨트롤을 만들려면, 삽입 열이, 항목을 삽입할 항목의 텍스트를 설정 및 목록 컨트롤의 글꼴 설정 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [Visual Studio 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#25](../../mfc/codesnippet/cpp/cmfclistctrl-class_1.h)]  
@@ -105,10 +105,10 @@ void EnableMarkSortedColumn(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bMark`  
+ [in] *bMark*  
  다른 배경색을 사용할 것인지를 결정 하는 부울 매개 변수입니다.  
   
- [in] `bRedraw`  
+ [in] *bRedraw*  
  컨트롤을 즉시 다시 그리도록 여부를 결정 하는 부울 매개 변수입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -122,7 +122,7 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
  여러 열 정렬 모드 사용 여부를 지정 하는 부울입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -165,13 +165,13 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lParam1`  
+ [in] *lParam1*  
  비교할 첫 번째 항목입니다.  
   
- [in] `lParam2`  
+ [in] *lParam2*  
  비교할 두 번째 항목입니다.  
   
- [in] `iColumn`  
+ [in] *iColumn*  
  이 메서드가 정렬 하는 열의 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -213,13 +213,13 @@ virtual HFONT OnGetCellFont(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nRow`  
+ [in] *nRow*  
  문제의 셀의 행입니다.  
   
- [in] `nColumn`  
+ [in] *nColumn*  
  문제의 셀의 열입니다.  
   
- [in] `dwData`  
+ [in] *dwData*  
  사용자 정의 데이터입니다. 기본 구현에서는이 매개 변수를 사용 하지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -238,10 +238,10 @@ virtual COLORREF OnGetCellTextColor(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nRow`  
+ [in] *nRow*  
  문제의 셀의 행입니다.  
   
- [in] `nColumn`  
+ [in] *nColumn*  
  문제의 셀의 열입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -258,7 +258,7 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iColumn`  
+ [in] *iColumn*  
  제거할 열입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -275,14 +275,14 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iColumn`  
+ [in] *iColumn*  
  정렬 열입니다.  
   
- [in] `bAscending`  
+ [in] *bAscending*  
  정렬 순서를 지정 하는 부울입니다.  
   
- [in] `bAdd`  
- 메서드가으로 표시 된 열을 추가 하는지 여부를 지정 하는 부울 `iColumn` 정렬 열 목록에 있습니다.  
+ [in] *추가*  
+ 메서드가으로 표시 된 열을 추가 하는지 여부를 지정 하는 부울 *iColumn* 정렬 열 목록에 있습니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드는 메서드를 사용 하 여 헤더 컨트롤에 입력된 매개 변수를 전달 [CMFCHeaderCtrl::SetSortColumn](../../mfc/reference/cmfcheaderctrl-class.md#setsortcolumn)합니다.  
@@ -298,14 +298,14 @@ virtual void Sort(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iColumn`  
+ [in] *iColumn*  
  정렬 열입니다.  
   
- [in] `bAscending`  
+ [in] *bAscending*  
  정렬 순서를 지정 하는 부울입니다.  
   
- [in] `bAdd`  
- 이 메서드가 표시 열을 추가 하는지 여부를 지정 하는 부울 `iColumn` 정렬 열 목록에 있습니다.  
+ [in] *추가*  
+ 이 메서드가 표시 열을 추가 하는지 여부를 지정 하는 부울 *iColumn* 정렬 열 목록에 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [계층 구조 차트](../../mfc/hierarchy-chart.md)   

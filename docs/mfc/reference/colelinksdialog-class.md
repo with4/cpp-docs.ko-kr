@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e190c8b8cb11fefccb2847214dcaebf713f35dc4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fb24b73ba23b430e29ed9144e51372eefdb673a3
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368971"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042536"
 ---
 # <a name="colelinksdialog-class"></a>COleLinksDialog 클래스
 OLE 링크 편집 대화 상자에 사용합니다.  
@@ -117,16 +117,16 @@ COleLinksDialog (
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDoc`  
+ *pDoc*  
  편집할 수에 대 한 링크를 포함 하는 OLE 문서의를 가리킵니다.  
   
- `pView`  
- 현재 보기의 가리키는 `pDoc`합니다.  
+ *pView*  
+ 현재 보기의 가리키는 *pDoc*합니다.  
   
- `dwFlags`  
+ *dwFlags*  
  0을 포함 하는 생성 플래그 또는 **ELF_SHOWHELP** 대화 상자가 표시 되 면 도움말 단추를 표시할지 여부를 지정할 수 있습니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  부모 또는 소유자 창 개체를 가리키는 (형식의 `CWnd`) 대화 상자 개체 속해 있는 합니다. 이 경우 **NULL**, 대화 상자의 부모 창은 주 응용 프로그램 창으로 설정 됩니다.  
   
 ### <a name="remarks"></a>설명  

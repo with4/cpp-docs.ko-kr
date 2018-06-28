@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7a1af8887a1c07aefd3fc3593b0aae6222e51a4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 613076e38d8033a5af92913fcbe8e195ebdc2c60
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378045"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042146"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel 클래스
 리본 요소 집합이 포함된 패널을 구현합니다. 패널을 그리면 지정된 패널 크기에 가능한 한 많은 요소를 표시합니다.  
@@ -214,7 +214,7 @@ class CMFCRibbonPanel : public CObject
   
  리본 메뉴를 호출 하 여 리본 범주에 포함 된 패널을 얻을 수는 [CMFCRibbonCategory::GetPanel](../../mfc/reference/cmfcribboncategory-class.md#getpanel) 메서드.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 구성 하는 `CMFCRibbonPanel` 에서 다양 한 메서드를 사용 하 여 개체는 `CMFCRibbonPanel` 클래스입니다. 예제에는 리본 패널을 표시 하는 바로 가기 키 설정, 패널의 요소를 세로로 열 기준 정렬 및 열 맞춤을 사용 하도록 설정 하는 방법을 보여 줍니다. 이 코드 조각은의 일부인는 [MS Office 2007 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#10](../../mfc/reference/codesnippet/cpp/cmfcribbonpanel-class_1.cpp)]  
@@ -235,7 +235,7 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in, out] `pElem`  
+ [out에서] *pElem*  
  리본 요소에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -262,16 +262,16 @@ UINT uiDisabledResID = 0);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiToolbarResID`  
+ [in] *uiToolbarResID*  
  추가할 도구 모음의 리소스 ID를 지정 합니다.  
   
- [in] `uiColdResID`  
+ [in] *uiColdResID*  
  도구 모음의 콜드 이미지의 리소스 ID를 지정합니다.  
   
- [in] `uiHotResID`  
+ [in] *uiHotResID*  
  도구 모음의 핫 이미지의 리소스 ID를 지정합니다.  
   
- [in] `uiDisabledResID`  
+ [in] *uiDisabledResID*  
  도구 모음의 비활성화 된 이미지의 리소스 ID를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -292,13 +292,13 @@ CMFCRibbonPanel(CMFCRibbonGallery* pPaletteButton);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszName`  
+ [in] *lpszName*  
  리본 패널의 이름입니다.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  기본 단추를 리본 패널의 아이콘에 대 한 핸들입니다.  
   
- [in] `pPaletteButton`  
+ [in] *pPaletteButton*  
  리본 갤러리 리본 패널에 대 한 포인터입니다.  
   
 ##  <a name="findbydata"></a>  CMFCRibbonPanel::FindByData  
@@ -309,7 +309,7 @@ CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `dwData`  
+ [in] *dwData*  
  리본 요소에 연결 된 데이터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -325,7 +325,7 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  리본 요소의 명령 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -397,11 +397,11 @@ CMFCRibbonBaseElement* GetElement(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  검색할 요소의 0부터 시작 인덱스를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 기본 리본 요소에 대 한 유효한 포인터 위치에 있는 `nIndex` 리본 패널에 또는 `NULL` 지정된 된 인덱스에 요소가 없는 경우.  
+ 기본 리본 요소에 대 한 유효한 포인터 위치에 있는 *nIndex* 리본 패널에 또는 `NULL` 지정된 된 인덱스에 요소가 없는 경우.  
   
 ##  <a name="getelements"></a>  CMFCRibbonPanel::GetElements  
  리본 패널에 포함 된 모든 리본 요소를 검색 합니다.  
@@ -411,7 +411,7 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `arElements`  
+ [out] *arElements*  
  리본 패널에 포함 된 모든 리본 요소를 채울 배열입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -426,10 +426,10 @@ CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  리본 요소에 대 한 명령 ID입니다.  
   
- [in] `arElements`  
+ [in] *arElements*  
  리본 요소의 배열입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -455,7 +455,7 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pElem`  
+ [in] *pElem*  
  리본 요소에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -471,7 +471,7 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `lstItems`  
+ [out] *lstItems*  
  리본 패널에 포함 된 리본 요소에 대 한 명령 Id의 목록.  
   
 ### <a name="remarks"></a>설명  
@@ -528,7 +528,7 @@ virtual BOOL GetPreferedMenuLocation(CRect& rect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `rect`  
+ [out] *rect*  
  이 매개 변수는 사용되지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -569,7 +569,7 @@ BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pElem`  
+ [in] *pElem*  
  리본 요소에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -587,10 +587,10 @@ CPoint point);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bHighlight`  
+ [in] *bHighlight*  
  `TRUE` 리본 패널; 강조 표시 `FALSE` unhighlight 리본 패널에 있습니다.  
   
- [in] `point`  
+ [in] *지점*  
  창의 왼쪽 위 모퉁이 기준으로 포인터의 x 및 y 좌표입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -605,10 +605,10 @@ BOOL bCheckPanelCaption = FALSE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `point`  
+ [in] *지점*  
  창의 왼쪽 위 모퉁이 기준으로 포인터의 x 및 y 좌표입니다.  
   
- [in] `bCheckPanelCaption`  
+ [in] *bCheckPanelCaption*  
  `TRUE` 리본 패널 캡션; 테스트 하려면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -625,7 +625,7 @@ virtual int HitTestEx(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `point`  
+ [in] *지점*  
  창의 왼쪽 위 모퉁이 기준으로 포인터의 x 및 y 좌표입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -644,17 +644,17 @@ int nIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in, out] `pElem`  
+ [out에서] *pElem*  
  리본 요소에 대 한 포인터입니다.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  배열에 포함 된 리본 요소의 수에서 1 사이 범위의 0부터 시작 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
  `TRUE` 리본 요소를 성공적으로 삽입 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
- 하는 경우의 값 `nIndex` 은-1, if 또는 `nIndex` 리본 배열의 요소 수와 일치, 지정 된 리본 요소가 배열의 끝에 추가 됩니다. 하는 경우의 값 `nIndex` 가 범위를 벗어난 경우 메서드가 실패 합니다.  
+ 하는 경우의 값 *nIndex* 은-1, if 또는 *nIndex* 리본 배열의 요소 수와 일치, 지정 된 리본 요소가 배열의 끝에 추가 됩니다. 하는 경우의 값 *nIndex* 은 범위를 벗어난 경우 메서드가 실패 합니다.  
   
 ##  <a name="insertseparator"></a>  CMFCRibbonPanel::InsertSeparator  
  지정된 된 위치에는 구분 기호를 삽입합니다.  
@@ -664,14 +664,14 @@ virtual BOOL InsertSeparator(int nIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  구분 기호 삽입 되는 위치 0부터 시작 인덱스를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  `TRUE` 구분 기호에 성공적으로 삽입 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
- 로 지정 된 위치에는 구분 기호를 삽입 하려면이 메서드를 호출 `nIndex`합니다. 가장 최근에 추가 된 리본 요소 옆에 있는 구분 기호를 삽입 하려면 호출 [CMFCRibbonPanel::AddSeparator](#addseparator)합니다.  
+ 로 지정 된 위치에는 구분 기호를 삽입 하려면이 메서드를 호출 *nIndex*합니다. 가장 최근에 추가 된 리본 요소 옆에 있는 구분 기호를 삽입 하려면 호출 [CMFCRibbonPanel::AddSeparator](#addseparator)합니다.  
   
 ##  <a name="iscentercolumnvert"></a>  CMFCRibbonPanel::IsCenterColumnVert  
  리본 요소의 세로 위치는 해당 표시 사각형 내에서 가운데 정렬 여부를 나타냅니다.  
@@ -753,7 +753,7 @@ virtual BOOL OnKey(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nChar`  
+ [in] *nChar*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -769,10 +769,10 @@ int nHeight);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  리본 패널에 대 한 장치 컨텍스트에 대 한 포인터입니다.  
   
- [in] `nHeight`  
+ [in] *nHeight*  
  리본 패널의 높이입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -788,14 +788,14 @@ BOOL bDelete = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  리본 패널에서 제거 된 요소의 0부터 시작 하는 인덱스를 지정 합니다.  
   
- [in] `bDelete`  
+ [in] *b 삭제*  
  `TRUE` 제거 되 고 요소를 삭제 하려면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 요소를 제거 하 고 삭제 된 경우 (경우 `bDelete` 은 `TRUE`); `FALSE` 요소가 제거 되지 않은 경우 또는 리본 요소에 있는 경우 `nIndex`합니다.  
+ `TRUE` 요소를 제거 하 고 삭제 된 경우 (경우 *b 삭제* 은 `TRUE`); `FALSE` 요소가 제거 되지 않은 경우 리본 요소에 있는 경우 *nIndex*합니다.  
   
 ### <a name="remarks"></a>설명  
  리본 패널에서 요소를 제거 하려면이 메서드를 호출 합니다.  
@@ -820,10 +820,10 @@ CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  바꿀 요소의 0부터 시작 하는 인덱스를 지정 합니다.  
   
- [in] [out] `pElem`  
+ [in] [out] *pElem*  
  Original 요소를 대체 하는 요소에 대 한 유효한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -842,10 +842,10 @@ CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  바꿀 요소의 명령 ID를 지정 합니다.  
   
- [in] [out] `pElem`  
+ [in] [out] *pElem*  
  원래 요소를 대체 하는 요소에 대 한 유효한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -862,7 +862,7 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` 중앙의 표시 사각형; 내에서 리본 요소의 세로 위치 `FALSE` 이 기능을 해제할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
@@ -875,7 +875,7 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `dwData`  
+ [in] *dwData*  
  사용자 정의 설정할 데이터를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -900,19 +900,19 @@ BOOL bRightAlign = FALSE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  메뉴 추가 됩니다 리본 요소의 명령 ID를 지정 합니다.  
   
- [in] `hMenu`  
+ [in] *hMenu*  
  리본 패널에 추가할 Windows 메뉴에 대 한 핸들을 지정 합니다.  
   
- [in] `bIsDefautCommand`  
+ [in] *bIsDefautCommand*  
  `TRUE` 리본 요소를 클릭할 경우 리본 요소와 연결 된 명령 실행 않아야 함을 지정 합니다. 이 경우 메뉴만 열릴 사용자가 리본 요소 옆의 화살표를 클릭 합니다. `FALSE` 리본 요소를 클릭할 경우 리본 요소와 연결 된 명령이 실행 되지를 지정 합니다. 이 경우, 팝업 메뉴 요소에는 사용자가 클릭 하는 위치에 관계 없이 나타납니다.  
   
- [in] `bRightAlign`  
+ [in] *bRightAlign*  
  `TRUE` 팝업 메뉴가 오른쪽에 맞추어져; 임을 지정 하려면 그렇지 않으면 `FALSE`합니다.  
   
- [in] `uiMenuResID`  
+ [in] *uiMenuResID*  
  리본 패널에 추가 하 고 메뉴의 리소스 ID를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -931,10 +931,10 @@ CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  리본 요소를 추가 하려면의 0부터 시작 하는 인덱스를 지정 합니다.  
   
- [in] [out] `pRTC`  
+ [in] [out] *pRTC*  
  리본 패널에 추가 하는 리본 요소에 대 한 런타임 클래스 정보에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -953,10 +953,10 @@ CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmdID`  
+ [in] *uiCmdID*  
  추가할 리본 요소의 명령 ID를 지정 합니다.  
   
- [in] [out] `pRTC`  
+ [in] [out] *pRTC*  
  리본 패널에 추가 된 리본 요소와 연결 된 런타임 클래스 정보에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -965,7 +965,7 @@ CRuntimeClass* pRTC);
 ### <a name="remarks"></a>설명  
  사용자 지정 요소 (예를 들어 색 단추)를 리본 패널에 추가 하려는 경우 사용자 지정 요소의 런타임 클래스 정보를 지정 해야 합니다. 리본이이 정보를 저장, 사용자 지정 요소를 만듭니다 및 지정한 명령 id에 있는 기존 요소를 대체 합니다. 그런 다음 새로 만든된 요소에 대 한 포인터를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  사용 하는 방법을 보여 주는 다음 예제는 `SetElementRTCByID` 메서드:  
   
 ```  
@@ -999,7 +999,7 @@ void SetJustifyColumns(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bSet`  
+ [in] *bSet*  
  `TRUE` 리본 요소에는 열에 큰 리본 요소의 너비에 동일한 열 너비를 조정 하려면 `FALSE` 이 너비 조정 하지 않으려면입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1013,7 +1013,7 @@ void SetKeys(LPCTSTR lpszKeys);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszKeys`  
+ [in] *lpszKeys*  
  리본 패널의 기본 단추에 대 한 keytip 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1027,7 +1027,7 @@ CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pButton`  
+ [in] *pButton*  
  리본 패널에 대 한 기본 단추에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1044,7 +1044,7 @@ void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pNewFocus`  
+ *pNewFocus*  
  포커스를 받는 리본 요소에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1057,7 +1057,7 @@ void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pItem`  
+ *pItem*  
  표시할 리본 요소에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1084,7 +1084,7 @@ CMFCRibbonBaseElement*>& arElements);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `arElements`  
+ *arElements*  
  함수가 반환할 때이 매개 변수는 표시 된 요소의 배열이 포함 됩니다.  
   
 ### <a name="remarks"></a>설명  

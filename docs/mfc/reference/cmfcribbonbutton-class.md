@@ -124,12 +124,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68320402a21fadd516e2c2f37b7cb437df6b74a6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8dc6e780ece78bca59a95f8050a36a77656f0ad6
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376420"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040040"
 ---
 # <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton 클래스
 `CMFCRibbonButton` 클래스는 패널, 빠른 실행 도구 모음 및 팝업 메뉴와 같은 리본 막대 요소에 배치할 수 있는 단추를 구현합니다.  
@@ -213,7 +213,7 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 |----------|-----------------|  
 |[CMFCRibbonButton::OnClick](#onclick)|사용자가 단추를 클릭하면 프레임워크에서 호출됩니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCRibbonButton` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 예제에서는     `CMFCRibbonButton` 클래스의 개체를 생성하고, 리본 단추에 팝업 메뉴를 할당하고, 단추 설명을 설정하고, 팝업 메뉴에서 메뉴 항목을 제거하고, 팝업 메뉴를 단추 가장자리로 오른쪽 맞춤하는 방법을 설명합니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#7](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_1.cpp)]  
@@ -261,10 +261,10 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pSubItem`  
+ [in] *pSubItem*  
  추가할 새 요소에 대 한 포인터를 지정 합니다.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  단추의; 메뉴 항목의 배열에 요소를 추가 하는 인덱스를 지정 합니다. 메뉴 항목의 배열 끝에 요소를 추가 하려면-1입니다.  
   
 ##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched  
@@ -318,22 +318,22 @@ CMFCRibbonButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nID`  
+ [in] *nID*  
  단추의 명령 ID를 지정합니다.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  단추의 텍스트 레이블을 지정합니다.  
   
- [in] `nSmallImageIndex`  
+ [in] *nSmallImageIndex*  
  부모 범주의 이미지 목록에서 단추의 작은 이미지의 0부터 시작 하는 인덱스를 지정합니다.  
   
- [in] `nLargeImageIndex`  
+ [in] *nLargeImageIndex*  
  부모 범주의 이미지 목록에 큰 단추의 이미지의 0부터 시작 인덱스를 지정합니다.  
   
- [in] `hIcon`  
+ [in] *hIcon*  
  단추의 이미지 형식으로 응용 프로그램에 사용 되는 아이콘에 대 한 핸들을 지정 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 생성 하는 방법을 `CMFCRibbonButton` 개체입니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#6](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_2.cpp)]  
@@ -348,8 +348,8 @@ CSize DrawBottomText(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `bCalcOnly`  
+ [in] *pDC*  
+ [in] *bCalcOnly*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -366,9 +366,9 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `type`  
- [in] `rectImage`  
+ [in] *pDC*  
+ [in] *유형*  
+ [in] *rectImage*  
   
 ### <a name="remarks"></a>설명  
   
@@ -385,11 +385,11 @@ virtual int DrawRibbonText(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- [in] `strText`  
- [in] `rectText`  
- [in] `uiDTFlags`  
- [in] `clrText`  
+ [in] *pDC*  
+ [in] *strText*  
+ [in] *rectText*  
+ [in] *uiDTFlags*  
+ [in] *clrText*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -403,11 +403,11 @@ int FindSubItemIndexByID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiID`  
+ [in] *uiID*  
  팝업 메뉴 항목의 명령 ID를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 연결 된 하위 항목의 0부터 시작 인덱스는 `uiID`합니다. 이러한 하위 항목이 없는 경우-1입니다.  
+ 연결 된 하위 항목의 0부터 시작 인덱스는 *uiID*합니다. 이러한 하위 항목이 없는 경우-1입니다.  
   
 ##  <a name="getcommandrect"></a>  CMFCRibbonButton::GetCommandRect  
 
@@ -428,7 +428,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -442,7 +442,7 @@ HICON GetIcon(BOOL bLargeIcon = TRUE) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bLargeIcon`  
+ [in] *bLargeIcon*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -456,7 +456,7 @@ int GetImageIndex(BOOL bLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bLargeImage`  
+ [in] *bLargeImage*  
  경우 `TRUE`, 큰 이미지를 포함 합니다. 그렇지 않으면 작은 이미지를 포함 하는 이미지 목록에서 이미지 인덱스를 반환 하는 이미지 목록에서 이미지 인덱스를 반환 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -470,7 +470,7 @@ virtual CSize GetImageSize(RibbonImageType type) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `type`  
+ [in] *유형*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -484,7 +484,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -519,7 +519,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -751,7 +751,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>설명  
   
@@ -763,7 +763,7 @@ virtual void OnClick(CPoint point);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `point`  
+ [in] *지점*  
  마우스 클릭 위치를 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -777,7 +777,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>설명  
   
@@ -789,7 +789,7 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="remarks"></a>설명  
   
@@ -801,7 +801,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -822,11 +822,11 @@ BOOL RemoveSubItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  제거 하려는 메뉴 항목의 0부터 시작 하는 인덱스를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 지정된 된 항목이 성공적으로 제거 된 경우 그렇지 않으면 `FALSE` 경우 `nIndex` 음수 또는 팝업 메뉴의 메뉴 항목의 수를 초과 합니다.  
+ `TRUE` 지정된 된 항목이 성공적으로 제거 된 경우 그렇지 않으면 `FALSE` 경우 *nIndex* 음수 또는 팝업 메뉴의 메뉴 항목의 수를 초과 합니다.  
   
 ##  <a name="setaccdata"></a>  Cmfcribbonbutton:: Setaccdata  
  리본 단추에 대한 내게 필요한 옵션 데이터를 설정합니다.  
@@ -838,10 +838,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParent`  
+ *pParent*  
  리본 요소에 대한 부모 창입니다.  
   
- `data`  
+ *data*  
  리본 요소에 대한 내게 필요한 옵션 데이터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -857,7 +857,7 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bSet`  
+ [in] *bSet*  
  경우 `TRUE`, 큰 이미지를 표시 합니다. 그렇지 않으면 단추는 작은 이미지를 표시 합니다.  
   
 ##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand  
@@ -868,11 +868,11 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bSet`  
+ [in] *bSet*  
  경우 `TRUE`, 단추는 해당 기본 명령을 실행할 수 있습니다. 경우 `FALSE`, 단추는 해당 기본 명령을 실행할 수 없습니다.  
   
 ### <a name="remarks"></a>설명  
- `bSet` 관련이 있는 단추에 메뉴가 경우에 있습니다. 경우 `bSet` 은 `TRUE`, 단추는 해당 기본 명령을 실행할 수 있습니다 및 할당 된 팝업 메뉴가 클릭 하면 단추 오른쪽 가장자리에 있는 화살표를 표시 합니다. 그렇지 않으면 단추에는 해당 기본 명령을 실행할 수 없음 하 고 팝업 메뉴 단추 영역에 관계 없이 사용자가 클릭 나타납니다.  
+ *bSet* 단추에 메뉴가 경우에 관련 됩니다. 경우 *bSet* 은 `TRUE`, 단추는 해당 기본 명령을 실행할 수 있습니다 및 할당 된 팝업 메뉴가 클릭 하면 단추 오른쪽 가장자리에 있는 화살표를 표시 합니다. 그렇지 않으면 단추에는 해당 기본 명령을 실행할 수 없음 하 고 팝업 메뉴 단추 영역에 관계 없이 사용자가 클릭 나타납니다.  
   
 ##  <a name="setdescription"></a>  CMFCRibbonButton::SetDescription  
 
@@ -882,7 +882,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszText`  
+ [in] *lpszText*  
   
 ### <a name="remarks"></a>설명  
   
@@ -896,10 +896,10 @@ void SetImageIndex(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIndex`  
+ [in] *nIndex*  
  이미지 인덱스를 지정합니다.  
   
- [in] `bLargeImage`  
+ [in] *bLargeImage*  
  경우 `TRUE`, 큰 이미지의 목록에 지정된 된 인덱스를 참조 합니다. 그렇지 않은 경우 인덱스의 작은 이미지 목록에 참조합니다.  
   
 ##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu  
@@ -918,20 +918,20 @@ void SetMenu(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hMenu`  
+ *hMenu*  
  창 메뉴에 대 한 핸들입니다.  
   
- `bIsDefaultCommand`  
+ *bIsDefaultCommand*  
  경우 `TRUE`, 단추는 팝업 메뉴를 표시 하는 그렇지 않은 경우; 단추에는 해당 기본 명령을 실행할 수 있습니다.  
   
- `bRightAlign`  
+ *bRightAlign*  
  경우 `TRUE`, 메뉴를 오른쪽 맞춤 합니다. 그렇지 않은 경우 메뉴는 왼쪽 정렬 합니다.  
   
- `uiMenuResID`  
+ *uiMenuResID*  
  메뉴 리소스 id입니다.  
   
 ### <a name="remarks"></a>설명  
- 메뉴 단추에 할당 하는 응용 프로그램, 단추 오른쪽에 화살표가 표시 됩니다. 경우 `bIsDefaultCommand` 은 `TRUE`, 사용자의 화살표를 클릭 하는 경우에 표시 합니다. 사용자가 단추를 클릭 하면 해당 기본 명령이 실행 됩니다. 경우 `bIsDefaultCommand` 은 `FALSE`, 메뉴 단추에서 아무 곳 이나 클릭 하 여 나타납니다.  
+ 메뉴 단추에 할당 하는 응용 프로그램, 단추 오른쪽에 화살표가 표시 됩니다. 경우 *bIsDefaultCommand* 은 `TRUE`, 사용자의 화살표를 클릭 하는 경우에 표시 합니다. 사용자가 단추를 클릭 하면 해당 기본 명령이 실행 됩니다. 경우 *bIsDefaultCommand* 은 `FALSE`, 메뉴 단추에서 아무 곳 이나 클릭 하 여 나타납니다.  
   
 ##  <a name="setparentcategory"></a>  CMFCRibbonButton::SetParentCategory  
 
@@ -941,7 +941,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pParent`  
+ [in] *pParent*  
   
 ### <a name="remarks"></a>설명  
   
@@ -953,7 +953,7 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bSet`  
+ [in] *bSet*  
  경우 `TRUE`, 메뉴를 오른쪽 맞춤 합니다. 그렇지 않은 경우 메뉴에는 왼쪽 정렬  
   
 ##  <a name="settext"></a>  CMFCRibbonButton::SetText  
@@ -964,7 +964,7 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszText`  
+ [in] *lpszText*  
   
 ### <a name="remarks"></a>설명  
   

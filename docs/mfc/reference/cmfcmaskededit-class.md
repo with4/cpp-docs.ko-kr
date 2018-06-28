@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 985cd4011dbb1ea8ccad7cd40c81833dd5507f11
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6ff84edab9166072e04637bb82dfc52c42f1722e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371799"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040105"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit 클래스
 `CMFCMaskedEdit` 클래스 마스크에 대해 사용자 입력의 유효성을 검사 하 고 템플릿에 따라 유효성이 검사 된 결과 표시 하는 마스킹된 편집 컨트롤을 지원 합니다.  
@@ -94,7 +94,7 @@ class CMFCMaskedEdit : public CEdit
   
  마스크, 유효한 문자 및 기본 텍스트를 초기화 하는 하나 이상의 메서드를 호출 하면 마스킹된 편집 컨트롤에 표준 편집 컨트롤의 동작을 동일 하 게 동작 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 마스크 (예: 전화 번호)를 사용 하 여 설정 하는 `EnableMask` 메서드는 마스킹된 편집 컨트롤에 대 한 마스크를 만들는 `SetValidChars` 입력할 수 있는 유효한 문자 및 문자열을지정하는메서드`SetWindowText` 컨트롤을 편집 하는 메서드는 마스크의 프롬프트를 표시 합니다. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#11](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_1.h)]  
@@ -132,7 +132,7 @@ void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` 지정 하는 [CMFCMaskedEdit::GetWindowText](#getwindowtext) 메서드 검색만 지정할 때;에 마스크 `FALSE` 메서드 전체 텍스트 검색을 지정할 수 있습니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -150,16 +150,16 @@ void EnableMask(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszMask`  
- 사용자 입력의 각 위치에 나타날 수 있는 문자 형식을 지정 하는 마스크 문자열입니다. 길이 `lpszInputTemplate` 및 `lpszMask` 매개 변수 문자열이 동일 해야 합니다. 마스크 문자에 대 한 자세한 내용은 설명 섹션을 참조 하십시오.  
+ [in] *lpszMask*  
+ 사용자 입력의 각 위치에 나타날 수 있는 문자 형식을 지정 하는 마스크 문자열입니다. 길이 *lpszInputTemplate* 및 *lpszMask* 매개 변수 문자열이 동일 해야 합니다. 마스크 문자에 대 한 자세한 내용은 설명 섹션을 참조 하십시오.  
   
- [in] `lpszInputTemplate`  
- 리터럴 문자를 지정 하는 마스크 템플릿 문자열로 사용자 입력의 각 위치에 나타날 수 있습니다. 밑줄 문자 ('_')는 문자 자리 표시자로 사용 합니다. 길이 `lpszInputTemplate` 및 `lpszMask` 매개 변수 문자열이 동일 해야 합니다.  
+ [in] *lpszInputTemplate*  
+ 리터럴 문자를 지정 하는 마스크 템플릿 문자열로 사용자 입력의 각 위치에 나타날 수 있습니다. 밑줄 문자 ('_')는 문자 자리 표시자로 사용 합니다. 길이 *lpszInputTemplate* 및 *lpszMask* 매개 변수 문자열이 동일 해야 합니다.  
   
- [in] `chMaskInputTemplate`  
+ [in] *chMaskInputTemplate*  
  프레임 워크는 사용자 입력에 잘못 된 각 문자에 대 한 대체 하는 기본 문자입니다. 이 매개 변수의 기본값은 밑줄 ('_').  
   
- [in] `lpszValid`  
+ [in] *lpszValid*  
  유효한 문자 집합을 포함 하는 문자열입니다. `NULL` 모든 문자가 올바른지를 나타냅니다. 이 매개 변수의 기본값은 `NULL`입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -186,7 +186,7 @@ void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` 그룹에만;를 선택 하려면 `FALSE` 전체 텍스트를 선택 합니다. 기본값은 `TRUE`입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -218,7 +218,7 @@ void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` 유효성을 검사할 사용자 입력에 대해만 마스크 지정할 때; `FALSE` 전체 마스크를 검사할 수 있습니다. 기본값은 `TRUE`입니다.  
   
 ##  <a name="getwindowtext"></a>  CMFCMaskedEdit::GetWindowText  
@@ -233,20 +233,20 @@ void GetWindowText(CString& rstrString) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `lpszStringBuf`  
+ [out] *lpszStringBuf*  
  편집 컨트롤에서 텍스트를 수신 하는 버퍼에 대 한 포인터입니다.  
   
- [in] `nMaxCount`  
+ [in] *nMaxCount*  
  수신할 문자의 최대 수입니다.  
   
- [out] `rstrString`  
+ [out] *rstrString*  
  편집 컨트롤에서 텍스트를 수신 하는 문자열 개체에 대 한 참조입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 에 복사 되는 문자열의 바이트 수를 반환 하는 첫 번째 메서드 오버 로드는 `lpszStringBuf` 매개 변수 버퍼; 마스킹된 편집 컨트롤에 텍스트가 없는 경우 0입니다.  
+ 에 복사 되는 문자열의 바이트 수를 반환 하는 첫 번째 메서드 오버 로드는 *lpszStringBuf* 매개 변수 버퍼; 마스킹된 편집 컨트롤에 텍스트가 없는 경우 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 마스킹된 편집 컨트롤에서 텍스트를 복사 하는이 메서드는 `lpszStringBuf` 버퍼 또는 `rstrString` 문자열입니다.  
+ 마스킹된 편집 컨트롤에서 텍스트를 복사 하는이 메서드는 *lpszStringBuf* 버퍼 또는 *rstrString* 문자열입니다.  
   
  이 메서드를 재정의 [CWnd::GetWindowText](../../mfc/reference/cwnd-class.md#getwindowtext)합니다.  
   
@@ -260,14 +260,14 @@ virtual BOOL IsMaskedChar(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `chChar`  
+ [in] *chChar*  
  유효성을 검사 하는 문자입니다.  
   
- [in] `chMaskChar`  
+ [in] *chMaskChar*  
  다음 마스크 문자열에서 해당 문자입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 경우는 `chChar` 매개 변수는 형식에서 허용 하는 문자는 `chMaskChar` 매개 변수, 그렇지 않으면 `FALSE`합니다.  
+ `TRUE` 경우는 *chChar* 매개 변수는 형식에서 허용 하는 문자는 *chMaskChar* 매개 변수, 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
  입력된 문자를 직접 유효성을 검사 하려면이 메서드를 재정의 합니다. 마스크 문자에 대 한 자세한 내용은 참조는 [CMFCMaskedEdit::EnableMask](#enablemask) 메서드.  
@@ -280,7 +280,7 @@ void SetValidChars(LPCTSTR lpszValid=NULL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszValid`  
+ [in] *lpszValid*  
  유효한 입력된 문자 집합을 포함 하는 문자열입니다. `NULL` 모든 문자가 유효함을 의미 합니다. 이 매개 변수의 기본값은 `NULL`입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -298,7 +298,7 @@ void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszString`  
+ [in] *lpszString*  
  Null로 끝나는 문자열을 프롬프트로 사용 될를 가리킵니다.  
   
 ### <a name="remarks"></a>설명  

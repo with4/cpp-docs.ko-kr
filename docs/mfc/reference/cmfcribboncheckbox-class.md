@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 109c3b2f6337adece6c371f1fafa98291468485e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 444d42c7273e64a07966592b315660b92ddf8ee0
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369709"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042058"
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox 클래스
 `CMFCRibbonCheckBox` 클래스는 리본 패널, 빠른 실행 도구 모음 또는 팝업 메뉴에 추가할 수 있는 확인란을 구현합니다.  
@@ -77,7 +77,7 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 ```  
 CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)  
 ```  
-여기서 `nID`는 확인란 명령 ID이고 `lpszText`는 확인란의 텍스트 레이블입니다.  
+여기서 *nID* 확인란 명령 id 및 *lpszText* 확인란의 텍스트 레이블입니다.  
   
  사용 하 여 리본 패널에 확인란을 추가할 수 있습니다 [cmfcribbonpanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add)합니다.  
   
@@ -103,16 +103,16 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nID`  
+ [in] *nID*  
  명령 ID를 지정 합니다.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  텍스트 레이블을 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
  리본 확인란 개체를 만듭니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는의 개체를 생성 하는 `CMFCRibbonCheckBox` 클래스입니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#17](../../mfc/reference/codesnippet/cpp/cmfcribboncheckbox-class_1.cpp)]  
@@ -125,7 +125,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  에 대 한 포인터는 `CDC` 확인란과 관련 된 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -142,7 +142,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  에 대 한 포인터는 `CDC` 관련 된이 확인란을이 선택 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -159,7 +159,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  에 대 한 포인터는 `CDC` 이 확인란 연관 된 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -188,7 +188,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  에 대 한 포인터는 `CDC` 를 그릴는 확인란을 선택 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -201,10 +201,10 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `CDC*`  
+ [in] *CDC**  
  에 대 한 포인터는 `CDC` 확인란과 관련 된 합니다.  
   
- [in] `CRect`  
+ [in] *CRect*  
  A `CRect` 메뉴 이미지를 그릴 사각형을 지정 하는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -227,22 +227,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  확인란을 그릴 장치 컨텍스트에 대 한 포인터입니다.  
   
- [in] `strText`  
+ [in] *strText*  
  표시 텍스트입니다.  
   
- [in] `nTextOffset`  
+ [in] *nTextOffset*  
  텍스트를 표시할 목록 상자의 왼쪽에서의 픽셀 거리입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  확인란의 표시 사각형을 지정 합니다.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  `TRUE` 이 확인란을 선택 하는 경우 또는 `FALSE` 그렇지 않은 경우.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  `TRUE` 이 확인란을 강조 표시 하는 경우 또는 `FALSE` 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
@@ -257,10 +257,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParent`  
+ *pParent*  
  이 확인란의 부모 창입니다.  
   
- `data`  
+ *data*  
  확인란에 대 한 내게 필요한 옵션 데이터입니다.  
   
 ### <a name="return-value"></a>반환 값  
