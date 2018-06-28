@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 590914ac312a4f998eb759beb08ed2e7935874fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 365f984385eab870d46b0772719346fa5d1ae383
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368754"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040157"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl 클래스
 Windows의 공용 바로 가기 컨트롤의 기능을 제공합니다.  
@@ -73,7 +73,7 @@ class CHotKeyCtrl : public CWnd
   
  이 컨트롤 (및 따라서는 `CHotKeyCtrl` 클래스) 이상 Windows 95/98 및 Windows NT 버전 3.51에서 실행 중인 프로그램에만 사용할 수는 있습니다.  
   
- 응용 프로그램 컨트롤에서 지정 된 키 조합을 검색 하 고 사용할 수는 사용자가 키 조합의 선택한 경우는 **WM_SETHOTKEY** 시스템의 바로 가기 키를 설정 하는 메시지입니다. 창에 지정 된 사용자를 누를 때마다 바로 가기 키 그 후 시스템의 모든 부분에서는 **WM_SETHOTKEY** 메시지 수신는 `WM_SYSCOMMAND` 메시지 지정 **SC_HOTKEY**합니다. 이 메시지를 수신 하는 창을 활성화 합니다. 호출한 응용 프로그램까지 바로 가기 키 유효 **WM_SETHOTKEY** 종료 됩니다.  
+ 응용 프로그램 컨트롤에서 지정 된 키 조합을 검색 하 고 사용할 수는 사용자가 키 조합의 선택한 경우는 **WM_SETHOTKEY** 시스템의 바로 가기 키를 설정 하는 메시지입니다. 창에 지정 된 사용자를 누를 때마다 바로 가기 키 그 후 시스템의 모든 부분에서는 **WM_SETHOTKEY** 메시지 수신는 **WM_SYSCOMMAND** 메시지 지정 **SC_HOTKEY** . 이 메시지를 수신 하는 창을 활성화 합니다. 호출한 응용 프로그램까지 바로 가기 키 유효 **WM_SETHOTKEY** 종료 됩니다.  
   
  이 메커니즘에 의존 하는 핫 키 지원 간에 차이가 있는 **WM_HOTKEY** 메시지와 Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) 및 [UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327) 함수입니다.  
   
@@ -110,25 +110,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwStyle`  
+ *dwStyle*  
  바로 가기 키 컨트롤의 스타일을 지정합니다. 컨트롤 스타일의 조합을 적용 됩니다. 참조 [공통 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775498) 자세한 내용은 Windows sdk입니다.  
   
- `rect`  
+ *rect*  
  바로 가기 키 컨트롤의 크기와 위치를 지정합니다. 있습니다는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT 구조체](../../mfc/reference/rect-structure1.md)합니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  일반적으로 바로 가기 키 컨트롤의 부모 창 지정을 [CDialog](../../mfc/reference/cdialog-class.md)합니다. 않아야 **NULL**합니다.  
   
- `nID`  
+ *nID*  
  바로 가기 키 컨트롤의 ID를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  0이 아닌 경우 초기화에 성공 하면 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 생성할는 `CHotKeyCtrl` 두 단계를 수행에서 하는 개체입니다. 먼저 생성자를 호출 하 고 호출 **만들기**, 바로 가기 키 컨트롤을 만들고에 연결 하는 `CHotKeyCtrl` 개체입니다.  
+ 생성할는 `CHotKeyCtrl` 두 단계를 수행에서 하는 개체입니다. 먼저 생성자를 호출 하 고 호출 `Create`, 바로 가기 키 컨트롤을 만들고에 연결 하는 `CHotKeyCtrl` 개체입니다.  
   
- 컨트롤 확장된 창 스타일을 사용 하려면 호출 [CreateEx](#createex) 대신 **만들기**합니다.  
+ 컨트롤 확장된 창 스타일을 사용 하려면 호출 [CreateEx](#createex) 대신 `Create`합니다.  
   
 ##  <a name="createex"></a>  CHotKeyCtrl::CreateEx  
  컨트롤 (자식 창)을 만들고 사용 하 여 연결 하려면이 함수를 호출 하 여 `CHotKeyCtrl` 개체입니다.  
@@ -143,19 +143,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwExStyle`  
- 만들 컨트롤의 확장된 스타일을 지정 합니다. 목록이 확장된 창 스타일에 대 한 참조는 `dwExStyle` 에 대 한 매개 변수 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows sdk에서입니다.  
+ *dwExStyle*  
+ 만들 컨트롤의 확장된 스타일을 지정 합니다. 목록이 확장된 창 스타일에 대 한 참조는 *dwExStyle* 에 대 한 매개 변수 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows sdk에서입니다.  
   
- `dwStyle`  
+ *dwStyle*  
  바로 가기 키 컨트롤의 스타일을 지정합니다. 컨트롤 스타일의 조합을 적용 됩니다. 자세한 내용은 참조 [공통 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb775498) Windows sdk에서입니다.  
   
- `rect`  
- 에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 크기와의 클라이언트 좌표에 만들어질 창 위치를 설명 하는 구조 `pParentWnd`합니다.  
+ *rect*  
+ 에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 크기와의 클라이언트 좌표에 만들어질 창 위치를 설명 하는 구조 *pParentWnd*합니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  컨트롤의 부모 창에 대 한 포인터입니다.  
   
- `nID`  
+ *nID*  
  컨트롤의 자식 창 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -176,10 +176,10 @@ void GetHotKey(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `wVirtualKeyCode`  
+ [out] *wVirtualKeyCode*  
  바로 가기 키의 가상 키 코드입니다. 표준 가상 키 코드 목록이 Winuser.h을 참조 하세요.  
   
- [out] `wModifiers`  
+ [out] *wModifiers*  
  바로 가기 키의 보조 키를 나타내는 플래그의 비트 조합 (OR)입니다.  
   
  보조키 플래그는 다음과 같습니다.  
@@ -220,19 +220,19 @@ static CString GetKeyName(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `vk`  
+ *vk*  
  가상 키 코드입니다.  
   
  *fExtended*  
  가상 키 코드 확장 된 키가 있으면 **TRUE**고, 그렇지 않으면 **FALSE**합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 지정 된 키의 지역화 된 이름을 `vk` 매개 변수입니다. 키에 매핑된 이름이 없는 경우 `GetKeyName` 빈 문자열을 반환 합니다.  
+ 으로 지정 된 키의 지역화 된 이름을 *vk* 매개 변수입니다. 키에 매핑된 이름이 없는 경우 `GetKeyName` 빈 문자열을 반환 합니다.  
   
 ### <a name="remarks"></a>설명  
  지역화 된 버전의 Windows에서의 키보드 지역화 되지 않은 드라이버를 설치할 수 있도록 키보드 드라이버에서이 함수가 반환 하는 키 이름을 제공 하며 그 반대 과정도 수행 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCControlLadenDialog#69](../../mfc/codesnippet/cpp/chotkeyctrl-class_1.cpp)]  
   
 ##  <a name="sethotkey"></a>  CHotKeyCtrl::SetHotKey  
@@ -245,10 +245,10 @@ void SetHotKey(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `wVirtualKeyCode`  
+ [in] *wVirtualKeyCode*  
  바로 가기 키의 가상 키 코드입니다. 표준 가상 키 코드 목록이 Winuser.h을 참조 하세요.  
   
- [in] `wModifiers`  
+ [in] *wModifiers*  
  바로 가기 키의 보조 키를 나타내는 플래그의 비트 조합 (OR)입니다.  
   
  보조키 플래그는 다음과 같습니다.  
@@ -273,7 +273,7 @@ void SetRules(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `wInvalidComb`  
+ *wInvalidComb*  
  잘못 된 키 조합을 지정 하는 플래그의 배열입니다. 다음 값의 조합 수 있습니다.  
   
 - `HKCOMB_A` ALT  
@@ -292,11 +292,11 @@ void SetRules(
   
 - `HKCOMB_SCA` SHIFT + CTRL + ALT  
   
- `wModifiers`  
+ *wModifiers*  
  잘못 된 조합이 입력할 때 사용할 키 조합을 지정 하는 플래그의 배열입니다. 보조키 플래그에 대 한 자세한 내용은 참조 하십시오. [GetHotKey](#gethotkey)합니다.  
   
 ### <a name="remarks"></a>설명  
- 에 지정 된 플래그에 정의 된 대로 잘못 된 키 조합이 조합을 사용할 `wInvalidComb`, 시스템에 지정 된 플래그와 함께 사용자가 입력 한 키를 결합 하는 OR 연산자를 사용 하 여 `wModifiers`합니다. 결과 키 조합은 문자열로 변환 되 고 바로 가기 키 컨트롤에 표시 됩니다.  
+ 에 지정 된 플래그에 정의 된 대로 잘못 된 키 조합이 조합을 사용할 *wInvalidComb*, 시스템에 지정 된 플래그와 함께 사용자가 입력 한 키를 결합 하는 OR 연산자를 사용 하 여 *wModifiers*. 결과 키 조합은 문자열로 변환 되 고 바로 가기 키 컨트롤에 표시 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CWnd 클래스](../../mfc/reference/cwnd-class.md)   

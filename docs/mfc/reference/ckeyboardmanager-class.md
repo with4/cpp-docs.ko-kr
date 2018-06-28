@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b9d4aace502310836429ec8f8f9db74d7cf17ff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 27ff8f622eb3af52ad23f8f4fc7a20ecb8be9b77
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369104"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041138"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager 클래스
 주 프레임 창 및 자식 프레임 창에 대한 바로 가기 키 테이블을 관리합니다.  
@@ -87,7 +87,7 @@ class CKeyboardManager : public CObject
   
  만들지 마십시오는 `CKeyboardManager` 수동으로 개체입니다. 응용 프로그램의 프레임 워크에서 자동으로 생성 될 됩니다. 하지만 호출 해야 [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager) 응용 프로그램의 초기화 프로세스 동안 합니다. 응용 프로그램에 대 한 키보드 관리자에 대 한 포인터를 가져오려면, 호출 [CWinAppEx::GetKeyboardManager](../../mfc/reference/cwinappex-class.md#getkeyboardmanager)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에 대 한 포인터를 검색 하는 방법을 보여 줍니다는 `CKeyboardManager` 에서 개체는 `CWinAppEx` 클래스 및 메뉴 명령과 연결 된 모든 바로 가기 키를 표시 하는 방법입니다. 이 코드 조각은의 일부인는 [사용자 지정 페이지 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_CustomPages#5](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]  
@@ -134,23 +134,23 @@ static BOOL FindDefaultAccelerator(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  명령 ID입니다.  
   
- [out] `str`  
+ [out] *str*  
  `CString` 개체에 대한 참조입니다.  
   
- [in] `pWndFrame`  
+ [in] *pWndFrame*  
  프레임 창에 대 한 포인터입니다.  
   
- [in] `bIsDefaultFrame`  
+ [in] *bIsDefaultFrame*  
  프레임 창의 기본 프레임 창인지 여부를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  바로 가기; 없으면 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드를 지정 된 명령을 찾습니다 `uiCmd` 기본 바로 가기 키를 검색 합니다. 메서드는이 바로 가기 키와 연결 된 문자열을 사용 하 고 값을 씁니다는 `str` 매개 변수입니다.  
+ 이 메서드를 지정 된 명령을 찾습니다 *uiCmd* 기본 바로 가기 키를 검색 합니다. 메서드는이 바로 가기 키와 연결 된 문자열을 사용 하 고 값을 씁니다는 *str* 매개 변수입니다.  
   
 ##  <a name="iskeyhandled"></a>  CKeyboardManager::IsKeyHandled  
  지정된 된 키가 처리 여부를 결정은 [CKeyboardManager 클래스](../../mfc/reference/ckeyboardmanager-class.md)합니다.  
@@ -168,16 +168,16 @@ static BOOL __stdcall IsKeyHandled(
 |||  
 |-|-|  
 |매개 변수|설명|  
-|[in] `nKey`|확인할 키입니다.|  
-|[in] `fVirt`|바로 가기 키의 동작을 지정 합니다. 가능한 값 목록은 참조 [가속 구조](http://msdn.microsoft.com/library/windows/desktop/ms646340)합니다.|  
-|[in] `pWndFrame`|프레임 창입니다. 이 메서드는이 프레임에서 바로 가기 키를 처리 하는지 여부를 결정 합니다.|  
-|[in] `bIsDefaultFrame`|나타내는 부울 매개 변수 여부 `pWndFrame` 기본 프레임 창입니다.|  
+|[in] *nKey*|확인할 키입니다.|  
+|[in] *fVirt*|바로 가기 키의 동작을 지정 합니다. 가능한 값 목록은 참조 [가속 구조](http://msdn.microsoft.com/library/windows/desktop/ms646340)합니다.|  
+|[in] *pWndFrame*|프레임 창입니다. 이 메서드는이 프레임에서 바로 가기 키를 처리 하는지 여부를 결정 합니다.|  
+|[in] *bIsDefaultFrame*|나타내는 부울 매개 변수 여부 *pWndFrame* 기본 프레임 창입니다.|  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 바로 가기 키를 처리 하는 경우 합니다. `FALSE` 키가 처리 되지 않은 경우 또는 경우 `pWndFrame` 은 `NULL`합니다.  
+ `TRUE` 바로 가기 키를 처리 하는 경우 합니다. `FALSE` 키가 처리 되지 않은 경우 또는 경우 *pWndFrame* 은 `NULL`합니다.  
   
 ### <a name="remarks"></a>설명  
- 입력된 매개 변수는 액셀러레이터 키 테이블에 모두에 대 한 항목과 일치 해야 함 `nKey` 및 `fVirt` 에 바로 가기 키를 처리 하는지 여부를 확인 하려면 `pWndFrame`합니다.  
+ 입력된 매개 변수는 액셀러레이터 키 테이블에 모두에 대 한 항목과 일치 해야 함 *nKey* 및 *fVirt* 에 바로 가기 키를 처리 하는지 여부를 확인 하려면 *pWndFrame*합니다.  
   
 ##  <a name="iskeyprintable"></a>  CKeyboardManager::IsKeyPrintable  
  인쇄 가능한 문자 인지를 나타냅니다.  
@@ -191,7 +191,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||  
 |-|-|  
 |매개 변수|설명|  
-|[in] `nChar`|이 메서드를 확인 하는 문자입니다.|  
+|[in] *nChar*|이 메서드를 확인 하는 문자입니다.|  
   
 ### <a name="return-value"></a>반환 값  
  0이 아닌 문자 이면 인쇄할 수 없는 경우 0입니다.  
@@ -222,17 +222,17 @@ BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  레지스트리 경로 여기서 `CKeyboardManager` 데이터가 저장 됩니다.  
   
- [in] `pDefaultFrame`  
+ [in] *pDefaultFrame*  
  기본 창으로 사용 하는 프레임 창에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
  그렇지 않으면 상태는 0 또는 성공적으로 로드 하는 경우에 0이 아닙니다.  
   
 ### <a name="remarks"></a>설명  
- 경우는 `lpszProfileName` 매개 변수는 `NULL`,이 메서드는 기본 레지스트리 위치에 대 한 확인 `CKeyboardManager` 데이터입니다. 지정 된 기본 레지스트리 위치는 [CWinAppEx 클래스](../../mfc/reference/cwinappex-class.md)합니다. 방법으로 데이터를 이전에 써야 합니다 [CKeyboardManager::SaveState](#savestate)합니다.  
+ 경우는 *lpszProfileName* 매개 변수는 `NULL`,이 메서드는 기본 레지스트리 위치에 대 한 확인 `CKeyboardManager` 데이터입니다. 지정 된 기본 레지스트리 위치는 [CWinAppEx 클래스](../../mfc/reference/cwinappex-class.md)합니다. 방법으로 데이터를 이전에 써야 합니다 [CKeyboardManager::SaveState](#savestate)합니다.  
   
  기본 창을 지정 하지 않으면 응용 프로그램의 주 프레임 창이 사용 됩니다.  
   
@@ -256,17 +256,17 @@ BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  나중에 다시 레지스트리 경로 `CKeyboardManager` 상태입니다.  
   
- [in] `pDefaultFrame`  
+ [in] *pDefaultFrame*  
  기본 창 되는 프레임 창에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
  키보드 관리자 상태가 성공적으로 저장 된 경우 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 경우는 `lpszProfileName` 매개 변수는 `NULL`,이 메서드는 기록의 `CKeyboardManager` 로 지정 된 기본 위치에 상태는 [CWinAppEx 클래스](../../mfc/reference/cwinappex-class.md)합니다. 메서드를 사용 하 여 나중에 데이터를 로드할 수 위치를 지정 하는 경우 [CKeyboardManager::LoadState](#loadstate)합니다.  
+ 경우는 *lpszProfileName* 매개 변수는 `NULL`,이 메서드는 기록의 `CKeyboardManager` 로 지정 된 기본 위치에 상태는 [CWinAppEx 클래스](../../mfc/reference/cwinappex-class.md)합니다. 메서드를 사용 하 여 나중에 데이터를 로드할 수 위치를 지정 하는 경우 [CKeyboardManager::LoadState](#loadstate)합니다.  
   
  기본 기간을 지정 하지 않으면 주 프레임 창의 기본 창으로 사용 됩니다.  
   
@@ -280,16 +280,16 @@ static void ShowAllAccelerators(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bShowAll`  
+ [in] *bShowAll*  
  경우 `true`, 바로 가기 키를 모두 표시 됩니다. 경우 `false`, 첫 번째 바로 가기 키만 표시 됩니다.  
   
- [in] `lpszDelimiter`  
+ [in] *lpszDelimiter*  
  바로 가기 키 사이 삽입할 문자열입니다. 이 구분 기호 하나만 하나의 바로 가기 키 표시 되는 경우에 영향이 없습니다.  
   
 ### <a name="remarks"></a>설명  
  기본적으로 명령에 연결 된 바로 가기 키를 둘 이상의 첫 번째 바로 가기 키만 표시 됩니다. 이 함수를 사용 하면 모든 명령과 연결 된 모든 바로 가기 키를 나열할 수 있습니다.  
   
- 메뉴 모음에서 명령 옆에 있는 바로 가기 키를 나열 됩니다. 문자열에서 제공 하는 모든 바로 가기 키를 표시 되 면 `lpszDelimiter` 개별 바로 가기 키를 구분 합니다.  
+ 메뉴 모음에서 명령 옆에 있는 바로 가기 키를 나열 됩니다. 문자열에서 제공 하는 모든 바로 가기 키를 표시 되 면 *lpszDelimiter* 개별 바로 가기 키를 구분 합니다.  
   
 ##  <a name="translatechartoupper"></a>  CKeyboardManager::TranslateCharToUpper  
  문자 위쪽 해당 레지스터를 변환 합니다.  
@@ -299,7 +299,7 @@ static UINT TranslateCharToUpper(const UINT nChar);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nChar`  
+ [in] *nChar*  
  변환할 문자입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -323,19 +323,19 @@ BOOL UpdateAccelTable(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pTemplate`  
+ [in] *pTemplate*  
  문서 서식 파일에 대 한 포인터입니다.  
   
- [in] `lpAccel`  
+ [in] *lpAccel*  
  새 바로 가기 키에 대 한 포인터입니다.  
   
- [in] `nSize`  
+ [in] *nSize*  
  새 바로 가기 테이블의 크기입니다.  
   
- [in] `pDefaultFrame`  
+ [in] *pDefaultFrame*  
  기본 프레임 창에 대 한 포인터입니다.  
   
- [in] `hAccelNew`  
+ [in] *hAccelNew*  
  새 바로 가기 테이블에 대 한 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  

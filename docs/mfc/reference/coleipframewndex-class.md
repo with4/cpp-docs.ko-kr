@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71610035d029c4d8f5ca403c52d9eddd575e3a8b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5b79f65b39aa741a9794fbe05721c7dc44287603
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377573"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37041648"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx 클래스
 `COleIPFrameWndEx` 클래스는 MFC를 지원하는 OLE 컨테이너를 구현합니다. 응용 프로그램에 대한 현재 위치의 프레임 창 클래스는 `COleIPFrameWndEx` COleIPFrameWnd [클래스에서 파생하는 대신](../../mfc/reference/coleipframewnd-class.md)클래스에서 파생해야 합니다. 
@@ -177,7 +177,7 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 |----------|-----------------|  
 |[COleIPFrameWndEx::InitUserToobars](#initusertoobars)|사용자 정의 도구 모음에 할당되는 컨트롤 ID의 범위를 초기화하도록 프레임워크에 지시합니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `COleIPFrameWndEx` 클래스의 인스턴스를 하위 클래스로 지정하고 해당 메서드를 재정의하는 방법을 보여 줍니다. 이 예제에서는 `OnDestory` 메서드, `RepositionFrame` 메서드, `RecalcLayout` 메서드 및 `CalcWindowRect` 메서드를 재정의하는 방법을 보여 줍니다. 이 코드 조각은 [워드 패드 샘플](../../visual-cpp-samples.md)의 일부입니다.  
   
  [!code-cpp[NVC_MFC_WordPad#1](../../mfc/reference/codesnippet/cpp/coleipframewndex-class_1.cpp)]  
@@ -217,8 +217,8 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pControlBar`  
- [in] `bTail`  
+ [in] *pControlBar*  
+ [in] *bTail*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -232,7 +232,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `hdwp`  
+ [in] *hdwp*  
   
 ### <a name="remarks"></a>설명  
   
@@ -247,9 +247,9 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pBar`  
- [in] `nDockBarID`  
- [in] `lpRect`  
+ [in] *pBar*  
+ [in] *nDockBarID*  
+ [in] *lpRect*  
   
 ### <a name="remarks"></a>설명  
   
@@ -263,17 +263,17 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pBar`  
+ [in] *pBar*  
  도킹 창에 대 한 포인터입니다.  
   
- [in] `pLeftOf`  
+ [in] *pLeftOf*  
  원본으로 사용 되는 창에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
  반환 `TRUE` 는 작업을 완료 합니다. 그렇지 않으면 `FALSE`를 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 미리 정의 된 순서에 따라 여러 창 개체를 도킹 하려면이 메서드를 호출 합니다. 이 메서드는 지정 된 창을 도킹 `pBar` 로 지정 된 창 왼쪽에 `pLeftOf`합니다.  
+ 미리 정의 된 순서에 따라 여러 창 개체를 도킹 하려면이 메서드를 호출 합니다. 이 메서드는 지정 된 창을 도킹 *pBar* 로 지정 된 창 왼쪽에 *pLeftOf*합니다.  
   
 ##  <a name="enableautohidepanes"></a>  COleIPFrameWndEx::EnableAutoHidePanes  
 
@@ -283,7 +283,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -297,7 +297,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `dwDockStyle`  
+ [in] *dwDockStyle*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -317,12 +317,12 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
- [in] `uiCustomizeCmd`  
- [in] `strCustomizeLabel`  
- [in] `uiViewToolbarsMenuEntryID`  
- [in] `bContextMenuShowsToolbarsOnly`  
- [in] `bViewMenuShowsToolbarsOnly`  
+ [in] *bEnable*  
+ [in] *uiCustomizeCmd*  
+ [in] *strCustomizeLabel*  
+ [in] *uiViewToolbarsMenuEntryID*  
+ [in] *bContextMenuShowsToolbarsOnly*  
+ [in] *bViewMenuShowsToolbarsOnly*  
   
 ### <a name="remarks"></a>설명  
   
@@ -417,7 +417,7 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nID`  
+ [in] *nID*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -446,10 +446,10 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pButton`  
+ [in] *pButton*  
  단추에 대 한 포인터입니다.  
   
- [in] `strTTText`  
+ [in] *strTTText*  
  도구 설명 텍스트에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -469,17 +469,17 @@ void InitUserToolbars(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszRegEntry`  
+ [in] *lpszRegEntry*  
  레지스트리 항목의 라이브러리에는 사용자 도구 모음 설정을 저장 합니다.  
   
- [in] `uiUserToolbarFirst`  
+ [in] *uiUserToolbarFirst*  
  첫 번째 사용자 정의 도구 모음에 할당 된 컨트롤 ID입니다.  
   
- [in] `uiUserToolbarLast`  
+ [in] *uiUserToolbarLast*  
  마지막 사용자 정의 도구 모음에 할당 된 컨트롤 ID입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 함수를 사용 하 여 사용자가 동적으로 정의 하는 도구 모음에 할당 하기 위해 컨트롤 Id의 범위를 초기화 합니다. 매개 변수 `uiUserToolbarFirst` 및 `uiUserToolbarLast` 허용 되는 도구 모음 컨트롤 Id의 범위를 정의 합니다. 사용자 정의 도구 모음 생성을 해제 하려면 설정 `uiUserToolbarFirst` 또는 `uiUserToolbarLast` 를-1입니다.  
+ 이 함수를 사용 하 여 사용자가 동적으로 정의 하는 도구 모음에 할당 하기 위해 컨트롤 Id의 범위를 초기화 합니다. 매개 변수 *uiUserToolbarFirst* 및 *uiUserToolbarLast* 허용 되는 도구 모음 컨트롤 Id의 범위를 정의 합니다. 사용자 정의 도구 모음 생성을 해제 하려면 설정 *uiUserToolbarFirst* 또는 *uiUserToolbarLast* 를-1입니다.  
   
 ##  <a name="insertpane"></a>  COleIPFrameWndEx::InsertPane  
 
@@ -492,9 +492,9 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pControlBar`  
- [in] `pTarget`  
- [in] `bAfter`  
+ [in] *pControlBar*  
+ [in] *pTarget*  
+ [in] *후에는*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -524,9 +524,9 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `point`  
- [in] `dwBarAlignment`  
- [in] `bOuterEdge`  
+ [in] *지점*  
+ [in] *dwBarAlignment*  
+ [in] *bOuterEdge*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -544,10 +544,10 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nIDResource`  
- [in] `dwDefaultStyle`  
- [in] `pParentWnd`  
- [in] `pContext`  
+ [in] *nIDResource*  
+ [in] *dwDefaultStyle*  
+ [in] *pParentWnd*  
+ [in] *pContext*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -561,7 +561,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane*);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `CDockablePane*`  
+ [in] *CDockablePane**  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -575,25 +575,25 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `CPaneFrameWnd*`  
+ [in] *CPaneFrameWnd\**  
   
 ### <a name="return-value"></a>반환 값  
   
 ### <a name="remarks"></a>설명  
   
 ##  <a name="onclosepopupmenu"></a>  COleIPFrameWndEx::OnClosePopupMenu  
- 활성 팝업 메뉴를 처리할 때 프레임 워크에서 호출 된 `WM_DESTROY` 메시지입니다.  
+ 활성 팝업 메뉴에서 WM_DESTROY 메시지를 처리할 때 프레임워크에서 호출됩니다.  
   
 ```  
 virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pMenuPopup`  
+ [in] *pMenuPopup*  
  팝업 메뉴 개체에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
- 알림을 수신 하려면이 메서드를 재정의 `CMFCPopupMenu` 개체를 처리할 때 `WM_DESTROY` 메시지입니다.  
+ 알림을 수신 하려면이 메서드를 재정의 `CMFCPopupMenu` WM_DESTROY 메시지를 처리 하는 경우 개체입니다.  
   
 ##  <a name="oncmdmsg"></a>  COleIPFrameWndEx::OnCmdMsg  
 
@@ -607,10 +607,10 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nID`  
- [in] `nCode`  
- [in] `pExtra`  
- [in] `pHandlerInfo`  
+ [in] *nID*  
+ [in] *nCode*  
+ [in] *pExtra*  
+ [in] *pHandlerInfo*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -627,13 +627,13 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대 한 포인터입니다.  
   
- [in] `pMenuButton`  
+ [in] *pMenuButton*  
  메뉴 단추에 대 한 포인터입니다.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  메뉴 항목과 연결 된 이미지입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -643,7 +643,7 @@ virtual BOOL OnDrawMenuImage(
  이미지가 소유 하 고 메뉴 모음에 속하는 메뉴 항목에 대 한 그리기를 사용자 지정 하려는 경우이 메서드를 재정의 `COleIPFrameWndEx`-파생 된 개체입니다.  
   
 ##  <a name="ondrawmenulogo"></a>  COleIPFrameWndEx::OnDrawMenuLogo  
- 프레임 워크에서 호출 때는 [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)프로세스 개체를 `WM_PAINT` 메시지입니다.  
+ [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)개체에서 WM_PAINT 메시지를 처리할 때 프레임워크에서 호출됩니다.  
   
 ```  
 virtual void OnDrawMenuLogo(
@@ -653,13 +653,13 @@ virtual void OnDrawMenuLogo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대 한 포인터입니다.  
   
- [in] `pMenu`  
+ [in] *pMenu*  
  팝업 메뉴 개체에 대 한 포인터입니다.  
   
- [in] `rectLogo`  
+ [in] *rectLogo*  
  표시할 로고에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -682,7 +682,7 @@ virtual BOOL OnMenuButtonToolHitTest(
  `TOOLINFO` 구조체에 대한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 기본 구현은 아무 작업도 수행 하 고 0을 반환 합니다. 구현 채워지면 0이 아닌 값을 반환 해야는 `pTI` 매개 변수입니다.  
+ 기본 구현은 아무 작업도 수행 하 고 0을 반환 합니다. 구현 채워지면 0이 아닌 값을 반환 해야는 *pTI* 매개 변수입니다.  
   
 ### <a name="remarks"></a>설명  
  특정 메뉴 항목에 대 한 도구 설명 정보를 제공 하려면이 메서드를 재정의 합니다.  
@@ -695,7 +695,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pFrame`  
+ [in] *pFrame*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -711,8 +711,8 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bPreview`  
- [in] `pState`  
+ [in] *bPreview*  
+ [in] *pState*  
   
 ### <a name="remarks"></a>설명  
   
@@ -726,8 +726,8 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pMenuPane`  
- [in] `uiToolbarID`  
+ [in] *pMenuPane*  
+ [in] *uiToolbarID*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -741,7 +741,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bShow`  
+ [in] *bShow*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -755,7 +755,7 @@ virtual BOOL OnShowPopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `[in] pMenuPopup`  
+ [in] *pMenuPopup*  
  팝업 메뉴를 표시에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -774,10 +774,10 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pMenuPopup`  
+ [in] *pMenuPopup*  
  사용자가 선택한 팝업 메뉴에 대 한 포인터입니다.  
   
- [in] `pBar`  
+ [in] *pBar*  
  메뉴를 호스팅하는 창에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -804,11 +804,11 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `point`  
- [in] `nSensitivity`  
- [in] `bExactBar`  
- [in] `pRTCBarType`  
- [in] `dwAlignment`  
+ [in] *지점*  
+ [in] *nSensitivity*  
+ [in] *bExactBar*  
+ [in] *pRTCBarType*  
+ [in] *dwAlignment*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -822,7 +822,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pMsg`  
+ [in] *pMsg*  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -836,7 +836,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bNotify`  
+ [in] *bNotify*  
   
 ### <a name="remarks"></a>설명  
   
@@ -853,11 +853,11 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pControlBar`  
- [in] `bDestroy`  
- [in] `bAdjustLayout`  
- [in] `bAutoHide`  
- [in] `pBarReplacement`  
+ [in] *pControlBar*  
+ [in] *bDestroy*  
+ [in] *bAdjustLayout*  
+ [in] *bAutoHide*  
+ [in] *pBarReplacement*  
   
 ### <a name="remarks"></a>설명  
   
@@ -869,7 +869,7 @@ void SetDockState(const CDockState& state);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `state`  
+ [in] *상태*  
  도킹 상태를 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -886,13 +886,13 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `menu`  
+ [in] *메뉴*  
  에 대 한 참조는 [CMenu](../../mfc/reference/cmenu-class.md) 개체를 수정할 수 있습니다.  
   
- [in] `uiViewUserToolbarCmdFirst`  
+ [in] *uiViewUserToolbarCmdFirst*  
  첫 번째 사용자 정의 명령을 지정합니다.  
   
- [in] `uiViewUserToolbarCmdLast`  
+ [in] *uiViewUserToolbarCmdLast*  
  마지막 사용자 정의 명령을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -909,10 +909,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pBar`  
- [in] `bShow`  
- [in] `bDelay`  
- [in] `bActivate`  
+ [in] *pBar*  
+ [in] *bShow*  
+ [in] *bDelay*  
+ [in] *bActivate*  
   
 ### <a name="remarks"></a>설명  
   
@@ -927,10 +927,10 @@ virtual void WinHelp(
   
 ### <a name="parameters"></a>매개 변수  
  [in] dwData  
- `nCmd`에 지정된 도움말의 형식에 필요한 대로 데이터를 지정합니다.  
+ 에 지정 된 도움말의 형식에 필요한 대로 데이터를 지정 *nCmd*합니다.  
   
- [in] `nCmd`  
- 요청한 도움말의 형식을 지정합니다. 가능한 값 목록과 `dwData` 매개 변수에 영향을 주는 방식에 대해서는 Windows SDK의 [WinHelp 함수](http://msdn.microsoft.com/library/windows/desktop/bb762267) (영문)를 참조하세요.  
+ [in] *nCmd*  
+ 요청한 도움말의 형식을 지정합니다. 가능한 값 목록과 미치는 영향에 대 한는 *dwData* 매개 변수 참조는 [WinHelp 함수](http://msdn.microsoft.com/library/windows/desktop/bb762267) Windows SDK에서 합니다.  
   
 ### <a name="remarks"></a>설명  
   

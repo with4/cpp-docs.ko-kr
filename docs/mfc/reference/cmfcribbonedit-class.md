@@ -83,12 +83,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: daa6a5976f4f20ba067eed047a4ff83b30550ea9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a67696289603697ddac541382d63f989881afaf
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374178"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040862"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit 클래스
 리본 표시줄에 있는 편집 컨트롤을 구현 합니다.  
@@ -147,7 +147,7 @@ class CMFCRibbonEdit : public CMFCRibbonButton
   
 ## <a name="remarks"></a>설명  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 생성 하는 방법을 `CMFCRibbonEdit` 개체, 편집 컨트롤 옆에 있는 스핀 단추를 표시 하 고 편집 컨트롤의 텍스트를 설정 합니다. 이 코드 조각은의 일부인는 [MS Office 2007 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_MSOffice2007Demo#7](../../mfc/reference/codesnippet/cpp/cmfcribbonedit-class_1.cpp)]  
@@ -181,16 +181,16 @@ CMFCRibbonEdit();
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nID`  
+ [in] *nID*  
  명령에 대 한 ID는 `CMFCRibbonEdit` 제어 합니다.  
   
- [in] `nWidth`  
+ [in] *nWidth*  
  에 대 한 입력란의 픽셀에서 너비는 `CMFCRibbonEdit` 제어 합니다.  
   
- [in] `lpszLabel`  
+ [in] *lpszLabel*  
  에 대 한 레이블은 `CMFCRibbonEdit` 제어 합니다.  
   
- [in] `nImage`  
+ [in] *nImage*  
  에 사용할 작은 이미지의 인덱스는 `CMFCRibbonEdit` 제어 합니다. 작은 이미지의 컬렉션은 부모 리본 범주에 따라 유지 됩니다.  
   
 ### <a name="remarks"></a>설명  
@@ -204,11 +204,11 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `src`  
+ [in] *src*  
  소스 `CMFCRibbonEdit` 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- `src` 매개 변수 형식 이어야 합니다 `CMFCRibbonEdit`합니다.  
+ *src* 매개 변수 형식 이어야 합니다 `CMFCRibbonEdit`합니다.  
   
 ##  <a name="createedit"></a>  CMFCRibbonEdit::CreateEdit  
  에 대 한 텍스트 상자를 새로 만들어는 [CMFCRibbonEdit](../../mfc/reference/cmfcribbonedit-class.md) 개체입니다.  
@@ -220,10 +220,10 @@ virtual CMFCRibbonRichEditCtrl* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  부모 창에 대 한 포인터는 `CMFCRibbonEdit` 개체입니다.  
   
- [in] `dwEditStyle`  
+ [in] *dwEditStyle*  
  텍스트 상자의 스타일을 지정합니다. 주의 섹션에 나열 된 창 스타일을 결합할 수 있습니다는 [컨트롤 스타일 편집](http://msdn.microsoft.com/library/windows/desktop/bb775464) Windows SDK에 설명 되어 있는 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -273,10 +273,10 @@ void EnableSpinButtons(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nMin`  
+ [in] *nMin*  
  스핀 단추의 최소값입니다.  
   
- [in] `nMax`  
+ [in] *최대*  
  스핀 단추의 최대값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -290,7 +290,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대 한 포인터는 `CMFCRibbonEdit` 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -318,7 +318,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대 한 포인터는 `CMFCRibbonEdit` 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -355,7 +355,7 @@ int GetWidth(BOOL bInFloatyMode = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bInFloatyMode`  
+ [in] *bInFloatyMode*  
  `TRUE` 경우는 `CMFCRibbonEdit` 부동 모드에서 컨트롤은 그렇지 않은 경우 `FALSE`합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -433,7 +433,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대 한 포인터는 `CMFCRibbonEdit` 제어 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -446,7 +446,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대 한 포인터는 `CMFCRibbonEdit` 제어 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -459,7 +459,7 @@ virtual void OnDrawLabelAndImage(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대 한 포인터는 `CMFCRibbonEdit` 제어 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -478,22 +478,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대 한 포인터는 `CMFCRibbonEdit` 제어 합니다.  
   
- [in] `strText`  
- 표시 텍스트 [ ] (../../mfc/reference/cmfcribbonedit-class.md "cmfcribbonedit 클래스")합니다.  
+ [in] *strText*  
+ 표시 텍스트 [cmfcribbonedit 클래스](../../mfc/reference/cmfcribbonedit-class.md "")합니다.  
   
- [in] `nTextOffset`  
+ [in] *nTextOffset*  
  텍스트를 표시할 목록 상자의 왼쪽에서 픽셀에서 거리입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  에 대 한 디스플레이 사각형은 `CMFCRibbonEdit` 제어 합니다.  
   
- [in] `bIsSelected`  
+ [in] *bIsSelected*  
  이 매개 변수는 사용되지 않습니다.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  이 매개 변수는 사용되지 않습니다.  
   
 ### <a name="remarks"></a>설명  
@@ -507,7 +507,7 @@ virtual void OnEnable(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
+ [in] *bEnable*  
  `TRUE` 컨트롤을 사용 하도록 설정 하려면 `FALSE` 에 컨트롤을 사용 하지 않도록 설정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -520,7 +520,7 @@ virtual void OnHighlight(BOOL bHighlight);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bHighlight`  
+ [in] *bHighlight*  
  `TRUE` 범위 내에 포인터가 있으면는 `CMFCRibbonEdit` 제어; 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -533,7 +533,7 @@ virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bIsMenuKey`  
+ [in] *bIsMenuKey*  
  `TRUE` keytip; 팝업 메뉴를 표시 하는 경우 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -549,7 +549,7 @@ virtual void OnLButtonDown(CPoint point);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `point`  
+ [in] *지점*  
  이 매개 변수는 사용되지 않습니다.  
   
 ### <a name="remarks"></a>설명  
@@ -562,7 +562,7 @@ virtual void OnLButtonUp(CPoint point);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `point`  
+ [in] *지점*  
  이 매개 변수는 사용되지 않습니다.  
   
 ### <a name="remarks"></a>설명  
@@ -575,7 +575,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bIsRTL`  
+ [in] *bIsRTL*  
  `TRUE` 레이아웃은 오른쪽에서 왼쪽; 경우 `FALSE` 경우 레이아웃은 왼쪽에서 오른쪽입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -588,7 +588,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` 컨트롤을 표시 하려면 `FALSE` 컨트롤을 숨기려면 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -613,10 +613,10 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParent`  
+ *pParent*  
  에 대 한 부모 창에 대 한 포인터는 `CMFCRibbonEdit` 개체입니다.  
   
- `data`  
+ *data*  
  에 대 한 내게 필요한 옵션 데이터는 `CMFCRibbonEdit` 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -632,7 +632,7 @@ void SetEditText(CString strText);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `strText`  
+ [in] *strText*  
  텍스트 상자에 대 한 텍스트입니다.  
   
 ##  <a name="settextalign"></a>  CMFCRibbonEdit::SetTextAlign  
@@ -643,11 +643,11 @@ void SetTextAlign(int nAlign);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nAlign`  
+ [in] *nAlign*  
  텍스트 맞춤 값을 열거 합니다. 가능한 값에 대 한 설명 섹션을 참조 하십시오.  
   
 ### <a name="remarks"></a>설명  
- 매개 변수 `nAlign` 컨트롤 스타일 다음 편집 중 하나입니다.  
+ 매개 변수 *nAlign* 컨트롤 스타일 다음 편집 중 하나입니다.  
   
 - **ES_LEFT** 왼쪽된 맞춤에 대 한  
   
@@ -667,10 +667,10 @@ void SetWidth(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nWidth`  
+ [in] *nWidth*  
  텍스트 상자의 픽셀 너비입니다.  
   
- `bInFloatyMode`  
+ *bInFloatyMode*  
  `TRUE` 부동 모드에 대 한 너비를 설정 하려면 `FALSE` 일반 모드에 대 한 너비를 설정 합니다.  
   
 ### <a name="remarks"></a>설명  

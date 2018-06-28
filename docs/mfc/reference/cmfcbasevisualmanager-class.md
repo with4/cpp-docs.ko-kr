@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496c6905276e789a72c55db1835187b0d4ab342a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2b18eef5b828577f6d77846a5e9e231dcf828332
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369153"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37040729"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager 클래스
 파생된 비주얼 관리자 및 Windows 테마 API 사이의 계층입니다.  
@@ -136,31 +136,31 @@ virtual BOOL DrawCheckBox(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대 한 포인터  
   
- [in] `rect`  
+ [in] *rect*  
  확인란의 경계 사각형입니다.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  확인란은 강조 표시 여부를 지정 합니다.  
   
- [in] `nState`  
+ [in] *nState*  
  0 checked normal에 대 한 옵션을 선택 취소 1에 대 한  
   
  일반적인 경우 혼합 2입니다.  
   
- [in] `bEnabled`  
+ [in] *b 사용*  
  확인란 사용 되는지 여부를 지정 합니다.  
   
- [in] `bPressed`  
+ [in] *bPressed*  
  확인란을 눌렀는지 여부를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  `TRUE` 테마 API를 사용 하면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="remarks"></a>설명  
- 값 `nState` 다음 확인란 스타일에 해당 합니다.  
+ 값 *nState* 다음 확인란 스타일에 해당 합니다.  
   
 |nState|확인란 스타일|  
 |------------|---------------------|  
@@ -181,19 +181,19 @@ virtual BOOL DrawComboBorder(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  콤보 상자 테두리의 경계 사각형입니다.  
   
- [in] `bDisabled`  
+ [in] *사용 안 함*  
  콤보 상자 테두리 되지 않는지 여부를 지정 합니다.  
   
- [in] `bIsDropped`  
+ [in] *bIsDropped*  
  테두리 콤보 상자를 삭제할지 여부를 지정 합니다.  
   
- [in] `bIsHighlighted`  
+ [in] *bIsHighlighted*  
  콤보 상자 테두리에 강조 표시 되어 있는지 여부를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -215,11 +215,11 @@ virtual BOOL DrawComboDropButton(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `pDC`|장치 컨텍스트에 대한 포인터입니다.|  
-|[in] `rect`|콤보 상자 드롭다운 단추 경계 사각형입니다.|  
-|[in] `bDisabled`|콤보 상자 드롭다운 단추 되지 않는지 여부를 지정 합니다.|  
-|[in] `bIsDropped`|콤보 상자 드롭다운 단추를 삭제할지 여부를 지정 합니다.|  
-|[in] `bIsHighlighted`|콤보 상자 드롭다운 단추는 강조 표시 여부를 지정 합니다.|  
+|[in] *pDC*|장치 컨텍스트에 대한 포인터입니다.|  
+|[in] *rect*|콤보 상자 드롭다운 단추 경계 사각형입니다.|  
+|[in] *사용 안 함*|콤보 상자 드롭다운 단추 되지 않는지 여부를 지정 합니다.|  
+|[in] *bIsDropped*|콤보 상자 드롭다운 단추를 삭제할지 여부를 지정 합니다.|  
+|[in] *bIsHighlighted*|콤보 상자 드롭다운 단추는 강조 표시 여부를 지정 합니다.|  
   
 ### <a name="return-value"></a>반환 값  
  `TRUE` 테마 API를 사용 하면 그렇지 않으면 `FALSE`합니다.  
@@ -236,17 +236,17 @@ virtual BOOL DrawPushButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  누름 단추의 경계 사각형입니다.  
   
- [in] `pButton`  
+ [in] *pButton*  
  에 대 한 포인터는 [CMFCButton 클래스](../../mfc/reference/cmfcbutton-class.md) 그릴 개체입니다.  
   
- [in] `uiState`  
- 무시됩니다. 상태에서 가져온 것 `pButton`합니다.  
+ [in] *uiState*  
+ 무시됩니다. 상태에서 가져온 것 *pButton*합니다.  
   
 ### <a name="return-value"></a>반환 값  
  `TRUE` 테마 API를 사용 하면 그렇지 않으면 `FALSE`합니다.  
@@ -265,22 +265,22 @@ virtual BOOL DrawRadioButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  라디오 단추의 경계 사각형입니다.  
   
- [in] `bHighlighted`  
+ [in] *bHighlighted*  
  라디오 단추가 강조 표시 하는지 여부를 지정 합니다.  
   
- [in] `bChecked`  
+ [in] *bChecked*  
  라디오 단추가 선택 되어 있는지 여부를 지정 합니다.  
   
- [in] `bEnabled`  
+ [in] *b 사용*  
  라디오 단추를 사용할 수 있는지 여부를 지정 합니다.  
   
- [in] `bPressed`  
+ [in] *bPressed*  
  라디오 단추를 눌렀는지 여부를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -303,31 +303,31 @@ virtual BOOL DrawStatusBarProgress(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `pStatusBar`  
+ [in] *pStatusBar*  
  상태 표시줄에 대 한 포인터입니다. 이 값은 무시됩니다.  
   
- [in] `rectProgress`  
- 진행률 표시줄의 경계 사각형 `pDC` 좌표입니다.  
+ [in] *rectProgress*  
+ 진행률 표시줄의 경계 사각형 *pDC* 좌표입니다.  
   
- [in] `nProgressTotal`  
+ [in] *nProgressTotal*  
  총 진행률 값입니다.  
   
- [in] `nProgressCurr`  
+ [in] *nProgressCurr*  
  현재 진행률 값입니다.  
   
- [in] `clrBar`  
+ [in] *clrBar*  
  시작 색입니다. `CMFCBaseVisualManager` 이 무시합니다. 파생된 클래스 색 그라데이션을에 사용할 수 있습니다.  
   
- [in] `clrProgressBarDest`  
+ [in] *clrProgressBarDest*  
  마지막 색입니다. `CMFCBaseVisualManager` 이 무시합니다. 파생된 클래스 색 그라데이션을에 사용할 수 있습니다.  
   
- [in] `clrProgressText`  
+ [in] *clrProgressText*  
  진행률 텍스트 색입니다. `CMFCBaseVisualManager` 이 무시합니다. 텍스트 색 정의한 `afxGlobalData.clrBtnText`합니다.  
   
- [in] `bProgressText`  
+ [in] *bProgressText*  
  진행률 텍스트를 표시할지 여부를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -344,13 +344,13 @@ virtual void FillReBarPane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `pBar`  
+ [in] *pBar*  
  해당 배경을 그릴 창에 대 한 포인터입니다.  
   
- [in] `rectClient`  
+ [in] *rectClient*  
  채울 영역 경계 사각형입니다.  
   
 ### <a name="return-value"></a>반환 값  
