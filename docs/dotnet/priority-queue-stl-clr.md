@@ -61,19 +61,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 300cb9e7708c02717aeb8ea8fda59986f3fd9fa7
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: abfe2a740a51ffe8b2735942bc9387f0b13bb0d2
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36306036"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079533"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue(STL/CLR)
 이 템플릿 클래스는 다양 한 길이의 액세스가 제한 된 요소의 시퀀스를 정렬 된 제어 하는 개체를 설명 합니다. 컨테이너 어댑터를 사용 하 여 `priority_queue` 우선 순위 큐는 기본 컨테이너를 관리할 수 있습니다.  
   
  아래 설명에 `GValue` 동일 `Value` 후자 형식인 ref 하지 않는 한 경우에서 이기 `Value^`합니다. 마찬가지로, `GContainer` 동일 `Container` 후자 형식인 ref 하지 않는 한 경우에서 이기 `Container^`합니다.  
   
-### <a name="syntax"></a>구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename Value,  
@@ -84,7 +84,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  값  
  제어되는 시퀀스의 요소 형식입니다.  
   
@@ -138,7 +138,7 @@ template<typename Value,
 |<xref:System.ICloneable>|개체를 복제 합니다.|  
 |IPriorityQueue\<값, 컨테이너 >|제네릭 컨테이너 어댑터를 유지 합니다.|  
   
-### <a name="remarks"></a>설명  
+## <a name="remarks"></a>설명  
  개체 할당 및 형식의 기본 컨테이너를 통해 제어 하는 시퀀스에 대 한 저장소를 해제 `Container`, 저장 하는 `Value` 요소 및 필요에 따라 증가 합니다. 우선 순위가 가장 높은 요소 (맨 위에 있는 요소) 쉽게 액세스할 수 있고 이동식와 힙 정렬 순서를 유지 합니다. 개체는 새 요소를 삽입 또는 방금 우선 순위가 가장 높은 요소를 구현 하는 우선 순위 큐를 제거할에 대 한 액세스를 제한 합니다.  
   
  형식의 개체를 저장된 하는 대리자를 호출 하 여 제어 하는 시퀀스를 정렬 하는 개체 [priority_queue:: value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md)합니다. Priority_queue; 생성할 때 저장된 대리자 개체를 지정할 수 있습니다. 기본값은 비교 없는 대리자 개체를 지정 하면 `operator<(value_type, value_type)`합니다. 멤버 함수를 호출 하 여이 저장 된 개체를 액세스할 [priority_queue:: value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)`()`합니다.  

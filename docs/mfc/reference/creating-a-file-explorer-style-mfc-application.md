@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b0f5d4bdabc987d4f4177f616ce756c351b8b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2a2c3e8e1c7956a5dff33cd8ff78612f5f844ad6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370157"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078423"
 ---
 # <a name="creating-a-file-explorer-style-mfc-application"></a>파일 탐색기 스타일 MFC 응용 프로그램 만들기
 파일 탐색기에 대 한 사용자 인터페이스 (UI)를 사용 하는 많은 Windows 시스템 응용 프로그램. 예를 들어, 파일 탐색기를 시작 하면 응용 프로그램을 수직 분할 분할 막대 클라이언트 영역을 표시 됩니다. 클라이언트 영역의 오른쪽 세부 정보를 표시 선택한 항목과 관련 된 왼쪽된 창에서 및 클라이언트 영역의 왼쪽 탐색 및 검색 기능을 제공 합니다. 사용자가 왼쪽된 창에서 항목을 응용 프로그램에 오른쪽 창을 다시 채워집니다. MDI 응용 프로그램에서 명령을 사용할 수는 **보기** 메뉴 오른쪽 창에 표시 되는 세부의 크기를 변경할 수 있습니다. (SDI 또는 다중 최상위 문서 응용 프로그램에서 변경할 수 있습니다만 도구 모음 단추를 사용 하 여 세부 정보.)  
@@ -32,7 +32,7 @@ ms.locfileid: "33370157"
   
  마법사는 다음 클래스에서:  
   
--   **CLeftView** 클라이언트 영역의 왼쪽된 창 클래스를 정의 합니다. 파생 된 항상 [CTreeView](../../mfc/reference/ctreeview-class.md)합니다.  
+-   `CLeftView` 클라이언트 영역의 왼쪽된 창 클래스를 정의 합니다. 파생 된 항상 [CTreeView](../../mfc/reference/ctreeview-class.md)합니다.  
   
 -   C*ProjName*뷰 클래스 오른쪽 창의 클라이언트 영역을 정의 합니다. 파생 된 기본적으로 [CListView](../../mfc/reference/clistview-class.md) 보기에서 지정 하는 클래스에 따라 다른 유형의 가능 하지만 **기본 클래스** 목록에 [생성 된 클래스](../../mfc/reference/generated-classes-mfc-application-wizard.md) 의 페이지는 마법사입니다.  
   

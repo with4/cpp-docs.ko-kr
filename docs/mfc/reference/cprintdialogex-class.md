@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f511eb1414a5cd5e22b9a3e05f81caef15b908e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e005d18b57a4ada2c1a3aad605b7724f17a62347
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376648"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079100"
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx 클래스
 Windows의 인쇄 속성 시트에서 제공 하는 서비스를 캡슐화 합니다.  
@@ -146,10 +146,10 @@ CPrintDialogEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwFlags`  
+ *dwFlags*  
  하나 이상의 플래그 비트 OR 연산자를 사용 하 여 결합 대화 상자에서 설정을 사용자 지정 하는 데 사용할 수 있습니다. 예를 들어는 **PD_ALLPAGES** 플래그의 기본 인쇄 범위는 문서의 모든 페이지를 설정 합니다. 참조는 [PRINTDLGEX](http://msdn.microsoft.com/library/windows/desktop/ms646844) 이러한 플래그에 대 한 자세한 내용은 Windows SDK에는 구조입니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  대화 상자의 부모 또는 소유자 창에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -248,7 +248,7 @@ CString GetDriverName() const;
  A `CString` 드라이버 시스템 정의 이름을 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
- 에 대 한 포인터를 사용 하 여는 `CString` 에서 반환 된 개체 `GetDriverName` 의 값으로 `lpszDriverName` 호출에서 [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc)합니다.  
+ 에 대 한 포인터를 사용 하 여는 `CString` 에서 반환 된 개체 `GetDriverName` 의 값으로 *lpszDriverName* 호출에서 [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc)합니다.  
   
 ##  <a name="getportname"></a>  CPrintDialogEx::GetPortName  
  이 함수를 호출한 후 호출 [DoModal](#domodal) 또는 [GetDefaults](#getdefaults) 를 현재 선택 된 프린터 포트의 이름을 검색 합니다.  

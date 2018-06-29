@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0c2ffbe685ac643116fa60d4f97d03781d1efc83
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3b81a35a696d3d5cdcb22a6f9a66425320b544c2
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375443"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079451"
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder 클래스
 사용자 컨트롤에 사진을 표시할 수 있게 하는 사진 속성을 구현 합니다.  
@@ -133,29 +133,29 @@ BOOL CreateFromBitmap(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `idResource`  
+ *idResource*  
  비트맵 리소스의 리소스 ID입니다.  
   
- `pBitmap`  
+ *pBitmap*  
  에 대 한 포인터는 [CBitmap](../../mfc/reference/cbitmap-class.md) 개체입니다.  
   
  *pPal*  
  에 대 한 포인터는 [CPalette](../../mfc/reference/cpalette-class.md) 개체입니다.  
   
- `bTransferOwnership`  
+ *bTransferOwnership*  
  그림 개체 비트맵 및 색상표 개체의 소유권을 갖게 됩니다 있는지 여부를 나타냅니다.  
   
- `hbm`  
+ *hbm*  
  비트맵에 대 한 핸들은 `CPictureHolder` 개체가 만들어집니다.  
   
- `hpal`  
+ *hpal*  
  비트맵 렌더링에 사용 되는 색상표에 대 한 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
  개체가 성공적으로 만들어지면; 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `bTransferOwnership` 은 **TRUE**호출자에 게 비트맵을 사용 하지 않아야, 또는이 호출 후에 어떤 방식으로든에서 색상표 개체를 반환 합니다. 경우 `bTransferOwnership` 은 **FALSE**, 호출자가 비트맵 및 색상표 개체 그림 개체의 수명 동안 유효한 상태로 유지 합니다.  
+ 경우 *bTransferOwnership* 은 **TRUE**호출자에 게 비트맵을 사용 하지 않아야, 또는이 호출 후에 어떤 방식으로든에서 색상표 개체를 반환 합니다. 경우 *bTransferOwnership* 은 **FALSE**, 호출자가 비트맵 및 색상표 개체 그림 개체의 수명 동안 유효한 상태로 유지 합니다.  
   
 ##  <a name="createfromicon"></a>  CPictureHolder::CreateFromIcon  
  아이콘을 사용 하 여 그림 개체에서 초기화 하는 `CPictureHolder`합니다.  
@@ -171,20 +171,20 @@ BOOL CreateFromIcon(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `idResource`  
+ *idResource*  
  비트맵 리소스의 리소스 ID입니다.  
   
- `hIcon`  
+ *hIcon*  
  올 아이콘에 대 한 핸들은 `CPictureHolder` 개체가 만들어집니다.  
   
- `bTransferOwnership`  
+ *bTransferOwnership*  
  그림 개체 아이콘 개체의 소유권은 있는지 여부를 나타냅니다.  
   
 ### <a name="return-value"></a>반환 값  
  개체가 성공적으로 만들어지면; 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `bTransferOwnership` 은 **TRUE**,이 호출 반환 후 호출자에 게 어떤 방식으로든에서 하지 아이콘 개체 사용 해야 합니다. 경우 `bTransferOwnership` 은 **FALSE**, 호출자가 아이콘 개체가 그림 개체의 수명 동안 유효한 상태로 있는지 확인 해야 합니다.  
+ 경우 *bTransferOwnership* 은 **TRUE**,이 호출 반환 후 호출자에 게 어떤 방식으로든에서 하지 아이콘 개체 사용 해야 합니다. 경우 *bTransferOwnership* 은 **FALSE**, 호출자가 아이콘 개체가 그림 개체의 수명 동안 유효한 상태로 있는지 확인 해야 합니다.  
   
 ##  <a name="createfrommetafile"></a>  CPictureHolder::CreateFromMetafile  
  메타 파일을 사용 하 여 그림 개체에서 초기화 하는 `CPictureHolder`합니다.  
@@ -198,7 +198,7 @@ BOOL CreateFromMetafile(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hmf`  
+ *hmf*  
  만드는 데 사용 하 여 메타 파일에 대 한 핸들은 `CPictureHolder` 개체입니다.  
   
  *xExt*  
@@ -207,14 +207,14 @@ BOOL CreateFromMetafile(
  *yExt*  
  그림의 Y 범위입니다.  
   
- `bTransferOwnership`  
+ *bTransferOwnership*  
  그림 개체 메타 파일 개체의 소유권은 있는지 여부를 나타냅니다.  
   
 ### <a name="return-value"></a>반환 값  
  개체가 성공적으로 만들어지면; 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `bTransferOwnership` 은 **TRUE**,이 호출 반환 후 호출자에 게 어떤 방식으로든에서 하지 메타 파일 개체 사용 해야 합니다. 경우 `bTransferOwnership` 은 **FALSE**, 호출자가 메타 파일 개체가 그림 개체의 수명 동안 유효한 상태로 있는지 확인 해야 합니다.  
+ 경우 *bTransferOwnership* 은 **TRUE**,이 호출 반환 후 호출자에 게 어떤 방식으로든에서 하지 메타 파일 개체 사용 해야 합니다. 경우 *bTransferOwnership* 은 **FALSE**, 호출자가 메타 파일 개체가 그림 개체의 수명 동안 유효한 상태로 있는지 확인 해야 합니다.  
   
 ##  <a name="getdisplaystring"></a>  CPictureHolder::GetDisplayString  
  컨테이너의 속성 브라우저에 표시 되는 문자열을 검색 합니다.  
@@ -224,7 +224,7 @@ BOOL GetDisplayString(CString& strValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `strValue`  
+ *StrValue*  
  에 대 한 참조는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 문자열 표시를 보유 하는 것입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -269,7 +269,7 @@ LPPICTURE m_pPict;
 ```  
   
 ##  <a name="render"></a>  Cpictureholder:: Render  
- 참조 하는 사각형에 그림을 렌더링 `rcRender`합니다.  
+ 참조 하는 사각형에 그림을 렌더링 *rcRender*합니다.  
   
 ```  
 void Render(
@@ -279,14 +279,14 @@ void Render(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  그림을 렌더링할 인 디스플레이 컨텍스트에 대 한 포인터입니다.  
   
- `rcRender`  
+ *rcRender*  
  그림을 렌더링할 인 사각형입니다.  
   
  *rcWBounds*  
- 그림을 렌더링 하는 개체의 경계 사각형을 나타내는 사각형입니다. 이 사각형은 컨트롤의 경우는 `rcBounds` 의 재정의에 전달 된 매개 변수 [COleControl::OnDraw](../../mfc/reference/colecontrol-class.md#ondraw)합니다.  
+ 그림을 렌더링 하는 개체의 경계 사각형을 나타내는 사각형입니다. 이 사각형은 컨트롤의 경우는 *rcBounds* 의 재정의에 전달 된 매개 변수 [COleControl::OnDraw](../../mfc/reference/colecontrol-class.md#ondraw)합니다.  
   
 ##  <a name="setpicturedispatch"></a>  CPictureHolder::SetPictureDispatch  
  연결 된 `CPictureHolder` 개체는 `IPictureDisp` 인터페이스입니다.  
@@ -296,7 +296,7 @@ void SetPictureDispatch(LPPICTUREDISP pDisp);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDisp`  
+ *pDisp*  
  새 포인터 `IPictureDisp` 인터페이스입니다.  
   
 ## <a name="see-also"></a>참고 항목  

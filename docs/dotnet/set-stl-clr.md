@@ -105,19 +105,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 99ea41a77a8ed01cb78df3513ccb79b6b2a8b3f1
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 21c2ebc9ba59e6581a9f6d286f136c907b7c73aa
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305893"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079879"
 ---
 # <a name="set-stlclr"></a>set(STL/CLR)
 이 템플릿 클래스는 다양 한 길이의 요소 시퀀스를 양방향 액세스할 수 있는 제어 하는 개체를 설명 합니다. 컨테이너를 사용 하 여 `set` 하나의 요소 저장 하 고 각 노드의 정렬 된 나무를 균형 있게 (거의)으로 요소의 시퀀스를 관리할 수 있습니다.  
   
  아래 설명에 `GValue` 동일 `GKey`는 다시 됩니다 동일 `Key` 후자 형식인 ref 하지 않는 한 경우에서 이기 `Key^`합니다.  
   
-### <a name="syntax"></a>구문  
+## <a name="syntax"></a>구문  
   
 ```  
 template<typename Key>  
@@ -133,10 +133,15 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  Key  
  형식 제어 된 시퀀스의 요소의 핵심 구성 요소입니다.  
   
+## <a name="requirements"></a>요구 사항  
+ **헤더:** \<cliext/set >  
+  
+ **Namespace:** cliext  
+
 ## <a name="declarations"></a>선언  
   
 |형식 정의|설명|  
@@ -202,7 +207,7 @@ template<typename Key>
 |<xref:System.Collections.Generic.ICollection%601>|형식화 된 요소의 그룹을 유지 합니다.|  
 |ITree\<키, 값 >|제네릭 컨테이너를 유지 합니다.|  
   
-### <a name="remarks"></a>설명  
+## <a name="remarks"></a>설명  
  개체 할당 및 개별 노드로 제어 하는 시퀀스에 대 한 저장소를 해제 합니다. 다른 한 노드의 콘텐츠를 복사 하 여 되지 노드 간의 링크를 변경 하 여 순서가 지정 된 보관 하는 나무를 균형 있게 (거의)에 요소를 삽입 합니다. 즉, 삽입 하 고 나머지 요소를 방해 하지 않고 자유롭게 요소를 제거할 수 있습니다.  
   
  형식의 개체를 저장된 하는 대리자를 호출 하 여 제어 하는 시퀀스를 정렬 하는 개체 [set:: key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md)합니다. 집합을 생성할 때 저장된 대리자 개체를 지정할 수 있습니다. 기본값은 비교 없는 대리자 개체를 지정 하면 `operator<(key_type, key_type)`합니다. 멤버 함수를 호출 하 여이 저장 된 개체를 액세스할 [set:: key_comp (STL/CLR)](../dotnet/set-key-comp-stl-clr.md)`()`합니다.  
@@ -228,11 +233,6 @@ template<typename Key>
  집합 반복기에 대 한 핸들에 연결 된 컨테이너에 대 한 핸들을 저장 하는 해당 관련된 집합 노드를 저장 합니다. 반복기의 관련된 컨테이너 개체와만 사용할 수 있습니다. 집합 반복기 관련된 집합 노드 집합과 일부 관련 된 경우에 유효한 상태를 유지 합니다. 유효한 반복기 dereferencable 연결은 액세스 또는 같지 않은 것으로 지정-요소 값을 변경 하려면 사용할 수 또한 `end()`합니다.  
   
  지우거 나 요소를 제거 합니다. 저장된 된 값에 대 한 소멸자를 호출 합니다. 컨테이너를 제거 합니다. 모든 요소를 지웁니다. 따라서 요소 형식이 ref 클래스는 컨테이너 보다 수명이 깁니다 컨테이너 요소가 있는지 확인 합니다. 단, 핸들의 컨테이너 하다 `not` 해당 요소를 제거 합니다.  
-  
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<cliext/set >  
-  
- **Namespace:** cliext  
  
 ## <a name="members"></a>멤버
 
@@ -1113,7 +1113,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
  오른쪽  
  삽입 하는 열거형입니다.  
   
- val  
+ Val  
  삽입할 키 값입니다.  
   
  형식에 대한 설명  

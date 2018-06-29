@@ -1,7 +1,7 @@
 ---
 title: C + + 마샬링 개요 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/28/2018
 ms.technology:
 - cpp-cli
 ms.topic: reference
@@ -20,16 +20,30 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1f950c8efbdd75e16096d158075e92594fb6b2d1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76f6721ce4561e9c2b4323fef9c2eed3231f73cb
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33137136"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079162"
 ---
 # <a name="overview-of-marshaling-in-c"></a>C++ 마샬링 개요
-혼합된 모드의 경우에 따라 마샬링해야 네이티브 및 관리 되는 형식 간의 데이터. [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] 마샬링 라이브러리를 도입 마샬링해야 하 고 간단한 방법으로 데이터를 변환 합니다.  
-  
+혼합된 모드의 경우에 따라 마샬링해야 네이티브 및 관리 되는 형식 간의 데이터. Visual Studio 2008 도입는 *마샬링 라이브러리* 있도록 마샬링해야 하 고 간단한 방법으로 데이터를 변환 합니다.  마샬링 라이브러리 함수의 집합 구성 및 `marshal_context` 공용 형식에 대 한 마샬링을 수행 하는 클래스입니다. 이러한 헤더에 정의 되어 있는 라이브러리는 **포함/msclr** Visual Studio 버전에 대 한 디렉터리:
+
+|헤더|설명|  
+|---------------|-----------------|
+|marshal.h|`marshal_context` 클래스 및 컨텍스트-자유 마샬링 함수|
+|marshal_atl.h| ATL 형식 마샬링에 대 한 함수|
+|marshal_cppstd.h|표준 c + + 형식 마샬링에 대 한 함수|
+|marshal_windows.h|Windows 형식 마샬링에 대 한 함수|
+
+
+에 대 한 기본 경로 **msclr** 폴더는 다음과 같이 있는 버전에 따라 및 빌드 번호:
+
+```cmd
+C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools\\MSVC\\14.15.26528\\include\\msclr
+```
+
  여부에 관계 없이 마샬링 라이브러리를 사용할 수는 [marshal_context 클래스](../dotnet/marshal-context-class.md)합니다. 변환 중 일부는 컨텍스트가 필요합니다. 다른 변환을 사용 하 여 구현할 수 있습니다는 [marshal_as](../dotnet/marshal-as.md) 함수입니다. 다음 표에 지원 되는 현재 변환이는 컨텍스트가 필요 여부와 어떤 마샬링 파일 포함 해야 합니다.  
   
 |형식에서|입력|마샬링 메서드|포함 파일|  
@@ -62,7 +76,7 @@ ms.locfileid: "33137136"
 > [!NOTE]
 >  삽입 한 경우 `NULL`의문자열에 문자열을 마샬링 한 결과를 보장 되지 않습니다. 포함 된 `NULL`잘릴 문자열 하면 수 있습니다 또는 유지 될 수 있습니다.  
   
- 마샬링 라이브러리 헤더 msclr 하위 디렉터리에서 include 디렉터리에 있습니다. 이 예제에는 포함 헤더 선언에 msclr 디렉터리를 포함 하는 방법을 보여 줍니다.  
+이 예제에는 포함 헤더 선언에 msclr 디렉터리를 포함 하는 방법을 보여 줍니다.  
   
  `#include "msclr\marshal_cppstd.h"`  
   

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36cc13fa77becf5bdeb3960f6ac9db18d5d63dbb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb5aeef3970488c293d4199261d765f2531c201a
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377278"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079683"
 ---
 # <a name="cpalette-class"></a>CPalette 클래스
 Windows 색상표를 캡슐화합니다.  
@@ -108,14 +108,14 @@ void AnimatePalette(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nStartIndex`  
+ *nStartIndex*  
  애니메이션 효과를 낼 색상표의 첫 번째 항목을 지정 합니다.  
   
- `nNumEntries`  
+ *nNumEntries*  
  애니메이션 효과를 낼 색상표의 항목 수를 지정 합니다.  
   
- `lpPaletteColors`  
- 배열의 첫 번째 멤버를 [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) 표 항목으로 식별 바꾸려면 구조 `nStartIndex` 및 `nNumEntries`합니다.  
+ *lpPaletteColors*  
+ 배열의 첫 번째 멤버를 [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) 표 항목으로 식별 바꾸려면 구조 *nStartIndex* 및 *nNumEntries*합니다.  
   
 ### <a name="remarks"></a>설명  
  응용 프로그램 호출 하는 경우 `AnimatePalette`, 없기의 클라이언트 영역을 업데이트 하려면 Windows 시스템 팔레트에 새 항목을 즉시 매핑하기 때문입니다.  
@@ -140,7 +140,7 @@ BOOL CreateHalftonePalette(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  장치 컨텍스트를 식별합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -159,7 +159,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpLogPalette`  
+ *lpLogPalette*  
  가리키는 [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) 논리 팔레트에서 색에 대 한 정보가 포함 된 구조체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -176,7 +176,7 @@ static CPalette* PASCAL FromHandle(HPALETTE hPalette);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hPalette`  
+ *hPalette*  
  Windows GDI 색상표에 대 한 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -203,7 +203,7 @@ UINT GetNearestPaletteIndex(COLORREF crColor) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `crColor`  
+ *crColor*  
  일치 여부를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -220,14 +220,14 @@ UINT GetPaletteEntries(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nStartIndex`  
+ *nStartIndex*  
  논리 팔레트를 검색할 첫 번째 항목을 지정 합니다.  
   
- `nNumEntries`  
+ *nNumEntries*  
  논리 팔레트를 검색할 항목의 수를 지정 합니다.  
   
- `lpPaletteColors`  
- 배열을 가리키는 [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) 표 항목을 수신 하도록 데이터 구조입니다. 배열에 지정 된 대로 이상의 데이터 구조에 포함 되어야 `nNumEntries`합니다.  
+ *lpPaletteColors*  
+ 배열을 가리키는 [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) 표 항목을 수신 하도록 데이터 구조입니다. 배열에 지정 된 대로 이상의 데이터 구조에 포함 되어야 *nNumEntries*합니다.  
   
 ### <a name="return-value"></a>반환 값  
  논리 팔레트; 검색 된 항목의 수 함수가 실패 하는 경우 0입니다.  
@@ -248,14 +248,14 @@ operator HPALETTE() const;
  그래픽 개체를 사용 하는 방법에 대 한 자세한 내용은 문서 참조 [그래픽 개체](http://msdn.microsoft.com/library/windows/desktop/dd144962) Windows sdk에서입니다.  
   
 ##  <a name="resizepalette"></a>  CPalette::ResizePalette  
- 에 연결 된 논리 팔레트의 크기를 변경는 `CPalette` 개체에서 지정한 항목의 수를 `nNumEntries`합니다.  
+ 에 연결 된 논리 팔레트의 크기를 변경는 `CPalette` 개체에서 지정한 항목의 수를 *nNumEntries*합니다.  
   
 ```  
 BOOL ResizePalette(UINT nNumEntries);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nNumEntries`  
+ *nNumEntries*  
  크기가 조정 된 후에 색상표의 항목 수를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -277,14 +277,14 @@ UINT SetPaletteEntries(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nStartIndex`  
+ *nStartIndex*  
  설정할 논리 팔레트에 첫 번째 항목을 지정 합니다.  
   
- `nNumEntries`  
+ *nNumEntries*  
  논리 팔레트를 설정할 항목의 수를 지정 합니다.  
   
- `lpPaletteColors`  
- 배열을 가리키는 [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) 표 항목을 수신 하도록 데이터 구조입니다. 배열에 지정 된 대로 이상의 데이터 구조에 포함 되어야 `nNumEntries`합니다.  
+ *lpPaletteColors*  
+ 배열을 가리키는 [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) 표 항목을 수신 하도록 데이터 구조입니다. 배열에 지정 된 대로 이상의 데이터 구조에 포함 되어야 *nNumEntries*합니다.  
   
 ### <a name="return-value"></a>반환 값  
  항목 수가 설정에서 논리 팔레트; 함수가 실패 하는 경우 0입니다.  

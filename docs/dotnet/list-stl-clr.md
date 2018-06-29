@@ -119,12 +119,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4e6ae13efabd34c6c685b07691789634ca0aed9c
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: db7398512e6b981f4da3fc0b88b6fbc7890c6016
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305919"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079788"
 ---
 # <a name="list-stlclr"></a>list(STL/CLR)
 이 템플릿 클래스는 다양 한 길이의 요소 시퀀스를 양방향 액세스할 수 있는 제어 하는 개체를 설명 합니다. 컨테이너를 사용 하 여 `list` 하나의 요소 저장 하 고 각 노드 양방향 링크 된 목록으로 요소의 시퀀스를 관리할 수 있습니다.  
@@ -146,7 +146,7 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  값  
  제어되는 시퀀스의 요소 형식입니다.  
   
@@ -155,7 +155,7 @@ template<typename Value>
   
  **Namespace:** cliext 
 
-## <a name="members"></a>멤버  
+## <a name="declarations"></a>선언  
   
 |형식 정의|설명|  
 |---------------------|-----------------|  
@@ -240,6 +240,8 @@ template<typename Value>
   
  지우거 나 요소를 제거 합니다. 저장된 된 값에 대 한 소멸자를 호출 합니다. 컨테이너를 제거 합니다. 모든 요소를 지웁니다. 따라서 요소 형식이 ref 클래스는 컨테이너 보다 수명이 깁니다 컨테이너 요소가 있는지 확인 합니다. 단, 핸들의 컨테이너 하다 `not` 해당 요소를 제거 합니다.  
   
+## <a name="members"></a>멤버
+
 ## <a name="assign"></a> list:: assign (STL/CLR)
 모든 요소를 바꿉니다.  
   
@@ -265,7 +267,7 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
  오른쪽  
  삽입 하는 열거형입니다.  
   
- val  
+ Val  
  삽입할 요소의 값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1249,7 +1251,7 @@ void insert(iterator where,
  오른쪽  
  삽입 하는 열거형입니다.  
   
- val  
+ Val  
  삽입할 요소의 값입니다.  
   
  형식에 대한 설명  
@@ -1964,7 +1966,7 @@ void remove(value_type val);
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- val  
+ Val  
  제거할 요소의 값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -2142,7 +2144,7 @@ void resize(size_type new_size, value_type val);
  new_size  
  제어 된 시퀀스의 새 크기입니다.  
   
- val  
+ Val  
  안쪽 여백 요소의 값입니다.  
   
 ### <a name="remarks"></a>설명  

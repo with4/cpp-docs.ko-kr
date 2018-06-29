@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0e5b0fac11c2472bbaf0d5f4a3ede7d4f5658f9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7c26df378c500b8c1384f7a357b93693b215ca10
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377160"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079618"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl 클래스
 Windows의 공용 슬라이더 컨트롤의 기능을 제공합니다.  
@@ -155,7 +155,7 @@ class CSliderCtrl : public CWnd
   
  슬라이더에서 만들 때 지정 하는 이동 합니다. 예를 들어 슬라이더 5의 범위에 있어야을 지정 하면 슬라이더 수만 자리를 차지 6: 범위에서 각 증가값에 대해 하나의 위치 및 슬라이더 컨트롤의 왼쪽에 위치 합니다. 일반적으로 이러한 각 위치를 눈금으로 식별 됩니다.  
   
- 생성자를 사용 하 여 슬라이더를 만들면 및 **만들기** 의 멤버 함수 `CSliderCtrl`합니다. 슬라이더 컨트롤을 만든 후에 멤버 함수에 사용할 수 있습니다 `CSliderCtrl` 다양 한 속성을 변경할 수 있습니다. 슬라이더에 대한 최소 및 최대 위치 설정, 눈금 표시 그리기, 선택 범위 설정 및 슬라이더 위치 조정을 변경할 수 있습니다.  
+ 생성자를 사용 하 여 슬라이더를 만들면 및 `Create` 의 멤버 함수 `CSliderCtrl`합니다. 슬라이더 컨트롤을 만든 후에 멤버 함수에 사용할 수 있습니다 `CSliderCtrl` 다양 한 속성을 변경할 수 있습니다. 슬라이더에 대한 최소 및 최대 위치 설정, 눈금 표시 그리기, 선택 범위 설정 및 슬라이더 위치 조정을 변경할 수 있습니다.  
   
  사용 하 여 대 한 자세한 내용은 `CSliderCtrl`, 참조 [컨트롤](../../mfc/controls-mfc.md) 및 [CSliderCtrl 사용 하 여](../../mfc/using-csliderctrl.md)합니다.  
   
@@ -179,7 +179,7 @@ void ClearSel(BOOL bRedraw = FALSE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bRedraw`  
+ *bRedraw*  
  플래그를 다시 그립니다. 이 매개 변수가 **TRUE**, 선택이 취소 되는 슬라이더 다시 않습니다; 그렇지 않으면 슬라이더 다시 그려지지 않습니다.  
   
 ##  <a name="cleartics"></a>  CSliderCtrl::ClearTics  
@@ -190,7 +190,7 @@ void ClearTics(BOOL bRedraw = FALSE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bRedraw`  
+ *bRedraw*  
  플래그를 다시 그립니다. 이 매개 변수가 **TRUE**, 슬라이더의 눈금 표시의 선택을 취소 한 후 다시 그려집니다; 그렇지 않으면 슬라이더 다시 그려지지 않습니다.  
   
 ##  <a name="create"></a>  CSliderCtrl::Create  
@@ -205,27 +205,27 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwStyle`  
+ *dwStyle*  
  슬라이더 컨트롤의 스타일을 지정합니다. 어떠한 조합의 적용 [슬라이더 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760147)컨트롤에는 Windows SDK에 설명 된 대로 합니다.  
   
- `rect`  
+ *rect*  
  슬라이더 컨트롤의 크기와 위치를 지정합니다. 있습니다는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 구조입니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  슬라이더 컨트롤의 부모 창에 일반적으로 지정 된 `CDialog`합니다. 않아야 **NULL**합니다.  
   
- `nID`  
+ *nID*  
  슬라이더 컨트롤의 ID를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  초기화에 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 생성 한 `CSliderCtrl` 두 단계를 수행에서 합니다. 먼저 생성자를 호출 하 고 호출 **만들기**, 슬라이더 컨트롤을 만들고에 연결는 `CSliderCtrl` 개체입니다.  
+ 생성 한 `CSliderCtrl` 두 단계를 수행에서 합니다. 먼저 생성자를 호출 하 고 호출 `Create`, 슬라이더 컨트롤을 만들고에 연결는 `CSliderCtrl` 개체입니다.  
   
  설정할 값에 따라 `dwStyle`, 슬라이더 컨트롤을 세로 또는 가로 방향을 가질 수 있습니다. 어느 쪽에 눈금을 가질 수 있습니다 면, 또는 모두 둘 다 합니다. 또한 연속 값의 범위를 지정 하려면 사용할 수 있습니다.  
   
- 확장된 창 스타일을 슬라이더 컨트롤에 적용 하려면 호출 [CreateEx](#createex) 대신 **만들기**합니다.  
+ 확장된 창 스타일을 슬라이더 컨트롤에 적용 하려면 호출 [CreateEx](#createex) 대신 `Create`합니다.  
   
 ##  <a name="createex"></a>  CSliderCtrl::CreateEx  
  에 연결 하 고 컨트롤 (자식 창)을 만듭니다.는 `CSliderCtrl` 개체입니다.  
@@ -240,19 +240,19 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwExStyle`  
- 만들 컨트롤의 확장된 스타일을 지정 합니다. 목록이 확장된 창 스타일에 대 한 참조는 `dwExStyle` 에 대 한 매개 변수 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows sdk에서입니다.  
+ *dwExStyle*  
+ 만들 컨트롤의 확장된 스타일을 지정 합니다. 목록이 확장된 창 스타일에 대 한 참조는 *dwExStyle* 에 대 한 매개 변수 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows sdk에서입니다.  
   
- `dwStyle`  
+ *dwStyle*  
  슬라이더 컨트롤의 스타일을 지정합니다. 어떠한 조합의 적용 [슬라이더 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760147)컨트롤에는 Windows SDK에 설명 된 대로 합니다.  
   
- `rect`  
- 에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 크기와의 클라이언트 좌표에 만들어질 창 위치를 설명 하는 구조 `pParentWnd`합니다.  
+ *rect*  
+ 에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 크기와의 클라이언트 좌표에 만들어질 창 위치를 설명 하는 구조 *pParentWnd*합니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  컨트롤의 부모 창에 대 한 포인터입니다.  
   
- `nID`  
+ *nID*  
  컨트롤의 자식 창 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -276,7 +276,7 @@ CWnd* GetBuddy(BOOL fLocation = TRUE) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `fLocation`  
+ *fLocation*  
  값 중 검색할 두 개의 버디 창 핸들을 나타내는 부울 값입니다. 다음 값 중 하나입니다.  
   
 - **TRUE** 슬라이더의 왼쪽에 친구에 대 한 핸들을 검색 합니다. 슬라이더 컨트롤 사용 하는 경우는 `TBS_VERT` 스타일 메시지 슬라이더 위의 버디를 검색 합니다.  
@@ -297,7 +297,7 @@ void GetChannelRect(LPRECT lprc) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lprc`  
+ *lprc*  
  에 대 한 포인터는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 함수가 반환할 때 채널의 위치와 크기를 포함 하는 개체의 경계 사각형입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -359,14 +359,14 @@ void GetRange(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nMin`  
+ *nMin*  
  최소 위치를 수신 하는 정수에 대 한 참조입니다.  
   
- `nMax`  
+ *최대*  
  최대 위치를 수신 하는 정수에 대 한 참조입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 함수에서 참조 하는 정수에 값을 복사 `nMin` 및 `nMax`합니다.  
+ 이 함수에서 참조 하는 정수에 값을 복사 *nMin* 및 *최대*합니다.  
   
 ##  <a name="getrangemax"></a>  CSliderCtrl::GetRangeMax  
  슬라이더 컨트롤에서 슬라이더에 대 한 최대 위치를 검색합니다.  
@@ -398,10 +398,10 @@ void GetSelection(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nMin`  
+ *nMin*  
  현재 선택의 시작 위치를 수신 하는 정수에 대 한 참조입니다.  
   
- `nMax`  
+ *최대*  
  현재 선택 항목의 끝 위치를 수신 하는 정수에 대 한 참조입니다.  
   
 ##  <a name="getthumblength"></a>  CSliderCtrl::GetThumbLength  
@@ -425,7 +425,7 @@ void GetThumbRect(LPRECT lprc) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lprc`  
+ *lprc*  
  에 대 한 포인터는 `CRect` 함수가 반환할 때 슬라이더에 대 한 경계 사각형을 포함 하는 개체입니다.  
   
 ##  <a name="gettic"></a>  CSliderCtrl::GetTic  
@@ -436,11 +436,11 @@ int GetTic(int nTic) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nTic`  
+ *nTic*  
  눈금 표시를 식별 하는 0부터 시작 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 위치 지정된 눈금 표시 또는-1 이면 `nTic` 유효한 인덱스를 지정 하지 않습니다.  
+ 위치 지정된 눈금 표시 또는-1 이면 *nTic* 유효한 인덱스를 지정 하지 않습니다.  
   
 ##  <a name="getticarray"></a>  CSliderCtrl::GetTicArray  
  슬라이더 컨트롤에 대 한 눈금 표시의 위치를 포함 하는 배열 주소를 검색 합니다.  
@@ -460,11 +460,11 @@ int GetTicPos(int nTic) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nTic`  
+ *nTic*  
  눈금 표시를 식별 하는 0부터 시작 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 실제 위치를 클라이언트 좌표로 지정된 눈금 표시 또는-1 이면 `nTic` 유효한 인덱스를 지정 하지 않습니다.  
+ 실제 위치를 클라이언트 좌표로 지정된 눈금 표시 또는-1 이면 *nTic* 유효한 인덱스를 지정 하지 않습니다.  
   
 ##  <a name="gettooltips"></a>  CSliderCtrl::GetToolTips  
  있는 경우 슬라이더 컨트롤에 할당 된 도구 설명 컨트롤에 대 한 핸들을 검색 합니다.  
@@ -491,10 +491,10 @@ CWnd* SetBuddy(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWndBuddy`  
+ *pWndBuddy*  
  에 대 한 포인터는 `CWnd` 슬라이더 컨트롤의 버디도 설정 될 개체입니다.  
   
- `fLocation`  
+ *fLocation*  
  버디 창의 표시할 위치를 지정 하는 값입니다. 이 값은 다음 중 하나일 수 있습니다.  
   
 - **True 이면** trackbar 컨트롤을 사용 하는 경우 버디 트랙 표시줄의 왼쪽에 표시 됩니다는 `TBS_HORZ` 스타일입니다. Trackbar에서 사용 하는 경우는 `TBS_VERT` 스타일을 버디 trackbar 컨트롤 위에 나타납니다.  
@@ -517,7 +517,7 @@ int SetLineSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nSize`  
+ *nSize*  
  슬라이더 컨트롤의 새 줄 크기입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -534,7 +534,7 @@ int SetPageSize(int nSize);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nSize`  
+ *nSize*  
  슬라이더 컨트롤의 새 페이지 크기입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -551,7 +551,7 @@ void SetPos(int nPos);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nPos`  
+ *nPos*  
  새 슬라이더 위치를 지정합니다.  
   
 ##  <a name="setrange"></a>  CSliderCtrl::SetRange  
@@ -565,13 +565,13 @@ void SetRange(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nMin`  
+ *nMin*  
  슬라이더에 대 한 최소 위치입니다.  
   
- `nMax`  
+ *최대*  
  슬라이더에 대 한 최대 위치입니다.  
   
- `bRedraw`  
+ *bRedraw*  
  다시 그리기 플래그입니다. 이 매개 변수가 **TRUE**, 범위 설정 되어 슬라이더 다시 않습니다; 그리고 그렇지 않으면 슬라이더 다시 그려지지 않습니다.  
   
 ##  <a name="setrangemax"></a>  CSliderCtrl::SetRangeMax  
@@ -584,10 +584,10 @@ void SetRangeMax(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nMax`  
+ *최대*  
  슬라이더에 대 한 최대 위치입니다.  
   
- `bRedraw`  
+ *bRedraw*  
  다시 그리기 플래그입니다. 이 매개 변수가 **TRUE**, 범위 설정 되어 슬라이더 다시 않습니다; 그리고 그렇지 않으면 슬라이더 다시 그려지지 않습니다.  
   
 ##  <a name="setrangemin"></a>  CSliderCtrl::SetRangeMin  
@@ -600,10 +600,10 @@ void SetRangeMin(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nMin`  
+ *nMin*  
  슬라이더에 대 한 최소 위치입니다.  
   
- `bRedraw`  
+ *bRedraw*  
  다시 그리기 플래그입니다. 이 매개 변수가 **TRUE**, 범위 설정 되어 슬라이더 다시 않습니다; 그리고 그렇지 않으면 슬라이더 다시 그려지지 않습니다.  
   
 ##  <a name="setselection"></a>  CSliderCtrl::SetSelection  
@@ -616,10 +616,10 @@ void SetSelection(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nMin`  
+ *nMin*  
  슬라이더에 대 한 시작 위치입니다.  
   
- `nMax`  
+ *최대*  
  슬라이더에 대 한 끝 위치입니다.  
   
 ##  <a name="setthumblength"></a>  CSliderCtrl::SetThumbLength  
@@ -633,19 +633,19 @@ void SetThumbLength(int nLength);
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `nLength`|픽셀 단위로 슬라이더의 길이입니다.|  
+|[in] *nLength*|픽셀 단위로 슬라이더의 길이입니다.|  
   
 ### <a name="remarks"></a>설명  
  Trackbar 컨트롤을 설정할 수는이 메서드에 필요 [TBS_FIXEDLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760147) 스타일입니다.  
   
  이 메서드는 전송 된 [TBM_SETTHUMBLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760234) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 변수를 정의 `m_sliderCtrl`, 즉 현재 trackbar 컨트롤에 액세스 하는 데 사용 합니다. 이 예제에서는 변수를 정의 `thumbLength`, 즉 trackbar 컨트롤의 스크롤 상자 구성 요소가 기본 길이 저장 하는 데 사용 합니다. 이러한 변수는 다음 예제에서 사용 됩니다.  
   
  [!code-cpp[NVC_MFC_CSliderCtrl_s1#1](../../mfc/reference/codesnippet/cpp/csliderctrl-class_1.h)]  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 두 번의 기본 길이에 trackbar 컨트롤의 스크롤 상자 구성 요소를 설정 합니다.  
   
  [!code-cpp[NVC_MFC_CSliderCtrl_s1#2](../../mfc/reference/codesnippet/cpp/csliderctrl-class_2.cpp)]  
@@ -658,7 +658,7 @@ BOOL SetTic(int nTic);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nTic`  
+ *nTic*  
  눈금 표시의 위치입니다. 이 매개 변수는 양수 값을 지정 해야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -688,11 +688,11 @@ int SetTipSide(int nLocation);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nLocation`  
+ *n 위치*  
  도구 설명 컨트롤을 표시 하는 위치를 나타내는 값입니다. 가능한 값 목록은 Win32 메시지를 참조 하십시오. [TBM_SETTIPSIDE](http://msdn.microsoft.com/library/windows/desktop/bb760240)Windows SDK에 설명 된 대로 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 도구 설명 컨트롤의 이전 위치를 나타내는 값입니다. 반환 값에 대 한 가능한 값 중 하나를 equals `nLocation`합니다.  
+ 도구 설명 컨트롤의 이전 위치를 나타내는 값입니다. 반환 값에 대 한 가능한 값 중 하나를 equals *n 위치*합니다.  
   
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 Win32 메시지의 동작을 구현 **TBM_SETTIPSIDE**Windows SDK에 설명 된 대로 합니다. 슬라이더를 사용 하는 제어는 **TBS_TOOLTIPS** 표시 도구 설명 스타일입니다. 슬라이더 컨트롤 스타일에 대 한 참조 [Trackbar 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb760147) Windows sdk에서입니다.  
@@ -705,7 +705,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWndTip`  
+ *pWndTip*  
  에 대 한 포인터는 [CToolTipCtrl](../../mfc/reference/ctooltipctrl-class.md) 슬라이더 컨트롤과 함께 사용할 도구 설명을 포함 하는 개체입니다.  
   
 ### <a name="remarks"></a>설명  

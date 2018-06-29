@@ -110,12 +110,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 353a45cad513e9c862b6ae6c15ab5383d3d65d48
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06793ae544b76ac959a51224aae754ad58e1af78
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378958"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079853"
 ---
 # <a name="cricheditview-class"></a>CRichEditView 클래스
 와 [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md) 및 [CRichEditCntrItem](../../mfc/reference/cricheditcntritem-class.md), MFC의 문서 뷰 아키텍처 컨텍스트 내에서 rich edit 컨트롤의 기능을 제공 합니다.  
@@ -259,19 +259,19 @@ void DoPaste(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dataobj`  
+ *dataobj*  
  [COleDataObject](../../mfc/reference/coledataobject-class.md) 붙여 데이터가 들어 있는입니다.  
   
- `cf`  
+ *cf*  
  원하는 클립보드 형식입니다.  
   
- `hMetaPict`  
+ *hMetaPict*  
  메타 파일을 붙여 넣을 항목을 나타냅니다.  
   
 ### <a name="remarks"></a>설명  
  프레임 워크의 기본 구현은의 일부분으로이 함수를 호출 [QueryAcceptData](#queryacceptdata)합니다.  
   
- 이 함수에는 붙여넣기에 대 한 처리기의 결과에 따라 붙여넣기의 유형을 결정 합니다. 경우 `cf` 가 0 이므로 새 항목에는 현재 아이콘 표현을 사용 합니다. 경우 `cf` 0이 아닌 및 `hMetaPict` 않습니다 **NULL**를 사용 하 여 새 항목 `hMetaPict` 표현에 대 한 합니다.  
+ 이 함수에는 붙여넣기에 대 한 처리기의 결과에 따라 붙여넣기의 유형을 결정 합니다. 경우 *cf* 가 0 이므로 새 항목에는 현재 아이콘 표현을 사용 합니다. 경우 *cf* 0이 아닌 및 *hMetaPict* 않습니다 **NULL**를 사용 하 여 새 항목 *hMetaPict* 표현에 대 한 합니다.  
   
 ##  <a name="findtext"></a>  CRichEditView::FindText  
  지정된 된 텍스트 찾기 및 현재 선택 되도록 설정 하려면이 함수를 호출 합니다.  
@@ -285,25 +285,25 @@ BOOL FindText(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszFind`  
+ *lpszFind*  
  검색할 문자열을 포함 합니다.  
   
- `bCase`  
+ *bCase*  
  검색은 대/소문자 구분 하는 경우를 나타냅니다.  
   
- `bWord`  
+ *bword가*  
  검색 단어 단위로 단어의 일부가 아니라 일치 해야 하는 경우를 나타냅니다.  
   
- `bNext`  
+ *다음*  
  검색 방향을 나타냅니다. 경우 **TRUE**, 검색 방향이 버퍼의 끝이 있습니다. 경우 **FALSE**, 버퍼의 시작 부분을 향해 검색 방향이 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
- 0이 아닌 경우에는 `lpszFind` 텍스트를 찾을 수 있습니다; 그렇지 않으면 0입니다.  
+ 0이 아닌 경우에는 *lpszFind* 텍스트를 찾을 수 있습니다; 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수는 찾기 작업 하는 동안 대기 커서를 표시합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#151](../../mfc/codesnippet/cpp/cricheditview-class_1.cpp)]  
   
 ##  <a name="findtextsimple"></a>  CRichEditView::FindTextSimple  
@@ -318,22 +318,22 @@ BOOL FindTextSimple(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszFind`  
+ *lpszFind*  
  검색할 문자열을 포함 합니다.  
   
- `bCase`  
+ *bCase*  
  검색은 대/소문자 구분 하는 경우를 나타냅니다.  
   
- `bWord`  
+ *bword가*  
  검색 단어 단위로 단어의 일부가 아니라 일치 해야 하는 경우를 나타냅니다.  
   
- `bNext`  
+ *다음*  
  검색 방향을 나타냅니다. 경우 **TRUE**, 검색 방향이 버퍼의 끝이 있습니다. 경우 **FALSE**, 버퍼의 시작 부분을 향해 검색 방향이 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
- 0이 아닌 경우에는 `lpszFind` 텍스트를 찾을 수 있습니다; 그렇지 않으면 0입니다.  
+ 0이 아닌 경우에는 *lpszFind* 텍스트를 찾을 수 있습니다; 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CRichEditView::FindText](#findtext)합니다.  
   
 ##  <a name="getcharformatselection"></a>  CRichEditView::GetCharFormatSelection  
@@ -349,7 +349,7 @@ CHARFORMAT2& GetCharFormatSelection();
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조는 [EM_GETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb788026) 메시지 및 [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) Windows SDK에는 구조입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#152](../../mfc/codesnippet/cpp/cricheditview-class_2.cpp)]  
   
 ##  <a name="getclipboarddata"></a>  CRichEditView::GetClipboardData  
@@ -364,10 +364,10 @@ virtual HRESULT GetClipboardData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpchrg`  
- 에 대 한 포인터는 [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) 문자 (및 OLE 항목)가 지정한 데이터 개체를 복사할 대상 범위를 지정 하는 구조 `lplpdataobj`합니다.  
+ *lpchrg*  
+ 에 대 한 포인터는 [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) 로 지정 된 데이터 개체에 복사할 문자 (및 OLE 항목)의 범위를 지정 하는 구조 *lplpdataobj*합니다.  
   
- `dwReco`  
+ *dwReco*  
  클립보드 작업 플래그입니다. 다음이 값 중 하나일 수 있습니다.  
   
 - **RECO_COPY** 클립보드에 복사 합니다.  
@@ -380,17 +380,17 @@ virtual HRESULT GetClipboardData(
   
 - **RECO_PASTE** 클립보드에서 붙여넣기 합니다.  
   
- `lpRichDataObj`  
+ *lpRichDataObj*  
  에 대 한 포인터는 [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) 컨트롤을 편집 하는 풍부한에서 클립보드 데이터를 포함 하는 개체 ( [IRichEditOle::GetClipboardData](http://msdn.microsoft.com/library/windows/desktop/bb774341)).  
   
- `lplpdataobj`  
- 포인터의 주소를 받는 포인터 변수에 `IDataObject` 에 지정 된 범위를 나타내는 개체는 `lpchrg` 매개 변수입니다. 값 `lplpdataobj` 오류가 반환 되는 경우 무시 됩니다.  
+ *lplpdataobj*  
+ 포인터의 주소를 받는 포인터 변수에 `IDataObject` 에 지정 된 범위를 나타내는 개체의 *lpchrg* 매개 변수입니다. 값 *lplpdataobj* 오류가 반환 되는 경우 무시 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  `HRESULT` 작업의 성공 여부를 보고 하는 값입니다. 대 한 자세한 내용은 `HRESULT`, 참조 [COM 오류 코드 구조](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows sdk에서입니다.  
   
 ### <a name="remarks"></a>설명  
- 반환 값은 성공을 나타내는 경우 **IRichEditOleCallback::GetClipboardData** 반환는 `IDataObject` 액세스 하 여 `lplpdataobj`, 그렇지 않으면 액세스 하 여 하나 반환 `lpRichDataObj`합니다. 사용자 고유의 클립보드 데이터를 제공 하려면이 함수를 재정의 합니다. 이 함수의 기본 구현은 반환 **E_NOTIMPL**합니다.  
+ 반환 값은 성공을 나타내는 경우 **IRichEditOleCallback::GetClipboardData** 반환는 `IDataObject` 액세스 하 여 *lplpdataobj*, 그렇지 않으면 액세스 하 여 하나 반환  *lpRichDataObj*합니다. 사용자 고유의 클립보드 데이터를 제공 하려면이 함수를 재정의 합니다. 이 함수의 기본 구현은 반환 **E_NOTIMPL**합니다.  
   
  고급 재정의할 수 있습니다.  
   
@@ -410,10 +410,10 @@ virtual HMENU GetContextMenu(
  *seltyp*  
  선택 영역 형식입니다. 선택 영역 유형 값은 주의 섹션에 설명 되어 있습니다.  
   
- `lpoleobj`  
- 에 대 한 포인터는 **OLEOBJECT** 선택 영역에는 OLE 항목을 하나 이상 포함 하는 경우 첫 번째 선택 된 OLE 개체를 지정 하는 구조입니다. 선택 영역에 항목이 없는 경우 `lpoleobj` 은 **NULL**합니다. **OLEOBJECT** 구조는 OLE 개체 v-테이블에 대 한 포인터를 보유 합니다.  
+ *lpoleobj*  
+ 에 대 한 포인터는 **OLEOBJECT** 선택 영역에는 OLE 항목을 하나 이상 포함 하는 경우 첫 번째 선택 된 OLE 개체를 지정 하는 구조입니다. 선택 영역에 항목이 없는 경우 *lpoleobj* 은 **NULL**합니다. **OLEOBJECT** 구조는 OLE 개체 v-테이블에 대 한 포인터를 보유 합니다.  
   
- `lpchrg`  
+ *lpchrg*  
  에 대 한 포인터는 [CHARRANGE](http://msdn.microsoft.com/library/windows/desktop/bb787885) 현재 선택 영역을 포함 하는 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -493,7 +493,7 @@ CSize GetPaperSize() const;
 ### <a name="return-value"></a>반환 값  
  인쇄에 사용 되는 용지 크기 단위로 `MM_TWIPS`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#153](../../mfc/codesnippet/cpp/cricheditview-class_3.cpp)]  
   
 ##  <a name="getparaformatselection"></a>  CRichEditView::GetParaFormatSelection  
@@ -519,7 +519,7 @@ CRect GetPrintRect() const;
 ### <a name="return-value"></a>반환 값  
  인쇄에 사용 되는 이미지 영역 경계 단위로 `MM_TWIPS`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#154](../../mfc/codesnippet/cpp/cricheditview-class_4.cpp)]  
   
 ##  <a name="getprintwidth"></a>  CRichEditView::GetPrintWidth  
@@ -542,7 +542,7 @@ CRichEditCtrl& GetRichEditCtrl() const;
 ### <a name="return-value"></a>반환 값  
  `CRichEditCtrl` 이 보기에 대 한 개체입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CRichEditView::FindText](#findtext)합니다.  
   
 ##  <a name="getselecteditem"></a>  CRichEditView::GetSelectedItem  
@@ -575,14 +575,14 @@ long GetTextLengthEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwFlags`  
+ *dwFlags*  
  텍스트 길이 결정 하는 데 사용할 방법을 지정 하는 값입니다. 이 구성원 하나일 수 있습니다 또는 플래그 소속에 나열 된 값 [GETTEXTLENGTHEX](http://msdn.microsoft.com/library/windows/desktop/bb787915) Windows SDK에 설명 합니다.  
   
- `uCodePage`  
+ *uCodePage*  
  번역 (1200 유니코드에 대 한 ANSI 코드 페이지에 대 한 CP_ACP)에 대 한 코드 페이지입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 문자 또는 편집 컨트롤의 바이트 수입니다. 호환 되지 않는 플래그 설정 된 경우 `dwFlags`를이 멤버 함수는 반환 `E_INVALIDARG`합니다.  
+ 문자 또는 편집 컨트롤의 바이트 수입니다. 호환 되지 않는 플래그 설정 된 경우 *dwFlags*를이 멤버 함수는 반환 `E_INVALIDARG`합니다.  
   
 ### <a name="remarks"></a>설명  
  `GetTextLengthEx` 텍스트의 길이 결정 하는 추가 방법을 제공 합니다. Rich Edit 2.0 기능을 지원합니다. 자세한 내용은 참조 [Rich Edit 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb787873) Windows sdk에서입니다.  
@@ -595,7 +595,7 @@ void InsertFileAsObject(LPCTSTR lpszFileName);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszFileName`  
+ *lpszFileName*  
  삽입 될 파일의 이름을 포함 하는 문자열입니다.  
   
 ##  <a name="insertitem"></a>  CRichEditView::InsertItem  
@@ -606,7 +606,7 @@ HRESULT InsertItem(CRichEditCntrItem* pItem);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pItem`  
+ *pItem*  
  삽입할 항목에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -616,18 +616,18 @@ HRESULT InsertItem(CRichEditCntrItem* pItem);
  대 한 자세한 내용은 `HRESULT`, 참조 [COM 오류 코드 구조](http://msdn.microsoft.com/library/windows/desktop/ms690088) Windows sdk에서입니다.  
   
 ##  <a name="isricheditformat"></a>  CRichEditView::IsRichEditFormat  
- 이 함수를 호출 `cf` 은 클립보드 형식 텍스트, 서식 있는 텍스트 또는 OLE 항목과 서식 있는 텍스트입니다.  
+ 이 함수를 호출 *cf* 은 클립보드 형식 텍스트, 서식 있는 텍스트 또는 OLE 항목과 서식 있는 텍스트입니다.  
   
 ```  
 static BOOL AFX_CDECL IsRichEditFormat(CLIPFORMAT cf);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cf`  
+ *cf*  
  관심 있는 클립보드 형식입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 0이 아닌 경우 `cf` 은 서식 있는 편집 또는 텍스트 클립보드 형식입니다.  
+ 0이 아닌 경우 *cf* 은 서식 있는 편집 또는 텍스트 클립보드 형식입니다.  
   
 ##  <a name="isselected"></a>  CRichEditView::IsSelected  
  지정된 된 OLE 항목이이 보기에서 현재 선택 되어 있는지 확인 하려면이 함수를 호출 합니다.  
@@ -637,7 +637,7 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDocItem`  
+ *pDocItem*  
  보기에 있는 개체에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -669,7 +669,7 @@ int m_nWordWrap;
   
 - `WrapToTargetDevice` 대상 장치의 특징을 기반으로 자동 줄 바꿈을 나타냅니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CRichEditView::WrapChanged](#wrapchanged)합니다.  
   
 ##  <a name="onchareffect"></a>  CRichEditView::OnCharEffect  
@@ -682,18 +682,18 @@ void OnCharEffect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwMask`  
+ *dwMask*  
  현재 선택한 항목의 수정 하는 효과 서식 지정 문자입니다.  
   
- `dwEffect`  
+ *dwEffect*  
  원하는 목록 효과 설정/해제를 서식 지정 문자입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수를 호출할 때마다 현재 선택 영역에 대 한 지정 된 서식 지정 효과 전환합니다.  
   
- 대 한 자세한 내용은 `dwMask` 및 `dwEffect` 매개 변수와 해당 잠재적인 값의 해당 데이터 멤버를 참조 [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) Windows sdk에서입니다.  
+ 대 한 자세한 내용은 *dwMask* 및 *dwEffect* 매개 변수와 해당 잠재적인 값의 해당 데이터 멤버를 참조 [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) Windows sdk에서입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#155](../../mfc/codesnippet/cpp/cricheditview-class_5.cpp)]  
   
 ##  <a name="onfindnext"></a>  CRichEditView::OnFindNext  
@@ -708,16 +708,16 @@ virtual void OnFindNext(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszFind`  
+ *lpszFind*  
  찾을 문자열입니다.  
   
- `bNext`  
+ *다음*  
  검색 방향을: **TRUE** 나타냅니다. **FALSE**, 최대 합니다.  
   
- `bCase`  
+ *bCase*  
  검색 대/소문자 구분 여부를 나타냅니다.  
   
- `bWord`  
+ *bword가*  
  검색 단어 단위로 전용인 지 여부를 나타냅니다.  
   
 ### <a name="remarks"></a>설명  
@@ -731,9 +731,9 @@ virtual void OnInitialUpdate();
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 함수의 기본 구현에서는 호출 하 여 [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate) 힌트 정보 없이 멤버 함수 (즉, 0에 대 한 기본값을 사용 하는 `lHint` 매개 변수 및 **NULL** 에 대 한 `pHint` 매개 변수). 문서에 대 한 정보를 필요로 하는 한 번만 초기화를 수행 하려면이 함수를 재정의 합니다. 예를 들어 응용 프로그램에 문서 고정 크기의 경우 보기의 스크롤 제한 되는 문서 크기에 따라 초기화를이 함수를 사용할 수 있습니다. 사용 하 여 응용 프로그램의 가변 크기 문서를 지 원하는 경우 `OnUpdate` 하기 위해 스크롤 업데이트 제한 될 때마다 변경 내용을 문서화 합니다.  
+ 이 함수의 기본 구현에서는 호출 하는 [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate) 힌트 정보 없이 멤버 함수 (즉, 0에 대 한 기본값을 사용 하 여 *lHint* 매개 변수 및 **NULL**  에 대 한는 *pHint* 매개 변수). 문서에 대 한 정보를 필요로 하는 한 번만 초기화를 수행 하려면이 함수를 재정의 합니다. 예를 들어 응용 프로그램에 문서 고정 크기의 경우 보기의 스크롤 제한 되는 문서 크기에 따라 초기화를이 함수를 사용할 수 있습니다. 사용 하 여 응용 프로그램의 가변 크기 문서를 지 원하는 경우 `OnUpdate` 하기 위해 스크롤 업데이트 제한 될 때마다 변경 내용을 문서화 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CRichEditView::m_nWordWrap](#m_nwordwrap)합니다.  
   
 ##  <a name="onpastenativeobject"></a>  CRichEditView::OnPasteNativeObject  
@@ -765,7 +765,7 @@ void OnParaAlign(WORD wAlign);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `wAlign`  
+ *wAlign*  
  단락 맞춤을 권장합니다. 다음 값 중 하나입니다.  
   
 - `PFA_LEFT` 왼쪽 여백 단락을 정렬 합니다.  
@@ -774,7 +774,7 @@ void OnParaAlign(WORD wAlign);
   
 - `PFA_CENTER` 단락 맞춥니다. 가운데 맞춤 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#156](../../mfc/codesnippet/cpp/cricheditview-class_6.cpp)]  
   
 ##  <a name="onprinterchanged"></a>  CRichEditView::OnPrinterChanged  
@@ -785,11 +785,11 @@ virtual void OnPrinterChanged(const CDC& dcPrinter);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dcPrinter`  
+ *dcPrinter*  
  A [CDC](../../mfc/reference/cdc-class.md) 새 프린터에 대 한 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 기본 구현은 물리적 높이와 너비를 출력 장치 (프린터)의 용지 크기를 설정 합니다. 장치 컨텍스트가 없는 연결 된 없을 경우 `dcPrinter`, 기본 구현에서는 11 8.5 인치 용지 크기를 설정 합니다.  
+ 기본 구현은 물리적 높이와 너비를 출력 장치 (프린터)의 용지 크기를 설정 합니다. 장치 컨텍스트가 없는 연결 된 없을 경우 *dcPrinter*, 기본 구현에서는 11 8.5 인치 용지 크기를 설정 합니다.  
   
 ##  <a name="onreplaceall"></a>  CRichEditView::OnReplaceAll  
  바꾸기 대화 상자에서 모두 바꾸기 명령을 처리할 때 프레임 워크에서 호출 됩니다.  
@@ -803,22 +803,22 @@ virtual void OnReplaceAll(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszFind`  
+ *lpszFind*  
  바꿀 텍스트입니다.  
   
- `lpszReplace`  
+ *lpszReplace*  
  바꿀 텍스트입니다.  
   
- `bCase`  
+ *bCase*  
  검색은 대/소문자 구분 하는 경우를 나타냅니다.  
   
- `bWord`  
+ *bword가*  
  아닌지 검색 단어 단위로 선택 해야 하는 경우를 나타냅니다.  
   
 ### <a name="remarks"></a>설명  
  지정 된 일부 텍스트 항목을 모두를 다른 문자열로 바꾸려면이 함수를 호출 합니다. 이 보기에 대 한 검색 특성을 변경 하려면이 함수를 재정의 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CRichEditView::FindText](#findtext)합니다.  
   
 ##  <a name="onreplacesel"></a>  CRichEditView::OnReplaceSel  
@@ -834,19 +834,19 @@ virtual void OnReplaceSel(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszFind`  
+ *lpszFind*  
  바꿀 텍스트입니다.  
   
- `bNext`  
+ *다음*  
  검색의 방향을 나타냅니다: **TRUE** ; 다운 **FALSE**, 최대 합니다.  
   
- `bCase`  
+ *bCase*  
  검색은 대/소문자 구분 하는 경우를 나타냅니다.  
   
- `bWord`  
+ *bword가*  
  아닌지 검색 단어 단위로 선택 해야 하는 경우를 나타냅니다.  
   
- `lpszReplace`  
+ *lpszReplace*  
  바꿀 텍스트입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -860,7 +860,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszFind`  
+ *lpszFind*  
  이 텍스트에 찾을 수 없습니다.  
   
 ### <a name="remarks"></a>설명  
@@ -868,7 +868,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
   
  자세한 내용은 참조 [MessageBeep](http://msdn.microsoft.com/library/windows/desktop/ms680356) Windows sdk에서입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#157](../../mfc/codesnippet/cpp/cricheditview-class_7.cpp)]  
   
 ##  <a name="onupdatechareffect"></a>  CRichEditView::OnUpdateCharEffect  
@@ -882,21 +882,21 @@ void OnUpdateCharEffect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pCmdUI`  
+ *pCmdUI*  
  에 대 한 포인터는 [CCmdUI](../../mfc/reference/ccmdui-class.md) 개체입니다.  
   
- `dwMask`  
+ *dwMask*  
  마스크 서식 문자를 나타냅니다.  
   
- `dwEffect`  
+ *dwEffect*  
  효과 서식 문자를 나타냅니다.  
   
 ### <a name="remarks"></a>설명  
- / / 마스크 `dwMask` 서식 특성을 확인 하는 문자를 지정 합니다. 플래그는 `dwEffect` 서식 특성을 설정/해제 하는 문자를 나열 합니다.  
+ / / 마스크 *dwMask* 서식 특성을 확인 하는 문자를 지정 합니다. 플래그는 *dwEffect* 서식 특성을 설정/해제 하는 문자를 나열 합니다.  
   
- 대 한 자세한 내용은 `dwMask` 및 `dwEffect` 매개 변수와 해당 잠재적인 값의 해당 데이터 멤버를 참조 [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) Windows sdk에서입니다.  
+ 대 한 자세한 내용은 *dwMask* 및 *dwEffect* 매개 변수와 해당 잠재적인 값의 해당 데이터 멤버를 참조 [CHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb787881) Windows sdk에서입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#158](../../mfc/codesnippet/cpp/cricheditview-class_8.cpp)]  
   
 ##  <a name="onupdateparaalign"></a>  CRichEditView::OnUpdateParaAlign  
@@ -909,10 +909,10 @@ void OnUpdateParaAlign(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pCmdUI`  
+ *pCmdUI*  
  에 대 한 포인터는 [CCmdUI](../../mfc/reference/ccmdui-class.md) 개체입니다.  
   
- `wAlign`  
+ *wAlign*  
  확인할 단락 맞춤입니다. 다음 값 중 하나입니다.  
   
 - `PFA_LEFT` 왼쪽 여백 단락을 정렬 합니다.  
@@ -921,11 +921,11 @@ void OnUpdateParaAlign(
   
 - `PFA_CENTER` 단락 맞춥니다. 가운데 맞춤 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#159](../../mfc/codesnippet/cpp/cricheditview-class_9.cpp)]  
   
 ##  <a name="printinsiderect"></a>  CRichEditView::PrintInsideRect  
- 범위 내에 맞게 rich edit 컨트롤의 텍스트에 서식을 지정 하려면이 함수를 호출 *rectLayout* 로 지정 된 장치에 대 한 `pDC`합니다.  
+ 범위 내에 맞게 rich edit 컨트롤의 텍스트에 서식을 지정 하려면이 함수를 호출 *rectLayout* 로 지정 된 장치에 대 한 *pDC*합니다.  
   
 ```  
 long PrintInsideRect(
@@ -937,16 +937,16 @@ long PrintInsideRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  출력 영역에 대 한 장치 컨텍스트에 대 한 포인터입니다.  
   
  *rectLayout*  
  [RECT](../../mfc/reference/rect-structure1.md) 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 출력 영역을 정의 하는 합니다.  
   
- `nIndexStart`  
+ *nIndexStart*  
  서식을 지정할 첫 번째 문자의 0부터 시작 인덱스입니다.  
   
- `nIndexStop`  
+ *nIndexStop*  
  서식을 지정할 마지막 문자의 0부터 시작 인덱스입니다.  
   
  *bOutput*  
@@ -958,11 +958,11 @@ long PrintInsideRect(
 ### <a name="remarks"></a>설명  
  일반적으로이 호출에 대 한 호출 뒤 [CRichEditCtrl::DisplayBand](../../mfc/reference/cricheditctrl-class.md#displayband) 출력을 생성 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CRichEditView::GetPaperSize](#getpapersize)합니다.  
   
 ##  <a name="printpage"></a>  CRichEditView::PrintPage  
- 로 지정 된 출력 장치에 대 한 서식 있는 편집 컨트롤에서 텍스트의 범위 서식을 지정 하려면이 함수를 호출 `pDC`합니다.  
+ 로 지정 된 출력 장치에 대 한 서식 있는 편집 컨트롤에서 텍스트의 범위 서식을 지정 하려면이 함수를 호출 *pDC*합니다.  
   
 ```  
 long PrintPage(
@@ -972,13 +972,13 @@ long PrintPage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  페이지 출력에 대 한 장치 컨텍스트에 대 한 포인터입니다.  
   
- `nIndexStart`  
+ *nIndexStart*  
  서식을 지정할 첫 번째 문자의 0부터 시작 인덱스입니다.  
   
- `nIndexStop`  
+ *nIndexStop*  
  서식을 지정할 마지막 문자의 0부터 시작 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1008,13 +1008,13 @@ virtual HRESULT QueryAcceptData(
  *lpcfFormat*  
  사용할 수 있는 데이터 형식에 대 한 포인터입니다.  
   
- `dwReco`  
+ *dwReco*  
  사용되지 않습니다.  
   
  *bReally*  
  붙여넣기 작업을 계속할지 여부를 나타냅니다.  
   
- `hMetaFile`  
+ *hMetaFile*  
  항목의 아이콘을 그리기에 사용 되는 메타 파일에 대 한 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1025,7 +1025,7 @@ virtual HRESULT QueryAcceptData(
   
  대 한 자세한 내용은 `HRESULT` 및 `IDataObject`, 참조 [COM 오류 코드 구조](http://msdn.microsoft.com/library/windows/desktop/ms690088) 및 [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421)각각 Windows sdk에서입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#160](../../mfc/codesnippet/cpp/cricheditview-class_10.cpp)]  
   
 ##  <a name="setcharformat"></a>  CRichEditView::SetCharFormat  
@@ -1036,15 +1036,15 @@ void SetCharFormat(CHARFORMAT2 cf);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `cf`  
+ *cf*  
  [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) 서식 특성 새 기본 문자를 포함 하는 구조입니다.  
   
 ### <a name="remarks"></a>설명  
- 로 지정 된 특성에만 **dwMask** 소속 `cf` 이 기능으로 변경 합니다.  
+ 로 지정 된 특성에만 **dwMask** 소속 *cf* 이 기능으로 변경 합니다.  
   
  자세한 내용은 참조 [EM_SETCHARFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774230) 메시지 및 [CHARFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787883) Windows SDK에는 구조입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#152](../../mfc/codesnippet/cpp/cricheditview-class_2.cpp)]  
   
 ##  <a name="setmargins"></a>  CRichEditView::SetMargins  
@@ -1063,7 +1063,7 @@ void SetMargins(const CRect& rectMargin);
   
  사용 하는 여백은 [PrintPage](#printpage) 물리적 페이지의 논리 페이지가 아닌 기준으로 합니다. 따라서 여백을 0 많은 프린터 페이지에서 인쇄할 수 없는 영역에는 이후 텍스트를 클립 종종 됩니다. 텍스트 캡처를 방지 하려면 사용 하 여 호출 해야 `SetMargins` 인쇄 하기 전에 적절 한 프린터 여백을 설정 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CRichEditView::GetPaperSize](#getpapersize)합니다.  
   
 ##  <a name="setpapersize"></a>  CRichEditView::SetPaperSize  
@@ -1080,7 +1080,7 @@ void SetPaperSize(CSize sizePaper);
 ### <a name="remarks"></a>설명  
  경우 [m_nWordWrap](#m_nwordwrap) 은 `WrapToTargetDevice`를 호출 해야 [WrapChanged](#wrapchanged) 이 함수를 사용 하 여 인쇄 특성을 조정 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#161](../../mfc/codesnippet/cpp/cricheditview-class_11.cpp)]  
   
 ##  <a name="setparaformat"></a>  CRichEditView::SetParaFormat  
@@ -1091,18 +1091,18 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pf`  
+ *pf*  
  [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) 새 기본값을 포함 하는 구조 단락 서식 특성입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공 하면 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 로 지정 된 특성에만 **dwMask** 소속 `pf` 이 기능으로 변경 합니다.  
+ 로 지정 된 특성에만 **dwMask** 소속 *pf* 이 기능으로 변경 합니다.  
   
  자세한 내용은 참조 [EM_SETPARAFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb774276) 메시지 및 [PARAFORMAT2](http://msdn.microsoft.com/library/windows/desktop/bb787942) Windows SDK에는 구조입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#162](../../mfc/codesnippet/cpp/cricheditview-class_12.cpp)]  
   
 ##  <a name="textnotfound"></a>  CRichEditView::TextNotFound  
@@ -1113,15 +1113,15 @@ void TextNotFound(LPCTSTR lpszFind);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszFind`  
+ *lpszFind*  
  찾을 수 없는 텍스트 문자열이 포함 됩니다.  
   
 ### <a name="remarks"></a>설명  
  에 대 한 실패 한 호출 직후이 메서드를 호출 하는 것이 좋습니다. [FindText](#findtext) 제대로 컨트롤의 내부 검색 상태를 다시 설정 되도록 합니다.  
   
- `lpszFind` 매개 변수를 제공 하는 문자열을 동일한 콘텐츠를 포함 해야 [FindText](#findtext)합니다. 내부 검색 상태를 재설정 한 후이 메서드를 호출 합니다는 [OnTextNotFound](#ontextnotfound) 메서드에 제공 된 검색 문자열입니다.  
+ *lpszFind* 매개 변수를 제공 하는 문자열을 동일한 콘텐츠를 포함 해야 [FindText](#findtext)합니다. 내부 검색 상태를 재설정 한 후이 메서드를 호출 합니다는 [OnTextNotFound](#ontextnotfound) 메서드에 제공 된 검색 문자열입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CRichEditView::FindText](#findtext)합니다.  
   
 ##  <a name="wrapchanged"></a>  CRichEditView::WrapChanged  
@@ -1134,7 +1134,7 @@ virtual void WrapChanged();
 ### <a name="remarks"></a>설명  
  변경 내용에 응답 하는 다양 한 보기를 편집 하는 방식을 수정 하려면이 함수를 재정의 [m_nWordWrap](#m_nwordwrap) 또는 인쇄 특성 ( [OnPrinterChanged](#onprinterchanged)).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#163](../../mfc/codesnippet/cpp/cricheditview-class_13.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

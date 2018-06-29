@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36f620f0a29e7d1715e7cb5bfb83c0685f97f643
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 022fe884f611eb5bc3254ef23c7078280e2a1046
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374942"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078545"
 ---
 # <a name="cpanedialog-class"></a>CPaneDialog 클래스
 `CPaneDialog` 클래스는 도킹 가능한 모덜리스 대화 상자를 지원 합니다.  
@@ -58,7 +58,7 @@ class CPaneDialog : public CDockablePane
 |`CPaneDialog::OnEraseBkgnd`|처리는 [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) 메시지입니다. (재정의 [CWnd::OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd).)|  
 |`CPaneDialog::OnLButtonDblClk`|처리는 [WM_LBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms645606) 메시지입니다. (재정의 [CWnd::OnLButtonDblClk](../../mfc/reference/cwnd-class.md#onlbuttondblclk).)|  
 |`CPaneDialog::OnLButtonDown`|처리는 [WM_LBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645607) 메시지입니다. (재정의 [CWnd::OnLButtonDown](../../mfc/reference/cwnd-class.md#onlbuttondown).)|  
-|`CPaneDialog::OnUpdateCmdUI`|대화 상자 창을 업데이트 하기 위해 프레임 워크에서 호출 됩니다. (재정의 [cdockablepane:: Onupdatecmdui](http://msdn.microsoft.com/en-us/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
+|`CPaneDialog::OnUpdateCmdUI`|대화 상자 창을 업데이트 하기 위해 프레임 워크에서 호출 됩니다. (재정의 [cdockablepane:: Onupdatecmdui](http://msdn.microsoft.com/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
 |`CPaneDialog::OnWindowPosChanging`|처리는 [WM_WINDOWPOSCHANGING](http://msdn.microsoft.com/library/windows/desktop/ms632653) 메시지입니다. (재정의 [CWnd::OnWindowPosChanging](../../mfc/reference/cwnd-class.md#onwindowposchanging).)|  
 |[CPaneDialog::SetOccDialogInfo](#setoccdialoginfo)|OLE 컨트롤 컨테이너의 대화 상자에 대 한 서식 파일을 지정 합니다.|  
   
@@ -122,31 +122,31 @@ BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszWindowName`  
+ [in] *lpszWindowName*  
  도킹 대화 상자의 이름입니다.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  부모 창을 가리킵니다.  
   
- [in] `bHasGripper`  
+ [in] *bHasGripper*  
  `TRUE` 캡션 (그리퍼);를 사용 하 여 도킹 대화 상자를 만들려면 그렇지 않으면 `FALSE`합니다.  
   
- [in] `lpszTemplateName`  
+ [in] *lpszTemplateName*  
  대화 상자 템플릿의 리소스의 이름입니다.  
   
- [in] `nStyle`  
+ [in] *nStyle*  
  Windows 스타일입니다.  
   
- [in] `nID`  
+ [in] *nID*  
  컨트롤 id입니다.  
   
- [in] `nIDTemplate`  
+ [in] *nIDTemplate*  
  대화 상자 템플릿의 리소스 ID입니다.  
   
- [in] `dwTabbedStyle`  
+ [in] *dwTabbedStyle*  
  사용자가 컨트롤로 끌어 다른 제어판이 제어 창 캡션에 때 발생 하는 탭된 창 스타일입니다. 기본값은 `AFX_CBRS_REGULAR_TABS`입니다. 자세한 내용은 설명 부분을 참조 하십시오.는 [cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex) 메서드.  
   
- [in] `dwControlBarStyle`  
+ [in] *dwControlBarStyle*  
  다른 스타일 특성입니다. 기본값은 `AFX_DEFAULT_DOCKING_PANE_STYLE`입니다. 자세한 내용은 설명 부분을 참조 하십시오.는 [cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex) 메서드.  
   
 ### <a name="return-value"></a>반환 값  
@@ -154,7 +154,7 @@ BOOL Create(
   
 ### <a name="remarks"></a>설명  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는 사용 하는 `Create` 에서 메서드는 `CPaneDialog` 클래스. 이 예제는의 일부는 [창 크기 설정 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanedialog-class_1.h)]  
@@ -170,14 +170,14 @@ afx_msg LRESULT HandleInitDialog(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `wParam`  
+ [in] *wParam*  
  기본 키보드 포커스를 받을 수 있는 컨트롤에 대 한 핸들입니다.  
   
- [in] `lParam`  
+ [in] *lParam*  
  추가 초기화 데이터를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 이 메서드가 성공적으로 수행되면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다. 또한 `TRUE` 로 지정 된 컨트롤에 키보드 포커스를 설정 합니다.는 `wParam` ; 매개 변수 `FALSE` 방지 기본 키보드 포커스를 설정 합니다.  
+ 이 메서드가 성공적으로 수행되면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다. 또한 `TRUE` 로 지정 된 컨트롤에 키보드 포커스를 설정의 *wParam* ; 매개 변수 `FALSE` 방지 기본 키보드 포커스를 설정 합니다.  
   
 ### <a name="remarks"></a>설명  
  프레임 워크는이 메서드를 사용 하 여 컨트롤 및 대화 상자의 모양을 초기화 합니다. 프레임 워크 대화 상자를 표시 하기 전에이 메서드를 호출 합니다.  
@@ -190,7 +190,7 @@ virtual BOOL SetOccDialogInfo(_AFX_OCC_DIALOG_INFO* pOccDialogInfo);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pOccDialogInfo`  
+ [in] *pOccDialogInfo*  
  대화 상자 개체를 만드는 데 사용 되는 대화 상자 템플릿에 대 한 포인터입니다. 이 매개 변수 값에 이후에 전달 되는 [COccManager::CreateDlgControls](../../mfc/reference/coccmanager-class.md#createdlgcontrols) 메서드.  
   
 ### <a name="return-value"></a>반환 값  

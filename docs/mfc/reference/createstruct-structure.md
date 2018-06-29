@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e51aed1eb7f74c721a5a4da092f205a2492ba5f7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b7bc510f0d0cfc88476c9e222f51bcfeb958e31a
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370873"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078469"
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT 구조체
 `CREATESTRUCT` 구조 응용 프로그램의 창 프로시저에 전달 된 초기화 매개 변수를 정의 합니다.  
@@ -46,40 +46,40 @@ typedef struct tagCREATESTRUCT {
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `lpCreateParams`  
+ *lpCreateParams*  
  창을 만들기 위해 사용할 데이터를 가리킵니다.  
   
- `hInstance`  
+ *hInstance*  
  새 창을 소유 하는 모듈의 모듈 인스턴스 핸들을 식별 합니다.  
   
- `hMenu`  
+ *hMenu*  
  새 창에서 사용할 수 있는 메뉴를 식별 합니다. 정수 ID를 포함 하는 경우 자식 창  
   
- `hwndParent`  
+ *hwndParent*  
  새 창을 소유 하는 창을 식별 합니다. 이 멤버는 **NULL** 경우 새 최상위 창입니다.  
   
- `cy`  
+ *cy*  
  새 창의 높이 지정합니다.  
   
- `cx`  
+ *cx*  
  새 창의 너비를 지정합니다.  
   
- `y`  
+ *y*  
  새 창의 왼쪽된 위 모퉁이의 y 좌표를 지정합니다. 새 창의 자식 창이; 면 좌표는 부모 창을 기준으로 그렇지 않으면 좌표는 화면 원점을 기준으로 합니다.  
   
- `x`  
+ *x*  
  새 창의 왼쪽된 위 모퉁이의 x 좌표를 지정합니다. 새 창의 자식 창이; 면 좌표는 부모 창을 기준으로 그렇지 않으면 좌표는 화면 원점을 기준으로 합니다.  
   
- `style`  
+ *style*  
  새 창을 지정 [스타일](../../mfc/reference/styles-used-by-mfc.md)합니다.  
   
- `lpszName`  
+ *lpszName*  
  새 창 이름을 지정 하는 null로 끝나는 문자열을 가리킵니다.  
   
- `lpszClass`  
+ *lpszClass*  
  새 창 Windows 클래스 이름을 지정 하는 null로 끝나는 문자열을 가리킵니다 (한 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) 구조;에 대 한 자세한 내용은 Windows SDK를 참조 하십시오.).  
   
- `dwExStyle`  
+ *dwExStyle*  
  지정 된 [확장 스타일](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) 새 창에 대 한 합니다.  
   
 ## <a name="requirements"></a>요구 사항  

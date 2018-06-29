@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3328eacb9789b892a271208193e82546eb73f7e6
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b787828c59535f0e3008816df6f4ab209e1d882c
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373669"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079136"
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo 클래스
 스마트 도킹 표식의 모양을 정의합니다.  
@@ -68,7 +68,7 @@ class CSmartDockingInfo : public CObject
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|프레임 워크 스마트 도킹 표식을 표시 하는 경우 현재 테마 색을 사용할지 여부를 지정 합니다.|  
 |[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|스마트 도킹 표식의 기본 배경색을 지정 합니다.|  
@@ -119,7 +119,7 @@ void CopyTo(CSmartDockingInfo& params);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `params`  
+ [out] *params*  
  형식의 개체 `CSmartDockingInfo` 현재 스마트 도킹 매개 변수는 채워집니다.  
   
 ##  <a name="m_busethemecolorinshading"></a>  CSmartDockingInfo::m_bUseThemeColorInShading  

@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b569efb201f95ade8987aaa89bb6cea1bc0c15c1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d1d61049c4c5af0285d728685776b2f285f69ba4
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376771"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079605"
 ---
 # <a name="crgn-class"></a>CRgn 클래스
 Windows GDI(그래픽 장치 인터페이스) 영역을 캡슐화합니다.  
@@ -138,20 +138,20 @@ int CombineRgn(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pRgn1`  
+ *pRgn1*  
  기존 영역을 식별합니다.  
   
- `pRgn2`  
+ *pRgn2*  
  기존 영역을 식별합니다.  
   
- `nCombineMode`  
+ *nCombineMode*  
  두 소스 영역을 결합 하는 경우 수행할 작업을 지정 합니다. 다음 값 중 하나일 수 있습니다.  
   
 - **RGN_AND** 두 영역 (겹치는 부분)에 대해 겹치는 영역을 사용 합니다.  
   
-- **RGN_COPY** 지역 1의 복사본을 만듭니다 (으로 식별 `pRgn1`).  
+- **RGN_COPY** 지역 1의 복사본을 만듭니다 (으로 식별 *pRgn1*).  
   
-- **RGN_DIFF** 1 영역의 영역으로 구성 된 영역을 만듭니다 (으로 식별 `pRgn1`) 2 영역에 속하지 않는 (으로 식별 `pRgn2`).  
+- **RGN_DIFF** 1 영역의 영역으로 구성 된 영역을 만듭니다 (으로 식별 *pRgn1*) 2 영역에 속하지 않는 (으로 식별 *pRgn2*).  
   
 - **RGN_OR** (union) 전체에 있는 두 영역을 결합 합니다.  
   
@@ -169,7 +169,7 @@ int CombineRgn(
 - **SIMPLEREGION** 새 영역에 겹치는 테두리가 없습니다.  
   
 ### <a name="remarks"></a>설명  
- 영역을 결합 하 여 지정 된 대로 `nCombineMode`합니다.  
+ 영역을 결합 하 여 지정 된 대로 *nCombineMode*합니다.  
   
  영역을 결합 하 고 결과 영역 핸들에 저장 된 지정한 두는 `CRgn` 개체입니다. 모든 지역에 저장 되는 따라서는 `CRgn` 개체 결합 된 지역으로 대체 됩니다.  
   
@@ -177,18 +177,18 @@ int CombineRgn(
   
  사용 하 여 [CopyRgn](#copyrgn) 한 지역의 다른 영역에 복사 하 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#144](../../mfc/codesnippet/cpp/crgn-class_1.cpp)]  
   
 ##  <a name="copyrgn"></a>  CRgn::CopyRgn  
- 에 정의 된 영역 복사 `pRgnSrc` 에 `CRgn` 개체입니다.  
+ 에 정의 된 영역 복사 *pRgnSrc* 에 `CRgn` 개체입니다.  
   
 ```  
 int CopyRgn(CRgn* pRgnSrc);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pRgnSrc`  
+ *pRgnSrc*  
  기존 영역을 식별합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -205,7 +205,7 @@ int CopyRgn(CRgn* pRgnSrc);
 ### <a name="remarks"></a>설명  
  이전에 저장 된 영역을 대체 하는 새 영역은 `CRgn` 개체입니다. 이 함수는 특별 한 경우는 [CombineRgn](#combinergn) 멤버 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CRgn::CreateEllipticRgn](#createellipticrgn)합니다.  
   
 ##  <a name="createellipticrgn"></a>  CRgn::CreateEllipticRgn  
@@ -220,29 +220,29 @@ BOOL CreateEllipticRgn(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `x1`  
+ *x1*  
  타원의 경계 사각형의 왼쪽 위 모퉁이의 논리적 x 좌표를 지정합니다.  
   
- `y1`  
+ *y1*  
  타원의 경계 사각형의 왼쪽 위 모퉁이의 논리적 y 좌표를 지정합니다.  
   
- `x2`  
+ *x2*  
  타원의 경계 사각형의 오른쪽 아래 모퉁이의 논리적 x 좌표를 지정합니다.  
   
- `y2`  
+ *y2*  
  타원의 경계 사각형의 오른쪽 아래 모퉁이의 논리적 y 좌표를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
  작업이 성공 하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 지역으로 지정 된 경계 사각형에 의해 정의 된 `x1`, `y1`, `x2`, 및 `y2`합니다. 지역에 저장 되는 `CRgn` 개체입니다.  
+ 지역으로 지정 된 경계 사각형에 의해 정의 된 *x1*, *y1*, *x2*, 및 *y2*합니다. 지역에 저장 되는 `CRgn` 개체입니다.  
   
  영역의 크기는 32, 767 32, 767 하 여 논리 단위 또는 64k의 메모리 제한, 중 더 작은 값입니다.  
   
  마친 다음 사용 하 여 만든 영역을 사용 하는 `CreateEllipticRgn` 함수, 응용 프로그램을 사용 하 여 장치 컨텍스트의 아웃 지역 선택 해야는 `DeleteObject` 함수를 제거 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#145](../../mfc/codesnippet/cpp/crgn-class_2.cpp)]  
   
 ##  <a name="createellipticrgnindirect"></a>  CRgn::CreateEllipticRgnIndirect  
@@ -253,20 +253,20 @@ BOOL CreateEllipticRgnIndirect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
+ *lpRect*  
  가리키는 `RECT` 구조 또는 `CRect` 타원의 경계 사각형의 왼쪽 및 오른쪽 아래 모퉁이의 논리적 좌표가 포함 된 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
  작업이 성공 하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 지역 구조 또는가 가리키는 개체가 정의 `lpRect` 에 저장 됩니다는 `CRgn` 개체입니다.  
+ 지역 구조 또는가 가리키는 개체가 정의 *lpRect* 에 저장 됩니다는 `CRgn` 개체입니다.  
   
  영역의 크기는 32, 767 32, 767 하 여 논리 단위 또는 64k의 메모리 제한, 중 더 작은 값입니다.  
   
  마친 다음 사용 하 여 만든 영역을 사용 하는 `CreateEllipticRgnIndirect` 함수, 응용 프로그램을 사용 하 여 장치 컨텍스트의 아웃 지역 선택 해야는 `DeleteObject` 함수를 제거 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CRgn::CreateRectRgnIndirect](#createrectrgnindirect)합니다.  
   
 ##  <a name="createfromdata"></a>  CRgn::CreateFromData  
@@ -283,10 +283,10 @@ BOOL CreateFromData(
  *lpXForm*  
  가리키는 [XFORM](../../mfc/reference/xform-structure.md) 영역에서 수행할 변환을 정의 하는 데이터 구조입니다. 이 포인터 이면 **NULL**, identity 변환을 사용 합니다.  
   
- `nCount`  
- 가 가리키는 바이트 수가 지정 `pRgnData`합니다.  
+ *nCount*  
+ 가 가리키는 바이트 수가 지정 *pRgnData*합니다.  
   
- `pRgnData`  
+ *pRgnData*  
  가리키는 [RGNDATA](../../mfc/reference/rgndata-structure.md) 지역 데이터를 포함 하는 데이터 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -303,14 +303,14 @@ BOOL CreateFromPath(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  닫힌된 경로가 포함 된 장치 컨텍스트를 식별 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 지정 된 디바이스 컨텍스트는 `pDC` 매개 변수는 닫힌된 경로가 포함 되어야 합니다. 후 `CreateFromPath` Windows 영역 경로 장치 컨텍스트에서 닫힌된 경로 삭제 합니다.  
+ 지정 된 디바이스 컨텍스트는 *pDC* 매개 변수는 닫힌된 경로가 포함 되어야 합니다. 후 `CreateFromPath` Windows 영역 경로 장치 컨텍스트에서 닫힌된 경로 삭제 합니다.  
   
 ##  <a name="createpolygonrgn"></a>  CRgn::CreatePolygonRgn  
  다각형 영역을 만듭니다.  
@@ -323,7 +323,7 @@ BOOL CreatePolygonRgn(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPoints`  
+ *lpPoints*  
  배열을 가리키는 **지점** 구조 또는 배열을 `CPoint` 개체입니다. X-좌표와 y 좌표는 다각형의 한 꼭 짓 점에 각 구조를 지정합니다. **지점** 구조 형식은 다음과 같습니다.  
   
  `typedef struct tagPOINT {`  
@@ -334,10 +334,10 @@ BOOL CreatePolygonRgn(
   
  `} POINT;`  
   
- `nCount`  
- 개수를 지정 **지점** 구조 또는 `CPoint` 가 가리키는 배열의 개체에에서 `lpPoints`합니다.  
+ *nCount*  
+ 개수를 지정 **지점** 구조 또는 `CPoint` 가 가리키는 배열의 개체에에서 *lpPoints*합니다.  
   
- `nMode`  
+ *nMode*  
  지역에 대 한 채우기 모드를 지정합니다. 이 매개 변수 중 하나일 수 있습니다 **대체** 또는 **굴곡**합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -354,7 +354,7 @@ BOOL CreatePolygonRgn(
   
  응용 프로그램이를 완료할 때 사용 하 여 만든 영역을 사용 하 여 `CreatePolygonRgn` 함수를 사용 하 여 장치 컨텍스트의 아웃 지역 선택 해야는 `DeleteObject` 함수를 제거 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#146](../../mfc/codesnippet/cpp/crgn-class_3.cpp)]  
   
 ##  <a name="createpolypolygonrgn"></a>  CRgn::CreatePolyPolygonRgn  
@@ -369,7 +369,7 @@ BOOL CreatePolyPolygonRgn(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPoints`  
+ *lpPoints*  
  배열을 가리키는 **지점** 구조 또는 배열을 `CPoint` 다각형의 꼭 짓 점을 정의 하는 개체입니다. 시스템에 자동으로 닫히지 않습니다 때문에 각 다각형 명시적으로 닫아야 합니다. 다각형은 연속으로 지정 됩니다. **지점** 구조 형식은 다음과 같습니다.  
   
  `typedef struct tagPOINT {`  
@@ -380,13 +380,13 @@ BOOL CreatePolyPolygonRgn(
   
  `} POINT;`  
   
- `lpPolyCounts`  
- 정수 배열 가리킵니다. 에 있는 첫 번째 다각형의 꼭 짓 점 수를 지정 하는 첫 번째 정수는 `lpPoints` 배열에 두 번째 정수 두 번째 다각형의 꼭 짓 점 수를 지정 합니다.  
+ *lpPolyCounts*  
+ 정수 배열 가리킵니다. 에 있는 첫 번째 다각형의 꼭 짓 점 수를 지정 하는 첫 번째 정수는 *lpPoints* 배열에 두 번째 정수 두 번째 다각형의 꼭 짓 점 수를 지정 합니다.  
   
- `nCount`  
- 정수 총 수를 지정 된 `lpPolyCounts` 배열입니다.  
+ *nCount*  
+ 정수 총 수를 지정 된 *lpPolyCounts* 배열입니다.  
   
- `nPolyFillMode`  
+ *nPolyFillMode*  
  다각형 채우기 모드를 지정합니다. 이 값 중 하나일 수 있습니다 **대체** 또는 **굴곡**합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -417,16 +417,16 @@ BOOL CreateRectRgn(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `x1`  
+ *x1*  
  영역의 왼쪽 위 모퉁이의 논리적 x 좌표를 지정합니다.  
   
- `y1`  
+ *y1*  
  영역의 왼쪽 위 모퉁이의 논리적 y 좌표를 지정합니다.  
   
- `x2`  
+ *x2*  
  영역의 오른쪽 아래 모퉁이의 논리적 x 좌표를 지정합니다.  
   
- `y2`  
+ *y2*  
  영역의 오른쪽 아래 모퉁이의 논리적 y 좌표를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -437,7 +437,7 @@ BOOL CreateRectRgn(
   
  마친 의해 만들어진 영역을 사용 하 여 `CreateRectRgn`, 응용 프로그램을 사용할지는 [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) 영역을 제거 하는 멤버 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#147](../../mfc/codesnippet/cpp/crgn-class_4.cpp)]  
   
  추가 예제를 참조 하십시오. [CRgn::CombineRgn](#combinergn)합니다.  
@@ -450,7 +450,7 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
+ *lpRect*  
  가리키는 `RECT` 구조 또는 `CRect` 영역의 왼쪽 및 오른쪽 아래 모퉁이의 논리적 좌표가 포함 된 개체입니다. `RECT` 구조체 형식은 다음과 같습니다.  
   
  `typedef struct tagRECT {`  
@@ -473,7 +473,7 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
   
  마친 의해 만들어진 영역을 사용 하 여 `CreateRectRgnIndirect`, 응용 프로그램을 사용할지는 [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) 영역을 제거 하는 멤버 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#148](../../mfc/codesnippet/cpp/crgn-class_5.cpp)]  
   
 ##  <a name="createroundrectrgn"></a>  CRgn::CreateRoundRectRgn  
@@ -490,22 +490,22 @@ BOOL CreateRoundRectRgn(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `x1`  
+ *x1*  
  영역의 왼쪽 위 모퉁이의 논리적 x 좌표를 지정합니다.  
   
- `y1`  
+ *y1*  
  영역의 왼쪽 위 모퉁이의 논리적 y 좌표를 지정합니다.  
   
- `x2`  
+ *x2*  
  영역의 오른쪽 아래 모퉁이의 논리적 x 좌표를 지정합니다.  
   
- `y2`  
+ *y2*  
  영역의 오른쪽 아래 모퉁이의 논리적 y 좌표를 지정합니다.  
   
  *x3*  
  둥근된 모퉁이 만드는 데는 타원의 너비를 지정 합니다.  
   
- `y3`  
+ *y3*  
  둥근된 모퉁이 만드는 데는 타원의 높이 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -516,7 +516,7 @@ BOOL CreateRoundRectRgn(
   
  응용 프로그램이를 완료할 때 사용 하 여 만든 영역을 사용 하 여 `CreateRoundRectRgn` 함수를 사용 하 여 장치 컨텍스트의 아웃 지역 선택 해야는 [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) 멤버 함수를 제거 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#149](../../mfc/codesnippet/cpp/crgn-class_6.cpp)]  
   
 ##  <a name="crgn"></a>  CRgn::CRgn  
@@ -529,7 +529,7 @@ CRgn();
 ### <a name="remarks"></a>설명  
  `m_hObject` 데이터 멤버에 없는 Windows GDI 영역이 다른의 하나 이상의 개체가 인스턴스화될 때까지 `CRgn` 멤버 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CRgn::CreateRoundRectRgn](#createroundrectrgn)합니다.  
   
 ##  <a name="equalrgn"></a>  CRgn::EqualRgn  
@@ -540,13 +540,13 @@ BOOL EqualRgn(CRgn* pRgn) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pRgn`  
+ *pRgn*  
  영역을 식별 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  두 영역 동일 하면 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#150](../../mfc/codesnippet/cpp/crgn-class_7.cpp)]  
   
 ##  <a name="fromhandle"></a>  CRgn::FromHandle  
@@ -557,7 +557,7 @@ static CRgn* PASCAL FromHandle(HRGN hRgn);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hRgn`  
+ *hRgn*  
  Windows 영역에 대 한 핸들을 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -576,14 +576,14 @@ int GetRegionData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRgnData`  
+ *lpRgnData*  
  가리키는 [RGNDATA](../../mfc/reference/rgndata-structure.md) 정보를 받는 데이터 구조입니다. 이 매개 변수가 **NULL**, 반환 값 영역 데이터에 필요한 바이트 수를 포함 합니다.  
   
- `nCount`  
- 크기를 바이트 단위로 지정 된 `lpRgnData` 버퍼입니다.  
+ *nCount*  
+ 크기를 바이트 단위로 지정 된 *lpRgnData* 버퍼입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 및 `nCount` 적절 한 수를 지정, 바이트의 반환 값은 항상 `nCount`합니다. 함수가 실패 하거나 경우 `nCount` 작은 지정 보다 적절 한 바이트 수를 반환 값은 0 (오류).  
+ 함수가 성공 하면 및 *nCount* 적절 한 수를 지정, 바이트의 반환 값은 항상 *nCount*합니다. 함수가 실패 하거나 경우 *nCount* 작은 지정 보다 적절 한 바이트 수를 반환 값은 0 (오류).  
   
 ### <a name="remarks"></a>설명  
  이 데이터 영역을 구성 하는 사각형의 크기를 포함 합니다. 이 함수는와 함께에서 사용 되는 `CRgn::CreateFromData` 함수입니다.  
@@ -596,7 +596,7 @@ int GetRgnBox(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
+ *lpRect*  
  가리키는 `RECT` 구조 또는 `CRect` 경계 사각형의 좌표를 받을 개체입니다. `RECT` 구조체 형식은 다음과 같습니다.  
   
  `typedef struct tagRECT {`  
@@ -622,7 +622,7 @@ int GetRgnBox(LPRECT lpRect) const;
   
 - **SIMPLEREGION** 지역에 겹치는 테두리가 없습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CRgn::CreatePolygonRgn](#createpolygonrgn)합니다.  
   
 ##  <a name="offsetrgn"></a>  CRgn::OffsetRgn  
@@ -643,8 +643,8 @@ int OffsetRgn(POINT point);
  *y*  
  위로 또는 아래로 이동할 단위 수를 지정 합니다.  
   
- `point`  
- x 좌표 `point` 오른쪽 또는 왼쪽으로 이동 하는 단위 수를 지정 합니다. y-좌표 `point` 위로 또는 아래로 이동할 단위 수를 지정 합니다. `point` 매개 변수 중 하나일 수 있습니다는 **지점** 구조 또는 `CPoint` 개체입니다.  
+ *지점*  
+ x 좌표 *가리킨* 오른쪽 또는 왼쪽으로 이동 하는 단위 수를 지정 합니다. y-좌표 *가리킨* 위로 또는 아래로 이동할 단위 수를 지정 합니다. *가리킨* 매개 변수 중 하나일 수 있습니다는 **가리킨** 구조 또는 `CPoint` 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
  새 영역의 유형입니다. 다음 값 중 하나일 수 있습니다.  
@@ -662,7 +662,7 @@ int OffsetRgn(POINT point);
   
  영역의 좌표 값은 32, 767 및 보다 크거나-32, 768 보다 작아야 합니다. *x* 및 *y* 잘못 된 지역 좌표를 방지 하기 위해 매개 변수를 신중 하 게 선택 해야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CRgn::CreateEllipticRgn](#createellipticrgn)합니다.  
   
 ##  <a name="operator_hrgn"></a>  HRGN CRgn::operator  
@@ -698,21 +698,21 @@ BOOL PtInRegion(POINT point) const;
  *y*  
  테스트할 점의의 논리적 y 좌표를 지정 합니다.  
   
- `point`  
- x 및 y 좌표 `point` 의 값을 테스트할 점의 x 및 y 좌표를 지정 합니다. `point` 매개 변수 수는 **지점** 구조 또는 `CPoint` 개체입니다.  
+ *지점*  
+ x 및 y 좌표 *가리킨* 의 값을 테스트할 점의 x 및 y 좌표를 지정 합니다. *가리킨* 매개 변수 수는 **가리킨** 구조 또는 `CPoint` 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
  지점이; 지역에 있으면 0이 아닌 그렇지 않으면 0입니다.  
   
 ##  <a name="rectinregion"></a>  CRgn::RectInRegion  
- 사각형의 모든 부분에서 지정한 `lpRect` 내에 저장 된 영역의 경계는 `CRgn` 개체입니다.  
+ 사각형의 모든 부분에서 지정한 *lpRect* 내에 저장 된 영역의 경계는 `CRgn` 개체입니다.  
   
 ```  
 BOOL RectInRegion(LPCRECT lpRect) const;  
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
+ *lpRect*  
  가리키는 `RECT` 구조 또는 `CRect` 개체입니다. `RECT` 구조체 형식은 다음과 같습니다.  
   
  `typedef struct tagRECT {`  
@@ -744,23 +744,23 @@ void SetRectRgn(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `x1`  
+ *x1*  
  사각형 영역의 왼쪽 위 모서리의 x 좌표를 지정합니다.  
   
- `y1`  
+ *y1*  
  사각형 영역의 왼쪽 위 모퉁이의 y 좌표를 지정합니다.  
   
- `x2`  
+ *x2*  
  사각형 영역의 오른쪽 아래 모서리의 x 좌표를 지정합니다.  
   
- `y2`  
+ *y2*  
  사각형 영역의 오른쪽 아래 모서리의 y 좌표를 지정합니다.  
   
- `lpRect`  
+ *lpRect*  
  사각형 영역을 지정 합니다. 에 대 한 일 수 있습니다는 `RECT` 구조 또는 `CRect` 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 그러나와 달리 [CreateRectRgn](#createrectrgn),는 추가 메모리를 로컬 Windows 응용 프로그램 힙에서 할당 하지 않습니다. 대신,에 저장 된 영역에 대해 할당 된 공간을 사용 하 여 `CRgn` 개체입니다. 즉는 `CRgn` 개체 해야 이미 초기화 된 호출 하기 전에 유효한 Windows 영역과 `SetRectRgn`합니다. 제공한 포인트 `x1`, `y1`, `x2`, 및 `y2` 할당 된 공간의 최소 크기를 지정 합니다.  
+ 그러나와 달리 [CreateRectRgn](#createrectrgn),는 추가 메모리를 로컬 Windows 응용 프로그램 힙에서 할당 하지 않습니다. 대신,에 저장 된 영역에 대해 할당 된 공간을 사용 하 여 `CRgn` 개체입니다. 즉는 `CRgn` 개체 해야 이미 초기화 된 호출 하기 전에 유효한 Windows 영역과 `SetRectRgn`합니다. 제공한 포인트 *x1*, *y1*, *x2*, 및 *y2* 할당 된 공간의 최소 크기를 지정 합니다.  
   
  대신이 함수를 사용 하 여는 `CreateRectRgn` 로컬 메모리 관리자에 대 한 호출을 방지 하려면 멤버 함수입니다.  
   

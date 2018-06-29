@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cffe2d337d611dff0387805c99965c3c2e9ef87
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dd96f0240f8dd97fdda54fd2d00231db14ae3d47
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374651"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079185"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog 클래스
 인쇄 여백 설정과 수정이 추가로 지원되는 Windows 공용 OLE 페이지 설정 대화 상자에서 제공하는, 서비스를 캡슐화합니다.  
@@ -123,7 +123,7 @@ CPageSetupDialog(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwFlags`  
+ *dwFlags*  
  하나 이상의 플래그 대화 상자의 설정을 사용자 지정 하는 데 사용할 수 있습니다. 비트 OR 연산자를 사용 하 여 값을 결합할 수 있습니다. 이러한 값에는 다음과 같은 의미가 있습니다.  
   
 - **PSD_DEFAULTMINMARGINS** 프린터의 최소값으로 동일 하 게 페이지 여백에 대해 허용 가능한 최소 너비를 설정 합니다. 이 플래그는 무시 됩니다는 **PSD_MARGINS** 및 **PSD_MINMARGINS** 플래그 지정 됩니다.  
@@ -162,13 +162,13 @@ CPageSetupDialog(
   
 - **PSD_DISABLEPAGEPAINTING** 대화 상자의 그리기 영역을 사용 하지 않도록 설정 합니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  이 대화 상자의 부모 또는 소유자에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
  사용 하 여는 [DoModal](../../mfc/reference/cdialog-class.md#domodal) 함수 대화 상자를 표시 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#94](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]  
   
 ##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC  
@@ -202,7 +202,7 @@ virtual INT_PTR DoModal();
   
  [!code-cpp[NVC_MFCDocView#95](../../mfc/codesnippet/cpp/cpagesetupdialog-class_2.cpp)]  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)합니다.  
   
 ##  <a name="getdevicename"></a>  CPageSetupDialog::GetDeviceName  
@@ -213,7 +213,7 @@ CString GetDeviceName() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 사용 되는 장치 이름을 **CPageSetupDialog** 개체입니다.  
+ 사용 되는 장치 이름을 `CPageSetupDialog` 개체입니다.  
   
 ##  <a name="getdevmode"></a>  CPageSetupDialog::GetDevMode  
  이 함수를 호출한 후 호출 `DoModal` 의 프린터 장치 컨텍스트에 대 한 정보를 검색 하는 `CPageSetupDialog` 개체입니다.  
@@ -301,10 +301,10 @@ virtual UINT OnDrawPage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  프린터 장치 컨텍스트에 대 한 포인터입니다.  
   
- `nMessage`  
+ *n 메시지*  
  그리고 현재 페이지의 영역을 나타내는 메시지를 지정 합니다. 다음 중 하나일 수 있습니다.  
   
 - **WM_PSD_FULLPAGERECT** 전체 페이지 영역입니다.  
@@ -319,7 +319,7 @@ virtual UINT OnDrawPage(
   
 - **WM_PSD_YAFULLPAGERECT** 반송 주소 표현에 대 한 영역입니다. 이 영역은 샘플 페이지 영역의 가장자리에 확장 됩니다.  
   
- `lpRect`  
+ *lpRect*  
  에 대 한 포인터는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 또는 [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) 그리기 영역의 좌표를 포함 하는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -328,11 +328,11 @@ virtual UINT OnDrawPage(
 ### <a name="remarks"></a>설명  
  이 이미지 일반 OLE 페이지 설정 대화 상자의 일부로 표시 됩니다. 기본 구현은 텍스트의 페이지의 이미지를 그립니다.  
   
- 특정 영역, 이미지 또는 전체 이미지를 그리는 사용자 지정 하려면이 함수를 재정의 합니다. 사용 하 여이 작업을 수행할 수는 `switch` 문을 **대/소문자** 의 값을 확인 하는 문을 `nMessage`합니다. 예를 들어 페이지 이미지의 내용 렌더링을 사용자 지정 하려면 다음 예제 코드를 사용할 수 있습니다.  
+ 특정 영역, 이미지 또는 전체 이미지를 그리는 사용자 지정 하려면이 함수를 재정의 합니다. 사용 하 여이 작업을 수행할 수는 **전환** 문을 **대/소문자** 의 값을 확인 하는 문을 *n 메시지*합니다. 예를 들어 페이지 이미지의 내용 렌더링을 사용자 지정 하려면 다음 예제 코드를 사용할 수 있습니다.  
   
  [!code-cpp[NVC_MFCDocView#96](../../mfc/codesnippet/cpp/cpagesetupdialog-class_3.cpp)]  
   
- 모든 사례를 처리할 필요가 없습니다 `nMessage`합니다. 이미지는 이미지 또는 전체 영역의 여러 구성 요소 중 하나의 구성 요소를 처리 하도록 선택할 수 있습니다.  
+ 모든 사례를 처리할 필요가 없습니다 *n 메시지*합니다. 이미지는 이미지 또는 전체 영역의 여러 구성 요소 중 하나의 구성 요소를 처리 하도록 선택할 수 있습니다.  
   
 ##  <a name="predrawpage"></a>  CPageSetupDialog::PreDrawPage  
  인쇄 된 페이지의 화면 이미지를 그리기 전에 프레임 워크에서 호출 됩니다.  
@@ -348,7 +348,7 @@ virtual UINT PreDrawPage(
  *wPaper*  
  용지 크기를 나타내는 값을 지정 합니다. 이 값 중 하나일 수 있습니다는 **DMPAPER_** 값에 대 한 설명에 나열 된 [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) 구조입니다.  
   
- `wFlags`  
+ *wFlags*  
  용지 또는 봉투의 방향을 나타냅니다와 프린터 도트 매트릭스 인지 HPPCL (Hewlett Packard 프린터 제어 언어) 장치 인지 합니다. 이 매개 변수는 다음 값 중 하나를 가질 수 있습니다.  
   
 -   (도트 매트릭스) 가로 모드에서 용지 0x001  
@@ -367,7 +367,7 @@ virtual UINT PreDrawPage(
   
 -   0x01f (도트 매트릭스) 세로 모드에서 봉투 (envelope)  
   
- `pPSD`  
+ *pPSD*  
  에 대 한 포인터는 **PAGESETUPDLG** 구조입니다. 대 한 자세한 내용은 [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842), Windows SDK를 참조 하십시오.  
   
 ### <a name="return-value"></a>반환 값  

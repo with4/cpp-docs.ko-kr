@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f234b3f06e22308a31e8e5694648fd5664b448a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fef6d3e30791d2a08a82d1b152cd849cd4ebf24b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377342"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078410"
 ---
 # <a name="cpropexchange-class"></a>CPropExchange 클래스
 OLE 컨트롤의 지속성 구현을 지원합니다.  
@@ -95,20 +95,20 @@ virtual BOOL ExchangeBlobProp(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pszPropName`  
+ *pszPropName*  
  교환 중인 속성의 이름입니다.  
   
- `phBlob`  
+ *phBlob*  
  속성을 저장할 위치를 가리키는 변수에 대 한 포인터 (변수는 클래스의 멤버가 일반적으로).  
   
- `hBlobDefault`  
+ *hBlobDefault*  
  속성에 대 한 기본값입니다.  
   
 ### <a name="return-value"></a>반환 값  
  교환에 성공 하면 0이 아닌 실패 한 경우 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 속성의 값은 읽거나 쓸 적절 한 참조 변수 처럼 `phBlob`합니다. 경우 `hBlobDefault` 지정 된 경우 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 어떤 이유로 든 실패할 경우 사용 합니다.  
+ 속성의 값은 읽거나 쓸 적절 한 참조 변수 처럼 *phBlob*합니다. 경우 *hBlobDefault* 지정 된 경우 속성의 기본값으로 사용 됩니다. 이 값은 컨트롤의 serialization 어떤 이유로 든 실패할 경우 사용 합니다.  
   
  함수 **CArchivePropExchange::ExchangeBlobProp**, **CResetPropExchange::ExchangeBlobProp**, 및 **CPropsetPropExchange::ExchangeBlobProp** 재정의 이 순수 가상 함수입니다.  
   
@@ -124,23 +124,23 @@ virtual BOOL ExchangeFontProp(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pszPropName`  
+ *pszPropName*  
  교환 중인 속성의 이름입니다.  
   
- `font`  
+ *글꼴*  
  에 대 한 참조는 [CFontHolder](../../mfc/reference/cfontholder-class.md) 글꼴 속성을 포함 하는 개체입니다.  
   
- `pFontDesc`  
- 에 대 한 포인터는 [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782) font 속성의 기본 상태로 초기화에 대 한 값이 포함 된 구조 때 `pFontDispAmbient` 은 **NULL**합니다.  
+ *pFontDesc*  
+ 에 대 한 포인터는 [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782) font 속성의 기본 상태로 초기화에 대 한 값이 포함 된 구조 때 *pFontDispAmbient* 은 **NULL**합니다.  
   
- `pFontDispAmbient`  
+ *pFontDispAmbient*  
  에 대 한 포인터는 **IFontDisp** font 속성의 기본 상태로 초기화 하는 데 사용할 글꼴의 인터페이스입니다.  
   
 ### <a name="return-value"></a>반환 값  
  교환에 성공 하면 0이 아닌 실패 한 경우 0입니다.  
   
 ### <a name="remarks"></a>설명  
- Font 속성 컨트롤 미디어에서 로드 하 고, 글꼴 특성 미디어에서 검색 됩니다와 `CFontHolder` 개체에서 참조 `font` 사람과 초기화 됩니다. Font 속성에 저장 하는 경우 font 개체의 특성에는 미디어에 기록 됩니다.  
+ Font 속성 컨트롤 미디어에서 로드 하 고, 글꼴 특성 미디어에서 검색 됩니다와 `CFontHolder` 개체에서 참조 *글꼴* 사람과 초기화 됩니다. Font 속성에 저장 하는 경우 font 개체의 특성에는 미디어에 기록 됩니다.  
   
  함수 **CArchivePropExchange::ExchangeFontProp**, **CResetPropExchange::ExchangeFontProp**, 및 **CPropsetPropExchange::ExchangeFontProp** 재정의 이 순수 가상 함수입니다.  
   
@@ -156,16 +156,16 @@ virtual BOOL ExchangePersistentProp(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pszPropName`  
+ *pszPropName*  
  교환 중인 속성의 이름입니다.  
   
- `ppUnk`  
+ *ppUnk*  
  속성에 대 한 포인터를 포함 하는 변수에 대 한 포인터 **IUnknown** 인터페이스 (이 변수는 클래스의 멤버가 일반적으로).  
   
- `iid`  
+ *iid*  
  컨트롤이 사용 하는 속성에 대 한 인터페이스의 인터페이스 ID입니다.  
   
- `pUnkDefault`  
+ *pUnkDefault*  
  속성에 대 한 기본값입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -188,10 +188,10 @@ virtual BOOL ExchangeProp(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pszPropName`  
+ *pszPropName*  
  교환 중인 속성의 이름입니다.  
   
- `vtProp`  
+ *vtProp*  
  교환 중인 속성의 유형을 지정 하는 기호입니다. 가능한 값은 다음과 같습니다.  
   
 |기호|속성 형식|  
@@ -204,7 +204,7 @@ virtual BOOL ExchangeProp(
 |`VT_R4`|**float**|  
 |`VT_R8`|**double**|  
   
- `pvProp`  
+ *pvProp*  
  속성의 값에 대 한 포인터입니다.  
   
  *pvDefault*  
@@ -214,7 +214,7 @@ virtual BOOL ExchangeProp(
  교환에 성공 하면 0이 아닌 실패 한 경우 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 컨트롤에는 속성이 미디어에서 로드 되 고, 속성의 값 미디어에서 검색 되며가 가리키는 개체에 저장 된 `pvProp`합니다. 속성을 미디어에 저장 하는 경우 개체의 값 가리키는 `pvProp` 미디어에 기록 됩니다.  
+ 컨트롤에는 속성이 미디어에서 로드 되 고, 속성의 값 미디어에서 검색 되며가 가리키는 개체에 저장 된 *pvProp*합니다. 속성을 미디어에 저장 하는 경우 개체의 값 가리키는 *pvProp* 미디어에 기록 됩니다.  
   
  함수 **CArchivePropExchange::ExchangeProp**, **CResetPropExchange::ExchangeProp**, 및 **CPropsetPropExchange::ExchangeProp** 이 순수 재정의 가상 함수입니다.  
   
@@ -232,10 +232,10 @@ virtual BOOL ExchangeVersion(
  *dwVersionLoaded*  
  로드 되는 영구 데이터의 버전 번호를 저장할 변수에 대 한 참조입니다.  
   
- `dwVersionDefault`  
+ *dwVersionDefault*  
  컨트롤의 현재 버전 번호입니다.  
   
- `bConvert`  
+ *bConvert*  
  영구 데이터를 현재 버전으로 변환 또는 로드 된 동일한 버전으로 유지할 것인지를 나타냅니다.  
   
 ### <a name="return-value"></a>반환 값  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 337ecf8227f1d5c2abe0369abdea5662f882f3d2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d1dc8b636d0c97bc220f9c7f0f1e1cd165369e0
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377255"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079018"
 ---
 # <a name="crecentfilelist-class"></a>CRecentFileList 클래스
 MRU(가장 최근에 사용됨) 파일 목록의 컨트롤을 지원합니다.  
@@ -115,19 +115,19 @@ void Add(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszPathName`  
+ *lpszPathName*  
  목록에 추가할 경로 이름을 지정 합니다.  
   
- `lpszAppID`  
+ *lpszAppID*  
  응용 프로그램에 대 한 응용 프로그램 사용자 모델 ID를 지정합니다.  
   
- `pItem`  
+ *pItem*  
  셸 목록에 추가할 항목에 대 한 포인터를 지정 합니다.  
   
- `pLink`  
+ *pLink*  
  목록에 추가할 셸 링크에 대 한 포인터를 지정 합니다.  
   
- `pidl`  
+ *pidl*  
  최근 docs 폴더에 추가 해야 하는 셸 항목에 대 한 IDLIST를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -146,23 +146,23 @@ CRecentFileList(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nStart`  
+ *시작*  
  MRU (가장 최근에 사용 됨) 파일 목록 표시 메뉴에에서 번호 매기기에 대 한 오프셋입니다.  
   
- `lpszSection`  
+ *lpszSection*  
  레지스트리 또는 응용 프로그램의 섹션의 이름 가리킵니다. INI 파일에서 최근에 사용한 파일 목록 읽거나 작성 합니다.  
   
- `lpszEntryFormat`  
+ *lpszEntryFormat*  
  레지스트리 또는 응용 프로그램에 저장 된 항목 이름에 사용할 서식 문자열을 가리킵니다. INI 파일입니다.  
   
- `nSize`  
+ *nSize*  
  최근에 사용한 파일 목록에 있는 파일의 최대 수입니다.  
   
- `nMaxDispLen`  
+ *nMaxDispLen*  
  최근에 사용한 파일 목록에 파일 이름을 메뉴 표시 하기 위해 사용할 수 있는 문자에는 최대 길이입니다.  
   
 ### <a name="remarks"></a>설명  
- 형식 문자열에서 가리키는 `lpszEntryFormat` 각 MRU 항목의 인덱스를 대체에 사용할 "%d"를 포함 해야 합니다. 예를 들어 형식 문자열은 `"file%d"` 항목 이름은 다음 `file0`, `file1`등입니다.  
+ 형식 문자열에서 가리키는 *lpszEntryFormat* 각 MRU 항목의 인덱스를 대체에 사용할 "%d"를 포함 해야 합니다. 예를 들어 형식 문자열은 `"file%d"` 항목 이름은 다음 `file0`, `file1`등입니다.  
   
 ##  <a name="getdisplayname"></a>  CRecentFileList::GetDisplayName  
  MRU 목록 메뉴 표시에 사용 하기 위해 최근에 사용한 파일 목록에 파일에 대 한 표시 이름을 가져옵니다.  
@@ -177,10 +177,10 @@ virtual BOOL GetDisplayName(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `strName`  
+ *strName*  
  이름이 MRU 파일 메뉴 목록에 표시 되는 파일의 전체 경로입니다.  
   
- `nIndex`  
+ *nIndex*  
  최근에 사용한 파일 목록에 있는 파일의 인덱스 0부터 시작 합니다.  
   
  *lpszCurDir*  
@@ -189,14 +189,14 @@ virtual BOOL GetDisplayName(
  *nCurDir*  
  현재 디렉터리 문자열의 길이입니다.  
   
- `bAtLeastName`  
- 0이 아니면 나타냅니다는 파일의 기본 이름 반환 되어야 함을, 최대 디스플레이 길이 초과 하는 경우에 (변수로 전달 되는 `nMaxDispLen` 매개 변수를는 `CRecentFileList` 생성자).  
+ *bAtLeastName*  
+ 0이 아니면 나타냅니다는 파일의 기본 이름 반환 되어야 함을, 최대 디스플레이 길이 초과 하는 경우에 (변수로 전달 되는 *nMaxDispLen* 매개 변수를는 `CRecentFileList` 생성자).  
   
 ### <a name="return-value"></a>반환 값  
  **FALSE** 가장 최근에 사용한 (MRU) 파일 목록에 지정된 된 인덱스에 없는 파일 이름이 없으면 합니다.  
   
 ### <a name="remarks"></a>설명  
- 현재 디렉터리에 해당 파일을 표시 하지 디렉터리 함수가 둡니다. 파일 이름이 너무 긴 경우 디렉터리 및 확장명 제거 됩니다. 하지 않는 한 표시 이름을 빈 문자열로 설정 파일 이름이 너무 긴 여전히 경우 `bAtLeastName` 0이 아닌 합니다.  
+ 현재 디렉터리에 해당 파일을 표시 하지 디렉터리 함수가 둡니다. 파일 이름이 너무 긴 경우 디렉터리 및 확장명 제거 됩니다. 하지 않는 한 표시 이름을 빈 문자열로 설정 파일 이름이 너무 긴 여전히 경우 *bAtLeastName* 0입니다.  
   
 ##  <a name="getsize"></a>  CRecentFileList::GetSize  
  최근에 사용한 파일 목록에 있는 파일의 수를 검색 합니다.  
@@ -209,14 +209,14 @@ int GetSize() const;
  가장 최근에 현재에서 파일 수에 사용한 (MRU) 파일 목록입니다.  
   
 ##  <a name="operator_at"></a>  CRecentFileList::operator]  
- 오버 로드 된 아래 첨자 ( `[]`) 연산자는 단일 반환 `CString` 인덱스 0부터 시작 하 여 지정 된 `nIndex`합니다.  
+ 오버 로드 된 아래 첨자 ( `[]`) 연산자는 단일 반환 `CString` 인덱스 0부터 시작 하 여 지정 된 *nIndex*합니다.  
   
 ```  
 CString& operator[ ](int nindex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  0부터 시작 인덱스는 `CString` 집합이 `CString`s입니다.  
   
 ##  <a name="readlist"></a>  CRecentFileList::ReadList  
@@ -234,7 +234,7 @@ virtual void Remove(int nIndex);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  가장 최근에 사용한 (MRU) 파일 목록에서 제거할 파일의 0부터 시작 인덱스입니다.  
   
 ##  <a name="updatemenu"></a>  CRecentFileList::UpdateMenu  
@@ -245,7 +245,7 @@ virtual void UpdateMenu(CCmdUI* pCmdUI);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pCmdUI`  
+ *pCmdUI*  
  에 대 한 포인터는 [CCmdUI](../../mfc/reference/ccmdui-class.md) 가장 최근에 사용한 (MRU) 파일 목록 메뉴에 대 한 개체입니다.  
   
 ##  <a name="writelist"></a>  CRecentFileList::WriteList  

@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7b49aba6ea5d2397baa0dc72f36b2693810fbeb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f194b8119cb080c9a3b29e63781595ada0027ef
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33377464"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079775"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet 클래스
 속성 시트(탭 대화 상자라고도 함)를 나타냅니다.  
@@ -175,7 +175,7 @@ void AddPage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pPage`  
+ *물리 페이지*  
  속성 시트에 추가할 페이지를 가리킵니다. 일 수 없습니다 **NULL**합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -189,7 +189,7 @@ void AddPage(CPropertyPage* pPage);
   
  호출 하는 경우 `AddPage` 탭 행의 속성 페이지를 표시 한 후 새로 추가 된 페이지를 반영 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#129](../../mfc/codesnippet/cpp/cpropertysheet-class_1.cpp)]  
   
 ##  <a name="construct"></a>  CPropertySheet::Construct  
@@ -227,25 +227,25 @@ void Construct(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDCaption`  
+ *nIDCaption*  
  속성 시트에 사용할 캡션의 ID입니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  속성 시트의 부모 창에 대 한 포인터입니다. 경우 **NULL**, 부모 창에는 응용 프로그램의 주 창 됩니다.  
   
- `iSelectPage`  
+ *iSelectPage*  
  위에 표시 됩니다는 페이지의 인덱스입니다. 기본값은 시트에 추가 된 첫 번째 페이지입니다.  
   
- `pszCaption`  
+ *pszCaption*  
  속성 시트에 사용할 캡션을 포함 하는 문자열에 대 한 포인터입니다. 일 수 없습니다 **NULL**합니다.  
   
- `hbmWatermark`  
+ *hbmWatermark*  
  속성 페이지의 워터 마크 비트맵에 대 한 핸들입니다.  
   
- `hpalWatermark`  
+ *hpalWatermark*  
  워터 마크 비트맵 및/또는 헤더 비트맵의 팔레트에 대 한 핸들입니다.  
   
- `hbmHeader`  
+ *hbmHeader*  
  속성 페이지의 머리글 비트맵에 대 한 핸들입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -253,9 +253,9 @@ void Construct(
   
  속성 시트를 표시 하려면 호출 [DoModal](#domodal) 또는 [만들기](#create)합니다. 첫 번째 매개 변수에 포함 된 문자열의 속성 시트에 대 한 캡션 표시줄에 표시 됩니다.  
   
- 세 번째 또는 네 번째 프로토타입을 사용 하는 경우 워터 마크 및/또는 헤더 이미지를 자동으로 표시할 수 있습니다 `Construct`위에 나열 된 마우스에 대 한 유효한 값을 전달 하면는 `hbmWatermark`, `hpalWatermark`, 및/또는 `hbmHeader` 매개 변수입니다.  
+ 세 번째 또는 네 번째 프로토타입을 사용 하는 경우 워터 마크 및/또는 헤더 이미지를 자동으로 표시할 수 있습니다 `Construct`위에 나열 된 마우스에 대 한 유효한 값을 전달 하면는 *hbmWatermark*, *hpalWatermark* 및/또는 *hbmHeader* 매개 변수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서 호출 하면 어떤 상황 `Construct`합니다.  
   
  [!code-cpp[NVC_MFCDocView#130](../../mfc/codesnippet/cpp/cpropertysheet-class_2.cpp)]  
@@ -298,25 +298,25 @@ CPropertySheet(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDCaption`  
+ *nIDCaption*  
  속성 시트에 사용할 캡션의 ID입니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  속성 시트의 부모 창을 가리킵니다. 경우 **NULL**, 부모 창에는 응용 프로그램의 주 창 됩니다.  
   
- `iSelectPage`  
+ *iSelectPage*  
  위에 표시 됩니다는 페이지의 인덱스입니다. 기본값은 시트에 추가 된 첫 번째 페이지입니다.  
   
- `pszCaption`  
+ *pszCaption*  
  속성 시트에 사용할 캡션을 포함 하는 문자열을 가리킵니다. 일 수 없습니다 **NULL**합니다.  
   
- `hbmWatermark`  
+ *hbmWatermark*  
  속성 시트의 배경 비트맵에 대 한 핸들입니다.  
   
- `hpalWatermark`  
+ *hpalWatermark*  
  워터 마크 비트맵 및/또는 헤더 비트맵의 팔레트에 대 한 핸들입니다.  
   
- `hbmHeader`  
+ *hbmHeader*  
  속성 페이지의 머리글 비트맵에 대 한 핸들입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -324,9 +324,9 @@ CPropertySheet(
   
  사용 하 여 (예: 배열을 사용 하는 경우) 여러 매개 변수를 설정한 경우 [생성](#construct) 대신 `CPropertySheet`합니다.  
   
- 세 번째 또는 네 번째 프로토타입을 사용 하는 경우 워터 마크 및/또는 헤더 이미지를 자동으로 표시할 수 있습니다 `CPropertySheet`, 위에 대 한 유효한 값을 전달 하는 `hbmWatermark`, `hpalWatermark`, 및/또는 `hbmHeader` 매개 변수입니다.  
+ 세 번째 또는 네 번째 프로토타입을 사용 하는 경우 워터 마크 및/또는 헤더 이미지를 자동으로 표시할 수 있습니다 `CPropertySheet`, 위에 대 한 유효한 값을 전달 하는 *hbmWatermark*, *hpalWatermark*, 및 / 또는 *hbmHeader* 매개 변수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#131](../../mfc/codesnippet/cpp/cpropertysheet-class_3.cpp)]  
   
 ##  <a name="create"></a>  CPropertySheet::Create  
@@ -339,30 +339,30 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParentWnd`  
+ *pParentWnd*  
  부모 창을 가리킵니다. 경우 **NULL**, 부모 데스크톱입니다.  
   
- `dwStyle`  
+ *dwStyle*  
  속성 시트에 대 한 창 스타일입니다. 사용 가능한 스타일의 전체 목록은 참조 하십시오. [창 스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles)합니다.  
   
- `dwExStyle`  
+ *dwExStyle*  
  속성 시트에 대 한 확장된 창 스타일입니다. 사용 가능한 스타일의 전체 목록은 참조 하세요. [확장 창 스타일](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
 ### <a name="return-value"></a>반환 값  
  속성 시트를 만들었습니다. 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 에 대 한 호출 **만들기** 생성자 내에 있을 수 또는 생성자를 호출한 후 호출할 수 있습니다.  
+ 에 대 한 호출 `Create` 생성자 내에 있을 수 또는 생성자를 호출한 후 호출할 수 있습니다.  
   
- -1로 전달 하 여 표현 된 기본 스타일 `dwStyle`, 실제 **WS_SYSMENU&#124;**`WS_POPUP`**&#124;WS_CAPTION&#124;DS_MODALFRAME&#124;DS_CONTEXTHELP&#124;WS_ 표시**합니다. 기본 확장 창 스타일 0을 전달 하 여 표현 `dwExStyle`, 실제 **WS_EX_DLGMODALFRAME**합니다.  
+ -1로 전달 하 여 표현 된 기본 스타일 *dwStyle*, 실제 **WS_SYSMENU&#124;**`WS_POPUP`**&#124;WS_CAPTION&#124;DS_MODALFRAME&#124;DS_ CONTEXTHELP&#124;WS_VISIBLE**합니다. 기본 확장 창 스타일 0을 전달 하 여 표현 *dwExStyle*, 실제 **WS_EX_DLGMODALFRAME**합니다.  
   
- **만들기** 속성 시트를 만든 후 즉시 멤버 함수를 반환 합니다. 속성 시트를 삭제, 호출 [CWnd::DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow)합니다.  
+ `Create` 속성 시트를 만든 후 즉시 멤버 함수를 반환 합니다. 속성 시트를 삭제, 호출 [CWnd::DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow)합니다.  
   
- 모덜리스 속성 시트를 호출 하 여 표시 **만들기** 모달 속성 시트와 마찬가지로 OK, 취소, 지금 적용 및 도움말 단추가 없는 합니다. 사용자가 원하는 단추를 만들어야 합니다.  
+ 모덜리스 속성 시트를 호출 하 여 표시 `Create` 모달 속성 시트와 마찬가지로 OK, 취소, 지금 적용 및 도움말 단추가 없는 합니다. 사용자가 원하는 단추를 만들어야 합니다.  
   
  모달 속성 시트를 표시 하려면 호출 [DoModal](#domodal) 대신 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#132](../../mfc/codesnippet/cpp/cpropertysheet-class_4.cpp)]  
   
  [!code-cpp[NVC_MFCDocView#133](../../mfc/codesnippet/cpp/cpropertysheet-class_5.cpp)]  
@@ -407,7 +407,7 @@ virtual INT_PTR DoModal();
   
  속성 시트와 호환 되지 않기 때문에 다른 모든 Windows 스타일을 사용 하지 않도록 설정 합니다. 이 권장 사항은 확장된 스타일에 적용 되지 않습니다. 이러한 표준 스타일을 적절 하 게 설정 속성 시트를 수정할 수 없는 및 첫째 예외를 생성 하는 피해 야 할 보장 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CPropertySheet::AddPage](#addpage)합니다.  
   
 ##  <a name="enablestackedtabs"></a>  CPropertySheet::EnableStackedTabs  
@@ -418,15 +418,15 @@ void EnableStackedTabs(BOOL bStacked);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bStacked`  
- 속성 시트에서 누적된 탭 사용 되는지 여부를 나타냅니다. 태그의 누적된 행을 사용 하지 않도록 설정 하 여 `bStacked` 를 **FALSE**합니다.  
+ *bStacked*  
+ 속성 시트에서 누적된 탭 사용 되는지 여부를 나타냅니다. 태그의 누적된 행을 사용 하지 않도록 설정 하 여 *bStacked* 를 **FALSE**합니다.  
   
 ### <a name="remarks"></a>설명  
- 기본적으로 속성 시트 속성 시트의 너비의 단일 행에 들어가는 것 보다 더 많은 탭에 여러 행에는 탭 스택 됩니다. 호출 스택 탭 대신 스크롤 탭을 사용 하려면 `EnableStackedTabs` 와 `bStacked` 로 설정 **FALSE** 호출 하기 전에 [DoModal](#domodal) 또는 [만들기](#create)합니다.  
+ 기본적으로 속성 시트 속성 시트의 너비의 단일 행에 들어가는 것 보다 더 많은 탭에 여러 행에는 탭 스택 됩니다. 호출 스택 탭 대신 스크롤 탭을 사용 하려면 `EnableStackedTabs` 와 *bStacked* 로 설정 **FALSE** 호출 하기 전에 [DoModal](#domodal) 또는 [만들기](#create).  
   
- 호출 해야 `EnableStackedTabs` 모달 또는 모덜리스 속성 시트를 만들 때. 이 스타일의 통합 하는 `CPropertySheet`-파생 클래스를 작성 한 메시지 처리기에 대 한 `WM_CREATE`합니다. 재정의 된 버전에서 [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate), 호출 **EnableStackedTabs (FALSE)** 기본 클래스 구현을 호출 하기 전에.  
+ 호출 해야 `EnableStackedTabs` 모달 또는 모덜리스 속성 시트를 만들 때. 이 스타일의 통합 하는 `CPropertySheet`-파생 클래스를 WM_CREATE에 대 한 메시지 처리기를 작성 합니다. 재정의 된 버전에서 [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate), 호출 **EnableStackedTabs (FALSE)** 기본 클래스 구현을 호출 하기 전에.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#134](../../mfc/codesnippet/cpp/cpropertysheet-class_6.cpp)]  
   
 ##  <a name="enddialog"></a>  CPropertySheet::EndDialog  
@@ -445,7 +445,7 @@ void EndDialog(int nEndID);
   
  이 멤버 함수는 모달 대화 상자와만 사용 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CPropertySheet::PressButton](#pressbutton)합니다.  
   
 ##  <a name="getactiveindex"></a>  CPropertySheet::GetActiveIndex  
@@ -458,7 +458,7 @@ int GetActiveIndex() const;
 ### <a name="return-value"></a>반환 값  
  현재 페이지의 인덱스 번호입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CPropertySheet::GetActivePage](#getactivepage)합니다.  
   
 ##  <a name="getactivepage"></a>  CPropertySheet::GetActivePage  
@@ -474,7 +474,7 @@ CPropertyPage* GetActivePage() const;
 ### <a name="remarks"></a>설명  
  이 멤버 함수를 사용 하 여 활성 페이지에 작업을 수행할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#135](../../mfc/codesnippet/cpp/cpropertysheet-class_7.cpp)]  
   
 ##  <a name="getpage"></a>  CPropertySheet::GetPage  
@@ -485,13 +485,13 @@ CPropertyPage* GetPage(int nPage) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nPage`  
+ *nPage*  
  원하는 페이지 인덱스 0부터 시작 합니다. 0과 1 (포함)의 속성 시트의 페이지 수보다 작아야 사이 여야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 에 해당 하는 페이지에 대 한 포인터는 `nPage` 매개 변수입니다.  
+ 에 해당 하는 페이지에 대 한 포인터는 *nPage* 매개 변수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish)합니다.  
   
 ##  <a name="getpagecount"></a>  CPropertySheet::GetPageCount  
@@ -504,7 +504,7 @@ int GetPageCount() const;
 ### <a name="return-value"></a>반환 값  
  속성 시트의 페이지 수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish)합니다.  
   
 ##  <a name="getpageindex"></a>  CPropertySheet::GetPageIndex  
@@ -515,7 +515,7 @@ int GetPageIndex(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pPage`  
+ *물리 페이지*  
  인덱스를 찾을 수 있는 페이지를 가리킵니다. 일 수 없습니다 **NULL**합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -524,7 +524,7 @@ int GetPageIndex(CPropertyPage* pPage);
 ### <a name="remarks"></a>설명  
  사용 예를 들어 `GetPageIndex` 인덱스를 가져오려면 페이지를 사용 하려면 [SetActivePage](#setactivepage) 또는 [GetPage](#getpage)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CPropertySheet::GetActivePage](#getactivepage)합니다.  
   
 ##  <a name="gettabcontrol"></a>  CPropertySheet::GetTabControl  
@@ -540,18 +540,18 @@ CTabCtrl* GetTabControl() const;
 ### <a name="remarks"></a>설명  
  예를 들어 비트맵을 초기화 하는 동안 각 탭에 추가 하려는 경우이 함수를 호출 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#136](../../mfc/codesnippet/cpp/cpropertysheet-class_8.cpp)]  
   
 ##  <a name="m_psh"></a>  CPropertySheet::m_psh  
  멤버의 특성을 저장 하는 구조 [PROPSHEETHEADER](http://msdn.microsoft.com/library/windows/desktop/bb774546)합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 구조를 사용 하 여 상태로 함께 해당 스크립트가 표시 되는 생성 된 후 속성 시트의 모양을 초기화는 [DoModal](#domodal) 멤버 함수입니다. 예를 들어 설정는 `dwSize` 소속 `m_psh` 있어야 속성 시트를 원하는 크기.  
+ 이 구조를 사용 하 여 상태로 함께 해당 스크립트가 표시 되는 생성 된 후 속성 시트의 모양을 초기화는 [DoModal](#domodal) 멤버 함수입니다. 예를 들어 설정는 *dwSize* 소속 `m_psh` 있어야 속성 시트를 원하는 크기.  
   
  해당 멤버의 목록을 포함 하 여이 구조에 대 한 자세한 내용은 참조 **PROPSHEETHEADER** Windows sdk에서입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#143](../../mfc/codesnippet/cpp/cpropertysheet-class_9.cpp)]  
   
 ##  <a name="mapdialogrect"></a>  CPropertySheet::MapDialogRect  
@@ -562,7 +562,7 @@ void MapDialogRect(LPRECT lpRect) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
+ *lpRect*  
  가리키는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 변환할 대화 상자가 포함 된 개체를 조정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -570,7 +570,7 @@ void MapDialogRect(LPRECT lpRect) const;
   
  [GetDialogBaseUnits](http://msdn.microsoft.com/library/windows/desktop/ms645475) Windows 함수 시스템 글꼴에 대 한 크기 정보를 반환 하지만 사용 하는 경우에 각 속성 시트에 대 한 다른 글꼴을 지정할 수 있습니다는 **DS_SETFONT** 스타일 지정에 리소스 정의 파일입니다. [MapDialogRect](http://msdn.microsoft.com/library/windows/desktop/ms645502) Windows SDK에 설명 된 Windows 함수를이 대화 상자에 대 한 적절 한 글꼴을 사용 합니다.  
   
- `MapDialogRect` 멤버 함수는 대화 상자 단위를 대체 `lpRect` 와 대화 상자를 만들거나 상자 내에서 컨트롤을 배치 하는 사각형을 사용할 수 있도록 단위 (픽셀)를 화면입니다.  
+ `MapDialogRect` 멤버 함수는 대화 상자 단위를 대체 *lpRect* 와 대화 상자를 만들거나 상자 내에서 컨트롤을 배치 하는 사각형을 사용할 수 있도록 단위 (픽셀)를 화면입니다.  
   
 ##  <a name="oninitdialog"></a>  Cpropertysheet:: Oninitdialog  
  속성 시트 초기화를 확대를 재정의 합니다.  
@@ -580,10 +580,10 @@ virtual BOOL OnInitDialog();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 응용 프로그램 속성 시트에 컨트롤 중 하나 입력된 포커스를 설정 않았는지 여부를 지정 합니다. 경우 **OnInitDialog** 반환 0이 아닌 Windows 입력된 포커스를 속성 시트에서 첫 번째 컨트롤로 설정 합니다. 응용 프로그램에서 입력된 포커스가 속성 시트에 컨트롤 중 하나를 명시적으로 설정 하는 경우에 0을 반환할 수 있습니다.  
+ 응용 프로그램 속성 시트에 컨트롤 중 하나 입력된 포커스를 설정 않았는지 여부를 지정 합니다. 경우 `OnInitDialog` 반환 0이 아닌 Windows 입력된 포커스를 속성 시트에서 첫 번째 컨트롤로 설정 합니다. 응용 프로그램에서 입력된 포커스가 속성 시트에 컨트롤 중 하나를 명시적으로 설정 하는 경우에 0을 반환할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
- 이 멤버 함수에 대 한 응답으로 호출 됩니다는 **WM_INITDIALOG** 메시지입니다. 속성 시트 중에이 메시지를 받는 [만들기](#create) 또는 [DoModal](#domodal) 속성 시트가 표시 되기 직전에 발생 하는 호출 합니다.  
+ 이 멤버 함수는 WM_INITDIALOG 메시지에 대 한 응답으로 호출 됩니다. 속성 시트 중에이 메시지를 받는 [만들기](#create) 또는 [DoModal](#domodal) 속성 시트가 표시 되기 직전에 발생 하는 호출 합니다.  
   
  속성 시트 초기화 될 때 특수 한 처리를 수행 해야 할 경우이 멤버 함수를 재정의 합니다. 기본 클래스에서 재정의 된 버전을 먼저 호출 하 `OnInitDialog` 있지만 반환 값을 무시 합니다. 일반적으로 돌아가게 됩니다 **TRUE** 재정의 멤버 함수에서.  
   
@@ -597,7 +597,7 @@ void PressButton(int nButton);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nButton`  
+ *nButton*  
  nButton: 단추를 누른 것을 식별 합니다. 이 매개 변수는 다음 값 중 하나일 수 있습니다.  
   
 - **PSBTN_BACK** 뒤로 단추를 선택 합니다.  
@@ -619,7 +619,7 @@ void PressButton(int nButton);
   
  에 대 한 호출 `PressButton` 보내지 것입니다는 [PSN_APPLY](http://msdn.microsoft.com/library/windows/desktop/bb774552) framework에 대 한 속성 페이지에서 알림입니다. 이 알림을 보내도록 호출 [CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#137](../../mfc/codesnippet/cpp/cpropertysheet-class_10.cpp)]  
   
 ##  <a name="removepage"></a>  CPropertySheet::RemovePage  
@@ -631,10 +631,10 @@ void RemovePage(int nPage);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pPage`  
+ *물리 페이지*  
  속성 시트에서 제거할 페이지를 가리킵니다. 일 수 없습니다 `NULL`합니다.  
   
- `nPage`  
+ *nPage*  
  제거할 페이지의 인덱스입니다. 0과 1 (포함)의 속성 시트의 페이지 수보다 작아야 사이 여야 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -649,10 +649,10 @@ BOOL SetActivePage(CPropertyPage* pPage);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nPage`  
+ *nPage*  
  설정 페이지의 인덱스입니다. 0과 1 (포함)의 속성 시트의 페이지 수보다 작아야 사이 여야 합니다.  
   
- `pPage`  
+ *물리 페이지*  
  속성 시트에서 설정 하는 페이지를 가리킵니다. 않아야 **NULL**합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -661,7 +661,7 @@ BOOL SetActivePage(CPropertyPage* pPage);
 ### <a name="remarks"></a>설명  
  예를 들어 사용 `SetActivePage` 다른 페이지가 활성 페이지를 한 페이지에는 사용자의 작업으로 인해 발생 해야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CPropertySheet::GetActivePage](#getactivepage)합니다.  
   
 ##  <a name="setfinishtext"></a>  CPropertySheet::SetFinishText  
@@ -672,13 +672,13 @@ void SetFinishText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszText`  
+ *lpszText*  
  명령 "마침" 단추에 표시할 텍스트를 가리킵니다.  
   
 ### <a name="remarks"></a>설명  
  호출 `SetFinishText` 명령 "마침" 단추에 텍스트를 표시 하 고 사용자는 마법사의 마지막 페이지에서 작업을 완료 한 후 다음 및 뒤로 단추를 숨깁니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#138](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]  
   
 ##  <a name="settitle"></a>  CPropertySheet::SetTitle  
@@ -691,16 +691,16 @@ void SetTitle(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nStyle`  
+ *nStyle*  
  속성 시트 타이틀의 스타일을 지정합니다. 0 또는 스타일을 지정 해야 **PSH_PROPTITLE**합니다. 스타일으로 설정 된 경우 **PSH_PROPTITLE**, "속성" 이라는 단어 캡션으로 지정 된 텍스트 뒤에 표시 됩니다. 예를 들어 호출 `SetTitle`("단순" **PSH_PROPTITLE**) "단순 속성입니다."의 속성 시트 캡션 됩니다  
   
- `lpszText`  
+ *lpszText*  
  속성 시트의 제목 표시줄에 캡션으로 사용할 텍스트를 가리킵니다.  
   
 ### <a name="remarks"></a>설명  
  기본적으로 속성 시트는 속성 시트 생성자에서 캡션 매개 변수를 사용 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#139](../../mfc/codesnippet/cpp/cpropertysheet-class_12.cpp)]  
   
 ##  <a name="setwizardbuttons"></a>  CPropertySheet::SetWizardButtons  
@@ -711,7 +711,7 @@ void SetWizardButtons(DWORD dwFlags);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwFlags`  
+ *dwFlags*  
  집합 함수 및 마법사 단추의 모양을 사용자 지정 하는 플래그입니다. 이 매개 변수는 다음 값의 조합 될 수 있습니다.  
   
 - **PSWIZB_BACK** 뒤로 단추  
@@ -727,7 +727,7 @@ void SetWizardButtons(DWORD dwFlags);
   
  텍스트 "마침" 단추를 변경 하거나 다음 숨길 및 뒤로 단추 사용자를 한 번 호출 마법사 완료 [SetFinishText](#setfinishtext)합니다. Note 동일한 단추 완료 및 다음에 대 한 공유 됩니다. 완료 된 후 또는 다음 단추를 한 번에 하나만 표시할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  A `CPropertySheet` 는 세 가지 마법사 속성 페이지: `CStylePage`, `CColorPage`, 및 `CShapePage`합니다.  아래 코드 조각에 설정 및 해제 하는 방법을 보여 줍니다는 **다시** 및 **다음** 마법사 속성 페이지의 단추입니다.  
   
  [!code-cpp[NVC_MFCDocView#140](../../mfc/codesnippet/cpp/cpropertysheet-class_13.cpp)]  
@@ -750,7 +750,7 @@ void SetWizardMode();
   
  `SetWizardMode` PSH_WIZARD 플래그를 설정합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#142](../../mfc/codesnippet/cpp/cpropertysheet-class_15.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

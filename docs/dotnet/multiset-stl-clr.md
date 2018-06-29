@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d4a4255e5c6229ee570b9baa8952cc784044ef95
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: b3c81bc3fd5068f8269476608cc870272a0ef2e4
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305815"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079801"
 ---
 # <a name="multiset-stlclr"></a>multiset(STL/CLR)
 이 템플릿 클래스는 다양 한 길이의 요소 시퀀스를 양방향 액세스할 수 있는 제어 하는 개체를 설명 합니다. 컨테이너를 사용 하 여 `multiset` 하나의 요소 저장 하 고 각 노드의 정렬 된 나무를 균형 있게 (거의)으로 요소의 시퀀스를 관리할 수 있습니다.  
@@ -135,7 +135,7 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  Key  
  형식 제어 된 시퀀스의 요소의 핵심 구성 요소입니다.  
 
@@ -1115,7 +1115,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
  오른쪽  
  삽입 하는 열거형입니다.  
   
- val  
+ Val  
  삽입할 키 값입니다.  
   
  형식에 대한 설명  

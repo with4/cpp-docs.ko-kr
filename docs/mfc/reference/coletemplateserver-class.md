@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90b24d65dbd6f800dda0b25088288bee6fdcf3c2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 38ade76568f261c0e0320002d1a53ef1858c9509
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374385"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37077980"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer 클래스
 OLE 비주얼 편집 서버, 자동화 서버 및 링크 컨테이너(포함에 대한 링크를 지원하는 응용 프로그램)에 사용합니다.  
@@ -96,13 +96,13 @@ void ConnectTemplate(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `clsid`  
+ *clsid*  
  서식 파일을 요청 하는 OLE 클래스 ID에 대 한 참조입니다.  
   
- `pDocTemplate`  
+ *pDocTemplate*  
  서식 파일에 대 한 포인터입니다.  
   
- `bMultiInstance`  
+ *bMultiInstance*  
  단일 인스턴스 응용 프로그램의 여러 인스턴스를 지원할 수 있는지 여부를 나타냅니다. 경우 **TRUE**, 개체를 만드는 각 요청에 대 한 응용 프로그램의 여러 인스턴스를 시작 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -133,7 +133,7 @@ void UpdateRegistry(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nAppType`  
+ *nAppType*  
  값은 **OLE_APPTYPE** AFXDISP에 정의 된 열거형입니다. 8. 다음 값 중 하나를 가질 수 있습니다.  
   
 - `OAT_INPLACE_SERVER` 서버에는 전체 서버 사용자 인터페이스에 있습니다.  
@@ -144,25 +144,25 @@ void UpdateRegistry(
   
 - `OAT_DISPATCH_OBJECT` 개체는 `IDispatch`-가능 합니다.  
   
-- **OAT_DOC_OBJECT_SERVER** 모두 서버 지원 포함 및 Document 개체 구성 요소 모델입니다.  
+- `OAT_DOC_OBJECT_SERVER` 서버는 모두 지원 포함 및 Document 개체 구성 요소 모델입니다.  
   
- `rglpszRegister`  
+ *rglpszRegister*  
  항목이 없는 경우에 레지스트리에 기록 된 항목의 목록.  
   
- `rglpszOverwrite`  
+ *rglpszOverwrite*  
  위의 모든 항목의 존재 여부에 관계 없이 레지스트리로 작성 된 목록 항목입니다.  
   
- `bRegister`  
- 클래스를 등록 해야 하는지를 결정 합니다. 경우 `bRegister` 은 **TRUE**, 클래스를 시스템 레지스트리에 등록 됩니다. 그렇지 않으면 클래스 등록 취소합니다.  
+ *b 등록 하십시오*  
+ 클래스를 등록 해야 하는지를 결정 합니다. 경우 *b 등록 하십시오* 은 **TRUE**, 클래스를 시스템 레지스트리에 등록 됩니다. 그렇지 않으면 클래스 등록 취소합니다.  
   
 ### <a name="remarks"></a>설명  
  호출 하 여 등록 정보가 로드 되어 [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)합니다. 검색할 부분 문자열은 인덱스에 의해 식별 **regFileTypeId**, **regFileTypeName**, 및 **fileNewName**에 설명 된 대로 `GetDocString` 페이지를 참조 합니다.  
   
  경우는 **regFileTypeId** 부분 문자열은 비어 있거나에 대 한 호출 `GetDocString` 어떤 이유로 든 다른이 함수가 실패 하면 실패 하 고 파일 정보를 레지스트리에 입력 하지 않으면 합니다.  
   
- 인수에 있는 정보 `rglpszRegister` 및 `rglpszOverwrite` 호출을 통해 레지스트리에 기록 됩니다 [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass)합니다. 두 개의 인수는 때 등록 되는 기본 정보를 **NULL**, 대부분의 응용 프로그램에 적합 합니다. 이 인수에 있는 정보의 구조에 대 한 정보를 참조 하십시오. `AfxOleRegisterServerClass`합니다.  
+ 인수에 있는 정보 *rglpszRegister* 및 *rglpszOverwrite* 호출을 통해 레지스트리에 기록 됩니다 [AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass)합니다. 두 개의 인수는 때 등록 되는 기본 정보를 **NULL**, 대부분의 응용 프로그램에 적합 합니다. 이 인수에 있는 정보의 구조에 대 한 정보를 참조 하십시오. `AfxOleRegisterServerClass`합니다.  
   
- 자세한 내용은 [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)을 참조하십시오.  
+ 자세한 내용은 참조 [IDispatch 인터페이스 구현](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [MFC 샘플 HIERSVR](../../visual-cpp-samples.md)   

@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 718283893c9e8ec9798dea9a4b9fb307d1099e68
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 95fdd973d94c0d60e5e3177260740c5d62f1ea5b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952059"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078558"
 ---
 # <a name="cd2dbrush-class"></a>CD2DBrush 클래스
 ID2D1Brush에 대 한 래퍼입니다.  
@@ -118,7 +118,7 @@ void Attach(ID2D1Brush* pResource);
   
 ### <a name="parameters"></a>매개 변수  
  *pResource*  
- 기존 리소스 인터페이스입니다. NULL 일 수 없습니다.  
+ 기존 리소스 인터페이스입니다. NULL일 수 없습니다.  
   
 ##  <a name="cd2dbrush"></a>  CD2DBrush::CD2DBrush  
  CD2DBrush 개체를 만듭니다.  
@@ -175,7 +175,7 @@ FLOAT GetOpacity() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- -브러시 불투명도 나타내는 1에서 0 사이의 값입니다. 이 값은 상수 승수 선형적으로 확대의 브러시에 의해 채워진 모든 픽셀이 알파 값입니다. 불투명도 값은 고정 됩니다. 0 ~ 1 범위 함께 곱하기 전에  
+ -브러시 불투명도 나타내는 1에서 0 사이의 값입니다. 이 값은 상수 승수 선형적으로 확대의 브러시에 의해 채워진 모든 픽셀이 알파 값입니다. 불투명도 값은 함께 곱하기 전에 0 ~ 1 범위 고정 됩니다.  
   
 ##  <a name="gettransform"></a>  CD2DBrush::GetTransform  
  렌더링 대상의 현재 변환을 가져옵니다.  
@@ -186,7 +186,7 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform) const;
   
 ### <a name="parameters"></a>매개 변수  
  *transform*  
- 이 반환 될 때 렌더링 대상의 현재 변형을 포함 합니다. 이 매개 변수는 초기화 되지 않은 상태로 전달 됩니다.  
+ 이 반환 될 때 렌더링 대상의 현재 변형을 포함 합니다. 이 매개 변수는 초기화되지 않은 상태로 전달됩니다.  
   
 ##  <a name="isvalid"></a>  CD2DBrush::IsValid  
  리소스 유효성 검사  
@@ -231,10 +231,10 @@ void SetOpacity(FLOAT opacity);
   
 ### <a name="parameters"></a>매개 변수  
  *불투명도*  
- -브러시 불투명도 나타내는 1에서 0 사이의 값입니다. 이 값은 상수 승수 선형적으로 확대의 브러시에 의해 채워진 모든 픽셀이 알파 값입니다. 불투명도 값은 고정 됩니다. 0 ~ 1 범위 함께 곱하기 전에  
+ -브러시 불투명도 나타내는 1에서 0 사이의 값입니다. 이 값은 상수 승수 선형적으로 확대의 브러시에 의해 채워진 모든 픽셀이 알파 값입니다. 불투명도 값은 함께 곱하기 전에 0 ~ 1 범위 고정 됩니다.  
   
 ##  <a name="settransform"></a>  CD2DBrush::SetTransform  
- 기존 변환을 바꾸는 렌더링 대상으로 지정된 된 변환을 적용 합니다. 변환 된 공간에서 발생 이후의 모든 그리기 작업  
+ 기존 변환을 바꾸는 렌더링 대상으로 지정된 된 변환을 적용 합니다. 이후의 모든 그리기 작업은 변환 된 공간에서 발생 합니다.  
   
 ```  
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);

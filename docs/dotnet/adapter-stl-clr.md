@@ -59,12 +59,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 598159ff01fe1628a693085f84077d9adfcbbf49
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: a472284df67993a65de98df7db698ea533451ea3
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305544"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079438"
 ---
 # <a name="adapter-stlclr"></a>adapter(STL/CLR)
 STL/CLR 헤더 `<cliext/adapter>` 두 템플릿 클래스 지정 (`collection_adapter` 및 `range_adapter`), 및 템플릿 함수 `make_collection`합니다.  
@@ -80,7 +80,7 @@ STL/CLR 헤더 `<cliext/adapter>` 두 템플릿 클래스 지정 (`collection_ad
   
  **Namespace:** cliext 
   
-## <a name="members"></a>멤버  
+## <a name="declarations"></a>선언  
   
 |클래스|설명|  
 |-----------|-----------------|  
@@ -91,6 +91,8 @@ STL/CLR 헤더 `<cliext/adapter>` 두 템플릿 클래스 지정 (`collection_ad
 |--------------|-----------------|  
 |[make_collection(STL/CLR)](#make_collection)|반복기 쌍을 사용 하 여 범위 어댑터를 만듭니다.|   
   
+## <a name="members"></a>멤버
+
 ## <a name="collection_adapter"></a> collection_adapter (STL/CLR)
 STL/CLR 컨테이너로 사용 하기 위해.NET 컬렉션을 래핑합니다. A `collection_adapter` 간단한 STL/CLR 컨테이너 개체를 설명 하는 템플릿 클래스입니다. 클래스 라이브러리 BCL (기본) 인터페이스를 래핑하고 제어 되는 시퀀스를 조작 하는 데 사용 하는 반복기 쌍을 반환 합니다.  
   
@@ -990,7 +992,7 @@ template<typename Iter>
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- iter  
+ Iter  
  래핑된 반복기와 관련 된 형식입니다.  
   
 ### <a name="members"></a>멤버  

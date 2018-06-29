@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 365247dc41ea75e67f63b2bb76b5bfe0c14a7ead
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e36baac5850942239bc9e553ed041a2914f8d670
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376293"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079546"
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass 구조
 각 클래스에서 파생 된 `CObject` 연관는 `CRuntimeClass` 런타임에 개체 또는 해당 기본 클래스에 대 한 정보를 가져오는 데 사용할 수 있는 구조입니다.  
@@ -83,7 +83,7 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszClassName`  
+ *lpszClassName*  
  클래스를 만들 수의 친숙 한 이름입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -92,7 +92,7 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 ### <a name="remarks"></a>설명  
  클래스에서 파생 된 `CObject` 런타임 시 지정된 된 클래스의 개체를 만들 수 있는 동적 만들기를 지원할 수 있습니다. 문서, 뷰 및 프레임 클래스, 예를 들어 해야 동적 생성을 지원 합니다. 동적 만들기에 대 한 자세한 내용은 및 `CreateObject` 멤버 참조 [CObject 클래스](../../mfc/using-cobject.md) 및 [CObject 클래스: 기능 수준 지정](../../mfc/specifying-levels-of-functionality.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [IsDerivedFrom](#isderivedfrom)합니다.  
   
 ##  <a name="fromname"></a>  CRuntimeClass::FromName  
@@ -105,13 +105,13 @@ static CRuntimeClass* PASCAL FromName(LPCWSTR lpszClassName);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszClassName`  
+ *lpszClassName*  
  파생 된 클래스의 친숙 한 이름을 `CObject`합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `CRuntimeClass` 이름에 해당 하는 전달 된 개체 `lpszClassName`합니다. 함수 반환 **NULL** 경우 일치 하는 클래스 이름을 찾지 못했습니다.  
+ 에 대 한 포인터는 `CRuntimeClass` 이름에 해당 하는 전달 된 개체 *lpszClassName*합니다. 함수 반환 **NULL** 경우 일치 하는 클래스 이름을 찾지 못했습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCObjectSample#17](../../mfc/codesnippet/cpp/cruntimeclass-structure_1.cpp)]  
   
 ##  <a name="isderivedfrom"></a>  CRuntimeClass::IsDerivedFrom  
@@ -134,11 +134,11 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
  관계 "를 검색 하 여" 파생 된 클래스의 체인을 해당 멤버의 클래스에서 위쪽으로 결정 됩니다. 이 함수는만 반환 **FALSE** 기본 클래스에 대 한 일치 항목이 없을 경우.  
   
 > [!NOTE]
->  사용 하는 `CRuntimeClass` 포함 해야 구조는 `IMPLEMENT_DYNAMIC`, `IMPLEMENT_DYNCREATE`, 또는 `IMPLEMENT_SERIAL` 런타임에 개체 정보를 검색 하려는 클래스의 구현에서 매크로입니다.  
+>  사용 하 여 `CRuntimeClass` 구조를 런타임에 개체 정보를 검색 하려는 클래스의 구현에 IMPLEMENT_DYNAMIC, IMPLEMENT_DYNCREATE, 또는 IMPLEMENT_SERIAL 매크로 포함 해야 합니다.  
   
  사용 하 여 대 한 자세한 내용은 `CRuntimeClass`, 문서를 참조 [CObject 클래스: 런타임 클래스 정보 액세스](../../mfc/accessing-run-time-class-information.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCObjectSample#18](../../mfc/codesnippet/cpp/cruntimeclass-structure_2.cpp)]  
   
 ##  <a name="m_lpszclassname"></a>  CRuntimeClass::m_lpszClassName  
@@ -147,7 +147,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="remarks"></a>설명  
  이 이름을 사용 하 여 클래스의 인스턴스를 만드는 데 사용할 수는 `FromName` 멤버 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [IsDerivedFrom](#isderivedfrom)합니다.  
   
 ##  <a name="m_nobjectsize"></a>  CRuntimeClass::m_nObjectSize  
@@ -156,7 +156,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="remarks"></a>설명  
  개체에 데이터 멤버가 할당 된 메모리에 해당 지점 해당 메모리의 크기가 포함 되지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [IsDerivedFrom](#isderivedfrom)합니다.  
   
 ##  <a name="m_pbaseclass"></a>  CRuntimeClass::m_pBaseClass  
@@ -165,7 +165,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="remarks"></a>설명  
  응용 프로그램 동적으로 MFC 라이브러리에 연결 하는 경우 참조 [m_pfnGetBaseClass](#m_pfngetbaseclass)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [IsDerivedFrom](#isderivedfrom)합니다.  
   
 ##  <a name="m_pfncreateobject"></a>  CRuntimeClass::m_pfnCreateObject  
@@ -180,7 +180,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="remarks"></a>설명  
  응용 프로그램은 정적으로 MFC 라이브러리에 링크를 참조 [m_pBaseClass](#m_pbaseclass)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [IsDerivedFrom](#isderivedfrom)합니다.  
   
 ##  <a name="m_wschema"></a>  CRuntimeClass::m_wSchema  
@@ -189,7 +189,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 ### <a name="remarks"></a>설명  
  스키마 번호에 대 한 자세한 내용은 참조는 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial) 매크로입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [IsDerivedFrom](#isderivedfrom)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -61,12 +61,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e37a8329e0afaa26b114d0ae0da53f0ec552e09e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 03c41bc17b6d8e5853203533a2d20d81063316a1
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36954751"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079291"
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap 클래스
 ID2D1Bitmap에 대 한 래퍼입니다.  
@@ -160,7 +160,7 @@ void Attach(ID2D1Bitmap* pResource);
   
 ### <a name="parameters"></a>매개 변수  
  *pResource*  
- 기존 리소스 인터페이스입니다. NULL 일 수 없습니다.  
+ 기존 리소스 인터페이스입니다. NULL일 수 없습니다.  
   
 ##  <a name="cd2dbitmap"></a>  CD2DBitmap::CD2DBitmap  
  리소스에서 CD2DBitmap 개체를 만듭니다.  
@@ -223,7 +223,7 @@ void CommonInit();
 ```  
   
 ##  <a name="copyfrombitmap"></a>  CD2DBitmap::CopyFromBitmap  
- 지정된 된 지역 지정한 비트맵에서 현재 비트맵으로 복사합니다.  
+ 지정한 비트맵에서 지정된 된 영역을 현재 비트맵에 복사합니다.  
   
 ```  
 HRESULT CopyFromBitmap(
@@ -234,19 +234,19 @@ HRESULT CopyFromBitmap(
   
 ### <a name="parameters"></a>매개 변수  
  *pBitmap*  
- 복사할 비트맵  
+ 복사 하는 비트맵입니다.  
   
  *destPoint*  
  현재 비트맵을 srcRect에 의해 지정 된 영역이 영역의 왼쪽 위 모서리 복사 됩니다.  
   
  *srcRect*  
- 복사 하는 비트맵의 영역  
+ 복사 하는 비트맵의 영역입니다.  
   
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK를 반환 합니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.  
   
 ##  <a name="copyfrommemory"></a>  CD2DBitmap::CopyFromMemory  
- 지정된 된 지역 메모리에서 현재 비트맵으로 복사합니다.  
+ 메모리에서 지정된 된 영역을 현재 비트맵에 복사합니다.  
   
 ```  
 HRESULT CopyFromMemory(
@@ -260,16 +260,16 @@ HRESULT CopyFromMemory(
  복사할 데이터입니다.  
   
  *피치*  
- SrcData에 저장 된 소스 비트맵의 피치 또는 진행 속도입니다. Stride는 스캐닝선 (메모리에서 픽셀의 한 행)의 바이트 수입니다. Stride는 다음 형식으로 계산할 수 있습니다: 픽셀 너비 * 픽셀 + 메모리 패딩 당 바이트 수  
+ SrcData에 저장 된 소스 비트맵의 피치 또는 진행 속도입니다. Stride는 스캐닝선 (메모리에서 픽셀의 한 행)의 바이트 수입니다. Stride는 다음 형식으로 계산할 수 있습니다: 픽셀 너비 * 픽셀 + 메모리 패딩 당 바이트 수입니다.  
   
  *destRect*  
- 현재 비트맵을 srcRect에 의해 지정 된 영역이 영역의 왼쪽 위 모서리 복사 됩니다.  
+ 현재 비트맵을 srcRect에 의해 지정 된 영역이 영역의 왼쪽 위 모서리 복사 됩니다. 
   
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK를 반환 합니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.  
   
 ##  <a name="copyfromrendertarget"></a>  CD2DBitmap::CopyFromRenderTarget  
- 복사본이 지정 된 위치에서 지정된 된 영역 렌더링 대상 현재 비트맵으로  
+ 지정 된 위치에서 지정된 된 영역 복사 대상 현재 비트맵으로 렌더링 합니다.  
   
 ```  
 HRESULT CopyFromRenderTarget(
@@ -280,13 +280,13 @@ HRESULT CopyFromRenderTarget(
   
 ### <a name="parameters"></a>매개 변수  
  *pRenderTarget*  
- 복사할 영역을 포함 하는 렌더링 대상  
+ 복사할 영역을 포함 하는 렌더링 대상입니다.  
   
  *destPoint*  
  현재 비트맵을 srcRect에 의해 지정 된 영역이 영역의 왼쪽 위 모서리 복사 됩니다.  
   
  *srcRect*  
- 복사할 편의 영역  
+ 복사할 편의의 영역입니다.  
   
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK를 반환 합니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.  
@@ -323,7 +323,7 @@ ID2D1Bitmap* Detach();
  분리 된 리소스 인터페이스 포인터입니다.  
   
 ##  <a name="get"></a>  CD2DBitmap::Get  
- 반환 ID2D1Bitmap 인터페이스  
+ 반환 ID2D1Bitmap 인터페이스입니다.  
   
 ```  
 ID2D1Bitmap* Get();
@@ -353,7 +353,7 @@ D2D1_PIXEL_FORMAT GetPixelFormat() const;
  비트맵의 픽셀 형식 및 알파 모드입니다.  
   
 ##  <a name="getpixelsize"></a>  CD2DBitmap::GetPixelSize  
- 비트맵의의 크기를 장치 독립적 단위 (픽셀)를 반환합니다.  
+ 비트맵의 크기를 장치 독립적 단위 (픽셀)를 반환합니다.  
   
 ```  
 CD2DSizeU GetPixelSize() const;  
@@ -363,7 +363,7 @@ CD2DSizeU GetPixelSize() const;
  비트맵의 픽셀 크기...  
   
 ##  <a name="getsize"></a>  CD2DBitmap::GetSize  
- 비트맵의 크기 (Dip)를 장치 독립적 픽셀 단위로 반환  
+ 비트맵의 크기 (Dip)를 장치 독립적 픽셀 단위로 반환합니다.  
   
 ```  
 CD2DSizeF GetSize() const;  
@@ -373,7 +373,7 @@ CD2DSizeF GetSize() const;
  비트맵의 Dip 단위로 크기입니다.  
   
 ##  <a name="isvalid"></a>  CD2DBitmap::IsValid  
- 리소스 유효성 검사  
+ 리소스 유효성을 검사 합니다.  
   
 ```  
 virtual BOOL IsValid() const;  

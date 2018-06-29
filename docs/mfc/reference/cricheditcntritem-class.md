@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a64950bcb0cc931b4528276e85f5d60e3b5cb08
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b0b4c038389810fcc6a847cdbf7837568b3007b6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368422"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078610"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem 클래스
 와 [CRichEditView](../../mfc/reference/cricheditview-class.md) 및 [CRichEditDoc](../../mfc/reference/cricheditdoc-class.md), MFC의 문서 뷰 아키텍처 컨텍스트 내에서 rich edit 컨트롤의 기능을 제공 합니다.  
@@ -86,8 +86,8 @@ CRichEditCntrItem(
  *preo*  
  에 대 한 포인터는 [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) OLE 항목에 설명 하는 구조입니다. 새 `CRichEditCntrItem` 이 OLE 항목 주위에 개체 생성 합니다. 경우 *preo* 은 **NULL**, 클라이언트 항목이 비어 있습니다.  
   
- `pContainer`  
- 이 항목에 포함 될 컨테이너 문서에 대 한 포인터입니다. 경우 `pContainer` 은 **NULL**를 명시적으로 호출 해야 [COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem) 문서에이 클라이언트 항목을 추가 합니다.  
+ *pContainer*  
+ 이 항목에 포함 될 컨테이너 문서에 대 한 포인터입니다. 경우 *pContainer* 은 **NULL**를 명시적으로 호출 해야 [COleDocument::AddItem](../../mfc/reference/coledocument-class.md#additem) 문서에이 클라이언트 항목을 추가 합니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수는 모든 OLE 초기화를 수행 하지 않습니다.  
@@ -95,7 +95,7 @@ CRichEditCntrItem(
  자세한 내용은 참조는 [REOBJECT](http://msdn.microsoft.com/library/windows/desktop/bb787946) Windows SDK에는 구조입니다.  
   
 ##  <a name="synctoricheditobject"></a>  CRichEditCntrItem::SyncToRichEditObject  
- 장치 측면을 동기화 하려면이 함수를 호출 [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318),이 **CRichEditCntrltem** 에 지정 된 *reo*합니다.  
+ 장치 측면을 동기화 하려면이 함수를 호출 [DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318),이 `CRichEditCntrltem` 에 지정 된 *reo*합니다.  
   
 ```  
 void SyncToRichEditObject(REOBJECT& reo);

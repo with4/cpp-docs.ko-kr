@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 475314edba2a11535349991db644a4915e352ae7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 28a82cc55e1cbf782603c7b34368fbc3d4ebe4c4
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372840"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079204"
 ---
 # <a name="connection-maps"></a>연결 맵
 OLE 컨트롤은 다른 응용 프로그램에 대 한 인터페이스를 노출할 수 있습니다. 이러한 인터페이스는이 컨트롤에는 컨테이너에서의 액세스만을 허용 합니다. OLE 컨트롤을 다른 OLE 개체의 외부 인터페이스에 액세스 하려는 경우 한 연결 지점을 설정 되어야 합니다. 이 연결점에는 나가는 이벤트 맵 또는 알림 함수 등의 외부 디스패치 맵에 대 한 액세스를 제어할 수 있습니다.  
@@ -59,14 +59,14 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `theClass`  
+ *theClass*  
  이 연결점 컨트롤 클래스의 이름을 지정 합니다.  
   
  *localClass*  
  연결 지점을 구현하는 로컬 클래스의 이름을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
- 클래스 멤버 함수를 정의 하는 선언 (.h) 파일에서 시작 연결점은 `BEGIN_CONNECTION_PART` 매크로 다음 추가 `CONNECTION_IID` 매크로 다른 멤버 함수를 구현 하 고 연결 지점 맵을 완료 합니다. 와 `END_CONNECTION_PART` 매크로입니다.  
+ 클래스 멤버 함수를 정의 하는 선언 (.h) 파일에서 시작 연결점 BEGIN_CONNECTION_PART 매크로와 다음 CONNECTION_IID 매크로 다른 멤버 함수를 구현 하려면 추가 하 고 연결을 완료 END_CONNECTION_PART 매크로와 지도 가리킵니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdisp.h  
@@ -86,18 +86,18 @@ END_CONNECTION_PART(localClass)
   **헤더** afxdisp.h  
   
 ##  <a name="connection_iid"></a>  CONNECTION_IID  
- 사이 사용 된 `BEGIN_CONNECTION_PART` 및 `END_CONNECTION_PART` OLE 컨트롤에서 지 원하는 연결 지점에 대 한 인터페이스 ID를 정의 하는 매크로입니다.  
+ OLE 컨트롤에서 지 원하는 연결 지점에 대 한 인터페이스 ID를 정의 하려면 매크로 BEGIN_CONNECTION_PART 사이의 END_CONNECTION_PART 사용.  
   
 ```   
 CONNECTION_IID(iid)   
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `iid`  
+ *iid*  
  연결 지점에서 호출 하는 인터페이스의 인터페이스 ID입니다.  
   
 ### <a name="remarks"></a>설명  
- `iid` 인수는 ID에 해당 연결 된 싱크 연결점은 호출 하는 인터페이스를 식별 하는 데 사용 하는 인터페이스입니다. 예를 들어:  
+ *iid* 인수는 ID에 해당 연결 된 싱크 연결점은 호출 하는 인터페이스를 식별 하는 데 사용 하는 인터페이스입니다. 예를 들어:  
   
  [!code-cpp[NVC_MFCConnectionPoints#10](../../mfc/codesnippet/cpp/connection-maps_1.h)]  
   
@@ -114,7 +114,7 @@ DECLARE_CONNECTION_MAP()
 ```  
   
 ### <a name="remarks"></a>설명  
- 사용 하 여 컨트롤에 추가 점을 지원는 `DECLARE_CONNECTION_MAP` 끝 클래스 선언에는 매크로입니다. 그런 다음 클래스에 대 한 멤버 함수를 정의 하는.cpp 파일에서 사용 하는 `BEGIN_CONNECTION_MAP` 매크로 `CONNECTION_PART` 각 컨트롤의 연결 지점에 대 한 매크로 및 `END_CONNECTION_MAP` 연결 맵의 끝을 선언 하는 매크로입니다.  
+ 컨트롤에 추가 점을 지원 클래스 선언의 끝 DECLARE_CONNECTION_MAP 매크로 사용 합니다. 그런 다음 클래스에 대 한 멤버 함수를 정의 하는.cpp 파일에서 사용 하 여 BEGIN_CONNECTION_MAP 매크로, 각 컨트롤의 연결 지점에 대 한 CONNECTION_PART 매크로 및 END_CONNECTION_MAP 매크로 연결 맵의 끝을 선언 하 합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdisp.h  
@@ -127,14 +127,14 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `theClass`  
+ *theClass*  
  이 연결을 매핑할 컨트롤 클래스의 이름을 지정합니다.  
   
  *theBase*  
- `theClass`의 기본 클래스 이름을 지정합니다.  
+ 기본 클래스의 이름을 지정 *theClass*합니다.  
   
 ### <a name="remarks"></a>설명  
- 구현에서 (합니다. 클래스에 대 한 멤버 함수를 정의 하는 CPP) 파일 연결 맵을 시작는 `BEGIN_CONNECTION_MAP` 매크로 다음 사용 하 여 연결 지점의 각각에 대해 매크로 항목을 추가 [CONNECTION_PART](#connection_part) 매크로입니다. 마지막으로 연결 맵을 완료 합니다.는 [END_CONNECTION_MAP](#end_connection_map) 매크로입니다.  
+ 구현에서 (합니다. 클래스에 대 한 cpp) 멤버를 정의 하는 함수, BEGIN_CONNECTION_MAP 매크로 사용 하 여 연결 맵을 시작 하 고 사용 하 여 연결 지점의 각각에 대해 매크로 항목을 추가 [CONNECTION_PART](#connection_part) 매크로입니다. 마지막으로 연결 맵을 완료 합니다.는 [END_CONNECTION_MAP](#end_connection_map) 매크로입니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdisp.h  
@@ -157,10 +157,10 @@ CONNECTION_PART(theClass, iid, localClass)
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `theClass`  
+ *theClass*  
  이 연결점 컨트롤 클래스의 이름을 지정 합니다.  
   
- `iid`  
+ *iid*  
  연결 지점에서 호출 하는 인터페이스의 인터페이스 ID입니다.  
   
  *localClass*  
@@ -177,7 +177,7 @@ CONNECTION_PART(theClass, iid, localClass)
   **헤더** afxdisp.h  
   
 ##  <a name="afxconnectionadvise"></a>  AfxConnectionAdvise  
- 로 지정 된 원본 사이의 연결을 설정 하려면이 함수를 호출 `pUnkSrc`를 및로 지정 된 싱크 `pUnkSink`합니다.  
+ 로 지정 된 원본 사이의 연결을 설정 하려면이 함수를 호출 *pUnkSrc*를 및로 지정 된 싱크 *pUnkSink*합니다.  
   
 ```   
 BOOL AFXAPI AfxConnectionAdvise(
@@ -189,32 +189,32 @@ BOOL AFXAPI AfxConnectionAdvise(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pUnkSrc`  
+ *pUnkSrc*  
  인터페이스를 호출 하는 개체에 대 한 포인터입니다.  
   
- `pUnkSink`  
+ *pUnkSink*  
  인터페이스를 구현 하는 개체에 대 한 포인터입니다.  
   
- `iid`  
+ *iid*  
  연결의 인터페이스 ID입니다.  
   
- `bRefCount`  
- **True 이면** 연결을 만드는의 참조 횟수를 인해 해야 함을 나타냅니다 `pUnkSink` 증가 합니다. **FALSE** 참조 횟수를 증가 하지 되 나타냅니다.  
+ *bRefCount*  
+ **True 이면** 연결을 만드는의 참조 횟수를 인해 해야 함을 나타냅니다 *pUnkSink* 증가 합니다. **FALSE** 참조 횟수를 증가 하지 되 나타냅니다.  
   
- `pdwCookie`  
- 에 대 한 포인터는 `DWORD` 연결 식별자 반환 됩니다. 이 값으로 전달 해야는 `dwCookie` 매개 변수를 `AfxConnectionUnadvise` 연결의 연결을 끊을 때.  
+ *pdwCookie*  
+ 에 대 한 포인터는 `DWORD` 연결 식별자 반환 됩니다. 이 값으로 전달 해야는 *dwCookie* 매개 변수를 `AfxConnectionUnadvise` 연결의 연결을 끊을 때.  
   
 ### <a name="return-value"></a>반환 값  
  연결이 설정 되었습니다. 0이 아닌 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCConnectionPoints#8](../../mfc/codesnippet/cpp/connection-maps_3.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  
  **헤더:** afxctl.h 
 
 ##  <a name="afxconnectionunadvise"></a>  AfxConnectionUnadvise  
- 로 지정 된 소스 간에 연결을 끊거나이 함수를 호출 `pUnkSrc`를 및로 지정 된 싱크 `pUnkSink`합니다.  
+ 로 지정 된 소스 간에 연결을 끊거나이 함수를 호출 *pUnkSrc*를 및로 지정 된 싱크 *pUnkSink*합니다.  
   
 ```   
 BOOL AFXAPI AfxConnectionUnadvise(
@@ -226,25 +226,25 @@ BOOL AFXAPI AfxConnectionUnadvise(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pUnkSrc`  
+ *pUnkSrc*  
  인터페이스를 호출 하는 개체에 대 한 포인터입니다.  
   
- `pUnkSink`  
+ *pUnkSink*  
  인터페이스를 구현 하는 개체에 대 한 포인터입니다.  
   
- `iid`  
+ *iid*  
  연결 지점 인터페이스의 인터페이스 ID입니다.  
   
- `bRefCount`  
- **True 이면** 는 연결을 끊기의 참조 횟수를 인해 해야 함을 나타냅니다 `pUnkSink` 감소 됩니다. **FALSE** 참조 횟수 감소 하지 않아야 나타냅니다.  
+ *bRefCount*  
+ **True 이면** 는 연결을 끊기의 참조 횟수를 인해 해야 함을 나타냅니다 *pUnkSink* 감소 됩니다. **FALSE** 참조 횟수 감소 하지 않아야 나타냅니다.  
   
- `dwCookie`  
+ *dwCookie*  
  반환 된 연결 식별자 `AfxConnectionAdvise`합니다.  
   
 ### <a name="return-value"></a>반환 값  
  0이 아닌 경우에 대 한 연결이 끊어졌습니다. 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCConnectionPoints#9](../../mfc/codesnippet/cpp/connection-maps_4.cpp)]  
 
 ### <a name="requirements"></a>요구 사항  

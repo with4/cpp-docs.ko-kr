@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5ed7d1dad634d330ac857f52d6ef35ef36c9c9a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7711e0105085f0b7af1344ce230839e90f2b6851
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33376895"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079490"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 Windows API 함수를 래핑하여 레지스트리에 액세스하는 데 사용할 수 있는 개체 지향 인터페이스를 제공합니다.  
@@ -71,7 +71,7 @@ class CSettingsStore : public CObject
 ## <a name="remarks"></a>설명  
  멤버 함수 `CreateKey` 및 `Open` 는 매우 유사 합니다. 레지스트리 키가 이미 있는 경우 `CreateKey` 및 `Open` 같은 방식으로 함수입니다. 그러나 레지스트리 키가 없는 경우, `CreateKey` 반면 만들 `Open` 오류 값을 반환 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는의 Open 및 읽기 메서드를 사용 하 여 `CSettingsStore` 클래스입니다. 이 코드 조각은의 일부인는 [도구 팁 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_ToolTipDemo#1](../../mfc/reference/codesnippet/cpp/csettingsstore-class_1.cpp)]  
@@ -102,14 +102,14 @@ virtual BOOL CreateKey(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pszPath`  
+ [in] *pszPath*  
  만들거나 열을 키의 이름을 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공 하면 0 그렇지 않으면 0이 아닌 값입니다.  
   
 ### <a name="remarks"></a>설명  
- `CreateKey` 사용 하 여 `m_hKey` 레지스트리 조회의 루트 라고 합니다. 검색할 `pszPath` 의 하위 키로 `m_hKey`합니다. 키가 없는 경우 `CreateKey` 을 만듭니다. 그렇지 않으면 키를 엽니다. `CreateKey` 다음 설정 `m_hKey` 만들거나 열린 키에 있습니다.  
+ `CreateKey` 사용 하 여 `m_hKey` 레지스트리 조회의 루트 라고 합니다. 검색할 *pszPath* 의 하위 키로 `m_hKey`합니다. 키가 없는 경우 `CreateKey` 을 만듭니다. 그렇지 않으면 키를 엽니다. `CreateKey` 다음 설정 `m_hKey` 만들거나 열린 키에 있습니다.  
   
 ##  <a name="csettingsstore"></a>  CSettingsStore::CSettingsStore  
  
@@ -122,16 +122,16 @@ CSettingsStore(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bAdmin`  
+ [in] *bAdmin*  
  지정 하는 부울 매개 변수 여부는 `CSettingsStore` 개체 관리자 모드에서 작동 합니다.  
   
- [in] `bReadOnly`  
+ [in] *bReadOnly*  
  지정 하는 부울 매개 변수 여부는 `CSettingsStore` 개체가 읽기 전용 모드에 만들어집니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `bAdmin` 로 설정 된 `true`, `m_hKey` 멤버 변수가로 설정 된 `HKEY_LOCAL_MACHINE`합니다. 설정한 경우 `bAdmin` 를 `false`, `m_hKey` 로 설정 된 `HKEY_CURRENT_USER`합니다.  
+ 경우 *bAdmin* 로 설정 된 `true`, `m_hKey` 멤버 변수가로 설정 된 `HKEY_LOCAL_MACHINE`합니다. 설정한 경우 *bAdmin* 를 `false`, `m_hKey` 로 설정 된 `HKEY_CURRENT_USER`합니다.  
   
- 액세스 보안에 따라 달라 집니다는 `bReadOnly` 매개 변수입니다. 경우 `bReadonly` 은 `false`, 보안 액세스로 설정 됩니다 `KEY_ALL_ACCESS`합니다. 경우 `bReadyOnly` 은 `true`, 액세스 보안의 조합으로 설정 됩니다 `KEY_QUERY_VALUE, KEY_NOTIFY` 및 `KEY_ENUMERATE_SUB_KEYS`합니다. 레지스트리 함께 보안 액세스에 대 한 자세한 내용은 참조 [레지스트리 키의 보안 및 액세스 권한을](http://msdn.microsoft.com/library/windows/desktop/ms724878)합니다.  
+ 액세스 보안에 따라 달라 집니다는 *bReadOnly* 매개 변수입니다. 경우 *bReadonly* 은 `false`, 보안 액세스로 설정 됩니다 `KEY_ALL_ACCESS`합니다. 경우 *bReadyOnly* 은 `true`, 액세스 보안의 조합으로 설정 됩니다 `KEY_QUERY_VALUE, KEY_NOTIFY` 및 `KEY_ENUMERATE_SUB_KEYS`합니다. 레지스트리 함께 보안 액세스에 대 한 자세한 내용은 참조 [레지스트리 키의 보안 및 액세스 권한을](http://msdn.microsoft.com/library/windows/desktop/ms724878)합니다.  
   
  에 대 한 소멸자 `CSettingsStore` 해제 `m_hKey` 자동으로 합니다.  
   
@@ -145,10 +145,10 @@ virtual BOOL DeleteKey(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pszPath`  
+ [in] *pszPath*  
  삭제할 키의 이름입니다.  
   
- [in] `bAdmin`  
+ [in] *bAdmin*  
  삭제할 키의 위치를 지정 하는 스위치입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -157,7 +157,7 @@ virtual BOOL DeleteKey(
 ### <a name="remarks"></a>설명  
  있으면이 메서드는 실패는 `CSettingsStore` 개체가 읽기 전용 모드 인지 합니다.  
   
- 경우 매개 변수 `bAdmin` 0 이면 `DeleteKey` 에서 삭제 하는 키에 대 한 검색 `HKEY_CURRENT_USER`합니다. 경우 `bAdmin` 이 값은 0 `DeleteKey` 에서 삭제 하는 키에 대 한 검색 `HKEY_LOCAL_MACHINE`합니다.  
+ 경우 매개 변수 *bAdmin* 0 이면 `DeleteKey` 에서 삭제 하는 키에 대 한 검색 `HKEY_CURRENT_USER`합니다. 경우 *bAdmin* 이 값은 0 `DeleteKey` 에서 삭제 하는 키에 대 한 검색 `HKEY_LOCAL_MACHINE`합니다.  
   
 ##  <a name="deletevalue"></a>  CSettingsStore::DeleteValue  
  값을 삭제 `m_hKey`합니다.  
@@ -167,7 +167,7 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pszValue`  
+ [in] *pszValue*  
  제거 하려면 값 필드를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -181,7 +181,7 @@ virtual BOOL Open(LPCTSTR pszPath);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pszPath`  
+ [in] *pszPath*  
  레지스트리 키의 이름입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -266,59 +266,59 @@ virtual BOOL Read(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pszKey`  
+ [in] *pszKey*  
  레지스트리에서 읽을 값의 이름을 포함 하는 null로 끝나는 문자열에 대 한 포인터입니다.  
   
- [out] `iVal`  
+ [out] *iVal*  
  레지스트리 키에서 읽는 값을 받는 정수 변수에 대 한 참조입니다.  
   
- [out] `dwVal`  
+ [out] *dwVal*  
  레지스트리 키에서 읽는 값을 수신 하는 32 비트 2 배 워드 변수 참조입니다.  
   
- [out] `sVal`  
+ [out] *sVal*  
  레지스트리 키에서 읽는 값을 받는 문자열 변수에 대 한 참조입니다.  
   
- [out] `scStringList`  
+ [out] *scStringList*  
  레지스트리 키에서 읽는 값을 받는 문자열 목록 변수에 대 한 참조입니다.  
   
- [out] `scArray`  
+ [out] *scArray*  
  레지스트리 키에서 읽는 값을 받는 문자열 배열 변수에 대 한 참조입니다.  
   
- [out] `dwcArray`  
+ [out] *dwcArray*  
  레지스트리 키에서 읽는 값을 수신 하는 32 비트 2 배 워드 배열 변수 참조입니다.  
   
- [out] `wcArray`  
+ [out] *wcArray*  
  레지스트리 키에서 읽는 값을 수신 하는 16 비트 단어 배열 변수 참조입니다.  
   
- [out] `bcArray`  
+ [out] *bcArray*  
  레지스트리 키에서 읽는 값을 수신 하는 바이트 배열 변수 참조입니다.  
   
- [out] `lpPoint`  
+ [out] *lpPoint*  
  에 대 한 포인터에 대 한 참조는 `POINT` 는 레지스트리 키에서 읽는 구조체는 값입니다.  
   
- [out] `rect`  
+ [out] *rect*  
  에 대 한 참조는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 레지스트리 키에서 읽은 값을 받는 변수입니다.  
   
- [out] `ppData`  
+ [out] *ppData*  
  값을 받는 데이터에 대 한 포인터에 대 한 포인터는 레지스트리 키에서 읽는 합니다.  
   
- [out] `pBytes`  
- 부호 없는 정수 변수에 대 한 포인터입니다. 이 변수는 버퍼의 크기를 받는 `ppData` 를 가리킵니다.  
+ [out] *pBytes*  
+ 부호 없는 정수 변수에 대 한 포인터입니다. 이 변수는 버퍼의 크기를 받는 *ppData* 를 가리킵니다.  
   
- [out] `list`  
+ [out] *목록*  
  에 대 한 참조는 [CObList](../../mfc/reference/coblist-class.md) 레지스트리 키에서 읽은 값을 받는 변수입니다.  
   
- [out] `obj`  
+ [out] *obj*  
  에 대 한 참조는 [CObject](../../mfc/reference/cobject-class.md) 레지스트리 키에서 읽은 값을 받는 변수입니다.  
   
- [out] `pObj`  
+ [out] *pObj*  
  에 대 한 포인터에 대 한 참조는 `CObject` 레지스트리 키에서 읽은 값을 받는 변수입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- `Read` 에 대 한 확인 `pszKey` 의 하위 키로 `m_hKey`합니다.  
+ `Read` 에 대 한 확인 *pszKey* 의 하위 키로 `m_hKey`합니다.  
   
 ##  <a name="write"></a>  CSettingsStore::Write  
  열린 키 아래의 레지스트리 값을 씁니다.  
@@ -396,59 +396,59 @@ virtual BOOL Write(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pszKey`  
+ [in] *pszKey*  
  설정할 값의 이름을 포함 하는 문자열에 대 한 포인터입니다.  
   
- [in] `iVal`  
+ [in] *iVal*  
  저장할 데이터를 포함 하는 정수 변수에 대 한 참조입니다.  
   
- [in] `dwVal`  
+ [in] *dwVal*  
  저장할 데이터를 포함 하는 32 비트 2 배 워드 변수 참조입니다.  
   
- [in] `pszVal`  
+ [in] *pszVal*  
  저장할 데이터를 포함 하는 null로 끝나는 문자열 변수에 대 한 포인터입니다.  
   
- [in] `scStringList`  
+ [in] *scStringList*  
  에 대 한 참조는 [CStringList](../../mfc/reference/cstringlist-class.md) 저장할 데이터를 포함 된 변수입니다.  
   
- [in] `bcArray`  
+ [in] *bcArray*  
  저장할 데이터를 포함 하는 바이트 배열 변수 참조입니다.  
   
- [in] `scArray`  
+ [in] *scArray*  
  저장할 데이터를 포함 하는 문자열 배열 변수 참조입니다.  
   
- [in] `dwcArray`  
+ [in] *dwcArray*  
  저장할 데이터를 포함 하는 32 비트 2 배 워드 배열 변수 참조입니다.  
   
- [in] `wcArray`  
+ [in] *wcArray*  
  저장할 데이터를 포함 하는 16 비트 단어 배열 변수 참조입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  에 대 한 참조는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 저장할 데이터를 포함 된 변수입니다.  
   
- [in] `lpPoint`  
+ [in] *lpPoint*  
  에 대 한 포인터에 대 한 참조는 `POINT` 저장할 데이터를 포함 된 변수입니다.  
   
- [in] `pData`  
+ [in] *pData*  
  저장할 데이터를 포함 하는 버퍼에 대 한 포인터입니다.  
   
- [in] `nBytes`  
- 에 데이터를 바이트 단위로 크기를 지정 된 `pData` 매개 지점입니다.  
+ [in] *nBytes*  
+ 에 데이터를 바이트 단위로 크기를 지정 된 *pData* 매개 지점입니다.  
   
- [in] `list`  
+ [in] *목록*  
  에 대 한 참조는 [CObList](../../mfc/reference/coblist-class.md) 저장할 데이터를 포함 된 변수입니다.  
   
- [in] `obj`  
+ [in] *obj*  
  에 대 한 참조는 [CObject](../../mfc/reference/cobject-class.md) 저장할 데이터를 포함 된 변수입니다.  
   
- [in] `pObj`  
+ [in] *pObj*  
  에 대 한 포인터에 대 한 포인터는 `CObject` 저장할 데이터를 포함 된 변수입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다.  
   
 ### <a name="remarks"></a>설명  
- 설정 해야 레지스트리에 쓰려면 `bReadOnly` 만들 때 0이 아닌 값으로는 [CSettingsStore](../../mfc/reference/csettingsstore-class.md) 개체입니다. 자세한 내용은 참조 [CSettingsStore::CSettingsStore](#csettingsstore)합니다.  
+ 설정 해야 레지스트리에 쓰려면 *bReadOnly* 만들 때 0이 아닌 값으로는 [CSettingsStore](../../mfc/reference/csettingsstore-class.md) 개체입니다. 자세한 내용은 참조 [CSettingsStore::CSettingsStore](#csettingsstore)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [계층 구조 차트](../../mfc/hierarchy-chart.md)   

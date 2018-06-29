@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eff57e1fde0af6e794c2c47db7d1e31daf545715
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c4ce3c4dbfbf49791673392a1e1234728a680611
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375910"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079670"
 ---
 # <a name="crecttracker-class"></a>CRectTracker 클래스
 항목을을 표시, 이동, 다른 방식에서 크기를 조정할 수 있습니다.  
@@ -124,16 +124,16 @@ virtual void AdjustRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nHandle`  
+ *nHandle*  
  사용 되는 핸들의 인덱스입니다.  
   
- `lpRect`  
+ *lpRect*  
  사각형의 현재 크기에 대 한 포인터입니다. (사각형의 크기는 해당 높이 너비에 의해 제공 됩니다.)  
   
 ### <a name="remarks"></a>설명  
  이 함수의 기본 동작 사각형의 방향을 변경할 경우에만 통해 `Track` 및 `TrackRubberBand` 허용 반전 된 호출 됩니다.  
   
- 끌기 작업 중 추적 사각형의 조정 제어 하려면이 함수를 재정의 합니다. 으로 지정 된 좌표를 조정 하는 한 가지 방법은 `lpRect` 반환 하기 전에.  
+ 끌기 작업 중 추적 사각형의 조정 제어 하려면이 함수를 재정의 합니다. 으로 지정 된 좌표를 조정 하는 한 가지 방법은 *lpRect* 반환 하기 전에.  
   
  직접 지원 하지 않는 특수 기능 `CRectTracker`와 같은 눈금에 또는 유지-가로 세로 비율,이 함수를 재정의 하 여 구현할 수 있습니다.  
   
@@ -150,10 +150,10 @@ CRectTracker(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpSrcRect`  
+ *lpSrcRect*  
  사각형 개체의 좌표를 지정 합니다.  
   
- `nStyle`  
+ *nStyle*  
  스타일을 지정 된 `CRectTracker` 개체입니다. 다음과 같은 스타일 지원 됩니다.  
   
 - **CRectTracker::solidLine** 실선 사각형 테두리에 대 한 사용 합니다.  
@@ -169,7 +169,7 @@ CRectTracker(
 - **CRectTracker::hatchInside** Hatched 패턴에서는 전체 사각형에 설명 합니다.  
   
 ### <a name="remarks"></a>설명  
- 기본 생성자는 초기화는 `CRectTracker` 개체의 값으로 `lpSrcRect` 다른 크기 시스템 기본값으로 초기화 합니다. 매개 변수가 없는 개체가 생성 되는 경우는 `m_rect` 및 `m_nStyle` 데이터 멤버는 초기화 되지 않습니다.  
+ 기본 생성자는 초기화는 `CRectTracker` 개체의 값으로 *lpSrcRect* 다른 크기 시스템 기본값으로 초기화 합니다. 매개 변수가 없는 개체가 생성 되는 경우는 `m_rect` 및 `m_nStyle` 데이터 멤버는 초기화 되지 않습니다.  
   
 ##  <a name="draw"></a>  CRectTracker::Draw  
  사각형의 외부 선과 내부 영역을 그리는이 함수를 호출 합니다.  
@@ -179,7 +179,7 @@ void Draw(CDC* pDC) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  그릴 장치 컨텍스트에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -197,16 +197,16 @@ virtual void DrawTrackerRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
+ *lpRect*  
  에 대 한 포인터는 `RECT` 그릴 사각형을 포함 하 합니다.  
   
- `pWndClipTo`  
+ *pWndClipTo*  
  사각형 오려낸에서 사용 하 여 창에 대 한 포인터입니다.  
   
- `pDC`  
+ *pDC*  
  그릴 장치 컨텍스트에 대 한 포인터입니다.  
   
- `pWnd`  
+ *pWnd*  
  그리기는 발생 하는 창에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -243,11 +243,11 @@ void GetTrueRect(LPRECT lpTrueRect) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpTrueRect`  
+ *lpTrueRect*  
  에 대 한 포인터는 `RECT` 에서 장치를 포함할 구조 좌표는 `CRectTracker` 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 사각형의 크기 높이 너비의 바깥쪽 테두리에 있는 모든 크기 조정 핸들을 포함 합니다. 를 반환 하면 `lpTrueRect` 는 항상 정규화 된 장치 좌표로 사각형입니다.  
+ 사각형의 크기 높이 너비의 바깥쪽 테두리에 있는 모든 크기 조정 핸들을 포함 합니다. 를 반환 하면 *lpTrueRect* 는 항상 정규화 된 장치 좌표로 사각형입니다.  
   
 ##  <a name="hittest"></a>  CRectTracker::HitTest  
  사용자가 크기 조정 핸들을 잡고 여부를 확인 하려면이 함수를 호출 합니다.  
@@ -257,7 +257,7 @@ int HitTest(CPoint point) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `point`  
+ *지점*  
  테스트 하려면 장치 좌표 점입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -328,7 +328,7 @@ int NormalizeHit(int nHandle) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nHandle`  
+ *nHandle*  
  사용자가 선택한 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -363,17 +363,17 @@ BOOL SetCursor(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  현재 커서를 포함 하는 창을를 가리킵니다.  
   
- `nHitTest`  
- 이전 적중 횟수 테스트의 결과에서 `WM_SETCURSOR` 메시지입니다.  
+ *nHitTest*  
+ WM_SETCURSOR 메시지에서 이전 적중 횟수 테스트의 결과입니다.  
   
 ### <a name="return-value"></a>반환 값  
  이전 결과 추적기 사각형; 통해 경우 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 사용자가 창 처리 하는 함수 내에서이 함수 호출의 `WM_SETCURSOR` 메시지 (일반적으로 `OnSetCursor`).  
+ 창의 WM_SETCURSOR 메시지를 처리 하는 함수 내에서이 함수 호출 (일반적으로 `OnSetCursor`).  
   
 ##  <a name="track"></a>  CRectTracker::Track  
  사각형의 크기를 조정 하는 것에 대 한 사용자 인터페이스를 표시 하려면이 함수를 호출 합니다.  
@@ -387,17 +387,17 @@ BOOL Track(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  사각형을 포함 하는 창 개체입니다.  
   
- `point`  
+ *지점*  
  장치 좌표 클라이언트 영역을 기준으로 현재 마우스 위치입니다.  
   
- `bAllowInvert`  
+ *bAllowInvert*  
  경우 **TRUE**, 사각형 수 x 축 또는 y 축을 따라 반전 없으면 **FALSE**합니다.  
   
- `pWndClipTo`  
- 이 창에 맞게 그리기 작업입니다. 경우 **NULL**, `pWnd` 클리핑 사각형으로 사용 됩니다.  
+ *pWndClipTo*  
+ 이 창에 맞게 그리기 작업입니다. 경우 **NULL**, *pWnd* 클리핑 사각형으로 사용 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  ESC 키를 누르면 추적 프로세스는 중지 추적기에 저장 된 사각형은 변경 되지 않습니다 및 0이 반환 됩니다. 변경 내용이 커밋되고 추적기의 사각형에 새 위치 및/또는 크기는 마우스를 이동 하 고 마우스 왼쪽된 단추에서 손을 떼기를 기록 하 고 0이 아닌 값이 반환 됩니다.  
@@ -407,7 +407,7 @@ BOOL Track(
   
  이 함수는 사용자가 왼쪽된 마우스 단추를 놓을, ESC 키를 누르는 또는 오른쪽 마우스 단추를 누를 때까지 마우스가 캡처됩니다. 마우스 커서를 이동할 피드백 호출 하 여 업데이트 되어 `DrawTrackerRect` 및 `OnChangedRect`합니다.  
   
- 경우 `bAllowInvert` 은 **TRUE**, x 축 또는 y 축에서 추적 사각형을 반전 시킬 수 있습니다.  
+ 경우 *bAllowInvert* 은 **TRUE**, x 축 또는 y 축에서 추적 사각형을 반전 시킬 수 있습니다.  
   
 ##  <a name="trackrubberband"></a>  Crecttracker:: Trackrubberband  
  고무 밴드 선택을 수행 하려면이 함수를 호출 합니다.  
@@ -420,20 +420,20 @@ BOOL TrackRubberBand(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  사각형을 포함 하는 창 개체입니다.  
   
- `point`  
+ *지점*  
  장치 좌표 클라이언트 영역을 기준으로 현재 마우스 위치입니다.  
   
- `bAllowInvert`  
+ *bAllowInvert*  
  경우 **TRUE 이면** 사각형 수 x 축 또는 y 축을 따라 반전 없으면 **FALSE**합니다.  
   
 ### <a name="return-value"></a>반환 값  
  마우스를 이동 하 고 사각형 비어 있지 않으면 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 일반적으로 처리 하는 응용 프로그램의 함수 내에서 호출 됩니다는 `WM_LBUTTONDOWN` 메시지 (일반적으로 `OnLButtonDown`).  
+ 일반적으로 WM_LBUTTONDOWN 메시지를 처리 하는 응용 프로그램의 함수 내에서 호출 됩니다 (일반적으로 `OnLButtonDown`).  
   
  이 함수는 사용자가 왼쪽된 마우스 단추를 놓을, ESC 키를 누르는 또는 오른쪽 마우스 단추를 누를 때까지 마우스가 캡처됩니다. 마우스 커서를 이동할 피드백 호출 하 여 업데이트 되어 `DrawTrackerRect` 및 `OnChangedRect`합니다.  
   

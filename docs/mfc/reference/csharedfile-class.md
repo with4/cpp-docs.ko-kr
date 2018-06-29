@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bee22940fb197d480f4ae3550d8dd59780c256b5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df3c052f3cefb3aa7d2a55e81fd5f7813632ceb1
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370183"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078285"
 ---
 # <a name="csharedfile-class"></a>CSharedFile 클래스
 [CMemFile](../../mfc/reference/cmemfile-class.md)-공유 메모리 파일을 지 원하는 클래스를 파생된 합니다.  
@@ -56,9 +56,9 @@ class CSharedFile : public CMemFile
 ## <a name="remarks"></a>설명  
  파일이 디스크 대신 RAM에 저장 된 제외 하 고 메모리 파일 디스크 파일 처럼 동작 합니다. 메모리 파일 독립 프로세스 간에 개체를 직렬화 하거나 빠른 임시 저장소에 대 한 또는 원시 바이트를 전송 하는 데 유용 합니다.  
   
- 공유 메모리 파일 달리 다른 메모리 파일에서 메모리에 할당 된는 [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows 함수입니다. `CSharedFile` 전역적으로 할당 된 메모리 블록에 데이터를 저장 하는 클래스 (사용 하 여 만든 **GlobalAlloc**), DDE, 클립보드 또는 다른 OLE/COM 단일형 데이터 전송 작업의 경우 예를 들어,를 사용 하 여이 메모리 블록을 공유할 수 있습니다 사용 하 여 `IDataObject`합니다.  
+ 공유 메모리 파일 달리 다른 메모리 파일에서 메모리에 할당 된는 [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) Windows 함수입니다. `CSharedFile` 전역적으로 할당 된 메모리 블록에 데이터를 저장 하는 클래스 (사용 하 여 만든 `GlobalAlloc`), 있으며 메모리 블록을 공유할 수 DDE, 클립보드 또는 다른 OLE/COM 단일형 데이터 전송 작업의 경우 예를 들어를 사용 하 여 사용 하 여 `IDataObject`합니다.  
   
- **GlobalAlloc** 반환는 `HGLOBAL` 처리에서 반환 된 포인터와 같은 메모리에 대 한 포인터 대신 [malloc](../../c-runtime-library/reference/malloc.md)합니다. `HGLOBAL` 핸들은 특정 응용 프로그램에 필요 합니다. 예를 들어 데이터에 두 클립보드 필요한는 `HGLOBAL` 처리 합니다.  
+ `GlobalAlloc` 반환 된 `HGLOBAL` 처리에서 반환 된 포인터와 같은 메모리에 대 한 포인터 대신 [malloc](../../c-runtime-library/reference/malloc.md)합니다. `HGLOBAL` 핸들은 특정 응용 프로그램에 필요 합니다. 예를 들어 데이터에 두 클립보드 필요한는 `HGLOBAL` 처리 합니다.  
   
  유의 사항: `CSharedFile` 사용 메모리 매핑된 파일 하지 않으며 데이터 직접 프로세스 간에 공유할 수 없습니다.  
   
@@ -91,7 +91,7 @@ CSharedFile(
  *nAllocFlags*  
  메모리 할당 방법을 나타내는 플래그입니다. 참조 [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) 올바른 플래그 값의 목록에 대 한 합니다.  
   
- `nGrowBytes`  
+ *nGrowBytes*  
  바이트의 메모리 할당 증가 합니다.  
   
 ##  <a name="detach"></a>  CSharedFile::Detach  
@@ -120,11 +120,11 @@ void SetHandle(
  *hGlobalMemory*  
  에 연결 될 글로벌 메모리에 대 한 핸들은 `CSharedFile`합니다.  
   
- `bAllowGrow`  
+ *bAllowGrow*  
  메모리 블록 증가할 수 있는지 여부를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `bAllowGrow` 0이 아닌 메모리 블록의 크기 증가 필요할 경우, 예를 들어 시도가 있으면 하려고 파일에서 메모리 블록에 할당 된 것 보다 더 많은 바이트를 쓰려고 합니다.  
+ 경우 *bAllowGrow* 0이 아닌 메모리 블록의 크기 증가 필요할 경우, 예를 들어 시도가 있으면 하려고 파일에서 메모리 블록에 할당 된 것 보다 더 많은 바이트를 쓰려고 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CMemFile 클래스](../../mfc/reference/cmemfile-class.md)   

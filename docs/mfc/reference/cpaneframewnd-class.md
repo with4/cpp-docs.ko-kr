@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6846f50b0e89193992a42ea50e785009f31e6d19
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c17c81fb39d4397c58b4baba7124de2bda646db7
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378789"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079696"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd 클래스
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -238,7 +238,7 @@ class CPaneFrameWnd : public CWnd
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|`CS_SAVEBITS` 클래스 스타일을 사용하여 창 클래스를 등록할지 여부를 지정합니다.|  
   
@@ -271,7 +271,7 @@ virtual void AddPane(CBasePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWnd`  
+ [in] *pWnd*  
  추가할 창입니다.  
   
 ##  <a name="addremovepanefromgloballist"></a>  CPaneFrameWnd::AddRemovePaneFromGlobalList  
@@ -284,10 +284,10 @@ static BOOL __stdcall AddRemovePaneFromGlobalList(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWnd`  
+ [in] *pWnd*  
  추가 또는 제거 하는 창입니다.  
   
- [in] `bAdd`  
+ [in] *추가*  
  0이 아닌 경우 창에 추가 합니다. 0 인 경우, 창을 제거 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -317,7 +317,7 @@ virtual void CalcBorderSize(CRect& rectBorderSize) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `rectBorderSize`  
+ [out] *rectBorderSize*  
  미니 프레임 창의 테두리를 픽셀 단위로 크기를 포함합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -336,23 +336,23 @@ virtual void CalcExpectedDockedRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWndToDock`  
+ [in] *pWndToDock*  
  도킹 창에 대 한 포인터입니다.  
   
- [in] `ptMouse`  
+ [in] *ptMouse*  
  마우스 위치입니다.  
   
- [out] `rectResult`  
+ [out] *rectResult*  
  계산 된 사각형입니다.  
   
- [out] `bDrawTab`  
+ [out] *bDrawTab*  
  경우 `TRUE`, 탭을 그립니다. 경우 `FALSE`, 탭 그리지 않습니다.  
   
- [out] `ppTargetBar`  
+ [out] *ppTargetBar*  
  대상 창에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 사용자로 지정 된 지점에 창을 끌 경우는 창이 차지 하는 사각형을 계산 `ptMouse` 있습니다 도킹 하 고 있습니다.  
+ 이 메서드는 사용자로 지정 된 지점에 창을 끌 경우는 창이 차지 하는 사각형을 계산 *ptMouse* 있습니다 도킹 하 고 있습니다.  
   
 ##  <a name="canbeattached"></a>  CPaneFrameWnd::CanBeAttached  
  현재 창을 다른 창이나 프레임 창에 도킹할 수 있는지 여부를 결정합니다.  
@@ -372,11 +372,11 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDockingBar`  
+ [in] *pDockingBar*  
  창입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 미니 프레임에 도킹할 수 있는 경우 0이 아닌 `pDockingBar`그렇지 않으면 0입니다.  
+ 미니 프레임에 도킹할 수 있는 경우 0이 아닌 *pDockingBar*그렇지 않으면 0입니다.  
   
 ##  <a name="checkgrippervisibility"></a>  CPaneFrameWnd::CheckGripperVisibility  
 
@@ -407,19 +407,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszWindowName`  
+ [in] *lpszWindowName*  
  미니 프레임 창에 표시할 텍스트를 지정 합니다.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  창 스타일을 지정합니다. 자세한 내용은 참조 [창 스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles)합니다.  
   
- [in] `rect`  
+ [in] *rect*  
  초기 크기와 미니 프레임 창의 위치를 지정합니다.  
   
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  미니 프레임 창의 부모 프레임을 지정합니다. 이 값이 아니어야 `NULL`합니다.  
   
- [in] [out] `pContext`  
+ [in] [out] *pContext*  
  사용자 정의 컨텍스트를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -442,22 +442,22 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `dwStyleEx`  
+ [in] *dwStyleEx*  
  확장된 창 스타일을 지정합니다. 자세한 내용은 참조 [확장 창 스타일](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)  
   
- [in] `lpszWindowName`  
+ [in] *lpszWindowName*  
  미니 프레임 창에 표시할 텍스트를 지정 합니다.  
   
- [in] `dwStyle`  
+ [in] *dwStyle*  
  창 스타일을 지정합니다. 자세한 내용은 참조 [창 스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles)합니다.  
   
- [in] `rect`  
+ [in] *rect*  
  초기 크기와 미니 프레임 창의 위치를 지정합니다.  
   
- [in] [out] `pParentWnd`  
+ [in] [out] *pParentWnd*  
  미니 프레임 창의 부모 프레임을 지정합니다. 이 값이 아니어야 `NULL`합니다.  
   
- [in] [out] `pContext`  
+ [in] [out] *pContext*  
  사용자 정의 컨텍스트를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -474,7 +474,7 @@ virtual CDockablePane* DockPane(BOOL& bWasDocked);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `bWasDocked`  
+ [out] *bWasDocked*  
  `TRUE` 창이 도킹 있는 경우가 이미 있습니다. 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -488,7 +488,7 @@ static CBasePane* FindFloatingPaneByID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nID`  
+ [in] *nID*  
  찾을 창의 컨트롤 ID를 나타냅니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -506,20 +506,20 @@ static CPaneFrameWnd* __stdcall FrameFromPoint(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pt`  
+ [in] *pt*  
  화면 좌표 점입니다.  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  이 크기에 따라 미니 프레임 창의 검색 영역을 늘립니다. 미니 프레임 창이 지정된 된 점을 증가 된 영역에 해당 하는 경우 검색 조건을 충족 합니다.  
   
- [in] `pFrameToExclude`  
+ [in] *pFrameToExclude*  
  검색에서 제외할 미니 프레임 창을 지정 합니다.  
   
- [in] `bFloatMultiOnly`  
+ [in] *bFloatMultiOnly*  
  경우 `TRUE`만 있는 미니 프레임 창을 검색는 `CBRS_FLOAT_MULTI` 스타일입니다. 경우 `FALSE`, 모든 미니 프레임 창을 검색 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 포함 된 미니 프레임 창에 대 한 포인터 `pt`고, 그렇지 않으면 `NULL`합니다.  
+ 포함 된 미니 프레임 창에 대 한 포인터 *pt*고, 그렇지 않으면 `NULL`합니다.  
   
 ##  <a name="getcaptionheight"></a>  CPaneFrameWnd::GetCaptionHeight  
  미니 프레임 창 캡션의 높이를 반환합니다.  
@@ -542,7 +542,7 @@ virtual void GetCaptionRect(CRect& rectCaption) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `rectCaption`  
+ [out] *rectCaption*  
  크기와 화면 좌표에 미니 프레임 창 캡션의 위치를 포함합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -688,10 +688,10 @@ virtual LRESULT HitTest(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `point`  
+ [in] *지점*  
  테스트 지점입니다.  
   
- [in] `bDetectCaption`  
+ [in] *bDetectCaption*  
  경우 `TRUE`, 캡션에 대해 지점을 확인 합니다. 경우 `FALSE`, 캡션을 무시 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -780,10 +780,10 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  프로필 이름입니다.  
   
- [in] `uiID`  
+ [in] *uiID*  
  창 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -836,7 +836,7 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  테두리를 그리는 데 사용 되는 장치 컨텍스트.  
   
 ### <a name="remarks"></a>설명  
@@ -859,10 +859,10 @@ virtual void OnMovePane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pBar`  
+ [in] *pBar*  
  (무시 됨) 창에 대 한 포인터입니다.  
   
- [in] `ptOffset`  
+ [in] *ptOffset*  
  창을 이동 하는 기준인 오프셋입니다.  
   
 ##  <a name="onpanerecalclayout"></a>  CPaneFrameWnd::OnPaneRecalcLayout  
@@ -894,10 +894,10 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pBar`  
+ [in] *pBar*  
  되는 창 표시 또는 숨겨집니다.  
   
- [in] `bShow`  
+ [in] *bShow*  
  `TRUE` 창; 표시 됨 `FALSE` 창에서이 숨겨진 경우.  
   
 ### <a name="remarks"></a>설명  
@@ -911,7 +911,7 @@ void Pin(BOOL bPin = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bPin`  
+ [in] *bPin*  
   
 ### <a name="remarks"></a>설명  
   
@@ -926,13 +926,13 @@ virtual CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `point`  
+ [in] *지점*  
  지점 화면 좌표에서 사용자가 클릭 합니다.  
   
- [in] `nSensitivity`  
+ [in] *nSensitivity*  
  이 매개 변수는 사용되지 않습니다.  
   
- [in] `bCheckVisibility`  
+ [in] *bCheckVisibility*  
  `TRUE` 표시 창에만 반환 되어야 함을;를 지정 하려면 그렇지 않으면 `FALSE`합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -969,17 +969,17 @@ virtual void RemovePane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWnd`  
+ [in] *pWnd*  
  제거 하 고 창에 대 한 포인터입니다.  
   
- [in] `bDestroy`  
- 미니 프레임 창을 처리 방식을 지정 합니다. 경우 `bDestroy` 은 `TRUE`,이 메서드는 미니 프레임 창을 즉시 삭제 합니다. 이 경우 `FALSE`,이 메서드는 특정 지연 후 미니 프레임 창을 삭제 합니다.  
+ [in] *bDestroy*  
+ 미니 프레임 창을 처리 방식을 지정 합니다. 경우 *bDestroy* 은 `TRUE`,이 메서드는 미니 프레임 창을 즉시 삭제 합니다. 이 경우 `FALSE`,이 메서드는 특정 지연 후 미니 프레임 창을 삭제 합니다.  
   
- [in] `bNoDelayedDestroy`  
+ [in] *bNoDelayedDestroy*  
  경우 `TRUE`지연 된, 소멸을 사용할 수 없습니다. 경우 `FALSE`지연 된, 소멸 사용 하도록 설정 합니다.  
   
 ### <a name="remarks"></a>설명  
- 프레임 워크는 즉시 또는 특정 지연 후 미니 프레임 창을 손상 될 수 있습니다. 미니 프레임 창 소멸을 연기 하려는 경우 전달 `FALSE` 에 `bNoDelayedDestroy` 매개 변수입니다. 지연 된 소멸 프레임 워크를 처리할 때이 발생 하는 `AFX_WM_CHECKEMPTYMINIFRAME` 메시지입니다.  
+ 프레임 워크는 즉시 또는 특정 지연 후 미니 프레임 창을 손상 될 수 있습니다. 미니 프레임 창 소멸을 연기 하려는 경우 전달 `FALSE` 에 *bNoDelayedDestroy* 매개 변수입니다. 지연 된 소멸 프레임 워크를 처리할 때이 발생 하는 `AFX_WM_CHECKEMPTYMINIFRAME` 메시지입니다.  
   
 ##  <a name="replacepane"></a>  CPaneFrameWnd::ReplacePane  
  한 창을 다른 창으로 대체합니다.  
@@ -991,10 +991,10 @@ virtual void ReplacePane(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pBarOrg`  
+ [in] *pBarOrg*  
  원래 창에 대 한 포인터입니다.  
   
- [in] `pBarReplaceWith`  
+ [in] *pBarReplaceWith*  
  원래 창을 대체 하는 창에 대 한 포인터입니다.  
   
 ##  <a name="savestate"></a>  CPaneFrameWnd::SaveState  
@@ -1007,10 +1007,10 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  프로필 이름입니다.  
   
- [in] `uiID`  
+ [in] *uiID*  
  창 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1024,7 +1024,7 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `dwButtons`  
+ [in] *dwButtons*  
  다음 값의 비트 OR 조합 합니다.  
   
 - `AFX_CAPTION_BTN_CLOSE`  
@@ -1043,7 +1043,7 @@ void SetDelayShow(BOOL bDelayShow);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bDelayShow`  
+ [in] *bDelayShow*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1055,7 +1055,7 @@ void SetDockingManager(CDockingManager* pManager);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pManager`  
+ [in] *pManager*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1067,7 +1067,7 @@ void SetDockingTimer(UINT nTimeOut);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nTimeOut`  
+ [in] *nTimeOut*  
  제한 시간 값 (밀리초)입니다.  
   
 ##  <a name="setdockstate"></a>  CPaneFrameWnd::SetDockState  
@@ -1078,7 +1078,7 @@ virtual void SetDockState(CDockingManager* pDockManager);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDockManager`  
+ [in] *pDockManager*  
  도킹 관리자에 대 한 포인터입니다.  
   
 ##  <a name="sethotpoint"></a>  CPaneFrameWnd::SetHotPoint  
@@ -1089,7 +1089,7 @@ void SetHotPoint(CPoint& ptNew);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `ptNew`  
+ [in] *ptNew*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1104,7 +1104,7 @@ virtual BOOL SetPreDockState(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `preDockState`  
+ [in] *preDockState*  
  가능한 값:  
   
 - `PDS_NOTHING`,  
@@ -1113,10 +1113,10 @@ virtual BOOL SetPreDockState(
   
 - `PDS_DOCK_TO_TAB`  
   
- [in] `pBarToDock`  
+ [in] *pBarToDock*  
  도킹 창에 대 한 포인터입니다.  
   
- [in] `dockMethod`  
+ [in] *dockMethod*  
  도킹 메서드입니다. (이 매개 변수가 무시 됩니다.)  
   
 ### <a name="return-value"></a>반환 값  
@@ -1140,7 +1140,7 @@ BOOL StartTearOff(CMFCPopu* pMenu);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pMenu`  
+ [in] *pMenu*  
  메뉴에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1154,7 +1154,7 @@ virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pBar`  
+ [in] *pBar*  
   
 ### <a name="remarks"></a>설명  
   
@@ -1168,8 +1168,8 @@ virtual void StoreRecentTabRelatedInfo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDockingBar`  
- [in] `pTabbedBar`  
+ [in] *pDockingBar*  
+ [in] *pTabbedBar*  
   
 ### <a name="remarks"></a>설명  
   

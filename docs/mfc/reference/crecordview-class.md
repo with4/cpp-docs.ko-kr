@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3784bfd637c40f326a67807d0002fae66177ac37
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d3d040f2da622cbfd6d1577729861917a5a03270
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373487"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079149"
 ---
 # <a name="crecordview-class"></a>CRecordView 클래스
 컨트롤에 데이터베이스 레코드를 표시하는 뷰입니다.  
@@ -109,10 +109,10 @@ explicit CRecordView(UINT nIDTemplate);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszTemplateName`  
+ *lpszTemplateName*  
  대화 상자 템플릿 리소스의 이름에 해당 하는 null로 끝나는 문자열을 포함 합니다.  
   
- `nIDTemplate`  
+ *nIDTemplate*  
  대화 상자 템플릿 리소스의 ID 번호를 포함합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -124,9 +124,9 @@ explicit CRecordView(UINT nIDTemplate);
  **CRecordView::OnInitialUpdate** 호출 `UpdateData`, 되는 호출 `DoDataExchange`합니다. 이 초기 호출으로 `DoDataExchange` 연결 `CRecordView` (간접적으로) 제어 `CRecordset` 필드 classwizard 함께 사용 하 여 만든 데이터 멤버입니다. 기본 클래스를 호출 하 고 나면 될 때까지 이러한 데이터 멤버를 사용할 수 없습니다 **CFormView::OnInitialUpdate** 멤버 함수입니다.  
   
 > [!NOTE]
->  마법사를 정의 하는 클래스 마법사를 사용 하는 경우는 `enum` 값 `CRecordView::IDD`, 클래스 선언에 지정이 고 생성자에 대 한 멤버 초기화 목록에서 사용 합니다.  
+>  마법사를 정의 하는 클래스 마법사를 사용 하는 경우는 **enum** 값 `CRecordView::IDD`, 클래스 선언에 지정이 고 생성자에 대 한 멤버 초기화 목록에서 사용 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDatabase#32](../../mfc/codesnippet/cpp/crecordview-class_1.cpp)]  
   
 ##  <a name="isonfirstrecord"></a>  CRecordView::IsOnFirstRecord  
@@ -158,7 +158,7 @@ BOOL IsOnLastRecord();
  이 함수는 기본값의 자체 구현을 클래스 마법사가 레코드 간을 이동 하기 위한 사용자 인터페이스를 지원 하기 위해 작성 하는 명령 업데이트 처리기를 작성할 때 유용 합니다.  
   
 > [!CAUTION]
->  이 함수의 결과 신뢰할 수 있는 점을 제외 하 고 사용자가 것을 지 나 이동 될 때까지 뷰 레코드 집합의 끝을 검색할 수 없습니다. 사용자 레코드 뷰를 다음 또는 마지막 레코드로 이동에 대 한 모든 사용자 인터페이스 개체를 해제 해야 알 수 전에 마지막 레코드를 벗어나는 이동 해야 합니다. 사용자 마지막 레코드를 지나서 이동 하 고 다시 마지막 레코드로 이동 하는 경우 (또는 앞), 레코드 뷰 수 레코드 집합에서 사용자의 위치를 추적 하 고 사용자 인터페이스 개체를 올바르게 사용 하지 않도록 설정 합니다. `IsOnLastRecord` 안정적이 지도 구현 함수를 호출한 후 **OnRecordLast**를 처리 하는 `ID_RECORD_LAST` 명령, 또는 `CRecordset::MoveLast`합니다.  
+>  이 함수의 결과 신뢰할 수 있는 점을 제외 하 고 사용자가 것을 지 나 이동 될 때까지 뷰 레코드 집합의 끝을 검색할 수 없습니다. 사용자 레코드 뷰를 다음 또는 마지막 레코드로 이동에 대 한 모든 사용자 인터페이스 개체를 해제 해야 알 수 전에 마지막 레코드를 벗어나는 이동 해야 합니다. 사용자 마지막 레코드를 지나서 이동 하 고 다시 마지막 레코드로 이동 하는 경우 (또는 앞), 레코드 뷰 수 레코드 집합에서 사용자의 위치를 추적 하 고 사용자 인터페이스 개체를 올바르게 사용 하지 않도록 설정 합니다. `IsOnLastRecord` 안정적이 지도 구현 함수를 호출한 후 `OnRecordLast`를 처리 하는 `ID_RECORD_LAST` 명령, 또는 `CRecordset::MoveLast`합니다.  
   
 ##  <a name="ongetrecordset"></a>  CRecordView::OnGetRecordset  
  에 대 한 포인터를 반환 합니다.는 `CRecordset`-레코드 보기와 연결 된 개체를 파생 합니다.  
@@ -171,7 +171,7 @@ virtual CRecordset* OnGetRecordset() = 0;
  에 대 한 포인터는 `CRecordset`-파생 개체 했으면 성공적으로 생성 된 개체는 **NULL** 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
- 생성 또는 레코드 집합 개체를 가져올 하 고에 대 한 포인터를 반환 하려면이 멤버 함수를 재정의 해야 합니다. 클래스 마법사로 레코드 뷰 클래스를 선언 하는 경우 마법사는 기본 재정의를 작성 합니다. 클래스 마법사의 기본 구현은 있을 경우 레코드 뷰에 저장 된 레코드 포인터를 반환 합니다. 클래스 마법사 및 호출을 사용 하 여 지정한 형식의 레코드 집합 개체를 생성 그렇지 않은 경우 해당 **열고** 멤버 함수를 테이블 열 또는 쿼리를 실행 한 다음 개체에 대 한 포인터를 반환 합니다.  
+ 생성 또는 레코드 집합 개체를 가져올 하 고에 대 한 포인터를 반환 하려면이 멤버 함수를 재정의 해야 합니다. 클래스 마법사로 레코드 뷰 클래스를 선언 하는 경우 마법사는 기본 재정의를 작성 합니다. 클래스 마법사의 기본 구현은 있을 경우 레코드 뷰에 저장 된 레코드 포인터를 반환 합니다. 클래스 마법사 및 호출을 사용 하 여 지정한 형식의 레코드 집합 개체를 생성 그렇지 않은 경우 해당 `Open` 멤버 함수를 테이블 열 또는 쿼리를 실행 한 다음 개체에 대 한 포인터를 반환 합니다.  
   
  자세한 내용 및 예제에 대 한 문서를 참조 [레코드 뷰: 레코드 뷰를 사용 하 여](../../data/using-a-record-view-mfc-data-access.md)합니다.  
   
@@ -198,7 +198,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  이동에 성공 하면 0이 아닌 그렇지 않은 경우 0 이동 요청이 거부 되었습니다.  
   
 ### <a name="remarks"></a>설명  
- 기본 구현은 적절 한 호출 **이동** 의 멤버 함수는 `CRecordset` 레코드 보기와 연결 된 개체입니다.  
+ 기본 구현은 적절 한 호출 `Move` 의 멤버 함수는 `CRecordset` 레코드 보기와 연결 된 개체입니다.  
   
  기본적으로 `OnMove` 사용자 레코드 보기에서 변경 된 경우 데이터 소스에서 현재 레코드를 업데이트 합니다.  
   
@@ -207,7 +207,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
  레코드 집합의 마지막 레코드를 지 나 이동 하는 경우 레코드 뷰 계속 마지막 레코드를 표시 됩니다. 첫 번째 레코드를 지 나 뒤로 이동 하는 경우 첫 번째 레코드를 표시 하는 레코드 뷰 계속 합니다.  
   
 > [!CAUTION]
->  호출 `OnMove` 레코드 집합에 레코드가 없는 경우 예외를 throw 합니다. 적절 한 사용자 인터페이스 업데이트 처리기 함수를 호출- **OnUpdateRecordFirst**, **OnUpdateRecordLast**, **OnUpdateRecordNext**, 또는  **OnUpdateRecordPrev** -전에 해당 레코드 집합에 레코드가 있는지 확인 하는 작업으로 이동 합니다.  
+>  호출 `OnMove` 레코드 집합에 레코드가 없는 경우 예외를 throw 합니다. 적절 한 사용자 인터페이스 업데이트 처리기 함수를 호출- `OnUpdateRecordFirst`, `OnUpdateRecordLast`, `OnUpdateRecordNext`, 또는 `OnUpdateRecordPrev` -전에 해당 레코드 집합에 레코드가 있는지 확인 하는 작업으로 이동 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CFormView 클래스](../../mfc/reference/cformview-class.md)   

@@ -107,12 +107,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 973957609b56f3bcd697f650c75c59d07cc97173
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 5d5b3e94b0b594174538aebe6542b04df7214f1b
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305773"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079814"
 ---
 # <a name="vector-stlclr"></a>vector(STL/CLR)
 템플릿 클래스는 임의 액세스를 가진 요소의 다양 한 길이의 시퀀스를 제어 하는 개체를 설명 합니다. 컨테이너를 사용 하 여 `vector` 저장소의 연속 블록으로 요소의 시퀀스를 관리할 수 있습니다. 블록 요구에 맞게 증가 하는 배열을로 구현 됩니다.  
@@ -135,7 +135,7 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  값  
  제어되는 시퀀스의 요소 형식입니다.  
   
@@ -225,10 +225,7 @@ template<typename Value>
   
  지우거 나 요소를 제거 합니다. 저장된 된 값에 대 한 소멸자를 호출 합니다. 컨테이너를 제거 합니다. 모든 요소를 지웁니다. 따라서 요소 형식이 ref 클래스는 컨테이너 보다 수명이 깁니다 컨테이너 요소가 있는지 확인 합니다. 단, 컨테이너 핸들의 해당 요소를 제거 하지 않습니다.  
   
-## <a name="requirements"></a>요구 사항  
- **헤더:** \<cliext/벡터 >  
-  
- **Namespace:** cliext  
+## <a name="members"></a>멤버
 
 ## <a name="assign"></a> vector:: assign (STL/CLR)
 모든 요소를 바꿉니다.  
@@ -255,7 +252,7 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
  오른쪽  
  삽입 하는 열거형입니다.  
   
- val  
+ Val  
  삽입할 요소의 값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1337,7 +1334,7 @@ void insert(iterator where,
  오른쪽  
  삽입 하는 열거형입니다.  
   
- val  
+ Val  
  삽입할 요소의 값입니다.  
   
  형식에 대한 설명  
@@ -1881,7 +1878,7 @@ void resize(size_type new_size, value_type val);
  new_size  
  제어 된 시퀀스의 새 크기입니다.  
   
- val  
+ Val  
  안쪽 여백 요소의 값입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -2252,7 +2249,7 @@ vector(System::Collections::Generic::IEnumerable<Value>^ right);
  오른쪽  
  삽입할 개체 또는 범위입니다.  
   
- val  
+ Val  
  삽입할 요소의 값입니다.  
   
 ### <a name="remarks"></a>설명  

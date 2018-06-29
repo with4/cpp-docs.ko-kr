@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82ffdb26c5766a0ff7cbada511c9bc9c82ebfd93
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b480ee1118551b09c705fb4f79f8a50c0a1f895
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375544"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079569"
 ---
 # <a name="cscrollview-class"></a>CScrollView 클래스
 A [CView](../../mfc/reference/cview-class.md) 스크롤 기능이 있습니다.  
@@ -100,7 +100,7 @@ class CScrollView : public CView
   
  전에 `OnDraw` 파생 된 뷰 클래스의 멤버 함수를 호출 하 고, `CScrollView` 뷰포트 원점에 대 한 자동으로 조정 하는 `CPaintDC` 디바이스 컨텍스트 개체를 전달 하는 `OnDraw`합니다.  
   
- 스크롤 창의 대 한 뷰포트 origin을 조정 하려면 `CScrollView` 재정의 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)합니다. 이 조정은 대 한 자동는 `CPaintDC` 장치 컨텍스트는 `CScrollView` 를 전달 `OnDraw`, 호출 해야 하지만 **CScrollView::OnPrepareDC** 직접 다른 장치 컨텍스트를 사용 하는 같은`CClientDC`. 재정의할 수 **CScrollView::OnPrepareDC** 펜, 배경색, 및 기타 그리기 특성 이지만 크기 조정 작업을 수행 하는 기본 클래스를 호출 합니다.  
+ 스크롤 창의 대 한 뷰포트 origin을 조정 하려면 `CScrollView` 재정의 [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)합니다. 이 조정은 대 한 자동는 `CPaintDC` 장치 컨텍스트는 `CScrollView` 를 전달 `OnDraw`, 호출 해야 하지만 `CScrollView::OnPrepareDC` 직접 다른 장치 컨텍스트를 사용 하면 같은 `CClientDC`합니다. 재정의할 수 `CScrollView::OnPrepareDC` 펜, 배경색, 및 기타 그리기 특성 이지만 크기 조정 작업을 수행 하는 기본 클래스를 호출 합니다.  
   
  스크롤 막대는 다음과 같은 경우에 표시 된 것 처럼 뷰를 기준으로 다음 세 위치에 나타날 수 있습니다.  
   
@@ -162,16 +162,16 @@ void FillOutsideRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  장치 컨텍스트를 채우기를 수행 해야 합니다.  
   
- `pBrush`  
+ *pBrush*  
  영역을 채울 된 브러시입니다.  
   
 ### <a name="remarks"></a>설명  
  사용 하 여 `FillOutsideRect` 스크롤 보기에서 `OnEraseBkgnd` 과도 한 배경 다시 표시 하지 않으려면 처리기 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#164](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]  
   
 ##  <a name="getdevicescrollposition"></a>  CScrollView::GetDeviceScrollPosition  
@@ -201,16 +201,16 @@ void GetDeviceScrollSizes(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nMapMode`  
+ *nMapMode*  
  이 보기에 대 한 현재 매핑 모드를 반환합니다. 가능한 값 목록은 참조 `SetScrollSizes`합니다.  
   
- `sizeTotal`  
+ *sizeTotal*  
  장치 단위로 스크롤 보기의 현재 총 크기를 반환합니다.  
   
- `sizePage`  
+ *sizePage*  
  스크롤 막대 손잡이에서 클릭 마우스에 대 한 응답의 각 방향으로 스크롤이 현재 가로 및 세로 거리를 반환 합니다. **cx** 멤버 가로 포함 합니다. **cy** 멤버 세로 크기를 포함 합니다.  
   
- `sizeLine`  
+ *sizeLine*  
  스크롤 화살표에 대 한 응답으로 마우스를 각 방향으로 스크롤이 현재 가로 및 세로 거리 클릭을 반환 합니다. **cx** 멤버 가로 포함 합니다. **cy** 멤버 세로 크기를 포함 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -267,7 +267,7 @@ void ScrollToPosition(POINT pt);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pt`  
+ *pt*  
  논리 단위에서를 스크롤할 수는 점입니다. **x** 멤버 (보기의 전체 크기까지 0 이상) 양수 값 이어야 합니다. 에 마찬가지입니다는 **y** 매핑 모드를 사용 하는 경우 멤버를 `MM_TEXT`합니다. **y** 멤버는 아닌 다른 모드 매핑에 음수 `MM_TEXT`합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -281,7 +281,7 @@ void SetScaleToFitSize(SIZE sizeTotal);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `sizeTotal`  
+ *sizeTotal*  
  가로 및 세로 크기가 뷰를 확장할 수 있습니다. 스크롤 보기 크기 논리 단위로 측정 됩니다. 가로 크기에 포함 되어는 **cx** 멤버입니다. 세로 크기에 포함 되어는 **cy** 멤버입니다. 둘 다 **cx** 및 **cy** 보다 크거나 0 이어야 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -307,7 +307,7 @@ void SetScrollSizes(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nMapMode`  
+ *nMapMode*  
  이 보기에 대해 설정 하는 매핑 모드입니다. 가능한 값은 다음과 같습니다.  
   
 |매핑 모드|논리 단위|양의 y 축 확장 중...|  
@@ -321,13 +321,13 @@ void SetScrollSizes(
   
  이러한 모드의 모든 Windows에 의해 정의 됩니다. 두 가지 표준 매핑 모드 `MM_ISOTROPIC` 및 `MM_ANISOTROPIC`에 사용 되지 않는 `CScrollView`합니다. 클래스 라이브러리에서 제공 된 `SetScaleToFitSize` 멤버 함수를 보기 창 크기를 조정 합니다. 위의 테이블에 열 3 좌표 방향을 설명합니다.  
   
- `sizeTotal`  
+ *sizeTotal*  
  스크롤 보기의 총 크기입니다. **cx** 멤버 가로 범위 내에 포함 되어 있습니다. **cy** 멤버 세로 범위에 포함 되어 있습니다. 크기는 논리 단위에서입니다. 둘 다 **cx** 및 **cy** 보다 크거나 0 이어야 합니다.  
   
- `sizePage`  
+ *sizePage*  
  마우스에 대 한 응답의 각 방향으로 스크롤이 가로 및 세로 거리 스크롤 막대 손잡이 클릭 합니다. **cx** 멤버 가로 포함 합니다. **cy** 멤버 세로 크기를 포함 합니다.  
   
- `sizeLine`  
+ *sizeLine*  
  마우스에 대 한 응답의 각 방향으로 스크롤이 가로 및 세로 거리 스크롤 화살표를 클릭 합니다. **cx** 멤버 가로 포함 합니다. **cy** 멤버 세로 크기를 포함 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -343,7 +343,7 @@ void SetScrollSizes(
   
  제외한 Windows 매핑 모드 중 하나로 매핑 모드를 설정 해야 `MM_ISOTROPIC` 또는 `MM_ANISOTROPIC`합니다. 제한 없는 매핑 모드를 사용 하려는 경우에 호출 된 `SetScaleToFitSize` 대신 멤버 함수 `SetScrollSizes`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#168](../../mfc/codesnippet/cpp/cscrollview-class_5.cpp)]  
   
  [!code-cpp[NVC_MFCDocView#169](../../mfc/codesnippet/cpp/cscrollview-class_6.cpp)]  

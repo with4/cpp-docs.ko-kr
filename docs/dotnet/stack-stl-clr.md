@@ -69,12 +69,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 078fd71dac8144e7aa6fda5772b820b086a78457
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: b24bf0eab913285559ec9905762e239841c93a00
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305529"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079735"
 ---
 # <a name="stack-stlclr"></a>stack(STL/CLR)
 이 템플릿 클래스는 다양 한 길이의 요소 시퀀스를 마지막 액세스할 수 있는 제어 하는 개체를 설명 합니다. 컨테이너 어댑터를 사용 하 여 `stack` 스택으로 푸시 다운 하는 기본 컨테이너를 관리할 수 있습니다.  
@@ -93,7 +93,7 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
  값  
  제어되는 시퀀스의 요소 형식입니다.  
   

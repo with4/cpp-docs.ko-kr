@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9849ebea812ecdb98a686e140c7b9d280634938d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b1052c7197d8679272cc917402a8936983649acb
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33378358"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079240"
 ---
 # <a name="cshellmanager-class"></a>CShellManager 클래스
 PIDL(식별자 포인터 목록)에 대한 포인터를 사용하여 작업할 수 있는 몇 가지 메서드를 구현합니다.  
@@ -104,31 +104,31 @@ BOOL BrowseForFolder(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `strOutFolder`  
+ [out] *strOutFolder*  
  선택한 폴더의 경로를 저장할 메서드에서 사용 하는 문자열입니다.  
   
- [in] `pWndParent`  
+ [in] *pWndParent*  
  부모 창에 대 한 포인터입니다.  
   
- [in] `lplszInitialFolder`  
+ [in] *lplszInitialFolder*  
  대화 상자가 표시 되 면 기본적으로 선택 된 폴더를 포함 하는 문자열입니다.  
   
- [in] `lpszTitle`  
+ [in] *lpszTitle*  
  대화 상자에 대 한 제목입니다.  
   
- [in] `ulFlags`  
+ [in] *ulFlags*  
  대화 상자에 대 한 옵션을 지정 하는 플래그입니다. 참조 [BROWSEINFO](http://msdn.microsoft.com/library/windows/desktop/bb773205) 에 대 한 자세한 내용은 합니다.  
   
- [out] `piFolderImage`  
+ [out] *piFolderImage*  
  메서드가 선택된 된 폴더의 이미지 인덱스를 기록 하는 위치는 정수 값에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
  사용자가; 대화 상자에서 폴더를 선택 하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드를 호출할 때 응용 프로그램 만들고 폴더를 선택할 수 있는 대화 상자를 표시 합니다. 메서드를 폴더의 경로 기록 합니다는 `strOutFolder` 매개 변수입니다.  
+ 이 메서드를 호출할 때 응용 프로그램 만들고 폴더를 선택할 수 있는 대화 상자를 표시 합니다. 메서드를 폴더의 경로 기록 합니다는 *strOutFolder* 매개 변수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에 대 한 참조를 검색 하는 방법을 보여 줍니다는 `CShellManager` 사용 하 여 개체는 `CWinAppEx::GetShellManager` 메서드 및 사용 방법에는 `BrowseForFolder` 메서드. 이 코드 조각은의 일부인는 [탐색기 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_Explorer#6](../../mfc/reference/codesnippet/cpp/cshellmanager-class_1.cpp)]  
@@ -143,17 +143,17 @@ LPITEMIDLIST ConcatenateItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pidl1`  
+ [in] *pidl1*  
  첫 번째 항목입니다.  
   
- [in] `pidl2`  
+ [in] *pidl2*  
  두 번째 항목입니다.  
   
 ### <a name="return-value"></a>반환 값  
  그렇지 않으면 함수가 성공 하면 새 항목 목록에 대 한 포인터 `NULL`합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드가 만드는 새 [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) 모두 포함 될 수 있을 만큼 큰 `pidl1` 및 `pidl2`합니다. 그런 다음 복사 `pidl1` 및 `pidl2` 새 목록에 있습니다.  
+ 이 메서드가 만드는 새 [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) 모두 포함 될 수 있을 만큼 큰 *pidl1* 및 *pidl2*합니다. 그런 다음 복사 *pidl1* 및 *pidl2* 새 목록에 있습니다.  
   
 ##  <a name="copyitem"></a>  CShellManager::CopyItem  
  항목 목록에 복사합니다.  
@@ -163,7 +163,7 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pidlSource`  
+ [in] *pidlSource*  
  원래 항목 목록입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -180,7 +180,7 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `cbSize`  
+ [in] *cbSize*  
  항목 목록의 크기입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -204,7 +204,7 @@ void FreeItem(LPITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pidl`  
+ [in] *pidl*  
  삭제 하는 항목 목록입니다.  
   
 ##  <a name="getitemcount"></a>  CShellManager::GetItemCount  
@@ -215,7 +215,7 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pidl`  
+ [in] *pidl*  
  항목 목록에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -229,7 +229,7 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pidl`  
+ [in] *pidl*  
  항목 목록에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -243,7 +243,7 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pidl`  
+ [in] *pidl*  
  반복할 항목의 목록입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -262,10 +262,10 @@ int GetParentItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpidl`  
+ [in] *lpidl*  
  부모가 검색할 PIDL 합니다.  
   
- [out] `lpidlParent`  
+ [out] *lpidlParent*  
  메서드 결과 저장 하는 PIDL에 대 한 참조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -284,10 +284,10 @@ HRESULT ItemFromPath(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszPath`  
+ [in] *lpszPath*  
  항목에 대 한 경로 지정 하는 문자열입니다.  
   
- [out] `pidl`  
+ [out] *pidl*  
  PIDL에 대 한 참조입니다. 메서드 반환 값에 대 한 포인터를 저장 하려면이 PIDL를 사용 합니다.  
   
 ### <a name="return-value"></a>반환 값  

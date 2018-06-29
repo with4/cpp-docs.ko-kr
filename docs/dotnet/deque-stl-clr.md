@@ -108,12 +108,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: ec92f1fcda75c8d632ea2c5a8f66583d960c744a
-ms.sourcegitcommit: 301bb19056e5bae84ff50f7d1df1e546efe225ba
+ms.openlocfilehash: 881db763518f31d9682ba050e460d4a3f7b39317
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36305867"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079827"
 ---
 # <a name="deque-stlclr"></a>deque(STL/CLR)
 템플릿 클래스는 임의 액세스를 가진 요소의 다양 한 길이의 시퀀스를 제어 하는 개체를 설명 합니다. 컨테이너를 사용 하 여 `deque` 인접 한 블록 저장소의 처럼 보입니다. 하지만 늘리거나 모든 나머지 요소를 복사할 필요 없이 양쪽 끝 줄일 수 있는 요소의 시퀀스를 관리할 수 있습니다. 따라서 구현할 수 있는 효율적으로 한 `double-ended queue`합니다. (따라서 이름입니다.)  
@@ -148,7 +148,7 @@ template<typename Value>
   
  **Namespace:** cliext  
 
-## <a name="members"></a>멤버  
+## <a name="declarations"></a>선언  
   
 |형식 정의|설명|  
 |---------------------|-----------------|  
@@ -229,7 +229,7 @@ template<typename Value>
   
  지우거 나 요소를 제거 합니다. 저장된 된 값에 대 한 소멸자를 호출 합니다. 컨테이너를 제거 합니다. 모든 요소를 지웁니다. 따라서 요소 형식이 ref 클래스는 컨테이너 보다 수명이 깁니다 컨테이너 요소가 있는지 확인 합니다. 단, 핸들의 컨테이너 하다 `not` 해당 요소를 제거 합니다.  
  
-## <a name="member-definitions"></a>멤버 정의
+## <a name="members"></a>멤버
 
 ## <a name="assign"></a> deque:: assign (STL/CLR)
 모든 요소를 바꿉니다.  
@@ -2023,7 +2023,7 @@ void resize(size_type new_size, value_type val);
  new_size  
  제어 된 시퀀스의 새 크기입니다.  
   
- val  
+ Val  
  안쪽 여백 요소의 값입니다.  
   
 ### <a name="remarks"></a>설명  

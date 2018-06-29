@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a94d39c6b6c256444cd2850f7e55a7e4b87f6d7a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5a54b4f4749e7865d793559a9cb5f475c1d57898
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368633"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078260"
 ---
 # <a name="compareitemstruct-structure"></a>COMPAREITEMSTRUCT 구조체
 `COMPAREITEMSTRUCT` 식별자 및 정렬 된, 소유자가 그린 목록 상자 또는 콤보 상자에 있는 두 항목에 대 한 응용 프로그램 제공 하는 데이터 구조를 제공 합니다.  
@@ -41,13 +41,13 @@ typedef struct tagCOMPAREITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `CtlType`  
+ *CtlType*  
  **ODT_LISTBOX** (소유자 그리기 목록 상자의 지정) 또는 **ODT_COMBOBOX** (소유자 그리기 콤보 상자 지정).  
   
- `CtlID`  
+ *CtlID*  
  목록 상자 또는 콤보 상자 컨트롤 ID입니다.  
   
- `hwndItem`  
+ *hwndItem*  
  컨트롤의 창 핸들입니다.  
   
  *itemID1*  
@@ -63,7 +63,7 @@ typedef struct tagCOMPAREITEMSTRUCT {
  비교할 두 번째 항목에 대 한 응용 프로그램에서 제공한 데이터입니다. 이 값 목록 또는 콤보 상자에 항목을 추가 하는 호출에 전달 되었습니다.  
   
 ## <a name="remarks"></a>설명  
- 소유자가 그린 목록 상자에 새 항목을 추가 하는 응용 프로그램 또는 콤보 상자 사용 하 여 만든 때마다는 **CBS_SORT** 또는 **LBS_SORT** 스타일 보내는데 소유자는 `WM_COMPAREITEM` 메시지입니다. `lParam` 에 대 한 긴 포인터를 포함 하는 메시지의 매개 변수는 `COMPAREITEMSTRUCT` 구조입니다. 메시지를 받으면 소유자와 두 항목을 비교 다른 앞에 정렬 항목을 나타내는 값을 반환 합니다.  
+ 소유자가 그린 목록 상자에 새 항목을 추가 하는 응용 프로그램 또는 콤보 상자 사용 하 여 만든 때마다는 **CBS_SORT** 또는 **LBS_SORT** 스타일, Windows 메시지를 보내는 소유자 WM_COMPAREITEM 합니다. *lParam* 에 대 한 긴 포인터를 포함 하는 메시지의 매개 변수는 `COMPAREITEMSTRUCT` 구조입니다. 메시지를 받으면 소유자와 두 항목을 비교 다른 앞에 정렬 항목을 나타내는 값을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** winuser.h  

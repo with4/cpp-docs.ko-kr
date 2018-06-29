@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d00d78acf7ddf8cfa27e117cbcdbbb00c7d6fa6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 71871eae42fc720481852be1e60c934f941858c6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374840"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078158"
 ---
 # <a name="collection-class-helpers"></a>컬렉션 클래스 도우미
-컬렉션 클래스 `CMap`, `CList`, 및 `CArray` 를 비교 하 고, 복사 및 요소를 직렬화 하는 작업에 대 한 전역 템플릿 기반 도우미 함수를 사용 합니다. 구현에 따라 클래스의 일부로 `CMap`, `CList`, 및 `CArray`, 지도, 목록 또는 배열에 저장 된 데이터의 형식에 맞는 버전 필요에 따라 이러한 함수를 재정의 해야 합니다. 와 같은 도우미 함수를 재정의에 대 한 내용은 `SerializeElements`, 문서를 참조 [컬렉션: 형식이 안전한 컬렉션을 만드는 방법](../../mfc/how-to-make-a-type-safe-collection.md)합니다. **ConstructElements** 및 **DestructElements** 사용 되지 않습니다.  
+컬렉션 클래스 `CMap`, `CList`, 및 `CArray` 를 비교 하 고, 복사 및 요소를 직렬화 하는 작업에 대 한 전역 템플릿 기반 도우미 함수를 사용 합니다. 구현에 따라 클래스의 일부로 `CMap`, `CList`, 및 `CArray`, 지도, 목록 또는 배열에 저장 된 데이터의 형식에 맞는 버전 필요에 따라 이러한 함수를 재정의 해야 합니다. 와 같은 도우미 함수를 재정의에 대 한 내용은 `SerializeElements`, 문서를 참조 [컬렉션: 형식이 안전한 컬렉션을 만드는 방법](../../mfc/how-to-make-a-type-safe-collection.md)합니다. `ConstructElements` 및 `DestructElements` 사용 되지 않습니다.  
   
  Microsoft Foundation Class 라이브러리는 다음 전역 함수를 컬렉션 클래스를 사용자 지정할 수 있도록 afxtempl.h에 제공 합니다.  
   
@@ -57,24 +57,24 @@ CompareElements(
  *형식*  
  비교할 첫 번째 요소의 형식입니다.  
   
- `pElement1`  
+ *pElement1*  
  비교할 첫 번째 요소에 대 한 포인터입니다.  
   
- `ARG_TYPE`  
+ *ARG_TYPE*  
  비교할 두 번째 요소의 형식입니다.  
   
- `pElement2`  
+ *pElement2*  
  비교할 두 번째 요소에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 가 가리키는 개체가 0이 아닌 `pElement1` 가 가리키는 개체가 같은지를 `pElement2`그렇지 않으면 0입니다.  
+ 가 가리키는 개체가 0이 아닌 *pElement1* 가 가리키는 개체가 같은지를 *pElement2*그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
  `CMap` 사용 하 여 호출 된 `CMap` 템플릿 매개 변수 *키* 및 `ARG_KEY`합니다.  
   
  비교의 결과 반환 하는 기본 구현은  *\*pElement1* 및  *\*pElement2*합니다. 응용 프로그램에 적합 한 방식으로 요소를 비교 하 여 되도록이 함수를 재정의 합니다.  
   
- 비교 연산자를 정의 하는 c + + 언어 ( `==`) 단순 형식 ( `char`, `int`, **float**등) 되지만 클래스와 구조체에 대 한 비교 연산자를 정의 하지 않습니다. 사용 하려는 경우 `CompareElements` 를 사용 하는 컬렉션 클래스 중 하나를 인스턴스화할 때 비교 연산자를 정의 하거나 오버 로드 또는 `CompareElements` 버전은 적절 한 값을 반환 합니다.  
+ 비교 연산자를 정의 하는 c + + 언어 ( `==`) 단순 형식 ( **char**, **int**, **float**등) 되지만 대 한 비교 연산자를 정의 하지 않습니다 클래스 및 구조체를 제공 합니다. 사용 하려는 경우 `CompareElements` 를 사용 하는 컬렉션 클래스 중 하나를 인스턴스화할 때 비교 연산자를 정의 하거나 오버 로드 또는 `CompareElements` 버전은 적절 한 값을 반환 합니다.  
   
 ### <a name="requirements"></a>요구 사항  
    **헤더:** afxtempl.h   
@@ -94,13 +94,13 @@ void AFXAPI CopyElements(
  *형식*  
  복사할 요소 유형을 지정 하는 템플릿 매개 변수  
   
- `pDest`  
+ *pDest*  
  요소가 복사 되는 대상에 대 한 포인터입니다.  
   
- `pSrc`  
+ *pSrc*  
  복사할 요소 소스에 대 한 포인터입니다.  
   
- `nCount`  
+ *nCount*  
  복사할 요소의 수입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -123,20 +123,20 @@ void  AFXAPI DumpElements(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dc`  
+ *dc*  
  요소를 덤프 하기 위해 컨텍스트를 덤프 합니다.  
   
  *형식*  
  요소 유형을 지정 하는 템플릿 매개 변수  
   
- `pElements`  
+ *pElements*  
  요소를 덤프할 수에 대 한 포인터입니다.  
   
- `nCount`  
+ *nCount*  
  덤프할 수 있는 요소의 수입니다.  
   
 ### <a name="remarks"></a>설명  
- **CArray::Dump**, **CList::Dump**, 및 **CMap::Dump** 덤프의 깊이 0 보다 큰 경우이 함수 호출 합니다.  
+ `CArray::Dump`, `CList::Dump`, 및 `CMap::Dump` 덤프의 깊이 0 보다 큰 경우이 함수 호출 합니다.  
   
  기본 구현은 아무 작업도 수행하지 않습니다. 컬렉션의 요소에서 파생 된 경우 `CObject`, 재정의 일반적으로 컬렉션의 요소를 반복 호출 `Dump` 선반에 있는 각 요소에 대 한 합니다.  
   
@@ -153,10 +153,10 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ARG_KEY`  
+ *ARG_KEY*  
  맵 키에 액세스 하는 데 사용 하는 데이터 형식을 지정 하는 템플릿 매개 변수  
   
- `key`  
+ *key*  
  해시 값을 계산 하는 키입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -165,9 +165,9 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 ### <a name="remarks"></a>설명  
  이 함수를 직접 호출 [CMap::RemoveKey](cmap-class.md#removekey) 및 간접적으로 [CMap::Lookup](cmap-class.md#lookup) 및 [CMap::Operator &#91; &#93; ](cmap-class.md#operator_at)합니다.
   
- 기본 구현은 이동 하 여 해시 값을 만들고 `key` 네 위치 오른쪽으로 합니다. 응용 프로그램에 대 한 적절 한 해시 값을 반환이 함수를 재정의 합니다.  
+ 기본 구현은 이동 하 여 해시 값을 만들고 *키* 네 위치 오른쪽으로 합니다. 응용 프로그램에 대 한 적절 한 해시 값을 반환이 함수를 재정의 합니다.  
   
-### <a name="example"></a>예제
+### <a name="example"></a>예
  ```cpp  
 template <> UINT AFXAPI HashKey(unsigned __int64 key)
 {
@@ -192,13 +192,13 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
  *형식*  
  요소 유형을 지정 하는 템플릿 매개 변수  
   
- `ar`  
+ *ar*  
  보관 개체 간에 보관입니다.  
   
- `pElements`  
+ *pElements*  
  보관 되 고 요소에 대 한 포인터입니다.  
   
- `nCount`  
+ *nCount*  
  보관 되는 요소의 수  
   
 ### <a name="remarks"></a>설명  
@@ -206,7 +206,7 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
   
  이 및 다른 도우미 함수 구현에 대 한 내용은 문서 참조 [컬렉션: 형식이 안전한 컬렉션을 만드는 방법](../how-to-make-a-type-safe-collection.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  예제 문서를 참조 하십시오 [컬렉션: 형식이 안전한 컬렉션을 만드는 방법](../how-to-make-a-type-safe-collection.md)합니다.  
  
 ### <a name="requirements"></a>요구 사항  

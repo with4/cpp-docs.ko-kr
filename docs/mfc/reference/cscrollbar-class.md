@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90f672cbeeee0c297e3d1deb6a6b5e83bffda3e8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 86827a2f01e387eb6e7c8b2184567cb204f184e6
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372771"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37079123"
 ---
 # <a name="cscrollbar-class"></a>CScrollBar 클래스
 Windows 스크롤 막대 컨트롤의 기능을 제공합니다.  
@@ -117,23 +117,23 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwStyle`  
+ *dwStyle*  
  스크롤을 지정 막대의 스타일입니다. 어떠한 조합의 적용 [스크롤 막대 스타일](../../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles) 스크롤 막대를 합니다.  
   
- `rect`  
+ *rect*  
  스크롤 막대의 크기와 위치를 지정합니다. 일 수 있습니다는 `RECT` 구조 또는 `CRect` 개체입니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  스크롤을 지정 막대의 부모 창, 일반적으로 `CDialog` 개체입니다. 않아야 **NULL**합니다.  
   
- `nID`  
+ *nID*  
  스크롤 막대 컨트롤 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 생성할는 `CScrollBar` 두 단계를 수행에서 하는 개체입니다. 먼저, 생성 된 생성자를 호출는 `CScrollBar` 개체; 호출 **만들기**, 및 연결 된 Windows 스크롤 막대를 초기화 만들고는에 연결는 `CScrollBar` 개체입니다.  
+ 생성할는 `CScrollBar` 두 단계를 수행에서 하는 개체입니다. 먼저, 생성 된 생성자를 호출는 `CScrollBar` 개체; 호출 `Create`, 및 연결 된 Windows 스크롤 막대를 초기화 만들고는에 연결는 `CScrollBar` 개체입니다.  
   
  다음 적용 [창 스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles) 스크롤 막대를:  
   
@@ -145,7 +145,7 @@ virtual BOOL Create(
   
 - **WS_GROUP** 컨트롤을 그룹화  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CScrollBar#1](../../mfc/reference/codesnippet/cpp/cscrollbar-class_1.cpp)]  
   
 ##  <a name="cscrollbar"></a>  CScrollBar::CScrollBar  
@@ -158,7 +158,7 @@ CScrollBar();
 ### <a name="remarks"></a>설명  
  개체를 생성 한 후 호출 하는 **만들기** 멤버 함수를 만들고 Windows 스크롤 막대를 초기화 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CScrollBar#2](../../mfc/reference/codesnippet/cpp/cscrollbar-class_2.h)]  
   
 ##  <a name="enablescrollbar"></a>  CScrollBar::EnableScrollBar  
@@ -169,7 +169,7 @@ BOOL EnableScrollBar(UINT nArrowFlags = ESB_ENABLE_BOTH);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nArrowFlags`  
+ *nArrowFlags*  
  화살표를 사용 및 스크롤 화살표에 설정 또는 해제 여부를 지정 합니다. 이 매개 변수는 다음 값 중 하나일 수 있습니다.  
   
 - **ESB_ENABLE_BOTH** 스크롤 막대의 두 화살표를 사용 하도록 설정 합니다.  
@@ -183,7 +183,7 @@ BOOL EnableScrollBar(UINT nArrowFlags = ESB_ENABLE_BOTH);
 ### <a name="return-value"></a>반환 값  
  화살표를; 지정 된 대로 사용 하면 0이 아니고 그렇지 않으면 0으로, 화살표는 이미 요청 된 상태에 있는지 아니면 오류가 발생 했음을 나타냅니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CScrollBar::SetScrollRange](#setscrollrange)합니다.  
   
 ##  <a name="getscrollbarinfo"></a>  CScrollBar::GetScrollBarInfo  
@@ -213,10 +213,10 @@ BOOL GetScrollInfo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpScrollInfo`  
+ *lpScrollInfo*  
  에 대 한 포인터는 [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) 구조입니다. 이 구조에 대 한 자세한 내용은 Windows SDK를 참조 하십시오.  
   
- `nMask`  
+ *nMask*  
  검색할 스크롤 막대 매개 변수를 지정 합니다. 일반적인 사용법 SIF_ALL, SIF_PAGE, SIF_POS, SIF_TRACKPOS, 및 SIF_RANGE의 조합을 지정합니다. 참조 `SCROLLINFO` nMask 값에 대 한 자세한 내용은 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -229,7 +229,7 @@ BOOL GetScrollInfo(
   
  MFC Windows 메시지 처리기를 스크롤 막대 위치를 나타내는 [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) 및 [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll)만 16 비트 위치 데이터를 제공 합니다. `GetScrollInfo` 및 `SetScrollInfo` 스크롤 위치 데이터 막대의 32 비트를 제공 합니다. 따라서 응용 프로그램이 호출할 수 `GetScrollInfo` 중 하나를 처리 하는 동안 `CWnd::OnHScroll` 또는 `CWnd::OnVScroll` 32 비트 스크롤 막대 위치 데이터를 가져올 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)합니다.  
   
 ##  <a name="getscrolllimit"></a>  CScrollBar::GetScrollLimit  
@@ -242,7 +242,7 @@ int GetScrollLimit();
 ### <a name="return-value"></a>반환 값  
  성공 하면 스크롤 막대의 최대 위치 지정 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)합니다.  
   
 ##  <a name="getscrollpos"></a>  CScrollBar::GetScrollPos  
@@ -258,11 +258,11 @@ int GetScrollPos() const;
 ### <a name="remarks"></a>설명  
  현재 위치가 현재 스크롤 범위에 따라 달라 지는 상대적 값입니다. 예를 들어 스크롤 범위는 100-200 및 스크롤 상자는 막대 중에, 현재 위치는 150입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)합니다.  
   
 ##  <a name="getscrollrange"></a>  CScrollBar::GetScrollRange  
- 지정된 된 스크롤 막대에 대 한 현재 최소 및 최대 스크롤 막대 위치에서 지정한 위치에 복사 `lpMinPos` 및 `lpMaxPos`합니다.  
+ 지정된 된 스크롤 막대에 대 한 현재 최소 및 최대 스크롤 막대 위치에서 지정한 위치에 복사 *lpMinPos* 및 *lpMaxPos*합니다.  
   
 ```  
 void GetScrollRange(
@@ -271,16 +271,16 @@ void GetScrollRange(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpMinPos`  
+ *lpMinPos*  
  최소 위치를 수신 하는 정수 변수를 가리킵니다.  
   
- `lpMaxPos`  
+ *lpMaxPos*  
  최대 위치를 수신 하는 정수 변수를 가리킵니다.  
   
 ### <a name="remarks"></a>설명  
  스크롤 막대 컨트롤에 대 한 기본 범위는 빈 (두 값은 0 임).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)합니다.  
   
 ##  <a name="setscrollinfo"></a>  CScrollBar::SetScrollInfo  
@@ -293,11 +293,11 @@ BOOL SetScrollInfo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpScrollInfo`  
+ *lpScrollInfo*  
  에 대 한 포인터는 [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) 구조입니다.  
   
- `bRedraw`  
- 새 정보를 반영 하도록 스크롤 막대를 그려야 하는지 여부를 지정 합니다. 경우 `bRedraw` 은 **TRUE**, 스크롤 막대 다시 그려집니다. 이 경우 **FALSE**, 다시 그려지지 않습니다. 스크롤 막대는 기본적으로 다시 그려집니다.  
+ *bRedraw*  
+ 새 정보를 반영 하도록 스크롤 막대를 그려야 하는지 여부를 지정 합니다. 경우 *bRedraw* 은 **TRUE**, 스크롤 막대 다시 그려집니다. 이 경우 **FALSE**, 다시 그려지지 않습니다. 스크롤 막대는 기본적으로 다시 그려집니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공이 반환 됩니다 **TRUE**합니다. 그렇지 않으면 **FALSE**합니다.  
@@ -307,11 +307,11 @@ BOOL SetScrollInfo(
   
  `SCROLLINFO` 구조 스크롤 막대의 최소값 및 최대값 스크롤 위치, 페이지 크기 및 스크롤 상자 (thumb)의 위치를 포함 하는 방법에 대 한 정보를 포함 합니다. 참조는 [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) 구조 기본값을 변경 하는 방법에 대 한 자세한 내용은 Windows SDK의 구조 항목입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  
   
 ##  <a name="setscrollpos"></a>  CScrollBar::SetScrollPos  
- 스크롤 상자의 현재 위치에 지정 된 설정 `nPos` 및를 지정 하는 경우 새 위치를 반영 하도록 스크롤 막대를 다시 그립니다.  
+ 스크롤 상자의 현재 위치에 지정 된 설정 *nPos* 및를 지정 하는 경우 새 위치를 반영 하도록 스크롤 막대를 다시 그립니다.  
   
 ```  
 int SetScrollPos(
@@ -320,19 +320,19 @@ int SetScrollPos(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nPos`  
+ *nPos*  
  스크롤 상자에 대 한 새 위치를 지정합니다. 스크롤 범위 내에 속해야 합니다.  
   
- `bRedraw`  
- 새 위치를 반영 하도록 스크롤 막대를 그려야 하는지 여부를 지정 합니다. 경우 `bRedraw` 은 **TRUE**, 스크롤 막대 다시 그려집니다. 이 경우 **FALSE**, 다시 그려지지 않습니다. 스크롤 막대는 기본적으로 다시 그려집니다.  
+ *bRedraw*  
+ 새 위치를 반영 하도록 스크롤 막대를 그려야 하는지 여부를 지정 합니다. 경우 *bRedraw* 은 **TRUE**, 스크롤 막대 다시 그려집니다. 이 경우 **FALSE**, 다시 그려지지 않습니다. 스크롤 막대는 기본적으로 다시 그려집니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공 하면 스크롤 상자의 이전 위치를 지정 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 설정 `bRedraw` 를 **FALSE** 짧은 간격 내에서 두 번 다시 그려지는 스크롤 막대를 하지 않으려면 다른 함수에 대 한 순차적 호출에서 스크롤 막대를 다시 그리는 때마다 합니다.  
+ 설정 *bRedraw* 를 **FALSE** 짧은 간격 내에서 두 번 다시 그려지는 스크롤 막대를 하지 않으려면 다른 함수에 대 한 순차적 호출에서 스크롤 막대를 다시 그리는 때마다 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CScrollBar::SetScrollRange](#setscrollrange)합니다.  
   
 ##  <a name="setscrollrange"></a>  CScrollBar::SetScrollRange  
@@ -346,25 +346,25 @@ void SetScrollRange(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nMinPos`  
+ *nMinPos*  
  최소 스크롤 위치를 지정 합니다.  
   
- `nMaxPos`  
+ *nMaxPos*  
  최대 스크롤 위치를 지정 합니다.  
   
- `bRedraw`  
- 변경 내용을 반영 하도록 스크롤 막대를 그려야 하는지 여부를 지정 합니다. 경우 `bRedraw` 은 **TRUE**, 스크롤 막대를 다시 그리면; 경우 **FALSE**, 다시 그려지지 않습니다. 기본적으로는 것이 그려집니다.  
+ *bRedraw*  
+ 변경 내용을 반영 하도록 스크롤 막대를 그려야 하는지 여부를 지정 합니다. 경우 *bRedraw* 은 **TRUE**, 스크롤 막대를 다시 그리면; 경우 **FALSE**, 다시 그려지지 않습니다. 기본적으로는 것이 그려집니다.  
   
 ### <a name="remarks"></a>설명  
- 설정 `nMinPos` 및 `nMaxPos` 표준 스크롤 막대를 숨기려면 0입니다.  
+ 설정 *nMinPos* 및 *nMaxPos* 표준 스크롤 막대를 숨기려면 0입니다.  
   
  스크롤 막대 알림 메시지를 처리 하는 동안 스크롤 막대를 숨기려면이 함수를 호출 하지 마십시오.  
   
- 호출 하는 경우 `SetScrollRange` 에 대 한 호출 바로 다음에 오는 `SetScrollPos` 멤버 함수를 설정 `bRedraw` 에 `SetScrollPos` 을 두 번 다시 그려지는에서 스크롤 막대를 제한 합니다.  
+ 호출 하는 경우 `SetScrollRange` 에 대 한 호출 바로 다음에 오는 `SetScrollPos` 멤버 함수를 설정 *bRedraw* 에 `SetScrollPos` 을 두 번 다시 그려지는에서 스크롤 막대를 제한 합니다.  
   
- 로 지정 된 값의 차이 `nMinPos` 및 `nMaxPos` 32767 보다 크지 않아야 합니다. 스크롤 막대 컨트롤에 대 한 기본 범위는 빈 (둘 다 `nMinPos` 및 `nMaxPos` 0).  
+ 로 지정 된 값의 차이 *nMinPos* 및 *nMaxPos* 32767 보다 크지 않아야 합니다. 스크롤 막대 컨트롤에 대 한 기본 범위는 빈 (둘 다 *nMinPos* 및 *nMaxPos* 0).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_CScrollBar#4](../../mfc/reference/codesnippet/cpp/cscrollbar-class_4.cpp)]  
   
 ##  <a name="showscrollbar"></a>  CScrollBar::ShowScrollBar  
@@ -375,13 +375,13 @@ void ShowScrollBar(BOOL bShow = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bShow`  
+ *bShow*  
  스크롤 막대가 표시 되는지 또는 숨겨지는지 여부를 지정 합니다. 이 매개 변수가 **TRUE**, 스크롤 막대가 표시 되는지; 숨겨져 그렇지 않은 경우.  
   
 ### <a name="remarks"></a>설명  
  응용 프로그램에서 스크롤 막대 알림 메시지를 처리 하는 동안 스크롤 막대를 숨기려면이 함수를 호출 하지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CScrollBar::Create](#create)합니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d04a2f643add489d3302e58a9bde995303ecddd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be5d27adabe8b271e2f8f3ed338e63e18d2432fc
+ms.sourcegitcommit: be0e3457f2884551f18e183ef0ea65c3ded7f689
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369927"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37078238"
 ---
 # <a name="csimpleexception-class"></a>CSimpleException 클래스
 이 클래스는 리소스에 중요한 MFC 예외의 기본 클래스입니다.  
@@ -84,8 +84,8 @@ explicit CSimpleException(BOOL bAutoDelete);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bAutoDelete`  
- 지정 **TRUE** 하는 경우에 대 한 메모리는 `CSimpleException` 힙에 할당 된 개체입니다. 이렇게 하면는 `CSimpleException` 삭제할 때 개체는 **삭제** 멤버 함수를 호출 하는 예외를 삭제 합니다. 지정 **FALSE** 경우는 `CSimpleException` 개체가 스택에 이거나 전역 개체입니다. 이 경우에 `CSimpleException` 됩니다 때는 **삭제** 멤버 함수를 호출 합니다.  
+ *bAutoDelete*  
+ 지정 **TRUE** 하는 경우에 대 한 메모리는 `CSimpleException` 힙에 할당 된 개체입니다. 이렇게 하면는 `CSimpleException` 삭제할 때 개체는 `Delete` 멤버 함수를 호출 하는 예외를 삭제 합니다. 지정 **FALSE** 경우는 `CSimpleException` 개체가 스택에 이거나 전역 개체입니다. 이 경우에 `CSimpleException` 됩니다 때는 `Delete` 멤버 함수를 호출 합니다.  
   
 ### <a name="remarks"></a>설명  
  이 생성자를 직접 호출 필요가 하는 것은 일반적으로 없습니다. 인스턴스를 만들도록 예외를 throw 하는 함수는 `CException`-파생 클래스와 MFC 중 하나를 사용 해야 함수 같은 throw 되거나 해당 생성자를 호출 [AfxThrowFileException](exception-processing.md#afxthrowfileexception), 미리 정의 된 형식이 throw 합니다.  
@@ -101,13 +101,13 @@ virtual BOOL GetErrorMessage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszError`  
+ *lpszError*  
  오류 메시지를 수신할 버퍼에 대 한 포인터입니다.  
   
- `nMaxError`  
+ *nMaxError*  
  버퍼에 저장할 수를 포함 하 여 문자의 최대 수는 **NULL** 종결자입니다.  
   
- `pnHelpContext`  
+ *pnHelpContext*  
  주소는 **UINT** 를 수신할 도움말 컨텍스트 id입니다. 경우 **NULL**, ID가 없습니다. 반환 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
