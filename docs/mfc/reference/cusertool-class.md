@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59f5ab622d6124e830028ea61a0c77583f76d015
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 925e93afae4682497263eb96832aa466c6034231
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374755"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121318"
 ---
 # <a name="cusertool-class"></a>CUserTool 클래스
 사용자 도구는 외부 응용 프로그램을 실행하는 메뉴 항목입니다. **도구** 탭은 **사용자 지정** 대화 상자 ( [CMFCToolBarsCustomizeDialog 클래스](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) 사용 하면 사용자 도구를 추가 하 고 이름, 명령, 인수를 지정 하 고 각 사용자 도구에 대 한 초기 디렉터리입니다.  
@@ -79,7 +79,7 @@ class CUserTool : public CObject
   
 ### <a name="data-members"></a>데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CUserTool::m_strArguments](#m_strarguments)|사용자 도구에 대 한 명령줄 인수입니다.|  
 |[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|사용자 도구에 대 한 초기 디렉터리입니다.|  
@@ -88,7 +88,7 @@ class CUserTool : public CObject
 ## <a name="remarks"></a>설명  
  응용 프로그램에서 사용자 도구를 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 참조 [CUserToolsManager 클래스](../../mfc/reference/cusertoolsmanager-class.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서 도구를 만드는 방법을 보여 줍니다는 `CUserToolsManager` 개체, 설정 된 `m_strLabel` 멤버 변수와 사용자 도구를 실행 하는 응용 프로그램 집합입니다. 이 코드 조각은의 일부인는 [Visual Studio 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#35](../../mfc/codesnippet/cpp/cusertool-class_1.cpp)]  
@@ -122,10 +122,10 @@ void DrawToolIcon(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- [in] `rectImage`  
+ [in] *rectImage*  
  아이콘을 표시 하는 영역의 좌표를 지정 합니다.  
   
 ##  <a name="getcommand"></a>  CUserTool::GetCommand  
@@ -169,7 +169,7 @@ virtual HICON LoadDefaultIcon();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 로드 된 아이콘에 대 한 핸들 ( `HICON`), 또는 `NULL` 기본 아이콘을 로드할 수 없는 경우.  
+ 로드 된 아이콘 (HICON) 또는 기본 아이콘을 로드할 수 없는 경우 NULL에 대 한 핸들입니다.  
   
 ### <a name="remarks"></a>설명  
  프레임 워크 도구 실행 파일에서 사용자 정의 도구에 대 한 아이콘을 로드할 수 없는 경우이 메서드를 호출 합니다.  
@@ -211,7 +211,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `ar`  
+ [in] *ar*  
   
 ### <a name="remarks"></a>설명  
   
@@ -223,7 +223,7 @@ void SetCommand(LPCTSTR lpszCmd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszCmd`  
+ [in] *lpszCmd*  
  사용자 도구와 연결할 새 응용 프로그램을 지정 합니다.  
   
 ### <a name="remarks"></a>설명  

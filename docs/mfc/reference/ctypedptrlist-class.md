@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afb32a662c538526c4fe26f6abf46e56a42de728
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c3f74782241ec69d77ec55b8613c59f87adb40fb
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374590"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122832"
 ---
 # <a name="ctypedptrlist-class"></a>CTypedPtrList 클래스
 클래스 `CPtrList`의 개체에 대한 형식 안전 "래퍼"를 제공합니다.  
@@ -54,10 +54,10 @@ class CTypedPtrList : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  형식화 된 포인터 목록 클래스;의 기본 클래스 포인터 목록 클래스 여야 합니다 ( `CObList` 또는 `CPtrList`).  
   
- `TYPE`  
+ *형식*  
  기본 클래스 목록에 저장 된 요소의 형식입니다.  
   
 ## <a name="members"></a>멤버  
@@ -90,7 +90,7 @@ class CTypedPtrList : public BASE_CLASS
   
  사용 하 여 대 한 자세한 내용은 `CTypedPtrList`, 문서를 참조 [컬렉션](../../mfc/collections.md) 및 [템플릿 기반 클래스](../../mfc/template-based-classes.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예의 인스턴스를 만들고 `CTypedPtrList`, 하나의 개체 추가, 디스크, 목록 또는 그 반대로 serialize 하 고 다음 개체를 삭제 합니다.  
   
  [!code-cpp[NVC_MFCCollections#110](../../mfc/codesnippet/cpp/ctypedptrlist-class_1.cpp)]  
@@ -119,17 +119,17 @@ void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
  *형식*  
  기본 클래스 목록에 저장 된 요소의 형식입니다.  
   
- `newElement`  
- 이 목록에 추가할 개체 포인터입니다. A **NULL** 값은 사용할 수 있습니다.  
+ *newElement*  
+ 이 목록에 추가할 개체 포인터입니다. NULL 값이 허용 됩니다.  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  형식화 된 포인터 목록 클래스;의 기본 클래스 포인터 목록 클래스 여야 합니다 ( [CObList](../../mfc/reference/coblist-class.md) 또는 [해당 클래스가](../../mfc/reference/cptrlist-class.md)).  
   
- `pNewList`  
- 에 대 한 포인터를 다른 [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) 개체입니다. 요소 `pNewList` 이 목록에 추가 됩니다.  
+ *pNewList*  
+ 에 대 한 포인터를 다른 [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) 개체입니다. 요소 *pNewList* 이 목록에 추가 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
- 첫 번째 버전은 반환 된 **위치** 새로 삽입된 된 요소의 값입니다.  
+ 첫 번째 버전 새로 삽입 된 요소의 위치 값을 반환 합니다.  
   
 ### <a name="remarks"></a>설명  
  첫 번째 버전 목록의 시작 하기 전에 새 요소를 추가 합니다. 두 번째 버전은 다른 목록 헤드 하기 전에 요소를 추가합니다.  
@@ -146,23 +146,23 @@ void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
  *형식*  
  기본 클래스 목록에 저장 된 요소의 형식입니다.  
   
- `newElement`  
- 이 목록에 추가할 개체 포인터입니다. A **NULL** 값은 사용할 수 있습니다.  
+ *newElement*  
+ 이 목록에 추가할 개체 포인터입니다. NULL 값이 허용 됩니다.  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  형식화 된 포인터 목록 클래스;의 기본 클래스 포인터 목록 클래스 여야 합니다 ( [CObList](../../mfc/reference/coblist-class.md) 또는 [해당 클래스가](../../mfc/reference/cptrlist-class.md)).  
   
- `pNewList`  
- 에 대 한 포인터를 다른 [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) 개체입니다. 요소 `pNewList` 이 목록에 추가 됩니다.  
+ *pNewList*  
+ 에 대 한 포인터를 다른 [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) 개체입니다. 요소 *pNewList* 이 목록에 추가 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
- 첫 번째 버전은 반환 된 **위치** 새로 삽입된 된 요소의 값입니다.  
+ 첫 번째 버전 새로 삽입 된 요소의 위치 값을 반환 합니다.  
   
 ### <a name="remarks"></a>설명  
  첫 번째 버전 목록 꼬리 후 새 요소를 추가합니다. 두 번째 버전은 목록 꼬리 후 다른 목록 요소를 추가합니다.  
   
 ##  <a name="getat"></a>  CTypedPtrList::GetAt  
- 형식의 변수 **위치** 목록에 대 한 키입니다.  
+ 위치 형식의 변수는 목록에 대 한 키입니다.  
   
 ```  
 TYPE& GetAt(POSITION position);  
@@ -174,17 +174,17 @@ TYPE GetAt(POSITION position) const;
  템플릿 매개 변수 목록에 저장 된 요소의 형식을 지정 합니다.  
   
  *위치*  
- A **위치** 이전에서 반환 된 값 `GetHeadPosition` 또는 **찾을** 멤버 함수 호출 합니다.  
+ 이전에서 반환 되는 위치 값 `GetHeadPosition` 또는 `Find` 멤버 함수 호출 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 목록에 대 한 포인터를 통해 액세스 하는 경우는 **const CTypedPtrList**, 다음 `GetAt` 템플릿 매개 변수로 지정 된 형식의 포인터를 반환 *형식*합니다. 이 함수를 대입문의 오른쪽에만 사용할 수 있도록 하며 따라서 수정 되지 않도록에서 목록을 보호 합니다.  
+ 목록에 대 한 포인터를 통해 액세스 하는 경우는 `const CTypedPtrList`, 다음 `GetAt` 템플릿 매개 변수로 지정 된 형식의 포인터를 반환 *형식*합니다. 이 함수를 대입문의 오른쪽에만 사용할 수 있도록 하며 따라서 수정 되지 않도록에서 목록을 보호 합니다.  
   
  목록에 직접 또는 포인터를 통해 액세스 하는 경우는 `CTypedPtrList`, 다음 `GetAt` 템플릿 매개 변수로 지정 된 형식의 포인터에 대 한 참조를 반환 *형식*합니다. 이 대입 문의 양쪽에 사용 될 함수를 통해 목록 항목을 수정할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
- 인덱스를 동일 하지 않습니다 및 작업할 수 없습니다. 한 **위치** 직접 값입니다. `GetAt` 검색 된 `CObject` 지정된 된 위치와 연결 된 포인터입니다.  
+ 인덱스를 동일 하지 않습니다 및 작업할 수 없습니다. 위치 값 직접 합니다. `GetAt` 검색 된 `CObject` 지정된 된 위치와 연결 된 포인터입니다.  
   
- 확인 해야 하면 **위치** 값 목록에서 올바른 위치를 나타냅니다. 유효 하지 않으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다.  
+ 위치 값 목록에서 올바른 위치를 나타내도록 확인 해야 합니다. 유효 하지 않으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다.  
   
  이 인라인 함수가 호출 `BASE_CLASS` **:: GetAt**합니다.  
   
@@ -201,7 +201,7 @@ TYPE GetHead() const;
  템플릿 매개 변수 목록에 저장 된 요소의 형식을 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 목록에 대 한 포인터를 통해 액세스 하는 경우는 **const CTypedPtrList**, 다음 `GetHead` 템플릿 매개 변수로 지정 된 형식의 포인터를 반환 *형식*합니다. 이 함수를 대입문의 오른쪽에만 사용할 수 있도록 하며 따라서 수정 되지 않도록에서 목록을 보호 합니다.  
+ 목록에 대 한 포인터를 통해 액세스 하는 경우는 `const CTypedPtrList`, 다음 `GetHead` 템플릿 매개 변수로 지정 된 형식의 포인터를 반환 *형식*합니다. 이 함수를 대입문의 오른쪽에만 사용할 수 있도록 하며 따라서 수정 되지 않도록에서 목록을 보호 합니다.  
   
  목록에 직접 또는 포인터를 통해 액세스 하는 경우는 `CTypedPtrList`, 다음 `GetHead` 템플릿 매개 변수로 지정 된 형식의 포인터에 대 한 참조를 반환 *형식*합니다. 이 대입 문의 양쪽에 사용 될 함수를 통해 목록 항목을 수정할 수 있습니다.  
   
@@ -209,7 +209,7 @@ TYPE GetHead() const;
  목록을 호출 하기 전에 비어 있지 않은지 확인 해야 `GetHead`합니다. 목록이 비어 있으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다. 사용 하 여 [IsEmpty](../../mfc/reference/coblist-class.md#isempty) 목록 요소에 포함 되었는지 확인 합니다.  
   
 ##  <a name="getnext"></a>  CTypedPtrList::GetNext  
- 로 식별 되는 목록 요소를 가져옵니다 `rPosition`, 다음 설정 `rPosition` 에 **위치** 목록에서 다음 항목의 값입니다.  
+ 로 식별 되는 목록 요소를 가져옵니다 *rPosition*, 다음 설정 *rPosition* 목록에서 다음 항목의 위치 값입니다.  
   
 ```  
 TYPE& GetNext(POSITION& rPosition);  
@@ -220,25 +220,25 @@ TYPE GetNext(POSITION& rPosition) const;
  *형식*  
  이 목록에 포함 된 요소의 형식을 지정 하는 템플릿 매개 변수  
   
- `rPosition`  
- 에 대 한 참조는 **위치** 이전에서 반환 된 값 `GetNext`, `GetHeadPosition`, 또는 기타 멤버 함수 호출 합니다.  
+ *rPosition*  
+ 이전에서 반환 되는 위치 값에 대 한 참조 `GetNext`, `GetHeadPosition`, 또는 기타 멤버 함수 호출 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 목록에 대 한 포인터를 통해 액세스 하는 경우는 **const CTypedPtrList**, 다음 `GetNext` 템플릿 매개 변수로 지정 된 형식의 포인터를 반환 *형식*합니다. 이 함수를 대입문의 오른쪽에만 사용할 수 있도록 하며 따라서 수정 되지 않도록에서 목록을 보호 합니다.  
+ 목록에 대 한 포인터를 통해 액세스 하는 경우는 `const CTypedPtrList`, 다음 `GetNext` 템플릿 매개 변수로 지정 된 형식의 포인터를 반환 *형식*합니다. 이 함수를 대입문의 오른쪽에만 사용할 수 있도록 하며 따라서 수정 되지 않도록에서 목록을 보호 합니다.  
   
  목록에 직접 또는 포인터를 통해 액세스 하는 경우는 `CTypedPtrList`, 다음 `GetNext` 템플릿 매개 변수로 지정 된 형식의 포인터에 대 한 참조를 반환 *형식*합니다. 이 대입 문의 양쪽에 사용 될 함수를 통해 목록 항목을 수정할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
  사용할 수 있습니다 `GetNext` 정방향으로 반복 루프를 호출 하 여 초기 위치를 설정 하는 경우에 `GetHeadPosition` 또는 [CPtrList::Find](../../mfc/reference/coblist-class.md#find)합니다.  
   
- 확인 해야 하면 **위치** 값 목록에서 올바른 위치를 나타냅니다. 유효 하지 않으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다.  
+ 위치 값 목록에서 올바른 위치를 나타내도록 확인 해야 합니다. 유효 하지 않으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다.  
   
- 검색된 된 요소는 목록에서 마지막 다음 새 값의 경우 `rPosition` 로 설정 된 **NULL**합니다.  
+ 검색된 된 요소는 목록에서 마지막 다음 새 값의 경우 *rPosition* NULL로 설정 됩니다.  
   
  반복 하는 동안 요소를 제거 하는 것이 불가능 합니다. 예를 참조 [CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat)합니다.  
   
 ##  <a name="getprev"></a>  CTypedPtrList::GetPrev  
- 로 식별 되는 목록 요소를 가져옵니다 `rPosition`, 다음 설정 `rPosition` 에 **위치** 목록에서 이전 항목의 값입니다.  
+ 로 식별 되는 목록 요소를 가져옵니다 *rPosition*, 다음 설정 *rPosition* 목록의 이전 항목의 위치 값입니다.  
   
 ```  
 TYPE& GetPrev(POSITION& rPosition);  
@@ -249,20 +249,20 @@ TYPE GetPrev(POSITION& rPosition) const;
  *형식*  
  이 목록에 포함 된 요소의 형식을 지정 하는 템플릿 매개 변수  
   
- `rPosition`  
- 에 대 한 참조는 **위치** 이전에서 반환 된 값 `GetPrev` 또는 다른 멤버 함수 호출 합니다.  
+ *rPosition*  
+ 이전에서 반환 되는 위치 값에 대 한 참조 `GetPrev` 또는 다른 멤버 함수 호출 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 목록에 대 한 포인터를 통해 액세스 하는 경우는 **const CTypedPtrList**, 다음 `GetPrev` 템플릿 매개 변수로 지정 된 형식의 포인터를 반환 *형식*합니다. 이 함수를 대입문의 오른쪽에만 사용할 수 있도록 하며 따라서 수정 되지 않도록에서 목록을 보호 합니다.  
+ 목록에 대 한 포인터를 통해 액세스 하는 경우는 `const CTypedPtrList`, 다음 `GetPrev` 템플릿 매개 변수로 지정 된 형식의 포인터를 반환 *형식*합니다. 이 함수를 대입문의 오른쪽에만 사용할 수 있도록 하며 따라서 수정 되지 않도록에서 목록을 보호 합니다.  
   
  목록에 직접 또는 포인터를 통해 액세스 하는 경우는 `CTypedPtrList`, 다음 `GetPrev` 템플릿 매개 변수로 지정 된 형식의 포인터에 대 한 참조를 반환 *형식*합니다. 이 대입 문의 양쪽에 사용 될 함수를 통해 목록 항목을 수정할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
- 사용할 수 있습니다 `GetPrev` 을 호출 하 여 초기 위치를 설정 하는 경우 역방향 반복 루프에서 `GetTailPosition` 또는 **찾을**합니다.  
+ 사용할 수 있습니다 `GetPrev` 을 호출 하 여 초기 위치를 설정 하는 경우 역방향 반복 루프에서 `GetTailPosition` 또는 `Find`합니다.  
   
- 확인 해야 하면 **위치** 값 목록에서 올바른 위치를 나타냅니다. 유효 하지 않으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다.  
+ 위치 값 목록에서 올바른 위치를 나타내도록 확인 해야 합니다. 유효 하지 않으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다.  
   
- 검색된 된 요소 목록에서 첫 번째 다음의 새 값 이면의 `rPosition` 로 설정 된 **NULL**합니다.  
+ 검색된 된 요소 목록에서 첫 번째 다음의 새 값 이면의 *rPosition* NULL로 설정 됩니다.  
   
 ##  <a name="gettail"></a>  CTypedPtrList::GetTail  
  이 목록의 헤드 요소를 나타내는 포인터를 가져옵니다.  
@@ -277,7 +277,7 @@ TYPE GetTail() const;
  템플릿 매개 변수 목록에 저장 된 요소의 형식을 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 목록에 대 한 포인터를 통해 액세스 하는 경우는 **const CTypedPtrList**, 다음 `GetTail` 템플릿 매개 변수로 지정 된 형식의 포인터를 반환 *형식*합니다. 이 함수를 대입문의 오른쪽에만 사용할 수 있도록 하며 따라서 수정 되지 않도록에서 목록을 보호 합니다.  
+ 목록에 대 한 포인터를 통해 액세스 하는 경우는 `const CTypedPtrList`, 다음 `GetTail` 템플릿 매개 변수로 지정 된 형식의 포인터를 반환 *형식*합니다. 이 함수를 대입문의 오른쪽에만 사용할 수 있도록 하며 따라서 수정 되지 않도록에서 목록을 보호 합니다.  
   
  목록에 직접 또는 포인터를 통해 액세스 하는 경우는 `CTypedPtrList`, 다음 `GetTail` 템플릿 매개 변수로 지정 된 형식의 포인터에 대 한 참조를 반환 *형식*합니다. 이 대입 문의 양쪽에 사용 될 함수를 통해 목록 항목을 수정할 수 있습니다.  
   
@@ -326,19 +326,19 @@ void SetAt(POSITION pos, TYPE newElement);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pos`  
- **위치** 설정할 요소입니다.  
+ *pos*  
+ 설정할 요소의 위치입니다.  
   
  *형식*  
  기본 클래스 목록에 저장 된 요소의 형식입니다.  
   
- `newElement`  
+ *newElement*  
  목록에 기록할 개체 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
- 형식의 변수 **위치** 목록에 대 한 키입니다. 인덱스를 동일 하지 않습니다 및 작업할 수 없습니다. 한 **위치** 직접 값입니다. `SetAt` 목록에서 지정된 된 위치에 개체 포인터를 씁니다.  
+ 위치 형식의 변수는 목록에 대 한 키입니다. 인덱스를 동일 하지 않습니다 및 작업할 수 없습니다. 위치 값 직접 합니다. `SetAt` 목록에서 지정된 된 위치에 개체 포인터를 씁니다.  
   
- 확인 해야 하면 **위치** 값 목록에서 올바른 위치를 나타냅니다. 유효 하지 않으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다.  
+ 위치 값 목록에서 올바른 위치를 나타내도록 확인 해야 합니다. 유효 하지 않으면 Microsoft Foundation Class 라이브러리의 디버그 버전 어설션 합니다.  
   
  설명에 자세한 참조 [CObList::SetAt](../../mfc/reference/coblist-class.md#setat)합니다.  
   

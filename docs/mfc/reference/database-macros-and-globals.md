@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcafff20ad79f68f2bb5d4195c38603da63b9d17
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cb4dbb75dba33fe616fbce95cdec74bd81cc3fe9
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370775"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121918"
 ---
 # <a name="database-macros-and-globals"></a>데이터베이스 매크로 및 전역
 매크로 및 전역 변수 아래에 나열 된 ODBC 기반 데이터베이스 응용 프로그램에 적용 됩니다. DAO 기반 응용 프로그램과 함께 사용 되지 않습니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "33370775"
 
 
 ## <a name="afxdbinitmodule"></a> AfxDbInitModule
-MFC 데이터베이스 (또는 DAO)을 동적으로 MFC에 링크 하는 MFC 기본 DLL에서 지원에 대 한 기본 MFC DLL의에이 함수에 대 한 호출 추가 **CWinApp::InitInstance** MFC를 초기화 하는 함수에 DLL 데이터베이스입니다.  
+MFC 데이터베이스 (또는 DAO)을 동적으로 MFC에 링크 하는 MFC 기본 DLL에서 지원에 대 한 기본 MFC DLL의에이 함수에 대 한 호출 추가 `CWinApp::InitInstance` MFC를 초기화 하는 함수에 DLL 데이터베이스입니다.  
    
 ### <a name="syntax"></a>구문    
 ```
@@ -60,7 +60,7 @@ void AFXAPI AfxDbInitModule( );
 ```  
    
 ### <a name="remarks"></a>설명  
- 이 호출은 기본 클래스 호출이 나 DLL MFC 데이터베이스에 액세스 하는 추가 코드를 확인 합니다. MFC 데이터베이스 DLL은 MFC 확장 DLL; MFC 확장 DLL 가져오기에 유선 하려면에서는 **CDynLinkLibrary** 만들어야 하 체인은 **CDynLinkLibrary** 은 사용 하는 모든 모듈의 컨텍스트에서 개체입니다. `AfxDbInitModule` 만듭니다는 **CDynLinkLibrary** 기본 MFC DLL의 컨텍스트에서 개체에 유선 가져옵니다 있도록는 **CDynLinkLibrary** 체인 기본 MFC DLL의 개체입니다.  
+ 이 호출은 기본 클래스 호출이 나 DLL MFC 데이터베이스에 액세스 하는 추가 코드를 확인 합니다. MFC 데이터베이스 DLL은 MFC 확장 DLL; MFC 확장 DLL 가져오기에 유선 하려면에서는 `CDynLinkLibrary` 만들어야 하 체인은 `CDynLinkLibrary` 은 사용 하는 모든 모듈의 컨텍스트에서 개체입니다. `AfxDbInitModule` 만듭니다는 `CDynLinkLibrary` 기본 MFC DLL의 컨텍스트에서 개체에 유선 가져옵니다 있도록는 `CDynLinkLibrary` 체인 기본 MFC DLL의 개체입니다.  
    
 ### <a name="requirements"></a>요구 사항  
  **헤더:** < afxdll_.h >  
@@ -78,19 +78,19 @@ AFX_ODBC_CALL(SQLFunc)
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `SQLFunc`  
+ *SQLFunc*  
  ODBC API 함수입니다. ODBC API 함수에 대 한 자세한 내용은 Windows SDK를 참조 하십시오.  
   
 ### <a name="remarks"></a>설명  
  `AFX_ODBC_CALL` 반복적으로 함수를 호출 될 때까지 더 이상 반환 `SQL_STILL_EXECUTING`합니다.  
   
- 호출 하기 전에 `AFX_ODBC_CALL`, 변수를 선언 해야 `nRetCode`, 형식의 **RETCODE**합니다.  
+ 호출 하기 전에 `AFX_ODBC_CALL`, 변수를 선언 해야 `nRetCode`, RETCODE 형식의 합니다.  
   
- MFC ODBC 클래스 지금 사용 하 여 동기적 처리만 있는지 note 합니다. 비동기 작업을 수행 하려면 ODBC API 함수를 호출 해야 **SQLSetConnectOption**합니다. 자세한 내용은 "비동기적으로 함수 실행" Windows SDK에서 항목을 참조 합니다.  
+ MFC ODBC 클래스 지금 사용 하 여 동기적 처리만 있는지 note 합니다. 비동기 작업을 수행 하려면 ODBC API 함수를 호출 해야 `SQLSetConnectOption`합니다. 자세한 내용은 "비동기적으로 함수 실행" Windows SDK에서 항목을 참조 합니다.  
 
   
-### <a name="example"></a>예제  
- 이 예에서는 `AFX_ODBC_CALL` 호출 하는 **SQLColumns** 의해 이름이 지정 된 테이블의 열 목록이 반환 하는 ODBC API 함수를 `strTableName`합니다. 선언에 유의 `nRetCode` 및 레코드 집합 데이터 멤버 함수에 매개 변수를 전달 하려면 사용 합니다. 예제에서는 또한 사용 하 여 호출의 결과 확인 보여줍니다 **확인**, 클래스의 멤버 함수 `CRecordset`합니다. 변수 `prs` 에 대 한 포인터는 `CRecordset` 개체를 다른 곳에서 선언 합니다.  
+### <a name="example"></a>예  
+ 이 예에서는 `AFX_ODBC_CALL` 호출 하는 `SQLColumns` 의해 이름이 지정 된 테이블의 열 목록이 반환 하는 ODBC API 함수를 `strTableName`합니다. 선언에 유의 `nRetCode` 및 레코드 집합 데이터 멤버 함수에 매개 변수를 전달 하려면 사용 합니다. 예제에서는 또한 사용 하 여 호출의 결과 확인 보여줍니다 `Check`, 클래스의 멤버 함수 `CRecordset`합니다. 변수 `prs` 에 대 한 포인터는 `CRecordset` 개체를 다른 곳에서 선언 합니다.  
   
  [!code-cpp[NVC_MFCDatabase#39](../../mfc/codesnippet/cpp/database-macros-and-globals_1.cpp)]  
 
@@ -105,17 +105,17 @@ AFX_SQL_ASYNC(prs, SQLFunc)
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `prs`  
+ *pr*  
  `CRecordset` 개체 또는 `CDatabase` 개체에 대한 포인터입니다. MFC 4.2부터는 이 매개 변수 값이 무시됩니다.  
   
- `SQLFunc`  
+ *SQLFunc*  
  ODBC API 함수입니다. ODBC API 함수에 대 한 자세한 내용은 Windows SDK를 참조 하십시오.  
   
 ### <a name="remarks"></a>설명  
- `AFX_SQL_ASYNC` 매크로 호출 하기만 하면 [AFX_ODBC_CALL](#afx_odbc_call) 무시는 `prs` 매개 변수입니다. MFC 4.2 이전 버전에서, `AFX_SQL_ASYNC`는 `SQL_STILL_EXECUTING`를 반환할 수 있는 ODBC API 함수를 호출하기 위해 사용되었습니다. ODBC API 함수가 `SQL_STILL_EXECUTING`을 반환한 경우, `AFX_SQL_ASYNC`가 `prs->OnWaitForDataSource`를 호출합니다.  
+ `AFX_SQL_ASYNC` 매크로 호출 하기만 하면 [AFX_ODBC_CALL](#afx_odbc_call) 무시는 *pr* 매개 변수입니다. MFC 4.2 이전 버전에서, `AFX_SQL_ASYNC`는 `SQL_STILL_EXECUTING`를 반환할 수 있는 ODBC API 함수를 호출하기 위해 사용되었습니다. ODBC API 함수가 `SQL_STILL_EXECUTING`을 반환한 경우, `AFX_SQL_ASYNC`가 `prs->OnWaitForDataSource`를 호출합니다.  
   
 > [!NOTE]
->  MFC ODBC 클래스에는 이제 동기적 처리만 사용됩니다. 비동기 작업을 수행 하려면 ODBC API 함수를 호출 해야 **SQLSetConnectOption**합니다. 자세한 내용은 "비동기적으로 함수 실행" Windows SDK에서 항목을 참조 합니다.  
+>  MFC ODBC 클래스에는 이제 동기적 처리만 사용됩니다. 비동기 작업을 수행 하려면 ODBC API 함수를 호출 해야 `SQLSetConnectOption`합니다. 자세한 내용은 "비동기적으로 함수 실행" Windows SDK에서 항목을 참조 합니다.  
   
 ### <a name="requirements"></a>요구 사항  
   **헤더** afxdb.h  
@@ -128,13 +128,13 @@ AFX_SQL_SYNC(SQLFunc)
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `SQLFunc`  
+ *SQLFunc*  
  ODBC API 함수입니다. 이러한 함수에 대 한 자세한 내용은 Windows SDK를 참조 하십시오.  
   
 ### <a name="remarks"></a>설명  
  이 매크로 사용 하 여 반환 하지 것입니다는 ODBC API 함수를 호출할 `SQL_STILL_EXECUTING`합니다.  
   
- 호출 하기 전에 `AFX_SQL_SYNC`, 변수를 선언 해야 `nRetCode`, 형식의 **RETCODE**합니다. 값을 확인할 수 있습니다 `nRetCode` 매크로 호출 후 합니다.  
+ 호출 하기 전에 `AFX_SQL_SYNC`, 변수를 선언 해야 `nRetCode`, RETCODE 형식의 합니다. 값을 확인할 수 있습니다 `nRetCode` 매크로 호출 후 합니다.  
   
  구현 `AFX_SQL_SYNC` MFC 4.2에서 변경 되었습니다. 서버 상태를 확인 하는 더 이상 필요 하기 때문에 `AFX_SQL_SYNC` 단순히에 값을 할당 `nRetCode`합니다. 예를 들어 호출을 수행 하는 대신  
   

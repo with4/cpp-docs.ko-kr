@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f56a09742276c7fcb1bd66ff1a36b1d17cdf882
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5c844ad428143c82e8214eab74262b326bf2c9a4
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33370948"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123242"
 ---
 # <a name="deleteitemstruct-structure"></a>DELETEITEMSTRUCT 구조체
 `DELETEITEMSTRUCT` 구조 삭제 된 소유자가 그린 목록 상자 또는 콤보 상자 항목에 설명 합니다.  
@@ -39,23 +39,23 @@ typedef struct tagDELETEITEMSTRUCT { /* ditms */
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `CtlType`  
- 지정 **ODT_LISTBOX** (소유자가 그린 목록 상자) 또는 **ODT_COMBOBOX** (소유자가 그린 콤보 상자).  
+ *CtlType*  
+ ODT_LISTBOX (소유자가 그린 목록 상자) 또는 ODT_COMBOBOX (소유자가 그린 콤보 상자)을 지정합니다.  
   
- `CtlID`  
+ *CtlID*  
  목록 상자 또는 콤보 상자의 식별자를 지정합니다.  
   
- `itemID`  
+ *itemID*  
  목록 상자 또는 콤보 상자가 제거 되는 항목의 인덱스를 지정 합니다.  
   
- `hwndItem`  
+ *hwndItem*  
  컨트롤을 식별합니다.  
   
- `itemData`  
- 항목에 대 한 응용 프로그램 정의 데이터를 지정합니다. 이 값이 컨트롤에 전달 되는 **lParam** 목록 상자 또는 콤보 상자에 항목을 추가 하는 메시지의 매개 변수입니다.  
+ *itemData*  
+ 항목에 대 한 응용 프로그램 정의 데이터를 지정합니다. 이 값이 컨트롤에 전달 되는 *lParam* 목록 상자 또는 콤보 상자에 항목을 추가 하는 메시지의 매개 변수입니다.  
   
 ## <a name="remarks"></a>설명  
- 목록 상자 또는 콤보 상자 또는 목록 상자 또는 콤보 상자가 제거 항목이 제거 되 면 Windows에서 보냅니다는 `WM_DELETEITEM` 메시지 삭제 된 각 항목에 대 한 소유자입니다. **lParam** 메시지의 매개 변수는이 구조에 대 한 포인터를 포함 합니다.  
+ 목록 상자 또는 콤보 상자 또는 목록 상자 또는 콤보 상자가 제거 항목이 제거 되 면 Windows 삭제 된 각 항목에 대 한 소유자에 게 WM_DELETEITEM 메시지를 보냅니다. *lParam* 메시지의 매개 변수는이 구조에 대 한 포인터를 포함 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atldbcli.h  

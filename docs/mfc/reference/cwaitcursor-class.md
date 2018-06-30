@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1e7bc4755d2e96c78735f1b3ef175ff3603686fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d89cd3a27869434bc5874037005fee6a592db233
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372510"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122673"
 ---
 # <a name="cwaitcursor-class"></a>CWaitCursor 클래스
 사용자가 장기 작업을 수행하는 동안 대기 커서를 표시하는 한 가지 방법(일반적으로 모래시계로 표시됨)을 제공합니다.  
@@ -62,7 +62,7 @@ class CWaitCursor
 > [!NOTE]
 >  해당 생성자 및 소멸자의 작동 방식을 인해 `CWaitCursor` 개체는 항상 지역 변수로 선언-전역 변수로 선언 되지 나 사용 하 여 이러한 할당은 **새**합니다.  
   
- 커서를 변경할 수는 메시지 상자 또는 대화 상자, 호출을 표시 하는 등을 일으킬 수 있는 작업을 수행 하는 경우는 [복원](#restore) 대기 커서를 복원 하는 멤버 함수입니다. 호출할 수 **복원** 도 때 대기 커서를 현재 표시 되어 있습니다.  
+ 커서를 변경할 수는 메시지 상자 또는 대화 상자, 호출을 표시 하는 등을 일으킬 수 있는 작업을 수행 하는 경우는 [복원](#restore) 대기 커서를 복원 하는 멤버 함수입니다. 호출할 수 `Restore` 도 때 대기 커서를 현재 표시 되어 있습니다.  
   
  조합을 사용 하는 대기 커서를 표시 하는 다른 방법은 [CCmdTarget::BeginWaitCursor](../../mfc/reference/ccmdtarget-class.md#beginwaitcursor), [CCmdTarget::EndWaitCursor](../../mfc/reference/ccmdtarget-class.md#endwaitcursor), 용도나 [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor). 그러나 `CWaitCursor` 시간이 오래 걸리는 작업을 완료 되 면 이전 커서에 커서를 설정 하려면 필요가 없기 때문에 사용 하기 쉽습니다.  
   
@@ -75,7 +75,7 @@ class CWaitCursor
 ## <a name="requirements"></a>요구 사항  
  **헤더:** afxwin.h  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#62](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_1.cpp)]  
   
 ##  <a name="cwaitcursor"></a>  CWaitCursor::CWaitCursor  
@@ -95,7 +95,7 @@ CWaitCursor();
 > [!NOTE]
 >  해당 생성자 및 소멸자의 작동 방식을 인해 `CWaitCursor` 개체는 항상 지역 변수로 선언-전역 변수로 선언 되지 나 사용 하 여 이러한 할당은 **새**합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#63](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_2.cpp)]  
   
 ##  <a name="restore"></a>  CWaitCursor::Restore  
@@ -106,11 +106,11 @@ void Restore();
 ```  
   
 ### <a name="remarks"></a>설명  
- 호출을 **복원** 도 대기 커서가 표시 되 면 현재 합니다.  
+ 호출을 `Restore` 도 대기 커서가 표시 되 면 현재 합니다.  
   
  에 있는 것 이외의 다른 함수에 있는 동안 대기 커서를 복원 해야 하는 경우는 `CWaitCursor` 호출할 수 있습니다, 개체를 선언 [CCmdTarget::RestoreWaitCursor](../../mfc/reference/ccmdtarget-class.md#restorewaitcursor)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#64](../../mfc/reference/codesnippet/cpp/cwaitcursor-class_3.cpp)]  
   
 ## <a name="see-also"></a>참고 항목  

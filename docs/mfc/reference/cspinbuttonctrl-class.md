@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43b0967309813603e4f683f35c3ca51dce99fd8c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ddf8e6530530552a4ef7b811698c816352f7719c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374693"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122969"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 클래스
 Windows의 공용 스핀 단추 컨트롤의 기능을 제공합니다.  
@@ -120,25 +120,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwStyle`  
+ *dwStyle*  
  Spin button 컨트롤 스타일을 지정합니다. 스핀 단추 컨트롤 스타일의 조합을 컨트롤에 적용 됩니다. 이러한 스타일에 설명 된 [Up-down 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb759885) Windows sdk에서입니다.  
   
- `rect`  
+ *rect*  
  스핀 단추 컨트롤의 크기와 위치를 지정합니다. 있습니다는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 구조  
   
- `pParentWnd`  
- 스핀 단추 컨트롤의 부모 창, 일반적으로에 대 한 포인터는 `CDialog`합니다. 않아야 **NULL입니다.**  
+ *pParentWnd*  
+ 스핀 단추 컨트롤의 부모 창, 일반적으로에 대 한 포인터는 `CDialog`합니다. NULL이 아니어야 합니다.  
   
- `nID`  
+ *nID*  
  스핀 단추 컨트롤의 ID를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  초기화에 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 생성 한 `CSpinButtonCtrl` 처음 두 단계에서 개체 생성자를 호출 하 고, 호출 하 **만들기**, 스핀 단추 컨트롤을 만들고에 연결는 `CSpinButtonCtrl` 개체입니다.  
+ 생성 한 `CSpinButtonCtrl` 처음 두 단계에서 개체 생성자를 호출 하 고, 호출 하 `Create`, 스핀 단추 컨트롤을 만들고에 연결는 `CSpinButtonCtrl` 개체입니다.  
   
- 확장된 창 스타일을 사용 하 여 스핀 단추 컨트롤을 만들려면 호출 [CSpinButtonCtrl::CreateEx](#createex) 대신 **만들기**합니다.  
+ 확장된 창 스타일을 사용 하 여 스핀 단추 컨트롤을 만들려면 호출 [CSpinButtonCtrl::CreateEx](#createex) 대신 `Create`합니다.  
   
 ##  <a name="createex"></a>  CSpinButtonCtrl::CreateEx  
  에 연결 하 고 컨트롤 (자식 창)을 만듭니다.는 `CSpinButtonCtrl` 개체입니다.  
@@ -153,26 +153,26 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwExStyle`  
- 만들 컨트롤의 확장된 스타일을 지정 합니다. 목록이 확장된 창 스타일에 대 한 참조는 `dwExStyle` 에 대 한 매개 변수 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows sdk에서입니다.  
+ *dwExStyle*  
+ 만들 컨트롤의 확장된 스타일을 지정 합니다. 목록이 확장된 창 스타일에 대 한 참조는 *dwExStyle* 에 대 한 매개 변수 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows sdk에서입니다.  
   
- `dwStyle`  
+ *dwStyle*  
  Spin button 컨트롤 스타일을 지정합니다. 스핀 단추 컨트롤 스타일의 조합을 컨트롤에 적용 됩니다. 이러한 스타일에 설명 된 [Up-down 컨트롤 스타일](http://msdn.microsoft.com/library/windows/desktop/bb759885) Windows sdk에서입니다.  
   
- `rect`  
- 에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 크기와의 클라이언트 좌표에 만들어질 창 위치를 설명 하는 구조 `pParentWnd`합니다.  
+ *rect*  
+ 에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 크기와의 클라이언트 좌표에 만들어질 창 위치를 설명 하는 구조 *pParentWnd*합니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  컨트롤의 부모 창에 대 한 포인터입니다.  
   
- `nID`  
+ *nID*  
  컨트롤의 자식 창 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 사용 하 여 `CreateEx` 대신 [만들기](#create) Windows 확장된 스타일 접두사에 의해 지정 된 확장된 창 스타일을 적용할 **WS_EX_** 합니다.  
+ 사용 하 여 `CreateEx` 대신 [만들기](#create) Windows 확장된 스타일 접두사 WS_EX_로 지정 된 확장된 창 스타일을 적용 합니다.  
   
 ##  <a name="cspinbuttonctrl"></a>  CSpinButtonCtrl::CSpinButtonCtrl  
  `CSpinButtonCtrl` 개체를 생성합니다.  
@@ -191,10 +191,10 @@ UINT GetAccel(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nAccel`  
- 변수로 지정 된 배열에 있는 요소의 수 `pAccel`합니다.  
+ *nAccel*  
+ 변수로 지정 된 배열에 있는 요소의 수 *pAccel*합니다.  
   
- `pAccel`  
+ *pAccel*  
  배열에 대 한 포인터 [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) 가속 정보를 수신 하는 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -229,7 +229,7 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
   
 ### <a name="parameters"></a>매개 변수  
  *lpbError*  
- 값 0으로 설정 하는 부울 값에 대 한 포인터 인지 성공적으로 검색 된 0이 아닌 경우 오류가 발생 합니다. 이 매개 변수 설정 하는 경우 **NULL**, 오류가 보고 되지 않습니다.  
+ 값 0으로 설정 하는 부울 값에 대 한 포인터 인지 성공적으로 검색 된 0이 아닌 경우 오류가 발생 합니다. 이 매개 변수는 NULL로 설정 하는 경우 오류가 보고 되지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  
  첫 번째 버전 하위 단어에서 16 비트 현재 위치를 반환합니다. 상위 단어는 오류가 발생 한 경우 0이 아닌 값입니다.  
@@ -277,11 +277,11 @@ BOOL SetAccel(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nAccel`  
- 수가 [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) 구조에서 지정한 `pAccel`합니다.  
+ *nAccel*  
+ 수가 [UDACCEL](http://msdn.microsoft.com/library/windows/desktop/bb759897) 구조에서 지정한 *pAccel*합니다.  
   
- `pAccel`  
- 배열에 대 한 포인터 `UDACCEL` 가속 정보가 포함 된 구조입니다. 요소에 따라 오름차순으로 정렬할지는 **nSec** 멤버입니다.  
+ *pAccel*  
+ 가속 정보가 포함 된 UDACCEL 구조의 배열에 대 한 포인터입니다. 요소에 따라 오름차순으로 정렬할지는 `nSec` 멤버입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
@@ -294,7 +294,7 @@ int SetBase(int nBase);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nBase`  
+ *nBase*  
  컨트롤에 대 한 새 기준 값입니다. 10 진수에 대 한 10 또는 16 진수 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -311,7 +311,7 @@ CWnd* SetBuddy(CWnd* pWndBuddy);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWndBuddy`  
+ *pWndBuddy*  
  새 버디 창에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -329,7 +329,7 @@ int SetPos32(int nPos);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nPos`  
+ *nPos*  
  컨트롤에 대 한 새 위치입니다. 이 값은 컨트롤에 대 한 상한 및 하 한 제한으로 지정 된 범위에 있어야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -353,8 +353,8 @@ void SetRange32(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nLower` 및 `nUpper`  
- 컨트롤에 대 한 상한 및 하 한 제한입니다. 에 대 한 `SetRange`, 모두 제한 보다 클 수 **UD_MAXVAL** 또는 미만 **UD_MINVAL**; 또한의 차이 두 가지 제한 초과할 수 없습니다 **UD_MAXVAL**. `SetRange32` 제한;에 제한을 두지합니다 모든 정수를 사용 합니다.  
+ *nLower* 및 *nUpper*  
+ 컨트롤에 대 한 상한 및 하 한 제한입니다. 에 대 한 `SetRange`, 모두 제한 UD_MAXVAL 보다 클 수 또는 UD_MINVAL; 보다 덜 또한의 차이 두 가지 제한 초과할 수 없습니다 UD_MAXVAL 합니다. `SetRange32` 제한;에 제한을 두지합니다 모든 정수를 사용 합니다.  
   
 ### <a name="remarks"></a>설명  
  멤버 함수 `SetRange32` 스핀 단추 컨트롤에 대 한 32 비트 범위를 설정 합니다.  

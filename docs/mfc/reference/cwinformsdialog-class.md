@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7596140f48b62a63189444bee6fb363552766fe
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1fe7c8518366065e93360187247cbd07df42d79f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371561"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122499"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog 클래스
 Windows Forms 사용자 정의 컨트롤을 호스팅하는 MFC 대화 상자 클래스의 래퍼입니다.  
@@ -64,7 +64,7 @@ class CWinFormsDialog :
   
 ### <a name="public-operators"></a>Public 연산자  
   
-|이름||  
+|name||  
 |----------|-|  
 |[CWinFormsDialog::operator-&gt;](#operator_-_gt)|대체 [CWinFormsDialog::GetControl](#getcontrol) 식에 있습니다.|  
 |[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|Windows Forms 사용자 정의 컨트롤에 대 한 참조로 형식을 캐스팅합니다.|  
@@ -85,7 +85,7 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDTemplate`  
+ *nIDTemplate*  
  대화 상자 템플릿 리소스의 ID를 포함 합니다. 대화 상자 편집기를 사용 하 여 대화 상자 템플릿을 만들고 응용 프로그램의 리소스 스크립트 파일에 저장 합니다. 대화 상자 템플릿에 대 한 자세한 내용은 참조 하십시오. [CDialog 클래스](../../mfc/reference/cdialog-class.md)합니다.  
   
 ##  <a name="getcontrol"></a>  CWinFormsDialog::GetControl  
@@ -119,7 +119,7 @@ virtual BOOL OnInitDialog();
  설정 여부를 응용 프로그램에 입력된 포커스가 컨트롤 중 하나를 대화 상자에서 지정 하는 부울 값입니다. 경우 `OnInitDialog` 반환 0이 아닌 Windows 입력된 포커스를 첫 번째 컨트롤로 설정 대화 상자에서 합니다. 이 메서드는 응용 프로그램에 명시적으로 설정 입력된 포커스가 컨트롤 중 하나를 대화 상자에서 경우에 0을 반환할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
- MFC 대화 상자를 만들 때 (사용 하는 [만들기](../../mfc/reference/cdialog-class.md#create), [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect), 또는 [DoModal](../../mfc/reference/cdialog-class.md#domodal) 에서 상속 된 [CDialog](../../mfc/reference/cdialog-class.md))는 `WM_INITDIALOG` 메시지가 전송 되 고이 메서드를 호출 합니다. 대화 상자에 있는 Windows Forms 컨트롤의 인스턴스를 만들고 하 고 사용자 정의 컨트롤의 크기에 맞게 대화 상자의 크기를 조정 합니다. 그런 다음 MFC 대화 상자에서 새 컨트롤을 호스트 합니다.  
+ MFC 대화 상자를 만들 때 (사용 하는 [만들기](../../mfc/reference/cdialog-class.md#create), [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect), 또는 [DoModal](../../mfc/reference/cdialog-class.md#domodal) 에서 상속 된 [CDialog](../../mfc/reference/cdialog-class.md))는 WM_ INITDIALOG 메시지 보내고이 메서드를 호출 합니다. 대화 상자에 있는 Windows Forms 컨트롤의 인스턴스를 만들고 하 고 사용자 정의 컨트롤의 크기에 맞게 대화 상자의 크기를 조정 합니다. 그런 다음 MFC 대화 상자에서 새 컨트롤을 호스트 합니다.  
   
  대화 상자 초기화 될 때 특수 한 처리를 수행 해야 할 경우이 멤버 함수를 재정의 합니다. 이 메서드를 사용 하 여에 대 한 자세한 내용은 참조 하십시오. [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)합니다.  
   

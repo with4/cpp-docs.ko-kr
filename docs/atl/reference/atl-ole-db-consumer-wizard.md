@@ -1,7 +1,7 @@
 ---
 title: ATL OLE DB 소비자 마법사 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d51569eaece5e3fac59c7cc2ff82a8454a5f959
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f53d8273a708b7f84393290dd578933a5390313c
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32364952"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121691"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB 소비자 마법사
 이 마법사를 설정 하는 OLE DB 소비자 클래스 데이터 바인딩을 사용 하 여 지정 된 OLE DB 공급자를 통해 지정 된 데이터 원본에 액세스 하는 데 필요한 합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "32364952"
   
     3. **서버에서 데이터베이스를 선택:** 데이터 서버에 등록 된 모든 데이터베이스를 표시 하 고 드롭다운 목록에서 메뉴를 클릭 하 고 하나를 선택 합니다.  
   
-         -또는-  
+         또는  
   
  **데이터베이스 이름으로 데이터베이스 파일 첨부:** 데이터베이스로 사용할 파일을 지정 합니다; 명시적 경로 이름을 입력 합니다.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "32364952"
   
  ``` 
  // Table accessor class  
-    class COrdersAccessor; *// Table class  
+    class COrdersAccessor; // Table class  
     class COrders : public CTable<CAccessor<COrdersAccessor>>;  
  ... 
  // Column map  

@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbbe2d9ed6ab7a17ccbd110d12070d4e295a62ec
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: c9082e28aad1edc584a1796d5bb5e97b5601753f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375822"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122917"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray 클래스
 `CPtrArray` 또는 `CObArray`클래스의 개체에 대해 형식 안전 "래퍼"를 제공합니다.  
@@ -50,10 +50,10 @@ class CTypedPtrArray : public BASE_CLASS
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  형식화 된 포인터 배열 클래스;의 기본 클래스 배열 클래스 여야 합니다 ( `CObArray` 또는 `CPtrArray`).  
   
- `TYPE`  
+ *형식*  
  기본 클래스 배열에 저장 된 요소의 형식입니다.  
   
 ## <a name="members"></a>멤버  
@@ -105,7 +105,7 @@ INT_PTR Add(TYPE newElement);
  *형식*  
  배열에 추가할 요소의 형식을 지정 하는 템플릿 매개 변수  
   
- `newElement`  
+ *newElement*  
  이 배열에 추가할 요소입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -115,14 +115,14 @@ INT_PTR Add(TYPE newElement);
  설명에 자세한 참조 [CObArray::Add](../../mfc/reference/cobarray-class.md#add)합니다.  
   
 ##  <a name="append"></a>  CTypedPtrArray::Append  
- 이 멤버 함수를 호출 `BASE_CLASS` **:: Append**합니다.  
+ 이 멤버 함수를 호출 `BASE_CLASS`:: Append * *입니다.  
   
 ```  
 INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  형식화 된 포인터 배열 클래스;의 기본 클래스 배열 클래스 여야 합니다 ( [CObArray](../../mfc/reference/cobarray-class.md) 또는 [사용할 때](../../mfc/reference/cptrarray-class.md)).  
   
  *형식*  
@@ -145,7 +145,7 @@ void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `BASE_CLASS`  
+ *BASE_CLASS*  
  형식화 된 포인터 배열 클래스;의 기본 클래스 배열 클래스 여야 합니다 ( [CObArray](../../mfc/reference/cobarray-class.md) 또는 [사용할 때](../../mfc/reference/cptrarray-class.md)).  
   
  *형식*  
@@ -168,11 +168,11 @@ TYPE& ElementAt(INT_PTR nIndex);
  *형식*  
  이 배열에 저장 된 요소의 형식을 지정 하는 템플릿 매개 변수  
   
- `nIndex`  
+ *nIndex*  
  보다 크거나 0에 있는 정수 인덱스 및에서 반환 된 값 보다 작거나 같은 `BASE_CLASS` **:: GetUpperBound**합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 지정 된 위치에 있는 요소에 대 한 임시 참조 `nIndex`합니다. 이 요소는 템플릿 매개 변수로 지정 된 형식의 *형식*합니다.  
+ 지정 된 위치에 있는 요소에 대 한 임시 참조 *nIndex*합니다. 이 요소는 템플릿 매개 변수로 지정 된 형식의 *형식*합니다.  
   
 ### <a name="remarks"></a>설명  
  설명에 자세한 참조 [CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)합니다.  
@@ -188,11 +188,11 @@ TYPE GetAt(INT_PTR nIndex) const;
  *형식*  
  템플릿 매개 변수 배열에 저장 된 요소의 형식을 지정 합니다.  
   
- `nIndex`  
+ *nIndex*  
  보다 크거나 0에 있는 정수 인덱스 및에서 반환 된 값 보다 작거나 같은 `BASE_CLASS` **:: GetUpperBound**합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 지정 된 위치에 있는 요소의 복사본 `nIndex`합니다. 이 요소는 템플릿 매개 변수로 지정 된 형식의 *형식*합니다.  
+ 지정 된 위치에 있는 요소의 복사본 *nIndex*합니다. 이 요소는 템플릿 매개 변수로 지정 된 형식의 *형식*합니다.  
   
 ### <a name="remarks"></a>설명  
  설명에 자세한 참조 [CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)  
@@ -213,25 +213,25 @@ void InsertAt(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  반환 된 값 보다 클 수는 정수 인덱스 [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)합니다.  
   
  *형식*  
  기본 클래스 배열에 저장 된 요소의 형식입니다.  
   
- `newElement`  
- 이 배열에 배치할 개체 포인터입니다. A `newElement` 값의 **NULL** ï ´ ù.  
+ *newElement*  
+ 이 배열에 배치할 개체 포인터입니다. A *newElement* 값의 **NULL** ï ´ ù.  
   
- `nCount`  
+ *nCount*  
  이 요소가 해야 하는 횟수 (기본값: 1)를 삽입 합니다.  
   
- `nStartIndex`  
+ *nStartIndex*  
  반환 된 값 보다 클 수는 정수 인덱스 `CObArray::GetUpperBound`합니다.  
   
- `BASE_CLASS`  
+ *BASE_CLASS*  
  형식화 된 포인터 배열 클래스;의 기본 클래스 배열 클래스 여야 합니다 ( [CObArray](../../mfc/reference/cobarray-class.md) 또는 [사용할 때](../../mfc/reference/cptrarray-class.md)).  
   
- `pNewArray`  
+ *pNewArray*  
  이 배열에 추가 하는 요소가 포함 된 다른 배열입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -249,7 +249,7 @@ TYPE operator[ ](int_ptr nindex) const;
  *형식*  
  템플릿 매개 변수 배열에 저장 된 요소의 형식을 지정 합니다.  
   
- `nIndex`  
+ *nIndex*  
  보다 크거나 0에 있는 정수 인덱스 및에서 반환 된 값 보다 작거나 같은 `BASE_CLASS` **:: GetUpperBound**합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -267,7 +267,7 @@ void SetAt(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  보다 크거나 0에 있는 정수 인덱스 및에서 반환 된 값 보다 작거나 같은 [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)합니다.  
   
  *형식*  
@@ -289,13 +289,13 @@ void SetAtGrow(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  정수 인덱스는 0 보다 크거나 같은 경우입니다.  
   
  *형식*  
  기본 클래스 배열에 저장 된 요소의 형식입니다.  
   
- `newElement`  
+ *newElement*  
  이 배열에 추가할 개체 포인터입니다. A **NULL** 값은 사용할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d126c7e6ef77142f20a9dd9d7ed68c44ede5fc1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 00ec945c5f0cdbb0c12f49b90719c31bf841ef2f
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375281"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121639"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl 클래스
 Windows Forms 컨트롤을 호스팅하기 위한 기본 기능을 제공합니다.  
@@ -113,25 +113,25 @@ inline BOOL CreateManagedControl(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pType`  
+ *pType*  
  만들 컨트롤의 데이터 형식입니다. 있어야는 [형식](https://msdn.microsoft.com/en-us/library/system.type) 데이터 형식입니다.  
   
- `dwStyle`  
+ *dwStyle*  
  컨트롤에 적용할 창 스타일입니다. 조합을 지정할 [창 스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles)합니다. 현재 다음 스타일에만 지원 됩니다: WS_TABSTOP, WS_VISIBLE, WS_DISABLED 및 WS_GROUP 합니다.  
   
- `rect`  
+ *rect*  
  A [RECT 구조체](../../mfc/reference/rect-structure1.md) 컨트롤의 왼쪽 및 오른쪽 아래 모퉁이의 좌표를 정의 하는 (먼저 오버 로드만).  
   
- `nPlaceHolderID`  
+ *nPlaceHolderID*  
  리소스 편집기에서 배치 하는 정적 내부 소유자 컨트롤의 핸들입니다. 새로 만든된 Windows Forms 컨트롤의 위치, z-순서 및 스타일을 가정 하는 정적 컨트롤을 대체 (두 번째 오버 로드만).  
   
- `pParentWnd`  
+ *pParentWnd*  
  부모 창에 대 한 포인터입니다.  
   
- `nID`  
+ *nID*  
  새로 만든된 컨트롤에 할당할 리소스 ID.  
   
- `pControl`  
+ *pControl*  
  연관 되어야 하는 Windows Forms 컨트롤의 인스턴스는 [CWinFormsControl](../../mfc/reference/cwinformscontrol-class.md) 개체 (네 번째 오버 로드만).  
   
 ### <a name="return-value"></a>반환 값  
@@ -140,13 +140,13 @@ inline BOOL CreateManagedControl(
 ### <a name="remarks"></a>설명  
  이 메서드는 MFC 컨테이너에서.NET Framework Windows Forms 컨트롤을 인스턴스화합니다.  
   
- 메서드의 첫 번째 오버 로드는.NET Framework 데이터 형식을 수락 `pType` MFC는이 형식의 새 개체를 인스턴스화할 수 있도록 합니다. `pType` 있어야는 [형식](https://msdn.microsoft.com/en-us/library/system.type) 데이터 형식입니다.  
+ 메서드의 첫 번째 오버 로드는.NET Framework 데이터 형식을 수락 *pType* MFC는이 형식의 새 개체를 인스턴스화할 수 있도록 합니다. *pType* 이어야 합니다는 [형식](https://msdn.microsoft.com/en-us/library/system.type) 데이터 형식입니다.  
   
- 메서드의 두 번째 오버 로드에 따라 Windows Forms 컨트롤을 만듭니다.는 `TManagedControl` 템플릿 매개 변수에 `CWinFormsControl` 클래스입니다. 크기와 컨트롤의 위치 기반는 `RECT` 메서드에 전달 하는 구조입니다. 만 `dwStyle` 스타일에 대 한 중요 합니다.  
+ 메서드의 두 번째 오버 로드에 따라 Windows Forms 컨트롤을 만듭니다.는 `TManagedControl` 템플릿 매개 변수에 `CWinFormsControl` 클래스입니다. 크기와 컨트롤의 위치 기반는 `RECT` 메서드에 전달 하는 구조입니다. 만 *dwStyle* 스타일에 대 한 중요 합니다.  
   
- 메서드의 세 번째 오버 로드는 정적 컨트롤을 제거 하 고 해당 위치, z-순서 및 스타일을 가정 하면 대체 하는 Windows Forms 컨트롤을 만듭니다. 정적 컨트롤은 Windows Forms 컨트롤에 대 한 자리 표시자 역할만합니다. 이 오버 로드에서 스타일을 결합 컨트롤을 만들 때 `dwStyle` 정적 컨트롤의 리소스 스타일을 사용 합니다.  
+ 메서드의 세 번째 오버 로드는 정적 컨트롤을 제거 하 고 해당 위치, z-순서 및 스타일을 가정 하면 대체 하는 Windows Forms 컨트롤을 만듭니다. 정적 컨트롤은 Windows Forms 컨트롤에 대 한 자리 표시자 역할만합니다. 이 오버 로드에서 스타일을 결합 컨트롤을 만들 때 *dwStyle* 정적 컨트롤의 리소스 스타일을 사용 합니다.  
   
- 메서드의 네 번째 오버 로드를 사용 하는 이미 인스턴스화된 Windows Forms 컨트롤에 전달할 수 있도록 `pControl` 을 MFC 래핑하는 합니다. 동일한 형식 이어야 합니다는 `TManagedControl` 템플릿 매개 변수에 `CWinFormsControl` 클래스입니다.  
+ 메서드의 네 번째 오버 로드를 사용 하는 이미 인스턴스화된 Windows Forms 컨트롤에 전달할 수 있도록 *pControl* 을 MFC 래핑하는 합니다. 동일한 형식 이어야 합니다는 `TManagedControl` 템플릿 매개 변수에 `CWinFormsControl` 클래스입니다.  
   
  참조 [MFC의 Windows Form 사용자 정의 컨트롤을 사용 하 여](../../dotnet/using-a-windows-form-user-control-in-mfc.md) Windows Form을 사용 하는 샘플에 대 한 제어 합니다.  
   
@@ -170,7 +170,7 @@ inline TManagedControl^ GetControl() const;
 ### <a name="return-value"></a>반환 값  
  Windows Forms 컨트롤에 대 한 포인터를 반환합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   참조 [CWinFormsControl::CreateManagedControl](#createmanagedcontrol)합니다.  
   
 ##  <a name="getcontrolhandle"></a>  CWinFormsControl::GetControlHandle  

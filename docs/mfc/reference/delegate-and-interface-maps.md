@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a1e6f2e8cc501f9a466e4970d27a2e6ecd9174ca
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d817ec62734b3646c4df0977daa8161601e5c592
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372984"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122694"
 ---
 |||  
 |-|-|  
@@ -31,7 +31,7 @@ ms.locfileid: "33372984"
 |[END_DELEGATE_MAP](#end_delegate_map)|대리자 맵에 종료 됩니다.|
 |[END_INTERFACE_MAP](#end_interface_map)|인터페이스 맵을 구현 파일에서을 종료합니다. |
 |[EVENT_DELEGATE_ENTRY](#event_delegate_entry)|대리자 맵에 항목을 만듭니다.|
-|[INTERFACE_PART](#interface_part)|사이 사용 된 `BEGIN_INTERFACE_MAP` 매크로 및 `END_INTERFACE_MAP` 개체에서 지원할 각 인터페이스에 대 한 매크로입니다.|
+|[INTERFACE_PART](#interface_part)|개체에서 지원할 각 인터페이스에 대 한 BEGIN_INTERFACE_MAP 매크로 END_INTERFACE_MAP 매크로 사이 사용 합니다.|
 |[MAKE_DELEGATE](#make_delegate)|관리 되는 컨트롤에 이벤트 처리기를 연결합니다.|
 
 
@@ -43,7 +43,7 @@ ms.locfileid: "33372984"
 BEGIN_DELEGATE_MAP(  CLASS );  
 ```
 ### <a name="parameters"></a>매개 변수  
- `CLASS`  
+ *클래스*  
  관리 되는 컨트롤 호스트 되는 클래스입니다.  
    
 ### <a name="remarks"></a>설명  
@@ -63,14 +63,14 @@ BEGIN_DELEGATE_MAP(  CLASS );
 BEGIN_INTERFACE_MAP( theClass, baseClass )  
 ```
 ### <a name="parameters"></a>매개 변수  
- `theClass`  
+ *theClass*  
  인터페이스 맵을 정의할 클래스  
   
- `baseClass`  
- `theClass`가 파생되는 클래스  
+ *baseClass*  
+ 클래스를 *theClass* 에서 파생 됩니다.  
    
 ### <a name="remarks"></a>설명  
- 구현 되는 각 인터페이스에 대해 없는 하나 이상의 `INTERFACE_PART` 매크로 호출이 있습니다. 클래스에서 사용 하는 각 집계에 대해 하나도 **INTERFACE_AGGREGATE** 매크로 호출 합니다.  
+ 구현 되는 각 인터페이스에 대해 하나 이상의 INTERFACE_PART 매크로 호출이 있습니다. 클래스에서 사용 하는 각 집계에 대해 하나의 INTERFACE_AGGREGATE 매크로 호출이 있습니다.  
   
  인터페이스 맵에 대 한 자세한 내용은 참조 하십시오. [기술 참고 38](../tn038-mfc-ole-iunknown-implementation.md)합니다.  
    
@@ -85,7 +85,7 @@ BEGIN_INTERFACE_MAP( theClass, baseClass )
 delegate void CommandHandler(  UINT^ cmdID  );  
 ```
 ### <a name="parameters"></a>매개 변수  
- `cmdID`  
+ *cmdID*  
  명령 ID입니다.  
    
 ### <a name="remarks"></a>설명  
@@ -109,10 +109,10 @@ delegate void CommandHandler(  UINT^ cmdID  );
 delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);  
 ```
 ### <a name="parameters"></a>매개 변수  
- `cmdID`  
+ *cmdID*  
  명령 ID입니다.  
   
- `cmdUI`  
+ *cmdUI*  
  명령 메시지 id입니다.  
    
 ### <a name="remarks"></a>설명  
@@ -173,20 +173,20 @@ END_INTERFACE_MAP( )
 EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);  
 ```
 ### <a name="parameters"></a>매개 변수  
- `MEMBER`  
+ *멤버*  
  컨트롤에 연결할 이벤트 처리기 메서드입니다.  
   
- `ARG0`  
- 관리 되는 이벤트 처리기 메서드의 첫 번째 인수 같은 **개체 ^** 합니다.  
+ *ARG0*  
+ 관리 되는 이벤트 처리기 메서드의 첫 번째 인수 같은 `Object^`합니다.  
   
- `ARG1`  
- 관리 되는 이벤트 처리기 메서드의 두 번째 인수 같은 **EventArgs ^** 합니다.  
+ *ARG1*  
+ 관리 되는 이벤트 처리기 메서드의 두 번째 인수 같은 `EventArgs^`합니다.  
    
 ### <a name="remarks"></a>설명  
  대리자 맵에의 각 항목에서 만든 관리 되는 이벤트 처리기 대리자에 게 해당 [MAKE_DELEGATE](#make_delegate)합니다.  
    
-### <a name="example"></a>예제  
- 다음 코드 예제는 `EVENT_DELEGATE_ENTRY`를 사용해서 `OnClick` 이벤트 처리기에 대해 대리자 맵에 항목을 만드는 방법을 보여줍니다. `MAKE_DELEGATE`의 코드 예제도 참조하십시오. 자세한 내용은 참조 [하는 방법: 네이티브 c + + 클래스에서 Windows Forms 이벤트 싱크](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)합니다.  
+### <a name="example"></a>예  
+ 다음 코드 예제에 대해 대리자 맵에 항목을 만들려면 EVENT_DELEGATE_ENTRY를 사용 하는 방법을 보여 줍니다는 `OnClick` 이벤트 처리기; MAKE_DELEGATE의 코드 예제를 참조 하십시오. 자세한 내용은 참조 [하는 방법: 네이티브 c + + 클래스에서 Windows Forms 이벤트 싱크](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)합니다.  
   
  ```cpp
 BEGIN_DELEGATE_MAP(CMyView)
@@ -205,22 +205,22 @@ END_DELEGATE_MAP()
  
 
 ##  <a name="interface_part"></a>INTERFACE_PART
-사이 사용 된 `BEGIN_INTERFACE_MAP` 매크로 및 `END_INTERFACE_MAP` 개체에서 지원할 각 인터페이스에 대 한 매크로입니다.  
+개체에서 지원할 각 인터페이스에 대 한 BEGIN_INTERFACE_MAP 매크로 END_INTERFACE_MAP 매크로 사이 사용 합니다.  
    
 ### <a name="syntax"></a>구문    
 ```
 INTERFACE_PART( theClass, iid, localClass)  
 ```
 ### <a name="parameters"></a>매개 변수  
- `theClass`  
+ *theClass*  
  인터페이스 맵을 포함하는 클래스의 이름    
- `iid`  
+ *iid*  
  포함된 된 클래스에 매핑할 수 있는 IID입니다.    
  *localClass*  
  로컬 클래스의 이름입니다.  
    
 ### <a name="remarks"></a>설명  
- 에 의해 표시 되는 클래스의 멤버에 IID를 매핑할 수 있습니다 `theClass` 및 *localClass*합니다.  
+ 에 의해 표시 되는 클래스의 멤버에 IID를 매핑할 수 있습니다 *theClass* 및 *localClass*합니다.  
   
  인터페이스 맵에 대 한 자세한 내용은 참조 하십시오. [기술 참고 38](../tn038-mfc-ole-iunknown-implementation.md)합니다.  
    
@@ -236,16 +236,16 @@ INTERFACE_PART( theClass, iid, localClass)
 MAKE_DELEGATE( DELEGATE,  MEMBER) ;  
 ```
 ### <a name="parameters"></a>매개 변수  
- `DELEGATE`  
+ *대리자*  
  와 같은 관리 되는 이벤트 처리기의 유형은 위임 [EventHandler](assetId:///T:System.EventHandler?qualifyHint=False&autoUpgrade=True)합니다.  
   
- `MEMBER`  
+ *멤버*  
  컨트롤에 연결 될 이벤트 처리기 메서드의 이름입니다.  
    
 ### <a name="remarks"></a>설명  
- 이 매크로 형식의 관리 되는 이벤트 처리기 대리자를 만듭니다. `DELEGATE` 및 이름의 `MEMBER`합니다. 관리 되는 이벤트 처리기 대리자에는 관리 되는 이벤트를 처리 하는 네이티브 클래스 수 있습니다.  
+ 이 매크로 형식의 관리 되는 이벤트 처리기 대리자를 만듭니다. *위임* 및 이름의 *멤버*합니다. 관리 되는 이벤트 처리기 대리자에는 관리 되는 이벤트를 처리 하는 네이티브 클래스 수 있습니다.  
    
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제에서는 호출 하는 방법을 보여 줍니다. `MAKE_DELEGATE` 연결할는 `OnClick` MFC 컨트롤에 이벤트 처리기 `MyControl`합니다. 이 매크로 MFC 응용 프로그램에서 작동 하는 방법에 대 한 보다 광범위 한 설명을 참조 하십시오. [하는 방법: 네이티브 c + + 클래스에서 Windows Forms 이벤트 싱크](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)합니다.  
   
 ```cpp

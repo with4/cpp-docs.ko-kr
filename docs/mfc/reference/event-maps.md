@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce997441c11287626e9681a661f858e33ccdde24
-ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
+ms.openlocfilehash: f4522b9ea2f336f5ac88f5444edc0c7df16b5bc6
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36322214"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122391"
 ---
 # <a name="event-maps"></a>이벤트 맵
 
@@ -71,7 +71,7 @@ DECLARE_EVENT_MAP()
 
 ### <a name="remarks"></a>설명
 
-사용 하 여는 `DECLARE_EVENT_MAP` 끝 클래스 선언에는 매크로입니다. 그런 다음 클래스에 대 한 멤버 함수를 정의 하는.cpp 파일에서 사용 하는 `BEGIN_EVENT_MAP` 매크로, 각 컨트롤의 이벤트에 대해 매크로 항목 및 `END_EVENT_MAP` 이벤트 목록의 끝을 선언 하는 매크로입니다.
+클래스 선언의 끝 DECLARE_EVENT_MAP 매크로 사용 합니다. 그런 다음 클래스에 대 한 멤버 함수를 정의 하는.cpp 파일에서 사용 하 여 BEGIN_EVENT_MAP 매크로, 매크로 항목 컨트롤의 이벤트 및 END_EVENT_MAP 매크로 대 이벤트 목록의 끝을 선언 하 합니다.
 
 이벤트 맵에 대 한 자세한 내용은 문서 참조 [ActiveX 컨트롤: 이벤트](../../mfc/mfc-activex-controls-events.md)합니다.
 
@@ -97,9 +97,9 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 ### <a name="remarks"></a>설명
 
-클래스 멤버 함수를 정의 하는 구현 (.cpp) 파일에서로 이벤트 맵 시작는 `BEGIN_EVENT_MAP` 매크로, 그런 다음 각 사용자 이벤트에 대해 매크로 항목을 추가 하 고 있는 이벤트 맵을 완료는 `END_EVENT_MAP` 매크로입니다.
+클래스 멤버 함수를 정의 하는 구현 (.cpp) 파일에서 이벤트 맵 BEGIN_EVENT_MAP 매크로와 다음 각 사용자 이벤트에 대해 매크로 항목을 추가 시작한 이벤트 맵 END_EVENT_MAP 매크로로 완료 합니다.
 
-이벤트에 대 한 자세한 내용은 매핑합니다 및 `BEGIN_EVENT_MAP` 매크로 문서 참조 [ActiveX 컨트롤: 이벤트](../../mfc/mfc-activex-controls-events.md)합니다.
+이벤트 맵 및 BEGIN_EVENT_MAP 매크로에 대 한 자세한 내용은 문서 참조 [ActiveX 컨트롤: 이벤트](../../mfc/mfc-activex-controls-events.md)합니다.
 
 ### <a name="requirements"></a>요구 사항
 
@@ -107,7 +107,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 ##  <a name="end_event_map"></a>  END_EVENT_MAP
 
-사용 된 `END_EVENT_MAP` 이벤트 맵의 정의를 끝내는 매크로입니다.
+END_EVENT_MAP 매크로 사용 하 여 이벤트 맵의 정의 종료 합니다.
 
 ```cpp
 END_EVENT_MAP()
@@ -148,36 +148,36 @@ RGB를 나타내는 32 비트 정수를 포함 하는 목록에 대 한 포인�
 
 |기호|매개 변수 형식|
 |------------|--------------------|
-|`VTS_I2`|**short**|
-|`VTS_I4`|**long**|
-|`VTS_R4`|**float**|
-|`VTS_R8`|**double**|
-|`VTS_COLOR`|`OLE_COLOR`|
-|`VTS_CY`|`CURRENCY`|
-|`VTS_DATE`|`DATE`|
-|`VTS_BSTR`|**const** __char\*__|
-|`VTS_DISPATCH`|`LPDISPATCH`|
-|`VTS_FONT`|`IFontDispatch*`|
-|`VTS_HANDLE`|`HANDLE`|
-|`VTS_SCODE`|`SCODE`|
-|`VTS_BOOL`|`BOOL`|
-|`VTS_VARIANT`|`const VARIANT*`|
-|`VTS_PVARIANT`|`VARIANT*`|
-|`VTS_UNKNOWN`|`LPUNKNOWN`|
-|`VTS_OPTEXCLUSIVE`|`OLE_OPTEXCLUSIVE`|
-|`VTS_PICTURE`|`IPictureDisp*`|
-|`VTS_TRISTATE`|`OLE_TRISTATE`|
-|`VTS_XPOS_PIXELS`|`OLE_XPOS_PIXELS`|
-|`VTS_YPOS_PIXELS`|`OLE_YPOS_PIXELS`|
-|`VTS_XSIZE_PIXELS`|`OLE_XSIZE_PIXELS`|
-|`VTS_YSIZE_PIXELS`|`OLE_YSIZE_PIXELS`|
-|`VTS_XPOS_HIMETRIC`|`OLE_XPOS_HIMETRIC`|
-|`VTS_YPOS_HIMETRIC`|`OLE_YPOS_HIMETRIC`|
-|`VTS_XSIZE_HIMETRIC`|`OLE_XSIZE_HIMETRIC`|
-|`VTS_YSIZE_HIMETRIC`|`OLE_YSIZE_HIMETRIC`|
+|VTS_I2|**short**|
+|VTS_I4|**long**|
+|VTS_R4|**float**|
+|VTS_R8|**double**|
+|VTS_COLOR|OLE_COLOR|
+|VTS_CY|통화|
+|VTS_DATE|DATE|
+|VTS_BSTR|**const** __char\*__|
+|VTS_DISPATCH|LPDISPATCH|
+|VTS_FONT|`IFontDispatch*`|
+|VTS_HANDLE|HANDLE|
+|VTS_SCODE|SCODE|
+|VTS_BOOL|BOOL|
+|VTS_VARIANT|`const VARIANT*`|
+|VTS_PVARIANT|`VARIANT*`|
+|VTS_UNKNOWN|LPUNKNOWN|
+|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE|
+|VTS_PICTURE|`IPictureDisp*`|
+|VTS_TRISTATE|OLE_TRISTATE|
+|VTS_XPOS_PIXELS|OLE_XPOS_PIXELS|
+|VTS_YPOS_PIXELS|OLE_YPOS_PIXELS|
+|VTS_XSIZE_PIXELS|OLE_XSIZE_PIXELS|
+|VTS_YSIZE_PIXELS|OLE_YSIZE_PIXELS|
+|TS_XPOS_HIMETRIC|OLE_XPOS_HIMETRIC|
+|VTS_YPOS_HIMETRIC|OLE_YPOS_HIMETRIC|
+|VTS_XSIZE_HIMETRIC|OLE_XSIZE_HIMETRIC|
+|VTS_YSIZE_HIMETRIC|OLE_YSIZE_HIMETRIC|
 
 > [!NOTE]
-> 추가 variant 상수를 모든 variant 형식에 대해 정의 된 `VTS_FONT` 및 `VTS_PICTURE`, 가변 데이터 상수에 대 한 포인터를 제공 하는 합니다. 이러한 상수를 사용 하 여 라고는 `VTS_Pconstantname` 규칙입니다. 예를 들어 `VTS_PCOLOR` 에 대 한 포인터는 `VTS_COLOR` 상수입니다.
+> 모든 variant 형식에 대해 VTS_FONT 및 VTS_PICTURE를 제외 하 고 가변 데이터 상수에 대 한 포인터를 제공 하는 정의 된 variant 상수를 추가 합니다. 이러한 상수를 사용 하 여 라고는 `VTS_Pconstantname` 규칙입니다. 예를 들어, VTS_PCOLOR VTS_COLOR 상수에 대 한 포인터입니다.
 
 ### <a name="requirements"></a>요구 사항
 
@@ -251,7 +251,7 @@ BOOL memberFxn(
    LPCRECT  lpRect);
 ```
 
-값은 *lpMsg*, *창은*, 및 *lpRect* 의 해당 매개 변수에서 가져온 매개 변수는 **IOleObject::DoVerb** 멤버 함수입니다.
+값은 *lpMsg*, *창은*, 및 *lpRect* 의 해당 매개 변수에서 가져온 매개 변수는 `IOleObject::DoVerb` 멤버 함수입니다.
 
 ### <a name="requirements"></a>요구 사항
 
@@ -275,7 +275,7 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 ### <a name="remarks"></a>설명
 
-폼의 표준 동사 인덱스는 `OLEIVERB_`동작 이어집니다. `OLEIVERB_SHOW``OLEIVERB_HIDE`, 및 `OLEIVERB_UIACTIVATE` 표준 동사의 일부의 예입니다.
+폼의 표준 동사 인덱스는 `OLEIVERB_`동작 이어집니다. OLEIVERB_SHOW, OLEIVERB_HIDE, 및 OLEIVERB_UIACTIVATE은 표준 동사의 몇 가지 예입니다.
 
 참조 [ON_OLEVERB](#on_oleverb) 에 대 한 설명은로 사용할 함수 프로토타입에 *memberFxn* 매개 변수입니다.
 

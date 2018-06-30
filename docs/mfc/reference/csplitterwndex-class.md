@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0dfacc6bf08aa5b36288a9933ffa9980937f2b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0ae4a24424acc4385927e0f7c99735bd50a6d472
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368877"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121652"
 ---
 # <a name="csplitterwndex-class"></a>CSplitterWndEx 클래스
 
@@ -81,13 +81,13 @@ virtual void OnDrawSplitter(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
- 장치 컨텍스트에 대 한 포인터입니다. 이 매개 변수가 `NULL`, 프레임 워크 활성 창을 다시 그립니다.  
+ [in] *pDC*  
+ 장치 컨텍스트에 대 한 포인터입니다. 이 매개 변수가 NULL 이면 현재 창 프레임 워크를 다시 그립니다.  
   
- [in] `nType`  
+ [in] *n 유형*  
  중 하나는 `CSplitterWnd::ESplitType` 분할자 창 요소 그리기를 지정 하는 열거형 값입니다. 유효한 값은 `splitBox`, `splitBar`, `splitIntersection` 및 `splitBorder`입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  차원 및에서 지정 된 분할자 창을 요소를 그릴 위치를 지정 하는 경계 사각형입니다.  
   
 ### <a name="remarks"></a>설명  

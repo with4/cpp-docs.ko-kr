@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8424d4be8ca2de5b1b40a7ed5d0142691b4d776f
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 3f8de4911d3de0ba94d4fd252bdb4fb9b54454be
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34256338"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123268"
 ---
 # <a name="cwnd-class"></a>CWnd 클래스
 MFC 라이브러리의 모든 Window 클래스의 기본적인 기능을 제공합니다.  
@@ -970,7 +970,7 @@ class CWnd : public CCmdTarget
 |[CWnd::GetParentOwner](#getparentowner)|자식 창의 부모 창에 대한 포인터를 반환합니다.|  
 |[CWnd::GetProperty](#getproperty)|ActiveX 컨트롤 속성을 검색합니다.|  
 |[CWnd::GetRenderTarget](#getrendertarget)|이 창에 연결된 렌더링 대상을 가져옵니다.|  
-|[CWnd::GetSafeHwnd](#getsafehwnd)|`m_hWnd`를 반환하거나, `this` 포인터가 `NULL`인 경우 `NULL`을 반환합니다.|  
+|[CWnd::GetSafeHwnd](#getsafehwnd)|반환 `m_hWnd`, 경우에 NULL 또는 **이** 포인터가 NULL입니다.|  
 |[CWnd::GetSafeOwner](#getsafeowner)|지정된 창에 대한 안전한 소유자를 검색합니다.|  
 |[CWnd::GetScrollBarCtrl](#getscrollbarctrl)|형제 스크롤 막대 컨트롤을 반환합니다.|  
 |[CWnd::GetScrollBarInfo](#getscrollbarinfo)|지정한 스크롤 막대에 대한 정보를 검색합니다.|  
@@ -1006,7 +1006,7 @@ class CWnd : public CCmdTarget
 |[CWnd::InvalidateRgn](#invalidatergn)|현재 업데이트 영역에 지정된 영역을 추가하여 해당 영역 내에서 클라이언트 영역을 무효화합니다.|  
 |[CWnd::InvokeHelper](#invokehelper)|ActiveX 컨트롤 메서드나 속성을 호출합니다.|  
 |[CWnd::IsChild](#ischild)|`CWnd`가 자식 창인지 지정된 창의 다른 직계 하위 항목인지를 나타냅니다.|  
-|[CWnd::IsD2DSupportEnabled](#isd2dsupportenabled)|`D2D` 지원이 사용되는지 여부를 확인합니다.|  
+|[CWnd::IsD2DSupportEnabled](#isd2dsupportenabled)|D2D 지원을 사용 되는지 여부를 결정 합니다.|  
 |[CWnd::IsDialogMessage](#isdialogmessage)|지정된 메시지가 모덜리스 대화 상자용인지 확인하고 그럴 경우 처리합니다.|  
 |[CWnd::IsDlgButtonChecked](#isdlgbuttonchecked)|단추 컨트롤이 선택되어 있는지 여부를 확인합니다.|  
 |[CWnd::IsDynamicLayoutEnabled](#isdynamiclayoutenabled)|이 창에서 동적 레이아웃이 사용되는지 여부를 확인합니다. 동적 레이아웃이 사용되는 경우 사용자가 부모 창의 크기를 조정하면 자식 창의 위치 및 크기가 변경될 수 있습니다.|  
@@ -1026,9 +1026,9 @@ class CWnd : public CCmdTarget
 |[CWnd::OnAmbientProperty](#onambientproperty)|앰비언트 속성 값을 구현합니다.|  
 |[CWnd::OnDrawIconicThumbnailOrLivePreview](#ondrawiconicthumbnailorlivepreview)|Windows 7 탭 미리 보기 또는 응용 프로그램 피킹(Peeking)용 클라이언트에 표시할 비트맵을 가져와야 하는 경우 프레임워크에서 호출됩니다.|  
 |[CWnd::OnHelp](#onhelp)|현재 컨텍스트를 사용하여 응용 프로그램 내에서 F1 도움말을 처리합니다.|  
-|[CWnd::OnHelpFinder](#onhelpfinder)|`ID_HELP_FINDER` 및 `ID_DEFAULT_HELP` 명령을 처리합니다.|  
-|[CWnd::OnHelpIndex](#onhelpindex)|`ID_HELP_INDEX` 명령을 처리하고 기본 도움말 항목을 제공합니다.|  
-|[CWnd::OnHelpUsing](#onhelpusing)|`ID_HELP_USING` 명령을 처리합니다.|  
+|[CWnd::OnHelpFinder](#onhelpfinder)|ID_HELP_FINDER 및 ID_DEFAULT_HELP 명령 처리합니다.|  
+|[CWnd::OnHelpIndex](#onhelpindex)|ID_HELP_INDEX 명령을 처리 하 고 기본 도움말 항목을 제공 합니다.|  
+|[CWnd::OnHelpUsing](#onhelpusing)|ID_HELP_USING 명령을 처리합니다.|  
 |[CWnd::OnToolHitTest](#ontoolhittest)|점이 지정된 도구의 경계 사각형에 있는지 여부를 확인하고 도구에 대한 정보를 검색합니다.|  
 |[CWnd::OpenClipboard](#openclipboard)|클립보드를 엽니다. 다른 응용 프로그램 Windows 될 때까지 클립보드를 수정할 수 없습니다 [CloseClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649035) 함수를 호출 합니다.|  
 |[CWnd::PaintWindowlessControls](#paintwindowlesscontrols)|컨트롤 컨테이너에서 창 없는 컨트롤을 그립니다.|  
@@ -1278,12 +1278,12 @@ class CWnd : public CCmdTarget
   
 |이름|설명|  
 |----------|-----------------|  
-|[CWnd::m_hWnd](#m_hwnd)|`HWND`가 이 `CWnd`에 연결되었음을 나타냅니다.|  
+|[CWnd::m_hWnd](#m_hwnd)|이에 연결 된 HWND 나타냅니다 `CWnd`합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CWnd` 개체는 Windows 창과 다르지만 둘이 밀접하게 연결되어 있습니다. `CWnd` 개체는 `CWnd` 생성자 및 소멸자로 만들거나 제거합니다. Windows 창을 반면에에 의해 만들어진 Windows 내부의 데이터 구조는 **만들기** 멤버 함수로 제거 하는 `CWnd` 가상 소멸자입니다. [DestroyWindow](#destroywindow) 함수 개체를 삭제 하지 않고 Windows 창을 제거 합니다.  
+ `CWnd` 개체는 Windows 창과 다르지만 둘이 밀접하게 연결되어 있습니다. `CWnd` 개체는 `CWnd` 생성자 및 소멸자로 만들거나 제거합니다. Windows 창을 반면에에 의해 만들어진 Windows 내부의 데이터 구조는 `Create` 멤버 함수로 제거 하는 `CWnd` 가상 소멸자입니다. [DestroyWindow](#destroywindow) 함수 개체를 삭제 하지 않고 Windows 창을 제거 합니다.  
   
- `CWnd` 클래스 및 숨기기 메시지 맵 메커니즘은 **WndProc** 함수입니다. 들어오는 Windows 알림 메시지에 자동으로 적절 한 메시지 맵을 통해 라우팅됩니다 **에서 * * * 메시지* `CWnd` 멤버 함수입니다. 재정의 **에서 * * * 메시지* 파생된 클래스에서 멤버의 특정 메시지를 처리 하는 멤버 함수입니다.  
+ `CWnd` 클래스 및 숨기기 메시지 맵 메커니즘은 `WndProc` 함수입니다. 들어오는 Windows 알림 메시지에 자동으로 적절 한 메시지 맵을 통해 라우팅됩니다 **에서 * * * 메시지* `CWnd` 멤버 함수입니다. 재정의 **에서 * * * 메시지* 파생된 클래스에서 멤버의 특정 메시지를 처리 하는 멤버 함수입니다.  
   
  또한 `CWnd` 클래스를 사용하여 응용 프로그램에 대한 Windows 자식 창을 만들 수 있습니다. `CWnd`에서 클래스를 파생시킨 다음 파생 클래스에 멤버 변수를 추가하여 응용 프로그램 관련 데이터를 저장합니다. 파생 클래스에서 메시지 처리기 멤버 함수 및 메시지 맵을 구현하여 메시지가 창에 전달될 때 수행되는 작업을 지정합니다.  
   
@@ -1313,7 +1313,7 @@ virtual HRESULT accDoDefaultAction(VARIANT varChild);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `varChild`  
+ *varChild*  
  기본 동작을 호출할 수의 개체나 개체의 자식 요소 중 하나 인지를 지정 합니다. 이 매개 변수는 CHILDID_SELF (수행 하려면 개체의 기본 동작) 또는 (수행 하려면 개체의 자식 요소 중 하나의 기본 동작) 자식 ID 일 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1335,17 +1335,17 @@ virtual HRESULT accHitTest(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `xLeft`  
+ *xLeft*  
  X-포인트의 적중 테스트를 (화면 단위로).  
   
- `yTop`  
+ *yTop*  
  Y-포인트의 적중 테스트를 (화면 단위로).  
   
- `pvarChild`  
- 지정 된 지점에서 개체를 식별 하는 정보를 받는 `xLeft` 및 `yTop`합니다. 참조 *pvarID* 에 [IAccessible::accHitTest](http://msdn.microsoft.com/library/windows/desktop/dd318471) Windows sdk에서입니다.  
+ *pvarChild*  
+ 지정 된 지점에서 개체를 식별 하는 정보를 받는 *xLeft* 및 *yTop*합니다. 참조 *pvarID* 에 [IAccessible::accHitTest](http://msdn.microsoft.com/library/windows/desktop/dd318471) Windows sdk에서입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 **IAccessible::accHitTest** in the Windows SDK입니다.  
+ 성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 `IAccessible::accHitTest` in the Windows SDK입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수는 MFC의의 일부가 [Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592) 지원 합니다.  
@@ -1379,16 +1379,16 @@ virtual HRESULT accLocation(
  *pcyHeight*  
  (화면 단위로) 개체의 높이 받습니다.  
   
- `varChild`  
+ *varChild*  
  검색할 위치 개체 또는 개체의 자식 요소 중 하나 인지를 지정 합니다. 이 매개 변수 (개체에 대 한 정보 가져오기)을 CHILDID_SELF 또는 자식 ID (개체의 자식 요소에 대 한 정보 가져오기) 가능 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 **IAccessible::accLocation** in the Windows SDK입니다.  
+ 성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 `IAccessible::accLocation` in the Windows SDK입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수를 재정의 하면 `CWnd`-창 없는 ActiveX 컨트롤을 MFC 처리) (제외 nonwindowed 사용자 인터페이스 요소가 있는 경우 파생 클래스입니다.  
   
- 자세한 내용은 참조 **IAccessible::accLocation** Windows sdk에서입니다.  
+ 자세한 내용은 참조 `IAccessible::accLocation` Windows sdk에서입니다.  
   
 ##  <a name="accnavigate"></a>  CWnd::accNavigate  
  컨테이너 내에서 다른 사용자 인터페이스 요소로 트래버스하고 가능할 경우 개체를 검색하기 위해 프레임워크에서 호출됩니다.  
@@ -1401,17 +1401,17 @@ virtual HRESULT accNavigate(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `navDir`  
- 이동할 방향을 지정 합니다. 참조 `navDir` 에 [IAccessible::accNavigate](http://msdn.microsoft.com/library/windows/desktop/dd318473) in the Windows SDK입니다.  
+ *navDir*  
+ 이동할 방향을 지정 합니다. 참조 *navDir* 에 [IAccessible::accNavigate](http://msdn.microsoft.com/library/windows/desktop/dd318473) Windows sdk에서입니다.  
   
- `varStart`  
- 시작 개체를 지정합니다. 참조 `varStart` 에 **IAccessible::accNavigate** in the Windows SDK입니다.  
+ *varStart*  
+ 시작 개체를 지정합니다. 참조 *varStart* 에 `IAccessible::accNavigate` Windows sdk에서입니다.  
   
  *pvarEndUpAt*  
- 대상 사용자 인터페이스 개체에 대 한 정보를 받습니다. 참조 *pvarEnd* 에 **IAccessible::accNavigate** Windows sdk에서입니다.  
+ 대상 사용자 인터페이스 개체에 대 한 정보를 받습니다. 참조 *pvarEnd* 에 `IAccessible::accNavigate` Windows sdk에서입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 **IAccessible::accNavigate** in the Windows SDK입니다.  
+ 성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 `IAccessible::accNavigate` in the Windows SDK입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수는 MFC의의 일부가 [Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592) 지원 합니다.  
@@ -1430,14 +1430,14 @@ virtual HRESULT accSelect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `flagsSelect`  
- 현재 선택 영역이 나 포커스를 변경 하는 방법을 지정 합니다. 참조 `flagsSelect` 에 [IAccessible::accSelect](http://msdn.microsoft.com/library/windows/desktop/dd318474) in the Windows SDK입니다.  
+ *flagsSelect*  
+ 현재 선택 영역이 나 포커스를 변경 하는 방법을 지정 합니다. 참조 *flagsSelect* 에 [IAccessible::accSelect](http://msdn.microsoft.com/library/windows/desktop/dd318474) Windows sdk에서입니다.  
   
- `varChild`  
+ *varChild*  
  선택할 개체를 지정 합니다. 이 매개 변수는 (개체 자체를 선택)를 CHILDID_SELF 또는 (중 하나를 선택 된 개체의 자식) 자식 ID 일 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 **IAccessible::accSelect** in the Windows SDK입니다.  
+ 성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 `IAccessible::accSelect` in the Windows SDK입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수는 MFC의의 일부가 [Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592) 지원 합니다.  
@@ -1459,7 +1459,7 @@ BOOL AnimateWindow(
  *dwTime*  
  시간 (밀리초)는 애니메이션을 재생 하는 데 걸리는 시간을 지정 합니다. 일반적으로 애니메이션 재생할 200 밀리초를 사용 합니다.  
   
- `dwFlags`  
+ *dwFlags*  
  애니메이션의 유형을 지정합니다. 가능한 값 목록은 전체 참조 [AnimateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632669)합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1483,7 +1483,7 @@ UINT ArrangeIconicWindows();
   
  MDI 클라이언트 창에서 아이콘 MDI 자식 창을 정렬 하려면 호출 [CMDIFrameWnd::MDIIconArrange](../../mfc/reference/cmdiframewnd-class.md#mdiiconarrange)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#66](../../mfc/reference/codesnippet/cpp/cwnd-class_1.cpp)]  
   
 ##  <a name="attach"></a>  CWnd::Attach  
@@ -1494,13 +1494,13 @@ BOOL Attach(HWND hWndNew);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hWndNew`  
+ *hWndNew*  
  Windows 창에 대 한 핸들을 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  이 예제에서는 MDI 클라이언트 창을에 매핑할 Attach 및 Detach를 사용 하는 방법을 보여 줍니다.  
   
  [!code-cpp[NVC_MFCWindowing#67](../../mfc/reference/codesnippet/cpp/cwnd-class_2.h)]  
@@ -1524,7 +1524,7 @@ CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPaint`  
+ *lpPaint*  
  가리키는 [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) 구조 그리기 정보를 수신 하는 것입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1537,7 +1537,7 @@ CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
   
  호출 하지 마십시오는 `BeginPaint` 대 한 응답으로 제외 하 고 멤버 함수는 [WM_PAINT](#onpaint) 메시지입니다. 호출할 때마다는 `BeginPaint` 멤버 함수에 대 한 일치 하는 호출 해야 합니다.는 [EndPaint](#endpaint) 멤버 함수입니다. 캐럿을 그릴 영역에 있는 경우는 `BeginPaint` 멤버 함수는 자동으로 지울 방지 하기 위해 캐럿을 숨깁니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#70](../../mfc/reference/codesnippet/cpp/cwnd-class_5.cpp)]  
   
 ##  <a name="binddefaultproperty"></a>  CWnd::BindDefaultProperty  
@@ -1552,22 +1552,22 @@ void BindDefaultProperty(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwDispID`  
+ *dwDispID*  
  데이터 소스 제어에 바인딩되어 있는 데이터 바인딩된 컨트롤에 속성의 경우 DISPID를 지정 합니다.  
   
- `vtProp`  
- 바인딩할 속성의 유형을 지정-예를 들어 `VT_BSTR`, **VT_VARIANT**등입니다.  
+ *vtProp*  
+ 바인딩할 속성의 유형을 지정-예를 들어 VT_BSTR, VT_VARIANT, 등에.  
   
- `szFieldName`  
+ *szFieldName*  
  속성이 연결 된 데이터 소스 컨트롤에서 제공 하는 커서의는 열의 이름을 지정 합니다.  
   
- `pDSCWnd`  
+ *pDSCWnd*  
  속성이 연결 된 호스트 데이터 소스 제어를 하는 창을 가리킵니다. 호출 `GetDlgItem` 이 포인터를 검색 하는 dc가 호스트 창의 리소스 id입니다.  
   
 ### <a name="remarks"></a>설명  
  `CWnd` 이 함수를 호출 하는 개체는 데이터 바인딩된 컨트롤 이어야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  `BindDefaultProperty` 다음 컨텍스트에서 사용 수 있습니다.  
   
  [!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]  
@@ -1587,13 +1587,13 @@ void BindProperty(
  *dwDispId*  
  데이터 소스 제어에 바인딩되어 있는 데이터 바인딩된 컨트롤에 속성의 경우 DISPID를 지정 합니다.  
   
- `pWndDSC`  
+ *pWndDSC*  
  속성이 연결 된 호스트 데이터 소스 제어를 하는 창을 가리킵니다. 호출 `GetDlgItem` 이 포인터를 검색 하는 dc가 호스트 창의 리소스 id입니다.  
   
 ### <a name="remarks"></a>설명  
  `CWnd` 이 함수를 호출 하는 개체는 데이터 바인딩된 컨트롤 이어야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  `BindProperty` 다음 컨텍스트에서 사용 수 있습니다.  
   
  [!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]  
@@ -1612,7 +1612,7 @@ void BringWindowToTop();
   
  이 함수는 Win32 호출 [BringWindowToTop](http://msdn.microsoft.com/library/windows/desktop/ms632673\(v=vs.85\).aspx) 함수입니다. 호출 된 [SetWindowPos](#setwindowpos) 함수 Z-순서에서 창의 위치를 변경 합니다. `BringWindowToTop` 함수는 창 스타일을 변경하여 최상위 창으로 만들지 않습니다. 자세한 내용은 참조 [이란 HWND_TOP와 HWND_TOPMOST의 차이](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#71](../../mfc/reference/codesnippet/cpp/cwnd-class_10.cpp)]  
   
 ##  <a name="calcwindowrect"></a>  CWnd::CalcWindowRect  
@@ -1625,18 +1625,18 @@ virtual void CalcWindowRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in, out] `lpClientRect`  
+ [out에서] *lpClientRect*  
  사각형 구조에 대 한 포인터입니다. 입력의 경우에이 구조는 클라이언트 사각형을 포함합니다. 메서드가 완료 되 면이 구조는 지정된 된 클라이언트 사각형을 포함할 수 있는 창 사각형을 포함 합니다.  
   
- [in] `nAdjustType`  
- 사용 하 여 `CWnd::adjustBorder` 없이 창 좌표로 계산 하는 `WS_EX_CLIENTEDGE` 스타일 지정 합니다; 그렇지 않으면 사용 `CWnd::adjustOutside`합니다.  
+ [in] *nAdjustType*  
+ 사용 하 여 `CWnd::adjustBorder` WS_EX_CLIENTEDGE 스타일; 없이 창 좌표로 계산에 사용 그렇지 않은 경우 `CWnd::adjustOutside`합니다.  
   
 ### <a name="remarks"></a>설명  
  계산 된 창 사각형의 크기는 메뉴 모음에 대 한 공간을 포함 하지 않습니다.  
   
  자세한 사용 제한 참조 [AdjustWindowRectEx](http://msdn.microsoft.com/library/windows/desktop/ms632667)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#72](../../mfc/reference/codesnippet/cpp/cwnd-class_11.cpp)]  
   
 ##  <a name="canceltooltips"></a>  CWnd::CancelToolTips  
@@ -1648,14 +1648,14 @@ static void PASCAL CancelToolTips(BOOL bKeys = FALSE);
   
 ### <a name="parameters"></a>매개 변수  
  *bKeys*  
- **True 이면** 키를 누른 상태 표시줄 텍스트 기본적으로 설정 하는 경우 도구 설명을 취소 하 고, 그렇지 **FALSE**합니다.  
+ 키를 누른 상태 표시줄 텍스트 기본적으로 설정 하는 경우 도구 설명을 취소 하려면 true이 고 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
   
 > [!NOTE]
 >  이 멤버 함수를 사용 하 여 해도 사용자 코드에서 관리 하는 도구 설명에는 영향이 없습니다. 관리 하는 도구 설명 컨트롤 영향 [CWnd::EnableToolTips](#enabletooltips)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#73](../../mfc/reference/codesnippet/cpp/cwnd-class_12.cpp)]  
   
 ##  <a name="centerwindow"></a>  CWnd::CenterWindow  
@@ -1666,24 +1666,24 @@ void CenterWindow(CWnd* pAlternateOwner = NULL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pAlternateOwner`  
+ *pAlternateOwner*  
  기준이 되는 것은 대체 창에 대 한 포인터를 가운데 맞춤 (부모 창 보다 기타).  
   
 ### <a name="remarks"></a>설명  
- 일반적으로에서 호출 [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) 응용 프로그램의 주 창에 상대적인 센터 대화 상자에 있습니다. 기본적으로 함수에는 해당 부모 창 및 팝업 창과 소유자를 기준으로 상대적인 자식 창을 가운데 맞춤합니다. 팝업 창을 소유 하지 않은 화면을 기준으로 가운데 맞춤 됩니다. 소유자 또는 부모 되지 않는 특정 창 기준으로 창을 가운데에 `pAlternateOwner` 유효한 창으로 매개 변수를 설정할 수 있습니다. 화면을 기준으로 가운데 맞추기를 강제로 표시 하려면 반환 값을 전달 [CWnd::GetDesktopWindow](#getdesktopwindow) 으로 `pAlternateOwner`합니다.  
+ 일반적으로에서 호출 [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog) 응용 프로그램의 주 창에 상대적인 센터 대화 상자에 있습니다. 기본적으로 함수에는 해당 부모 창 및 팝업 창과 소유자를 기준으로 상대적인 자식 창을 가운데 맞춤합니다. 팝업 창을 소유 하지 않은 화면을 기준으로 가운데 맞춤 됩니다. 소유자 또는 부모 되지 않는 특정 창 기준으로 창을 가운데에 *pAlternateOwner* 유효한 창으로 매개 변수를 설정할 수 있습니다. 화면을 기준으로 가운데 맞추기를 강제로 표시 하려면 반환 값을 전달 [CWnd::GetDesktopWindow](#getdesktopwindow) 으로 *pAlternateOwner*합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#74](../../mfc/reference/codesnippet/cpp/cwnd-class_13.cpp)]  
   
 ##  <a name="changeclipboardchain"></a>  CWnd::ChangeClipboardChain  
- 제거 `CWnd` 창에서 지정한 클립보드 뷰어 고로 전환의 체인에서 `hWndNext` 의 하위 항목은 `CWnd` 체인에 상위 항목입니다.  
+ 제거 `CWnd` 창에서 지정한 클립보드 뷰어 고로 전환의 체인에서 *hWndNext* 의 하위 항목은 `CWnd` 체인에 상위 항목입니다.  
   
 ```  
 BOOL ChangeClipboardChain(HWND hWndNext);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hWndNext`  
+ *hWndNext*  
  뒤에 창을 식별 `CWnd` 클립보드 뷰어 체인에서 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -1699,16 +1699,16 @@ void CheckDlgButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDButton`  
+ *nIDButton*  
  단추를 수정할 수를 지정 합니다.  
   
- `nCheck`  
- 수행할 동작을 지정 합니다. 경우 `nCheck` 이 값은 0에서 `CheckDlgButton` 단추 옆에 있는 확인 표시를 배치 하는 멤버 함수; 0 인 경우에 확인 표시가 제거 됩니다. 상태 단추에 대 한 경우 `nCheck` 2 인 단추의 상태는 확정적이 없습니다.  
+ *nCheck*  
+ 수행할 동작을 지정 합니다. 경우 *nCheck* 이 값은 0에서 `CheckDlgButton` 단추 옆에 있는 확인 표시를 배치 하는 멤버 함수; 0 인 경우에 확인 표시가 제거 됩니다. 상태 단추에 대 한 경우 *nCheck* 2 인 단추의 상태는 확정적이 없습니다.  
   
 ### <a name="remarks"></a>설명  
  `CheckDlgButton` 보냅니다 함수는 [BM_SETCHECK](http://msdn.microsoft.com/library/windows/desktop/bb775989) 메시지에서 지정 된 단추입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#75](../../mfc/reference/codesnippet/cpp/cwnd-class_14.cpp)]  
   
 ##  <a name="checkradiobutton"></a>  CWnd::CheckRadioButton  
@@ -1722,19 +1722,19 @@ void CheckRadioButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDFirstButton`  
+ *nIDFirstButton*  
  그룹의 첫 번째 라디오 단추의 정수 식별자를 지정합니다.  
   
- `nIDLastButton`  
+ *nIDLastButton*  
  그룹의 마지막 라디오 단추의 정수 식별자를 지정합니다.  
   
- `nIDCheckButton`  
+ *nIDCheckButton*  
  라디오 단추를 검사할의 정수 식별자를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
  `CheckRadioButton` 보냅니다 함수는 [BM_SETCHECK](http://msdn.microsoft.com/library/windows/desktop/bb775989) 메시지 지정된 된 라디오 단추입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#76](../../mfc/reference/codesnippet/cpp/cwnd-class_15.cpp)]  
   
 ##  <a name="childwindowfrompoint"></a>  CWnd::ChildWindowFromPoint  
@@ -1749,7 +1749,7 @@ CWnd* ChildWindowFromPoint(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `point`  
+ *지점*  
  테스트할 점의 클라이언트 좌표를 지정 합니다.  
   
  *nflags*  
@@ -1757,13 +1757,13 @@ CWnd* ChildWindowFromPoint(
   
 |값|의미|  
 |-----------|-------------|  
-|**CWP_ALL**|모든 자식 창을 건너뛰지 마세요|  
-|**CWP_SKIPINVISIBLE**|건너뛸 보이지 않는 자식 창|  
-|**CWP_SKIPDISABLED**|비활성화 된 자식 창을 건너뛰기|  
-|**CWP_SKIPTRANSPARENT**|투명 한 자식 창을 건너뛰기|  
+|CWP_ALL|모든 자식 창을 건너뛰지 마세요|  
+|CWP_SKIPINVISIBLE|건너뛸 보이지 않는 자식 창|  
+|CWP_SKIPDISABLED|비활성화 된 자식 창을 건너뛰기|  
+|CWP_SKIPTRANSPARENT|투명 한 자식 창을 건너뛰기|  
   
 ### <a name="return-value"></a>반환 값  
- 지점을 포함 하는 자식 창에 식별 합니다. **NULL** 클라이언트 영역 외부에 있는 지정 된 경우. 클라이언트 영역 내 올바르지만 모든 자식 창이 포함 되어 있지는 지점 `CWnd` 반환 됩니다.  
+ 지점을 포함 하는 자식 창에 식별 합니다. 클라이언트 영역 외부에 지정 된 경우 NULL입니다. 클라이언트 영역 내 올바르지만 모든 자식 창이 포함 되어 있지는 지점 `CWnd` 반환 됩니다.  
   
  이 멤버 함수는 지정 된 위치를 포함 하는 숨김 또는 비활성화 자식 창에 반환 됩니다.  
   
@@ -1771,7 +1771,7 @@ CWnd* ChildWindowFromPoint(
   
  `CWnd`* 반환 되는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#77](../../mfc/reference/codesnippet/cpp/cwnd-class_16.cpp)]  
   
 ##  <a name="clienttoscreen"></a>  CWnd::ClientToScreen  
@@ -1782,18 +1782,18 @@ void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) 
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPoint`  
+ *lpPoint*  
  가리키는 [POINT 구조체](../../mfc/reference/point-structure1.md) 또는 `CPoint` 변환할 좌표를 클라이언트를 포함 하는 개체입니다.  
   
- `lpRect`  
+ *lpRect*  
  가리키는 [RECT 구조체](../../mfc/reference/rect-structure1.md) 또는 `CRect` 변환할 좌표를 클라이언트를 포함 하는 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- `ClientToScreen` 에서 클라이언트 좌표를 사용 하는 멤버 함수는 **지점** 또는 `RECT` 구조 또는 `CPoint` 또는 `CRect` 가리키는 개체 `lpPoint` 또는 `lpRect` 새로운 계산 화면 좌표입니다. 좌표는 새 구조에 좌표를 대체합니다. 새 화면 좌표가 시스템 디스플레이의 왼쪽 위 모퉁이 기준으로 합니다.  
+ `ClientToScreen` 에서 클라이언트 좌표를 사용 하는 멤버 함수는 `POINT` 또는 `RECT` 구조 또는 `CPoint` 또는 `CRect` 가리키는 개체 *lpPoint* 또는 *lpRect* 새 화면 좌표; 계산 좌표는 새 구조에 좌표를 대체합니다. 새 화면 좌표가 시스템 디스플레이의 왼쪽 위 모퉁이 기준으로 합니다.  
   
  `ClientToScreen` 멤버 함수는 지정 된 점 또는 사각형 클라이언트 좌표에서 이라고 가정 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#78](../../mfc/reference/codesnippet/cpp/cwnd-class_17.cpp)]  
   
 ##  <a name="closewindow"></a>  CWnd::CloseWindow  
@@ -1834,42 +1834,42 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszClassName`  
+ [in] *lpszClassName*  
  등록 된 시스템 창 클래스;의 이름을 포함 하는 null로 끝나는 문자열에 대 한 포인터 또는 미리 정의 된 시스템 창 클래스의 이름입니다.  
   
- [in] `lpszWindowName`  
- 표시 이름;의 창을 포함 하는 null로 끝나는 문자열에 대 한 포인터 그렇지 않으면 `NULL` 창 표시 이름이 없는 대 한 합니다.  
+ [in] *lpszWindowName*  
+ 표시 이름;의 창을 포함 하는 null로 끝나는 문자열에 대 한 포인터 그렇지 않으면 NULL이 없는 창에 대 한 표시 이름입니다.  
   
- [in] `dwStyle`  
- 비트 조합 (OR) [창 스타일](styles-used-by-mfc.md#window-styles)합니다. `WS_POPUP` 옵션 올바른 스타일이 아닙니다.  
+ [in] *dwStyle*  
+ 비트 조합 (OR) [창 스타일](styles-used-by-mfc.md#window-styles)합니다. WS_POPUP 옵션 올바른 스타일이 아닙니다.  
   
- [in] `rect`  
+ [in] *rect*  
  부모 창의 왼쪽 위 모퉁이 기준으로 창의 위치와 크기입니다.  
   
- [in] `pParentWnd`  
+ [in] *pParentWnd*  
  부모 창에 대 한 포인터입니다.  
   
- [in] `nID`  
+ [in] *nID*  
  ID는 창입니다.  
   
- [in] `pContext`  
+ [in] *pContext*  
  에 대 한 포인터는 [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) 응용 프로그램에 대 한 문서 뷰 아키텍처를 사용자 지정 하는 데 사용 되는 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
+ 메서드가 성공 하면 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
   
 > [!WARNING]
-> `CWnd::PreCreateWindow` 이제 hMenu 소속 할당 해당 `CREATESTRUCT` 매개 변수를는 `this` 메뉴가 있는 경우 포인터 `NULL` 스타일을 포함 하 고 `WS_CHILD`합니다. 적절 한 기능에 대 한 대화 상자 컨트롤에 있지 않은 ID 있는지를 확인 `NULL`합니다.  
+> `CWnd::PreCreateWindow` 이제 hMenu 소속 할당 해당 `CREATESTRUCT` 매개 변수를는 **이** 포인터 메뉴 NULL이 고 스타일 WS_CHILD를 포함 하는 경우. 적절 한 기능에 대 한 대화 상자 컨트롤에 NULL이 아닌 ID가 있는지를 확인 합니다.  
 >   
->  이러한 변경 관리/네이티브 interop 시나리오에서 충돌을 해결합니다. A `TRACE` 의 문에서 `CWnd::Create` 문제의 개발자 경고를 보냅니다.  
+>  이러한 변경 관리/네이티브 interop 시나리오에서 충돌을 해결합니다. 추적 문이 `CWnd::Create` 문제의 개발자 경고 합니다.  
   
  사용 하 여는 [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) 창 클래스 등록 하는 함수입니다. 사용자 정의 등록 된 클래스 모듈에서 사용할 수 있는 창입니다.  
   
  [CWnd::OnCreate](#oncreate) 전에 메서드가 호출 되는 `Create` 메서드가 반환 되 면 창이 표시 되기 전에 및 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#79](../../mfc/reference/codesnippet/cpp/cwnd-class_18.cpp)]  
   
 ##  <a name="createaccessibleproxy"></a>  CWnd::CreateAccessibleProxy  
@@ -1883,18 +1883,18 @@ virtual HRESULT CreateAccessibleProxy(
 ```  
    
 ### <a name="parameters"></a>매개 변수  
- `wParam`  
+ *wParam*  
  Active Accessibility 프록시에 의해 액세스 되는 개체를 식별 합니다. 다음 값 중 하나일 수 있습니다.  
   
 |값|의미|  
 |-----------|-------------|  
-|**OBJID_CLIENT**|창의 클라이언트 영역을 가리킵니다.|  
+|OBJID_CLIENT|창의 클라이언트 영역을 가리킵니다.|  
   
- `lParam`  
+ *lParam*  
  추가 메시지 종속 정보를 제공 합니다.  
   
- `pResult`  
- 에 대 한 포인터는 **LRESULT** 결과 코드를 저장 하는 합니다.  
+ *pResult*  
+ 결과 코드를 저장 하는 LRESULT에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
  지정된 개체에 대해 Active Accessibility 프록시를 만듭니다.  
@@ -1907,7 +1907,7 @@ void CreateCaret(CBitmap* pBitmap);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pBitmap`  
+ *pBitmap*  
  캐럿의 셰이프를 정의 하는 비트맵을 식별 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -1917,7 +1917,7 @@ void CreateCaret(CBitmap* pBitmap);
   
  시스템 캐럿에는 공유 리소스입니다. `CWnd` 입력된 포커스를가지고 되거나 상태인 경우에 캐럿을 만들어야 합니다. 입력된 포커스를 잃이 되거나 비활성화 될 전에 캐럿을 삭제 해야 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#80](../../mfc/reference/codesnippet/cpp/cwnd-class_19.cpp)]  
   
 ##  <a name="createcontrol"></a>  CWnd::CreateControl  
@@ -1963,39 +1963,39 @@ BOOL CreateControl(
   
 ### <a name="parameters"></a>매개 변수  
  *pszClass*  
- 이 문자열에는 "짧은 이름" OLE 포함 될 수 있습니다 (ProgID) 예: "CIRC3 클래스에 대 한. Circ3Ctrl.1 "입니다. 이름이 동일한 컨트롤에 의해 등록 된 이름과 일치 해야 합니다. 문자열 또는 문자열 형식으로를 포함할 수 있습니다는 **CLSID**, 중괄호, 예: "{9DBAFCCF-592F-101B-85CE-00608CEC297B}"에 포함 합니다. 두 경우 모두 `CreateControl` 해당 클래스 id와 같습니다. 문자열 변환  
+ 이 문자열에는 "짧은 이름" OLE 포함 될 수 있습니다 (ProgID) 예: "CIRC3 클래스에 대 한. Circ3Ctrl.1 "입니다. 이름이 동일한 컨트롤에 의해 등록 된 이름과 일치 해야 합니다. 또는 문자열의 CLSID, 중괄호, 예: "{9DBAFCCF-592F-101B-85CE-00608CEC297B}"에 포함 된 문자열 형식을 포함 될 수 있습니다. 두 경우 모두 `CreateControl` 해당 클래스 id와 같습니다. 문자열 변환  
   
  *pszWindowName*  
- 컨트롤에 표시할 텍스트에 대 한 포인터입니다. (있는 경우) 컨트롤의 텍스트 또는 캡션을 속성의 값을 설정 합니다. 경우 **NULL**, 컨트롤의 텍스트 또는 캡션을 속성이 변경 되지 않습니다.  
+ 컨트롤에 표시할 텍스트에 대 한 포인터입니다. (있는 경우) 컨트롤의 텍스트 또는 캡션을 속성의 값을 설정 합니다. NULL 인 경우 컨트롤의 텍스트 또는 캡션을 속성이 변경 되지 않습니다.  
   
- `dwStyle`  
+ *dwStyle*  
  창 스타일입니다. 사용 가능한 스타일 주의 아래 나열 됩니다.  
   
- `rect`  
+ *rect*  
  컨트롤의 크기와 위치를 지정합니다. 있습니다는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT 구조체](../../mfc/reference/rect-structure1.md)합니다.  
   
- `ppt`  
+ *ppt*  
  가리키는 [POINT 구조체](../../mfc/reference/point-structure1.md) 또는 `CPoint` 컨트롤의 왼쪽된 위 모퉁이 포함 하는 개체입니다.  
   
- `pSize`  
+ *pSize*  
  가리키는 [크기](http://msdn.microsoft.com/library/windows/desktop/dd145106) 구조 또는 `CSize` 컨트롤의 크기를 포함 하는 개체  
   
- `pParentWnd`  
- 컨트롤의 부모 창을 지정합니다. 않아야 **NULL**합니다.  
+ *pParentWnd*  
+ 컨트롤의 부모 창을 지정합니다. NULL이 아니어야 합니다.  
   
- `nID`  
+ *nID*  
  컨트롤의 ID를 지정 합니다.  
   
- `pPersist`  
- 에 대 한 포인터는 [CFile](../../mfc/reference/cfile-class.md) 컨트롤에 대 한 영구 상태를 포함 합니다. 기본값은 **NULL**, 컨트롤 모든 영구 저장소에서 해당 상태를 복원 하지 않고 자체적 초기화를 나타내는입니다. 그렇지 않은 경우 **NULL**에 대 한 포인터 여야 합니다는 `CFile`-파생 된 스트림 또는 저장소의 형태로 컨트롤의 영구 데이터를 포함 하는 개체입니다. 이 데이터는 클라이언트의 이전 정품에서 저장 수 없습니다. `CFile` 다른 데이터를 포함할 수 있지만 읽기 / 쓰기 포인터에 대 한 호출의 시간에 영구 데이터의 첫 번째 바이트도 설정 되어 있어야 `CreateControl`합니다.  
+ *pPersist*  
+ 에 대 한 포인터는 [CFile](../../mfc/reference/cfile-class.md) 컨트롤에 대 한 영구 상태를 포함 합니다. 기본값은 해당 컨트롤을 초기화 자체 모든 영구 저장소에서 해당 상태를 복원 하지 않고 않음을 나타내는 NULL입니다. NULL이 아닌 경우 것에 대 한 포인터는 `CFile`-파생 된 스트림 또는 저장소의 형태로 컨트롤의 영구 데이터를 포함 하는 개체입니다. 이 데이터는 클라이언트의 이전 정품에서 저장 수 없습니다. `CFile` 다른 데이터를 포함할 수 있지만 읽기 / 쓰기 포인터에 대 한 호출의 시간에 영구 데이터의 첫 번째 바이트도 설정 되어 있어야 `CreateControl`합니다.  
   
- `bStorage`  
- 나타냅니다 여부의 데이터 `pPersist` IStorage 또는 IStream 데이터로 해석 해야 합니다. 경우에 데이터 `pPersist` 는 저장소 `bStorage` 해야 **TRUE**합니다. 경우에 데이터 `pPersist` 는 stream `bStorage` 해야 **FALSE**합니다. 기본값은 **FALSE**합니다.  
+ *bStorage*  
+ 나타냅니다 여부의 데이터 *pPersist* IStorage 또는 IStream 데이터로 해석 해야 합니다. 경우에 데이터 *pPersist* 는 저장소 *bStorage* TRUE 여야 합니다. 경우에 데이터 *pPersist* 는 stream *bStorage* FALSE 여야 합니다. 기본값은 FALSE입니다.  
   
  *bstrLicKe*y  
- 선택적 라이선스 키 데이터입니다. 이 데이터는 런타임 라이선스 키를 필요로 하는 컨트롤을 만드는 경우에 필요 합니다. 컨트롤 라이선스를 지 원하는 경우 성공 하려면 컨트롤 생성에 대 한 라이선스 키를 제공 해야 합니다. 기본값은 **NULL**합니다.  
+ 선택적 라이선스 키 데이터입니다. 이 데이터는 런타임 라이선스 키를 필요로 하는 컨트롤을 만드는 경우에 필요 합니다. 컨트롤 라이선스를 지 원하는 경우 성공 하려면 컨트롤 생성에 대 한 라이선스 키를 제공 해야 합니다. 기본값은 NULL입니다.  
   
- `clsid`  
+ *clsid*  
  컨트롤의 고유 클래스 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2004,19 +2004,19 @@ BOOL CreateControl(
 ### <a name="remarks"></a>설명  
  `CreateControl` 직접 아날로그가는 [CWnd::Create](#create) 함수에 대 한 창을 만드는 `CWnd`합니다. `CreateControl` 일반 창 대신 ActiveX 컨트롤을 만듭니다.  
   
- Windows의 하위 집합만 `dwStyle` 에 대 한 지원 되는 플래그 `CreateControl`:  
+ Windows의 하위 집합만 *dwStyle* 에 대 한 지원 되는 플래그 `CreateControl`:  
   
-- **WS_VISIBLE** 처음에 표시 되는 창을 만듭니다. 컨트롤이 일반 창과 마찬가지로 즉시 표시 될 수 있는 경우에 필요 합니다.  
+- WS_VISIBLE에 처음 표시 되는 창을 만듭니다. 컨트롤이 일반 창과 마찬가지로 즉시 표시 될 수 있는 경우에 필요 합니다.  
   
-- **WS_DISABLED** 처음부터 사용할 창을 만듭니다. 사용할 수 없는 창 사용자 로부터 입력을 받을 수 없습니다. 컨트롤에는 Enabled 속성에 설정할 수 있습니다.  
+- WS_DISABLED 처음 비활성화 되어 있는 창을 만듭니다. 사용할 수 없는 창 사용자 로부터 입력을 받을 수 없습니다. 컨트롤에는 Enabled 속성에 설정할 수 있습니다.  
   
-- `WS_BORDER` 씬 줄 테두리가 있는 창을 만듭니다. 컨트롤 BorderStyle 속성에 설정할 수 있습니다.  
+- WS_BORDER 얇은 선 테두리와 창을 만듭니다. 컨트롤 BorderStyle 속성에 설정할 수 있습니다.  
   
-- **WS_GROUP** 컨트롤 그룹의 첫 번째 컨트롤을 지정 합니다. 사용자 방향 키를 사용 하 여 키보드 포커스를 한 컨트롤의 그룹에서에서 다음 변경할 수 있습니다. 정의 된 모든 컨트롤은 **WS_GROUP** 후 동일한 그룹에 속하는 첫 번째 컨트롤에 스타일입니다. 다음 컨트롤은 **WS_GROUP** 스타일 그룹을 종료 하 고 다음 그룹을 시작 합니다.  
+- WS_GROUP은 컨트롤 그룹의 첫 번째 컨트롤을 지정합니다. 사용자 방향 키를 사용 하 여 키보드 포커스를 한 컨트롤의 그룹에서에서 다음 변경할 수 있습니다. 모든 컨트롤 WS_GROUP 스타일으로 된 후 정의 된 첫 번째 컨트롤 같은 그룹에 속해야 합니다. WS_GROUP 스타일이 적용 된 다음 컨트롤로 그룹을 종료 하 고 그룹을 시작 합니다.  
   
-- **WS_TABSTOP** TAB 키를 누를 때 키보드 포커스를 받을 수 있는 컨트롤을 지정 합니다. 다음 컨트롤로 키보드 포커스를 변경 TAB 키를 누를 **WS_TABSTOP** 스타일입니다.  
+- WS_TABSTOP TAB 키를 누를 때 키보드 포커스를 받을 수 있는 컨트롤을 지정 합니다. TAB 키를 누를 WS_TABSTOP 스타일의 다음 컨트롤로 키보드 포커스를 변경 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#81](../../mfc/reference/codesnippet/cpp/cwnd-class_20.h)]  
   
 ##  <a name="createex"></a>  CWnd::CreateEx  
@@ -2049,59 +2049,59 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwExStyle`  
- 비트 조합 (OR) [확장 창 스타일](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)고, 그렇지 않으면 `NULL` 기본값에 대 한 확장 창 스타일입니다.  
+ *dwExStyle*  
+ 비트 조합 (OR) [확장 창 스타일](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles); 그렇지 않으면 NULL 확장 창 스타일 기본입니다.  
   
- `lpszClassName`  
+ *lpszClassName*  
  등록 된 시스템 창 클래스;의 이름을 포함 하는 null로 끝나는 문자열에 대 한 포인터 또는 미리 정의 된 시스템 창 클래스의 이름입니다.  
   
- `lpszWindowName`  
- 표시 이름;의 창을 포함 하는 null로 끝나는 문자열에 대 한 포인터 그렇지 않으면 `NULL` 창 표시 이름이 없는 대 한 합니다.  
+ *lpszWindowName*  
+ 표시 이름;의 창을 포함 하는 null로 끝나는 문자열에 대 한 포인터 그렇지 않으면 NULL이 없는 창에 대 한 표시 이름입니다.  
   
- `dwStyle`  
- 비트 조합 (OR) [창 스타일](styles-used-by-mfc.md#window-styles)고, 그렇지 않으면 `NULL` 기본 창 스타일에 대 한 합니다.  
+ *dwStyle*  
+ 비트 조합 (OR) [창 스타일](styles-used-by-mfc.md#window-styles)기본 창 스타일에 대 한 그렇지 않으면 null입니다.  
   
- `x`  
+ *x*  
  화면 왼쪽에서 창 또는 부모 창의 가로 초기 거리입니다.  
   
- `y`  
+ *y*  
  화면 위쪽에서 창 또는 부모 창의 초기 세로 거리입니다.  
   
- `nWidth`  
+ *nWidth*  
  픽셀, 창의 너비입니다.  
   
- `nHeight`  
+ *nHeight*  
  픽셀, 창의 높이입니다.  
   
- `hwndParent`  
+ *hwndParent*  
  자식 창의 부모 창에 핸들 그렇지 않으면, 창에 소유자 있으면 소유자 창의 핸들입니다.  
   
- `nIDorHMenu`  
+ *nIDorHMenu*  
  자식 창, 창 ID;에 대 한 그렇지 않은 경우 ID는 창에 대 한 메뉴입니다.  
   
- `lpParam`  
- 에 전달 되는 사용자 데이터에 대 한 포인터는 [CWnd::OnCreate](#oncreate) 에서 메서드는 `lpCreateParams` 필드입니다.  
+ *lpParam*  
+ 에 전달 되는 사용자 데이터에 대 한 포인터는 [CWnd::OnCreate](#oncreate) 에서 메서드는 *lpCreateParams* 필드입니다.  
   
- `rect`  
+ *rect*  
  크기와 창 화면을 기준으로 또는 부모 창의 위치입니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  자식 창의 부모 창에 대 한 포인터 창에 소유자를가 하는 경우에 소유자 창에 대 한 포인터, 그렇지 않으면입니다.  
   
- `nID`  
+ *nID*  
  자식 창, 창 ID;에 대 한 그렇지 않은 경우 ID는 창에 대 한 메뉴입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
+ 메서드가 성공 하면 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
   
 > [!WARNING]
-> `CWnd::PreCreateWindow` 이제 hMenu 소속 할당 해당 `CREATESTRUCT` 매개 변수를는 `this` 메뉴가 있는 경우 포인터 `NULL` 스타일을 포함 하 고 `WS_CHILD`합니다. 적절 한 기능에 대 한 대화 상자 컨트롤에 있지 않은 ID 있는지를 확인 `NULL`합니다.  
+> `CWnd::PreCreateWindow` 이제 hMenu 소속 할당 해당 `CREATESTRUCT` 매개 변수를는 **이** 포인터 메뉴 NULL이 고 스타일 WS_CHILD를 포함 하는 경우. 적절 한 기능에 대 한 대화 상자 컨트롤에 NULL이 아닌 ID가 있는지를 확인 합니다.  
 >   
 >  이러한 변경 관리/네이티브 interop 시나리오에서 충돌을 해결합니다. A `TRACE` 의 문에서 `CWnd::Create` 문제의 개발자 경고를 보냅니다.  
   
- 확장 창 스타일 기본값은 `WS_EX_LEFT`합니다. 기본 창 스타일은 `WS_OVERLAPPED`합니다.  
+ 확장 창 스타일 기본값이 WS_EX_LEFT입니다. 기본 창 스타일은 WS_OVERLAPPED 합니다.  
   
  사용 하 여는 [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) 창 클래스 등록 하는 함수입니다. 사용자 정의 등록 된 클래스 모듈에서 사용할 수 있는 창입니다.  
   
@@ -2109,7 +2109,7 @@ virtual BOOL CreateEx(
   
  [CWnd::OnCreate](#oncreate) 전에 메서드가 호출 되는 `CreateEx` 메서드가 반환 되 면 창이 표시 되기 전에 및 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#82](../../mfc/reference/codesnippet/cpp/cwnd-class_21.cpp)]  
   
 ##  <a name="creategraycaret"></a>  CWnd::CreateGrayCaret  
@@ -2122,24 +2122,24 @@ void CreateGrayCaret(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nWidth`  
+ *nWidth*  
  (논리 단위)에서 캐럿의 너비를 지정합니다. 이 매개 변수가 0 이면 너비는 시스템 정의 창 테두리 너비에 설정 됩니다.  
   
- `nHeight`  
+ *nHeight*  
  (논리 단위)에서 캐럿의 높이 지정합니다. 이 매개 변수가 0 인 경우 시스템 정의 창 테두리 높이를 높이 설정 됩니다.  
   
 ### <a name="remarks"></a>설명  
  캐럿 셰이프는 한 줄 또는 블록 수 있습니다.  
   
- 매개 변수 `nWidth` 및 `nHeight` 캐럿의 너비와 높이 (논리 단위)를 지정 합니다; 정확한 너비 및 높이 (픽셀) 매핑 모드에 따라 다릅니다.  
+ 매개 변수 *nWidth* 및 *nHeight* 캐럿의 너비와 높이 (논리 단위)를 지정 합니다; 정확한 너비 및 높이 (픽셀) 매핑 모드에 따라 다릅니다.  
   
- 시스템의 창 테두리 너비 또는 높이 여 검색할 수는 [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) Windows 작동는 **SM_CXBORDER** 및 **SM_CYBORDER** 인덱스입니다. 창 테두리 너비 또는 높이 사용 하면 캐럿 고해상도 디스플레이에 표시 됩니다.  
+ 시스템의 창 테두리 너비 또는 높이 여 검색할 수는 [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) SM_CXBORDER 및 SM_CYBORDER 인덱스와 함께 Windows 함수입니다. 창 테두리 너비 또는 높이 사용 하면 캐럿 고해상도 디스플레이에 표시 됩니다.  
   
  `CreateGrayCaret` 캐럿을 소유 하는 창에 관계 없이 모든 경우 자동으로 멤버 함수는 이전 캐럿 셰이프를 제거 합니다. 를 만든 후 캐럿 처음에 숨겨져 있습니다. 캐럿을 표시 하는 [ShowCaret](#showcaret) 멤버 함수를 호출 해야 합니다.  
   
  시스템 캐럿에는 공유 리소스입니다. `CWnd` 입력된 포커스를가지고 되거나 상태인 경우에 캐럿을 만들어야 합니다. 입력된 포커스를 잃이 되거나 비활성화 될 전에 캐럿을 삭제 해야 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#83](../../mfc/reference/codesnippet/cpp/cwnd-class_22.cpp)]  
   
 ##  <a name="createsolidcaret"></a>  CWnd::CreateSolidCaret  
@@ -2152,24 +2152,24 @@ void CreateSolidCaret(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nWidth`  
+ *nWidth*  
  (논리 단위)에서 캐럿의 너비를 지정합니다. 이 매개 변수가 0 이면 너비는 시스템 정의 창 테두리 너비에 설정 됩니다.  
   
- `nHeight`  
+ *nHeight*  
  (논리 단위)에서 캐럿의 높이 지정합니다. 이 매개 변수가 0 인 경우 시스템 정의 창 테두리 높이를 높이 설정 됩니다.  
   
 ### <a name="remarks"></a>설명  
  캐럿 셰이프는 선 또는 블록 수 있습니다.  
   
- 매개 변수 `nWidth` 및 `nHeight` 캐럿의 너비와 높이 (논리 단위)를 지정 합니다; 정확한 너비 및 높이 (픽셀) 매핑 모드에 따라 다릅니다.  
+ 매개 변수 *nWidth* 및 *nHeight* 캐럿의 너비와 높이 (논리 단위)를 지정 합니다; 정확한 너비 및 높이 (픽셀) 매핑 모드에 따라 다릅니다.  
   
- 시스템의 창 테두리 너비 또는 높이 여 검색할 수는 [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) Windows 작동는 **SM_CXBORDER** 및 **SM_CYBORDER** 인덱스입니다. 창 테두리 너비 또는 높이 사용 하면 캐럿 고해상도 디스플레이에 표시 됩니다.  
+ 시스템의 창 테두리 너비 또는 높이 여 검색할 수는 [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) SM_CXBORDER 및 SM_CYBORDER 인덱스와 함께 Windows 함수입니다. 창 테두리 너비 또는 높이 사용 하면 캐럿 고해상도 디스플레이에 표시 됩니다.  
   
  `CreateSolidCaret` 캐럿을 소유 하는 창에 관계 없이 모든 경우 자동으로 멤버 함수는 이전 캐럿 셰이프를 제거 합니다. 를 만든 후 캐럿 처음에 숨겨져 있습니다. 캐럿을 표시 하는 [ShowCaret](#showcaret) 멤버 함수를 호출 해야 합니다.  
   
  시스템 캐럿에는 공유 리소스입니다. `CWnd` 입력된 포커스를가지고 되거나 상태인 경우에 캐럿을 만들어야 합니다. 입력된 포커스를 잃이 되거나 비활성화 될 전에 캐럿을 삭제 해야 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#84](../../mfc/reference/codesnippet/cpp/cwnd-class_23.cpp)]  
   
 ##  <a name="cwnd"></a>  CWnd::CWnd  
@@ -2195,7 +2195,7 @@ LRESULT Default();
 ### <a name="remarks"></a>설명  
  기본 창 프로시저는 기본 응용 프로그램을 처리 하지 않는 모든 창 메시지에 대 한 처리를 제공 합니다. 이 멤버 함수를 사용 하면 모든 메시지를 처리 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#85](../../mfc/reference/codesnippet/cpp/cwnd-class_24.cpp)]  
   
 ##  <a name="defwindowproc"></a>  CWnd::DefWindowProc  
@@ -2209,13 +2209,13 @@ virtual LRESULT DefWindowProc(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `message`  
+ *message*  
  처리할 Windows 메시지를 지정 합니다.  
   
- `wParam`  
+ *wParam*  
  추가 메시지 종속 정보를 지정 합니다.  
   
- `lParam`  
+ *lParam*  
  추가 메시지 종속 정보를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2234,7 +2234,7 @@ static void PASCAL DeleteTempMap();
 ### <a name="remarks"></a>설명  
  임시 삭제 `CWnd` 가 만든 개체는 `FromHandle` 멤버 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#86](../../mfc/reference/codesnippet/cpp/cwnd-class_25.cpp)]  
   
 ##  <a name="destroywindow"></a>  CWnd::DestroyWindow  
@@ -2260,7 +2260,7 @@ virtual BOOL DestroyWindow();
   
  경우는 `CWnd` 자식 창 고에 없는 [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) 집합 스타일 지정 하면 [창에 WM_PARENTNOTIFY ](https://msdn.microsoft.com/library/ms632638.aspx) 부모로 메시지가 보내집니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#87](../../mfc/reference/codesnippet/cpp/cwnd-class_26.cpp)]  
   
 ##  <a name="detach"></a>  CWnd::Detach  
@@ -2271,9 +2271,9 @@ HWND Detach();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- A `HWND` Windows 개체입니다.  
+ Windows 개체에는 HWND입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::Attach](#attach)합니다.  
   
 ##  <a name="dlgdirlist"></a>  CWnd::DlgDirList  
@@ -2288,55 +2288,55 @@ int DlgDirList(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPathSpec`  
+ *lpPathSpec*  
  경로 및 파일 이름을 포함 하는 null로 끝나는 문자열을 가리킵니다. `DlgDirList` 있어야 하 고 수정 작업을 포함할 수 있을 정도로 오래이 문자열을 수정 합니다. 자세한 내용은 다음 "주의" 섹션을 참조 하십시오.  
   
- `nIDListBox`  
- 목록 상자의 식별자를 지정합니다. 경우 `nIDListBox` 은 0으로, `DlgDirList` 목록 상자가 없는 테이블이 있고 하나 채우기 시도 하지 않고 가정 합니다.  
+ *nIDListBox*  
+ 목록 상자의 식별자를 지정합니다. 경우 *nIDListBox* 은 0으로, `DlgDirList` 목록 상자가 없는 테이블이 있고 하나 채우기 시도 하지 않고 가정 합니다.  
   
- `nIDStaticPath`  
- 현재 드라이브와 디렉터리를 표시 하는 데 사용 하는 정적 텍스트 컨트롤의 식별자를 지정 합니다. 경우 `nIDStaticPath` 은 0으로, `DlgDirList` 텍스트 컨트롤이 없습니다 있다고 가정 합니다.  
+ *nIDStaticPath*  
+ 현재 드라이브와 디렉터리를 표시 하는 데 사용 하는 정적 텍스트 컨트롤의 식별자를 지정 합니다. 경우 *nIDStaticPath* 은 0으로, `DlgDirList` 텍스트 컨트롤이 없습니다 있다고 가정 합니다.  
   
- `nFileType`  
+ *nFileType*  
  표시 될 파일의 특성을 지정 합니다. 다음 값의 조합 수 있습니다.  
   
-- **DDL_READWRITE** 특성이 있는 읽기 / 쓰기 데이터 파일.  
+- 특성이 있는 DDL_READWRITE 읽기 / 쓰기 데이터 파일.  
   
-- **DDL_READONLY** 읽기 전용 파일입니다.  
+- DDL_READONLY 읽기 전용 파일입니다.  
   
-- **DDL_HIDDEN** 숨겨진 파일입니다.  
+- DDL_HIDDEN 숨겨진 파일입니다.  
   
-- **DDL_SYSTEM** 시스템 파일입니다.  
+- DDL_SYSTEM 시스템 파일입니다.  
   
-- **DDL_DIRECTORY** 디렉터리입니다.  
+- DDL_DIRECTORY 디렉터리입니다.  
   
-- **DDL_ARCHIVE** 보관 합니다.  
+- DDL_ARCHIVE 보관 합니다.  
   
-- **DDL_POSTMSGS LB_DIR** 플래그입니다. 경우는 **LB_DIR** 플래그가 설정 되어, Windows에서 생성 하는 메시지를 배치 `DlgDirList` 응용 프로그램의 큐, 전송 됩니다 대화 상자 프로시저를 직접 합니다.  
+- DDL_POSTMSGS LB_DIR 플래그입니다. LB_DIR 플래그가 설정 된 경우 Windows에서 생성 된 메시지를 배치 하는 `DlgDirList` 응용 프로그램의 큐, 전송 됩니다 대화 상자 프로시저를 직접 합니다.  
   
-- **DDL_DRIVES** 드라이브입니다. 경우는 **DDL_DRIVES** 플래그가 설정 되 면는 **DDL_EXCLUSIVE** 플래그 자동으로 설정 됩니다. 따라서 드라이브 및 파일을 포함 하는 디렉터리 목록 만들기를 호출 해야 `DlgDirList` 두 번: 한 번의 **DDL_DRIVES** 목록의 나머지 부분에 대 한 플래그와 함께 한 번, 그리고 집합 플래그를 지정 합니다.  
+- DDL_DRIVES 드라이브입니다. DDL_DRIVES 플래그가 설정 된 경우 DDL_EXCLUSIVE 플래그는 자동으로 설정 됩니다. 따라서 드라이브 및 파일을 포함 하는 디렉터리 목록 만들기를 호출 해야 `DlgDirList` 두 번: 한 번의 DDL_DRIVES와 플래그 집합과 두 번 목록의 나머지 부분에 대 한 플래그와 함께 합니다.  
   
-- **DDL_EXCLUSIVE** 배타적 비트입니다. 배타적 비트 설정 된 경우 지정 된 형식의 파일에만 나열 됩니다; 그렇지 않으면 일반 파일 및 지정 된 형식의 파일 나열 됩니다.  
+- DDL_EXCLUSIVE 배타적 비트입니다. 배타적 비트 설정 된 경우 지정 된 형식의 파일에만 나열 됩니다; 그렇지 않으면 일반 파일 및 지정 된 형식의 파일 나열 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- `DlgDirList` 보냅니다 [LB_RESETCONTENT](http://msdn.microsoft.com/library/windows/desktop/bb761325) 및 [LB_DIR](http://msdn.microsoft.com/library/windows/desktop/bb775185) 목록 상자에는 메시지입니다. 로 지정 된 목록 상자를 채우는 `nIDListBox` 제공한 경로 일치 하는 모든 파일의 이름으로 `lpPathSpec`합니다.  
+ `DlgDirList` 보냅니다 [LB_RESETCONTENT](http://msdn.microsoft.com/library/windows/desktop/bb761325) 및 [LB_DIR](http://msdn.microsoft.com/library/windows/desktop/bb775185) 목록 상자에는 메시지입니다. 로 지정 된 목록 상자를 채우는 *nIDListBox* 제공한 경로 일치 하는 모든 파일의 이름으로 *lpPathSpec*합니다.  
   
- `lpPathSpec` 매개 변수 형식은 다음과 같습니다.  
+ *lpPathSpec* 매개 변수 형식은 다음과 같습니다.  
   
  `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`  
   
- 이 예제에서는 `drive` 는 드라이브 문자 `directory` 은 올바른 디렉터리 이름 및 *파일 이름* 하나 이상 와일드 카드를 포함 해야 하는 유효한 파일 이름입니다. 와일드 카드 문자와 별표 일치 매개 변수 (*)는 ( **\***), 즉 문자의 번호와 일치 합니다.  
+ 이 예제에서는 *드라이브* 는 드라이브 문자 *디렉터리* 은 올바른 디렉터리 이름 및 *파일 이름* 하나 이상 와일드 카드를 포함 해야 하는 유효한 파일 이름입니다. 와일드 카드 문자와 별표 일치 매개 변수 (*)는 ( **\***), 즉 문자의 번호와 일치 합니다.  
   
- 길이가 0 인 문자열을 지정 하는 경우 `lpPathSpec`, 문자열으로 변경 됩니다만 디렉터리 이름을 지정 해도 모든 파일 사양이 없는 경우 또는 "*.\*"입니다.  
+ 길이가 0 인 문자열을 지정 하는 경우 *lpPathSpec*, 문자열으로 변경 됩니다만 디렉터리 이름을 지정 해도 모든 파일 사양이 없는 경우 또는 "*.\*"입니다.  
   
- 경우 `lpPathSpec` 는 드라이브 및/또는 디렉터리 이름, 목록 상자 채워지는 전에 현재 드라이브와 디렉터리 지정 된 드라이브와 디렉터리를로 변경 됩니다. 으로 식별 되는 텍스트 컨트롤이 `nIDStaticPath` 새 드라이브 및/또는 디렉터리 이름으로 업데이트 됩니다.  
+ 경우 *lpPathSpec* 는 드라이브 및/또는 디렉터리 이름, 목록 상자 채워지는 전에 현재 드라이브와 디렉터리 지정 된 드라이브와 디렉터리를로 변경 됩니다. 으로 식별 되는 텍스트 컨트롤이 *nIDStaticPath* 새 드라이브 및/또는 디렉터리 이름으로 업데이트 됩니다.  
   
- 목록 상자 채운 후 `lpPathSpec` 경로의 드라이브 및/또는 디렉터리 부분을 제거 하 여 업데이트 됩니다.  
+ 목록 상자 채운 후 *lpPathSpec* 경로의 드라이브 및/또는 디렉터리 부분을 제거 하 여 업데이트 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#88](../../mfc/reference/codesnippet/cpp/cwnd-class_27.cpp)]  
   
 ##  <a name="dlgdirlistcombobox"></a>  CWnd::DlgDirListComboBox  
@@ -2351,55 +2351,55 @@ int DlgDirListComboBox(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPathSpec`  
+ *lpPathSpec*  
  경로 및 파일 이름을 포함 하는 null로 끝나는 문자열을 가리킵니다. `DlgDirListComboBox` 이 데이터 형식의 문자열 리터럴을에 속하지 않아야 하므로이 문자열을 수정 합니다. 다음 "주의" 섹션을 참조 하십시오.  
   
- `nIDComboBox`  
- 대화 상자에서 콤보 상자의 식별자를 지정합니다. 경우 `nIDComboBox` 은 0으로, `DlgDirListComboBox` 콤보 상자가 없는 테이블이 있고 하나 채우기 시도 하지 않고 가정 합니다.  
+ *nIDComboBox*  
+ 대화 상자에서 콤보 상자의 식별자를 지정합니다. 경우 *nIDComboBox* 은 0으로, `DlgDirListComboBox` 콤보 상자가 없는 테이블이 있고 하나 채우기 시도 하지 않고 가정 합니다.  
   
- `nIDStaticPath`  
- 현재 드라이브와 디렉터리를 표시 하는 데 사용 하는 정적 텍스트 컨트롤의 식별자를 지정 합니다. 경우 `nIDStaticPath` 은 0으로, `DlgDirListComboBox` 텍스트 컨트롤이 없습니다 있다고 가정 합니다.  
+ *nIDStaticPath*  
+ 현재 드라이브와 디렉터리를 표시 하는 데 사용 하는 정적 텍스트 컨트롤의 식별자를 지정 합니다. 경우 *nIDStaticPath* 은 0으로, `DlgDirListComboBox` 텍스트 컨트롤이 없습니다 있다고 가정 합니다.  
   
- `nFileType`  
+ *nFileType*  
  표시 되는 파일의 파일 특성을 DOS를 지정 합니다. 다음 값의 조합 수 있습니다.  
   
-- **DDL_READWRITE** 특성이 있는 읽기 / 쓰기 데이터 파일.  
+- 특성이 있는 DDL_READWRITE 읽기 / 쓰기 데이터 파일.  
   
-- **DDL_READONLY** 읽기 전용 파일입니다.  
+- DDL_READONLY 읽기 전용 파일입니다.  
   
-- **DDL_HIDDEN** 숨겨진 파일입니다.  
+- DDL_HIDDEN 숨겨진 파일입니다.  
   
-- **DDL_SYSTEM** 시스템 파일입니다.  
+- DDL_SYSTEM 시스템 파일입니다.  
   
-- **DDL_DIRECTORY** 디렉터리입니다.  
+- DDL_DIRECTORY 디렉터리입니다.  
   
-- **DDL_ARCHIVE** 보관 합니다.  
+- DDL_ARCHIVE 보관 합니다.  
   
-- **DDL_POSTMSGS CB_DIR** 플래그입니다. 경우는 **CB_DIR** 플래그가 설정 되어, Windows에서 생성 하는 메시지를 배치 `DlgDirListComboBox` 응용 프로그램의 큐, 전송 됩니다 대화 상자 프로시저를 직접 합니다.  
+- DDL_POSTMSGS CB_DIR 플래그입니다. CB_DIR 플래그가 설정 된 경우 Windows에서 생성 된 메시지를 배치 하는 `DlgDirListComboBox` 응용 프로그램의 큐, 전송 됩니다 대화 상자 프로시저를 직접 합니다.  
   
-- **DDL_DRIVES** 드라이브입니다. 경우는 **DDL_DRIVES** 플래그가 설정 되 면는 **DDL_EXCLUSIVE** 플래그 자동으로 설정 됩니다. 따라서 드라이브 및 파일을 포함 하는 디렉터리 목록 만들기를 호출 해야 `DlgDirListComboBox` 두 번: 한 번의 **DDL_DRIVES** 목록의 나머지 부분에 대 한 플래그와 함께 한 번, 그리고 집합 플래그를 지정 합니다.  
+- DDL_DRIVES 드라이브입니다. DDL_DRIVES 플래그가 설정 된 경우 DDL_EXCLUSIVE 플래그는 자동으로 설정 됩니다. 따라서 드라이브 및 파일을 포함 하는 디렉터리 목록 만들기를 호출 해야 `DlgDirListComboBox` 두 번: 한 번의 DDL_DRIVES와 플래그 집합과 두 번 목록의 나머지 부분에 대 한 플래그와 함께 합니다.  
   
-- **DDL_EXCLUSIVE** 배타적 비트입니다. 배타적 비트 설정 된 경우 지정 된 형식의 파일에만 나열 됩니다; 그렇지 않으면 일반 파일 및 지정 된 형식의 파일 나열 됩니다.  
+- DDL_EXCLUSIVE 배타적 비트입니다. 배타적 비트 설정 된 경우 지정 된 형식의 파일에만 나열 됩니다; 그렇지 않으면 일반 파일 및 지정 된 형식의 파일 나열 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수의 결과 지정합니다. 빈 목록도 목록을 변경한 경우를 0이 아닌 있습니다. 반환 값이 0 입력된 문자열에 유효한 검색 경로 포함 하지 않은 것을 의미 합니다.  
   
 ### <a name="remarks"></a>설명  
- `DlgDirListComboBox` 보냅니다 [CB_RESETCONTENT](http://msdn.microsoft.com/library/windows/desktop/bb775878) 및 [CB_DIR](http://msdn.microsoft.com/library/windows/desktop/bb775832) 콤보 상자에는 메시지입니다. 로 지정 된 콤보 상자의 목록 상자를 채우는 `nIDComboBox` 제공한 경로 일치 하는 모든 파일의 이름으로 `lpPathSpec`합니다.  
+ `DlgDirListComboBox` 보냅니다 [CB_RESETCONTENT](http://msdn.microsoft.com/library/windows/desktop/bb775878) 및 [CB_DIR](http://msdn.microsoft.com/library/windows/desktop/bb775832) 콤보 상자에는 메시지입니다. 로 지정 된 콤보 상자의 목록 상자를 채우는 *nIDComboBox* 제공한 경로 일치 하는 모든 파일의 이름으로 *lpPathSpec*합니다.  
   
- `lpPathSpec` 매개 변수 형식은 다음과 같습니다.  
+ *lpPathSpec* 매개 변수 형식은 다음과 같습니다.  
   
  `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`  
   
- 이 예제에서는 `drive` 는 드라이브 문자 `directory` 은 올바른 디렉터리 이름 및 *파일 이름* 하나 이상 와일드 카드를 포함 해야 하는 유효한 파일 이름입니다. 와일드 카드 문자와 별표 일치 매개 변수 (*)는 ( **\***)를 의미 하는 문자의 번호와 일치 합니다.  
+ 이 예제에서는 *드라이브* 는 드라이브 문자 *디렉터리* 은 올바른 디렉터리 이름 및 *파일 이름* 하나 이상 와일드 카드를 포함 해야 하는 유효한 파일 이름입니다. 와일드 카드 문자와 별표 일치 매개 변수 (*)는 ( **\***)를 의미 하는 문자의 번호와 일치 합니다.  
   
- 길이가 0 인 문자열을 지정 하는 경우 `lpPathSpec`, 현재 디렉터리를 사용 하 고 `lpPathSpec` 수정 되지 것입니다. 문자열을으로 변경 됩니다만 디렉터리 이름을 지정 해도 모든 파일 사양이 없는 경우 "*"입니다.  
+ 길이가 0 인 문자열을 지정 하는 경우 *lpPathSpec*, 현재 디렉터리를 사용 하 고 *lpPathSpec* 수정 되지 것입니다. 문자열을으로 변경 됩니다만 디렉터리 이름을 지정 해도 모든 파일 사양이 없는 경우 "*"입니다.  
   
- 경우 `lpPathSpec` 는 드라이브 및/또는 디렉터리 이름, 목록 상자 채워지는 전에 현재 드라이브와 디렉터리 지정 된 드라이브와 디렉터리를로 변경 됩니다. 으로 식별 되는 텍스트 컨트롤이 `nIDStaticPath` 새 드라이브 및/또는 디렉터리 이름으로 업데이트 됩니다.  
+ 경우 *lpPathSpec* 는 드라이브 및/또는 디렉터리 이름, 목록 상자 채워지는 전에 현재 드라이브와 디렉터리 지정 된 드라이브와 디렉터리를로 변경 됩니다. 으로 식별 되는 텍스트 컨트롤이 *nIDStaticPath* 새 드라이브 및/또는 디렉터리 이름으로 업데이트 됩니다.  
   
- 콤보 상자 목록 상자 채운 후 `lpPathSpec` 경로의 드라이브 및/또는 디렉터리 부분을 제거 하 여 업데이트 됩니다.  
+ 콤보 상자 목록 상자 채운 후 *lpPathSpec* 경로의 드라이브 및/또는 디렉터리 부분을 제거 하 여 업데이트 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#89](../../mfc/reference/codesnippet/cpp/cwnd-class_28.cpp)]  
   
 ##  <a name="dlgdirselect"></a>  CWnd::DlgDirSelect  
@@ -2412,10 +2412,10 @@ BOOL DlgDirSelect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpString`  
+ *lpString*  
  목록 상자에서 현재 선택 영역을 받을 수 있는 버퍼를 가리킵니다.  
   
- `nIDListBox`  
+ *nIDListBox*  
  대화 상자에서 목록 상자의 정수 ID를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2424,7 +2424,7 @@ BOOL DlgDirSelect(
 ### <a name="remarks"></a>설명  
  가정 하 여 목록 상자를 채워 졌는 [DlgDirList](#dlgdirlist) 멤버 함수와 선택한 않음을 드라이브 문자, 파일 또는 디렉터리 이름입니다.  
   
- `DlgDirSelect` 멤버 함수를 제공한 버퍼 선택 영역 복사 `lpString`합니다. 선택 영역이 없는 경우 `lpString` 변경 되지 않습니다.  
+ `DlgDirSelect` 멤버 함수를 제공한 버퍼 선택 영역 복사 *lpString*합니다. 선택 영역이 없는 경우 *lpString* 변경 되지 않습니다.  
   
  `DlgDirSelect` 보냅니다 [LB_GETCURSEL](http://msdn.microsoft.com/library/windows/desktop/bb775197) 및 [LB_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/bb761313) 목록 상자에는 메시지입니다.  
   
@@ -2440,10 +2440,10 @@ BOOL DlgDirSelectComboBox(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpString`  
+ *lpString*  
  선택한 경로 받기 위한 버퍼를 가리킵니다.  
   
- `nIDComboBox`  
+ *nIDComboBox*  
  대화 상자에서 콤보 상자의 정수 ID를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2466,7 +2466,7 @@ virtual void DoDataExchange(CDataExchange* pDX);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDX`  
+ *pDX*  
  `CDataExchange` 개체에 대한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -2494,9 +2494,9 @@ void DragAcceptFiles(BOOL bAccept = TRUE);
  끌어온된 파일은 허용 하는지 여부를 나타내는 플래그입니다.  
   
 ### <a name="remarks"></a>설명  
- 호출 하 여 창 `DragAcceptFiles` 와 `bAccept` 매개 변수 설정 **TRUE** Windows 메시지를 처리할 수로 식별 자체 `WM_DROPFILES`합니다. 예를 들어 MDI 응용 프로그램의 경우는 `CMDIFrameWnd` 에서 창 포인터를 사용는 `DragAcceptFiles` 함수 호출만 `CMDIFrameWnd` 창을 가져옵니다는 `WM_DROPFILES` 메시지. 이 메시지를 보내지 않습니다 열기 `CMDIChildWnd` windows 합니다. 에 대 한는 `CMDIChildWnd` 창이이 메시지를 호출 해야 `DragAcceptFiles` 와 `CMDIChildWnd` 액세스 가져옵니다.  
+ 호출 하 여 창 `DragAcceptFiles` 와 *bAccept* 매개 변수를 TRUE로 설정 WM_DROPFILES Windows 메시지를 처리할 수로 확인 했습니다. 예를 들어 MDI 응용 프로그램의 경우는 `CMDIFrameWnd` 에서 창 포인터를 사용는 `DragAcceptFiles` 함수 호출만 `CMDIFrameWnd` 창 WM_DROPFILES 메시지를 가져옵니다. 이 메시지를 보내지 않습니다 열기 `CMDIChildWnd` windows 합니다. 에 대 한는 `CMDIChildWnd` 창이이 메시지를 호출 해야 `DragAcceptFiles` 와 `CMDIChildWnd` 액세스 가져옵니다.  
   
- 끌어온된 파일을 받을 중단을 사용 하 여 멤버 함수 호출 `bAccept` 로 설정 **FALSE**합니다.  
+ 끌어온된 파일을 받을 중단을 사용 하 여 멤버 함수 호출 *bAccept* FALSE로 설정 합니다.  
   
 ##  <a name="dragdetect"></a>  CWnd::DragDetect  
  마우스를 캡처하고 사용자가 왼쪽 단추를 놓거나, Esc 키를 누르거나, 지정된 점 주위의 끌기 사각형 밖으로 마우스를 이동할 때까지 이동을 추적합니다.  
@@ -2506,7 +2506,7 @@ BOOL DragDetect(POINT pt) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pt`  
+ *pt*  
  화면 좌표에서 마우스의 초기 위치입니다. 함수는이 지점을 사용 하 여 끌기 사각형의 좌표를 결정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2529,12 +2529,12 @@ BOOL DrawAnimatedRects(
   
 ### <a name="parameters"></a>매개 변수  
  *idAni*  
- 애니메이션의 유형을 지정합니다. 지정 하는 경우 **IDANI_CAPTION**, 창 캡션의 애니메이션 효과 적용 하 여 지정 된 위치에서 `lprcFrom` 로 지정 된 위치에 `lprcTo`합니다. 효과 최소화 하거나 창을 최대화 하는 것과 비슷합니다.  
+ 애니메이션의 유형을 지정합니다. 창 캡션의로 지정 된 위치에서 애니메이션 효과 IDANI_CAPTION을 지정 하면 *lprcFrom* 로 지정 된 위치에 *lprcTo*합니다. 효과 최소화 하거나 창을 최대화 하는 것과 비슷합니다.  
   
- `lprcFrom`  
+ *lprcFrom*  
  에 대 한 포인터는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 아이콘 또는 최소화 된 창의 크기와 위치를 지정 하는 구조입니다.  
   
- `lprcTo`  
+ *lprcTo*  
  에 대 한 포인터는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 복원 된 창 크기와 위치를 지정 하는 구조  
   
 ### <a name="return-value"></a>반환 값  
@@ -2554,13 +2554,13 @@ BOOL DrawCaption(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  장치 컨텍스트에 대한 포인터입니다. 함수는이 장치 컨텍스트로 창 캡션을 그립니다.  
   
- `lprc`  
+ *lprc*  
  창 캡션에 대 한 경계 사각형을 지정 하는 RECT 구조체에 대 한 포인터입니다.  
   
- `uFlags`  
+ *uFlags*  
  드로잉 옵션을 지정합니다. 값의 전체 목록은 참조 하십시오. [DrawCaption](http://msdn.microsoft.com/library/windows/desktop/dd162476)합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -2579,7 +2579,7 @@ void DrawMenuBar();
 ### <a name="remarks"></a>설명  
  메뉴 모음에는 Windows가 창을 만든 후 변경 되 면 변경 된 메뉴 모음을 그리는 데이 함수를 호출 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::GetMenu](#getmenu)합니다.  
   
 ##  <a name="enableactiveaccessibility"></a>  CWnd::EnableActiveAccessibility  
@@ -2590,7 +2590,7 @@ void EnableActiveAccessibility();
 ```  
   
 ### <a name="remarks"></a>설명  
- MFC의 기본 Active Accessibility를 지원은 표준 windows 및 ActiveX 컨트롤; 등의 컨트롤에 대 한 충분 한 그러나 경우에 `CWnd`-nonwindowed 사용자 인터페이스 요소를 포함 하는 파생된 클래스, MFC는에 대 한 알 수 없습니다. 이 경우 해당 재정의 해야 [Active Accessibility 멤버 함수](http://msdn.microsoft.com/en-us/68af04ac-4eb9-4b7d-b33f-c45512097a74) 클래스의 호출 해야 하 고 **EnableActiveAccessibility** 클래스의 생성자입니다.  
+ MFC의 기본 Active Accessibility를 지원은 표준 windows 및 ActiveX 컨트롤; 등의 컨트롤에 대 한 충분 한 그러나 경우에 `CWnd`-nonwindowed 사용자 인터페이스 요소를 포함 하는 파생된 클래스, MFC는에 대 한 알 수 없습니다. 이 경우 해당 재정의 해야 [Active Accessibility 멤버 함수](http://msdn.microsoft.com/en-us/68af04ac-4eb9-4b7d-b33f-c45512097a74) 클래스의 호출 해야 하 고 `EnableActiveAccessibility` 클래스의 생성자입니다.  
   
 ##  <a name="enabledynamiclayout"></a>  CWnd::EnableDynamicLayout  
  동적 레이아웃 관리자를 사용하거나 사용하지 않도록 설정합니다. 동적 레이아웃을 사용하는 경우 사용자가 창의 크기를 조정하면 자식 창의 위치 및 크기가 동적으로 조정됩니다.  
@@ -2600,7 +2600,7 @@ void EnableDynamicLayout(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bEnable`  
+ *bEnable*  
  동적 레이아웃을 사용하도록 설정하려면 TRUE이고, 동적 레이아웃을 사용하지 않도록 설정하려면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -2616,10 +2616,10 @@ void EnableD2DSupport(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bEnable`  
+ *bEnable*  
  D2D 지원을 설정 또는 해제할지를 지정합니다.  
   
- `bUseDCRenderTarget`  
+ *bUseDCRenderTarget*  
  DC(장치 컨텍스트) 렌더 대상, CDCRenderTarget을 사용할지를 지정합니다. FALSE이면 CHwndRenderTarget이 사용됩니다.  
   
 ##  <a name="enablescrollbar"></a>  CWnd::EnableScrollBar  
@@ -2635,22 +2635,22 @@ BOOL EnableScrollBar(
  *nSBFlags*  
  스크롤 막대 유형을 지정합니다. 다음 값 중 하나일 수 있습니다.  
   
-- **SB_BOTH** 창과 관련 된 가로 및 세로 스크롤 막대의 화살표를 사용 하지 않도록 설정 하거나 사용 합니다.  
+- SB_BOTH 사용 하거나 사용 하지 않도록 설정 가로 및 세로 스크롤 막대 화살표 창과 관련 된 합니다.  
   
-- **SB_HORZ** 창과 관련 된 가로 스크롤 막대의 화살표를 사용 하지 않도록 설정 하거나 사용 합니다.  
+- SB_HORZ 사용 하거나 사용 하지 않도록 설정 가로 스크롤 막대의 화살표 창과 관련 된 합니다.  
   
-- **SB_VERT** 창과 관련 된 세로 스크롤 막대의 화살표를 사용 하지 않도록 설정 하거나 사용 합니다.  
+- SB_VERT 하거나 해제 합니다. 세로 스크롤 막대의 화살표 창과 관련 된 합니다.  
   
- `nArrowFlags`  
+ *nArrowFlags*  
  화살표를 사용 및 스크롤 막대 화살표 설정 또는 해제 여부를 지정 합니다. 다음 값 중 하나일 수 있습니다.  
   
-- **ESB_ENABLE_BOTH** 스크롤의 두 화살표를 사용 하면 막대 (기본값).  
+- ESB_ENABLE_BOTH 스크롤의 두 화살표를 사용 하면 막대 (기본값).  
   
-- **ESB_DISABLE_LTUP** 왼쪽된 화살표의 가로 스크롤 막대 또는 세로 스크롤 막대의 위쪽 화살표를 사용 하지 않도록 설정 합니다.  
+- 가로 스크롤 막대의 왼쪽된 화살표 또는 세로 스크롤 막대의 위쪽 화살표 ESB_DISABLE_LTUP을 사용할 수 없게 합니다.  
   
-- **ESB_DISABLE_RTDN** 가로 스크롤 막대의 오른쪽 화살표 또는 세로 스크롤 막대의 아래쪽 화살표를 사용 하지 않도록 설정 합니다.  
+- ESB_DISABLE_RTDN 가로 스크롤 막대의 오른쪽 화살표 또는 세로 스크롤 막대의 아래쪽 화살표를 해제합니다.  
   
-- **ESB_DISABLE_BOTH** 스크롤 막대의 두 화살표를 사용 하지 않도록 설정 합니다.  
+- ESB_DISABLE_BOTH는 스크롤 막대의 두 화살표를 해제합니다.  
   
 ### <a name="return-value"></a>반환 값  
  화살표를 지정 된 대로 사용 하는 경우에 0이 아닙니다. 그렇지 않으면 화살표는 요청 된 상태에도 이미 오류가 발생 했음을 나타내는 0입니다.  
@@ -2665,10 +2665,10 @@ void EnableScrollBarCtrl(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nBar`  
+ *nBar*  
  스크롤 막대 식별자입니다.  
   
- `bEnable`  
+ *bEnable*  
  스크롤 막대를 사용 하도록 설정 하거나 해제할 수를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -2682,11 +2682,11 @@ BOOL EnableToolTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bEnable`  
- 도구 설명 컨트롤이 사용 되는지 여부를 지정 합니다. **TRUE** ; 컨트롤이 활성화 **FALSE** 컨트롤을 사용 하지 않도록 설정 합니다.  
+ *bEnable*  
+ 도구 설명 컨트롤이 사용 되는지 여부를 지정 합니다. True 이면 컨트롤 수 FALSE 컨트롤을 비활성화 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- **True 이면** 도구 설명 되 고, 그렇지 않으면 사용 하도록 설정 하는 경우 **FALSE**합니다.  
+ 도구 설명 사용 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
  재정의 [OnToolHitTest](#ontoolhittest) 제공 하는 [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) 구조체 또는 구조체는 창에 대 한 합니다.  
@@ -2696,11 +2696,11 @@ BOOL EnableToolTips(BOOL bEnable = TRUE);
   
  참조 [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) 이 구조에 대 한 자세한 내용은 Windows sdk입니다.  
   
- 단순히 호출 `EnableToolTips` 부모 창에서 파생 된 경우가 아니면 자녀가 컨트롤에 대해 도구 설명을 표시 하는 데 충분 하지 않습니다 `CFrameWnd`합니다. 때문에 이것이 `CFrameWnd` 제공에 대 한 기본 처리기는 **TTN_NEEDTEXT** 알림입니다. 부모 창에서 파생 되지 않은 경우 `CFrameWnd`, 즉, 대화 상자나 폼 보기 인 경우 도구 설명 컨트롤에 대 한 처리기를 제공 하지 않는 한 제대로 표시 되지 것입니다 귀하의 자녀에 대 한는 **TTN_NEEDTEXT** 팁 알림 도구입니다. 참조 [도구 설명](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)합니다.  
+ 단순히 호출 `EnableToolTips` 부모 창에서 파생 된 경우가 아니면 자녀가 컨트롤에 대해 도구 설명을 표시 하는 데 충분 하지 않습니다 `CFrameWnd`합니다. 즉, `CFrameWnd` TTN_NEEDTEXT 알림에 대 한 기본 처리기를 제공 합니다. 부모 창에서 파생 되지 않은 경우 `CFrameWnd`, 즉, 대화 상자나 폼 보기 인 경우 도구 설명에 대 한 귀하의 자녀에 대 한 TTN_NEEDTEXT 도구 설명 알림 처리기를 제공 하지 않는 한 컨트롤이 제대로 표시 되지 것입니다. 참조 [도구 설명](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)합니다.  
   
- 기본 도구 설명으로 창에 대해 제공 된 `EnableToolTips` 연결 된 텍스트 필요가 없습니다. 표시할 도구 설명에 대 한 텍스트를 검색 하는 **TTN_NEEDTEXT** 도구 설명 창이 표시 되기 직전에 도구 설명 컨트롤의 부모 창에 알림이 전송 됩니다. 일부 값을 할당할이 메시지에 대 한 처리기가 없는 경우는 `pszText` 의 멤버는 **TOOLTIPTEXT** 구조, 텍스트가 도구 설명에 대해 표시 됩니다.  
+ 기본 도구 설명으로 창에 대해 제공 된 `EnableToolTips` 연결 된 텍스트 필요가 없습니다. 표시할 도구 설명에 대 한 텍스트를 검색 하려면 TTN_NEEDTEXT 알림이 도구 설명 창이 표시 되기 직전에 도구 설명 컨트롤의 부모 창에 전송 됩니다. 일부 값을 할당할이 메시지에 대 한 처리기가 없는 경우는 *pszText* 의 멤버는 `TOOLTIPTEXT` 구조, 텍스트가 도구 설명에 대해 표시 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#91](../../mfc/reference/codesnippet/cpp/cwnd-class_30.cpp)]  
   
  [!code-cpp[NVC_MFCWindowing#92](../../mfc/reference/codesnippet/cpp/cwnd-class_31.cpp)]  
@@ -2713,8 +2713,8 @@ BOOL EnableTrackingToolTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bEnable`  
- 지정 추적 도구 설명 사용 또는 사용 하지 않도록 설정 되었는지 여부. 이 매개 변수가 **TRUE**, 추적 도구 팁을 사용할 수 있습니다. 이 매개 변수가 **FALSE**, 추적 도구 팁을 사용할 수 없습니다.  
+ *bEnable*  
+ 지정 추적 도구 설명 사용 또는 사용 하지 않도록 설정 되었는지 여부. 이 매개 변수는 TRUE 이면 추적 도구 팁을 사용할 수 있습니다. 이 매개 변수는 FALSE, 추적 도구 팁을 사용할 수 없습니다.  
   
 ### <a name="return-value"></a>반환 값  
  하기 전의 상태로 나타냅니다는 `EnableWindow` 멤버 함수를 호출 했습니다. 반환 값은 창의 이전에 사용할 수 없는 경우 0이 아닌 합니다. 이전에 설정 된 창 또는 오류가 발생 하는 경우 반환 값은 0입니다.  
@@ -2730,8 +2730,8 @@ BOOL EnableWindow(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bEnable`  
- 지정된 된 창 설정 하거나 해제할 수를 지정 합니다. 이 매개 변수가 **TRUE**, 창 사용 하도록 설정 합니다. 이 매개 변수가 **FALSE**, 창이 없게 됩니다.  
+ *bEnable*  
+ 지정된 된 창 설정 하거나 해제할 수를 지정 합니다. 이 매개 변수가 TRUE 인 경우 창이 활성화 됩니다. 이 매개 변수가 FALSE 인 경우 창이 없게 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  하기 전의 상태로 나타냅니다는 `EnableWindow` 멤버 함수를 호출 했습니다. 반환 값은 창의 이전에 사용할 수 없는 경우 0이 아닌 합니다. 이전에 설정 된 창 또는 오류가 발생 하는 경우 반환 값은 0입니다.  
@@ -2741,15 +2741,15 @@ BOOL EnableWindow(BOOL bEnable = TRUE);
   
  활성화 상태가 변경 되 면는 [WM_ENABLE](#onenable) 이 함수가 반환 되기 전에 전송 됩니다.  
   
- 사용 하지 않으면 모든 자식 창을 암시적으로 비활성화 되어 있지만 전송 되지 `WM_ENABLE` 메시지입니다.  
+ 사용 하지 않으면 모든 자식 창은 암시적으로 WM_ENABLE 메시지 전송 되지 않지만 해제 됩니다.  
   
  창이 활성화 될 수 전에 활성화 되어야 합니다. 예를 들어 응용 프로그램 모덜리스 대화 상자를 표시 하는 주 창에 사용 하지 않도록 하는 경우 대화 상자를 제거 하기 전에 주 창 사용할 수 있어야 합니다. 그렇지 않으면 다른 입력된 포커스를 받습니다 창과 활성화 됩니다. 자식 창에는 사용 하지 않으면 Windows 창을 마우스 메시지 얻어야 합니다. 확인 하려고 할 때 무시 됩니다.  
   
- 기본적으로 창이 만들어질 때 사용 됩니다. 응용 프로그램을 지정할 수는 **WS_DISABLED** 에 스타일을 [만들기](#create) 또는 [CreateEx](#createex) 멤버 함수는 처음에 비활성화 되어 있는 창을 만들 수 있습니다. 창이 만든 후 응용 프로그램 ´ ï ´는 `EnableWindow` 멤버 함수를 사용 하도록 설정 하거나 창을 사용 하지 않도록 합니다.  
+ 기본적으로 창이 만들어질 때 사용 됩니다. 응용 프로그램에서 WS_DISABLED 스타일을 지정할 수는 [만들기](#create) 또는 [CreateEx](#createex) 멤버 함수는 처음에 비활성화 되어 있는 창을 만들 수 있습니다. 창이 만든 후 응용 프로그램 ´ ï ´는 `EnableWindow` 멤버 함수를 사용 하도록 설정 하거나 창을 사용 하지 않도록 합니다.  
   
  응용 프로그램 대화 상자에서 컨트롤을 사용 하지 않도록 설정 하거나 설정 하려면이 함수를 사용할 수 있습니다. 비활성화 된 컨트롤에 입력된 포커스를 받을 수 없습니다 및 사용자에 액세스할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#93](../../mfc/reference/codesnippet/cpp/cwnd-class_32.cpp)]  
   
 ##  <a name="endmodalloop"></a>  CWnd::EndModalLoop  
@@ -2760,11 +2760,11 @@ virtual void EndModalLoop(int nResult);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nResult`  
+ *n 결과*  
  호출자에 게 반환 될 값을 포함 [RunModalLoop](#runmodalloop)합니다.  
   
 ### <a name="remarks"></a>설명  
- `nResult` 매개 변수에서 반환 값에 전파 되 `RunModalLoop`합니다.  
+ *n 결과* 매개 변수에서 반환 값에 전파 되 `RunModalLoop`합니다.  
   
 ##  <a name="endmodalstate"></a>  CWnd::EndModalState  
  프레임 창을 모달에서 모덜리스로 변경하려면 이 멤버 함수를 호출합니다.  
@@ -2781,7 +2781,7 @@ void EndPaint(LPPAINTSTRUCT lpPaint);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPaint`  
+ *lpPaint*  
  가리키는 [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) 구조에서 검색 한 그리기 정보를 포함 하는 [BeginPaint](#beginpaint) 멤버 함수입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -2789,7 +2789,7 @@ void EndPaint(LPPAINTSTRUCT lpPaint);
   
  캐럿이 여 숨겨졌습니다 하는 경우는 `BeginPaint` 멤버 함수를 `EndPaint` 화면에 캐럿을 복원 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [cwnd:: Beginpaint](#beginpaint)합니다.  
   
 ##  <a name="executedlginit"></a>  CWnd::ExecuteDlgInit  
@@ -2801,17 +2801,17 @@ BOOL ExecuteDlgInit(LPVOID lpResource);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszResourceName`  
+ *lpszResourceName*  
  리소스의 이름을 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다.  
   
- `lpResource`  
+ *lpResource*  
  리소스에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
- **True 이면** 대화 상자 리소스 실행 상태가 아니면 **FALSE**합니다.  
+ 이 대화 상자 리소스를 실행 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- `ExecuteDlgInit` 다른 소스에서 실행 중인 모듈에 바인딩된 리소스 또는 리소스를 사용 합니다. 이를 위해 `ExecuteDlgInit` 리소스 핸들을 호출 하 여 찾습니다 `AfxFindResourceHandle`합니다. MFC 응용 프로그램 공유 DLL을 사용 하지 않습니다 (MFCx0 [D] [U]. DLL) **AfxFindResourceHandle** 호출 [AfxGetResourceHandle](application-information-and-management.md#afxgetresourcehandle), 실행 파일에 대 한 현재 리소스 핸들을 반환 하는 합니다. 경우 MFCx0를 사용 하 여 MFC 응용 프로그램 [D] [U]. DLL을 `AfxFindResourceHandle` 트래버스하는 **CDynLinkLibrary** 개체 목록이 공유 및 MFC 확장 Dll 올바른 리소스에 대 한 조회를 처리 합니다.  
+ `ExecuteDlgInit` 다른 소스에서 실행 중인 모듈에 바인딩된 리소스 또는 리소스를 사용 합니다. 이를 위해 `ExecuteDlgInit` 리소스 핸들을 호출 하 여 찾습니다 `AfxFindResourceHandle`합니다. MFC 응용 프로그램 공유 DLL을 사용 하지 않습니다 (MFCx0 [D] [U]. DLL) `AfxFindResourceHandle` 호출 [AfxGetResourceHandle](application-information-and-management.md#afxgetresourcehandle), 실행 파일에 대 한 현재 리소스 핸들을 반환 하는 합니다. 경우 MFCx0를 사용 하 여 MFC 응용 프로그램 [D] [U]. DLL을 `AfxFindResourceHandle` 트래버스하는 `CDynLinkLibrary` 개체 목록이 공유 및 MFC 확장 Dll 올바른 리소스에 대 한 조회를 처리 합니다.  
   
 ##  <a name="filtertooltipmessage"></a>  CWnd::FilterToolTipMessage  
  도구 설명 메시지를 표시 하기 위해 프레임 워크에서 호출 됩니다.  
@@ -2821,7 +2821,7 @@ void FilterToolTipMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pMsg`  
+ *pMsg*  
  도구 설명 메시지에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -2830,7 +2830,7 @@ void FilterToolTipMessage(MSG* pMsg);
  그러나 일부 ActiveX 컨트롤 예를 들어 특정 응용 프로그램에서 이러한 메서드는 프레임 워크에서 호출 될 수 있습니다 및 FilterToolTipMessage 직접 호출 해야 합니다. 자세한 내용은 참조 [메서드의 만드는 도구 설명](../../mfc/methods-of-creating-tool-tips.md)합니다.  
   
 ##  <a name="findwindow"></a>  CWnd::FindWindow  
- 최상위 반환 `CWnd` 인 창 클래스를 지정 하 여 `lpszClassName` 창 이름 또는 제목을 지정 하 여 및 `lpszWindowName`합니다.  
+ 최상위 반환 `CWnd` 인 창 클래스를 지정 하 여 *lpszClassName* 창 이름 또는 제목을 지정 하 여 및 *lpszWindowName*합니다.  
   
 ```  
 static CWnd* PASCAL FindWindow(
@@ -2839,21 +2839,21 @@ static CWnd* PASCAL FindWindow(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszClassName`  
- 창 클래스 이름을 지정 하는 null로 끝나는 문자열을 가리킵니다 (한 **WNDCLASS** 구조). 경우 `lpClassName` 은 **NULL**, 모든 클래스 이름이 일치 합니다.  
+ *lpszClassName*  
+ 창 클래스 이름을 지정 하는 null로 끝나는 문자열을 가리킵니다 (한 `WNDCLASS` 구조). 경우 *lpClassName* 가 null 인 경우 모든 클래스 이름이 일치 합니다.  
   
- `lpszWindowName`  
- 창 이름 (창 제목)을 지정 하는 null로 끝나는 문자열을 가리킵니다. 경우 `lpWindowName` 은 **NULL**, 모든 창 이름이 일치 합니다.  
+ *lpszWindowName*  
+ 창 이름 (창 제목)을 지정 하는 null로 끝나는 문자열을 가리킵니다. 경우 *lpWindowName* 가 NULL 이면 모든 창의 이름이 일치 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 지정 된 클래스 이름 및 창 이름을 포함 하는 창을 식별 합니다. **NULL** 이러한 창이 없는 경우.  
+ 지정 된 클래스 이름 및 창 이름을 포함 하는 창을 식별 합니다. 이러한 창이 없는 발견 되는 경우에 NULL입니다.  
   
  `CWnd`*는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수는 자식 창을 검색 하지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#94](../../mfc/reference/codesnippet/cpp/cwnd-class_33.cpp)]  
   
 ##  <a name="findwindowex"></a>  CWnd::FindWindowEx  
@@ -2874,14 +2874,14 @@ static CWnd* FindWindowEx(
  *hwndChildAfter*  
  자식 창에 대 한 핸들입니다. 검색 Z 순서에 따라 다음 자식 창으로 시작합니다. 자식 창의 직계 자식 창 이어야 합니다 *창은*, 뿐 아니라 하위 창.  
   
- `lpszClass`  
+ *lpszClass*  
  에 대 한 이전 호출에서 만든 클래스 atom 또는 클래스 이름을 지정 하는 null로 끝나는 문자열에 대 한 포인터는 [RegisterClass](http://msdn.microsoft.com/library/windows/desktop/ms633586) 또는 [RegisterClassEx](http://msdn.microsoft.com/library/windows/desktop/ms633587)합니다.  
   
  *lpszWindow*  
- 창 이름 (창 제목)을 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다. 이 매개 변수가 **NULL**, 모든 창 이름이 일치 합니다.  
+ 창 이름 (창 제목)을 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다. 이 매개 변수가 NULL 이면 모든 창의 이름이 일치 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 반환 값은 지정 된 클래스 및 창 이름을 소유 하는 창 개체에 대 한 포인터입니다. 반환 값은 함수가 실패 하면 **NULL**합니다.  
+ 함수가 성공 하면 반환 값은 지정 된 클래스 및 창 이름을 소유 하는 창 개체에 대 한 포인터입니다. 함수가 실패 하면 반환 값은 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 함수의 기능을 에뮬레이션 [FindWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms633500)Windows SDK에 설명 된 대로 합니다.  
@@ -2894,8 +2894,8 @@ BOOL FlashWindow(BOOL bInvert);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bInvert`  
- 지정 여부는 `CWnd` 업데이트 하거나 원래 상태로 돌아갑니다. `CWnd` 한 상태에서 다른 경우로 업데이트 했습니다 `bInvert` 은 **TRUE**합니다. 경우 `bInvert` 은 **FALSE**, 창 (활성 또는 비활성)를 원래 상태로 반환 됩니다.  
+ *bInvert*  
+ 지정 여부는 `CWnd` 업데이트 하거나 원래 상태로 돌아갑니다. `CWnd` 한 상태에서 다른 경우로 업데이트 했습니다 *bInvert* 은 TRUE입니다. 경우 *bInvert* 은 FALSE (활성 또는 비활성) 창을 원래 상태로 반환 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  창에 대 한 호출 하기 전에 활성 상태 였던 경우 0이 아닌는 `FlashWindow` 멤버 함수, 그렇지 않으면 0입니다.  
@@ -2905,11 +2905,11 @@ BOOL FlashWindow(BOOL bInvert);
   
  일반적으로 창은 주의 해야 하는 것 이지만 입력된 포커스가 현재 포함 되지 않도록 사용자에 게 업데이트 했습니다.  
   
- `bInvert` 매개 변수 여야 **FALSE** 경우 창이 입력된 포커스 예정 이며 더 이상 깜박일 수;만 것 **TRUE** 입력된 포커스를 얻기 위해 기다리는 동안 연속 호출에서.  
+ *bInvert* 경우 창이 입력된 포커스 예정 이며 더 이상 깜박일 수만 매개 변수가 FALSE 경고가 수는 TRUE 여야 합니다 입력된 포커스를 얻기 위해 기다리는 동안 연속 호출에서.  
   
- 이 함수는 항상 최소화 된 0이 아닌 값을 반환합니다. 창이 최소화 되는 경우 `FlashWindow` 창의 아이콘; 깜박입니다 단순히 `bInvert` 최소화 된 창에 대해 무시 됩니다.  
+ 이 함수는 항상 최소화 된 0이 아닌 값을 반환합니다. 창이 최소화 되는 경우 `FlashWindow` 창의 아이콘; 깜박입니다 단순히 *bInvert* 최소화 된 창에 대해 무시 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#95](../../mfc/reference/codesnippet/cpp/cwnd-class_34.cpp)]  
   
 ##  <a name="flashwindowex"></a>  CWnd::FlashWindowEx  
@@ -2923,14 +2923,14 @@ BOOL FlashWindowEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwFlags`  
+ *dwFlags*  
  플래시 상태를 지정합니다. 값의 전체 목록은 참조 하십시오.는 [FLASHWINFO](http://msdn.microsoft.com/library/windows/desktop/ms679348) 구조입니다.  
   
- `uCount`  
+ *uCount*  
  창을 플래시 횟수를 지정 합니다.  
   
- `dwTimeout`  
- 업데이트 된 창 했습니다 됩니다 밀리초는 속도 지정 합니다. 경우 `dwTimeout` 가 0 이면이 함수는 기본 커서 깜박임 속도 사용 합니다.  
+ *dwTimeout*  
+ 업데이트 된 창 했습니다 됩니다 밀리초는 속도 지정 합니다. 경우 *dwTimeout* 0 이면이 함수는 기본 커서 깜박임 속도 사용 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  반환 값에 대 한 호출 하기 전에 창 상태를 지정 된 `FlashWindowEx` 함수입니다. 창 캡션의 호출 하기 전에 활성으로 그릴 경우 반환 값은 0이 아닌 합니다. 그렇지 않으면 반환 값은 0입니다.  
@@ -2946,8 +2946,8 @@ static CWnd* PASCAL FromHandle(HWND hWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hWnd`  
- `HWND` Windows 창입니다.  
+ *hWnd*  
+ Windows 창의 HWND입니다.  
   
 ### <a name="return-value"></a>반환 값  
  창에 핸들을 지정한 경우 `CWnd` 개체에 대한 포인터를 반환합니다. `CWnd` 개체가 핸들에 연결되지 않은 경우 임시 `CWnd` 개체를 만들어 연결합니다.  
@@ -2962,14 +2962,14 @@ static CWnd* PASCAL FromHandlePermanent(HWND hWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hWnd`  
- `HWND` Windows 창입니다.  
+ *hWnd*  
+ Windows 창의 HWND입니다.  
   
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터는 `CWnd` 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 경우는 `CWnd` 개체가 핸들에 연결 되지 않은 **NULL** 반환 됩니다.  
+ 경우는 `CWnd` 개체가 핸들에 연결 되지 않은, NULL이 반환 됩니다.  
   
  이 함수 달리 [FromHandle](#fromhandle), 임시 개체를 만들지 않습니다.  
   
@@ -2983,7 +2983,7 @@ virtual HRESULT get_accChild(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `varChild`  
+ *varChild*  
  자식을 식별 인 `IDispatch` 검색할 인터페이스입니다.  
   
  *ppdispChild*  
@@ -3030,11 +3030,11 @@ virtual HRESULT get_accDefaultAction(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `varChild`  
+ *varChild*  
  기본 동작을 검색할 수의 개체나 개체의 자식 요소 중 하나 인지를 지정 합니다. 이 매개 변수 (개체에 대 한 정보 가져오기)을 CHILDID_SELF 또는 자식 ID (개체의 자식 요소에 대 한 정보 가져오기) 가능 합니다.  
   
  *pszDefaultAction*  
- 주소는 `BSTR` 받는이 개체에 기본 작업이 없을 경우 지정 된 개체 또는 NULL에 대 한 기본 동작을 설명 하는 지역화 된 문자열입니다.  
+ 이 개체에 기본 작업이 없을 경우 지정 된 개체 또는 NULL에 대 한 기본 동작을 설명 하는 지역화 된 문자열을 수신 하는 BSTR의 주소입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 [IAccessible::get_accDefaultAction](http://msdn.microsoft.com/library/windows/desktop/dd318477) in the Windows SDK입니다.  
@@ -3056,11 +3056,11 @@ virtual HRESULT get_accDescription(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `varChild`  
+ *varChild*  
  설명을 검색할 수의 개체나 개체의 자식 요소 중 하나 인지를 지정 합니다. 이 매개 변수 (개체에 대 한 정보 가져오기)을 CHILDID_SELF 또는 자식 ID (개체의 자식 요소에 대 한 정보 가져오기) 가능 합니다.  
   
- `pszDescription`  
- 주소는 `BSTR` 지역화 된 받는 지정된 된 개체를 설명 하는 문자열 또는이 개체에 대 한 설명이 없을 경우 NULL입니다.  
+ *pszDescription*  
+ 이 개체에 대 한 설명이 없을 경우 NULL 또는 주소가 지정된 된 개체를 설명 하는 지역화 된 문자열을 수신 하는 BSTR입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 [IAccessible::get_accDescription](http://msdn.microsoft.com/library/windows/desktop/dd318478) in the Windows SDK입니다.  
@@ -3080,11 +3080,11 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pvarChild`  
+ *pvarChild*  
  포커스가 있는 개체에 대 한 정보를 받습니다. 참조 *pvarID* 에 [IAccessible::get_accFocus](http://msdn.microsoft.com/library/windows/desktop/dd318479) Windows sdk에서입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 **IAccessible::get_accFocus** in the Windows SDK입니다.  
+ 성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 `IAccessible::get_accFocus` in the Windows SDK입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수는 MFC의의 일부가 [Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592) 지원 합니다.  
@@ -3103,11 +3103,11 @@ virtual HRESULT get_accHelp(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `varChild`  
+ *varChild*  
  도움말 정보를 검색할 개체 또는 개체의 자식 요소 중 하나 인지를 지정 합니다. 이 매개 변수 (개체에 대 한 정보 가져오기)을 CHILDID_SELF 또는 자식 ID (개체의 자식 요소에 대 한 정보 가져오기) 가능 합니다.  
   
  *pszHelp*  
- 주소는 `BSTR` 받는 도움말 정보가 없는 경우에 지정 된 개체 또는 NULL에 대 한 도움말 정보를 포함 하는 지역화 된 문자열입니다.  
+ 주소는 도움말 정보가 경우에 지정 된 개체 또는 NULL에 대 한 도움말 정보를 포함 하는 지역화 된 문자열을 수신 하는 BSTR입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 [IAccessible::get_accHelp](http://msdn.microsoft.com/library/windows/desktop/dd318480) in the Windows SDK입니다.  
@@ -3130,17 +3130,17 @@ virtual HRESULT get_accHelpTopic(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pszHelpFile`  
- 주소는 `BSTR` 의 전체 경로 수신 하는 `WinHelp` 있는 경우 지정된 된 개체와 연결 된 파일입니다.  
+ *pszHelpFile*  
+ 전체 경로 수신 하는 BSTR의 주소는 `WinHelp` 있는 경우 지정된 된 개체와 연결 된 파일입니다.  
   
- `varChild`  
+ *varChild*  
  도움말 항목을 검색할 수의 개체나 개체의 자식 요소 중 하나 인지를 지정 합니다. 이 매개 변수는 (개체에 대 한 도움말 항목 얻으려고) CHILDID_SELF 또는 자식 ID (요소 개체의 자식 중 하나에 대 한 도움말 항목 가져오기) 일 수 있습니다.  
   
- `pidTopic`  
- 지정한 개체와 관련 된 도움말 파일 항목을 식별 합니다. 참조 `pidTopic` 에 [IAccessible::get_accHelpTopic](http://msdn.microsoft.com/library/windows/desktop/dd318481) in the Windows SDK입니다.  
+ *pidTopic*  
+ 지정한 개체와 관련 된 도움말 파일 항목을 식별 합니다. 참조 *pidTopic* 에 [IAccessible::get_accHelpTopic](http://msdn.microsoft.com/library/windows/desktop/dd318481) Windows sdk에서입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 **IAccessible::get_accHelpTopic** in the Windows SDK입니다.  
+ 성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 `IAccessible::get_accHelpTopic` in the Windows SDK입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수는 MFC의의 일부가 [Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592) 지원 합니다.  
@@ -3159,11 +3159,11 @@ virtual HRESULT get_accKeyboardShortcut(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `varChild`  
+ *varChild*  
  바로 가기 키를 검색할 개체 또는 개체의 자식 요소 중 하나 인지를 지정 합니다. 이 매개 변수 (개체에 대 한 정보 가져오기)을 CHILDID_SELF 또는 자식 ID (개체의 자식 요소에 대 한 정보 가져오기) 가능 합니다.  
   
  *pszKeyboardShortcut*  
- 주소는 `BSTR` 을 받는 지역화 된 키보드 바로 가기가 지정 된 개체와 연결 된 경우에 NULL 또는 바로 가기 키를 식별 하는 문자열입니다.  
+ 키보드 바로 가기가 지정 된 개체와 연결 된 경우에 NULL 또는 바로 가기 키를 식별 하는 지역화 된 문자열을 수신 하는 BSTR의 주소가 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 [IAccessible::get_accKeyboardShortcut](http://msdn.microsoft.com/library/windows/desktop/dd318482) in the Windows SDK입니다.  
@@ -3185,11 +3185,11 @@ virtual HRESULT get_accName(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `varChild`  
+ *varChild*  
  검색할 이름 개체 또는 개체의 자식 요소 중 하나 인지 지정 합니다. 이 매개 변수 (개체에 대 한 정보 가져오기)을 CHILDID_SELF 또는 자식 ID (개체의 자식 요소에 대 한 정보 가져오기) 가능 합니다.  
   
- `pszName`  
- 주소는 `BSTR` 을 받는 개체의 이름을 포함 하는 문자열입니다.  
+ *pszName*  
+ 지정된 된 개체의 이름을 포함 하는 문자열을 수신 하는 BSTR의 주소입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 [IAccessible::get_accName](http://msdn.microsoft.com/library/windows/desktop/dd318483) in the Windows SDK입니다.  
@@ -3232,14 +3232,14 @@ virtual HRESULT get_accRole(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `varChild`  
+ *varChild*  
  역할 정보를 검색할 개체 또는 개체의 자식 요소 중 하나 인지를 지정 합니다. 이 매개 변수 (개체에 대 한 정보 가져오기)을 CHILDID_SELF 또는 자식 ID (개체의 자식 요소에 대 한 정보 가져오기) 가능 합니다.  
   
- `pvarRole`  
- 역할 정보를 받습니다. 참조 `pvarRole` 에 [IAccessible::get_accRole](http://msdn.microsoft.com/library/windows/desktop/dd318485) in the Windows SDK입니다.  
+ *pvarRole*  
+ 역할 정보를 받습니다. 참조 *pvarRole* 에 [IAccessible::get_accRole](http://msdn.microsoft.com/library/windows/desktop/dd318485) Windows sdk에서입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 **IAccessible::get_accRole** in the Windows SDK입니다.  
+ 성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 `IAccessible::get_accRole` in the Windows SDK입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수는 MFC의의 일부가 [Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592) 지원 합니다.  
@@ -3256,11 +3256,11 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pvarChildren`  
- 선택 된 자식에 대 한 정보를 받습니다. 참조 `pvarChildren` 에 [IAccessible::get_accSelection](http://msdn.microsoft.com/library/windows/desktop/dd318486) in the Windows SDK입니다.  
+ *pvarChildren*  
+ 선택 된 자식에 대 한 정보를 받습니다. 참조 *pvarChildren* 에 [IAccessible::get_accSelection](http://msdn.microsoft.com/library/windows/desktop/dd318486) Windows sdk에서입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 **IAccessible::get_accSelection** in the Windows SDK입니다.  
+ 성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 `IAccessible::get_accSelection` in the Windows SDK입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수는 MFC의의 일부가 [Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592) 지원 합니다.  
@@ -3279,14 +3279,14 @@ virtual HRESULT get_accState(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `varChild`  
+ *varChild*  
  상태 정보를 검색할 개체 또는 개체의 자식 요소 중 하나 인지를 지정 합니다. 이 매개 변수 (개체에 대 한 정보 가져오기)을 CHILDID_SELF 또는 자식 ID (개체의 자식 요소에 대 한 정보 가져오기) 가능 합니다.  
   
- `pvarState`  
- 개체의 상태에 대 한 정보를 받습니다. 참조 `pvarState` 에 [IAccessible::get_accState](http://msdn.microsoft.com/library/windows/desktop/dd318487) in the Windows SDK입니다.  
+ *pvarState*  
+ 개체의 상태에 대 한 정보를 받습니다. 참조 *pvarState* 에 [IAccessible::get_accState](http://msdn.microsoft.com/library/windows/desktop/dd318487) Windows sdk에서입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 **IAccessible::get_accState** in the Windows SDK입니다.  
+ 성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 `IAccessible::get_accState` in the Windows SDK입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수는 MFC의의 일부가 [Active Accessibility](http://msdn.microsoft.com/library/windows/desktop/dd373592) 지원 합니다.  
@@ -3305,11 +3305,11 @@ virtual HRESULT get_accValue(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `varChild`  
+ *varChild*  
  값 정보를 검색할 개체 또는 개체의 자식 요소 중 하나 인지를 지정 합니다. 이 매개 변수 (개체에 대 한 정보 가져오기)을 CHILDID_SELF 또는 자식 ID (개체의 자식 요소에 대 한 정보 가져오기) 가능 합니다.  
   
- `pszValue`  
- 주소는 `BSTR` 을 받는 개체의 현재 값이 포함 된 지역화 된 문자열입니다.  
+ *pszValue*  
+ 개체의 현재 값을 포함 하는 지역화 된 문자열을 수신 하는 BSTR의 주소입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공, 실패 시 COM 오류 코드에 S_OK를 반환합니다. 참조 **값을 반환할** 에 [IAccessible::get_accValue](http://msdn.microsoft.com/library/windows/desktop/dd318488) in the Windows SDK입니다.  
@@ -3329,7 +3329,7 @@ static CWnd* PASCAL GetActiveWindow();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 활성 창 또는 **NULL** 호출 시 창이 활성 상태 였던 경우. 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.  
+ 현재 창이 나 호출 시 창이 활성 상태 였던 경우 NULL입니다. 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.  
   
 ### <a name="remarks"></a>설명  
  활성 창은 현재 입력 포커스가 있는 창이 나 명시적으로 활성화를 수행 하는 창 고 [SetActiveWindow](#setactivewindow) 멤버 함수입니다.  
@@ -3346,7 +3346,7 @@ CWnd* GetAncestor(UINT gaFlags) const;
  상위 항목을 검색할 수를 지정 합니다. 가능한 값 목록은 전체 참조 [GetAncestor](http://msdn.microsoft.com/library/windows/desktop/ms633502)합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 반환 값은 상위 창 개체에 대 한 포인터입니다. 반환 값은 함수가 실패 하면 **NULL**합니다.  
+ 함수가 성공 하면 반환 값은 상위 창 개체에 대 한 포인터입니다. 함수가 실패 하면 반환 값은 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 함수의 기능을 에뮬레이션 [GetAncestor](http://msdn.microsoft.com/library/windows/desktop/ms633502)Windows SDK에 설명 된 대로 합니다.  
@@ -3359,7 +3359,7 @@ static CWnd* PASCAL GetCapture();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 마우스 캡처가 포함 하는 창을 식별 합니다. **NULL** 에 마우스 캡처가 있는 창이 없습니다.  
+ 마우스 캡처가 포함 하는 창을 식별 합니다. 창이 마우스 캡처가 경우 NULL입니다.  
   
  반환 값은 임시 수 있으며 나중에 저장할 수 없습니다.  
   
@@ -3389,30 +3389,30 @@ int GetCheckedRadioButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDFirstButton`  
+ *nIDFirstButton*  
  그룹의 첫 번째 라디오 단추의 정수 식별자를 지정합니다.  
   
- `nIDLastButton`  
+ *nIDLastButton*  
  그룹의 마지막 라디오 단추의 정수 식별자를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
  선택 된 경우에 0 또는 선택 된 라디오 단추의 ID입니다.  
   
 ##  <a name="getclientrect"></a>  CWnd::GetClientRect  
- 복사의 클라이언트 좌표는 `CWnd` 가리키는 구조에 대 한 클라이언트 영역 `lpRect`합니다.  
+ 복사의 클라이언트 좌표는 `CWnd` 가리키는 구조에 대 한 클라이언트 영역 *lpRect*합니다.  
   
 ```  
 void GetClientRect(LPRECT lpRect) const;  
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
- 가리키는 [RECT 구조체](../../mfc/reference/rect-structure1.md) 또는 `CRect` 클라이언트 좌표를 받을 개체입니다. **왼쪽** 및 **top** 멤버는 0이 됩니다. **오른쪽** 및 **아래쪽** 멤버 창의 높이 너비에 포함 됩니다.  
+ *lpRect*  
+ 가리키는 [RECT 구조체](../../mfc/reference/rect-structure1.md) 또는 `CRect` 클라이언트 좌표를 받을 개체입니다. `left` 및 `top` 구성원은 0이 됩니다. `right` 및 `bottom` 멤버 창의 높이 너비에 포함 됩니다.  
   
 ### <a name="remarks"></a>설명  
  클라이언트 좌표 클라이언트 영역의 왼쪽 위 및 오른쪽 아래 모퉁이 지정합니다. 클라이언트 좌표는 왼쪽 위 모퉁이 기준으로 하므로 `CWnd` 클라이언트 영역의 왼쪽 위 모퉁이의 좌표는 (0, 0).  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::IsIconic](#isiconic)합니다.  
   
 ##  <a name="getclipboardowner"></a>  CWnd::GetClipboardOwner  
@@ -3423,7 +3423,7 @@ static CWnd* PASCAL GetClipboardOwner();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 함수가 성공 하는 경우 클립보드를 소유 하는 창을 식별 합니다. 그렇지 않으면 **NULL**합니다.  
+ 함수가 성공 하는 경우 클립보드를 소유 하는 창을 식별 합니다. 그렇지 않으면은 NULL입니다.  
   
  반환된 된 포인터는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다.  
   
@@ -3438,7 +3438,7 @@ static CWnd* PASCAL GetClipboardViewer();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 성공 하면 클립보드 표시를 현재 담당 하는 창을 식별합니다 그렇지 않으면 **NULL** (예를 들어 있는 경우 뷰어가).  
+ 성공 하면 클립보드 표시를 현재 담당 하는 창을 식별합니다 그렇지 않은 경우 (예를 들어 있는 경우 뷰어가) NULL입니다.  
   
  반환된 된 포인터는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다.  
   
@@ -3450,14 +3450,14 @@ LPUNKNOWN GetControlUnknown();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 이 나타내는 OLE 컨트롤의 인터페이스 `CWnd` 개체입니다. 반환 값은이 개체에서 OLE 컨트롤을 나타낼 경우 **NULL**합니다.  
+ 에 대 한 포인터는 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 이 나타내는 OLE 컨트롤의 인터페이스 `CWnd` 개체입니다. 이 개체에서 OLE 컨트롤을 나타낼 경우 반환 값은 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 해제 하지 해야 **IUnknown** 포인터입니다. 일반적으로 컨트롤의 특정 인터페이스를 가져올 수 사용 합니다.  
+ 이 해제 하지 해야 `IUnknown` 포인터입니다. 일반적으로 컨트롤의 특정 인터페이스를 가져올 수 사용 합니다.  
   
- 반환 된 인터페이스 포인터 **GetControlUnknown** 참조 개수가 계산 되지 않습니다. 호출 하지 마십시오 [iunknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) 포인터에 대해 이전에 호출 하지 않는 한 [iunknown:: Addref](http://msdn.microsoft.com/library/windows/desktop/ms691379) 에 있습니다.  
+ 반환 된 인터페이스 포인터 `GetControlUnknown` 참조 개수가 계산 되지 않습니다. 호출 하지 마십시오 [iunknown:: Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) 포인터에 대해 이전에 호출 하지 않는 한 [iunknown:: Addref](http://msdn.microsoft.com/library/windows/desktop/ms691379) 에 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#96](../../mfc/reference/codesnippet/cpp/cwnd-class_35.cpp)]  
   
 ##  <a name="getcurrentmessage"></a>  CWnd::GetCurrentMessage  
@@ -3470,7 +3470,7 @@ static const MSG* PASCAL GetCurrentMessage();
 ### <a name="return-value"></a>반환 값  
  에 대 한 포인터를 반환 합니다.는 [MSG](../../mfc/reference/msg-structure1.md) 구조 창 메시지를 포함 하는 현재 처리 합니다. 만 호출 해야 경우는 **에서 * * * 메시지* 처리기입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CMDIFrameWnd::MDICascade](../../mfc/reference/cmdiframewnd-class.md#mdicascade)합니다.  
   
 ##  <a name="getdc"></a>  CWnd::GetDC  
@@ -3481,14 +3481,14 @@ CDC* GetDC();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 장치 컨텍스트를 식별 하는 `CWnd` 클라이언트 영역 경우 성공이 고; 그렇지 않으면, 반환 값은 **NULL**합니다. 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.  
+ 에 대 한 장치 컨텍스트를 식별 하는 `CWnd` 클라이언트 영역 경우 성공이 고; 그렇지 않으면, 반환 값은 NULL입니다. 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.  
   
 ### <a name="remarks"></a>설명  
  일반적인 장치 컨텍스트에 대 한 `GetDC` 검색 될 때마다 컨텍스트에 기본 특성을 할당 합니다. 클래스 및 개인 컨텍스트에 대 한 `GetDC` 변경 하지 않고 이전에 할당 된 특성을 유지 합니다. 장치 컨텍스트에 후속 그래픽 장치 인터페이스 (GDI) 함수에서 클라이언트 영역에 그리는 데 사용할 수 있습니다.  
   
  장치 컨텍스트 창 클래스에 속해 있지 않는 한는 [ReleaseDC](#releasedc) 그리기 후 컨텍스트를 해제 하기 위해 멤버 함수를 호출 해야 합니다.  
   
- 에 속한 장치 컨텍스트는 `CWnd` 클래스에서 반환 되는 `GetDC` 경우 멤버 함수 **CS_CLASSDC**, **CS_OWNDC**, 또는 **CS_PARENTDC** 되었습니다 에 스타일으로 지정 된 **WNDCLASS** 클래스가 등록 될 때 구성 합니다.  
+ 에 속한 장치 컨텍스트는 `CWnd` 클래스에서 반환 되는 `GetDC` CS_CLASSDC, CS_OWNDC, 또는 CS_PARENTDC에 스타일으로 지정 된 경우 멤버 함수는 `WNDCLASS` 클래스가 등록 될 때 구성 합니다.  
   
 ##  <a name="getdcex"></a>  CWnd::GetDCEx  
  에 대 한 장치 컨텍스트 핸들을 검색 된 `CWnd` 창.  
@@ -3500,30 +3500,30 @@ CDC* GetDCEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `prgnClip`  
+ *prgnClip*  
  클라이언트 창의 표시 되는 영역으로 함께 사용할 수 있는 클립 영역을 식별 합니다.  
   
- `flags`  
+ *flags*  
  다음 미리 설정 된 값 중 하나일 수 있습니다.  
   
-- **DCX_CACHE** 캐시에서 장치 컨텍스트를 반환 하지 않고 **OWNDC** 또는 **CLASSDC** 창. 재정의 **CS_OWNDC** 및 **CS_CLASSDC**합니다.  
+- DCX_CACHE는 OWNDC 또는 CLASSDC 창 보다는 캐시에서 장치 컨텍스트를 반환합니다. CS_OWNDC 및 CS_CLASSDC 재정의합니다.  
   
-- **DCX_CLIPCHILDREN** 아래 있는 모든 자식 창이 표시 영역을 제외는 `CWnd` 창.  
+- DCX_CLIPCHILDREN 아래 있는 모든 자식 창이 표시 영역을 제외는 `CWnd` 창.  
   
-- **DCX_CLIPSIBLINGS** 위의 모든 형제 창이의 표시 영역을 제외는 `CWnd` 창.  
+- 위의 모든 형제 창이의 표시 영역을 제외 하는 DCX_CLIPSIBLINGS는 `CWnd` 창.  
   
-- **DCX_EXCLUDERGN** 로 식별 되는 클립 영역을 제외 `prgnClip` 에서 반환 된 장치 컨텍스트의 표시 되는 영역입니다.  
+- DCX_EXCLUDERGN로 식별 되는 클립 영역을 제외 *prgnClip* 에서 반환 된 장치 컨텍스트의 표시 되는 영역입니다.  
   
-- **DCX_INTERSECTRGN** 로 식별 되는 클립 영역을 교차 `prgnClip` 반환 된 장치 컨텍스트에의 표시 영역 내에서.  
+- DCX_INTERSECTRGN로 식별 되는 클립 영역을 교차 *prgnClip* 반환 된 장치 컨텍스트에의 표시 영역 내에서.  
   
-- **DCX_LOCKWINDOWUPDATE** 는 그리기를 사용 하면 한 `LockWindowUpdate` 호출 하지 않으면이 창을 제외 되 게 적용에서 합니다. 이 값은 추적 중에 그리기에 사용 됩니다.  
+- 경우에 그리기 DCX_LOCKWINDOWUPDATE 허용는 `LockWindowUpdate` 호출 하지 않으면이 창을 제외 되 게 적용에서 합니다. 이 값은 추적 중에 그리기에 사용 됩니다.  
   
-- **DCX_PARENTCLIP** 부모 창의 표시 영역을 사용 하 고 부모 창의 무시 **WS_CLIPCHILDREN** 및 **WS_PARENTDC** 비트 스타일 지정 합니다. 왼쪽 위 모퉁이에 원점 장치 컨텍스트를 설정 하는이 값은 `CWnd` 창.  
+- DCX_PARENTCLIP 부모 창의 표시 영역을 사용 하 고 부모 창의 WS_CLIPCHILDREN 및 WS_PARENTDC 스타일 비트를 무시 합니다. 왼쪽 위 모퉁이에 원점 장치 컨텍스트를 설정 하는이 값은 `CWnd` 창.  
   
-- **DCX_WINDOW** 클라이언트 사각형이 아닌 창 사각형에 해당 하는 장치 컨텍스트를 반환 합니다.  
+- DCX_WINDOW는 클라이언트 사각형이 아닌 창 사각형에 해당 하는 장치 컨텍스트를 반환 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 지정된 된 창에 대 한 장치 컨텍스트 그렇지 않으면 **NULL**합니다.  
+ 함수가 성공 하면 지정된 된 창에 대 한 장치 컨텍스트 그렇지 않으면 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
  장치 컨텍스트에 이후의 GDI 함수에서 클라이언트 영역에 그리는 데 사용할 수 있습니다.  
@@ -3532,11 +3532,11 @@ CDC* GetDCEx(
   
  장치 컨텍스트 창 클래스에 속해 있지 않는 한는 [ReleaseDC](http://msdn.microsoft.com/library/windows/desktop/dd162920) 그리기를 마친 후 컨텍스트를 해제 하기 위해 함수를 호출 해야 합니다. 일반적인 5 개의 장치 컨텍스트는 언제 든 지 사용할 수 있는, 실패 한 장치 컨텍스트를 해제 하기 위해 장치 컨텍스트를 액세스 하지 못하도록 다른 응용 프로그램을 방지할 수 있습니다.  
   
- 캐시 된 장치 컨텍스트를 가져오려면 응용 프로그램을 지정 해야 [DCX_CACHE](http://msdn.microsoft.com/library/windows/desktop/dd144873)합니다. 경우 **DCX_CACHE** 지정 하지 않으면, 창이 모두 **CS_OWNDC** 나 [CS_CLASSDC](http://msdn.microsoft.com/library/windows/desktop/ms633576),이 함수는 반환 **NULL**합니다.  
+ 캐시 된 장치 컨텍스트를 가져오려면 응용 프로그램을 지정 해야 [DCX_CACHE](http://msdn.microsoft.com/library/windows/desktop/dd144873)합니다. DCX_CACHE 지정 하지 않으면, 창이 모두 CS_OWNDC 경우 나 [CS_CLASSDC](http://msdn.microsoft.com/library/windows/desktop/ms633576),이 함수는 NULL을 반환 합니다.  
   
- 반환 된 특수 특성을 가진 장치 컨텍스트는 [GetDCEx](http://msdn.microsoft.com/library/windows/desktop/dd144873) 경우 함수는 **CS_CLASSDC**, [CS_OWNDC](http://msdn.microsoft.com/library/windows/desktop/ms633576), 또는 [CS_PARENTDC](http://msdn.microsoft.com/library/windows/desktop/ms633576)에 지정 된 스타일의 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) 클래스가 등록 될 때 구성 합니다.  
+ 반환 된 특수 특성을 가진 장치 컨텍스트는 [GetDCEx](http://msdn.microsoft.com/library/windows/desktop/dd144873) 작동 CS_CLASSDC, [CS_OWNDC](http://msdn.microsoft.com/library/windows/desktop/ms633576), 또는 [CS_PARENTDC](http://msdn.microsoft.com/library/windows/desktop/ms633576) 스타일의 에지정된[ WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) 클래스가 등록 될 때 구성 합니다.  
   
- 이러한 특성에 대 한 자세한 내용은 참조에 대 한 설명을 **WNDCLASS** Windows SDK에는 구조입니다.  
+ 이러한 특성에 대 한 자세한 내용은 참조에 대 한 설명을 `WNDCLASS` Windows SDK에는 구조입니다.  
   
 ##  <a name="getdcrendertarget"></a>  CWnd::GetDCRenderTarget  
  `CWnd` 창에 대한 DC(디바이스 컨텍스트) 렌더링 대상을 검색합니다.  
@@ -3546,7 +3546,7 @@ CDCRenderTarget* GetDCRenderTarget();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 디바이스 컨텍스트 렌더링 하며 지정한 창에 대 한 대상 그렇지 않으면 **NULL**합니다.  
+ 함수가 성공 하면 디바이스 컨텍스트 렌더링 하며 지정한 창에 대 한 대상 그렇지 않으면 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -3560,14 +3560,14 @@ CWnd* GetDescendantWindow(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nID`  
+ *nID*  
  검색할 컨트롤 또는 자식 창의 식별자를 지정 합니다.  
   
- `bOnlyPerm`  
- 반환 될 수 있는 창을 임시 수 있는지 여부를 지정 합니다. 경우 **TRUE**, 영구 창만 반환 될 수 있습니다; **FALSE** 함수는 임시 창을 반환할 수 있습니다. 임시 windows에 대 한 자세한 내용은 참조 [기술 참고 3](../../mfc/tn003-mapping-of-windows-handles-to-objects.md)합니다.  
+ *bOnlyPerm*  
+ 반환 될 수 있는 창을 임시 수 있는지 여부를 지정 합니다. True 이면 영구 창만 반환 될 수 있습니다. FALSE 인 경우 함수는 임시 창을 반환할 수 있습니다. 임시 windows에 대 한 자세한 내용은 참조 [기술 참고 3](../../mfc/tn003-mapping-of-windows-handles-to-objects.md)합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `CWnd` 개체 또는 **NULL** 자식 창이 없는 경우.  
+ 에 대 한 포인터는 `CWnd` 개체 또는 자식 창이 없는 경우 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 자식 창, 직접 자식인 창 뿐만 아니라 전체 형식 트리를 검색 합니다.  
@@ -3598,7 +3598,7 @@ int GetDlgCtrlID() const;
 ### <a name="remarks"></a>설명  
  이 함수의 반환 값은 올바른 최상위 창에는 ID 값이 없으므로 경우는 `CWnd` 최상위 창입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::OnCtlColor](#onctlcolor)합니다.  
   
 ##  <a name="getdlgitem"></a>  CWnd::GetDlgItem  
@@ -3613,25 +3613,25 @@ void GetDlgItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nID`  
+ *nID*  
  검색할 컨트롤 또는 자식 창의 식별자를 지정 합니다.  
   
- `phWnd`  
+ *phWnd*  
  자식 창에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 지정된 된 컨트롤 또는 자식 창에 대 한 포인터입니다. 정수 ID 제공한 있는 컨트롤이 경우는 `nID` 매개 변수가 있는지, 속성 값은 **NULL**합니다.  
+ 지정된 된 컨트롤 또는 자식 창에 대 한 포인터입니다. 정수 ID 제공한 있는 컨트롤이 경우는 *nID* 매개 변수가 있는지,이 값은 NULL입니다.  
   
  반환된 된 포인터는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다.  
   
 ### <a name="remarks"></a>설명  
- 반환 된 포인터는 일반적으로로 식별 되는 컨트롤의 형식으로 캐스팅 `nID`합니다.  
+ 일반적으로 식별 된 컨트롤의 형식으로 캐스팅은 반환 된 포인터 *nID*합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#97](../../mfc/reference/codesnippet/cpp/cwnd-class_36.cpp)]  
   
 ##  <a name="getdlgitemint"></a>  CWnd::GetDlgItemInt  
- 로 식별 되는 컨트롤의 텍스트를 검색 `nID`합니다.  
+ 로 식별 되는 컨트롤의 텍스트를 검색 *nID*합니다.  
   
 ```  
 UINT GetDlgItemInt(
@@ -3641,26 +3641,26 @@ UINT GetDlgItemInt(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nID`  
+ *nID*  
  변환 해야 하는 대화 상자 컨트롤의 정수 식별자를 지정 합니다.  
   
- `lpTrans`  
+ *lpTrans*  
  번역 된 플래그를 수신 하는 부울 변수를 가리킵니다.  
   
- `bSigned`  
+ *bSigned*  
  값을 검색할 수 서명 되었는지 여부를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 대화 상자 항목 텍스트의 번역 된 값을 지정 합니다. 0은 올바른 반환 값 이후 `lpTrans` 오류 검색 하는 데 사용 해야 합니다. 서명 된 반환 값을 사용할 경우로 캐스팅 한 `int` 유형입니다.  
+ 대화 상자 항목 텍스트의 번역 된 값을 지정 합니다. 0은 올바른 반환 값 이후 *lpTrans* 오류 검색 하는 데 사용 해야 합니다. 서명 된 반환 값을 사용할 경우로 캐스팅 한 **int** 유형입니다.  
   
  함수 반환 값에 번역 된 번호 (부호 없음)에 부호 있는 숫자) (에 INT_MAX 또는 UINT_MAX 보다 큰 경우 0입니다.  
   
- 숫자가 아닌 문자를 발견 하 고 위의 최대 초과 같은 오류가 발생 하면 `GetDlgItemInt` 0에서 가리키는 위치에 복사 `lpTrans`합니다. 오류가 없는 경우 `lpTrans` 0이 아닌 값을 받습니다. 경우 `lpTrans` 은 **NULL**, `GetDlgItemInt` 오류에 대 한 경고를 표시 하지 않습니다.  
+ 숫자가 아닌 문자를 발견 하 고 위의 최대 초과 같은 오류가 발생 하면 `GetDlgItemInt` 0에서 가리키는 위치에 복사 *lpTrans*합니다. 오류가 없는 경우 *lpTrans* 0이 아닌 값을 받습니다. 경우 *lpTrans* 이 NULL 이면 `GetDlgItemInt` 오류에 대 한 경고를 표시 하지 않습니다.  
   
 ### <a name="remarks"></a>설명  
  텍스트의 시작 부분에 추가 공백을 제거 하 고 10 진수 변환 하 여 지정된 된 대화 상자에서 지정된 된 컨트롤의 텍스트 정수 값으로 변환 합니다. 텍스트의 끝에 도달 하거나 모든 숫자가 아닌 문자를 발견할 때에 해당 번역을 중지 합니다.  
   
- 경우 `bSigned` 은 **TRUE**, `GetDlgItemInt` 텍스트의 시작 부분에 빼기 기호 (-)를 확인 하 고 텍스트 부호 있는 숫자를 변환 합니다. 그렇지 않으면 부호 없는 값을 만듭니다.  
+ 경우 *bSigned* 가 TRUE 이면 `GetDlgItemInt` 텍스트의 시작 부분에 빼기 기호 (-)를 확인 하 고 텍스트 부호 있는 숫자를 변환 합니다. 그렇지 않으면 부호 없는 값을 만듭니다.  
   
  보냅니다는 [WM_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632627) 컨트롤에는 메시지입니다.  
   
@@ -3679,23 +3679,23 @@ int GetDlgItemText(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nID`  
+ *nID*  
  검색할 제목은 컨트롤의 정수 식별자를 지정 합니다.  
   
- `lpStr`  
+ *lpStr*  
  컨트롤의 제목 또는 텍스트를 받기 위한 버퍼를 가리킵니다.  
   
- `nMaxCount`  
- 최대 길이 (문자 수)에 복사할 문자열의 지정 `lpStr`합니다. 문자열 보다 긴 경우 `nMaxCount`, 아니면 잘립니다.  
+ *nMaxCount*  
+ 최대 길이 (문자 수)에 복사할 문자열의 지정 *lpStr*합니다. 문자열 보다 긴 경우 *nMaxCount*를 자릅니다.  
   
- `rString`  
+ *rString*  
  에 대 한 참조는 [CString](../../atl-mfc-shared/reference/cstringt-class.md)합니다.  
   
 ### <a name="return-value"></a>반환 값  
  실제 종료 null 문자를 포함 하지 않습니다 버퍼에 복사 하는 문자 수를 지정 합니다. 텍스트가 복사 되는 경우 값은 0입니다.  
   
 ### <a name="remarks"></a>설명  
- `GetDlgItemText` 멤버 함수에서 가리키는 위치에 텍스트를 복사 `lpStr` 복사 된 바이트 수의 수를 반환 합니다.  
+ `GetDlgItemText` 멤버 함수에서 가리키는 위치에 텍스트를 복사 *lpStr* 복사 된 바이트 수의 수를 반환 합니다.  
   
 ##  <a name="getdsccursor"></a>  CWnd::GetDSCCursor  
  데이터 소스 컨트롤의 데이터 원본, 사용자 이름, 암호 및 SQL 속성으로 정의 된 기본 커서에 대 한 포인터를 검색 하려면이 멤버 함수를 호출 합니다.  
@@ -3708,9 +3708,9 @@ IUnknown* GetDSCCursor();
  데이터 소스 제어에서 정의한 커서에 대 한 포인터입니다. MFC를 호출한 담당 `AddRef` 포인터에 대 한 합니다.  
   
 ### <a name="remarks"></a>설명  
- 데이터 바인딩된 표 형태 컨트롤 같이 복합 데이터 바인딩된 컨트롤의 ICursor 속성을 설정 하는 반환 된 포인터를 사용 합니다. 데이터 소스 제어 첫 번째 바인딩된 컨트롤의 커서를 요청할 때까지 활성화 되지 않습니다. 이 호출을 명시적으로 발생할 수 있습니다 `GetDSCCursor` 또는 MFC 바인딩 관리자에 의해 암시적으로 합니다. 두 경우 모두 호출 하 여 활성화할 데이터 소스 제어를 강제로 수행할 수 있습니다 `GetDSCCursor` 호출한 다음 **릴리스** 반환 된 포인터의 **IUnknown**합니다. 정품 인증 기본 데이터 원본에 연결 하려고 하는 데이터 소스 제어에 발생 합니다. 다음 컨텍스트에서 반환 된 포인터를 사용할 수 있습니다.  
+ 데이터 바인딩된 표 형태 컨트롤 같이 복합 데이터 바인딩된 컨트롤의 ICursor 속성을 설정 하는 반환 된 포인터를 사용 합니다. 데이터 소스 제어 첫 번째 바인딩된 컨트롤의 커서를 요청할 때까지 활성화 되지 않습니다. 이 호출을 명시적으로 발생할 수 있습니다 `GetDSCCursor` 또는 MFC 바인딩 관리자에 의해 암시적으로 합니다. 두 경우 모두 호출 하 여 활성화할 데이터 소스 제어를 강제로 수행할 수 있습니다 `GetDSCCursor` 호출한 다음 `Release` 반환 된 포인터의 `IUnknown`합니다. 정품 인증 기본 데이터 원본에 연결 하려고 하는 데이터 소스 제어에 발생 합니다. 다음 컨텍스트에서 반환 된 포인터를 사용할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]  
 [!code-cpp[NVC_MFC_AxDataBinding#5](../../mfc/reference/codesnippet/cpp/cwnd-class_37.cpp)]  
 [!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]  
@@ -3746,12 +3746,12 @@ static CWnd* PASCAL GetFocus();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 현재 포커스가 있는 창에 대 한 포인터 또는 **NULL** 경우 포커스가 창이 없습니다.  
+ 포커스 창 없는 경우 현재 포커스 또는 NULL 있는 창에 대 한 포인터입니다.  
   
  해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.  
   
 ##  <a name="getfont"></a>  CWnd::GetFont  
- 보냅니다는 `WM_GETFONT` 창에 메시지를 현재 글꼴을 검색 합니다.  
+ 현재 글꼴을 검색 하 여 창에 WM_GETFONT 메시지를 보냅니다.  
   
 ```  
 CFont* GetFont() const;  
@@ -3761,7 +3761,7 @@ CFont* GetFont() const;
  에 대 한 포인터는 [CFont](../../mfc/reference/cfont-class.md) 창에 대해 현재 글꼴에 연결 된 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 창을 처리 하지 않으면이 메서드에서 아무 작업도 `WM_GETFONT` 메시지입니다. 파생 되는 여러 MFC 클래스 `CWnd` 메시지 처리기를 포함 하는 미리 정의 된 창 클래스에 연결 되었으므로이 메시지를 처리는 `WM_GETFONT` 메시지입니다. 클래스에서 파생 되는이 방법을 사용 하려면 `CWnd` 메서드 처리기를 정의 해야 합니다는 `WM_GETFONT` 메시지입니다.  
+ 창 WM_GETFONT 메시지를 처리 하지 않는 한 효과가 없습니다. 파생 되는 여러 MFC 클래스 `CWnd` WM_GETFONT 메시지에 대 한 메시지 처리기를 포함 하는 미리 정의 된 창 클래스에 연결 하기 때문에이 메시지를 처리 합니다. 클래스에서 파생 되는이 방법을 사용 하려면 `CWnd` WM_GETFONT 메시지에 대 한 메서드 처리기를 정의 해야 합니다.  
   
 ##  <a name="getforegroundwindow"></a>  CWnd::GetForegroundWindow  
  전경 창에 대 한 포인터를 반환 합니다. (현재 사용자가 작업 창).  
@@ -3777,18 +3777,18 @@ static CWnd* PASCAL GetForegroundWindow();
  전경 창 (프레임 창 또는 대화 상자) 최상위 창에만 적용 됩니다.  
   
 ##  <a name="geticon"></a>  CWnd::GetIcon  
- 표시 된 대로 중 하나는 큰 (32x32)에 대 한 핸들 또는 작은 (16 x 16) 아이콘에 대 한 핸들을 얻기 위해이 함수를 호출 `bBigIcon`합니다.  
+ 표시 된 대로 중 하나는 큰 (32x32)에 대 한 핸들 또는 작은 (16 x 16) 아이콘에 대 한 핸들을 얻기 위해이 함수를 호출 *bBigIcon*합니다.  
   
 ```  
 HICON GetIcon(BOOL bBigIcon) const;  
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bBigIcon`  
- 32 픽셀 아이콘으로 32 픽셀을 지정 하는 경우 **TRUE**; 16 픽셀 아이콘으로 16 픽셀을 지정 하는 경우 **FALSE**합니다.  
+ *bBigIcon*  
+ True; 32 픽셀 아이콘으로 32 픽셀을 지정 합니다. false 인 경우 16 픽셀 아이콘으로 16 픽셀을 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 아이콘에 대 한 핸들입니다. 프로시저가 실패 하면 반환 **NULL**합니다.  
+ 아이콘에 대 한 핸들입니다. 프로시저가 실패 하면 NULL을 반환 합니다.  
   
 ##  <a name="getlastactivepopup"></a>  CWnd::GetLastActivePopup  
  `CWnd`가 소유한 팝업 창이 가장 최근에 활성화되었는지 확인합니다.  
@@ -3808,7 +3808,7 @@ CWnd* GetLastActivePopup() const;
   
  해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::FindWindow](#findwindow)합니다.  
   
 ##  <a name="getlayeredwindowattributes"></a>  CWnd::GetLayeredWindowAttributes  
@@ -3823,13 +3823,13 @@ BOOL GetLayeredWindowAttributes(
   
 ### <a name="parameters"></a>매개 변수  
  *pcrKey*  
- 에 대 한 포인터는 **COLORREF** 계층화 된 창의 메시지를 작성할 때 사용할 투명도 색상 키를 수신 하는 값입니다. 이 색의 창으로 그린 모든 픽셀에 투명 하 게 됩니다. 이 수 **NULL** 인수가 필요 하지 않은 경우.  
+ 계층적된 창의 메시지를 작성할 때 사용할 투명도 색상 키를 받는 COLORREF 값에 대 한 포인터입니다. 이 색의 창으로 그린 모든 픽셀에 투명 하 게 됩니다. 이 인수가 필요 하지 않은 경우 NULL을 수 있습니다.  
   
- `pbAlpha`  
- 에 대 한 포인터는 **바이트** 계층화 된 창의 불투명도 설명 하는 데 알파 값을 받는입니다. 변수를 참조 하는 경우 `pbAlpha` 은 0, 창은 완전히 투명 합니다. 변수를 참조 하는 경우 `pbAlpha` 은 255, 기간은 불투명 합니다. 이 수 **NULL** 인수가 필요 하지 않은 경우.  
+ *pbAlpha*  
+ 계층적된 창의 불투명도 설명 하는 데 알파 값을 받는 바이트에 대 한 포인터입니다. 변수를 참조 하는 경우 *pbAlpha* 은 0, 창은 완전히 투명 합니다. 변수를 참조 하는 경우 *pbAlpha* 은 255, 기간은 불투명 합니다. 이 인수가 필요 하지 않은 경우 NULL을 수 있습니다.  
   
  *pdwFlags*  
- 에 대 한 포인터는 `DWORD` 쌓기 플래그를 받는입니다. 이 수 **NULL** 인수가 필요 하지 않은 경우. 가능한 값 목록은 전체 참조 [GetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633508)합니다.  
+ 레이어 링 플래그를 받는 DWORD에 대 한 포인터입니다. 이 인수가 필요 하지 않은 경우 NULL을 수 있습니다. 가능한 값 목록은 전체 참조 [GetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633508)합니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
@@ -3845,14 +3845,14 @@ CMenu* GetMenu() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 메뉴를 식별합니다. 값은 **NULL** 경우 `CWnd` 메뉴가 없습니다. 경우에 반환 값이 정의 되지 `CWnd` 자식 창입니다.  
+ 메뉴를 식별합니다. 이 경우 값은 NULL `CWnd` 메뉴가 없습니다. 경우에 반환 값이 정의 되지 `CWnd` 자식 창입니다.  
   
  반환된 된 포인터는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수는 메뉴 없기 때문에 자식 창에 대 한 사용 되지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#98](../../mfc/reference/codesnippet/cpp/cwnd-class_38.cpp)]  
   
 ##  <a name="getmenubarinfo"></a>  CWnd::GetMenuBarInfo  
@@ -3866,10 +3866,10 @@ BOOL GetMenuBarInfo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `idObject`  
+ *idObject*  
  메뉴 개체를 지정합니다. 가능한 값 목록은 참조 [GetMenuBarInfo](http://msdn.microsoft.com/library/windows/desktop/ms647833)합니다.  
   
- `idItem`  
+ *idItem*  
  항목의 정보를 검색할 수를 지정 합니다. 이 매개 변수가 0 이면 함수는 메뉴 자체에 대 한 정보를 검색 합니다. 이 매개 변수가 1 이면 함수는 메뉴 및 기타 등등에 첫 번째 항목에 대 한 정보를 검색 합니다.  
   
  *pmbi*  
@@ -3894,14 +3894,14 @@ COleControlSiteOrWnd* GetNextDlgGroupItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWndCtl`  
+ *pWndCtl*  
  검색을 위한 시작 지점으로 사용할 컨트롤을 식별 합니다.  
   
- `bPrevious`  
- 대화 상자에서 컨트롤의 그룹을 검색 하는 기능 방법을 지정 합니다. 경우 **TRUE**, 함수 검색; 그룹에서 이전 컨트롤로 **FALSE**, 그룹에서 다음 컨트롤을 검색 합니다.  
+ *이전*  
+ 대화 상자에서 컨트롤의 그룹을 검색 하는 기능 방법을 지정 합니다. True 이면; 그룹에서 이전 컨트롤에 대 한 검색 false 인 경우, 그룹에서 다음 컨트롤을 검색 합니다.  
   
- `pCurSiteOrWnd`  
- 식별 된 **COleControlSiteOrWnd** 제어 합니다. 에 대 한 자세한 내용은 `COleControlSiteOrWnd`, 참조 **주의**합니다.  
+ *pCurSiteOrWnd*  
+ 식별 된 `COleControlSiteOrWnd` 제어 합니다. 에 대 한 자세한 내용은 `COleControlSiteOrWnd`, 참조 **주의**합니다.  
   
 ### <a name="return-value"></a>반환 값  
  멤버 함수는 성공 하는 경우 그룹의 이전 또는 다음 컨트롤에 대 한 포인터입니다.  
@@ -3909,18 +3909,18 @@ COleControlSiteOrWnd* GetNextDlgGroupItem(
  반환된 된 포인터는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다.  
   
 ### <a name="remarks"></a>설명  
- 컨트롤 그룹을 사용 하 여 만든 컨트롤으로 시작는 [WS_GROUP](styles-used-by-mfc.md#window-styles) 스타일과으로 생성 되지 않은 마지막 컨트롤으로 끝나는 **WS_GROUP** 스타일입니다.  
+ 컨트롤 그룹을 사용 하 여 만든 컨트롤으로 시작는 [WS_GROUP](styles-used-by-mfc.md#window-styles) 스타일과 WS_GROUP 스타일이 적용 된 생성 되지 않은 마지막 컨트롤으로 끝납니다.  
   
- 기본적으로는 `GetNextDlgGroupItem` 멤버 함수에서 다음 컨트롤의 그룹에서에 대 한 포인터를 반환 합니다. 경우 `pWndCtl` 그룹의 첫 번째 컨트롤을 식별 하 고 `bPrevious` 은 **TRUE**, `GetNextDlgGroupItem` 그룹의 마지막 컨트롤에 대 한 포인터를 반환 합니다.  
+ 기본적으로는 `GetNextDlgGroupItem` 멤버 함수에서 다음 컨트롤의 그룹에서에 대 한 포인터를 반환 합니다. 경우 *pWndCtl* 그룹의 첫 번째 컨트롤을 식별 하 고 *이전* 가 TRUE 이면 `GetNextDlgGroupItem` 그룹의 마지막 컨트롤에 대 한 포인터를 반환 합니다.  
   
 > [!NOTE]
 >  MFC 창 없는 ActiveX 컨트롤, 표준 ActiveX 컨트롤 및 windows를 지원 하므로 HWND만 하 여 컨트롤을 더 이상 참조할 충분 합니다. `COleControlSiteOrWnd` 개체에는 다음과 같이 창 있는 ActiveX 컨트롤, 창 없는 ActiveX 컨트롤 또는 창으로 개체를 식별 하는 정보가 포함 됩니다.  
   
 |창 또는 컨트롤 형식|식별 정보|  
 |----------------------------|-----------------------------|  
-|창 있는 ActiveX 컨트롤|HWND를 포함 하 고 연결 된 [COleControlSite](../../mfc/reference/colecontrolsite-class.md) 된 개체입니다. `m_hWnd` 소속 `COleControlSiteOrWnd` 컨트롤의 HWND로 설정 된 및 **m_pSite** 멤버 컨트롤의 가리키는 `COleControlSite`합니다.|  
-|창 없는 ActiveX 컨트롤|' 아니요 ' `HWND`합니다. **m_pSite** 소속 `COleControlSiteOrWnd` 컨트롤의 가리키는 `COleControlSite`, 및 **m_hWnd** 멤버는 **NULL**합니다.|  
-|표준 창|포함 된 `HWND`합니다. `m_hWnd` 소속 `COleControlSiteOrWnd` 로 설정 되는 `HWND` 창의 및 **m_pSite** 멤버는 **NULL**합니다.|  
+|창 있는 ActiveX 컨트롤|HWND를 포함 하 고 연결 된 [COleControlSite](../../mfc/reference/colecontrolsite-class.md) 된 개체입니다. `m_hWnd` 소속 `COleControlSiteOrWnd` 컨트롤의 HWND로 설정 된 및 `m_pSite` 멤버 컨트롤의 가리키는 `COleControlSite`합니다.|  
+|창 없는 ActiveX 컨트롤|없는 HWND에 포함 되어 있습니다. `m_pSite` 소속 `COleControlSiteOrWnd` 컨트롤의 가리키는 `COleControlSite`, 및 `m_hWnd` 멤버는 NULL입니다.|  
+|표준 창|방금 HWND에 포함 되어 있습니다. `m_hWnd` 소속 `COleControlSiteOrWnd` 창의 HWND에 설정 및 `m_pSite` 멤버는 NULL입니다.|  
   
 ##  <a name="getnextdlgtabitem"></a>  CWnd::GetNextDlgTabItem  
  사용 하 여 만든 첫 번째 컨트롤에 대 한 포인터를 검색는 [WS_TABSTOP](styles-used-by-mfc.md#window-styles) 유형과 하 앞 또는 지정된 된 컨트롤을 따릅니다.  
@@ -3936,17 +3936,17 @@ COleControlSiteOrWnd* GetNextDlgTabItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWndCtl`  
+ *pWndCtl*  
  검색을 위한 시작 지점으로 사용할 컨트롤을 식별 합니다.  
   
- `pCurSiteOrWnd`  
- 식별 된 **COleControlSiteOrWnd** 제어 합니다. 에 대 한 자세한 내용은 `COleControlSiteOrWnd`, 참조 [CWnd::GetNextDlgGroupItem](#getnextdlggroupitem)합니다.  
+ *pCurSiteOrWnd*  
+ 식별 된 `COleControlSiteOrWnd` 제어 합니다. 에 대 한 자세한 내용은 `COleControlSiteOrWnd`, 참조 [CWnd::GetNextDlgGroupItem](#getnextdlggroupitem)합니다.  
   
- `bPrevious`  
- 대화 상자를 검색 하는 기능 방법을 지정 합니다. 경우 **TRUE**, 함수가 경우 대화 상자에서 이전 컨트롤에 대 한 검색 **FALSE**, 다음 컨트롤을 검색 합니다.  
+ *이전*  
+ 대화 상자를 검색 하는 기능 방법을 지정 합니다. True 이면; 대화 상자에서 이전 컨트롤에 대 한 검색 false 인 경우, 다음 컨트롤을 검색 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 갖고 있는 이전 또는 다음 컨트롤에 대 한 포인터는 **WS_TABSTOP** 멤버 함수가 성공 하는 경우 스타일입니다.  
+ 멤버 함수는 성공 하는 경우 WS_TABSTOP 스타일이 적용 된 이전 또는 다음 컨트롤에 대 한 포인터입니다.  
   
  반환된 된 포인터는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다.  
   
@@ -3960,8 +3960,8 @@ CWnd* GetNextWindow(UINT nFlag = GW_HWNDNEXT) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nFlag`  
- 함수가 다음 창 또는 이전 창에 대 한 포인터를 반환 하는지 여부를 지정 합니다. 있습니다 **GW_HWNDNEXT**, 뒤에 오는 창을 반환 하는 `CWnd` 창 관리자의 목록에서 개체 또는 **GW_HWNDPREV**, 창 관리자에서 이전 창을 반환 하는 목록입니다.  
+ *nFlag*  
+ 함수가 다음 창 또는 이전 창에 대 한 포인터를 반환 하는지 여부를 지정 합니다. 어느 GW_HWNDNEXT 뒤에 오는 창 반환 하는 것은 `CWnd` 창 관리자의 목록 또는 GW_HWNDPREV 창 관리자의 목록에서 이전 창을 반환 하는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
  다음 (또는 이전)를 식별 하는 창 관리자의 목록 멤버 함수는 성공 하는 경우에 창입니다.  
@@ -3981,7 +3981,7 @@ COleControlSite* GetOleControlSite(UINT idControl) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `idControl`  
+ *idControl*  
  ActiveX 컨트롤의 ID입니다.  
   
 ##  <a name="getopenclipboardwindow"></a>  CWnd::GetOpenClipboardWindow  
@@ -3992,7 +3992,7 @@ static CWnd* PASCAL GetOpenClipboardWindow();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 현재 클립보드가 창의 핸들 열기 그렇지 않으면 **NULL**합니다.  
+ 함수가 성공 하면 현재 클립보드가 창의 핸들 열기 그렇지 않으면 NULL입니다.  
   
 ##  <a name="getowner"></a>  CWnd::GetOwner  
  창의 소유자에 대 한 포인터를 검색합니다.  
@@ -4020,7 +4020,7 @@ CWnd* GetParent() const;
  반환 값 섹션을 참조 [GetParent](http://msdn.microsoft.com/library/windows/desktop/ms633510) Windows sdk에서입니다.  
   
 ### <a name="remarks"></a>설명  
- `GetParent` 함수 (있는 경우) 직계 부모에 대 한 포인터를 반환 합니다. 반면,는 [GetParentOwner](#getparentowner) 함수 자식 창이 직계 부모 또는 소유자 창에 대 한 포인터를 반환 합니다 (없는 **WS_CHILD** 스타일). 자식 창 내에서 자식 창 있으면 `GetParent` 및 `GetParentOwner` 다른 결과 반환 합니다.  
+ `GetParent` 함수 (있는 경우) 직계 부모에 대 한 포인터를 반환 합니다. 반면,는 [GetParentOwner](#getparentowner) 함수 (없는 WS_CHILD 스타일) 자식 창 없는 가장 시급한 부모 또는 소유자 창에 대 한 포인터를 반환 합니다. 자식 창 내에서 자식 창 있으면 `GetParent` 및 `GetParentOwner` 다른 결과 반환 합니다.  
   
 ##  <a name="getparentframe"></a>  CWnd::GetParentFrame  
  부모 프레임 창을 검색 하려면이 멤버 함수를 호출 합니다.  
@@ -4030,7 +4030,7 @@ CFrameWnd* GetParentFrame() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 성공 하면 프레임 창에 대 한 포인터 그렇지 않으면 **NULL**합니다.  
+ 성공 하면 프레임 창에 대 한 포인터 그렇지 않으면 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
  멤버 함수까지 부모 체인을 검색 한 [CFrameWnd](../../mfc/reference/cframewnd-class.md) (또는 파생 클래스) 개체를 찾을 수 있습니다.  
@@ -4046,12 +4046,12 @@ CWnd* GetParentOwner() const;
  에 대 한 포인터는 `CWnd` 개체입니다. `CWnd` 개체가 핸들에 연결되지 않은 경우 임시 `CWnd` 개체를 만들어 연결합니다. 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.  
   
 ### <a name="remarks"></a>설명  
- `GetParentOwner` 자식 창 없는 직계 부모 또는 소유자 창에 대 한 포인터를 반환 합니다 (없는 **WS_CHILD** 스타일). 현재 소유자 창으로 설정할 수 [SetOwner](#setowner)합니다. 기본적으로 부모 창에 해당 소유자입니다.  
+ `GetParentOwner` 자식 창 (없는 WS_CHILD 스타일) 하지 않은 직계 부모 또는 소유자 창에 대 한 포인터를 반환 합니다. 현재 소유자 창으로 설정할 수 [SetOwner](#setowner)합니다. 기본적으로 부모 창에 해당 소유자입니다.  
   
  반면,는 [GetParent](#getparent) 함수 인지 자식 창 여부 직계 부모에 대 한 포인터를 반환 합니다. 자식 창 내에서 자식 창 있으면 `GetParent` 및 `GetParentOwner` 다른 결과 반환 합니다.  
   
 ##  <a name="getproperty"></a>  CWnd::GetProperty  
- 이 지정 된 ActiveX 컨트롤 속성을 가져오는 함수를 호출 `dwDispID`합니다.  
+ 이 지정 된 ActiveX 컨트롤 속성을 가져오는 함수를 호출 *dwDispID*합니다.  
   
 ```  
 void GetProperty(
@@ -4061,17 +4061,17 @@ void GetProperty(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwDispID`  
+ *dwDispID*  
  검색할 속성을 식별 합니다.  
   
- `vtProp`  
+ *vtProp*  
  검색할 속성의 유형을 지정 합니다. 가능한 값에 대 한 설명 섹션을 참조 하십시오. [coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)합니다.  
   
- `pvProp`  
- 하는 변수의 주소는 속성 값을 받게 됩니다. 지정한 형식과 일치 해야 `vtProp`합니다.  
+ *pvProp*  
+ 하는 변수의 주소는 속성 값을 받게 됩니다. 지정한 형식과 일치 해야 *vtProp*합니다.  
   
 ### <a name="remarks"></a>설명  
- **GetProperty** 통해 값을 반환 `pvProp`합니다.  
+ `GetProperty` 통해 값을 반환 *pvProp*합니다.  
   
 > [!NOTE]
 >  이 함수에 대해서만 호출 해야는 `CWnd` ActiveX 컨트롤을 나타내는 개체입니다.  
@@ -4089,16 +4089,16 @@ CHwndRenderTarget* GetRenderTarget();
  렌더링 대상 또는 NULL 포인터입니다.  
   
 ##  <a name="getsafehwnd"></a>  CWnd::GetSafeHwnd  
- 반환 `m_hWnd`, 또는 **NULL** 경우는 **이** 포인터가 **NULL**합니다.  
+ 반환 `m_hWnd`, 경우에 NULL 또는 **이** 포인터가 NULL입니다.  
   
 ```  
 HWND GetSafeHwnd() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 창에 대 한 창 핸들을 반환합니다. 반환 **NULL** 경우는 `CWnd` 창에 연결 되지 않은 하거나 함께 사용 하는 경우는 **NULL CWnd** 포인터입니다.  
+ 창에 대 한 창 핸들을 반환합니다. 없으면 NULL을 반환는 `CWnd` 창에 연결 되지 않은 null이 사용 되는 경우 또는 `CWnd` 포인터입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::SubclassWindow](#subclasswindow)합니다.  
   
 ##  <a name="getsafeowner"></a>  CWnd::GetSafeOwner  
@@ -4111,17 +4111,17 @@ static CWnd* GetSafeOwner(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParent`  
- 부모에 대 한 포인터 `CWnd` 창. 되었을 **NULL**합니다.  
+ *pParent*  
+ 부모에 대 한 포인터 `CWnd` 창. NULL이 될 수 있습니다.  
   
  *pWndTop*  
- 현재 위쪽에 있는 창에 대 한 포인터입니다. 되었을 **NULL**합니다.  
+ 현재 위쪽에 있는 창에 대 한 포인터입니다. NULL이 될 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
  지정된 된 창에 대 한 안전한 소유자에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
- 안전한 소유자는의 첫 번째 부모-자식 창이 `pParent`합니다. 경우 `pParent` 은 **NULL**, 스레드의 주 창 (통해 검색 [AfxGetMainWnd](../../mfc/reference/application-information-and-management.md#afxgetmainwnd)) 소유자를 찾는 데 사용 됩니다.  
+ 안전한 소유자는의 첫 번째 부모-자식 창이 *pParent*합니다. 경우 *pParent* 이 NULL 이면 스레드의 주 창 (통해 [AfxGetMainWnd](../../mfc/reference/application-information-and-management.md#afxgetmainwnd)) 소유자를 찾는 데 사용 됩니다.  
   
 > [!NOTE]
 >  이 함수를 사용 하 여 소유자 지정 하지 않으면 대화 상자 및 속성 시트에 대 한 올바른 소유자 창 결정 하는 프레임 워크 자체입니다.  
@@ -4134,18 +4134,18 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nBar`  
+ *nBar*  
  스크롤 막대의 형식을 지정합니다. 매개 변수는 다음 값 중 하나를 사용할 수 있습니다.  
   
-- **SB_HORZ** 가로 스크롤 막대의 위치를 검색 합니다.  
+- SB_HORZ 가로 스크롤 막대의 위치를 검색 합니다.  
   
-- **SB_VERT** 세로 스크롤 막대의 위치를 검색 합니다.  
+- SB_VERT 세로 스크롤 막대의 위치를 검색 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 형제 스크롤 막대 컨트롤 또는 **NULL** 없으면 합니다.  
+ 형제 스크롤 막대 컨트롤 또는 없으면 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 멤버 함수는 만들 때 스크롤 막대에서 작동 하지 않습니다는 **WS_HSCROLL** 또는 **WS_VSCROLL** 비트 창 만드는 동안 설정 됩니다. `CWnd` 이 함수의 구현은 단순히 반환 **NULL**합니다. 파생 클래스와 같은 `CView`설명된 하는 기능을 구현 합니다.  
+ 이 멤버 함수는 비트 WS_HSCROLL 또는 WS_VSCROLL 창 만드는 동안 설정 하는 경우 생성 되는 스크롤 막대에서 작동 하지 않습니다. `CWnd` 이 함수의 구현은 단순히 NULL을 반환 합니다. 파생 클래스와 같은 `CView`설명된 하는 기능을 구현 합니다.  
   
 ##  <a name="getscrollbarinfo"></a>  CWnd::GetScrollBarInfo  
  지정한 스크롤 막대에 대한 정보를 검색합니다.  
@@ -4157,7 +4157,7 @@ BOOL GetScrollBarInfo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `idObject`  
+ *idObject*  
  메뉴 개체를 지정합니다. 가능한 값 목록은 참조 [GetScrollBarInfo](http://msdn.microsoft.com/library/windows/desktop/bb787581)합니다.  
   
  *psbi*  
@@ -4180,23 +4180,23 @@ BOOL GetScrollInfo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nBar`  
- 스크롤 막대 컨트롤 또는 창에서 비클라이언트 영역의의 일부 인지 여부를 지정 합니다. 비클라이언트 영역의 일부인 경우 `nBar` 가로, 세로 스크롤 막대를 배치 되는 여부 또는 둘 다 나타냅니다. 다음 중 하나 여야 합니다.  
+ *nBar*  
+ 스크롤 막대 컨트롤 또는 창에서 비클라이언트 영역의의 일부 인지 여부를 지정 합니다. 비클라이언트 영역의 일부인 경우 *nBar* 가로, 세로 스크롤 막대를 배치 되는 여부 또는 둘 다 나타냅니다. 다음 중 하나 여야 합니다.  
   
-- **SB_CTL** 스크롤 막대 컨트롤에 대 한 매개 변수를 검색 합니다. `m_hWnd` 데이터 멤버는 스크롤 막대 컨트롤의 핸들 이어야 합니다.  
+- SB_CTL은 스크롤 막대 컨트롤에 대 한 매개 변수를 검색 합니다. `m_hWnd` 데이터 멤버는 스크롤 막대 컨트롤의 핸들 이어야 합니다.  
   
-- **SB_HORZ** 창의 표준 가로 스크롤 막대에 대 한 매개 변수를 검색 합니다.  
+- SB_HORZ 창의 표준 가로 스크롤 막대에 대 한 매개 변수를 검색 합니다.  
   
-- **SB_VERT** 창의 표준 세로 스크롤 막대에 대 한 매개 변수를 검색 합니다.  
+- SB_VERT 창의 표준 세로 스크롤 막대에 대 한 매개 변수를 검색 합니다.  
   
- `lpScrollInfo`  
+ *lpScrollInfo*  
  에 대 한 포인터는 [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) 구조입니다. 이 구조에 대 한 자세한 내용은 Windows SDK를 참조 하십시오.  
   
- `nMask`  
- 검색할 스크롤 막대 매개 변수를 지정 합니다. 기본값의 조합을 지정 **SIF_PAGE**, **SIF_POS**, **SIF_TRACKPOS**, 및 **SIF_RANGE**합니다. 참조 `SCROLLINFO` 대 한 자세한 내용은 *nMask* 값입니다.  
+ *nMask*  
+ 검색할 스크롤 막대 매개 변수를 지정 합니다. 기본은 SIF_PAGE, SIF_POS, SIF_TRACKPOS, 및 SIF_RANGE의 조합을 지정합니다. 참조 `SCROLLINFO` 대 한 자세한 내용은 *nMask* 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 메시지가 검색 된 값을 반환은 **TRUE**합니다. 그렇지 않으면 **FALSE**합니다.  
+ 메시지가 검색 된 값을 반환은 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
  `GetScrollInfo` 32 비트 스크롤 위치를 사용 하려면 응용 프로그램이 있습니다.  
@@ -4213,12 +4213,12 @@ int GetScrollLimit(int nBar);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nBar`  
+ *nBar*  
  스크롤 막대의 형식을 지정합니다. 매개 변수는 다음 값 중 하나를 사용할 수 있습니다.  
   
-- **SB_HORZ** 가로 스크롤 막대의 스크롤 한계를 검색 합니다.  
+- SB_HORZ 가로 스크롤 막대의 스크롤 한계를 검색 합니다.  
   
-- **SB_VERT** 세로 스크롤 막대의 스크롤 한계를 검색 합니다.  
+- SB_VERT 세로 스크롤 막대의 스크롤 한계를 검색 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공 하면 스크롤 막대의 최대 위치 지정 그렇지 않으면 0입니다.  
@@ -4231,12 +4231,12 @@ int GetScrollPos(int nBar) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nBar`  
+ *nBar*  
  스크롤 막대 검토를 지정 합니다. 매개 변수는 다음 값 중 하나를 사용할 수 있습니다.  
   
-- **SB_HORZ** 가로 스크롤 막대의 위치를 검색 합니다.  
+- SB_HORZ 가로 스크롤 막대의 위치를 검색 합니다.  
   
-- **SB_VERT** 세로 스크롤 막대의 위치를 검색 합니다.  
+- SB_VERT 세로 스크롤 막대의 위치를 검색 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공 하면, 스크롤 막대의 스크롤 상자의 현재 위치를 지정 합니다. 그렇지 않으면 0입니다.  
@@ -4245,7 +4245,7 @@ int GetScrollPos(int nBar) const;
  현재 위치가 현재 스크롤 범위에 따라 달라 지는 상대적 값입니다. 예를 들어 스크롤 범위 50-100 이며 스크롤 상자는 막대 중에 현재 위치는 75입니다.  
   
 ##  <a name="getscrollrange"></a>  CWnd::GetScrollRange  
- 지정된 된 스크롤 막대에 대 한 현재 최소 및 최대 스크롤 막대 위치에서 지정한 위치에 복사 `lpMinPos` 및 `lpMaxPos`합니다.  
+ 지정된 된 스크롤 막대에 대 한 현재 최소 및 최대 스크롤 막대 위치에서 지정한 위치에 복사 *lpMinPos* 및 *lpMaxPos*합니다.  
   
 ```  
 void GetScrollRange(
@@ -4255,21 +4255,21 @@ void GetScrollRange(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nBar`  
+ *nBar*  
  스크롤 막대 검토를 지정 합니다. 매개 변수는 다음 값 중 하나를 사용할 수 있습니다.  
   
-- **SB_HORZ** 가로 스크롤 막대의 위치를 검색 합니다.  
+- SB_HORZ 가로 스크롤 막대의 위치를 검색 합니다.  
   
-- **SB_VERT** 세로 스크롤 막대의 위치를 검색 합니다.  
+- SB_VERT 세로 스크롤 막대의 위치를 검색 합니다.  
   
- `lpMinPos`  
+ *lpMinPos*  
  최소 위치를 수신 하는 정수 변수를 가리킵니다.  
   
- `lpMaxPos`  
+ *lpMaxPos*  
  최대 위치를 수신 하는 정수 변수를 가리킵니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `CWnd` 스크롤 막대에 없는 경우 `GetScrollRange` 멤버 함수는 0 ~ 복사 `lpMinPos` 및 `lpMaxPos`합니다.  
+ 경우 `CWnd` 스크롤 막대에 없는 경우 `GetScrollRange` 멤버 함수는 0 ~ 복사 *lpMinPos* 및 *lpMaxPos*합니다.  
   
  표준 스크롤 막대의 기본 범위는 0에서 100 까지입니다. 스크롤 막대 컨트롤에 대 한 기본 범위는 빈 (두 값은 0 임).  
   
@@ -4291,11 +4291,11 @@ CMenu* GetSystemMenu(BOOL bRevert) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bRevert`  
- 수행할 동작을 지정 합니다. 경우 `bRevert` 은 **FALSE**, `GetSystemMenu` 에서 현재 사용 중인 컨트롤 메뉴의 복사본에 대 한 핸들을 반환 합니다. 이 복사본은 컨트롤 메뉴 처음 동일 하지만 수정할 수 있습니다. 경우 `bRevert` 은 **TRUE**, `GetSystemMenu` 컨트롤 메뉴를 기본 상태로 다시 설정 합니다. 앞의 경우에 따라 수정 메뉴, any, 손상 된 경우 제어 합니다. 이 경우 반환 값이 정의 되지 않습니다.  
+ *bRevert*  
+ 수행할 동작을 지정 합니다. 경우 *bRevert* 가 FALSE 이면 `GetSystemMenu` 에서 현재 사용 중인 컨트롤 메뉴의 복사본에 대 한 핸들을 반환 합니다. 이 복사본은 컨트롤 메뉴 처음 동일 하지만 수정할 수 있습니다. 경우 *bRevert* 가 TRUE 이면 `GetSystemMenu` 컨트롤 메뉴를 기본 상태로 다시 설정 합니다. 앞의 경우에 따라 수정 메뉴, any, 손상 된 경우 제어 합니다. 이 경우 반환 값이 정의 되지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  
- 경우에 컨트롤 메뉴의 복사본을 식별 `bRevert` 은 **FALSE**합니다. 경우 `bRevert` 은 **TRUE**, 반환 값이 정의 되지 않습니다.  
+ 경우에 컨트롤 메뉴의 복사본을 식별 *bRevert* 은 FALSE입니다. 경우 *bRevert* 가 TRUE 이면 반환 값이 정의 되지 않습니다.  
   
  반환된 된 포인터는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다.  
   
@@ -4304,11 +4304,11 @@ CMenu* GetSystemMenu(BOOL bRevert) const;
   
  반환 된 포인터는 `GetSystemMenu` 멤버 함수에 사용할 수는 [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu), [CMenu::InsertMenu](../../mfc/reference/cmenu-class.md#insertmenu), 또는 [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu) 하는 함수 컨트롤 메뉴를 변경 합니다.  
   
- 컨트롤 메뉴와 같은 다양 한 ID 값으로 식별 하는 항목을 처음 포함 **SC_CLOSE**, **SC_MOVE**, 및 **SC_SIZE**합니다. 컨트롤 메뉴에 있는 항목 생성 [WM_SYSCOMMAND](#onsyscommand) 메시지입니다. 모든 미리 정의 된 컨트롤 메뉴 항목은 0xf000 보다 큰 ID 번호가 있습니다. 컨트롤 메뉴에 항목을 추가 하는 응용 프로그램, F000 미만의 ID 번호가 사용 해야 합니다.  
+ 컨트롤 메뉴에는 처음 SC_SIZE SC_CLOSE, SC_MOVE, 등 다양 한 ID 값으로 식별 하는 항목이 포함 됩니다. 컨트롤 메뉴에 있는 항목 생성 [WM_SYSCOMMAND](#onsyscommand) 메시지입니다. 모든 미리 정의 된 컨트롤 메뉴 항목은 0xf000 보다 큰 ID 번호가 있습니다. 컨트롤 메뉴에 항목을 추가 하는 응용 프로그램, F000 미만의 ID 번호가 사용 해야 합니다.  
   
  Windows 수 자동으로 없게 항목 표준 컨트롤 메뉴에 있습니다. `CWnd` 선택 영역이 나 사용할 수 없는 자체 응답 하 여 수행할 수는 [WM_INITMENU](#oninitmenu) 전송 되는 모든 메뉴가 표시 되기 전에 메시지입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#99](../../mfc/reference/codesnippet/cpp/cwnd-class_39.cpp)]  
   
 ##  <a name="gettitlebarinfo"></a>  CWnd::GetTitleBarInfo  
@@ -4338,7 +4338,7 @@ CFrameWnd* GetTopLevelFrame() const;
  반환된 된 포인터는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `CWnd` 에 연결 된 창이, 또는 최상위 부모는 아니므로 [CFrameWnd](../../mfc/reference/cframewnd-class.md)-파생 된 개체를이 함수는 반환 **NULL**합니다.  
+ 경우 `CWnd` 에 연결 된 창이, 또는 최상위 부모는 아니므로 [CFrameWnd](../../mfc/reference/cframewnd-class.md)-파생 된 개체를이 함수는 NULL을 반환 합니다.  
   
 ##  <a name="gettoplevelowner"></a>  CWnd::GetTopLevelOwner  
  최상위 창을 검색 하려면이 멤버 함수를 호출 합니다.  
@@ -4351,7 +4351,7 @@ CWnd* GetTopLevelOwner() const;
  최상위 창을 식별합니다. 반환된 된 포인터는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다.  
   
 ### <a name="remarks"></a>설명  
- 최상위 데스크톱의 자식 창이입니다. 경우 `CWnd` 에 연결 된 창이,이 함수는 반환 **NULL**합니다.  
+ 최상위 데스크톱의 자식 창이입니다. 경우 `CWnd` 에 연결 된 창이,이 함수는 NULL을 반환 합니다.  
   
 ##  <a name="gettoplevelparent"></a>  CWnd::GetTopLevelParent  
  창의 최상위 부모를 검색 하려면이 멤버 함수를 호출 합니다.  
@@ -4376,12 +4376,12 @@ CWnd* GetTopWindow() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 최상위 자식 창에 식별 한 `CWnd` 자식 창의 연결 된 목록입니다. 자식 창이 없는지 존재 하는 경우이 값은 **NULL**합니다.  
+ 최상위 자식 창에 식별 한 `CWnd` 자식 창의 연결 된 목록입니다. 자식 창이 없는지 존재 하는 경우 값은 NULL입니다.  
   
  반환된 된 포인터는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `CWnd` 에 자식이 없습니다.이 함수는 반환 **NULL**합니다.  
+ 경우 `CWnd` 자식이 없으면,이 함수는 NULL을 반환 합니다.  
   
 ##  <a name="getupdaterect"></a>  CWnd::GetUpdateRect  
  업데이트 영역을 완전히 둘러싸는 가장 작은 사각형의 좌표를 검색 합니다.  
@@ -4393,30 +4393,30 @@ BOOL GetUpdateRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
+ *lpRect*  
  가리키는 `CRect` 개체 또는 [RECT 구조체](../../mfc/reference/rect-structure1.md) 업데이트 영역을 포함 하는 업데이트의 클라이언트 좌표를 수신 하는입니다.  
   
- 이 매개 변수를 설정 **NULL** 업데이트 영역에 존재 하는지 확인 하는 `CWnd`합니다. 경우 `lpRect` 은 **NULL**, `GetUpdateRect` 업데이트 영역 존재 하 고 한 경우 0은 그렇지 않은 경우 멤버 함수를 0이 아닌 반환 합니다. 결정 하는 방법을 제공 여부는 `WM_PAINT` 메시지가 잘못 된 영역에서 발생 합니다. 이 매개 변수를 설정 하지 마십시오 **NULL** 3.0 및 이전 버전 Windows에서 합니다.  
+ 이 매개 변수 업데이트 영역에 존재 하는지 확인 하는 NULL로 설정 된 `CWnd`합니다. 경우 *lpRect* 가 null 인 경우는 `GetUpdateRect` 업데이트 영역 존재 하 고 한 경우 0은 그렇지 않은 경우 멤버 함수를 0이 아닌 반환 합니다. 이 잘못 된 영역에서 WM_PAINT 메시지 발생 여부를 결정 하는 방법을 제공 합니다. Windows 버전 3.0에서에서 NULL 및 이전 버전에이 매개 변수를 설정 하지 마십시오.  
   
- `bErase`  
+ *bErase*  
  업데이트 영역에 배경 지울 수 있는지 여부를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  업데이트 영역 상태를 지정합니다. 값 0이 아닌 업데이트 영역; 비어 있지 않습니다. 그렇지 않으면 0입니다.  
   
- 경우는 `lpRect` 로 설정 된 **NULL**, 반환 값은 업데이트 영역에 있는 경우 0이 아니고 그렇지 않으면 0입니다.  
+ 경우는 *lpRect* 매개 변수가 NULL로 설정 되어 있으면 반환 값이 업데이트 영역에 있는 경우 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `CWnd` 사용 하 여 만든는 **CS_OWNDC** 스타일과 매핑 모드 않습니다 `MM_TEXT`, `GetUpdateRect` 멤버 함수는 논리적 좌표에서 사각형을 제공 합니다. 그렇지 않으면 `GetUpdateRect` 좌표 클라이언트에는 사각형을 제공 합니다. 업데이트 영역이 경우 `GetUpdateRect` 비어 있도록 (모든 좌표를 0으로 설정) 사각형을 설정 합니다.  
+ 경우 `CWnd` 만들어진 CS_OWNDC 스타일 할당과 매핑 모드는 MM_TEXT는 `GetUpdateRect` 멤버 함수는 논리적 좌표에서 사각형을 제공 합니다. 그렇지 않으면 `GetUpdateRect` 좌표 클라이언트에는 사각형을 제공 합니다. 업데이트 영역이 경우 `GetUpdateRect` 비어 있도록 (모든 좌표를 0으로 설정) 사각형을 설정 합니다.  
   
- `bErase` 매개 변수를 지정 하는지 여부를 `GetUpdateRect` 업데이트 영역 배경의 삭제 해야 합니다. 경우 `bErase` 은 **TRUE** 및 업데이트 영역 비어 있지 않은, 백그라운드 삭제 됩니다. 백그라운드 지울 `GetUpdateRect` 보냅니다는 [WM_ERASEBKGND](#onerasebkgnd) 메시지입니다.  
+ *bErase* 매개 변수를 지정 하는지 여부를 `GetUpdateRect` 업데이트 영역 배경의 삭제 해야 합니다. 경우 *bErase* 가 TRUE이 고 업데이트 영역이 비어 있지 않은, 백그라운드 삭제 됩니다. 백그라운드 지울 `GetUpdateRect` 보냅니다는 [WM_ERASEBKGND](#onerasebkgnd) 메시지입니다.  
   
  업데이트 사각형이 하 여 검색 된 [BeginPaint](#beginpaint) 멤버 함수는 동일 하 여 검색는 `GetUpdateRect` 멤버 함수입니다.  
   
  `BeginPaint` 멤버 함수 자동으로 유효성을 검사, 업데이트 영역에 대 한 호출 하므로 `GetUpdateRect` 에 대 한 호출 바로 다음 `BeginPaint` 빈 업데이트 영역을 검색 합니다.  
   
 ##  <a name="getupdatergn"></a>  CWnd::GetUpdateRgn  
- 로 식별 되는 영역을 업데이트 영역을 검색 `pRgn`합니다.  
+ 로 식별 되는 영역을 업데이트 영역을 검색 *pRgn*합니다.  
   
 ```  
 int GetUpdateRgn(
@@ -4425,22 +4425,22 @@ int GetUpdateRgn(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pRgn`  
+ *pRgn*  
  업데이트 영역을 식별합니다.  
   
- `bErase`  
- 백그라운드를 삭제 하 고 자식 창의 비클라이언트 영역에 그려질 수 있는지 여부를 지정 합니다. 값이 **FALSE**, 없습니다 그리기 수행 됩니다.  
+ *bErase*  
+ 백그라운드를 삭제 하 고 자식 창의 비클라이언트 영역에 그려질 수 있는지 여부를 지정 합니다. 값이 FALSE 이면 없습니다 그리기 수행 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  결과 영역의 형식을 나타내는 짧은 정수 플래그를 지정 합니다. 값은 다음 중 하나를 사용할 수 있습니다.  
   
-- **SIMPLEREGION** 지역에 겹치는 테두리가 없습니다.  
+- SIMPLEREGION 지역에 겹치는 테두리가 없습니다.  
   
-- **COMPLEXREGION** 테두리가 겹치는 영역에 있습니다.  
+- 지역 COMPLEXREGION 테두리가 겹치는 있습니다.  
   
-- **NULLREGION** 영역이 비어 있습니다.  
+- 지역 NULLREGION 비어 있습니다.  
   
-- **오류** 생성 된 지역이 없습니다.  
+- 오류가 없는 영역을 만들었습니다.  
   
 ### <a name="remarks"></a>설명  
  이 영역의 좌표는 왼쪽 위 모서리 (클라이언트 좌표)를 기준으로 합니다.  
@@ -4448,27 +4448,27 @@ int GetUpdateRgn(
  [BeginPaint](#beginpaint) 멤버 함수 자동으로 유효성을 검사, 업데이트 영역에 대 한 호출 하므로 `GetUpdateRgn` 에 대 한 호출 바로 다음 `BeginPaint` 빈 업데이트 영역을 검색 합니다.  
   
 ##  <a name="getwindow"></a>  CWnd::GetWindow  
- 요청 창에 대 한 포인터를 반환 하거나 **NULL** 없으면 합니다.  
+ 요청 창 또는 NULL이 아닌 경우에 대 한 포인터를 반환 합니다.  
   
 ```  
 CWnd* GetWindow(UINT nCmd) const;  
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nCmd`  
+ *nCmd*  
  간의 관계를 지정 `CWnd` 및 반환 된 창입니다. 다음 값 중 하나가 걸릴 수 있습니다.  
   
-- **GW_CHILD** 식별 된 `CWnd` 첫 번째 자식 창.  
+- GW_CHILD 식별 된 `CWnd` 첫 번째 자식 창.  
   
-- **GW_HWNDFIRST** 경우 `CWnd` 자식 창, 첫 번째 형제 창을 반환 합니다. 그렇지 않은 경우 목록에서 첫 번째 최상위 창을 반환합니다.  
+- GW_HWNDFIRST 경우 `CWnd` 자식 창, 첫 번째 형제 창을 반환 합니다. 그렇지 않은 경우 목록에서 첫 번째 최상위 창을 반환합니다.  
   
-- **GW_HWNDLAST** 경우 `CWnd` 자식 창, 마지막 형제 창을 반환 합니다. 그렇지 않은 경우 목록에서 마지막 최상위 창을 반환합니다.  
+- GW_HWNDLAST 경우 `CWnd` 자식 창, 마지막 형제 창을 반환 합니다. 그렇지 않은 경우 목록에서 마지막 최상위 창을 반환합니다.  
   
-- **GW_HWNDNEXT** 창 관리자 목록에는 다음 창을 반환 합니다.  
+- GW_HWNDNEXT 창 관리자의 목록에서 다음 창을 반환합니다.  
   
-- **GW_HWNDPREV** 창 관리자 목록에는 이전 창을 반환 합니다.  
+- GW_HWNDPREV 창 관리자의 목록에서 이전 창을 반환합니다.  
   
-- **GW_OWNER** 식별 된 `CWnd` 소유자입니다.  
+- GW_OWNER 식별 하는 `CWnd` 소유자입니다.  
   
 ### <a name="return-value"></a>반환 값  
  반환된 된 포인터는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다.  
@@ -4501,7 +4501,7 @@ CDC* GetWindowDC();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 함수가 성공 하면 지정된 된 창에 대 한 디스플레이 컨텍스트를 식별 합니다. 그렇지 않으면 **NULL**합니다.  
+ 함수가 성공 하면 지정된 된 창에 대 한 디스플레이 컨텍스트를 식별 합니다. 그렇지 않으면 NULL입니다.  
   
  반환된 된 포인터는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다. [ReleaseDC](#releasedc) 성공한 각 호출에 한 번씩 호출 해야 `GetWindowDC`합니다.  
   
@@ -4548,24 +4548,24 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpwndpl`  
+ *lpwndpl*  
  가리키는 `WINDOWPLACEMENT` 구조체 표시 상태 및 위치 정보입니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공하면 0이 아니고 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- **플래그** 의 멤버는 [WINDOWPLACEMENT](../../mfc/reference/windowplacement-structure.md) 이 함수에 의해 검색 되는 구조는 항상 0입니다. 경우 `CWnd` 최대화는 **showCmd** 소속 `WINDOWPLACEMENT` 은 **SW_SHOWMAXIMIZED**합니다. 창이 최소화 되는 경우 **SW_SHOWMINIMIZED 합니다.** **는 SW_SHOWNORMAL** 그렇지 않은 경우.  
+ `flags` 의 멤버는 [WINDOWPLACEMENT](../../mfc/reference/windowplacement-structure.md) 이 함수에 의해 검색 되는 구조는 항상 0입니다. 경우 `CWnd` 최대화는 `showCmd` 소속 `WINDOWPLACEMENT` SW_SHOWMAXIMIZED 됩니다. 창이 최소화 되 경우 SW_SHOWMINIMIZED입니다. 그렇지 않으면는 SW_SHOWNORMAL를입니다.  
   
 ##  <a name="getwindowrect"></a>  CWnd::GetWindowRect  
- 복사의 경계 사각형의 크기는 `CWnd` 가리키는 구조에 대 한 개체 `lpRect`합니다.  
+ 복사의 경계 사각형의 크기는 `CWnd` 가리키는 구조에 대 한 개체 *lpRect*합니다.  
   
 ```  
 void GetWindowRect(LPRECT lpRect) const;  
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
+ *lpRect*  
  가리키는 `CRect` 개체 또는 [RECT 구조체](../../mfc/reference/rect-structure1.md) 왼쪽 및 오른쪽 아래 모퉁이의 화면 좌표를 받습니다.  
   
 ### <a name="remarks"></a>설명  
@@ -4579,19 +4579,19 @@ int GetWindowRgn(HRGN hRgn)const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hRgn`  
+ *hRgn*  
  창 영역에 대 한 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
  반환 값이 함수를 가져옵니다 영역의 형식을 지정 합니다. 다음 값 중 하나일 수 있습니다.  
   
-- **NULLREGION** 영역이 비어 있습니다.  
+- 지역 NULLREGION 비어 있습니다.  
   
-- **SIMPLEREGION** 영역에는 단일 사각형입니다.  
+- SIMPLEREGION 영역에는 단일 사각형입니다.  
   
-- **COMPLEXREGION** 지역 둘 이상의 사각형입니다.  
+- COMPLEXREGION 영역에 둘 이상의 사각형입니다.  
   
-- **오류** 오류가 발생 했습니다; 영역 영향을 받지 않습니다.  
+- 동안 오류가 발생 했습니다. 지역 영향을 받지 않습니다.  
   
 ### <a name="remarks"></a>설명  
  창 영역 운영 체제에서 그리기를 허용 하는 위치 창 내에서 영역을 결정 합니다. 운영 체제 창의 창 영역 외부에 있는 모든 부분을 표시 되지 않습니다.  
@@ -4601,7 +4601,7 @@ int GetWindowRgn(HRGN hRgn)const;
  호출 하는 창의 창 영역을 설정 하려면 [CWnd::SetWindowRgn](#setwindowrgn)합니다.  
   
 ##  <a name="getwindowtext"></a>  CWnd::GetWindowText  
- 복사본의 `CWnd` 가리키는 버퍼에 제목 (경우 하나) 캡션 `lpszStringBuf` 또는 대상 문자열에 `rString`합니다.  
+ 복사본의 `CWnd` 가리키는 버퍼에 제목 (경우 하나) 캡션 *lpszStringBuf* 또는 대상 문자열에 *rString*합니다.  
   
 ```  
 int GetWindowText(
@@ -4613,13 +4613,13 @@ void GetWindowText(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszStringBuf`  
+ *lpszStringBuf*  
  창의 제목이의 복사 된 문자열을 수신 하는 버퍼를 가리킵니다.  
   
- `nMaxCount`  
- Null 종결 문자를 포함 하 여 버퍼에 복사할 문자의 최대 수를 지정 합니다. 문자열에 지정 된 문자 수보다 길면 `nMaxCount`, 아니면 잘립니다.  
+ *nMaxCount*  
+ Null 종결 문자를 포함 하 여 버퍼에 복사할 문자의 최대 수를 지정 합니다. 문자열에 지정 된 문자 수보다 길면 *nMaxCount*를 자릅니다.  
   
- `rString`  
+ *rString*  
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) 창의 제목이의 복사 된 문자열을 수신 하는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -4630,7 +4630,7 @@ void GetWindowText(
   
  이 멤버 함수는 [WM_GETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632627) 에 보내야 하는 메시지는 `CWnd` 개체입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::SetWindowText](#setwindowtext)합니다.  
   
 ##  <a name="getwindowtextlength"></a>  CWnd::GetWindowTextLength  
@@ -4648,7 +4648,7 @@ int GetWindowTextLength() const;
   
  이 멤버 함수는 [WM_GETTEXTLENGTH](http://msdn.microsoft.com/library/windows/desktop/ms632628) 에 보내야 하는 메시지는 `CWnd` 개체입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::SetWindowText](#setwindowtext)합니다.  
   
 ##  <a name="hidecaret"></a>  CWnd::HideCaret  
@@ -4674,28 +4674,28 @@ BOOL HiliteMenuItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pMenu`  
+ *pMenu*  
  강조 표시 항목이 있는 최상위 메뉴를 식별 합니다.  
   
- `nIDHiliteItem`  
- 메뉴 항목의 값에 따라 선택 된을 지정 하는 `nHilite` 매개 변수입니다.  
+ *nIDHiliteItem*  
+ 메뉴 항목의 값에 따라 선택 된을 지정 하는 *nHilite* 매개 변수입니다.  
   
- `nHilite`  
- 메뉴 항목이 강조 표시 됩니다 또는 제거 강조 표시 여부를 지정 합니다. 조합 수 **MF_HILITE** 또는 **MF_UNHILITE** 와 **MF_BYCOMMAND** 또는 **MF_BYPOSITION**합니다. 비트 OR 연산자를 사용 하 여 값을 결합할 수 있습니다. 이러한 값에는 다음과 같은 의미가 있습니다.  
+ *nHilite*  
+ 메뉴 항목이 강조 표시 됩니다 또는 제거 강조 표시 여부를 지정 합니다. MF_HILITE MF_BYCOMMAND 또는 MF_BYPOSITION MF_UNHILITE는 결합 한 조합일 수 있습니다. 비트 OR 연산자를 사용 하 여 값을 결합할 수 있습니다. 이러한 값에는 다음과 같은 의미가 있습니다.  
   
-- **MF_BYCOMMAND** Interprets `nIDHiliteItem` 메뉴 항목 ID (기본 해석)으로 기록 합니다.  
+- MF_BYCOMMAND 해석 *nIDHiliteItem* 메뉴 항목 ID (기본 해석)으로 기록 합니다.  
   
-- **MF_BYPOSITION** Interprets `nIDHiliteItem` 메뉴 항목의 0부터 시작 오프셋입니다.  
+- MF_BYPOSITION 해석 *nIDHiliteItem* 메뉴 항목의 0부터 시작 오프셋입니다.  
   
-- **MF_HILITE** 항목이 강조 표시 합니다. 이 값을 지정 하지 않은 경우 강조 표시 된 항목에서 제거 됩니다.  
+- MF_HILITE 항목이 강조 표시 합니다. 이 값을 지정 하지 않은 경우 강조 표시 된 항목에서 제거 됩니다.  
   
-- **MF_UNHILITE** 항목에서 강조 표시를 제거 합니다.  
+- MF_UNHILITE 항목에서 강조 표시를 제거 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  메뉴 항목을 강조 표시 된 여부를 지정 합니다. 해당 항목이 강조 표시 된; 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- **MF_HILITE** 및 **MF_UNHILITE** 함께 사용할 수 없습니다;이 멤버 함수에만 플래그를 사용할 수는 [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu) 멤버 함수입니다.  
+ MF_HILITE 및 MF_UNHILITE 플래그;이 멤버 함수 에서만 사용할 수 있습니다. 함께 사용할 수 없습니다는 [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu) 멤버 함수입니다.  
   
 ##  <a name="htmlhelp"></a>  CWnd::HtmlHelp  
  HTMLHelp 응용 프로그램을 호출 하려면이 함수를 호출 합니다.  
@@ -4707,11 +4707,11 @@ virtual void HtmlHelp(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwData`  
- 추가 데이터를 지정합니다. 값에 따라 사용 되는 값은 `nCmd` 매개 변수입니다.  
+ *dwData*  
+ 추가 데이터를 지정합니다. 값에 따라 사용 되는 값은 *nCmd* 매개 변수입니다.  
   
- `nCmd`  
- 요청한 도움말의 형식을 지정합니다. 가능한 값 목록과 미치는 영향에 대 한는 `dwData` 매개 변수 참조는 `uCommand` Windows SDK에 HTML 도움말 API 참조에 설명 된 매개 변수입니다.  
+ *nCmd*  
+ 요청한 도움말의 형식을 지정합니다. 가능한 값 목록과 미치는 영향에 대 한는 *dwData* 매개 변수 참조는 *uCommand* Windows SDK에 HTML 도움말 API 참조에 설명 된 매개 변수입니다.  
   
 ### <a name="remarks"></a>설명  
  참조 [CWinApp::HtmlHelp](../../mfc/reference/cwinapp-class.md#htmlhelp) 자세한 정보에 대 한 합니다.  
@@ -4734,17 +4734,17 @@ void Invalidate(BOOL bErase = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bErase`  
+ *bErase*  
  업데이트 영역 내에서 배경 지울 수 있는지 여부를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
- 클라이언트 영역 때 그리기를 위해 표시 되어 다음 [WM_PAINT](#onpaint) 메시지가 발생 합니다. 지역 수 유효성도 검사 해야 하기 전에 `WM_PAINT` 메시지가 발생 하 여는 [ValidateRect](#validaterect) 또는 [ValidateRgn](#validatergn) 멤버 함수입니다.  
+ 클라이언트 영역 때 그리기를 위해 표시 되어 다음 [WM_PAINT](#onpaint) 메시지가 발생 합니다. 영역도 유효성을 검사할 수 WM_PAINT 메시지에서 발생 하기 전에 [ValidateRect](#validaterect) 또는 [ValidateRgn](#validatergn) 멤버 함수입니다.  
   
- `bErase` 매개 변수 업데이트 영역 내에서 백그라운드 업데이트 영역을 처리할 때 삭제할 인지를 지정 합니다. 경우 `bErase` 은 **TRUE**, 백그라운드 지워집니다 때는 [BeginPaint](#beginpaint) 경우 멤버 함수를 호출할 `bErase` 은 **FALSE**, 백그라운드 유지 됩니다. 변경 되지 않습니다. 경우 `bErase` 은 **TRUE** 일부나 업데이트 영역에 대 한 특정된 부분에 뿐 아니라 전체 지역에 배경 지워집니다.  
+ *bErase* 매개 변수 업데이트 영역 내에서 백그라운드 업데이트 영역을 처리할 때 삭제할 인지를 지정 합니다. 경우 *bErase* 가 TRUE 이면 백그라운드 때 지워집니다는 [BeginPaint](#beginpaint) 경우 멤버 함수를 호출할 *bErase* 가 FALSE 이면 변경 하지 않고 백그라운드 유지 됩니다. 경우 *bErase* 부분의 특정된 부분에 뿐 아니라 전체 지역에 백그라운드 업데이트 영역을 지우고 TRUE입니다.  
   
  Windows에서는 보냅니다는 [WM_PAINT](#onpaint) 때마다 메시지는 `CWnd` 업데이트 영역에 비어 있지 않으며 해당 창에 대 한 응용 프로그램 큐에 있는 다른 메시지가 없는 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::UpdateWindow](#updatewindow)합니다.  
   
 ##  <a name="invalidaterect"></a>  CWnd::InvalidateRect  
@@ -4757,16 +4757,16 @@ void InvalidateRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
- 가리키는 `CRect` 개체 또는 [RECT 구조체](../../mfc/reference/rect-structure1.md) 업데이트 영역에 추가할 (클라이언트 좌표로) 사각형을 포함 하는 합니다. 경우 `lpRect` 은 **NULL**, 전체 클라이언트 영역에 추가 됩니다.  
+ *lpRect*  
+ 가리키는 `CRect` 개체 또는 [RECT 구조체](../../mfc/reference/rect-structure1.md) 업데이트 영역에 추가할 (클라이언트 좌표로) 사각형을 포함 하는 합니다. 경우 *lpRect* 가 NULL 이면 전체 클라이언트 영역에 추가 됩니다.  
   
- `bErase`  
+ *bErase*  
  업데이트 영역 내에서 배경 지울 수 있는지 여부를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
- 그려야 하는 경우 무효화 된 사각형의 업데이트 영역에 다른 모든 영역 함께 표시 되어 다음 [WM_PAINT](#onpaint) 메시지가 전송 됩니다. 지역 처리 될 때까지 업데이트 영역에 무효화 된 영역 누적 될 때 다음 `WM_PAINT` 호출이 발생 지역에 따라 유효성이 검사 될 때까지 또는 [ValidateRect](#validaterect) 또는 [ValidateRgn](#validatergn) 멤버 함수입니다.  
+ 그려야 하는 경우 무효화 된 사각형의 업데이트 영역에 다른 모든 영역 함께 표시 되어 다음 [WM_PAINT](#onpaint) 메시지가 전송 됩니다. 무효화 된 영역 지역 다음 WM_PAINT 호출이 발생할 때 처리 될 때까지 또는 지역에 따라 유효성이 검사 될 때까지 업데이트 영역에 누적 된 [ValidateRect](#validaterect) 또는 [ValidateRgn](#validatergn) 멤버 함수입니다.  
   
- `bErase` 매개 변수 업데이트 영역 내에서 백그라운드 업데이트 영역을 처리할 때 삭제할 인지를 지정 합니다. 경우 `bErase` 은 **TRUE**, 백그라운드 지워집니다 때는 [BeginPaint](#beginpaint) 경우 멤버 함수를 호출할 `bErase` 은 **FALSE**, 백그라운드 유지 됩니다. 변경 되지 않습니다. 경우 `bErase` 은 **TRUE** 일부나 업데이트 영역에 대 한 전체 지역에 배경 지워지면 뿐 아니라 특정된 부분에서에서 합니다.  
+ *bErase* 매개 변수 업데이트 영역 내에서 백그라운드 업데이트 영역을 처리할 때 삭제할 인지를 지정 합니다. 경우 *bErase* 가 TRUE 이면 백그라운드 때 지워집니다는 [BeginPaint](#beginpaint) 경우 멤버 함수를 호출할 *bErase* 가 FALSE 이면 변경 하지 않고 백그라운드 유지 됩니다. 경우 *bErase* 뿐 아니라 특정된 부분에서에서 부분의 전체 지역에 백그라운드 업데이트 영역을 지우고 TRUE입니다.  
   
  Windows에서는 보냅니다는 [WM_PAINT](#onpaint) 때마다 메시지는 `CWnd` 업데이트 영역에 비어 있지 않으며 해당 창에 대 한 응용 프로그램 큐에 있는 다른 메시지가 없는 합니다.  
   
@@ -4780,23 +4780,23 @@ void InvalidateRgn(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pRgn`  
- 에 대 한 포인터는 [CRgn](../../mfc/reference/crgn-class.md) 업데이트 영역에 추가할 영역을 식별 하는 개체입니다. 클라이언트 좌표를 갖는 지역 간주 됩니다. 이 매개 변수가 **NULL**, 전체 클라이언트 영역 업데이트 영역에 추가 됩니다.  
+ *pRgn*  
+ 에 대 한 포인터는 [CRgn](../../mfc/reference/crgn-class.md) 업데이트 영역에 추가할 영역을 식별 하는 개체입니다. 클라이언트 좌표를 갖는 지역 간주 됩니다. 이 매개 변수가 NULL 이면 전체 클라이언트 영역 업데이트 영역에 추가 됩니다.  
   
- `bErase`  
+ *bErase*  
  업데이트 영역 내에서 배경 지울 수 있는지 여부를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
- 업데이트 영역에 다른 모든 영역 함께 무효화 된 영역을 그려야 하는 경우 표시 됩니다는 [WM_PAINT](#onpaint) 메시지가 다음 전송 됩니다. 지역 처리 될 때까지 업데이트 영역에 무효화 된 영역 누적 될 때는 `WM_PAINT` 다음 메시지를 보낼 지역에 따라 유효성이 검사 될 때까지 또는 [ValidateRect](#validaterect) 또는 [ValidateRgn](#validatergn) 멤버 함수입니다.  
+ 업데이트 영역에 다른 모든 영역 함께 무효화 된 영역을 그려야 하는 경우 표시 됩니다는 [WM_PAINT](#onpaint) 메시지가 다음 전송 됩니다. 무효화 된 영역 옆 WM_PAINT 메시지를 보내면 지역 처리 될 때까지 또는 지역에 따라 유효성이 검사 될 때까지 업데이트 영역에 누적 된 [ValidateRect](#validaterect) 또는 [ValidateRgn](#validatergn) 멤버 함수입니다.  
   
- `bErase` 매개 변수 업데이트 영역 내에서 백그라운드 업데이트 영역을 처리할 때 삭제할 인지를 지정 합니다. 경우 `bErase` 은 **TRUE**, 백그라운드 지워집니다 때는 [BeginPaint](#beginpaint) 경우 멤버 함수를 호출할 `bErase` 은 **FALSE**, 백그라운드 유지 됩니다. 변경 되지 않습니다. 경우 `bErase` 은 **TRUE** 일부나 업데이트 영역에 대 한 특정된 부분에 뿐 아니라 전체 지역에 배경 지워집니다.  
+ *bErase* 매개 변수 업데이트 영역 내에서 백그라운드 업데이트 영역을 처리할 때 삭제할 인지를 지정 합니다. 경우 *bErase* 가 TRUE 이면 백그라운드 때 지워집니다는 [BeginPaint](#beginpaint) 경우 멤버 함수를 호출할 *bErase* 가 FALSE 이면 변경 하지 않고 백그라운드 유지 됩니다. 경우 *bErase* 부분의 특정된 부분에 뿐 아니라 전체 지역에 백그라운드 업데이트 영역을 지우고 TRUE입니다.  
   
  Windows에서는 보냅니다는 [WM_PAINT](#onpaint) 때마다 메시지는 `CWnd` 업데이트 영역에 비어 있지 않으며 해당 창에 대 한 응용 프로그램 큐에 있는 다른 메시지가 없는 합니다.  
   
  지정된 된 영역 해야 이전에 만든 지역 함수 중 하나에서.  
   
 ##  <a name="invokehelper"></a>  CWnd::InvokeHelper  
- 이 ActiveX 컨트롤 메서드나 속성으로 지정 된 호출에 함수를 호출 `dwDispID`, 의해 지정 된 컨텍스트의 `wFlags`합니다.  
+ 이 ActiveX 컨트롤 메서드나 속성으로 지정 된 호출에 함수를 호출 *dwDispID*, 의해 지정 된 컨텍스트의 *wFlags*합니다.  
   
 ```  
 void AFX_CDECL InvokeHelper(
@@ -4809,28 +4809,28 @@ void AFX_CDECL InvokeHelper(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwDispID`  
+ *dwDispID*  
  호출할 메서드 또는 속성을 식별합니다.  
   
- `wFlags`  
- **IDispatch::Invoke**호출의 컨텍스트를 설명하는 플래그입니다.  
+ *wFlags*  
+ 에 대 한 호출의 컨텍스트를 설명 하는 플래그 `IDispatch::Invoke`합니다.  
   
- `vtRet`  
+ *vtRet*  
  반환 값 형식을 지정합니다. 가능한 값에 대 한 설명 섹션을 참조 하십시오. [coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)합니다.  
   
- `pvRet`  
- 하는 변수의 주소는 속성 값을 받이 되거나 값을 반환 됩니다. `vtRet`를 통해 지정된 형식과 일치해야 합니다.  
+ *pvRet*  
+ 하는 변수의 주소는 속성 값을 받이 되거나 값을 반환 됩니다. 지정한 형식과 일치 해야 *vtRet*합니다.  
   
- `pbParamInfo`  
- `pbParamInfo`뒤에 매개 변수 형식을 지정하는 바이트의 null로 종료된 문자열에 대한 포인터입니다. 가능한 값에 대 한 설명 섹션을 참조 하십시오. `COleDispatchDriver::InvokeHelper`합니다.  
+ *pbParamInfo*  
+ 뒤에 매개 변수 형식을 지정 하는 바이트 null로 끝나는 문자열에 대 한 포인터 *pbParamInfo*합니다. 가능한 값에 대 한 설명 섹션을 참조 하십시오. `COleDispatchDriver::InvokeHelper`합니다.  
   
  *...*  
- 에 지정 된 형식의 매개 변수 목록은 `pbParamInfo`합니다.  
+ 에 지정 된 형식의 매개 변수 목록은 *pbParamInfo*합니다.  
   
 ### <a name="remarks"></a>설명  
- `pbParamInfo` 매개 변수는 메서드나 속성에 전달되는 매개 변수 형식을 지정합니다. 인수의 변수 목록은 나타내는 *...*  구문 선언에서 합니다.  
+ *pbParamInfo* 매개 변수를 메서드 또는 속성에 전달 된 매개 변수의 유형을 지정 합니다. 인수의 변수 목록은 나타내는 *...*  구문 선언에서 합니다.  
   
- 이 함수는 매개 변수를 변환 **VARIANTARG** 값, 한 다음 호출에서 **idispatch:: Invoke** ActiveX 컨트롤에는 메서드. 경우에 대 한 호출 **idispatch:: Invoke** 실패 하면이이 함수는 예외가 throw 됩니다. 경우는 `SCODE` (상태 코드)에서 반환 된 **idispatch:: Invoke** 은 `DISP_E_EXCEPTION`,이 함수는 [COleException](../../mfc/reference/coleexception-class.md) 개체, 그렇지 않으면 throw 된 [ COleDispatchException](../../mfc/reference/coledispatchexception-class.md)합니다.  
+ 이 함수 VARIANTARG 값을 매개 변수를 변환한 다음 호출에서 `IDispatch::Invoke` ActiveX 컨트롤에는 메서드. 경우에 대 한 호출 `IDispatch::Invoke` 실패 하면이이 함수는 예외가 throw 됩니다. SCODE (상태 코드)에서 반환 된 경우 `IDispatch::Invoke` DISP_E_EXCEPTION은이 함수는 [COleException](../../mfc/reference/coleexception-class.md) 개체, 그렇지 않으면 throw 한 [COleDispatchException](../../mfc/reference/coledispatchexception-class.md)합니다.  
   
 > [!NOTE]
 >  이 함수에 대해서만 호출 해야는 `CWnd` ActiveX 컨트롤을 나타내는 개체입니다.  
@@ -4838,18 +4838,18 @@ void AFX_CDECL InvokeHelper(
  이 멤버 함수를 사용 하 여 ActiveX 컨트롤 컨테이너와 함께 하는 방법에 대 한 자세한 내용은 문서 참조 [ActiveX 컨트롤 컨테이너: ActiveX 컨트롤 컨테이너에서 ActiveX 컨트롤 프로그래밍](../../mfc/programming-activex-controls-in-a-activex-control-container.md)합니다.  
   
 ##  <a name="ischild"></a>  CWnd::IsChild  
- 가 창 지정 하는지 여부를 나타냅니다. `pWnd` 자식 창이 나 다른 직계 하위 항목은 `CWnd`합니다.  
+ 가 창 지정 하는지 여부를 나타냅니다. *pWnd* 자식 창이 나 다른 직계 하위 항목은 `CWnd`합니다.  
   
 ```  
 BOOL IsChild(const CWnd* pWnd) const;  
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  테스트할 수 있는 창을 식별 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 함수의 결과 지정합니다. 값이 창으로 식별 하는 경우 0이 아닌 `pWnd` 의 자식 창 `CWnd`그렇지 않으면 0입니다.  
+ 함수의 결과 지정합니다. 값이 창으로 식별 하는 경우 0이 아닌 *pWnd* 의 자식 창 `CWnd`그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
  자식 창 직계 하위 항목은 `CWnd` 경우는 `CWnd` 개체는 부모 창의 자식 창으로 인해 원래 팝업 창에서 하는 체인에 포함 합니다.  
@@ -4872,7 +4872,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpMsg`  
+ *lpMsg*  
  가리키는 [MSG](../../mfc/reference/msg-structure1.md) 검사할 메시지를 포함 하는 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -4893,7 +4893,7 @@ UINT IsDlgButtonChecked(int nIDButton) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDButton`  
+ *nIDButton*  
  단추 컨트롤의 정수 식별자를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -4924,7 +4924,7 @@ BOOL IsIconic() const;
 ### <a name="return-value"></a>반환 값  
  0이 아닌 경우 `CWnd` 최소화 됩니다; 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#101](../../mfc/reference/codesnippet/cpp/cwnd-class_41.cpp)]  
   
 ##  <a name="istouchwindow"></a>  CWnd::IsTouchWindow  
@@ -4935,7 +4935,7 @@ BOOL IsTouchWindow() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 경우 `CWnd` 가 터치를 지원 하 고; 그렇지 않으면 `FALSE`합니다.  
+ TRUE 이면 `CWnd` 가 터치 지원, 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -4949,7 +4949,7 @@ BOOL IsWindowEnabled() const;
 ### <a name="return-value"></a>반환 값  
  0이 아닌 경우 `CWnd` 활성화 됩니다; 그렇지 않으면 0입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#102](../../mfc/reference/codesnippet/cpp/cwnd-class_42.cpp)]  
   
 ##  <a name="iswindowvisible"></a>  CWnd::IsWindowVisible  
@@ -4960,14 +4960,14 @@ BOOL IsWindowVisible() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 0이 아닌 경우 `CWnd` 표시 됩니다 (에 [WS_VISIBLE](styles-used-by-mfc.md#window-styles) 부모 창이 표시 되 고 스타일 비트가 설정). 반환 값의 상태를 반영 하기 때문에 **WS_VISIBLE** 스타일 비트 반환 값 수 0이 아닌 경우에 `CWnd` 완전히 다른 창으로 가려진 됩니다.  
+ 0이 아닌 경우 `CWnd` 표시 됩니다 (에 [WS_VISIBLE](styles-used-by-mfc.md#window-styles) 부모 창이 표시 되 고 스타일 비트가 설정). 이므로 WS_VISIBLE 스타일 비트의 상태를 반영 하는 반환 값, 반환 값 수 0이 아닌 경우에 `CWnd` 완전히 다른 창으로 가려진 됩니다.  
   
 ### <a name="remarks"></a>설명  
- 창을 소유 가리키는 표시 여부 상태는 **WS_VISIBLE** 스타일 비트입니다. 호출 하 여이 스타일 비트가 설정 된 경우는 [ShowWindow](#showwindow) 멤버 함수는 창 표시 되 고 창에는 스타일 비트 집합으로 후속 그리기 창에 표시 됩니다.  
+ 창은 WS_VISIBLE 스타일 비트 가리키는 표시 여부 상태를가지고 있습니다. 호출 하 여이 스타일 비트가 설정 된 경우는 [ShowWindow](#showwindow) 멤버 함수는 창 표시 되 고 창에는 스타일 비트 집합으로 후속 그리기 창에 표시 됩니다.  
   
- 에 있는 창에 모든 드로잉은 **WS_VISIBLE** 스타일 창을 다른 창에서 검사 하는 지 또는 해당 부모 창에서 클리핑 하는 경우 표시 되지 것입니다.  
+ 창을 다른 창에서 검사 하는 지 또는 해당 부모 창에서 클리핑 하는 경우 모든 드로잉 WS_VISIBLE 스타일이 적용 된 창에 표시 되지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#103](../../mfc/reference/codesnippet/cpp/cwnd-class_43.cpp)]  
   
 ##  <a name="iszoomed"></a>  CWnd::IsZoomed  
@@ -4981,14 +4981,14 @@ BOOL IsZoomed() const;
  0이 아닌 경우 `CWnd` 최대화 됩니다; 그렇지 않으면 0입니다.  
   
 ##  <a name="killtimer"></a>  CWnd::KillTimer  
- 해당 프로세스를 중지 하 여 식별 되는 타이머 이벤트 `nIDEvent` 에 이전 호출 로부터 `SetTimer`합니다.  
+ 해당 프로세스를 중지 하 여 식별 되는 타이머 이벤트 *nIDEvent* 에 이전 호출 로부터 `SetTimer`합니다.  
   
 ```  
 BOOL KillTimer(UINT_PTR nIDEvent);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDEvent`  
+ *nIDEvent*  
  타이머 이벤트의 값이 전달 [SetTimer](#settimer)합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -4997,7 +4997,7 @@ BOOL KillTimer(UINT_PTR nIDEvent);
 ### <a name="remarks"></a>설명  
  보류 중인 [WM_TIMER](#ontimer) 타이머와 연결 된 메시지의 메시지 큐에서 제거 되지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::SetTimer](#settimer)합니다.  
   
 ##  <a name="loaddynamiclayoutresource"></a>  CWnd::LoadDynamicLayoutResource  
@@ -5008,7 +5008,7 @@ BOOL LoadDynamicLayoutResource(LPCTSTR lpszResourceName);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszResourceName`  
+ *lpszResourceName*  
  이 창에 대한 필요한 동적 레이아웃 정보가 포함된 리소스의 이름입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -5044,7 +5044,7 @@ HWND m_hWnd;
 ```  
   
 ### <a name="remarks"></a>설명  
- `m_hWnd` 데이터 멤버는 형식의 공용 변수 `HWND`합니다.  
+ `m_hWnd` 데이터 멤버는 HWND 형식의 공용 변수입니다.  
   
 ##  <a name="mapwindowpoints"></a>  CWnd::MapWindowPoints  
  `CWnd`의 좌표 공간에서 다른 창의 좌표 공간으로 점 집합(맵)을 변환합니다.  
@@ -5062,16 +5062,16 @@ void MapWindowPoints(
   
 ### <a name="parameters"></a>매개 변수  
  *pwndTo*  
- 점 변환 되는 창을 식별 합니다. 이 매개 변수가 **NULL**, 요소를 화면 좌표로 변환 됩니다.  
+ 점 변환 되는 창을 식별 합니다. 이 매개 변수가 NULL 인 경우 요소를 화면 좌표로 변환 됩니다.  
   
- `lpRect`  
+ *lpRect*  
  변환 될 요소가 사각형을 지정 합니다. 이 함수의 첫 번째 버전은 및 이후 버전 Windows 3.1에 대해서만 사용할 수 있습니다.  
   
- `lpPoint`  
+ *lpPoint*  
  배열에 대 한 포인터 [POINT 구조체](../../mfc/reference/point-structure1.md) 변환 될 수 있는 점의 집합을 포함 하는 합니다.  
   
- `nCount`  
- 개수를 지정 **지점** 가 가리키는 배열의 구조 `lpPoint`합니다.  
+ *nCount*  
+ 개수를 지정 `POINT` 가 가리키는 배열의 구조 *lpPoint*합니다.  
   
 ##  <a name="messagebox"></a>  CWnd::MessageBox  
  만들고 응용 프로그램에서 제공 하는 메시지는 및 캡션 +의 미리 정의 된 아이콘 및 누름 단추에 설명 된 조합을 포함 하는 창이 표시는 [메시지 상자 스타일](../../mfc/reference/styles-used-by-mfc.md#message-box-styles) 목록입니다.  
@@ -5084,13 +5084,13 @@ int MessageBox(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszText`  
+ *lpszText*  
  가리키는 `CString` 개체나 표시할 메시지를 포함 하는 null로 끝나는 문자열.  
   
- `lpszCaption`  
- 가리키는 `CString` 개체 또는 null로 끝나는 문자열에 메시지 상자 캡션을 사용할 합니다. 경우 `lpszCaption` 은 **NULL**, 기본 캡션을 "Error"가 사용 됩니다.  
+ *lpszCaption*  
+ 가리키는 `CString` 개체 또는 null로 끝나는 문자열에 메시지 상자 캡션을 사용할 합니다. 경우 *lpszCaption* 가 NULL 이면 기본 캡션을 "Error"가 사용 됩니다.  
   
- `nType`  
+ *n 유형*  
  내용과 messagebox의 동작을 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -5103,12 +5103,12 @@ int MessageBox(
   
 |||  
 |-|-|  
-|![중지 &#40;x&#41; 아이콘](../../mfc/reference/media/vc364f1.gif "vc364f1")|**MB_ICONHAND**, **MB_ICONSTOP**, 및 **MB_ICONERROR**|  
-|![도움말 &#40; &#41; 아이콘](../../mfc/reference/media/vc364f2.gif "vc364f2")|**MB_ICONQUESTION**|  
-|![중요 한 &#40; &#33; &#41; 아이콘](../../mfc/reference/media/vc364f3.gif "vc364f3")|**MB_ICONEXCLAMATION** 및 **MB_ICONWARNING**|  
-|![정보 &#40;i&#41; 아이콘](../../mfc/reference/media/vc364f4.gif "vc364f4")|**MB_ICONASTERISK** 및 **MB_ICONINFORMATION**|  
+|![중지 &#40;x&#41; 아이콘](../../mfc/reference/media/vc364f1.gif "vc364f1")|MB_ICONHAND, MB_ICONSTOP, 및 MB_ICONERROR|  
+|![도움말 &#40; &#41; 아이콘](../../mfc/reference/media/vc364f2.gif "vc364f2")|MB_ICONQUESTION|  
+|![중요 한 &#40; &#33; &#41; 아이콘](../../mfc/reference/media/vc364f3.gif "vc364f3")|MB_ICONEXCLAMATION 및 MB_ICONWARNING|  
+|![정보 &#40;i&#41; 아이콘](../../mfc/reference/media/vc364f4.gif "vc364f4")|MB_ICONASTERISK 및 MB_ICONINFORMATION|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#104](../../mfc/reference/codesnippet/cpp/cwnd-class_44.cpp)]  
   
 ##  <a name="modifystyle"></a>  CWnd::ModifyStyle  
@@ -5122,13 +5122,13 @@ BOOL ModifyStyle(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwRemove`  
+ *dwRemove*  
  스타일 수정 하는 동안 제거할 창 스타일을 지정 합니다.  
   
- `dwAdd`  
+ *dwAdd*  
  스타일 수정 하는 동안 추가할 창 스타일을 지정 합니다.  
   
- `nFlags`  
+ *nFlags*  
  플래그를 전달 하도록 [SetWindowPos](#setwindowpos), 경우에는 0 또는 `SetWindowPos` 호출할 수 없습니다. 기본값은 0입니다. 미리 설정 된 플래그의 목록은 설명 섹션을 참조 하십시오.  
   
 ### <a name="return-value"></a>반환 값  
@@ -5137,22 +5137,22 @@ BOOL ModifyStyle(
 ### <a name="remarks"></a>설명  
  비트 OR를 사용 하 여 추가 또는 제거 하기 위해 스타일을 결합할 수 있습니다 (&#124;) 연산자. 항목을 참조 [창 스타일](http://msdn.microsoft.com/library/windows/desktop/ms632600) 및 [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) 사용 가능한 창 스타일에 대 한 정보는 Windows sdk입니다.  
   
- 경우 `nFlags` 이 값은 0 `ModifyStyle` Windows API 함수를 호출 [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) 하 고 결합 하 여 창을 다시 그립니다 `nFlags` 다음 4 개의 미리 설정 된 플래그:  
+ 경우 *nFlags* 이 값은 0 `ModifyStyle` Windows API 함수를 호출 [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) 하 고 결합 하 여 창을 다시 그립니다 *nFlags* 다음과 같은 네 개의 미리 설정 된 플래그:  
   
-- `SWP_NOSIZE` 현재 크기를 유지합니다.  
+- SWP_NOSIZE 현재 크기를 유지합니다.  
   
-- `SWP_NOMOVE` 현재 위치를 유지합니다.  
+- SWP_NOMOVE 현재 위치를 유지 합니다.  
   
-- `SWP_NOZORDER` 현재 Z 순서를 유지합니다.  
+- SWP_NOZORDER은 현재 Z 순서를 유지합니다.  
   
-- `SWP_NOACTIVATE` 창을 활성화 하지 않습니다.  
+- 창을 활성화 되지 SWP_NOACTIVATE 않습니다.  
   
  스타일의 연장 창을 수정 하려면 다음을 참조 하십시오 [ModifyStyleEx](#modifystyleex)합니다.  
   
 > [!NOTE]
->  특정 컨트롤에서 일부 스타일 (의 **ES_READONLY** 예를 들어 편집 컨트롤에 스타일), **ModifyStyle** 제대로 바뀌지 않을 스타일 컨트롤 내부 특수를 수행 해야 할 수 있으므로 처리 중입니다. 이러한 경우에는 스타일을 변경 하려면 해당 메시지를 사용할 수 ( **EM_SETREADONLY** 언급 한 예에서).  
+>  특정 컨트롤 (ES_READONLY 스타일 edit 컨트롤 예:)의 일부 스타일에 대 한 `ModifyStyle` 하지 제대로 스타일 되기 때문에 다르게 컨트롤 내부 특수 한 처리를 수행 해야 할 수 있습니다. 이러한 경우에는 스타일을 변경 하려면 해당 하는 메시지가 사용 가능한 (언급 한 예에서 EM_SETREADONLY) 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#105](../../mfc/reference/codesnippet/cpp/cwnd-class_45.cpp)]  
   
 ##  <a name="modifystyleex"></a>  CWnd::ModifyStyleEx  
@@ -5166,13 +5166,13 @@ BOOL ModifyStyleEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwRemove`  
+ *dwRemove*  
  스타일 수정 하는 동안 제거할 확장된 스타일을 지정 합니다.  
   
- `dwAdd`  
+ *dwAdd*  
  스타일 수정 하는 동안 추가할 확장된 스타일을 지정 합니다.  
   
- `nFlags`  
+ *nFlags*  
  플래그를 전달 하도록 [SetWindowPos](#setwindowpos), 경우에는 0 또는 `SetWindowPos` 호출할 수 없습니다. 기본값은 0입니다. 미리 설정 된 플래그의 목록은 설명 섹션을 참조 하십시오.  
   
 ### <a name="return-value"></a>반환 값  
@@ -5181,19 +5181,19 @@ BOOL ModifyStyleEx(
 ### <a name="remarks"></a>설명  
  비트 OR를 사용 하 여 추가 또는 제거 하기 위해 스타일을 결합할 수 있습니다 (&#124;) 연산자. 항목을 참조 [확장 창 스타일](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) 이 가이드의 및 [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows sdk에서 사용 가능한 항목에 대 한 정보에 대 한 확장 스타일  
   
- 경우 `nFlags` 이 값은 0 `ModifyStyleEx` Windows API 함수를 호출 [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) 하 고 결합 하 여 창을 다시 그립니다 `nFlags` 다음 4 개의 미리 설정 된 플래그:  
+ 경우 *nFlags* 이 값은 0 `ModifyStyleEx` Windows API 함수를 호출 [SetWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms633545) 하 고 결합 하 여 창을 다시 그립니다 *nFlags* 다음과 같은 네 개의 미리 설정 된 플래그:  
   
-- `SWP_NOSIZE` 현재 크기를 유지합니다.  
+- SWP_NOSIZE 현재 크기를 유지합니다.  
   
-- `SWP_NOMOVE` 현재 위치를 유지합니다.  
+- SWP_NOMOVE 현재 위치를 유지 합니다.  
   
-- `SWP_NOZORDER` 현재 Z 순서를 유지합니다.  
+- SWP_NOZORDER은 현재 Z 순서를 유지합니다.  
   
-- `SWP_NOACTIVATE` 창을 활성화 하지 않습니다.  
+- 창을 활성화 되지 SWP_NOACTIVATE 않습니다.  
   
  일반 창 스타일을 사용 하 여 windows를 수정 하려면 참조 [ModifyStyle](#modifystyle)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#106](../../mfc/reference/codesnippet/cpp/cwnd-class_46.cpp)]  
   
 ##  <a name="movewindow"></a>  CWnd::MoveWindow  
@@ -5220,24 +5220,24 @@ void MoveWindow(
  *y*  
  위쪽의 새 위치를 지정 된 `CWnd`합니다.  
   
- `nWidth`  
+ *nWidth*  
  새 너비를 지정 된 `CWnd`합니다.  
   
- `nHeight`  
+ *nHeight*  
  새 높이 지정 된 `CWnd`합니다.  
   
- `bRepaint`  
- 지정 하는지 여부를 `CWnd` 그려야 하는 것입니다. 경우 **TRUE**, `CWnd` 수신는 [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) 메시지가 해당 [OnPaint](#onpaint) 평소와 같이 메시지 처리기입니다. 이 매개 변수가 **FALSE**, 모든 종류의 없습니다 다시 발생 합니다. 클라이언트 영역, 비클라이언트 영역 (제목 및 스크롤 막대가 포함), 및의 결과로 처리 되지 않는 부모 창 부분의이 적용 됩니다 `CWnd`의 이동 합니다. 이 매개 변수가 **FALSE**, 응용 프로그램 해야 명시적으로 무효화 하거나의 모든 부분을 다시 그릴 `CWnd` 및 다시 그려야 하는 부모 창입니다.  
+ *bRepaint*  
+ 지정 하는지 여부를 `CWnd` 그려야 하는 것입니다. True 이면 `CWnd` 수신는 [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) 메시지에 해당 [OnPaint](#onpaint) 평소와 같이 메시지 처리기입니다. 이 매개 변수가 FALSE 인 경우 모든 종류의 없습니다 다시 발생 합니다. 클라이언트 영역, 비클라이언트 영역 (제목 및 스크롤 막대가 포함), 및의 결과로 처리 되지 않는 부모 창 부분의이 적용 됩니다 `CWnd`의 이동 합니다. 이 매개 변수가 FALSE 인 경우 응용 프로그램 해야 명시적으로 무효화 하거나의 모든 부분을 다시 그릴 `CWnd` 및 다시 그려야 하는 부모 창입니다.  
   
- `lpRect`  
+ *lpRect*  
  [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT 구조체](../../mfc/reference/rect-structure1.md) 새 크기와 위치를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
  최상위 수준에 대 한 `CWnd` 개체는 *x* 및 *y* 매개 변수는 화면의 왼쪽 위 모퉁이 기준으로 합니다. 자식에 대 한 `CWnd` 개체를 부모 창의 클라이언트 영역의 왼쪽 위 모퉁이 기준으로 합니다.  
   
- `MoveWindow` 보냅니다 함수는 [WM_GETMINMAXINFO](#ongetminmaxinfo) 메시지입니다. 이 메시지 처리를 제공 `CWnd` 가장 큰 및 가장 작은 창에 대 한 기본값을 수정할 수 있습니다. 경우에 매개 변수는 `MoveWindow` 이러한 값을 초과 하는 멤버 함수, 값의 최소값 또는 최대값 값으로 바꿀 수 있습니다는 `WM_GETMINMAXINFO` 처리기입니다.  
+ `MoveWindow` 보냅니다 함수는 [WM_GETMINMAXINFO](#ongetminmaxinfo) 메시지입니다. 이 메시지 처리를 제공 `CWnd` 가장 큰 및 가장 작은 창에 대 한 기본값을 수정할 수 있습니다. 경우에 매개 변수는 `MoveWindow` 이러한 값을 초과 하는 멤버 함수, WM_GETMINMAXINFO 처리기의 최소값 또는 최대값 값으로 값을 대체할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::ClientToScreen](#clienttoscreen)합니다.  
   
 ##  <a name="notifywinevent"></a>  CWnd::NotifyWinEvent  
@@ -5251,14 +5251,14 @@ void NotifyWinEvent(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `event`  
+ *event*  
  발생 한 이벤트를 지정 합니다. 이 값 중 하나 여야 합니다는 [이벤트 상수](http://msdn.microsoft.com/library/windows/desktop/dd318066)합니다.  
   
  *idObjectType*  
  이벤트를 생성 하는 개체의 종류를 식별 합니다. 이 값은 미리 정의 된 하나 [개체 식별자](http://msdn.microsoft.com/library/windows/desktop/dd373606) 또는 사용자 지정 개체 ID 값입니다.  
   
- `idObject`  
- 개체 또는 개체의 자식 요소에 의해 이벤트가 생성 된 있는지 식별 합니다. 이 값이 **CHILDID_SELF**, 개체 자체에 의해 생성 된 이벤트입니다. 그렇지 않은 경우이 값은 자식 ID 이벤트를 생성 하는 요소입니다.  
+ *idObject*  
+ 개체 또는 개체의 자식 요소에 의해 이벤트가 생성 된 있는지 식별 합니다. 이 값이 CHILDID_SELF 이면 이벤트는 개체 자체에 의해 생성 되었습니다. 그렇지 않은 경우이 값은 자식 ID 이벤트를 생성 하는 요소입니다.  
   
 ### <a name="remarks"></a>설명  
  이 멤버 함수는 함수의 기능을 에뮬레이션 [NotifyWinEvent](http://msdn.microsoft.com/library/windows/desktop/dd373603)Windows SDK에 설명 된 대로 합니다.  
@@ -5274,22 +5274,22 @@ afx_msg void OnActivate(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nState`  
+ *nState*  
  지정 여부는 `CWnd` 활성화 또는 비활성화 되는 합니다. 다음 값 중 하나일 수 있습니다.  
   
-- **WA_INACTIVE** 창이 비활성화 하는 중입니다.  
+- 창이 WA_INACTIVE는 비활성화 하는 중입니다.  
   
-- **WA_ACTIVE** 창이 제외 (예를 들어 창을 선택 하는 키보드 인터페이스 사용)에서: 마우스 클릭을 통해 활성화 되 고 있습니다.  
+- WA_ACTIVE 마우스 이외의 다른 몇 가지 메서드를 통해 창이 활성화 되 고 (예를 들어 여 창을 선택 하는 키보드 인터페이스 사용)를 클릭 합니다.  
   
-- **WA_CLICKACTIVE** 마우스 클릭 하 여 창이 활성화 되 고 있습니다.  
+- 마우스 클릭 하 여 WA_CLICKACTIVE 창이 활성화 되 고 있습니다.  
   
  *pWndOther*  
- 에 대 한 포인터는 `CWnd` 활성화 되거나 비활성화 되 고 있습니다. 포인터 수 **NULL**, 임시 수도 있습니다.  
+ 에 대 한 포인터는 `CWnd` 활성화 되거나 비활성화 되 고 있습니다. 포인터에는 NULL 일 수 및 임시 수 있습니다.  
   
  *bMinimized*  
- 최소화 된 상태를 지정 된 `CWnd` 활성화 되거나 비활성화 되 고 있습니다. 값이 **TRUE** 창을 최소화 됨을 나타냅니다.  
+ 최소화 된 상태를 지정 된 `CWnd` 활성화 되거나 비활성화 되 고 있습니다. TRUE 값을 지정 창을 최소화 합니다.  
   
- 경우 **TRUE**, `CWnd` 활성화 되 고; 그렇지 않으면 비활성화 합니다.  
+ True 이면는 `CWnd` 활성화 되 고; 그렇지 않으면 비활성화 합니다.  
   
 ### <a name="remarks"></a>설명  
  경우는 `CWnd` 발생 하기도 합니다, 개체가 마우스 클릭으로 활성화 되는 [OnMouseActivate](#onmouseactivate) 멤버 함수 호출 합니다.  
@@ -5307,11 +5307,11 @@ afx_msg void OnActivateApp(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bActive`  
- 지정 여부는 `CWnd` 활성화 또는 비활성화 되는 합니다. **True 이면** 의미는 `CWnd` 활성화 되 고 있습니다. **FALSE** 의미는 `CWnd` 비활성화 하는 중입니다.  
+ *bActive*  
+ 지정 여부는 `CWnd` 활성화 또는 비활성화 되는 합니다. TRUE로 `CWnd` 활성화 되 고 있습니다. FALSE는 `CWnd` 비활성화 하는 중입니다.  
   
  *dwThreadID*  
- 스레드 id입니다. 값을 지정합니다. 경우 `bActive` 은 **TRUE**, *dwThreadID* 소유 하는 스레드를 식별 하는 `CWnd` 비활성화 하는 중입니다. 경우 `bActive` 은 **FALSE**, *dwThreadID* 소유 하는 스레드를 식별 하는 `CWnd` 활성화 되 고 있습니다.  
+ 스레드 id입니다. 값을 지정합니다. 경우 *bActive* 가 TRUE 이면 *dwThreadID* 소유 하는 스레드를 식별 하는 `CWnd` 해제 하 고 있습니다. 경우 *bActive* 가 FALSE 이면 *dwThreadID* 소유 하는 스레드를 식별 하는 `CWnd` 활성화 되 고 있습니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -5329,17 +5329,17 @@ virtual BOOL OnAmbientProperty(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pSite`  
+ *pSite*  
  앰비언트 속성을 요청 하는 컨트롤의 사이트에 대 한 포인터입니다.  
   
- `dispid`  
+ *dispid*  
  요청된 된 앰비언트 속성의 디스패치 ID입니다.  
   
- `pvar`  
+ *pvar*  
  호출자가 할당에 대 한 포인터 `VARIANT` 앰비언트 속성의 값이 반환을 통해 구성 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- **True 이면** 앰비언트 속성이 지원 되 면 **FALSE** 그렇지 않은 경우.  
+ 앰비언트 속성이 지원 되 면 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
  앰비언트 속성 값이 해당 컨트롤에는 OLE 컨트롤 컨테이너에 의해 반환 되는 기본 변경 하려면이 함수를 재정의 합니다. 기본 클래스 구현에는 재정의 함수에 의해 처리 되지 않은 모든 앰비언트 속성 요청 전달 되어야 합니다.  
@@ -5359,10 +5359,10 @@ afx_msg void OnAppCommand(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `pWnd`|에 대 한 포인터는 `CWnd` 사용자 명령 단추를 클릭 하거나 명령 키를 눌렀습니다 위치 창을 나타내는 개체입니다. 이 창의 자식 창 메시지를 받는 창 수 있습니다.|  
-|[in] `nCmd`|응용 프로그램 명령을 나타냅니다. 가능한 값 목록은 아래에 있는 명령을 참조는 *cmd* 의 섹션은 `lParam` 의 매개 변수 [WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275)합니다.|  
-|[in] `nDevice`|입력된 이벤트를 생성 하는 입력된 장치입니다. 가능한 값의 목록에서 장치를 참조 하십시오.는 *uDevice* 의 섹션은 `lParam` 의 매개 변수 [WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275)합니다.|  
-|[in] `nKey`|CTRL 키 또는 마우스 왼쪽된 단추와 같은, 다운 되는 모든 가상 키를 나타냅니다. 가능한 값 목록은 아래 키를 참조 하십시오.는 *dwKeys* 의 섹션은 `lParam` 의 매개 변수 [WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275)합니다. 자세한 내용은의 "메시지 매개 변수" 부제목을 참조 하십시오. [마우스 입력에 대 한](http://msdn.microsoft.com/library/windows/desktop/ms645601)합니다.|  
+|[in] *pWnd*|에 대 한 포인터는 `CWnd` 사용자 명령 단추를 클릭 하거나 명령 키를 눌렀습니다 위치 창을 나타내는 개체입니다. 이 창의 자식 창 메시지를 받는 창 수 있습니다.|  
+|[in] *nCmd*|응용 프로그램 명령을 나타냅니다. 가능한 값 목록은 아래에 있는 명령을 참조는 *cmd* 의 섹션은 *lParam* 의 매개 변수 [WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275)합니다.|  
+|[in] *nDevice*|입력된 이벤트를 생성 하는 입력된 장치입니다. 가능한 값의 목록에서 장치를 참조 하십시오.는 *uDevice* 의 섹션은 *lParam* 의 매개 변수 [WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275)합니다.|  
+|[in] *nKey*|CTRL 키 또는 마우스 왼쪽된 단추와 같은, 다운 되는 모든 가상 키를 나타냅니다. 가능한 값 목록은 아래 키를 참조 하십시오.는 *dwKeys* 의 섹션은 *lParam* 의 매개 변수 [WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275)합니다. 자세한 내용은의 "메시지 매개 변수" 부제목을 참조 하십시오. [마우스 입력에 대 한](http://msdn.microsoft.com/library/windows/desktop/ms645601)합니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_APPCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646275) 알림 Windows SDK에 설명 되어 있습니다.  
@@ -5371,7 +5371,7 @@ afx_msg void OnAppCommand(
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
   
 ##  <a name="onaskcbformatname"></a>  CWnd::OnAskCbFormatName  
- 클립보드에 대 한 데이터 핸들을 포함 하는 경우 프레임 워크를이 멤버 함수 호출의 `CF_OWNERDISPLAY` (즉 때 클립보드 소유자가 클립보드 내용을 표시).  
+ 클립보드 데이터를 포함 하는 경우이 멤버 함수는 CF_OWNERDISPLAY에 대 한 처리는 프레임 워크 호출 (즉 때 형식을 클립보드 소유자가 클립보드 내용을 표시).  
   
 ```  
 afx_msg void OnAskCbFormatName(
@@ -5380,16 +5380,16 @@ afx_msg void OnAskCbFormatName(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nMaxCount`  
+ *nMaxCount*  
  복사할 바이트의 최대 수를 지정 합니다.  
   
- `lpszString`  
+ *lpszString*  
  형식 이름의 복사본 저장 될 버퍼를 가리킵니다.  
   
 ### <a name="remarks"></a>설명  
  클립보드 소유자는 해당 형식에 대 한 이름을 제공 해야 합니다.  
   
- 이 멤버 함수를 재정의 하 고의 이름을 복사는 `CF_OWNERDISPLAY` 지정 된 바이트의 최대 수를 초과 하지 않는 지정된 된 버퍼에는 형식입니다.  
+ 이 멤버 함수를 재정의 하 고 CF_OWNERDISPLAY 형식의 이름을 지정 하는 바이트의 최대 수를 초과 하지 않는 지정된 된 버퍼에 복사 합니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -5414,7 +5414,7 @@ afx_msg void OnCaptureChanged(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  마우스 캡처를 창에 대 한 포인터  
   
 ### <a name="remarks"></a>설명  
@@ -5435,14 +5435,14 @@ afx_msg void OnChangeCbChain(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hWndRemove`  
+ *hWndRemove*  
  클립보드 뷰어 체인에서 제거 되는 창 핸들을 지정 합니다.  
   
- `hWndAfter`  
+ *hWndAfter*  
  클립보드 뷰어 체인에서 제거 되 고 창 뒤에 오는 창 핸들을 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
- 각 `CWnd` 받는 개체는 `OnChangeCbChain` 호출을 사용 해야는 [SendMessage](http://msdn.microsoft.com/library/windows/desktop/ms644950) 보내는 Windows 함수는 [WM_CHANGECBCHAIN](http://msdn.microsoft.com/library/windows/desktop/ms649019) 클립보드 뷰어에 다음 창으로 메시지 체인 (에서 반환 된 핸들이 `SetClipboardViewer`). 경우 `hWndRemove` 는 지정 된 창 체인의 다음 창 `hWndAfter` 다음 창 되며 클립보드 메시지 것로 전달 됩니다.  
+ 각 `CWnd` 받는 개체는 `OnChangeCbChain` 호출을 사용 해야는 [SendMessage](http://msdn.microsoft.com/library/windows/desktop/ms644950) 보내는 Windows 함수는 [WM_CHANGECBCHAIN](http://msdn.microsoft.com/library/windows/desktop/ms649019) 클립보드 뷰어에 다음 창으로 메시지 체인 (에서 반환 된 핸들이 `SetClipboardViewer`). 경우 *hWndRemove* 는 지정 된 창 체인의 다음 창 *hWndAfter* 다음 창 되며 클립보드 메시지 것로 전달 됩니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -5457,23 +5457,23 @@ afx_msg void OnChangeUIState(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nAction`  
+ *n 작업*  
  수행할 동작을 지정 합니다. 다음 값 중 하나입니다.  
   
-- **UIS_CLEAR** UI 상태 요소 (지정 된 `nUIElement`)를 숨깁니다.  
+- UIS_CLEAR UI 상태 요소 (지정 된 *nUIElement*)를 숨깁니다.  
   
-- **UIS_INITIALIZE** UI 상태 요소 (지정 된 `nUIElement`)는 마지막 입력된 이벤트에 따라 변경 해야 합니다. 자세한 내용은 참조는 **주의** 섹션 [WM_CHANGEUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646342)합니다.  
+- UIS_INITIALIZE UI 상태 요소 (지정 된 *nUIElement*)는 마지막 입력된 이벤트에 따라 변경 해야 합니다. 자세한 내용은 참조는 **주의** 섹션 [WM_CHANGEUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646342)합니다.  
   
-- **UIS_SET** UI 상태 요소 (지정 된 `nUIElement`) 표시 되어야 합니다.  
+- UIS_SET UI 상태 요소 (지정 된 *nUIElement*) 표시 되어야 합니다.  
   
- `nUIElement`  
+ *nUIElement*  
  UI 상태 요소에 어떤 영향을 받는 또는 컨트롤의 스타일을 지정 합니다. 다음 값 중 하나입니다.  
   
-- **UISF_HIDEACCEL** 키보드 액셀러레이터 키입니다.  
+- UISF_HIDEACCEL 키보드 액셀러레이터 키입니다.  
   
-- **UISF_HIDEFOCUS** 표시기 집중 합니다.  
+- UISF_HIDEFOCUS 포커스 표시기입니다.  
   
-- **UISF_ACTIVE Windows XP:** 활성 컨트롤에 사용 되는 스타일의 컨트롤을 그려야 합니다.  
+- UISF_ACTIVE Windows XP: 컨트롤을 그려야 활성 컨트롤에 사용 되는 스타일입니다.  
   
 ### <a name="remarks"></a>설명  
  기능을 에뮬레이션 하는이 멤버 함수는 [WM_CHANGEUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646342) Windows SDK에 설명 된 대로 메시지입니다.  
@@ -5489,13 +5489,13 @@ afx_msg void OnChar(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nChar`  
+ *nChar*  
  키의 문자 코드 값을 포함합니다.  
   
- `nRepCnt`  
+ *nRepCnt*  
  반복 횟수 키 입력 사용자 키를 보유 하는 경우 반복 되는 횟수를 포함 합니다.  
   
- `nFlags`  
+ *nFlags*  
  다음 목록에 표시 된 것과 같이 검색 코드, 코드 키 전환, 이전 키 상태 및 상황에 맞는 코드를 포함 합니다.  
   
 |값|의미|  
@@ -5511,9 +5511,9 @@ afx_msg void OnChar(
 ### <a name="remarks"></a>설명  
  이 함수는 전에 호출 됩니다는 [OnKeyUp](#onkeyup) 멤버 함수 후는 [OnKeyDown](#onkeydown) 멤버 함수가 호출 됩니다. `OnChar` 누르거나 놓을 키보드 키의 값을 포함 합니다.  
   
- 없기 때문에 반드시 한 일 대응 누른 키 사이 및 `OnChar` 정보에 대 한 호출이 생성 `nFlags` 는 일반적으로 없는 응용 프로그램에 유용 합니다. 정보 `nFlags` 에 대 한 가장 최근 호출에만 적용 됩니다는 `OnKeyUp` 멤버 함수 또는 `OnKeyDown` 멤버 함수에 대 한 호출 앞에 오는 `OnChar`합니다.  
+ 없기 때문에 반드시 한 일 대응 누른 키 사이 및 `OnChar` 정보에 대 한 호출이 생성 *nFlags* 는 일반적으로 없는 응용 프로그램에 유용 합니다. 정보 *nFlags* 에 대 한 가장 최근 호출에만 적용 됩니다는 `OnKeyUp` 멤버 함수 또는 `OnKeyDown` 멤버 함수에 대 한 호출 앞에 오는 `OnChar`합니다.  
   
- IBM 고급 101 및 102 키 키보드에 대 한 향상 된 키가 오른쪽 ALT와 키보드의 주요 섹션에는 오른쪽 CTRL 키 기능, DEL, 홈, END, PAGE UP, PAGE DOWN 및 왼쪽의 숫자 키패드; 클러스터에 있는 화살표 키 슬래시 (/) 및 숫자 키패드에서 ENTER 키입니다. 다른 일부 키보드에 있는 확장 된 키 비트를 지원할 수 있습니다 `nFlags`합니다.  
+ IBM 고급 101 및 102 키 키보드에 대 한 향상 된 키가 오른쪽 ALT와 키보드의 주요 섹션에는 오른쪽 CTRL 키 기능, DEL, 홈, END, PAGE UP, PAGE DOWN 및 왼쪽의 숫자 키패드; 클러스터에 있는 화살표 키 슬래시 (/) 및 숫자 키패드에서 ENTER 키입니다. 다른 일부 키보드에 있는 확장 된 키 비트를 지원할 수 있습니다 *nFlags*합니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -5529,13 +5529,13 @@ afx_msg int OnCharToItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nChar`  
+ *nChar*  
  사용자가 누른 키의 값을 지정 합니다.  
   
- `pListBox`  
+ *pListBox*  
  목록 상자에 대 한 포인터를 지정합니다. 임시 수도 있습니다.  
   
- `nIndex`  
+ *nIndex*  
  현재 캐럿 위치를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -5565,17 +5565,17 @@ virtual BOOL OnChildNotify(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `message`  
+ *message*  
  부모 창에 전송 하는 Windows 메시지 번호입니다.  
   
- `wParam`  
- **wparam** 은 메시지와 연결 합니다.  
+ *wParam*  
+ *wparam* 은 메시지와 연결 합니다.  
   
- `lParam`  
- **lparam** 은 메시지와 연결 합니다.  
+ *lParam*  
+ *lparam* 은 메시지와 연결 합니다.  
   
- `pLResult`  
- 부모 창 프로시저에서 반환 될 값에 대 한 포인터입니다. 이 포인터가 됩니다 **NULL** 반환 값이 없는 경우.  
+ *pLResult*  
+ 부모 창 프로시저에서 반환 될 값에 대 한 포인터입니다. 반환 값이 없는 경우이 포인터가 NULL이 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  이 창은 부모;에 전송 되는 메시지를 처리 하면 0이 아니고 그렇지 않으면 0입니다.  
@@ -5617,8 +5617,8 @@ afx_msg void OnColorizationColorChanged(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `dwColorizationColor`|새 색 지정에서 색을 지정합니다.<br /><br /> 색 형식은 여기서 네 개의 구성 요소가 범위는 0x00 0xFF 양식 0xAARRGGBB의 16 진수 숫자입니다. AA 구성 요소는 알파 값, RR은 빨간색, GG은 녹색 및 BB는 파란색입니다.|  
-|[in] `bOpacity`|`true` 불투명도; 새로운 색이 배경색과 혼합 하는 경우 `false` 없는 경우.|  
+|[in] *dwColorizationColor*|새 색 지정에서 색을 지정합니다.<br /><br /> 색 형식은 여기서 네 개의 구성 요소가 범위는 0x00 0xFF 양식 0xAARRGGBB의 16 진수 숫자입니다. AA 구성 요소는 알파 값, RR은 빨간색, GG은 녹색 및 BB는 파란색입니다.|  
+|[in] *bOpacity*|TRUE 이면 불투명도; 새로운 색이 배경색과 혼합 없는 경우 FALSE입니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_DWMNCRENDERINGCHANGED](http://msdn.microsoft.com/library/windows/desktop/dd388198) 알림 메시지는 Windows SDK에 설명 되어 있습니다.  
@@ -5636,17 +5636,17 @@ virtual BOOL OnCommand(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `wParam`  
- 하위 단어로 `wParam` 메뉴 항목, 컨트롤 또는 엑셀 러 레이 터의 명령 ID를 식별 합니다. 상위 단어로 `wParam` 컨트롤에서 메시지를 보낸 경우 알림 메시지를 지정 합니다. 액셀러레이터 키에서 메시지가 있으면 상위 단어는 1입니다. 메시지 메뉴 인 경우 상위 단어로 0입니다.  
+ *wParam*  
+ 하위 단어로 *wParam* 메뉴 항목, 컨트롤 또는 엑셀 러 레이 터의 명령 ID를 식별 합니다. 상위 단어로 *wParam* 컨트롤에서 메시지를 보낸 경우 알림 메시지를 지정 합니다. 액셀러레이터 키에서 메시지가 있으면 상위 단어는 1입니다. 메시지 메뉴 인 경우 상위 단어로 0입니다.  
   
- `lParam`  
- 메시지를 보내는 경우 메시지는 컨트롤에서 컨트롤을 식별 합니다. 그렇지 않으면 `lParam` 은 0입니다.  
+ *lParam*  
+ 메시지를 보내는 경우 메시지는 컨트롤에서 컨트롤을 식별 합니다. 그렇지 않으면 *lParam* 은 0입니다.  
   
 ### <a name="return-value"></a>반환 값  
  응용 프로그램;이 메시지를 처리 하는 경우 0이 아닌 반환 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- `OnCommand` 컨트롤 알림에 대 한 메시지 맵을 처리 및 `ON_COMMAND` 항목을 적절 한 멤버 함수를 호출 합니다.  
+ `OnCommand` 컨트롤 알림 및 ON_COMMAND 항목에 대 한 메시지 맵을 처리 하 고 적절 한 멤버 함수를 호출 합니다.  
   
  이 멤버 함수를 처리 하려면 파생된 클래스에서 재정의 된 [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) 메시지입니다. 재정의 하지 않는 한 메시지 맵을 처리 하지 것입니다는 기본 클래스 `OnCommand` 호출 됩니다.  
   
@@ -5682,10 +5682,10 @@ afx_msg int OnCompareItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDCtl`  
- 전송 되는 컨트롤의 식별자는 `WM_COMPAREITEM` 메시지입니다.  
+ *nIDCtl*  
+ WM_COMPAREITEM 메시지를 전송 하는 컨트롤의 식별자입니다.  
   
- `lpCompareItemStruct`  
+ *lpCompareItemStruct*  
  에 대 한 긴 포인터를 포함 한 [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) 식별자 및 콤보 상자나 목록에 있는 두 항목에 대 한 응용 프로그램 제공 하는 데이터를 포함 하는 데이터 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -5698,11 +5698,11 @@ afx_msg int OnCompareItem(
 |1|항목 1 항목 2 뒤에 정렬합니다.|  
   
 ### <a name="remarks"></a>설명  
- 로 생성 되는 목록 또는 콤보 상자 경우는 [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 또는 [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) 스타일 보내는데 콤보 상자 또는 목록 상자의 소유자는 `WM_COMPAREITEM` 응용 프로그램에 새 항목 추가 될 때마다 메시지입니다.  
+ 로 생성 되는 목록 또는 콤보 상자 경우는 [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 또는 [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) 스타일 Windows 때마다 메시지를 보내는 콤보 상자 또는 목록 상자의 소유자 WM_COMPAREITEM 메시지 응용 프로그램에 새 항목을 추가 합니다.  
   
- 목록 또는 콤보 상자에 있는 두 항목에는 과정이 생략 됩니다는 `COMPAREITEMSTRUCT` 가리키는 구조 `lpCompareItemStruct`합니다. `OnCompareItem` 다른 앞에 있는 항목을 표시 하는 값이 표시 해야 반환 해야 합니다. 일반적으로 Windows에서는이 호출은 여러 번 새 항목에 대 한 정확한 위치를 확인 하기 전까지 합니다.  
+ 목록 또는 콤보 상자에 있는 두 항목에는 과정이 생략 됩니다는 `COMPAREITEMSTRUCT` 가리키는 구조 *lpCompareItemStruct*합니다. `OnCompareItem` 다른 앞에 있는 항목을 표시 하는 값이 표시 해야 반환 해야 합니다. 일반적으로 Windows에서는이 호출은 여러 번 새 항목에 대 한 정확한 위치를 확인 하기 전까지 합니다.  
   
- 경우는 **hwndItem** 의 멤버는 `COMPAREITEMSTRUCT` 구조에 속하는 [CListBox](../../mfc/reference/clistbox-class.md) 또는 [CComboBox](../../mfc/reference/ccombobox-class.md) 개체 면 `CompareItem` 의 가상 함수는 적절 한 클래스 라고 합니다. 재정의 `CComboBox::CompareItem` 또는 `CListBox::CompareItem` 프로그램 파생에 `CListBox` 또는 `CComboBox` 항목 비교 작업을 수행 하는 클래스입니다.  
+ 경우는 `hwndItem` 의 멤버는 `COMPAREITEMSTRUCT` 구조에 속하는 [CListBox](../../mfc/reference/clistbox-class.md) 또는 [CComboBox](../../mfc/reference/ccombobox-class.md) 개체 하면 `CompareItem` 해당 클래스의 가상 함수를 호출 합니다. 재정의 `CComboBox::CompareItem` 또는 `CListBox::CompareItem` 프로그램 파생에 `CListBox` 또는 `CComboBox` 항목 비교 작업을 수행 하는 클래스입니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -5730,10 +5730,10 @@ afx_msg void OnContextMenu(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  사용자는 마우스 마우스 오른쪽 단추로 클릭 하 여 창에 대 한 핸들입니다. 이 메시지를 받는 창의 자식 창 수 있습니다. 이 메시지를 처리 하는 방법에 대 한 자세한 내용은 설명 섹션을 참조 합니다.  
   
- `pos`  
+ *pos*  
  마우스의 시의 화면 좌표에서 커서의 위치를 클릭 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -5751,21 +5751,21 @@ afx_msg BOOL OnCopyData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  에 대 한 포인터는 `CWnd` 는 데이터를 보내는 개체입니다.  
   
- `pCopyDataStruct`  
+ *pCopyDataStruct*  
  에 대 한 포인터는 [COPYDATASTRUCT](http://msdn.microsoft.com/library/windows/desktop/ms649010) 전송 되는 데이터를 포함 하는 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 반환 **TRUE** 수신 응용 프로그램 데이터를 성공적으로 수락 합니다. 그렇지 않으면 반환 **FALSE**합니다.  
+ 수신 응용 프로그램 데이터를 성공적으로 허용 하는 경우 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
   
 ### <a name="remarks"></a>설명  
  전달 되는 데이터에는 포인터나 개체 데이터를 받는 응용 프로그램에 액세스할 수 없음에 다른 참조를 포함할 수 없습니다.  
   
  데이터 복사 되는 동안 하지는 송신 프로세스의 다른 스레드에서 변경 해야 합니다.  
   
- 읽기 전용 수신 응용 프로그램에서 데이터를 고려해 야 합니다. 하지만 구조는 매개 변수가 가리키는 `pCopyDataStruct` 데이터를 전송 하는 동안에 유효 수신 응용 프로그램을 해제 하면 안 구조에 연결 된 메모리입니다.  
+ 읽기 전용 수신 응용 프로그램에서 데이터를 고려해 야 합니다. 하지만 구조는 매개 변수가 가리키는 *pCopyDataStruct* 데이터를 전송 하는 동안에 유효 수신 응용 프로그램을 해제 하면 안 구조에 연결 된 메모리입니다.  
   
  이 함수에서 반환 된 후 데이터에 액세스 해야 하는 수신 응용 프로그램을 로컬 버퍼에 받은 데이터를 복사 해야 것입니다.  
   
@@ -5780,14 +5780,14 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpCreateStruct`  
+ *lpCreateStruct*  
  가리키는 [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) 구조에 대 한 정보를 포함 하는 `CWnd` 만들어지는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
  `OnCreate` 만들기를 계속 하려면는 0을 반환 해야 합니다는 `CWnd` 개체입니다. -1을 반환 하는 응용 프로그램, 창 소멸 됩니다.  
   
 ### <a name="remarks"></a>설명  
- `CWnd` 개체 표시 되기 전에 되지만 창을 만든 후이 호출을 수신 합니다. `OnCreate` 이전에 호출 됩니다는 **만들기** 또는 `CreateEx` 멤버 함수를 반환 합니다.  
+ `CWnd` 개체 표시 되기 전에 되지만 창을 만든 후이 호출을 수신 합니다. `OnCreate` 이전에 호출 됩니다는 `Create` 또는 `CreateEx` 멤버 함수를 반환 합니다.  
   
  파생된 클래스의 모든 필요한 초기화를 수행 하려면이 멤버 함수를 재정의 합니다.  
   
@@ -5807,45 +5807,45 @@ afx_msg HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  자식 창에 대 한 디스플레이 컨텍스트에 대 한 포인터를 포함합니다. 임시 수 있습니다.  
   
- `pWnd`  
+ *pWnd*  
  색을 요청 하는 컨트롤에 대 한 포인터를 포함 합니다. 임시 수 있습니다.  
   
- `nCtlColor`  
+ *nCtlColor*  
  컨트롤의 형식을 지정 하는 다음 값 중 하나가 포함 되어 있습니다.  
   
-- **CTLCOLOR_BTN** 단추 컨트롤  
+- CTLCOLOR_BTN Button 컨트롤  
   
-- **CTLCOLOR_DLG** 대화 상자  
+- CTLCOLOR_DLG 대화 상자  
   
-- **CTLCOLOR_EDIT** Edit 컨트롤  
+- CTLCOLOR_EDIT Edit 컨트롤  
   
-- **CTLCOLOR_LISTBOX** 목록 상자 컨트롤  
+- CTLCOLOR_LISTBOX 목록 상자 컨트롤  
   
-- **CTLCOLOR_MSGBOX** 메시지 상자  
+- CTLCOLOR_MSGBOX 메시지 상자  
   
-- **CTLCOLOR_SCROLLBAR** 스크롤 막대 컨트롤  
+- CTLCOLOR_SCROLLBAR 스크롤 막대 컨트롤  
   
-- **CTLCOLOR_STATIC** 정적 컨트롤  
+- CTLCOLOR_STATIC 정적 컨트롤  
   
 ### <a name="return-value"></a>반환 값  
  `OnCtlColor` 컨트롤의 배경을 그리는 데 사용 하는 브러시에 대 한 핸들을 반환 해야 합니다.  
   
 ### <a name="remarks"></a>설명  
- 대부분의 컨트롤을 준비 하려면 해당 부모 (일반적으로 대화 상자)에이 메시지를 보낼는 `pDC` 올바른 색을 사용 하 여 컨트롤을 그리기 위한 합니다.  
+ 대부분의 컨트롤을 준비 하려면 해당 부모 (일반적으로 대화 상자)에이 메시지를 보낼는 *pDC* 올바른 색을 사용 하 여 컨트롤을 그리기 위한 합니다.  
   
  텍스트 색을 변경 하려면 호출 된 `SetTextColor` 원하는 빨강, 녹색 및 파란색 (RGB) 값이 포함 된 멤버 함수입니다.  
   
- 단일 행 편집 컨트롤의 배경색을 변경 하려면 둘 다에서 브러시 핸들을 설정는 **CTLCOLOR_EDIT** 및 **CTLCOLOR_MSGBOX** 호출 하 고 메시지 코드는 [CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) 함수에 대 한 응답에는 **CTLCOLOR_EDIT** 코드입니다.  
+ 단일 행 편집 컨트롤의 배경색을 변경 하려면 CTLCOLOR_EDIT와 CTLCOLOR_MSGBOX 메시지 코드와 호출에서 브러시 핸들을 설정는 [CDC::SetBkColor](../../mfc/reference/cdc-class.md#setbkcolor) CTLCOLOR_EDIT 코드에 대 한 응답에는 함수입니다.  
   
- `OnCtlColor` 호출 되지 않습니다 드롭다운 콤보 상자의 목록 상자에 대 한 드롭다운 목록 상자가 콤보 상자의 자식 실제로 인데 창의 자식이 아닙니다. 드롭 다운 목록 상자의 색을 변경 하려면 만듭니다는 `CComboBox` 재정의 `OnCtlColor` 를 확인 하 **CTLCOLOR_LISTBOX** 에 `nCtlColor` 매개 변수입니다. 이 처리기는 `SetBkColor` 멤버 함수를 사용 하 여 텍스트에 대 한 배경색을 설정 해야 합니다.  
+ `OnCtlColor` 호출 되지 않습니다 드롭다운 콤보 상자의 목록 상자에 대 한 드롭다운 목록 상자가 콤보 상자의 자식 실제로 인데 창의 자식이 아닙니다. 드롭 다운 목록 상자의 색을 변경 하려면 만듭니다는 `CComboBox` 재정의 `OnCtlColor` 에 CTLCOLOR_LISTBOX를 확인 하는 `nCtlColor` 매개 변수입니다. 이 처리기는 `SetBkColor` 멤버 함수를 사용 하 여 텍스트에 대 한 배경색을 설정 해야 합니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다. 대화 상자 클래스에 다음 메서드를 추가 하려면 Visual Studio 속성 창을 사용 하 여 WM_CTLCOLOR에 대 한 메시지 처리기를 추가 합니다. 또는 메시지 맵에 ON_WM_CTLCOLOR() 항목을 수동으로 추가할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#107](../../mfc/reference/codesnippet/cpp/cwnd-class_47.cpp)]  
   
 ##  <a name="ondeadchar"></a>  CWnd::OnDeadChar  
@@ -5859,13 +5859,13 @@ afx_msg void OnDeadChar(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nChar`  
+ *nChar*  
  키가 배달 못 한 문자 값을 지정합니다.  
   
- `nRepCnt`  
+ *nRepCnt*  
  반복 횟수를 지정합니다.  
   
- `nFlags`  
+ *nFlags*  
  다음 목록에 표시 된 것 처럼 검색 코드, 코드 키 전환, 이전 키 상태 및 상황에 맞는 코드를 지정 합니다.  
   
 |값|설명|  
@@ -5883,9 +5883,9 @@ afx_msg void OnDeadChar(
   
  응용 프로그램에서는 보통 `OnDeadChar` 을 각 키를 누른 상태에 대 한 사용자 피드백을 제공 합니다. 예를 들어 응용 프로그램이 캐럿을 이동 하지 않고 현재 문자 위치에는 악센트를 표시할 수 있습니다.  
   
- 하지 않으므로 반드시 일대일로 대응 누른 키 사이 및 `OnDeadChar` 호출, 정보 `nFlags` 는 일반적으로 없는 응용 프로그램에 유용 합니다. 정보 `nFlags` 에 대 한 가장 최근 호출에만 적용 됩니다는 [OnKeyUp](#onkeyup) 멤버 함수 또는 [OnKeyDown](#onkeydown) 앞에 있는 멤버 함수는 `OnDeadChar` 호출 합니다.  
+ 하지 않으므로 반드시 일대일로 대응 누른 키 사이 및 `OnDeadChar` 호출, 정보 *nFlags* 는 일반적으로 없는 응용 프로그램에 유용 합니다. 정보 *nFlags* 에 대 한 가장 최근 호출에만 적용 됩니다는 [OnKeyUp](#onkeyup) 멤버 함수 또는 [OnKeyDown](#onkeydown) 앞에 있는 멤버 함수는 `OnDeadChar` 호출 합니다.  
   
- IBM 고급 101 및 102 키 키보드에 대 한 향상 된 키가 오른쪽 ALT와 키보드의 주요 섹션에는 오른쪽 CTRL 키 기능, DEL, 홈, END, PAGE UP, PAGE DOWN 및 왼쪽의 숫자 키패드; 클러스터에 있는 화살표 키 슬래시 (/) 및 숫자 키패드에서 ENTER 키입니다. 다른 일부 키보드에 있는 확장 된 키 비트를 지원할 수 있습니다 `nFlags`합니다.  
+ IBM 고급 101 및 102 키 키보드에 대 한 향상 된 키가 오른쪽 ALT와 키보드의 주요 섹션에는 오른쪽 CTRL 키 기능, DEL, 홈, END, PAGE UP, PAGE DOWN 및 왼쪽의 숫자 키패드; 클러스터에 있는 화살표 키 슬래시 (/) 및 숫자 키패드에서 ENTER 키입니다. 다른 일부 키보드에 있는 확장 된 키 비트를 지원할 수 있습니다 *nFlags*합니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -5900,14 +5900,14 @@ afx_msg void OnDeleteItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDCtl`  
- 전송 되는 컨트롤의 식별자는 `WM_DELETEITEM` 메시지입니다.  
+ *nIDCtl*  
+ WM_DELETEITEM 메시지를 전송 하는 컨트롤의 식별자입니다.  
   
- `lpDeleteItemStruct`  
+ *lpDeleteItemStruct*  
  에 대 한 긴 포인터를 지정 된 [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) 삭제 된 목록 상자 항목에 대 한 정보를 포함 하는 데이터 구조입니다.  
   
 ### <a name="remarks"></a>설명  
- 경우는 **hwndItem** 의 멤버는 `DELETEITEMSTRUCT` 구조 콤보 상자 또는 목록 상자에 속하는 경우 `DeleteItem` 해당 클래스의 가상 함수를 호출 합니다. 재정의 `DeleteItem` 항목 관련 데이터를 삭제 하는 적절 한 컨트롤 클래스의 멤버 함수입니다.  
+ 경우는 `hwndItem` 의 멤버는 `DELETEITEMSTRUCT` 구조 콤보 상자 또는 목록 상자에 속하는 경우 `DeleteItem` 해당 클래스의 가상 함수를 호출 합니다. 재정의 `DeleteItem` 항목 관련 데이터를 삭제 하는 적절 한 컨트롤 클래스의 멤버 함수입니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -5946,13 +5946,13 @@ afx_msg BOOL OnDeviceChange(
  *nEventType*  
  이벤트 유형입니다. 사용 가능한 값의 설명에 대 한 설명 섹션을 참조  
   
- `dwData`  
+ *dwData*  
  이벤트 관련 데이터를 포함 하는 구조체의 주소입니다. 지정된 된 이벤트에 해당 의미에 따라 다릅니다.  
   
 ### <a name="remarks"></a>설명  
- 배출 및 잠금, 같은 소프트웨어를 제어할 수 있는 기능을 제공 하는 장치에 대 한 운영 체제 일반적으로 보냅니다는 **DBT_DEVICEREMOVEPENDING** 응용 프로그램 수 있도록 메시지 보내기 및 장치의 사용을 종료 하는 장치 드라이버 적절 하 게 합니다.  
+ 배출 및 잠금, 같은 소프트웨어를 제어할 수 있는 기능을 제공 하는 장치에 대 한 운영 체제는 DBT_DEVICEREMOVEPENDING에 게 메시지를 응용 프로그램에서 일반적으로 보내는 및 장치 드라이버 장치의 용도 정상적으로 종료 합니다.  
   
- 장치의 운영 체제에서 강제로 제거를 하는 경우 그 보내지 않을 수도 있습니다는 **DBT_DEVICEQUERYREMOVE** 이렇게 하기 전에 메시지입니다.  
+ 장치의 운영 체제에서 강제로 제거를 하는 경우 이렇게 하기 전에 DBT_DEVICEQUERYREMOVE 메시지 하지 보낼 수 있습니다.  
   
  *n 이벤트* 매개 변수는 다음이 값 중 하나일 수 있습니다.  
   
@@ -5970,7 +5970,7 @@ afx_msg BOOL OnDeviceChange(
   
 - [DBT_CONFIGCHANGED](http://msdn.microsoft.com/library/windows/desktop/aa363203) 현재 구성이 변경 되었습니다.  
   
-- **DBT_DEVNODES_CHANGED** 장치 노드 변경 되었습니다.  
+- DBT_DEVNODES_CHANGED 장치 노드 변경 되었습니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -5987,7 +5987,7 @@ afx_msg void OnDevModeChange(LPTSTR lpDeviceName);
  Windows 초기화 파일, WIN에에서 지정 된 장치 이름 가리킵니다. INI 합니다.  
   
 ### <a name="remarks"></a>설명  
- 처리 하는 응용 프로그램의 `WM_DEVMODECHANGE` 메시지 장치 모드 설정을 다시 초기화 될 수 있습니다. 창을 사용 하는 응용 프로그램 **ExtDeviceMode** 함수를 저장 및 복원 장치 설정을이 함수를 일반적으로 처리 하지 않습니다.  
+ WM_DEVMODECHANGE 메시지를 처리 하는 응용 프로그램 장치 모드 설정을 다시 초기화할 수 있습니다. 창을 사용 하는 응용 프로그램 `ExtDeviceMode` 함수를 저장 및 복원 장치 설정을이 함수를 일반적으로 처리 하지 않습니다.  
   
  사용자는 제어판에서 기본 프린터를 변경할 때이 함수 호출 되지 않습니다. 이 경우에 `OnWinIniChange` 함수를 호출 합니다.  
   
@@ -6019,23 +6019,23 @@ virtual void OnDrawIconicThumbnailOrLivePreview(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dc`  
+ *dc*  
  장치 컨텍스트를 지정합니다.  
   
- `rect`  
+ *rect*  
  렌더링 하는 영역의 경계 사각형을 지정 합니다.  
   
- `szRequiredThumbnailSize`  
- 대상 축소판 그림의 크기를 지정합니다. 경우에 무시 됩니다 `bIsThumbnail` 은 `FALSE`합니다.  
+ *szRequiredThumbnailSize*  
+ 대상 축소판 그림의 크기를 지정합니다. 경우에 무시 됩니다 *bIsThumbnail* 은 FALSE입니다.  
   
- `bIsThumbnail`  
+ *bIsThumbnail*  
  아이콘의 미리 보기 또는 실시간 미리 보기 (미리 보기)에 대 한이 메서드가 호출 되는지 여부를 지정 합니다.  
   
- `bAlphaChannelSet`  
- [out] 로 설정 `TRUE` 구현에서 선택한 비트맵의 알파 채널을 초기화 하는 경우 `dc`합니다.  
+ *bAlphaChannelSet*  
+ [out] 구현에서 선택한 비트맵의 알파 채널을 초기화 하는 경우 TRUE로 설정 *dc*합니다.  
   
 ### <a name="remarks"></a>설명  
- 파생된 클래스에서이 메서드를 재정의 하 고 축소판 그림 및 미리 보기를 사용자 지정 하기 위해 지정된 된 디바이스 컨텍스트에 그립니다. 경우 `bThumbnail` 은 `TRUE`, `szRequiredThumbnailSize` 무시 될 수 있습니다. 이 경우 수 (즉, 전체 클라이언트 영역을 검사 하는 비트맵) 전체 크기의 비트맵을 그릴 수 있습니다. 장치 컨텍스트 ( `dc`) 선택한 32 비트 비트맵와 함께 제공 합니다. 기본 구현은 WM_PRINT PRF_CLIENT, PRF_CHILDREN, 및 PRF_NONCLIENT 플래그와 함께이 창에 보냅니다.  
+ 파생된 클래스에서이 메서드를 재정의 하 고 축소판 그림 및 미리 보기를 사용자 지정 하기 위해 지정된 된 디바이스 컨텍스트에 그립니다. 경우 *bThumbnail* 가 TRUE 이면 *szRequiredThumbnailSize* 무시 될 수 있습니다. 이 경우 수 (즉, 전체 클라이언트 영역을 검사 하는 비트맵) 전체 크기의 비트맵을 그릴 수 있습니다. 장치 컨텍스트 ( *dc*) 선택한 32 비트 비트맵와 함께 제공 합니다. 기본 구현은 WM_PRINT PRF_CLIENT, PRF_CHILDREN, 및 PRF_NONCLIENT 플래그와 함께이 창에 보냅니다.  
   
 ##  <a name="ondrawitem"></a>  CWnd::OnDrawItem  
  소유자 그리기 단추 컨트롤, 콤보 상자 컨트롤, 목록 상자 컨트롤 또는 컨트롤의 시각적 측면이 때 메뉴의 소유자에 대 한이 멤버 함수를 호출 하는 프레임 워크 또는 메뉴 변경 되었습니다.  
@@ -6047,18 +6047,18 @@ afx_msg void OnDrawItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDCtl`  
- 전송 하는 컨트롤의 식별자가 포함 된 `WM_DRAWITEM` 메시지입니다. 메뉴는 메시지를 보낸 경우 `nIDCtl` 0이 포함 되어 있습니다.  
+ *nIDCtl*  
+ WM_DRAWITEM 메시지를 전송 하는 컨트롤의 식별자를 포함 합니다. 메뉴는 메시지를 보낸 경우 *nIDCtl* 0이 포함 되어 있습니다.  
   
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  에 대 한 긴 포인터 지정는 `DRAWITEMSTRUCT` 필요한 그리기의 형식과 항목을 그릴 수 있도록 하는 방법에 대 한 정보를 포함 하는 데이터 구조입니다.  
   
 ### <a name="remarks"></a>설명  
- **itemAction** 의 멤버는 [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) 그리기 작업을 수행할 수 있는 구조를 정의 합니다. 이 멤버의 데이터를 컨트롤의 소유자를 필요한 그리기 동작을 결정할 수 있습니다.  
+ `itemAction` 의 멤버는 [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) 그리기 작업을 수행할 수 있는 구조를 정의 합니다. 이 멤버의 데이터를 컨트롤의 소유자를 필요한 그리기 동작을 결정할 수 있습니다.  
   
- 이 메시지 처리에서 반환 하기 전에 응용 프로그램 확인 해야 하는 지정 된 디바이스 컨텍스트는 `hDC` 의 멤버는 `DRAWITEMSTRUCT` 구조 기본 상태로 복원 됩니다.  
+ 이 메시지 처리에서 반환 하기 전에 응용 프로그램 확인 해야 하는 지정 된 디바이스 컨텍스트는 *hDC* 의 멤버는 `DRAWITEMSTRUCT` 구조 기본 상태로 복원 됩니다.  
   
- 경우는 **hwndItem** 멤버가 속하는 [CButton](../../mfc/reference/cbutton-class.md), [CMenu](../../mfc/reference/cmenu-class.md), [CListBox](../../mfc/reference/clistbox-class.md), 또는 [CComboBox](../../mfc/reference/ccombobox-class.md) 개체 그런 다음 `DrawItem` 해당 클래스의 가상 함수를 호출 합니다. 재정의 `DrawItem` 항목을 그리는 적절 한 컨트롤 클래스의 멤버 함수입니다.  
+ 경우는 `hwndItem` 멤버가 속하는 [CButton](../../mfc/reference/cbutton-class.md), [CMenu](../../mfc/reference/cmenu-class.md), [CListBox](../../mfc/reference/clistbox-class.md), 또는 [CComboBox](../../mfc/reference/ccombobox-class.md) 개체는 다음 `DrawItem` 해당 클래스의 가상 함수를 호출 합니다. 재정의 `DrawItem` 항목을 그리는 적절 한 컨트롤 클래스의 멤버 함수입니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -6072,7 +6072,7 @@ afx_msg void OnDropFiles(HDROP hDropInfo);
   
 ### <a name="parameters"></a>매개 변수  
  *hDropInfo*  
- 삭제 된 파일을 설명 하는 내부 데이터 구조에 대 한 포인터입니다. 이 핸들에서 사용 되는 **DragFinish**, **DragQueryFile**, 및 **DragQueryPoint** Windows 함수는 삭제 된 파일에 대 한 정보를 검색 합니다.  
+ 삭제 된 파일을 설명 하는 내부 데이터 구조에 대 한 포인터입니다. 이 핸들에서 사용 되는 `DragFinish`, `DragQueryFile`, 및 `DragQueryPoint` Windows 함수는 삭제 된 파일에 대 한 정보를 검색 합니다.  
   
 ### <a name="remarks"></a>설명  
  일반적으로 삭제 된 파일을 지원 하기 위해 파생된 클래스를 디자인 하 고 창 생성 중에 자체 등록 합니다.  
@@ -6088,8 +6088,8 @@ afx_msg void OnEnable(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bEnable`  
- 지정 여부는 `CWnd` 활성화 또는 비활성화 되었으므로 개체입니다. 이 매개 변수는 **TRUE** 경우는 `CWnd` ; 설정한는 **FALSE** 경우는 `CWnd` 비활성화 되었습니다.  
+ *bEnable*  
+ 지정 여부는 `CWnd` 활성화 또는 비활성화 되었으므로 개체입니다. 이 매개 변수는 TRUE이는 `CWnd` ; 설정한 경우 조건이 FALSE는 `CWnd` 비활성화 되었습니다.  
   
 ### <a name="remarks"></a>설명  
  `OnEnable` 전에 호출 됩니다는 [EnableWindow](#enablewindow) 멤버 함수를 반환 하지만 사용 하도록 설정 하는 창 상태가 후 ( [WS_DISABLED](styles-used-by-mfc.md#window-styles) 스타일 비트) 변경 되었습니다.  
@@ -6105,13 +6105,13 @@ afx_msg void OnEndSession(BOOL bEnding);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bEnding`  
- 세션을 종료 여부를 지정 합니다. **TRUE** 세션이 고, 그렇지 않으면 종료 되 고 있으면 **FALSE**합니다.  
+ *벤딩*  
+ 세션을 종료 여부를 지정 합니다. 세션을 종료 합니다; TRUE 이면 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
  `OnEndSession` 호출 알립니다는 `CWnd` 세션이 실제로 종료 되 고 있는지 여부를 개체입니다.  
   
- 경우 `bEnding` 은 **TRUE**, Windows에서이 호출을 처리 하는 모든 응용 프로그램 반환한 후 언제 든 지 종료할 수 있습니다. 따라서 내에서 종료 하는 데 필요한 모든 작업을 수행 하는 응용 프로그램을 있을 `OnEndSession`합니다.  
+ 경우 *벤딩* 가 TRUE 이면 Windows에서이 호출을 처리 하는 모든 응용 프로그램 반환한 후 언제 든 지 종료할 수 있습니다. 따라서 내에서 종료 하는 데 필요한 모든 작업을 수행 하는 응용 프로그램을 있을 `OnEndSession`합니다.  
   
  호출할 필요가 없습니다는 [DestroyWindow](#destroywindow) 멤버 함수 또는 [경우도](http://msdn.microsoft.com/library/windows/desktop/ms644945) 세션이 종료 되는 경우에 Windows 작동 합니다.  
   
@@ -6128,15 +6128,15 @@ afx_msg void OnEnterIdle(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nWhy`  
+ *nWhy*  
  메시지는 대화 상자 또는 메뉴가 표시 되 고 결과 지정 합니다. 이 매개 변수는 다음 값 중 하나일 수 있습니다.  
   
-- **MSGF_DIALOGBOX** 대화 상자가 표시 되 고 되기 때문에 시스템 유휴 상태입니다.  
+- MSGF_DIALOGBOX 대화 상자가 표시 되 고 되기 때문에 시스템 유휴 상태입니다.  
   
-- **MSGF_MENU** 는 메뉴가 표시 되는 시스템은 유휴 상태입니다.  
+- MSGF_MENU 메뉴가 표시 되 고 되기 때문에 시스템 유휴 상태입니다.  
   
  *pWho*  
- 대화 상자에 대 한 포인터를 지정 합니다 (경우 `nWhy` 은 **MSGF_DIALOGBOX**), 또는 표시 된 메뉴를 포함 하는 창을 (경우 `nWhy` 은 **MSGF_MENU**). 이 포인터는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다.  
+ 대화 상자에 대 한 포인터를 지정 합니다 (경우 *nWhy* MSGF_DIALOGBOX은), 또는 표시 된 메뉴를 포함 하는 창을 (경우 *nWhy* MSGF_MENU 됩니다). 이 포인터는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다.  
   
 ### <a name="remarks"></a>설명  
  하나 이상의 이전 메시지 처리 후 메시지가 큐에 대기 중인 경우 모달 대화 상자 또는 메뉴가 유휴 상태로 전환 합니다.  
@@ -6152,7 +6152,7 @@ afx_msg void OnEnterMenuLoop(BOOL bIsTrackPopupMenu);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bIsTrackPopupMenu`  
+ *bIsTrackPopupMenu*  
  관련 된 메뉴 팝업 메뉴를 지정 합니다. 함수가 성공 하면 0이 아닌 값이 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -6170,7 +6170,7 @@ afx_msg void OnEnterSizeMove();
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_ENTERSIZEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms632622) 알림 Windows SDK에 설명 되어 있습니다.  
   
- 창이 이동 또는 창의 제목 표시줄이 나 크기 조정 테두리를 두 번 클릭할 때 또는 전달 하 여 창 경우 모달 루프를 크기 조정 설정의 [WM_SYSCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646360) 에 메시지는 [CWnd::DefWindowProc](#defwindowproc) 함수 및 `wParam` 해당 메시지의 매개 변수 지정 `SC_MOVE` 또는 `SC_SIZE`합니다.  
+ 창이 이동 또는 창의 제목 표시줄이 나 크기 조정 테두리를 두 번 클릭할 때 또는 전달 하 여 창 경우 모달 루프를 크기 조정 설정의 [WM_SYSCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646360) 에 메시지는 [CWnd::DefWindowProc](#defwindowproc) 함수 및 *wParam* SC_MOVE 또는 SC_SIZE 해당 메시지의 매개 변수를 지정 합니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -6183,7 +6183,7 @@ afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  디바이스 컨텍스트 개체를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -6192,13 +6192,13 @@ afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 ### <a name="remarks"></a>설명  
  그리기에 무효화 된 영역을 준비 하는 것이 라고 합니다.  
   
- 기본 구현으로 지정 된 창 클래스 배경 브러시를 사용 하 여 백그라운드 지웁니다는 **hbrBackground** 창 클래스 구조의 멤버입니다.  
+ 기본 구현으로 지정 된 창 클래스 배경 브러시를 사용 하 여 백그라운드 지웁니다는 `hbrBackground` 창 클래스 구조의 멤버입니다.  
   
- 경우는 **hbrBackground** 멤버는 **NULL**, 재정의 된 버전 `OnEraseBkgnd` 배경색을 삭제 해야 합니다. 사용 중인 버전에서 의도 된 브러시의 원점을 맞춰짐을 `CWnd` 첫 번째 호출 하 여 좌표 [UnrealizeObject](http://msdn.microsoft.com/library/windows/desktop/dd145164) 브러시를 선택한 다음 브러시에 대 한 합니다.  
+ 경우는 `hbrBackground` 멤버는 NULL, 재정의 된 버전 `OnEraseBkgnd` 배경색을 삭제 해야 합니다. 사용 중인 버전에서 의도 된 브러시의 원점을 맞춰짐을 `CWnd` 첫 번째 호출 하 여 좌표 [UnrealizeObject](http://msdn.microsoft.com/library/windows/desktop/dd145164) 브러시를 선택한 다음 브러시에 대 한 합니다.  
   
- 재정의 된 `OnEraseBkgnd` 에 대 한 응답에 0이 아닌 반환 해야 `WM_ERASEBKGND` 백그라운드; 지웁니다 메시지를 처리 하는 경우 더 이상 지우기 필요한 임을 나타냅니다. 0을 반환 하는 경우 창이 지워져야 하는 것으로 표시 된 상태로 유지 됩니다. (즉, 일반적으로 **fErase** 의 멤버는 `PAINTSTRUCT` 구조가 **TRUE**.)  
+ 재정의 된 `OnEraseBkgnd` 메시지를 처리 하 고 백그라운드 지웁니다 WM_ERASEBKGND에 대 한 응답에 0이 아닌 반환 해야 하 고 더 이상 지우기 과정 나타냅니다. 0을 반환 하는 경우 창이 지워져야 하는 것으로 표시 된 상태로 유지 됩니다. (즉, 일반적으로 `fErase` 의 멤버는 `PAINTSTRUCT` 구조 TRUE 됩니다.)  
   
- Windows 가정 배경으로 계산 되는 `MM_TEXT` 매핑 모드입니다. 장치 컨텍스트를 다른 매핑 모드를 사용 하는 클라이언트 영역의 보이는 부분 내에서 지울 영역 아닐 수 있습니다.  
+ Windows에서는 백그라운드 MM_TEXT 매핑 모드와 계산을 가정 합니다. 장치 컨텍스트를 다른 매핑 모드를 사용 하는 클라이언트 영역의 보이는 부분 내에서 지울 영역 아닐 수 있습니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -6211,7 +6211,7 @@ afx_msg void OnExitMenuLoop(BOOL bIsTrackPopupMenu);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bIsTrackPopupMenu`  
+ *bIsTrackPopupMenu*  
  관련 된 메뉴에 팝업 메뉴를 지정 합니다. 함수가 성공 하면 0이 아닌 값이 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -6229,7 +6229,7 @@ afx_msg void OnExitSizeMove();
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_EXITSIZEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms632623) 알림 Windows SDK에 설명 되어 있습니다.  
   
- 창이 이동 또는 창의 제목 표시줄이 나 크기 조정 테두리를 두 번 클릭할 때 또는 전달 하 여 창 경우 모달 루프를 크기 조정 설정의 [WM_SYSCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646360) 에 메시지는 [CWnd::DefWindowProc](#defwindowproc) 함수 및 `wParam` 해당 메시지의 매개 변수 지정 `SC_MOVE` 또는 `SC_SIZE`합니다.  
+ 창이 이동 또는 창의 제목 표시줄이 나 크기 조정 테두리를 두 번 클릭할 때 또는 전달 하 여 창 경우 모달 루프를 크기 조정 설정의 [WM_SYSCOMMAND](http://msdn.microsoft.com/library/windows/desktop/ms646360) 에 메시지는 [CWnd::DefWindowProc](#defwindowproc) 함수 및 *wParam* SC_MOVE 또는 SC_SIZE 해당 메시지의 매개 변수를 지정 합니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -6244,7 +6244,7 @@ afx_msg void OnFontChange();
 ### <a name="remarks"></a>설명  
  추가 하거나 글꼴을 시스템에서 제거 하는 응용 프로그램 (예: 전자는 [AddFontResource](http://msdn.microsoft.com/library/windows/desktop/dd183326) 또는 [RemoveFontResource](http://msdn.microsoft.com/library/windows/desktop/dd162922) Windows 함수) 보내야 하는 [WM_FONTCHANGE](http://msdn.microsoft.com/library/windows/desktop/dd145211) 모든 최상위 창에는 메시지입니다.  
   
- 이 메시지를 보내기 위해 사용 하 여는 [SendMessage](http://msdn.microsoft.com/library/windows/desktop/ms644950) Windows와 함수는 `hWnd` 매개 변수 설정 **HWND_BROADCAST**합니다.  
+ 이 메시지를 보내기 위해 사용 하 여는 [SendMessage](http://msdn.microsoft.com/library/windows/desktop/ms644950) Windows와 함수는 *hWnd* 매개 변수가 HWND_BROADCAST로 설정 합니다.  
   
 ##  <a name="ongetdlgcode"></a>  CWnd::OnGetDlgCode  
  컨트롤에서 화살표 키 및 Tab 키 입력 자체를 처리할 수 있도록 컨트롤에 대해 호출됩니다.  
@@ -6256,27 +6256,27 @@ afx_msg UINT OnGetDlgCode();
 ### <a name="return-value"></a>반환 값  
  하나 이상의 응용 프로그램 프로세스 입력의 유형을 나타내는 다음 값 중:  
   
-- **DLGC_BUTTON** 단추 (일반).  
+- DLGC_BUTTON 단추 (일반)입니다.  
   
-- **DLGC_DEFPUSHBUTTON** 기본 누름 단추입니다.  
+- DLGC_DEFPUSHBUTTON 기본 누름 단추입니다.  
   
-- **DLGC_HASSETSEL EM_SETSEL** 메시지입니다.  
+- DLGC_HASSETSEL EM_SETSEL 메시지입니다.  
   
-- **DLGC_UNDEFPUSHBUTTON** 기본 누름 단추 처리 하지 않습니다. (응용 프로그램에이 플래그를 사용할 수 **DLGC_BUTTON** 나타내려면 단추 입력을 처리 하지만 기본 누름 단추 처리를 위해 시스템에 의존 합니다.)  
+- DLGC_UNDEFPUSHBUTTON 아니요 기본 누름 단추 처리 합니다. (응용 프로그램 수이 플래그를 사용할 DLGC_BUTTON 단추 입력을 처리 하지만 기본 누름 단추 처리를 위해 시스템에 의존 나타냅니다.)  
   
-- **DLGC_RADIOBUTTON** 라디오 단추입니다.  
+- DLGC_RADIOBUTTON 라디오 단추입니다.  
   
-- **DLGC_STATIC** 정적 컨트롤입니다.  
+- DLGC_STATIC 정적 컨트롤입니다.  
   
-- **DLGC_WANTALLKEYS** 모든 키보드 입력 합니다.  
+- 모든 DLGC_WANTALLKEYS 키보드 입력 합니다.  
   
-- **DLGC_WANTARROWS** 화살표 키입니다.  
+- DLGC_WANTARROWS 화살표 키입니다.  
   
-- **DLGC_WANTCHARS** `WM_CHAR` 메시지입니다.  
+- DLGC_WANTCHARS WM_CHAR 메시지입니다.  
   
-- **DLGC_WANTMESSAGE** 모든 키보드 입력 합니다. 응용 프로그램 컨트롤에 로그온 할이 메시지를 전달합니다.  
+- 모든 DLGC_WANTMESSAGE 키보드 입력 합니다. 응용 프로그램 컨트롤에 로그온 할이 메시지를 전달합니다.  
   
-- **DLGC_WANTTAB** TAB 키입니다.  
+- DLGC_WANTTAB TAB 키입니다.  
   
 ### <a name="remarks"></a>설명  
  Windows가 모든 화살표 키 및 TAB 키 입력을 처리 하는 일반적으로 `CWnd` 제어 합니다. 재정의 하 여 `OnGetDlgCode`, `CWnd` 컨트롤 자체를 처리 하는 특정 유형의 입력을 선택할 수 있습니다.  
@@ -6313,7 +6313,7 @@ afx_msg void OnHelp();
  참조 [CWinApp::OnHelp](../../mfc/reference/cwinapp-class.md#onhelp) 자세한 정보에 대 한 합니다.  
   
 ##  <a name="onhelpfinder"></a>  CWnd::OnHelpFinder  
- 처리는 **ID_HELP_FINDER** 및 **ID_DEFAULT_HELP** 명령입니다.  
+ ID_HELP_FINDER 및 ID_DEFAULT_HELP 명령 처리합니다.  
   
 ```  
 afx_msg void OnHelpFinder();
@@ -6323,7 +6323,7 @@ afx_msg void OnHelpFinder();
  참조 [CWinApp::OnHelpFinder](../../mfc/reference/cwinapp-class.md#onhelpfinder) 자세한 정보에 대 한 합니다.  
   
 ##  <a name="onhelpindex"></a>  CWnd::OnHelpIndex  
- 처리는 **ID_HELP_INDEX** 명령 하 고 기본 도움말 항목을 제공 합니다.  
+ ID_HELP_INDEX 명령을 처리 하 고 기본 도움말 항목을 제공 합니다.  
   
 ```  
 afx_msg void OnHelpIndex();
@@ -6347,10 +6347,10 @@ afx_msg BOOL OnHelpInfo(HELPINFO* lpHelpInfo);
  창에 키보드 포커스가 있으면 하거나 메뉴가 창 내에서 활성화 되어 있는 경우 TRUE를 반환 합니다. 키보드 포커스가 없는 창, FALSE를 반환 합니다.  
   
 ### <a name="remarks"></a>설명  
- F1 키를 누르면 메뉴가 활성화 된 경우 **WM_HELP** 메뉴와 연결 된 창으로 전송 되 고, **WM_HELP** 키보드 포커스가 있는 창으로 전송 됩니다. 창이 키보드 포커스가 있으면 **WM_HELP** 현재 활성 창으로 전달 됩니다.  
+ WM_HELP; 메뉴와 연결 된 창으로 전달 됩니다 f1 키를 누르면 메뉴가 활성화 된 경우 그렇지 않으면 WM_HELP 키보드 포커스가 있는 창으로 전송 됩니다. 키보드 포커스가 없는 창, WM_HELP 현재 활성 창으로 전송 됩니다.  
   
 ##  <a name="onhelpusing"></a>  CWnd::OnHelpUsing  
- 처리는 **ID_HELP_USING** 명령입니다.  
+ ID_HELP_USING 명령을 처리합니다.  
   
 ```  
 afx_msg void OnHelpUsing();
@@ -6373,9 +6373,9 @@ afx_msg void OnHotKey(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `nHotKeyId`|메시지를 생성 하는 바로 가기 키에 대 한 식별자입니다. 메시지가 시스템에 정의 된 바로 가기 키에 의해 생성 된 경우이 매개 변수는 다음 값 중 하나로 설정 됩니다.<br /><br /> - `IDHOT_SNAPDESKTOP` -맞춤 바탕 화면 바로 가기 키를 눌렀습니다.<br />- `IDHOT_SNAPWINDOW` -스냅인 창 바로 가기 키를 눌렀습니다.|  
-|[in] `nKey1`|키로 지정 된 키와 함께에서 눌렀는지를 나타내는 플래그의 비트 조합 (OR)는 `nKey2` 매개 변수입니다. 가능한 값은 다음과 같습니다.<br /><br /> - `MOD_ALT` -두 ALT 키를 누른 되었습니다.<br />- `MOD_CONTROL` -하거나 CTRL 키를 누른 되었습니다.<br />- `MOD_SHIFT` -두 SHIFT 키를 누른 되었습니다.<br />- `MOD_WIN` -WINDOWS 키 어느 눌렀던 합니다. 이러한 키는 Microsoft Windows 로고가 표시 되어 있습니다.|  
-|[in] `nKey2`|바로 가기 키의 가상 키 코드입니다.|  
+|[in] *nHotKeyId*|메시지를 생성 하는 바로 가기 키에 대 한 식별자입니다. 메시지가 시스템에 정의 된 바로 가기 키에 의해 생성 된 경우이 매개 변수는 다음 값 중 하나로 설정 됩니다.<br /><br /> -IDHOT_SNAPDESKTOP-스냅인 바탕 화면 바로 가기 키를 눌렀습니다.<br />-IDHOT_SNAPWINDOW-스냅인 창 바로 가기 키를 눌렀습니다.|  
+|[in] *nKey1*|키로 지정 된 키와 함께에서 눌렀는지를 나타내는 플래그의 비트 조합 (OR)는 *nKey2* 매개 변수입니다. 가능한 값은 다음과 같습니다.<br /><br /> -MOD_ALT-ALT 키 중 하나가 눌렀던 합니다.<br />-MOD_CONTROL-하거나 CTRL 키를 누른 되었습니다.<br />-SHIFT 키를 사용 하거나 MOD_SHIFT-눌렀던 합니다.<br />-MOD_WIN-중 하나가 WINDOWS 키 눌렀던 합니다. 이러한 키는 Microsoft Windows 로고가 표시 되어 있습니다.|  
+|[in] *nKey2*|바로 가기 키의 가상 키 코드입니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_HOTKEY](http://msdn.microsoft.com/library/windows/desktop/ms646279) 알림 Windows SDK에 설명 되어 있습니다. 이 메시지는 바로 가기 키를 등록 하는 스레드와 연결 된 메시지 큐의 맨 위쪽에 배치 됩니다. 사용 하 여는 [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) 시스템 차원 바로 가기 키를 등록 하는 함수입니다.  
@@ -6394,42 +6394,42 @@ afx_msg void OnHScroll(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nSBCode`  
+ *nSBCode*  
  사용자 지정 하는 스크롤 막대 코드의 요청을 스크롤을 지정 합니다. 이 매개 변수는 다음 중 하나일 수 있습니다.  
   
-- **SB_LEFT** 맨 왼쪽으로 스크롤합니다.  
+- 맨 왼쪽 SB_LEFT 스크롤입니다.  
   
-- **SB_ENDSCROLL** 끝 스크롤입니다.  
+- SB_ENDSCROLL 끝 스크롤입니다.  
   
-- **SB_LINELEFT** 스크롤 남아 있습니다.  
+- 왼쪽 SB_LINELEFT 스크롤입니다.  
   
-- **SB_LINERIGHT** 오른쪽으로 스크롤합니다.  
+- SB_LINERIGHT 스크롤 권한입니다.  
   
-- **SB_PAGELEFT** 한 페이지에 남아 있습니다.  
+- SB_PAGELEFT 스크롤 하나에 왼쪽 페이지입니다.  
   
-- **SB_PAGERIGHT** 오른쪽 스크롤 한 페이지입니다.  
+- SB_PAGERIGHT 스크롤 적절 한 페이지입니다.  
   
-- **SB_RIGHT** 맨 오른쪽으로 스크롤합니다.  
+- 맨 오른쪽으로 SB_RIGHT 스크롤입니다.  
   
-- **SB_THUMBPOSITION** 절대 위치도 스크롤합니다. 현재 위치에서 지정 된 `nPos` 매개 변수입니다.  
+- 절대 위치로 SB_THUMBPOSITION 스크롤입니다. 현재 위치에서 지정 된 *nPos* 매개 변수입니다.  
   
-- **SB_THUMBTRACK** 끌어서 스크롤 상자에 지정 된 위치입니다. 현재 위치에서 지정 된 `nPos` 매개 변수입니다.  
+- 지정 된 위치로 SB_THUMBTRACK 끌어서 스크롤 상자입니다. 현재 위치에서 지정 된 *nPos* 매개 변수입니다.  
   
- `nPos`  
- 스크롤 막대 코드가 스크롤 상자 위치를 지정 **SB_THUMBPOSITION** 또는 **SB_THUMBTRACK**되지 않을 경우 사용 되지 않습니다. 초기 스크롤 범위에 따라 `nPos` 음수가 될 수 있습니다 및로 캐스팅 해야는 `int` 필요한 경우.  
+ *nPos*  
+ 스크롤 막대 코드가 SB_THUMBPOSITION 또는 SB_THUMBTRACK; 이면 스크롤 상자 위치를 지정 합니다. 그렇지 않으면 사용 되지 않습니다. 초기 스크롤 범위에 따라 *nPos* 음수가 될 수 있습니다 및로 캐스팅 해야는 **int** 필요한 경우.  
   
- `pScrollBar`  
- 스크롤 막대 컨트롤에서 스크롤 메시지를 받은 경우 컨트롤에 대 한 포인터를 포함 합니다. 이 매개 변수는 사용자는 창의 스크롤 막대를 클릭 한 경우 **NULL**합니다. 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.  
+ *pScrollBar*  
+ 스크롤 막대 컨트롤에서 스크롤 메시지를 받은 경우 컨트롤에 대 한 포인터를 포함 합니다. 사용자는 창의 스크롤 막대를 클릭 한 경우이 매개 변수는 NULL입니다. 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.  
   
 ### <a name="remarks"></a>설명  
- **SB_THUMBTRACK** 일반적으로 코드 스크롤 막대의 스크롤 상자를 끄는 동안 몇 가지 사용 의견을 제공 하는 응용 프로그램에서 사용 됩니다.  
+ 일반적으로 SB_THUMBTRACK 스크롤 막대 코드 스크롤 상자를 끄는 동안 몇 가지 사용 의견을 제공 하는 응용 프로그램에서 사용 됩니다.  
   
  스크롤 막대에 의해 제어 내용을 스크롤 하는 응용 프로그램, 것도 다시 설정 해야 있는 스크롤 상자의 위치는 [SetScrollPos](#setscrollpos) 멤버 함수입니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#108](../../mfc/reference/codesnippet/cpp/cwnd-class_48.cpp)]  
   
 ##  <a name="onhscrollclipboard"></a>  CWnd::OnHScrollClipboard  
@@ -6443,30 +6443,30 @@ afx_msg void OnHScrollClipboard(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pClipAppWnd`  
+ *pClipAppWnd*  
  클립보드 뷰어 창에 대 한 포인터를 지정합니다. 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.  
   
- `nSBCode`  
+ *nSBCode*  
  하위 단어에는 다음과 같은 스크롤 막대 코드 중 하나를 지정합니다.  
   
-- **SB_BOTTOM** 오른쪽 아래로 향하는 스크롤입니다.  
+- 오른쪽 아래로 향하는 SB_BOTTOM 스크롤입니다.  
   
-- **SB_ENDSCROLL** 끝 스크롤입니다.  
+- SB_ENDSCROLL 끝 스크롤입니다.  
   
-- **SB_LINEDOWN** 한 줄 아래로 스크롤합니다.  
+- 한 줄 아래로 스크롤 SB_LINEDOWN 합니다.  
   
-- **SB_LINEUP** 한 줄 위로 스크롤합니다.  
+- 한 줄 위로 스크롤 SB_LINEUP 합니다.  
   
-- **SB_PAGEDOWN** 한 페이지 아래로 스크롤합니다.  
+- 한 페이지 아래로 SB_PAGEDOWN 스크롤입니다.  
   
-- **SB_PAGEUP** 한 페이지 위로 스크롤합니다.  
+- 한 페이지 위로 SB_PAGEUP 스크롤입니다.  
   
-- **SB_THUMBPOSITION** 스크롤 절대 위치에 있습니다. 현재 위치에 제공 된 `nPos`합니다.  
+- 절대 위치로 SB_THUMBPOSITION 스크롤입니다. 현재 위치에 제공 된 *nPos*합니다.  
   
-- **SB_TOP** 상단 왼쪽으로 스크롤합니다.  
+- 왼쪽 위에서 SB_TOP 스크롤 클릭 합니다.  
   
- `nPos`  
- 코드가 있는 경우 스크롤 막대의 스크롤 상자 위치를 포함 **SB_THUMBPOSITION**; 그렇지 않으면 사용 되지 않습니다.  
+ *nPos*  
+ 스크롤 막대 코드가 SB_THUMBPOSITION; 이면 스크롤 상자 위치를 포함 합니다. 그렇지 않으면 사용 되지 않습니다.  
   
 ### <a name="remarks"></a>설명  
  소유자는 클립보드 이미지를 스크롤하고, 적절 한 섹션을 무효화 및 스크롤 막대 값을 업데이트 해야 합니다.  
@@ -6482,7 +6482,7 @@ afx_msg void OnIconEraseBkgnd(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  아이콘의 디바이스 컨텍스트 개체를 지정합니다. 임시 수 있으며 나중에 사용할 저장 해서는 안 됩니다.  
   
 ### <a name="remarks"></a>설명  
@@ -6501,7 +6501,7 @@ afx_msg void OnInitMenu(CMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pMenu`  
+ *pMenu*  
  메뉴를 초기화할 수를 지정 합니다. 임시 수 있으며 나중에 사용할 저장 해서는 안 됩니다.  
   
 ### <a name="remarks"></a>설명  
@@ -6526,11 +6526,11 @@ afx_msg void OnInitMenuPopup(
  *pPopupMenu*  
  팝업 메뉴의 메뉴 개체를 지정합니다. 임시 수 있으며 나중에 사용할 저장 해서는 안 됩니다.  
   
- `nIndex`  
+ *nIndex*  
  주 메뉴에 팝업 메뉴의 인덱스를 지정합니다.  
   
  *bSysMenu*  
- **True 이면** 팝업 메뉴 컨트롤 메뉴; 이면 그렇지 않으면 **FALSE**합니다.  
+ 팝업 메뉴 컨트롤 메뉴; 이면 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
  따라서 응용을 프로그램 전체 메뉴를 변경 하지 않고 표시 되기 전에 팝업 메뉴를 수정할 수 있습니다.  
@@ -6549,7 +6549,7 @@ afx_msg void OnInputDeviceChange(unsigned short uFlag);
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `uFlag`|이 플래그는 다음과 같은 값을 포함할 수 있습니다.<br /><br /> - `GIDC_ARRIVAL` -새 장치를 시스템에 추가 되었습니다.<br />- `GIDC_REMOVAL` -시스템에서 A 장치가 제거 되었습니다.|  
+|[in] *uFlag*|이 플래그는 다음과 같은 값을 포함할 수 있습니다.<br /><br /> -GIDC_ARRIVAL-A 새 장치를 시스템에 추가 되었습니다.<br />시스템에서-GIDC_REMOVAL-A 장치가 제거 되었습니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_INPUT_DEVICE_CHANGE](http://msdn.microsoft.com/library/windows/desktop/ms645591) 알림 Windows SDK에 설명 되어 있습니다. 일반 입력된 장치 메시지입니다.  
@@ -6570,8 +6570,8 @@ afx_msg void OnInputLangChange(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `nCharSet`|새 로캘의 문자 집합입니다. 자세한 내용은 참조는 `lfCharSet` 의 매개 변수는 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) 구조입니다.|  
-|[in] `nLocaleId`|입력된 로캘 식별자입니다. 자세한 내용은 참조 [언어 식별자 상수 및 문자열](http://msdn.microsoft.com/library/windows/desktop/dd318693)합니다.|  
+|[in] *nCharSet*|새 로캘의 문자 집합입니다. 자세한 내용은 참조는 *lfCharSet* 의 매개 변수는 [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) 구조입니다.|  
+|[in] *nLocaleId*|입력된 로캘 식별자입니다. 자세한 내용은 참조 [언어 식별자 상수 및 문자열](http://msdn.microsoft.com/library/windows/desktop/dd318693)합니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_INPUTLANGCHANGE](http://msdn.microsoft.com/library/windows/desktop/ms632629) 알림 메시지는 Windows SDK에 설명 되어 있습니다.  
@@ -6592,8 +6592,8 @@ afx_msg void OnInputLangChangeRequest(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `nFlags`|로캘, 설치 된 목록에서 이전 또는 다음 로캘에서 선택한 새 로캘 또는 시스템 문자 집합과 자판 배열을 새 입력된 로캘을 사용할 수 있습니다를 나타내는 플래그의 비트 (OR) 조합입니다.<br /><br /> 가능한 값은 `INPUTLANGCHANGE_BACKWARD`, `INPUTLANGCHANGE_FORWARD`, 및 `INPUTLANGCHANGE_SYSCHARSET`합니다.|  
-|[in] `nLocaleId`|입력된 로캘 식별자입니다. 자세한 내용은 참조 [언어 식별자 상수 및 문자열](http://msdn.microsoft.com/library/windows/desktop/dd318693)합니다.|  
+|[in] *nFlags*|로캘, 설치 된 목록에서 이전 또는 다음 로캘에서 선택한 새 로캘 또는 시스템 문자 집합과 자판 배열을 새 입력된 로캘을 사용할 수 있습니다를 나타내는 플래그의 비트 (OR) 조합입니다.<br /><br /> 가능한 값은 INPUTLANGCHANGE_BACKWARD, INPUTLANGCHANGE_FORWARD, 및 INPUTLANGCHANGE_SYSCHARSET입니다.|  
+|[in] *nLocaleId*|입력된 로캘 식별자입니다. 자세한 내용은 참조 [언어 식별자 상수 및 문자열](http://msdn.microsoft.com/library/windows/desktop/dd318693)합니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_INPUTLANGCHANGEREQUEST](http://msdn.microsoft.com/library/windows/desktop/ms632630) 알림 메시지는 Windows SDK에 설명 되어 있습니다. 두는 바로 가기 키 키보드 컨트롤 패널 응용 프로그램 또는 시스템 작업 표시줄에서 표시기에서 지정 된 된 새 입력된 언어를 선택 하면이 메시지가 게시 됩니다.  
@@ -6612,13 +6612,13 @@ afx_msg void OnKeyDown(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nChar`  
+ *nChar*  
  지정한 키의 가상 키 코드를 지정합니다. 표준 가상 키 코드의 목록, Winuser.h을 참조 하십시오.  
   
- `nRepCnt`  
+ *nRepCnt*  
  반복 횟수 (횟수 사용자 키로 인해 반복 되는 키 입력).  
   
- `nFlags`  
+ *nFlags*  
  다음 목록에 표시 된 것 처럼 검색 코드, 코드 키 전환, 이전 키 상태 및 상황에 맞는 코드를 지정 합니다.  
   
 |값|설명|  
@@ -6631,14 +6631,14 @@ afx_msg void OnKeyDown(
 |14|이전 키 상태 (1 키를 키가 있으면 0 호출 전에 다운 된 경우)입니다.|  
 |15|전환 상태 (1 키를 해제 하 되, 키를 누른 경우 0)입니다.|  
   
- 에 대 한는 `WM_KEYDOWN` 메시지 키 전환 (비트 15)이 비트가 0 및 상황에 맞는 코드 비트 (bit 13)은 0입니다.  
+ WM_KEYDOWN 메시지에 대 한 키 전환 (비트 15)이 비트가 0이 고 상황에 맞는 코드 (비트 13) 비트가 0입니다.  
   
 ### <a name="remarks"></a>설명  
  시스템 키 이외의 키를 누를 때 ALT 키를 누르지 키보드 키 인지 키보드 키를 누르면를 `CWnd` 입력된 포커스를가지고 있습니다.  
   
  자동 반복, 두 개 이상으로 인해 `OnKeyDown` 호출 하기 전에 발생할 수 있습니다는 [OnKeyUp](#onkeyup) 멤버 함수 호출 합니다. 이전 키 상태를 나타내는 비트를 확인 하기 위해 사용할 수 있는지 여부를 `OnKeyDown` 호출의 첫 번째 다운 전환을 인지 아래로 반복된 전환 합니다.  
   
- IBM 고급 101 및 102 키 키보드에 대 한 향상 된 키가 오른쪽 ALT와 키보드의 주요 섹션에는 오른쪽 CTRL 키 기능, DEL, 홈, END, PAGE UP, PAGE DOWN 및 왼쪽의 숫자 키패드; 클러스터에 있는 화살표 키 슬래시 (/) 및 숫자 키패드에서 ENTER 키입니다. 다른 일부 키보드에 있는 확장 된 키 비트를 지원할 수 있습니다 `nFlags`합니다.  
+ IBM 고급 101 및 102 키 키보드에 대 한 향상 된 키가 오른쪽 ALT와 키보드의 주요 섹션에는 오른쪽 CTRL 키 기능, DEL, 홈, END, PAGE UP, PAGE DOWN 및 왼쪽의 숫자 키패드; 클러스터에 있는 화살표 키 슬래시 (/) 및 숫자 키패드에서 ENTER 키입니다. 다른 일부 키보드에 있는 확장 된 키 비트를 지원할 수 있습니다 *nFlags*합니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -6654,13 +6654,13 @@ afx_msg void OnKeyUp(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nChar`  
+ *nChar*  
  지정한 키의 가상 키 코드를 지정합니다. 표준 가상 키 코드의 목록, Winuser.h을 참조 하십시오.  
   
- `nRepCnt`  
+ *nRepCnt*  
  반복 횟수 (횟수 사용자 키로 인해 반복 되는 키 입력).  
   
- `nFlags`  
+ *nFlags*  
  다음 목록에 표시 된 것 처럼 검색 코드, 코드 키 전환, 이전 키 상태 및 상황에 맞는 코드를 지정 합니다.  
   
 |값|설명|  
@@ -6673,12 +6673,12 @@ afx_msg void OnKeyUp(
 |14|이전 키 상태 (1 키를 키가 있으면 0 호출 전에 다운 된 경우)입니다.|  
 |15|전환 상태 (1 키를 해제 하 되, 키를 누른 경우 0)입니다.|  
   
- 에 대 한는 `WM_KEYUP` 메시지 (비트 15) 키 전환 비트는 1 및 상황에 맞는 코드 비트 (bit 13)은 0입니다.  
+ WM_KEYUP 메시지에 대 한 키 전환 비트 (비트 15)는 1이 고 상황에 맞는 코드 (비트 13) 비트가 0입니다.  
   
 ### <a name="remarks"></a>설명  
  시스템 키 이외의 키를 누를 때 ALT 키를 누르지 키보드 키 인지 키보드 키를 누르면를 `CWnd` 입력된 포커스를가지고 있습니다.  
   
- IBM 고급 101 및 102 키 키보드에 대 한 향상 된 키가 오른쪽 ALT와 키보드의 주요 섹션에는 오른쪽 CTRL 키 기능, DEL, 홈, END, PAGE UP, PAGE DOWN 및 왼쪽의 숫자 키패드; 클러스터에 있는 화살표 키 슬래시 (/) 및 숫자 키패드에서 ENTER 키입니다. 다른 일부 키보드에 있는 확장 된 키 비트를 지원할 수 있습니다 `nFlags`합니다.  
+ IBM 고급 101 및 102 키 키보드에 대 한 향상 된 키가 오른쪽 ALT와 키보드의 주요 섹션에는 오른쪽 CTRL 키 기능, DEL, 홈, END, PAGE UP, PAGE DOWN 및 왼쪽의 숫자 키패드; 클러스터에 있는 화살표 키 슬래시 (/) 및 숫자 키패드에서 ENTER 키입니다. 다른 일부 키보드에 있는 확장 된 키 비트를 지원할 수 있습니다 *nFlags*합니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -6692,7 +6692,7 @@ afx_msg void OnKillFocus(CWnd* pNewWnd);
   
 ### <a name="parameters"></a>매개 변수  
  *pNewWnd*  
- 입력된 포커스를 받는 창에 대 한 포인터를 지정 합니다 (되었을 **NULL** 일시적일 수 또는).  
+ 입력된 포커스를 받는 창에 대 한 포인터를 지정 합니다 (NULL 일 수 또는 일시적일 수)입니다.  
   
 ### <a name="remarks"></a>설명  
  경우는 `CWnd` 캐럿을 표시 하는 개체, 캐럿이 시점에서 제거 해야 합니다.  
@@ -6710,24 +6710,24 @@ afx_msg void OnLButtonDblClk(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nFlags`  
+ *nFlags*  
  아래로 다양 한 가상 키가 있는지 여부를 나타냅니다. 이 매개 변수는 다음 값의 조합이 포함 될 수 있습니다.  
   
-- **MK_CONTROL** 다운 된 CTRL 키를 설정 합니다.  
+- MK_CONTROL 다운 된 CTRL 키를 설정 합니다.  
   
-- **MK_LBUTTON** 마우스 왼쪽된 단추를 누른 경우 설정 합니다.  
+- 왼쪽 마우스 단추 MK_LBUTTON 설정 다운 되었습니다.  
   
-- **MK_MBUTTON** 마우스 가운데 단추를 누른 경우 설정 합니다.  
+- 마우스 가운데 단추를 눌렀음을 MK_MBUTTON 설정 합니다.  
   
-- **MK_RBUTTON** 마우스 오른쪽 단추를 누른 경우 설정 합니다.  
+- 경우에 오른쪽 마우스 단추 MK_RBUTTON 설정 다운 되었습니다.  
   
-- **MK_SHIFT** 다운 되 고 SHIFT 키를 설정 합니다.  
+- MK_SHIFT 다운 되 고 SHIFT 키를 설정 합니다.  
   
- `point`  
+ *지점*  
  커서의 x 및 y 좌표를 지정합니다. 이러한 좌표는 항상 창의 왼쪽 위 모퉁이 기준으로 합니다.  
   
 ### <a name="remarks"></a>설명  
- 창은 해당는 **CS_DBLCLKS** [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) 스타일 수신할 `OnLButtonDblClk` 호출 합니다. Microsoft Foundation Class windows에 대 한 기본값입니다. Windows 호출 `OnLButtonDblClk` 사용자가을 해제 하 고 다음 시스템의 내에 다시 왼쪽된 마우스 단추를 누를 때 제한 시간을 두 번 클릭 합니다. 4 개의 이벤트를 생성 실제로 마우스 왼쪽된 단추를 두 번 클릭: [WM_LBUTTONDOWN](#onlbuttondown), [WM_LBUTTONUP](#onlbuttonup) 메시지는 `WM_LBUTTONDBLCLK` 호출과 다른 `WM_LBUTTONUP` 단추를 때 메시지 릴리스 했습니다.  
+ CS_DBLCLKS 있는 창만 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) 스타일 수신할 `OnLButtonDblClk` 호출 합니다. Microsoft Foundation Class windows에 대 한 기본값입니다. Windows 호출 `OnLButtonDblClk` 사용자가을 해제 하 고 다음 시스템의 내에 다시 왼쪽된 마우스 단추를 누를 때 제한 시간을 두 번 클릭 합니다. 4 개의 이벤트를 생성 실제로 마우스 왼쪽된 단추를 두 번 클릭: [WM_LBUTTONDOWN](#onlbuttondown), [WM_LBUTTONUP](#onlbuttonup) 메시지, WM_LBUTTONDBLCLK 호출 및 단추를 때 다른 WM_LBUTTONUP 메시지 릴리스 했습니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -6742,20 +6742,20 @@ afx_msg void OnLButtonDown(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nFlags`  
+ *nFlags*  
  아래로 다양 한 가상 키가 있는지 여부를 나타냅니다. 이 매개 변수는 다음 값의 조합이 포함 될 수 있습니다.  
   
-- **MK_CONTROL** 다운 된 CTRL 키를 설정 합니다.  
+- MK_CONTROL 다운 된 CTRL 키를 설정 합니다.  
   
-- **MK_LBUTTON** 마우스 왼쪽된 단추를 누른 경우 설정 합니다.  
+- 왼쪽 마우스 단추 MK_LBUTTON 설정 다운 되었습니다.  
   
-- **MK_MBUTTON** 마우스 가운데 단추를 누른 경우 설정 합니다.  
+- 마우스 가운데 단추를 눌렀음을 MK_MBUTTON 설정 합니다.  
   
-- **MK_RBUTTON** 마우스 오른쪽 단추를 누른 경우 설정 합니다.  
+- 경우에 오른쪽 마우스 단추 MK_RBUTTON 설정 다운 되었습니다.  
   
-- **MK_SHIFT** 다운 되 고 SHIFT 키를 설정 합니다.  
+- MK_SHIFT 다운 되 고 SHIFT 키를 설정 합니다.  
   
- `point`  
+ *지점*  
  커서의 x 및 y 좌표를 지정합니다. 이러한 좌표는 항상 창의 왼쪽 위 모퉁이 기준으로 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -6773,18 +6773,18 @@ afx_msg void OnLButtonUp(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nFlags`  
+ *nFlags*  
  아래로 다양 한 가상 키가 있는지 여부를 나타냅니다. 이 매개 변수는 다음 값의 조합이 포함 될 수 있습니다.  
   
-- **MK_CONTROL** 다운 된 CTRL 키를 설정 합니다.  
+- MK_CONTROL 다운 된 CTRL 키를 설정 합니다.  
   
-- **MK_MBUTTON** 마우스 가운데 단추를 누른 경우 설정 합니다.  
+- 마우스 가운데 단추를 눌렀음을 MK_MBUTTON 설정 합니다.  
   
-- **MK_RBUTTON** 마우스 오른쪽 단추를 누른 경우 설정 합니다.  
+- 경우에 오른쪽 마우스 단추 MK_RBUTTON 설정 다운 되었습니다.  
   
-- **MK_SHIFT** 다운 되 고 SHIFT 키를 설정 합니다.  
+- MK_SHIFT 다운 되 고 SHIFT 키를 설정 합니다.  
   
- `point`  
+ *지점*  
  커서의 x 및 y 좌표를 지정합니다. 이러한 좌표는 항상 창의 왼쪽 위 모퉁이 기준으로 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -6802,24 +6802,24 @@ afx_msg void OnMButtonDblClk(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nFlags`  
+ *nFlags*  
  아래로 다양 한 가상 키가 있는지 여부를 나타냅니다. 이 매개 변수는 다음 값의 조합이 포함 될 수 있습니다.  
   
-- **MK_CONTROL** 다운 된 CTRL 키를 설정 합니다.  
+- MK_CONTROL 다운 된 CTRL 키를 설정 합니다.  
   
-- **MK_LBUTTON** 마우스 왼쪽된 단추를 누른 경우 설정 합니다.  
+- 왼쪽 마우스 단추 MK_LBUTTON 설정 다운 되었습니다.  
   
-- **MK_MBUTTON** 마우스 가운데 단추를 누른 경우 설정 합니다.  
+- 마우스 가운데 단추를 눌렀음을 MK_MBUTTON 설정 합니다.  
   
-- **MK_RBUTTON** 마우스 오른쪽 단추를 누른 경우 설정 합니다.  
+- 경우에 오른쪽 마우스 단추 MK_RBUTTON 설정 다운 되었습니다.  
   
-- **MK_SHIFT** 다운 되 고 SHIFT 키를 설정 합니다.  
+- MK_SHIFT 다운 되 고 SHIFT 키를 설정 합니다.  
   
- `point`  
+ *지점*  
  커서의 x 및 y 좌표를 지정합니다. 이러한 좌표는 항상 창의 왼쪽 위 모퉁이 기준으로 합니다.  
   
 ### <a name="remarks"></a>설명  
- 창은 해당는 **CS_DBLCLKS** [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) 스타일 수신할 `OnMButtonDblClk` 호출 합니다. 모든 Microsoft Foundation Class 창에 대 한 기본값입니다. Windows에서 생성 하는 `OnMButtonDblClk` 제한 시간을 두 번 클릭는 사용자가, 릴리스를 차례로 누르면 마우스 가운데 단추를 시스템의 내에서 다시 호출 합니다. 4 개의 이벤트를 생성 실제로 마우스 가운데 단추를 두 번 클릭: [WM_MBUTTONDOWN](#onmbuttondown) 및 [WM_MBUTTONUP](#onmbuttonup) 메시지는 `WM_MBUTTONDBLCLK` 호출과 다른 `WM_MBUTTONUP` 메시지입니다.  
+ CS_DBLCLKS 있는 창만 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) 스타일 수신할 `OnMButtonDblClk` 호출 합니다. 모든 Microsoft Foundation Class 창에 대 한 기본값입니다. Windows에서 생성 하는 `OnMButtonDblClk` 제한 시간을 두 번 클릭는 사용자가, 릴리스를 차례로 누르면 마우스 가운데 단추를 시스템의 내에서 다시 호출 합니다. 4 개의 이벤트를 생성 실제로 마우스 가운데 단추를 두 번 클릭: [WM_MBUTTONDOWN](#onmbuttondown) 및 [WM_MBUTTONUP](#onmbuttonup) 메시지, WM_MBUTTONDBLCLK 호출 및 다른 WM_MBUTTONUP 메시지입니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -6834,20 +6834,20 @@ afx_msg void OnMButtonDown(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nFlags`  
+ *nFlags*  
  아래로 다양 한 가상 키가 있는지 여부를 나타냅니다. 이 매개 변수는 다음 값의 조합이 포함 될 수 있습니다.  
   
-- **MK_CONTROL** 다운 된 CTRL 키를 설정 합니다.  
+- MK_CONTROL 다운 된 CTRL 키를 설정 합니다.  
   
-- **MK_LBUTTON** 마우스 왼쪽된 단추를 누른 경우 설정 합니다.  
+- 왼쪽 마우스 단추 MK_LBUTTON 설정 다운 되었습니다.  
   
-- **MK_MBUTTON** 마우스 가운데 단추를 누른 경우 설정 합니다.  
+- 마우스 가운데 단추를 눌렀음을 MK_MBUTTON 설정 합니다.  
   
-- **MK_RBUTTON** 마우스 오른쪽 단추를 누른 경우 설정 합니다.  
+- 경우에 오른쪽 마우스 단추 MK_RBUTTON 설정 다운 되었습니다.  
   
-- **MK_SHIFT** 다운 되 고 SHIFT 키를 설정 합니다.  
+- MK_SHIFT 다운 되 고 SHIFT 키를 설정 합니다.  
   
- `point`  
+ *지점*  
  커서의 x 및 y 좌표를 지정합니다. 이러한 좌표는 항상 창의 왼쪽 위 모퉁이 기준으로 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -6865,18 +6865,18 @@ afx_msg void OnMButtonUp(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nFlags`  
+ *nFlags*  
  아래로 다양 한 가상 키가 있는지 여부를 나타냅니다. 이 매개 변수는 다음 값의 조합이 포함 될 수 있습니다.  
   
-- **MK_CONTROL** 다운 된 CTRL 키를 설정 합니다.  
+- MK_CONTROL 다운 된 CTRL 키를 설정 합니다.  
   
-- **MK_LBUTTON** 마우스 왼쪽된 단추를 누른 경우 설정 합니다.  
+- 왼쪽 마우스 단추 MK_LBUTTON 설정 다운 되었습니다.  
   
-- **MK_RBUTTON** 마우스 오른쪽 단추를 누른 경우 설정 합니다.  
+- 경우에 오른쪽 마우스 단추 MK_RBUTTON 설정 다운 되었습니다.  
   
-- **MK_SHIFT** 다운 되 고 SHIFT 키를 설정 합니다.  
+- MK_SHIFT 다운 되 고 SHIFT 키를 설정 합니다.  
   
- `point`  
+ *지점*  
  커서의 x 및 y 좌표를 지정합니다. 이러한 좌표는 항상 창의 왼쪽 위 모퉁이 기준으로 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -6895,11 +6895,11 @@ afx_msg void OnMDIActivate(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bActivate`  
- **TRUE** 자식 활성화 되는 경우 및 **FALSE** 비활성화 되 고 있습니다.  
+ *bActivate*  
+ 자식 정품 인증 하 고 FALSE 이면이 비활성화 되 면 TRUE입니다.  
   
- `pActivateWnd`  
- 활성화할 MDI 자식 창에 대 한 포인터를 포함 합니다. MDI 자식 창에서 받으면 `pActivateWnd` 활성화 되 고 자식 창에 대 한 포인터를 포함 합니다. 이 포인터는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다.  
+ *pActivateWnd*  
+ 활성화할 MDI 자식 창에 대 한 포인터를 포함 합니다. MDI 자식 창에서 받으면 *pActivateWnd* 활성화 되 고 자식 창에 대 한 포인터를 포함 합니다. 이 포인터는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다.  
   
  *pDeactivateWnd*  
  해제 하 고 MDI 자식 창에 대 한 포인터를 포함 합니다. 이 포인터는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다.  
@@ -6919,22 +6919,22 @@ afx_msg void OnMeasureItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDCtl`  
+ *nIDCtl*  
  컨트롤의 ID입니다.  
   
- `lpMeasureItemStruct`  
+ *lpMeasureItemStruct*  
  가리키는 [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) 소유자 그리기 컨트롤의 크기를 포함 하는 데이터 구조입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 멤버 함수를 재정의 하 고 입력는 `MEASUREITEMSTRUCT` 데이터 구조에서 가리키는 `lpMeasureItemStruct` 반환; 컨트롤의 크기의 창에 알립니다.이 고 Windows 사용자 컨트롤와 상호 작용을 올바르게 처리할 수 있도록 합니다.  
+ 이 멤버 함수를 재정의 하 고 입력의 `MEASUREITEMSTRUCT` 데이터 구조에서 가리키는 *lpMeasureItemStruct* 반환; 컨트롤의 크기의 창에 알립니다.이 고 windows 사용자와 상호 작용을 처리 하는 올바르게를 제어 합니다.  
   
  목록 상자 또는 콤보 상자로 만들어는 [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) 또는 [CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) 스타일, 프레임 워크는; 컨트롤의 각 항목에 대 한 소유자에 대 한이 기능을 호출 하지 않으면이 함수는 한 번 호출 됩니다.  
   
- 에 대 한 호출을 시작 하는 Windows `OnMeasureItem` 사용 하 여 만든 콤보 상자 및 목록 상자의 소유자에 대 한는 **OWNERDRAWFIXED** 스타일 보내기 전에 [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) 메시지입니다. 결과적으로, 소유자가이 호출을 받으면 Windows 확인 되지 않았음을 아직; 컨트롤에 사용 되는 글꼴의 너비와 높이 함수 호출 및 이러한 값을 필요로 하는 계산 응용 프로그램 또는 라이브러리의 주 기능은에서 수행 해야 합니다.  
+ 에 대 한 호출을 시작 하는 Windows `OnMeasureItem` 콤보 상자와 목록 상자를 보내기 전에 OWNERDRAWFIXED 스타일으로 만든의 소유자는 [WM_INITDIALOG](http://msdn.microsoft.com/library/windows/desktop/ms645428) 메시지입니다. 결과적으로, 소유자가이 호출을 받으면 Windows 확인 되지 않았음을 아직; 컨트롤에 사용 되는 글꼴의 너비와 높이 함수 호출 및 이러한 값을 필요로 하는 계산 응용 프로그램 또는 라이브러리의 주 기능은에서 수행 해야 합니다.  
   
  측정 되는 항목이 있으면는 `CMenu`, `CListBox` 또는 `CComboBox` 개체 면 `MeasureItem` 해당 클래스의 가상 함수를 호출 합니다. 재정의 `MeasureItem` 계산 하 고 각 항목의 크기를 설정 하는 적절 한 컨트롤 클래스의 멤버 함수입니다.  
   
- `OnMeasureItem` 런타임 시 컨트롤의 클래스를 만들거나로 생성 하는 경우에 호출 됩니다는 **LBS_OWNERDRAWVARIABLE** 또는 **CBS_OWNERDRAWVARIABLE** 스타일입니다. 대화 상자 편집기에서 컨트롤을 만들 경우 `OnMeasureItem` 호출 되지 것입니다. 때문에 이것이 [WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925) 컨트롤의 생성 프로세스 초기에 전송 됩니다. 경우 하위 클래스를 사용 하 여 `DDX_Control`, `SubclassDlgItem`, 또는 `SubclassWindow`, 하위 클래스를 작성 후 생성 프로세스는 일반적으로 발생 합니다. 따라서 없기를 처리 하는 [WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925) 컨트롤의 메시지 `OnChildNotify` 함수를 구현 하기 위해 MFC를 사용 하는 메커니즘 **ON_WM_MEASUREITEM_REFLECT**합니다.  
+ `OnMeasureItem` 런타임 시 컨트롤의 클래스를 만들거나 LBS_OWNERDRAWVARIABLE 또는 CBS_OWNERDRAWVARIABLE 스타일으로 생성 하는 경우에 호출 됩니다. 대화 상자 편집기에서 컨트롤을 만들 경우 `OnMeasureItem` 호출 되지 것입니다. 때문에 이것이 [WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925) 컨트롤의 생성 프로세스 초기에 전송 됩니다. 경우 하위 클래스를 사용 하 여 `DDX_Control`, `SubclassDlgItem`, 또는 `SubclassWindow`, 하위 클래스를 작성 후 생성 프로세스는 일반적으로 발생 합니다. 따라서 없기를 처리 하는 [WM_MEASUREITEM](http://msdn.microsoft.com/library/windows/desktop/bb775925) 컨트롤의 메시지 `OnChildNotify` 함수는 MFC ON_WM_MEASUREITEM_REFLECT를 구현 하기 위해 사용 하는 메커니즘입니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -6950,13 +6950,13 @@ afx_msg LRESULT OnMenuChar(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nChar`  
+ *nChar*  
  빌드 설정에 따라 사용자가 누른 ANSI 또는 유니코드 문자를 지정 합니다.  
   
- `nFlags`  
- 포함 된 **MF_POPUP** 메뉴에 팝업 메뉴 경우 플래그를 지정 합니다. 포함 된 **MF_SYSMENU** 메뉴 컨트롤 메뉴 경우 플래그를 지정 합니다.  
+ *nFlags*  
+ 메뉴 팝업 메뉴 경우 MF_POPUP 플래그를 포함 합니다. 메뉴 컨트롤 메뉴 경우 MF_SYSMENU 플래그를 포함 합니다.  
   
- `pMenu`  
+ *pMenu*  
  선택한에 대 한 포인터를 포함 `CMenu`합니다. 포인터는 임시적 이며 저장 되어야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -6971,7 +6971,7 @@ afx_msg LRESULT OnMenuChar(
  0 또는 1 상위 단어에 포함 되어 있는 경우에 하위 단어는 무시 됩니다. 액셀러레이터 키를 사용 하는 메뉴에 배치 하는 비트맵을 선택 하는 경우 응용 프로그램에서이 메시지를 처리 해야 합니다.  
   
 ### <a name="remarks"></a>설명  
- 에 게 보내기는 `CWnd` 메뉴를 소유 하는 합니다. `OnMenuChar` 키 니모닉 문자에 해당 하지 않는 경우에 사용자가 alt 키와 다른 키를 누를 때을 호출 또한 됩니다. 이 경우 `pMenu` 가 소유 하 고 메뉴를 가리키는 `CWnd`, 및 `nFlags` 은 0입니다.  
+ 에 게 보내기는 `CWnd` 메뉴를 소유 하는 합니다. `OnMenuChar` 키 니모닉 문자에 해당 하지 않는 경우에 사용자가 alt 키와 다른 키를 누를 때을 호출 또한 됩니다. 이 경우 *pMenu* 가 소유 하 고 메뉴를 가리키는 `CWnd`, 및 *nFlags* 은 0입니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -6989,15 +6989,15 @@ afx_msg UINT OnMenuDrag(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `nPos`|끌기 작업이 시작 될 때 메뉴 항목의 인덱스 위치입니다.|  
-|[in] `pMenu`|에 대 한 포인터는 [CMenu](../../mfc/reference/cmenu-class.md) 메뉴 항목을 포함 하는 개체입니다.|  
+|[in] *nPos*|끌기 작업이 시작 될 때 메뉴 항목의 인덱스 위치입니다.|  
+|[in] *pMenu*|에 대 한 포인터는 [CMenu](../../mfc/reference/cmenu-class.md) 메뉴 항목을 포함 하는 개체입니다.|  
   
 ### <a name="return-value"></a>반환 값  
   
 |반환 값|의미|  
 |------------------|-------------|  
-|`MND_CONTINUE`|메뉴에 활성 상태로 유지 해야 합니다. 마우스를 해제 하는 경우 무시 됩니다.|  
-|`MND_ENDMENU`|메뉴 종료 되어야 합니다.|  
+|MND_CONTINUE|메뉴에 활성 상태로 유지 해야 합니다. 마우스를 해제 하는 경우 무시 됩니다.|  
+|MND_ENDMENU|메뉴 종료 되어야 합니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_MENUDRAG](http://msdn.microsoft.com/library/windows/desktop/ms647606) 알림 Windows SDK에 설명 되어 있습니다.  
@@ -7016,14 +7016,14 @@ afx_msg UINT OnMenuGetObject(MENUGETOBJECTINFO* pMenuGetObjectInfo);
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `pMenu`|에 대 한 포인터는 [MENUGETOBJECTINFO](http://msdn.microsoft.com/library/windows/desktop/ms647572) 끌어서 놓기 메뉴 마우스 커서에 대 한 정보가 포함 된 구조체 켜져 있습니다.|  
+|[in] *pMenu*|에 대 한 포인터는 [MENUGETOBJECTINFO](http://msdn.microsoft.com/library/windows/desktop/ms647572) 끌어서 놓기 메뉴 마우스 커서에 대 한 정보가 포함 된 구조체 켜져 있습니다.|  
   
 ### <a name="return-value"></a>반환 값  
   
 |반환 값|의미|  
 |------------------|-------------|  
-|`MNGO_NOERROR`|드롭 끌기 작업을 지 원하는 인터페이스 포인터에 반환 됩니다는 `pvObj` 의 멤버는 [MENUGETOBJECTINFO](http://msdn.microsoft.com/library/windows/desktop/ms647572) 구조입니다. 현재만 [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) 인터페이스를 지원 합니다.|  
-|`MNGO_NOINTERFACE`|드롭 끌어서 인터페이스가 사용할 수 있습니다.|  
+|MNGO_NOERROR|드롭 끌기 작업을 지 원하는 인터페이스 포인터에 반환 됩니다는 `pvObj` 의 멤버는 [MENUGETOBJECTINFO](http://msdn.microsoft.com/library/windows/desktop/ms647572) 구조입니다. 현재만 [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) 인터페이스를 지원 합니다.|  
+|MNGO_NOINTERFACE|드롭 끌어서 인터페이스가 사용할 수 있습니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_MENUGETOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms647607) 알림 Windows SDK에 설명 되어 있습니다.  
@@ -7044,8 +7044,8 @@ afx_msg void OnMenuRButtonUp(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `nPos`|마우스 오른쪽 단추를 놓았음을 때 메뉴 항목의 인덱스 위치입니다.|  
-|[in] `pMenu`|에 대 한 포인터는 [CMenu](../../mfc/reference/cmenu-class.md) 메뉴 항목을 포함 하는 개체입니다.|  
+|[in] *nPos*|마우스 오른쪽 단추를 놓았음을 때 메뉴 항목의 인덱스 위치입니다.|  
+|[in] *pMenu*|에 대 한 포인터는 [CMenu](../../mfc/reference/cmenu-class.md) 메뉴 항목을 포함 하는 개체입니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_MENURBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms647610) 알림 Windows SDK에 설명 되어 있습니다. [WM_MENURBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms647610) 메시지 통해 응용 프로그램 메시지에 지정 된 항목의 메뉴에 대 한 상황에 맞는 메뉴를 제공할 수 있습니다.  
@@ -7064,35 +7064,35 @@ afx_msg void OnMenuSelect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nItemID`  
- 선택한 항목을 식별합니다. 선택한 항목이 메뉴 항목 이면 `nItemID` 메뉴 항목 ID를 포함 선택한 항목 팝업 메뉴를 포함 하는 경우 `nItemID` 팝업 메뉴 인덱스를 포함 하 고 *hSysMenu* 주 (클릭-on) 메뉴의 핸들을 포함 합니다.  
+ *nItemID*  
+ 선택한 항목을 식별합니다. 선택한 항목이 메뉴 항목 이면 *nItemID* 메뉴 항목 ID를 포함 선택한 항목 팝업 메뉴를 포함 하는 경우 *nItemID* 팝업 메뉴 인덱스를 포함 하 고 *hSysMenu* 주 (클릭-on) 메뉴의 핸들을 포함 합니다.  
   
- `nFlags`  
+ *nFlags*  
  다음 메뉴 플래그의 조합을 포함 되어 있습니다.  
   
-- **MF_BITMAP** 항목은 비트맵입니다.  
+- MF_BITMAP 항목이 비트맵입니다.  
   
-- **MF_CHECKED** 항목이 선택 되어 있습니다.  
+- MF_CHECKED 항목이 선택 되어 있습니다.  
   
-- **MF_DISABLED** 항목을 사용할 수 없습니다.  
+- MF_DISABLED 항목이 비활성화 됩니다.  
   
-- **MF_GRAYED** 항목이 흐리게 표시 됩니다.  
+- MF_GRAYED 항목이 흐리게 표시 됩니다.  
   
-- **MF_MOUSESELECT** 마우스로 항목을 선택 합니다.  
+- 마우스로 MF_MOUSESELECT 항목을 선택 합니다.  
   
-- `MF_OWNERDRAW` 항목 소유자 그리기 항목입니다.  
+- MF_OWNERDRAW 소유자 그리기 항목입니다.  
   
-- **MF_POPUP** 항목 팝업 메뉴를 포함 합니다.  
+- MF_POPUP 항목 팝업 메뉴를 포함 합니다.  
   
-- **MF_SEPARATOR** 항목 메뉴 항목 구분 기호입니다.  
+- MF_SEPARATOR 항목 메뉴 항목 구분 기호입니다.  
   
-- **MF_SYSMENU** 항목이 컨트롤 메뉴에 포함 되어 있습니다.  
+- MF_SYSMENU 항목 컨트롤 메뉴에 포함 됩니다.  
   
- `hSysMenu`  
- 경우 `nFlags` 포함 **MF_SYSMENU**를 메시지에 연결 된 메뉴를 식별 합니다. 경우 `nFlags` 포함 **MF_POPUP**, 주 메뉴의 핸들을 식별 합니다. 경우 `nFlags` 둘 다 포함 **MF_SYSMENU** 나 **MF_POPUP**, 사용 되지 않습니다.  
+ *hSysMenu*  
+ 경우 *nFlags* MF_SYSMENU 포함, 메시지에 연결 된 메뉴를 식별 합니다. 경우 *nFlags* MF_POPUP 포함, 주 메뉴의 핸들을 식별 합니다. 경우 *nFlags* MF_SYSMENU 아니고 MF_POPUP, 포함 되어 사용 되지 않습니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `nFlags` 0xFFFF 포함 및 `hSysMenu` , 0이 포함 된 사용자가 ESC 키를 누르거나 메뉴 밖을 클릭 하기 때문에 메뉴를 종료 했습니다.  
+ 경우 *nFlags* 0xFFFF를 포함 하 고 *hSysMenu* , 0이 포함 된 사용자가 ESC 키를 누르거나 메뉴 밖을 클릭 하기 때문에 메뉴를 종료 했습니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -7111,32 +7111,32 @@ afx_msg int OnMouseActivate(
  *pDesktopWnd*  
  활성화 되 고 창의 최상위 부모 창에 대 한 포인터를 지정 합니다. 포인터는 임시적 이며 저장 되어야 합니다.  
   
- `nHitTest`  
+ *nHitTest*  
  지정 된 [적중 테스트](#onnchittest) 지역 번호입니다. 적중 횟수 테스트에는 커서의 위치를 결정 하는 테스트가입니다.  
   
- `message`  
+ *message*  
  마우스 메시지 번호를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
  활성화 여부를 지정 된 `CWnd` 여부와 마우스 이벤트는 삭제를 합니다. 다음 값 중 하나 여야 합니다.  
   
-- **MA_ACTIVATE** Activate `CWnd` 개체입니다.  
+- MA_ACTIVATE 활성화 `CWnd` 개체입니다.  
   
-- **MA_NOACTIVATE** 를 활성화 하지 않는 `CWnd` 개체입니다.  
+- 활성화 하지 않는 MA_NOACTIVATE `CWnd` 개체입니다.  
   
-- **MA_ACTIVATEANDEAT** Activate `CWnd` 개체를 마우스 이벤트를 삭제 합니다.  
+- MA_ACTIVATEANDEAT 활성화 `CWnd` 개체를 마우스 이벤트를 삭제 합니다.  
   
-- **MA_NOACTIVATEANDEAT** 를 활성화 하지 않는 `CWnd` 개체를 마우스 이벤트를 삭제 합니다.  
+- 활성화 하지 않는 MA_NOACTIVATEANDEAT `CWnd` 개체를 마우스 이벤트를 삭제 합니다.  
   
 ### <a name="remarks"></a>설명  
- 기본 구현은 모든 처리가 발생 하기 전에 부모 창에이 메시지를 전달 합니다. 부모 창에 반환 하는 경우 **TRUE**, 처리를 중지 합니다.  
+ 기본 구현은 모든 처리가 발생 하기 전에 부모 창에이 메시지를 전달 합니다. 부모 창 TRUE가 반환 하는 경우 처리가 중단 됩니다.  
   
  개별 적중 테스트 지역 번호에 대 한 참조는 [OnNcHitTest](#onnchittest) 멤버 함수  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCAxCtl#9](../../mfc/reference/codesnippet/cpp/cwnd-class_49.cpp)]  
   
 ##  <a name="onmousehover"></a>  CWnd::OnMouseHover  
@@ -7152,13 +7152,13 @@ afx_msg void OnMouseHover(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `nFlags`|보조 키를 누르면 나타내는 플래그의 비트 조합 (OR)입니다. 예를 들어는 `MK_CONTROL` 플래그 CTRL 키를 눌렀음을 나타냅니다.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 지정 하는 개체는 *x* 및 *y* 클라이언트 영역의 왼쪽 위 모퉁이 기준으로 커서의 좌표가 합니다.|  
+|[in] *nFlags*|보조 키를 누르면 나타내는 플래그의 비트 조합 (OR)입니다. 예를 들어 MK_CONTROL 플래그 CTRL 키를 눌렀음을 나타냅니다.|  
+|[in] *지점*|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 지정 하는 개체는 *x* 및 *y* 클라이언트 영역의 왼쪽 위 모퉁이 기준으로 커서의 좌표가 합니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_MOUSEHOVER](http://msdn.microsoft.com/library/windows/desktop/ms645613) 알림 Windows SDK에 설명 되어 있습니다.  
   
- `nFlags` 매개 변수는 다음 표에 나열 된 보조 키의 조합 수 있습니다. 자세한 내용은 참조 [마우스 입력에 대 한](http://msdn.microsoft.com/library/windows/desktop/ms645601)합니다.  
+ *nFlags* 매개 변수는 다음 표에 나열 된 보조 키의 조합 수 있습니다. 자세한 내용은 참조 [마우스 입력에 대 한](http://msdn.microsoft.com/library/windows/desktop/ms645601)합니다.  
   
 |보조키|설명|  
 |------------------|-----------------|  
@@ -7187,9 +7187,9 @@ afx_msg void OnMouseHWheel(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `nFlags`|보조 키를 누르면 나타내는 플래그의 비트 조합 (OR)입니다. 예를 들어는 `MK_CONTROL` 플래그 CTRL 키를 눌렀음을 나타냅니다.<br /><br /> 목록이 플래그에 대 한 참조에서 "메시지 매개 변수" 부제목 [마우스 입력에 대 한](http://msdn.microsoft.com/library/windows/desktop/ms645601)합니다.|  
-|[in] `zDelta`|휠을 돌릴 배수로 또는의 각 부분에 표현 된 거리를 나타내는 `WHEEL_DELTA`는 120 자입니다. 양수 값 이면 가격이 휠을; 오른쪽으로 회전 했습니다. 음수 값을 휠을 왼쪽으로 회전 된 것을 나타냅니다.|  
-|[in] `pt`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 지정 하는 개체는 *x* 및 *y* 클라이언트 영역의 왼쪽 위 모퉁이 기준으로 커서의 좌표가 합니다.|  
+|[in] *nFlags*|보조 키를 누르면 나타내는 플래그의 비트 조합 (OR)입니다. 예를 들어 MK_CONTROL 플래그 CTRL 키를 눌렀음을 나타냅니다.<br /><br /> 목록이 플래그에 대 한 참조에서 "메시지 매개 변수" 부제목 [마우스 입력에 대 한](http://msdn.microsoft.com/library/windows/desktop/ms645601)합니다.|  
+|[in] *zDelta*|휠을 돌릴는 120 자는 여러 개의 차트 또는 WHEEL_DELTA의 각 부분에 표현 된 거리를 나타냅니다. 양수 값 이면 가격이 휠을; 오른쪽으로 회전 했습니다. 음수 값을 휠을 왼쪽으로 회전 된 것을 나타냅니다.|  
+|[in] *pt*|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 지정 하는 개체는 *x* 및 *y* 클라이언트 영역의 왼쪽 위 모퉁이 기준으로 커서의 좌표가 합니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_MOUSEHWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645614) 알림 메시지는 Windows SDK에 설명 되어 있습니다. 이 메시지는 마우스의 가로 스크롤 휠을 기울이거나 회전할 때 포커스를가지고 있는 창으로 전송 됩니다.  
@@ -7220,24 +7220,24 @@ afx_msg void OnMouseMove(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nFlags`  
+ *nFlags*  
  아래로 다양 한 가상 키가 있는지 여부를 나타냅니다. 이 매개 변수는 다음 값의 조합이 포함 될 수 있습니다.  
   
-- **MK_CONTROL** 다운 된 CTRL 키를 설정 합니다.  
+- MK_CONTROL 다운 된 CTRL 키를 설정 합니다.  
   
-- **MK_LBUTTON** 마우스 왼쪽된 단추를 누른 경우 설정 합니다.  
+- 왼쪽 마우스 단추 MK_LBUTTON 설정 다운 되었습니다.  
   
-- **MK_MBUTTON** 마우스 가운데 단추를 누른 경우 설정 합니다.  
+- 마우스 가운데 단추를 눌렀음을 MK_MBUTTON 설정 합니다.  
   
-- **MK_RBUTTON** 마우스 오른쪽 단추를 누른 경우 설정 합니다.  
+- 경우에 오른쪽 마우스 단추 MK_RBUTTON 설정 다운 되었습니다.  
   
-- **MK_SHIFT** 다운 되 고 SHIFT 키를 설정 합니다.  
+- MK_SHIFT 다운 되 고 SHIFT 키를 설정 합니다.  
   
- `point`  
+ *지점*  
  커서의 x 및 y 좌표를 지정합니다. 이러한 좌표는 항상 창의 왼쪽 위 모퉁이 기준으로 합니다.  
   
 ### <a name="remarks"></a>설명  
- 마우스 캡처되지 않은 경우는 `WM_MOUSEMOVE` 에서 메시지가 수신 되는 `CWnd` 마우스 커서; 아래에 있는 개체 메시지 마우스를 캡처 있는 창으로 이동 하는 그렇지 않은 경우.  
+ WM_MOUSEMOVE 메시지를 받으면 마우스 캡처되지 않은 경우는 `CWnd` 마우스 커서; 아래에 있는 개체 메시지 마우스를 캡처 있는 창으로 이동 하는 그렇지 않은 경우.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -7253,23 +7253,23 @@ afx_msg BOOL OnMouseWheel(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nFlags`  
+ *nFlags*  
  아래로 다양 한 가상 키가 있는지 여부를 나타냅니다. 이 매개 변수는 다음 값의 조합이 포함 될 수 있습니다.  
   
-- **MK_CONTROL** 다운 된 CTRL 키를 설정 합니다.  
+- MK_CONTROL 다운 된 CTRL 키를 설정 합니다.  
   
-- **MK_LBUTTON** 마우스 왼쪽된 단추를 누른 경우 설정 합니다.  
+- 왼쪽 마우스 단추 MK_LBUTTON 설정 다운 되었습니다.  
   
-- **MK_MBUTTON** 마우스 가운데 단추를 누른 경우 설정 합니다.  
+- 마우스 가운데 단추를 눌렀음을 MK_MBUTTON 설정 합니다.  
   
-- **MK_RBUTTON** 마우스 오른쪽 단추를 누른 경우 설정 합니다.  
+- 경우에 오른쪽 마우스 단추 MK_RBUTTON 설정 다운 되었습니다.  
   
-- **MK_SHIFT** 다운 되 고 SHIFT 키를 설정 합니다.  
+- MK_SHIFT 다운 되 고 SHIFT 키를 설정 합니다.  
   
- `zDelta`  
- 회전 된 거리를 나타냅니다. `zDelta` 값은 여러 개의 차트 또는의 각 부분으로 표현 **WHEEL_DELTA**는 120 자입니다. 0 보다 작은 값 0 (사용자 반대쪽) 앞으로 회전 보다 크면 값 (사용자)을 향해 회전 백을 나타냅니다. 사용자는 소프트웨어 마우스에서에서 휠 설정을 변경 하 여이 응답을 되돌릴 수 있습니다. 이 매개 변수에 대 한 자세한 내용은 설명을 참조 하세요.  
+ *zDelta*  
+ 회전 된 거리를 나타냅니다. *zDelta* 값은 여러 개의 차트 또는 WHEEL_DELTA의 각 부분에는 120 자입니다. 0 보다 작은 값 0 (사용자 반대쪽) 앞으로 회전 보다 크면 값 (사용자)을 향해 회전 백을 나타냅니다. 사용자는 소프트웨어 마우스에서에서 휠 설정을 변경 하 여이 응답을 되돌릴 수 있습니다. 이 매개 변수에 대 한 자세한 내용은 설명을 참조 하세요.  
   
- `pt`  
+ *pt*  
  커서의 x 및 y 좌표를 지정합니다. 이러한 좌표는 항상 화면의 왼쪽 위 모퉁이 기준으로 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -7278,9 +7278,9 @@ afx_msg BOOL OnMouseWheel(
 ### <a name="remarks"></a>설명  
  재정의 되지 않으면 `OnMouseWheel` 기본값인 호출 [WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617)합니다. Windows는 자동으로 포커스가 있는 컨트롤 또는 자식 창에는 메시지를 라우팅합니다. Win32 함수 [DefWindowProc](http://msdn.microsoft.com/library/windows/desktop/ms633572) 부모 체인을 처리 하는 창에 메시지를 전파 합니다.  
   
- `zDelta` 매개 변수는의 배수 **WHEEL_DELTA**, 120에 설정 됩니다. 이 값은, 수행할 작업에 대 한 임계값 및 이러한 작업을 하나 (예를 들어 스크롤 정방향으로 한 단계) 각 델타에 대해 수행 되어야 합니다.  
+ *zDelta* 매개 변수는 120에 설정 된 WHEEL_DELTA의 배수입니다. 이 값은, 수행할 작업에 대 한 임계값 및 이러한 작업을 하나 (예를 들어 스크롤 정방향으로 한 단계) 각 델타에 대해 수행 되어야 합니다.  
   
- **WHEEL_DELTA** 허용 하기 위해 자유롭게 회전 휠이 없습니다 노치도 등의 더욱 세밀 하 게 해결 바퀴 120으로 설정 되었습니다. 더 좋은 해상도 휠 회전 당 더 많은 메시지 보내지만 각 메시지에 더 작은 델타 값. 들어오는 추가 하거나 이러한 휠을 사용 하려면 `zDelta` 될 때까지 값 **WHEEL_DELTA** 에 도달 하면 (받을 수 있도록 같은 응답 주어진된 델타 회전에 대 한), 또는 더 자주 메시지에 대 한 응답에서 부분 줄을 스크롤할 합니다. 또한 스크롤 세분성을 선택할 수 있으며 누적 될 때까지 델타 **WHEEL_DELTA** 에 도달 합니다.  
+ WHEEL_DELTA 허용 하기 위해 자유롭게 회전 휠이 없습니다 노치도 등의 더욱 세밀 하 게 해결 바퀴 120으로 설정 되었습니다. 더 좋은 해상도 휠 회전 당 더 많은 메시지 보내지만 각 메시지에 더 작은 델타 값. 들어오는 추가 하거나 이러한 휠을 사용 하려면 *zDelta* WHEEL_DELTA (받을 수 있도록 같은 응답 주어진된 델타 회전에 대 한)에 도달할 때까지 값 또는 스크롤할 더 자주 메시지에 대 한 응답으로 줄의 일부입니다. 스크롤 단위는 선택 하 고 WHEEL_DELTA에 도달할 때까지 델타 누적 될 수도 있습니다.  
   
  사용자 고유의 마우스 휠 스크롤 동작을 제공 하려면이 멤버 함수를 재정의 합니다.  
   
@@ -7318,10 +7318,10 @@ afx_msg void OnMoving(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nSide`  
+ *nSide*  
  이동할 창의 가장자리를 지정 합니다.  
   
- `lpRect`  
+ *lpRect*  
  주소는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 또는 [RECT 구조체](../../mfc/reference/rect-structure1.md) 시 항목의 좌표를 포함 하 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -7337,14 +7337,14 @@ afx_msg BOOL OnNcActivate(BOOL bActive);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bActive`  
- 활성 또는 비활성 상태를 나타내는 변경할 캡션 표시줄 또는 아이콘을 필요로 하는 경우를 지정 합니다. `bActive` 매개 변수는 **TRUE** 활성 캡션 또는 아이콘을 그릴 수 있도록 경우. **FALSE** 비활성 캡션의 또는 아이콘에 대 한 합니다.  
+ *bActive*  
+ 활성 또는 비활성 상태를 나타내는 변경할 캡션 표시줄 또는 아이콘을 필요로 하는 경우를 지정 합니다. *bActive* 매개 변수가 TRUE 이면 활성 캡션 또는 아이콘을 그릴 수 있도록 합니다. 조건이 FALSE 비활성 캡션의 또는 아이콘에 대 한 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  Windows; 기본 처리를 계속 진행 해야 하면 0이 아니고 캡션 표시줄 또는 아이콘 비활성화 되지 않도록 하려면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 기본 구현은 그립니다 제목 표시줄 및 제목 표시줄 텍스트를 현재 색 경우 `bActive` 은 **TRUE** 및를 비활성 색 경우 `bActive` 은 **FALSE**합니다.  
+ 기본 구현은 그립니다 제목 표시줄 및 제목 표시줄 텍스트를 현재 색 경우 *bActive* TRUE 및를 비활성 색은 경우 *bActive* 은 FALSE입니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -7359,20 +7359,20 @@ afx_msg void OnNcCalcSize(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bCalcValidRects`  
- 응용 프로그램 해야 유효한 정보를 포함 하는 클라이언트 영역의 어느 부분을 지정 하는지 여부를 지정 합니다. Windows는 새 클라이언트 영역 내에서 지정된 된 영역으로 유효한 정보를 복사 합니다. 이 매개 변수가 **TRUE**, 응용 프로그램에서 클라이언트 영역의 어느 부분이 올바른지를 지정 해야 합니다.  
+ *bCalcValidRects*  
+ 응용 프로그램 해야 유효한 정보를 포함 하는 클라이언트 영역의 어느 부분을 지정 하는지 여부를 지정 합니다. Windows는 새 클라이언트 영역 내에서 지정된 된 영역으로 유효한 정보를 복사 합니다. 이 매개 변수가 TRUE 인 경우 응용 프로그램 클라이언트 영역의 어느 부분이 올바른지를 지정 해야 합니다.  
   
- `lpncsp`  
+ *lpncsp*  
  가리키는 [NCCALCSIZE_PARAMS](../../mfc/reference/nccalcsize-params-structure.md) 새 크기와 위치를 계산 하는 응용 프로그램이 사용할 수 있는 정보를 포함 하는 데이터 구조는 `CWnd` 사각형 (클라이언트 영역, 테두리, 캡션, 스크롤 막대 및 등 포함) .  
   
 ### <a name="remarks"></a>설명  
  이 메시지를 처리 하 여 크기 또는 창의 위치가 변경 될 때 응용 프로그램 창의 클라이언트 영역의 내용을 제어할 수 있습니다.  
   
- 값에 관계 없이 `bCalcValidRects`, 변수로 지정 된 배열에서 첫 번째 사각형은 **rgrc** 의 구조체 멤버는 `NCCALCSIZE_PARAMS` 구조 창의 좌표를 포함 합니다. 자식 창에 대 한 부모 창의 클라이언트 영역을 기준으로 좌표 있습니다. 최상위 창에 대 한 좌표는 화면 좌표입니다. 응용 프로그램을 수정 해야는 **rgrc [0]** 사각형 크기와 클라이언트 영역의 위치를 반영 하도록 합니다.  
+ 값에 관계 없이 *bCalcValidRects*, 변수로 지정 된 배열에서 첫 번째 사각형은 `rgrc` 의 구조체 멤버는 `NCCALCSIZE_PARAMS` 구조 창의 좌표를 포함 합니다. 자식 창에 대 한 부모 창의 클라이언트 영역을 기준으로 좌표 있습니다. 최상위 창에 대 한 좌표는 화면 좌표입니다. 응용 프로그램을 수정 해야는 `rgrc[0]` 사각형 크기와 클라이언트 영역의 위치를 반영 하도록 합니다.  
   
- **rgrc [1]** 및 **rgrc [2]** 사각형은 유효한 경우에만 `bCalcValidRects` 은 **TRUE**합니다. 이 경우에 **rgrc [1]** 사각형을 이동 하거나 크기를 조정 하기 전에 창의 좌표를 포함 합니다. **rgrc [2]** 사각형 창으로 이동 되기 전에 창의 클라이언트 영역 좌표가 포함 되어 있습니다. 모든 좌표는 부모 창 또는 화면 상대적입니다.  
+ `rgrc[1]` 및 `rgrc[2]` 사각형은 유효한 경우에만 *bCalcValidRects* 은 TRUE입니다. 이 경우에 `rgrc[1]` 사각형을 이동 하거나 크기를 조정 하기 전에 창의 좌표를 포함 합니다. `rgrc[2]` 사각형 창으로 이동 되기 전에 창의 클라이언트 영역 좌표가 포함 되어 있습니다. 모든 좌표는 부모 창 또는 화면 상대적입니다.  
   
- 기본 구현 (스크롤 막대, 메뉴 및 등의 현재 상태), 창 특성에 따라 클라이언트 영역의 크기를 계산 하 고 고 결과가 `lpncsp`합니다.  
+ 기본 구현 (스크롤 막대, 메뉴 및 등의 현재 상태), 창 특성에 따라 클라이언트 영역의 크기를 계산 하 고 고 결과가 *lpncsp*합니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -7385,11 +7385,11 @@ afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpCreateStruct`  
+ *lpCreateStruct*  
  가리키는 [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) 데이터에 대 한 구조 `CWnd`합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 비클라이언트 영역에 만들어지는 경우에 0이 아닙니다. 오류가 발생 하는 경우 0입니다. **만들기** 함수는 반환 **오류** 이 경우.  
+ 비클라이언트 영역에 만들어지는 경우에 0이 아닙니다. 오류가 발생 하는 경우 0입니다. `Create` 함수는 반환 **오류** 이 경우.  
   
 ### <a name="remarks"></a>설명  
   
@@ -7416,7 +7416,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `point`  
+ *지점*  
  커서의 x 및 y 좌표를 포함합니다. 이러한 좌표는 항상 화면 좌표입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -7437,10 +7437,10 @@ afx_msg void OnNcLButtonDblClk(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nHitTest`  
+ *nHitTest*  
  지정 된 [적중 테스트 코드](#onnchittest)합니다. 적중 횟수 테스트에는 커서의 위치를 결정 하는 테스트가입니다.  
   
- `point`  
+ *지점*  
  지정 된 `CPoint` x 및 y를 포함 하는 개체 화면 좌표에서 커서 위치의 합니다. 이러한 좌표는 항상 화면의 왼쪽 위 모퉁이 기준으로 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -7459,10 +7459,10 @@ afx_msg void OnNcLButtonDown(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nHitTest`  
+ *nHitTest*  
  지정 된 [적중 테스트 코드](#onnchittest)합니다. 적중 횟수 테스트에는 커서의 위치를 결정 하는 테스트가입니다.  
   
- `point`  
+ *지점*  
  지정 된 `CPoint` x 및 y를 포함 하는 개체 화면 좌표에서 커서 위치의 합니다. 이러한 좌표는 항상 화면의 왼쪽 위 모퉁이 기준으로 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -7481,10 +7481,10 @@ afx_msg void OnNcLButtonUp(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nHitTest`  
+ *nHitTest*  
  지정 된 [적중 테스트 코드](#onnchittest)합니다. 적중 횟수 테스트에는 커서의 위치를 결정 하는 테스트가입니다.  
   
- `point`  
+ *지점*  
  지정 된 `CPoint` x 및 y를 포함 하는 개체 화면 좌표에서 커서 위치의 합니다. 이러한 좌표는 항상 화면의 왼쪽 위 모퉁이 기준으로 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -7503,10 +7503,10 @@ afx_msg void OnNcMButtonDblClk(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nHitTest`  
+ *nHitTest*  
  지정 된 [적중 테스트 코드](#onnchittest)합니다. 적중 횟수 테스트에는 커서의 위치를 결정 하는 테스트가입니다.  
   
- `point`  
+ *지점*  
  지정 된 `CPoint` x 및 y를 포함 하는 개체 화면 좌표에서 커서 위치의 합니다. 이러한 좌표는 항상 화면의 왼쪽 위 모퉁이 기준으로 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -7524,10 +7524,10 @@ afx_msg void OnNcMButtonDown(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nHitTest`  
+ *nHitTest*  
  지정 된 [적중 테스트 코드](#onnchittest)합니다. 적중 횟수 테스트에는 커서의 위치를 결정 하는 테스트가입니다.  
   
- `point`  
+ *지점*  
  지정 된 `CPoint` x 및 y를 포함 하는 개체 화면 좌표에서 커서 위치의 합니다. 이러한 좌표는 항상 화면의 왼쪽 위 모퉁이 기준으로 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -7545,10 +7545,10 @@ afx_msg void OnNcMButtonUp(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nHitTest`  
+ *nHitTest*  
  지정 된 [적중 테스트 코드](#onnchittest)합니다. 적중 횟수 테스트에는 커서의 위치를 결정 하는 테스트가입니다.  
   
- `point`  
+ *지점*  
  지정 된 `CPoint` x 및 y를 포함 하는 개체 화면 좌표에서 커서 위치의 합니다. 이러한 좌표는 항상 화면의 왼쪽 위 모퉁이 기준으로 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -7569,8 +7569,8 @@ afx_msg void OnNcMouseHover(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `nHitTest`|반환 된 적중 테스트 값의 [CWnd::DefWindowProc](#defwindowproc) 처리의 결과로 함수는 [WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618) 메시지입니다.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 지정 하는 개체는 *x* 및 *y* 화면의 왼쪽 위 모퉁이 기준으로 커서의 좌표가 합니다.|  
+|[in] *nHitTest*|반환 된 적중 테스트 값의 [CWnd::DefWindowProc](#defwindowproc) 처리의 결과로 함수는 [WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618) 메시지입니다.|  
+|[in] *지점*|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 지정 하는 개체는 *x* 및 *y* 화면의 왼쪽 위 모퉁이 기준으로 커서의 좌표가 합니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_NCMOUSEHOVER](http://msdn.microsoft.com/library/windows/desktop/ms645625) 알림 Windows SDK에 설명 되어 있습니다.  
@@ -7601,10 +7601,10 @@ afx_msg void OnNcMouseMove(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nHitTest`  
+ *nHitTest*  
  지정 된 [적중 테스트 코드](#onnchittest)합니다. 적중 횟수 테스트에는 커서의 위치를 결정 하는 테스트가입니다.  
   
- `point`  
+ *지점*  
  지정 된 `CPoint` x 및 y를 포함 하는 개체 화면 좌표에서 커서 위치의 합니다. 이러한 좌표는 항상 화면의 왼쪽 위 모퉁이 기준으로 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -7635,10 +7635,10 @@ afx_msg void OnNcRButtonDblClk(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nHitTest`  
+ *nHitTest*  
  지정 된 [적중 테스트 코드](#onnchittest)합니다. 적중 횟수 테스트에는 커서의 위치를 결정 하는 테스트가입니다.  
   
- `point`  
+ *지점*  
  지정 된 `CPoint` x 및 y를 포함 하는 개체 화면 좌표에서 커서 위치의 합니다. 이러한 좌표는 항상 화면의 왼쪽 위 모퉁이 기준으로 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -7656,10 +7656,10 @@ afx_msg void OnNcRButtonDown(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nHitTest`  
+ *nHitTest*  
  지정 된 [적중 테스트 코드](#onnchittest)합니다. 적중 횟수 테스트에는 커서의 위치를 결정 하는 테스트가입니다.  
   
- `point`  
+ *지점*  
  지정 된 `CPoint` x 및 y를 포함 하는 개체 화면 좌표에서 커서 위치의 합니다. 이러한 좌표는 항상 화면의 왼쪽 위 모퉁이 기준으로 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -7677,10 +7677,10 @@ afx_msg void OnNcRButtonUp(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nHitTest`  
+ *nHitTest*  
  지정 된 [적중 테스트 코드](#onnchittest)합니다. 적중 횟수 테스트에는 커서의 위치를 결정 하는 테스트가입니다.  
   
- `point`  
+ *지점*  
  지정 된 `CPoint` x 및 y를 포함 하는 개체 화면 좌표에서 커서 위치의 합니다. 이러한 좌표는 항상 화면의 왼쪽 위 모퉁이 기준으로 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -7699,7 +7699,7 @@ afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `bIsRendering`|`true` 창의 비클라이언트 영역에 대 한 관리자 DWM (데스크톱 창) 렌더링을 사용 하는 경우 `false` 렌더링을 사용 하지 않도록 설정 합니다.|  
+|[in] *bIsRendering*|TRUE 이면 데스크톱 창 관리자 (DWM) 렌더링이; 창의 비클라이언트 영역에 대 한 활성화 FALSE 이면 렌더링을 사용할 수 없습니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_DWMNCRENDERINGCHANGED](http://msdn.microsoft.com/library/windows/desktop/dd388200) 알림 Windows SDK에 설명 되어 있습니다.  
@@ -7721,9 +7721,9 @@ void OnNcXButtonDblClk(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `nHitTest`|반환 된 적중 테스트 값의 [CWnd::DefWindowProc](#defwindowproc) 처리의 결과로 함수는 [WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618) 메시지입니다.|  
-|[in] `nButton`|값이 `XBUTTON1` 첫 번째 Microsoft Intellimouse X 단추를 두 번 경우 또는 `XBUTTON2` 경우 두 번째 X 단추를 두 번 클릭 합니다.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 지정 하는 개체는 *x* 및 *y* 클라이언트 영역의 왼쪽 위 모퉁이 기준으로 커서의 좌표가 합니다.|  
+|[in] *nHitTest*|반환 된 적중 테스트 값의 [CWnd::DefWindowProc](#defwindowproc) 처리의 결과로 함수는 [WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618) 메시지입니다.|  
+|[in] *nButton*|값이 첫 번째 Microsoft Intellimouse X 단추를 두 번 경우 XBUTTON1 또는 XBUTTON2 경우 두 번째 X 단추를 두 번 클릭 합니다.|  
+|[in] *지점*|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 지정 하는 개체는 *x* 및 *y* 클라이언트 영역의 왼쪽 위 모퉁이 기준으로 커서의 좌표가 합니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_XBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms646244) 알림 Windows SDK에 설명 되어 있습니다. 이 메시지는 커서가 포함 된 창에 게시 됩니다. 창을 마우스를 캡처,이 메시지를 게시 하지 않습니다.  
@@ -7745,9 +7745,9 @@ afx_msg void OnNcXButtonDown(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `nHitTest`|반환 된 적중 테스트 값의 [CWnd::DefWindowProc](#defwindowproc) 처리의 결과로 함수는 [WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618) 메시지입니다.|  
-|[in] `nButton`|값이 `XBUTTON1` 첫 번째 마우스의 X 단추를 누르면 또는 `XBUTTON2` 경우 두 번째 X 단추를 누르면 합니다.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 지정 하는 개체는 *x* 및 *y* 화면의 왼쪽 위 모퉁이 기준으로 커서의 좌표가 합니다.|  
+|[in] *nHitTest*|반환 된 적중 테스트 값의 [CWnd::DefWindowProc](#defwindowproc) 처리의 결과로 함수는 [WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618) 메시지입니다.|  
+|[in] *nButton*|값이 첫 번째 마우스의 X 단추를 누르면 XBUTTON1 또는 XBUTTON2 경우 두 번째 X 단추를 누르면 됩니다.|  
+|[in] *지점*|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 지정 하는 개체는 *x* 및 *y* 화면의 왼쪽 위 모퉁이 기준으로 커서의 좌표가 합니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_NCXBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms645632) 알림 Windows SDK에 설명 되어 있습니다. 이 메시지는 커서가 포함 된 창에 게시 됩니다. 창을 마우스를 캡처,이 메시지를 게시 하지 않습니다.  
@@ -7769,9 +7769,9 @@ afx_msg void OnNcXButtonUp(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `nHitTest`|반환 된 적중 테스트 값의 [CWnd::DefWindowProc](#defwindowproc) 처리의 결과로 함수는 [WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618) 메시지입니다.|  
-|[in] `nButton`|값이 `XBUTTON1` 첫 번째 마우스의 X 단추를 놓을 경우 또는 `XBUTTON2` 경우 두 번째 X 단추를 놓을 합니다.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 지정 하는 개체는 *x* 및 *y* 화면의 왼쪽 위 모퉁이 기준으로 커서의 좌표가 합니다.|  
+|[in] *nHitTest*|반환 된 적중 테스트 값의 [CWnd::DefWindowProc](#defwindowproc) 처리의 결과로 함수는 [WM_NCHITTEST](http://msdn.microsoft.com/library/windows/desktop/ms645618) 메시지입니다.|  
+|[in] *nButton*|값이 첫 번째 마우스의 X 단추를 놓을 경우 XBUTTON1 또는 XBUTTON2 경우 두 번째 X 단추를 놓을 합니다.|  
+|[in] *지점*|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 지정 하는 개체는 *x* 및 *y* 화면의 왼쪽 위 모퉁이 기준으로 커서의 좌표가 합니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_NCXBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms646240) 알림 Windows SDK에 설명 되어 있습니다. 이 메시지는 커서가 포함 된 창에 게시 됩니다. 창을 마우스를 캡처,이 메시지를 게시 하지 않습니다.  
@@ -7792,8 +7792,8 @@ afx_msg void OnNextMenu(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `nKey`|보조 키를 누르면 나타내는 플래그의 비트 조합 (OR)입니다. 예를 들어는 `MK_CONTROL` 플래그 CTRL 키를 눌렀음을 나타냅니다.<br /><br /> 목록이 플래그에 대 한 참조에서 "메시지 매개 변수" 부제목 [마우스 입력에 대 한](http://msdn.microsoft.com/library/windows/desktop/ms645601)합니다.|  
-|[in] `lpMdiNextMenu`|에 대 한 포인터는 [MDINEXTMENU](http://msdn.microsoft.com/library/windows/desktop/ms647561) 메뉴를 활성화할 수에 대 한 정보가 포함 된 구조체입니다.|  
+|[in] *nKey*|보조 키를 누르면 나타내는 플래그의 비트 조합 (OR)입니다. 예를 들어 MK_CONTROL 플래그 CTRL 키를 눌렀음을 나타냅니다.<br /><br /> 목록이 플래그에 대 한 참조에서 "메시지 매개 변수" 부제목 [마우스 입력에 대 한](http://msdn.microsoft.com/library/windows/desktop/ms645601)합니다.|  
+|[in] *lpMdiNextMenu*|에 대 한 포인터는 [MDINEXTMENU](http://msdn.microsoft.com/library/windows/desktop/ms647561) 메뉴를 활성화할 수에 대 한 정보가 포함 된 구조체입니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_UNINITMENUPOPUP](http://msdn.microsoft.com/library/windows/desktop/ms647614) 알림 Windows SDK에 설명 되어 있습니다. 이 메시지에 대 한 응답, 응용 프로그램을 설정할 수는 `hmenuNext` 의 멤버는 [MDINEXTMENU](http://msdn.microsoft.com/library/windows/desktop/ms647561) 전환할 메뉴를 지정 하는 구조와 `hwndNext` 창을 메뉴 알림 메시지를 지정 하는 멤버 .  
@@ -7812,14 +7812,14 @@ virtual BOOL OnNotify(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `wParam`  
- 메시지를 보내는 경우 메시지는 컨트롤에서 컨트롤을 식별 합니다. 그렇지 않으면 `wParam` 은 0입니다.  
+ *wParam*  
+ 메시지를 보내는 경우 메시지는 컨트롤에서 컨트롤을 식별 합니다. 그렇지 않으면 *wParam* 은 0입니다.  
   
- `lParam`  
- 알림 메시지에 대 한 포인터 ( **NMHDR**) 알림 코드 및 추가 정보를 포함 하는 구조입니다. 일부 알림 메시지에 대 한이 매개 변수는 큰 구조체를 가리키는 **NMHDR** 첫 번째 멤버로 구조입니다.  
+ *lParam*  
+ 알림 메시지에 대 한 포인터 (`NMHDR`) 알림 코드 및 추가 정보를 포함 하는 구조입니다. 일부 알림 메시지에 대 한이 매개 변수는 큰 구조체를 가리키는 `NMHDR` 첫 번째 멤버로 구조입니다.  
   
- `pResult`  
- 에 대 한 포인터는 **LRESULT** 메시지가 처리 되는 결과 코드를 저장할 변수입니다.  
+ *pResult*  
+ 메시지가 처리 되는 결과 코드를 저장할 LRESULT 변수에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
  응용 프로그램;이 메시지를 처리 하는 경우 0이 아닌 반환 그렇지 않으면 0입니다.  
@@ -7827,7 +7827,7 @@ virtual BOOL OnNotify(
 ### <a name="remarks"></a>설명  
  `OnNotify` 컨트롤 알림에 대 한 메시지 맵을 처리합니다.  
   
- 이 멤버 함수를 처리 하려면 파생된 클래스에서 재정의 된 **WM_NOTIFY** 메시지입니다. 재정의 하지 않는 한 메시지 맵을 처리 하지 것입니다는 기본 클래스 `OnNotify` 호출 됩니다.  
+ WM_NOTIFY 메시지를 처리 하려면 파생된 클래스에서이 멤버 함수를 재정의 합니다. 재정의 하지 않는 한 메시지 맵을 처리 하지 것입니다는 기본 클래스 `OnNotify` 호출 됩니다.  
   
  WM_NOTIFY 메시지에 대 한 자세한 내용은 기술 참고 61 (TN061)을 참조 하십시오. [ON_NOTIFY 및 WM_NOTIFY 메시지](../../mfc/tn061-on-notify-and-wm-notify-messages.md)합니다. 관련된 항목에 설명 된 관심이 있을 수도 수 있습니다 [제어 항목](../../mfc/controls-mfc.md), 및 TN062, [Windows 컨트롤에 대 한 메시지 리플렉션](../../mfc/tn062-message-reflection-for-windows-controls.md)합니다.  
   
@@ -7844,19 +7844,19 @@ afx_msg UINT OnNotifyFormat(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `pWnd`|에 대 한 포인터는 `CWnd` 전송 창을 나타내는 개체는 [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) 메시지입니다.<br /><br /> 경우이 매개 변수는 컨트롤에 대 한 포인터는 `nCommand` 매개 변수는 `NF_QUERY`, 컨트롤의 부모 창에 대 한 포인터 또는 경우 `nCommand` 은 `NF_REQUERY`합니다.|  
-|[in] `nCommand`|특수화 하는 명령 값의 **WM_NOTIFY** 메시지입니다. 가능한 값은 다음과 같습니다.<br /><br /> - `NF_QUERY` -<br />     메시지의 ANSI 또는 유니코드 구조를 사용할지 여부를 결정 하는 쿼리는 **WM_NOTIFY** 메시지입니다. 이 메시지를 받는 컨트롤에서 해당 부모 창에는 컨트롤의 한 응답으로 만드는 동안는 `NF_REQUERY` 이 메시지의 형식입니다.<br />- `NF_REQUERY` -<br />     메시지는 보낼 컨트롤에 대 한 요청에서 `NF_QUERY` 형태의이 메시지를 해당 부모 창입니다. 이 요청 부모 창에서 전송 되 고 요청에서 사용 하는 구조체의 형식에 대 한 부모 다시 쿼리 컨트롤 **WM_NOTIFY** 메시지입니다. 경우는 `nCommand` 매개 변수는 `NF_REQUERY`, 반환 값은 다시 쿼리 작업의 결과입니다.|  
+|[in] *pWnd*|에 대 한 포인터는 `CWnd` 전송 창을 나타내는 개체는 [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583) 메시지입니다.<br /><br /> 경우이 매개 변수는 컨트롤에 대 한 포인터는 *된 명령* 경우 NF_QUERY, 또는 컨트롤의 부모 창에 대 한 포인터 매개 변수는 *된 명령* NF_REQUERY 됩니다.|  
+|[in] *된 명령*|WM_NOTIFY 메시지를 특수화 하는 명령 값입니다. 가능한 값은 다음과 같습니다.<br /><br /> -NF_QUERY-<br />     메시지는 WM_NOTIFY 메시지의 ANSI 또는 유니코드 구조를 사용할지 여부를 결정 하는 쿼리입니다. 이 메시지는 컨트롤의 및 NF_REQUERY 형태의이 메시지에 대 한 응답에서을 만드는 동안를 해당 부모 창 컨트롤에서 전송 됩니다.<br />-NF_REQUERY-<br />     메시지를 해당 부모 창 NF_QUERY 형태의이 메시지를 보내도록 컨트롤에 대 한 요청입니다. 이 요청 부모 창에서 전송 되 고 컨트롤 WM_NOTIFY 메시지에서 사용 하는 구조체의 형식에 대 한 부모를 묻습니다. 경우는 *된 명령* 매개 변수는 NF_REQUERY, 반환 값은 다시 쿼리 작업의 결과입니다.|  
   
 ### <a name="return-value"></a>반환 값  
   
 |반환 값|의미|  
 |------------------|-------------|  
-|`NFR_ANSI`|ANSI 구조에 사용 해야 **WM_NOTIFY** 컨트롤에서 보낸 메시지입니다.|  
-|`NFR_UNICODE`|유니코드 구조를 사용 해야 **WM_NOTIFY** 컨트롤에서 보낸 메시지입니다.|  
+|NFR_ANSI|컨트롤에서 보낸 WM_NOTIFY 메시지에 ANSI 구조체를 사용 해야 합니다.|  
+|NFR_UNICODE|컨트롤에서 보낸 WM_NOTIFY 메시지에 유니코드 구조를 사용 해야 합니다.|  
 |0|오류가 발생했습니다.|  
   
 ### <a name="remarks"></a>설명  
- 이 메서드에 전달 된 [WM_NOTIFYFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb775584) 알림 Windows SDK에 설명 되어 있습니다. **WM_NOTIFY** 메시지가 공용 컨트롤을 부모 창에서 해당 부모 창에 공용 컨트롤에서 전송 됩니다.  
+ 이 메서드에 전달 된 [WM_NOTIFYFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb775584) 알림 Windows SDK에 설명 되어 있습니다. WM_NOTIFY 메시지 공용 컨트롤을 부모 창에서 해당 부모 창에 공용 컨트롤에서 전송 됩니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -7871,22 +7871,22 @@ afx_msg void OnPaint();
 ### <a name="remarks"></a>설명  
  [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145137) 경우 메시지가 전송 되는 [UpdateWindow](#updatewindow) 또는 [RedrawWindow](#redrawwindow) 멤버 함수를 호출 합니다.  
   
- 창이 호출한 결과로 내부 그리기 메시지를 받을 수는 `RedrawWindow` 와 멤버 함수는 **RDW_INTERNALPAINT** 플래그가 설정 합니다. 이 경우 창이 업데이트 영역이 없을 수 있습니다. 응용 프로그램 호출 해야는 [GetUpdateRect](#getupdaterect) 창이 업데이트 영역에 있는지 확인 하려면 멤버 함수입니다. 경우 `GetUpdateRect` 0을 응용 프로그램 반환을 호출 하지 않아야는 [BeginPaint](#beginpaint) 및 [EndPaint](#endpaint) 멤버 함수입니다.  
+ 창이 호출한 결과로 내부 그리기 메시지를 받을 수는 `RedrawWindow` 멤버 함수는 RDW_INTERNALPAINT 플래그가 설정 합니다. 이 경우 창이 업데이트 영역이 없을 수 있습니다. 응용 프로그램 호출 해야는 [GetUpdateRect](#getupdaterect) 창이 업데이트 영역에 있는지 확인 하려면 멤버 함수입니다. 경우 `GetUpdateRect` 0을 응용 프로그램 반환을 호출 하지 않아야는 [BeginPaint](#beginpaint) 및 [EndPaint](#endpaint) 멤버 함수입니다.  
   
- 필요한 내부 다시 표시 또는 해당 내부 데이터 구조가 각각에 대해 확인 하 여 업데이트 확인 해야 하는 응용 프로그램의 `WM_PAINT` 메시지에 `WM_PAINT` 는 잘못 된 영역과에 대 한 호출 하 여 메시지 발생는 `RedrawWindow` 와 멤버 함수는 **RDW_INTERNALPAINT** 플래그가 설정 합니다.  
+ 필요한 내부 다시 그리기 또는 잘못 된 영역와는 에대한호출에서WM_PAINT메시지발생하기때문에각WM_PAINT메시지에는내부데이터구조를확인하여업데이트를확인해야하는응용프로그램의`RedrawWindow`멤버 함수는 RDW_INTERNALPAINT 플래그가 설정 합니다.  
   
- 내부 `WM_PAINT` 메시지는 Windows에서 한 번만 전송 됩니다. 내부 후 `WM_PAINT` 으로 창을로 메시지가 보내집니다는 `UpdateWindow` 멤버 함수를 더 이상 `WM_PAINT` 메시지 보내거나 창을 무효화 될 때까지 또는 될 때까지 게시는 `RedrawWindow` 멤버 함수는 다시호출됩니다 **RDW_INTERNALPAINT** 플래그가 설정 합니다.  
+ 내부 WM_PAINT 메시지는 Windows에서 한 번만 전송 됩니다. 창으로 전송 된 메시지 내부 WM_PAINT 후는 `UpdateWindow` 멤버 함수를 더 이상 WM_PAINT 메시지 보내거나 창을 무효화 될 때까지 또는 될 때까지 게시는 `RedrawWindow` 멤버 함수는 RDW_INTERNALPAINT 다시 호출 됩니다 플래그가 설정 합니다.  
   
  렌더링의 이미지 문서/뷰 응용 프로그램에 대 한 자세한 내용은 참조 [cview:: Ondraw](../../mfc/reference/cview-class.md#ondraw)합니다.  
   
- 사용에 대 한 자세한 내용은 **WM_Paint**, Windows SDK의 다음 항목을 참조 하십시오.  
+ 사용 하는 방법에 대 한 자세한 내용은 `WM_Paint`, Windows SDK의 다음 항목을 참조 하십시오.  
   
 - [WM_PAINT 메시지](http://msdn.microsoft.com/library/windows/desktop/dd145137)  
   
 - [WM_PAINT 메시지를 사용 하 여](http://msdn.microsoft.com/library/windows/desktop/dd145193)  
   
 ##  <a name="onpaintclipboard"></a>  CWnd::OnPaintClipboard  
- 클립보드 소유자의 `OnPaintClipboard` 멤버 함수는 클립보드 소유자가 `CF_OWNERDISPLAY` 형식으로 클립보드에 데이터를 배치했으며 클립보드 뷰어의 클라이언트 영역을 다시 그려야 하는 경우 클립보드 뷰어에서 호출됩니다.  
+ 클립보드 소유자의 `OnPaintClipboard` 클립보드 소유자 CF_OWNERDISPLAY 형식으로 클립보드에 데이터를 배치 하 고 클립보드 뷰어의 클라이언트 영역을 다시 그려야 할 때 클립보드 뷰어에서 멤버 함수를 호출 합니다.  
   
 ```  
 afx_msg void OnPaintClipboard(
@@ -7895,14 +7895,14 @@ afx_msg void OnPaintClipboard(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pClipAppWnd`  
+ *pClipAppWnd*  
  클립보드 응용 프로그램 창에 대한 포인터를 지정합니다. 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.  
   
  *hPaintStruct*  
  식별 된 [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) 그릴 클라이언트 영역 부분을 정의 하는 데이터 구조입니다.  
   
 ### <a name="remarks"></a>설명  
- 클립보드 소유자 여부 전체 클라이언트 영역 또는 그 일부만 다시 그려야 할를 확인 하려면에 지정 된 그리기 영역의 크기를 비교 해야 합니다는 **rcpaint** 의 멤버는 `PAINTSTRUCT` 구조체 가장 최근의 [OnSizeClipboard](#onsizeclipboard) 멤버 함수 호출 합니다.  
+ 클립보드 소유자 여부 전체 클라이언트 영역 또는 그 일부만 다시 그려야 할를 확인 하려면에 지정 된 그리기 영역의 크기를 비교 해야 합니다는 `rcpaint` 의 멤버는 `PAINTSTRUCT` 가장 최근의 에지정된차원에대한구조[ OnSizeClipboard](#onsizeclipboard) 멤버 함수 호출 합니다.  
   
  `OnPaintClipboard` 사용 해야는 [GlobalLock](http://msdn.microsoft.com/library/windows/desktop/aa366584) Windows 함수를 포함 하는 메모리를 잠글 수는 `PAINTSTRUCT` 데이터 구조를 해당 메모리를 잠금 해제는 [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) 종료 되기 전에 Windows 작동 합니다.  
   
@@ -7917,15 +7917,15 @@ afx_msg void OnPaletteChanged(CWnd* pFocusWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pFocusWnd`  
+ *pFocusWnd*  
  변경 하려면 시스템 팔레트를 발생 시킨 창에 대 한 포인터를 지정 합니다. 포인터는 임시적 이며 저장 되어야 합니다.  
   
 ### <a name="remarks"></a>설명  
  이 호출은 색상표를 사용 하 여 해당 논리 팔레트를 나타내고 해당 클라이언트 영역을 업데이트 하는 입력된 포커스가 없는 창 수 있습니다.  
   
- `OnPaletteChanged` 모든 최상위와 겹치는 창 시스템 색상표를 변경 하 고 발생 하는 것을 포함 하 여 멤버 함수가 호출 되는 `WM_PALETTECHANGED` 메시지를 보냅니다. 모든 자식 창에서 색상표를 사용 하는 경우에이 메시지 전달 합니다.  
+ `OnPaletteChanged` 모든 최상위와 겹치는 창 WM_PALETTECHANGED 메시지를 보낼 수 있기 때문에 시스템 색상표를 변경 하는 것을 포함 하 여 멤버 함수를 호출 합니다. 모든 자식 창에서 색상표를 사용 하는 경우에이 메시지 전달 합니다.  
   
- 무한 루프를 방지 하려면 창을 결정 하는 경우가 아니면에서 팔레트를 나타내려고 안 `pFocusWnd` 자체에 대 한 포인터를 포함 하지 않습니다.  
+ 무한 루프를 방지 하려면 창을 결정 하는 경우가 아니면에서 팔레트를 나타내려고 안 *pFocusWnd* 자체에 대 한 포인터를 포함 하지 않습니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -7954,28 +7954,28 @@ afx_msg void OnParentNotify(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `message`  
- 이벤트를 지정 부모에 게 전달 됩니다는 및 자식 창의 식별자입니다. 이벤트의 하위 단어는 `message`합니다. 이벤트가 경우 `WM_CREATE` 또는 `WM_DESTROY`의 상위 단어로 `message` 자식 창의 식별자 번호 상위 그렇지 않으면 정의 되지 않습니다. 이벤트 (의 하위 단어 `message`) 다음이 값 중 하나일 수 있습니다.  
+ *message*  
+ 이벤트를 지정 부모에 게 전달 됩니다는 및 자식 창의 식별자입니다. 이벤트의 하위 단어는 *메시지*합니다. 이벤트 WM_CREATE 인지 WM_DESTROY의 상위 단어로 *메시지* 자식 창의 식별자 번호 상위 그렇지 않으면 정의 되지 않습니다. 이벤트 (의 하위 단어 *메시지*) 다음이 값 중 하나일 수 있습니다.  
   
-- `WM_CREATE` 자식 창을 만드는 중입니다.  
+- WM_CREATE 자식 창을 만드는 중입니다.  
   
-- `WM_DESTROY` 자식 창이 제거 되 고 있습니다.  
+- WM_DESTROY 자식 창을 소멸 되 고 있습니다.  
   
-- `WM_LBUTTONDOWN` 사용자가 자식 창 위에 마우스 커서를 배치 하 고 마우스 왼쪽된 단추를 클릭 합니다.  
+- WM_LBUTTONDOWN 사용자가 자식 창 위에 마우스 커서를 배치 하 고 마우스 왼쪽된 단추로 클릭 합니다.  
   
-- `WM_MBUTTONDOWN` 사용자가 자식 창 위에 마우스 커서를 배치 하 고 마우스 가운데 단추를 클릭 합니다.  
+- WM_MBUTTONDOWN 사용자가 자식 창 위에 마우스 커서를 배치 하 고 마우스 가운데 단추를 클릭 합니다.  
   
-- `WM_RBUTTONDOWN` 사용자가 자식 창 위에 마우스 커서를 배치 하 고 마우스 오른쪽 단추로 클릭 합니다.  
+- WM_RBUTTONDOWN 사용자가 자식 창 위에 마우스 커서를 배치 하 고 마우스 오른쪽 단추로 클릭 합니다.  
   
- `lParam`  
- 경우의 이벤트 (하위 단어) `message` 은 `WM_CREATE` 또는 `WM_DESTROY`, `lParam` 자식 창의 창 핸들을 지정 하지 않으면 `lParam` x 및 y를 포함 커서의 좌표가 합니다. X 좌표 하위 단어 이며 번호 상위 y 좌표입니다.  
+ *lParam*  
+ 경우의 이벤트 (하위 단어) *메시지* WM_CREATE 또는 WM_DESTROY, *lParam* 자식 창의 창 핸들을 지정 하지 않으면 *lParam* x 및 y를 포함 합니다. 커서의 좌표가 합니다. X 좌표 하위 단어 이며 번호 상위 y 좌표입니다.  
   
 ### <a name="remarks"></a>설명  
  자식 창을 만들 되 고 시스템에서는 호출 `OnParentNotify` 바로 앞의 [만들기](#create) 창을 만듭니다. 멤버 함수를 반환 합니다. 자식 창을 소멸 될 때, 시스템 호출 `OnParentNotify` 처리를 수행 하기 전에 창을 제거할 수 있습니다.  
   
  `OnParentNotify` 최상위 창을 포함 하 여 자식 창의 모든 상위 항목 창에 대해 호출 됩니다.  
   
- 모든 자식 창 있는 것은 예외는 [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) 스타일 해당 부모 창에이 메시지를 보냅니다. 대화 상자에서 자식 창에는 기본적으로는 **WS_EX_NOPARENTNOTIFY** 이 스타일 없이 호출 하 여 자식 창을 만들지 않은 스타일의 [CreateEx](#createex) 멤버 함수입니다.  
+ 모든 자식 창 있는 것은 예외는 [WS_EX_NOPARENTNOTIFY](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) 스타일 해당 부모 창에이 메시지를 보냅니다. 기본적으로 대화 상자에서 자식 창 적용 WS_EX_NOPARENTNOTIFY 스타일이이 스타일 없이 호출 하 여 자식 창을 만들지 않은 [CreateEx](#createex) 멤버 함수입니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -7993,16 +7993,16 @@ afx_msg UINT OnPowerBroadcast(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `nPowerEvent`|전원 관리는 이벤트입니다.|  
-|[in] `nEventData`|이벤트 관련 데이터입니다.|  
+|[in] *nPowerEvent*|전원 관리는 이벤트입니다.|  
+|[in] *nEventData*|이벤트 관련 데이터입니다.|  
   
 ### <a name="return-value"></a>반환 값  
- 요청 인 경우 반환 `true` 요청을 부여 하려면 또는 `BROADCAST_QUERY_DENY` 요청을 거부 하도록 합니다.  
+ 이 이벤트는 요청을 TRUE를 반환 하는 경우에 요청을 거부 하도록 요청 또는 BROADCAST_QUERY_DENY 권한을 부여 합니다.  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247) 메시지는 Windows SDK에 설명 되어 있습니다.  
   
- `nPowerEvent` 하거나와 같이 배터리 전원이 부족, 전원 상태가 변경, 사용 권한 작업을 일시 중단 요청 또는 거부 이벤트 후 작업을 자동으로 다시 시작, 작업, 시스템을 중단 하는 매개 변수 지정 이벤트 작업 일시 중단 한 후 다시 시작 됩니다. `nEventData` 매개 변수는 일반적으로 사용 되지 않습니다. 자세한 내용은 참조는 `wParam` 및 `lParam` 의 매개 변수는 [WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247) 메시지입니다.  
+ *nPowerEvent* 배터리 전원이 부족 같은 매개 변수 지정 이벤트, 전원 상태가 변경, 사용 권한 작업을 일시 중단 요청 또는 거부, 이벤트 후 작업을 자동으로 다시 시작, 시스템은 일시 중단 되었다가 재개 되 고 작업 또는 작업 일시 중단 합니다. *nEventData* 매개 변수는 일반적으로 사용 되지 않습니다. 자세한 내용은 참조는 *wParam* 및 *lParam* 의 매개 변수는 [WM_POWERBROADCAST](http://msdn.microsoft.com/library/windows/desktop/aa373247) 메시지입니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -8015,7 +8015,7 @@ afx_msg HCURSOR OnQueryDragIcon();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 하위 단어에서 핸들 커서 또는 아이콘을 포함 하는 워드 단위 값입니다. 커서 또는 아이콘 디스플레이 드라이버의 해상도와 호환 되어야 합니다. 응용 프로그램에 반환 하는 경우 **NULL**, 시스템의 기본 커서를 표시 합니다. 기본 반환 값은 **NULL**합니다.  
+ 하위 단어에서 핸들 커서 또는 아이콘을 포함 하는 워드 단위 값입니다. 커서 또는 아이콘 디스플레이 드라이버의 해상도와 호환 되어야 합니다. NULL을 반환 하는 응용 프로그램, 시스템의 기본 커서를 표시 합니다. 기본 반환 값은 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
  시스템에서는이 호출을 최소화 된 창을 끄는 동안 표시할 커서를 가져옵니다. 아이콘 또는 커서의 핸들을 반환 하는 응용 프로그램, 시스템 흑백으로 변환 합니다. 응용 프로그램이 핸들을 반환할 경우 핸들 커서 흑백 또는 디스플레이 드라이버의 해상도와 호환 되는 아이콘을 식별 해야 합니다. 응용 프로그램에서 호출할 수는 [CWinApp::LoadCursor](../../mfc/reference/cwinapp-class.md#loadcursor) 또는 [CWinApp::LoadIcon](../../mfc/reference/cwinapp-class.md#loadicon) 실행 파일의 리소스에서 커서 또는 아이콘을 로드 하 고이 핸들을 얻기 위해 멤버 함수입니다.  
@@ -8031,7 +8031,7 @@ afx_msg BOOL OnQueryEndSession();
  0이 아닌 경우 응용 프로그램 편리 하 게 종료할 수 있습니다. 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 0을 반환 하는 모든 응용 프로그램을 Windows 세션을 종료 하지 않습니다. Windows 호출 중지 `OnQueryEndSession` 하나의 응용 프로그램 0을 반환 하 고 보냅니다는 [WM_ENDSESSION](#onendsession) 메시지의 매개 변수 값으로 **FALSE** 0이 아닌를 반환 했습니다. 이미 있는 모든 응용 프로그램에 대 한 합니다.  
+ 0을 반환 하는 모든 응용 프로그램을 Windows 세션을 종료 하지 않습니다. 호출을 중지 하는 Windows `OnQueryEndSession` 하나의 응용 프로그램 0을 반환 하 고 보냅니다는 [WM_ENDSESSION](#onendsession) 메시지 0이 아닌를 반환 했습니다. 이미 있는 모든 응용 프로그램에 대 한 매개 변수 값은 FALSE입니다.  
   
 ##  <a name="onquerynewpalette"></a>  CWnd::OnQueryNewPalette  
  이 멤버 함수를 호출 하는 프레임 워크 때는 `CWnd` 개체를 입력된 포커스를 받을 하 려 제공는 `CWnd` 포커스를 받을 때에서 논리 팔레트를 나타내려고 하 합니다.  
@@ -8064,13 +8064,13 @@ afx_msg UINT OnQueryUIState();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 반환 값은 **NULL** 포커스 표시기 및 키보드 액셀러레이터 표시 되는 경우. 그렇지 않으면 반환 값은 다음 값 중 하나 이상이 될 수 있습니다.  
+ 포커스 표시기과 키보드 액셀러레이터 키 표시 되 면 반환 값은 NULL입니다. 그렇지 않으면 반환 값은 다음 값 중 하나 이상이 될 수 있습니다.  
   
-- **UISF_HIDEFOCUS** 포커스 표시기 숨겨져 있습니다.  
+- UISF_HIDEFOCUS 포커스 표시기 숨겨집니다.  
   
-- **UISF_HIDEACCEL** 키보드 액셀러레이터가 숨겨져 있습니다.  
+- UISF_HIDEACCEL 키보드 액셀러레이터가 숨겨집니다.  
   
-- **UISF_ACTIVE Windows XP:** 활성 컨트롤에 사용 되는 스타일의 컨트롤을 그려야 합니다.  
+- UISF_ACTIVE Windows XP: 컨트롤을 그려야 활성 컨트롤에 사용 되는 스타일입니다.  
   
 ### <a name="remarks"></a>설명  
  기능을 에뮬레이션 하는이 멤버 함수는 [WM_QUERYUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646355) Windows SDK에 설명 된 대로 메시지입니다.  
@@ -8088,8 +8088,8 @@ afx_msg void OnRawInput(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `nInputCode`|입력 응용 프로그램이 전경에 인지 되는 동안 발생 했는지 여부를 나타내는 입력된 코드입니다. 두 경우 모두 응용 프로그램 호출 해야 [CWnd::DefWindowProc](#defwindowproc) 시스템 정리 작업을 수행할 수 있도록 합니다.<br /><br /> 이 매개 변수는 다음 값 중 하나일 수 있습니다.<br /><br /> - `RIM_INPUT` -입력 응용 프로그램이 전경에 되는 동안 발생 했습니다.<br />- `RIM_INPUTSINK` -입력 응용 프로그램이 전경에 되지 않은 동안 발생 했습니다.|  
-|[in] `hRawInput`|에 대 한 핸들을 [RAWINPUT](http://msdn.microsoft.com/library/windows/desktop/ms645562) 장치에서 원시 입력이 포함 된 구조입니다.|  
+|[in] *nInputCode*|입력 응용 프로그램이 전경에 인지 되는 동안 발생 했는지 여부를 나타내는 입력된 코드입니다. 두 경우 모두 응용 프로그램 호출 해야 [CWnd::DefWindowProc](#defwindowproc) 시스템 정리 작업을 수행할 수 있도록 합니다.<br /><br /> 이 매개 변수는 다음 값 중 하나일 수 있습니다.<br /><br /> -RIM_INPUT-입력 응용 프로그램이 전경에 되는 동안 발생 했습니다.<br />-RIM_INPUTSINK-입력 응용 프로그램이 전경에 되지 않은 동안 발생 했습니다.|  
+|[in] *hRawInput*|에 대 한 핸들을 [RAWINPUT](http://msdn.microsoft.com/library/windows/desktop/ms645562) 장치에서 원시 입력이 포함 된 구조입니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_INPUT](http://msdn.microsoft.com/library/windows/desktop/ms646275) 알림 Windows SDK에 설명 되어 있습니다.  
@@ -8107,24 +8107,24 @@ afx_msg void OnRButtonDblClk(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nFlags`  
+ *nFlags*  
  아래로 다양 한 가상 키가 있는지 여부를 나타냅니다. 이 매개 변수는 다음 값의 조합이 포함 될 수 있습니다.  
   
-- **MK_CONTROL** 다운 된 CTRL 키를 설정 합니다.  
+- MK_CONTROL 다운 된 CTRL 키를 설정 합니다.  
   
-- **MK_LBUTTON** 마우스 왼쪽된 단추를 누른 경우 설정 합니다.  
+- 마우스 단추 하지 않으면 MK_LBUTTON 설정 다운 되었습니다.  
   
-- **MK_MBUTTON** 마우스 가운데 단추를 누른 경우 설정 합니다.  
+- 마우스 가운데 단추를 눌렀음을 MK_MBUTTON 설정 합니다.  
   
-- **MK_RBUTTON** 마우스 오른쪽 단추를 누른 경우 설정 합니다.  
+- 마우스 오른쪽 단추를 눌렀음을 MK_RBUTTON 설정 합니다.  
   
-- **MK_SHIFT** 다운 된 SHIFT 키를 설정 합니다.  
+- MK_SHIFT 다운 된 SHIFT 키를 설정 합니다.  
   
- `point`  
+ *지점*  
  X 및 y를 지정 합니다. 커서의 좌표가 합니다. 이러한 좌표는 항상 창의 왼쪽 위 모퉁이 기준으로 합니다.  
   
 ### <a name="remarks"></a>설명  
- 창은 해당는 **CS_DBLCLKS** [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) 스타일 받을 수 있는 `OnRButtonDblClk` 호출 합니다. Microsoft Foundation Class 라이브러리 내에서 windows에 대 한 기본값입니다. Windows 호출 `OnRButtonDblClk` 사용자가을 해제 하 고 다시 다음 시스템의 내에서 마우스 오른쪽 단추를 누를 때 제한 시간을 두 번 클릭 합니다. 4 개의 이벤트를 생성 실제로 마우스 오른쪽 단추를 두 번 클릭: [WM_RBUTTONDOWN](#onrbuttondown) 및 [WM_RBUTTONUP](#onrbuttonup) 메시지는 `OnRButtonDblClk` 호출과 다른 `WM_RBUTTONUP` 메시지 단추 해제 됩니다.  
+ CS_DBLCLKS 있는 창만 [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) 스타일 받을 수 있는 `OnRButtonDblClk` 호출 합니다. Microsoft Foundation Class 라이브러리 내에서 windows에 대 한 기본값입니다. Windows 호출 `OnRButtonDblClk` 사용자가을 해제 하 고 다시 다음 시스템의 내에서 마우스 오른쪽 단추를 누를 때 제한 시간을 두 번 클릭 합니다. 4 개의 이벤트를 생성 실제로 마우스 오른쪽 단추를 두 번 클릭: [WM_RBUTTONDOWN](#onrbuttondown) 및 [WM_RBUTTONUP](#onrbuttonup) 메시지는 `OnRButtonDblClk` 호출과 단추를 때 다른 WM_RBUTTONUP 메시지 릴리스 했습니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -8139,20 +8139,20 @@ afx_msg void OnRButtonDown(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nFlags`  
+ *nFlags*  
  아래로 다양 한 가상 키가 있는지 여부를 나타냅니다. 이 매개 변수는 다음 값의 조합이 포함 될 수 있습니다.  
   
-- **MK_CONTROL** 다운 된 CTRL 키를 설정 합니다.  
+- MK_CONTROL 다운 된 CTRL 키를 설정 합니다.  
   
-- **MK_LBUTTON** 마우스 왼쪽된 단추를 누른 경우 설정 합니다.  
+- 마우스 단추 하지 않으면 MK_LBUTTON 설정 다운 되었습니다.  
   
-- **MK_MBUTTON** 마우스 가운데 단추를 누른 경우 설정 합니다.  
+- 마우스 가운데 단추를 눌렀음을 MK_MBUTTON 설정 합니다.  
   
-- **MK_RBUTTON** 마우스 오른쪽 단추를 누른 경우 설정 합니다.  
+- 마우스 오른쪽 단추를 눌렀음을 MK_RBUTTON 설정 합니다.  
   
-- **MK_SHIFT** 다운 된 SHIFT 키를 설정 합니다.  
+- MK_SHIFT 다운 된 SHIFT 키를 설정 합니다.  
   
- `point`  
+ *지점*  
  X 및 y를 지정 합니다. 커서의 좌표가 합니다. 이러한 좌표는 항상 창의 왼쪽 위 모퉁이 기준으로 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -8168,18 +8168,18 @@ afx_msg void OnRButtonUp(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nFlags`  
+ *nFlags*  
  아래로 다양 한 가상 키가 있는지 여부를 나타냅니다. 이 매개 변수는 다음 값의 조합이 포함 될 수 있습니다.  
   
-- **MK_CONTROL** 다운 된 CTRL 키를 설정 합니다.  
+- MK_CONTROL 다운 된 CTRL 키를 설정 합니다.  
   
-- **MK_LBUTTON** 마우스 왼쪽된 단추를 누른 경우 설정 합니다.  
+- 마우스 단추 하지 않으면 MK_LBUTTON 설정 다운 되었습니다.  
   
-- **MK_MBUTTON** 마우스 가운데 단추를 누른 경우 설정 합니다.  
+- 마우스 가운데 단추를 눌렀음을 MK_MBUTTON 설정 합니다.  
   
-- **MK_SHIFT** 다운 된 SHIFT 키를 설정 합니다.  
+- MK_SHIFT 다운 된 SHIFT 키를 설정 합니다.  
   
- `point`  
+ *지점*  
  X 및 y를 지정 합니다. 커서의 좌표가 합니다. 이러한 좌표는 항상 창의 왼쪽 위 모퉁이 기준으로 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -8195,10 +8195,10 @@ afx_msg LRESULT OnRegisteredMouseWheel(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `wParam`  
+ *wParam*  
  포인터의 가로 위치입니다.  
   
- `lParam`  
+ *lParam*  
  포인터의 세로 위치입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -8230,13 +8230,13 @@ afx_msg void OnRenderFormat(UINT nFormat);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nFormat`  
+ *nFormat*  
  클립보드 형식을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
  받는 사람이 해당 형식의 데이터를 렌더링 하 고 호출 하 여 클립보드에 전달 된 [SetClipboardData](http://msdn.microsoft.com/library/windows/desktop/ms649051) Windows 함수.  
   
- 호출 하지 마십시오는 `OpenClipboard` 멤버 함수 또는 **CloseClipboard** Windows 함수 내에서 `OnRenderFormat`합니다.  
+ 호출 하지 마십시오는 `OpenClipboard` 멤버 함수 또는 `CloseClipboard` Windows 함수 내에서 `OnRenderFormat`합니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -8254,13 +8254,13 @@ afx_msg void OnSessionChange(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `nSessionState`|상태 코드를 세션 상태 변경에 설명 합니다.|  
-|[in] `nId`|세션 식별자입니다.|  
+|[in] *nSessionState*|상태 코드를 세션 상태 변경에 설명 합니다.|  
+|[in] *nId*|세션 식별자입니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) 알림 Windows SDK에 설명 되어 있습니다.  
   
- `nSessionState` 매개 변수는 세션 콘센트에 꽂거나 뽑을 콘솔 또는 원격 터미널에서 사용자 로그온 또는 로그 오프, 세션이 잠금 또는 잠금 해제 또는 지정 세션 상태 원격 제어로 변경 되었습니다. 자세한 내용은 참조는 `wParam` 의 매개 변수는는 [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) 메시지입니다.  
+ *nSessionState* 매개 변수는 세션 콘센트에 꽂거나 뽑을 콘솔 또는 원격 터미널에서 사용자 로그온 또는 로그 오프, 세션이 잠금 또는 잠금 해제 또는 지정 세션 상태 원격 제어로 변경 되었습니다. 자세한 내용은 참조는 *wParam* 의 매개 변수는는 [WM_WTSSESSION_CHANGE](http://msdn.microsoft.com/library/aa383828) 메시지입니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -8276,26 +8276,26 @@ afx_msg BOOL OnSetCursor(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWnd`  
+ *pWnd*  
  커서가 포함 된 창에 대 한 포인터를 지정 합니다. 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.  
   
- `nHitTest`  
+ *nHitTest*  
  지정 된 [적중 테스트](#onnchittest) 지역 번호입니다. 적중 횟수 테스트 커서의 위치를 결정합니다.  
   
- `message`  
+ *message*  
  마우스 메시지 번호를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
  계속 하려면는 0 또는 추가 처리를 중단 하려면 0이 아닙니다.  
   
 ### <a name="remarks"></a>설명  
- 부모 창의 호출 하는 기본 구현은 `OnSetCursor` 처리 하기 전에. 부모 창에 반환 하는 경우 **TRUE**, 추가 처리를 중단 합니다. 부모 창 호출 제어할 부모 창의 자식 창에서 커서의 설정을 있습니다.  
+ 부모 창의 호출 하는 기본 구현은 `OnSetCursor` 처리 하기 전에. 부모 창 TRUE가 반환 하는 경우 추가 처리가 중단 됩니다. 부모 창 호출 제어할 부모 창의 자식 창에서 커서의 설정을 있습니다.  
   
  기본 구현은 커서 화살표 클라이언트 영역에 없는 경우 또는 설정 등록 클래스 커서에 있으면 합니다.  
   
- 경우 `nHitTest` 은 **HTERROR** 및 `message` 마우스 button-down 메시지는 **MessageBeep** 멤버 함수를 호출 합니다.  
+ 경우 *nHitTest* HTERROR은 및 *메시지* 마우스 button-down 메시지는 `MessageBeep` 멤버 함수를 호출 합니다.  
   
- `message` 매개 변수가 0 이면 때 `CWnd` 메뉴 모드를 시작 합니다.  
+ *메시지* 매개 변수가 0 이면 때 `CWnd` 메뉴 모드를 시작 합니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -8309,7 +8309,7 @@ afx_msg void OnSetFocus(CWnd* pOldWnd);
   
 ### <a name="parameters"></a>매개 변수  
  *pOldWnd*  
- 포함 된 `CWnd` 입력된 포커스를 잃을 개체 (수 있습니다 **NULL**). 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.  
+ 포함 된 `CWnd` 개체 (NULL 일 수 있음) 입력된 포커스를 잃을입니다. 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.  
   
 ### <a name="remarks"></a>설명  
  캐럿을 표시 하려면 `CWnd` 이 시점에서 적절 한 캐럿 함수를 호출 해야 합니다.  
@@ -8327,22 +8327,22 @@ afx_msg void OnSettingChange(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `uFlags`  
- 시스템의 결과로 메시지를 보낼 때는 **SystemParametersInfo** 호출에서이 매개 변수는 변경 된 시스템 매개 변수를 나타내는 플래그입니다. 값의 목록이 참조 [SystemParametersInfo](http://msdn.microsoft.com/library/windows/desktop/ms724947) Windows sdk에서입니다. 응용 프로그램에서 메시지를 보내면이 매개 변수는 0 이어야 합니다.  
+ *uFlags*  
+ 시스템의 결과로 메시지를 보낼 때는 `SystemParametersInfo` 호출에서이 매개 변수는 변경 된 시스템 매개 변수를 나타내는 플래그입니다. 값의 목록이 참조 [SystemParametersInfo](http://msdn.microsoft.com/library/windows/desktop/ms724947) Windows sdk에서입니다. 응용 프로그램에서 메시지를 보내면이 매개 변수는 0 이어야 합니다.  
   
- `lpszSection`  
+ *lpszSection*  
  변경 된 섹션의 이름을 지정 하는 문자열을 가리킵니다. (문자열 섹션 이름 둘러싸고 있는 대괄호 포함 되지 않습니다.)  
   
 ### <a name="remarks"></a>설명  
  시스템 매개 변수를 변경한 사용자가 제어판을 통해 설정을 변경 하는 경우 Windows에서는 메시지를 전송 하는 경우 응용 프로그램 모든 최상위 창에는 메시지를 보내 해야 합니다.  
   
- **ON_WM_SETTINGCHANGE** 메시지는 비슷합니다는 **ON_WM_WININICHANGE** 차이점은 다음과 같은 메시지:  
+ ON_WM_SETTINGCHANGE 메시지는 다음과 같은 차이점은 ON_WM_WININICHANGE 메시지 비슷합니다.  
   
--   사용 하 여 **ON_WM_SETTINGCHANGE** Windows NT 4.0 이상에서 실행 하는 경우 또는 Windows 95/98입니다.  
+-   Windows NT 4.0 이상에서 실행 하거나 Windows 95/98 ON_WM_SETTINGCHANGE를 사용 합니다.  
   
--   사용 하 여 **ON_WININICHANGE** 3.51 이상 때 Windows NT를 실행 합니다. 이 메시지는 이제 사용 되지 않습니다.  
+-   Windows NT 3.51 이전을 실행 하는 경우 ON_WININICHANGE를 사용 합니다. 이 메시지는 이제 사용 되지 않습니다.  
   
- 메시지 맵을에서 이러한 매크로 중 하나만 해야 합니다. Windows 95/98 및 Windows NT 4.0 모두에 대해 작동 하는 프로그램을 작성 하기 위해 작성에 대 한 처리기 **ON_WM_SETTINGCHANGE**합니다. Windows NT 3.51에서 처리기에 의해 호출 됩니다 `OnSettingChange` 및 `uFlags` 항상 0이 됩니다.  
+ 메시지 맵을에서 이러한 매크로 중 하나만 해야 합니다. Windows 95/98 및 Windows NT 4.0 모두에 대해 작동 하는 프로그램을 작성 하기 위해 ON_WM_SETTINGCHANGE에 대 한 처리기를 작성 합니다. Windows NT 3.51에서 처리기에 의해 호출 됩니다 `OnSettingChange` 및 *uFlags* 항상 0이 됩니다.  
   
 ##  <a name="onshowwindow"></a>  CWnd::OnShowWindow  
  이 멤버 함수를 호출 하는 프레임 워크는 경우는 `CWnd` 개체를 숨기 거 나 표시 하 려 합니다.  
@@ -8354,15 +8354,15 @@ afx_msg void OnShowWindow(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bShow`  
- 창이 표시 되는지 여부를 지정 합니다. **TRUE** 는 창이 표시 되어; 경우 **FALSE** 창을 숨기 거 하는 경우.  
+ *bShow*  
+ 창이 표시 되는지 여부를 지정 합니다. 창이 표시 되어; TRUE 이면 창을 숨기 거 경우 FALSE입니다.  
   
- `nStatus`  
- 표시 되는 창의 상태를 지정 합니다. 0 이기 때문에 메시지를 보낼 경우는 `ShowWindow` 멤버 함수 호출 고, 그렇지 않으면 `nStatus` 다음 중 하나입니다.  
+ *nStatus*  
+ 표시 되는 창의 상태를 지정 합니다. 0 이기 때문에 메시지를 보낼 경우는 `ShowWindow` 멤버 함수 호출 고, 그렇지 않으면 *nStatus* 다음 중 하나입니다.  
   
-- **SW_PARENTCLOSING** 부모 창을 닫는 (만들어지는 아이콘) 또는 팝업 창이 숨겨져 있습니다.  
+- SW_PARENTCLOSING 부모 창을 닫는 (만들어지는 아이콘) 또는 팝업 창을 숨기 거 합니다.  
   
-- **SW_PARENTOPENING** 부모 창을 열고 (표시 됨) 또는 팝업 창이 표시 되어 있습니다.  
+- SW_PARENTOPENING 부모 창을 열고 (표시 됨) 또는 팝업 창이 표시 되어 있습니다.  
   
 ### <a name="remarks"></a>설명  
  창을 숨기 거 나 때 표시 되는 `ShowWindow` 겹쳐 창 최대화 또는 복원 하는 경우 또는 겹쳐 또는 팝업 창의 닫을 때 멤버 함수를 호출 (만든 아이콘) 또는 열 (화면에 표시 됨). 겹쳐진된 창이 닫힌 경우 해당 창과 연결 된 모든 팝업 창이 숨겨집니다.  
@@ -8381,23 +8381,23 @@ afx_msg void OnSize(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nType`  
+ *n 유형*  
  요청 된 크기 조정의 유형을 지정 합니다. 이 매개 변수는 다음 값 중 하나일 수 있습니다.  
   
-- **SIZE_MAXIMIZED** 창이 최대화 되었습니다.  
+- SIZE_MAXIMIZED 창 최대화 되었습니다.  
   
-- **SIZE_MINIMIZED** 창이 최소화 되었습니다.  
+- SIZE_MINIMIZED 창은 최소화 되었습니다.  
   
-- **SIZE_RESTORED** 창 크기 조정 하지만 두 **SIZE_MINIMIZED** 나 **SIZE_MAXIMIZED** 적용 됩니다.  
+- SIZE_RESTORED 창 크기 조정 하지만 SIZE_MINIMIZED 아니고 SIZE_MAXIMIZED도 적용 됩니다.  
   
-- **SIZE_MAXHIDE** 다른 창이 최대화 될 때 모든 팝업 창을로 메시지가 보내집니다.  
+- 다른 창이 최대화 되었을 때 SIZE_MAXHIDE을 모든 팝업 창으로 전송 됩니다.  
   
-- **SIZE_MAXSHOW** 다른 창이 이전 크기로 복원 된 경우 모든 팝업 창을로 메시지가 보내집니다.  
+- 다른 창이 이전 크기로 복원 된 경우 SIZE_MAXSHOW을 모든 팝업 창으로 전송 됩니다.  
   
- `cx`  
+ *cx*  
  클라이언트 영역으로 새 너비를 지정합니다.  
   
- `cy`  
+ *cy*  
  클라이언트 영역으로 새 높이 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -8406,7 +8406,7 @@ afx_msg void OnSize(
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#109](../../mfc/reference/codesnippet/cpp/cwnd-class_50.cpp)]  
   
 ##  <a name="onsizeclipboard"></a>  CWnd::OnSizeClipboard  
@@ -8419,7 +8419,7 @@ afx_msg void OnSizeClipboard(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pClipAppWnd`  
+ *pClipAppWnd*  
  클립보드 응용 프로그램 창의 식별합니다. 포인터는 임시적 이며 저장 되어야 합니다.  
   
  *hRect*  
@@ -8443,10 +8443,10 @@ afx_msg void OnSizing(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nSide`  
+ *nSide*  
  이동할 창의 가장자리를 지정 합니다.  
   
- `lpRect`  
+ *lpRect*  
  주소는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 또는 [RECT 구조체](../../mfc/reference/rect-structure1.md) 시 항목의 좌표를 포함 하 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -8455,7 +8455,7 @@ afx_msg void OnSizing(
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#110](../../mfc/reference/codesnippet/cpp/cwnd-class_51.cpp)]  
   
 ##  <a name="onspoolerstatus"></a>  CWnd::OnSpoolerStatus  
@@ -8468,8 +8468,8 @@ afx_msg void OnSpoolerStatus(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nStatus`  
- 지정 된 **SP_JOBSTATUS** 플래그입니다.  
+ *nStatus*  
+ SP_JOBSTATUS 플래그를 지정합니다.  
   
  *nJobs*  
  인쇄 관리자 큐에 남아 있는 작업의 수를 지정 합니다.  
@@ -8490,14 +8490,14 @@ afx_msg void OnStyleChanged(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nStyleType`  
+ *nStyleType*  
  창 확장 또는 nonextended 스타일 변경 여부를 지정 합니다. 이 매개 변수는 다음 값의 조합 될 수 있습니다.  
   
-- **GWL_EXSTYLE** 확장된 창 스타일 변경 되었습니다.  
+- GWL_EXSTYLE 확장된 창 스타일 변경 되었습니다.  
   
-- **GWL_STYLE** nonextended 창 스타일 변경 되었습니다.  
+- GWL_STYLE nonextended 창 스타일 변경 되었습니다.  
   
- `lpStyleStruct`  
+ *lpStyleStruct*  
  가리키는 [STYLESTRUCT](http://msdn.microsoft.com/library/windows/desktop/ms632607) 창에 대 한 새 스타일을 포함 하는 구조입니다. 응용 프로그램의 스타일을 검사할 수 있지만 수 변경 되지는 않습니다.  
   
 ### <a name="remarks"></a>설명  
@@ -8515,14 +8515,14 @@ afx_msg void OnStyleChanging(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nStyleType`  
+ *nStyleType*  
  창 확장 또는 nonextended 스타일 변경 여부를 지정 합니다. 이 매개 변수는 다음 값의 조합 될 수 있습니다.  
   
-- **GWL_EXSTYLE** 확장된 창 스타일 변경 되었습니다.  
+- GWL_EXSTYLE 확장된 창 스타일 변경 되었습니다.  
   
-- **GWL_STYLE** nonextended 창 스타일 변경 되었습니다.  
+- GWL_STYLE nonextended 창 스타일 변경 되었습니다.  
   
- `lpStyleStruct`  
+ *lpStyleStruct*  
  가리키는 [STYLESTRUCT](http://msdn.microsoft.com/library/windows/desktop/ms632607) 창에 대 한 새 스타일을 포함 하는 구조입니다. 응용 프로그램의 스타일을 검토 하 고 변경할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
@@ -8541,14 +8541,14 @@ afx_msg void OnSysChar(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nChar`  
+ *nChar*  
  메뉴 컨트롤 키의 ASCII 문자 키 코드를 지정합니다.  
   
- `nRepCnt`  
+ *nRepCnt*  
  반복 횟수 (키 입력을 키를 누른 사용자로 인해 반복 횟수 수)를 지정 합니다.  
   
- `nFlags`  
- `nFlags` 매개 변수는 이러한 값을 가질 수 있습니다.  
+ *nFlags*  
+ *nFlags* 매개 변수는 이러한 값을 가질 수 있습니다.  
   
 |값|의미|  
 |-----------|-------------|  
@@ -8563,9 +8563,9 @@ afx_msg void OnSysChar(
 ### <a name="remarks"></a>설명  
  메뉴 컨트롤 키의 가상 키 코드를 지정합니다. (표준 가상 키 코드의 목록, Winuser.h 참조)  
   
- 상황에 맞는 코드는 0 일 때 `WM_SYSCHAR` 전달할 수는 [wm_syschar입니다](http://msdn.microsoft.com/library/windows/desktop/ms646357) 에 메시지는 [TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms646373) Windows 함수는 시스템이 아닌 키가 일반 메시지 것 처럼 처리 합니다 문자 키입니다. 따라서 액셀러레이터 키를를 활성 창에 입력된 포커스가 없는 경우에 활성 창에 사용할 수 있습니다.  
+ 상황에 맞는 코드 0 이면 wm_syschar입니다 전달할 수는 [wm_syschar입니다](http://msdn.microsoft.com/library/windows/desktop/ms646357) 에 메시지는 [TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms646373) Windows 함수는 시스템이 아닌 키가 일반 메시지 것 처럼 처리 합니다 문자 키입니다. 따라서 액셀러레이터 키를를 활성 창에 입력된 포커스가 없는 경우에 활성 창에 사용할 수 있습니다.  
   
- IBM 고급 101 및 102 키 키보드에 대 한 향상 된 키가 오른쪽 ALT와 키보드의 주요 섹션에는 오른쪽 CTRL 키 기능, DEL, 홈, END, PAGE UP, PAGE DOWN 및 왼쪽의 숫자 키패드; 클러스터에 있는 화살표 키 슬래시 (/) 및 숫자 키패드에서 ENTER 키입니다. 다른 일부 키보드에 있는 확장 된 키 비트를 지원할 수 있습니다 `nFlags`합니다.  
+ IBM 고급 101 및 102 키 키보드에 대 한 향상 된 키가 오른쪽 ALT와 키보드의 주요 섹션에는 오른쪽 CTRL 키 기능, DEL, 홈, END, PAGE UP, PAGE DOWN 및 왼쪽의 숫자 키패드; 클러스터에 있는 화살표 키 슬래시 (/) 및 숫자 키패드에서 ENTER 키입니다. 다른 일부 키보드에 있는 확장 된 키 비트를 지원할 수 있습니다 *nFlags*합니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -8592,54 +8592,54 @@ afx_msg void OnSysCommand(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nID`  
+ *nID*  
  요청 된 시스템 명령은 유형을 지정 합니다. 이 매개 변수는 다음 값 중 하나일 수 있습니다.  
   
-- **SC_CLOSE** 닫기는 `CWnd` 개체입니다.  
+- SC_CLOSE 닫기는 `CWnd` 개체입니다.  
   
-- **SC_HOTKEY** 활성화는 `CWnd` 응용 프로그램에서 지정한 바로 가기 키와 연결 된 개체입니다. 하위 단어로 `lParam` 식별는 `HWND` 을 활성화 하기 위해 창입니다.  
+- SC_HOTKEY 활성화는 `CWnd` 응용 프로그램에서 지정한 바로 가기 키와 연결 된 개체입니다. 하위 단어로 *lParam* 활성화 하려면 창의 HWND를 식별 합니다.  
   
-- **SC_HSCROLL** 가로로 스크롤합니다.  
+- SC_HSCROLL 가로로 스크롤합니다.  
   
-- **SC_KEYMENU** 키 입력을 통해 메뉴를 검색 합니다.  
+- SC_KEYMENU 키 입력을 통해 메뉴를 검색 합니다.  
   
-- **SC_MAXIMIZE** (또는 **SC_ZOOM**) 최대화는 `CWnd` 개체입니다.  
+- SC_MAXIMIZE (또는 SC_ZOOM) 최대화는 `CWnd` 개체입니다.  
   
-- **SC_MINIMIZE** (또는 **SC_ICON**) 최소화는 `CWnd` 개체입니다.  
+- SC_MINIMIZE (또는 SC_ICON) 최소화는 `CWnd` 개체입니다.  
   
-- **SC_MOUSEMENU** 검색 마우스를 통해 메뉴를 클릭 합니다.  
+- SC_MOUSEMENU 검색 마우스를 통해 메뉴를 클릭 합니다.  
   
-- **SC_MOVE** 이동는 `CWnd` 개체입니다.  
+- SC_MOVE 이동는 `CWnd` 개체입니다.  
   
-- **SC_NEXTWINDOW** 다음 창으로 이동 합니다.  
+- SC_NEXTWINDOW 다음 창으로 이동 합니다.  
   
-- **SC_PREVWINDOW** 이전 창으로 이동 합니다.  
+- SC_PREVWINDOW 이전 창으로 이동 합니다.  
   
-- **SC_RESTORE** 일반 위치와 크기로 복원 기간입니다.  
+- 기본 위치와 크기로 SC_RESTORE 복원 창입니다.  
   
-- **SC_SCREENSAVE** 시스템의 [부팅] 섹션에 지정 된 화면 보호기 응용 프로그램을 실행 합니다. INI 파일입니다.  
+- 화면 보호기 응용 프로그램 시스템의 [부팅] 섹션에 지정 된 SC_SCREENSAVE 실행 합니다. INI 파일입니다.  
   
-- **SC_SIZE** 크기는 `CWnd` 개체입니다.  
+- SC_SIZE 크기는 `CWnd` 개체입니다.  
   
-- **SC_TASKLIST** 실행 하거나 Windows 작업 관리자 응용 프로그램을 활성화 합니다.  
+- SC_TASKLIST 실행 하거나 Windows 작업 관리자 응용 프로그램을 활성화 합니다.  
   
-- **SC_VSCROLL** 세로로 스크롤합니다.  
+- SC_VSCROLL 세로로 스크롤합니다.  
   
- `lParam`  
- 마우스로 컨트롤 메뉴 명령을 선택 하면 `lParam` 커서 좌표를 포함 합니다. X 좌표를 포함 하는 하위 단어 및 번호 상위 y 좌표를 포함 합니다. 그렇지 않으면이 매개 변수는 사용 되지 않습니다.  
+ *lParam*  
+ 마우스로 컨트롤 메뉴 명령을 선택 하면 *lParam* 커서 좌표를 포함 합니다. X 좌표를 포함 하는 하위 단어 및 번호 상위 y 좌표를 포함 합니다. 그렇지 않으면이 매개 변수는 사용 되지 않습니다.  
   
-- **SC_HOTKEY** 응용 프로그램에서 지정한 바로 가기 키와 연결 된 창으로 전환 합니다. 하위 단어로 `lParam` 를 활성화 하는 창을 식별 합니다.  
+- 응용 프로그램에서 지정한 바로 가기 키와 연결 된 창 SC_HOTKEY 활성화 합니다. 하위 단어로 *lParam* 를 활성화 하는 창을 식별 합니다.  
   
-- **SC_SCREENSAVE** 제어판의 데스크톱 섹션에 지정 된 화면 저장 응용 프로그램을 실행 합니다.  
+- SC_SCREENSAVE 제어판의 데스크톱 섹션에 지정 된 화면 저장 응용 프로그램을 실행 합니다.  
   
 ### <a name="remarks"></a>설명  
  기본적으로 `OnSysCommand` 앞의 표에 지정 된 미리 정의 된 작업에 대 한 컨트롤 메뉴 요청을 수행 합니다.  
   
- `WM_SYSCOMMAND` 메시지의 4 개 낮은 순서 비트는 `nID` 매개 변수는 Windows에서 내부적으로 사용 됩니다. 응용 프로그램의 값을 테스트 하는 경우 `nID`, 0xFFF0 값을 결합 해야는 `nID` 비트를 사용 하 여 값-및 연산자 올바른 결과를 가져옵니다.  
+ WM_SYSCOMMAND는 메시지의 4 개 낮은 순서 비트는 *nID* 매개 변수는 Windows에서 내부적으로 사용 됩니다. 응용 프로그램의 값을 테스트 하는 경우 *nID*, 0xFFF0 값을 결합 해야는 *nID* 비트를 사용 하 여 값-및 연산자 올바른 결과를 가져옵니다.  
   
- 컨트롤 메뉴에서 메뉴 항목으로 수정할 수는 `GetSystemMenu`, `AppendMenu`, `InsertMenu`, 및 `ModifyMenu` 멤버 함수입니다. 컨트롤 메뉴를 수정 하는 응용 프로그램에서 처리 해야 `WM_SYSCOMMAND` 메시지 및 모든 `WM_SYSCOMMAND` 에 응용 프로그램에서 처리 되지 않은 메시지를 전달 해야 `OnSysCommand`합니다. 응용 프로그램에 의해 추가 된 명령은 값 응용 프로그램에서 처리 해야 하 고에 전달할 수 없습니다 `OnSysCommand`합니다.  
+ 컨트롤 메뉴에서 메뉴 항목으로 수정할 수는 `GetSystemMenu`, `AppendMenu`, `InsertMenu`, 및 `ModifyMenu` 멤버 함수입니다. 컨트롤 메뉴를 수정 하는 응용 프로그램 WM_SYSCOMMAND 메시지를 처리 해야 하 고 응용 프로그램에서 처리 되지 않은 모든 WM_SYSCOMMAND 메시지에 전달 해야 `OnSysCommand`합니다. 응용 프로그램에 의해 추가 된 명령은 값 응용 프로그램에서 처리 해야 하 고에 전달할 수 없습니다 `OnSysCommand`합니다.  
   
- 응용 프로그램을 전달 하 여 언제 든 지 모든 시스템 명령을 수행할 수는 `WM_SYSCOMMAND` 메시지를 `OnSysCommand`합니다.  
+ 응용 프로그램 명령을 실행할 수 있는 시스템 언제 든 지 WM_SYSCOMMAND 메시지를 전달 하 여 `OnSysCommand`합니다.  
   
  컨트롤 메뉴에서 항목을 선택 하도록 정의 된 액셀러레이터 키 입력으로 변환 됩니다 `OnSysCommand` 호출; 키 입력으로 변환 된 결과 다른 모든 액셀러레이터 [WM_COMMAND](#oncommand) 메시지입니다.  
   
@@ -8657,13 +8657,13 @@ afx_msg void OnSysDeadChar(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nChar`  
+ *nChar*  
  키가 배달 못 한 문자 값을 지정합니다.  
   
- `nRepCnt`  
+ *nRepCnt*  
  반복 횟수를 지정합니다.  
   
- `nFlags`  
+ *nFlags*  
  다음 목록에 표시 된 것 처럼 검색 코드, 코드 키 전환, 이전 키 상태 및 상황에 맞는 코드를 지정 합니다.  
   
 |값|의미|  
@@ -8693,13 +8693,13 @@ afx_msg void OnSysKeyDown(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nChar`  
+ *nChar*  
  키를 누르는의 가상 키 코드를 지정 합니다. 표준 가상 키 코드의 목록, Winuser.h을 참조 하십시오.  
   
- `nRepCnt`  
+ *nRepCnt*  
  반복 횟수를 지정합니다.  
   
- `nFlags`  
+ *nFlags*  
  다음 목록에 표시 된 것 처럼 검색 코드, 코드 키 전환, 이전 키 상태 및 상황에 맞는 코드를 지정 합니다.  
   
 |값|의미|  
@@ -8717,11 +8717,11 @@ afx_msg void OnSysKeyDown(
 ### <a name="remarks"></a>설명  
  창이 현재 입력 포커스가, 현재 창의 경우 `OnSysKeyDown` 멤버 함수를 호출 합니다. `CWnd` 메시지를 받는 개체 상황에 맞는 코드를 확인 하 여 이러한 두 가지 컨텍스트를 구별할 수 `nFlags`합니다.  
   
- 상황에 맞는 코드는 0 일 때의 `WM_SYSKEYDOWN` 수신한 메시지 `OnSysKeyDown` 에 전달 될 수는 [TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms646373) 시스템 키 메시지 대신 키가 일반 메시지 것 처럼 처리 됩니다 하는 Windows 함수를 . 따라서 액셀러레이터 키를를 활성 창에 입력된 포커스가 없는 경우에 활성 창에 사용할 수 있습니다.  
+ WM_SYSKEYDOWN 메시지에서 수신 컨텍스트 코드 0 이면 `OnSysKeyDown` 에 전달 될 수는 [TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms646373) Windows 함수를 시스템 키 메시지 대신 키가 일반 메시지 것 처럼 처리 됩니다. 따라서 액셀러레이터 키를를 활성 창에 입력된 포커스가 없는 경우에 활성 창에 사용할 수 있습니다.  
   
  자동 반복, 두 개 이상으로 인해 `OnSysKeyDown` 호출 되기 전에 발생할 수 있습니다는 [WM_SYSKEYUP](#onsyskeyup) 메시지를 수신 합니다. 이전 키 상태 (14 비트)를 확인 하기 위해 사용할 수 있는지는 `OnSysKeyDown` 호출 첫 번째 다운 전환 또는 아래로 반복된 전환을 나타냅니다.  
   
- IBM 고급 101 및 102 키 키보드에 대 한 향상 된 키가 오른쪽 ALT와 키보드의 주요 섹션에는 오른쪽 CTRL 키 기능, DEL, 홈, END, PAGE UP, PAGE DOWN 및 왼쪽의 숫자 키패드; 클러스터에 있는 화살표 키 슬래시 (/) 및 숫자 키패드에서 ENTER 키입니다. 다른 일부 키보드에 있는 확장 된 키 비트를 지원할 수 있습니다 `nFlags`합니다.  
+ IBM 고급 101 및 102 키 키보드에 대 한 향상 된 키가 오른쪽 ALT와 키보드의 주요 섹션에는 오른쪽 CTRL 키 기능, DEL, 홈, END, PAGE UP, PAGE DOWN 및 왼쪽의 숫자 키패드; 클러스터에 있는 화살표 키 슬래시 (/) 및 숫자 키패드에서 ENTER 키입니다. 다른 일부 키보드에 있는 확장 된 키 비트를 지원할 수 있습니다 *nFlags*합니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -8737,13 +8737,13 @@ afx_msg void OnSysKeyUp(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nChar`  
+ *nChar*  
  키를 누르는의 가상 키 코드를 지정 합니다. 표준 가상 키 코드의 목록, Winuser.h을 참조 하십시오.  
   
- `nRepCnt`  
+ *nRepCnt*  
  반복 횟수를 지정합니다.  
   
- `nFlags`  
+ *nFlags*  
  다음 목록에 표시 된 것 처럼 검색 코드, 코드 키 전환, 이전 키 상태 및 상황에 맞는 코드를 지정 합니다.  
   
 |값|의미|  
@@ -8759,20 +8759,20 @@ afx_msg void OnSysKeyUp(
  에 대 한 `OnSysKeyUp` 호출, (비트 15) 키 전환 비트는 1입니다. 상황에 맞는 코드 비트 (비트 13)는 1이 키를 누른 채로; ALT 키 다운 상태인 경우 창이 입력된 포커스를가지고 있으므로 현재 창 메시지가 전송 된 경우 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 창이 현재 입력 포커스가, 현재 창의 경우 `OnSysKeyUp` 멤버 함수를 호출 합니다. `CWnd` 호출을 받는 개체 상황에 맞는 코드를 확인 하 여 이러한 두 가지 컨텍스트를 구별할 수 `nFlags`합니다.  
+ 창이 현재 입력 포커스가, 현재 창의 경우 `OnSysKeyUp` 멤버 함수를 호출 합니다. `CWnd` 호출을 받는 개체 상황에 맞는 코드를 확인 하 여 이러한 두 가지 컨텍스트를 구별할 수 *nFlags*합니다.  
   
- 상황에 맞는 코드는 0 일 때의 `WM_SYSKEYUP` 수신한 메시지 `OnSysKeyUp` 에 전달 될 수는 [TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms646373) 시스템 키 메시지 대신 키가 일반 메시지 것 처럼 처리 됩니다 하는 Windows 함수를 . 이렇게 하면 엑셀 러 레이 터 (바로 가기) 키를 활성 창에 입력된 포커스가 없는 경우에 활성 창에 사용할 수 있습니다.  
+ WM_SYSKEYUP 메시지에서 수신 컨텍스트 코드 0 이면 `OnSysKeyUp` 에 전달 될 수는 [TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms646373) Windows 함수를 시스템 키 메시지 대신 키가 일반 메시지 것 처럼 처리 됩니다. 이렇게 하면 엑셀 러 레이 터 (바로 가기) 키를 활성 창에 입력된 포커스가 없는 경우에 활성 창에 사용할 수 있습니다.  
   
- IBM 고급 101 및 102 키 키보드에 대 한 향상 된 키가 오른쪽 ALT와 키보드의 주요 섹션에는 오른쪽 CTRL 키 기능, DEL, 홈, END, PAGE UP, PAGE DOWN 및 왼쪽의 숫자 키패드; 클러스터에 있는 화살표 키 슬래시 (/) 및 숫자 키패드에서 ENTER 키입니다. 다른 일부 키보드에 있는 확장 된 키 비트를 지원할 수 있습니다 `nFlags`합니다.  
+ IBM 고급 101 및 102 키 키보드에 대 한 향상 된 키가 오른쪽 ALT와 키보드의 주요 섹션에는 오른쪽 CTRL 키 기능, DEL, 홈, END, PAGE UP, PAGE DOWN 및 왼쪽의 숫자 키패드; 클러스터에 있는 화살표 키 슬래시 (/) 및 숫자 키패드에서 ENTER 키입니다. 다른 일부 키보드에 있는 확장 된 키 비트를 지원할 수 있습니다 *nFlags*합니다.  
   
  미국이 아닌에 대 한 향상 된 102 키 키보드, 오른쪽 ALT 키 CTRL + ALT 키 조합으로 처리 됩니다. 다음 메시지와이 키를 놓을 때 발생 하는 통화의 순서를 보여 줍니다.  
   
 |Sequence|액세스 함수|전달 된 메시지|  
 |--------------|-----------------------|--------------------|  
-|1.|[WM_KEYDOWN](#onkeydown)|**VK_CONTROL**|  
-|2.|[WM_KEYDOWN](#onkeydown)|**VK_MENU**|  
-|3.|[WM_KEYUP](#onkeyup)|**VK_CONTROL**|  
-|4.|[WM_SYSKEYUP](http://msdn.microsoft.com/library/windows/desktop/ms646287)|**VK_MENU**|  
+|1.|[WM_KEYDOWN](#onkeydown)|VK_CONTROL|  
+|2.|[WM_KEYDOWN](#onkeydown)|VK_MENU|  
+|3.|[WM_KEYUP](#onkeyup)|VK_CONTROL|  
+|4.|[WM_SYSKEYUP](http://msdn.microsoft.com/library/windows/desktop/ms646287)|VK_MENU|  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -8787,38 +8787,38 @@ afx_msg void OnTCard(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `idAction`  
+ *idAction*  
  사용자 작업이 수행 되어 나타냅니다. 이 매개 변수는 다음이 값 중 하나일 수 있습니다.  
   
-- **IDABORT** 사용자는 만들 수 있는 중단 단추를 클릭 합니다.  
+- IDABORT 사용자는 만들 수 있는 중단 단추를 클릭 합니다.  
   
-- **IDCANCEL** 사용자는 만들 수 있는 취소 단추를 클릭 합니다.  
+- IDCANCEL 사용자는 만들 수 있는 취소 단추를 클릭 합니다.  
   
-- **IDCLOSE** 사용자 교육 카드 닫힙니다.  
+- IDCLOSE 사용자 교육 카드를 닫혀 있습니다.  
   
-- **IDHELP** 사용자는 만들 수 있는 Windows 도움말 단추를 클릭 합니다.  
+- IDHELP 사용자는 만들 수 있는 Windows 도움말 단추를 클릭 합니다.  
   
-- **IDIGNORE** 사용자는 만들 수 있는 무시 단추를 클릭 합니다.  
+- IDIGNORE 사용자는 만들 수 있는 무시 단추를 클릭 합니다.  
   
-- **IDOK** 사용자 한번 확인 단추를 클릭 합니다.  
+- 사용자 IDOK 한번 확인 단추를 클릭 합니다.  
   
-- **IDNO** 사용자 클릭는 만들 수 있는 단추가 없습니다.  
+- 사용자 IDNO이 클릭는 만들 수 있는 단추가 없습니다.  
   
-- **IDRETRY** 사용자는 만들 재시도 단추를 클릭 합니다.  
+- IDRETRY 사용자는 만들 재시도 단추를 클릭 합니다.  
   
-- **HELP_TCARD_DATA** 사용자 만들 수 있는 단추를 클릭 합니다. `dwActionData` 매개 변수 도움말 작성자가 지정 된 정수 (long)를 포함 합니다.  
+- 사용자 HELP_TCARD_DATA 만들 수 있는 단추를 클릭 합니다. *dwActionData* 매개 변수 도움말 작성자가 지정 된 정수 (long)를 포함 합니다.  
   
-- **HELP_TCARD_NEXT** 사용자는 만들 수 있는 다음 단추를 클릭 합니다.  
+- HELP_TCARD_NEXT 사용자는 만들 수 있는 다음 단추를 클릭 합니다.  
   
-- **HELP_TCARD_OTHER_CALLER** 다른 응용 프로그램에서 교육 카드를 요청 합니다.  
+- 다른 응용 프로그램 HELP_TCARD_OTHER_CALLER 교육 카드를 요청 했습니다.  
   
-- **IDYES** 사용자는 만들 수 있는 예 단추를 클릭 합니다.  
+- IDYES 사용자는 만들 수 있는 예 단추를 클릭 합니다.  
   
- `dwActionData`  
- 경우 `idAction` 지정 **HELP_TCARD_DATA**,이 매개 변수는 도움말 작성자가 지정 된 정수 (long)입니다. 그렇지 않으면이 매개 변수는 0입니다.  
+ *dwActionData*  
+ 경우 *idAction* HELP_TCARD_DATA 지정,이 매개 변수는 도움말 작성자가 지정 된 정수 (long)입니다. 그렇지 않으면이 매개 변수는 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 함수는 응용 프로그램의 사용자가 Windows 도움말 학습 카드를 시작한 경우에 호출 됩니다. 응용 프로그램 교육 카드를 지정 하 여 시작 된 **HELP_TCARD** 명령에 대 한 호출에는 [WinHelp](../../mfc/reference/cwinapp-class.md#winhelp) 함수입니다.  
+ 이 함수는 응용 프로그램의 사용자가 Windows 도움말 학습 카드를 시작한 경우에 호출 됩니다. 응용 프로그램에 대 한 호출에서 HELP_TCARD 명령을 지정 하 여 학습 카드 시작는 [WinHelp](../../mfc/reference/cwinapp-class.md#winhelp) 함수입니다.  
   
 ##  <a name="ontimechange"></a>  CWnd::OnTimeChange  
  시스템 시간이 변경 된 후 프레임 워크에서이 멤버 함수를 호출 합니다.  
@@ -8828,7 +8828,7 @@ afx_msg void OnTimeChange();
 ```  
   
 ### <a name="remarks"></a>설명  
- 모든 응용 프로그램을 변경 내용이 시스템 시간이이 메시지를 보낼 모든 최상위 창에 있어야 합니다. 보낼는 `WM_TIMECHANGE` 메시지에 모든 최상위 창, 응용 프로그램에서 사용할 수는 [SendMessage](http://msdn.microsoft.com/library/windows/desktop/ms644950) Windows 작동 해당 *hwnd* 매개 변수 설정 **HWND_BROADCAST**.  
+ 모든 응용 프로그램을 변경 내용이 시스템 시간이이 메시지를 보낼 모든 최상위 창에 있어야 합니다. 모든 최상위 창으로 WM_TIMECHANGE 메시지를 보내려고 응용 프로그램이 사용할 수는 [SendMessage](http://msdn.microsoft.com/library/windows/desktop/ms644950) Windows 작동 해당 *hwnd* 매개 변수가 HWND_BROADCAST로 설정 합니다.  
   
 ##  <a name="ontimer"></a>  CWnd::OnTimer  
  각 간격에 지정 된이 멤버 함수를 호출 하는 프레임 워크는 [SetTimer](#settimer) 멤버 함수는 타이머를 설치 하는 데 사용 합니다.  
@@ -8838,7 +8838,7 @@ afx_msg void OnTimer(UINT_PTR nIDEvent);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDEvent`  
+ *nIDEvent*  
  타이머의 식별자를 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -8847,7 +8847,7 @@ afx_msg void OnTimer(UINT_PTR nIDEvent);
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예제를 참조 [CWnd::SetTimer](#settimer)합니다.  
   
 ##  <a name="ontoolhittest"></a>  CWnd::OnToolHitTest  
@@ -8860,19 +8860,19 @@ virtual INT_PTR OnToolHitTest(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `point`  
+ *지점*  
  커서의 x 및 y 좌표를 지정합니다. 이러한 좌표는 항상 창의 왼쪽 위 모퉁이 기준으로  
   
- `pTI`  
+ *pTI*  
  에 대 한 포인터는 [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) 구조입니다. 다음과 같은 구조 값은 기본적으로 설정 됩니다.  
   
 - *hwnd*  =  `m_hWnd` 창 핸들입니다  
   
-- `uId` = **(단위) hWndChild** 자식 창에 대 한 핸들  
+- *uId*  =  `(UINT)hWndChild` 자식 창에 대 한 핸들  
   
-- `uFlags` &#124;= **TTF_IDISHWND** 도구의 핸들  
+- *uFlags* &#124;도구의 TTF_IDISHWND 처리 =  
   
-- `lpszText` = **LPSTR_TEXTCALLBACK** 하며 지정한 창에 표시 되는 문자열에 대 한 포인터  
+- *lpszText* = LPSTR_TEXTCALLBACK 포인터 하며 지정한 창에 표시 되는 문자열을  
   
 ### <a name="return-value"></a>반환 값  
  창 컨트롤 id입니다. 도구 설명 컨트롤을 찾을 수, 하는 경우 도구 설명 컨트롤이 없는 경우,-1입니다.  
@@ -8880,7 +8880,7 @@ virtual INT_PTR OnToolHitTest(
 ### <a name="remarks"></a>설명  
  사각형에 지점이 있으면 도구에 대 한 정보를 검색 합니다.  
   
- 도구 설명에 연결 된 영역 단추와 없으면 `OnToolHitTest` 구조 플래그 설정 하는 **TTF_NOTBUTTON** 및 **TTF_CENTERTIP**합니다.  
+ 도구 설명에 연결 된 영역 단추와 없으면 `OnToolHitTest` TTF_NOTBUTTON 및 TTF_CENTERTIP 구조 플래그를 설정 합니다.  
   
  재정의 `OnToolHitTest` 기본 제공 보다 다양 한 정보를 제공 하도록 합니다.  
   
@@ -8898,20 +8898,20 @@ virtual BOOL OnTouchInput(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pt`  
+ *pt*  
  (클라이언트 좌표로) 화면 처리 된 위치를 가리킵니다.  
   
- `nInputNumber`  
+ *nInputNumber*  
  터치식 입력 횟수입니다.  
   
- `nInputsCount`  
+ *nInputsCount*  
  터치 입력의 총 수입니다.  
   
- `pInput`  
+ *pInput*  
  TOUCHINPUT 구조에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 응용 프로그램 Windows 터치; 입력을 처리 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ 응용 프로그램 Windows 터치; 입력을 처리 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -8925,14 +8925,14 @@ virtual BOOL OnTouchInputs(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nInputsCount`  
+ *nInputsCount*  
  입력을 터치 하는 Windows의 총 수입니다.  
   
- `pInputs`  
+ *pInputs*  
  TOUCHINPUT의 배열입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 응용 프로그램 프로세스 Windows 터치 입력; 그렇지 않으면 `FALSE`합니다.  
+ TRUE 이면 응용 프로그램 프로세스 Windows 터치 입력 합니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -8950,9 +8950,9 @@ afx_msg void OnUniChar(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `nChar`|누른된 키의 문자 코드를 지정합니다.|  
-|[in] `nRepCnt`|현재 메시지에 대 한 반복 횟수를 지정합니다. 값은 키 입력은 사용자 키로 인해 autorepeated 횟수입니다. 키 입력 유지 되는 경우 시간이 충분 한, 여러 개의 메시지가 전송 됩니다. 그러나 반복 횟수는 누적 됩니다.|  
-|[in] `nFlags`|다음 표에 나와 있는 것 처럼 검색 코드, 확장 된 키, 컨텍스트 코드, 이전 키 상태 및 전환 상태를 지정 하는 플래그:<br /><br /> **0-7:** 검사 코드를 지정 합니다. 값 (oem)에 따라 달라 집니다.<br /><br /> **8:** 향상된 된 101 또는 102 키 키보드에 표시 되는 오른쪽 CTRL 및 ALT 키와 같은 확장 된 키를 지정 합니다. 확장 된 키;가 있으면 플래그는 1 그렇지 않으면 0입니다.<br /><br /> **9-12:** Windows에서 내부적으로 사용 합니다.<br /><br /> **13:** 상황에 맞는 코드를 지정 합니다. 키를 누른 채로; 동안 ALT 키를 누르고 있으면 플래그는 1 그렇지 않으면 값은 0입니다.<br /><br /> **14:** 이전 키 상태를 지정 합니다. 메시지를 보내기 전에 다운 키가 1 또는 0을 키가 있습니다.<br /><br /> **15:** 전환 상태를 지정 합니다. 키 해제 하 고, 1 또는 0 키를 누른 경우 있습니다.|  
+|[in] *nChar*|누른된 키의 문자 코드를 지정합니다.|  
+|[in] *nRepCnt*|현재 메시지에 대 한 반복 횟수를 지정합니다. 값은 키 입력은 사용자 키로 인해 autorepeated 횟수입니다. 키 입력 유지 되는 경우 시간이 충분 한, 여러 개의 메시지가 전송 됩니다. 그러나 반복 횟수는 누적 됩니다.|  
+|[in] *nFlags*|다음 표에 나와 있는 것 처럼 검색 코드, 확장 된 키, 컨텍스트 코드, 이전 키 상태 및 전환 상태를 지정 하는 플래그:<br /><br /> **0-7:** 검사 코드를 지정 합니다. 값 (oem)에 따라 달라 집니다.<br /><br /> **8:** 향상된 된 101 또는 102 키 키보드에 표시 되는 오른쪽 CTRL 및 ALT 키와 같은 확장 된 키를 지정 합니다. 확장 된 키;가 있으면 플래그는 1 그렇지 않으면 0입니다.<br /><br /> **9-12:** Windows에서 내부적으로 사용 합니다.<br /><br /> **13:** 상황에 맞는 코드를 지정 합니다. 키를 누른 채로; 동안 ALT 키를 누르고 있으면 플래그는 1 그렇지 않으면 값은 0입니다.<br /><br /> **14:** 이전 키 상태를 지정 합니다. 메시지를 보내기 전에 다운 키가 1 또는 0을 키가 있습니다.<br /><br /> **15:** 전환 상태를 지정 합니다. 키 해제 하 고, 1 또는 0 키를 누른 경우 있습니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_UNICHAR](http://msdn.microsoft.com/library/windows/desktop/ms646288) 알림 Windows SDK에 설명 되어 있습니다. [WM_UNICHAR](http://msdn.microsoft.com/library/windows/desktop/ms646288) 메시지를 보내거나 ANSI windows에 유니코드 문자를 게시 하도록 설계 되었습니다. 동일는 [WM_CHAR](http://msdn.microsoft.com/library/windows/desktop/ms646276) 메시지, 하지만 유니코드 변환 형식-32 (u t F-32) 인코딩을 사용 하는 반면는 [WM_CHAR](http://msdn.microsoft.com/library/windows/desktop/ms646276) 메시지에서 u t F-16을 사용 합니다.  
@@ -8973,8 +8973,8 @@ afx_msg void OnUnInitMenuPopup(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `pMenu`|에 대 한 포인터는 [CMenu](../../mfc/reference/cmenu-class.md) 메뉴 또는 하위 메뉴를 나타내는 개체입니다.|  
-|[in] `nFlags`|소멸 되는 메뉴입니다. 현재 가능 창 메뉴 `MF_SYSMENU`합니다.|  
+|[in] *pMenu*|에 대 한 포인터는 [CMenu](../../mfc/reference/cmenu-class.md) 메뉴 또는 하위 메뉴를 나타내는 개체입니다.|  
+|[in] *nFlags*|소멸 되는 메뉴입니다. 현재 창 메뉴 MF_SYSMENU 수만 있습니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_UNINITMENUPOPUP](http://msdn.microsoft.com/library/windows/desktop/ms647614) 알림 Windows SDK에 설명 되어 있습니다.  
@@ -8992,23 +8992,23 @@ afx_msg void OnUpdateUIState(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nAction`  
+ *n 작업*  
  작업을 수행 하도록 지정 합니다. 다음 값 중 하나입니다.  
   
-- **UIS_CLEAR** UI 상태 요소 (지정 된 `nUIElement`)를 숨깁니다.  
+- UIS_CLEAR UI 상태 요소 (지정 된 *nUIElement*)를 숨깁니다.  
   
-- **UIS_INITIALIZE** UI 상태 요소 (지정 된 `nUIElement`)는 마지막 입력된 이벤트에 따라 변경 해야 합니다. 자세한 내용은 참조는 **주의** 섹션 [WM_UPDATEISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646361)합니다.  
+- UIS_INITIALIZE UI 상태 요소 (지정 된 *nUIElement*)는 마지막 입력된 이벤트에 따라 변경 해야 합니다. 자세한 내용은 참조는 **주의** 섹션 [WM_UPDATEISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646361)합니다.  
   
-- **UIS_SET** UI 상태 요소 (지정 된 `nUIElement`) 표시 되어야 합니다.  
+- UIS_SET UI 상태 요소 (지정 된 *nUIElement*) 표시 되어야 합니다.  
   
- `nUIElement`  
+ *nUIElement*  
  UI 상태 요소에 어떤 영향을 받는 또는 컨트롤의 스타일을 지정 합니다. 다음 값 중 하나입니다.  
   
-- **UISF_HIDEACCEL** 키보드 액셀러레이터 키입니다.  
+- UISF_HIDEACCEL 키보드 액셀러레이터 키입니다.  
   
-- **UISF_HIDEFOCUS** 표시기 집중 합니다.  
+- UISF_HIDEFOCUS 포커스 표시기입니다.  
   
-- **UISF_ACTIVE Windows XP:** 활성 컨트롤에 사용 되는 스타일의 컨트롤을 그려야 합니다.  
+- UISF_ACTIVE Windows XP: 컨트롤을 그려야 활성 컨트롤에 사용 되는 스타일입니다.  
   
 ### <a name="remarks"></a>설명  
  기능을 에뮬레이션 하는이 멤버 함수는 [WM_UPDATEUISTATE](http://msdn.microsoft.com/library/windows/desktop/ms646361) Windows SDK에 설명 된 대로 메시지입니다.  
@@ -9027,7 +9027,7 @@ afx_msg void OnUserChanged();
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
   
 ##  <a name="onvkeytoitem"></a>  CWnd::OnVKeyToItem  
- 경우는 `CWnd` 으로 목록 상자를 소유 하는 개체는 [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) 스타일을 목록 상자에서 보냅니다는 `WM_VKEYTOITEM` 에 대 한 응답 메시지는 `WM_KEYDOWN` 메시지입니다.  
+ 경우는 `CWnd` 으로 목록 상자를 소유 하는 개체는 [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) 스타일 목록 상자에서 메시지를 보내지 WM_VKEYTOITEM WM_KEYDOWN 메시지에 대 한 응답에서입니다.  
   
 ```  
 afx_msg int OnVKeyToItem(
@@ -9037,13 +9037,13 @@ afx_msg int OnVKeyToItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nKey`  
+ *nKey*  
  사용자가 누른 키의 가상 키 코드를 지정 합니다. 표준 가상 키 코드의 목록, Winuser.h을 참조 하십시오.  
   
- `pListBox`  
+ *pListBox*  
  목록 상자에 대 한 포인터를 지정합니다. 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.  
   
- `nIndex`  
+ *nIndex*  
  현재 캐럿 위치를 지정합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -9066,32 +9066,32 @@ afx_msg void OnVScroll(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nSBCode`  
+ *nSBCode*  
  사용자 지정 하는 스크롤 막대 코드의 요청을 스크롤을 지정 합니다. 이 매개 변수는 다음 중 하나일 수 있습니다.  
   
-- **SB_BOTTOM** 아래쪽으로 스크롤합니다.  
+- 아래로 스크롤 SB_BOTTOM입니다.  
   
-- **SB_ENDSCROLL** 끝 스크롤입니다.  
+- SB_ENDSCROLL 끝 스크롤입니다.  
   
-- **SB_LINEDOWN** 한 줄 아래로 스크롤합니다.  
+- 한 줄 아래로 스크롤 SB_LINEDOWN 합니다.  
   
-- **SB_LINEUP** 한 줄 위로 스크롤합니다.  
+- 한 줄 위로 스크롤 SB_LINEUP 합니다.  
   
-- **SB_PAGEDOWN** 한 페이지 아래로 스크롤합니다.  
+- 한 페이지 아래로 SB_PAGEDOWN 스크롤입니다.  
   
-- **SB_PAGEUP** 한 페이지 위로 스크롤합니다.  
+- 한 페이지 위로 SB_PAGEUP 스크롤입니다.  
   
-- **SB_THUMBPOSITION** 스크롤 절대 위치에 있습니다. 현재 위치에 제공 된 `nPos`합니다.  
+- 절대 위치로 SB_THUMBPOSITION 스크롤입니다. 현재 위치에 제공 된 *nPos*합니다.  
   
-- **SB_THUMBTRACK** 끌어서 스크롤 상자에 지정 된 위치입니다. 현재 위치에 제공 된 `nPos`합니다.  
+- 지정 된 위치로 SB_THUMBTRACK 끌어서 스크롤 상자입니다. 현재 위치에 제공 된 *nPos*합니다.  
   
-- **SB_TOP** 스크롤 맨 위로 이동 합니다.  
+- 맨 위로 이동 SB_TOP 스크롤입니다.  
   
- `nPos`  
- 스크롤 막대 코드가 현재 스크롤 상자 위치를 포함 **SB_THUMBPOSITION** 또는 **SB_THUMBTRACK**; 그렇지 않으면 사용 되지 않습니다. 초기 스크롤 범위에 따라 `nPos` 음수가 될 수 있습니다 및로 캐스팅 해야는 `int` 필요한 경우.  
+ *nPos*  
+ 스크롤 막대 코드가 SB_THUMBPOSITION 또는 SB_THUMBTRACK; 이면 현재 스크롤 상자 위치를 포함 합니다. 그렇지 않으면 사용 되지 않습니다. 초기 스크롤 범위에 따라 *nPos* 음수가 될 수 있습니다 및로 캐스팅 해야는 **int** 필요한 경우.  
   
- `pScrollBar`  
- 스크롤 막대 컨트롤에서 스크롤 메시지를 받은 경우 컨트롤에 대 한 포인터를 포함 합니다. 이 매개 변수는 사용자는 창의 스크롤 막대를 클릭 한 경우 **NULL**합니다. 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.  
+ *pScrollBar*  
+ 스크롤 막대 컨트롤에서 스크롤 메시지를 받은 경우 컨트롤에 대 한 포인터를 포함 합니다. 사용자는 창의 스크롤 막대를 클릭 한 경우이 매개 변수는 NULL입니다. 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.  
   
 ### <a name="remarks"></a>설명  
  `OnVScroll` 일반적으로 스크롤 상자를 끄는 동안 몇 가지 사용 의견을 제공 하는 응용 프로그램에서 사용 됩니다.  
@@ -9102,7 +9102,7 @@ afx_msg void OnVScroll(
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
   
 ##  <a name="onvscrollclipboard"></a>  CWnd::OnVScrollClipboard  
- 클립보드 소유자 `OnVScrollClipboard` 클립보드 데이터 때 클립보드 뷰어에서 호출 멤버 함수는 `CF_OWNERDISPLAY` 서식을 지정 하 고 클립보드 뷰어의 세로 스크롤 막대에는 이벤트는 합니다.  
+ 클립보드 소유자 `OnVScrollClipboard` 클립보드 데이터의 CF_OWNERDISPLAY 형식이 고 클립보드 뷰어의 세로 스크롤 막대에는 이벤트는 경우 클립보드 뷰어에서 멤버 함수를 호출 합니다.  
   
 ```  
 afx_msg void OnVScrollClipboard(
@@ -9112,30 +9112,30 @@ afx_msg void OnVScrollClipboard(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pClipAppWnd`  
+ *pClipAppWnd*  
  클립보드 뷰어 창에 대 한 포인터를 지정합니다. 해당 포인터는 임시적이며, 나중에 사용하려고 저장하면 안됩니다.  
   
- `nSBCode`  
+ *nSBCode*  
  스크롤 막대 값 중 하나를 지정합니다.  
   
-- **SB_BOTTOM** 아래쪽으로 스크롤합니다.  
+- 아래로 스크롤 SB_BOTTOM입니다.  
   
-- **SB_ENDSCROLL** 끝 스크롤입니다.  
+- SB_ENDSCROLL 끝 스크롤입니다.  
   
-- **SB_LINEDOWN** 한 줄 아래로 스크롤합니다.  
+- 한 줄 아래로 스크롤 SB_LINEDOWN 합니다.  
   
-- **SB_LINEUP** 한 줄 위로 스크롤합니다.  
+- 한 줄 위로 스크롤 SB_LINEUP 합니다.  
   
-- **SB_PAGEDOWN** 한 페이지 아래로 스크롤합니다.  
+- 한 페이지 아래로 SB_PAGEDOWN 스크롤입니다.  
   
-- **SB_PAGEUP** 한 페이지 위로 스크롤합니다.  
+- 한 페이지 위로 SB_PAGEUP 스크롤입니다.  
   
-- **SB_THUMBPOSITION** 스크롤 절대 위치에 있습니다. 현재 위치에 제공 된 `nPos`합니다.  
+- 절대 위치로 SB_THUMBPOSITION 스크롤입니다. 현재 위치에 제공 된 *nPos*합니다.  
   
-- **SB_TOP** 스크롤 맨 위로 이동 합니다.  
+- 맨 위로 이동 SB_TOP 스크롤입니다.  
   
- `nPos`  
- 코드가 있는 경우 스크롤 막대의 스크롤 상자 위치를 포함 **SB_THUMBPOSITION**고, 그렇지 않으면 `nPos` 사용 되지 않습니다.  
+ *nPos*  
+ 스크롤 막대 코드가 SB_THUMBPOSITION; 이면 스크롤 상자 위치를 포함 합니다. 그렇지 않으면 *nPos* 사용 되지 않습니다.  
   
 ### <a name="remarks"></a>설명  
  소유자는 클립보드 이미지를 스크롤하고, 적절 한 섹션을 무효화 및 스크롤 막대 값을 업데이트 해야 합니다.  
@@ -9154,7 +9154,7 @@ afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `bIsMaximized`|`true` 현재 창을 최대화 하는 경우 및 `false` 없는 경우.|  
+|[in] *bIsMaximized*|TRUE 이면 현재 창을 최대화 하 고 없는 경우 FALSE입니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_DWMWINDOWMAXIMIZEDCHANGE](http://msdn.microsoft.com/library/windows/desktop/dd388201) 알림 메시지는 Windows SDK에 설명 되어 있습니다.  
@@ -9170,7 +9170,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpwndpos`  
+ *lpwndpos*  
  가리키는 [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) 창의 새 크기와 위치에 대 한 정보를 포함 하는 데이터 구조입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -9187,13 +9187,13 @@ afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpwndpos`  
+ *lpwndpos*  
  가리키는 `WINDOWPOS` 창의 새 크기와 위치에 대 한 정보를 포함 하는 데이터 구조입니다.  
   
 ### <a name="remarks"></a>설명  
  응용 프로그램 설정 하거나의 적절 한 비트의 선택을 취소 하 여 창 변동을 방지할 수는 **플래그** 의 멤버는 [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) 구조입니다.  
   
- 창에 대 한는 [WS_OVERLAPPED](styles-used-by-mfc.md#window-styles) 또는 [WS_THICKFRAME](styles-used-by-mfc.md#window-styles) 스타일을 기본 구현은 보냅니다는 [WM_GETMINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632626) 창에 메시지입니다. 이 작업은 수행 새 크기와 창의 위치를 확인 하 고 적용 하는 **CS_BYTEALIGNCLIENT** 및 **CS_BYTEALIGN** 클라이언트 스타일입니다. 응용 프로그램 하지 기본 클래스를 호출 하 여이 기능을 재정의할 수 있습니다.  
+ 창에 대 한는 [WS_OVERLAPPED](styles-used-by-mfc.md#window-styles) 또는 [WS_THICKFRAME](styles-used-by-mfc.md#window-styles) 스타일을 기본 구현은 보냅니다는 [WM_GETMINMAXINFO](http://msdn.microsoft.com/library/windows/desktop/ms632626) 창에 메시지입니다. 이 새 크기와 창의 위치를 확인 하 고 CS_BYTEALIGNCLIENT 및 CS_BYTEALIGN 클라이언트 스타일 적용을 수행 됩니다. 응용 프로그램 하지 기본 클래스를 호출 하 여이 기능을 재정의할 수 있습니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -9206,17 +9206,17 @@ afx_msg void OnWinIniChange(LPCTSTR lpszSection);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszSection`  
+ *lpszSection*  
  변경 된 섹션의 이름을 지정 하는 문자열을 가리킵니다. (문자열 섹션 이름 둘러싸고 있는 대괄호 포함 되지 않습니다.)  
   
 ### <a name="remarks"></a>설명  
  [SystemParametersInfo](http://msdn.microsoft.com/library/windows/desktop/ms724947) Windows 함수 호출 `OnWinIniChange` 후 응용 프로그램 WIN에서 설정을 변경 하려면 함수를 사용 합니다. INI 파일입니다.  
   
- 보낼는 `WM_WININICHANGE` 메시지에 모든 최상위 창, 응용 프로그램에서 사용할 수는 [SendMessage](http://msdn.microsoft.com/library/windows/desktop/ms644950) Windows 작동 해당 *hwnd* 매개 변수 설정 **HWND_BROADCAST**.  
+ 모든 최상위 창으로 WM_WININICHANGE 메시지를 보내려고 응용 프로그램이 사용할 수는 [SendMessage](http://msdn.microsoft.com/library/windows/desktop/ms644950) Windows 작동 해당 *hwnd* 매개 변수가 HWND_BROADCAST로 설정 합니다.  
   
- 응용 프로그램에 다양 한 섹션에서 변경 되 면 승리 합니다. 동시에 INI, 응용 프로그램 보내야 하나 `WM_WININICHANGE` 메시지 `lpszSection` 로 설정 **NULL**합니다. 응용 프로그램 보내야 그렇지 않으면 `WM_WININICHANGE` 때마다를 사용 하는 변경 요청 우선 합니다. INI 합니다.  
+ 응용 프로그램에 다양 한 섹션에서 변경 되 면 승리 합니다. 동시에 INI, 응용 프로그램 하나 WM_WININICHANGE 메시지를 보내야 *lpszSection* NULL로 설정 합니다. 그렇지 않으면 응용 프로그램이 각 WM_WININICHANGE 때마다 WIN 변경 하는지 보내야 합니다. INI 합니다.  
   
- 응용 프로그램에서 수신 하는 경우는 `OnWinIniChange` 하 여 호출 `lpszSection` 로 설정 **NULL**, 응용 프로그램 WIN의 모든 섹션을 확인 해야 합니다. 응용 프로그램에 영향을 주는 INI 합니다.  
+ 응용 프로그램에서 수신 하는 경우는 `OnWinIniChange` 하 여 호출 *lpszSection* NULL로 설정 된 응용 프로그램의 확인 WIN의 모든 섹션. 응용 프로그램에 영향을 주는 INI 합니다.  
   
 > [!NOTE]
 >  이 멤버 함수는 응용프로그램에서 Windows 메시지를 처리할 수 있도록 프레임워크에서 호출됩니다. 함수에 전달되는 매개 변수는 해당 메시지가 수신되었을 때 프레임워크에서 받았던 매개 변수를 반영합니다. 이 함수의 기본 클래스 구현을 호출하는 경우, 해당 구현은 해당 함수에 공급한 매개변수가 아닌, 메시지와 함께 전달 받았던 원래의 매개 변수를 사용할 것입니다.  
@@ -9233,23 +9233,23 @@ virtual BOOL OnWndMsg(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `message`  
+ *message*  
  메시지를 보내도록 지정 합니다.  
   
- `wParam`  
+ *wParam*  
  추가 메시지 종속 정보를 지정 합니다.  
   
- `lParam`  
+ *lParam*  
  추가 메시지 종속 정보를 지정 합니다.  
   
- `pResult`  
- 반환 값 [WindowProc](#windowproc)합니다. 메시지에 따라 달라 집니다. 되었을 **NULL**합니다.  
+ *pResult*  
+ 반환 값 [WindowProc](#windowproc)합니다. 메시지에 따라 달라 집니다. NULL이 될 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
- **True 이면** 메시지 했으면 처리 **FALSE**합니다.  
+ 메시지가 처리 되 면 TRUE 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- `OnWndMsg` 적절 한 프레임 워크 함수는 메시지 유형 및 호출 중 하나를 결정 (예를 들어 [OnCommand](#oncommand) 에 대 한 **WM_COMMAND**) / 메시지 맵에 적절 한 메시지를 찾습니다.  
+ `OnWndMsg` 적절 한 프레임 워크 함수는 메시지 유형 및 호출 중 하나를 결정 (예를 들어 [OnCommand](#oncommand) WM_COMMAND에 대 한) / 메시지 맵에 적절 한 메시지를 찾습니다.  
   
  메시지 리플렉션에 대 한 자세한 내용은 참조 [리플렉션된 메시지 처리](../../mfc/handling-reflected-messages.md)합니다.  
   
@@ -9267,14 +9267,14 @@ afx_msg void OnXButtonDblClk(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `nFlags`|보조 키를 누르면 나타내는 플래그의 비트 조합 (OR)입니다. 예를 들어는 `MK_CONTROL` 플래그 CTRL 키를 눌렀음을 나타냅니다.|  
-|[in] `nButton`|값이 `XBUTTON1` 첫 번째 Microsoft Intellimouse X 단추를 두 번 경우 또는 `XBUTTON2` 경우 두 번째 X 단추를 두 번 클릭 합니다.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 지정 하는 개체는 *x* 및 *y* 클라이언트 영역의 왼쪽 위 모퉁이 기준으로 커서의 좌표가 합니다.|  
+|[in] *nFlags*|보조 키를 누르면 나타내는 플래그의 비트 조합 (OR)입니다. 예를 들어 MK_CONTROL 플래그 CTRL 키를 눌렀음을 나타냅니다.|  
+|[in] *nButton*|값이 첫 번째 Microsoft Intellimouse X 단추를 두 번 경우 XBUTTON1 또는 XBUTTON2 경우 두 번째 X 단추를 두 번 클릭 합니다.|  
+|[in] *지점*|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 지정 하는 개체는 *x* 및 *y* 클라이언트 영역의 왼쪽 위 모퉁이 기준으로 커서의 좌표가 합니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_XBUTTONDBLCLK](http://msdn.microsoft.com/library/windows/desktop/ms646244) 알림 Windows SDK에 설명 되어 있습니다. 마우스 캡처되지 않은 경우 커서 아래에 있는 창에 메시지가 게시 됩니다. 그렇지 않으면 메시지는 마우스를 캡처 되는 창에 게시 됩니다.  
   
- `nFlags` 매개 변수는 다음 표에 나열 된 보조 키의 조합 수 있습니다. 자세한 내용은 참조 [마우스 입력에 대 한](http://msdn.microsoft.com/library/windows/desktop/ms645601)합니다.  
+ *nFlags* 매개 변수는 다음 표에 나열 된 보조 키의 조합 수 있습니다. 자세한 내용은 참조 [마우스 입력에 대 한](http://msdn.microsoft.com/library/windows/desktop/ms645601)합니다.  
   
 |보조키|설명|  
 |------------------|-----------------|  
@@ -9303,14 +9303,14 @@ afx_msg void OnXButtonDown(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `nFlags`|보조 키를 누르면 나타내는 플래그의 비트 조합 (OR)입니다. 예를 들어는 `MK_CONTROL` 플래그 CTRL 키를 눌렀음을 나타냅니다.|  
-|[in] `nButton`|값이 `XBUTTON1` 첫 번째 Microsoft Intellimouse X 단추가 클릭 되었으며, 하는 경우 또는 `XBUTTON2` 경우 두 번째 X 단추를 클릭 했습니다.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 지정 하는 개체는 *x* 및 *y* 클라이언트 영역의 왼쪽 위 모퉁이 기준으로 커서의 좌표가 합니다.|  
+|[in] *nFlags*|보조 키를 누르면 나타내는 플래그의 비트 조합 (OR)입니다. 예를 들어 MK_CONTROL 플래그 CTRL 키를 눌렀음을 나타냅니다.|  
+|[in] *nButton*|값이 첫 번째 Microsoft Intellimouse X 단추가 클릭 되었으며, 경우 XBUTTON1 또는 XBUTTON2 경우 두 번째 X 단추를 클릭 했습니다.|  
+|[in] *지점*|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 지정 하는 개체는 *x* 및 *y* 클라이언트 영역의 왼쪽 위 모퉁이 기준으로 커서의 좌표가 합니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_XBUTTONDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646245) 알림 Windows SDK에 설명 되어 있습니다. 마우스 캡처되지 않은 경우 커서 아래에 있는 창에 메시지가 게시 됩니다. 그렇지 않으면 메시지는 마우스를 캡처 되는 창에 게시 됩니다.  
   
- `nFlags` 매개 변수는 다음 표에 나열 된 보조 키의 조합 수 있습니다. 자세한 내용은 참조 [마우스 입력에 대 한](http://msdn.microsoft.com/library/windows/desktop/ms645601)합니다.  
+ *nFlags* 매개 변수는 다음 표에 나열 된 보조 키의 조합 수 있습니다. 자세한 내용은 참조 [마우스 입력에 대 한](http://msdn.microsoft.com/library/windows/desktop/ms645601)합니다.  
   
 |보조키|설명|  
 |------------------|-----------------|  
@@ -9339,14 +9339,14 @@ afx_msg void OnXButtonUp(
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|[in] `nFlags`|보조 키를 누르면 나타내는 플래그의 비트 조합 (OR)입니다. 예를 들어는 `MK_CONTROL` 플래그 CTRL 키를 눌렀음을 나타냅니다.|  
-|[in] `nButton`|값이 `XBUTTON1` 첫 번째 Microsoft Intellimouse X 단추를 두 번 클릭할 경우 또는 `XBUTTON2` 경우 두 번째 X 단추를 두 번 클릭 합니다.|  
-|[in] `point`|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 지정 하는 개체는 *x* 및 *y* 클라이언트 영역의 왼쪽 위 모퉁이 기준으로 커서의 좌표가 합니다.|  
+|[in] *nFlags*|보조 키를 누르면 나타내는 플래그의 비트 조합 (OR)입니다. 예를 들어 MK_CONTROL 플래그 CTRL 키를 눌렀음을 나타냅니다.|  
+|[in] *nButton*|값이 첫 번째 Microsoft Intellimouse X 단추를 두 번 클릭할 경우 XBUTTON1 또는 XBUTTON2 경우 두 번째 X 단추를 두 번 클릭 합니다.|  
+|[in] *지점*|A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 지정 하는 개체는 *x* 및 *y* 클라이언트 영역의 왼쪽 위 모퉁이 기준으로 커서의 좌표가 합니다.|  
   
 ### <a name="remarks"></a>설명  
  이 메서드에 전달 된 [WM_XBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms646246) 알림 Windows SDK에 설명 되어 있습니다. 마우스 캡처되지 않은 경우 커서 아래에 있는 창에 메시지가 게시 됩니다. 그렇지 않으면 메시지는 마우스를 캡처 되는 창에 게시 됩니다.  
   
- `nFlags` 매개 변수는 다음 표에 나열 된 보조 키의 조합 수 있습니다. 자세한 내용은 참조 [마우스 입력에 대 한](http://msdn.microsoft.com/library/windows/desktop/ms645601)합니다.  
+ *nFlags* 매개 변수는 다음 표에 나열 된 보조 키의 조합 수 있습니다. 자세한 내용은 참조 [마우스 입력에 대 한](http://msdn.microsoft.com/library/windows/desktop/ms645601)합니다.  
   
 |보조키|설명|  
 |------------------|-----------------|  
@@ -9376,7 +9376,7 @@ BOOL OpenClipboard();
   
  현재 `CWnd` 개체 될 때까지 클립보드 소유자 됩니다는 [EmptyClipboard](http://msdn.microsoft.com/library/windows/desktop/ms649037) Windows 함수를 호출 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#111](../../mfc/reference/codesnippet/cpp/cwnd-class_52.cpp)]  
   
 ##  <a name="operator_hwnd"></a>  CWnd::operator HWND  
@@ -9394,7 +9394,7 @@ BOOL operator!=(const CWnd& wnd) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `wnd`  
+ *wnd*  
  `CWnd` 개체에 대한 참조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -9408,7 +9408,7 @@ BOOL operator==(const CWnd& wnd) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `wnd`  
+ *wnd*  
  `CWnd` 개체에 대한 참조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -9422,7 +9422,7 @@ BOOL PaintWindowlessControls(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  창 없는 컨트롤을 그릴 장치 컨텍스트.  
   
 ### <a name="return-value"></a>반환 값  
@@ -9439,13 +9439,13 @@ BOOL PostMessage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `message`  
+ *message*  
  게시 될 메시지를 지정 합니다.  
   
- `wParam`  
+ *wParam*  
  추가 메시지 정보를 지정합니다. 이 매개 변수의 내용은 게시 되는 메시지에 따라 달라 집니다.  
   
- `lParam`  
+ *lParam*  
  추가 메시지 정보를 지정합니다. 이 매개 변수의 내용은 게시 되는 메시지에 따라 달라 집니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -9456,7 +9456,7 @@ BOOL PostMessage(
   
  Windows [PostMessage](http://msdn.microsoft.com/library/windows/desktop/ms644944) 함수를 사용 하 여 다른 응용 프로그램에 액세스할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [AfxGetMainWnd](../../mfc/reference/application-information-and-management.md#afxgetmainwnd)합니다.  
   
 ##  <a name="postncdestroy"></a>  CWnd::PostNcDestroy  
@@ -9486,19 +9486,19 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ### <a name="remarks"></a>설명  
   
 > [!WARNING]
-> `CWnd::PreCreateWindow` 이제 hMenu 소속 할당 `cs` 에 `this` 메뉴가 있는 경우 포인터 `NULL` 스타일을 포함 하 고 `WS_CHILD`합니다. 적절 한 기능에 대 한 대화 상자 컨트롤에 있지 않은 ID 있는지를 확인 `NULL`합니다.  
+> `CWnd::PreCreateWindow` 이제 hMenu 소속 할당 *cs* 에 **이** 포인터 메뉴 NULL이 고 스타일 WS_CHILD를 포함 하는 경우. 적절 한 기능에 대 한 대화 상자 컨트롤에 NULL이 아닌 ID가 있는지를 확인 합니다.  
 >   
->  이러한 변경 관리/네이티브 interop 시나리오에서 충돌을 해결합니다. A `TRACE` 의 문에서 `CWnd::Create` 문제의 개발자 경고를 보냅니다.  
+>  이러한 변경 관리/네이티브 interop 시나리오에서 충돌을 해결합니다. 추적 문이 `CWnd::Create` 문제의 개발자 경고 합니다.  
   
  이 함수를 직접 호출 하지 않습니다.  
   
- 이 함수의 기본 구현에 대 한 검사는 **NULL** 창 클래스 이름 하 고 적절 한 기본값을 대체 합니다. 수정 하려면이 멤버 함수를 재정의 `CREATESTRUCT` 창을 만든 전에 구성 합니다.  
+ 이 함수의 기본 구현은 NULL 창 클래스 이름에 대 한 확인 하 고 적절 한 기본값을 대체 합니다. 수정 하려면이 멤버 함수를 재정의 `CREATESTRUCT` 창을 만든 전에 구성 합니다.  
   
- 각 클래스에서 파생 된 `CWnd` 해당 재정의에 고유한 기능을 추가 `PreCreateWindow`합니다. 기본적으로 이러한 파생을 `PreCreateWindow` 설명 하지 않습니다. 각 클래스와 상호 종속성의 스타일에 적합 한 스타일을 확인 하려면 응용 프로그램의 기본 클래스에 대 한 MFC 소스 코드를 검사할 수 있습니다. 재정의 하도록 선택 **PreCreateWindow,** 응용 프로그램의 기본 클래스에 사용 된 스타일 MFC 소스 코드에서 수집 된 정보를 사용 하 여 필요한 기능을 제공 하는지 여부를 확인할 수 있습니다.  
+ 각 클래스에서 파생 된 `CWnd` 해당 재정의에 고유한 기능을 추가 `PreCreateWindow`합니다. 기본적으로 이러한 파생을 `PreCreateWindow` 설명 하지 않습니다. 각 클래스와 상호 종속성의 스타일에 적합 한 스타일을 확인 하려면 응용 프로그램의 기본 클래스에 대 한 MFC 소스 코드를 검사할 수 있습니다. 재정의 하도록 선택 `PreCreateWindow,` 응용 프로그램의 기본 클래스에 사용 된 스타일 MFC 소스 코드에서 수집 된 정보를 사용 하 여 필요한 기능을 제공 하는지 여부를 확인할 수 있습니다.  
   
  창 스타일 변경에 대 한 자세한 내용은 참조는 [MFC에서 만든 창 스타일 변경](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#112](../../mfc/reference/codesnippet/cpp/cwnd-class_53.cpp)]  
   
 ##  <a name="presubclasswindow"></a>  CWnd::PreSubclassWindow  
@@ -9519,7 +9519,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pMsg`  
+ *pMsg*  
  가리키는 [MSG](../../mfc/reference/msg-structure1.md) 처리할 메시지를 포함 하는 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -9535,38 +9535,38 @@ void Print(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- `dwFlags`  
+ *dwFlags*  
  드로잉 옵션을 지정합니다. 이 매개 변수는 이러한 플래그 중 하나 이상을 하나일 수 있습니다.  
   
-- `PRF_CHECKVISIBLE` 표시 되는 경우에 창을 그립니다.  
+- PRF_CHECKVISIBLE 표시 되는 경우에 창을 그립니다.  
   
-- `PRF_CHILDREN` 모든 표시 자식 창을 그립니다.  
+- PRF_CHILDREN 모든 표시 자식 창을 그립니다.  
   
-- `PRF_CLIENT` 창의 클라이언트 영역을 그립니다.  
+- PRF_CLIENT 창의 클라이언트 영역을 그립니다.  
   
-- `PRF_ERASEBKGND` 창 그리기 전에 배경에 지웁니다.  
+- PRF_ERASEBKGND 창 그리기 전에 배경에 지웁니다.  
   
-- `PRF_NONCLIENT` 창의 비클라이언트 영역을 그립니다.  
+- PRF_NONCLIENT 창의 비클라이언트 영역을 그립니다.  
   
-- `PRF_OWNED` 모든 소유 windows를 그립니다.  
+- PRF_OWNED 그리기 windows 모든 소유 합니다.  
   
 ### <a name="remarks"></a>설명  
  [CWnd::DefWindowProc](#defwindowproc) 함수는 그리기 옵션이 지정 되었는지에 따라이 메시지를 처리 합니다.  
   
--   경우 `PRF_CHECKVISIBLE` 지정 하 고는 창이 표시 되지 않으면, 아무 작업도 수행 합니다.  
+-   PRF_CHECKVISIBLE 지정는 창이 표시 되지 않은 경우 아무 작업도 수행 합니다.  
   
--   경우 `PRF_NONCLIENT` 가 지정 된 장치 컨텍스트에 비클라이언트 영역을 그리는 지정 합니다.  
+-   PRF_NONCLIENT 지정 된 경우 지정 된 장치 컨텍스트에 비클라이언트 영역을 그립니다.  
   
--   경우 `PRF_ERASEBKGND` 은 창 보낼 지정는 [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) 메시지입니다.  
+-   PRF_ERASEBKGND 지정 된 경우 전송 창은 [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) 메시지입니다.  
   
--   경우 `PRF_CLIENT` 은 창 보낼 지정는 [WM_PRINTCLIENT](http://msdn.microsoft.com/library/windows/desktop/dd145217) 메시지입니다.  
+-   PRF_CLIENT 지정 된 경우 전송 창은 [WM_PRINTCLIENT](http://msdn.microsoft.com/library/windows/desktop/dd145217) 메시지입니다.  
   
--   경우 `PRF_CHILDREN` 설정, 각 표시 되는 자식 창 전송 되는 [WM_PRINT](http://msdn.microsoft.com/library/windows/desktop/dd145216) 메시지입니다.  
+-   PRF_CHILDREN 설정 된 경우 각 표시 되는 자식 창 보내기는 [WM_PRINT](http://msdn.microsoft.com/library/windows/desktop/dd145216) 메시지입니다.  
   
--   경우 `PRF_OWNED` 설정, 각 보이는 소유 창 전송 되는 `WM_PRINT` 메시지입니다.  
+-   PRF_OWNED 설정 된 경우 각 표시 소유 창을 WM_PRINT 메시지를 보냅니다.  
   
 ##  <a name="printclient"></a>  CWnd::PrintClient  
  지정된 된 디바이스 컨텍스트 (일반적으로 프린터 디바이스 컨텍스트)에서 그리기를이 멤버 함수를 호출 합니다.  
@@ -9578,23 +9578,23 @@ void PrintClient(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  장치 컨텍스트에 대한 포인터입니다.  
   
- `dwFlags`  
+ *dwFlags*  
  드로잉 옵션을 지정합니다. 이 매개 변수는 이러한 플래그 중 하나 이상을 하나일 수 있습니다.  
   
-- `PRF_CHECKVISIBLE` 표시 되는 경우에 창을 그립니다.  
+- PRF_CHECKVISIBLE 표시 되는 경우에 창을 그립니다.  
   
-- `PRF_CHILDREN` 모든 표시 자식 창을 그립니다.  
+- PRF_CHILDREN 모든 표시 자식 창을 그립니다.  
   
-- `PRF_CLIENT` 창의 클라이언트 영역을 그립니다.  
+- PRF_CLIENT 창의 클라이언트 영역을 그립니다.  
   
-- `PRF_ERASEBKGND` 창 그리기 전에 배경에 지웁니다.  
+- PRF_ERASEBKGND 창 그리기 전에 배경에 지웁니다.  
   
-- `PRF_NONCLIENT` 창의 비클라이언트 영역을 그립니다.  
+- PRF_NONCLIENT 창의 비클라이언트 영역을 그립니다.  
   
-- `PRF_OWNED` 모든 소유 windows를 그립니다.  
+- PRF_OWNED 그리기 windows 모든 소유 합니다.  
   
 ##  <a name="printwindow"></a>  CWnd::PrintWindow  
  지정된 디바이스 컨텍스트(일반적으로 프린터 DC)에 시각적 창을 복사합니다.  
@@ -9606,10 +9606,10 @@ BOOL PrintWindow(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  장치 컨텍스트를 인쇄에 대 한 포인터입니다.  
   
- `nFlags`  
+ *nFlags*  
  드로잉 옵션을 지정합니다. 가능한 값 목록은 참조 [PrintWindow](http://msdn.microsoft.com/library/windows/desktop/dd162869)합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -9629,44 +9629,44 @@ BOOL RedrawWindow(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRectUpdate`  
+ *lpRectUpdate*  
  가리키는 [RECT 구조체](../../mfc/reference/rect-structure1.md) 업데이트 사각형의 좌표를 포함 합니다. 이 매개 변수는 *prgnUpdate* 유효한 영역 핸들을 포함 합니다.  
   
  *prgnUpdate*  
- 업데이트 영역을 식별합니다. 두 *prgnUpdate* 및 `lpRectUpdate` 는 **NULL**, 전체 클라이언트 영역 업데이트 영역에 추가 됩니다.  
+ 업데이트 영역을 식별합니다. 두 *prgnUpdate* 및 *lpRectUpdate* 이 NULL 이면 전체 클라이언트 영역 업데이트 영역에 추가 됩니다.  
   
- `flags`  
+ *flags*  
  다음과 같은 플래그는 창을 무효화 하는 데 사용 됩니다.  
   
-- **RDW_ERASE** 받으려는 경우 창이 [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) 메시지 창을 다시 표시 합니다. **RDW_INVALIDATE** 고, 그렇지 않으면 지정 된 플래그 수도 있어야 **RDW_ERASE** 영향을 주지 않습니다.  
+- RDW_ERASE 인해 창에서 받을 수는 [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) 메시지 창을 다시 표시 합니다. 도 RDW_INVALIDATE 플래그를 지정 합니다. 그렇지 않으면 RDW_ERASE 아무런 영향이 없습니다.  
   
-- **RDW_FRAME** 받으려는 업데이트 영역을 교차 하는 창의 비클라이언트 영역 부분의 사용 하면 한 [WM_NCPAINT](http://msdn.microsoft.com/library/windows/desktop/dd145212) 메시지입니다. **RDW_INVALIDATE** 고, 그렇지 않으면 지정 된 플래그 수도 있어야 **RDW_FRAME** 영향을 주지 않습니다.  
+- RDW_FRAME 하면 받으려는 업데이트 영역을 교차 하는 창의 비클라이언트 영역 부분의 [WM_NCPAINT](http://msdn.microsoft.com/library/windows/desktop/dd145212) 메시지입니다. 도 RDW_INVALIDATE 플래그를 지정 합니다. 그렇지 않으면 RDW_FRAME 아무런 영향이 없습니다.  
   
-- **RDW_INTERNALPAINT** 하면는 [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) 창 잘못 된 영역이 포함 되는지 여부에 관계 없이 창에 게시 될 메시지입니다.  
+- RDW_INTERNALPAINT 하면는 [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) 창 잘못 된 영역이 포함 되는지 여부에 관계 없이 창에 게시 될 메시지입니다.  
   
-- **RDW_INVALIDATE** Invalidate `lpRectUpdate` 또는 *prgnUpdate* (하나만 지 못할 **NULL**). 둘 다 **NULL**, 창에 있는 전체 무효화 됩니다.  
+- RDW_INVALIDATE 무효화 *lpRectUpdate* 또는 *prgnUpdate* (하나 되지 않는 NULL)만 있습니다. 둘 다가 NULL 이면 전체 창을 무효화 됩니다.  
   
  다음 플래그 창을 유효성을 검사 하는 데 사용 됩니다.  
   
-- **RDW_NOERASE** 보류 중인 억제 `WM_ERASEBKGND` 메시지입니다.  
+- RDW_NOERASE 표시 WM_ERASEBKGND 메시지 보류 중인 하지 않습니다.  
   
-- **RDW_NOFRAME** 보류 중인 억제 `WM_NCPAINT` 메시지입니다. 이 플래그를 함께 사용 해야 **RDW_VALIDATE** 일반적으로 사용 되 고 **RDW_NOCHILDREN**합니다. 이 옵션은 창의 각 부분에서 제대로 그리기 차면 대로 신중 하 게 사용 해야 합니다.  
+- RDW_NOFRAME 표시 WM_NCPAINT 메시지 보류 중인 하지 않습니다. 이 플래그 RDW_VALIDATE 함께 사용 해야 하 고 RDW_NOCHILDREN 일반적으로 사용 됩니다. 이 옵션은 창의 각 부분에서 제대로 그리기 차면 대로 신중 하 게 사용 해야 합니다.  
   
-- **RDW_NOINTERNALPAINT** 내부 보류 중인 억제 `WM_PAINT` 메시지입니다. 이 플래그는 그대로 `WM_PAINT` 메시지에서 잘못 된 영역으로 인해 발생 합니다.  
+- RDW_NOINTERNALPAINT 표시 내부 WM_PAINT 메시지 보류 중인 하지 않습니다. 이 플래그 WM_PAINT 메시지를 잘못 된 영역에서 결과 영향을 주지 않습니다.  
   
-- **RDW_VALIDATE** 을 검사 `lpRectUpdate` 또는 *prgnUpdate* (하나만 지 못할 **NULL**). 둘 다 **NULL**에서 전체 창이 유효성을 검사 합니다. 이 플래그는 내부 그대로 `WM_PAINT` 메시지입니다.  
+- 유효성을 검사 RDW_VALIDATE *lpRectUpdate* 또는 *prgnUpdate* (하나 되지 않는 NULL)만 있습니다. 둘 다가 NULL 이면 전체 창은 유효성이 검사 됩니다. 이 플래그는 내부 WM_PAINT 메시지에 영향을 주지 않습니다.  
   
  다음 플래그 컨트롤 다시 그려야 하는 경우 발생 합니다. 그리기가 수행 되지 않습니다는 `RedrawWindow` 이러한 비트 중 하나를 지정 하지 않으면 작동 합니다.  
   
-- **RDW_ERASENOW** 하면 영향을 받는 창이 (에 지정 된 대로 **RDW_ALLCHILDREN** 및 **RDW_NOCHILDREN** 플래그)를 받을 `WM_NCPAINT` 및 `WM_ERASEBKGND` 경우 메시지 함수가 반환 되기 전에 필요 합니다. `WM_PAINT` 메시지 지연 됩니다.  
+- RDW_ERASENOW는 RDW_ALLCHILDREN 및 RDW_NOCHILDREN 플래그에 지정) (으로 영향을 받는 창 함수가 반환 되기 전에 필요한 경우 WM_NCPAINT 및 WM_ERASEBKGND 메시지를 수신 하지 되도록 합니다. WM_PAINT 메시지 지연 됩니다.  
   
-- **RDW_UPDATENOW** 하면 영향을 받는 창이 (에 지정 된 대로 **RDW_ALLCHILDREN** 및 **RDW_NOCHILDREN** 플래그)를 받을 `WM_NCPAINT`, `WM_ERASEBKGND`, 및 `WM_PAINT`메시지, 필요한 경우 함수가 반환 되기 전에 합니다.  
+- RDW_UPDATENOW는 RDW_ALLCHILDREN 및 RDW_NOCHILDREN 플래그에 지정) (으로 영향을 받는 창 함수가 반환 되기 전에 필요한 경우 WM_NCPAINT, WM_ERASEBKGND, 및 WM_PAINT 메시지를 수신 하지 되도록 합니다.  
   
- 기본적으로 windows의 영향을 받는 `RedrawWindow` 하며 지정한 창에 있는지 여부에 따라 달라 집니다 함수는 **WS_CLIPCHILDREN** 스타일입니다. 자식 창이 **WS_CLIPCHILDREN** windows 영향을 받지 않습니다. 그러나 이러한 창 없는 **WS_CLIPCHILDREN** 창이 있는 재귀적으로 유효성을 검사 하거나 무효화 될 때까지 **WS_CLIPCHILDREN** 창 발생 합니다. 다음 windows의 영향을 받는 되는 제어 플래그는 `RedrawWindow` 함수:  
+ 기본적으로 windows의 영향을 받는 `RedrawWindow` 함수 하며 지정한 창 WS_CLIPCHILDREN 스타일에 있는지 여부에 따라 달라 집니다. WS_CLIPCHILDREN 창의 자식 창 영향을 받지 않습니다. 그러나 WS_CLIPCHILDREN windows가 아닌 해당 창은 재귀적으로 유효성을 검사 하거나 WS_CLIPCHILDREN 창이 나타날 때까지 무효화 됩니다. 다음 windows의 영향을 받는 되는 제어 플래그는 `RedrawWindow` 함수:  
   
-- **RDW_ALLCHILDREN** 다시 그리기 작업에서 자식 창을 포함 합니다.  
+- RDW_ALLCHILDREN 포함 자식 창에서 작업을 다시 그리기에 있는 경우.  
   
-- **RDW_NOCHILDREN** 있는 경우 다시 그리기 작업에서 자식 창에서 제외 됩니다.  
+- RDW_NOCHILDREN 제외 자식 창, 다시 그리기 작업에서 있는 경우.  
   
 ### <a name="return-value"></a>반환 값  
  창이 성공적으로 다시 그리면 0이 아닌 그렇지 않으면 0입니다.  
@@ -9686,23 +9686,23 @@ BOOL ReflectChildNotify(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `message`  
+ *message*  
  반영 되도록 하려면 메시지를 지정 합니다.  
   
- `wParam`  
+ *wParam*  
  추가 메시지 종속 정보를 지정 합니다.  
   
- `lParam`  
+ *lParam*  
  추가 메시지 종속 정보를 지정 합니다.  
   
- `pResult`  
- 부모 창에서 반환 될 자식 창에 의해 생성 된 결과입니다. 수 **NULL**합니다.  
+ *pResult*  
+ 부모 창에서 반환 될 자식 창에 의해 생성 된 결과입니다. NULL이 될 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
- **True 이면** 메시지 했으면 반영 **FALSE**합니다.  
+ 메시지가 반영 되었으면 TRUE 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- 반영 하는 도우미 함수 `message` 원본에 있습니다.  
+ 반영 하는 도우미 함수 *메시지* 원본에 있습니다.  
   
  메시지에 직접 보내집니다 반영 [CWnd::OnWndMsg](#onwndmsg) 또는 [CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg)합니다.  
   
@@ -9718,17 +9718,17 @@ static BOOL PASCAL ReflectLastMsg(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hWndChild`  
+ *hWndChild*  
  자식 창에 대 한 핸들입니다.  
   
- `pResult`  
- 부모 창에서 반환 될 자식 창에 의해 생성 된 결과입니다. 수 **NULL**합니다.  
+ *pResult*  
+ 부모 창에서 반환 될 자식 창에 의해 생성 된 결과입니다. NULL이 될 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
  메시지가 처리 된 경우 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 멤버 함수를 호출 [SendChildNotifyLastMsg](#sendchildnotifylastmsg) 창으로 식별 하는 경우 `hWndChild` OLE 컨트롤 또는 영구 맵에서 창.  
+ 이 멤버 함수를 호출 [SendChildNotifyLastMsg](#sendchildnotifylastmsg) 창으로 식별 하는 경우 *hWndChild* OLE 컨트롤 또는 영구 맵에서 창.  
   
  메시지 리플렉션에 대 한 자세한 내용은 참조 [리플렉션된 메시지 처리](../../mfc/handling-reflected-messages.md)합니다.  
   
@@ -9740,7 +9740,7 @@ int ReleaseDC(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDC`  
+ *pDC*  
  릴리스될 장치 컨텍스트를 식별 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -9765,58 +9765,58 @@ void RepositionBars(UINT nIDFirst,
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDFirst`  
+ *nIDFirst*  
  첫 번째 ID 컨트롤 막대의 위치 및 크기의 범위에 있습니다.  
   
- `nIDLast`  
+ *nIDLast*  
  위치 및 크기를 조정 하려면 컨트롤 막대의 범위에서 마지막의 ID입니다.  
   
- `nIDLeftOver`  
+ *nIDLeftOver*  
  창의 클라이언트 영역의 나머지 부분을 채우는 ID를 지정 합니다.  
   
- `nFlag`  
+ *nFlag*  
  다음 값 중 하나일 수 있습니다.  
   
-- **CWnd::reposDefault** 컨트롤 막대 레이아웃 작업을 수행 합니다. `lpRectParam` 사용 되지 않으며 수 **NULL**합니다.  
+- `CWnd::reposDefault` 컨트롤 막대의 레이아웃을 수행합니다. *lpRectParam* 사용 되지 않으며 NULL 일 수 있습니다.  
   
-- **CWnd::reposQuery** 컨트롤 막대 레이아웃 작업이 수행 되지 않습니다; 대신 `lpRectParam` 레이아웃 냈 실제로 하는 경우 클라이언트 영역의 크기를 사용 하 여 초기화 됩니다.  
+- `CWnd::reposQuery` 컨트롤 막대 레이아웃 작업이 수행 되지 않습니다. 대신 *lpRectParam* 레이아웃 냈 실제로 하는 경우 클라이언트 영역의 크기를 사용 하 여 초기화 됩니다.  
   
-- **CWnd::reposExtra** 의 값을 더 `lpRectParam` 의 클라이언트 영역에 `nIDLast` 하 고 레이아웃을 수행 합니다.  
+- `CWnd::reposExtra` 값을 더 *lpRectParam* 의 클라이언트 영역에 *nIDLast* 하 고 레이아웃을 수행 합니다.  
   
- `lpRectParam`  
- 가리키는 [RECT 구조체](../../mfc/reference/rect-structure1.md);는 사용 현황의 값에 따라 `nFlag`합니다.  
+ *lpRectParam*  
+ 가리키는 [RECT 구조체](../../mfc/reference/rect-structure1.md);는 사용 현황의 값에 따라 *nFlag*합니다.  
   
  *lpRectClient*  
- 가리키는 [RECT 구조체](../../mfc/reference/rect-structure1.md) 사용 가능한 클라이언트 영역을 포함 합니다. 경우 **NULL**, 창의 클라이언트 영역을 사용 됩니다.  
+ 가리키는 [RECT 구조체](../../mfc/reference/rect-structure1.md) 사용 가능한 클라이언트 영역을 포함 합니다. NULL 인 경우 창의 클라이언트 영역 사용 됩니다.  
   
- `bStretch`  
+ *bStretch*  
  프레임의 크기에 막대를 늘이는 있는지 여부를 나타냅니다.  
   
 ### <a name="remarks"></a>설명  
- `nIDFirst` 및 `nIDLast` 매개 변수는 클라이언트 영역에 다시 배치 컨트롤 막대 Id의 범위를 정의 합니다. `nIDLeftOver` 매개 변수 위치가 변경 되 고 나머지 컨트롤 막대로 채워지지 클라이언트 영역에 크기를 조정 자식 창 (일반적으로 보기)의 ID를 지정 합니다.  
+ *nIDFirst* 및 *nIDLast* 매개 변수는 클라이언트 영역에 다시 배치 컨트롤 막대 Id의 범위를 정의 합니다. *nIDLeftOver* 매개 변수 위치가 변경 되 고 나머지 컨트롤 막대로 채워지지 클라이언트 영역에 크기를 조정 자식 창 (일반적으로 보기)의 ID를 지정 합니다.  
   
 ##  <a name="runmodalloop"></a>  CWnd::RunModalLoop  
- 이 멤버 함수를 검색, 변환 또는 될 때까지 메시지를 디스패치할 호출 [ContinueModal](#continuemodal) 반환 **FALSE**합니다.  
+ 이 멤버 함수를 검색, 변환 또는 될 때까지 메시지를 디스패치할 호출 [ContinueModal](#continuemodal) FALSE를 반환 합니다.  
   
 ```  
 int RunModalLoop(DWORD dwFlags = 0);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwFlags`  
+ *dwFlags*  
  Windows 메시지를 보내도록 지정 합니다. 다음 값 중 하나입니다.  
   
-- **MLF_NOIDLEMSG** 보내지 않음 [WM_ENTERIDLE](http://msdn.microsoft.com/library/windows/desktop/ms645422) 부모에 대 한 메시지입니다.  
+- MLF_NOIDLEMSG 하지 않는 송신 [WM_ENTERIDLE](http://msdn.microsoft.com/library/windows/desktop/ms645422) 부모에 대 한 메시지입니다.  
   
-- **MLF_NOKICKIDLE** 보내지 않음 **WM_KICKIDLE** 메시지를 창.  
+- 창에 WM_KICKIDLE 메시지를 보낼 MLF_NOKICKIDLE 하지 마십시오.  
   
-- **MLF_SHOWONIDLE** 메시지 큐 유휴 상태가 되는 경우 창을 표시 합니다.  
+- MLF_SHOWONIDLE는 메시지 큐 유휴 상태가 되는 경우 창을 표시 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 값을 지정는 `nResult` 에 전달 된 매개 변수는 [EndModalLoop](#endmodalloop) 멤버 함수는 모달 루프를 끝내 사용 됩니다.  
+ 값을 지정는 *n 결과* 에 전달 된 매개 변수는 [EndModalLoop](#endmodalloop) 멤버 함수는 모달 루프를 끝내 사용 됩니다.  
   
 ### <a name="remarks"></a>설명  
- 기본적으로 `ContinueModal` 반환 **FALSE** 후 `EndModalLoop` 라고 합니다. 제공 된 값을 반환 `nResult` 를 `EndModalLoop`합니다.  
+ 기본적으로 `ContinueModal` 후 FALSE를 반환 `EndModalLoop` 호출 됩니다. 제공 된 값을 반환 *n 결과* 를 `EndModalLoop`합니다.  
   
 ##  <a name="screentoclient"></a>  CWnd::ScreenToClient  
  디스플레이에 있는 지정된 점 또는 사각형의 화면 좌표를 클라이언트 좌표로 변환합니다.  
@@ -9826,16 +9826,16 @@ void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) 
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpPoint`  
+ *lpPoint*  
  가리키는 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 개체 또는 [POINT 구조체](../../mfc/reference/point-structure1.md) 변환할 화면 좌표가 들어 있는입니다.  
   
- `lpRect`  
+ *lpRect*  
  가리키는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT 구조체](../../mfc/reference/rect-structure1.md) 변환할 화면 좌표가 들어 있는입니다.  
   
 ### <a name="remarks"></a>설명  
- `ScreenToClient` 멤버 함수에 지정 된 화면 좌표를 대체 `lpPoint` 또는 `lpRect` 클라이언트 좌표를 사용 합니다. 왼쪽 위 모퉁이 기준으로 한 새 좌표는 `CWnd` 클라이언트 영역입니다.  
+ `ScreenToClient` 멤버 함수에 지정 된 화면 좌표를 대체 *lpPoint* 또는 *lpRect* 클라이언트 좌표를 사용 합니다. 왼쪽 위 모퉁이 기준으로 한 새 좌표는 `CWnd` 클라이언트 영역입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CListCtrl::GetItemRect](../../mfc/reference/clistctrl-class.md#getitemrect)합니다.  
   
 ##  <a name="scrollwindow"></a>  CWnd::ScrollWindow  
@@ -9850,26 +9850,26 @@ void ScrollWindow(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `xAmount`  
+ *xAmount*  
  가로 스크롤 장치 단위로 크기를 지정합니다. 이 매개 변수는 음수 값을 왼쪽으로 스크롤하여 이어야 합니다.  
   
- `yAmount`  
+ *yAmount*  
  세로 스크롤 장치 단위로 크기를 지정합니다. 이 매개 변수 위로 스크롤하려면 음수 값 이어야 합니다.  
   
- `lpRect`  
- 가리키는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT 구조체](../../mfc/reference/rect-structure1.md) 클라이언트 영역을 스크롤할 수의 부분을 지정 하는 합니다. 경우 `lpRect` 은 **NULL**, 전체 클라이언트 영역 스크롤됩니다. 캐럿 커서 사각형이 스크롤 사각형을 교차 하는 경우 위치가 변경 됩니다.  
+ *lpRect*  
+ 가리키는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT 구조체](../../mfc/reference/rect-structure1.md) 클라이언트 영역을 스크롤할 수의 부분을 지정 하는 합니다. 경우 *lpRect* 가 NULL 이면 전체 클라이언트 영역 스크롤됩니다. 캐럿 커서 사각형이 스크롤 사각형을 교차 하는 경우 위치가 변경 됩니다.  
   
- `lpClipRect`  
- 가리키는 `CRect` 개체 또는 `RECT` 스크롤해야 클리핑 사각형을 지정 하는 구조입니다. 이 사각형 안에 비트만 스크롤됩니다. Bits이이 영역 밖에 있는 경우에 영향을 받지 않습니다는 `lpRect` 사각형입니다. 경우 `lpClipRect` 은 **NULL**, 스크롤 사각형 오려낸 없습니다 수행 됩니다.  
+ *lpClipRect*  
+ 가리키는 `CRect` 개체 또는 `RECT` 스크롤해야 클리핑 사각형을 지정 하는 구조입니다. 이 사각형 안에 비트만 스크롤됩니다. Bits이이 영역 밖에 있는 경우에 영향을 받지 않습니다는 *lpRect* 사각형입니다. 경우 *lpClipRect* 가 null 인 경우 스크롤 사각형 오려낸 없습니다 수행 됩니다.  
   
 ### <a name="remarks"></a>설명  
  캐럿이 있는 경우는 `CWnd` 는 스크롤되는 `ScrollWindow` 스크롤 완료 되 면 캐럿을 다음 복원 하 고 자동으로 지우거 하지 못하도록 캐럿을 숨깁니다. 캐럿 위치에 따라 조정 됩니다.  
   
  영역에서 다루지 못하는 `ScrollWindow` 멤버 함수는 다시 표시 되지 않습니다 되지만 현재 결합은 `CWnd` 개체의 업데이트 영역입니다. 응용 프로그램 결국 받습니다는 [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) 영역 다시 표시 해야 함을 알리는 메시지입니다. 호출 이루어진다는 스크롤 동시에 적용 되지 않은 영역을 다시 그릴 수는 [UpdateWindow](#updatewindow) 멤버 함수 호출 직후 `ScrollWindow`합니다.  
   
- 경우 `lpRect` 은 **NULL**에서 지정한 양만큼 오프셋 하는 창에서 모든 자식 창의 위치 `xAmount` 및 `yAmount`, 및 모든 잘못 된 (만져) 영역에는 `CWnd` 또한 오프셋 됩니다. `ScrollWindow` 빠릅니다.이 경우 `lpRect` 은 **NULL**합니다.  
+ 경우 *lpRect* 가 null 인 경우 모든 자식 창에서 windows을 값으로 지정한 오프셋 위치 *xAmount* 및 *yAmount*, 및 모든 잘못 된 (만져) 영역에는 `CWnd` 또한 오프셋 됩니다. `ScrollWindow` 빠릅니다.이 경우 *lpRect* 은 NULL입니다.  
   
- 경우 `lpRect` 않습니다 **NULL**, 변경 및 잘못 된 영역에 없는 자식 창의 위치 `CWnd` 오프셋 됩니다. 방지 하기 위해 업데이트 문제가 발생 때 `lpRect` 않습니다 **NULL**, 호출의 `UpdateWindow` 멤버 함수를 다시 그릴 `CWnd` 호출 하기 전에 `ScrollWindow`합니다.  
+ 경우 *lpRect* NULL이 아니고 자식 창의 위치, 변경 및 잘못 된 영역에 없는 `CWnd` 오프셋 됩니다. 방지 하기 위해 업데이트 문제가 발생 때 *lpRect* not NULL, 호출의 `UpdateWindow` 멤버 함수를 다시 그릴 `CWnd` 호출 하기 전에 `ScrollWindow`합니다.  
   
 ##  <a name="scrollwindowex"></a>  CWnd::ScrollWindowEx  
  창의 클라이언트 영역의 내용을 스크롤합니다.  
@@ -9886,46 +9886,46 @@ int ScrollWindowEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dx`  
+ *dx*  
  가로 스크롤 장치 단위로 크기를 지정합니다. 이 매개 변수는 음수 값을 왼쪽으로 스크롤하여 있어야 합니다.  
   
  *dy*  
  세로 스크롤 장치 단위로 크기를 지정합니다. 이 매개 변수 위로 스크롤하려면 음수 값이 있어야 합니다.  
   
- `lpRectScroll`  
- 가리키는 [RECT 구조체](../../mfc/reference/rect-structure1.md) 클라이언트 영역을 스크롤할 수의 부분을 지정 하는 합니다. 이 매개 변수가 **NULL**, 전체 클라이언트 영역 스크롤됩니다.  
+ *lpRectScroll*  
+ 가리키는 [RECT 구조체](../../mfc/reference/rect-structure1.md) 클라이언트 영역을 스크롤할 수의 부분을 지정 하는 합니다. 이 매개 변수가 NULL 이면 전체 클라이언트 영역이 스크롤됩니다.  
   
- `lpRectClip`  
- 가리키는 `RECT` 스크롤해야 클리핑 사각형을 지정 하는 구조입니다. 이 구조에서 가리키는 사각형 보다 우선 `lpRectScroll`합니다. 이 사각형 안에 비트만 스크롤됩니다. Bits이이 영역 밖에 있는 경우에 영향을 받지 않습니다는 `lpRectScroll` 사각형입니다. 이 매개 변수가 **NULL**, 스크롤 사각형 오려낸 없습니다 수행 됩니다.  
+ *lpRectClip*  
+ 가리키는 `RECT` 스크롤해야 클리핑 사각형을 지정 하는 구조입니다. 이 구조에서 가리키는 사각형 보다 우선 *lpRectScroll*합니다. 이 사각형 안에 비트만 스크롤됩니다. Bits이이 영역 밖에 있는 경우에 영향을 받지 않습니다는 *lpRectScroll* 사각형입니다. 이 매개 변수가 NULL 인 경우 스크롤 사각형 오려낸 없습니다 수행 됩니다.  
   
  *prgnUpdate*  
- 스크롤 무효화 된 영역을 포함 하도록 수정 되는 영역을 식별 합니다. 이 매개 변수 수 **NULL**합니다.  
+ 스크롤 무효화 된 영역을 포함 하도록 수정 되는 영역을 식별 합니다. 이 매개 변수는 NULL 일 수 있습니다.  
   
- `lpRectUpdate`  
- 가리키는 `RECT` 구조를 스크롤하여 무효화 사각형의 경계를 받게 됩니다. 이 매개 변수 수 **NULL**합니다.  
+ *lpRectUpdate*  
+ 가리키는 `RECT` 구조를 스크롤하여 무효화 사각형의 경계를 받게 됩니다. 이 매개 변수는 NULL 일 수 있습니다.  
   
- `flags`  
+ *flags*  
  다음 값 중 하나일 수 있습니다.  
   
-- **SW_ERASE** 로 지정 되 면 **SW_INVALIDATE**를 전송 하 여 새로 무효화 된 영역을 지우고는 [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) 창에 메시지를 합니다.  
+- SW_ERASE SW_INVALIDATE로 지정 되 면 전송 하 여 새로 무효화 된 영역을 지우고는 [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) 창에 메시지입니다.  
   
-- **SW_INVALIDATE** 로 식별 되는 영역을 무효화 *prgnUpdate* 스크롤한 후 합니다.  
+- SW_INVALIDATE로 식별 되는 영역을 무효화 *prgnUpdate* 스크롤한 후 합니다.  
   
-- **SW_SCROLLCHILDREN** 가리키는 사각형 교차 하는 모든 자식 창을 스크롤합니다 `lpRectScroll` 에 지정 된 픽셀의 개수로 `dx` 및 *dy*합니다. Windows에서는 보냅니다는 [WM_MOVE](http://msdn.microsoft.com/library/windows/desktop/ms632631) 교차 하는 모든 자식 창에 메시지 `lpRectScroll`이동 하지 않는 경우에 합니다. 캐럿은 자식 창으로 스크롤 되 고 커서가 사각형이 교차 스크롤 사각형 위치가 변경 됩니다.  
+- 사각형을 교차 하는 모든 자식 창에서 가리키는 SW_SCROLLCHILDREN 스크롤 *lpRectScroll* 에 지정 된 픽셀의 개수로 *dx* 및 *dy*합니다. Windows에서는 보냅니다는 [WM_MOVE](http://msdn.microsoft.com/library/windows/desktop/ms632631) 교차 하는 모든 자식 창에 메시지 *lpRectScroll*이동 하지 않는 경우에 합니다. 캐럿은 자식 창으로 스크롤 되 고 커서가 사각형이 교차 스크롤 사각형 위치가 변경 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
- 반환 값은 **SIMPLEREGION** (사각형 무효화 된 영역), **COMPLEXREGION** (사각형이 아닌 무효화 된 영역; 겹치는 사각형), 또는 **NULLREGION**(무효화 된 영역 없음) 함수에 성공 하면, 그렇지 않으면 반환 값은 **오류**합니다.  
+ SIMPLEREGION (사각형 무효화 된 영역), COMPLEXREGION (사각형이 아닌 무효화 된 영역; 겹치는 사각형) 또는 NULLREGION (무효화 된 영역 없음), 반환 값은 함수에 성공 하면 그렇지 않으면 반환 값은 오류입니다.  
   
 ### <a name="remarks"></a>설명  
  이 함수는 비슷합니다는 [ScrollWindow](http://msdn.microsoft.com/library/windows/desktop/bb787591) 함수 된 몇 가지 추가 기능입니다.  
   
  경우 [SW_INVALIDATE](http://msdn.microsoft.com/library/windows/desktop/bb787593) 및 [SW_ERASE](http://msdn.microsoft.com/library/windows/desktop/bb787593) 지정 되지 않은 `ScrollWindowEx` 멤버 함수에서 스크롤할 수 있는 영역을 무효화 하지 않습니다. 이러한 플래그 중 하나가 설정 되어 `ScrollWindowEx` 이 영역을 무효화 합니다. 영역 응용 프로그램이 호출할 때까지 업데이트 되지 않습니다는 [UpdateWindow](http://msdn.microsoft.com/library/windows/desktop/dd145167) 을 호출 하는 멤버 함수는 [RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) 멤버 함수 (지정 [RDW_UPDATENOW](http://msdn.microsoft.com/library/windows/desktop/dd162911) 또는 [ RDW_ERASENOW](http://msdn.microsoft.com/library/windows/desktop/dd162911)), 검색 또는 [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) 응용 프로그램 큐에서 메시지입니다.  
   
- 창에 있으면는 [WS_CLIPCHILDREN](http://msdn.microsoft.com/library/windows/desktop/ms632679) 스타일, 지정 된 반환 된 영역 *prgnUpdate* 및 `lpRectUpdate` 업데이트의 모든 영역을 포함 하는 스크롤 창의 전체 영역을 나타내는 업데이트 해야 하는 자식 창  
+ 창에 있으면는 [WS_CLIPCHILDREN](http://msdn.microsoft.com/library/windows/desktop/ms632679) 스타일, 지정 된 반환 된 영역 *prgnUpdate* 및 *lpRectUpdate* 해야 하는 스크롤 창의 전체 영역을 나타냅니다 업데이트를 업데이트 해야 하는 자식 창에 영역이 포함.  
   
- 경우는 [SW_SCROLLCHILDREN](http://msdn.microsoft.com/library/windows/desktop/bb787593) 플래그가 지정 된, Windows 업데이트 되지 것입니다 제대로 화면 자식 창의 일부 스크롤됩니다. 소스 사각형 범위를 벗어난 스크롤된 자식 창의 일부를 삭제 하지 하 고 활성 및 비활성 제대로 새 대상에서 합니다. 사용 하 여는 [DeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632681) 완전히 내에 없는 이동 자식 창에 대 한 Windows 함수는 `lpRectScroll` 사각형입니다. 경우 커서 위치가 변경 되는 **SW_SCROLLCHILDREN** 플래그가 설정 되 고 캐럿 사각형이 스크롤 사각형을 교차 합니다.  
+ 경우는 [SW_SCROLLCHILDREN](http://msdn.microsoft.com/library/windows/desktop/bb787593) 플래그가 지정 된, Windows 업데이트 되지 것입니다 제대로 화면 자식 창의 일부 스크롤됩니다. 소스 사각형 범위를 벗어난 스크롤된 자식 창의 일부를 삭제 하지 하 고 활성 및 비활성 제대로 새 대상에서 합니다. 사용 하 여는 [DeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632681) 완전히 내에 없는 이동 자식 창에 대 한 Windows 함수는 *lpRectScroll* 사각형입니다. SW_SCROLLCHILDREN 플래그가 설정 되 고 캐럿 사각형이 스크롤 사각형을 교차 하는 경우 커서 위치가 변경 합니다.  
   
- 모든 입력 및 출력 좌표 (에 대 한 `lpRectScroll`, `lpRectClip`, `lpRectUpdate`, 및 *prgnUpdate*) 창의 있는지 여부에 관계 없이 클라이언트 좌표에 있는 것으로 가정 됩니다는 **CS_OWNDC**또는 **CS_CLASSDC** 클래스 스타일입니다. 사용 하 여는 [LPtoDP](http://msdn.microsoft.com/library/windows/desktop/dd145042) 및 [DPtoLP](http://msdn.microsoft.com/library/windows/desktop/dd162474) Windows 함수에 필요한 경우와 논리적 좌표로 변환 합니다.  
+ 모든 입력 및 출력 좌표 (에 대 한 *lpRectScroll*, *lpRectClip*, *lpRectUpdate*, 및 *prgnUpdate*)에 있는 것으로 간주 됩니다 창의 CS_OWNDC 또는 CS_CLASSDC 클래스 스타일 있는지 여부에 관계 없이 클라이언트 좌표 사용 하 여는 [LPtoDP](http://msdn.microsoft.com/library/windows/desktop/dd145042) 및 [DPtoLP](http://msdn.microsoft.com/library/windows/desktop/dd162474) Windows 함수에 필요한 경우와 논리적 좌표로 변환 합니다.  
   
 ##  <a name="sendchildnotifylastmsg"></a>  CWnd::SendChildNotifyLastMsg  
  이 멤버 함수는 자식 창 작업을 처리할 수 있도록를 자식 창 알림 메시지를 부모 창에서 제공 하는 프레임 워크에서 호출 됩니다.  
@@ -9935,7 +9935,7 @@ BOOL SendChildNotifyLastMsg(LRESULT* pResult = NULL);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pResult`  
+ *pResult*  
  부모 창에서 반환 될 자식 창에 의해 생성 된 결과입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -9958,16 +9958,16 @@ LRESULT SendDlgItemMessage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nID`  
+ *nID*  
  메시지를 받을 대화 상자 컨트롤의 식별자를 지정 합니다.  
   
- `message`  
+ *message*  
  메시지를 보내도록 지정 합니다.  
   
- `wParam`  
+ *wParam*  
  추가 메시지 종속 정보를 지정 합니다.  
   
- `lParam`  
+ *lParam*  
  추가 메시지 종속 정보를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -9978,7 +9978,7 @@ LRESULT SendDlgItemMessage(
   
  사용 하 여 `SendDlgItemMessage` 가져오는 동일는 `CWnd`* 특정된 제어 및 호출에는 [SendMessage](#sendmessage) 멤버 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#113](../../mfc/reference/codesnippet/cpp/cwnd-class_54.cpp)]  
   
 ##  <a name="sendmessage"></a>  CWnd::SendMessage  
@@ -9992,22 +9992,22 @@ LRESULT SendMessage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `message`  
+ *message*  
  메시지를 보내도록 지정 합니다.  
   
- `wParam`  
+ *wParam*  
  추가 메시지 종속 정보를 지정 합니다.  
   
- `lParam`  
+ *lParam*  
  추가 메시지 종속 정보를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  메시지 처리;의 결과 전송 된 메시지에 해당 값에 따라 다릅니다.  
   
 ### <a name="remarks"></a>설명  
- **SendMessage** 멤버 함수는 창 프로시저를 직접 호출 하 고 해당 창 프로시저에서 메시지를 처리할 때 까지는 반환 하지 않습니다. 이 달리는 [PostMessage](#postmessage) 멤버 함수는 창 메시지 큐에 메시지를 배치 하 고 즉시 반환 합니다.  
+ `SendMessage` 멤버 함수는 창 프로시저를 직접 호출 하 고 해당 창 프로시저에서 메시지를 처리할 때 까지는 반환 하지 않습니다. 이 달리는 [PostMessage](#postmessage) 멤버 함수는 창 메시지 큐에 메시지를 배치 하 고 즉시 반환 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#101](../../mfc/reference/codesnippet/cpp/cwnd-class_41.cpp)]  
   
 ##  <a name="sendmessagetodescendants"></a>  CWnd::SendMessageToDescendants  
@@ -10023,27 +10023,27 @@ void SendMessageToDescendants(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `message`  
+ *message*  
  메시지를 보내도록 지정 합니다.  
   
- `wParam`  
+ *wParam*  
  추가 메시지 종속 정보를 지정 합니다.  
   
- `lParam`  
+ *lParam*  
  추가 메시지 종속 정보를 지정 합니다.  
   
- `bDeep`  
- 검색 수준을 지정 합니다. 경우 **TRUE**를 재귀적으로 모든 자식; 검색 하는 경우 **FALSE**, 직계 자식만 검색 합니다.  
+ *bDeep*  
+ 검색 수준을 지정 합니다. 회귀적으로 검색할 모든 자식을; TRUE 인 경우 false 인 경우만 직계 자식을 검색 합니다.  
   
- `bOnlyPerm`  
- 임시 windows에서 메시지를 수신 하는지 여부를 지정 합니다. 경우 **TRUE**, 하는 경우 임시 windows에서 메시지를 받을 수 **FALSE**영구 windows 메시지를 수신만 필요 합니다. 임시 windows에 대 한 자세한 내용은 참조 [기술 참고 3](../../mfc/tn003-mapping-of-windows-handles-to-objects.md)합니다.  
+ *bOnlyPerm*  
+ 임시 windows에서 메시지를 수신 하는지 여부를 지정 합니다. TRUE이 고, 임시 windows에서 메시지를 받을 수 있는 경우 false 인 경우, 영구 창만 메시지를 받습니다. 임시 windows에 대 한 자세한 내용은 참조 [기술 참고 3](../../mfc/tn003-mapping-of-windows-handles-to-objects.md)합니다.  
   
 ### <a name="remarks"></a>설명  
- 경우 `bDeep` 은 **FALSE**, 직계 자식 창에 전송 됩니다; 그렇지 않은 경우 모든 하위 창을 메시지가 전송 됩니다.  
+ 경우 *bDeep* 가 FALSE 이면 직계 자식 창에 전송 됩니다; 그렇지 않은 경우 모든 하위 창을 메시지가 전송 됩니다.  
   
- 경우 `bDeep` 및 `bOnlyPerm` 는 **TRUE**, 임시 windows 아래 검색이 계속 됩니다. 이 경우 검색 하는 동안 발생 하는 영구 창만 메시지를 받습니다. 경우 `bDeep` 은 **FALSE**, 직계 자식 창에 전송 됩니다.  
+ 경우 *bDeep* 및 *bOnlyPerm* 를 임시 windows 아래 검색이 계속 됩니다. 이 경우 검색 하는 동안 발생 하는 영구 창만 메시지를 받습니다. 경우 *bDeep* 가 FALSE 이면 직계 자식 창에 전송 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#114](../../mfc/reference/codesnippet/cpp/cwnd-class_55.cpp)]  
   
 ##  <a name="sendnotifymessage"></a>  CWnd::SendNotifyMessage  
@@ -10057,13 +10057,13 @@ BOOL SendNotifyMessage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `message`  
+ *message*  
  메시지를 보내도록 지정 합니다.  
   
- `wParam`  
+ *wParam*  
  추가 메시지 종속 정보를 지정 합니다.  
   
- `lParam`  
+ *lParam*  
  추가 메시지 종속 정보를 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -10095,12 +10095,12 @@ CWnd* SetCapture();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 이전에 모든 마우스 입력을 수신 하는 창 개체에 대 한 포인터입니다. `NULL` 창인지 없는 경우. 반환된 된 포인터는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다.  
+ 이전에 모든 마우스 입력을 수신 하는 창 개체에 대 한 포인터입니다. 창인지 없는 경우 NULL입니다. 반환된 된 포인터는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다.  
   
 ### <a name="remarks"></a>설명  
  때 `CWnd` 모든 마우스 입력, 응용 프로그램을 더 이상 필요는 [ReleaseCapture](http://msdn.microsoft.com/library/windows/desktop/ms646261) 다른 창을 마우스 입력을 받을 수 있도록 작동 합니다.  
   
- 마우스 입력을 캡처할 동안 없습니다 `WM_NCHITTEST` 또는 `WM_SETCURSOR` 활성 창으로 전송 됩니다.  
+ 마우스 입력을 캡처할 동안 WM_NCHITTEST 또는 WM_SETCURSOR 메시지가 활성 창으로 전송 됩니다.  
   
 ##  <a name="setcaretpos"></a>  CWnd::SetCaretPos  
  캐럿의 위치를 설정합니다.  
@@ -10110,7 +10110,7 @@ static void PASCAL SetCaretPos(POINT point);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `point`  
+ *지점*  
  새 x 및 y를 지정 합니다. 캐럿의 (클라이언트 좌표로) 좌표입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -10118,11 +10118,11 @@ static void PASCAL SetCaretPos(POINT point);
   
  캐럿은 공유 리소스입니다. 캐럿을 소유 하지 않은 경우 창이 캐럿을 이동 해야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#115](../../mfc/reference/codesnippet/cpp/cwnd-class_56.cpp)]  
   
 ##  <a name="setclipboardviewer"></a>  CWnd::SetClipboardViewer  
- 이 창 알림을 받는 창 체인에 추가 (방법으로 `WM_DRAWCLIPBOARD` 메시지) 클립보드의 내용이 변경 될 때마다 합니다.  
+ 이 창 클립보드의 내용이 변경 될 때마다 (WM_DRAWCLIPBOARD 메시지)을 통해 알림을 받는 창 체인에 추가 합니다.  
   
 ```  
 HWND SetClipboardViewer();
@@ -10134,7 +10134,7 @@ HWND SetClipboardViewer();
 ### <a name="remarks"></a>설명  
  클립보드 뷰어 체인의 일부인 창에 응답 해야 [WM_DRAWCLIPBOARD](#ondrawclipboard), [WM_CHANGECBCHAIN](#onchangecbchain), 및 [WM_DESTROY](#ondestroy) 메시지 및 다음 메시지를 전달 합니다. 체인에 있는 창입니다.  
   
- 이 멤버 함수는 `WM_DRAWCLIPBOARD` 창에 메시지입니다. 클립보드 뷰어 체인에서 다음 창에 대 한 핸들 아직 반환 되지 않은 이후 응용 프로그램 전달 하지 않아야는 `WM_DRAWCLIPBOARD` 를 호출 하는 동안 받는 메시지 `SetClipboardViewer`합니다.  
+ 이 멤버 함수는 창에 WM_DRAWCLIPBOARD 메시지를 보냅니다. 응용 프로그램을 호출 하는 동안 받는 WM_DRAWCLIPBOARD 메시지에서 전달 해서는 안 클립보드 뷰어 체인에서 다음 창에 대 한 핸들 아직 반환 되지 않은 이후 `SetClipboardViewer`합니다.  
   
  응용 프로그램 자체와 클립보드 뷰어 체인에서 제거 하려면 호출 해야 합니다는 [ChangeClipboardChain](#changeclipboardchain) 멤버 함수입니다.  
   
@@ -10146,7 +10146,7 @@ int SetDlgCtrlID(int nID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nID`  
+ *nID*  
  컨트롤의 식별자에 대해 설정할 새 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -10166,19 +10166,19 @@ void SetDlgItemInt(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nID`  
+ *nID*  
  변경할 수는 컨트롤의 정수 ID를 지정 합니다.  
   
- `nValue`  
+ *n 값*  
  항목 텍스트를 생성 하는 데 사용 하는 정수 값을 지정 합니다.  
   
- `bSigned`  
- 정수 값은 서명 되거나 서명 되지 않은 있는지 여부를 지정 합니다. 이 매개 변수가 **TRUE**, `nValue` 서명 합니다. 이 매개 변수가 **TRUE** 및 `nValue` 가 0 보다 작거나, 빼기 기호 문자열의 첫 번째 숫자 앞에 배치 됩니다. 이 매개 변수가 **FALSE**, `nValue` 서명 되지 않은 합니다.  
+ *bSigned*  
+ 정수 값은 서명 되거나 서명 되지 않은 있는지 여부를 지정 합니다. 이 매개 변수가 TRUE 이면 *n 값* 서명 합니다. 이 매개 변수가 TRUE 이면 및 *n 값* 가 0 보다 작거나, 빼기 기호 문자열의 첫 번째 숫자 앞에 배치 됩니다. 이 매개 변수가 FALSE 이면 *n 값* 서명 되지 않은 합니다.  
   
 ### <a name="remarks"></a>설명  
  `SetDlgItemInt` 보냅니다는 [WM_SETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632644) 지정한 컨트롤에는 메시지입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::SetDlgItemText](#setdlgitemtext)합니다.  
   
 ##  <a name="setdlgitemtext"></a>  CWnd::SetDlgItemText  
@@ -10191,16 +10191,16 @@ void SetDlgItemText(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nID`  
+ *nID*  
  텍스트가 설정 되어야 하는 컨트롤을 식별 합니다.  
   
- `lpszString`  
+ *lpszString*  
  가리키는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 개체 또는 컨트롤에 복사할 텍스트가 포함 된 null로 끝나는 문자열.  
   
 ### <a name="remarks"></a>설명  
  `SetDlgItemText` 보냅니다는 [WM_SETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632644) 지정한 컨트롤에는 메시지입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#116](../../mfc/reference/codesnippet/cpp/cwnd-class_57.cpp)]  
   
 ##  <a name="setforegroundwindow"></a>  CWnd::SetForegroundWindow  
@@ -10216,7 +10216,7 @@ BOOL SetForegroundWindow();
 ### <a name="remarks"></a>설명  
  키보드 입력 창으로 보내지면 하 고 사용자에 대 한 다양 한 시각 신호 변경 됩니다. 전경 현재 사용자가 작업 창이입니다. 전경 창이 최상위 창 (프레임 창 또는 대화 상자 상자)에 적용 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::FindWindow](#findwindow)합니다.  
   
 ##  <a name="setfocus"></a>  CWnd::SetFocus  
@@ -10227,7 +10227,7 @@ CWnd* SetFocus();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 이전에 입력된 포커스가 있던 window 개체에 대 한 포인터입니다. **NULL** 창인지 없는 경우. 반환된 된 포인터는 임시적 이며 저장 되어야 합니다.  
+ 이전에 입력된 포커스가 있던 window 개체에 대 한 포인터입니다. 창인지 없는 경우 NULL입니다. 반환된 된 포인터는 임시적 이며 저장 되어야 합니다.  
   
 ### <a name="remarks"></a>설명  
  입력된 포커스가 있는이 창에 대 한 모든 후속 키보드 입력을 지시합니다. 이전에 입력된 포커스가 있는 창이 것 손실 됩니다.  
@@ -10237,7 +10237,7 @@ CWnd* SetFocus();
  현재 창 활성화 되어 있지만 포커스 없는 경우 (즉, 창이 포커스가)으로 키를 누르면 됩니다는 메시지를 생성 하는 [wm_syschar입니다](#onsyschar), [WM_SYSKEYDOWN](#onsyskeydown), 또는 [WM_SYSKEYUP](#onsyskeyup).  
   
 ##  <a name="setfont"></a>  CWnd::SetFont  
- 보냅니다는 `WM_SETFONT` 창에 메시지를 지정 된 글꼴 크기를 사용 합니다.  
+ 지정된 된 글꼴을 사용 하 여 창에 WM_SETFONT 메시지를 보냅니다.  
   
 ```  
 void SetFont(
@@ -10246,17 +10246,17 @@ void SetFont(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pFont`  
+ *pFont*  
  `CFont` 개체에 대한 포인터입니다.  
   
- `bRedraw`  
- `TRUE` 후 즉시 다시 그리게 창에 대 한 처리는 `WM_SETFONT` 메시지; 그렇지 않으면 `FALSE`합니다.  
+ *bRedraw*  
+ WM_SETFONT 메시지; 처리 한 후에 즉시 다시 그리게 창에 대해 TRUE 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- 창을 처리 하지 않으면이 메서드에서 아무 작업도 `WM_SETFONT` 메시지입니다. 파생 되는 여러 MFC 클래스 `CWnd` 메시지 처리기를 포함 하는 미리 정의 된 창 클래스에 연결 되었으므로이 메시지를 처리는 `WM_SETFONT` 메시지입니다. 클래스에서 파생 되는이 방법을 사용 하려면 `CWnd` 메서드 처리기를 정의 해야 합니다는 `WM_SETFONT` 메시지입니다.  
+ 창 WM_SETFONT 메시지를 처리 하지 않는 한 효과가 없습니다. 파생 되는 여러 MFC 클래스 `CWnd` WM_SETFONT 메시지에 대 한 메시지 처리기를 포함 하는 미리 정의 된 창 클래스에 연결 하기 때문에이 메시지를 처리 합니다. 클래스에서 파생 되는이 방법을 사용 하려면 `CWnd` WM_SETFONT 메시지에 대 한 메서드 처리기를 정의 해야 합니다.  
   
 ##  <a name="seticon"></a>  CWnd::SetIcon  
- 식별 한 대로 핸들을 특정 아이콘을 설정 하려면이 멤버 함수를 호출 `hIcon`합니다.  
+ 식별 한 대로 핸들을 특정 아이콘을 설정 하려면이 멤버 함수를 호출 *hIcon*합니다.  
   
 ```  
 HICON SetIcon(
@@ -10265,11 +10265,11 @@ HICON SetIcon(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hIcon`  
+ *hIcon*  
  이전 아이콘에 대 한 핸들입니다.  
   
- `bBigIcon`  
- 32 픽셀 아이콘으로 32 픽셀을 지정 하는 경우 **TRUE**; 16 픽셀 아이콘으로 16 픽셀을 지정 하는 경우 **FALSE**합니다.  
+ *bBigIcon*  
+ True; 32 픽셀 아이콘으로 32 픽셀을 지정 합니다. false 인 경우 16 픽셀 아이콘으로 16 픽셀을 지정 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  아이콘에 대 한 핸들입니다.  
@@ -10277,7 +10277,7 @@ HICON SetIcon(
 ### <a name="remarks"></a>설명  
  창 클래스 등록 될 때 아이콘을 선택 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::GetSystemMenu](#getsystemmenu)합니다.  
   
 ##  <a name="setlayeredwindowattributes"></a>  CWnd::SetLayeredWindowAttributes  
@@ -10291,13 +10291,13 @@ BOOL SetLayeredWindowAttributes(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `crKey`  
- 에 대 한 포인터는 **COLORREF** 계층화 된 창의 메시지를 작성할 때 사용할 투명도 색상 키를 지정 하는 값입니다. 이 색의 창으로 그린 모든 픽셀에 투명 하 게 됩니다. 생성 하는 **COLORREF**, RGB 매크로 사용 합니다.  
+ *crKey*  
+ 계층적된 창의 메시지를 작성할 때 사용할 투명도 색상 키를 지정 하는 COLORREF 값에 대 한 포인터입니다. 이 색의 창으로 그린 모든 픽셀에 투명 하 게 됩니다. COLORREF를 생성 하려면 RGB 매크로 사용 합니다.  
   
- `bAlpha`  
- 계층적된 창의 불투명도 설명 하는 데 알파 값입니다. 자세한 내용은 참조는 **SourceConstantAlpha** 의 멤버는 [BLENDFUNCTION](http://msdn.microsoft.com/library/windows/desktop/dd183393) 구조입니다. 때 `bAlpha` 은 0, 창은 완전히 투명 합니다. 때 `bAlpha` 은 255, 기간은 불투명 합니다.  
+ *bAlpha*  
+ 계층적된 창의 불투명도 설명 하는 데 알파 값입니다. 자세한 내용은 참조는 `SourceConstantAlpha` 의 멤버는 [BLENDFUNCTION](http://msdn.microsoft.com/library/windows/desktop/dd183393) 구조입니다. 때 *bAlpha* 은 0, 창은 완전히 투명 합니다. 때 *bAlpha* 은 255, 기간은 불투명 합니다.  
   
- `dwFlags`  
+ *dwFlags*  
  수행할 동작을 지정 합니다. 이 매개 변수는 다음 값 중 하나 이상이 될 수 있습니다. 가능한 값 목록은 참조 [SetLayeredWindowAttributes](http://msdn.microsoft.com/library/windows/desktop/ms633540)합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -10314,8 +10314,8 @@ BOOL SetMenu(CMenu* pMenu);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pMenu`  
- 새로 만들기 메뉴를 식별합니다. 이 매개 변수가 **NULL**, 현재 메뉴가 제거 됩니다.  
+ *pMenu*  
+ 새로 만들기 메뉴를 식별합니다. 이 매개 변수가 NULL 이면 현재 메뉴가 제거 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  메뉴 변경 되 면 0이 아닌 그렇지 않으면 0입니다.  
@@ -10325,7 +10325,7 @@ BOOL SetMenu(CMenu* pMenu);
   
  `SetMenu` 이전 메뉴는 제거 되지 않습니다. 응용 프로그램 호출 해야는 [CMenu::DestroyMenu](../../mfc/reference/cmenu-class.md#destroymenu) 멤버 함수를이 작업을 수행 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CMenu::LoadMenu](../../mfc/reference/cmenu-class.md#loadmenu)합니다.  
   
 ##  <a name="setowner"></a>  CWnd::SetOwner  
@@ -10337,7 +10337,7 @@ void SetOwner(CWnd* pOwnerWnd);
   
 ### <a name="parameters"></a>매개 변수  
  *pOwnerWnd*  
- 창 개체의 새 소유자를 식별합니다. 이 매개 변수가 **NULL**, window 개체에 소유자가 없는 합니다.  
+ 창 개체의 새 소유자를 식별합니다. 이 매개 변수가 NULL 이면 window 개체에 소유자를 없는 합니다.  
   
 ### <a name="remarks"></a>설명  
  그런 다음이 소유자 현재 창 개체에서 명령 메시지를 받을 수 있습니다. 기본적으로 현재 창의 상위의 소유자입니다.  
@@ -10364,7 +10364,7 @@ CWnd* SetParent(CWnd* pWndNewParent);
  자식 창을 표시 하지 않은 경우 Windows 적절 한 다시 그리기 및 다시 그리기를 수행 합니다.  
   
 ##  <a name="setproperty"></a>  CWnd::SetProperty  
- 로 지정 된 OLE 컨트롤 속성을 설정 하려면이 함수를 호출 `dwDispID`합니다.  
+ 로 지정 된 OLE 컨트롤 속성을 설정 하려면이 함수를 호출 *dwDispID*합니다.  
   
 ```  
 void AFX_CDECL SetProperty(
@@ -10373,14 +10373,14 @@ void AFX_CDECL SetProperty(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwDispID`  
+ *dwDispID*  
  설정할 속성을 확인합니다.  
   
- `vtProp`  
+ *vtProp*  
  설정할 속성의 유형을 지정합니다. 가능한 값에 대 한 설명 섹션을 참조 하십시오. [coledispatchdriver:: Invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)합니다.  
   
  *...*  
- `vtProp`에서 지정한 유형의 단일 매개 변수  
+ 지정 된 형식의 단일 매개 변수 *vtProp*합니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -10397,13 +10397,13 @@ void SetRedraw(BOOL bRedraw = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bRedraw`  
- 다시 그리기 플래그의 상태를 지정합니다. 이 매개 변수가 **TRUE**, 하는 경우의 다시 그리기 플래그가 설정 되 고; **FALSE**, 플래그가 지워집니다.  
+ *bRedraw*  
+ 다시 그리기 플래그의 상태를 지정합니다. 이 매개 변수가 TRUE 인 경우 다시 그리기 플래그가 설정 되어 있습니다. FALSE 인 경우 플래그가 지워집니다.  
   
 ### <a name="remarks"></a>설명  
  이 멤버 함수를 설정 하거나 다시 그리기 플래그를 지웁니다. 다시 그리기 플래그가 해제 되는 동안 변경 될 때마다 업데이트 되지 않습니다 내용과 다시 그리기 플래그가 설정 되지 않으면 다시 되지 않습니다. 예를 들어 목록 상자에 몇 가지 항목을 추가 해야 하는 응용 프로그램 다시 그리기 플래그 지우기, 항목을을 추가한 다음 다시 그리기 플래그를 설정 합니다. 마지막으로, 응용 프로그램이 호출할 수는 [Invalidate](#invalidate) 또는 [InvalidateRect](#invalidaterect) 멤버 함수를 목록 상자를 다시 발생 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#117](../../mfc/reference/codesnippet/cpp/cwnd-class_58.cpp)]  
   
 ##  <a name="setscrollinfo"></a>  CWnd::SetScrollInfo  
@@ -10417,23 +10417,23 @@ BOOL SetScrollInfo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nBar`  
+ *nBar*  
  스크롤 막대 컨트롤 또는 창에서 비클라이언트 영역의의 일부 인지 여부를 지정 합니다. 비클라이언트 영역의 일부 이면 nBar 가로, 세로 스크롤 막대를 배치 되는 여부 또는 둘 다도 나타냅니다. 다음 중 하나 여야 합니다.  
   
-- **SB_CTL** 스크롤 막대 컨트롤에 대 한 매개 변수를 포함 합니다. `m_hWnd` 데이터 멤버는 스크롤 막대 컨트롤의 핸들 이어야 합니다.  
+- SB_CTL은 스크롤 막대 컨트롤에 대 한 매개 변수를 포함 합니다. `m_hWnd` 데이터 멤버는 스크롤 막대 컨트롤의 핸들 이어야 합니다.  
   
-- **SB_HORZ** 창을 가로 스크롤 막대 임을 지정 합니다.  
+- SB_HORZ 창을 가로 스크롤 막대 임을 지정 합니다.  
   
-- **SB_VERT** 창의 세로 스크롤 막대 임을 지정 합니다.  
+- SB_VERT 창의 세로 스크롤 막대 임을 지정 합니다.  
   
- `lpScrollInfo`  
+ *lpScrollInfo*  
  에 대 한 포인터는 [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) 구조입니다. 이 구조에 대 한 자세한 내용은 Windows SDK를 참조 하십시오.  
   
- `bRedraw`  
- 새 위치를 반영 하도록 스크롤 막대를 그려야 하는지 여부를 지정 합니다. 경우 `bRedraw` 은 **TRUE**, 스크롤 막대 다시 그려집니다. 이 경우 **FALSE**, 다시 그려지지 않습니다. 스크롤 막대는 기본적으로 다시 그려집니다.  
+ *bRedraw*  
+ 새 위치를 반영 하도록 스크롤 막대를 그려야 하는지 여부를 지정 합니다. 경우 *bRedraw* 가 TRUE 이면 스크롤 막대가 다시 그려집니다. FALSE 인 경우 다시 그려지지 않습니다. 스크롤 막대는 기본적으로 다시 그려집니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공이 반환 됩니다 **TRUE**합니다. 그렇지 않으면 **FALSE**합니다.  
+ 성공 하면 TRUE이 반환이 됩니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
  [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) 구조 스크롤 막대의 최소값 및 최대값 스크롤 위치, 페이지 크기 및 스크롤 상자 (thumb)의 위치를 포함 하는 방법에 대 한 정보를 포함 합니다. 참조는 `SCROLLINFO` 구조 기본값을 변경 하는 방법에 대 한 자세한 내용은 Windows SDK의 구조 항목입니다.  
@@ -10454,24 +10454,24 @@ int SetScrollPos(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nBar`  
+ *nBar*  
  스크롤 막대를 설정할 수를 지정 합니다. 이 매개 변수는 다음 중 하나일 수 있습니다.  
   
-- **SB_HORZ** 창의 가로 스크롤 막대의 스크롤 상자 위치를 설정 합니다.  
+- SB_HORZ 창의 가로 스크롤 막대의 스크롤 상자 위치를 설정합니다.  
   
-- **SB_VERT** 창의 세로 스크롤 막대의 스크롤 상자 위치를 설정 합니다.  
+- SB_VERT 창의 세로 스크롤 막대의 스크롤 상자 위치를 설정 합니다.  
   
- `nPos`  
+ *nPos*  
  스크롤 상자의 새 위치를 지정합니다. 스크롤 범위 내에 속해야 합니다.  
   
- `bRedraw`  
- 새 스크롤 상자 위치를 반영 하도록 스크롤 막대를 그릴지 여부를 지정 합니다. 이 매개 변수가 **TRUE**, 스크롤 막대 그려집니다; 경우 **FALSE**, 스크롤 막대는 다시 표시 되지 않습니다.  
+ *bRedraw*  
+ 새 스크롤 상자 위치를 반영 하도록 스크롤 막대를 그릴지 여부를 지정 합니다. 이 매개 변수가 TRUE 인 경우 스크롤 막대가 다시 그려집니다. FALSE 인 경우 스크롤 막대가 없습니다 그려집니다.  
   
 ### <a name="return-value"></a>반환 값  
  스크롤 상자의 이전 위치입니다.  
   
 ### <a name="remarks"></a>설명  
- 설정 `bRedraw` 를 **FALSE** 스크롤 막대는 다른 함수에 대 한 순차적 호출에서 다시 그릴 됩니다 때마다 유용 합니다.  
+ 설정 *bRedraw* FALSE로은 때 항상 유용 다른 함수에 대 한 순차적 호출에서 스크롤 막대를 다시 그려집니다.  
   
 ##  <a name="setscrollrange"></a>  CWnd::SetScrollRange  
  지정된 스크롤 막대에 대한 최소 및 최대 위치 값을 설정합니다.  
@@ -10485,30 +10485,30 @@ void SetScrollRange(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nBar`  
+ *nBar*  
  스크롤 막대를 설정할 수를 지정 합니다. 이 매개 변수는 다음 값 중 하나일 수 있습니다.  
   
-- **SB_HORZ** 창의 가로 스크롤 막대의 범위를 설정 합니다.  
+- SB_HORZ 창의 가로 스크롤 막대의 범위를 설정합니다.  
   
-- **SB_VERT** 창의 세로 스크롤 막대의 범위를 설정 합니다.  
+- SB_VERT 창의 세로 스크롤 막대의 범위를 설정합니다.  
   
- `nMinPos`  
+ *nMinPos*  
  최소 스크롤 위치를 지정 합니다.  
   
- `nMaxPos`  
+ *nMaxPos*  
  최대 스크롤 위치를 지정 합니다.  
   
- `bRedraw`  
- 변경 내용을 반영 하도록 스크롤 막대를 그려야 하는지 여부를 지정 합니다. 경우 `bRedraw` 은 **TRUE**, 스크롤 막대를 다시 그리면; 경우 **FALSE**, 스크롤 막대 다시 그려지지 않습니다.  
+ *bRedraw*  
+ 변경 내용을 반영 하도록 스크롤 막대를 그려야 하는지 여부를 지정 합니다. 경우 *bRedraw* 은 TRUE, 스크롤 막대를 다시 그리면; FALSE 인 경우 스크롤 막대가 다시 그려지지 않습니다.  
   
 ### <a name="remarks"></a>설명  
  또한 표준 스크롤 막대를 표시 하거나 숨기려면 사용할 수 있습니다.  
   
  응용 프로그램에서 스크롤 막대 알림 메시지를 처리 하는 동안 스크롤 막대를 숨기려면이 함수를 호출 하지 않습니다.  
   
- 경우에 대 한 호출 `SetScrollRange` 에 대 한 호출 바로 다음에 오는 [SetScrollPos](#setscrollpos) 멤버 함수는 `bRedraw` 에서 매개 변수는 `SetScrollPos` 멤버 함수에는 스크롤 막대를 두 번 그리고 하지 않도록 설정 하려면 0 이어야 합니다.  
+ 경우에 대 한 호출 `SetScrollRange` 바로 뒤에 대 한 호출에서 [SetScrollPos](#setscrollpos) 멤버 함수는 *bRedraw* 에서 매개 변수는 `SetScrollPos` 멤버 함수에서 스크롤 막대를 방지 하기 위해 0 이어야 합니다. 두 번 그려집니다.  
   
- 표준 스크롤 막대의 기본 범위는 0부터 100입니다. 스크롤 막대 컨트롤에 대 한 기본 범위는 빈 (모두는 `nMinPos` 및 `nMaxPos` 값은 0). 로 지정 된 값의 차이 `nMinPos` 및 `nMaxPos` 보다 크지 않아야 **INT_MAX**합니다.  
+ 표준 스크롤 막대의 기본 범위는 0부터 100입니다. 스크롤 막대 컨트롤에 대 한 기본 범위는 빈 (모두는 *nMinPos* 및 *nMaxPos* 값은 0). 로 지정 된 값의 차이 *nMinPos* 및 *nMaxPos* INT_MAX 보다 크지 않아야 합니다.  
   
 ##  <a name="settimer"></a>  CWnd::SetTimer  
  시스템 타이머를 설치합니다.  
@@ -10524,22 +10524,22 @@ UINT_PTR SetTimer(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDEvent`  
+ *nIDEvent*  
  0이 아닌 타이머 식별자를 지정합니다. 타이머 식별자 고유 경우 동일한 값이 반환 `SetTimer`합니다. 그렇지 않으면 `SetTimer` 새로운 고유 값을 결정 하 고는 반환 합니다. (에 NULL 콜백 함수)는 창 타이머 값이 현재 창에 연관 된 다른 windows 타이머에 대해서만 고유 해야 합니다. 콜백 타이머에 대 한 값은 모든 프로세스의 모든 타이머에 대 한 고유 해야 합니다. 하므로, 콜백 타이머를 만들 때에 사용자가 지정한 값에서 반환된 된 값 수 차이 가능성이 큽니다.  
   
- `nElapse`  
+ *nElapse*  
  제한 시간 값 또는 간격을 밀리초 단위로 지정합니다.  
   
- `lpfnTimer`  
- 응용 프로그램에서 제공 하는의 주소를 지정 `TimerProc` 를 처리 하는 콜백 함수는 [WM_TIMER](http://msdn.microsoft.com/library/windows/desktop/ms644902) 메시지입니다. 이 매개 변수가 `NULL`, `WM_TIMER` 메시지가 응용 프로그램의 메시지 큐에 배치 되 고에서 처리는 `CWnd` 개체입니다.  
+ *lpfnTimer*  
+ 응용 프로그램에서 제공 하는의 주소를 지정 `TimerProc` 를 처리 하는 콜백 함수는 [WM_TIMER](http://msdn.microsoft.com/library/windows/desktop/ms644902) 메시지입니다. WM_TIMER 메시지가 응용 프로그램의 메시지 큐에 배치 되 고 처리 하 여이 매개 변수가 NULL 인 경우는 `CWnd` 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 함수가 성공 하는 경우 새 타이머의 타이머 식별자입니다. 또는 통해 전달 된 값과 같지 않을 수 있습니다이 값은 `nIDEvent` 매개 변수입니다. 응용 프로그램에 반환 값을 항상 전달 해야는 [KillTimer](#killtimer) 멤버 함수를 사용 되는 타이머를 종료 합니다. 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
+ 함수가 성공 하는 경우 새 타이머의 타이머 식별자입니다. 또는 통해 전달 된 값과 같지 않을 수 있습니다이 값은 *nIDEvent* 매개 변수입니다. 응용 프로그램에 반환 값을 항상 전달 해야는 [KillTimer](#killtimer) 멤버 함수를 사용 되는 타이머를 종료 합니다. 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 간격 값을 지정 하 고 시스템이 게시 간격이 경과 될 때마다 한 `WM_TIMER` 설치 응용 프로그램의 설치 메시지 큐에 메시지를 응용 프로그램 정의 메시지 전달 또는 `TimerProc` 콜백 함수입니다.  
+ 간격 값을 지정 하 고 시스템 WM_TIMER 메시지 설치 응용 프로그램의 설치 메시지 큐를 게시 하거나 응용 프로그램 정의 메시지 전달 간격이 경과 될 때마다 `TimerProc` 콜백 함수입니다.  
   
- `lpfnTimer` 콜백 함수 이름을 지정 해야 `TimerProc`, 하지만 선언 되어야 정적 고 정의 된 것으로 다음과 같습니다.  
+ *lpfnTimer* 콜백 함수 이름을 지정 해야 `TimerProc`, 하지만 선언 되어야 정적 고 정의 된 것으로 다음과 같습니다.  
   
 ```  
 void CALLBACK TimerProc(
@@ -10549,8 +10549,8 @@ void CALLBACK TimerProc(
     DWORD dwTime    // system time);
 ```  
   
-### <a name="example"></a>예제  
- 이 예에서는 `CWnd::SetTimer`, `CWnd::OnTimer`, 및 `CWnd::KillTimer` 처리 `WM_TIMER` 메시지입니다. 첫 번째 타이머 보낼 수 있도록 설정 되어 한 `WM_TIMER` 메시지를 주 프레임 창에 2 초 마다 `OnStartTimer`합니다. `OnTimer` 이벤트 처리기 핸들 `WM_TIMER` 주 프레임 창에 대 한 메시지입니다. 이 메서드를 사용 하면 2 초 마다 경고음을 PC 스피커 합니다. 두 번째 타이머 메시지를 보냅니다 콜백 함수에 3.75 초 마다. `OnStopTimer` 호출 하 여 두 타이머를 중지 됩니다 `CWnd::KillTimer` 각 타이머 id.  
+### <a name="example"></a>예  
+ 이 예에서는 `CWnd::SetTimer`, `CWnd::OnTimer`, 및 `CWnd::KillTimer` WM_TIMER 메시지를 처리 합니다. 첫 번째 타이머에 2 초 마다 주 프레임 창에 WM_TIMER 메시지를 보낼 수 있도록 설정 되어 `OnStartTimer`합니다. `OnTimer` 주 프레임 창에 대 한 WM_TIMER 메시지를 처리 하는 이벤트 처리기입니다. 이 메서드를 사용 하면 2 초 마다 경고음을 PC 스피커 합니다. 두 번째 타이머 메시지를 보냅니다 콜백 함수에 3.75 초 마다. `OnStopTimer` 호출 하 여 두 타이머를 중지 됩니다 `CWnd::KillTimer` 각 타이머 id.  
   
  [!code-cpp[NVC_MFCWindowing#118](../../mfc/reference/codesnippet/cpp/cwnd-class_59.cpp)]  
   
@@ -10562,7 +10562,7 @@ BOOL SetWindowContextHelpId(DWORD dwContextHelpId);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwContextHelpId`  
+ *dwContextHelpId*  
  도움말 컨텍스트 식별자입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -10571,7 +10571,7 @@ BOOL SetWindowContextHelpId(DWORD dwContextHelpId);
 ### <a name="remarks"></a>설명  
  자식 창 도움말 컨텍스트 식별자가 없으면 해당 부모 창의 식별자를 상속 합니다. 마찬가지로, 소유 된 창을 도움말 컨텍스트 식별자가 없으면 해당 소유자 창의 식별자를 상속 합니다. 이 상속 도움말 컨텍스트 식별자의 응용을 프로그램 대화 상자에 대 한 하나의 식별자 및 모든 해당 컨트롤을 설정할 수 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#119](../../mfc/reference/codesnippet/cpp/cwnd-class_60.cpp)]  
   
 ##  <a name="setwindowplacement"></a>  CWnd::SetWindowPlacement  
@@ -10582,7 +10582,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT* lpwndpl);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpwndpl`  
+ *lpwndpl*  
  가리키는 [WINDOWPLACEMENT](../../mfc/reference/windowplacement-structure.md) 새 표시 상태와 위치를 지정 하는 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -10602,16 +10602,16 @@ BOOL SetWindowPos(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pWndInsertAfter`  
- 식별 된 `CWnd` 앞에 오는 개체 (보다 클 수)이 `CWnd` Z-순서에서 개체입니다. 이 매개 변수는에 대 한 일 수는 `CWnd` 또는 **포인터** 를 다음 값 중 하나:  
+ *pWndInsertAfter*  
+ 식별 된 `CWnd` 앞에 오는 개체 (보다 클 수)이 `CWnd` Z-순서에서 개체입니다. 이 매개 변수는에 대 한 일 수는 `CWnd` 또는 다음 값 중 하나에 대 한 포인터.  
   
-- **wndBottom** 창이 Z 순서 맨 아래에 배치 합니다. 이 경우 `CWnd` 맨 위 창에는 창 맨 위에 있는 상태를 잃을; 창을 다른 모든 창의 맨 아래에 배치 합니다.  
+- `wndBottom` 창이 Z 순서 맨 아래에 배치합니다. 이 경우 `CWnd` 맨 위 창에는 창 맨 위에 있는 상태를 잃을; 창을 다른 모든 창의 맨 아래에 배치 합니다.  
   
-- **wndTop** Z 순서 맨 위에 있는 창을 배치 합니다.  
+- `wndTop` Z 순서 맨 위에 있는 창을 배치합니다.  
   
-- **wndTopMost** 모든 최상위 비 windows 창을 배치 합니다. 비활성화 될 경우에 창 맨 위에 있는 위치를 유지 관리 합니다.  
+- `wndTopMost` 창 맨 위 아닌 모든 창 배치합니다. 비활성화 될 경우에 창 맨 위에 있는 위치를 유지 관리 합니다.  
   
-- **wndNoTopMost** 창 맨 위 모든 창의 맨 위에 위치를 변경 (즉, 모든 최상위 창 뒤). 이 플래그는 창이 맨 위 창 되어 경우 효과가 없습니다.  
+- `wndNoTopMost` 창 맨 위 모든 창의 맨 위에 위치를 변경 (즉, 모든 최상위 창 뒤). 이 플래그는 창이 맨 위 창 되어 경우 효과가 없습니다.  
   
  이 매개 변수를 사용 하는 방법에 대 한 규칙에 대 한이 항목의 "주의" 섹션을 참조 합니다.  
   
@@ -10621,40 +10621,40 @@ BOOL SetWindowPos(
  *y*  
  창의 위쪽의 새 위치를 지정합니다.  
   
- `cx`  
+ *cx*  
  창의 새 너비를 지정합니다.  
   
- `cy`  
+ *cy*  
  창의 새 높이 지정합니다.  
   
- `nFlags`  
+ *nFlags*  
  크기 조정 및 위치 옵션을 지정 합니다. 이 매개 변수는 다음 플래그의 조합일 수 있습니다.  
   
-- **SWP_DRAWFRAME** 창 주위 프레임 (창을 만들 때 정의 됨)를 그립니다.  
+- SWP_DRAWFRAME 창 주위 프레임 (창을 만들 때 정의 됨)를 그립니다.  
   
-- **SWP_FRAMECHANGED** 보냅니다는 `WM_NCCALCSIZE` 는 창 크기가 변경 되는 경우에 창에는 메시지입니다. 이 플래그를 지정 하지 않으면 `WM_NCCALCSIZE` 창 크기가 변경 되는 경우에 전송 됩니다.  
+- SWP_FRAMECHANGED 보냅니다는 WM_NCCALCSIZE 메시지 창에는 창 크기가 변경 되는 경우에 합니다. 이 플래그를 지정 하지 않으면 WM_NCCALCSIZE 창 크기가 변경 되는 경우에 전송 됩니다.  
   
-- **SWP_HIDEWINDOW** 창을 숨깁니다.  
+- SWP_HIDEWINDOW 창을 숨깁니다.  
   
-- `SWP_NOACTIVATE` 창을 활성화 하지 않습니다. 창이 활성화 되어 맨 위 또는 맨 위 그룹의 맨 위로 이동 합니다.이 플래그를 설정 하지 않으면 (의 설정에 따라는 `pWndInsertAfter` 매개 변수).  
+- 창을 활성화 되지 SWP_NOACTIVATE 않습니다. 창이 활성화 되어 맨 위 또는 맨 위 그룹의 맨 위로 이동 합니다.이 플래그를 설정 하지 않으면 (의 설정에 따라는 *pWndInsertAfter* 매개 변수).  
   
-- **SWP_NOCOPYBITS** 클라이언트 영역의 전체 내용을 삭제 합니다. 이 플래그를 지정 하지 클라이언트 영역의 유효한 내용은 저장 되며 창이 크기가 조정 되거나 위치가 변경 후 클라이언트 영역에 다시 복사 됩니다.  
+- SWP_NOCOPYBITS는 클라이언트 영역의 전체 내용을 삭제합니다. 이 플래그를 지정 하지 클라이언트 영역의 유효한 내용은 저장 되며 창이 크기가 조정 되거나 위치가 변경 후 클라이언트 영역에 다시 복사 됩니다.  
   
-- `SWP_NOMOVE` 현재 위치를 유지 (무시는 *x* 및 *y* 매개 변수).  
+- 현재 위치 SWP_NOMOVE 유지 (무시는 *x* 및 *y* 매개 변수).  
   
-- **SWP_NOOWNERZORDER** Z-순서에서 소유자 창의 위치를 변경 되지 않습니다.  
+- Z 축에서 소유자 창의 위치를 변경할 SWP_NOOWNERZORDER 않습니다.  
   
-- **SWP_NOREDRAW** 변경 내용을 다시 그려지지 않습니다. 이 플래그를 설정 하는 경우 모든 종류의 없습니다 다시 발생 합니다. 클라이언트 영역, 비클라이언트 영역 (제목 및 스크롤 막대가 포함) 및 부모 창 이동된 창의 결과로 처리 되지 않는 부분이이 적용 됩니다. 이 플래그를 설정 하는 경우 응용 프로그램 무효화 하거나 다시 그려야 하는 부모 창 확인 하 고 창을의 모든 부분을 다시 그릴 명시적으로 해야 합니다.  
+- 변경 내용을 다시 그려지지 SWP_NOREDRAW 않습니다. 이 플래그를 설정 하는 경우 모든 종류의 없습니다 다시 발생 합니다. 클라이언트 영역, 비클라이언트 영역 (제목 및 스크롤 막대가 포함) 및 부모 창 이동된 창의 결과로 처리 되지 않는 부분이이 적용 됩니다. 이 플래그를 설정 하는 경우 응용 프로그램 무효화 하거나 다시 그려야 하는 부모 창 확인 하 고 창을의 모든 부분을 다시 그릴 명시적으로 해야 합니다.  
   
-- **SWP_NOREPOSITION** 동일 **SWP_NOOWNERZORDER**합니다.  
+- SWP_NOREPOSITION SWP_NOOWNERZORDER와 동일 합니다.  
   
-- **SWP_NOSENDCHANGING** 창을 받지 못하게에서 방지는 `WM_WINDOWPOSCHANGING` 메시지입니다.  
+- SWP_NOSENDCHANGING은 WM_WINDOWPOSCHANGING 메시지를 받지 못하도록 창의 방지 합니다.  
   
-- `SWP_NOSIZE` 현재 크기를 유지 하면서 (무시는 `cx` 및 `cy` 매개 변수).  
+- 현재 크기 SWP_NOSIZE 유지 (무시는 *cx* 및 *cy* 매개 변수).  
   
-- `SWP_NOZORDER` 현재 순서 유지 (무시 `pWndInsertAfter`).  
+- 현재 주문 SWP_NOZORDER 유지 (무시 *pWndInsertAfter*).  
   
-- **SWP_SHOWWINDOW** 창을 표시 합니다.  
+- SWP_SHOWWINDOW 창을 표시 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
@@ -10664,13 +10664,13 @@ BOOL SetWindowPos(
   
  자식 창에 대 한 모든 좌표가 클라이언트 좌표 (기준으로 상위 창의 클라이언트 영역의 왼쪽 위 모서리) 됩니다.  
   
- 창이 Z 순서의 맨 위로 이동할 수 있습니다 설정 하거나는 `pWndInsertAfter` 매개 변수를 **& wndTopMost** 원활 하 고 `SWP_NOZORDER` 플래그는 하지 설정 하거나 설정 하는 창의 Z 순서 기존 위에 오도록 맨 위 창입니다. 맨 위 창에 최상위 수행 될 경우 소유 된 창 맨 위에 있는 만들어집니다. 해당 소유자가 변경 되지 않습니다.  
+ 창이 Z 순서의 맨 위로 이동할 수 있습니다 설정 하거나는 *pWndInsertAfter* 매개 변수를 **& wndTopMost** SWP_NOZORDER 플래그가 설정 되어 있지 않음을 확인 하 고 또는 설정 하는 창이 Z-순서 하므로 에 모든 기존 맨 위 창 위에 있습니다. 맨 위 창에 최상위 수행 될 경우 소유 된 창 맨 위에 있는 만들어집니다. 해당 소유자가 변경 되지 않습니다.  
   
  맨 위 창 아래쪽에 위치가 변경 되 면 맨 위를 더 이상 ( **& wndBottom**) Z 순서의 맨 위 창 이후인 합니다. 맨 위 창 맨 위를 만들어지면 맨 위 windows 만들어진 모든 해당 소유자 및 소유 된 창입니다.  
   
- 모두 `SWP_NOACTIVATE` 또는 `SWP_NOZORDER` 때 지정 됩니다 (즉, 응용 프로그램 창을 활성화 되 고 지정된 된 Z-순서에 동시에 되기 요청)에 지정 된 값 `pWndInsertAfter` 다음과 같은 경우에만 사용 됩니다.  
+ 에 지정 된 값 (즉, 응용 프로그램이 요청할 때 창이 활성화 되 고 지정된 된 Z-순서에 동시에 되기)도 아니고 SWP_NOACTIVATE SWP_NOZORDER 지정 된 경우 *pWndInsertAfter* 에 사용 됩니다 다음과 같은 경우:  
   
--   모두 **& wndTopMost** 나 **& wndNoTopMost** 에 지정 된는 `pWndInsertAfter` 매개 변수입니다.  
+-   모두 **& wndTopMost** 나 **& wndNoTopMost** 에 지정 된 된 *pWndInsertAfter* 매개 변수입니다.  
   
 -   이 창이 활성 창이 아닙니다.  
   
@@ -10678,15 +10678,15 @@ BOOL SetWindowPos(
   
  맨 위 창 맨 위 창을 소유할 수 있지만 반대의 경우는 가능 하지 않습니다. 맨 위 창 소유한 모든 창 (예를 들어 대화 상자) 자체적으로 소유한 모든 windows 소유자 유지 되도록 맨 위 창에 적용 됩니다.  
   
- Windows 버전 3.1 이상에서 windows Z 순서의 맨 위로 이동 하 고 수 있는 설정에 의해 잠겨 자신의 **WS_EX_TOPMOST** 스타일입니다. 최상위 창에는 맨 위 위치로 비활성화 하는 경우에 유지 관리 합니다. 예를 들어 WinHelp 항상 위 명령을 선택 하면 topmost 도움말 창 이므로 만들고 응용 프로그램에 반환 하는 경우 계속 표시 됩니다.  
+ Windows 버전 3.1 이상에서는 windows 수 Z 순서의 맨 위로 이동 있고 WS_EX_TOPMOST 스타일을 설정 하 여 있습니다 잠긴 합니다. 최상위 창에는 맨 위 위치로 비활성화 하는 경우에 유지 관리 합니다. 예를 들어 WinHelp 항상 위 명령을 선택 하면 topmost 도움말 창 이므로 만들고 응용 프로그램에 반환 하는 경우 계속 표시 됩니다.  
   
- 최상위 창을 만들기 위해 호출 `SetWindowPos` 와 `pWndInsertAfter` 매개 변수를 **& wndTopMost**, 설정 또는 **WS_EX_TOPMOST** 창을 만들 경우의 스타일입니다.  
+ 최상위 창을 만들기 위해 호출 `SetWindowPos` 와 *pWndInsertAfter* 매개 변수를 **& wndTopMost**, 하거나 창을 만들 때 WS_EX_TOPMOST 스타일을 설정 합니다.  
   
- Z 순서와 모든 창을 포함 하는 경우는 **WS_EX_TOPMOST** 스타일와 함께 이동 하는 창은 **& wndTopMost** 값 모든 맨 위 창의 맨 아래 있는 맨 위 창에 배치 됩니다. 응용 프로그램 없이 비활성 창을 활성화 하는 경우는 **WS_EX_TOPMOST** bit는 창이 이동 하는 모든 맨 위 창 위에 하지만 모든 맨 위 창 아래 합니다.  
+ 창이 함께 이동 Z-순서 WS_EX_TOPMOST 스타일으로 된 기간에 포함 된 경우는 **& wndTopMost** 값 모든 맨 위 창의 맨 아래 있는 맨 위 창에 배치 됩니다. 비활성 창 WS_EX_TOPMOST 비트 없이 활성화 하는 응용 프로그램 창의 모든 맨 위 창 위에 하지만 모든 맨 위 창 아래 이동 됩니다.  
   
- 경우 `SetWindowPos` 때 호출 되는 `pWndInsertAfter` 매개 변수는 **& wndBottom** 및 `CWnd` 맨 위 창에는 창 맨 위에 있는 상태를 잃을 ( **WS_EX_TOPMOST** 선택이 취소 되어), 및 창이 Z 순서 맨 아래에 배치 하는 됩니다.  
+ 경우 `SetWindowPos` 될 때 호출 됩니다는 *pWndInsertAfter* 매개 변수는 **& wndBottom** 및 `CWnd` 맨 위 창에는 창 맨 위에 있는 상태 (WS_EX_TOPMOST 취소), 손실 및 창이 Z 순서 맨 아래에 배치 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#120](../../mfc/reference/codesnippet/cpp/cwnd-class_61.cpp)]  
   
 ##  <a name="setwindowrgn"></a>  CWnd::SetWindowRgn  
@@ -10699,11 +10699,11 @@ int SetWindowRgn(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hRgn`  
+ *hRgn*  
  영역에 대 한 핸들입니다.  
   
- `bRedraw`  
- 경우 **TRUE**, 운영 체제는 영역을 설정한 후 창을 다시 그립니다.; 그렇지 않으면 그렇지 않은 경우. 일반적으로 설정 `bRedraw` 를 **TRUE** 창이 표시 되는 경우. 경우로 설정 **TRUE**, 시스템은 보냅니다는 `WM_WINDOWPOSCHANGING` 및 `WM_WINDOWPOSCHANGED` 메시지를 창.  
+ *bRedraw*  
+ True 이면 영역; 설정한 후 운영 체제 창을 다시 그립니다. 그렇지 않은 경우 포함 되지 않습니다. 일반적으로 설정 *bRedraw* 창이 표시 되 면 true입니다. 경우 TRUE로 설정 된 시스템 WM_WINDOWPOSCHANGING 및 WM_WINDOWPOSCHANGED 메시지 창에 보냅니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공 하면 반환 값은 0이 아닌 합니다. 함수가 실패하면 반환 값은 0입니다.  
@@ -10711,7 +10711,7 @@ int SetWindowRgn(
 ### <a name="remarks"></a>설명  
  창의 창 영역 좌표가 되지 않은 창의 클라이언트 영역 창의 왼쪽 위 모퉁이 기준으로 합니다.  
   
- 에 대 한 호출에 성공한 후 `SetWindowRgn`, 영역 핸들에 의해 지정 된 영역을 소유 하는 운영 체제 `hRgn`합니다. 운영 체제 지역의 복사본을 만들지 않습니다, 따라서 없도록 더 이상이 영역 핸들을 사용 하 여 함수 호출 및이 영역 핸들을 닫지 마십시오.  
+ 에 대 한 호출에 성공한 후 `SetWindowRgn`, 영역 핸들에 의해 지정 된 영역을 소유 하는 운영 체제 *hRgn*합니다. 운영 체제 지역의 복사본을 만들지 않습니다, 따라서 없도록 더 이상이 영역 핸들을 사용 하 여 함수 호출 및이 영역 핸들을 닫지 마십시오.  
   
 ##  <a name="setwindowtext"></a>  CWnd::SetWindowText  
  창의 제목이 지정 된 텍스트를 설정합니다.  
@@ -10721,7 +10721,7 @@ void SetWindowText(LPCTSTR lpszString);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszString`  
+ *lpszString*  
  가리키는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 개체 또는 null로 끝나는 문자열의 새 제목 또는 컨트롤 텍스트도 사용할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
@@ -10729,7 +10729,7 @@ void SetWindowText(LPCTSTR lpszString);
   
  이 함수는 [WM_SETTEXT](http://msdn.microsoft.com/library/windows/desktop/ms632644) 메시지를이 창에 보냅니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#121](../../mfc/reference/codesnippet/cpp/cwnd-class_62.cpp)]  
   
 ##  <a name="showcaret"></a>  CWnd::ShowCaret  
@@ -10748,7 +10748,7 @@ void ShowCaret();
   
  캐럿은 공유 리소스입니다. 창이 입력된 포커스를가지고 되거나 상태인 경우에 캐럿을 표시 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::CreateCaret](#createcaret)합니다.  
   
 ##  <a name="showownedpopups"></a>  CWnd::ShowOwnedPopups  
@@ -10759,10 +10759,10 @@ void ShowOwnedPopups(BOOL bShow = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bShow`  
- 팝업 창을 표시 하거나 숨길 수 있는지 여부를 지정 합니다. 이 매개 변수가 **TRUE**, 모든 숨겨진된 팝업 창이 표시 됩니다. 이 매개 변수가 **FALSE**, 표시 된 모든 팝업 창을 숨겨져 있습니다.  
+ *bShow*  
+ 팝업 창을 표시 하거나 숨길 수 있는지 여부를 지정 합니다. 이 매개 변수가 TRUE 이면 모든 숨겨진된 팝업 창이 표시 됩니다. 이 매개 변수가 FALSE 인 경우에 표시 된 모든 팝업 창은 숨겨져 있습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::SetWindowPos](#setwindowpos)합니다.  
   
 ##  <a name="showscrollbar"></a>  CWnd::ShowScrollBar  
@@ -10775,17 +10775,17 @@ void ShowScrollBar(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nBar`  
- 스크롤 막대 컨트롤 또는 창에서 비클라이언트 영역의의 일부 인지 여부를 지정 합니다. 비클라이언트 영역의 일부인 경우 `nBar` 가로, 세로 스크롤 막대를 배치 되는 여부 또는 둘 다 나타냅니다. 다음 중 하나 여야 합니다.  
+ *nBar*  
+ 스크롤 막대 컨트롤 또는 창에서 비클라이언트 영역의의 일부 인지 여부를 지정 합니다. 비클라이언트 영역의 일부인 경우 *nBar* 가로, 세로 스크롤 막대를 배치 되는 여부 또는 둘 다 나타냅니다. 다음 중 하나 여야 합니다.  
   
-- **SB_BOTH** 창의 가로 및 세로 스크롤 막대를 지정 합니다.  
+- SB_BOTH 창의 가로 및 세로 스크롤 막대를 지정합니다.  
   
-- **SB_HORZ** 창을 가로 스크롤 막대 임을 지정 합니다.  
+- SB_HORZ 창을 가로 스크롤 막대 임을 지정 합니다.  
   
-- **SB_VERT** 창의 세로 스크롤 막대 임을 지정 합니다.  
+- SB_VERT 창의 세로 스크롤 막대 임을 지정 합니다.  
   
- `bShow`  
- Windows 표시 스크롤 막대를 숨기 하는지 여부를 지정 합니다. 이 매개 변수가 **TRUE**, 스크롤 막대는 숨겨진; 스크롤 막대가 표시 됩니다.  
+ *bShow*  
+ Windows 표시 스크롤 막대를 숨기 하는지 여부를 지정 합니다. 이 매개 변수가 TRUE 인 경우 스크롤 막대가 표시 됩니다. 그렇지 않은 경우 스크롤 막대가 숨겨집니다.  
   
 ### <a name="remarks"></a>설명  
  응용 프로그램을 호출 하지 않아야 `ShowScrollBar` 스크롤 막대 알림 메시지를 처리 하는 동안 스크롤 막대를 숨기려면 합니다.  
@@ -10798,28 +10798,28 @@ BOOL ShowWindow(int nCmdShow);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nCmdShow`  
+ *nCmdShow*  
  지정 방법을 `CWnd` 를 표시 합니다. 다음 값 중 하나 여야 합니다.  
   
-- **SW_HIDE** 이 창을 숨깁니다 하 고 다른 창에 활성화를 전달 합니다.  
+- SW_HIDE이이 창을 숨깁니다 하 고 다른 창으로 정품 인증을 전달 합니다.  
   
-- **SW_MINIMIZE** 창을 최소화 하 고 시스템의 목록에서 최상위 창을 활성화 합니다.  
+- SW_MINIMIZE 창을 최소화 하 고 시스템의 목록에서 최상위 창을 활성화 합니다.  
   
-- **SW_RESTORE** 활성화 하 고 창을 표시 합니다. 창이, 최대화 또는 최소화 하는 경우 Windows의 원래 크기와 위치에 복원 합니다.  
+- SW_RESTORE 활성화 하 고 창을 표시 합니다. 창이, 최대화 또는 최소화 하는 경우 Windows의 원래 크기와 위치에 복원 합니다.  
   
-- **SW_SHOW** 의 현재 크기와 위치에 표시 하 고 창을 활성화 합니다.  
+- SW_SHOW 창을 활성화 한의 현재 크기와 위치에 표시 됩니다.  
   
-- **SW_SHOWMAXIMIZED** 창을 활성화 한 최대화 창으로 표시 됩니다.  
+- SW_SHOWMAXIMIZED 창을 활성화 한 최대화 창으로 표시 됩니다.  
   
-- **SW_SHOWMINIMIZED** 창을 활성화 하 고 아이콘으로 표시 합니다.  
+- SW_SHOWMINIMIZED 창을 활성화를 아이콘으로 표시 합니다.  
   
-- **SW_SHOWMINNOACTIVE** 창을 아이콘으로 표시 합니다. 현재 활성화 된 창에 활성 상태로 유지 됩니다.  
+- 창을 아이콘으로 표시 하는 SW_SHOWMINNOACTIVE 합니다. 현재 활성화 된 창에 활성 상태로 유지 됩니다.  
   
-- **SW_SHOWNA** 현재 상태에서 창을 표시 합니다. 현재 활성화 된 창에 활성 상태로 유지 됩니다.  
+- SW_SHOWNA 현재 상태에서 창을 표시 합니다. 현재 활성화 된 창에 활성 상태로 유지 됩니다.  
   
-- **SW_SHOWNOACTIVATE** 의 가장 최근 크기와 위치에 있는 창을 표시 합니다. 현재 활성화 된 창에 활성 상태로 유지 됩니다.  
+- SW_SHOWNOACTIVATE의 가장 최근 크기와 위치에 있는 창을 표시 합니다. 현재 활성화 된 창에 활성 상태로 유지 됩니다.  
   
-- **SW_SHOWNORMAL** 활성화 하 고 창을 표시 합니다. 창이, 최대화 또는 최소화 하는 경우 Windows의 원래 크기와 위치에 복원 합니다.  
+- SW_SHOWNORMAL 활성화 하 고 창을 표시 합니다. 창이, 최대화 또는 최소화 하는 경우 Windows의 원래 크기와 위치에 복원 합니다.  
   
 ### <a name="return-value"></a>반환 값  
  이전에 표시 되는 창 되었으면 0이 아닌 인 경우 0은 `CWnd` 이전에 숨겨진 되었습니다.  
@@ -10827,7 +10827,7 @@ BOOL ShowWindow(int nCmdShow);
 ### <a name="remarks"></a>설명  
  `ShowWindow` 사용 하 여 주 창에 대 한 응용 프로그램 마다 한 번만 호출 해야 [CWinApp::m_nCmdShow](../../mfc/reference/cwinapp-class.md#m_ncmdshow)합니다. 에 대 한 후속 호출 `ShowWindow` 에 의해 지정 된 대신 위에 나열 된 값 중 하나를 사용 해야 `CWinApp::m_nCmdShow`합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::CalcWindowRect](#calcwindowrect)합니다.  
   
 ##  <a name="subclassdlgitem"></a>  CWnd::SubclassDlgItem  
@@ -10840,10 +10840,10 @@ BOOL SubclassDlgItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nID`  
+ *nID*  
  컨트롤의 id입니다.  
   
- `pParent`  
+ *pParent*  
  컨트롤의 부모 (일반적으로 대화 상자)입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -10852,9 +10852,9 @@ BOOL SubclassDlgItem(
 ### <a name="remarks"></a>설명  
  Windows 메시지를 통해 라우팅합니다 동적으로 서브클래싱된 컨트롤이 이면는 `CWnd`의 지도 메시지 및 메시지 처리기에서 호출는 `CWnd`먼저 클래스의 합니다. 기본 클래스에 전달 되는 메시지는 컨트롤의 기본 메시지 처리기로 전달 됩니다.  
   
- 이 멤버 함수를 Windows 컨트롤을 연결 된 `CWnd` 개체 및 컨트롤의 대체 **WndProc** 및 **AfxWndProc** 함수입니다. 함수가 이전 저장 **WndProc** 에서 반환 된 위치에는 `GetSuperWndProcAddr` 멤버 함수입니다.  
+ 이 멤버 함수를 Windows 컨트롤을 연결 된 `CWnd` 개체 및 컨트롤의 대체 `WndProc` 및 `AfxWndProc` 함수입니다. 함수가 이전 저장 `WndProc` 에서 반환 된 위치에는 `GetSuperWndProcAddr` 멤버 함수입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#122](../../mfc/reference/codesnippet/cpp/cwnd-class_63.cpp)]  
   
 ##  <a name="subclasswindow"></a>  CWnd::SubclassWindow  
@@ -10865,7 +10865,7 @@ BOOL SubclassWindow(HWND hWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hWnd`  
+ *hWnd*  
  창 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -10874,12 +10874,12 @@ BOOL SubclassWindow(HWND hWnd);
 ### <a name="remarks"></a>설명  
  Windows 메시지를 통해 라우팅합니다 창을 동적으로 서브클래싱된 이면는 `CWnd`의 지도 메시지 및 메시지 처리기에서 호출는 `CWnd`먼저 클래스의 합니다. 기본 클래스에 전달 되는 메시지 창에는 기본 메시지 처리기에 전달 됩니다.  
   
- 이 멤버 함수를 Windows 컨트롤을 연결 된 `CWnd` 개체 하 고 대체 하 여 창 **WndProc** 및 **AfxWndProc** 함수입니다. 함수가 이전에 대 한 포인터를 저장 **WndProc** 에 `CWnd` 개체입니다.  
+ 이 멤버 함수를 Windows 컨트롤을 연결 된 `CWnd` 개체 하 고 대체 하 여 창 `WndProc` 및 `AfxWndProc` 함수입니다. 함수가 이전에 대 한 포인터를 저장 `WndProc` 에 `CWnd` 개체입니다.  
   
 > [!NOTE]
 >  창 해야 이미 연결할 수는 MFC 개체가이 함수를 호출할 때입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#123](../../mfc/reference/codesnippet/cpp/cwnd-class_64.cpp)]  
   
 ##  <a name="unlockwindowupdate"></a>  CWnd::UnlockWindowUpdate  
@@ -10893,7 +10893,7 @@ void UnlockWindowUpdate();
  사용 하 여 한 번에 하나의 창만 잠글 수 `LockWindowUpdate`합니다. 참조 [CWnd::LockWindowUpdate](#lockwindowupdate) 또는 Win32 함수 [LockWindowUpdate](http://msdn.microsoft.com/library/windows/desktop/dd145034) windows 잠금에 대 한 자세한 내용은 합니다.  
   
 ##  <a name="unsubclasswindow"></a>  CWnd::UnsubclassWindow  
- 설정 하려면이 함수를 호출 **WndProc** 원래 값으로 백업 하 고 분리로 식별 되는 창 `HWND` 에서 **CWnd** 개체입니다.  
+ 설정 하려면이 함수를 호출 `WndProc` 원래 값으로 백업 하 고 분리에서 HWND로 식별 되는 창 고 `CWnd` 개체입니다.  
   
 ```  
 HWND UnsubclassWindow();
@@ -10902,7 +10902,7 @@ HWND UnsubclassWindow();
 ### <a name="return-value"></a>반환 값  
  Unsubclassed 창 핸들입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [CWnd::SubclassWindow](#subclasswindow)합니다.  
   
 ##  <a name="updatedata"></a>  CWnd::UpdateData  
@@ -10913,14 +10913,14 @@ BOOL UpdateData(BOOL bSaveAndValidate = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bSaveAndValidate`  
- 대화 상자 초기화 되 고 있는지 여부를 나타내는 플래그 ( **FALSE**) 또는 데이터를 검색 하는 ( **TRUE**).  
+ *bSaveAndValidate*  
+ 여부 대화 상자 초기화 하는 중 (FALSE) 또는 데이터를 나타내는 플래그를 검색 하는 (TRUE).  
   
 ### <a name="return-value"></a>반환 값  
- 작업에 성공 하면 0이 아닌 그렇지 않으면 0입니다. 경우 *bSaveAndValidat*e는 **TRUE**, 다음 반환 값이 0이 아닌 값 이면 데이터의 유효성이 성공적으로 검사 됩니다.  
+ 작업에 성공 하면 0이 아닌 그렇지 않으면 0입니다. 경우 *bSaveAndValidat*e가 TRUE 이면 반환 값이 0이 아닌 값 이면 데이터의 유효성이 성공적으로 검사 됩니다.  
   
 ### <a name="remarks"></a>설명  
- 프레임 워크에서 자동으로 호출 `UpdateData` 와 `bSaveAndValidate` 로 설정 **FALSE** 의 기본 구현에서 모달 대화 상자를 만들 때 [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)합니다. 호출에는 대화 상자가 표시 되기 전에 발생 합니다. 기본 구현은 [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) 이 멤버 함수를 호출 `bSaveAndValidate` 로 설정 **TRUE** 데이터를 검색 하 고 성공 하면 대화 상자가 닫힙니다. ("취소" 단추가 대화 상자에서을 클릭 하면 대화 상자가 닫힙니다 검색 중인 데이터 없이.)  
+ 프레임 워크에서 자동으로 호출 `UpdateData` 와 *bSaveAndValidate* 의 기본 구현에서 모달 대화 상자를 만들 때 FALSE로 설정 [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)합니다. 호출에는 대화 상자가 표시 되기 전에 발생 합니다. 기본 구현은 [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) 이 멤버 함수를 호출 *bSaveAndValidate* 데이터를 검색 하려면 TRUE로 설정 하 고 성공 하면 대화 상자가 닫힙니다. ("취소" 단추가 대화 상자에서을 클릭 하면 대화 상자가 닫힙니다 검색 중인 데이터 없이.)  
   
 ##  <a name="updatedialogcontrols"></a>  CWnd::UpdateDialogControls  
  대화 상자 단추 및 대화 상자 또는 사용 하는 창에서 다른 컨트롤의 상태를 업데이트 하려면이 함수 호출의 [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) 콜백 메커니즘입니다.  
@@ -10932,14 +10932,14 @@ void UpdateDialogControls(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pTarget`  
+ *pTarget*  
  응용 프로그램의 주 프레임 창 가리키고 업데이트 메시지 라우팅에 사용 됩니다.  
   
- `bDisableIfNoHndler`  
+ *bDisableIfNoHndler*  
  업데이트 처리기가 있는 컨트롤 사용 안 함으로 자동으로 표시할지 여부를 나타내는 플래그입니다.  
   
 ### <a name="remarks"></a>설명  
- 자식 컨트롤에는 처리기가 없는 경우 및 `bDisableIfNoHndler` 은 **TRUE**, 자식 컨트롤을 사용할 수 없습니다.  
+ 자식 컨트롤에는 처리기가 없는 경우 및 *bDisableIfNoHndler* 가 TRUE 이면 자식 컨트롤을 사용할 수 없습니다.  
   
  프레임 워크가 멤버 함수를 호출 대화 상자 모음 또는 도구 모음 컨트롤에 대 한 응용 프로그램의 일부로 유휴 처리 합니다.  
   
@@ -10959,34 +10959,34 @@ BOOL UpdateLayeredWindow(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pDCDst`  
- 화면에 대 한 장치 컨텍스트에 대 한 포인터입니다. 색상표 색 창 내용 업데이트 되 면 일치에 사용 됩니다. 경우 `pDCDst` 은 **NULL**, 기본 색상표 사용 됩니다.  
+ *pDCDst*  
+ 화면에 대 한 장치 컨텍스트에 대 한 포인터입니다. 색상표 색 창 내용 업데이트 되 면 일치에 사용 됩니다. 경우 *pDCDst* 가 NULL 이면 기본 색상표 사용 됩니다.  
   
- 경우 `pDCSrc` 은 **NULL**, `pDCDst` 해야 **NULL**합니다.  
+ 경우 *pDCSrc* 이 NULL 이면 *pDCDst* NULL 이어야 합니다.  
   
- `pptDst`  
- 에 대 한 포인터는 **지점** 계층화 된 창의 새 화면 위치를 지정 하는 구조입니다. 현재 위치가 변경 되지 않는 경우 `pptDst` 수 **NULL**합니다.  
+ *pptDst*  
+ 에 대 한 포인터는 `POINT` 계층화 된 창의 새 화면 위치를 지정 하는 구조입니다. 현재 위치가 변경 되지 않는 경우 *pptDst* NULL 일 수 있습니다.  
   
  *psize*  
- 에 대 한 포인터는 **크기** 계층화 된 창의 새 크기를 지정 하는 구조입니다. 창 크기가 변경 되지 않는 경우 *psize* 수 **NULL**합니다.  
+ 에 대 한 포인터는 `SIZE` 계층화 된 창의 새 크기를 지정 하는 구조입니다. 창 크기가 변경 되지 않는 경우 *psize* NULL 일 수 있습니다.  
   
- 경우 `pDCSrc` 은 **NULL**, *psize* 해야 **NULL**합니다.  
+ 경우 *pDCSrc* 이 NULL 이면 *psize* NULL 이어야 합니다.  
   
- `pDCSrc`  
- 계층화 된 창을 정의 하는 화면에 대 한 DC에 대 한 포인터입니다. 모양과 창의 visual 컨텍스트 변경 하지 않는 경우 `pDCSrc` 수 **NULL**합니다.  
+ *pDCSrc*  
+ 계층화 된 창을 정의 하는 화면에 대 한 DC에 대 한 포인터입니다. 모양과 창의 visual 컨텍스트 변경 하지 않는 경우 *pDCSrc* NULL 일 수 있습니다.  
   
- `pptSrc`  
- 에 대 한 포인터는 **지점** 장치 컨텍스트에서 계층의 위치를 지정 하는 구조입니다.  
+ *pptSrc*  
+ 에 대 한 포인터는 `POINT` 장치 컨텍스트에서 계층의 위치를 지정 하는 구조입니다.  
   
- 경우 `pDCSrc` 은 **NULL**, `pptSrc` 해야 **NULL**합니다.  
+ 경우 *pDCSrc* 이 NULL 이면 *pptSrc* NULL 이어야 합니다.  
   
- `crKey`  
- 에 대 한 포인터는 **COLORREF** 계층화 된 창의 메시지를 작성할 때 사용할 투명도 색상 키를 지정 하는 값입니다. 이 색의 창으로 그린 모든 픽셀에 투명 하 게 됩니다. 생성 하는 **COLORREF**, RGB 매크로 사용 합니다.  
+ *crKey*  
+ 계층적된 창의 메시지를 작성할 때 사용할 투명도 색상 키를 지정 하는 COLORREF 값에 대 한 포인터입니다. 이 색의 창으로 그린 모든 픽셀에 투명 하 게 됩니다. COLORREF를 생성 하려면 RGB 매크로 사용 합니다.  
   
  *pblend*  
  에 대 한 포인터는 [BLENDFUNCTION](http://msdn.microsoft.com/library/windows/desktop/dd183393) 계층화 된 창의 메시지를 작성할 때 사용 하는 투명도 값을 지정 하는 구조입니다.  
   
- `dwFlags`  
+ *dwFlags*  
  수행할 동작을 지정 합니다. 이 매개 변수는 다음 값 중 하나 이상이 될 수 있습니다. 가능한 값 목록은 참조 [UpdateLayeredWindow](http://msdn.microsoft.com/library/windows/desktop/ms633556)합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -11003,9 +11003,9 @@ void UpdateWindow();
 ```  
   
 ### <a name="remarks"></a>설명  
- `UpdateWindow` 멤버 함수는 `WM_PAINT` 메시지를 직접 응용 프로그램 큐를 무시 합니다. 업데이트 영역 비어 있으면 `WM_PAINT` 전송 되지 않습니다.  
+ `UpdateWindow` 멤버 함수에서 WM_PAINT 메시지를 직접 응용 프로그램 큐 무시를 보냅니다. 업데이트 영역을 선택 하지 않으면 WM_PAINT 전송 되지 않습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCWindowing#124](../../mfc/reference/codesnippet/cpp/cwnd-class_65.cpp)]  
   
 ##  <a name="validaterect"></a>  CWnd::ValidateRect  
@@ -11016,13 +11016,13 @@ void ValidateRect(LPCRECT lpRect);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpRect`  
- 가리키는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT 구조체](../../mfc/reference/rect-structure1.md) 사각형의 업데이트 영역에서 제거 될 클라이언트 좌표를 포함 하는 합니다. 경우 `lpRect` 은 **NULL**에서 전체 창이 유효성을 검사 합니다.  
+ *lpRect*  
+ 가리키는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 개체 또는 [RECT 구조체](../../mfc/reference/rect-structure1.md) 사각형의 업데이트 영역에서 제거 될 클라이언트 좌표를 포함 하는 합니다. 경우 *lpRect* 가 NULL 이면 전체 창을 유효성을 검사 합니다.  
   
 ### <a name="remarks"></a>설명  
  [BeginPaint](#beginpaint) 멤버 함수는 전체 클라이언트 영역에 자동으로 유효성을 검사 합니다. 모두는 `ValidateRect` 와 [ValidateRgn](#validatergn) 업데이트 영역의 일부를 하기 전에 유효성을 검사 해야 하는 경우 멤버 함수를 호출 해야 [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) 다음 생성 됩니다.  
   
- Windows는 계속 생성 `WM_PAINT` 현재 업데이트 영역 유효성을 검사할 때까지 메시지입니다.  
+ Windows는 계속 현재 업데이트 영역 유효성을 검사할 때까지 WM_PAINT 메시지를 생성 합니다.  
   
 ##  <a name="validatergn"></a>  CWnd::ValidateRgn  
  창의 현재 업데이트 영역에서 영역을 제거 하 여 지정된 된 영역 내에서 클라이언트 영역을 확인 합니다.  
@@ -11032,8 +11032,8 @@ void ValidateRgn(CRgn* pRgn);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pRgn`  
- 에 대 한 포인터는 [CRgn](../../mfc/reference/crgn-class.md) 업데이트 영역에서 제거할 영역을 정의 하는 영역을 식별 하는 개체입니다. 이 매개 변수가 **NULL**, 전체 클라이언트 영역을 제거 합니다.  
+ *pRgn*  
+ 에 대 한 포인터는 [CRgn](../../mfc/reference/crgn-class.md) 업데이트 영역에서 제거할 영역을 정의 하는 영역을 식별 하는 개체입니다. 이 매개 변수가 NULL 이면 전체 클라이언트 영역 제거 됩니다.  
   
 ### <a name="remarks"></a>설명  
  지정된 된 영역 만들어야 이전에 지역 함수에 의해 합니다. 영역의 좌표는 클라이언트 좌표로 것으로 간주 됩니다.  
@@ -11041,18 +11041,18 @@ void ValidateRgn(CRgn* pRgn);
  [BeginPaint](#beginpaint) 멤버 함수는 전체 클라이언트 영역에 자동으로 유효성을 검사 합니다. 모두는 [ValidateRect](#validaterect) 와 `ValidateRgn` 후 다음 업데이트 영역 부분의 유효성을 검사 해야 하는 경우 멤버 함수를 호출 해야 [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) 메시지가 생성 됩니다.  
   
 ##  <a name="windowfrompoint"></a>  CWnd::WindowFromPoint  
- 지정된 된 지점이 포함 된 창을 검색합니다 `point` 화면에 있는 점의 화면 좌표를 지정 해야 합니다.  
+ 지정된 된 지점이 포함 된 창을 검색합니다 *가리킨* 화면에 있는 점의 화면 좌표를 지정 해야 합니다.  
   
 ```  
 static CWnd* PASCAL WindowFromPoint(POINT point);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `point`  
+ *지점*  
  지정는 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) 개체 또는 [가리킨](../../mfc/reference/point-structure1.md) 검사할 지점을 정의 하는 데이터 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 점이 있는 창 개체에 대 한 포인터입니다. **NULL** 특정된 시점에 있을 때 창이 없습니다. 반환된 된 포인터는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다.  
+ 점이 있는 창 개체에 대 한 포인터입니다. 창이 특정된 시점에 존재 하는 경우 NULL입니다. 반환된 된 포인터는 임시적 이며 나중에 사용할 저장 해서는 안 됩니다.  
   
 ### <a name="remarks"></a>설명  
  `WindowFromPoint` 중요 한 점은 창 내에서 경우에 숨김 또는 비활성화 창을 검색 하지 않습니다. 응용 프로그램을 사용할지는 [ChildWindowFromPoint](#childwindowfrompoint) 제한적인 검색에 대 한 멤버 함수입니다.  
@@ -11068,13 +11068,13 @@ virtual LRESULT WindowProc(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `message`  
+ *message*  
  처리할 Windows 메시지를 지정 합니다.  
   
- `wParam`  
+ *wParam*  
  메시지 처리에 사용 되는 추가 정보를 제공 합니다. 매개 변수 값은 메시지에 따라 달라 집니다.  
   
- `lParam`  
+ *lParam*  
  메시지 처리에 사용 되는 추가 정보를 제공 합니다. 매개 변수 값은 메시지에 따라 달라 집니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -11093,11 +11093,11 @@ virtual void WinHelp(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwData`  
- 추가 데이터를 지정합니다. 값에 따라 사용 되는 값은 `nCmd` 매개 변수입니다.  
+ *dwData*  
+ 추가 데이터를 지정합니다. 값에 따라 사용 되는 값은 *nCmd* 매개 변수입니다.  
   
- `nCmd`  
- 요청한 도움말의 형식을 지정합니다. 가능한 값 목록과 미치는 영향에 대 한는 `dwData` 매개 변수 참조는 [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) Windows SDK에서 Windows 함수입니다.  
+ *nCmd*  
+ 요청한 도움말의 형식을 지정합니다. 가능한 값 목록과 미치는 영향에 대 한는 *dwData* 매개 변수 참조는 [WinHelp](http://msdn.microsoft.com/library/windows/desktop/bb762267) Windows SDK에서 Windows 함수입니다.  
   
 ### <a name="remarks"></a>설명  
  참조 [CWinApp::WinHelp](../../mfc/reference/cwinapp-class.md#winhelp) 자세한 정보에 대 한 합니다.  
@@ -11112,14 +11112,14 @@ BOOL RegisterTouchWindow(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bRegister`  
- `TRUE` 레지스터를 나타내는 Windows 터치 지원 합니다. `FALSE` 그렇지 않은 경우.  
+ *b 등록 하십시오*  
+ TRUE 이면 레지스터 Windows 터치 지원 합니다. FALSE 그렇지 않은 경우.  
   
- `ulFlags`  
+ *ulFlags*  
  집합 선택 사항 수정 작업을 지정 하는 비트 플래그입니다. 이 필드는 0 또는 다음 값 중 하나를 사용할 수 있습니다: TWF_FINETOUCH, TWF_WANTPALM 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공하면 `TRUE`이고, 그렇지 않으면 `FALSE`입니다.  
+ 성공하면 TRUE이고, 실패하면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
   

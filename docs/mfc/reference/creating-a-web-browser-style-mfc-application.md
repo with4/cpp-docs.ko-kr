@@ -1,7 +1,7 @@
 ---
 title: 웹 브라우저 스타일 MFC 응용 프로그램 만들기 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20c7228b08200466bd62d1cdbbf7e2f66f8efebb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1553f7ccc3b22b4e3d76d8c49d94ba2a61c19e97
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374525"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122555"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>웹 브라우저 스타일 MFC 응용 프로그램 만들기
 네트워크와 로컬 파일 시스템에는 웹 브라우저 스타일 응용 프로그램 폴더 뿐 아니라 (예: HTML 또는 활성 문서) 인터넷 또는 인트라넷에서 정보에 액세스할 수 있습니다. 응용 프로그램의 뷰 클래스를 파생 하 여 [CHtmlView](../../mfc/reference/chtmlview-class.md), 효과적으로 뷰에 WebBrowser 컨트롤이 제공 하 여 응용 프로그램 웹 브라우저 확인 합니다.  
@@ -50,30 +50,30 @@ ms.locfileid: "33374525"
   
  `CHtmlView` 응용 프로그램 웹 또는 HTML 페이지는 뷰를 제공 하는 웹 브라우저 컨트롤에 대 한 래퍼 역할을 합니다. 마법사에서는 재정의를 만듭니다.는 [OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) Microsoft Visual c + + 웹 사이트를 탐색 링크를 제공 하는 뷰 클래스의 함수:  
   
-```  
+```cpp
 void CWebView::OnInitialUpdate()  
 {  
     CHtmlView::OnInitialUpdate();
 
- *// TODO: This code navigates to a popular spot on the web. *//  change the code to go where you'd like.  
+    // TODO: This code navigates to a popular spot on the web.
+    // Change the code to go where you'd like.  
     Navigate2(_T("http://www.msdn.microsoft.com/vstudio/"),
-    NULL,
-    NULL);
+        NULL,
+        NULL);
+}
+```
 
-} 
-```  
+직접 중 하 나와이 사이트를 교체 하거나, 사용할 수 있습니다는 [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource) 멤버 함수는 보기에 대 한 기본 내용으로 프로젝트의 리소스 스크립트에 있는 HTML 페이지를 엽니다. 예를 들어:  
   
- 직접 중 하 나와이 사이트를 교체 하거나, 사용할 수 있습니다는 [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource) 멤버 함수는 보기에 대 한 기본 내용으로 프로젝트의 리소스 스크립트에 있는 HTML 페이지를 엽니다. 예를 들어:  
-  
-```  
+```cpp
 void CWebView::OnInitialUpdate()  
 {  
     CHtmlView::OnInitialUpdate();
 
- *// TODO: This code navigates to a popular spot on the web. *//  change the code to go where you'd like.  
+    // TODO: This code navigates to a popular spot on the web.
+    // Change the code to go where you'd like.  
     LoadFromResource(IDR_HTML1);
-
-} 
+}
 ```  
   
 ## <a name="see-also"></a>참고 항목  

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a3ebc30304f2d194a10b71f832b42039bac6a53
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da29c1b3c62769157735bca556eedc7557a4268d
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375508"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121814"
 ---
 # <a name="cstringarray-class"></a>CStringArray 클래스
 배열을 지원 [CString](../../atl-mfc-shared/using-cstring.md) 개체입니다.  
@@ -120,7 +120,7 @@ class CStringArray : public CObject
 |[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|지정한 인덱스에 있는 요소를 설정하거나 가져옵니다.|  
   
 ## <a name="remarks"></a>설명  
- `CStringArray`는 serialization 및 요소 덤프를 지원하기 위해 `IMPLEMENT_SERIAL` 매크로를 통합합니다. 오버로드된 삽입 연산자 또는 `CString` 멤버 함수를 사용하여 `Serialize` 개체 배열을 보관 파일에 저장하는 경우에는 각 요소가 차례로 serialize됩니다.  
+ `CStringArray` serialization 및 요소 덤프를 지원 하기 위해 IMPLEMENT_SERIAL 매크로 통합 합니다. 오버로드된 삽입 연산자 또는 `CString` 멤버 함수를 사용하여 `Serialize` 개체 배열을 보관 파일에 저장하는 경우에는 각 요소가 차례로 serialize됩니다.  
   
 > [!NOTE]
 >  배열을 사용하기 전에 `SetSize`를 사용하여 배열 크기를 설정하고 배열에 대해 메모리를 할당합니다. `SetSize`를 사용하지 않는 경우 배열에 요소를 추가하면 배열이 자주 다시 할당되고 복사됩니다. 이처럼 다시 할당 및 복사가 자주 수행되면 효율성이 떨어지며 메모리가 조각화될 수 있습니다.  

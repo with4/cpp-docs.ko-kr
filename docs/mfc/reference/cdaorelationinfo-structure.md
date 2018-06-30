@@ -1,7 +1,7 @@
 ---
 title: CDaoRelationInfo 구조체 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -17,34 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a49bdfb00c3f2ceba424af7bfdfa652cacec929e
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 8887c9735b91c43e9dc43140df792841eecef5ed
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36951294"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122610"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo 구조체
 `CDaoRelationInfo` 구조에서 두 테이블의 필드 간에 정의 된 관계에 대 한 정보를 포함 한 [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) 개체입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp
 struct CDaoRelationInfo  
 {  
-    CDaoRelationInfo();
-*// Constructor  
-    CString m_strName;      // Primary  
-    CString m_strTable;     // Primary  
+    CDaoRelationInfo();                     // Constructor  
+    CString m_strName;                      // Primary  
+    CString m_strTable;                     // Primary  
     CString m_strForeignTable;              // Primary  
-    long m_lAttributes;     // Secondary  
+    long m_lAttributes;                     // Secondary  
     CDaoRelationFieldInfo* m_pFieldInfos;   // Secondary  
-    short m_nFields;        // Secondary *// Below the // Implementation comment: *// Destructor, not otherwise documented  
+    short m_nFields;                        // Secondary
+    // Below the // Implementation comment:
+    // Destructor, not otherwise documented  
 };  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- *m_strName*  
+*m_strName*  
  Relation 개체를 이름을 고유 하 게 지정 합니다. 자세한 내용은 DAO 도움말의 "Name 속성" 항목을 참조 합니다.  
   
  *m_strTable*  
@@ -70,11 +71,11 @@ struct CDaoRelationInfo
   
 - **dbRelationDeleteCascade** 삭제 연계 됩니다.  
   
- *m_pFieldInfos*  
- 배열에 대 한 포인터 [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) 구조입니다. 배열에는 관계의 각 필드에 대 한 개체가 포함 됩니다. *m_nFields* 데이터 멤버는 배열 요소의 수를 제공 합니다.  
+*m_pFieldInfos*  
+ 배열에 대 한 포인터 [CDaoRelationFieldInfo](../../mfc/reference/cdaorelationfieldinfo-structure.md) 구조입니다. 배열에는 관계의 각 필드에 대 한 개체가 포함 됩니다. `m_nFields` 데이터 멤버는 배열 요소의 수를 제공 합니다.  
   
- *m_nFields*  
- 수가 `CDaoRelationFieldInfo` 개체에 *m_pFieldInfos* 데이터 멤버입니다.  
+*m_nFields*  
+ 수가 `CDaoRelationFieldInfo` 개체에 `m_pFieldInfos` 데이터 멤버입니다.  
   
 ## <a name="remarks"></a>설명  
  기본 및 보조 위의에 대 한 참조 정보에서 반환 되는 방법을 나타내는 [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) 클래스에서 멤버 함수 `CDaoDatabase`합니다.  

@@ -17,24 +17,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 450021fd1ea05831f44dd5af7a9f1e39a9d6fc5f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7ffe43c33e4b371f6d5dcf5dc7da327b11328af7
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371786"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121381"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>ATL 마법사로 추가한 ATL 지원에 대한 세부 정보
 때 있습니다 [기존 MFC 실행 파일 또는 DLL에 ATL 지원 추가](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), Visual c + +에서 기존 MFC 프로젝트에 다음과 같이 수정 하면 (이 예제에서는 프로젝트 라고 `MFCEXE`):  
   
 -   두 개의 새 파일 (.idl 파일 및.rgs 파일 서버를 등록 하는 데 사용) 추가 됩니다.  
   
--   (Mfcexe.h 및 Mfcexe.cpp) 주 응용 프로그램 헤더와 구현 파일에서 새 클래스 (에서 파생 된 **CAtlMFCModule**) 추가 됩니다. 에 코드가 추가 새 클래스 뿐 아니라 `InitInstance` 등록에 대 한 합니다. 코드에도 추가 됩니다는 `ExitInstance` 클래스 개체를 해지 하는 것에 대 한 함수입니다. 헤더 파일에 마지막으로, 두 개의 새 헤더 파일 (Initguid.h 및 Mfcexe_i.c) 가지 선언 및 초기화에 대 한 새 Guid는 구현 파일에는 **CAtlMFCModule**-클래스를 파생 합니다.  
+-   (Mfcexe.h 및 Mfcexe.cpp) 주 응용 프로그램 헤더와 구현 파일에서 새 클래스 (에서 파생 된 `CAtlMFCModule`) 추가 됩니다. 에 코드가 추가 새 클래스 뿐 아니라 `InitInstance` 등록에 대 한 합니다. 코드에도 추가 됩니다는 `ExitInstance` 클래스 개체를 해지 하는 것에 대 한 함수입니다. 헤더 파일에 마지막으로, 두 개의 새 헤더 파일 (Initguid.h 및 Mfcexe_i.c) 가지 선언 및 초기화에 대 한 새 Guid는 구현 파일에는 `CAtlMFCModule`-클래스를 파생 합니다.  
   
 -   서버를 올바르게 등록 하려면 새.rgs 파일에 대 한 항목은 프로젝트의 리소스 파일에 추가 됩니다.  
   
 ## <a name="notes-for-dll-projects"></a>DLL 프로젝트에 대 한 참고 사항  
- MFC DLL 프로젝트에 ATL 지원을 추가 하면 약간의 차이가 표시 됩니다. 에 코드가 추가 **DLLRegisterServer** 및 **DLLUnregisterServer** 함수를 등록 하 고 DLL의 등록을 취소 합니다. 코드에도 추가 됩니다 [DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow) 및 [DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject)합니다.  
+ MFC DLL 프로젝트에 ATL 지원을 추가 하면 약간의 차이가 표시 됩니다. 에 코드가 추가 `DLLRegisterServer` 및 `DLLUnregisterServer` 함수를 등록 하 고 DLL의 등록을 취소 합니다. 코드에도 추가 됩니다 [DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow) 및 [DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [MFC 프로젝트에 ATL 지원](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)   

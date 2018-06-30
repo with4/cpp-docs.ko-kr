@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91a88fc73b27323327bce477fa2cdaca747ed21c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 31e13222ccd5ac12768961ff5e93d11e68ecfded
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375150"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122717"
 ---
 # <a name="cstringlist-class"></a>CStringList 클래스
 `CString` 개체 목록을 지원합니다.  
@@ -128,7 +128,7 @@ class CStringList : public CObject
 ## <a name="remarks"></a>설명  
  모든 비교는 문자열의 주소 대신 문자열의 문자를 비교할 이므로 값으로 수행 됩니다.  
   
- `CStringList`는 serialization 및 요소 덤프를 지원하기 위해 `IMPLEMENT_SERIAL` 매크로를 통합합니다. 목록을 `CString` 개체는 오버 로드 된 삽입 연산자 또는으로 보관 파일로 저장 됩니다는 `Serialize` 멤버 함수를 각각 `CString` 요소가 차례로 serialize 됩니다.  
+ `CStringList` serialization 및 요소 덤프를 지원 하기 위해 IMPLEMENT_SERIAL 매크로 통합 합니다. 목록을 `CString` 개체는 오버 로드 된 삽입 연산자 또는으로 보관 파일로 저장 됩니다는 `Serialize` 멤버 함수를 각각 `CString` 요소가 차례로 serialize 됩니다.  
   
  개인의 덤프 해야 할 경우 `CString` 요소를 1 이상으로 덤프 컨텍스트 깊이 설정 해야 합니다.  
   

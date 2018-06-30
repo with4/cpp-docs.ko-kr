@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 199aa7adc6cb96a4bc92e196ff94d57abdedfede
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: eb5fb6b09ba6d27828c9f76a1b2ee21323197f6b
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33374301"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122943"
 ---
 # <a name="cstatusbar-class"></a>CStatusBar 클래스
 텍스트 출력 창의 행 또는 "지표"가 있는 컨트롤 막대입니다.  
@@ -110,7 +110,7 @@ class CStatusBar : public CControlBar
   
 1.  호출 [CWnd::SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext) 창 0에에서 있는 텍스트를 업데이트 합니다.  
   
-2.  호출 [CCmdUI::SetText](../../mfc/reference/ccmdui-class.md#settext) 상태 표시줄에 `ON_UPDATE_COMMAND_UI` 처리기입니다.  
+2.  호출 [CCmdUI::SetText](../../mfc/reference/ccmdui-class.md#settext) 상태 표시줄의 ON_UPDATE_COMMAND_UI 처리기에서 합니다.  
   
 3.  호출 [SetPaneText](#setpanetext) 모든 창에 대 한 텍스트를 업데이트 합니다.  
   
@@ -140,7 +140,7 @@ int CommandToIndex(UINT nIDFind) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIDFind`  
+ *nIDFind*  
  해당 인덱스가 검색 되는 표시기의 문자열 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -160,19 +160,19 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParentWnd`  
+ *pParentWnd*  
  에 대 한 포인터는 [CWnd](../../mfc/reference/cwnd-class.md) 인 Windows 창 상태 표시줄의 부모인 개체입니다.  
   
- `dwStyle`  
+ *dwStyle*  
  상태 표시줄 스타일입니다. 표준 Windows 뿐 아니라 [스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles), 이러한 스타일은 지원 됩니다.  
   
-- `CBRS_TOP` 컨트롤 막대 프레임 창의 위쪽에입니다.  
+- 프레임 창의 위쪽에 CBRS_TOP 컨트롤 막대는입니다.  
   
-- `CBRS_BOTTOM` 컨트롤 막대 프레임 창 맨 아래에입니다.  
+- 프레임 창 맨 아래에 CBRS_BOTTOM 컨트롤 막대는입니다.  
   
-- `CBRS_NOALIGN` 부모 크기를 조정할 때 컨트롤 막대 위치가 변경 되지 않습니다.  
+- 부모 크기를 조정할 때 CBRS_NOALIGN 컨트롤 막대 위치가 변경 되지 않습니다.  
   
- `nID`  
+ *nID*  
  도구 모음의 자식 창 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -193,22 +193,22 @@ virtual BOOL CreateEx(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParentWnd`  
+ *pParentWnd*  
  에 대 한 포인터는 [CWnd](../../mfc/reference/cwnd-class.md) 인 Windows 창 상태 표시줄의 부모인 개체입니다.  
   
- `dwCtrlStyle`  
+ *dwCtrlStyle*  
  포함된 된 생성에 대 한 추가 스타일 [CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md) 개체입니다. 크기 조정 그립 또는 도구 설명 없이 상태 표시줄을 지정 하는 기본값을 지원 합니다. 지원 되는 상태 막대 스타일은  
   
-- **SBARS_SIZEGRIP** 상태 표시줄 컨트롤 크기 조정 그립 상태 표시줄의 오른쪽 끝에 포함 됩니다. 크기 조정 그립 크기 조정 테두리;에 대해 비슷합니다. 해당 사용자를 클릭 하 고 끌어 부모 창의 크기를 조정할 수 있는 사각형 영역입니다.  
+- SBARS_SIZEGRIP 상태 표시줄 컨트롤 크기 조정 그립 상태 표시줄의 오른쪽 끝에 포함 되어 있습니다. 크기 조정 그립 크기 조정 테두리;에 대해 비슷합니다. 해당 사용자를 클릭 하 고 끌어 부모 창의 크기를 조정할 수 있는 사각형 영역입니다.  
   
-- **SBT_TOOLTIPS** 상태 표시줄에서 도구 설명을 지원 합니다.  
+- SBT_TOOLTIPS 상태 표시줄에서 도구 설명을 지원 합니다.  
   
  이러한 스타일에 대 한 세부 정보를 참조 하십시오. [CStatusBarCtrl에 대 한 설정을](../../mfc/settings-for-the-cstatusbarctrl.md)합니다.  
   
- `dwStyle`  
+ *dwStyle*  
  상태 표시줄 스타일입니다. 기본 표시 상태 표시줄 프레임 창의 맨 아래에 생성 되도록 지정 합니다. 상태 표시줄에 나열 된 컨트롤 스타일의 조합을 적용 [창 스타일](../../mfc/reference/styles-used-by-mfc.md#window-styles) 및 [CDialogBar::Create](../../mfc/reference/cdialogbar-class.md#create)합니다. 그러나이 매개 변수 WS_CHILD 및 WS_VISIBLE 스타일을 항상 포함 되어야 합니다.  
   
- `nID`  
+ *nID*  
  상태 표시줄의 자식 창 id입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -217,7 +217,7 @@ virtual BOOL CreateEx(
 ### <a name="remarks"></a>설명  
  이 함수에서 또한 초기 글꼴을 설정 하 고 상태를 설정에 기본값을 막대의 높이입니다.  
   
- 사용 하 여 `CreateEx`, 대신 [만들기](#create)포함 된 상태 표시줄 컨트롤을 만들 때 특정 스타일 있어야 하는 경우. 예를 들어 설정 `dwCtrlStyle` 를 **SBT_TOOLTIPS** 상태 표시줄 개체에서 도구 설명을 표시 하도록 합니다.  
+ 사용 하 여 `CreateEx`, 대신 [만들기](#create)포함 된 상태 표시줄 컨트롤을 만들 때 특정 스타일 있어야 하는 경우. 예를 들어 설정 *dwCtrlStyle* 상태 표시줄 개체에서 도구 설명을 표시 하려면 SBT_TOOLTIPS 하 합니다.  
   
 ##  <a name="cstatusbar"></a>  CStatusBar::CStatusBar  
  생성 된 `CStatusBar` 개체, 필요한 경우 기본 상태 표시줄 글꼴 만들고 글꼴 특성을 기본값으로 설정 합니다.  
@@ -234,28 +234,28 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpDrawItemStruct`  
+ *lpDrawItemStruct*  
  에 대 한 포인터는 [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) 드로잉 필요한의 종류에 대 한 정보가 포함 된 구조체입니다.  
   
 ### <a name="remarks"></a>설명  
- **itemAction** 의 멤버는 `DRAWITEMSTRUCT` 구조 정의 그리기 작업을 수행 하는 것입니다. 소유자 그리기에 대 한 그리기를 구현 하려면이 멤버 함수 재정의 `CStatusBar` 개체입니다. 응용 프로그램에 제공 된 디스플레이 컨텍스트에 대해 선택한 모든 그래픽 장치 GDI (인터페이스) 개체를 복원 해야 `lpDrawItemStruct` 이 멤버 함수 종료 전에 합니다.  
+ `itemAction` 의 멤버는 `DRAWITEMSTRUCT` 구조 정의 그리기 작업을 수행 하는 것입니다. 소유자 그리기에 대 한 그리기를 구현 하려면이 멤버 함수 재정의 `CStatusBar` 개체입니다. 응용 프로그램에 제공 된 디스플레이 컨텍스트에 대해 선택한 모든 그래픽 장치 GDI (인터페이스) 개체를 복원 해야 *lpDrawItemStruct* 이 멤버 함수 종료 전에 합니다.  
   
 ##  <a name="getitemid"></a>  CStatusBar::GetItemID  
- 로 지정 된 표시기의 ID를 반환 `nIndex`합니다.  
+ 로 지정 된 표시기의 ID를 반환 *nIndex*합니다.  
   
 ```  
 UINT GetItemID(int nIndex) const;  
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  검색할 ID가 있는 표시기의 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- ID에서 지정한 표시기의 `nIndex`합니다.  
+ ID에서 지정한 표시기의 *nIndex*합니다.  
   
 ##  <a name="getitemrect"></a>  CStatusBar::GetItemRect  
- 복사로 지정 된 표시기의 좌표 `nIndex` 에서 가리키는 구조에 `lpRect`합니다.  
+ 복사로 지정 된 표시기의 좌표 *nIndex* 에서 가리키는 구조에 *lpRect*합니다.  
   
 ```  
 void GetItemRect(
@@ -264,17 +264,17 @@ void GetItemRect(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  인덱스를 검색할 수 있는 사각형 좌표는 표시기입니다.  
   
- `lpRect`  
- 가리키는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 표시기로 지정 된 좌표를 받게 될 개체입니다 `nIndex`합니다.  
+ *lpRect*  
+ 가리키는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 구조 또는 [CRect](../../atl-mfc-shared/reference/crect-class.md) 표시기로 지정 된 좌표를 받게 될 개체입니다 *nIndex*합니다.  
   
 ### <a name="remarks"></a>설명  
  좌표는 픽셀 상태 표시줄의 왼쪽 위 모퉁이가 기준입니다.  
   
 ##  <a name="getpaneinfo"></a>  CStatusBar::GetPaneInfo  
- 집합 `nID`, `nStyle`, 및 `cxWidth` ID, 스타일 및 지정 된 위치에서 표시기 창의 너비를 `nIndex`합니다.  
+ 집합 *nID*, *nStyle*, 및 *cxWidth* ID, 스타일 및 지정 된 위치에서 표시기 창의 너비를 *nIndex*합니다.  
   
 ```  
 void GetPaneInfo(
@@ -285,16 +285,16 @@ void GetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  인덱스를 검색할 수 있는 정보는 창입니다.  
   
- `nID`  
- 에 대 한 참조는 **UINT** 창의 ID로 설정 된 합니다.  
+ *nID*  
+ UINT 창 ID로 설정 되어 있는지에 대 한 참조입니다.  
   
- `nStyle`  
- 에 대 한 참조는 **UINT** 창 스타일으로 설정 되어 있는 합니다.  
+ *nStyle*  
+ 창 스타일으로 설정 된 UINT에 대 한 참조입니다.  
   
- `cxWidth`  
+ *cxWidth*  
  창의 너비를 설정 하는 정수에 대 한 참조입니다.  
   
 ##  <a name="getpanestyle"></a>  CStatusBar::GetPaneStyle  
@@ -305,11 +305,11 @@ UINT GetPaneStyle(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  인덱스를 검색할 수 있는 스타일은 창입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 로 지정 된 상태 표시줄 창 스타일 `nIndex`합니다.  
+ 로 지정 된 상태 표시줄 창 스타일 *nIndex*합니다.  
   
 ### <a name="remarks"></a>설명  
  창의 스타일 창에서 표시 되는 방식을 결정 합니다.  
@@ -324,10 +324,10 @@ CString GetPaneText(int nIndex) const;  void GetPaneText(int nIndex, CString& rS
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  인덱스를 검색할 수 있는 텍스트는 창입니다.  
   
- `rString`  
+ *rString*  
  에 대 한 참조는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 검색할 텍스트를 포함 하는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -352,7 +352,7 @@ CStatusBarCtrl& GetStatusBarCtrl() const;
  공용 컨트롤에 대 한 자세한 내용은 참조 하십시오. [공용 컨트롤](http://msdn.microsoft.com/library/windows/desktop/bb775493) Windows sdk에서입니다.  
   
 ##  <a name="setindicators"></a>  CStatusBar::SetIndicators  
- 각 표시기의 ID를 배열의 해당 요소에 지정 된 값으로 설정 `lpIDArray`, 각 ID에 의해 지정 된 문자열 리소스를 로드 하 고 표시기의 텍스트를 문자열로 설정 합니다.  
+ 각 표시기의 ID를 배열의 해당 요소에 지정 된 값으로 설정 *lpIDArray*, 각 ID에 의해 지정 된 문자열 리소스를 로드 하 고 표시기의 텍스트를 문자열로 설정 합니다.  
   
 ```  
 BOOL SetIndicators(
@@ -361,11 +361,11 @@ BOOL SetIndicators(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpIDArray`  
+ *lpIDArray*  
  Id의 배열에 대 한 포인터입니다.  
   
- `nIDCount`  
- 가 가리키는 배열의 요소 수가 `lpIDArray`합니다.  
+ *nIDCount*  
+ 가 가리키는 배열의 요소 수가 *lpIDArray*합니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
@@ -382,30 +382,30 @@ void SetPaneInfo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  설정할 스타일은 표시기 창의의 인덱스입니다.  
   
- `nID`  
+ *nID*  
  표시기 창에 대 한 새 ID입니다.  
   
- `nStyle`  
+ *nStyle*  
  표시기 창에 대 한 새 스타일입니다.  
   
- `cxWidth`  
+ *cxWidth*  
  표시기 창에 대 한 새 너비입니다.  
   
 ### <a name="remarks"></a>설명  
  다음과 같은 표시기 스타일 지원 됩니다.  
   
-- **SBPS_NOBORDERS** 창 주위에 3 차원 테두리 없음.  
+- SBPS_NOBORDERS 아니요 3 차원 테두리의 창입니다.  
   
-- **SBPS_POPOUT** 역방향 테두리를 텍스트 "나옵니다."  
+- 텍스트 "나옵니다." 있도록 테두리 SBPS_POPOUT 역방향  
   
-- **SBPS_DISABLED** 텍스트를 그리지 않습니다.  
+- 텍스트를 그리지 SBPS_DISABLED 않습니다.  
   
-- **SBPS_STRETCH** 스트레치 창 사용 하지 않는 공간을 채웁니다. 상태 표시줄 당 하나의 창에는이 스타일이 있을 수 있습니다.  
+- 사용 하지 않는 공간을 채우기 위해 SBPS_STRETCH 스트레치 창입니다. 상태 표시줄 당 하나의 창에는이 스타일이 있을 수 있습니다.  
   
-- **SBPS_NORMAL** 없거나 스트레치, 테두리, 팝아웃 합니다.  
+- SBPS_NORMAL 아니요 스트레치, 테두리, 또는 팝아웃 합니다.  
   
 ##  <a name="setpanestyle"></a>  CStatusBar::SetPaneStyle  
  상태 표시줄의 창 스타일을 설정 하려면이 멤버 함수를 호출 합니다.  
@@ -417,10 +417,10 @@ void SetPaneStyle(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  창 스타일 설정 되어야 하는 인덱스입니다.  
   
- `nStyle`  
+ *nStyle*  
  스타일 스타일 설정 되어야 하는 창입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -429,7 +429,7 @@ void SetPaneStyle(
  상태 표시줄에서 사용할 수 있는 스타일의 목록이 참조 [SetPaneInfo](#setpaneinfo)합니다.  
   
 ##  <a name="setpanetext"></a>  CStatusBar::SetPaneText  
- 가 가리키는 문자열에 창 텍스트를 설정 하려면이 함수를 호출 `lpszNewText`합니다.  
+ 가 가리키는 문자열에 창 텍스트를 설정 하려면이 함수를 호출 *lpszNewText*합니다.  
   
 ```  
 BOOL SetPaneText(
@@ -439,14 +439,14 @@ BOOL SetPaneText(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nIndex`  
+ *nIndex*  
  인덱스 설정 되어야 하는 텍스트가 있는 창입니다.  
   
- `lpszNewText`  
+ *lpszNewText*  
  새 창 텍스트에 대 한 포인터입니다.  
   
  *b 업데이트*  
- 경우 **TRUE**, 창에서 텍스트 설정 된 후 무효화 됩니다.  
+ True 이면 텍스트 설정 된 후의 창 무효화 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
@@ -454,7 +454,7 @@ BOOL SetPaneText(
 ### <a name="remarks"></a>설명  
  호출한 후 `SetPaneText`, 상태 표시줄에 새 텍스트를 표시 하려면 UI 업데이트 처리기를 추가 해야 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_MFCDocView#176](../../mfc/codesnippet/cpp/cstatusbar-class_1.cpp)]  
   
  [!code-cpp[NVC_MFCDocView#177](../../mfc/codesnippet/cpp/cstatusbar-class_2.cpp)]  
