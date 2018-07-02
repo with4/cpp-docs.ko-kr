@@ -1,6 +1,6 @@
 ---
 title: Visual C++ 도구 집합의 문제를 보고하는 방법 | Microsoft Docs
-ms.date: 06/08/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dec9cfac5273469eb37418929d83e273f6ab8612
-ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
+ms.openlocfilehash: f1735f890c0f106d82884a5ad7d63a5a3f0f8920
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35253882"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322370"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Visual C++ 도구 집합 또는 설명서의 문제를 보고하는 방법
 
@@ -358,7 +358,7 @@ C++ 컴파일러의 모듈 기능을 사용하는 경우 전처리된 재현을 
 몇 가지 좋은 방법으로 보고서를 보낼 수 있습니다. Visual Studio의 기본 제공 [문제 도구 보고](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) 또는 [Visual Studio 개발자 커뮤니티](https://developercommunity.visualstudio.com/) 페이지를 사용할 수 있습니다. 이 페이지의 아래쪽에 있는 **제품 피드백** 단추를 선택하여 개발자 커뮤니티 페이지로 직접 이동할 수도 있습니다. 스크린 샷을 캡처하여 개발자 커뮤니티 페이지에 게시하기 위해 보고서를 구성하기 위해 IDE에 내장된 도구를 사용할지 여부 또는 웹 사이트를 직접 사용하려는 경우에 따라 선택이 달라집니다.
 
 > [!NOTE]
-> 보고서를 제출하는 방법에 관계없이 Microsoft는 사용자의 개인 정보를 보호합니다. Microsoft는 모든 데이터 프라이버시 법률 및 규정을 준수할 것을 약속합니다. Microsoft에서 사용자가 보낸 데이터를 처리하는 방법에 대한 자세한 내용은 [Microsoft 개인정보처리방침](https://www.visualstudio.com/dn948229)을 참조하세요.
+> 보고서를 제출하는 방법에 관계없이 Microsoft는 사용자의 개인 정보를 보호합니다. Microsoft는 모든 데이터 프라이버시 법률 및 규정을 준수할 것을 약속합니다. Microsoft에서 사용자가 보낸 데이터를 처리하는 방법에 대한 자세한 내용은 [Microsoft 개인정보처리방침](https://privacy.microsoft.com/privacystatement)을 참조하세요.
 
 ### <a name="use-the-report-a-problem-tool"></a>문제 보고 도구 사용
 

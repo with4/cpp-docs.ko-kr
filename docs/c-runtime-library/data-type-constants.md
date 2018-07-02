@@ -1,7 +1,7 @@
 ---
 title: 데이터 형식 상수 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/25/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -44,6 +44,39 @@ f1_keywords:
 - UCHAR_MAX
 - FLT_EPSILON
 - UINT_MAX
+- LLONG_MIN
+- LLONG_MAX
+- ULLONG_MAX
+- _I8_MIN
+- _I8_MAX
+- _UI8_MAX
+- _I16_MIN
+- _I16_MAX
+- _UI16_MAX
+- _I32_MIN
+- _I32_MAX
+- _UI32_MAX
+- _I64_MIN
+- _I64_MAX
+- _UI64_MAX
+- _I128_MIN
+- _I128_MAX
+- _UI128_MAX
+- SIZE_MAX
+- RSIZE_MAX
+- LDBL_DIG
+- LDBL_EPSILON
+- LDBL_HAS_SUBNORM
+- LDBL_MANT_DIG
+- LDBL_MAX
+- LDBL_MAX_10_EXP
+- LDBL_MAX_EXP
+- LDBL_MIN
+- LDBL_MIN_10_EXP
+- LDBL_MIN_EXP
+- _LDBL_RADIX
+- LDBL_TRUE_MIN
+- DECIMAL_DIG
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -91,72 +124,142 @@ helpviewer_keywords:
 - UINT_MAX constant
 - FLT_MANT_DIG constant
 - SCHAR_MIN constant
+- LLONG_MIN constant
+- LLONG_MAX constant
+- ULLONG_MAX constant
+- _I8_MIN constant
+- _I8_MAX constant
+- _UI8_MAX constant
+- _I16_MIN constant
+- _I16_MAX constant
+- _UI16_MAX constant
+- _I32_MIN constant
+- _I32_MAX constant
+- _UI32_MAX constant
+- _I64_MIN constant
+- _I64_MAX constant
+- _UI64_MAX constant
+- _I128_MIN constant
+- _I128_MAX constant
+- _UI128_MAX constant
+- SIZE_MAX constant
+- RSIZE_MAX constant
 ms.assetid: c0f1c405-0465-41d5-b5ff-e81cdb6f1622
 author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf9a64b81ae90c517e9cd15e796dfb1333c7b08c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 55690bc06ae838ad44e1d0d6f0527974b7859b94
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392148"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952468"
 ---
 # <a name="data-type-constants"></a>데이터 형식 상수
-데이터 형식 상수는 정수 데이터 형식에 대해 허용되는 값의 구현에 따라 다른 값입니다. 아래 나열된 상수는 정수 데이터 형식의 범위를 제공하고 LIMITS.H에 정의됩니다.  
-  
+
+데이터 형식 상수는 정수 및 부동 소수점 데이터 형식에 대해 허용되는 값의 구현에 따라 다른 값입니다.
+
+## <a name="integral-type-constants"></a>정수 형식 상수
+
+이러한 상수는 정수 계열 데이터 형식에 대한 범위를 지정합니다. 이러한 상수를 사용하려면 소스 파일에 limits.h 헤더를 포함시킵니다.
+
+```C
+#include <limits.h>
+```
+
 > [!NOTE]
->  /J 컴파일러 옵션은 기본 `char` 형식을 `unsigned`로 변경합니다.  
-  
-|상수|값|의미|  
-|--------------|-----------|-------------|  
-|**SCHAR_MAX**|127|최대 부호 있는 `char` 값|  
-|**SCHAR_MIN**|-128|최소 부호 있는 `char` 값|  
-|**UCHAR_MAX**|255(0Xff)|최대 `unsigned char` 값|  
-|**CHAR_BIT**|8|`char`의 비트 수|  
-|**USHRT_MAX**|65535(0xffff)|최대 **unsigned short** 값|  
-|**SHRT_MAX**|32767|최대 (부호 있는) **short** 값|  
-|**SHRT_MIN**|-32768|최소 (부호 있는) **short** 값|  
-|**UINT_MAX**|4294967295(0xffffffff)|최대 `unsigned int` 값|  
-|**ULONG_MAX**|4294967295(0xffffffff)|최대 `unsigned long` 값|  
-|**INT_MAX**|2147483647|최대 (부호 있는) `int` 값|  
-|**INT_MIN**|-2147483647-1|최소 (부호 있는) `int` 값|  
-|**LONG_MAX**|2147483647|최대 (부호 있는) **long** 값|  
-|**LONG_MIN**|-2147483647-1|최소 (부호 있는) **long** 값|  
-|**CHAR_MAX**|127(/J 옵션이 사용된 경우 255)|최대 `char` 값|  
-|**CHAR_MIN**|-128(/J 옵션이 사용된 경우 0)|최소 `char` 값|  
-|**MB_LEN_MAX**|2|최대 바이트 수(멀티바이트) `char`|  
-|**_I64_MAX**|9223372036854775807|최대 (부호 있는) __**int64** 값|  
-|**_I64_MIN**|-9223372036854775807-1|최소 (부호 있는) __**int64** 값|  
-|**_UI64_MAX**|0xffffffffffffffff|최대 (부호 없는) __**int64** 값|  
-  
- 다음 상수는 **double** 및 **float** 데이터 형식의 범위와 기타 특성을 제공하며, FLOAT.H에 정의됩니다.  
-  
-|상수|값|설명|  
-|--------------|-----------|-----------------|  
-|**DBL_DIG**|15|전체 자릿수|  
-|**DBL_EPSILON**|2.2204460492503131e-016|1.0+**DBL_EPSILON** !=1.0처럼 가장 작은 수|  
-|**DBL_MANT_DIG**|53|비트 수(가수)|  
-|**DBL_MAX**|1.7976931348623158e+308|최대값|  
-|**DBL_MAX_10_EXP**|308|최대 10진수 지수|  
-|**DBL_MAX_EXP**|1024|최대 이진 지수|  
-|**DBL_MIN**|2.2250738585072014e-308|최소 양수 값|  
-|**DBL_MIN_10_EXP**|(-307)|최소 10진수 지수|  
-|**DBL_MIN_EXP**|(-1021)|최소 이진 지수|  
-|**_DBL_RADIX**|2|지수 기수|  
-|**_DBL_ROUNDS**|1|더하기 반올림: 근사값|  
-|**FLT_DIG**|6|전체 자릿수|  
-|**FLT_EPSILON**|1.192092896e-07F|1.0+**FLT_EPSILON** !=1.0처럼 가장 작은 수|  
-|**FLT_MANT_DIG**|24|비트 수(가수)|  
-|**FLT_MAX**|3.402823466e+38F|최대값|  
-|**FLT_MAX_10_EXP**|38|최대 10진수 지수|  
-|**FLT_MAX_EXP**|128|최대 이진 지수|  
-|**FLT_MIN**|1.175494351e-38F|최소 양수 값|  
-|**FLT_MIN_10_EXP**|(-37)|최소 10진수 지수|  
-|**FLT_MIN_EXP**|(-125)|최소 이진 지수|  
-|**FLT_RADIX**|2|지수 기수|  
-|**FLT_ROUNDS**|1|더하기 반올림: 근사값|  
-  
-## <a name="see-also"></a>참고 항목  
- [전역 상수](../c-runtime-library/global-constants.md)
+> [/J](../build/reference/j-default-char-type-is-unsigned.md) 컴파일러 옵션은 기본 **char** 형식을 **unsigned**로 변경합니다.
+
+|상수|값|설명|
+|--------------|-----------|-------------|
+|**CHAR_BIT**|8|**char**의 비트 수|
+|**SCHAR_MIN**|(-128)|최소 signed **char** 값|
+|**SCHAR_MAX**|127|최대 signed **char** 값|
+|**UCHAR_MAX**|255(0Xff)|최대 **unsigned** **char** 값|
+|**CHAR_MIN**|(-128)(**/J** 옵션이 사용된 경우 0)|최소 **char** 값|
+|**CHAR_MAX**|127(**/J** 옵션이 사용된 경우 255)|최대 **char** 값|
+|**MB_LEN_MAX**|5|멀티바이트 **char**의 최대 바이트 수|
+|**SHRT_MIN**|-32768|최소 signed **short** 값|
+|**SHRT_MAX**|32767|최대 signed **short** 값|
+|**USHRT_MAX**|65535(0xffff)|최대 **unsigned** **short** 값|
+|**INT_MIN**|(-2147483647 - 1)|최소 signed **int** 값|
+|**INT_MAX**|2147483647|최대 signed **int** 값|
+|**UINT_MAX**|4294967295(0xffffffff)|최대 **unsigned** **int** 값|
+|**LONG_MIN**|(-2147483647L - 1)|최소 signed **long** 값|
+|**LONG_MAX**|2147483647L|최대 signed **long** 값|
+|**ULONG_MAX**|4294967295UL (0xfffffffful)|최대 **unsigned** **long** 값|
+|**LLONG_MIN**|(-9223372036854775807LL - 1)|최소 signed **long** **long** 또는 **__int64** 값|
+|**LLONG_MAX**|9223372036854775807LL|최대 signed **long** **long** 또는 **__int64** 값|
+|**ULLONG_MAX**|0xffffffffffffffffull|최대 **unsigned** **long** **long** 값|
+|**_I8_MIN**|(-127i8 - 1)|최소 signed 8비트 값|
+|**_I8_MAX**|127i8|최대 signed 8비트 값|
+|**_UI8_MAX**|0xffui8|최대 unsigned 8비트 값|
+|**_I16_MIN**|(-32767i16 - 1)|최소 signed 16비트 값|
+|**_I16_MAX**|32767i16|최대 signed 16비트 값|
+|**_UI16_MAX**|0xffffui16|최대 unsigned 16비트 값|
+|**_I32_MIN**|(-2147483647i32 - 1)|최소 signed 32비트 값|
+|**_I32_MAX**|2147483647i32|최대 signed 32비트 값|
+|**_UI32_MAX**|0xffffffffui32|최대 unsigned 32비트 값|
+|**_I64_MIN**|(-9223372036854775807 - 1)|최소 signed 64비트 값|
+|**_I64_MAX**|9223372036854775807|최대 signed 64비트 값|
+|**_UI64_MAX**|0xffffffffffffffffui64|최대 unsigned 64비트 값|
+|**_I128_MIN**|(-170141183460469231731687303715884105727i128 - 1)|최소 signed 128비트 값|
+|**_I128_MAX**|170141183460469231731687303715884105727i128|최대 signed 128비트 값|
+|**_UI128_MAX**|0xffffffffffffffffffffffffffffffffui128|최대 unsigned 128비트 값|
+|**SIZE_MAX**|**_WIN64**가 정의된 경우 **_UI64_MAX**와 동일하거나, **UINT_MAX**|최대 기본 정수 크기|
+|**RSIZE_MAX**|(**SIZE_MAX** >> 1)와 동일|최대 보안 라이브러리 정수 크기|
+
+## <a name="floating-point-type-constants"></a>부동 소수점 형식 상수
+
+다음 상수는 **long** **double**, **double** 및 **float** 데이터 형식의 범위와 기타 특성을 제공합니다. 이러한 상수를 사용하려면 소스 파일에 float.h 헤더를 포함시킵니다.
+
+```C
+#include <float.h>
+```
+
+|상수|값|설명|
+|--------------|-----------|-----------------|
+|**DBL_DECIMAL_DIG**|17|반올림한 소수점 이하 자릿수(#)|
+|**DBL_DIG**|15|전체 자릿수|
+|**DBL_EPSILON**|2.2204460492503131e-016|1.0 + **DBL_EPSILON** ! = 1.0인 최솟값|
+|**DBL_HAS_SUBNORM**|1|형식은 비정상(비정규) 숫자를 지원함|
+|**DBL_MANT_DIG**|53|유효 숫자(가수)의 비트 수(#)|
+|**DBL_MAX**|1.7976931348623158e+308|최대값|
+|**DBL_MAX_10_EXP**|308|최대 10진수 지수|
+|**DBL_MAX_EXP**|1024|최대 이진 지수|
+|**DBL_MIN**|2.2250738585072014e-308|최소 정규화된 양수 값|
+|**DBL_MIN_10_EXP**|(-307)|최소 10진수 지수|
+|**DBL_MIN_EXP**|(-1021)|최소 이진 지수|
+|**_DBL_RADIX**|2|지수 기수|
+|**DBL_TRUE_MIN**|4.9406564584124654e-324|최소 비정상 양수 값|
+|**FLT_DECIMAL_DIG**|10|반올림한 소수점 이하 자릿수|
+|**FLT_DIG**|6|전체 자릿수|
+|**FLT_EPSILON**|1.192092896e-07F|1.0 + **FLT_EPSILON** ! = 1.0인 최솟값|
+|**FLT_HAS_SUBNORM**|1|형식은 비정상(비정규) 숫자를 지원함|
+|**FLT_MANT_DIG**|24|유효 숫자(가수)의 비트 수|
+|**FLT_MAX**|3.402823466e+38F|최대값|
+|**FLT_MAX_10_EXP**|38|최대 10진수 지수|
+|**FLT_MAX_EXP**|128|최대 이진 지수|
+|**FLT_MIN**|1.175494351e-38F|최소 정규화된 양수 값|
+|**FLT_MIN_10_EXP**|(-37)|최소 10진수 지수|
+|**FLT_MIN_EXP**|(-125)|최소 이진 지수|
+|**FLT_RADIX**|2|지수 기수|
+|**FLT_TRUE_MIN**|1.401298464e-45F|최소 비정상 양수 값|
+|**LDBL_DIG**|15|전체 자릿수|
+|**LDBL_EPSILON**|2.2204460492503131e-016|1.0 + **LDBL_EPSILON** ! = 1.0인 최솟값|
+|**LDBL_HAS_SUBNORM**|1|형식은 비정상(비정규) 숫자를 지원함|
+|**LDBL_MANT_DIG**|53|유효 숫자(가수)의 비트 수(#)|
+|**LDBL_MAX**|1.7976931348623158e+308|최대값|
+|**LDBL_MAX_10_EXP**|308|최대 10진수 지수|
+|**LDBL_MAX_EXP**|1024|최대 이진 지수|
+|**LDBL_MIN**|2.2250738585072014e-308|최소 정규화된 양수 값|
+|**LDBL_MIN_10_EXP**|(-307)|최소 10진수 지수|
+|**LDBL_MIN_EXP**|(-1021)|최소 이진 지수|
+|**_LDBL_RADIX**|2|지수 기수|
+|**LDBL_TRUE_MIN**|4.9406564584124654e-324|최소 비정상 양수 값|
+|**DECIMAL_DIG**|**DBL_DECIMAL_DIG**와 동일|반올림한 소수점 이하 기본(double) 자릿수|
+
+## <a name="see-also"></a>참고 항목
+
+[전역 상수](../c-runtime-library/global-constants.md)  
