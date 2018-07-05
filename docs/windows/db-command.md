@@ -145,7 +145,7 @@ TCHAR m_state[3] = 'CA';
 ## <a name="example"></a>예제  
  이 샘플에서는 상태 열이 'CA'와 일치하는 테이블에서 성과 이름을 선택하는 명령을 정의합니다. **db_command** 는 마법사에서 생성한 함수(예: [OpenAll 및 CloseAll](../data/oledb/consumer-wizard-generated-methods.md)) 및 `CRowset` 멤버 함수(예: [MoveNext](../data/oledb/crowset-movenext.md))를 호출할 수 있는 행 집합을 만들고 읽습니다.  
   
- 이 코드를 사용하려면 pubs 데이터베이스에 연결되는 고유한 연결 문자열을 제공해야 합니다. 개발 환경에서 이를 수행하는 방법에 대한 자세한 내용은 [How to: Connect to a Database from Server Explorer](http://msdn.microsoft.com/en-us/7c1c3067-0d77-471b-872b-639f9f50db74) 및 [How to: Add New Data Connections in Server Explorer/Database Explorer](http://msdn.microsoft.com/en-us/fb2f513b-ddad-4142-911e-856bba0054c8)를 참조하세요.  
+ 이 코드를 사용하려면 pubs 데이터베이스에 연결되는 고유한 연결 문자열을 제공해야 합니다. 개발 환경에서 이를 수행하는 방법에 대한 자세한 내용은 [방법 : 서버 탐색기에서 데이터베이스에 연결](http://msdn.microsoft.com/en-us/7c1c3067-0d77-471b-872b-639f9f50db74) 및 [방법 : 서버 탐색기 / 데이터베이스 탐색기에서 새 데이터 연결 추가](http://msdn.microsoft.com/en-us/fb2f513b-ddad-4142-911e-856bba0054c8)를 참조하세요.   
   
 ```  
 // db_command.h  
