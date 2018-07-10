@@ -41,9 +41,10 @@ ms.workload:
 - cplusplus
 ms.openlocfilehash: 903ad9d5a44bb455bede52aa3456d03456f54d13
 ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379343"
 ---
 # <a name="microsoft-extensions-to-c-and-c"></a>C 및 C++에 대한 Microsoft 확장명
 Visual C++는 다음과 같이 ANSI C 및 ANSI C++ 표준을 확장합니다.  
