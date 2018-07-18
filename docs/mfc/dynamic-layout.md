@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350851"
 ---
 # <a name="dynamic-layout"></a>동적 레이아웃
 Visual Studio 2015의 mfc를 조정할 수 있는 대화 상자를 만들 수 있습니다 및 레이아웃 크기 변경에 따라 조정 하는 방식을 제어할 수 있습니다. 예를 들어 항상 맨 아래에 유지되도록 대화 상자의 맨 아래 단추를 아래쪽 가장자리에 연결할 수 있습니다. 사용자가 대화 상자를 확장할 때 확장되도록 ListBox, EditBox 및 텍스트 필드와 같은 특정 컨트롤을 설정할 수도 있습니다.  

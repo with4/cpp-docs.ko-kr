@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358492"
 ---
 # <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl 클래스
 이 클래스는 컬렉션 클래스에 의해 사용 되는 메서드를 제공 합니다.  

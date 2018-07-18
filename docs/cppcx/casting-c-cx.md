@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090959"
 ---
 # <a name="casting-ccx"></a>캐스팅(C++/CX)
 Windows 런타임 형식에 적용 된 네 가지 캐스트 연산자: [static_cast 연산자](../cpp/static-cast-operator.md), [dynamic_cast Operator](../cpp/dynamic-cast-operator.md), **safe_cast Operator**, 및 [ reinterpret_cast 연산자](../cpp/reinterpret-cast-operator.md)합니다. `safe_cast` 및 `static_cast` 는 변환이 수행될 수 없을 때 예외를 throw합니다. [static_cast 연산자](../cpp/static-cast-operator.md) 도 컴파일 타임 형식 검사를 수행합니다. `dynamic_cast` 는 형식을 변환하지 못할 경우 `nullptr` 을 반환합니다. `reinterpret_cast` 는 null이 아닌 값을 반환하지만 이는 잘못되었을 수 있습니다. 따라서 캐스팅이 성공할지 여부를 모른다면 `reinterpret_cast` 를 사용하지 않는 것이 좋습니다. 또한 좋습니다 사용 하는 C 스타일 캐스트 C + + /cli CX 동일 하기 때문에 코드 `reinterpret_cast`합니다.  
