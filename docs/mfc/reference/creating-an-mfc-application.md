@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b30b1e0f5e8031609845c78da7558e8b3207862
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d5907006fcff607ad91f9cf579e5bf022c02b8f0
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368815"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026993"
 ---
 # <a name="creating-an-mfc-application"></a>MFC 응용 프로그램 만들기
 MFC 응용 프로그램은 MFC(Microsoft Foundation Class) 라이브러리를 기반으로 하는 실행 가능한 Windows용 응용 프로그램입니다. MFC 응용 프로그램을 만드는 가장 쉬운 방법은 MFC 응용 프로그램 마법사를 사용하는 것입니다.  
@@ -45,22 +45,22 @@ MFC 응용 프로그램은 MFC(Microsoft Foundation Class) 라이브러리를 �
   
 ### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>MFC 응용 프로그램 마법사를 사용하여 MFC 응용 프로그램을 만들려면  
   
-1.  도움말 항목의 지침에 따라 [Visual c + + 응용 프로그램 마법사로 프로젝트 만들기](../../ide/creating-desktop-projects-by-using-application-wizards.md)합니다.  
+1.  [Visual C++ 응용 프로그램 마법사를 사용하여 프로젝트 만들기](../../ide/creating-desktop-projects-by-using-application-wizards.md) 도움말 항목의 지침을 따릅니다.  
   
 2.  에 **새 프로젝트** 대화 상자에서 **MFC 응용 프로그램** 마법사를 열려면 템플릿 창에서.  
   
-3.  사용 하 여 응용 프로그램 설정을 정의 [MFC 응용 프로그램 마법사](../../mfc/reference/mfc-application-wizard.md)합니다.  
+3.  사용 하 여 응용 프로그램 설정을 정의 합니다 [MFC 응용 프로그램 마법사](../../mfc/reference/mfc-application-wizard.md)합니다.  
   
     > [!NOTE]
     >  마법사의 기본 설정을 그대로 유지하려면 이 단계를 건너 뜁니다.  
   
-4.  클릭 **마침** 는 마법사를 닫고 개발 환경에서 새 프로젝트를 엽니다.  
+4.  클릭 **완료** 마법사를 닫고 개발 환경에서 새 프로젝트를 엽니다.  
   
- 프로젝트를 만든 후에 생성 된 파일을 볼 수 있습니다 **솔루션 탐색기**합니다. 마법사에서 프로젝트용으로 만드는 파일에 대한 자세한 내용은 프로젝트 생성 파일인 ReadMe.txt를 참조하세요. 파일 형식에 대 한 자세한 내용은 참조 [Visual c + + 프로젝트용으로 만들어지는 파일 형식](../../ide/file-types-created-for-visual-cpp-projects.md)합니다.  
+ 프로젝트가 만들어진 후에 만들어진 파일을 볼 수 있습니다 **솔루션 탐색기**합니다. 마법사에서 프로젝트용으로 만드는 파일에 대한 자세한 내용은 프로젝트 생성 파일인 ReadMe.txt를 참조하세요. 파일 형식에 대 한 자세한 내용은 참조 하세요. [Visual c + + 프로젝트용으로 만들어지는 파일 형식](../../ide/file-types-created-for-visual-cpp-projects.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [디버깅 준비: Visual c + + Windows 응용 프로그램](http://msdn.microsoft.com/en-us/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
+ [디버깅 준비: Visual c + + Windows 응용 프로그램](http://msdn.microsoft.com/a8bc54de-41a3-464d-9a12-db9bdcbc1ad5)   
  [코드 마법사로 기능 추가](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [속성 페이지](../../ide/property-pages-visual-cpp.md)   
- [응용 프로그램 배포](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [응용 프로그램 배포](http://msdn.microsoft.com/4ff8881d-0daf-47e7-bfe7-774c625031b4)
 

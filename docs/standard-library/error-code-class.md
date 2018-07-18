@@ -29,12 +29,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44de89891f3380f71e4fa590626ba4e275782f9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1e97ce9daf097e85dfc9b7b1b74bfcbf6a149fdd
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33848039"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027234"
 ---
 # <a name="errorcode-class"></a>error_code 클래스
 
@@ -100,12 +100,12 @@ void assign(value_type val, const error_category& _Cat);
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`val`|`error_code`에 저장할 오류 코드 값입니다.|
-|`_Cat`|`error_code`에 저장할 오류 범주입니다.|
+|*val*|`error_code`에 저장할 오류 코드 값입니다.|
+|*_Cat*|`error_code`에 저장할 오류 범주입니다.|
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 `val`을 오류 코드 값 및 `_Cat`에 대한 포인터로 저장합니다.
+멤버 함수는 *val* 오류 코드 값 및에 대 한 포인터 *_Cat*합니다.
 
 ## <a name="category"></a>  error_code::category
 
@@ -164,15 +164,15 @@ error_code(_Enum _Errcode,
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`val`|`error_code`에 저장할 오류 코드 값입니다.|
-|`_Cat`|`error_code`에 저장할 오류 범주입니다.|
-|`_Errcode`|`error_code`에 저장할 열거형 값입니다.|
+|*val*|`error_code`에 저장할 오류 코드 값입니다.|
+|*_Cat*|`error_code`에 저장할 오류 범주입니다.|
+|*_Errcode*|`error_code`에 저장할 열거형 값입니다.|
 
 ### <a name="remarks"></a>설명
 
 첫 번째 생성자는 0 오류 코드 값 및 [generic_category](../standard-library/system-error-functions.md#generic_category)에 대한 포인터를 저장합니다.
 
-두 번째 생성자는 `val`을 오류 코드 값 및 [error_category](http://msdn.microsoft.com/en-us/6fe57a15-63a1-4e79-8af4-6738e43e19c8)에 대한 포인터로 저장합니다.
+두 번째 생성자 저장소 *val* 오류 코드 값 및에 대 한 포인터 [error_category](http://msdn.microsoft.com/6fe57a15-63a1-4e79-8af4-6738e43e19c8)합니다.
 
 세 번째 생성자는 `(value_type)_Errcode`를 오류 코드 값 및 [generic_category](../standard-library/system-error-functions.md#generic_category)에 대한 포인터로 저장합니다.
 
@@ -204,7 +204,7 @@ bool operator==(const error_code& right) const;
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`right`|같은지 테스트할 개체입니다.|
+|*right*|같은지 테스트할 개체입니다.|
 
 ### <a name="return-value"></a>반환 값
 
@@ -226,11 +226,11 @@ bool operator!=(const error_code& right) const;
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`right`|같지 않은지 테스트할 개체입니다.|
+|*right*|같지 않은지 테스트할 개체입니다.|
 
 ### <a name="return-value"></a>반환 값
 
-`error_code` 개체가 `right`에 전달된 `error_code` 개체와 같지 않으면 **true**이고, 그렇지 않으면 **false**입니다.
+**true** 경우는 `error_code` 개체와 같지 않습니다. 합니다 `error_code` 개체가 전달 *오른쪽*이 고 그렇지 않으면 **false**합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -238,7 +238,7 @@ bool operator!=(const error_code& right) const;
 
 ## <a name="op_lt"></a>  error_code::operator&lt;
 
-[error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) 개체가 비교를 위해 전달된 `error_code` 개체보다 작은지 테스트합니다.
+[error_code](http://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) 개체가 비교를 위해 전달된 `error_code` 개체보다 작은지 테스트합니다.
 
 ```cpp
 bool operator<(const error_code& right) const;
@@ -248,7 +248,7 @@ bool operator<(const error_code& right) const;
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`right`|비교할 error_code 개체입니다.|
+|*right*|비교할 error_code 개체입니다.|
 
 ### <a name="return-value"></a>반환 값
 
@@ -260,7 +260,7 @@ bool operator<(const error_code& right) const;
 
 ## <a name="op_eq"></a>  error_code::operator=
 
-새 열거형 값을 [error_code](http://msdn.microsoft.com/en-us/09c6ef90-b6f8-430a-b584-e168716c7e31) 개체에 할당합니다.
+새 열거형 값을 [error_code](http://msdn.microsoft.com/09c6ef90-b6f8-430a-b584-e168716c7e31) 개체에 할당합니다.
 
 ```cpp
 template <class _Enum>
@@ -273,7 +273,7 @@ typename enable_if<is_error_code_enum<_Enum>::value,
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`_Errcode`|`error_code` 개체에 할당할 열거형 값입니다.|
+|*_Errcode*|`error_code` 개체에 할당할 열거형 값입니다.|
 
 ### <a name="return-value"></a>반환 값
 
@@ -297,7 +297,7 @@ explicit operator bool() const;
 
 ### <a name="remarks"></a>설명
 
-연산자는 [value](#value)가 0과 같지 않을 경우에만 `true`로 변환할 수 있는 값을 반환합니다. 반환 형식은 `bool`로만 변환할 수 있고, `void *` 또는 기타 알려진 스칼라 형식으로 변환할 수 없습니다.
+변환할 값을 반환 하는 연산자 **true** 경우에만 [값](#value) 0과 같지 않습니다. 반환 형식으로 변환 될 수만 **bool**, 없습니다 `void *` 또는 기타 알려진된 스칼라 형식입니다.
 
 ## <a name="value"></a>  error_code::value
 
@@ -323,7 +323,7 @@ typedef int value_type;
 
 ### <a name="remarks"></a>설명
 
-이 형식 정의는 `int`의 동의어입니다.
+이 형식 정의 대 한 동의어가 **int**합니다.
 
 ## <a name="see-also"></a>참고자료
 

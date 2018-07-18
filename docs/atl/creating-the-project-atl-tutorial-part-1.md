@@ -1,5 +1,5 @@
 ---
-title: 프로젝트 (ATL 자습서, 1 부) 만들기 | Microsoft Docs
+title: 프로젝트 만들기 (ATL 자습서, 1 부) | Microsoft Docs
 ms.custom: get-started-article
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1aedf7b4112d4c8d4bb5b2a174e93925f5a46ce5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1906ac1ae8c1e526d78690e131a7ca5147283d76
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357720"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025928"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>프로젝트 만들기(ATL 자습서, 1부)
 이 자습서에서는 다각형을 표시하는 ActiveX 개체를 생성하는 비-어트리뷰트 ATL 프로젝트를 단계별로 안내합니다. 생성된 개체는 사용자가 다각형을 구성하는 변의 수를 바꾸고 화면을 새로 고치는 코드가 가능한 옵션을 포함합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "32357720"
   
 2.  **Visual C++ 프로젝트** 폴더를 클릭하고 **ATL 프로젝트**를 선택합니다.  
   
-3.  `Polygon`을 프로젝트 이름으로 입력합니다.  
+3.  형식 *다각형* 프로젝트 이름으로 합니다.  
   
      소스 코드에 대한 위치는 일반적으로 My Documents\Visual Studio Project를 기본값으로 사용하며 새 폴더가 자동으로 생성됩니다.  
   
@@ -48,17 +48,17 @@ ms.locfileid: "32357720"
   
  ATL 프로젝트 마법사는 여러 개의 파일을 생성하여 프로젝트를 만듭니다. 솔루션 탐색기에서 다각형 개체를 확장하여 이러한 파일들을 볼 수 있습니다. 파일은 다음과 같습니다.  
   
-|파일|설명|  
-|----------|-----------------|  
-|Polygon.cpp|`DllMain`, `DllCanUnloadNow`, `DllGetClassObject`, `DllRegisterServer` 및 `DllUnregisterServer`의 구현이 포함되어 있습니다. 프로젝트의 ATL 개체의 목록인 개체 맵의 포함 됩니다. 이 옵션은 처음에 비어 있습니다.|  
-|Polygon.def|이 모듈 정의 파일은 링커에게 DLL에서 필요로 하는 내보내기에 대한 정보를 제공합니다.|  
-|마우스 오른쪽 단추로 Polygon.idl|인터페이스 정의 언어 파일입니다. 개체에 특정 인터페이스를 설명합니다.|  
-|Polygon.rgs|이 레지스트리 스크립트를 사용하면 프로그램의 DLL 등록을 위한 정보가 있습니다.|  
-|Polygon.rc|버전 정보 및 프로젝트 이름이 문자열로 포함된 리소스 파일입니다.|  
-|Resource.h|리소스 파일에 대 한 헤더 파일입니다.|  
-|Polygonps.def|이 모듈 정의 파일은 경계를 넘어 호출하는 프록시와 스텁 코드에서 필요한 내보내기 정보를 링커에 제공합니다.|  
-|stdafx.cpp|`#include`되는 ATL의 헤더 파일입니다.|  
-|stdafx.h|`#include`되는 ATL의 구현 파일입니다.|  
+    |파일|설명|  
+    |----------|-----------------|  
+    |Polygon.cpp|`DllMain`, `DllCanUnloadNow`, `DllGetClassObject`, `DllRegisterServer` 및 `DllUnregisterServer`의 구현이 포함되어 있습니다. 프로젝트의 ATL 개체의 목록인 개체 맵의 포함 됩니다. 이 옵션은 처음에 비어 있습니다.|  
+    |Polygon.def|이 모듈 정의 파일은 링커에게 DLL에서 필요로 하는 내보내기에 대한 정보를 제공합니다.|  
+    |마우스 오른쪽 단추로 Polygon.idl|인터페이스 정의 언어 파일입니다. 개체에 특정 인터페이스를 설명합니다.|  
+    |Polygon.rgs|이 레지스트리 스크립트를 사용하면 프로그램의 DLL 등록을 위한 정보가 있습니다.|  
+    |Polygon.rc|버전 정보 및 프로젝트 이름이 문자열로 포함된 리소스 파일입니다.|  
+    |Resource.h|리소스 파일용 헤더 파일.|  
+    |Polygonps.def|이 모듈 정의 파일은 경계를 넘어 호출하는 프록시와 스텁 코드에서 필요한 내보내기 정보를 링커에 제공합니다.|  
+    |stdafx.cpp|`#include`되는 ATL의 헤더 파일입니다.|  
+    |stdafx.h|`#include`되는 ATL의 구현 파일입니다.|  
   
 1.  솔루션 탐색기에서 마우스 오른쪽 단추로 `Polygon` 프로젝트를 클릭합니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "32357720"
   
  다음 단계에서는 프로젝트에 컨트롤을 추가합니다.  
   
- [2 단계로](../atl/adding-a-control-atl-tutorial-part-2.md)  
+ [2 단계로 이동 합니다.](../atl/adding-a-control-atl-tutorial-part-2.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [자습서](../atl/active-template-library-atl-tutorial.md)
