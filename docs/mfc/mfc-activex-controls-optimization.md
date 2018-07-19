@@ -24,36 +24,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c91f147637b53250f8d373af9950d6205c82d3e3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4459865bc2ba374048622167fadb7bcf8fb97c99
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355313"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028176"
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC ActiveX 컨트롤: 최적화
-이 문서에서는 기술을 더 나은 성능을 위해 ActiveX 컨트롤을 최적화 하기 위해 사용할 수 있습니다.  
+이 문서에는 성능 향상을 위해 ActiveX 컨트롤을 최적화 하 여 기술을 설명 합니다.  
   
- 항목 [설정 Off the 되었을 때 활성화 표시 옵션](../mfc/turning-off-the-activate-when-visible-option.md) 및 [제공 마우스 상호 작용 하는 동안 비활성](../mfc/providing-mouse-interaction-while-inactive.md) 활성화 될 때까지 창을 만들지 컨트롤에 설명 합니다. 항목 [창 없는 활성화 제공](../mfc/providing-windowless-activation.md) 활성화 되는 경우에 한 창을 만들지 마십시오 하는 컨트롤에 설명 합니다.  
+ 항목 [설정 Off the 활성화 되었을 때 표시 옵션](../mfc/turning-off-the-activate-when-visible-option.md) 하 고 [제공 마우스 상호 작용 하는 동안 비활성](../mfc/providing-mouse-interaction-while-inactive.md) 활성화 될 때까지 창을 만들지는 컨트롤에 설명 합니다. 항목 [창 없는 활성화 제공](../mfc/providing-windowless-activation.md) 활성화 되는 경우에 창을 만들지는 컨트롤에 설명 합니다.  
   
- 창에는 OLE 개체에 대 한 두 가지 주요 단점: 개체의 경우를 더 큰 오버 헤드를 인스턴스화 및 컨트롤의 화면 표시에 추가 합니다. 일반적으로 창을 만드는 컨트롤의 생성 시간의 60%를 사용 합니다. 단일 공유 창 (일반적으로 컨테이너의) 및 디스패치 일부 코드를 사용 하 여 컨트롤 성능 손실 없이 일반적으로 동일한 창 서비스를 받습니다. 창 개체에 대 한 대부분 불필요 한 오버 헤드를 합니다.  
+ Windows가 OLE 개체에 대 한 두 가지 주요 단점이: 개체에서 활성 상태인 경우 방지 및 인스턴스화 및 컨트롤의 표시에 큰 오버 헤드를 추가 합니다. 일반적으로 창을 만드는 컨트롤을 만들 때의 60%가 됩니다. 단일 공유 창 (일반적으로 컨테이너의) 및 디스패치 일부 코드를 사용 하 여 컨트롤을 성능 손실 없이 일반적으로 동일한 창 서비스를 받습니다. 창 것 대부분 불필요 한 오버 헤드는 개체에 대 한 합니다.  
   
- 특정 컨테이너에서 컨트롤을 사용할 경우 일부 최적화 성능이 반드시 향상 되지 않습니다. 예를 들어 컨테이너 1996 이전의 해제 되므로이 기능을 구현 해도 오래 된 컨테이너의 이점을 제공 하지 않습니다 창 없는 활성화를 지원 하지 않았습니다. 그러나 거의 모든 컨테이너 컨트롤의 지 속성 코드 최적화는 모든 컨테이너에서 성능을 향상 시킬 하므로 지 속성을 지원 합니다. 한 가지 특정 유형의 컨테이너에서 사용 되는 컨트롤을 사용 하려면 구체적으로, 하려는 알아보고 해당 컨테이너에서 지원 되는 이러한 최적화 합니다. 그러나 일반적으로 마십시오 다양 한 종류의 컨테이너에서 할 수 있는 다양 한 컨트롤 잘 작동할 수 있도록 특정 컨트롤에 적용할 수는 이러한 기법을 구현 합니다.  
+ 일부 최적화 수행 성능이 반드시 향상 되지 컨트롤 특정 컨테이너에서 사용 되는 경우. 예를 들어 컨테이너 1996 이전에 릴리스된이 기능을 구현에서 오래 된 컨테이너의 혜택을 제공 하지 않습니다 있도록 창 없는 활성화를 지원 하지 않았습니다. 그러나 거의 모든 컨테이너 컨트롤의 지 속성 코드 최적화 모든 컨테이너의 성능이 개선 될 가능성이 높습니다 하므로 지 속성을 지원 합니다. 컨트롤은 특정 유형의 컨테이너를 사용 하 여 사용할 데 특히 경우 조사 하려면 해당 컨테이너에서 사용할 수 있는 이러한 최적화. 그러나 일반적으로 하려고 해야 다양 한 컨테이너의에서 컨트롤 잘 작동할 수 있도록 특정 컨트롤에 적용할 수는 이러한 기술 대부분와 구현 합니다.  
   
- 많은 이러한 최적화를 통해 구현할 수는 [MFC ActiveX 컨트롤 마법사](../mfc/reference/mfc-activex-control-wizard.md)의 [제어 설정](../mfc/reference/control-settings-mfc-activex-control-wizard.md) 페이지.  
+ 이러한 최적화를 통해 많은 구현할 수 있습니다는 [MFC ActiveX 컨트롤 마법사](../mfc/reference/mfc-activex-control-wizard.md)의 합니다 [제어 설정을](../mfc/reference/control-settings-mfc-activex-control-wizard.md) 페이지.  
   
 ### <a name="mfc-activex-control-wizard-ole-optimization-options"></a>MFC ActiveX 컨트롤 마법사 OLE 최적화 옵션  
   
-|MFC ActiveX 컨트롤 마법사의 제어 설정|작업|추가 정보|  
+|MFC ActiveX 컨트롤 마법사에서 컨트롤 설정|작업|추가 정보|  
 |-------------------------------------------------------|------------|----------------------|  
-|**표시 되었을 때 활성화** 확인란|지우기|[해제 된 되었을 때 활성화 표시 옵션](../mfc/turning-off-the-activate-when-visible-option.md)|  
+|**표시 되었을 때 활성화** 확인란|지우기|[해제를 활성화 하는 경우 표시 옵션](../mfc/turning-off-the-activate-when-visible-option.md)|  
 |**창 없는 활성화** 확인란|선택|[창 없는 활성화 제공](../mfc/providing-windowless-activation.md)|  
 |**잘리지 않는 장치 컨텍스트** 확인란|선택|[잘리지 않는 장치 컨텍스트 사용](../mfc/using-an-unclipped-device-context.md)|  
 |**깜빡임 없는 활성화** 확인란|선택|[깜빡임 없는 활성화 제공](../mfc/providing-flicker-free-activation.md)|  
 |**마우스 포인터 알림 비활성 상태일 때** 확인란|선택|[비활성 상태 중 마우스 상호 작용 제공](../mfc/providing-mouse-interaction-while-inactive.md)|  
 |**그리기 코드 최적화** 확인란|선택|[컨트롤 그리기 최적화](../mfc/optimizing-control-drawing.md)|  
   
- 이러한 최적화를 구현 하는 멤버 함수에 대 한 자세한 내용은 참조 하십시오. [COleControl](../mfc/reference/colecontrol-class.md)합니다. 멤버 함수를 사용 하 여 같은 나열 됩니다 [창 없는 작업](http://msdn.microsoft.com/en-us/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) 및 [비활성 포인터 처리 함수와](http://msdn.microsoft.com/en-us/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df)합니다.  
+ 이러한 최적화를 구현 하는 멤버 함수에 대 한 자세한 내용은 [COleControl](../mfc/reference/colecontrol-class.md)합니다. 멤버 함수를 사용 하 여 같은 나열 됩니다 [창 작업](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) 하 고 [비활성 포인터 처리 함수](http://msdn.microsoft.com/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df)합니다.  
   
  자세한 내용은 다음을 참조하세요.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "33355313"
   
 -   [창 없는 활성화 제공](../mfc/providing-windowless-activation.md)  
   
--   [해제 된 되었을 때 활성화 표시 옵션](../mfc/turning-off-the-activate-when-visible-option.md)  
+-   [해제를 활성화 하는 경우 표시 옵션](../mfc/turning-off-the-activate-when-visible-option.md)  
   
 -   [비활성 상태 중 마우스 상호 작용 제공](../mfc/providing-mouse-interaction-while-inactive.md)  
   

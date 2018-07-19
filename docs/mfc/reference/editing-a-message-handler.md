@@ -17,19 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dafb80b7497d8ab9acbc01060b67e967d5f8244f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4f82245e8e2fa338ed4abca0b97c53d653427cce
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33375631"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027874"
 ---
 # <a name="editing-a-message-handler"></a>메시지 처리기 편집
-메시지 처리기를 정의 하기 위해 추가 코드를 수정 하거나 멤버 함수 정의에 이동할 수 있습니다.  
+메시지 처리기를 정의한 후에 멤버 함수 정의 추가 하 여 코드를 수정 하려면 이동할 수 있습니다.  
   
- 멤버 함수 정의로 이동 하는 [대화 상자 편집기](../../windows/dialog-editor.md), 처리기가 이미 정의 된 컨트롤을 두 번 클릭 합니다. 이 선택 된 컨트롤의 메시지 처리기가 정의 된 파일을 탐색 합니다.  
+ 멤버 함수 정의로 이동 합니다 [대화 상자 편집기](../../windows/dialog-editor.md), 처리기가 이미 정의 된 컨트롤을 두 번 클릭 합니다. 이 선택한 컨트롤의 메시지 처리기가 정의 된 파일로 이동 합니다.  
   
- 멤버 함수 정의로 이동 하려면 [클래스 뷰](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), 클래스 뷰에서 함수 이름을 두 번 클릭 합니다.  
+ 멤버 함수 정의로 이동할 [클래스 뷰](http://msdn.microsoft.com/8d7430a9-3e33-454c-a9e1-a85e3d2db925), 클래스 뷰에서 함수 이름을 두 번 클릭 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [함수에 메시지 매핑](../../mfc/reference/mapping-messages-to-functions.md)   
