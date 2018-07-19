@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5faf4bb8f2ff416d90311d678543c48d212acdd
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 6e054c23d2137f5802c17731fac86dd64080389e
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36953885"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336476"
 ---
 # <a name="cd2drectu-class"></a>CD2DRectU 클래스
 `D2D1_RECT_U`의 래퍼입니다.  
@@ -48,13 +48,13 @@ class CD2DRectU : public D2D1_RECT_U;
   
 |이름|설명|  
 |----------|-----------------|  
-|[CD2DRectU::IsNull](#isnull)|반환 된 **부울** 유효 하지 않은 데이터 식에 포함 되어 있는지 여부를 나타내는 값 ( **null**).|  
+|[CD2DRectU::IsNull](#isnull)|반환 된 **부울** 식에 유효 하지 않은 데이터 (NULL)이 포함 되어 있는지 여부를 나타내는 값입니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[CD2DRectU::operator CRect](#operator_crect)|변환 `CD2DRectU` 를 `CRect` 개체입니다.|  
+|[CD2DRectU::operator CRect](#operator_crect)|변환 `CD2DRectU` 에 `CRect` 개체입니다.|  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `D2D1_RECT_U`  
@@ -65,7 +65,7 @@ class CD2DRectU : public D2D1_RECT_U;
  **헤더:** afxrendertarget.h  
   
 ##  <a name="cd2drectu"></a>  CD2DRectU::CD2DRectU  
- CD2DRectU CRect 개체에서 개체를 만듭니다.  
+ CRect 개체에서 CD2DRectU 개체를 생성합니다.  
   
 ```  
 CD2DRectU(const CRect& rect);  
@@ -85,16 +85,16 @@ CD2DRectU(
  소스 사각형  
   
  *uLeft*  
- 소스 왼쪽된 좌표  
+ 원본 왼쪽된 좌표  
   
  *uTop*  
- 소스 위쪽 좌표  
+ 원본 위쪽 좌표  
   
  *uRight*  
  원본 오른쪽 좌표  
   
  *uBottom*  
- 소스 아래쪽 좌표입니다.  
+ 원본 아래쪽 좌표입니다.  
   
 ##  <a name="isnull"></a>  CD2DRectU::IsNull  
  식에 유효 하지 않은 데이터 (Null)이 포함 되어 있는지 여부를 나타내는 부울 값을 반환 합니다.  
@@ -104,7 +104,7 @@ BOOL IsNull() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- TRUE 이면 사각형의 위쪽, 왼쪽, 아래쪽 및 오른쪽 값은 모두 0; 그렇지 않으면 FALSE입니다.  
+ 사각형의 위쪽, 왼쪽, 아래쪽 및 오른쪽 값을 0으로 모두 같을 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ##  <a name="operator_crect"></a>  CD2DRectU::operator CRect  
  CD2DRectU CRect 개체로 변환합니다.  

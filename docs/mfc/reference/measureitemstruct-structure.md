@@ -16,15 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff015fdaf9e37d919459cadc8e4c35c4b795b3f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcf4bd41d00f6999b4158f0884c39e7a16d10bcc
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33372272"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336961"
 ---
 # <a name="measureitemstruct-structure"></a>MEASUREITEMSTRUCT 구조체
-`MEASUREITEMSTRUCT` 구조 창에 소유자가 그린 컨트롤 또는 메뉴 항목의 크기에 알립니다.  
+`MEASUREITEMSTRUCT` 구조에 소유자가 그린 컨트롤 또는 메뉴 항목의 크기의 Windows에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,28 +40,28 @@ typedef struct tagMEASUREITEMSTRUCT {
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `CtlType`  
- 컨트롤 형식에 포함 되어 있습니다. 컨트롤 형식의 값은 다음과 같습니다.  
+ *CtlType*  
+ 컨트롤 형식을 포함합니다. 컨트롤 형식의 값은 다음과 같습니다.  
   
-- **ODT_COMBOBOX** 소유자 그리기 콤보 상자  
+- ODT_COMBOBOX 소유자 그리기 콤보 상자  
   
-- **ODT_LISTBOX** 소유자 그리기 목록 상자  
+- ODT_LISTBOX 소유자 그리기 목록 상자  
   
-- **ODT_MENU** 소유자 그리기 메뉴  
+- ODT_MENU 소유자 그리기 메뉴  
   
- `CtlID`  
- 콤보 상자, 목록 상자 또는 단추에 대 한 컨트롤 ID를 포함합니다. 이 멤버는 메뉴에 사용되지 않습니다.  
+ *CtlID*  
+ 단추, 목록 상자 또는 콤보 상자 컨트롤 ID를 포함합니다. 이 멤버는 메뉴에 사용되지 않습니다.  
   
- `itemID`  
- 메뉴에 대 한 메뉴 항목 ID 또는 가변 높이 콤보 상자 또는 목록 상자에 대 한 목록 상자 항목 ID를 포함합니다. 이 멤버는 고정 높이 콤보 상자 또는 목록 상자 또는 단추에 대 한 사용 되지 않습니다.  
+ *itemID*  
+ 메뉴의 메뉴 항목 ID 또는 가변 높이 콤보 상자 또는 목록 상자에 대 한 목록 상자 항목 ID를 포함합니다. 이 멤버는 고정 높이 콤보 상자 또는 목록 상자 또는 단추에 대 한 사용 되지 않습니다.  
   
  *itemWidth*  
  메뉴 항목의 너비를 지정합니다. 소유자 그리기 메뉴 항목의 소유자는 메시지에서 반환 하기 전에이 멤버를 입력 해야 합니다.  
   
- *itemHeight*  
+ *으로 itemHeight*  
  목록 상자 또는 메뉴에 있는 개별 항목의 높이 지정합니다. 소유자 그리기 콤보 상자의 소유자는 메시지에서 반환 하기 전에이 멤버 목록 상자 또는 메뉴 항목 입력 해야 합니다. 목록 상자 항목의 최대 높이 255입니다.  
   
- `itemData`  
+ *itemData*  
  콤보 상자 또는 목록 상자의 경우 이 멤버는 다음 중 하나에 의해 목록 상자에 전달된 값을 포함합니다.  
   
 - [CComboBox::AddString](../../mfc/reference/ccombobox-class.md#addstring)  
@@ -80,7 +80,7 @@ typedef struct tagMEASUREITEMSTRUCT {
   
 - [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)  
   
- 따라서 Windows를 컨트롤에서 사용자 상호 작용을 올바르게 처리할 수 있습니다. 오류에서 적절 한 멤버를 채울는 `MEASUREITEMSTRUCT` 구조에는 컨트롤의이 제대로 작동 하지 것입니다.  
+ 이렇게 하면 Windows 컨트롤을 사용 하 여 사용자 상호 작용을 올바르게 처리할 수 있습니다. 적절 한 멤버를 작성 하는 오류를 `MEASUREITEMSTRUCT` 구조에는 컨트롤의 부적절 한 작업이 실행 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** winuser.h  

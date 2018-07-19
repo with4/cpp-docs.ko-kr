@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 127e1d4d39a79350dc050e1b9fb7636bce63c156
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c5c47f91a3e029175d40bd1a762fb6e6ff527ee7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850628"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955816"
 ---
 # <a name="gslice-class"></a>gslice 클래스
 
@@ -39,9 +39,9 @@ valarray의 다차원 하위 집합을 정의하는 데 사용되는 valarray에
 
 - 시작 인덱스
 
-- **valarray<size_t>** 클래스의 길이 벡터
+- 클래스의 길이 벡터 `valarray<size_t>`입니다.
 
-- **valarray<size_t>** 클래스의 진행 속도 벡터
+- 클래스의 진행 속도 벡터 `valarray<size_t>`입니다.
 
 두 벡터는 길이가 같아야 합니다.
 
@@ -84,21 +84,21 @@ gslice(
 
 ### <a name="parameters"></a>매개 변수
 
-`_StartIndex` Valarray 인덱스 하위 집합에서 첫 번째 요소입니다.
+*_StartIndex* 하위 집합에서 첫 번째 요소의 valarray 인덱스입니다.
 
-`_LenArray` 각 조각에 요소 수를 지정 하는 배열입니다.
+*_LenArray* 각 조각의 요소 수를 지정 하는 배열입니다.
 
-`_IncArray` 각 조각에는 진행 속도 지정 하는 배열입니다.
+*_IncArray* 각 조각에 stride를 지정 하는 배열입니다.
 
 ### <a name="return-value"></a>반환 값
 
-기본 생성자는 시작 인덱스에 대해 0을 저장하고 길이 및 진행 속도 벡터에 대해 0 길이 벡터를 저장합니다. 두 번째 생성자는 시작 인덱스에 대해 `_StartIndex`, 길이 배열에 대해 `_LenArray`, 진행 속도 배열에 대해 `_IncArray`를 저장합니다.
+기본 생성자는 시작 인덱스에 대해 0을 저장하고 길이 및 진행 속도 벡터에 대해 0 길이 벡터를 저장합니다. 두 번째 생성자 저장소 *_StartIndex* 시작 인덱스에 대 한 *_LenArray* 길이 배열에 대해 및 *_IncArray* 진행 속도 배열에 대 한 합니다.
 
 ### <a name="remarks"></a>설명
 
-**gslice**는 각각 동일한 지정된 요소에서 시작되는 valarray의 여러 조각으로 구성된 valarray 하위 집합을 정의합니다. 배열을 사용하여 여러 조각을 정의하는 기능은 `gslice`와 [slice::slice](../standard-library/slice-class.md#slice) 간의 유일한 차이점입니다. 첫 번째 조각에는 인덱스가 `_StartIndex`인 첫 번째 요소, `_LenArray`의 첫 번째 요소로 지정된 요소 수, `_IncArray`의 첫 번째 요소가 제공한 진행 속도가 있습니다. 직교 조각의 다음 set에는 첫 번째 조각이 제공한 첫 번째 요소가 있습니다. `_LenArray`의 두 번째 요소는 요소 수를 지정합니다. 진행 속도는 `_IncArray`의 두 번째 요소에서 제공됩니다. 조각의 세 번째 차원은 2차원 배열의 요소를 시작 요소로 사용하고 비슷하게 진행됩니다.
+**gslice**는 각각 동일한 지정된 요소에서 시작되는 valarray의 여러 조각으로 구성된 valarray 하위 집합을 정의합니다. 배열을 사용하여 여러 조각을 정의하는 기능은 `gslice`와 [slice::slice](../standard-library/slice-class.md#slice) 간의 유일한 차이점입니다. 인덱스를 사용 하 여 첫 번째 요소가 첫 번째 조각은 *_StartIndex*의 첫 번째 요소에 의해 지정 된 요소 수가 *_LenArray*, 및의 첫 번째 요소가 제공한 진행 속도가 *_IncArray* . 직교 조각의 다음 set에는 첫 번째 조각이 제공한 첫 번째 요소가 있습니다. 두 번째는 요소의 *_LenArray* 요소 수를 지정 합니다. Stride의 두 번째 요소에 의해 제공 됩니다 *_IncArray*합니다. 조각의 세 번째 차원은 2차원 배열의 요소를 시작 요소로 사용하고 비슷하게 진행됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // gslice_ctor.cpp
@@ -161,7 +161,7 @@ valarray의 일반 조각 중 각 조각의 요소 수를 지정하는 valarray�
 
 멤버 함수는 저장된 조각 길이를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // gslice_size.cpp
@@ -235,7 +235,7 @@ size_t start() const;
 
 valarray의 일반 조각 시작 인덱스입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // gslice_start.cpp
@@ -298,7 +298,7 @@ valarray<size_t> stride() const;
 
 valarray의 일반 조각 중 각 조각의 요소 간 거리를 지정하는 valarray입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // gslice_stride.cpp

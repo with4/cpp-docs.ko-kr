@@ -96,12 +96,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb5745d5c4ccc495cd508df10f0d36e3729ecf13
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 4a47efc1018f42cbd9f421f1d53566aa134addd6
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36952560"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37336841"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -121,7 +121,7 @@ class CDockSite: public CBasePane
 |이름|설명|  
 |----------|-----------------|  
 |[CDockSite::AddRow](#addrow)||  
-|[CDockSite::AdjustDockingLayout](#adjustdockinglayout)|(재정의 [:: Adjustdockinglayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout).)|  
+|[CDockSite::AdjustDockingLayout](#adjustdockinglayout)|(재정의 [cbasepane:: Adjustdockinglayout](../../mfc/reference/cbasepane-class.md#adjustdockinglayout).)|  
 |[CDockSite::AdjustLayout](#adjustlayout)|(재정의 [cbasepane:: Adjustlayout](../../mfc/reference/cbasepane-class.md#adjustlayout).)|  
 |[CDockSite::AlignDockSite](#aligndocksite)||  
 |[CDockSite::CalcFixedLayout](#calcfixedlayout)|(재정의 [cbasepane:: Calcfixedlayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
@@ -129,7 +129,7 @@ class CDockSite: public CBasePane
 |[CDockSite::CreateEx](#createex)|(재정의 [cbasepane:: Createex](../../mfc/reference/cbasepane-class.md#createex).)|  
 |[CDockSite::CreateRow](#createrow)||  
 |[CDockSite::DockPane](#dockpane)|(재정의 [cbasepane:: Dockpane](../../mfc/reference/cbasepane-class.md#dockpane).)|  
-|[CDockSite::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|(재정의 [:: Doesallowdyninsertbefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|  
+|[CDockSite::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|(재정의 [cbasepane:: Doesallowdyninsertbefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|  
 |[CDockSite::FindRowIndex](#findrowindex)||  
 |[CDockSite::FixupVirtualRects](#fixupvirtualrects)||  
 |[CDockSite::GetDockSiteID](#getdocksiteid)||  
@@ -162,9 +162,9 @@ class CDockSite: public CBasePane
 |[CDockSite::SwapRows](#swaprows)||  
   
 ## <a name="remarks"></a>설명  
- 프레임 워크 만듭니다 `CDockSite` 개체를 호출 하는 경우 자동으로 [CFrameWndEx::EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking)합니다. 도킹 사이트 창은 주 프레임 창에서 클라이언트 영역의 가장자리에 배치됩니다.  
+ 프레임 워크를 만듭니다 `CDockSite` 개체를 호출 하는 경우 자동으로 [CFrameWndEx::EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking)합니다. 도킹 사이트 창은 주 프레임 창에서 클라이언트 영역의 가장자리에 배치됩니다.  
   
- 일반적으로 않아도 때문에 도킹 사이트에서 제공 하는 서비스를 호출 하려면 [CFrameWndEx 클래스](../../mfc/reference/cframewndex-class.md) 이러한 서비스를 처리 합니다.  
+ 일반적으로 수행할 필요가 없습니다 때문에 도킹 사이트에서 제공 하는 서비스 호출 [CFrameWndEx 클래스](../../mfc/reference/cframewndex-class.md) 이러한 서비스를 처리 합니다.  
   
 ## <a name="example"></a>예  
  다음 예제에서는 `CDockSite` 클래스의 개체를 만드는 방법을 보여 줍니다.  
@@ -340,7 +340,7 @@ virtual BOOL DockPaneLeftOf(
  대상 창에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 창이 도킹 되어 있는 성공적으로 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ 창이 도킹 되어 있는 했으면 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -356,7 +356,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 ### <a name="remarks"></a>설명  
   
 ##  <a name="findpanebyid"></a>  CDockSite::FindPaneByID  
- 창에 지정 된 id를 반환합니다.  
+ 지정된 된 ID 사용 하 여 창을 반환 합니다.  
   
 ```  
 CPane* FindPaneByID(UINT nID);
@@ -367,7 +367,7 @@ CPane* FindPaneByID(UINT nID);
  찾을 창의 명령 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 창에는 지정한 명령 ID에 대 한 포인터 또는 `NULL` 창에서을 찾을 수 없는 경우.  
+ 창 없는 경우 NULL을 지정 된 명령 ID를 사용 하 여 창에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -424,7 +424,7 @@ const CObList& GetPaneList() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 읽기 전용 참조 창의 목록은 현재 도킹 막대에 도킹 합니다.  
+ 에 대 한 읽기 전용 참조 창의 목록에서 도킹 모음의 현재 도킹 합니다.  
   
 ##  <a name="isaccessibilitycompatible"></a>  CDockSite::IsAccessibilityCompatible  
 
@@ -614,11 +614,11 @@ virtual CPane* PaneFromPoint(CPoint pt);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] *pt*  
- 한 요소를 화면 좌표를 검색 창에 대 한 합니다.  
+ [in] *(태평양 표준시)*  
+ 시점, 검색할 창에 대 한 화면 좌표입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 지정된 된 지점에 있는 창에 대 한 포인터 또는 `NULL` 없는 창이 지정된 된 지점에 있는 경우.  
+ 창 없는 지정된 된 지점에 있는 경우 NULL을 지정 된 위치에 있는 창에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -742,22 +742,22 @@ virtual BOOL ShowPane(
   
 ### <a name="parameters"></a>매개 변수  
  [in] [out] *pBar*  
- 에 표시 하거나 숨길 수 있는 창에 대 한 포인터입니다.  
+ 표시 하거나 숨길 수의 창에 대 한 포인터입니다.  
   
  [in] *bShow*  
- `TRUE` 창에서 표시할; 임을 지정 하려면 `FALSE` 창이 숨겨져야 되는지 지정 하려면.  
+ 창에 표시할; 임을 지정. 창에 표시 되지 않도록 임을 지정 하려면 FALSE입니다.  
   
  [in] *bDelay*  
- `TRUE` 창 레이아웃 창이 표시 되 고; 후까지 지연 될 해야 지정 하려면 그렇지 않으면 `FALSE`합니다.  
+ 창 레이아웃 창으로 표시 되 후까지 지연 돼야 하는지 지정. 그렇지 않으면 FALSE입니다.  
   
  [in] *bActivate*  
  이 매개 변수는 사용되지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 창에서 성공적으로 숨기 거 나 표시할지 되었습니다. `FALSE` 지정 된 창이 도킹 사이트에 속해 있지 않으면입니다.  
+ 창에 성공적으로 숨기 거 나 표시할지를 하는 경우 TRUE입니다. FALSE 이면 지정한 창이 도킹 사이트에 속하지 않습니다.  
   
 ### <a name="remarks"></a>설명  
- 표시 하거나 숨기려면 도킹 된 창에이 메서드를 호출 합니다. 호출할 필요가 없습니다 일반적으로 `CDockSite::ShowPane` 를 직접 부모 프레임 창에서 또는 기본 창에서 호출 되어 합니다.  
+ 표시 하거나 숨기려면 도킹된 창에이 메서드를 호출 합니다. 일반적으로 호출할 필요가 없습니다 `CDockSite::ShowPane` 를 직접 부모 프레임 창에서 또는 기본 창에서 호출 되었습니다.  
   
 ##  <a name="showrow"></a>  CDockSite::ShowRow  
 

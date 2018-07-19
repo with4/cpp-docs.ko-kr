@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5fbb8ee6852e21912050ae7af9ed291f8ecb104
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 085a9c3926506ce7886b48465bdd2618541d4feb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843914"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956087"
 ---
 # <a name="isconst-class"></a>is_const 클래스
 
@@ -37,13 +37,13 @@ struct is_const;
 
 ### <a name="parameters"></a>매개 변수
 
-`Ty` 형식이 쿼리입니다.
+*Ty* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 `Ty`가 `const-qualified`인 경우 true입니다.
+형식 조건자의 인스턴스 형태인 경우 true *Ty* 는 `const-qualified`합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // std__type_traits__is_const.cpp

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 245391a0625d94fee0a4457f87e7b633ba3d03ca
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2ba0d46f567232c36eb3dcd7845792bdbe8b6eac
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859828"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955737"
 ---
 # <a name="strstream-class"></a>strstream 클래스
 
@@ -77,15 +77,16 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Freezeit` A `bool` 고정 스트림을 여부를 나타내는입니다.
+*_Freezeit*  
+ A **bool** 스트림을 고정할지를 나타내는입니다.
 
 ### <a name="remarks"></a>설명
 
 구성원 함수는 [rdbuf](#rdbuf) -> [freeze](../standard-library/strstreambuf-class.md#freeze)(_ *Freezeit*)를 호출합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
-**freeze**를 사용하는 예제는 [strstreambuf::freeze](../standard-library/strstreambuf-class.md#freeze)를 참조하세요.
+참조 [strstreambuf:: freeze](../standard-library/strstreambuf-class.md#freeze) 사용 하는 예제에 대 한 `freeze`합니다.
 
 ## <a name="pcount"></a>  strstream::pcount
 
@@ -103,7 +104,7 @@ streamsize pcount() const;
 
 구성원 함수는 [rdbuf](#rdbuf) -> [pcount](../standard-library/strstreambuf-class.md#pcount)를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 pcount를 사용하는 샘플은 [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount)를 참조하세요.
 
@@ -121,9 +122,9 @@ strstreambuf *rdbuf() const
 
 ### <a name="remarks"></a>설명
 
-구성원 함수는 **pointer** 형식의 저장된 스트림 버퍼 주소를 [strstreambuf](../standard-library/strstreambuf-class.md)에 반환합니다.
+형식의 저장 된 스트림 버퍼 주소를 반환 하는 멤버 함수 `pointer` 하 [strstreambuf](../standard-library/strstreambuf-class.md)합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `rdbuf`를 사용하는 샘플은 [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount)를 참조하세요.
 
@@ -143,9 +144,9 @@ char *str();
 
 구성원 함수는 [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str)을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
-**str**을 사용하는 샘플은 [strstreambuf::str](../standard-library/strstreambuf-class.md#str)을 참조하세요.
+참조 [strstreambuf:: str](../standard-library/strstreambuf-class.md#str) 사용 하는 샘플에 대 한 `str`합니다.
 
 ## <a name="strstream"></a>  strstream::strstream
 
@@ -161,19 +162,22 @@ strstream(char* ptr,
 
 ### <a name="parameters"></a>매개 변수
 
-`count` 버퍼의 크기입니다.
+*count*  
+ 버퍼의 크기입니다.
 
-`_Mode` 버퍼의 입력 및 출력 모드입니다. 자세한 내용은 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)를 참조하세요.
+*모드 (_m)*  
+ 버퍼의 입력 및 출력 모드입니다. 자세한 내용은 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)를 참조하세요.
 
-`ptr` 버퍼입니다.
+*ptr*  
+ 버퍼입니다.
 
 ### <a name="remarks"></a>설명
 
-두 생성자는 모두 [streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **sb**)를 호출하여 기본 클래스를 초기화합니다. 여기서 **sb**는 [strstreambuf](../standard-library/strstreambuf-class.md) 클래스의 저장된 개체입니다. 또한 첫 번째 생성자는 [strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf)를 호출하여 **sb**를 초기화합니다. 두 번째 생성자는 다음의 두 가지 방법 중 하나로 기본 클래스를 초기화합니다.
+두 생성자를 호출 하 여 기본 클래스를 초기화 [streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **sb**) 여기서 `sb` 클래스의 저장 개체인 [strstreambuf](../standard-library/strstreambuf-class.md)합니다. 첫 번째 생성자는 초기화 `sb` 호출한 [strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf)합니다. 두 번째 생성자는 다음의 두 가지 방법 중 하나로 기본 클래스를 초기화합니다.
 
-- `_Mode` & **ios_base::app**== 0인 경우 `ptr`은 `count` 요소 배열의 첫 번째 요소를 지정해야 합니다. 그러면 생성자가 `strstreambuf`( `ptr`, `count`, `ptr`)를 호출합니다.
+- 하는 경우 `_Mode`  &  **ios_base**= = 0, 한 다음 *ptr* 배열의 첫 번째 요소를 지정 해야 `count` 요소 및 생성자 호출 `strstreambuf`( `ptr`, `count`, `ptr`).
 
-- 그렇지 않은 경우 `ptr`은 첫 번째 요소가 `ptr`에 의해 지정되는 C 문자열이 포함된 count 요소 배열의 첫 번째 요소를 지정해야 합니다. 그러면 생성자가 `strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) )를 호출합니다.
+- 그렇지 않으면 *ptr* 배열의 count 요소 C 문자열이 포함 된 첫 번째 요소가에서 지정 하는 첫 번째 요소를 지정 해야 합니다 *ptr*, 및 생성자 호출 `strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
 
 ## <a name="see-also"></a>참고자료
 

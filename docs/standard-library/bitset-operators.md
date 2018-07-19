@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (bitset)
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3056546e5a543c0058f789e293e0a63a3d53283a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7d01a9ad5ef0b5cc3198231ae2b361e04856449f
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850400"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955022"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt; 연산자
 
@@ -48,15 +48,15 @@ operator&(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 해당 요소가 함께 사용 하도록 비트 두 bitset의 첫 번째 `AND`합니다.
+*왼쪽* 해당 요소가와 비트 결합할 두 bitset 중 첫 번째 `AND`입니다.
 
-`right` 해당 요소가 함께 사용 하도록 비트 같은 두 valarray의 두 번째 `AND`합니다.
+*오른쪽* 해당 요소가와 비트 결합할 두 valarray 중 두 번째 `AND`입니다.
 
 ### <a name="return-value"></a>반환 값
 
-요소가 `left` 및 `right`의 해당 요소에 대한 `AND` 연산을 수행한 결과인 bitset입니다.
+요소가 수행한 결과 bitset를 `AND` 의 해당 요소에 대 한 작업 *왼쪽* 하 고 *오른쪽*합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_and.cpp
@@ -98,19 +98,19 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 형식의 개체 **bitset\<N >** 문자열로 출력 스트림에 삽입 수입니다.
+*오른쪽* 형식의 개체 **bitset\<N >** 문자열로 출력 스트림에 삽입 될 하는 것입니다.
 
 ### <a name="return-value"></a>반환 값
 
-**ostr**에서 비트 시퀀스의 텍스트 표현입니다.
+비트 시퀀스의 텍스트 표현을 `ostr`합니다.
 
 ### <a name="remarks"></a>설명
 
-템플릿 함수는 **operator<<** 를 오버로드하여, bitset을 먼저 문자열로 변환하지 않고 기록할 수 있게 합니다. 템플릿 함수는 다음을 효과적으로 실행합니다.
+템플릿 함수 오버 로드 `operator<<`, bitset을 먼저 문자열로 변환 하지 않고 작성할 수 있도록 합니다. 템플릿 함수는 다음을 효과적으로 실행합니다.
 
 **ostr** << _ *Right*. [to_string](bitset-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_op_insert.cpp
@@ -157,19 +157,19 @@ _Istr,
 
 ### <a name="parameters"></a>매개 변수
 
-`_Istr` 으로 된 bitset에 삽입 되는 입력된 스트림에 입력 된 문자열입니다.
+*_Istr* bitset에 삽입할 입력 스트림에 입력 되는 문자열입니다.
 
-`right` 입력 스트림에서 비트를 수신 하는 bitset 합니다.
+*오른쪽* 입력 스트림에서 비트를 수신 하는 bitset입니다.
 
 ### <a name="return-value"></a>반환 값
 
-템플릿 함수는 `_Istr` 문자열을 반환합니다.
+문자열을 반환 하는 템플릿 함수 *_Istr*합니다.
 
 ### <a name="remarks"></a>설명
 
-템플릿 함수는 **operator>>** 를 오버로드하여 bitset( `str`) 값을 bitset _ *Right*에 저장합니다. 여기서 `str`은 `_Istr`에서 추출된 [basic_string](basic-string-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > **&** 형식의 개체입니다.
+템플릿 함수 오버 로드가 `operator>>` bitset _에 저장할 *오른쪽* 값 bitset (`str`), 여기서 `str` 형식의 개체인 [basic_string](basic-string-class.md)  <  **CharType**를 **Traits**하십시오 **할당자** \< **CharType**>> **&** 에서 추출한 *_Istr*합니다.
 
-템플릿 함수는 `_Istr`에서 요소를 추출하여 다음이 발생할 때까지 bitset에 삽입합니다.
+요소를 추출 하는 템플릿 함수 *_Istr* 발생할 때까지 bitset에 삽입 합니다.
 
 - 모든 비트 요소가 입력 스트림에서 추출되어 bitset에 저장될 때까지
 
@@ -177,7 +177,7 @@ _Istr,
 
 - 0 또는 1이 아닌 입력 요소가 발견될 때까지
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 #include <bitset>
@@ -240,15 +240,15 @@ operator^(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 해당 요소가 함께 사용 하도록 비트 두 bitset의 첫 번째 `EXCLUSIVE-OR`합니다.
+*왼쪽* 해당 요소가와 비트 결합할 두 bitset 중 첫 번째 `EXCLUSIVE-OR`입니다.
 
-`right` 해당 요소가 함께 사용 하도록 비트 같은 두 valarray의 두 번째 `EXCLUSIVE-OR`합니다.
+*오른쪽* 해당 요소가와 비트 결합할 두 valarray 중 두 번째 `EXCLUSIVE-OR`입니다.
 
 ### <a name="return-value"></a>반환 값
 
-요소가 `left` 및 `right`의 해당 요소에 대한 `EXCLUSIVE-OR` 연산을 수행한 결과인 bitset입니다.
+요소가 수행한 결과 bitset를 `EXCLUSIVE-OR` 의 해당 요소에 대 한 작업 *왼쪽* 하 고 *오른쪽*합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_xor.cpp
@@ -290,15 +290,15 @@ operator|(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 해당 요소가 함께 사용 하도록 비트 두 bitset의 첫 번째 `OR`합니다.
+*왼쪽* 해당 요소가와 비트 결합할 두 bitset 중 첫 번째 `OR`입니다.
 
-`right` 해당 요소가 함께 사용 하도록 비트 같은 두 valarray의 두 번째 `OR`합니다.
+*오른쪽* 해당 요소가와 비트 결합할 두 valarray 중 두 번째 `OR`입니다.
 
 ### <a name="return-value"></a>반환 값
 
-요소가 `left` 및 `right`의 해당 요소에 대한 `OR` 연산을 수행한 결과인 bitset입니다.
+요소가 수행한 결과 bitset를 `OR` 의 해당 요소에 대 한 작업 *왼쪽* 하 고 *오른쪽*합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // bitset_or.cpp

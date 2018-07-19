@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 935898197455715160e463d1b272e55ab368eab1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cabc805f826c0e4d89fc9506e6a019632bdcd8c8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841515"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956248"
 ---
 # <a name="container-classconstreference"></a>Container Class::const_reference
 
@@ -37,7 +37,7 @@ typedef T3 const_reference;
 
 ## <a name="remarks"></a>설명
 
-여기서는 지정되지 않은 형식 **T3**의 동의어(일반적으로 **Alloc::const_reference**)로 설명됩니다.
+설명 됩니다 여기서 지정 되지 않은 형식에 대 한 동의어 `T3` (일반적으로 `Alloc::const_reference`).
 
 ## <a name="see-also"></a>참고자료
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (stack)
 - std::operator&lt;= (stack)
 - std::operator== (stack)
-ms.openlocfilehash: 5d3bafd2d3112a2f4155f55a554b6c9c2e351b1f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5c4e2f6b0b86e7b13c917eaf50d7f7dd0a55d9d6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861648"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955763"
 ---
 # <a name="ltstackgt-operators"></a>&lt;stack&gt; 연산자
 
@@ -44,9 +44,9 @@ bool operator!=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 형식의 개체 **스택**합니다.
+*왼쪽* 형식의 개체 `stack`합니다.
 
-`right` 형식의 개체 **스택**합니다.
+*오른쪽* 형식의 개체 `stack`합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -56,7 +56,7 @@ bool operator!=(const stack <Type, Container>& left, const stack <Type, Containe
 
 stack 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소값이 같으면 두 스택은 같은 것입니다. 그렇지 않으면 목록은 같지 않은 것입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // stack_op_me.cpp
@@ -107,9 +107,9 @@ bool operator<(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 형식의 개체 **스택**합니다.
+*왼쪽* 형식의 개체 `stack`합니다.
 
-`right` 형식의 개체 **스택**합니다.
+*오른쪽* 형식의 개체 `stack`합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -119,7 +119,7 @@ bool operator<(const stack <Type, Container>& left, const stack <Type, Container
 
 stack 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 stack 개체 간의 보다 작음 관계는 같지 않은 요소의 첫 번째 쌍 비교를 기반으로 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // stack_op_lt.cpp
@@ -189,9 +189,9 @@ bool operator<=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 형식의 개체 **스택**합니다.
+*왼쪽* 형식의 개체 `stack`합니다.
 
-`right` 형식의 개체 **스택**합니다.
+*오른쪽* 형식의 개체 `stack`합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -201,7 +201,7 @@ bool operator<=(const stack <Type, Container>& left, const stack <Type, Containe
 
 stack 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 stack 개체 간의 작거나 같음 관계는 같지 않은 첫 번째 요소 쌍의 비교를 기반으로 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // stack_op_le.cpp
@@ -254,9 +254,9 @@ bool operator==(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 형식의 개체 **스택**합니다.
+*왼쪽* 형식의 개체 `stack`합니다.
 
-`right` 형식의 개체 **스택**합니다.
+*오른쪽* 형식의 개체 `stack`합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -266,7 +266,7 @@ bool operator==(const stack <Type, Container>& left, const stack <Type, Containe
 
 stack 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 포함된 요소 수가 같고 개별 요소값이 같으면 두 스택은 같은 것입니다. 그렇지 않으면 목록은 같지 않은 것입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // stack_op_eq.cpp
@@ -317,9 +317,9 @@ bool operator>(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 형식의 개체 **스택**합니다.
+*왼쪽* 형식의 개체 `stack`합니다.
 
-`right` 형식의 개체 **스택**합니다.
+*오른쪽* 형식의 개체 `stack`합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -329,7 +329,7 @@ bool operator>(const stack <Type, Container>& left, const stack <Type, Container
 
 stack 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 stack 개체 간의 보다 큼 관계는 같지 않은 요소의 첫 번째 쌍 비교를 기반으로 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // stack_op_gt.cpp
@@ -384,9 +384,9 @@ bool operator>=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 형식의 개체 **스택**합니다.
+*왼쪽* 형식의 개체 `stack`합니다.
 
-`right` 형식의 개체 **스택**합니다.
+*오른쪽* 형식의 개체 `stack`합니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -396,7 +396,7 @@ bool operator>=(const stack <Type, Container>& left, const stack <Type, Containe
 
 stack 개체 간의 비교는 해당 요소의 쌍 비교를 기반으로 합니다. 두 stack 개체 간의 크거나 같음 관계는 같지 않은 첫 번째 요소 쌍의 비교를 기반으로 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // stack_op_ge.cpp

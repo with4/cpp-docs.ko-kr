@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1c1e7c0992822f8f0a47011a873f99a17b2095d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 43bce47084065e10da418ff652f070f41bb79278
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854456"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955622"
 ---
 # <a name="timegetbyname-class"></a>time_get_byname 클래스
 
@@ -50,13 +50,15 @@ protected:
 
 ### <a name="parameters"></a>매개 변수
 
-`_Locname` 명명 된 로캘입니다.
+*_Locname*  
+ 명명된 로캘입니다.
 
-`_Refs` 초기 참조 수입니다.
+*_Refs*  
+ 초기 참조 개수입니다.
 
 ## <a name="requirements"></a>요구 사항
 
-해당 동작은 명명된 로캘 `_Locname`에 따라 결정됩니다. 각 생성자는 [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`)를 통해 해당 기준 개체를 초기화합니다.
+해당 동작은 명명 된 로캘에 따라 결정 됩니다 *_Locname*합니다. 각 생성자는 [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`)를 통해 해당 기준 개체를 초기화합니다.
 
 ## <a name="requirements"></a>요구 사항
 

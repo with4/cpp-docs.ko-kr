@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51a7a9aff4f77444bbec46a9739fae91cac3c104
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: dcb17eeaf09cec63392cb842f790504b28038487
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845933"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955724"
 ---
 # <a name="inputoutput-streams"></a>입력/출력 스트림
 
@@ -32,7 +32,7 @@ ms.locfileid: "33845933"
 
 `basic_iostream`에서 파생은 클래스 템플릿 `basic_fstream`이며, 파일 간에 문자 데이터를 스트림하는 데 사용됩니다.
 
-`basic_fstream`의 문자 관련 특수화를 제공하는 형식 정의도 있습니다. 이러한 형식 정의는 `char`에 기반한 파일 I/O 스트림인 `fstream`과 `wchar_t`에 기반한 파일 I/O 스트림인 `wfstream`입니다. 자세한 내용은 [basic_fstream 클래스](../standard-library/basic-fstream-class.md), [fstream](../standard-library/basic-fstream-class.md) 및 [wfstream](../standard-library/basic-fstream-class.md)을 참조하세요. 이러한 형식 정의를 사용하려면 헤더 파일 \<fstream>을 포함해야 합니다.
+`basic_fstream`의 문자 관련 특수화를 제공하는 형식 정의도 있습니다. 이들은 `fstream`를 기반으로 하는 파일 I/O 스트림인은 **char**, 및 `wfstream`, 기반으로 하는 파일 I/O 스트림인은 **wchar_t**합니다. 자세한 내용은 [basic_fstream 클래스](../standard-library/basic-fstream-class.md), [fstream](../standard-library/basic-fstream-class.md) 및 [wfstream](../standard-library/basic-fstream-class.md)을 참조하세요. 이러한 형식 정의를 사용하려면 헤더 파일 \<fstream>을 포함해야 합니다.
 
 > [!NOTE]
 > `basic_fstream` 개체를 사용하여 파일 I/O를 수행하는 경우 기본 버퍼에 읽기 및 쓰기를 위해 별도로 지정된 위치가 포함되어 있어도 현재 입력 및 현재 출력 위치가 함께 연결되어 있으므로 일부 데이터를 읽으면 출력 위치가 이동합니다.

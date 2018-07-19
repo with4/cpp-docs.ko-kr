@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaa7b01fe4008089cb8a773fc866d62a269ae717
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 20e601608b1a6b0f076040c10e027f7dc78db17a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850511"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955360"
 ---
 # <a name="allocatorchunklist-class"></a>allocator_chunklist 클래스
 
@@ -40,11 +40,11 @@ class allocator_chunklist;
 
 |매개 변수|설명|
 |---------------|-----------------|
-|`Type`|할당자에 의해 할당된 요소 형식입니다.|
+|*Type*|할당자에 의해 할당된 요소 형식입니다.|
 
 ## <a name="remarks"></a>설명
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) 매크로는 다음 문에서 이 클래스를 `name` 매개 변수로서 전달합니다. `ALLOCATOR_DECL(CACHE_CHUNKLIST, SYNC_DEFAULT, allocator_chunklist);`
+합니다 [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl) 매크로로이 클래스를 전달 합니다 *이름* 다음 문에서 매개 변수: `ALLOCATOR_DECL(CACHE_CHUNKLIST, SYNC_DEFAULT, allocator_chunklist);`
 
 ## <a name="requirements"></a>요구 사항
 

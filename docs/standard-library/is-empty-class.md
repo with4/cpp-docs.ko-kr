@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10fe3f311211e3bbde61aef37c9a152ba2105126
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 040121c192d11a54a6142ff565768ba2bc104c33
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843576"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955321"
 ---
 # <a name="isempty-class"></a>is_empty 클래스
 
@@ -37,13 +37,13 @@ struct is_empty;
 
 ### <a name="parameters"></a>매개 변수
 
-`Ty` 형식이 쿼리입니다.
+*Ty* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 `Ty` 형식이 빈 클래스인 경우 true이고, 그렇지 않은 경우 false입니다.
+형식 조건자의 인스턴스 형태인 경우 true 형식을 *Ty* 는 빈 클래스, 그렇지 않으면 false입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // std__type_traits__is_empty.cpp
