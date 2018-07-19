@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4cab540d36f322bbe571a04046ff876d5425a317
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b06bceadf9a274253693dc8f33f3d04e6500115
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028623"
 ---
 # <a name="single-inheritance"></a>단일 상속
 일반적인 상속 형식인 "단일 상속"에서 클래스에는 기본 클래스가 하나만 포함됩니다. 다음 그림에 나와 있는 관계를 살펴보십시오.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
  그림에서 확인할 수 있는 또 한 가지 사항은, `Book`이 `PrintedDocument`에서 파생 클래스인 동시에 기본 클래스라는 것입니다(`PaperbackBook`이 `Book`에서 파생됨). 이러한 클래스 계층 구조의 기본적인 선언이 다음 예제에 나와 있습니다.  
   
-```  
+```cpp 
 // deriv_SingleInheritance.cpp  
 // compile with: /LD  
 class PrintedDocument {};  
@@ -52,21 +53,21 @@ class PaperbackBook : public Book {};
   
  각 클래스가 파생되는 기본 클래스는 파생 클래스의 선언 이전에 선언됩니다. 기본 클래스에 대한 전방 참조 선언만을 제공하는 것으로는 부족하며 완전한 선언을 제공해야 합니다.  
   
- 위의 예제에서는 액세스 지정자 **공용** 사용 됩니다. Public, protected 및 private 상속의 의미에 설명 되어 [멤버 액세스 제어 합니다.](../cpp/member-access-control-cpp.md)  
+ 위의 예제에서는 액세스 지정자 **공용** 사용 됩니다. Public, protected 및 전용 상속의 의미에 설명 된 [멤버 액세스 제어 합니다.](../cpp/member-access-control-cpp.md)  
   
  다음 그림과 같이 클래스 하나를 여러 특정 클래스의 기본 클래스로 사용할 수 있습니다.  
   
- ![방향이 있는 비순환 그래프](../cpp/media/vc38xj2.gif "vc38XJ2")  
+ ![방향성된 비순환 그래프](../cpp/media/vc38xj2.gif "vc38XJ2")  
 방향이 있는 비순환 그래프 샘플  
   
  위의 다이어그램에 나와 있는 "DAG"("방향이 있는 비순환 그래프")에서 일부 클래스는 파생 클래스 두 개 이상의 기본 클래스입니다. 그러나 그 반대의 경우는 성립하지 않습니다. 즉, 지정된 파생 클래스의 직접 기본 클래스는 하나뿐입니다. 그림의 그래프는 "단일 상속" 구조체를 나타냅니다.  
   
 > [!NOTE]
->  방향이 있는 비순환 그래프는 단일 상속만을 고유하게 나타내지 않습니다. 즉, 다중 상속 그래프를 나타내는 데 사용되기도 합니다. 이 항목에 대해서는 [다중 상속](http://msdn.microsoft.com/en-us/3b74185e-2beb-4e29-8684-441e51d2a2ca)합니다.  
+>  방향이 있는 비순환 그래프는 단일 상속만을 고유하게 나타내지 않습니다. 즉, 다중 상속 그래프를 나타내는 데 사용되기도 합니다. 이 항목에서 다룹니다 [다중 상속](http://msdn.microsoft.com/3b74185e-2beb-4e29-8684-441e51d2a2ca)합니다.  
   
  상속에서 파생 클래스는 기본 클래스의 멤버와 새로 추가하는 멤버를 포함합니다. 따라서 파생 클래스는 기본 클래스의 멤버를 참조할 수 있습니다(해당 멤버가 파생 클래스에서 다시 정의되는 경우는 제외). 이러한 멤버가 파생 클래스에서 다시 정의된 경우에는 범위 결정 연산자(`::`)를 사용하여 직접 또는 간접 기본 클래스의 멤버를 참조할 수 있습니다. 다음 예제를 고려해 보세요.  
   
-```  
+```cpp 
 // deriv_SingleInheritance2.cpp  
 // compile with: /EHsc /c  
 #include <iostream>  
@@ -99,7 +100,7 @@ Book::Book( char *name, long pagecount ) {
   
  `Book`의 생성자(`Book::Book`)는 데이터 멤버 `Name`에 액세스할 수 있습니다. 프로그램에서는 `Book` 형식 개체를 만들어 다음과 같이 사용할 수 있습니다.  
   
-```  
+```cpp 
 //  Create a new object of type Book. This invokes the  
 //   constructor Book::Book.  
 Book LibraryBook( "Programming Windows, 2nd Ed", 944 );  
@@ -112,7 +113,7 @@ LibraryBook.PrintNameOf();
   
  위의 예제에 나와 있는 것처럼 클래스 멤버와 상속된 데이터 및 함수는 동일하게 사용됩니다. 클래스 `Book`의 구현에서 `PrintNameOf` 함수를 다시 구현해야 하는 경우 `Document` 클래스에 속하는 함수는 범위 결정(`::`) 연산자를 통해서만 호출할 수 있습니다.  
   
-```  
+```cpp 
 // deriv_SingleInheritance3.cpp  
 // compile with: /EHsc /LD  
 #include <iostream>  
@@ -138,7 +139,7 @@ void Book::PrintNameOf() {
   
  액세스 가능하며 명확한 기본 클래스가 있으면 파생 클래스에 대한 참조 및 포인터를 암시적으로 해당 기본 클래스에 대한 참조 및 포인터로 변환할 수 있습니다. 다음 코드에서는 포인터를 사용하여 이 개념을 보여 줍니다. 참조에도 동일한 원칙이 적용됩니다.  
   
-```  
+```cpp 
 // deriv_SingleInheritance4.cpp  
 // compile with: /W3  
 struct Document {  
