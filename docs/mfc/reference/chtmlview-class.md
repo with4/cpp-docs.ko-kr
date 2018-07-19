@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b44b4b6cb834590c795084fc4ac84337c0fe8a6
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 58a336ef74a3fdcb787dee5feeef2b76e45706bf
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37039351"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027861"
 ---
 # <a name="chtmlview-class"></a>CHtmlView 클래스
 MFC의 문서/뷰 아키텍처 컨텍스트 내에서 WebBrowser 컨트롤의 기능을 제공합니다.  
@@ -243,7 +243,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::GetLocationURL](#getlocationurl)|현재 WebBrowser에 표시되는 리소스의 URL을 검색합니다.|  
 |[CHtmlView::GetMenuBar](#getmenubar)|메뉴 모음을 표시할지 여부를 결정하는 값을 검색합니다.|  
 |[CHtmlView::GetOffline](#getoffline)|컨트롤이 오프라인 상태인지 여부를 결정하는 값을 검색합니다.|  
-|[CHtmlView::GetParentBrowser](#getparentbrowser)|`IDispatch` 인터페이스에 대한 포인터를 검색합니다. 자세한 내용은 [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)을 참조하십시오.|  
+|[CHtmlView::GetParentBrowser](#getparentbrowser)|`IDispatch` 인터페이스에 대한 포인터를 검색합니다. 자세한 내용은 [IDispatch 인터페이스 구현](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)합니다.|  
 |[CHtmlView::GetProperty](#getproperty)|지정된 개체와 연결된 속성의 현재 값을 검색합니다.|  
 |[CHtmlView::GetReadyState](#getreadystate)|웹 브라우저 개체의 준비 상태를 검색합니다.|  
 |[CHtmlView::GetRegisterAsBrowser](#getregisterasbrowser)|WebBrowser 컨트롤이 대상 이름 확인을 위한 최상위 브라우저로 등록되었는지 여부를 나타냅니다.|  
@@ -267,7 +267,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::Navigate2](#navigate2)|URL로 식별된 리소스 또는 전체 경로로 식별된 파일로 이동합니다.|  
 |[CHtmlView::OnBeforeNavigate2](#onbeforenavigate2)|창 또는 프레임셋 요소에 지정된 WebBrowser에서 이동하기 전에 호출됩니다.|  
 |[CHtmlView::OnCommandStateChange](#oncommandstatechange)|웹 브라우저 명령의 사용 상태가 변경되었음을 응용 프로그램에 알리기 위해 호출됩니다.|  
-|[CHtmlView::OnDocumentComplete](#ondocumentcomplete)|문서가 `READYSTATE_COMPLETE` 상태에 도달했음을 응용 프로그램에 알리기 위해 호출됩니다.|  
+|[CHtmlView::OnDocumentComplete](#ondocumentcomplete)|문서가 READYSTATE_COMPLETE 상태가 도달 하는 응용 프로그램에 알리기 위해 호출 됩니다.|  
 |[CHtmlView::OnDocWindowActivate](#ondocwindowactivate)|[IOleInPlaceActiveObject::OnDocWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms687281)의 Internet Explorer 또는 MSHTML 구현에서 호출되며, 컨테이너의 문서 창이 활성화 또는 비활성화될 경우 활성 현재 위치 개체에 알립니다.|  
 |[CHtmlView::OnDownloadBegin](#ondownloadbegin)|이동 작업이 시작되었음을 응용 프로그램에 알리기 위해 호출됩니다.|  
 |[CHtmlView::OnDownloadComplete](#ondownloadcomplete)|이동 작업이 중단 또는 실패한 상태로 마치면 호출됩니다.|  
@@ -369,7 +369,7 @@ class CHtmlView : public CFormView
  **헤더:** afxhtml.h  
   
 ##  <a name="create"></a>  CHtmlView::Create  
- WebBrowser 컨트롤이 나 컨테이너에 대해 만들려는 Internet Explorer 실행이 함수를 호출 합니다.  
+ WebBrowser 컨트롤이 나 컨테이너에 대해 만들려는 Internet Explorer 실행이 멤버 함수를 호출 합니다.  
   
 ```  
 virtual BOOL Create(
@@ -384,25 +384,25 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>매개 변수  
  *lpszClassName*  
- Windows 클래스의 이름을 지정 하는 null로 끝나는 문자열을 가리킵니다. 클래스 이름에 등록 된 모든 이름일 수 있습니다는 [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) 전역 함수 또는 **RegisterClass** Windows 함수입니다. 경우 **NULL**, 미리 정의 된 기본값을 사용 하 여 [CFrameWnd](../../mfc/reference/cframewnd-class.md) 특성입니다.  
+ Windows 클래스의 이름을 지정 하는 null로 끝나는 문자열을 가리킵니다. 클래스 이름을 사용 하 여 등록 된 모든 이름 수는 [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) 전역 함수 또는 `RegisterClass` Windows 함수입니다. NULL 인 경우 미리 정의 된 기본값을 사용 하 여 [CFrameWnd](../../mfc/reference/cframewnd-class.md) 특성입니다.  
   
  *lpszWindowName*  
  창 이름을 나타내는 null로 끝나는 문자열을 가리킵니다.  
   
  *dwStyle*  
- 창 스타일 특성을 지정합니다. 기본적으로는 **WS_VISIBLE** 및 **WS_CHILD** 창 스타일 설정 됩니다.  
+ 창 스타일 특성을 지정합니다. WS_VISIBLE 및 WS_CHILD Windows 스타일은 기본적으로 설정 됩니다.  
   
  *rect*  
- 에 대 한 참조는 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 크기와 창의 위치를 지정 하는 구조입니다. *rectDefault* 크기와 새 창의 위치를 지정 하려면 Windows를 허용 하는 값입니다.  
+ 에 대 한 참조를 [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) 구조 크기와 창의 위치를 지정 합니다. 합니다 *rectDefault* 값 크기와 새 창의 위치를 지정 하는 Windows를 허용 합니다.  
   
  *pParentWnd*  
  컨트롤의 부모 창에 대 한 포인터입니다.  
   
  *nID*  
- 보기의 ID. 기본적으로로 설정 **AFX_IDW_PANE_FIRST**합니다.  
+ 뷰의 ID. 기본적으로 AFX_IDW_PANE_FIRST로 설정 합니다.  
   
  *pContext*  
- 에 대 한 포인터는 [CCreateContext](../../mfc/reference/ccreatecontext-structure.md)합니다. **NULL** 기본적으로 합니다.  
+ 에 대 한 포인터를 [CCreateContext](../../mfc/reference/ccreatecontext-structure.md)합니다. 기본적으로 NULL입니다.  
   
 ##  <a name="createcontrolsite"></a>  CHtmlView::CreateControlSite  
  폼에서 컨트롤을 호스트할 컨트롤 사이트 인스턴스를 만드는 데 사용되는 Overridable입니다.  
@@ -417,19 +417,19 @@ virtual BOOL CreateControlSite(
   
 ### <a name="parameters"></a>매개 변수  
  *pContainer*  
- 에 대 한 포인터는 [COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md) 컨트롤을 포함 하는 개체입니다.  
+ 에 대 한 포인터를 [COleControlContainer](../../mfc/reference/colecontrolcontainer-class.md) 컨트롤이 들어 있는 개체입니다.  
   
  *ppSite*  
- 에 대 한 포인터에 대 한 포인터는 [COleControlSite](../../mfc/reference/colecontrolsite-class.md) 개체를 컨트롤에 대 한 사이트를 제공 합니다.  
+ 에 대 한 포인터에 대 한 포인터를 [COleControlSite](../../mfc/reference/colecontrolsite-class.md) 개체를 컨트롤에 대 한 사이트를 제공 합니다.  
   
  *nID*  
- 호스트 컨트롤의 식별자입니다.  
+ 호스팅할 컨트롤의 식별자입니다.  
   
  *clsid*  
- 호스트 되는 컨트롤의 CLSID  
+ 호스팅할 컨트롤의 CLSID  
   
 ### <a name="return-value"></a>반환 값  
- 성공할 경우 TRUE를 반환 합니다. 실패 한 경우 FALSE입니다.  
+ 성공 하면 TRUE를 반환 합니다. 실패 한 경우 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
  사용자 지정 컨트롤 사이트 클래스의 인스턴스를 반환 하려면이 멤버 함수를 재정의할 수 있습니다.  
@@ -446,22 +446,22 @@ HRESULT ExecFormsCommand(
   
 ### <a name="parameters"></a>매개 변수  
  *dwCommandID*  
- 실행할 명령입니다. 이 명령은에 속해야 합니다는 **CMDSETID3_Forms3** 그룹입니다.  
+ 실행할 명령입니다. 이 명령은 CMDSETID3_Forms3 그룹에 속해야 합니다.  
   
  *pVarIn*  
- 에 대 한 포인터는 **VARIANT** 입력된 인수를 포함 하는 구조입니다. 수 **NULL**합니다.  
+ 에 대 한 포인터를 `VARIANT` 입력된 인수를 포함 하는 구조입니다. NULL 일 수 있습니다.  
   
  *pVarOut*  
- 에 대 한 포인터는 **VARIANT** 명령 출력을 받을 구조입니다. 수 **NULL**합니다.  
+ 에 대 한 포인터를 `VARIANT` 명령 출력을 받는 구조체입니다. NULL 일 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
- 표준 `HRESULT` 값입니다. 가능한 값의 전체 목록을 보려면 [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300) Windows sdk에서입니다.  
+ 표준 HRESULT 값입니다. 가능한 값의 전체 목록은 참조 하세요 [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300) Windows SDK에 있습니다.  
   
 ### <a name="remarks"></a>설명  
- **ExecFormsCommand** 의 동작을 구현 하는 [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300) 메서드.  
+ `ExecFormsCommand` 동작을 구현 합니다 [IOleCommandTarget::Exec](http://msdn.microsoft.com/library/windows/desktop/ms690300) 메서드.  
   
 ##  <a name="execwb"></a>  CHtmlView::ExecWB  
- WebBrowser 또는 Internet Explorer에서 명령을 실행 하려면이 멤버 함수를 호출 합니다.  
+ Internet Explorer 및 WebBrowser에서 명령을 실행 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 void ExecWB(
@@ -476,7 +476,7 @@ void ExecWB(
  실행할 명령입니다.  
   
  *cmdexecopt*  
- 명령을 실행 하는 것에 대 한 집합 옵션입니다.  
+ 명령을 실행 하는 것에 대 한 옵션을 설정 합니다.  
   
  *pvaIn*  
  명령 입력된 인수를 지정 하는 데 사용 되는 variant입니다.  
@@ -485,7 +485,7 @@ void ExecWB(
  명령 출력 인수를 지정 하는 데 사용 되는 variant입니다.  
   
 ### <a name="remarks"></a>설명  
- 참조 [IWebBrowser2::ExecWB](https://msdn.microsoft.com/library/aa752117.aspx) in the Windows SDK입니다.  
+ 참조 [IWebBrowser2::ExecWB](https://msdn.microsoft.com/library/aa752117.aspx) Windows SDK에에서 있습니다.  
   
 ##  <a name="getaddressbar"></a>  CHtmlView::GetAddressBar  
  Internet Explorer 주소 표시줄을 검색 하려면이 멤버 함수를 호출 합니다.  
@@ -495,10 +495,10 @@ BOOL GetAddressBar() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 주소 표시줄에 표시 되 면 0이 아닌 그렇지 않으면 0입니다.  
+ 주소 표시줄에 표시 되 면 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- Internet Explorer에 적용 됩니다. 이 호출에서 WebBrowser 컨트롤을 사용 하면 오류가 반환 됩니다 하지만이 호출을 무시 합니다.  
+ Internet Explorer에 적용 됩니다. WebBrowser 컨트롤을 사용 하 여이 호출을 사용 하는 경우 오류가 없으면 반환 됩니다 있지만이 호출을 무시 합니다.  
   
 ##  <a name="getapplication"></a>  CHtmlView::GetApplication  
  WebBrowser 컨트롤을 포함 하는 응용 프로그램에서 지원 되는 자동화 개체를 검색 하려면이 멤버 함수를 호출 합니다.  
@@ -508,67 +508,67 @@ LPDISPATCH GetApplication() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `IDispatch` 현재 문서 개체의 인터페이스입니다. 자세한 내용은 [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)을 참조하십시오.  
+ 에 대 한 포인터를 `IDispatch` 활성 문서 개체의 인터페이스입니다. 자세한 내용은 [IDispatch 인터페이스 구현](http://msdn.microsoft.com/0e171f7f-0022-4e9b-ac8e-98192828e945)합니다.  
   
 ### <a name="remarks"></a>설명  
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="getbusy"></a>  CHtmlView::GetBusy  
- WebBrowser 컨트롤 작업 탐색 또는 다운로드 중인 작업에 포함 되어 있는지 여부를 확인 하려면이 함수를 호출 합니다.  
+ WebBrowser 컨트롤을 작업 탐색 또는 다운로드 작업에 포함 되어 있는지 여부를 결정 하는이 멤버 함수를 호출 합니다.  
   
 ```  
 BOOL GetBusy() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 웹 브라우저에서 사용 중입니다. 0이 아닌 그렇지 않으면 0입니다.  
+ 웹 브라우저를 사용 중입니다. 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="getcontainer"></a>  CHtmlView::GetContainer  
- 웹 브라우저의 컨테이너에 계산 되는 개체를 검색 하려면이 함수를 호출 합니다.  
+ 웹 브라우저의 컨테이너에 계산 되는 개체를 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 LPDISPATCH GetContainer() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `IDispatch` 현재 문서 개체의 인터페이스입니다.  
+ 에 대 한 포인터를 `IDispatch` 활성 문서 개체의 인터페이스입니다.  
   
 ### <a name="remarks"></a>설명  
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="getfullname"></a>  CHtmlView::GetFullName  
- 현재 Internet Explorer에 표시 되는 파일의 전체 경로 검색 하려면이 멤버 함수를 호출 합니다.  
+ Internet Explorer에 현재 표시 되는 파일의 전체 경로 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 CString GetFullName() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md) 현재 표시 된 파일의 이름과 경로 포함 하는 개체입니다. 없는 경로 파일 이름을 없으면 `GetFullName` 빈 반환 `CString`합니다.  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) 현재 표시 된 파일의 이름과 경로 포함 하는 개체입니다. 없는 경로 파일 이름이 없으면 `GetFullName` 빈 반환 `CString`합니다.  
   
 ### <a name="remarks"></a>설명  
- Internet Explorer에 적용 됩니다. 이 호출에서 WebBrowser 컨트롤을 사용 하면 오류가 반환 됩니다 하지만이 호출을 무시 합니다.  
+ Internet Explorer에 적용 됩니다. WebBrowser 컨트롤을 사용 하 여이 호출을 사용 하는 경우 오류가 없으면 반환 됩니다 있지만이 호출을 무시 합니다.  
   
 ##  <a name="getfullscreen"></a>  CHtmlView::GetFullScreen  
- WebBrowser 컨트롤이 전체 화면 모드 또는 표준 창 모드로 작동 하는지 여부를 확인 하려면이 함수를 호출 합니다.  
+ WebBrowser 컨트롤이 전체 화면 모드 또는 표준 창 모드로 작동 하는지 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 BOOL GetFullScreen() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 전체 화면 모드에서 작동 하는 WebBrowser 경우 0이 아닌 그렇지 않으면 0입니다.  
+ WebBrowser 전체 화면 모드에서 작동 하는 경우 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 전체 화면 모드에서 Internet Explorer 주 창의 최대화 하 고 상태 표시줄, 도구 모음, 메뉴 모음 및 제목 표시줄 숨겨집니다.  
+ 전체 화면 모드에서 Internet Explorer 주 창 최대화 하 고 상태 표시줄, 도구 모음, 메뉴 모음 및 제목 표시줄은 숨겨집니다.  
   
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="getheight"></a>  CHtmlView::GetHeight  
- WebBrowser 컨트롤의 프레임 창의 픽셀 단위 높이 검색 하려면이 멤버 함수를 호출 합니다.  
+ WebBrowser 컨트롤의 프레임 창의 픽셀 높이 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 long GetHeight() const;  
@@ -585,7 +585,7 @@ LPDISPATCH GetHtmlDocument() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `IDispatch` 현재 문서 개체의 인터페이스입니다.  
+ 에 대 한 포인터를 `IDispatch` 활성 문서 개체의 인터페이스입니다.  
   
 ### <a name="remarks"></a>설명  
  Internet Explorer 및 WebBrowser에 적용됩니다.  
@@ -614,47 +614,47 @@ CString GetLocationName() const;
  A [CString](../../atl-mfc-shared/reference/cstringt-class.md) 현재 WebBrowser에 표시 된 리소스의 이름을 포함 하는 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- World Wide Web에는 HTML 페이지 리소스가 사용 하는 경우 이름은 해당 페이지의 제목입니다. 폴더 또는 파일에서 네트워크 또는 로컬 컴퓨터에 리소스가 있으면 UNC 또는 폴더 또는 파일의 전체 경로 이름이입니다.  
+ 리소스에서 World Wide Web의 HTML 페이지로 경우 이름은 해당 페이지의 제목입니다. 경우 리소스를 폴더 또는 네트워크 또는 로컬 컴퓨터에서 파일 이름은 폴더 또는 파일의 전체 경로 또는 UNC입니다.  
   
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="getlocationurl"></a>  CHtmlView::GetLocationURL  
- 현재 WebBrowser 컨트롤에 표시 되는 리소스의 URL을 검색 하려면이 멤버 함수를 호출 합니다.  
+ WebBrowser 컨트롤에 현재 표시 되는 리소스의 URL을 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 CString GetLocationURL() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md) 현재 WebBrowser에 표시 된 리소스의 URL을 포함 하는 개체입니다.  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) 현재 WebBrowser에 표시 되는 리소스의 URL을 포함 하는 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 폴더 또는 파일에서 네트워크 또는 로컬 컴퓨터에 리소스가 있으면 UNC 또는 폴더 또는 파일의 전체 경로 이름이입니다.  
+ 경우 리소스를 폴더 또는 네트워크 또는 로컬 컴퓨터에서 파일 이름은 폴더 또는 파일의 전체 경로 또는 UNC입니다.  
   
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="getmenubar"></a>  CHtmlView::GetMenuBar  
- 메뉴 모음을 표시할지 여부를 확인 하려면이 함수를 호출 합니다.  
+ 메뉴 모음을 표시할지 여부를 결정 하는이 멤버 함수를 호출 합니다.  
   
 ```  
 BOOL GetMenuBar() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 메뉴 모음에 표시 되 면 0이 아닌 그렇지 않으면 0입니다.  
+ 메뉴 모음에 표시 되 면 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="getoffline"></a>  CHtmlView::GetOffline  
- 웹 브라우저 오프 라인으로 작동 하는지 여부를 확인 하려면이 함수를 호출 합니다.  
+ 웹 브라우저를 오프 라인으로 작동 하는지 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 BOOL GetOffline() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 웹 브라우저가 현재; 오프 라인 상태 이면 0이 아닌 그렇지 않으면 0입니다.  
+ 0이 아닌 웹 브라우저는 현재 오프 라인 상태입니다. 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
  Internet Explorer 및 WebBrowser에 적용됩니다.  
@@ -667,13 +667,13 @@ LPDISPATCH GetParentBrowser() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 `IDispatch` WebBrowser 컨트롤의 부모 개체의 인터페이스입니다.  
+ 에 대 한 포인터를 `IDispatch` WebBrowser 컨트롤의 부모 개체의 인터페이스입니다.  
   
 ### <a name="remarks"></a>설명  
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="getproperty"></a>  CHtmlView::GetProperty  
- 이 컨트롤에서 현재 연결 된 속성의 값을 가져오는 함수를 호출 합니다.  
+ 현재 컨트롤과 연결 된 속성의 값을 검색할이 멤버 함수를 호출 합니다.  
   
 ```  
 BOOL GetProperty(
@@ -687,11 +687,11 @@ COleVariant GetProperty(LPCTSTR lpszProperty);
  *lpszProperty*  
  검색할 속성을 포함 하는 문자열에 대 한 포인터입니다.  
   
- *StrValue*  
- 에 대 한 참조는 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 속성의 현재 값을 받는 개체입니다.  
+ *strValue*  
+ 에 대 한 참조를 [CString](../../atl-mfc-shared/reference/cstringt-class.md) 속성의 현재 값을 받는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공적으로 완료 한 경우 0이 아니고 첫 번째 버전 그렇지 않으면 0입니다. 두 번째 버전에는 [COleVariant](../../mfc/reference/colevariant-class.md) 개체입니다.  
+ 성공적으로 완료 되었으면 0이 아닌 첫 번째 버전 그렇지 않으면 0입니다. 두 번째 버전에는 [COleVariant](../../mfc/reference/colevariant-class.md) 개체입니다.  
   
 ### <a name="remarks"></a>설명  
  Internet Explorer 및 WebBrowser에 적용됩니다.  
@@ -710,40 +710,40 @@ READYSTATE GetReadyState() const;
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="getregisterasbrowser"></a>  CHtmlView::GetRegisterAsBrowser  
- WebBrowser 개체 대상 이름 확인을 위한 최상위 브라우저로 등록 되었는지 여부를 확인 하려면이 함수를 호출 합니다.  
+ WebBrowser 개체 대상 이름 확인을 위한 최상위 브라우저로 등록 되었는지 여부를 결정 하는이 멤버 함수를 호출 합니다.  
   
 ```  
 BOOL GetRegisterAsBrowser() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 브라우저는 최상위 브라우저로 등록 되 면 0이 아닌 그렇지 않으면 0입니다.  
+ 브라우저는 최상위 브라우저로 등록 되 면 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="getregisterasdroptarget"></a>  CHtmlView::GetRegisterAsDropTarget  
- WebBrowser 컨트롤이 탐색을 위한 놓기 대상으로 등록 되었는지 여부를 확인 하려면이 함수를 호출 합니다.  
+ WebBrowser 컨트롤이 탐색을 위한 놓기 대상으로 등록 되었는지 여부를 결정 하는이 멤버 함수를 호출 합니다.  
   
 ```  
 BOOL GetRegisterAsDropTarget() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 브라우저; 놓기 대상으로 등록 되 면 0이 아닌 그렇지 않으면 0입니다.  
+ 브라우저는 놓기 대상;로 등록 된 경우 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="getsilent"></a>  CHtmlView::GetSilent  
- WebBrowser 컨트롤에 있는 모든 대화 상자를 표시할 수 있는지 여부를 확인 하려면이 함수를 호출 합니다.  
+ WebBrowser 컨트롤의 모든 대화 상자를 표시할 수 있는지 여부를 결정 하는이 멤버 함수를 호출 합니다.  
   
 ```  
 BOOL GetSilent() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- WebBrowser 컨트롤에서 대화 상자를 표시할 수 없는 경우 0이 아닌 그렇지 않으면 0입니다.  
+ WebBrowser 컨트롤에서 대화 상자를 표시할 수 없는 경우 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
  Internet Explorer 및 WebBrowser에 적용됩니다.  
@@ -760,48 +760,48 @@ BOOL GetSource(CString& strRef);
   
 ### <a name="parameters"></a>매개 변수  
  *refString*  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md) 소스 코드를 보유 합니다.  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) 소스 코드를 보유할입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 함수는 Internet Explorer에서 "소스 보기" 명령에 해당 하는 소스 코드에 반환 되는 `CString`합니다.  
+ 이 함수는 Internet Explorer에서 "소스 보기" 명령에 해당 하는 점을 제외 하 고 소스 코드에 반환 됩니다는 `CString`합니다.  
   
 ##  <a name="getstatusbar"></a>  CHtmlView::GetStatusBar  
- WebBrowser 컨트롤 상태 표시줄을 표시 하는지 여부를 확인 하려면이 함수를 호출 합니다.  
+ WebBrowser 컨트롤 상태 표시줄 표시 되는지 여부를 결정 하는이 멤버 함수를 호출 합니다.  
   
 ```  
 BOOL GetStatusBar() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 상태 표시줄을 표시할 수 있으면 0이 아닌 그렇지 않으면 0입니다.  
+ 0이 아닌 상태 표시줄을 표시할 수 있습니다. 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- Internet Explorer에 적용 됩니다. 이 호출에서 WebBrowser 컨트롤을 사용 하면 오류가 반환 됩니다 하지만이 호출을 무시 합니다.  
+ Internet Explorer에 적용 됩니다. WebBrowser 컨트롤을 사용 하 여이 호출을 사용 하는 경우 오류가 없으면 반환 됩니다 있지만이 호출을 무시 합니다.  
   
 ##  <a name="gettheatermode"></a>  CHtmlView::GetTheaterMode  
- 웹 브라우저 극장 모드 인지 여부를 확인 하려면이 함수를 호출 합니다.  
+ 웹 브라우저 극장 모드에서 인지 여부를 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 BOOL GetTheaterMode() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 웹 브라우저에서 극장 모드에 있으면 0이 아닌 그렇지 않으면 0입니다.  
+ 극장 모드에서 웹 브라우저를 0이 아닌 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 웹 브라우저 극장 모드 인지, 브라우저 주 창을 전체 화면을 채웁니다, 그리고 최소한의 탐색 도구 모음에 있는 도구 모음을 표시 및 상태 표시줄이 화면 오른쪽 위 모서리에 표시 합니다.  
+ 웹 브라우저 극장 모드의 경우 브라우저 창의 전체 화면을 채우는, 최소한의 탐색 도구를 사용 하 여 도구 모음 표시 되 고 상태 표시줄 화면의 오른쪽 위 모서리에 표시 됩니다.  
   
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="gettoolbar"></a>  CHtmlView::GetToolBar  
- 도구 모음 표시 되는지 확인 하려면이 함수를 호출 합니다.  
+ 도구 모음 표시 되는지 여부를 결정 하는이 멤버 함수를 호출 합니다.  
   
 ```  
 int GetToolBar() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 도구 모음 표시 되는지를 나타내는 값입니다. 도구 모음 표시 되 면 0이 아닌 그렇지 않으면 0입니다.  
+ 도구 모음 표시 되는지 여부를 나타내는 값입니다. 도구 모음 표시 되 면 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ##  <a name="gettop"></a>  CHtmlView::GetTop  
  WebBrowser 컨트롤의 주 창의 위쪽 가장자리의 화면 좌표를 검색 하려면이 멤버 함수를 호출 합니다.  
@@ -811,13 +811,13 @@ long GetTop() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 주 창의 위쪽 가장자리의 화면 좌표를 수신 하는 변수의 주소입니다.  
+ 주 창의 위쪽 가장자리의 화면 좌표를 받는 변수의 주소입니다.  
   
 ### <a name="remarks"></a>설명  
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="gettoplevelcontainer"></a>  CHtmlView::GetTopLevelContainer  
- Internet Explorer WebBrowser 컨트롤의 최상위 컨테이너 인지 확인 하려면이 멤버 함수를 호출 합니다.  
+ Internet Explorer WebBrowser 컨트롤의 최상위 컨테이너 인지 여부를 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 BOOL GetTopLevelContainer() const;  
@@ -830,27 +830,27 @@ BOOL GetTopLevelContainer() const;
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="gettype"></a>  CHtmlView::GetType  
- 포함 된 현재 문서의 형식 이름을 검색 하려면이 멤버 함수를 호출 합니다.  
+ 활성 문서 포함된의 형식 이름을 검색 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 CString GetType() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md) 포함 된 현재 문서의 형식 이름을 포함 하는 개체입니다.  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) 활성 문서 포함된의 형식 이름을 포함 하는 개체입니다.  
   
 ### <a name="remarks"></a>설명  
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="getvisible"></a>  CHtmlView::GetVisible  
- 포함 된 개체가 표시 되는지 확인 하려면이 함수를 호출 합니다.  
+ 포함된 된 개체 표시 되는지 확인 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 BOOL GetVisible() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 개체가 표시 되 면 0이 아닌 그렇지 않으면 0입니다.  
+ 개체 표시 되 면 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
  Internet Explorer 및 WebBrowser에 적용됩니다.  
@@ -863,7 +863,7 @@ long GetWidth() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 픽셀 단위로 창의 현재 너비입니다.  
+ 픽셀, 창의 현재 너비입니다.  
   
 ##  <a name="goback"></a>  CHtmlView::GoBack  
  기록 목록에서 이전 버전과 한 항목을 이동합니다.  
@@ -876,7 +876,7 @@ void GoBack();
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="goforward"></a>  CHtmlView::GoForward  
- 기록 목록에서 한 항목을 앞으로 이동합니다.  
+ 기록 목록에서 앞으로 하나씩을 이동합니다.  
   
 ```  
 void GoForward();
@@ -893,7 +893,7 @@ void GoHome();
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="gosearch"></a>  CHtmlView::GoSearch  
- 현재 검색 페이지 Internet Explorer 인터넷 옵션 대화 상자 또는 인터넷 속성 대화 상자에 지정 된 대로 제어판에서 액세스를 탐색 합니다.  
+ 현재 검색 페이지에 Internet Explorer 인터넷 옵션 대화 상자 또는 인터넷 속성 대화 상자에 지정 된 대로 제어판에서 액세스를 탐색 합니다.  
   
 ```  
 void GoSearch();
@@ -938,28 +938,28 @@ void Navigate(
   
 ### <a name="parameters"></a>매개 변수  
  *URL*  
- 찾을 URL을 포함 하는 호출자가 할당 문자열 또는 표시할 파일의 전체 경로입니다.  
+ 탐색할 URL을 포함 하는 호출자에 게 할당 된 문자열 또는 표시할 파일의 전체 경로입니다.  
   
  *dwFlags*  
- 기록 목록에 리소스를 추가할 것인지를에 대 한 읽기 또는 쓰기 캐시를 사용할지 여부 및 리소스를 새 창에 표시할지 여부를 지정 하는 변수의 플래그입니다. 변수에서 정의 된 값의 조합 수 있습니다는 [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) 열거 합니다.  
+ 리소스 기록 목록에 추가할지 여부를, 여부에 대 한 읽기 또는 쓰기 캐시 및 리소스를 새 창에 표시할지 여부를 지정 하는 변수는 플래그입니다. 변수에서 정의 된 값의 조합 수를 [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) 열거형입니다.  
   
  *lpszTargetFrameName*  
  리소스를 표시 하는 프레임의 이름을 포함 하는 문자열에 대 한 포인터입니다.  
   
  *lpszHeaders*  
- 서버에 보낼 HTTP 헤더를 지정 하는 값에 대 한 포인터입니다. 이러한 헤더는 기본 Internet Explorer 헤더에 추가 됩니다. 헤더는 서버는 서버 또는 상태 코드에 전달 되는 데이터 형식에 필요한 작업으로 등의 작업을 지정할 수 있습니다. 이 매개 변수는 *URL* HTTP URL이 아닙니다.  
+ 서버에 보낼 HTTP 헤더를 지정 하는 값에 대 한 포인터입니다. 이러한 헤더는 기본 Internet Explorer 헤더에 추가 됩니다. 헤더, 서버 또는 상태 코드에 전달 되는 데이터 형식의 서버의 필요한 작업으로 등을 지정할 수 있습니다. 이 매개 변수가 무시 됩니다 *URL* 는 HTTP URL이 아닙니다.  
   
  *lpvPostData*  
- 보낼 HTTP POST 트랜잭션을 사용 하 여 데이터에 대 한 포인터입니다. 예를 들어 POST 트랜잭션이 HTML 폼에 의해 수집 된 데이터 전송에 사용 됩니다. 이 매개 변수는 모든 게시 데이터를 지정 하지 않는 경우 **탐색** HTTP GET 트랜잭션을 발급 합니다. 이 매개 변수는 *URL* HTTP URL이 아닙니다.  
+ HTTP POST 트랜잭션과 보낼 데이터에 대 한 포인터입니다. 예를 들어 HTML 형식에서 수집 된 데이터를 보낼 POST 트랜잭션이 사용 됩니다. 이 매개 변수는 모든 게시 데이터를 지정 하지 않는 경우 `Navigate` 는 HTTP GET 트랜잭션을 실행 합니다. 이 매개 변수가 무시 됩니다 *URL* 는 HTTP URL이 아닙니다.  
   
  *dwPostDataLen*  
- HTTP POST 트랜잭션을 사용 하 여 보낼 데이터입니다. 예를 들어 POST 트랜잭션이 HTML 폼에 의해 수집 된 데이터 전송에 사용 됩니다. 이 매개 변수는 모든 게시 데이터를 지정 하지 않는 경우 **탐색** HTTP GET 트랜잭션을 발급 합니다. 이 매개 변수는 *URL* HTTP URL이 아닙니다.  
+ HTTP POST 트랜잭션과 보낼 데이터입니다. 예를 들어 HTML 형식에서 수집 된 데이터를 보낼 POST 트랜잭션이 사용 됩니다. 이 매개 변수는 모든 게시 데이터를 지정 하지 않는 경우 `Navigate` 는 HTTP GET 트랜잭션을 실행 합니다. 이 매개 변수가 무시 됩니다 *URL* 는 HTTP URL이 아닙니다.  
   
 ### <a name="remarks"></a>설명  
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="navigate2"></a>  CHtmlView::Navigate2  
- 이 URL로 식별 되는 리소스 또는 전체 경로로 식별 된 파일로 이동할 수 함수를 호출 합니다.  
+ URL로 식별 되는 리소스 또는 전체 경로로 식별 된 파일을 이동 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 void Navigate2(
@@ -987,31 +987,31 @@ void Navigate2(
   
 ### <a name="parameters"></a>매개 변수  
  *pIDL*  
- 에 대 한 포인터는 [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) 구조입니다.  
+ 에 대 한 포인터를 [ITEMIDLIST](http://msdn.microsoft.com/library/windows/desktop/bb773321) 구조입니다.  
   
  *dwFlags*  
- 기록 목록에 리소스를 추가할 것인지를에 대 한 읽기 또는 쓰기 캐시를 사용할지 여부 및 리소스를 새 창에 표시할지 여부를 지정 하는 변수의 플래그입니다. 변수에서 정의 된 값의 조합 수 있습니다는 [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) 열거 합니다.  
+ 리소스 기록 목록에 추가할지 여부를, 여부에 대 한 읽기 또는 쓰기 캐시 및 리소스를 새 창에 표시할지 여부를 지정 하는 변수는 플래그입니다. 변수에서 정의 된 값의 조합 수를 [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) 열거형입니다.  
   
  *lpszTargetFrameName*  
  리소스를 표시 하는 프레임의 이름을 포함 하는 문자열에 대 한 포인터입니다.  
   
  *lpszURL*  
- URL을 포함 하는 문자열에 대 한 포인터입니다.  
+ URL이 포함 된 문자열에 대 한 포인터입니다.  
   
  *lpvPostData*  
- HTTP POST 트랜잭션을 사용 하 여 보낼 데이터입니다. 예를 들어 POST 트랜잭션이 HTML 폼에 의해 수집 된 데이터 전송에 사용 됩니다. 이 매개 변수는 모든 게시 데이터를 지정 하지 않는 경우 `Navigate2` HTTP GET 트랜잭션을 발급 합니다. 이 매개 변수는 *URL* HTTP 또는 HTTPS URL이 아닙니다.  
+ HTTP POST 트랜잭션과 보낼 데이터입니다. 예를 들어 HTML 형식에서 수집 된 데이터를 보낼 POST 트랜잭션이 사용 됩니다. 이 매개 변수는 모든 게시 데이터를 지정 하지 않는 경우 `Navigate2` 는 HTTP GET 트랜잭션을 실행 합니다. 이 매개 변수가 무시 됩니다 *URL* HTTP 또는 HTTPS URL가 아닙니다.  
   
  *dwPostDataLen*  
- 가리키는 데이터의 길이 (바이트)는 *lpvPostData* 매개 변수입니다.  
+ 가리키는 데이터의 길이 (바이트) *lpvPostData* 매개 변수입니다.  
   
  *lpszHeaders*  
- 서버에 보낼 HTTP 또는 HTTPS 헤더를 지정 하는 값에 대 한 포인터입니다. 이러한 헤더는 기본 Internet Explorer 헤더에 추가 됩니다. 헤더는 서버는 서버 또는 상태 코드에 전달 되는 데이터 형식에 필요한 작업으로 등의 작업을 지정할 수 있습니다. 이 매개 변수는 *URL* HTTP 또는 HTTPS URL이 아닙니다.  
+ 서버에 보낼 HTTP 또는 HTTPS 헤더를 지정 하는 값에 대 한 포인터입니다. 이러한 헤더는 기본 Internet Explorer 헤더에 추가 됩니다. 헤더, 서버 또는 상태 코드에 전달 되는 데이터 형식의 서버의 필요한 작업으로 등을 지정할 수 있습니다. 이 매개 변수가 무시 됩니다 *URL* HTTP 또는 HTTPS URL가 아닙니다.  
   
  *baPostedData*  
- 에 대 한 참조는 [CByteArray](../../mfc/reference/cbytearray-class.md) 개체입니다.  
+ 에 대 한 참조를 [CByteArray](../../mfc/reference/cbytearray-class.md) 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 멤버 함수 확장는 **탐색** 멤버 함수는 매개 변수도 표현 되는 데스크톱 및 내 컴퓨터와 같은 특정 폴더에서 인터넷 검색을 지원 하 여 *pIDL*합니다.  
+ 이 멤버 함수를 확장 합니다 `Navigate` 매개 변수에서 나타내는 데스크톱 및 내 컴퓨터와 같은 특수 폴더, 검색을 지원 하 여 멤버 함수 *pIDL*합니다.  
   
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
@@ -1019,7 +1019,7 @@ void Navigate2(
  [!code-cpp[NVC_MFCHtmlHttp#7](../../mfc/reference/codesnippet/cpp/chtmlview-class_1.cpp)]  
   
 ##  <a name="onbeforenavigate2"></a>  CHtmlView::OnBeforeNavigate2  
- 이 멤버 함수를 웹 브라우저에서 이동 하기 전에 발생 한 이벤트 프레임 워크에서 호출 됩니다.  
+ 이 멤버 함수는 이벤트가 웹 브라우저에서 이동 하기 전에 발생 하는 프레임 워크에서 호출 됩니다.  
   
 ```  
 virtual void OnBeforeNavigate2(
@@ -1033,22 +1033,22 @@ virtual void OnBeforeNavigate2(
   
 ### <a name="parameters"></a>매개 변수  
  *lpszURL*  
- 탐색할 URL을 포함 하는 문자열에 대 한 포인터입니다.  
+ 이동 URL이 포함 된 문자열에 대 한 포인터입니다.  
   
  *nFlags*  
  나중에 사용하기 위해 예약되어 있습니다.  
   
  *lpszTargetFrameName*  
- 리소스를 표시 하는 프레임의 이름을 포함 하는 문자열 또는 **NULL** 리소스 대상이 명명 된 프레임이 없습니다.  
+ 리소스를 표시 하거나 명명 된 프레임이 없는 리소스를 대상으로 하는 경우 NULL 프레임의 이름을 포함 하는 문자열입니다.  
   
  *baPostedData*  
- 에 대 한 참조는 `CByteArray` HTTP POST 트랜잭션이 사용 되는 경우 서버에 보낼 데이터를 포함 하는 개체입니다.  
+ 에 대 한 참조를 `CByteArray` HTTP POST 트랜잭션을 사용 하는 경우 서버에 보낼 데이터가 들어 있는 개체입니다.  
   
  *lpszHeaders*  
- (HTTP Url에만 해당) 서버로 보낼 추가 HTTP 헤더를 포함 하는 문자열에 대 한 포인터입니다. 헤더는 서버는 서버 또는 상태 코드에 전달 되는 데이터 형식에 필요한 작업으로 등의 작업을 지정할 수 있습니다.  
+ (HTTP Url에만 해당) 서버로 보낼 추가 HTTP 헤더를 포함 하는 문자열에 대 한 포인터입니다. 헤더, 서버 또는 상태 코드에 전달 되는 데이터 형식의 서버의 필요한 작업으로 등을 지정할 수 있습니다.  
   
  *pbCancel*  
- 취소 플래그에 대 한 포인터입니다. 응용 프로그램 탐색 작업을 취소 하거나 계속할 수 있도록 허용 하 0 0이 아닌 값을이 매개 변수를 설정할 수 있습니다.  
+ 취소 플래그에 대 한 포인터입니다. 응용 프로그램 탐색 작업을 취소 하거나 계속할 수 있도록 하는 0 0이 아닌 값을이 매개 변수를 설정할 수 있습니다.  
   
 ##  <a name="oncommandstatechange"></a>  CHtmlView::OnCommandStateChange  
  이 멤버 함수는 웹 브라우저 명령의 활성화 상태가 변경 되었음을 응용 프로그램에 알리기 위해 프레임 워크에서 호출 됩니다.  
@@ -1064,10 +1064,10 @@ virtual void OnCommandStateChange(
  활성화 상태가 변경 된 명령 식별자입니다.  
   
  *bEnable*  
- 활성화 된 상태입니다. 이 매개 변수는 명령이 활성화 되거나 비활성화 된 경우 0 경우 0이 아닌 값입니다.  
+ 설정 된 상태입니다. 이 매개 변수는 명령을 활성화 또는 비활성화 된 경우 0 경우 0이 아닌 값입니다.  
   
 ##  <a name="ondocumentcomplete"></a>  CHtmlView::OnDocumentComplete  
- 이 멤버 함수는 문서에 도달 하는 응용 프로그램에 알리기 위해 프레임 워크에서 호출 됩니다는 `READYSTATE_COMPLETE` 상태입니다.  
+ 이 멤버 함수는 문서가 READYSTATE_COMPLETE 상태가 도달 하는 응용 프로그램에 알리기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
 virtual void OnDocumentComplete(LPCTSTR lpszURL);
@@ -1075,15 +1075,15 @@ virtual void OnDocumentComplete(LPCTSTR lpszURL);
   
 ### <a name="parameters"></a>매개 변수  
  *lpszURL*  
- UNC URL로 계산 되는 문자열에 대 한 포인터는 이름 또는 탐색 된 PIDL (식별자 목록 항목에 포인터) 파일입니다.  
+ UNC URL로 계산 되는 문자열에 대 한 포인터에는 이름 또는 탐색 된 PIDL (식별자 목록 항목에 포인터) 파일입니다.  
   
 ### <a name="remarks"></a>설명  
- 모든 프레임 발생 하는 각 프레임 하지만이 이벤트는 발생 한 [OnDownloadBegin](#ondownloadbegin) 해당 이벤트는 발생 하는 `OnDocumentComplete` 이벤트.  
+ 모든 프레임에 발생 하는 각 프레임 하지만이 이벤트를 발생 합니다는 [OnDownloadBegin](#ondownloadbegin) 해당 이벤트는 발생 `OnDocumentComplete` 이벤트입니다.  
   
- URL을 가리키는 *lpszURL* 이 URL은 정규화 된와 정규화 된 URL 때문에 브라우저로 이동 하도록 지시 받고 된 URL에서 다를 수 있습니다. 예를 들어, "www.microsoft.com"에 대 한 호출을의 URL을 지정 하는 응용 프로그램 [탐색](#navigate) 또는 [Navigate2](#navigate2), 전달한 URL `OnNavigateComplete2` 됩니다 "http://www.microsoft.com/"입니다. 또한 서버가 다른 URL로 브라우저를 리디렉션 리디렉션된 URL 여기에 반영 됩니다.  
+ URL에 나타난 *lpszURL* 하므로이 URL은 정규화 된 및 정규화 된 URL으로 이동 하려면 브라우저 들었습니다는 URL에서 다를 수 있습니다. 예를 들어, 응용 프로그램 "www.microsoft.com" 호출에서의 URL을 지정 하는 경우 [Navigate](#navigate) 또는 [Navigate2](#navigate2), 전달한 URL `OnNavigateComplete2` 됩니다 "http://www.microsoft.com/"입니다. 또한 서버가 다른 URL로 브라우저 리디렉션, 리디렉션된 URL은 여기에 반영 됩니다.  
   
 ##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate  
- **IOleInPlaceActiveObject::OnDocWindowActivate**의 Internet Explorer 또는 MSHTML 구현에서 호출되며, 컨테이너의 문서 창이 활성화 또는 비활성화될 경우 활성 현재 위치 개체에 알립니다.  
+ Internet Explorer 또는 MSHTML 구현에서 호출 `IOleInPlaceActiveObject::OnDocWindowActivate`, 컨테이너의 문서 창이 활성화 또는 비활성화 될 경우 활성 현재 위치 개체 알립니다.  
   
 ```  
 virtual HRESULT OnDocWindowActivate(BOOL fActivate);
@@ -1091,26 +1091,26 @@ virtual HRESULT OnDocWindowActivate(BOOL fActivate);
   
 ### <a name="parameters"></a>매개 변수  
  *fActivate*  
- 문서 창의 상태를 나타냅니다. 이 값이 0이 아니고, 창이 활성화 되 고 있습니다. 이 값이 0 이면 창이 비활성화 하는 중입니다.  
+ 문서 창의 상태를 나타냅니다. 이 값이 0이 아닌, 창이 활성화 되 고 합니다. 이 값이 0 이면 창이 비활성화 되 고 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
- `S_OK` 성공 하면 또는 그렇지 않으면 OLE 정의 된 오류 코드입니다.  
+ 성공 하면 s_ok이 고, 또는 고 그렇지 OLE 정의한 오류 코드입니다.  
   
 ### <a name="remarks"></a>설명  
- 재정의 `OnDocWindowActivate` 에 대응 하는 `OnDocWindowActivate` Microsoft 웹 브라우저 컨트롤에서 알림입니다. 참조 [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx) 자세한 내용은 Windows sdk입니다.  
+ 재정의 `OnDocWindowActivate` 대응 하는 데는 `OnDocWindowActivate` Microsoft 웹 브라우저 컨트롤에서 알림. 참조 [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx) 자세한 내용은 Windows SDK에 있습니다.  
   
 ##  <a name="ondownloadbegin"></a>  CHtmlView::OnDownloadBegin  
- 이 멤버 함수는 문서를 다운로드를 시작 하기 위해 프레임 워크에 의해 호출 됩니다.  
+ 이 멤버 함수는 문서를 다운로드 하려면 프레임 워크에서 호출 됩니다.  
   
 ```  
 virtual void OnDownloadBegin();
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 이벤트가 직후는 [OnBeforeNavigate2](#onbeforenavigate2) 이벤트를 탐색을 취소 하지 않는 한 합니다. 모든 애니메이션 또는 "사용 중" 표시를 표시 해야 하는 컨테이너는이 이벤트에 연결 되어야 합니다.  
+ 직후에이 이벤트가 발생 합니다 [OnBeforeNavigate2](#onbeforenavigate2) 이벤트 탐색을 취소 하지 않는 한 합니다. 모든 애니메이션 또는 컨테이너를 표시 해야 하는 "사용 중" 표시를이 이벤트에 연결 되어야 합니다.  
   
 ##  <a name="ondownloadcomplete"></a>  CHtmlView::OnDownloadComplete  
- 이 멤버 함수는 작업이 끝난 후에 이동 작업이 중단 또는 실패를 나타내기 위해 프레임 워크에서 호출 됩니다.  
+ 이 멤버 함수는 완료 되 면 이동 작업이 중단 또는 실패를 나타내기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
 virtual void OnDownloadComplete();
@@ -1125,13 +1125,13 @@ virtual HRESULT OnEnableModeless(BOOL fEnable);
   
 ### <a name="parameters"></a>매개 변수  
  *fEnable*  
- 호스트의 모덜리스 대화 상자 설정 또는 해제 하는 경우를 나타냅니다. 이 값은 0이 아니고, 모덜리스 대화 상자는 사용할 수 있습니다. 이 값이 0 이면 모덜리스 대화 상자는 사용할 수 없습니다.  
+ 호스트의 모덜리스 대화 상자 설정 또는 해제 하는 경우를 나타냅니다. 이 값은 0이 아닌, 모덜리스 대화 상자를 사용할 수 있습니다. 이 값이 0 이면 모덜리스 대화 상자는 비활성화 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
- `S_OK` 성공 하면 또는 그렇지 않으면 OLE 정의 된 오류 코드입니다.  
+ 성공 하면 s_ok이 고, 또는 고 그렇지 OLE 정의한 오류 코드입니다.  
   
 ### <a name="remarks"></a>설명  
- 컨테이너를 만들거나 모달 대화 상자를 제거할 때 모덜리스 대화 상자를 사용 하지 않도록 설정 하거나 사용 합니다. 재정의 `OnEnableModeless` 에 대응 하는 `EnableModeless` Microsoft 웹 브라우저 컨트롤에서 알림입니다. 참조 [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx) 자세한 내용은 Windows sdk입니다.  
+ 사용 하거나 컨테이너를 만들거나 모달 대화 상자를 삭제할 때 모덜리스 대화 상자를 사용 하지 않도록 설정 합니다. 재정의 `OnEnableModeless` 대응 하는 데는 `EnableModeless` Microsoft 웹 브라우저 컨트롤에서 알림. 참조 [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx) 자세한 내용은 Windows SDK에 있습니다.  
   
 ##  <a name="onfilterdataobject"></a>  CHtmlView::OnFilterDataObject  
  호스트가 Internet Explorer 또는 MSHTML의 데이터 개체를 바꿀 수 있도록 하기 위해 Internet Explorer 또는 MSHTML에 의해 호스트에서 호출됩니다.  
@@ -1144,16 +1144,16 @@ virtual HRESULT OnFilterDataObject(
   
 ### <a name="parameters"></a>매개 변수  
  *pDataObject*  
- 주소는 [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) Internet Explorer 또는 MSHTML에 의해 제공 된 인터페이스입니다.  
+ 주소를 [IDataObject](http://msdn.microsoft.com/library/windows/desktop/ms688421) Internet Explorer 또는 MSHTML에 의해 제공 되는 인터페이스입니다.  
   
  *ppDataObject*  
- 주소를 수신 하는 `IDataObject` 호스트에서 제공 하는 인터페이스 포인터입니다. 이 매개 변수의 콘텐츠를 항상 초기화 **NULL**메서드가 실패 하는 경우에 합니다.  
+ 수신 하는 주소는 `IDataObject` 호스트에서 제공 하는 인터페이스 포인터입니다. 메서드가 실패 하는 경우에에 항상이 매개 변수의 내용은 NULL로 초기화 해야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `S_OK` 데이터 개체를 대체 **S_FALSE** 데이터 개체를 대체 하지 않는 경우 또는 오류가 발생 한 경우에 OLE에서 정의한 오류 코드입니다.  
+ 데이터 개체를 사용 하면 s_ok이 고, 데이터 개체를 대체 하지 않는 경우 S_FALSE 또는 OLE 정의한 오류 코드에 오류가 발생 합니다.  
   
 ### <a name="remarks"></a>설명  
- 재정의 `OnFilterDataObject` 에 대응 하는 `FilterDataObject` Microsoft 웹 브라우저 컨트롤에서 알림입니다. 참조 [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx) 자세한 내용은 Windows sdk입니다.  
+ 재정의 `OnFilterDataObject` 대응 하는 데는 `FilterDataObject` Microsoft 웹 브라우저 컨트롤에서 알림. 참조 [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx) 자세한 내용은 Windows SDK에 있습니다.  
   
 ##  <a name="onframewindowactivate"></a>  CHtmlView::OnFrameWindowActivate  
  컨테이너의 최상위 프레임 창이 활성화 또는 비활성화될 경우 개체에 알리기 위해 [IOleInPlaceActiveObject::OnFrameWindowActivate](http://msdn.microsoft.com/library/windows/desktop/ms683969) 에서 호출됩니다.  
@@ -1164,16 +1164,16 @@ virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
   
 ### <a name="parameters"></a>매개 변수  
  *fActivate*  
- 컨테이너의 최상위 프레임 창의 상태를 나타냅니다. 이 값이 0이 아니고, 창이 활성화 되 고 있습니다. 이 값이 0 이면 창이 비활성화 하는 중입니다.  
+ 컨테이너의 최상위 프레임 창의 상태를 나타냅니다. 이 값이 0이 아닌, 창이 활성화 되 고 합니다. 이 값이 0 이면 창이 비활성화 되 고 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
- `S_OK` 성공 하면 또는 그렇지 않으면 OLE 정의 된 오류 코드입니다.  
+ 성공 하면 s_ok이 고, 또는 고 그렇지 OLE 정의한 오류 코드입니다.  
   
 ### <a name="remarks"></a>설명  
- 재정의 `OnFrameWindowActivate` 에 대응 하는 `OnFrameWindowActivate` Microsoft 웹 브라우저 컨트롤에서 알림입니다. 참조 [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx) 자세한 내용은 Windows sdk입니다.  
+ 재정의 `OnFrameWindowActivate` 대응 하는 데는 `OnFrameWindowActivate` Microsoft 웹 브라우저 컨트롤에서 알림. 참조 [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx) 자세한 내용은 Windows SDK에 있습니다.  
   
 ##  <a name="onfullscreen"></a>  CHtmlView::OnFullScreen  
- 프레임 워크에서이 멤버 함수를 호출 하는 경우는 [전체 화면](https://msdn.microsoft.com/library/aa752119.aspx) 속성이 변경 합니다.  
+ 이 멤버 함수는 프레임 워크에서 호출 됩니다 때 합니다 [전체 화면](https://msdn.microsoft.com/library/aa752119.aspx) 속성이 변경 합니다.  
   
 ```  
 virtual void OnFullScreen(BOOL bFullScreen);
@@ -1181,7 +1181,7 @@ virtual void OnFullScreen(BOOL bFullScreen);
   
 ### <a name="parameters"></a>매개 변수  
  *bFullScreen*  
- 전체 화면 모드에서 Internet Explorer가 0이 아닌 그렇지 않으면 0입니다.  
+ 전체 화면 모드에서 Internet Explorer를 0이 아닌 그렇지 않으면 0입니다.  
   
 ##  <a name="ongetdroptarget"></a>  CHtmlView::OnGetDropTarget  
  호스트가 대체 `IDropTarget`을 참조하십시오.  
@@ -1197,13 +1197,13 @@ virtual HRESULT OnGetDropTarget(
  [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) Internet Explorer 또는 MSHTML이 사용 하도록 제안 합니다.  
   
  *ppDropTarget*  
- 주소는 `IDropTarget` 받는 `IDropTarget` 인터페이스 포인터를 호스트가 제공 하려고 합니다.  
+ 주소를 `IDropTarget` 받는 `IDropTarget` 인터페이스 포인터를 제공 하고자 하는 호스트입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 참조 [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) 반환 코드의 목록에 대 한 Windows sdk입니다.  
+ 참조 [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) 반환 코드의 목록은 Windows SDK에 있습니다.  
   
 ### <a name="remarks"></a>설명  
- 재정의 `OnGetDropTarget` 에 대응 하는 `GetDropTarget` Microsoft 웹 브라우저 컨트롤에서 알림입니다. 참조 [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) 자세한 내용은 Windows sdk입니다.  
+ 재정의 `OnGetDropTarget` 대응 하는 데는 `GetDropTarget` Microsoft 웹 브라우저 컨트롤에서 알림. 참조 [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) 자세한 내용은 Windows SDK에 있습니다.  
   
 ##  <a name="ongetexternal"></a>  CHtmlView::OnGetExternal  
  호스트의 `IDispatch` 인터페이스를 가져오기 위해 Internet Explorer 또는 MSHTML에 의해 호출됩니다.  
@@ -1214,13 +1214,13 @@ virtual HRESULT OnGetExternal(LPDISPATCH* lppDispatch);
   
 ### <a name="parameters"></a>매개 변수  
  *lppDispatch*  
- 수신 하는 주소에 대 한 포인터는 `IDispatch` 호스트 응용 프로그램의 인터페이스 포인터입니다. 호스트 자동화 인터페이스를 노출 하는 경우이 매개 변수를 통해 Internet Explorer 또는 MSHTML에 대 한 참조를 제공할 수 있습니다. 이 매개 변수의 콘텐츠를 항상 초기화 **NULL**메서드가 실패 하는 경우에 합니다.  
+ 수신 하는 주소에 대 한 포인터를 `IDispatch` 호스트 응용 프로그램의 인터페이스 포인터입니다. 호스트 자동화 인터페이스를 노출 하는 경우이 매개 변수를 통해 Internet Explorer 또는 MSHTML에 대 한 참조를 제공할 수 있습니다. 메서드가 실패 하는 경우에에 항상이 매개 변수의 내용은 NULL로 초기화 해야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `S_OK` 성공 하면 또는 그렇지 않으면 OLE 정의 된 오류 코드입니다.  
+ 성공 하면 s_ok이 고, 또는 고 그렇지 OLE 정의한 오류 코드입니다.  
   
 ### <a name="remarks"></a>설명  
- 재정의 `OnGetExternal` 에 대응 하는 `GetExternal` Microsoft 웹 브라우저 컨트롤에서 알림입니다. 참조 [IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx) 자세한 내용은 Windows sdk입니다.  
+ 재정의 `OnGetExternal` 대응 하는 데는 `GetExternal` Microsoft 웹 브라우저 컨트롤에서 알림. 참조 [IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx) 자세한 내용은 Windows SDK에 있습니다.  
   
 ##  <a name="ongethostinfo"></a>  CHtmlView::OnGetHostInfo  
  Internet Explorer 또는 MSHTML 호스트의 UI 기능을 검색합니다.  
@@ -1231,13 +1231,13 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
   
 ### <a name="parameters"></a>매개 변수  
  *pInfo*  
- 주소는 [DOCHOSTUIINFO](https://msdn.microsoft.com/library/aa770044.aspx) 구조체 호스트의 UI 기능입니다.  
+ 주소를 [DOCHOSTUIINFO](https://msdn.microsoft.com/library/aa770044.aspx) 호스트의 UI 기능을 수신 하는 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `S_OK` 성공 하면 또는 그렇지 않으면 OLE 정의 된 오류 코드입니다.  
+ 성공 하면 s_ok이 고, 또는 고 그렇지 OLE 정의한 오류 코드입니다.  
   
 ### <a name="remarks"></a>설명  
- 재정의 `OnGetHostInfo` 에 대응 하는 `GetHostInfo` Microsoft 웹 브라우저 컨트롤에서 알림입니다. 참조 [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx) 자세한 내용은 Windows sdk입니다.  
+ 재정의 `OnGetHostInfo` 대응 하는 데는 `GetHostInfo` Microsoft 웹 브라우저 컨트롤에서 알림. 참조 [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx) 자세한 내용은 Windows SDK에 있습니다.  
   
 ##  <a name="ongetoptionkeypath"></a>  CHtmlView::OnGetOptionKeyPath  
  Internet Explorer 또는 MSHTML 사용자 기본 설정을 저장 됩니다. 레지스트리 키를 가져오려면이 함수를 호출 합니다.  
@@ -1250,32 +1250,32 @@ virtual HRESULT OnGetOptionKeyPath(
   
 ### <a name="parameters"></a>매개 변수  
  *pchKey*  
- 주소는 `LPOLESTR` 받는 호스트의 기본 옵션을 저장 하는 레지스트리 하위 키 문자열입니다. 이 하위 키는 HKEY_CURRENT_USER 키 아래에 있게 됩니다. 사용 하 여이 메모리를 할당할 [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)합니다. 호출 응용 프로그램은 사용 하 여이 메모리를 확보 해야 [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)합니다. 이 매개 변수를 항상 초기화 **NULL**메서드가 실패 하는 경우에 합니다.  
+ 주소는 `LPOLESTR` 호스트의 기본 옵션을 저장 하는 위치 레지스트리 하위 키 문자열을 받는입니다. 이 하위 키는 HKEY_CURRENT_USER 키 아래에 있게 됩니다. 사용 하 여이 메모리를 할당할 [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727)합니다. 호출 응용 프로그램을 사용 하 여이 메모리를 해제 담당 [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722)합니다. 메서드가 실패 하는 경우에에 항상이 매개 변수가 NULL로 초기화 합니다.  
   
  *dwReserved*  
  나중에 사용하기 위해 예약되어 있습니다. 현재 사용 되지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  
- `S_OK` 성공 하면 또는 **S_FALSE** 그렇지 않은 경우. 경우 **S_FALSE**, Internet Explorer 또는 MSHTML 자체 사용자 옵션의 기본값은입니다.  
+ 성공 하면 s_ok이 고, 또는 그렇지 않으면 S_FALSE입니다. S_FALSE, Internet Explorer 또는 MSHTML 기본적으로 자체 사용자 옵션 하는 경우.  
   
 ### <a name="remarks"></a>설명  
- 재정의 `OnGetOptionKeyPath` 에 대응 하는 `GetOptionKeyPath` Microsoft 웹 브라우저 컨트롤에서 알림입니다. 참조 [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) 자세한 내용은 Windows sdk입니다.  
+ 재정의 `OnGetOptionKeyPath` 대응 하는 데는 `GetOptionKeyPath` Microsoft 웹 브라우저 컨트롤에서 알림. 참조 [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) 자세한 내용은 Windows SDK에 있습니다.  
   
 ##  <a name="onhideui"></a>  CHtmlView::OnHideUI  
- 이 멤버 함수는 Internet Explorer 또는 MSHTML이 해당 메뉴 및 도구 모음 제거 때 프레임 워크에서 호출 됩니다.  
+ 이 멤버 함수는 Internet Explorer 또는 MSHTML이 해당 메뉴 및 도구 모음 제거 하는 경우 프레임 워크에서 호출 됩니다.  
   
 ```  
 virtual HRESULT OnHideUI();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `S_OK` 성공 하면 또는 그렇지 않으면 OLE 정의 된 오류 코드입니다.  
+ 성공 하면 s_ok이 고, 또는 고 그렇지 OLE 정의한 오류 코드입니다.  
   
 ### <a name="remarks"></a>설명  
- 재정의 `OnHideUI` 에 대응 하는 `HideUI` Microsoft 웹 브라우저 컨트롤에서 알림입니다. 참조 [IDocHostUIHandler::HideUI](https://msdn.microsoft.com/library/aa753259.aspx) 자세한 내용은 Windows sdk입니다.  
+ 재정의 `OnHideUI` 대응 하는 데는 `HideUI` Microsoft 웹 브라우저 컨트롤에서 알림. 참조 [IDocHostUIHandler::HideUI](https://msdn.microsoft.com/library/aa753259.aspx) 자세한 내용은 Windows SDK에 있습니다.  
   
 ##  <a name="onmenubar"></a>  CHtmlView::OnMenuBar  
- 프레임 워크에서이 멤버 함수를 호출 하는 경우는 [MenuBar](https://msdn.microsoft.com/library/aa752131.aspx) 속성이 변경 합니다.  
+ 이 멤버 함수는 프레임 워크에서 호출 됩니다 때 합니다 [MenuBar](https://msdn.microsoft.com/library/aa752131.aspx) 속성이 변경 합니다.  
   
 ```  
 virtual void OnMenuBar(BOOL bMenuBar);
@@ -1283,10 +1283,10 @@ virtual void OnMenuBar(BOOL bMenuBar);
   
 ### <a name="parameters"></a>매개 변수  
  *bMenuBar*  
- Internet Explorer 메뉴 모음에 표시 되 면 0이 아닌 그렇지 않으면 0입니다.  
+ Internet Explorer 메뉴 표시줄 표시 되 면 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ##  <a name="onnavigatecomplete2"></a>  CHtmlView::OnNavigateComplete2  
- 이 멤버 함수는 창 또는 프레임셋 요소의 하이퍼링크로 탐색 완료 된 후 프레임 워크에서 호출 됩니다.  
+ 이 멤버 함수는 창 또는 프레임셋 요소의 하이퍼링크로 탐색을 완료 된 후 프레임 워크에서 호출 됩니다.  
   
 ```  
 virtual void OnNavigateComplete2(LPCTSTR strURL);
@@ -1294,12 +1294,12 @@ virtual void OnNavigateComplete2(LPCTSTR strURL);
   
 ### <a name="parameters"></a>매개 변수  
  *strURL*  
- URL로 계산 되는 문자열 식 UNC 파일 이름 또는 탐색 된 PIDL (식별자 목록 항목에 포인터).  
+ URL로 계산 되는 문자열 식을 UNC 파일 이름 또는 탐색 된 PIDL (식별자 목록 항목에 포인터).  
   
 ### <a name="remarks"></a>설명  
- URL 매개 변수는 셸 이름 공간 엔터티 URL 나타나지는의 경우 PIDL 수 있습니다.  
+ URL 매개 변수는 셸 이름 공간 엔터티 URL 나타나지는 경우 PIDL 수 있습니다.  
   
- 에 포함 된 URL을 *strURL* 이 URL은 정규화 된와 정규화 된 URL 때문에 브라우저로 이동 하도록 지시 받고 된 URL에서 다를 수 있습니다. 예를 들어, "www.microsoft.com"에 대 한 호출을의 URL을 지정 하는 응용 프로그램 [탐색](#navigate) 또는 [Navigate2](#navigate2), 전달한 URL `OnNavigateComplete2` 됩니다 "http://www.microsoft.com/"입니다. 또한 서버가 다른 URL로 브라우저를 리디렉션 리디렉션된 URL 여기에 반영 됩니다.  
+ URL에 포함 된 참고 *strURL* 하므로이 URL은 정규화 된 및 정규화 된 URL으로 이동 하려면 브라우저 들었습니다는 URL에서 다를 수 있습니다. 예를 들어, 응용 프로그램 "www.microsoft.com" 호출에서의 URL을 지정 하는 경우 [Navigate](#navigate) 또는 [Navigate2](#navigate2), 전달한 URL `OnNavigateComplete2` 됩니다 "http://www.microsoft.com/"입니다. 또한 서버가 다른 URL로 브라우저 리디렉션, 리디렉션된 URL은 여기에 반영 됩니다.  
   
 ##  <a name="onnavigateerror"></a>  CHtmlView::OnNavigateError  
  하이퍼링크로 이동이 실패할 경우 프레임워크에 의해 호출됩니다.  
@@ -1314,24 +1314,24 @@ virtual void OnNavigateError(
   
 ### <a name="parameters"></a>매개 변수  
  *lpszURL*  
- URL 탐색 하지 못했습니다.  
+ 탐색이 실패는 URL입니다.  
   
  *lpszFrame*  
- 리소스를 표시 또는 명명 된 프레임이 없는 리소스에 대 한 대상 지정 된 경우 NULL 인 프레임의 이름입니다.  
+ 리소스를 표시 하거나 명명 된 프레임이 없는 리소스에 대 한 대상으로 지정 된 경우 NULL 인 프레임의 이름입니다.  
   
  *dwError*  
- 오류 상태 코드를 사용할 수 있는 경우입니다. 목록이 가능한 HRESULT 및 HTTP 상태 코드에 대 한 참조 [NavigateError 이벤트 상태 코드입니다.](https://msdn.microsoft.com/library/aa768365.aspx)  
+ 오류 상태 코드를 사용할 수 있는 경우입니다. 가능한 HRESULT 및 HTTP 상태 코드의 목록은 참조 하세요. [NavigateError 이벤트 상태 코드입니다.](https://msdn.microsoft.com/library/aa768365.aspx)  
   
  *pbCancel*  
- 오류 페이지에는 더 이상 자동 검색 탐색을 취소할 것인지 지정 합니다. 경우 **TRUE** (기본값) 이면 오류 페이지 또는 자동 검색; 탐색을 하는 경우 계속 **FALSE**, 오류 페이지 또는 자동 검색 탐색을 취소 합니다.  
+ 오류 페이지 또는 모든 추가 자동 검색에 대 한 이동을 취소할지 여부를 지정 합니다. 경우 TRUE (기본값), 오류 페이지 또는 자동 검색; 탐색을 사용 하 여 계속 합니다. false 인 경우, 오류 페이지 또는 자동 검색에 대 한 탐색을 취소 합니다.  
   
 ### <a name="remarks"></a>설명  
  사용자 지정 탐색 오류 처리를 제공 하려면이 메서드를 재정의 합니다.  
   
- 자세한 내용은 참조 [DWebBrowserEvents2::NavigateError](https://msdn.microsoft.com/library/aa768286.aspx)  
+ 자세한 내용은 참조 하세요. [DWebBrowserEvents2::NavigateError](https://msdn.microsoft.com/library/aa768286.aspx)  
   
 ##  <a name="onnewwindow2"></a>  CHtmlView::OnNewWindow2  
- 이 멤버 함수는 새 창을 리소스를 표시에 대해 생성 될 때 프레임 워크에서 호출 됩니다.  
+ 이 멤버 함수는 새 창이 표시 된 리소스에 대해 생성 될 때 프레임 워크에서 호출 됩니다.  
   
 ```  
 virtual void OnNewWindow2(
@@ -1341,16 +1341,16 @@ virtual void OnNewWindow2(
   
 ### <a name="parameters"></a>매개 변수  
  *ppDisp*  
- 필요에 따라 수신 하는 인터페이스 포인터에 대 한 포인터는 `IDispatch` 새 WebBrowser 또는 Internet Explorer 개체의 인터페이스 포인터입니다.  
+ 선택적으로 수신 하는 인터페이스 포인터에 대 한 포인터를 `IDispatch` 새 Internet Explorer 및 WebBrowser 개체의 인터페이스 포인터입니다.  
   
  *취소*  
- 취소 플래그에 대 한 포인터입니다. 응용 프로그램 탐색 작업을 취소 하거나 계속할 수 있도록 허용 하 0 0이 아닌 값을이 매개 변수를 설정할 수 있습니다.  
+ 취소 플래그에 대 한 포인터입니다. 응용 프로그램 탐색 작업을 취소 하거나 계속할 수 있도록 하는 0 0이 아닌 값을이 매개 변수를 설정할 수 있습니다.  
   
 ### <a name="remarks"></a>설명  
- 이 이벤트에서 새 창 내에서 WebBrowser에서 만드는 것 보다 우선 합니다.  
+ 이 이벤트는 WebBrowser 내에서 창 새로 만들기 만드는 것 보다 우선 합니다.  
   
 ##  <a name="onprogresschange"></a>  CHtmlView::OnProgressChange  
- 이 멤버 함수는 다운로드 작업 진행률이 업데이트 된 응용 프로그램에 알리기 위해 프레임 워크에서 호출 됩니다.  
+ 이 멤버 함수는 다운로드 작업 진행률이 업데이트 되었음을 응용 프로그램에 알리기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
 virtual void OnProgressChange(
@@ -1359,17 +1359,17 @@ virtual void OnProgressChange(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- *nprogress는 o 365*  
- 총 진행률을 표시, 또는 진행 완료 될 때-1의 양입니다.  
+ *nProgress*  
+ 총 진행률 표시, 또는 진행률 완료 되 면-1의 양입니다.  
   
  *nProgressMax*  
  최대 진행률 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 컨테이너 지금 다운로드 한 바이트 수를 표시 하거나 진행률 표시기를 업데이트 하려면이 이벤트에서 제공 하는 정보를 사용할 수입니다.  
+ 진행률 표시기를 업데이트 하거나 지금 다운로드 한 바이트 수를 표시 컨테이너가이 이벤트에서 제공 하는 정보를 사용할 수 있습니다.  
   
 ##  <a name="onpropertychange"></a>  CHtmlView::OnPropertyChange  
- 응용 프로그램에 알리기 위해 프레임 워크에서이 멤버 함수를 호출 하는 [PutProperty](#putproperty) 속성의 값이 변경 되었습니다.  
+ 응용 프로그램에 알리기 위해 프레임 워크에서이 구성원 함수가 호출 되는 [PutProperty](#putproperty) 속성의 값을 변경 했습니다.  
   
 ```  
 virtual void OnPropertyChange(LPCTSTR lpszProperty);
@@ -1380,7 +1380,7 @@ virtual void OnPropertyChange(LPCTSTR lpszProperty);
  속성의 이름을 포함 하는 문자열에 대 한 포인터입니다.  
   
 ##  <a name="onquit"></a>  CHtmlView::OnQuit  
- 이 멤버 함수는 Internet Explorer 응용 프로그램을 끝낼 준비가 하는 응용 프로그램에 알리기 위해 프레임 워크에서 호출 됩니다.  
+ 이 멤버 함수는 Internet Explorer 응용 프로그램 종료 준비가 된 응용 프로그램에 알리기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
 virtual void OnQuit();
@@ -1401,16 +1401,16 @@ virtual HRESULT OnResizeBorder(
  테두리 공간에 대 한 새 외부 사각형입니다.  
   
  *pUIWindow*  
- 변경 된 테두리 프레임 또는 문서 창 개체에 대 한 인터페이스에 대 한 포인터입니다.  
+ 테두리가 변경 프레임 또는 문서 창 개체에 대 한 인터페이스 포인터입니다.  
   
  *fFrameWindow*  
- **True 이면** 프레임 창을 호출 하는 경우 [IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053), 그렇지 않으면 **FALSE**합니다.  
+ 프레임 창을 호출 하는 경우 TRUE [IOleInPlaceActiveObject::ResizeBorder](http://msdn.microsoft.com/library/windows/desktop/ms680053)이 고, 그렇지 않으면 FALSE입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `S_OK` 성공 하면 또는 그렇지 않으면 OLE 정의 된 오류 코드입니다.  
+ 성공 하면 s_ok이 고, 또는 고 그렇지 OLE 정의한 오류 코드입니다.  
   
 ### <a name="remarks"></a>설명  
- 재정의 `OnResizeBorder` 에 대응 하는 `ResizeBorder` Microsoft 웹 브라우저 컨트롤에서 알림입니다. 참조 [IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx) 자세한 내용은 Windows sdk입니다.  
+ 재정의 `OnResizeBorder` 대응 하는 데는 `ResizeBorder` Microsoft 웹 브라우저 컨트롤에서 알림. 참조 [IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx) 자세한 내용은 Windows SDK에 있습니다.  
   
 ##  <a name="onshowcontextmenu"></a>  CHtmlView::OnShowContextMenu  
  상황에 맞는 메뉴를 표시하려는 경우 Internet Explorer 또는 MSHTML에 의해 호출됩니다.  
@@ -1425,22 +1425,22 @@ virtual HRESULT OnShowContextMenu(
   
 ### <a name="parameters"></a>매개 변수  
  *dwID*  
- 표시 되는 상황에 맞는 메뉴의 식별자입니다. 참조 **IDocHostUIHandler::ShowContextMenu** 값 목록에 대 한 Windows sdk입니다.  
+ 표시할 상황에 맞는 메뉴의 식별자입니다. 참조 `IDocHostUIHandler::ShowContextMenu` 값의 목록을 Windows SDK에 있습니다.  
   
  *ppt*  
- 메뉴에 대 한 화면 좌표입니다.  
+ 메뉴의 화면 좌표입니다.  
   
  *pcmdtReserved*  
  [IOleCommandTarget](http://msdn.microsoft.com/library/windows/desktop/ms683797) 명령 상태를 쿼리하고이 개체에서 명령을 실행 하는 데 사용 되는 인터페이스입니다.  
   
  *pdispReserved*  
- 화면 좌표에 있는 개체의 IDispatch 인터페이스입니다. 따라서 보다 구체적인 컨텍스트를 제공 하는 특정 개체를 구별 하는 호스트 수 있습니다.  
+ 화면 좌표에 있는 개체의 IDispatch 인터페이스입니다. 이 자세한 컨텍스트를 제공 하는 특정 개체를 구별 하는 호스트 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
- 참조 [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) 값 목록에 대 한 Windows sdk입니다.  
+ 참조 [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) 값의 목록을 Windows SDK에 있습니다.  
   
 ### <a name="remarks"></a>설명  
- 재정의 `OnShowContextMenu` 에 대응 하는 `ShowContextMenu` Microsoft 웹 브라우저 컨트롤에서 알림입니다. 참조 [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) 자세한 내용은 Windows sdk입니다.  
+ 재정의 `OnShowContextMenu` 대응 하는 데는 `ShowContextMenu` Microsoft 웹 브라우저 컨트롤에서 알림. 참조 [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) 자세한 내용은 Windows SDK에 있습니다.  
   
 ##  <a name="onshowui"></a>  CHtmlView::OnShowUI  
  Internet Explorer 또는 MSHTML이 해당 메뉴 및 도구 모음을 표시하기 전에 호출됩니다.  
@@ -1467,17 +1467,17 @@ virtual HRESULT OnShowUI(
  *pFrame*  
  [IOleInPlaceFrame](http://msdn.microsoft.com/library/windows/desktop/ms692770) 개체의 인터페이스입니다. 이 메뉴 및 도구 모음에 필요 합니다.  
   
- *pDoc*  
- [IOleInPlaceUIWindow](http://msdn.microsoft.com/library/windows/desktop/ms680716) 개체에 대 한 인터페이스입니다. 이 도구 모음에 필요 합니다.  
+ *입력*  
+ [IOleInPlaceUIWindow](http://msdn.microsoft.com/library/windows/desktop/ms680716) 개체에 대 한 인터페이스입니다. 이 도구 모음에 대 한 필요 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 참조 [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) 값 목록에 대 한 Windows sdk입니다.  
+ 참조 [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) 값의 목록을 Windows SDK에 있습니다.  
   
 ### <a name="remarks"></a>설명  
- 재정의 `OnShowUI` 에 대응 하는 `ShowUI` Microsoft 웹 브라우저 컨트롤에서 알림입니다. 참조 [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) 자세한 내용은 Windows sdk입니다.  
+ 재정의 `OnShowUI` 대응 하는 데는 `ShowUI` Microsoft 웹 브라우저 컨트롤에서 알림. 참조 [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) 자세한 내용은 Windows SDK에 있습니다.  
   
 ##  <a name="onstatusbar"></a>  CHtmlView::OnStatusBar  
- 프레임 워크에서이 멤버 함수를 호출 하는 경우는 [StatusBar](https://msdn.microsoft.com/library/aa768270.aspx) 속성이 변경 합니다.  
+ 이 멤버 함수는 프레임 워크에서 호출 됩니다 때 합니다 [StatusBar](https://msdn.microsoft.com/library/aa768270.aspx) 속성이 변경 합니다.  
   
 ```  
 virtual void OnStatusBar(BOOL bStatusBar);
@@ -1485,7 +1485,7 @@ virtual void OnStatusBar(BOOL bStatusBar);
   
 ### <a name="parameters"></a>매개 변수  
  *bStatusBar*  
- Internet Explorer의 상태 표시줄 표시 되 면 0이 아니고 그렇지 않으면 0입니다.  
+ Internet Explorer의 상태 표시줄 표시 되 면 0이 아닌 이거나 그렇지 않으면 0입니다.  
   
 ##  <a name="onstatustextchange"></a>  CHtmlView::OnStatusTextChange  
  이 멤버 함수는 WebBrowser 컨트롤과 연결 된 상태 표시줄의 텍스트가 변경 되었음을 응용 프로그램에 알리기 위해 프레임 워크에서 호출 됩니다.  
@@ -1499,7 +1499,7 @@ virtual void OnStatusTextChange(LPCTSTR lpszText);
  새 상태 표시줄 텍스트를 포함 하는 문자열입니다.  
   
 ##  <a name="ontheatermode"></a>  CHtmlView::OnTheaterMode  
- 프레임 워크에서이 멤버 함수를 호출 하는 경우는 [TheaterMode](https://msdn.microsoft.com/library/aa768273.aspx) 속성이 변경 합니다.  
+ 프레임 워크에서이 구성원 함수가 호출 되는 경우는 [TheaterMode](https://msdn.microsoft.com/library/aa768273.aspx) 속성이 변경.  
   
 ```  
 virtual void OnTheaterMode(BOOL bTheaterMode);
@@ -1507,10 +1507,10 @@ virtual void OnTheaterMode(BOOL bTheaterMode);
   
 ### <a name="parameters"></a>매개 변수  
  *bTheaterMode*  
- Internet Explorer가 극장 모드에 0이 아닌 그렇지 않으면 0입니다.  
+ Internet Explorer 극장 모드에 있으면 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ##  <a name="ontitlechange"></a>  CHtmlView::OnTitleChange  
- 이 멤버 함수는 WebBrowser 컨트롤의 문서 제목을 사용할 수 있게 되는 응용 프로그램에 알리기 위해 프레임 워크 또는 변경 내용에 의해 호출 됩니다.  
+ 이 멤버 함수는 WebBrowser 컨트롤의 문서 제목을 사용할 수 있으면 응용 프로그램에 알리기 위해 프레임 워크 또는 변경 하 여 호출 됩니다.  
   
 ```  
 virtual void OnTitleChange(LPCTSTR lpszText);
@@ -1521,10 +1521,10 @@ virtual void OnTitleChange(LPCTSTR lpszText);
  새 문서 제목입니다.  
   
 ### <a name="remarks"></a>설명  
- HTML에 대 한 제목 변경 될 수 있습니다. HTML을 아직 다운로드 하는 동안에 문서의 URL 제목으로 설정 됩니다. 실제 제목 (있는 경우) 구문 분석 되는 HTML에서 제목 실제 제목을 반영 하도록 변경 됩니다.  
+ HTML에 대 한 제목을 변경 될 수 있습니다. HTML을 아직 다운로드 하는 동안에 문서의 URL 제목으로 설정 됩니다. 실제 제목 (있는 경우)는 구문 분석 후 HTML의 제목은 실제 제목을 반영 하도록 변경 됩니다.  
   
 ##  <a name="ontoolbar"></a>  CHtmlView::OnToolBar  
- 프레임 워크에서이 멤버 함수를 호출 하는 경우는 [도구 모음](https://msdn.microsoft.com/library/aa768274.aspx) 속성이 변경 합니다.  
+ 프레임 워크에서이 구성원 함수가 호출 되는 경우는 [도구 모음](https://msdn.microsoft.com/library/aa768274.aspx) 속성이 변경.  
   
 ```  
 virtual void OnToolBar(BOOL bToolBar);
@@ -1532,7 +1532,7 @@ virtual void OnToolBar(BOOL bToolBar);
   
 ### <a name="parameters"></a>매개 변수  
  *bToolBar*  
- Internet Explorer의 도구 모음을 표시 하는 경우 0이 아니고 그렇지 않으면 0입니다.  
+ Internet Explorer의 도구 모음을 표시 하는 경우 0이 아닌 이거나 그렇지 않으면 0입니다.  
   
 ##  <a name="ontranslateaccelerator"></a>  CHtmlView::OnTranslateAccelerator  
  컨테이너의 메시지 큐에서 메뉴 바로 가기 키 메시지를 처리하기 위해 [IOleInPlaceActiveObject::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693360) 또는 [IOleControlSite::TranslateAccelerator](http://msdn.microsoft.com/library/windows/desktop/ms693756) 가 호출될 경우 Internet Explorer 또는 MSHTML에 의해 호출됩니다.  
@@ -1555,10 +1555,10 @@ virtual HRESULT OnTranslateAccelerator(
  명령 식별자입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `S_OK` 성공 하면 또는 **S_FALSE** 그렇지 않은 경우.  
+ 성공 하면 s_ok이 고, 또는 그렇지 않으면 S_FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- 재정의 `OnTranslateAccelerator` 에 대응 하는 `TranslateAccelerator` Microsoft 웹 브라우저 컨트롤에서 알림입니다. 참조 [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx) 자세한 내용은 Windows sdk입니다.  
+ 재정의 `OnTranslateAccelerator` 대응 하는 데는 `TranslateAccelerator` Microsoft 웹 브라우저 컨트롤에서 알림. 참조 [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx) 자세한 내용은 Windows SDK에 있습니다.  
   
 ##  <a name="ontranslateurl"></a>  CHtmlView::OnTranslateUrl  
  호스트가 로드할 URL을 수정할 수 있도록 하기 위해 Internet Explorer 또는 MSHTML에 의해 호출됩니다.  
@@ -1575,16 +1575,16 @@ virtual HRESULT OnTranslateUrl(
  나중에 사용하기 위해 예약되어 있습니다.  
   
  *pchURLIn*  
- Internet Explorer 또는 MSHTML 변환 해야 하는 URL을 나타내는 의해 제공 된 문자열의 주소입니다.  
+ Internet Explorer 또는 MSHTML 변환할 URL을 나타내는 의해 제공 된 문자열의 주소입니다.  
   
  *ppchURLOut*  
- 번역 된 URL 주소를 수신 하는 문자열 포인터의 주소입니다. 호스트는 작업 메모리 할당자를 사용 하 여 버퍼를 할당 합니다. 이 매개 변수의 콘텐츠를 항상 초기화 **NULL**URL 변환 되지 않는 또는 메서드가 실패 하는 경우에 합니다.  
+ 변환 된 URL의 주소를 수신 하는 문자열 포인터의 주소입니다. 호스트는 작업 메모리 할당자를 사용 하 여 버퍼를 할당 합니다. 이 매개 변수의 내용은 URL 변환 되지 않습니다 또는 메서드가 실패 하는 경우에 NULL로 항상 초기화 해야 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- `S_OK` URL 변환 된 경우 **S_FALSE** URL 번역 되지 된 경우 또는 오류가 발생 한 경우에 OLE에서 정의한 오류 코드입니다.  
+ `S_OK` URL 되었으면 번역 URL를 변환 하지 않으면 S_FALSE 또는 OLE에서 정의한 오류 코드는 오류가 발생 합니다.  
   
 ### <a name="remarks"></a>설명  
- 재정의 `OnTranslateUrl` 에 대응 하는 `TranslateUrl` Microsoft 웹 브라우저 컨트롤에서 알림입니다. 참조 [IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx) 자세한 내용은 Windows sdk입니다.  
+ 재정의 `OnTranslateUrl` 대응 하는 데는 `TranslateUrl` Microsoft 웹 브라우저 컨트롤에서 알림. 참조 [IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx) 자세한 내용은 Windows SDK에 있습니다.  
   
 ##  <a name="onupdateui"></a>  CHtmlView::OnUpdateUI  
  명령 상태가 변경되었음을 호스트에 알립니다.  
@@ -1594,13 +1594,13 @@ virtual HRESULT OnUpdateUI();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `S_OK` 성공 하면 또는 그렇지 않으면 OLE 정의 된 오류 코드입니다.  
+ 성공 하면 s_ok이 고, 또는 고 그렇지 OLE 정의한 오류 코드입니다.  
   
 ### <a name="remarks"></a>설명  
- 호스트의 도구 모음 단추 상태를 업데이트 해야 합니다. 반환 값에 관계 없이이 메서드는 `ShowUI`합니다. 재정의 `OnUpdateUI` 에 대응 하는 `UpdateUI` Microsoft 웹 브라우저 컨트롤에서 알림입니다.  
+ 호스트는 도구 모음 단추의 상태를 업데이트 해야 합니다. 반환 값에 관계 없이이 메서드는 `ShowUI`합니다. 재정의 `OnUpdateUI` 대응 하는 데는 `UpdateUI` Microsoft 웹 브라우저 컨트롤에서 알림.  
   
 ##  <a name="onvisible"></a>  CHtmlView::OnVisible  
- 이 멤버 함수는 WebBrowser에 대 한 창을 표시 하거나 숨길 수 해야 때 프레임 워크에서 호출 됩니다.  
+ 이 멤버 함수는 WebBrowser 창을 표시 하거나 숨길 수 해야 하는 경우 프레임 워크에서 호출 됩니다.  
   
 ```  
 virtual void OnVisible(BOOL bVisible);
@@ -1608,13 +1608,13 @@ virtual void OnVisible(BOOL bVisible);
   
 ### <a name="parameters"></a>매개 변수  
  *bVisible*  
- 개체를 표시 하는 경우 0이 아니고 그렇지 않으면 0입니다.  
+ 개체를 표시 하는 경우 0이 아닌 이거나 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 이렇게 하면 Internet Explorer 창을 작동 하는 동일한 방식으로 동작을 제어 호스트 개체 창.  
+ 이 사용 하면 개체 컨트롤 호스트 창이 Internet Explorer 창을 작동 하는 동일한 방식으로 동작 합니다.  
   
 ##  <a name="putproperty"></a>  CHtmlView::PutProperty  
- 지정된 된 개체와 연결 된 속성을 설정 하려면이 함수를 호출 합니다.  
+ 지정된 된 개체와 연결 된 속성을 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 void PutProperty(
@@ -1647,7 +1647,7 @@ void PutProperty(
  설정할 속성을 포함 하는 문자열입니다.  
   
  *vtValue*  
- 속성의 새 값으로 표시 *lpszProperty*합니다.  
+ 속성의 새 값에 나타난 *lpszProperty*합니다.  
   
  *lpszPropertyName*  
  설정할 속성의 이름을 포함 하는 문자열에 대 한 포인터입니다.  
@@ -1683,22 +1683,22 @@ HRESULT QueryFormsCommand(
  식별자에 대 한 쿼리 중인 명령입니다.  
   
  *pbSupported*  
- 에 대 한 포인터는 **BOOL** 지정 if 명령 (으로 식별 *dwCommandID*) 지원 됩니다. True 이면 명령이 지원 됩니다. 그렇지 않으면 FALSE입니다.  
+ 경우를 지정 하는 부울에 대 한 포인터 명령 (구분 *dwCommandID*) 지원 됩니다. True 이면 명령이 지원 됩니다. 그렇지 않으면 FALSE입니다.  
   
  *pbEnabled*  
- 에 대 한 포인터는 **BOOL** 지정 하는 경우 명령 (으로 식별 *dwCommandID*)를 사용할 수 있습니다. True 이면 명령이 지원 됩니다. 그렇지 않으면 FALSE입니다.  
+ 경우를 지정 하는 부울에 대 한 포인터 명령 (구분 *dwCommandID*) 사용 가능 합니다. True 이면 명령이 지원 됩니다. 그렇지 않으면 FALSE입니다.  
   
  *pbChecked*  
- 에 대 한 포인터는 **BOOL** 지정 하는 경우 명령 (으로 식별 *dwCommandID*)을 선택 합니다. True 이면 명령이 지원 됩니다. 그렇지 않으면 FALSE입니다.  
+ 경우를 지정 하는 부울에 대 한 포인터 명령 (구분 *dwCommandID*) 확인란이 선택 되어 있습니다. True 이면 명령이 지원 됩니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 표준 `HRESULT` 값입니다. 가능한 값의 전체 목록을 보려면 [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) Windows sdk에서입니다.  
+ 표준 HRESULT 값입니다. 가능한 값의 전체 목록은 참조 하세요 [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) Windows SDK에 있습니다.  
   
 ### <a name="remarks"></a>설명  
- `QueryFormsCommand` 동작을 구현 하는 [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) 메서드.  
+ `QueryFormsCommand` 동작을 구현 합니다 [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) 메서드.  
   
 ##  <a name="querystatuswb"></a>  CHtmlView::QueryStatusWB  
- 명령 상태를 쿼리를이 멤버 함수를 호출 합니다.  
+ 명령 상태를 쿼리하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 OLECMDF QueryStatusWB(OLECMDID cmdID) const;  
@@ -1706,30 +1706,30 @@ OLECMDF QueryStatusWB(OLECMDID cmdID) const;
   
 ### <a name="parameters"></a>매개 변수  
  *cmdID*  
- [OLECMDID](http://msdn.microsoft.com/library/windows/desktop/ms691264) 호출자에 게 상태 정보를 필요로 하는 명령 값입니다.  
+ 합니다 [OLECMDID](http://msdn.microsoft.com/library/windows/desktop/ms691264) 명령 호출자는에 대 한 상태 정보를 필요로 하는 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 주소는 [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) 명령의 상태를 수신 하는 값입니다.  
+ 주소를 [OLECMDF](http://msdn.microsoft.com/library/windows/desktop/ms695237) 명령의 상태를 수신 하는 값입니다.  
   
 ### <a name="remarks"></a>설명  
- `QueryStatusWB` 동작을 구현 하는 [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) 메서드.  
+ `QueryStatusWB` 동작을 구현 합니다 [IOleCommandTarget::QueryStatus](http://msdn.microsoft.com/library/windows/desktop/ms688491) 메서드.  
   
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="refresh"></a>  CHtmlView::Refresh  
- URL 또는 현재 웹 브라우저에 표시 되는 파일을 다시 로드 합니다.  
+ URL 또는 웹 브라우저에 현재 표시 되는 파일을 다시 로드 합니다.  
   
 ```  
 void Refresh();
 ```  
   
 ### <a name="remarks"></a>설명  
- **새로 고침** 새로 고침 수준 설정에 대 한 매개 변수를 포함 합니다.  
+ `Refresh` 새로 고침 수준 설정에 대 한 매개 변수를 없이 포함 되어 있습니다.  
   
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="refresh2"></a>  CHtmlView::Refresh2  
- 현재 Internet Explorer에 표시 하는 파일을 다시 로드 합니다.  
+ Internet Explorer에 현재 표시 되는 파일을 다시 로드 합니다.  
   
 ```  
 void Refresh2(int nLevel);
@@ -1737,7 +1737,7 @@ void Refresh2(int nLevel);
   
 ### <a name="parameters"></a>매개 변수  
  *nLevel*  
- 새로 고침 수준을 지정 하는 변수의 주소입니다. 가능한 변수가에 정의 된 [RefreshConstants](https://msdn.microsoft.com/library/aa768363.aspx), Windows sdk에서입니다.  
+ 새로 고침 수준을 지정 하는 변수의 주소입니다. 가능한 변수에서 정의 됩니다 [RefreshConstants](https://msdn.microsoft.com/library/aa768363.aspx), Windows SDK에 있습니다.  
   
 ### <a name="remarks"></a>설명  
  와 달리 [새로 고침](#refresh), `Refresh2` 새로 고침 수준을 지정 하는 매개 변수를 포함 합니다.  
@@ -1745,7 +1745,7 @@ void Refresh2(int nLevel);
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="setaddressbar"></a>  CHtmlView::SetAddressBar  
- 이 멤버 함수는 Internet Explorer 개체의 주소 표시줄 표시 / 숨기기를 호출 합니다.  
+ Internet Explorer 개체의 주소 표시줄 표시 / 숨기기를이 멤버 함수를 호출 합니다.  
   
 ```  
 void SetAddressBar(BOOL bNewValue);
@@ -1753,13 +1753,13 @@ void SetAddressBar(BOOL bNewValue);
   
 ### <a name="parameters"></a>매개 변수  
  *bNewValue*  
- 주소 표시줄을 표시 하려면 0이 아닌 그렇지 않으면 0입니다.  
+ 주소 표시줄에 표시할 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- Internet Explorer에 적용 됩니다. 이 호출에서 WebBrowser 컨트롤을 사용 하면 오류가 반환 됩니다 하지만이 호출을 무시 합니다.  
+ Internet Explorer에 적용 됩니다. WebBrowser 컨트롤을 사용 하 여이 호출을 사용 하는 경우 오류가 없으면 반환 됩니다 있지만이 호출을 무시 합니다.  
   
 ##  <a name="setfullscreen"></a>  CHtmlView::SetFullScreen  
- Internet Explorer를 어느 전체 화면 또는 표준 창 모드로 설정 하려면이 함수를 호출 합니다.  
+ Internet Explorer 하거나 전체 화면 또는 표준 창 모드로 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 void SetFullScreen(BOOL bNewValue);
@@ -1767,15 +1767,15 @@ void SetFullScreen(BOOL bNewValue);
   
 ### <a name="parameters"></a>매개 변수  
  *bNewValue*  
- 전체 화면 모드에서 0이 아닌 그렇지 않으면 0입니다.  
+ 전체 화면 모드에 대해 0 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 전체 화면 모드에서 Internet Explorer 주 창의 최대화 하 고 상태 표시줄, 도구 모음, 메뉴 모음 및 제목 표시줄 숨겨집니다.  
+ 전체 화면 모드에서 Internet Explorer 주 창 최대화 하 고 상태 표시줄, 도구 모음, 메뉴 모음 및 제목 표시줄은 숨겨집니다.  
   
- Internet Explorer에 적용 됩니다. 이 호출에서 WebBrowser 컨트롤을 사용 하면 오류가 반환 됩니다 하지만이 호출을 무시 합니다.  
+ Internet Explorer에 적용 됩니다. WebBrowser 컨트롤을 사용 하 여이 호출을 사용 하는 경우 오류가 없으면 반환 됩니다 있지만이 호출을 무시 합니다.  
   
 ##  <a name="setheight"></a>  CHtmlView::SetHeight  
- Internet Explorer 주 창의 높이 설정 하려면이 함수를 호출 합니다.  
+ Internet Explorer 주 창의 높이 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 void SetHeight(long nNewValue);
@@ -1783,7 +1783,7 @@ void SetHeight(long nNewValue);
   
 ### <a name="parameters"></a>매개 변수  
  *nNewValue*  
- 픽셀 주 창의 높이입니다.  
+ 주 창의 픽셀 높이입니다.  
   
 ### <a name="remarks"></a>설명  
  Internet Explorer 및 WebBrowser에 적용됩니다.  
@@ -1808,13 +1808,13 @@ void SetMenuBar(BOOL bNewValue);
   
 ### <a name="parameters"></a>매개 변수  
  *bNewValue*  
- 메뉴 모음; 표시에 0이 아닌 그렇지 않으면 0입니다.  
+ 메뉴 표시줄을 표시 하려면 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- Internet Explorer에 적용 됩니다. 이 호출에서 WebBrowser 컨트롤을 사용 하면 오류가 반환 됩니다 하지만이 호출을 무시 합니다.  
+ Internet Explorer에 적용 됩니다. WebBrowser 컨트롤을 사용 하 여이 호출을 사용 하는 경우 오류가 없으면 반환 됩니다 있지만이 호출을 무시 합니다.  
   
 ##  <a name="setoffline"></a>  CHtmlView::SetOffline  
- WebBrowser 컨트롤이 현재 오프 라인 모드에서 작동 하는지 여부를 나타내는 값을 설정 하려면이 함수를 호출 합니다.  
+ WebBrowser 컨트롤을 현재 오프 라인 모드에서 작동 하는지 여부를 나타내는 값을 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 void SetOffline(BOOL bNewValue);
@@ -1822,15 +1822,15 @@ void SetOffline(BOOL bNewValue);
   
 ### <a name="parameters"></a>매개 변수  
  *bNewValue*  
- 로컬 캐시;에서 읽을 수는 0이 아닌 값 그렇지 않으면 0입니다.  
+ 로컬 캐시;를 읽어올 수는 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 오프 라인 모드에서 브라우저에서는 소스 문서 대신 로컬 캐시에서 HTML 페이지를 읽습니다.  
+ 오프 라인 모드에서 브라우저 소스 문서 대신 로컬 캐시에서 HTML 페이지를 읽습니다.  
   
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="setregisterasbrowser"></a>  CHtmlView::SetRegisterAsBrowser  
- WebBrowser 컨트롤이 대상 이름 확인을 위한 최상위 브라우저로 등록 되었는지 여부를 나타내는 값을 설정 하려면이 함수를 호출 합니다.  
+ WebBrowser 컨트롤이 대상 이름 확인을 위한 최상위 브라우저로 등록 되었는지 여부를 나타내는 값을 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 void SetRegisterAsBrowser(BOOL bNewValue);
@@ -1838,15 +1838,15 @@ void SetRegisterAsBrowser(BOOL bNewValue);
   
 ### <a name="parameters"></a>매개 변수  
  *bNewValue*  
- Internet Explorer 최상위 브라우저로 등록 되었는지 여부를 결정 합니다. 웹 브라우저; 최상위 브라우저로 등록 되었는지, 0이 아닌 경우 0 이면 최상위 브라우저 않습니다. 기본값은 0입니다.  
+ Internet Explorer 최상위 브라우저로 등록 되었는지 여부를 결정 합니다. 웹 브라우저를 최상위 브라우저로 등록 되어 0이 아닌 경우 0 이면 최상위 브라우저 아닙니다. 기본값은 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 최상위 브라우저를 기본 브라우저로 레지스트리에 설정 된 브라우저가입니다.  
+ 최상위 브라우저를 기본 브라우저로 레지스트리에 설정 브라우저를입니다.  
   
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="setregisterasdroptarget"></a>  CHtmlView::SetRegisterAsDropTarget  
- WebBrowser 컨트롤이 탐색을 위한 놓기 대상으로 등록 되었는지 여부를 나타내는 값을 설정 하려면이 함수를 호출 합니다.  
+ WebBrowser 컨트롤이 탐색을 위한 놓기 대상으로 등록 되었는지 여부를 나타내는 값을 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 void SetRegisterAsDropTarget(BOOL bNewValue);
@@ -1854,13 +1854,13 @@ void SetRegisterAsDropTarget(BOOL bNewValue);
   
 ### <a name="parameters"></a>매개 변수  
  *bNewValue*  
- WebBrowser 컨트롤이 탐색을 위한 놓기 대상으로 등록 되어 있는지 확인 합니다. 개체가; 놓기 대상으로 등록은 0이 아니면 0 이면 놓기 대상 않습니다.  
+ WebBrowser 컨트롤이 탐색을 위한 놓기 대상으로 등록 되어 있는지 확인 합니다. 개체가; 놓기 대상으로 등록 되었는지, 0이 아닌 경우 0 이면 놓기 대상이 아닙니다.  
   
 ### <a name="remarks"></a>설명  
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="setsilent"></a>  CHtmlView::SetSilent  
- 모든 대화 상자를 표시할 수 있는지 여부를 나타내는 값을 설정 하려면이 함수를 호출 합니다.  
+ 모든 대화 상자를 표시할 수 있는지 여부를 나타내는 값을 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 void SetSilent(BOOL bNewValue);
@@ -1868,7 +1868,7 @@ void SetSilent(BOOL bNewValue);
   
 ### <a name="parameters"></a>매개 변수  
  *bNewValue*  
- 0이 아니면 대화 상자가 표시 되지 않습니다. 0 이면 대화 상자가 표시 됩니다. 기본값은 0입니다.  
+ 0이 아니면 대화 상자 표시 되지 않습니다. 0 이면 대화 상자가 표시 됩니다. 기본값은 0입니다.  
   
 ### <a name="remarks"></a>설명  
  Internet Explorer 및 WebBrowser에 적용됩니다.  
@@ -1882,13 +1882,13 @@ void SetStatusBar(BOOL bNewValue);
   
 ### <a name="parameters"></a>매개 변수  
  *bNewValue*  
- 상태 표시줄 표시 되 면 0이 아닌 그렇지 않으면 0입니다.  
+ 상태 표시줄 표시 되 면 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- Internet Explorer에 적용 됩니다. 이 호출에서 WebBrowser 컨트롤을 사용 하면 오류가 반환 됩니다 하지만이 호출을 무시 합니다.  
+ Internet Explorer에 적용 됩니다. WebBrowser 컨트롤을 사용 하 여이 호출을 사용 하는 경우 오류가 없으면 반환 됩니다 있지만이 호출을 무시 합니다.  
   
 ##  <a name="settheatermode"></a>  CHtmlView::SetTheaterMode  
- WebBrowser 컨트롤이 극장 모드에서 인지를 나타내는 값을 설정 하려면이 함수를 호출 합니다.  
+ WebBrowser 컨트롤이 극장 모드 인지 여부를 나타내는 값을 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 void SetTheaterMode(BOOL bNewValue);
@@ -1896,15 +1896,15 @@ void SetTheaterMode(BOOL bNewValue);
   
 ### <a name="parameters"></a>매개 변수  
  *bNewValue*  
- WebBrowser 컨트롤이 극장 모드;를 설정 하려면 0이 아닌 그렇지 않으면 0입니다. 기본값은 0입니다.  
+ WebBrowser 컨트롤이 극장 모드;로 설정 하려면 0이 아닌 값 그렇지 않으면 0입니다. 기본값은 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 웹 브라우저 극장 모드 인지, 브라우저 주 창을 전체 화면을 채웁니다, 그리고 최소한의 탐색 도구 모음에 있는 도구 모음을 표시 및 상태 표시줄이 화면 오른쪽 위 모서리에 표시 합니다.  
+ 웹 브라우저 극장 모드의 경우 브라우저 창의 전체 화면을 채우는, 최소한의 탐색 도구를 사용 하 여 도구 모음 표시 되 고 상태 표시줄 화면의 오른쪽 위 모서리에 표시 됩니다.  
   
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="settoolbar"></a>  CHtmlView::SetToolBar  
- 이 멤버 함수를 Internet Explorer의 도구 모음을 표시할지를 호출 합니다.  
+ Internet Explorer 도구 모음을 표시할지를이 멤버 함수를 호출 합니다.  
   
 ```  
 void SetToolBar(int nNewValue);
@@ -1912,10 +1912,10 @@ void SetToolBar(int nNewValue);
   
 ### <a name="parameters"></a>매개 변수  
  *nNewValue*  
- 도구 모음을 표시할지 여부를 나타냅니다. 도구 모음이 표시 됩니다. 0이 아닌 그렇지 않으면 0입니다.  
+ 도구 모음을 표시할지 여부를 나타냅니다. 도구 모음이 표시 됩니다. 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- Internet Explorer에 적용 됩니다. 이 호출에서 WebBrowser 컨트롤을 사용 하면 오류가 반환 됩니다 하지만이 호출을 무시 합니다.  
+ Internet Explorer에 적용 됩니다. WebBrowser 컨트롤을 사용 하 여이 호출을 사용 하는 경우 오류가 없으면 반환 됩니다 있지만이 호출을 무시 합니다.  
   
 ##  <a name="settop"></a>  CHtmlView::SetTop  
  WebBrowser 컨트롤의 내부 위쪽 가장자리와 해당 컨테이너의 위쪽 가장자리 사이의 거리를 설정 하려면이 멤버 함수를 호출 합니다.  
@@ -1932,7 +1932,7 @@ void SetTop(long nNewValue);
  Internet Explorer 및 WebBrowser에 적용됩니다.  
   
 ##  <a name="setvisible"></a>  CHtmlView::SetVisible  
- WebBrowser 컨트롤의 표시 여부 상태를 설정 하려면이 함수를 호출 합니다.  
+ WebBrowser 컨트롤의 표시 여부 상태를 설정 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 void SetVisible(BOOL bNewValue);
@@ -1940,7 +1940,7 @@ void SetVisible(BOOL bNewValue);
   
 ### <a name="parameters"></a>매개 변수  
  *bNewValue*  
- 컨트롤에 표시 되 면 0이 아닌 그렇지 않으면 0입니다.  
+ 컨트롤이 표시 되 면 0이 아닌 값 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
  Internet Explorer 및 WebBrowser에 적용됩니다.  
@@ -1957,7 +1957,7 @@ void SetWidth(long nNewValue);
  Internet Explorer 주 창의 픽셀 너비입니다.  
   
 ##  <a name="stop"></a>  CHtmlView::Stop  
- 보류 중인 모든 탐색 취소 작업을 다운로드 하 여 배경 소리 및 애니메이션과 같은 모든 동적 페이지 요소를 중지 하려면이 멤버 함수를 호출 합니다.  
+ 또는 보류 중인 모든 탐색을 취소 하 고, 작업을 다운로드 하 고, 배경 소리 및 애니메이션과 같은 모든 동적 페이지 요소를 중지 하려면이 멤버 함수를 호출 합니다.  
   
 ```  
 void Stop();
