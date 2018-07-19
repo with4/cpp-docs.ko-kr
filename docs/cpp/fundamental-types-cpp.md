@@ -53,17 +53,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c24ee360f1c14aa9b355f45ec1c12877efa306c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d91971b7d96b09fe1fd0d14a2a711f7771503a6a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417330"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941478"
 ---
 # <a name="fundamental-types--c"></a>기본 형식 (C++)
 C++의 기본 형식은 정수 계열, 부동 소수점 및 void의 세 가지 범주로 구분됩니다. 정수 계열 형식은 정수를 처리할 수 있습니다. 부동 소수점 형식은 소수 부분이 있을 수 있는 값을 지정할 수 있습니다.  
   
- [void](../cpp/void-cpp.md) 형식은 빈 값 집합을 설명합니다. `void` 형식의 변수를 지정할 수는 없습니다. 이 형식은 값을 반환하지 않는 함수를 선언하거나 형식화되지 않은 데이터 또는 임의로 형식화된 데이터에 대한 제네릭 포인터를 선언하는 데 주로 사용됩니다. 모든 식은 `void`형식으로 명시적으로 변환되거나 캐스팅될 수 있습니다. 그러나 이러한 식은 사용이 다음으로 제한됩니다.  
+ [void](../cpp/void-cpp.md) 형식은 빈 값 집합을 설명합니다. 형식의 변수가 없기 **void** 지정할 수 있습니다-값을 반환 하는 함수를 선언 하는 데 주로 사용 됩니다 또는 형식화 된 데이터 또는 임의로 형식화 되지 제네릭 포인터를 선언 하 합니다. 명시적으로 변환 하거나 형식으로 캐스팅할 수 식일 **void**합니다. 그러나 이러한 식은 사용이 다음으로 제한됩니다.  
   
 -   식 문. 자세한 내용은 [식](../cpp/expressions-cpp.md)을 참조하세요.  
   
@@ -77,17 +77,17 @@ C++의 기본 형식은 정수 계열, 부동 소수점 및 void의 세 가지 �
   
 |범주|형식|목차|  
 |--------------|----------|--------------|  
-|정수 계열|`char`|`char` 형식은 일반적으로 기본 실행 문자 집합의 멤버를 포함하는 정수 계열 형식이며, 기본적으로 Microsoft C++에서는 ASCII입니다.<br /><br /> C++ 컴파일러는 `char`, `signed` `char`및 `unsigned` `char` 형식의 변수를 서로 다른 형식으로 처리합니다. /J 컴파일 옵션을 사용하지 않는 한 기본적으로 `char` 형식의 변수가 `int`  `signed` `char` 로 승격됩니다. 이 경우 변수는 `unsigned` `char` 형식으로 처리되어 부호 확장 없이 `int` 로 승격됩니다.|  
-||`bool`|`bool` 형식은 `true` 또는 `false`의 두 값 중 하나를 가질 수 있는 정수 계열 형식입니다. 크기는 지정되지 않습니다.|  
-||`short`|`short` `int` 형식(또는 단순히 `short`)은 `char`형식의 크기보다 크거나 같고 `int`형식의 크기보다 짧거나 같은 정수 계열 형식입니다.<br /><br /> `short` 형식의 개체를 `signed` `short` 또는 `unsigned short`로 선언할 수 있습니다. `Signed short` 와 `short`는 동의어입니다.|  
-||`int`|`int` 형식은 `short` `int`형식의 크기보다 크거나 같고 `long`형식의 크기보다 짧거나 같은 정수 계열 형식입니다.<br /><br /> `int` 형식의 개체를 `signed` `int` 또는 `unsigned` `int`로 선언할 수 있습니다. `Signed` `int` 와 `int`는 동의어입니다.|  
-||`__int8`, `__int16`, `__int32`, `__int64`|크기가 지정된 정수 `__int n`입니다. 여기서 `n` 은 정수 변수의 크기(비트)입니다. `__int8`, `__int16`, `__int32` 과 `__int64` 은 Microsoft 전용 키워드입니다. 일부 아키텍처에서 모든 형식을 사용할 수 있습니다. `(__int128` 지원 되지 않습니다.)|  
-||`long`|`long` 형식(또는 `long` `int`)은 `int`형식의 크기보다 크거나 같은 정수 계열 형식입니다.<br /><br /> `long` 형식의 개체를 `signed` `long` 또는 `unsigned` `long`로 선언할 수 있습니다. `Signed` `long` 와 `long`는 동의어입니다.|  
-||`long` `long`|부호 없는 `long`보다 큽니다.<br /><br /> `long long` 형식의 개체를 `signed` `long long` 또는 `unsigned` `long long`로 선언할 수 있습니다. `signed` `long long` 에 대 한 동의어 `long long`합니다.|  
-||`wchar_t`, `__wchar_t`|`wchar_t` 형식의 변수는 와이드 문자 또는 멀티바이트 문자 형식을 지정합니다. 기본적으로 `wchar_t` 는 네이티브 형식이지만, [/Zc:wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 를 사용하여 `wchar_t` 를 `unsigned short`에 대한 typedef로 만들 수 있습니다. `__wchar_t` 형식은 네이티브 `wchar_t` 형식의 Microsoft 전용 동의어입니다.<br /><br /> 문자 또는 문자열 리터럴 앞에 L 접두사를 사용하여 와이드 문자 형식을 지정합니다.|  
-|부동 소수점|`float`|`float` 형식은 가장 작은 부동 소수점 형식입니다.|  
-||`double`|`double` 형식은 `float`형식보다 크거나 같지만 `long` `double`형식의 크기보다 짧거나 같은 부동 소수점 형식입니다.<br /><br /> Microsoft 전용: `long double` 과 `double` 의 표현은 동일합니다. 그러나 `long double` 및 `double` 은 별개 형식입니다.|  
-||`long double`|`long` `double` 형식은 `double`형식보다 크거나 같은 부동 소수점 형식입니다.|  
+|정수 계열|**char**|형식 **char** 일반적으로 기본 실행 문자 집합의 멤버를 포함 하는 정수 계열 형식-기본적으로 Microsoft c + +에서는 ASCII입니다.<br /><br /> C + + 컴파일러는 형식의 변수에 취급 **char**, **char 서명**, 및 **unsigned char** 서로 다른 형식으로. 형식의 변수에 **char** 올려진 **int** 형식인 것 처럼 **char 서명** 기본적으로 /J 컴파일 옵션을 사용 하지 않으면. 이 경우 형식으로 처리 되므로 **unsigned char** 로 승격 됩니다 **int** 부호 확장 없이 합니다.|  
+||**bool**|형식 **bool** 두 값 중 하나를 가질 수 있는 정수 계열 형식인 **true** 하거나 **false**합니다. 크기는 지정되지 않습니다.|  
+||**short**|형식 **short int** (또는 단순히 **짧은**) 형식의 크기 보다 크거나 같은 경우에 정수 계열 형식인 **char**, 및 보다 작거나 형식의크기**int**합니다.<br /><br /> 형식의 개체 **짧은** 로 선언할 수 있습니다 **짧은 서명** 하거나 **unsigned short**합니다. **즉 서명** 에 대 한 동의어가 **짧은**합니다.|  
+||**int**|형식 **int** 형식의 크기 보다 크거나 같은 경우에 정수 계열 형식인 **short int**, 및 보다 작거나 형식의 크기 **긴**합니다.<br /><br /> 형식의 개체 **int** 로 선언할 수 있습니다 **int 서명** 하거나 **부호 없는 int**합니다. **Int 서명** 에 대 한 동의어가 **int**합니다.|  
+||**__int8**하십시오 **__int16**하십시오 **__int32**, **__int64**|크기가 지정된 정수 `__int n`입니다. 여기서 `n` 은 정수 변수의 크기(비트)입니다. **__int8**, **__int16**합니다 **__int32** 하 고 **__int64** 은 Microsoft 전용 키워드입니다. 모든 형식이 아닌 모든 아키텍처에서 사용할 수 있습니다. (**__int128** 지원 되지 않습니다.)|  
+||**long**|형식 **긴** (또는 **long int**) 형식의 크기 보다 크거나 같은 경우에 정수 계열 형식인 **int**합니다.<br /><br /> 형식의 개체 **긴** 로 선언할 수 있습니다 **기호가 있는 long** 하거나 **부호 없는 long**합니다. **기호가 있는 long** 에 대 한 동의어가 **긴**합니다.|  
+||**long long**|부호 없는 보다 큰 **긴**합니다.<br /><br /> 형식의 개체 **long long** 로 선언할 수 있습니다 **기호가 있는 long long** 하거나 **부호 없는 long long**합니다. **기호가 있는 long long** 에 대 한 동의어가 **long long**합니다.|  
+||**wchar_t**, **__wchar_t**|형식 변수의 **wchar_t** 는 와이드 문자 또는 멀티 바이트 문자 형식을 지정 합니다. 기본적으로 **wchar_t** 는 네이티브 형식에 사용할 수 있지만 [/zc: wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) 되도록 **wchar_t** 에 대 한 typedef **unsigned short**합니다. 합니다 **__wchar_t** 네이티브에 대 한 Microsoft 전용 동의어 **wchar_t** 형식입니다.<br /><br /> 문자 또는 문자열 리터럴 앞에 L 접두사를 사용하여 와이드 문자 형식을 지정합니다.|  
+|부동 소수점|**float**|형식 **float** 가장 작은 부동 소수점 형식입니다.|  
+||**double**|형식 **이중** 보다 큰 부동 소수점 형식 또는 형식 **float**, 하지만 보다 작거나 형식의 크기 **long double**합니다.<br /><br /> Microsoft 전용: 표현의 **long double** 하 고 **double** 동일 합니다. 그러나 **long double** 하 고 **double** 은 별개 형식입니다.|  
+||**long double**|형식 **long double** 부동 소수점 형식 보다 큰 또는 형식 **double**합니다.|  
   
  **Microsoft 전용**  
   
@@ -97,10 +97,10 @@ C++의 기본 형식은 정수 계열, 부동 소수점 및 void의 세 가지 �
   
 |형식|크기|  
 |----------|----------|  
-|`bool`, `char`, `unsigned char`, `signed char`, `__int8`|1바이트|  
-|`__int16`, `short`, `unsigned short`, `wchar_t`, `__wchar_t`|2바이트|  
-|`float`, `__int32`, `int`, `unsigned int`, `long`, `unsigned long`|4바이트|  
-|`double`, `__int64`, `long double`, `long long`|8바이트|  
+|**bool**, **char**합니다 **unsigned char**를 **char 서명**, **__int8**|1바이트|  
+|**__int16**, **짧은**합니다 **unsigned short**를 **wchar_t**, **__wchar_t**|2바이트|  
+|**부동 소수점**, **__int32**, **int**를 **부호 없는 int**를 **긴**, **부호 없는 long**|4바이트|  
+|**이중**하십시오 **__int64**, **long double**, **long long**|8바이트|  
   
  **Microsoft 전용 종료**  
   

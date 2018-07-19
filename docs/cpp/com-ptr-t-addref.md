@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54a1b629f254bae2b72790546bcbb00185f2c44c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40ed48b54a3862f7ac5804e7652d98b661bb071d
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409776"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940994"
 ---
 # <a name="comptrtaddref"></a>_com_ptr_t::AddRef
 **Microsoft 전용**  
   
- 호출의 `AddRef` 의 멤버 함수 **IUnknown** 캡슐화 된 인터페이스 포인터입니다.  
+ 호출 된 `AddRef` 멤버 함수 `IUnknown` 캡슐화 된 인터페이스 포인터에 대 한 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,7 +37,7 @@ void AddRef( );
 ```  
   
 ## <a name="remarks"></a>설명  
- 호출 `IUnknown::AddRef` 캡슐화 된 인터페이스 포인터에 발생 한 `E_POINTER` 포인터가 있는 경우 오류 **NULL**합니다.  
+ 호출 `IUnknown::AddRef` 포인터가 null 인 경우 캡슐화 된 인터페이스 포인터에 대 한 E_POINTER 오류를 발생 합니다.  
   
  **Microsoft 전용 종료**  
   

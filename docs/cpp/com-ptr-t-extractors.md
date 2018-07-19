@@ -30,11 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1343d7dd5f6a35bb222b731294ec897116b9e4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b0bfe0cdb5ea9dd524f2e81fcb2719bf40001758
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944602"
 ---
 # <a name="comptrt-extractors"></a>_com_ptr_t Extractors
 **Microsoft 전용**  
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-      operator Interface*( ) const throw( );   
+operator Interface*( ) const throw( );   
 operator Interface&( ) const;   
 Interface& operator*( ) const;   
 Interface* operator->( ) const;   
@@ -55,17 +56,17 @@ operator bool( ) const throw( );
   
 ## <a name="remarks"></a>설명  
   
--   **연산자 인터페이스\***  일 수 있는 캡슐화 된 인터페이스 포인터를 반환 **NULL**합니다.  
+-   **연산자 인터페이스\***  NULL 일 수 있는 캡슐화 된 인터페이스 포인터를 반환 합니다.  
   
--   **연산자 인터페이스 &** 캡슐화 된 인터페이스 포인터에 대 한 참조를 반환 하 고에서 오류가 발생 하 여 포인터가 있으면 **NULL**합니다.  
+-   **연산자 인터페이스 &** 캡슐화 된 인터페이스 포인터에 대 한 참조를 반환 하 고 포인터가 null 인 경우 오류가 발생 합니다.  
   
--   **연산자\***  는 스마트 포인터 개체가 역참조 시 실제로 캡슐화 된 인터페이스인 것 처럼 작동 하도록 합니다.  
+-   **연산자\***  는 스마트 포인터 개체가 역참조 시 실제로 캡슐화 된 인터페이스인 것 처럼 작동 하도록 허용 합니다.  
   
--   **operator->** 는 스마트 포인터 개체가 역참조 시 실제로 캡슐화 된 인터페이스인 것 처럼 작동 하도록 합니다.  
+-   **operator->** 는 스마트 포인터 개체가 역참조 시 실제로 캡슐화 된 인터페이스인 것 처럼 작동 하도록 허용 합니다.  
   
--   **연산자 &** 로 바꾸고, 모든 캡슐화 된 인터페이스 포인터를 해제 **NULL**, 캡슐화 된 포인터의 주소를 반환 합니다. 이렇게 하면 포함 된 함수를 주소로 전달 하도록 스마트 포인터는 **아웃** 인터페이스 포인터를 반환 하는 매개 변수입니다.  
+-   **연산자 &** NULL으로 바꿔 모든 캡슐화 된 인터페이스 포인터를 해제 하 고 캡슐화 된 포인터의 주소를 반환 합니다. 이렇게 하면 포함 된 함수를 주소로 전달 되는 스마트 포인터는 *out* 인터페이스 포인터를 반환 하는 매개 변수입니다.  
   
--   **연산자 bool** 스마트 포인터 개체를 조건식에 사용할 수 있습니다. 이 연산자는 반환 **true** 포인터가 없으면 **NULL**합니다.  
+-   **연산자 bool** 스마트 포인터 개체를 조건식에 사용할 수 있습니다. 이 연산자는 포인터가 NULL이 아닌 경우 TRUE를 반환 합니다.  
   
  **Microsoft 전용 종료**  
   

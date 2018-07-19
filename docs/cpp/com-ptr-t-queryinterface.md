@@ -17,22 +17,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c046f1b1d14b7e7dbd44ca9f5f012e632efef6e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c455ce81a869d64b3a9019088028e384c6a06217
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943148"
 ---
 # <a name="comptrtqueryinterface"></a>_com_ptr_t::QueryInterface
 **Microsoft 전용**  
   
- 호출의 `QueryInterface` 의 멤버 함수 **IUnknown** 캡슐화 된 인터페이스 포인터입니다.  
+ 호출 된 `QueryInterface` 멤버 함수 `IUnknown` 캡슐화 된 인터페이스 포인터에 대 한 합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
   
-      template<typename _InterfaceType> HRESULT QueryInterface (  
+template<typename _InterfaceType> HRESULT QueryInterface (  
    const IID& iid,  
    _InterfaceType*& p   
 ) throw ( );  
@@ -43,14 +44,14 @@ template<typename _InterfaceType> HRESULT QueryInterface (
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `iid`  
- **IID** 인터페이스 포인터입니다.  
+ *iid*  
+ `IID` 인터페이스 포인터입니다.  
   
- `p`  
+ *p*  
  원시 인터페이스 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
- 호출 **iunknown:: Queryinterface** 지정 된 캡슐화 된 인터페이스 포인터에 **IID** 결과 원시 인터페이스 포인터를 반환 하 고 `p`합니다. 이 루틴은 `HRESULT`를 반환하여 성공 또는 실패를 나타냅니다.  
+ 호출 `IUnknown::QueryInterface` 지정 된 캡슐화 된 인터페이스 포인터에 대 한 `IID` 결과 원시 인터페이스 포인터를 반환 하 고 *p*합니다. 이 루틴은 성공 또는 실패를 나타내는 HRESULT를 반환 합니다.  
   
  **Microsoft 전용 종료**  
   

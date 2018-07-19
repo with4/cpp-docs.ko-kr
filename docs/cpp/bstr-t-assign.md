@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de790fa55299999be8c4cb4d2945e2b004d20a9e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a80c918036887e9c3e573294d3859a9b60e71e7f
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943188"
 ---
 # <a name="bstrtassign"></a>_bstr_t::Assign
 **Microsoft 전용**  
   
- 복사는 `BSTR` 에 `BSTR` 의해 래핑되는 **_**`bstr_t`합니다.  
+ 복사본을 `BSTR` 에 `BSTR` 래핑되는 **_**`bstr_t`합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,15 +37,15 @@ void Assign(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `s`  
+ *s*  
  `BSTR`로 래핑된 `BSTR`로 복사되는 `_bstr_t`입니다.  
   
 ## <a name="remarks"></a>설명  
  `Assign`은 이진 복사를 수행합니다. 즉, `BSTR`의 전체 길이가 내용과 관계없이 복사됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp 
 // _bstr_t_Assign.cpp  
   
 #include <comdef.h>  

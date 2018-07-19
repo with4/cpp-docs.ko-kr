@@ -50,15 +50,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5894f1fc9bd901bef6e830250f4e1f8e9bdd335
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: a2ccefbc435cac5b48cd2c9509831699dcec70af
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37040756"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37849671"
 ---
 # <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox 클래스
-`CMFCRibbonComboBox` 클래스 리본 막대, 리본 패널 또는 리본 팝업 메뉴에 추가할 수 있는 콤보 상자 컨트롤을 구현 합니다.  
+`CMFCRibbonComboBox` 클래스는 리본 표시줄, 리본 패널 또는 리본 팝업 메뉴에 추가할 수 있는 콤보 상자 컨트롤을 구현 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -72,7 +72,7 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
   
 |name|설명|  
 |----------|-----------------|  
-|[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|CMFCRibbonComboBox 개체를 만듭니다.|  
+|[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|CMFCRibbonComboBox 개체를 생성합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
@@ -82,13 +82,13 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
 |[CMFCRibbonComboBox::DeleteItem](#deleteitem)|목록 상자에서 지정된 된 항목을 삭제합니다.|  
 |[CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)|떨어지면 목록 상자에서 크기를 변경할 수 있는지 여부를 지정 합니다.|  
 |[CMFCRibbonComboBox::FindItem](#finditem)|지정 된 문자열과 일치 하는 목록 상자에서 첫 번째 항목의 인덱스를 반환 합니다.|  
-|[CMFCRibbonComboBox::GetCount](#getcount)|목록 상자에서 항목의 수를 반환합니다.|  
-|[CMFCRibbonComboBox::GetCurSel](#getcursel)|목록 상자에서 현재 선택 된 항목의 인덱스를 가져옵니다.|  
+|[CMFCRibbonComboBox::GetCount](#getcount)|목록 상자에서 항목 수를 반환합니다.|  
+|[CMFCRibbonComboBox::GetCurSel](#getcursel)|목록 상자에서 현재 선택한 항목의 인덱스를 가져옵니다.|  
 |[CMFCRibbonComboBox::GetDropDownHeight](#getdropdownheight)|목록 상자를 삭제할 때 목록 상자의 높이 가져옵니다.|  
-|[CMFCRibbonComboBox::GetIntermediateSize](#getintermediatesize)|중간 모드에 표시 된 대로 콤보 상자의 크기를 반환 합니다.|  
-|[CMFCRibbonComboBox::GetItem](#getitem)|목록 상자에서 지정된 된 인덱스에 항목에 연결 된 문자열을 반환 합니다.|  
-|[CMFCRibbonComboBox::GetItemData](#getitemdata)|목록 상자에서 지정된 된 인덱스에 항목에 연결 된 데이터를 반환 합니다.|  
-|[CMFCRibbonComboBox::HasEditBox](#haseditbox)|편집 상자 컨트롤에 포함 되어 있는지 여부를 나타냅니다.|  
+|[CMFCRibbonComboBox::GetIntermediateSize](#getintermediatesize)|중간 모드로 표시 콤보 상자의 크기를 반환 합니다.|  
+|[CMFCRibbonComboBox::GetItem](#getitem)|목록 상자에서 지정된 된 인덱스에서 항목을 사용 하 여 연결 문자열을 반환 합니다.|  
+|[CMFCRibbonComboBox::GetItemData](#getitemdata)|목록 상자에서 지정된 된 인덱스에서 항목에 연결 된 데이터를 반환 합니다.|  
+|[CMFCRibbonComboBox::HasEditBox](#haseditbox)|컨트롤 편집 상자에 포함 되는지 여부를 나타냅니다.|  
 |[CMFCRibbonComboBox::IsResizeDropDownList](#isresizedropdownlist)|목록 상자 크기를 조정할 수 있는지 여부를 나타냅니다.|  
 |[CMFCRibbonComboBox::OnSelectItem](#onselectitem)|목록 상자에서 항목을 선택할 때 프레임 워크에서 호출 됩니다.|  
 |[CMFCRibbonComboBox::RemoveAllItems](#removeallitems)|목록 상자에서 모든 항목을 삭제 하 고 편집 상자를 지웁니다.|  
@@ -96,10 +96,10 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
 |[CMFCRibbonComboBox::SetDropDownHeight](#setdropdownheight)|놓을 때 목록 상자의 높이 설정 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 정적 레이블 또는 사용자가 편집할 수 있는 레이블을 사용 하 여 결합 된 목록 상자의 글꼴로 리본 콤보 상자 구성 됩니다. 리본 콤보 상자를 만들 때 원하는 형식을 지정 해야 합니다.  
+ 리본 콤보 상자 목록 상자의 정적 레이블 또는 사용자가 편집할 수 있는 레이블 중 하나를 사용 하 여 결합으로 구성 됩니다. 리본 콤보 상자를 만들 때 원하는 형식을 지정 해야 합니다.  
   
 ## <a name="example"></a>예  
- 다음 예제에서는의 개체를 생성 하는 `CMFCRibbonComboBox` 클래스, 콤보 상자에 항목을 추가, 콤보 상자에서 항목을 선택 및 콤보 상자 패널에 추가 합니다.  
+ 다음 예제에서는의 개체를 생성 하는 방법에 설명 합니다 `CMFCRibbonComboBox` 클래스, 콤보 상자에 항목을 추가, 콤보 상자에서 항목을 선택 하 고 콤보 상자를 패널에 추가 합니다.  
   
  [!code-cpp[NVC_MFC_RibbonApp#11](../../mfc/reference/codesnippet/cpp/cmfcribboncombobox-class_1.cpp)]  
   
@@ -157,13 +157,13 @@ CMFCRibbonComboBox();
  콤보 상자의 ID입니다.  
   
  [in] *bHasEditBox*  
- `TRUE` 컨트롤에서 입력란을 원하는 경우 `FALSE` 그렇지 않은 경우.  
+ 컨트롤 내에서 편집 상자를 원하는 경우 TRUE입니다. FALSE이 고, 그렇지 합니다.  
   
  [in] *nWidth*  
- 너비의 픽셀;에 있는 콤보 상자 또는 기본 너비에 대 한-1을 추가 합니다.  
+ 픽셀; 콤보 상자의 너비 또는 기본 너비에 대 한-1입니다.  
   
  [in] *lpszLabel*  
- 콤보 상자의 레이블 표시 합니다.  
+ 콤보 상자의 표시 레이블입니다.  
   
  [in] *nImage*  
  콤보 상자의 작은 이미지 인덱스입니다.  
@@ -186,13 +186,13 @@ BOOL DeleteItem(LPCTSTR lpszText);
  삭제할 항목의 0부터 시작 하는 인덱스입니다.  
   
  [in] *dwData*  
- 삭제할 항목에 연결 된 데이터입니다.  
+ 삭제할 항목과 연결 된 데이터입니다.  
   
  [in] *lpszText*  
- 삭제할 항목의 문자열입니다. 동일한 문자열로 여러 항목이 있으면 첫 번째 항목이 삭제 됩니다.  
+ 삭제할 항목의 문자열입니다. 동일한 문자열을 가진 여러 항목이 있으면 첫 번째 항목이 삭제 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 지정된 된 항목이 삭제 되었음을 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ TRUE 이면 지정된 된 항목이 삭제 되었습니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -205,10 +205,10 @@ void EnableDropDownListResize(BOOL bEnable=FALSE);
   
 ### <a name="parameters"></a>매개 변수  
  [in] *bEnable*  
- `TRUE` 크기 조정; 사용 하도록 설정 하려면 `FALSE` 크기를 조정 하지 않으려면입니다.  
+ 크기 조정을 사용 하도록 설정 하는 true로 설정 하면 크기 조정을 해제 하려면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- 크기를 조정할 때 목록 상자 크기를 표시 하는 항목에 맞게 변경 됩니다.  
+ 크기 조정 설정 된 경우 목록 상자 크기를 표시 하는 항목에 맞게 변경 됩니다.  
   
 ##  <a name="finditem"></a>  CMFCRibbonComboBox::FindItem  
  지정 된 문자열과 일치 하는 목록 상자에서 첫 번째 항목의 인덱스를 반환 합니다.  
@@ -222,12 +222,12 @@ int FindItem(LPCTSTR lpszText) const;
  목록 상자에 있는 항목의 문자열입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 항목의 0부터 시작 인덱스 또는 항목을 찾을 수 없는 경우-1을 추가 합니다.  
+ 항목의 0부터 시작 인덱스 또는 항목이 없으면-1입니다.  
   
 ### <a name="remarks"></a>설명  
   
 ##  <a name="getcount"></a>  CMFCRibbonComboBox::GetCount  
- 목록 상자에서 항목의 수를 반환합니다.  
+ 목록 상자에서 항목 수를 반환합니다.  
   
 ```  
 INT_PTR GetCount() const;  
@@ -239,14 +239,14 @@ INT_PTR GetCount() const;
 ### <a name="remarks"></a>설명  
   
 ##  <a name="getcursel"></a>  CMFCRibbonComboBox::GetCurSel  
- 목록 상자에서 현재 선택 된 항목의 인덱스를 가져옵니다.  
+ 목록 상자에서 현재 선택한 항목의 인덱스를 가져옵니다.  
   
 ```  
 int GetCurSel() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 목록 상자에서 현재 선택 된 항목의 0부터 시작 인덱스 또는 선택 된 항목이 없으면-1입니다.  
+ 목록 상자; 현재 선택된 된 항목의 0부터 시작 인덱스 또는 선택한 항목이 없으면-1입니다.  
   
 ##  <a name="getdropdownheight"></a>  CMFCRibbonComboBox::GetDropDownHeight  
  목록 상자를 삭제할 때 목록 상자의 높이 가져옵니다.  
@@ -256,12 +256,12 @@ int GetDropDownHeight();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 목록 상자의 픽셀 단위 높이입니다.  
+ 목록 상자의 픽셀 높이입니다.  
   
 ### <a name="remarks"></a>설명  
   
 ##  <a name="getintermediatesize"></a>  CMFCRibbonComboBox::GetIntermediateSize  
- 중간 모드에 표시 된 대로 콤보 상자의 크기를 반환 합니다.  
+ 중간 모드로 표시 콤보 상자의 크기를 반환 합니다.  
   
 ```  
 virtual CSize GetIntermediateSize(CDC* pDC);
@@ -275,10 +275,10 @@ virtual CSize GetIntermediateSize(CDC* pDC);
  콤보 상자의 크기입니다.  
   
 ### <a name="remarks"></a>설명  
- 반환 되는 크기는 기반으로 콤보 상자의 크기가 작은 이미지를 표시 하는 경우 합니다.  
+ 작은 이미지를 표시 될 때 반환 되는 크기 콤보 상자의 크기에 따라 됩니다.  
   
 ##  <a name="getitem"></a>  CMFCRibbonComboBox::GetItem  
- 목록 상자에서 지정된 된 인덱스에 항목에 연결 된 문자열을 반환 합니다.  
+ 목록 상자에서 지정된 된 인덱스에서 항목을 사용 하 여 연결 문자열을 반환 합니다.  
   
 ```  
 LPCTSTR GetItem(int iIndex) const;  
@@ -289,12 +289,12 @@ LPCTSTR GetItem(int iIndex) const;
  목록 상자에 있는 항목의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 항목과 연결 된 문자열에 대 한 포인터 그렇지 않으면 `NULL` 인덱스 매개 변수가 유효 하지 않을 경우 또는 인덱스 매개 변수가-1이 고 콤보 상자에서 선택한 항목이 없습니다.  
+ 항목을 사용 하 여 연결 문자열에 대 한 포인터 그렇지 않은 경우 인덱스 매개 변수가 유효 하지 않은 경우 또는 인덱스 매개 변수가-1이 고 콤보 상자에서 선택한 항목이 없는 경우 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
   
 ##  <a name="getitemdata"></a>  CMFCRibbonComboBox::GetItemData  
- 목록 상자에서 지정된 된 인덱스에 항목에 연결 된 데이터를 반환 합니다.  
+ 목록 상자에서 지정된 된 인덱스에서 항목에 연결 된 데이터를 반환 합니다.  
   
 ```  
 DWORD_PTR GetItemData(int iIndex) const;  
@@ -305,17 +305,17 @@ DWORD_PTR GetItemData(int iIndex) const;
  목록 상자에 있는 항목의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 항목;에 연결 된 데이터 0 또는 항목이 없는 경우 또는 인덱스 매개 변수가-1이 고 목록 상자에서 선택한 항목이 없습니다.  
+ 항목과 연결 된 데이터 0 또는 항목이 없는 경우 또는 인덱스 매개 변수가-1 이며 목록 상자에서 선택한 항목이 없습니다.  
   
 ##  <a name="haseditbox"></a>  CMFCRibbonComboBox::HasEditBox  
- 편집 상자 컨트롤에 포함 되어 있는지 여부를 나타냅니다.  
+ 컨트롤 편집 상자에 포함 되는지 여부를 나타냅니다.  
   
 ```  
 BOOL HasEditBox() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 컨트롤 편집 상자; 포함 되 면 그렇지 않으면 `FALSE`합니다.  
+ 컨트롤 편집 상자; 포함 된 경우 TRUE 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -327,10 +327,10 @@ BOOL IsResizeDropDownList() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 목록 상자 크기를 조정할 수; 경우 그렇지 않으면 `FALSE`합니다. [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)  
+ TRUE 이면 목록 상자 크기를 조정할 수 있습니다. 그렇지 않으면 FALSE입니다. [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)  
   
 ### <a name="remarks"></a>설명  
- 목록 상자를 사용 하 여 크기 조정 사용 하도록 설정할 수 있습니다는 [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize) 메서드.  
+ 목록 상자를 사용 하 여 크기 조정 가능 합니다 [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize) 메서드.  
   
 ##  <a name="onselectitem"></a>  CMFCRibbonComboBox::OnSelectItem  
  사용자가 목록 상자에서 항목을 선택할 때 프레임 워크에서 호출 됩니다.  
@@ -376,7 +376,7 @@ BOOL SelectItem(LPCTSTR lpszText);
  목록 상자에 있는 항목의 문자열입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
+ 메서드가 성공 하면 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -389,7 +389,7 @@ void SetDropDownHeight(int nHeight);
   
 ### <a name="parameters"></a>매개 변수  
  [in] *nHeight*  
- 목록 상자의 픽셀 단위 높이입니다.  
+ 목록 상자의 픽셀 높이입니다.  
   
 ### <a name="remarks"></a>설명  
  기본 높이 150 픽셀입니다.  

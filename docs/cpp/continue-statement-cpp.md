@@ -1,5 +1,5 @@
 ---
-title: 문 (c + +)를 계속 | Microsoft Docs
+title: continue 문 (c + +) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b153c9f5dfae93f1a5cb83dc2b9bcfc09e77af07
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97422a09f890686c4d414eea13da7db891494cc4
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944773"
 ---
 # <a name="continue-statement-c"></a>continue 문 (C++)
-가장 작은 바깥쪽의 제어 식이 강제로 전송 컨트롤의 [않습니다](../cpp/do-while-statement-cpp.md), [에 대 한](../cpp/for-statement-cpp.md), 또는 [동안](../cpp/while-statement-cpp.md) 루프입니다.  
+가장 작은 바깥쪽의 제어 식으로 강제로 전송 [마십시오](../cpp/do-while-statement-cpp.md)를 [에 대 한](../cpp/for-statement-cpp.md), 또는 [하는 동안](../cpp/while-statement-cpp.md) 루프입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,15 +35,15 @@ continue;
 ## <a name="remarks"></a>설명  
  현재 반복에서 나머지 모든 문은 실행되지 않습니다. 루프의 다음 반복은 다음과 같이 결정됩니다.  
   
--   `do` 또는 `while` 루프 내에서 다음 반복은 `do` 또는 `while` 문의 제어 식의 다시 계산에 의해 시작됩니다.  
+-   에 **수행** 또는 **하는 동안** 루프의 제어 식 내에서 시작 된 다음 반복 합니다 **수행** 또는 **하는 동안** 문.  
   
--   `for` 루프(`for`(`init-expr`; `cond-expr`; `loop-expr`) 구문 사용)에서 `loop-expr` 절이 실행됩니다. 그런 다음 `cond-expr` 절이 다시 계산되고 해당 결과에 따라 루프가 종료되거나 다른 반복이 발생합니다.  
+-   에 **에 대 한** 루프 (구문을 사용 하 여 `for`(`init-expr`; `cond-expr`; `loop-expr`)), `loop-expr` 절이 실행 됩니다. 그런 다음 `cond-expr` 절이 다시 계산되고 해당 결과에 따라 루프가 종료되거나 다른 반복이 발생합니다.  
   
- 다음 예제에서는 `continue` 문을 사용하여 코드 섹션을 건너뛰고 루프의 다음 반복을 시작하는 방법을 보여 줍니다.  
+ 다음 예제와 방법을 **계속** 문은 코드 섹션을 건너뛰고 루프의 다음 반복이 시작에 사용할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp 
 // continue_statement.cpp  
 #include <stdio.h>  
 int main()  

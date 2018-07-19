@@ -17,16 +17,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 165f110a7464e3393c68a469f1ad1220ef174452
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d056cb99c9da17622a115c1a250fb0a932397bfa
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412321"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939717"
 ---
 # <a name="defining-inline-c-functions-with-dllexport-and-dllimport"></a>dllexport 및 dllimport로 인라인 C++ 함수 정의
 ## <a name="microsoft-specific"></a>Microsoft 전용  
- `dllexport` 특성으로 함수를 인라인으로 정의할 수 있습니다. 이 경우 프로그램의 임의의 모듈이 함수를 참조하는지 여부와 상관없이 함수가 항상 인스턴스화되어 내보내집니다. 함수는 다른 프로그램에서 가져올 수 있는 것으로 간주됩니다.  
+ 사용 하는 함수를 인라인으로 정의할 수 있습니다 합니다 **dllexport** 특성입니다. 이 경우 프로그램의 임의의 모듈이 함수를 참조하는지 여부와 상관없이 함수가 항상 인스턴스화되어 내보내집니다. 함수는 다른 프로그램에서 가져올 수 있는 것으로 간주됩니다.  
   
  **dllimport** 특성으로 선언된 함수를 인라인으로 정의할 수도 있습니다. 이 경우 함수는 /Ob 지정에 따라 확장될 수 있으나 인스턴스화되지는 않습니다. 특히 인라인으로 가져온 함수의 주소가 사용된 경우 DLL에 상주하는 함수의 주소가 반환됩니다. 이 동작은 인라인으로 가져온 함수가 아닌 함수의 주소를 사용할 때와 동일합니다.  
   

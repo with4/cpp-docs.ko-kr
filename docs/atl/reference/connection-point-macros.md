@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e50a868dd87628873b2a43f0ace55690b0583fd5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 88789bef4bbcce3df99d90d736974377c9bca5fd
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32362932"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882938"
 ---
 # <a name="connection-point-macros"></a>연결 지점 매크로
 이러한 매크로 연결 지점 맵 및 항목을 정의합니다.  
@@ -49,15 +49,15 @@ BEGIN_CONNECTION_POINT_MAP(x)
  [in] 연결 지점을 포함 하는 클래스의 이름입니다.  
   
 ### <a name="remarks"></a>설명  
- 시작 된 연결 지점 맵에 `BEGIN_CONNECTION_POINT_MAP` 매크로 각 사용자 연결 지점을 사용에 대 한 항목을 추가 [CONNECTION_POINT_ENTRY](#connection_point_entry) 매크로 지도에 완료는 [END_CONNECTION_POINT_MAP](#end_connection_point_map) 매크로입니다.  
+ 연결 지점 맵에 BEGIN_CONNECTION_POINT_MAP 매크로 사용 하 여 시작, 사용 하 여 연결 포인트의 각 항목을 추가 합니다 [CONNECTION_POINT_ENTRY](#connection_point_entry) 매크로 지도를 완료 하 고는 [END_CONNECTION_ POINT_MAP](#end_connection_point_map) 매크로입니다.  
   
  Atl에서 연결 지점에 대 한 자세한 내용은 문서 참조 [연결점](../../atl/atl-connection-points.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Windowing#101](../../atl/codesnippet/cpp/connection-point-macros_1.h)]  
   
 ##  <a name="connection_point_entry"></a>  CONNECTION_POINT_ENTRY 및 CONNECTION_POINT_ENTRY_P  
- 액세스할 수 있도록 연결 지점 맵은에 지정된 된 인터페이스에 대 한 연결 지점을 입력 합니다.  
+ 액세스할 수 있도록 연결 지점 지도에 지정된 된 인터페이스에 대 한 연결 지점을 입력 합니다.  
   
 ```
 CONNECTION_POINT_ENTRY(iid)
@@ -65,20 +65,20 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `iid`  
- [in] 연결 지점 지도에 추가 되 고 인터페이스의 GUID입니다. 
+ *iid*  
+ [in] 연결 지점 지도에 추가 되는 인터페이스의 GUID입니다. 
  
- `piid`  
- [in] Adde 되 고 인터페이스의 GUID에 대 한 포인터입니다.   
+ *piid*  
+ [in] Adde 되는 인터페이스의 GUID에 대 한 포인터입니다.   
   
 ### <a name="remarks"></a>설명  
- 연결 지점 항목을 맵에서 사용 하 여 [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)합니다. 연결 지점 맵을 포함 하는 클래스에서 상속 해야 `IConnectionPointContainerImpl`합니다.  
+ 사용 하는 연결 지점 항목 구조의 [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)합니다. 연결 지점 맵을 포함 하는 클래스에서 상속 해야 `IConnectionPointContainerImpl`합니다.  
   
- 시작 된 연결 지점 맵에 [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) 매크로 각 사용자 연결 지점을 사용에 대 한 항목을 추가 `CONNECTION_POINT_ENTRY` 매크로 지도에 완료는 [END_CONNECTION_POINT_MAP ](#end_connection_point_map) 매크로입니다.  
+ 연결 지점 지도를 시작 합니다 [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) 매크로 각 CONNECTION_POINT_ENTRY 매크로 사용 하 여 연결 포인트에 대 한 항목을 추가 하 고 지도를 완료 합니다 [END_CONNECTION_ POINT_MAP](#end_connection_point_map) 매크로입니다.  
   
  Atl에서 연결 지점에 대 한 자세한 내용은 문서 참조 [연결점](../../atl/atl-connection-points.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Windowing#120](../../atl/codesnippet/cpp/connection-point-macros_2.h)]  
   
 ##  <a name="end_connection_point_map"></a>  END_CONNECTION_POINT_MAP  
@@ -89,11 +89,11 @@ END_CONNECTION_POINT_MAP()
 ```  
   
 ### <a name="remarks"></a>설명  
- 시작 된 연결 지점 맵에 [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) 매크로 각 사용자 연결 지점을 사용에 대 한 항목을 추가 [CONNECTION_POINT_ENTRY](#connection_point_entry) 매크로 지도에 완료`END_CONNECTION_POINT_MAP` 매크로입니다.  
+ 연결 지점 지도를 시작 합니다 [BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map) 매크로 사용 하 여 연결 포인트의 각 항목을 추가 [CONNECTION_POINT_ENTRY](#connection_point_entry) 매크로 지도 END_ 완료 하 고 CONNECTION_POINT_MAP 매크로입니다.  
   
  Atl에서 연결 지점에 대 한 자세한 내용은 문서 참조 [연결점](../../atl/atl-connection-points.md)합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Windowing#128](../../atl/codesnippet/cpp/connection-point-macros_3.h)]  
   
 ## <a name="see-also"></a>참고 항목  

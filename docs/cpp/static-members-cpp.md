@@ -23,15 +23,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca75d2e54c951e20de842b984f8619dc6639dc00
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a9cfa2dd47f14053da9ef0b9620c9ce0dc05c5da
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421073"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941982"
 ---
 # <a name="static-members-c"></a>정적 멤버(C++)
-클래스는 정적 멤버 데이터와 멤버 함수를 포함할 수 있습니다. 로 데이터 멤버가 선언 되는 경우 **정적**, 클래스의 모든 개체에 대 한 데이터의 복사본을 하나만 유지 됩니다.
+클래스는 정적 멤버 데이터와 멤버 함수를 포함할 수 있습니다. 로 데이터 멤버는 선언 하는 경우 **정적**, 클래스의 모든 개체에 대 한 데이터의 복사본을 하나만 유지 됩니다.
   
  정적 데이터 멤버는 지정된 클래스 형식의 개체에 속하지 않습니다. 결과적으로, 정적 데이터 멤버 선언은 정의로 간주되지 않습니다. 데이터 멤버는 클래스 범위에서 선언되지만 정의는 파일 범위에서 수행됩니다. 이러한 정적 멤버에는 외부 링크가 있습니다. 다음 예제는 이러한 과정을 보여 줍니다.  
   
@@ -72,7 +72,7 @@ int main()
 long nBytes = BufferedOutput::bytecount;  
 ```  
   
- 정적 멤버가 존재하기 위해 클래스 형식의 개체가 있어야 하는 것은 아닙니다. 멤버 선택을 사용 하 여 정적 멤버 액세스할 수도 있습니다 (**합니다.** 및 **->**) 연산자. 예를 들어:  
+ 정적 멤버가 존재하기 위해 클래스 형식의 개체가 있어야 하는 것은 아닙니다. 멤버 선택 영역을 사용 하 여 정적 멤버 액세스할 수도 있습니다 (**합니다.** 및 **->**) 연산자. 예를 들어:  
   
 ```cpp  
 BufferedOutput Console;  
@@ -82,9 +82,9 @@ long nBytes = Console.bytecount;
   
  앞의 경우에서 개체(`Console`)에 대한 참조는 평가되지 않습니다. 반환된 값은 정적 개체 `bytecount`의 값입니다.  
   
- 정적 데이터 멤버에는 클래스 멤버 액세스 규칙이 적용되므로 정적 데이터 멤버에 대한 전용 액세스는 클래스 멤버 함수 및 friend에만 허용됩니다. 이러한 규칙에 설명 된 [멤버 액세스 제어](../cpp/member-access-control-cpp.md)합니다. 예외는 정적 데이터 멤버가 해당 액세스 제한에 관계없이 파일 범위에서 정의되어야 한다는 것입니다. 데이터 멤버를 명시적으로 초기화하는 경우 이니셜라이저에 정의를 제공해야 합니다.  
+ 정적 데이터 멤버에는 클래스 멤버 액세스 규칙이 적용되므로 정적 데이터 멤버에 대한 전용 액세스는 클래스 멤버 함수 및 friend에만 허용됩니다. 이러한 규칙에 설명 되어 있습니다 [멤버 Access Control](../cpp/member-access-control-cpp.md)합니다. 예외는 정적 데이터 멤버가 해당 액세스 제한에 관계없이 파일 범위에서 정의되어야 한다는 것입니다. 데이터 멤버를 명시적으로 초기화하는 경우 이니셜라이저에 정의를 제공해야 합니다.  
   
- 정적 멤버의 형식은 클래스 이름으로 한정되지 않습니다. 따라서 `BufferedOutput::bytecount`의 형식은 `long`입니다.  
+ 정적 멤버의 형식은 클래스 이름으로 한정되지 않습니다. 따라서 유형을 `BufferedOutput::bytecount` 됩니다 **긴**합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [클래스 및 구조체](../cpp/classes-and-structs-cpp.md)

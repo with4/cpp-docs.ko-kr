@@ -14,42 +14,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 21bb273b94f871e253ab927238c96256f46e2b3a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3063dd1bb5bbd9c0eb957b9727027b2d01edfd7d
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360219"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37886208"
 ---
 # <a name="windows-messages-macros"></a>Windows 메시지 매크로
 이 매크로 창 메시지를 전달합니다.  
   
 |||  
 |-|-|  
-|[WM_FORWARDMSG](#wm_forwardmsg)|사용 하 여 처리를 위해 다른 창으로 창에서 수신 된 메시지를 전달 합니다.|  
+|[WM_FORWARDMSG](#wm_forwardmsg)|사용 하 여 다른 창에 대 한 처리 창에서 수신 된 메시지를 전달 합니다.|  
 
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h 
    
 ##  <a name="wm_forwardmsg"></a>  WM_FORWARDMSG  
- 이 매크로 처리를 위해 다른 창으로 창에서 수신 된 메시지를 전달 합니다.  
+ 이 매크로 다른 창에 대 한 처리 창에서 수신 된 메시지를 전달 합니다.  
   
 ```
 WM_FORWARDMSG
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 0이 아니고 그렇지 않으면 메시지를 처리 하는 경우 0입니다.  
+ 0이 아닌 메시지를 처리 하는 경우 그렇지 않은 경우에 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 사용 하 여 `WM_FORWARDMSG` 처리를 위해 다른 창으로 창에서 수신 된 메시지를 전달 하도록 합니다. LPARAM 및 WPARAM 매개 변수는 다음과 같이 사용 됩니다.  
+ WM_FORWARDMSG를 사용 하 여 다른 창에 대 한 처리 창에서 수신 된 메시지를 전달 합니다. LPARAM 및 WPARAM 매개 변수를 다음과 같이 사용 됩니다.  
   
 |매개 변수|사용법|  
 |---------------|-----------|  
-|WPARAM|사용자가 정의 된 데이터|  
-|LPARAM|에 대 한 포인터는 `MSG` 메시지에 대 한 정보가 포함 된 구조체|  
+|WPARAM|사용자가 정의한 데이터|  
+|LPARAM|에 대 한 포인터를 `MSG` 메시지에 대 한 정보를 포함 하는 구조|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예에서 `m_hWndOther` 이 메시지를 수신 하는 다른 창을 나타냅니다.  
   
  [!code-cpp[NVC_ATL_Windowing#137](../../atl/codesnippet/cpp/windows-messages-macros_1.cpp)]  

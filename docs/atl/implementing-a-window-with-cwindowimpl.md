@@ -1,5 +1,5 @@
 ---
-title: CWindowImpl 포함 된 창을 구현 | Microsoft Docs
+title: CWindowImpl 사용 하 여 창 구현 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,54 +21,54 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9c1fc32d2265f6853c4dd34a3eb463609fca52b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6eb783c35704f87a0bfed57e05f22c3b9b035498
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32356549"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851546"
 ---
-# <a name="implementing-a-window-with-cwindowimpl"></a>CWindowImpl 포함 된 창을 구현합니다.
-클래스를 파생 창을 구현 하려면 `CWindowImpl`합니다. 파생된 클래스에서 메시지 맵 및 메시지 처리기 함수를 선언 합니다. 세 가지 방법으로 이제 클래스를 사용할 수 있습니다.  
+# <a name="implementing-a-window-with-cwindowimpl"></a>CWindowImpl 사용 하 여 창 구현
+를 구현 하기 위해 창에서 클래스를 파생 `CWindowImpl`합니다. 파생된 클래스에서 메시지 맵 및 메시지 처리기 함수를 선언 합니다. 이제 세 가지 방법으로 클래스를 사용할 수 있습니다.  
   
--   [새 Windows 클래스를 기반으로 창을 만듭니다.](#_atl_creating_a_window_based_on_a_new_windows_class)  
+-   [새 Windows 클래스를 기반으로 창을 만들기](#_atl_creating_a_window_based_on_a_new_windows_class)  
   
--   [Superclass 기존 Windows 클래스](#_atl_superclassing_an_existing_windows_class)  
+-   [기존 Windows 클래스 슈퍼 클래스](#_atl_superclassing_an_existing_windows_class)  
   
--   [기존 창 서브 클래스](#_atl_subclassing_an_existing_window)  
+-   [기존 창 하위 클래스.](#_atl_subclassing_an_existing_window)  
   
-##  <a name="_atl_creating_a_window_based_on_a_new_windows_class"></a> 새 Windows 클래스를 기반으로 하는 창 만들기  
- `CWindowImpl` 포함 된 [DECLARE_WND_CLASS](reference/window-class-macros.md#declare_wnd_class) Windows 클래스 정보를 선언 하는 매크로입니다. 이 매크로 구현 하는 `GetWndClassInfo` 함수를 사용 하 여 [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) 새 Windows 클래스 정보를 정의할 수 있습니다. 때 `CWindowImpl::Create` 라고,이 Windows 클래스 등록 되 고 새 창이 만들어집니다.  
+##  <a name="_atl_creating_a_window_based_on_a_new_windows_class"></a> 새 Windows 클래스에 따라 창 만들기  
+ `CWindowImpl` 포함 된 [DECLARE_WND_CLASS](reference/window-class-macros.md#declare_wnd_class) Windows 클래스 정보를 선언 하는 매크로입니다. 이 매크로 구현 하는 `GetWndClassInfo` 함수를 사용 하는 [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) 새 Windows 클래스의 정보를 정의할 수 있습니다. 때 `CWindowImpl::Create` 라고,이 Windows 클래스 등록 되 고 새 창이 만들어집니다.  
   
 > [!NOTE]
->  `CWindowImpl` 전달 **NULL** 에 `DECLARE_WND_CLASS` 매크로 ATL Windows 클래스 이름이 생성 됩니다. 고유한 이름을 지정 하려면 문자열을 전달 `DECLARE_WND_CLASS` 에 프로그램 `CWindowImpl`-클래스를 파생 합니다.  
+>  `CWindowImpl` NULL을 전달 합니다 `DECLARE_WND_CLASS` 매크로 ATL은 Windows 클래스 이름을 생성 합니다. DECLARE_WND_CLASS에 고유한 이름을 지정 하려면 문자열을 전달 하면 `CWindowImpl`-클래스를 파생 합니다.  
   
-## <a name="example"></a>예제  
- 다음은 새 Windows 클래스를 기반으로 하는 창을 구현 하는 클래스의 예입니다.  
+## <a name="example"></a>예  
+ 다음은 새 Windows 클래스를 기반으로 창을 구현 하는 클래스의 예입니다.  
   
  [!code-cpp[NVC_ATL_Windowing#64](../atl/codesnippet/cpp/implementing-a-window-with-cwindowimpl_1.h)]  
   
- 창을 만들려면의 인스턴스를 만들고 `CMyWindow` 다음 호출에서 **만들기** 메서드.  
+ 창을 만들려면의 인스턴스를 만듭니다 `CMyWindow` 호출을 `Create` 메서드.  
   
 > [!NOTE]
->  기본 Windows 클래스 정보를 재정의 하려면 구현는 `GetWndClassInfo` 설정 하 여 파생된 클래스에서 메서드는 `CWndClassInfo` 멤버를 적절 한 값입니다.  
+>  기본 Windows 클래스 정보를 재정의 하려면 구현 합니다 `GetWndClassInfo` 설정 하 여 파생된 클래스에서 메서드를 `CWndClassInfo` 적절 한 값 멤버입니다.  
   
-##  <a name="_atl_superclassing_an_existing_windows_class"></a> 슈퍼 클 래 싱 기존 Windows 클래스  
- [DECLARE_WND_SUPERCLASS](reference/window-class-macros.md#declare_wnd_superclass) 매크로 슈퍼 기존 Windows 창을 만들 수 있습니다. 클래스입니다. 이 매크로 지정 하면 `CWindowImpl`-클래스를 파생 합니다. 다른 ATL 창과 마찬가지로 메시지는 메시지 맵을 처리 합니다.  
+##  <a name="_atl_superclassing_an_existing_windows_class"></a> 기존 Windows 클래스를 슈퍼 클 래 싱  
+ 합니다 [DECLARE_WND_SUPERCLASS](reference/window-class-macros.md#declare_wnd_superclass) 매크로 사용 하면 해당 슈퍼 클래스는 기존 Windows 창을 만들려면 클래스입니다. 이 매크로 지정 하면 `CWindowImpl`-클래스를 파생 합니다. 다른 ATL 창과 마찬가지로 메시지는 메시지 맵을 통해 처리 됩니다.  
   
- 사용 하는 경우 `DECLARE_WND_SUPERCLASS`, 새 Windows 클래스 등록 됩니다. 이 새 클래스를 지정 하지만 창 프로시저 바뀝니다 기존 클래스와 동일 됩니다 `CWindowImpl::WindowProc` (또는이 메서드를 재정의 하 여 함수).  
+ DECLARE_WND_SUPERCLASS를 사용 하는 경우 새 Windows 클래스 등록 됩니다. 이 새 클래스를 지정 해도 사용 하 여 창 프로시저를 대체할 기존 클래스와 동일 하 게 됩니다 `CWindowImpl::WindowProc` (또는이 메서드를 재정의 하는 함수를 사용 하 여).  
   
-## <a name="example"></a>예제  
- 다음은 예제 클래스의 표준 편집을 슈퍼 클래스:  
+## <a name="example"></a>예  
+ 다음은 클래스의 예제를 슈퍼 표준 편집 클래스:  
   
  [!code-cpp[NVC_ATL_Windowing#65](../atl/codesnippet/cpp/implementing-a-window-with-cwindowimpl_2.h)]  
   
- 인스턴스를 만들고 슈퍼 클래스로 지정 된 편집 창을 만들기 위해 `CMyEdit` 호출는 **만들기** 메서드.  
+ 슈퍼 클래스로 지정 된 편집 창을 만들기의 인스턴스를 만듭니다 `CMyEdit` 호출을 `Create` 메서드.  
   
-##  <a name="_atl_subclassing_an_existing_window"></a> 기존 창 서브클래싱  
- 기존 창 서브 클래스에서 파생 `CWindowImpl` 메시지 맵이 두 경우에서와 같이 선언 합니다. 단, 하는 것 이므로 하위 클래스는 이미 기존 창을 Windows 클래스 정보를 지정 하지 않으면 합니다.  
+##  <a name="_atl_subclassing_an_existing_window"></a> 기존 창을 서브클래싱  
+ 기존 창 서브 클래스에서 클래스 파생 `CWindowImpl` 메시지 맵을 두 이전 경우와 같이 선언 합니다. 단, 하는 것 이므로 하위 클래스는 기존 창에 모든 Windows 클래스 정보를 지정 하지 않으면.  
   
- 호출 하는 대신 **만들기**, 호출 `SubclassWindow` 하위 클래스를 기존 창에 핸들을 전달 합니다. 사용, 서브클래싱된 되 면 `CWindowImpl::WindowProc` (또는이 메서드를 재정의 하 여 함수)을 메시지 맵에 대 한 메시지를 보내도록 합니다. 개체에서 서브클래싱된 창을 분리 하려면 호출 `UnsubclassWindow`합니다. 그런 다음 창의 원본 창 프로시저를 복원 됩니다.  
+ 호출 하는 대신 `Create`, 호출 `SubclassWindow` 서브 클래스를 기존 창에 핸들을 전달 합니다. 창을 서브클래싱 되 면 사용할 `CWindowImpl::WindowProc` (또는이 메서드를 재정의 하는 함수)을 메시지 맵에 메시지를 보내기 위해. 개체에서 서브클래싱된 창을 분리 하려면 호출 `UnsubclassWindow`합니다. 창의 원본 창 프로시저는 다음 복원 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [창 구현](../atl/implementing-a-window.md)

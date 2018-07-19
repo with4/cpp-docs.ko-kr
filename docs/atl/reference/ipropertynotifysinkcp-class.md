@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9612cf65479e474b9a6e89a8f5a57ca078c9ed0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 66fd7b267a70b962bb5c28bb5835bd96d44a92f0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361628"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879191"
 ---
 # <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP 클래스
-이 클래스를 노출 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) 연결 가능 개체에 보내기 인터페이스로 인터페이스입니다.  
+이 클래스를 노출 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) 인터페이스로 연결 가능 개체의 나가는 인터페이스입니다.  
   
 > [!IMPORTANT]
 >  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
@@ -41,20 +41,20 @@ class IPropertyNotifySinkCP
 ```    
   
 #### <a name="parameters"></a>매개 변수  
- `T`  
- 파생 된 클래스에 `IPropertyNotifySinkCP`합니다.  
+ *T*  
+ 클래스에서 파생 된 `IPropertyNotifySinkCP`합니다.  
   
- `CDV`  
- 연결 지점 및 해당 싱크 간의 연결을 관리 하는 클래스입니다. 기본값은 [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), 무제한 연결을 허용 하는 합니다. 사용할 수도 있습니다 [CComUnkArray](../../atl/reference/ccomunkarray-class.md), 고정된 된 수의 연결을 지정 하는 합니다.  
+ *CDV*  
+ 연결 지점 및 해당 싱크 간의 연결을 관리 하는 클래스입니다. 기본값은 [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md), 무제한 연결 수 있습니다. 사용할 수도 있습니다 [CComUnkArray](../../atl/reference/ccomunkarray-class.md), 고정 된 수의 연결을 지정 합니다.  
   
 ## <a name="remarks"></a>설명  
- `IPropertyNotifySinkCP` 메서드를 상속 받고 해당 기본 클래스를 통해 [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)합니다.  
+ `IPropertyNotifySinkCP` 해당 기본 클래스를 통해 메서드를 모두 상속 [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)합니다.  
   
- [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) 인터페이스 싱크 개체 속성 변경에 대 한 알림을 받을 수 있습니다. 클래스 `IPropertyNotifySinkCP` 연결 가능 개체에 보내기 인터페이스로이 인터페이스를 노출 합니다. 클라이언트를 구현 해야 합니다는 `IPropertyNotifySink` 싱크의 메서드.  
+ 합니다 [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) 인터페이스 싱크 개체 속성 변경에 대 한 알림을 받을 수 있습니다. 클래스 `IPropertyNotifySinkCP` 연결 가능 개체에는 송신 인터페이스와이 인터페이스를 노출 합니다. 클라이언트를 구현 해야 합니다는 `IPropertyNotifySink` 싱크에서 메서드.  
   
- 클래스를 파생 `IPropertyNotifySinkCP` 나타내는 연결점 만들려는 `IPropertyNotifySink` 인터페이스입니다.  
+ 클래스를 파생 `IPropertyNotifySinkCP` 나타내는 연결점을 만들려는 경우를 `IPropertyNotifySink` 인터페이스입니다.  
   
- Atl에서 연결 지점을 사용 하는 방법에 대 한 자세한 내용은 문서 참조 [연결점](../../atl/atl-connection-points.md)합니다.  
+ ATL 연결 지점 사용에 대 한 자세한 내용은 문서를 참조 [연결점](../../atl/atl-connection-points.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlctl.h  

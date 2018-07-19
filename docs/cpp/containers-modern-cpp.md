@@ -11,23 +11,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49a77234b679fd61d801bb78d751891467d6b4e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2eb9419562382d3494e64dd7fb0472882fe73c13
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412077"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939041"
 ---
 # <a name="containers-modern-c"></a>컨테이너(최신 C++)
 
-기본적으로 사용 하 여 [벡터](../standard-library/vector-class.md) c + +에서 기본 순차적 컨테이너입니다. 이에 해당 하는 `List<T>` .NET 언어에서입니다.
+기본적으로 사용 하 여 [벡터](../standard-library/vector-class.md) c + +에서 기본 순차 컨테이너로 합니다. 이 설정은 `List<T>` .NET 언어에서입니다.
 
 ```cpp
 vector<string> apples;
 apples.push_back("Granny Smith");
 ```
 
-사용 하 여 [지도](../standard-library/map-class.md) (하지 `unordered_map`) 기본 연관 컨테이너입니다. 사용 하 여 [설정](../standard-library/set-class.md), [multimap](../standard-library/multimap-class.md), 및 [multiset](../standard-library/multiset-class.md) 중복 제거 및 다중 사례에 대 한 합니다.
+사용 하 여 [지도](../standard-library/map-class.md) (없습니다 `unordered_map`) 기본 연관 컨테이너로 합니다. 사용 하 여 [설정할](../standard-library/set-class.md)를 [multimap](../standard-library/multimap-class.md), 및 [multiset](../standard-library/multiset-class.md) 중복 제거 및 다중 사례에 대 한 합니다.
 
 ```cpp
 map<string, string> apple_color;
@@ -35,17 +35,17 @@ map<string, string> apple_color;
 apple_color["Granny Smith"] = "Green";
 ```
 
-성능 최적화에 필요한 경우 사용 하십시오.
+성능 최적화, 필요할 때 사용 하는 것이 좋습니다.
 
-- [배열](../standard-library/array-class-stl.md) 포함 하는 것이 중요 클래스 멤버 등으로 입력 합니다.
+- 합니다 [배열](../standard-library/array-class-stl.md) 포함 하는 것이 중요 클래스 멤버로 예를 들어을 입력 합니다.
 
-- 연관 컨테이너와 같은 순서가 지정 되지 않은 [unordered_map](../standard-library/unordered-map-class.md)합니다. 이러한 하위 요소 오버 헤드 포함 하 고 일정 시간 조회 있지만 올바르고 효율적으로 사용 하기 쉽다는 점 수 있습니다.
+- 연관 컨테이너와 같은 순서가 지정 되지 않은 [unordered_map](../standard-library/unordered-map-class.md)합니다. 이러한 요소 마다 낮은 오버 헤드 있고 일정 시간 조회 되지만 있을 수 있습니다 정확 하 고 효율적으로 사용 하기 어렵습니다.
 
-- 정렬 **벡터**합니다. 자세한 내용은 [알고리즘](../cpp/algorithms-modern-cpp.md)을 참조하세요.
+- 정렬 `vector`합니다. 자세한 내용은 [알고리즘](../cpp/algorithms-modern-cpp.md)을 참조하세요.
 
-C 스타일 배열에 사용 하지 마십시오. 데이터에 대 한 액세스를 지시 해야 하는 오래 된 Api에 대 한 접근자와 같은 메서드 사용 `f(vec.data(), vec.size());` 대신 합니다.
+C 스타일 배열을 사용 하지 마세요. 직접 데이터에 대 한 액세스가 필요한 이전 api를 사용 하 여 접근자 메서드 같은 `f(vec.data(), vec.size());` 대신 합니다.
 
-컨테이너에 대 한 자세한 내용은 참조 [c + + 표준 라이브러리 컨테이너](../standard-library/stl-containers.md)합니다.
+컨테이너에 대 한 자세한 내용은 참조 하세요. [c + + 표준 라이브러리 컨테이너](../standard-library/stl-containers.md)합니다.
 
 ## <a name="see-also"></a>참고자료
 

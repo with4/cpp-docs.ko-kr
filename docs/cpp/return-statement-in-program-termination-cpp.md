@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d09c1b3aaea799c227686436486efa48fc7857
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb594eb10e8068d5f5b3ed124d5e77b48ced728e
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943147"
 ---
 # <a name="return-statement-in-program-termination-c"></a>프로그램 종료 시 return 문 (C++)
-발급 한 `return` 에서 문을 **주** 호출 하는 기능적는 **종료** 함수. 다음 예제를 참조하세요.  
+발급을 `return` 에서 문을 **주** 기능적으로 호출 합니다 **종료** 함수. 다음 예제를 참조하세요.  
   
-```  
+```cpp 
 // return_statement.cpp  
 #include <stdlib.h>  
 int main()  
@@ -35,7 +36,7 @@ int main()
 }  
 ```  
   
- **종료** 및 `return` 앞의 예에서 문은 기능적으로 동일 합니다. 그러나 C++에서는 `void`가 아닌 반환 형식을 가지는 함수가 값을 반환해야 합니다. `return` 문을 사용 하면 한 값을 반환할 **주**합니다.  
+ 합니다 **종료** 하 고 **반환** 문 앞의 예제에서 기능적으로 동일 합니다. 그러나 c + +에서는 함수를 반환 형식 이외의 **void** 값을 반환 합니다. 합니다 **반환** 문을 사용 하면에서 값을 반환 하려면 `main`합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [프로그램 종료](../cpp/program-termination.md)

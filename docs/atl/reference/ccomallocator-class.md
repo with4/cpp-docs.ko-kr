@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3606df325bfd41dabf99bb790ff154b383ab987f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9dbaa4631e50b14131418b902dd008e74060dbf6
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358279"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881933"
 ---
 # <a name="ccomallocator-class"></a>CComAllocator 클래스
 이 클래스는 COM 메모리 루틴을 사용 하 여 메모리를 관리 하기 위한 메서드를 제공 합니다.  
@@ -43,11 +43,11 @@ class CComAllocator
 |이름|설명|  
 |----------|-----------------|  
 |[CComAllocator::Allocate](#allocate)|메모리를 할당 하려면이 정적 메서드를 호출 합니다.|  
-|[CComAllocator::Free](#free)|할당 된 메모리를이 정적 메서드를 호출 합니다.|  
+|[CComAllocator::Free](#free)|할당 된 메모리를 확보 하려면이 정적 메서드를 호출 합니다.|  
 |[CComAllocator::Reallocate](#reallocate)|메모리를 다시 할당 하려면이 정적 메서드를 호출 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 클래스는 사용 하 여 [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) COM 메모리 할당 루틴을 제공 하기. 테이블에 해당 클래스 [CCRTAllocator](../../atl/reference/ccrtallocator-class.md), CRT 루틴을 사용 하 여 동일한 메서드를 제공 합니다.  
+ 이 클래스에서 사용 됩니다 [CComHeapPtr](../../atl/reference/ccomheapptr-class.md) COM 메모리 할당 루틴을 제공 합니다. 누구 클래스 [CCRTAllocator](../../atl/reference/ccrtallocator-class.md), CRT 루틴을 사용 하 여 동일한 메서드를 제공 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
@@ -60,28 +60,28 @@ static void* Allocate(size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nBytes`  
+ *nBytes*  
  할당할 바이트 수입니다.  
   
 ### <a name="return-value"></a>반환 값  
  할당된 공간에 대한 void 포인터 또는 사용 가능한 메모리가 부족한 경우 NULL을 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 메모리를 할당합니다. 참조 [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) 내용을 확인 합니다.  
+ 메모리를 할당합니다. 참조 [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727) 대 한 자세한 내용은 합니다.  
   
 ##  <a name="free"></a>  CComAllocator::Free  
- 할당 된 메모리를이 정적 함수를 호출 합니다.  
+ 할당 된 메모리를 확보 하려면이 정적 함수를 호출 합니다.  
   
 ```
 static void Free(void* p) throw();
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `p`  
+ *p*  
  할당된 메모리에 대한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
- 할당된 된 메모리를 해제합니다. 참조 [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) 내용을 확인 합니다.  
+ 할당된 된 메모리를 해제합니다. 참조 [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) 대 한 자세한 내용은 합니다.  
   
 ##  <a name="reallocate"></a>  CComAllocator::Reallocate  
  메모리를 다시 할당하려면 이 정적 함수를 호출합니다.  
@@ -91,17 +91,17 @@ static void* Reallocate(void* p, size_t nBytes) throw();
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `p`  
+ *p*  
  할당된 메모리에 대한 포인터입니다.  
   
- `nBytes`  
+ *nBytes*  
  다시 할당할 바이트 수입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 메모리가 부족 한 경우 할당 된 공간 또는 NULL에 대 한 void 포인터를 반환  
+ 메모리가 부족 한 경우 NULL이 할당 된 공간에 대 한 void 포인터를 반환 합니다.  
   
 ### <a name="remarks"></a>설명  
- 할당된 메모리의 크기를 조정합니다. 참조 [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280) 내용을 확인 합니다.  
+ 할당된 메모리의 크기를 조정합니다. 참조 [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280) 대 한 자세한 내용은 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CComHeapPtr 클래스](../../atl/reference/ccomheapptr-class.md)   

@@ -1,7 +1,7 @@
 ---
 title: friend (c + +) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 07/02/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1538ad67ce1b742c55dc413d78e40e8dcc9884df
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9938e8bb2128def7d5f507acb111de854dfd4977
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418265"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37942083"
 ---
 # <a name="friend-c"></a>friend (C++)
-이 경우에 따라 개별 클래스의 모든 멤버 또는 클래스의 멤버가 아닌 함수에 멤버 수준 액세스 권한을 부여할 간편 합니다. 클래스 구현자만 이 클래스의 friend를 선언할 수 있습니다. 함수 또는 클래스는 자신을 클래스의 friend로 선언할 수 없습니다. 클래스 정의에서 사용 된 `friend` 키워드 및 비멤버 함수 또는 클래스의 private 컨트롤과 protected 멤버에 액세스 권한을 부여 다른 클래스의 이름입니다.         템플릿 정의에 형식 매개 변수는 friend로 선언할 수 있습니다.  
+이 일부 경우에는 클래스의 멤버가 아닌 함수 또는 별도 클래스에서 모든 구성원 멤버 수준 액세스 권한을 부여할 더 편리 합니다. 클래스 구현자만 이 클래스의 friend를 선언할 수 있습니다. 함수 또는 클래스는 자신을 클래스의 friend로 선언할 수 없습니다. 클래스 정의 사용 합니다 **friend** 키워드 및 비멤버 함수 또는 클래스의 private 및 protected 멤버에 대 한 액세스 권한을 부여 하려면 다른 클래스의 이름입니다. 템플릿 정의 형식 매개 변수는 friend로 선언할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,7 +38,7 @@ friend F;
 ## <a name="friend-declarations"></a>Friend 선언  
  이전에 선언되지 않은 friend 함수를 선언하는 경우 해당 함수가 바깥쪽 비클래스 범위로 내보내집니다.  
   
- friend 선언에서 선언된 함수는 `extern` 키워드를 사용하여 선언된 것처럼 취급됩니다. (에 대 한 자세한 내용은 `extern`, 참조 [정적 저장소 클래스 지정자](http://msdn.microsoft.com/en-us/3ba9289a-a412-4a17-b319-ceb2c087df48).)  
+ Friend 선언에서 선언 된 함수는 선언 되었으면 네임 스페이스를 사용 하 여 처럼 처리 됨을 **extern** 키워드입니다. 자세한 내용은 [extern](extern-cpp.md)합니다.  
   
  전역 범위를 갖는 함수는 프로토타입 이전에 friend로 선언될 수 있지만, 멤버 함수는 전체 클래스 선언이 나타나기 전에 friend로 선언될 수 없습니다. 다음 코드에서는 이러한 작업이 실패하는 이유를 보여 줍니다.  
   
@@ -50,18 +50,18 @@ class HasFriends
 };  
 ```  
   
- 위의 예제에서는 클래스 이름 `ForwardDeclared`를 범위에 입력하지만, 전체 선언(특히 `IsAFriend` 함수를 선언하는 부분)은 알 수 없습니다. 따라서 `friend` 클래스의 `HasFriends` 선언은 오류를 생성합니다.  
+ 위의 예제에서는 클래스 이름 `ForwardDeclared`를 범위에 입력하지만, 전체 선언(특히 `IsAFriend` 함수를 선언하는 부분)은 알 수 없습니다. 따라서 합니다 **friend** 클래스의 선언 `HasFriends` 오류를 생성 합니다.  
   
- C + + 11부터는 클래스에 대 한 friend 선언의 두 가지 형식이 있습니다.  
+ C++11부터는 두 가지 형태의 클래스의 friend 선언  
   
 ```cpp  
 friend class F;  
 friend F;  
 ```  
   
- 첫 번째 형태는 가장 안쪽의 네임 스페이스에 해당 이름의 기존 클래스가 없는 경우 새 클래스 F를 소개 합니다.  **C + + 11**: 두 번째 형태는 새 클래스를 사용 하지 않습니다; 클래스에 선언 된 템플릿 형식 매개 변수 또는 형식 정의 friend로 선언할 때 사용 해야 하는 경우 사용 될 수 있습니다.  
+ 첫 번째 형태는 가장 안쪽의 네임 스페이스에 해당 이름의 기존 클래스가 있으면 F 새 클래스를 소개 합니다.  **C + + 11**: 두 번째 형태는 새 클래스를 제공 하지 않습니다; 클래스에 선언 된 및 템플릿 형식 매개 변수 또는 friend로 typedef를 선언할 때 사용 해야 하는 경우 사용할 수 있습니다.  
   
- 사용 하 여 `class friend F` 때 참조 된 형식 선언 되지 않은 아직:  
+ 사용 하 여 `class friend F` 때 참조 된 형식을 아직 아직 선언 되지 않았습니다.  
   
 ```cpp  
 namespace NS  
@@ -83,7 +83,7 @@ namespace NS
 }  
 ```  
   
- 다음 예에서 `friend F` 참조 하는 `F` NS 범위 밖에 서 선언 된 클래스입니다.  
+ 다음 예에서 `friend F` 가리킵니다는 `F` NS 범위 밖에 서 선언 된 클래스입니다.  
   
 ```cpp  
 class F {};  
@@ -96,7 +96,7 @@ namespace NS
 }  
 ```  
   
- 사용 하 여 `friend F` friend로는 템플릿 매개 변수를 선언 하려면:  
+ 사용 하 여 `friend F` friend로는 템플릿 매개 변수를 선언 합니다.  
   
 ```cpp  
 template <typename T>  
@@ -107,7 +107,7 @@ class my_class
 };  
 ```  
   
- 사용 하 여 `friend F` typedef friend로 선언할 수 있습니다.  
+ 사용 하 여 `friend F` friend로 typedef를 선언할 수 있습니다.  
   
 ```cpp  
 class Foo {};  
@@ -126,9 +126,9 @@ class G
 >  두 번째 클래스 전체가 첫 번째 클래스의 friend여야 하지만, 두 번째 클래스의 friend가 될 첫 번째 클래스의 함수를 선택할 수 있습니다.  
   
 ## <a name="friend-functions"></a>friend 함수  
- `friend` 함수는 클래스의 멤버가 아니지만 클래스의 전용 및 보호된 멤버에 액세스할 수 있는 함수입니다. friend 함수는 클래스 멤버로 간주되지 않으며, 특수 액세스 권한이 부여된 일반 외부 함수입니다. Friend 클래스의 범위에 있지 않은 한 멤버 선택 연산자를 사용 하 여 호출 되지 않습니다 (**합니다.** 매개 변수와-**>**) 다른 클래스의 멤버가 아닌 합니다. `friend` 함수는 액세스 권한을 부여하는 클래스에서 선언됩니다. `friend` 선언은 클래스 선언의 어느 곳에나 배치될 수 있으며, 액세스 제어 키워드의 영향을 받지 않습니다.  
+ A **friend** 함수는 클래스의 멤버인 되지 않지만 클래스의 private 및 protected 멤버에 액세스할 수 있는 함수입니다. friend 함수는 클래스 멤버로 간주되지 않으며, 특수 액세스 권한이 부여된 일반 외부 함수입니다. Friend는 클래스의 범위에 포함 되지 및 멤버 선택 연산자를 사용 하 여 호출 되지는 (**합니다.** 및-**>**) 다른 클래스의 멤버가 아닌 합니다. A **friend** 함수 액세스 권한을 부여 하는 클래스에서 선언 됩니다. 합니다 **friend** 선언이 클래스 선언에서 아무 곳 이나 배치할 수 있습니다. 액세스 제어 키워드의 영향을 받지 않습니다.  
   
- 다음 예제에서는 `Point` 클래스와 `ChangePrivate`라는 friend 함수를 보여 줍니다. `friend` 함수는 매개 변수로 받는 `Point` 개체의 전용 데이터 멤버에 액세스할 수 있습니다.  
+ 다음 예제에서는 `Point` 클래스와 `ChangePrivate`라는 friend 함수를 보여 줍니다. **friend** 함수에의 전용 데이터 멤버에 대 한 액세스는 `Point` 매개 변수로 받을 개체입니다.  
   
 ```cpp  
 // friend_functions.cpp  
@@ -189,7 +189,7 @@ int A::Func1( B& b ) { return b._b; }   // OK
 int A::Func2( B& b ) { return b._b; }   // C2248  
 ```  
   
- 위의 예제에서는 `A::Func1( B& )` 함수에만 `B` 클래스에 대한 friend 액세스 권한이 부여됩니다. 따라서 전용 멤버에 대 한 액세스 `_b` 올바른지 `Func1` 클래스의 `A` 아니라 `Func2`합니다.  
+ 위의 예제에서는 `A::Func1( B& )` 함수에만 `B` 클래스에 대한 friend 액세스 권한이 부여됩니다. 따라서 전용 멤버에 대 한 액세스 `_b` 올바른지 `Func1` 클래스의 `A` 되지 않습니다 `Func2`합니다.  
   
  `friend` 클래스는 모든 멤버 함수가 클래스의 friend 함수인 클래스입니다. 즉, 멤버 함수가 다른 클래스의 전용 및 보호된 멤버에 액세스할 수 있습니다. `friend` 클래스의 `B` 선언이 다음과 같다고 가정합니다.  
   

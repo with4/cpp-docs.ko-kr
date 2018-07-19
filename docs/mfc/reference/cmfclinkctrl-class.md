@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8b0a512d0969f88d270ab7373be4807b1c55914
-ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
+ms.openlocfilehash: 13f411f9f50b1a498dba718b41245f8fbb7c6e79
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37038356"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37851589"
 ---
 # <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl 클래스
-`CMFCLinkCtrl` 클래스 하이퍼링크로 단추를 표시 하 고 단추를 클릭할 때 링크 대상을 호출 합니다.  
+`CMFCLinkCtrl` 클래스 하이퍼링크 단추를 표시 하 고 단추를 클릭할 때 링크 대상을 호출 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,21 +46,21 @@ class CMFCLinkCtrl : public CMFCButton
   
 |이름|설명|  
 |----------|-----------------|  
-|[CMFCLinkCtrl::SetURL](#seturl)|지정된 된 URL의 단추 텍스트로 표시합니다.|  
-|[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|암시적 프로토콜 설정 (예를 들어 "http:")의 URL입니다.|  
-|[CMFCLinkCtrl::SizeToContent](#sizetocontent)|단추 텍스트 또는 비트맵을 포함 단추의 크기를 조정 합니다.|  
+|[CMFCLinkCtrl::SetURL](#seturl)|단추 텍스트와 지정 된 URL을 표시합니다.|  
+|[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|암시적 프로토콜을 설정 합니다 (예를 들어, "http:")의 URL입니다.|  
+|[CMFCLinkCtrl::SizeToContent](#sizetocontent)|단추 텍스트나 비트맵 단추의 크기를 조정 합니다.|  
   
 ### <a name="protected-methods"></a>보호된 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|포커스 사각형 단추를 그리기 전에 프레임 워크에서 호출 됩니다.|  
+|[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|포커스 사각형에서 단추를 그리기 전에 프레임 워크에서 호출 됩니다.|  
   
 ## <a name="remarks"></a>설명  
- 파생 되는 단추를 클릭할 때는 `CMFCLinkCtrl` 클래스, 프레임 워크 단추의 URL에 대 한 매개 변수로 전달 된 `ShellExecute` 메서드. 그런 다음 `ShellExecute` 메서드 URL 대상을 엽니다.  
+ 파생 되는 단추를 클릭할 때 합니다 `CMFCLinkCtrl` 클래스를 프레임 워크는 매개 변수로 단추의 URL을 전달 합니다 `ShellExecute` 메서드. 그런 다음 `ShellExecute` 메서드 url 대상을 엽니다.  
   
 ## <a name="example"></a>예  
- 다음 예제에서는의 크기를 설정 하는 `CMFCLinkCtrl` 개체 및에 도구 설명 및 url을 설정 하는 `CMFCLinkCtrl` 개체입니다. 이 예제는의 일부는 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
+ 다음 예제에서는 크기를 설정 하는 방법에 설명 된 `CMFCLinkCtrl` 개체 및 설정 url 및 도구를 설명 하는 방법을 `CMFCLinkCtrl` 개체입니다. 이 예제는의 일부를 [새 컨트롤 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_NewControls#9](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#10](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_2.cpp)]  
@@ -82,7 +82,7 @@ class CMFCLinkCtrl : public CMFCButton
  **헤더:** afxlinkctrl.h  
   
 ##  <a name="ondrawfocusrect"></a>  CMFCLinkCtrl::OnDrawFocusRect  
- 포커스 사각형 단추를 그리기 전에 프레임 워크에서 호출 됩니다.  
+ 포커스 사각형에서 단추를 그리기 전에 프레임 워크에서 호출 됩니다.  
   
 ```  
 virtual void OnDrawFocusRect(
@@ -95,13 +95,13 @@ virtual void OnDrawFocusRect(
  장치 컨텍스트에 대한 포인터입니다.  
   
  [in] *rectClient*  
- 링크 컨트롤의 경계를 지정 하는 사각형입니다.  
+ 링크 컨트롤을 제한 하는 사각형입니다.  
   
 ### <a name="remarks"></a>설명  
- 단추의 포커스 사각형을 그리는 사용자 고유의 코드를 사용 하려는 경우이 메서드를 재정의 합니다.  
+ 단추의 포커스 사각형을 그릴 사용자 고유의 코드를 사용 하려는 경우이 메서드를 재정의 합니다.  
   
 ##  <a name="seturl"></a>  CMFCLinkCtrl::SetURL  
- 지정된 된 URL의 단추 텍스트로 표시합니다.  
+ 단추 텍스트와 지정 된 URL을 표시합니다.  
   
 ```  
 void SetURL(LPCTSTR lpszURL);
@@ -109,12 +109,12 @@ void SetURL(LPCTSTR lpszURL);
   
 ### <a name="parameters"></a>매개 변수  
  [in] *lpszURL*  
- 단추 텍스트 표시를 합니다.  
+ 단추 텍스트 표시입니다.  
   
 ### <a name="remarks"></a>설명  
   
 ##  <a name="seturlprefix"></a>  CMFCLinkCtrl::SetURLPrefix  
- 암시적 프로토콜 설정 (예를 들어 "http:")의 URL입니다.  
+ 암시적 프로토콜을 설정 합니다 (예를 들어, "http:")의 URL입니다.  
   
 ```  
 void SetURLPrefix(LPCTSTR lpszPrefix);
@@ -122,13 +122,13 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
   
 ### <a name="parameters"></a>매개 변수  
  [in] *lpszPrefix*  
- URL 프로토콜 접두사를 지정 합니다.  
+ URL 프로토콜의 접두사입니다.  
   
 ### <a name="remarks"></a>설명  
- URL 접두사를 설정 하려면이 메서드를 사용 합니다. 접두사 단추의 면에 표시 되지 않지만 URL의 대상으로 이동 하는 데 사용할 수 있습니다.  
+ URL 접두사를 설정 하려면이 메서드를 사용 합니다. 접두사 단추의 얼굴에 표시 되지 않지만 URL의 대상으로 이동 하는 데 사용할 수 있습니다.  
   
 ##  <a name="sizetocontent"></a>  CMFCLinkCtrl::SizeToContent  
- 단추 텍스트 또는 비트맵을 포함 단추의 크기를 조정 합니다.  
+ 단추 텍스트나 비트맵 단추의 크기를 조정 합니다.  
   
 ```  
 virtual CSize SizeToContent(
@@ -138,10 +138,10 @@ virtual CSize SizeToContent(
   
 ### <a name="parameters"></a>매개 변수  
  [in] *bVCenter*  
- `TRUE` 단추 텍스트 및 비트맵 링크 컨트롤;의 위아래 간에 세로로 가운데 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `FALSE`입니다.  
+ 단추 텍스트 및 비트맵 위쪽과 아래쪽 링크 컨트롤 간에 세로로 가운데 TRUE 그렇지 않으면 FALSE입니다. 기본값은 FALSE입니다.  
   
  [in] *bHCenter*  
- `TRUE` 단추 텍스트 및 링크 컨트롤의 왼쪽과 오른쪽 간 가로 방향으로 비트맵 가운데 하려면 그렇지 않으면 `FALSE`합니다. 기본값은 `FALSE`입니다.  
+ 단추 텍스트 및 링크 컨트롤의 왼쪽과 오른쪽 간 가로 방향으로 비트맵 가운데 TRUE 그렇지 않으면 FALSE입니다. 기본값은 FALSE입니다.  
   
 ### <a name="return-value"></a>반환 값  
  A [CSize](../../atl-mfc-shared/reference/csize-class.md) 링크 컨트롤의 새 크기를 포함 하는 개체입니다.  

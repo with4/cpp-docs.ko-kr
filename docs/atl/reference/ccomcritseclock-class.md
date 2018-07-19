@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98b6eb7a8e6df16134573b55a7c9666befe4e4a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1b03d22a7daff614c560c7531143b718de7351c0
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32358888"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37880253"
 ---
 # <a name="ccomcritseclock-class"></a>CComCritSecLock 클래스
-이 클래스는 잠금 및 임계 영역 개체 잠금 해제에 대 한 메서드를 제공 합니다.  
+이 클래스는 잠금 및 임계 영역 개체를 잠금 해제에 대 한 메서드를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -53,11 +53,11 @@ template<class TLock> class CComCritSecLock
   
 |이름|설명|  
 |----------|-----------------|  
-|[CComCritSecLock::Lock](#lock)|임계 영역 개체를 잠그려고이 메서드를 호출 합니다.|  
+|[CComCritSecLock::Lock](#lock)|임계 영역 개체를 잠그는이 메서드를 호출 합니다.|  
 |[CComCritSecLock::Unlock](#unlock)|임계 영역 개체의 잠금을 해제 하려면이 메서드를 호출 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 클래스를 사용 하 여 잠금와 보다 더 안전한 방식으로 개체를 해제 하는 [클래스 클래스](../../atl/reference/ccomcriticalsection-class.md) 또는 [CComAutoCriticalSection 클래스](../../atl/reference/ccomautocriticalsection-class.md)합니다.  
+ 이 클래스를 사용 하 여 잠금을 사용 하 여 보다 안전한 방식으로 개체를 해제 합니다 [CComCriticalSection 클래스](../../atl/reference/ccomcriticalsection-class.md) 또는 [CComAutoCriticalSection 클래스](../../atl/reference/ccomautocriticalsection-class.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
@@ -73,8 +73,8 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
  *cs*  
  임계 영역 개체입니다.  
   
- `bInitialLock`  
- 초기 잠금 상태: **true** 잠겨 의미 합니다.  
+ *bInitialLock*  
+ 초기 잠금 상태: **true** 잠긴 의미 합니다.  
   
 ### <a name="remarks"></a>설명  
  임계 영역 개체를 초기화합니다.  
@@ -87,20 +87,20 @@ CComCritSecLock(TLock& cs, bool bInitialLock = true);
 ```  
   
 ### <a name="remarks"></a>설명  
- 임계 영역 개체의 잠금을 해제합니다.  
+ 임계 영역 개체의 잠금을 해제 합니다.  
   
 ##  <a name="lock"></a>  CComCritSecLock::Lock  
- 임계 영역 개체를 잠그려고이 메서드를 호출 합니다.  
+ 임계 영역 개체를 잠그는이 메서드를 호출 합니다.  
   
 ```
 HRESULT Lock() throw();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 실패 시 오류 HRESULT 또는 개체를 성공적으로 잠근 경우 S_OK 반환 합니다.  
+ 실패 시 개체에서 성공적으로 차단 된 경우 s_ok이 고, 또는 오류 HRESULT 반환 합니다.  
   
 ### <a name="remarks"></a>설명  
- 개체를 이미 잠근 경우 디버그 빌드에 어설션 오류가 발생 합니다.  
+ 개체가 이미 잠겨 있는 경우 디버그 빌드에 어설션 오류가 발생 합니다.  
   
 ##  <a name="unlock"></a>  CComCritSecLock::Unlock  
  임계 영역 개체의 잠금을 해제 하려면이 메서드를 호출 합니다.  
@@ -110,8 +110,8 @@ void Unlock() throw();
 ```  
   
 ### <a name="remarks"></a>설명  
- 개체가 이미 잠긴 없는 경우 디버그 빌드에 어설션 오류가 발생 합니다.  
+ 개체 잠금 해제 된 경우 디버그 빌드에 어설션 오류가 발생 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [클래스 클래스](../../atl/reference/ccomcriticalsection-class.md)   
+ [CComCriticalSection 클래스](../../atl/reference/ccomcriticalsection-class.md)   
  [CComAutoCriticalSection 클래스](../../atl/reference/ccomautocriticalsection-class.md)

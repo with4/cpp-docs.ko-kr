@@ -19,22 +19,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a56d456564dc171292e8a58b6cb486ce2dfbaf31
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f89651ba671bf66d7d27edb047db6d1b6b15ee06
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32424591"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940926"
 ---
 # <a name="storage-classes-c"></a>저장소 클래스(C++)  
   
-A *저장소 클래스* c + +의 컨텍스트에서 변수 선언은 개체의 수명, 링크 및 메모리 위치를 제어 하는 형식 지정자입니다. 주어진 개체에는 저장소 클래스가 하나만 있을 수 있습니다. `extern`, `static`또는 `thread_local` 지정자를 사용하여 달리 지정되지 않은 경우 블록 내에 정의된 변수는 자동 저장소를 갖습니다. 자동 개체 및 변수는 링크가 없으며 블록 외부의 코드에 표시되지 않습니다.  
+A *저장소 클래스* c + +의 컨텍스트에서 변수 선언 하는 개체의 수명, 링크 및 메모리 위치를 제어 하는 형식 지정자입니다. 주어진 개체에는 저장소 클래스가 하나만 있을 수 있습니다. 블록 내에서 정의 된 변수를 사용 하 여 달리 지정 하지 않으면 자동 저장소에는 **extern**를 **정적**, 또는 `thread_local` 지정자입니다. 자동 개체 및 변수는 링크가 없으며 블록 외부의 코드에 표시되지 않습니다.  
   
 **참고**  
   
-1.  [변경 가능한](../cpp/mutable-data-members-cpp.md) 키워드는 저장소 클래스 지정자를 고려 될 수 있습니다. 하지만 클래스 정의의 멤버 목록에만 사용할 수 있습니다.  
+1.  합니다 [변경할 수 있는](../cpp/mutable-data-members-cpp.md) 키워드는 저장소 클래스 지정자로 간주 될 수 있습니다. 하지만 클래스 정의의 멤버 목록에만 사용할 수 있습니다.  
   
-2.  **Visual c + + 2010 이상:** 는 `auto` 키워드는 c + + 저장소 클래스 지정자를 사용 하는 더 이상 및 `register` 키워드는 사용 되지 않습니다. **Visual Studio 2017 15.7 이상 버전:** (사용할 수 있는 [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):는 `register` 키워드는 c + + 언어에서 제거 됩니다.
+2.  **Visual c + + 2010 이상:** 는 **자동** 키워드는 c + + 저장소 클래스 지정자를 사용 하는 더 이상 하며 **등록** 키워드가 사용 되지 않습니다. **Visual Studio 2017 버전 15.7 이상의:** (사용할 수 있습니다 [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 합니다 **등록** 키워드는 c + + 언어에서 제거 됩니다.
 
 
 ```cpp
@@ -49,21 +49,21 @@ A *저장소 클래스* c + +의 컨텍스트에서 변수 선언은 개체의 �
 
 ## <a name="static"></a> 정적
 
-`static` 키워드는 전역 범위, 네임스페이스 범위 및 클래스 범위에서 변수와 함수를 선언하는 데 사용할 수 있습니다. 정적 변수는 로컬 범위에서 선언할 수도 있습니다.
+합니다 **정적** 전역 범위, 네임 스페이스 범위 및 클래스 범위에서 변수와 함수를 선언 하려면 키워드를 사용할 수 있습니다. 정적 변수는 로컬 범위에서 선언할 수도 있습니다.
 
-정적 생존 기간이란 프로그램이 시작될 때 개체 또는 변수가 할당되고 프로그램이 끝날 때 개체 또는 변수가 할당 취소됨을 의미합니다. 외부 연결은 변수가 선언된 파일 외부에서 변수 이름이 표시됨을 의미합니다. 반대로 내부 연결은 변수가 선언된 파일 외부에 이름이 표시되지 않음을 의미합니다. 기본적으로 전역 네임스페이스에서 정의된 개체 또는 변수에는 정적 지속 기간 및 외부 링크가 있습니다. `static` 키워드는 다음 상황에서 사용할 수 있습니다.
+정적 생존 기간이란 프로그램이 시작될 때 개체 또는 변수가 할당되고 프로그램이 끝날 때 개체 또는 변수가 할당 취소됨을 의미합니다. 외부 연결은 변수가 선언된 파일 외부에서 변수 이름이 표시됨을 의미합니다. 반대로 내부 연결은 변수가 선언된 파일 외부에 이름이 표시되지 않음을 의미합니다. 기본적으로 전역 네임스페이스에서 정의된 개체 또는 변수에는 정적 지속 기간 및 외부 링크가 있습니다. 합니다 **정적** 키워드는 다음과 같은 상황에서 사용할 수 있습니다.
 
-1. 파일 범위(전역 및/또는 네임스페이스 범위)에 변수 또는 함수를 선언한 경우, `static` 키워드는 변수 또는 함수에 내부 링크가 있음을 지정합니다. 변수를 선언할 때 변수가 정적 생존 기간을 가지며, 다른 값을 지정하지 않으면 컴파일러가 0으로 초기화합니다.
+1. 변수 또는 함수의 파일 범위에서 선언할 때 (전역 네임 스페이스 범위 및/또는), **정적** 키워드는 변수 또는 함수에 내부 링크가 있음을 지정 합니다. 변수를 선언할 때 변수가 정적 생존 기간을 가지며, 다른 값을 지정하지 않으면 컴파일러가 0으로 초기화합니다.
 
-1. 함수에 변수를 선언하는 경우, `static` 키워드는 해당 함수 호출 간 변수의 상태가 유지되도록 지정합니다.
+1. 함수에서 변수를 선언 하는 경우는 **정적** 변수에서 함수 호출 간에 상태를 유지 하는 키워드를 지정 합니다.
 
-1. 클래스 선언에서 데이터 멤버를 선언하는 경우, `static`키워드는 멤버의 복사본 하나가 클래스의 모든 인스턴스에 공유되도록 지정합니다. 정적 데이터 멤버는 파일 범위에서 정의되어야 합니다. 로 선언 하는 정수 계열 데이터 멤버 `const static` 는 이니셜라이저를 사용할 수 있습니다.
+1. 클래스 선언에서 데이터 멤버를 선언 하는 경우는 **정적** 키워드는 멤버의 복사본 하나 클래스의 모든 인스턴스에 공유 되도록 지정 합니다. 정적 데이터 멤버는 파일 범위에서 정의되어야 합니다. 로 선언 하는 정수 계열 데이터 멤버 **const 정적** 는 이니셜라이저를 사용할 수 있습니다.
 
-1. 클래스 선언에서 데이터 멤버를 선언하는 경우, `static` 키워드는 해당 함수가 클래스의 모든 인스턴스에 공유되도록 지정합니다. 정적 멤버 함수는 암시적 `this` 포인터가 없기 때문에 인스턴스 멤버에 액세스할 수 없습니다. 인스턴스 멤버에 액세스하려면 인스턴스 포인터나 참조인 매개 변수로 함수를 선언해야 합니다.
+1. 클래스 선언에서 멤버 함수를 선언 하는 경우는 **정적** 키워드는 클래스의 모든 인스턴스에 공유 되도록 지정 합니다. 정적 멤버 함수는 함수에 암시적 없기 때문에 인스턴스 멤버를 액세스할 수 없습니다 **이** 포인터입니다. 인스턴스 멤버에 액세스하려면 인스턴스 포인터나 참조인 매개 변수로 함수를 선언해야 합니다.
 
-1. 공용 구조체의 멤버는 정적 상태로 선언할 수 없습니다. 하지만 전역으로 선언된 익명 공용 구조체는 `static`으로 명시적으로 선언해야 합니다.
+1. 공용 구조체의 멤버는 정적 상태로 선언할 수 없습니다. 그러나 전역적으로 선언 된 익명 공용 구조체를 명시적으로 선언 해야 **정적**합니다.
 
-이 예에서는 변수 선언 하는 방법을 보여 줍니다. `static` 함수에서 함수 호출 간에 상태를 유지 합니다.
+이 예제에서는 변수를 선언 하는 방법을 보여 줍니다 **정적** 함수에서 함수 호출 간에 상태를 유지 합니다.
 
 ```cpp
 // static1.cpp
@@ -92,7 +92,7 @@ nStatic is 6
 nStatic is 10
 ```
 
-이 예에서는 사용을 보여 줍니다. `static` 클래스에서 합니다.
+이 예제에서는 사용을 보여 줍니다 **정적** 클래스에서.
 
 ```cpp
 // static2.cpp
@@ -138,7 +138,7 @@ int main() {
 3
 ```
 
-이 예에서는 선언 된 지역 변수에 `static` 멤버 함수에 있습니다. 정적 변수는 전체 프로그램에서 사용할 수 있으며 해당 형식의 모든 인스턴스는 정적 변수의 동일한 복사본을 공유합니다.
+이 예제에서는 선언 된 지역 변수를 보여 줍니다 **정적** 멤버 함수에 있습니다. 정적 변수는 전체 프로그램에서 사용할 수 있으며 해당 형식의 모든 인스턴스는 정적 변수의 동일한 복사본을 공유합니다.
 
 ```cpp
 // static3.cpp
@@ -170,17 +170,17 @@ var != value
 var == value
 ```
 
-C++11부터 정적 지역 변수 초기화는 스레드로부터 안전이 보장됩니다. 이 기능은 라고도 *매직 정적 이름*합니다. 그러나 다중 스레드 응용 프로그램에서는 모든 후속 할당을 동기화해야 합니다. 사용 하 여 스레드로부터 안전한 정적 초기화 기능을 해제할 수 있습니다는 [/Zc:threadSafeInit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) CRT에 대 한 종속성을 받지 않도록 하는 플래그입니다.
+C++11부터 정적 지역 변수 초기화는 스레드로부터 안전이 보장됩니다. 이 기능 이라고 *매직 정적 이름*합니다. 그러나 다중 스레드 응용 프로그램에서는 모든 후속 할당을 동기화해야 합니다. 스레드로부터 안전한 정적 초기화 기능을 사용 하 여 사용할 수는 [/zc: threadsafeinit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) CRT에 의존 하지 않도록 하는 플래그입니다.
 
 ## <a name="extern"></a> extern
 
-`extern`으로 선언된 변수와 개체는 바깥쪽 범위나 다른 변환 단위에 정의된 개체를 외부 링크가 있는 것으로 선언합니다.
+으로 선언 된 변수와 개체 **extern** 다른 변환 단위에서 또는 외부 링크가 있는 것으로 바깥쪽 범위에서 정의 되는 개체를 선언 합니다.
 
-선언 `const` 사용 하 여 변수는 `extern` 저장소 클래스 변수 외부 링크를 강제로 수행 합니다. 초기화는 `extern const` 변수 정의 변환 단위에서 허용 됩니다. 정의하는 변환 단위 이외의 변환 단위에서 초기화하면 정의되지 않은 결과가 생성됩니다. 자세한 내용은 참조 [extern 링크 지정을 사용 하 여](../cpp/using-extern-to-specify-linkage.md)
+선언의 **const** 사용 하 여 변수를 **extern** 저장소 클래스 하면 해당 변수가 외부 링크를 갖게 합니다. 초기화를 **extern const** 변수 정의 변환 단위에서 허용 됩니다. 정의하는 변환 단위 이외의 변환 단위에서 초기화하면 정의되지 않은 결과가 생성됩니다. 자세한 내용은 참조 하세요. [extern을 지정 하는 링크를 사용 하 여](../cpp/using-extern-to-specify-linkage.md)
 
-[/Zc:externConstexpr](../build/reference/zc-externconstexpr.md) 컴파일러 옵션을 사용 하도록 컴파일러에 적용 하면 [외부 링크]() 를 사용 하 여 선언 된 변수에 **extern constexpr**합니다. 이전 버전의 Visual Studio 및 기본적으로 또는 **/Zc:externConstexpr-** Visual Studio 적용에 내부 링크가 지정 된 **constexpr** 경우라도 변수는 **extern** 키워드를 사용 합니다. **/Zc:externConstexpr** 옵션은 Visual Studio 2017 업데이트 15.6부터 사용할 수 있습니다. 기본적으로 꺼져 있습니다. /permissive-option /Zc:externConstexpr 수는 없습니다.
+[/zc: externconstexpr](../build/reference/zc-externconstexpr.md) 컴파일러 옵션을 사용 하면 적용할 컴파일러 [외부 링크가]() 사용 하 여 선언 된 변수를 `extern constexpr`입니다. 이전 버전의 Visual Studio 및 기본적으로 이거나 **/Zc:externConstexpr-** 지정 된 경우 Visual Studio 내부 링크에 적용 됩니다 **constexpr** 경우에도 변수는 **extern** 키워드를 사용 합니다. 합니다 **/zc: externconstexpr** 옵션은 Visual Studio 2017 업데이트 15.6부터 사용할 수 있습니다. 기본적으로 꺼져 있습니다. /permissive-option /zc: externconstexpr 활성화 되지 않습니다.
 
-다음 코드에서는 두 가지 `extern` 선언, `DefinedElsewhere`(다른 변환 단위에 정의된 이름을 참조함) 및 `DefinedHere`(포함 범위에 정의된 이름을 참조함)를 보여 줍니다.
+다음 코드에서는 두 개의 **extern** 선언을 `DefinedElsewhere` (참조 하는 다른 변환 단위에 정의 된 이름) 및 `DefinedHere` (참조 하는 바깥쪽 범위에서 정의 된 이름):
 
 ```cpp
 // external.cpp
@@ -197,7 +197,7 @@ int main() {
 
 ## <a name="thread_local"></a> thread_local (C + + 11)
 
-`thread_local` 지정자를 사용하여 선언된 변수는 변수가 생성된 스레드에서만 액세스할 수 있습니다. 변수는 스레드를 만들 때 생성되고 스레드를 삭제할 때 삭제됩니다. 각 스레드에 변수의 자체 복사본이 있습니다. Windows에서는 `thread_local` 기능적으로 Microsoft 특정 [__declspec (thread)](../cpp/thread.md) 특성입니다.
+`thread_local` 지정자를 사용하여 선언된 변수는 변수가 생성된 스레드에서만 액세스할 수 있습니다. 변수는 스레드를 만들 때 생성되고 스레드를 삭제할 때 삭제됩니다. 각 스레드에 변수의 자체 복사본이 있습니다. Windows에 온 `thread_local` 기능적으로 Microsoft 전용 [__declspec (thread)](../cpp/thread.md) 특성입니다.
 
 ```cpp
 thread_local float f = 42.0; // Global namespace. Not implicitly static.
@@ -216,29 +216,29 @@ void DoSomething()
 }
 ```
 
-에 대 한 주의할 점은 `thread_local` 지정자:
+에 대 한 참고 사항은 `thread_local` 지정자:
 
 - Dll에서 스레드 로컬 변수를 동적으로 초기화 된 모든 호출 스레드에서 올바르게 초기화 되지 않을 수 있습니다. 자세한 내용은 [스레드](thread.md)를 참조하세요.
 
--  `thread_local` 지정자와 함께 `static` 또는 `extern`합니다.
+-  `thread_local` 지정자를 사용 하 여 결합할 수 있습니다 **정적** 하거나 **extern**합니다.
 
--  적용할 수 있습니다 `thread_local` 데이터 선언 및 정의;에 `thread_local` 함수 선언 또는 정의에 사용할 수 없습니다.
+-  적용할 수 있습니다 `thread_local` 데이터 선언 및 정의에 `thread_local` 함수 선언 또는 정의에 사용할 수 없습니다.
 
--  정적 저장 기간이 있는 데이터 항목에만 `thread_local`을 지정할 수 있습니다. 여기에 전역 데이터 개체 (둘 다 `static` 및 `extern`), 지역 정적 개체 및 클래스의 정적 데이터 멤버가 있습니다. 모든 지역 변수의 선언 `thread_local` 는 없는 다른 저장소 클래스를 제공 하도록 하는 경우 암시적으로 정적 블록 범위에서 즉, `thread_local` 같습니다 `thread_local static`합니다. 
+-  정적 저장 기간이 있는 데이터 항목에만 `thread_local`을 지정할 수 있습니다. 여기에 전역 데이터 개체 (둘 다 **정적** 하 고 **extern**), 지역 정적 개체 및 클래스의 정적 데이터 멤버입니다. 모든 로컬 변수 선언 `thread_local` 없는 다른 저장소 클래스를 제공 하는 경우 암시적으로 정적 블록 범위에서 다시 말해 `thread_local` 동일 `thread_local static`합니다. 
 
 -  스레드 로컬 개체의 선언과 정의가 같은 파일에서 발생하는지, 아니면 별도의 파일에서 발생하는지와 관계없이 해당 선언과 정의 둘 다에 대해 `thread_local`을 지정해야 합니다.
 
-Windows에서는 `thread_local` 기능적으로 [__declspec (thread)](../cpp/thread.md) 점을 제외 하 고 `__declspec(thread)` 형식 정의에 적용 될 수 있으며은 C 코드에서 유효 합니다. 가능한 경우 항상 C++ 표준의 일부로 포팅 가능성이 큰 `thread_local`을 사용합니다.
+Windows에 온 `thread_local` 기능적으로 [__declspec (thread)](../cpp/thread.md) 점을 제외 하 고 `__declspec(thread)` 형식 정의에 적용 될 수 있으며 C 코드에서 유효 합니다. 가능한 경우 항상 C++ 표준의 일부로 포팅 가능성이 큰 `thread_local`을 사용합니다.
 
 ##  <a name="register"></a>  register
 
-**Visual Studio 2017 버전 15.3 이상** (사용할 수 있는 [/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):는 `register` 키워드는 더 이상 지원 되는 저장소 클래스입니다. 키워드는 나중에 사용할 표준에서 계속 예약 되어 있습니다. 
+**Visual Studio 2017 버전 15.3 이상** (사용할 수 없습니다 [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 합니다 **등록** 키워드는 더 이상 지원 되는 저장소 클래스입니다. 키워드는 나중에 사용할 표준에 여전히 예약 되어 있습니다. 
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
 ```
 
-## <a name="example-automatic-vs-static-initialization"></a>예: 자동 정적 초기화와 비교
+## <a name="example-automatic-vs-static-initialization"></a>예: 자동 및 정적 초기화
 
 로컬 자동 개체나 변수는 컨트롤의 흐름이 정의에 도달할 때마다 초기화됩니다. 로컬 정적 개체 또는 변수는 컨트롤의 흐름이 정의에 처음 도달할 때 초기화됩니다.
 
@@ -311,9 +311,9 @@ Destroying: Auto I1
 Destroying: Static I3
 ```
 
-시기와 방법을 보여 주는이 예제 개체 `I1`, `I2`, 및 `I3` 초기화 및 제거 되는 경우.
+이 예제에서는 방법 및 시기 개체 `I1`, `I2`, 및 `I3` 초기화 됩니다 제거 되는 시기 및 합니다.
 
-프로그램에 대해 점이 있습니다.
+가지 프로그램에 대해 몇 가지 사항이 있습니다.
 
 - 첫째, 제어 흐름이 정의된 블록을 종료할 때 `I1` 및 `I2`가 자동으로 제거됩니다.
 

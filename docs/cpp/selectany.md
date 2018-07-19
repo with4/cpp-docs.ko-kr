@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a6543188525bea9a04c82bf5202160b42bcb6b8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb4f4ccd3cbfb5bb26e9f58a862eaa87dba3c538
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944590"
 ---
 # <a name="selectany"></a>selectany
 **Microsoft 전용**  
@@ -35,21 +36,21 @@ __declspec( selectany ) declarator
 ```  
   
 ## <a name="remarks"></a>설명  
- 링크 타임에 COMDAT의 정의가 여러 개 표시되면 링커가 그 중 하나를 선택하고 나머지는 무시합니다. 경우 링커 옵션 [/opt: ref](../build/reference/opt-optimizations.md) (최적화)가 선택 되 면 링커 출력에서 모든 참조 되지 않은 데이터 항목을 제거 하려면 COMDAT 제거 발생 합니다.  
+ 링크 타임에 COMDAT의 정의가 여러 개 표시되면 링커가 그 중 하나를 선택하고 나머지는 무시합니다. 하는 경우 링커 옵션 [/opt: ref](../build/reference/opt-optimizations.md) (최적화)을 선택 하면 링커 출력에서 참조 되지 않은 데이터 항목을 모두 제거 하려면 COMDAT 제거 발생 합니다.  
   
  선언에서 전역 함수 또는 정적 메서드에 의한 생성자 및 할당은 참조를 만들지 않으며 /OPT:REF 제거를 막지 않습니다. 데이터에 대한 다른 참조가 없을 경우 그러한 코드로 인해 의도하지 않은 결과가 발생해서는 안 됩니다.  
   
- 동적으로 초기화되는 전역 개체의 경우 `selectany`가 참조하지 않는 개체의 초기화 코드도 삭제합니다.  
+ 동적으로 초기화 되는 전역 개체에 대 한 **selectany** 참조 되지 않은 개체의 초기화 코드도 삭제 됩니다.  
   
- 보통 EXE 또는 DLL 프로젝트에서 한 번만 전역 데이터 항목을 초기화할 수 있습니다. 둘 이상의 소스 파일에 같은 헤더가 나타날 경우 헤더에 정의된 전역 데이터를 초기화하는 데 `selectany`를 사용할 수 있습니다. C 및 C++ 컴파일러에서 `selectany`를 사용할 수 있습니다.  
+ 보통 EXE 또는 DLL 프로젝트에서 한 번만 전역 데이터 항목을 초기화할 수 있습니다. **selectany** 헤더에 정의 된 둘 이상의 소스 파일에 같은 헤더가 나타날 경우 글로벌 데이터 초기화에 사용할 수 있습니다. **selectany** C 및 c + + 컴파일러에서 사용할 수 있습니다.  
   
 > [!NOTE]
->  외부에 표시되는 전역 데이터 항목의 실제 초기화에 한해 `selectany`를 적용할 수 있습니다.  
+>  **selectany** 외부에 표시 되는 전역 데이터 항목의 실제 초기화에만 적용할 수 있습니다.  
   
-## <a name="example"></a>예제  
- 이 코드에서는 `selectany` 특성을 사용하는 방법을 보여 줍니다.  
+## <a name="example"></a>예  
+ 이 코드에서는 사용 하 여 **selectany** 특성:  
   
-```  
+```cpp 
 //Correct - x1 is initialized and externally visible   
 __declspec(selectany) int x1=1;  
   
@@ -79,10 +80,10 @@ int i;
 __declspec(selectany) X x(1);  
 ```  
   
-## <a name="example"></a>예제  
- 이 코드에서는 사용 하는 `selectany` 특성을 사용할 때 데이터 COMDAT 정리는 [/opt: icf](../build/reference/opt-optimizations.md) 링커 옵션입니다. 데이터와 표시 되어 해야 `selectany` 에 배치 하 고는 **const** (읽기 전용) 섹션. 읽기 전용 섹션을 명시적으로 지정해야 합니다.  
+## <a name="example"></a>예  
+ 이 코드를 사용 하는 방법을 보여 줍니다 합니다 **selectany** 특성을 사용 하는 경우 데이터 COMDAT 정리를 확인 합니다 [/opt: icf](../build/reference/opt-optimizations.md) 링커 옵션입니다. 로 데이터를 표시 해야 합니다는 **selectany** 에 배치 하 고는 **const** (읽기 전용) 섹션입니다. 읽기 전용 섹션을 명시적으로 지정해야 합니다.  
   
-```  
+```cpp 
 // selectany2.cpp  
 // in the following lines, const marks the variables as read only  
 __declspec(selectany) extern const int ix = 5;  

@@ -18,15 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9122431d0d71d33406250a624048dbede46fd387
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e99299d1232fda75d6b0552b5236a060903a08e5
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361937"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879654"
 ---
 # <a name="ccomqiptrelementtraits-class"></a>CComQIPtrElementTraits 클래스
-이 클래스는 COM 인터페이스 포인터의 컬렉션을 만들 때 메서드, 정적 함수 및 typedefs 유용 제공 합니다.  
+이 클래스 COM 인터페이스 포인터의 컬렉션을 만들 때 정적 함수 메서드와 유용한 형식 정의 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -37,11 +37,11 @@ class CComQIPtrElementTraits :
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `I`  
- 저장할 수에 대 한 포인터의 유형을 지정 하는 COM 인터페이스입니다.  
+ *I*  
+ 저장에 대 한 포인터의 형식을 지정 하는 COM 인터페이스입니다.  
   
- `piid`  
- IID에 대 한 포인터 `I`합니다.  
+ *piid*  
+ 에 대 한 포인터의 IID *있습니까*합니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -49,12 +49,12 @@ class CComQIPtrElementTraits :
   
 |이름|설명|  
 |----------|-----------------|  
-|[CComQIPtrElementTraits::INARGTYPE](#inargtype)|컬렉션 클래스 개체에 요소를 추가 하는 데 사용할 데이터 형식입니다.|  
+|[CComQIPtrElementTraits::INARGTYPE](#inargtype)|컬렉션 클래스 개체에 요소를 추가 하는 데 데이터 형식입니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 클래스는 메서드를 파생 하 고의 컬렉션 클래스를 만들 때 유용한 형식 정의 제공 [CComQIPtr](../../atl/reference/ccomqiptr-class.md) COM 인터페이스 포인터 개체입니다. 이 클래스는 둘 다로 사용 하 여 [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) 및 [CInterfaceList](../../atl/reference/cinterfacelist-class.md) 클래스입니다.  
+ 이 클래스는 메서드를 파생 하 고의 컬렉션 클래스를 만들 때 유용한 형식 정의 제공 [CComQIPtr](../../atl/reference/ccomqiptr-class.md) COM 인터페이스 포인터 개체입니다. 둘 다에서이 클래스를 사용 합니다 [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) 하 고 [CInterfaceList](../../atl/reference/cinterfacelist-class.md) 클래스입니다.  
   
- 자세한 내용은 참조 [ATL 컬렉션 클래스](../../atl/atl-collection-classes.md)합니다.  
+ 자세한 내용은 [ATL 컬렉션 클래스](../../atl/atl-collection-classes.md)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
@@ -71,7 +71,7 @@ class CComQIPtrElementTraits :
  **헤더:** atlcoll.h  
   
 ##  <a name="inargtype"></a>  CComQIPtrElementTraits::INARGTYPE  
- 컬렉션 클래스 개체에 요소를 추가 하는 데 사용할 데이터 형식입니다.  
+ 컬렉션 클래스 개체에 요소를 추가 하는 데 데이터 형식입니다.  
   
 ```
 typedef I* INARGTYPE;

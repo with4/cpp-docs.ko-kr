@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9101d66de6782d1a060a8acdfb0d02e9971bb9c5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5d942c0611b408303922f3e6ab91000630ce8774
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357547"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37883595"
 ---
 # <a name="cautoptrlist-class"></a>CAutoPtrList 클래스
 이 클래스는 스마트 포인터의 목록을 구성할 때 유용한 메서드를 제공 합니다.  
@@ -40,7 +40,7 @@ class CAutoPtrList :
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `E`  
+ *E*  
  포인터 형식입니다.  
   
 ## <a name="members"></a>멤버  
@@ -52,9 +52,9 @@ class CAutoPtrList :
 |[CAutoPtrList::CAutoPtrList](#cautoptrlist)|생성자입니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 클래스는 생성자를 제공 하 고 메서드를 파생 [CAtlList](../../atl/reference/catllist-class.md) 및 [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) 스마트 포인터를 저장 하는 목록 개체 만들기를 지원할 수 있습니다. 클래스 [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) 배열 개체에 대 한 유사한 기능을 제공 합니다.  
+ 이 클래스는 생성자를 제공 하 고 메서드에서 파생 [CAtlList](../../atl/reference/catllist-class.md) 하 고 [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) 스마트 포인터를 저장 하는 목록 개체의 생성을 지원 합니다. 클래스 [CAutoPtrArray](../../atl/reference/cautoptrarray-class.md) 배열 개체에 대 한 유사한 기능을 제공 합니다.  
   
- 자세한 내용은 참조 [ATL 컬렉션 클래스](../../atl/atl-collection-classes.md)합니다.  
+ 자세한 내용은 [ATL 컬렉션 클래스](../../atl/atl-collection-classes.md)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CAtlList](../../atl/reference/catllist-class.md)  
@@ -72,11 +72,11 @@ CAutoPtrList(UINT nBlockSize = 10) throw();
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nBlockSize`  
- 블록 크기 기본값은 10입니다.  
+ *nBlockSize*  
+ 기본값은 10 사용 하 여 블록 크기입니다.  
   
 ### <a name="remarks"></a>설명  
- 블록 크기는 새 요소가 필요한 경우 할당 된 메모리의 업무량을 측정 합니다. 블록 크기는 메모리 할당 루틴에 대 한 호출 줄어들지만 더 많은 리소스를 사용 하 여 합니다.  
+ 블록 크기는 새 요소가 필요한 경우 할당 된 메모리의 크기를 측정 합니다. 블록 크기가 클수록 메모리 할당 루틴에 대 한 호출 줄어들지만 더 많은 리소스를 사용 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CAtlList 클래스](../../atl/reference/catllist-class.md)   

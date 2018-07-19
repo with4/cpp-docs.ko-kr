@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04d794041df385a9e18a8a4b25460d961a340cda
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dad1f9a223d8eb97c8e59e955bd5358b27dafd08
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944488"
 ---
 # <a name="pointers-c"></a>포인터 (c + +)
 포인터는 다음 시퀀스를 사용하여 선언합니다.  
@@ -39,25 +40,25 @@ ms.lasthandoff: 05/03/2018
   
  1. 선언 지정자:  
   
--   선택적 저장소 클래스 지정자. 자세한 내용은 참조 [지정자](../cpp/specifiers.md)합니다.  
+    - 선택적 저장소 클래스 지정자. 자세한 내용은 [지정자](../cpp/specifiers.md)합니다.  
   
--   가리키는 대상 개체의 형식에 적용되는 선택적 `const` 또는 `volatile` 키워드  
+    - 선택적인 **상수** 또는 **volatile** 키워드가 가리키는 개체의 형식에 적용 합니다.  
   
--   형식 지정자: 가리키는 대상 개체의 형식을 나타내는 형식의 이름  
+    - 형식 지정자: 가리키는 대상 개체의 형식을 나타내는 형식의 이름  
   
  2. 선언자:  
   
--   선택적 Microsoft 전용 한정자. 자세한 내용은 참조 [Microsoft 전용 한정자](../cpp/microsoft-specific-modifiers.md)합니다.  
+    - 선택적 Microsoft 전용 한정자. 자세한 내용은 [Microsoft 전용 한정자](../cpp/microsoft-specific-modifiers.md)합니다.  
   
--   `*` 연산자  
+    - `*` 연산자  
   
--   포인터 자체에 적용되는 선택적 `const` 또는 `volatile` 키워드  
+    - 선택적인 **상수** 또는 **volatile** 포인터 자체에 적용 되는 키워드입니다.  
   
--   식별자입니다.  
+    - 식별자입니다.  
   
--   선택적 이니셜라이저입니다.  
+    - 선택적 이니셜라이저입니다.  
   
- 함수 포인터의 선언자는 다음과 같습니다.  
+     함수 포인터의 선언자는 다음과 같습니다.  
   
 ```  
 (* [cv-qualifiers] identifier )( argument-list ) [cv-qualifers]  
@@ -74,31 +75,31 @@ ms.lasthandoff: 05/03/2018
   
  포인터 선언의 간단한 예제는 다음과 같습니다.  
   
-```  
+```cpp 
 char *pch;  
 ```  
   
- 위의 선언은 `pch`가 `char` 형식의 개체를 가리키도록 지정합니다.  
+ 앞의 선언은 지정 `pch` 형식의 개체를 가리키는 **char**합니다.  
   
  보다 복잡한 예제는 다음과 같습니다.  
   
-```  
+```cpp 
 static unsigned int * const ptr;  
 ```  
   
- 앞의 선언은 지정 `ptr` 형식의 개체에 대 한 상수 포인터 `unsigned` `int` 정적 저장 기간이 있는 합니다.  
+ 앞의 선언은 지정 `ptr` 형식의 개체에 대 한 상수 포인터 **부호 없는** **int** 정적 저장 기간이 있는 합니다.  
   
  다음 예제에서는 여러 포인터가 선언 및 초기화되는 방법을 보여 줍니다.  
   
-```  
+```cpp 
 static int *p = &i, *q = &j;  
 ```  
   
- 위의 예제에서 p 포인터와 q 포인터 모두 `int` 형식의 개체를 가리키며 각각 i 및 j 주소로 초기화됩니다.  저장소 클래스 지정자 `static`은 두 포인터에 모두 적용됩니다.  
+ 앞의 예제에서 p 포인터와 q 포인터 모두 개체를 가리키는 형식의 **int** 되며 각각 i 및 j 주소로 초기화 됩니다.  저장소 클래스 지정자 **정적** 두 포인터에 적용 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp 
 // pointer.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -186,10 +187,10 @@ j is 10
 dog dog  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음은 데이터 구조(이 경우에는 연결된 목록)에서 포인터를 사용하는 방법을 보여 주는 또 다른 예제입니다.  
   
-```  
+```cpp 
 // pointer_linkedlist.cpp  
 // compile with: /EHsc  
 #include <iostream>  

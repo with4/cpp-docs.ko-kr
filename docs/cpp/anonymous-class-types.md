@@ -15,16 +15,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e4200548100804d1e64c16311875e85ffcdd717
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 49149a055f60cb24c6f676b91a2d9ddd55132a3a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944812"
 ---
 # <a name="anonymous-class-types"></a>익명 클래스 형식
-클래스는 익명 일 수 있으므로-없이 선언할 수 있습니다, 즉는 *식별자*합니다. 다음과 같이 클래스 이름을 `typedef` 이름으로 바꿀 때 유용합니다.  
+클래스는 익명 일 수-없이 선언할 수 있습니다 즉, 한 *식별자*합니다. 클래스 이름을 바꿔야 하는 경우에 유용를 **typedef** 같이 이름:  
   
-```  
+```cpp 
 typedef struct  
 {  
     unsigned x;  
@@ -33,11 +34,11 @@ typedef struct
 ```  
   
 > [!NOTE]
->  이전 예제와 같이 익명 클래스를 사용하면 기존의 C 코드와 호환성을 유지하는 데 도움이 됩니다. 일부 C 코드에서는 익명 구조체와 함께 `typedef`를 사용하는 것이 일반적입니다.  
+>  이전 예제와 같이 익명 클래스를 사용하면 기존의 C 코드와 호환성을 유지하는 데 도움이 됩니다. 일부 C 코드에서 사용 **typedef** 익명 구조체와 함께에서 널리 사용 됩니다.  
   
  다음과 같이 클래스 멤버를 참조하여 별도의 클래스에 포함되지 않은 것처럼 나타내려는 경우에도 익명 클래스가 유용합니다.  
   
-```  
+```cpp 
 struct PTValue  
 {  
     POINT ptLoc;  
@@ -51,13 +52,13 @@ struct PTValue
 PTValue ptv;  
 ```  
   
- 위의 코드에서 `iValue` 개체 멤버 선택 연산자를 사용 하 여 액세스할 수 있습니다 (**.**) 다음과 같습니다.  
+ 위의 코드에서 `iValue` 개체 멤버 선택 연산자를 사용 하 여 액세스할 수 있습니다 (**.**) 다음과 같이 합니다.  
   
-```  
+```cpp 
 int i = ptv.iValue;  
 ```  
   
- 특정 제한이 익명 클래스에 적용됩니다. (익명 공용 구조체에 대 한 자세한 내용은 참조 [공용 구조체](../cpp/unions.md).) 익명 클래스:  
+ 특정 제한이 익명 클래스에 적용됩니다. (익명 공용 구조체에 대 한 자세한 내용은 참조 하세요. [공용 구조체](../cpp/unions.md).) 익명 클래스:  
   
 -   생성자나 소멸자를 가질 수 없습니다.  
   
@@ -72,7 +73,7 @@ int i = ptv.iValue;
   
  포함하는 구조체의 멤버인 것처럼 익명 구조체의 멤버에 액세스할 수 있습니다.  
   
-```  
+```cpp 
 // anonymous_structures.c  
 #include <stdio.h>  
   

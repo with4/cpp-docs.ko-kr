@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aaafdf42d218e2c3bca1e8ee28c27898f80bcf40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fed15dc2348fa540c1f33e7742c5cbcda96b5846
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357872"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882535"
 ---
 # <a name="catlexception-class"></a>CAtlException 클래스
 이 클래스는 ATL 예외를 정의합니다.  
@@ -53,12 +53,12 @@ class CAtlException
   
 |이름|설명|  
 |----------|-----------------|  
-|[CAtlException::m_hr](#m_hr)|형식의 변수 HRESULT 개체에 의해 생성 및 오류 조건을 저장 하는 데 사용 합니다.|  
+|[CAtlException::m_hr](#m_hr)|형식 변수의 HRESULT 개체에 의해 생성 및 오류 조건을 저장 하는 데 사용 합니다.|  
   
 ## <a name="remarks"></a>설명  
- A `CAtlException` 개체 ATL 작업과 관련 된 예외 상태를 나타냅니다. `CAtlException` 클래스는 예외 및 예외를 HRESULT 값이 있는 것 처럼 처리할 수 있도록 하는 캐스트 연산자에 대 한 이유를 나타내는 상태 코드를 저장 하는 공용 데이터 멤버를 포함 합니다.  
+ `CAtlException` 개체 작업과 관련 된 ATL 예외 조건을 나타냅니다. `CAtlException` 클래스 예외 및 예외를 HRESULT 것 처럼 처리할 수 있습니다는 캐스트 연산자에 대 한 이유를 나타내는 상태 코드를 저장 하는 공용 데이터 멤버를 포함 합니다.  
   
- 일반적으로 호출 합니다 `AtlThrow` 만드는 대신 한 `CAtlException` 개체를 직접 합니다.  
+ 일반적으로 호출 `AtlThrow` 만들지 않고는 `CAtlException` 직접 개체입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlexcept.h  
@@ -72,8 +72,8 @@ CAtlException() throw();
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hr`  
- `HRESULT` 오류 코드입니다.  
+ *hr*  
+ HRESULT 오류 코드입니다.  
   
 ##  <a name="operator_hresult"></a>  CAtlException::operator HRESULT 
  현재 개체를 HRESULT 값을 캐스팅합니다.  
@@ -83,15 +83,15 @@ operator HRESULT() const throw ();
 ```  
   
 ##  <a name="m_hr"></a>  CAtlException::m_hr  
- `HRESULT` 데이터 멤버입니다.  
+ HRESULT 데이터 멤버입니다.  
   
 ```
 HRESULT m_hr;
 ```  
   
 ### <a name="remarks"></a>설명  
- 오류 조건이 저장 된 데이터 멤버입니다. HRESULT 값이 생성자에 의해 설정 [CAtlException::CAtlException](#catlexception)합니다.  
+ 오류 조건을 저장 하는 데이터 멤버입니다. HRESULT 값을 생성자에 의해 설정 됩니다 [CAtlException::CAtlException](#catlexception)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Atlthrow 변형이](debugging-and-error-reporting-global-functions.md#atlthrow)   
+ [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)   
  [클래스 개요](../../atl/atl-class-overview.md)

@@ -18,17 +18,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a320b02bb97c4f6b506e23a7dc93b36c22421aec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5408cf05910bdc1802213d69a286707199f0be76
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409763"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940233"
 ---
 # <a name="bstrtoperator-"></a>_bstr_t::operator !
 **Microsoft 전용**  
   
- 확인 캡슐화 된 `BSTR` 는 **NULL** 문자열입니다.  
+ 확인 캡슐화 된 `BSTR` NULL 문자열입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,7 +39,7 @@ bool operator!( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 반환 **true** 그렇다면 **false** 그렇지 않은 경우.  
+ 그러한 경우 TRUE를 반환 합니다이 고, 그렇지 않으면 FALSE입니다.  
   
  **Microsoft 전용 종료**  
   

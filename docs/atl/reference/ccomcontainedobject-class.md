@@ -24,15 +24,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0d4b0a6491aaeb27e4a1d986db01c03d1c5314d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26f6216d5e78ae8ee95eb9f43d70f13aeb5f4874
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360177"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881060"
 ---
 # <a name="ccomcontainedobject-class"></a>CComContainedObject 클래스
-이 클래스는 구현 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 소유자 개체에 위임 하 여 **IUnknown**합니다.  
+이 클래스는 구현 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 소유자 개체에 위임 하 여 `IUnknown`입니다.  
   
 > [!IMPORTANT]
 >  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
@@ -45,8 +45,8 @@ class CComContainedObject : public Base
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `Base`  
- 파생 된 클래스에 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) 또는 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)합니다.  
+ *자료*  
+ 파생 된 클래스 [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) 하거나 [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)합니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -54,20 +54,20 @@ class CComContainedObject : public Base
   
 |이름|설명|  
 |----------|-----------------|  
-|[CComContainedObject::CComContainedObject](#ccomcontainedobject)|생성자입니다. Owner 개체에 대 한 멤버 포인터를 초기화 `IUnknown`합니다.|  
+|[CComContainedObject::CComContainedObject](#ccomcontainedobject)|생성자입니다. 멤버에 대 한 포인터로 소유자 개체의 초기화 `IUnknown`합니다.|  
 |[CComContainedObject:: ~ CComContainedObject](#dtor)|소멸자입니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[CComContainedObject::AddRef](#addref)|소유자 개체에서 참조 횟수를 증가 시킵니다.|  
+|[CComContainedObject::AddRef](#addref)|소유자 개체의 참조 횟수를 증가 시킵니다.|  
 |[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|소유자 개체의 검색 `IUnknown`합니다.|  
-|[CComContainedObject::QueryInterface](#queryinterface)|소유자 개체에 대해 요청 된 인터페이스에 대 한 포인터를 검색 합니다.|  
+|[CComContainedObject::QueryInterface](#queryinterface)|소유자 개체에서 요청한 인터페이스에 대 한 포인터를 검색 합니다.|  
 |[CComContainedObject::Release](#release)|소유자 개체의 참조 횟수를 감소 시킵니다.|  
   
 ## <a name="remarks"></a>설명  
- ATL 사용 하 여 `CComContainedObject` 클래스에서 [CComAggObject](../../atl/reference/ccomaggobject-class.md), [CComPolyObject](../../atl/reference/ccompolyobject-class.md), 및 [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)합니다. `CComContainedObject` 구현 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 소유자 개체에 위임 하 여 **IUnknown**합니다. (의 소유자는 외부 집계의 개체 이거나 분리 인터페이스를 만들 개체입니다.) `CComContainedObject` 호출 `CComObjectRootEx`의 `OuterQueryInterface`, `OuterAddRef`, 및 `OuterRelease`를 통해 상속 된 모든, `Base`합니다.  
+ ATL 사용 `CComContainedObject` 클래스의 [CComAggObject](../../atl/reference/ccomaggobject-class.md)를 [CComPolyObject](../../atl/reference/ccompolyobject-class.md), 및 [CComCachedTearOffObject](../../atl/reference/ccomcachedtearoffobject-class.md)합니다. `CComContainedObject` 구현 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) 소유자 개체에 위임 하 여 `IUnknown`입니다. (소유자 개체 또는 집계의 외부 개체는 분리 인터페이스는 생성 되는 개체입니다.) `CComContainedObject` 호출 `CComObjectRootEx`의 `OuterQueryInterface`를 `OuterAddRef`, 및 `OuterRelease`를 통해 상속 된 모든, `Base`합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  `Base`  
@@ -78,14 +78,14 @@ class CComContainedObject : public Base
  **헤더:** atlcom.h  
   
 ##  <a name="addref"></a>  CComContainedObject::AddRef  
- 소유자 개체에서 참조 횟수를 증가 시킵니다.  
+ 소유자 개체의 참조 횟수를 증가 시킵니다.  
   
 ```
 STDMETHOD_(ULONG, AddRef)();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 진단에 대 한 유용한 또는 테스트 수 있는 값입니다.  
+ 진단에 유용 하거나 테스트 수 있는 값입니다.  
   
 ##  <a name="ccomcontainedobject"></a>  CComContainedObject::CComContainedObject  
  생성자입니다.  
@@ -95,11 +95,11 @@ CComContainedObject(void* pv);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pv`  
- [in] 소유자 개체의 **IUnknown**합니다.  
+ *pv*  
+ [in] 소유자 개체의 `IUnknown`합니다.  
   
 ### <a name="remarks"></a>설명  
- 설정의 `m_pOuterUnknown` 멤버 포인터 (을 통해 상속는 `Base` 클래스)을 `pv`합니다.  
+ 집합의 `m_pOuterUnknown` 멤버 포인터 (통해 상속 합니다 `Base` 클래스)를 *pv*.  
   
 ##  <a name="dtor"></a>  CComContainedObject:: ~ CComContainedObject  
  소멸자입니다.  
@@ -112,20 +112,20 @@ CComContainedObject(void* pv);
  할당 된 모든 리소스를 해제합니다.  
   
 ##  <a name="getcontrollingunknown"></a>  CComContainedObject::GetControllingUnknown  
- 반환 된 `m_pOuterUnknown` 멤버 포인터 (을 통해 상속는 *자료* 클래스) 소유자 개체를 보유 하는 **IUnknown**합니다.  
+ 반환 된 `m_pOuterUnknown` 멤버 포인터 (통해 상속를 *자료* 클래스) 소유자 개체를 보유 하는 `IUnknown`.  
   
 ```
 IUnknown* GetControllingUnknown();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 소유자 개체의 **IUnknown**합니다.  
+ 소유자 개체의 `IUnknown`합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드는 가상 일 수 있음 경우 `Base` 가 선언 된 [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) 매크로입니다.  
+ 이 메서드는 가상 일 수 있음 경우 `Base` 선언에 [DECLARE_GET_CONTROLLING_UNKNOWN](aggregation-and-class-factory-macros.md#declare_get_controlling_unknown) 매크로입니다.  
   
 ##  <a name="queryinterface"></a>  CComContainedObject::QueryInterface  
- 소유자 개체에 대해 요청 된 인터페이스에 대 한 포인터를 검색 합니다.  
+ 소유자 개체에서 요청한 인터페이스에 대 한 포인터를 검색 합니다.  
   
 ```
 STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
@@ -134,17 +134,17 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `iid`  
+ *iid*  
  [in] 요청 된 인터페이스의 식별자입니다.  
   
- `ppvObject`  
- [out] 로 식별 되는 인터페이스 포인터에 대 한 포인터 `iid`합니다. 개체가이 인터페이스를 지원 하지 않는 경우 `ppvObject` 로 설정 된 **NULL**합니다.  
+ *ppvObject*  
+ [out] 로 식별 되는 인터페이스 포인터에 대 한 포인터 *iid*합니다. 개체는이 인터페이스를 지원 하지 않는 경우 *ppvObject* NULL로 설정 됩니다.  
   
- `pp`  
- [out] 형식으로 식별 된 인터페이스 포인터에 대 한 포인터 `Q`합니다. 개체가이 인터페이스를 지원 하지 않는 경우 `pp` 로 설정 된 **NULL**합니다.  
+ *pp*  
+ [out] 형식별로 식별 된 인터페이스 포인터에 `Q`입니다. 개체는이 인터페이스를 지원 하지 않는 경우 *pp* NULL로 설정 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
- 표준 `HRESULT` 값입니다.  
+ 표준 HRESULT 값입니다.  
   
 ##  <a name="release"></a>  CComContainedObject::Release  
  소유자 개체의 참조 횟수를 감소 시킵니다.  
@@ -154,7 +154,7 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 디버그 빌드에서 **릴리스** 진단에 대 한 유용한 또는 테스트 수 있는 값을 반환 합니다. 디버그가 아닌 빌드에서 **릴리스** 항상 0을 반환 합니다.  
+ 디버그 빌드에서 `Release` 진단용 유용 하거나 테스트 수 있는 값을 반환 합니다. 디버그가 아닌 빌드에서 `Release` 항상 0을 반환 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [클래스 개요](../../atl/atl-class-overview.md)

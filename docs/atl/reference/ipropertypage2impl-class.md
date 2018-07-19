@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 204f62e667bd149dd174f960ba31d8388e01394e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bf5cf9438d2fcecb434802dc99aaa5c692ba108f
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361904"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37882899"
 ---
 # <a name="ipropertypage2impl-class"></a>IPropertyPage2Impl 클래스
-이 클래스는 구현 **IUnknown** 의 기본 구현을 상속 [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)합니다.  
+이 클래스는 구현 `IUnknown` 의 기본 구현을 상속 [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)합니다.  
   
 > [!IMPORTANT]
 >  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
@@ -41,8 +41,8 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `T`  
- 파생 된 클래스에 `IPropertyPage2Impl`합니다.  
+ *T*  
+ 클래스에서 파생 된 `IPropertyPage2Impl`합니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -50,14 +50,14 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
   
 |이름|설명|  
 |----------|-----------------|  
-|[IPropertyPage2Impl::EditProperty](#editproperty)|속성 컨트롤에서 속성 페이지를 활성화할 때 포커스를 수신 하도록 지정 합니다. ATL 구현은 **E_NOTIMPL**합니다.|  
+|[IPropertyPage2Impl::EditProperty](#editproperty)|속성 페이지를 활성화할 때 속성 컨트롤에서 포커스를 수신 하도록 지정 합니다. ATL 구현 E_NOTIMPL을 반환합니다.|  
   
 ## <a name="remarks"></a>설명  
- [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) 확장 [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) 추가 하 여는 `EditProperty` 메서드. 이 메서드는 클라이언트가 속성 페이지 개체에서 특정 속성을 선택 하는 데 사용 합니다.  
+ 합니다 [IPropertyPage2](http://msdn.microsoft.com/library/windows/desktop/ms683996) 인터페이스를 확장 [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) 추가 하 여는 `EditProperty` 메서드. 이 메서드는 클라이언트가 속성 페이지 개체의 특정 속성을 선택 하는 데 사용 합니다.  
   
- 클래스 `IPropertyPage2Impl` 단순히 반환 **E_NOTIMPL** 에 대 한 **IPropertyPage2::EditProperty**합니다. 하지만 기본 구현을 상속 [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) 구현 **IUnknown** 디버그에서 장치 정보 덤프를 전송 하 여 빌드합니다.  
+ 클래스 `IPropertyPage2Impl` 에 대 한 E_NOTIMPL을 반환 하기만 `IPropertyPage2::EditProperty`합니다. 하지만 기본 구현을 상속 [IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md) 구현 및 `IUnknown` 장치에서 디버그 덤프에 정보를 전송 하 여 작성 합니다.  
   
- 클래스에서 파생 된 일반적으로 속성 페이지를 만들 때 `IPropertyPageImpl`합니다. 추가 지원을 제공 하기 위해 **IPropertyPage2**, 클래스 정의 수정 하 고 재정의 `EditProperty` 메서드.  
+ 클래스에서 파생 된 일반적으로 속성 페이지를 만들면 `IPropertyPageImpl`합니다. 추가 지원을 제공 하기 위해 `IPropertyPage2`클래스 정의 수정 하 고 재정의 `EditProperty` 메서드.  
   
  **관련 문서** [ATL 자습서](../../atl/active-template-library-atl-tutorial.md), [ATL 프로젝트 만들기](../../atl/reference/creating-an-atl-project.md)  
   
@@ -72,17 +72,17 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
  **헤더:** atlctl.h  
   
 ##  <a name="editproperty"></a>  IPropertyPage2Impl::EditProperty  
- 속성 컨트롤에서 속성 페이지를 활성화할 때 포커스를 수신 하도록 지정 합니다.  
+ 속성 페이지를 활성화할 때 속성 컨트롤에서 포커스를 수신 하도록 지정 합니다.  
   
 ```
 HRESULT EditProperty(DISPID dispID);
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 반환 **E_NOTIMPL**합니다.  
+ E_NOTIMPL 반환.  
   
 ### <a name="remarks"></a>설명  
- 참조 [IPropertyPage2::EditProperty](http://msdn.microsoft.com/library/windows/desktop/ms690353) in the Windows SDK입니다.  
+ 참조 [IPropertyPage2::EditProperty](http://msdn.microsoft.com/library/windows/desktop/ms690353) Windows SDK에에서 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [IPerPropertyBrowsingImpl 클래스](../../atl/reference/iperpropertybrowsingimpl-class.md)   

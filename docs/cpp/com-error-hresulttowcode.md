@@ -16,17 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e3955fcda665e08e5415652a1e8f1f232d0fe13
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbcbd73f1a4a6d80ed30a5d70ca43d5fe45677f9
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412266"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941719"
 ---
 # <a name="comerrorhresulttowcode"></a>_com_error::HRESULTToWCode
 **Microsoft 전용**  
   
- 32 비트 매핑합니다 `HRESULT` 에 16 비트 `wCode`합니다.  
+ 16 비트에서 32 비트 HRESULT 매핑됩니다 `wCode`합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,14 +38,14 @@ ms.locfileid: "32412266"
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `hr`  
- 32 비트 `HRESULT` 16 비트 매핑될 수 있도록 `wCode`합니다.  
+ *hr*  
+ 16 비트와 매핑되어야 32 비트 HRESULT `wCode`합니다.  
   
 ## <a name="return-value"></a>반환 값  
- 16 비트 `wCode` 32 비트에서 매핑된 `HRESULT`합니다.  
+ 16 비트 `wCode` 32 비트 HRESULT에서 매핑됩니다.  
   
 ## <a name="remarks"></a>설명  
- 참조 [_com_error:: wcode](../cpp/com-error-wcode.md) 자세한 정보에 대 한 합니다.  
+ 참조 [_com_error:: wcode](../cpp/com-error-wcode.md) 자세한 내용은 합니다.  
   
  **Microsoft 전용 종료**  
   

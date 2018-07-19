@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da050dbf2b4052aeadd9fe8380857a0ba15b264f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b2c571733aca48ddbfd881a294786d1de334c7c3
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32360922"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884667"
 ---
 # <a name="ccomsimplethreadallocator-class"></a>CComSimpleThreadAllocator 클래스
 이 클래스는 클래스에 대 한 스레드 선택을 관리 `CComAutoThreadModule`합니다.  
@@ -46,30 +46,30 @@ class CComSimpleThreadAllocator
 |[CComSimpleThreadAllocator::GetThread](#getthread)|스레드를 선택 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CComSimpleThreadAllocator` 에 대 한 스레드 선택을 관리 [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)합니다. `CComSimpleThreadAllocator::GetThread` 단순히 각 스레드를 순환 하 고 시퀀스의 다음 하나를 반환 합니다.  
+ `CComSimpleThreadAllocator` 관리에 대 한 스레드 선택을 [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)합니다. `CComSimpleThreadAllocator::GetThread` 단순히 각 스레드를 순환 하 고 시퀀스의 다음 항목을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlbase.h  
   
 ##  <a name="getthread"></a>  CComSimpleThreadAllocator::GetThread  
- 시퀀스에 있는 다음 스레드를 지정 하 여 스레드를 선택 합니다.  
+ 시퀀스의 다음 스레드를 지정 하 여 스레드를 선택 합니다.  
   
 ```
 int GetThread(CComApartment* /* pApt */, int nThreads);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pApt`  
+ *pApt*  
  ATL의 기본 구현에서 사용 되지 않습니다.  
   
- `nThreads`  
- EXE 모듈에 있는 스레드의 최대 수입니다.  
+ *nThreads*  
+ EXE 모듈의 스레드의 최대 수입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 0 사이의 정수 및 ( `nThreads` -1). EXE 모듈에서 스레드 중 하나를 식별합니다.  
+ 0 사이의 정수 및 (*nThreads* -1). EXE 모듈에서 스레드 중 하나를 식별합니다.  
   
 ### <a name="remarks"></a>설명  
- 재정의할 수 있습니다 `GetThread` 선택의 다른 메서드를 제공 하거나 변경 하려면의 사용은 `pApt` 매개 변수입니다.  
+ 재정의할 수 있습니다 `GetThread` 선택 영역의 다른 메서드를 제공 하거나 변경 하려면 사용 합니다 *pApt* 매개 변수입니다.  
   
  `GetThread` 호출한 [CComAutoThreadModule::CreateInstance](../../atl/reference/ccomautothreadmodule-class.md#createinstance)합니다.  
   

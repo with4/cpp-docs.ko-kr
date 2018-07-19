@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cc5d5f96b5ffabd5397f26b6ff1372232fe0cd6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0e7b022925e22f021a2ddad1b3b9ef52924b25a3
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32421421"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939109"
 ---
 # <a name="results-of-calling-example"></a>호출 예제 결과
 ## <a name="microsoft-specific"></a>Microsoft 전용  
@@ -31,17 +31,17 @@ ms.locfileid: "32421421"
 ## <a name="cdecl"></a>__cdecl  
  C 데코레이팅된 함수 이름은 "_MyFunc"입니다.  
   
- ![CDECL 호출 규칙이](../cpp/media/vc37i01.gif "vc37I01")  
+ ![Cdecl 호출 규칙이](../cpp/media/vc37i01.gif "vc37I01")  
 __cdecl 호출 규칙  
   
 ## <a name="stdcall-and-thiscall"></a>__stdcall 및 thiscall  
- C 데코레이팅된 이름 (`__stdcall`)은 "_MyFunc@20." C 데코레이팅된 이름은 독점적입니다.  
+ C 데코레이팅된 이름 (**__stdcall**)는 "_MyFunc@20." C 데코레이팅된 이름은 독점적입니다.  
   
  ![&#95;&#95;stdcall 및 thiscall 호출 규칙](../cpp/media/vc37i02.gif "vc37I02")  
 __stdcall 및 thiscall 호출 규칙  
   
 ## <a name="fastcall"></a>__fastcall  
- C 데코레이팅된 이름 (`__fastcall`)은 "@MyFunc@20." C 데코레이팅된 이름은 독점적입니다.  
+ C 데코레이팅된 이름 (**__fastcall**)는 "@MyFunc@20." C 데코레이팅된 이름은 독점적입니다.  
   
  ![호출 규칙에 대 한 &#95; &#95;fastcall](../cpp/media/vc37i03.gif "vc37I03")  
 __fastcall 호출 규칙  

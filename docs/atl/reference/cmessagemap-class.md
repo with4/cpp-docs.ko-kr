@@ -20,15 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 187d9964da0929516207a67b0e3a769649fc375b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 663ee462bf03e76ab15cbac05790c89dcaf07dca
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32359021"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37884856"
 ---
 # <a name="cmessagemap-class"></a>CMessageMap 클래스
-이 클래스를 사용 하면 다른 개체에 의해 액세스 되어야 하는 개체의 메시지 맵.  
+이 클래스는 개체의 메시지 맵 다른 개체에 의해 액세스를 허용 합니다.  
   
 > [!IMPORTANT]
 >  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
@@ -48,21 +48,21 @@ class ATL_NO_VTABLE CMessageMap
 |[CMessageMap::ProcessWindowMessage](#processwindowmessage)|메시지 맵을 액세스는 `CMessageMap`-클래스를 파생 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `CMessageMap` 개체의 메시지를 허용 하는 추상 기본 클래스에 액세스 하 여 다른 개체에 의해 매핑되는입니다. 개체는 메시지 맵을 노출 하도록 하려면, 해당 클래스에서 파생 되어야 `CMessageMap`합니다.  
+ `CMessageMap` 개체의 메시지를 허용 하는 추상 기본 클래스를 다른 개체에 의해 액세스할 수 매핑되는입니다. 메시지 맵을 노출 하는 개체에 대 한 순서로 해당 클래스에서 파생 되어야 `CMessageMap`합니다.  
   
- ATL 사용 하 여 `CMessageMap` 지원이 포함 된 창과 동적 메시지 맵 체인입니다. 예를 들어 모든 클래스를 포함 하는 [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) 개체에서 파생 되어야 `CMessageMap`합니다. 다음 코드에서 가져온 것은 [SUBEDIT](../../visual-cpp-samples.md) 샘플. 통해 [CComControl](../../atl/reference/ccomcontrol-class.md), `CAtlEdit` 클래스에서 자동으로 파생 `CMessageMap`합니다.  
+ ATL 사용 `CMessageMap` 지원이 포함 된 windows 및 동적 메시지 맵 체 이닝 합니다. 예를 들어, 모든 클래스를 포함 하는 [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) 개체에서 파생 되어야 합니다 `CMessageMap`합니다. 다음 코드에서 가져온 것은 [SUBEDIT](../../visual-cpp-samples.md) 샘플입니다. 통해 [CComControl](../../atl/reference/ccomcontrol-class.md)서 `CAtlEdit` 클래스에서 자동으로 파생 됩니다 `CMessageMap`합니다.  
   
  [!code-cpp[NVC_ATL_Windowing#90](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]  
   
- 때문에 포함된 된 창의 `m_EditCtrl`, 메시지 맵을 포함 하는 클래스에서 사용할 `CAtlEdit` 에서 파생 `CMessageMap`합니다.  
+ 때문에 포함 된 창을 `m_EditCtrl`, 메시지 맵을 포함 하는 클래스에서 사용할 `CAtlEdit` 에서 파생 `CMessageMap`합니다.  
   
- 메시지 맵에 대 한 자세한 내용은 참조 [메시지 맵](../../atl/message-maps-atl.md) "ATL 창 클래스" 문서  
+ 메시지 맵에 대 한 자세한 내용은 참조 하세요. [메시지 맵](../../atl/message-maps-atl.md) 문서의 "ATL 창 클래스입니다."  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** atlwin.h  
   
 ##  <a name="processwindowmessage"></a>  CMessageMap::ProcessWindowMessage  
- 로 식별 되는 메시지 맵을 액세스 `dwMsgMapID` 에 `CMessageMap`-클래스를 파생 합니다.  
+ 액세스로 식별 되는 메시지 맵을 *dwMsgMapID* 에 `CMessageMap`-클래스를 파생 합니다.  
   
 ```
 virtual BOOL ProcessWindowMessage(  
@@ -75,29 +75,29 @@ virtual BOOL ProcessWindowMessage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hWnd`  
- [in] 메시지를 받는 창 핸들입니다.  
+ *hWnd*  
+ [in] 메시지를 받는 창에 대 한 핸들입니다.  
   
- `uMsg`  
- [in] 창에 전송 하는 메시지입니다.  
+ *uMsg*  
+ [in] 창으로 전송 하는 메시지입니다.  
   
- `wParam`  
+ *wParam*  
  [in] 추가 메시지 관련 정보입니다.  
   
- `lParam`  
+ *lParam*  
  [in] 추가 메시지 관련 정보입니다.  
   
- `lResult`  
+ *lResult*  
  [out] 메시지 처리의 결과입니다.  
   
- `dwMsgMapID`  
- [in] 메시지를 처리 하는 메시지 맵의 식별자입니다. 기본 메시지 맵을 사용 하 여 선언 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)를 0으로 식별 됩니다. 대체 메시지 맵을 사용 하 여 선언 [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map),으로 식별 되 `msgMapID`합니다.  
+ *dwMsgMapID*  
+ [in] 메시지를 처리 하는 메시지 맵의 식별자입니다. 기본 메시지 맵을 사용 하 여 선언 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)를 0으로 식별 됩니다. 대체 메시지 지도 사용 하 여 선언 [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map),으로 식별 되 `msgMapID`합니다.  
   
 ### <a name="return-value"></a>반환 값  
- **True 이면** 메시지를 완전히 처리 된 고, 그렇지 않으면 **FALSE**합니다.  
+ TRUE 이면 메시지 처리. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- 창 프로시저에 의해 호출 된 [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) 개체 또는 개체를 동적으로 연결 메시지 맵에 있습니다.  
+ 창 프로시저에 의해 호출 된 [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md) 개체 또는 개체는 동적으로 연결을 메시지 맵에 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CDynamicChain 클래스](../../atl/reference/cdynamicchain-class.md)   

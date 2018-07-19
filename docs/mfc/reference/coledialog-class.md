@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c13b5d0a3bb30e08eaaeb0250da7deef692a66d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a41aa479fd87c76dbf167d728ad2dbb830f6a24b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33368662"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853623"
 ---
 # <a name="coledialog-class"></a>COleDialog 클래스
 OLE 대화 상자에 공통적인 기능을 제공합니다.  
@@ -40,10 +40,10 @@ class COleDialog : public CCommonDialog
   
 |이름|설명|  
 |----------|-----------------|  
-|[COleDialog::GetLastError](#getlasterror)|대화 상자에 의해 반환 된 오류 코드를 가져옵니다.|  
+|[COleDialog::GetLastError](#getlasterror)|대화 상자에서 반환 된 오류 코드를 가져옵니다.|  
   
 ## <a name="remarks"></a>설명  
- 파생 된 여러 클래스를 제공 하는 Microsoft Foundation Class 라이브러리 `COleDialog`:  
+ 파생 된 여러 클래스를 제공 하는 Microsoft Foundation Class 라이브러리를 `COleDialog`:  
   
 - [COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)  
   
@@ -63,7 +63,7 @@ class COleDialog : public CCommonDialog
   
 - [COleChangeSourceDialog](../../mfc/reference/colechangesourcedialog-class.md)  
   
- 특정 대화 상자에 대 한 자세한 내용은 문서 참조 [OLE의 대화 상자](../../mfc/dialog-boxes-in-ole.md)합니다.  
+ OLE 관련 대화 상자에 대 한 자세한 내용은 문서 참조 [OLE의 대화 상자](../../mfc/dialog-boxes-in-ole.md)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -82,7 +82,7 @@ class COleDialog : public CCommonDialog
  **헤더:** afxodlgs.h  
   
 ##  <a name="getlasterror"></a>  COleDialog::GetLastError  
- 호출 된 `GetLastError` 멤버 함수 추가 오류 정보를 가져올 때 `DoModal` 반환 **IDABORT**합니다.  
+ 호출을 `GetLastError` 멤버 함수 추가 오류 정보를 가져올 때 `DoModal` IDABORT를 반환 합니다.  
   
 ```  
 UINT GetLastError() const;  
@@ -92,7 +92,7 @@ UINT GetLastError() const;
  반환 된 오류 코드 `GetLastError` 표시 되는 특정 대화 상자에 따라 달라 집니다.  
   
 ### <a name="remarks"></a>설명  
- 참조는 `DoModal` 특정 오류 메시지에 대 한 정보에 대 한 파생된 클래스에서 멤버 함수입니다.  
+ 참조 된 `DoModal` 특정 오류 메시지에 대 한 정보에 대 한 파생된 클래스에서 멤버 함수입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CCommonDialog 클래스](../../mfc/reference/ccommondialog-class.md)   

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24aa01ec29f063c1fa65ebe24c707deb1ea58556
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e591bc8c77e2130548e65c6197f9e550efc480fb
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32361729"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881856"
 ---
 # <a name="cdefaultchartraits-class"></a>CDefaultCharTraits 클래스
 이 클래스는 대 문자와 소문자 사이 문자를 변환 하기 위한 두 개의 정적 함수를 제공 합니다.  
@@ -37,7 +37,7 @@ class CDefaultCharTraits
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `T`  
+ *T*  
  컬렉션에 저장할 데이터의 형식입니다.  
   
 ## <a name="members"></a>멤버  
@@ -67,7 +67,7 @@ static char CharToLower(char x);
  *x*  
  소문자로 변환할 문자입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  [!code-cpp[NVC_ATL_Utilities#132](../../atl/codesnippet/cpp/cdefaultchartraits-class_1.cpp)]  
   
 ##  <a name="chartoupper"></a>  CDefaultCharTraits::CharToUpper  

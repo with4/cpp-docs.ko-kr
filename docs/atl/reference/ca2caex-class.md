@@ -19,15 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa16122a1cb3a5f8378397363a45cd28ddaef6d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3603f93c5b6430cd5aa11e4f43c99f75a838497
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32357804"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37879246"
 ---
 # <a name="ca2caex-class"></a>CA2CAEX 클래스
-이 클래스는 사용 하 여 문자열 변환 매크로 `CA2CTEX` 및 `CT2CAEX`, 및 typedef **CA2CA**합니다.  
+이 클래스는 문자열 변환 매크로 CA2CTEX CT2CAEX, 및 CA2CA typedef에서 사용 됩니다.  
   
 > [!IMPORTANT]
 >  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
@@ -40,7 +40,7 @@ class CA2CAEX
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `t_nBufferLength`  
+ *t_nBufferLength*  
  변환 프로세스에서 사용 되는 버퍼의 크기입니다. 기본 길이 128 바이트입니다.  
   
 ## <a name="members"></a>멤버  
@@ -65,23 +65,23 @@ class CA2CAEX
 |[CA2CAEX::m_psz](#m_psz)|소스 문자열을 저장 하는 데이터 멤버입니다.|  
   
 ## <a name="remarks"></a>설명  
- 추가 기능은 필요 하지 않는 한 사용할 `CA2CTEX`, `CT2CAEX`, 또는 **CA2CA** 사용자 코드에서.  
+ 추가 기능이 필요한 경우가 아니면 사용자 고유의 코드에서 CA2CTEX, CT2CAEX, 또는 CA2CA을 사용 합니다.  
   
- 이 클래스는 루프에서 사용 하기에 안전 하며 스택이 오버플로되지 않습니다. 기본적으로 ATL 변환 클래스와 매크로는 현재 스레드의 ANSI 코드 페이지를 변환에 사용합니다.  
+ 이 클래스는 루프에서 사용 하기에 안전 하 고 스택이 오버플로되지 않습니다. 기본적으로 ATL 변환 클래스와 매크로는 현재 스레드의 ANSI 코드 페이지를 변환에 사용합니다.  
   
- 다음 매크로이 클래스에 따라 결정 됩니다.  
+ 다음 매크로이 클래스를 기반으로 합니다.  
   
-- `CA2CTEX`  
+- CA2CTEX  
   
-- `CT2CAEX`  
+- CT2CAEX  
   
- 다음 typedef에는이 클래스를 기반으로 합니다.  
+ 다음 typedef는이 클래스를 기반으로 합니다.  
   
-- **CA2CA**  
+- CA2CA  
   
- 이러한 텍스트 변환 매크로의 논의 알려면 [ATL 및 MFC 문자열 변환 매크로](string-conversion-macros.md)합니다.  
+ 이러한 텍스트 변환 매크로의 논의 참조 하세요 [ATL 및 MFC 문자열 변환 매크로](string-conversion-macros.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  참조 [ATL 및 MFC 문자열 변환 매크로](string-conversion-macros.md) 이러한 문자열 변환 매크로 사용의 예입니다.  
   
 ## <a name="requirements"></a>요구 사항  
@@ -96,11 +96,11 @@ CA2CAEX(LPCSTR psz) throw(...);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `psz`  
+ *psz*  
  변환할 텍스트 문자열입니다.  
   
- `nCodePage`  
- 이 클래스에서는 사용 되지 않습니다.  
+ *nCodePage*  
+ 이 클래스에서 사용 되지 않습니다.  
   
 ### <a name="remarks"></a>설명  
  번역에 필요한 버퍼를 만듭니다.  
@@ -130,7 +130,7 @@ operator LPCSTR() const throw();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 텍스트 문자열 형식으로 반환 `LPCSTR`합니다.  
+ LPCSTR 입력할 텍스트 문자열을 반환 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CA2AEX 클래스](../../atl/reference/ca2aex-class.md)   
