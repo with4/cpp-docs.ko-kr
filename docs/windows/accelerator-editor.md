@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856419"
 ---
 # <a name="accelerator-editor"></a>액셀러레이터 키 편집기
 액셀러레이터 키 테이블은 액셀러레이터 키(바로 가기 키) 목록 및 해당 키와 연결된 명령 식별자가 포함되어 있는 Windows 리소스입니다. 프로그램에는 액셀러레이터 키 테이블이 두 개 이상 있을 수 있습니다.  

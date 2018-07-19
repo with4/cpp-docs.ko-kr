@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876906"
 ---
 # <a name="moving-a-toolbar-button"></a>도구 모음 단추 이동
 ### <a name="to-move-a-toolbar-button"></a>도구 모음 단추 이동 하려면  

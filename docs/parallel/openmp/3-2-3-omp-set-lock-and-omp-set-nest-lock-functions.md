@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689716"
 ---
 # <a name="323-ompsetlock-and-ompsetnestlock-functions"></a>3.2.3 omp_set_lock and omp_set_nest_lock 함수
 이러한 각 함수는 지정 된 잠금은 ´ ï ´ 다음 잠금을 설정 될 때까지 함수를 실행 하는 스레드를 차단 합니다. 잠금이 해제 된 경우 단순 잠금을 ´ ù. 잠겨 있지 또는 함수를 실행 하는 스레드에 의해 이미 소유 하는 경우 중첩 잠금 ´ ù. 형식은 다음과 같습니다.  

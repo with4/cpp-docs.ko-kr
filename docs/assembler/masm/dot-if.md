@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053118"
 ---
 # <a name="if"></a>.IF
 테스트 하는 코드를 생성 `condition1` (예를 들어 > 7 AX,)를 실행 하 고는 *문을* 해당 조건이 true 인 경우.  

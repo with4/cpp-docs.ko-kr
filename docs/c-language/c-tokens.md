@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381709"
 ---
 # <a name="c-tokens"></a>C 토큰
 C 소스 프로그램에서 컴파일러가 인식하는 기본 요소는 "토큰"입니다. 토큰은 컴파일러가 구성 요소로 분할하지 않는 소스 프로그램 텍스트입니다.  

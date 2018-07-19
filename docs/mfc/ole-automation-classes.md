@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342880"
 ---
 # <a name="ole-automation-classes"></a>OLE 자동화 클래스
 이러한 클래스는 자동화 클라이언트 (응용 프로그램을 다른 응용 프로그램 제어)를 지원 합니다. 자동화 서버 (응용 프로그램 다른 응용 프로그램에서 제어할 수 있는)를 통해 지원 됩니다 [디스패치 맵](../mfc/reference/dispatch-maps.md)합니다.  

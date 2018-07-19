@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860605"
 ---
 # <a name="changing-the-properties-of-a-string"></a>문자열 속성 변경
 ### <a name="to-change-a-string-or-its-identifier"></a>해당 식별자 또는 문자열이 변경 하려면  

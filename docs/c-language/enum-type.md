@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382759"
 ---
 # <a name="enum-type"></a>열거형 형식
 **ANSI 3.5.2.2** 열거형 형식의 값을 나타내기 위해 선택한 정수 계열 형식  

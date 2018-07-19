@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291715"
 ---
 # <a name="compiler-warning-level-4-c4132"></a>컴파일러 경고(수준 4) C4132
 'object': const 개체를 초기화해야 합니다.  

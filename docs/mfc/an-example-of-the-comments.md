@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340886"
 ---
 # <a name="an-example-of-the-comments"></a>주석 예
 클래스의 다음 부분 목록을 `CChildFrame` 대부분의 클래스 멤버를 사용 하는 방식에 따라 구분 하는 클래스에서 MFC에서 사용 하는 표준 주석 사용 합니다.  

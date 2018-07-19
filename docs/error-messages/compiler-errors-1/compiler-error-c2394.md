@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197743"
 ---
 # <a name="compiler-error-c2394"></a>컴파일러 오류 C2394
 'your_type:: operator'op' ": CLR 또는 WinRToperator 유효 하지 않습니다. 하나 이상의 매개 변수가 'T^', 'T^%', 'T^&' 형식이어야 합니다(여기서 T = 'your_type').  

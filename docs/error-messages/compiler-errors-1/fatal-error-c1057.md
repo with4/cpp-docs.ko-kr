@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33224654"
 ---
 # <a name="fatal-error-c1057"></a>심각한 오류 C1057
 매크로 확장에서 예기치 않은 파일의 끝이 나타났습니다.  

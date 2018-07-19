@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d6c93bfc6525840343c64b8cd804ddb65f68dd5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1d259040ec5f4d7f1148b9a782479b6db8617602
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954632"
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator 클래스
 
@@ -39,13 +40,13 @@ class raw_storage_iterator
 
 ### <a name="parameters"></a>매개 변수
 
-`OutputIterator` 저장 되는 개체에 대 한 출력 반복기를 지정 합니다.
+*OutputIterator* 저장 되는 개체에 대 한 출력 반복기를 지정 합니다.
 
-*형식* 저장소를 할당 하는 개체의 형식입니다.
+*형식* 저장소가 할당 되는 개체의 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-이 클래스는 생성하는 시퀀스에서 **Type** 형식의 개체를 생성하는 출력 반복기를 설명합니다. `raw_storage_iterator`\< **ForwardIterator**, **Type**> 클래스의 개체는 개체를 생성할 때 지정하는 **ForwardIterator** 클래스의 정방향 반복기 개체를 통해 저장소에 액세스합니다. **ForwardIterator** 클래스의 first 개체에 대해 **&\*first** 식은 생성된 시퀀스에서 다음 개체(**Type** 형식)에 대해 생성되지 않은 저장소를 지정해야 합니다.
+클래스 형식의 개체를 생성 하는 출력 반복기를 설명 `Type` 생성 하는 시퀀스에 있습니다. 클래스의 개체 `raw_storage_iterator` \< **ForwardIterator**를 **형식**> 클래스의 정방향 반복기 개체를 통해 저장소에 액세스 `ForwardIterator`, 시기를 지정 하면 개체를 생성 합니다. 개체에 대 한 클래스의 첫 번째 `ForwardIterator`, 식  **& \*첫 번째** 다음 개체에 대해 생성 되지 않은 저장소를 지정 해야 합니다 (형식의 `Type`) 생성된 된 시퀀스에서 합니다.
 
 이 어댑터 클래스는 메모리 할당 및 개체 생성을 구분하는 데 필요한 경우에 사용됩니다. `raw_storage_iterator`를 사용하여 `malloc` 함수를 통해 할당된 메모리와 같은 초기화되지 않은 저장소에 개체를 복사할 수 있습니다.
 
@@ -88,7 +89,7 @@ typedef Type element_type;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 raw_storage_iterator 클래스 템플릿 매개 변수 **Type**과 동일한 의미입니다.
+형식은 raw_storage_iterator 클래스 템플릿 매개 변수에 대 한 동의어 `Type`합니다.
 
 ## <a name="iter_type"></a>  raw_storage_iterator::iter_type
 
@@ -100,7 +101,7 @@ typedef ForwardIterator iter_type;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 템플릿 매개 변수 **ForwardIterator**와 동일한 의미입니다.
+이 형식은 템플릿 매개 변수 `ForwardIterator`의 동의어입니다.
 
 ## <a name="op_star"></a>  raw_storage_iterator::operator*
 
@@ -116,9 +117,9 @@ raw_storage_iterator<ForwardIterator, Type>& operator*();
 
 ### <a name="remarks"></a>설명
 
-원시 저장소 반복기가 충족해야 하는 **ForwardIterator**에 대한 요구 사항은 \* *ii* = *t* 식만 유효해야 한다는 것과 해당 반복기 자체는 **operator** 또는 `operator=`에 대해 어떤 정보도 제공하지 않아야 한다는 것입니다. 이 구현의 구성원 연산자는 [operator=](#op_eq)( **constType**&)이 \* *ptr* = `val`과 같이 식에서 실제 저장을 수행할 수 있도록 **\*this**를 반환합니다.
+에 대 한 요구 사항을 `ForwardIterator` 사항은 원시 저장소 반복기 식만 충족 해야 합니다 \* *ii* = *t* 잘못 사용할 수 있으며 한다는 **연산자** 또는 `operator=` 자체적으로 합니다. 이 구현의 구성원 연산자 반환  **\*이**되도록 [연산자 =](#op_eq)(**constType**&) 식에서 실제 저장을 수행할 수 있습니다 와 같은 \* *ptr* = `val`합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // raw_storage_iterator_op_deref.cpp
@@ -180,7 +181,7 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
 
 ### <a name="parameters"></a>매개 변수
 
-`val` 형식의 개체의 값 **형식** 메모리에 삽입할 수 있습니다.
+`val` 형식의 개체의 값을 `Type` 메모리에 삽입 됩니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -188,11 +189,11 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
 
 ### <a name="remarks"></a>설명
 
-원시 저장소 반복기가 충족해야 하는 **ForwardIterator** 상태에 대한 요구 사항은 \* *ii* = *t* 식만 유효해야 한다는 것과 해당 반복기 자체는 **operator** 또는 `operator=`에 대해 어떤 정보도 제공하지 않아야 한다는 것입니다. 이러한 구성원 연산자는 **\*this**를 반환합니다.
+에 대 한 요구를 `ForwardIterator` 원시 저장소 반복기가 충족 해야 하는 상태 식만 필요 \* *ii* = *t* 잘못 사용할 수 있으며 한다는 합니다 **연산자** 또는 `operator=` 자체적으로 합니다. 이러한 구성원 연산자는 **\*this**를 반환합니다.
 
 대입 연산자는 placement new 식 **new** ( ( `void` \*)&\* **first**) **Type**( `val`)을 평가하여 저장된 반복기 값을 먼저 사용해 출력 시퀀스에서 다음 개체를 생성합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // raw_storage_iterator_op_assign.cpp
@@ -257,15 +258,15 @@ raw_storage_iterator<ForwardIterator, Type> operator++(int);
 
 ### <a name="remarks"></a>설명
 
-첫 번째 연산자는 연결된 입력 스트림에서 **CharType** 형식의 개체를 추출하고 저장하려고 합니다. 두 번째 연산자는 개체의 복사본을 만들고 개체를 증가시킨 다음 복사본을 반환합니다.
+첫 번째 연산자는 최종적으로 추출 하 고 형식의 개체를 저장 하려고 시도 `CharType` 는 연결 된 입력 스트림에서 합니다. 두 번째 연산자는 개체의 복사본을 만들고 개체를 증가시킨 다음 복사본을 반환합니다.
 
 첫 번째 preincrement 연산자는 저장된 출력 반복기 개체를 증가시키고 **\*this**를 반환합니다.
 
 두 번째 postincrement 연산자는 **\*this**의 복사본을 만들고 저장된 출력 반복기 개체를 증가시킨 다음 해당 복사본을 반환합니다.
 
-생성자는 출력 반복기 개체로 **first**를 저장합니다.
+생성자 저장소 `first` 는 출력 반복기 개체로 반환 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // raw_storage_iterator_op_incr.cpp
@@ -307,9 +308,9 @@ explicit raw_storage_iterator(ForwardIterator first);
 
 ### <a name="parameters"></a>매개 변수
 
-`first` 기반이 되는 정방향 반복기는 `raw_storage_iterator` 생성 되 고 개체입니다.
+*첫 번째* 기반이 되 하는 정방향 반복기를 `raw_storage_iterator` 생성 되 고 있는 개체입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // raw_storage_iterator_ctor.cpp

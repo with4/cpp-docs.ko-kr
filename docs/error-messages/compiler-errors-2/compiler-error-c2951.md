@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33241538"
 ---
 # <a name="compiler-error-c2951"></a>컴파일러 오류 C2951
 형식 선언은 전역, 네임 스페이스 에서만 허용 됩니다 또는 클래스 범위  

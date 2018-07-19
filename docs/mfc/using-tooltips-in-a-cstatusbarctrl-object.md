@@ -18,17 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 323f2861da9fcc498e34792c30c763b4dffb2fd1
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9cce98e4a3b3ffd506607529b9fea6f0c1114cc3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951270"
 ---
 # <a name="using-tooltips-in-a-cstatusbarctrl-object"></a>CStatusBarCtrl 개체에서 도구 설명 사용
-상태 표시줄 컨트롤에 도구 설명을 사용 하려면 만듭니다는 `CStatusBarCtrl` 개체는 **SBT_TOOLTIPS** 스타일입니다.  
+상태 표시줄 컨트롤에 도구 설명을 사용 하려면 만듭니다는 `CStatusBarCtrl` SBT_TOOLTIPS 스타일이 적용 된 개체입니다.  
   
 > [!NOTE]
->  사용 하는 경우는 `CStatusBar` 상태 표시줄 구현를 사용 하는 개체는 `CStatusBar::CreateEx` 함수입니다. 포함 된 항목에 대 한 추가 스타일을 지정할 수 있습니다 **CStatusBarCtrl** 개체입니다.  
+>  사용 하는 경우는 `CStatusBar` 상태 표시줄 구현를 사용 하는 개체는 `CStatusBar::CreateEx` 함수입니다. 포함 된 항목에 대 한 추가 스타일을 지정할 수 있습니다 `CStatusBarCtrl` 개체입니다.  
   
  한 번의 `CStatusBarCtrl` 개체를 만들고 성공적으로, 사용 하 여 [CStatusBarCtrl::SetTipText](../mfc/reference/cstatusbarctrl-class.md#settiptext) 및 [CStatusBarCtrl::GetTipText](../mfc/reference/cstatusbarctrl-class.md#gettiptext) 설정 하 고 특정 창에 대 한 설명 텍스트를 검색 합니다.  
   

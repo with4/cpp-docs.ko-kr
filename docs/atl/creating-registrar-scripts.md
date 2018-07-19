@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354435"
 ---
 # <a name="creating-registrar-scripts"></a>Creating Registrar Scripts
 등록자 스크립트 시스템 레지스트리에 API 기반 하는 것이 아니라 데이터 기반 액세스를 제공합니다. 데이터 기반 액세스 레지스트리 키를 추가 하는 스크립트에 한 개나 두 줄을 걸리는 이므로 일반적으로 더 효율적입니다.  

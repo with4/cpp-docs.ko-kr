@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33887028"
 ---
 # <a name="custom-attributes-c"></a>사용자 지정 특성(C++)
 사용자 지정 특성은 메타 데이터를 확장할 수 있는 강력한 형식의 기술입니다. 이 항목의 특성을 사용 하 여 다루는: 매개 변수 및 대상을 지정 합니다.  

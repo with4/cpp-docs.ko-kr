@@ -30,6 +30,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33862279"
 ---
 # <a name="building-an-attributed-program"></a>특성을 사용하는 프로그램 빌드
 소스 코드에 Visual c + + 특성을 추가한 후에 사용자에 대 한 형식 라이브러리 및.idl 파일을 생성 하 고 Visual c + + 컴파일러를 할 수 있습니다. 다음의 링커 옵션.tlb 및.idl 파일을 빌드할 수 있습니다.  

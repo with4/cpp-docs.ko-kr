@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882449"
 ---
 # <a name="id"></a>ID
 지정 된 `dispid` 멤버 함수 (속성 또는 메서드를 인터페이스 또는 dispinterface)에 대 한 매개 변수입니다.  

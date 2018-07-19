@@ -23,6 +23,7 @@ ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33954023"
 ---
 # <a name="autoinline"></a>auto_inline
 범위 내에서 정의 된 모든 함수는 제외 됩니다. 여기서 **오프** 자동 인라인 확장 후보에서 지정 된 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054888"
 ---
 # <a name="dosseg"></a>.DOSSEG
 MS-DOS 세그먼트 규칙에 따라 세그먼트를 정렬: 먼저 DGROUP에 없는 다음 세그먼트를 다음 DGROUP 세그먼트가 코드입니다.  

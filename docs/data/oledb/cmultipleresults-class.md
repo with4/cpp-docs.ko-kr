@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096222"
 ---
 # <a name="cmultipleresults-class"></a>CMultipleResults 클래스
 여러 결과 집합을 처리 하는 명령을 사용 `CMultipleResults` 에 대 한는 `CCommand` 템플릿 인수 *TMultiple*합니다.  

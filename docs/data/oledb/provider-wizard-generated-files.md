@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106010"
 ---
 # <a name="provider-wizard-generated-files"></a>공급자 마법사가 생성하는 파일
 ATL OLE DB 공급자 마법사는 다음 파일을 생성 합니다. 다음 항목에서는 "MyProvider" 짧은 이름을 사용 하지만 정확한 파일 이름을 이름 공급자를 만들 때에 따라 다릅니다.  

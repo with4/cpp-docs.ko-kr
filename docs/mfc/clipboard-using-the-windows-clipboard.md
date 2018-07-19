@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342110"
 ---
 # <a name="clipboard-using-the-windows-clipboard"></a>클립보드: Windows 클립보드 사용
 이 항목에서는 MFC 응용 프로그램 내에서 표준 Windows 클립보드 API를 사용 하는 방법을 설명 합니다.  

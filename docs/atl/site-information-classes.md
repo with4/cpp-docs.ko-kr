@@ -16,18 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2279eb951888a1b323455f3e8a2545cc1b1d7f2d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 68a8c96983443f39f05004493d0393f51f7ee19e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959958"
 ---
 # <a name="site-information-classes"></a>사이트 정보 클래스
-다음 클래스에는 사이트와 통신 하는 개체 허용:  
+다음 클래스에는 해당 사이트와 통신 하는 개체 허용:  
   
--   [IObjectWithSiteImpl](../atl/reference/iobjectwithsiteimpl-class.md) 를 검색 하 고 개체의 사이트에 대 한 포인터를 설정 합니다. 컨트롤 없는 개체에 사용 합니다.  
+-   [IObjectWithSiteImpl](../atl/reference/iobjectwithsiteimpl-class.md) 검색 개체의 사이트에 대 한 포인터를 가져오거나 설정 합니다. 제어 되지 않는 개체에 사용 합니다.  
   
--   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) 를 검색 하 고 개체의 사이트에 대 한 포인터를 설정 합니다. 컨트롤에 사용 합니다.  
+-   [IOleObjectImpl](../atl/reference/ioleobjectimpl-class.md) 검색 개체의 사이트에 대 한 포인터를 가져오거나 설정 합니다. 컨트롤에 사용 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [클래스 개요](../atl/atl-class-overview.md)

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198848"
 ---
 # <a name="fatal-error-c1353"></a>심각한 오류 C1353
 메타데이터 작업이 실패했습니다. 런타임이 설치되지 않았거나 버전이 일치하지 않습니다.  

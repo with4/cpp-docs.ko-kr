@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33350499"
 ---
 # <a name="ole-background-implementation-strategies"></a>OLE 백그라운드 구현 전략
 응용 프로그램에 따라 OLE 지원 추가를 위해서는 다음 네 가지 구현 전략을 사용할 수 있습니다.  

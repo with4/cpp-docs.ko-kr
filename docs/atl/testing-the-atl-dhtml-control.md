@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32361868"
 ---
 # <a name="testing-the-atl-dhtml-control"></a>ATL DHTML 컨트롤 테스트
 프로젝트를 만든 후에 작성 하 고 샘플 컨트롤을 테스트할 수 있습니다. 이렇게 하기 전에 클래스 뷰 및 솔루션 탐색기에서 프로젝트를 검사 하려면 사용 합니다. 프로젝트의 요소에 더 자세히 설명 되어 [DHTML 컨트롤 프로젝트의 요소를 식별](../atl/identifying-the-elements-of-the-dhtml-control-project.md)합니다.  

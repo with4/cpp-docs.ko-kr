@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368800"
 ---
 # <a name="language-specific-handler"></a>언어별 처리기
 언어별 처리기의 상대 주소에에서 있으면는 UNWIND_INFO 때마다 UNW_FLAG_EHANDLER 또는 UNW_FLAG_UHANDLER 플래그를 설정 합니다. 이전 섹션에서 설명한 언어별 처리기는 예외 처리기에 대 한 검색의 일부로 또는 해제의 일부로 호출 됩니다. 여기에 다음과 같은 프로토타입이 있습니다.  

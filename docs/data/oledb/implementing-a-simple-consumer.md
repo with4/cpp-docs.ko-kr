@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112565"
 ---
 # <a name="implementing-a-simple-consumer"></a>단순 소비자 구현
 다음 항목에는 단순 소비자를 만드는 MFC 응용 프로그램 마법사 및 ATL OLE DB 소비자 마법사에서 생성 된 파일을 편집 하는 방법을 보여 줍니다. 이 예제에는 다음과 같은 부분이 있습니다.  

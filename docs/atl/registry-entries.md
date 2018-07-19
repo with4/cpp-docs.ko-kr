@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359731"
 ---
 # <a name="registry-entries"></a>레지스트리 항목
 DCOM 레지스트리에 중앙된 위치에 하나 이상의 DCOM 개체에 대 한 구성 옵션을 그룹화 하는 응용 프로그램 Id (Appid)의 개념을 도입 했습니다. AppID 명명 된 개체의 CLSID 아래 값에에서 해당 값을 지정 하 여 AppID를 지정 합니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379603"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel(커널 모드 이진 만들기)
 Windows 커널에서 실행할 수 있는 이진 파일을 만듭니다.  

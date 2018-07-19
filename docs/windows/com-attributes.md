@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861388"
 ---
 # <a name="com-attributes"></a>COM 특성
 COM 특성에는 COM 개발 및.NET Framework 공용 언어 런타임 개발의 다양 한 영역을 지 원하는 코드를 삽입 합니다. 이러한 영역 범위에서 사용자 지정 인터페이스 구현 및 인터페이스의 지원 스톡 속성, 메서드 및 이벤트를 지 원하는입니다. 또한 복합 및 ActiveX 컨트롤 구현을 위한 지원은 찾을 수 있습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322382"
 ---
 # <a name="nmake-fatal-error-u1007"></a>NMAKE 심각한 오류 U1007
 큰따옴표 이름에 사용할 수 없습니다  

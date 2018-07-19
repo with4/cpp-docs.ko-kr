@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344515"
 ---
 # <a name="creating-the-header-control"></a>헤더 컨트롤 만들기
 헤더 컨트롤 (하지만 헤더 컨트롤을 포함 하는 목록 컨트롤을 추가할 수 있습니다) 대화 상자 편집기에서 직접 사용할 수 있는있지 않습니다.  

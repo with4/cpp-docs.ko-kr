@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32054724"
 ---
 # <a name="ml-nonfatal-error-a2079"></a>ML 심각하지 않은 오류 A2079
 **명령 훨씬 직접 주소 지정을 허용 하지 않습니다.**  

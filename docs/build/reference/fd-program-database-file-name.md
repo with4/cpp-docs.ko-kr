@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375625"
 ---
 # <a name="fd-program-database-file-name"></a>/Fd(프로그램 데이터베이스 파일 이름)
 만든 프로그램 데이터베이스 (PDB) 파일에 대 한 파일 이름을 지정 [/Z7, /Zi, /ZI (디버깅 정보 형식)](../../build/reference/z7-zi-zi-debug-information-format.md)합니다.  

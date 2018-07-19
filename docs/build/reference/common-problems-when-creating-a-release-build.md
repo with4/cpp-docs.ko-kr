@@ -33,6 +33,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373168"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>릴리스 빌드를 만들 때의 일반적인 문제
 개발 하는 동안 일반적으로 빌드하고 프로젝트의 디버그 빌드를 테스트 합니다. 다음 릴리스 빌드에 대 한 응용 프로그램을 작성 하는 경우 액세스 위반이 발생할 수 있습니다.  

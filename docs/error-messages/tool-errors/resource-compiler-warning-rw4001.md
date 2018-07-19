@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323575"
 ---
 # <a name="resource-compiler-warning-rw4001"></a>리소스 컴파일러 오류 RW4001
 . EXE 처리 옵션 (/L /M /P /T /K /E /31 또는/30)  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873929"
 ---
 # <a name="handletoperator-operator"></a>HandleT::operator= 연산자
 현재 HandleT 개체를 지정된 된 HandleT 개체의 값을 이동합니다.  

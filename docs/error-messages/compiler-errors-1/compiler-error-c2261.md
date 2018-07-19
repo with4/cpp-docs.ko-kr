@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170468"
 ---
 # <a name="compiler-error-c2261"></a>컴파일러 오류 C2261
 'string': 어셈블리 참조가 잘못 되었으며 확인할 수 없습니다  

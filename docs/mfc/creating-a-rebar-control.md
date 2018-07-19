@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342309"
 ---
 # <a name="creating-a-rebar-control"></a>Rebar 컨트롤 만들기
 [CReBarCtrl](../mfc/reference/crebarctrl-class.md) 부모 개체가 표시 되기 전에 개체를 만들어야 합니다. 이렇게 하면 그리기 문제가 발생할 가능성이 최소화됩니다.  

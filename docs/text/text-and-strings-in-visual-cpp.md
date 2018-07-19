@@ -39,6 +39,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856035"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Visual C++의 텍스트 및 문자열
 국제 시장을 겨냥 한 응용 프로그램을 개발 하는 중요 한 요소에는 로컬 문자 집합의 적절 한 표현입니다. ASCII 문자 집합 0x00-0x7F 범위의 문자를 정의합니다. 주로 유럽 0x00-0x7F 범위 내 문자를 동일 하 게 ASCII 문자 집합을 정의 하 고 또한 확장된 문자 0xff 0x80에서 집합을 정의 하는 다른 문자 집합입니다. 따라서 (SBCS)는 8 비트, 단일 바이트 문자 집합은 ASCII 문자 집합은 물론 많은 유럽 언어에 대 한 문자 집합 표현 하기에 충분 합니다. 그러나 일본어 간지 같은 일부 비 유럽 문자 집합 싱글바이트 코드 구성표로 나타내고 수 때문에 멀티 바이트 문자 집합 (MBCS) 인코딩이 필요 보다 훨씬 더 많은 문자를 포함 합니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882091"
 ---
 # <a name="disabling-guides"></a>안내선 비활성화
 맞춤 안내선의 효과 사용 하지 않도록 설정 하려면 특수 키 마우스와 함께에서 사용할 수 있습니다. ALT 키를 사용 하 여 선택한 가이드의 맞춤 효과를 사용 하지 않습니다. SHIFT 키를 사용 하 여 안내선 이동 기준된 컨트롤을 가이드와 함께 이동할 수 없습니다.  

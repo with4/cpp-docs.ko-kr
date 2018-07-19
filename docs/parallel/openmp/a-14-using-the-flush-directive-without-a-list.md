@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694331"
 ---
 # <a name="a14---using-the-flush-directive-without-a-list"></a>A.14   목록이 없는 flush 지시문 사용
 다음 예제에서는 (에 대 한 [섹션 2.6.5](../../parallel/openmp/2-6-5-flush-directive.md) 페이지 20) 영향을 받는 공유 개체를 구별는 `flush` 영향을 받지 않는 공유 개체와에서 목록이 없는 지시문:  

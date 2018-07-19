@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316337"
 ---
 # <a name="nmake-fatal-error-u1036"></a>NMAKE 심각한 오류 U1036
 구문 오류: '='의 왼쪽에 너무 많은 이름  

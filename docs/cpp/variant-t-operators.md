@@ -14,14 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 154dd2fb284b5db8902f8d80b23b8fb5306e63d5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3a9a5ea3b606d2df8a5ac27b4f9c8c7ff435b267
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37941056"
 ---
 # <a name="variantt-operators"></a>_variant_t 연산자
-에 대 한 내용은 **_variant_t** 연산자 참조 [_variant_t 클래스](../cpp/variant-t-class.md)합니다.  
+에 대 한 자세한 합니다 `_variant_t` 연산자를 참조 하세요 [_variant_t 클래스](../cpp/variant-t-class.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [_variant_t 클래스](../cpp/variant-t-class.md)

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858704"
 ---
 # <a name="international-enabling"></a>국가별 사용
 대부분의 일반적인 C 및 c + + 코드에서는 국가별 응용 프로그램에 대 한 잘 작동 하지 않는 문자 및 문자열 조작에 대 한 가정을 합니다. 런타임 라이브러리와 MFC MBCS 또는 유니코드를 지원 하지만 사업이 있으므로 여전히 작업을 수행할 수 있습니다. 이 섹션에서는 사용자를 안내 하 Visual c + +에서 "국가별 사용"의 의미를 설명 합니다.  

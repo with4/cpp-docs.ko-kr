@@ -28,6 +28,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32378329"
 ---
 # <a name="u-u-undefine-symbols"></a>/U, /u(기호 정의 해제)
 **/U** 컴파일러 옵션에 지정된 된 전처리기 기호 정의 해제 합니다. **/u** 컴파일러 옵션에는 컴파일러를 정의 하는 Microsoft 전용 기호 정의 해제 합니다.  

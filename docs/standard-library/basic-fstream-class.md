@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00484c170ba3e42ceb9925861def9e7a4617e324
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 832a7b8f864dc21214d3b2428f83fd0c68330ff9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959893"
 ---
 # <a name="basicfstream-class"></a>basic_fstream 클래스
 
@@ -45,9 +46,9 @@ class basic_fstream : public basic_iostream<Elem, Tr>
 
 ### <a name="parameters"></a>매개 변수
 
-`Elem` 파일 버퍼의 기본 요소입니다.
+*Elem* 파일 버퍼의 기본 요소입니다.
 
-`Tr` 파일 버퍼 기본 요소의 특성 (일반적으로 `char_traits` <  `Elem`>).
+*Tr* 파일 버퍼 기본 요소의 특성 (일반적으로 `char_traits` <  `Elem`>).
 
 ## <a name="remarks"></a>설명
 
@@ -56,7 +57,7 @@ class basic_fstream : public basic_iostream<Elem, Tr>
 > [!NOTE]
 > fstream 개체의 get 포인터 및 put 포인터는 서로 독립적이지 **않습니다**. get 포인터가 이동하면 put 포인터도 이동합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 읽고 쓸 수 있는 `basic_fstream` 개체를 만드는 방법을 보여 줍니다.
 
@@ -134,21 +135,21 @@ basic_fstream(basic_fstream&& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Filename` 열려는 파일의 이름입니다.
+*_Filename* 열려는 파일의 이름입니다.
 
-`_Mode` 열거 중 하나 [ios_base:: openmode](../standard-library/ios-base-class.md#openmode)합니다.
+*모드 (_m)* 의 열거형 중 하나 [ios_base:: openmode](../standard-library/ios-base-class.md#openmode)합니다.
 
-`_Prot` 기본 파일을 보호 하려면 해당를 여는 `shflag` 매개 변수에서 [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)합니다.
+*_Prot* 기본 파일 열기 보호는 *shflag* 의 매개 변수에 [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)합니다.
 
 ### <a name="remarks"></a>설명
 
-첫 번째 생성자는 [basic_iostream](../standard-library/basic-iostream-class.md)( **sb**)를 호출하여 기본 클래스를 초기화합니다. 여기서 **sb**는 [basic_filebuf](../standard-library/basic-filebuf-class.md)\< **Elem**, **Tr**> 클래스의 저장된 개체입니다. 또한 `basic_filebuf`\< **Elem**, **Tr**>을 호출하여 **sb**를 초기화합니다.
+첫 번째 생성자는 기본 클래스를 호출 하 여 초기화 [basic_iostream](../standard-library/basic-iostream-class.md)(`sb`), 여기서 `sb` 클래스의 저장 개체인 [basic_filebuf](../standard-library/basic-filebuf-class.md) \< **Elem**하십시오 **Tr**>. 또한 초기화 `sb` 호출한 `basic_filebuf` \< **Elem**를 **Tr**>.
 
-두 번째 및 세 번째 생성자는 `basic_iostream`( **sb**)를 호출하여 기본 클래스를 초기화합니다. 또한 `basic_filebuf`\< **Elem**, **Tr**> 및 **sb.**[open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`)를 차례로 호출하여 **sb**를 초기화합니다. 후자 함수가 null 포인터를 반환하면 생성자는 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)를 호출합니다.
+두 번째 및 세 번째 생성자는 `basic_iostream`( **sb**)를 호출하여 기본 클래스를 초기화합니다. 초기화 `sb` 호출한 `basic_filebuf` \< **Elem**, **Tr**>, 차례로 **sb.**[엽니다](../standard-library/basic-filebuf-class.md#open)( _ *Filename*, `_Mode`). 후자 함수가 null 포인터를 반환 하는 경우 생성자를 호출 [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
 네 번째 생성자는 rvalue 참조로 처리되는 `right`의 내용으로 개체를 초기화합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `basic_fstream`을 사용하는 예는 [streampos](../standard-library/ios-typedefs.md#streampos)를 참조하세요.
 
@@ -164,9 +165,9 @@ void close();
 
 멤버 함수는 [rdbuf](#rdbuf)**->** [close](../standard-library/basic-filebuf-class.md#close)를 호출합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
-**close**를 사용하는 방법의 예는 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)를 참조하세요.
+`close`를 사용하는 방법의 예는 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)를 참조하세요.
 
 ## <a name="is_open"></a>  basic_fstream::is_open
 
@@ -184,7 +185,7 @@ bool is_open() const;
 
 멤버 함수는 [rdbuf](#rdbuf)**->**[is_open](../standard-library/basic-filebuf-class.md#is_open)을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `is_open`을 사용하는 방법의 예는 [basic_filebuf::is_open](../standard-library/basic-filebuf-class.md#is_open)을 참조하세요.
 
@@ -214,19 +215,19 @@ void open(
 
 ### <a name="parameters"></a>매개 변수
 
-`_Filename` 열려는 파일의 이름입니다.
+*_Filename* 열려는 파일의 이름입니다.
 
-`_Mode` 열거 중 하나 [ios_base:: openmode](../standard-library/ios-base-class.md#openmode)합니다.
+*모드 (_m)* 의 열거형 중 하나 [ios_base:: openmode](../standard-library/ios-base-class.md#openmode)합니다.
 
-`_Prot` 기본 파일을 보호 하려면 해당를 여는 `shflag` 매개 변수에서 [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)합니다.
+*_Prot* 기본 파일 열기 보호는 *shflag* 의 매개 변수에 [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)합니다.
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`)를 호출합니다. 해당 함수가 null 포인터를 반환하면 함수는 [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**)를 호출합니다.
+멤버 함수는 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`)를 호출합니다. 이 함수를 호출 하는 해당 함수가 null 포인터를 반환 하면 [setstate](../standard-library/basic-ios-class.md#setstate)( `failbit`).
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
-**open**을 사용하는 방법의 예는 [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open)을 참조하세요.
+참조 [basic_filebuf:: open](../standard-library/basic-filebuf-class.md#open) 사용 하는 방법의 예 `open`합니다.
 
 ## <a name="op_eq"></a>  basic_fstream::operator=
 
@@ -238,7 +239,7 @@ basic_fstream& operator=(basic_fstream&& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` 에 대 한 lvalue 참조는 `basic_fstream` 개체입니다.
+*오른쪽* 에 대 한 lvalue 참조를 `basic_fstream` 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -246,7 +247,7 @@ basic_fstream& operator=(basic_fstream&& right);
 
 ### <a name="remarks"></a>설명
 
-멤버 연산자는 rvalue 참조로 처리되는 `right`의 내용을 사용하여 개체의 내용을 바꿉니다.
+멤버 연산자의 콘텐츠를 사용 하 여 개체의 내용을 바꿉니다 *오른쪽*는 rvalue 참조로 처리 합니다.
 
 ## <a name="rdbuf"></a>  basic_fstream::rdbuf
 
@@ -260,7 +261,7 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 
 저장된 스트림 버퍼의 주소입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `rdbuf`를 사용하는 방법의 예는 [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close)를 참조하세요.
 
@@ -274,11 +275,11 @@ void swap(basic_fstream& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` `lvalue` 에 대 한 참조는 `basic_fstream` 개체입니다.
+*오른쪽* 는 `lvalue` 에 대 한 참조를 `basic_fstream` 개체입니다.
 
 ### <a name="remarks"></a>설명
 
-멤버 함수는 이 개체의 내용과 `right`의 내용을 교환합니다.
+멤버 함수는이 개체의 내용과의 내용을 교환 *오른쪽*합니다.
 
 ## <a name="see-also"></a>참고자료
 

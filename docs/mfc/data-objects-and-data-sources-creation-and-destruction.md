@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b226c115ce148fa29b5d93cb60af8498b63fdee9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 90143b919fde02a95df81d41845d8ecc671ced0d
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931878"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>데이터 개체 및 데이터 소스: 생성 및 소멸
 문서에 설명 된 대로 [데이터 개체 및 데이터 소스 (OLE)](../mfc/data-objects-and-data-sources-ole.md), 데이터 개체 및 데이터 소스는 데이터 전송의 양쪽을 나타냅니다. 이 문서에서는 다음을 포함하여 데이터 전송을 제대로 수행하기 위해 이들 개체 및 소스를 만들고 제거할 경우에 대해 설명합니다.  
@@ -71,14 +72,14 @@ ms.lasthandoff: 05/04/2018
   
 5.  응용 프로그램에서는 3단계에서 생성된 개체에 속한 `SetClipboard` 멤버 함수(또는 끌어서 놓기 작업인 경우 `DoDragDrop` 멤버 함수)를 호출합니다.  
   
-6.  이것이 **잘라내기** 작업 또는 `DoDragDrop` 반환 `DROPEFFECT_MOVE`, 1 단계에서 선택한 데이터가 문서에서 삭제 됩니다.  
+6.  이것이 **잘라내기** 작업 또는 `DoDragDrop` 반환 **DROPEFFECT_MOVE**, 1 단계에서 선택한 데이터가 문서에서 삭제 됩니다.  
   
  이 시나리오는 MFC OLE 샘플에서 구현 [OCLIENT](../visual-cpp-samples.md) 및 [HIERSVR](../visual-cpp-samples.md)합니다. `GetClipboardData` 및 `OnGetClipboardData` 함수 외에 모든 함수에 대한 각 응용 프로그램의 `CView` 파생 클래스 소스를 살펴봅니다. 이들 두 함수는 `COleClientItem` 또는 `COleServerItem` 파생 클래스 구현이 포함됩니다. 이들 샘플 프로그램에서는 이러한 개념을 구현하는 방법의 좋은 예를 제공합니다.  
   
  `COleDataSource` 개체를 만들어야 할 한 가지 다른 상황은 끌어서 놓기 작업의 기본 동작을 수정할 경우 발생합니다. 자세한 내용은 참조는 [끌어서 놓기: 사용자 지정](../mfc/drag-and-drop-customizing.md) 문서.  
   
 ##  <a name="_core_destroying_data_sources"></a> 데이터 소스 제거  
- 데이터 소스는 현재 데이터 소스를 처리해야 하는 응용 프로그램을 통해 제거되어야 합니다. 데이터 소스를 OLE 전달 하는 경우에서와 같은 호출 [coledatasource:: Dodragdrop](../mfc/reference/coledatasource-class.md#dodragdrop)를를 호출 해야 **pdatasrc->internalrelease**합니다. 예를 들어:  
+ 데이터 소스는 현재 데이터 소스를 처리해야 하는 응용 프로그램을 통해 제거되어야 합니다. 데이터 소스를 OLE 전달 하는 경우에서와 같은 호출 [coledatasource:: Dodragdrop](../mfc/reference/coledatasource-class.md#dodragdrop)를를 호출 해야 `pDataSrc->InternalRelease`합니다. 예를 들어:  
   
  [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]  
   

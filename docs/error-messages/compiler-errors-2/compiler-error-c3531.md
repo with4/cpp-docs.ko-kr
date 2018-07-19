@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252686"
 ---
 # <a name="compiler-error-c3531"></a>컴파일러 오류 C3531
 'symbol': 'auto'가 포함 된 형식의 기호에는 이니셜라이저가 있어야 합니다.  

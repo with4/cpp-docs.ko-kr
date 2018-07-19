@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33173140"
 ---
 # <a name="stlclr-containers"></a>STL/CLR 컨테이너
 STL/CLR 라이브러리에 c + + 표준 라이브러리에 있는 동일한 컨테이너가 하지만.NET Framework의 관리 되는 환경 내에서 실행 합니다. C + + 표준 라이브러리에 익숙한 경우 STL/CLR 계속 공용 언어 런타임 (CLR) 대상에 코드를 업그레이드 하는 동안 미리 만들어 둔 기술을 사용 하는 가장 좋은 방법은 됩니다.  

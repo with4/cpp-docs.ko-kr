@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127954"
 ---
 # <a name="initializer-lists"></a>이니셜라이저 목록
 이니셜라이저 목록 생성자에서 기본 클래스 생성자 전에 이제 호출 됩니다.  

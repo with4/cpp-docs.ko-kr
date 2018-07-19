@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874735"
 ---
 # <a name="creating-an-icon-or-other-image-image-editor-for-icons"></a>아이콘 또는 다른 이미지 만들기(아이콘에 대한 이미지 편집기)
 새 이미지 (비트맵, 아이콘, 커서 또는 도구 모음)를 만든 다음 이미지 편집기를 사용 하 여 모양을 사용자 지정할 수 있습니다. 새 비트맵을 만들 수도 있습니다는 [템플릿](../windows/how-to-use-resource-templates.md)합니다.  

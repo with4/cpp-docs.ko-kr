@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371917"
 ---
 # <a name="cl-invokes-the-linker"></a>CL에서의 링커 호출
 CL /c 옵션을 사용 하지 않으면 컴파일한 다음 링커를 자동으로 호출 합니다. CL 컴파일하는 동안 만들어진.obj 파일의 이름 및 명령줄에 지정 된 다른 파일의 이름이 링커로 전달 합니다. 링커가 링크 환경 변수에 나열 된 옵션을 사용 합니다. CL 명령줄에서 링커 옵션을 지정 하려면 /link 옵션을 사용할 수 있습니다. /Link 옵션을 다음 옵션을 LINK 환경 변수를 재정의 합니다. 다음 표의 옵션 링크 하지 않도록 합니다.  

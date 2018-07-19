@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342737"
 ---
 # <a name="adding-items-to-the-header-control"></a>헤더 컨트롤에 항목 추가
 헤더 컨트롤을 만든 후 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md))의 부모 창에서 항목을 추가할 "헤더" 필요에 따라: 열당 하나씩 일반적으로 합니다.  

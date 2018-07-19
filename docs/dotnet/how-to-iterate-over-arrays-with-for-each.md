@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130505"
 ---
 # <a name="how-to-iterate-over-arrays-with-for-each"></a>방법: for each로 배열 반복
 이 항목에서는 사용 하는 방법을 보여 줍니다.는 [각 항목에 대해에서](../dotnet/for-each-in.md) 여러 형식의 배열에는 키워드입니다.  

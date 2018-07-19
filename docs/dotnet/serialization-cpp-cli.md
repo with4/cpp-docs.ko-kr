@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164568"
 ---
 # <a name="serialization-ccli"></a>Serialization(C++/CLI)
 Serialization (개체 또는 멤버를 영구적인 매체에의 상태를 저장할 경우의 프로세스)의 관리 클래스 (개별 필드 또는 속성 포함)에서 지원 되는 <xref:System.SerializableAttribute> 및 <xref:System.NonSerializedAttribute> 클래스입니다.  

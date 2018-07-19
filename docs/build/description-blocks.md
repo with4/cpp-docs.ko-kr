@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367110"
 ---
 # <a name="description-blocks"></a>설명 블록
 설명 블록은 필요에 따라 뒤 명령 블록이 연결선입니다.  

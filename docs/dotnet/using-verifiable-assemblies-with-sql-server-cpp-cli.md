@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168648"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>SQL Server에 안정형 어셈블리 사용(C++/CLI)
 동적 연결 라이브러리 (Dll)로 패키지 하는 확장된 저장된 프로시저에는 Visual c + +를 사용 하 여 개발 하는 기능을 통해 SQL Server 기능을 확장 하는 방법을 제공 합니다. 확장된 저장된 프로시저 Dll 내에서 함수로 구현 됩니다. 함수 외에 확장된 저장된 프로시저를 정의할 수도 [사용자 정의 형식](../cpp/classes-and-structs-cpp.md) 및 [집계 함수는](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da) (예: SUM 또는 AVG).  

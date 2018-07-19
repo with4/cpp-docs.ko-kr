@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55658efabf8c9df795ed8069d9659ebf0e01e364
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fae1d569f49a50d3b7281e86c72fd12c69b40832
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956361"
 ---
 # <a name="canimationvariableintegerchangehandler-class"></a>CAnimationVariableIntegerChangeHandler 클래스
 애니메이션 변수 값이 변경될 때 애니메이션 API에서 호출하는 콜백을 구현합니다.  
@@ -87,10 +88,10 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pAnimationController`  
+ *pAnimationController*  
  이벤트를 수신 하는 애니메이션 컨트롤러에 대 한 포인터입니다.  
   
- `ppHandler`  
+ *ppHandler*  
   
 ### <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK를 반환 합니다. 그렇지 않으면 HRESULT 오류 코드를 반환합니다.  
@@ -107,16 +108,16 @@ IFACEMETHOD(OnIntegerValueChanged) (
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `storyboard`  
+ *스토리 보드*  
  변수를 애니메이션 효과 주는 스토리 보드 합니다.  
   
- `variable`  
+ *variable*  
  애니메이션 변수를 업데이트입니다.  
   
- `newValue`  
+ *새 값*  
  새 반올림된 한 값입니다.  
   
- `previousValue`  
+ *previousValue*  
  이전 반올림된 한 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -130,7 +131,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pAnimationController`  
+ *pAnimationController*  
  이벤트를 수신 하는 애니메이션 컨트롤러에 대 한 포인터입니다.  
   
 ## <a name="see-also"></a>참고 항목  

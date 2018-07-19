@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33245199"
 ---
 # <a name="compiler-error-c2859"></a>컴파일러 오류 C2859
 파일 이름이이 미리 컴파일된 헤더가 만들어졌을 때 사용 된 형식 파일 않습니다, 그리고 미리 컴파일된 헤더를 다시 만드십시오.  

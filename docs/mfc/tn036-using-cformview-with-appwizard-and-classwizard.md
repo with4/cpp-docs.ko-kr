@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379877"
 ---
 # <a name="tn036-using-cformview-with-appwizard-and-classwizard"></a>TN036: CFormView와 AppWizard 및 ClassWizard 함께 사용
 이 기술 노트 사용할 생성 하는 응용 프로그램 마법사에서 응용 프로그램을 수정 하는 방법을 설명는 `CFormView` 기본값 대신 `CView` 주 보기 클래스 처럼 합니다. 이이 버전의 Visual c + +와 직접 지원 됩니다.  

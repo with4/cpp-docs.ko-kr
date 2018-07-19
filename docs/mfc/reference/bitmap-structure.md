@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa8bb4ab914b4e05eb21cfc45a243328d32bb6d8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ddc4868d7cc3c094ad2bb81b5d9706a2b749553d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339349"
 ---
 # <a name="bitmap-structure"></a>BITMAP 구조체
-**비트맵** 높이, 너비, 색상 형식 및 논리적 비트맵의 비트 값 구조 정의**합니다.**  
+합니다 **비트맵** 높이, 너비, 색상 형식 및 논리적 비트맵의 비트 값을 정의 하는 구조**합니다.**  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,7 +51,7 @@ typedef struct tagBITMAP {  /* bm */
  비트맵의 높이(래스터 줄)를 지정합니다. 높이는 0보다 커야 합니다.  
   
  *bmWidthBytes*  
- 각 래스터 줄에서 바이트 수를 지정합니다. GDI(그래픽 장치 인터페이스)에서는 비트맵의 비트 값이 정수(2바이트) 값의 배열을 형성한다고 가정하기 때문에 이 값은 짝수여야 합니다. 즉, **bmWidthBytes** \* 8 때 가져온 값 보다 크거나 16의 배수로 이어야 합니다는 **bmWidth** 멤버는 **bmBitsPixel**  멤버입니다.  
+ 각 래스터 줄에서 바이트 수를 지정합니다. GDI(그래픽 장치 인터페이스)에서는 비트맵의 비트 값이 정수(2바이트) 값의 배열을 형성한다고 가정하기 때문에 이 값은 짝수여야 합니다. 즉, *bmWidthBytes* \* 8 때 가져온 값 보다 크거나 16의 다음 배수 여야 합니다 *bmWidth* 멤버는 *bmBitsPixel*  멤버입니다.  
   
  *bmPlanes*  
  비트맵에서 색 평면의 수를 지정합니다.  
@@ -59,12 +60,12 @@ typedef struct tagBITMAP {  /* bm */
  픽셀을 정의하는 데 필요한 각 평면의 인접 색상 비트 수를 지정합니다.  
   
  *bmBits*  
- 비트맵에 대한 비트 값의 위치를 가리킵니다. **bmBits** 멤버에 1 바이트 값의 배열에 대 한 긴 포인터 여야 합니다.  
+ 비트맵에 대한 비트 값의 위치를 가리킵니다. 합니다 *bmBits* 멤버 1 바이트 값의 배열에 대 한 긴 포인터 여야 합니다.  
   
 ## <a name="remarks"></a>설명  
  현재 사용되는 비트맵 형식은 흑백 및 컬러입니다. 흑백 비트맵에는 1비트, 1평면 형식이 사용됩니다. 각 스캔은 16비트의 배수입니다.  
   
- 검사 높이의 흑백 비트맵에 대해 다음과 같이 구성 됩니다 *n*:  
+ 검색 높이의 흑백 비트맵에 대해 다음과 같이 구성 됩니다 *n*:  
   
  `Scan 0`  
   
@@ -82,9 +83,9 @@ typedef struct tagBITMAP {  /* bm */
   
  흑백 장치에서 픽셀은 검정색 또는 흰색입니다. 비트맵에서 해당 비트가 1이면 픽셀이 켜집니다(흰색). 비트맵에서 해당 비트가 0이면 픽셀이 꺼집니다(검정색).  
   
- 모든 장치 된 비트맵이 지원는 **RC_BITBLT** 비트가 설정 된 **RASTERCAPS** 의 인덱스는 [CDC::GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) 멤버 함수입니다.  
+ 모든 장치 집합 RC_BITBLT 비트의 RASTERCAPS 인덱스에 있는 비트맵을 지원 합니다 [CDC::GetDeviceCaps](../../mfc/reference/cdc-class.md#getdevicecaps) 멤버 함수입니다.  
   
- 각 장치는 고유한 색상 형식을 가집니다. 다른 장치로 비트맵을 전송 하기 위해 사용 하 여는 [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) 및 [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) Windows 함수입니다.  
+ 각 장치는 고유한 색상 형식을 가집니다. 다른 장치로 비트맵을 전송 하기 위해 사용 합니다 [GetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd144879) 하 고 [SetDIBits](http://msdn.microsoft.com/library/windows/desktop/dd162973) Windows 함수입니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** wingdi.h  

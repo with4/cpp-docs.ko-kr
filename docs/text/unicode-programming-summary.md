@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33859679"
 ---
 # <a name="unicode-programming-summary"></a>유니코드 프로그래밍 요약
 유니코드에 대 한 MFC 및 C 런타임 지원을 활용 하려면:  

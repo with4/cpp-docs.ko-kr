@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389665"
 ---
 # <a name="storage-class-specifiers-with-function-declarations"></a>함수 선언이 포함된 저장소 클래스 지정자
 함수 선언에서 **static** 또는 `extern` 저장소 클래스 지정자를 사용할 수 있습니다. 함수에는 항상 전역 수명이 있습니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33864599"
 ---
 # <a name="adding-formatting-or-special-characters-to-a-string"></a>문자열에 형식 지정 또는 특수 문자 추가
 ### <a name="to-add-formatting-or-special-characters-to-a-string"></a>문자열에 형식 지정 또는 특수 문자를 추가 하려면  

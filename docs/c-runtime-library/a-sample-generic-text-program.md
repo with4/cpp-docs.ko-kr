@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388963"
 ---
 # <a name="a-sample-generic-text-program"></a>샘플 일반 텍스트 프로그램
 **Microsoft 전용**  

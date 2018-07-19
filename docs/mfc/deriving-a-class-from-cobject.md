@@ -23,30 +23,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d0b629617c1592387f3f959996fd3e9837242ea
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 05828283f560e73d4c5d2ddf2cbc05963cbb217f
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026119"
 ---
 # <a name="deriving-a-class-from-cobject"></a>CObject에서 클래스 파생시키기
-이 문서에서 클래스를 파생 하는 데 필요한 최소 단계에서는 설명 [CObject](../mfc/reference/cobject-class.md)합니다. 다른 `CObject` 클래스 문서 특정 기능을 활용 하는 데 필요한 단계를 설명 `CObject` serialization 진단 디버깅 지원 등의 기능입니다.  
+이 문서에서 클래스를 파생 하는 데 필요한 최소 단계를 설명 합니다. [CObject](../mfc/reference/cobject-class.md)합니다. 다른 `CObject` 특정 기능을 활용 하는 데 필요한 단계를 설명 하는 클래스 문서 `CObject` serialization 진단 디버깅 지원 등의 기능입니다.  
   
- 토론에 `CObject`, 용어 "인터페이스 file" 및 "구현 파일" 자주 사용 됩니다. 인터페이스 파일 (라고도 하는 헤더 파일 또는 합니다. H 파일)는 클래스 선언 및 클래스를 사용 하는 데 필요한 기타 정보를 포함 합니다. 구현 파일 (또는 합니다. CPP 파일)에서 클래스 멤버 함수를 구현 하는 코드 뿐 아니라 클래스 정의 포함 합니다. 클래스에 대 한 예를 들어 `CPerson`, 일반적으로 PERSON 이라는 하는 인터페이스 파일을 만듭니다. H와 구현 파일 PERSON을 이라는 합니다. CPP 합니다. 그러나 응용 프로그램 간에 공유할 수는 몇 가지 작은 클래스에 대 한 것이 더 쉽습니다 인터페이스와 구현 파일 단일 결합 합니다. CPP 파일입니다.  
+ 토론에 `CObject`, 용어 "인터페이스" 파일과 "구현 파일" 자주 사용 됩니다. 인터페이스 파일 (라고도 하는 헤더 파일 또는 합니다. H 파일)는 클래스 선언 및 클래스를 사용 하는 데 필요한 기타 정보를 포함 합니다. 구현 파일 (또는 합니다. CPP 파일)에서 클래스 멤버 함수를 구현 하는 코드 뿐만 아니라 클래스 정의 포함 합니다. 라는 클래스에 대 한 예를 들어 `CPerson`, 일반적으로 PERSON 이라는 인터페이스 파일을 만듭니다. H와 구현 파일 이름이 사용자입니다. CPP 합니다. 그러나 응용 프로그램 간에 공유할 수는 몇 가지 작은 클래스에 대 한 쉽습니다 때로는 인터페이스와 구현은 단일 결합 합니다. CPP 파일입니다.  
   
- 클래스를 파생 하는 경우 네 가지 수준의 기능에서 선택할 수 있습니다 `CObject`:  
+ 클래스를 파생 하는 경우 4 개의 기능 수준에서 선택할 수 있습니다 `CObject`:  
   
--   기본 기능: 런타임 클래스 정보 또는 serialization 지원 되지 않지만 진단 메모리 관리를 포함 합니다.  
+-   기본 기능: 직렬화 런타임 클래스 정보에 지원 되지 않습니다 하지만 진단 메모리 관리를 포함 합니다.  
   
--   기본 기능 런타임 클래스 정보에 대 한 지원을 포함 합니다.  
+-   기본 기능 및 런타임 클래스 정보에 대 한 지원.  
   
--   실행 시간에 대 한 지원을 포함 하는 기본 기능 클래스 정보 및 동적 생성 합니다.  
+-   기본 기능 및 런타임 클래스 정보 및 동적 생성을 지원 합니다.  
   
--   기본 기능 런타임 클래스 정보, 동적 생성 및 serialization에 대 한 지원을 포함 합니다.  
+-   기본 기능 및 런타임 클래스 정보, 동적 생성 및 serialization에 대 한 지원.  
   
- (나중에 기본 클래스로 사용 됩니다 하) 다시 사용 하기 위해 설계 된 클래스 앞으로 serialization 필요 함을 예측 런타임 클래스 지원과 serialization 지원의 포함 이상 되어야 합니다.  
+ (기본 클래스로 사용할 나중에 해당) 다시 사용할 수 있도록 설계 된 클래스 미래의 serialization 필요가 것으로 예상 됩니다 하는 경우 런타임 클래스 지원과 serialization 지원의 포함 이상 되어야 합니다.  
   
- 선언 및에서 파생 클래스의 구현에서 특정 선언 및 구현 매크로 사용 하 여 기능 수준을 선택 `CObject`합니다.  
+ 파생 클래스의 구현 선언에 특정 선언 및 구현 매크로 사용 하 여 기능 수준을 선택 `CObject`합니다.  
   
  다음 표에서 serialization 및 런타임 정보를 지 원하는 데 사용 되는 매크로 간의 관계를 보여 줍니다.  
   
@@ -61,15 +62,15 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="to-use-basic-cobject-functionality"></a>기본 CObject 기능을 사용 하려면  
   
-1.  일반 c + + 구문을 사용 하 여에서 클래스를 파생 `CObject` (또는에서 파생 된 클래스에서 `CObject`).  
+1.  표준 c + + 구문을 사용 하 여에서 클래스를 파생 `CObject` (또는에서 파생 된 클래스에서 `CObject`).  
   
-     다음 예제에서는 가장 간단한 경우에서 클래스를 파생 시키는 `CObject`:  
+     다음 예제에서는 가장 간단한 경우는 클래스의 파생 `CObject`:  
   
      [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]  
   
- 그러나 일반적으로의 일부를 재정의할 수도 `CObject`의 새 클래스의 세부 사항을 처리 하는 멤버 함수입니다. 예를 들어 재정의 하려는 일반적으로 `Dump` 의 기능은 `CObject` 클래스의 내용에 대 한 디버깅 출력을 제공 하 합니다. 재정의 하는 방법에 대 한 내용은 `Dump`, 문서를 참조 [진단: 개체 내용을 덤프](http://msdn.microsoft.com/en-us/727855b1-5a83-44bd-9fe3-f1d535584b59)합니다. 재정의 하려면는 `AssertValid` 의 기능은 `CObject` 클래스 개체의 데이터 멤버의 일관성을 확인 하는 사용자 지정 된 테스트 수 있도록 합니다. 에 대 한 설명은 재정의 하는 방법 `AssertValid`, 참조 [MFC ASSERT_VALID 및 CObject::AssertValid](http://msdn.microsoft.com/en-us/7654fb75-9e9a-499a-8165-0a96faf2d5e6)합니다.  
+ 일반적으로의 일부를 재정의할 수도 있지만 `CObject`의 새 클래스의 세부 정보를 처리 하는 멤버 함수입니다. 예를 들어 재정의 하려는 일반적으로 `Dump` 함수의 `CObject` 클래스의 내용에 대 한 디버깅 출력을 제공 하 합니다. 재정의 하는 방법에 대 한 내용은 `Dump`, 문서를 참조 하세요 [진단: 개체 내용을 덤프](http://msdn.microsoft.com/727855b1-5a83-44bd-9fe3-f1d535584b59)합니다. 재정의할 수도 있습니다는 `AssertValid` 함수의 `CObject` 클래스 개체의 데이터 멤버의 일관성을 검사할 사용자 지정 된 테스트를 제공 하 합니다. 재정의 하는 방법에 대 한 `AssertValid`를 참조 하세요 [MFC ASSERT_VALID 및 CObject::AssertValid](http://msdn.microsoft.com/7654fb75-9e9a-499a-8165-0a96faf2d5e6)합니다.  
   
- 문서 [기능 수준 지정](../mfc/specifying-levels-of-functionality.md) 다른 수준의 런타임 클래스 정보, 동적 개체 만들기 및 serialization을 포함 한 기능을 지정 하는 방법에 설명 합니다.  
+ 이 문서 [기능 수준 지정](../mfc/specifying-levels-of-functionality.md) 다른 수준의 기능을 런타임 클래스 정보, 동적 개체 만들기 및 serialization 등을 지정 하는 방법에 설명 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CObject 사용](../mfc/using-cobject.md)

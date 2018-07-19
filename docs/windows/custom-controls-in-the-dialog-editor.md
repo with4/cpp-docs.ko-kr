@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880246"
 ---
 # <a name="custom-controls-in-the-dialog-editor"></a>대화 상자 편집기의 사용자 지정 컨트롤
 대화 상자 편집기 대화 상자 템플릿에 컨트롤 "user" 또는 "custom" 기존 항목 사용 수 있습니다.  

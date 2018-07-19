@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32051997"
 ---
 # <a name="dw"></a>DW
 할당 및 각각에 대해 저장소의 단어 (2 바이트)를 선택적으로 초기화 `initializer`합니다. 형식 지정자로 사용할 수도 있습니다 형식이 법적 곳입니다. `DW` 동의어 [단어](../../assembler/masm/word.md)합니다.  

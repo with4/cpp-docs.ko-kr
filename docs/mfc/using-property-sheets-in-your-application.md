@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383895"
 ---
 # <a name="using-property-sheets-in-your-application"></a>응용 프로그램에서 속성 시트 사용
 응용 프로그램에서 속성 시트를 사용 하려면 다음 단계를 수행 합니다.  

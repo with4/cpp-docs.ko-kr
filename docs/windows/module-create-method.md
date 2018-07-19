@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874891"
 ---
 # <a name="modulecreate-method"></a>Module::Create 메서드
 모듈의 인스턴스를 만듭니다.  

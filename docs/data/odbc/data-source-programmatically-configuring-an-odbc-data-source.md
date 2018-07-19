@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091974"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>데이터 소스: 프로그래밍 방식으로 ODBC 데이터 소스 구성
 이 항목에서는 프로그래밍 방식으로 데이터 원본 이름은 ODBC Open Database Connectivity ()를 구성 하는 방법에 대해 설명 합니다. 이 방법을 사용 하면 데이터 액세스를 명시적으로 데이터 원본의 이름을 지정 하려면 ODBC 관리자 또는 다른 프로그램을 사용 하도록 사용자를 강요 하지 않고도.  

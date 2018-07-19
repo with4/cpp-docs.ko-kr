@@ -17,11 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4fe4e7c26d1b32f16d524407279e5e71534d00c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eba4ae92f9db67dfff58ec111b294b6cd26eff5a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939821"
 ---
 # <a name="compiler-com-support-classes"></a>컴파일러 COM 지원 클래스
 **Microsoft 전용**  
@@ -31,9 +32,9 @@ ms.lasthandoff: 05/03/2018
 |클래스|용도|  
 |-----------|-------------|  
 |[_bstr_t](../cpp/bstr-t-class.md)|`BSTR` 형식을 래핑하여 유용한 연산자와 메서드를 제공합니다.|  
-|[_com_error](../cpp/com-error-class.md)|throw 된 오류 개체를 정의 [_com_raise_error](../cpp/com-raise-error.md) 대부분 오류가 발생에서 합니다.|  
-|[_com_ptr_t](../cpp/com-ptr-t-class.md)|COM 인터페이스 포인터를 캡슐화 하 고 필수 호출을 자동화 `AddRef`, **릴리스**, 및 `QueryInterface`합니다.|  
-|[_variant_t](../cpp/variant-t-class.md)|래핑하는 **VARIANT** 형식 유용한 연산자와 메서드를 제공 합니다.|  
+|[_com_error](../cpp/com-error-class.md)|throw 된 오류 개체를 정의 [_com_raise_error](../cpp/com-raise-error.md) 대부분의 오류가 발생 합니다.|  
+|[_com_ptr_t](../cpp/com-ptr-t-class.md)|COM 인터페이스 포인터를 캡슐화 하 고 필요한 호출을 자동화 `AddRef`하십시오 `Release`, 및 `QueryInterface`합니다.|  
+|[_variant_t](../cpp/variant-t-class.md)|`VARIANT` 형식을 래핑하여 유용한 연산자와 메서드를 제공합니다.|  
   
 **Microsoft 전용 종료**  
   

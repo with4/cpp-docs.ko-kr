@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276863"
 ---
 # <a name="compiler-warning-level-1-c4185"></a>컴파일러 경고(수준 1) C4185
 알 수 없는 #import 특성 'attribute'를 무시합니다.  

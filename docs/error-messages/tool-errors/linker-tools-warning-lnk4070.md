@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302505"
 ---
 # <a name="linker-tools-warning-lnk4070"></a>링커 도구 경고 LNK4070
 /OUT:filename 지시문입니다. 출력 파일 이름 'filename';에서 다른 EXP 지시문을 무시합니다.  

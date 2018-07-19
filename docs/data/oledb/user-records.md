@@ -31,6 +31,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109809"
 ---
 # <a name="user-records"></a>사용자 레코드
 정적 접근자를 사용 하려면 (즉,에서 파생 된 접근자 **CAccessor)**, 소비자 사용자 레코드가 있어야 합니다. 사용자 레코드는 핸들 입력 또는 출력에 데이터 요소를 포함 하는 c + + 클래스입니다. ATL OLE DB 소비자 마법사는 소비자에 대 한 사용자 레코드를 생성합니다. 명령 처리 등의 선택적 작업에 대 한 사용자 레코드에 메서드를 추가할 수 있습니다.  

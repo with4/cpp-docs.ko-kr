@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375599"
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE(winmd 파일 지정)
 생성 되는 Windows 런타임 메타 데이터 (.winmd) 출력 파일에 대 한 파일 이름을 지정는 [/WINMD](../../build/reference/winmd-generate-windows-metadata.md) 링커 옵션입니다.  

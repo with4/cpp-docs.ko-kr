@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892659"
 ---
 # <a name="srwlocktrylockexclusive-method"></a>SRWLock::TryLockExclusive 메서드
 현재 또는 지정 된 SRWLock 개체에 대 한 단독 모드의 SRWLock 개체를 얻으려고 합니다. 호출이 성공 하면 호출 스레드는 잠금의 소유권을 갖습니다.  

@@ -38,6 +38,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379218"
 ---
 # <a name="wm-messages-t---z"></a>WM_ 메시지: T - Z
 다음 맵 항목 있는 함수 프로토타입과 일치합니다.  

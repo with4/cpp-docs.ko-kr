@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230592"
 ---
 # <a name="compiler-error-c2673"></a>컴파일러 오류 C2673
 'function': 전역 함수에는 'this' 포인터가 없는 합니다.  

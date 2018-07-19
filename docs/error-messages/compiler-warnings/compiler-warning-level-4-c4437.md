@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298329"
 ---
 # <a name="compiler-warning-level-4-c4437"></a>컴파일러 경고(수준 4) C4437
 가상 기본 'class1'에서 'class2' 사이의 dynamic_cast 일부 컨텍스트에서 실패할 컴파일/v d 2 하거나 적용 'class2' #pragma vtordisp(2)로 정의할 수 없습니다.  

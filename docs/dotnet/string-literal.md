@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172410"
 ---
 # <a name="string-literal"></a>문자열 리터럴
 문자열 리터럴 처리의 Visual c + + Managed Extensions for c + + 변경 되었습니다.  

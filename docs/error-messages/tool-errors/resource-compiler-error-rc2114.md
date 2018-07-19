@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317624"
 ---
 # <a name="resource-compiler-error-rc2114"></a>리소스 컴파일러 오류 RC2114
 예상된 컨트롤 클래스 이름  

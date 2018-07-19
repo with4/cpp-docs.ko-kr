@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c7d09615b5f9ec7f0f72acde965d5ffbd018c9c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f1b0ae8be5e9f33982d9a24d3004ebb46b6b8a4d
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026353"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/08/2018
 
 ## <a name="remarks"></a>설명
 
-클래스 및 템플릿 \<type_traits > 형식 유추, 분류 및 형식 관련 오류를 감지 하 고 일반 코드를 최적화할 수 있도록 컴파일 타임에 변환을 지 원하는 데 사용 됩니다. 이러한 클래스와 템플릿에는 형식 속성을 설명하는 단항 형식 특성, 형식 간의 관계를 설명하는 이진 형식 특성, 그리고 형식 속성을 수정하는 변환 특성이 포함됩니다.
+클래스 및 템플릿은 \<type_traits > 형식 유추, 분류 및 변환을 컴파일 타임에 형식 관련 오류를 검색 하 고 일반 코드를 최적화할 수 있도록 지 원하는 데 사용 됩니다. 이러한 클래스와 템플릿에는 형식 속성을 설명하는 단항 형식 특성, 형식 간의 관계를 설명하는 이진 형식 특성, 그리고 형식 속성을 수정하는 변환 특성이 포함됩니다.
 
 형식 특성을 지원하려는 경우 `integral_constant` 도우미 클래스를 정의합니다. 이 클래스는 형식 조건자의 기본 클래스를 구성하는 템플릿 특수화 `true_type` 및 `false_type`을 포함합니다. *형식 조건자*는 형식 인수를 하나 이상 사용하는 템플릿입니다. 형식 조건자가 *true인 경우* 형식은 [true_type](../standard-library/type-traits-typedefs.md#true_type)에서 직접 또는 간접적으로 공개 파생됩니다. 형식 조건자가 *false인 경우* 형식은 [false_type](../standard-library/type-traits-typedefs.md#false_type)에서 직접 또는 간접적으로 공개 파생됩니다.
 
@@ -73,7 +74,7 @@ using add_const_t = typename add_const<T>::type;
 
 |||
 |-|-|
-|[is_void](../standard-library/is-void-class.md)|형식이 `void`인지 테스트합니다.|
+|[is_void](../standard-library/is-void-class.md)|형식 인지 테스트 **void**합니다.|
 |[is_null_pointer](../standard-library/is-null-pointer-class.md)|형식이 `std::nullptr_t`인지 테스트합니다.|
 |[is_integral](../standard-library/is-integral-class.md)|형식이 정수인지 테스트합니다.|
 |[is_floating_point](../standard-library/is-floating-point-class.md)|형식이 부동 소수점인지 테스트합니다.|
@@ -94,7 +95,7 @@ using add_const_t = typename add_const<T>::type;
 |-|-|
 |[is_reference](../standard-library/is-reference-class.md)|형식이 참조인지 테스트합니다.|
 |[is_arithmetic](../standard-library/is-arithmetic-class.md)|형식이 산술형인지 테스트합니다.|
-|[is_fundamental](../standard-library/is-fundamental-class.md)|형식이 `void` 또는 산술형인지 테스트합니다.|
+|[is_fundamental](../standard-library/is-fundamental-class.md)|형식 인지 테스트 **void** 또는 산술 형입니다.|
 |[is_object](../standard-library/is-object-class.md)|형식이 개체 형식인지 테스트합니다.|
 |[is_scalar](../standard-library/is-scalar-class.md)|형식이 스칼라 형식인지 테스트합니다.|
 |[is_compound](../standard-library/is-compound-class.md)|형식이 스칼라가 아닌지 테스트합니다.|
@@ -104,8 +105,8 @@ using add_const_t = typename add_const<T>::type;
 
 |||
 |-|-|
-|[is_const](../standard-library/is-const-class.md)|형식이 `const`인지 테스트합니다.|
-|[is_volatile](../standard-library/is-volatile-class.md)|형식이 `volatile`인지 테스트합니다.|
+|[is_const](../standard-library/is-const-class.md)|형식 인지 테스트 **const**합니다.|
+|[is_volatile](../standard-library/is-volatile-class.md)|형식 인지 테스트 **volatile**합니다.|
 |[is_trivial](../standard-library/is-trivial-class.md)|형식이 trivial인지 테스트합니다.|
 |[is_trivially_copyable](../standard-library/is-trivially-copyable-class.md)|형식을 일반적으로 복사할 수 있는지 테스트합니다.|
 |[is_standard_layout](../standard-library/is-standard-layout-class.md)|형식이 표준 레이아웃 형식인지 테스트합니다.|
@@ -141,7 +142,7 @@ using add_const_t = typename add_const<T>::type;
 |[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|형식이 복사 할당 가능하며 할당이 throw되지 않는 것으로 확인되는지 테스트합니다.|
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|형식이 이동 할당 가능하며 할당이 throw되지 않는 것으로 확인되는지 테스트합니다.|
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|형식이 소멸 가능하며 소멸자가 throw되지 않는 것으로 확인되는지 테스트합니다.|
-|[has_virtual_destructor](http://msdn.microsoft.com/en-us/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|형식에 가상 소멸자가 있는지 테스트합니다.|
+|[has_virtual_destructor](http://msdn.microsoft.com/c0f85f0b-c63c-410d-a046-72eeaf44f7eb)|형식에 가상 소멸자가 있는지 테스트합니다.|
 
 형식 속성 쿼리
 
@@ -163,9 +164,9 @@ const-volatile 수정
 
 |||
 |-|-|
-|[add_const](../standard-library/add-const-class.md)|형식에서 `const` 형식을 생성합니다.|
-|[add_volatile](../standard-library/add-volatile-class.md)|형식에서 `volatile` 형식을 생성합니다.|
-|[add_cv](../standard-library/add-cv-class.md)|형식에서 `const volatile` 형식을 생성합니다.|
+|[add_const](../standard-library/add-const-class.md)|생성 된 **const** 형식에서 형식입니다.|
+|[add_volatile](../standard-library/add-volatile-class.md)|생성 된 **volatile** 형식에서 형식입니다.|
+|[add_cv](../standard-library/add-cv-class.md)|생성 된 **const volatile** 형식에서 형식입니다.|
 |[remove_const](../standard-library/remove-const-class.md)|형식에서 비const 형식을 생성합니다.|
 |[remove_volatile](../standard-library/remove-volatile-class.md)|형식에서 비volatile 형식을 생성합니다.|
 |[remove_cv](../standard-library/remove-cv-class.md)|형식에서 비const/비volatile 형식을 생성합니다.|

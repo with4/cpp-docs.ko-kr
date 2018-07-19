@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 335fecb1104a3aa1754f0267eb7b9686446782ec
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 74adf7d42fcb5e5e3114e1a06162022f9f062e67
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960241"
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 
@@ -34,12 +35,12 @@ ms.lasthandoff: 05/07/2018
 
 확인된 반복기에서 생성한 경고를 사용하지 않도록 설정하는 방법에 대한 자세한 내용은 [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md)를 참조하세요.
 
-[\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) 전처리기 매크로를 사용하여 확인된 반복기 기능을 사용하거나 사용하지 않도록 설정할 수 있습니다. `_ITERATOR_DEBUG_LEVEL`을 1 또는 2로 정의한 경우 반복기를 안전하지 않은 방식으로 사용하면 런타임 오류가 발생하고 프로그램이 종료됩니다. 0으로 정의한 경우 확인된 반복기를 사용하지 않도록 설정됩니다. 기본적으로 `_ITERATOR_DEBUG_LEVEL` 값은 릴리스 빌드의 경우 0이며 디버그 빌드의 경우 2입니다.
+[\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) 전처리기 매크로를 사용하여 확인된 반복기 기능을 사용하거나 사용하지 않도록 설정할 수 있습니다. _ITERATOR_DEBUG_LEVEL 1 또는 2로 정의 된 경우 안전 하지 않은 반복기 사용 하면 런타임 오류가 발생 하 고 프로그램이 종료 됩니다. 0으로 정의한 경우 확인된 반복기를 사용하지 않도록 설정됩니다. 기본적으로 _ITERATOR_DEBUG_LEVEL 값 디버그 빌드에 대 한 릴리스 빌드에 대해 0 및 2는 합니다.
 
 > [!IMPORTANT]
-> 이전 설명서와 소스 코드에서 [_SECURE_SCL](../standard-library/secure-scl.md) 매크로를 참조할 수 있습니다. `_ITERATOR_DEBUG_LEVEL`을 사용하여 `_SECURE_SCL`을 제어합니다. 자세한 내용은 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)을 참조하세요.
+> 이전 설명서와 소스 코드에서 [_SECURE_SCL](../standard-library/secure-scl.md) 매크로를 참조할 수 있습니다. _SECURE_SCL _ITERATOR_DEBUG_LEVEL 사용 합니다. 자세한 내용은 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)을 참조하세요.
 
-`_ITERATOR_DEBUG_LEVEL`을 1 또는 2로 정의한 경우 다음과 같은 반복기 확인이 수행됩니다.
+_ITERATOR_DEBUG_LEVEL에 1 또는 2로 정의 되 면 이러한 반복기 확인이 수행 됩니다.
 
 - 모든 표준 반복기(예: [vector::iterator](../standard-library/vector-class.md#iterator))를 확인합니다.
 
@@ -55,7 +56,7 @@ ms.lasthandoff: 05/07/2018
 |[deque::operator\[\]](../standard-library/deque-class.md#op_at)|[back](../standard-library/list-class.md#back)|[front](../standard-library/list-class.md#front)|[back](../standard-library/queue-class.md#back)|
 |[front](../standard-library/queue-class.md#front)|[vector::operator\[\]](../standard-library/vector-class.md#op_at)|[back](../standard-library/vector-class.md#back)|[front](../standard-library/vector-class.md#front)|
 
-`_ITERATOR_DEBUG_LEVEL`을 0으로 정의한 경우
+_ITERATOR_DEBUG_LEVEL 0으로 정의 된 경우:
 
 - 모든 표준 반복기가 확인되지 않습니다. 반복기가 컨테이너 경계 밖으로 이동할 수 있으며 이는 정의되지 않은 동작으로 이어집니다.
 
@@ -67,9 +68,9 @@ ms.lasthandoff: 05/07/2018
 
 확인된 반복기를 지원하는 반복기 어댑터는 [checked_array_iterator 클래스](../standard-library/checked-array-iterator-class.md)와 [unchecked_array_iterator 클래스](../standard-library/unchecked-array-iterator-class.md)입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
-1 또는 2로 설정된 `_ITERATOR_DEBUG_LEVEL`을 사용하여 컴파일할 경우 특정 클래스의 인덱싱 연산자를 사용하여 컨테이너 경계 밖에 있는 요소에 액세스하려고 하면 런타임 오류가 발생합니다.
+_ITERATOR_DEBUG_LEVEL 1 또는 2를 사용 하 여 컴파일하는 경우 특정 클래스의 인덱싱 연산자를 사용 하 여 컨테이너의 범위 밖에 있는 요소에 액세스 하면 런타임 오류가 발생 합니다.
 
 ```cpp
 // checked_iterators_1.cpp
@@ -96,9 +97,9 @@ int main()
 
 이 프로그램은 "67"을 인쇄한 후 실패에 대한 자세한 정보가 들어 있는 어설션 실패 대화 상자를 팝업으로 표시합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
-마찬가지로, 1 또는 2로 설정된 `_ITERATOR_DEBUG_LEVEL`을 사용하여 컴파일할 경우 컨테이너가 비어 있을 때 컨테이너 클래스의 `front` 또는 `back`을 사용하여 요소에 액세스하려고 하면 런타임 오류가 발생합니다.
+마찬가지로, _ITERATOR_DEBUG_LEVEL 1 또는 2를 사용 하 여 컴파일할 때 런타임 오류가 발생 요소를 사용 하 여 액세스 하려는 경우 `front` 또는 `back` 컨테이너가 비어 있을 때 컨테이너 클래스에 있습니다.
 
 ```cpp
 // checked_iterators_2.cpp
@@ -120,9 +121,9 @@ int main()
 
 이 프로그램은 실패에 대한 자세한 정보가 들어 있는 어설션 실패 대화 상자를 팝업으로 표시합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
-다음 코드에는 다양한 반복기 사용 사례 시나리오에 대한 설명과 각각에 대한 주석이 나와 있습니다. 기본적으로 `_ITERATOR_DEBUG_LEVEL`은 디버그 빌드에서 2로 설정되고 정품 빌드에서는 0으로 설정됩니다.
+다음 코드에는 다양한 반복기 사용 사례 시나리오에 대한 설명과 각각에 대한 주석이 나와 있습니다. 기본적으로 _ITERATOR_DEBUG_LEVEL 디버그 빌드에서 2 및 일반 정품 빌드에서 0으로 설정 됩니다.
 
 ```cpp
 // checked_iterators_3.cpp

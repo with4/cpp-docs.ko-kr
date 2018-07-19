@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100332"
 ---
 # <a name="idbinitializeimplinitialize"></a>IDBInitializeImpl::Initialize
 속성 지원을 준비하여 데이터 소스 개체를 초기화합니다.  

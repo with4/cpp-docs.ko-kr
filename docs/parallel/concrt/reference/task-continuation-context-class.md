@@ -27,6 +27,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689183"
 ---
 # <a name="taskcontinuationcontext-class"></a>task_continuation_context 클래스
 `task_continuation_context` 클래스를 사용하면 연속 실행 위치를 지정할 수 있습니다. 만 Windows 런타임 앱에서이 클래스를 사용 하는 것이 유용 합니다. 비-Windows 런타임 앱에 대 한 작업 연속 실행 컨텍스트가 결정 되며 런타임에 의해 구성할 수 없습니다.  

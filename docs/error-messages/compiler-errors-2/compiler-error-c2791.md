@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236498"
 ---
 # <a name="compiler-error-c2791"></a>컴파일러 오류 C2791
 'super'를 잘못 사용 했습니다: 'class' 기본 클래스가 없습니다  

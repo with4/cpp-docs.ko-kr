@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100176"
 ---
 # <a name="icommandimplcancelexecution"></a>ICommandImpl::CancelExecution
 현재 명령 실행을 취소합니다.  

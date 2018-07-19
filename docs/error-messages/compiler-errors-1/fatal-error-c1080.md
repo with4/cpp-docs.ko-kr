@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33225409"
 ---
 # <a name="fatal-error-c1080"></a>심각한 오류 C1080
 컴파일러 한계: 명령줄 숫자인 한계를 초과 하는 옵션  

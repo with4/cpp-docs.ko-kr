@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106396"
 ---
 # <a name="debugging-your-provider"></a>공급자 디버깅
 공급자를 디버깅 하는 방법은 두 가지가 있습니다.  

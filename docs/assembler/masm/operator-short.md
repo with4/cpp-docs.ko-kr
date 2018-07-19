@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32056329"
 ---
 # <a name="operator-short"></a>operator SHORT
 유형을 설정 *레이블* 짧게 합니다. 모든 점프를 *레이블* 짧아야 (점프 명령에서-128에서 + 127 바이트 ~ 범위 내에서 *레이블*).  

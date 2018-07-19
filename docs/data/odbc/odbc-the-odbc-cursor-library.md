@@ -32,6 +32,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092596"
 ---
 # <a name="odbc-the-odbc-cursor-library"></a>ODBC: ODBC 커서 라이브러리
 이 항목에서 ODBC 커서 라이브러리 및 사용 하는 방법을 설명 합니다. 자세한 내용은 다음을 참조하세요.  

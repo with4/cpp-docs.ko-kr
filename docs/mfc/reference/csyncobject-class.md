@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1712f0d26fc0d9ac3dcfb0f2a15a906351f43154
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bcc5290b08b6a0b6159c1ba9b0b5b05d02a178ba
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37122071"
 ---
 # <a name="csyncobject-class"></a>CSyncObject 클래스
 Win32의 동기화 개체에 일반적인 기능을 제공하는 순수 가상 클래스입니다.  
@@ -88,8 +89,8 @@ virtual ~CSyncObject();
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pstrName`  
- 개체의 이름입니다. 경우 **NULL**, *pstrName* null이 됩니다.  
+ *pstrName*  
+ 개체의 이름입니다. NULL 인 경우 *pstrName* null이 됩니다.  
   
 ##  <a name="lock"></a>  CSyncObject::Lock  
  동기화 개체에 의해 제어 되는 리소스에 액세스 하려면이 함수를 호출 합니다.  
@@ -99,8 +100,8 @@ virtual BOOL Lock(DWORD dwTimeout = INFINITE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwTimeout`  
- 시간 (밀리초)를 사용할 수 있는 동기화 개체에 대해 기다려야 지정 (신호). 경우 **무한**, `Lock` 반환 하기 전에 사용 하는 개체에서 신호를 보낼 때까지 기다립니다.  
+ *dwTimeout*  
+ 시간 (밀리초)를 사용할 수 있는 동기화 개체에 대해 기다려야 지정 (신호). 무한 경우 `Lock` 반환 하기 전에 사용 하는 개체에서 신호를 보낼 때까지 기다립니다.  
   
 ### <a name="return-value"></a>반환 값  
  함수가 성공 하면 0이 아닌 그렇지 않으면 0입니다.  
@@ -123,7 +124,7 @@ operator HANDLE() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 성공 하면; 동기화 개체의 핸들 그렇지 않으면 **NULL**합니다.  
+ 성공 하면; 동기화 개체의 핸들 그렇지 않으면 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
  Windows Api를 직접 호출 하는 핸들을 사용할 수 있습니다.  
@@ -138,17 +139,17 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lCount`  
+ *lCount*  
  기본 구현에서 사용 되지 않습니다.  
   
- `lpPrevCount`  
+ *lpPrevCount*  
  기본 구현에서 사용 되지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  
- 기본 구현에서는 항상 반환 **TRUE**합니다.  
+ 기본 구현에서는 항상 TRUE를 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 두 개의 매개 변수를 사용 하 여 선언 항상의 기본 구현은 반환 **TRUE**합니다. 이 함수는 호출 스레드에서 소유 동기화 개체에 대 한 액세스를 해제 하기 위해 호출 됩니다. 두 번째 선언 세마포 제어 된 리소스의 둘 이상의 액세스를 허용 하는 등의 동기화 개체에 제공 됩니다.  
+ 기본적으로 두 개의 매개 변수를 사용 하 여 선언 항상 TRUE를 반환합니다. 이 함수는 호출 스레드에서 소유 동기화 개체에 대 한 액세스를 해제 하기 위해 호출 됩니다. 두 번째 선언 세마포 제어 된 리소스의 둘 이상의 액세스를 허용 하는 등의 동기화 개체에 제공 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CObject 클래스](../../mfc/reference/cobject-class.md)   

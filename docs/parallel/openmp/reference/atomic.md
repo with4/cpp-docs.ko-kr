@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694409"
 ---
 # <a name="atomic"></a>원자성(atomic)
 지정 하는 원자적으로 업데이트할 수 있는 메모리 위치 합니다.  

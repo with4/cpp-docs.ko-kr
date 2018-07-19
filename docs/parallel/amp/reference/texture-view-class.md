@@ -29,6 +29,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696268"
 ---
 # <a name="textureview-class"></a>texture_view 클래스
 질감에 대 한 읽기 및 쓰기를 제공합니다. `texture_view` 값 형식이 변수인 텍스처를 읽을 수만 사용할 수 `int`, `unsigned int`, 또는 `float` 기본 32 비트 bpse 있는 합니다. 사용 하 여 다른 질감 형식을 읽으려면 `texture_view<const value_type, _Rank>`합니다.  

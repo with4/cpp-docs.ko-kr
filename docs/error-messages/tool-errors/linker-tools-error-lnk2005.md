@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301244"
 ---
 # <a name="linker-tools-error-lnk2005"></a>링커 도구 오류 LNK2005
 *기호* 개체에 이미 정의  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342633"
 ---
 # <a name="exceptions-exceptions-in-constructors"></a>예외: 생성자의 예외
 생성자에서는 예외를 throw 하는 경우에 설명 된 대로 된 예외를 throw 하기 전에 내용을 모든 개체 및 메모리 할당 정리 [예외: 사용자 자신의 함수에서 예외를 Throw](../mfc/exceptions-throwing-exceptions-from-your-own-functions.md)합니다.  

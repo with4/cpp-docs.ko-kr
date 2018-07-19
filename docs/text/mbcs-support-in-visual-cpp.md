@@ -37,6 +37,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33865838"
 ---
 # <a name="mbcs-support-in-visual-c"></a>Visual C++에서 MBCS 지원
 MBCS 지원 버전의 Windows 실행 하는 경우 Visual c + + 개발 시스템 등 통합된 소스 코드 편집기, 디버거 및 명령줄 도구는 MBCS 지원, 메모리 창 제외 하 고.  

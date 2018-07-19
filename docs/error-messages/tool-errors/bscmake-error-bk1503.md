@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294796"
 ---
 # <a name="bscmake-error-bk1503"></a>BSCMAKE 오류 BK1503
 'filename' 파일에 쓸 수 없습니다 [: 이유]  

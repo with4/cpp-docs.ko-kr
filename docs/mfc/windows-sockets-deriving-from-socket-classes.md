@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64fb9a3ff1c27aade9f74a8ed95a8016829874ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 76ccb2ec126ae57e39b1a4fab3a0bff82a353d71
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953764"
 ---
 # <a name="windows-sockets-deriving-from-socket-classes"></a>Windows 소켓: 소켓 클래스에서 파생시키기
 이 문서에서는 설명의 일부 기능은 소켓 클래스 중 하나에서 고유한 클래스를 파생 하 여 얻을 수 있습니다.  
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/04/2018
   
  또한 클래스 `CSocket` 제공는 [OnMessagePending](../mfc/reference/csocket-class.md#onmessagepending) 멤버 함수 (고급는 재정의 가능한). MFC는 소켓은 Windows 기반 메시지를 펌프 하는 동안이 함수를 호출 합니다. 재정의할 수 `OnMessagePending` 를 Windows에서 특정 메시지를 검색 하 고 응답할 수 있습니다.  
   
- 기본 버전 `OnMessagePending` 클래스에 제공 된 `CSocket` 에 대 한 메시지 큐를 검사 하 여 `WM_PAINT` 차단 호출이 완료 되기를 기다리는 동안 메시지입니다. 디스플레이 품질 향상 그리기 메시지를 발송 합니다. 필요한 작업을 수행 하는 것 외 들 함수를 재정의 하는 한 가지 방법은 직접 합니다. 또 다른 예로,으로 사용 하 여 `OnMessagePending` 다음 작업에 대 한 합니다. 네트워크 트랜잭션이 완료 되기를 기다리는 동안 모덜리스 대화 상자를 표시 한다고 가정 합니다. 대화 상자에는 사용자 차단 트랜잭션이 시간이 오래 걸리는 취소 하는 데 사용할 수 있는 취소 단추가 있습니다. 프로그램 `OnMessagePending` 재정의이 모덜리스 대화 상자와 관련 된 메시지를 펌프 될 수 있습니다.  
+ 기본 버전 `OnMessagePending` 클래스에 제공 된 `CSocket` 차단 호출이 완료 되기를 기다리는 동안 WM_PAINT 메시지에 대 한 메시지 큐를 검사 합니다. 디스플레이 품질 향상 그리기 메시지를 발송 합니다. 필요한 작업을 수행 하는 것 외 들 함수를 재정의 하는 한 가지 방법은 직접 합니다. 또 다른 예로,으로 사용 하 여 `OnMessagePending` 다음 작업에 대 한 합니다. 네트워크 트랜잭션이 완료 되기를 기다리는 동안 모덜리스 대화 상자를 표시 한다고 가정 합니다. 대화 상자에는 사용자 차단 트랜잭션이 시간이 오래 걸리는 취소 하는 데 사용할 수 있는 취소 단추가 있습니다. 프로그램 `OnMessagePending` 재정의이 모덜리스 대화 상자와 관련 된 메시지를 펌프 될 수 있습니다.  
   
  사용자 `OnMessagePending` 재정의 반환 **TRUE** 의 기본 클래스 버전에 대 한 호출에서 반환 된 값 또는 `OnMessagePending`합니다. 여전히 원하는 작업을 수행 하는 경우 기본 클래스 버전을 호출 합니다.  
   

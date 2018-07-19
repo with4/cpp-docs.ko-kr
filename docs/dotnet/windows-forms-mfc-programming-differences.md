@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33172673"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Windows Forms/MFC 프로그래밍의 차이점
 항목에서는 [MFC의 Windows Form 사용자 정의 컨트롤을 사용 하 여](../dotnet/using-a-windows-form-user-control-in-mfc.md) Windows Forms에 대 한 MFC 지원을 설명 합니다. .NET Framework 또는 MFC 프로그래밍에 익숙한 경우이 항목 프로그래밍 방식 둘 사이의 차이점에 대 한 배경 정보를 제공 합니다.  

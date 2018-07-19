@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 880c6953addd0ec7db3abf5864010bd472d2d5a3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8817133ba1004e746f568ad3e039de5130693174
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929447"
 ---
 # <a name="creating-an-active-document-container-application"></a>액티브 문서 컨테이너 응용 프로그램 만들기
 액티브 문서 컨테이너 응용 프로그램을 만드는 가장 간단하고 가장 권장되는 방법은 MFC 응용 프로그램 마법사를 사용해서 MFC EXE 컨테이너 응용 프로그램을 만들고 액티브 문서 포함을 지원하도록 응용 프로그램을 수정하는 방법입니다.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/04/2018
   
 3.  선택 **MFC 응용 프로그램** 오른쪽 창에서.  
   
-4.  프로젝트 이름을 `MyProj`, 클릭 **확인**합니다.  
+4.  프로젝트 이름을 *MyProj*, 클릭 **확인**합니다.  
   
 5.  선택 된 **복합 문서 지원** 페이지.  
   
@@ -47,9 +48,9 @@ ms.lasthandoff: 05/04/2018
   
 9. MFC 응용 프로그램 마법사에서 응용 프로그램 생성이 완료되면 솔루션 탐색기를 사용해서 다음 파일을 엽니다.  
   
-    -   MyProjview.cpp  
+    -   *MyProjview.cpp*  
   
-10. MyProjview.cpp에서 다음과 같이 변경합니다.  
+10. *MyProjview.cpp*를 다음과 같이 변경 합니다.  
   
     -   `CMyProjView::OnPreparePrinting`에서 함수 내용을 다음 코드로 바꿉니다.  
   

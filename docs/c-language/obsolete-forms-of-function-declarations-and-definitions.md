@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384283"
 ---
 # <a name="obsolete-forms-of-function-declarations-and-definitions"></a>사용되지 않는 함수 선언 및 정의 폼
 이전 스타일 함수 선언 및 정의는 매개 변수 선언에 대해 ANSI C 표준에 의해 권장되는 구문과 약간 다른 규칙을 사용합니다. 첫째로 이전 스타일 선언에는 매개 변수 목록이 없습니다. 둘째로 함수 정의에서는 매개 변수가 나열되지만 해당 형식은 매개 변수 목록에 선언되지 않습니다. 형식 선언은 함수 본문을 구성하는 복합 문의 앞에 와야 합니다. 이전 스타일 구문은 사용되지 않으며 새 코드에 사용하면 안 됩니다. 그러나 이전 스타일 구문을 사용하는 코드는 여전히 지원됩니다. 다음 예제에서는 사용되지 않는 선언 및 정의 형태를 보여 줍니다.  

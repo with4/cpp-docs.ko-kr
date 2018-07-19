@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384995"
 ---
 # <a name="function-declarations-and-definitions"></a>함수 선언 및 정의
 함수 프로토타입은 함수 이름, 해당 반환 형식 및 해당 정식 매개 변수의 형식 및 개수를 설정합니다. 함수 정의에는 함수 본문이 포함됩니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33161579"
 ---
 # <a name="property-declaration"></a>속성 선언
 관리 되는 클래스에서 속성을 선언 하는 방법은 Visual c + + Managed Extensions for c + + 변경 되었습니다.  

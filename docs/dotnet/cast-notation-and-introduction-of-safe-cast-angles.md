@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111642"
 ---
 # <a name="cast-notation-and-introduction-of-safecastltgt"></a>캐스트 표기법 및 safe_cast의 도입&lt;&gt;
 캐스트 표기법 Visual c + + Managed Extensions for c + + 변경 되었습니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863311"
 ---
 # <a name="asyncresulttype-enumeration"></a>AsyncResultType 열거형
 GetResults 메서드에서 반환되는 결과 형식을 지정합니다.  

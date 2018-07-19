@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ed492198c5c667fa1ffadcaa9a3bcc0461c16d4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 65e7c613f5c4a4273208e30cd0fc6284ef4e420c
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037872"
 ---
 # <a name="coledispatchexception-class"></a>COleDispatchException 클래스
 OLE 자동화의 핵심인 OLE `IDispatch` 인터페이스에만 해당하는 예외를 처리합니다.  
@@ -54,7 +55,7 @@ class COleDispatchException : public CException
 |[COleDispatchException::m_wCode](#m_wcode)|`IDispatch`-특정 오류 코드입니다.|  
   
 ## <a name="remarks"></a>설명  
- 마찬가지로 다른 예외 클래스에서 파생 되는 `CException` 기본 클래스 `COleDispatchException` 와 함께 사용할 수는 **THROW**, `THROW_LAST`, **시도**, **CATCH**, `AND_CATCH`, 및 `END_CATCH` 매크로입니다.  
+ 마찬가지로 다른 예외 클래스에서 파생 되는 `CException` 기본 클래스 `COleDispatchException` THROW, THROW_LAST, TRY, CATCH, AND_CATCH, 및 END_CATCH 매크로 함께 사용할 수 있습니다.  
   
  일반적으로 호출 해야 [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) 만들고 throw 하는 `COleDispatchException` 개체입니다.  
   
@@ -80,7 +81,7 @@ DWORD m_dwHelpContext;
 ### <a name="remarks"></a>설명  
  이 멤버 함수에 의해 설정 되어 [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) 때 예외가 throw 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [coledispatchdriver:: Createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)합니다.  
   
 ##  <a name="m_strdescription"></a>  COleDispatchException::m_strDescription  
@@ -93,7 +94,7 @@ CString m_strDescription;
 ### <a name="remarks"></a>설명  
  이 멤버 함수에 의해 설정 되어 [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) 때 예외가 throw 됩니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [coledispatchdriver:: Createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)합니다.  
   
 ##  <a name="m_strhelpfile"></a>  COleDispatchException::m_strHelpFile  
@@ -110,7 +111,7 @@ CString m_strHelpFile;
 CString m_strSource;  
 ```  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [coledispatchdriver:: Createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)합니다.  
   
 ##  <a name="m_wcode"></a>  COleDispatchException::m_wCode  

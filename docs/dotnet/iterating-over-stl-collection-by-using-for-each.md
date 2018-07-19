@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33131344"
 ---
 # <a name="iterating-over-c-standard-library-collection-by-using-for-each"></a>각각에 대해 사용 하 여 c + + 표준 라이브러리 컬렉션 반복
 `for each` c + + 표준 라이브러리 컬렉션을 반복 하는 키워드를 사용할 수 있습니다.  

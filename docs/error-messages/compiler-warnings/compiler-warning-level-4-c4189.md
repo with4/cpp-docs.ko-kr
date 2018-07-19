@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33293171"
 ---
 # <a name="compiler-warning-level-4-c4189"></a>컴파일러 경고(수준 4) C4189
 'identifier': 지역 변수가 초기화되었으나 참조되지 않았습니다.  

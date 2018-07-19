@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370516"
 ---
 # <a name="dumpbin-command-line"></a>DUMPBIN 명령줄
 DUMPBIN을 실행 하려면 다음 구문을 사용 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317335"
 ---
 # <a name="resource-compiler-error-rc2163"></a>리소스 컴파일러 오류 RC2163
 엑셀 러 레이 터 필요한 형식 [ASCII 또는 VIRTKEY]  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164052"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Interop에 대한 성능 고려 사항(C++)
 이 항목에서는 관리 되 는/관리 되지 않는 interop 전환이 런타임 성능에 영향을 줄이기 위한 지침을 제공 합니다.  

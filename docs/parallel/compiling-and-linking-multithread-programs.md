@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695735"
 ---
 # <a name="compiling-and-linking-multithread-programs"></a>다중 스레드 프로그램 컴파일 및 링크
 에 도입 된 Bounce.c 프로그램 [샘플 다중 스레드 C 프로그램](../parallel/sample-multithread-c-program.md)합니다.  

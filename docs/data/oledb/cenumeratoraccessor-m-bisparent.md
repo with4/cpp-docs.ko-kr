@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095088"
 ---
 # <a name="cenumeratoraccessormbisparent"></a>CEnumeratorAccessor::m_bIsParent
 행이 있는 경우 열거자 열거자 부모 열거자 인지를 나타내는 변수입니다.  

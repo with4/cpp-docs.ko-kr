@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138971"
 ---
 # <a name="lockacquire"></a>lock::acquire
 지정 된 시간 또는 전혀 영원히 잠금을 획득 하려고 대기 하는 선택적으로 개체에 대 한 잠금을 획득 합니다.  

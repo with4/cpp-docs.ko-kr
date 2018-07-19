@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689404"
 ---
 # <a name="operationtimedout-class"></a>operation_timed_out 클래스
 이 클래스는 작업이 시간 초과된 경우 발생하는 예외를 설명합니다.  

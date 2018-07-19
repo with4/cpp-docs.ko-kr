@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32356536"
 ---
 # <a name="implementing-ccomobjectrootex"></a>CComObjectRootEx 구현
 [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) 필수적; 모든 ATL 개체의 인스턴스 하나가 있어야 합니다. `CComObjectRootEx` 또는 [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) 의 상속에 있습니다. `CComObjectRootEx`에서는 COM 맵 엔트리를 기반으로 하는 기본 `QueryInterface` 메커니즘을 제공합니다.  

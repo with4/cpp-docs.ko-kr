@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348106"
 ---
 # <a name="ole-common-dialog-classes"></a>OLE 일반 대화 상자 클래스
 이러한 클래스는 다양 한 표준 OLE 대화 상자를 구현 하 여 일반적인 OLE 작업을 처리 합니다. 또한 OLE 기능에 대 한 일관 된 사용자 인터페이스를 제공 합니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383311"
 ---
 # <a name="using-crebarctrl"></a>CReBarCtrl 사용
 rebar 컨트롤은 자식 창에 대한 컨테이너로 사용됩니다. 다른 컨트롤인 이러한 자식 창은 rebar 컨트롤 밴드에 자주 할당됩니다. rebar 컨트롤은 그리퍼 막대, 비트맵, 텍스트 레이블 및 자식 창이 조합된 하나 이상의 밴드를 포함할 수 있습니다. 그러나 밴드는 둘 이상의 자식 창을 포함할 수 없습니다.  

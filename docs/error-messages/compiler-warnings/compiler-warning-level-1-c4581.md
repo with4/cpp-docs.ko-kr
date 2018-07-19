@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33281861"
 ---
 # <a name="compiler-warning-level-1-c4581"></a>컴파일러 경고(수준 1) C4581
 사용 되지 않는 동작: '"string1" ' '문자열 2' 프로세스 특성으로 대체  

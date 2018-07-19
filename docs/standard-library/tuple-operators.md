@@ -13,11 +13,12 @@ f1_keywords:
 dev_langs:
 - C++
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
-ms.openlocfilehash: c3e5c1e82e98379ff2cefae48f8af89f8fc0b698
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ce4c1a0b7fa1771cf80437d27ed9dd89baa5f220
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956965"
 ---
 # <a name="lttuplegt-operators"></a>&lt;tuple&gt; 연산자
 
@@ -39,13 +40,14 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>매개 변수
 
-`TN` N 번째 튜플 요소의 형식입니다.
+*TN*  
+ N번째 튜플 요소의 형식입니다.
 
 ### <a name="remarks"></a>설명
 
 함수는 `N`이 0이면 false를 반환하고 그렇지 않으면 `get<0>(tpl1) != get<0>(tpl2) || get<1>(tpl1) != get<1>(tpl2) || ... || get<N - 1>(tpl1) == get<N - 1>(tpl2)`을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__tuple__operator_ne.cpp
@@ -103,13 +105,14 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>매개 변수
 
-`TN` N 번째 튜플 요소의 형식입니다.
+*TN*  
+ N번째 튜플 요소의 형식입니다.
 
 ### <a name="remarks"></a>설명
 
 함수는 `N`이 0보다 크고 `tpl1`의 첫 번째 다른 값이 `tpl2`의 해당 값에 비해 작으면 true를 반환하고, 그렇지 않으면 false를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__tuple__operator_lt.cpp
@@ -167,13 +170,14 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>매개 변수
 
-`TN` N 번째 튜플 요소의 형식입니다.
+*TN*  
+ N번째 튜플 요소의 형식입니다.
 
 ### <a name="remarks"></a>설명
 
 함수에서 `!(tpl2 < tpl1)`을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__tuple__operator_le.cpp
@@ -231,13 +235,14 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>매개 변수
 
-`TN` N 번째 튜플 요소의 형식입니다.
+*TN*  
+ N번째 튜플 요소의 형식입니다.
 
 ### <a name="remarks"></a>설명
 
 함수는 `N`이 0이면 true를 반환하고 그렇지 않으면 `get<0>(tpl1) == get<0>(tpl2) && get<1>(tpl1) == get<1>(tpl2) && ... && get<N - 1>(tpl1) == get<N - 1>(tpl2)`을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__tuple__operator_eq.cpp
@@ -295,13 +300,14 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>매개 변수
 
-`TN` N 번째 튜플 요소의 형식입니다.
+*TN*  
+ N번째 튜플 요소의 형식입니다.
 
 ### <a name="remarks"></a>설명
 
 함수에서 `tpl2 < tpl1`을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__tuple__operator_gt.cpp
@@ -359,13 +365,14 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
 
 ### <a name="parameters"></a>매개 변수
 
-`TN` N 번째 튜플 요소의 형식입니다.
+*TN*  
+ N번째 튜플 요소의 형식입니다.
 
 ### <a name="remarks"></a>설명
 
 함수에서 `!(tpl1 < tpl2)`을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // std__tuple__operator_ge.cpp

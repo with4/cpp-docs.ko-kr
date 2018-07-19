@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089574"
 ---
 # <a name="features-of-record-view-classes--mfc-data-access"></a>레코드 뷰 클래스의 기능  (MFC Data Access)
 클래스와 함께 양식 기반 데이터 액세스 프로그래밍을 수행할 수 [CFormView](../mfc/reference/cformview-class.md), 하지만 [CRecordView](../mfc/reference/crecordview-class.md) 는 일반적으로 더 나은 클래스에서 파생 되도록 합니다. 외에 해당 `CFormView` 기능 `CRecordView`:  

@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 91ce48232884d1ab242ed52f82f614de058a2f91
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9caa3d08140887da45916b931b6a4850358db16
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944848"
 ---
 # <a name="super"></a>__super
 **Microsoft 전용**  
@@ -31,24 +32,22 @@ ms.lasthandoff: 05/03/2018
   
 ```  
   
-__super::  
-member_function  
-();  
+__super::member_function();  
   
 ```  
   
 ## <a name="remarks"></a>설명  
  액세스할 수 있는 모든 기본 클래스 메서드가 오버로드 확인 단계에서 고려되고 가장 일치하는 함수가 호출되는 함수입니다.  
   
- `__super`는 멤버 함수의 본문 내에서만 나타날 수 있습니다.  
+ **__super** 멤버 함수의 본문 내 에서만 사용할 수 있습니다.  
   
- `__super`는 using 선언과 함께 사용할 수 없습니다. 참조 [선언을 사용 하 여](../cpp/using-declaration.md) 자세한 정보에 대 한 합니다.  
+ **__super** 을 사용 하 여 사용할 수 없습니다. 선언 합니다. 참조 [선언을 사용 하 여](../cpp/using-declaration.md) 자세한 내용은 합니다.  
   
- 도입으로 [특성](../windows/cpp-attributes-reference.md) 코드를 삽입 하 여 코드 이름 해당 모를 수에 포함 된 메서드를 호출 하려는 하나 이상의 기본 클래스가 포함 될 수 있습니다.  
+ 되면서 [특성](../windows/cpp-attributes-reference.md) 코드를 삽입 하는, 코드는 호출 하려는 메서드를 포함 하는 이름이 해당 모를 수 있습니다 하나 이상의 기본 클래스가 포함 될 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
-```  
+```cpp 
 // deriv_super.cpp  
 // compile with: /c  
 struct B1 {  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882513"
 ---
 # <a name="module-c"></a>module(C++)
 .Idl 파일의 라이브러리 블록을 정의합니다.  

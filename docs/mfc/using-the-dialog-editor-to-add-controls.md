@@ -18,14 +18,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f891366c4d195c012f57a6de9a6b96bc1aafceb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 19cb52659c92b470057098edf3b65de4042e3bb9
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36950372"
 ---
 # <a name="using-the-dialog-editor-to-add-controls"></a>대화 상자 편집기를 사용하여 컨트롤 추가
-대화 상자 템플릿 리소스를 만들 때의 [대화 상자 편집기](../windows/dialog-editor.md), 컨트롤 팔레트에서 컨트롤을 끌어서 대화 상자에 놓습니다. 이 대화 상자 템플릿 리소스에 해당 컨트롤 형식에 대 한 사양을 추가합니다. 대화 상자 개체 및 호출을 생성할 때 해당 **만들기** 또는 `DoModal` 멤버 함수를 프레임 워크 Windows 컨트롤을 생성 하 고 화면에 대화 상자 창에 배치 합니다.  
+대화 상자 템플릿 리소스를 만들 때의 [대화 상자 편집기](../windows/dialog-editor.md), 컨트롤 팔레트에서 컨트롤을 끌어서 대화 상자에 놓습니다. 이 대화 상자 템플릿 리소스에 해당 컨트롤 형식에 대 한 사양을 추가합니다. 대화 상자 개체 및 호출을 생성할 때 해당 `Create` 또는 `DoModal` 멤버 함수를 프레임 워크 Windows 컨트롤을 생성 하 고 화면에 대화 상자 창에 배치 합니다.  
   
  대신 수 [컨트롤을 수동으로 만드는](../mfc/adding-controls-by-hand.md) 들어 있습니다. 이 작업을 더 합니다.  
   

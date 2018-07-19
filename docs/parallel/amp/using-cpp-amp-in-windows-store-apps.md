@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33696157"
 ---
 # <a name="using-c-amp-in-uwp-apps"></a>UWP 앱에서 c + + AMP를 사용 하 여
 GPU (그래픽 처리 장치) 또는 기타 계산 액셀러레이터에서 계산을 수행 하려면 유니버설 Windows 플랫폼 (UWP) 앱에서 c + + AMP (c + + Accelerated Massive Parallelism)를 사용할 수 있습니다. 그러나, C++ AMP는 Windows Runtime 형식으로 직접 작업하기 위한 API를 제공하지 않으며, Windows 런타임은 C++ AMP에 대한 래퍼를 제공하지 않습니다. 코드(본인이 직접 만든 형식 포함)에 Windows 런타임 형식을 사용할 경우 C++ AMP와 호환되는 형식으로 변환해야 합니다.  

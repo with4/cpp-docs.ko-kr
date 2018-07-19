@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270282"
 ---
 # <a name="compiler-error-c3920"></a>컴파일러 오류 C3920
 ' 연산자 ': 후 위 증가/감소 WinRT 또는 CLR 연산자를 호출 하는 후 위 정의할 수 없습니다 WinRT 또는 CLR 연산자는 해당 접두사를 호출 하는 WinRT 또는 CLR 연산자 (op_Increment/op_decrement)가 후 위 의미 체계와  

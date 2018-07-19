@@ -28,6 +28,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879850"
 ---
 # <a name="how-to-copy-resources"></a>방법: 리소스 복사
 변경 하지 않은 다른 리소스 파일에서 복사할 수 있습니다 수 또는 [복사 하는 동안 언어 또는 리소스의 조건은 변경](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md)합니다.  

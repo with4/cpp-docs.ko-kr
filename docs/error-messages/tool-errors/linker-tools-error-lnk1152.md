@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33297952"
 ---
 # <a name="linker-tools-error-lnk1152"></a>링커 도구 오류 LNK1152
 하나 이상의 데코레이팅되지 않은 기호를 확인할 수 없습니다.  

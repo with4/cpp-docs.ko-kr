@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252919"
 ---
 # <a name="compiler-error-c3507"></a>컴파일러 오류 C3507
 ProgID 'id'; 개 이하의 39 자의 가질 수 있습니다. 와 별개로 문장 부호를 포함 합니다. '.'; 또는 숫자로 시작  

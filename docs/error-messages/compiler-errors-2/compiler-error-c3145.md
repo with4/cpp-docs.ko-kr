@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246743"
 ---
 # <a name="compiler-error-c3145"></a>컴파일러 오류 C3145
 'object': 전역 또는 정적 변수는 WinRT 또는 관리되는 형식 'type'을 가질 수 없습니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382743"
 ---
 # <a name="default-date-and-time"></a>기본 날짜 및 시간
 **ANSI 3.8.8** 변환 날짜와 시간을 각각 사용할 수 없을 때 _DATE\_ 및 _TIME\_에 대한 정의  

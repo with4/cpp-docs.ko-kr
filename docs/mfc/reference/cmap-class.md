@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89e508242e7318e5419656720b6dee20bed55716
-ms.sourcegitcommit: 59afc95d0e494af658cf464503f7f89bd1a8d2ce
+ms.openlocfilehash: ebfacd93c8a346c2303e80ded4e28f3314ed10bb
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239426"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37339171"
 ---
 # <a name="cmap-class"></a>CMap 클래스
 고유 키를 값에 매핑하는 사전 컬렉션 클래스입니다.  
@@ -65,17 +65,17 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `KEY`  
- 맵에 대 한 키로 사용 되는 개체의 클래스입니다.  
+ *KEY*  
+ 지도 키로 사용 되는 개체의 클래스입니다.  
   
- `ARG_KEY`  
- 데이터 형식에 사용 되는 `KEY` 인수에 대 한 참조, 일반적으로 `KEY`합니다.  
+ *ARG_KEY*  
+ 에 사용 되는 데이터 형식 *키* 인수에 대 한 참조, 대개 *키*합니다.  
   
- `VALUE`  
+ *값*  
  Map에 저장 된 개체의 클래스입니다.  
   
- `ARG_VALUE`  
- 데이터 형식에 사용 되는 `VALUE` 인수에 대 한 참조, 일반적으로 `VALUE`합니다.  
+ *ARG_VALUE*  
+ 에 사용 되는 데이터 형식 *값* 인수에 대 한 참조, 대개 *값*합니다.  
   
 ## <a name="members"></a>멤버  
   
@@ -89,47 +89,47 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
 |이름|설명|  
 |----------|-----------------|  
-|[CMap::CMap](#cmap)|키 값에 매핑되는 컬렉션을 만듭니다.|  
+|[CMap::CMap](#cmap)|키 값에 매핑하는 컬렉션을 생성 합니다.|  
   
 ### <a name="public-methods"></a>Public 메서드  
   
 |이름|설명|  
 |----------|-----------------|  
-|[CMap::GetCount](#getcount)|이 맵에서 요소의 수를 반환합니다.|  
-|[CMap::GetHashTableSize](#gethashtablesize)|해시 테이블의 요소 수를 반환합니다.|  
-|[CMap::GetNextAssoc](#getnextassoc)|반복 하는 데 다음 요소를 가져옵니다.|  
-|[CMap::GetSize](#getsize)|이 맵에서 요소의 수를 반환합니다.|  
-|[CMap::GetStartPosition](#getstartposition)|첫 번째 요소의 위치를 반환합니다.|  
+|[CMap::GetCount](#getcount)|이 map에서 요소 수를 반환합니다.|  
+|[CMap::GetHashTableSize](#gethashtablesize)|해시 테이블에 있는 요소의 수를 반환합니다.|  
+|[CMap::GetNextAssoc](#getnextassoc)|반복에 대 한 다음 요소를 가져옵니다.|  
+|[CMap::GetSize](#getsize)|이 map에서 요소 수를 반환합니다.|  
+|[CMap::GetStartPosition](#getstartposition)|첫 번째 요소의 위치를 반환 합니다.|  
 |[CMap::InitHashTable](#inithashtable)|해시 테이블을 초기화 하 고 크기를 지정 합니다.|  
-|[CMap::IsEmpty](#isempty)|빈 맵 조건 (요소 없음)에 대해 테스트 합니다.|  
-|[CMap::Lookup](#lookup)|지정된 된 키에 매핑된 값을 찾습니다.|  
+|[CMap::IsEmpty](#isempty)|빈 맵을 조건 (요소 없음)에 대해 테스트 합니다.|  
+|[CMap::Lookup](#lookup)|지정된 된 키에 매핑된 값을 조회 합니다.|  
 |[CMap::PGetFirstAssoc](#pgetfirstassoc)|첫 번째 요소에 대 한 포인터를 반환합니다.|  
-|[CMap::PGetNextAssoc](#pgetnextassoc)|반복 하는 데 다음 요소에 대 한 포인터를 가져옵니다.|  
+|[CMap::PGetNextAssoc](#pgetnextassoc)|반복에 대 한 다음 요소에 대 한 포인터를 가져옵니다.|  
 |[CMap::PLookup](#plookup)|지정된 된 값을 일치 하는 값을 갖는 키에 대 한 포인터를 반환 합니다.|  
 |[CMap::RemoveAll](#removeall)|이 맵에서 모든 요소를 제거합니다.|  
-|[CMap::RemoveKey](#removekey)|키가 지정 하는 요소를 제거 합니다.|  
-|[CMap::SetAt](#setat)|map에 요소를 삽입 일치 하는 키가 있을 경우 기존 요소를 바꿉니다.|  
+|[CMap::RemoveKey](#removekey)|키로 지정 된 요소를 제거 합니다.|  
+|[CMap::SetAt](#setat)|맵에; 요소를 삽입합니다. 일치 하는 키가 있을 경우 기존 요소를 바꿉니다.|  
   
 ### <a name="public-operators"></a>Public 연산자  
   
 |이름|설명|  
 |----------|-----------------|  
-|[CMap::operator]](#operator_at)|지도 요소를 삽입-한 연산자의 대체 `SetAt`합니다.|  
+|[CMap::operator]](#operator_at)|Map에 요소를 삽입-에 대 한 연산자 대체 `SetAt`합니다.|  
   
 ## <a name="remarks"></a>설명  
- 지도에 키-값 쌍 (요소)를 삽입 하면 효율적으로 검색 하거나 액세스 키를 사용 하는 쌍을 삭제할 수 있습니다. Map의 모든 요소를 반복할 수도 있습니다.  
+ Map에는 키-값 쌍 (요소)가 삽입 되 면 효율적으로 검색 하거나 액세스 키를 사용 하 여 쌍을 삭제할 수 있습니다. 또한 map의 모든 요소를 반복할 수 있습니다.  
   
- 형식의 변수 **위치** 항목에 대 한 대체 액세스에 사용 됩니다. 사용할 수는 **위치** 항목 "기억" 하 고 맵을 통해 반복 하 합니다. 이 반복은 키 값으로 순차적 이라고 생각할 수도 있습니다. 그것이 아니야. 검색 된 요소의 순서는 결정 되지 않습니다.  
+ 위치 형식의 변수는 항목에 대 한 대체 액세스에 사용 됩니다. 항목을 "기억" 하 고 맵을 통해 반복 하는 위치를 사용할 수 있습니다. 이 반복은 키 값;으로 순차적는 생각 그것이 아니야. 검색 된 요소의 시퀀스를 결정 되지 않습니다.  
   
- 글로벌 도우미 함수를이 클래스 호출의 특정 멤버 함수는 대부분 용도에 대 한 사용자 지정 되어야 합니다는 `CMap` 클래스입니다. 참조 [컬렉션 클래스 도우미](../../mfc/reference/collection-class-helpers.md) 의 매크로 및 전역 섹션에는 `MFC Reference`합니다.  
+ 전역 도우미 함수는이 클래스 호출의 특정 멤버 함수는 대부분의 사용에 대 한 사용자 지정 되어야 합니다는 `CMap` 클래스입니다. 참조 [컬렉션 클래스 도우미](../../mfc/reference/collection-class-helpers.md) 의 매크로 및 전역 섹션에는 **MFC 참조**합니다.  
   
- `CMap` 재정의 [cobject:: Serialize](../../mfc/reference/cobject-class.md#serialize) serialization 및 요소 덤프를 지원 하도록 합니다. 맵을 사용 하 여 보관 파일에 저장 되는 경우 `Serialize`, 각 지도 요소 차례로 serialize 됩니다. 기본 구현에서 `SerializeElements` 도우미 함수는 비트 쓰기를 수행 합니다. 파생 된 포인터 컬렉션 항목의 직렬화에 대 한 내용은 `CObject` 다른 사용자 정의 형식을 참조 또는 [하는 방법: 형식이 안전한 컬렉션 만들기](../../mfc/how-to-make-a-type-safe-collection.md)합니다.  
+ `CMap` 재정의 [cobject:: Serialize](../../mfc/reference/cobject-class.md#serialize) serialization 및 요소 덤프를 지원 하도록 합니다. 맵을 사용 하 여 보관 파일에 저장 되는 경우 `Serialize`, 각 지도 요소 차례로 serialize 됩니다. 기본 구현 된 `SerializeElements` 도우미 함수 비트 쓰기를 수행 합니다. 파생 된 포인터 컬렉션 항목의 serialization에 대 한 정보에 대 한 `CObject` 다른 사용자 정의 형식 참조 또는 [방법: 형식이 안전한 컬렉션 만들기](../../mfc/how-to-make-a-type-safe-collection.md)합니다.  
   
- (키 및 값) 맵에서 개별 요소의 진단 덤프 해야 할 경우 덤프 컨텍스트 깊이 1 이상으로 설정 해야 합니다.  
+ 진단 덤프 (키 및 값) 구조의 개별 요소에 필요한 경우 덤프 컨텍스트 깊이 1 이상으로 설정 해야 합니다.  
   
- 경우는 `CMap` 개체를 삭제 하거나 해당 요소를 제거할 키와 값 모두 제거 됩니다.  
+ 경우는 `CMap` 개체를 삭제 하거나 해당 요소를 제거 하 고, 키 및 값 제거 됩니다.  
   
- 맵 클래스를 파생 목록 파생 하는 것과 비슷합니다. 문서 참조 [컬렉션](../../mfc/collections.md) 특수 한 용도의 목록 클래스의 파생에 대 한 예제입니다.  
+ Map 클래스를 파생 목록 파생 하는 것과 비슷합니다. 문서를 참조 하세요 [컬렉션](../../mfc/collections.md) 예시의 특수 한 용도의 목록 클래스를 파생 합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -147,11 +147,11 @@ CMap(INT_PTR nBlockSize = 10);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nBlockSize`  
- 지도 확장 하기 위한 메모리 할당 세분성을 지정 합니다.  
+ *nBlockSize*  
+ 맵을 확장 하는 것에 대 한 메모리 할당 세분성을 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
- 단위에서 메모리를 할당 지도 확장 되면서 `nBlockSize` 항목입니다.  
+ 메모리 단위에서 할당 되는 지도 늘어나면 *nBlockSize* 항목입니다.  
   
 ### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
@@ -164,14 +164,14 @@ CMap(INT_PTR nBlockSize = 10);
   
  구조는 두 가지 필드로 구성 됩니다.  
   
-- **키** 키 형식의 실제 값입니다.  
+- `key` 실제 값 키 형식입니다.  
   
-- **값** 연결된 된 개체의 값입니다.  
+- `value` 연결된 된 개체의 값입니다.  
   
- 반환 값을 저장 하는 데 사용 됩니다 [CMap::PLookup](#plookup), [CMap::PGetFirstAssoc](#pgetfirstassoc), 및 [CMap::PGetNextAssoc](#pgetnextassoc)합니다.  
+ 반환 값을 저장 하 되 [CMap::PLookup](#plookup)를 [CMap::PGetFirstAssoc](#pgetfirstassoc), 및 [CMap::PGetNextAssoc](#pgetnextassoc)합니다.  
   
 ### <a name="example"></a>예  
- 사용의 예에 대 한 예제를 참조 하십시오. [CMap::PLookup](#plookup)합니다.  
+ 사용 예에 대 한 예제를 참조 하세요 [CMap::PLookup](#plookup)합니다.  
   
 ##  <a name="getcount"></a>  CMap::GetCount  
  Map의 요소 수를 검색 합니다.  
@@ -184,10 +184,10 @@ INT_PTR GetCount() const;
  요소의 수입니다.  
   
 ### <a name="example"></a>예  
- 예를 참조 [CMap::Lookup](#lookup)합니다.  
+ 예를 참조 하세요 [CMap::Lookup](#lookup)합니다.  
   
 ##  <a name="gethashtablesize"></a>  CMap::GetHashTableSize  
- 지도 대 한 해시 테이블에 있는 요소의 수를 결정합니다.  
+ 맵에 대 한 해시 테이블에 있는 요소의 수를 결정합니다.  
   
 ```  
 UINT GetHashTableSize() const;  
@@ -200,7 +200,7 @@ UINT GetHashTableSize() const;
  [!code-cpp[NVC_MFCCollections#57](../../mfc/codesnippet/cpp/cmap-class_2.cpp)]  
   
 ##  <a name="getnextassoc"></a>  CMap::GetNextAssoc  
- 에 지도 요소를 검색 `rNextPosition`, 그런 다음 업데이트 `rNextPosition` 맵에서 다음 요소를 참조 하 합니다.  
+ 있는 지도 요소를 검색 `rNextPosition`, 다음 업데이트 `rNextPosition` 다음 지도 요소를 가리킵니다.  
   
 ```  
 void GetNextAssoc(
@@ -210,31 +210,31 @@ void GetNextAssoc(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `rNextPosition`  
- 에 대 한 참조를 지정 된 **위치** 이전에서 반환 된 값 `GetNextAssoc` 또는 `GetStartPosition` 호출 합니다.  
+ *rNextPosition*  
+ 이전 반환한 위치 값에 대 한 참조를 지정 `GetNextAssoc` 또는 `GetStartPosition` 호출 합니다.  
   
  *KEY*  
- Map의 키 유형을 지정 하는 템플릿 매개 변수  
+ 템플릿 매개 변수 맵의 키의 형식을 지정 합니다.  
   
- `rKey`  
- 검색 된 요소의 반환 된 키를 지정합니다.  
+ *rKey*  
+ 검색 된 요소는 반환 된 키를 지정합니다.  
   
  *값*  
- Map의 값의 형식을 지정 하는 템플릿 매개 변수  
+ 템플릿 매개 변수 맵의 값의 형식을 지정 합니다.  
   
- `rValue`  
- 검색 된 요소의 반환 된 값을 지정합니다.  
+ *rValue*  
+ 검색된 된 요소 반환 된 값을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 함수는 map의 모든 요소를 통해 반복 하는 데 가장 유용 합니다. 참고 위치 시퀀스 아닌지 반드시 키 값 시퀀스와 동일 합니다.  
+ 이 함수는 map의 모든 요소를 반복 하는 데 가장 유용 합니다. 않음을 유의 위치 순서 반드시 키 값 시퀀스와 동일 합니다.  
   
- 검색된 된 요소는 맵에서 마지막 다음 새 값의 경우 `rNextPosition` 로 설정 된 **NULL**합니다.  
+ 검색 된 요소가 있으면 맵의 마지막으로 다음의 새 값 *rNextPosition* NULL로 설정 됩니다.  
   
 ### <a name="example"></a>예  
- 예를 참조 [CMap::SetAt](#setat)합니다.  
+ 예를 참조 하세요 [CMap::SetAt](#setat)합니다.  
   
 ##  <a name="getsize"></a>  CMap::GetSize  
- 지도 요소 수를 반환합니다.  
+ 지도 요소 수를 반환 합니다.  
   
 ```  
 INT_PTR GetSize() const;  
@@ -250,20 +250,20 @@ INT_PTR GetSize() const;
  [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
 ##  <a name="getstartposition"></a>  CMap::GetStartPosition  
- 가 반환 하 여 맵 반복을 시작할는 **위치** 에 전달 될 수 있는 값을 `GetNextAssoc` 호출 합니다.  
+ 맵 반복을 전달할 수 있는 위치 값을 반환 하 여 시작을 `GetNextAssoc` 호출 합니다.  
   
 ```  
 POSITION GetStartPosition() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- A **위치** 지도; 반복 하기 위한 시작 위치를 나타내는 값 또는 **NULL** 맵이 비어 있는 경우.  
+ 가 맵을 반복 시작 위치를 지정 하는 위치 값 또는 맵이 비어 있으면 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
- 반복 순서는 예측할 수 없으며; 따라서 "맵 내에서 요소 첫 번째" 특별 한 의미가 없습니다.  
+ 반복 시퀀스 예측 가능한; 아닙니다. 따라서 "첫 번째 요소를 맵" 특별 한 의미가 없습니다.  
   
 ### <a name="example"></a>예  
- 예를 참조 [CMap::SetAt](#setat)합니다.  
+ 예를 참조 하세요 [CMap::SetAt](#setat)합니다.  
   
 ##  <a name="inithashtable"></a>  CMap::InitHashTable  
  해시 테이블을 초기화합니다.  
@@ -273,62 +273,62 @@ void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hashSize`  
- 해시 테이블에 있는 항목의 수입니다.  
+ *hashSize*  
+ 해시 테이블에 있는 엔트리의 수입니다.  
   
- `bAllocNow`  
- 경우 **TRUE**, 초기화; 시 해시 테이블을 할당 필요할 때 테이블 할당 되는 그렇지 않은 경우.  
+ *bAllocNow*  
+ TRUE 인 경우 초기화 시 해시 테이블을 할당 합니다. 그렇지 않은 경우 테이블은 필요할 때 할당 됩니다.  
   
 ### <a name="remarks"></a>설명  
- 최상의 성능을 얻으려면 해시 테이블 크기 소수 이어야 합니다. 충돌을 최소화 하려면 크기 해야 약 20%는 가장 큰 예상된 데이터 집합 보다 큰 합니다.  
+ 최상의 성능을 얻으려면 해시 테이블 크기에는 소수 여야 합니다. 충돌을 최소화 하려면 크기 있어야 약 20% 최대 예상된 데이터 집합 보다 큰 합니다.  
   
 ### <a name="example"></a>예  
- 예를 참조 [CMap::Lookup](#lookup)합니다.  
+ 예를 참조 하세요 [CMap::Lookup](#lookup)합니다.  
   
 ##  <a name="isempty"></a>  CMap::IsEmpty  
- 지도 비어 있는지 여부를 결정 합니다.  
+ Map이 비어 있는지 여부를 결정 합니다.  
   
 ```  
 BOOL IsEmpty() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 이 지도 요소가 포함 되어 있지 않으면 0이 아닌 그렇지 않으면 0입니다.  
+ 이 0이 아닌 지도 요소가 없는. 그렇지 않으면 0입니다.  
   
 ### <a name="example"></a>예  
- 예를 참조 [CMap::RemoveAll](#removeall)합니다.  
+ 예를 참조 하세요 [CMap::RemoveAll](#removeall)합니다.  
   
 ##  <a name="lookup"></a>  CMap::Lookup  
- 지정된 된 키에 매핑된 값을 찾습니다.  
+ 지정된 된 키에 매핑된 값을 조회 합니다.  
   
 ```  
 BOOL Lookup(ARG_KEY key, VALUE& rValue) const;  
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ARG_KEY`  
- 템플릿 매개 변수 유형을 지정 하는 `key` 값입니다.  
+ *ARG_KEY*  
+ 템플릿 매개 변수 형식을 지정 하는 *키* 값입니다.  
   
- `key`  
- 조회 되는 요소를 식별 하는 키를 지정 합니다.  
+ *key*  
+ 조회 요소를 식별 하는 키를 지정 합니다.  
   
  *값*  
- 조회 되는 값의 형식을 지정 합니다.  
+ 조회할 수 값의 형식을 지정 합니다.  
   
- `rValue`  
+ *rValue*  
  조회 값을 받습니다.  
   
 ### <a name="return-value"></a>반환 값  
- 요소가 발견 되었습니다. 0이 아닌 그렇지 않으면 0입니다.  
+ 0이 아닌 요소를 찾을 수 있습니다. 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- `Lookup` 정확 하 게 지정된 된 키와 일치 하는 키가 있는 지도 요소를 빠르게 찾기 위해 해싱 알고리즘을 사용 합니다.  
+ `Lookup` 해시 알고리즘을를 사용 하 여 신속 하 게 정확 하 게 지정된 된 키를 일치 시키는 키를 사용 하 여 지도 요소를 찾습니다.  
   
 ### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
 ##  <a name="operator_at"></a>  CMap::operator]  
- 에 대 한 편리한 대체는 `SetAt` 멤버 함수입니다.  
+ 대체 하는 편리한는 `SetAt` 멤버 함수입니다.  
   
 ```  
 VALUE& operator[](arg_key key);
@@ -336,24 +336,24 @@ VALUE& operator[](arg_key key);
   
 ### <a name="parameters"></a>매개 변수  
  *값*  
- 지도 값의 형식을 지정 하는 템플릿 매개 변수  
+ 템플릿 매개 변수를 지도 값의 형식을 지정 합니다.  
   
- `ARG_KEY`  
- 템플릿 매개 변수는 키 값의 형식을 지정 합니다.  
+ *ARG_KEY*  
+ 템플릿 매개 변수를 키 값의 형식을 지정 합니다.  
   
- `key`  
- 지도에서 값을 검색 하는 데 사용 하는 키입니다.  
+ *key*  
+ 지도에서 값을 검색 하는 데 사용 된 키입니다.  
   
 ### <a name="remarks"></a>설명  
- 따라서 대입문 (l-value)의 왼쪽에만 사용할 수 있습니다. 지정된 된 키와 지도 요소가 경우 새 요소는 생성 됩니다.  
+ 따라서 대입문 (l-value)의 왼쪽에만 사용할 수 있습니다. 지정된 된 키를 사용 하 여 지도 요소가 이면 새 요소가 만들어집니다.  
   
- 없습니다 "오른쪽" (r-value)이이 운영자에 게 해당 되므로은 실패할 가능성이 있는 지도에서 키를 찾을 수 있습니다. 사용 하 여 `Lookup` 요소 검색에 대 한 멤버 함수입니다.  
+ 경우 없음 "오른쪽" (r-value)이이 연산자에 해당 맵의 키를 찾을 수 없습니다 가능성이 있기 때문에 사용 된 `Lookup` 요소 검색에 대 한 멤버 함수입니다.  
   
 ### <a name="example"></a>예  
- 예를 참조 [CMap::Lookup](#lookup)합니다.  
+ 예를 참조 하세요 [CMap::Lookup](#lookup)합니다.  
   
 ##  <a name="pgetfirstassoc"></a>  CMap::PGetFirstAssoc  
- Map 개체의 첫 번째 항목을 반환합니다.  
+ 지도 개체의 첫 번째 항목을 반환합니다.  
   
 ```  
 const CPair* PGetFirstAssoc() const; 
@@ -361,16 +361,16 @@ CPair* PGetFirstAssoc();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 맵에서; 첫 번째 항목에 대 한 포인터 참조 [CMap::CPair](#cpair)합니다. 지도 항목이 없는 경우이 값은 **NULL**합니다.  
+ map에서 첫 번째 항목에 대 한 포인터 참조 [CMap::CPair](#cpair)합니다. 지도 항목이 없는 경우 값은 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
- Map 개체에 대 한 포인터는 첫 번째 요소를 반환 하려면이 함수를 호출 합니다.  
+ Map 개체의 첫 번째 요소에 대 한 포인터를 반환 하려면이 함수를 호출 합니다.  
   
 ### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
 ##  <a name="pgetnextassoc"></a>  CMap::PGetNextAssoc  
- 가 가리키는 지도 요소를 검색 `pAssocRec`합니다.  
+ 지도 요소를 가리키는 검색 *pAssocRec*합니다.  
   
 ```  
 const CPair *PGetNextAssoc(const CPair* pAssocRet) const;  
@@ -380,16 +380,16 @@ CPair *PGetNextAssoc(const CPair* pAssocRet);
   
 ### <a name="parameters"></a>매개 변수  
  *pAssocRet*  
- 이전에서 반환 된 맵 항목을 가리키는 [PGetNextAssoc](#pgetnextassoc) 또는 [CMap::PGetFirstAssoc](#pgetfirstassoc) 호출 합니다.  
+ 이전 반환한 맵 항목을 가리키는 [PGetNextAssoc](#pgetnextassoc) 하거나 [CMap::PGetFirstAssoc](#pgetfirstassoc) 호출 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 지도;에서 다음 항목에 대 한 포인터 참조 [CMap::CPair](#cpair)합니다. 값은 해당 요소가 맵의 마지막 이면 **NULL**합니다.  
+ 지도;에서 다음 항목에 대 한 포인터 참조 [CMap::CPair](#cpair)합니다. Map에서 마지막 요소 이면 값은 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
- Map의 모든 요소를 반복 하는이 메서드를 호출 합니다. 첫 번째 요소를 호출 하 여 검색 `PGetFirstAssoc` 는 지도에 대 한 연속 호출은을 반복 하 고 `PGetNextAssoc`합니다.  
+ Map의 모든 요소를 반복 하려면이 메서드를 호출 합니다. 호출 하 여 첫 번째 요소를 검색할 `PGetFirstAssoc` 다음에 대 한 연속 호출을 사용 하 여 map을 반복 하 고 `PGetNextAssoc`입니다.  
   
 ### <a name="example"></a>예  
- 예를 참조 [CMap::PGetFirstAssoc](#pgetfirstassoc)합니다.  
+ 예를 참조 하세요 [CMap::PGetFirstAssoc](#pgetfirstassoc)합니다.  
   
 ##  <a name="plookup"></a>  CMap::PLookup  
  지정된 된 키에 매핑된 값을 찾습니다.  
@@ -400,27 +400,27 @@ CPair* PLookup(ARG_KEY key);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `key`  
+ *key*  
  검색할 요소의 키입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 키 구조;에 대 한 포인터 참조 [CMap::CPair](#cpair)합니다. 일치 없을 경우 `CMap::PLookup` 반환 `NULL`합니다.  
+ 키 구조에 대 한 포인터 참조 [CMap::CPair](#cpair)합니다. 일치 하는 항목이 없으면 `CMap::PLookup` NULL을 반환 합니다.  
   
 ### <a name="remarks"></a>설명  
- 지정된 된 키를 정확 하 게 일치 하는 키를 사용 하 여 지도 요소에 대 한 검색 하려면이 메서드를 호출 합니다.  
+ 지도 요소를 정확 하 게 지정된 된 키와 일치 하는 키를 검색 하려면이 메서드를 호출 합니다.  
   
 ### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#60](../../mfc/codesnippet/cpp/cmap-class_5.cpp)]  
   
 ##  <a name="removeall"></a>  CMap::RemoveAll  
- 전역 도우미 함수를 호출 하 여 모든 값이 맵에서 제거 **DestructElements**합니다.  
+ 전역 도우미 함수를 호출 하 여 모든 값이 맵에서 제거 `DestructElements`합니다.  
   
 ```  
 void RemoveAll();
 ```  
   
 ### <a name="remarks"></a>설명  
- 함수는 맵이 비어 이미 경우 제대로 작동 합니다.  
+ 맵이 비어 이미 경우 함수가 제대로 작동 합니다.  
   
 ### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#61](../../mfc/codesnippet/cpp/cmap-class_6.cpp)]  
@@ -433,43 +433,43 @@ BOOL RemoveKey(ARG_KEY key);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ARG_KEY`  
- 키의 형식을 지정 하는 템플릿 매개 변수  
+ *ARG_KEY*  
+ 템플릿 매개 변수는 키의 형식을 지정 합니다.  
   
- `key`  
+ *key*  
  제거할 요소의 키입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 항목을 찾아 제거 되었으면 0이 아닌 그렇지 않으면 0입니다.  
+ 0이 아닌 항목을 찾아 제거 했습니다. 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- **DestructElements** 도우미 함수를 사용 하는 항목을 제거 합니다.  
+ `DestructElements` 도우미 함수는 항목을 제거 하는 데 사용 됩니다.  
   
 ### <a name="example"></a>예  
- 예를 참조 [CMap::SetAt](#setat)합니다.  
+ 예를 참조 하세요 [CMap::SetAt](#setat)합니다.  
   
 ##  <a name="setat"></a>  CMap::SetAt  
- 기본 지도에 요소를 삽입 하려면 의미 합니다.  
+ 기본 맵에서 요소를 삽입 한다는 의미입니다.  
   
 ```  
 void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `ARG_KEY`  
- 템플릿 매개 변수 유형을 지정 하는 `key` 매개 변수입니다.  
+ *ARG_KEY*  
+ 템플릿 매개 변수 형식을 지정 하는 *키* 매개 변수입니다.  
   
- `key`  
+ *key*  
  새 요소의 키를 지정합니다.  
   
- `ARG_VALUE`  
- 템플릿 매개 변수 유형을 지정 하는 `newValue` 매개 변수입니다.  
+ *ARG_VALUE*  
+ 템플릿 매개 변수 형식을 지정 하는 *newValue* 매개 변수입니다.  
   
- `newValue`  
+ *newValue*  
  새 요소의 값을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
- 첫째, 키가 찾습니다. 키가 있으면 해당 값이 변경 됩니다; 그런 다음 그렇지 않으면 새 키-값 쌍이 생성 됩니다.  
+ 먼저 키를 찾습니다. 키가 있으면 해당 값이 변경 됩니다; 그런 다음 그렇지 않은 경우 새 키-값 쌍이 생성 됩니다.  
   
 ### <a name="example"></a>예  
  [!code-cpp[NVC_MFCCollections#62](../../mfc/codesnippet/cpp/cmap-class_7.cpp)]  

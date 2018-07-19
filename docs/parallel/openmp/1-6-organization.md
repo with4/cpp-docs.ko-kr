@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686115"
 ---
 # <a name="16-organization"></a>1.6 조직
 -   런타임 라이브러리 함수 ([3 장 참조](../../parallel/openmp/3-run-time-library-functions.md)).  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881707"
 ---
 # <a name="open-ltdevicegt-image-dialog-box-image-editor-for-icons"></a>열기 &lt;장치&gt; 이미지 대화 상자 (아이콘에 대 한 이미지 편집기)
 이 대화 상자를 사용 하 여 장치 이미지를 엽니다. 현재 리소스 (현재 리소스의 일부인 이미지)에 기존 장치 이미지를 나열 합니다.  

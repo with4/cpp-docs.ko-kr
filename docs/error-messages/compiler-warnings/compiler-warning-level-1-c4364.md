@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283763"
 ---
 # <a name="compiler-warning-level-1-c4364"></a>컴파일러 경고(수준 1) C4364
 \#as_friend 특성 없이 location(line_number)에서 이전에 표시 하는 ' file' 어셈블리에 대 한 사용 하 여 as_friend 적용 되지 않습니다  

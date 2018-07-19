@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32364023"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>C/C++ side-by-side 어셈블리 빌드
 A [side-by-side-어셈블리](http://msdn.microsoft.com/library/windows/desktop/ff951640) 리소스의 컬렉션은-Dll, windows 클래스, COM 서버, 형식 라이브러리 또는 인터페이스 그룹-런타임 시 사용 하도록 응용 프로그램에 사용할 수 있습니다. 어셈블리에 Dll을 다시 패키지의 주요 이점은 동시에 응용 프로그램에서 여러 버전의 어셈블리를 사용할 수 있습니다 및 현재 설치 된 서비스 업데이트가 릴리스되는 어셈블리 수입니다.  

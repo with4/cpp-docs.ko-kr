@@ -50,11 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa188930f6fe80d26282252ef3aae875aa19922f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0966faee52febce026028fc6a93e611983ff61cb
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37853581"
 ---
 # <a name="cmfcribboncolorbutton-class"></a>CMFCRibbonColorButton 클래스
 `CMFCRibbonColorButton` 클래스는 리본 표시줄에 추가할 수 있는 색 단추를 구현합니다. 리본 색 단추는 하나 이상의 색상표가 포함된 드롭다운 메뉴를 표시합니다.  
@@ -97,7 +98,7 @@ class CMFCRibbonColorButton : public CMFCRibbonGallery
 ## <a name="remarks"></a>설명  
  리본 색 단추는 사용자가 누를 때 색 막대를 표시합니다. 기본적으로 이 색 막대에는 일반 색 영역이라는 색 선택 색상표가 포함되어 있습니다. 필요에 따라 색 막대에 기본 색을 선택할 수 있는 **자동** 단추와 추가 색이 포함된 팝업 색상표를 표시하는 **기타** 단추가 표시될 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `CMFCRibbonColorButton` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 이 예제에서는 `CMFCRibbonColorButton` 개체 생성, 큰 이미지 설정, **자동** 단추 사용, **기타** 단추 사용, 열 수 설정, 색 막대에 표시되는 모든 색 요소의 크기 설정, 일반 색 영역에 색 그룹 추가, 문서 색 영역에 표시할 RGB 값 목록 지정 등을 수행하는 방법을 보여 줍니다. 이 코드 조각은 [클라이언트 그리기 샘플](../../visual-cpp-samples.md)의 일부입니다.  
   
  [!code-cpp[NVC_MFC_DrawClient#3](../../mfc/reference/codesnippet/cpp/cmfcribboncolorbutton-class_1.cpp)]  
@@ -127,17 +128,17 @@ void AddColorsGroup(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszName`  
+ [in] *lpszName*  
  그룹 이름입니다.  
   
- [in] `lstColors`  
- 색 목록입니다.  
+ [in] *lstColors*  
+ 색의 목록입니다.  
   
- [in] `bContiguousColumns`  
- 색 항목 그룹에 표시 되는 방식을 제어 합니다. 경우 `TRUE`, 해당 색 항목 세로 간격 없이 그려집니다. 경우 `FALSE`, 해당 색 항목 세로 간격으로 그려집니다.  
+ [in] *bContiguousColumns*  
+ 색 항목 그룹에 표시 되는 방식을 제어 합니다. True 이면 세로 간격 없이 색 항목 그려집니다. FALSE 인 경우 해당 색 항목 세로 간격을 사용 하 여 그려집니다.  
   
 ### <a name="remarks"></a>설명  
- 이 팝업 색으로 기능을 사용 하 여 색의 여러 그룹을 표시 합니다. 색이 그룹에 표시 되는 방식을 제어할 수 있습니다.  
+ 이 함수 팝업 색으로 사용 하 여 색의 여러 그룹을 표시 합니다. 색 그룹의 표시 되는 방식을 제어할 수 있습니다.  
   
 ##  <a name="cmfcribboncolorbutton"></a>  CMFCRibbonColorButton::CMFCRibbonColorButton  
  `CMFCRibbonColorButton` 개체를 생성합니다.  
@@ -163,23 +164,23 @@ CMFCRibbonColorButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nID`  
+ [in] *nID*  
  단추를 클릭할 때 실행할 명령의 명령 ID를 지정 합니다.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  단추에 표시할 텍스트를 지정 합니다.  
   
- [in] `nSmallImageIndex`  
+ [in] *nSmallImageIndex*  
  단추에 표시할 작은 이미지의 0부터 시작 하는 인덱스입니다.  
   
- [in] `color`  
- (기본값은 검정) 단추의 색입니다.  
+ [in] *색*  
+ 색 단추 (기본값은 검정)입니다.  
   
- [in] `bSimpleButtonLook`  
- 경우 `TRUE`, 단추 간단한 사각형으로 그려집니다.  
+ [in] *bSimpleButtonLook*  
+ True 이면 단추는 간단한 사각형으로 그려집니다.  
   
- [in] `nLargeImageIndex`  
- 큰 단추에 표시할 이미지의 0부터 시작 하는 인덱스입니다.  
+ [in] *nLargeImageIndex*  
+ 단추에 표시할 큰 이미지의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -199,23 +200,23 @@ void EnableAutomaticButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszLabel`  
- 에 대 한 레이블은 **자동** 단추입니다.  
+ [in] *lpszLabel*  
+ 레이블 합니다 **자동** 단추입니다.  
   
- [in] `colorAutomatic`  
- RGB 값을 지정 하는 **자동** 버튼의 기본 색입니다.  
+ [in] *colorAutomatic*  
+ RGB 값을 지정 하는 **자동** 단추의 기본 색입니다.  
   
- [in] `bEnable`  
- `TRUE` 경우는 **자동** 단추를 사용할 수 있습니다. `FALSE` 해제 된 경우.  
+ [in] *bEnable*  
+ TRUE 이면 합니다 **자동** 단추를 사용할 수 있습니다. 비활성화 된 경우 FALSE입니다.  
   
- [in] `lpszToolTip`  
- 도구 설명에서 **자동** 단추입니다.  
+ [in] *lpszToolTip*  
+ 도구 설명을 합니다 **자동** 단추입니다.  
   
- [in] `bOnTop`  
+ [in] *bOnTop*  
  지정 여부는 **자동** 색상표 전에 맨 위에 있는 단추는 합니다.  
   
- [in] `bDrawBorder`  
- `TRUE` 이면 응용 프로그램 리본 색 단추 색 막대 주위에 테두리를 가져옵니다. 색 막대는 현재 선택한 색을 표시합니다. `FALSE` 응용 프로그램에 테두리를 그리지 않습니다 하는 경우  
+ [in] *bDrawBorder*  
+ TRUE 이면 응용 프로그램 리본 색 단추 색 막대 주위에 테두리를 가져옵니다. 색 막대에는 현재 선택한 색을 표시합니다. 응용 프로그램에 테두리를 그립니다 하지 않는 경우 FALSE입니다.  
   
 ##  <a name="enableotherbutton"></a>  CMFCRibbonColorButton::EnableOtherButton  
  **기타** 단추를 사용하도록 설정합니다.  
@@ -227,14 +228,14 @@ void EnableOtherButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszLabel`  
- 단추의 레이블입니다.  
+ *lpszLabel*  
+ 버튼의 레이블은 합니다.  
   
- `lpszToolTip`  
- 에 대 한 도구 설명 텍스트는 **다른** 단추입니다.  
+ *lpszToolTip*  
+ 에 대 한 도구 설명 텍스트를 **다른** 단추입니다.  
   
 ### <a name="remarks"></a>설명  
- **다른** 단추가 색의 그룹 아래에 표시 된 단추입니다. 사용자가 클릭할 때는 **다른** 단추, 색 대화 상자를 표시 합니다.  
+ 합니다 **다른** 단추가 색 그룹 아래에 표시 된 단추입니다. 클릭할 때 합니다 **다른** 단추 색 대화 상자를 표시 합니다.  
   
 ##  <a name="getautomaticcolor"></a>  CMFCRibbonColorButton::GetAutomaticColor  
  현재 자동 단추의 색을 검색합니다.  
@@ -244,10 +245,10 @@ COLORREF GetAutomaticColor() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 현재 자동 단추의 색을 나타내는 RGB 색상 값입니다.  
+ 현재 자동 단추 색을 나타내는 RGB 색 값입니다.  
   
 ### <a name="remarks"></a>설명  
- 자동 단추의 색으로 설정 됩니다는 `colorAutomatic` 에 전달 된 매개 변수는 `CMFCRibbonColorButton::EnableAutomaticButton` 메서드.  
+ 자동 단추 색으로 설정 됩니다는 `colorAutomatic` 전달 된 매개 변수는 `CMFCRibbonColorButton::EnableAutomaticButton` 메서드.  
   
 ##  <a name="getcolor"></a>  CMFCRibbonColorButton::GetColor  
  현재 선택된 색을 반환합니다.  
@@ -267,10 +268,10 @@ CSize GetColorBoxSize() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 드롭 다운 색상표의 색 단추의 크기입니다.  
+ 드롭 다운 색상표의 색 단추 크기입니다.  
   
 ##  <a name="getcolumns"></a>  CMFCRibbonColorButton::GetColumns  
- 리본 색 단추는 갤러리 디스플레이의 행의 항목 수를 가져옵니다.  
+ 리본 색 단추는 갤러리 표시 행의 항목 수를 가져옵니다.  
   
 ```  
 int GetColumns() const;  
@@ -306,8 +307,8 @@ void SetColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `color`  
- 설정 하는 색입니다.  
+ [in] *색*  
+ 색을 설정 합니다.  
   
 ##  <a name="setcolorboxsize"></a>  CMFCRibbonColorButton::SetColorBoxSize  
  색 막대에 표시되는 모든 색 요소의 크기를 설정합니다.  
@@ -317,8 +318,8 @@ void SetColorBoxSize(CSize sizeBox);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `sizeBox`  
- 색상표의 색 단추의 새 크기입니다.  
+ [in] *sizeBox*  
+ 색상표의 색 단추 새 크기입니다.  
   
 ##  <a name="setcolorname"></a>  CMFCRibbonColorButton::SetColorName  
  지정 된 색에 대 한 새 이름을 설정합니다.  
@@ -330,24 +331,24 @@ static void __stdcall SetColorName(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `color`  
+ [in] *색*  
  색의 RGB 값입니다.  
   
- [in] `strName`  
+ [in] *strName*  
  지정된 된 색에 대 한 새 이름입니다.  
   
 ### <a name="remarks"></a>설명  
- 호출 하므로 `CMFCColorBar::SetColorName`,이 메서드는 모든 페이지에서 지정된 된 색의 이름 변경 `CMFCColorBar` 응용 프로그램의 개체입니다.  
+ 호출 하므로 `CMFCColorBar::SetColorName`,이 메서드는 모든 지정된 된 색의 이름 변경 `CMFCColorBar` 응용 프로그램의 개체입니다.  
   
 ##  <a name="setcolumns"></a>  CMFCRibbonColorButton::SetColumns  
- 사용자의 색 선택 프로세스 중 사용자에 게 제공 되는 색의 테이블에 표시 되는 열의 수를 설정 합니다.  
+ 사용자의 색 선택 프로세스 중 사용자에 게 표시 되는 색의 표에 표시 된 열의 수를 설정 합니다.  
   
 ```  
 void SetColumns(int nColumns);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nColumns`  
+ [in] *nColumns*  
  각 행에 표시 하려면 색 아이콘의 수입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -362,21 +363,21 @@ void SetDocumentColors(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszLabel`  
- 문서 색으로 표시 될 텍스트입니다.  
+ [in] *lpszLabel*  
+ 문서 색으로 표시할 텍스트입니다.  
   
- [in] `lstColors`  
+ [in] *lstColors*  
  RGB 값 목록에 대 한 참조입니다.  
   
 ##  <a name="setpalette"></a>  CMFCRibbonColorButton::SetPalette  
- 색 단추를 표시 하는 색 테이블에 표시할 표준 색을 지정 합니다.  
+ 표준 색상표 색 단추를 표시 하는 표시할 색을 지정 합니다.  
   
 ```  
 void SetPalette(CPalette* pPalette);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pPalette`  
+ [in] *pPalette*  
  색상표에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -389,11 +390,11 @@ void UpdateColor(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `color`  
+ [in] *색*  
  사용자가 선택한 색입니다.  
   
 ### <a name="remarks"></a>설명  
- `CMFCRibbonColorButton::UpdateColor` 메서드 현재 선택 된 단추의 색을 변경 하 고 전송 하 여 해당 부모에 게 알리는 `WM_COMMAND` 메시지는 `BN_CLICKED` 표준 알림. 사용 하 여는 [CMFCRibbonColorButton::GetColor](#getcolor) 선택한 색을 검색 하는 메서드입니다.  
+ `CMFCRibbonColorButton::UpdateColor` 메서드 현재 선택한 단추의 색을 변경 하 고 BN_CLICKED 표준 알림이 WM_COMMAND 메시지를 보내 해당 부모에 알립니다. 사용 된 [CMFCRibbonColorButton::GetColor](#getcolor) 선택한 색을 검색 하는 방법입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [계층 구조 차트](../../mfc/hierarchy-chart.md)   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294195"
 ---
 # <a name="compiler-warning-levels-1-and-4-c4115"></a>컴파일러 경고(수준 1 및 4) C4115
 'type': 괄호 안에 명명된 형식 정의가 있습니다.  

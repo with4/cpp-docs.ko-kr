@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243782"
 ---
 # <a name="compiler-error-c3096"></a>컴파일러 오류 C3096
 'attribute': 특성은 특성 클래스의 데이터 멤버에만 허용됩니다.  

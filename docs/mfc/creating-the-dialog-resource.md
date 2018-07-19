@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342087"
 ---
 # <a name="creating-the-dialog-resource"></a>대화 상자 리소스 만들기
 디자인 하기 위해는 [대화 상자](../mfc/dialog-boxes.md) 대화 상자 리소스를 사용 하 고는 [대화 상자 편집기](../windows/dialog-editor.md)합니다. 대화 상자 편집기에서는 다음을 수행할 수 있습니다.  

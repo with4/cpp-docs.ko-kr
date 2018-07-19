@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136677"
 ---
 # <a name="how-to-use-safecast-in-ccli"></a>방법: C++/CLI에서 safe_cast 사용
 이 문서에서는 C + safe_cast를 사용 하는 방법을 보여 줍니다. + /CLI 응용 프로그램입니다. safe_cast에 대 한 내용은 [!INCLUDE[cppwrt_short](../build/reference/includes/cppwrt_short_md.md)], 참조 [safe_cast](../windows/safe-cast-cpp-component-extensions.md)합니다.  

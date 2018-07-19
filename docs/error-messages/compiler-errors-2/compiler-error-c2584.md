@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231075"
 ---
 # <a name="compiler-error-c2584"></a>컴파일러 오류 C2584
 'Class': 직접 기본 '2 '했습니다. 액세스할 수 있음 이미 'Base1'의 기본  

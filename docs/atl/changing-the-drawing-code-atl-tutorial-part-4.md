@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358914"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>그리기 코드 변경(ATL 자습서, 4부)
 기본적으로 컨트롤의 그리기 코드가 표시 사각형 및 텍스트 **PolyCtl**합니다. 이 단계에서는 좀 더 재미 있게 표시 하는 코드를 변경 합니다. 다음 작업은 다음과 같습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298131"
 ---
 # <a name="c-runtime-error-r6026"></a>C 런타임 오류 R6026
 stdio 초기화에 필요한 공간이 부족 합니다.  

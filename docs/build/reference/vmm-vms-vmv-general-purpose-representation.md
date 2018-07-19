@@ -34,6 +34,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379564"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms, /vmv(일반적인 용도 표시)
 경우에 사용 [/vmb, /vmg (표시 메서드)](../../build/reference/vmb-vmg-representation-method.md) 으로 선택한는 [표시 메서드](../../build/reference/vmb-vmg-representation-method.md)합니다. 이러한 옵션 아직 발생 하지 않은 클래스 정의의 상속 모델을 나타냅니다.  

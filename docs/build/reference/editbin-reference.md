@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372310"
 ---
 # <a name="editbin-reference"></a>EDITBIN 참조
 Microsoft COFF Binary 파일 편집기 (EDITBIN 합니다. EXE) 파일 형식 COFF (공용 개체) 이진 파일을 수정 합니다. 개체 파일, 실행 파일 및 동적 연결 라이브러리 (DLL)를 수정 하려면 EDITBIN를 사용할 수 있습니다.  

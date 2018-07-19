@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27f5585ec334a4179b76579c5216c8c30013ca97
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 784551b090f7c0c73b96b846fcc8d74017cc1e30
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37850643"
 ---
 # <a name="commandhandler"></a>CommandHandler
-`CommandHandler` 세 번째 매개 변수로 식별 된 함수는 `COMMAND_HANDLER` 메시지 맵에서 매크로입니다.  
+`CommandHandler` 메시지 맵에 COMMAND_HANDLER 매크로의 세 번째 매개 변수로 식별 된 함수입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/03/2018
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `wNotifyCode`  
+ *wNotifyCode*  
  알림 코드입니다.  
   
  *wID*  
@@ -48,14 +49,14 @@ ms.lasthandoff: 05/03/2018
  *hWndCtl*  
  창 컨트롤에 대 한 핸들입니다.  
   
- `bHandled`  
- 메시지 맵 집합 `bHandled` 를 **TRUE** 전에 `CommandHandler` 호출 됩니다. 경우 `CommandHandler` 메시지를 완전히 처리 하지 않는 설정 해야 `bHandled` 를 **FALSE** 를 나타내는 메시지에 추가 처리가 필요 합니다.  
+ *bHandled*  
+ 메시지 맵 집합 *bHandled* 하기 전에 true `CommandHandler` 라고 합니다. 경우 `CommandHandler` 메시지를 완전히 처리 하지 않는 설정 해야 *bHandled* 에 FALSE를 메시지에 추가 처리가 필요 합니다.  
   
 ## <a name="return-value"></a>반환 값  
- 메시지 처리의 결과입니다. 성공 하면 0입니다.  
+ 메시지 처리의 결과입니다. 성공한 경우 0입니다.  
   
 ## <a name="remarks"></a>설명  
- 이 메시지 처리기를 사용 하 여 메시지 맵에서 예제를 보려면 [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)합니다.  
+ 메시지 맵에서이 메시지 처리기를 사용 하 여 예제를 참조 하세요 [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [창 구현](../atl/implementing-a-window.md)   

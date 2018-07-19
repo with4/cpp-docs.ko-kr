@@ -39,6 +39,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451812"
 ---
 # <a name="security-features-in-the-crt"></a>CRT의 보안 기능
 이전 CRT 함수 중 상당수에 더 안전한 최신 버전이 있습니다. 안전한 함수가 있을 경우 보안 수준이 떨어지는 이전 버전이 사용되지 않는 것으로 표시되고 새 버전에 `_s`("안전함") 접미사가 붙습니다.  

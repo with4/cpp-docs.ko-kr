@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291361"
 ---
 # <a name="compiler-warning-level-2-c4250"></a>컴파일러 경고(수준 2) C4250
 'class1': 'class2::member' 우위를 통해 상속  

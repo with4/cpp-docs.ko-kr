@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f71ea63fbb0fa11f470061ea5ee141d0c3b2bfb3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c2d26ecc120565556651057b764a5fdd7ae64d43
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958255"
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator 클래스
 
@@ -44,9 +45,9 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="parameters"></a>매개 변수
 
-`CharType` Ostreambuf_iterator의 문자 형식을 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 `char`입니다.
+*CharType* ostreambuf_iterator의 문자 형식을 나타내는 형식입니다. 이 인수는 선택 사항이 며 기본값은 **char**합니다.
 
-`Traits` Ostreambuf_iterator의 문자 형식을 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 `char_traits`\< *CharType>입니다.*
+*특성* ostreambuf_iterator의 문자 형식을 나타내는 형식입니다. 이 인수는 선택 사항이며 기본값은 `char_traits`\< *CharType>입니다.*
 
 ## <a name="remarks"></a>설명
 
@@ -97,9 +98,9 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 템플릿 매개 변수 **CharType**의 동의어입니다.
+이 형식은 템플릿 매개 변수 `CharType`의 동의어입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // ostreambuf_iterator_char_type.cpp
@@ -153,7 +154,7 @@ bool failed() const throw();
 
 구성원 함수는 이전에 구성원 `operator=`를 사용할 때 **subf**_-> `sputc` 호출에서 **eof**가 반환된 경우 **true**를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // ostreambuf_iterator_failed.cpp
@@ -204,7 +205,7 @@ ostreambuf 반복기 개체입니다.
 
 이 연산자는 스트림 버퍼로 문자를 출력하기 위한 출력 반복기 식 \* *i* = *x*에서만 작동합니다. ostreambut 반복기에 적용하는 경우 반복기가 반환되며 **\*iter**에서는 **iter**을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // ostreambuf_iterator_op_deref.cpp
@@ -252,7 +253,7 @@ ostreambuf_iterator<CharType, Traits>& operator++(int);
 
 연산자는 출력 반복기 식 \* *i* = *x*를 구현하는 데 사용됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // ostreambuf_iterator_op_incr.cpp
@@ -293,7 +294,7 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Char` 스트림 버퍼에 삽입 되는 문자입니다.
+*_Char* 스트림 버퍼에 삽입할 문자입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -303,7 +304,7 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 출력 스트림에 쓰기 위해 출력 반복기 식 \* *i* = *x*를 구현하는 데 사용된 할당 연산자입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // ostreambuf_iterator_op_assign.cpp
@@ -345,17 +346,17 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 
 ### <a name="parameters"></a>매개 변수
 
-`strbuf` 출력 스트림 버퍼 포인터를 초기화 하는 데 사용 되는 출력 streambuf 개체입니다.
+*strbuf* 출력 스트림 버퍼 포인터를 초기화 하는 데는 출력 streambuf 개체입니다.
 
-`Ostr` 출력 스트림 개체를 출력 스트림 버퍼 포인터를 초기화 하는 데 사용 합니다.
+*Ostr* 출력 스트림 버퍼 포인터를 초기화 하는 데 사용 하는 출력 스트림 개체입니다.
 
 ### <a name="remarks"></a>설명
 
-첫 번째 생성자는 `strbuf`로 출력 스트림 버퍼 포인터를 초기화합니다.
+첫 번째 생성자는 초기화로 출력 스트림 버퍼 포인터 *strbuf*합니다.
 
 두 번째 생성자는 `Ostr`로 출력 스트림 버퍼 포인터를 초기화합니다. `rdbuf`. 저장된 포인터는 null 포인터가 아니어야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // ostreambuf_iteratorOstreambuf_iterator.cpp
@@ -400,7 +401,7 @@ typedef basicOstream<CharType, Traits> ostream_type;
 
 이 형식은 `basicOstream`\< **CharType**, **Traits**>와 동일한 의미입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `ostream_type`을 선언하고 사용하는 방법의 예제는 [ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator)를 참조하세요.
 
@@ -414,9 +415,9 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 문자 형식 `char`로 특수화하면 `streambuf`가 되는 I/O 버퍼에 대한 스트림 클래스인 `basic_streambuf`\< **CharType**, **Traits**>와 동일한 의미입니다.
+형식에 대 한 동의어가 `basic_streambuf` \< **CharType**, **Traits**>, 되는 I/O 버퍼에 대 한 스트림 클래스인 `streambuf` 문자형식에특수화된경우**char**합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `streambuf_type`을 선언하고 사용하는 방법의 예제는 [ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator)를 참조하세요.
 
@@ -430,9 +431,9 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 템플릿 매개 변수 **Traits**와 동일한 의미입니다.
+이 형식은 템플릿 매개 변수 `Traits`의 동의어입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // ostreambuf_iterator_traits_type.cpp

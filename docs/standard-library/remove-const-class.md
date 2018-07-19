@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b9aaae690acd372e8482ac8a0e33a14e030e4b3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 3c0eaf8eeab1c5d9c024baa85af025f2294956e8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38959286"
 ---
 # <a name="removeconst-class"></a>remove_const 클래스
 
@@ -41,13 +42,13 @@ using remove_const_t = typename remove_const<T>::type;
 
 ### <a name="parameters"></a>매개 변수
 
-`T` 수정할 형식입니다.
+*T* 수정할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-`remove_const<T>`의 인스턴스는 `T1`가 `T` 형식인 경우 수정된 형식인 `const T1`을 보관하고, 그렇지 않은 경우 `T`를 보관합니다.
+인스턴스의 `remove_const<T>` 는 형식인 수정 된 `T1` 때 *T* 형식인 `const T1`고, 그렇지 않으면 *T*합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 #include <type_traits>

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345643"
 ---
 # <a name="orchestrating-other-window-actions"></a>기타 창 작업 조정
 프레임 창 상황에 맞는 도움말 같은 세미 모달 상태를 조정 하 고 인쇄 미리 보기. 인쇄 미리 보기에서 프레임 창은 역할에 대 한 참조 [인쇄 및 인쇄 미리 보기](../mfc/printing-and-print-preview.md)합니다.  

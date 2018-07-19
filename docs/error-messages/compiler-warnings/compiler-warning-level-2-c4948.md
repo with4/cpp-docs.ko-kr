@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296213"
 ---
 # <a name="compiler-warning-level-2-c4948"></a>컴파일러 경고(수준 2) C4948
 '접근자'의 반환 형식은 해당 setter의 마지막 매개 변수 형식과 일치 하지 않습니다.  

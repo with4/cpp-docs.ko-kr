@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382811"
 ---
 # <a name="messages-generated-by-the-perror-function"></a>perror 함수에서 생성된 메시지
 **ANSI 4.9.10.4** `perror` 함수가 생성하는 메시지  

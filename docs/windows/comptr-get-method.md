@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870730"
 ---
 # <a name="comptrget-method"></a>ComPtr::Get 메서드
 이 ComPtr과 연결된 인터페이스에 대한 포인터를 검색합니다.  

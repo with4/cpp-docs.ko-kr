@@ -1,5 +1,5 @@
 ---
-title: 메시지 구조 1 | Microsoft Docs
+title: MSG 구조체 1 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 41dbbcdd3404705a9ac7c6c7969a9ebeeb0238f8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5fe629c2f279b6b258f4824229490f7b72b4ce4d
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338814"
 ---
-# <a name="msg-structure1"></a>메시지 구조 1
-`MSG` 구조는 스레드의 메시지 큐에서 메시지 정보를 포함 합니다.  
+# <a name="msg-structure1"></a>MSG 구조체 1
+`MSG` 구조 스레드의 메시지 큐에서 메시지 정보를 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,20 +43,20 @@ typedef struct tagMSG {     // msg
  *hwnd*  
  창 메시지를 수신 하는 창 프로시저를 식별 합니다.  
   
- `message`  
+ *message*  
  메시지 번호를 지정합니다.  
   
- `wParam`  
- 메시지에 대 한 추가 정보를 지정 합니다. 값에 따라 정확한 의미는 **메시지** 멤버입니다.  
+ *wParam*  
+ 메시지에 대 한 추가 정보를 지정합니다. 값에 따라 정확한 의미는 `message` 멤버입니다.  
   
- `lParam`  
- 메시지에 대 한 추가 정보를 지정 합니다. 값에 따라 정확한 의미는 **메시지** 멤버입니다.  
+ *lParam*  
+ 메시지에 대 한 추가 정보를 지정합니다. 값에 따라 정확한 의미는 `message` 멤버입니다.  
   
- `time`  
+ *time*  
  메시지가 게시 된 시간을 지정 합니다.  
   
- `pt`  
- 메시지 게시 될 때 커서 위치 화면 좌표를 지정 합니다.  
+ *(태평양 표준시)*  
+ 메시지가 게시 될 때 화면 좌표에서 커서 위치를 지정 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** winuser.h  

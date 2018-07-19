@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33263290"
 ---
 # <a name="compiler-error-c3275"></a>컴파일러 오류 C3275
 'enum member': 한정자 없이 이 기호를 사용할 수 없습니다.  

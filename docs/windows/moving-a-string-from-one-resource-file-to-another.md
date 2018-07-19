@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879271"
 ---
 # <a name="moving-a-string-from-one-resource-file-to-another"></a>리소스 파일 사이의 문자열 이동
 ### <a name="to-move-a-string-from-one-resource-script-file-to-another"></a>문자열을 하나의 리소스 스크립트 파일에서 다른 컴퓨터로 이동 하려면  

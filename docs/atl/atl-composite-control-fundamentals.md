@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354619"
 ---
 # <a name="atl-composite-control-fundamentals"></a>ATL 합성 컨트롤 기본 사항
 복합 컨트롤은 ActiveX 컨트롤 (대화 상자와 유사)를 포함할 수 있는 종류의 다른 ActiveX 컨트롤 또는 Windows 컨트롤입니다. 복합 컨트롤으로 빌드하고 나면 삽입할 수 원하는 위치에 ActiveX 컨트롤을 호스팅할 수 있습니다.  

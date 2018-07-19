@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094373"
 ---
 # <a name="type-system-ccx"></a>형식 시스템(C++/CX)
 Windows 런타임 아키텍처를 사용 하 여 다음을 사용할 수 있습니다 C + + /CX, Visual Basic, Visual C# 및 JavaScript 앱과 직접 Windows API에 액세스 하 고 다른 Windows 런타임 앱 및 구성 요소와 상호 운용 하는 구성 요소를 쓸 수 있습니다. C + +로 작성 된 유니버설 Windows 플랫폼 앱은 CPU에서 직접 실행 하는 네이티브 코드로 컴파일됩니다. C# 또는 Visual Basic로 작성 하는 유니버설 Windows 플랫폼 앱 Microsoft MSIL (intermediate language)로 컴파일되고 공용 언어 런타임 (CLR)에서 실행 됩니다. JavaScript로 작성 된 유니버설 Windows 플랫폼 앱 런타임 환경에서 실행 됩니다. Windows 런타임 운영 체제 구성 요소 자체는 c + +에서 작성 되 고 네이티브 코드로 실행 합니다. 이러한 구성 요소 및 유니버설 Windows 플랫폼 앱의 모든 Windows 런타임 응용 프로그램 이진 인터페이스 ABI ()를 통해 직접 통신합니다.  

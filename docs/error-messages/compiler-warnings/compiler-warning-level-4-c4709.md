@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295320"
 ---
 # <a name="compiler-warning-level-4-c4709"></a>컴파일러 경고(수준 4) C4709
 배열 인덱스 식 내에 쉼표 연산자  

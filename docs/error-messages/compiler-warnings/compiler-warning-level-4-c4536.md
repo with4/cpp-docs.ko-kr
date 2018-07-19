@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302310"
 ---
 # <a name="compiler-warning-level-4-c4536"></a>컴파일러 경고(수준 4) C4536
 'type name': 형식-이름이 메타 데이터 한계인 '한계' 자 초과 합니다  

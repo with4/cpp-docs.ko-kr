@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385578"
 ---
 # <a name="truncation-of-text-files"></a>텍스트 파일 잘라내기
 **ANSI 4.9.3** 텍스트 스트림에서 쓰기가 해당 지점을 벗어난 관련 파일을 잘라내는지 여부  

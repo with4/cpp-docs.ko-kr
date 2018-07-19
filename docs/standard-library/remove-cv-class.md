@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb046dfbc01a4a65a565d8d9aa6b012bbde1d9e6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b14733ea906fa47e7339c23efb8942763e928828
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956311"
 ---
 # <a name="removecv-class"></a>remove_cv 클래스
 
@@ -39,13 +40,13 @@ using remove_cv_t = typename remove_cv<T>::type;
 
 ### <a name="parameters"></a>매개 변수
 
-`T` 수정할 형식입니다.
+*T* 수정할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-`remove_cv<T>`의 인스턴스는 `T1`가 `T`, `const T1` 또는 `volatile T1` 형식인 경우 수정된 형식인 `const volatile T1`을 보관하며, 그렇지 않은 경우 `T`를 보관합니다.
+인스턴스의 `remove_cv<T>` 는 형식인 수정 된 `T1` 때 *T* 형식인 `const T1`를 `volatile T1`, 또는 `const volatile T1`고, 그렇지 않으면 *T*합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 #include <type_traits>

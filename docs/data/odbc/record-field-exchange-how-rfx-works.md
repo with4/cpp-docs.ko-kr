@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094301"
 ---
 # <a name="record-field-exchange-how-rfx-works"></a>레코드 필드 교환: RFX 작동 방식
 이 항목에서는 RFX 프로세스에 설명 합니다. 고급 항목 포함:  

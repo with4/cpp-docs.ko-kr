@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103566"
 ---
 # <a name="using-an-existing-ado-recordset"></a>기존 ADO 레코드 집합 사용
 OLE DB 소비자 템플릿 및 현재 데이터 개체 (ADO)를 혼합 하려면 ADO를 사용 하 여 레코드 집합 (OLE DB 소비자 템플릿의 행 집합에 해당)을 엽니다. 레코드 집합을 사용 하는 경우에 OLE DB 행 집합에 연결 하려면 다음을 수행 합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863828"
 ---
 # <a name="aggregatable"></a>aggregatable
 클래스에서 집계를 지원 하는지 나타냅니다.  

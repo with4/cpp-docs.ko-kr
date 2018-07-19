@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881171"
 ---
 # <a name="handle-to-object-operator---c-component-extensions"></a>개체 연산자에 대한 핸들(^)(C++ 구성 요소 확장)
 *선언 자 처리* (`^`, "햇" 발음), 유형을 수정 [지정자](../cpp/overview-of-declarators.md) 시스템 개체 인지를 판단 하는 경우에 선언 된 개체가 삭제 자동으로 할지 의미임 더 이상 액세스할 수 없습니다.  

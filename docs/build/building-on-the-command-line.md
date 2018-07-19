@@ -1,7 +1,7 @@
 ---
 title: C/c + + 코드를 명령줄에서 빌드 | Microsoft Docs
 ms.custom: conceptual
-ms.date: 03/29/2018
+ms.date: 06/21/2018
 ms.technology:
 - cpp-tools
 ms.topic: conceptual
@@ -18,11 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1e02ea59ffc5a4ece71d2790b2ebb6a953ed682
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 241a7ae0d7f6c1adf269370301b39a3267440995
+ms.sourcegitcommit: e013acba70aa29fed60ae7945162adee23e19c3b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36322318"
 ---
 # <a name="build-cc-code-on-the-command-line"></a>C/c + + 코드를 명령줄에서 빌드
 
@@ -50,7 +51,7 @@ Visual Studio 설치 관리자에서 c + + 작업 중 하나를 선택할 때 Vi
 
 실제 시작 메뉴 폴더 및 바로 가기 이름을 하나를 설정 하는 경우 설치한 Visual Studio의 버전 및 설치 애칭에 따라 달라 집니다. 예를 들어 Visual Studio 2017 설치 되어 있는 경우 한 것을 지정한 설치 별칭의 *미리 보기*, 개발자 명령 프롬프트 바로 가기를 라는 **VS 2017 (미리 보기)용개발자명령프롬프트**, 명명 된 폴더에 **Visual Studio 2017**합니다.
 
-이전에 설치한 경우는 [Visual Studio 2017 용 빌드 도구](https://go.microsoft.com/fwlink/p/?linkid=840931) (도 포함 하는 Visual Studio 2015 업데이트 3 컴파일러 도구 집합), 아키텍처별 네이티브 또는 크로스 도구 옵션 설치 된 개발자 명령 프롬프트 를 일반 하지 **개발자 명령 프롬프트** 바로 가기 합니다.
+이전에 설치한 경우는 [Visual Studio 2017 용 빌드 도구](https://go.microsoft.com/fwlink/p/?linkid=875721) (도 포함 하는 Visual Studio 2015 업데이트 3 컴파일러 도구 집합), 아키텍처별 네이티브 또는 크로스 도구 옵션 설치 된 개발자 명령 프롬프트 를 일반 하지 **개발자 명령 프롬프트** 바로 가기 합니다.
 
 <a name="developer_command_prompt"></a>
 ### <a name="to-open-a-developer-command-prompt-window"></a>개발자 명령 프롬프트 창을 열려면

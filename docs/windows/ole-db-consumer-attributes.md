@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876022"
 ---
 # <a name="ole-db-consumer-attributes"></a>OLE DB 소비자 특성
 OLE DB 소비자 특성에 따라 코드를 삽입는 [OLE DB 소비자 템플릿](../data/oledb/ole-db-consumer-templates-reference.md), 소비자를 만드는 작업 OLE DB opening 테이블 등의 작업을 수행 하는 명령을 실행 하 고 데이터에 액세스 합니다.  

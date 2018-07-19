@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33303948"
 ---
 # <a name="c-runtime-error-r6031"></a>C 런타임 오류 R6031
 CRT를 여러 번 초기화 하려고 시도 합니다. 응용 프로그램에서 버그를 나타냅니다.  

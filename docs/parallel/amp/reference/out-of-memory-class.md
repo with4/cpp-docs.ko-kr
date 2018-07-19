@@ -23,6 +23,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695297"
 ---
 # <a name="outofmemory-class"></a>out_of_memory 클래스
 메서드가 시스템이 나 장치 메모리 부족으로 인해 실패할 경우 throw 되는 예외입니다.  

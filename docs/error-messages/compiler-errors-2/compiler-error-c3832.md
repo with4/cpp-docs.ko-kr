@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266557"
 ---
 # <a name="compiler-error-c3832"></a>컴파일러 오류 C3832
 'type library': 형식 라이브러리 처럼 보입니다. 32 비트 포인터 용으로 작성 된 'ptrsize' 한정자를 변경 하십시오.  

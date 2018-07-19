@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33097642"
 ---
 # <a name="cdynamicaccessorgetblobhandling"></a>CDynamicAccessor::GetBlobHandling
 현재 행에 대 한 값을 처리 하는 BLOB를 검색 합니다.  

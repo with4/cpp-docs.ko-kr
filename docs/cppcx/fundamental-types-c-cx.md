@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098539"
 ---
 # <a name="fundamental-types-ccx"></a>기본 형식(C++/CX)
 형식 뿐만 아니라는 표준 c + + 기본 제공 C + + /cli CX 기본적인 Windows 런타임 형식 매핑되는 표준 c + + 형식에 대 한 형식 정의 제공 하 여 Windows 런타임 아키텍처에서 정의 된 형식 시스템을 지원 합니다. C + + /cli CX 부울, 문자 및 숫자 기본 형식을 구현 합니다. 이러한 형식 정의는 명시적으로 지정할 필요가 없는 `default` 네임스페이스에서 정의됩니다. 또한 C + + /cli CX 특정 Windows 런타임 형식 및 인터페이스에 대 한 래퍼 및 구체적 구현을 제공 합니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129686"
 ---
 # <a name="how-to-define-and-install-a-global-exception-handler"></a>방법: 전역 예외 처리기 정의 및 설치
 다음 코드 예제에서는 어떻게 처리 되지 않은 예외를 보여 줍니다. 캡처할 수 있습니다. 폼 예제는 단추를 포함 하는를 누를 때 예외를 throw 하는 null 참조를 수행 합니다. 이 기능은 일반적인 코드 오류를 나타냅니다. Main 함수에 의해 설치 된 응용 프로그램 수준 예외 핸들러에서 예외가 발생 검색 되었습니다.  

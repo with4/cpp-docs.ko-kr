@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385939"
 ---
 # <a name="working-with-the-toolbar-control"></a>ToolBar 컨트롤 사용
 이 문서에서는 액세스 하는 방법을 설명는 [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) 개체 내부는 [CToolBar](../mfc/reference/ctoolbar-class.md) 도구 모음을 보다 효율적으로 제어 합니다. 고급 항목입니다.  

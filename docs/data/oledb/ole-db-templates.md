@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33109575"
 ---
 # <a name="ole-db-templates"></a>OLE DB 템플릿
 OLE DB 템플릿 쉽게 OLE DB 데이터 액세스를 확인합니다. Visual c + +는 여러 가지 자주 사용 되는 OLE DB 인터페이스를 구현 하는 템플릿 클래스를 제공 합니다. OLE DB (소비자) 클라이언트 응용 프로그램을 작성 하려면 Visual c + + 소비자 템플릿과 공급자 템플릿으로 서버 (공급자) 응용 프로그램을 작성을 사용할 수 있습니다.  

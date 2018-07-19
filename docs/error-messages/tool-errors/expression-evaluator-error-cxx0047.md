@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33296811"
 ---
 # <a name="expression-evaluator-error-cxx0047"></a>식 계산기 오류 CXX0047
 인수 목록이 함수와 일치 하지 않습니다.  

@@ -101,6 +101,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33098708"
 ---
 # <a name="cindexes-cindexinfo"></a>CIndexes, CIndexInfo
 Typedef 클래스 호출 **CIndexes** 해당 매개 변수 클래스를 구현 하려면 **CIndexInfo**합니다.  

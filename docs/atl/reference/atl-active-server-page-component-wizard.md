@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32359132"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>ATL Active Server Page 구성 요소 마법사
 이 마법사는 프로젝트에는 ASP Active Server Pages () 구성 요소를 삽입합니다. Microsoft 인터넷 정보 서비스 (IIS)의 향상 된 웹 페이지 개발 아키텍처의 일부로 ASP 구성 요소를 사용합니다.  

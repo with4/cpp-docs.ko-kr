@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84cc8ade8d844b591d6cb848ebee0fb3b05fb932
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 5c0e37eb0eaa7f0a6e40f385315822742f15516e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962373"
 ---
 # <a name="isscalar-class"></a>is_scalar 클래스
 
@@ -36,13 +37,13 @@ struct is_scalar;
 
 ### <a name="parameters"></a>매개 변수
 
-`Ty` 형식이 쿼리입니다.
+*Ty* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 `Ty` 형식이 정수 형식, 부동 소수점 형식, 열거형 형식, 포인터 형식 또는 멤버 포인터 형식이거나 이들 형식 중 하나의 `cv-qualified` 형식이면 true를 포함하고, 그렇지 않으면 false를 포함합니다.
+형식 조건자의 인스턴스 형태인 경우 true 형식을 *Ty* 정수 계열 형식 부동 소수점 형식, 열거형 형식, 포인터 형식, 또는 포인터 멤버 형식으로 또는 `cv-qualified` 형태의 그 중 하나, 그렇지 않으면 false입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // std__type_traits__is_scalar.cpp

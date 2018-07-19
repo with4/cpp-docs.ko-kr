@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197782"
 ---
 # <a name="compiler-error-c2460"></a>컴파일러 오류 C2460
 'identifier1': 사용 하 여 'identifier2'를 정의 중인  

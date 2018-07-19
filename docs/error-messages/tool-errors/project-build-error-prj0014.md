@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316159"
 ---
 # <a name="project-build-error-prj0014"></a>프로젝트 빌드 오류 PRJ0014
 생성된 된 프로세스를 제어 하는 작업 개체가 실패 했습니다.  빌드를 계속할 수 없습니다.  

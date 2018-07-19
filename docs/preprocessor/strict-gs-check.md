@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33842978"
 ---
 # <a name="strictgscheck"></a>strict_gs_check
 이 pragma는 향상된 보안 검사를 제공합니다.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381787"
 ---
 # <a name="converting-multibyte-characters"></a>멀티바이트 문자 변환
 **ANSI 3.1.3.4** 멀티바이트 문자를 와이드 문자 상수에 대한 해당 와이드 문자(코드)로 변환하는 데 사용되는 현재 로캘  

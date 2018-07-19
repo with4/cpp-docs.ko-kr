@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372444"
 ---
 # <a name="cgthreads-code-generation-threads"></a>/cgthreads(코드 생성 스레드)
 최적화 및 코드 생성에 사용할 cl.exe 스레드 수를 설정합니다.  

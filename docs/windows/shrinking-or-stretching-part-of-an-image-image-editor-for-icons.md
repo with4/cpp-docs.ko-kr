@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888736"
 ---
 # <a name="shrinking-or-stretching-part-of-an-image-image-editor-for-icons"></a>이미지 일부 줄이기 또는 늘이기(아이콘에 대한 이미지 편집기)
 ### <a name="to-shrink-or-stretch-part-of-an-image"></a>이미지 일부 확장 또는 축소 하려면  

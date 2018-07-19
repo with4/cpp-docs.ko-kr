@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33342048"
 ---
 # <a name="creating-the-list-control"></a>목록 컨트롤 만들기
 목록 제어 하는 방법 ([CListCtrl](../mfc/reference/clistctrl-class.md)) 만들어질 컨트롤을 직접 사용 하거나 클래스를 사용 하 여 하 고 있는지 여부에 따라 달라 집니다 [CListView](../mfc/reference/clistview-class.md) 대신 합니다. 사용 하는 경우 `CListView`, 프레임 워크의 문서/뷰 만들기 시퀀스의 일부로 뷰를 만듭니다. 목록 보기를 만드는 컨트롤을 만듭니다는 목록도 (두 개의 동일한 작업 되어 있음). 보기의에서 컨트롤을 만들 [OnCreate](../mfc/reference/cwnd-class.md#oncreate) 처리기 함수입니다. 이 경우 컨트롤은 호출을 통해 항목을 추가할 수 있도록 준비 된 [GetListCtrl](../mfc/reference/clistview-class.md#getlistctrl)합니다.  

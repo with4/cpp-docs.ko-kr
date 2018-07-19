@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861138"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces 구조체
 인터페이스 ID 집합에 적용할 수 있는 확인 및 초기화 함수를 지정합니다.  

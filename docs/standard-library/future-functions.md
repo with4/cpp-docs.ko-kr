@@ -16,11 +16,12 @@ helpviewer_keywords:
 - std::make_error_code [C++]
 - std::make_error_condition [C++]
 - std::swap [C++]
-ms.openlocfilehash: 83a1d50c0041c3cd66abbd3d52d2e2b49231c81c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bbb724747052c6dd636199fd1cabdf97d2bd4045
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027399"
 ---
 # <a name="ltfuturegt-functions"></a>&lt;future&gt; 함수
 
@@ -45,7 +46,7 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>매개 변수
 
-`policy` A [시작](../standard-library/future-enums.md#launch) 값입니다.
+*정책* A [시작](../standard-library/future-enums.md#launch) 값입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -63,11 +64,9 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 `decay<Fn>::type`이 시작 이외의 형식이 아닌 경우 두 번째 함수는 오버로드 확인에 참여하지 않습니다.
 
-`policy`가 `launch::any`인 경우 함수는 `launch::async` 또는 `launch::deferred`를 선택합니다. 이 구현에서는 함수는 `launch::async`를 사용합니다.
+C + + 표준 상태 정책 launch::async 인 함수는 새 스레드를 만듭니다. 그러나 Microsoft에서 구현한은 현재 비준수입니다. 경우에 따라 새로 보다는 재생된 스레드를 제공할 수 있는 Windows 스레드 풀에서 해당 스레드를 가져옵니다. 즉 합니다 `launch::async` 정책으로 실제로 구현 `launch::async|launch::deferred`합니다.  ThreadPool 기반 구현의 또 다른 문제는 보장이 없다는 스레드가 완료 될 때 스레드 지역 변수는 소멸 됩니다. 스레드가 재활용 되며 새 호출으로 제공 `async`, 이전 변수는 계속 존재 합니다. 따라서 사용 하 여 스레드 로컬 변수를 사용 하지 않는 권장 `async`합니다.
 
-`policy`가 `launch::async`인 경우 함수는 `INVOKE(dfn, dargs..., Ty)`를 계산하는 스레드를 생성합니다. 함수는 결과를 기다리지 않고 스레드를 만든 후 반환합니다. 시스템에서 새 스레드를 시작할 수 없으면 오류 코드가 `resource_unavailable_try_again`인 [system_error](../standard-library/system-error-class.md)를 throw합니다.
-
-`policy`가 `launch::deferred`일 경우 연결된 비동기 상태에 *지연된 함수*가 있는 것으로 표시하고 반환합니다. 연결된 비동기 상태가 유효해지기를 기다리는 non-timed 함수의 첫 번째 호출은 `INVOKE(dfn, dargs..., Ty)`를 평가함으로써 지연된 함수를 호출합니다.
+경우 *정책* 됩니다 `launch::deferred`, 함수가 있는 것으로 연결 된 비동기 상태를 표시를 *지연 된 함수* 반환 합니다. 연결된 비동기 상태가 유효해지기를 기다리는 non-timed 함수의 첫 번째 호출은 `INVOKE(dfn, dargs..., Ty)`를 평가함으로써 지연된 함수를 호출합니다.
 
 어떤 경우에도 `future` 개체의 연결된 비동기 상태는 예외를 throw하거나 정상적으로 반환함으로써 `INVOKE(dfn, dargs..., Ty)`의 계산이 완료될 때까지 *준비*로 설정되지 않습니다. 예외가 throw되거나 계산에서 값이 반환된 경우 연결된 비동기 상태의 결과는 예외입니다.
 
@@ -94,7 +93,7 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>매개 변수
 
-`Errno` A [future_errc](../standard-library/future-enums.md#future_errc) 보고 된 오류를 식별 하는 값입니다.
+*Errno* A [future_errc](../standard-library/future-enums.md#future_errc) 보고 된 오류를 식별 하는 값입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -110,7 +109,7 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>매개 변수
 
-`Errno` A [future_errc](../standard-library/future-enums.md#future_errc) 보고 된 오류를 식별 하는 값입니다.
+*Errno* A [future_errc](../standard-library/future-enums.md#future_errc) 보고 된 오류를 식별 하는 값입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -130,9 +129,9 @@ void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& 
 
 ### <a name="parameters"></a>매개 변수
 
-`Left` 왼쪽 `promise` 개체입니다.
+*왼쪽* 왼쪽 `promise` 개체입니다.
 
-`Right` 오른쪽 `promise` 개체입니다.
+*오른쪽* 오른쪽 `promise` 개체입니다.
 
 ## <a name="see-also"></a>참고자료
 

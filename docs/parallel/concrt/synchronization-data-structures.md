@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693808"
 ---
 # <a name="synchronization-data-structures"></a>동기화 데이터 구조
 동시성 런타임은 여러 스레드에서 공유 데이터에 대 한 액세스를 동기화 할 수 있는 몇 가지 데이터 구조를 제공 합니다. 이러한 데이터 구조는 공유 데이터를 자주 수정 하는 경우에 유용 합니다. 예를 들어 임계 영역 개체를 동기화 하면 다른 스레드가 공유 리소스를 사용할 수 있는 될 때까지 기다립니다. 따라서 이러한 개체를 사용 하 여 자주 사용 되는 데이터에 대 한 액세스를 동기화 하는 경우 응용 프로그램에서 확장성을 잃을 수 있습니다. [라이브러리 PPL (병렬 패턴)](../../parallel/concrt/parallel-patterns-library-ppl.md) 제공는 [concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md) 클래스를 통해 여러 개의 스레드 또는 동기화 할 필요가 없는 작업 사이에서 리소스를 공유할 수 있습니다. 에 대 한 자세한 내용은 `combinable` 클래스를 참조 하십시오. [병렬 컨테이너 및 개체](../../parallel/concrt/parallel-containers-and-objects.md)합니다.  

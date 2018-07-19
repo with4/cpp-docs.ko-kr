@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138680"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Windows Form 사용자 정의 컨트롤을 MFC 대화 상자로 호스팅
 템플릿 클래스를 제공 하는 MFC [CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md) Windows Forms 사용자 정의 컨트롤을 호스팅할 수 있습니다 (<xref:System.Windows.Forms.UserControl>) 모달 또는 모덜리스 MFC 대화 상자에서 합니다. `CWinFormsDialog` MFC 클래스에서 파생 된 [CDialog](../mfc/reference/cdialog-class.md)이므로 modal 또는 모덜리스 대화 상자를 시작할 수 있습니다.  

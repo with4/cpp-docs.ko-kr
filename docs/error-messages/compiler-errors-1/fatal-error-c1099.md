@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198783"
 ---
 # <a name="fatal-error-c1099"></a>심각한 오류 C1099
 편집하며 계속하기 엔진이 컴파일을 종료하고 있습니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358953"
 ---
 # <a name="cautoptrarray-class"></a>CAutoPtrArray 클래스
 이 클래스는 스마트 포인터의 배열을 만들 때 유용한 메서드를 제공 합니다.  

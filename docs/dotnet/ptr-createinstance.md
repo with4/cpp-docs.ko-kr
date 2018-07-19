@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33161706"
 ---
 # <a name="ptrcreateinstance"></a>ptr::CreateInstance
 내에서 COM 개체의 인스턴스를 만듭니다는 `com::ptr`합니다.  

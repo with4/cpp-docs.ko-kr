@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106260"
 ---
 # <a name="irowsetnotifyimpl-class"></a>IRowsetNotifyImpl 클래스
 구현 하 고 등록 [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx) 소비자 (라고도 "sink")에서 알림을 처리할 수 있도록 합니다.  

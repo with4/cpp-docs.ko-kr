@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386526"
 ---
 # <a name="renaming-with-a-name-that-exists"></a>이미 있는 이름으로 바꾸기
 **ANSI 4.9.4.2** **rename** 함수를 호출하기 전에 새 이름의 파일이 존재하는 경우의 효과  

@@ -25,14 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e87001ca341ae27cb173357f74e06e543f5eb262
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e29bf1c8265a0d92200cda2704b750dfd8db3d6f
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37885642"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread 클래스
-이 클래스에서 작업자 스레드 또는 기존을 사용 하 여, 하나 이상의 커널 개체 핸들을 대기 만들고 핸들 중 하나에 신호가 전달 될 때 지정 된 클라이언트 함수를 실행 합니다.  
+이 클래스 작업자 스레드를 만듭니다 또는 기존 항목을 사용 하 여, 하나 이상의 커널 개체 핸들에서 대기 및 핸들 중 하나에 신호가 전달 될 때 지정 된 클라이언트 함수를 실행 합니다.  
   
 > [!IMPORTANT]
 >  이 클래스 및 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
@@ -45,14 +46,14 @@ class CWorkerThread
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `ThreadTraits`  
- 와 같은 스레드 만들기 함수를 제공 하는 클래스 [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) 또는 [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)합니다.  
+ *ThreadTraits*  
+ 와 같은 스레드 생성 함수를 제공 하는 클래스 [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) 하거나 [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)합니다.  
   
 ## <a name="members"></a>멤버  
   
-### <a name="protected-structures"></a>Protected 구조체  
+### <a name="protected-structures"></a>보호 된 구조  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |`WorkerClientEntry`||  
   
@@ -67,8 +68,8 @@ class CWorkerThread
   
 |이름|설명|  
 |----------|-----------------|  
-|[CWorkerThread::AddHandle](#addhandle)|작업자 스레드에 의해 관리 되는 목록에 있는 대기 가능 개체의 핸들을 추가 하려면이 메서드를 호출 합니다.|  
-|[CWorkerThread::AddTimer](#addtimer)|작업자 스레드에 의해 관리 되는 목록에는 정기 대기 타이머를 추가 하려면이 메서드를 호출 합니다.|  
+|[CWorkerThread::AddHandle](#addhandle)|작업자 스레드에 의해 유지 관리 목록에는 대기 가능 개체의 핸들을 추가 하려면이 메서드를 호출 합니다.|  
+|[CWorkerThread::AddTimer](#addtimer)|대기 가능 주기적 타이머 작업자 스레드에 의해 유지 관리 목록에 추가 하려면이 메서드를 호출 합니다.|  
 |[CWorkerThread::GetThreadHandle](#getthreadhandle)|작업자 스레드의 스레드 핸들을 가져오려면이 메서드를 호출 합니다.|  
 |[CWorkerThread::GetThreadId](#getthreadid)|작업자 스레드의 스레드 ID를 가져오려면이 메서드를 호출 합니다.|  
 |[CWorkerThread::Initialize](#initialize)|작업자 스레드를 초기화 하려면이 메서드를 호출 합니다.|  
@@ -77,7 +78,7 @@ class CWorkerThread
   
 ## <a name="remarks"></a>설명  
   
-### <a name="to-use-cworkerthread"></a>CWorkerThread 사용 하려면  
+### <a name="to-use-cworkerthread"></a>CWorkerThread를 사용 하려면  
   
 1.  이 클래스의 인스턴스를 만듭니다.  
   
@@ -87,19 +88,19 @@ class CWorkerThread
   
      - 또는  
   
-     호출 [CWorkerThread::AddTimer](#addtimer) 의 구현에 대 한 포인터와 [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)합니다.  
+     호출 [CWorkerThread::AddTimer](#addtimer) 의 구현에 대 한 포인터를 사용 하 여 [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)합니다.  
   
-4.  구현 [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) 핸들 또는 타이머 신호를 받는 경우 몇 가지 작업을 수행할 합니다.  
+4.  구현 [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) 핸들 또는 타이머 신호를 받는 경우 몇 가지 작업을 수행 하 합니다.  
   
 5.  대기 가능 개체의 목록에서 개체를 제거 하려면 호출 [CWorkerThread::RemoveHandle](#removehandle)합니다.  
   
-6.  스레드를 종료 하려면 호출 [CWorkerThread::Shutdown](#shutdown)합니다.  
+6.  호출 스레드를 종료 하려면 [CWorkerThread::Shutdown](#shutdown)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** atlutil.h  
+ **헤더:** 와 atlutil.h  
   
 ##  <a name="addhandle"></a>  CWorkerThread::AddHandle  
- 작업자 스레드에 의해 관리 되는 목록에 있는 대기 가능 개체의 핸들을 추가 하려면이 메서드를 호출 합니다.  
+ 작업자 스레드에 의해 유지 관리 목록에는 대기 가능 개체의 핸들을 추가 하려면이 메서드를 호출 합니다.  
   
 ```
 HRESULT AddHandle(
@@ -109,23 +110,23 @@ HRESULT AddHandle(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hObject`  
+ *hObject*  
  대기 가능 개체에 대 한 핸들입니다.  
   
- `pClient`  
- 에 대 한 포인터는 [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) 는 핸들이 신호를 받을 때 호출 될 개체의 인터페이스입니다.  
+ *pClient*  
+ 에 대 한 포인터를 [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) 핸들 신호가 전달 될 때 호출할 개체의 인터페이스입니다.  
   
- `dwParam`  
- 매개 변수에 전달 될 [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) 핸들이 신호를 받는 경우입니다.  
+ *dwParam*  
+ 에 전달할 매개 변수 [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) 핸들이 신호를 받을 때입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+ 성공 하면 s_ok이 고, 또는 실패 시 오류 HRESULT 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) 를 통해 호출할 수 `pClient` 때 핸들에 `hObject`, 신호를 받는 합니다.  
+ [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) 를 통해 호출할 *pClient* 때 핸들을 *hObject*, 신호를 받을.  
   
 ##  <a name="addtimer"></a>  CWorkerThread::AddTimer  
- 작업자 스레드에 의해 관리 되는 목록에는 정기 대기 타이머를 추가 하려면이 메서드를 호출 합니다.  
+ 대기 가능 주기적 타이머 작업자 스레드에 의해 유지 관리 목록에 추가 하려면이 메서드를 호출 합니다.  
   
 ```
 HRESULT AddTimer(
@@ -139,22 +140,22 @@ HRESULT AddTimer(
  *dwInterval*  
  타이머의 기간을 밀리초 단위로 지정 합니다.  
   
- `pClient`  
- 에 대 한 포인터는 [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) 는 핸들이 신호를 받을 때 호출 될 개체의 인터페이스입니다.  
+ *pClient*  
+ 에 대 한 포인터를 [IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md) 핸들 신호가 전달 될 때 호출할 개체의 인터페이스입니다.  
   
- `dwParam`  
- 매개 변수에 전달 될 [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) 핸들이 신호를 받는 경우입니다.  
+ *dwParam*  
+ 에 전달할 매개 변수 [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) 핸들이 신호를 받을 때입니다.  
   
- `phTimer`  
- [out] 성공할 경우 새로 만든된 타이머에 대 한 핸들을 수신 하는 핸들 변수의 주소입니다.  
+ *phTimer*  
+ [out] 성공 하면 새로 만든된 타이머에 대 한 핸들을 수신 하는 핸들 변수의 주소입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+ 성공 하면 s_ok이 고, 또는 실패 시 오류 HRESULT 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) 를 통해 호출할 수 `pClient` 타이머 신호를 보낼 때.  
+ [IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute) 를 통해 호출할 *pClient* 타이머 신호를 받을 때입니다.  
   
- 타이머 핸들을 전달 `phTimer` 를 [CWorkerThread::RemoveHandle](#removehandle) 를 타이머를 닫습니다.  
+ 타이머 핸들을 전달 *phTimer* 하 [CWorkerThread::RemoveHandle](#removehandle) 를 타이머를 닫습니다.  
   
 ##  <a name="cworkerthread"></a>  CWorkerThread::CWorkerThread  
  생성자입니다.  
@@ -181,7 +182,7 @@ HANDLE GetThreadHandle() throw();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 작업자 스레드를 초기화 되지 않은 경우 스레드 핸들 또는 NULL을 반환 합니다.  
+ 작업자 스레드가 초기화 되지 않은 경우 스레드 핸들 또는 NULL을 반환 합니다.  
   
 ##  <a name="getthreadid"></a>  CWorkerThread::GetThreadId  
  작업자 스레드의 스레드 ID를 가져오려면이 메서드를 호출 합니다.  
@@ -191,7 +192,7 @@ DWORD GetThreadId() throw();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 작업자 스레드를 초기화 되지 않은 경우의 스레드 ID 또는 NULL을 반환 합니다.  
+ 작업자 스레드가 초기화 되지 않은 경우에 스레드 ID 또는 NULL을 반환 합니다.  
   
 ##  <a name="initialize"></a>  CWorkerThread::Initialize  
  작업자 스레드를 초기화 하려면이 메서드를 호출 합니다.  
@@ -203,18 +204,18 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pThread`  
+ *pThread*  
  기존 작업자 스레드입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+ 성공 하면 s_ok이 고, 또는 실패 시 오류 HRESULT 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드를 호출 하 여 만든 이후 또는 호출한 후에 개체를 초기화 하는 [CWorkerThread::Shutdown](#shutdown)합니다.  
+ 이 메서드를 호출 하 여 만든 후 또는 호출 후에 개체를 초기화 하는 [CWorkerThread::Shutdown](#shutdown)합니다.  
   
- 두 개 이상이 있어야 `CWorkerThread` 개체 동일한 작업자 스레드를 사용 하 여 인수를 해당 개체에 대 한 포인터를 전달 합니다 전달 하지 않고 그 중 하나를 초기화 합니다.는 `Initialize` 메서드는 다른 인스턴스의 합니다. 개체 초기화에 사용 하기 전에 마우스 포인터를 사용 하 여 초기화 개체 종료 합니다.  
+ 두 개 이상 있어야 `CWorkerThread` 개체가 동일한 작업자 스레드를 사용 하 여, 다음 인수를 해당 개체에 포인터를 전달 하는 전달 하지 않고 그 중 하나를 초기화 합니다 `Initialize` 다른 메서드. 포인터를 사용 하 여 초기화 하는 개체를 초기화 하는 데 사용 되는 개체 전에 종료 해야 합니다.  
   
- 참조 [CWorkerThread::Shutdown](#shutdown) 기존 개체에 대 한 포인터를 사용 하 여 초기화 될 때 해당 메서드의 동작이 변경 하는 방법에 대 한 내용은 합니다.  
+ 참조 [CWorkerThread::Shutdown](#shutdown) 기존 개체에 대 한 포인터를 사용 하 여 초기화할 때 해당 메서드의 동작이 변경 하는 방법에 대 한 정보에 대 한 합니다.  
   
 ##  <a name="removehandle"></a>  CWorkerThread::RemoveHandle  
  핸들을 대기 가능 개체의 목록에서 제거 하려면이 메서드를 호출 합니다.  
@@ -224,14 +225,14 @@ HRESULT RemoveHandle(HANDLE hObject) throw();
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `hObject`  
+ *hObject*  
  제거에 대 한 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 성공 시 S_OK 또는 실패 시 오류 HRESULT 반환합니다.  
+ 성공 하면 s_ok이 고, 또는 실패 시 오류 HRESULT 반환합니다.  
   
 ### <a name="remarks"></a>설명  
- 핸들이 제거 되 면 [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) 에 전달 된 연결된 된 개체에 대해 [AddHandle](#addhandle)합니다. 이 호출이 실패 한 경우 `CWorkerThread` Windows 호출 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211) 핸들에 대해 함수입니다.  
+ 핸들 제거 되 면 [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) 에 전달 된 연결된 된 개체에서 호출 되는 [AddHandle](#addhandle)합니다. 이 호출이 실패 하면 `CWorkerThread` 는 Windows를 호출 하는 [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211) 핸들에는 함수입니다.  
   
 ##  <a name="shutdown"></a>  CWorkerThread::Shutdown  
  작업자 스레드를 종료 하려면이 메서드를 호출 합니다.  
@@ -241,16 +242,16 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwWait`  
- 작업자 스레드를 종료 될 때까지 기다리는 시간 (밀리초)에 대 한 시간입니다. ATL_WORKER_THREAD_WAIT 기본값 10 초입니다. 필요한 경우 atlutil.h 포함 하기 전에이 기호에 대 한 사용자가 직접 값을 정의할 수 있습니다. 
+ *dwWait*  
+ 작업자 스레드가 종료 될 때까지 기다리는 시간 (밀리초) 시간입니다. ATL_WORKER_THREAD_WAIT 기본값은 10 초입니다. 필요한 경우와 atlutil.h 포함 하기 전에이 기호에 대 한 고유한 값을 정의할 수 있습니다. 
   
 ### <a name="return-value"></a>반환 값  
- 성공 또는 실패의 경우와 같이 오류 HRESULT에 S_OK를 반환 합니다. 제한 시간 값 `dwWait`를 초과 합니다.  
+ 경우와 같이 실패 HRESULT 오류가 성공 시 S_OK를 반환 합니다. 제한 시간 값을 *dwWait*를 초과 합니다.  
   
 ### <a name="remarks"></a>설명  
  개체를 다시 사용 하려면 호출 [CWorkerThread::Initialize](#initialize) 후이 메서드를 호출 합니다.  
   
- 호출 **종료** 다른에 대 한 포인터를 사용 하 여 초기화 하는 개체에 `CWorkerThread` 개체 아무 효과가 없으며 항상 S_OK를 반환 합니다.  
+ 호출 `Shutdown` 간에 대 한 포인터를 사용 하 여 초기화 하는 개체에서 `CWorkerThread` 개체 영향을 주지 않으며 항상 S_OK를 반환 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   

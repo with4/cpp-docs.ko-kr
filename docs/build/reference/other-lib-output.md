@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371465"
 ---
 # <a name="other-lib-output"></a>기타 LIB 출력
 기본 모드에서 결과 라이브러리에 대 한 정보를 표시 하려면 /LIST 옵션을 사용할 수 있습니다. 이 출력을 파일로 리디렉션할 수 있습니다.  

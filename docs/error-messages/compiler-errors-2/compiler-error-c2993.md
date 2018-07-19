@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33242317"
 ---
 # <a name="compiler-error-c2993"></a>컴파일러 오류 C2993
 'identifier': 비형식 템플릿 매개 변수 'parameter'에 대 한 형식이 잘못 되었습니다.  

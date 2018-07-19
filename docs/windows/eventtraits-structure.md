@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873744"
 ---
 # <a name="eventtraits-structure"></a>EventTraits 구조체
 이벤트 클래스 핸들의 특성을 정의합니다.  

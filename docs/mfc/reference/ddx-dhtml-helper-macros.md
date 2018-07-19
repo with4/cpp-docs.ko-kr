@@ -27,11 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cb2e9d2494463b502fda85c03fa1b861e1182cfc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6de53324eac663df7c12ee0cb2c0f4f02558157d
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121704"
 ---
 # <a name="ddxdhtml-helper-macros"></a>DDX_DHtml 도우미 매크로
 DDX_DHtml 도우미 매크로 사용 하는 HTML 페이지에 있는 컨트롤의 자주 사용 되는 속성에 쉽게 액세스할 수 있습니다.  
@@ -65,13 +66,13 @@ DDX_DHtml_Anchor_Href(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `dx`  
+ *dx*  
  에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
   
- `name`  
+ *name*  
  HTML 컨트롤의 ID 매개 변수에 지정한 값입니다.  
   
- `var`  
+ *var*  
  교환 되는 값입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -88,13 +89,13 @@ DDX_DHtml_Anchor_Target(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `dx`  
+ *dx*  
  에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
   
- `name`  
+ *name*  
  HTML 컨트롤의 ID 매개 변수에 지정한 값입니다.  
   
- `var`  
+ *var*  
  교환 되는 값입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -113,13 +114,13 @@ DDX_DHtml_ElementInnerHtml(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `dx`  
+ *dx*  
  에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
   
- `name`  
+ *name*  
  HTML 컨트롤의 ID 매개 변수에 지정한 값입니다.  
   
- `var`  
+ *var*  
  교환 되는 값입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -139,13 +140,13 @@ DDX_DHtml_ElementInnerText(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `dx`  
+ *dx*  
  에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
   
- `name`  
+ *name*  
  HTML 컨트롤의 ID 매개 변수에 지정한 값입니다.  
   
- `var`  
+ *var*  
  교환 되는 값입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -162,13 +163,13 @@ DDX_DHtml_ElementValue(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `dx`  
+ *dx*  
  에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
   
- `name`  
+ *name*  
  HTML 컨트롤의 ID 매개 변수에 지정한 값입니다.  
   
- `var`  
+ *var*  
  교환 되는 값입니다. 참조 *값* 에 [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)합니다.  
   
 ## <a name="remarks"></a>설명  
@@ -187,13 +188,13 @@ DDX_DHtml_Frame_Src(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `dx`  
+ *dx*  
  에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
   
- `name`  
+ *name*  
  HTML 컨트롤의 ID 매개 변수에 지정한 값입니다.  
   
- `var`  
+ *var*  
  교환 되는 값입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -212,13 +213,13 @@ DDX_DHtml_IFrame_Src(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `dx`  
+ *dx*  
  에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
   
- `name`  
+ *name*  
  HTML 컨트롤의 ID 매개 변수에 지정한 값입니다.  
   
- `var`  
+ *var*  
  교환 되는 값입니다.  
   
 ## <a name="remarks"></a>설명  
@@ -235,17 +236,17 @@ DDX_DHtml_Img_Src(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `dx`  
+ *dx*  
  에 대 한 포인터는 [CDataExchange](../../mfc/reference/cdataexchange-class.md) 개체입니다.  
   
- `name`  
+ *name*  
  HTML 컨트롤의 ID 매개 변수에 지정한 값입니다.  
   
- `var`  
+ *var*  
  교환 되는 값입니다.  
   
 ## <a name="remarks"></a>설명  
- 사용 하는 경우는 `DDX_DHtml_Img_Src` 이미지 요소, Internet Explorer 이미지 개체에 대 한 src 속성을 검색 하는 매크로 이미지 원본에 대 한 완전 하 게 이스케이프 된 URL을 반환 합니다. 예를 들어, 사용 하는 경우는 `DDX_DHtml_Img_Src` 매크로 "몇 가지 흥미로운 그림" 문자열에 이미지 요소의 src 속성을 설정 하려면 Internet Explorer "res://d:\myapplication\myapp.exe/some% 문자열을 반환 합니다 해당 속성을 검색 하는 경우 20interesting %20picture입니다. "  
+ DDX_DHtml_Img_Src 매크로 사용 하 여 이미지 요소에 대 한 src 속성을 검색, Internet Explorer image 개체는 이미지 원본에 대 한 완전 하 게 이스케이프 된 URL을 반환 합니다. 예를 들어 "몇 가지 흥미로운 그림" 문자열에 이미지 요소의 src 속성을 설정 하려면 DDX_DHtml_Img_Src 매크로 사용 하는 경우 Internet Explorer 해당 속성을 검색할 때 반환 합니다 "res://d:\myapplication\myapp.exe/some% 문자열 20interesting %20picture입니다. "  
   
  이 매크로 호출의 [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) 함수는 DISPID_IHTMLIMGELEMENT_SRC를 사용 하 여 디스패치 id입니다.  
 

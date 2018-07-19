@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33290998"
 ---
 # <a name="compiler-warning-level-2-c4653"></a>컴파일러 경고(수준 2) C4653
 미리 컴파일된 헤더와 일치 하지 않는 ' option' 컴파일러 옵션 현재 명령줄 옵션이 무시  

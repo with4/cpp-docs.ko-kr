@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104245"
 ---
 # <a name="irowsetupdateimplupdate"></a>IRowsetUpdateImpl::Update
 마지막 페치 또는 업데이트 이후 행에 대해 변경 내용을 전송 합니다.  

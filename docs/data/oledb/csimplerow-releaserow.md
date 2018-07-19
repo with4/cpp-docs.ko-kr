@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099380"
 ---
 # <a name="csimplerowreleaserow"></a>CSimpleRow::ReleaseRow
 스레드로부터 안전한 방식으로 행을 해제합니다.  

@@ -19,17 +19,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14bbb56c7ae62bd7ef8c58b45704a4ba809965e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e66ee17f8aa82e46011a78e34baa79b3dea3cdb1
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37943179"
 ---
-# <a name="functions-with-variable-argument-lists--c"></a>가변 인수를 사용 하는 함수 목록 (c + +)
-마지막 멤버가 줄임표(...)인 함수 선언에서는 여러 가지 인수를 사용할 수 있습니다. 이러한 경우 C++에서는 명시적으로 선언된 인수에만 형식 검사를 제공합니다. 인수의 수와 형식까지 변경될 수 있는 정도의 일반적인 수준으로 함수를 만들어야 하는 경우 가변 인수 목록을 사용할 수 있습니다. 함수는 집합은 가변 인수 목록을 사용 하는 함수의 예입니다. `printf` *인수 선언 목록*  
+# <a name="functions-with-variable-argument-lists--c"></a>가변 인수를 사용 하 여 함수 목록 (c + +)
+마지막 멤버가 줄임표(...)인 함수 선언에서는 여러 가지 인수를 사용할 수 있습니다. 이러한 경우 C++에서는 명시적으로 선언된 인수에만 형식 검사를 제공합니다. 인수의 수와 형식까지 변경될 수 있는 정도의 일반적인 수준으로 함수를 만들어야 하는 경우 가변 인수 목록을 사용할 수 있습니다. 함수 패밀리는 가변 인수 목록을 사용 하는 함수의 예입니다. `printf` *인수 선언 목록*  
   
 ## <a name="functions-with-variable-arguments"></a>가변 인수를 사용하는 함수  
- 표준 포함 파일에 포함 된 매크로 사용 하 여 선언 된 후 인수에 액세스 하려면 \<g. h > 아래에서 설명 합니다.  
+ 선언 된 후 인수에 액세스 하려면 표준 포함 파일에 포함 된 매크로 사용 하 여 \<stdarg.h > 아래에서 설명 합니다.  
   
  **Microsoft 전용**  
   
@@ -39,13 +40,13 @@ ms.lasthandoff: 05/03/2018
   
  일정하지 않은 수의 인수를 사용하는 함수의 선언에는 사용하지 않더라도 최소한 하나의 자리 표시자 인수가 있어야 합니다. 이 자리 표시자 인수가 제공되지 않은 경우 나머지 인수에 액세스할 수 있는 방법은 없습니다.  
   
- `char` 형식의 인수는 가변 인수로 전달될 때 `int` 형식으로 변환됩니다. 마찬가지로, 형식 인수 **float** 전달 되는 가변 인수로 형식으로 변환 됩니다 **double**합니다. 다른 형식의 인수에는 일반적인 정수 계열 및 부동 소수점 확장이 적용됩니다. 참조 [표준 변환](standard-conversions.md) 자세한 정보에 대 한 합니다.  
+ 때 형식 인수 **char** 전달 되는 가변 인수로 형식으로 변환 됩니다 **int**합니다. 마찬가지로, 형식 인수 **float** 전달 됩니다 가변 인수로 형식으로 변환 됩니다 **double**합니다. 다른 형식의 인수에는 일반적인 정수 계열 및 부동 소수점 확장이 적용됩니다. 참조 [표준 변환](standard-conversions.md) 자세한 내용은 합니다.  
   
- 변수 목록이 필요한 함수는 인수 목록에서 줄임표(...)를 사용하여 선언합니다. 형식 및에 설명 된 매크로 사용 하 여는 \<g. h > 변수 목록에서 전달 되는 인수를 액세스 하는 파일을 포함 합니다. 이러한 매크로 대 한 자세한 내용은 참조 [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)합니다. 참조하세요.  
+ 변수 목록이 필요한 함수는 인수 목록에서 줄임표(...)를 사용하여 선언합니다. 형식과에 설명 된 매크로 사용 합니다 \<stdarg.h > 변수 목록으로 전달 되는 액세스 인수에는 파일을 포함 합니다. 이러한 매크로 대 한 자세한 내용은 참조 하세요. [va_arg, va_copy, va_end, va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)합니다. 참조하세요.  
   
- 다음 예제에서는 매크로 형식과 함께 작동 하는 방법을 보여 줍니다 (에 선언 된 \<g. h >): 
+ 다음 예제에서는 매크로 형식과 함께 작동 하는 방법을 보여 줍니다 (에 선언 된 \<stdarg.h >): 
   
-```  
+```cpp 
 // variable_argument_lists.cpp  
 #include <stdio.h>  
 #include <stdarg.h>  

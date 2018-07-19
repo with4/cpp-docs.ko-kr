@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863584"
 ---
 # <a name="asyncbasefireprogress-method"></a>AsyncBase::FireProgress 메서드
 현재 진행률 이벤트 처리기를 호출합니다.  

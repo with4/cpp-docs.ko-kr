@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33198692"
 ---
 # <a name="compiler-error-c2436"></a>컴파일러 오류 C2436
 'identifier': 멤버 함수 또는 생성자 이니셜라이저 목록에서 중첩된 클래스  

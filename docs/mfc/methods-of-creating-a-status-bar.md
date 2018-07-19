@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346931"
 ---
 # <a name="methods-of-creating-a-status-bar"></a>상태 표시줄을 만드는 방법
 상태 표시줄을 만드는 두 개의 클래스를 제공 하는 MFC: [CStatusBar](../mfc/reference/cstatusbar-class.md) 및 [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md) (Windows 공용 컨트롤 API 래핑합니다 입니다). `CStatusBar` 모든 기능을 제공 표시줄 공용 컨트롤 상태를 자동으로 상호 작용 하는 메뉴 및 도구 모음, 하며 있습니다;에 대 한 대부분의 필수 공용 컨트롤 설정 및 구조 처리 그러나 결과 실행 파일이 일반적으로 보다 커집니다 사용 하 여 만든 `CStatusBarCtrl`합니다.  

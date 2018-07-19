@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093245"
 ---
 # <a name="sql"></a>SQL
 SQL (구조적 쿼리 언어)은 쿼리를 정의 수정 및 데이터를 제어할 수 있는 관계형 데이터베이스와 통신 하는 방법입니다. SQL 구문을 사용 하 여, 사용자가 지정한 조건에 따라 레코드를 추출 하는 문을 생성할 수 있습니다.  

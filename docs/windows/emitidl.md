@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33876594"
 ---
 # <a name="emitidl"></a>emitidl
 모든 후속 IDL 특성 처리 되 고 생성된 된.idl 파일에 배치 하는지 여부를 지정 합니다.  

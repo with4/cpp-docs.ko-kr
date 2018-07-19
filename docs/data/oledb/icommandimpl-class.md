@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101145"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl 클래스
 에 대 한 구현을 제공는 [ICommand](https://msdn.microsoft.com/en-us/library/ms709737.aspx) 인터페이스입니다.  

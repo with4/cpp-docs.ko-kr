@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691302"
 ---
 # <a name="critical"></a>Critical
 한 번에 한 스레드에서 코드 하만 실행 된 지정 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367435"
 ---
 # <a name="environment-variable-macros"></a>환경 변수 매크로
 NMAKE는 매크로 정의 대 한 세션을 시작 하기 전에 존재 하는 환경 변수를 상속 합니다. 변수를 설정한 경우 운영 체제 환경에서 NMAKE 매크로로 제공 됩니다. 상속 된 이름은 대문자로 변환 됩니다. 상속 전처리 하기 전에 발생합니다. 메이크파일의에 같은 이름의 모든 매크로 재정의 하려면 환경 변수에서 상속 하는 매크로를 /E 옵션을 사용 합니다.  

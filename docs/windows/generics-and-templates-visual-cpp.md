@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878907"
 ---
 # <a name="generics-and-templates-visual-c"></a>제네릭 및 템플릿(Visual C++)
 제네릭과 템플릿의 지 매개 변수가 있는 형식에 대 한 지원을 제공 하는 두 언어 기능. 그러나 다른 되며 다른 용도로 사용 합니다. 이 항목에서는 많은 차이점에 대 한 개요를 제공 합니다.  

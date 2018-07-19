@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112110"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB 소비자 템플릿(C++)
 OLE DB 소비자 템플릿은 OLE DB 버전 2.6 사양을 지원합니다. OLE DB 소비자 템플릿은 OLE DB 2.6에 대해 테스트되지만 사양에서 모든 인터페이스를 지원하지는 않습니다. 소비자 템플릿은 OLE DB 소비자를 구현하기 위해 작성해야 하는 코드의 양을 최소화합니다. 이 템플릿은 다음과 같은 장점이 있습니다.  

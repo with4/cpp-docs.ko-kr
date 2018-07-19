@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352160"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>여러 문서 형식, 뷰 및 프레임 창
 문서, 뷰 및 프레임 창의 기본 관계는 [문서/뷰 만들기](../mfc/document-view-creation.md)에서 설명합니다. 대부분의 응용 프로그램은 단일한 뷰와 문서당 하나의 프레임 창만 사용하는 단일한 문서 형식(그러나 해당 형식의 문서는 여러 개 열 수 있음)을 지원합니다. 그러나 일부 응용 프로그램에서는 이러한 기본 설정을 하나 이상 변경해야 할 수도 있습니다.  

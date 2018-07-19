@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339880"
 ---
 # <a name="project-build-error-prj0046"></a>프로젝트 빌드 오류 PRJ0046
 지정 된 항목이 비어 있으므로 명령줄을 생성할 수 없습니다.  

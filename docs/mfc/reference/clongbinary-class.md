@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7030fdcb59166c0e70a7b2c2471273c913fe459
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b75016c6c783ae19d8e0f6739adaa34b8da977db
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338439"
 ---
 # <a name="clongbinary-class"></a>CLongBinary 클래스
 데이터베이스에서 매우 큰 이진 데이터 개체(BLOB 또는 "이진 대형 개체"라고도 함) 사용 작업을 간소화합니다.  
@@ -47,20 +48,20 @@ class CLongBinary : public CObject
   
 |이름|설명|  
 |----------|-----------------|  
-|[CLongBinary::m_dwDataLength](#m_dwdatalength)|핸들에 저장 된 데이터 개체의 바이트의 실제 크기를 포함 `m_hData`합니다.|  
-|[CLongBinary::m_hData](#m_hdata)|Windows 포함 `HGLOBAL` 실제 이미지 개체에 대 한 핸들입니다.|  
+|[CLongBinary::m_dwDataLength](#m_dwdatalength)|실제 크기 핸들이에 저장 된 데이터 개체의 바이트를 포함 `m_hData`합니다.|  
+|[CLongBinary::m_hData](#m_hdata)|실제 이미지 개체에 대 한 Windows HGLOBAL 핸들을 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- 예를 들어 SQL 테이블의 레코드 필드에 그림을 나타내는 비트맵을 포함 될 수 있습니다. A `CLongBinary` 개체는 이러한 개체를 저장 하 고 크기는 추적 합니다.  
+ 예를 들어 SQL 테이블에서 레코드 필드에 그림을 나타내는 비트맵을 포함할 수 있습니다. `CLongBinary` 개체는 이러한 개체를 저장 하 고 해당 크기는 추적 합니다.  
   
 > [!NOTE]
->  일반적으로 것이 좋습니다 지금 사용 하도록 [CByteArray](../../mfc/reference/cbytearray-class.md) 함께에서 [DFX_Binary](record-field-exchange-functions.md#dfx_binary) 함수입니다. 사용할 수 없습니다 `CLongBinary`, 하지만 일반적 `CByteArray` 많은 기능을 제공 Win32에서 더 이상 있기 때문 16 비트 스페이스가 크기 제한 `CByteArray`합니다. 이 권장 ODBC Open Database Connectivity () 뿐만 아니라 개체 DAO (Data Access)를 사용 하 여 프로그래밍에 적용 됩니다.  
+>  좋습니다 지금 사용 하는 것이 일반적으로 [CByteArray](../../mfc/reference/cbytearray-class.md) 함께에서 합니다 [DFX_Binary](record-field-exchange-functions.md#dfx_binary) 함수입니다. 계속 사용할 수 없습니다 `CLongBinary`, 하지만 일반적 `CByteArray` 많은 기능을 제공 win32에서 되므로 더 이상 16 비트를 사용 하 여 발생 하는 크기 제한 `CByteArray`합니다. 이 권장 사항은 개방형 데이터베이스 연결 (ODBC) 뿐만 아니라 데이터 액세스 개체 (DAO)를 사용한 프로그래밍에 적용 됩니다.  
   
- 사용 하는 `CLongBinary` 개체 형식의 필드 데이터 멤버를 선언 `CLongBinary` 레코드 집합 클래스에 있습니다. 이 멤버는 레코드 집합 클래스의 포함된 된 멤버 고 레코드 집합 생성 될 때 생성 됩니다. 이후에 `CLongBinary` 개체가 생성 된, 레코드 필드 교환 (RFX) 메커니즘의 필드에 데이터 소스에서 현재 레코드에서 데이터 개체를 로드 하 고는 레코드가 업데이트 될 때 레코드에 다시 저장 합니다. RFX에 대 한 저장소를 할당 하는 이진 대형 개체의 크기에 대 한 데이터 소스를 쿼리 (통해는 `CLongBinary` 개체의 `m_hData` 데이터 멤버)를 저장 하 고는 `HGLOBAL` 의 데이터에 대 한 핸들 `m_hData`합니다. RFX 저장에서 데이터 개체의 실제 크기는 `m_dwDataLength` 데이터 멤버입니다. 통해 개체의 데이터로 작업 `m_hData`, 일반적으로 Windows에 저장 된 데이터를 조작 하기 위한 사용 동일한 기술을 사용 하 여 `HGLOBAL` 처리 합니다.  
+ 사용 하는 `CLongBinary` 개체 형식의 필드 데이터 멤버를 선언 `CLongBinary` 레코드 집합 클래스에서. 이 멤버는 레코드 집합 클래스의 멤버를 포함된 되며 레코드 집합이 생성 될 때 생성 됩니다. 이후에 `CLongBinary` 개체가 생성 되 면 레코드 필드 교환 (RFX) 메커니즘 데이터 소스의 현재 레코드의 필드에서 데이터 개체를 로드 하 고는 레코드가 업데이트 될 때 레코드에 다시 저장 합니다. RFX에 대 한 저장소를 할당 하는 큰 이진 개체의 크기에 대 한 데이터 소스를 쿼리 (통해 합니다 `CLongBinary` 개체의 `m_hData` 데이터 멤버)를 가져와 `HGLOBAL` 의 데이터에 대 한 핸들 `m_hData`합니다. RFX 저장 데이터 개체의 실제 크기는 `m_dwDataLength` 데이터 멤버입니다. 통해 개체의 데이터로 작동 `m_hData`, 일반적으로 Windows에 저장 된 데이터를 조작 하는 데 사용 하는 동일한 기술을 사용 하 여 `HGLOBAL` 처리 합니다.  
   
- 포함된 된 레코드 집합을 삭제 하면 `CLongBinary` 개체도 제거 하 고 소멸자 할당을 취소 하는 `HGLOBAL` 데이터 핸들입니다.  
+ 레코드 집합에 포함된 된 경우 삭제할 `CLongBinary` 개체도 제거 하 고 해당 소멸자 할당을 취소 합니다 `HGLOBAL` 데이터 핸들입니다.  
   
- 사용 하 여 큰 개체에 대 한 자세한 내용은 `CLongBinary`, 문서를 참조 [레코드 집합 (ODBC)](../../data/odbc/recordset-odbc.md) 및 [레코드 집합: 대형 데이터 항목 (ODBC)와 작업](../../data/odbc/recordset-working-with-large-data-items-odbc.md)합니다.  
+ 큰 개체 및 사용에 대 한 자세한 내용은 `CLongBinary`, 문서를 참조 하세요 [레코드 집합 (ODBC)](../../data/odbc/recordset-odbc.md) 하 고 [레코드 집합: 대형 데이터 항목 (ODBC)을 사용 하 여 작업](../../data/odbc/recordset-working-with-large-data-items-odbc.md).  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -78,17 +79,17 @@ CLongBinary();
 ```  
   
 ##  <a name="m_dwdatalength"></a>  CLongBinary::m_dwDataLength  
- 실제 크기에 저장 된 데이터의 바이트에 저장 된 `HGLOBAL` 에서 처리할 `m_hData`합니다.  
+ 실제 크기는 HGLOBAL 핸들에 저장 된 데이터의 바이트에 저장 `m_hData`합니다.  
   
 ```  
 SQLULEN m_dwDataLength;  
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 크기는 데이터에 대 한 할당 된 메모리 블록의 크기 보다 작을 수 있습니다. Win32 호출 [GLobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593) 함수 할당 된 크기를 가져옵니다.  
+ 이 크기는 데이터에 할당 된 메모리 블록의 크기 보다 작을 수 있습니다. Win32 호출 [GLobalSize](http://msdn.microsoft.com/library/windows/desktop/aa366593) 함수 할당 된 크기를 가져옵니다.  
   
 ##  <a name="m_hdata"></a>  CLongBinary::m_hData  
- Windows 저장 `HGLOBAL` 실제 binary large object 데이터에 대 한 핸들입니다.  
+ 실제 binary large object 데이터에 대 한 Windows HGLOBAL 핸들을 저장합니다.  
   
 ```  
 HGLOBAL m_hData;  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874605"
 ---
 # <a name="export"></a>내보내기
 데이터 구조는.idl 파일에 배치 하면 됩니다.  

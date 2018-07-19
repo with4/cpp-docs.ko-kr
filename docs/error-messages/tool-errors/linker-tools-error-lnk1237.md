@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33298618"
 ---
 # <a name="linker-tools-error-lnk1237"></a>링커 도구 오류 LNK1237
 코드를 생성 하는 동안 컴파일러 'symbol' /GL으로 컴파일된 ' module' 모듈에 정의 된 기호 참조를 했습니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341999"
 ---
 # <a name="communicating-with-a-tree-control"></a>트리 컨트롤과 통신
 멤버 함수를 호출 하는 것에 대 한 다양 한 방법을 사용 하면 한 [CTreeCtrl](../mfc/reference/ctreectrl-class.md) 개체가 생성 된 방식에 따라 개체:  

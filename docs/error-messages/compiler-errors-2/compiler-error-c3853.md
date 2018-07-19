@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33270079"
 ---
 # <a name="compiler-error-c3853"></a>컴파일러 오류 C3853
 '=': 참조 또는 참조-함수를 통해 할당을 다시 초기화는 사용할 수 없습니다  

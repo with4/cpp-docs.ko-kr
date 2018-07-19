@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3db081a3baa3b8e5d974080275fc75b372009b6
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f54f036c6e647c3f04bb202b68109e227061bf7a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961924"
 ---
 # <a name="binarynegate-class"></a>binary_negate 클래스
 
@@ -43,11 +44,11 @@ public:
 
 ### <a name="parameters"></a>매개 변수
 
-`Func` 이진 함수를 무효화 합니다.
+*Func* 부정할 이항 함수입니다.
 
-`left` 이진 함수를 무효화의 왼쪽된 피연산자.
+*왼쪽* 부정할 이항 함수의 왼쪽된 피연산자.
 
-`right` 오른쪽 피연산자를 무효화 이진 함수입니다.
+*오른쪽* 부정할 이항 함수의 오른쪽 피연산자입니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -55,11 +56,11 @@ public:
 
 ## <a name="remarks"></a>설명
 
-템플릿 클래스는 단항 함수 개체 _ *Func*의 복사본을 저장합니다. 그리고 **!**\_를 반환하도록 해당 구성원 함수 `operator()`를 정의합니다. *Func (왼쪽, 오른쪽)입니다.*
+템플릿 클래스는 단항 함수 개체 _ *Func*의 복사본을 저장합니다. 그리고 **!**\_를 반환하도록 해당 구성원 함수 `operator()`를 정의합니다. *Func (left, right)입니다.*
 
 `binary_negate`의 생성자는 직접 사용되는 경우가 거의 없습니다. **binary_negator** 어댑터 조건자를 선언하고 사용하는 데 일반적으로 [not2](../standard-library/functional-functions.md#not2) 도우미 함수가 사용됩니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // functional_binary_negate.cpp

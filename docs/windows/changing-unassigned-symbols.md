@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855385"
 ---
 # <a name="changing-unassigned-symbols"></a>할당되지 않은 기호 변경
 에 있는 동안는 [리소스 기호 대화 상자](../windows/resource-symbols-dialog-box.md), 리소스 또는 개체에 아직 할당 되지 않은 기존 기호를 삭제 하거나 편집할 수 있습니다.  

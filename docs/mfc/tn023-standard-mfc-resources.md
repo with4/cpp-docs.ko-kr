@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61d6520aef1ec04c6419fb1c9c901475c9c109f5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 967485f358d6659d759f2651c80c9390bff0b912
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952039"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023: 표준 MFC 리소스
 이 메모와 함께 제공 되 고 MFC 라이브러리에 필요한 표준 리소스를 설명 합니다.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/04/2018
   
 -   Indicate.rc: 상태 표시줄 키 상태 지표 "CAP" Caps Lock 키에 대 한 예:에 대 한 문자열 리소스를 포함합니다.  
   
--   Prompts.rc:에 대 한 "새 문서 만들기"와 같은 미리 정의 된 각 명령에 대 한 메뉴 프롬프트 문자열 리소스를 포함 하 `ID_FILE_NEW`합니다.  
+-   Prompts.rc: ID_FILE_NEW에 대 한 "새 문서 만들기"와 같은 미리 정의 된 각 명령에 대 한 메뉴 프롬프트 문자열 리소스를 포함합니다.  
   
 -   Commdlg.rc: Visual c + + 호환.rc 파일 표준 COMMDLG 대화 상자 템플릿을 포함 합니다.  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/04/2018
 >  실수로 Common.rc에서 리소스를 영구적으로 이동 하지 않도록 주의 하십시오. 리소스를 끌어 동안 CTRL 키를 누른 경우 복사본을 만들게 됩니다. 끌면 동안 CTRL 포함 되지 않은 리소스 이동 됩니다. 위해서 수 실수로 했다고 변경 Common.rc 파일로 Common.rc의 변경 사항을 저장할 것인지 묻는 메시지가 나타나면 "아니요"를 클릭 합니다.  
   
 > [!NOTE]
->  .Rc 리소스 파일에는 특별 한 있습니다 `TEXTINCLUDE` 에 실수로 위에 표준.rc 파일에 저장 하면 방해 하는 리소스입니다.  
+>  .Rc 리소스 파일에 표준.rc 파일 맨 위에 저장할 실수로 방해 하는 특수 TEXTINCLUDE 리소스에 있습니다.  
   
 ### <a name="customizing-standard-framework-resources"></a>표준 프레임 워크 리소스를 사용자 지정  
  표준 프레임 워크 리소스를 사용 하 여 응용 프로그램에 포함 된 일반적으로 # 응용 프로그램의 리소스 파일에 명령을 include 합니다. 응용 프로그램 마법사는 리소스 파일을 생성 합니다. 이 파일에는 선택한 응용 프로그램 마법사 옵션에 따라 적절 한 표준 프레임 워크 리소스를 포함 합니다. 검토 지정, 추가 또는 제거 컴파일 타임 지시문을 변경 하 여 어떤 리소스가 포함 됩니다. 이 작업을 수행 하려면 엽니다는 **리소스** 메뉴와 선택 **Set Includes**합니다. "컴파일 타임 지시문" 참조 항목을 편집 합니다. 예를 들어:  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33889247"
 ---
 # <a name="string--c-component-extensions"></a>문자열(C++ 구성 요소 확장)
 Visual c + + 컴파일러에서는 *문자열*, 하는 일련의 문자로 텍스트를 나타내는 개체입니다. Visual c + + 문자열 값이 암시적, 변수와 값은 명시적 따옴표 붙은 문자열 리터럴을 지원 합니다.  

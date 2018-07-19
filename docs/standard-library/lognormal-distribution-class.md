@@ -36,11 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72b42546f140dfd150676c8bc21b4b651815281f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1c2f2351d55a4b4f868021bd0c44a0b942633c68
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38958532"
 ---
 # <a name="lognormaldistribution-class"></a>lognormal_distribution 클래스
 
@@ -77,11 +78,11 @@ public:
 
 ### <a name="parameters"></a>매개 변수
 
-*RealType* 부동 소수점 결과 형식 기본값이 `double`합니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
+*RealType* 부동 소수점 결과 형식에 기본값이 **double**합니다. 가능한 형식은 [\<random>](../standard-library/random.md)를 참조하세요.
 
 ## <a name="remarks"></a>설명
 
-대수 정규 분포에 따라 분포된 경우 템플릿 클래스는 사용자 지정 정수 형식 또는 아무 것도 제공되지 않았다면 `double` 형식의 값을 생성하는 분포를 설명합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
+사용자 지정 정수 값을 생성 하는 분포를 설명 하는 템플릿 클래스 형식 또는 형식 **이중** 제공 하지 않으면 로그 정규 분포에 따라 배포 합니다. 다음 테이블은 개별 멤버에 대한 문서와 연결되어 있습니다.
 
 ||||
 |-|-|-|
@@ -102,7 +103,7 @@ public:
 
 로그 정규 분포에 대한 자세한 내용은 Wolfram MathWorld 문서 [LogNormal Distribution](http://go.microsoft.com/fwlink/p/?linkid=400917)(로그 정규 분포)을 참조하세요.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // compile with: /EHsc /W4
@@ -207,7 +208,7 @@ explicit lognormal_distribution(const param_type& parm);
 
 *s* 는 `s` 분포 매개 변수입니다.
 
-*매개 변수* 는 `param_type` 분포를 생성 하는 데 사용 되는 구조입니다.
+*parm* 는 `param_type` 분포를 생성 하는 데 사용 되는 구조입니다.
 
 ### <a name="remarks"></a>설명
 
@@ -239,7 +240,7 @@ struct param_type {
 
 *s* 는 `s` 분포 매개 변수입니다.
 
-*오른쪽* 는 `param_type` 구조를 비교 하는 데 사용 합니다.
+*오른쪽* 는 `param_type` 구조 비교 하는 데 사용 합니다.
 
 ### <a name="remarks"></a>설명
 

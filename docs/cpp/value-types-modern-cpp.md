@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32423420"
 ---
 # <a name="value-types-modern-c"></a>값 형식(최신 C++)
 C + + 클래스는 기본 값 형식으로 됩니다. 이 항목에서는 값 형식 및 용도 관련 된 문제 소개 개요를 제공 합니다.  

@@ -60,11 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b7cbdcc1c5534d8dd9ba5d4f895af70a8ec16ac5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 115b351ccbaf9c8c5cbccb0004d04c53e54351ba
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37123066"
 ---
 # <a name="cwinthread-class"></a>CWinThread 클래스
 응용 프로그램 내의 실행 스레드를 나타냅니다.  
@@ -125,7 +126,7 @@ class CWinThread : public CCmdTarget
   
  두 가지 유형의 스레드가 있습니다 하는 `CWinThread` 지원: 사용자 인터페이스 스레드와 작업자 스레드 수입니다. 작업자 스레드 메시지 펌프가 없습니다: 스프레드시트 응용 프로그램에서 백그라운드 계산을 수행 하는 스레드는 예를 들어 있습니다. 사용자 인터페이스 스레드는 메시지 펌프가 하 고 시스템에서 수신 된 메시지를 처리 합니다. [CWinApp](../../mfc/reference/cwinapp-class.md) 및 클래스에서 파생 된 사용자 인터페이스 스레드에 속합니다. 다른 사용자 인터페이스 스레드에서 직접 파생 될 수도 `CWinThread`합니다.  
   
- 클래스의 개체 `CWinThread` 스레드 기간에 대 한 일반적으로 존재 합니다. 이 동작을 수정 하려는 경우 설정 [m_bAutoDelete](#m_bautodelete) 를 **FALSE**합니다.  
+ 클래스의 개체 `CWinThread` 스레드 기간에 대 한 일반적으로 존재 합니다. 이 동작을 수정 하려는 경우 설정 [m_bAutoDelete](#m_bautodelete) FALSE로 합니다.  
   
  `CWinThread` 클래스는 완전 한 스레드 안전 코드와 MFC을 만들 필요가 있습니다. 관리 하는 스레드 관련 정보를 유지 하기 위해 프레임 워크에서 사용 되는 스레드 로컬 데이터 `CWinThread` 개체입니다. 에 대 한이 종속성이로 인해 `CWinThread` 스레드 로컬 데이터를 처리 하려면 MFC를 사용 하는 모든 스레드가 MFC에서 생성 해야 합니다. 예를 들어 런타임 함수에서 만든 스레드 [_beginthread, _beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) MFC Api를 사용할 수 없습니다.  
   
@@ -156,17 +157,17 @@ BOOL CreateThread(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dwCreateFlags`  
+ *dwCreateFlags*  
  스레드 생성을 제어 하는 추가 플래그를 지정 합니다. 이 플래그는 두 값 중 하나를 포함할 수 있습니다.  
   
-- **CREATE_SUSPENDED** 하나의 suspend 수로 스레드를 시작 합니다. 사용 하 여 **CREATE_SUSPENDED** 의 모든 멤버 데이터를 초기화 하려는 경우는 `CWinThread` 와 같은 개체를 [m_bAutoDelete](#m_bautodelete) 또는 스레드가 실행을 시작 하기 전에 파생된 클래스의 멤버입니다. 사용 하 여 프로그램 초기화가 완료 되 면는 [CWinThread::ResumeThread](#resumethread) 실행 스레드를 시작 합니다. 스레드가 될 때까지 실행 되지 것입니다 `CWinThread::ResumeThread` 호출 됩니다.  
+- CREATE_SUSPENDED 하나의 일시 중단 수로 스레드를 시작 합니다. 모든 멤버 데이터를 초기화 하려면 CREATE_SUSPENDED 사용는 `CWinThread` 와 같은 개체를 [m_bAutoDelete](#m_bautodelete) 또는 스레드가 실행을 시작 하기 전에 파생된 클래스의 멤버입니다. 사용 하 여 프로그램 초기화가 완료 되 면는 [CWinThread::ResumeThread](#resumethread) 실행 스레드를 시작 합니다. 스레드가 될 때까지 실행 되지 것입니다 `CWinThread::ResumeThread` 호출 됩니다.  
   
 - **0** 을 만든 후 즉시 스레드를 시작 합니다.  
   
- `nStackSize`  
+ *nStackSize*  
  새 스레드의 스택 바이트 단위로 크기를 지정합니다. 경우 **0**, 스택 크기 프로세스의 주 스레드는 같은 크기의 기본값입니다.  
   
- `lpSecurityAttrs`  
+ *lpSecurityAttrs*  
  가리키는 [SECURITY_ATTRIBUTES](http://msdn.microsoft.com/library/windows/desktop/aa379560) 스레드에 대 한 보안 특성을 지정 하는 구조입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -196,9 +197,9 @@ virtual int ExitInstance();
  스레드 종료 코드입니다. 0의 오류가 나타내고 0 보다 큰 값에 오류가 발생 합니다. 이 값을 호출 하 여 검색할 수 [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)합니다.  
   
 ### <a name="remarks"></a>설명  
- 호출 하지 마십시오이 멤버 함수 어디서 내 하지만 **실행** 멤버 함수입니다. 이 멤버 함수는 사용자 인터페이스 스레드에만 사용 됩니다.  
+ 호출 하지 마십시오이 멤버 함수 어디서 내 하지만 `Run` 멤버 함수입니다. 이 멤버 함수는 사용자 인터페이스 스레드에만 사용 됩니다.  
   
- 이 함수의 기본 구현은 삭제는 `CWinThread` 개체를 [m_bAutoDelete](#m_bautodelete) 은 **TRUE**합니다. 스레드가 종료 될 때 추가 정리를 수행 하려는 경우이 함수를 재정의 합니다. 구현 `ExitInstance` 코드를 실행 한 후에 기본 클래스의 버전을 호출 해야 합니다.  
+ 이 함수의 기본 구현은 삭제는 `CWinThread` 개체를 [m_bAutoDelete](#m_bautodelete) 은 TRUE입니다. 스레드가 종료 될 때 추가 정리를 수행 하려는 경우이 함수를 재정의 합니다. 구현 `ExitInstance` 코드를 실행 한 후에 기본 클래스의 버전을 호출 해야 합니다.  
   
 ##  <a name="getmainwnd"></a>  CWinThread::GetMainWnd  
  OLE 서버 응용 프로그램을 사용 하는 경우 호출를 직접 참조 하는 대신 응용 프로그램의 활성 주 창에 대 한 포인터를 검색 하려면이 함수는 `m_pMainWnd` application 개체의 멤버입니다.  
@@ -229,19 +230,19 @@ int GetThreadPriority();
 ### <a name="return-value"></a>반환 값  
  현재 스레드 우선 순위는 우선 순위 클래스 내의 수준입니다. 반환 되는 값은 다음 중 하나가 됩니다 가장 높은 우선 순위에서 낮은 순으로 나열:  
   
-- **THREAD_PRIORITY_TIME_CRITICAL**  
+- THREAD_PRIORITY_TIME_CRITICAL  
   
-- **THREAD_PRIORITY_HIGHEST**  
+- THREAD_PRIORITY_HIGHEST  
   
-- **THREAD_PRIORITY_ABOVE_NORMAL**  
+- THREAD_PRIORITY_ABOVE_NORMAL  
   
-- **THREAD_PRIORITY_NORMAL**  
+- THREAD_PRIORITY_NORMAL  
   
-- **THREAD_PRIORITY_BELOW_NORMAL**  
+- THREAD_PRIORITY_BELOW_NORMAL  
   
-- **THREAD_PRIORITY_LOWEST**  
+- THREAD_PRIORITY_LOWEST  
   
-- **THREAD_PRIORITY_IDLE**  
+- THREAD_PRIORITY_IDLE  
   
  이러한 우선 순위에 대 한 자세한 내용은 참조 하십시오. [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) Windows sdk에서입니다.  
   
@@ -261,27 +262,27 @@ virtual BOOL InitInstance();
  이 멤버 함수는 사용자 인터페이스 스레드에만 사용 됩니다. 에 전달 된 제어 함수에서 작업자 스레드 수의 초기화를 수행 [AfxBeginThread](application-information-and-management.md#afxbeginthread)합니다.  
   
 ##  <a name="isidlemessage"></a>  CWinThread::IsIdleMessage  
- 유지 하려면이 함수를 재정의 **OnIdle** 특정 메시지 생성 된 후 호출 하지 못하도록 합니다.  
+ 계속 하려면이 함수를 재정의 `OnIdle` 특정 메시지 생성 된 후 호출 하지 못하도록 합니다.  
   
 ```  
 virtual BOOL IsIdleMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pMsg`  
+ *pMsg*  
  현재 처리 중인 메시지를 가리킵니다.  
   
 ### <a name="return-value"></a>반환 값  
  0이 아닌 경우 `OnIdle` 처리 한 후 호출 해야 메시지가 고, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 기본 구현에서는 호출 하지 않으며 **OnIdle** 중복 마우스 메시지 및 메시지 캐럿 깜박임에 의해 생성 된 후입니다.  
+ 기본 구현에서는 호출 하지 않으며 `OnIdle` 중복 마우스 메시지 및 메시지 캐럿 깜박임에 의해 생성 된 후입니다.  
   
- 응용 프로그램에서 짧은 타이머를 만든 경우 **OnIdle** 이름은 자주 인해 성능 문제가 발생 합니다. 이러한 응용 프로그램의 성능을 향상 시키기 위해 재정의 `IsIdleMessage` 응용 프로그램의 `CWinApp`-파생 클래스를 확인 하려면 `WM_TIMER` 다음과 같이 메시지:  
+ 응용 프로그램에서 짧은 타이머를 만든 경우 `OnIdle` 이름은 자주 인해 성능 문제가 발생 합니다. 이러한 응용 프로그램의 성능을 향상 시키기 위해 재정의 `IsIdleMessage` 응용 프로그램의 `CWinApp`-파생 클래스 WM_TIMER 메시지에 대 한 확인 하는 방법입니다.  
   
  [!code-cpp[NVC_MFCDocView#189](../../mfc/codesnippet/cpp/cwinthread-class_1.cpp)]  
   
- 처리 `WM_TIMER` 이러한 방식으로 짧은 타이머를 사용 하는 응용 프로그램의 성능이 향상 됩니다.  
+ 이러한 방식으로 WM_TIMER 처리 짧은 타이머를 사용 하는 응용 프로그램의 성능이 향상 됩니다.  
   
 ##  <a name="m_bautodelete"></a>  CWinThread::m_bAutoDelete  
  스레드 종료 시 `CWinThread` 개체를 자동으로 삭제할지 여부를 지정합니다.  
@@ -291,7 +292,7 @@ BOOL m_bAutoDelete;
 ```  
   
 ### <a name="remarks"></a>설명  
- `m_bAutoDelete` 데이터 멤버는 형식의 공용 변수 **BOOL**합니다.  
+ `m_bAutoDelete` 데이터 멤버는 BOOL 형식의 공용 변수입니다.  
   
  `m_bAutoDelete`의 값은 해당 스레드 핸들이 닫히는 방식에 영향을 주지 않습니다. 스레드 핸들은 항상 `CWinThread` 개체가 소멸될 때 닫힙니다.  
   
@@ -303,7 +304,7 @@ HANDLE m_hThread;
 ```  
   
 ### <a name="remarks"></a>설명  
- `m_hThread` 데이터 멤버는 형식의 공용 변수 `HANDLE`합니다. 현재 스레드를 기본 있는 경우에 유효 합니다.  
+ `m_hThread` 데이터 멤버는 핸들 형식의 공용 변수입니다. 현재 스레드를 기본 있는 경우에 유효 합니다.  
   
 ##  <a name="m_nthreadid"></a>  CWinThread::m_nThreadID  
  이에 연결 된 스레드의 ID `CWinThread`합니다.  
@@ -313,9 +314,9 @@ DWORD m_nThreadID;
 ```  
   
 ### <a name="remarks"></a>설명  
- **m_nThreadID** 데이터 멤버는 형식의 공용 변수 `DWORD`합니다. 현재 스레드를 기본 있는 경우에 유효 합니다.  
+ `m_nThreadID` 데이터 멤버는 DWORD 형식의 공용 변수입니다. 현재 스레드를 기본 있는 경우에 유효 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
   예를 참조 [AfxGetThread](application-information-and-management.md#afxgetthread)합니다.  
   
 ##  <a name="m_pactivewnd"></a>  CWinThread::m_pActiveWnd  
@@ -326,7 +327,7 @@ CWnd* m_pActiveWnd;
 ```  
   
 ### <a name="remarks"></a>설명  
- Microsoft Foundation Class 라이브러리 본 계약은 경우 스레드는 창에서 참조 하는 경우 `m_pActiveWnd` 닫혀 있습니다. 이 스레드는 응용 프로그램에 대 한 주 스레드, 경우에 응용 프로그램이 종료 됩니다. 이 데이터 멤버는 경우 **NULL**, 응용 프로그램의 활성 창 `CWinApp` 개체 상속 됩니다. `m_pActiveWnd` 형식의 공용 변수 **CWnd\*** 합니다.  
+ Microsoft Foundation Class 라이브러리 본 계약은 경우 스레드는 창에서 참조 하는 경우 `m_pActiveWnd` 닫혀 있습니다. 이 스레드는 응용 프로그램에 대 한 주 스레드, 경우에 응용 프로그램이 종료 됩니다. 이 데이터 멤버는 NULL 이면 현재 창에 대 한 응용 프로그램의 경우 `CWinApp` 개체 상속 됩니다. `m_pActiveWnd` 형식의 공용 변수 `CWnd*`합니다.  
   
  재정의 하는 경우이 멤버 변수를 설정 일반적으로 `InitInstance`합니다. 작업자 스레드에서이 데이터 멤버의 값은 부모 스레드에서 상속 됩니다.  
   
@@ -338,7 +339,7 @@ CWnd* m_pMainWnd;
 ```  
   
 ### <a name="remarks"></a>설명  
- Microsoft Foundation Class 라이브러리 본 계약은 경우 스레드는 창에서 참조 하는 경우 `m_pMainWnd` 닫혀 있습니다. 이 스레드는 응용 프로그램에 대 한 주 스레드, 경우에 응용 프로그램이 종료 됩니다. 이 데이터 멤버는 경우 **NULL**, 응용 프로그램의 주 창 `CWinApp` 개체 스레드를 종료 하는 시기를 결정 하는 데 사용 됩니다. `m_pMainWnd` 형식의 공용 변수 **CWnd\*** 합니다.  
+ Microsoft Foundation Class 라이브러리 본 계약은 경우 스레드는 창에서 참조 하는 경우 `m_pMainWnd` 닫혀 있습니다. 이 스레드는 응용 프로그램에 대 한 주 스레드, 경우에 응용 프로그램이 종료 됩니다. 이 데이터 멤버가 NULL 이면 응용 프로그램의 주 창 `CWinApp` 개체 스레드를 종료 하는 시기를 결정 하는 데 사용 됩니다. `m_pMainWnd` 형식의 공용 변수 `CWnd*`합니다.  
   
  재정의 하는 경우이 멤버 변수를 설정 일반적으로 `InitInstance`합니다. 작업자 스레드에서이 데이터 멤버의 값은 부모 스레드에서 상속 됩니다.  
   
@@ -350,8 +351,8 @@ virtual BOOL OnIdle(LONG lCount);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lCount`  
- 카운터가 증가 될 때마다 `OnIdle` 스레드의 메시지 큐가 비어 때 호출 됩니다. 이 횟수가 새 메시지가 처리 될 때마다를 0으로 재설정 됩니다. 사용할 수는 `lCount` 상대 스레드가 하지 않는 경우에 메시지를 처리 하지 않고 시간을 결정 하는 매개 변수입니다.  
+ *lCount*  
+ 카운터가 증가 될 때마다 `OnIdle` 스레드의 메시지 큐가 비어 때 호출 됩니다. 이 횟수가 새 메시지가 처리 될 때마다를 0으로 재설정 됩니다. 사용할 수는 *lCount* 상대 스레드가 하지 않는 경우에 메시지를 처리 하지 않고 시간을 결정 하는 매개 변수입니다.  
   
 ### <a name="return-value"></a>반환 값  
  더 유휴 처리 시간; 받을 수는 0이 아닌 값 유휴 처리 시간을 더 이상 필요 하지 않으면 0입니다.  
@@ -359,7 +360,7 @@ virtual BOOL OnIdle(LONG lCount);
 ### <a name="remarks"></a>설명  
  `OnIdle` 스레드의 메시지 큐가 비어 있는 경우 기본 메시지 루프에서 호출 됩니다. 재정의 사용 하 여 사용자 고유의 배경 유휴 처리기 작업을 호출.  
   
- `OnIdle` 유휴 처리 시간이 없는 추가로 필요한 임을 나타내려면 0을 반환 해야 합니다. `lCount` 매개 변수 때마다 증가 `OnIdle` 메시지 큐가 비어 있으며 새 메시지가 처리 될 때마다 0으로 설정 될 때 호출 됩니다. 이 수에 따라 다른 유휴 루틴을 호출할 수 있습니다.  
+ `OnIdle` 유휴 처리 시간이 없는 추가로 필요한 임을 나타내려면 0을 반환 해야 합니다. *lCount* 매개 변수 때마다 증가 `OnIdle` 메시지 큐가 비어 있으며 새 메시지가 처리 될 때마다 0으로 설정 될 때 호출 됩니다. 이 수에 따라 다른 유휴 루틴을 호출할 수 있습니다.  
   
  이 멤버 함수의 기본 구현은 임시 개체와 사용 하지 않는 동적 연결 라이브러리에서 메모리를 해제합니다.  
   
@@ -375,7 +376,7 @@ operator HANDLE() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 성공 하면 스레드 개체가; 핸들 그렇지 않으면 **NULL**합니다.  
+ 성공 하면 스레드 개체가; 핸들 그렇지 않으면 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
  Windows Api를 직접 호출 하려면 핸들을 사용 합니다.  
@@ -391,20 +392,20 @@ BOOL PostThreadMessage(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `message`  
+ *message*  
  사용자 정의 메시지의 ID입니다.  
   
- `wParam`  
+ *wParam*  
  첫 번째 메시지 매개 변수입니다.  
   
- `lParam`  
+ *lParam*  
  두 번째 메시지 매개 변수입니다.  
   
 ### <a name="return-value"></a>반환 값  
  성공하면 0이 아니고, 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
- 메시지 맵 매크로 의해 게시 된 메시지 적절 한 메시지 처리기에 매핑되어 `ON_THREAD_MESSAGE`합니다.  
+ 게시 된 메시지는 메시지 맵 매크로 ON_THREAD_MESSAGE에 의해 적절 한 메시지 처리기에 매핑됩니다.  
   
 > [!NOTE]
 >  Windows를 호출할 때 [PostThreadMessage](http://msdn.microsoft.com/library/windows/desktop/ms644946) 함수 MFC 응용 프로그램에서 MFC 메시지 처리기는 호출 되지 않습니다. 자세한 내용은 기술 자료 문서 "PRB:: MFC 메시지 처리기 되지 호출 된 PostThreadMessage()" (Q142415)을 참조 하십시오.  
@@ -417,7 +418,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pMsg`  
+ *pMsg*  
  가리키는 [MSG 구조체](../../mfc/reference/msg-structure1.md) 처리할 메시지를 포함 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -436,10 +437,10 @@ virtual BOOL ProcessMessageFilter(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `code`  
- 후크 코드를 지정합니다. 이 멤버 함수는 코드를 사용 하 여 처리 하는 방법을 확인 하려면 `lpMsg.`  
+ *코드*  
+ 후크 코드를 지정합니다. 이 멤버 함수는 코드를 사용 하 여 처리 하는 방법을 결정 하기 위해 *lpMsg 합니다.*  
   
- `lpMsg`  
+ *lpMsg*  
  Windows에 대 한 포인터 [MSG 구조체](../../mfc/reference/msg-structure1.md)합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -463,11 +464,11 @@ virtual LRESULT ProcessWndProcException(
  *e*  
  처리 되지 않은 예외를 가리킵니다.  
   
- `pMsg`  
+ *pMsg*  
  가리키는 [MSG 구조체](../../mfc/reference/msg-structure1.md) 예외를 throw 하기 위해 프레임 워크를 발생 시킨 windows 메시지에 대 한 정보가 들어 있는입니다.  
   
 ### <a name="return-value"></a>반환 값  
- -없으면 1을 `WM_CREATE` 예외가 생성 됩니다; 그렇지 않으면 0입니다.  
+ 멤버가 없으면-WM_CREATE 예외가 생성 됩니다. 그렇지 않으면 0입니다.  
   
 ### <a name="remarks"></a>설명  
  이 멤버 함수를 직접 호출 하지 마십시오.  
@@ -476,8 +477,8 @@ virtual LRESULT ProcessWndProcException(
   
 |명령|작업|  
 |-------------|------------|  
-|`WM_CREATE`|실패 합니다.|  
-|`WM_PAINT`|다른 하지 못하도록 차단 하 여 영향을 받는 창 유효성을 검사 `WM_PAINT` 할 합니다.|  
+|WM_CREATE|실패 합니다.|  
+|WM_PAINT|생성 되 고 다른 WM_PAINT 메시지를 방지 하 여 영향을 받는 창 유효성을 검사 합니다.|  
   
  프로그램 예외의 전역 처리를 제공 하려면이 멤버 함수를 재정의 합니다. 기본 동작을 표시 하려는 경우에 기본 기능을 호출 합니다.  
   
@@ -491,12 +492,12 @@ virtual BOOL PumpMessage();
 ```  
   
 ### <a name="remarks"></a>설명  
- `PumpMessage` 스레드의 메시지 루프를 포함합니다. **PumpMessage** 호출한 `CWinThread` 스레드의 메시지 펌프를 합니다. 호출할 수 있습니다 `PumpMessage` 처리할 메시지를 강제로 재정의할 수 있습니다 또는 직접 `PumpMessage` 기본 동작을 변경 하 합니다.  
+ `PumpMessage` 스레드의 메시지 루프를 포함합니다. `PumpMessage` 에 의해 호출 됩니다 `CWinThread` 하는 스레드의 메시지를 펌핑 합니다. 호출할 수 있습니다 `PumpMessage` 처리할 메시지를 강제로 재정의할 수 있습니다 또는 직접 `PumpMessage` 기본 동작을 변경 하 합니다.  
   
  호출 `PumpMessage` 직접 및 고급 사용자만의 기본 동작 재정의 권장 합니다.  
   
 ##  <a name="resumethread"></a>  CWinThread::ResumeThread  
- 호출 하 여 일시 중단 된 스레드의 실행을 계속 하려면는 [있는 경우 SuspendThread](#suspendthread) 멤버 함수 또는 사용 하 여 만든 스레드는 **CREATE_SUSPENDED** 플래그입니다.  
+ 호출 하 여 일시 중단 된 스레드의 실행을 계속 하려면는 [있는 경우 SuspendThread](#suspendthread) 멤버 함수 또는 CREATE_SUSPENDED 플래그를 사용 하 여 만든 스레드입니다.  
   
 ```  
 DWORD ResumeThread();
@@ -516,12 +517,12 @@ virtual int Run();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `int` 스레드에 의해 반환 되는 값입니다. 이 값을 호출 하 여 검색할 수 [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)합니다.  
+ **int** 스레드에 의해 반환 되는 값입니다. 이 값을 호출 하 여 검색할 수 [GetExitCodeThread](http://msdn.microsoft.com/library/windows/desktop/ms683190)합니다.  
   
 ### <a name="remarks"></a>설명  
- **실행** 확보 하 고 응용 프로그램이 받을 때까지 Windows 메시지를 발송 한 [WM_QUIT](http://msdn.microsoft.com/library/windows/desktop/ms632641) 메시지입니다. 스레드의 메시지 큐에 현재 없는 메시지를 포함 하는 경우 **실행** 호출 `OnIdle` 유휴 시간 처리를 수행 합니다. 들어오는 메시지는로 이동 된 [PreTranslateMessage](#pretranslatemessage) 멤버 함수에 대 한 특수 한 처리 및 다음 Windows 함수 [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) 표준 키보드의 번역에 대 한 합니다. 마지막으로 [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 함수를 호출 합니다.  
+ `Run` 획득 및 응용 프로그램을 수신 될 때까지 Windows 메시지를 디스패치는 [WM_QUIT](http://msdn.microsoft.com/library/windows/desktop/ms632641) 메시지입니다. 스레드의 메시지 큐에 현재 없는 메시지를 포함 하는 경우 `Run` 호출 `OnIdle` 유휴 시간 처리를 수행 합니다. 들어오는 메시지는로 이동 된 [PreTranslateMessage](#pretranslatemessage) 멤버 함수에 대 한 특수 한 처리 및 다음 Windows 함수 [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) 표준 키보드의 번역에 대 한 합니다. 마지막으로 [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 함수를 호출 합니다.  
   
- **실행** 대부분 재정의 하지만 특별 한 동작을 구현 하 여 재정의할 수 있습니다.  
+ `Run` 대부분 재정의 하지만 특별 한 동작을 구현 하 여 재정의할 수 있습니다.  
   
  이 멤버 함수는 사용자 인터페이스 스레드에만 사용 됩니다.  
   
@@ -533,22 +534,22 @@ BOOL SetThreadPriority(int nPriority);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `nPriority`  
+ *nPriority*  
  해당 우선 순위 클래스 내에서 새 스레드 우선 순위 수준을 지정합니다. 이 매개 변수는 가장 높은 우선 순위에서 낮은 순으로 나열 하는 다음 값 중 하나 여야 합니다.  
   
-- **THREAD_PRIORITY_TIME_CRITICAL**  
+- THREAD_PRIORITY_TIME_CRITICAL  
   
-- **THREAD_PRIORITY_HIGHEST**  
+- THREAD_PRIORITY_HIGHEST  
   
-- **THREAD_PRIORITY_ABOVE_NORMAL**  
+- THREAD_PRIORITY_ABOVE_NORMAL  
   
-- **THREAD_PRIORITY_NORMAL**  
+- THREAD_PRIORITY_NORMAL  
   
-- **THREAD_PRIORITY_BELOW_NORMAL**  
+- THREAD_PRIORITY_BELOW_NORMAL  
   
-- **THREAD_PRIORITY_LOWEST**  
+- THREAD_PRIORITY_LOWEST  
   
-- **THREAD_PRIORITY_IDLE**  
+- THREAD_PRIORITY_IDLE  
   
  이러한 우선 순위에 대 한 자세한 내용은 참조 하십시오. [SetThreadPriority](http://msdn.microsoft.com/library/windows/desktop/ms686277) Windows sdk에서입니다.  
   

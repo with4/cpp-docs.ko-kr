@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164520"
 ---
 # <a name="typeof-goes-to-ttypeid"></a>typeof 대신 T::typeid 사용
 `typeof` c + +로 변경 된가 데에 대 한 관리 되는 확장에 사용 되는 연산자는 `typeid` Visual c + +의 키워드입니다.  

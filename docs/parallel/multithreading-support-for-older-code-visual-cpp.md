@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687727"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>이전 코드를 위한 다중 스레드 지원(Visual C++)
 Visual c + +를 사용 하면 여러 동시 실행 스레드를 동시에 실행할 수 있습니다. 와 다중 스레딩, 백그라운드 작업 분리 시키고, 동시 입력 스트림을 관리, 사용자 인터페이스 및 등을 관리 합니다.  

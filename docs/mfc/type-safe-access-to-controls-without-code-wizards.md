@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33385767"
 ---
 # <a name="type-safe-access-to-controls-without-code-wizards"></a>코드 마법사를 사용하지 않고 컨트롤에 대한 형식이 안전한 액세스 수행
 첫 번째는 방식은 컨트롤에 대 한 형식이 안전한 액세스는 인라인 멤버 함수를 사용 하 여 클래스의 반환 형식을 캐스팅 `CWnd`의 `GetDlgItem` 멤버 함수를 다음이 예제와 같이 적절 한 c + + 컨트롤 형식:  

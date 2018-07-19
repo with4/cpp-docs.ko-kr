@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385843"
 ---
 # <a name="signal-function-c"></a>신호 함수 (C)
 **ANSI 4.7.1.1** **signal** 함수에 대한 신호의 집합  

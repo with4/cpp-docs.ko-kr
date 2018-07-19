@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33256404"
 ---
 # <a name="compiler-error-c3539"></a>컴파일러 오류 C3539
 'type': 템플릿 인수 'auto' 포함 된 형식일 수 없습니다.  

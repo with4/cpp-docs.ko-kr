@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344421"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>방법: 리본 컨트롤 및 이벤트 처리기 추가
 리본 메뉴 컨트롤은 단추와 콤보 상자 패널에 추가 하는 등의 요소입니다. 패널은 관련된 컨트롤의 그룹을 표시 하는 리본 표시줄의 영역입니다.  

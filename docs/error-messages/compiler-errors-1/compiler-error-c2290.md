@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33169922"
 ---
 # <a name="compiler-error-c2290"></a>컴파일러 오류 C2290
 C++ asm 구문이 무시됩니다. __asm을 사용하세요.  

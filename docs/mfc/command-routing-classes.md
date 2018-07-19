@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341964"
 ---
 # <a name="command-routing-classes"></a>명령 라우팅 클래스
 메뉴 또는 마우스 단추 컨트롤 막대를 선택 하 여 사용자 응용 프로그램과 상호 작용 하는 응용 프로그램 메시지 적절 한 명령 대상 개체에 영향을 받는 사용자 인터페이스 개체에서 보냅니다. 명령 대상 클래스에서 파생 된 `CCmdTarget` 포함 [CWinApp](../mfc/reference/cwinapp-class.md), [CWnd](../mfc/reference/cwnd-class.md), [CDocTemplate](../mfc/reference/cdoctemplate-class.md), [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md)와 여기서 파생 된 클래스입니다. 프레임 워크 자동 명령 라우팅 명령을 응용 프로그램에서 현재 활성 상태인 가장 적합 한 개체에 의해 처리 될 수 있도록 지원 합니다.  

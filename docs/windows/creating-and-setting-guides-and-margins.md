@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873513"
 ---
 # <a name="creating-and-setting-guides-and-margins"></a>안내선과 여백 만들기 및 설정
 이동 하는 컨트롤에 컨트롤을 추가 하거나 현재 레이아웃을 다시 정렬, 안내선 수 있는지 여부를 정확 하 게 내 대화 상자에서 컨트롤 정렬 합니다. 안내선은 눈금자 (위쪽에 대화 상자 편집기의 왼쪽을 따라)에서 해당 화살표 편집기에 표시 되는 대화 상자에서 파란색 점선으로 나타납니다.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381670"
 ---
 # <a name="file-position-in-append-mode"></a>추가 모드의 파일 위치
 **ANSI 4.9.3** 추가 모드 스트림의 파일 위치 표시기가 처음에 파일의 시작에 배치되는지 아니면 끝에 배치되는지 여부  

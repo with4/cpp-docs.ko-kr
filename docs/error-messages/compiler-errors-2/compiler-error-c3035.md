@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33244988"
 ---
 # <a name="compiler-error-c3035"></a>컴파일러 오류 C3035
 OpenMP 'ordered' 지시문은 'ordered' 절이 있는 'for' 또는 'parallel for' 지시문에 직접 바인딩되어야 합니다.  

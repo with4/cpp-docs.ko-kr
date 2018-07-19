@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366798"
 ---
 # <a name="callercallee-saved-registers"></a>호출자/호출 수신자 저장 레지스터
 함수 호출의 휘발성 간주 되며, 그 밖에 고려해 야 RAX, RCX, RDX, R8, r 9, r 10, R11 레지스터 삭제 (하지 않는 한 안전성이 전체 프로그램 최적화와 같은 분석을 통해).  

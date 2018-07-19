@@ -25,15 +25,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ab7f4e185f19b07ddcec47b8f167e7040a5bef28
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d5f0d38ebd24c38579f73bceea0fff50ab361638
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962782"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; 클래스
 
-`vector<bool>` 클래스는 `bool` 형식의 요소에 대한 [vector](../standard-library/vector-class.md)의 부분적 특수화입니다. 특수화(비트당 하나의 `bool` 값을 저장하여 공간 최적화 제공)에서 사용하는 기본 형식에 대한 할당자가 있습니다.
+합니다 `vector<bool>` 클래스는 부분 특수화 [벡터](../standard-library/vector-class.md) 형식의 요소에 대해 **bool**합니다. 하나를 저장 하 여 공간 최적화를 제공 하는 특수화에서 사용 되는 기본 형식에 대 한 할당자를 있기 **bool** 당 비트 값입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -46,14 +47,14 @@ class vector<bool, Allocator>
 
 이 클래스 템플릿 특수화는 이 문서에서 설명하는 차이를 제외하고 벡터처럼 동작합니다.
 
-`bool` 형식으로 처리되는 작업은 컨테이너 저장소의 값에 해당합니다. `allocator_traits::construct`는 이러한 값을 만드는 데 사용되지 않습니다.
+처리 하는 작업은 **bool** 컨테이너 저장소의 값에 해당 하는 형식입니다. `allocator_traits::construct`는 이러한 값을 만드는 데 사용되지 않습니다.
 
 ### <a name="typedefs"></a>형식 정의
 
 |형식 이름|설명|
 |-|-|
 |[const_pointer](#const_pointer)|`const_iterator`의 부울 요소에 대한 상수 포인터로 사용할 수 있는 `vector<bool>`에 대한 typedef입니다.|
-|[const_reference](#const_reference)|`bool`에 대한 typedef입니다. 초기화 이후에는 원래 값으로의 업데이트를 따르지 않습니다.|
+|[const_reference](#const_reference)|에 대 한 typedef **bool**합니다. 초기화 이후에는 원래 값으로의 업데이트를 따르지 않습니다.|
 |[pointer](#pointer)|`iterator`의 부울 요소에 대한 포인터로 사용할 수 있는 `vector<bool>`에 대한 typedef입니다.|
 
 ### <a name="member-functions"></a>멤버 함수
@@ -107,7 +108,7 @@ typedef bool const_reference;
 void flip();
 ```
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // vector_bool_flip.cpp
@@ -152,7 +153,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 |매개 변수|설명|
 |-|-|
-|`Pos`|`vector<bool>` 요소의 위치입니다.|
+|*pos*|`vector<bool>` 요소의 위치입니다.|
 
 ### <a name="return-value"></a>반환 값
 
@@ -162,9 +163,9 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="remarks"></a>설명
 
-`_ITERATOR_DEBUG_LEVEL` 집합을 사용하여 컴파일할 경우 벡터 경계 밖에서 요소를 액세스하려고 하면 런타임 오류가 발생합니다.  자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)을 참조하세요.
+_ITERATOR_DEBUG_LEVEL 집합을 사용 하 여 컴파일할 경우 벡터 경계 밖에 서 요소에 액세스 하면 런타임 오류가 발생 합니다.  자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)을 참조하세요.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 이 코드 예제는 `vector<bool>::operator[]`의 올바른 사용 방법과 두 가지 흔한 코딩 실수(주석 처리)를 보여 줍니다. 이러한 실수는 `vector<bool>::reference`에서 반환하는 `vector<bool>::operator[]` 개체의 주소를 가져올 수 없으므로 오류가 발생합니다.
 
@@ -226,7 +227,7 @@ bool& refb = vb[1];   // conversion error - do not use
 void flip();
 ```
 
-#### <a name="example"></a>예제
+#### <a name="example"></a>예
 
 ```cpp
 // vector_bool_ref_flip.cpp
@@ -267,7 +268,7 @@ The vector with first element flipped is:
 
 ###  <a name="reference_operator_bool"></a>  vector\<bool>::reference::operator bool
 
-`vector<bool>::reference`을 `bool`로 묵시적으로 변환합니다.
+암시적으로 변환 `vector<bool>::reference` 하 **bool**합니다.
 
 ```cpp
 operator bool() const;
@@ -292,11 +293,13 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>매개 변수
 
-`Right` 비트에 할당 하는 값을 갖는 요소 참조입니다.
+*오른쪽*  
+ 해당 값을 비트에 할당할 요소 참조입니다.
 
-`Val` 비트에 할당 될 부울 값입니다.
+*val*  
+ 비트에 할당될 부울 값입니다.
 
-#### <a name="example"></a>예제
+#### <a name="example"></a>예
 
 ```cpp
 // vector_bool_ref_op_assign.cpp
@@ -379,9 +382,11 @@ static void swap(
 
 ### <a name="parameters"></a>매개 변수
 
-`Left` 와 교환할 요소는 `Right` 요소입니다.
+*왼쪽*  
+ 사용 하 여 교환할 요소를 *오른쪽* 요소입니다.
 
-`Right` 와 교환할 요소는 `Left` 요소입니다.
+*오른쪽*  
+ 사용 하 여 교환할 요소를 *왼쪽* 요소입니다.
 
 ### <a name="remarks"></a>설명
 

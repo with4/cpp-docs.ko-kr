@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33883344"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>제네릭 형식 매개 변수에 대한 제약 조건(C++/CLI)
 제네릭 형식 또는 메서드 선언에는 제약 조건이 있는 형식 매개 변수를 한정할 수 있습니다. 제약 조건은 형식 인수로 사용되는 형식이 충족해야 하는 요구 사항입니다. 예를 들어, 형식 인수가 특정 인터페이스를 구현하거나 특정 클래스에서 상속해야 제한할 수 있습니다.  

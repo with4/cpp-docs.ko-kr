@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6eb1eec82e7f9e39f508bd0c9559cec787f6ec9a
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e2cc04a711e211c7dcc5f3491edc8b4646f73dbb
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960007"
 ---
 # <a name="insertiterator-class"></a>insert_iterator 클래스
 
@@ -39,11 +40,11 @@ class insert_iterator;
 
 ### <a name="parameters"></a>매개 변수
 
-`Container` 에 의해 삽입 될 요소는 컨테이너 유형에 `insert_iterator`합니다.
+`Container` 컨테이너에 요소를 삽입할 유형의 `insert_iterator`합니다.
 
 ## <a name="remarks"></a>설명
 
-형식이 **Container**인 컨테이너는 다양한 크기의 컨테이너 요구 사항을 충족해야 하며 매개 변수의 형식이 **Container::iterator** 및 **Container::value_type**이거나 **Container::iterator** 형식을 반환할 경우 두 개의 인수 삽입 멤버 함수가 있어야 합니다. C++ 표준 라이브러리 시퀀스 및 정렬된 연관 컨테이너는 이러한 요구 사항을 준수하며 `insert_iterator`를 사용할 수 있도록 조정되었습니다. 연관 컨테이너의 경우 위치 인수는 힌트로 처리되며, 힌트가 얼마나 양호한가에 따라 성능이 향상되거나 저하될 수 있습니다. `insert_iterator`는 항상 컨테이너를 사용하여 초기화해야 합니다.
+형식의 컨테이너 `Container` 가변 크기의 컨테이너에 대 한 요구 사항을 충족 하며 형식의 매개 변수가 있는 두 개의 인수 삽입 멤버 함수를 있어야 `Container::iterator` 하 고 `Container::value_type` 형식을 반환 하 고 `Container::iterator`입니다. C++ 표준 라이브러리 시퀀스 및 정렬된 연관 컨테이너는 이러한 요구 사항을 준수하며 `insert_iterator`를 사용할 수 있도록 조정되었습니다. 연관 컨테이너의 경우 위치 인수는 힌트로 처리되며, 힌트가 얼마나 양호한가에 따라 성능이 향상되거나 저하될 수 있습니다. `insert_iterator`는 항상 컨테이너를 사용하여 초기화해야 합니다.
 
 ### <a name="constructors"></a>생성자
 
@@ -82,9 +83,9 @@ typedef Container container_type;
 
 ### <a name="remarks"></a>설명
 
-이 형식은 템플릿 매개 변수 **Container**의 동의어입니다.
+이 형식은 템플릿 매개 변수 *Container*의 동의어입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // insert_iterator_container_type.cpp
@@ -124,15 +125,15 @@ insert_iterator(Container& _Cont, typename Container::iterator _It);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Cont` 대상 컨테이너는 `insert_iterator` 요소를 삽입 하는 것입니다.
+*_Cont* 대상 컨테이너를 `insert_iterator` 요소를 삽입 하는 것입니다.
 
-`_It` 삽입을 위한 위치입니다.
+*_It* 를 삽입할 위치입니다.
 
 ### <a name="remarks"></a>설명
 
 모든 컨테이너에는 `insert_iterator`에서 호출하는 삽입 멤버 함수가 있습니다. 연관 컨테이너의 경우 위치 매개 변수는 단순히 제안입니다. inserter 함수는 값에 삽입하는 편리한 방법을 제공합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // insert_iterator_insert_iterator.cpp
@@ -192,9 +193,9 @@ insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>설명
 
-출력 반복기 식 **\*Iter** = **value**를 구현하는 데 사용됩니다. **Iter**이 시퀀스에서 요소의 주소를 지정하는 반복기인 경우 **\*Iter** = **value**는 해당 요소를 값과 바꾸며 시퀀스에서 총 요소 수를 변경하지 않습니다.
+출력 반복기 식 **\*Iter** = **value**를 구현하는 데 사용됩니다. 하는 경우 `Iter` 가 다음 시퀀스에서 요소를 해결 하는 반복기  **\*Iter** = **값** 값을 사용 하 여 해당 요소를 대체 하 고 총 변경 되지 않습니다 시퀀스의 요소입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // insert_iterator_op_deref.cpp
@@ -240,7 +241,7 @@ After the insertions, the list L is:
 
 ## <a name="op_add_add"></a>  insert_iterator::operator++
 
-값을 저장할 수 있는 다음 위치로 **insert_iterator**를 증가시킵니다.
+값을 저장할 다음 위치에 `insert_iterator`를 증가시킵니다.
 
 ```cpp
 insert_iterator<Container>& operator++();
@@ -256,7 +257,7 @@ insert_iterator<Container> operator++(int);
 
 preincrementation과 postincrementation 연산자는 둘 다 동일한 결과를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // insert_iterator_op_incr.cpp
@@ -316,7 +317,7 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>매개 변수
 
-`val` 컨테이너에 할당할 값입니다.
+*val* 컨테이너에 할당할 값입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -340,7 +341,7 @@ insert_iterator<Container>& operator=(
 
 그런 다음 `*this`를 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // insert_iterator_op_assign.cpp
@@ -396,7 +397,7 @@ typedef typename Container::reference reference;
 
 이 형식은 연관 컨테이너에서 제어하는 시퀀스의 요소에 대한 참조를 제공합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // insert_iterator_container_reference.cpp

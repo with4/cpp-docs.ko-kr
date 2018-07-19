@@ -9,6 +9,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32424853"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>간단한, 표준 레이아웃, POD, 및 리터럴 형식
 

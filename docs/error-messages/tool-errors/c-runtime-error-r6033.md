@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299996"
 ---
 # <a name="c-runtime-error-r6033"></a>C 런타임 오류 r 6033이 발생
 네이티브 코드를 초기화 하는 동안이 어셈블리에서 MSIL 코드를 사용 하려고 합니다. 응용 프로그램에서 버그를 나타냅니다. MSIL로 컴파일된 호출의 결과 가능성이 높으며 (/ clr) 함수를 DllMain 또는 기본 생성자에서 합니다.  

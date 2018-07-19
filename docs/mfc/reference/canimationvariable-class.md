@@ -54,11 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: efaf47ef434e4f6c63b937d1f360851fa9826e3d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 207adbba4635b80ba7b60af53f920b1af376e93d
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36957301"
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable 클래스
 애니메이션 변수를 나타냅니다.  
@@ -109,7 +110,7 @@ class CAnimationVariable;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|IUIAnimationVariable로 전파 되는 기본값을 지정 합니다.|  
 |[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|이 애니메이션 변수 애니메이션 효과 적용 하는 전환 목록을 포함 합니다.|  
@@ -140,7 +141,7 @@ void AddTransition(CBaseTransition* pTransition);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pTransition`  
+ *pTransition*  
  추가할 전환에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -157,13 +158,13 @@ void ApplyTransitions(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pController`  
+ *pController*  
  부모 애니메이션 컨트롤러에 대 한 포인터입니다.  
   
- `pStoryboard`  
+ *pStoryboard*  
  스토리 보드에 대 한 포인터입니다.  
   
- `bDependOnKeyframes`  
+ *bDependOnKeyframes*  
  이 메서드는 키 프레임에 종속 되는 전환을 추가 해야 하는 경우 TRUE입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -177,7 +178,7 @@ CAnimationVariable(DOUBLE dblDefaultValue = 0.0);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  기본값을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -191,7 +192,7 @@ void ClearTransitions(BOOL bAutodestroy);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bAutodestroy`  
+ *bAutodestroy*  
  이 메서드 변환 개체를 삭제 해야 하는지 여부를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -205,7 +206,7 @@ virtual BOOL Create(IUIAnimationManager* pManager);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pManager`  
+ *pManager*  
  애니메이션 관리자에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -224,7 +225,7 @@ BOOL CreateTransitions(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
-`pLibrary`  
+*pLibrary*  
  에 대 한 포인터는 [IUIAnimationTransitionLibrary 인터페이스](https://msdn.microsoft.com/library/windows/desktop/dd371897), 표준 전환의 라이브러리를 정의 하는 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -243,10 +244,10 @@ void EnableIntegerValueChangedEvent (
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pController`  
+ *pController*  
  부모 컨트롤러에 대 한 포인터입니다.  
   
- `bEnable`  
+ *bEnable*  
  TRUE-이벤트를 이벤트 사용 안 함-FALSE를 설정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -262,10 +263,10 @@ void EnableValueChangedEvent (
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pController`  
+ *pController*  
  부모 컨트롤러에 대 한 포인터입니다.  
   
- `bEnable`  
+ *bEnable*  
  TRUE-이벤트를 이벤트 사용 안 함-FALSE를 설정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -306,10 +307,10 @@ HRESULT GetValue(INT32& nValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dblValue`  
+ *dblValue*  
  애니메이션 변수의 현재 값입니다.  
   
- `nValue`  
+ *n 값*  
  애니메이션 변수의 현재 값입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -377,7 +378,7 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `dblDefaultValue`  
+ *dblDefaultValue*  
  새 기본값을 지정합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -391,7 +392,7 @@ void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParentObject`  
+ *pParentObject*  
  이 변수를 포함 하는 애니메이션 개체에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  

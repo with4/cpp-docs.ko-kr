@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369616"
 ---
 # <a name="error-message-edit-control"></a>오류 메시지 Edit 컨트롤
 **오류 메시지가** 시스템 오류 메시지 또는 입력 한 값을 기반으로 하는 모듈 오류 메시지의 텍스트 상자에 포함 되어 있습니다.  

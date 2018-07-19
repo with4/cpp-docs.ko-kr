@@ -19,36 +19,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53fd73fc9606053dda6f8c143618373ad9bb7e4e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f87d9e4d7193755f70e3463f4da60d88a7bd832c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944446"
 ---
 # <a name="varianttchangetype"></a>_variant_t::ChangeType
 **Microsoft 전용**  
   
- 종류를 변경 하는 `_variant_t` 표시 된 개체 **VARTYPE**합니다.  
+ 형식을 변경 합니다 `_variant_t` 표시 된 개체 `VARTYPE`합니다.  
   
 ## <a name="syntax"></a>구문  
   
 ```  
   
-      void ChangeType(  
+void ChangeType(  
    VARTYPE vartype,  
    const _variant_t* pSrc = NULL   
 );  
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `vartype`  
- **VARTYPE** 이 `_variant_t` 개체입니다.  
+ *vartype*  
+ 합니다 `VARTYPE` 이 `_variant_t` 개체입니다.  
   
- `pSrc`  
- 변환할 `_variant_t` 개체의 포인터입니다. 이 값이 **NULL**, 변환은 위치에서 수행 됩니다.  
+ *pSrc*  
+ 변환할 `_variant_t` 개체의 포인터입니다. 이 값이 NULL 인 경우 변환 위치에서 수행 됩니다.  
   
 ## <a name="remarks"></a>설명  
- 이 멤버 함수는 변환 된 `_variant_t` 개체를 지정 된 **VARTYPE**합니다. 경우 `pSrc` 은 **NULL**, 변환이 수행 되 준비, 그렇지 않으면이 `_variant_t` 개체에서 복사 된 `pSrc` 변환 합니다.  
+ 이 멤버 함수는 변환 된 `_variant_t` 개체로 표시 된 `VARTYPE`합니다. 하는 경우 *pSrc* 가 null 인 경우 변환은 이렇게 적용이 고 그렇지 `_variant_t` 개체에서 복사 됩니다 *pSrc* 변환한 후 합니다.  
   
  **Microsoft 전용 종료**  
   

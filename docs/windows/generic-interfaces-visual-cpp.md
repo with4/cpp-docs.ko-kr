@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878699"
 ---
 # <a name="generic-interfaces-visual-c"></a>제네릭 인터페이스(Visual C++)
 클래스에 매개 변수를 형식에 적용 되는 제한 사항을 인터페이스에 형식 매개 변수를 적용 하는 것과 동일 (참조 [제네릭 클래스 (C + + /cli CLI)](../windows/generic-classes-cpp-cli.md)).  

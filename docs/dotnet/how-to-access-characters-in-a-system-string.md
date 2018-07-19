@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33129751"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>방법: System::String의 문자에 액세스
 문자에 액세스할 수 있습니다는 <xref:System.String> 관리 되지 않는 호출 성능을 향상에 대 한 개체 사용 하는 함수의 `wchar_t*` 문자열입니다. 메서드가 생성의 첫 번째 문자에 대 한 내부 포인터는 <xref:System.String> 개체입니다. 이 포인터 직접 조작할 또는 고정 하 고 수는 일반 필요한 함수에 전달 된 `wchar_t` 문자열입니다.  

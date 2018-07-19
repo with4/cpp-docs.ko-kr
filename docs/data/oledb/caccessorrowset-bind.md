@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088331"
 ---
 # <a name="caccessorrowsetbind"></a>CAccessorRowset::Bind
 지정한 경우에 바인딩 만듭니다 **bBind** 에 false [ccommand:: Open](../../data/oledb/ccommand-open.md)합니다.  

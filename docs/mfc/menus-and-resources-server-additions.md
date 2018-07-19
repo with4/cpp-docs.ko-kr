@@ -27,11 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86b941820b439afc8b914142b412995df30f109c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cbcedd8cf217c993511bdb84a89294d7e98d6bab
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930204"
 ---
 # <a name="menus-and-resources-server-additions"></a>메뉴 및 리소스: 서버 추가
 이 문서에서는 메뉴 및 비주얼 편집 서버 (구성 요소) 응용 프로그램의 다른 리소스에 적용 하는 변경 사항을 설명 합니다. 세 가지 모드 중 하나에서 시작 하려면 때문에 서버 응용 프로그램의 메뉴 구조 및 기타 리소스에 많은 추가 필요: 독립 실행형 모드, 포함 또는 위치에 있습니다. 에 설명 된 대로 [메뉴 및 리소스 (OLE)](../mfc/menus-and-resources-ole.md) 문서, 4 개의 집합이 메뉴의 최대는 합니다. 4는 3 개만 모드만 사용 되지만 MDI 풀 서버 응용 프로그램에 사용 됩니다. 응용 프로그램 마법사에서는 원하는 서버 유형에 필요한 메뉴 레이아웃을 만듭니다. 일부 사용자 지정을 할 수 있습니다.  
@@ -62,14 +63,14 @@ ms.lasthandoff: 05/04/2018
   
  두 번째 테이블은 거의 보기의 액셀러레이터 키 테이블의 정확한 복사본입니다. 모든 차이점에 언급 된 완전히 열기 메뉴에서 변경 내용을 병렬 [서버 메뉴 추가](#_core_server_menu_additions)합니다.  
   
- 이러한 액셀러레이터 키 테이블 변경의 예로에 대 한 비교는 **IDR_HIERSVRTYPE_SRVR_IP** 및 **IDR_HIERSVRTYPE_SRVR_EMB** 가속기가 포함 된 테이블 **IDR_MAINFRAME** HIERSVR에서. MFC OLE 샘플에 포함 된 RC 파일과 [HIERSVR](../visual-cpp-samples.md)합니다. 파일 및 Window 액셀러레이터 내부 테이블에서 누락 되어 정확한 사본을 포함 된 테이블에 있습니다.  
+ 이러한 액셀러레이터 키 테이블 변경의 예는 HIERSVR에서 IDR_MAINFRAME와 IDR_HIERSVRTYPE_SRVR_IP 한 액셀러레이터 키 테이블을 비교 합니다. MFC OLE 샘플에 포함 된 RC 파일과 [HIERSVR](../visual-cpp-samples.md)합니다. 파일 및 Window 액셀러레이터 내부 테이블에서 누락 되어 정확한 사본을 포함 된 테이블에 있습니다.  
   
 ##  <a name="_core_string_table_additions_for_server_applications"></a> 서버 응용 프로그램에 대 한 문자열 테이블 추가  
  하나의 문자열 테이블에 추가 서버 응용 프로그램에 필요-는 문자열을 나타내는 OLE를 초기화 하지 못했습니다. 예를 들어, 응용 프로그램 마법사에서 생성 하는 문자열 테이블 항목 다음과 같습니다.  
   
 |ID|문자열|  
 |--------|------------|  
-|**IDP_OLE_INIT_FAILED**|OLE 초기화 하지 못했습니다. OLE 라이브러리 버전이 올바른지 확인 합니다.|  
+|IDP_OLE_INIT_FAILED|OLE 초기화 하지 못했습니다. OLE 라이브러리 버전이 올바른지 확인 합니다.|  
   
 ##  <a name="_core_mini.2d.server_additions"></a> 미니 서버 추가  
  동일한 추가 적용으로 위에 나열 된 미니 서버 전체에 대 한 합니다. 미니를 독립 실행형 모드에서 실행할 수 없습니다. 때문에 주 메뉴는 훨씬 더 작습니다. 응용 프로그램 마법사로 만든 주 메뉴에만 파일을 포함 하는 메뉴가 종료 항목만 및 약 합니다. 포함 및 내부 메뉴 및 액셀러레이터 미니 서버 전체에 대 한 것과 동일합니다.  

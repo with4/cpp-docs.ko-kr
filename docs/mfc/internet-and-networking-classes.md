@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345093"
 ---
 # <a name="internet-and-networking-classes"></a>인터넷 및 네트워킹 클래스
 이러한 클래스를 통해 Windows 소켓 또는 Win32 인터넷(WinInet)을 사용하여 다른 컴퓨터와 정보를 교환할 수 있습니다. Windows 소켓을 조작하기 위한 클래스 집합도 있습니다.  

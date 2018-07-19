@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354184"
 ---
 # <a name="adding-functionality-to-the-composite-control"></a>복합 컨트롤에 기능 추가
 복합 컨트롤에 필요한 컨트롤을 삽입 하면 다음 단계는 새로운 기능을 추가 해야 합니다. 이 새로운 기능은 일반적으로 두 가지 범주에 해당 됩니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375203"
 ---
 # <a name="stub"></a>STUB
 IMAGE_DOS_HEADER 구조 (WINNT에 정의 포함 된 파일 이름을 지정할 수 있습니다 (VxD) 가상 장치 드라이버를 작성 하는 모듈 정의 파일에서 사용 될 때 합니다. H) 기본 헤더 대신 가상 장치 드라이버 (VxD)에서 사용할 수 있습니다.  

@@ -36,6 +36,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33846651"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if, #elif, #else, and #endif 지시문 (C/C++)
 `#if` 지시문은 `#elif`, `#else` 및 `#endif` 지시문과 함께 소스 파일 부분들의 컴파일을 제어합니다. `#if` 뒤에 작성하는 식에 0이 아닌 값이 있는 경우 `#if` 지시문 바로 다음에 나오는 줄 그룹은 변환 단위에서 유지됩니다.  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694887"
 ---
 # <a name="parallel-algorithms"></a>병렬 알고리즘
 병렬 패턴 라이브러리 (PPL) 동시에 데이터 컬렉션에 대 한 작업을 수행 하는 알고리즘을 제공 합니다. 이러한 알고리즘 비슷한 c + + 표준 라이브러리에서 제공 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232727"
 ---
 # <a name="compiler-error-c2780"></a>컴파일러 오류 c 2780
 'declaration' : 인수가 N개 있어야 하는데 M개를 사용했습니다.  

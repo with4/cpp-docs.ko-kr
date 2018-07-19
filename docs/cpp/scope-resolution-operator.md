@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32420943"
 ---
 # <a name="scope-resolution-operator-"></a>범위 해결 연산자: ::
 범위 확인 연산자 `::`는 여러 범위에 사용된 식별자를 식별하고 구분하는 데 사용됩니다. 범위에 대 한 자세한 내용은 참조 [범위](../cpp/scope-visual-cpp.md)합니다.  

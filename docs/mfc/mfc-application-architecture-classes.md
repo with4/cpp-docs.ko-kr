@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351432"
 ---
 # <a name="mfc-application-architecture-classes"></a>MFC 응용 프로그램 아키텍처 클래스
 이 항목의 클래스는 프레임 워크 응용 프로그램의 아키텍처에 영향을 줍니다. 대부분의 응용 프로그램에 공통 기능을 제공합니다. 응용 프로그램 관련 기능을 추가 하기 위해 프레임 워크에 정보를 입력 합니다. 일반적으로 이렇게 하면 아키텍처 클래스에서 새 클래스를 파생 하 고 다음 새 멤버를 추가 하거나 기존 멤버 함수를 재정의 하 여 됩니다.  

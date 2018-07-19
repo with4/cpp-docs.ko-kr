@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234044"
 ---
 # <a name="compiler-error-c2782"></a>컴파일러 오류 c 2782가
 'declaration': 템플릿 매개 변수 'identifier' 모호 합니다.  

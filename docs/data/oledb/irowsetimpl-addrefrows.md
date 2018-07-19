@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33102295"
 ---
 # <a name="irowsetimpladdrefrows"></a>IRowsetImpl::AddRefRows
 기존 행 핸들에 대 한 참조 횟수를 추가합니다.  

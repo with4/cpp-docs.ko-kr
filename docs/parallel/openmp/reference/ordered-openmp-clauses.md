@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691653"
 ---
 # <a name="ordered-openmp-clauses"></a>ordered (OpenMP 절)
 병렬 처리에 필요한 [에 대 한](../../../parallel/openmp/reference/for-openmp.md) 문을 경우는 [정렬](../../../parallel/openmp/reference/ordered-openmp-directives.md) 지시문은 루프에서 사용 됩니다.  

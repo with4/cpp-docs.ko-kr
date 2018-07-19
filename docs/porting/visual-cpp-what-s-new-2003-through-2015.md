@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9778a9d456ebd0fed6bc36c2c631849bcbfe11d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ef91c42d0787dac371d324eece1527e5366c89c3
+ms.sourcegitcommit: 05075fce8a0ed7fddb99f50f3931db966a91450d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705607"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36271398"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 2003 ~ 2015의 새로운 기능
 
@@ -1585,7 +1585,7 @@ C++11 명시적 변환 연산자, 이니셜라이저 목록, 범위가 지정된
 
 - 클래스 형식에 세미콜론을 추가합니다.
 - 원시 문자열 리터럴에 대한 괄호를 완성합니다.
-- 여러 줄 주석(/* */)을 완성합니다.
+- 여러 줄 주석(/\* \*/)을 완성합니다.
 
 **모든 참조 찾기**에서 텍스트 일치 목록을 표시한 후 백그라운드에서 참조를 자동으로 확인하고 필터링합니다.
 

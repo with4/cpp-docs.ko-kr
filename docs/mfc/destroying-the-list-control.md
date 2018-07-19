@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343284"
 ---
 # <a name="destroying-the-list-control"></a>목록 컨트롤 제거
 포함 한 경우 사용자 [CListCtrl](../mfc/reference/clistctrl-class.md) 뷰 또는 대화 상자 클래스의 데이터 멤버로 개체의 소유자가 소멸 될 때 소멸 됩니다. 사용 하는 경우는 [CListView](../mfc/reference/clistview-class.md), 보기를 제거 하는 경우 프레임 워크 컨트롤을 제거 합니다.  

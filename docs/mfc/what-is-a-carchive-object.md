@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383836"
 ---
 # <a name="what-is-a-carchive-object"></a>CArchive 개체
 A `CArchive` 쓰거나 간에 직렬화 가능 개체를 읽는 데 형식이 안전한 버퍼링 메커니즘을 제공 하는 개체는 `CFile` 개체입니다. 일반적으로 `CFile` 개체 디스크 파일을 나타냅니다; 그러나 파일을 메모리를 사용할 수도 있습니다 (`CSharedFile` 개체), 아마도 클립보드를 나타내는입니다.  

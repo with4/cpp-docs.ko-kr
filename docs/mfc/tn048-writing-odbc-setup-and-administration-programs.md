@@ -21,11 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c08366f995c1ecb4182fff04a88ac37fe7334bc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a7d89b6c6e05a5baf973abace2c64de3b52754f5
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954559"
 ---
 # <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048: MFC 데이터베이스 응용 프로그램에 대한 ODBC 설정 및 관리 프로그램 작성
 > [!NOTE]
@@ -40,9 +41,9 @@ ms.lasthandoff: 05/04/2018
   
 -   또는 드라이버 관리자와 드라이버를 설치 하 여 직접 설치 프로그램을 작성할 수 있습니다.  
   
- 응용 프로그램별 설치 프로그램을 작성 하는 ODBC 설치 관리자 API는 사용할 수 있습니다. ODBC 설치 DLL 설치 관리자 API의에서 함수 구현-ODBCINST 합니다. 16 비트 Windows 및 ODBCCP32에 대 한 DLL입니다. Win32 DLL입니다. 응용 프로그램에서 호출할 수 **SQLInstallODBC** 설치 관리자에서 ODBC 드라이버 관리자, ODBC 드라이버 및 설치 하는 DLL는 변환기가 필요 합니다. 다음은 ODBCINST에 설치 된 드라이버 및 번역기 기록합니다. INI 파일 (또는 nt 레지스트리). **SQLInstallODBC** ODBC의 전체 경로가 필요 합니다. INF 파일 설치 되도록 드라이버 목록을 포함 하 고 각 드라이버를 구성 하는 파일에 설명 합니다. 또한 드라이버 관리자 및 변환기에 대 한 유사한 정보를 포함합니다. ODBC 합니다. INF 파일은 일반적으로 드라이버 개발자가 제공 됩니다.  
+ 응용 프로그램별 설치 프로그램을 작성 하는 ODBC 설치 관리자 API는 사용할 수 있습니다. ODBC 설치 DLL 설치 관리자 API의에서 함수 구현-ODBCINST 합니다. 16 비트 Windows 및 ODBCCP32에 대 한 DLL입니다. Win32 DLL입니다. 응용 프로그램에서 호출할 수 `SQLInstallODBC` 설치 관리자에서 ODBC 드라이버 관리자, ODBC 드라이버 및 설치 하는 DLL는 변환기가 필요 합니다. 다음은 ODBCINST에 설치 된 드라이버 및 번역기 기록합니다. INI 파일 (또는 nt 레지스트리). `SQLInstallODBC` ODBC에 대 한 전체 경로가 필요합니다. INF 파일 설치 되도록 드라이버 목록을 포함 하 고 각 드라이버를 구성 하는 파일에 설명 합니다. 또한 드라이버 관리자 및 변환기에 대 한 유사한 정보를 포함합니다. ODBC 합니다. INF 파일은 일반적으로 드라이버 개발자가 제공 됩니다.  
   
- 프로그램은 ODBC 구성 요소를 개별 설치할 수도 있습니다. 드라이버 관리자를 설치 하려면 프로그램이 먼저 호출 하는 **SQLInstallDriverManager** installer DLL 드라이버 관리자에 대 한 대상 디렉터리를 가져올 수 있습니다. 이 일반적으로 Windows Dll이 상주 하는 디렉터리입니다. 그런 다음 프로그램 ODBC의 [ODBC 드라이버 관리자] 섹션에는 정보를 사용합니다. 설치 디스크에서이 디렉터리에 드라이버 관리자 및 관련된 파일을 복사 하려면 INF 파일입니다. 개별 드라이버를 설치 하려면 프로그램이 먼저 호출 하는 **SQLInstallDriver** 드라이버 사양에서 ODBCINST에 추가 하려면 DLL이 설치 관리자에서 합니다. INI 파일 (또는 nt 레지스트리). **SQLInstallDriver** 드라이버의 대상 디렉터리를 반환 합니다.-일반적으로 Windows Dll이 상주 하는 디렉터리입니다. 프로그램에서 odbc 드라이버의 섹션에는 정보를 사용 하 여 합니다. 설치 디스크에서이 디렉터리에 드라이버 DLL 및 관련된 파일을 복사 하려면 INF 파일입니다.  
+ 프로그램은 ODBC 구성 요소를 개별 설치할 수도 있습니다. 드라이버 관리자를 설치 하려면 프로그램이 먼저 호출 하는 `SQLInstallDriverManager` installer DLL 드라이버 관리자에 대 한 대상 디렉터리를 가져올 수 있습니다. 이 일반적으로 Windows Dll이 상주 하는 디렉터리입니다. 그런 다음 프로그램 ODBC의 [ODBC 드라이버 관리자] 섹션에는 정보를 사용합니다. 설치 디스크에서이 디렉터리에 드라이버 관리자 및 관련된 파일을 복사 하려면 INF 파일입니다. 개별 드라이버를 설치 하려면 프로그램이 먼저 호출 하는 `SQLInstallDriver` 드라이버 사양에서 ODBCINST에 추가 하려면 DLL이 설치 관리자에서 합니다. INI 파일 (또는 nt 레지스트리). `SQLInstallDriver` 드라이버의 대상 디렉터리를 반환 합니다.-일반적으로 Windows Dll이 상주 하는 디렉터리입니다. 프로그램에서 odbc 드라이버의 섹션에는 정보를 사용 하 여 합니다. 설치 디스크에서이 디렉터리에 드라이버 DLL 및 관련된 파일을 복사 하려면 INF 파일입니다.  
   
  대 한 자세한 내용은 ODBC 합니다. INF, ODBCINST 합니다. INI와 설치 관리자 API를 사용 하 여 ODBC SDK를 참조 하십시오. *Programmer's Reference* 19 장, ODBC 소프트웨어를 설치 합니다.  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 05/04/2018
   
  데이터 소스를 구성 하는 프로그램에서는 설치 관리자로 DLL 함수 호출 합니다. DLL 설치 관리자 설치 데이터 원본을 구성 하는 DLL을 호출 합니다. 각 드라이버;에 대해 하나의 설치 프로그램 DLL은 드라이버 자체 DLL 또는 별도 DLL 수도 있습니다. 설치 DLL 메시지 사용자에 게는 드라이버가 지원 되는 경우 데이터 원본 및 기본 변환기에 연결 하는 데 필요한 정보를 표시 합니다. 그런 다음 DLL 및 Windows Api는 ODBC에서이 정보를 기록 하는 설치 관리자를 호출 합니다. INI 파일 (또는 레지스트리)입니다.  
   
- 프로그램이 호출 된 사용자 수를 추가, 수정 및 데이터 원본을 삭제 대화 상자를 표시 하려면 **SQLManageDataSources** DLL 설치 관리자에서 합니다. 이 함수는 설치 관리자는 제어판에서 DLL을 호출 될 때 호출 됩니다. 추가, 수정 또는 데이터 원본을 삭제 하려면 **SQLManageDataSources** 호출 **ConfigDSN** 해당 데이터 원본과 관련 된 드라이버 설치 DLL에서에서 합니다. 원본 데이터를 직접 추가, 수정 또는 삭제, 프로그램이 호출 하는 **SQLConfigDataSource** DLL 설치 관리자에서 합니다. 데이터 원본 및 수행할 동작을 지정 하는 옵션의 이름을 전달 하는 프로그램입니다. **SQLConfigDataSource** 호출 **ConfigDSN** DLL 설치 프로그램에서 인수를 전달 하 고 **SQLConfigDataSource**합니다.  
+ 프로그램이 호출 된 사용자 수를 추가, 수정 및 데이터 원본을 삭제 대화 상자를 표시 하려면 `SQLManageDataSources` DLL 설치 관리자에서 합니다. 이 함수는 설치 관리자는 제어판에서 DLL을 호출 될 때 호출 됩니다. 추가, 수정 또는 데이터 원본을 삭제 하려면 `SQLManageDataSources` 호출 `ConfigDSN` 해당 데이터 원본과 관련 된 드라이버 설치 DLL에서에서 합니다. 원본 데이터를 직접 추가, 수정 또는 삭제, 프로그램이 호출 하는 `SQLConfigDataSource` DLL 설치 관리자에서 합니다. 데이터 원본 및 수행할 동작을 지정 하는 옵션의 이름을 전달 하는 프로그램입니다. `SQLConfigDataSource` 호출 `ConfigDSN` DLL 설치 프로그램에서 인수를 전달 하 고 `SQLConfigDataSource`합니다.  
   
  자세한 내용은 ODBC SDK를 참조 하십시오. *Programmer's Reference* 23 장, 설치 DLL 함수 참조 및 24 장 Installer DLL 함수 참조 합니다.  
   

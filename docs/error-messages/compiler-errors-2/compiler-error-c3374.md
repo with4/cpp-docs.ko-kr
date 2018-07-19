@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253894"
 ---
 # <a name="compiler-error-c3374"></a>컴파일러 오류 C3374
 대리자 인스턴스를 만들지 않으면 'function'의 주소를 가져올 수 없습니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33104489"
 ---
 # <a name="using-bookmarks"></a>책갈피 사용
 행 집합을 열기 전에 알려야 공급자 책갈피를 사용 하려면. 이 위해 설정 된 **DBPROP_BOOKMARKS** 속성을 **true** 속성을 설정 합니다. 공급자는 특수 매크로 사용 해야 열 0으로 책갈피를 검색 `BOOKMARK_ENTRY` 및 `CBookmark` 정적 접근자를 사용 하는 경우 클래스입니다. `CBookmark` 책갈피 버퍼의 바이트 길이 인수가 있는 템플릿 클래스가입니다. 책갈피에 필요한 버퍼의 길이 공급자에 따라 달라 집니다. 다음 예제에 표시 된 대로 ODBC OLE DB 공급자를 사용 하는, 버퍼 4 바이트를 이어야 합니다.  

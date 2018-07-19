@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090824"
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation::Collections 네임스페이스(C++/CX)
 C + + /cli CX Vector, VectorView, 지도 및 MapView 컬렉션 클래스 사용을 간소화 하는 함수가 있는 Windows::Foundation::Collections 네임 스페이스를 보완 합니다.  

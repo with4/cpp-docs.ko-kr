@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2529a38a7737fc45573f5c151477e0a5754cde50
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7017ee7b29e8e41e4aa33f95560a10127dc812e7
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960894"
 ---
 # <a name="unarynegate-class"></a>unary_negate 클래스
 
@@ -41,9 +42,11 @@ public:
 
 ### <a name="parameters"></a>매개 변수
 
-`Func` 단항 함수를 무효화 합니다.
+*Func*  
+ 부정할 단항 함수입니다.
 
-`left` 단항 함수를 부 정하도록 피연산자입니다.
+*left*  
+ 부정할 단항 함수의 피연산자입니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -55,7 +58,7 @@ public:
 
 `unary_negate`의 생성자는 직접 사용되는 경우가 거의 없습니다. 도우미 함수 [not1](../standard-library/functional-functions.md#not1)을 사용하면 **unary_negator** 어댑터 조건자를 보다 쉽게 선언하고 사용할 수 있습니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // functional_unary_negate.cpp

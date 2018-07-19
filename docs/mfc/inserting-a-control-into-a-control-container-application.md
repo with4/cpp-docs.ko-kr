@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346339"
 ---
 # <a name="activex-control-containers-inserting-a-control-into-a-control-container-application"></a>ActiveX 컨트롤 컨테이너: 컨트롤 컨테이너 응용 프로그램에 컨트롤 삽입
 사용 하 여 컨테이너 응용 프로그램에 ActiveX 컨트롤을 추가 해야 ActiveX 컨트롤에서 ActiveX 컨트롤 컨테이너 응용 프로그램에 액세스 하기 전에 [ActiveX 컨트롤 삽입](../windows/insert-activex-control-dialog-box.md) 대화 상자.  

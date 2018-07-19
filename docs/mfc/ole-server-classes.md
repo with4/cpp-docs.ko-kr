@@ -19,14 +19,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9fc737a3d11307dff917132bfd113896b4ad801f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e9d0c75325c62a92f65c56f2c76350bf752228fd
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932223"
 ---
 # <a name="ole-server-classes"></a>OLE 서버 클래스
-이러한 클래스는 서버 응용 프로그램에서 사용 됩니다. 서버 문서에서 파생 된 `COleServerDoc` 아닌 **CDocument**합니다. 되므로 `COleServerDoc` 에서 파생 된 `COleLinkingDoc`, 서버 문서 연결을 지원 하는 컨테이너를 수도 있습니다.  
+이러한 클래스는 서버 응용 프로그램에서 사용 됩니다. 서버 문서에서 파생 된 `COleServerDoc` 아닌 `CDocument`합니다. 되므로 `COleServerDoc` 에서 파생 된 `COleLinkingDoc`, 서버 문서 연결을 지원 하는 컨테이너를 수도 있습니다.  
   
  `COleServerItem` 문서나 다른 문서에 포함 하거나 연결할 수 있는 문서의 일부 클래스를 나타냅니다.  
   

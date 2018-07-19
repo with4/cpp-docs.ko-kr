@@ -16,21 +16,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d73b082b9f41d03eb0b1a8c9fe772351ff4da91f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2a7a9de35e225dabadbf9f4a3731f6d57fd9e99a
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940415"
 ---
 # <a name="unaligned"></a>__unaligned
 
-**Microsoft 전용**합니다. 포인터를 `__unaligned` 한정자로 선언하는 경우, 컴파일러는 포인터가 정렬되지 않은 데이터의 주소 지정한다고 가정합니다. 따라서 플랫폼에 적절 한 코드 정렬 되지 않은 읽기를 처리 하도록 생성 되 고 포인터를 통해 씁니다.
+**Microsoft 전용**합니다. 포인터를 선언 하는 경우는 **__unaligned** 한정자, 컴파일러는 포인터가 정렬 되지 않은 데이터의 주소 지정 합니다. 따라서 플랫폼에 적절 한 코드 정렬 되지 않은 읽기를 처리 하도록 생성 되 고 포인터를 통해 씁니다.
 
 ## <a name="remarks"></a>설명
 
-이 한정자 설명 포인터가; 데이터 맞춤 포인터 자체는 정렬 된 것으로 간주 됩니다.
+이 한정자에는 포인터가; 데이터의 맞춤을 설명 합니다. 포인터 자체는 정렬로 간주 됩니다.
 
-에 대 한 필요성은 `__unaligned` 키워드 플랫폼과 환경에 따라 다릅니다. 데이터를 적절 하 게 표시 하지 않으면 성능 저하가에서 하드웨어 오류에 이르는 다양 한 문제가 발생할 수 있습니다. `__unaligned` 한정자 x86 적합 하지 않습니다. 플랫폼입니다.
+에 대 한 필요성을 **__unaligned** 키워드 플랫폼과 환경에 따라 다릅니다. 데이터를 적절 하 게 표시할 오류 성능 저하의 하드웨어 오류에 이르는 다양 한 문제가 발생할 수 있습니다. 합니다 **__unaligned** 한정자 x86에 대해 올바르지 않습니다. 플랫폼입니다.
 
 정렬에 대한 자세한 내용은 다음을 참조하십시오.
 

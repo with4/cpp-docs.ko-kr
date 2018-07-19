@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33246405"
 ---
 # <a name="compiler-error-c3175"></a>컴파일러 오류 C3175
 'function1': 관리 되지 않는 함수 'function2'에서 관리 되는 형식의 메서드를 호출할 수 없습니다  

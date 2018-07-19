@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087818"
 ---
 # <a name="access-to-odbc-and-sql"></a>ODBC 및 SQL 액세스
 Microsoft Foundation Class 라이브러리는 많은 Windows API 호출을 캡슐화 하 고 여전히 모든 Windows API 함수를 직접 호출할 수 있습니다. 데이터베이스 클래스는 ODBC API를 고려 하 여 동일한 유연성을 제공 합니다. 데이터베이스 클래스는 하면 ODBC의 복잡성을 보호 하는 동안 모든 위치에서 직접 ODBC API 함수를 호출할 수 있습니다 프로그램에 있습니다.  

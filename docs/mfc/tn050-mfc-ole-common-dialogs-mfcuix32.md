@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33380905"
 ---
 # <a name="tn050-mfcole-common-dialogs-mfcuix32"></a>TN050: MFC/OLE 일반 대화 상자(MFCUIx32)
 이 노트는 몇 가지 문제와 OLE 일반 대화 상자 제공 되 고 MFC에서 사용의 미래에 원래 다룹니다. OLE 일반 대화 상자는 이제 (OLEDLG 시스템에 기본 제공 구성 요소로 제공. DLL)와 제품 설명서에 문서화 되어 완벽 하 게 됩니다.  

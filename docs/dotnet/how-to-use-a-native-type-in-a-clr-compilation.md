@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128409"
 ---
 # <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>방법: /clr 컴파일에 네이티브 형식 사용
 네이티브 형식을 정의할 수 있습니다는 **/clr** 컴파일 및 어셈블리 내에서 네이티브 형식을 사용 되는 모든는 유효 합니다. 그러나 네이티브 형식은 참조 된 메타 데이터에서 사용 하기 위해 사용할 수 없습니다.  

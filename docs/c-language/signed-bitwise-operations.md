@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385259"
 ---
 # <a name="signed-bitwise-operations"></a>부호 있는 비트 연산
 **ANSI 3.3** 부호 있는 정수에 대한 비트 연산의 결과  

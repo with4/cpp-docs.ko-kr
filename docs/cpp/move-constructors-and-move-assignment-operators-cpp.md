@@ -1,5 +1,5 @@
 ---
-title: '방법: 이동 생성자 및 이동 할당 연산자 (c + +) 정의 합니다. | Microsoft Docs'
+title: '방법: 정의 이동 생성자 및 이동 할당 연산자 (c + +) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/05/2018
 ms.technology:
@@ -14,14 +14,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad5f54bc0366b0da9286631294a10f4904b7cb30
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: af1220cbb6b872ebd0370cfa526aba47338e70e6
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39028153"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>이동 생성자 및 이동 할당 연산자(C++)
-이 항목에서는 작성 하는 방법을 설명는 *이동 생성자* 및 c + + 클래스에 대 한 이동 할당 연산자입니다. 이동 생성자를 복사 하지 않고를 lvalue로 이동 될는 rvalue 개체를 소유한 리소스 수 있습니다. 이동 의미 체계에 대 한 자세한 내용은 참조 [Rvalue 참조 선언 자: & &](../cpp/rvalue-reference-declarator-amp-amp.md)합니다.  
+이 항목에서는 작성 하는 방법에 설명 합니다는 *이동 생성자* 와 c + + 클래스에 대 한 이동 할당 연산자입니다. 이동 생성자는 rvalue lvalue로 복사 하지 않고 이동 될 개체를 소유한 리소스 수 있습니다. 이동 의미 체계에 대 한 자세한 내용은 참조 하세요. [Rvalue 참조 선언 자: & &](../cpp/rvalue-reference-declarator-amp-amp.md)합니다.  
   
  이 항목은 메모리 버퍼를 관리하는 다음 C++클래스 `MemoryBlock`을 기반으로 합니다.  
   
@@ -176,7 +177,7 @@ private:
     return *this;  
     ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `MemoryBlock` 클래스에 대한 완전한 이동 생성자와 이동 할당 연산자를 보여 줍니다.  
   
 ```cpp  
@@ -224,7 +225,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 이동 의미 체계를 통해 응용 프로그램의 성능을 향상시키는 방법을 보여 줍니다. 이 예제에서는 벡터 개체에 두 요소를 추가한 다음 기존의 두 요소 사이에 새 요소를 삽입합니다. `vector` 클래스는 이동 의미 체계를 복사 하는 대신 벡터의 요소를 이동 하 여 삽입 작업을 효율적으로 수행 합니다.  
   
 ```cpp  
@@ -302,7 +303,8 @@ In ~MemoryBlock(). length = 75. Deleting resource.
   
  사용자 클래스에 이동 생성자와 이동 할당 연산자를 둘 다 제공하는 경우 이동 할당 연산자를 호출하는 이동 생성자를 작성하여 중복 코드를 제거할 수 있습니다. 다음 예제에서는 이동 할당 연산자를 호출하는 이동 생성자의 수정된 버전을 보여 줍니다.  
   
-```  
+```cpp
+  
 // Move constructor.  
 MemoryBlock(MemoryBlock&& other)  
    : _data(nullptr)  
@@ -312,8 +314,8 @@ MemoryBlock(MemoryBlock&& other)
 }  
 ```  
   
- [std:: move](../standard-library/utility-functions.md#move) 의 rvalue 속성을 유지 하는 함수는 `other` 매개 변수입니다.  
+ 합니다 [std:: move](../standard-library/utility-functions.md#move) 변수의 rvalue 속성을 유지 하는 함수는 *다른* 매개 변수입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Rvalue 참조 선언 자: & &](../cpp/rvalue-reference-declarator-amp-amp.md)   
- [\<유틸리티 > 이동](http://msdn.microsoft.com/en-us/abef7e85-9dd6-4724-85da-d7f7fe95dca9)
+ [\<유틸리티 > 이동](http://msdn.microsoft.com/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

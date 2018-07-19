@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890946"
 ---
 # <a name="wrl-reference"></a>WRL 참조
 이 섹션에는 Windows 런타임 c + + 템플릿 라이브러리 (WRL)에 대 한 참조 정보가 포함 되어 있습니다.  

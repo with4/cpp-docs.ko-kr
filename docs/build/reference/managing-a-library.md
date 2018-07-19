@@ -55,6 +55,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379642"
 ---
 # <a name="managing-a-library"></a>라이브러리 관리
 LIB에 대 한 기본 모드를 빌드하거나 COFF 개체의 라이브러리를 수정 하는 합니다. LIB은 /EXTRACT (개체를 복사할 파일) 또는 /DEF (가져오기 라이브러리를 빌드)를 지정 하지 않을 경우이 모드에서 실행 됩니다.  

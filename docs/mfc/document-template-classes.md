@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343545"
 ---
 # <a name="document-template-classes"></a>문서 템플릿 클래스
 문서, 뷰 및 프레임 창 개체 때 새 문서 만들기를 조정 하는 문서 템플릿 개체 또는 뷰가 생성 됩니다.  

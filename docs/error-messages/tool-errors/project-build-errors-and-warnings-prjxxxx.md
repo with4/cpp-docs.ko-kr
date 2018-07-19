@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316110"
 ---
 # <a name="project-build-errors-and-warnings-prjxxxx"></a>프로젝트 빌드 오류 및 경고(PRJxxxx)
 

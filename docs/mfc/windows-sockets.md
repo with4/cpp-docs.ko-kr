@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382543"
 ---
 # <a name="windows-sockets"></a>Windows 소켓
 이 문서에서는 Windows 소켓의 MFC 구현에 설명 합니다. MFC는 Windows 소켓 API와 네트워크 응용 프로그램 프로그래밍을 지원 하기 위해 두 개의 클래스를 제공 합니다. 클래스 [CAsyncSocket](../mfc/reference/casyncsocket-class.md) 가장 강력 하며 유연성 고급 네트워크 프로그래머 제공 하나, 하나는 Windows 소켓 API를 캡슐화 합니다. 클래스 [CSocket](../mfc/reference/csocket-class.md) 에서 데이터를 직렬화 하기 위한 간단한 인터페이스를 제공는 [CArchive](../mfc/reference/carchive-class.md) 개체입니다.  

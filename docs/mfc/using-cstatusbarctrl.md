@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383552"
 ---
 # <a name="using-cstatusbarctrl"></a>CStatusBarCtrl 사용
 상태 표시줄 컨트롤을 사용할 수 있습니다 ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) 다양 한 종류의 응용 프로그램에 대 한 상태 정보를 반영 하는 컨트롤 창을 만들 수 있습니다. 상태 창은 두 가지 이상의 정보 유형을 표시하는 여러 부분으로 나눌 수 있습니다.  

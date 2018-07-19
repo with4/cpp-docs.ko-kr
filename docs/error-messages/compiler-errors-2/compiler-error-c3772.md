@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275452"
 ---
 # <a name="compiler-error-c3772"></a>컴파일러 오류 C3772
 'name': friend 템플릿 선언이 잘못되었습니다.  

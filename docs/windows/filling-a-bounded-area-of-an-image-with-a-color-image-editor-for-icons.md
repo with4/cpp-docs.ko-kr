@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880571"
 ---
 # <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>이미지 경계 영역을 색으로 채우기(아이콘에 대한 이미지 편집기)
 이미지 편집기는 **채우기** 도구가 포함 된 현재 그리기 색 이나 현재 배경색으로 이미지 영역입니다.  

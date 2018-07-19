@@ -16,16 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7123fcf5859ce3fc373b29b4cb3e7b32109b464e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e800bd3100fa0199534f3e9bdf6646aa0ffc6860
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940900"
 ---
 # <a name="comerrorhelpcontext"></a>_com_error::HelpContext
 **Microsoft 전용**  
   
- 호출 **ierrorinfo:: Gethelpcontext** 함수입니다.  
+ 호출 `IErrorInfo::GetHelpContext` 함수입니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,10 +37,10 @@ DWORD HelpContext( ) const throw( );
 ```  
   
 ## <a name="return-value"></a>반환 값  
- 결과 반환 **ierrorinfo:: Gethelpcontext** 에 대 한는 **IErrorInfo** 내에 기록 된 개체는 `_com_error` 개체입니다. 없는 경우 **IErrorInfo** 개체는 기록, 0을 반환 합니다.  
+ 결과 반환 합니다 `IErrorInfo::GetHelpContext` 에 대 한는 `IErrorInfo` 내에 기록 된 개체는 `_com_error` 개체입니다. 없으면 `IErrorInfo` 개체는 기록, 0을 반환 합니다.  
   
 ## <a name="remarks"></a>설명  
- 호출 하는 동안 모든 오류는 **ierrorinfo:: Gethelpcontext** 메서드는 무시 됩니다.  
+ 호출 하는 동안 모든 오류를 `IErrorInfo::GetHelpContext` 메서드는 무시 됩니다.  
   
  **Microsoft 전용 종료**  
   

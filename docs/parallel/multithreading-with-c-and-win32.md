@@ -25,6 +25,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687545"
 ---
 # <a name="multithreading-with-c-and-win32"></a>C 및 Wind32를 사용한 다중 스레딩
 Microsoft Visual c + +는 다중 스레드 응용 프로그램을 만들기에 대 한 지원을 제공 합니다. 응용 프로그램 사용자 인터페이스가 응답 하지 못하도록 하는 부담이 큰 작업을 수행 해야 하는 경우에 둘 이상의 스레드를 사용 하는 것이 좋습니다.  

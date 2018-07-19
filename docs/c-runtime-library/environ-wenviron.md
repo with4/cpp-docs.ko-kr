@@ -28,6 +28,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451401"
 ---
 # <a name="environ-wenviron"></a>_environ, _wenviron
 `_environ` 변수는 프로세스 환경을 구성하는 멀티바이트 문자열에 대한 포인터 배열의 포인터입니다. 이 전역 변수는 전역 변수 대신 사용되어야 할 보안 기능이 보다 강화된 버전인 [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) 및 [_putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md)에 대해서는 더 이상 사용되지 않습니다. `_environ`은 Stdlib.h에서 선언됩니다.  

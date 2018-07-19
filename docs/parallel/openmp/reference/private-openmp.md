@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692680"
 ---
 # <a name="private-openmp"></a>private (OpenMP)
 각 스레드에 변수의 자체 인스턴스가 있어야 한다는 것을 지정 합니다.  

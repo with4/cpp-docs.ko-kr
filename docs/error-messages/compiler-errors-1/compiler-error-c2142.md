@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170400"
 ---
 # <a name="compiler-error-c2142"></a>컴파일러 오류 C2142
 함수 선언이 다릅니다. 둘 중 하나에 지정  

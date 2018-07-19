@@ -26,6 +26,7 @@ ms.sourcegitcommit: 96cdc2da0d8c3783cc2ce03bd280a5430e1ac01d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33954091"
 ---
 # <a name="ifdef-and-ifndef-directives-cc"></a>#ifdef 및 #ifndef 지시문 (C/C++)
 **#ifdef** 및 **#ifndef** 으로 동일한 작업을 수행 하는 지시문은 `#if` 지시문을 함께 사용할 경우 **정의**( *식별자* ).  

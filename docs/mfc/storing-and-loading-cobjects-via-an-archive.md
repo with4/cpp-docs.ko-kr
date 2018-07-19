@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe5cc426e3494117bff98577f02178709a2588f3
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7a2dc227815f8888b85784ea92e58b3e91ffc83a
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36954977"
 ---
 # <a name="storing-and-loading-cobjects-via-an-archive"></a>보관을 통해 CObject 저장 및 로드
 저장 및 로드 `CObject`보관 저장소를 통해 추가로 고려해 야 합니다. 특정 한 경우에 호출 해야는 `Serialize` 함수 개체의 위치는 `CArchive` 개체의 매개 변수는는 `Serialize` 사용 하지 않고 호출의 **< \<** 또는 **>>** 의 연산자는 `CArchive`합니다. 중요 한 사실을 염두에 `CArchive` **>>** 연산자 구문은 `CObject` 기반으로 하는 메모리에 `CRuntimeClass` 정보 저장 보관 저장소가가 파일에 이전에 작성 합니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/04/2018
 -   개체를 역직렬화 할 때 할당 된 메모리를 이미 있습니다.  
   
 > [!CAUTION]
->  사용 하 여 개체를 로드 하는 경우는 `Serialize` 함수를 사용 하 여 개체 저장 해야는 `Serialize` 함수입니다. 사용 하 여 저장 하지 않습니다는 `CArchive` **<<** 연산자와 사용 하 여 다음 부하는 `Serialize` 함수를 사용 하 여 저장 하거나는 `Serialize` 함수를 사용 하 여 다음 로드 **CArchive >>** 연산자입니다.  
+>  사용 하 여 개체를 로드 하는 경우는 `Serialize` 함수를 사용 하 여 개체 저장 해야는 `Serialize` 함수입니다. 사용 하 여 저장 하지 않습니다는 `CArchive` **<<** 연산자와 사용 하 여 다음 부하는 `Serialize` 함수를 사용 하 여 저장 하거나는 `Serialize` 함수를 사용 하 여 다음 로드 `CArchive >>` 연산자입니다.  
   
  다음 예제에서는 사례를 보여 줍니다.  
   
@@ -44,7 +45,7 @@ ms.lasthandoff: 05/04/2018
   
  [!code-cpp[NVC_MFCSerialization#37](../mfc/codesnippet/cpp/storing-and-loading-cobjects-via-an-archive_2.cpp)]  
   
- 요약 하자면, serializable 클래스 정의 포함 된 경우 **CObjec**해야 멤버로 t, *하지* 사용는 `CArchive` **< \<** 및 **>>** 해당 개체에 대 한 연산자를 호출 해야 하지만 `Serialize` 함수를 대신 합니다. 또한 serializable 클래스에 대 한 포인터를 정의 하는 경우는 `CObject` (에서 파생 된 개체 또는 `CObject`) 회원 같지만 구문 자체 생성자에서이 다른 개체도 호출 해야 `Serialize`합니다.  
+ 요약 하자면, serializable 클래스 정의 포함 된 경우 `CObject` 해야 멤버로 *하지* 사용는 `CArchive` **< \<** 및 **>>** 해당 개체에 대 한 연산자를 호출 해야 하지만 `Serialize` 함수를 대신 합니다. 또한 serializable 클래스에 대 한 포인터를 정의 하는 경우는 `CObject` (에서 파생 된 개체 또는 `CObject`) 회원 같지만 구문 자체 생성자에서이 다른 개체도 호출 해야 `Serialize`합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Serialization: 개체 Serialize](../mfc/serialization-serializing-an-object.md)

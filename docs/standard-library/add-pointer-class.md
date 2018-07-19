@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7a80ffbfbcfb8c350eecc54e87c4cadaaab0295
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 85efc646daf6ddb55f37c1f46157671eda2f13a8
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963578"
 ---
 # <a name="addpointer-class"></a>add_pointer 클래스
 
@@ -43,11 +44,11 @@ using add_pointer_t = typename add_pointer<T>::type;
 
 ## <a name="remarks"></a>설명
 
-`remove_reference<T>::type*`과 동일한 멤버 typedef `type` 이름입니다. `add_pointer_t` 별칭은 멤버 typedef `type`에 액세스하기 위한 바로 가기입니다.
+멤버 **typedef** `type` 와 같은 형식 이름을 `remove_reference<T>::type*`입니다. 별칭 `add_pointer_t` 멤버에 액세스 하려면 바로 가기입니다 **typedef** `type`합니다.
 
 참조에서 포인터를 만드는 것은 잘못이기 때문에 `add_pointer`가 포인터-형식을 만들기 전에 지정된 형식에서 참조(있는 경우)를 제거합니다. 결과적으로, 형식이 참조인지 걱정하지 않고도 `add_pointer`를 포함하여 형식을 사용할 수 있습니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 다음 예제에서는 `add_pointer` 형식이 해당 형식의 포인터와 같은 경우를 보여 줍니다.
 

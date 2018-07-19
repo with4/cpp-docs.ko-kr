@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33136615"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>방법: PInvoke를 사용하여 구조체 마샬링
 이 문서에서는 어떻게 네이티브 함수를 P/Invoke를 사용 하 여 관리 되는 함수에서 C 스타일 구조체를 호출할 수 있습니다. 있지만 대신 c + + Interop 기능을 사용 하는 것이 좋습니다 P/Invoke P/Invoke 거의 컴파일 타임 오류 보고를 제공 하기 때문에 형식이 안전한 아니며 관리 되지 않는 API는 DLL로 패키지와 소스 코드를 없는 경우 구현 하는 것 P/Invoke를 사용할 수 있는 유일한 옵션입니다. 다음 문서를 참조 하십시오.  

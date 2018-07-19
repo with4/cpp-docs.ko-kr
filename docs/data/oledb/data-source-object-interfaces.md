@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101879"
 ---
 # <a name="data-source-object-interfaces"></a>데이터 소스 개체 인터페이스
 다음 표에서 OLE DB 데이터 원본 개체에 대해 정의한 필수 및 선택적 인터페이스를 보여 줍니다.  

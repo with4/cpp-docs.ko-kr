@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101694"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>공급자에서 열을 동적으로 바인딩
 동적 열 바인딩 게이트웨이가 필요한 지 확인 합니다. 때문에 필요할 수 있습니다.  

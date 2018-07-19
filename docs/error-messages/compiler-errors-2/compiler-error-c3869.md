@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33267514"
 ---
 # <a name="compiler-error-c3869"></a>컴파일러 오류 C3869
 gcnew 제약 조건에 빈 매개 변수 목록 '(가 없습니다.  

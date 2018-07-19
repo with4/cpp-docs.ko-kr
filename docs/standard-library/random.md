@@ -16,11 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdfae58c03d18638ad44f844909d585b41d710cd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 453c2eb186175b275defdc87dcfcdc79ff5f258a
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38956507"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/08/2018
 
 ### <a name="quick-tips"></a>유용한 팁
 
-다음은 몇 가지 팁을 사용할 때 염두에서에 둬야 \<임의 >:
+다음은 몇 가지 팁을 사용 하는 경우 염두 \<임의 >:
 
 - 대부분의 경우 URNG는 분포에 따라 셰이핑되어야 하는 원시 비트를 생성합니다. 이에 대한 눈에 띄는 예외는 URNG를 직접 사용하는 [std::shuffle()](../standard-library/algorithm-functions.md#shuffle)입니다.
 
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/08/2018
 
 - 대부분의 응용 프로그램의 경우 가장 유용한 연결은 이 문서 뒷부분의 [코드 예제](#code)에 나와 있는 `uniform_int_distribution`을 사용하는 `mt19937` 엔진입니다.
 
-여러 가지 옵션이 있습니다에서 선택할 수는 \<임의 > 헤더 및 그 중 하나는 오래 된 C 런타임 함수에는 것이 좋습니다 `rand()`합니다. 문제에 대 한 내용은 `rand()` 방법과 \<임의 > 이러한 문제를 해결 참조 [이 비디오](http://go.microsoft.com/fwlink/p/?linkid=397615)합니다.
+선택 하는 방법은 여러 가지는 \<임의 > 헤더 및 그 중 하나 보다 오래 된 C 런타임 함수가 적합 `rand()`합니다. 무엇이 잘못 된에 대 한 자세한 `rand()` 방법과 \<임의 > 이러한 문제를 해결 참조 [이 비디오](http://go.microsoft.com/fwlink/p/?linkid=397615)합니다.
 
 ## <a name="code"></a> 예제
 
@@ -227,7 +228,7 @@ URNG는 일반적으로 다음과 같은 속성 측면에서 설명합니다.
 
 3. **품질**: 생성된 시퀀스가 실제 난수에 얼마나 가까운지입니다. 이를 대개 "*임의성*"이라고 합니다.
 
-다음 섹션에 나열 된 균등 난수 생성기 (Urng)에서 제공 되는 \<임의 > 헤더입니다.
+다음 섹션에서는 목록 균일 난수 생성기 (Urng)에서 제공 되는 \<임의 > 헤더입니다.
 
 ####  <a name="rd"></a> 불명확한 생성기
 
@@ -293,7 +294,7 @@ URNG는 일반적으로 다음과 같은 속성 측면에서 설명합니다.
 
 ###  <a name="distributions"></a> 난수 분포
 
-다음 섹션에서 제공 하는 분포를 나열는 \<임의 > 헤더입니다. 분포는 후처리 메커니즘으로 일반적으로 URNG 출력을 입력으로 사용하여 정의된 통계적 확률 밀도 함수를 통해 출력을 분포시킵니다. 자세한 내용은 [엔진 및 분포](#engdist) 섹션을 참조하세요.
+다음 섹션에서 제공 되는 분포에 나열 된 \<임의 > 헤더입니다. 분포는 후처리 메커니즘으로 일반적으로 URNG 출력을 입력으로 사용하여 정의된 통계적 확률 밀도 함수를 통해 출력을 분포시킵니다. 자세한 내용은 [엔진 및 분포](#engdist) 섹션을 참조하세요.
 
 #### <a name="uniform-distributions"></a>균등 분포
 
@@ -309,7 +310,7 @@ URNG는 일반적으로 다음과 같은 속성 측면에서 설명합니다.
 
 |||
 |-|-|
-|[bernoulli_distribution 클래스](../standard-library/bernoulli-distribution-class.md)|`bool` 값의 베르누이 분포를 생성합니다.|
+|[bernoulli_distribution 클래스](../standard-library/bernoulli-distribution-class.md)|베르누이 분포를 생성 **bool** 값입니다.|
 |[binomial_distribution 클래스](../standard-library/binomial-distribution-class.md)|정수 값의 이항 분포를 생성합니다.|
 |[geometric_distribution 클래스](../standard-library/geometric-distribution-class.md)|정수 값의 기하 분포를 생성합니다.|
 |[negative_binomial_distribution 클래스](../standard-library/negative-binomial-distribution-class.md)|정수 값의 음이항 분포를 생성합니다.|
@@ -322,7 +323,7 @@ URNG는 일반적으로 다음과 같은 속성 측면에서 설명합니다.
 |-|-|
 |[cauchy_distribution 클래스](../standard-library/cauchy-distribution-class.md)|실수(부동 소수점) 값의 코시 분포를 생성합니다.|
 |[chi_squared_distribution 클래스](../standard-library/chi-squared-distribution-class.md)|실수(부동 소수점) 값의 카이 제곱 분포를 생성합니다.|
-|[fisher_f_distribution 클래스](../standard-library/fisher-f-distribution-class.md)|F 분포 (Snedecor의 F 분포 또는 Fisher-snedecor 분포 라고도 함)의 실수 (부동 소수점) 값을 생성합니다.|
+|[fisher_f_distribution 클래스](../standard-library/fisher-f-distribution-class.md)|F 분포 (라고도: 분포의 F 분포 또는 fisher-snedecor 분포 분포) 실수 (부동 소수점) 값을 생성합니다.|
 |[lognormal_distribution 클래스](../standard-library/lognormal-distribution-class.md)|실수(부동 소수점) 값의 대수 정규 분포를 생성합니다.|
 |[normal_distribution 클래스](../standard-library/normal-distribution-class.md)|실수(부동 소수점) 값의 정규(가우스) 분포를 생성합니다.|
 |[student_t_distribution 클래스](../standard-library/student-t-distribution-class.md)|실수값(부동 소수점)의 Student *t* 분포를 생성합니다.|
@@ -353,7 +354,7 @@ URNG는 일반적으로 다음과 같은 속성 측면에서 설명합니다.
 
 ### <a name="utility-functions"></a>유틸리티 함수
 
-이 섹션에 제공 되는 일반 유틸리티 함수를 나열는 \<임의 > 헤더입니다.
+이 섹션에서 제공 하는 일반 유틸리티 함수를 나열 합니다 \<임의 > 헤더입니다.
 
 |||
 |-|-|
@@ -361,7 +362,7 @@ URNG는 일반적으로 다음과 같은 속성 측면에서 설명합니다.
 
 ### <a name="operators"></a>연산자
 
-이 섹션에 제공 된 연산자를 나열는 \<임의 > 헤더입니다.
+이 섹션에서 제공 되는 연산자를 나열 합니다 \<임의 > 헤더입니다.
 
 |||
 |-|-|
@@ -372,13 +373,13 @@ URNG는 일반적으로 다음과 같은 속성 측면에서 설명합니다.
 
 ## <a name="engdist"></a> 엔진 및 분포
 
-이러한 템플릿 클래스 범주에 정의 된 각 작업에 대 한 내용은 다음 섹션을 참조 하세요 \<임의 > 합니다. 이러한 템플릿 클래스 범주 둘 다는 형식을 인수로 가져와 공유 템플릿 매개 변수 이름을 사용하여 다음과 같이 실제 인수 형식으로 허용되는 형식 속성을 설명합니다.
+이러한 각 템플릿 클래스 범주에 정의 된에 대 한 내용은 다음 섹션을 참조 하세요 \<임의 >. 이러한 템플릿 클래스 범주 둘 다는 형식을 인수로 가져와 공유 템플릿 매개 변수 이름을 사용하여 다음과 같이 실제 인수 형식으로 허용되는 형식 속성을 설명합니다.
 
-- `IntType` `short`, `int`, `long`, `long long`, `unsigned short`, `unsigned int`, `unsigned long` 또는 `unsigned long long`을 나타냅니다.
+- `IntType` 나타냅니다는 **짧은**, **int**를 **긴**를 **long long**를 **unsigned short**,  **부호 없는 int**하십시오 **부호 없는 long**, 또는 **부호 없는 long long**합니다.
 
-- `UIntType` `unsigned short`, `unsigned int`, `unsigned long` 또는 `unsigned long long`을 나타냅니다.
+- `UIntType` 나타냅니다 **unsigned short**를 **부호 없는 int**합니다 **부호 없는 long**, 또는 **부호 없는 long long**합니다.
 
-- `RealType` `float`, `double` 또는 `long double`을 나타냅니다.
+- `RealType` 나타냅니다는 **부동 소수점**를 **double**, 또는 **long double**합니다.
 
 ### <a name="engines"></a>엔진
 

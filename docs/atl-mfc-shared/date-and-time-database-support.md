@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32353891"
 ---
 # <a name="date-and-time-database-support"></a>날짜 및 시간: 데이터베이스 지원
 버전 4.0부터 MFC 데이터베이스 프로그래밍 사용 하 여는 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) 및 [COleDateTimeSpan](../atl-mfc-shared/reference/coledatetimespan-class.md) 날짜 및 시간 데이터를 나타내는 클래스입니다. 에서도 자동화를 사용 하는 이러한 클래스를 클래스에서 파생 된 [COleVariant](../mfc/reference/colevariant-class.md)합니다. 업체가 공급 하는 것에 날짜 및 시간 데이터를 관리 하기 위한 더 나은 지원을 [CTime](../atl-mfc-shared/reference/ctime-class.md) 및 [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md)합니다.  

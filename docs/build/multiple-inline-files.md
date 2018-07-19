@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368215"
 ---
 # <a name="multiple-inline-files"></a>인라인 파일이 여러 개인 경우
 명령을 여러 개 인라인 파일을 만들 수 있습니다.  

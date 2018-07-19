@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368837"
 ---
 # <a name="importing-into-an-application-using-declspecdllimport"></a>__declspec(dllimport)을 사용하여 응용 프로그램으로 가져오기
 DLL에 정의 된 공용 기호를 사용 하는 프로그램을 가져올 라고 합니다. Dll을 사용 하 여, 작성 하는 응용 프로그램 사용에 대 한 헤더 파일을 만들 때 **__declspec (dllimport)** 공용 기호 선언에 있습니다. 키워드 **__declspec (dllimport)** .def 파일 또는 내보내기 든 작동는 **__declspec (dllexport)** 키워드입니다.  

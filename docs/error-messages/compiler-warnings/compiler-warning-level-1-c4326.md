@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283132"
 ---
 # <a name="compiler-warning-level-1-c4326"></a>컴파일러 경고(수준 1) C4326
 'function'의 반환 형식은 'type2' 대신 ' type1' 해야 합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33874592"
 ---
 # <a name="mutextraits-structure"></a>MutexTraits 구조체
 일반적인 특성 정의 [뮤텍스](../windows/mutex-class1.md) 클래스입니다.  

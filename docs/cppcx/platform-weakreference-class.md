@@ -16,6 +16,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088380"
 ---
 # <a name="platformweakreference-class"></a>Platform::WeakReference 클래스
 ref 클래스 인스턴스에 대한 약한 참조를 나타냅니다.  

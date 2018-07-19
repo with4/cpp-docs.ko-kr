@@ -14,11 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54045dfdebf3ab7c9f7ad04611bc9e267faea0d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 7becd4cb5700cfb31acacc244d2640498bf8120e
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38963474"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/07/2018
 ```
 
 > [!NOTE]
-> 사용 하 여 컴파일된 코드에서 **/clr**,이 헤더 ï ´ ù.
+> 코드를 사용 하 여 컴파일된 **/clr**,이 헤더가 차단 됩니다.
 
 ### <a name="remarks"></a>설명
 
@@ -58,9 +59,9 @@ while (condition is false)
 
 - `wait_for`는 지정된 `time interval` 동안 대기합니다.
 
-이러한 각 메서드에는 두 개의 오버로드된 버전이 있습니다. 하나는 대기만 하다가 의사적으로 대기 모드를 해제할 수 있습니다. 다른 하나는 조건자를 정의하는 추가 템플릿 인수를 사용합니다. 조건자가 `true`가 될 때까지 메서드에서 반환하지 않습니다.
+이러한 각 메서드에는 두 개의 오버로드된 버전이 있습니다. 하나는 대기만 하다가 의사적으로 대기 모드를 해제할 수 있습니다. 다른 하나는 조건자를 정의하는 추가 템플릿 인수를 사용합니다. 조건자가 될 때까지 메서드가 반환 하지 않습니다 **true**합니다.
 
-각 클래스에는 조건이 `true`가 되는 것을 조건 변수에 알리는 데 사용되는 두 가지 메서드가 있습니다.
+각 클래스에 조건이 있는 조건 변수에 알리는 데 사용 되는 메서드와 **true**합니다.
 
 - `notify_one`은 조건 변수를 대기 중인 스레드 중 하나의 대기 모드를 해제합니다.
 

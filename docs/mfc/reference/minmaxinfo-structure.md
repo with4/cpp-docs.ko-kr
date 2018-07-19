@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12161938f96e5044ae48f9eb5cf380fbc3840d3f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: cf9a6e6a1397b9361df5372af09be8e61d997e62
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37337816"
 ---
 # <a name="minmaxinfo-structure"></a>MINMAXINFO 구조체
-`MINMAXINFO` 구조 창 최대화 크기와 위치 및 최소 및 최대 추적 크기에 대 한 정보를 포함 합니다.  
+`MINMAXINFO` 구조 상태의 최대화 된 창의 크기 및 위치 최소 및 최대 추적 크기에 대 한 정보가 들어 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,16 +43,16 @@ typedef struct tagMINMAXINFO {
  내부용으로 예약됩니다.  
   
  *ptMaxSize*  
- 최대화 된 상태로 너비 (point.x) 및 창 최대화 높이 (point.y)를 지정합니다.  
+ 최대화 된 상태로 너비 (point.x) 및 창 최대화 (point.y) 높이 지정합니다.  
   
- `ptMaxPosition`  
- (Point.y) 최대화 된 창의 위쪽의 위치와 최대화 창 (point.x)의 왼쪽의 위치를 지정합니다.  
+ *ptMaxPosition*  
+ 최대화 된 창 (point.x) 왼쪽의 위치와 상태의 최대화 된 창 (point.y)의 위쪽 위치를 지정합니다.  
   
  *ptMinTrackSize*  
  최소 추적 너비 (point.x) 및 최소 추적 창의 높이 (point.y)를 지정 합니다.  
   
  *ptMaxTrackSize*  
- 최대 너비 (point.x)를 추적 하 고 최대 창 높이 (point.y)를 추적을 지정 합니다.  
+ 최대 너비 (point.x) 추적 및 추적 창의 높이 (point.y) 최대값을 지정 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** winuser.h  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351968"
 ---
 # <a name="menus-and-resources-menu-merging"></a>메뉴 및 리소스: 메뉴 병합
 이 문서는 OLE 문서 응용 프로그램에서 내부 활성화 제대로 비주얼 편집을 처리 하는 데 필요한 단계를 설명 합니다. 내부 활성화 사용 하는 경우 컨테이너와 서버 모두에 대 한 응용 프로그램 (구성 요소). 사용자 (컨테이너 문서의 컨텍스트) 내에서 동일한 프레임 창에 남아 있지만 실제로 다른 응용 프로그램 (서버)를 실행 합니다. 이 컨테이너 및 서버 응용 프로그램의 리소스 간에 조정을 해야합니다.  

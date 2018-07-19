@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33197171"
 ---
 # <a name="fatal-error-c1004"></a>심각한 오류 C1004
 예기치 않은 파일의 끝  

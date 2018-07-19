@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255442"
 ---
 # <a name="compiler-error-c3229"></a>컴파일러 오류 C3229
 'type': 제네릭 형식 매개 변수에 대한 간접 참조는 허용되지 않습니다.  

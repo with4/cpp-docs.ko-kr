@@ -31,6 +31,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689989"
 ---
 # <a name="multithreading-programming-tips"></a>다중 스레딩: 프로그래밍 팁
 다중 스레드 응용 프로그램 데이터에 액세스할 때 단일 스레드 응용 프로그램 보다 엄격한 주의가 필요 합니다. 에 있기 때문에 여러 개의 독립 실행 경로가에서 동시에 사용 다중 스레드 응용 프로그램 알고리즘, 데이터, 또는 둘 다 알아야 할 데이터를 한 번에 둘 이상의 스레드에서 사용할 수 없습니다. 이 항목에서는 Microsoft Foundation 클래스 (MFC) 라이브러리와 다중 스레드 응용 프로그램을 프로그래밍할 때 발생할 수 있는 문제를 방지 하는 방법에 설명 합니다.  

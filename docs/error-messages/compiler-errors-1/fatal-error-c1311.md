@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33226680"
 ---
 # <a name="fatal-error-c1311"></a>심각한 오류 C1311
 COFF 형식은 'var' 숫자 바이트의 주소를 사용으로 정적으로 초기화할 수 없습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383762"
 ---
 # <a name="windows-sockets-converting-strings"></a>Windows 소켓: 문자열 변환
 이 문서 및 두 개의 참조 문서에서는 Windows 소켓 프로그래밍의 몇 가지 문제를 설명합니다. 이 문서에서는 문자열 변환에 대해 설명 합니다. 다른 문제에 대해서는 설명 [Windows 소켓: 차단](../mfc/windows-sockets-blocking.md) 및 [Windows 소켓: 바이트 순서 지정](../mfc/windows-sockets-byte-ordering.md)합니다.  

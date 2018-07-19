@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32363531"
 ---
 # <a name="atl-control-wizard"></a>ATL 컨트롤 마법사
 ATL 프로젝트 (또는 MFC 프로젝트에 ATL 지원)에 대 한 삽입 ATL 컨트롤입니다. 세 가지 종류의 컨트롤 중 하나를 삽입 하려면이 마법사를 사용할 수 있습니다.  

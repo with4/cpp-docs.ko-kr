@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276661"
 ---
 # <a name="compiler-warning-level-1-c4172"></a>컴파일러 경고 (수준 1) C4172
 지역 변수 또는 임시 주소를 반환합니다.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858759"
 ---
 # <a name="adding-or-deleting-a-string"></a>문자열 추가 또는 삭제
 문자열 편집기를 사용 하 여 문자열 테이블에 새 항목을 신속 하 게 삽입할 수 있습니다. 새 문자열 테이블의 끝에 배치 되 고 사용 가능한 식별자가 지정 됩니다. ID, 값 또는 캡션 속성을 편집할 수 있습니다는 [속성 창](/visualstudio/ide/reference/properties-window) 필요에 따라 합니다.  

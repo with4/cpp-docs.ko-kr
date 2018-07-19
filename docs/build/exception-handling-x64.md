@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367188"
 ---
 # <a name="exception-handling-x64"></a>예외 처리(x64)
 이 섹션에서는 구조적된 예외 처리와 c + + 예외 처리 동작에는 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]합니다.  

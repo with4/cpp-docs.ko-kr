@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111834"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>/CLR을 지정하는 경우 예외 처리 동작의 차이점
 [관리 되는 예외 사용의 기본 개념과](../dotnet/basic-concepts-in-using-managed-exceptions.md) 관리 되는 응용 프로그램에서 예외 처리에 대해 설명 합니다. 이 항목에서는 몇 가지 제한 사항이 및 예외 처리의 표준 동작과에서 차이점을 자세히 설명 되어 있습니다. 자세한 내용은 참조 [_set_se_translator 함수](../c-runtime-library/reference/set-se-translator.md)합니다.  

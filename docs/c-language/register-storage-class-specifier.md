@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384602"
 ---
 # <a name="register-storage-class-specifier"></a>register 저장소 클래스 지정자
 **Microsoft 전용**  

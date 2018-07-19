@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33165963"
 ---
 # <a name="compiler-error-c2014"></a>컴파일러 오류 C2014
 전처리기 명령은 공백 아닌 문자로 시작 해야 합니다.  

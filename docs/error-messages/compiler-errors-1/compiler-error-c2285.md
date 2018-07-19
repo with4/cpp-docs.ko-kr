@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33170439"
 ---
 # <a name="compiler-error-c2285"></a>컴파일러 오류 C2285
 멤버 표현에 대 한 포인터를 이미 확인-pragma가 무시 되었습니다  

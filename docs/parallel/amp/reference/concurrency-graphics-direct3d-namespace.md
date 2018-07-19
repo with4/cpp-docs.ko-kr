@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33695995"
 ---
 # <a name="concurrencygraphicsdirect3d-namespace"></a>Concurrency::graphics::direct3d 네임스페이스
 제공 된 [get_texture](concurrency-graphics-direct3d-namespace-functions.md#get_texture) 및 [make_texture](concurrency-graphics-direct3d-namespace-functions.md#make_texture) 메서드.  

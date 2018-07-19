@@ -19,11 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06a2b6a5ab17db7b512f1f44d2eda68169d71645
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b3aa243ab8c0fb49e20e5b7485acdcd8bb808831
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930470"
 ---
 # <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>ActiveX 컨트롤 컨테이너: ActiveX 컨트롤을 멤버 변수에 연결
 ActiveX 컨트롤의 컨트롤 컨테이너 응용 프로그램 내에서 액세스 하는 가장 쉬운 방법은 컨트롤이 포함 될 대화 상자 클래스의 멤버 변수가 있는 ActiveX 컨트롤을 연결 하는 것입니다.  
@@ -43,7 +44,7 @@ ActiveX 컨트롤의 컨트롤 컨테이너 응용 프로그램 내에서 액세
   
 5.  에 **변수 이름** 상자에 이름을 입력 합니다.  
   
-     예를 들어, `m_circctl`을 입력합니다.  
+     예를 들어 *m_circctl*합니다.  
   
 6.  클릭 **마침** 하 여 변경 내용을 적용 하 고 멤버 변수 추가 마법사를 종료 합니다.  
   

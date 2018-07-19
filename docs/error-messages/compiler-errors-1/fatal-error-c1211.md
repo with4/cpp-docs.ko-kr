@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199368"
 ---
 # <a name="fatal-error-c1211"></a>심각한 오류 C1211
 설치된 런타임 버전에서는 TypeForwardedTo 사용자 지정 특성이 지원되지 않습니다.  

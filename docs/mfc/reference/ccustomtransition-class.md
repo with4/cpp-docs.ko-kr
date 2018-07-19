@@ -34,11 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89c3ec260fad8b0e2f8224c639aa745a9101e8b7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 39588a6835b3484fc3961e793596c1190f85f7c4
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952754"
 ---
 # <a name="ccustomtransition-class"></a>CCustomTransition 클래스
 사용자 지정 전환을 구현합니다.  
@@ -67,7 +68,7 @@ class CCustomTransition : public CBaseTransition;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CCustomTransition::m_bInitialValueSpecified](#m_binitialvaluespecified)|초기 값으로 SetInitialValue 지정 되었는지 여부를 지정 합니다.|  
 |[CCustomTransition::m_bInitialVelocitySpecified](#m_binitialvelocityspecified)|초기 속도와 SetInitialVelocity 지정 되었는지 여부를 지정 합니다.|  
@@ -96,7 +97,7 @@ CCustomTransition(CCustomInterpolator* pInterpolator);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pInterpolator`  
+ *pInterpolator*  
  사용자 지정 보간에 대 한 포인터입니다.  
   
 ##  <a name="create"></a>  CCustomTransition::Create  
@@ -109,7 +110,7 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pFactory`  
+ *pFactory*  
  사용자 지정 전환 만드는 담당 하는 전환 팩터리에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -160,7 +161,7 @@ void SetInitialValue(DOUBLE initialValue);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `initialValue`  
+ *초기 값*  
   
 ##  <a name="setinitialvelocity"></a>  CCustomTransition::SetInitialVelocity  
  이 전환과 관련 된 애니메이션 변수에 적용할 초기 속도 설정 합니다.  
@@ -170,7 +171,7 @@ void SetInitialVelocity(DOUBLE initialVelocity);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `initialVelocity`  
+ *initialVelocity*  
   
 ## <a name="see-also"></a>참고 항목  
  [클래스](../../mfc/reference/mfc-classes.md)

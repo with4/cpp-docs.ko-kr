@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101112"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl 클래스
 구현을 제공는 [IGetDataSource](https://msdn.microsoft.com/en-us/library/ms709721.aspx) 개체입니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33171720"
 ---
 # <a name="compiler-error-c2129"></a>컴파일러 오류 C2129
 'function' 정적 함수 선언 되었지만 정의 되지 않았습니다.  

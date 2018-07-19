@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343020"
 ---
 # <a name="documentview-sample-list"></a>문서/뷰 샘플 목록
 흥미로운 방법으로 MFC의 문서/뷰 아키텍처를 사용 하 여 설명 하는 다음 샘플 프로그램을 참조 하십시오.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347281"
 ---
 # <a name="ole-background-linking-and-embedding"></a>OLE 백그라운드: 연결 및 포함
 컨테이너 응용 프로그램에서 붙여넣기 명령을 사용하면 포함된 구성 요소 또는 포함된 항목을 만들 수 있습니다. 포함된 항목에 대한 소스 데이터는 이를 포함하는 OLE 문서의 일부로 저장됩니다. 이 방식으로 워드 프로세서 문서에 대한 문서 파일은 텍스트를 포함하고, 비트맵, 그래프, 공식 또는 다른 모든 종류의 데이터를 포함할 수도 있습니다.  

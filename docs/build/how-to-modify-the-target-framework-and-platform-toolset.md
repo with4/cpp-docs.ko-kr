@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371904"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>방법: 대상 프레임워크 및 플랫폼 도구 집합 수정
 다른 버전의.NET Framework를 대상 고 다른 플랫폼 도구 집합을 사용 하도록 Visual c + + 프로젝트 설정을 변경할 수 있습니다. 기본적으로 프로젝트 시스템에는 프로젝트를 만드는 데 사용하는 Visual Studio 버전에 해당하는 .NET Framework 버전 및 도구 집합 버전이 사용됩니다. 프로젝트 속성을 수정하여 대상 플랫폼 도구 집합을 변경할 수 있습니다. 프로젝트 파일(.vcxproj)을 수정하여 대상 프레임워크를 변경할 수 있습니다. 각 컴파일 대상에 대해 별도의 코드베이스를 유지 관리할 필요는 없습니다.  

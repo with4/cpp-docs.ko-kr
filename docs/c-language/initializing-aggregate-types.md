@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391680"
 ---
 # <a name="initializing-aggregate-types"></a>집합체 형식 초기화
 "집합체" 형식은 구조체, 공용 구조체 또는 배열 형식입니다. 집합체 형식은 집합체 형식 멤버를 포함하며 초기화 규칙이 재귀적으로 적용됩니다.  

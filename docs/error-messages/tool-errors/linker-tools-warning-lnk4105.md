@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33304416"
 ---
 # <a name="linker-tools-warning-lnk4105"></a>링커 도구 경고 LNK4105
 'option'; 옵션에 지정 된 인수 없음 옵션을 무시합니다.  

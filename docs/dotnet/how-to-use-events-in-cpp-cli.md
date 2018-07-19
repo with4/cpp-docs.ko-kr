@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138041"
 ---
 # <a name="how-to-use-events-in-ccli"></a>방법: C++/CLI에서 이벤트 사용
 이 문서에서는 이벤트 및 해당 이벤트를 호출 하는 함수를 선언 하는 인터페이스 및 인터페이스를 구현 하는 클래스와 이벤트 처리기를 사용 하는 방법을 보여 줍니다.  

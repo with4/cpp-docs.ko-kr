@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692654"
 ---
 # <a name="271-threadprivate-directive"></a>2.7.1 threadprivate 지시문
 `threadprivate` 명명 된 파일 범위, 네임 스페이스 범위 또는 블록 범위의 정적 변수에 지정 된 지시문을 사용 하면는 *변수 목록* 스레드에 한정 합니다. *변수 목록* 불완전 한 형식을 갖지 않는 변수의 쉼표로 구분 된 목록입니다. 구문은 `threadprivate` 지시문은 다음과 같습니다.  

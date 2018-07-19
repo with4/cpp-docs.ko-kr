@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33372246"
 ---
 # <a name="database-support-mfc-application-wizard"></a>MFC 응용 프로그램 마법사, 데이터베이스 지원
 이 페이지에서는 데이터베이스의 수준을 지정할 수 있도록 하는 옵션이 제공 프로젝트에 대 한 데이터 원본, 필요한 경우) (더하기 지원 합니다.  

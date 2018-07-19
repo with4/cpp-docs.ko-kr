@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689261"
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>방법: 초과 구독을 사용하여 대기 오프셋
 초과 구독 대기 시간이 없는 작업을 포함 하는 일부 응용 프로그램의 전반적인 효율성을 향상 시킬 수 있습니다. 이 항목에는 네트워크 연결에서 데이터 읽기를 통해 발생 하는 대기 시간 오프셋을 초과 구독을 사용 하는 방법을 보여 줍니다.  

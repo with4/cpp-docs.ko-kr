@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33166743"
 ---
 # <a name="compiler-error-c2172"></a>컴파일러 오류 C2172
 'function': 실제 매개 변수가 포인터가 아닙니다. 매개 변수 number  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099679"
 ---
 # <a name="icommandtextimplsetcommandtext"></a>ICommandTextImpl::SetCommandText
 기존 명령 텍스트를 바꿀 명령 텍스트를 설정 합니다.  

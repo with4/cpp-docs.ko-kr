@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368696"
 ---
 # <a name="masm-macros"></a>MASM 매크로
 사용을 단순화 하기 위해는 [원시 의사 작업](../build/raw-pseudo-operations.md)를 일반적인 방법 프롤로그 및 에필로그를 만드는 데 사용할 수 있도록 ksamd64.inc에에 정의 된 매크로의 집합입니다.  

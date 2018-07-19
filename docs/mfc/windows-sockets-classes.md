@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382130"
 ---
 # <a name="windows-sockets-classes"></a>Windows 소켓 클래스
 Windows 소켓 두 컴퓨터 간에 통신 하는 네트워크 프로토콜에 관계 없이 방법을 제공 합니다. 이러한 소켓 동기적 일 수 있습니다 (프로그램 통신 완료 될 때까지 대기) 또는 비동기 (프로그램 통신 진행 되는 동시에 실행을 계속).  

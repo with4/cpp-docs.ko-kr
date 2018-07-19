@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689495"
 ---
 # <a name="331-ompgetwtime-function"></a>3.3.1 omp_get_wtime 함수
 `omp_get_wtime` 함수 반환 배정밀도 부동 소수점 값 경과 된 벽 시계 시간을 몇 가지 "과거의 지정 시간" 이후의 초 단위입니다.  실제 "과거의 지정 시간"은 선택적 요소 이지만를 응용 프로그램의 실행 하는 동안 변경 하지 않도록 보장 됩니다. 형식은 다음과 같습니다.  

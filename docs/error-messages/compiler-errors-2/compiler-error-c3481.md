@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33250487"
 ---
 # <a name="compiler-error-c3481"></a>컴파일러 오류 C3481
 'var': 람다 캡처 변수가 없습니다.  

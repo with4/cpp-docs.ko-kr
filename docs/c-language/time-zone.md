@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385542"
 ---
 # <a name="time-zone"></a>표준 시간대
 **ANSI 4.12.1** 현지 표준 시간대 및 일광 절약 시간제  

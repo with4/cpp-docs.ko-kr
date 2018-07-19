@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053303"
 ---
 # <a name="arm-assembler-directives"></a>ARM 어셈블리 지시문
 Microsoft ARM 어셈블러의 7 장에에서 설명 되어 있는 ARM 어셈블리 언어를 사용 하는 대부분의 경우는 [ARM 어셈블러 도구 가이드](http://go.microsoft.com/fwlink/p/?linkid=246102)합니다. 그러나 일부 어셈블리 지시문의 Microsoft 구현 ARM 어셈블리 지시문에서 다릅니다. 이 문서에서는 차이점을 설명 합니다.  

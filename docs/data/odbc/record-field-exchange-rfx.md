@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33091656"
 ---
 # <a name="record-field-exchange-rfx"></a>RFX
 MFC ODBC 데이터베이스 클래스에는 데이터 원본 사이의 데이터 이동을 자동화 및 [레코드 집합](../../data/odbc/recordset-odbc.md) 개체입니다. 클래스를 파생 시키는 경우 [CRecordset](../../mfc/reference/crecordset-class.md) 하 고 대량 행 페치를 사용 하지 않는, 레코드 필드 교환 (RFX) 메커니즘에 의해 데이터가 전송 됩니다.  

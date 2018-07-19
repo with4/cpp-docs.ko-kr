@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873487"
 ---
 # <a name="editing-control-properties"></a>컨트롤 속성 편집
 ### <a name="to-edit-the-properties-of-a-control-or-controls"></a>컨트롤 또는 컨트롤의 속성을 편집 하려면  

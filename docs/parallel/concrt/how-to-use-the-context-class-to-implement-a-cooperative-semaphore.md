@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693746"
 ---
 # <a name="how-to-use-the-context-class-to-implement-a-cooperative-semaphore"></a>방법: 컨텍스트 클래스를 사용하여 공동 작업 세마포 구현
 이 항목에서는 concurrency::Context 클래스를 사용 하 여 공동 작업 세마포 클래스를 구현 하는 방법을 보여 줍니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380461"
 ---
 # <a name="special-characters-in-a-makefile"></a>메이크파일의 특수 문자
 NMAKE 특수 문자를 리터럴 문자로 사용 하려면 문자 앞에 캐럿 (^) 합니다. NMAKE 다른 문자 앞에 있는 캐럿을 무시 합니다. 특수 문자에는  

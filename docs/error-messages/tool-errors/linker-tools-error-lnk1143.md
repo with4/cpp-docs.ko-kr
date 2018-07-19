@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33294705"
 ---
 # <a name="linker-tools-error-lnk1143"></a>링커 도구 오류 LNK1143
 잘못 되었거나 손상 된 파일: COMDAT 섹션 번호에 대 한 기호가 없습니다  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33195700"
 ---
 # <a name="compiler-error-c2409"></a>컴파일러 오류 C2409
 'context'에서 연산자로 사용한 형식이 잘못되었습니다.  

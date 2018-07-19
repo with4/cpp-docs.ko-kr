@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33381806"
 ---
 # <a name="using-chotkeyctrl"></a>CHotKeyCtrl 사용
 클래스가 나타내는 바로 가기 키 컨트롤 [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md), 키 조합 CTRL + SHIFT + Q 같은 메서드를 사용자 입력의 텍스트 표현을 표시 하는 창입니다. 또한 가상 키 코드 양식과 이동 상태를 나타내는 플래그 집합에서이 키의 내부 표시 유지 관리 합니다. 바로 가기 키 컨트롤 바로 가기 키를 실제로 설정 되지 않습니다-이렇게 하면 각은 프로그램의 몫입니다. (표준 가상 키 코드 목록이 Winuser.h 참조).  

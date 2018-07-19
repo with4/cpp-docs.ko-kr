@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875723"
 ---
 # <a name="implementsfillarraywithiid-method"></a>Implements::FillArrayWithIid 메서드
 지정 된 배열 요소에 현재 0 번째 템플릿 매개 변수로 지정 된 인터페이스 ID를 삽입 합니다.  

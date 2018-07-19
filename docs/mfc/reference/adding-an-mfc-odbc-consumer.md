@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346860"
 ---
 # <a name="adding-an-mfc-odbc-consumer"></a>MFC ODBC 소비자 추가
 MFC ODBC 소비자 데이터 원본에 액세스 하는 데 필요한 ODBC 레코드 집합 클래스 및 데이터 바인딩으로 구성 됩니다.  

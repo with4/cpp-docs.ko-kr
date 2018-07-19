@@ -15,14 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 226b69c9521016a2d5abbbdb7225cbbec972db3b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: df916cddacd5a435ef5cb130f9f6f5b6a25d2d4c
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36952725"
 ---
 # <a name="working-with-a-header-control"></a>헤더 컨트롤 사용
-헤더 컨트롤을 사용 하는 쉬운 방법은 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) 목록 컨트롤와 함께; 참조 [CListCtrl 사용 하 여](../mfc/using-clistctrl.md) 이 항목 군의 뒷부분에 나오는 합니다. 헤더 컨트롤 단독으로 사용할 수도 있습니다. MFC 호출 **InitCommonControls** 드립니다. 주요 작업은 다음과 같습니다.  
+헤더 컨트롤을 사용 하는 쉬운 방법은 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) 목록 컨트롤와 함께; 참조 [CListCtrl 사용 하 여](../mfc/using-clistctrl.md) 이 항목 군의 뒷부분에 나오는 합니다. 헤더 컨트롤 단독으로 사용할 수도 있습니다. MFC 호출 `InitCommonControls` 드립니다. 주요 작업은 다음과 같습니다.  
   
 -   [헤더 컨트롤 만들기](../mfc/creating-the-header-control.md)  
   

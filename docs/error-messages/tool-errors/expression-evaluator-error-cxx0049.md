@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295583"
 ---
 # <a name="expression-evaluator-error-cxx0049"></a>식 계산기 오류 CXX0049
 사용 되지 않는 OMF-프로그램을 다시 링크 하십시오.  

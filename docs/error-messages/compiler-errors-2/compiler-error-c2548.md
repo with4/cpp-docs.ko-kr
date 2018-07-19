@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230406"
 ---
 # <a name="compiler-error-c2548"></a>컴파일러 오류 C2548
 'class::member': 누락 된 매개 변수 매개 변수에 대 한 기본 매개 변수  

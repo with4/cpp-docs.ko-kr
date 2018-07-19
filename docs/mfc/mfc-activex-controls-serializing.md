@@ -25,11 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 74d62411747dbe920b772b66d11cd1e2a789c5db
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: f9db6ff6c0cdda01875e4968e4d92ca087ad2b57
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930063"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC ActiveX 컨트롤: Serialize
 이 문서에서는 ActiveX 컨트롤을 serialize 하는 방법을 설명 합니다. Serialization은 프로세스에서 읽기 또는 쓰기를 영구 저장 매체에 디스크 파일 등입니다. Microsoft Foundation 클래스 (MFC) 라이브러리는 클래스의 serialization에 대 한 기본 제공 지원 `CObject`합니다. `COleControl` ActiveX 컨트롤 속성 교환 메커니즘을 사용 하 여이 지원이 확장 합니다.  
@@ -76,7 +77,7 @@ ms.lasthandoff: 05/04/2018
  이러한 속성 exchange 함수에 대 한 자세한 내용은 참조 하십시오. [지 속성 OLE 컨트롤의](../mfc/reference/persistence-of-ole-controls.md) 에 *MFC 참조*합니다.  
   
 ##  <a name="_core_customizing_the_default_behavior_of_dopropexchange"></a> DoPropExchange의 기본 동작을 사용자 지정  
- 기본 구현은 **DoPropertyExchange** (에서처럼 이전 항목)에서 기본 클래스를 호출할 `COleControl`합니다. 이 serialize에서 자동으로 지원 되는 속성 집합이 `COleControl`, 컨트롤의 사용자 지정 속성만 직렬화 하는 작업 보다 더 많은 저장소 공간을 사용 하 합니다. 이 호출을 제거 하면 중요 한 고려 속성만 serialize 개체가 있습니다. 컨트롤에 구현 된 스톡 속성 상태 저장 하거나 명시적으로 추가 하지 않는 한 컨트롤 개체를 로드할 때 serialize 되지 것입니다 **PX_** 을 호출 합니다.  
+ 기본 구현은 `DoPropertyExchange` (에서처럼 이전 항목)에서 기본 클래스를 호출할 `COleControl`합니다. 이 serialize에서 자동으로 지원 되는 속성 집합이 `COleControl`, 컨트롤의 사용자 지정 속성만 직렬화 하는 작업 보다 더 많은 저장소 공간을 사용 하 합니다. 이 호출을 제거 하면 중요 한 고려 속성만 serialize 개체가 있습니다. 컨트롤에 구현 된 스톡 속성 상태 저장 하거나 명시적으로 추가 하지 않는 한 컨트롤 개체를 로드할 때 serialize 되지 것입니다 **PX_** 을 호출 합니다.  
   
 ##  <a name="_core_implementing_version_support"></a> 버전 지원 구현  
  버전 지원을 통해 수정 된 ActiveX 컨트롤을을 새 영구적 속성을 추가 하 고 여전히를 감지 하 여 컨트롤의 이전 버전에서 만든 영구 상태를 로드할 수 있습니다. 컨트롤의 버전을 사용할 수 있도록 하려면 자체 영구 데이터의 일부로 호출 [COleControl::ExchangeVersion](../mfc/reference/colecontrol-class.md#exchangeversion) 컨트롤의 `DoPropExchange` 함수입니다. 이 호출은 ActiveX 컨트롤을 ActiveX 컨트롤 마법사를 사용 하 여 만들어진 경우에 자동으로 삽입 됩니다. 버전 지원에 필요 하지 않은 경우 제거할 수 있습니다. 그러나 컨트롤 크기에 비용은 매우 작은 (4 바이트) 유연성이 버전 지원을 제공 합니다.  
@@ -86,7 +87,7 @@ ms.lasthandoff: 05/04/2018
  [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]  
 [!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]  
   
- 사용할 수 있습니다 `DWORD` 버전 번호입니다. ActiveX 컨트롤 마법사에 의해 생성 된 프로젝트를 사용 하 여 **_wVerMinor** 및 **_wVerMajor** 기본값으로 합니다. 이들은 프로젝트의 ActiveX 컨트롤 클래스의 구현 파일에 정의 된 전역 상수입니다. 나머지 부분 내에서 프로그램 `DoPropExchange` 함수를 호출할 수 있습니다 [CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion) 언제 든 지 저장 하거나 검색 하는 버전을 검색 합니다.  
+ 사용할 수 있습니다 **DWORD** 버전 번호입니다. ActiveX 컨트롤 마법사에 의해 생성 된 프로젝트를 사용 하 여 `_wVerMinor` 및 `_wVerMajor` 기본값으로 합니다. 이들은 프로젝트의 ActiveX 컨트롤 클래스의 구현 파일에 정의 된 전역 상수입니다. 나머지 부분 내에서 프로그램 `DoPropExchange` 함수를 호출할 수 있습니다 [CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion) 언제 든 지 저장 하거나 검색 하는 버전을 검색 합니다.  
   
  다음 예제에서는이 샘플 컨트롤의 버전 1에는 "ReleaseDate" 속성만 있습니다. 버전 2는 "OriginalDate" 속성을 추가합니다. 컨트롤은 이전 버전에서 영구 상태를 로드를 시작 하는 경우 기본값을 새 속성에 대 한 멤버 변수를 초기화 합니다.  
   

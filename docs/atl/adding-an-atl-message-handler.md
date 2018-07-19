@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32354158"
 ---
 # <a name="adding-an-atl-message-handler"></a>ATL 메시지 처리기 추가
 메시지 처리기 (Windows 메시지를 처리 하는 멤버 함수)에 컨트롤을 추가 하려면 먼저 클래스 뷰에서 컨트롤을 선택 합니다. 다음 엽니다는 **속성** 창에서는 **메시지** 아이콘을 클릭 하 여 드롭다운 목록 옆에 필요한 메시지 상자에서 제어 합니다. 이렇게 하면 컨트롤의 헤더 파일 및 컨트롤의.cpp 파일에서 처리기의 기본 구현에서 메시지 처리기에 대 한 선언을 추가 됩니다. 또한 메시지 맵을 추가할 되며 처리기에 대 한 항목을 추가 합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33295446"
 ---
 # <a name="expression-evaluator-error-cxx0009"></a>식 계산기 오류 CXX0009
 누락 된 ' 문자 상수 뒤  

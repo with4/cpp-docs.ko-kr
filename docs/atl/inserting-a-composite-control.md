@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32358692"
 ---
 # <a name="inserting-a-composite-control"></a>복합 컨트롤 삽입
 **클래스 추가** 대화 상자를 사용 하 여 ATL 개체를 프로젝트에 삽입할 수 있습니다. 가리키는 솔루션 탐색기에서 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 여이 대화 상자를 열려면 **추가**을 클릭 한 다음 **클래스 추가**합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33167296"
 ---
 # <a name="compiler-error-c2141"></a>컴파일러 오류 C2141
 배열 크기 오버플로가 발생 했습니다.  

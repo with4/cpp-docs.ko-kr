@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384202"
 ---
 # <a name="multibyte-and-wide-characters"></a>멀티바이트 및 와이드 문자
 멀티바이트 문자는 하나 이상의 바이트의 시퀀스로 구성된 문자입니다. 각 바이트 시퀀스는 확장된 문자 집합에서 단일 문자를 나타냅니다. 멀티바이트 문자는 한자와 같은 문자 집합에 사용됩니다.  

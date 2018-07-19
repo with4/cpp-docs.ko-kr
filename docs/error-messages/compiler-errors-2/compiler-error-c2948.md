@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33243527"
 ---
 # <a name="compiler-error-c2948"></a>컴파일러 오류 C2948
 명시적 인스턴스화. 저장소 클래스 지정자 'specifier' 특수화에 사용할 수 없습니다  

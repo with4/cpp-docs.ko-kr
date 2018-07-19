@@ -20,11 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d59c994cba47cf609c13a1d35fbc7fed60fc531f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8bff57549307eeaa9245c0bb4083b206471fe726
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38962535"
 ---
 # <a name="integralconstant-class-boolconstant-class"></a>integral_constant 클래스, bool_constant 클래스
 
@@ -45,17 +46,17 @@ struct integral_constant {
 
 ### <a name="parameters"></a>매개 변수
 
-*T* 상수 형식입니다.
+*T* 상수의 형식입니다.
 
-*v* 상수 값입니다.
+*v* 상수의 값입니다.
 
 ## <a name="remarks"></a>설명
 
 정수 계열 형식 *T* 및 해당 형식의 *v* 값으로 특수화된 경우 `integral_constant` 템플릿 클래스는 지정된 값이 있는 해당 정수 계열 형식의 상수를 포함하는 개체를 나타냅니다. `type`이라는 멤버는 생성된 템플릿 특수화 형식에 대한 별칭이고, `value` 멤버는 특수화를 만드는 데 사용되는 *v* 값을 포함합니다.
 
-`bool_constant` 템플릿 클래스는 `bool`을 *T* 인수로 사용하는 `integral_constant`의 명시적 부분 특수화입니다.
+합니다 `bool_constant` 템플릿 클래스의 명시적 부분 특수화는 `integral_constant` 사용 하는 **bool** 으로 *T* 인수입니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ```cpp
 // std__type_traits__integral_constant.cpp

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376168"
 ---
 # <a name="linker-command-line-syntax"></a>링커 명령줄 구문
 링크를 실행 합니다. EXE를 다음 명령 구문을 사용 합니다.  

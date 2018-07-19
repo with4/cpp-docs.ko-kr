@@ -16,15 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 06959bd5a22c65077f447f0f0e776025cbe5ced5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e6a5162057944ac3d91d2465cfefe99c68dd5fb3
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961417"
 ---
 # <a name="atomicflag-structure"></a>atomic_flag 구조체
 
-`bool` 플래그를 원자 단위로 설정하고 지우는 개체를 설명합니다. 원자 플래그에 대한 작업은 항상 잠금 해제입니다.
+원자 단위로 설정 하 고 지우는 개체를 설명 합니다는 **bool** 플래그입니다. 원자 플래그에 대한 작업은 항상 잠금 해제입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -38,8 +39,8 @@ struct atomic_flag;
 
 |이름|설명|
 |----------|-----------------|
-|[clear](#clear)|저장된 플래그를 `false`로 설정합니다.|
-|[test_and_set](#test_and_set)|저장된 플래그를 `true`로 설정하고 초기 플래그 값을 반환합니다.|
+|[clear](#clear)|저장된 된 플래그를 설정 **false**합니다.|
+|[test_and_set](#test_and_set)|저장된 된 플래그를 설정 **true** 초기 플래그 값을 반환 합니다.|
 
 ## <a name="remarks"></a>설명
 
@@ -53,7 +54,7 @@ struct atomic_flag;
 
 ## <a name="clear"></a>  atomic_flag::clear
 
-지정한 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 제약 조건 내에서 `*this`에 저장된 `bool` 플래그를 `false`로 설정합니다.
+집합을 **bool** 에 저장 된 플래그 `*this` 에 **false**, 지정 된 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 제약 조건입니다.
 
 ```cpp
 void atomic_flag::clear(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -62,11 +63,11 @@ void atomic_flag::clear(memory_order Order = memory_order_seq_cst) noexcept;
 
 ### <a name="parameters"></a>매개 변수
 
-`Order` A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)합니다.
+*순서* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)합니다.
 
 ## <a name="test_and_set"></a>  atomic_flag::test_and_set
 
-지정한 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 제약 조건 내에서 `*this`에 저장된 `bool` 플래그를 `true`로 설정합니다.
+집합을 **bool** 에 저장 된 플래그 `*this` 에 **true**, 지정 된 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 제약 조건입니다.
 
 ```cpp
 bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -75,7 +76,7 @@ bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexce
 
 ### <a name="parameters"></a>매개 변수
 
-`Order` A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)합니다.
+*순서* A [memory_order](../standard-library/atomic-enums.md#memory_order_enum)합니다.
 
 ### <a name="return-value"></a>반환 값
 

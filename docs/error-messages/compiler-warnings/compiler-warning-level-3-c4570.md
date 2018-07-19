@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33289843"
 ---
 # <a name="compiler-warning-level-3-c4570"></a>컴파일러 경고(수준 3) C4570
 'type': 명시적으로 선언 되지 추상 않았지만 추상 함수를가지고  

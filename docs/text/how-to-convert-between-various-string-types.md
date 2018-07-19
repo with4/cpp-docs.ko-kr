@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861229"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>방법: 다양한 문자열 형식 간 변환
 이 항목에는 다양 한 Visual c + + 문자열 형식을 다른 문자열로 변환 하는 방법을 보여 줍니다. 적용 되는 문자열 형식에는 `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md), 및 <xref:System.String?displayProperty=fullName>합니다. 모든 경우에는 문자열의 복사본에 새 유형으로 변환할 때 이루어집니다. 새 문자열을 변경한 원래 문자열에 영향을 주지 것입니다 및 그 반대의 경우도 마찬가지입니다.  

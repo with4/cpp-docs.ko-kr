@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369230"
 ---
 # <a name="bscmake-exit-codes"></a>BSCMAKE 종료 코드
 BSCMAKE 운영 체제나 호출 프로그램에는 종료 코드 (반환 코드 또는 오류 코드가 라고도 함)을 반환 합니다.  

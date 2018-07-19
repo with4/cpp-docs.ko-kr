@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088065"
 ---
 # <a name="installing-and-getting-started-with-odbc"></a>ODBC 설치 및 시작
 다음 항목 수와 Open Database Connectivity (ODBC) 해야 하는 구성 요소를 설치 합니다.  

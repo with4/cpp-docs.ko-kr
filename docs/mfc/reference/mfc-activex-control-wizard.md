@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375065"
 ---
 # <a name="mfc-activex-control-wizard"></a>MFC ActiveX 컨트롤 마법사
 ActiveX 컨트롤은 특정 유형의 [자동화 서버](../../mfc/automation-servers.md);는 재사용 가능한 구성 요소입니다. ActiveX 컨트롤을 호스팅하는 응용 프로그램은는 [자동화 클라이언트](../../mfc/automation-clients.md) 해당 컨트롤의 합니다. 이러한 다시 사용할 수 있는 구성 요소를 만드는 것이 목표인 경우 컨트롤을 만드는이 마법사를 사용 합니다. 참조 [MFC ActiveX 컨트롤](../../mfc/mfc-activex-controls.md) 자세한 정보에 대 한 합니다.  

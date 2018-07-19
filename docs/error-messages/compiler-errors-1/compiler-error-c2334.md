@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33222217"
 ---
 # <a name="compiler-error-c2334"></a>컴파일러 오류 C2334
 앞에 예기치 않은 토큰이 있습니다 ': 또는 {'; 명백한 함수 본문을 건너뜁니다.  

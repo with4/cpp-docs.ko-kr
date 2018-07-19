@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33258752"
 ---
 # <a name="compiler-error-c3490"></a>컴파일러 오류 C3490
 'var'는 const 개체를 통해 액세스되고 있으므로 수정할 수 없습니다.  

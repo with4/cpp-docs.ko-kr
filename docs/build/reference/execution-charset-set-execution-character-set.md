@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375954"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/execution-charset (실행 문자 집합 설정)
 실행 문자 집합 실행 파일을 지정할 수 있습니다.  

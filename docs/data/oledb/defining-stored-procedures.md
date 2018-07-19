@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101304"
 ---
 # <a name="defining-stored-procedures"></a>저장 프로시저 정의
 저장된 프로시저를 호출 하기 전에 먼저 정의 해야를 사용 하 여 [DEFINE_COMMAND](../../data/oledb/define-command.md) 매크로입니다. 명령을 정의 하는 경우 매개 변수 표식으로 물음표 (?) 매개 변수를 나타냅니다.  

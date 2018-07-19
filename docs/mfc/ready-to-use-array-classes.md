@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71a5f94964b9e28b851c34ac456f3cfe630c255c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 397b45d6304d80c90a05daf48067ca7fff03194a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36932047"
 ---
 # <a name="ready-to-use-array-classes"></a>바로 사용할 수 있는 배열 클래스
 다음 클래스는 즉시 사용할 배열 클래스입니다.  
@@ -31,13 +32,13 @@ ms.lasthandoff: 05/04/2018
  형식의 요소를 저장 **바이트** 배열에 있습니다.  
   
  [CDWordArray](../mfc/reference/cdwordarray-class.md)  
- 형식의 요소를 저장 `DWORD` 배열에 있습니다.  
+ 형식의 요소를 저장 **DWORD** 배열에 있습니다.  
   
  [CObArray](../mfc/reference/cobarray-class.md)  
  클래스의 개체에 대 한 포인터를 저장 `CObject` 또는에서 파생 된 클래스의 개체에 `CObject` 배열에 있습니다.  
   
  [사용할 때](../mfc/reference/cptrarray-class.md)  
- 에 대 한 포인터를 저장 `void` (일반 포인터)의 배열입니다.  
+ 에 대 한 포인터를 저장 **void** (일반 포인터)의 배열입니다.  
   
  [CUIntArray](../mfc/reference/cuintarray-class.md)  
  형식의 요소를 저장 **UINT** 배열에 있습니다.  

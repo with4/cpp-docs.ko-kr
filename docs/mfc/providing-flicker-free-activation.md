@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356556"
 ---
 # <a name="providing-flicker-free-activation"></a>깜빡임 없는 활성화 제공
 그리기 작업 및 깜빡임을 비활성 사이 전환할 때는 일반적으로 발생 하는 경우 컨트롤의 비활성 및 활성 상태에서 동일 하 게 자신을 그릴 (창 없는 활성화를 사용 하지 않는)을 제거할 수 있습니다. 및 활성 상태입니다. 이 작업을 수행 하려면 포함 된 **noFlickerActivate** 에서 반환 하는 플래그 집합에서 플래그 [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags)합니다. 예를 들어:  

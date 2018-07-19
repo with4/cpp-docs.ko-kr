@@ -24,6 +24,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368514"
 ---
 # <a name="importing-data-using-declspecdllimport"></a>__declspec(dllimport)을 사용하여 데이터 가져오기
 사용 하 여 데이터의 경우 **__declspec (dllimport)** 간접 참조 계층을 제거 하는 편의 항목입니다. DLL에서 데이터를 가져올 때에 여전히 가져오기 주소 테이블을 통해 검색 해야 합니다. 하기 전에 **__declspec (dllimport)**, 즉, DLL에서 내보낸 데이터에 액세스할 때 간접 참조 수준이 강화 해야 할 기억해 야 했습니다.  

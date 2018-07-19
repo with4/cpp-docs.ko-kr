@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32409724"
 ---
 # <a name="additional-startup-considerations"></a>추가 시작 고려 사항
 C++에서 개체 생성 및 소멸 시 실행할 사용자 코드를 포함할 수 있습니다. 따라서 항목을 되기 전에 어떤 초기화 수행을 이해 하는 **주** 종료 후 어떤 소멸자가 호출 **주**합니다. (개체의 생성과 소멸에 대 한 자세한 내용은 참조 [생성자](../cpp/constructors-cpp.md) 및 [소멸자](../cpp/destructors-cpp.md).)  

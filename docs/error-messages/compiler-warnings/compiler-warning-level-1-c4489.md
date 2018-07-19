@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33278420"
 ---
 # <a name="compiler-warning-level-1-c4489"></a>컴파일러 경고(수준 1) C4489
 'specifier': 인터페이스 메서드 'method';에 사용할 수 없습니다 재정의 지정자는 ref 클래스와 값 클래스 메서드에만 사용할 수  

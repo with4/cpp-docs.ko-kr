@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371257"
 ---
 # <a name="c-preserve-comments-during-preprocessing"></a>/C(전처리 중에 주석 유지)
 전처리하는 동안 주석을 유지합니다.  

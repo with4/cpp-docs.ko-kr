@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33135861"
 ---
 # <a name="managed-types-ccl"></a>관리되는 형식(C++/CL)
 이러한 형식의 개체의 관리 되는 형식 및는 생성의 선언 및 사용에 대 한 구문 크게에서 변경 되었습니다 Managed Extensions for c + + Visual c + +입니다. 이 ISO c + + 형식 시스템 내에서 통합을 강화 하기 위해서입니다. 이러한 변경 내용은 다음 하위 섹션에서 자세히 표시 됩니다.  

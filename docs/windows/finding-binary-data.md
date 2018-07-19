@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873565"
 ---
 # <a name="finding-binary-data"></a>이진 데이터 찾기
 ASCII 문자열 또는 16 진수 바이트에 대 한 검색할 수 있습니다. 예를 들어 "Hello"를 찾기 위해 또는 검색할 수 있습니다에 대 한 문자열 "Hello"에 대 한 "48 65 6C 6 C 6F" (16 진수).  

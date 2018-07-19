@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32389191"
 ---
 # <a name="scope-and-visibility"></a>범위 및 표시 영역
 식별자의 "표시 유형"은 "범위"를 참조할 수 있는 프로그램의 위치를 결정합니다. 식별자는 "범위"로 포함된 프로그램 부분에서만 표시되며(예: 사용 가능) 나타나는 파일, 함수, 블록 또는 함수 프로토타입으로 제한될 수 있습니다(제한이 증가하는 순서). 식별자의 범위는 이름을 사용할 수 있는 프로그램의 일부입니다. 이를 "어휘 범위"라고도 합니다. 범위에는 함수, 파일, 블록 및 함수 프로토타입과 같은 네 가지 종류가 있습니다.  

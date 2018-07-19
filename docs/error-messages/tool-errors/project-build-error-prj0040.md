@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326461"
 ---
 # <a name="project-build-error-prj0040"></a>프로젝트 빌드 오류 PRJ0040
 빌드에 내부 오류가 발생 했습니다. 계속할 수 없습니다. 프로젝트를 다시 로드 하 고 다시 시도 하십시오.  

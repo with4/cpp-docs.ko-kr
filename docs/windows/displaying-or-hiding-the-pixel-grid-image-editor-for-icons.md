@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882929"
 ---
 # <a name="displaying-or-hiding-the-pixel-grid-image-editor-for-icons"></a>픽셀 모눈 표시 또는 숨기기(아이콘에 대한 이미지 편집기)
 4 이상인 확대 비율이 모든 이미지 편집기 창에 대 한 이미지의 개별 픽셀을 구분 하는 표를 표시할 수 있습니다.  

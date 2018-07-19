@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369008"
 ---
 # <a name="building-a-bsc-file"></a>.Bsc 파일 빌드
 BSCMAKE는 새로 만든된.sbr 파일에서 새 찾아보기 정보 파일을 빌드할 수 있습니다. 또한.sbr 파일을 사용 하 여 마지막 빌드 이후 변경 된 개체 파일에 대 한 기존.bsc 파일을 유지할 수 있습니다.  

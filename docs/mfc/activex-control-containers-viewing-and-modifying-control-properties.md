@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340296"
 ---
 # <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX 컨트롤 컨테이너: 컨트롤 속성 보기 및 수정
 프로젝트에 ActiveX 컨트롤을 삽입할 때는 ActiveX 컨트롤에서 지원되는 속성을 보고 변경하는 것이 유용합니다. 이 문서에서는 이를 수행하기 위해 Visual C++ 리소스 편집기를 사용하는 방법을 설명합니다.  

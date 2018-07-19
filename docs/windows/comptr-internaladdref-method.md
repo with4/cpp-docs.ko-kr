@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870288"
 ---
 # <a name="comptrinternaladdref-method"></a>ComPtr::InternalAddRef 메서드
 이 ComPtr과 연결된 인터페이스의 참조 개수를 증가시킵니다.  

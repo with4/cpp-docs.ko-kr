@@ -27,6 +27,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879596"
 ---
 # <a name="resource-editors"></a>리소스 편집기
 리소스 편집기는 Visual Studio 프로젝트에 포함된 리소스를 만들거나 수정하기 위해 만들어진 특수한 환경입니다. Visual Studio 리소스 편집기는 응용 프로그램 리소스를 쉽고 빠르게 만들고 수정할 수 있도록 기술 및 인터페이스를 공유합니다. 리소스 편집기를 사용하면 [적절한 편집기에서 리소스를 보고 편집](../windows/viewing-and-editing-resources-in-a-resource-editor.md) 하며 [리소스를 미리 볼](../windows/previewing-resources.md)수 있습니다.  

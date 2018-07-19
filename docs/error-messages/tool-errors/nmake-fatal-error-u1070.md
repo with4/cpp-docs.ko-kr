@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327043"
 ---
 # <a name="nmake-fatal-error-u1070"></a>NMAKE 심각한 오류 U1070
 '매크로 이름' 매크로 정의에서 순환 됩니다.  

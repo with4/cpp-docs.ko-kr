@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101967"
 ---
 # <a name="cutlpropsisvalidvalue"></a>CUtlProps::IsValidValue
 값 속성을 설정 하기 전에 유효성을 검사 하는 데 사용 합니다.  

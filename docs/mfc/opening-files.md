@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 379449469d37f01c7c0fd225688a019eaec9e977
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3ba12cce799d0d1ed9a02f3a4d3a268ca86d4447
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931569"
 ---
 # <a name="opening-files"></a>파일 열기
 MFC, 파일을 열려면 가장 일반적인 방법은 2 단계 프로세스를입니다.  
@@ -54,7 +55,7 @@ MFC, 파일을 열려면 가장 일반적인 방법은 2 단계 프로세스를�
  [!code-cpp[NVC_MFCFiles#1](../atl-mfc-shared/reference/codesnippet/cpp/opening-files_1.cpp)]  
   
 > [!NOTE]
->  이 예제에서는 만들고 파일을 엽니다. 문제가 있는 경우는 `Open` 호출이 반환 될 수는 `CFileException` 마지막 매개 변수를 다음과 같이 개체입니다. `TRACE` 매크로 파일 이름에 대 한 실패의 원인을 나타내는 코드를 인쇄 합니다. 호출할 수 있습니다는 `AfxThrowFileException` 더 자세한 오류 보고 필요한 경우에 작동 합니다.  
+>  이 예제에서는 만들고 파일을 엽니다. 문제가 있는 경우는 `Open` 호출이 반환 될 수는 `CFileException` 마지막 매개 변수를 다음과 같이 개체입니다. TRACE 매크로 파일 이름 및 실패에 대 한 이유를 나타내는 코드를 인쇄 합니다. 호출할 수 있습니다는 `AfxThrowFileException` 더 자세한 오류 보고 필요한 경우에 작동 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CFile 클래스](../mfc/reference/cfile-class.md)   

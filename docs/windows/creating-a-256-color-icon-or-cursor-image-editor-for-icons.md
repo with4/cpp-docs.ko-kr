@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33872363"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>256색 아이콘 또는 커서 만들기(아이콘에 대한 이미지 편집기)
 이미지 편집기를 사용 하 여 256 색상표에서 선택할 수 있는 크기의 큰 (64 × 64) 아이콘 및 커서를 만들 수 있습니다. 리소스를 만든 후 장치 이미지 스타일 선택 되어 있습니다.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331076"
 ---
 # <a name="activation-verbs"></a>활성화: 동사
 이 문서에서는 OLE의 역할 기본 및 보조 동사 플레이 설명 [활성화](../mfc/activation-cpp.md)합니다.  

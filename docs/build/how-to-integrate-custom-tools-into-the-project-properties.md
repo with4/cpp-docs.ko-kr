@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368904"
 ---
 # <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>방법: 사용자 지정 도구를 프로젝트 속성에 통합
 Visual Studio를 사용자 지정 도구 옵션을 추가할 수 있습니다 **속성 페이지** 기본 XML 스키마 파일을 만들어 창.  

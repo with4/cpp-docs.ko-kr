@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32050804"
 ---
 # <a name="ifdif"></a>IFDIF]
 텍스트 항목에는 서로 다른 경우 어셈블리를 부여 합니다.  

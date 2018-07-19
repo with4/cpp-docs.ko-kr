@@ -29,6 +29,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095296"
 ---
 # <a name="cbulkrowsetaddrefrows"></a>CBulkRowset::AddRefRows
 호출 [irowset:: Addrefrows](https://msdn.microsoft.com/en-us/library/ms719619.aspx) bulk 행 집합에서 현재 검색 된 모든 행에 대 한 참조 수를 증가 합니다.  

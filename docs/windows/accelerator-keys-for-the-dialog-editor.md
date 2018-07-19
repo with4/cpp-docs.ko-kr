@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863408"
 ---
 # <a name="accelerator-keys-for-the-dialog-editor"></a>대화 상자 편집기의 액셀러레이터 키
 다음은 기본 액셀러레이터 키 대화 상자 편집기 명령에 대 한 합니다. 바로 가기 키를 변경 하려면 **옵션** 에 **도구** 메뉴에서 선택 합니다 **키보드** 아래는 **환경** 폴더입니다. 자세한 내용은 [바로 가기 키 식별 및 사용자 지정](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)을 참조하세요.  

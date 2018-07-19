@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33163207"
 ---
 # <a name="standard-conversions-and-implicit-boxing"></a>표준 변환 및 암시적 boxing
 표준 변환이 필요한 boxing 변환을 통해 컴파일러에 의해 선택 됩니다.  

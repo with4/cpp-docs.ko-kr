@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33343515"
 ---
 # <a name="ole-classes"></a>OLE 클래스
 OLE 클래스 프로그램 ActiveX의 사용자에 게 제공 하는 쉬운 방법을 제공 ActiveX API에 쉽게 액세스할 수는 다른 응용 프로그램 프레임 워크 클래스를 사용 합니다. ActiveX를 사용 하 여 다음을 수행할 수 있습니다.  

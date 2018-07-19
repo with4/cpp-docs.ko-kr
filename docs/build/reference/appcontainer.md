@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368436"
 ---
 # <a name="appcontainer"></a>/APPCONTAINER
 앱 컨테이너에서 실행 해야 하는 실행 파일이 표시-예를 들어 Microsoft 스토어 또는 유니버설 Windows 앱.  

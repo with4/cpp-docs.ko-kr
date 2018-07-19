@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687376"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>동기화 데이터 구조와 Windows API의 비교
 이 항목에서는 Windows API에서 제공 된, 동시성 런타임에서 제공 되는 동기화 데이터 구조체의 동작을 비교 합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374728"
 ---
 # <a name="module-definition-def-files"></a>모듈 정의(.Def) 파일
 모듈 정의 (.def) 파일 링커 내보내기, 특성 및 연결 될 프로그램에 대 한 기타 정보에 대 한 정보를 제공 합니다. .Def 파일 DLL을 빌드할 때 가장 유용 합니다. 있기 때문에 [링커 옵션](../../build/reference/linker-options.md) 사용할 수 있는 모듈 정의 문의 대신.def 파일은 일반적으로 불필요 합니다. 사용할 수도 있습니다 [__declspec (dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md) 지정 하는 방법으로 함수를 내보냈습니다.  

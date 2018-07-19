@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c01dbb3b14c13182afc85412b5c3ffa3ac0e9cf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 4e479c156967addc7add8f048d2ef1c3abab0dd8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956235"
 ---
 # <a name="cd2dgradientbrush-class"></a>CD2DGradientBrush 클래스
 CD2DLinearGradientBrush 및 CD2DRadialGradientBrush 클래스의 기본 클래스입니다.  
@@ -60,7 +61,7 @@ class CD2DGradientBrush : public CD2DBrush;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CD2DGradientBrush::m_arGradientStops](#m_argradientstops)|D2D1_GRADIENT_STOP 구조체의 배열입니다.|  
 |[CD2DGradientBrush::m_colorInterpolationGamma](#m_colorinterpolationgamma)|어떤 색 그라데이션 중지점 사이의 보간을 수행 되는 공간입니다.|  
@@ -101,25 +102,25 @@ CD2DGradientBrush(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pParentTarget`  
+ *pParentTarget*  
  렌더링 대상에 대 한 포인터입니다.  
   
- `gradientStops`  
+ *gradientStops*  
  D2D1_GRADIENT_STOP 구조의 배열에 대 한 포인터입니다.  
   
- `gradientStopsCount`  
+ *gradientStopsCount*  
  GradientStops 배열에서 그라데이션 중지점의 수를 지정 하는 1 보다 크거나 같은 값입니다.  
   
- `colorInterpolationGamma`  
+ *colorInterpolationGamma*  
  어떤 색 그라데이션 중지점 사이의 보간을 수행 되는 공간입니다.  
   
- `extendMode`  
+ *extendMode*  
  [0, 1]의 표준화 된 범위를 벗어난 그라데이션의 동작입니다.  
   
- `pBrushProperties`  
+ *pBrushProperties*  
  불투명도 및 브러시의 변환에 대 한 포인터입니다.  
   
- `bAutoDestroy`  
+ *bAutoDestroy*  
  개체를 소유자 (pParentTarget)에 의해 폐기 수를 나타냅니다.  
   
 ##  <a name="destroy"></a>  CD2DGradientBrush::Destroy  

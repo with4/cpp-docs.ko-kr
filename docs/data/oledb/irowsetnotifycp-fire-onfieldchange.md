@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33106559"
 ---
 # <a name="irowsetnotifycpfireonfieldchange"></a>IRowsetNotifyCP::Fire_OnFieldChange
 브로드캐스트하는 [OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx) 열 값에 대 한 변경의 사용자에 게 이벤트입니다.  

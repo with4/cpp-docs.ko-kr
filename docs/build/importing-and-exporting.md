@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368875"
 ---
 # <a name="importing-and-exporting"></a>가져오기 및 내보내기
 응용 프로그램으로 공용 기호를 가져올 하거나 두 개의 메서드를 사용 하 여 DLL에서 함수를 내보낼 수 있습니다.  

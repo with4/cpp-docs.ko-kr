@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273808"
 ---
 # <a name="compiler-warning-c4355"></a>컴파일러 경고 C4355
 'this' : 기본 멤버 이니셜라이저 목록에서 사용되었습니다.  

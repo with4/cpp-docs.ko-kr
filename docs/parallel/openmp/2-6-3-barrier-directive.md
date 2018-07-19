@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689794"
 ---
 # <a name="263-barrier-directive"></a>2.6.3 barrier 지시문
 **장벽** 지시문 팀의 모든 스레드를 동기화 합니다. 오류가 발생 하면 팀에서 각 스레드에이 점에 도달해 서는 다른 모든 때까지 기다립니다. 구문은 **장벽** 지시문은 다음과 같습니다.  

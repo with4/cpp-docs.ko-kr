@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100644"
 ---
 # <a name="icommandimplcreaterowset"></a>ICommandImpl::CreateRowset
 에 의해 호출 [Execute](../../data/oledb/icommandimpl-execute.md) 단일 행 집합을 만들려고 합니다.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33856516"
 ---
 # <a name="ltsample-containergt-specialized-template-functions"></a>&lt;sample container&gt; 특수 템플릿 함수
 

@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380251"
 ---
 # <a name="unwind-helpers-for-masm"></a>MASM에 대한 해제 도우미
 적절 한 어셈블리 루틴을 작성 하려면 적절 한.pdata 및.xdata 만들려는 실제 어셈블리 명령 동시에 사용할 수 있는 의사 (pseudo) 작업 집합이 있습니다. 또한 매크로 제공 하는 가장 일반적인 용도에 의사 (pseudo) 작업의 사용을 간소화 합니다.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317322"
 ---
 # <a name="profile-guided-optimization-errors-and-warnings"></a>프로필 기반 최적화 오류 및 경고
 이 섹션은 빌드 도구에 의해 생성된 오류에 대한 참조입니다. 에 대 한 도움말 특정 오류 메시지를 출력 창에 오류 번호를 F1 키를 입력에 오류 번호는 **찾아보십시오** 인덱스 상자로 하거나 적절 한 링크를 클릭 합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32374426"
 ---
 # <a name="range"></a>/RANGE
 Dumpbin /RAWDATA 또는 /DISASM 등의 다른 dumpbin 옵션와 함께 사용할 경우의 출력을 수정 합니다.  

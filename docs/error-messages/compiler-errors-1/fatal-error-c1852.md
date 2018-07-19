@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33199513"
 ---
 # <a name="fatal-error-c1852"></a>심각한 오류 C1852
 'filename'은 올바른 미리 컴파일된 헤더 파일이 아닙니다.  

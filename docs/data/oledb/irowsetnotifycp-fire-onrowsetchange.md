@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33101996"
 ---
 # <a name="irowsetnotifycpfireonrowsetchange"></a>IRowsetNotifyCP::Fire_OnRowsetChange
 브로드캐스트하는 [OnRowsetChange](https://msdn.microsoft.com/en-us/library/ms722669.aspx) 연결 지점에 대해 모든 수신기에 이벤트 **IID_IRowsetNotify** 전체 행 집합에 영향을 미치는 변경의 사용자에 게 있습니다.  

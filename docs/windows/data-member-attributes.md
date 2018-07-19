@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871707"
 ---
 # <a name="data-member-attributes"></a>데이터 멤버 특성
 다음 특성은 클래스, coclass 등 또는 인터페이스의 데이터 멤버에 적용 합니다.  

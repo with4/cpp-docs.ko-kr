@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377821"
 ---
 # <a name="notification-hooks"></a>알림 후크
 알림 후크 도우미 루틴에는 다음과 같은 조치가 취해집니다 하기 바로 전에 호출 됩니다.  

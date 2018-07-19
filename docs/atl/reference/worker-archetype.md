@@ -1,5 +1,5 @@
 ---
-title: 작업자 아키타 | Microsoft Docs
+title: Worker 원형 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,24 +14,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cee9df0b137655fe66e68c189de756f15233a94d
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 75f9e974a2969fa817598556e3e043626a826970
+ms.sourcegitcommit: 7d68f8303e021e27dc8f4d36e764ed836e93d24f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37881307"
 ---
-# <a name="worker-archetype"></a>작업자 아키타
-준수 하는 클래스는 *작업자* 아키타 스레드 풀 큐에 대기 프로세스 작업 항목에 코드를 제공 합니다.  
+# <a name="worker-archetype"></a>Worker 원형
+따르는 클래스를 *작업자* archetype 스레드 풀에서 대기 중인 작업 항목을 처리 하는 코드를 제공 합니다.  
   
  **구현**  
   
- 이 아키타를 준수 하는 클래스를 구현 하려면 클래스는 다음 기능을 제공 해야 합니다.  
+ 이 원형에 맞는 클래스를 구현 하려면 클래스는 다음과 같은 기능을 제공 해야 합니다.  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[Initialize](#initialize)|모든 요청에 전달 되기 전에 worker 개체를 초기화 하기 위해 호출 [Execute](#execute)합니다.|  
+|[Initialize](#initialize)|모든 요청에 전달 되기 전에 작업자 개체를 초기화 하기 위해 호출할 [Execute](#execute)합니다.|  
 |[실행](#execute)|작업 항목을 처리 하기 위해 호출 됩니다.|  
-|[종료](#terminate)|모든 요청에 전달 된 후 작업자 개체의 초기화를 해제 하기 위해 호출 [Execute](#execute)합니다.|  
+|[종료](#terminate)|모든 요청에 전달 된 후 작업자 개체 초기화를 호출 [Execute](#execute)합니다.|  
   
 |Typedef|설명|  
 |-------------|-----------------|  
@@ -43,15 +44,15 @@ ms.lasthandoff: 05/17/2018
   
  **기존 구현**  
   
- 이러한 클래스는이 아키타 준수:  
+ 이러한 클래스는이 원형을 따릅니다.  
   
 |클래스|설명|  
 |-----------|-----------------|  
-|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|스레드 풀의 요청을 수신 하 고 생성 되 고 각 요청에 대 한 제거 하는 작업자 개체를 전달 하 여 합니다.|  
+|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|스레드 풀의 요청을 받고으로 생성 되 고 각 요청에 대 한 제거 하는 작업자 개체를 전달 합니다.|  
   
  **사용 하 여**  
   
- 이러한 템플릿 매개 변수 예상이 아키타에 맞게 클래스:  
+ 이러한 템플릿 매개 변수 예상이 원형에 맞게 클래스:  
   
 |매개 변수 이름|사용 주체|  
 |--------------------|-------------|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 05/17/2018
 |*작업자*|[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|  
   
 ### <a name="requirements"></a>요구 사항  
- **헤더:** atlutil.h  
+ **헤더:** 와 atlutil.h  
   
 ## <a name="execute"></a>WorkerArchetype::Execute
 작업 항목을 처리 하기 위해 호출 됩니다.  
@@ -74,27 +75,27 @@ void Execute(
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `request`  
- 처리 해야 하는 작업 항목입니다. 와 동일한 형식의 작업 항목은 `RequestType`합니다.  
+ *요청*  
+ 작업 항목을 처리할 수입니다. 동일한 형식의 작업 항목은 `RequestType`합니다.  
   
- `pvWorkerParam`  
- 작업자 클래스에 의해 인식 사용자 지정 매개 변수입니다. 또한 전달할 `WorkerArchetype::Initialize` 및 `Terminate`합니다.  
+ *pvWorkerParam*  
+ 작업자 클래스에 의해 인식 사용자 지정 매개 변수입니다. 또한 전달 `WorkerArchetype::Initialize` 고 `Terminate`입니다.  
   
- `pOverlapped`  
- 에 대 한 포인터는 [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) 구조를 큐에 항목 대상 작업에 큐를 만드는 데 사용 합니다.  
+ *pOverlapped*  
+ 에 대 한 포인터를 [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) 구조는 작업 항목이 대기 중인 큐를 만드는 데 사용 합니다.  
   
 ## <a name="initialize"></a> WorkerArchetype::Initialize
-모든 요청에 전달 되기 전에 worker 개체를 초기화 하기 위해 호출 `WorkerArchetype::Execute`합니다.  
+모든 요청에 전달 되기 전에 작업자 개체를 초기화 하기 위해 호출 `WorkerArchetype::Execute`합니다.  
 ```
 BOOL Initialize(void* pvParam) throw();
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `pvParam`  
- 작업자 클래스에 의해 인식 사용자 지정 매개 변수입니다. 또한 전달할 `WorkerArchetype::Terminate` 및 `WorkerArchetype::Execute`합니다.  
+ *pvParam*  
+ 작업자 클래스에 의해 인식 사용자 지정 매개 변수입니다. 또한 전달 `WorkerArchetype::Terminate` 고 `WorkerArchetype::Execute`입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 반환할 **TRUE** 성공 **FALSE** 실패 합니다.  
+ 성공 하면 TRUE를 반환 합니다. 실패 한 경우 FALSE입니다.  
   
 ## <a name="requesttype"></a> WorkerArchetype::RequestType
 작업자 클래스에 의해 처리 될 수 있는 작업 항목 형식에 대 한 typedef입니다.  
@@ -104,18 +105,18 @@ typedef MyRequestType RequestType;
 ```  
   
 ### <a name="remarks"></a>설명  
- 이 형식은의 첫 번째 매개 변수로 사용 해야 `WorkerArchetype::Execute` 는 ULONG_PTR의 캐스팅 되 고 수 있어야 하 고 있습니다.  
+ 이 형식은의 첫 번째 매개 변수로 사용 해야 `WorkerArchetype::Execute` 및는 ULONG_PTR에서 캐스팅 될 수 있어야 합니다.  
   
 ## <a name="terminate"></a> WorkerArchetype::Terminate
-모든 요청에 전달 된 후 작업자 개체의 초기화를 해제 하기 위해 호출 `WorkerArchetype::Execute`).  
+모든 요청에 전달 된 후 작업자 개체의 초기화를 취소 하기 위해 호출 `WorkerArchetype::Execute`).  
     
 ``` 
 void Terminate(void* pvParam) throw();
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- `pvParam`  
- 작업자 클래스에 의해 인식 사용자 지정 매개 변수입니다. 또한 전달할 `WorkerArchetype::Initialize` 및 `WorkerArchetype::Execute`합니다.  
+ *pvParam*  
+ 작업자 클래스에 의해 인식 사용자 지정 매개 변수입니다. 또한 전달 `WorkerArchetype::Initialize` 고 `WorkerArchetype::Execute`입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [개념](../../atl/active-template-library-atl-concepts.md)   

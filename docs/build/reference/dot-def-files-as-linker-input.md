@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370529"
 ---
 # <a name="def-files-as-linker-input"></a>링커 입력 파일로 사용하는 .Def 파일
 참조 [모듈 정의 (.def) 파일](../../build/reference/module-definition-dot-def-files.md) 자세한 정보에 대 한 합니다. 사용 하 여 [/DEF](../../build/reference/def-specify-module-definition-file.md) .def 파일 이름을 지정 하는 옵션입니다.  

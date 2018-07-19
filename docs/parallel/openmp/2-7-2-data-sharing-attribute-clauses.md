@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33691910"
 ---
 # <a name="272-data-sharing-attribute-clauses"></a>2.7.2 데이터 공유 특성 절
 여러 지시문 절 영역의 기간에 대 한 변수 공유 특성을 제어 하는 사용자가 수락 합니다. 공유 특성 절 지시문 절은 표시 되는 어휘 범위 변수에 적용 됩니다. 다음 절 중 일부만 모든 지시문에서 허용 됩니다. 특정 지시문에서 사용할 수 있는 절 목록 지시문과 함께 설명 되어 있습니다.  

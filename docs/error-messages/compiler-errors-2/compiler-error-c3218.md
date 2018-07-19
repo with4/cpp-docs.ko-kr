@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33248273"
 ---
 # <a name="compiler-error-c3218"></a>컴파일러 오류 C3218
 'type': 형식은 제약 조건으로 사용할 수 없습니다  

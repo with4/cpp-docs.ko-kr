@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32391694"
 ---
 # <a name="parameters"></a>매개 변수
 인수는 함수 호출을 통해 함수에 전달되는 값의 이름입니다. 매개 변수는 함수가 수신할 수 있는 값입니다. 함수 프로토타입에서 함수 이름 뒤의 괄호에는 함수의 전체 매개 변수 및 해당 형식 목록이 포함됩니다. 매개 변수 선언은 형식, 크기 및 매개 변수에 저장된 값의 식별자를 지정합니다.  

@@ -10,14 +10,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c4e58a651129e1f3855ad9e32c5b70fa2527ab5
-ms.sourcegitcommit: 0bc67d40aa283be42f3e1c7190d6a5d9250ecb9b
+ms.openlocfilehash: 3ed2165f75103f5e2aecd3d73dfe9518341d926e
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34762063"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37042331"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-and-157improvements157"></a>Visual Studio 2017 버전 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156) 및 [15.7](#improvements_157)의 C++ 규칙 향상입니다.
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157"></a>Visual Studio 2017 버전 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157)의 C++ 규칙 향상입니다.
 
 Microsoft Visual C++ 컴파일러는 일반화된 constexpr을 지원하고 집계에 NSDMI를 사용할 수 있기 때문에 이제 C++14 표준에 추가된 기능을 완벽히 갖췄습니다. 하지만 아직까지 C++11 표준 기능과 C++98 표준 기능이 몇 가지 부족합니다. 컴파일러의 현재 상태를 보여 주는 테이블은 [Visual C++ Language Conformance](visual-cpp-language-conformance.md)(Visual C++ 언어 규칙)를 참조하세요.
 
@@ -339,7 +339,7 @@ void bar(A<0> *p)
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) 상수 식에서 `std::string_view`를 사용할 수 있도록 `std::traits_type` 멤버 함수 `length`, `compare` 및 `find`로 변경합니다. (Visual Studio 2017 버전 15.6에서 Clang/LLVM에 대해서만 지원됩니다. 버전 15.7 미리 보기 2에서 ClXX에 대해서도 지원이 거의 완료되었습니다.)
 
-## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-and-157update157"></a>Visual Studio 버전 15.0, [15.3](#update_153), [15.5](#update_155) 및 [15.7](#update_157)의 버그 수정
+## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-and-158update158"></a>Visual Studio 버전 15.0, [15.3](#update_153), [15.5](#update_155), [15.7](#update_157) 및 [15.8](#update_158)의 버그 수정
 
 ### <a name="copy-list-initialization"></a>Copy-list-initialization
 
@@ -493,12 +493,12 @@ int main()
     printf("%i\n", static_cast<int>(s))
 ```
 
-CStringW를 사용하여 빌드 및 관리되는 문자열의 경우 제공된 `operator LPCWSTR()`를 사용하여 CStringW 개체를 서식 문자열에 필요한 C 포인터에 캐스트해야 합니다.
+CString을 사용하여 빌드 및 관리되는 문자열의 경우 제공된 `operator LPCTSTR()`를 사용하여 CString 개체를 서식 문자열에 필요한 C 포인터에 캐스트해야 합니다.
 
 ```cpp
-CStringW str1;
-CStringW str2;
-str1.Format(L"%s", static_cast<LPCWSTR>(str2));
+CString str1;
+CString str2 = _T("hello!");
+str1.Format(_T("%s"), static_cast<LPCTSTR>(str2));
 ```
 
 ### <a name="cv-qualifiers-in-class-construction"></a>클래스 생성의 cv 한정자
@@ -1621,6 +1621,211 @@ int main() {
     return 0;
 }
 
+```
+
+## <a name="update_158"></a> Visual Studio 2017 15.8 버전의 버그 수정 및 동작 변경
+
+### <a name="typename-on-unqualified-identifiers"></a>정규화되지 않은 식별자의 형식 이름
+
+[/permissive-](build/reference/permissive-standards-conformance.md) 모드에서는 별칭 템플릿 정의의 정규화되지 않은 식별자에 있는 의사 `typename` 키워드가 컴파일러에서 더 이상 허용되지 않습니다. 이제 C7511 *'T': 'typename' 키워드 뒤에는 정규화된 이름이 와야 합니다* 코드가 생성됩니다.
+
+```cpp
+template <typename T>
+using  X = typename T;
+```
+
+이 오류를 해결하려면 두 번째 줄을 `using  X = T;`로 변경하기만 하면 됩니다.
+
+### <a name="declspec-on-right-side-of-alias-template-definitions"></a>별칭 템플릿 정의의 오른쪽에 __declspec()
+
+[__declspec](cpp/declspec.md)은 별칭 템플릿 정의의 오른쪽에 더 이상 허용되지 않습니다. 이것은 이전에 컴파일러에서 허용되었지만 완전히 무시되었으며 별칭이 사용될 때 사용 중단 경고가 발생하지 않습니다.
+
+표준 C++ 특성 [\[\[사용되지 않음\]\]](cpp/attributes.md)이 대신 사용될 수 있으며 Visual Studio 2017 버전 15.6 기준으로 적용됩니다. 이제 C2760 *구문 오류: '__declspec'은 예기치 않은 토큰입니다. 필요한 토큰은 'type specifier'입니다.* 코드가 생성됩니다.
+
+```cpp
+template <typename T>
+using X = __declspec(deprecated("msg")) T;
+```
+
+오류를 수정하려면 코드를 다음으로 변경합니다('=' 별칭 정의 앞에 속성 배치).
+
+```cpp
+template <typename T>
+using  X [[deprecated("msg")]] = T;
+```
+
+### <a name="two-phase-name-lookup-diagnostics"></a>2단계 이름 조회 진단
+
+2단계 이름 조회를 위해서는 템플릿 본문에 사용된 종속되지 않은 이름이 정의 시점에 템플릿에 표시될 수 있어야 합니다. 이전에는 Microsoft C++ 컴파일러가 인스턴스화 시점까지 찾을 수 없는 이름을 조회 안 함으로 남겨 두었습니다. 이제, 종속되지 않은 이름을 템플릿 본문에 바인드해야 합니다.
+
+이것을 나타낼 수 있는 한 가지 방법은 종속 기본 클래스를 조회하는 것입니다. 이전에는 모든 형식이 해석될 때 인스턴스화 시간 동안 이름이 조회되기 때문에 컴파일러가 종속 기본 클래스에 정의된 이름의 사용을 허용했습니다. 이제 해당 코드는 오류로 처리됩니다. 이러한 경우 기본 클래스 형식으로 한정하거나 종속으로 지정하여 인스턴스화 시점에 변수가 조회되도록 할 수 있습니다(예: `this->` 포인터 추가).
+
+**/permissive-** 모드에서는 다음 C3861: *'base_value': 식별자를 찾을 수 없습니다.* 코드가 발생합니다.
+
+```cpp
+template <class T>
+struct Base {
+    int base_value = 42;
+};
+
+template <class T>
+struct S : Base<T> {
+    int f() {
+        return base_value;
+    }
+};
+
+```
+
+이 오류를 해결하려면 `return` 문을 `return this->base_value;`로 변경합니다.
+
+### <a name="forward-declarations-and-definitions-in-namespace-std"></a>std 네임스페이스에서 정방향 선언 및 정의
+
+C++ 표준에서는 사용자가 `std` 네임스페이스에 정방향 선언 또는 정의를 추가할 수 없습니다. `std` 네임스페이스 또는 std 네임스페이스 내의 네임스페이스에 선언 또는 정의를 추가하면 정의되지 않은 동작이 발생합니다.
+
+향후 Microsoft는 일부 STL 형식이 정의된 위치를 변경할 예정입니다. 이 경우 `std` 네임스페이스에 정방향 선언을 추가하는 기존 코드가 중단됩니다. 새로운 경고, C4643을 통해 이러한 소스 문제를 파악할 수 있습니다. 이 경고는 **/default** 모드에서 사용하도록 설정되며 기본적으로 해제되어 있습니다. 이것은 **/Wall** 또는 **/WX**로 컴파일되는 프로그램에 영향을 줍니다. 
+
+이제 C4643: *C++ 표준에서는 std 네임스페이스에서 'vector' 정방향 선언이 허용되지 않습니다.* 코드가 발생합니다. 
+
+
+```cpp
+namespace std { 
+    template<typename T> class vector; 
+} 
+```
+
+이 오류를 해결하려면 정방향 선언보다는 **include** 지시문을 사용합니다.
+
+```cpp
+#include <vector>
+```
+
+### <a name="constructors-that-delegate-to-themselves"></a>자신을 위임하는 생성자
+
+C++ 표준은 위임하는 생성자가 자신을 위임할 때 컴파일러가 진단을 내보내야 한다고 제안합니다. [/std:c++17](build/reference/std-specify-language-standard-version.md) 및 [/std:c++latest](build/reference/std-specify-language-standard-version.md) 모드의 Microsoft C++는 C7535: *'X::X': 위임하는 생성자는 자신을 호출합니다.* 코드를 생성합니다.
+
+이 오류가 없으면 다음 프로그램이 컴파일되지만 무한 루프가 생성됩니다.
+
+```cpp
+class X { 
+public: 
+    X(int, int); 
+    X(int v) : X(v){}
+}; 
+```
+
+무한 루프를 방지하려면 다른 생성자에 위임합니다.
+
+```cpp
+class X { 
+public: 
+
+    X(int, int); 
+    X(int v) : X(v, 0) {} 
+}; 
+```
+
+### <a name="offsetof-with-constant-expressions"></a>상수 식이 있는 offsetof
+
+지금까지 [offsetof](c-runtime-library/reference/offsetof-macro.md)는 [reinterpret_cast](cpp/reinterpret-cast-operator.md)가 필요한 매크로를 사용하여 구현되었습니다. 이는 상수 식을 필요로 하는 컨텍스트에서는 올바르지 않지만 Microsoft C++ 컴파일러는 일반적으로 허용합니다. STL의 일부로 제공되는 offsetof 매크로는 컴파일러 내장 함수(**__builtin_offsetof**)를 올바르게 사용하지만 많은 사람은 매크로 트릭을 사용하여 자신의 **offsetof**을 정의합니다.  
+
+Visual Studio 2017 버전 15.8에서 컴파일러는 reinterpret_casts가 기본 모드로 표시될 수 있는 영역을 제한하여 코드가 표준 C++ 동작을 준수하도록 합니다. [/permissive-](build/reference/permissive-standards-conformance.md) 아래에서는 제약 조건이 더욱 엄격합니다. 상수 식을 요구하는 위치에서 offsetof 결과를 사용하면 C4644 *상수 식에 매크로 기반 offsetof 패턴을 사용하는 것은 표준이 아닙니다. 대신 C++ 표준 라이브러리에 정의된 offsetof를 사용하십시오.* 또는 C2975 *템플릿 인수가 잘못되었습니다. 컴파일 시간 상수 식이 필요합니다.* 라는 경고를 생성하는 코드가 발생할 수 있습니다.
+
+**/default** 및 **/std:c++17** 모드에서는 C4644가, **/permissive-** 모드에서는 C2975 코드가 발생합니다. 
+
+```cpp
+struct Data { 
+    int x; 
+}; 
+
+// Common pattern of user-defined offsetof 
+#define MY_OFFSET(T, m) (unsigned long long)(&(((T*)nullptr)->m)) 
+
+int main() 
+
+{ 
+    switch (0) { 
+    case MY_OFFSET(Data, x): return 0; 
+    default: return 1; 
+    } 
+} 
+```
+
+이 오류를 해결하려면 \<cstddef>:를 통해 정의된 대로 **offsetof**를 사용하세요.
+
+```cpp
+#include <cstddef>  
+
+struct Data { 
+    int x; 
+};  
+
+int main() 
+{ 
+    switch (0) { 
+    case offsetof(Data, x): return 0; 
+    default: return 1; 
+    } 
+} 
+```
+
+
+### <a name="cv-qualifiers-on-base-classes-subject-to-pack-expansion"></a>팩 확장의 대상이 되는 기본 클래스의 CV 한정자
+
+이전 버전의 Microsoft C++ 컴파일러는 기본 클래스가 팩 확장의 대상이 될 경우 기본 클래스에 cv 한정자가 있음을 감지하지 못했습니다. 
+
+Visual Studio 2017 버전 15.8의 **/permissive-** 모드에서는 C3770 *'const S': 유효한 기본 클래스가 아닙니다.* 코드가 발생합니다. 
+
+```cpp
+template<typename... T> 
+class X : public T... { };  
+
+class S { };  
+
+int main() 
+{ 
+    X<const S> x; 
+} 
+```
+### <a name="template-keyword-and-nested-name-specifiers"></a>템플릿 키워드 및 중첩된 이름 지정자
+
+**/permissive-** 모드에서 컴파일러는 종속된 중첩된 이름 지정자 뒤에 오는 경우 `template` 키워드가 템플릿 이름 앞에 오도록 요구합니다. 
+
+**/permissive-** 모드에서 다음 코드는 C7510: *'foo': 종속 템플릿 이름은 'template'과 함께 사용해야 합니다. 참고: 컴파일 중인 클래스 템플릿 인스턴스화 'X<T>'에 대한 참조를 확인하십시오.* 를 생성합니다.
+
+```cpp
+template<typename T> struct Base
+{
+    template<class U> void foo() {} 
+}; 
+
+template<typename T> 
+struct X : Base<T> 
+{ 
+    void foo() 
+    { 
+        Base<T>::foo<int>(); 
+    } 
+}; 
+```
+
+이 오류를 해결하려면 다음 예제에서 표시된 대로 `template` 키워드를 `Base<T>::foo<int>();` 문에 추가합니다.
+
+```cpp
+template<typename T> struct Base
+{
+    template<class U> void foo() {}
+};
+ 
+template<typename T> 
+struct X : Base<T> 
+{ 
+    void foo() 
+    { 
+        // Add template keyword here:
+        Base<T>::template foo<int>(); 
+    } 
+}; 
 ```
 
 ## <a name="see-also"></a>참고 항목

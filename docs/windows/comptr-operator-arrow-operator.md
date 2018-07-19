@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870187"
 ---
 # <a name="comptroperator-gt-operator"></a>Comptr:: Operator-&gt; 연산자
 현재 템플릿 매개 변수에 지정된 형식에 대한 포인터를 검색합니다.  

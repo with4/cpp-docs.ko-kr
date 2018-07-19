@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351617"
 ---
 # <a name="abcfloat-structure"></a>ABCFLOAT 구조체
 `ABCFLOAT` 구조 A, B 및 C 너비 글꼴 문자가 포함 되어 있습니다.  

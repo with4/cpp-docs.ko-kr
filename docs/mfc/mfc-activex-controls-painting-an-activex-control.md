@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7026dd5ffaab04eb445ae68449127e65c772394
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: de12a21c4b411f3cd1fe25d7d6badd8d26318351
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929814"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX 컨트롤: ActiveX 컨트롤 그리기
 이 문서에서는 ActiveX 컨트롤 그리기 프로세스와 프로세스를 최적화하는 그리기 코드를 변경하는 방법을 설명합니다. (참조 [컨트롤 그리기 최적화](../mfc/optimizing-control-drawing.md) 이전에 선택한 GDI 개체를 복원 하 여 개별적으로 컨트롤 없이 그리기를 최적화 하는 방법은 대. 모든 컨트롤이 그려진 후 컨테이너에서 원래 개체를 자동으로 복원할 수 있습니다.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/04/2018
 ##  <a name="_core_the_painting_process_of_an_activex_control"></a> ActiveX 컨트롤의 그리기 프로세스  
  ActiveX 컨트롤이 처음 표시되거나 다시 그려지는 경우 해당 컨트롤은 MFC를 사용하여 개발된 다른 응용 프로그램과 유사한 그리기 프로세스를 따릅니다. 중요한 차이점 하나는 ActiveX 컨트롤이 활성 또는 비활성 상태가 될 수 있다는 점입니다.  
   
- 활성 컨트롤은 자식 창에서 ActiveX 컨트롤 컨테이너에 표시됩니다. 다른 창과 마찬가지로 `WM_PAINT` 메시지가 수신될 때 직접 그려야 합니다. 컨트롤의 기본 클래스 [COleControl](../mfc/reference/colecontrol-class.md)에서이 메시지를 처리 합니다. 해당 `OnPaint` 함수입니다. 이 기본 구현은 컨트롤의 `OnDraw` 함수를 호출합니다.  
+ 활성 컨트롤은 자식 창에서 ActiveX 컨트롤 컨테이너에 표시됩니다. 다른 창과 마찬가지로 WM_PAINT 메시지를 받을 때 직접 그려야 하는 일을 담당 합니다. 컨트롤의 기본 클래스 [COleControl](../mfc/reference/colecontrol-class.md)에서이 메시지를 처리 합니다. 해당 `OnPaint` 함수입니다. 이 기본 구현은 컨트롤의 `OnDraw` 함수를 호출합니다.  
   
  비활성 컨트롤은 다르게 그려집니다. 컨트롤이 비활성화인 경우 해당 창은 표시되지 않거나 존재하지 않으므로 그리기 메시지를 받을 수 없습니다. 대신 컨트롤 컨테이너에서는 컨트롤의 `OnDraw` 함수를 직접 호출합니다. 이는 `OnPaint` 멤버 함수가 호출되지 않는 활성 컨트롤의 그리기 프로세스와 다릅니다.  
   
@@ -62,12 +63,12 @@ ms.lasthandoff: 05/04/2018
   
  ActiveX 컨트롤 그리기의 기본 구현은 전체 컨트롤 영역을 그리는 것입니다. 이 작업은 간단한 컨트롤에 충분하지만 전체 컨트롤 대신 업데이트가 필요한 부분이 다시 그려질 경우에만 대부분의 컨트롤 다시 그리기는 더 빨라집니다.  
   
- `OnDraw` 함수는 다시 그려야 하는 컨트롤의 사각형 영역인 `rcInvalid`를 전달하여 최적화하는 쉬운 방법을 제공합니다. 그리기 프로세스의 속도를 높이려면 일반적으로 전체 컨트롤 영역보다 더 작은 이 영역을 사용합니다.  
+ `OnDraw` 함수 전달 하 여 최적화 하는 쉬운 방법을 제공 *rcInvalid*, 다시 그려야 하는 컨트롤의 사각형 영역입니다. 그리기 프로세스의 속도를 높이려면 일반적으로 전체 컨트롤 영역보다 더 작은 이 영역을 사용합니다.  
   
 ##  <a name="_core_painting_your_control_using_metafiles"></a> 메타 파일을 사용 하 여 컨트롤 그리기  
- 대부분의 경우 `pdc` 함수에 대한 `OnDraw` 매개 변수는 화면 DC(장치 컨텍스트)를 가리킵니다. 그러나 컨트롤의 이미지를 그릴 때 또는 인쇄 미리 보기 세션 중 렌더링을 위해 받은 DC는 "메타파일 DC"라는 특별한 형식입니다. 전송된 요청을 즉시 처리하는 화면 DC와는 달리 메타파일 DC는 나중에 재생하기 위해 요청을 저장합니다. 일부 컨테이너 응용 프로그램은 디자인 모드에서 메타파일 DC를 사용하여 컨트롤 이미지를 렌더링하도록 선택할 수도 있습니다.  
+ 대부분의 경우에서는 *pdc* 매개 변수는 `OnDraw` 함수는 화면 DC (디바이스 컨텍스트)를 가리킵니다. 그러나 컨트롤의 이미지를 그릴 때 또는 인쇄 미리 보기 세션 중 렌더링을 위해 받은 DC는 "메타파일 DC"라는 특별한 형식입니다. 전송된 요청을 즉시 처리하는 화면 DC와는 달리 메타파일 DC는 나중에 재생하기 위해 요청을 저장합니다. 일부 컨테이너 응용 프로그램은 디자인 모드에서 메타파일 DC를 사용하여 컨트롤 이미지를 렌더링하도록 선택할 수도 있습니다.  
   
- 두 인터페이스 함수를 통해 컨테이너에 의해 메타 파일 그리기 요청을 만들 수 있습니다: **IViewObject::Draw** (이 함수 라고도 비 메타 파일 그리기에 대 한) 및 **idataobject:: Getdata**합니다. MFC 프레임 워크를 호출 하는 경우에 메타 파일 DC 매개 변수 중 하나로 전달 됩니다 [colecontrol:: Ondrawmetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile)합니다. 이 함수는 가상 멤버 함수이므로 특수한 처리 작업을 수행할 컨트롤 클래스에서 이 함수를 재정의합니다. 기본 동작은 `COleControl::OnDraw`를 호출합니다.  
+ 두 인터페이스 함수를 통해 컨테이너에 의해 메타 파일 그리기 요청을 만들 수 있습니다: `IViewObject::Draw` (이 함수 라고도 비 메타 파일 그리기에 대 한) 및 `IDataObject::GetData`합니다. MFC 프레임 워크를 호출 하는 경우에 메타 파일 DC 매개 변수 중 하나로 전달 됩니다 [colecontrol:: Ondrawmetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile)합니다. 이 함수는 가상 멤버 함수이므로 특수한 처리 작업을 수행할 컨트롤 클래스에서 이 함수를 재정의합니다. 기본 동작은 `COleControl::OnDraw`를 호출합니다.  
   
  컨트롤이 화면 및 메타파일 장치 컨텍스트 모두에서 그려질 수 있는지 확인하려면 화면 및 메타파일 DC 모두에서 지원되는 멤버 함수만 사용해야 합니다. 좌표계는 픽셀 단위로 측정할 수 없다는 사실에 주의해야 합니다.  
   
@@ -75,11 +76,11 @@ ms.lasthandoff: 05/04/2018
   
 |Arc|BibBlt|Chord|  
 |---------|------------|-----------|  
-|**타원**|**Esc**|`ExcludeClipRect`|  
+|`Ellipse`|`Escape`|`ExcludeClipRect`|  
 |`ExtTextOut`|`FloodFill`|`IntersectClipRect`|  
 |`LineTo`|`MoveTo`|`OffsetClipRgn`|  
 |`OffsetViewportOrg`|`OffsetWindowOrg`|`PatBlt`|  
-|`Pie`|**다각형**|`Polyline`|  
+|`Pie`|`Polygon`|`Polyline`|  
 |`PolyPolygon`|`RealizePalette`|`RestoreDC`|  
 |`RoundRect`|`SaveDC`|`ScaleViewportExt`|  
 |`ScaleWindowExt`|`SelectClipRgn`|`SelectObject`|  
@@ -94,7 +95,7 @@ ms.lasthandoff: 05/04/2018
   
  메타 파일에 기록 되지 않는 함수는: [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect), [DrawIcon](../mfc/reference/cdc-class.md#drawicon), [DrawText](../mfc/reference/cdc-class.md#drawtext), [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn), [FillRect](../mfc/reference/cdc-class.md#fillrect), [FrameRect](../mfc/reference/cdc-class.md#framerect), [GrayString](../mfc/reference/cdc-class.md#graystring), [InvertRect](../mfc/reference/cdc-class.md#invertrect), [ScrollDC](../mfc/reference/cdc-class.md#scrolldc), 및 [TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout)합니다. 메타파일 DC가 실제로 장치와 연결되어 있지 않으므로 SetDIBits, GetDIBits 및 CreateDIBitmap을 메타파일 DC와 함께 사용할 수 없습니다. 대상으로 SetDIBitsToDevice 및 StretchDIBits를 메타파일 DC와 함께 사용할 수 있습니다. [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc), [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap), 및 [CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap) 는 메타 파일 DC와 의미가 없습니다.  
   
- 메타파일 DC를 사용할 때 고려해야 할 또 다른 점은 좌표계를 픽셀 단위로 측정할 수 없다는 것입니다. 이 따라서 그리기 코드가 사각형에 맞게 조정 해야 하는 모든 형식에 전달 `OnDraw` 에 `rcBounds` 매개 변수입니다. `rcBounds`가 컨트롤의 창 크기를 나타내므로 이를 통해 컨트롤 외부에 실수로 그리는 것이 방지됩니다.  
+ 메타파일 DC를 사용할 때 고려해야 할 또 다른 점은 좌표계를 픽셀 단위로 측정할 수 없다는 것입니다. 이 따라서 그리기 코드가 사각형에 맞게 조정 해야 하는 모든 형식에 전달 `OnDraw` 에 *rcBounds* 매개 변수입니다. 때문에이 컨트롤 외부에 실수로 그리는 방지 *rcBounds* 컨트롤의 창 크기를 나타냅니다.  
   
  컨트롤에 대한 메타파일 렌더링을 구현한 후 테스트 컨테이너를 사용하여 메타파일을 테스트합니다. 테스트 컨테이너에 액세스하는 방법은 [테스트 컨테이너로 속성 및 이벤트 테스트](../mfc/testing-properties-and-events-with-test-container.md) 를 참조하세요.  
   

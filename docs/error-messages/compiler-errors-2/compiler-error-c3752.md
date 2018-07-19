@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265287"
 ---
 # <a name="compiler-error-c3752"></a>컴파일러 오류 C3752
 '특성 클래스': 특성; 분류할 수 없습니다 이 컨텍스트에서 'keyword'를 사용 하지 않아야 합니다.  

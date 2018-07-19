@@ -35,6 +35,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882552"
 ---
 # <a name="creating-transparent-or-inverse-regions-in-device-images-image-editor-for-icons"></a>장치 이미지에서 투명한 영역 또는 반전 영역 만들기(아이콘에 대한 이미지 편집기)
 에 [이미지 편집기](../windows/image-editor-for-icons.md), 초기 아이콘이 나 커서 이미지의 특성은 투명 합니다. 아이콘 및 커서 이미지는 사각형, 많은 나타나지 않습니다 하므로 이미지의 부분; 투명 한 때문에 화면에 기본 이미지가 표시 아이콘이 나 커서입니다. 아이콘을 끌어다 놓으면 이미지의 부분 반전된 된 색으로 나타날 수 있습니다. 화면색 및 반전색에서 설정 하 여이 효과 만들는 [색상 창](../windows/colors-window-image-editor-for-icons.md)합니다.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33861547"
 ---
 # <a name="changing-the-tab-order-of-controls"></a>컨트롤의 탭 순서 변경
 탭 순서는 TAB 키 대화 상자 내에서 다음 단계로 한 컨트롤에서 입력된 포커스가 이동는 순서입니다. 일반적으로 탭 순서는 왼쪽에서 오른쪽, 위쪽에서 대화 상자에서 아래쪽으로 진행 됩니다. 각 컨트롤에는 **Tabstop** 입력된 포커스를 받을 것인지를 결정 하는 속성입니다.  

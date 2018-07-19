@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33113189"
 ---
 # <a name="exceptions-in-ccli"></a>C++/CLI의 예외
 설명서의이 섹션의 문서에서는 예외 처리 C + + CLI 및 표준 예외 처리 차이점 것입니다.  

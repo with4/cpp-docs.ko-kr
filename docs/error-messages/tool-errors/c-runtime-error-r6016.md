@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33306938"
 ---
 # <a name="c-runtime-error-r6016"></a>C 런타임 오류 r 6016
 스레드 데이터에 대한 공간이 부족합니다.  

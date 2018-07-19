@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369054"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>방법: C/C++ 응용 프로그램에 매니페스트 포함
 C/c + + 응용 프로그램 (또는 라이브러리) 한지의 매니페스트가 대부분의 시나리오에서 올바른 런타임 동작을 보장 하기 때문에 최종 이진에 포함 하는 것이 좋습니다. 기본적으로 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 참조; 소스 파일에서 프로젝트를 빌드할 때 매니페스트를 포함 하려고 [Visual Studio에서 매니페스트 생성](../build/manifest-generation-in-visual-studio.md) 자세한 정보에 대 한 합니다. 그러나를 nmake를 사용 하 여 응용 프로그램을 빌드하는 경우 일부 기존의 메이크파일을 변경이 필요 합니다. 이 섹션에는 최종 이진 매니페스트를 자동으로 포함 하도록 기존 메이크파일을 변경 하는 방법을 보여 줍니다.  

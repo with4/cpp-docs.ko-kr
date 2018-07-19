@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33879837"
 ---
 # <a name="inserting-a-space-between-buttons-on-a-toolbar"></a>도구 모음의 단추 사이에 공백 삽입
 일반적으로 단추 사이 공백을 삽입할 끌어 놓으십시오 다른 도구 모음. 공간을 제거 하려면 다른 쪽으로 끌어 옵니다.  

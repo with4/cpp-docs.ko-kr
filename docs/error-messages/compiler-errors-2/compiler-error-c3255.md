@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33251597"
 ---
 # <a name="compiler-error-c3255"></a>컴파일러 오류 C3255
 '값 유형':이 값 형식 개체를 네이티브 힙에 동적으로 할당할 수 없습니다  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33891846"
 ---
 # <a name="symbols-resource-identifiers"></a>기호: 리소스 식별자
 기호는 두 부분 즉, 텍스트 문자열(기호 이름)과 이와 매핑되는 정수 값(기호 값)으로 구성된 리소스 식별자(ID)입니다. 예를 들어:  

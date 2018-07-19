@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388908"
 ---
 # <a name="one-dimensional-arrays"></a>1차원 배열
 대괄호(**[ ]**) 안의 식이 뒤따르는 후위 식은 배열 개체 요소의 첨자가 있는 표현입니다. 첨자식은 다음과 같이 표현될 때 *postfix-expression*을 벗어나는 *expression* 위치의 주소에 있는 값을 나타냅니다.  

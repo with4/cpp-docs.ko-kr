@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e08ea95c9cfe4bd67c0904cc22e6db19dcfb52e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9ee88b7784abb6ca622e72a9dfb31efc39fa7816
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930942"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>입력/출력 처리에 대한 권장 사항
 파일 기반 I/O 사용 하는지 여부는 다음 의사 결정 트리의 질문에 대답에 따라 달라 집니다.  
@@ -33,9 +34,9 @@ ms.lasthandoff: 05/04/2018
   
      **응용 프로그램 전체 파일 메모리로 파일 열기에 읽기 및 쓰기 전체 파일 다시 디스크에 파일 저장을**  
   
-    -   예: 기본 MFC 문서 환경입니다. 사용 하 여 **CDocument** 직렬화 합니다.  
+    -   예: 기본 MFC 문서 환경입니다. 사용 하 여 `CDocument` 직렬화 합니다.  
   
-    -   없음:이 경우 일반적으로 파일의 업데이트 트랜잭션 기반 합니다. 트랜잭션 단위로에 파일을 업데이트 하 고 필요 없는 **CDocument** 직렬화 합니다.  
+    -   없음:이 경우 일반적으로 파일의 업데이트 트랜잭션 기반 합니다. 트랜잭션 단위로에 파일을 업데이트 하 고 필요 없는 `CDocument` 직렬화 합니다.  
   
 -   아니요, 주 데이터 디스크 파일에 상주 하지 않습니다.  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/04/2018
   
          이 경우의 예: 멤버에 ODBC DBMS가 아닌;의 데이터 데이터를 OLE 또는 DDE 등의 다른 메커니즘을 통해 읽기입니다.  
   
-         이러한 경우 직렬화를 사용 하지 않는 한 응용 프로그램 열기와 메뉴 항목을 저장 하지 않습니다. 사용 하려는 여전히는 **CDocument** 홈 기반으로 MFC ODBC와 마찬가지로 응용 프로그램 사용 하 여 문서를 저장할 `CRecordset` 개체입니다. 하지만 프레임 워크의 기본 파일 열기/저장 문서 직렬화를 사용 하지 않습니다.  
+         이러한 경우 직렬화를 사용 하지 않는 한 응용 프로그램 열기와 메뉴 항목을 저장 하지 않습니다. 사용 하려는 여전히는 `CDocument` 홈 기반으로 MFC ODBC와 마찬가지로 응용 프로그램 사용 하 여 문서를 저장할 `CRecordset` 개체입니다. 하지만 프레임 워크의 기본 파일 열기/저장 문서 직렬화를 사용 하지 않습니다.  
   
  열기, 저장을 지원 하 고 파일 메뉴에서 명령으로 저장, 프레임 워크에서는 문서 직렬화를 제공 합니다. Serialization을 읽고 클래스에서 파생 된 개체를 포함 하 여 데이터를 쓸 `CObject`에 영구 저장소 이며 일반적으로 디스크 파일입니다. Serialization은 사용 하기 쉬운 및 사용자 요구를 충족 시키지만 하지만 여러 데이터 액세스 응용 프로그램에 적합 하지 않을 수 있습니다. 데이터 액세스 응용 프로그램에는 일반적으로 트랜잭션 단위로에 데이터를 업데이트 합니다. 트랜잭션 보다는 읽기 및 쓰기 전체 데이터 파일을 한 번에 영향을 받는 레코드를 업데이트 합니다.  
   

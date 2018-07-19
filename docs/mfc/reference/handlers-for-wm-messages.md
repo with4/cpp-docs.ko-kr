@@ -16,25 +16,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08f4c55eef55cb1258932f5e503c82c1ee824246
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 5eeb3ee5b458ea65628e7f1c86c87dcad42f6fd2
+ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37338606"
 ---
 # <a name="handlers-for-wm-messages"></a>WM_ 메시지 처리기
 다음 항목에서는 맵 항목에 해당합니다.  
   
 |항목|맵 항목|  
 |-----------|-----------------|  
-|[A-C](../../mfc/reference/wm-message-handlers-a-c.md)|**ON_WM_ACTIVATE** 통해 **ON_WM_CTLCOLOR**|  
-|[D-E](../../mfc/reference/wm-message-handlers-d-e.md)|**ON_WM_DEADCHAR** 통해 **ON_WM_ERASEBKGND**|  
-|[F-K](../../mfc/reference/wm-message-handlers-f-k.md)|**ON_WM_FONTCHANGE** 통해 **ON_WM_KILLFOCUS**|  
-|[L-M](../../mfc/reference/wm-message-handlers-l-m.md)|**ON_WM_LBUTTONDBLCLK** 통해 **ON_WM_MOVING**|  
-|[N-O](../../mfc/reference/wm-message-handlers-n-o.md)|**ON_WM_NCACTIVATE** 통해 **ON_WM_NCRBUTTONUP**|  
-|[P-R](../../mfc/reference/wm-messages-p-r.md)|**ON_WM_PAINT** 통해 **ON_WM_RENDERFORMAT**|  
-|[S](../../mfc/reference/wm-messages-s.md)|**ON_WM_SETCURSOR** 통해 **ON_WM_SYSKEYUP**|  
-|[T-Z](../../mfc/reference/wm-messages-t-z.md)|**ON_WM_TIMECHANGE** 통해 **ON_WM_WININICHANGE**|  
+|[-C](../../mfc/reference/wm-message-handlers-a-c.md)|ON_WM_CTLCOLOR 통해 ON_WM_ACTIVATE|  
+|[D-E](../../mfc/reference/wm-message-handlers-d-e.md)|ON_WM_ERASEBKGND 통해 ON_WM_DEADCHAR|  
+|[F-K](../../mfc/reference/wm-message-handlers-f-k.md)|ON_WM_KILLFOCUS 통해 ON_WM_FONTCHANGE|  
+|[L-M](../../mfc/reference/wm-message-handlers-l-m.md)|ON_WM_MOVING 통해 ON_WM_LBUTTONDBLCLK|  
+|[N-O](../../mfc/reference/wm-message-handlers-n-o.md)|ON_WM_NCRBUTTONUP 통해 ON_WM_NCACTIVATE|  
+|[P-R](../../mfc/reference/wm-messages-p-r.md)|ON_WM_RENDERFORMAT 통해 ON_WM_PAINT|  
+|[S](../../mfc/reference/wm-messages-s.md)|ON_WM_SYSKEYUP 통해 ON_WM_SETCURSOR|  
+|[T-Z](../../mfc/reference/wm-messages-t-z.md)|ON_WM_WININICHANGE 통해 ON_WM_TIMECHANGE|  
   
 ## <a name="see-also"></a>참고 항목  
  [메시지 맵](../../mfc/reference/message-maps-mfc.md)

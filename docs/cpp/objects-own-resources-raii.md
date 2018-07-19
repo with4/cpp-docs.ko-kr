@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32419935"
 ---
 # <a name="objects-own-resources-raii"></a>개체가 리소스 소유(RAII)
 직접 리소스 개체가 있는지 확인 합니다. 이 원칙은 라고도 "resource acquisition 초기화" 또는 "RAII."  

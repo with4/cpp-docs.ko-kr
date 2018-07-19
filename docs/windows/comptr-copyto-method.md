@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870873"
 ---
 # <a name="comptrcopyto-method"></a>ComPtr::CopyTo 메서드
 지정된 된 포인터를이 ComPtr과 연결 된 현재 또는 지정 된 인터페이스를 복사 합니다.  

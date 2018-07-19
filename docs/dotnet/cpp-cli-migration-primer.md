@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33108688"
 ---
 # <a name="ccli-migration-primer"></a>C++/CLI 마이그레이션 입문
 Visual c + + 프로그램에서 Managed Extensions for c + +로 이동 Visual c + +에 대 한 지침입니다. 

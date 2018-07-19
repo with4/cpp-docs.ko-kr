@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33128295"
 ---
 # <a name="how-to-specify-an-out-parameter"></a>방법: out 매개 변수 지정
 이 샘플에서는 C# 프로그램에서 함수를 호출 하는 방법과 함수 매개 변수는 out 매개 변수를 지정 하는 방법을 보여 줍니다.  

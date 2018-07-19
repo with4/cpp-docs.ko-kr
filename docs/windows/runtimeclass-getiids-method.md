@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33888426"
 ---
 # <a name="runtimeclassgetiids-method"></a>RuntimeClass::GetIids 메서드
 RuntimeClass 개체에서 구현되는 인터페이스 ID를 포함할 수 있는 배열을 가져옵니다.  

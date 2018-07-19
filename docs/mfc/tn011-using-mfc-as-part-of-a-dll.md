@@ -20,11 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0dcaa0aaf903787549cc91ffd19a34aa4aa066bd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0b558bb373416338f4136a6142ca6d491b28b510
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951460"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: DLL의 일부로 MFC 사용
 이 노트 Windows 동적 연결 라이브러리 (DLL)의 일부로 MFC 라이브러리를 사용할 수 있도록 기본 MFC Dll에 설명 합니다. Windows Dll 및 이들을 빌드하는 방법에 잘 알고 한다고 가정 합니다. MFC 확장 Dll에 대 한 정보를 만들 수 있는와 MFC 라이브러리에 대 한 확장 참조 [MFC의 DLL 버전](../mfc/tn033-dll-version-of-mfc.md)합니다.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/04/2018
   
  C 및 c + + 파일에 의해 포함 될 수 있는 별도 헤더에 Api를 배치 합니다. MFC 고급 개념 샘플에서 ScreenCap.h 헤더 참조 [DLLScreenCap](../visual-cpp-samples.md) 예에 대 한 합니다. 함수를 내보내려면 입력이 `EXPORTS` 모듈 정의 파일의 섹션 (합니다. DEF) 하거나 포함 `__declspec(dllexport)` 함수 정의에 있습니다. 사용 하 여 `__declspec(dllimport)` 클라이언트 실행 파일은으로 이러한 함수를 가져올 수 있습니다.  
   
- 추가 해야 합니다는 `AFX_MANAGE_STATE` 동적으로 MFC에 링크 되는 기본 MFC Dll에서 내보낸 모든 함수 시작 부분에는 매크로입니다. 이 매크로 DLL에 대 한을 현재 모듈 상태를 설정합니다. 이 매크로 사용 하려면 DLL에서 내보낸 함수의 시작 부분에 다음 코드 줄을 추가 합니다.  
+ 동적으로 MFC에 링크 되는 기본 MFC Dll에서 내보낸 모든 함수 시작 부분에 AFX_MANAGE_STATE 매크로 추가 해야 합니다. 이 매크로 DLL에 대 한을 현재 모듈 상태를 설정합니다. 이 매크로 사용 하려면 DLL에서 내보낸 함수의 시작 부분에 다음 코드 줄을 추가 합니다.  
   
  `AFX_MANAGE_STATE(AfxGetStaticModuleState( ))`  
   

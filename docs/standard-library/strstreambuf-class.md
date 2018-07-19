@@ -30,15 +30,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0512e2794e5ac493a997b5d4d885931d9a9fc14
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e7f52e0e62a831a77a7a00dc50aeecac45cd0fe9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960556"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf 클래스
 
-`char` 배열 개체에 저장된 요소의 시퀀스로/에서 요소의 전송을 제어하는 스트림 버퍼를 설명합니다.
+에 저장 된 요소의 시퀀스에서 요소의 전송을 제어 하는 스트림 버퍼를 설명 된 **char** 배열 개체입니다.
 
 ## <a name="syntax"></a>구문
 
@@ -102,18 +103,19 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Freezeit` A `bool` 고정 스트림을 여부를 나타내는입니다.
+*_Freezeit*  
+ A **bool** 스트림을 고정할지를 나타내는입니다.
 
 ### <a name="remarks"></a>설명
 
-`_Freezeit`가 true이면 함수는 저장된 `strstreambuf` 모드를 변경하여 제어되는 시퀀스를 고정합니다. 그렇지 않은 경우에는 제어되는 시퀀스를 고정하지 않습니다.
+하는 경우 *_Freezeit* 가 true 이면 함수는 저장 된 변경 `strstreambuf` 모드 제어 된 시퀀스를 고정 합니다. 그렇지 않은 경우에는 제어되는 시퀀스를 고정하지 않습니다.
 
 [str](#str)은 `freeze`를 의미합니다.
 
 > [!NOTE]
 > 고정된 버퍼는 `strstreambuf` 소멸 중에 해제되지 않습니다. 메모리 누수를 방지하려면 버퍼를 해제하기 전에 고정을 취소해야 합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // strstreambuf_freeze.cpp
@@ -189,7 +191,8 @@ virtual int overflow(int _Meta = EOF);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Meta` 버퍼에 삽입 하는 문자 또는 `EOF`합니다.
+*_Meta*  
+ 버퍼에 삽입할 문자 또는 `EOF`입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -213,7 +216,8 @@ virtual int pbackfail(int _Meta = EOF);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Meta` 버퍼에 삽입 하는 문자 또는 `EOF`합니다.
+*_Meta*  
+ 버퍼에 삽입할 문자 또는 `EOF`입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -225,9 +229,9 @@ virtual int pbackfail(int _Meta = EOF);
 
 _ *Meta* == `EOF`인 경우 현재 요소 이전에 스트림에 이미 있었던 요소를 실제로 다시 넣습니다. 그렇지 않으면 요소가 **ch** = ( `char`)\_ *Meta*에 의해 바뀝니다. 함수는 여러 가지 방법으로 요소를 다시 넣을 수 있습니다.
 
-- putback 위치를 사용할 수 있고 여기에 저장된 요소가 **ch**와 비교 시 같으면 입력 버퍼에 대한 다음 포인터를 감소시킬 수 있습니다.
+- Putback 위치를 사용할 수 있고 여기에 저장 된 요소는 비교 시 같으면 경우 `ch`, 해당 입력된 버퍼에 대 한 다음 포인터를 감소 시킬 수 있습니다.
 
-- putback 위치를 사용할 수 있고 strstreambuf 모드에서 제어되는 시퀀스가 수정 가능함을 나타내면 함수는 **ch**를 putback 위치에 저장하고 입력 버퍼에 대한 다음 포인터를 감소시킬 수 있습니다.
+- Putback 위치를 사용할 수 있고 strstreambuf 모드 라는 제어 되는 시퀀스를 수정할 수는 경우 함수를 저장할 수 있는 경우 `ch` putback 위치를 입력된 버퍼의 다음 포인터로 감소 합니다.
 
 ## <a name="pcount"></a>  strstreambuf::pcount
 
@@ -243,9 +247,9 @@ streamsize pcount() const;
 
 ### <a name="remarks"></a>설명
 
-구체적으로 [pptr](../standard-library/basic-streambuf-class.md#pptr)이 null 포인터이면 함수는 0을 반환합니다. 그렇지 않으면 반환 `pptr`  -  [pbase](../standard-library/basic-streambuf-class.md#pbase)합니다.
+구체적으로 [pptr](../standard-library/basic-streambuf-class.md#pptr)이 null 포인터이면 함수는 0을 반환합니다. 그렇지 `pptr`  -  [pbase](../standard-library/basic-streambuf-class.md#pbase)합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // strstreambuf_pcount.cpp
@@ -276,11 +280,14 @@ virtual streampos seekoff(streamoff _Off,
 
 ### <a name="parameters"></a>매개 변수
 
-`_Off` 기준으로 찾을 대 한 위치 `_Way`합니다.
+*_Off*  
+ 위치를 기준으로 찾을 *_Way*합니다.
 
-`_Way` 오프셋된 작업에 대 한 시작 지점입니다. 가능한 값은 [seekdir](../standard-library/ios-base-class.md#seekdir)을 참조하세요.
+*_Way*  
+ 오프셋 작업의 시작 지점입니다. 가능한 값은 [seekdir](../standard-library/ios-base-class.md#seekdir)을 참조하세요.
 
-`_Which` 포인터 위치에 대 한 모드를 지정합니다. 기본적으로는 읽기 및 쓰기 위치를 수정할 수 있습니다.
+*_Which*  
+ 포인터 위치에 대한 모드를 지정합니다. 기본적으로는 읽기 및 쓰기 위치를 수정할 수 있습니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -312,9 +319,11 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 
 ### <a name="parameters"></a>매개 변수
 
-`_Sp` 에 대 한 검색 위치입니다.
+*_Sp*  
+ 찾을 위치입니다.
 
-`_Which` 포인터 위치에 대 한 모드를 지정합니다. 기본적으로는 읽기 및 쓰기 위치를 수정할 수 있습니다.
+*_Which*  
+ 포인터 위치에 대한 모드를 지정합니다. 기본적으로는 읽기 및 쓰기 위치를 수정할 수 있습니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -342,7 +351,7 @@ char *str();
 
 종료 null 요소는 명시적으로 삽입한 경우가 아니면 없습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 **str**을 사용하는 샘플은 [strstreambuf::freeze](#freeze)를 참조하세요.
 
@@ -380,19 +389,24 @@ strstreambuf(const unsigned char* _Getptr,
 
 ### <a name="parameters"></a>매개 변수
 
-*_Allocfunc* 버퍼 메모리를 할당 하는 데 사용 하는 함수입니다.
+*_Allocfunc*  
+ 버퍼 메모리를 할당하는 데 사용되는 함수입니다.
 
-`count` 가 가리키는 버퍼의 길이 결정 `_Getptr`합니다. `_Getptr`이 인수(첫 번째 생성자 형식)가 아닌 경우에는 버퍼에 대해 제안된 할당 크기입니다.
+*count*  
+ 가리키는 버퍼의 길이 결정 *_Getptr*합니다. 하는 경우 *_Getptr* 는 인수가 아닙니다. (첫 번째 생성자 형식), 제안된 된 할당 크기의 버퍼에 대 한 합니다.
 
-*_Freefunc* 버퍼 메모리를 사용 하는 함수입니다.
+*_Freefunc*  
+ 버퍼 메모리를 확보하는 데 사용되는 함수입니다.
 
-`_Getptr` 입력에 사용 되는 버퍼입니다.
+*_Getptr*  
+ 입력에 사용되는 버퍼입니다.
 
-`_Putptr` 출력에 사용 되는 버퍼입니다.
+*_Putptr*  
+ 출력에 사용되는 버퍼입니다.
 
 ### <a name="remarks"></a>설명
 
-첫 번째 생성자는 입력 버퍼, 출력 버퍼 및 strstreambuf 할당을 제어하는 모든 포인터에 null 포인터를 저장합니다. 이 생성자는 제어되는 시퀀스를 수정/확장할 수 있도록 저장된 strstreambuf 모드를 설정합니다. 또한 제안된 초기 할당 크기로 `count`를 허용합니다.
+첫 번째 생성자는 입력 버퍼, 출력 버퍼 및 strstreambuf 할당을 제어하는 모든 포인터에 null 포인터를 저장합니다. 이 생성자는 제어되는 시퀀스를 수정/확장할 수 있도록 저장된 strstreambuf 모드를 설정합니다. 또한 받아들이는지 *개수* 제안 된 초기 할당 크기로 합니다.
 
 두 번째 생성자도 첫 번째 생성자와 동일하게 동작합니다. 단, 저장소 할당을 호출하는 함수에 대한 포인터로 _ *Allocfunc*를 저장하고, 해당 저장소 확보를 호출하는 함수에 대한 포인터로 \_ *Freefunc*를 저장합니다.
 
@@ -414,11 +428,11 @@ strstreambuf(unsigned char *_Getptr,
 
 `_Getptr`이 제어되는 시퀀스를 저장하는 데 사용되는 배열 개체를 지정한다는 점을 제외하면 세 번째 생성자도 첫 번째 생성자와 동일하게 동작합니다. 따라서 이 생성자는 null 포인터가 아니어야 합니다. 배열의 요소 수 *N*은 다음과 같이 결정됩니다.
 
-- 경우 (`count` > 0), 다음 *N* 은 `count`합니다.
+- 경우 (`count` > 0), 한 다음 *N* 는 `count`합니다.
 
-- 경우 (`count` = = 0), 다음 *N* 은 `strlen`(( **const** `char` *) `_Getptr` ).
+- 경우 (`count` = = 0), 한 다음 *N* 됩니다 `strlen`(( **const** `char` *) `_Getptr` ).
 
-- 경우 (`count` < 0), 다음 *N* 은 **INT_MAX**합니다.
+- 경우 (`count` < 0), 한 다음 *N* 됩니다 **INT_MAX**합니다.
 
 `_Putptr`이 null 포인터이면 함수는 다음 코드를 실행하여 입력 버퍼만 설정합니다.
 
@@ -476,7 +490,7 @@ virtual int underflow();
 
 ### <a name="remarks"></a>설명
 
-현재 요소를 추출 하는 보호 된 가상 멤버 함수 노력 **ch** 현재 스트림 위치를 입력된 버퍼에서 다음 이동 하 고 요소 반환 (`int`) (`unsigned char`) **ch** . 이 경우 사용할 수 있는 방법은 한 가지뿐입니다. 읽기 위치를 사용할 수 있으면 함수는 읽기 위치에 저장된 요소로 **ch**를 가져온 후 입력 버퍼의 다음 포인터로 이동합니다.
+보호 된 가상 멤버 함수를 현재 요소를 추출 하려고 `ch` 으로 요소를 반환 하 고 입력된 버퍼에서 다음 현재 스트림 위치로 이동 (`int`) (`unsigned char`) **ch**합니다. 한쪽 방향 으로만 수행할 수 있는: 읽기 위치를 사용할 수 있으면 `ch` 읽기 위치에 저장 되는 요소와 입력된 버퍼의 다음 포인터로 이동 합니다.
 
 ## <a name="see-also"></a>참고자료
 

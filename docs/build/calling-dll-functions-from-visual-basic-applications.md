@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367084"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Visual Basic 응용 프로그램에서 DLL 함수 호출
 Visual Basic 응용 프로그램 (또는 Pascal 또는 포트란 같은 다른 언어에서는 응용 프로그램) C/c + + DLL의 함수를 호출에 대 한 올바른 호출 규칙을 사용 하 여 컴파일러에 의해 이름 데코레이션 없이 함수를 내보낼 수 해야 합니다.  

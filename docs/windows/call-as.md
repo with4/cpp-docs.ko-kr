@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860868"
 ---
 # <a name="callas"></a>call_as
 수 있도록는 [로컬](../windows/local-cpp.md) 함수를 로컬 함수를 호출 하는 원격 함수를 호출할 때 되도록 원격 함수에 매핑할 수 있습니다.  

@@ -468,6 +468,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693454"
 ---
 # <a name="reference-concurrency-runtime"></a>참조(동시성 런타임)
 이 섹션에는 동시성 런타임에 대 한 참조 정보가 포함 되어 있습니다.

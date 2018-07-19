@@ -17,6 +17,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323552"
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>컴파일러 내장 및 어셈블리 언어
 설명서의 이 단원에는 컴파일러 내장 함수 및 어셈블리 언어에 대한 정보가 포함되어 있습니다.  

@@ -23,11 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47d1c9769055e0ab69f57f58b136b7844cb1f860
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 60e42aedd406e7478db83ecddca7d8b82230abc5
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951996"
 ---
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053: DAO 데이터베이스 클래스에 대한 사용자 지정 DFX 루틴
 > [!NOTE]
@@ -133,19 +134,19 @@ PopUpEmployeeData(emp.m_strFirstName,
   
 |작업|설명|  
 |---------------|-----------------|  
-|**AddToParameterList**|빌드 매개 변수 절|  
-|**AddToSelectList**|빌드 SELECT 절|  
-|**BindField**|바인딩 구조를 설정합니다.|  
-|**BindParam**|매개 변수 값 설정|  
-|**픽스업**|NULL 상태 설정|  
-|**AllocCache**|더티 검사에 대 한 캐시를 할당합니다.|  
-|**StoreField**|에서는 현재 레코드를 캐시에 저장|  
-|**LoadField**|멤버 값을 복원 캐시|  
-|**FreeCache**|캐시를 해제합니다.|  
+|`AddToParameterList`|빌드 매개 변수 절|  
+|`AddToSelectList`|빌드 SELECT 절|  
+|`BindField`|바인딩 구조를 설정합니다.|  
+|`BindParam`|매개 변수 값 설정|  
+|`Fixup`|NULL 상태 설정|  
+|`AllocCache`|더티 검사에 대 한 캐시를 할당합니다.|  
+|`StoreField`|에서는 현재 레코드를 캐시에 저장|  
+|`LoadField`|멤버 값을 복원 캐시|  
+|`FreeCache`|캐시를 해제합니다.|  
 |`SetFieldNull`|집합 상태 및 NULL 값 필드|  
-|**MarkForAddNew**|필드를 변경 하지 않은 경우 NULL 의사를 표시합니다.|  
-|**MarkForEdit**|표시 필드 커밋되지 않은 경우 캐시에 일치 하지 않습니다.|  
-|**SetDirtyField**|필드 있다고 표시의 값을 설정|  
+|`MarkForAddNew`|필드를 변경 하지 않은 경우 NULL 의사를 표시합니다.|  
+|`MarkForEdit`|표시 필드 커밋되지 않은 경우 캐시에 일치 하지 않습니다.|  
+|`SetDirtyField`|필드 있다고 표시의 값을 설정|  
   
  다음 섹션, 각 작업에 대 한 자세한 정보에 설명 되어 있습니다 `DFX_Text`합니다.  
   
@@ -167,45 +168,45 @@ PopUpEmployeeData(emp.m_strFirstName,
 ##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a> DFX_Text의 세부 정보  
  앞에서 언급 한 DFX 작동 하는 방법을 설명 하는 가장 좋은 방법은 때 예를 통해 작동 하도록 합니다. 내부를 진행 하 고이 위해 `DFX_Text` DFX의 적어도 한 기본적인 이해를 제공 하기 위하여 매우 편리 하 게 작동 해야 합니다.  
   
- **AddToParameterList**  
- 이 작업은 SQL 작성 **매개 변수** 절 ("`Parameters <param name>, <param type> ... ;`") Jet가 필요 합니다. 각 매개 변수는 명명 된 이며 (지정 된 대로 RFX 호출에) 입력 합니다. 함수를 참조 **CDaoFieldExchange::AppendParamType** 함수 개별 형식의 이름을 볼 수 있습니다. 경우 `DFX_Text`, 사용 되는 형식이 `text`합니다.  
+ `AddToParameterList`  
+ 이 작업은 SQL 작성 **매개 변수** 절 ("`Parameters <param name>, <param type> ... ;`") Jet가 필요 합니다. 각 매개 변수는 명명 된 이며 (지정 된 대로 RFX 호출에) 입력 합니다. 함수를 참조 `CDaoFieldExchange::AppendParamType` 함수 개별 형식의 이름을 볼 수 있습니다. 경우 `DFX_Text`, 사용 되는 형식이 **텍스트**합니다.  
   
- **AddToSelectList**  
+ `AddToSelectList`  
  Sql 문을 작성 **선택** 절. 추가 되는 단순히 DFX 호출에 의해 지정 된 열 이름으로 매우 단순 합니다 ("`SELECT <column name>, ...`").  
   
- **BindField**  
+ `BindField`  
  작업 중 가장 복잡 합니다. 앞서 언급 했 듯이이 DAO 바인딩 구조의 사용한 `GetRows` 를 설정 합니다. 코드에서 볼 수 있듯이 `DFX_Text` 구조에 있는 정보의 종류를 사용 하는 DAO 형식 포함 (**DAO_CHAR** 또는 **DAO_WCHAR** 의 경우 `DFX_Text`). 또한 사용 하는 바인딩 유형은 설정 됩니다. 이전 단원에서 `GetRows` 설명만 간단 하 게 하지만 MFC에서 사용 되는 바인딩의 유형은 항상 직접 주소 바인딩을 설명 하는 데 충분 (**DAOBINDING_DIRECT**). 또한 가변 길이 열 바인딩에 대 한 (같은 `DFX_Text`) MFC 메모리 할당을 제어 하 고 올바른 길이의 주소를 지정할 수 있도록 콜백 바인딩이 사용 됩니다. 즉, MFC 등을 확인할 수 DAO 멤버 변수에 직접 바인딩할 수 있도록 하는 데이터를 삽입 하려면 "where"입니다. 바인딩 구조의 나머지는 메모리 할당 콜백 함수 및 열 바인딩 (열 이름으로 바인딩) 형식 주소 등 포함 됩니다.  
   
- **BindParam**  
+ `BindParam`  
  이 호출 하는 간단한 작업 `SetParamValue` 매개 변수 멤버에 지정 된 매개 변수 값을 사용 합니다.  
   
- **픽스업**  
+ `Fixup`  
  채웁니다는 **NULL** 각 필드에 대 한 상태입니다.  
   
  `SetFieldNull`  
  이 작업으로 각 필드의 상태를 표시만 **NULL** 구성원 변수 값을 설정 하 고 **PSEUDO_NULL**합니다.  
   
- **SetDirtyField**  
+ `SetDirtyField`  
  호출 `SetFieldValue` 더티로 표시 된 각 필드에 대 한 합니다.  
   
  만 나머지 모든 작업 데이터 캐시를 사용 하 여 처리 합니다. 데이터 캐시는 특정 작업을 더 간단 하 게 하는 데 사용 되는 현재 레코드에 있는 데이터의 추가 버퍼입니다. 예를 들어, "더티" 필드를 자동으로 검색할 수 있습니다. 온라인 설명서에 설명 된 대로 것 해제할 수 있습니다 완전히 또는 필드 수준입니다. 버퍼의 구현에서 지도 사용합니다. 이 맵은 "바인딩된" 필드의 주소와이 데이터의 동적으로 할당 된 복사본을 일치 시키는 데 사용 됩니다 (또는 `CDaoRecordset` 데이터 멤버를 파생).  
   
- **AllocCache**  
+ `AllocCache`  
  동적으로 캐시 된 필드 값을 할당 하 고 지도에 추가 합니다.  
   
- **FreeCache**  
+ `FreeCache`  
  맵에서 제거 및 캐시 된 필드 값을 삭제 합니다.  
   
- **StoreField**  
+ `StoreField`  
  데이터 캐시에는 현재 필드 값을 복사합니다.  
   
- **LoadField**  
+ `LoadField`  
  필드 멤버에 캐시 된 값을 복사합니다.  
   
- **MarkForAddNew**  
+ `MarkForAddNew`  
  확인 하는 경우 현재 필드 값이 아닌**NULL** 하 고 필요한 경우 더티 표시 합니다.  
   
- **MarkForEdit**  
+ `MarkForEdit`  
  데이터 캐시와 현재 필드 값과 비교 하 고 필요한 경우 커밋되지 않은 데이터를 표시 합니다.  
   
 > [!TIP]

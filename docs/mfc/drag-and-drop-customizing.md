@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344245"
 ---
 # <a name="drag-and-drop-customizing"></a>끌어서 놓기: 사용자 지정
 대부분의 응용 프로그램에서는 끌어 놓기 기능의 기본 구현으로도 충분합니다. 하지만 일부 응용 프로그램에서는 이러한 표준 동작을 변경해야 할 수 있습니다. 이 문서에서는 이러한 기본값을 변경하는 데 필요한 단계를 설명합니다. 또한 이 기술을 사용해서 놓기 대상으로 복합 문서를 지원하지 않는 응용 프로그램을 설정할 수 있습니다.  

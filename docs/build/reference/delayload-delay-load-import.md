@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32372258"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD(가져오기 로드 지연)
 ```  

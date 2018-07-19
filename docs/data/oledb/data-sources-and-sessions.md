@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33100007"
 ---
 # <a name="data-sources-and-sessions"></a>데이터 소스 및 세션
 다음 그림에 연결 하거나 데이터 원본에 액세스 하는 클래스를 보여 줍니다. 각 클래스는 표준 OLE DB 구성 요소가 구현을 기반으로 합니다.  

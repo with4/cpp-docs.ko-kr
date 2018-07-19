@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32379382"
 ---
 # <a name="decorated-names"></a>데코레이팅된 이름
 C 및 C++ 프로그램의 함수, 데이터 및 개체는 내부적으로 데코레이트된 이름으로 표시됩니다. A *데코 레이트 된 이름* 되는 개체, 데이터 또는 함수 정의 컴파일하는 동안 컴파일러에서 생성 된 인코딩된 문자열입니다. 호출 규칙, 형식, 함수 매개 변수 및 기타 정보를 이름과 함께 기록합니다. 또한 다음 이라고 알려집니다이 이름 장식은 *이름 관리*링커가 올바른 함수 찾기 도와 실행 파일을 링크할 때 개체입니다.  

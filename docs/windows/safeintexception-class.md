@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33895777"
 ---
 # <a name="safeintexception-class"></a>SafeIntException 클래스
 `SafeInt` 사용 하 여 `SafeIntException` 수학 작업 완료할 수 없는 이유를 식별 하 합니다.  

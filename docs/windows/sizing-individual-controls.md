@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890129"
 ---
 # <a name="sizing-individual-controls"></a>각 컨트롤 크기 조정
 컨트롤의 크기를 조정 하려면 크기 조정 핸들을 사용 합니다. 크기 조정 핸들에 포인터를 컨트롤을 조정할 수 있는 지침을 나타내는 셰이프를 변경 됩니다. 현재 크기 조정 핸들은 실선입니다. 크기 조정 핸들을 빈 경우 해당 축을 따라 컨트롤을 조정할 수 없습니다.  

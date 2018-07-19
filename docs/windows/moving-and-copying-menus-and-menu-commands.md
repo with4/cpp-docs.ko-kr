@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878439"
 ---
 # <a name="moving-and-copying-menus-and-menu-commands"></a>메뉴와 메뉴 명령 이동 및 복사
 끌어서 놓기 방법을 사용하거나 바로 가기 메뉴(오른쪽 마우스 클릭 메뉴)의 명령을 사용하여 메뉴 및 메뉴 명령을 이동하거나 복사할 수 있습니다.  

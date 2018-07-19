@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368917"
 ---
 # <a name="allowbind"></a>/ALLOWBIND
 DLL을 바인딩할 수 있는지 여부를 지정합니다.  

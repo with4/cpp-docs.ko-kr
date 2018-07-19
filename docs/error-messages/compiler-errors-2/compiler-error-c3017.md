@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33242472"
 ---
 # <a name="compiler-error-c3017"></a>컴파일러 오류 C3017
 OpenMP 'for' 문의 종료 테스트 형식이 잘못되었습니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849771"
 ---
 # <a name="checkstack"></a>check_stack
 경우 스택 프로브를 해제 하려면 컴파일러에 지시 **오프** (또는 **-**)를 지정 하는 경우 스택 프로브를 설정 하려면 또는 **에** (또는 **+**) 지정 합니다.  

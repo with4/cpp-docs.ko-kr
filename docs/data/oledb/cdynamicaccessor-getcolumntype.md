@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095172"
 ---
 # <a name="cdynamicaccessorgetcolumntype"></a>CDynamicAccessor::GetColumnType
 지정 된 열의 데이터 형식을 검색합니다.  

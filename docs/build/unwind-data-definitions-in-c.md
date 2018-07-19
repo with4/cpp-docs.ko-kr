@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32380705"
 ---
 # <a name="unwind-data-definitions-in-c"></a>C의 해제 데이터 정의
 다음은 C 설명은 해제 데이터입니다.  

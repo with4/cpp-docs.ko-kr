@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33268083"
 ---
 # <a name="compiler-error-c3821"></a>컴파일러 오류 C3821
 'function': 관리 되지 않는 함수에 관리 되는 형식 또는 함수를 사용할 수 없습니다  

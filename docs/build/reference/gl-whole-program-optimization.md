@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376275"
 ---
 # <a name="gl-whole-program-optimization"></a>/GL(전체 프로그램 최적화)
 전체 프로그램 최적화를 사용합니다.  

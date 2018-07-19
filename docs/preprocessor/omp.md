@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33849472"
 ---
 # <a name="omp"></a>omp
 모든 선택적 지시문 절과 함께 하나 이상의 OpenMP 지시문을 사용합니다.  

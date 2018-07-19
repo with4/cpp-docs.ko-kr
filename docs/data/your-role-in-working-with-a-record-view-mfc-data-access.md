@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111096"
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>레코드 뷰를 사용하여 작업할 때의 사용자 작업  (MFC Data Access)
 다음 테이블에는 레코드 뷰를 사용하기 위해 일반적으로 수행해야 하는 작업과 프레임워크에서 자동으로 수행하는 작업이 나와 있습니다.  

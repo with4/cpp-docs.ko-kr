@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33291806"
 ---
 # <a name="compiler-warning-level-2-c4302"></a>컴파일러 경고(수준 2) C4302
 'conversion': 잘림에서 'type 1'을 't y 2'  

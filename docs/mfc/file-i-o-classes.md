@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356188"
 ---
 # <a name="file-io-classes"></a>파일 I/O 클래스
 이러한 클래스는 기존의 디스크 파일, 메모리에 파일, 활성 스트림, 및 Windows 소켓에 대 한 인터페이스를 제공합니다. 파생 된 모든 클래스 `CFile` 와 함께 사용할 수는 `CArchive` 개체를 직렬화를 수행 합니다.  

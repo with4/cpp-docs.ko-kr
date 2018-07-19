@@ -24,11 +24,12 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], unlock
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89c39f006cee8c62c22f3caf7e2c10ee9a0c1d03
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a0c137183e396255d0a9f9d3c304273eda320c72
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38955896"
 ---
 # <a name="recursivemutex-class"></a>recursive_mutex 클래스
 
@@ -105,11 +106,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>반환 값
 
-메서드가 `mutex`의 소유권을 정상적으로 가져오거나 호출 스레드가 `mutex`를 이미 소유하고 있으면 `true`이고 그렇지 않으면 `false`입니다.
+**true** 메서드는 성공적으로의 소유권을 가져올 경우 합니다 `mutex` 호출 스레드가 이미 소유 하는 경우 또는 `mutex**; otherwise, **false`입니다.
 
 ### <a name="remarks"></a>설명
 
-호출 스레드가 `mutex`를 이미 소유하고 있으면 함수는 `true`를 즉시 반환하며 이전 잠금은 적용된 상태로 유지됩니다.
+호출 스레드가 이미 소유 하는 경우는 `mutex`를 즉시 반환 **true**, 이전 잠금은 적용 상태로 유지 됩니다.
 
 ## <a name="unlock"></a>  unlock
 

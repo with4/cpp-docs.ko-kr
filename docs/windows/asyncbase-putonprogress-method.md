@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33859789"
 ---
 # <a name="asyncbaseputonprogress-method"></a>AsyncBase::PutOnProgress 메서드
 진행률 이벤트 처리기의 주소 지정된 된 값으로 설정합니다.  

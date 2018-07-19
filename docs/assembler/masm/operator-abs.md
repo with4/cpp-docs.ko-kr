@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052575"
 ---
 # <a name="operator-abs"></a>연산자 ABS
 참조는 [EXTERNDEF](../../assembler/masm/externdef.md) 지시문입니다.  

@@ -16,15 +16,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d354e469b6b6a19d51ecedbc7f2106c21e82dab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 327fc58cdfdc21711b992891e6fabe7872c48d26
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38960832"
 ---
 # <a name="memfun1reft-class"></a>mem_fun1_ref_t 클래스
 
-참조 인수를 사용하여 초기화할 때 단일 인수를 사용하는 **non_const** 멤버 함수를 이항 함수 개체로 호출할 수 있도록 하는 어댑터 클래스입니다.
+허용 하는 어댑터 클래스를 `non_const` 멤버 함수는 단일 인수를 참조 인수를 사용 하 여 초기화할 때 이항 함수 개체로 호출할 수 있습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -43,11 +44,11 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
 
 ### <a name="parameters"></a>매개 변수
 
-`_Pm` 클래스의 멤버 함수에 대 한 포인터 **형식** 함수 개체를 변환할 수 있습니다.
+*_Pm* 클래스의 멤버 함수에 대 한 포인터 `Type` 함수 개체를 변환할 수 있습니다.
 
-`left` 개체는는 `_Pm` 에서 멤버 함수를 호출 합니다.
+*왼쪽* 개체는 합니다 *_Pm* 멤버 함수가 호출 됩니다.
 
-`right` 인수에 지정 되 고 `_Pm`합니다.
+*오른쪽* 에 지정 되는 인수 *_Pm*합니다.
 
 ## <a name="return-value"></a>반환 값
 
@@ -55,9 +56,9 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
 
 ## <a name="remarks"></a>설명
 
-템플릿 클래스는 `_Pm`의 복사본을 저장합니다. 이는 전용 멤버 개체에서 **Type** 클래스의 멤버 함수에 대한 포인터여야 합니다. 멤버 함수 정의 `operator()` 반환 하도록 ( **왼쪽**.\* `_Pm`) ( **오른쪽**).
+복사본을 저장 하는 템플릿 클래스 *_Pm*, 클래스의 멤버 함수에 대 한 포인터 여야 `Type`, 전용 멤버 개체에 있습니다. 해당 멤버 함수 정의 `operator()` 반환 ( **왼쪽**.\* `_Pm`) ( **오른쪽**).
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 `mem_fun1_ref_t`의 생성자는 일반적으로 직접 사용되지 않습니다. 도우미 함수 `mem_fun_ref`은 멤버 함수를 적용하는 데 사용됩니다. 멤버 함수 어댑터를 사용하는 방법에 대한 예제는 [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)를 참조하세요.
 

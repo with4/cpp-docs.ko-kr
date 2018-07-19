@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33860387"
 ---
 # <a name="changing-a-symbol39s-numeric-value"></a>기호 변경&#39;s 숫자 값
 단일 리소스와 관련 된 기호를 사용할 수 있습니다는 [속성 창](/visualstudio/ide/reference/properties-window) 기호 값을 변경 합니다. 사용할 수는 [리소스 기호 대화 상자](../windows/resource-symbols-dialog-box.md) 리소스에 할당 되어 있지 않은 기호의 값을 변경 합니다. 자세한 내용은 참조 [할당 되지 않은 기호 변경](../windows/changing-unassigned-symbols.md)합니다.  

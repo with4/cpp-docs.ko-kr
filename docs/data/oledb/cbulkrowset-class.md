@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33090727"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset 클래스
 인출 하 고 한 번의 호출으로 여러 행 핸들을 검색 하 여 대량으로 데이터에서 작동 하도록 행을 조작 합니다.  

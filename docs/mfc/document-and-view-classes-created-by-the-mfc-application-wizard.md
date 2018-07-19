@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349924"
 ---
 # <a name="document-and-view-classes-created-by-the-mfc-application-wizard"></a>MFC 응용 프로그램 마법사에서 만든 문서 및 뷰 클래스
 MFC 응용 프로그램 마법사 사용을 h e a d 프로그램 개발을 기본 문서 및 뷰 클래스를 만들어 있습니다. 그런 다음 [이러한 클래스에 명령 및 메시지를 매핑하](../mfc/reference/mapping-messages-to-functions.md) Visual c + + 소스 코드 편집기를 사용 하 여 해당 멤버 함수를 작성 하 고 있습니다.  

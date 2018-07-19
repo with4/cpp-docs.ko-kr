@@ -1,5 +1,5 @@
 ---
-title: 제한 (c + + AMP) | Microsoft Docs
+title: (c + + AMP) 제한 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,19 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abe3bd4f737cfb26a326a1f0d83b731c36e6c7bf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 175dcbbf94ff28b1f59804eb996254e29dfef243
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37944581"
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 제한 지정자는 함수 및 람다 선언에 적용할 수 있습니다. 제한 지정자는 C++ AMP(C++ Accelerated Massive Parallelism) 런타임을 사용하는 응용 프로그램의 함수 동작 및 함수의 코드에 제한을 적용합니다.  
   
 > [!NOTE]
->  에 대 한 내용은 `restrict` 의 일부인 키워드는 `__declspec` 저장소 클래스 특성 참조 [제한](../cpp/restrict.md)합니다.  
+>  에 대 한 자세한 합니다 **제한** 포함 된 키워드는 **__declspec** 저장소 클래스 특성을 참조 하세요 [제한](../cpp/restrict.md)합니다.  
   
- `restrict` 절은 다음 형식을 사용합니다.  
+ 합니다 **제한** 절은 다음 형식:  
   
 |절|설명|  
 |------------|-----------------|  
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/03/2018
 |`restrict(cpu)` 및 `restrict(amp)`의 시퀀스입니다.|이 함수는 `restrict(cpu)` 및 `restrict(amp)` 둘 다의 제한을 따라야 합니다. 이 함수는 `restrict(cpu)`, `restrict(amp)`, `restrict(cpu, amp)` 또는 `restrict(amp, cpu)`를 사용하여 선언된 함수를 통해 호출할 수 있습니다.<br /><br /> `restrict(A) restrict(B)` 형식을 `restrict(A,B)`로 작성할 수 있습니다.|  
   
 ## <a name="remarks"></a>설명  
- `restrict` 키워드는 컨텍스트 키워드입니다. 제한 지정자인 `cpu` 및 `amp`는 예약어가 아닙니다. 지정자 목록은 확장할 수 없습니다. `restrict` 절이 없는 함수는 `restrict(cpu)` 절이 있는 함수와 같습니다.  
+ 합니다 **제한** 키워드는 상황별 키워드입니다. 제한 지정자인 `cpu` 및 `amp`는 예약어가 아닙니다. 지정자 목록은 확장할 수 없습니다. 없는 함수는 **제한할** 절이 있는 함수와 동일 하 게는 `restrict(cpu)` 절.  
   
  `restrict(amp)` 절이 있는 함수에는 다음 제한이 적용됩니다.  
   
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/03/2018
   
 -   함수 인라이닝 처리 가능해야 합니다.  
   
--   이 함수는 `int`, `unsigned int`, `float` 및 `double` 변수와 이러한 형식을 포함하는 클래스 및 구조체만 선언할 수 있습니다. `bool`도 사용 가능하지만 복합 형식에서 사용하는 경우 4바이트로 맞춰야 합니다.  
+-   함수를 선언할 수 있습니다 **int**를 **부호 없는 int**를 **float**, 및 **double** 변수 및 클래스와 포함 된 구조 이러한 형식입니다. **bool** 도 사용할 수 있지만 복합 형식에서 사용 하는 경우 4 바이트 맞춤 이어야 합니다.  
   
 -   람다 함수는 참조로 캡처할 수 없으며 포인터를 캡처할 수 없습니다.  
   
@@ -56,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
     -   재귀  
   
-    -   로 선언 된 변수는 [휘발성](../cpp/volatile-cpp.md) 키워드입니다.  
+    -   사용 하 여 선언 된 변수를 [volatile](../cpp/volatile-cpp.md) 키워드입니다.  
   
     -   가상 함수  
   
@@ -68,30 +69,30 @@ ms.lasthandoff: 05/03/2018
   
     -   포인터에 대한 포인터  
   
-    -   `goto` 문  
+    -   **goto** 문입니다.  
   
     -   레이블 문  
   
-    -   `try`, `catch` 또는 `throw` 문  
+    -   **시도**, **catch**, 또는 **throw** 문입니다.  
   
     -   전역 변수  
   
     -   정적 변수 사용 하 여 [tile_static 키워드](../cpp/tile-static-keyword.md) 대신 합니다.  
   
-    -   `dynamic_cast` 캐스트  
+    -   **dynamic_cast** 캐스팅 합니다.  
   
-    -   `typeid` 연산자  
+    -   합니다 **typeid** 연산자입니다.  
   
     -   asm 선언  
   
     -   vararg  
   
- 함수 제한 사항을 논의 알려면 [restrict (amp) 제한](http://go.microsoft.com/fwlink/p/?LinkId=251089)합니다.  
+ 함수 제한 사항 설명은 참조 하세요 [restrict (amp) 제한](http://go.microsoft.com/fwlink/p/?LinkId=251089)합니다.  
   
-## <a name="example"></a>예제  
- 사용 하는 방법을 보여 주는 다음 예제는 `restrict(amp)`절.  
+## <a name="example"></a>예  
+ 다음 예제에서는 사용 하는 방법의 `restrict(amp)`절.  
   
-```  
+```cpp 
   
 void functionAmp() restrict(amp) {}   
 void functionNonAmp() {}   

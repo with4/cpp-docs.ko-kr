@@ -24,11 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea3a2cb6c3d9a454c33654254fb751bfc8679696
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e43f6704476879e1848ce82b3327b23efe2192a8
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026308"
 ---
 # <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter 클래스
 `CWnd`파생 창에 대해 도킹 지원을 제공합니다.  
@@ -46,14 +47,14 @@ class CDockablePaneAdapter : public CDockablePane
 |이름|설명|  
 |----------|-----------------|  
 |[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|래핑된 창을 반환합니다.|  
-|[CDockablePaneAdapter::LoadState](#loadstate)|(재정의 [cdockablepane:: Loadstate](http://msdn.microsoft.com/en-us/96110136-4f46-4764-8a76-3b4abaf77917).)|  
-|[CDockablePaneAdapter::SaveState](#savestate)|(재정의 [cdockablepane:: Savestate](http://msdn.microsoft.com/en-us/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
+|[CDockablePaneAdapter::LoadState](#loadstate)|(재정의 [cdockablepane:: Loadstate](http://msdn.microsoft.com/96110136-4f46-4764-8a76-3b4abaf77917).)|  
+|[CDockablePaneAdapter::SaveState](#savestate)|(재정의 [cdockablepane:: Savestate](http://msdn.microsoft.com/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
 |[CDockablePaneAdapter::SetWrappedWnd](#setwrappedwnd)||  
   
 ## <a name="remarks"></a>설명  
- 사용 하는 경우 프레임 워크가이 클래스의 개체를 인스턴스화하는 일반적으로 [cmfcbasetabctrl:: Addtab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) 또는 [cmfcbasetabctrl:: Inserttab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) 메서드.  
+ 사용 하는 경우 프레임 워크가이 클래스의 개체를 인스턴스화하는 일반적으로 [cmfcbasetabctrl:: Addtab](../../mfc/reference/cmfcbasetabctrl-class.md#addtab) 하거나 [cmfcbasetabctrl:: Inserttab](../../mfc/reference/cmfcbasetabctrl-class.md#inserttab) 메서드.  
   
- 사용자 지정 하려는 경우는 `CDockablePaneAdapter` 동작을 바로 여기에서 새 클래스를 파생 하 고 런타임 클래스 정보를 사용 하 여 탭된 창에 설정 [cmfcbasetabctrl:: Setdockingbarwrapperrtc](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc)합니다.  
+ 사용자 지정 하려는 경우는 `CDockablePaneAdapter` 동작을 방금에서 새 클래스를 파생 하 고 런타임 클래스 정보를 사용 하 여 탭된 창에 설정할 [cmfcbasetabctrl:: Setdockingbarwrapperrtc](../../mfc/reference/cmfcbasetabctrl-class.md#setdockingbarwrapperrtc)합니다.  
   
 ## <a name="inheritance-hierarchy"></a>상속 계층  
  [CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)  
@@ -79,7 +80,7 @@ virtual CWnd* GetWrappedWnd() const;
  래핑된 창에 액세스 하려면이 함수를 사용 합니다.  
   
 ##  <a name="loadstate"></a>  CDockablePaneAdapter::LoadState  
- 레지스트리에서 창의 상태를 로드 합니다.  
+ 레지스트리에서 창의 상태를 로드합니다.  
   
 ```  
 virtual BOOL LoadState(
@@ -89,14 +90,14 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  프로필 이름입니다.  
   
- [in] `nIndex`  
+ [in] *nIndex*  
  프로필 인덱스입니다.  
   
- [in] `uiID`  
- 창 id입니다.  
+ [in] *uiID*  
+ 창 ID  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -113,14 +114,14 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszProfileName`  
+ [in] *lpszProfileName*  
  프로필 이름입니다.  
   
- [in] `nIndex`  
- 프로필 인덱스 (기본값: 창의 컨트롤 ID)입니다.  
+ [in] *nIndex*  
+ 프로필 인덱스 (기본값은 창의 컨트롤 ID)입니다.  
   
- [in] `uiID`  
- 창 id입니다.  
+ [in] *uiID*  
+ 창 ID  
   
 ### <a name="return-value"></a>반환 값  
   
@@ -134,7 +135,7 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWnd`  
+ [in] *pWnd*  
  래핑할 창 어댑터에 대 한 창에 대 한 포인터입니다.  
   
 ### <a name="return-value"></a>반환 값  

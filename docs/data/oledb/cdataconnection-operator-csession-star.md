@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094471"
 ---
 # <a name="cdataconnectionoperator-csession"></a>CDataConnection::operator CSession*
 포함된 `CSession` 개체에 대한 포인터를 반환합니다.  

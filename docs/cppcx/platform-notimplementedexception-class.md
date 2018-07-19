@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088505"
 ---
 # <a name="platformnotimplementedexception-class"></a>Platform::NotImplementedException 클래스
 인터페이스 멤버가 파생된 형식으로 구현되지 않은 경우 throw됩니다.  

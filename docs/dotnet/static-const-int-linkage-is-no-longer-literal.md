@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33164998"
 ---
 # <a name="static-const-int-linkage-is-no-longer-literal"></a>Static Const Int 링크가 더 이상 리터럴이 아닙니다.
 상수 멤버 클래스의 선언 Visual c + + Managed Extensions for c + + 변경 되었습니다.  

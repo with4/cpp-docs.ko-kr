@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357325"
 ---
 # <a name="recommendations-for-choosing-between-atl-and-mfc"></a>ATL 및 MFC 중에서 선택에 대 한 권장 사항
 구성 요소 및 응용 프로그램을 개발할 때는 두 가지 방법 중 선택할 수 있습니다-ATL 및 MFC (Microsoft Foundation Class 라이브러리)입니다.  

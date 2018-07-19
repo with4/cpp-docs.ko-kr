@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33694679"
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>연습: 사용자 지정 메시지 블록 만들기
 이 문서에는 우선 순위에 따라 들어오는 메시지를 정리 하는 사용자 지정 메시지 블록 형식을 만드는 방법을 설명 합니다.  

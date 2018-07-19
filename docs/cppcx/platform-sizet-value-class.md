@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33087736"
 ---
 # <a name="platformsizet-value-class"></a>Platform::SizeT 값 클래스
 개체의 크기를 나타냅니다. SizeT는 부호 없는 데이터 형식입니다.  

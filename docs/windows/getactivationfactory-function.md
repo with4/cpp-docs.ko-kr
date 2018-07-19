@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33881340"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory 함수
 템플릿 매개 변수로 지정 된 형식에 대 한 한 활성화 팩터리를 검색 합니다.  

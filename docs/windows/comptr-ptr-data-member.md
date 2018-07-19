@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880809"
 ---
 # <a name="comptrptr-data-member"></a>ComPtr::ptr_ 데이터 멤버
 이 ComPtr과 연결되어 있고 이 ComPtr에서 관리하는 인터페이스에 대한 포인터를 포함합니다.  

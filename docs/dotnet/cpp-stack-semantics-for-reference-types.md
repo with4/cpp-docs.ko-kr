@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111356"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>참조 형식에 대한 C++ 스택 의미 체계
 Visual c + + 2005 이전 참조 형식의 인스턴스만 만들 수를 사용 하는 `new` 수집 되는 힙에 가비지에 개체를 생성 하는 연산자입니다. 그러나 스택에 네이티브 형식의 인스턴스를 만드는 데 사용할 수 있는 동일한 구문을 사용 하는 참조 형식의 인스턴스를 지금 만들 수 있습니다. 사용할 필요가 없습니다 따라서 [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) 참조 형식의 개체를 만듭니다. 및이 개체가 범위를 벗어나면 컴파일러가 개체의 소멸자가 호출 합니다.  

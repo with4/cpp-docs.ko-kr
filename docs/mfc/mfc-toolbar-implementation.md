@@ -27,11 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0fd3a41d7574d627ebd374af170ce47801cd351
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d21bfa1dcc39e00de852203d05a2eae743b8a2f6
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36929234"
 ---
 # <a name="mfc-toolbar-implementation"></a>MFC 도구 모음 구현
 도구 모음은입니다는 [컨트롤 막대](../mfc/control-bars.md) 컨트롤의 비트맵 이미지를 포함 하 합니다. 이러한 이미지는 누름 단추, 확인란 또는 라디오 단추 처럼 동작할 수 있습니다. MFC 클래스를 제공 [CToolbar](../mfc/reference/ctoolbar-class.md) 도구 모음을 관리할 수 있습니다.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 05/04/2018
 > [!NOTE]
 >  MFC 버전 4.0부터 도구 모음 및 도구 설명 구현 MFC에 특정 이전 구현 하는 대신 Windows 95 및 이상의 기능을 사용 하 여 합니다.  
   
- 이전 버전과 호환성에 대 한 MFC 유지 클래스에서 이전 도구 모음 구현 **COldToolBar**합니다. 이전 버전의 MFC에 대 한 문서 설명 **COldToolBar** 아래 `CToolBar`합니다.  
+ 이전 버전과 호환성에 대 한 MFC 유지 클래스에서 이전 도구 모음 구현 `COldToolBar`합니다. 이전 버전의 MFC에 대 한 문서 설명 `COldToolBar` 아래 `CToolBar`합니다.  
   
  응용 프로그램 마법사에서 도구 모음 옵션을 선택 하 여 프로그램의 첫 번째 도구 모음을 만듭니다. 추가 도구 모음을 만들 수도 있습니다.  
   

@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33875112"
 ---
 # <a name="hstringoperatorlt-operator"></a>Hstring:: Operator&lt; 연산자
 첫 번째 매개 변수 인지 보다 작은 두 번째 매개 변수를 나타냅니다.  

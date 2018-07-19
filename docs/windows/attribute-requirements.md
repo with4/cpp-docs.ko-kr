@@ -18,6 +18,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33863571"
 ---
 # <a name="attribute-requirements"></a>특성 요구 사항
 프로젝트 형식, 컴파일러 설정 및 특성에 필요한 기타 정보에서 실행 되도록 c + + 특성에 대해 나열 된 요구 사항에 설명 합니다. 정보 범주에 대 한 설명은 다음과 같습니다.  

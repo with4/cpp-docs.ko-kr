@@ -28,6 +28,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33689586"
 ---
 # <a name="multithreading-terminating-threads"></a>다중 스레딩: 스레드 종료
 두 가지 일반적인 문제 때문 스레드가 종료: 제어 함수 종료 또는 스레드 실행을 완료할 수 없습니다. 백그라운드 인쇄를 위해 스레드를 사용 하는 워드 프로세서를 제어 하는 함수는 정상적으로 종료 성공적으로 완료 된 인쇄 하는 경우. 그러나 사용자가 인쇄 작업을 취소, 백그라운드 인쇄 스레드가 완전히 종료 되어야 합니다. 이 항목에는 각 상황을 구현 하는 방법 및 종료 된 후 스레드 종료 코드를 가져오는 방법을 모두 설명 합니다.  

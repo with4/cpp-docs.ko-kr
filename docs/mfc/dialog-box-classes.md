@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351692"
 ---
 # <a name="dialog-box-classes"></a>대화 상자 클래스
 클래스 `CDialog` 및 대화 상자 기능을 캡슐화 하는 클래스의 파생된 클래스입니다. 대화 상자 창의 특별 한 종류 이므로 `CDialog` 에서 파생 된 `CWnd`합니다. 대화 상자 클래스에서 파생 `CDialog` 또는 하나를 사용을 열거나 저장할 파일, 인쇄, 글꼴 또는 색상을 선택 하면 같은 표준 대화 상자에 대 한 일반 대화 상자 클래스의 검색 및 바꾸기 작업을 시작 하거나 수행 하는 다양 한 OLE 관련 작업입니다.  

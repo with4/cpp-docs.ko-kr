@@ -19,6 +19,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057879"
 ---
 # <a name="symbols-reference"></a>기호 참조
 **날짜 및 시간 정보**  

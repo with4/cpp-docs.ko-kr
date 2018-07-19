@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33873016"
 ---
 # <a name="editing-an-image-outside-of-a-project-image-editor-for-icons"></a>프로젝트 외부의 이미지 편집(아이콘에 대한 이미지 편집기)
 열 및 모든 그래픽 응용 프로그램에서와 마찬가지로 개발 환경에서 이미지를 편집할 수 있습니다. 작업할 이미지 독립형 편집에 대 한 Visual Studio 프로젝트의 일부가 일 필요 없습니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327768"
 ---
 # <a name="project-build-error-prj0005"></a>프로젝트 빌드 오류 PRJ0005
 'Directory' 디렉터리에 임시 파일을 만들 수 없습니다.  

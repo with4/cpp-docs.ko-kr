@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33266632"
 ---
 # <a name="compiler-error-c3733"></a>컴파일러 오류 C3733
 'event': COM 이벤트를 지정 하기 위한 부적절 한 구문 '__interface'가 있습니까?  

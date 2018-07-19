@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33258636"
 ---
 # <a name="compiler-error-c3482"></a>컴파일러 오류 C3482
 비정적 멤버 함수 내에서는 'this'는 람다 캡처로만 사용할 수 있습니다.  

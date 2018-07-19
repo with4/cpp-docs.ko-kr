@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348237"
 ---
 # <a name="printing"></a>인쇄
 Microsoft Windows 장치 독립적 디스플레이 구현합니다. Mfc에서 즉 동일한 그리기 호출에는 `OnDraw` 뷰 클래스의 멤버 함수는 디스플레이 프린터와 같은 다른 장치에서 그리기를 담당 합니다. 인쇄 미리 보기에 대 한 대상 장치는 화면에는 시뮬레이션 된 프린터 출력 합니다.  

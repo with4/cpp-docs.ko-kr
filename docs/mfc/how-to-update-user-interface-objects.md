@@ -28,6 +28,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33346209"
 ---
 # <a name="how-to-update-user-interface-objects"></a>방법: 사용자 인터페이스 개체 업데이트
 일반적으로, 메뉴와 도구 모음 단추는 하나 이상의 상태를 포함 합니다. 예를 들어 현재 컨텍스트에서 사용할 수 없는 경우 메뉴 항목을 흐리게 흐리게 표시 됩니다. 메뉴 항목 checked 또는 unchecked 될 수도 있습니다. 도구 모음 단추를 사용할 수 없는 경우에 비활성화 수 또는 확인할 수 있습니다.  

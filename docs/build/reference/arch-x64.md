@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371673"
 ---
 # <a name="arch-x64"></a>/arch(x64)
 x64에서 코드 생성 아키텍처를 지정합니다. 또한 참조 [(x86) /arch](../../build/reference/arch-x86.md) 및 [/arch (ARM)](../../build/reference/arch-arm.md)합니다.  

@@ -74,11 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ddfa4d26ed0a4328714fbd1a921fe7c204ca3752
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 24fee4d4a73fb2933b00160879be130f4c33083b
+ms.sourcegitcommit: 26fff80635bd1d51bc51899203fddfea8b29b530
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854059"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton 클래스
 콤보 상자 컨트롤을 포함 하는 도구 모음 단추 ( [CComboBox 클래스](../../mfc/reference/ccombobox-class.md)).  
@@ -102,47 +103,47 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 |이름|설명|  
 |----------|-----------------|  
 |[CMFCToolBarComboBoxButton::AddItem](#additem)|콤보 상자 목록 끝에 항목을 추가 합니다.|  
-|[CMFCToolBarComboBoxButton::AddSortedItem](#addsorteditem)|콤보 상자 목록에 항목을 추가 합니다. 여는 목록에 있는 항목의 순서가 지정 되었는지 `Compare`합니다.|  
-|[CMFCToolBarComboBoxButton::Compare](#compare)|두 항목을 비교합니다. 호출 정렬 항목에 `AddSortedItems` 콤보 상자 목록에 추가 합니다.|  
-|[CMFCToolBarComboBoxButton::CreateEdit](#createedit)|콤보 상자 단추에 대 한 새 편집 컨트롤을 만듭니다.|  
-|[CMFCToolBarComboBoxButton::DeleteItem](#deleteitem)|콤보 상자 목록에서 항목을 삭제 합니다.|  
+|[CMFCToolBarComboBoxButton::AddSortedItem](#addsorteditem)|콤보 상자 목록에 항목을 추가 합니다. 목록에서 항목의 순서 된 `Compare`합니다.|  
+|[CMFCToolBarComboBoxButton::Compare](#compare)|두 항목을 비교합니다. 호출 정렬 하는 항목 `AddSortedItems` 콤보 상자 목록에 추가 합니다.|  
+|[CMFCToolBarComboBoxButton::CreateEdit](#createedit)|콤보 상자 단추에 대해 새 편집 컨트롤을 만듭니다.|  
+|[CMFCToolBarComboBoxButton::DeleteItem](#deleteitem)|콤보 상자 목록에서 항목을 삭제합니다.|  
 |[CMFCToolBarComboBoxButton::FindItem](#finditem)|지정된 된 문자열을 포함 하는 항목의 인덱스를 반환 합니다.|  
-|[CMFCToolBarComboBoxButton::GetByCmd](#getbycmd)|지정한 명령 id 콤보 상자 단추에 대 한 포인터를 반환합니다.|  
+|[CMFCToolBarComboBoxButton::GetByCmd](#getbycmd)|지정 된 명령 ID 사용 하 여 콤보 상자 단추에 대 한 포인터를 반환합니다.|  
 |[CMFCToolBarComboBoxButton::GetComboBox](#getcombobox)|콤보 상자 단추에 포함 된 콤보 상자 컨트롤에 대 한 포인터를 반환 합니다.|  
-|[CMFCToolBarComboBoxButton::GetCount](#getcount)|상자 목록 콤보에서 항목의 수를 반환합니다.|  
-|[CMFCToolBarComboBoxButton::GetCountAll](#getcountall)|찾습니다 콤보 상자 단추를 지정 된 명령 id입니다. 해당 단추의 상자 목록 콤보에서 항목의 수를 반환합니다.|  
-|[CMFCToolBarComboBoxButton::GetCurSel](#getcursel)|콤보 상자 목록 선택된 된 항목의 인덱스를 반환 합니다.|  
-|[CMFCToolBarComboBoxButton::GetCurSelAll](#getcurselall)|콤보 상자 단추를 지정 된 명령 ID 및 해당 단추의 상자 목록 콤보에서 선택한 항목의 인덱스를 반환 하는 찾습니다.|  
+|[CMFCToolBarComboBoxButton::GetCount](#getcount)|상자 목록 콤보에서 항목 수를 반환 합니다.|  
+|[CMFCToolBarComboBoxButton::GetCountAll](#getcountall)|콤보 상자 단추를 지정 된 명령 ID를 가진 찾습니다. 해당 단추 상자 목록을 콤보에서 항목 수를 반환합니다.|  
+|[CMFCToolBarComboBoxButton::GetCurSel](#getcursel)|상자 목록 콤보에서 선택한 항목의 인덱스를 반환 합니다.|  
+|[CMFCToolBarComboBoxButton::GetCurSelAll](#getcurselall)|콤보 상자 단추를 지정 된 명령 ID가 해당 단추의 상자 목록 콤보에서 선택한 항목의 인덱스를 반환 하는 찾습니다.|  
 |[CMFCToolBarComboBoxButton::GetEditCtrl](#geteditctrl)|콤보 상자 단추에 포함 된 편집 컨트롤에 대 한 포인터를 반환 합니다.|  
 |[CMFCToolBarComboBoxButton::GetItem](#getitem)|상자 목록을 콤보에서 지정된 된 인덱스와 연결 된 문자열을 반환 합니다.|  
-|[CMFCToolBarComboBoxButton::GetItemAll](#getitemall)|콤보 상자 단추를 지정 된 명령 ID 및 해당 단추의 콤보 상자 목록에서 인덱스와 연결 된 문자열을 반환 하는 찾습니다.|  
+|[CMFCToolBarComboBoxButton::GetItemAll](#getitemall)|콤보 상자 단추를 지정 된 명령 ID가 해당 단추의 콤보 상자 목록에서 인덱스와 연결 된 문자열을 반환 하를 찾습니다.|  
 |[CMFCToolBarComboBoxButton::GetItemData](#getitemdata)|상자 목록을 콤보에서 지정된 된 인덱스와 연결 된 32 비트 값을 반환 합니다.|  
-|[CMFCToolBarComboBoxButton::GetItemDataAll](#getitemdataall)|콤보 상자 단추를 지정한 명령 ID로, 있으며 해당 단추의 콤보 상자 목록에서 인덱스와 연결 된 32 비트 값을 반환 하는 찾습니다.|  
-|[CMFCToolBarComboBoxButton::GetItemDataPtrAll](#getitemdataptrall)|찾습니다 콤보 상자 단추를 지정 된 명령 id입니다. 검색 단추 및 32 비트 포인터로 값을 반환 하는 콤보 상자 목록에서 인덱스를 관련 되는 32 비트 값입니다.|  
+|[CMFCToolBarComboBoxButton::GetItemDataAll](#getitemdataall)|콤보 상자 단추를 지정 된 명령 ID가 해당 단추의 콤보 상자 목록에서 인덱스와 연결 된 32 비트 값을 반환 하는 찾습니다.|  
+|[CMFCToolBarComboBoxButton::GetItemDataPtrAll](#getitemdataptrall)|콤보 상자 단추를 지정 된 명령 ID를 가진 찾습니다. 검색 된 32 비트 값 목록의 콤보 상자 단추 및 32 비트 값 포인터를 반환 하는 인덱스를 연결 합니다.|  
 |[CMFCToolBarComboBoxButton::GetText](#gettext)|콤보 상자의 편집 컨트롤에서 텍스트를 반환합니다.|  
-|[CMFCToolBarComboBoxButton::GetTextAll](#gettextall)|콤보 상자 단추를 지정 된 명령 ID 및 해당 단추의 편집 컨트롤에서 텍스트를 반환 하는 찾습니다.|  
-|[CMFCToolBarComboBoxButton::IsCenterVert](#iscentervert)|응용 프로그램에서 콤보 상자 단추 가운데가 또는 도구 모음의 위쪽에 맞춰집니다 하는지 여부를 결정 합니다.|  
-|[CMFCToolBarComboBoxButton::IsFlatMode](#isflatmode)|응용 프로그램에서 콤보 상자 단추 평면 모양 있는지 확인 합니다.|  
-|[CMFCToolBarComboBoxButton::RemoveAllItems](#removeallitems)|목록에서 모든 항목 상자 및 콤보 상자 컨트롤을 편집할를 제거 합니다.|  
-|[CMFCToolBarComboBoxButton::SelectItem](#selectitem)|해당 인덱스, 32 비트 값 또는 문자열에 따라 콤보 상자에서 항목을 선택 하 고 선택 영역에 대 한 콤보 상자 컨트롤에 알립니다.|  
-|[CMFCToolBarComboBoxButton::SelectItemAll](#selectitemall)|찾습니다 콤보 상자 단추를 지정 된 명령 id입니다. 호출 `SelectItem` 을 해당 문자열, 인덱스 또는 32 비트 값에 따라 해당 단추의 콤보 상자에서 항목을 선택 합니다.|  
-|[CMFCToolBarComboBoxButton::SetCenterVert](#setcentervert)|응용 프로그램에서 콤보 상자 단추 세로 가운데 맞춤가 또는 도구 모음의 위쪽에 맞춰집니다 하는지 여부를 지정 합니다.|  
+|[CMFCToolBarComboBoxButton::GetTextAll](#gettextall)|콤보 상자 단추를 지정 된 명령 ID가 해당 단추의 편집 컨트롤에서 텍스트를 반환 하는 찾습니다.|  
+|[CMFCToolBarComboBoxButton::IsCenterVert](#iscentervert)|응용 프로그램에서 콤보 상자 단추는 가운데 또는 도구 모음의 위쪽에 맞춰집니다 여부를 결정 합니다.|  
+|[CMFCToolBarComboBoxButton::IsFlatMode](#isflatmode)|응용 프로그램에서 콤보 상자 단추를 평면 모양으로 표시 여부를 확인 합니다.|  
+|[CMFCToolBarComboBoxButton::RemoveAllItems](#removeallitems)|제거 목록에서 항목을 모두 상자 및 콤보 상자 컨트롤을 편집 합니다.|  
+|[CMFCToolBarComboBoxButton::SelectItem](#selectitem)|해당 인덱스, 32 비트 값 또는 문자열에 따라 콤보 상자의 항목을 선택 하 고 선택 영역에 대 한 콤보 상자 컨트롤에 알립니다.|  
+|[CMFCToolBarComboBoxButton::SelectItemAll](#selectitemall)|콤보 상자 단추를 지정 된 명령 ID를 가진 찾습니다. 호출 `SelectItem` 해당 문자열, 인덱스 또는 32 비트 값에 따라 해당 단추의 콤보 상자에서 항목을 선택 합니다.|  
+|[CMFCToolBarComboBoxButton::SetCenterVert](#setcentervert)|응용 프로그램에서 콤보 상자 단추 세로 가운데 맞춤 되는지 또는 도구 모음의 위쪽에 맞춰집니다를 지정 합니다.|  
 |[CMFCToolBarComboBoxButton::SetDropDownHeight](#setdropdownheight)|드롭다운 목록 상자의 높이 설정합니다.|  
-|[CMFCToolBarComboBoxButton::SetFlatMode](#setflatmode)|응용 프로그램에서 콤보 상자 단추 평면 모양 하는지 여부를 지정 합니다.|  
+|[CMFCToolBarComboBoxButton::SetFlatMode](#setflatmode)|응용 프로그램에서 콤보 상자 단추를 평면 모양으로 표시 여부를 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 콤보 상자 단추를 도구 모음을 추가 하려면 다음이 단계를 수행 합니다.  
+ 도구 모음에 콤보 상자 단추를 추가 하려면 다음이 단계를 수행 합니다.  
   
  1. 부모 도구 모음 리소스의 단추에 대한 더미 리소스 ID를 예약합니다.  
   
  2. 생성 된 `CMFCToolBarComboBoxButton` 개체입니다.  
   
- 3. 처리 하는 메시지 처리기에는 `AFX_WM_RESETTOOLBAR` 메시지를 사용 하 여 새 콤보 상자 단추 더미 단추 바꿉니다 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)합니다.  
+ 3. AFX_WM_RESETTOOLBAR 메시지를 처리 하는 메시지 처리기에서 더미 단추를 새 콤보 상자 단추를 사용 하 여 바꿉니다 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)합니다.  
   
- 자세한 내용은 참조 [연습: 도구 모음에 컨트롤 배치](../../mfc/walkthrough-putting-controls-on-toolbars.md)합니다. 콤보 상자 도구 모음 단추의 예를 들어 VisualStudioDemo 예제 프로젝트를 참조 하세요.  
+ 자세한 내용은 [연습: 도구 모음에 컨트롤 배치](../../mfc/walkthrough-putting-controls-on-toolbars.md)합니다. 콤보 상자 도구 모음 단추의 예 VisualStudioDemo 예제 프로젝트를 참조 하세요.  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 `CMFCToolBarComboBoxButton` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 예제에서는 편집 및 콤보 상자를 사용 하도록 설정, 세로 위치 콤보 상자 단추 응용 프로그램 설정, 놓을 때 목록 상자의 높이 설정, 응용 프로그램에서 콤보 상자 단추의 평면 스타일 모양을 설정 하는 방법을 보여 줍니다. 및 상자 단추 콤보의 편집 상자에 텍스트를 설정 합니다. 이 코드 조각은의 일부인는 [Visual Studio 데모 샘플](../../visual-cpp-samples.md)합니다.  
+## <a name="example"></a>예  
+ 다음 예제에서는 `CMFCToolBarComboBoxButton` 클래스에서 다양한 메서드를 사용하는 방법을 보여 줍니다. 이 예제에서는 편집 및 콤보 상자를 사용 하도록 설정, 응용 프로그램에서 세로 위치 콤보 상자 단추를 설정, 놓을 때 목록 상자의 높이 설정, 응용 프로그램에서 콤보 상자 단추의 평면 스타일 모양을 설정 하는 방법을 보여 줍니다. 및 상자 단추 콤보의 편집 상자에 텍스트를 설정 합니다. 이 코드 조각은의 일부인 합니다 [Visual Studio 데모 샘플](../../visual-cpp-samples.md)합니다.  
   
  [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]  
 [!code-cpp[NVC_MFC_VisualStudioDemo#37](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]  
@@ -167,10 +168,10 @@ virtual INT_PTR AddItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszItem`  
+ [in] *lpszItem*  
  목록 상자에 추가할 항목의 텍스트입니다.  
   
- [in] `dwData`  
+ [in] *dwData*  
  목록 상자에 추가할 항목에 연결 된 데이터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -179,10 +180,10 @@ virtual INT_PTR AddItem(
 ### <a name="remarks"></a>설명  
  목록 상자 스타일 정렬 될 때이 메서드를 사용 하지 마십시오.  
   
- 항목 텍스트의 목록 상자에 이미 있으면 새 데이터가 기존 항목으로 저장 됩니다. 항목에 대 한 검색은 대/소문자 구분 합니다.  
+ 항목 텍스트를 목록 상자에 이미 있으면 기존 항목과 새 데이터가 저장 됩니다. 항목에 대 한 검색은 대/소문자 구분 합니다.  
   
 ##  <a name="addsorteditem"></a>  CMFCToolBarComboBoxButton::AddSortedItem  
- 정의 된 순서로 목록 상자에 항목을 추가 [비교](#compare) 메서드.  
+ 정의 된 순서 대로 목록 상자에 항목을 추가 합니다 [비교](#compare) 메서드.  
   
 ```  
 virtual INT_PTR AddSortedItem(
@@ -191,10 +192,10 @@ virtual INT_PTR AddSortedItem(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszItem`  
+ [in] *lpszItem*  
  목록 상자에 추가할 항목의 텍스트입니다.  
   
- [in] `dwData`  
+ [in] *dwData*  
  목록 상자에 추가할 항목에 연결 된 데이터입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -211,7 +212,7 @@ virtual BOOL CanBeStretched() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE`를 반환합니다.  
+ TRUE 반환.  
   
 ##  <a name="cmfctoolbarcomboboxbutton"></a>  CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton  
  생성 된 [CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md) 개체입니다.  
@@ -225,22 +226,22 @@ CMFCToolBarComboBoxButton(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiID`  
+ [in] *uiID*  
  새 단추의 명령 ID입니다.  
   
- [in] `iImage`  
- 새로 만들기 단추와 연결 된 이미지의 이미지 인덱스입니다.  
+ [in] *iImage*  
+ 새로 만들기 단추를 사용 하 여 연결 된 이미지의 이미지 인덱스입니다.  
   
- [in] `dwStyle`  
- 새 단추의 스타일입니다.  
+ [in] *dwStyle*  
+ 새 단추 스타일입니다.  
   
- [in] `iWidth`  
- 새로 만들기 단추를 픽셀 단위로 너비입니다.  
+ [in] *iWidth*  
+ 새 단추의 픽셀 너비입니다.  
   
 ### <a name="remarks"></a>설명  
  기본 너비는 150 픽셀입니다.  
   
- 도구 모음 단추 스타일의 목록이 참조 [ToolBar 컨트롤 스타일](../../mfc/reference/toolbar-control-styles.md)  
+ 도구 모음 단추 스타일의 목록을 참조 하세요. [ToolBar 컨트롤 스타일](../../mfc/reference/toolbar-control-styles.md)  
   
 ##  <a name="cleardata"></a>  CMFCToolBarComboBoxButton::ClearData  
  사용자 정의 데이터를 삭제 합니다.  
@@ -250,7 +251,7 @@ virtual void ClearData();
 ```  
   
 ### <a name="remarks"></a>설명  
- 기본적으로이 메서드는 아무 작업도 수행 하지 않습니다. 모든 사용자 정의 데이터를 삭제 하려는 경우에 파생된 클래스에서이 메서드를 재정의 합니다.  
+ 기본적으로이 메서드는 없습니다. 모든 사용자 정의 데이터를 삭제 하려는 경우에 파생된 클래스에서이 메서드를 재정의 합니다.  
   
 ##  <a name="compare"></a>  CMFCToolBarComboBoxButton::Compare  
  두 문자열을 비교합니다.  
@@ -262,27 +263,27 @@ virtual int Compare(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszItem1`  
+ [in] *lpszItem1*  
  비교할 첫째 문자열입니다.  
   
- [in] `lpszItem2`  
+ [in] *lpszItem2*  
  비교할 둘째 문자열입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 문자열의 대/소문자 구분 사전적 관계를 나타내는 값입니다. 다음 표에서 가능한 값을 보여 줍니다.  
+ 대/소문자 구분 사전적 문자열 간의 관계를 나타내는 값입니다. 다음 표에서 가능한 값을 나열합니다.  
   
 |값|설명|  
 |-----------|-----------------|  
 |\<0|첫 번째 문자열이 두 번째 인스턴스보다 합니다.|  
-|0|첫 번째 문자열이 두 번째를 같습니다.|  
+|0|첫 번째 문자열이 두 번째를 것과 같습니다.|  
 |>0|첫 번째 문자열이 두 번째 보다 큽니다.|  
   
 ### <a name="remarks"></a>설명  
- 목록 상자 항목이 정렬 되는 방식을 변경 하려면이 메서드를 재정의 합니다.  
+ 목록 상자 항목 정렬 되는 방법을 변경 하려면이 메서드를 재정의 합니다.  
   
- 비교는 대/소문자 구분 합니다.  
+ 비교는 대/소문자 구분.  
   
- 이 메서드를 통해서만 호출 됩니다는 [AddSortedItem](#addsorteditem) 메서드.  
+ 에서만이 메서드는 호출 된 [AddSortedItem](#addsorteditem) 메서드.  
   
 ##  <a name="copyfrom"></a>  CMFCToolBarComboBoxButton::CopyFrom  
  지정된 된 상태의 복사 `CMFCToolBarComboBoxButton` 현재 개체입니다.  
@@ -292,7 +293,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `src`  
+ [in] *src*  
  소스 `CMFCToolBarComboBoxButton` 개체입니다.  
   
 ##  <a name="createcombo"></a>  CMFCToolBarComboBoxButton::CreateCombo  
@@ -305,17 +306,17 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  단추의 부모 창에 대 한 포인터입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  콤보 상자의 경계 사각형입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 새 콤보 상자에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
+ 메서드가 성공 하면 새 콤보 상자에 대 한 포인터 그렇지 않으면 NULL입니다.  
   
 ##  <a name="createedit"></a>  CMFCToolBarComboBoxButton::CreateEdit  
- 콤보 상자 단추에 대 한 새 편집 상자를 만듭니다.  
+ 콤보 상자 단추에 대해 새 편집 상자를 만듭니다.  
   
 ```  
 virtual CMFCToolBarComboBoxEdit* CreateEdit(
@@ -325,20 +326,20 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  단추의 부모 창에 대 한 포인터입니다.  
   
- [in] `rect`  
+ [in] *rect*  
  새 입력란의 경계 사각형입니다.  
   
- [in] `dwEditStyle`  
+ [in] *dwEditStyle*  
  새 입력란의 스타일을 제어 합니다.  
   
 ### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 새 편집 상자에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
+ 메서드가 성공 하면 새 편집 상자에 대 한 포인터 그렇지 않으면 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
- 콤보 상자 단추에 대 한 새 편집 상자를 만들 때 프레임 워크에서이 메서드를 호출 합니다. 변경 하려면이 메서드를 재정의 방법을 [CMFCToolBarComboBoxEdit](../../mfc/reference/cmfctoolbarcomboboxedit-class.md) 만들어집니다.  
+ 프레임 워크는 콤보 상자 단추에 대해 새 편집 상자를 만들 때이 메서드를 호출 합니다. 변경 하려면이 메서드를 재정의 하는 방법 [CMFCToolBarComboBoxEdit](../../mfc/reference/cmfctoolbarcomboboxedit-class.md) 만들어집니다.  
   
 ##  <a name="deleteitem"></a>  CMFCToolBarComboBoxButton::DeleteItem  
  목록 상자에서 지정된 된 항목을 삭제합니다.  
@@ -350,17 +351,17 @@ BOOL DeleteItem(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iIndex`  
+ [in] *iIndex*  
  삭제할 항목의 0부터 시작 하는 인덱스입니다.  
   
- [in] `dwData`  
- 삭제할 항목에 연결 된 데이터입니다.  
+ [in] *dwData*  
+ 삭제할 항목과 연결 된 데이터입니다.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  삭제할 항목의 텍스트입니다. 동일한 텍스트를 가진 여러 항목이 있으면 첫 번째 항목이 삭제 됩니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 항목이 있고 성공적으로 삭제 됩니다. 그렇지 않으면 `FALSE`합니다.  
+ 항목이 있고 성공적으로 삭제 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -372,21 +373,21 @@ virtual void DuplicateData();
 ```  
   
 ### <a name="remarks"></a>설명  
- 기본적으로이 메서드는 아무 작업도 수행 하지 않습니다. 모든 사용자 정의 데이터를 복사 하려는 경우에 파생된 클래스에서이 메서드를 재정의 합니다.  
+ 기본적으로이 메서드는 없습니다. 모든 사용자 정의 데이터를 복사 하려는 경우에 파생된 클래스에서이 메서드를 재정의 합니다.  
   
 ##  <a name="enablewindow"></a>  CMFCToolBarComboBoxButton::EnableWindow  
- 편집 및 콤보 상자를 사용 하지 않도록 설정 하거나 사용 합니다.  
+ 사용 하거나 편집 및 콤보 상자를 사용 하지 않도록 설정 합니다.  
   
 ```  
 virtual void EnableWindow(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bEnable`  
- `TRUE` 편집 하며 콤보 상자를 사용 하도록 설정 하려면 `FALSE` 를 편집 및 콤보 상자를 사용 하지 않도록 설정 합니다.  
+ [in] *bEnable*  
+ TRUE는 편집 및 콤보 상자를 사용 하도록 설정 하려면 편집 및 콤보 상자를 사용 하지 않도록 설정 하려면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- 해제 된 경우에 컨트롤 활성화 될 수 없습니다 및 사용자 입력을 받아들일 수 없습니다.  
+ 를 사용할 수 없을 때 컨트롤 없습니다 활성화 되며 사용자 입력을 받아들일 수 없습니다.  
   
 ##  <a name="exporttomenubutton"></a>  CMFCToolBarComboBoxButton::ExportToMenuButton  
  복사 콤보 상자 단추 명령을 사용 하 여 지정된 된 메뉴에 응용 프로그램 문자열 테이블에서 문자열 id입니다.  
@@ -396,30 +397,30 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [out] `menuButton`  
+ [out] *menuButton*  
  메뉴 단추에 대 한 참조입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 항상 `TRUE`입니다.  
+ 항상 TRUE입니다.  
   
 ##  <a name="finditem"></a>  CMFCToolBarComboBoxButton::FindItem  
- 지정 된 문자열을 포함 하는 목록 상자에서 첫 번째 항목의 인덱스를 반환 합니다.  
+ 지정된 된 문자열을 포함 하는 목록 상자에서 첫 번째 항목의 인덱스를 반환 합니다.  
   
 ```  
 int FindItem(LPCTSTR lpszText) const;  
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszText`  
+ [in] *lpszText*  
  목록 상자에 검색할 텍스트입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 항목의 인덱스 또는 `CB_ERR` 항목을 찾을 수 없는 경우.  
+ 항목의 인덱스 또는 CB_ERR 항목이 없는 경우입니다.  
   
 ### <a name="remarks"></a>설명  
   
 ##  <a name="getbycmd"></a>  CMFCToolBarComboBoxButton::GetByCmd  
- 지정한 명령 ID를 가집니다. 콤보 상자 단추에 대 한 포인터를 가져옵니다.  
+ 지정 된 명령 ID가 있는 콤보 상자 단추에 대 한 포인터를 가져옵니다.  
   
 ```  
 static CMFCToolBarComboBoxButton* GetByCmd(
@@ -428,14 +429,14 @@ static CMFCToolBarComboBoxButton* GetByCmd(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  콤보 상자 단추의 명령 ID입니다.  
   
- [in] `bIsFocus`  
- `TRUE` 포커스가 있는 단추;만 검색 하려면 `FALSE` 모든 단추를 찾으려고 합니다.  
+ [in] *bIsFocus*  
+ 포커스가 있는 단추;만 검색 하려면 true로 설정 모든 단추를 검색 하려면 FALSE입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 콤보 상자 단추;에 대 한 포인터 또는 `NULL` 단추를 찾을 수 없는 경우.  
+ 콤보 상자 단추;에 대 한 포인터 또는 단추를 찾을 수 없으면 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -447,7 +448,7 @@ CComboBox* GetComboBox() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 에 대 한 포인터는 [CComboBox 클래스](../../mfc/reference/ccombobox-class.md) 메서드가 고, 그렇지 않으면 경우 개체 `NULL`합니다.  
+ 에 대 한 포인터를 [CComboBox 클래스](../../mfc/reference/ccombobox-class.md) 메서드가 성공 하는 경우 개체, 그렇지 않으면 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -462,7 +463,7 @@ UINT GetContextMenuID();
  바로 가기 메뉴 리소스 id입니다.  
   
 ##  <a name="getcount"></a>  CMFCToolBarComboBoxButton::GetCount  
- 목록 상자에서 항목의 수를 반환합니다.  
+ 목록 상자에서 항목 수를 반환합니다.  
   
 ```  
 INT_PTR GetCount() const;  
@@ -474,47 +475,47 @@ INT_PTR GetCount() const;
 ### <a name="remarks"></a>설명  
   
 ##  <a name="getcountall"></a>  CMFCToolBarComboBoxButton::GetCountAll  
- 지정한 명령 ID가 있는 콤보 상자 단추의 목록 상자에서 항목 수를 가져옵니다.  
+ 지정한 명령 ID가 있는 콤보 상자 단추의 목록 상자에서 항목의 수를 가져옵니다.  
   
 ```  
 static int GetCountAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  콤보 상자 단추의 명령 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 목록 상자;에 있는 항목의 수 그렇지 않으면 `CB_ERR` 경우 콤보 상자 단추를 찾을 수 없습니다.  
+ 목록 상자에서 항목 수 그렇지 않으면 CB_ERR 콤보 상자 단추 경우 찾을 수 없습니다.  
   
 ### <a name="remarks"></a>설명  
   
 ##  <a name="getcursel"></a>  CMFCToolBarComboBoxButton::GetCurSel  
- 목록 상자에서 현재 선택 된 항목의 인덱스를 가져옵니다.  
+ 목록 상자에서 현재 선택한 항목의 인덱스를 가져옵니다.  
   
 ```  
 int GetCurSel() const;  
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 목록 상자에서 현재 선택 된 항목의 인덱스 또는 `CB_ERR` 선택 된 항목이 없는 경우.  
+ 목록 상자; 현재 선택된 된 항목의 인덱스 또는 CB_ERR 없는 항목을 선택 합니다.  
   
 ### <a name="remarks"></a>설명  
  목록 상자 인덱스는 0부터 시작 합니다.  
   
 ##  <a name="getcurselall"></a>  CMFCToolBarComboBoxButton::GetCurSelAll  
- Id가 지정 된 명령 ID가 있는 상자 단추를 콤보 목록 상자에서 현재 선택 된 항목의 인덱스를 반환  
+ 지정 된 명령 ID가 있는 상자 단추는 콤보 목록 상자에서 현재 선택한 항목의 인덱스를 반환  
   
 ```  
 static int GetCurSelAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  콤보 상자 단추의 명령 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 목록 상자에서 현재 선택 된 항목의 인덱스 그렇지 않으면 `CB_ERR` 선택 된 항목이 또는 콤보 상자 단추를 찾을 수 없습니다.  
+ 목록 상자; 현재 선택된 된 항목의 인덱스 그렇지 않은 경우 선택 된 항목이 있으면 CB_ERR 또는 콤보 상자 단추가 없습니다.  
   
 ### <a name="remarks"></a>설명  
  목록 상자 인덱스는 0부터 시작 합니다.  
@@ -527,7 +528,7 @@ virtual CEdit* GetEditCtrl();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 편집 상자에 대 한 포인터 그렇지 않으면 `NULL`합니다.  
+ 메서드가 성공 하면 입력란에 대 한 포인터 그렇지 않으면 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -539,27 +540,27 @@ virtual HWND GetHwnd();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 창 핸들 또는 `NULL` 콤보 상자 창 개체와 연결 되지 않은 경우.  
+ 창 핸들 또는 콤보 상자는 창 개체와 연결 되지 않은 경우 NULL입니다.  
   
 ##  <a name="getitem"></a>  CMFCToolBarComboBoxButton::GetItem  
- 목록 상자에서 지정된 된 인덱스에 항목에 연결 된 문자열을 반환 합니다.  
+ 목록 상자에서 지정된 된 인덱스에서 항목을 사용 하 여 연결 문자열을 반환 합니다.  
   
 ```  
 LPCTSTR GetItem(int iIndex=-1) const;  
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iIndex`  
+ [in] *iIndex*  
  목록 상자에 있는 항목의 0부터 시작 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 항목과 연결 된 문자열에 대 한 포인터 그렇지 않으면 `NULL` 인덱스 매개 변수가 유효 하지 않을 경우 또는 인덱스 매개 변수가-1이 고 콤보 상자에서 선택한 항목이 없습니다.  
+ 항목을 사용 하 여 연결 문자열에 대 한 포인터 그렇지 않은 경우 인덱스 매개 변수가 유효 하지 않은 경우 또는 인덱스 매개 변수가-1이 고 콤보 상자에서 선택한 항목이 없는 경우 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
- -1 인덱스 매개 변수가 현재 선택 된 항목의 문자열을 반환 합니다.  
+ -1 인덱스 매개 변수는 현재 선택 된 항목의 문자열을 반환 합니다.  
   
 ##  <a name="getitemall"></a>  CMFCToolBarComboBoxButton::GetItemAll  
- 지정한 명령 ID가 있는 콤보 상자 단추의 목록 상자에서 지정된 된 인덱스에 항목에 연결 된 문자열을 반환 합니다.  
+ 지정한 명령 ID가 있는 콤보 상자 단추의 목록 상자에서 지정된 된 인덱스에서 항목을 사용 하 여 연결 된 문자열을 반환 합니다.  
   
 ```  
 static LPCTSTR GetItemAll(
@@ -568,37 +569,37 @@ static LPCTSTR GetItemAll(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  콤보 상자 단추의 명령 ID입니다.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  목록 상자에 있는 항목의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 해당 항목의 문자열에 대 한 포인터 그렇지 않으면 `NULL` 콤보 상자 단추가 되지 않는 인덱스 유효 하지 않을 경우, 이거나 인덱스-1이 고 콤보 상자에서 선택한 항목이 없습니다.  
+ 메서드가 성공 하면 항목의 문자열에 대 한 포인터 콤보 상자 단추 발견 되지 않으면이 고, 그렇지 인덱스가 유효 하지 않은 경우 NULL을 여부나 인덱스가-1 및 콤보 상자에서 선택한 항목이 없습니다.  
   
 ### <a name="remarks"></a>설명  
  현재 선택 된 항목의 문자열을 반환 하는 인덱스 값이-1입니다.  
   
 ##  <a name="getitemdata"></a>  CMFCToolBarComboBoxButton::GetItemData  
- 목록 상자에서 특정 인덱스에 항목에 연결 된 데이터를 반환 합니다.  
+ 목록 상자에서 지정한 인덱스에서 항목에 연결 된 데이터를 반환 합니다.  
   
 ```  
 DWORD_PTR GetItemData(int iIndex=-1) const;  
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iIndex`  
+ [in] *iIndex*  
  목록 상자에 있는 항목의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 항목;에 연결 된 데이터 또는 항목이 존재 하지 않는 경우 0을 지정 합니다.  
+ 항목과 연결 된 데이터 이거나 항목이 없는 경우 0입니다.  
   
 ### <a name="remarks"></a>설명  
- -1 인덱스 매개 변수가 현재 선택 된 항목과 연결 된 데이터를 반환 합니다.  
+ -1 인덱스 매개 변수는 현재 선택 된 항목과 연결 된 데이터를 반환 합니다.  
   
 ##  <a name="getitemdataall"></a>  CMFCToolBarComboBoxButton::GetItemDataAll  
- 특정 명령 ID가 있는 콤보 상자 단추의 목록 상자에서 특정 인덱스에 항목에 연결 된 데이터를 반환 합니다.  
+ 특정 명령 ID가 있는 콤보 상자 단추의 목록 상자에서 지정한 인덱스에서 항목에 연결 된 데이터를 반환 합니다.  
   
 ```  
 static DWORD_PTR GetItemDataAll(
@@ -607,20 +608,20 @@ static DWORD_PTR GetItemDataAll(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  콤보 상자 단추의 명령 ID입니다.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  목록 상자에 있는 항목의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 항목과 연결 된 데이터 그렇지 않은 경우 지정된 된 인덱스 유효 하지 않을 경우 0 또는 콤보 상자 단추 경우 CB_ERR는 찾을 수 없습니다.  
+ 메서드가 성공 하면 항목과 연결 된 데이터 그렇지 않은 경우 지정된 된 인덱스 유효 하지 않은 경우 0 또는 콤보 상자 단추 경우 CB_ERR가 없습니다.  
   
 ### <a name="remarks"></a>설명  
- -1 인덱스 매개 변수가 현재 선택 된 항목과 연결 된 데이터를 반환 합니다.  
+ -1 인덱스 매개 변수는 현재 선택 된 항목과 연결 된 데이터를 반환 합니다.  
   
 ##  <a name="getitemdataptrall"></a>  CMFCToolBarComboBoxButton::GetItemDataPtrAll  
- 특정 명령 ID가 있는 콤보 상자 단추의 목록 상자에서 특정 인덱스에 항목에 연결 된 데이터를 반환 합니다. 이 데이터를 포인터로 반환 됩니다.  
+ 특정 명령 ID가 있는 콤보 상자 단추의 목록 상자에서 지정한 인덱스에서 항목에 연결 된 데이터를 반환 합니다. 이 데이터 포인터로 반환 됩니다.  
   
 ```  
 static void* GetItemDataPtrAll(
@@ -629,14 +630,14 @@ static void* GetItemDataPtrAll(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  콤보 상자 단추의 명령 ID입니다.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  목록 상자에 있는 항목의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 항목과 연결 된 포인터 오류가 발생 하는 경우, 그렇지 않으면-1 또는 `NULL` 경우 콤보 상자 단추를 찾을 수 없습니다.  
+ 메서드가 성공 하면 항목과 연결 된 포인터 그렇지 않으면 오류가 없으면-1 발생 하거나 콤보 상자 단추 경우 NULL을 찾을 수 없습니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -651,7 +652,7 @@ virtual CString GetPrompt() const;
  프롬프트 문자열입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드가 현재 구현 되지 않았습니다.  
+ 이 메서드가 현재 구현 되지 않습니다.  
   
 ##  <a name="gettext"></a>  CMFCToolBarComboBoxButton::GetText  
  편집 상자에 텍스트를 가져옵니다.  
@@ -661,23 +662,23 @@ LPCTSTR GetText() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 편집 상자에 텍스트입니다.  
+ 입력란 텍스트입니다.  
   
 ### <a name="remarks"></a>설명  
   
 ##  <a name="gettextall"></a>  CMFCToolBarComboBoxButton::GetTextAll  
- 지정한 명령 ID가 있는 콤보 상자 단추의 편집 상자에 텍스트를 가져옵니다.  
+ 지정 된 명령 ID가 있는 콤보 상자 단추의 편집 상자에 텍스트를 가져옵니다.  
   
 ```  
 static LPCTSTR GetTextAll(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmd`  
+ [in] *uiCmd*  
  특정 콤보 상자 단추의 명령 ID입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 입력란의 텍스트 그렇지 않으면 `NULL`합니다.  
+ 메서드가 성공 하면 입력란의 텍스트 그렇지 않으면 NULL입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -689,10 +690,10 @@ virtual BOOL HasFocus() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 콤보 상자에 현재 포커스가; 경우 그렇지 않으면 `FALSE`합니다.  
+ 콤보 상자의 현재 포커스가; 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- 또한이 메서드 반환 `TRUE` 콤보 상자의 모든 자식 창이 현재 포커스를가지고 있는 경우.  
+ 이 메서드는 또한 콤보 상자의 모든 자식 창에 현재 포커스를가지고 있으면 TRUE를 반환 합니다.  
   
 ##  <a name="iscentervert"></a>  CMFCToolBarComboBoxButton::IsCenterVert  
  응용 프로그램에서 콤보 상자 단추의 세로 위치를 반환합니다.  
@@ -702,7 +703,7 @@ static BOOL IsCenterVert();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 경우 단추 가운데 맞춤 됩니다. `FALSE` 이면 단추 위쪽에 맞춥니다.  
+ TRUE 이면 단추 가운데에 배치 됩니다. FALSE 이면 단추 위쪽에 맞춥니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -714,24 +715,24 @@ static BOOL IsFlatMode();
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 단추 평면 스타일; 있는 경우 그렇지 않으면 `FALSE`합니다.  
+ 단추를 평면 스타일; 경우 TRUE 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- 콤보 상자 단추에 대 한 기본 플랫 스타일은 `FALSE.`  
+ 콤보 상자 단추에 대 한 기본 평면 스타일은 FALSE입니다.  
   
 ##  <a name="isownerof"></a>  CMFCToolBarComboBoxButton::IsOwnerOf  
- 지정 된 핸들은 콤보 상자 단추 또는 그 하위 중 하나로 연결 되어 있는지 여부를 나타냅니다.  
+ 지정된 된 핸들 콤보 상자 단추 또는 해당 자식 중 하나를 사용 하 여 연결 되는지 여부를 나타냅니다.  
   
 ```  
 virtual BOOL IsOwnerOf(HWND hwnd);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `hwnd`  
+ [in] *hwnd*  
  창 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 이 핸들은 콤보 상자 단추 또는 해당 자식; 중 그리드의 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ 핸들이 콤보 상자 단추 또는 해당 자식; 중 하나를 사용 하 여 연결 된 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ##  <a name="isribbonbutton"></a>  CMFCToolBarComboBoxButton::IsRibbonButton  
  콤보 상자 단추를 리본 패널에 있는지 여부를 나타냅니다.  
@@ -741,13 +742,13 @@ BOOL IsRibbonButton() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 항상 `FALSE`입니다.  
+ 항상 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- 기본적으로이 메서드는 항상 반환 `FALSE`를 의미 하는 콤보 상자 단추를 리본 패널에 표시 되지 않습니다.  
+ 기본적으로이 메서드는 항상 반환 FALSE, 즉, 콤보 상자 단추를 리본 패널에 표시 되지 않습니다.  
   
 ##  <a name="iswindowvisible"></a>  CMFCToolBarComboBoxButton::IsWindowVisible  
- 상자 단추 콤보의 표시 여부 상태를 반환합니다.  
+ 상자 단추를 콤보의 표시 여부 상태를 반환합니다.  
   
 ```  
 virtual BOOL IsWindowVisible();
@@ -764,14 +765,14 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iNotifyCode`  
+ [in] *iNotifyCode*  
  명령과 사용 하 여 연결 된 알림 메시지입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 여부 콤보 상자 단추는 메시지를 처리 합니다.  
+ 여부 콤보 상자 단추 메시지를 처리 합니다.  
   
 ##  <a name="onaddtocustomizepage"></a>  CMFCToolBarComboBoxButton::OnAddToCustomizePage  
- 단추에 추가 되는 프레임 워크에서 호출 된 **사용자 지정** 대화 상자.  
+ 단추를 추가할 때 프레임 워크에서 호출 된 **사용자 지정** 대화 상자.  
   
 ```  
 virtual void OnAddToCustomizePage();
@@ -788,17 +789,17 @@ virtual SIZE OnCalculateSize(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  콤보 상자 단추를 표시 하는 장치 컨텍스트.  
   
- [in] `sizeDefault`  
+ [in] *sizeDefault*  
  콤보 상자 단추의 기본 크기입니다.  
   
- [in] `bHorz`  
- 부모 도구 모음 도킹 상태입니다. `TRUE` 도구 모음을 가로로 도킹 되어 및 `FALSE` 세로로 도구 모음 도킹 된 경우.  
+ [in] *bHorz*  
+ 부모 도구 모음 도킹 상태입니다. 도구 모음 세로로 도킹 되 면 도구 모음은 가로 및 FALSE에 도킹 되 면 TRUE입니다.  
   
 ### <a name="return-value"></a>반환 값  
- A `SIZE` 픽셀 단위로 콤보 상자 단추의 크기를 포함 하는 구조입니다.  
+ `SIZE` 콤보 상자 단추 픽셀에서의 크기를 포함 하는 구조입니다.  
   
 ##  <a name="onchangeparentwnd"></a>  CMFCToolBarComboBoxButton::OnChangeParentWnd  
  새 도구 모음에 콤보 상자 단추를 삽입할 때 프레임 워크에서 호출 됩니다.  
@@ -808,7 +809,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  새 부모 도구 모음에 대 한 포인터입니다.  
   
 ##  <a name="onclick"></a>  CMFCToolBarComboBoxButton::OnClick  
@@ -821,17 +822,17 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWnd`  
+ [in] *pWnd*  
  콤보 상자 단추의 부모 창에 대 한 포인터입니다.  
   
- [in] `bDelay`  
+ [in] *bDelay*  
  파생된 클래스에서 사용 하기 위해 예약 되어 있습니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 이벤트를 처리 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ 메서드는 이벤트를 처리 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ##  <a name="onctlcolor"></a>  CMFCToolBarComboBoxButton::OnCtlColor  
- 사용자의 콤보 상자 단추 색을 설정 하려면 부모 도구 모음 색이 변경 될 때 프레임 워크에서 호출 됩니다.  
+ 사용자의 콤보 상자 단추 색을 설정 하려면 부모 도구 모음 색을 변경 하는 경우 프레임 워크에서 호출 됩니다.  
   
 ```  
 virtual HBRUSH OnCtlColor(
@@ -840,10 +841,10 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  콤보 상자 단추를 표시 하는 장치 컨텍스트.  
   
- [in] `nCtlColor`  
+ [in] *nCtlColor*  
  사용되지 않습니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -868,32 +869,32 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `Pdc`  
+ [in] *Pdc*  
  단추를 표시 하는 장치 컨텍스트.  
   
- [in] `rect`  
+ [in] *rect*  
  단추의 경계 사각형입니다.  
   
- [in] `pImages`  
+ [in] *pImages*  
  단추와 연결 된 이미지의 컬렉션입니다.  
   
- [in] `bHorz`  
- 부모 도구 모음 도킹 상태입니다. `TRUE` 도구 모음을 가로로 도킹 되어 및 `FALSE` 세로로 도구 모음 도킹 된 경우.  
+ [in] *bHorz*  
+ 부모 도구 모음 도킹 상태입니다. 도구 모음 세로로 도킹 되 면 도구 모음은 가로 및 FALSE에 도킹 되 면 TRUE입니다.  
   
- [in] `bCustomizeMode`  
- 응용 프로그램에 사용자 지정 모드 인지 여부입니다.  
+ [in] *bCustomizeMode*  
+ 응용 프로그램에서 사용자 지정 모드 인지 여부입니다.  
   
- [in] `bHighlight`  
+ [in] *bHighlight*  
  콤보 상자 단추를 강조 표시를 그릴 것인지 지정 합니다.  
   
- [in] `bDrawBorder`  
- 테두리가 있는 콤보 상자 단추를 그릴 것인지 지정 합니다.  
+ [in] *bDrawBorder*  
+ 테두리가 있는 콤보 상자 단추를 그리기 위한 것인지 지정 합니다.  
   
- [in] `bGrayDisabledButtons`  
- `TRUE` 음영 처리 된 비활성화 된 단추; 그리려면 `FALSE` 사용 안 함을 사용 하려면 컬렉션을 이미지입니다.  
+ [in] *bGrayDisabledButtons*  
+ 그리기 true로 설정 하면 비활성화 된 단추가; 음영 처리 비활성된 이미지 컬렉션을 사용 하려면 FALSE입니다.  
   
 ##  <a name="ondrawoncustomizelist"></a>  CMFCToolBarComboBoxButton::OnDrawOnCustomizeList  
- 콤보 상자 단추를 그리기 위해 프레임 워크에서 호출 된 **명령을** 의 창은 **사용자 지정** 대화 상자.  
+ 콤보 상자 단추를 그리기 위해 프레임 워크에서 호출 합니다 **명령** 창 합니다 **사용자 지정** 대화 상자.  
   
 ```  
 virtual int OnDrawOnCustomizeList(
@@ -903,56 +904,56 @@ virtual int OnDrawOnCustomizeList(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pDC`  
+ [in] *pDC*  
  콤보 상자 단추를 표시 하는 장치 컨텍스트.  
   
- [in] `rect`  
- 콤보 상자 단추 경계 사각형입니다.  
+ [in] *rect*  
+ 콤보 상자 단추의 경계 사각형입니다.  
   
- [in] `bSelected`  
- `TRUE` 콤보 상자 단추 선택 됩니다. 그렇지 않으면 `FALSE`합니다.  
+ [in] *bSelected*  
+ TRUE 이면 콤보 상자 단추를 선택 합니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="return-value"></a>반환 값  
- 콤보 상자 단추의 픽셀 너비입니다.  
+ 콤보 상자 단추에 픽셀에서 너비입니다.  
   
 ##  <a name="onglobalfontschanged"></a>  CMFCToolBarComboBoxButton::OnGlobalFontsChanged  
- 응용 프로그램 글꼴이 변경 될 때 콤보 상자 단추 글꼴을 설정 하기 위해 프레임 워크에서 호출 됩니다.  
+ 응용 프로그램 글꼴이 변경 될 때의 콤보 상자 단추 글꼴을 설정 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
 virtual void OnGlobalFontsChanged();
 ```  
   
 ##  <a name="onmove"></a>  CMFCToolBarComboBoxButton::OnMove  
- 부모 도구 모음에서 이동할 때 콤보 상자 단추의 위치를 변경 하기 위해 프레임 워크에서 호출 됩니다.  
+ 부모 도구 모음으로 이동 하는 경우 콤보 상자 단추 위치를 변경 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
 virtual void OnMove();
 ```  
   
 ##  <a name="onshow"></a>  CMFCToolBarComboBoxButton::OnShow  
- 콤보 상자 단추 숨겨지거나 표시 될 때 프레임 워크에서 호출 됩니다.  
+ 콤보 상자 단추를 숨기 거 나 표시 하는 경우 프레임 워크에서 호출 됩니다.  
   
 ```  
 virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bShow`  
- 숨기 거 나 콤보 상자 단추 표시 여부를 나타냅니다.  
+ [in] *bShow*  
+ 콤보 상자 단추를 표시 하거나 숨기려면 여부입니다.  
   
 ##  <a name="onsize"></a>  CMFCToolBarComboBoxButton::OnSize  
- 부모 도구 모음에서 크기를 변경 하는 경우 콤보 상자 단추의 크기를 변경 하기 위해 프레임 워크에서 호출 됩니다.  
+ 부모 도구 모음 크기를 변경 하는 경우 콤보 상자 단추의 크기를 변경 하기 위해 프레임 워크에서 호출 됩니다.  
   
 ```  
 virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iSize`  
+ [in] *iSize*  
  콤보 상자 단추 새 너비입니다.  
   
 ##  <a name="onupdatetooltip"></a>  CMFCToolBarComboBoxButton::OnUpdateToolTip  
- 콤보 상자 단추에 대 한 도구 설명 변경할 때 프레임 워크에서 호출 됩니다.  
+ 사용자 도구 설명 콤보 상자 단추에 대 한 변경 될 때 프레임 워크에서 호출 됩니다.  
   
 ```  
 virtual BOOL OnUpdateToolTip(
@@ -963,20 +964,20 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pWndParent`  
+ [in] *pWndParent*  
  콤보 상자 단추에 대 한 부모 창에 대 한 포인터입니다.  
   
- [in] `iButtonIndex`  
+ [in] *iButtonIndex*  
  콤보 상자 단추의 ID입니다.  
   
- [in] `wndToolTip`  
- 콤보 상자 단추와 연결할 도구 설명입니다.  
+ [in] *wndToolTip*  
+ 콤보 상자 단추를 사용 하 여 연결할 도구 설명입니다.  
   
- [in] `str`  
+ [in] *str*  
  도구 설명 텍스트입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 이벤트를 처리 하는 경우 그렇지 않으면 `FALSE`합니다.  
+ 메서드는 이벤트를 처리 하는 경우 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ##  <a name="removeallitems"></a>  CMFCToolBarComboBoxButton::RemoveAllItems  
  목록 및 편집 상자에서 모든 항목을 삭제합니다.  
@@ -986,7 +987,7 @@ void RemoveAllItems();
 ```  
   
 ### <a name="remarks"></a>설명  
- 목록에서 모든 항목 상자 및 콤보 상자 컨트롤을 편집할를 제거 합니다.  
+ 제거 목록에서 항목을 모두 상자 및 콤보 상자 컨트롤을 편집 합니다.  
   
 ##  <a name="selectitem"></a>  CMFCToolBarComboBoxButton::SelectItem  
  목록 상자에서 항목을 선택합니다.  
@@ -1001,25 +1002,25 @@ BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iIndex`  
+ [in] *iIndex*  
  목록 상자에 있는 항목의 0부터 시작 하는 인덱스입니다.  
   
- [in] `bNotify`  
- `TRUE` 선택;의 콤보 상자 단추에 알리기 위해 그렇지 않으면 `FALSE`합니다.  
+ [in] *bNotify*  
+ 에 게 알리려면 콤보 상자 단추를 선택 합니다. 그렇지 않으면 FALSE입니다.  
   
- [in] `dwData`  
+ [in] *dwData*  
  목록 상자에서 항목에 연결 된 데이터입니다.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  목록 상자에 있는 항목의 텍스트입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
+ 메서드가 성공 하면 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
   
 ##  <a name="selectitemall"></a>  CMFCToolBarComboBoxButton::SelectItemAll  
- 지정한 명령 ID가 있는 콤보 상자 단추의 목록 상자 항목 선택  
+ 지정 된 명령 ID가 있는 콤보 상자 단추의 목록 상자에서 항목을 선택 합니다.  
   
 ```  
 static BOOL SelectItemAll(
@@ -1038,20 +1039,20 @@ static BOOL SelectItemAll(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiCmd`  
- 목록 상자가 포함 된 콤보 상자 단추의 명령 ID입니다.  
+ [in] *uiCmd*  
+ 목록 상자를 포함 하는 콤보 상자 단추의 명령 ID입니다.  
   
- [in] `iIndex`  
- 목록 상자에 있는 항목의 0부터 시작 하는 인덱스입니다. 값이-1 목록 상자에서 모든 현재 선택 영역을 제거 하 고 편집 상자를 지웁니다.  
+ [in] *iIndex*  
+ 목록 상자에서 항목의 0부터 시작 하는 인덱스입니다. 값이-1 목록 상자에서 모든 현재 선택 영역을 제거 하 고 편집 상자를 지웁니다.  
   
- [in] `dwData`  
+ [in] *dwData*  
  목록 상자에 있는 항목의 데이터입니다.  
   
- [in] `lpszText`  
+ [in] *lpszText*  
  목록 상자에 있는 항목의 텍스트입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
+ 메서드가 성공 하면 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -1063,11 +1064,11 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in, out] `ar`  
+ [out에서] *ar*  
  `CArchive` serialize 할 개체입니다.  
   
 ### <a name="remarks"></a>설명  
- 설정에서 `CArchive` 개체이 이렇게 읽고 보관 파일에 기록 하는지 여부를 확인 합니다.  
+ 설정에는 `CArchive` 개체가 있는지 여부를 확인할이 메서드를 읽습니다 보관 파일에 씁니다.  
   
 ##  <a name="setaccdata"></a>  CMFCToolBarComboBoxButton::SetACCData  
  지정 된 채웁니다 `CAccessibilityData` 콤보 상자 단추에서 내게 필요한 옵션 데이터를 사용 하 여 개체입니다.  
@@ -1079,14 +1080,14 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pParent`  
+ [in] *pParent*  
  콤보 상자 단추의 부모 창입니다.  
   
- [out] `data`  
- A `CAccessibilityData` 콤보 상자 단추에서 내게 필요한 옵션 데이터를 받는 개체입니다.  
+ [out] *데이터*  
+ `CAccessibilityData` 콤보 상자 단추에서 내게 필요한 옵션 데이터를 받는 개체입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 메서드가 성공 하면 그렇지 않으면 `FALSE`합니다.  
+ 메서드가 성공 하면 TRUE입니다. 그렇지 않으면 FALSE입니다.  
   
 ##  <a name="setcentervert"></a>  CMFCToolBarComboBoxButton::SetCenterVert  
  응용 프로그램에서 콤보 상자 단추의 세로 위치를 설정합니다.  
@@ -1096,11 +1097,11 @@ static void SetCenterVert(BOOL bCenterVert=TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bCenterVert`  
- `TRUE` 센터에서 도구 모음의 콤보 상자 단추 `FALSE` 위쪽 도구 모음에 콤보 상자 단추에 맞게 합니다.  
+ [in] *bCenterVert*  
+ Center; 도구 모음에서 콤보 상자 단추를 true로 설정 하면 콤보 상자 단추를 도구 모음의 위쪽을 정렬 하려면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- 기본적으로 콤보 상자 단추 위에 정렬 됩니다.  
+ 기본적으로 콤보 상자 단추는 위쪽에 정렬 됩니다.  
   
 ##  <a name="setcontextmenuid"></a>  CMFCToolBarComboBoxButton::SetContextMenuID  
  콤보 상자 단추 바로 가기 메뉴 리소스 ID를 설정합니다.  
@@ -1110,7 +1111,7 @@ void SetContextMenuID(UINT uiResID);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `uiResID`  
+ [in] *uiResID*  
  바로 가기 메뉴 리소스 id입니다.  
   
 ##  <a name="setdropdownheight"></a>  CMFCToolBarComboBoxButton::SetDropDownHeight  
@@ -1121,39 +1122,39 @@ void SetDropDownHeight(int nHeight);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nHeight`  
- 목록 상자의 픽셀 단위 높이입니다.  
+ [in] *nHeight*  
+ 목록 상자의 픽셀 높이입니다.  
   
 ### <a name="remarks"></a>설명  
  기본 높이 150 픽셀입니다.  
   
 ##  <a name="setflatmode"></a>  CMFCToolBarComboBoxButton::SetFlatMode  
- 응용 프로그램에서 콤보 상자 단추의 평면 스타일 모양을 설정합니다.  
+ 응용 프로그램의 평면 스타일 모양을 콤보 상자 단추를 설정합니다.  
   
 ```  
 static void SetFlatMode(BOOL bFlat=TRUE);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `bFlat`  
- `TRUE` 평면 스타일 모양을;에 대 한 그렇지 않으면 `FALSE`합니다.  
+ [in] *bFlat*  
+ 평면 스타일 모양을;에 대해 TRUE 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- 콤보 상자 단추에 대 한 기본 플랫 스타일은 `FALSE`합니다.  
+ 콤보 상자 단추에 대 한 기본 평면 스타일은 FALSE입니다.  
   
 ##  <a name="setstyle"></a>  CMFCToolBarComboBoxButton::SetStyle  
- 상자 단추 콤보에 대 한 지정된 된 스타일을 설정 하 고 있지 않는 경우 컨트롤을 다시 그립니다.  
+ 상자 단추 콤보에 대 한 지정된 된 스타일을 설정 하 고 사용 하지 않는 경우 컨트롤을 다시 그립니다.  
   
 ```  
 virtual void SetStyle(UINT nStyle);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `nStyle`  
+ [in] *nStyle*  
  도구 모음 스타일의 비트 조합 (OR)입니다.  
   
 ### <a name="remarks"></a>설명  
- 도구 모음 단추 스타일의 목록이 참조 [ToolBar 컨트롤 스타일](../../mfc/reference/toolbar-control-styles.md)  
+ 도구 모음 단추 스타일의 목록을 참조 하세요. [ToolBar 컨트롤 스타일](../../mfc/reference/toolbar-control-styles.md)  
   
 ##  <a name="settext"></a>  CMFCToolBarComboBoxButton::SetText  
  상자 단추 콤보의 편집 상자에 텍스트를 설정 합니다.  
@@ -1163,7 +1164,7 @@ void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `lpszText`  
+ [in] *lpszText*  
  편집 상자에 대 한 텍스트를 포함 하는 문자열에 대 한 포인터입니다.  
   
 ## <a name="see-also"></a>참고 항목  

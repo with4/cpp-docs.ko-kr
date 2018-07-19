@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871616"
 ---
 # <a name="cropping-or-extending-an-entire-image-image-editor-for-icons"></a>전체 이미지 자르기 또는 확장(아이콘에 대한 이미지 편집기)
 다음 절차 자르거나 전체 이미지를 확장 하는 방법을 보여 줍니다.  

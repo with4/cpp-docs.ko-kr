@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134415"
 ---
 # <a name="language-keywords-ccli"></a>언어 키워드(C++/CLI)
 여러 언어 키워드는 Visual c + + Managed Extensions for c + + 변경 합니다.  

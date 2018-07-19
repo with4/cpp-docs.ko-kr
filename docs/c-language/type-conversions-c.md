@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32387241"
 ---
 # <a name="type-conversions-c"></a>형식 변환 (C)
 형식 변환은 지정된 연산자와 피연산자 및 연산자의 형식에 따라 달라집니다. 다음과 같은 경우에 형식 변환이 수행됩니다.  

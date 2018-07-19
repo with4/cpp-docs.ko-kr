@@ -32,11 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08c0cff2f6586ab5e385808fb806ed435b00bfc9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8d64d503c4bad0d452be174064e2932ed100d7de
+ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37121759"
 ---
 # <a name="ctabview-class"></a>CTabView 클래스
 `CTabView` 탭 컨트롤 클래스의 사용을 간소화 하는 클래스 ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) MFC의 문서/뷰 아키텍처를 사용 하는 응용 프로그램입니다.  
@@ -74,7 +75,7 @@ class CTabbedView : public CView
   
  [TabbedView 샘플: MFC 탭 보기 응용 프로그램](../../visual-cpp-samples.md) 의 사용법을 보여 줍니다 `CTabView`합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 어떻게 `CTabView` TabbedView 샘플에 사용 됩니다.  
   
  [!code-cpp[NVC_MFC_TabbedView#1](../../mfc/reference/codesnippet/cpp/ctabview-class_1.h)]  
@@ -94,16 +95,16 @@ int AddView(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `pViewClass`  
+ [in] *pViewClass*  
  삽입 된 보기의 런타임 클래스에 대 한 포인터입니다.  
   
- [in] `strViewLabel`  
+ [in] *strViewLabel*  
  탭의 텍스트를 지정합니다.  
   
- [in] `iIndex`  
+ [in] *iIndex*  
  보기를 삽입할 0부터 시작 위치를 지정 합니다. 위치가 있는 경우-1의 끝에 새 탭 삽입 됩니다.  
   
- [in] `pContext`  
+ [in] *pContext*  
  에 대 한 포인터는 `CCreateContext` 보기의 합니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -120,7 +121,7 @@ int FindTab(HWND hWndView) const;
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `hWndView`  
+ [in] *hWndView*  
  보기의 핸들입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -137,7 +138,7 @@ CView* GetActiveView() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- 현재 보기에 대 한 유효한 포인터 또는 `NULL` 경우 활성 보기가 없습니다.  
+ 현재 보기 또는 활성 뷰가 없는 경우 NULL을 유효한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
   
@@ -159,12 +160,12 @@ virtual BOOL IsScrollBar() const;
 ```  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 경우 공유 스크롤 막대와 함께 탭 보기를 만들어야 합니다. 그렇지 않으면 `FALSE`입니다.  
+ 탭 보기 공유 스크롤 막대와 함께 생성 되어야 하면 TRUE이 고 그렇지 않으면 FALSE입니다.  
   
 ### <a name="remarks"></a>설명  
- 이 메서드를 호출 하는 프레임 워크는 경우는 `CTabView` 개체가 만들어집니다.  
+ 이 메서드를 호출 하는 프레임 워크는 경우는 *CTabView* 개체가 만들어집니다.  
   
- 재정의 `IsScrollBar` 에서 메서드는 `CTabView`-파생 된 클래스 및 반환 `TRUE` 공유 가로 스크롤 막대를 보유 하는 뷰를 만들 경우.  
+ 재정의 *IsScrollBar* 에서 메서드는 *CTabView*-클래스를 파생 하 고 공유 가로 스크롤 막대를 보유 하는 보기를 만들려는 경우 TRUE를 반환 합니다.  
   
 ##  <a name="onactivateview"></a>  CTabView::OnActivateView  
  활성 또는 비활성 탭 보기 만들어질 때 프레임 워크에서 호출 됩니다.  
@@ -174,7 +175,7 @@ virtual void OnActivateView(CView* view);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `view`  
+ [in] *보기*  
  보기에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -188,7 +189,7 @@ BOOL RemoveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iTabNum`  
+ [in] *iTabNum*  
  제거할 보기의 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
@@ -204,11 +205,11 @@ BOOL SetActiveView(int iTabNum);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] `iTabNum`  
+ [in] *iTabNum*  
  탭 보기의 0부터 시작 하는 인덱스입니다.  
   
 ### <a name="return-value"></a>반환 값  
- `TRUE` 지정 된 뷰가 활성화 된 경우 `FALSE` 경우 해당 뷰의 인덱스가 잘못 되었습니다.  
+ 된 경우 TRUE 지정된 된 보기 활성 상태 이면 FALSE 해당 뷰의 인덱스가 유효 하지 않을 경우.  
   
 ### <a name="remarks"></a>설명  
  자세한 내용은 참조 [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab)합니다.  

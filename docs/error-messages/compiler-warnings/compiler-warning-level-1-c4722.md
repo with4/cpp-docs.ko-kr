@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33282586"
 ---
 # <a name="compiler-warning-level-1-c4722"></a>컴파일러 경고(수준 1) C4722
 'function': 소멸자가 반환하지 않습니다. 메모리 누수가 발생할 수 있습니다.  

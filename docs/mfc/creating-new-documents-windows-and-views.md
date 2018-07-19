@@ -34,11 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89d929f4d7419e027a1018c4b0b33a4e42416613
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 3c0abc53e1a24d822605c9e5bfd7ab8276b32f82
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36931208"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>새 문서, 창 및 뷰 만들기
 다음 그림에서는 문서, 뷰 및 프레임 창에 대 한 생성 프로세스의 개요를 제공합니다. 프로그램에 참여 하는 개체에 집중 하는 다른 문서는 추가 세부 정보를 제공 합니다.  
@@ -54,10 +55,10 @@ ms.lasthandoff: 05/04/2018
  ![보기를 만드는 방법에 대 한 시퀀스](../mfc/media/vc387l3.gif "vc387l3")  
 뷰를 만드는 순서  
   
- 프레임 워크를 새 문서, 뷰 및 프레임 창 개체를 초기화 하는 방법에 대 한 정보에 대 한 클래스를 참조 하십시오. [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), 및 [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) MFC 라이브러리 참조에서. 또한 참조 [Technical Note 22](../mfc/tn022-standard-commands-implementation.md), 생성 및 초기화 프로세스에 대 한 프레임 워크의 표준 명령의 해당 토론에서 자세하게 설명 하는 `New` 및 **열려** 에 있는 항목의 **파일** 메뉴.  
+ 프레임 워크를 새 문서, 뷰 및 프레임 창 개체를 초기화 하는 방법에 대 한 정보에 대 한 클래스를 참조 하십시오. [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), 및 [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) MFC 라이브러리 참조에서. 또한 참조 [Technical Note 22](../mfc/tn022-standard-commands-implementation.md), 생성 및 초기화 프로세스에 대 한 프레임 워크의 표준 명령의 해당 토론에서 자세하게 설명 하는 **새로** 및 **열** 에 있는 항목의 **파일** 메뉴.  
   
 ##  <a name="_core_initializing_your_own_additions_to_these_classes"></a> 이러한 클래스에 직접 추가 된 초기화  
- 앞의 그림 또한 위치도을 응용 프로그램의 개체를 초기화 하는 멤버 함수를 재정의할 수 있습니다. 재정의 `OnInitialUpdate` 보기 클래스는 보기를 초기화 하는 것이 좋습니다. `OnInitialUpdate` 호출 프레임 창을 만들고 보기 프레임 창 내에서 해당 문서에 연결 된 직후에 발생 합니다. 예를 들어, 보기는 스크롤 보기 (에서 파생 된 `CScrollView` 대신 `CView`), 문서 크기에 따라 뷰 크기를 설정 해야 프로그램 `OnInitialUpdate` 재정의 합니다. (이 프로세스는 클래스의 설명에 설명 되어 [CScrollView](../mfc/reference/cscrollview-class.md).) 재정의할 수 있습니다는 **CDocument** 멤버 함수 `OnNewDocument` 및 `OnOpenDocument` 문서의 응용 프로그램 관련 초기화를 제공 하기. 일반적으로 두 가지 방법으로 문서를 만들 수 없으므로 둘 다 재정의 해야 있습니다.  
+ 앞의 그림 또한 위치도을 응용 프로그램의 개체를 초기화 하는 멤버 함수를 재정의할 수 있습니다. 재정의 `OnInitialUpdate` 보기 클래스는 보기를 초기화 하는 것이 좋습니다. `OnInitialUpdate` 호출 프레임 창을 만들고 보기 프레임 창 내에서 해당 문서에 연결 된 직후에 발생 합니다. 예를 들어, 보기는 스크롤 보기 (에서 파생 된 `CScrollView` 대신 `CView`), 문서 크기에 따라 뷰 크기를 설정 해야 프로그램 `OnInitialUpdate` 재정의 합니다. (이 프로세스는 클래스의 설명에 설명 되어 [CScrollView](../mfc/reference/cscrollview-class.md).) 재정의할 수 있습니다는 `CDocument` 멤버 함수 `OnNewDocument` 및 `OnOpenDocument` 문서의 응용 프로그램 관련 초기화를 제공 하기. 일반적으로 두 가지 방법으로 문서를 만들 수 없으므로 둘 다 재정의 해야 있습니다.  
   
  대부분의 경우에서 재정의 기본 클래스 버전을 호출 해야 합니다. 자세한 내용은 클래스의 명명 된 멤버 함수를 참조 하십시오. [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), 및 [CWinApp](../mfc/reference/cwinapp-class.md) MFC에서 라이브러리 참조 합니다.  
   

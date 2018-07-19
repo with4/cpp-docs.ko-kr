@@ -22,6 +22,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32384544"
 ---
 # <a name="declarations-and-types"></a>선언 및 형식
 이 단원에서는 변수, 함수 및 형식의 선언 및 초기화에 대해 설명합니다. C 언어는 기본 데이터 형식의 표준 집합을 포함합니다. 또한 이미 정의된 형식에 따라 새 형식을 선언하여 "파생 형식"이라는 사용자 자신의 데이터 형식을 추가할 수 있습니다. 다음 항목을 다룹니다.  

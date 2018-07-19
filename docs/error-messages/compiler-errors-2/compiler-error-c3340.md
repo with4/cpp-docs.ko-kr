@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255125"
 ---
 # <a name="compiler-error-c3340"></a>컴파일러 오류 C3340
 'interface': 인터페이스는 coclass 'class'에서 'restricted'이면서 'default'일 수 없습니다.  

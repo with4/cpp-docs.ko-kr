@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33878176"
 ---
 # <a name="load-palette-colors-dialog-box-image-editor-for-icons"></a>색상표 로드 대화 상자(아이콘에 대한 이미지 편집기)
 이 대화 상자를 사용 하 여 프로젝트에서 사용할 특별 한 색상표를 로드 합니다. 자세한 내용은 참조 [저장 하 고 다른 색상표 로드](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md)합니다.  

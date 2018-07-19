@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33232941"
 ---
 # <a name="compiler-error-c2599"></a>컴파일러 오류 C2599
 'enum': 열거형 형식의 정방향 선언은 허용 되지 않습니다  

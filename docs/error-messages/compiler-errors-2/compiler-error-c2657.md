@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231385"
 ---
 # <a name="compiler-error-c2657"></a>컴파일러 오류 C2657
 ' 클래스:: *'에서 문의 시작 찾을 (했는지 확인 한 형식을 지정 하 시겠습니까?)  

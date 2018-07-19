@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33231320"
 ---
 # <a name="compiler-error-c2619"></a>컴파일러 오류 C2619
 'identifier': 익명 구조체 또는 집합체에는 정적 데이터 멤버가 허용되지 않습니다.  

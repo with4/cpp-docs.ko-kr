@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33277883"
 ---
 # <a name="compiler-warning-level-1-c4553"></a>컴파일러 경고(수준 1) C4553
 'operator': 연산자에 영향을 주지 않습니다. 'operator' 사용 하려고 했습니까?  

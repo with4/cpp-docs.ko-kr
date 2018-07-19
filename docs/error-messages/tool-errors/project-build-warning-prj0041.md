@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318063"
 ---
 # <a name="project-build-warning-prj0041"></a>프로젝트 빌드 경고 PRJ0041
 찾을 수 없습니다 '종속성' 'file' 파일에 대 한 종속성입니다. 프로젝트가 빌드할 수 있지만이 파일을 찾을 때까지 최신 표시 계속 될 수 있습니다.  

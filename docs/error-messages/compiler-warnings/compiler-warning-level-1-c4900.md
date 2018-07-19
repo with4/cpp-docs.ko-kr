@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33304751"
 ---
 # <a name="compiler-warning-level-1-c4900"></a>컴파일러 경고(수준 1) C4900
 'tool1' 버전 'version1'과 'tool2' 버전 'version2' 사이에 중간 언어가 일치하지 않습니다.  

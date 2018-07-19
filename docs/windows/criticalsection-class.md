@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33871512"
 ---
 # <a name="criticalsection-class"></a>CriticalSection 클래스
 임계 영역 개체를 나타냅니다.  

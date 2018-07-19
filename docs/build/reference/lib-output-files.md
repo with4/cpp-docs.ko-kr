@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32370490"
 ---
 # <a name="lib-output-files"></a>LIB 출력 파일
 LIB에서 생성 된 출력 파일은 다음 표에 나와 있는 것 처럼가 사용 되 고 있는 모드에 따라 달라 집니다.  

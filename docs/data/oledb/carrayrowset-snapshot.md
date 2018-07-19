@@ -30,6 +30,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089440"
 ---
 # <a name="carrayrowsetsnapshot"></a>CArrayRowset::Snapshot
 전체 행 집합을 메모리로 읽어서 이에 대한 이미지 또는 스냅숏을 만듭니다.  

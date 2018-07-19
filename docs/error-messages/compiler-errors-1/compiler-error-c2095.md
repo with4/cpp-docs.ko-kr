@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168320"
 ---
 # <a name="compiler-error-c2095"></a>컴파일러 오류 C2095
 'function': 실제 매개 변수는 'void' 형식의: 'number' 매개 변수  

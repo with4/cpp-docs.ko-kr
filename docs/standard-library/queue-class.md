@@ -32,11 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5442888e8e370892add687c21132e397ae683ac8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d50b53f9c06c5edbd159e7e2bac112f6f30432df
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954918"
 ---
 # <a name="queue-class"></a>queue 클래스
 
@@ -53,15 +54,15 @@ class queue
 
 *형식* 큐에 저장 되는 요소 데이터 형식
 
-`Container` 큐를 구현 하는 데 기본 컨테이너의 형식입니다.
+*컨테이너* 큐를 구현 하는 데 사용 된 기본 컨테이너의 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-스택 개체의 첫 번째 템플릿 매개 변수에 규정된 클래스 **Type** 의 요소는 [value_type](#value_type)과 같고, 두 번째 템플릿 매개 변수로 규정된 기본 컨테이너 클래스 **Container**에 있는 요소의 형식과 일치해야 합니다. **Type**은 해당 형식의 개체를 복사하고 해당 형식의 변수에 값을 할당할 수 있도록 할당 가능해야 합니다.
+클래스의 요소 `Type` 첫 번째 템플릿에서 규정 된 큐 개체의 매개 변수는 [value_type](#value_type) 기본 컨테이너 클래스에 있는 요소의 형식과 일치 해야 `Container` 에서 규정 합니다 두 번째 템플릿 매개 변수입니다. `Type` 해당 형식의 개체를 복사 하 고 해당 형식의 변수에 값을 할당할 수 있도록 할당할 수 있어야 합니다.
 
-스택에 적합한 기본 컨테이너 클래스에는 `front`, **back**, `push_back` 및 `pop_front`의 작업을 지원하는 [deque](../standard-library/deque-class.md) 및 [list](../standard-library/list-class.md) 또는 기타 시퀀스 컨테이너가 포함됩니다. 기본 컨테이너 클래스는 제한된 시퀀스 컨테이너 멤버 함수 집합만 공용 인터페이스로 표시하는 컨테이너 어댑터 내에서 캡슐화되어 있습니다.
+큐에 대 한 적합 한 기본 컨테이너 클래스를 포함 [deque](../standard-library/deque-class.md) 하 고 [목록](../standard-library/list-class.md), 또는 기타 시퀀스 컨테이너가 지 원하는 작업 `front`를 `back`, `push_back`, 및 `pop_front`합니다. 기본 컨테이너 클래스는 제한된 시퀀스 컨테이너 멤버 함수 집합만 공용 인터페이스로 표시하는 컨테이너 어댑터 내에서 캡슐화되어 있습니다.
 
-스택 개체는 클래스 **Type**의 요소가 동등 비교 가능한 경우에만 동등 비교할 수 있으며 클래스 **Type**의 요소가 미만 비교 가능한 경우에만 미만 비교가 가능합니다.
+큐는 같음 비교 가능한 경우 경우에만 클래스의 개체 `Type` 같음 비교가 되며 작은-비교 가능한 경우 및 경우에만 보다 클래스의 요소 `Type` 작은-비교가 가능 합니다.
 
 C++ 표준 라이브러리를 통해 정의되는 컨테이너 어댑터에는 stack, queue, priority_queue의 세 가지 형식이 있습니다. 각 어댑터는 일부 기본 컨테이너 클래스의 기능을 제한하여 표준 데이터 구조에 대해 정확하게 제어되는 인터페이스를 제공합니다.
 
@@ -118,11 +119,11 @@ queue의 마지막 요소입니다. queue가 비어 있으면 반환 값이 정�
 
 ### <a name="remarks"></a>설명
 
-**back**의 반환 값이 `const_reference`에 할당된 경우 queue 개체를 수정할 수 없습니다. **back**의 반환 값이 **reference**에 할당된 경우에는 queue 개체를 수정할 수 있습니다.
+`back`의 반환 값이 `const_reference`에 할당된 경우 queue 개체를 수정할 수 없습니다. 하는 경우의 반환 값 `back` 에 할당 되는 `reference`, 큐 개체를 수정할 수 있습니다.
 
 1 또는 2로 정의된 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)을 사용하여 컴파일한 경우 빈 queue의 요소에 액세스하면 런타임 오류가 발생합니다.  자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // queue_back.cpp
@@ -162,7 +163,7 @@ typedef Container container_type;
 
 `Container`에 대한 자세한 내용은 [queue 클래스](../standard-library/queue-class.md) 항목의 설명 섹션을 참조하세요.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `container_type`을 선언하고 사용하는 방법에 대한 예제는 [queue](#queue)의 예제를 참조하세요.
 
@@ -178,7 +179,7 @@ bool empty() const;
 
 queue가 비어 있으면 **true**이고 비어 있지 않으면 **false**입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // queue_empty.cpp
@@ -228,13 +229,13 @@ const_reference front() const;
 
 ### <a name="remarks"></a>설명
 
-`front`의 반환 값이 `const_reference`에 할당된 경우 queue 개체를 수정할 수 없습니다. `front`의 반환 값이 **reference**에 할당된 경우에는 queue 개체를 수정할 수 있습니다.
+`front`의 반환 값이 `const_reference`에 할당된 경우 queue 개체를 수정할 수 없습니다. 하는 경우의 반환 값 `front` 에 할당 되는 `reference`, 큐 개체를 수정할 수 있습니다.
 
-구성원 함수는 비어 있지 않아야 하는 제어되는 시퀀스의 첫 번째 요소에 대한 **reference**를 반환합니다.
+멤버 함수가 반환 하는 `reference` 제어 된 시퀀스의 첫 번째 요소에 비어 있지 않아야 합니다.
 
 1 또는 2로 정의된 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)을 사용하여 컴파일한 경우 빈 queue의 요소에 액세스하면 런타임 오류가 발생합니다.  자세한 내용은 [확인된 반복기](../standard-library/checked-iterators.md)를 참조하세요.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // queue_front.cpp
@@ -276,7 +277,7 @@ void pop();
 
 구성원 함수를 적용하려면 queue가 비어 있지 않아야 합니다. queue의 맨 위 위치에는 가장 최근에 추가한 요소가 배치되며, 이 요소가 컨테이너 끝의 마지막 요소가 됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // queue_pop.cpp
@@ -330,13 +331,13 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>매개 변수
 
-`val` 큐의 뒤에 추가 하는 요소입니다.
+*val* queue 끝에 추가 된 요소입니다.
 
 ### <a name="remarks"></a>설명
 
 queue의 뒤 위치에는 가장 최근에 추가한 요소가 배치되며, 이 요소가 컨테이너 끝의 마지막 요소가 됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // queue_push.cpp
@@ -380,13 +381,13 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>매개 변수
 
-`right` **const** 복사본으로 생성 된 큐가 있는 컨테이너입니다.
+*오른쪽* 는 **const** 복사본으로 생성 된 큐가 있는 컨테이너입니다.
 
 ### <a name="remarks"></a>설명
 
 queue의 기본 컨테이너는 deque입니다. list는 기본 컨테이너로 지정할 수 있지만 vector는 필수 `pop_front` 구성원 함수를 포함하지 않으므로 기본 컨테이너로 지정할 수 없습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // queue_queue.cpp
@@ -446,7 +447,7 @@ size_type size() const;
 
 queue의 현재 길이입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // queue_size.cpp
@@ -487,7 +488,7 @@ typedef typename Container::size_type size_type;
 
 이 형식은 queue에 의해 조정되는 기본 컨테이너의 `size_type`과 동일한 의미입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 `size_type`을 선언하고 사용하는 방법에 대한 예제는 [queue::front](#front)의 예제를 참조하세요.
 
@@ -503,7 +504,7 @@ typedef typename Container::value_type value_type;
 
 이 형식은 queue에 의해 조정되는 기본 컨테이너의 `value_type`과 동일한 의미입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // queue_value_type.cpp

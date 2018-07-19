@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33107417"
 ---
 # <a name="setparamtype"></a>SET_PARAM_TYPE
 `COLUMN_ENTRY` 매크로 입력, 출력 또는 입력/출력 다음에 오는 `SET_PARAM_TYPE` 매크로를 지정합니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369372"
 ---
 # <a name="module-states-of-a-regular-mfc-dll-dynamically-linked-to-mfc"></a>MFC에 동적으로 링크 하는 MFC 기본 DLL의 모듈 상태
 MFC DLL에는 일반적인 MFC DLL에 동적으로 연결 하는 기능을 사용 하면 매우 복잡 한 일부 구성 합니다. 예를 들어 기본 MFC DLL과이 사용 하는 실행 파일이 둘 다 동적으로 연결할 수 및 MFC 확장 Dll MFC DLL에.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870834"
 ---
 # <a name="control"></a>컨트롤
 사용자 정의 형식 컨트롤 임을 지정 합니다.  

@@ -3,13 +3,14 @@ layout: LandingPage
 author: jasongroce
 ms.author: apexprodleads
 ms.topic: landing-page
-title: "C++ 설명서로 Linux 개발"
-description: "Linux에서 실행되는 응용 프로그램을 만들고 디버그합니다."
+title: C++ 설명서로 Linux 개발
+description: Linux에서 실행되는 응용 프로그램을 만들고 디버그합니다.
 ms.openlocfilehash: c4794dbeb7e5a1d356e251686653c6c0aa0a023a
 ms.sourcegitcommit: c770a343def04ae77522708387c3f7c470e49969
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/08/2018
+ms.locfileid: "29794182"
 ---
 # <a name="linux-development-with-c-documentation"></a>C++ 설명서로 Linux 개발
 

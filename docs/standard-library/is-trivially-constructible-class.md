@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 757a5eb526bc8d4294a64cbdc9645e72285162ce
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: f73559503ad427c9b7eb513d4164d3348c652948
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954749"
 ---
 # <a name="istriviallyconstructible-class"></a>is_trivially_constructible 클래스
 
@@ -36,13 +37,13 @@ struct is_trivially_constructible;
 
 ### <a name="parameters"></a>매개 변수
 
-`T` 형식이 쿼리입니다.
+*T* 쿼리할 형식입니다.
 
-`Args` 생성자에서 일치 하도록 인수 형식을 `T`합니다.
+*Args* 의 생성자에서 일치 시킬 인수 형식 *T*합니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 `T` 형식이 `Args`의 인수 형식을 사용하여 일반적으로 생성 가능한 경우 true이고, 그렇지 않으면 false입니다. 변수 정의 `T t(std::declval<Args>()...);`의 형식이 올바르고 특수한 작업을 호출하지 않는 것으로 알려진 경우 `T` 형식은 일반적으로 생성 가능합니다. `T`와 `Args`의 모든 형식은 둘 다 완전한 형식이거나, `void`이거나, 범위를 알 수 없는 배열이어야 합니다.
+형식 조건자의 인스턴스 형태인 경우 true 형식을 *T* 의 인수 형식을 사용 하 여 일반적으로 생성 가능한 됩니다 *Args*, 그렇지 않으면 false입니다. 형식 *T* 일반적으로 생성 가능한 경우 변수 정의 `T t(std::declval<Args>()...);` 올바른 형식이 고 없습니다 trivial이 아닌 작업을 호출 하 라고 합니다. 둘 다 *T* 와의 모든 형식 *Args* 완전 한 형식 이어야 합니다 **void**, 또는 범위를 알 수 없는 배열입니다.
 
 ## <a name="requirements"></a>요구 사항
 

@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ada34aae858d8e29b119fa08d363a0c26013567
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51da4a44f99c83ba34ec035e77173946d2327fe9
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38953365"
 ---
 # <a name="expressions-c"></a>식 (C++)
 이 단원에서는 C++ 식에 대해 설명합니다. 식은 다음과 같은 용도 중 하나 이상으로 사용되는 일련의 연산자와 피연산자입니다.  
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
 -   "의도하지 않은 결과"를 생성합니다. 의도하지 않은 결과는 예를 들어 개체의 값을 수정하는 등 식의 평가 이외의 모든 작업입니다.  
   
- C++에서는 연산자를 오버로드할 수 있으며 해당 의미는 사용자 정의할 수 있습니다. 하지만 우선 순위와 피연산자의 수를 수정할 수 없습니다. 이 섹션에서는 오버로드가 아니라 언어로 제공되기 때문에 연산자의 문법과 의미론을 설명합니다. 외에 [유형의 식](../cpp/types-of-expressions.md) 및 [식의 의미 체계](../cpp/semantics-of-expressions.md), 다음 항목을 설명 합니다.  
+ C++에서는 연산자를 오버로드할 수 있으며 해당 의미는 사용자 정의할 수 있습니다. 하지만 우선 순위와 피연산자의 수를 수정할 수 없습니다. 이 섹션에서는 오버로드가 아니라 언어로 제공되기 때문에 연산자의 문법과 의미론을 설명합니다. 외에 [유형의 식](../cpp/types-of-expressions.md) 및 [식의 의미 체계](../cpp/semantics-of-expressions.md), 다음 내용을 다룹니다.  
   
 -   [기본 식](../cpp/primary-expressions.md)  
   
@@ -44,8 +45,6 @@ ms.lasthandoff: 05/03/2018
 -   [조건 연산자](../cpp/conditional-operator-q.md)  
   
 -   [상수 식](../cpp/cpp-constant-expressions.md)  
-  
--   [명시적 형식 변환이 있는 식](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae)  
   
 -   [캐스팅 연산자](../cpp/casting-operators.md)  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882062"
 ---
 # <a name="mfc-predefined-symbols"></a>미리 정의된 MFC 기호
 MFC 프로젝트는 항상 기간을 지 원하는 여러 헤더 파일을 포함 합니다. 통해 추가한 #include 문을 StdAfx.h 파일에:  

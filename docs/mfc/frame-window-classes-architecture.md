@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33344180"
 ---
 # <a name="frame-window-classes-architecture"></a>프레임 창 클래스(아키텍처)
 문서/뷰 아키텍처의 프레임 창이 있는 뷰 창을 포함 하는 창입니다. 또한 지원 제어 있으면 여기에 연결 된 막대입니다.  

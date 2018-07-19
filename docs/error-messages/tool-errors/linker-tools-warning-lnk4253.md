@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301283"
 ---
 # <a name="linker-tools-warning-lnk4253"></a>링커 도구 경고 LNK4253
 섹션 '사항 구역 1' 'section2;'에 병합 되지 않았습니다 'section3'에 이미 병합  

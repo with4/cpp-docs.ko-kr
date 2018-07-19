@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112045"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>관리 코드에서 네이티브 함수 호출
 공용 언어 런타임 관리 수 있게 네이티브 동적 연결 라이브러리 (Dll)의 C 스타일 함수를 호출 하는 코드는 PInvoke 또는 플랫폼 호출 서비스를 제공 합니다. 런타임 및 것 바로 "작동", 또는 IJW, 메커니즘에 대 한 COM 상호 운용성의 경우와 동일한 데이터 마샬링 사용 됩니다.  

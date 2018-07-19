@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379192"
 ---
 # <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>목록 컨트롤에서 스크롤, 정렬 및 찾기
 목록 컨트롤 ([CListCtrl](../mfc/reference/clistctrl-class.md)) 기본적으로 스크롤 가능 합니다. 자세한 내용은 참조 [스크롤 위치](http://msdn.microsoft.com/library/windows/desktop/bb774736) Windows sdk에서 및 [스크롤](../mfc/reference/clistctrl-class.md#scroll) 멤버 함수입니다.  

@@ -29,6 +29,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32373129"
 ---
 # <a name="i-additional-include-directories"></a>/I(추가 포함 디렉터리)
 Include 파일을 검색할 디렉터리 목록에 디렉터리를 추가 합니다.  

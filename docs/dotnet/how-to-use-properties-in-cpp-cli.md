@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33134342"
 ---
 # <a name="how-to-use-properties-in-ccli"></a>방법: C++/CLI에서 속성 사용
 이 문서에서는 C + 속성을 사용 하는 방법을 보여 줍니다. + CLI 합니다.  

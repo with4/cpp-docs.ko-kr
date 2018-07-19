@@ -26,11 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05257749c95b619c479538a1322746ae2b487b6a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d92df2378ea8f41c140b69ba3878ca0d7a18e08a
+ms.sourcegitcommit: f1b051abb1de3fe96350be0563aaf4e960da13c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37037374"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel 클래스
 클릭할 때 표시 되는 리본 패널을 구현 하는 [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)합니다.  
@@ -89,7 +90,7 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] [out] `pElem`  
+ [in] [out] *pElem*  
  기본 패널에 추가 하는 리본 요소에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -105,10 +106,10 @@ void AddRecentFilesList(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszLabel`  
+ *lpszLabel*  
  최근 파일 목록에 추가할 문자열을 지정 합니다.  
   
- `nWidth`  
+ *nWidth*  
  최근 파일 목록 패널의 픽셀에서 너비를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  
@@ -121,7 +122,7 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- [in] [out] `pElem`  
+ [in] [out] *pElem*  
  기본 패널의 아래쪽에 추가 하려면 리본 요소에 대 한 포인터입니다.  
   
 ### <a name="remarks"></a>설명  
@@ -136,10 +137,10 @@ void AddToRight(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pElem`  
+ *pElem*  
  기본 패널의 오른쪽에 추가 될 리본 요소에 대 한 포인터입니다.  
   
- `nWidth`  
+ *nWidth*  
  오른쪽 패널의 픽셀에서 너비를 지정 합니다.  
   
 ### <a name="remarks"></a>설명  

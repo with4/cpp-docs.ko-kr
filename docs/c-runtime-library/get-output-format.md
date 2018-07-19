@@ -35,6 +35,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32392239"
 ---
 # <a name="getoutputformat"></a>_get_output_format
 출력 형식 플래그의 현재 값을 가져옵니다.  

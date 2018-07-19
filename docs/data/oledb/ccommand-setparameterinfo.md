@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094529"
 ---
 # <a name="ccommandsetparameterinfo"></a>CCommand::SetParameterInfo
 각 명령 매개 변수의 네이티브 유형을 지정합니다.  

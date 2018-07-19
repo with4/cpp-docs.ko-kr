@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388603"
 ---
 # <a name="parsing-c-command-line-arguments"></a>C 명령줄 인수 구문 분석
 **Microsoft 전용**  

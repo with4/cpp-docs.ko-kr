@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32422165"
 ---
 # <a name="tilestatic-keyword"></a>tile_static 키워드
 `tile_static` 키워드는 스레드의 타일에 있는 모든 스레드에서 액세스할 수 있는 변수를 선언하는 데 사용됩니다. 변수의 수명은 실행이 선언 지점에 도달할 때 시작되고 커널 함수가 반환될 때 종료됩니다. 타일 사용에 대 한 자세한 내용은 참조 하십시오. [를 사용 하 여 타일](../parallel/amp/using-tiles.md)합니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33853819"
 ---
 # <a name="benefits-of-character-set-portability"></a>문자 집합 이식성의 이점
 현재 응용 프로그램을 국제화 작성할 하지 않는 경우에 MFC 및 C 런타임 이식성 기능을 사용 하 여 얻을 수 있습니다.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33114486"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>관리되는 예외 사용의 기본 개념
 이 항목에서는 관리 되는 응용 프로그램에서 예외 처리를 설명 합니다. 즉, 응용 프로그램을 사용 하 여 컴파일한는 **/clr** 컴파일러 옵션입니다.  

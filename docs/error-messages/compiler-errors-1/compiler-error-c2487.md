@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33225465"
 ---
 # <a name="compiler-error-c2487"></a>컴파일러 오류 C2487
 'identifier': dll 인터페이스 클래스의 멤버 dll 인터페이스를 선언할 수 없습니다.  

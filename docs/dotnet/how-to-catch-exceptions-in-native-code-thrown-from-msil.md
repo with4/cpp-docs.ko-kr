@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33127879"
 ---
 # <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>방법: 네이티브 코드에서 MSIL이 throw한 예외 catch
 네이티브 코드에서 MSIL에서 네이티브 c + + 예외를 catch 할 수 있습니다.  와 CLR 예외를 catch 할 수 있습니다 `__try` 및 `__except`합니다.  

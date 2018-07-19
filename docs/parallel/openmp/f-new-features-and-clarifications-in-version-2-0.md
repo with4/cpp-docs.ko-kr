@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33693145"
 ---
 # <a name="f-new-features-and-clarifications-in-version-20"></a>F. 새로운 기능 및 버전 2.0에에서 대 한 설명
 이 부록 키 변경 버전 2.0 버전 1.0의에서 이동에 OpenMP C/c + + 사양에 요약 되어 있습니다. 다음 항목은 사양에 추가 된 새로운 기능:  

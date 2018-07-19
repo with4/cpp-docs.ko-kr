@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32385842"
 ---
 # <a name="sign-of-bit-fields"></a>비트 필드의 부호
 **ANSI 3.5.2.1** "일반" `int` 필드를 **signed int** 비트 필드 또는 unsigned int 비트 필드로 처리할지 여부  

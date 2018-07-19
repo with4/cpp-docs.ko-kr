@@ -14,11 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc0904c5e503b60d5d9015e5102b1155016c78a7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a053c837b0a2064a93a019d16856712553bd7a44
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39026567"
 ---
 # <a name="types-of-expressions"></a>식의 형식
 C++ 식은 여러 범주로 나뉩니다.  
@@ -31,11 +32,11 @@ C++ 식은 여러 범주로 나뉩니다.
   
 -   [이항 연산자로 구성 된 식](../cpp/expressions-with-binary-operators.md)합니다. 이항 연산자는 한 식에서 두 개의 피연산자에 대해 작동합니다.  
   
--   [조건부 연산자가 있는 식](../cpp/conditional-operator-q.md)합니다. 조건 연산자는 C++ 언어에서 유일한 삼항 연산자이며 피연산자 세 개를 사용합니다.  
+-   [조건부 연산자를 사용 하 여 식을](../cpp/conditional-operator-q.md)합니다. 조건 연산자는 C++ 언어에서 유일한 삼항 연산자이며 피연산자 세 개를 사용합니다.  
   
 -   [상수 식](../cpp/cpp-constant-expressions.md)합니다. 상수 식은 상수 데이터로만 구성됩니다.  
   
--   [명시적 형식 변환이 있는 식](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae)합니다. 명시적 형식 변환, 즉 "캐스트"를 식에서 사용할 수 있습니다.  
+-   [명시적 형식 변환이 있는 식](http://msdn.microsoft.com/060ad6b4-9592-4f3e-8509-a20ac84a85ae)합니다. 명시적 형식 변환, 즉 "캐스트"를 식에서 사용할 수 있습니다.  
   
 -   [멤버 포인터 연산자가 있는 식](../cpp/pointer-to-member-operators-dot-star-and-star.md)합니다.  
   

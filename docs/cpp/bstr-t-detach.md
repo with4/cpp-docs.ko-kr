@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 117a2df667b9aa9ee13fc30dd0eff4bd201907c8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b8b7bc86ae487843f925668bccfbfd8e67b8685
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37940253"
 ---
 # <a name="bstrtdetach"></a>_bstr_t::Detach
 **Microsoft 전용**  
@@ -38,8 +39,8 @@ BSTR Detach( ) throw;
 ## <a name="return-value"></a>반환 값  
  `BSTR`로 래핑된 `_bstr_t`입니다.  
   
-## <a name="example"></a>예제  
- 참조 [_bstr_t:: assign](../cpp/bstr-t-assign.md) 사용 하는 예제 **분리**합니다.  
+## <a name="example"></a>예  
+ 참조 [_bstr_t:: assign](../cpp/bstr-t-assign.md) 사용 하는 예제 `Detach`합니다.  
   
  **Microsoft 전용 종료**  
   

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318665"
 ---
 # <a name="project-build-error-prj0032"></a>프로젝트 빌드 오류 PRJ0032
 프로젝트 수준의 사용자 지정 빌드 단계에 대 한 '출력' 속성이 '매크로' out 'macro_expansion' 계산 되는 포함 되어 있습니다.  

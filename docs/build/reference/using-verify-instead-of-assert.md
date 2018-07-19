@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32376561"
 ---
 # <a name="using-verify-instead-of-assert"></a>ASSERT 대신 VERIFY 사용
 MFC 응용 프로그램의 디버그 버전을 실행 하면 문제가 없는지를 가정 합니다. 그러나 동일한 응용 프로그램의 릴리스 버전 충돌, 잘못 된 결과 반환 및/또는 일부 다른 비정상적인 동작을 수행 합니다.  

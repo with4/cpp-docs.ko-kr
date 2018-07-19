@@ -14,6 +14,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33088482"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>컴파일러 및 링커 옵션(C++/CX)
 환경 변수를 C + + /cli CX 컴파일러 옵션 및 링커 옵션 Windows 런타임에 대 한 앱의 빌드를 지원 합니다.  

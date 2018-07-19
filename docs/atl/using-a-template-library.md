@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32357846"
 ---
 # <a name="using-a-template-library"></a>템플릿 라이브러리를 사용 하 여
 서식 파일은 다소 매크로 비슷합니다. 매크로와 마찬가지로 템플릿은 호출 확장 됩니다 (적절 한 매개 변수 대체)으로 작성 된 코드를 합니다. 그러나 템플릿에 이보다 매개 변수로 전달 하는 형식을 기반으로 하는 새 클래스를 만들 수 있도록 합니다. 이러한 새 클래스에 템플릿 코드에 표현 된 작업을 수행 하는 형식이 안전한 방법을 구현 합니다.  

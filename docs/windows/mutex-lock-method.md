@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33880874"
 ---
 # <a name="mutexlock-method"></a>Mutex::Lock 메서드
 현재 개체 또는 지정 된 핸들과 연결 된 뮤텍스 개체 될 때까지 대기는 뮤텍스를 해제 하거나 지정한 시간 제한 간격이 경과 합니다.  

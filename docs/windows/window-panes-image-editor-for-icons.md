@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892841"
 ---
 # <a name="window-panes-image-editor-for-icons"></a>창(아이콘에 대한 이미지 편집기)
 일반적으로 이미지 편집기 창 분할 막대로 구분 된 두 창에 이미지를 표시 합니다. 그 중 하나는 실제 크기 및 다른 확대 됩니다 (기본 확대 계수는 6). 이러한 두 창의 뷰를 자동으로 업데이트 됩니다: 하나의 창에서 수행한 변경 내용을 다른에 즉시 표시 됩니다. 두 개의 창이 쉽게 확대해 수 개별 픽셀을 구분 하 고 있는, 같은 시간에 이미지의 실제 크기 보기에서 작업의 효과 확인 합니다. 이미지에서 작업할 수 있습니다.  

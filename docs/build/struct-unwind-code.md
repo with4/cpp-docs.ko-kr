@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390101"
 ---
 # <a name="struct-unwindcode"></a>구조체 UNWIND_CODE
 해제 코드 배열은 비휘발성 레지스터와 rsp 구성에 영향을 주는 프롤로그에 일련의 작업을 기록 하는 데 사용 됩니다. 각 코드 항목의 다음 형식은 같습니다.  

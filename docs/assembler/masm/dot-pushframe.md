@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053206"
 ---
 # <a name="pushframe"></a>.PUSHFRAME
 생성 된 `UWOP_PUSH_MACHFRAME` 코드 항목을 해제 합니다. 경우 선택적 `code` 지정을 해제 코드 항목 1의 한정자를 제공 됩니다. 그렇지 않으면 한정자는 0입니다.  

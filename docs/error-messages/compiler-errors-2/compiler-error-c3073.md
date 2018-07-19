@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33253618"
 ---
 # <a name="compiler-error-c3073"></a>컴파일러 오류 C3073
 'type': ref 클래스에는 사용자 정의 복사 생성자가 없습니다  

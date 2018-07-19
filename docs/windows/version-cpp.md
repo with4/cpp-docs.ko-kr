@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33890611"
 ---
 # <a name="version-c"></a>version(C++)
 클래스의 여러 버전 간에 특정 버전을 식별합니다.  

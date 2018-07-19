@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33349215"
 ---
 # <a name="drawing-tool-classes"></a>그리기 도구 클래스
 이러한 클래스를 그릴 장치 컨텍스트에서 사용 되는 그리기 도구를 캡슐화 합니다.  

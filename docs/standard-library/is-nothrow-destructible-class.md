@@ -17,11 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d8980119a3414159018102b8a0d1ad7fb0e8fe76
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ee35bd9fd138dce5e9163fe1712083f5671caaa1
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964325"
 ---
 # <a name="isnothrowdestructible-class"></a>is_nothrow_destructible 클래스
 
@@ -36,11 +37,11 @@ struct is_nothrow_destructible;
 
 ### <a name="parameters"></a>매개 변수
 
-`T` 형식이 쿼리입니다.
+*T* 쿼리할 형식입니다.
 
 ## <a name="remarks"></a>설명
 
-형식 조건자의 인스턴스는 `T` 형식이 소멸 가능한 형식이고 소멸자가 throw되지 않는 것으로 컴파일러에 알려진 경우 true이고, 그렇지 않으면 false입니다.
+형식 조건자의 인스턴스 형태인 경우 true 형식을 *T* 소멸 가능한 형식이 고 소멸자는 컴파일러에 throw 되지 않는 합니다. 그렇지 않으면 false입니다.
 
 ## <a name="requirements"></a>요구 사항
 

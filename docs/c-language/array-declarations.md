@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32386906"
 ---
 # <a name="array-declarations"></a>배열 선언
 "배열 선언"은 배열의 이름을 지정하고 배열 요소의 형식을 지정합니다. 배열 선언은 배열의 요소 수를 정의할 수도 있습니다. 배열 형식이 있는 변수는 배열 요소의 형식에 대한 포인터로 간주됩니다.  

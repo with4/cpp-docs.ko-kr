@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 072b6a62bde2ab58909fd0c8dd1954e7d330ced5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7a94ee7df512262c58d7a90e3dbf461270b5d4c
+ms.sourcegitcommit: 1fd1eb11f65f2999dfd93a2d924390ed0a0901ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37939867"
 ---
 # <a name="initializers"></a>이니셜라이저
 이니셜라이저는 변수의 초기 값을 지정합니다. 변수를 초기화할 수 있는 컨텍스트는 다음과 같습니다.  
@@ -94,7 +95,7 @@ ms.lasthandoff: 05/03/2018
   
 -   포인터는 `nullptr`로 초기화됩니다.  
   
--   배열, [POD](../standard-library/is-pod-class.md) 클래스, 구조체 및 공용 구조체는 해당 멤버 값을 0으로 초기화 합니다.  
+-   배열 [POD](../standard-library/is-pod-class.md) 클래스, 구조체 및 공용 구조체는 해당 멤버 값을 0으로 초기화 합니다.  
   
  0 초기화는 다음과 같은 다양한 시간에 수행됩니다.  
   
@@ -124,7 +125,7 @@ int main() {
 ```  
   
 ### <a name="default_initialization"></a> 기본 초기화  
- 기본 생성자를 사용하는 클래스, 구조체 및 공용 구조체에 대한 기본 초기화입니다. 기본 생성자는 초기화 식 없이 또는 `new` 키워드를 사용하여 호출할 수 있습니다.  
+ 기본 생성자를 사용하는 클래스, 구조체 및 공용 구조체에 대한 기본 초기화입니다. 초기화 식 없이 또는 기본 생성자를 호출할 수는 **새** 키워드:  
   
 ```cpp  
 MyClass mc1;  
@@ -179,7 +180,7 @@ int main() {
 }  
 ```  
   
- 전역 정적 개체의 초기화에 대 한 자세한 내용은 참조 [추가 시작 고려 사항](../cpp/additional-startup-considerations.md)합니다.  
+ 전역 정적 개체의 초기화에 대 한 자세한 내용은 참조 하세요. [추가 시작 고려 사항](../cpp/additional-startup-considerations.md)합니다.  
   
 ### <a name="value-initialization"></a>값 초기화  
  값 초기화는 다음과 같은 경우에 발생합니다.  
@@ -188,7 +189,7 @@ int main() {
   
 -   익명의 임시 개체가 빈 괄호나 중괄호를 사용하여 초기화됩니다.  
   
--   개체가 `new` 키워드와 빈 괄호나 중괄호를 사용하여 초기화됩니다.  
+-   개체를 사용 하 여 초기화 되는 **새** 키워드와 빈 괄호나 중괄호  
   
  값 초기화가 수행하는 작업은 다음과 같습니다.  
   
@@ -278,9 +279,9 @@ shared_ptr<int> sp = new int(1729); // the constructor is explicit; same error
   
 -   변수가 비어 있지 않은 중괄호 또는 괄호를 사용하여 초기화됩니다.  
   
--   변수가 `new` 키워드와 비어 있지 않은 중괄호 또는 괄호를 사용하여 초기화됩니다.  
+-   변수로 사용 하 여 초기화 되는 **새** 키워드와 비어 있지 않은 중괄호 또는 괄호  
   
--   변수가 `static_cast`를 사용하여 초기화됩니다.  
+-   변수를 사용 하 여 초기화 됩니다 **static_cast**  
   
 -   생성자에서 기본 클래스 및 비정적 멤버가 이니셜라이저 목록을 사용하여 초기화됩니다.  
   
@@ -320,7 +321,7 @@ int main(){
   
 -   변수가 초기화됩니다.  
   
--   클래스가 `new` 키워드를 사용하여 초기화됩니다.  
+-   클래스를 사용 하 여 초기화 되는 **새** 키워드  
   
 -   개체가 함수에서 반환됩니다.  
   
@@ -377,7 +378,7 @@ int main() {
 -   가상 멤버 함수 없음  
   
 > [!NOTE]
->  <!--conformance note-->In Visual Studio 2015 and earlier, an aggregate is not allowed to have  brace-or-equal initializers for non-static members. This restriction was removed in the C++14 standard and implemented in Visual Studio 2017. 
+>  <!--conformance note-->Visual Studio 2015 및 이전 버전에서는 비정적 멤버의 경우 중괄호 또는 등호 이니셜라이저 할 집계 되지 않습니다. 이 제한 된 c++14 표준에 제거 되 고 Visual Studio 2017에서 구현 합니다. 
   
  집합체 이니셜라이저는 다음 예제와 같이 중괄호로 묶은 초기화 목록으로 구성되며, 등호가 있을 수도 있고 없을 수도 있습니다.  
   
@@ -424,7 +425,7 @@ myArr3: 8 9 10 0 0
 ```  
   
 > [!IMPORTANT]
->  배열 멤버는 선언 되지만 집합체 초기화 중에 명시적으로 초기화 하는 0으로 초기화 되었는지에서 같이 `myArr3` 위에 있습니다.  
+>  배열 멤버는 선언 되지만 집합체 초기화 중 명시적으로 초기화 하는 0으로 초기화 되, 에서처럼 `myArr3` 위에 있습니다.  
   
 #### <a name="initializing-unions-and-structs"></a>공용 구조체 및 구조체 초기화  
  공용 구조체에 생성자가 없는 경우 단일 값을 사용하여(또는 공용 구조체의 다른 인스턴스를 사용하여) 초기화할 수 있습니다. 값을 사용하여 첫 번째 비정적 필드를 초기화합니다. 이는 구조체 초기화와는 다릅니다. 구조체 초기화는 이니셜라이저의 첫 번째 값을 사용하여 첫 번째 필드를 초기화하고, 두 번째 값을 사용하여 두 번째 필드를 초기화하는 식으로 이루어집니다. 다음 예제에서 구조체와 공용 구조체 초기화를 비교해 보세요.  
@@ -515,7 +516,7 @@ int main()
     class c {public:   int& i;};  
     ```  
   
--   `extern`으로 명시적으로 지정된 변수의 선언. 예를 들어:  
+-   으로 명시적으로 지정 하는 변수 선언의 **extern**합니다. 예를 들어:  
   
     ```  
     extern int& iVal;  
@@ -526,10 +527,10 @@ int main()
  ![의사 결정 그래프 초기화 참조 형식에 대 한](../cpp/media/vc38s71.gif "vc38S71")  
 참조 형식 초기화를 위한 결정 그래프  
   
- 에 대 한 참조 `volatile` 형식 (으로 선언 `volatile` *typename * * * &** *식별자*)으로 초기화할 수 `volatile` 또는 동일한 유형의 개체 으로 선언 되지 않은 개체 `volatile`합니다. 그러나 사용 하 여 초기화, 수 없습니다, **const** 해당 형식의 개체입니다. 마찬가지로,에 대 한 참조 **const** 형식 (으로 선언 **const** *typename * * * &** *식별자*) 수 사용 하 여 초기화 **const** 동일한 유형의 개체 (또는 변환으로 선언 되지 않은 개체 또는 해당 형식에 있는 모든 **const**). 그러나 해당 형식의 `volatile` 개체를 사용하여 초기화될 수는 없습니다.  
+ 에 대 한 참조 **volatile** 형식 (으로 선언 **volatile** *typename * &** *식별자*) 초기화할 수 있습니다 사용 하 여 **volatile** 로 선언 되지 않은 개체 또는 동일한 유형의 개체 **volatile**합니다. 하지만 이러한 없습니다,, 초기화할 **const** 해당 형식의 개체입니다. 마찬가지로,에 대 한 참조 **상수** 형식 (로 선언 **const** *typename * * * &** *식별자*) 수 사용 하 여 초기화 **상수** 같은 형식의 개체 (또는 변환으로 선언 되지 않은 개체 또는 해당 형식에 있는 모든 **const**). 하지만 사용 하 여 초기화를 수 없습니다, **volatile** 해당 형식의 개체입니다.  
   
- 사용 하 여 정규화 되지 않은 참조는 **const** 또는 `volatile` 키워드로 선언 하는 개체 에서만 초기화 될 수 있습니다 **const** 나 `volatile`합니다.  
+ 사용 하 여 정규화 되지 않은 참조를 **const** 또는 **volatile** 키워드를 둘 다로 선언 된 개체에만 초기화 될 수 있습니다 **const** 도  **volatile**합니다.  
   
 ### <a name="initialization-of-external-variables"></a>외부 변수 초기화  
- 자동, 정적 및 외부 변수의 선언은 이니셜라이저를 포함할 수 있습니다. 하지만 외부 변수 선언은 변수가 `extern`으로 선언되지 않은 경우에만 이니셜라이저를 포함할 수 있습니다.
+ 자동, 정적 및 외부 변수의 선언은 이니셜라이저를 포함할 수 있습니다. 그러나 통해 외부 변수 선언은 변수도 선언 되지 않은 경우에 이니셜라이저를 포함할 수 있습니다 **extern**합니다.
   

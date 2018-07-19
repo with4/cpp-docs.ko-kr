@@ -22,11 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d17dc3e53504add2507617c95439fa7d32565a53
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 2d0f45f1b8eac09ae28f8a289a59d8a16a709295
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38965879"
 ---
 # <a name="slice-class"></a>slice 클래스
 
@@ -78,7 +79,7 @@ size_t size() const;
 
 valarray의 조각에 있는 요소의 수입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // slice_size.cpp
@@ -145,21 +146,21 @@ slice(
 
 ### <a name="parameters"></a>매개 변수
 
-`_StartIndex` Valarray 인덱스 하위 집합에서 첫 번째 요소입니다.
+*_StartIndex* 하위 집합에서 첫 번째 요소의 valarray 인덱스입니다.
 
-`_Len` 하위 집합에 있는 요소의 수입니다.
+*_Len* 하위 집합에 있는 요소의 수입니다.
 
-`stride` 하위 집합에서 요소 간의 거리입니다.
+*stride* 하위 집합의 요소 간 거리입니다.
 
 ### <a name="return-value"></a>반환 값
 
-기본 생성자는 시작 인덱스, 총 길이 및 진행 속도에 대해 0을 저장합니다. 두 번째 생성자는 시작 인덱스에 대해 `_StartIndex`, 총 길이에 대해 `_Len`, 진행 속도에 대해 `stride`를 저장합니다.
+기본 생성자는 시작 인덱스, 총 길이 및 진행 속도에 대해 0을 저장합니다. 두 번째 생성자 저장소 *_StartIndex* 시작 인덱스에 대 한 *_Len* 총 길이 대 한 및 *stride* 진행 속도 대 한 합니다.
 
 ### <a name="remarks"></a>설명
 
 진행 속도는 음수일 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // slice_ctor.cpp
@@ -212,7 +213,7 @@ size_t start() const;
 
 valarray 조각의 시작 인덱스입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // slice_start.cpp
@@ -270,7 +271,7 @@ size_t stride() const;
 
 valarray의 조각 내 요소 간 거리입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // slice_stride.cpp

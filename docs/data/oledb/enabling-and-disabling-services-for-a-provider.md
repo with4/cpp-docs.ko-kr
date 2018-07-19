@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33099734"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>공급자 서비스 사용 및 사용 안 함
 개별 OLE DB 서비스 사용 하도록 설정 하거나 단일 공급자에 액세스 하는 모든 응용 프로그램에 대해 기본적으로 사용 하지 않도록 설정 될 수 있습니다. 추가 하 여 이렇게는 **OLEDB_SERVICES** 공급자 아래에 레지스트리 항목으로 CLSID의 `DWORD` 다음 표에 나와 있는 것 처럼 사용 하거나 사용 하려면 서비스를 지정 하는 값입니다.  

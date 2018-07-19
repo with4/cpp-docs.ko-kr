@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32383880"
 ---
 # <a name="null-characters"></a>Null 문자
 **ANSI 4.9.2** 이진 스트림에 기록된 데이터에 추가할 수 있는 null 문자의 개수  

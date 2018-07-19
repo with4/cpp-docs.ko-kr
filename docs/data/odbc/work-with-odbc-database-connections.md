@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094145"
 ---
 # <a name="work-with-odbc-database-connections"></a>ODBC 데이터베이스 연결을 사용한 작업
 다음 항목에서는 ODBC 데이터 원본에 연결 하는 방법을 설명 합니다.  

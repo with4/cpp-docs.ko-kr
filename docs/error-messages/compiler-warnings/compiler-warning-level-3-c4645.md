@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33292911"
 ---
 # <a name="compiler-warning-level-3-c4645"></a>컴파일러 경고(수준 3) C4645
 __declspec(noreturn)으로 선언된 함수에 return 문이 있습니다.  

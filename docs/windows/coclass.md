@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33867014"
 ---
 # <a name="coclass"></a>coclass
 COM 인터페이스를 구현할 수 있는 COM 개체를 만듭니다.  

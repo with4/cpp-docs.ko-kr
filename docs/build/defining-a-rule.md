@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32367123"
 ---
 # <a name="defining-a-rule"></a>규칙 정의
 *fromext* 종속 파일의 확장을 나타내는 및 *toext* 대상 파일의 확장을 나타냅니다.  

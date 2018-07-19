@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33094171"
 ---
 # <a name="use-mfc-odbc-recordsets"></a>MFC ODBC 레코드 집합 사용
 MFC 통해 ODBC 레코드 집합으로 작업 하는 방법을 설명 합니다.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690545"
 ---
 # <a name="a6---using-the-lastprivate-clause"></a>A.6   lastprivate 절 사용
 경우에 따라 올바르게 실행 루프의 마지막 반복을 변수에 할당 되는 값에 따라 달라 집니다. 이러한 프로그램에 대 한 인수 같은 모든 변수를 나열 해야 합니다.는 `lastprivate` 절 ([2.7.2.3 섹션](../../parallel/openmp/2-7-2-3-lastprivate.md) 페이지 27) 하는 변수의 값 루프 순차적으로 실행 될 때와 동일 합니다.  

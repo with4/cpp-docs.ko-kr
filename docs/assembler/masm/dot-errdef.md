@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32053105"
 ---
 # <a name="errdef"></a>.ERRDEF
 오류가 생성 *이름* 이전에 정의 된 레이블, 변수 또는 기호입니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33882777"
 ---
 # <a name="drawing-lines-or-closed-figures-image-editor-for-icons"></a>선 또는 닫힌 그림 그리기(아이콘에 대한 이미지 편집기)
 선 그리기에 대 한 이미지 편집기 도구와 동일한 방식으로 닫힌된 그림 작동: 한 지점에 삽입 포인터를 두고 다른 위치로 끕니다. 줄에 대 한 이러한 포인트는 끝점입니다. 닫힌된 그림에 대 한 이러한 지점은 그림 경계 사각형의 모서리를 반대 됩니다.  

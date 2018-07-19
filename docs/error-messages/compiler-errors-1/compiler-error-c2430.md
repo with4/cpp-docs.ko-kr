@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33224578"
 ---
 # <a name="compiler-error-c2430"></a>컴파일러 오류 C2430
 'identifier'에 둘 이상의 인덱스 등록  

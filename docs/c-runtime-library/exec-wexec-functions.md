@@ -68,6 +68,7 @@ ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/22/2018
+ms.locfileid: "34451526"
 ---
 # <a name="exec-wexec-functions"></a>_exec, _wexec 함수
 이 패밀리의 다음 각 함수는 새 프로세스를 로드하고 실행합니다.  

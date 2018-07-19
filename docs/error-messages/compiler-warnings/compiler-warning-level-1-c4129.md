@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33276645"
 ---
 # <a name="compiler-warning-level-1-c4129"></a>컴파일러 경고 (수준 1) C4129
 'character': 문자 이스케이프 시퀀스를 인식할 수 없습니다  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33858090"
 ---
 # <a name="associating-a-menu-command-with-an-accelerator-key"></a>메뉴 명령과 액셀러레이터 키 연결
 메뉴 명령과 키보드 조합에서 동일한 프로그램 명령을 종종 실행하도록 하려고 합니다. 이렇게 하려면 메뉴 편집기를 사용하여 메뉴 명령과 응용 프로그램의 액셀러레이터 테이블에 있는 항목에 동일한 리소스 식별자를 할당합니다. 그러고 나서 메뉴 명령의 [캡션](../windows/menu-command-properties.md) 을 편집하여 액셀러레이터 키의 이름을 표시합니다.  

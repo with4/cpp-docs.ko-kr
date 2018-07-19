@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345575"
 ---
 # <a name="dragging-and-dropping-files-in-a-frame-window"></a>프레임 창에서 파일 끌어서 놓기
 프레임 창에는 파일 탐색기 또는 파일 관리자와 관계를 관리합니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33265209"
 ---
 # <a name="compiler-error-c3630"></a>컴파일러 오류 C3630
 'token' 토큰을 처리 하는 동안 오류가 발생 했습니다.  

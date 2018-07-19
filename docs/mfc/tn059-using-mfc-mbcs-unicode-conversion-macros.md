@@ -23,11 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 379c5b4fb9ed302ad1ea0167f2b32c30e48ab2bf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e857d6f5bc2ebabb0f36a3c97e011a4f2a00d641
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36953505"
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059: MFC MBCS/유니코드 변환 매크로 사용
 > [!NOTE]
@@ -85,9 +86,9 @@ pI->SomeFunctionThatNeedsUnicode(T2OLE(lpszA));
   
  변환 시 문자열이 되지만 경우가 매크로 사용 하 여 간단 하 고 효율적인 추가 호출이 있습니다.  
   
- 각 매크로 구현 _alloca () 함수를 사용 하 여 힙에 대신 스택에서 메모리를 할당할 수 있습니다. 스택에서 메모리를 할당 하는 보다 훨씬 힙에서 메모리를 할당 하 고 메모리는 함수가 종료 될 때 자동으로 해제 됩니다. 또한 매크로 호출을 하지 **MultiByteToWideChar** (또는 **WideCharToMultiByte**) 한 번 이상. 이 옵션은 필요한 것 보다 좀 더 많은 메모리를 할당 하 여 수행 됩니다. 회원님의 MBC 최대 하나의 변환 됩니다 **WCHAR** 있고 각각에 대해 **WCHAR** 최대 두 개의 MBC 바이트 있다고 합니다. 약 필요 하지만 항상 충분히 할당 하 여 두 번째 변환이 두 번째 호출을 처리 하는 변환 함수에 호출을 금지 합니다. 도우미 함수에 대 한 호출 **AfxA2Whelper** 는 변환을 수행 하기 위해 수행 해야 하는 인수 푸시의 수를 줄입니다 (호출 되 고 있는 경우 더 작은 코드를 보다이 인해 **MultiByteToWideChar**직접).  
+ 각 매크로 구현 _alloca () 함수를 사용 하 여 힙에 대신 스택에서 메모리를 할당할 수 있습니다. 스택에서 메모리를 할당 하는 보다 훨씬 힙에서 메모리를 할당 하 고 메모리는 함수가 종료 될 때 자동으로 해제 됩니다. 또한 매크로 호출을 하지 `MultiByteToWideChar` (또는 `WideCharToMultiByte`) 한 번 이상. 이 옵션은 필요한 것 보다 좀 더 많은 메모리를 할당 하 여 수행 됩니다. 회원님의 MBC 최대 하나의 변환 됩니다 **WCHAR** 있고 각각에 대해 **WCHAR** 최대 두 개의 MBC 바이트 있다고 합니다. 약 필요 하지만 항상 충분히 할당 하 여 두 번째 변환이 두 번째 호출을 처리 하는 변환 함수에 호출을 금지 합니다. 도우미 함수에 대 한 호출 `AfxA2Whelper` 는 변환을 수행 하기 위해 수행 해야 하는 인수 푸시의 수를 줄입니다 (호출 되 고 있는 경우 더 작은 코드를 보다이 인해 `MultiByteToWideChar` 직접).  
   
- 저장할 공간이 매크로 대 한 순서에이 변환 매크로 사용 하는 작업을 위해 각 함수는 변환 (_c) 라는 지역 변수를 선언 하는 데 필요한 임시 길이입니다. 호출 하 여 이렇게는 **따라** 예제에서 위의 예제와 같이 매크로입니다.  
+ 저장할 공간이 매크로 대 한 순서에이 변환 매크로 사용 하는 작업을 위해 각 함수는 변환 (_c) 라는 지역 변수를 선언 하는 데 필요한 임시 길이입니다. 이 예제에서 위의 예제와 같이 따라를 호출 하 여 수행 됩니다.  
   
  제네릭 변환 매크로 OLE 특정 매크로 모두 있습니다. 이러한 두 개의 다른 매크로 집합 아래 설명 되어 있습니다. 모든 매크로 AFXPRIV에 있어야합니다. 8.  
   
@@ -104,7 +105,7 @@ W2A      (LPCWSTR) -> (LPSTR)
  텍스트 변환 수행, 외에도 있습니다 매크로 및 변환 하기 위한 도우미 함수 `TEXTMETRIC`, `DEVMODE`, `BSTR`, 및 OLE 문자열을 할당 합니다. 이 토론의 범위를 벗어나지만이 매크로-AFXPRIV를 참조 하십시오. 이러한 매크로 대 한 자세한 내용은 H입니다.  
   
 ## <a name="ole-conversion-macros"></a>OLE 변환 매크로  
- OLE 변환 매크로 함수에 처리 하기 위한 전용 만들어진 **OLESTR** 문자입니다. 에 대 한 많은 참조가 표시는 OLE 머리글을 검사 하면 **LPCOLESTR** 및 **OLECHAR**합니다. 이러한 형식은 플랫폼에 특정 하지 않은 방식으로 OLE 인터페이스에 사용 된 문자의 형식을 참조 하는 데 사용 됩니다. **OLECHAR** 매핑됩니다 `char` Win16 및 Macintosh 플랫폼에서 및 **WCHAR** win32에서 합니다.  
+ OLE 변환 매크로 함수에 처리 하기 위한 전용 만들어진 **OLESTR** 문자입니다. 에 대 한 많은 참조가 표시는 OLE 머리글을 검사 하면 **LPCOLESTR** 및 **OLECHAR**합니다. 이러한 형식은 플랫폼에 특정 하지 않은 방식으로 OLE 인터페이스에 사용 된 문자의 형식을 참조 하는 데 사용 됩니다. **OLECHAR** 매핑됩니다 **char** Win16 및 Macintosh 플랫폼에서 및 **WCHAR** win32에서 합니다.  
   
  개수를 유지 하기 위해 **#ifdef** MFC의 지시문 코드를 최소한으로 각 변환에 대 한 유사한 매크로 하는 OLE 문자열이 포함 되어 있습니다. 다음 매크로 가장 일반적으로 사용 됩니다.  
   
@@ -115,7 +116,7 @@ OLE2CT   (LPCOLESTR) -> (LPCTSTR)
 OLE2T   (LPCOLESTR) -> (LPCSTR)  
 ```  
   
- 다시, 이렇게 하면 유사한 매크로 `TEXTMETRIC`, `DEVMODE`, `BSTR`, 및 OLE 문자열을 할당 합니다. AFXPRIV를 참조 하십시오. 자세한 내용은 H.  
+ 다시, 유사한 매크로 TEXTMETRIC, DEVMODE, BSTR 및 문자열을 할당 하는 OLE를 수행 하는 데 있습니다. AFXPRIV를 참조 하십시오. 자세한 내용은 H.  
   
 ## <a name="other-considerations"></a>기타 고려 사항  
  루프에서 매크로 사용 하지 마십시오. 예를 들어 다음 코드의 종류를 작성 하지 않을 수 있습니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33089248"
 ---
 # <a name="caccessorrowsetfreerecordmemory"></a>CAccessorRowset::FreeRecordMemory
 해제 해야 하는 현재 레코드의 모든 열을 해제 합니다.  

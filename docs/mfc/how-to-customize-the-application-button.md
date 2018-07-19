@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33351366"
 ---
 # <a name="how-to-customize-the-application-button"></a>방법: 응용 프로그램 단추 사용자 지정
 응용 프로그램 단추를 클릭할 때의 명령 메뉴에 표시 됩니다. 일반적으로 메뉴 명령이 포함 되어 파일 관련와 같은 **열려**, **저장**, **인쇄**, 및 **종료**합니다.  

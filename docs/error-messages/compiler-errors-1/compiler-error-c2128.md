@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33168154"
 ---
 # <a name="compiler-error-c2128"></a>컴파일러 오류 C2128
 'function': alloc_text/same_seg는 C 링크가 있는 함수에만 적용  

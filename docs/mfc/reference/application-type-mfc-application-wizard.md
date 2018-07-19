@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353441"
 ---
 # <a name="application-type-mfc-application-wizard"></a>MFC 응용 프로그램 마법사, 응용 프로그램 종류
 이 페이지는 [MFC 응용 프로그램 마법사](../../mfc/reference/mfc-application-wizard.md) 디자인 하 고 새 MFC 응용 프로그램에 기본 기능을 추가 합니다.  

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33111392"
 ---
 # <a name="ole-db-consumers-and-providers"></a>OLE DB 소비자 및 공급자
 OLE DB 아키텍처의 소비자 및 공급자 모델을 사용 합니다. 소비자에서는 데이터에 대 한 요청 합니다. 공급자는 테이블 형식으로 데이터를 배치 하는 고객에 게 반환 하 여 이러한 요청에 응답 합니다. 공급자에서 소비자 수 있도록 하는 모든 호출을 구현 되어야 합니다.  

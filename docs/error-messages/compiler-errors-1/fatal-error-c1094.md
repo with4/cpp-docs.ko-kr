@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33227519"
 ---
 # <a name="fatal-error-c1094"></a>심각한 오류 C1094
 '-Zmval1': 명령줄 옵션이 미리 컴파일된 헤더를 작성 하는 데 사용 되는 값과 일치 하지 않습니다 ('-Zmval2')  

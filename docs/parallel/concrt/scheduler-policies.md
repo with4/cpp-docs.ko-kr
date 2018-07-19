@@ -19,6 +19,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690409"
 ---
 # <a name="scheduler-policies"></a>Scheduler 정책
 이 문서에서는 동시성 런타임에서 스케줄러 정책의 역할을 설명 합니다. A *스케줄러 정책을* 스케줄러가 작업을 관리할 때 사용 하는 전략을 제어 합니다. 예를 들어, 일부 작업은 `THREAD_PRIORITY_NORMAL`에서 실행해야 하고 다른 작업은 `THREAD_PRIORITY_HIGHEST`에서 실행해야 하는 응용 프로그램을 고려해 보겠습니다.  두 가지 스케줄러 인스턴스를 만들 수 있으며, 하나는 `ContextPriority` 정책을 `THREAD_PRIORITY_NORMAL`로 지정하고, 다른 하나는 동일한 정책을 `THREAD_PRIORITY_HIGHEST`로 지정합니다.  

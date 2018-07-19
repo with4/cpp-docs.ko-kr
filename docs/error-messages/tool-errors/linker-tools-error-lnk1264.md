@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301465"
 ---
 # <a name="linker-tools-error-lnk1264"></a>링커 도구 오류 LNK1264
 /Ltcg: pginstrument 지정 되었지만 코드를 생성 하지 않아도 됩니다. 계측 하지 못했습니다.  

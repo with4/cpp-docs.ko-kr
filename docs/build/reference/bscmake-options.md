@@ -44,6 +44,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32377857"
 ---
 # <a name="bscmake-options"></a>BSCMAKE 옵션
 이 섹션에서는 BSCMAKE를 제어 하는 것에 대 한 사용할 수 있는 옵션을 설명 합니다. 몇 가지 옵션에는 특정 정보를 포함 시키거나 제외 시켜 찾아보기 정보 파일의 내용을 제어 합니다. 제외 옵션 BSCMAKE 더 빠르게 실행을 허용할 수 하 고 더 작은.bsc 파일이 될 수 있습니다. 옵션 이름은 대/소문자 구분 됩니다 (제외 하 고 **/help** 및 **/NOLOGO**).  

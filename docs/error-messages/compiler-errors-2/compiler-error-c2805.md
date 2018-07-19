@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33237559"
 ---
 # <a name="compiler-error-c2805"></a>컴파일러 오류 C2805
 이진 파일 '연산자'에 매개 변수가 너무 적습니다.  

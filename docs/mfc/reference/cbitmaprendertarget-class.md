@@ -28,11 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd752ff649491ce23b537987ff9f4aebf7811255
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a0eece5c7ba74f523836ab5916b8817671dac287
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956754"
 ---
 # <a name="cbitmaprendertarget-class"></a>CBitmapRenderTarget 클래스
 ID2D1BitmapRenderTarget에 대 한 래퍼입니다.  
@@ -68,7 +69,7 @@ class CBitmapRenderTarget : public CRenderTarget;
   
 ### <a name="protected-data-members"></a>보호된 데이터 멤버  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[CBitmapRenderTarget::m_pBitmapRenderTarget](#m_pbitmaprendertarget)|ID2D1BitmapRenderTarget 개체에 대 한 포인터입니다.|  
   
@@ -90,7 +91,7 @@ void Attach(ID2D1BitmapRenderTarget* pTarget);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `pTarget`  
+ *pTarget*  
  기존 렌더링 대상 인터페이스입니다. NULL 일 수 없습니다.  
   
 ##  <a name="cbitmaprendertarget"></a>  CBitmapRenderTarget::CBitmapRenderTarget  
@@ -118,7 +119,7 @@ BOOL GetBitmap(CD2DBitmap& bitmap);
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `bitmap`  
+ *비트맵*  
  이 메서드가 반환 될 때이 렌더링 대상에 대 한 올바른 비트맵을 포함 합니다. 이 비트맵 그리기 작업에 사용할 수 있습니다.  
   
 ### <a name="return-value"></a>반환 값  

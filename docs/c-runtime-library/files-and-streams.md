@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32390520"
 ---
 # <a name="files-and-streams"></a>파일 및 스트림
 프로그램은 파일을 읽고 써서 대상 환경과 통신합니다. 파일은 다음일 수 있습니다.  

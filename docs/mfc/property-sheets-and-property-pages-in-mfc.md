@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33348608"
 ---
 # <a name="property-sheets-and-property-pages-in-mfc"></a>MFC의 속성 시트 및 속성 페이지
 으로 알려진 탭 대화 상자는 속성 시트는 속성 페이지를 포함 하는 대화 상자. 각 속성 페이지 대화 상자 템플릿 리소스를 기반으로 하며 컨트롤을 포함 합니다. 위에 표시 탭 된 페이지에 묶여 있습니다. 탭은 페이지에 이름을 지정 하 고 용도 나타냅니다. 사용자가 컨트롤의 집합을 선택 하 고 속성 시트에 탭을 클릭 합니다.  

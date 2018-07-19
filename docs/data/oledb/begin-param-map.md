@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093261"
 ---
 # <a name="beginparammap"></a>BEGIN_PARAM_MAP
 매개 변수가 맵 항목의 시작을 표시 합니다.  

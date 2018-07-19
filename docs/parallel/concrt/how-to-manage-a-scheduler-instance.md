@@ -20,6 +20,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33687662"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>방법: 스케줄러 인스턴스 관리
 스케줄러 인스턴스를 사용 하면 다양 한 종류의 작업 부하를 특정 일정 예약 정책을 연결 합니다. 이 항목에는 만들고 스케줄러 인스턴스를 관리 하는 방법을 보여 주는 두 가지 기본 예제가 포함 되어 있습니다.  

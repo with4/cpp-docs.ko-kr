@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32368423"
 ---
 # <a name="inference-rules"></a>유추 규칙
 유추 규칙 대상을 업데이트 하 고 대상에 대 한 종속 항목을 유추 하는 명령을 제공 합니다. 확장이 유추 규칙에 일치 하는 단일 대상 있고 종속 기본 이름은 동일 합니다. 유추 규칙은 사용자 지정 또는 미리 정의 된; 미리 정의 된 규칙을 재정의할 수 있습니다.  

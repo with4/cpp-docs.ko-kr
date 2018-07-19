@@ -20,6 +20,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33345757"
 ---
 # <a name="file-menu-in-an-mfc-database-application"></a>MFC 데이터베이스 응용 프로그램의 파일 메뉴
 어떻게 해야 하면 해석 열기, 닫기, 저장 및 다른 이름으로 저장 명령을 파일 메뉴에서 MFC 데이터베이스 응용 프로그램을 만들고 serialization을 사용 하지 않는 경우 다음은 몇 가지 제안 사항이이 질문에 대 한 스타일 지정 지침 없음 상태인:  

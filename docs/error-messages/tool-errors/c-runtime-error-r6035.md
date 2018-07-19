@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299749"
 ---
 # <a name="c-runtime-error-r6035"></a>C 런타임 오류 R6035
 Microsoft Visual c + + 런타임 라이브러리, 오류 R6035-이 응용 프로그램의 모듈을 초기화 하 고 모듈의 전역 보안 쿠키 보안 쿠키에 의존 하는 함수를 활성화 합니다.  이전 __security_init_cookie를 호출 합니다.  

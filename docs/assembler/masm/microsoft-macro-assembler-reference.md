@@ -22,6 +22,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32052829"
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Microsoft 매크로 어셈블러 참조
 Microsoft 매크로 어셈블러 (MASM) 인라인 어셈블리에 비해 여러 가지 이점을 제공합니다. MASM은 매크로 반복, 산술, 및 텍스트 문자열 처리와 같은 기능이 있는 언어를 포함 합니다. MASM도 제어할 수 큰 하드웨어는 386, 486, 및 Pentium 프로세서의 명령 집합을 지원 하기 때문에 있습니다. MASM를 사용 하 여도 시간 및 메모리 오버를 줄일 수 있습니다.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32418841"
 ---
 # <a name="indirection-on-array-types"></a>배열 형식에 대한 간접 참조
 간접 참조 연산자를 사용 (**\***)에 *n*-차원 배열 형식에서 생성 한 *n*-1 차원 배열입니다. 경우 *n* 는 1, 스칼라 (또는 배열 요소)가 생성 됩니다.  

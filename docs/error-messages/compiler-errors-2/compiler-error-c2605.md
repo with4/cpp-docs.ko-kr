@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33236198"
 ---
 # <a name="compiler-error-c2605"></a>컴파일러 오류 C2605
 'name': 이 메서드는 관리되는 클래스나 WinRT 클래스에서 예약됩니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32407404"
 ---
 # <a name="wcharmax"></a>WCHAR_MAX
 `wchar_t` 형식에 대한 최대값입니다.  

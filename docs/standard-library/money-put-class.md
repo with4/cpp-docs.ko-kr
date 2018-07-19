@@ -26,11 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df8b872d9aeb718c1e86d460d8ef60beac8f3632
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: de84f708957074878fba84ebfe3db600a1b6ed86
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38954814"
 ---
 # <a name="moneyput-class"></a>money_put 클래스
 
@@ -46,9 +47,9 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>매개 변수
 
-`CharType` 로캘의 문자를에서 인코딩하기 위해 프로그램 내 사용 유형입니다.
+*CharType* 로캘의 문자를 인코딩하기 위해 프로그램 내에서 사용 되는 형식입니다.
 
-`OutputIterator` 통화 put 함수가 출력을 쓰는 반복기의 형식입니다.
+*OutputIterator* 는 통화 put 함수가 반복기의 형식 출력을 작성 합니다.
 
 ## <a name="remarks"></a>설명
 
@@ -116,15 +117,15 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>매개 변수
 
-`next` 삽입 된 문자열의 첫 번째 요소를 주소 지정 하는 반복기입니다.
+*다음* 삽입된 된 문자열의 첫 번째 요소를 지정 하는 반복기입니다.
 
-`_Intl` 형식의 시퀀스에서 예상 되는 통화 기호를 나타내는 부울 값: **true** 국제 경우 **false** 국내 하는 경우.
+*_Intl* 시퀀스에서 필요한 통화 기호 유형을 나타내는 부울 값: **true** 경우 국제 **false** 국내의 경우.
 
-`_Iosbase` 형식 플래그는 집합을 나타내면 통화 기호는 선택 사항입니다. 그렇지 않은 경우 필수
+*_Iosbase* 형식 플래그는 경우 필요한 것이 고, 그렇지 않으면 집합 통화 기호가 선택 사항임을 나타냅니다
 
-`_Fill` 간격에 사용 되는 문자입니다.
+*_Fill* 간격에 사용 되는 문자입니다.
 
-`val` 변환할 문자열 개체입니다.
+*val* 변환할 문자열 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -132,9 +133,9 @@ virtual iter_type do_put(
 
 ### <a name="remarks"></a>설명
 
-보호되는 첫 번째 가상 구성원 함수는 [string_type](#string_type) 개체 `val`에서 통화 출력 필드를 생성하기 위해 `next`부터 시작하여 순차 요소를 생성합니다. 에 의해 제어 되는 시퀀스 `val` 필요에 따라 앞에 빼기 기호 (-)을 나타내는 하나 이상의 10 진수 숫자로 시작 해야 합니다. 함수는 생성된 통화 출력 필드를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다.
+첫 번째 보호 된 가상 구성원 함수에서 시작 하는 순차 요소를 생성 *다음* 통화 출력 필드를 생성 하는 [string_type](#string_type) 개체 *val*합니다. 제어 하는 시퀀스 *val* 크기를 나타내는 빼기 기호 (-), 필요에 따라 앞에 하나 이상의 10 진수 자릿수를 사용 하 여 시작 해야 합니다. 함수는 생성된 통화 출력 필드를 벗어난 범위에 있는 첫 번째 요소를 지정하는 반복기를 반환합니다.
 
-두 번째 보호된 가상 구성원 함수는 실제로 `val`을 먼저 10진수 숫자 시퀀스(필요에 따라 앞에 빼기 기호가 붙음)로 변환한 다음 위의 설명과 같이 해당 시퀀스를 변환한다는 점을 제외하면 첫 번째 함수와 동일하게 동작합니다.
+두 번째 보호 된 가상 구성원 함수는 첫 번째 동일 하 게 동작 한다는 점을 제외 효과적으로 첫 번째 변환 *val* 필요에 따라 앞에 빼기 기호, 소수 자릿수 시퀀스로 위와 같이 해당 시퀀스를 변환 합니다.
 
 통화 출력 필드의 형식은 [locale facet](../standard-library/locale-class.md#facet_class) fac에 의해 결정됩니다. 이 항목은 유효 호출 [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc))에서 반환됩니다.
 
@@ -168,7 +169,7 @@ virtual iter_type do_put(
 
 함수는 **iosbase**. **width**(0)을 호출하여 필드 너비를 0으로 다시 설정합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 **put**에 의해 가상 구성원 함수가 호출되는 [put](#put)의 예제를 참조하세요.
 
@@ -194,11 +195,11 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>매개 변수
 
-`_Refs` 개체에 대 한 메모리 관리의 유형을 지정 하는 데 사용 되는 정수 값입니다.
+*_Refs* 개체에 대 한 메모리 관리의 유형을 지정 하는 데 사용 하는 정수 값입니다.
 
 ### <a name="remarks"></a>설명
 
-`_Refs` 매개 변수에 대해 사용 가능한 값과 해당 중요도는 다음과 같습니다.
+에 대 한 가능한 값을 *_Refs* 매개 변수 및 중요성은:
 
 - 0: 개체가 포함된 로캘에서 개체의 수명을 관리합니다.
 
@@ -233,15 +234,15 @@ iter_type put(
 
 ### <a name="parameters"></a>매개 변수
 
-`next` 삽입 된 문자열의 첫 번째 요소를 주소 지정 하는 반복기입니다.
+*다음* 삽입된 된 문자열의 첫 번째 요소를 지정 하는 반복기입니다.
 
-`_Intl` 형식의 시퀀스에서 예상 되는 통화 기호를 나타내는 부울 값: **true** 국제 경우 **false** 국내 하는 경우.
+*_Intl* 시퀀스에서 필요한 통화 기호 유형을 나타내는 부울 값: **true** 경우 국제 **false** 국내의 경우.
 
-`_Iosbase` 형식 플래그는 집합을 나타내면 통화 기호는 선택 사항입니다. 그렇지 않은 경우 필수
+*_Iosbase* 형식 플래그는 경우 필요한 것이 고, 그렇지 않으면 집합 통화 기호가 선택 사항임을 나타냅니다
 
-`_Fill` 간격에 사용 되는 문자입니다.
+*_Fill* 간격에 사용 되는 문자입니다.
 
-`val` 변환할 문자열 개체입니다.
+*val* 변환할 문자열 개체입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -251,7 +252,7 @@ iter_type put(
 
 두 구성원 함수는 모두 [do_put](#do_put)( `next`, `_Intl`, `_Iosbase`, `_Fill`, `val`)을 반환합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // money_put_put.cpp
@@ -285,7 +286,7 @@ money_put( ) = "CAD1,000.12"
 
 ## <a name="string_type"></a>  money_put::string_type
 
-**CharType** 형식의 문자가 포함된 문자열을 설명하는 형식입니다.
+`CharType` 형식의 문자가 포함된 문자열을 설명하는 형식입니다.
 
 ```cpp
 typedef basic_string<CharType, Traits, Allocator> string_type;

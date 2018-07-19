@@ -23,6 +23,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33379270"
 ---
 # <a name="scrolling-and-scaling-views"></a>뷰 스크롤 및 크기 조정
 MFC는 뷰를 스크롤하여 뷰를 자동으로 표시 하는 프레임 창의 크기 측정을 지원 합니다. 클래스 `CScrollView` 두 종류의 보기를 지원 합니다.  

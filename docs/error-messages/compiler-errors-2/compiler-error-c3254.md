@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33255610"
 ---
 # <a name="compiler-error-c3254"></a>컴파일러 오류 C3254
 '명시적 재정의': 클래스 명시적 재정의 'override'를 포함 되어 있지만 함수 선언을 포함 하는 인터페이스에서 파생 되지 않습니다  

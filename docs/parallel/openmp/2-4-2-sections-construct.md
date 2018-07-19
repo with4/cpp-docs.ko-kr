@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33688286"
 ---
 # <a name="242-sections-construct"></a>2.4.2 sections 구문
 **섹션** 지시문 팀에 스레드 간에 나눠집니다 않는 구문이의 집합을 지정 하는 noniterative 작업 공유 구문을 식별 합니다. 각 섹션은 팀의 스레드에 의해 한 번만 실행 됩니다. 구문은 **섹션** 지시문은 다음과 같습니다.  

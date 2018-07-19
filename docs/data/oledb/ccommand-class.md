@@ -24,6 +24,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33096901"
 ---
 # <a name="ccommand-class"></a>CCommand 클래스
 설정 하 고 명령을 실행 하는 메서드를 제공 합니다.  

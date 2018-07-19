@@ -17,6 +17,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33690597"
 ---
 # <a name="a2---specifying-conditional-compilation"></a>A.2   조건부 컴파일 지정
 다음 예에서는 조건부 컴파일 OpenMP 매크로 사용 하 여 사용법을 보여 줍니다. `_OPENMP` ([섹션 2.2](../../parallel/openmp/2-2-conditional-compilation.md) 8 페이지에). OpenMP 컴파일을 사용한는 `_OPENMP` 매크로가 정의 됩니다.  

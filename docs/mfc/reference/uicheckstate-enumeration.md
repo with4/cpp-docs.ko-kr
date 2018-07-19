@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33375424"
 ---
 # <a name="uicheckstate-enumeration"></a>UICheckState 열거형
 명령에 대 한 사용자 인터페이스 항목의 선택 상태를 설명합니다.  

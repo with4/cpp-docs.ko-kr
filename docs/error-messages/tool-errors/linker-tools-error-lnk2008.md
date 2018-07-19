@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33299567"
 ---
 # <a name="linker-tools-error-lnk2008"></a>링커 도구 오류 LNK2008
 픽스업 대상이 정렬 된 'symbol_name' 아닙니다.  

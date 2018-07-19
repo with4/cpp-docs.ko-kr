@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33383963"
 ---
 # <a name="win32-internet-extensions-wininet"></a>Win32 인터넷 확장명(WinInet)
 인터넷 클라이언트 응용 프로그램은 gopher, FTP 또는 HTTP와 같은 인터넷 프로토콜을 사용 하 여 네트워크 데이터 원본 (서버)의 정보에 액세스 하는 프로그램입니다. 인터넷 클라이언트 응용 프로그램 예를 들어 날씨, 주식 시세 또는 신문 기사 등 데이터를 검색 하려면 서버에 액세스할 수 있습니다. 인터넷 클라이언트를 외부 네트워크 (인터넷) 또는 내부 네트워크 (인트라넷이 라고도 함)를 통해 서버에 액세스할 수 있습니다.  

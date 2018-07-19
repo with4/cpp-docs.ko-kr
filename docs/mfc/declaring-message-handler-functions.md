@@ -19,6 +19,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33341712"
 ---
 # <a name="declaring-message-handler-functions"></a>메시지 처리기 함수 선언
 특정 규칙에 따라 메시지-처리기 함수의 이름에 적용 합니다. 이러한 따라 다음 항목에 설명 된 대로 메시지 범주 달라 집니다.  

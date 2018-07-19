@@ -17,6 +17,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32382483"
 ---
 # <a name="remainders"></a>나머지
 **ANSI 3.3.5** 정수 나누기에 대한 나머지의 부호  

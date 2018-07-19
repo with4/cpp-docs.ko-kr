@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33093762"
 ---
 # <a name="beginpropertyset"></a>BEGIN_PROPERTY_SET
 속성에는 속성의 시작 부분을 설정 하는 부호 맵을 설정 합니다.  

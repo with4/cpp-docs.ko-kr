@@ -18,6 +18,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33130226"
 ---
 # <a name="lock-members"></a>lock 멤버
 멤버는 [lock 클래스](../dotnet/lock-class.md)합니다.  

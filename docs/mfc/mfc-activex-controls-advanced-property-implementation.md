@@ -16,11 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b6bbcbcf226d343d8b3cb51f110442e133a379
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2eb3ba387d4b6fcca7b30cd360dff84b9da4302a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928366"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX 컨트롤: 고급 속성 구현
 이 문서에서는 ActiveX 컨트롤에 고급 속성을 구현 하는 데 관련 된 항목을 설명 합니다.  
@@ -65,9 +66,9 @@ ms.lasthandoff: 05/04/2018
  이 코드 샘플에서는 호출 `SetNotSupported` 경우는 `m_bReadOnlyMode` 데이터 멤버는 **TRUE**합니다. 경우 **FALSE**, 속성은 새 값으로 설정 합니다.  
   
 ##  <a name="_core_returning_error_codes_from_a_property"></a> 속성에서 오류 코드 반환  
- 속성을 가져오거나 설정 하는 동안 오류가 발생 했음을 알리는를 사용 하 여는 `COleControl::ThrowError` 함수를 사용는 `SCODE` (상태 코드)를 매개 변수로 합니다. 미리 정의 된 사용할 수 있습니다 `SCODE` 하거나 자체를 정의 합니다. 목록은 미리 정의 된 `SCODE`s 및 사용자 지정을 정의 하기 위한 지침 `SCODE`s, 참조 [Your ActiveX 컨트롤에 대 한 오류 처리](../mfc/mfc-activex-controls-advanced-topics.md) 문서 ActiveX 컨트롤의: 고급 항목입니다.  
+ 속성을 가져오거나 설정 하는 동안 오류가 발생 했음을 알리는를 사용 하 여는 `COleControl::ThrowError` 함수 매개 변수로 SCODE (상태 코드)를 사용 합니다. 미리 정의 된 SCODE를 사용 하거나 자체를 정의할 수 있습니다. 미리 정의 된 SCODEs 및 사용자 지정 SCODEs 정의 하기 위한 지침의 목록에 대 한 참조 [Your ActiveX 컨트롤에 대 한 오류 처리](../mfc/mfc-activex-controls-advanced-topics.md) 문서 ActiveX 컨트롤의: 고급 항목입니다.  
   
- 도우미 함수에 대 한 미리 정의 된 가장 일반적인 존재 `SCODE`s와 같은 [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), 및 [COleControl:: SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted)합니다.  
+ 도우미 함수는 가장 일반적인 같은 미리 정의 된 SCODEs에 대 한 존재 [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), 및 [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
   
 > [!NOTE]
 >  `ThrowError` 속성의 Get 또는 Set 내에서 오류를 반환 하는 방법 으로만 사용 하려는 함수 또는 자동화 메서드. 이 스택에 적절 한 예외 처리기 수 있는 시간을 제공 합니다.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092036"
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>레코드 필드 교환: RFX 함수 사용
 이 항목의 본문을 구성 하는 RFX 함수 호출을 사용 하는 방법에 설명 프로그램 `DoFieldExchange` 재정의 합니다.  

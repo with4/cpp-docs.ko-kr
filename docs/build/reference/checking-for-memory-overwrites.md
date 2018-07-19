@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369853"
 ---
 # <a name="checking-for-memory-overwrites"></a>메모리 덮어쓰기 확인
 힙 조작 함수에 대 한 호출에서 액세스 위반이 발생 하면 프로그램에 힙 손상 됩니다. 이러한 상황의 일반적인 증상 것입니다.  

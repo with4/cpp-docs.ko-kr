@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33195177"
 ---
 # <a name="compiler-error-c2421"></a>컴파일러 오류 C2421
 PTR 연산자의 '컨텍스트' 레지스터와 함께 사용  

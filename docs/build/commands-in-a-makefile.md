@@ -19,6 +19,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32366876"
 ---
 # <a name="commands-in-a-makefile"></a>메이크파일의 명령
 설명 블록 또는 유추 규칙의 종속성이 오래 된 경우 실행 하는 명령 블록을 지정 합니다. NMAKE 않는 한 각 명령을 실행 하기 전에 표시 /S, **합니다. 자동**, **! CMDSWITCHES**, 또는 @ 사용 됩니다. NMAKE 설명 블록 명령 블록이 나오지 않습니다. 일치 하는 유추 규칙을 찾습니다.  

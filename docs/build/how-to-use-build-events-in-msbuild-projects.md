@@ -21,6 +21,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32369775"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>방법: MSBuild 프로젝트에서 빌드 이벤트 사용
 빌드 이벤트는 명령 하는 [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] 빌드 프로세스의 특정 단계에서 수행 합니다. *빌드 전* 이벤트 빌드가 시작 되기 전에 발생; *링크 전* 는 링크 단계가 시작 되기 전에 이벤트 발생 및 *빌드 후* 빌드 후 이벤트 발생 성공적으로 종료 됩니다. 빌드 이벤트는 연관된 빌드 단계가 수행될 때만 발생합니다. 예를 들어 링크 단계가 실행 되지 않는 경우에 링크 전 이벤트 발생 하지 않습니다.  

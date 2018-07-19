@@ -35,11 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c6658c972b9d9cdeececd43a89ac424964d2289
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d052b2d77df8b3209671b4330347ef642877e47a
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36928884"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC ActiveX 컨트롤: ActiveX 컨트롤 배포
 이 문서에서는 ActiveX 컨트롤 재배포와 관련 된 몇 가지 문제를 설명 합니다.  
@@ -59,7 +60,7 @@ ms.lasthandoff: 05/04/2018
  ActiveX 컨트롤을 제공 하는 설치 프로그램 Windows 디렉터리의 특별 한 하위 만들고의 컨트롤을 설치 해야 합니다. 에 OCX 파일입니다.  
   
 > [!NOTE]
->  Windows를 사용 하 여 **GetWindowsDirectory** 항상 설치 프로그램에서 API는 Windows 디렉터리의 이름을 가져올 수 있습니다. 하위 디렉터리 이름을 회사 또는 제품 이름에서 파생 될 수도 있습니다.  
+>  Windows를 사용 하 여 `GetWindowsDirectory` 항상 설치 프로그램에서 API는 Windows 디렉터리의 이름을 가져올 수 있습니다. 하위 디렉터리 이름을 회사 또는 제품 이름에서 파생 될 수도 있습니다.  
   
  설치 프로그램은 Windows 시스템 디렉터리에 필요한 재배포 가능 DLL 파일을 설치 해야 합니다. Dll 사용자의 컴퓨터에 이미 있는 경우 설치 프로그램의 버전을 설치 하는 버전으로 비교 해야 합니다. 해당 버전 번호는 이미 설치 된 파일에 보다 높은 경우에 파일을 다시 설치 합니다.  
   
@@ -70,14 +71,14 @@ ms.lasthandoff: 05/04/2018
   
  원한다 면 대신 컨트롤을 직접 등록 하려면 설치 프로그램을 작성할 수 있습니다.  
   
- 사용 하 여 **LoadLibrary** 컨트롤 DLL을 로드 하는 Windows API입니다. 를 사용 하 여 **GetProcAddress** "DllRegisterServer" 함수의 주소를 가져옵니다. 마지막으로 호출 된 `DllRegisterServer` 함수입니다. 다음 코드 예제에서는 한 가지 방법을 보여 줍니다. 여기서 `hLib` 컨트롤 라이브러리의 핸들을 저장 하 고 `lpDllEntryPoint` "DllRegisterServer" 함수의 주소를 저장 합니다.  
+ 사용 하 여 `LoadLibrary` 컨트롤 DLL을 로드 하는 Windows API입니다. 를 사용 하 여 `GetProcAddress` "DllRegisterServer" 함수의 주소를 가져옵니다. 마지막으로 호출 된 `DllRegisterServer` 함수입니다. 다음 코드 예제에서는 한 가지 방법을 보여 줍니다. 여기서 `hLib` 컨트롤 라이브러리의 핸들을 저장 하 고 `lpDllEntryPoint` "DllRegisterServer" 함수의 주소를 저장 합니다.  
   
  [!code-cpp[NVC_MFC_AxCont#16](../mfc/codesnippet/cpp/mfc-activex-controls-distributing-activex-controls_1.cpp)]  
   
  컨트롤을 직접 등록의 장점은 필요가 없습니다 호출 하 고 별도 프로세스 (즉, REGSVR32)를 로드 합니다. 설치 시간을 줄일 점입니다. 또한 등록 내부 프로세스 이기 때문에 설치 프로그램에서 오류를 처리할 수 및 예측할 수 없는 상황에서 외부 프로세스 보다 더 수 있습니다.  
   
 > [!NOTE]
->  설치 프로그램에서 ActiveX 컨트롤을 설치 하기 전에 호출 해야 **OleInitialize**합니다. 설치 프로그램이 완료 되 면 호출 **OleUnitialize**합니다. 이렇게 하면 OLE 시스템 Dll에 ActiveX 컨트롤을 등록 하기 위한 적절 한 상태입니다.  
+>  설치 프로그램에서 ActiveX 컨트롤을 설치 하기 전에 호출 해야 `OleInitialize`합니다. 설치 프로그램이 완료 되 면 호출 `OleUnitialize`합니다. 이렇게 하면 OLE 시스템 Dll에 ActiveX 컨트롤을 등록 하기 위한 적절 한 상태입니다.  
   
  MFCx0.DLL 등록 해야 합니다.  
   

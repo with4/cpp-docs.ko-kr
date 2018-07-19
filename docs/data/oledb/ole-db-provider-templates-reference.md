@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33112422"
 ---
 # <a name="ole-db-provider-templates-reference"></a>OLE DB 공급자 템플릿 참조
 클래스와 OLE DB 공급자 템플릿에 대 한 인터페이스는 다음과 같은 범주로 그룹화 할 수 있습니다. 또한 참조 자료에 대 한 정보를 포함 된 [OLE DB 공급자 템플릿 매크로](../../data/oledb/macros-for-ole-db-provider-templates.md)합니다.  

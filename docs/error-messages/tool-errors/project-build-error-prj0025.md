@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316987"
 ---
 # <a name="project-build-error-prj0025"></a>프로젝트 빌드 오류 PRJ0025
 배치 파일 'file' 사용자의 ANSI 코드 페이지로 변환할 수 없는 유니코드 내용이 있습니다.  

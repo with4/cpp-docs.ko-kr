@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32355434"
 ---
 # <a name="atl-window-classes"></a>ATL 창 클래스
 ATL 사용 하 고 windows를 구현할 수 있는 여러 클래스가 포함 되어 있습니다. 다른 ATL 클래스와 마찬가지로 이러한 클래스는 코드에는 오버 헤드를 부여 하지 않는 효율적인 구현을 제공 합니다.  

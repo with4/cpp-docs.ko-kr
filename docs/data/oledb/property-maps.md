@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33103218"
 ---
 # <a name="property-maps"></a>속성 맵
 세션, 행 집합 및 선택적 명령 개체 외에도 각 공급자는 하나 이상의 속성을 지원합니다. 이러한 속성은 OLE DB 공급자 마법사에서 생성 된 헤더 파일에 포함 된 속성 매핑이에 정의 됩니다. 각 헤더 파일에는 개체 또는 해당 파일에 정의 된 개체에 대해 정의 된 OLE DB 속성 그룹의 속성에 대 한 맵을 포함 합니다. 데이터 원본 개체를 포함 하는 헤더 파일에 대 한 속성 매핑이 포함 된 [DataSource 속성](https://msdn.microsoft.com/en-us/library/ms724188\(v=vs.140\).aspx)합니다. Session.h에 대 한 속성 매핑이 포함 된 [세션 속성](https://msdn.microsoft.com/en-us/library/ms714221.aspx)합니다. 행 집합 및 명령 개체 라는 단일 헤더 파일에 있는 *projectname*RS.h 합니다. 이러한 속성은의 멤버는 [행 집합 속성](https://msdn.microsoft.com/en-us/library/ms711252.aspx) 그룹입니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: dbca5fdd47249727df7dca77de5b20da57d0f544
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/28/2018
+ms.locfileid: "32057723"
 ---
 # <a name="option-masm"></a>OPTION (MASM)
 사용 하도록 설정 하 고는 어셈블러의 기능을 해제 합니다.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32360115"
 ---
 # <a name="active-technology-and-dlls"></a>액티브 기술 및 DLL
 액티브 기술 개체 서버가 완전히 DLL 내 구현 될 수 있습니다. 이러한 종류의 서버 프로세스 서버를 라고 합니다. MFC 지원 하지 않습니다 완전히 종속 프로세스 서버로 비주얼 편집의 모든 기능에 대 한 액티브 기술 컨테이너의 기본 메시지 루프에 후크 할 서버에 대 한 방법도 제공 하지 때문에. MFC는 액셀러레이터 키 및 유휴 시간 처리 하는 컨테이너 응용 프로그램의 메시지 루프에 대 한 액세스를 해야 합니다.  

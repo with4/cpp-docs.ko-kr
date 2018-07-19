@@ -22,6 +22,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33302138"
 ---
 # <a name="expression-evaluator-error-cxx0064"></a>식 계산기 오류 CXX0064
 바인딩된 가상 멤버 함수에 중단점을 설정할 수 없습니다.  

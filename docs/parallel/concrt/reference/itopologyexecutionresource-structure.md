@@ -24,6 +24,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33686479"
 ---
 # <a name="itopologyexecutionresource-structure"></a>ITopologyExecutionResource 구조체
 리소스 관리자에 의해 정의된 실행 리소스에 대한 인터페이스입니다.  

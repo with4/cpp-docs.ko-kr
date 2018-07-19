@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33382693"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>대화 상자에서 공용 컨트롤 사용
 Windows 공용 컨트롤에서 사용할 수 있습니다 [대화 상자](../mfc/dialog-boxes.md), 폼 뷰, 레코드 뷰 및 대화 상자 템플릿을 기반으로 하는 다른 창. 약간의 다른 점이 있지만 다음 절차는 폼에서도 작동합니다.  

@@ -21,11 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d876d1005e5044a6be6511482d3e3043b580adcd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a8d933c80aa42ef9b954b6ae498632ab9835cb3d
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39025941"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 열거형
 
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/07/2018
 
 ## <a name="copy_options"></a>  copy_options
 
-동작을 지정하기 위해 [copy](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) 및 [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) 함수와 함께 사용되는 비트 마스크 값의 열거형입니다.
+동작을 지정하기 위해 [copy](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) 및 [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60) 함수와 함께 사용되는 비트 마스크 값의 열거형입니다.
 
 ### <a name="syntax"></a>구문
 
@@ -94,7 +95,7 @@ enum class directory_options {
 
 ## <a name="file_type"></a>  file_type
 
-파일 형식에 대한 열거형입니다. 지원 되는 값은 일반, 디렉터리, not_found, 및 알 수 없음.
+파일 형식에 대한 열거형입니다. 지원 되는 값에는 일반, directory, not_found, 및 알 수 없는 됩니다.
 
 ### <a name="syntax"></a>구문
 

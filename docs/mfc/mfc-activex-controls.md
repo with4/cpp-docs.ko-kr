@@ -25,14 +25,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cf5553904c859e38f42423408c0b7bddd9237fc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1209353f10e52b13202a91ae120057ba85dfa805
+ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36930099"
 ---
 # <a name="mfc-activex-controls"></a>MFC ActiveX 컨트롤
-ActiveX 컨트롤은 다시 사용할 수 있는 소프트웨어 구성 요소를 COM을 기반으로 구성 요소 개체 모델 ()는 다양 한 OLE 기능을 지원 하 고 많은 소프트웨어 요구 사항에 맞게 사용자 지정할 수 있습니다. ActiveX 컨트롤은 일반적인 ActiveX 컨트롤 컨테이너와 인터넷의 World Wide Web 웹 페이지 모두에 사용할 수 있도록 디자인되었습니다. 여기서 또는으로 설명 된 MFC를 사용 하 여 ActiveX 컨트롤을 만들 수 있습니다는 [라이브러리 ATL (액티브 템플릿)](../atl/active-template-library-atl-concepts.md)합니다.  
+ActiveX 컨트롤은 다양한 OLE 기능을 지원하고 많은 소프트웨어 요구 사항에 맞게 사용자 지정할 수 있는 COM(구성 요소 개체 모델)을 기반으로 재사용 가능한 소프트웨어 구성 요소입니다. ActiveX 컨트롤은 일반적인 ActiveX 컨트롤 컨테이너와 인터넷의 World Wide Web 웹 페이지 모두에 사용할 수 있도록 디자인되었습니다. 여기서 또는으로 설명 된 MFC를 사용 하 여 ActiveX 컨트롤을 만들 수 있습니다는 [라이브러리 ATL (액티브 템플릿)](../atl/active-template-library-atl-concepts.md)합니다.  
   
  고유한 창에서 ActiveX 컨트롤을 그리고, 이벤트(예: 마우스 클릭)에 응답하고, 자동화 개체와 유사한 속성과 메서드를 포함한 인터페이스를 통해 관리할 수 있습니다.  
   
@@ -76,7 +77,7 @@ ActiveX 컨트롤 컨테이너와 ActiveX 컨트롤 간의 통신
   
  이전 그림은 다른 OLE 인터페이스(자동화 및 이벤트의 경우)가 컨트롤을 통해 처리되는 방법도 보여 줍니다.  
   
- 컨테이너를 사용하는 모든 컨트롤의 통신은 `COleControl`에 의해 수행됩니다. 컨테이너의 요청을 처리 하기 위한 **COleControl** control 클래스에서 구현 되는 함수 멤버를 호출 합니다. 모든 메서드와 일부 속성은 이러한 방식으로 처리됩니다. 컨트롤 클래스는 `COleControl`의 멤버 함수를 호출하여 컨테이너와 통신을 시작할 수도 있습니다. 이러한 방식으로 이벤트가 발생합니다.  
+ 컨테이너를 사용하는 모든 컨트롤의 통신은 `COleControl`에 의해 수행됩니다. 컨테이너의 요청을 처리 하기 위한 `COleControl` control 클래스에서 구현 되는 함수 멤버를 호출 합니다. 모든 메서드와 일부 속성은 이러한 방식으로 처리됩니다. 컨트롤 클래스는 `COleControl`의 멤버 함수를 호출하여 컨테이너와 통신을 시작할 수도 있습니다. 이러한 방식으로 이벤트가 발생합니다.  
   
 ##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> ActiveX 컨트롤의 활성 및 비활성 상태  
  컨트롤은 활성 및 비활성의 두 가지 기본 상태를 가집니다. 일반적으로 이러한 상태는 컨트롤에 창이 있는지 여부에 따라 구분됩니다. 활성 컨트롤에는 창이 있지만 비활성 컨트롤에는 창이 없습니다. 창 없는 활성화의 도입으로 이러한 구분은 더 이상 일반적이지 않지만 여전히 많은 컨트롤에 적용됩니다.  
@@ -88,7 +89,7 @@ ActiveX 컨트롤 컨테이너와 ActiveX 컨트롤 간의 통신
  ![활성 창 있는 ActiveX 컨트롤에서 msg 처리](../mfc/media/vc37223.gif "vc37223")  
 창 있는 ActiveX 컨트롤의 Windows 메시지 처리(활성화된 경우)  
   
-##  <a name="_core_serializing_activex_elements"></a> Serialization  
+##  <a name="_core_serializing_activex_elements"></a> serialization  
  영구성이라고도 하는 데이터를 serialize 기능을 통해 컨트롤은 영구 저장소에 해당 속성 값을 작성할 수 있습니다. 그런 다음 저장소에서 개체의 상태를 읽어들여서 컨트롤을 다시 만들 수 있습니다.  
   
  컨트롤에서는 저장소 매체에 대한 액세스를 얻지 않습니다. 대신 컨트롤의 컨테이너가 적절한 때에 사용하기 위해 컨트롤에 저장소 매체를 제공합니다. Serialization 중에 대 한 자세한 내용은 문서 참조 [MFC ActiveX 컨트롤: 직렬화](../mfc/mfc-activex-controls-serializing.md)합니다. Serialization 최적화에 대 한 정보를 참조 하십시오. [영 구성 최적화 및 초기화](../mfc/optimizing-persistence-and-initialization.md) 에서 ActiveX 컨트롤: 최적화 합니다.  

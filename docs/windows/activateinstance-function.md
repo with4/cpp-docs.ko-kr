@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33855577"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance 함수
 등록 하 고 id가 지정 된 클래스 ID에 정의 된 지정 된 형식의 인스턴스를 검색  

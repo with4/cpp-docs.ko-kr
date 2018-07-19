@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33234109"
 ---
 # <a name="compiler-error-c2777"></a>컴파일러 오류 C2777
 속성 당 'put' 메서드를 하나만 지정할 수 있습니다.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32371283"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc(문서 주석 처리)(C/C++)
 컴파일러가 문서 주석을 소스 코드 파일에서 및 문서 주석이 있는 있는 각 소스 코드 파일에 대 한.xdc 파일을 만들려면 합니다.  

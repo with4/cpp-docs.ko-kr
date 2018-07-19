@@ -34,11 +34,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: e65d11ef95b5305988fe77ab258bb39c2b80de57
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 0c297ddf24c1ed357a0756c5e0e5631e7b3d1c02
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38964836"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt; 연산자
 
@@ -77,9 +78,11 @@ operator!=(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 같지 않음을 테스트할 요소가 같은 두 valarray의 첫 번째입니다.
+*left*  
+ 해당 요소가 같지 않은지 테스트할 두 valarray 중 첫 번째 valarray입니다.
 
-`right` 같은 두 valarray의 두 번째 요소가 다른 지 테스트 해야 합니다.
+*right*  
+ 해당 요소가 같지 않은지 테스트할 두 valarray 중 두 번째 valarray입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -91,13 +94,13 @@ operator!=(
 
 ### <a name="remarks"></a>설명
 
-클래스의 개체를 반환 하는 첫 번째 템플릿 연산자 [valarray\<bool >](../standard-library/valarray-bool-class.md), 각 해당 요소의 `I` 은 `left[I] != right[I]`합니다.
+클래스의 개체를 반환 하는 첫 번째 템플릿 연산자 [valarray\<bool >](../standard-library/valarray-bool-class.md), 각 요소가 `I` 는 `left[I] != right[I]`합니다.
 
 두 번째 템플릿 연산자는 요소에 저장 `I` `left[I] != right`합니다.
 
 세 번째 템플릿 연산자는 요소에 저장 `I` `left != right[I]`합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_ne.cpp
@@ -170,15 +173,17 @@ operator%(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 값 이나 다른 값으로 피제수로 사용 되는 valarray valarray 나눠야 하입니다.
+*left*  
+ 다른 값이나 valarray를 나눌 피제수로 사용되는 값 또는 valarray입니다.
 
-`right` 값 또는 valarray 제수로 사용 되 고 다른 값을 분할 하는 또는 valarray입니다.
+*right*  
+ 다른 값이나 valarray를 나누는 제수로 사용되는 값 또는 valarray입니다.
 
 ### <a name="return-value"></a>반환 값
 
-요소가 요소나 나머지 인 valarray의 `left` 나눈 `right`합니다.
+요소가 요소 전체 나머지 인 valarray의 *왼쪽* 나눈 *오른쪽*합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_rem.cpp
@@ -251,21 +256,23 @@ operator&(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 해당 요소가 함께 사용 하도록 비트 같은 두 valarray의 첫 번째 **AND** 또는 valarray의 각 요소와 비트 결합을 요소 형식의 지정 된 값입니다.
+*left*  
+ 개별 요소를 비트 `AND`로 결합하거나 요소 형식의 지정된 값을 valarray의 각 요소와 비트 결합할 두 valarray 중 첫 번째 valarray입니다.
 
-`right` 해당 요소가 함께 사용 하도록 비트 같은 두 valarray의 두 번째 **AND** 또는 valarray의 각 요소와 비트 결합을 요소 형식의 지정 된 값입니다.
+*right*  
+ 개별 요소를 비트 `AND`로 결합하거나 요소 형식의 지정된 값을 valarray의 각 요소와 비트 결합할 두 valarray 중 두 번째 valarray입니다.
 
 ### <a name="return-value"></a>반환 값
 
-비트 AND 연산 요소나 조합의 요소가 valarray의 `left` 및 `right`합니다.
+요소가 비트 AND 연산의 요소 전체 조합인 valarray의 *왼쪽* 하 고 *오른쪽*합니다.
 
 ### <a name="remarks"></a>설명
 
-비트 연산은 `char` 및 `int` 데이터 형식과 변환의 비트를 조작하는 데만 사용할 수 있으며 **float**, **double**, **longdouble**, `void`, `bool` 또는 보다 복잡한 기타 데이터 형식에는 사용할 수 없습니다.
+비트를 조작 하는 연산을 사용할 수 있습니다 **char** 하 고 **int** 데이터 형식 및 변형 아닌 **float**를 **double**, **longdouble**를 **void**하십시오 **bool** 또는 기타 복잡 한 데이터 형식입니다.
 
-비트 **AND**는 논리적 **AND**와 같은 진리표를 포함하지만 개별 비트 수준에서 데이터 형식에 적용됩니다. [operator&&](../standard-library/valarray-operators.md#amp)는 요소 수준에서 적용되어 0이 아닌 모든 값을 true로 계산하며, 결과는 부울 값의 valarray입니다. 반면 비트 **ANDoperator&** 를 사용하는 경우에는 비트 연산의 결과에 따라 0이나 1이 아닌 값의 valarray가 생성될 수 있습니다.
+비트 `AND`은 논리적 `AND`과 같은 진리표를 포함하지만 개별 비트 수준에서 데이터 형식에 적용됩니다. [operator&&](../standard-library/valarray-operators.md#amp)는 요소 수준에서 적용되어 0이 아닌 모든 값을 true로 계산하며, 결과는 부울 값의 valarray입니다. 반면 비트 **ANDoperator&** 를 사용하는 경우에는 비트 연산의 결과에 따라 0이나 1이 아닌 값의 valarray가 생성될 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_bitand.cpp
@@ -338,19 +345,21 @@ operator&&(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 해당 요소가 논리적으로 결합 되는 같은 두 valarray의 첫 번째 **AND** 또는 valarray의 각 요소와 결합 되는 요소 형식의 지정 된 값입니다.
+*left*  
+ 개별 요소를 논리적 `AND`로 결합하거나 요소 형식의 지정된 값을 valarray의 각 요소와 결합할 두 valarray 중 첫 번째 valarray입니다.
 
-`right` 해당 요소가 논리적으로 결합 되는 같은 두 valarray의 두 번째 **AND** 또는 valarray의 각 요소와 결합 되는 요소 형식의 지정 된 값입니다.
+*right*  
+ 개별 요소를 논리적 `AND`로 결합하거나 요소 형식의 지정된 값을 valarray의 각 요소와 결합할 두 valarray 중 두 번째 valarray입니다.
 
 ### <a name="return-value"></a>반환 값
 
-해당 요소가 bool 및 논리의 요소나 조합이 됩니다 valarray **AND** 의 작동 `left` 및 `right`합니다.
+해당 요소가 bool 형식의 되며 논리적 요소 전체 조합인 valarray `AND` 연산의 *왼쪽* 하 고 *오른쪽*합니다.
 
 ### <a name="remarks"></a>설명
 
-논리적 **ANDoperator&&** 는 요소 수준에서 적용되어 0이 아닌 모든 값을 true로 계산하며, 결과는 부울 값의 valarray입니다. 반면 비트 버전 **AND**, [operator&](../standard-library/valarray-operators.md#op_amp)를 사용하는 경우에는 비트 연산의 결과에 따라 0이나 1이 아닌 값의 valarray가 생성될 수 있습니다.
+논리적 `ANDoperator&&` 적용 되는 요소 수준에서 부울 값의 valarray가 true로 결과 0이 아닌 모든 값을 계산 합니다. 비트 버전 `AND`, [연산자 &,](../standard-library/valarray-operators.md#op_amp), 반면에 비트 연산의 결과 따라 1 이나 0이 아닌 값의 valarray 발생할 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_logand.cpp
@@ -423,23 +432,25 @@ operator>(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` Valarray의 각 요소와 비교 될 요소가 비교 될 같은 두 valarray 또는 지정된 된 값의 첫 번째입니다.
+*left*  
+ 해당 요소를 비교하거나 지정된 값을 valarray의 각 요소와 비교할 두 valarray 중 첫 번째 valarray입니다.
 
-`right` 비교 될 요소가 같은 두 valarray의 두 번째 또는 지정 된 값 valarray의 각 요소와 비교 합니다.
+*right*  
+ 해당 요소를 비교하거나 지정된 값을 valarray의 각 요소와 비교할 두 valarray 중 두 번째 valarray입니다.
 
 ### <a name="return-value"></a>반환 값
 
 부울 값의 valarray. 각 valarray은 다음을 반환합니다.
 
-- `left` 요소나 값이 해당하는 `right` 요소나 값보다 크면 **true**
+- **true 이면** 경우는 *왼쪽* 요소나 값 보다 해당 *오른쪽* 요소나 값입니다.
 
-- `left` 요소나 값이 해당하는 `right` 요소나 값보다 크지 않으면 **false**
+- **false** 경우는 *왼쪽* 요소나 값 보다 크지 해당 *오른쪽* 요소나 값입니다.
 
 ### <a name="remarks"></a>설명
 
 두 valarray의 요소 수가 같지 않으면 결과는 정의되지 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_gt.cpp
@@ -512,23 +523,25 @@ operator>=(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` Valarray의 각 요소와 비교 될 요소가 비교 될 같은 두 valarray 또는 지정된 된 값의 첫 번째입니다.
+*left*  
+ 해당 요소를 비교하거나 지정된 값을 valarray의 각 요소와 비교할 두 valarray 중 첫 번째 valarray입니다.
 
-`right` 비교 될 요소가 같은 두 valarray의 두 번째 또는 지정 된 값 valarray의 각 요소와 비교 합니다.
+*right*  
+ 해당 요소를 비교하거나 지정된 값을 valarray의 각 요소와 비교할 두 valarray 중 두 번째 valarray입니다.
 
 ### <a name="return-value"></a>반환 값
 
 부울 값의 valarray. 각 valarray은 다음을 반환합니다.
 
-- `left` 요소나 값이 해당하는 `right` 요소나 값보다 크거나 같으면 **true**
+- **true** 경우는 *왼쪽* 요소나 값 보다 크거나 같으면 해당 *오른쪽* 요소나 값입니다.
 
-- `left` 요소나 값이 해당하는 `right` 요소나 값보다 작으면 **false**
+- **false** 경우는 *왼쪽* 요소나 값 보다 작으면 해당 *오른쪽* 요소나 값입니다.
 
 ### <a name="remarks"></a>설명
 
 두 valarray의 요소 수가 같지 않으면 결과는 정의되지 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_ge.cpp
@@ -601,9 +614,11 @@ operator>>(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 이동할 값 또는 이동 하 여 요소가 valarray입니다.
+*left*  
+ 이동할 값 또는 해당 요소를 이동할 valarray
 
-`right` 오른쪽 시프트 또는 valarray 요소의 오른쪽 시프트의 요소나 양을 나타냅니다의 크기를 나타내는 값입니다.
+*right*  
+ 오른쪽으로 이동할 크기를 나타내는 값 또는 해당 요소가 요소 전체 오른쪽 이동 크기를 나타내는 valarray
 
 ### <a name="return-value"></a>반환 값
 
@@ -613,7 +628,7 @@ operator>>(
 
 부호 있는 숫자의 부호는 유지됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_rs.cpp
@@ -686,23 +701,25 @@ operator<(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` Valarray의 각 요소와 비교 될 요소가 비교 될 같은 두 valarray 또는 지정된 된 값의 첫 번째입니다.
+*left*  
+ 해당 요소를 비교하거나 지정된 값을 valarray의 각 요소와 비교할 두 valarray 중 첫 번째 valarray입니다.
 
-`right` 비교 될 요소가 같은 두 valarray의 두 번째 또는 지정 된 값 valarray의 각 요소와 비교 합니다.
+*right*  
+ 해당 요소를 비교하거나 지정된 값을 valarray의 각 요소와 비교할 두 valarray 중 두 번째 valarray입니다.
 
 ### <a name="return-value"></a>반환 값
 
 부울 값의 valarray. 각 valarray은 다음을 반환합니다.
 
-- `left` 요소나 값이 해당하는 `right` 요소나 값보다 작으면 **true**
+- **true 이면** 경우는 *왼쪽* 요소나 값 보다 작으면 해당 *오른쪽* 요소나 값입니다.
 
-- `left` 요소나 값이 해당하는 `right` 요소나 값보다 작지 않으면 **false**
+- **false** 경우는 *왼쪽* 요소나 값 보다 작지 않습니다 해당 *오른쪽* 요소나 값입니다.
 
 ### <a name="remarks"></a>설명
 
 두 valarray의 요소 수가 같지 않으면 결과는 정의되지 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_lt.cpp
@@ -775,23 +792,25 @@ operator<=(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` Valarray의 각 요소와 비교 될 요소가 비교 될 같은 두 valarray 또는 지정된 된 값의 첫 번째입니다.
+*left*  
+ 해당 요소를 비교하거나 지정된 값을 valarray의 각 요소와 비교할 두 valarray 중 첫 번째 valarray입니다.
 
-`right` 비교 될 요소가 같은 두 valarray의 두 번째 또는 지정 된 값 valarray의 각 요소와 비교 합니다.
+*right*  
+ 해당 요소를 비교하거나 지정된 값을 valarray의 각 요소와 비교할 두 valarray 중 두 번째 valarray입니다.
 
 ### <a name="return-value"></a>반환 값
 
 부울 값의 valarray. 각 valarray은 다음을 반환합니다.
 
-- `left` 요소나 값이 해당하는 `right` 요소나 값보다 작거나 같으면 **true**
+- **true 이면** 경우는 *왼쪽* 요소나 값 보다 작거나 같으면 해당 *오른쪽* 요소나 값입니다.
 
-- `left` 요소나 값이 해당하는 `right` 요소나 값보다 크면 **false**
+- **false** 경우는 *왼쪽* 요소나 값 보다 해당 *오른쪽* 요소나 값입니다.
 
 ### <a name="remarks"></a>설명
 
 두 valarray의 요소 수가 같지 않으면 결과는 정의되지 않습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_le.cpp
@@ -864,9 +883,11 @@ operator<<(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 이동할 값 또는 이동 하 여 요소가 valarray입니다.
+*left*  
+ 이동할 값 또는 해당 요소를 이동할 valarray
 
-`right` 왼쪽된 시프트 또는 해당 요소가 왼쪽된 시프트의 요소나 양을 나타냅니다 valarray의 크기를 나타내는 값입니다.
+*right*  
+ 왼쪽으로 이동할 크기를 나타내는 값 또는 해당 요소가 요소 전체 왼쪽 이동 크기를 나타내는 valarray
 
 ### <a name="return-value"></a>반환 값
 
@@ -876,7 +897,7 @@ operator<<(
 
 부호 있는 숫자의 부호는 유지됩니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_ls.cpp
@@ -949,15 +970,17 @@ operator*(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` Valarray의 각 요소와 곱할 곱할 요소가 같은 두 valarray 또는 지정된 된 값의 첫 번째입니다.
+*left*  
+ 해당 요소를 곱하거나 지정된 값을 valarray의 각 요소와 곱할 두 valarray 중 첫 번째 valarray입니다.
 
-`right` Valarray의 각 요소와 곱할 곱할 요소가 같은 두 valarray의 두 번째 또는 지정된 된 값입니다.
+*right*  
+ 해당 요소를 곱하거나 지정된 값을 valarray의 각 요소와 곱할 두 valarray 중 두 번째 valarray입니다.
 
 ### <a name="return-value"></a>반환 값
 
-한 valarray 요소 전체의 곱의 `left` 및 `right`합니다.
+요소가 요소 전체 곱 인 valarray의 *왼쪽* 하 고 *오른쪽*합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_eprod.cpp
@@ -1030,15 +1053,17 @@ operator+(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` Valarray의 각 요소와 추가 될 요소가 추가 될 같은 두 valarray 또는 지정된 된 값의 첫 번째입니다.
+*left*  
+ 해당 요소를 더하거나 지정된 값을 valarray의 각 요소와 더할 두 valarray 중 첫 번째 valarray입니다.
 
-`right` 요소가 추가 될 같은 두 valarray의 두 번째 또는 지정된 된 값 valarray의 각 요소와 함께 추가 합니다.
+*right*  
+ 해당 요소를 더하거나 지정된 값을 valarray의 각 요소와 더할 두 valarray 중 두 번째 valarray입니다.
 
 ### <a name="return-value"></a>반환 값
 
-한 valarray 요소 합계의 `left` 및 `right`합니다.
+요소가 요소 전체 합 인 valarray의 *왼쪽* 하 고 *오른쪽*합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_esum.cpp
@@ -1111,13 +1136,15 @@ operator-(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 값 또는 역할을 다른 값 또는 valarray는 차이 형성에 뺄 피 감수에서 감수를 valarray입니다.
+*left*  
+ 차를 구하기 위해 다른 값이나 valarray를 뺄 피감수로 사용되는 값 또는 valarray
 
-`right` 값 또는 역할은 다른 값 또는 차이 형성에 valarray에서 뺄 값을 valarray입니다.
+*right*  
+ 차를 구하기 위해 다른 값이나 valarray에서 뺄 감수로 사용되는 값 또는 valarray
 
 ### <a name="return-value"></a>반환 값
 
-한 valarray 요소 차이의 `left` 및 `right`합니다.
+요소가 요소 전체 차 인 valarray의 *왼쪽* 하 고 *오른쪽*합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1125,7 +1152,7 @@ operator-(
 
 차 = 피감수 - 감수
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_ediff.cpp
@@ -1198,13 +1225,15 @@ operator/(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 값 이나 다른 값으로 피제수로 사용 되는 valarray valarray 몫 형성에 나눌 수 되려고 합니다.
+*left*  
+ 몫을 구하기 위해 다른 값이나 valarray를 나눌 피제수로 사용되는 값 또는 valarray입니다.
 
-`right` 값 또는 valarray 제수로 사용 되 고 다른 값 또는 valarray의 몫을 형성 하는 나눕니다.
+*right*  
+ 몫을 구하기 위해 다른 값이나 valarray를 나누는 제수로 사용되는 값 또는 valarray입니다.
 
 ### <a name="return-value"></a>반환 값
 
-한 valarray 요소 몫의 `left` 나눈 `right`합니다.
+해당 요소가 요소 전체 몫인 valarray의 *왼쪽* 나눈 *오른쪽*합니다.
 
 ### <a name="remarks"></a>설명
 
@@ -1212,7 +1241,7 @@ operator/(
 
 몫 = 피제수/제수
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_equo.cpp
@@ -1285,9 +1314,11 @@ operator==(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 요소가 같은지 테스트할 같은 두 valarray의 첫 번째입니다.
+*left*  
+ 해당 요소가 같은지 테스트할 두 valarray 중 첫 번째 valarray입니다.
 
-`right` 두 번째 같은 두 valarray의 요소가 같은지 테스트할 합니다.
+*right*  
+ 해당 요소가 같은지 테스트할 두 valarray 중 두 번째 valarray입니다.
 
 ### <a name="return-value"></a>반환 값
 
@@ -1299,9 +1330,9 @@ operator==(
 
 ### <a name="remarks"></a>설명
 
-클래스의 개체를 반환 하는 첫 번째 템플릿 연산자 [valarray\<bool >](../standard-library/valarray-bool-class.md), 각 해당 요소의 `I` 은 `left[I] == right[I]`합니다. 두 번째 템플릿 연산자는 요소에 저장 `I` `left[I] == right`합니다. 세 번째 템플릿 연산자는 요소에 저장 `I` `left == right[I]`합니다.
+클래스의 개체를 반환 하는 첫 번째 템플릿 연산자 [valarray\<bool >](../standard-library/valarray-bool-class.md), 각 요소가 `I` 는 `left[I] == right[I]`합니다. 두 번째 템플릿 연산자는 요소에 저장 `I` `left[I] == right`합니다. 세 번째 템플릿 연산자는 요소에 저장 `I` `left == right[I]`합니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_eq.cpp
@@ -1374,21 +1405,23 @@ operator^(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 해당 요소가 함께 사용 하도록 비트 같은 두 valarray의 첫 번째 **XOR** 또는 valarray의 각 요소와 비트 결합을 요소 형식의 지정 된 값입니다.
+*left*  
+ 개별 요소를 비트 **XOR**로 결합하거나 요소 형식의 지정된 값을 valarray의 각 요소와 비트 결합할 두 valarray 중 첫 번째 valarray입니다.
 
-`right` 해당 요소가 함께 사용 하도록 비트 같은 두 valarray의 두 번째 **XOR** 또는 valarray의 각 요소와 비트 결합을 요소 형식의 지정 된 값입니다.
+*right*  
+ 개별 요소를 비트 **XOR**로 결합하거나 요소 형식의 지정된 값을 valarray의 각 요소와 비트 결합할 두 valarray 중 두 번째 valarray입니다.
 
 ### <a name="return-value"></a>반환 값
 
-한 valarray의 비트 조합 요소나 **XOR** 의 작동 `left` 및 `right`합니다.
+요소가 비트의 요소 전체 조합인 valarray **XOR** 연산의 *왼쪽* 하 고 *오른쪽*합니다.
 
 ### <a name="remarks"></a>설명
 
-비트 연산을 데 사용할 수 있는 비트를 조작 `char` 및 `int` 데이터 형식 및 변형 아닌 **float**, **double**, `long double`, `void`, `bool` 또는 기타, 더 복잡 한 데이터 형식입니다.
+비트를 조작 하는 연산을 사용할 수 있습니다 **char** 하 고 **int** 데이터 형식 및 변형 아닌 **float**를 **double**, **long double**, **void**하십시오 **bool** 또는 기타 복잡 한 데이터 형식입니다.
 
 비트 배타적 `OR`(**XOR**)의 의미 체계에서 *b*1 및 *b*2 비트가 지정되는 경우 *b*1 **XOR** *b*2는 비트 중 정확히 하나가 true이면 **true**이고 두 비트가 모두 false이거나 true이면 **false**입니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_xor.cpp
@@ -1465,21 +1498,23 @@ operator|(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 해당 요소가 함께 사용 하도록 비트 같은 두 valarray의 첫 번째 `OR` 또는 valarray의 각 요소와 비트 결합을 요소 형식의 지정 된 값입니다.
+*left*  
+ 개별 요소를 비트 `OR`로 결합하거나 요소 형식의 지정된 값을 valarray의 각 요소와 비트 결합할 두 valarray 중 첫 번째 valarray입니다.
 
-`right` 해당 요소가 함께 사용 하도록 비트 같은 두 valarray의 두 번째 `OR` 또는 valarray의 각 요소와 비트 결합을 요소 형식의 지정 된 값입니다.
+*right*  
+ 개별 요소를 비트 `OR`로 결합하거나 요소 형식의 지정된 값을 valarray의 각 요소와 비트 결합할 두 valarray 중 두 번째 valarray입니다.
 
 ### <a name="return-value"></a>반환 값
 
-한 valarray의 비트 조합 요소나 `OR` 의 작동 `left` 및 `right`합니다.
+요소가 비트의 요소 전체 조합인 valarray `OR` 연산의 *왼쪽* 하 고 *오른쪽*합니다.
 
 ### <a name="remarks"></a>설명
 
-비트 연산은 `char` 및 `int` 데이터 형식과 변환의 비트를 조작하는 데만 사용할 수 있으며 **float**, **double**, **longdouble**, `void`, `bool` 또는 보다 복잡한 기타 데이터 형식에는 사용할 수 없습니다.
+비트를 조작 하는 연산을 사용할 수 있습니다 **char** 하 고 **int** 데이터 형식 및 변형 아닌 **float**를 **double**, **longdouble**를 **void**하십시오 **bool** 또는 기타 복잡 한 데이터 형식입니다.
 
 비트 OR은 논리적 `OR`와 같은 진리표를 포함하지만 개별 비트 수준에서 데이터 형식에 적용됩니다. *b*1 및 *b*2가 지정되는 경우 *b*1 `OR` *b*2는 비트 중 하나 이상이 true이면 **true**이고 두 비트가 모두 false이면 **false**입니다. 논리적 `OR`[operator&#124;&#124;](../standard-library/valarray-operators.md#op_lor)는 요소 수준에서 적용되어 0이 아닌 모든 값을 **true**로 계산하며, 결과는 부울 값의 valarray입니다. 반면 비트 OR `operator|`를 사용하는 경우에는 비트 연산의 결과에 따라 0이나 1이 아닌 값의 valarray가 생성될 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_bitor.cpp
@@ -1556,19 +1591,21 @@ operator||(
 
 ### <a name="parameters"></a>매개 변수
 
-`left` 해당 요소가 논리적으로 결합 되는 같은 두 valarray의 첫 번째 `OR` 또는 valarray의 각 요소와 결합 되는 요소 형식의 지정 된 값입니다.
+*left*  
+ 개별 요소를 논리적 `OR`로 결합하거나 요소 형식의 지정된 값을 valarray의 각 요소와 결합할 두 valarray 중 첫 번째 valarray입니다.
 
-`right` 해당 요소가 논리적으로 결합 되는 같은 두 valarray의 두 번째 `OR` 또는 valarray의 각 요소와 결합 되는 요소 형식의 지정 된 값입니다.
+*right*  
+ 개별 요소를 논리적 `OR`로 결합하거나 요소 형식의 지정된 값을 valarray의 각 요소와 결합할 두 valarray 중 두 번째 valarray입니다.
 
 ### <a name="return-value"></a>반환 값
 
-Valarray 요소 형식의 `bool` 의 논리 OR 연산의 요소나 조합이 됩니다 `left` 및 `right`합니다.
+Valarray 요소 형식의 **bool** 되며 논리 OR 연산의 요소 전체 조합인 *왼쪽* 하 고 *오른쪽*합니다.
 
 ### <a name="remarks"></a>설명
 
-논리 `OR` `operator||` 로 0이 아닌 모든 값을 계산 하는 요소 수준에서 적용 **true**, 결과 부울 값의 valarray입니다. 반면 비트 버전 `OR`, [operator&#124;](../standard-library/valarray-operators.md#op_or)를 사용하는 경우에는 비트 연산의 결과에 따라 0이나 1이 아닌 값의 valarray가 생성될 수 있습니다.
+논리적 `OR` `operator||` 0이 아닌 모든 값을 계산 하는 요소 수준에서 적용 **true**, 결과 부울 값의 valarray입니다. 반면 비트 버전 `OR`, [operator&#124;](../standard-library/valarray-operators.md#op_or)를 사용하는 경우에는 비트 연산의 결과에 따라 0이나 1이 아닌 값의 valarray가 생성될 수 있습니다.
 
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 ```cpp
 // valarray_op_logor.cpp

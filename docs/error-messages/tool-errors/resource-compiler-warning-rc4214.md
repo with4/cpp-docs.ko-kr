@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319041"
 ---
 # <a name="resource-compiler-warning-rc4214"></a>리소스 컴파일러 오류 RC4214
 유효 하지 않은 코드 페이지: 무시  

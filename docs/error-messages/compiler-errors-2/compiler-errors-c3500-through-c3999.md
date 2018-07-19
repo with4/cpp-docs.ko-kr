@@ -260,6 +260,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33283535"
 ---
 # <a name="compiler-errors-c3500-through-c3999"></a>컴파일러 오류 C3500 C3999 통해
 

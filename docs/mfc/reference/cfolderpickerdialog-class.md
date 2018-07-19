@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1627d11c5c55c62e39092882177ec893cefb89a9
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ded586e6d8ad5252d73e0972424915d174b8b1f3
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36956527"
 ---
 # <a name="cfolderpickerdialog-class"></a>CFolderPickerDialog 클래스
 CFolderPickerDialog 클래스 폴더 선택 모드에서 CFileDialog를 구현 합니다.  
@@ -74,16 +75,16 @@ explicit CFolderPickerDialog(
 ```  
   
 ### <a name="parameters"></a>매개 변수  
- `lpszFolder`  
+ *lpszFolder*  
  초기 폴더입니다.  
   
- `dwFlags`  
+ *dwFlags*  
  대화 상자를 사용자 지정할 수 있도록 하는 하나 이상의 플래그의 조합입니다.  
   
- `pParentWnd`  
+ *pParentWnd*  
  대화 상자 개체의 부모 또는 소유자 창에 대 한 포인터입니다.  
   
- `dwSize`  
+ *dwSize*  
  OPENFILENAME 구조체의 크기입니다.  
   
 ### <a name="remarks"></a>설명  

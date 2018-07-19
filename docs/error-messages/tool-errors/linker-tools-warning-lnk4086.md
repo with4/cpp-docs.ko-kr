@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33301163"
 ---
 # <a name="linker-tools-warning-lnk4086"></a>링커 도구 경고 LNK4086
 entrypoint 'function' 'number' 바이트; 인수가 있는 __stdcall이 아닙니다. 이미지가 실행 되지 않습니다.  

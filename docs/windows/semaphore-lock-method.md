@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33892477"
 ---
 # <a name="semaphorelock-method"></a>Semaphore::Lock 메서드
 현재 개체 또는 지정된 핸들에 연결된 Semaphore 개체가 신호가 있는 상태가 되거나 지정된 제한 시간 간격이 경과할 때까지 기다립니다.  

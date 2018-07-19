@@ -21,6 +21,7 @@ ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33692287"
 ---
 # <a name="parallel"></a>parallel
 여러 스레드에서 동시에 실행 되는 코드의 병렬 영역을 정의 합니다.  

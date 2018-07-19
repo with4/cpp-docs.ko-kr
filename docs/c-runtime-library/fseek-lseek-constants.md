@@ -25,6 +25,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32388450"
 ---
 # <a name="fseek-lseek-constants"></a>fseek, _lseek 상수
 ## <a name="syntax"></a>구문  

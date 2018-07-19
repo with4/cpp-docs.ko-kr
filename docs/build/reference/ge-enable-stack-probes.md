@@ -27,6 +27,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32375300"
 ---
 # <a name="ge-enable-stack-probes"></a>/Ge(스택 조사 사용)
 지역 변수에 대 한 저장소를 필요로 하는 모든 함수 호출에 대 한 스택 프로브를 활성화 합니다.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33870105"
 ---
 # <a name="comptrattach-method"></a>ComPtr::Attach 메서드
 현재 템플릿 형식 매개 변수에 지정된 인터페이스 형식과 이 ComPtr을 연결합니다.  

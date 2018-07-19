@@ -15,11 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d2865d56c899cc9489fd4e09720ed22ef1bf540
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 840ca90b2f704fc3340c67a830856e006123867a
+ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39027815"
 ---
 # <a name="mfc-classes"></a>MFC 클래스
 다음 목록의 클래스는 MFC(Microsoft Foundation Class) 라이브러리에 포함되어 있습니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/04/2018
 >  MFC 클래스와 해당 멤버는 Windows 런타임에서 실행 되는 응용 프로그램에서 사용할 수 없습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [CAccelerateDecelerateTransition 클래스](../../mfc/reference/cacceleratedeceleratetransition-class1.md)  
+ [Cacceleratedeceleratetransition 클래스 클래스](../../mfc/reference/cacceleratedeceleratetransition-class1.md)  
  가속-감속 전환을 구현합니다.  
   
  [CAnimateCtrl 클래스](../../mfc/reference/canimatectrl-class.md)  
@@ -167,7 +168,7 @@ ms.lasthandoff: 05/04/2018
  상황에 맞는 메뉴라고도 하는 바로 가기 메뉴를 관리합니다.  
   
  [CControlBar 클래스](../../mfc/reference/ccontrolbar-class.md)  
- 기본 컨트롤 막대 클래스에 대 한 클래스 [CStatusBar 클래스](../../mfc/reference/cstatusbar-class.md), [CToolBar 클래스](../../mfc/reference/ctoolbar-class.md), [CDialogBar 클래스](../../mfc/reference/cdialogbar-class.md), [CReBar 클래스](../../mfc/reference/crebar-class.md), 및 [ COleResizeBar 클래스](../../mfc/reference/coleresizebar-class.md)합니다.  
+ 컨트롤 막대 클래스의 기본 클래스 [CStatusBar 클래스](../../mfc/reference/cstatusbar-class.md), [CToolBar 클래스](../../mfc/reference/ctoolbar-class.md)합니다 [CDialogBar 클래스](../../mfc/reference/cdialogbar-class.md)를 [CReBar 클래스](../../mfc/reference/crebar-class.md), 및 [ COleResizeBar 클래스](../../mfc/reference/coleresizebar-class.md)합니다.  
   
  [CCriticalSection 클래스](../../mfc/reference/ccriticalsection-class.md)  
  한 번에 한 스레드에서 코드 섹션 또는 리소스 하나에 액세스할 수 있도록 하는 동기화 개체인 "임계 섹션"을 나타냅니다.  
@@ -392,7 +393,7 @@ ms.lasthandoff: 05/04/2018
  파일 관련 예외 상태를 나타냅니다.  
   
  [CFileFind 클래스](../../mfc/reference/cfilefind-class.md)  
- 로컬 파일 검색을 수행 하 고는 기본 클래스에 대 한 [CGopherFileFind 클래스](../../mfc/reference/cgopherfilefind-class.md) 및 [CFtpFileFind 클래스](../../mfc/reference/cftpfilefind-class.md), 인터넷 파일 검색을 수행 합니다.  
+ 로컬 파일 검색을 수행 하 고에 대 한 기본 클래스인 [CGopherFileFind 클래스](../../mfc/reference/cgopherfilefind-class.md) 하 고 [CFtpFileFind 클래스](../../mfc/reference/cftpfilefind-class.md), 인터넷 파일 검색을 수행 하는 합니다.  
   
  [CFindReplaceDialog 클래스](../../mfc/reference/cfindreplacedialog-class.md)  
  응용 프로그램에서 표준 문자열 찾기/바꾸기 대화 상자를 구현할 수 있습니다.  
@@ -437,7 +438,7 @@ ms.lasthandoff: 05/04/2018
  Gopher 서버의 인터넷 파일 검색에 유용합니다.  
   
  [CGopherLocator 클래스](../../mfc/reference/cgopherlocator-class.md)  
- Gopher 서버에서 gopher "로케이터"를 가져오고 로케이터 형식을 확인 하 고 로케이터를 사용할 수 있도록 [CGopherFileFind 클래스](../../mfc/reference/cgopherfilefind-class.md)합니다.  
+ Gopher 서버에서 gopher "로케이터"를 가져옵니다 로케이터 형식을 확인 하 고 로케이터를 사용할 수 있게 [CGopherFileFind 클래스](../../mfc/reference/cgopherfilefind-class.md)합니다.  
   
  [CHeaderCtrl 클래스](../../mfc/reference/cheaderctrl-class.md)  
  Windows의 공용 헤더 컨트롤의 기능을 제공합니다.  
@@ -452,7 +453,7 @@ ms.lasthandoff: 05/04/2018
  HTML 편집 구성 요소를 나타냅니다.  
   
  [CHtmlEditDoc 클래스](../../mfc/reference/chtmleditdoc-class.md)  
- 와 [CHtmlEditView 클래스](../../mfc/reference/chtmleditview-class.md), MFC 문서 뷰 아키텍처 컨텍스트 내에서 WebBrowser 편집 플랫폼의 기능을 제공 합니다.  
+ 사용 하 여 [CHtmlEditView 클래스](../../mfc/reference/chtmleditview-class.md), MFC 문서 뷰 아키텍처 컨텍스트 내에서 WebBrowser 편집 플랫폼의 기능을 제공 합니다.  
   
  [CHtmlEditView 클래스](../../mfc/reference/chtmleditview-class.md)  
  MFC의 문서/뷰 아키텍처 컨텍스트 내에서 WebBrowser 편집 플랫폼의 기능을 제공합니다.  
@@ -524,7 +525,7 @@ ms.lasthandoff: 05/04/2018
  각각 이미지 목록의 아이콘과 레이블로 구성되는 항목 컬렉션을 표시하는 "목록 뷰 컨트롤"의 기능을 캡슐화합니다.  
   
  [CListView 클래스](../../mfc/reference/clistview-class.md)  
- 및 목록 컨트롤의 사용을 간소화 [CListCtrl 클래스](../../mfc/reference/clistctrl-class.md), MFC의 문서 뷰 아키텍처와 목록 컨트롤 기능을 캡슐화 하는 클래스입니다.  
+ 및 목록 컨트롤의 사용을 간소화 [CListCtrl 클래스](../../mfc/reference/clistctrl-class.md), MFC의 문서 뷰 아키텍처를 사용 하 여 목록 컨트롤 기능을 캡슐화 하는 클래스입니다.  
   
  [CLongBinary 클래스](../../mfc/reference/clongbinary-class.md)  
  데이터베이스에서 매우 큰 이진 데이터 개체(BLOB 또는 "이진 대형 개체"라고도 함) 사용 작업을 간소화합니다.  
@@ -563,13 +564,13 @@ ms.lasthandoff: 05/04/2018
  창 관리 멤버와 함께 Windows MDI(다중 문서 인터페이스) 프레임 창 기능을 제공합니다.  
   
  [CMDIFrameWndEx 클래스](../../mfc/reference/cmdiframewndex-class.md)  
- 기능을 확장 [CFrameWnd 클래스](../../mfc/reference/cframewnd-class.md), Windows 인터페이스 MDI (다중 문서) 프레임 창.  
+ 기능을 확장 [CFrameWnd 클래스](../../mfc/reference/cframewnd-class.md), Windows 인터페이스 MDI (다중 문서) 프레임 창입니다.  
   
  [CMDITabInfo 클래스](../../mfc/reference/cmditabinfo-class.md)  
  [CMDIFrameWndEx::EnableMDITabbedGroups](../../mfc/reference/cmdiframewndex-class.md#enablemditabbedgroups) 메서드에 매개 변수를 전달하는 데 사용됩니다. MDI 탭 그룹의 동작을 제어하려면 이 클래스의 멤버를 설정합니다.  
   
  [CMemFile 클래스](../../mfc/reference/cmemfile-class.md)  
- [CFile 클래스](../../mfc/reference/cfile-class.md)-을 지 원하는 메모리 파일 클래스를 파생 합니다.  
+ 합니다 [CFile 클래스](../../mfc/reference/cfile-class.md)-메모리 파일을 지 원하는 클래스를 파생 합니다.  
   
  [CMemoryException 클래스](../../mfc/reference/cmemoryexception-class.md)  
  메모리 부족 예외 상태를 나타냅니다.  
@@ -596,7 +597,7 @@ ms.lasthandoff: 05/04/2018
  탭 창의 기본 기능을 구현합니다.  
   
  [CMFCButton 클래스](../../mfc/reference/cmfcbutton-class.md)  
- 에 새로운 기능이 추가 된 [CButton 클래스](../../mfc/reference/cbutton-class.md) 단추 텍스트 정렬, 단추 텍스트 및 이미지 결합, 커서 선택, 도구 설명 지정 등 클래스입니다.  
+ 기능을 추가 합니다 [CButton 클래스](../../mfc/reference/cbutton-class.md) 클래스 등 단추 텍스트 정렬, 단추 텍스트 및 이미지 결합, 커서 선택, 도구 설명 지정 합니다.  
   
  [CMFCCaptionBar 클래스](../../mfc/reference/cmfccaptionbar-class.md)  
  단추, 텍스트 레이블, 비트맵의 세 가지 요소를 표시할 수 있는 컨트롤 막대입니다. 각 형식의 요소를 한 번에 하나만 표시할 수 있습니다. 각 요소를 컨트롤의 왼쪽 또는 오른쪽 가장자리나 가운데에 맞출 수 있습니다. 평면 또는 3D 스타일을 캡션 표시줄의 위쪽 및 아래쪽 테두리에 적용할 수도 있습니다.  
@@ -608,7 +609,7 @@ ms.lasthandoff: 05/04/2018
  문서 또는 응용 프로그램에서 색을 선택할 수 있는 도킹 컨트롤 막대를 나타냅니다.  
   
  [CMFCColorButton 클래스](../../mfc/reference/cmfccolorbutton-class.md)  
- `CMFCColorButton` 및 [CMFCColorBar 클래스](../../mfc/reference/cmfccolorbar-class.md) 클래스는 색 선택 컨트롤을 구현 하는 데 함께 사용 됩니다.  
+ 합니다 `CMFCColorButton` 하 고 [CMFCColorBar 클래스](../../mfc/reference/cmfccolorbar-class.md) 색 선택 컨트롤을 구현 하려면 클래스를 함께 사용 합니다.  
   
  [CMFCColorDialog 클래스](../../mfc/reference/cmfccolordialog-class.md)  
  색 선택 항목 대화 상자를 나타냅니다.  
@@ -635,7 +636,7 @@ ms.lasthandoff: 05/04/2018
  사용자가 최상위 도구 모음 단추를 누르고 있을 때 나타나는 도구 모음입니다.  
   
  [CMFCDropDownToolbarButton 클래스](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)  
- 클릭할 때 일반 단추처럼 동작하는 도구 모음 단추의 한 종류입니다. 그러나 드롭다운 도구 모음이 열립니다 ([CMFCDropDownToolBar 클래스](../../mfc/reference/cmfcdropdowntoolbar-class.md) 경우 사용자 번 클릭 하 고 도구 모음 단추를 누르고 있습니다.  
+ 클릭할 때 일반 단추처럼 동작하는 도구 모음 단추의 한 종류입니다. 그러나 드롭다운 도구 모음이 열립니다 ([CMFCDropDownToolBar 클래스](../../mfc/reference/cmfcdropdowntoolbar-class.md) 경우 클릭 하 고 도구 모음 단추를 누르고 있습니다.  
   
  [CMFCDynamicLayout 클래스](../../mfc/reference/cmfcdynamiclayout-class.md)  
  사용자가 창의 크기를 조정할 때 창에서 컨트롤이 이동하고 컨트롤의 크기가 조정되는 방식을 지정합니다.  
@@ -665,7 +666,7 @@ ms.lasthandoff: 05/04/2018
  단추를 하이퍼링크로 표시하고 단추를 클릭할 때 링크 대상을 호출합니다.  
   
  [CMFCListCtrl 클래스](../../mfc/reference/cmfclistctrl-class.md)  
- 기능을 확장 [CListCtrl 클래스](../../mfc/reference/clistctrl-class.md) 의 고급 헤더 컨트롤 기능을 지원 하 여 클래스는 [CMFCHeaderCtrl 클래스](../../mfc/reference/cmfcheaderctrl-class.md)합니다.  
+ 기능을 확장 [CListCtrl 클래스](../../mfc/reference/clistctrl-class.md) 클래스의 고급 헤더 컨트롤 기능을 지원 합니다 [CMFCHeaderCtrl 클래스](../../mfc/reference/cmfcheaderctrl-class.md)합니다.  
   
  [CMFCMaskedEdit 클래스](../../mfc/reference/cmfcmaskededit-class.md)  
  마스크에 대해 사용자 입력의 유효성을 검사하고 템플릿에 따라 유효성 검사된 결과를 표시하는 마스킹된 편집 컨트롤을 지원합니다.  
@@ -677,7 +678,7 @@ ms.lasthandoff: 05/04/2018
  사용자가 선택한 메뉴에 팝업 메뉴와 보고서를 표시하는 단추입니다.  
   
  [CMFCOutlookBar 클래스](../../mfc/reference/cmfcoutlookbar-class.md)  
- Microsoft Outlook 2000 또는 Outlook 2003의 **탐색 창** 과 시각적으로 유사한 탭 창입니다. `CMFCOutlookBar` 개체에 포함 되어는 [CMFCOutlookBarTabCtrl 클래스](../../mfc/reference/cmfcoutlookbartabctrl-class.md) 개체와 일련의 탭 합니다. 탭 수 [CMFCOutlookBarPane 클래스](../../mfc/reference/cmfcoutlookbarpane-class.md) 개체 또는 `CWnd`-파생 개체입니다. Outlook 표시줄은 사용자에게 일련의 단추와 표시 영역으로 나타납니다. 사용자가 단추를 클릭하면 해당 컨트롤 또는 단추 창이 표시됩니다.  
+ Microsoft Outlook 2000 또는 Outlook 2003의 **탐색 창** 과 시각적으로 유사한 탭 창입니다. `CMFCOutlookBar` 개체를 포함 한 [CMFCOutlookBarTabCtrl 클래스](../../mfc/reference/cmfcoutlookbartabctrl-class.md) 개체와 일련의 탭. 탭 일 수 있습니다 [CMFCOutlookBarPane 클래스](../../mfc/reference/cmfcoutlookbarpane-class.md) 개체 또는 `CWnd`-파생 개체입니다. Outlook 표시줄은 사용자에게 일련의 단추와 표시 영역으로 나타납니다. 사용자가 단추를 클릭하면 해당 컨트롤 또는 단추 창이 표시됩니다.  
   
  [CMFCOutlookBarPane 클래스](../../mfc/reference/cmfcoutlookbarpane-class.md)  
  파생 되는 컨트롤 [CMFCToolBar 클래스](../../mfc/reference/cmfctoolbar-class.md) Outlook 표시줄에 삽입할 수 있는 ([CMFCOutlookBar 클래스](../../mfc/reference/cmfcoutlookbar-class.md)). Outlook 표시줄 창에 큰 단추의 열이 포함되어 있습니다. 단추 목록이 창보다 크면 위 아래로 스크롤할 수 있습니다. 사용자가 Outlook 표시줄 창을 Outlook 표시줄에서 분리하면 기본 프레임 창에서 이동하거나 도킹할 수 있습니다.  
@@ -722,7 +723,7 @@ ms.lasthandoff: 05/04/2018
  응용 프로그램 창의 왼쪽 위 모서리에 있는 특수 단추를 구현합니다. 클릭하면 단추는 **열기** , **저장**및 **종료**와 같은 일반적인 **파일**명령이 포함된 메뉴를 엽니다.  
   
  [CMFCRibbonBaseElement 클래스](../../mfc/reference/cmfcribbonbaseelement-class.md)  
- 기본 클래스에 추가할 수 있는 모든 요소에 대 한 한 [CMFCRibbonBar 클래스](../../mfc/reference/cmfcribbonbar-class.md)합니다. 리본 요소의 예를 들면 리본 단추, 리본 확인란 및 리본 콤보 상자가 있습니다.  
+ 기본 클래스에 추가할 수 있는 모든 요소에는 [CMFCRibbonBar 클래스](../../mfc/reference/cmfcribbonbar-class.md)합니다. 리본 요소의 예를 들면 리본 단추, 리본 확인란 및 리본 콤보 상자가 있습니다.  
   
  [CMFCRibbonButton 클래스](../../mfc/reference/cmfcribbonbutton-class.md)  
  패널, 빠른 실행 도구 모음 및 팝업 메뉴와 같은 리본 막대 요소에 배치할 수 있는 단추를 구현합니다.  
@@ -731,7 +732,7 @@ ms.lasthandoff: 05/04/2018
  리본 단추 집합을 그룹으로 구성할 수 있습니다. 그룹의 모든 단추는 가로로 서로 직접 인접해 있으며 테두리로 둘러싸여 있습니다.  
   
  [CMFCRibbonCategory 클래스](../../mfc/reference/cmfcribboncategory-class.md)  
- 그룹을 포함 하는 리본 탭 구현 [CMFCRibbonPanel 클래스](../../mfc/reference/cmfcribbonpanel-class.md)합니다.  
+ 그룹을 포함 하는 리본 탭을 구현 [CMFCRibbonPanel 클래스](../../mfc/reference/cmfcribbonpanel-class.md)합니다.  
   
  [CMFCRibbonCheckBox 클래스](../../mfc/reference/cmfcribboncheckbox-class.md)  
  리본 패널, 빠른 실행 도구 모음 또는 팝업 메뉴에 추가할 수 있는 확인란을 구현합니다.  
@@ -764,7 +765,7 @@ ms.lasthandoff: 05/04/2018
  리본에 배치되는 하이퍼링크를 구현합니다. 하이퍼링크를 클릭하면 웹 페이지가 열립니다.  
   
  [CMFCRibbonMainPanel 클래스](../../mfc/reference/cmfcribbonmainpanel-class.md)  
- 클릭할 때 표시 되는 리본 패널을 구현 하는 [CMFCRibbonApplicationButton 클래스](../../mfc/reference/cmfcribbonapplicationbutton-class.md)합니다.  
+ 클릭할 때 표시 되는 리본 패널을 구현 합니다 [CMFCRibbonApplicationButton 클래스](../../mfc/reference/cmfcribbonapplicationbutton-class.md)합니다.  
   
  [CMFCRibbonMiniToolBar 클래스](../../mfc/reference/cmfcribbonminitoolbar-class.md)  
  상황별 팝업 도구 모음을 구현합니다.  
@@ -812,22 +813,22 @@ ms.lasthandoff: 05/04/2018
  작업 창 컨트롤에 대 한 작업을 나타내는 도우미 클래스 ([CMFCTasksPane 클래스](../../mfc/reference/cmfctaskspane-class.md)). 작업 개체의 작업 그룹에서 항목을 나타냅니다 ([CMFCTasksPaneTaskGroup 클래스](../../mfc/reference/cmfctaskspanetaskgroup-class.md)). 각 작업은 사용자가 작업을 클릭할 때 프레임워크가 실행하는 명령과 작업 이름의 왼쪽에 나타내는 아이콘을 포함할 수 있습니다.  
   
  [CMFCTasksPaneTaskGroup 클래스](../../mfc/reference/cmfctaskspanetaskgroup-class.md)  
- 사용 하는 도우미 클래스는 [CMFCTasksPane 클래스](../../mfc/reference/cmfctaskspane-class.md) 제어 합니다. `CMFCTasksPaneTaskGroup` 형식의 개체는 *작업 그룹*을 나타냅니다. 작업 그룹은 축소 단추가 포함된 별도 상자에 프레임워크가 표시하는 항목 목록입니다. 상자는 선택적 캡션(그룹 이름)을 가질 수 있습니다. 그룹을 축소하면 작업 목록이 표시되지 않습니다.  
+ 사용 되는 도우미 클래스를 [CMFCTasksPane 클래스](../../mfc/reference/cmfctaskspane-class.md) 제어 합니다. `CMFCTasksPaneTaskGroup` 형식의 개체는 *작업 그룹*을 나타냅니다. 작업 그룹은 축소 단추가 포함된 별도 상자에 프레임워크가 표시하는 항목 목록입니다. 상자는 선택적 캡션(그룹 이름)을 가질 수 있습니다. 그룹을 축소하면 작업 목록이 표시되지 않습니다.  
   
  [CMFCToolBar 클래스](../../mfc/reference/cmfctoolbar-class.md)  
- 유사한 [CToolBar 클래스](../../mfc/reference/ctoolbar-class.md), 하지만 사용자 인터페이스 기능에 대 한 추가 지원을 제공 합니다. 여기에는 평면 도구 모음, 핫 이미지 포함 도구 모음, 큰 아이콘, 페이저 단추, 잠긴 도구 모음, rebar 컨트롤, 이미지 아래 텍스트, 배경 이미지, 탭 도구 모음이 포함됩니다. `CMFCToolBar` 클래스에는 기본 제공 사용자 지정 도구 모음과 메뉴, 메뉴 사이 끌어 놓기, 콤보 상자 단추, 편집 상자 단추, 색 선택 및 롤업 단추 도구 모음이 포함됩니다.  
+ 유사 [CToolBar 클래스](../../mfc/reference/ctoolbar-class.md), 하지만 사용자 인터페이스 기능에 대 한 추가 지원을 제공 합니다. 여기에는 평면 도구 모음, 핫 이미지 포함 도구 모음, 큰 아이콘, 페이저 단추, 잠긴 도구 모음, rebar 컨트롤, 이미지 아래 텍스트, 배경 이미지, 탭 도구 모음이 포함됩니다. `CMFCToolBar` 클래스에는 기본 제공 사용자 지정 도구 모음과 메뉴, 메뉴 사이 끌어 놓기, 콤보 상자 단추, 편집 상자 단추, 색 선택 및 롤업 단추 도구 모음이 포함됩니다.  
   
  [CMFCToolBarImages 클래스](../../mfc/reference/cmfctoolbarimages-class.md)  
  응용 프로그램 리소스 또는 파일에서 로드된 도구 모음 이미지를 관리합니다.  
   
  [CMFCToolBarInfo 클래스](../../mfc/reference/cmfctoolbarinfo-class.md)  
- 다양한 상태의 도구 모음 이미지의 리소스 ID를 포함합니다. `CMFCToolBarInfo` 매개 변수로 사용 되는 도우미 클래스는 [CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) 메서드.  
+ 다양한 상태의 도구 모음 이미지의 리소스 ID를 포함합니다. `CMFCToolBarInfo` 매개 변수로 사용 되는 도우미 클래스를 [cmfctoolbar:: Loadtoolbarex](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex) 메서드.  
   
  [CMFCToolBarMenuButton 클래스](../../mfc/reference/cmfctoolbarmenubutton-class.md)  
  팝업 메뉴를 포함하는 도구 모음 단추입니다.  
   
  [CMFCToolBarsCustomizeDialog 클래스](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)  
- 모덜리스 탭 대화 상자 ([CPropertySheet 클래스](../../mfc/reference/cpropertysheet-class.md)) 하는 도구 모음, 메뉴, 바로 가기 키, 사용자 정의 도구 및 응용 프로그램에서 비주얼 스타일을 사용자 지정할 수 있습니다. 일반적으로 사용자가 **도구** 메뉴에서 **사용자 지정** 을 선택하여 이 대화 상자에 액세스합니다.  
+ 모덜리스 탭 대화 상자 ([CPropertySheet 클래스](../../mfc/reference/cpropertysheet-class.md)) 사용자 도구 모음, 메뉴, 바로 가기 키, 사용자 정의 도구 및 응용 프로그램에서 비주얼 스타일을 지정할 수 있도록 합니다. 일반적으로 사용자가 **도구** 메뉴에서 **사용자 지정** 을 선택하여 이 대화 상자에 액세스합니다.  
   
  [CMFCToolTipCtrl 클래스](../../mfc/reference/cmfctooltipctrl-class.md)  
  [CToolTipCtrl Class](../../mfc/reference/ctooltipctrl-class.md)를 기반으로 하는 확장된 도구 설명 구현입니다. `CMFCToolTipCtrl` 클래스 기반의 도구 설명은 아이콘, 레이블 및 설명을 표시할 수 있습니다. 그라데이션 채우기, 사용자 지정 텍스트와 테두리 색, 굵은 텍스트, 둥근 모서리 또는 풍선 스타일을 사용하여 시각적인 모양을 사용자 지정할 수 있습니다.  
@@ -866,7 +867,7 @@ ms.lasthandoff: 05/04/2018
  달력 컨트롤의 기능을 캡슐화합니다.  
   
  [CMouseManager 클래스](../../mfc/reference/cmousemanager-class.md)  
- 다양 한 명령어를 특정 연결 [CView 클래스](../../mfc/reference/cview-class.md) 사용자가 뷰 안에서 두 번 클릭할 때 개체입니다.  
+ 다른 명령을 특정을 사용 하 여 연결 하 게 [CView 클래스](../../mfc/reference/cview-class.md) 사용자가 뷰 안에서 두 번 클릭할 때 개체입니다.  
   
  [CMultiDocTemplate 클래스](../../mfc/reference/cmultidoctemplate-class.md)  
  MDI(다중 문서 인터페이스)를 구현하는 문서 템플릿을 정의합니다.  
@@ -878,7 +879,7 @@ ms.lasthandoff: 05/04/2018
  여러 페이지로 구성된 대화 상자는 여러 HTML 페이지를 순차적으로 표시하고 각 페이지의 이벤트를 처리합니다.  
   
  [CMultiPaneFrameWnd 클래스](../../mfc/reference/cmultipaneframewnd-class.md)  
- 확장 [CPaneFrameWnd 클래스](../../mfc/reference/cpaneframewnd-class.md)합니다. 여러 창을 지원합니다. 컨트롤 막대에 포함 된 단일 핸들 대신 `CMultiPaneFrameWnd` 포함 한 [CPaneContainerManager 클래스](../../mfc/reference/cpanecontainermanager-class.md) 하나 도킹할 수 있는 개체 `CMultiPaneFrameWnd` 간에 이동 하 고 동적으로 만들 여러 부동, 탭 창입니다.  
+ 확장 [CPaneFrameWnd 클래스](../../mfc/reference/cpaneframewnd-class.md)합니다. 여러 창을 지원합니다. 컨트롤 막대에 포함 된 단일 핸들 대신 `CMultiPaneFrameWnd` 포함을 [CPaneContainerManager 클래스](../../mfc/reference/cpanecontainermanager-class.md) 하나를 도킹 하 사용할 수 있는 개체 `CMultiPaneFrameWnd` 간 및 동적으로 만드는 여러 부동, 탭 windows입니다.  
   
  [CMutex 클래스](../../mfc/reference/cmutex-class.md)  
  한 스레드가 한 리소스에 상호 배타적으로 액세스하도록 허용하는 동기화 개체인 뮤텍스를 나타냅니다.  
@@ -1019,7 +1020,7 @@ ms.lasthandoff: 05/04/2018
  OLE 편집 링크 대화 상자의 특별한 경우에 사용됩니다. 예를 들어, 문서에서 기존에 연결되거나 포함된 개체만 업데이트할 경우에 사용해야 합니다.  
   
  [COleVariant 클래스](../../mfc/reference/colevariant-class.md)  
- [VARIANT](http://msdn.microsoft.com/en-us/e305240e-9e11-4006-98cc-26f4932d2118) 데이터 형식을 캡슐화합니다.  
+ 캡슐화 된 [VARIANT](http://msdn.microsoft.com/e305240e-9e11-4006-98cc-26f4932d2118) 데이터 형식입니다.  
   
  [CPagerCtrl 클래스](../../mfc/reference/cpagerctrl-class.md)  
  `CPagerCtrl` 클래스는 윈도우에 맞지 않는 포함된 창을 보기로 스크롤할 수 있는 Windows 페이저 컨트롤을 래핑합니다.  
@@ -1067,7 +1068,7 @@ ms.lasthandoff: 05/04/2018
  Windows 공용 대화 상자에서 인쇄용으로 제공하는 서비스를 캡슐화합니다.  
   
  [CPrintDialogEx 클래스](../../mfc/reference/cprintdialogex-class.md)  
- Windows의 인쇄 속성 시트에서 제공 하는 서비스를 캡슐화 합니다.  
+ Windows 인쇄 속성 시트에서 제공 하는 서비스를 캡슐화 합니다.  
   
  [CProgressCtrl 클래스](../../mfc/reference/cprogressctrl-class.md)  
  Windows의 공용 진행률 표시줄 컨트롤의 기능을 제공합니다.  
@@ -1124,16 +1125,16 @@ ms.lasthandoff: 05/04/2018
  Windows GDI(그래픽 장치 인터페이스) 영역을 캡슐화합니다.  
   
  [CRichEditCntrItem 클래스](../../mfc/reference/cricheditcntritem-class.md)  
- 와 [CRichEditView 클래스](../../mfc/reference/cricheditview-class.md) 및 [CRichEditDoc 클래스](../../mfc/reference/cricheditdoc-class.md), MFC의 문서 뷰 아키텍처 컨텍스트 내에서 rich edit 컨트롤의 기능을 제공 합니다.  
+ 사용 하 여 [CRichEditView 클래스](../../mfc/reference/cricheditview-class.md) 하 고 [CRichEditDoc 클래스](../../mfc/reference/cricheditdoc-class.md), MFC의 문서 뷰 아키텍처 컨텍스트 내에서 rich edit 컨트롤의 기능을 제공 합니다.  
   
  [CRichEditCtrl 클래스](../../mfc/reference/cricheditctrl-class.md)  
  Rich Edit 컨트롤의 기능을 제공합니다.  
   
  [CRichEditDoc 클래스](../../mfc/reference/cricheditdoc-class.md)  
- 와 [CRichEditView 클래스](../../mfc/reference/cricheditview-class.md) 및 [CRichEditCntrItem 클래스](../../mfc/reference/cricheditcntritem-class.md), MFC의 문서 뷰 아키텍처 컨텍스트 내에서 rich edit 컨트롤의 기능을 제공 합니다.  
+ 사용 하 여 [CRichEditView 클래스](../../mfc/reference/cricheditview-class.md) 하 고 [CRichEditCntrItem 클래스](../../mfc/reference/cricheditcntritem-class.md), MFC의 문서 뷰 아키텍처 컨텍스트 내에서 rich edit 컨트롤의 기능을 제공 합니다.  
   
  [CRichEditView 클래스](../../mfc/reference/cricheditview-class.md)  
- 와 [CRichEditDoc 클래스](../../mfc/reference/cricheditdoc-class.md) 및 [CRichEditCntrItem 클래스](../../mfc/reference/cricheditcntritem-class.md), MFC의 문서 뷰 아키텍처 컨텍스트 내에서 rich edit 컨트롤의 기능을 제공 합니다.  
+ 사용 하 여 [CRichEditDoc 클래스](../../mfc/reference/cricheditdoc-class.md) 하 고 [CRichEditCntrItem 클래스](../../mfc/reference/cricheditcntritem-class.md), MFC의 문서 뷰 아키텍처 컨텍스트 내에서 rich edit 컨트롤의 기능을 제공 합니다.  
   
  [CScrollBar 클래스](../../mfc/reference/cscrollbar-class.md)  
  Windows 스크롤 막대 컨트롤의 기능을 제공합니다.  
@@ -1151,7 +1152,7 @@ ms.lasthandoff: 05/04/2018
  [CSettingsStore Class](../../mfc/reference/csettingsstore-class.md)인스턴스를 만드는 데 사용할 수 있는 도우미 클래스입니다.  
   
  [CSharedFile 클래스](../../mfc/reference/csharedfile-class.md)  
- [CMemFile 클래스](../../mfc/reference/cmemfile-class.md)-공유 메모리 파일을 지 원하는 클래스를 파생된 합니다.  
+ 합니다 [CMemFile 클래스](../../mfc/reference/cmemfile-class.md)-공유 메모리 파일을 지 원하는 클래스를 파생된 합니다.  
   
  [CShellManager 클래스](../../mfc/reference/cshellmanager-class.md)  
  PIDL(식별자 포인터 목록)에 대한 포인터를 사용하여 작업할 수 있는 몇 가지 메서드를 구현합니다.  
@@ -1211,7 +1212,7 @@ ms.lasthandoff: 05/04/2018
  Windows의 공용 상태 표시줄 컨트롤의 기능을 제공합니다.  
   
  [CStdioFile 클래스](../../mfc/reference/cstdiofile-class.md)  
- 런타임 함수에서 연 것과 C 런타임 스트림 파일을 나타냅니다 [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)합니다.  
+ 런타임 함수에서 연 것과 같은 C 런타임 스트림 파일을 나타내는 [fopen, _wfopen](../../c-runtime-library/reference/fopen-wfopen.md)합니다.  
   
  [CStringArray 클래스](../../mfc/reference/cstringarray-class.md)  
  `CString` 개체 배열을 지원합니다.  
@@ -1268,7 +1269,7 @@ ms.lasthandoff: 05/04/2018
  최종 사용자 작업을 중지하도록 throw됩니다.  
   
  [CUserTool 클래스](../../mfc/reference/cusertool-class.md)  
- 외부 응용 프로그램을 실행하는 메뉴 항목입니다. **도구** 탭은 **사용자 지정** 대화 상자 ([CMFCToolBarsCustomizeDialog 클래스](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) 사용 하면 사용자 도구를 추가 하 고 이름, 명령, 인수를 지정 하 고 각 사용자 도구에 대 한 초기 디렉터리입니다.  
+ 외부 응용 프로그램을 실행하는 메뉴 항목입니다. 합니다 **도구** 탭의 **사용자 지정** 대화 상자 ([CMFCToolBarsCustomizeDialog 클래스](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) 사용자가 사용자 도구를 추가 하 고 이름, 명령, 인수를 지정할 수 있도록 및 각 사용자 도구에 대 한 초기 디렉터리입니다.  
   
  [CUserToolsManager 클래스](../../mfc/reference/cusertoolsmanager-class.md)  
  컬렉션을 유지 [CUserTool 클래스](../../mfc/reference/cusertool-class.md) 응용 프로그램의 개체입니다. 사용자 도구는 외부 응용 프로그램을 실행하는 메뉴 항목입니다. `CUserToolsManager` 개체를 사용하면 사용자 또는 개발자가 응용 프로그램에 새 사용자 도구를 추가할 수 있습니다. 사용자 도구와 연결된 명령 실행을 지원하고 사용자 도구에 관한 정보를 Windows 레지스트리를 저장합니다.  

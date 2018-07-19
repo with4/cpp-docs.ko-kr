@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33138442"
 ---
 # <a name="how-to-migrate-to-clr"></a>방법: /clr로 마이그레이션
 이 항목에서는 네이티브 코드를 컴파일할 때 발생 하는 문제를 설명 **/clr** (참조 [/clr (공용 언어 런타임 컴파일)](../build/reference/clr-common-language-runtime-compilation.md) 자세한 정보에 대 한). **/clr** Visual c + + 모듈을 호출 하 고 관리 되지 않는 모듈과 호환성을 유지 하면서.NET 어셈블리를 호출할 수 있습니다. 참조 [혼합 (네이티브 / 관리) 어셈블리](../dotnet/mixed-native-and-managed-assemblies.md) 및 [네이티브 및.NET 상호 운용성](../dotnet/native-and-dotnet-interoperability.md) 로 컴파일할의 장점에 대 한 자세한 내용은 **/clr**합니다.  

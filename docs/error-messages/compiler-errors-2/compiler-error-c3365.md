@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33252522"
 ---
 # <a name="compiler-error-c3365"></a>컴파일러 오류 C3365
 연산자 'operator': 피연산자 형식 'type1'과 'type2'가 서로 다릅니다.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33230998"
 ---
 # <a name="compiler-error-c2692"></a>컴파일러 오류 C2692
 'function_name': C 컴파일러에 필요한 완전히 프로토타입화 된 함수가 ' / clr' 옵션  

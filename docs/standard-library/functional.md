@@ -19,11 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1cf7d03b9c34f6be15fc947206e8d14ec04c991
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 6528cb1f3aa4da429cd27d1123536ab694f60ac6
+ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38961238"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
@@ -39,7 +40,7 @@ ms.lasthandoff: 05/07/2018
 
 알고리즘에는 단항 및 이항의 두 가지 함수 개체 형식이 필요합니다. 단항 함수 개체에는 인수가 하나 필요하고 이항 함수 개체에는 인수가 두 개 필요합니다. 함수 개체 및 함수 포인터는 알고리즘 조건자로 전달할 수 있지만 함수 개체는 조정 가능하며 C++ 표준 라이브러리의 범위, 유연성 및 효율성을 높입니다. 예를 들어 값이 알고리즘에 전달되기 전에 함수에 바인딩되어야 하는 경우 함수 포인터를 사용할 수 없습니다. 함수 어댑터는 함수 포인터를 값에 바인딩될 수 있는 조정 가능한 함수 개체로 변환합니다. \<functional> 헤더에는 멤버 함수를 조정 가능한 함수 개체로 호출할 수 있도록 하는 멤버 함수 어댑터도 포함되어 있습니다. 함수는 해당 인수 및 반환 형식을 지정하는 중첩 형식 선언을 포함하는 경우 조정 가능합니다. C++ 표준에서는 모든 표준 개체 클래스가 unary_function 또는 binary_function 기본 클래스에서 상속하도록 하여 이 적응성을 구현해야 합니다. 함수 개체와 해당 어댑터는 C++ 표준 라이브러리가 기존 응용 프로그램을 업그레이드할 수 있도록 하며 라이브러리를 C++ 프로그래밍 환경으로 통합하는 데 도움이 됩니다.
 
-에 있는 함수 개체의 Visual c + + 구현을 \<기능 > 포함 *투명 연산자 함수*, 표준의 특수화 된 함수 개체 및 템플릿 매개 변수가 없는 및 함수 인수의 완벽 한 전달 및 결과의 완벽 한 반환을 수행 합니다. 이 기능은 C++14 초안 표준 사양의 일부입니다. 이러한 템플릿 특수화는 산술, 비교, 논리 및 비트 연산자 함수를 호출할 때 인수 형식을 지정할 필요가 없습니다. 사용자 고유의 형식 또는 다른 유형의 형식 조합에 대해 산술, 비교, 논리 또는 비트 연산자를 오버로드할 수 있으며 투명 연산자 함수를 함수 인수로 사용할 수 있습니다. 예를 들어 *MyType* 형식이 `operator<`를 구현하는 경우 `sort(my_collection.begin(), my_collection.end(), less<MyType>())` 형식을 명시적으로 지정하는 대신 `sort(my_collection.begin(), my_collection.end(), less<>())`를 호출할 수 있습니다.
+함수 개체의 Visual c + + 구현을 \<기능 > 포함 *투명 연산자 함수*, 표준의 특수화 된 함수 개체 및 없는 템플릿 매개 변수 및 함수 인수의 완벽 한 전달 및 결과의 완벽 한 반환을 수행 합니다. 이 기능은 C++14 초안 표준 사양의 일부입니다. 이러한 템플릿 특수화는 산술, 비교, 논리 및 비트 연산자 함수를 호출할 때 인수 형식을 지정할 필요가 없습니다. 사용자 고유의 형식 또는 다른 유형의 형식 조합에 대해 산술, 비교, 논리 또는 비트 연산자를 오버로드할 수 있으며 투명 연산자 함수를 함수 인수로 사용할 수 있습니다. 예를 들어 *MyType* 형식이 `operator<`를 구현하는 경우 `sort(my_collection.begin(), my_collection.end(), less<MyType>())` 형식을 명시적으로 지정하는 대신 `sort(my_collection.begin(), my_collection.end(), less<>())`를 호출할 수 있습니다.
 
 ## <a name="c11c14-implementation"></a>C++11/C++14 구현
 
@@ -99,10 +100,10 @@ C++11/C++14의 Visual C++ 구현에서 다음 기능이 추가되었습니다.
 |[hash](../standard-library/hash-class.md)|값에 대한 해시 코드를 계산하는 클래스입니다.|
 |[is_bind_expression](../standard-library/is-bind-expression-class.md)|`bind`를 호출하여 특정 형식이 생성되었는지 테스트하는 클래스입니다.|
 |[is_placeholder](../standard-library/is-placeholder-class.md)|특정 형식이 자리 표시자인지 테스트하는 클래스입니다.|
-|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|참조 인수를 사용하여 초기화할 때 인수를 사용하지 않는 **non_const** 멤버 함수를 단항 함수 개체로 호출할 수 있도록 하는 어댑터 클래스입니다.|
-|[mem_fun_t](../standard-library/mem-fun-t-class.md)|포인터 인수를 사용하여 초기화할 때 인수를 사용하지 않는 **non_const** 멤버 함수를 단항 함수 개체로 호출할 수 있도록 하는 어댑터 클래스입니다.|
-|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|참조 인수를 사용하여 초기화할 때 단일 인수를 사용하는 **non_const** 멤버 함수를 이항 함수 개체로 호출할 수 있도록 하는 어댑터 클래스입니다.|
-|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|포인터 인수를 사용하여 초기화할 때 단일 인수를 사용하는 **non_const** 멤버 함수를 이항 함수 개체로 호출할 수 있도록 하는 어댑터 클래스입니다.|
+|[mem_fun_ref_t](../standard-library/mem-fun-ref-t-class.md)|허용 하는 어댑터 클래스를 `non_const` 멤버 함수는 인수 없이 참조 인수를 사용 하 여 초기화할 때 단항 함수 개체로 호출할 수 있습니다.|
+|[mem_fun_t](../standard-library/mem-fun-t-class.md)|허용 하는 어댑터 클래스를 `non_const` 멤버 함수 포인터 인수를 사용 하 여 초기화할 때 단항 함수 개체로 호출할 수 없는 인수입니다.|
+|[mem_fun1_ref_t](../standard-library/mem-fun1-ref-t-class.md)|허용 하는 어댑터 클래스를 `non_const` 멤버 함수는 단일 인수를 참조 인수를 사용 하 여 초기화할 때 이항 함수 개체로 호출할 수 있습니다.|
+|[mem_fun1_t](../standard-library/mem-fun1-t-class.md)|허용 하는 어댑터 클래스를 `non_const` 멤버 함수는 단일 인수를 포인터 인수를 사용 하 여 초기화할 때 이항 함수 개체로 호출할 수 있습니다.|
 |[pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md)|이항 함수 포인터를 조정 가능한 이항 함수로 변환합니다.|
 |[pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md)|단항 함수 포인터를 조정 가능한 단항 함수로 변환합니다.|
 |[reference_wrapper](../standard-library/reference-wrapper-class.md)|참조를 래핑하는 클래스입니다.|
@@ -110,7 +111,7 @@ C++11/C++14의 Visual C++ 구현에서 다음 기능이 추가되었습니다.
 
 ### <a name="functions"></a>함수
 
-|함수|설명|
+|기능|설명|
 |-|-|
 |[bind](../standard-library/functional-functions.md#bind)|호출 가능 개체에 인수를 바인딩합니다.|
 |[bind1st](../standard-library/functional-functions.md#bind1st)|이항 함수의 첫 번째 인수를 지정된 값에 바인딩하여 이항 함수 개체를 단항 함수 개체로 변환하는 어댑터를 만드는 도우미 템플릿 함수입니다.|

@@ -23,6 +23,7 @@ ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33905574"
 ---
 # <a name="error-directive-cc"></a>#error 지시문 (C/C++)
 `#error` 지시문 컴파일 타임에 사용자 지정 오류 메시지를 내보냅니다 하 고 다음 컴파일을 종료 합니다.  

@@ -18,11 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17b27b4cfc1b624c9c12138154a660951a0f2a13
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ca1e78ab4b94d9055b8f0c7cc14bde12506695b8
+ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36951369"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: ID 명명 및 번호 매기기 규칙
 이 노트 ID 명명 및 리소스, 명령, 문자열, 컨트롤 및 자식 창에 대 한 MFC 2.0을 사용 하는 번호 매기기 규칙을 설명 합니다.  
@@ -67,7 +68,7 @@ ms.lasthandoff: 05/04/2018
 |IDM_|MFC 명령 아키텍처를 사용 하지 않는 메뉴 항목에 대 한|  
 |ID_|MFC를 사용 하는 메뉴 명령에 대 한 아키텍처를 명령입니다.|  
   
- MFC 명령 아키텍처 뒤에 나오는 명령은 있어야는 `ON_COMMAND` 명령 처리기 있고 사용할 수 있습니다는 `ON_UPDATE_COMMAND_UI` 처리기입니다. 이러한 명령 처리기에서 MFC 명령 아키텍처를 따르는 경우 프로그램이 제대로 작동지 것입니다 메뉴 명령, 도구 모음 단추 또는 대화 상자 막대 단추에 바인딩되어 있는지 여부. 동일한 "ID_" 접두사는 프로그램의 메시지 표시줄에 표시 되는 메뉴 프롬프트 문자열에도 사용 됩니다. 대부분 응용 프로그램에서 메뉴 항목의 MFC 명령 규칙을 따라야 합니다. 모든 표준 명령 Id (예를 들어 `ID_FILE_NEW`)이이 규칙을 따릅니다.  
+ MFC 명령 아키텍처 뒤에 나오는 명령 ON_COMMAND 명령 처리기가 있어야 하 고는 ON_UPDATE_COMMAND_UI 처리기가 있을 수 있습니다. 이러한 명령 처리기에서 MFC 명령 아키텍처를 따르는 경우 프로그램이 제대로 작동지 것입니다 메뉴 명령, 도구 모음 단추 또는 대화 상자 막대 단추에 바인딩되어 있는지 여부. 동일한 "ID_" 접두사는 프로그램의 메시지 표시줄에 표시 되는 메뉴 프롬프트 문자열에도 사용 됩니다. 대부분 응용 프로그램에서 메뉴 항목의 MFC 명령 규칙을 따라야 합니다. 모든 표준 명령 Id (예를 들어 ID_FILE_NEW)이이 규칙을 따릅니다.  
   
  또한 MFC는 특수 한 형태의 문자열 ("형식이 사용") 하는 대신으로 "IDP_"를 사용합니다. "IDP_" 접두사가 포함 된 문자열에는 표시 되는 메시지, 즉, 메시지 상자에 사용 되는 문자열입니다. 문자열 "IDP_"는 프로그램에 의해 결정 되는 문자열의 자리 표시자로 "%1" 및 "%2"를 포함할 수 있습니다. 일반적으로 "IDP_" 문자열 그와 관련 된 도움말 항목이 있고 "형식이 사용" 문자열은 그렇지 않습니다. "IDP_" 문자열이 지역화 항상 됩니다 및 "형식이 사용" 문자열을 지역화할 수 있습니다.  
   

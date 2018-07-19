@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33092886"
 ---
 # <a name="use-the-odbc-cursor-library"></a>ODBC 커서 라이브러리 사용
 ODBC 커서 라이브러리 레코드 집합 스크롤을 관리 합니다. 커서 라이브러리를 사용 하는 방법을 설명 합니다.  

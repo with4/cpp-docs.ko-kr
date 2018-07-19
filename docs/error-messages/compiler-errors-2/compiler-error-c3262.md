@@ -21,6 +21,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33247350"
 ---
 # <a name="compiler-error-c3262"></a>컴파일러 오류 C3262
 잘못된 배열 인덱싱: '#'개 차원을 '#'차원 'array type'에 대해 지정했습니다.  

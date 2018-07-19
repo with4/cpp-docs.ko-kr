@@ -26,6 +26,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33095133"
 ---
 # <a name="cdatasourcegetproperties"></a>CDataSource::GetProperties
 연결 된 데이터 원본 개체에 대해 요청 된 속성 정보를 반환 합니다.  

@@ -25,6 +25,7 @@ ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33347031"
 ---
 # <a name="oncmdmsg-handler"></a>OnCmdMsg 처리기
 각 명령 대상 명령 라우팅을 달성 하기 위해 호출 된 `OnCmdMsg` 시퀀스에서 다음 명령 대상의 멤버 함수입니다. 명령 대상으로 사용 하 여 `OnCmdMsg` 명령을 처리할 수 있는지 여부를 확인 하 고 처리할 수 없는 경우 다른 명령 대상에 게 전달 합니다.  

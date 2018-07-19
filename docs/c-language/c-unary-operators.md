@@ -20,6 +20,7 @@ ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32381241"
 ---
 # <a name="c-unary-operators"></a>단항 연산자
 단항 연산자는 피연산자 앞에 나타나고 오른쪽에서 왼쪽으로 연결됩니다.  
